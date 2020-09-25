@@ -6,9 +6,9 @@ user-guide-description: Collection of AEM Forms resources for beginners and expe
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: c7ae9a51800bb96de24ad577863989053d53da6b
+source-git-commit: 9f8c858197e44de020ab195373f30e3d38dfd2cc
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '835'
 ht-degree: 3%
 
 ---
@@ -38,7 +38,8 @@ ht-degree: 3%
    + [Konfigurieren des adaptiven Formulars zum Auslösen AEM Arbeitsablaufs - Video](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
    + [PTO-AEM-Workflow](handling-form-submissions/invoking-aem-workflow-on-form-submission-article-use.md)
    + [Benachrichtigung zur Zuweisung von Aufgaben anpassen](handling-form-submissions/customize-assign-task-notification.md)
-
++ Nützliche Integrationen{#some-useful-integrations}
+   + [Zweifaktorauthentifizierung](some-useful-integrations/two-factor-authentication.md)
 + Adaptive Formulare {#adaptive-forms}
    + [Installieren von AEM Forms unter Windows](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [Vorfülldienst im adaptiven Forms](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
@@ -69,7 +70,7 @@ ht-degree: 3%
    + [Umgang mit Fehlermeldungen im Dienstschritt des Formulardatenmodells](adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)
    + [Formulardatenmodelldienst in AEM 6.5.1 Workflow](adaptive-forms/form-data-model-service-as-step-in-aem65-workflow-video-use.md)
    + [Formulardatenmodell ohne Datenquelle](adaptive-forms/form-data-model-without-data-source-feature-video-use.md)
-   + [Berechnetes Datenmodellelement des Formulars](adaptive-forms/computed-form-data-model-elements-aem-forms-feature-video.md)
+   + [Datenmodellelement des berechneten Formulars](adaptive-forms/computed-form-data-model-elements-aem-forms-feature-video.md)
    + [JDBC-Datenquelle in AEM Forms einrichten](adaptive-forms/data-integration-technical-video-setup.md)
    + [JDBC-basiertes Formulardatenmodell](adaptive-forms/jdbc-data-model-technical-video-use.md)
    + [Erstellen von Verknüpfungen zwischen zwei Entitäten im Formulardatenmodell](adaptive-forms/association-data-model-technical-video-use.md)
