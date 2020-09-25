@@ -1,0 +1,43 @@
+---
+title: Verwenden des Formulardatenmodelldienstes als Schritt in AEM 6.5-Arbeitsablauf
+seo-title: Verwenden des Formulardatenmodelldienstes als Schritt in AEM 6.5-Arbeitsablauf
+description: AEM Forms 6.5 bietet die Möglichkeit, Variablen im AEM Workflow zu erstellen. Mit dieser neuen Funktion ist die Verwendung des "Formulardatenmodelldienstes aufrufen"in AEM Arbeitsablauf sehr einfach geworden. Im folgenden Video werden Sie durch die Schritte geführt, die bei der Verwendung des Dienstes "Formulardatenmodell aufrufen"im Arbeitsablauf AEM.
+seo-description: AEM Forms 6.5 bietet die Möglichkeit, Variablen im AEM Workflow zu erstellen. Mit dieser neuen Funktion ist die Verwendung des "Formulardatenmodelldienstes aufrufen"in AEM Arbeitsablauf sehr einfach geworden. Im folgenden Video werden Sie durch die Schritte geführt, die bei der Verwendung des Dienstes "Formulardatenmodell aufrufen"im Arbeitsablauf AEM.
+feature: workflow.
+topics: workflow.
+audience: developer.
+doc-type: technical video.
+activity: setup.
+version: 6.5.
+translation-type: tm+mt
+source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+workflow-type: tm+mt
+source-wordcount: '334'
+ht-degree: 1%
+
+---
+
+
+# Verwenden des Formulardatenmodelldienstes als Schritt in AEM 6.5-Arbeitsablauf {#using-form-data-model-service-as-step-in-workflow}
+
+Ab AEM Forms 6.4 können wir jetzt den Formulardatenmodelldienst als Teil AEM Arbeitsablaufs verwenden. Im folgenden Video werden die Schritte erläutert, die zum Konfigurieren des Formulardatenmodellschritts im Arbeitsablauf AEM Arbeitsablauf erforderlich sind
+
+>!![NOTE]Die in diesem Video demonstrierte Funktionalität erfordert AEM Forms 6.5.1
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/28145?quality=9&learn=on)
+
+Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisungen
+
+* Setup tomcat mit der Datei SampleRest.war, wie [hier](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)beschrieben. Die in Tomcat bereitgestellte Kriegsdatei hat den Code, um die Bonität des Antragstellers zurückzugeben.Die Bonitätsbewertung ist eine Zufallszahl zwischen 200 und 800
+
+* [ Assets mit dem Package Manager in AEM importieren](assets/aem65-loanapplication.zip)
+* Das Paket enthält die folgenden:
+
+   * Workflow-Modell, das FDM-Schritt verwendet.
+   * Formulardatenmodell, das im FDM-Schritt verwendet wird.
+   * Adaptives Formular, um den Workflow beim Senden auszulösen.
+* Öffnen Sie das [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Füllen Sie die Details aus und senden Sie sie ab. Beim Senden des Formulars wird der [Anmeldevorgang](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) ausgelöst.
+
+![ Workflow ](assets/invokefdm651.PNG).
+Der Arbeitsablauf nutzt die Komponente &quot;Oder teilen&quot;, um die Anwendung an den Administrator weiterzuleiten, wenn die Bonität über 500 liegt. Wenn die Bonität unter 500 liegt, wird der Antrag zur Aushöhlung weitergeleitet.
