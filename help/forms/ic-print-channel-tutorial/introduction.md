@@ -10,10 +10,10 @@ doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
 workflow-type: tm+mt
-source-wordcount: '274'
-ht-degree: 3%
+source-wordcount: '224'
+ht-degree: 2%
 
 ---
 
@@ -37,18 +37,4 @@ Nach Abschluss dieses Lernprogramms haben Sie Folgendes gelernt:
 * Erstellen von Dokument-Fragmenten
 * Tabellen und Diagramme konfigurieren
 * Verwenden von überwachten Ordnern zum Generieren von Dokumenten im Stapelmodus
-
-## Tutorial
-
-* [Tomcat einrichten](partone.md)
-* [Datenquelle erstellen](parttwo.md)
-* [Formulardatenmodell erstellen](partthree.md)
-* [XDP-Layout mit Forms Designer erstellen](partfour.md)
-* [Dokument-Fragment erstellen](partfive.md)
-* [Drucken-Kanal-Dokument erstellen](partsix.md)
-* [Hinzufügen von Inhalten zu Zielgruppen](partseven.md)
-* [Konfigurieren des Liniendiagramms](parteight.md)
-* [Tabelle zum Drucken-Kanal hinzufügen](partnine.md)
-* [Verwenden des überwachten Ordners zum Generieren von Dokumenten](partten.md)
-* [Benutzeroberfläche des Agenten bei Formularübermittlung öffnen](parteleven.md)
 
