@@ -10,7 +10,7 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
 workflow-type: tm+mt
 source-wordcount: '482'
 ht-degree: 0%
@@ -110,7 +110,7 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 **Um dies auf Ihrem lokalen System zu testen, befolgen Sie die folgenden Anweisungen:**
 
-* Einrichten von Tomcat wie in diesem [Artikel beschrieben.](/help/forms/ic-print-channel-tutorial/partone.md) Tomcat verfügt über die Kriegsdatei, die die Musterdaten generiert.
+* Einrichten von Tomcat wie in diesem [Artikel beschrieben.](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat verfügt über die Kriegsdatei, die die Musterdaten generiert.
 * Richten Sie den Dienst als Systembenutzer ein, wie in diesem [Artikel](/help/forms/adaptive-forms/service-user-tutorial-develop.md)beschrieben.
 Vergewissern Sie sich, dass dieser Systembenutzer über Leserechte für den folgenden Knoten verfügt. So melden Sie sich mit den Berechtigungen beim [Benutzeradministrator](https://localhost:4502/useradmin) an und suchen Sie nach den Systembenutzerdaten. Weisen Sie dem folgenden Knoten die Leserechte zu, indem Sie die Registerkarte &quot;Berechtigungen&quot;aufrufen
    * /content/dam/formsanddocuments
