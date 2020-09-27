@@ -10,7 +10,7 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: 4f51f7bf00827210d2631b9335768a9980f6655c
+source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 0%
@@ -26,5 +26,5 @@ Zeile1 ist so konfiguriert, dass sie je nach den vom Dienstaufruf zurückgegeben
 
 ## Bereitstellen auf dem Server
 
-[Installieren Sie Tomcat wie hier](/help/forms/ic-print-channel-tutorial/partone.md)[beschriebenBereitstellen der Datei](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)SampleRest.warArchivieren Sie die Assets[mit AEM Package Manager ](assets/amortizationschedule.zip) Öffnen Sie das Formular[](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)Amortisierungszeitplan Geben Sie den entsprechenden Wert ein und klicken Sie auf calculateAmortizationsplan sollte in Ihrem Formular ausgefüllt werden
+[Installieren Sie Tomcat wie hier](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)[beschriebenBereitstellen der Datei](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)SampleRest.warArchivieren Sie die Assets[mit AEM Package Manager ](assets/amortizationschedule.zip) Öffnen Sie das Formular[](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)Amortisierungszeitplan Geben Sie den entsprechenden Wert ein und klicken Sie auf calculateAmortizationsplan sollte in Ihrem Formular ausgefüllt werden
 
