@@ -11,7 +11,7 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 1%
@@ -61,7 +61,7 @@ Das Beispielpaket verwendet den Alias &quot;ares&quot;, um die Dokumente zu zert
    **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service** , wie im Screenshot unten dargestellt
    ![User-Mapper](assets/user-mapper-service.PNG)
 * [Beispiel für adaptives Formular importieren](assets/certify-pdf-af.zip)
-* [Client-Bibliothek und benutzerdefiniertes Senden importieren](assets/certify-document-assets.zip)
+* [Benutzerspez. Senden importieren und installieren](assets/custom-submit-certify.zip)
 * [Adaptives Formular öffnen](http://localhost:4502/content/dam/formsanddocuments/certifypdf/jcr:content?wcmmode=disabled)
 * PDF-Dokument hochladen, das zertifiziert werden muss
    **optional** - Geben Sie das Signaturfeld an, das Sie zum Zertifizieren des Dokuments verwenden möchten
