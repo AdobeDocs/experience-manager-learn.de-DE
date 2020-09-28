@@ -10,7 +10,7 @@ doc-type: tutorial
 activity: understand
 version: 6.5
 translation-type: tm+mt
-source-git-commit: c7ae9a51800bb96de24ad577863989053d53da6b
+source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 1%
@@ -46,7 +46,7 @@ Der erste Schritt besteht darin, ein Maven-Projekt mit der entsprechenden Adobe 
 
 In diesem Lernprogramm schreiben wir die Anlagen, die dem adaptiven Formular im Rahmen des AEM Arbeitsablaufs hinzugefügt wurden.
 
-Um diesen Verwendungsfall zu erreichen, wurde die folgende Java-Klasse geschrieben
+Um diesen Verwendungsfall zu ermöglichen, wurde die folgende Java-Klasse geschrieben
 
 Sehen wir uns diesen Code an
 
@@ -133,7 +133,7 @@ Da wir ein für AEM Forms spezifisches Dokument-Objekt verwenden, müssen Sie di
 
 #### Erstellen und Bereitstellen
 
-[Erstellen Sie das Bundle wie hier](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)beschrieben[Stellen Sie sicher, dass das Bundle bereitgestellt ist und sich im aktiven Status befindet.](http://localhost:450/system/console/bundles)
+[Erstellen Sie das Bundle wie hier](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)beschrieben[Stellen Sie sicher, dass das Bundle bereitgestellt ist und sich im aktiven Status befindet.](http://localhost:4502/system/console/bundles)
 
 Workflow-Modell erstellen. Ziehen Sie den Prozessschritt per Drag &amp; Drop in das Workflow-Modell. Verknüpfen Sie den Prozessschritt mit &quot;Adaptive Formularanlagen im Dateisystem speichern&quot;.
 
