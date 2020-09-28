@@ -10,9 +10,9 @@ doc-type: tutorial
 activity: understand
 version: 6.5
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---
@@ -20,19 +20,17 @@ ht-degree: 0%
 # Variablen des Typs JSON in AEM Workflow
 
 Ab AEM Forms 6.5 können wir jetzt Variablen vom Typ JSON im AEM Workflow erstellen. Normalerweise erstellen Sie Variablen vom Typ JSON, wenn Sie adaptives Forms basierend auf JSON-Schema an einen AEM Workflow senden oder die Ergebnisse eines Formulardatenmodellaufrufvorgangs speichern möchten. Im folgenden Video werden die Schritte erläutert, die zum Erstellen und Verwenden einer Variablen vom Typ JSON im Arbeitsablauf AEM erforderlich sind
->[!NOTE]
 
 **Bei Verwendung von AEM Forms 6.5.0**
 
 Wenn Sie eine Variable vom Typ JSON erstellen, um die gesendeten Daten in Ihrem Workflow-Modell zu erfassen, verknüpfen Sie das JSON-Schema nicht mit der Variablen. Dies liegt daran, dass die gesendeten Daten beim Senden des JSON-Schemas-basierten adaptiven Formulars nicht mit dem JSON-Schema konform sind. Die JSON-Schema-Beschreibungsdaten sind in das afData.afBoundData.data-Element eingeschlossen.
 
+>[!VIDEO](https://video.tv.adobe.com/v/26444?quality=12&learn=on)
+
+
 **Bei Verwendung von AEM Forms 6.5.1 und höher**
 
 Sie können das Schema der Variablen vom Typ JSON in Ihrem Workflow-Modell zuordnen. Anschließend können Sie mit dem Schema-Browser die Schema-Elemente mit Ihren String-/Zahlenvariablen in Ihrem Workflow-Modell verknüpfen
-
->[!VIDEO](https://video.tv.adobe.com/v/26444?quality=12&learn=on)
-
-**Die Möglichkeit zum Drilldown von Schema-Elementen und zum Zuordnen des Schema-Elements zur Workflow-Variablen ist nur ab AEM Forms 6.5.1 verfügbar.**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28097?quality=12&learn=on)
 
