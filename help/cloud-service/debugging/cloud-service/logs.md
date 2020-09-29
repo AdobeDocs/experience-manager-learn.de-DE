@@ -10,9 +10,9 @@ audience: developer
 kt: 5432
 thumbnail: kt-5432.jpg
 translation-type: tm+mt
-source-git-commit: 1eb15af3d9d2904856218aaad4d5c52233603a71
+source-git-commit: 7fd232d6821f91c342dd04fcdd04b9b505cb7250
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '990'
 ht-degree: 2%
 
 ---
@@ -28,6 +28,12 @@ Pod-IDs werden in jeder Protokollanweisung bereitgestellt und ermöglichen das F
 
 + `cm-p<PROGRAM ID>-e<ENVIRONMENT ID>-aem-<author|publish>-<POD NAME>`
 + Beispiel: `cm-p12345-e56789-aem-author-abcdefabde-98765`
+
+## Benutzerdefinierte Protokolldateien
+
+AEM als Cloud Services unterstützt keine benutzerdefinierten Protokolldateien, unterstützt jedoch die benutzerdefinierte Protokollierung.
+
+Damit Java-Protokolle in AEM als Cloud Service verfügbar sind (über die [Cloud Manager](#cloud-manager) - oder [Adobe-E/A-CLI](#aio)), müssen benutzerdefinierte Protokollanweisungen in die `error.log`Datei geschrieben werden. Protokolle, die in benutzerdefinierte benannte Protokolle geschrieben wurden, wie z. B. `example.log`, stehen AEM als Cloud Service nicht zur Verfügung.
 
 ## Protokolle des AEM-Dienstes für Autoren und Veröffentlichungen
 
@@ -54,7 +60,7 @@ Nur AEM Publish Dispatcher stellt Apache-Webserver- und Dispatcher-Protokolle be
    + Staging: `WARN`
    + Produktion: `ERROR`
 
-## Cloud Manager
+## Cloud Manager{#cloud-manager}
 
 Adobe Cloud Manager ermöglicht das tägliche Herunterladen von Protokollen über die Aktion &quot;Protokolle herunterladen&quot;einer Umgebung.
 
@@ -62,7 +68,7 @@ Adobe Cloud Manager ermöglicht das tägliche Herunterladen von Protokollen übe
 
 Diese Protokolle können über beliebige Tools zur Analyse von Protokolldateien heruntergeladen und geprüft werden.
 
-## Adobe-I/O-CLI mit Cloud Manager-Plugin
+## Adobe-I/O-CLI mit Cloud Manager-Plugin{#aio}
 
 Adobe Cloud Manager unterstützt den Zugriff auf AEM als Cloud Service-Login über die [Adobe-E/A-CLI](https://github.com/adobe/aio-cli) mit dem [Cloud Manager-Plugin für die Adobe-I/O-CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
