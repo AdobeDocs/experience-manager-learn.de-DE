@@ -9,7 +9,7 @@ activity: use
 version: 6.4,6.5
 kt: 6317
 translation-type: tm+mt
-source-git-commit: 9f8c858197e44de020ab195373f30e3d38dfd2cc
+source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 3%
@@ -67,7 +67,9 @@ Wenn Sie die Beispielelemente mit Ihren API-Schlüsseln verwenden möchten, füh
 * Das adaptive Beispielformular herunterladen können Sie hier [herunterladen](assets/sms-2fa-verification-af.zip). Dieses Musterformular verwendet die Dienstaufrufe des Formulardatenmodells, das als Teil dieses Artikels bereitgestellt wird.
 * Formular aus der Benutzeroberfläche von [Forms und Dokument in AEM importieren](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Öffnen Sie das Formular im Bearbeitungsmodus. Öffnen Sie den Regeleditor für das folgende Feld
-   ![sms-send](assets/check-sms.PNG)
+
+![sms-send](assets/check-sms.PNG)
+
 * Bearbeiten Sie die mit dem Feld verknüpfte Regel. Geben Sie die entsprechenden API-Schlüssel an
 * Speichern Sie das Formular
 * [Vorschau des Formulars](http://localhost:4502/content/dam/formsanddocuments/sms-2fa-verification/jcr:content?wcmmode=disabled) und Testen der Funktionalität
