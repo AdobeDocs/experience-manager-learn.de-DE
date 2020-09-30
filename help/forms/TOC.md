@@ -6,9 +6,9 @@ user-guide-description: Collection of AEM Forms resources for beginners and expe
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '840'
 ht-degree: 3%
 
 ---
@@ -119,6 +119,7 @@ ht-degree: 3%
    + [JSON-Variablen](variables-aem-workflow/part2.md)
    + [Dokument-Variablen](variables-aem-workflow/part3.md)
    + [ArrayList-Variable](variables-aem-workflow/part4.md)
+   + [Formulardatenmodell-Variable](variables-aem-workflow/form-data-model.md)
    + [Regeleditor in AEM Workflow](variables-aem-workflow/part5.md)
 + Speichern und Abrufen von Formulardaten in MySQL DB{#storing-and-retrieving-form-data}
    + [Einführung](storing-retrieving-form-data/introduction.md)
