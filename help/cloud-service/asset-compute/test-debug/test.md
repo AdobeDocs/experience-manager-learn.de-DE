@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6284
 thumbnail: KT-6284.jpg
 translation-type: tm+mt
-source-git-commit: 06632b90e5cdaf80b9343e5a69ab9c735d4a70f1
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '818'
 ht-degree: 0%
 
 ---
@@ -110,6 +110,12 @@ In diesem Test wird überprüft, ob der Worker den entsprechenden Fehler auslös
 
 ![Test - Fehlerkontrast](./assets/test/error-contrast/result.png)
 
+## Testfälle bei Github
+
+Die abschließenden Testfälle sind auf Github unter folgender Adresse abrufbar:
+
++ [aem-guides-work-asset-compute/test/asset-compute/Worker](https://github.com/adobe/aem-guides-wknd-asset-compute/tree/master/test/asset-compute/worker)
+
 ## Fehlerbehebung
 
 ### Keine Darstellung generiert
@@ -127,6 +133,6 @@ Test Case schlägt fehl, ohne eine Darstellung zu generieren.
 Test Case schlägt fehl, weil eine falsche Darstellung generiert wurde.
 
 + __Fehler:__ Fehler: Darstellung &#39;rendition.xxx&#39; nicht wie erwartet.
-+ __Ursache:__ Der Arbeiter gibt eine Darstellung aus, die nicht mit der im Testfall `rendition.<extension>` bereitgestellten identisch war.
++ __Ursache:__ Der Worker gibt eine Darstellung aus, die nicht mit der im Testfall `rendition.<extension>` bereitgestellten identisch war.
    + Wenn die erwartete `rendition.<extension>` Datei nicht genau so erstellt wird wie die lokal generierte Darstellung im Testfall, schlägt der Test möglicherweise fehl, da die Bits etwas voneinander abweichen können. Wenn die erwartete Darstellung im Testfall über das Entwicklungstool gespeichert wird, was in Adobe I/O Runtime erzeugt wird, können die Bits technisch anders sein, wodurch der Test fehlschlägt, selbst wenn die erwarteten und tatsächlichen Darstellungsdateien aus menschlicher Sicht identisch sind.
 + __Lösung:__ Überprüfen Sie die Ausgabe der Darstellung aus dem Test, indem Sie zu dieser Datei navigieren `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`und sie mit der erwarteten Darstellungsdatei im Testfall vergleichen.
