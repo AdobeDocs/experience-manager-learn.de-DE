@@ -10,9 +10,9 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 translation-type: tm+mt
-source-git-commit: ecee5f83dc778b016b6d236c1e3bcc4919ee55a7
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '985'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ Dieses Lernprogramm führt Sie durch die Erstellung eines einfachen Workers für
 
 Erfahren Sie, wie Sie sich ordnungsgemäß auf die Erweiterung von Asset Compute-Mitarbeitern vorbereiten und verstehen, welche Dienste und Konten bereitgestellt und konfiguriert werden müssen und welche Software lokal für die Entwicklung installiert werden muss.
 
-### Konto- und Dienstbereitstellung
+### Konto- und Dienstbereitstellung{#accounts-and-services}
 
 Die folgenden Konten und Dienste erfordern Bereitstellung und Zugriff, um das Tutorial, AEM als Cloud Service Dev Umgebung oder Sandbox Programm, Zugriff auf Adobe Project Firefly und Microsoft Azurblase Blob Datenspeicherung abzuschließen.
 
@@ -50,13 +50,13 @@ Die folgenden Konten und Dienste erfordern Bereitstellung und Zugriff, um das Tu
 
 ### Umgebung der lokalen Entwicklung
 
-Für die lokale Entwicklung von Asset Compute-Anwendungen ist ein spezieller Entwicklerwerkzeug erforderlich, das sich von der herkömmlichen AEM unterscheidet. Dazu gehören: Microsoft Visual Studio Code, Docker Desktop, Node.js und unterstützende npm Module.
+Für die lokale Entwicklung von Asset Compute-Projekten ist ein spezieller Entwicklerwerkzeug erforderlich, das sich von der herkömmlichen AEM unterscheidet. Dazu gehören: Microsoft Visual Studio Code, Docker Desktop, Node.js und unterstützende npm Module.
 
 + [Umgebung zur lokalen Entwicklung einrichten](./set-up/development-environment.md)
 
 ### Projekt Adobe
 
-Asset Compute-Projekte sind eigens definierte Adobe Project Firefly-Anwendungen und erfordern daher Zugriff auf Adobe Project Firefly in der Adobe Developer Console, um sie einzurichten und bereitzustellen.
+Asset Compute-Projekte sind eigens definierte Adobe Project Firefly-Projekte und erfordern daher Zugriff auf Adobe Project Firefly in der Adobe Developer Console, um sie einzurichten und bereitzustellen.
 
 + [Adobe-Projekt einrichten](./set-up/firefly.md)
 
@@ -66,7 +66,7 @@ Erfahren Sie, wie Sie ein Asset Compute-Projekt erstellen und konfigurieren und 
 
 ### Neues Asset-Computingprojekt erstellen
 
-Asset Compute-Anwendungsprojekte, die einen oder mehrere Asset Compute-Mitarbeiter enthalten, werden mithilfe der interaktiven Adobe-I/O-CLI generiert. Asset Compute-Anwendungen sind speziell strukturierte Adobe Project Firefly-Anwendungen, die wiederum Node.js-Anwendungen sind.
+Asset Compute-Projekte, die einen oder mehrere Asset Compute-Mitarbeiter enthalten, werden mithilfe der interaktiven Adobe-I/O-CLI generiert. Asset Compute Projekte sind speziell strukturierte Adobe Project Firefly Projekte, die wiederum Node.js Projekte.
 
 + [Neues Asset-Computingprojekt erstellen](./develop/project.md)
 
@@ -78,7 +78,7 @@ Umgebung-Variablen werden in der `.env` Datei für die lokale Entwicklung beibeh
 
 ### manifest.yml konfigurieren
 
-Asset Compute-Anwendungen enthalten Manifeste, die alle im Projekt enthaltenen Asset Compute-Mitarbeiter sowie die verfügbaren Ressourcen definieren, wenn sie zur Ausführung in Adobe I/O Runtime bereitgestellt werden.
+Asset Compute-Projekte enthalten Manifeste, die alle im Projekt enthaltenen Asset Compute-Mitarbeiter sowie die verfügbaren Ressourcen definieren, wenn sie zur Ausführung in Adobe I/O Runtime bereitgestellt werden.
 
 + [manifest.yml konfigurieren](./develop/manifest.md)
 
@@ -106,7 +106,7 @@ Asset Compute bietet ein Testframework zum Erstellen von Test-Suites für Arbeit
 
 ### Debuggen eines Arbeitnehmers
 
-Asset Compute-Anwendungen bieten verschiedene Debugging-Ebenen, von der herkömmlichen `console.log(..)` Ausgabe über Integrationen mit __VS-Code__ bis zum __wskdebug__, sodass Entwickler während der Ausführung in Echtzeit den Arbeitsablaufcode durchlaufen können.
+Asset Compute-Mitarbeiter bieten verschiedene Debugging-Ebenen, von der herkömmlichen `console.log(..)` Ausgabe über Integrationen mit __VS-Code__ bis hin zum __wskdebug__, sodass Entwickler während der Ausführung in Echtzeit den Arbeitsablaufcode durchlaufen können.
 
 + [Debuggen eines Arbeitnehmers](./test-debug/debug.md)
 
@@ -125,6 +125,14 @@ Mitarbeiter in Asset Compute müssen nach Adobe I/O Runtime entsandt werden, um 
 Nach der Bereitstellung in Adobe I/O Runtime können Mitarbeiter von Asset Compute über [Assets Processing Profils](../../assets/configuring/processing-profiles.md)in AEM als Cloud Service registriert werden. Verarbeitungsordner werden wiederum auf Asset-Profil angewendet, die auf die darin enthaltenen Assets angewendet werden.
 
 + [Integration mit AEM-Profilen](./deploy/processing-profiles.md)
+
+## Tutorial-Codebase auf Github
+
+Die Tutorial-Codebase ist auf Github verfügbar unter:
+
++ [adobe/aem-guides-work-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @ Übergeordnet branch
+
+Der Quellcode enthält nicht die erforderlichen `.env` oder `config.json` Dateien. Diese müssen mit Ihren [Konto- und Dienstinformationen](#accounts-and-services) hinzugefügt und konfiguriert werden.
 
 ## Zusätzliche Ressourcen
 
