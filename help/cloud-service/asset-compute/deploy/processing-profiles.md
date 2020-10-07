@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
 translation-type: tm+mt
-source-git-commit: 59bfc9ae08acca6c41234f23eaa60f56e2eda890
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '778'
 ht-degree: 2%
 
 ---
@@ -59,12 +59,12 @@ Erstellen Sie zunächst ein neues Verarbeitungsparameter, das den Worker mit den
          + Verarbeiten Sie Assets niemals mit diesen MIME-Typen, indem Sie diese Dienstkonfiguration verwenden. In diesem Fall verwenden wir nur eine Zulassungsliste.
 1. Tippen Sie oben rechts auf __Speichern__ .
 
-## Ein verarbeitendes Profil anwenden und aufrufen
+## Anwenden und Aufrufen eines Profils zur Verarbeitung
 
 1. Wählen Sie das neu erstellte Profil für die Verarbeitung aus. `WKND Asset Renditions`
 1. Tippen Sie in der oberen Aktionsleiste auf Profil auf Ordner __anwenden__ .
 1. Wählen Sie einen Ordner aus, auf den das Profil &quot;Verarbeitung&quot;angewendet werden soll, z. B. `WKND` und tippen Sie auf &quot; __Anwenden&quot;__
-1. Navigieren Sie zu dem Ordner, auf den das Profil &quot;Verarbeitung&quot;nicht angewendet wurde, über __AEM > Assets > Files__ und tippen Sie auf `WKND`.
+1. Navigieren Sie zu dem Ordner, auf den das Profil Verarbeitung nicht angewendet wurde, über __AEM > Assets > Files__ und tippen Sie auf `WKND`.
 1. Laden Sie einige neue Bildelemente ([sample-1.jpg](../assets/samples/sample-1.jpg), [sample-2.jpg](../assets/samples/sample-2.jpg)und [sample-3.jpg](../assets/samples/sample-3.jpg)) in einen beliebigen Ordner unter dem Ordner hoch, auf den das Profil &quot;Verarbeitung&quot;angewendet wurde, und warten Sie, bis das hochgeladene Asset verarbeitet wird.
 1. Tippen Sie auf das Asset, um seine Details zu öffnen.
    + Standarddarstellungen können in AEM schneller generiert und angezeigt werden als benutzerdefinierte Darstellungen.
@@ -76,6 +76,14 @@ Erstellen Sie zunächst ein neues Verarbeitungsparameter, das den Worker mit den
 ## Beendet!
 
 Herzlichen Glückwunsch! Sie haben das [Tutorial](../overview.md) zum Erweitern AEM als Cloud Service Asset Compute Microservices abgeschlossen! Sie sollten jetzt die Möglichkeit haben, benutzerdefinierte Asset Compute-Mitarbeiter einzurichten, zu entwickeln, zu testen, zu debuggen und bereitzustellen, um sie als Cloud Service-Authoring-Dienst für Ihre AEM zu verwenden.
+
+### Überprüfen Sie den vollständigen Projektquellcode auf Github
+
+Das endgültige Asset Compute-Projekt finden Sie auf Github unter:
+
++ [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
+
+_Github enthält den finalen Status des Projekts, der vollständig mit den Arbeitern- und Testfällen gefüllt ist, jedoch keine Anmeldeinformationen enthält, d. h.`.env`,`.config.json`oder`.aio`._
 
 ## Fehlerbehebung
 
