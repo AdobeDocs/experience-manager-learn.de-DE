@@ -1,6 +1,6 @@
 ---
 title: manifest.yml eines Asset Compute-Projekts konfigurieren
-description: In der Datei "manifest.yml"des Projekts "Asset Compute"werden alle bereitzustellenden Arbeiter in dieser Anwendung beschrieben.
+description: In der Datei "manifest.yml"des Projekts "Asset Compute"werden alle in diesem Projekt bereitzustellenden Arbeiter beschrieben.
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '550'
 ht-degree: 0%
 
 ---
@@ -94,6 +94,13 @@ packages:
           require-adobe-auth: true
 ```
 
+## manifest.yml auf Github
+
+Das Finale `.manifest.yml` ist auf Github unter folgender Adresse abrufbar:
+
++ [aem-guides-wknd-asset-compute/manifest.yml](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/manifest.yml)
+
+
 ## Validieren der Datei manifest.yml
 
 Führen Sie nach der Aktualisierung des erstellten Asset-Compute das lokale Entwicklungstool aus und stellen Sie sicher, dass die Beginn die aktualisierten `manifest.yml` `manifest.yml` Einstellungen erfolgreich verwenden.
@@ -118,7 +125,7 @@ So Beginn Asset Compute Development Tool for the Asset Compute project:
 ### Falscher YAML-Einzug
 
 + __Fehler:__ YAMLException: Ungültiger Einzug eines Zuordnungseintrags in Zeile X, Spalte Y:(über `aio app run` Befehl &quot;Standard ab&quot;)
-+ __Ursache:__ Bei den Yaml-Dateien wird zwischen weißen Abständen unterschieden. Der Einzug ist wahrscheinlich nicht korrekt.
++ __Ursache:__ Yaml-Dateien haben weiße Abstände, der Einzug ist wahrscheinlich nicht korrekt.
 + __Lösung:__ Überprüfen Sie Ihren Einzug `manifest.yml` und stellen Sie sicher, dass er korrekt ist.
 
 ### memorySize limit ist zu niedrig eingestellt
