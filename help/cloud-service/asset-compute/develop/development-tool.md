@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6283
 thumbnail: 40241.jpg
 translation-type: tm+mt
-source-git-commit: a71c61304bbc9d54490086b3313c823225fbe2e0
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '700'
+source-wordcount: '703'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Das Asset Compute Development Tool ist eine lokale Webanwendung, mit der Entwick
 
 ## Asset Compute Development Tool ausführen
 
-Das Asset Compute Development Tool kann über den Befehl &quot;Terminal&quot;aus dem Stammordner des Asset Compute-Anwendungsprojekts ausgeführt werden:
+Das Asset Compute Development Tool kann über den Befehl &quot;Terminal&quot;aus dem Stammordner des Asset Compute-Projekts ausgeführt werden:
 
 ```
 $ aio app run
@@ -42,9 +42,9 @@ Dadurch wird das Entwicklungstool unter __http://localhost:9000__ Beginn und aut
 1. __Definition des Profils &quot;Asset Computing&quot;:__ Definiert den auszuführenden Asset Compute-Worker einschließlich der folgenden Parameter: einschließlich des URL-Endpunkts des Workers, des Ausgabenamens und aller Parameter
 1. __Ausführen:__ Über die Schaltfläche &quot;Ausführen&quot;wird das Profil &quot;Asset Compute&quot;ausgeführt, wie im Editor für das Asset Compute-Konfigurationseditor definiert.
 1. __Abbrechen:__ Mit der Schaltfläche Abbrechen wird eine Ausführung abgebrochen, die durch Tippen auf die Schaltfläche Ausführen eingeleitet wurde
-1. __Anforderung/Antwort:__ Stellt die HTTP-Anforderung und -Antwort auf/von der Asset Compute-Anwendung bereit, die in Adobe Runtime ausgeführt wird. Dies kann beim Debugging hilfreich sein
-1. __Aktivierungen-Protokolle:__ Die Protokolle, in denen die Ausführung der Asset-Compute-Anwendung beschrieben wird, sowie etwaige Fehler. Diese Informationen sind auch im `aio app run` Standard-Layout verfügbar.
-1. __Darstellungen:__ Zeigt alle Darstellungen an, die durch die Ausführung der Anwendung &quot;Asset Berechnen&quot;generiert wurden.
+1. __Anforderung/Antwort:__ Stellt die HTTP-Anforderung und -Antwort an den/vom Asset Compute-Mitarbeiter bereit, der in Adobe I/O Runtime ausgeführt wird. Dies kann beim Debugging hilfreich sein
+1. __Aktivierungen-Protokolle:__ Die Protokolle, in denen die Ausführung des Assets Compute-Workers sowie etwaige Fehler beschrieben werden. Diese Informationen sind auch im `aio app run` Standard-Layout verfügbar.
+1. __Darstellungen:__ Zeigt alle Darstellungen an, die durch die Ausführung des Workers &quot;Asset Compute&quot;generiert wurden
 1. __abfrage-Parameter devToolToken:__ Für das Asset Compute Development Tool-Token muss ein gültiger Parameter für die `devToolToken` Abfrage vorhanden sein. Dieses Token wird automatisch jedes Mal generiert, wenn ein neues Entwicklungstool erzeugt wird
 
 ### Ausführen eines benutzerdefinierten Arbeitnehmers
@@ -89,9 +89,9 @@ Das Asset Compute Development Tool kann einen Status eingeben, in dem statische 
 
 + __Fehler:__ Das Dropdown-Menü Quelldatei enthält falsche Elemente.
 + __Ursache:__ Der Status &quot;Nicht im Cache gespeicherter Browser&quot;verursacht
-+ __Lösung:__ Löschen Sie in Ihrem Browser den Anwendungsstatus der Browser-Registerkarte, den Browser-Cache, die lokale Datenspeicherung und den Service-Mitarbeiter vollständig.
++ __Lösung:__ In Ihrem Browser löschen Sie vollständig den &quot;Anwendungszustand&quot; des Browser-Tab, den Browser-Cache, die lokale Datenspeicherung und den Service-Mitarbeiter.
 
-### Fehlender Parameter für die devToolToken-Abfrage{#troubleshooting__devtooltoken}
+### Fehlender oder ungültiger Parameter für die devToolToken-Abfrage{#troubleshooting__devtooltoken}
 
 + __Fehler:__ Benachrichtigung &quot;Nicht autorisiert&quot;im Asset Computing Development Tool
 + __Ursache:__ `devToolToken` fehlt oder ist ungültig
@@ -101,6 +101,6 @@ Das Asset Compute Development Tool kann einen Status eingeben, in dem statische 
 
 + __Fehler:__ Es gibt keine Möglichkeit, hinzugefügte Quelldateien aus der Benutzeroberfläche der Entwicklungstools zu entfernen
 + __Ursache:__ Diese Funktion wurde nicht implementiert.
-+ __Lösung:__ Melden Sie sich bei Ihrem Cloud-Anbieter für Datenspeicherung mit den unter `.env`&quot;Anmeldeinformationen&quot;definierten Anmeldeinformationen an. Suchen Sie den Container, der von den Entwicklungstools verwendet wird (siehe auch `.env`), navigieren Sie zum __Quellordner__ und löschen Sie alle Quellbilder. Möglicherweise müssen Sie die in der Dropdown-Liste &quot; [Quelldateien&quot;beschriebenen Schritte falsch](#troubleshooting__dev-tool-application-cache) ausführen, wenn die gelöschten Quelldateien weiterhin im Dropdown-Menü angezeigt werden, da sie im Anwendungszustand &quot;Entwicklungstools&quot;lokal zwischengespeichert werden können.
++ __Lösung:__ Melden Sie sich bei Ihrem Cloud-Anbieter für Datenspeicherung mit den unter `.env`&quot;Anmeldeinformationen&quot;definierten Anmeldeinformationen an. Suchen Sie den Container, der von den Entwicklungstools verwendet wird (siehe auch `.env`), navigieren Sie zum __Quellordner__ und löschen Sie alle Quellbilder. Möglicherweise müssen Sie die in der Dropdown-Liste [Quelldateien beschriebenen Schritte falsch](#troubleshooting__dev-tool-application-cache) ausführen, wenn die gelöschten Quelldateien weiterhin im Dropdown-Menü angezeigt werden, da sie lokal im &quot;Anwendungszustand&quot;der Entwicklungstools zwischengespeichert werden.
 
    ![Microsoft Azure Blob Storage](./assets/development-tool/troubleshooting__remove-source-files.png)
