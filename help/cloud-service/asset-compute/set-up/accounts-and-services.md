@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6264
 thumbnail: 40377.jpg
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 2%
@@ -39,7 +39,7 @@ Alle Adobe-Services müssen über dieselbe Adobe Org, mit Ihrem Adobe ID zugäng
 
 ## AEM as a Cloud Service{#aem-as-a-cloud-service}
 
-Der Zugriff auf eine AEM als Cloud Service-Umgebung ist erforderlich, um AEM Assets-Verarbeitungsmodule zum Aufrufen der benutzerdefinierten Asset-Compute-Anwendung zu konfigurieren.
+Der Zugriff auf eine AEM als Cloud Service-Umgebung ist erforderlich, um AEM Assets-Verarbeitungswerkzeuge zum Aufrufen des benutzerdefinierten Asset Compute-Workers zu konfigurieren.
 
 Idealerweise steht ein Sandbox-Programm oder eine Nicht-Sandbox-Umgebung zur Verfügung.
 
@@ -47,7 +47,7 @@ Beachten Sie, dass ein lokales AEM-SDK nicht ausreicht, um dieses Lernprogramm a
 
 ## Projekt Adobe{#adobe-project-firefly}
 
-Das [Adobe Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly.html) Framework wird zum Erstellen und Bereitstellen von benutzerdefinierten Anwendungen auf Adobe I/O Runtime, der Serverplattform der Adobe, verwendet. AEM Asset Compute-Anwendungen sind speziell entwickelte Firefly-Anwendungen, die über Verarbeitungsmodule in AEM Assets integriert werden und die Möglichkeit bieten, auf Asset-Binärdateien zuzugreifen und diese zu verarbeiten.
+Das [Adobe Project Firefly](https://www.adobe.io/apis/experienceplatform/project-firefly.html) Framework wird zum Erstellen und Bereitstellen von benutzerdefinierten Aktionen für Adobe I/O Runtime, die serverllose Plattform der Adobe, verwendet. AEM Asset Compute-Projekte sind eigens für Firefly entwickelte Projekte, die über Processing-Profil in AEM Assets integriert werden und die Möglichkeit bieten, auf Asset-Binärdateien zuzugreifen und diese zu verarbeiten.
 
 Um Zugriff auf das Projekt Firefly zu erhalten, melden Sie sich bei der Vorschau an.
 
@@ -57,9 +57,9 @@ Um Zugriff auf das Projekt Firefly zu erhalten, melden Sie sich bei der Vorschau
 
 ## Cloud-Datenspeicherung
 
-Für die lokale Entwicklung von Asset Compute-Anwendungen ist eine Cloud-Datenspeicherung erforderlich.
+Für die lokale Entwicklung von Asset Compute-Projekten ist eine Cloud-Datenspeicherung erforderlich.
 
-Wenn Asset Compute-Anwendungen für die direkte Verwendung durch AEM als Cloud Service auf dem Adobe I/O Runtime bereitgestellt werden, ist diese Cloud-Datenspeicherung nicht unbedingt erforderlich, da AEM die Cloud-Datenspeicherung bietet, von der aus das Asset gelesen und in die Darstellung geschrieben wird.
+Wenn Asset Compute-Mitarbeiter für die direkte Verwendung durch AEM als Cloud Service auf dem Adobe I/O Runtime bereitgestellt werden, ist diese Cloud-Datenspeicherung nicht unbedingt erforderlich, da AEM die Cloud-Datenspeicherung bietet, von der aus das Asset gelesen und in die Darstellung geschrieben wird.
 
 ### Microsoft Azure Blob Storage{#azure-blob-storage}
 
@@ -71,7 +71,7 @@ Dieses Tutorial wird die Datenspeicherung von Azurblut verwenden, aber [Amazon S
 _Clickthrough der Bereitstellung der Azurblase-Datenspeicherung (kein Ton)_
 
 
-1. Melden Sie sich bei Ihrem [Microsoft Azurblau-Konto](https://azure.microsoft.com/en-us/account/)an.
+1. Melden Sie sich bei Ihrem [Microsoft Azurblase-Konto](https://azure.microsoft.com/en-us/account/)an.
 1. Navigieren Sie zum Bereich __Datenspeicherung Accounts__ Azurblase-Dienste.
 1. Tippen Sie auf __+ Hinzufügen__ , um ein neues Blob Datenspeicherung-Konto zu erstellen.
 1. Erstellen Sie bei Bedarf eine neue __Ressourcengruppe__ , z. B.: `aem-as-a-cloud-service`
