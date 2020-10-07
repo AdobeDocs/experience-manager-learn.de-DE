@@ -1,6 +1,6 @@
 ---
 title: Entwickeln eines Asset Computing-Mitarbeiters
-description: Asset Compute-Mitarbeiter sind der Kern einer Asset Compute-Anwendung, da sie benutzerdefinierte Funktionen bereitstellen, mit denen die an einem Asset durchgeführten Arbeiten zur Erstellung einer neuen Darstellung ausgeführt oder orchestriert werden.
+description: Asset Compute-Mitarbeiter sind der Kern von Asset Compute-Projekten, da sie benutzerdefinierte Funktionen bereitstellen, mit denen die Arbeit an einem Asset zur Erstellung einer neuen Darstellung ausgeführt wird oder orchestriert wird.
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '1412'
+source-wordcount: '1508'
 ht-degree: 0%
 
 ---
@@ -20,26 +20,28 @@ ht-degree: 0%
 
 # Entwickeln eines Asset Computing-Mitarbeiters
 
-Asset Compute-Mitarbeiter sind der Kern einer Asset Compute-Anwendung, da sie benutzerdefinierte Funktionen bereitstellen, mit denen die an einem Asset durchgeführten Arbeiten zur Erstellung einer neuen Darstellung ausgeführt oder orchestriert werden.
+Asset Compute-Mitarbeiter sind der Kern eines Asset Compute-Projekts, da sie benutzerdefinierte Funktionen bereitstellen, mit denen die an einem Asset durchgeführten Arbeiten zur Erstellung einer neuen Darstellung ausgeführt oder orchestriert werden.
 
 Das Asset Compute-Projekt generiert automatisch einen einfachen Arbeiter, der die ursprüngliche Binärdatei des Assets ohne Konvertierungen in eine benannte Darstellung kopiert. In diesem Tutorial werden wir diesen Arbeiter ändern, um eine interessantere Darstellung zu machen, um die Macht der Mitarbeiter von Asset Compute zu veranschaulichen.
 
-Wir erstellen einen Asset Compute-Mitarbeiter, der eine neue horizontale Bilddarstellung generiert, die leeren Raum links und rechts von der Asset-Darstellung mit einer verschwommenen Version des Assets abdeckt. Die Breite, Höhe und Weichzeichnung der endgültigen Darstellung werden parametrisiert.
+Wir erstellen einen Asset Compute-Mitarbeiter, der eine neue horizontale Bilddarstellung generiert, die leeren Raum links und rechts neben der Asset-Darstellung mit einer verschwommenen Version des Assets abdeckt. Die Breite, Höhe und Weichzeichnung der endgültigen Darstellung werden parametrisiert.
 
-## Die Ausführung eines Asset Compute-Workers verstehen
+## Logischer Fluss eines Asset Compute-Workers, der aufgerufen wird
 
-Asset Computing-Mitarbeiter implementieren den Asset Compute SDK-Worker-API-Vertrag, der einfach Folgendes umfasst:
+Mitarbeiter von Asset Compute implementieren den Asset Compute SDK-Worker-API-Vertrag in der `renditionCallback(...)` Funktion, die Folgendes versteht:
 
 + __Eingabe:__ Die Binärparameter und Parameter eines AEM Assets im Original
 + __Ausgabe:__ Eine oder mehrere Darstellungen, die dem AEM Asset hinzugefügt werden sollen
 
-![Asset Computing-Arbeitsabläufe](./assets/worker/execution-flow.png)
+![Asset Berechnen des logischen Arbeitsablaufs](./assets/worker/logical-flow.png)
 
 1. Wenn ein Asset-Compute-Mitarbeiter vom AEM Author-Dienst aufgerufen wird, wird er über ein Profil zur Verarbeitung gegen ein AEM Asset geführt. Die ursprüngliche Binärdatei des Assets __(1a)__ wird über den `source` Parameter der Rückruffunktion und __(1b)__ alle im Profil &quot;Verarbeitung&quot;definierten Parameter über den `rendition.instructions` Parametersatz an den Worker übergeben.
-1. Der Asset Compute-Arbeitscode transformiert die in __(1a)__ bereitgestellte Quellbinärdatei basierend auf allen Parametern, die von __(1b)__ bereitgestellt werden, um eine Darstellung der Quellbinärdatei zu generieren.
+1. Die Asset Compute SDK-Ebene akzeptiert die Anforderung vom verarbeitenden Profil und orchestriert die Ausführung der benutzerdefinierten Asset Compute- `renditionCallback(...)` Funktion des Workers und transformiert die in __(1a)__ bereitgestellte Quellbinärdatei basierend auf den von __(1b)__ bereitgestellten Parametern, um eine Darstellung der Quellbinärdatei zu generieren.
    + In diesem Tutorial wird die Darstellung &quot;in Bearbeitung&quot;erstellt, d. h. der Worker erstellt die Darstellung, die Quellbinäre kann jedoch auch zur Generierung der Darstellung an andere Webdienst-APIs gesendet werden.
 1. Der Asset Compute-Mitarbeiter speichert die binäre Darstellung der Darstellung, in `rendition.path` der sie im AEM Author-Dienst gespeichert werden kann.
-1. Nach Abschluss werden die in den Asset Compute-Dienst geschriebenen Binärdaten über den AEM Author-Dienst als Darstellung für das AEM Asset bereitgestellt, auf das der Asset Compute-Mitarbeiter aufgerufen wurde. `rendition.path`
+1. Nach Abschluss des Vorgangs werden die in das Asset Compute-SDK geschriebenen Binärdaten über den AEM Author-Dienst als Darstellung in der Benutzeroberfläche AEM bereitgestellt. `rendition.path`
+
+Das obige Diagramm zeigt die Bedenken der Asset Compute-Entwickler und den logischen Fluss zum Asset Compute-Arbeitsaufruf an. Die [internen Details zur Ausführung](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) von Asset Compute sind für das Merkwürdige verfügbar, es sollten jedoch nur die öffentlichen Asset Compute SDK API-Verträge angefordert werden.
 
 ## Anatomie eines Arbeitnehmers
 
@@ -106,7 +108,7 @@ Dies ist die JavaScript-Arbeitsdatei, die wir in diesem Lernprogramm ändern wer
 
 ## Installieren und Importieren unterstützender NPM-Module
 
-Als Node.js-Anwendungen profitieren Asset Compute-Anwendungen vom stabilen [npm-Modul-Ökosystem](https://npmjs.com). Um npm-Module nutzen zu können, müssen wir sie zunächst in unserem Asset Compute-Anwendungsprojekt installieren.
+Aufgrund der Node.js-Basis profitieren Asset Compute-Projekte vom stabilen [npm-Modul-Ökosystem](https://npmjs.com). Um npm-Module nutzen zu können, müssen wir sie zunächst in unserem Asset Compute-Projekt installieren.
 
 In diesem Arbeitsbereich verwenden wir das [Jimp](https://www.npmjs.com/package/jimp) , um das Darstellungsbild direkt im Code von Node.js zu erstellen und zu bearbeiten.
 
@@ -380,6 +382,12 @@ Diese werden im Arbeiter gelesen `index.js` über:
    ![Parametrisierte PNG-Darstellung](./assets/worker/parameterized-rendition.png)
 
 1. Laden Sie andere Bilder in das Dropdown-Feld __Quelldatei__ hoch und versuchen Sie, den Worker mit anderen Parametern auszuführen!
+
+## Worker index.js auf Github
+
+Das Finale `index.js` ist auf Github unter folgender Adresse abrufbar:
+
++ [aem-guides-wknd-asset-compute/actions/worker/index.js](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/actions/worker/index.js)
 
 ## Fehlerbehebung
 
