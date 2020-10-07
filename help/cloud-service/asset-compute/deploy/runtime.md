@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6286
 thumbnail: KT-6286.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Da dieses Projekt mit `aio app init` dem `Development` Arbeitsbereich erstellt w
 
 So stellen Sie die in der `.env` Projektdatei definierten Arbeitsflächen bereit:
 
-1. Öffnen Sie die Befehlszeile im Stammverzeichnis des Asset Compute-Anwendungsprojekts
+1. Öffnen Sie die Befehlszeile im Stammordner des Projekts &quot;Asset Compute&quot;
 1. Befehl ausführen `aio app deploy`
 1. Führen Sie den Befehl `aio app get-url` aus, um die Worker-URL für die Verwendung im AEM als Cloud Service Processing-Profil abzurufen, um auf diesen benutzerdefinierten Asset Compute-Worker zu verweisen. Wenn das Projekt mehrere Arbeiter enthält, werden für jeden Arbeiter separate URLs aufgelistet.
 
@@ -54,7 +54,7 @@ Wenn Sie True Umgebung-Variablen festlegen, werden Werte für die gleichnamigen 
 Der allgemeine Ansatz, der normalerweise von einem CI/CD-System automatisiert wird, für die Bereitstellung auf Stage- und Production-Umgebung lautet:
 
 1. Stellen Sie sicher, dass das [Adobe-Modul für die Befehlszeilenschnittstelle und das Asset Compute-Plug-In](../set-up/development-environment.md#aio) installiert sind.
-1. Überprüfen Sie die Asset-Compute-Anwendung, die von Git bereitgestellt werden soll.
+1. Sehen Sie sich das Asset Compute-Projekt an, das von Git bereitgestellt werden soll.
 1. Legen Sie die Umgebung mit den Werten fest, die der Zielgruppe Workspace (Phase oder Produktion) entsprechen
    + Die beiden erforderlichen Variablen werden pro Arbeitsbereich in der Adobe-E/A-Entwicklerkonsole über die Funktion &quot;Alle `AIO_runtime_namespace` herunterladen&quot;von Workspace abgerufen `AIO_runtime_auth` und erhalten ____ .
 
@@ -74,7 +74,7 @@ Wenn Ihre Mitarbeiter von Asset Compute andere Variablen benötigen, z. B. in de
 1. Die Arbeiter-URL(s), auf die der AEM als Cloud Service-VerarbeitungsProfil verweist, ist ebenfalls verfügbar über:
    + `aio app get-url`.
 
-Wenn sich die Anwendungsversion zum Berechnen von Assets ändert, ändern sich auch die Arbeits-URL(s) entsprechend der neuen Version und die URL muss in den Profilen zum Verarbeiten aktualisiert werden.
+Wenn die Projektversion &quot;Asset Compute&quot;die Arbeits-URL(s) ändert, ändert sich auch die neue Version, und die URL muss in den Profilen &quot;Verarbeitung&quot;aktualisiert werden.
 
 ## Bereitstellung der Workspace-API{#workspace-api-provisioning}
 
