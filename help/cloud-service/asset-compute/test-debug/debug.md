@@ -10,7 +10,7 @@ doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
@@ -45,6 +45,7 @@ Diese Protokollanweisungen stehen je nach Ausführung des Workers &quot;Asset Co
 Das Modul [wskdebug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm unterstützt das Anhängen eines Debuggers an Asset Compute-Mitarbeiter, einschließlich der Möglichkeit, Haltepunkte im VS-Code festzulegen und den Code schrittweise zu durchlaufen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/40383/?quality=12&learn=on)
+
 _Clickthrough zum Debugging eines Asset Compute-Workers mit wskdebug (kein Audio)_
 
 1. Stellen Sie sicher, dass die [Module &quot;wskdebug](../set-up/development-environment.md#wskdebug) &quot;und [ngrok](../set-up/development-environment.md#ngork) npm installiert sind
