@@ -10,7 +10,7 @@ doc-type: tutorial
 activity: understand
 version: 6.5
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%
@@ -29,14 +29,18 @@ Mit der XML-Variablen können Sie das adaptive Formular vorab ausfüllen oder di
 Zeichenfolgenvariable kann durch Xpathing in die XML-Variable gefüllt werden. Diese Zeichenfolgenvariable wird dann normalerweise zum Füllen der Platzhalter für E-Mail-Vorlagen in der Komponente &quot;E-Mail senden&quot;verwendet
 
 >[!NOTE]
-Wenn Ihr adaptives Formular nicht mit XSD verknüpft ist, sieht der XPath zum Abrufen des Werts eines Elements wie**/afData/afUnboundData/data/submitterName aus**
+>
+>Wenn Ihr adaptives Formular nicht mit XSD verknüpft ist, sieht der XPath zum Abrufen des Werts eines Elements wie
+>
+>**/afData/afUnboundData/data/submitterName**
 
 Die Daten des adaptiven Formulars werden wie oben gezeigt unter dem Datenelement gespeichert. **_Im obigen XPath submitterName ist der Name des Textfelds im adaptiven Formular._**
 
 >[!NOTE]
-**AEM Forms 6.5.0** - Wenn Sie eine Variable vom Typ XML erstellen, um die gesendeten Daten in Ihrem Workflow-Modell zu erfassen, verknüpfen Sie die XSD nicht mit der Variablen. Dies liegt daran, dass beim Senden eines XSD-basierten adaptiven Formulars die gesendeten Daten nicht mit der XSD konform sind. Die XSD-Beschreibungsdaten sind im Element /afData/afBoundData/ enthalten.
-
-**AEM Forms 6.5.1** - Wenn Sie XSD mit Ihrer XML-Variablen verknüpfen, können Sie die Schema-Elemente durchsuchen, um die Variablenzuordnung vorzunehmen. Sie können nicht auf Formulardaten zugreifen, die nicht an Schema-Elemente gebunden sind. Wenn Sie in diesem Fall auf Daten zugreifen möchten, die sowohl an Schema-Elemente als auch an ungebundene Daten gebunden sind, binden Sie im Workflow kein Schema an Ihre XML-Variable. Sie müssen den entsprechenden XPath-Ausdruck verwenden, um die benötigten Daten zu erhalten
+>
+>**AEM Forms 6.5.0** - Wenn Sie eine Variable vom Typ XML erstellen, um die gesendeten Daten in Ihrem Workflow-Modell zu erfassen, verknüpfen Sie die XSD nicht mit der Variablen. Dies liegt daran, dass beim Senden eines XSD-basierten adaptiven Formulars die gesendeten Daten nicht mit der XSD konform sind. Die XSD-Beschreibungsdaten sind im Element /afData/afBoundData/ enthalten.
+>
+>**AEM Forms 6.5.1** - Wenn Sie XSD mit Ihrer XML-Variablen verknüpfen, können Sie die Schema-Elemente durchsuchen, um die Variablenzuordnung vorzunehmen. Sie können nicht auf Formulardaten zugreifen, die nicht an Schema-Elemente gebunden sind. Wenn Sie in diesem Fall auf Daten zugreifen möchten, die sowohl an Schema-Elemente als auch an ungebundene Daten gebunden sind, binden Sie im Workflow kein Schema an Ihre XML-Variable. Sie müssen den entsprechenden XPath-Ausdruck verwenden, um die benötigten Daten zu erhalten
 
 ## Erstellen von XML-Variablen
 
@@ -45,6 +49,7 @@ Die Daten des adaptiven Formulars werden wie oben gezeigt unter dem Datenelement
 ### Schema mit XML-Variable verwenden
 
 **Zuordnen einer XML-Variablen zu Schema. Verwenden Sie diese Funktion ab AEM Forms 6.5.1**
+
 >[!VIDEO](https://video.tv.adobe.com/v/28098?quality=9&learn=on)
 
 #### Verwenden der Variablen in der E-Mail senden
