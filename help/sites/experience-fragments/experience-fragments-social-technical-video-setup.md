@@ -9,7 +9,7 @@ doc-type: setup
 activity: use
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
@@ -22,6 +22,7 @@ ht-degree: 0%
 Erlebnisfragmente ermöglichen es Marketingexperten, in AEM erstellte Erlebnisse auf Plattformen sozialer Medien zu veröffentlichen. Im folgenden Video werden die Einstellungen und Konfigurationen erläutert, die zum Veröffentlichen von Erlebnisfragmenten auf Facebook und Pinterest erforderlich sind.
 
 >[!VIDEO](https://video.tv.adobe.com/v/20592/?quality=9&learn=on)
+
 *[Erlebnisfragmente]- Einrichtung und Konfiguration von Social-Beiträgen für Facebook und Pinterest*
 
 ## Checkliste für die Konfiguration von Erlebnisfragmenten zum Posten auf Facebook und Pinterest
