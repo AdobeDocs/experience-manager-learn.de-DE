@@ -12,27 +12,33 @@ activity: setup
 version: 6.4,6.5
 discoiquuid: 1182ef4d-5838-433b-991d-e24ab805ae0e
 translation-type: tm+mt
-source-git-commit: 82127d5be9a4b969537738f9ba537efe07f38479
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 7%
 
 ---
 
+
 # Vereinfachte Schritte für die Installation von AEM Forms unter Windows
 
 >[!NOTE]
+>
 >Klicken Sie niemals auf die AEM Quick Beginn-JAR, wenn Sie AEM Forms verwenden möchten.
+>
 >Achten Sie außerdem darauf, dass sich im Pfad des AEM Forms-Installationsordners keine Leerzeichen befinden.
+>
 >Installieren Sie beispielsweise AEM Forms nicht unter c:\jack and jill\AEM Forms folder
 
 >[!NOTE]
-Wenn Sie AEM Forms 6.5 installieren, vergewissern Sie sich bitte, dass die folgenden 32-Bit-Microsoft Visual C++-Redistributables installiert sind.
+>
+>Wenn Sie AEM Forms 6.5 installieren, vergewissern Sie sich bitte, dass die folgenden 32-Bit-Microsoft Visual C++-Redistributables installiert sind.
+>
+>* Microsoft Visual C++ 2008 Redistributable
+>* Microsoft Visual C++ 2010 redistributable
+>* Microsoft Visual C++ 2012 Redistributable
+>* Microsoft Visual C++ 2013 redistributable (ab 6.5)
 
-* Microsoft Visual C++ 2008 Redistributable
-* Microsoft Visual C++ 2010 redistributable
-* Microsoft Visual C++ 2012 Redistributable
-* Microsoft Visual C++ 2013 redistributable (ab 6.5)
 
 Obwohl wir empfehlen, die [offizielle Dokumentation](https://helpx.adobe.com/de/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html) für die Installation von AEM Forms zu befolgen. Die folgenden Schritte können ausgeführt werden, um AEM Forms unter Windows-Umgebung zu installieren und zu konfigurieren:
 
