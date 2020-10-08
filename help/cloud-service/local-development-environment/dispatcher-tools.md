@@ -11,7 +11,7 @@ audience: developer
 kt: 4679
 thumbnail: 30603.jpg
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '1508'
 ht-degree: 2%
@@ -74,6 +74,7 @@ Die Version der Dispatcher Tools unterscheidet sich von der des AEM SDK. Vergewi
 Beachten Sie, dass alle unten angegebenen Befehle davon ausgehen, dass der aktuelle Arbeitsordner den erweiterten Dispatcher Tools-Inhalt enthält.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12&learn=on)
+
 *In diesem Video wird macOS zur Veranschaulichung verwendet. Die entsprechenden Windows/Linux-Befehle können verwendet werden, um ähnliche Ergebnisse zu erzielen*
 
 ## Verstehen der Dispatcher-Konfigurationsdateien
@@ -86,6 +87,7 @@ Die Dispatcher-Tools bieten eine Reihe von Apache HTTP-Webserver- und Dispatcher
 Diese Dateien sollen in ein Experience Manager-Maven-Projekt kopiert werden, sofern sie nicht bereits im Experience Manager-Maven-Projekt `dispatcher/src` vorhanden sind.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30602/?quality=12&learn=on)
+
 *In diesem Video wird macOS zur Veranschaulichung verwendet. Die entsprechenden Windows/Linux-Befehle können verwendet werden, um ähnliche Ergebnisse zu erzielen*
 
 Eine vollständige Beschreibung der Konfigurationsdateien finden Sie in den entpackten Dispatcher Tools wie `dispatcher-sdk-x.x.x/docs/Config.html`.
@@ -142,6 +144,7 @@ Um Dispatcher-Tools für die Dispatcher-Konfiguration eines Experience Manager-P
    ```
 
 >[!VIDEO](https://video.tv.adobe.com/v/30603/?quality=12&learn=on)
+
 *In diesem Video wird macOS zur Veranschaulichung verwendet. Die entsprechenden Windows/Linux-Befehle können verwendet werden, um ähnliche Ergebnisse zu erzielen*
 
 ## Dispatcher Tools-Protokolle
@@ -177,6 +180,7 @@ Ein oder mehrere Parameter können an `docker_run`
    ```
 
 >[!VIDEO](https://video.tv.adobe.com/v/30604/?quality=12&learn=on)
+
 *In diesem Video wird macOS zur Veranschaulichung verwendet. Die entsprechenden Windows/Linux-Befehle können verwendet werden, um ähnliche Ergebnisse zu erzielen*
 
 ## Aktualisieren der Dispatcher-Tools{#dispatcher-tools-version}
