@@ -10,10 +10,10 @@ version: cloud-service
 kt: 6352
 thumbnail: 6352-personalization-using-vec.jpg
 translation-type: tm+mt
-source-git-commit: 892cb074814eabd347ba7aef883721df0ee4d431
+source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '485'
+ht-degree: 1%
 
 ---
 
@@ -22,6 +22,10 @@ ht-degree: 0%
 
 Erfahren Sie, wie Sie mit Visual Experience Composer (VEC) eine Aktivität zur A/B-Zielgruppe erstellen.
 
+Bevor Sie eine Aktivität in der Zielgruppe erstellen, müssen Sie Folgendes einrichten:
+
+1. [Experience Platform Launch und AEM integrieren](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
+2. [Integrieren von Adobe Experience Manager mit Adobe Target mithilfe von Cloud Services](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/target/setup-aem-target-cloud-service.html)
 
 ## Szenario-Übersicht
 
