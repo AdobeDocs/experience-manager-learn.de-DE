@@ -8,7 +8,7 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4
 translation-type: tm+mt
-source-git-commit: 1ba56ad44df4dc327cf37d39ac72539b5c7af4a2
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 2%
@@ -32,4 +32,5 @@ Im nächsten Schritt erstellen Sie ein Schema aus dem im vorherigen Schritt erst
 Damit diese Demo auf Ihrem System funktioniert, müssen Sie einen Ordner mit dem Namen `acroforms` &quot;AEM Assets&quot;erstellen. Laden Sie das Acroform in diesen `acroforms` Ordner hoch.
 
 >[!NOTE]
-Der Beispielcode sucht nach dem acroform in diesem Ordner. Das Formular &quot;acroform&quot;ist erforderlich, um die gesendeten Daten des adaptiven Formulars zusammenzuführen.
+>
+>Der Beispielcode sucht nach dem acroform in diesem Ordner. Das Formular &quot;acroform&quot;ist erforderlich, um die gesendeten Daten des adaptiven Formulars zusammenzuführen.
