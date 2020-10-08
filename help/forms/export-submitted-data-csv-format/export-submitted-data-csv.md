@@ -7,7 +7,7 @@ audience: developer
 doc-type: article
 activity: implement
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '398'
 ht-degree: 1%
@@ -40,7 +40,8 @@ Der folgende OSGI-Dienst wurde erstellt, um die gesendeten Daten im CSV-Format z
 * Linie 89: Dies ist der Einstiegspunkt zum Dienst. Die Methode `getCSVFile(..)` nimmt formName als Eingabeparameter an und ruft die gesendeten Daten zum angegebenen Formularnamen ab.
 
 >[!NOTE]
-Der Code setzt voraus, dass Sie in der Felix Web Console eine Verbindung mit DataSource mit dem Namen &quot;aemformstutorial&quot;definiert haben. Der Code geht auch davon aus, dass Sie ein Schema in der Datenbank mit dem Namen aemformstutorial haben
+>
+>Der Code setzt voraus, dass Sie in der Felix Web Console eine Verbindung mit DataSource mit dem Namen &quot;aemformstutorial&quot;definiert haben. Der Code geht auch davon aus, dass Sie ein Schema in der Datenbank mit dem Namen aemformstutorial haben
 
 ```java
 package com.aemforms.storeandexport.core;
