@@ -10,7 +10,7 @@ doc-type: tutorial
 activity: understand
 version: 6.5
 translation-type: tm+mt
-source-git-commit: ca4a8f02ea9ec5db15dbe6f322731748da90be6b
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '895'
 ht-degree: 1%
@@ -129,7 +129,8 @@ Zeilen 24-26 - Get ResourceResolver und dann die Ressource, die auf attachmentFi
 Der Rest des Codes erstellt Dokument-Objekte, indem das untergeordnete Objekt der Ressource, das auf attachmentFilePath zeigt, mithilfe der API durchlaufen wird. Dieses Dokument-Objekt ist spezifisch für AEM Forms. Anschließend verwenden wir die copyToFile-Methode des Dokument-Objekts, um das Dokument-Objekt zu speichern.
 
 >[!NOTE]
-Da wir ein für AEM Forms spezifisches Dokument-Objekt verwenden, müssen Sie die aemfd-client-sdk-Abhängigkeit in Ihr Maven-Projekt einbeziehen. Die Gruppen-ID lautet com.adobe.aemfd und die Artefakt-ID aemfd-client-sdk.
+>
+>Da wir ein für AEM Forms spezifisches Dokument-Objekt verwenden, müssen Sie die aemfd-client-sdk-Abhängigkeit in Ihr Maven-Projekt einbeziehen. Die Gruppen-ID lautet com.adobe.aemfd und die Artefakt-ID aemfd-client-sdk.
 
 #### Erstellen und Bereitstellen
 
