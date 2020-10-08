@@ -12,7 +12,7 @@ activity: implement
 version: 6.4,6.5
 discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
 translation-type: tm+mt
-source-git-commit: 4f51f7bf00827210d2631b9335768a9980f6655c
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '389'
 ht-degree: 1%
@@ -68,5 +68,7 @@ Melden Sie sich bei AEM Forms an.
 * [Öffnen Sie getad.html](http://localhost:4502/content/getad.html)
 
 * Der mit dieser URL verknüpfte Code erhält die Kontonummer des angemeldeten Benutzers. Diese Kontonummer wird dann als Anforderungsattribut an den FDM übergeben. Der FDM ruft dann die mit dieser Kontonummer verknüpften Daten ab und füllt das Web-Kanal-Dokument.
+
 >[!NOTE]
-Bitte schauen Sie sich die **Datei /apps/AEMForms/fetchad/GET.jsp** in crx an. Vergewissern Sie sich, dass die String-Variable webChannelDocument auf einen gültigen Kommunikations-Dokument-Pfad verweist.
+>
+>Bitte schauen Sie sich die **Datei /apps/AEMForms/fetchad/GET.jsp** in crx an. Vergewissern Sie sich, dass die String-Variable webChannelDocument auf einen gültigen Kommunikations-Dokument-Pfad verweist.
