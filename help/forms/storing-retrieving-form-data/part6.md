@@ -8,7 +8,7 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 translation-type: tm+mt
-source-git-commit: 6ae8110d4f4bc80682c35b0dab3fe7a62cad88f3
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 6%
@@ -19,7 +19,12 @@ ht-degree: 6%
 # Bereitstellen auf dem Server
 
 >[!NOTE]
-Für die Ausführung auf Ihrem System sind die folgenden Schritte erforderlichAEM Forms(Version 6.3 oder höher)MYSQL-Datenbank
+>
+>Die folgenden Schritte sind erforderlich, um diese Funktion auf Ihrem System ausführen zu können
+>
+>* AEM Forms(Version 6.3 oder höher)
+>* MYSQL-Datenbank
+
 
 Gehen Sie wie folgt vor, um diese Funktion auf Ihrer AEM Forms-Instanz zu testen
 
