@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6353
 thumbnail: 6353-personalization-web-page.jpg
 translation-type: tm+mt
-source-git-commit: 892cb074814eabd347ba7aef883721df0ee4d431
+source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '457'
 ht-degree: 1%
 
 ---
@@ -21,6 +21,10 @@ ht-degree: 1%
 # Personalisierung des gesamten Erlebnisses einer Webseite {#personalization-fpe}
 
 Erfahren Sie, wie Sie eine Aktivität erstellen, um Ihre Siteseiten, die auf AEM gehostet werden, mit Adobe Target auf eine neue Seite umzuleiten.
+
+Bevor Sie eine Aktivität in der Zielgruppe erstellen, müssen Sie Folgendes einrichten:
+
+1. [Experience Platform Launch und AEM integrieren](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
 
 ## Szenario-Übersicht
 
