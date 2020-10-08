@@ -12,7 +12,7 @@ doc-type: technical video
 activity: setup
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 43%
@@ -30,7 +30,7 @@ Bietet schrittweise Anleitungen zur Integration von Adobe Experience Manager (AE
 
 >[!NOTE]
 >
-> Zum Einrichten des Smart Content Service benötigen Sie ein Adobe ID-Konto mit Administratorrechten für das Unternehmen, für das der Smart Content Service aktiviert ist.
+>Um Smart Content Service einzurichten, benötigen Sie ein Adobe ID-Konto mit Administratorrechten für das Unternehmen, für das der Smart Content Service aktiviert ist.
 
 Im Video werden die folgenden wichtigen Aufgaben erläutert, die zum Konfigurieren des Smart Content Service erforderlich sind.
 
