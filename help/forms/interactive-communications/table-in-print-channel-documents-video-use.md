@@ -9,7 +9,7 @@ doc-type: technical video
 activity: implement
 version: 6.4,6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 0%
@@ -26,7 +26,8 @@ Im folgenden Video werden die Schritte erläutert, die erforderlich sind, um die
 Tabellen werden verwendet, um Daten tabellarisch anzuzeigen. Die Zeilen in der Tabelle müssen je nach den von der Datenquelle zurückgegebenen Daten wachsen oder schrumpfen. Um eine Tabelle im Print Kanal-Dokument zu verwenden, müssen wir eine Layoutdatei (xdp-Datei) mit AEM Forms Designer erstellen. In dieser Layoutdatei fügen wir die Tabelle mit der erforderlichen Spaltenanzahl hinzu. Stellen Sie sicher, dass der Objekttyp für das Spaltenfeld je nach Bedarf entweder TextField oder Numeric Field ist. Für jede Spalte stellen die Felder sicher, dass die Datenbindung auf &quot;Name verwenden&quot;eingestellt ist.
 
 >[!NOTE]
-Um die Tabelle dynamisch zu gestalten, stellen Sie sicher, dass Sie die Zeile als wiederholend markiert haben.
+>
+>Um die Tabelle dynamisch zu gestalten, stellen Sie sicher, dass Sie die Zeile als wiederholend markiert haben.
 
 **Testen Sie es auf Ihrem eigenen Server**
 
