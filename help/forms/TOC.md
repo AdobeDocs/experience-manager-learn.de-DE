@@ -6,9 +6,9 @@ user-guide-description: Collection of AEM Forms resources for beginners and expe
 breadcrumb-title: AEM Forms Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
+source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '843'
 ht-degree: 3%
 
 ---
@@ -71,7 +71,7 @@ ht-degree: 3%
    + [Umgang mit Fehlermeldungen im Dienstschritt des Formulardatenmodells](adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)
    + [Formulardatenmodelldienst in AEM 6.5.1 Workflow](adaptive-forms/form-data-model-service-as-step-in-aem65-workflow-video-use.md)
    + [Formulardatenmodell ohne Datenquelle](adaptive-forms/form-data-model-without-data-source-feature-video-use.md)
-   + [Datenmodellelement des berechneten Formulars](adaptive-forms/computed-form-data-model-elements-aem-forms-feature-video.md)
+   + [Berechnetes Datenmodellelement des Formulars](adaptive-forms/computed-form-data-model-elements-aem-forms-feature-video.md)
    + [JDBC-Datenquelle in AEM Forms einrichten](adaptive-forms/data-integration-technical-video-setup.md)
    + [JDBC-basiertes Formulardatenmodell](adaptive-forms/jdbc-data-model-technical-video-use.md)
    + [Erstellen von Verknüpfungen zwischen zwei Entitäten im Formulardatenmodell](adaptive-forms/association-data-model-technical-video-use.md)
@@ -169,7 +169,9 @@ ht-degree: 3%
    + [Verwendungsrechte auf PDF bei XDP-Darstellung anwenden](document-services/rendering-and-reader-extending-xdp-templates-article.md)
    + [Verwendungsrechte auf hochgeladene PDF-Dateien anwenden](document-services/apply-reader-extension-rights-to-pdf.md)
    + [Dokumente zertifizieren](document-services/certifying-documents-aem-forms-tutorial.md)
-+ Interaktive Kommunikation mit Print Kanal {#ic-print-channel-tutorial}
+   + [Zusammenstellen von Formularanlagen](document-services/assemble-form-attachments.md)
++ Interaktive Kommunikation mit Print Kanal
+{#ic-print-channel-tutorial}
    + [Einführung](ic-print-channel-tutorial/introduction.md)
    + [Tomcat einrichten](ic-print-channel-tutorial/set-up-tomcat.md)
    + [Datenquelle erstellen](ic-print-channel-tutorial/create-data-source.md)
