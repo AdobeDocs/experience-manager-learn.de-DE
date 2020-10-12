@@ -10,9 +10,9 @@ version: 6.4,6.5
 kt: 6406
 thumbnail: kt-6406.jpg
 translation-type: tm+mt
-source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
+source-git-commit: a9fbd73f128998bb201ef8715e5e725e94ee1ede
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '619'
 ht-degree: 1%
 
 ---
@@ -137,7 +137,7 @@ Im Folgenden wird die Struktur des Payload-Ordners dargestellt, nachdem die Form
 * Laden Sie das Formular [für die Formularanlagen](assets/assemble-form-attachments-af.zip) zusammenstellen auf Ihr lokales System herunter.
 * Importieren Sie das Formular von[der Seite &quot;Formulare und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) &quot;.
 * Laden Sie den [Workflow](assets/assemble-form-attachments.zip) herunter und importieren Sie ihn mithilfe des Paketmanagers in AEM.
-* Herunterladen des benutzerdefinierten Bundles (assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
+* Herunterladen des [benutzerdefinierten Bundles](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
 * Bereitstellen und Beginn des Bundles mithilfe der [Webkonsole](http://localhost:4502/system/console/bundles)
 * Verweisen Sie Ihren Browser auf [AssembleAttachments Form](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
 * hinzufügen einer Anlage im ID-Dokument und ein paar PDF-Dokumente zum Abschnitt &quot;Bankauszüge&quot;
