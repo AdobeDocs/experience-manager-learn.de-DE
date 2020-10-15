@@ -1,6 +1,6 @@
 ---
 user-guide-title: 'Erste Schritte mit AEM und Adobe Target '
-user-guide-description: An end-to-end tutorial showing how to deliver personalized experiences using Experience Manager and Target.
+user-guide-description: Ein Lernprogramm, das von Anfang bis Ende zeigt, wie mithilfe von Experience Manager und Target personalisierte Erlebnisse bereitgestellt werden können.
 product: experience manager
 version: 6.5
 sub-product: Sites
@@ -14,13 +14,13 @@ kt: 2214
 translation-type: tm+mt
 source-git-commit: bdb62b3361f20a0d0f27f5818cb82276980755d1
 workflow-type: tm+mt
-source-wordcount: '51'
-ht-degree: 5%
+source-wordcount: '65'
+ht-degree: 46%
 
 ---
 
 
-# Erste Schritte mit AEM und Zielgruppe {#aem-target-tutorial}
+# Erste Schritte mit AEM und Target {#aem-target-tutorial}
 
 + [Übersicht](./overview.md)
 + [Personalisierung mit AEM Erlebnisfragmenten](./personalization-use-case-1.md)
