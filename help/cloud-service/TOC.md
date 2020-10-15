@@ -1,14 +1,14 @@
 ---
 user-guide-title: Tutorials zu Adobe Experience Manager as a Cloud Service
-user-guide-description: A collection of tutorials for Adobe Experience Manager as a Cloud Service.
-breadcrumb-title: AEM as a Cloud Service Tutorials
+user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manager als Cloud-Service.
+breadcrumb-title: Tutorials zu AEM als Cloud-Service
 sub-product: cloud-service
 team: TM
 translation-type: tm+mt
 source-git-commit: 50519b9526182b528047069f211498099e3a4c88
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 31%
+source-wordcount: '197'
+ht-degree: 38%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 31%
       + [OSGi-Webkonsole](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher Tools](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [Andere Werkzeuge](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + Debuggen von AEM als Cloud Service{#debugging-aem-as-a-cloud-service}
+   + Debugging AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [Übersicht](./debugging/cloud-service/overview.md)
       + [Protokolle](./debugging/cloud-service/logs.md)
       + [Erstellen und Bereitstellen](./debugging/cloud-service/build-and-deployment.md)
