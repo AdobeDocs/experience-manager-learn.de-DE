@@ -1,14 +1,14 @@
 ---
 user-guide-title: AEM Foundation-Videos und -Tutorials
-breadcrumb-title: AEM Foundation Tutorials
-user-guide-description: A collection of videos and tutorials for Adobe Experience Manager Foundation.
+breadcrumb-title: AEM Foundation-Tutorials
+user-guide-description: 'Eine Sammlung von Videos und Tutorials für die Adobe Experience Manager Foundation. '
 sub-product: Stiftung
 index: y
 translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 4%
+source-wordcount: '156'
+ht-degree: 19%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 4%
    + [Best Practices für die Java-API](./development/understand-java-api-best-practices.md)
    + [Sling Model Exporter](./development/understand-sling-model-exporter.md)
 + Projekte {#projects}
-   + [AEM entwickeln](./projects/develop-aem-projects.md)
+   + [Entwickeln AEM Projekte](./projects/develop-aem-projects.md)
    + [Verwenden von Projektplänen](./projects/use-project-masters.md)
 + Sicherheit {#security}
    + [AEM Security Notification (November 2018)](./security/aem-security-notification-2018-11.md)
