@@ -1,20 +1,20 @@
 ---
 sub-product: Formulare
 audience: developer
-user-guide-title: AEM Forms Videos und Tutorials
-user-guide-description: Collection of AEM Forms resources for beginners and experienced AEM Forms developers.
-breadcrumb-title: AEM Forms Tutorials
+user-guide-title: AEM Forms-Videos und -Tutorials
+user-guide-description: Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler.
+breadcrumb-title: AEM Forms-Tutorials
 index: y
 translation-type: tm+mt
 source-git-commit: 8aed732a0488aa9303ddf35f6c2065eb08ec0c4c
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 3%
+source-wordcount: '858'
+ht-degree: 6%
 
 ---
 
 
-# AEM Forms Videos und Tutorials {#forms}
+# AEM Forms-Videos und -Tutorials {#forms}
 
 + [Übersicht](overview.md)
 + [Bewährte Verfahren](adaptive-forms/best-practices-adaptive-forms.md)
