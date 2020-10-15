@@ -1,7 +1,7 @@
 ---
-user-guide-title: Erste Schritte mit AEM
-user-guide-description: An end-to-end tutorial illustrating how to build-out and expose content using AEM Headless.
-breadcrumb-title: AEM Headless Tutorial
+user-guide-title: Erste Schritte mit AEM Headless
+user-guide-description: Ein Tutorial, in dem von Anfang bis Ende erläutert wird, wie Inhalte mithilfe von AEM Headless aufgebaut und bereitgestellt werden können.
+breadcrumb-title: AEM Headless-Tutorial
 version: 6.5
 sub-product: content-services
 doc-type: tutorial
@@ -14,13 +14,13 @@ index: y
 translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 2%
+source-wordcount: '64'
+ht-degree: 42%
 
 ---
 
 
-# Getting Started with AEM Headless{#getting-started-with-aem-headless}
+# Erste Schritte mit AEM Headless{#getting-started-with-aem-headless}
 
 + [Übersicht](./overview.md)
 + [1 - Lernprogramm einrichten](./chapter-1.md)
