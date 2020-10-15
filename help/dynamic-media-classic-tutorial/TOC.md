@@ -6,14 +6,14 @@ doc-type: tutorial
 activity: develop
 audience: developer
 user-guide-title: Einführung in Dynamic Media Classic
-user-guide-description: This tutorial shows how to use Dynamic Media Classic to create, author, and deliver rich media content.
-breadcrumb-title: Dynamic Media Classic Tutorials
+user-guide-description: Dieses Lernprogramm zeigt, wie Sie mit Dynamic Media Classic Rich-Media-Inhalte erstellen, bearbeiten und bereitstellen können.
+breadcrumb-title: Dynamic Media Classic-Tutorials
 index: y
 translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
-source-wordcount: '55'
-ht-degree: 9%
+source-wordcount: '76'
+ht-degree: 47%
 
 ---
 
