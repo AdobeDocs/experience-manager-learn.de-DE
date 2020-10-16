@@ -10,17 +10,17 @@ version: cloud-service
 kt: 6296
 thumbnail: KT-6296.jpg
 translation-type: tm+mt
-source-git-commit: 97fe98c8c62f5472f7771bbc803b2a47dc97044d
+source-git-commit: 096cdccdf1675480aa0a35d46ce7b62a3906dad1
 workflow-type: tm+mt
-source-wordcount: '1773'
-ht-degree: 2%
+source-wordcount: '1831'
+ht-degree: 4%
 
 ---
 
 
 # Klickende Komponente mit Adobe Analytics verfolgen
 
-Verwenden Sie die Ereignis-gesteuerte [Adobe-Client-Datenschicht mit AEM Kernkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html) , um Klicks auf bestimmte Komponenten auf einer Adobe Experience Manager-Site zu verfolgen. Erfahren Sie, wie Sie in Experience Platform Launch Regeln verwenden, um auf Ereignis mit Klick zu hören, die Daten nach Komponente zu filtern und an ein Adobe Analytics mit einem Tracking-Link-Beacon zu senden.
+Use the event-driven [Adobe Client Data Layer with AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html) to track clicks of specific components on an Adobe Experience Manager site. Erfahren Sie, wie Sie Regeln in Experience Platform Launch verwenden, um Klick-Ereignisse zu überwachen, nach Komponenten zu filtern und die Daten mit einem Verfolgungs-Linkbeacon an Adobe Analytics zu senden.
 
 ## Was Sie erstellen
 
@@ -87,7 +87,7 @@ Bevor Sie Regeln in Launch erstellen, sollten Sie das [Schema für Button und Te
 Die Adobe Client Data Layer ist eine vom **Ereignis** gesteuerte Datenschicht. Wenn auf die Kernkomponente geklickt wird, wird ein `cmp:click` Ereignis über die Datenschicht gesendet. Anschließend erstellen Sie eine Regel, die auf das `cmp:click` Ereignis überwacht.
 
 1. Navigieren Sie zum Experience Platform Launch und zur Webeigenschaft, die in die AEM Site integriert ist.
-1. Navigieren Sie zum Abschnitt **Regeln** in der Benutzeroberfläche &quot;Starten&quot;und klicken Sie dann auf **Hinzufügen Regel**.
+1. Navigieren Sie zum Abschnitt **Regeln** in der Benutzeroberfläche &quot;Start&quot;und klicken Sie dann auf **Hinzufügen Regel**.
 1. Benennen Sie die Regel **CTA angeklickt**.
 1. Klicken Sie auf **Ereignisse** > **Hinzufügen** , um den Assistenten zur **Ereignis-Konfiguration** zu öffnen.
 1. Wählen Sie unter **Ereignistyp** die Option **Benutzerdefinierter Code**.
@@ -255,9 +255,13 @@ Derzeit gibt die **CTA Click** -Regel einfach eine Konsolenanweisung aus. Als N�
 
    * `evar8` - `%Component ID%`
    * `prop8` - `%Component ID%`
-   * `event8` - `CTA Clicked`
+   * `event8`
 
    ![EVar-Prop und Ereignis festlegen](assets/track-clicked-component/set-evar-prop-event.png)
+
+   >[!NOTE]
+   >
+   > Hier `%Component ID%` wird verwendet, da es eine eindeutige Kennung für die CTA sicherstellt, auf die geklickt wurde. Eine mögliche Nebenwirkung bei der Verwendung `%Component ID%` ist, dass der Analytics-Bericht Werte wie `button-2e6d32893a`. Die Verwendung `%Component Title%` würde einen benutzerfreundlicheren Namen geben, aber der Wert könnte nicht eindeutig sein.
 
 1. Fügen Sie anschließend rechts neben dem **Adobe Analytics - Variablen** festlegen eine weitere Aktion hinzu, indem Sie auf das **Pluszeichen** tippen:
 
@@ -265,9 +269,11 @@ Derzeit gibt die **CTA Click** -Regel einfach eine Konsolenanweisung aus. Als N�
 
 1. Legen Sie als **Erweiterungstyp** **Adobe Analytics** fest und legen Sie als **Aktionstyp** den **Beacon**-Senden-Typ fest.
 1. Stellen Sie unter **Verfolgung** das Optionsfeld auf **`s.tl()`**.
-1. Wählen Sie für **Linktyp** **Benutzerspezifischen Link** und für **Linkname** den Wert auf den **Komponententitel** des Datenelements:
+1. Wählen Sie für **Linktyp** **Benutzerspezifischen Link** und für **Linkname** den Wert: **`%Component Title%: CTA Clicked`**:
 
    ![Konfiguration für den Beacon &quot;Link senden&quot;](assets/track-clicked-component/analytics-send-beacon-link-track.png)
+
+   Dadurch werden die dynamische Variable aus dem Datenelement **Komponententitel** und die statische Zeichenfolge **CTA angeklickt** kombiniert.
 
 1. Speichern Sie die Änderungen. Die **CTA-Regel, auf die geklickt** wurde, sollte jetzt die folgende Konfiguration aufweisen:
 
