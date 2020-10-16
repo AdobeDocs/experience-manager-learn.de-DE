@@ -10,17 +10,17 @@ version: cloud-service
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 translation-type: tm+mt
-source-git-commit: 97fe98c8c62f5472f7771bbc803b2a47dc97044d
+source-git-commit: 096cdccdf1675480aa0a35d46ce7b62a3906dad1
 workflow-type: tm+mt
-source-wordcount: '2402'
-ht-degree: 4%
+source-wordcount: '2414'
+ht-degree: 5%
 
 ---
 
 
 # Seitendaten mit Adobe Analytics erfassen
 
-Erfahren Sie, wie Sie die integrierten Funktionen der [Adobe Client Data Layer mit AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html) verwenden können, um Daten zu einer Seite in Adobe Experience Manager Sites zu erfassen. [Experience Platform Launch](https://www.adobe.com/experience-platform/launch.html) und die [Adobe Analytics-Erweiterung](https://docs.adobe.com/content/help/de-DE/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html) werden verwendet, um Regeln zum Senden von Seitendaten an Adobe Analytics zu erstellen.
+Learn to use the built-in features of the [Adobe Client Data Layer with AEM Core Components](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html) to collect data about a page in Adobe Experience Manager Sites. [Experience Platform Launch und die Adobe Analytics-Erweiterung werden verwendet, um Regeln zum Senden von Seitendaten an Adobe Analytics zu erstellen.](https://www.adobe.com/experience-platform/launch.html)[](https://docs.adobe.com/content/help/de-DE/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)
 
 ## Was Sie erstellen
 
@@ -265,11 +265,15 @@ Fügen Sie dann der Eigenschaft &quot;Start&quot;die Analytics-Erweiterung hinzu
 
    >[!NOTE]
    >
-   > In diesem Lernprogramm können Sie eine Report Suite für alle Umgebung verwenden. In Wirklichkeit sollten Sie jedoch separate Report Suites verwenden, wie in der folgenden Abbildung dargestellt
+   > In diesem Lernprogramm können Sie eine Report Suite für alle Umgebung verwenden. In Wirklichkeit sollten Sie jedoch separate Report Suites verwenden, wie im folgenden Bild dargestellt.
 
    >[!TIP]
    >
    >Es wird empfohlen, die Option *&quot;Bibliothek für mich* verwalten&quot;als Einstellung &quot;Bibliotheksverwaltung&quot;zu verwenden, da die `AppMeasurement.js` Bibliothek dadurch leichter auf dem neuesten Stand gehalten werden kann.
+
+1. Markieren Sie das Kontrollkästchen, um **Activity Map** verwenden zu aktivieren.
+
+   ![Activity Map aktivieren](assets/track-clicked-component/analytic-track-click.png)
 
 1. Geben Sie unter **Allgemein** > **Tracking-Server** Ihren Tracking-Server ein, z. `tmd.sc.omtrdc.net`. Geben Sie den SSL-Tracking-Server ein, wenn Ihre Site `https://`
 
