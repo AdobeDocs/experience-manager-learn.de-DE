@@ -10,9 +10,9 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 translation-type: tm+mt
-source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
+source-git-commit: 4cfbf975919eb38413be8446b70b107bbfebb845
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1406'
 ht-degree: 2%
 
 ---
@@ -23,12 +23,6 @@ ht-degree: 2%
 Adobe Experience Manager (AEM) kann lokal mit dem AEM als QuickStart-Jar des Cloud Service-SDK ausgeführt werden. Auf diese Weise können Entwickler benutzerdefinierten Code, Konfiguration und Inhalt bereitstellen und testen, bevor sie sich an die Quellcodeverwaltung wenden, und ihn als Cloud Service-Umgebung auf einem AEM bereitstellen.
 
 Beachten Sie, dass dies als Kurzschrift für das Benutzerverzeichnis verwendet `~` wird. Unter Windows entspricht dies `%HOMEPATH%`.
-
->[!VIDEO](https://video.tv.adobe.com/v/32551/?quality=12&learn=on)
-
->[!NOTE]
->
-> In diesem Video wird gezeigt, wie eine lokale Instanz von Adobe Experience Manager in wenigen Minuten mit dem lokalen Schnellstart des AEM SDK installiert und ausgeführt wird. Dieses Video zeigt, wie Sie den lokalen Schnellstart des AEM SDK starten, indem Sie mit der Dublette auf die Schnellstart-JAR-Datei klicken. Dies funktioniert jedoch nicht, wenn Java 8 auf dem Computer installiert ist. Alternativ kann der lokale Schnellstart des AEM SDKs über die Befehlszeile mit dem `java -jar ...` Befehl gestartet werden, wie auf dieser Seite [beschrieben](#set-up-local-aem-author-service).
 
 ## Java installieren
 
@@ -55,9 +49,6 @@ Die AEM als Cloud Service-SDK oder AEM SDK enthält die QuickStart-JAR, mit der 
 ## Extrahieren Sie die Schnellstart-JAR-Datei aus der AEM SDK-ZIP.
 
 1. Unzip the downloaded `aem-sdk-XXX.zip` file
-1. Vergewissern Sie sich, dass die __Datei &quot;license.properties__ &quot;für den Experience Manager verfügbar ist
-
-Beachten Sie, dass für den Beginn von AEM Author- und Publish-Diensten dieselben QuickStart-Jar- und die license.properties-Dateien verwendet werden __ .
 
 ## Lokalen AEM Authoring-Dienst einrichten{#set-up-local-aem-author-service}
 
@@ -65,7 +56,6 @@ Der lokale AEM Author-Dienst bietet Entwicklern eine lokale Erfahrung, die digit
 
 1. Erstellen Sie den Ordner `~/aem-sdk/author`
 1. Kopieren Sie die __Quickstart-JAR__ -Datei in `~/aem-sdk/author` und benennen Sie sie in `aem-author-p4502.jar`
-1. Kopieren Sie die Datei __license.properties__ in  `~/aem-sdk/author`
 1. Beginn Sie den lokalen AEM Author-Dienst, indem Sie Folgendes über die Befehlszeile ausführen:
    + `java -jar aem-author-p4502.jar`
       + Geben Sie das Administratorkennwort an `admin`. Jedes Admin-Kennwort ist zulässig. Es wird jedoch empfohlen, den Standard für die lokale Entwicklung zu verwenden, um eine Neukonfiguration zu vermeiden.
@@ -78,7 +68,6 @@ Windows:
 ```shell
 $ mkdir -p c:\Users\<My User>\aem-sdk\author
 $ copy aem-sdk-Quickstart-XXX.jar c:\Users\<My User>\aem-sdk\author\aem-author-p4502.jar
-$ copy ../license.properties c:\Users\<My User>\aem-sdk\author
 $ cd c:\Users\<My User>\aem-sdk\author
 $ java -jar aem-author-p4502.jar
 ```
@@ -88,7 +77,6 @@ macOS/Linux:
 ```shell
 $ mkdir -p ~/aem-sdk/author
 $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/author/aem-author-p4502.jar
-$ cp ../license.properties ~/aem-sdk/author
 $ cd ~/aem-sdk/author
 $ java -jar aem-author-p4502.jar
 ```
@@ -99,7 +87,6 @@ Der lokale AEM Publish-Dienst bietet Entwicklern die lokale Erfahrung, die Endbe
 
 1. Erstellen Sie den Ordner `~/aem-sdk/publish`
 1. Kopieren Sie die __Quickstart-JAR__ -Datei in `~/aem-sdk/publish` und benennen Sie sie in `aem-publish-p4503.jar`
-1. Kopieren Sie die Datei __license.properties__ in  `~/aem-sdk/publish`
 1. Beginn Sie den lokalen AEM Publish-Dienst, indem Sie Folgendes über die Befehlszeile ausführen:
    + `java -jar aem-publish-p4503.jar`
       + Geben Sie das Administratorkennwort an `admin`. Jedes Admin-Kennwort ist zulässig. Es wird jedoch empfohlen, den Standard für die lokale Entwicklung zu verwenden, um eine Neukonfiguration zu vermeiden.
@@ -112,7 +99,6 @@ Windows:
 ```shell
 $ mkdir -p c:\Users\<My User>\aem-sdk\publish
 $ copy aem-sdk-Quickstart-XXX.jar c:\Users\<My User>\aem-sdk\publish\aem-publish-p4503.jar
-$ copy ../license.properties c:\Users\<My User>\aem-sdk\publish
 $ cd c:\Users\<My User>\aem-sdk\publish
 $ java -jar aem-publish-p4503.jar
 ```
@@ -122,7 +108,6 @@ macOS/Linux:
 ```shell
 $ mkdir -p ~/aem-sdk/publish
 $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
-$ cp ../license.properties ~/aem-sdk/publish
 $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
@@ -191,7 +176,7 @@ Wenn Sie mit der Dublette auf die Schnellstartjar zu Beginn klicken, wird ein Fe
 
 Dies liegt daran, dass AEM als Cloud Service QuickStart Jar nicht unterstützt Dublette-Klick auf die Schnellstart-JAR auf Beginn AEM lokal. Stattdessen müssen Sie die JAR-Datei über diese Befehlszeile ausführen.
 
-Um den AEM Author-Dienst `cd` in den Ordner mit der Schnellstart-JAR zu Beginn zu laden, führen Sie den Befehl aus:
+Zum Beginn des AEM Author-Dienstes in `cd` den Ordner mit der Schnellstart-JAR und führen Sie den Befehl aus:
 
 `$ java -jar aem-author-p4502.jar`
 
