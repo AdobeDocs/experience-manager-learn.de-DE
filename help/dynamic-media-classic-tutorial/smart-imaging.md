@@ -8,9 +8,9 @@ topics: development, authoring, configuring, renditions, images
 audience: all
 activity: use
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: 317fb625e7af57b7ad0079014c341eab9adda376
 workflow-type: tm+mt
-source-wordcount: '678'
+source-wordcount: '694'
 ht-degree: 5%
 
 ---
@@ -46,9 +46,9 @@ Die intelligente Bildbearbeitung funktioniert mit Bildern, die über HTTP, HTTPS
 >
 >Wenn Sie zu Smart Imaging wechseln, wird Ihr Cache im CDN gelöscht. Der Cache im CDN wird in der Regel innerhalb von ein oder zwei Tagen wieder aufgebaut.
 
-Smart Imaging ist im Lieferumfang Ihrer Lizenz für Dynamic Media Classic enthalten. Für diese Funktion fallen keine zusätzlichen Kosten an. Sie müssen zwei Voraussetzungen erfüllen, um diese Vorteile zu nutzen: haben ein CDN mit Adobe und eine dedizierte Domäne. Dann müssen Sie es für Ihr Konto aktivieren, da es nicht automatisch aktiviert ist.
+Smart Imaging ist im Lieferumfang Ihrer Lizenz für Dynamic Media Classic enthalten. Für diese Funktion fallen keine zusätzlichen Kosten an. Um diese Vorteile zu nutzen, müssen Sie zwei Anforderungen erfüllen: haben ein CDN mit Adobe und eine dedizierte Domäne. Dann müssen Sie es für Ihr Konto aktivieren, da es nicht automatisch aktiviert ist.
 
-Wenn Sie Smart Imaging-Beginn aktivieren, senden Sie eine Anfrage per E-Mail an [s7support@adobe.com](mailto:s7support@adobe.com). Sie werden mit Ihnen zusammenarbeiten, um eine benutzerdefinierte Domäne einzurichten, die Sie mit Smart Imaging verbinden. Sie ändern einen Parameter im Zusammenhang mit der Zwischenspeicherung (Time To Live oder TTL) und die Unterstützung löscht den Cache. Sie können auch einen optionalen Staging-Schritt ausführen, bevor Sie zur Produktion wechseln. Wenn Smart Imaging dann aktiviert ist, liefern Sie den Kunden kleinere Bilder, aber mit der gleichen Qualität, die sie angefordert haben. Das bedeutet, dass die Seitenladezeiten schneller ablaufen — Und das alles geschieht automatisch, weil Adobe Sensei dabei hilft, die effizienteste Größe zu wählen.
+Aktivieren von Smart Imaging-Beginn, wenn Sie eine Anfrage an den technischen Support senden, indem Sie |Erstellen einer Support-Anfrage| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). Der Support arbeitet mit Ihnen zusammen, um eine benutzerdefinierte Domäne einzurichten, die Sie mit Smart Imaging verbinden. Sie ändern einen Parameter im Zusammenhang mit der Zwischenspeicherung (Time To Live oder TTL) und die Unterstützung löscht den Cache. Sie können auch einen optionalen Staging-Schritt ausführen, bevor Sie zur Produktion wechseln. Wenn Smart Imaging dann aktiviert ist, liefern Sie den Kunden kleinere Bilder, aber mit der gleichen Qualität, die sie angefordert haben. Das bedeutet, dass die Seitenladezeiten schneller ablaufen — Und das alles geschieht automatisch, weil Adobe Sensei dabei hilft, die effizienteste Größe zu wählen.
 
 Sobald Sie Smart Imaging aktiviert haben, sollten Sie überprüfen, ob es erwartungsgemäß funktioniert.
 
