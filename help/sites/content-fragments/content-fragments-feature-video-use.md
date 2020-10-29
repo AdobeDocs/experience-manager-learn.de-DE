@@ -9,9 +9,9 @@ doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '396'
 ht-degree: 8%
 
 ---
@@ -39,7 +39,7 @@ Diese Videoreihe behandelt den Authoring-Lebenszyklus von Inhaltsfragmenten in A
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
-AEM Inhaltsfragmentmodelle, die Datenfragmente von Inhaltsfragmenten, müssen über AEM [!UICONTROL Konfigurationsbrowser]aktiviert werden, sodass Inhaltsfragmentmodelle je nach Konfiguration definiert werden können.
+AEM Inhaltsfragmentmodelle, die Datenfragmente von Inhaltsfragmenten, müssen über AEM [[!UICONTROL Konfigurationsbrowser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)aktiviert werden, sodass Inhaltsfragmentmodelle je nach Konfiguration definiert werden können.
 
 ## Erstellen von Inhaltsfragmenten       {#creating-content-fragments}
 
