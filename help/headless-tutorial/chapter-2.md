@@ -4,9 +4,9 @@ seo-title: Erste Schritte mit AEM Content Services - Kapitel 2 - Definieren von 
 description: Kapitel 2 des Lernprogramms "AEM ohne Kopf"umfasst die Aktivierung und Definition von Inhaltsfragmentmodellen, mit denen eine normalisierte Datenstruktur und eine Authoring-Oberfläche zum Erstellen von Ereignissen definiert werden.
 seo-description: Kapitel 2 des Lernprogramms "AEM ohne Kopf"umfasst die Aktivierung und Definition von Inhaltsfragmentmodellen, mit denen eine normalisierte Datenstruktur und eine Authoring-Oberfläche zum Erstellen von Ereignissen definiert werden.
 translation-type: tm+mt
-source-git-commit: 885e30dea2a21dff789c98bdc5beb2f758b806f3
+source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '994'
 ht-degree: 9%
 
 ---
@@ -25,9 +25,9 @@ Dieses Kapitel behandelt die Aktivierung und Definition von Inhaltsfragmentmodel
 
 ## Aktivieren von Inhaltsfragmentmodellen  
 
-Inhaltsfragmentmodelle **müssen** über **AEM[!UICONTROL Konfigurationsbrowser]** aktiviert werden.
+Inhaltsfragmentmodelle **müssen** über **[AEM [!UICONTROL Konfigurationsbrowser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)** aktiviert werden.
 
-Wenn Inhaltsfragmentmodelle für eine Konfiguration **nicht** aktiviert sind, wird die Schaltfläche &quot; **[!UICONTROL Erstellen]&quot;> &quot;[!UICONTROL Inhaltsfragment]** &quot;für die entsprechende AEM nicht angezeigt.
+Wenn Inhaltsfragmentmodelle für eine Konfiguration **nicht** aktiviert sind, wird die Schaltfläche &quot; **[!UICONTROL Erstellen] &quot;> &quot; [!UICONTROL Inhaltsfragment]** &quot;für die entsprechende AEM nicht angezeigt.
 
 >[!NOTE]
 >
@@ -36,10 +36,12 @@ Wenn Inhaltsfragmentmodelle für eine Konfiguration **nicht** aktiviert sind, wi
 >Damit eine Konfiguration eine Inhaltshierarchie beeinflussen kann, muss über die `cq:conf` Eigenschaft in dieser Inhaltshierarchie auf die Konfiguration verwiesen werden. (Dies wird für die [!DNL WKND Mobile] Konfiguration in **Schritt 5** erreicht.)
 >
 >Wenn die `global` Konfiguration verwendet wird, gilt die Konfiguration für alle Inhalte und muss `cq:conf` nicht eingestellt werden.
+>
+>See the [[!UICONTROL Configuration Browser] documentation](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html) for more information.
 
 1. Melden Sie sich bei AEM Author als Benutzer mit den entsprechenden Berechtigungen an, um die entsprechende Konfiguration zu ändern.
    * Für dieses Lernprogramm kann der **Administrator** -Benutzer verwendet werden.
-1. Navigieren Sie zu **[!UICONTROL Tool]>[!UICONTROL Allgemein]>[!UICONTROL Konfigurationsbrowser]**
+1. Navigieren Sie zu **[!UICONTROL Tool] > [!UICONTROL Allgemein] > [!UICONTROL Konfigurationsbrowser]**
 1. Tippen Sie auf das **Ordnersymbol** neben der Auswahl **[!DNL WKND Mobile]** und dann oben links auf die Schaltfläche **[!UICONTROL Bearbeiten]** .
 1. Wählen Sie **[!UICONTROL Inhaltsfragmentmodelle]** und tippen Sie oben rechts auf **[!UICONTROL Speichern und Schließen]** .
 
@@ -58,8 +60,8 @@ Wenn Inhaltsfragmentmodelle für eine Konfiguration **nicht** aktiviert sind, wi
 
 1. Wenden Sie die **[!DNL WKND Mobile]** Konfiguration auf den Ordner **[!DNL WKND Mobile]&quot;** Assets&quot;an, damit Inhaltsfragmente aus Inhaltsfragmentmodellen innerhalb der Hierarchie &quot;Assets&quot;erstellt werden können:
 
-   1. Navigieren Sie zu **[!UICONTROL AEM]>[!UICONTROL Assets]>[!UICONTROL Dateien]**
-   1. Wählen Sie den **[!UICONTROL Ordner &quot;WKND Mobile]&quot;**
+   1. Navigieren Sie zu **[!UICONTROL AEM] > [!UICONTROL Assets] > [!UICONTROL Dateien]**
+   1. Wählen Sie den **[!UICONTROL Ordner &quot;WKND Mobile] &quot;**
    1. Tippen Sie in der oberen Aktionsleiste auf die Schaltfläche **[!UICONTROL Eigenschaften]** , um die [!UICONTROL Ordnereigenschaften zu öffnen]
    1. Tippen Sie in den [!UICONTROL Ordnereigenschaften]auf die Registerkarte &quot; **[!UICONTROL Cloud Services]** &quot;.
    1. Überprüfen Sie, ob das Feld **[!UICONTROL Cloud-Konfiguration]** auf **/conf/wknd-mobile eingestellt ist.**
@@ -79,7 +81,7 @@ Ausgerüstet mit der Zuordnung können wir Inhaltsfragment definieren, das zur E
 
 ## Erstellen des Inhaltsfragmentmodells
 
-1. Navigate to **[!UICONTROL Tools]>[!UICONTROL Assets]>[!UICONTROL Content Fragment Models]**.
+1. Navigate to **[!UICONTROL Tools] > [!UICONTROL Assets] > [!UICONTROL Content Fragment Models]**.
 1. Tippen Sie zum Öffnen auf den **[!DNL WKND Mobile]** Ordner.
 1. Tippen Sie auf **[!UICONTROL Erstellen]** , um den Assistenten zum Erstellen von Inhaltsfragmenten zu öffnen.
 1. Geben Sie **[!DNL Event]** als **[!UICONTROL Modelltitel]** ein (Beschreibung ist optional) *und tippen Sie zum Speichern auf* Erstellen **** .
@@ -88,10 +90,10 @@ Ausgerüstet mit der Zuordnung können wir Inhaltsfragment definieren, das zur E
 
 ## Definieren der Struktur des Inhaltsfragmentmodells
 
-1. Navigate to **[!UICONTROL Tools]>[!UICONTROL Assets]>[!UICONTROL Content Fragment Models]>[!DNL WKND]**.
+1. Navigate to **[!UICONTROL Tools] > [!UICONTROL Assets] > [!UICONTROL Content Fragment Models] >[!DNL WKND]**.
 1. Wählen Sie das **[!DNL Event]** Inhaltsfragmentmodell aus und tippen Sie in der oberen Aktionsleiste auf **[!UICONTROL Bearbeiten]** .
-1. Ziehen Sie auf der Registerkarte **[!UICONTROL Datentypen]auf der rechten Seite die** einzeilige Texteingabe **[!UICONTROL in die linke Dropdownzone, um das]** **[!DNL Question]** Feld zu definieren.
-1. Vergewissern Sie sich, dass die neue **[!UICONTROL einzeilige Texteingabe]** auf der linken Seite ausgewählt und die Registerkarte &quot; **[!UICONTROL Eigenschaften]&quot;auf der rechten Seite** ausgewählt ist. Füllen Sie die Felder Eigenschaften wie folgt aus:
+1. Ziehen Sie auf der Registerkarte **[!UICONTROL Datentypen] auf der rechten Seite die** einzeilige Texteingabe **[!UICONTROL in die linke Dropdownzone, um das]** **[!DNL Question]** Feld zu definieren.
+1. Vergewissern Sie sich, dass die neue **[!UICONTROL einzeilige Texteingabe]** auf der linken Seite ausgewählt und die Registerkarte &quot; **[!UICONTROL Eigenschaften] &quot;auf der rechten Seite** ausgewählt ist. Füllen Sie die Felder Eigenschaften wie folgt aus:
 
    * [!UICONTROL Rendern als] : `textfield`
    * [!UICONTROL Feldbezeichnung] : `Event Title`
