@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,8 @@ Im Folgenden finden Sie eine Anleitung zur Einrichtung des Abkürzungssystems. D
 1. [Installieren Sie Docker Desktop](https://www.docker.com/products/docker-desktop) und ziehen Sie die erforderlichen Docker-Bilder:
 
    ```
-   $ docker pull openwhisk/action-nodejs-v10:latest
-   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
+   $ docker pull openwhisk/action-nodejs-v12:latest
+   $ docker pull adobeapiplatform/adobe-action-nodejs-v12:latest
    ```
 
 1. [Installieren von Visual Studio-Code](https://code.visualstudio.com/download)
@@ -44,11 +44,13 @@ Im Folgenden finden Sie eine Anleitung zur Einrichtung des Abkürzungssystems. D
    && aio plugins:install @adobe/aio-cli-plugin-asset-compute
    ```
 
+Weitere Informationen zu den verkürzten Installationsanweisungen finden Sie in den folgenden Abschnitten.
+
 ## Installieren von Visual Studio-Code{#vscode}
 
 [Microsoft Visual Studio-Code](https://code.visualstudio.com/download) wird zum Entwickeln und Debuggen von Asset Compute-Workern verwendet. Während andere [JavaScript-kompatible IDE](../../local-development-environment/development-tools.md#set-up-the-development-ide) zum Entwickeln des Workers verwendet werden können, kann nur Visual Studio-Code zum [Debugging](../test-debug/debug.md) von Asset Compute-Workern integriert werden.
 
-_Visual Studio-Code 1.48.x+ ist erforderlich, damit[wskdebug](#wskdebug)funktioniert._
+_Visual Studio-Code 1.48.x+ ist erforderlich, damit [wskdebug](#wskdebug) funktioniert._
 
 In diesem Lernprogramm wird von der Verwendung von Visual Studio-Code ausgegangen, da es das beste Entwicklererlebnis zum Erweitern von Asset Compute bietet.
 
@@ -59,7 +61,7 @@ Laden Sie den neuesten stabilen [Docker Desktop](https://www.docker.com/products
 Nachdem Sie Docker Desktop installiert haben, führen Sie den Beginn aus und installieren Sie die folgenden Docker-Bilder über die Befehlszeile:
 
 ```
-$ docker pull openwhisk/action-nodejs-v10:latest
+$ docker pull openwhisk/action-nodejs-v12:latest
 $ docker pull adobeapiplatform/adobe-action-nodejs-v12:3.0.22
 ```
 
@@ -91,7 +93,7 @@ $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
 
 Laden Sie das [Apache OpenWhisk Debug](https://www.npmjs.com/package/@openwhisk/wskdebug) npm-Modul herunter und installieren Sie es, um das lokale Debugging von Asset Compute-Mitarbeitern zu erleichtern.
 
-_Visual Studio-Code 1.48.x+ ist erforderlich, damit[wskdebug](#wskdebug)funktioniert._
+_Visual Studio-Code 1.48.x+ ist erforderlich, damit [wskdebug](#wskdebug) funktioniert._
 
 ```
 $ npm install -g @openwhisk/wskdebug
