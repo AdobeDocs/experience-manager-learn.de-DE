@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '630'
 ht-degree: 2%
 
 ---
@@ -39,7 +39,7 @@ Erstellen Sie zunächst ein neues Verarbeitungsparameter, das den Worker mit den
    + __Erweiterung:__ `png`
       + Die Erweiterung der zu generierenden Darstellung. Wird auf `png` das unterstützte Ausgabeformat eingestellt, das der Webdienst des Workers unterstützt, was zu einem transparenten Hintergrund hinter dem Kreissegment führt.
    + __Endpunkt:__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/worker`
-      + Dies ist die URL für den Mitarbeiter, die über `aio app get-url`. Vergewissern Sie sich, dass die URL auf der Grundlage der AEM als Cloud Service-Umgebung, in der das Profil für die Verarbeitung konfiguriert wird, auf den richtigen Arbeitsbereich verweist. Beachten Sie, dass diese Subdomäne mit der `development` Arbeitsfläche übereinstimmt.
+      + Dies ist die URL für den Mitarbeiter, die über `aio app get-url`. Stellen Sie sicher, dass die URL auf der Grundlage der AEM als Cloud Service-Umgebung auf den richtigen Arbeitsbereich verweist.
       + Stellen Sie sicher, dass die Worker-URL auf den richtigen Arbeitsbereich verweist. AEM als Cloud Service Stage sollte die Stage Workspace-URL verwenden und AEM als Cloud Service Production sollte die Produktions-Workspace-URL verwenden.
    + __Dienstparameter__
       + Tippen Sie auf __Hinzufügen Parameter__
@@ -54,7 +54,7 @@ Erstellen Sie zunächst ein neues Verarbeitungsparameter, das den Worker mit den
       + Diese Schlüssel/Wert-Paare, die an den Asset Compute-Worker übergeben und über das `rendition.instructions` JavaScript-Objekt verfügbar sind.
    + __MIME-Typen__
       + __Umfasst:__ `image/jpeg`, `image/png`, `image/gif`, `image/bmp`, `image/tiff`
-         + Diese MIME-Typen sind die einzigen, die der Webdienst des Workers unterstützt. Dadurch wird begrenzt, welche Assets vom benutzerdefinierten Worker verarbeitet werden können.
+         + Diese MIME-Typen sind die einzigen, die die npm-Module des Arbeitnehmers. Diese Liste beschränkt, welche Assets vom benutzerdefinierten Worker verarbeitet werden.
       + __Schließt Folgendes aus:__ `Leave blank`
          + Verarbeiten Sie Assets niemals mit diesen MIME-Typen, indem Sie diese Dienstkonfiguration verwenden. In diesem Fall verwenden wir nur eine Zulassungsliste.
 1. Tippen Sie oben rechts auf __Speichern__ .
@@ -83,26 +83,9 @@ Das endgültige Asset Compute-Projekt finden Sie auf Github unter:
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
-_Github enthält den finalen Status des Projekts, der vollständig mit den Arbeitern- und Testfällen gefüllt ist, jedoch keine Anmeldeinformationen enthält, d. h.`.env`,`.config.json`oder`.aio`._
+_Github enthält den finalen Status des Projekts, der vollständig mit den Arbeitern- und Testfällen gefüllt ist, jedoch keine Anmeldeinformationen enthält, d. h. `.env`, `.config.json` oder `.aio`._
 
 ## Fehlerbehebung
 
-### Benutzerdefinierte Darstellung fehlt im Asset
-
-+ __Fehler:__ Neue und erneut verarbeitete Assets werden erfolgreich verarbeitet, die benutzerdefinierte Darstellung fehlt jedoch
-
-#### Verarbeitendes Profil, das nicht auf übergeordneten Ordner angewendet wird
-
-+ __Ursache:__ Das Asset ist nicht in einem Ordner mit dem Verarbeitungsordner vorhanden, das den benutzerdefinierten Worker verwendet
-+ __Lösung:__ Anwenden des Profils &quot;Verarbeitung&quot;auf einen übergeordneten Ordner des Assets
-
-#### Profil wird durch Profil der unteren Verarbeitung ersetzt
-
-+ __Ursache:__ Das Asset befindet sich unter einem Ordner, auf den das benutzerdefinierte Worker Processing-Profil angewendet wurde. Zwischen diesem Ordner und dem Asset wurde jedoch ein anderes Profil für die Verarbeitung angewendet, das den Kundenarbeiter nicht verwendet.
-+ __Lösung:__ Kombinieren oder auf andere Weise abgleichen Sie die beiden VerarbeitungsProfil und entfernen Sie das Profil für die Zwischenverarbeitung
-
-### Asset-Verarbeitung fehlgeschlagen
-
-+ __Fehler:__ Asset-Verarbeitung Fehlgeschlagene Markierung für Asset angezeigt
-+ __Ursache:__ Bei der Ausführung des benutzerdefinierten Workers ist ein Fehler aufgetreten
-+ __Lösung:__ Befolgen Sie die Anweisungen zum [Debugging von Adobe I/O Runtime-Aktivierungen](../test-debug/debug.md#aio-app-logs) mit `aio app logs`.
++ [Benutzerdefinierte Darstellung fehlt im Asset in AEM](../troubleshooting.md#custom-rendition-missing-from-asset)
++ [Die Asset-Verarbeitung schlägt in AEM fehl](../troubleshooting.md#asset-processing-fails)
