@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -122,14 +122,5 @@ So Beginn Asset Compute Development Tool for the Asset Compute project:
 
 ## Fehlerbehebung
 
-### Falscher YAML-Einzug
-
-+ __Fehler:__ YAMLException: Ungültiger Einzug eines Zuordnungseintrags in Zeile X, Spalte Y:(über `aio app run` Befehl &quot;Standard ab&quot;)
-+ __Ursache:__ Yaml-Dateien haben weiße Abstände, der Einzug ist wahrscheinlich nicht korrekt.
-+ __Lösung:__ Überprüfen Sie Ihren Einzug `manifest.yml` und stellen Sie sicher, dass er korrekt ist.
-
-### memorySize limit ist zu niedrig eingestellt
-
-+ __Fehler:__  Local Dev Server OpenWhiskError: PUT https://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true HTTP 400 (Ungültige Anforderung) zurückgegeben —> &quot;Der Anforderungsinhalt war fehlerhaft:Anforderung fehlgeschlagen: Speicher 64 MB unter dem zulässigen Schwellenwert von 134217728 B&quot;
-+ __Ursache:__ Eine `memorySize` Beschränkung im Manifest wurde unter dem erlaubten Mindestschwellenwert festgelegt, wie von der Fehlermeldung in Byte berichtet.
-+ __Lösung:__  Überprüfen Sie die `memorySize` Grenzwerte in der `manifest.yml` und stellen Sie sicher, dass sie alle größer als der erlaubte Mindestschwellenwert sind.
++ [Falscher YAML-Einzug](../troubleshooting.md#incorrect-yaml-indentation)
++ [memorySize limit ist zu niedrig eingestellt](../troubleshooting.md#memorysize-limit-is-set-too-low)
