@@ -10,9 +10,9 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '1028'
 ht-degree: 1%
 
 ---
@@ -112,7 +112,7 @@ Asset Compute-Mitarbeiter bieten verschiedene Debugging-Ebenen, von der herkömm
 
 ## Bereitstellen
 
-Erfahren Sie, wie Sie benutzerdefinierte Asset-Compute-Mitarbeiter mit AEM als Cloud Service integrieren, indem Sie sie zunächst in Adobe I/O Runtime bereitstellen und dann über AEM Assets Processing-Profil von AEM als Cloud Service-Autor aufrufen.
+Erfahren Sie, wie Sie benutzerdefinierte Asset-Compute-Mitarbeiter mit AEM als Cloud Service integrieren, indem Sie sie zunächst in Adobe I/O Runtime bereitstellen und dann über die Verarbeitungselemente von AEM Assets von AEM als Cloud Service-Autor aufrufen.
 
 ### Auf Adobe I/O Runtime bereitstellen
 
@@ -126,9 +126,15 @@ Nach der Bereitstellung in Adobe I/O Runtime können Mitarbeiter von Asset Compu
 
 + [Integration mit AEM-Profilen](./deploy/processing-profiles.md)
 
-## Tutorial-Codebase auf Github
+## Erweitert
 
-Die Tutorial-Codebase ist auf Github verfügbar unter:
+Diese gekürzten Lernprogramme behandeln fortgeschrittenere Nutzungsszenarien, die auf den in den vorherigen Kapiteln gewonnenen Erkenntnissen aufbauen.
+
++ [Entwickeln Sie einen Metadaten-Arbeiter](./advanced/metadata.md) zum Berechnen von Assets, der Metadaten in die
+
+## Codebase auf Github
+
+Die Codebase des Tutorials ist auf Github verfügbar unter:
 
 + [adobe/aem-guides-work-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @ Übergeordnet branch
 
@@ -142,14 +148,13 @@ Im Folgenden finden Sie eine Reihe von Adoben, die weitere Informationen und nü
 
 + [Dokumentation zum Asset Computing-Dienst](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html)
 + [Asset Computing Development Tool - Bitte lesen](https://github.com/adobe/asset-compute-devtool)
-
-### Andere Codebeispiele
-
 + [Beispielarbeiter von Asset Computing](https://github.com/adobe/asset-compute-example-workers)
 
 ### APIs und SDKs
 
 + [Asset Computing SDK](https://github.com/adobe/asset-compute-sdk)
    + [Befehle zum Berechnen von Assets](https://github.com/adobe/asset-compute-commons)
+   + [XMP](https://github.com/adobe/asset-compute-xmp#readme)
 + [Adobe Cloud Blobstore Wrapper-Bibliothek](https://github.com/adobe/node-cloud-blobstore-wrapper)
 + [Adoben-Node - Wiederholungsbibliothek abrufen](https://github.com/adobe/node-fetch-retry)
++ [Beispielarbeiter von Asset Computing](https://github.com/adobe/asset-compute-example-workers)
