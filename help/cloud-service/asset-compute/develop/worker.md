@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -30,18 +30,20 @@ Wir erstellen einen Asset Compute-Mitarbeiter, der eine neue horizontale Bilddar
 
 Mitarbeiter von Asset Compute implementieren den Asset Compute SDK-Worker-API-Vertrag in der `renditionCallback(...)` Funktion, die Folgendes versteht:
 
-+ __Eingabe:__ Die Binärparameter und Parameter eines AEM Assets im Original
++ __Eingabe:__ Die ursprünglichen Parameter eines AEM-Assets für Binär- und VerarbeitungsProfil
 + __Ausgabe:__ Eine oder mehrere Darstellungen, die dem AEM Asset hinzugefügt werden sollen
 
 ![Asset Berechnen des logischen Arbeitsablaufs](./assets/worker/logical-flow.png)
 
-1. Wenn ein Asset-Compute-Mitarbeiter vom AEM Author-Dienst aufgerufen wird, wird er über ein Profil zur Verarbeitung gegen ein AEM Asset geführt. Die ursprüngliche Binärdatei des Assets __(1a)__ wird über den `source` Parameter der Rückruffunktion und __(1b)__ alle im Profil &quot;Verarbeitung&quot;definierten Parameter über den `rendition.instructions` Parametersatz an den Worker übergeben.
-1. Die Asset Compute SDK-Ebene akzeptiert die Anforderung vom verarbeitenden Profil und orchestriert die Ausführung der benutzerdefinierten Asset Compute- `renditionCallback(...)` Funktion des Workers und transformiert die in __(1a)__ bereitgestellte Quellbinärdatei basierend auf den von __(1b)__ bereitgestellten Parametern, um eine Darstellung der Quellbinärdatei zu generieren.
-   + In diesem Tutorial wird die Darstellung &quot;in Bearbeitung&quot;erstellt, d. h. der Worker erstellt die Darstellung, die Quellbinäre kann jedoch auch zur Generierung der Darstellung an andere Webdienst-APIs gesendet werden.
-1. Der Asset Compute-Mitarbeiter speichert die binäre Darstellung der Darstellung, in `rendition.path` der sie im AEM Author-Dienst gespeichert werden kann.
-1. Nach Abschluss des Vorgangs werden die in das Asset Compute-SDK geschriebenen Binärdaten über den AEM Author-Dienst als Darstellung in der Benutzeroberfläche AEM bereitgestellt. `rendition.path`
+1. Der AEM Author-Dienst ruft den Asset Compute-Worker auf und stellt die __(1a)__ Original-Binärparameter (`source` Parameter) und __(1b)__ alle im Processing-Profil definierten Parameter (`rendition.instructions` Parameter) bereit.
+1. Das Asset Compute-SDK orchestriert die Ausführung der `renditionCallback(...)` Funktion des benutzerdefinierten Asset Compute-Metadaten-Workers und generiert eine neue binäre Darstellung, basierend auf der ursprünglichen Binärdatei __(1a)__ des Assets und beliebigen Parametern __(1b)__.
 
-Das obige Diagramm zeigt die Bedenken der Asset Compute-Entwickler und den logischen Fluss zum Asset Compute-Arbeitsaufruf an. Die [internen Details zur Ausführung](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) von Asset Compute sind für das Merkwürdige verfügbar, es sollten jedoch nur die öffentlichen Asset Compute SDK API-Verträge angefordert werden.
+   + In diesem Tutorial wird die Darstellung &quot;in Bearbeitung&quot;erstellt, d. h. der Worker erstellt die Darstellung, die Quellbinäre kann jedoch auch zur Generierung der Darstellung an andere Webdienst-APIs gesendet werden.
+
+1. Der Asset Compute-Mitarbeiter speichert die Binärdaten der neuen Darstellung in `rendition.path`.
+1. Die Binärdaten, die in den Asset Compute SDK geschrieben `rendition.path` werden, werden über den Asset Compute-SDK an den AEM Author-Dienst übertragen und als __(4a)__ Textdarstellung bereitgestellt und __(4b)__ auf dem Metadaten-Knoten des Assets beibehalten.
+
+Das obige Diagramm zeigt die Bedenken der Asset Compute-Entwickler und den logischen Fluss zum Asset Compute-Arbeitsaufruf an. Die [internen Details zur Ausführung](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) von Asset Compute sind für die Interessenten verfügbar, es können jedoch nur die öffentlichen Asset Compute SDK API-Verträge angefordert werden.
 
 ## Anatomie eines Arbeitnehmers
 
@@ -316,7 +318,7 @@ class RenditionInstructionsError extends ClientError {
 Nachdem der Worker-Code abgeschlossen ist und zuvor in [manifest.yml](./manifest.md)registriert und konfiguriert wurde, kann er mit dem lokalen Asset Compute Development Tool ausgeführt werden, um die Ergebnisse anzuzeigen.
 
 1. Stamm des Projekts &quot;Asset Compute&quot;
-1. Starte `app aio run`
+1. Starte `aio app run`
 1. Warten Sie, bis das Asset Computing Development Tool in einem neuen Fenster geöffnet wird
 1. Wählen Sie eine Datei __aus...__ Dropdown-Liste wählen Sie ein zu verarbeitendes Beispielbild aus
    + Wählen Sie eine Beispielbilddatei aus, die als Quellelement-Binärdatei verwendet werden soll
@@ -391,11 +393,4 @@ Das Finale `index.js` ist auf Github unter folgender Adresse abrufbar:
 
 ## Fehlerbehebung
 
-### Darstellung wird teilweise gezeichnet zurückgegeben
-
-+ __Fehler__: Wiedergabe wird nicht vollständig gerendert, wenn die Gesamtgröße der Darstellungsdatei groß ist
-
-   ![Fehlerbehebung - Wiedergabe wird teilweise gezeichnet zurückgegeben](./assets/worker/troubleshooting__await.png)
-
-+ __Ursache__: Die `renditionCallback` Funktion des Arbeitnehmers wird beendet, bevor die Darstellung vollständig in geschrieben werden kann `rendition.path`.
-+ __Auflösung__: Überprüfen Sie den benutzerdefinierten Worker-Code und stellen Sie sicher, dass alle asynchronen Aufrufe synchron erfolgen.
++ [Ausgabe teilweise gezeichnet/beschädigt zurückgegeben](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
