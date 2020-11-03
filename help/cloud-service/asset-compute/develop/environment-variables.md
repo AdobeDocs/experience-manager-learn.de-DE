@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6270
 thumbnail: KT-6270.jpg
 translation-type: tm+mt
-source-git-commit: 50519b9526182b528047069f211498099e3a4c88
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '642'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
@@ -113,8 +113,4 @@ So Beginn Asset Compute Development Tool for the Asset Compute project:
 
 ## Fehlerbehebung
 
-### Asset Computing Local Development Tools kann aufgrund des Fehlens von &quot;private.key&quot;nicht Beginn werden
-
-+ __Fehler:__ Local Dev ServerError: Erforderliche Dateien bei validatePrivateKeyFile fehlen.... (über &quot;Standard out from `aio app run` command&quot;)
-+ __Ursache:__ Der `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` Wert in der `.env` Datei verweist nicht auf den aktuellen Benutzer `private.key` `private.key` oder ist für diesen nicht lesbar.
-+ __Lösung:__ Überprüfen Sie den `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` Wert in der `.env` Datei und stellen Sie sicher, dass er den vollständigen, absoluten Pfad zum `private.key` Dateisystem enthält.
++ [Entwicklungstool kann aufgrund fehlender privater.key-Elemente nicht Beginn werden](../troubleshooting.md#missing-private-key)
