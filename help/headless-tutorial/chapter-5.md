@@ -2,7 +2,7 @@
 title: Kapitel 5 - Authoring von Content Services-Seiten
 description: In Kapitel 5 des AEM-Lernprogramms "Kopflos"werden die Seiten aus den in Kapitel 4 definierten Vorlagen erstellt. Diese Seiten fungieren als JSON HTTP-Endpunkte.
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
 source-wordcount: '594'
 ht-degree: 1%
@@ -20,7 +20,7 @@ Kapitel 5 des AEMHeadless-Lernprogramms umfasst das Erstellen der Seite anhand d
 
 ## Erstellen der Ereignis-API-Seite
 
-1. Navigieren Sie zu **[!UICONTROL AEM]>[!UICONTROL Sites]>[!DNL WKND Mobile]>[!DNL English]>[!DNL API]**.
+1. Navigieren Sie zu **[!UICONTROL AEM] > [!UICONTROL Sites] > [!DNL WKND Mobile] > [!DNL English] >[!DNL API]**.
 1. **Tippen Sie auf die Beschriftung der API-Seite** und dann auf die Schaltfläche &quot; **Erstellen** &quot;in der oberen Aktionsleiste und erstellen Sie eine neue API-Seite unter der API-Seite.
    1. Tippen Sie in der oberen Aktionsleiste auf **Erstellen** .
    1. Auswählen der **Ereignisses-API** -Vorlage
@@ -44,7 +44,7 @@ Kapitel 5 des AEMHeadless-Lernprogramms umfasst das Erstellen der Seite anhand d
 1. hinzufügen **Tag-Zeile** , die über den Ereignissen angezeigt werden soll.
    1. Bearbeiten der **Text** -Komponente
    1. Geben Sie den Text ein:
-      1. `The WKND is here.`
+      * `The WKND is here.`
 
 1. Wählen Sie die anzuzeigenden **Ereignis** aus:
    1. Legen Sie auf der Registerkarte &quot; **Eigenschaften** &quot;die folgende Konfiguration fest:
