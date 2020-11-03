@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6284
 thumbnail: KT-6284.jpg
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '818'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Die Struktur der Tests in einem Asset Compute-Projekt lautet wie folgt:
 ...
 /test/
   asset-compute/
-    <worker-name>/           <--- Test suite for the worker
+    <worker-name>/           <--- Test suite for the worker, must match the yaml key for this worker in manifest.yml
         <test-case-1>/       <--- Specific test case 
             file.jpg         <--- Input file (ie. `source.path` or `source.url`)
             params.json      <--- Parameters (ie. `rendition.instructions`)
@@ -118,21 +118,5 @@ Die abschließenden Testfälle sind auf Github unter folgender Adresse abrufbar:
 
 ## Fehlerbehebung
 
-### Keine Darstellung generiert
-
-Test Case schlägt fehl, ohne eine Darstellung zu generieren.
-
-+ __Fehler:__ Fehler: Keine Darstellung generiert.
-+ __Ursache:__ Der Arbeiter konnte aufgrund eines unerwarteten Fehlers, z. B. eines JavaScript-Syntaxfehlers, keine Darstellung erstellen.
-+ __Lösung:__ Überprüfen Sie die Testausführung `test.log` unter `/build/test-results/test-worker/test.log`. Suchen Sie den Abschnitt in dieser Datei, der dem fehlerhaften Testfall entspricht, und überprüfen Sie, ob Fehler vorliegen.
-
-   ![Fehlerbehebung - Keine Darstellung generiert](./assets/test/troubleshooting__no-rendition-generated.png)
-
-### Test generiert falsche Darstellung
-
-Test Case schlägt fehl, weil eine falsche Darstellung generiert wurde.
-
-+ __Fehler:__ Fehler: Darstellung &#39;rendition.xxx&#39; nicht wie erwartet.
-+ __Ursache:__ Der Worker gibt eine Darstellung aus, die nicht mit der im Testfall `rendition.<extension>` bereitgestellten identisch war.
-   + Wenn die erwartete `rendition.<extension>` Datei nicht genau so erstellt wird wie die lokal generierte Darstellung im Testfall, schlägt der Test möglicherweise fehl, da die Bits etwas voneinander abweichen können. Wenn die erwartete Darstellung im Testfall über das Entwicklungstool gespeichert wird, was in Adobe I/O Runtime erzeugt wird, können die Bits technisch anders sein, wodurch der Test fehlschlägt, selbst wenn die erwarteten und tatsächlichen Darstellungsdateien aus menschlicher Sicht identisch sind.
-+ __Lösung:__ Überprüfen Sie die Ausgabe der Darstellung aus dem Test, indem Sie zu dieser Datei navigieren `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`und sie mit der erwarteten Darstellungsdatei im Testfall vergleichen.
++ [Keine Darstellung während der Testausführung generiert](../troubleshooting.md#test-no-rendition-generated)
++ [Test generiert falsche Darstellung](../troubleshooting.md#tests-generates-incorrect-rendition)
