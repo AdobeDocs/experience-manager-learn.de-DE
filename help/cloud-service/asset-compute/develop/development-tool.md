@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6283
 thumbnail: 40241.jpg
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '536'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Dadurch wird das Entwicklungstool unter __http://localhost:9000__ Beginn und aut
 1. __Quelldatei:__ Die Auswahl der Quelldatei dient zum:
    + Die Asset-Binärdatei wurde ausgewählt, bei der es sich um die `source` Binärdatei handelt, die an den Asset Compute-Mitarbeiter übergeben wird.
    + Hochladen von Quelldateien
-1. __Definition des Profils &quot;Asset Computing&quot;:__ Definiert den auszuführenden Asset Compute-Worker einschließlich der folgenden Parameter: einschließlich des URL-Endpunkts des Workers, des Ausgabenamens und aller Parameter
+1. __Definition der Profil für die Asset-Berechnung:__ Definiert den auszuführenden Asset Compute-Worker einschließlich der folgenden Parameter: einschließlich des URL-Endpunkts des Workers, des Ausgabenamens und aller Parameter
 1. __Ausführen:__ Über die Schaltfläche &quot;Ausführen&quot;wird das Profil &quot;Asset Compute&quot;ausgeführt, wie im Editor für das Asset Compute-Konfigurationseditor definiert.
 1. __Abbrechen:__ Mit der Schaltfläche Abbrechen wird eine Ausführung abgebrochen, die durch Tippen auf die Schaltfläche Ausführen eingeleitet wurde
 1. __Anforderung/Antwort:__ Stellt die HTTP-Anforderung und -Antwort an den/vom Asset Compute-Mitarbeiter bereit, der in Adobe I/O Runtime ausgeführt wird. Dies kann beim Debugging hilfreich sein
@@ -84,24 +84,10 @@ Wenn Sie Codeänderungen am Arbeitscode vornehmen, während das Entwicklungstool
 
 ## Fehlerbehebung
 
-### Dropdown-Liste der Quelldateien falsch{#troubleshooting__dev-tool-application-cache}
-
-Das Asset Compute Development Tool kann einen Status eingeben, in dem statische Daten abgerufen werden, und ist im Dropdown-Menü __Quelldatei__ mit falschen Elementen am auffälligsten.
-
-+ __Fehler:__ Das Dropdown-Menü Quelldatei enthält falsche Elemente.
-+ __Ursache:__ Der Status &quot;Nicht im Cache gespeicherter Browser&quot;verursacht
-+ __Lösung:__ In Ihrem Browser löschen Sie vollständig den &quot;Anwendungszustand&quot; des Browser-Tab, den Browser-Cache, die lokale Datenspeicherung und den Service-Mitarbeiter.
-
-### Fehlender oder ungültiger Parameter für die devToolToken-Abfrage{#troubleshooting__devtooltoken}
-
-+ __Fehler:__ Benachrichtigung &quot;Nicht autorisiert&quot;im Asset Computing Development Tool
-+ __Ursache:__ `devToolToken` fehlt oder ist ungültig
-+ __Lösung:__ Schließen Sie das Browserfenster des Tools für die Asset-Berechnung, beenden Sie alle laufenden Entwicklungstool-Prozesse, die über den `aio app run` Befehl initiiert wurden, und starten Sie das Beginn-Entwicklungstool (unter Verwendung `aio app run`).
-
-### Quelldateien können nicht entfernt werden{#troubleshooting__remove-source-files}
-
-+ __Fehler:__ Es gibt keine Möglichkeit, hinzugefügte Quelldateien aus der Benutzeroberfläche der Entwicklungstools zu entfernen
-+ __Ursache:__ Diese Funktion wurde nicht implementiert.
-+ __Lösung:__ Melden Sie sich bei Ihrem Cloud-Anbieter für Datenspeicherung mit den unter `.env`&quot;Anmeldeinformationen&quot;definierten Anmeldeinformationen an. Suchen Sie den Container, der von den Entwicklungstools verwendet wird (siehe auch `.env`), navigieren Sie zum __Quellordner__ und löschen Sie alle Quellbilder. Möglicherweise müssen Sie die in der Dropdown-Liste [Quelldateien beschriebenen Schritte falsch](#troubleshooting__dev-tool-application-cache) ausführen, wenn die gelöschten Quelldateien weiterhin im Dropdown-Menü angezeigt werden, da sie lokal im &quot;Anwendungszustand&quot;der Entwicklungstools zwischengespeichert werden.
-
-   ![Microsoft Azure Blob Storage](./assets/development-tool/troubleshooting__remove-source-files.png)
++ [Falscher YAML-Einzug](../troubleshooting.md#incorrect-yaml-indentation)
++ [memorySize limit ist zu niedrig eingestellt](../troubleshooting.md#memorysize-limit-is-set-too-low)
++ [Entwicklungstool kann aufgrund fehlender privater.key-Elemente nicht Beginn werden](../troubleshooting.md#missing-private-key)
++ [Dropdown-Liste der Quelldateien falsch](../troubleshooting.md#source-files-dropdown-incorrect)
++ [Fehlender oder ungültiger Parameter für die devToolToken-Abfrage](../troubleshooting.md#missing-or-invalid-devtooltoken-query-parameter)
++ [Quelldateien können nicht entfernt werden](../troubleshooting.md#unable-to-remove-source-files)
++ [Ausgabe teilweise gezeichnet/beschädigt zurückgegeben](../troubleshooting.md#rendition-returned-partially-drawn-or-corrupt)
