@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -103,40 +103,9 @@ _Clickthrough zum Debugging eines Asset Compute-Workers mit wskdebug (kein Audio
 
 ## Fehlerbehebung
 
-### Debugger wird nicht angehängt
-
-+ __Fehler__: Fehlerverarbeitungsstart: Fehler: Verbindung zur Debug-Zielgruppe konnte nicht hergestellt werden...
-+ __Ursache__: Docker Desktop wird nicht auf dem lokalen System ausgeführt. Überprüfen Sie dies, indem Sie die VS-Code-Debug-Konsole (Ansicht > Debug-Konsole) überprüfen und bestätigen, dass dieser Fehler gemeldet wird.
-+ __Auflösung__: Beginn [Docker Desktop und überprüfen Sie, ob die erforderlichen Docker-Bilder installiert](../set-up/development-environment.md#docker)sind.
-
-### Haltepunkte werden nicht angehalten
-
-+ __Fehler__: Beim Ausführen des Assets Compute-Workers über das debug-fähige Entwicklungstool wird der VS-Code an Haltepunkten nicht angehalten.
-
-#### VS-Code-Debugger ist nicht angehängt
-
-+ __Ursache:__ Der VS-Code-Debugger wurde angehalten/getrennt.
-+ __Lösung:__ Starten Sie den VS-Code-Debugger neu und überprüfen Sie, ob er angehängt wird, indem Sie die Konsole &quot;VS-Code-Debug-Ausgabe&quot;(&quot;Ansicht&quot;> &quot;Debug-Konsole&quot;) aufrufen.
-
-#### VS-Code-Debugger nach Beginn der Arbeitsausführung angehängt
-
-+ __Ursache:__ Der VS-Code-Debugger wurde nicht angehängt, bevor auf In Entwicklungstool __ausführen__ getippt wurde.
-+ __Lösung:__ Vergewissern Sie sich, dass der Debugger angehängt wurde, indem Sie die Debug-Konsole des VS-Codes (Ansicht > Debug-Konsole) überprüfen und dann den Asset-Compute-Mitarbeiter aus dem Entwicklungstool erneut ausführen.
-
-### Zeitüberschreitung beim Debugging
-
-+ __Fehler__: Debug-Konsolenberichte &quot;Action will timeout in -XXX Millisekunden&quot;oder [Asset Compute Development Tool&#39;s](../develop/development-tool.md) Darstellungs-Vorschau dreht sich unendlich oder
-+ __Ursache__: Der in der Datei [manifest.yml](../develop/manifest.md) definierte Worker-Timeout wird während des Debuggens überschritten.
-+ __Auflösung__: Erhöhen Sie vorübergehend den Timeout des Workers in der [Datei manifest.yml](../develop/manifest.md) oder beschleunigen Sie das Debugging-Aktivitäten.
-
-### Debug-Prozess kann nicht beendet werden
-
-+ __Fehler__: `Ctrl-C` in der Befehlszeile wird der Debugger-Prozess nicht beendet (`npx adobe-asset-compute devtool`).
-+ __Ursache__: Ein Fehler in `@adobe/aio-cli-plugin-asset-compute` 1.3.x führt dazu, dass `Ctrl-C` er nicht als beendet erkannt wird.
-+ __Auflösung__: Update `@adobe/aio-cli-plugin-asset-compute` auf Version 1.4.1+
-
-   ```
-   $ aio update
-   ```
-
-   ![Fehlerbehebung - Aktualisierung](./assets/debug/troubleshooting__terminate.png)
++ [Debugger wird nicht angehängt](../troubleshooting.md#debugger-does-not-attach)
++ [Haltepunkte werden nicht angehalten](../troubleshooting.md#breakpoints-no-pausing)
++ [VS-Code-Debugger nicht angehängt](../troubleshooting.md#vs-code-debugger-not-attached)
++ [VS-Code-Debugger nach Beginn der Arbeitsausführung angehängt](../troubleshooting.md#vs-code-debugger-attached-after-worker-execution-began)
++ [Zeitüberschreitung beim Debugging](../troubleshooting.md#worker-times-out-while-debugging)
++ [Debug-Prozess kann nicht beendet werden](../troubleshooting.md#cannot-terminate-debugger-process)
