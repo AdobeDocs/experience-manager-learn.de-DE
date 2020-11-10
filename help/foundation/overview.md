@@ -2,12 +2,12 @@
 title: AEM Foundation-Videos und -Tutorials
 seo-title: AEM Foundation-Videos und -Tutorials
 description: 'Eine Sammlung von Videos und Tutorials für die Adobe Experience Manager Foundation. '
-seo-description: Video- und Lernprogramme für die Adobe Experience Manager Foundation
+seo-description: Eine Sammlung von Videos und Tutorials für die Adobe Experience Manager Foundation
 translation-type: tm+mt
-source-git-commit: e19e177589df7ce6a56c0be3f9d590cbca2f8ce7
+source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '261'
-ht-degree: 1%
+ht-degree: 22%
 
 ---
 
@@ -19,22 +19,15 @@ Adobe Experience Manager bietet eine Reihe von Funktionen, die für Benutzer von
 ## Neue Funktionen
 
 * **[Verwenden des Workflow-Managements in AEM (Video)](./workflow/use-workflow-management.md)**
-
-   <br>
-   *AEM ermöglicht die Sichtbarkeit laufender Workflows und erleichtert die Verwaltung von[!DNL Workflow]Definitionen.*
+   *AEM ermöglicht die Sichtbarkeit laufender Workflows und erleichtert die Verwaltung von [!DNL Workflow] Definitionen.*
 
 * **[Erläuterung von Cloud Manager für AEM (Video)](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-   <br>
-
    *Cloud Manager für AEM ermöglicht eine einfache Verwaltung, Überprüfung und Selbstbedienung von AEM Umgebung.*
 
 * **[Öffentliche und private Schlüssel zur Verwendung mit Adobe I/O einrichten (Tutorial)](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   <br>
-   *Erfahren Sie, wie Schlüssel und Keystores mit[!DNL openssl]der AEM und Adobe-E/A generiert werden.*
+   *Erfahren Sie, wie Schlüssel und Keystores mit [!DNL openssl] der AEM und Adobe-E/A generiert werden.*
 
 * **[Verwenden der CI/CD-Pipeline von Cloud Manager (Video)](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-   <br>
-
    *Erfahren Sie, wie Sie die CI/CD-Pipeline von Cloud Manager verwenden, um eine sichere und konsistente Bereitstellung zu gewährleisten.*
 
 ## Personalauswahl
@@ -86,7 +79,7 @@ Adobe Experience Manager bietet eine Reihe von Funktionen, die für Benutzer von
 ## Zusätzliche Ressourcen
 
 * [Experience League - AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM als Cloud Service Tutorials](/help/cloud-service/overview.md)
-* [AEM Sites Videos und Tutorials](/help/sites/overview.md)
-* [AEM Assets Videos und Tutorials](/help/assets/overview.md)
-* [AEM Forms Videos und Tutorials](/help/forms/overview.md)
+* [Tutorials zu AEM als Cloud-Service](/help/cloud-service/overview.md)
+* [AEM Sites-Videos und -Tutorials](/help/sites/overview.md)
+* [AEM Assets-Videos und -Tutorials](/help/assets/overview.md)
+* [AEM Forms-Videos und -Tutorials](/help/forms/overview.md)
