@@ -1,8 +1,8 @@
 ---
 title: Wert des JSON-Datenelements im AEM Forms-Workflow festlegen
 seo-title: Wert des JSON-Datenelements im AEM Forms-Workflow festlegen
-description: Da ein adaptives Formular in AEM Arbeitsablauf an verschiedene Benutzer weitergeleitet wird, müssen bestimmte Felder oder Bereiche je nach dem Benutzer, der das Formular überprüft, ein- oder ausgeblendet werden. Um diese Anwendungsfälle zu befriedigen, legen wir in der Regel einen Wert für ein unsichtbares Feld fest. Auf der Grundlage der Werte in diesem unsichtbaren Feld können Geschäftsregeln erstellt werden, um geeignete Bereiche oder Felder auszublenden/zu deaktivieren.
-seo-description: Da ein adaptives Formular in AEM Arbeitsablauf an verschiedene Benutzer weitergeleitet wird, müssen bestimmte Felder oder Bereiche je nach dem Benutzer, der das Formular überprüft, ein- oder ausgeblendet werden. Um diese Anwendungsfälle zu befriedigen, legen wir in der Regel einen Wert für ein unsichtbares Feld fest. Auf der Grundlage der Werte in diesem unsichtbaren Feld können Geschäftsregeln erstellt werden, um geeignete Bereiche oder Felder auszublenden/zu deaktivieren.
+description: Da ein adaptives Formular in AEM Arbeitsablauf an verschiedene Benutzer weitergeleitet wird, müssen bestimmte Felder oder Bereiche je nach dem Benutzer, der das Formular überprüft, ein- oder ausgeblendet werden. Um diese Anwendungsfälle zu befriedigen, legen wir in der Regel einen Wert für ein unsichtbares Feld fest. Basierend auf den Wertregeln dieses verborgenen Felds können Geschäftsregeln erstellt werden, um geeignete Bereiche oder Felder auszublenden/zu deaktivieren.
+seo-description: Da ein adaptives Formular in AEM Arbeitsablauf an verschiedene Benutzer weitergeleitet wird, müssen bestimmte Felder oder Bereiche je nach dem Benutzer, der das Formular überprüft, ein- oder ausgeblendet werden. Um diese Anwendungsfälle zu befriedigen, legen wir in der Regel einen Wert für ein unsichtbares Feld fest. Basierend auf den Wertregeln dieses verborgenen Felds können Geschäftsregeln erstellt werden, um geeignete Bereiche oder Felder auszublenden/zu deaktivieren.
 uuid: a4ea6aef-a799-49e5-9682-3fa3b7a442fb
 feature: adaptive-forms,workflow
 topics: developing
@@ -12,7 +12,7 @@ activity: setup
 version: 6.4
 discoiquuid: 548fb2ec-cfcf-4fe2-a02a-14f267618d68
 translation-type: tm+mt
-source-git-commit: f07680e73316efb859a675f4b2212d8c3e03f6a0
+source-git-commit: 233ad7184cb48098253a78c07a3913356ac9e774
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 
 # Wert des JSON-Datenelements im AEM Forms-Workflow festlegen {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-Da ein adaptives Formular in AEM Arbeitsablauf an verschiedene Benutzer weitergeleitet wird, müssen bestimmte Felder oder Bereiche je nach dem Benutzer, der das Formular überprüft, ein- oder ausgeblendet werden. Um diese Anwendungsfälle zu befriedigen, legen wir in der Regel einen Wert für ein unsichtbares Feld fest. Auf der Grundlage der Werte in diesem unsichtbaren Feld können Geschäftsregeln erstellt werden, um geeignete Bereiche oder Felder auszublenden/zu deaktivieren.
+Da ein adaptives Formular in AEM Arbeitsablauf an verschiedene Benutzer weitergeleitet wird, müssen bestimmte Felder oder Bereiche je nach dem Benutzer, der das Formular überprüft, ein- oder ausgeblendet werden. Um diese Anwendungsfälle zu befriedigen, legen wir in der Regel einen Wert für ein unsichtbares Feld fest. Basierend auf den Wertregeln dieses verborgenen Felds können Geschäftsregeln erstellt werden, um geeignete Bereiche oder Felder auszublenden/zu deaktivieren.
 
 ![Wert eines Elements in JSON-Daten festlegen](assets/capture-3.gif)
 
@@ -46,7 +46,7 @@ So stellen Sie die Assets auf Ihrem lokalen System bereit:
 
 * [Herunterladen und Bereitstellen von DevelopingWitheServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-*[Laden Sie das SetValue-Bundle](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)herunter und stellen Sie es bereit. Dies ist das benutzerdefinierte OSGI-Bundle, mit dem Sie die Werte eines Elements in den gesendeten JSON-Daten festlegen können.
+* [Laden Sie das SetValue-Bundle herunter und stellen Sie es bereit](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGI-Bundle, mit dem Sie die Werte eines Elements in den gesendeten JSON-Daten festlegen können.
 
 * [Herunterladen und Extrahieren des Inhalts der ZIP-Datei](assets/set-value-jsondata.zip)
    * Stellen Sie Ihren Browser auf den [Paketmanager.](http://localhost:4502/crx/packmgr/index.jsp)
@@ -63,10 +63,8 @@ So stellen Sie die Assets auf Ihrem lokalen System bereit:
 * Beachten Sie, dass die Felder im ersten Bereich deaktiviert sind.
 * Beachten Sie, dass der Bereich zum Genehmigen oder Ablehnen der Anforderung jetzt sichtbar ist.
 
-
-
 >[!NOTE]
-
+>
 >Da wir das adaptive Formular mit dem Profil &quot;user&quot;vorab ausfüllen, stellen Sie sicher, dass die Informationen zum Profil des [Administrators vorliegen ](http://localhost:4502/security/users.html). Vergewissern Sie sich mindestens, dass Sie die Feldwerte FirstName, LastName und Email festgelegt haben.
 >Sie können die Debug-Protokollierung aktivieren, indem Sie die Protokollfunktion für com.aemforms.setvalue.core.SetValueInJson [von hier aus aktivieren](http://localhost:4502/system/console/slinglog)
 
