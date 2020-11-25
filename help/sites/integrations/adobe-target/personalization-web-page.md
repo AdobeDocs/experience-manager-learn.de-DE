@@ -1,6 +1,6 @@
 ---
 title: Personalisierung des gesamten Erlebnisses einer Webseite
-description: Erfahren Sie, wie Sie eine Aktivität erstellen, um Ihre Siteseiten, die auf AEM gehostet werden, mit Adobe Target auf eine neue Seite umzuleiten.
+description: Erfahren Sie, wie Sie eine Zielgruppe-Aktivität erstellen, um Ihre AEM Webseiten mit Adobe Target auf neue Seiten umzuleiten.
 feature: targeting
 topics: integrations, authoring, personalization, activity, offers
 audience: all
@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6353
 thumbnail: 6353-personalization-web-page.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '461'
 ht-degree: 1%
 
 ---
@@ -22,11 +22,14 @@ ht-degree: 1%
 
 Erfahren Sie, wie Sie eine Aktivität erstellen, um Ihre Siteseiten, die auf AEM gehostet werden, mit Adobe Target auf eine neue Seite umzuleiten.
 
-Bevor Sie eine Aktivität in der Zielgruppe erstellen, müssen Sie Folgendes einrichten:
+## Voraussetzungen
 
-1. [Experience Platform Launch und AEM integrieren](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
+Um die vollständigen Seiten einer AEM Website personalisieren zu können, muss die folgende Einrichtung abgeschlossen sein:
 
-## Szenario-Übersicht
+1. [hinzufügen von Adobe Target zu Ihrer AEM Website](./add-target-launch-extension.md)
+1. [Auslösen eines Adobe Target-Aufrufs beim Start](./load-and-fire-target.md)
+
+## Szenario - Übersicht
 
 Die WKND-Site hat ihre Startseite neu gestaltet und möchte ihre aktuellen Besucher der Startseite in die neue Startseite umleiten. Gleichzeitig sollten Sie auch verstehen, wie die neu gestaltete Startseite zur Verbesserung der Benutzerinteraktion und des Umsatzes beiträgt. Als Vermarkter wurde Ihnen die Aufgabe zugewiesen, eine Aktivität zu erstellen, mit der die Besucher zur neuen Startseite umgeleitet werden. Lassen Sie uns die Startseite der WKND-Site erkunden und lernen, wie eine Aktivität mit Adobe Target erstellt wird.
 
