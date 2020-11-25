@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6352
 thumbnail: 6352-personalization-using-vec.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '518'
 ht-degree: 1%
 
 ---
@@ -22,10 +22,12 @@ ht-degree: 1%
 
 Erfahren Sie, wie Sie mit Visual Experience Composer (VEC) eine Aktivität zur A/B-Zielgruppe erstellen.
 
-Bevor Sie eine Aktivität in der Zielgruppe erstellen, müssen Sie Folgendes einrichten:
+## Voraussetzungen
 
-1. [Experience Platform Launch und AEM integrieren](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
-2. [Integrieren von Adobe Experience Manager mit Adobe Target mithilfe von Cloud Services](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/target/setup-aem-target-cloud-service.html)
+Zur Verwendung von VEC auf einer AEM Website muss die folgende Einrichtung abgeschlossen sein:
+
+1. [hinzufügen von Adobe Target zu Ihrer AEM Website](./add-target-launch-extension.md)
+1. [Auslösen eines Adobe Target-Aufrufs beim Start](./load-and-fire-target.md)
 
 ## Szenario-Übersicht
 
@@ -33,7 +35,10 @@ Die WKND-Site-Startseite zeigt Aktivitäten oder das Beste, was man in einer Sta
 
 ## Schritte zum Erstellen eines A/B-Tests mit Visual Experience Composer (VEC)
 
-1. Melden Sie sich bei Adobe Target an und navigieren Sie zur Registerkarte &quot;Aktivitäten&quot;.
+1. Bei [Adobe Experience Cloud](https://experience.adobe.com/)anmelden, auf __Zielgruppe__ tippen und zur Registerkarte __Aktivitäten__ navigieren
+
+   + Wenn Sie keine __Zielgruppe__ auf dem Experience Cloud-Dashboard sehen, stellen Sie sicher, dass im Organisationsschalter oben rechts die richtige Organisation für die Adobe ausgewählt ist und dass Sie Zugriff auf die Zielgruppe in [Adobe Admin Console](https://adminconsole.adobe.com/)erhalten haben.
+
 1. Klicken Sie auf **Aktivität** erstellen und wählen Sie dann **A/B-Test** -Aktivität
 
    ![A/B-Aktivität](assets/ab-target-activity.png)
@@ -82,5 +87,5 @@ In diesem Kapitel konnte ein Marketingexperte mithilfe von Visual Experience Com
 
 ## Unterstützende Links
 
-* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
-* [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
