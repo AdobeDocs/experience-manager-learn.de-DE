@@ -10,17 +10,17 @@ version: cloud-service
 kt: 6133
 thumbnail: 41243.jpg
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 3%
+source-wordcount: '613'
+ht-degree: 2%
 
 ---
 
 
 # Laden und Auslösen eines Zielgruppe-Aufrufs {#load-fire-target}
 
-Erfahren Sie, wie Sie mithilfe einer Startregel Zielgruppen laden, Parameter an Seitenanfragen übergeben und einen Seitenaufruf von Ihrer Site auslösen können. Seiteninformationen werden mithilfe der Adobe Client Data Layer abgerufen und als Parameter übergeben, mit denen Sie Daten über das Erlebnis der Besucher auf einer Webseite erfassen und speichern können, um so den Zugriff auf diese Daten zu erleichtern.
+Erfahren Sie, wie Sie mithilfe einer Startregel Zielgruppen laden, Parameter an Seitenanfragen übergeben und einen Seitenaufruf von Ihrer Site auslösen können. Webseiteninformationen werden mithilfe der Adobe Client Data Layer als Parameter abgerufen und weitergegeben, mit der Sie Daten über das Erlebnis der Besucher auf einer Webseite erfassen und speichern können, um so den Zugriff auf diese Daten zu erleichtern.
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
@@ -28,98 +28,134 @@ Erfahren Sie, wie Sie mithilfe einer Startregel Zielgruppen laden, Parameter an 
 
 Die Adobe Client Data Layer ist eine vom Ereignis gesteuerte Datenschicht. Wenn die AEM-Datenschicht geladen wird, löst sie ein Ereignis aus `cmp:show` . Im Video wird die `Launch Library Loaded` Regel mithilfe eines benutzerdefinierten Ereignisses aufgerufen. Unten finden Sie die Codeausschnitte, die im Video sowohl für das benutzerdefinierte Ereignis als auch für die Datenelemente verwendet werden.
 
-### Benutzerdefiniertes Ereignis
+### Angezeigtes benutzerdefiniertes Ereignis{#page-event}
 
-Das folgende Codefragment fügt einen Ereignis-Listener hinzu, indem eine Funktion in die Datenschicht gedrängt wird. Wenn das `cmp:show` Ereignis ausgelöst wird, wird die `pageShownEventHandler` Funktion aufgerufen. In dieser Funktion werden einige Sanitätsüberprüfungen hinzugefügt und ein neuer erstellt, der den neuesten Status der Datenschicht für die Komponente enthält, die das Ereignis ausgelöst hat. `dataObject`
+![Seitendarstellung und benutzerdefinierter Ereignis](assets/load-and-fire-target-call.png)
 
-Danach `trigger(dataObject)` wird gerufen. `trigger()` ist ein reservierter Name in Launch und löst die Launch-Regel aus. Wir übergeben das Ereignis-Objekt als Parameter, der wiederum durch einen anderen reservierten Namen in Launch namens Ereignis verfügbar gemacht wird. Datenelemente in Launch können jetzt auf verschiedene Eigenschaften verweisen: `event.component['someKey']`.
+Fügen Sie der **Regel in der Eigenschaft Start ein neues** Ereignis **hinzu**
+
++ __Erweiterung:__ Core
++ __Ereignistyp:__ Benutzerdefinierter Code
++ __Name:__ Seitenansichts-Handler (oder eine Beschreibung)
+
+Tippen Sie auf die Schaltfläche __Editor__ öffnen und fügen Sie das folgende Codefragment ein. Dieser Code __muss__ der __Ereignis-Konfiguration__ und einer nachfolgenden __Aktion__ hinzugefügt werden.
 
 ```javascript
-var pageShownEventHandler = function(evt) {
-// defensive coding to avoid a null pointer exception
-if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-   //trigger Launch Rule and pass event
-   console.debug("cmp:show event: " + evt.eventInfo.path);
-   var event = {
-      //include the id of the component that triggered the event
-      id: evt.eventInfo.path,
-      //get the state of the component that triggered the event
-      component: window.adobeDataLayer.getState(evt.eventInfo.path)
-   };
+// Define the event handler function
+var pageShownEventHandler = function(coreComponentEvent) {
 
-      //Trigger the Launch Rule, passing in the new `event` object
-      // the `event` obj can now be referenced by the reserved name `event` by other Launch data elements
-      // i.e `event.component['someKey']`
-      trigger(event);
+    // Check to ensure event trigger via AEM Core Components is shaped correctly
+    if (coreComponentEvent.hasOwnProperty("eventInfo") && 
+        coreComponentEvent.eventInfo.hasOwnProperty("path")) {
+    
+        // Debug the AEM Component path the show event is associated with
+        console.debug("cmp:show event: " + coreComponentEvent.eventInfo.path);
+
+        // Create the Launch Event object
+        var launchEvent = {
+            // Include the ID of the AEM Component that triggered the event
+            id: coreComponentEvent.eventInfo.path,
+            // Get the state of the AEM Component that triggered the event           
+            component: window.adobeDataLayer.getState(coreComponentEvent.eventInfo.path)
+        };
+
+        //Trigger the Launch Rule, passing in the new `event` object
+        // the `event` obj can now be referenced by the reserved name `event` by other Launch data elements
+        // i.e `event.component['someKey']`
+        trigger(launchEvent);
    }
 }
 
-//set the namespace to avoid a potential race condition
+// With the AEM Core Component event handler, that proxies the event and relevant information to Adobe Launch, defined above...
+
+// Initialize the adobeDataLayer global object in a safe way
 window.adobeDataLayer = window.adobeDataLayer || [];
-//push the event listener for cmp:show into the data layer
-window.adobeDataLayer.push(function (dl) {
-   //add event listener for `cmp:show` and callback to the `pageShownEventHandler` function
-   dl.addEventListener("cmp:show", pageShownEventHandler);
+
+// Push the event custom listener onto the Adobe Data Layer
+window.adobeDataLayer.push(function (dataLayer) {
+   // Add event listener for the `cmp:show` event, and the custom `pageShownEventHandler` function as the callback
+   dataLayer.addEventListener("cmp:show", pageShownEventHandler);
 });
 ```
 
-### Seiten-ID der Datenschicht
+Eine benutzerdefinierte Funktion definiert die Ereignis, die von AEM Core-Komponenten ausgegeben werden, überwacht sie `pageShownEventHandler`und leitet die relevanten Informationen von der Core-Komponente ab, packt sie in ein Ereignis-Objekt und löst das Launch-Ereignis mit den abgeleiteten Ereignis-Informationen bei der Nutzlast aus.
+
+Die Startregel wird mithilfe der `trigger(...)` Funktion des Launches ausgelöst, die __nur__ in der Codeausschnittdefinition des Ereignisses &quot;Benutzerspezifischer Code&quot;einer Regel verfügbar ist.
+
+Die `trigger(...)` Funktion nimmt ein Ereignis-Objekt als Parameter, das wiederum in Datenelementen zum Starten angezeigt wird, und zwar mit einem anderen reservierten Namen in Launch namens `event`. Datenelemente in Launch können jetzt auf Daten aus diesem Ereignis-Objekt vom `event` Objekt mit Syntax wie `event.component['someKey']`.
+
+Wenn `trigger(...)` der JavaScript-Ereignistyp außerhalb des Kontexts des benutzerspezifischen Codes eines Ereignisses (z. B. in einer Aktion) verwendet wird, wird der JavaScript-Fehler auf der mit der Eigenschaft &quot;Start&quot;integrierten Website ausgegeben `trigger is undefined` werden.
+
+
+### Datenelemente
+
+![Datenelemente](assets/data-elements.png)
+
+Datenelemente zum Adoben-Start ordnen die Daten des im benutzerdefinierten Ereignis [&quot;Seitenansicht&quot;](#page-event) ausgelösten Ereignis-Objekts Variablen zu, die in Adobe Target über den Datenelementtyp &quot;Benutzerspezifischer Code&quot;der Core-Erweiterung verfügbar sind.
+
+#### Seiten-ID-Datenelement
 
 ```
-if(event && event.id) {
+if (event && event.id) {
     return event.id;
 }
 ```
 
+Dieser Code gibt die generierte eindeutige ID der Core-Komponente zurück.
+
 ![Seiten-ID](assets/pageid.png)
 
-### Seitenpfad
+### Seitenpfad-Datenelement
 
 ```
-if(event && event.component && event.component.hasOwnProperty('repo:path')) {
+if (event && event.component && event.component.hasOwnProperty('repo:path')) {
     return event.component['repo:path'];
 }
 ```
 
+Dieser Code gibt den Pfad der AEM Seite zurück.
+
 ![Seitenpfad](assets/pagepath.png)
 
-### Seitentitel
+### Datenelement für Seitentitel
 
 ```
-if(event && event.component && event.component.hasOwnProperty('dc:title')) {
+if (event && event.component && event.component.hasOwnProperty('dc:title')) {
     return event.component['dc:title'];
 }
 ```
 
+Dieser Code gibt den Titel der AEM Seite zurück.
+
 ![Seitentitel](assets/pagetitle.png)
 
-### Häufige Probleme
+## Fehlerbehebung
 
-#### Warum werden meine Mboxes nicht auf meinen Webseiten ausgelöst?
+### Warum werden meine Mboxes nicht auf meinen Webseiten ausgelöst?
 
-**Fehlermeldung, wenn kein mboxDisable-Cookie gesetzt wurde**
+#### Fehlermeldung, wenn das Cookie &quot;mboxDisable&quot;nicht gesetzt wurde**
 
 ![Zielgruppe Cookie-Domänenfehler](assets/target-cookie-error.png)
 
-**Lösung**
+#### Lösung
 
 Zielgruppe-Kunden verwenden manchmal Cloud-basierte Instanzen mit Zielgruppe zum Testen oder zum einfachen Testversand des Konzepts. Diese Domänen und viele andere gehören zur Public Suffix Liste .
 Moderne Browser speichern keine Cookies, wenn Sie diese Domänen verwenden, es sei denn, Sie passen die `cookieDomain` Einstellung mit `targetGlobalSettings()`an.
 
 ```
 window.targetGlobalSettings = {  
-   cookieDomain: 'your-domain' //set the cookie directly on this subdomain 
+   cookieDomain: 'your-domain' //set the cookie directly on this subdomain, for example: 'publish-p1234-e5678.adobeaemcloud.com'
 };
 ```
 
 ## Nächste Schritte
 
-1. [Erlebnisfragment nach Adobe Target exportieren](./export-experience-fragment-target.md)
++ [Erlebnisfragment nach Adobe Target exportieren](./export-experience-fragment-target.md)
 
 ## Unterstützende Links
 
-* [Dokumentation zur Adobe Client-Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
-* [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-* [Verwenden der Adobe Client-Datenschicht und der Dokumentation der Kernkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
-* [Einführung in den Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
++ [Dokumentation zur Adobe Client-Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
++ [Verwenden der Adobe Client-Datenschicht und der Dokumentation der Kernkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
++ [Einführung in den Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
