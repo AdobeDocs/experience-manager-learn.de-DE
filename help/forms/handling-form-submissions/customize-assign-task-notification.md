@@ -22,16 +22,16 @@ ht-degree: 5%
 # Benachrichtigung zur Zuweisung von Aufgaben anpassen
 
 Die Komponente &quot;Aufgabe zuweisen&quot;wird verwendet, um Workflow-Teilnehmern Aufgaben zuzuweisen. Wenn eine Aufgabe einem Benutzer oder einer Gruppe zugewiesen wird, wird eine E-Mail-Benachrichtigung an den definierten Benutzer oder Gruppenmitglieder gesendet.
-Diese E-Mail-Benachrichtigung enthält in der Regel dynamische Daten zur Aufgabe. Diese dynamischen Daten werden mithilfe der systemgenerierten [Metadateneigenschaften](https://docs.adobe.com/content/help/en/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification)abgerufen.
+Diese E-Mail-Benachrichtigung enthält in der Regel dynamische Daten zur Aufgabe. Diese dynamischen Daten werden mit dem vom System generierten [Metadateneigenschaften](https://docs.adobe.com/content/help/en/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification) abgerufen.
 Um Werte aus den gesendeten Formulardaten in die E-Mail-Benachrichtigung einzubeziehen, müssen wir eine benutzerdefinierte Metadateneigenschaft erstellen und diese benutzerdefinierten Metadateneigenschaften dann in der E-Mail-Vorlage verwenden
 
 
 
 ## Benutzerdefinierte Metadateneigenschaft erstellen
 
-Der empfohlene Ansatz besteht darin, eine OSGI-Komponente zu erstellen, die die getUserMetadata-Methode des [WorkitemUserMetadataService implementiert](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)
+Der empfohlene Ansatz besteht darin, eine OSGI-Komponente zu erstellen, die die getUserMetadata-Methode von [WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--) implementiert
 
-Der folgende Code erstellt 4 Metadateneigenschaften (_firstName_,_lastName_,_reason_ und _amountRequested_) und legt deren Wert aus den gesendeten Daten fest. Beispielsweise wird der Wert der Metadateneigenschaft _firstName_ auf den Wert des Elements firstName aus den gesendeten Daten eingestellt. Im folgenden Code wird davon ausgegangen, dass die gesendeten Daten des adaptiven Formulars im XML-Format vorliegen. Adaptives Forms auf Basis des JSON-Schemas oder des Formulardatenmodells generiert Daten im JSON-Format.
+Der folgende Code erstellt 4 Metadateneigenschaften (_firstName_,_lastName_,_reason_ und _amountRequested_) und legt seinen Wert aus den gesendeten Daten fest. Beispielsweise wird der Wert der Metadateneigenschaft _firstName_ auf den Wert des Elements firstName aus den gesendeten Daten eingestellt. Im folgenden Code wird davon ausgegangen, dass die gesendeten Daten des adaptiven Formulars im XML-Format vorliegen. Adaptives Forms auf Basis des JSON-Schemas oder des Formulardatenmodells generiert Daten im JSON-Format.
 
 
 ```java
@@ -113,7 +113,7 @@ return customMetadataMap;
 
 ## Verwenden Sie die benutzerdefinierten Metadateneigenschaften in der E-Mail-Vorlage für Aufgaben-Benachrichtigungen
 
-In der E-Mail-Vorlage können Sie die Metadateneigenschaft mit der folgenden Syntax einbeziehen, wobei amountRequested die Metadateneigenschaft ist `${amountRequested}`
+In der E-Mail-Vorlage können Sie die Metadateneigenschaft mit der folgenden Syntax einbeziehen, wobei amountRequested die Metadateneigenschaft `${amountRequested}` ist
 
 ## Aufgabe zuweisen für die Verwendung der benutzerdefinierten Metadateneigenschaft konfigurieren
 
@@ -129,10 +129,10 @@ Nachdem die OSGi-Aufgabe erstellt und auf AEM Server bereitgestellt wurde, konfi
 ## So versuchen Sie es auf Ihrem Server
 
 * [Konfigurieren des Day CQ Mail Service](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
-* Zuordnen einer gültigen E-Mail-ID zum [Admin-Benutzer](http://localhost:4502/security/users.html)
-* Herunterladen und Installieren der [Workflow-and-notification-Vorlage](assets/workflow-and-task-notification-template.zip) mithilfe des [Paketmanagers](http://localhost:4502/crx/packmgr/index.jsp)
-* Laden Sie das [adaptive Formular](assets/request-travel-authorization.zip) herunter und importieren Sie es aus der Benutzeroberfläche für [Formulare und Dokumente in AEM](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
-* Bereitstellen und Beginn des [benutzerdefinierten Bundles](assets/work-items-user-service-bundle.jar) mithilfe der [Webkonsole](http://localhost:4502/system/console/bundles)
+* Verknüpfen Sie eine gültige E-Mail-ID mit [Admin-Benutzer](http://localhost:4502/security/users.html)
+* Laden Sie die [Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip) mit [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) herunter und installieren Sie sie.
+* Laden Sie [Adaptives Formular](assets/request-travel-authorization.zip) herunter und importieren Sie es aus dem [Formular und Dokumente ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) in AEM.
+* Stellen Sie das [Benutzerspezifische Paket](assets/work-items-user-service-bundle.jar) bereit und Beginn Sie es mit der [Webkonsole](http://localhost:4502/system/console/bundles) ein.
 * [Vorschau und Senden des Formulars](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
 
 Bei der Übermittlung des Formulars wird die Zuweisungsbenachrichtigung an die E-Mail-ID gesendet, die dem Administrator zugeordnet ist. Der folgende Screenshot zeigt Ihnen eine Musterzuweisungsbenachrichtigung für Aufgaben
