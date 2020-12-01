@@ -13,7 +13,7 @@ ht-degree: 29%
 ---
 
 
-# Überblick {#overview}
+# Überblick{#overview}
 
 Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie komplexe digitale Formulare erstellen, verwalten, veröffentlichen und aktualisieren und dabei in Back-End-Prozesse, Geschäftsregeln und Daten integrieren können. Dieses Benutzerhandbuch enthält Videos und Übungen zu den zahlreichen Funktionen und Funktionen von AEM Forms
 
@@ -58,7 +58,7 @@ Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie
     </a>
     </div>
     <p>
-    <em>Interactive Communications zentralisiert und verwaltet die Erstellung, Zusammenstellung und den Versand sicherer, personalisierter und interaktiver Schriftstücke, wie z. B. Geschäftskorrespondenz, Dokumente, Aussagen, Vorteilsmitteilungen, Marketing-E-Mails, Rechnungen und Begrüßungs-Kits. </em>
+    <em>Interactive Communications zentralisiert und verwaltet die Erstellung, Zusammenstellung und den Versand sicherer, personalisierter und interaktiver Schriftstücke, wie z. B. Geschäftskorrespondenz, Dokumente, Aussagen, Vorteilsmitteilungen, Marketing-E-Mails, Rechnungen und Begrüßungs-Kits.  </em>
     <p>
   </td>
   <td>
@@ -84,7 +84,7 @@ Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie
 * [AEM Sites-Entwicklerdokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [AEM Sites-Verwaltungsdokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
 * [AEM Sites - Bereitstellung der Dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/user-guide.html)
-* [Tutorials zu AEM als Cloud-Service](/help/cloud-service/overview.md)
+* [Tutorials zu AEM as a Cloud Service](/help/cloud-service/overview.md)
 * [AEM Assets-Tutorials](/help/assets/overview.md)
 * [AEM Forms-Tutorials](/help/forms/overview.md)
 * [AEM Foundation-Tutorials](/help/foundation/overview.md)
