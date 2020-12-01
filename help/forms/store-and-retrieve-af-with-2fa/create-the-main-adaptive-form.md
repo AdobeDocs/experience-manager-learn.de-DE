@@ -24,14 +24,14 @@ Das Formular **StoreAFWithAttachments** ist das wichtigste adaptive Formular. Di
 
 ![Hauptantragsformular](assets/6552.JPG)
 
-Dieses Formular ist mit **bootboxjs540,storeAFWithAttachments** -Client-Bibliotheken verknüpft, die zuvor im Verlauf des Kurses erstellt wurden, und einem AEM Arbeitsablauf, der beim Senden des Formulars ausgelöst wird.
+Dieses Formular ist mit den Clientbibliotheken **bootboxjs540,storeAFWithAttachments** verknüpft, die zuvor im Kurs erstellt wurden, und einem AEM Arbeitsablauf, der beim Senden des Formulars ausgelöst wird.
 
 
-* Die Musterformulare basieren auf einer [benutzerdefinierten Vorlage](assets/custom-template-with-page-component.zip) für adaptive Formulare, die in AEM importiert werden muss, damit die Musterformulare korrekt wiedergegeben werden können.
+* Die Musterformulare basieren auf [einer benutzerdefinierten adaptiven Formularvorlage](assets/custom-template-with-page-component.zip), die in AEM importiert werden muss, damit die Musterformulare korrekt wiedergegeben werden.
 
-* Das ausgefüllte [StoreAfWithAttachments-Formular](assets/store-af-with-attachments-form.zip) kann heruntergeladen und in Ihre AEM-Instanz importiert werden.
+* Das ausgefüllte Formular [StoreAfWithAttachments](assets/store-af-with-attachments-form.zip) kann heruntergeladen und in Ihre AEM-Instanz importiert werden.
 
-* Der mit diesem Formular [verknüpfte](assets/workflow-model-store-af-with-attachments.zip) AEM Workflow muss in Ihre AEM-Instanz importiert werden, damit das Formular funktioniert.
+* Der mit diesem Formular verknüpfte [AEM Arbeitsablauf muss in Ihre AEM Instanz importiert werden, damit das Formular funktioniert.](assets/workflow-model-store-af-with-attachments.zip)
 
 
 
