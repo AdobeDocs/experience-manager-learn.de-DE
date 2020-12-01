@@ -30,12 +30,12 @@ Der Anwendungsfall besteht darin, einen AEM Workflow bei einer Übermittlung des
    * Importieren Sie die Datei &quot;StoreAFInDBWorkflow.zip&quot;mit dem Package Manager in AEM. Das Paket verfügt über einen Beispielarbeitsablauf, in dem die AF-Daten in DB gespeichert werden. Öffnen Sie das Workflow-Modell. Der Workflow umfasst nur einen Schritt. Dieser Schritt ruft den im Bundle geschriebenen Code auf, um die AF-Daten in der Datenbank zu speichern. Ich übergebe ein einziges Argument an den Prozess. Dies ist der Name des adaptiven Formulars, dessen Daten gespeichert werden.
    * Stellen Sie mithilfe der Felix-Webkonsole die Datei &quot;insertData.core-0.0.1-SNAPSHOT.jar&quot;bereit. Dieses Bundle enthält den Code zum Schreiben der gesendeten Formulardaten in die Datenbank
 
-* Zu [ConfigMgr wechseln](http://localhost:4502/system/console/configMgr)
+* Gehen Sie zu [ConfigMgr](http://localhost:4502/system/console/configMgr)
 
    * Suchen Sie nach &quot;JDBC Connection Pool&quot;. Erstellen Sie einen neuen Day Commons JDBC Connection Pool. Geben Sie die Einstellungen für Ihre Datenbank an.
 
    * ![JDBC-Verbindungspool](assets/jdbc-connection-pool.png)
-   * Suchen Sie nach &quot;Formulardaten **in DB** einfügen&quot;.
+   * Suchen Sie nach &quot;**Formulardaten in DB**&quot;
    * Geben Sie die für Ihre Datenbank spezifischen Eigenschaften an.
       * DataSourceName:Name der Datenquelle, die Sie zuvor konfiguriert haben.
       * TableName - Name der Tabelle, in der Sie die AF-Daten speichern möchten
