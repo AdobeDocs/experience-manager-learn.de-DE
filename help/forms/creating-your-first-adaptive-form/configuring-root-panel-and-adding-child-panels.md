@@ -24,7 +24,7 @@ ht-degree: 0%
 
 # Hinzufügen von untergeordneten Bedienfeldern zum Stammbedienfeld {#adding-child-panels-to-root-panel}
 
-Wenn Sie untergeordnete Bedienfelder zum Stammbedienfeld hinzufügen, **stellen Sie sicher, dass Sie sich im Bearbeitungsmodus befinden. Die Schaltfläche &quot;Bearbeiten&quot;befindet sich oben rechts im Browser.**
+Wenn Sie untergeordnete Bedienfelder zum Stammbedienfeld hinzufügen, stellen Sie sicher, dass Sie sich im Bearbeitungsmodus befinden. **Die Schaltfläche &quot;Bearbeiten&quot;befindet sich oben rechts im Browser.**
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28536?quality=9&learn=on)
