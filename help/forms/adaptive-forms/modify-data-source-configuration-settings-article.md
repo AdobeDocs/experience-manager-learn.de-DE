@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Möglichkeit zum Ändern der Einstellungen der Datenquellenkonfiguration{#ability-to-modify-data-source-configuration-settings}
+# Möglichkeit zum Ändern der Datenquellenkonfigurationseinstellungen{#ability-to-modify-data-source-configuration-settings}
 
 Bis zur Version AEM Forms 6.4 konnten Sie nach der Konfiguration einer Datenquelle das Schema Host und Base Path für RESTful-Dienst nicht ändern. Dies war problematisch, wenn Sie Ihre Datenquellen mit verschiedenen Umgebung testen wollten.
 
@@ -30,5 +30,7 @@ Die folgenden Screenshots zeigen die Einstellungen der Datenquellenkonfiguration
 
 **Datenquellenkonfiguration in AEM 6.4**
 
-![64DataSource-Konfiguration](assets/64release.gif)**Bearbeitbare Datenquellenkonfiguration in AEM 6.5 und höher**![65DataSource-Konfiguration](assets/modifiabledatasource.jfif)
+![64DataSource-](assets/64release.gif)
+**KonfigurationBearbeitbare Datenquellenkonfiguration in AEM 6.5 und höher**
+![65DataSource-Konfiguration](assets/modifiabledatasource.jfif)
 
