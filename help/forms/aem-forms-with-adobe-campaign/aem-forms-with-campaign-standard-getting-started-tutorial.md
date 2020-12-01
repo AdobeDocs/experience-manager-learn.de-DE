@@ -38,8 +38,8 @@ Um AEM Forms mit ACS zu integrieren, müssen Sie die folgenden Schritte ausführ
 Zum Einstieg befolgen Sie bitte die folgenden Anweisungen
 
 * [Laden Sie die Assets für dieses Lernprogramm herunter und dekomprimieren Sie sie.](assets/aem-forms-and-acs-bundles.zip)
-* Bereitstellen der Pakete mithilfe der [Felix-Webkonsole](http://localhost:4502/system/console/bundles)
+* Stellen Sie die Pakete mit [Felix Web Console](http://localhost:4502/system/console/bundles) bereit.
 * Geben Sie die entsprechenden Einstellungen für Adobe Campaign in der Felix OSGI-Konfiguration ein.
-* [Erstellen Sie einen Dienstbenutzer, wie in diesem Artikel](/help/forms/adaptive-forms/service-user-tutorial-develop.md)erwähnt. Stellen Sie sicher, dass Sie das mit dem Artikel verknüpfte OSGi-Bundle bereitstellen.
+* [Erstellen Sie einen Dienstbenutzer, wie in diesem Artikel](/help/forms/adaptive-forms/service-user-tutorial-develop.md) erwähnt. Stellen Sie sicher, dass Sie das mit dem Artikel verknüpfte OSGi-Bundle bereitstellen.
 * Speichern Sie den privaten ACS-Schlüssel unter etc/key/campaign/private.key. Sie müssen einen Ordner mit dem Namen Kampagne unter etc/key erstellen.
 * [Stellen Sie dem Dienstbenutzer &quot;data&quot;Lesezugriff auf den Ordner &quot;Kampagne&quot;bereit.](http://localhost:4502/useradmin)
