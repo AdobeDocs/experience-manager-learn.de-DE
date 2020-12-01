@@ -37,7 +37,7 @@ Sie können das Schema der Variablen vom Typ JSON in Ihrem Workflow-Modell zuord
 Um die Assets auf Ihrem System zu verwenden, führen Sie die folgenden Schritte aus:
 
 * [Herunterladen und Importieren von Assets in AEM mit dem Paketmanager](assets/jsonandstringvariable.zip)
-* [Durchsuchen Sie das Workflow-Modell](http://localhost:4502/editor.html/conf/global/settings/workflow/models/jsonvariable.html) , um die Variablen zu verstehen, die im Workflow verwendet werden.
+* [Überprüfen Sie das Workflow-](http://localhost:4502/editor.html/conf/global/settings/workflow/models/jsonvariable.html) Modell, um die Variablen zu verstehen, die im Workflow verwendet werden.
 * [E-Mail-Dienst konfigurieren](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
 * [Adaptives Formular öffnen](http://localhost:4502/content/dam/formsanddocuments/afbasedonjson/jcr:content?wcmmode=disabled)
 * Füllen Sie die Details aus und senden Sie das Formular
