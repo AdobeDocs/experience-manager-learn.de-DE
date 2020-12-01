@@ -24,9 +24,9 @@ HTML5-Formulare können an ein in AEM gehostetes Servlet gesendet werden. Auf di
 
 ## Senden-Handler erstellen
 
-Ein einfaches Servlet kann erstellt werden, um die Übermittlung des HTML5-Formulars zu verarbeiten. Die gesendeten Daten können dann mithilfe des folgenden Codes extrahiert werden. Dieses [Servlet](assets/html5-submit-handler.zip) wird Ihnen im Rahmen dieses Tutorials zur Verfügung gestellt. Installieren Sie das [Servlet](assets/html5-submit-handler.zip) mithilfe des [Paketmanagers](http://localhost:4502/crx/packmgr/index.jsp)
+Ein einfaches Servlet kann erstellt werden, um die Übermittlung des HTML5-Formulars zu verarbeiten. Die gesendeten Daten können dann mithilfe des folgenden Codes extrahiert werden. Dieses [Servlet](assets/html5-submit-handler.zip) wird Ihnen im Rahmen dieses Lernprogramms zur Verfügung gestellt. Installieren Sie das [Servlet](assets/html5-submit-handler.zip) mit [Paketmanager](http://localhost:4502/crx/packmgr/index.jsp)
 
-Der Code aus Zeile 9 kann zum Aufrufen des J2EE-Prozesses verwendet werden. Stellen Sie sicher, dass Sie die LiveCycle Client SDK-Konfiguration [für](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) Adobe konfiguriert haben, wenn Sie den Code zum Aufrufen des J2EE-Prozesses verwenden möchten.
+Der Code aus Zeile 9 kann zum Aufrufen des J2EE-Prozesses verwendet werden. Vergewissern Sie sich, dass Sie [Adobe LiveCycle Client SDK Configuration](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) konfiguriert haben, wenn Sie den Code zum Aufrufen des J2EE-Prozesses verwenden möchten.
 
 ```java
 StringBuffer stringBuffer = new StringBuffer();
@@ -62,12 +62,12 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 
 * Tippen Sie auf die xdp-Datei und klicken Sie auf _Eigenschaften_->_Erweitert_
 * Kopieren Sie http://localhost:4502/content/AemFormsSamples/handlehml5formsubmission.html und fügen Sie es in das Textfeld &quot;URL senden&quot;ein
-* Klicken Sie auf _Speichern undSchließen_ .
+* Klicken Sie auf die Schaltfläche _SaveAndClose_.
 
 ### hinzufügen Eintrag in den Ausschließen-Pfaden
 
 * Navigieren Sie zu [configMgr](http://localhost:4502/system/console/configMgr).
-* Nach _Adobe Granite CSRF Filter suchen_
+* Suchen Sie nach _Adobe Granite CSRF Filter_
 * hinzufügen den folgenden Eintrag im Abschnitt Ausgeschlossene Pfade
 * _/content/AEMFormsSamples/handlehml5formsubmission_
 * Speichern Sie Ihre Änderungen
@@ -81,7 +81,7 @@ System.out.println("The submitted form data is " + stringBuffer.toString());
 
 ### Zusätzliche Lesung
 
-Dieser [Artikel](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html) zum Generieren von PDF-Dateien aus der Übermittlung von HTML5-Formularen wird ebenfalls empfohlen.
+Dieser [Artikel](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html) beim Generieren von PDF-Dateien aus der Übermittlung von HTML5-Formularen wird ebenfalls empfohlen.
 
 
 
