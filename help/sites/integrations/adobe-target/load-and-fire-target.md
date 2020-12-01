@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
 workflow-type: tm+mt
 source-wordcount: '613'
-ht-degree: 2%
+ht-degree: 4%
 
 ---
 
@@ -26,19 +26,19 @@ Erfahren Sie, wie Sie mithilfe einer Startregel Zielgruppen laden, Parameter an 
 
 ## Seitenladeregel
 
-Die Adobe Client Data Layer ist eine vom Ereignis gesteuerte Datenschicht. Wenn die AEM-Datenschicht geladen wird, löst sie ein Ereignis aus `cmp:show` . Im Video wird die `Launch Library Loaded` Regel mithilfe eines benutzerdefinierten Ereignisses aufgerufen. Unten finden Sie die Codeausschnitte, die im Video sowohl für das benutzerdefinierte Ereignis als auch für die Datenelemente verwendet werden.
+Die Adobe Client Data Layer ist eine vom Ereignis gesteuerte Datenschicht. Wenn die AEM-Seitendatenschicht geladen wird, löst sie ein Ereignis `cmp:show` aus. Im Video wird die `Launch Library Loaded`-Regel mithilfe eines benutzerdefinierten Ereignisses aufgerufen. Unten finden Sie die Codeausschnitte, die im Video sowohl für das benutzerdefinierte Ereignis als auch für die Datenelemente verwendet werden.
 
 ### Angezeigtes benutzerdefiniertes Ereignis{#page-event}
 
 ![Seitendarstellung und benutzerdefinierter Ereignis](assets/load-and-fire-target-call.png)
 
-Fügen Sie der **Regel in der Eigenschaft Start ein neues** Ereignis **hinzu**
+Fügen Sie der Eigenschaft &quot;Start&quot;ein neues **Ereignis** zur **Regel** hinzu.
 
 + __Erweiterung:__ Core
 + __Ereignistyp:__ Benutzerdefinierter Code
 + __Name:__ Seitenansichts-Handler (oder eine Beschreibung)
 
-Tippen Sie auf die Schaltfläche __Editor__ öffnen und fügen Sie das folgende Codefragment ein. Dieser Code __muss__ der __Ereignis-Konfiguration__ und einer nachfolgenden __Aktion__ hinzugefügt werden.
+Tippen Sie auf die Schaltfläche __Editor öffnen__ und fügen Sie das folgende Codefragment ein. Dieser Code __muss der__ Ereignis-Konfiguration __und einer nachfolgenden__ Aktion __hinzugefügt werden.__
 
 ```javascript
 // Define the event handler function
@@ -78,20 +78,20 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-Eine benutzerdefinierte Funktion definiert die Ereignis, die von AEM Core-Komponenten ausgegeben werden, überwacht sie `pageShownEventHandler`und leitet die relevanten Informationen von der Core-Komponente ab, packt sie in ein Ereignis-Objekt und löst das Launch-Ereignis mit den abgeleiteten Ereignis-Informationen bei der Nutzlast aus.
+Eine benutzerdefinierte Funktion definiert das `pageShownEventHandler` und überwacht die von AEM Core-Komponenten emittierten Ereignis, leitet die relevanten Informationen aus der Core-Komponente ab, packt sie in ein Ereignis-Objekt und löst das Launch-Ereignis mit den abgeleiteten Ereignis-Informationen bei der Nutzlast aus.
 
-Die Startregel wird mithilfe der `trigger(...)` Funktion des Launches ausgelöst, die __nur__ in der Codeausschnittdefinition des Ereignisses &quot;Benutzerspezifischer Code&quot;einer Regel verfügbar ist.
+Die Startregel wird mithilfe der Funktion `trigger(...)` des Launches ausgelöst, die nur __in der Codeausschnittdefinition des Ereignisses für benutzerspezifischen Code verfügbar ist.__
 
-Die `trigger(...)` Funktion nimmt ein Ereignis-Objekt als Parameter, das wiederum in Datenelementen zum Starten angezeigt wird, und zwar mit einem anderen reservierten Namen in Launch namens `event`. Datenelemente in Launch können jetzt auf Daten aus diesem Ereignis-Objekt vom `event` Objekt mit Syntax wie `event.component['someKey']`.
+Die Funktion `trigger(...)` akzeptiert ein Ereignis-Objekt als Parameter, der wiederum in Datenelemente starten angezeigt wird, und zwar unter &quot;Start&quot;, wobei der Name `event` ein anderer reservierter Name lautet. Datenelemente in Launch können nun auf Daten aus diesem Ereignis-Objekt vom `event`-Objekt mit Syntax wie `event.component['someKey']` verweisen.
 
-Wenn `trigger(...)` der JavaScript-Ereignistyp außerhalb des Kontexts des benutzerspezifischen Codes eines Ereignisses (z. B. in einer Aktion) verwendet wird, wird der JavaScript-Fehler auf der mit der Eigenschaft &quot;Start&quot;integrierten Website ausgegeben `trigger is undefined` werden.
+Wenn `trigger(...)` außerhalb des Kontexts des benutzerspezifischen Code-Ereignistyps eines Ereignisses verwendet wird (z. B. in einer Aktion), wird der JavaScript-Fehler `trigger is undefined` auf der mit der Launch-Eigenschaft integrierten Website ausgegeben.
 
 
 ### Datenelemente
 
 ![Datenelemente](assets/data-elements.png)
 
-Datenelemente zum Adoben-Start ordnen die Daten des im benutzerdefinierten Ereignis [&quot;Seitenansicht&quot;](#page-event) ausgelösten Ereignis-Objekts Variablen zu, die in Adobe Target über den Datenelementtyp &quot;Benutzerspezifischer Code&quot;der Core-Erweiterung verfügbar sind.
+Datenelemente zum Starten von Adoben ordnen die Daten des im benutzerspezifischen Ereignis für die Seitenanzeige ausgelösten Ereignis-Objekts [den in Adobe Target verfügbaren Variablen über den Datenelementtyp für benutzerdefinierte  der Core-Erweiterung zu.](#page-event)
 
 #### Seiten-ID-Datenelement
 
@@ -140,7 +140,7 @@ Dieser Code gibt den Titel der AEM Seite zurück.
 #### Lösung
 
 Zielgruppe-Kunden verwenden manchmal Cloud-basierte Instanzen mit Zielgruppe zum Testen oder zum einfachen Testversand des Konzepts. Diese Domänen und viele andere gehören zur Public Suffix Liste .
-Moderne Browser speichern keine Cookies, wenn Sie diese Domänen verwenden, es sei denn, Sie passen die `cookieDomain` Einstellung mit `targetGlobalSettings()`an.
+Moderne Browser speichern keine Cookies, wenn Sie diese Domänen verwenden, es sei denn, Sie passen die `cookieDomain`-Einstellung mit `targetGlobalSettings()` an.
 
 ```
 window.targetGlobalSettings = {  
@@ -157,5 +157,5 @@ window.targetGlobalSettings = {
 + [Dokumentation zur Adobe Client-Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki)
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-+ [Verwenden der Adobe Client-Datenschicht und der Dokumentation der Kernkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
++ [Verwenden der Adobe Client-Datenschicht und der Dokumentation der Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/data-layer/overview.html)
 + [Einführung in den Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
