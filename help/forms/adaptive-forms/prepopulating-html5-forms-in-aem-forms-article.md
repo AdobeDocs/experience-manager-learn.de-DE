@@ -20,9 +20,9 @@ ht-degree: 2%
 ---
 
 
-# HTML5-Forms mit Datenattribut vorbeleben {#prepopulate-html-forms-using-data-attribute}
+# HTML5-Forms mit Datenattribut {#prepopulate-html-forms-using-data-attribute} vorbeleben
 
-Besuchen Sie die [AEM Forms-Beispielseite](https://forms.enablementadobe.com/content/samples/samples.html?query=0) für einen Link zu einer Live-Demo dieser Funktion.
+Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) für einen Link zu einer Live-Demo dieser Funktion.
 
 XDP-Vorlagen, die mit AEM Forms im HTML-Format wiedergegeben werden, werden als HTML5- oder Mobile Forms bezeichnet. In der Regel werden diese Formulare bei der Wiedergabe vorab ausgefüllt.
 
@@ -38,7 +38,7 @@ slingRequest.setAttribute(&quot;data&quot;, content);
 
 In diesem Beispiel legen wir das Datenattribut mit dem Inhalt fest. Der Inhalt stellt die Daten dar, mit denen Sie das Formular vorab füllen möchten. Normalerweise würden Sie den &quot;Inhalt&quot;abrufen, indem Sie einen REST-Aufruf an einen internen Dienst richten.
 
-Um dies zu erreichen, müssen Sie ein benutzerdefiniertes Profil erstellen. Die Details zum Erstellen von benutzerdefiniertem Profil sind in der [AEM Forms-Dokumentation hier](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html)eindeutig dokumentiert.
+Um dies zu erreichen, müssen Sie ein benutzerdefiniertes Profil erstellen. Die Details zum Erstellen von benutzerdefiniertem Profil sind in der [AEM Forms-Dokumentation hier](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html) eindeutig dokumentiert.
 
 Nachdem Sie Ihr benutzerdefiniertes Profil erstellt haben, erstellen Sie eine JSP-Datei, die die Daten abruft, indem Sie Aufrufe an Ihr Backend-System tätigen. Nach dem Abrufen der Daten verwenden Sie slingRequest.setAttribute(&quot;data&quot;, content); zum Vorausfüllen des Formulars
 
@@ -49,7 +49,8 @@ Wenn die XDP gerendert wird, können Sie auch einige Parameter an die xdp überg
 Die von Ihnen geschriebene JSP hat Zugriff auf den Parameter name über request.getParameter(&quot;name&quot;) . Anschließend können Sie den Wert dieses Parameters an Ihren Backend-Prozess übergeben, um die erforderlichen Daten abzurufen.
 Gehen Sie wie folgt vor, um diese Funktion auf Ihrem System zu verwenden:
 
-* [Herunterladen und Importieren der Assets AEM mit Package Manager](assets/prepopulatemobileform.zip)Das Paket installiert Folgendes
+* [Herunterladen und Importieren der Assets AEM mit Package ](assets/prepopulatemobileform.zip)
+ManagerDas Paket installiert Folgendes
 
    * CustomProfile
    * Beispiel-XDP
