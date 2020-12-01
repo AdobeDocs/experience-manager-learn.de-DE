@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Verwenden der Tabellenkomponente im AEM Forms Print Kanal Dokument {#using-table-component-in-aem-forms-print-channel-document}
+# Verwenden der Tabellenkomponente im AEM Forms Print Kanal-Dokument {#using-table-component-in-aem-forms-print-channel-document}
 
 Im folgenden Video werden die Schritte erläutert, die erforderlich sind, um die Tabellenkomponente in der interaktiven Kommunikation für Dokumente von Kanälen zu verwenden.
 
@@ -44,7 +44,7 @@ Tabellen werden verwendet, um Daten tabellarisch anzuzeigen. Die Zeilen in der T
    * Interaktives Kommunikations-Dokument
    * sampleretirementaccountdata.json
 
-* Öffnen Sie das Dokument Interaktive Kommunikation im [Bearbeitungsmodus](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html).
+* Öffnen Sie das Dokument &quot;Interaktive Kommunikation&quot;im Bearbeitungsmodus [a1/>.](http://localhost:4502/editor.html/content/forms/af/401kstatement/tablesinprintdocument/channels/print.html)
 
 * hinzufügen Sie das Layout-Fragment &quot;TableDemo&quot;in den Beitragsabschnitt.
 * Binden Sie die Tabellenzellen an die entsprechenden Formulardatenmodellelemente, wie im Video gezeigt.
