@@ -15,7 +15,7 @@ ht-degree: 8%
 ---
 
 
-# Sprachkopie verwenden {#using-language-copy}
+# Verwenden der Sprachkopie {#using-language-copy}
 
 Mit AEM 6.3 Verbesserungen bei der Übersetzung des Assistenten zum Erstellen von Sprachkopien können Benutzer eine Sprachkopie aus Übergeordnet erstellen, ohne eine Stammseite erstellen zu müssen.
 
