@@ -31,7 +31,7 @@ In diesem Artikel wird die Verwendung des Barcode-Dienstes zum Ausfüllen des ad
 
 Der folgende Code dekodiert den Barcode und füllt ein JSON-Objekt mit den dekodierten Werten. Das Servlet gibt dann das JSON-Objekt in seiner Antwort auf die aufrufende Anwendung zurück.
 
-Sie können diese Funktion live sehen, besuchen Sie bitte das [Beispielportal](https://forms.enablementadobe.com/content/samples/samples.html?query=0) und suchen Sie nach der Barcode Service Demo
+Sie können diese Funktion live sehen, besuchen Sie bitte das Portal [samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) und suchen Sie nach der Barcode Service Demo
 
 ```java
 public JSONObject extractBarCode(Document pdfDocument) {
@@ -146,11 +146,11 @@ Zeile 23 - Aufruf der DocumentServices-Methode &quot;extractBarCode&quot;, um da
 
 Gehen Sie wie folgt vor, um dieses System auf Ihrem System laufen zu lassen
 
-1. [Laden Sie die Datei &quot;BarcodeService.zip](assets/barcodeservice.zip) &quot;herunter und importieren Sie sie mit dem Package Manager in AEM
+1. [Laden Sie BarcodeService.](assets/barcodeservice.zip) zipand herunter und importieren Sie mit dem Package Manager in AEM
 1. [Herunterladen und Installieren des benutzerdefinierten DocumentServices-Bundles](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [Herunterladen und Installieren des DevelopingWithServiceUser-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [PDF-Musterformular herunterladen](assets/barcode.pdf)
-1. Verweisen Sie Ihren Browser auf das adaptive [Beispielformular](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
+1. Verweisen Sie Ihren Browser auf das adaptive Beispielformular [](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
 1. Hochladen der bereitgestellten Musterdatei
 1. Sie sollten die Formulare sehen, die mit den Daten gefüllt sind
 
