@@ -16,11 +16,11 @@ ht-degree: 6%
 ---
 
 
-# Entwicklung für Seitendifferenz {#developing-for-page-difference}
+# Entwickeln für Seitendifferenz {#developing-for-page-difference}
 
 In diesem Video wird gezeigt, wie Sie benutzerdefinierte Stile für die Seitendifferenz-Funktion von AEM-Sites bereitstellen.
 
-## Anpassen von Seitenunterschieden {#customizing-page-difference-styles}
+## Anpassen von Seitenunterschieden-Stilen {#customizing-page-difference-styles}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18871/?quality=9&learn=on)
 
@@ -28,15 +28,15 @@ In diesem Video wird gezeigt, wie Sie benutzerdefinierte Stile für die Seitendi
 >
 >In diesem Video wird der Client-Bibliothek we.Retail benutzerdefinierte CSS hinzugefügt, wobei diese Änderungen am AEM Sites-Projekt des Kunden vorgenommen werden sollten. im folgenden Beispielcode: `my-project`.
 
-AEM Seitendifferenz ruft die OOTB CSS über eine direkte Ladung von `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`.
+AEM Seitendifferenz ruft die OOTB-CSS über eine direkte Last von `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css` ab.
 
 Aufgrund dieser direkten Belastung mit CSS anstatt mit einer Client-Bibliotheks-Kategorie müssen wir einen weiteren Einfügepunkt für die benutzerdefinierten Stile finden. Dieser benutzerdefinierte Einfügepunkt ist der Authoring-Client des Projekts.
 
 Dies hat den Vorteil, dass diese benutzerdefinierten Stilüberschreibungen für Pächter spezifisch sein können.
 
-### Vorbereiten der Authoring-Clientlib {#prepare-the-authoring-clientlib}
+### Vorbereiten der Authoring-Client-Bibliothek {#prepare-the-authoring-clientlib}
 
-Stellen Sie sicher, dass für Ihr Projekt eine `authoring` clientlib vorhanden ist unter `/apps/my-project/clientlib/authoring.`
+Stellen Sie sicher, dass `authoring` clientlib für Ihr Projekt unter `/apps/my-project/clientlib/authoring.` vorhanden ist.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -45,9 +45,9 @@ Stellen Sie sicher, dass für Ihr Projekt eine `authoring` clientlib vorhanden i
         categories="[my-project.authoring]"/>
 ```
 
-### Benutzerdefinierte CSS bereitstellen {#provide-the-custom-css}
+### Geben Sie die benutzerdefinierte CSS {#provide-the-custom-css} an
 
-hinzufügen auf die `authoring` clientlib des Projekts, `css.txt` die auf die less-Datei verweist, die die überschreibenden Stile bereitstellt. [Weniger](https://lesscss.org/) wird aufgrund der zahlreichen praktischen Funktionen bevorzugt, einschließlich der in diesem Beispiel verwendeten Klassenumbrüche.
+hinzufügen auf die `authoring`-clientlib des Projekts ein `css.txt`, die auf die less-Datei verweist, die die überschreibenden Stile bereitstellt. [](https://lesscss.org/) Lessis wird aufgrund seiner zahlreichen praktischen Funktionen bevorzugt, einschließlich der in diesem Beispiel verwendeten Klassenumhüllung.
 
 ```shell
 base=./css
@@ -55,7 +55,7 @@ base=./css
 htmldiff.less
 ```
 
-Erstellen Sie die `less` Datei, die die Stilüberschreibungen am enthält, `/apps/my-project/clientlibs/authoring/css/htmldiff.less`und stellen Sie die gewünschten Überlaufstile bereit.
+Erstellen Sie die Datei `less`, die die Stilüberschreibungen unter `/apps/my-project/clientlibs/authoring/css/htmldiff.less` enthält, und stellen Sie die gewünschten Überlaufstile bereit.
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -103,9 +103,9 @@ body {
 
 ### Include the authoring clientlib CSS via the page component {#include-the-authoring-clientlib-css-via-the-page-component}
 
-Schließen Sie die Authoring-clientlibs-Kategorie direkt vor dem `/apps/my-project/components/structure/page/customheaderlibs.html` `</head>` -Tag in die Basisseite des Projekts ein, um sicherzustellen, dass die Stile geladen werden.
+Schließen Sie die Authoring-clientlibs-Kategorie direkt vor dem `/apps/my-project/components/structure/page/customheaderlibs.html`-Tag auf der Basisseite des Projekts ein, um sicherzustellen, dass die Stile geladen werden.`</head>`
 
-Diese Stile sollten auf den WCM-Modus [!UICONTROL Bearbeiten] und [!UICONTROL Vorschau] beschränkt sein.
+Diese Stile sollten auf die Modi [!UICONTROL Bearbeiten] und [!UICONTROL Vorschau] WCM beschränkt sein.
 
 ```xml
 <head>
