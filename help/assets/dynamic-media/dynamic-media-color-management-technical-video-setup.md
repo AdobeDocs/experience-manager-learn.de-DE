@@ -29,11 +29,11 @@ In diesem Video erforschen wir das dynamische Medienfarbmanagement und wie es zu
 
 >[!NOTE]
 >
->[Aktivieren Sie dynamische Medien](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) in AEM, um diese Funktion zu verwenden.
+>[Aktivieren Sie die AEM für dynamische ](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) Medien, um diese Funktion zu verwenden.
 
 Diese Funktion ist für AEM 6.1- und 6.2-Versionen als Feature Pack verfügbar.
 
-## XML-Vorlage für den Konfigurationsknoten &quot;Farbmanagement&quot; {#xml-template-for-the-color-management-configuration-node}
+## XML-Vorlage für den Konfigurationsknoten Farbmanagement {#xml-template-for-the-color-management-configuration-node}
 
 Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten &quot;Farbmanagement&quot;. Diese XML-Vorlage kann in das AEM Entwicklungsprojekt kopiert und mit den projektspezifischen Konfigurationen konfiguriert werden.
 
@@ -91,7 +91,7 @@ Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten &quot;Farb
 />
 ```
 
-### Die Liste der standardmäßigen Adoben-Profil sind unten aufgeführt {#list-of-default-adobe-color-profiles-are-listed-below}
+### Die Liste der standardmäßigen Adoben-Farbfelder sind unten {#list-of-default-adobe-color-profiles-are-listed-below} aufgeführt.
 
 | Name | Farbraum | Beschreibung |
 | ------------------- | ---------- | ------------------------------------- |
@@ -115,12 +115,12 @@ Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten &quot;Farb
 | PAL | RGB | PAL/SECAM |
 | ProPhoto | RGB | ProPhoto RGB |
 | PS4Default | CMYK | Photoshop 4 Standard-CMYK |
-| PS5Default | CMYK | Photoshop 5 Standard-CMYK |
+| PS5Standard | CMYK | Photoshop 5 Standard-CMYK |
 | SheetfeedCoated | CMYK | U.S. Sheetfeed Coated v2 |
 | BlattmatteUngestrichen | CMYK | U.S. Sheetfeed Unstructured v2 |
 | SMPTE | RGB | SMPTE-C |
 | sRGB | RGB sRGB | IEC 61966-2.1 |
-| UncoatedFogra29 | CMYK | Ungestrichenes FOGRA29 (ISO 12647-2:2004) |
+| UngestrichenFogra29 | CMYK | Ungestrichenes FOGRA29 (ISO 12647-2:2004) |
 | WebCoated | CMYK | U.S. Web Coated (SWOP) v2 |
 | WebCoatedFogra28 | CMYK | Web Coated FOGRA28 (ISO 12647-2:2004) |
 | WebCoatedGrade3 | CMYK | Web Coated SWOP 2006 Grade 3 Paper |
