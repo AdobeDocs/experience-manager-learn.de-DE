@@ -26,7 +26,7 @@ In diesem Artikel betrachten wir E-Mail als Versand-Mechanismus für Web-Kanal-D
 
 Sehen wir uns das folgende Codefragment an. Dieser Code ist Teil von GET.jsp, der ausgelöst wird, wenn der Benutzer auf den Link in der E-Mail klickt, um das Web-Kanal-Dokument Ansicht. Wir erhalten den angemeldeten Benutzer mit dem Jackrabbit UserManager. Nach Erhalt des angemeldeten Benutzers erhalten wir den Wert der accountNumber-Eigenschaft, die mit dem Profil des Benutzers verknüpft ist.
 
-Dann verbinden wir den Wert accountNumber mit einem Schlüssel namens accountNumber in der Map. Die **Kontonummer** des Schlüssels wird im Formulardatenmodell als Anforderungsattribut definiert. Der Wert dieses Attributs wird als Eingabeparameter an die Methode zum Lesen des Formulardatenmodells übergeben.
+Dann verbinden wir den Wert accountNumber mit einem Schlüssel namens accountNumber in der Map. Der Schlüssel **accountNumber** wird im Formulardatenmodell als Anforderungsattribut definiert. Der Wert dieses Attributs wird als Eingabeparameter an die Methode zum Lesen des Formulardatenmodells übergeben.
 
 Zeile 7: Wir senden die empfangene Anfrage an ein anderes Servlet, basierend auf dem Ressourcentyp, der von der Interactive Communication Dokument-URL identifiziert wird. Die von diesem zweiten Servlet zurückgegebene Antwort ist in der Antwort des ersten Servlets enthalten.
 
