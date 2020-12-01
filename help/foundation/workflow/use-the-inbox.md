@@ -31,5 +31,5 @@ In diesem Video werden Highlights AEM Inbox behandelt.
 * Workflow-Info-Konsole
 * Ad-hoc-Aufgaben erstellen
 * Sichtbarkeit von Aufgaben und Arbeitselementen
-* [!DNL Inbox] und [!DNL Omnisearch] Integration
-* [!DNL Inbox] und [!DNL AEM Projects] Integration
+* [!DNL Inbox] und  [!DNL Omnisearch] Integration
+* [!DNL Inbox] und  [!DNL AEM Projects] Integration
