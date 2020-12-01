@@ -19,7 +19,7 @@ ht-degree: 2%
 ---
 
 
-# Senden von E-Mails beim Senden von adaptiven Formularen {#sending-email-on-adaptive-form-submission}
+# Senden von E-Mails zur Übermittlung adaptiver Formulare {#sending-email-on-adaptive-form-submission}
 
 Eine der gängigen Aktionen besteht darin, eine Bestätigungs-E-Mail nach erfolgreicher Übermittlung des adaptiven Formulars an den Übermittler zu senden. Um dies zu erreichen, wählen wir &quot;E-Mail senden&quot; als Übermittlungsaktion.
 
@@ -33,7 +33,7 @@ Wenn das adaptive Formular gesendet wird, erhält der Empfänger eine E-Mail.
 
 ## Benötigte Konfigurationen {#configurations-needed}
 
-Sie müssen den Day CQ Mail-Dienst konfigurieren. Dies kann konfiguriert werden, indem Sie Ihren Browser auf [Felix Configuration Manager verweisen](http://localhost:4502/system/console/configMgr)
+Sie müssen den Day CQ Mail-Dienst konfigurieren. Dies kann konfiguriert werden, indem Sie Ihren Browser auf [Felix Configuration Manager](http://localhost:4502/system/console/configMgr) verweisen
 
 Der Screenshot zeigt die Konfigurationseigenschaften für den Adobe Mail-Server.
 
@@ -41,9 +41,9 @@ Der Screenshot zeigt die Konfigurationseigenschaften für den Adobe Mail-Server.
 
 Gehen Sie wie folgt vor, um dies auf Ihrem Server auszuprobieren:
 
-* [Importieren Sie die mit diesem Artikel verknüpften Assets](assets/timeoffrequest.zip) in AEM mit dem Package Manager.
+* [Importieren Sie die mit diesem Artikel verknüpften ](assets/timeoffrequest.zip) Assets in AEM mit dem Package Manager.
 
-* Öffnen Sie das [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled).
+* Öffnen Sie [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled).
 
 * Füllen Sie die Details aus.Achten Sie darauf, im E-Mail-Feld eine gültige E-Mail-Adresse anzugeben.
 
