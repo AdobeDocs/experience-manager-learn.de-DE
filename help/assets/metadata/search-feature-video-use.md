@@ -20,12 +20,12 @@ ht-degree: 0%
 
 In diesen Videos werden einige Verbesserungen der Suche nach Assets, die in AEM eingeführt wurden, behandelt. Autoren können bestimmte Assets in Suchbegriffssuchergebnissen durch Aktualisieren der entsprechenden Metadateneigenschaften erhöhen. Wir betrachten auch einige erweiterte Konfigurationen für Assets, die OmniSearch vorhersagt.
 
-## Suchaufstieg mit Asset-Metadaten {#search-boost-asset}
+## Suchverstärkung mit Asset-Metadaten {#search-boost-asset}
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=9&learn=on)
 
-## Erweiterte Konfiguration der Eigenschaften &quot;Mehrwert&quot;und &quot;Tag-Suche&quot; {#multi-value-tag-predicates}
+## Erweiterte Konfiguration von Multi-Value- und Tag-Suchprädikaten {#multi-value-tag-predicates}
 
-Die **Suchvorhersage** mit mehreren Werten wird für eine einfache Textübereinstimmung in den Suchergebnissen zur Verfügung gestellt. Die Tag-Prognose wurde auch mehrfach verbessert, um die Ergebnisse der Asset-Suche effizienter zu filtern.
+Die **Suchvorhersage mit mehreren Werten** ist für eine einfache Textübereinstimmung in den Suchergebnissen verfügbar. Die Tag-Prognose wurde auch mehrfach verbessert, um die Ergebnisse der Asset-Suche effizienter zu filtern.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16457/?quality=9&learn=on)
