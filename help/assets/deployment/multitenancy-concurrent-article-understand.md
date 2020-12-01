@@ -49,13 +49,13 @@ Ungeachtet der Herausforderungen, vor denen eine Anwendung mit mehreren Mandante
 * Standardarchitektur- und Entwicklungspraktiken im gesamten Unternehmen
 * Eine gemeinsame Codebasis
 
-Wenn für das Unternehmen eine echte Multi-Pachtzeit erforderlich ist, die kein Wissen über andere Pächter und keinen gemeinsamen Code, keinen gemeinsamen Inhalt oder allgemeine Autoren enthält, sind separate Autoreninstanzen die einzige praktikable Option. Der Gesamtanstieg der Entwicklungsbemühungen sollte mit den Einsparungen bei den Infrastruktur- und Lizenzkosten verglichen werden, um festzustellen, ob dieser Ansatz am besten geeignet ist.
+Wenn für das Unternehmen eine echte Multi-Pachtzeit erforderlich ist, die kein Wissen über andere Mieter und keinen gemeinsamen Code, Inhalt oder allgemeine Autoren enthält, sind separate Autoreninstanzen die einzige praktikable Option. Der Gesamtanstieg der Entwicklungsbemühungen sollte mit den Einsparungen bei den Infrastruktur- und Lizenzkosten verglichen werden, um festzustellen, ob dieser Ansatz am besten geeignet ist.
 
 ## Entwicklungstechniken {#development-techniques}
 
-### Abhängigkeiten verwalten {#managing-dependencies}
+### Verwalten von Abhängigkeiten {#managing-dependencies}
 
-Bei der Verwaltung von Maven-Projektabhängigkeiten ist es wichtig, dass alle Teams dieselbe Version eines gegebenen OSGi-Bundles auf dem Server verwenden. Um zu veranschaulichen, was schiefgehen kann, wenn Maven-Projekte falsch verwaltet werden, stellen wir ein Beispiel dar:
+Bei der Verwaltung von Maven-Projektabhängigkeiten ist es wichtig, dass alle Teams dieselbe Version eines gegebenen OSGi-Bundles auf dem Server verwenden. Um zu veranschaulichen, was schief gehen kann, wenn Maven-Projekte falsch verwaltet werden, stellen wir ein Beispiel dar:
 
 Projekt A hängt von Version 1.0 der Bibliothek ab, foo; foo Version 1.0 ist in ihre Bereitstellung auf dem Server eingebettet. Projekt B ist von Version 1.1 der Bibliothek abhängig, foo; foo Version 1.1 ist in ihre Bereitstellung eingebettet.
 
@@ -63,7 +63,7 @@ Nehmen wir außerdem an, dass sich in dieser Bibliothek eine API zwischen den Ve
 
 Um diese Bedenken auszuräumen, empfehlen wir, alle Maven-Projekte für Kinder eines Reaktorprojekts zu gestalten. Dieses Reaktorprojekt dient zwei Zwecken: Es ermöglicht die Erstellung und den Einsatz aller Projekte zusammen, falls gewünscht, und es enthält die Abhängigkeitserklärungen für alle untergeordneten Projekte. Das übergeordnete Projekt definiert die Abhängigkeiten und ihre Versionen, während die untergeordneten Projekte nur die Abhängigkeiten deklarieren, die sie benötigen, und die Version vom übergeordneten Projekt übernehmen.
 
-Wenn in diesem Fall das Team, das an Projekt B arbeitet, Funktionen in Version 1.1 von foo benötigt, wird in der Entwicklungs-Umgebung schnell deutlich, dass diese Änderung Projekt A beschädigt. An dieser Stelle können die Teams diese Änderung diskutieren und entweder Projekt A mit der neuen Version kompatibel machen oder nach einer alternativen Lösung für Projekt B suchen.
+Wenn in diesem Fall das Team, das an Projekt B arbeitet, Funktionen in Version 1.1 von foo benötigt, wird in der Umgebung der Entwicklung schnell deutlich, dass diese Änderung Projekt A beschädigt. An dieser Stelle können die Teams diese Änderung diskutieren und entweder Projekt A mit der neuen Version kompatibel machen oder nach einer alternativen Lösung für Projekt B suchen.
 
 Beachten Sie, dass dies nicht die Notwendigkeit ausschließt, dass diese Teams diese Abhängigkeit teilen - es werden nur Probleme schnell und früh aufgezeigt, sodass Teams alle Risiken diskutieren und eine Lösung vereinbaren können.
 
@@ -96,7 +96,7 @@ Dadurch entfällt nicht die Notwendigkeit, dass mehrere Teams von demselben Code
 
 Um sicherzustellen, dass die an diesem Kernpaket vorgenommenen Änderungen die Funktionalität des Systems nicht stören, empfehlen wir, dass ein leitender Entwickler oder Entwicklerteam die Aufsicht behält. Eine Möglichkeit besteht darin, ein Team zu haben, das alle Änderungen an diesem Paket verwaltet; eine andere besteht darin, dass Teams Pull-Anforderungen senden, die von diesen Ressourcen überprüft und zusammengeführt werden. Es ist wichtig, dass ein Governance-Modell von den Teams konzipiert und akzeptiert wird und dass die Entwickler diesem Modell folgen.
 
-## Verwalten von Bereitstellungsbereich&amp;nbsp {#managing-deployment-scope}
+## Verwalten von Deployment Scope&amp;nbsp {#managing-deployment-scope}
 
 Da verschiedene Teams ihren Code in demselben Repository bereitstellen, ist es wichtig, dass sie die Änderungen der anderen nicht überschreiben. AEM verfügt über einen Mechanismus, um dies bei der Bereitstellung von Inhaltspaketen, dem Filter, zu steuern. XML-Datei. Es ist wichtig, dass es keine Überschneidung zwischen Filtern gibt.  XML-Dateien, andernfalls könnte die Bereitstellung eines Teams die vorherige Bereitstellung eines anderen Teams löschen. Um dies zu illustrieren, sehen Sie sich die folgenden Beispiele gut erstellter oder problematischer Filterdateien an:
 
@@ -134,7 +134,7 @@ Bei der Entwicklung von Komponenten und Vorlagen für mehrere Authoring-Gruppen 
 
 Obwohl eine gute Architektur und offene Kanäle der Kommunikation dazu beitragen können, die Einschleppung von Fehlern in unerwartete Bereiche der Site zu verhindern, sind diese Ansätze nicht stichhaltig. Aus diesem Grund ist es wichtig, das, was auf der Plattform bereitgestellt wird, vollständig zu testen, bevor etwas in die Produktion freigegeben wird. Dies erfordert die Koordinierung zwischen den Teams bei ihren Versionszyklen und macht eine Reihe automatisierter Tests erforderlich, die so viele Funktionen wie möglich abdecken. Da ein System von mehreren Teams gemeinsam genutzt wird, werden außerdem Leistung, Sicherheit und Lastentests wichtiger denn je.
 
-## Operative Überlegungen {#operational-considerations}
+## Operative Aspekte {#operational-considerations}
 
 ### Freigegebene Ressourcen {#shared-resources}
 
