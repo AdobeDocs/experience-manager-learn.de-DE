@@ -30,13 +30,13 @@ Die Datei, die in den überwachten Ordner abgelegt wird, hat die folgende Strukt
 
 &lt;accountnumbers>
 
-&lt;account tnummer>509840&lt;/accountNumber>
+&lt;accountnumber>509840&lt;/accountnumber>
 
-&lt;account tnummer>948576&lt;/accountNumber>
+&lt;accountnumber>948576&lt;/accountnumber>
 
-&lt;account tnummer>398762&lt;/accountNumber>
+&lt;accountnumber>398762&lt;/accountnumber>
 
-&lt;account tnummer>291723&lt;/accountNumber>
+&lt;accountnumber>291723&lt;/accountnumber>
 
 &lt;/accountnumbers>
 
@@ -110,9 +110,9 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 
 **Um dies auf Ihrem lokalen System zu testen, befolgen Sie die folgenden Anweisungen:**
 
-* Einrichten von Tomcat wie in diesem [Artikel beschrieben.](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat verfügt über die Kriegsdatei, die die Musterdaten generiert.
-* Richten Sie den Dienst als Systembenutzer ein, wie in diesem [Artikel](/help/forms/adaptive-forms/service-user-tutorial-develop.md)beschrieben.
-Vergewissern Sie sich, dass dieser Systembenutzer über Leserechte für den folgenden Knoten verfügt. So melden Sie sich mit den Berechtigungen beim [Benutzeradministrator](https://localhost:4502/useradmin) an und suchen Sie nach den Systembenutzerdaten. Weisen Sie dem folgenden Knoten die Leserechte zu, indem Sie die Registerkarte &quot;Berechtigungen&quot;aufrufen
+* Setup Tomcat wie in diesem [Artikel beschrieben.](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat verfügt über die Kriegsdatei, die die Musterdaten generiert.
+* Richten Sie den Dienst als Systembenutzer ein, wie in diesem [Artikel](/help/forms/adaptive-forms/service-user-tutorial-develop.md) beschrieben.
+Vergewissern Sie sich, dass dieser Systembenutzer über Leserechte für den folgenden Knoten verfügt. So melden Sie sich mit den Berechtigungen bei [user admin](https://localhost:4502/useradmin) an und suchen Sie nach den Systembenutzern &quot;data&quot;. Weisen Sie den folgenden Knoten Leserechte zu, indem Sie auf die Registerkarte &quot;Berechtigungen&quot;klicken
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
