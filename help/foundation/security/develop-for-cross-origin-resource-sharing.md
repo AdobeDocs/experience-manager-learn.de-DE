@@ -11,7 +11,7 @@ doc-type: tutorial
 translation-type: tm+mt
 source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -19,16 +19,16 @@ ht-degree: 0%
 
 # Entwickeln für Cross-Herkunft Resource Sharing (CORS)
 
-Ein kurzes Beispiel [!DNL CORS] für den Zugriff auf AEM Inhalte einer externen Webanwendung über clientseitiges JavaScript.
+Ein kurzes Beispiel für die Nutzung von [!DNL CORS] für den Zugriff auf AEM Inhalte einer externen Webanwendung über clientseitiges JavaScript.
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837/?quality=12&learn=on)
 
 In diesem Video:
 
-* **www.example.com** von Maps zu localhost über `/etc/hosts`
-* **aem-publish.local** ordnet localhost über `/etc/hosts`
-* [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12) (ein Wrapper für [[!DNL Python]&#39;s SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)) beliefert die HTML-Seite über Port 8000.
-* [!DNL AEM Dispatcher] läuft auf [!DNL Apache HTTP Web Server] 2.4 und umgekehrte Proxying-Anforderung `aem-publish.local` zu `localhost:4503`.
+* **www.example.** commaps to localhost über  `/etc/hosts`
+* **aem-publish.** localmaps für localhost über  `/etc/hosts`
+* [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)  (ein Wrapper für  [[!DNL Python]den SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)) liefert die HTML-Seite über Port 8000.
+* [!DNL AEM Dispatcher] läuft auf  [!DNL Apache HTTP Web Server] 2.4 und umgekehrte Proxying-Anfrage  `aem-publish.local` zu  `localhost:4503`.
 
 Weitere Informationen finden Sie unter [Informationen zum Cross-Herkunft Resource Sharing (CORS) in AEM](./understand-cross-origin-resource-sharing.md).
 
@@ -37,9 +37,9 @@ Weitere Informationen finden Sie unter [Informationen zum Cross-Herkunft Resourc
 Diese Webseite hat eine Logik, die
 
 1. Klicken auf die Schaltfläche
-1. Stellt eine [!DNL AJAX GET] Anforderung an `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
-1. Ruft das `jcr:title` Formular der JSON-Antwort ab
-1. injiziert die `jcr:title` Datei in das DOM
+1. Fordert [!DNL AJAX GET] an `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json` an
+1. Ruft das `jcr:title` aus der JSON-Antwort ab
+1. injiziert das `jcr:title` in das DOM
 
 ```xml
 <html>
@@ -74,7 +74,7 @@ Diese Webseite hat eine Logik, die
 
 ## OSGi-Factory-Konfiguration
 
-Die OSGi Configuration Factory für [!DNL Cross-Origin Resource Sharing] ist verfügbar über:
+Die OSGi-Konfigurationsfactory für [!DNL Cross-Origin Resource Sharing] ist verfügbar über:
 
 * `http://<host>:<port>/system/console/configMgr > [!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]`
 
@@ -94,9 +94,9 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 />
 ```
 
-## Dispatcher configuration {#dispatcher-configuration}
+## Dispatcher-Konfiguration {#dispatcher-configuration}
 
-Um das Zwischenspeichern und Bereitstellen von [!DNL CORS] Headern für zwischengespeicherte Inhalte zu ermöglichen, fügen Sie allen unterstützten AEM Publish- `dispatcher.any` Dateien die folgende Konfiguration hinzu.
+Um die Zwischenspeicherung und Bereitstellung von [!DNL CORS]-Headern für zwischengespeicherten Inhalt zuzulassen, fügen Sie allen unterstützenden AEM Publish `dispatcher.any`-Dateien die folgende Konfiguration hinzu.
 
 ```
 /cache { 
@@ -113,11 +113,11 @@ Um das Zwischenspeichern und Bereitstellen von [!DNL CORS] Headern für zwischen
 }
 ```
 
-**Starten Sie die Webserveranwendung** neu, nachdem Sie Änderungen an der `dispatcher.any` Datei vorgenommen haben.
+**Starten Sie die Webserver-** Anwendung neu, nachdem Sie Änderungen an der  `dispatcher.any` Datei vorgenommen haben.
 
-Es ist wahrscheinlich erforderlich, den Cache vollständig zu leeren, um sicherzustellen, dass die Header bei der nächsten Anforderung nach einer `/headers` Konfigurationsaktualisierung ordnungsgemäß zwischengespeichert werden.
+Es ist wahrscheinlich erforderlich, den Cache vollständig zu leeren, um sicherzustellen, dass Header bei der nächsten Anforderung nach einem `/headers`-Konfigurationsupdate ordnungsgemäß zwischengespeichert werden.
 
-## Begleitmaterialien {#supporting-materials}
+## Unterstützende Materialien {#supporting-materials}
 
 * [AEM OSGi-Konfigurationsfactory für Richtlinien zum Cross-Herkunft Resource Sharing](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
 * [SimpleHTTPServer für macOS](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)
