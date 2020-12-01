@@ -40,7 +40,7 @@ ht-degree: 0%
 
 * Wählen Sie das Symbol &quot;Stift&quot;, um den Standardtext zu bearbeiten.
 
-* Ersetzen Sie den Standardtext durch &quot;**Ihr Rentenergebnis-Outlook&quot;.**
+* Ersetzen Sie den Standardtext durch &quot;**Ihr Rentenergebnis-Outlook&quot;**
 
 **RightsPanel-Zielgruppe konfigurieren**
 
@@ -52,15 +52,15 @@ ht-degree: 0%
 
 * Wählen Sie das Symbol &quot;Stift&quot;, um den Standardtext zu bearbeiten.
 
-* Ersetzen Sie den Standardtext durch &quot;**Geschätztes monatliches Renteneinkommen&quot;.**
+* Ersetzen Sie den Standardtext durch &quot;**Geschätztes monatliches Renteneinkommen&quot;**
 
-## hinzufügen Renteneinkommen Outlook-Dokument-Fragment {#add-retirement-income-outlook-document-fragment}
+## hinzufügen Ruhestandseinkommen Outlook-Dokument Fragment {#add-retirement-income-outlook-document-fragment}
 
 * Klicken Sie auf das Asset-Symbol und wenden Sie den Filter an, um Assets vom Typ &quot;Dokument-Fragmente&quot;anzuzeigen. Ziehen Sie das Fragment RetirementIncomeOutlook-Dokument in den Bereich Zielgruppe des linken Bedienfelds.
 
-* Sie können [auf dieser Seite](https://helpx.adobe.com/experience-manager/kt/forms/using/interactive-communication-web-channel-aem-forms/9.html) nachschlagen, wenn Sie Inhaltsbereiche mit einem Dokument-Fragment versehen.
+* Sie können [auf diese Seite](https://helpx.adobe.com/experience-manager/kt/forms/using/interactive-communication-web-channel-aem-forms/9.html) verweisen, wenn Sie Inhaltsbereiche mit einem Dokument-Fragment versehen.
 
-## Hinzufügen eines Diagramms zum geschätzten monatlichen Einkommen {#adding-estimated-monthly-income-chart}
+## Geschätztes Monatseinkommen-Diagramm {#adding-estimated-monthly-income-chart} hinzufügen
 
 * Klicken Sie rechts auf den Bereich Zielgruppe RightPanel. Klicken Sie auf das &quot;+&quot;-Symbol, um die Diagrammkomponente einzufügen. Wir verwenden ein Spaltendiagramm, um das geschätzte Monatseinkommen anzuzeigen. Tippen Sie vorsichtig auf die neu eingefügte Diagrammkomponente. Wählen Sie das Symbol &quot;Schraubenschlüssel&quot;, um das Konfigurationseigenschaftsblatt zu öffnen.Konfigurieren Sie das Diagramm mit den folgenden Eigenschaften, wie im Screenshot unten dargestellt.
 
