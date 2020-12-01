@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# Übersicht über den Adobe-Asset-Verknüpfungsbereich {#adobe-asset-link-panel-overview}
+# Übersicht über das Adobe-Asset-Verknüpfungsbedienfeld {#adobe-asset-link-panel-overview}
 
 Adobe Asset Link bietet kreativen Benutzern die Möglichkeit, in AEM Assets gespeicherte Assets über das In-App-Bedienfeld in InDesign, Photoshop und Illustrator zu durchsuchen, zu suchen, auszuchecken und einzuchecken. Lernen Sie die Benutzeroberfläche und Funktionen des Bedienfelds &quot;Asset-Link&quot;von Adobe kennen.
 
