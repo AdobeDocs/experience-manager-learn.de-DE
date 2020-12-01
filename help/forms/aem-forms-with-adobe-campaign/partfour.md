@@ -20,7 +20,7 @@ ht-degree: 2%
 ---
 
 
-# Kampagne Profil mithilfe des Formulardatenmodells erstellen {#create-campaign-profile-using-form-data-model}
+# Kampagne-Profil mithilfe des Formulardatenmodells {#create-campaign-profile-using-form-data-model} erstellen
 
 Schritte zum Erstellen von Adobe Campaign Standard-Profilen mit dem AEM Forms-Formulardatenmodell
 
@@ -28,7 +28,7 @@ Schritte zum Erstellen von Adobe Campaign Standard-Profilen mit dem AEM Forms-Fo
 
 Beim Erstellen der Datenquelle mit der Swagger-Datei unterstützt AEM Forms die folgenden Authentifizierungstypen
 
-* Keine
+* Kein
 * OAuth 2.0
 * Einfache Authentifizierung
 * API-Schlüssel
@@ -113,12 +113,13 @@ Eine Datenquelle wird mithilfe der Swagger-Datei erstellt. Beim Erstellen der Da
 
 Sie erhalten eine Beispieldatei für Swagger als Teil des Assets, das mit diesem Artikel in Verbindung steht.**Vergewissern Sie sich, dass Sie Host und basePath in der Swagger-Datei so ändern, dass sie mit Ihrer ACS-Instanz übereinstimmen.**
 
-## Testen der Lösung {#test-the-solution}
+## Testen Sie die Lösung {#test-the-solution}
 
 Gehen Sie wie folgt vor, um die Lösung zu testen:
 * [Vergewissern Sie sich, dass Sie die hier beschriebenen Schritte ausgeführt haben](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [Laden Sie diese Datei herunter und entpacken Sie sie, um die Swagger-Datei zu erhalten.](assets/create-acs-profile-swagger-file.zip)
-* Datenquelle mithilfe der Swagger-Datei erstellenFormulardatenmodell erstellen und auf der im vorherigen Schritt erstellten Datenquelle basieren
+* Datenquelle mithilfe der Swagger-Datei erstellen
+Formulardatenmodell erstellen und auf der im vorherigen Schritt erstellten Datenquelle basieren
 * Erstellen Sie ein adaptives Formular basierend auf dem Formulardatenmodell, das im vorherigen Schritt erstellt wurde.
 * Ziehen Sie die folgenden Elemente aus der Registerkarte &quot;Datenquellen&quot;in das adaptive Formular
 
