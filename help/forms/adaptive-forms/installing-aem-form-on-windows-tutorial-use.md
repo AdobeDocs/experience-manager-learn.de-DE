@@ -47,7 +47,7 @@ Obwohl wir empfehlen, die [offizielle Dokumentation](https://helpx.adobe.com/de/
 * 
    * AEM 6.3 und AEM 6.4 benötigen Sie: Oracle SE 8 JDK 1.8.x (64 Bit)
 * AEM 6.5 benötigen Sie JDK 8 oder JDK 11
-* [Die offiziellen JDK-Anforderungen](https://helpx.adobe.com/de/experience-manager/6-3/sites/deploying/using/technical-requirements.html) finden Sie hier
+* [Offizielle JDK-](https://helpx.adobe.com/de/experience-manager/6-3/sites/deploying/using/technical-requirements.html) Anforderungen finden Sie hier
 * Stellen Sie sicher, dass JAVA_HOME so eingestellt ist, dass es auf das installierte JDK verweist.
    * Gehen Sie wie folgt vor, um die Variable JAVA_HOME in Windows zu erstellen:
       * Klicken Sie mit der rechten Maustaste auf „Arbeitsplatz“ und wählen Sie „Eigenschaften“.
@@ -81,12 +81,12 @@ Obwohl wir empfehlen, die [offizielle Dokumentation](https://helpx.adobe.com/de/
    * Oder [Sie können das entsprechende Forms Add-On-Paket herunterladen](https://helpx.adobe.com/aem-forms/kb/aem-forms-releases.html)
    * Nachdem Sie das Add-On-Paket installiert haben, müssen die folgenden Schritte befolgt werden
 
-      * **Vergewissern Sie sich, dass sich alle Pakete im aktiven Status befinden. (Mit Ausnahme des Bundles für AEMFD-Signaturen).**
+      * **Vergewissern Sie sich, dass sich alle Pakete im aktiven Status befinden. (Ausgenommen AEMFD-Signaturen-Bundle).**
       * **Es dauert in der Regel 5 oder mehr Minuten, bis alle Pakete aktiv sind.**
    * **Sobald alle Pakete aktiv sind (mit Ausnahme des AEMFD-Signaturen-Bundles), starten Sie das System neu, um die AEM Forms-Installation abzuschließen**
 
 
-* hinzufügen `sun.util.calendar` Paket zur Zulassungsliste:
+* hinzufügen `sun.util.calendar`-Paket zur Zulassungsliste:
 
    1. Öffnen Sie die Felix-Webkonsole in Ihrem [Browserfenster](http://localhost:4502/system/console/configMgr)
    2. Suchen und öffnen Sie die Deserialisierungs-Firewallkonfiguration: `com.adobe.cq.deserfw.impl.DeserializationFirewallImpl`
@@ -94,4 +94,4 @@ Obwohl wir empfehlen, die [offizielle Dokumentation](https://helpx.adobe.com/de/
    4. Speichern Sie die Änderungen.
 
 Herzlichen Glückwunsch!!! Sie haben AEM Forms jetzt auf Ihrem System installiert und konfiguriert.
-Je nach Bedarf können Sie [Reader-Erweiterungen](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html) oder [ PDFG](https://helpx.adobe.com/experience-manager/6-3/forms/using/install-configure-pdf-generator.html) auf Ihrem Server konfigurieren
+Abhängig von Ihren Anforderungen können Sie [Reader-Erweiterungen](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html) oder [ PDFG](https://helpx.adobe.com/experience-manager/6-3/forms/using/install-configure-pdf-generator.html) auf Ihrem Server konfigurieren.
