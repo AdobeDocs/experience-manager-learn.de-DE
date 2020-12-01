@@ -24,7 +24,7 @@ ht-degree: 11%
 
 Hinzufügen und Verwenden eines CAPTCHA mit AEM adaptiven Forms.
 
-Besuchen Sie die [AEM Forms-Beispielseite](https://forms.enablementadobe.com/content/samples/samples.html?query=0) für einen Link zu einer Live-Demo dieser Funktion.
+Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) für einen Link zu einer Live-Demo dieser Funktion.
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336/?quality=9&learn=on)
 
@@ -40,7 +40,7 @@ Besuchen Sie die [AEM Forms-Beispielseite](https://forms.enablementadobe.com/con
 >
 >reCaptach in der Autoreninstanz konfigurieren
 >
->Öffnen der Felix- [Webkonsole](http://localhost:4502/system/console/bundles) in der Autoreninstanz
+>Öffnen Sie die felix [Webkonsole](http://localhost:4502/system/console/bundles) in der Autoreninstanz
 >
 >suchen Sie nach com.adobe.granite.crypto.file bundle
 >
@@ -59,7 +59,7 @@ Navigieren Sie zur Bundle-ID im Dateisystem Ihrer Veröffentlichungsinstanz
 
 AEM Veröffentlichungsserver neu starten
 
-## Begleitmaterialien {#supporting-materials}
+## Unterstützende Materialien {#supporting-materials}
 
 * [Google reCAPTCHA](https://www.google.com/recaptcha)
 
