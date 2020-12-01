@@ -25,7 +25,7 @@ ht-degree: 0%
 # Tabelle zu Beitragsabschnitt hinzufügen
 
 In diesem Teil fügen wir eine Tabelle zum Beitragsabschnitt hinzu.
-Weitere Informationen zur Verwendung von Tabellen im Dokument &quot;Kanal drucken&quot;finden Sie unter [Tabellen im Kanal](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md) &quot;Drucken&quot;.
+Weitere Informationen zur Verwendung von Tabellen im Dokument &quot;Kanal drucken&quot;finden Sie unter [Tabellen im Kanal](/help/forms/interactive-communications/table-in-print-channel-documents-video-use.md) verwenden.
 
 Melden Sie sich bei AEM Forms an und navigieren Sie zu Adobe Experience Manager > Forms > Forms &amp; Dokumente.
 
