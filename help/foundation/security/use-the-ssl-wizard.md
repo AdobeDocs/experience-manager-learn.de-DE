@@ -13,7 +13,7 @@ discoiquuid: 9e666741-0f76-43c9-ab79-1ef149884686
 translation-type: tm+mt
 source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,9 @@ Adobe Experience Managers SSL-Setup-Assistent, um die Einrichtung einer AEM Inst
 
 ## Privater Schlüssel und selbst signierter Zertifikatdownload
 
-Die folgende ZIP-Datei enthält [!DNL DER] und [!DNL CRT] Dateien, die für die Einrichtung AEM SSL auf localhost erforderlich sind und nur für lokale Entwicklungszwecke vorgesehen sind.
+Die folgende ZIP-Datei enthält [!DNL DER]- und [!DNL CRT]-Dateien, die zum Einrichten AEM SSL auf localhost erforderlich sind und nur für lokale Entwicklungszwecke vorgesehen sind.
 
-Die Dateien [!DNL DER] und [!DNL CERT] Dateien werden aus praktischen Gründen bereitgestellt und mithilfe der Schritte generiert, die im Abschnitt &quot;Privaten Schlüssel erstellen&quot;und &quot;Selbstsigniertes Zertifikat&quot;unten beschrieben werden.
+Die Dateien [!DNL DER] und [!DNL CERT] werden aus praktischen Gründen bereitgestellt und mithilfe der Schritte generiert, die im Abschnitt &quot;Generate Private Key and Self-Signed Certificate&quot;unten beschrieben werden.
 
 Bei Bedarf lautet der Satz für den Zertifikatpass **admin**.
 
@@ -45,7 +45,7 @@ localhost - privater Schlüssel und selbstsigniertes certificate.zip (läuft Jul
 
 ## Generieren von privaten Schlüsseln und selbstsignierten Zertifikaten
 
-Das obige Video zeigt die Einrichtung und Konfiguration von SSL in einer AEM Autoreninstanz mithilfe von selbstsignierten Zertifikaten. Die folgenden Befehle mit [[!DNL OpenSSL]](https://www.openssl.org/) können einen privaten Schlüssel und ein Zertifikat generieren, das in Schritt 2 des Assistenten verwendet werden soll.
+Das obige Video zeigt die Einrichtung und Konfiguration von SSL in einer AEM Autoreninstanz mithilfe von selbstsignierten Zertifikaten. Die folgenden Befehle mit [[!DNL OpenSSL]](https://www.openssl.org/) können einen privaten Schlüssel und ein Zertifikat generieren, die in Schritt 2 des Assistenten verwendet werden sollen.
 
 ```shell
 ### Create Private Key
