@@ -26,7 +26,7 @@ Dieses Lernprogramm führt Sie durch die Schritte zum Speichern und Abrufen adap
 
 * Führen Sie einen POST-Aufruf an ein Servlet aus. Dieses Servlet speichert die Daten in der Datenbank und die Formularanlagen im CRX-Repository. Die in der Datenbank gespeicherten Daten sind mit einer GUID verknüpft.
 
-* Wenn Sie das adaptive Formular mit den gespeicherten Daten füllen möchten, rufen Sie die mit der GUID verknüpften Daten ab und füllen das adaptive Formular mit der **Methode request.setAttribute** .
+* Wenn Sie das adaptive Formular mit den gespeicherten Daten füllen möchten, rufen Sie die mit der GUID verknüpften Daten ab und füllen das adaptive Formular mit der Methode **request.setAttribute**.
 
 ## Nachweis des Anwendungsfalls
 
