@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Create a Live Copy {#create-livecopy}
+# Erstellen einer Live-Kopie {#create-livecopy}
 
 Verstehen Sie, wie Sie mithilfe des Assistenten &quot;Live-Kopie erstellen&quot;eine Live-Kopie für Ihre Site aus einem Blueprint erstellen.
 
