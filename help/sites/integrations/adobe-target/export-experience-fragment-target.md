@@ -18,7 +18,7 @@ ht-degree: 6%
 ---
 
 
-# Export Experience Fragment to Adobe Target {#experience-fragment-target}
+# Erlebnisfragment nach Adobe Target exportieren {#experience-fragment-target}
 
 Erfahren Sie, wie Sie AEM Erlebnisfragment als Adobe Target-Angebot exportieren.
 
@@ -38,16 +38,16 @@ Beim Exportieren von Erlebnisfragment nach Adobe Target ohne die richtigen Berec
 
     ![UI-Fehler der Zielgruppe-API](assets/error-target-offer.png)
 
-... und die folgenden Protokollmeldungen im `aemerror` Protokoll:
+... und die folgenden Protokollmeldungen im `aemerror`-Protokoll:
 
-    ![Zielgruppe-API-Konsolenfehler](assets/target-console-error.png)
+    ![Zielgruppe API Console Error](assets/target-console-error.png)
 
 #### Auflösung
 
-1. Anmelden bei der [Admin Console](https://adminconsole.adobe.com/) mit Administratorrechten für das verwendete Adobe Target Product Profil, aber AEM Integration
+1. Melden Sie sich bei [Admin Console](https://adminconsole.adobe.com/) mit Administratorrechten für das verwendete Adobe Target Product Profil an, aber die AEM Integration
 2. Wählen Sie __Produkte > Adobe Target > Produkt-Profil__
-3. Wählen Sie auf der Registerkarte &quot; __Integrationen__ &quot;die Integration für Ihren AEM als Cloud Service-Umgebung aus (gleicher Name wie das Adobe-E/A-Projekt)
-4. Rolle &quot; __Editor__ &quot;oder &quot; __Genehmigende__ Person&quot;zuweisen
+3. Wählen Sie auf der Registerkarte __Integrationen__ die Integration für Ihren AEM als Cloud Service-Umgebung (gleicher Name wie das Adobe I/O-Projekt) aus.
+4. Rolle __Editor__ oder __Genehmigende Person__ zuweisen
 
    ![Zielgruppen-API-Fehler](assets/target-permissions.png)
 
