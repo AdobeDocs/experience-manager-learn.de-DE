@@ -30,23 +30,23 @@ Wenn der Benutzer die Anwendungs-ID eingibt und auf die Schaltfläche **FetchApp
 Dieses Formular verwendet den Aufruf der POST des Formulardatenmodells, um die Mobiltelefonnummer mit OTP zu überprüfen. Die Übermittlungsaktion des Formulars wird bei erfolgreicher Überprüfung der Mobiltelefonnummer mit dem folgenden Code ausgelöst. Wir lösen das click-Ereignis der Senden-Schaltfläche mit dem Namen **submitForm** aus.
 
 >[!NOTE]
-> Sie müssen den API-Schlüssel und die für Ihr [Nexmo](https://dashboard.nexmo.com/) -Konto spezifischen Werte für den geheimen API-Schlüssel in den entsprechenden Feldern von MyAccountForm angeben.
+> Sie müssen den API-Schlüssel und die für Ihr [Nexmo](https://dashboard.nexmo.com/)-Konto spezifischen Werte für den geheimen API-Schlüssel in den entsprechenden Feldern von MyAccountForm angeben.
 
 ![trigger-submit](assets/trigger-submit.JPG)
 
 
 
-Dieses Formular ist mit einer benutzerdefinierten Übermittlungsaktion verknüpft, die die Formularübermittlung an das am **/bin/renderaf bereitgestellte Servlet weiterleitet**
+Dieses Formular ist mit einer benutzerdefinierten Übermittlungsaktion verknüpft, die die Formularübermittlung an das Servlet weiterleitet, das auf **/bin/renderaf**
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/renderaf",null,null);
 ```
 
-Der Code im Servlet, das auf **/bin/renderaf** gemountet wird, leitet die Anforderung weiter, das stoeuCONE-Anlagen-adaptives Formular zu rendern, das mit den gespeicherten Daten vorausgefüllt ist.
+Der Code im Servlet, der auf **/bin/renderaf** gemountet ist, leitet die Anforderung zum Rendern des stoeurewithattachments-adaptiven Formulars weiter, das mit den gespeicherten Daten vorausgefüllt ist.
 
 
-* Das MyAccountForm können Sie hier [herunterladen](assets/my-account-form.zip)
+* Das MyAccountForm kann [von hier heruntergeladen werden](assets/my-account-form.zip)
 
-* Musterformulare basieren auf einer [benutzerdefinierten Vorlage](assets/custom-template-with-page-component.zip) für adaptive Formulare, die in AEM importiert werden muss, damit die Musterformulare korrekt wiedergegeben werden können.
+* Musterformulare basieren auf [einer benutzerdefinierten adaptiven Formularvorlage](assets/custom-template-with-page-component.zip), die in AEM importiert werden muss, damit die Musterformulare korrekt dargestellt werden.
 
-* [Der mit der Übermittlung von MyAccountForm verknüpfte benutzerdefinierte Übermittlungshandler](assets/custom-submit-my-account-form.zip) muss in AEM importiert werden.
+* [Benutzerdefinierter Sende-](assets/custom-submit-my-account-form.zip) Handler, der mit der MyAccountForm-Übermittlung verknüpft ist, muss in AEM importiert werden.
