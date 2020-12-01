@@ -34,6 +34,6 @@ Das Formulardatenmodell ist von einer korrekt konfigurierten Datenquelle abhäng
 
 Formulardatenmodell ist die Grundlage für alle Ihre interaktiven Mitteilungen. Der Vorgang &quot;Abrufen/Lesen&quot;des Formulardatenmodells ruft die Daten aus Ihrer Back-End-Datenquelle ab und wird zum Ausfüllen des Dokuments &quot;Interaktive Kommunikation&quot;verwendet.
 
-Weitere Informationen zur Konfiguration von Data Sources finden Sie unter diesem [Link.&quot;](parttwo.md)
+Weitere Informationen zum Konfigurieren von Data Sources finden Sie unter [link`](parttwo.md)
 
 Nachdem Sie das Formulardatenmodell erstellt haben, können Sie es als Grundlage für die Erstellung von Dokument-Fragmenten und interaktiven Dokumenten verwenden.
