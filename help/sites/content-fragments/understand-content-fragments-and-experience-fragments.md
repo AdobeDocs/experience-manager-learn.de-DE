@@ -29,17 +29,17 @@ Adobe Experience Managers Inhaltsfragmente und Erlebnisfragmente mögen oberflä
 <td><strong>Erlebnisfragmente (XF)</strong></td>
 </tr><tr><td><strong>Definition</strong></td>
 <td><ul>
-<li>Wiederverwendbarer, präsentationsunabhängiger <strong>Inhalt</strong>, der aus strukturierten Datenelementen (Text, Daten, Referenzen usw.) besteht</li>
+<li>Wiederverwendbarer, präsentationsunabhängiger <strong>Inhalt</strong>, bestehend aus strukturierten Datenelementen (Text, Daten, Referenzen usw.)</li>
 </ul>
 </td>
 <td><ul>
-<li>Ein wiederverwendbares Composite aus einer oder mehreren AEM Komponenten, die Inhalt und Darstellung definieren, das ein <strong>Erlebnis</strong> darstellt, das für sich genommen sinnvoll ist</li>
+<li>Ein wiederverwendbares Composite aus einer oder mehreren AEM Komponenten, die Inhalt und Darstellung definieren, die ein <strong>Erlebnis</strong> bilden, das für sich genommen sinnvoll ist</li>
 </ul>
 </td>
 </tr><tr><td><strong>Kernlegende</strong></td>
 <td><ul>
 <li>Inhaltsorientiert</li>
-<li>Definiert durch ein <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-models.html" target="_blank">strukturiertes formularbasiertes Datenmodell.</a></li>
+<li>Definiert durch ein strukturiertes, formularbasiertes Datenmodell.<a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-models.html" target="_blank"></a></li>
 <li>Design und Layout agnostisch.</li>
 <li>Dem Kanal gehört die Präsentation des Inhalts des Inhaltsfragments (Layout und Design)</li>
 </ul>
@@ -53,7 +53,7 @@ Adobe Experience Managers Inhaltsfragmente und Erlebnisfragmente mögen oberflä
 </td>
 </tr><tr><td><strong>Technische Details</strong></td>
 <td><ul>
-<li>Implementiert als <strong>DAM:Asset</strong></li>
+<li>Implementiert als <strong>dam:Asset</strong></li>
 <li>Definiert durch ein <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-models.html" target="_blank">Inhaltsfragmentmodell</a></li>
 </ul>
 </td>
@@ -72,17 +72,17 @@ Adobe Experience Managers Inhaltsfragmente und Erlebnisfragmente mögen oberflä
 <td><ul>
 <li>Abweichungen sind Kanals- oder Kontextspezifisch</li>
 <li>Varianten werden über AEM Live Copy synchronisiert</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#BuildingBlocks" target="_blank">Bausteine</a> ermöglichen die Wiederverwendung von Inhalten in verschiedenen Varianten</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#BuildingBlocks" target="_blank">Erstellen von </a> Blocksallow-Inhalten für verschiedene Varianten</li>
 </ul>
 </td>
 </tr><tr><td><strong>Funktionen</strong></td>
 <td><ul>
 <li>Varianten</li>
 <li>Versionen</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#SynchronizingwithMaster" target="_blank">Synchronisierung</a> von Inhalten in verschiedenen Varianten</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-managing.html#ComparingFragmentVersions" target="_blank">Visual Diff</a> of Content Fragment versions</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#AnnotatingaContentFragment" target="_blank">Anmerkungen</a> zu mehrzeiligen Textelementen</li>
-<li>Intelligente <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#SummarizingText" target="_blank">Zusammenfassung</a> von mehrzeiligen Textelementen.</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#SynchronizingwithMaster" target="_blank">Synchronisierung </a> von Inhalten in verschiedenen Varianten</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-managing.html#ComparingFragmentVersions" target="_blank">Visuelle </a> Unterschiede bei Inhaltsfragmentversionen</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#AnnotatingaContentFragment" target="_blank">Anmerkungen </a> zu mehrzeiligen Textelementen</li>
+<li>Intelligent <a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-variations.html#SummarizingText" target="_blank">Zusammenfassung</a> von mehrzeiligen Textelementen.</li>
 <li><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/creating-translation-projects-for-content-fragments.html" target="_blank">Übersetzung/lokale Anpassung</a></li>
 </ul>
 </td>
@@ -98,15 +98,15 @@ Adobe Experience Managers Inhaltsfragmente und Erlebnisfragmente mögen oberflä
 </td>
 </tr><tr><td><strong>Verwenden</strong></td>
 <td><ul>
-<li><a href="https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM Inhaltsfragment-Komponente</a> "Kernkomponenten"zur Verwendung in AEM Sites, AEM Screens oder in Erlebnisfragmenten.</li>
-<li>JSON-Export über <a href="https://helpx.adobe.com/de/experience-manager/kt/sites/using/content-services-tutorial-use.html" target="_blank">AEM Content Services</a> für den Drittanbieterkonsum</li>
+<li><a href="https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM Inhaltsfragment-</a> Komponente für Kernkomponenten zur Verwendung in AEM Sites, AEM Screens oder in Erlebnisfragmenten.</li>
+<li>JSON-Export über <a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html" target="_blank">AEM Content Services</a> für den Verbrauch durch Dritte</li>
 <li>JSON über AEM HTTP Assets APIs für den Drittanbieterkonsum.</li>
 </ul>
 </td>
 <td><ul>
 <li>AEM Erlebnisfragment-Komponente zur Verwendung in AEM Sites, AEM Screens oder anderen Erlebnisfragmenten.</li>
-<li>Exportieren als <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#ThePlainHTMLRendition" target="_blank">normales HTML</a> zur Verwendung durch Drittanbietersysteme</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/experience-fragments-target.html" target="_blank">HTML-Export nach Adobe Target</a> für zielgerichtete Angebot</li>
+<li>Als <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#ThePlainHTMLRendition" target="_blank">Nur HTML</a> zur Verwendung durch Drittanbietersysteme exportieren</li>
+<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/experience-fragments-target.html" target="_blank">HTML-Export in Adobe </a> Target für zielgerichtete Angebot</li>
 <li>JSON-Export nach Adobe Target für zielgerichtete Angebot</li>
 </ul>
 </td>
@@ -142,27 +142,27 @@ Das folgende Diagramm zeigt die Gesamtarchitektur AEM Inhaltsfragmente
 
 !![Architektur von Inhaltsfragmenten](./assets/content-fragments-architecture.png)
 
-+ **Inhaltsfragmentmodelle** definieren die Elemente (oder Felder), die definieren, welche Inhalte vom Inhaltsfragment erfasst und bereitgestellt werden können.
-+ Das **Inhaltsfragment** ist eine Instanz eines Inhaltsfragmentmodells, das eine logische Inhaltsentität darstellt.
-+ Inhaltsfragment- **Varianten** entsprechen dem Inhaltsfragmentmodell, enthalten jedoch Inhaltsvarianten.
++ **Inhaltsfragment-** Modelle definieren die Elemente (oder Felder), die definieren, welche Inhalte vom Inhaltsfragment erfasst und bereitgestellt werden können.
++ Das Inhaltsfragment **ist eine Instanz eines Inhaltsfragmentmodells, das eine logische Inhaltsentität darstellt.**
++ Inhaltsfragment **Varianten** halten sich an das Inhaltsfragmentmodell, es gibt jedoch Inhaltsvarianten.
 + Inhaltsfragmente können wie folgt verfügbar gemacht/genutzt werden:
    + Verwenden von Inhaltsfragmenten auf **AEM Sites** (oder AEM Screens) über die Inhaltsfragment-Komponente der AEM WCM-Kernkomponenten.
-   + Einbetten eines Inhaltsfragments in ein **Erlebnisfragment** über die Inhaltsfragment-Komponente der AEM WCM-Kernkomponenten zur Verwendung in allen Anwendungsfällen des Erlebnisfragments.
-   + Durch das Bereitstellen eines Inhaltsfragments werden Inhalte als JSON über **AEM Content Services** - und API-Seiten für schreibgeschützte Anwendungsfälle variiert.
+   + Einbetten eines Inhaltsfragments in ein **Erlebnisfragment** über die Inhaltsfragment-Komponente der AEM WCM-Kernkomponenten zur Verwendung in einem beliebigen Anwendungsfall des Erlebnisfragments.
+   + Durch das Bereitstellen eines Inhaltsfragments werden Inhalte als JSON über **AEM Content Services** und API-Seiten für schreibgeschützte Anwendungsfälle variiert.
    + Direktes Bereitstellen von Content Fragment-Inhalten (alle Varianten) als JSON über Direktaufrufe an AEM Assets über die **AEM Assets HTTP API** für CRUD-Anwendungsfälle.
 
 ## Architektur von Erlebnisfragmenten
 
 !![Architektur von Erlebnisfragmenten](./assets/experience-fragments-architecture.png)
 
-+ **Bearbeitbare Vorlagen**, die wiederum von **bearbeitbaren Vorlagentypen** und einer Implementierung **von** AEM Seitenkomponenten definiert werden, definieren die zulässigen AEM Komponenten, die zum Erstellen eines Erlebnisfragments verwendet werden können.
++ **Bearbeitbare Vorlagen**, die wiederum durch  **bearbeitbare** Vorlagentypen und eine Implementierung **von** AEM Seitenkomponenten definiert werden, definieren die zulässigen AEM Komponenten, die zum Erstellen eines Erlebnisfragments verwendet werden können.
 + Das **Erlebnisfragment** ist eine Instanz einer bearbeitbaren Vorlage, die ein logisches Erlebnis darstellt.
-+ Erlebnisfragment- **Varianten** entsprechen der bearbeitbaren Vorlage, weisen jedoch unterschiedliche Erlebnisse (Inhalt und Design) auf.
++ Erlebnisfragment **Varianten** halten sich an die bearbeitbare Vorlage, es gibt jedoch Variationen im Erlebnis (Inhalt und Design).
 + Erlebnisfragmente können wie folgt verfügbar gemacht/genutzt werden:
    + Verwenden von Erlebnisfragmenten auf AEM Sites (oder AEM Screens) über die Komponente AEM Erlebnisfragment
-   + Beim Anzeigen eines Erlebnisfragments werden Inhalte als JSON (mit eingebettetem HTML) über **AEM Content Services** - und API-Seiten variiert.
-   + Direktes Anzeigen einer Erlebnisfragment-Variante als **&quot;einfaches HTML&quot;**.
-   + Exportieren von Erlebnisfragmenten in **Adobe Target** als HTML- oder JSON-Angebot.
+   + Beim Anzeigen eines Erlebnisfragments werden Inhalte als JSON (mit eingebettetem HTML) über **AEM Content Services**- und API-Seiten variiert.
+   + Direktes Anzeigen einer Erlebnisfragment-Variation als **&quot;Nur HTML&quot;**.
+   + Exportieren von Erlebnisfragmenten in **Adobe Target** als HTML- oder JSON-Angebot
    + AEM Sites unterstützt nativ HTML-Angebot, JSON-Angebot erfordern jedoch eine benutzerdefinierte Entwicklung.
 
 ## Unterstützende Materialien für Inhaltsfragmente
@@ -171,7 +171,7 @@ Das folgende Diagramm zeigt die Gesamtarchitektur AEM Inhaltsfragmente
 + [Inhaltsfragmente in AEM](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-feature-video-use.html)
 + [Inhaltsfragment-Komponente AEM WCM-Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/content-fragment-component.html)
 + [Inhaltsfragmente und AEM Content Services verwenden](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
-+ [Erste Schritte mit AEM Content Services](https://helpx.adobe.com/de/experience-manager/kt/sites/using/content-services-tutorial-use.html)
++ [Erste Schritte mit AEM Content Services](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html)
 
 ## Unterstützende Materialien für Erlebnisfragmente
 
