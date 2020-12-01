@@ -8,10 +8,10 @@ doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 787a79663472711b78d467977d633e3d410803e5
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 6%
+source-wordcount: '278'
+ht-degree: 11%
 
 ---
 
@@ -23,18 +23,28 @@ ht-degree: 6%
 >Die folgenden Schritte sind erforderlich, um diese Funktion auf Ihrem System ausführen zu können
 >
 >* AEM Forms(Version 6.3 oder höher)
->* MYSQL-Datenbank
+>* MySql-Datenbank
 
 
 Gehen Sie wie folgt vor, um diese Funktion auf Ihrer AEM Forms-Instanz zu testen
 
-* Laden Sie die [Übungselemente](assets/store-retrieve-form-data.zip) herunter und entpacken Sie sie auf Ihr lokales System
-* Bereitstellen und Beginn der Pakete techmarketingdemos.jar und mysqldriver.jar mithilfe der [Felix-Webkonsole](http://localhost:4502/system/console/configMgr)
-* Importieren Sie aemformstutorial.sql mit MYSQL Workbench. Dadurch werden die erforderlichen Schemas und Tabellen in Ihrer Datenbank erstellt, damit dieses Lernprogramm funktioniert.
-* Importieren Sie &quot;StoreAndRetrieve.zip&quot;mit [AEM Package Manager.](http://localhost:4502/crx/packmgr/index.jsp) Dieses Paket enthält die Vorlage für das adaptive Formular, die Client-Bibliothek für die Seitenkomponente sowie die Beispiel-Konfiguration für das adaptive Formular und die Datenquelle.
-* Melden Sie sich bei [configMgr an.](http://localhost:4502/system/console/configMgr) Suchen Sie nach &quot;Apache Sling Connection Pooled DataSource. Öffnen Sie den mit aemformstutorial verknüpften Datenquelleneintrag und geben Sie den Benutzernamen und das Kennwort für Ihre Datenbankinstanz ein.
-* Öffnen des [adaptiven Formulars](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)
-* Füllen Sie einige Details aus und klicken Sie auf die Schaltfläche &quot;Speichern und weiter&quot;
+* Laden Sie die JAR-Dateien für den [MySQL-Treiber unter ](assets/mysqldriver.jar) mit der [felix-Webkonsole](http://localhost:4502/system/console/bundles) herunter und stellen Sie sie bereit
+* Laden Sie das [OSGi-Bundle](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar) mit der [felix-Webkonsole](http://localhost:4502/system/console/bundles) herunter und stellen Sie es bereit
+* Laden Sie das [Paket mit Client-lib, Vorlage für adaptive Formulare und die benutzerdefinierte Seitenkomponente](assets/store-and-fetch-af-with-data.zip) mit dem [Paketmanager](http://localhost:4502/crx/packmgr/index.jsp) herunter und installieren Sie es und installieren Sie es mithilfe des &lt;a2/>Paketmanagers&lt;a3/>
+* Importieren Sie das adaptive Beispielformular [mithilfe der [FormsAndDocuments-Schnittstelle](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)](assets/sample-adaptive-form.zip)
+
+* Importieren Sie [form-data-db.sql](assets/form-data-db.sql) mit MySql Workbench. Dadurch werden die erforderlichen Schemas und Tabellen in Ihrer Datenbank erstellt, damit dieses Lernprogramm funktioniert.
+* Melden Sie sich bei [configMgr an.](http://localhost:4502/system/console/configMgr) Suchen Sie nach &quot;Apache Sling Connection Pooled DataSource. Erstellen Sie einen neuen Apache Sling Connection Pooled DataSource-Eintrag namens **SaveAndContinue** mit den folgenden Eigenschaften:
+
+| Eigenschaftsname | Wert |
+------------------------|---------------------------------------
+| Datasource Name | SaveAndContinue |
+| JDBC-Treiberklasse | com.mysql.cj.jdbc.Driver |
+| JDBC-Verbindungsuri | jdbc:mysql://localhost:3306/aemformstutorial |
+
+
+* Öffnen Sie das [Adaptive Formular](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)
+* Füllen Sie einige Details aus und klicken Sie auf die Schaltfläche &quot;Später speichern und weiter&quot;.
 * Sie sollten eine URL mit einer GUID zurückerhalten.
 * Kopieren Sie die URL und fügen Sie sie in eine neue Registerkarte des Browsers ein. **Stellen Sie sicher, dass am Ende der URL kein Leerzeichen steht.**
-* Adaptives Formular sollte mit den Daten aus dem vorherigen Schritt gefüllt werden
+* Adaptives Formular sollte mit den Daten aus dem vorherigen Schritt gefüllt werden.
