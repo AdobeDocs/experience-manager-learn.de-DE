@@ -19,7 +19,7 @@ ht-degree: 46%
 ---
 
 
-# Using Brand Portal with AEM Assets{#using-brand-portal-with-aem-assets}
+# Verwenden des Markenportals mit AEM Assets{#using-brand-portal-with-aem-assets}
 
 Videoanleitungen zur Integration von Adobe Experience Manager (AEM) Assets Brand Portal.
 
@@ -35,9 +35,9 @@ Die Asset-Beschaffung von Brand Portal wird verwendet, um Assets von Agenturen u
 
 *Für die Verwendung von Asset Sourcing ist Experience Manager Author 6.5 SP2 (6.5.2) oder höher erforderlich*
 
-Anweisungen zum Konfigurieren und Einrichten der Asset-Beschaffung bei Experience Manager Author finden Sie unter Asset-Erstellung [aktivieren](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) .
+Anweisungen zum Konfigurieren und Einrichten von Asset Sourcing für den Experience Manager-Autor finden Sie unter [Asset Sourcing aktivieren](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html).
 
-## Markenportal - Februar 2019 Funktionen und Verbesserungen{#brand-portal-features-and-enhancements-644}
+## Markenportal Februar 2019 Funktionen und Verbesserungen{#brand-portal-features-and-enhancements-644}
 
 >[!VIDEO](https://video.tv.adobe.com/v/26354/?quality=9&learn=on)
 
@@ -49,7 +49,7 @@ Brand Portal verbessert die Suche mit der Teiltextsuche nach Eigenschaftsvorhers
 
 Lesen Sie weiter, um mehr über die Suche nach Textteilen und Suche mit Platzhalter zu erfahren.
 
-#### Suche nach Satzteilen                   
+#### Suche nach Satzteilen
 
 Sie können nach Assets suchen, indem Sie nur einen Teil – d. h. ein oder zwei Wörter – des gesuchten Satzes in den Filterbereich eingeben.
 
@@ -61,7 +61,7 @@ Beispiel: Wenn Ihr Suchformular in Brand Portal das Eigenschaftsprädikat für T
 
 In Brand Portal können Sie das Sternchen (*) in der Suchanfrage zusammen mit einem Teil des Wortes in der gesuchten Phrase verwenden.
 
-**Anwendungsfall** : Wenn Sie sich nicht sicher sind, welche Wörter genau im gesuchten Satz vorkommen, können Sie eine Platzhaltersuche verwenden, um die Lücken in Ihrer Abfrage zu schließen.
+**Verwendungsfall** : Wenn Sie nicht sicher sind, welche Wörter genau im gesuchten Satz vorkommen, können Sie die Lücken in Ihrer Abfrage mit Platzhaltern füllen.
 
 Beispielsweise werden durch die Angabe von klettern* alle Assets zurückgegeben, deren Titelphrase Wörter enthält, die mit den Zeichen klettern beginnen, wenn das Suchformular in Brand Portal das Eigenschaftsprädikat für Teilsuche auf Asset-Titel anwendet.
 
@@ -73,12 +73,12 @@ Auch gilt Folgendes:
 #### Aktivieren der Ordnerhierarchie    
 
 Administratoren können jetzt konfigurieren, wie Ordner für Benutzer ohne Administratorrechte (Bearbeiter, Betrachter und Gastbenutzer) bei der Anmeldung angezeigt werden.
- Die Konfiguration [Ordnerhierarchie aktivieren](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) wird in den Allgemeinen Einstellungen im Admin Tools-Bereich hinzugefügt. Wenn die Konfiguration:
+Die Konfiguration [Ordnerhierarchie aktivieren](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) wird in den Allgemeinen Einstellungen im Admin Tools-Bereich hinzugefügt. Wenn die Konfiguration:
 
 * Aktiviert ist, ist die Ordnerstruktur, die vom Stammordner ausgeht, für Benutzer ohne Administratorrechte sichtbar. Sie können also genauso wie Administratoren navigieren.
 * Deaktiviert, werden nur die freigegebenen Ordner auf der Landingpage angezeigt.
 
-[Die Funktion &quot;Ordnerhierarchie](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) aktivieren&quot;(sofern aktiviert) hilft Ihnen, die Ordner mit denselben Namen von verschiedenen Hierarchien zu unterscheiden. Bei der Anmeldung sehen Nicht-Administratoren nun die virtuellen übergeordneten (und untergeordneten) Ordner der freigegebenen Ordner.
+[Die Funktion &quot;](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) Ordnerhierarchie aktivieren&quot;(sofern aktiviert) hilft Ihnen, die Ordner mit denselben Namen von verschiedenen Hierarchien zu unterscheiden. Bei der Anmeldung sehen Nicht-Administratoren nun die virtuellen übergeordneten (und untergeordneten) Ordner der freigegebenen Ordner.
 
 Die freigegebenen Ordner werden innerhalb der jeweiligen Verzeichnisse in virtuellen Ordnern angeordnet. Sie können diese virtuellen Ordner an einem Schlosssymbol erkennen.
 
@@ -156,12 +156,12 @@ Es wurden sechs neue Konfigurationen hinzugefügt, damit Administratoren folgend
 
 ### Weitere Verbesserungen
 
-* *Pfad zur Ordnerhierarchie auf Karten- und Listen-Ansichten* — Ermöglicht Benutzern, den Speicherort der in einer Brand Portal-Instanz gespeicherten Ordner zu kennen. Hilft Benutzern, Ordner mit demselben Namen innerhalb einer anderen Ordnerhierarchie zu unterscheiden.
+* *Ordnerhierarchiepfad auf Karten- und Listen-Ansichten* — Ermöglicht Benutzern, den Speicherort der in einer Brand Portal-Instanz gespeicherten Ordner zu kennen. Hilft Benutzern, Ordner mit demselben Namen innerhalb einer anderen Ordnerhierarchie zu unterscheiden.
 * *Übersichtsoption* — bietet Benutzern ohne Administratorrechte Metadaten zum Asset/Ordner, indem Sie das Asset/den Ordner auswählen und dann in der Symbolleiste die Übersichtsoption auswählen. Zeigt derzeit Titel, Erstellungsdatum und Pfad an
 
-### Benutzeroberfläche für Adobe-E/A-Hosts zum Konfigurieren von oAuth-Integrationen
+### Adobe I/O Hosts-Benutzeroberfläche zum Konfigurieren von Auth-Integrationen
 
-Brand Portal uses Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/) interface to create JWT application, which enables configuring oAuth integrations to allow AEM Assets integration with Brand Portal. Zuvor wurde die Benutzeroberfläche zum Konfigurieren von OAuth-Integrationen unter `https://marketing.adobe.com/developer/` gehostet. Weitere Informationen zur Integration von AEM Assets mit Brand Portal, um Assets und Sammlungen in Brand Portal zu veröffentlichen, finden Sie unter [Konfigurieren der Integration von AEM Assets mit Brand Portal](https://helpx.adobe.com/de/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
+Brand Portal verwendet Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)-Schnittstelle, um eine JWT-Anwendung zu erstellen, die die Konfiguration von Auth-Integrationen ermöglicht, um die AEM Assets-Integration mit dem Markenportal zu ermöglichen. Zuvor wurde die Benutzeroberfläche zum Konfigurieren von OAuth-Integrationen unter `https://marketing.adobe.com/developer/` gehostet. Weitere Informationen zur Integration von AEM Assets mit Brand Portal, um Assets und Sammlungen in Brand Portal zu veröffentlichen, finden Sie unter [Konfigurieren der Integration von AEM Assets mit Brand Portal](https://helpx.adobe.com/de/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
 
 ## Markenportal Februar 2018 - Funktionen und Verbesserungen{#brand-portal-features-and-enhancements-632}
 
@@ -208,7 +208,7 @@ Die neuen Funktionen wurden erweitert und zielen darauf ab, das Markenportal an 
 ## Zusätzliche Ressourcen{#additional-resources}
 
 * [Neue Funktionen im Markenportal](https://helpx.adobe.com/experience-manager/brand-portal/using/whats-new.html)
-* [Replizierungsagenten von AEM Authoring](https://helpx.adobe.com/de/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
+* [Replizierungsagenten von AEM Authoring](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [Handbuch zum beschleunigten Herunterladen](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [AEM Assets Brand Portal Adobe Docs](https://helpx.adobe.com/de/experience-manager/brand-portal/using/brand-portal.html)
 * [AEM Assets Dynamic Media Adobe Docs](https://docs.adobe.com/docs/de/aem/6-3/author/assets/dynamic-media.html)
