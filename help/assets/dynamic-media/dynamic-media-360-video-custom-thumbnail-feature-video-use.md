@@ -29,7 +29,7 @@ Zu den Verbesserungen des dynamischen Media Viewers in AEM 6.5 gehören die zus�
 
 >[!NOTE]
 >
->Video geht davon aus, dass Ihre AEM-Instanz im Modus &quot;Dynamische Medien - S7&quot;ausgeführt wird.  [Anweisungen zum Einrichten von AEM mit dynamischen Medien finden Sie hier](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). Beim Hochladen eines Videos verarbeitet Dynamic Media das Filmmaterial standardmäßig als 360-Grad-Video, wenn das Seitenverhältnis 2:1 beträgt. das Verhältnis von Breite zu Höhe ist 2:1.
+>Video geht davon aus, dass Ihre AEM-Instanz im Modus Dynamische Medien S7 ausgeführt wird.  [Anweisungen zum Einrichten von AEM mit dynamischen Medien finden Sie hier](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). Beim Hochladen eines Videos verarbeitet Dynamic Media das Filmmaterial standardmäßig als 360-Grad-Video, wenn das Seitenverhältnis 2:1 beträgt. das Verhältnis von Breite zu Höhe ist 2:1.
 
 >[!NOTE]
 >
@@ -60,7 +60,7 @@ Video zu dynamischen Medien unterstützt jetzt die Auswahl einer benutzerdefinie
       </td>
    </tr>
    <tr>
-      <td>Nutzungsszenario      </td>
+      <td>Nutzungsszenario </td>
       <td>
          <p>Für Websites und Geräte, die Gyroskop nicht unterstützen</p>
          <p> </p>
