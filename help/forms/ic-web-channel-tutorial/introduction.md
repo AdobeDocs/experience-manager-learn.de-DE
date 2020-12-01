@@ -22,7 +22,7 @@ ht-degree: 2%
 
 Interaktive Kommunikation ist neu bei AEM Forms 6.4. Dieses Dokument führt Sie durch die Schritte, die erforderlich sind, um eine interaktive Kommunikation für den Kanal zu erstellen.
 
-Besuchen Sie die [AEM Forms-Beispielseite](https://forms.enablementadobe.com/content/samples/samples.html?query=0) für einen Link zu einer Live-Demo dieser Funktion.
+Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) für einen Link zu einer Live-Demo dieser Funktion.
 
 ## Voraussetzungen {#prerequistes}
 
