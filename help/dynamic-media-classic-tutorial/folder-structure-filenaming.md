@@ -30,7 +30,7 @@ Die Ordnerhierarchie ist nur für Sie und Ihre Firma aus organisatorischen Grün
 
 Ein weiterer wichtiger Aspekt ist die Anzahl der Assets oder Ordner, die in jedem Ordner gespeichert werden sollen. Wenn viele Assets in einem Ordner gespeichert sind, wird die Leistung bei der Anzeige von Assets in Dynamic Media Classic beeinträchtigt. Speichern Sie nicht Tausende von Assets in einem Ordner. Entwickeln Sie stattdessen eine hierarchische Struktur mit weniger als 500 Assets oder Ordnern in einer bestimmten Hierarchieabteilung. Dies ist keine strikte Anforderung, trägt jedoch dazu bei, dass akzeptable Reaktionszeiten beim Anzeigen oder Suchen von Assets beibehalten werden. Die Empfehlung besteht darin, Hierarchien zu erstellen, die breit und flach sind, anstatt schmal und tief.
 
-Die einfachste Möglichkeit zum Erstellen von Ordnern besteht darin, die gesamte Ordnerstruktur per FTP hochzuladen und die Option &quot;Unterordner **einschließen&quot;zu aktivieren**. Diese Option bewirkt, dass Dynamic Media Classic die Ordnerstruktur auf der FTP-Site in Dynamic Media Classic neu erstellt.
+Die einfachste Möglichkeit zum Erstellen von Ordnern besteht darin, die gesamte Ordnerstruktur per FTP hochzuladen und die Option **Unterordner einschließen** zu aktivieren. Diese Option bewirkt, dass Dynamic Media Classic die Ordnerstruktur auf der FTP-Site in Dynamic Media Classic neu erstellt.
 
 Wir möchten, dass Sie Ihre Ordnerstruktur berücksichtigen, bevor Sie den Beginn haben, alle Ihre Dateien hochzuladen, da es wesentlich einfacher ist, Ihre Dateien und Ordner lokal auf Ihrem Computer zu organisieren und zu verwalten, als dies in Dynamic Media Classic der Fall ist. Sie können beispielsweise nur Dateien, jedoch nicht ganze Ordner, innerhalb von Dynamic Media Classic ziehen und ablegen.
 
@@ -46,7 +46,7 @@ Berücksichtigen Sie bei Ihrer Ordnerstrategie, was für Ihr Unternehmen sinnvol
 
 Wie Sie sich entscheiden, Ihre Dateien zu benennen, ist vielleicht die wichtigste frühe Entscheidung, die Sie in Bezug auf Dynamic Media Classic treffen werden. Dies liegt daran, dass alle Assets in Dynamic Media Classic eindeutige Namen haben müssen, unabhängig davon, wo sie im Konto gespeichert werden.
 
-Alle URLs und Transaktionen in Dynamic Media Classic werden von einer Asset-ID gesteuert, der eindeutigen Kennung eines Assets in der Datenbank. Wenn Sie eine Datei hochladen, wird die Asset-ID erstellt, indem Sie den Dateinamen verwenden und die Erweiterung entfernen. Beispielsweise erhält _896649.jpg_ die Asset- _ID 896649_.
+Alle URLs und Transaktionen in Dynamic Media Classic werden von einer Asset-ID gesteuert, der eindeutigen Kennung eines Assets in der Datenbank. Wenn Sie eine Datei hochladen, wird die Asset-ID erstellt, indem Sie den Dateinamen verwenden und die Erweiterung entfernen. Beispiel: _896649.jpg_ erhält Asset _ID 896649_.
 
 Regeln für Asset-IDs:
 
@@ -67,7 +67,7 @@ Ihre Benennungsstrategie sollte flexibel sein, damit Sie nach dem Start keine Um
 | SKU/PID | Dateiname | Asset-ID |
 | ------- | ---------- | -------- |
 | 896649 | 896649.jpg | 896649 |
-| SKU123 | SKU123.png | SKU123 |
+| SKU 123 | SKU123.png | SKU 123 |
 
 Dies ist ein sehr einfaches System, und gut, wenn Sie bescheidene Bedürfnisse haben. Es ist jedoch nicht sehr flexibel. Nur weil Sie heute keine alternativen Bilder haben, heißt das nicht, dass Sie diese Bilder morgen nicht haben werden. Das nächste Szenario Angebot mehr Flexibilität.
 
@@ -78,7 +78,7 @@ Dies ist ein sehr einfaches System, und gut, wenn Sie bescheidene Bedürfnisse h
 | AA123 | Alt-Ansichten | AA123_1.tif AA123_2.tif AA123_3.tif | AA123_1 AA123_2 AA123_3 |
 |  | Farbige Ansichten | AA123_BLU.tif AA123_RED.tif AA123_BROWN.tif | AA123_BLU AA123_RED AA123_BROWN |
 |  | Muster | AA123_BLU_SW.tif | AA123_BLU_SW |
-|  | Bildsatz oder Musterset |  | AA123 oder AA123_SET | -- |
+|  | Bildsatz oder Musterset |  | AA123 oder AA123_SET | — |
 
 Beim Umgang mit festgelegten Sammlungen, z. B. Bildsätzen und Mustersets, muss das Set selbst auch einen eindeutigen Namen haben. In diesem Fall könnte das Set die Basis-SKU als Name oder die SKU mit der Erweiterung &quot;_SET&quot;erhalten.
 
