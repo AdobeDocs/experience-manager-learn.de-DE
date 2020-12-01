@@ -8,22 +8,22 @@ translation-type: tm+mt
 source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
 workflow-type: tm+mt
 source-wordcount: '396'
-ht-degree: 20%
+ht-degree: 26%
 
 ---
 
 
-# Überblick {#overview}
+# Überblick{#overview}
 
 Adobe Experience Manager (AEM) Sites ist eine führende Plattform für Erlebnismanagement. Dieses Benutzerhandbuch enthält Videos und Tutorials zu den zahlreichen Funktionen und Funktionen von AEM Sites.
 
 ## Neue Funktionen
 
-* **[Erste Schritte mit AEMSPA Editor und React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html) (Tutorial)**
+* **[Erste Schritte mit AEMSPA Editor und React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)  (Tutorial)**
 
    *Erste Schritte für Entwickler zur Integration von Einzelseitenanwendungen (SPA) mit AEM mithilfe von React*
 
-* **[Erste Schritte mit AEM SPA Editor und Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html) (Tutorial)**
+* **[Erste Schritte mit AEM SPA Editor und Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)  (Tutorial)**
 
    *Erste Schritte für Entwickler zur Integration von Einzelseitenanwendungen (SPA) mit AEM mithilfe von Angular*
 
@@ -48,7 +48,7 @@ Adobe Experience Manager (AEM) Sites ist eine führende Plattform für Erlebnism
 <table>
 <tr>
   <td>
-    <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
+    <a href="https://docs.adobe.com/content/help/de-DE/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
       <img alt="Erste Schritte mit AEM Sites - WKND-Tutorial" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
@@ -96,7 +96,7 @@ Adobe Experience Manager (AEM) Sites ist eine führende Plattform für Erlebnism
 * [AEM Sites-Entwicklerdokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [AEM Sites-Verwaltungsdokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
 * [AEM Sites - Bereitstellung der Dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/user-guide.html)
-* [Tutorials zu AEM als Cloud-Service](/help/cloud-service/overview.md)
+* [Tutorials zu AEM as a Cloud Service](/help/cloud-service/overview.md)
 * [AEM Assets-Tutorials](/help/assets/overview.md)
 * [AEM Forms-Tutorials](/help/forms/overview.md)
 * [AEM Foundation-Tutorials](/help/foundation/overview.md)
