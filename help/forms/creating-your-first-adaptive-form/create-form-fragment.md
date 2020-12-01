@@ -26,9 +26,9 @@ Ein Fragment ist ein wiederverwendbarer Teil eines Formulars. Beispielsweise kan
 
 
 
-Weitere Informationen finden Sie in der Dokumentation [zu](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html) adaptiven Formularvorlagen
+Weitere Informationen finden Sie in der Dokumentation zu adaptiven Formularvorlagen[](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html)
 
-Bei Bedarf können Sie das Fragment &quot; [Spouse-details- ](assets/spouse-details-fragment.zip) Fragment&quot;herunterladen [und mithilfe desPaketmanagers in AEM importieren.](http://localhost:4502/crx/packmgr/index.jsp)
+Bei Bedarf können Sie das [Spouse-details-Fragment ](assets/spouse-details-fragment.zip) herunterladen und mit dem [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) in AEM importieren.
 
 
 
