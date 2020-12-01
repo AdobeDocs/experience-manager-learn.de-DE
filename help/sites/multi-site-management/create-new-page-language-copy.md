@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Erstellen einer Seite &quot;Sprachkopie&quot; {#create-language-copy-page}
+# Eine Sprachkopieseite {#create-language-copy-page} erstellen
 
 Erfahren Sie, wie Sie eine Seite in einer vorhandenen Sprachkopie erstellen und den Inhalt dann in eine andere Sprachkopie übersetzen.
 
