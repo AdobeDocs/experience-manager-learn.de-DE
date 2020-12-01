@@ -28,7 +28,7 @@ Die Variablen können die folgenden Typen sein:
 * Doppelt
 * Boolesch
 * Zeichenfolge
-* Datum           
+* Datum
 * JSON
 * XML
 * ArrayList
