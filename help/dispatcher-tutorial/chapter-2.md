@@ -76,7 +76,7 @@ Es versteht sich von selbst, dass die anfängliche Konfiguration der Dispatcher-
 
 In einem früheren Projekt haben wir einen anderen Trick verwendet, um ein Veröffentlichungssystem aus dem Lastenausgleich zu entfernen, ohne direkten Zugriff auf den Lastenausgleich selbst zu haben.
 
-Der Lastenausgleich &quot;pings&quot;, eine bestimmte Seite, um zu sehen, ob der Server läuft. Eine triviale Wahl ist normalerweise, die Homepage zu pingen. Aber wenn Sie den Ping verwenden möchten, um den Lastenausgleich zu signalisieren, um Traffic nicht auszugleichen, würden Sie etwas Anderes wählen. Sie erstellen eine dedizierte Vorlage oder ein Servlet, das konfiguriert werden kann, um mit oder `"up"` `"down"` (im Körper oder als HTTP-Antwortcode) zu reagieren. Die Antwort auf diese Seite darf natürlich nicht im Dispatcher zwischengespeichert werden - daher wird sie immer frisch aus dem Veröffentlichungssystem abgerufen. Wenn Sie jetzt den Lastenausgleich konfigurieren, um diese Vorlage oder das Servlet zu überprüfen, können Sie einfach die Option Veröffentlichen &quot;so tun, als wäre sie ausfallen lassen. Es wäre nicht Teil des Lastenausgleichs und kann aktualisiert werden.
+Der Lastenausgleich &quot;pings&quot;, eine bestimmte Seite, um zu sehen, ob der Server läuft. Eine triviale Wahl ist normalerweise, die Homepage zu pingen. Aber wenn Sie den Ping verwenden möchten, um den Lastenausgleich zu signalisieren, um Traffic nicht auszugleichen, würden Sie etwas Anderes wählen. Sie erstellen eine dedizierte Vorlage oder ein Servlet, das so konfiguriert werden kann, dass es mit `"up"` oder `"down"` (im Hauptteil oder als HTTP-Antwortcode) reagiert. Die Antwort auf diese Seite darf natürlich nicht im Dispatcher zwischengespeichert werden - daher wird sie immer frisch aus dem Veröffentlichungssystem abgerufen. Wenn Sie jetzt den Lastenausgleich konfigurieren, um diese Vorlage oder das Servlet zu überprüfen, können Sie einfach die Option Veröffentlichen &quot;so tun, als wäre sie ausfallen lassen. Es wäre nicht Teil des Lastenausgleichs und kann aktualisiert werden.
 
 #### Weltweiter Vertrieb
 
@@ -108,11 +108,11 @@ Sie könnten erwägen, eine zentrale freigegebene Datenspeicherung für alle Dis
 
 Wir haben einige Experimente mit NFS durchgeführt - aber NFS führt aufgrund der Inhaltssperrung enorme Leistungsprobleme ein. Dies hat die Gesamtleistung tatsächlich verringert.
 
-**Schlussfolgerung** - Die Freigabe eines gemeinsamen Dateisystems für mehrere Dispatcher ist KEIN empfohlener Ansatz.
+**Schlussfolgerung** : Die Freigabe eines gemeinsamen Dateisystems für mehrere Dispatcher ist KEIN empfohlener Ansatz.
 
 Wenn Sie Leistungsprobleme haben, sollten Sie Publish und Dispatcher gleichermaßen hochskalieren, um maximale Auslastung bei den Publisher-Instanzen zu vermeiden. Es gibt keine goldene Regel über das Verhältnis Publish / Dispatcher - es hängt in hohem Maße von der Verteilung der Anforderungen und der Häufigkeit von Veröffentlichungen und Cache-Ungültigkeiten ab.
 
-Wenn Sie sich auch Sorgen über die Latenz machen, die ein Besucher erfährt, sollten Sie die Verwendung eines Content Versand-Netzwerks, eine erneute Zwischenspeicherung, eine präventive Cache-Erwärmung, eine Übergangsphase wie in [Kapitel 1](chapter-1.md) dieser Serie beschrieben oder auf einige erweiterte Ideen von [Teil 3](chapter-3.md)verweisen.
+Wenn Sie auch Bedenken hinsichtlich der Latenz haben, die ein Besucher aufweist, sollten Sie die Verwendung eines Content Versand-Netzwerks, eine erneute Zwischenspeicherung, eine präventive Cacheerwärmung und eine Übergangsphase wie in [Kapitel 1](chapter-1.md) dieser Serie beschrieben festlegen oder auf einige erweiterte Ideen von [Teil 3](chapter-3.md) verweisen.
 
 ### Einrichtung &quot;Cross Connected&quot;
 
