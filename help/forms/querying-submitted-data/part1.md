@@ -21,13 +21,13 @@ ht-degree: 2%
 # Adaptives Formular basierend auf JSON-Schema erstellen
 
 
-Die Möglichkeit, adaptive Forms auf Basis von JSON-Schema zu erstellen, wurde mit AEM Forms 6.3 eingeführt. Die Einzelheiten zum Erstellen von Adaptiven Forms mit JSON-Schema werden in diesem [Artikel](https://helpx.adobe.com/de/experience-manager/6-3/forms/using/adaptive-form-json-schema-form-model.html)ausführlich erläutert.
+Die Möglichkeit, adaptive Forms auf Basis von JSON-Schema zu erstellen, wurde mit AEM Forms 6.3 eingeführt. Die Details zum Erstellen des adaptiven Forms mit dem JSON-Schema werden in diesem [Artikel](https://helpx.adobe.com/de/experience-manager/6-3/forms/using/adaptive-form-json-schema-form-model.html) ausführlich erläutert.
 
 Nachdem Sie ein adaptives Formular auf der Grundlage des JSON-Schemas erstellt haben, müssen Sie die gesendeten Daten als Nächstes in einer Datenbank speichern. Zu diesem Zweck verwenden wir den neuen JSON-Datentyp, der von verschiedenen Datenbankherstellern eingeführt wurde. Für die Zwecke dieses Artikels verwenden wir die MySql 8 Datenbank, um die gesendeten Daten zu speichern.
 
-MySql 8 Datenbank wurde für diesen Artikel verwendet. MySQL hat einen neuen Datentyp namens [JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html)eingeführt. Dies erleichtert die Speicherung und Abfrage von JSON-Objekten. Wir werden die gesendeten Daten in einer Spalte des Typs JSON in unserer Datenbank speichern.
+MySql 8 Datenbank wurde für diesen Artikel verwendet. MySQL hat einen neuen Datentyp namens [JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html) eingeführt. Dies erleichtert die Speicherung und Abfrage von JSON-Objekten. Wir werden die gesendeten Daten in einer Spalte des Typs JSON in unserer Datenbank speichern.
 
-Der folgende Screenshot zeigt die gesendeten Formulardaten, die im JSON-Datentyp gespeichert sind. Die Spalte &quot;formdata&quot;ist vom Typ JSON. Wir haben auch den Namen des Formulars gespeichert, das mit den Daten im Spaltenformname verknüpft ist
+Der folgende Screenshot zeigt die gesendeten Formulardaten, die im JSON-Datentyp gespeichert werden. Die Spalte &quot;formdata&quot;ist vom Typ JSON. Wir haben auch den Namen des Formulars gespeichert, das mit den Daten im Spaltenformname verknüpft ist
 
 >[!NOTE]
 >
