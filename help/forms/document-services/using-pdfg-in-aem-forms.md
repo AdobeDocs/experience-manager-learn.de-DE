@@ -25,19 +25,19 @@ ht-degree: 1%
 Demonstrieren der Drag &amp; Drop-Funktion zum Erstellen von PDF-Dateien mit AEM Forms
 
 PDFG steht für PDF-Generierung. Dies bedeutet, dass Sie eine Vielzahl von Dateiformaten in PDF konvertieren können. Die häufigsten sind Microsoft Office-Dokumente. PDFG gehört seit 6.1 zu AEM Forms.
-[Das Javadoc für die PDFG-API ist hier aufgeführt](https://helpx.adobe.com/experience-manager/6-3/forms/using/aem-document-services-programmatically.html#PDFGeneratorService)
+[Das JavaScript für die PDFG-API ist hier](https://helpx.adobe.com/experience-manager/6-3/forms/using/aem-document-services-programmatically.html#PDFGeneratorService) aufgeführt.
 
 Die mit diesem Artikel verknüpften Assets ermöglichen es Ihnen, MS Office- oder JPG-Dokumente per Drag &amp; Drop in den Ablagebereich der HTML-Seite zu ziehen. Nach dem Ablegen des Dokuments wird der PDFG-Dienst aufgerufen, das Dokument in PDF konvertiert und im Dateisystem AEM Servers gespeichert.
 
 So installieren Sie die Demoelemente
 
-1. PDFG wie in diesem Dokument [hier](https://helpx.adobe.com/experience-manager/6-4/forms/using/install-configure-pdf-generator.html)erwähnt konfigurieren.
+1. PDFG wie in diesem Dokument [hier](https://helpx.adobe.com/experience-manager/6-4/forms/using/install-configure-pdf-generator.html) erwähnt konfigurieren.
 1. Bitte befolgen Sie die entsprechende Dokumentation zu Ihrer AEM Forms-Version.
 1. [Importieren und installieren Sie Assets, die sich auf diesen Artikel beziehen, mit dem Package Manager.](assets/createpdfgdemov2.zip)
-1. [Navigieren Sie zu post.jsp](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) in Ihrer CRX
+1. [Navigieren Sie zu post.](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) jspin Ihrer CRX
 1. Speicherort gemäß Ihrer Voreinstellung ändern(Zeile 9)
 1. Speichern Sie Ihre Änderungen.
-1. Öffnen Sie die [ HTML-Seite](http://localhost:4502/content/DocumentServices/CreatePDFG.html) zum Ziehen und Ablegen von Dateien zur Konvertierung.
+1. Öffnen Sie die Seite [ html](http://localhost:4502/content/DocumentServices/CreatePDFG.html) zum Ziehen und Ablegen von Dateien zur Konvertierung.
 1. Legen Sie eine Word- oder JPG-Datei in den Ablagebereich.
 1. Das Eingabe-Dokument wird in PDF konvertiert und an demselben Speicherort wie unter Nummer 4 angegeben gespeichert.
 
