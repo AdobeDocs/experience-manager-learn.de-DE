@@ -20,9 +20,9 @@ ht-degree: 2%
 
 Durch die Verwendung einzelner Bilder für dynamische Größen und Zoomen lassen sich mit den Sammlungen von Dynamic Media Classic-Mediensets bessere Online-Erlebnisse schaffen. In diesem Abschnitt des Tutorials wird untersucht, wie die folgenden Rich-Media-Sets in Dynamic Media Classic erstellt werden:
 
-- Bild-Set
+- Bildset
 - Musterset
-- Rotations-Set
+- Rotationsset
 - Gemischtes Medienset
 
 Außerdem wird erläutert, wie die Erstellung von Sets mithilfe von Stapelsatzvorgaben automatisiert wird.
@@ -37,7 +37,7 @@ Wenn Sie einen Satz erstellen, wird dieser Satz als separates Asset verwaltet, d
 
 Lernen Sie die vier Arten von Sets kennen, die Sie in Dynamic Media Classic erstellen können: Bild-, Muster-, Rotationsset- und gemischte Mediensets.
 
-## Bild-Set
+## Bildset
 
 Dies ist der am häufigsten verwendete Set-Typ. Normalerweise verwenden Sie es für alternative Ansichten desselben Elements. Es besteht aus mehreren Bildern, die Sie in den Viewer laden, indem Sie auf die zugehörige Miniaturansicht des Bildes klicken.
 
@@ -49,8 +49,8 @@ Die URL für den obigen Bildsatz könnte wie folgt aussehen:
 
 ![image](assets/media-sets/image-set-url-1.png)
 
-- Erfahren Sie mehr über Bildsätze mit dem [Beginn &quot;Schnell zu Bildsätzen&quot;](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sets/quick-start-image-sets.html).
-- Erfahren Sie, wie Sie einen Bildsatz [erstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set).
+- Erfahren Sie mehr über Bildsätze mit dem Beginn [Schnellansicht zu Bildsätzen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sets/quick-start-image-sets.html).
+- Erfahren Sie, wie Sie einen Bildsatz [erstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set) erstellen.
 
 ### Musterset
 
@@ -68,10 +68,10 @@ Die URL für das obige Musterset könnte wie folgt aussehen:
 
 ![image](assets/media-sets/image-set_url.png)
 
-- Erfahren Sie mehr über Mustersets mit dem [Beginn &quot;Schnell zu Mustersets&quot;](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html).
-- Erfahren Sie, wie Sie ein Musterset [erstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set).
+- Erfahren Sie mehr über Mustersets mit dem Beginn [Schnellansicht zu Mustersets](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html).
+- Erfahren Sie, wie Sie ein Musterset [erstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set) erstellen.
 
-### Rotations-Set
+### Rotationsset
 
 Dieser Satz wird normalerweise verwendet, um eine 360-Grad-Ansicht eines Elements anzuzeigen. Wie Mustersets verwenden Rotationssets keine 3D-Magie — Die eigentliche Arbeit ist, viele Fotos von einem Bild von allen Seiten zu erstellen. Mit dem Viewer können Sie einfach wie eine Stopp-Motion-Animation zwischen den Bildern wechseln.
 
@@ -85,7 +85,7 @@ Die URL für das oben stehende Rotationsset könnte wie folgt aussehen:
 
 ![image](assets/media-sets/spin-set.png)
 
-- Erfahren Sie mehr über Rotationssets mit dem [QuickBeginn zu Rotationssets](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html).
+- Weitere Informationen zu Rotationssets mit dem Beginn [Schnellansicht zu Rotationssets](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html).
 - Erfahren Sie, wie Sie ein Rotationsset [erstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set).
 
 ## Gemischtes Medienset
@@ -100,9 +100,9 @@ Die URL für das oben stehende gemischte Medienset könnte wie folgt aussehen:
 
 ![image](assets/media-sets/image-set-url-1.png)
 
-- Erfahren Sie mehr über gemischte Mediensets mit dem [Quick Beginn zu gemischten Mediensets](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html).
+- Weitere Informationen zu gemischten Mediensets mit dem Beginn [Schnellansicht zu gemischten Mediensets](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html).
 
-- Erfahren Sie, wie Sie ein gemischtes Medienset [erstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set).
+- Erfahren Sie, wie Sie ein gemischtes Medienset [erstellen.](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set)
 
 Um ein Bild für Zoom, Set oder Video auf Ihrer Website anzuzeigen, rufen Sie es in einem &quot;Viewer&quot;für Dynamic Media Classic auf. Dynamic Media Classic umfasst Viewer für Rich-Media-Assets wie Mustersets, Rotationssets, Video und viele andere.
 
@@ -114,26 +114,26 @@ Bislang haben wir darüber diskutiert, wie Sätze mithilfe der Funktion &quot;Dy
 
 Jede Vorgabe ist ein eindeutig benannter, in sich abgeschlossener Satz von Anweisungen, die definieren, wie der Satz mithilfe von Bildern, die den definierten Benennungsregeln entsprechen, erstellt wird. In der Vorgabe definieren Sie zuerst Benennungsregeln für die Assets, die Sie in einem Satz gruppieren möchten. Anschließend kann eine Stapelsatzvorgabe erstellt werden, um auf diese Bilder zu verweisen.
 
-Es ist zwar möglich, die Vorgabe selbst zu erstellen (sie finden Sie unter **Einstellungen > Anwendungseinstellungen > Stapelsatzvorgaben** ), aber als Best Practice sollten Sie sie von Ihrem Beratungsteam oder vom technischen Support einrichten lassen. Deshalb:
+Es ist zwar möglich, die Vorgabe selbst zu erstellen (sie finden Sie unter **Einstellungen > Anwendungseinstellungen > Stapelsatzvorgaben**), aber als Best Practice sollten Sie das Beratungsteam oder den technischen Support für Sie einrichten. Deshalb:
 
 - Stapelsatzvorgaben können komplex eingerichtet werden — Sie werden von regulären Ausdrücken betrieben, und wenn Sie kein Entwickler sind, kann diese Syntax unbekannt oder verwirrend sein.
 - Nach der Erstellung sind sie standardmäßig aktiviert. Es gibt keine Rückgängig-Funktion. Wenn Sie Beginn haben, Tausende von Bildern hochzuladen und Ihre Vorgabe falsch konfiguriert ist, können Sie am Ende Hunderte oder Tausende von beschädigten Sets haben, die Sie manuell finden und löschen müssen.
 
 Eine einfache Benennungsregel wurde früher vorgeschlagen, die sehr einfach in eine Stapelsatzvorgabe integriert werden kann. Da die Vorgaben jedoch sehr flexibel sind, können sie komplexe Benennungsstrategien handhaben. Kurz gesagt, die Bilder, die zu einem Satz gehören, sollten durch einen gemeinsamen Namen zusammengeführt werden — häufig die SKU-Nummer oder Produkt-ID. In Dynamic Media Classic legen Sie entweder eine Standardbenennungsregel für alle Bilder fest, die für eine Vorgabe verwendet werden sollen, oder Sie können mehrere Vorgaben mit jeweils unterschiedlichen Benennungsregeln erstellen.
 
-Stapelsatzvorgaben werden nur beim Hochladen angewendet. sie können nach dem Hochladen der Bilder nicht mehr ausgeführt werden. Daher ist es wichtig, dass Sie Ihre Benennungsregeln planen und eine Vorgabe erstellen, bevor Sie alle Beginn hochladen.
+Stapelsatzvorgaben werden nur beim Hochladen angewendet. sie können nach dem Hochladen der Bilder nicht mehr ausgeführt werden. Daher ist es wichtig, Ihre Benennungsregeln zu planen und eine Vorgabe zu erstellen, bevor Sie alle Beginn hochladen.
 
-Nachdem die Vorgaben erstellt wurden, kann der Administrator der Firma wählen, ob sie aktiv oder inaktiv sind. Aktiv bedeutet, dass sie auf der Seite &quot;Hochladen&quot;unter &quot; **Auftragsoptionen**&quot;angezeigt werden, während inaktive Vorgaben ausgeblendet bleiben.
+Nachdem die Vorgaben erstellt wurden, kann der Administrator der Firma wählen, ob sie aktiv oder inaktiv sind. Aktiv bedeutet, dass sie auf der Upload-Seite unter **Auftragsoptionen** angezeigt werden, während inaktive Vorgaben ausgeblendet bleiben.
 
-Erfahren Sie, wie Sie eine Stapelsatzvorgabe [erstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset).
+Erfahren Sie, wie Sie eine Stapelsatzvorgabe [erstellen.](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset)
 
 ### Stapelsatzvorgaben beim Hochladen verwenden
 
 So verwenden Sie Stapelsatzvorgaben beim Hochladen, nachdem sie erstellt wurden:
 
-1. Klicken Sie auf **Hochladen** und wählen Sie entweder &quot; **Von Desktop** &quot;oder &quot; **Über FTP**&quot;.
+1. Klicken Sie auf **Hochladen** und wählen Sie entweder **Von Desktop** oder **Über FTP**.
 2. Klicken Sie auf **Auftragsoptionen**.
-3. Öffnen Sie die Option &quot; **Stapelsatzvorgaben** &quot;und aktivieren oder deaktivieren Sie die Vorgabe, um sie beim Hochladen zu verwenden.
+3. Öffnen Sie die Option **Stapelsatzvorgaben** und aktivieren oder deaktivieren Sie die Vorgabe, um sie beim Hochladen zu verwenden.
 4. Suchen Sie nach Abschluss des Uploads in Ihrem Ordner nach den fertigen Sets.
 
 Weitere Informationen zu [Stapelsatzvorgaben](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets).
