@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Erstellen von Kampagne-Profil beim Senden von adaptiven Formularen {#creating-campaign-profile-on-adaptive-form-submission}
+# Erstellen eines Kampagne-Profils bei der Übermittlung des adaptiven Formulars {#creating-campaign-profile-on-adaptive-form-submission}
 
 In diesem Artikel werden die Schritte erläutert, die zum Erstellen eines Profils in Adobe Campaign Standard bei der Übermittlung eines adaptiven Formulars erforderlich sind. Bei diesem Vorgang wird ein benutzerdefinierter Übermittlungsmechanismus verwendet, um die Übermittlung des adaptiven Formulars zu verarbeiten.
 
@@ -30,7 +30,7 @@ In diesem Lernprogramm werden die Schritte zum Erstellen des Profils zur Kampagn
 * Erstellen einer benutzerdefinierten Übermittlungsaktion für die Verarbeitung der Übermittlung des adaptiven Formulars
 * Aufruf der createProfile-Methode des CampaignService
 
-## AEM {#create-aem-service}
+## AEM Dienst {#create-aem-service} erstellen
 
 Erstellen Sie AEM Dienst, um ein Adobe Campaign-Profil zu erstellen. Dieser AEM Dienst ruft die Anmeldeinformationen des Adobe Campaigns aus der OSGI-Konfiguration ab. Nachdem die Anmeldeinformationen für die Kampagne erhalten wurden, wird Zugriffstoken generiert und der Zugriffstoken-HTTP-Post-Aufruf erfolgt, um das Profil in Adobe Campaign zu erstellen. Der folgende Code dient zum Erstellen von Profil.
 
@@ -245,11 +245,11 @@ return null;
 }
 ```
 
-## Benutzerspez. Übermittlung {#custom-submit}
+## Benutzerspez. Senden {#custom-submit}
 
 Erstellen Sie einen benutzerdefinierten Übermittlungs-Handler, um die Übermittlung des adaptiven Formulars zu verarbeiten. In diesem benutzerdefinierten Übermittlungshandler werden wir die createProfile-Methode des CampaignService aufrufen. Die createProfile-Methode akzeptiert ein JSONObject, das das zu erstellende Profil darstellt.
 
-Weitere Informationen zum benutzerdefinierten Übermittlungshandler in AEM Forms erhalten Sie unter diesem [Link](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
+Weitere Informationen zum benutzerdefinierten Sendehandler in AEM Forms erhalten Sie unter [link](/help/forms/adaptive-forms/custom-submit-aem-forms-article.md)
 
 Im Folgenden finden Sie den Code im benutzerdefinierten Senden
 
@@ -264,13 +264,13 @@ profile.addProperty("mobilePhone",request.getParameter("phone"));
 String pkey = addNewProfile.createProfile(profile);
 ```
 
-## Testen der Lösung {#test-the-solution}
+## Testen Sie die Lösung {#test-the-solution}
 
 Sobald wir den Dienst und die benutzerdefinierte Übermittlungsaktion definiert haben, sind wir bereit, unsere Lösung zu testen. So testen Sie die Lösung:
 
 
 * [Vergewissern Sie sich, dass Sie die hier beschriebenen Schritte ausgeführt haben](aem-forms-with-campaign-standard-getting-started-tutorial.md)
-* [Adaptives Formular und benutzerdefinierten Übermittlungs-Handler mit Package Manager](assets/create-acs-profile-on-af-submission.zip)importieren. Dieses Paket enthält ein adaptives Formular, das für die Übermittlung an eine benutzerdefinierte Übermittlungsaktion konfiguriert ist.
-* Preview the [form](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
+* [Adaptives Formular und benutzerdefinierten Übermittlungs-Handler mit Package Manager](assets/create-acs-profile-on-af-submission.zip) importieren. Dieses Paket enthält ein adaptives Formular, das für die Übermittlung an eine benutzerdefinierte Übermittlungsaktion konfiguriert ist.
+* Vorschau des [Formulars](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
 * Füllen Sie alle Felder aus und senden Sie
 * In Ihrer ACS-Instanz wird ein neues Profil erstellt
