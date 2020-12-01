@@ -31,16 +31,18 @@ Um den oben genannten Verwendungsfall zu erreichen, schreiben Sie normalerweise 
 
 ## Maven-Projekt erstellen
 
-Der erste Schritt besteht darin, ein Maven-Projekt mit der entsprechenden Adobe Maven Archetype zu erstellen. Die ausführlichen Schritte sind in diesem [Artikel](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)aufgeführt. Nachdem Sie Ihr Maven-Projekt in Eclipse importiert haben, können Sie Ihre erste OSGi-Komponente, die in Ihrem Prozessschritt verwendet werden kann, zum Beginn schreiben.
+Der erste Schritt besteht darin, ein Maven-Projekt mit der entsprechenden Adobe Maven Archetype zu erstellen. Die detaillierten Schritte sind in diesem [Artikel](https://helpx.adobe.com/experience-manager/using/maven_arch13.html) aufgeführt. Nachdem Sie Ihr Maven-Projekt in Eclipse importiert haben, können Sie Ihre erste OSGi-Komponente, die in Ihrem Prozessschritt verwendet werden kann, zum Beginn schreiben.
 
 
 ### Klasse erstellen, die WorkflowProcess implementiert
 
-Öffnen Sie das Maven-Projekt in Ihrer Eclipse-IDE. Erweitern Sie **den Ordner &quot;Projektname** &quot;> &quot; **Core** &quot;. Erweitern Sie den Ordner src/main/java. Sie sollten ein Paket sehen, das mit &quot;core&quot;endet. Erstellen Sie eine Java-Klasse, die WorkflowProcess in diesem Paket implementiert. Sie müssen die Ausführungsmethode überschreiben. Die Signatur der execute-Methode lautet wie folgt public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)throws WorkflowExceptionDie execute-Methode gibt Zugriff auf die folgenden 3 Variablen
+Öffnen Sie das Maven-Projekt in Ihrer Eclipse-IDE. Erweitern Sie den Ordner **Projektname** > **core**. Erweitern Sie den Ordner src/main/java. Sie sollten ein Paket sehen, das mit &quot;core&quot;endet. Erstellen Sie eine Java-Klasse, die WorkflowProcess in diesem Paket implementiert. Sie müssen die Ausführungsmethode überschreiben. Die Signatur der execute-Methode lautet wie folgt
+public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)throws WorkflowException
+Die execute-Methode gibt Zugriff auf die folgenden 3 Variablen
 
-**WorkItem**: Die Variable &quot;workItem&quot;gibt Zugriff auf Daten im Zusammenhang mit dem Workflow. Die öffentliche API-Dokumentation finden Sie [hier.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkItem**: Die Variable &quot;workItem&quot;gibt Zugriff auf Daten im Zusammenhang mit dem Workflow. Die öffentliche API-Dokumentation ist [hier verfügbar.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**WorkflowSession**: Diese Variable &quot;workflowSession&quot;gibt Ihnen die Möglichkeit, den Workflow zu steuern. Die öffentliche API-Dokumentation finden Sie [hier](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkflowSession**: Diese Variable &quot;workflowSession&quot;gibt Ihnen die Möglichkeit, den Workflow zu steuern. Die öffentliche API-Dokumentation ist [hier ](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html) verfügbar
 
 **MetaDataMap**: Alle mit dem Workflow verknüpften Metadaten. Alle Prozessargumente, die an den Prozessschritt übergeben werden, stehen mit dem MetaDataMap-Objekt zur Verfügung.[API-Dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
@@ -134,7 +136,8 @@ Der Rest des Codes erstellt Dokument-Objekte, indem das untergeordnete Objekt de
 
 #### Erstellen und Bereitstellen
 
-[Erstellen Sie das Bundle wie hier](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)beschrieben[Stellen Sie sicher, dass das Bundle bereitgestellt ist und sich im aktiven Status befindet.](http://localhost:4502/system/console/bundles)
+[Erstellen Sie das Bundle wie ](https://helpx.adobe.com/experience-manager/using/maven_arch13.html#BuildtheOSGibundleusingMaven)
+[hier beschriebenStellen Sie sicher, dass das Bundle bereitgestellt ist und sich im aktiven Status befindet.](http://localhost:4502/system/console/bundles)
 
 Workflow-Modell erstellen. Ziehen Sie den Prozessschritt per Drag &amp; Drop in das Workflow-Modell. Verknüpfen Sie den Prozessschritt mit &quot;Adaptive Formularanlagen im Dateisystem speichern&quot;.
 
