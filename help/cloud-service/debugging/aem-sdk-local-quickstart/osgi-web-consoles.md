@@ -32,7 +32,7 @@ Die Bundles-Konsole ist ein Katalog der OSGi-Bundles und deren Details, die in A
 Die Bundles-Konsole befindet sich unter:
 
 + Werkzeuge > Vorgänge > Web-Konsole > OSGi > Pakete
-+ Or directly at: [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
++ Oder direkt unter: [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 
 Durch Klicken auf die einzelnen Bundles erhalten Sie Informationen zum Debugging der Anwendung.
 
@@ -49,7 +49,7 @@ Die Komponentenkonsole ist ein Katalog aller OSGi-Komponenten, die auf AEM berei
 Die Komponentenkonsole befindet sich unter:
 
 + Werkzeuge > Vorgänge > Web-Konsole > OSGi > Komponenten
-+ Or directly at: [http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
++ Oder direkt unter: [http://localhost:4502/system/console/components](http://localhost:4502/system/console/components)
 
 Wichtige Aspekte, die beim Debugging von Aktivitäten helfen:
 
@@ -66,7 +66,7 @@ Wichtige Aspekte, die beim Debugging von Aktivitäten helfen:
 Die Konsole Sling Models befindet sich unter:
 
 + Werkzeuge > Vorgänge > Web-Konsole > Status > Sling-Modelle
-+ Or directly at: [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
++ Oder direkt unter: [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
 
 Wichtige Aspekte, die beim Debugging von Aktivitäten helfen:
 
