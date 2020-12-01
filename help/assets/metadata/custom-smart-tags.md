@@ -25,19 +25,19 @@ Benutzerdefinierte intelligente Tags oder erweiterte intelligente Tags können d
 
 >[!VIDEO](https://video.tv.adobe.com/v/22254/?quality=12&learn=on)
 
-## Richten Sie benutzerdefinierte Smart-Tags für Bilder für AEM 6.x ein{#set-up}
+## Richten Sie benutzerdefinierte Smart-Tags für Bilder für AEM 6.x ein.{#set-up}
 
 >[!NOTE]
 > Benutzerdefinierte Smart-Tags für Bilder werden automatisch als Cloud Service für AEM bereitgestellt.
 
-Für benutzerdefinierte intelligente Tags für Bilder sind [intelligente Tags erforderlich, damit Bilder eingerichtet](./image-smart-tags.md#set-up)werden.
+Für benutzerdefinierte intelligente Tags für Bilder sind [intelligente Tags erforderlich, damit Bilder eingerichtet werden.](./image-smart-tags.md#set-up)
 
-Erfahren Sie, wie Sie die Schulung für Smart-Tags in AEM Assets mithilfe des Smart Content Service und der Adobe-E/A konfigurieren. Benutzerdefinierte intelligente Tags für Bilder
+Erfahren Sie, wie Sie mithilfe des Smart Content Service und Adobe I/O die Schulung für intelligente Tags in AEM Assets konfigurieren. Benutzerdefinierte intelligente Tags für Bilder
 
 >[!VIDEO](https://video.tv.adobe.com/v/23405/?quality=12&learn=on)
 
 ## Zusätzliche Ressourcen
 
-* Für AEM 6.4 ist das [neueste Service Pack](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64)erforderlich.
+* Für AEM 6.4 ist das [letzte Service Pack](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64) erforderlich.
 
 
