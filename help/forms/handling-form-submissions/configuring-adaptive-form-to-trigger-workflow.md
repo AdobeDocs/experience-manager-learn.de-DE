@@ -27,16 +27,16 @@ Das in diesem Workflow verwendete Musterformular basiert auf einer benutzerdefin
 
 ### Adaptive Formularvorlagen abrufen
 
-* Vorlage [für adaptive Formulare herunterladen](assets/af-form-template.zip)
+* [Vorlage für adaptive Formulare herunterladen](assets/af-form-template.zip)
 * [Importieren der Vorlage mit dem Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
 * Hochladen und Installieren der Vorlage für das adaptive Formular
 
 ### Beispiel für ein adaptives Formular abrufen
 
-* Herunterladen [des adaptiven Formulars](assets/peak-application-form.zip)
-* Nach [Formular und Dokumenten suchen](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [Adaptives Formular](assets/peak-application-form.zip) herunterladen
+* Gehen Sie zu [Formular und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicken Sie auf Erstellen -> Datei-Upload
-* Das adaptive Beispielformular wird in einem Ordner namens [Application Forms abgelegt](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
+* Das adaptive Beispielformular wird in einem Ordner namens [Application Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
 
 Im folgenden Video wird erläutert, wie ein adaptives Formular so konfiguriert wird, dass ein AEM Workflow ausgelöst wird
 >[!VIDEO](https://video.tv.adobe.com/v/40258/?quality=9&learn=on)
