@@ -27,33 +27,33 @@ Durch Zugriff auf die Protokolle des AEM SDK können entweder die lokalen Schnel
 
 Protokolle dienen als Frontline für das Debugging AEM Anwendungen, sind jedoch von einer angemessenen Anmeldung in der bereitgestellten AEM abhängig. Adobe empfiehlt, die lokalen Entwicklungs- und AEM als Cloud Service-Dev-Protokollierungskonfigurationen so ähnlich wie möglich zu halten, da dadurch die Protokollsichtbarkeit beim lokalen Schnellstart des AEM SDK und AEM als Dev-Umgebung des Cloud Service normalisiert wird, wodurch das Konfigurations-Widget und die erneute Bereitstellung reduziert werden.
 
-Der [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) konfiguriert die Protokollierung auf DEBUG-Ebene für die Java-Pakete Ihrer AEM-Anwendung für die lokale Entwicklung über die Sling Logger OSGi-Konfiguration unter
+Der [AEM-Projektarchetype](https://github.com/adobe/aem-project-archetype) konfiguriert die Protokollierung auf DEBUG-Ebene für die Java-Pakete Ihrer AEM-Anwendung für die lokale Entwicklung über die Sling Logger OSGi-Konfiguration unter
 
 `ui.apps/src/main/content/jcr_root/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
 
-, der sich bei der `error.log`.
+, der sich bei `error.log` anmeldet.
 
-Wenn die Standardprotokollierung für die lokale Entwicklung nicht ausreicht, kann die Ad-hoc-Protokollierung über AEM lokale Schnellstart-Protokollunterstützungs-Webkonsole unter ([/system/console/slinglog](http://localhost:4502/system/console/slinglog)) konfiguriert werden. Es wird jedoch nicht empfohlen, Ad-hoc-Änderungen in Git beizubehalten, es sei denn, diese Protokollkonfigurationen werden auch auf AEM als Cloud Service-Dev-Umgebung benötigt. Beachten Sie, dass Änderungen über die Konsole Protokollunterstützung direkt im Repository des AEM SDKs für den lokalen Schnellstart beibehalten werden.
+Wenn die Standardprotokollierung für die lokale Entwicklung nicht ausreicht, kann die Ad-hoc-Protokollierung über AEM lokale Schnellstart-Protokollunterstützungs-Webkonsole von SDK konfiguriert werden, unter ([/system/console/slinglog](http://localhost:4502/system/console/slinglog)). Es wird jedoch nicht empfohlen, dass Ad-hoc-Änderungen in Git beibehalten werden, es sei denn, diese Protokollkonfigurationen sind auch für AEM Cloud Service-Dev-Umgebung erforderlich. Beachten Sie, dass Änderungen über die Konsole Protokollunterstützung direkt im Repository des AEM SDKs für den lokalen Schnellstart beibehalten werden.
 
-Java-Protokollanweisungen können als Ansicht in der `error.log` Datei verwendet werden:
+Java-Protokollanweisungen können in der Datei `error.log` Ansicht sein:
 
 ```
 $ ~/aem-sdk/author/crx-quickstart/logs/error.log
 ```
 
-Oft ist es nützlich, die &quot;Tail&quot; die Ausgabe `error.log` , die ihre Ausgabe an das Terminal.
+Oft ist es nützlich, die `error.log` zu &quot;schwinden&quot;, die ihre Ausgabe an das Terminal.
 
 + macOS/Linux
    + `$ tail -f ~/aem-sdk/author/crx-quickstart/logs/error.log`
-+ Windows erfordert [Drittanbieter-Tail-Anwendungen](https://stackoverflow.com/questions/187587/a-windows-equivalent-of-the-unix-tail-command) oder die Verwendung des Get-Content-Befehls [von](https://stackoverflow.com/a/46444596/133936)Powershell.
++ Für Windows sind [Tail-Anwendungen von Drittanbietern](https://stackoverflow.com/questions/187587/a-windows-equivalent-of-the-unix-tail-command) oder die Verwendung des Befehls [Get-Content von Powershell](https://stackoverflow.com/a/46444596/133936) erforderlich.
 
 ## Dispatcher-Protokolle
 
-Dispatcher-Protokolle werden ausgegeben, um beim Aufrufen abzustürzen, Protokolle können jedoch direkt mit in der Docker-Datei aufgerufen werden. `bin/docker_run`
+Dispatcher-Protokolle werden ausgegeben, um abzustürzen, wenn `bin/docker_run` aufgerufen wird. Protokolle können jedoch direkt mit in der Docker-Datei aufgerufen werden.
 
 ### Zugriff auf Protokolle im Docker-Container
 
-Dispatcher-Protokolle können direkt im Docker-Container unter `/etc/httpd/logs`.
+Dispatcher-Protokolle können direkt auf den Docker-Container unter `/etc/httpd/logs` zugreifen.
 
 ```shell
 $ docker ps
@@ -75,7 +75,7 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 
 ### Kopieren der Docker-Protokolle in das lokale Dateisystem
 
-Dispatcher-Protokolle können aus dem Docker-Container in `/etc/httpd/logs` das lokale Dateisystem kopiert werden, um sie mit Ihrem Lieblings-Log-Analyse-Tool zu überprüfen. Beachten Sie, dass es sich hierbei um eine Point-in-Time-Kopie handelt, die keine Aktualisierungen in Echtzeit für die Protokolle bereitstellt.
+Dispatcher-Protokolle können aus dem Docker-Container unter `/etc/httpd/logs` in das lokale Dateisystem kopiert werden, um sie mit Ihrem bevorzugten Tool zur Analyse von Protokolldateien zu überprüfen. Beachten Sie, dass es sich hierbei um eine Point-in-Time-Kopie handelt, die keine Aktualisierungen in Echtzeit für die Protokolle bereitstellt.
 
 ```shell
 $ docker ps
