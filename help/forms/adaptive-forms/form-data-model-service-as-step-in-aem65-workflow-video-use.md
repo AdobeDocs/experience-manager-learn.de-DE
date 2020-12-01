@@ -29,7 +29,7 @@ Ab AEM Forms 6.4 können wir jetzt den Formulardatenmodelldienst als Teil AEM Ar
 
 Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisungen
 
-* Setup tomcat mit der Datei SampleRest.war, wie [hier](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)beschrieben. Die in Tomcat bereitgestellte Kriegsdatei hat den Code, um die Bonität des Antragstellers zurückzugeben.Die Bonitätsbewertung ist eine Zufallszahl zwischen 200 und 800
+* Setup tomcat mit der Datei SampleRest.war, wie beschrieben [hier](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html).Die in Tomcat bereitgestellte Kriegsdatei hat den Code, um die Bonität des Antragstellers zurückzugeben.Die Bonitätsbewertung ist eine Zufallszahl zwischen 200 und 800
 
 * [ Assets mit dem Package Manager in AEM importieren](assets/aem65-loanapplication.zip)
 * Das Paket enthält die folgenden:
@@ -37,7 +37,7 @@ Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisu
    * Workflow-Modell, das FDM-Schritt verwendet.
    * Formulardatenmodell, das im FDM-Schritt verwendet wird.
    * Adaptives Formular, um den Workflow beim Senden auszulösen.
-* Öffnen Sie das [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Füllen Sie die Details aus und senden Sie sie ab. Beim Senden des Formulars wird der [Anmeldevorgang](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) ausgelöst.
+* Öffnen Sie [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Füllen Sie die Details aus und senden Sie sie ab. Beim Senden des Formulars wird der [Darlehensanwendungs-Workflow](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) ausgelöst.
 
 ![ Workflow ](assets/invokefdm651.PNG).
 Der Arbeitsablauf nutzt die Komponente &quot;Oder teilen&quot;, um die Anwendung an den Administrator weiterzuleiten, wenn die Bonität über 500 liegt. Wenn die Bonität unter 500 liegt, wird der Antrag zur Aushöhlung weitergeleitet.
