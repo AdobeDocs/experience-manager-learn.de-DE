@@ -31,9 +31,9 @@ Die Import- und Exportfunktionen von AEM Assets-Metadaten ermöglichen es Inhalt
 
 >[!VIDEO](https://video.tv.adobe.com/v/21374/?quality=9&learn=on)
 
-Laden Sie den [Sportordner &quot;WeRetail&quot;herunter](assets/we-retail-sports.zip)
+[WeRetail-Sportordner](assets/we-retail-sports.zip)
 
-Herunterladen des [Asset-Metadatenpakets](assets/we-retail-sports-asset-metadata.zip)
+[Asset-Metadatenpaket](assets/we-retail-sports-asset-metadata.zip) herunterladen
 
 ## Metadaten-Dateiformat {#metadata-file-format}
 
@@ -42,7 +42,7 @@ Herunterladen des [Asset-Metadatenpakets](assets/we-retail-sports-asset-metadata
 #### Erste Zeile
 
 * Die erste Zeile der CSV-Datei definiert das Metadaten-Schema.
-* Die Spalte &quot;Erste&quot; `assetPath`enthält standardmäßig den absoluten JCR-Pfad für ein Asset.
+* Die erste Spalte ist standardmäßig auf `assetPath` eingestellt, was den absoluten JCR-Pfad für ein Asset enthält.
 
 * Nachfolgende Spalten in der ersten Zeile verweisen auf andere Metadateneigenschaften eines Assets.
 
@@ -61,7 +61,7 @@ Herunterladen des [Asset-Metadatenpakets](assets/we-retail-sports-asset-metadata
 * Bei Eigenschaftstyp wird nicht zwischen Groß- und Kleinschreibung unterschieden
 * Alle gültigen [JCR-Eigenschaftstypen](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html) werden unterstützt
 
-* Format der Eigenschaft mit mehreren Werten: `<metadata property name> {{<property type : MULTI }}`
+* Format der Eigenschaft mit mehreren Werten - `<metadata property name> {{<property type : MULTI }}`
 
 #### Zweite Zeile in N Zeilen
 
