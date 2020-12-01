@@ -23,15 +23,15 @@ Erlebnisfragmente ermöglichen es Marketingexperten, in AEM erstellte Erlebnisse
 
 >[!VIDEO](https://video.tv.adobe.com/v/20592/?quality=9&learn=on)
 
-*[Erlebnisfragmente]- Einrichtung und Konfiguration von Social-Beiträgen für Facebook und Pinterest*
+*[Erlebnisfragmente]  - Einrichtung und Konfiguration von Social-Beiträgen für Facebook und Pinterest*
 
 ## Checkliste für die Konfiguration von Erlebnisfragmenten zum Posten auf Facebook und Pinterest
 
 1. AEM Authoring-Instanz wird unter HTTPS ausgeführt
 2. Facebook-Konto + Facebook Developer-App
 3. Pinterest-Konto + Pinterest-Entwickler-App
-4. [!UICONTROL AEM Cloud-Services] -Konfiguration - Facebook
-5. [!UICONTROL AEM Cloud-Services] -Konfiguration - Pinterest
+4. [!UICONTROL AEM Cloud ] ServicesKonfiguration - Facebook
+5. [!UICONTROL AEM Cloud ] ServicesKonfiguration - Pinterest
 6. AEM Erlebnisfragment mit Cloud Services für Facebook + Pinterest
 7. Erlebnisfragment-Variation mit Facebook-Vorlage
 8. Erlebnisfragment-Variation mit Pinterest-Vorlage
