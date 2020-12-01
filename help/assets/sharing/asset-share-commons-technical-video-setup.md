@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# Asset-Freigabe-Commons auf lokalen AEM einrichten {#setup-asset-share-commons}
+# Asset-Freigabe-Commons auf lokaler AEM {#setup-asset-share-commons} einrichten
 
 Eine kurze Anleitung zum Ausführen von Asset Share Commons auf einer lokalen AEM.
 
