@@ -23,7 +23,7 @@ AEM 6.3 bietet die Möglichkeit, Inhaltsfragmente zu übersetzen. Assets mit gem
 
 >[!VIDEO](https://video.tv.adobe.com/v/18131/?quality=9&learn=on)
 
-## Fälle bei der Übersetzung von Inhaltsfragmenten {#content-fragment-translation-use-cases}
+## Übersetzung von Inhaltsfragmenten - Verwendungsfälle {#content-fragment-translation-use-cases}
 
 Inhaltsfragmente sind ein erkannter Inhaltstyp, der AEM extrahiert und an einen externen Übersetzungsdienst gesendet wird. Einige Anwendungsfälle werden standardmäßig unterstützt:
 
