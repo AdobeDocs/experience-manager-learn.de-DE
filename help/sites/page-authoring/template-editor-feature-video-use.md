@@ -27,15 +27,15 @@ Bearbeitbare Vorlagen ermöglichen es spezialisierten Autoren, Seitenvorlagen zu
 
 Bearbeitbare Vorlagen sind die Empfehlung zum Aufbau eines neuen AEM Sites.
 
-**Konsistente Autorenerfahrung** - Verbesserungen beim AEM Sites-Authoring werden in die Vorlagenbearbeitung übernommen, einschließlich Inline-Layout-Modus und Inhaltsbaum-Bedienfeld.
+**Konsistente Autorenerfahrung** : Die Verbesserungen beim AEM Sites-Authoring werden in die Vorlagenbearbeitung übernommen, einschließlich Inline-Layout-Modus und Inhaltsbaum-Bedienfeld.
 
 **Erweiterte Richtlinienkonfigurationen** : Im Folgenden werden einige erweiterte Richtlinienkonfigurationen hervorgehoben, die mit bearbeitbaren Vorlagen zur Verfügung gestellt wurden:
 
-* **Layout Container** - Möglichkeit zum Konfigurieren von zulässigen Komponenten, Verwalten der Drag &amp; Drop-Zuordnung von Assets und der Spalten &quot;Responsive Raster&quot;.
-* **Textkomponente** - Möglichkeit, Rich-Text-Editor-Plugins mit einer neuen Benutzeroberfläche zu konfigurieren und RTE-Richtlinien über mehrere Vorlagen hinweg wiederzuverwenden.
-* **Bildkomponente** - Möglichkeit, Funktionen wie Beschneiden, Hochladen von Desktop-Dateien mit einer neuen Benutzeroberfläche und Wiederverwendung von Bildrichtlinien für mehrere Vorlagen zu aktivieren/deaktivieren.
+* **Layout Container** : Möglichkeit, zulässige Komponenten zu konfigurieren, die Drag &amp; Drop-Zuordnung von Assets zu verwalten und interaktive Raster-Spalten zu konfigurieren.
+* **Textkomponente**  - Möglichkeit, Rich-Text-Editor-Plugins mit einer neuen Benutzeroberfläche zu konfigurieren und RTE-Richtlinien über mehrere Vorlagen hinweg wiederzuverwenden.
+* **Bildkomponente** : Möglichkeit, Funktionen wie Beschneiden, Hochladen von Desktop-Dateien mit einer neuen Benutzeroberfläche und Wiederverwendung von Bildrichtlinien für mehrere Vorlagen zu aktivieren/deaktivieren.
 
-Bearbeitbare Vorlagen finden Sie unter **Tools** `>` General **** Templates `>` ****.\
+Bearbeitbare Vorlagen finden Sie unter **Tools** `>` **Allgemein** `>` **Vorlagen**.\
 URL der bearbeitbaren Vorlagen (lokale AEM): [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf)
 
 ## Zusätzliche Ressourcen {#additional-resources}
