@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# Personalisierung des gesamten Erlebnisses einer Webseite {#personalization-fpe}
+# Personalisierung des vollständigen Website-Erlebnisses {#personalization-fpe}
 
 Erfahren Sie, wie Sie eine Aktivität erstellen, um Ihre Siteseiten, die auf AEM gehostet werden, mit Adobe Target auf eine neue Seite umzuleiten.
 
@@ -36,27 +36,27 @@ Die WKND-Site hat ihre Startseite neu gestaltet und möchte ihre aktuellen Besuc
 ## Schritte zum Erstellen eines A/B-Tests mit Visual Experience Composer (VEC)
 
 1. Melden Sie sich bei Adobe Target an und navigieren Sie zur Registerkarte &quot;Aktivitäten&quot;.
-1. Klicken Sie auf **Aktivität** erstellen und wählen Sie dann **A/B-Test** -Aktivität
+1. Klicken Sie auf die Schaltfläche **Aktivität erstellen** und wählen Sie dann **A/B-Test** Aktivität
 
    ![A/B-Aktivität](assets/ab-target-activity.png)
 
-1. Wählen Sie die Option **Visual Experience Composer** , geben Sie die Aktivitäten-URL ein und klicken Sie auf **Weiter**
+1. Wählen Sie die Option **Visual Experience Composer**, geben Sie die Aktivitäten-URL ein und klicken Sie auf **Weiter**
 
    ![Aktivitäten-URL](assets/ab-test-url.png)
 
-1. Der Visual Experience Composer zeigt nach Erstellung einer neuen Aktivität auf der linken Seite zwei Registerkarten an: *Erlebnis A* und *Erlebnis B*. Wählen Sie ein Erlebnis aus der Liste. Sie können der Liste mithilfe der Schaltfläche **Hinzufügen Erlebnis** neue Erlebnisse hinzufügen.
+1. Der Visual Experience Composer zeigt nach Erstellung einer neuen Aktivität auf der linken Seite zwei Registerkarten an: *Erlebnis A* und *Erlebnis B*. Wählen Sie ein Erlebnis aus der Liste. Mit der Schaltfläche **Hinzufügen Erlebnis** können Sie der Liste neue Erlebnisse hinzufügen.
 
    ![Erlebnisoptionen](assets/experience-options.png)
 
-1. Optionen für die Ansicht, die für Erlebnis A verfügbar sind, wählen Sie dann die Option **Zu URL** umleiten und geben Sie eine URL für die neue WKND-Site-Startseite ein.
+1. Für Erlebnis A verfügbare Optionen zur Ansicht und wählen Sie dann die Option **Zu URL** umleiten und geben Sie eine URL für die neue WKND-Site-Startseite ein.
 
    ![Umleitungs-URL](assets/redirect-url.png)
 
-1. *Erlebnis A* in *neue WKND-Startseite* und *Erlebnis B* in *WKND-Startseite umbenennen*
+1. Benennen Sie *Erlebnis A* in *Neue WKND-Startseite* und *Erlebnis B* in *WKND-Startseite* um.
 
    ![Abenteuer](assets/new-experiences.png)
 
-1. Klicken Sie auf **Weiter** , um zum Targeting zu wechseln und eine manuelle Traffic-Zuordnung von 50-50 zwischen den beiden Erlebnissen beizubehalten.
+1. Klicken Sie auf **Weiter**, um zum Targeting zu wechseln und eine manuelle Traffic-Zuordnung von 50-50 zwischen den beiden Erlebnissen beizubehalten.
 
    ![Targeting](assets/targeting.png)
 
@@ -69,7 +69,7 @@ Die WKND-Site hat ihre Startseite neu gestaltet und möchte ihre aktuellen Besuc
 
    ![Ziele](assets/activate.png)
 
-1. Öffnen Sie Ihre Site-Seite (Aktivität-URL ab Schritt 3) in einer neuen Registerkarte und Sie sollten in der Lage sein, eines der Erlebnisse (WKND-Startseite oder Neue WKND-Startseite) aus unserer A/B-Test-Aktivität Ansicht. `us/en.html` umleitet zu `us/home.html`.
+1. Öffnen Sie Ihre Site-Seite (Aktivität-URL ab Schritt 3) in einer neuen Registerkarte und Sie sollten in der Lage sein, eines der Erlebnisse (WKND-Startseite oder Neue WKND-Startseite) aus unserer A/B-Test-Aktivität Ansicht. `us/en.html` umleitet zu  `us/home.html`.
 
    ![Ziele](assets/redirect-test.png)
 
