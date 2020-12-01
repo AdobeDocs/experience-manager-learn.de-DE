@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# Hinzufügen von Komponenten zum Abschnitt &quot;Assets&quot; {#adding-components-to-assets-section}
+# Hinzufügen von Komponenten zum Abschnitt {#adding-components-to-assets-section}
 
 Konfigurieren Sie das Akkordeon-Layout für das Bedienfeld &quot;Assets&quot;. Das Akkordeon-Layout bietet eine bessere Endbenutzerfreundlichkeit zum Hinzufügen wiederholbarer Abschnitte.
 
