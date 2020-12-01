@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Eine Ländersite erstellen {#create-country-site}
+# Eine Ländersite {#create-country-site} erstellen
 
 Erfahren Sie, wie Sie mithilfe des Assistenten &quot;Site erstellen&quot;eine Ländersite aus vorhandenen Sprachkopien erstellen.
 
