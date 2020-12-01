@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# JSON-Schema in Datenbank speichern {#storing-json-schema-in-database}
+# Speichern des JSON-Schemas in der Datenbank {#storing-json-schema-in-database}
 
 
 Um Abfragen zu den gesendeten Daten vornehmen zu können, müssen wir das mit dem gesendeten Formular verknüpfte JSON-Schema speichern. Das JSON-Schema wird im Abfrage Builder zum Erstellen der Abfrage verwendet.
