@@ -12,7 +12,7 @@ translation-type: tm+mt
 source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
 workflow-type: tm+mt
 source-wordcount: '396'
-ht-degree: 8%
+ht-degree: 10%
 
 ---
 
@@ -23,25 +23,25 @@ Inhaltsfragmente sind eine Inhaltsabstraktion in AEM, mit der textbasierte Inhal
 
 >[!NOTE]
 >
->Die in diesen Videos behandelten AEM Content Fragment-Funktionen wurden erstmals in [AEM 6.3 + FP 19008 und FP19614](https://helpx.adobe.com/experience-manager/6-3/release-notes/content-services-fragments-featurepack.html)eingeführt.
+>Die in diesen Videos behandelte AEM Content Fragment-Funktion wurde erstmals in [AEM 6.3 + FP 19008 und FP19614](https://helpx.adobe.com/experience-manager/6-3/release-notes/content-services-fragments-featurepack.html) eingeführt.
 
 
 AEM Inhaltsfragmente sind textbasierte redaktionelle Inhalte, die mit einigen strukturierten Datenelementen verknüpft sein können, die jedoch ohne Design- oder Layoutinformationen als reiner Inhalt betrachtet werden. Inhaltsfragmente werden in der Regel als Kanal-agnostischer Inhalt erstellt, der für die Verwendung und Wiederverwendung über Kanal hinweg vorgesehen ist, wodurch der Inhalt wiederum in ein kontextspezifisches Erlebnis eingeschlossen wird.
 
-Diese Videoreihe behandelt den Authoring-Lebenszyklus von Inhaltsfragmenten in AEM. Details zur [Bereitstellung von Inhaltsfragmenten finden Sie hier](content-fragments-delivery-feature-video-use.md).
+Diese Videoreihe behandelt den Authoring-Lebenszyklus von Inhaltsfragmenten in AEM. Details zu [Bereitstellung von Inhaltsfragmenten finden Sie hier](content-fragments-delivery-feature-video-use.md).
 
 1. Aktivieren und Definieren von Inhaltsfragmentmodellen
 2. Authoring von Inhaltsfragmenten
 3. Herunterladen von Inhaltsfragmenten
 4. Redaktionelle Funktionen
 
-## Defining Content Fragment Models {#defining-content-fragment-models}
+## Definieren von Inhaltsfragmentmodellen {#defining-content-fragment-models}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
-AEM Inhaltsfragmentmodelle, die Datenfragmente von Inhaltsfragmenten, müssen über AEM [[!UICONTROL Konfigurationsbrowser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html)aktiviert werden, sodass Inhaltsfragmentmodelle je nach Konfiguration definiert werden können.
+AEM Inhaltsfragmentmodelle, die Datenfragmente von Inhaltsfragmenten, müssen über AEM [[!UICONTROL Konfigurationsbrowser]](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-service/implementing/developing/configurations.html) aktiviert werden, wodurch Inhaltsfragmentmodelle je Konfiguration definiert werden können.
 
-## Erstellen von Inhaltsfragmenten       {#creating-content-fragments}
+## Erstellen von Inhaltsfragmenten  {#creating-content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22451/?quality=12&learn=on)
 
@@ -61,17 +61,17 @@ AEM Inhaltsfragmente können als ZIP-Datei mit Varianten, Elementen und Metadate
 *Beispiel für eine ZIP-Datei zum Herunterladen von Inhaltsfragmenten:*\
 **[daniel_schreder.zip](assets/daniel_schreder.zip)**
 
-## Funktionen für Inhaltsfragmente {#editorial-capabilities}
+## Inhaltsfragment-Redaktionsfunktionen {#editorial-capabilities}
 
 >[!VIDEO](https://video.tv.adobe.com/v/25891/?quality=12&learn=on)
 
 >[!NOTE]
 >
-> Anmerkungen und Versionsvergleich für Inhaltsfragmente wurden in [AEM 6.4 Service Pack 2](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) und [AEM 6.3 Service Pack 3](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp3-release-notes.html)eingeführt.
+> Anmerkungen und Versionsvergleich für Inhaltsfragmente wurden in [AEM 6.4 Service Pack 2](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) und [AEM 6.3 Service Pack 3](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp3-release-notes.html) eingeführt.
 
 ## Nächste Schritte
 
-Erfahren Sie mehr über die [Bereitstellung von Inhaltsfragmenten](content-fragments-delivery-feature-video-use.md).
+Erfahren Sie mehr über [Bereitstellen von Inhaltsfragmenten](content-fragments-delivery-feature-video-use.md).
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
