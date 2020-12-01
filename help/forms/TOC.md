@@ -6,9 +6,9 @@ user-guide-description: Sammlung von AEM Forms-Ressourcen für Anfänger und erf
 breadcrumb-title: AEM Forms-Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 787a79663472711b78d467977d633e3d410803e5
 workflow-type: tm+mt
-source-wordcount: '898'
+source-wordcount: '896'
 ht-degree: 6%
 
 ---
@@ -16,10 +16,10 @@ ht-degree: 6%
 
 # AEM Forms-Videos und -Tutorials {#forms}
 
-+ [Übersicht](overview.md)
++ [Überblick](overview.md)
 + [Bewährte Verfahren](adaptive-forms/best-practices-adaptive-forms.md)
 + [Einrichten der OKTA-Authentifizierung mit AEM Author](adaptive-forms/single-sign-on-with-okta.md)
-+ Creating Your First Adaptive Form {#creating-your-first-adaptive-form}
++ Erstellen des ersten adaptiven Formulars {#creating-your-first-adaptive-form}
    + [Einführung und Einrichtung](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [Erstellen der Vorlage für adaptive Formulare](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [Formularfragment erstellen](creating-your-first-adaptive-form/create-form-fragment.md)
@@ -29,7 +29,7 @@ ht-degree: 6%
    + [Tabelle zum Einkommensbedienfeld hinzufügen](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
    + [Asset-Bedienfeld konfigurieren](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [Verwenden von benutzerdefinierten Funktionen und Code-Editor](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
-+ Bearbeiten von Formularübermittlungen {#handling-af-form-submissions}
++ Verarbeiten von Formularübermittlungen {#handling-af-form-submissions}
    + [Erstellen eines Review-Workflows](handling-form-submissions/creating-a-review-workflow.md)
    + [Konfigurieren des adaptiven Formulars zum Auslösen des Workflows](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [Danksagungsseite anzeigen](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
@@ -89,7 +89,7 @@ ht-degree: 6%
    + [Formulardatenmodell konfigurieren](prefill-fdm-db/configuring-form-data-model.md)
    + [Anforderungsparameter abrufen](prefill-fdm-db/get-request-parameter.md)
    + [Adaptives Formular erstellen](prefill-fdm-db/create-adaptive-form.md)
-+ Anpassung des Postfachs{#inbox-customization}
++ Posteingangsanpassung{#inbox-customization}
    + [Einführung](inbox-customization/introduction.md)
    + [hinzufügen benutzerspezifische Spalte](inbox-customization/add-married-column.md)
    + [Verwenden der Vorlage](inbox-customization/use-sightly-template.md)
@@ -124,7 +124,7 @@ ht-degree: 6%
    + [PDF-Formular in adaptives Formular konvertieren](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [Konvertiertes adaptives Formular konfigurieren](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Verwenden von XDP-Vorlagen mit Adobe Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
-+ Variablen im AEM Workflow{#variables-aem-workflow}
++ Variablen in AEM Workflow{#variables-aem-workflow}
    + [Einführung - Variablen im Workflow](variables-aem-workflow/introduction.md)
    + [XML-Variablen](variables-aem-workflow/part1.md)
    + [JSON-Variablen](variables-aem-workflow/part2.md)
@@ -135,12 +135,12 @@ ht-degree: 6%
 + Speichern und Abrufen von Formulardaten in MySQL DB{#storing-and-retrieving-form-data}
    + [Einführung](storing-retrieving-form-data/introduction.md)
    + [Datenquelle konfigurieren](storing-retrieving-form-data/part1.md)
-   + [Servlet zum Speichern von Daten](storing-retrieving-form-data/part2.md)
-   + [Dienst zum Abrufen von Daten](storing-retrieving-form-data/part3.md)
+   + [Dienst zum Speichern von Daten](storing-retrieving-form-data/part3.md)
+   + [Servlet erstellen](storing-retrieving-form-data/part2.md)
    + [Client-Bibliothek](storing-retrieving-form-data/part4.md)
    + [Adaptive Formularvorlage](storing-retrieving-form-data/part5.md)
    + [Beispielelemente bereitstellen](storing-retrieving-form-data/part6.md)
-+ Auslösen AEM Workflows aus der Übermittlung von Mobile Forms{#offline-mobile-form-submission}
++ Auslösen AEM Workflows aus der Übermittlung des Mobile Form{#offline-mobile-form-submission}
    + [Einführung](offline-mobile-form-submission/introduction.md)
    + [Benutzerdefiniertes Profil](offline-mobile-form-submission/part-one.md)
    + [PDF-Übermittlung verarbeiten](offline-mobile-form-submission/part-two.md)
@@ -152,7 +152,7 @@ ht-degree: 6%
    + [Gesendete Daten speichern](querying-submitted-data/part2.md)
    + [JSON-Schema speichern](querying-submitted-data/part3.md)
    + [Abfrage der gesendeten Daten](querying-submitted-data/part4.md)
-+ Auflisten benutzerdefinierter Asset-Typen in Forms Portal{#listing-custom-asset-types}
++ Auflisten benutzerdefinierter Asset-Typen im Forms Portal{#listing-custom-asset-types}
    + [Teil 1: Registrieren benutzerdefinierter Asset-Typen](listing-custom-asset-types/part1.md)
    + [Teil 2 - Erstellen einer benutzerdefinierten Vorlage](listing-custom-asset-types/part2.md)
 + AEM Forms mit Marketo{#aem-forms-with-marketo}
@@ -204,7 +204,7 @@ ht-degree: 6%
    + [Verwenden der Tabellenkomponente im AEM Forms Print Kanal Dokument](interactive-communications/table-in-print-channel-documents-video-use.md)
    + [Generieren von interaktivem Communications-Dokument für Print Kanal mit überwachten Ordnern](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
-+ Interactive Communications For Web Channel {#ic-web-channel-tutorial}
++ Interaktive Kommunikation mit dem Web-Kanal {#ic-web-channel-tutorial}
    + [Einführung](ic-web-channel-tutorial/introduction.md)
    + [Tomcat einrichten](ic-web-channel-tutorial/partone.md)
    + [Datenquelle erstellen](ic-web-channel-tutorial/parttwo.md)
