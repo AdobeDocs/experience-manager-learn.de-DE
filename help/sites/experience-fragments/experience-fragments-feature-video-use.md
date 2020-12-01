@@ -56,5 +56,5 @@ AEM 6.5 unterstützt jetzt Volltextsuchfunktionen für Erlebnisfragmente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27720/?quality=9&learn=on)
 
-* **Inhaltsverfasser** (interne Suche) können jetzt nach einem Textteil in einem Erlebnisfragment suchen. Das Ergebnis wären die Erlebnisfragmente, die den Text enthalten, sowie die Seite, die auf das Erlebnisfragment verweist.
-* **Site-Benutzer** (Externe Suche) können jetzt eine Volltextsuche mit der Suchkomponente durchführen. Das Ergebnis umfasst Site-Seiten, die auf das Erlebnisfragment verweisen, das den Suchbegriff enthält.
+* **Inhaltsverfasser**  (interne Suche) können jetzt nach einem Textteil in einem Erlebnisfragment suchen. Das Ergebnis wären die Erlebnisfragmente, die den Text enthalten, sowie die Seite, die auf das Erlebnisfragment verweist.
+* **Site-Benutzer**  (Externe Suche) können jetzt eine Volltextsuche mit der Suchkomponente durchführen. Das Ergebnis umfasst Site-Seiten, die auf das Erlebnisfragment verweisen, das den Suchbegriff enthält.
