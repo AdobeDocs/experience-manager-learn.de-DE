@@ -27,7 +27,7 @@ In diesem Artikel wird ein einfacher Arbeitsablauf für die Anforderung der beza
 * Admin öffnet das Formular. Admin sollte keine vom Übermittler eingegebenen Informationen bearbeiten können.
 * Der Abschnitt &quot;Genehmigende Person&quot;sollte für den Genehmiger sichtbar sein (in diesem Fall ist er der AEM Administrator).
 
-Um die oben genannte Anforderung zu erfüllen, verwenden wir ein unsichtbares Feld mit dem Namen **initialstep** im Formular, dessen Standardwert auf Yes festgelegt ist. Wenn das Formular gesendet wird, setzt der erste Schritt im Workflow den Wert initialstep auf Nein. Das Formular verfügt über Geschäftsregeln, um die entsprechenden Abschnitte basierend auf dem Wert des ersten Schritts auszublenden und anzuzeigen.
+Um die oben genannte Anforderung zu erfüllen, verwenden wir ein unsichtbares Feld mit dem Namen **initialstep** im Formular und der Standardwert ist auf &quot;Ja&quot;festgelegt. Wenn das Formular gesendet wird, setzt der erste Schritt im Workflow den Wert initialstep auf Nein. Das Formular verfügt über Geschäftsregeln, um die entsprechenden Abschnitte basierend auf dem Wert des ersten Schritts auszublenden und anzuzeigen.
 
 **Formular zum Auslösen AEM Arbeitsablaufs konfigurieren**
 
@@ -51,8 +51,8 @@ Gehen Sie wie folgt vor, um diesen Workflow auf Ihrem System zu testen:
 * [Herunterladen und Bereitstellen von DevelopingWitheServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * [SetValue Custom OSGI Bundle herunterladen und bereitstellen](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
 * [Importieren Sie die Assets, die sich auf diesen Artikel beziehen, in AEM](assets/helpxworkflow.zip)
-* Öffnen Sie das Formular [&quot;Anfrage deaktivieren&quot;](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* Öffnen Sie das Anforderungsformular [Zeitüberschreitung](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * Füllen Sie die Details aus und senden Sie
-* Open the [inbox](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html). Ihnen sollte eine neue Aufgabe zugewiesen werden. Öffnen Sie das Formular. Die Daten des Übermittlers sollten schreibgeschützt sein und ein neuer Abschnitt für die Genehmigung sollte sichtbar sein.
-* Workflow- [Modell](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
+* Öffnen Sie den Posteingang [inbox](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html). Ihnen sollte eine neue Aufgabe zugewiesen werden. Öffnen Sie das Formular. Die Daten des Übermittlers sollten schreibgeschützt sein und ein neuer Abschnitt für die Genehmigung sollte sichtbar sein.
+* [Workflow-Modell](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
 * Überprüfen Sie den Prozessschritt. Dies ist der Schritt, der den Wert von initialstep auf &quot;Nein&quot;setzt.
