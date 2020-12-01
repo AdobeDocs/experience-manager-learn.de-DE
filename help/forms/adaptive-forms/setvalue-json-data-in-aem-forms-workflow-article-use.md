@@ -20,7 +20,7 @@ ht-degree: 2%
 ---
 
 
-# Wert des JSON-Datenelements im AEM Forms-Workflow festlegen {#setting-value-of-json-data-element-in-aem-forms-workflow}
+# Wert des JSON-Datenelements im AEM Forms Workflow {#setting-value-of-json-data-element-in-aem-forms-workflow} festlegen
 
 Da ein adaptives Formular in AEM Arbeitsablauf an verschiedene Benutzer weitergeleitet wird, müssen bestimmte Felder oder Bereiche je nach dem Benutzer, der das Formular überprüft, ein- oder ausgeblendet werden. Um diese Anwendungsfälle zu befriedigen, legen wir in der Regel einen Wert für ein unsichtbares Feld fest. Basierend auf den Wertregeln dieses verborgenen Felds können Geschäftsregeln erstellt werden, um geeignete Bereiche oder Felder auszublenden/zu deaktivieren.
 
@@ -49,24 +49,24 @@ So stellen Sie die Assets auf Ihrem lokalen System bereit:
 * [Laden Sie das SetValue-Bundle herunter und stellen Sie es bereit](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGI-Bundle, mit dem Sie die Werte eines Elements in den gesendeten JSON-Daten festlegen können.
 
 * [Herunterladen und Extrahieren des Inhalts der ZIP-Datei](assets/set-value-jsondata.zip)
-   * Stellen Sie Ihren Browser auf den [Paketmanager.](http://localhost:4502/crx/packmgr/index.jsp)
+   * Verweisen Sie Ihren Browser auf [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
       * Importieren und installieren Sie die Datei SetValueOfElementInJSONDataWorkflow.zip. Für dieses Paket sind das Beispiel-Workflow-Modell und das Formulardatenmodell mit dem Formular verknüpft.
 
 * Verweisen Sie Ihren Browser auf [Forms und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicken Sie auf Erstellen | Datei-Upload
 * Upload TimeOffRequestForm.zip-Datei
    **Dieses Formular wurde mit AEM Forms 6.4 erstellt. Stellen Sie sicher, dass Sie AEM Forms 6.4 oder höher verwenden**
-* Öffnen des [Formulars](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
+* Öffnen Sie das [Formular](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
 * Füllen Sie die Beginns- und Enddaten aus und senden Sie das Formular ab.
-* Gehe zu [&quot;Posteingang&quot;](http://localhost:4502/aem/inbox)
+* Gehen Sie zu [&quot;Inbox&quot;](http://localhost:4502/aem/inbox)
 * Öffnen Sie das mit der Aufgabe verknüpfte Formular.
 * Beachten Sie, dass die Felder im ersten Bereich deaktiviert sind.
 * Beachten Sie, dass der Bereich zum Genehmigen oder Ablehnen der Anforderung jetzt sichtbar ist.
 
 >[!NOTE]
 >
->Da wir das adaptive Formular mit dem Profil &quot;user&quot;vorab ausfüllen, stellen Sie sicher, dass die Informationen zum Profil des [Administrators vorliegen ](http://localhost:4502/security/users.html). Vergewissern Sie sich mindestens, dass Sie die Feldwerte FirstName, LastName und Email festgelegt haben.
->Sie können die Debug-Protokollierung aktivieren, indem Sie die Protokollfunktion für com.aemforms.setvalue.core.SetValueInJson [von hier aus aktivieren](http://localhost:4502/system/console/slinglog)
+>Da das adaptive Formular mit dem Profil &quot;user&quot;bereits ausgefüllt wurde, stellen Sie sicher, dass die Angaben zum Profil des Administrators [](http://localhost:4502/security/users.html) vorhanden sind. Vergewissern Sie sich mindestens, dass Sie die Feldwerte FirstName, LastName und Email festgelegt haben.
+>Sie können die Debug-Protokollierung aktivieren, indem Sie die Protokollfunktion für com.aemforms.setvalue.core.SetValueInJson [von hier](http://localhost:4502/system/console/slinglog) aktivieren
 
 >[!NOTE]
 >
