@@ -1,6 +1,6 @@
 ---
-title: manifest.yml eines Asset Compute-Projekts konfigurieren
-description: In der Datei "manifest.yml"des Projekts "Asset Compute"werden alle in diesem Projekt bereitzustellenden Arbeiter beschrieben.
+title: manifest.yml eines Asset compute-Projekts konfigurieren
+description: Die Datei "manifest.yml"des Asset compute-Projekts beschreibt alle in diesem Projekt bereitzustellenden Arbeiter.
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -13,24 +13,24 @@ translation-type: tm+mt
 source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
 source-wordcount: '437'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
 
 # manifest.yml konfigurieren
 
-In `manifest.yml`der Datei im Stammverzeichnis des Projekts &quot;Asset Compute&quot;werden alle in diesem Projekt bereitzustellenden Arbeiter beschrieben.
+Das `manifest.yml`, das sich im Stammverzeichnis des Asset compute-Projekts befindet, beschreibt alle Mitarbeiter in diesem Projekt, die bereitgestellt werden sollen.
 
 ![manifest.yml](./assets/manifest/manifest.png)
 
 ## Standardarbeitsdefinition
 
-Arbeitnehmer werden als Adobe I/O Runtime-Aktionseinträge unter definiert `actions`und bestehen aus einer Gruppe von Konfigurationen.
+Arbeiter werden als Adobe I/O Runtime-Aktionseinträge unter `actions` definiert und bestehen aus einer Gruppe von Konfigurationen.
 
-Arbeiter, die auf andere Adoben-E/A-Integrationen zugreifen, müssen die `annotations -> require-adobe-auth` Eigenschaft auf einstellen, `true` da dadurch die Adoben-E/A-Anmeldeinformationen [des Workers über das](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) Objekt `params.auth` verfügbar gemacht werden. Dies ist in der Regel erforderlich, wenn der Mitarbeiter Adobe-I/O-APIs wie die Adobe Photoshop-, Lightroom- oder Sensei-APIs abruft und pro Mitarbeiter umgeschaltet werden kann.
+Mitarbeiter, die auf andere Adobe I/O-Integrationen zugreifen, müssen die `annotations -> require-adobe-auth`-Eigenschaft auf `true` setzen, da [die Adobe I/O-Anmeldeinformationen des Workers](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) über das `params.auth`-Objekt verfügbar macht. Dies ist in der Regel erforderlich, wenn der Mitarbeiter Adobe I/O-APIs wie die Adobe Photoshop-, Lightroom- oder Sensei-APIs abruft und pro Mitarbeiter umgeschaltet werden kann.
 
-1. Öffnen und überprüfen Sie den automatisch generierten Arbeiter `manifest.yml`. Projekte, die mehrere Asset Compute-Mitarbeiter enthalten, müssen einen Eintrag für jeden Arbeitnehmer unter dem `actions` Array definieren.
+1. Öffnen und überprüfen Sie den automatisch generierten Worker `manifest.yml`. Projekte, die mehrere Asset compute-Worker enthalten, müssen einen Eintrag für jeden Arbeitnehmer unter dem `actions`-Array definieren.
 
 ```yml
 packages:
@@ -49,11 +49,11 @@ packages:
 
 ## Grenzen definieren
 
-Jeder Mitarbeiter kann die [Beschränkungen](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) für seinen Ausführungskontext in Adobe I/O Runtime konfigurieren. Diese Werte sollten so eingestellt werden, dass eine optimale Größenanpassung für den Arbeiter möglich ist, basierend auf der Menge, der Rate und der Art der zu berechnenden Assets sowie der Art der von ihm ausgeführten Arbeit.
+Jeder Worker kann die [limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) für seinen Ausführungskontext in Adobe I/O Runtime konfigurieren. Diese Werte sollten so eingestellt werden, dass eine optimale Größenanpassung für den Arbeiter möglich ist, basierend auf der Menge, der Rate und der Art der zu berechnenden Assets sowie der Art der von ihm ausgeführten Arbeit.
 
-Überprüfen Sie die Anleitung zur Größenanpassung der [Adobe](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers) , bevor Sie Grenzwerte festlegen. Mitarbeiter von Asset Compute können bei der Verarbeitung von Assets nicht über genügend Arbeitsspeicher verfügen, was dazu führt, dass die Ausführung von Adobe I/O Runtime abgebrochen wird. So wird sichergestellt, dass die Größe des Arbeitnehmers für die Verarbeitung aller zu prüfenden Assets angemessen ist.
+Überprüfen Sie die Anleitung zur Größenanpassung der Adobe[, bevor Sie Grenzwerte festlegen. ](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers) asset compute-Workern kann bei der Verarbeitung von Assets der Arbeitsspeicher ausgehen, was dazu führt, dass die Adobe I/O Runtime-Ausführung abgebrochen wird, sodass die Größe des Arbeitnehmers für den Umgang mit allen möglichen Assets angemessen ist.
 
-1. hinzufügen Sie einen `inputs` Abschnitt zum neuen `wknd-asset-compute` Aktionseintrag. Dies ermöglicht die Abstimmung der Gesamtleistung und Ressourcenzuordnung des Asset Compute-Mitarbeiters.
+1. hinzufügen Sie einen Abschnitt `inputs` zum neuen Eintrag `wknd-asset-compute` actions. Dies ermöglicht die Abstimmung der Gesamtleistung und Ressourcenzuordnung des Asset compute-Workers.
 
 ```yml
 packages:
@@ -75,7 +75,7 @@ packages:
 
 ## Die fertige manifest.yml
 
-Das endgültige Ergebnis `manifest.yml` sieht wie folgt aus:
+Das endgültige `manifest.yml` sieht wie folgt aus:
 
 ```yml
 packages:
@@ -96,29 +96,29 @@ packages:
 
 ## manifest.yml auf Github
 
-Das Finale `.manifest.yml` ist auf Github unter folgender Adresse abrufbar:
+Das endgültige `.manifest.yml` ist auf Github verfügbar unter:
 
 + [aem-guides-wknd-asset-compute/manifest.yml](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/manifest.yml)
 
 
 ## Validieren der Datei manifest.yml
 
-Führen Sie nach der Aktualisierung des erstellten Asset-Compute das lokale Entwicklungstool aus und stellen Sie sicher, dass die Beginn die aktualisierten `manifest.yml` `manifest.yml` Einstellungen erfolgreich verwenden.
+Nachdem die generierte Asset compute `manifest.yml` aktualisiert wurde, führen Sie das lokale Entwicklungstool aus und stellen Sie sicher, dass die Beginn mit den aktualisierten `manifest.yml`-Einstellungen erfolgreich arbeiten.
 
-So Beginn Asset Compute Development Tool for the Asset Compute project:
+So Beginn Asset compute Development Tool für das Asset compute-Projekt:
 
-1. Öffnen Sie eine Befehlszeile im Projektstamm &quot;Asset Compute&quot;(im VS-Code kann diese über Terminal > New Terminal direkt in der IDE geöffnet werden) und führen Sie den Befehl aus:
+1. Öffnen Sie eine Befehlszeile im Asset compute-Projektstamm (in VS-Code kann diese über Terminal > New Terminal direkt in der IDE geöffnet werden) und führen Sie den Befehl aus:
 
    ```
    $ aio app run
    ```
 
-1. Das lokale Asset Compute Development Tool wird in Ihrem Standard-Webbrowser unter __http://localhost:9000__ geöffnet.
+1. Das lokale Asset compute Development Tool wird in Ihrem Standard-Webbrowser unter __http://localhost:9000__ geöffnet.
 
    ![App-Ausführung](assets/environment-variables/aio-app-run.png)
 
 1. Beobachten Sie die Befehlszeilenausgabe und den Webbrowser auf Fehlermeldungen während der Initialisierung des Entwicklungstools.
-1. Um das Asset Compute Development Tool zu beenden, tippen Sie `Ctrl-C` im Fenster, das ausgeführt wurde, auf , um den Prozess `aio app run` zu beenden.
+1. Um das Asset compute-Entwicklungstool zu beenden, tippen Sie im Fenster, das `aio app run` ausgeführt hat, auf `Ctrl-C`, um den Vorgang zu beenden.
 
 ## Fehlerbehebung
 
