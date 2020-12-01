@@ -25,7 +25,7 @@ ht-degree: 2%
 
 In diesem Teil starten wir die Benutzeroberfläche des Agenten-UI zum Erstellen der Ad-hoc-Korrespondenz beim Senden des Formulars.
 
-In diesem Artikel werden Sie durch die Schritte geführt, die beim Senden eines Formulars in der Benutzeroberfläche des Eröffnungsvermittlers erforderlich sind. In der Regel müssen Kundendienstmitarbeiter ein Formular mit einigen Eingabeparametern ausfüllen und beim Öffnen des Formularübermittlungsagenten wird ui mit Daten geöffnet, die im Vorausfülldienst des Formulardatenmodells vorausgefüllt sind. Die Eingabeparameter zum Vorausfülldienst des Formulardatenmodells werden aus der Formularübermittlung extrahiert.
+Dieser Artikel führt Sie durch die Schritte, die beim Öffnen der Benutzeroberfläche des Agenten beim Senden eines Formulars erforderlich sind. In der Regel müssen Kundendienstmitarbeiter ein Formular mit einigen Eingabeparametern ausfüllen und beim Öffnen des Formularübermittlungsagenten wird ui mit Daten geöffnet, die im Vorausfülldienst des Formulardatenmodells vorausgefüllt sind. Die Eingabeparameter zum Vorausfülldienst des Formulardatenmodells werden aus der Formularübermittlung extrahiert.
 
 Das folgende Video zeigt den Verwendungsfall
 
@@ -61,11 +61,11 @@ So testen Sie diese Funktion auf Ihrem Server
 
 * [Importieren und installieren Sie die Assets, die mit diesem Artikel in Verbindung stehen, mithilfe des Paketmanagers.](assets/launch-agent-ui.zip)
 * [Bei configMgr anmelden](http://localhost:4502/system/console/configMgr)
-* Nach _Adobe Granite CSRF Filter suchen_
-* hinzufügen _/content/getPrintchannel_ in den Ausgeschlossenen Pfaden
+* Suchen Sie nach _Adobe Granite CSRF Filter_
+* hinzufügen _/content/getprintchannel_ in den Ausgeschlossenen Pfaden
 * Speichern Sie Ihre Änderungen.
 * [Öffnen Sie POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp). Vergewissern Sie sich, dass die an FormFieldRequestParameter übergebene Zeichenfolge documentId gültig ist.(Linie 19).
-* [Öffnen Sie die Webseite](http://localhost:4502/content/OpenPrintChannel.html) , geben Sie die Kontonummer ein und senden Sie das Formular.
+* [Öffnen Sie die ](http://localhost:4502/content/OpenPrintChannel.html) Webseite, geben Sie die Kontonummer ein und senden Sie das Formular.
 * Die Benutzeroberfläche des Agenten sollte geöffnet werden, wobei die Daten vorab ausgefüllt werden, die spezifisch für die im Formular eingegebene Kontonummer sind.
 
 >[!NOTE]
