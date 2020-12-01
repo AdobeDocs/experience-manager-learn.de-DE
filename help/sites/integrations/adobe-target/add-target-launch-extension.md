@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # hinzufügen der Erweiterung des Zieldatensatzes zu einer Launch-Eigenschaft {#adobe-target-extension}
 
-Um mit diesem Video zu folgen, müssen Sie bereits [integrierten Experience Platform Launch mit AEM](../experience-platform-launch/overview.md)haben.
+Um mit diesem Video fortzufahren, müssen Sie bereits über einen [integrierten Experience Platform Launch mit AEM](../experience-platform-launch/overview.md) verfügen.
 
 Erfahren Sie, wie Sie Adobe Target mithilfe von Experience Platform Launch für Ihre AEM Website aktivieren.
 
