@@ -20,7 +20,7 @@ ht-degree: 5%
 ---
 
 
-# An Danksagungsseite übermitteln {#submitting-to-thank-you-page}
+# An Danksagungsseite senden {#submitting-to-thank-you-page}
 
 Bei der Option &quot;An REST-Endpunkt übermitteln&quot;werden die im Formular eingegebenen Daten im Rahmen der HTTP-GET-Anforderung an eine konfigurierte Bestätigungsseite übergeben. Sie können den Namen der Felder der Anforderung hinzufügen. Das Format der Anforderung lautet:
 
@@ -39,8 +39,8 @@ Sie können auch über POST an den externen Endpunkt senden. Um dies zu erreiche
 
 Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisungen:
 
-* Importieren Sie die mit diesem Artikel verknüpfte [Asset-Datei mit dem Package Manager in AEM](assets/submittingtorestendpoint.zip)
-* Verweisen Sie Ihren Browser auf das Anforderungsformular für die [Zeitüberschreitung](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* Importieren Sie die mit diesem Artikel verknüpfte Asset-Datei mit dem Package Manager[ in AEM.](assets/submittingtorestendpoint.zip)
+* Verweisen Sie Ihren Browser auf das Anforderungsformular [Zeitüberschreitung](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * Füllen Sie das erforderliche Feld aus und senden Sie das Formular
 * Sie sollten eine Dankeseite mit Ihren auf der Seite ausgefüllten Informationen erhalten
 
