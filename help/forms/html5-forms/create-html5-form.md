@@ -24,11 +24,11 @@ HTML5-Formulare sind eine neue Funktion in Adobe Experience Manager, mit der Ang
 
 ## Voraussetzung
 
-Vergewissern Sie sich bitte, dass Sie eine funktionierende Instanz von AEM Forms haben. Folgen Sie dem [Installationshandbuch](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) , um AEM Forms zu installieren und zu konfigurieren
+Vergewissern Sie sich bitte, dass Sie eine funktionierende Instanz von AEM Forms haben. Folgen Sie dem [Installationshandbuch](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html), um AEM Forms zu installieren und zu konfigurieren.
 
 ## Erstellen des ersten HTML5-Formulars
 
-1. [Laden Sie den Inhalt der ZIP-Datei](assets/assets.zip)herunter und extrahieren Sie ihn. Die ZIP-Datei enthält xdp und die Datendatei
+1. [Laden Sie den Inhalt der ZIP-Datei](assets/assets.zip) herunter und extrahieren Sie ihn. Die ZIP-Datei enthält xdp und die Datendatei
 2. [Navigieren Sie zu Forms und Dokumenten](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 3. Klicken Sie auf Erstellen -> Datei-Upload
 4. Wählen Sie die in Schritt 2 heruntergeladene xdp-Vorlage aus.
@@ -40,7 +40,7 @@ Die xdp-Datei kann im HTML5- oder PDF-Format in der Vorschau angezeigt werden. G
 * Tippen Sie auf die neu hochgeladene xdp und klicken Sie auf _Vorschau -> Vorschau als HTML_. Sie sollten den xdp sehen, der als HTML5 gerendert wird
 
 >[!NOTE]
->Wenn Sie die Option &quot; _Vorschau als PDF_ &quot;auswählen, wird die gerenderte PDF nicht im Browser angezeigt, da AEM Forms dynamische PDFs wiedergibt, für die das Acrobat-Plugin erforderlich ist. Sie müssen die PDF-Datei herunterladen und mit Adobe Acrobat/Reader zur Ansicht öffnen
+>Wenn Sie die Option _Vorschau als PDF_ auswählen, wird die gerenderte PDF nicht im Browser angezeigt, da AEM Forms dynamische PDFs wiedergibt, für die Acrobat-Plugin erforderlich ist.Sie müssen die PDF-Datei herunterladen und mit Adobe Acrobat/Reader zur Ansicht öffnen
 
 
 ## Vorschau mit Daten
@@ -54,9 +54,9 @@ Gehen Sie wie folgt vor, um die xdp-Datei im HTML5-Format mit der Datendatei Vor
 
 Mit den erweiterten Eigenschaften der xdp-Vorlage können Sie Veröffentlichungsdatum, Übermittlungs-Handler, Rendering-Profil für Ihr Formular, Vorfülldienst usw. angeben. Um die erweiterten Eigenschaften der Vorlage Ansicht, tippen Sie auf den xdp und klicken Sie auf _Eigenschaften -> Erweitert_. Hier finden Sie eine Reihe von Immobilien. Einige dieser Eigenschaften werden hier behandelt.
 
-**Sende-URL** - Diese URL verarbeitet die Übermittlung des HTML5-Formulars. Wir werden dies in der nächsten Lektion behandeln. Wenn hier keine Sende-URL angegeben ist, wird der standardmäßige Sende-Handler aufgerufen, der die Formulardaten an den Browser zurückgibt.
+**Sende-URL** : Diese URL verarbeitet die Übermittlung des HTML5-Formulars. Wir werden dies in der nächsten Lektion behandeln. Wenn hier keine Sende-URL angegeben ist, wird der standardmäßige Sende-Handler aufgerufen, der die Formulardaten an den Browser zurückgibt.
 
-**HTML-Render-Profil** - HTML5-Formulare haben die Vorstellung von Profilen, die als REST-Endpunkte bereitgestellt werden, um die mobile Wiedergabe von Formularvorlagen zu aktivieren. Die Mehrzahl der Profile, bei denen das Standard-Rendering ausreicht, um das Formular wiederzugeben. Wenn das standardmäßige Render-Profil Ihren Anforderungen nicht entspricht, kann ein [benutzerdefiniertes Profil](https://docs.adobe.com/content/help/en/experience-manager-64/forms/html5-forms/custom-profile.html) erstellt und mit dem Formular verknüpft werden.
+**HTML-Render-Profil**  - HTML5-Formulare haben die Vorstellung von Profilen, die als REST-Endpunkte bereitgestellt werden, um die mobile Wiedergabe von Formularvorlagen zu aktivieren. Die Mehrzahl der Profile, bei denen das Standard-Rendering ausreicht, um das Formular wiederzugeben. Wenn das standardmäßige Render-Profil Ihren Anforderungen nicht entspricht, kann ein [benutzerdefiniertes Profil](https://docs.adobe.com/content/help/en/experience-manager-64/forms/html5-forms/custom-profile.html) erstellt und mit dem Formular verknüpft werden.
 
-**Vorfülldienst** - Der Vorfülldienst wird in der Regel verwendet, um Ihr Formular mit Daten zu füllen, die von einer Back-End-Datenquelle abgerufen werden.
+**Dienst**  zum Vorausfüllen: Der Dienst zum Vorausfüllen wird in der Regel verwendet, um Ihr Formular mit Daten zu füllen, die von einer Back-End-Datenquelle abgerufen werden.
 
