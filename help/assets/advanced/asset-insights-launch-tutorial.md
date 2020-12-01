@@ -34,12 +34,12 @@ In dieser fünfteiligen Videoserie gehen wir durch die Einrichtung und Konfigura
 
 >[!CAUTION]
 >
->Laden Sie unbedingt die [neueste Version der Core-Komponenten](https://github.com/adobe/aem-core-wcm-components) für Ihre Implementierung herunter.
+>Laden Sie unbedingt die [aktuelle Version der Core-Komponenten](https://github.com/adobe/aem-core-wcm-components) für Ihre Implementierung herunter.
 
 Das Video verwendet die Core-Komponenten v2.2.2, die nicht mehr die neueste Version sind. Achten Sie darauf, die neueste Version zu verwenden, bevor Sie mit dem nächsten Abschnitt fortfahren.
 
-* Beispielbildinhalt [für Asset Insights herunterladen](./assets/asset-insights-launch-tutorial/aem-assets-insights-sample.zip)
-* Laden Sie [die neuesten AEM WCM-Kernkomponenten herunter](https://github.com/adobe/aem-core-wcm-components/releases)
+* [Asset Insights-Beispielbildinhalt](./assets/asset-insights-launch-tutorial/aem-assets-insights-sample.zip) herunterladen
+* [die neuesten AEM WCM-Kernkomponenten](https://github.com/adobe/aem-core-wcm-components/releases) herunterladen
 
 ## Teil 2: Aktivieren der Verfolgung von Asset Insights für die Beispielbildkomponente {#sample-image-component-asset-insights}
 
@@ -55,14 +55,14 @@ Die Core-Image-Komponente verwendet das Attribut ***data-asset-id*** innerhalb d
 
 * Entfernt die ***data-asset-id*** aus dem übergeordneten div eines &lt;img>-Elements in image.html
 * Fügt ***data-aem-asset-id*** direkt zum &lt;img>-Element in image.html hinzu.
-* Fügt dem Element &lt;img> innerhalb der image.html den Wert ***data-trackable=&#39;true&#39;*** hinzu
-* ***data-aem-asset-id*** und ***data-trackable=&#39;true&#39;*** werden auf derselben Knotenebene gespeichert
+* Fügt dem &lt;img>-Element in image.html den Wert ***data-trackable=&#39;true&#39;*** hinzu.
+* ***data-aem-asset-*** idand  ***data-trackable=&#39;true&#39;*** werden auf derselben Knotenebene gespeichert
 
 >[!NOTE]
 >
->*data-aem-asset-id=&#39;image.UUID&#39;* und *data-trackable=&#39;true&#39;* sind die Schlüsselattribute, die für Asset-Impressionen vorhanden sein müssen. Bei Asset Click Insights muss das übergeordnete &lt;a>-Tag zusätzlich zu den oben genannten Datenattributen, die am &lt;img>-Tag vorhanden sind, einen gültigen href-Wert haben.
+>*data-aem-asset-id=&#39;image.UUID&#39;* und  *data-trackable=&#39;true&#39;* sind die Schlüsselattribute, die für Asset-Impressionen vorhanden sein müssen. Bei Asset Click Insights muss das übergeordnete &lt;a>-Tag zusätzlich zu den oben genannten Datenattributen, die am &lt;img>-Tag vorhanden sind, einen gültigen href-Wert haben.
 
-## Teil 3: Adobe Analytics — Erstellen von Report Suites, die die Echtzeit-Datenerfassung und AEM Assets Berichte aktivieren {#adobe-analytics-asset-insights}
+## Teil 3: Adobe Analytics — Erstellen von Report Suites, die die Echtzeit-Datenerfassung und den AEM Assets Berichte {#adobe-analytics-asset-insights} aktivieren
 
 Für die Asset-Verfolgung wird eine Report Suite mit Echtzeit-Datenerfassung erstellt. Die AEM Assets Insights-Konfiguration wird mit Adobe Analytics-Anmeldeinformationen eingerichtet.
 
@@ -73,10 +73,10 @@ Die Echtzeit-Datenerfassung und AEM Asset Berichte müssen für Ihre Adobe Analy
 
 Für die AEM Assets Insights-Konfiguration benötigen Sie die folgenden Anmeldeinformationen:
 
-* Datenzentrum
+* Rechenzentrum
 * Name der Analytics-Firma
 * Analytics-Benutzername
-* Shared Secret (erhältlich unter *Adobe Analytics > Admin > Einstellungen für Firmen > Webdienst*).
+* Shared Secret (erhältlich unter *Adobe Analytics > Admin > Firma Settings > Web Service*).
 * Report Suite (Achten Sie darauf, die richtige Report Suite auszuwählen, die für Asset Berichte verwendet wird)
 
 ## Teil 4: Verwenden von Adobe Experience Platform Launch zum Hinzufügen der Adobe Analytics-Erweiterung {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
@@ -102,13 +102,13 @@ Achten Sie darauf, alle Änderungen von der Autoreninstanz in die Veröffentlich
 
 Seiten-Tracker implementiert zwei Rückrufe (registriert im Asset-Einbettungscode)
 
-* **\&lt;Code>assetAnalytics.core.assetLoaded\&lt;Code>** : aufgerufen, wenn das Ereignis &quot;load&quot;für das Element asset-DOM-Element ausgelöst wird.
-* **\&lt;Code>assetAnalytics.core.assetClicked\&lt;Code>** : aufgerufen, wenn das Ereignis &quot;click&quot;für das Element asset-DOM-Element ausgelöst wird, ist dies nur relevant, wenn das Element asset-DOM-element ein Anker-Tag als übergeordnetes Element mit einem gültigen, externen Attribut &quot;href&quot;hat
+* **\&lt;code>assetAnalytics.core.assetLoaded\&lt;/code>** &lt;code>&lt;code>: aufgerufen, wenn das Ereignis &quot;load&quot;für das Element asset-DOM-Element ausgelöst wird.&lt;/code>&lt;/code>
+* **\&lt;code>assetAnalytics.core.assetClicked\&lt;/code>** &lt;code>&lt;code>: aufgerufen, wenn das Ereignis &quot;click&quot;für das Element asset-DOM-Element ausgelöst wird, ist dies nur relevant, wenn das Element asset-DOM-element ein Anker-Tag als übergeordnetes Element mit einem gültigen, externen Attribut &quot;href&quot;hat&lt;/code>&lt;/code>
 
 Schließlich implementiert Pagetracker eine Initialisierungsfunktion wie folgt:
 
-* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** : aufgerufen, um die Pagetracker-Komponente zu initialisieren. Diese MUSS aufgerufen werden, bevor eines der Asset-Insight-Ereignis (Impressionen und/oder Klicks) von der Webseite generiert wird.
-* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;code>** : optional ein AppMeasurement-Objekt — sofern vorhanden, wird nicht versucht, eine neue Instanz des AppMeasurement-Objekts zu erstellen.
+* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;/code>** &lt;code>&lt;code>: aufgerufen, um die Pagetracker-Komponente zu initialisieren.&lt;/code>&lt;/code> Diese MUSS aufgerufen werden, bevor eines der Asset-Insight-Ereignis (Impressionen und/oder Klicks) von der Webseite generiert wird.
+* **\&lt;code>assetAnalytics.dispatcher.init()\&lt;/code>** &lt;code>&lt;code>: optional ein AppMeasurement-Objekt — sofern vorhanden, wird nicht versucht, eine neue Instanz des AppMeasurement-Objekts zu erstellen.&lt;/code>&lt;/code>
 
 ### Regel 2: Bildverfolgung — Aktion 1 (asset-insights.js) {#rule-image-tracker-action-asset-insights-js}
 
@@ -190,7 +190,7 @@ Im Video werden zwei Google Chrome-Browsererweiterungen als Möglichkeiten zum D
 * [Switch Chrome Extension starten](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en)
 * [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj?hl=en)
 
-Mit der folgenden Chrome-Erweiterung ist es auch möglich, DTM in den Debug-Modus umzuschalten: [Starten und DTM Switch](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en). Auf diese Weise können Sie leichter erkennen, ob Fehler bei der DTM-Bereitstellung vorliegen. Darüber hinaus können Sie DTM über beliebige Browser- *Entwicklerwerkzeuge -> JS-Konsole* manuell in den Debug-Modus umschalten, indem Sie das folgende Codefragment hinzufügen:
+Mit der folgenden Chrome-Erweiterung ist es auch möglich, DTM in den Debug-Modus umzuschalten: [Launch and DTM Switch](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=en). Auf diese Weise können Sie leichter erkennen, ob Fehler bei der DTM-Bereitstellung vorliegen. Darüber hinaus können Sie DTM über alle Browser *Developer Tools -> JS Console* manuell in den Debug-Modus umschalten, indem Sie das folgende Codefragment hinzufügen:
 
 ## Teil 5: Testen der Analytischen Verfolgung und Synchronisierung von Insight-Daten{#analytics-tracking-asset-insights}
 
