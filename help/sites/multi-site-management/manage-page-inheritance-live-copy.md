@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Live Copy-Vererbung auf einer Seite verwalten {#manage-live-copy-page}
+# Live Copy-Vererbung auf einer Seite {#manage-live-copy-page} verwalten
 
 Erfahren Sie, wie Sie die Vererbung zwischen einer Live Copy und ihrem Blueprint auf Seitenebene verwalten.
 >[!VIDEO](https://video.tv.adobe.com/v/36679?quality=12&learn=on)
