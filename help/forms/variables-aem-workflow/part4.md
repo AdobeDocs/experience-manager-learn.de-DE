@@ -68,12 +68,15 @@ Im Folgenden finden Sie die Daten aus der Übermittlung des adaptiven Formulars.
 ```
 
 Um die ArrayList-Variable des Subtyps String zu initialisieren, können Sie entweder den JSON Dot Notation- oder den XPath-Zuordnungsmodus verwenden. Der folgende Screenshot zeigt Ihnen, wie Sie eine ArrayList-Variable namens CustomRoutes mit der JSON-Punktnotiz füllen. Vergewissern Sie sich, dass Sie auf ein Element in einem Array-Objekt verweisen, wie im Screenshot unten dargestellt. Wir füllen die CustomRoutes ArrayList mit den Namen des managerchain-Array-Objekts.
-Die CustomRoutes-ArrayList wird dann verwendet, um die Routen in der AssignTask-Komponente![customroutes](assets/arraylist.jpg)Sobald die CustomRoutes-ArrayList-Variable mit den Werten der gesendeten Daten initialisiert wurde, werden die Routen der AssignTask-Komponente mit der CustomRoutes-Variablen gefüllt. Der folgende Screenshot zeigt Ihnen die benutzerdefinierten Routen in einer AssignTask![-Aufgabe](assets/customactions.jpg)
+Die CustomRoutes-ArrayList wird dann zum Füllen der Routen in der AssignTask-Komponente verwendet
+![customroutes](assets/arraylist.jpg)
+Sobald die Variable CustomRoutes ArrayList mit den Werten aus den gesendeten Daten initialisiert wurde, werden die Routen der AssignTask-Komponente mit der Variablen CustomRoutes gefüllt. Der folgende Screenshot zeigt Ihnen die benutzerdefinierten Routen in einer AssignTask
+![asingtask](assets/customactions.jpg)
 
 Gehen Sie wie folgt vor, um diesen Workflow auf Ihrem System zu testen
 
 * Laden Sie die Datei &quot;ArrayListVariable.zip&quot;herunter und speichern Sie sie in Ihrem Dateisystem
-* [Importieren der ZIP-Datei](assets/arraylistvariable.zip) mit dem AEM Package Manager
+* [Importieren der ZIP-](assets/arraylistvariable.zip) Datei mit dem AEM Package Manager
 * [Öffnen Sie das Formular &quot;TravelExpenseReport&quot;](http://localhost:4502/content/dam/formsanddocuments/helpx/travelexpensereport/jcr:content?wcmmode=disabled)
 * Geben Sie ein paar Kosten und die Namen des 2 Managers ein
 * Auf die Senden-Schaltfläche klicken
