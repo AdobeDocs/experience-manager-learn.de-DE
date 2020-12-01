@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# Debuggen einer Implementierung starten {#debug-launch-implementation}
+# Debuggen einer Implementierung zum Starten {#debug-launch-implementation}
 
 Eine Einführung in allgemeine Tools und Techniken, die zum Debugging einer Implementierung von Launch verwendet werden. Erfahren Sie, wie Sie mit der Entwicklerkonsole des Browsers und der Experience Platform Debugger-Erweiterung die wichtigsten Aspekte einer Implementierung von Launch identifizieren und beheben können.
 
