@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Erstellen wiederverwendbarer AEM Forms-Workflow-Modelle{#create-re-usable-aem-forms-workflow-models}
+# Wiederverwendbare AEM Forms-Workflow-Modelle erstellen{#create-re-usable-aem-forms-workflow-models}
 
 Ab AEM Forms 6.5 können wir nun Workflow-Modelle erstellen, die nicht an ein bestimmtes adaptives Formular gebunden sind. Mit dieser Funktion können Sie jetzt ein Workflow-Modell erstellen, das bei verschiedenen Übermittlungen adaptiver Formulare aufgerufen werden kann. Mit dieser Funktion können Sie über einen generischen Arbeitsablauf verfügen, um alle Übermittlungen adaptiver Formulare zur Überprüfung und Genehmigung zu bearbeiten.
 
@@ -39,7 +39,8 @@ Führen Sie zum Entwerfen eines solchen Workflows die folgenden Schritte aus
 Es gibt drei Möglichkeiten, den Formularpfad anzugeben
 
 1. Verfügbar unter einem absoluten Pfad - Dies bedeutet, dass der Workflow eng mit dem adaptiven Formular verknüpft wird. Das wollen wir hier nicht
-1. **An den Workflow** gesendet - Das heißt, wenn das adaptive Formular gesendet wird, extrahiert das Workflow-Engine den Namen des Formulars aus den gesendeten Daten. Diese Option muss ausgewählt werden
-1. Verfügbar an einem Pfad in einer Variablen - Das bedeutet, dass das adaptive Formular aus der Workflow-Variablen abgerufen wirdDer folgende Screenshot zeigt die richtige Option, die Sie zur Entkopplung des Workflows vom adaptiven Formular benötigen
+1. **An den Workflow**  gesendet. Das bedeutet, dass das Workflow-Engine beim Senden des adaptiven Formulars den Formularnamen aus den gesendeten Daten extrahiert. Diese Option muss ausgewählt werden
+1. Verfügbar an einem Pfad in einer Variablen - Das bedeutet, dass das adaptive Formular aus der Workflow-Variablen abgerufen wird
+Der folgende Screenshot zeigt die richtige Option, die Sie für die Entkopplung des Workflows vom adaptiven Formular wählen müssen
 
 ![Workflow-Modell](assets/workflomodel.PNG)
