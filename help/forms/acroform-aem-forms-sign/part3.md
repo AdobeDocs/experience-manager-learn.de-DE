@@ -18,7 +18,8 @@ ht-degree: 1%
 
 # Testen Sie diese Funktion auf Ihrem System
 
-[Laden Sie dieses Paket herunter und importieren Sie es in AEM](assets/acro-form-aem-form.zip)Dieses Paket enthält den Beispielarbeitsablauf und die HTML-Seite, auf der Sie das Schema aus der hochgeladenen Acroform erstellen können.
+[Laden Sie dieses Paket herunter und importieren Sie es in ](assets/acro-form-aem-form.zip)
+AEMTthis package enthält den Beispielarbeitsablauf und die HTML-Seite, auf der Sie das Schema aus dem hochgeladenen Acroform erstellen können.
 
 ## Arbeitsablauf konfigurieren
 
@@ -33,7 +34,7 @@ ht-degree: 1%
 1. Erstellen Sie ein adaptives Formular mit dem im vorherigen Schritt erstellten Schema.
 2. Ziehen Sie ein paar Schema-Elemente auf das adaptive Formular.
 3. Konfigurieren Sie die Übermittlungsaktion des adaptiven Formulars, um sie an AEM Workflow (MergeAcroformData) zu senden.
-4. **Stellen Sie sicher, dass Sie den Datendateipfad als &quot;Data.xml&quot;angeben. Dies ist sehr wichtig, da der Beispielcode in der Workflow-Nutzlast nach einer Datei namens &quot;Data.xml&quot;sucht.**
+4. **Stellen Sie sicher, dass Sie den Datendateipfad als &quot;Data.xml&quot;angeben. Dies ist sehr wichtig, da der Beispielcode nach einer Datei namens Data.xml in der Workflow-Nutzlast sucht.**
 5. Adaptives Formular für die Vorschau ausfüllen und senden.
 6. Sie sollten die PDF-Datei mit den zusammengeführten Daten in dem in Schritt 4 angegebenen Ordner unter &quot;Arbeitsablauf für die Konfiguration&quot;anzeigen
 
