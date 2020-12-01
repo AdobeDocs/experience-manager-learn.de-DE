@@ -24,7 +24,7 @@ Erlebnisfragmente sind ein wichtiger Schritt vorwärts, um Inhaltsersteller mit 
 
 ## Szenario-Übersicht
 
-WKND Website plant, eine **SkateFest Challenge** in ganz Amerika über ihre Website anzukündigen und möchte, dass ihre Site-Benutzer sich für die Vorführung in jedem Bundesstaat anmelden. Als Marketingspezialist wurde Ihnen die Aufgabe zugewiesen, eine Kampagne auf der WKND-Site-Startseite auszuführen, mit Bannermeldungen, die für den Standort des Ereignisses relevant sind, und einem Link zur Seite mit den Details. Lassen Sie uns die Startseite der WKND-Site untersuchen und lernen, wie ein personalisiertes Erlebnis für einen Benutzer basierend auf seinem aktuellen Standort erstellt und bereitgestellt wird.
+Die WKND-Site plant, eine **SkateFest Challenge** in ganz Amerika über ihre Website anzukündigen und möchte, dass sich ihre Site-Benutzer für die Vorführung in jedem Bundesstaat anmelden. Als Marketingspezialist wurde Ihnen die Aufgabe zugewiesen, eine Kampagne auf der WKND-Site-Startseite auszuführen, mit Bannermeldungen, die für den Standort des Ereignisses relevant sind, und einem Link zur Seite mit den Details. Lassen Sie uns die Startseite der WKND-Site untersuchen und lernen, wie ein personalisiertes Erlebnis für einen Benutzer basierend auf seinem aktuellen Standort erstellt und bereitgestellt wird.
 
 ### Betroffene Benutzer
 
@@ -36,9 +36,9 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 ### Voraussetzungen
 
 * **AEM**
-   * [AEM Autoreninstanz](./implementation.md#getting-aem) und Veröffentlichungsinstanz, die auf localhost 4502 bzw. 4503 ausgeführt wird.
+   * [AEM Autoren- und Veröffentlichungsinstancerunning ](./implementation.md#getting-aem) auf localhost 4502 bzw. 4503.
 * **Experience Cloud**
-   * Zugriff auf Ihre Organisationen Adobe Experience Cloud - <https://>`<yourcompany>`.experienceCloud.adobe.com
+   * Zugriff auf Ihre Organisationen Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
    * Experience Cloud mit den folgenden Lösungen
       * [Adobe Target](https://experiencecloud.adobe.com)
 
@@ -55,7 +55,7 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 1. Basierend auf den Anforderungen erstellt AEM Content Editor ein Erlebnisfragment für den Inhaltsblock und exportiert es als Angebot nach Adobe Target. Um personalisierte Inhalte für alle Bundesstaaten in den USA bereitzustellen, kann der Autor eines Inhalts eine Erlebnisfragment-Übergeordnet-Variante erstellen und dann 50 weitere Varianten erstellen, eine für jeden Bundesstaat. Inhalte für jede Statusvariation mit relevanten Bildern und Text können dann manuell bearbeitet werden. Beim Erstellen eines Erlebnisfragments können Inhaltseditoren schnell auf alle in AEM Assets verfügbaren Assets zugreifen, indem sie die Option &quot;Asset-Suche&quot;verwenden. Wenn ein Erlebnisfragment nach Adobe Target exportiert wird, werden alle seine Varianten auch als Angebote an Adobe Target gesendet.
 
 1. Nachdem Sie Erlebnisfragment von AEM nach Adobe Target als Angebote exportiert haben, können Marketingexperten mithilfe dieser Angebot eine Aktivität in der Zielgruppe erstellen. Auf der Grundlage der SkateFest-Kampagne auf der WKND-Site muss der Marketingspezialist ein personalisiertes Erlebnis erstellen und den WKND-Site-Besuchern aus jedem Bundesstaat ein personalisiertes Erlebnis bereitstellen. Um eine Erlebnis-Targeting-Aktivität zu erstellen, muss der Marketingspezialist die Audiencen identifizieren. Für unsere WKND SkateFest-Kampagne müssen wir 50 separate Audiencen erstellen, je nach ihrem Standort, von dem aus sie die WKND-Website besuchen.
-   * [Audiencen](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) definieren die Zielgruppe für Ihre Aktivität und werden überall dort verwendet, wo Targeting verfügbar ist. Zielgruppe-Audiencen sind definierte Besucher-Kriterien. Angebot können auf bestimmte Audiencen (oder Segmente) ausgerichtet werden. Nur Besucher, die zu dieser Audience gehören, sehen das Erlebnis, das auf sie zugeschnitten ist.  Sie können beispielsweise ein Angebot an eine Audience senden, die aus Besuchern besteht, die einen bestimmten Browser oder einen bestimmten geografischen Standort verwenden.
+   * [](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) Zielgruppen definieren die Zielgruppe für Ihre Aktivität und werden überall dort verwendet, wo Targeting verfügbar ist. Zielgruppe-Audiencen sind definierte Besucher-Kriterien. Angebot können auf bestimmte Audiencen (oder Segmente) ausgerichtet werden. Nur Besucher, die zu dieser Audience gehören, sehen das Erlebnis, das auf sie zugeschnitten ist.  Sie können beispielsweise ein Angebot an eine Audience senden, die aus Besuchern besteht, die einen bestimmten Browser oder einen bestimmten geografischen Standort verwenden.
    * Ein [Angebot](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_973D4CC4CEB44711BBB9A21BF74B89E9) ist der Inhalt, der während der Kampagnen oder Aktivitäten auf Ihren Webseiten angezeigt wird. Wenn Sie Ihre Webseiten testen, messen Sie den Erfolg jedes Erlebnisses mit verschiedenen Angeboten an Ihren Orten. Ein Angebot kann verschiedene Inhaltstypen enthalten, darunter:
       * Bild
       * Text
@@ -74,15 +74,15 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 
 ## Aktivitäten von Marketingexperten
 
-### Audience mit Geo-Targeting erstellen {#marketer-audience}
+### Erstellen einer Audience mit Geo-Targeting {#marketer-audience}
 
-1. Navigieren Sie zu Ihrem Unternehmen [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (<https://>`<yourcompany>`.experienceCloud.adobe.com)
+1. Navigieren Sie zu Ihren Organisationen [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (<https://>`<yourcompany>`.experiencecloud.adobe.com)
 1. Melden Sie sich mit Ihrem Adobe ID an und stellen Sie sicher, dass Sie sich in der richtigen Organisation befinden.
-1. Klicken Sie im Lösungsumschalter auf **Zielgruppe** und **starten** Sie Adobe Target.
+1. Klicken Sie im Lösungsschalter auf **Zielgruppe** und dann auf **Start** Adobe Target.
 
    ![Experience Cloud - Adobe Target](assets/personalization-use-case-1/exp-cloud-adobe-target.png)
 
-1. Navigieren Sie zur Registerkarte &quot; **Angebot** &quot;und suchen Sie nach &quot;WKND&quot;-Angeboten. Sie sollten die Liste der Varianten von Erlebnisfragmenten anzeigen können, die aus AEM als HTML-Angebot exportiert wurden. Jedes Angebot entspricht einem Status. Beispielsweise ist *WKND SkateFest California* das Angebot, das einem WKND-Site-Besucher aus Kalifornien bereitgestellt wird.
+1. Navigieren Sie zum Register **Angebot** und suchen Sie nach &quot;WKND&quot;-Angeboten. Sie sollten die Liste der Varianten von Erlebnisfragmenten anzeigen können, die aus AEM als HTML-Angebot exportiert wurden. Jedes Angebot entspricht einem Status. Beispielsweise ist *WKND SkateFest California* das Angebot, das einem WKND-Site-Besucher aus Kalifornien bereitgestellt wird.
 
    ![Experience Cloud - Adobe Target](assets/personalization-use-case-1/html-offers.png)
 
@@ -90,14 +90,14 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 
    Ein Marketer muss 50 separate Audiencen für WKND-Site-Besucher aus jedem Bundesstaat in den Vereinigten Staaten von Amerika erstellen.
 
-1. Um eine Audience zu erstellen, klicken Sie auf &quot;Audience **** erstellen&quot;und geben Sie einen Namen für die Audience ein.
+1. Um eine Audience zu erstellen, klicken Sie auf die Schaltfläche **Audience erstellen** und geben Sie einen Namen für Ihre Audience ein.
 
-   **Format &quot;Audience Name&quot;: WKND-\&lt;*Status*\>**
+   **Format &quot;Audience Name&quot;: WKND-\&lt;>state *\>***
 
    ![Experience Cloud - Adobe Target](assets/personalization-use-case-1/audience-target-1.png)
 
-1. Click **Add Rule > Geo**.
-1. Klicken Sie auf **Auswählen** und wählen Sie eine der folgenden Optionen aus:
+1. Klicken Sie auf **Hinzufügen Regel > Geo**.
+1. Klicken Sie auf **Wählen Sie** und wählen Sie eine der folgenden Optionen aus:
    * Land
    * **Bundesland** *(Bundesland für WKND Site SkateFest-Kampagne auswählen)*
    * Ort
@@ -112,7 +112,7 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
    >[!NOTE]
    >Die IP-Adresse eines Besuchers wird einmal pro Besuch (Sitzung) mit einer mbox-Anfrage weitergeleitet, um Geotargeting-Parameter für diesen Besucher aufzulösen.
 
-1. Wählen Sie den Operator als **Übereinstimmung** aus und geben Sie einen entsprechenden Wert ein (z. B.: Kalifornien) und **Speichern** Sie Ihre Änderungen. Geben Sie in unserem Fall den Statusnamen ein.
+1. Wählen Sie den Operator als **stimmt mit** überein und geben Sie einen entsprechenden Wert ein (z. B.: Kalifornien) und **Speichern** Ihre Änderungen. Geben Sie in unserem Fall den Statusnamen ein.
 
    ![Adobe Target - Geo-Regel](assets/personalization-use-case-1/audience-geo-rule.png)
 
@@ -123,20 +123,20 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 
    ![Adobe Target- WKND-Audiencen](assets/personalization-use-case-1/adobe-target-audiences-50.png)
 
-Zu diesem Zeitpunkt haben wir erfolgreich Audiencen für alle WKND-Site-Besucher in verschiedenen Bundesstaaten der Vereinigten Staaten von Amerika erstellt und haben auch das entsprechende HTML-Angebot für jeden Bundesstaat. Erstellen wir nun eine Erlebnis-Targeting-Aktivität, um die Audience mit einem entsprechenden Angebot für die WKND-Site-Startseite zu Zielgruppe.
+Zu diesem Zeitpunkt haben wir erfolgreich Audiencen für alle WKND-Site-Besucher in verschiedenen Bundesstaaten der Vereinigten Staaten von Amerika erstellt und haben auch das entsprechende HTML-Angebot für jeden Bundesstaat. Erstellen wir nun eine Erlebnis-Targeting-Aktivität, um die Audience mit einem entsprechenden Angebot für die WKND-Site-Startseite zu Zielgruppe zu bringen.
 
 ### Aktivität mit Geo-Targeting erstellen
 
-1. Navigieren Sie im Adobe Target-Fenster zur Registerkarte &quot; **Aktivitäten** &quot;.
-1. Klicken Sie auf Aktivität **** erstellen und wählen Sie den Aktivitäten-Typ **Erlebnis-Targeting** .
-1. Wählen Sie den **Web** Kanal und dann **Visual Experience Composer**.
-1. Geben Sie die **Aktivitäten-URL** ein und klicken Sie auf **Weiter** , um den Visual Experience Composer zu öffnen.
+1. Navigieren Sie im Adobe Target-Fenster zur Registerkarte **Aktivitäten**.
+1. Klicken Sie auf **Aktivität erstellen** und wählen Sie den Aktivitäten-Typ **Erlebnis-Targeting**.
+1. Wählen Sie den Kanal **Web** und wählen Sie **Visual Experience Composer**.
+1. Geben Sie die **Aktivitäten-URL** ein und klicken Sie auf **Weiter**, um den Visual Experience Composer zu öffnen.
 
    Veröffentlichungs-URL der WKND-Site-Startseite: http://localhost:4503/content/wknd/en.html
 
    ![Erlebnis-Targeting-Aktivität](assets/personalization-use-case-1/target-activity.png)
 
-1. Damit **Visual Experience Composer** geladen wird, aktivieren Sie **Zulassen von nicht sicheren Skripten** in Ihrem Browser und laden Sie Ihre Seite neu.
+1. Damit **Visual Experience Composer** geladen werden kann, aktivieren Sie **Unsichere Skripte** in Ihrem Browser laden und laden Sie Ihre Seite neu.
 
    ![Erlebnis-Targeting-Aktivität](assets/personalization-use-case-1/load-unsafe-scripts.png)
 
@@ -144,43 +144,43 @@ Zu diesem Zeitpunkt haben wir erfolgreich Audiencen für alle WKND-Site-Besucher
 
    ![VEC](assets/personalization-use-case-1/vec.png)
 
-1. Um eine Audience zu Ihrem VEC hinzuzufügen, klicken Sie unter &quot;Audiencen&quot;auf **Hinzufügen Erlebnis-Targeting** , wählen Sie die WKND-California-Audience und klicken Sie auf **Weiter**.
+1. Um Ihrer VEC eine Audience hinzuzufügen, klicken Sie unter &quot;Audiencen&quot;auf **Hinzufügen Erlebnis-Targeting**, wählen Sie die WKND-California-Audience und klicken Sie auf **Weiter**.
 
    ![VEC](assets/personalization-use-case-1/vec-select-audience.png)
 
-1. Klicken Sie auf die WKND-Site innerhalb von VEC, wählen Sie das HTML-Element aus, um das Angebot für die WKND-California-Audience hinzuzufügen, und wählen Sie die Option **Ersetzen durch** und wählen Sie dann das **HTML-Angebot** aus.
+1. Klicken Sie in VEC auf die Seite der WKND-Site, wählen Sie das HTML-Element aus, um das Angebot für die WKND-California-Audience hinzuzufügen, und wählen Sie **Ersetzen durch** und dann die Option **HTML-Angebot**.
 
    ![Erlebnis-Targeting-Aktivität](assets/personalization-use-case-1/vec-selecting-div.png)
 
-1. Wählen Sie das **WKND SkateFest California** HTML-Angebot für die **WKND-California** -Audience aus, wählen Sie die Benutzeroberfläche aus und klicken Sie auf **Fertig**.
-1. Sie sollten nun das **WKND SkateFest California** HTML-Angebot sehen können, das zu Ihrer WKND-Site-Seite für die WKND-California Audience hinzugefügt wurde.
+1. Wählen Sie das HTML-Angebot **WKND SkateFest California** für die Audience **WKND-California** aus, wählen Sie die Benutzeroberfläche aus und klicken Sie auf **Fertig**.
+1. Sie sollten nun das HTML-Angebot **WKND SkateFest California** sehen können, das zu Ihrer WKND-Site-Seite für die WKND-California-Audience hinzugefügt wurde.
 1. Wiederholen Sie die Schritte 7 bis 10, um Erlebnis-Targeting für die anderen Status hinzuzufügen und das entsprechende HTML-Angebot auszuwählen.
-1. Klicken Sie auf **Weiter** , um fortzufahren, und Sie können eine Zuordnung für Audiencen zu Erlebnissen sehen.
-1. Klicken Sie auf **Weiter** , um zu Ziele und Einstellungen zu wechseln.
-1. Wählen Sie die Quelle des Berichte und ein Hauptziel für Ihre Aktivität aus. Wählen Sie für unser Szenario die Berichte-Quelle als **Adobe Target** aus, messen Sie die Aktivität als **Konversion**, zeigen Sie die angezeigte Seite an und zeigen Sie die URL auf die Seite &quot;WKND-SkateFest-Details&quot;.
+1. Klicken Sie auf **Weiter**, um fortzufahren, und Sie können eine Zuordnung für Audiencen zu Erlebnissen sehen.
+1. Klicken Sie auf **Weiter**, um zu Ziele und Einstellungen zu wechseln.
+1. Wählen Sie die Quelle des Berichte und ein Hauptziel für Ihre Aktivität aus. Wählen Sie für unser Szenario die Berichte-Quelle als **Adobe Target** aus, messen Sie die Aktivität als **Konversion**, die Aktion als angezeigte Seite und die URL, die auf die Seite &quot;Details zum WKND-SkateFest&quot;zeigt.
 
    ![Ziel und Targeting - Zielgruppe](assets/personalization-use-case-1/goal-metric-target.png)
 
    >[!NOTE]
    >Sie können auch Adobe Analytics als Berichte wählen.
 
-1. Bewegen Sie den Mauszeiger über den Namen der aktuellen Aktivität, und Sie können ihn in **WKND SkateFest - USA** umbenennen und dann Ihre Änderungen **speichern und schließen** .
-1. Achten Sie im Bildschirm &quot;Aktivität&quot; darauf, Ihre Aktivität zu **aktivieren** .
+1. Bewegen Sie den Mauszeiger über den Namen der aktuellen Aktivität, und Sie können ihn in **WKND SkateFest - USA** umbenennen und dann **Speichern und schließen** Ihre Änderungen.
+1. Vergewissern Sie sich im Bildschirm &quot;Aktivität Details&quot;auf **Aktivieren** Ihrer Aktivität.
 
    ![Aktivität aktivieren](assets/personalization-use-case-1/activate-activity.png)
 
 1. Ihre WKND SkateFest Kampagne ist jetzt live für alle WKND Site Besucher.
-1. Navigieren Sie zur [WKND Site-Startseite](http://localhost:4503/content/wknd/en.html)und Sie sollten das WKND SkateFest-Angebot sehen können, das auf Ihrem Geo-Standort basiert (*Bundesstaat: Kalifornien*).
+1. Navigieren Sie zur [WKND-Site-Startseite](http://localhost:4503/content/wknd/en.html), und Sie sollten das WKND SkateFest-Angebot auf Grundlage Ihres geografischen Standorts (*Bundesstaat: Kalifornien*).
 
    ![Aktivität-Qualitätssicherung](assets/personalization-use-case-1/wknd-california.png)
 
 ### Qualitätssicherung bei Zielgruppe-Aktivitäten
 
-1. Klicken Sie unter **Aktivitäten > Übersicht** auf die Schaltfläche zur Qualitätssicherung **der** Aktivität, und Sie erhalten den Link zur direkten Qualitätssicherung zu all Ihren Erlebnissen.
+1. Klicken Sie unter **Aktivität Details > Übersicht** auf die Schaltfläche **Aktivität QA** und Sie erhalten den Link zur direkten Qualitätssicherung zu allen Ihren Erlebnissen.
 
    ![Aktivität-Qualitätssicherung](assets/personalization-use-case-1/activity-qa.png)
 
-1. Navigieren Sie zur [WKND-Site-Startseite](http://localhost:4503/content/wknd/en.html), und Sie sollten das WKND SkateFest-Angebot sehen können, basierend auf Ihrer geografischen Lage (Bundesstaat).
+1. Navigieren Sie zur [WKND Site-Startseite](http://localhost:4503/content/wknd/en.html) und Sie sollten das WKND SkateFest-Angebot sehen können, das auf Ihrem Geo-Standort (Bundesstaat) basiert.
 1. Sehen Sie sich das folgende Video an, um zu verstehen, wie ein Angebot an Ihre Seite gesendet wird, wie Sie Antworttokens anpassen und eine Qualitätsprüfung durchführen können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28658?quality=12&learn=on)
