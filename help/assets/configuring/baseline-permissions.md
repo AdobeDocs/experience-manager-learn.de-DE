@@ -21,6 +21,6 @@ ht-degree: 2%
 
 # Grundlegende Berechtigungen
 
-Die Verwaltung des Benutzerzugriffs auf die [Basisordner](./baseline-folders.md) von Assets ist ein wichtiger Aspekt der Verwaltung und stellt sicher, dass die Prozesse ordnungsgemäß unterstützt werden können.
+Die Verwaltung des Benutzerzugriffs auf die Grundlegende Asset-Ordner [ist ein wichtiger Aspekt in der Verwaltung und stellt sicher, dass die Prozesse ordnungsgemäß unterstützt werden können.](./baseline-folders.md)
 
 >[!VIDEO](https://video.tv.adobe.com/v/37696/?quality=12&learn=on&hidetitle=true)
