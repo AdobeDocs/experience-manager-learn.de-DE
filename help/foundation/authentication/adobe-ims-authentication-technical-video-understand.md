@@ -17,14 +17,14 @@ ht-degree: 4%
 ---
 
 
-# Informationen zur Adobe-IMS-Authentifizierung mit AEM unter Adobe Managed Services{#understanding-adobe-ims-authentication-with-aem-on-adobe-managed-services}
+# Einführung in die IMS-Authentifizierung der Adobe mit AEM unter Adobe Managed Services{#understanding-adobe-ims-authentication-with-aem-on-adobe-managed-services}
 
 Adobe Experience Manager bietet Admin Console-Support für AEM Instanzen und Adobe IMS (Identity Management System)-basierte Authentifizierung für AEM auf Managed Services.   Diese Integration ermöglicht es AEM Managed Services-Kunden, alle Experience Cloud-Benutzer in einer einzigen einheitlichen Webkonsole zu verwalten. Benutzer und Gruppen können Produktinstanzen zugeordnet werden, die AEM Profilen zugeordnet sind. Dadurch erhalten Sie zentral verwalteten Zugriff auf die spezifischen AEM Instanzen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26170?quality=12&learn=on)
 
 * Die Unterstützung der Adobe Experience Manager IMS-Authentifizierung gilt nur für &quot;interne&quot;Benutzer (Autoren, Prüfer, Administratoren, Entwickler usw.) und nicht für externe Endbenutzer wie Website-Besucher.
-* [Admin Console](https://adminconsole.adobe.com/) repräsentiert AEM Managed Services-Kunden als IMS Orgs und die AEM Instanzen als Product Kontexte. Admin Console System- und Produktadministratoren können diese definieren und verwalten.
+* [Admin ](https://adminconsole.adobe.com/) Console repräsentiert AEM Managed Services-Kunden als IMS-Orgs und die AEM Instanzen als Produkt-Kontexte. Admin Console System- und Produktadministratoren können diese definieren und verwalten.
 * AEM Managed Services synchronisiert Ihre Topologie mit der Admin Console und erstellt eine 1-zu-1-Zuordnung zwischen einem Produktkontext und AEM Instanz.
 * Das Produkt-Profil in der Admin Console bestimmt, auf welche AEM Instanzen ein Benutzer zugreifen kann.
 * Der Authentifizierungssupport umfasst Kunden-SAML2-kompatible IDPs für die einmalige Anmeldung.
@@ -46,4 +46,4 @@ In der Admin Console sollten Benutzer über Benutzergruppen auf der Ebene des Pr
 
 ### Berechtigungen in Adobe Experience Manager anwenden
 
-In Adobe Experience Manager sollten Benutzergruppen, die mit Adobe IMS synchronisiert werden, längerfristig [AEM Benutzergruppen](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security.html)hinzugefügt werden, die über die entsprechenden Berechtigungen verfügen, um bestimmte Gruppen von Aufgaben in AEM auszuführen. Von Adobe IMS synchronisierte Benutzer sollten nicht direkt zu [AEM Benutzergruppen](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security.html)hinzugefügt werden.
+Unter Adobe Experience Manager sollten Benutzergruppen, die mit Adobe IMS synchronisiert wurden, im Begriff zu [AEM bereitgestellten Benutzergruppen](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security.html) hinzugefügt werden, die über die entsprechenden Berechtigungen zum Ausführen bestimmter Gruppen von Aufgaben in AEM verfügen. Von Adobe IMS synchronisierte Benutzer sollten nicht direkt zu [AEM bereitgestellten Benutzergruppen](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/security.html) hinzugefügt werden.
