@@ -34,7 +34,7 @@ Dieser Artikel erläutert schrittweise die Erstellung eines Systembenutzers und 
 1. Legen Sie den Typ &quot;userid&quot;als &quot;data&quot;fest und klicken Sie auf das grüne Symbol, um den Vorgang zum Erstellen des Systembenutzers abzuschließen.
 1. [Open configMgr](http://localhost:4502/system/console/configMgr)
 1. Suchen Sie nach &#39; Apache Sling Service User Mapper Service &#39; und klicken Sie auf , um die Eigenschaften zu öffnen
-1. Klicken Sie auf das Symbol *+* (Plus), um die folgende Dienstzuordnung hinzuzufügen
+1. Klicken Sie auf das Symbol *+* (Plus), um die folgende Dienstzuordnung hinzuzufügen:
 
    * DevelopingWithServiceUser.core:getresourceresolver=data
    * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
@@ -46,7 +46,7 @@ In der obigen Konfiguration ist DevelopingWithServiceUser.core der symbolische N
 Wir können auch Resource Resolver im Namen des fd-service-Benutzers abrufen. Dieser Dienstbenutzer wird für Dokument-Services verwendet. Wenn Sie z. B. Nutzungsrechte zertifizieren/anwenden usw. möchten, verwenden wir den Ressourcen-Auflöser des fd-service-Benutzers, um die Vorgänge auszuführen
 
 1. [Laden Sie die mit diesem Artikel verknüpfte ZIP-Datei herunter und dekomprimieren Sie sie.](assets/developingwithserviceuser.zip)
-1. Navigate to [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
+1. Navigieren Sie zu [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 1. OSGi-Bundle hochladen und Beginn daraus erstellen
 1. Stellen Sie sicher, dass das Bundle sich im aktiven Status befindet.
 1. Sie haben jetzt erfolgreich einen *Systembenutzer* erstellt und auch das *Dienstbenutzer-Bundle* bereitgestellt.
