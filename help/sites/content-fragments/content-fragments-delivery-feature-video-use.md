@@ -33,21 +33,21 @@ Diese Videoreihe behandelt die Optionen zum Versand für die Verwendung von Inha
 2. Bereitstellen von Inhaltsfragmenten als JSON mithilfe von AEM Content Services
 3. Verwenden der Asset HTTP-API
 
-## Using Content Fragments in Web pages {#using-content-fragments-in-web-pages}
+## Verwenden von Inhaltsfragmenten auf Webseiten {#using-content-fragments-in-web-pages}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
 
-Inhaltsfragmente können auf AEM Sites-Seiten oder ähnlich wie Erlebnisfragmente mithilfe der [Inhaltsfragment-Komponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/content-fragment-component.html)der AEM WCM-Kernkomponenten verwendet werden.
+Inhaltsfragmente können auf AEM Sites-Seiten oder ähnlich wie Erlebnisfragmente verwendet werden, indem die AEM WCM-Kernkomponenten [Inhaltsfragment-Komponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/content-fragment-component.html) verwendet werden.
 
 Inhaltsfragmentkomponenten können mit AEM Stilsystem formatiert werden, um den Inhalt nach Bedarf anzuzeigen.
 
-## Bereitstellen von Inhaltsfragmenten als JSON {#exposing-content-fragments-as-json}
+## Inhaltsfragmente als JSON verfügbar machen {#exposing-content-fragments-as-json}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22448/?quality=12&learn=on)
 
 AEM Content Services erleichtert die Erstellung AEM seitenbasierten HTTP-Endpunkten, die Inhalte in einem normalisierten JSON-Format darstellen.
 
-Im obigen Video wird die [Inhaltsfragmentkomponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/content-fragment-component.html) verwendet, um einzelne Inhaltsfragmente verfügbar zu machen. Die [Inhaltsfragment-Liste](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-list.html) ist eine neue Komponente, mit der ein Autor eine Abfrage definieren kann, die die Seite mit einer Liste Inhaltsfragmente dynamisch füllt. Die Komponente &quot;Inhaltsfragment-Liste&quot;wird bevorzugt, wenn mehrere Inhaltsfragmente verfügbar gemacht werden müssen.
+Im obigen Video wird die Komponente [Inhaltsfragment](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html) verwendet, um einzelne Inhaltsfragmente verfügbar zu machen. Die Komponente [Inhaltsfragment-Liste](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-list.html) ist eine neue Komponente, mit der ein Autor eine Abfrage definieren kann, die die Seite mit einer Liste Inhaltsfragmente dynamisch füllt. Die Komponente &quot;Inhaltsfragment-Liste&quot;wird bevorzugt, wenn mehrere Inhaltsfragmente verfügbar gemacht werden müssen.
 
 *Beispiel für eine JSON-Endpunkt-Nutzlast für Content Services:*\
 **[athletes.json](assets/athletes.json)**
@@ -58,7 +58,7 @@ Im obigen Video wird die [Inhaltsfragmentkomponente](https://docs.adobe.com/cont
 
 Die erste Einführung in AEM 6.5 ist die verbesserte Unterstützung für Inhaltsfragmente mit der Assets HTTP API. Dies bietet Entwicklern eine einfache Möglichkeit, CRUD-Vorgänge (Create, Read, Update, and Delete) für Inhaltsfragmente durchzuführen.
 
-*Beispiel-POSTMAN-Anforderungen:*
+*Beispiel für POSTMAN-Anforderungen:*
 **[CRUD-CFM-API-We.Retail.postman_collection.json](assets/CRUD-CFM-API-We.Retail.postman_collection.json)**
 
 ## Welche Versand-Methode
@@ -79,7 +79,7 @@ Es gibt zwei Optionen, um Inhaltsfragment als JSON verfügbar zu machen, um eine
 
 * [Authoring von Inhaltsfragmenten](content-fragments-feature-video-use.md)
 * [AEM WCM-Hauptkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html)
-* [AEM WCM-Kerninhaltsfragment-Komponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/content-fragment-component.html)
+* [AEM WCM-Kerninhaltsfragment-Komponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)
 
 So laden Sie das unten stehende Paket auf eine AEM 6.4+-Instanz für den finalen Status aus der Videoreihe herunter und installieren es:\
 **[aem_demo_Fluid-experienceContent-fragments-100.zip](assets/aem_demo_fluid-experiencescontent-fragments-100.zip)**
