@@ -44,10 +44,10 @@ Gehen Sie wie folgt vor, um die Assets auf Ihrem lokalen System bereitzustellen:
 
 * [Developing with serviceUser-Bundle bereitstellen](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [Stellen Sie das Beispielpaket](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)bereit. Dies ist das benutzerdefinierte OSGI-Bundle, mit dem Sie die Werte eines Elements in den gesendeten XML-Daten festlegen können.
+* [Stellen Sie das Beispielpaket](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar) bereit. Dies ist das benutzerdefinierte OSGI-Bundle, mit dem Sie die Werte eines Elements in den gesendeten XML-Daten festlegen können.
 
 * [Herunterladen und Extrahieren des Inhalts der ZIP-Datei](assets/setvalueassets.zip)
-* Stellen Sie Ihren Browser auf den [Paketmanager.](http://localhost:4502/crx/packmgr/index.jsp)
+* Verweisen Sie Ihren Browser auf [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
 * Importieren und installieren Sie die Datei setValueWorkflow.zip. Dies hat das Beispiel-Workflow-Modell.
 * Verweisen Sie Ihren Browser auf [Forms und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicken Sie auf Erstellen | Datei-Upload
@@ -55,7 +55,7 @@ Gehen Sie wie folgt vor, um die Assets auf Ihrem lokalen System bereitzustellen:
 * Öffnen Sie das [TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
 * Füllen Sie die drei erforderlichen Felder aus und senden Sie
 * Melden Sie sich als &quot;Admin&quot;bei AEM an (falls noch nicht geschehen)
-* Zu [&quot;AEM Posteingang&quot; gehen](http://localhost:4502/aem/inbox)
+* Gehen Sie zu [&quot;AEM Posteingang&quot;](http://localhost:4502/aem/inbox)
 * Öffnen Sie das Formular &quot;Anfrage zur Überprüfungszeit&quot;
 * Beachten Sie, dass die Felder im ersten Bereich deaktiviert sind. Dies liegt daran, dass das Formular vom Prüfer geöffnet wird. Beachten Sie außerdem, dass das Fenster zum Genehmigen oder Ablehnen der Anforderung jetzt sichtbar ist
 
