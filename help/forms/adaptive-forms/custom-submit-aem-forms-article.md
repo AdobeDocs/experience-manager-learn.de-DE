@@ -20,7 +20,7 @@ ht-degree: 2%
 ---
 
 
-# Schreiben von benutzerdefinierten Übermittlungen in AEM Forms {#writing-a-custom-submit-in-aem-forms}
+# Schreiben eines benutzerdefinierten Übermittlungsformulars in AEM Forms {#writing-a-custom-submit-in-aem-forms}
 
 Schnelle und einfache Möglichkeit, eigene benutzerdefinierte Übermittlungsaktionen für adaptive Formulare zu erstellen
 
