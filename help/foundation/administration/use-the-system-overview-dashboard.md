@@ -19,16 +19,16 @@ ht-degree: 0%
 
 # Verwenden Sie das Dashboard Systemübersicht
 
-Die (AEM) [!UICONTROL Systemübersicht] von Adobe Experience Manager bietet eine hohe Ansicht der Konfiguration, Hardware und des Gesundheitszustands der AEM Instanz von einem Dashboard.
+Adobe Experience Managers (AEM) [!UICONTROL Systemübersicht] bietet eine Ansicht der Konfiguration, Hardware und des Gesundheitszustands der AEM Instanz auf hoher Ebene aus einem einzigen Dashboard.
 
 >[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
 
 1. Die Systemübersicht ist abrufbar unter: **AEM Beginn** > **[!UICONTROL Tools]** > **[!UICONTROL Vorgänge]** > **[!UICONTROL Systemübersicht]**
 
-   Direkt am **`<server-host>/libs/granite/operations/content/systemoverview.html`**
+   Direkt bei **`<server-host>/libs/granite/operations/content/systemoverview.html`**
 
-1. Die Informationen aus der [!UICONTROL Systemübersicht] können exportiert werden, indem Sie auf die Schaltfläche [!UICONTROL Herunterladen] klicken. Die Informationen werden auch über den folgenden [!DNL REST] Endpunkt offen gelegt:
-1. Im Folgenden finden Sie eine Beispielausgabe der JSON-Datei, die aus der [!UICONTROL Systemübersicht]exportiert wird:
+1. Die Informationen aus der [!UICONTROL Systemübersicht] können exportiert werden, indem Sie auf die Schaltfläche [!UICONTROL Herunterladen] klicken. Die Informationen werden auch über den folgenden [!DNL REST]-Endpunkt offen gelegt:
+1. Im Folgenden finden Sie eine Beispielausgabe der JSON-Datei, die aus der Datei [!UICONTROL Systemübersicht] exportiert wird:
 
    ```json
    {
