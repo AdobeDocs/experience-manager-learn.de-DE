@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# Hinzufügen von Komponenten zum Bedienfeld &quot;Einkommen&quot; {#adding-components-to-income-panel}
+# Hinzufügen von Komponenten zum Einkommensbedienfeld {#adding-components-to-income-panel}
 
 Wir fügen eine Tabelle zum Einkommensbedienfeld hinzu. Konfigurieren Sie die Tabellenzeilen und verwenden Sie den Regeleditor, um die Gesamtsumme zu berechnen.
 
@@ -32,7 +32,7 @@ Wir fügen eine Tabelle zum Einkommensbedienfeld hinzu. Konfigurieren Sie die Ta
 
 
 
-## Tabelle &quot;Einkommen dynamisch gestalten&quot; {#make-the-income-table-dynamic}
+## Tabelle mit Einkommen dynamisch machen {#make-the-income-table-dynamic}
 
 **Stellen Sie sicher, dass Sie sich im Bearbeitungsmodus befinden. Die Schaltfläche &quot;Bearbeiten&quot;befindet sich oben rechts im Browser.**
 
@@ -46,7 +46,7 @@ Wir fügen eine Tabelle zum Einkommensbedienfeld hinzu. Konfigurieren Sie die Ta
 
 * Legen Sie unter Wiederholungseinstellungen die Werte für Minimum und Maximum auf 1 und 5 fest und speichern Sie Ihre Änderungen, indem Sie auf das blaue Häkchen klicken. Das bedeutet, dass die Tabelle maximal 5 Zeilen enthalten kann. Um eine unbegrenzte Anzahl von Zeilen festzulegen, setzen Sie die maximale Anzahl auf -1.
 
-## Regel zur Berechnung der Gesamtsumme erstellen {#create-rule-to-calculate-grand-total}
+## Regel zur Berechnung der Gesamtsumme {#create-rule-to-calculate-grand-total} erstellen
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/22197?quality=9&learn=on)
