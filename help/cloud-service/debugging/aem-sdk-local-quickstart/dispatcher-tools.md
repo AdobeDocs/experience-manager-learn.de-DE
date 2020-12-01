@@ -28,15 +28,15 @@ Das Debuggen der Protokolle und Inhalte der Dispatcher-Tools kann entscheidend s
 
 ## Dispatcher Tools-Protokolle
 
-Dispatcher Tools-Protokolle sind über den `stdout` oder den `bin/docker_run` Befehl oder mit weiteren Details im Docker Container unter `/etc/https/logs`.
+Dispatcher Tools-Protokolle sind über den Befehl `stdout` oder `bin/docker_run` oder mit weiteren Details im Docker-Container unter `/etc/https/logs` verfügbar.
 
-Anweisungen zum direkten Zugriff auf die Protokolle des Dispatcher-Containers finden Sie unter [Dispatcher-Protokolle](./logs.md#dispatcher-logs) .
+Anweisungen zum direkten Zugriff auf die Protokolle der Dispatcher-Tools finden Sie unter [Dispatcher logs](./logs.md#dispatcher-logs).
 
 ## Dispatcher Tools-Cache
 
 ### Zugriff auf Protokolle im Docker-Container
 
-Der Dispatcher-Cache kann direkt im Docker-Container unter ` /mnt/var/www/html`.
+Der Dispatcher-Cache kann direkt auf den Docker-Container unter ` /mnt/var/www/html` zugreifen.
 
 ```shell
 $ docker ps
@@ -56,7 +56,7 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 
 ### Kopieren der Docker-Protokolle in das lokale Dateisystem
 
-Dispatcher-Protokolle können aus dem Docker-Container in `/mnt/var/www/html` das lokale Dateisystem kopiert werden, um sie mit Ihren bevorzugten Werkzeugen überprüfen zu können. Beachten Sie, dass es sich hierbei um eine Point-in-Time-Kopie handelt und keine Echtzeit-Aktualisierungen für den Cache bereitgestellt werden.
+Dispatcher-Protokolle können aus dem Docker-Container bei `/mnt/var/www/html` in das lokale Dateisystem kopiert werden, um sie mit Ihren Lieblings-Tools zu überprüfen. Beachten Sie, dass es sich hierbei um eine Point-in-Time-Kopie handelt und keine Echtzeit-Aktualisierungen für den Cache bereitgestellt werden.
 
 ```shell
 $ docker ps
