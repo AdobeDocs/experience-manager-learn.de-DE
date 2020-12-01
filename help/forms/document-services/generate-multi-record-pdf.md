@@ -23,7 +23,8 @@ Im Folgenden sehen Sie den Screenshot der XML-Datei, die mehrere Datensätze ent
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-Die Daten-XML enthält 2 Datensätze. Jeder Datensatz wird durch das form1-Element dargestellt. Diese XML wird an die OutputService-Methode [generatePDFOutputBatch übergeben, bei](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) der die Liste der PDF-Dokumente(ein pro Datensatz)Die Signatur der generatePDFOutputBatch-Methode akzeptiert die folgenden Parameter
+Die Daten-XML enthält 2 Datensätze. Jeder Datensatz wird durch das form1-Element dargestellt. Diese XML wird an die OutputService [generatePDFOutputBatch-Methode](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) übergeben. Es wird eine Liste der PDF-Dokumente(ein pro Datensatz) erhalten.
+Die Signatur der generatePDFOutputBatch-Methode akzeptiert die folgenden Parameter
 
 * templates - Zuordnung, die die Vorlage enthält, durch einen Schlüssel identifiziert
 * data - Zuordnung mit XML-Dokumenten, identifiziert durch Schlüssel
@@ -32,9 +33,9 @@ Die Daten-XML enthält 2 Datensätze. Jeder Datensatz wird durch das form1-Eleme
 
 >[!NOTE]
 >
->Dieser Verwendungsfall ist als Live-Beispiel auf dieser [Website](https://forms.enablementadobe.com/content/samples/samples.html?query=0)verfügbar.
+>Dieser Verwendungsfall ist als Live-Beispiel auf dieser [Website](https://forms.enablementadobe.com/content/samples/samples.html?query=0) verfügbar.
 
-## Falldetails verwenden{#use-case-details}
+## Falldetails{#use-case-details}
 
 In diesem Fall stellen wir eine einfache Weboberfläche bereit, um die Vorlage und die Datei data(xml) hochzuladen. Sobald der Hochladevorgang abgeschlossen ist und die POST an AEM Servlet gesendet wird. Dieses Servlet extrahiert die Dokumente und ruft die generatePDFOutputBatch-Methode des OutputService auf. Die generierten PDFs werden in eine ZIP-Datei komprimiert und dem Endbenutzer zum Herunterladen vom Webbrowser zur Verfügung gestellt.
 
@@ -73,7 +74,7 @@ Document zippedDocument = documentServices.generateMultiplePdfs(templateMap, dat
 ....
 ```
 
-### Implementierungscode der Schnittstelle{#Interface-Implementation-Code}
+### Interface-Implementierungscode{#Interface-Implementation-Code}
 
 Der folgende Code generiert mehrere PDFs mit generatePDFOutputBatch des OutputService und gibt eine ZIP-Datei mit den PDF-Dateien an das aufrufende Servlet zurück.
 
@@ -124,7 +125,7 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 }
 ```
 
-### Auf dem Server bereitstellen{#Deploy-on-your-server}
+### Auf Ihrem Server bereitstellen{#Deploy-on-your-server}
 
 Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisungen:
 
