@@ -28,7 +28,7 @@ Die Komponentenkonsole bietet folgende Funktionen:
 * [!UICONTROL Richtlinien]: zeigt alle vorhandenen Richtlinien für eine bestimmte Komponente und die zugeordnete Vorlage an
 * [!UICONTROL Live-Nutzung]: zeigt eine Liste der Seiten an, auf denen die Komponente enthalten ist
 
-Die Komponenten-Konsole finden Sie unter **[!UICONTROL Tools]** > **[!UICONTROL Allgemein]** > **[!UICONTROL Komponenten]**.
+Die Komponentenkonsole befindet sich unter **[!UICONTROL Tools]** > **[!UICONTROL Allgemein]** > **[!UICONTROL Komponenten]**.
 Komponenten-Konsolen-URL (lokaler AEM-Autor): [http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
 
 ## Zusätzliche Ressourcen {#additional-resources}
