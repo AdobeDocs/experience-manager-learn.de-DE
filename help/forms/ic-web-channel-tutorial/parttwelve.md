@@ -20,7 +20,7 @@ ht-degree: 1%
 ---
 
 
-# Einrichten des Versands von Web Kanal Dokument {#setting-up-the-delivery-of-web-channel-document}
+# Einrichten des Versands des Web-Kanal-Dokuments {#setting-up-the-delivery-of-web-channel-document}
 
 
 In diesem Teil betrachten wir den Versand des Web-Kanal-Dokuments per E-Mail.
@@ -50,7 +50,7 @@ Melden Sie sich bei AEM Forms an.
 * Achten Sie darauf, Ihre Änderungen zu speichern.
    ![fdm](assets/requestattribute.gif)
 
-## E-Mail-Versand des Web-Kanal-Dokuments testen {#test-email-delivery-of-web-channel-document}
+## E-Mail-Versand des Web-Kanal-Dokuments {#test-email-delivery-of-web-channel-document} testen
 
 * [Beispielelemente mit Package Manager installieren](assets/webchanneldelivery.zip)
 * [Bei CRX anmelden](http://localhost:4502/crx/de/index.jsp#)
@@ -71,4 +71,4 @@ Melden Sie sich bei AEM Forms an.
 
 >[!NOTE]
 >
->Bitte schauen Sie sich die **Datei /apps/AEMForms/fetchad/GET.jsp** in crx an. Vergewissern Sie sich, dass die String-Variable webChannelDocument auf einen gültigen Kommunikations-Dokument-Pfad verweist.
+>Bitte schauen Sie sich die Datei **/apps/AEMForms/fetchad/GET.jsp** in crx an. Vergewissern Sie sich, dass die String-Variable webChannelDocument auf einen gültigen Kommunikations-Dokument-Pfad verweist.
