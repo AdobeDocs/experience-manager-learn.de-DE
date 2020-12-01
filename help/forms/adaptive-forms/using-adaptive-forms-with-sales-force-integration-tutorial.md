@@ -35,7 +35,7 @@ Voraussetzungen für diese Übung:
    * [Offizielle Dokumentation zur Aktivierung von SSL unter AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
 
 * Sie benötigen ein Salesforce-Konto
-* Sie müssen eine verbundene App erstellen. Das offizielle Dokumentationsformular Salesforce zum Erstellen der App ist [hier](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0)aufgeführt.
+* Sie müssen eine verbundene App erstellen. Das offizielle Dokumentationsformular Salesforce zum Erstellen der App ist [hier](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0) aufgelistet.
 * Bereitstellung geeigneter OAuth-Scopes für die App (ich habe alle verfügbaren OAuth-Scopes zum Testen ausgewählt)
 * Geben Sie die Rückruf-URL ein. Die Rückruf-URL in meinem Fall war
 
@@ -45,7 +45,7 @@ Voraussetzungen für diese Übung:
 
 In diesem Beispiel ist gbedekar -w7-1:6443 der Name meines Servers und der Anschluss, an dem AEM ausgeführt wird.
 
-Nachdem Sie die verbundene App erstellt haben, notieren Sie sich den **Consumer key- und den geheimen Schlüssel**. Sie benötigen diese beim Erstellen der Datenquelle in AEM Forms.
+Nachdem Sie die Notiz für die verbundene App erstellt haben, klicken Sie auf **Consumer key und auf den geheimen Schlüssel**. Sie benötigen diese beim Erstellen der Datenquelle in AEM Forms.
 
 Nachdem Sie die verbundene App erstellt haben, müssen Sie eine Swagger-Datei für die Vorgänge erstellen, die Sie in salesforce ausführen müssen. Als Teil der herunterladbaren Assets wird eine Swagger-Musterdatei eingefügt. Mit dieser Swagger-Datei können Sie beim Senden des adaptiven Formulars das Objekt &quot;Interessent&quot;erstellen. Bitte entdecken Sie diese Swagger-Datei.
 
@@ -73,11 +73,11 @@ Der nächste Schritt besteht darin, Datenquelle in AEM Forms zu erstellen. Gehen
 * OAuth-URL ist - **https://login.salesforce.com/services/oauth2/authorize**
 * Token-URL aktualisieren - **https://na5.salesforce.com/services/oauth2/token**
 * **URL des Zugriffstools - https://na5.salesforce.com/services/oauth2/token**
-* Autorisierungsbereich: ** api chatter_api full id openid refresh_token visualforce web**
+* Autorisierungsbereich: ** API   chatter_api full id   openid   refresh_token visualforce web**
 * Authentifizierungs-Handler: Autorisierungsanbieter
 * Klicken Sie auf &quot;Mit OAUTH verbinden&quot;. Wenn alles gut läuft, sollten Sie keine Fehler sehen
 
-Nachdem Sie Ihr Formulardatenmodell mit Salesforce erstellt haben, können Sie die Formulardatenintegration mit der soeben erstellten Datenquelle erstellen. Die offizielle Dokumentation zur Formulardatenintegration finden Sie [hier](https://helpx.adobe.com/aem-forms/6-3/data-integration.html).
+Nachdem Sie Ihr Formulardatenmodell mit Salesforce erstellt haben, können Sie die Formulardatenintegration mit der soeben erstellten Datenquelle erstellen. Die offizielle Dokumentation zum Erstellen der Formulardatenintegration ist [hier](https://helpx.adobe.com/aem-forms/6-3/data-integration.html).
 
 Stellen Sie sicher, dass Sie das Formulardatenmodell so konfigurieren, dass es den POST-Dienst einbezieht, um ein Lead-Objekt in SFDC zu erstellen.
 
@@ -104,13 +104,13 @@ Nachdem Sie das Formulardatenmodell erstellt haben, können Sie adaptives Forms 
    * Geben Sie die Werte für ClientID und geheimer Clientschlüssel an
    * OAuth-URL ist - **https://login.salesforce.com/services/oauth2/authorize**
    * Token-URL aktualisieren - **https://na5.salesforce.com/services/oauth2/token**
-   * Zugriffstoken-**URL - https://na5.salesforce.com/services/oauth2/token**
+   * Zugriffstoken Ur **l - https://na5.salesforce.com/services/oauth2/token**
    * Autorisierungsbereich: ** api chatter_api full id openid refresh_token visualforce web**
    * Authentifizierungs-Handler: Autorisierungsanbieter
    * Klicken Sie auf &quot;Mit OAuth verbinden&quot;. Sollten Sie Fehler sehen, überprüfen Sie bitte die vorhergehenden Schritte, um sicherzustellen, dass alle Informationen korrekt eingegeben wurden.
 
 
-Nachdem Sie Ihre Datenquelle mit SalesForce erstellt haben, können Sie dann die Formulardatenintegration mit der soeben erstellten Datenquelle erstellen. Der Link zur Dokumentation dazu ist [hier](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
+Nachdem Sie Ihre Datenquelle mit SalesForce erstellt haben, können Sie dann die Formulardatenintegration mit der soeben erstellten Datenquelle erstellen. Der Link zur Dokumentation hierfür ist [hier](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
 
 Stellen Sie sicher, dass Sie das Formulardatenmodell so konfigurieren, dass es den POST-Dienst einbezieht, um ein Lead-Objekt in SFDC zu erstellen.
 
