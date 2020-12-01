@@ -32,7 +32,7 @@ Verwenden Sie AEM Desktop-App, um den Zugriff auf alle Assets, die auf dem Deskt
 
 >[!NOTE]
 >
-> [Adobe Asset Link](./adobe-asset-link.md) ist eine von der Adobe entwickelte Lösung zum Arbeiten mit AEM Assets in Adobe Creative Cloud-Anwendungen: Photoshop, Illustrator, InDesign. Wenn Sie in diesen Anwendungen AEM Assets verwenden, wird der Asset-Link für Adoben AEM Desktop-App bevorzugt.
+> [Adobe Asset ](./adobe-asset-link.md) Linkis-Adobe für die Verwendung AEM Assets in Adobe Creative Cloud-Anwendungen: Photoshop, Illustrator, InDesign. Wenn Sie in diesen Anwendungen AEM Assets verwenden, wird der Asset-Link für Adoben AEM Desktop-App bevorzugt.
 
 ## Zusätzliche Ressourcen
 
