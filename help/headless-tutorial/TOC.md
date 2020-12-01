@@ -22,7 +22,7 @@ ht-degree: 42%
 
 # Erste Schritte mit AEM Headless{#getting-started-with-aem-headless}
 
-+ [Übersicht](./overview.md)
++ [Überblick](./overview.md)
 + [1 - Lernprogramm einrichten](./chapter-1.md)
 + [2 - Definieren von Ereignis Content Fragment-Modellen](./chapter-2.md)
 + [3 - Erstellen von Inhaltsfragmenten für Ereignisse](./chapter-3.md)
