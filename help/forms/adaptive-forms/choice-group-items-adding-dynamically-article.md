@@ -23,7 +23,7 @@ ht-degree: 3%
 
 AEM Forms 6.5 bietet die Möglichkeit, Elemente dynamisch zu einer Auswahlgruppe für adaptive Forms hinzuzufügen, z. B. Kontrollkästchen, Optionsfelder und Bild-Listen.
 
-[Diese Funktion ist live auf dem Samples Server](https://forms.enablementadobe.com/content/samples/samples.html?query=0)verfügbar. Suchen Sie nach einer Karte mit dynamischen Kontrollkästchen und klicken Sie auf &quot;Testen&quot;.
+[Diese Funktion ist live auf dem Samples Server](https://forms.enablementadobe.com/content/samples/samples.html?query=0) verfügbar. Suchen Sie nach einer Karte mit dynamischen Kontrollkästchen und klicken Sie auf &quot;Testen&quot;.
 
 
 Sie können Elemente je nach Anwendungsfall im Visual Editor sowie im Code-Editor hinzufügen.
