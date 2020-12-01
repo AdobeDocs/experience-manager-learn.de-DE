@@ -35,13 +35,13 @@ Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](htt
 
 ## Programme {#programs}
 
-[Cloud Manager-Programm](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/setting-up-program.html) stellen AEM Umgebung dar, die logische Geschäftsinitiativen unterstützen, die in der Regel einem erworbenen Service Level Agreement (SLA) entsprechen. Beispielsweise kann ein Programm die AEM zur Unterstützung der globalen öffentlichen Websites darstellen, während ein anderes Programm einen internen DAM darstellt.
+[Cloud Manager-](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/setting-up-program.html) Programme stellen AEM Umgebung dar, die logische Gruppen von Geschäftsinitiativen unterstützen, die in der Regel einem erworbenen Service Level Agreement (SLA) entsprechen. Beispielsweise kann ein Programm die AEM zur Unterstützung der globalen öffentlichen Websites darstellen, während ein anderes Programm einen internen DAM darstellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313/?quality=12&learn=on)
 
 ## Umgebungen {#environments}
 
-[Cloud Manager-Umgebung](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html) bestehen aus AEM Author-, AEM Publish- und Dispatcher-Instanzen. Verschiedene Umgebung unterstützen Rollen und können mit verschiedenen CI/CD-Pipelines (siehe unten) eingestellt werden. Cloud Manager-Umgebung verfügen in der Regel über eine Produktions- und eine Stage-Umgebung.
+[Cloud Manager-](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html) Umgebungen bestehen aus AEM Author-, AEM Publish- und Dispatcher-Instanzen. Verschiedene Umgebung unterstützen Rollen und können mit verschiedenen CI/CD-Pipelines (siehe unten) eingestellt werden. Cloud Manager-Umgebung verfügen in der Regel über eine Produktions- und eine Stage-Umgebung.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318/?quality=12&learn=on)
 
@@ -51,9 +51,9 @@ Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](htt
 
 >[!VIDEO](https://video.tv.adobe.com/v/26315/?quality=12&learn=on)
 
-## CI/CD Production Pipeline {#cicd-production-pipeline}
+## CI/CD-Produktionspipeline {#cicd-production-pipeline}
 
-*[Die Verwendung der CI/CD-Pipeline in der Adobe Cloud Manager](./use-the-cicd-pipeline-in-cloud-manager-for-aem.md)-Videoreihe bietet einen tiefen Einstieg in die Produktionspipeline-Ausführung, einschließlich der Untersuchung fehlerhafter und erfolgreicher Bereitstellungen.*
+*[Die Verwendung der CI/CD-Pipeline in der Adobe Cloud ](./use-the-cicd-pipeline-in-cloud-manager-for-aem.md) Manager-Videoreihe bietet einen tiefen Einstieg in die Produktionspipelinausführung, einschließlich der Untersuchung fehlerhafter und erfolgreicher Bereitstellungen.*
 
 >[!NOTE]
 >
@@ -61,13 +61,13 @@ Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](htt
 
 ### Konfiguration
 
-The [CI/CD Production Pipeline](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html) configuration defines the trigger that will initiate the pipeline, parameters controlling the production deployment and performance test parameters.
+Die Konfiguration [CI/CD Production Pipeline](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html) definiert den Auslöser, der die Pipeline auslöst, Parameter, die die Bereitstellung der Produktion und die Leistungstests-Parameter steuern.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314/?quality=12&learn=on)
 
 ### Pipeline-Ausführung
 
-Die [CI/CD-Produktionsleitung](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) wird verwendet, um Code über Stage zu erstellen und in der Produktions-Umgebung bereitzustellen, wodurch die Wertschöpfungszeit verkürzt wird.
+Die [CI/CD Production Pipeline](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/deploying-code.html) wird zum Erstellen und Bereitstellen von Code über Stage in der Produktions-Umgebung verwendet, wodurch die Wertungszeit verkürzt wird.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26317/?quality=12&learn=on)
 
@@ -81,6 +81,6 @@ Die [CI/CD-Produktionsleitung](https://docs.adobe.com/content/help/en/experience
 
 Cloud Manager bietet eine konsolidierte Ansicht in die Aktivität eines Programms, in der alle CI/CD-Pipeline-Ausführungen aufgelistet werden, sowohl Produktions- als auch Nicht-Produktionsausführung. So können Sie einen Einblick in die vergangene und aktuelle Aktivität erhalten und alle Details einer Aktivität überprüfen.
 
-Cloud Manager kann auch auf Benutzerebene in [Adobe Experience Cloud-Benachrichtigungen](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/notifications.html)integriert werden, was eine allgegenwärtige Ansicht in Ereignis und Aktionen von Interesse bietet.
+Cloud Manager kann auch auf Benutzerebene mit [Adobe Experience Cloud Notifications](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/notifications.html) integriert werden, was eine allgegenwärtige Ansicht in Ereignis und Aktionen von Interesse bietet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26319/?quality=12&learn=on)
