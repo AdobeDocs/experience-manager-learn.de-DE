@@ -1,8 +1,8 @@
 ---
 title: Assembler-Dienst in AEM Forms verwenden
 seo-title: Assembler-Dienst in AEM Forms verwenden
-description: Assembler-Dienst in AEM Forms zum Zusammenführen mehrerer PDF-Dateien verwenden
-seo-description: Assembler-Dienst in AEM Forms zum Zusammenführen mehrerer PDF-Dateien verwenden
+description: Assembler-Dienst in AEM Forms zum Zusammenstellen mehrerer PDF-Dateien verwenden
+seo-description: Assembler-Dienst in AEM Forms zum Zusammenstellen mehrerer PDF-Dateien verwenden
 uuid: 7895b1a3-6f9d-4413-bb7f-692ea0380fcd
 feature: assembler
 topics: development
@@ -108,10 +108,10 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 So funktioniert diese Funktion auf Ihrem AEM
 
 * Laden Sie die Datei [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) auf Ihr lokales System herunter.
-* Hochladen und Installieren des Pakets mit dem [Paketmanager](http://localhost:4502/crx/packmgr/index.jsp)
-* [DownloadCustom Dokument Services Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* Herunterladen [der Entwicklung mit Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* Bereitstellen und Beginn der Pakete mithilfe der [felix-Webkonsole](http://localhost:4502/system/console/bundles)
+* Laden Sie das Paket mit dem [Paketmanager](http://localhost:4502/crx/packmgr/index.jsp) hoch und installieren Sie es.
+* Herunterladen[Benutzerdefiniertes Dokument Services Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* [Entwickeln mit Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* Stellen Sie die Bundles mithilfe der felix-Webkonsole [bereit und Beginn bereit.](http://localhost:4502/system/console/bundles)
 * Verweisen Sie Ihren Browser auf [AssemblePdfs.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
 * PDF-Dateien per Drag&amp;Drop verschieben
 
@@ -119,7 +119,7 @@ So funktioniert diese Funktion auf Ihrem AEM
 >
 >Vergewissern Sie sich, dass die AEM Forms-Installation abgeschlossen ist. Alle Pakete müssen sich im aktiven Zustand befinden.
 >
->Vergewissern Sie sich, dass Sie - Boot Delegate RSA- und BouncyCastle-Bibliotheken hinzugefügt haben, wie in dieser [Installation von AEM Forms beschrieben.](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
+>Vergewissern Sie sich, dass Sie - Boot Delegate RSA- und BouncyCastle-Bibliotheken hinzugefügt haben, wie in dieser [Installation von AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html) beschrieben
 >
 >**Caveats für diese Demo**
 >
