@@ -25,11 +25,12 @@ Nach Abschluss dieses Kurses haben Sie Folgendes gelernt.
 
 * RDBMS-Datenmodell erstellen
 * Verknüpfung zwischen 2 Entitäten erstellen
-* Tabelle mit Daten füllen, die vom _get_ -Dienst des Formulardatenmodells zurückgegeben werden
+* Tabelle mit Daten füllen, die vom _get_-Dienst des Formulardatenmodells zurückgegeben werden
 * Anforderungsattribut des Formulardatenmodells verwenden
 
 
-[Live-Demonstration der Funktionen](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207): Das folgende Video gibt einen Überblick über den Kurs
+[Hier sehen Sie eine Live-Demo der ](https://forms.enablementadobe.com/content/dam/formsanddocuments/fdmwithrequestparameterinurl/jcr:content?wcmmode=disabled&amp;empID=207)
+FunktionenDas folgende Video gibt Ihnen einen Überblick über den Kurs
 >[!VIDEO](https://video.tv.adobe.com/v/36387/quality=9)
 
 ## Voraussetzungen
