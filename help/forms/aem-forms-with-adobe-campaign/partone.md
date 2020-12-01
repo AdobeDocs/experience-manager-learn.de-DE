@@ -20,11 +20,11 @@ ht-degree: 0%
 ---
 
 
-# JSON-WebToken und -Zugriffstoken erstellen {#generating-json-web-token-and-access-token}
+# Generieren von JSON-WebToken und -Zugriffstoken {#generating-json-web-token-and-access-token}
 
 In diesem Artikel wird der Code erläutert, der zum Generieren von JWT und Zugriffstoken für REST-Aufrufe an Adobe Campaign Standard erforderlich ist
 
-## JSON-WebToken erstellen {#generate-json-web-token}
+## JSON-WebToken {#generate-json-web-token} generieren
 
 Der erste Schritt bei der Verwendung der Adobe Campaign-API ist die Generierung von JWT. Es gibt zahlreiche Codebeispiele zum Generieren von JWT für ACS. Sie können diesem [Java-Codebeispiel](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java) folgen, um JWT zu generieren.
 
@@ -245,6 +245,6 @@ public class CampaignServiceImpl implements CampaignService {
  }
 ```
 
-## Zugriffstoken generieren {#generate-access-token}
+## Zugriffstoken {#generate-access-token} generieren
 
 Dann tauschen wir die generierte JWT gegen ein Zugriffstoken aus, indem wir einen POST-Aufruf durchführen. Dieses Zugriffstoken wird dann als Autorisierungsschlüssel in der HTTP-Kopfzeile für nachfolgende REST-Aufrufe gesendet
