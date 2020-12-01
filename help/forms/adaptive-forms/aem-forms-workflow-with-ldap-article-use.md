@@ -26,7 +26,7 @@ Zuweisen der AEM Forms Workflow-Aufgabe zum Manager des Absenders.
 
 Bei Verwendung des adaptiven Formulars im Arbeitsablauf AEM möchten Sie dem Manager des Formularübermittlers dynamisch eine Aufgabe zuweisen. Um diesen Anwendungsfall zu erreichen, müssen wir AEM mit Ldap konfigurieren.
 
-Die Schritte zum Konfigurieren von AEM mit LDAP werden hier [ausführlich erläutert.](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)
+Die zum Konfigurieren von AEM mit LDAP erforderlichen Schritte werden hier im Detail beschrieben.[](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)
 
 Für die Zwecke dieses Artikels füge ich Konfigurationsdateien an, die beim Konfigurieren von AEM mit Adobe LDAP verwendet werden. Diese Dateien sind im Paket enthalten, das mit dem Paketmanager importiert werden kann.
 
@@ -66,16 +66,16 @@ Wir erhalten die Person, die den Workflow initiiert hat. Dann erhalten wir den W
 
 Je nachdem, wie die Managereigenschaft in Ihrem LDAP gespeichert wird, müssen Sie möglicherweise einige Zeichenfolgen bearbeiten, um die Manager-ID abzurufen.
 
-Bitte lesen Sie diesen Artikel um Ihren eigenen ParticipantChooser zu implementieren [ .](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
+Bitte lesen Sie diesen Artikel, um Ihre eigenen [ ParticipantChooser zu implementieren.](https://helpx.adobe.com/experience-manager/using/dynamic-steps.html)
 
 Um dies auf Ihrem System zu testen (Für Adobe-Mitarbeiter können Sie dieses Beispiel standardmäßig verwenden)
 
 * [Laden Sie das SetValue-Bundle herunter und stellen Sie es bereit](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGI-Bundle zum Festlegen der Managereigenschaft.
 * [Herunterladen und Installieren des DevelopingWithServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* [Importieren Sie die mit diesem Artikel verknüpften Assets mit dem Paketmanager](assets/aem-forms-ldap.zip)in AEM. Als Teil dieses Pakets sind LDAP-Konfigurationsdateien, Arbeitsabläufe und ein adaptives Formular enthalten.
+* [Importieren Sie die mit diesem Artikel verknüpften Assets mit dem Paketmanager](assets/aem-forms-ldap.zip) in AEM. Als Teil dieses Pakets sind LDAP-Konfigurationsdateien, Arbeitsabläufe und ein adaptives Formular enthalten.
 * Konfigurieren Sie AEM mit Ihrem LDAP mit den entsprechenden LDAP-Anmeldeinformationen.
 * Melden Sie sich mit Ihren LDAP-Anmeldedaten bei AEM an.
-* Öffnen des [timeoffrequestform](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* Öffnen Sie das [timeoffrequestform](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * Füllen Sie das Formular aus und senden Sie es ab.
 * Der Manager des Absenders sollte das Formular zur Überprüfung abrufen.
 
