@@ -16,22 +16,22 @@ ht-degree: 3%
 ---
 
 
-# Best Practices für das Stilsystem{#understanding-style-organization-with-the-aem-style-system}
+# Grundlegendes zu den Best Practices des Stilsystems{#understanding-style-organization-with-the-aem-style-system}
 
 >[!NOTE]
 >
->Bitte lesen Sie den Inhalt unter [Erläuterungen zum Code für das Stilsystem](style-system-technical-video-understand.md), um ein Verständnis der BEM-ähnlichen Konventionen zu gewährleisten, die von AEM Style System verwendet werden.
+>Bitte lesen Sie den Inhalt unter [Informationen zum Code für das Stilsystem](style-system-technical-video-understand.md), um ein Verständnis der BEM-ähnlichen Konventionen sicherzustellen, die von AEM Style System verwendet werden.
 
 Es gibt zwei Hauptformate oder -stile, die für das AEM-Stilsystem implementiert sind:
 
 * **Layoutstile**
 * **Anzeigestile**
 
-**Layoutstile** wirken sich auf viele Elemente einer Komponente aus, um eine gut definierte und identifizierbare Darstellung (Entwurf und Layout) der Komponente zu erstellen und sie oft an einem bestimmten wiederverwendbaren Markenkonzept auszurichten. Beispielsweise kann eine Teaser-Komponente im klassischen kartenbasierten Layout, im horizontalen Promotionstil oder als Hero-Layout-Überlagerungstext auf einem Bild dargestellt werden.
+**Layout-** Stile wirken sich auf viele Elemente einer Komponente aus, um eine gut definierte und identifizierbare Darstellung (Design und Layout) der Komponente zu erstellen und sie oft an einem bestimmten wiederverwendbaren Markenkonzept auszurichten. Beispielsweise kann eine Teaser-Komponente im klassischen kartenbasierten Layout, im horizontalen Promotionstil oder als Hero-Layout-Überlagerungstext auf einem Bild dargestellt werden.
 
-**Anzeigeformate** wirken sich auf geringfügige Änderungen an Layoutstilen aus, ändern jedoch nicht die grundlegende Natur oder Absicht des Layoutstils. Ein Hero-Layoutstil kann beispielsweise Anzeigestile aufweisen, die das Farbschema vom primären Markenfarbschema zum sekundären Markenfarbschema ändern.
+**Anzeigestile** werden verwendet, um kleinere Änderungen an Layoutstilen zu beeinflussen. Sie ändern jedoch nicht die grundlegende Natur oder Absicht des Layoutstils. Ein Hero-Layoutstil kann beispielsweise Anzeigestile aufweisen, die das Farbschema vom primären Markenfarbschema zum sekundären Markenfarbschema ändern.
 
-## Best Practices für die Organisation {#style-organization-best-practices}
+## Best Practices für die Stilorganisation {#style-organization-best-practices}
 
 Beim Definieren der Stilnamen, die AEM Autoren zur Verfügung stehen, sollten Sie Folgendes tun:
 
@@ -49,47 +49,47 @@ Stilnamen oder die Optionen, die AEM Autoren angezeigt werden, und die implement
 
 Dadurch können Stiloptionen in einem Vokabular eindeutig beschriftet und von den AEM-Autoren verstanden werden, aber CSS-Entwickler können die CSS-Klassen zukünftig semantisch benennen. Beispiel:
 
-Eine Komponente muss die Optionen haben, die mit den **primären** und **sekundären** Farben der Marke farblich zu verfärben sind, die AEM jedoch die Farben als **grün** und **gelb** und nicht als Entwurfssprache primär und sekundär kennen.
+Eine Komponente muss über die Optionen verfügen, die mit den Farben **primary** und **secondary** farblich gekennzeichnet werden. Die AEM Autoren kennen die Farben jedoch eher als **green** und **gelb** als die Entwurfssprache primär und sekundär.
 
-Das AEM-Stilsystem kann diese farbigen Anzeigestile mithilfe von **Grün** - und **Gelb**-Bezeichnungen verfügbar machen, während es CSS-Entwicklern ermöglicht wird, die semantische Benennung von zu verwenden `.cmp-component--primary-color` `.cmp-component--secondary-color` und die tatsächliche Stilimplementierung in CSS zu definieren.
+Das AEM-Stilsystem kann diese Farbanzeigestile mit den Authoring-freundlichen Bezeichnungen **Green** und **Yellow** verfügbar machen, während es den CSS-Entwicklern ermöglicht wird, die tatsächliche Stilimplementierung in CSS mit der semantischen Benennung von `.cmp-component--primary-color` und `.cmp-component--secondary-color` zu definieren.
 
-Der Stilname von **Grün** wird zugeordnet `.cmp-component--primary-color`, und **Gelb** `.cmp-component--secondary-color`.
+Der Stilname von **Grün** wird `.cmp-component--primary-color` und **Gelb** bis `.cmp-component--secondary-color` zugeordnet.
 
-Wenn sich die Markenfarbe der Firma in der Zukunft ändert, müssen nur die einzelnen Implementierungen von und `.cmp-component--primary-color` `.cmp-component--secondary-color`sowie die Stilnamen geändert werden.
+Wenn sich die Markenfarbe der Firma in Zukunft ändert, müssen nur die einzelnen Implementierungen von `.cmp-component--primary-color` und `.cmp-component--secondary-color` sowie die Stilnamen geändert werden.
 
-## Die Teaser-Komponente als Beispiel {#the-teaser-component-as-an-example-use-case}
+## Die Teaser-Komponente als Beispiel für einen Verwendungsfall {#the-teaser-component-as-an-example-use-case}
 
 Im Folgenden finden Sie ein Beispiel für die Formatierung einer Teaser-Komponente mit mehreren verschiedenen Layout- und Anzeigestilen.
 
 Auf diese Weise wird untersucht, wie Stilnamen (denen Autoren zur Verfügung stehen) und wie die CSS-Unterklassen organisiert werden.
 
-### Konfiguration von Teaser-Komponentenstilen {#component-styles-configuration}
+### Komponentenstil-Konfiguration {#component-styles-configuration}
 
-Die folgende Abbildung zeigt die Konfiguration der [!UICONTROL Stile] für die Teaser-Komponente für die Varianten, die im Anwendungsfall erläutert werden.
+Die folgende Abbildung zeigt die Konfiguration [!UICONTROL Stile] für die Teaser-Komponente für die Varianten, die im Anwendungsfall erläutert werden.
 
-Die Namen der [!UICONTROL Stilgruppen] , Layout und Anzeige stimmen nach dem Glück mit den allgemeinen Konzepten von Anzeigestilen und Layoutstilen überein, die zur konzeptionellen Kategorisierung von Stiltypen in diesem Artikel verwendet werden.
+Die Namen, das Layout und die Ansicht der [!UICONTROL Stilgruppe] entsprechen zufällig den allgemeinen Konzepten von Anzeigestilen und Layoutstilen, die zur begrifflichen Kategorisierung von Stiltypen in diesem Artikel verwendet werden.
 
-Die [!UICONTROL Stilgruppennamen] und die Anzahl der [!UICONTROL Stilgruppen] sollten auf die Konventionen für die Komponentenverwendung und für die projektspezifische Komponentenformatierung zugeschnitten werden.
+Die Namen [!UICONTROL Stilgruppe] und die Anzahl der [!UICONTROL Stilgruppen] sollten auf die Konventionen für die Komponentenverwendung und den projektspezifischen Komponentenstil zugeschnitten sein.
 
-Beispielsweise könnte der Gruppenname für den **Anzeigestil** den Namen &quot; **Farben**&quot;erhalten haben.
+Beispielsweise könnte der Stilgruppenname **Display** **Colors** heißen.
 
 ![Stilgruppe anzeigen](assets/style-config.png)
 
-### Menü &quot;Stilauswahl&quot; {#style-selection-menu}
+### Stilauswahl Menü {#style-selection-menu}
 
-In der folgenden Abbildung sehen Sie die Interaktion der Autoren des [!UICONTROL Stilmenüs] , um die entsprechenden Stile für die Komponente auszuwählen. Beachten Sie, dass die [!UICONTROL Stilnamen] sowie die Stilnamen dem Autor angezeigt werden.
+In unten stehender Abbildung werden die Menüautoren [!UICONTROL Stil] angezeigt, mit denen die entsprechenden Stile für die Komponente interagiert werden. Beachten Sie, dass die Namen [!UICONTROL Style Grpi] sowie die Stilnamen dem Autor angezeigt werden.
 
 ![Dropdown-Menü &quot;Stil&quot;](assets/style-menu.png)
 
-### Default style {#default-style}
+### Standardstil {#default-style}
 
 Der Standardstil ist häufig der am häufigsten verwendete Komponentenstil und die standardmäßige, nicht formatierte Ansicht des Teasers, wenn sie einer Seite hinzugefügt wird.
 
-Abhängig von der Standardart kann die CSS direkt auf die `.cmp-teaser` (ohne Modifikatoren) oder auf eine `.cmp-teaser--default`Anwendung angewendet werden.
+Abhängig von der allgemeinen Eigenschaft des Standardstils kann das CSS direkt auf das `.cmp-teaser` (ohne Modifikatoren) oder auf ein `.cmp-teaser--default` angewendet werden.
 
-Wenn die Standard-Stilregeln häufiger als nicht für alle Varianten gelten, sollten Sie sie am besten `.cmp-teaser` als CSS-Klassen des Standardstils verwenden, da alle Varianten diese implizit übernehmen sollten, vorausgesetzt, es werden BEM-ähnliche Konventionen befolgt. Andernfalls sollten sie über den Standardmodifikator angewendet werden, z. B. `.cmp-teaser--default`, der wiederum dem Feld Standard-CSS-Klassen [der](#component-styles-configuration) Komponentenstil-Konfiguration hinzugefügt werden muss. Andernfalls müssen diese Stilregeln in jeder Variante außer Kraft gesetzt werden.
+Wenn die Standardstilregeln häufiger als nicht für alle Varianten gelten, sollten Sie `.cmp-teaser` als CSS-Klassen des Standardstils verwenden, da alle Varianten diese implizit übernehmen sollten, vorausgesetzt, es werden BEM-ähnliche Konventionen befolgt. Andernfalls sollten sie über den Standardmodifikator wie `.cmp-teaser--default` angewendet werden, der wiederum dem Feld [StandardCSS-Klassen](#component-styles-configuration) der Komponentenstil-Konfiguration hinzugefügt werden muss. Andernfalls müssen diese Stilregeln in jeder Variante außer Kraft gesetzt werden.
 
-Es ist sogar möglich, einen &quot;benannten&quot;Stil als Standardstil zuzuweisen, z. B. den unten `(.cmp-teaser--hero)` definierten Hero-Stil. Es ist jedoch klarer, den Standardstil für Implementierungen der `.cmp-teaser` oder `.cmp-teaser--default` CSS-Klasse zu implementieren.
+Es ist sogar möglich, einen &quot;benannten&quot;Stil als Standardstil zuzuweisen, z. B. den unten definierten Hero-Stil `(.cmp-teaser--hero)`. Es ist jedoch klarer, den Standardstil für die CSS-Klassenimplementierungen `.cmp-teaser` oder `.cmp-teaser--default` zu implementieren.
 
 >[!NOTE]
 >
@@ -110,14 +110,14 @@ Es ist sogar möglich, einen &quot;benannten&quot;Stil als Standardstil zuzuweis
 * **Layoutstil**
    * Default
 * **Anzeigeformat**
-   * Keine
-* **Effektive CSS-Klassen**: `.cmp-teaser--promo` oder `.cmp-teaser--default`
+   * Kein
+* **Effektive CSS-Klassen**:  `.cmp-teaser--promo` oder  `.cmp-teaser--default`
 
-### Werbeformat {#promo-style}
+### Promo-Stil {#promo-style}
 
-Der Layoutstil **&quot;** Promo&quot;wird verwendet, um hochwertige Inhalte auf der Site zu fördern. Er wird horizontal angeordnet, um einen Leerraum auf der Webseite aufzunehmen. Er muss mit Markenfarben formatiert sein, wobei der standardmäßige Promo-Layoutstil schwarzen Text verwendet.
+Der Layoutstil **Promo** wird verwendet, um hochwertigen Inhalt auf der Site zu fördern. Er wird horizontal angeordnet, um einen Leerraum auf der Webseite aufzunehmen. Er muss mit Markenfarben formatiert sein, wobei der standardmäßige Promo-Layoutstil schwarzen Text verwendet.
 
-Um dies zu erreichen, werden ein **Layoutstil** von **Promo** und die **Anzeigeformate** von **Grün** und **Gelb** im AEM für die Teaser-Komponente konfiguriert.
+Um dies zu erreichen, werden ein **Layoutstil** von **Promo** und die **Anzeigestile** von **Grün** und **Gelb** im AEM Stilsystem für die Teaser-Komponente konfiguriert.
 
 #### Promo-Standard
 
@@ -127,8 +127,8 @@ Um dies zu erreichen, werden ein **Layoutstil** von **Promo** und die **Anzeigef
    * Stilname: **Promo**
    * CSS-Klasse: `cmp-teaser--promo`
 * **Anzeigeformat**
-   * Keine
-* **Effektive CSS-Klassen**: `.cmp-teaser--promo`
+   * Kein
+* **Effektive CSS-Klassen**:  `.cmp-teaser--promo`
 
 #### Werbung Primär
 
@@ -140,7 +140,7 @@ Um dies zu erreichen, werden ein **Layoutstil** von **Promo** und die **Anzeigef
 * **Anzeigeformat**
    * Stilname: **Grün**
    * CSS-Klasse: `cmp-teaser--primary-color`
-* **Effektive CSS-Klassen**: `cmp-teaser--promo.cmp-teaser--primary-color`
+* **Effektive CSS-Klassen**:  `cmp-teaser--promo.cmp-teaser--primary-color`
 
 #### Werbung Sekundär
 
@@ -152,58 +152,58 @@ Um dies zu erreichen, werden ein **Layoutstil** von **Promo** und die **Anzeigef
 * **Anzeigeformat**
    * Stilname: **Gelb**
    * CSS-Klasse: `cmp-teaser--secondary-color`
-* **Effektive CSS-Klassen**: `cmp-teaser--promo.cmp-teaser--secondary-color`
+* **Effektive CSS-Klassen**:  `cmp-teaser--promo.cmp-teaser--secondary-color`
 
-### Rechtsbündiger Stil der Promo {#promo-r-align}
+### Promo Rechtsbündiger Stil {#promo-r-align}
 
-Der Layoutstil &quot; **Promo&quot;mit der rechten Ausrichtung** ist eine Variante des &quot;Promo&quot;-Stils, bei dem die Position des Bilds und des Textes (Bild rechts, Text links) durch den Stil umgekehrt wird.
+Der Layoutstil **Promo Rechtsbündig** ist eine Variante des Promo-Stils, der die Position des Bildes und des Texts (Bild rechts, Text links) durch den Stil spiegelt.
 
 Die richtige Ausrichtung ist im Kern ein Anzeigestil, der als Display-Stil in Verbindung mit dem Layout-Stil &quot;Promo&quot;in das AEM-Stilsystem eingegeben werden kann. Dies verstößt gegen die Best Practice bei:
 
 **Nur Stilkombinationen mit Effekt verfügbar machen**
 
-..die bereits im [Standardstil](#default-style)verletzt wurde.
+...die bereits im [Standardstil](#default-style) verletzt wurde.
 
 Da die rechte Ausrichtung nur den Promo-Layoutstil betrifft, nicht die anderen 2 Layoutstile: Standard und Hero können Sie eine neue Layoutstil-Promo (rechts ausgerichtet) erstellen, die die CSS-Klasse enthält, die den Inhalt der Promo-Layoutstile rechtsbündig ausrichtet: `cmp -teaser--alternate`.
 
 Diese Kombination mehrerer Stile zu einem einzelnen Stileintrag kann auch dazu beitragen, die Anzahl der verfügbaren Stile und Stilpermutationen zu reduzieren, was am besten zu minimieren ist.
 
-Beachten Sie, dass der Name der CSS-Klasse `cmp-teaser--alternate`nicht mit der Authoring-freundlichen Nomenklatur von &quot;rechts ausgerichtet&quot; übereinstimmen muss.
+Beachten Sie, dass der Name der CSS-Klasse `cmp-teaser--alternate` nicht mit der Authoring-freundlichen Nomenklatur von &quot;right align&quot;übereinstimmen muss.
 
 #### Promo, rechtsbündiger Standard
 
 ![rechts ausrichten](assets/promo-alternate-default.png)
 
 * **Layoutstil**
-   * Stilname: **Promo (rechts ausgerichtet)**
+   * Stilname: **Promo (Rechtsbündig)**
    * CSS-Klassen: `cmp-teaser--promo cmp-teaser--alternate`
 * **Anzeigeformat**
-   * Keine
-* **Effektive CSS-Klassen**: `.cmp-teaser--promo.cmp-teaser--alternate`
+   * Kein
+* **Effektive CSS-Klassen**:  `.cmp-teaser--promo.cmp-teaser--alternate`
 
 #### Werbung rechts ausgerichtet Primär
 
 ![Werbung rechts ausgerichtet Primär](assets/promo-alternate-primary.png)
 
 * **Layoutstil**
-   * Stilname: **Promo (rechts ausgerichtet)**
+   * Stilname: **Promo (Rechtsbündig)**
    * CSS-Klassen: `cmp-teaser--promo cmp-teaser--alternate`
 * **Anzeigeformat**
    * Stilname: **Grün**
    * CSS-Klasse: `cmp-teaser--primary-color`
-* **Effektive CSS-Klassen**: `.cmp-teaser--promo.cmp-teaser--alternate.cmp-teaser--primary-color`
+* **Effektive CSS-Klassen**:  `.cmp-teaser--promo.cmp-teaser--alternate.cmp-teaser--primary-color`
 
 #### Werbung rechts ausgerichtet Sekundär
 
 ![Werbung rechts ausgerichtet Sekundär](assets/promo-alternate-secondary.png)
 
 * **Layoutstil**
-   * Stilname: **Promo (rechts ausgerichtet)**
+   * Stilname: **Promo (Rechtsbündig)**
    * CSS-Klassen: `cmp-teaser--promo cmp-teaser--alternate`
 * **Anzeigeformat**
    * Stilname: **Gelb**
    * CSS-Klasse: `cmp-teaser--secondary-color`
-* **Effektive CSS-Klassen**: `.cmp-teaser--promo.cmp-teaser--alternate.cmp-teaser--secondary-color`
+* **Effektive CSS-Klassen**:  `.cmp-teaser--promo.cmp-teaser--alternate.cmp-teaser--secondary-color`
 
 ### Hero-Stil {#hero-style}
 
@@ -215,7 +215,7 @@ Pro Komponente wird der Stilname dem einzelnen Satz von CSS-Klassen zugeordnet. 
 
 Dies lässt sich durch Scoping der CSS-Regeln auf triviale Weise erreichen. Dies erfordert jedoch, dass die CSS-Entwickler verstehen, wie diese Permutationen AEM umgesetzt werden.
 
-CSS zum Färben des Hintergrundfarbens des **Promote** -Layoutstils mit der primären (grünen) Farbe:
+CSS zum Färben des Hintergrunds des Layoutstils **Promote** mit der primären (grünen) Farbe:
 
 ```css
 .cmp-teaser--promo.cmp-teaser--primary--color {
@@ -225,7 +225,7 @@ CSS zum Färben des Hintergrundfarbens des **Promote** -Layoutstils mit der prim
 }
 ```
 
-CSS zum Färben des Textes des **Hero** -Layoutstils mit der primären (grünen) Farbe:
+CSS zum Färben des Texts des Layoutstils **Hero** mit der primären (grünen) Farbe:
 
 ```css
 .cmp-teaser--hero.cmp-teaser--primary--color {
@@ -243,8 +243,8 @@ CSS zum Färben des Textes des **Hero** -Layoutstils mit der primären (grünen)
    * Stilname: **Hero**
    * CSS-Klasse: `cmp-teaser--hero`
 * **Anzeigeformat**
-   * Keine
-* **Effektive CSS-Klassen**: `.cmp-teaser--hero`
+   * Kein
+* **Effektive CSS-Klassen**:  `.cmp-teaser--hero`
 
 #### Hero Primär
 
@@ -256,7 +256,7 @@ CSS zum Färben des Textes des **Hero** -Layoutstils mit der primären (grünen)
 * **Anzeigeformat**
    * Stilname: **Grün**
    * CSS-Klasse: `cmp-teaser--primary-color`
-* **Effektive CSS-Klassen**: `cmp-teaser--hero.cmp-teaser--primary-color`
+* **Effektive CSS-Klassen**:  `cmp-teaser--hero.cmp-teaser--primary-color`
 
 #### Hero Sekundär
 
@@ -268,7 +268,7 @@ CSS zum Färben des Textes des **Hero** -Layoutstils mit der primären (grünen)
 * **Anzeigeformat**
    * Stilname: **Gelb**
    * CSS-Klasse: `cmp-teaser--secondary-color`
-* **Effektive CSS-Klassen**: `cmp-teaser--hero.cmp-teaser--secondary-color`
+* **Effektive CSS-Klassen**:  `cmp-teaser--hero.cmp-teaser--secondary-color`
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
