@@ -33,7 +33,7 @@ In diesem Video werden die folgenden, in AEM 6.5 eingeführten Aspekte des Workf
 + Benachrichtigen Sie Benutzer über eine QuickInfo zur Warnung, wenn Sie versuchen, ein OOTB-Workflow-Modell oder einen Starter zu bearbeiten.
 + Möglichkeit zur Wiederherstellung von Änderungen, die an einem OOTB Workflow Model oder Launchers vorgenommen wurden.
 
-In diesem Video wird [!DNL Workflow models] dieser Satz von Funktionen veranschaulicht, jedoch auch für [!DNL AEM Launchers]sie.
+In diesem Video wird [!DNL Workflow models] verwendet, um diesen Satz von Funktionen zu demonstrieren, sie gelten jedoch auch für [!DNL AEM Launchers].
 
 
 >[!NOTE]
