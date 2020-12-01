@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# Kopieren platzieren {#place-copy}
+# Place Copy {#place-copy}
 
 Erfahren Sie, wie Sie mit dem Vorgang &quot;Kopieren platzieren&quot;Assets aus AEM Assets verwenden.
 
