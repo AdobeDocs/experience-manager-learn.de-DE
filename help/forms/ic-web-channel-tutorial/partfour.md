@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Erstellen einer Web Kanal Dokument-Vorlage AEM Forms {#creating-web-channel-document-template-aem-forms}
+# Erstellen der Web Kanal-Dokument-Vorlage AEM Forms {#creating-web-channel-document-template-aem-forms}
 
 In diesem Teil erstellen wir eine Vorlage für Web-Kanal-Dokument.
 Erstellen einer Web Kanal-Dokument-Vorlage in AEM Forms 6.4
