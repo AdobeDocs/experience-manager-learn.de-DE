@@ -22,7 +22,7 @@ Die Benutzeroberfläche der Übersetzungskonfiguration ermöglicht es dem Benutz
 
 >[!NOTE]
 >
-> Das folgende Video wurde am AEM 6.3 aufgenommen. AEM 6.4+ führt eine neue Repository-Struktur zum Speichern der XML-Datei mit den Übersetzungsregeln ein. Bei Verwendung der Benutzeroberfläche der Übersetzungskonfiguration in AEM 6.4 und höher werden die Regeln am Speicherort gespeichert `/conf/global/settings/translation/rules/translation_rules.xml`. Weitere Informationen finden Sie unter [Identifizieren von zu übersetzenden](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html) Inhalten.
+> Das folgende Video wurde am AEM 6.3 aufgenommen. AEM 6.4+ führt eine neue Repository-Struktur zum Speichern der XML-Datei mit den Übersetzungsregeln ein. Bei Verwendung der Benutzeroberfläche der Übersetzungskonfiguration in AEM 6.4+ werden die Regeln am Speicherort `/conf/global/settings/translation/rules/translation_rules.xml` gespeichert. Weitere Informationen finden Sie unter [Identifizieren von zu übersetzenden Inhalten](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/18135/?quality=9&learn=on)
 
@@ -36,7 +36,7 @@ Der Übersetzungsregel-Editor, der die XML-Datei für die Übersetzung aktualisi
 
 Zugriff auf die Benutzeroberfläche der Übersetzungskonfiguration:
 
-* **[!UICONTROL Menü]AEM Beginn >[!UICONTROL Tools]>[!UICONTROL Allgemein]>[[!UICONTROL Übersetzungskonfiguration]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
+* **[!UICONTROL Menü]  AEM Beginn >  [!UICONTROL Extras]  >  [!UICONTROL Allgemein] >  [[!UICONTROL Übersetzungskonfiguration]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
 
 ## Vor AEM 6.3 {#prior-to-aem}
 
