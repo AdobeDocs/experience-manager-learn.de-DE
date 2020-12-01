@@ -42,7 +42,7 @@ Apache Sling Connection Pooled DataSource ist so konfiguriert, dass sie auf die 
 
 ![connectionPool](assets/storingdata.PNG)
 
-### Servlet erstellen {#create-servlet}
+### Servlet {#create-servlet} erstellen
 
 Im Folgenden sehen Sie den Code des Servlets, mit dem adaptive Formulardaten in die Datenbank eingefügt/aktualisiert werden. Die gepoolte DataSource für die Apache Sling-Verbindung wird mithilfe von AEM ConfigMgr konfiguriert und dasselbe wird in Zeile 26 referenziert. Der Rest des Codes ist ziemlich einfach. Der Code fügt entweder eine neue Zeile in die Datenbank ein oder aktualisiert eine vorhandene Zeile. Die gespeicherten Daten des adaptiven Formulars sind mit einer GUID verknüpft. Die gleiche GUID wird dann verwendet, um die Formulardaten zu aktualisieren.
 
@@ -410,11 +410,11 @@ $(document).ready(function()
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
 
-### Nachweis der Fähigkeit {#capability-demo}
+### Nachweis der Funktion {#capability-demo}
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=9&learn=on)
 
-#### Auf dem Server bereitstellen {#deploy-on-your-server}
+#### Auf dem Server {#deploy-on-your-server} bereitstellen
 
 Gehen Sie wie folgt vor, um diese Funktion auf Ihrer AEM Forms-Instanz zu testen
 
