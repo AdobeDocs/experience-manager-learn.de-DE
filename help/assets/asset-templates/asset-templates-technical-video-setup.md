@@ -16,7 +16,7 @@ ht-degree: 0%
 ---
 
 
-# Asset-Vorlagen mit AEM Assets und InDesign Server einrichten{#set-up-asset-templates-with-aem-assets-and-indesign-server}
+# Asset-Vorlagen mit AEM Assets und InDesign Server{#set-up-asset-templates-with-aem-assets-and-indesign-server} einrichten
 
 Mit Asset-Vorlagen können Marketingexperten digitale Assets für digitale und gedruckte Dokumente erstellen, verwalten und bereitstellen. Die Erstellung von Marketingbroschüren, Visitenkarten, Flyer, Anzeigen und Postkarten ist bei der Integration mit dem InDesign-Server wesentlich einfacher. Die Konfiguration des InDesign-Servers mit AEM wird in diesem Abschnitt behandelt.
 
@@ -28,7 +28,7 @@ Mit Asset-Vorlagen können Marketingexperten digitale Assets für digitale und g
 
 ## InDesign Server-Testversion herunterladen {#download-indesign-server-trial}
 
-Download-Website für [InDesign Server-Testversionen](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html)
+[Website zum Herunterladen der InDesign Server-Testversion](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html) herunterladen
 
 ## Starten von InDesign Server {#starting-indesign-server}
 
