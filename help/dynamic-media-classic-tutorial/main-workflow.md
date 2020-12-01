@@ -32,7 +32,7 @@ Der Arbeitsablauf in Lösungen von Dynamic Media Classic besteht aus drei Haupts
 
 Dies ist der Anfang des Workflows. In diesem Schritt erfassen oder erstellen Sie den Quellinhalt, der in den verwendeten Workflow passt, und laden ihn in Dynamic Media Classic hoch. Das System unterstützt mehrere Dateitypen für Bilder, Videos und Schriftarten, aber auch für PDF, Adobe Illustrator und Adobe InDesign.
 
-Lesen Sie die vollständige Liste der [unterstützten Dateitypen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats).
+Siehe die vollständige Liste von [Unterstützte Dateitypen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats).
 
 Sie können Quellinhalte auf verschiedene Arten hochladen:
 
@@ -45,31 +45,28 @@ Der Standardmodus ist &quot;Von Desktop&quot;, in dem Sie nach Dateien im lokale
 
 >[!TIP]
 >
->Fügen Sie Ihre Ordner nicht manuell hinzu. Führen Sie stattdessen einen Upload über FTP aus und verwenden Sie die Option &quot;Unterordner **einschließen&quot;** , um Ihre Ordnerstruktur in Dynamic Media Classic neu zu erstellen.
+>Fügen Sie Ihre Ordner nicht manuell hinzu. Führen Sie stattdessen einen Upload über FTP aus und verwenden Sie die Option **Unterordner** einschließen, um Ihre Ordnerstruktur in Dynamic Media Classic neu zu erstellen.
 
-Die beiden wichtigsten Upload-Optionen sind standardmäßig aktiviert — **Markieren Sie zur Veröffentlichung**, was wir vorhin besprochen haben, und **Überschreiben**. Überschreiben bedeutet, dass die neue Datei die vorhandene Version ersetzt, wenn die hochgeladene Datei denselben Namen wie eine bereits im System vorhandene Datei hat. Wenn Sie diese Option deaktivieren, wird die Datei möglicherweise nicht hochgeladen.
+Die beiden wichtigsten Upload-Optionen sind standardmäßig aktiviert — **Zur Veröffentlichung markieren**, was wir bereits besprochen haben, und **Überschreiben**. Überschreiben bedeutet, dass die neue Datei die vorhandene Version ersetzt, wenn die hochgeladene Datei denselben Namen wie eine bereits im System vorhandene Datei hat. Wenn Sie diese Option deaktivieren, wird die Datei möglicherweise nicht hochgeladen.
 
 ### Optionen beim Hochladen von Bildern überschreiben
 
 Es gibt vier Varianten der Option &quot;Bild überschreiben&quot;, die für die gesamte Firma festgelegt werden können, und diese werden häufig missverstanden. Kurz gesagt: Sie legen die Regeln so fest, dass Assets mit demselben Namen häufiger überschrieben werden sollen, oder Sie möchten, dass Überschreibungen seltener auftreten (in diesem Fall wird das neue Bild mit der Erweiterung &quot;-1&quot;oder &quot;-2&quot;umbenannt).
 
-- **Im aktuellen Ordner überschreiben, Name/Erweiterung**des Basisbilds.
-Diese Option ist die strengste Ersatzregel. Das Ersatzbild muss in den Ordner des Originalbilds hochgeladen werden und dieselbe Dateierweiterung haben wie das Originalbild. Wenn diese Voraussetzungen nicht erfüllt sind, wird ein Duplikat erstellt.
+- **Im aktuellen Ordner überschreiben, Name/Erweiterung** des Basisbilds. Diese Option ist die strengste Ersatzregel. Das Ersatzbild muss in den Ordner des Originalbilds hochgeladen werden und dieselbe Dateierweiterung haben wie das Originalbild. Wenn diese Voraussetzungen nicht erfüllt sind, wird ein Duplikat erstellt.
 
-- **Im aktuellen Ordner den gleichen Asset-Namen unabhängig von der Erweiterung**überschreiben.
+- **Im aktuellen Ordner den gleichen Asset-Namen unabhängig von der Erweiterung** überschreiben.
 Erfordert, dass Sie das Ersatzbild in denselben Ordner wie das Original hochladen, die Dateinamenerweiterung kann jedoch vom Original abweichen. Beispielsweise ersetzt &quot;Sessel.tif&quot;die Datei &quot;Sessel.jpg&quot;.
 
-- **Überschreiben Sie in einem beliebigen Ordner denselben Asset-Namen/dieselbe Erweiterung**.
-Erfordert, dass das Ersatzbild dieselbe Dateinamenerweiterung wie das Originalbild hat (z. B. muss &quot;Sessel.jpg&quot;die Datei &quot;Sessel.jpg&quot;ersetzen, nicht &quot;Sessel.tif&quot;). Sie können das Ersatzbild jedoch in einen anderen Ordner hochladen als den, in dem sich das Original befindet. Das hochgeladene Bild bleibt dann im neuen Ordner; die Datei befindet sich also nicht mehr am ursprünglichen Speicherort..
+- **Überschreiben Sie in einem beliebigen Ordner denselben Asset-Namen/dieselbe Erweiterung**. Erfordert, dass das Ersatzbild dieselbe Dateinamenerweiterung wie das Originalbild hat (z. B. muss &quot;Sessel.jpg&quot;die Datei &quot;Sessel.jpg&quot;ersetzen, nicht &quot;Sessel.tif&quot;). Sie können das Ersatzbild jedoch in einen anderen Ordner hochladen als den, in dem sich das Original befindet. Das hochgeladene Bild bleibt dann im neuen Ordner; die Datei befindet sich also nicht mehr am ursprünglichen Speicherort..
 
-- **Überschreiben Sie in jedem Ordner denselben Asset-Namen, unabhängig von der Erweiterung**.
-Diese Option ist die am meisten einschließende Ersatzregel. Sie können ein Ersatzbild in einen anderen Ordner hochladen als den, in dem sich das Originalbild befindet, und eine Datei mit einer anderen Dateierweiterung verwenden, um die Originaldatei zu ersetzen. Wenn sich die Originaldatei in einem anderen Ordner befindet, bleibt das Ersatzbild in dem neuen Ordner, in den es hochgeladen wurde.
+- **Überschreiben Sie in jedem Ordner denselben Asset-Namen, unabhängig von der Erweiterung**. Diese Option ist die am meisten einschließende Ersatzregel. Sie können ein Ersatzbild in einen anderen Ordner hochladen als den, in dem sich das Originalbild befindet, und eine Datei mit einer anderen Dateierweiterung verwenden, um die Originaldatei zu ersetzen. Wenn sich die Originaldatei in einem anderen Ordner befindet, bleibt das Ersatzbild in dem neuen Ordner, in den es hochgeladen wurde.
 
-Erfahren Sie mehr über die Option &quot;Bilder [überschreiben&quot;](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option).
+Erfahren Sie mehr über die Option [Bilder überschreiben](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option).
 
 Obwohl dies nicht erforderlich ist, können Sie beim Hochladen mit einer der beiden oben genannten Methoden Auftragsoptionen für den jeweiligen Upload angeben — — Um beispielsweise einen wiederkehrenden Upload zu planen, legen Sie beim Hochladen Optionen für das Beschneiden fest und viele andere Optionen. Diese können für einige Workflows nützlich sein, daher lohnt es sich zu überlegen, ob sie für Sie sein können.
 
-Erfahren Sie mehr über die [Auftragsoptionen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options).
+Erfahren Sie mehr über [Auftragsoptionen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options).
 
 Das Hochladen ist der erste notwendige Schritt in einem Workflow, da Dynamic Media Classic nicht mit Inhalten arbeiten kann, die sich noch nicht im System befinden. Hinter den Kulissen beim Hochladen registriert das System jedes hochgeladene Asset mit der zentralisierten Datenbank &quot;Dynamic Media Classic&quot;, weist eine ID zu und kopiert es in die Datenspeicherung. Darüber hinaus konvertiert das System Bilddateien in ein Format, das eine dynamische Größenanpassung und Zoom ermöglicht, und konvertiert Videodateien in das webfreundliche Format MP4.
 
@@ -98,7 +95,7 @@ Ebenso können Sie Ihr Übergeordnet-Quellvideo in Dynamic Media Classic hochlad
 
 **Es gibt zwar kein Minimum für die Bildgröße, es wird jedoch empfohlen, riesige Bilder hochzuladen.** Ein riesiges Bild kann als über 4000 Pixel angesehen werden. Beim Hochladen von Bildern dieser Größe können potenzielle Fehler wie Staubkörner oder Haarspüle im Bild auftreten. Solche Bilder nehmen auch mehr Platz auf dem Dynamic Media Classic-Server in Anspruch, was dazu führen kann, dass Sie Ihre vertraglich festgelegten Datenspeicherung übertreffen.
 
-Weitere Informationen zum [Hochladen von Dateien](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files).
+Erfahren Sie mehr über [Hochladen von Dateien](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files).
 
 ## Schritt 2: Autor (und Veröffentlichen)
 
@@ -128,7 +125,7 @@ Die folgende Syntax für die URL eines Bildes enthält einige Beispiele:
 
 In der URL ist alles links neben dem Fragezeichen der virtuelle Pfad zu einem bestimmten Bild. Alles rechts neben dem Fragezeichen befindet sich ein Image-Server-Modifikator, eine Anleitung zum Verarbeiten des Bildes. Wenn Sie mehrere Modifikatoren haben, werden diese durch ein kaufmännisches Und getrennt.
 
-Im ersten Beispiel ist der virtuelle Pfad zum Bild &quot;Backpack_A&quot; `http://sample.scene7.com/is/image/s7train/BackpackA`. Die Image-Server-Modifikatoren ändern die Größe des Bildes auf eine Breite von 250 Pixel (von wid=250) und berechnen das Bild mit dem Lanczos-Interpolationsalgorithmus, der beim Ändern der Größe scharfgezeichnet wird (von resMode=sharp2).
+Im ersten Beispiel lautet der virtuelle Pfad zum Bild &quot;Backpack_A&quot;`http://sample.scene7.com/is/image/s7train/BackpackA`. Die Image-Server-Modifikatoren ändern die Größe des Bildes auf eine Breite von 250 Pixel (von wid=250) und berechnen das Bild mit dem Lanczos-Interpolationsalgorithmus, der beim Ändern der Größe scharfgezeichnet wird (von resMode=sharp2).
 
 Das zweite Beispiel wendet das so genannte &quot;Bild-Vorgabe&quot;auf dasselbe Backpack_A-Bild an, wie es in $!_template300$. Die $-Symbole auf beiden Seiten des Ausdrucks weisen darauf hin, dass eine Bildvorgabe, ein zusammengesetzter Satz von Bildmodifikatoren, auf das Bild angewendet wird.
 
@@ -140,18 +137,18 @@ Neu hochgeladene und veröffentlichte Assets werden sofort angezeigt, während f
 
 Dies ist in der Regel kein Problem, es sei denn, es ist ein Fehler aufgetreten. Das Bild/Asset hat denselben Namen wie die zuvor veröffentlichte Version, es liegt jedoch ein Problem mit dem Bild vor. Sie haben beispielsweise versehentlich eine Version mit niedriger Auflösung hochgeladen oder Ihr Artdirektor hat das Bild nicht genehmigt. In diesem Fall sollten Sie das Originalbild zurückrufen und es mit derselben Asset-ID durch eine neue Version ersetzen.
 
-Erfahren Sie, wie Sie den Cache für die URLs, die aktualisiert werden müssen, [manuell löschen](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/invalidate-cdn-cached-content.html).
+Erfahren Sie, wie Sie den Cache für die URLs, die aktualisiert werden müssen, manuell löschen.[](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/invalidate-cdn-cached-content.html)
 
 >[!TIP]
 >
 >Um Probleme mit der Cache-Verzögerung zu vermeiden, sollten Sie immer vorgehen — einen Abend, einen Tag, zwei Wochen usw. Richten Sie rechtzeitig ein, um die Qualitätssicherung/Akzeptanz für interne Parteien sicherzustellen, damit diese Ihre Arbeit vor der Veröffentlichung Testversand haben. Selbst wenn Sie einen Abend vorher arbeiten, können Sie an diesem Abend Änderungen vornehmen und erneut veröffentlichen. Am Morgen sind die 10 Stunden vergangen und der Cache wird mit dem richtigen Bild aktualisiert.
 
-- Weitere Informationen zum [Erstellen eines Veröffentlichungsauftrags](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html#creating-a-publish-job).
-- Weitere Informationen zur [Veröffentlichung](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html).
+- Erfahren Sie mehr über [Erstellen eines Veröffentlichungsauftrags](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html#creating-a-publish-job).
+- Erfahren Sie mehr über [Veröffentlichung](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html).
 
 ## Schritt 3: Bereitstellung
 
-Denken Sie daran, dass das Endprodukt eines Arbeitsablaufs für Dynamic Media Classic eine URL ist, die auf das Asset verweist. Die URL kann auf ein einzelnes Bild, einen Bildsatz, ein Rotationsset oder eine andere Bildsatzsammlung oder ein Video verweisen. Sie müssen diese URL verwenden und etwas damit anfangen, z. B. Ihren HTML-Code so bearbeiten, dass die `<IMG>` -Tags auf das Bild von Dynamic Media Classic verweisen, anstatt auf ein Bild zu verweisen, das von Ihrer aktuellen Site stammt.
+Denken Sie daran, dass das Endprodukt eines Arbeitsablaufs für Dynamic Media Classic eine URL ist, die auf das Asset verweist. Die URL kann auf ein einzelnes Bild, einen Bildsatz, ein Rotationsset oder eine andere Bildsatzsammlung oder ein Video verweisen. Sie müssen diese URL verwenden und etwas damit anfangen, z. B. Ihren HTML-Code so bearbeiten, dass die `<IMG>`-Tags auf das Bild von Dynamic Media Classic zeigen, anstatt auf ein Bild zu verweisen, das von Ihrer aktuellen Site stammt.
 
 Im Bereitstellungsschritt müssen Sie diese URLs in Ihre Website, mobile App, E-Mail-Kampagne oder einen anderen digitalen Berührungspunkt integrieren, an dem Sie das Asset anzeigen möchten.
 
@@ -175,14 +172,14 @@ Beispiel eines Links (in rot), über den ein Bildsatz in einem Viewer in einem n
 
 ## Anzeigen von Assets in einer Vorschau
 
-Wahrscheinlich möchten Sie die hochgeladenen Assets oder die Assets, die Sie hochgeladen haben, erstellen oder bearbeiten, um sicherzustellen, dass sie bei der Ansicht durch Ihre Kunden wie gewünscht angezeigt werden. Sie können auf das Fenster &quot;Vorschau&quot;zugreifen, indem Sie auf eine beliebige Schaltfläche für die **Vorschau** klicken, entweder auf der Miniaturansicht des Assets, oben im **Durchsuchen-/Erstellenbedienfeld** oder über **Datei > Vorschau**. In einem Browserfenster wird jedes Asset, das sich derzeit im Bedienfeld befindet, Vorschau, unabhängig davon, ob es sich um ein Bild, ein Video oder ein erstelltes Asset wie ein Bildsatz handelt.
+Wahrscheinlich möchten Sie die hochgeladenen Assets oder die Assets, die Sie hochgeladen haben, erstellen oder bearbeiten, um sicherzustellen, dass sie bei der Ansicht durch Ihre Kunden wie gewünscht angezeigt werden. Sie können auf das Fenster &quot;Vorschau&quot;zugreifen, indem Sie auf die Schaltfläche **Vorschau** klicken, entweder auf der Miniaturansicht des Assets, oben im Fenster **Durchsuchen/Erstellen** oder unter **Datei > Vorschau**. In einem Browserfenster wird jedes Asset, das sich derzeit im Bedienfeld befindet, Vorschau, unabhängig davon, ob es sich um ein Bild, ein Video oder ein erstelltes Asset wie ein Bildsatz handelt.
 
 ### Vorschau der dynamischen Größe (Bildvorgaben)
 
-Mit der Vorschau &quot; **Größen** &quot;können Sie Ihre Bilder in verschiedenen Größen Vorschauen durchführen. Dadurch wird eine Liste der verfügbaren Bildvorgaben geladen. Wir werden später über Bildvorgaben diskutieren, aber denken Sie an &quot;Rezepte&quot; für das Laden Ihres Bildes in einer bestimmten Größe mit bestimmten Mengen an Scharfzeichnung und Bildqualität.
+Sie können Ihre Bilder mit der Vorschau **Größen** in mehreren Größen Vorschau haben. Dadurch wird eine Liste der verfügbaren Bildvorgaben geladen. Wir werden später über Bildvorgaben diskutieren, aber denken Sie an &quot;Rezepte&quot; für das Laden Ihres Bildes in einer bestimmten Größe mit bestimmten Mengen an Scharfzeichnung und Bildqualität.
 
 ### Zoom-Vorschau
 
-Sie können das Bild auch mit der **Zoomoption** in einer von vielen vordefinierten Zoomvorgaben, die auf verschiedenen Zoom-Viewern basieren, Vorschau haben.
+Sie können auch die Option **Zoom** verwenden, um Ihr Bild in einer von vielen vordefinierten Zoomvorgaben, die auf unterschiedlichen eingeschlossenen Zoom-Viewern basieren, Vorschau.
 
-Erfahren Sie mehr über die [Vorschau von Assets](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/managing-assets/previewing-asset.html).
+Erfahren Sie mehr über [Anzeigen einer Asset-Vorschau](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/managing-assets/previewing-asset.html).
