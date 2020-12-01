@@ -20,11 +20,11 @@ ht-degree: 0%
 ---
 
 
-# Generiert PDF-Dateien aus der HTML5-Formularübermittlung. {#generate-pdf-from-htm-form-submission}
+# Generiert PDF-Dateien aus der HTML5-Formularübermittlung {#generate-pdf-from-htm-form-submission}
 
-In diesem Artikel werden Sie durch die Schritte geführt, die beim Generieren von PDF-Dateien aus einer HTML5-Formularübermittlung (auch Mobile Forms genannt) erforderlich sind. In dieser Demo werden auch die Schritte erläutert, die zum Hinzufügen eines Bildes zum HTML5-Formular und zum Zusammenführen des Bildes in der endgültigen PDF-Datei erforderlich sind.
+Dieser Artikel führt Sie durch die Schritte zum Generieren von PDF-Dateien aus einer HTML5-Formularübermittlung (auch Mobile Forms genannt). In dieser Demo werden auch die Schritte erläutert, die zum Hinzufügen eines Bildes zum HTML5-Formular und zum Zusammenführen des Bildes in der endgültigen PDF-Datei erforderlich sind.
 
-Um eine Live-Demonstration dieser Funktion zu sehen, besuchen Sie den [Beispielserver](https://forms.enablementadobe.com/content/samples/samples.html?query=0) und suchen Sie nach &quot;Mobile Form To PDF&quot;.
+Um eine Live-Demonstration dieser Funktion anzuzeigen, besuchen Sie bitte den [Beispielserver](https://forms.enablementadobe.com/content/samples/samples.html?query=0) und suchen Sie nach &quot;Mobile Form To PDF&quot;.
 
 Um die gesendeten Daten mit der xdp-Vorlage zusammenzuführen, führen wir die folgenden Schritte aus
 
@@ -121,7 +121,7 @@ Gehen Sie wie folgt vor, um diese Funktion auf Ihrem eigenen Server zu testen:
 
 * [Laden Sie das mit diesem Artikel verknüpfte Paket herunter und installieren Sie es.](assets/pdf-from-mobile-form-submission.zip)
 
-* Vergewissern Sie sich, dass die Sende-URL und das HTML-Render-Profil korrekt eingestellt sind, indem Sie die Eigenschaftenseite der [xdp anzeigen](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
+* Vergewissern Sie sich, dass die Sende-URL und das HTML-Render-Profil korrekt eingestellt sind, indem Sie die Eigenschaftsseite von [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp) anzeigen
 
 * [Vorschau der XDP als HTML](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 
