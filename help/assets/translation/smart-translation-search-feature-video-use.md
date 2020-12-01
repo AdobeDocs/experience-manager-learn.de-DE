@@ -29,15 +29,15 @@ AEM Suche nach intelligenter Übersetzung ermöglicht es Benutzern, mithilfe von
 
 Die intelligente Übersetzungssuche ist ein perfektes Kompliment für AEM Smart Tags, die auf Assets in Englisch angewendet werden.
 
-In diesem Video wird davon ausgegangen, dass [AEM intelligente Übersetzungssuche](smart-translation-search-technical-video-setup.md) eingerichtet wurde.
+In diesem Video wird davon ausgegangen, dass [AEM Suche nach intelligenter Übersetzung](smart-translation-search-technical-video-setup.md) eingerichtet wurde.
 
-## Funktionsweise der Suche nach intelligenten Übersetzungen {#how-smart-translation-search-works}
+## Funktionsweise der Suche nach intelligenter Übersetzung {#how-smart-translation-search-works}
 
 ![Diagramm des intelligenten Übersetzungssuchablaufs](assets/smart-translation-search-flow.png)
 
 1. AEM Benutzer führt eine Volltextsuche durch und gibt einen lokalisierten Suchbegriff (z. der spanische Begriff &quot;Mann&quot;, &quot;hombre&quot;).
 2. Die intelligente Übersetzungssuche, die vom Apache Oak Machine Translation OSGi-Bundle bereitgestellt wird, wird aktiviert und bewertet, ob die angegebenen Suchbegriffe mit den registrierten Sprachpaketen übersetzt werden können.
-3. Alle übersetzten Begriffe aus Schritt 2 werden erfasst und die Abfrage wird intern erweitert, um sie als Suchbegriffe einzuschließen. Dieser erweiterte Satz von Suchbegriffen, wenn diese normal mit AEM Suchindizes ausgewertet werden, die relevante Übereinstimmungen finden.
+3. Alle übersetzten Begriffe aus Schritt 2 werden erfasst und die Abfrage wird intern erweitert, um sie als Suchbegriffe einzuschließen. Dieser erweiterte Satz von Suchbegriffen, wenn sie normal mit AEM Suchindizes ausgewertet werden, die relevante Übereinstimmungen finden.
 4. Die Suchergebnisse, die mit dem ursprünglichen Begriff (&#39;hombre&#39;) oder dem übersetzten Begriff (&#39;man&#39;) übereinstimmen, werden erfasst und dem Benutzer als Suchergebnisse zurückgegeben.
 
 ## Zusätzliche Ressourcen{#additional-resources}
