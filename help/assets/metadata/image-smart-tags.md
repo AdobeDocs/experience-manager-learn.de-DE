@@ -36,7 +36,7 @@ Stellen Sie vor der Verwendung des Smart Content Service Folgendes sicher, um ei
 * Es ist ein Adobe ID-Konto mit Administratorrechten für die Organisation vorhanden
 * Der Smart Content Service ist für Ihre Organisation aktiviert
 
-Im Video werden die folgenden Aufgaben erläutert, die zum Konfigurieren des Adoben-E/A-Smart Content-Dienstes erforderlich sind, der für Smart-Tag-Bilder verwendet wird.
+Im Video werden die folgenden Aufgaben erläutert, die zum Konfigurieren des Adobe I/O Smart Content-Dienstes erforderlich sind, der für Smart-Tag-Bilder verwendet wird.
 
 * Erstellen Sie in AEM eine Konfiguration für den Smart Content Service, um einen öffentlichen Schlüssel zu erstellen. Erhalten Sie ein öffentliches Zertifikat für die OAuth-Integration.
 * Erstellen Sie eine Integration in Adobe I/O und laden Sie den generierten öffentlichen Schlüssel hoch.
