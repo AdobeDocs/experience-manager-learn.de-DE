@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Tabelle zum Bedienfeld &quot;Kontostand&quot;hinzufügen{#adding-table-to-account-balance-panel}
+# Tabelle zum Kontoauszugsbedienfeld hinzufügen{#adding-table-to-account-balance-panel}
 
 In diesem Teil fügen wir eine Tabelle zum Bedienfeld Kontostand hinzu.
 
