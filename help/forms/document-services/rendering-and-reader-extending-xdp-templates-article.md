@@ -26,11 +26,11 @@ Ein gängiger Anwendungsfall besteht darin, xdp in PDF zu rendern und Reader Ext
 
 Wenn ein Benutzer beispielsweise im Forms Portal von AEM Forms auf XDP klickt, können wir XDP als PDF wiedergeben und die PDF-Datei durch Reader erweitern.
 
-Um diese Funktion zu testen, können Sie diesen [Link](https://forms.enablementadobe.com/content/samples/samples.html?query=0)ausprobieren. Der Beispielname lautet &quot;Render XDP with RE&quot;.
+Um diese Funktion zu testen, können Sie diesen [Link](https://forms.enablementadobe.com/content/samples/samples.html?query=0) ausprobieren. Der Beispielname lautet &quot;Render XDP with RE&quot;.
 
 Um diesen Verwendungsfall zu erreichen, müssen wir die folgenden Schritte ausführen.
 
-* hinzufügen das Reader Extensions-Zertifikat auf &quot;fd-service&quot;-Benutzer. Die Schritte zum Hinzufügen von Reader Extensions-Berechtigungen sind [hier aufgeführt](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html)
+* hinzufügen das Reader Extensions-Zertifikat auf &quot;fd-service&quot;-Benutzer. Die Schritte zum Hinzufügen der Berechtigung für Reader-Erweiterungen sind [hier](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html) aufgelistet
 
 * Erstellen Sie einen benutzerdefinierten OSGi-Dienst, der Verwendungsrechte wiedergibt und anwendet. Der Code, um dies zu erreichen, ist unten aufgeführt
 
@@ -123,7 +123,7 @@ public @interface DocSvcConfiguration {
 }
 ```
 
-## Servlet zum Streamen der PDF erstellen {#create-servlet-to-stream-the-pdf}
+## Erstellen eines Servlets zum Streamen der PDF {#create-servlet-to-stream-the-pdf}
 
 Im nächsten Schritt erstellen Sie ein Servlet mit einer GET, um dem Leser die erweiterte PDF-Datei zurückzugeben. In diesem Fall wird der Benutzer aufgefordert, die PDF-Datei in seinem Dateisystem zu speichern. Das liegt daran, dass die PDF-Datei als dynamisches PDF gerendert wird und die mit den Browsern mitgelieferten PDF-Viewer keine dynamischen PDF-Dateien verarbeiten.
 
