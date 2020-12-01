@@ -67,7 +67,7 @@ function consumeImage (file) {
 
 ### Auf dem Server bereitstellen
 
-* Laden Sie die [Clientbibliothek](assets/inline-image-client-library.zip) mit AEM Package Manager auf Ihre AEM-Instanz herunter und installieren Sie sie.
-* Laden Sie das [Musterformular](assets/inline-image-af.zip) mit AEM Package Manager auf Ihre AEM-Instanz herunter und installieren Sie es.
-* Verweisen Sie Ihren Browser auf [Hinzufügen Inline-Bild](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
+* Laden Sie die [Client-Bibliothek](assets/inline-image-client-library.zip) mit AEM Package Manager auf Ihre AEM-Instanz herunter und installieren Sie sie.
+* Laden Sie das [Beispielformular](assets/inline-image-af.zip) mit AEM Package Manager auf Ihre AEM-Instanz herunter und installieren Sie es.
+* Zeigen Sie Ihren Browser auf [Hinzufügen Inline-Bild](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
 * Klicken Sie auf die Schaltfläche &quot;Foto anhängen&quot;, um ein Bild hinzuzufügen.
