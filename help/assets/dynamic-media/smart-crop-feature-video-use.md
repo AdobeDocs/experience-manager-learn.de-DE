@@ -21,7 +21,7 @@ ht-degree: 13%
 ---
 
 
-# Using Smart Crop with AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
+# Verwenden von Smart-Zuschneiden mit AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
 
 Smart Crop nutzt Adobe Sensei, um zeitaufwendige und kostspielige Aufgaben beim Zuschneiden von Inhalten für reaktionsfähiges Design zu vermeiden.
 
@@ -29,7 +29,7 @@ Smart Crop nutzt Adobe Sensei, um zeitaufwendige und kostspielige Aufgaben beim 
 
 >[!NOTE]
 >
->Video geht davon aus, dass Ihre AEM-Instanz im Modus &quot;Dynamische Medien - S7&quot;ausgeführt wird. [Anweisungen zum Einrichten von AEM mit dynamischen Medien finden Sie hier.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>Video geht davon aus, dass Ihre AEM-Instanz im Modus Dynamische Medien S7 ausgeführt wird. [Anweisungen zum Einrichten von AEM mit dynamischen Medien finden Sie hier.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## Adobe Experience Managers Funktion zum Zuschneiden auf dynamische Medien umfasst
 
