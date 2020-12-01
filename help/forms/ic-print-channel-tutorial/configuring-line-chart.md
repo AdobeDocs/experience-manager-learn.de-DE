@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# Konfigurieren des Liniendiagramms für Ihr erstes interaktives Kommunikationsmittel-Dokument {#configuring-line-chart-for-your-first-interactive-communication-document}
+# Konfigurieren des Liniendiagramms für Ihr erstes interaktives Kommunikationsprogramm {#configuring-line-chart-for-your-first-interactive-communication-document}
 
 In diesem Teil fügen wir ein Liniendiagramm hinzu, um den Kontostand anzuzeigen.
 
