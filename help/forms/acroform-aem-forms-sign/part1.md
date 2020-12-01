@@ -29,7 +29,7 @@ Acroforms sind Formulare, die mit Acrobat erstellt wurden. Sie können ein neues
 
 >[!NOTE]
 >
->Wenn Sie das ausfüllbare Formular zur Unterzeichnung mit Adobe Sign senden möchten, benennen Sie die Felder entsprechend. Sie können beispielsweise ein Feld **Sig_es_:signer1:signature** benennen. Dies ist die Syntax, die Adobe Sign versteht.
+>Wenn Sie das ausfüllbare Formular zur Unterzeichnung mit Adobe Sign senden möchten, benennen Sie die Felder entsprechend. Sie könnten beispielsweise ein Feld **Sig_es_:signer1:signature** benennen. Dies ist die Syntax, die Adobe Sign versteht.
 
 >[!NOTE]
 >
