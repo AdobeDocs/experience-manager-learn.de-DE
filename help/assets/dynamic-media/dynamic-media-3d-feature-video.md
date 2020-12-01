@@ -23,12 +23,12 @@ Dank der Unterstützung für das dynamische 3D-Format für Adobe Experience Mana
 
 >[!VIDEO](https://video.tv.adobe.com/v/35156/?quality=9&learn=on)
 
-Sehen Sie sich den 3D [Dimensions Viewer](http://s7d1.scene7.com/s7viewers/html5/DimensionalViewer.html?asset=DynamicmediaNA1/canBlue-2&amp;config=DynamicmediaNA1/Dimensional&amp;serverUrl=http://s7d1.scene7.com/is/image/&amp;contenturl=http://s7d1.scene7.com/is/content/) hier an.
+Sehen Sie sich hier den 3D [Dimensional Viewer](http://s7d1.scene7.com/s7viewers/html5/DimensionalViewer.html?asset=DynamicmediaNA1/canBlue-2&amp;config=DynamicmediaNA1/Dimensional&amp;serverUrl=http://s7d1.scene7.com/is/image/&amp;contenturl=http://s7d1.scene7.com/is/content/) an.
 
 
 ## Verwenden des 3D-Experience Viewers
 
-* **Kamera** drehen: Um das Objekt zu umkreisen - Klicken Sie mit der linken Maustaste, ziehen Sie oder drücken Sie die Eingabetaste
-* **Kamera** schwenken: Zum Schwenken (Ansicht links, rechts, nach oben und unten) - Rechtsklick + Ziehen / Strg + Ziehen / Zwei Finger + Ziehen
+* **Kamera**  drehen: Um das Objekt zu umkreisen - Klicken Sie mit der linken Maustaste, ziehen Sie oder drücken Sie die Eingabetaste
+* **Kamera**  schwenken: Zum Schwenken (Ansicht links, rechts, nach oben und unten) - Rechtsklick + Ziehen / Strg + Ziehen / Zwei Finger + Ziehen
 * **Zoomkamera** : Zoom - Bildlaufrad oder Pinch
-* **Kamera** zurücksetzen/zentrieren: So zentrieren Sie das Objekt - Dublette oder Dublette Tippen
+* **Kamera**  zurücksetzen/zentrieren: So zentrieren Sie das Objekt - Dublette oder Dublette Tippen
