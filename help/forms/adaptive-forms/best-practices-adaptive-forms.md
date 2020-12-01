@@ -33,10 +33,10 @@ Mit Adobe Experience Manager (AEM) Forms können Sie komplexe Transaktionen in e
    * Namen können Buchstaben, Ziffern, Unterstriche und Dollarzeichen enthalten.
    * Namen müssen mit einem Brief beginnen
    * Bei Namen muss die Groß-/Kleinschreibung beachtet werden
-   * Reservierte Wörter (wie JavaScript-Suchbegriffe) können nicht als Namen verwendet werden. Achten Sie auf andere AF-spezifische reservierte Wörter wie &quot;panel&quot;, &quot;name&quot;.
+   * Reservierte Wörter (wie JavaScript-Suchbegriffe) können nicht als Namen verwendet werden. Achten Sie auf andere AF-spezifische reservierte Wörter wie   als &quot;panel&quot;,&quot;name&quot;.
    * Fügen Sie keine Bindestriche &quot;-&quot;in Ihren Namen ein
 * **Forms entwickeln**
-   * Formularfragmente sollten bei der Entwicklung großer Formulare berücksichtigt werden. Verzögertes Laden von Formularfragmenten für schnellere Ladezeiten aktivieren
+   * Formularfragmente sollten bei der Entwicklung großer Formulare berücksichtigt werden. Verzögertes Laden von Formularfragmenten für schnelleres Laden aktivieren   times
    * **DataModel**
       * Es wird empfohlen, adaptives Formular mit dem entsprechenden Datenmodell zu verknüpfen
    * **Objekt-Ereignis**
