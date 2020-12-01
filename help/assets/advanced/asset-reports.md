@@ -54,7 +54,7 @@ Die folgenden Formeln werden im Video verwendet, um das Diagramm Assets nach Gr√
 =COUNTIFS(E2:E1000,">= 200000", E2:E1000,"<= 500000")
 ```
 
-#### Mehr als 500 KB {#greater-than-kb}
+#### Gr√∂√üer als 500 KB {#greater-than-kb}
 
 ```
 =COUNTIFS(E2:E1000,"> 500000")
@@ -62,4 +62,4 @@ Die folgenden Formeln werden im Video verwendet, um das Diagramm Assets nach Gr√
 
 ## Zus√§tzliche Ressourcen{#additional-resources}
 
-Excel-Datei [mit Diagramm herunterladen](./assets/asset-reports/all-assets.xlsx)
+[Alle Assets Excel-Datei mit Diagramm](./assets/asset-reports/all-assets.xlsx) herunterladen
