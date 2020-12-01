@@ -64,12 +64,12 @@ _Benutzeroberfläche von Dynamic Media Classic_
 
 >[!IMPORTANT]
 >
->Neben jeder Asset-ID befindet sich der **Schalter &quot;Zur Veröffentlichung** markieren&quot;. Wenn der Umschalter aktiviert ist (grün), gibt dies an, dass das Asset zur Veröffentlichung markiert ist.
+>Neben jeder Asset-ID befindet sich der Umschalter **Zur Veröffentlichung markieren**. Wenn der Umschalter aktiviert ist (grün), gibt dies an, dass das Asset zur Veröffentlichung markiert ist.
 
 ![image](assets/overview/overview-mark-for-publish.png)
 
 >[!TIP]
 >
->Aktivieren Sie im Dialogfeld &quot;Hochladen&quot;das Kontrollkästchen &quot;Nach dem Hochladen **veröffentlichen** &quot;, um Assets beim Hochladen automatisch zu veröffentlichen.
+>Aktivieren Sie im Dialogfeld &quot;Hochladen&quot;das Kontrollkästchen **Nach dem Hochladen veröffentlichen, um Assets beim Hochladen automatisch zu veröffentlichen.**
 
-Weitere Informationen zum [Navigieren in der Benutzeroberfläche von Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/getting-started/navigation-basics.html).
+Weitere Informationen zum Navigieren in der Benutzeroberfläche von Dynamic Media Classic[.](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/getting-started/navigation-basics.html)
