@@ -31,13 +31,13 @@ Es gibt drei dynamische Regelsätze, die für ein bestimmtes Metadatenfeld aktiv
 
 2. **Sichtbarkeit** : Felder können immer sichtbar oder nur sichtbar sein, je nach Wert eines anderen Dropdown-Felds.
 
-3. **Auswahlmöglichkeiten** : (nur auf Dropdown-Felder anwendbar) filtern Sie die Auswahlmöglichkeiten, die dem Benutzer basierend auf dem aktuell ausgewählten Wert eines anderen Dropdown-Felds angezeigt werden.
+3. **Optionen** : (nur auf Dropdown-Felder anwendbar) filtern Sie die Auswahlmöglichkeiten, die dem Benutzer basierend auf dem aktuell ausgewählten Wert eines anderen Dropdown-Felds angezeigt werden.
 
 >[!NOTE]
 >
 >Kaskadenregeln können NUR basierend auf den Werten eines Dropdown-Felds erstellt werden. Es ist möglich, alle drei Regelsätze auf dasselbe Metadatenfeld anzuwenden. Es empfiehlt sich jedoch, jeden Regelsatz von derselben Metadaten-Dropdown-Liste abhängig zu machen.
 
-Herunterladen [des Pakets für benutzerdefinierte Metadaten](assets/cascade-metadata-values-001.zip)
+[Benutzerdefiniertes Metadatenpaket](assets/cascade-metadata-values-001.zip) herunterladen
 
 ## Zusätzliche Ressourcen{#additional-resources}
 
