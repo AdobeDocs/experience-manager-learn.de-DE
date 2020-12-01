@@ -19,7 +19,7 @@ ht-degree: 6%
 
 # Client-Bibliothek erstellen
 
-Erstellen Sie eine [Client-Bibliothek](https://docs.adobe.com/content/help/de-DE/experience-manager-65/developing/introduction/clientlibs.html) , die den Code zum Aufrufen der Methode `doAjaxSubmitWithFileAttachment` der `guideBridge` API im click-Ereignis der Schaltfläche enthält, die durch die CSS-Klasse- **Speicherung** identifiziert wird.  Wir geben die Daten des adaptiven Formulars `fileMap`und den `mobileNumber` an den Endpunkt weiter, der beim `**/bin/storeafdatawithattachments`
+Erstellen Sie [client lib](https://docs.adobe.com/content/help/de-DE/experience-manager-65/developing/introduction/clientlibs.html), die den Code zum Aufrufen der `doAjaxSubmitWithFileAttachment`-API für das click-Ereignis der Schaltfläche enthält, das von der CSS-Klasse **savebutton** identifiziert wird.  `guideBridge`  Die adaptiven Formulardaten `fileMap` und `mobileNumber` werden an den Endpunkt weitergeleitet, der `**/bin/storeafdatawithattachments` überwacht
 
 Nach dem Speichern der Formulardaten wird eine eindeutige Anwendungs-ID generiert und dem Benutzer in einem Dialogfeld angezeigt. Wenn das Dialogfeld geschlossen wird, wird der Benutzer zum Formular weitergeleitet, damit er das gespeicherte adaptive Formular mit der eindeutigen Anwendungs-ID abrufen kann.
 
@@ -67,6 +67,6 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> Wir haben [Bootbox JavaScript-Bibliothek](http://bootboxjs.com/examples.html) zum Anzeigen des Dialogfelds verwendet
+> Wir haben [Bootbox-Javascript-Bibliothek](http://bootboxjs.com/examples.html) verwendet, um das Dialogfeld anzuzeigen
 
-Die in diesem Beispiel verwendeten Client-Bibliotheken können hier [heruntergeladen werden](assets/client-libraries.zip)
+Die in diesem Beispiel verwendeten Clientbibliotheken können [von hier heruntergeladen werden](assets/client-libraries.zip)
