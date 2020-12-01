@@ -19,7 +19,7 @@ ht-degree: 71%
 
 # Erste Schritte mit dem AEM SPA-Editor und React {#spa-react-tutorial}
 
-+ [Übersicht](overview.md)
++ [Überblick](overview.md)
 + [SPA Editor Project](create-project.md)
 + [SPA integrieren](integrate-spa.md)
 + [Zuordnen SPA Komponenten](map-components.md)
