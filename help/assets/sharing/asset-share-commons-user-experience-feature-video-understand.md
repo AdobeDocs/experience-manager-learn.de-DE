@@ -21,7 +21,7 @@ ht-degree: 1%
 ---
 
 
-# Einführung in das Benutzererlebnis von Asset-Freigabe-Commons{#understanding-asset-share-commons}
+# Einführung in das Benutzererlebnis von Commons zum Teilen von Assets{#understanding-asset-share-commons}
 
 Eine Kurzzusammenstellung zu den Benutzern und Authoring-Erlebnissen von Asset Share Commons.
 
