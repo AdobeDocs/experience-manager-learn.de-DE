@@ -27,7 +27,7 @@ AEM Videoplayer für dynamische Medien, der zur Unterstützung des adaptiven Vid
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
 
-## Schneller Überblick über den Videoplayer ohne Flash {#quick-look-into-non-flash-video-player}
+## Schneller Einblick in den Videoplayer für Nicht-Flash {#quick-look-into-non-flash-video-player}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
 
