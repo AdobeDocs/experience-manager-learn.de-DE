@@ -33,7 +33,7 @@ In diesem Video werden die folgenden Funktionen und Funktionen behandelt:
    * Bearbeiten
    * Layout
    * Entwickler
-   * Timewarp  
+   * Timewarp 
 * Funktionen des Seiteneditors
    * Komponentensuche
    * Asset-Suche
