@@ -28,7 +28,7 @@ Das Adobe Experience Manager Style System ermöglicht visuelle Variationen von K
 
 In diesem Video wird gezeigt, wie das Stilsystem genutzt werden kann, um deutlich unterschiedliche visuelle Darstellungen für eine einzelne Komponente zu erstellen, wobei nur CSS verwendet wird.
 
-Die angezeigten Stile werden von der [WKND-Anwendung](https://github.com/adobe/aem-guides-wknd)bereitgestellt. Diese Stile werden als CSS definiert und erfordern keine Änderungen an der Backend-Logik der Komponente, dem HTML-Skript oder dem Sling-Modell.
+Die angezeigten Stile werden von der [WKND-Anwendung](https://github.com/adobe/aem-guides-wknd) bereitgestellt. Diese Stile werden als CSS definiert und erfordern keine Änderungen an der Backend-Logik der Komponente, dem HTML-Skript oder dem Sling-Modell.
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
