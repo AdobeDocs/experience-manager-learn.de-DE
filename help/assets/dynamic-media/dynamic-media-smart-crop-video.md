@@ -19,7 +19,7 @@ ht-degree: 0%
 ---
 
 
-# Verwenden der intelligenten Zuschneidung für dynamische Medien für Videos {#using-smart-crop-video}
+# Verwenden von &quot;Dynamic Media Smart Crop&quot;für Video {#using-smart-crop-video}
 
 Beim dynamischen Medien-Smart-Zuschneiden für Videos wird Adobe Sensei verwendet, um den Point-of-Interest im Video intelligent zu verfolgen und sicherzustellen, dass Videos in allen Bildschirmgrößen optimal dargestellt werden.
 
