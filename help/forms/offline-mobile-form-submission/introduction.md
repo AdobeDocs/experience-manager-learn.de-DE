@@ -27,7 +27,7 @@ Um diesen Verwendungsfall zu erreichen, müssen wir die folgenden Schritte ausf�
 * Verarbeiten der PDF-Übermittlung von Acrobat/Reader
 * Auslösen des Adobe Experience Manager (AEM)-Workflows zum Überprüfen der gesendeten PDF
 
-Dieses Lernprogramm führt Sie durch die Schritte, die zur Durchführung des oben genannten Anwendungsfalls erforderlich sind. Beispielcode und Assets zu diesem Tutorial sind hier [verfügbar.](part-four.md)
+Dieses Lernprogramm führt Sie durch die Schritte, die zur Durchführung des oben genannten Anwendungsfalls erforderlich sind. Beispielcode und Assets zu diesem Tutorial sind [hier verfügbar.](part-four.md)
 
 Das folgende Video gibt Ihnen einen Überblick über den Verwendungsfall
 
