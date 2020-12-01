@@ -38,15 +38,15 @@ In diesem Video wird das Einrichten der Pipeline für das Programm in Cloud Mana
 
 ## Fehlerhafte Pipeline-Ausführung
 
-In diesem Video wird die Ausführung der CI/CD-Pipeline mithilfe von Code untersucht, der die erforderlichen Qualitätsprüfungen von Cloud Manager nicht erfolgreich durchführt, und zwar mithilfe der **[!DNL yellow]** Repository-Verzweigung.
+In diesem Video wird die Ausführung der CI/CD-Pipeline mithilfe von Code untersucht, der die erforderlichen Qualitätsprüfungen von Cloud Manager fehlschlägt, und zwar mithilfe der Repository-Verzweigung **[!DNL yellow]**.
 
 >[!VIDEO](https://video.tv.adobe.com/v/23084/?quality=12&learn=on)
 
 ## Erfolgreiche Pipeline-Ausführung
 
-In diesem Video wird die erfolgreiche Ausführung der CI/CD-Pipeline mithilfe von Code untersucht, der die erforderlichen Qualitätsprüfungen von Cloud Manager mithilfe der **[!DNL master]** Repository-Verzweigung durchläuft.
+In diesem Video wird die erfolgreiche Ausführung der CI/CD-Pipeline mithilfe von Code untersucht, der die erforderlichen Qualitätsprüfungen von Cloud Manager mithilfe der Repository-Verzweigung **[!DNL master]** durchläuft.
 
-Dieses Video berührt auch die [!UICONTROL Aktivität] -Konsole in Cloud Manager, die den erneuten Zugriff auf aktive Ausführungen oder die Überprüfung abgeschlossener oder fehlgeschlagener Ausführung ermöglicht.
+Dieses Video berührt auch die Konsole [!UICONTROL Aktivität] in Cloud Manager, die den erneuten Zugriff auf aktive Ausführungen oder die Überprüfung abgeschlossener oder fehlgeschlagener Ausführung ermöglicht.
 
 >[!VIDEO](https://video.tv.adobe.com/v/23085/?quality=12&learn=on)
 
