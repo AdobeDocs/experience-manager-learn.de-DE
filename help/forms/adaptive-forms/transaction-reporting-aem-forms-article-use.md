@@ -41,7 +41,7 @@ Melden Sie sich zur Ansicht des Transaktionsberichts als Administrator bei AEM F
 
 Tools auswählen | Forms | Ansicht-Transaktionsbericht
 
-oder Ansicht des Transaktionsberichts durch Klicken [hier](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
+oder Ansicht des Transaktionsberichts durch Klicken auf [hier](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
 
 ![TransctionReporting](assets/transactionreporting.gif)
 
@@ -53,5 +53,5 @@ Aktionen wie das Senden eines PDF-Formulars, die Verwendung der Agent-Benutzerob
 
 Wenn Sie den Transaktionsbericht auf der Autoreninstanz anzeigen, stellen Sie sicher, dass die umgekehrte Replizierung auf allen Veröffentlichungsinstanzen konfiguriert ist.
 
-Weitere Informationen zum Berichte von Transaktionen [erhalten Sie hier](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
+Um mehr über den Transaktions-Berichte [zu erfahren, klicken Sie bitte hier](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
 
