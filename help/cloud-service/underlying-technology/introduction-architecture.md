@@ -17,8 +17,8 @@ ht-degree: 0%
 ---
 
 
-# Einführung in den AEM {#introduction-architecture}
+# Einführung in den AEM Architecture Stack {#introduction-architecture}
 
-Stellt die Technologien von [!DNL OSGi], [!DNL JCR], [!DNL Oak]und [!DNL Sling] als Teil von Adobe Experience Managers Technologiestapel vor.
+Stellt die Technologien von [!DNL OSGi], [!DNL JCR], [!DNL Oak] und [!DNL Sling] als Teil des Adobe Experience Manager-Technologiestapels vor.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32034/?quality=12&learn=on)
