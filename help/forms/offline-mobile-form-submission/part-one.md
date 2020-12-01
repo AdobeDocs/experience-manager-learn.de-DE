@@ -20,9 +20,9 @@ ht-degree: 0%
 
 # Benutzerdefiniertes Profil erstellen
 
-In diesem Teil erstellen wir ein [benutzerspezifisches Profil.](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) Ein Profil ist für die Wiedergabe der XDP als HTML verantwortlich. Für die Wiedergabe von XDP-Dateien als HTML wird standardmäßig ein Profil bereitgestellt. Es stellt eine benutzerdefinierte Version des Mobile Forms Rendition-Dienstes dar. Mit dem Mobile Form Rendition-Dienst können Sie Erscheinungsbild, Verhalten und Interaktionen des Mobile Forms anpassen. In unserem benutzerspezifischen Profil erfassen wir die Daten, die im Mobile Form mit der guidebridge API ausgefüllt werden. Diese Daten werden dann an ein benutzerdefiniertes Servlet gesendet, das dann eine interaktive PDF generiert und an die aufrufende Anwendung zurückgesendet wird.
+In diesem Teil erstellen wir ein [benutzerdefiniertes Profil.](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) Ein Profil ist für die Wiedergabe der XDP als HTML verantwortlich. Für die Wiedergabe von XDP-Dateien als HTML wird standardmäßig ein Profil bereitgestellt. Es stellt eine benutzerdefinierte Version des Mobile Forms Rendition-Dienstes dar. Mit dem Mobile Form Rendition-Dienst können Sie Erscheinungsbild, Verhalten und Interaktionen des Mobile Forms anpassen. In unserem benutzerspezifischen Profil erfassen wir die Daten, die im Mobile Form mit der guidebridge API ausgefüllt werden. Diese Daten werden dann an ein benutzerdefiniertes Servlet gesendet, das dann eine interaktive PDF generiert und an die aufrufende Anwendung zurückgesendet wird.
 
-Rufen Sie die Formulardaten mit der `formBridge` JavaScript-API ab. Wir verwenden die `getDataXML()` Methode:
+Rufen Sie die Formulardaten mit der JavaScript-API ab. `formBridge` Wir verwenden die `getDataXML()`-Methode:
 
 ```javascript
 window.formBridge.getDataXML({success:suc,error:err});
@@ -61,7 +61,7 @@ var suc = function(obj) {
 
 ## Interaktive PDF generieren
 
-Im Folgenden finden Sie den Servlet-Code, der für die Wiedergabe interaktiver PDF und die Rückgabe der PDF an die aufrufende Anwendung verantwortlich ist. Das Servlet ruft die `mobileFormToInteractivePdf` Methode des benutzerdefinierten DocumentServices OSGi-Dienstes auf.
+Im Folgenden finden Sie den Servlet-Code, der für die Wiedergabe interaktiver PDF und die Rückgabe der PDF an die aufrufende Anwendung verantwortlich ist. Das Servlet ruft die Methode `mobileFormToInteractivePdf` des benutzerdefinierten DocumentServices OSGi-Dienstes auf.
 
 ```java
 import java.io.File;
@@ -123,7 +123,7 @@ public class GenerateInteractivePDF extends SlingAllMethodsServlet {
 
 ### Interaktive PDF rendern
 
-Im folgenden Code wird die [Forms-Dienst-API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) verwendet, um interaktive PDF-Dateien mit den Daten des mobilen Formulars wiederzugeben.
+Im folgenden Code wird die [Forms-Dienst-API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) verwendet, um interaktive PDF-Dateien mit den Daten aus dem mobilen Formular wiederzugeben.
 
 ```java
 public Document mobileFormToInteractivePdf(Document xmlData,String path) {
@@ -146,7 +146,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-Zur Ansicht der Möglichkeit, interaktive PDF-Dateien von teilweise ausgefüllten Formularen für Mobilgeräte herunterzuladen, klicken [Sie bitte hier](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content).
+Zur Ansicht der Möglichkeit, interaktive PDF-Dateien von teilweise ausgefüllten mobilen Formularen herunterzuladen, klicken Sie [hier](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content).
 Nach dem Herunterladen der PDF-Datei müssen Sie die PDF-Datei senden, um einen AEM Workflow auszulösen. In diesem Arbeitsablauf werden die Daten aus der gesendeten PDF zusammengeführt und nicht interaktive PDF zur Überprüfung generiert.
 
 Das für diesen Anwendungsfall erstellte benutzerdefinierte Profil steht als Teil dieser Übungselemente zur Verfügung.
