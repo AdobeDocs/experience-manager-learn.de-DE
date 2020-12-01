@@ -1,6 +1,6 @@
 ---
 title: Adobe IMS-Benutzer und AEM
-description: Benutzer, die Zugriff auf den AEM Author-Dienst benötigen, werden in der Admin Console der Adobe als IMS-Adobe verwaltet. Erfahren Sie, welche Adobe IMS-Benutzer sind und wie sie in der Admin Console aufgerufen und verwaltet werden.
+description: Benutzer, die Zugriff auf den AEM Author-Dienst benötigen, werden in der Admin Console der Adobe als Adobe-IMS-Benutzer verwaltet. Erfahren Sie, welche Adobe IMS-Benutzer sind und wie sie in der Admin Console aufgerufen und verwaltet werden.
 feature: users-and-groups
 topics: authentication
 version: cloud-service
@@ -20,7 +20,7 @@ ht-degree: 12%
 
 # Adobe IMS-Benutzer
 
-Benutzer, die Zugriff auf den AEM Author-Dienst benötigen, werden als IMS- [Adoben](https://helpx.adobe.com/de/enterprise/using/set-up-identity.html) in der Admin Console [der](https://adminconsole.adobe.com)Adobe verwaltet. Erfahren Sie, welche Adobe IMS-Benutzer sind und wie sie in der Admin Console aufgerufen und verwaltet werden.
+Benutzer, die Zugriff auf den AEM Author-Dienst benötigen, werden als [Adobe IMS-Benutzer](https://helpx.adobe.com/de/enterprise/using/set-up-identity.html) in [Admin Console der Adobe](https://adminconsole.adobe.com) verwaltet. Erfahren Sie, welche Adobe IMS-Benutzer sind und wie sie in der Admin Console aufgerufen und verwaltet werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/39149/?quality=12&learn=on)
 
