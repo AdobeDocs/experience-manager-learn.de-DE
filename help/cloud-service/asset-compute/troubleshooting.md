@@ -1,6 +1,6 @@
 ---
-title: Fehlerbehebung bei der Erweiterbarkeit von Asset Compute für AEM Assets
-description: Im Folgenden finden Sie eine Übersicht über häufig auftretende Probleme und Fehler sowie die entsprechenden Lösungen, die bei der Entwicklung und Bereitstellung von benutzerdefinierten Asset Compute-Mitarbeitern für AEM Assets auftreten können.
+title: Fehlerbehebung bei der Asset compute-Erweiterbarkeit für AEM Assets
+description: Im Folgenden finden Sie eine Übersicht über häufig auftretende Probleme und Fehler sowie die entsprechenden Lösungen, die beim Entwickeln und Bereitstellen von benutzerdefinierten Asset compute-Workern für AEM Assets auftreten können.
 feature: asset-compute
 topics: renditions, metadata, development
 version: cloud-service
@@ -18,60 +18,60 @@ ht-degree: 0%
 ---
 
 
-# Fehlerbehebung bei der Erweiterbarkeit von Asset Compute
+# Fehlerbehebung bei Asset compute-Erweiterbarkeit
 
-Im Folgenden finden Sie eine Übersicht über häufig auftretende Probleme und Fehler sowie die entsprechenden Lösungen, die bei der Entwicklung und Bereitstellung von benutzerdefinierten Asset Compute-Mitarbeitern für AEM Assets auftreten können.
+Im Folgenden finden Sie eine Übersicht über häufig auftretende Probleme und Fehler sowie die entsprechenden Lösungen, die beim Entwickeln und Bereitstellen von benutzerdefinierten Asset compute-Workern für AEM Assets auftreten können.
 
 ## Entwicklung{#develop}
 
-### Darstellung wird teilweise gezeichnet/beschädigt zurückgegeben{#rendition-returned-partially-drawn-or-corrupt}
+### Die Darstellung wird teilweise gezeichnet/beschädigt zurückgegeben{#rendition-returned-partially-drawn-or-corrupt}
 
 + __Fehler__: Die Darstellung wird unvollständig (wenn ein Bild beschädigt ist) oder beschädigt dargestellt und kann nicht geöffnet werden.
 
    ![Darstellung wird teilweise gezeichnet zurückgegeben](./assets/troubleshooting/develop__await.png)
 
-+ __Ursache__: Die `renditionCallback` Funktion des Arbeitnehmers wird beendet, bevor die Darstellung vollständig in geschrieben werden kann `rendition.path`.
-+ __Auflösung__: Überprüfen Sie den benutzerdefinierten Worker-Code und stellen Sie sicher, dass alle asynchronen Aufrufe synchron mit `await`erfolgen.
++ __Ursache__: Die  `renditionCallback` Funktion des Arbeitnehmers wird beendet, bevor die Darstellung vollständig in geschrieben werden kann  `rendition.path`.
++ __Auflösung__: Überprüfen Sie den benutzerdefinierten Worker-Code und stellen Sie sicher, dass alle asynchronen Aufrufe synchron mit  `await`erfolgen.
 
 ## Entwicklungstool{#development-tool}
 
 ### Falscher YAML-Einzug in manifest.yml{#incorrect-yaml-indentation}
 
-+ __Fehler:__ YAMLException: Ungültiger Einzug eines Zuordnungseintrags in Zeile X, Spalte Y:(über `aio app run` Befehl &quot;Standard ab&quot;)
-+ __Ursache:__ Yaml-Dateien haben weiße Abstände, der Einzug ist wahrscheinlich nicht korrekt.
-+ __Lösung:__ Überprüfen Sie Ihren Einzug `manifest.yml` und stellen Sie sicher, dass er korrekt ist.
++ __Fehler:__ YAMLException: Ungültiger Einzug eines Zuordnungseintrags in Zeile X, Spalte Y:(über Standard ab  `aio app run` Befehl)
++ __Ursache:__ Bei Yaml-Dateien wird der Einzug in weißen Abständen angezeigt. Der Einzug ist wahrscheinlich nicht korrekt.
++ __Lösung:__ Überprüfen Sie Ihren Einzug  `manifest.yml` und stellen Sie sicher, dass er korrekt ist.
 
-### memorySize limit ist zu niedrig eingestellt{#memorysize-limit-is-set-too-low}
+### memorySize limit ist auf low{#memorysize-limit-is-set-too-low} eingestellt
 
-+ __Fehler:__  Local Dev Server OpenWhiskError: PUT https://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true HTTP 400 (Ungültige Anforderung) zurückgegeben —> &quot;Der Anforderungsinhalt war fehlerhaft:Anforderung fehlgeschlagen: Speicher 64 MB unter dem zulässigen Schwellenwert von 134217728 B&quot;
-+ __Ursache:__ Ein `memorySize` Grenzwert für den Arbeiter im `manifest.yml` wurde unter dem erlaubten Mindestschwellenwert festgelegt, der von der Fehlermeldung in Byte angegeben wurde.
-+ __Lösung:__  Überprüfen Sie die `memorySize` Grenzwerte in der `manifest.yml` und stellen Sie sicher, dass sie alle größer als der erlaubte Mindestschwellenwert sind.
++ __Fehler:OpenWhiskError für__  lokalen Dev-Server: PUT https://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true HTTP 400 (Ungültige Anforderung) zurückgegeben —> &quot;Der Anforderungsinhalt war fehlerhaft:Anforderung fehlgeschlagen: Speicher 64 MB unter dem zulässigen Schwellenwert von 134217728 B&quot;
++ __Ursache:__ Eine  `memorySize` Beschränkung für den Arbeiter im  `manifest.yml` wurde unter dem erlaubten Mindestschwellenwert festgelegt, wie in der Fehlermeldung in Byte angegeben.
++ __Lösung:__  Überprüfen Sie die  `memorySize` Grenzwerte in der  `manifest.yml` und stellen Sie sicher, dass sie alle den erlaubten Mindestschwellenwert überschreiten.
 
-### Entwicklungstool kann aufgrund fehlender privater.key-Elemente nicht Beginn werden{#missing-private-key}
+### Das Entwicklungstool kann aufgrund fehlender privater.key{#missing-private-key}-Zeichenfolge nicht Beginn werden
 
-+ __Fehler:__ Local Dev ServerError: Erforderliche Dateien bei validatePrivateKeyFile fehlen.... (über &quot;Standard out from `aio app run` command&quot;)
-+ __Ursache:__ Der `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` Wert in der `.env` Datei verweist nicht auf den aktuellen Benutzer `private.key` `private.key` oder ist für diesen nicht lesbar.
-+ __Lösung:__ Überprüfen Sie den `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` Wert in der `.env` Datei und stellen Sie sicher, dass er den vollständigen, absoluten Pfad zum `private.key` Dateisystem enthält.
++ __Fehler:__ Local Dev ServerError: Erforderliche Dateien bei validatePrivateKeyFile fehlen.... (über den Standardabgleich von `aio app run`-Befehl)
++ __Ursache:__ Der  `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` Wert in der  `.env` Datei verweist nicht auf  `private.key` oder  `private.key` ist vom aktuellen Benutzer nicht lesbar.
++ __Auflösung:__ Überprüfen Sie den  `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` Wert in der  `.env` Datei und stellen Sie sicher, dass er den vollständigen, absoluten Pfad zum  `private.key` Dateisystem enthält.
 
 ### Dropdown-Liste der Quelldateien falsch{#source-files-dropdown-incorrect}
 
-Das Asset Compute Development Tool kann einen Status eingeben, in dem statische Daten abgerufen werden, und ist im Dropdown-Menü __Quelldatei__ mit falschen Elementen am auffälligsten.
+asset compute Development Tool kann einen Status eingeben, in dem statische Daten abgerufen werden. Am auffälligsten ist dies bei der Dropdown-Liste __Quelldatei__, in der falsche Elemente angezeigt werden.
 
-+ __Fehler:__ Das Dropdown-Menü Quelldatei enthält falsche Elemente.
-+ __Ursache:__ Der Status &quot;Nicht im Cache gespeicherter Browser&quot;verursacht
-+ __Lösung:__ In Ihrem Browser löschen Sie vollständig den &quot;Anwendungszustand&quot; des Browser-Tab, den Browser-Cache, die lokale Datenspeicherung und den Service-Mitarbeiter.
++ __Fehler: Im Dropdown-Menü__ Quelldatei werden falsche Elemente angezeigt.
++ __Ursache:Der__ Status &quot;Blocker Cache&quot;verursacht die
++ __Lösung:__ Im Browser müssen Sie den &quot;Anwendungszustand&quot;, den Browser-Cache, die lokale Datenspeicherung und den Service-Mitarbeiter der Browser-Registerkarte vollständig löschen.
 
 ### Fehlender oder ungültiger Parameter für die devToolToken-Abfrage{#missing-or-invalid-devtooltoken-query-parameter}
 
-+ __Fehler:__ Benachrichtigung &quot;Nicht autorisiert&quot;im Asset Computing Development Tool
++ __Fehler:__  Benachrichtigung &quot;Nicht autorisiert&quot;im Asset compute Development Tool
 + __Ursache:__ `devToolToken` fehlt oder ist ungültig
-+ __Lösung:__ Schließen Sie das Browserfenster des Tools für die Asset-Berechnung, beenden Sie alle laufenden Entwicklungstool-Prozesse, die über den `aio app run` Befehl initiiert wurden, und starten Sie das Beginn-Entwicklungstool (unter Verwendung `aio app run`).
++ __Lösung:__ Schließen Sie das Browserfenster des Asset compute Development Tool, beenden Sie alle laufenden Entwicklungstool-Prozesse, die über den  `aio app run` Befehl initiiert wurden, und starten Sie das Development Tool erneut (unter Verwendung  `aio app run`).
 
 ### Quelldateien können nicht entfernt werden{#unable-to-remove-source-files}
 
 + __Fehler:__ Es gibt keine Möglichkeit, hinzugefügte Quelldateien aus der Benutzeroberfläche der Entwicklungstools zu entfernen
-+ __Ursache:__ Diese Funktion wurde nicht implementiert.
-+ __Lösung:__ Melden Sie sich bei Ihrem Cloud-Anbieter für Datenspeicherung mit den unter `.env`&quot;Anmeldeinformationen&quot;definierten Anmeldeinformationen an. Suchen Sie den Container, der von den Entwicklungstools verwendet wird (siehe auch `.env`), navigieren Sie zum __Quellordner__ und löschen Sie alle Quellbilder. Möglicherweise müssen Sie die in der Dropdown-Liste [Quelldateien beschriebenen Schritte falsch](#source-files-dropdown-incorrect) ausführen, wenn die gelöschten Quelldateien weiterhin im Dropdown-Menü angezeigt werden, da sie lokal im &quot;Anwendungszustand&quot;der Entwicklungstools zwischengespeichert werden.
++ __Ursache:__ Diese Funktion wurde nicht implementiert
++ __Lösung:__ Melden Sie sich mit den in  `.env`definierten Anmeldeinformationen bei Ihrem Cloud-Datenspeicherung-Provider an. Suchen Sie den Container, der von den Entwicklungstools verwendet wird (auch in `.env` angegeben), navigieren Sie zum Ordner __source__ und löschen Sie alle Quellbilder. Möglicherweise müssen Sie die unter [Dropdown-Liste &quot;Quelldateien&quot;beschriebenen Schritte ausführen, die nicht korrekt](#source-files-dropdown-incorrect) sind, wenn die gelöschten Quelldateien weiterhin im Dropdown-Menü angezeigt werden, da sie lokal im &quot;Anwendungszustand&quot;der Entwicklungstools zwischengespeichert werden können.
 
    ![Microsoft Azure Blob Storage](./assets/troubleshooting/dev-tool__remove-source-files.png)
 
@@ -80,19 +80,19 @@ Das Asset Compute Development Tool kann einen Status eingeben, in dem statische 
 ### Keine Darstellung während der Testausführung generiert{#test-no-rendition-generated}
 
 + __Fehler:__ Fehler: Keine Darstellung generiert.
-+ __Ursache:__ Der Arbeiter konnte aufgrund eines unerwarteten Fehlers, z. B. eines JavaScript-Syntaxfehlers, keine Darstellung erstellen.
-+ __Lösung:__ Überprüfen Sie die Testausführung `test.log` unter `/build/test-results/test-worker/test.log`. Suchen Sie den Abschnitt in dieser Datei, der dem fehlerhaften Testfall entspricht, und überprüfen Sie, ob Fehler vorliegen.
++ __Ursache:__ Der Arbeiter konnte aufgrund eines unerwarteten Fehlers wie einem JavaScript-Syntaxfehler keine Darstellung erstellen.
++ __Lösung:__ Überprüfen Sie die Testausführung  `test.log` unter  `/build/test-results/test-worker/test.log`. Suchen Sie den Abschnitt in dieser Datei, der dem fehlerhaften Testfall entspricht, und überprüfen Sie, ob Fehler vorliegen.
 
    ![Fehlerbehebung - Keine Darstellung generiert](./assets/troubleshooting/test__no-rendition-generated.png)
 
 ### Test generiert eine falsche Darstellung, wodurch der Test fehlschlägt{#tests-generates-incorrect-rendition}
 
 + __Fehler:__ Fehler: Darstellung &#39;rendition.xxx&#39; nicht wie erwartet.
-+ __Ursache:__ Der Worker gibt eine Darstellung aus, die nicht mit der im Testfall `rendition.<extension>` bereitgestellten identisch war.
-   + Wenn die erwartete `rendition.<extension>` Datei nicht genau so erstellt wird wie die lokal generierte Darstellung im Testfall, schlägt der Test möglicherweise fehl, da die Bits etwas voneinander abweichen können. Wenn beispielsweise der Asset Compute-Mitarbeiter den Kontrast mithilfe von APIs ändert und das erwartete Ergebnis durch Anpassen des Kontrasts in Adobe Photoshop CC erstellt wird, können die Dateien gleich aussehen, aber kleinere Variationen der Bits können unterschiedlich sein.
-+ __Lösung:__ Überprüfen Sie die Ausgabe der Darstellung aus dem Test, indem Sie zu dieser Datei navigieren `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`und sie mit der erwarteten Darstellungsdatei im Testfall vergleichen. So erstellen Sie ein exakt erwartetes Asset:
++ __Ursache:__ Der Arbeiter gibt eine Darstellung aus, die nicht mit der im Testfall  `rendition.<extension>` bereitgestellten identisch war.
+   + Wenn die erwartete `rendition.<extension>`-Datei nicht genau so erstellt wird wie die lokal generierte Darstellung im Testfall, schlägt der Test möglicherweise fehl, da die Bits etwas voneinander abweichen können. Wenn der Asset compute-Worker beispielsweise den Kontrast mithilfe von APIs ändert und das erwartete Ergebnis durch Anpassen des Kontrasts in Adobe Photoshop CC erstellt wird, können die Dateien gleich aussehen, aber kleinere Varianten der Bits können unterschiedlich sein.
++ __Auflösung:__ Überprüfen Sie die Ausgabe der Darstellung vom Test, indem Sie zu navigieren  `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`und sie mit der erwarteten Darstellungsdatei im Testfall vergleichen. So erstellen Sie ein exakt erwartetes Asset:
    + Verwenden Sie das Entwicklungstool, um eine Darstellung zu erstellen, zu überprüfen, ob sie korrekt ist, und verwenden Sie diese als erwartete Darstellungsdatei
-   + Oder überprüfen Sie die testgenerierte Datei auf `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`, überprüfen Sie sie auf ihre Richtigkeit und verwenden Sie sie als erwartete Darstellungsdatei.
+   + Oder überprüfen Sie die testgenerierte Datei bei `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`, überprüfen Sie sie auf ihre Richtigkeit und verwenden Sie sie als erwartete Darstellungsdatei.
 
 ## Debug
 
@@ -101,33 +101,33 @@ Das Asset Compute Development Tool kann einen Status eingeben, in dem statische 
 
 + __Fehler__: Fehlerverarbeitungsstart: Fehler: Verbindung zur Debug-Zielgruppe konnte nicht hergestellt werden...
 + __Ursache__: Docker Desktop wird nicht auf dem lokalen System ausgeführt. Überprüfen Sie dies, indem Sie die VS-Code-Debug-Konsole (Ansicht > Debug-Konsole) überprüfen und bestätigen, dass dieser Fehler gemeldet wird.
-+ __Auflösung__: Beginn [Docker Desktop und überprüfen Sie, ob die erforderlichen Docker-Bilder installiert](./set-up/development-environment.md#docker)sind.
++ __Auflösung__: Beginn  [Docker Desktop und überprüfen Sie, ob die erforderlichen Docker-Bilder installiert](./set-up/development-environment.md#docker) sind.
 
 ### Haltepunkte werden nicht angehalten{#breakpoints-no-pausing}
 
-+ __Fehler__: Beim Ausführen des Assets Compute-Workers über das debug-fähige Entwicklungstool wird der VS-Code an Haltepunkten nicht angehalten.
++ __Fehler__: Beim Ausführen des Asset compute-Workers über das debug-fähige Entwicklungstool wird der VS-Code an Haltepunkten nicht angehalten.
 
 #### VS-Code-Debugger nicht angehängt{#vs-code-debugger-not-attached}
 
 + __Ursache:__ Der VS-Code-Debugger wurde angehalten/getrennt.
-+ __Lösung:__ Starten Sie den VS-Code-Debugger neu und überprüfen Sie, ob er angehängt wird, indem Sie die Konsole &quot;VS-Code-Debug-Ausgabe&quot;(&quot;Ansicht&quot;> &quot;Debug-Konsole&quot;) aufrufen.
++ __Auflösung:__ Starten Sie den VS-Code-Debugger neu und überprüfen Sie, ob er angehängt wird, indem Sie die Konsole &quot;VS-Code-Debug-Ausgabe&quot;(Ansicht > Debug-Konsole)
 
-#### VS-Code-Debugger nach Beginn der Arbeitsausführung angehängt{#vs-code-debugger-attached-after-worker-execution-began}
+#### VS-Code-Debugger angehängt, nachdem die Ausführung des Arbeitnehmers begonnen hat{#vs-code-debugger-attached-after-worker-execution-began}
 
-+ __Ursache:__ Der VS-Code-Debugger wurde nicht angehängt, bevor auf In Entwicklungstool __ausführen__ getippt wurde.
-+ __Lösung:__ Vergewissern Sie sich, dass der Debugger angehängt wurde, indem Sie die Debug-Konsole des VS-Codes (Ansicht > Debug-Konsole) überprüfen und dann den Asset-Compute-Mitarbeiter aus dem Entwicklungstool erneut ausführen.
++ __Ursache:__ Der VS-Code-Debugger wurde nicht vor dem Tippen auf das  ____ Runin Development Tool angehängt.
++ __Lösung:__ Vergewissern Sie sich, dass der Debugger angehängt wurde, indem Sie die Debug-Konsole des VS-Codes (Ansicht > Debug-Konsole) überprüfen und dann den Asset compute-Worker aus dem Entwicklungstool erneut ausführen.
 
-### Zeitüberschreitung beim Debugging{#worker-times-out-while-debugging}
+### Worker-Timeout beim Debugging{#worker-times-out-while-debugging}
 
-+ __Fehler__: Debug-Konsolenberichte &quot;Action will timeout in -XXX Millisekunden&quot;oder [Asset Compute Development Tool&#39;s](./develop/development-tool.md) Darstellungs-Vorschau dreht sich unendlich oder
-+ __Ursache__: Der in der Datei [manifest.yml](./develop/manifest.md) definierte Worker-Timeout wird während des Debuggens überschritten.
-+ __Auflösung__: Erhöhen Sie vorübergehend den Timeout des Workers in der [Datei manifest.yml](./develop/manifest.md) oder beschleunigen Sie das Debugging-Aktivitäten.
++ __Fehler__: Debug-Konsolenberichte &quot;Action will timeout in -XXX Millisekunden&quot;oder die  [Ausgabeformations-Vorschau des ](./develop/development-tool.md) Asset compute-Entwicklungstools drehen sich unendlich oder
++ __Ursache__: Das Zeitlimit des Workers, wie in  [manifest.](./develop/manifest.md) ymlis definiert, wurde während des Debuggens überschritten.
++ __Auflösung__: Erhöhen Sie vorübergehend die Zeitüberschreitung des Workers in den  [Aktivitäten manifest.](./develop/manifest.md) ymlor, um das Debugging zu beschleunigen.
 
-### Debug-Prozess kann nicht beendet werden{#cannot-terminate-debugger-process}
+### Debug-Prozess{#cannot-terminate-debugger-process} kann nicht beendet werden
 
-+ __Fehler__: `Ctrl-C` in der Befehlszeile wird der Debugger-Prozess nicht beendet (`npx adobe-asset-compute devtool`).
-+ __Ursache__: Ein Fehler in `@adobe/aio-cli-plugin-asset-compute` 1.3.x führt dazu, dass `Ctrl-C` er nicht als beendet erkannt wird.
-+ __Auflösung__: Update `@adobe/aio-cli-plugin-asset-compute` auf Version 1.4.1+
++ __Fehler__:  `Ctrl-C` in der Befehlszeile wird der Debugger-Prozess nicht beendet (`npx adobe-asset-compute devtool`).
++ __Ursache__: Ein Fehler in  `@adobe/aio-cli-plugin-asset-compute` 1.3.x führt dazu, dass der Befehl zum Beenden  `Ctrl-C` nicht erkannt wird.
++ __Auflösung__: Aktualisierung  `@adobe/aio-cli-plugin-asset-compute` auf Version 1.4.1+
 
    ```
    $ aio update
@@ -139,22 +139,22 @@ Das Asset Compute Development Tool kann einen Status eingeben, in dem statische 
 
 ### Benutzerdefinierte Darstellung fehlt im Asset in AEM{#custom-rendition-missing-from-asset}
 
-+ __Fehler:__ Neue und erneut verarbeitete Assets werden erfolgreich verarbeitet, die benutzerdefinierte Darstellung fehlt jedoch
++ __Fehler:__ Neue und erneut verarbeitete Assets werden erfolgreich verarbeitet, aber die benutzerdefinierte Darstellung fehlt
 
 #### Verarbeitendes Profil, das nicht auf übergeordneten Ordner angewendet wird
 
-+ __Ursache:__ Das Asset ist nicht in einem Ordner mit dem Verarbeitungsordner vorhanden, das den benutzerdefinierten Worker verwendet
-+ __Lösung:__ Anwenden des Profils &quot;Verarbeitung&quot;auf einen übergeordneten Ordner des Assets
++ __Ursache:__ Das Asset ist nicht in einem Ordner mit dem Verarbeitungsordner vorhanden, in dem der benutzerdefinierte Worker verwendet wird
++ __Auflösung:__ Wenden Sie das Profil &quot;Verarbeitung&quot;auf einen übergeordneten Ordner des Assets an
 
 #### Profil wird durch Profil der unteren Verarbeitung ersetzt
 
-+ __Ursache:__ Das Asset befindet sich unter einem Ordner, auf den das benutzerdefinierte Worker Processing-Profil angewendet wurde. Zwischen diesem Ordner und dem Asset wurde jedoch ein anderes Profil für die Verarbeitung angewendet, das den Kundenarbeiter nicht verwendet.
-+ __Lösung:__ Kombinieren oder auf andere Weise abgleichen Sie die beiden VerarbeitungsProfil und entfernen Sie das Profil für die Zwischenverarbeitung
++ __Ursache:__ Das Asset befindet sich unter einem Ordner, auf den das benutzerdefinierte Worker Processing-Profil angewendet wurde. Es wurde jedoch ein anderes Verarbeitungsordner angewendet, das den Kundendienstmitarbeiter nicht verwendet, und das Asset wurde mit diesem Profil verknüpft.
++ __Auflösung:__ Kombinieren oder anderweitig abgleichen Sie die beiden verarbeitenden Profil und entfernen Sie das Profil für die Zwischenverarbeitung
 
-### Die Asset-Verarbeitung schlägt in AEM fehl{#asset-processing-fails}
+### Die Elementverarbeitung schlägt bei AEM{#asset-processing-fails} fehl
 
-+ __Fehler:__ Asset-Verarbeitung Fehlgeschlagene Markierung für Asset angezeigt
++ __Fehler: Fehler bei der__ Asset-Verarbeitung: Markierung für Asset fehlgeschlagen
 + __Ursache:__ Bei der Ausführung des benutzerdefinierten Workers ist ein Fehler aufgetreten
-+ __Lösung:__ Befolgen Sie die Anweisungen zum [Debugging von Adobe I/O Runtime-Aktivierungen](./test-debug/debug.md#aio-app-logs) mit `aio app logs`.
++ __Lösung:__ Befolgen Sie die Anweisungen zum  [Debugging von Adobe I/O Runtime-](./test-debug/debug.md#aio-app-logs) Aktivierungen  `aio app logs`.
 
 
