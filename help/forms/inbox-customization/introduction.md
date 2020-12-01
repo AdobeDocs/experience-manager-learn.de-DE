@@ -19,7 +19,8 @@ ht-degree: 24%
 # AEM-Posteingang
 
 AEM Inbox konsolidiert Benachrichtigungen und Aufgaben aus verschiedenen AEM Komponenten, einschließlich Forms Workflows. Wenn ein Forms-Workflow ausgelöst wird, der einen Schritt zur Zuweisung einer Aufgabe enthält, wird die dazugehörige Anwendung als Aufgabe im Posteingang der zugewiesenen Person angezeigt.
-In der Benutzeroberfläche des Posteingangs können die Aufgaben in einer Listen- oder einer Kalenderansicht angezeigt werden. Sie können außerdem die Einstellungen für die Anzeige konfigurieren. Sie können Aufgaben anhand verschiedener Parameter filtern. Sie können einen Experience Manager-Posteingang anpassen, um den Standardtitel einer Spalte zu ändern, die Spaltenposition neu anzuordnen und zusätzliche Spalten anzuzeigen, die auf den Daten eines Workflows basieren
+In der Benutzeroberfläche des Posteingangs können die Aufgaben in einer Listen- oder einer Kalenderansicht angezeigt werden. Sie können außerdem die Einstellungen für die Anzeige konfigurieren. Sie können Aufgaben anhand verschiedener Parameter filtern.
+Sie können einen Experience Manager-Posteingang anpassen, um den Standardtitel einer Spalte zu ändern, die Spaltenposition neu anzuordnen und zusätzliche Spalten anzuzeigen, die auf den Daten eines Workflows basieren
 
 
 >[!NOTE]
@@ -28,7 +29,8 @@ In der Benutzeroberfläche des Posteingangs können die Aufgaben in einer Listen
 
 ## Spaltenanpassung
 
-[AEM Posteingang](http://localhost:4502/aem/inbox)starten Öffnen Sie die Admin-Steuerung, indem Sie auf das Symbol _Liste Ansicht_ klicken und dann _Admin Control_ auswählen, wie im Screenshot unten dargestellt
+[Starten AEM ](http://localhost:4502/aem/inbox)
+inboxÖffnen Sie die Admin-Steuerung, indem Sie auf das  _Liste-_ Viewer klicken und dann  _Admin-_ Steuerelemente auswählen, wie im Screenshot unten dargestellt
 
 ![admin-control](assets/open-customization.png)
 
@@ -47,4 +49,4 @@ Bei der Branding-Anpassung können Sie die folgenden Schritte ausführen:
 * Link zur Hilfe anpassen
 * Navigationsoptionen ausblenden
 
-![inbox-Branding](assets/branding-customization.PNG)
+![Inbox-Branding](assets/branding-customization.PNG)
