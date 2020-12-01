@@ -15,7 +15,7 @@ ht-degree: 2%
 ---
 
 
-# Anpassen von Komponentensymbolen {#developing-component-icons-in-aem-sites}
+# Anpassen der Komponentensymbole {#developing-component-icons-in-aem-sites}
 
 Mithilfe von Komponentensymbolen können Autoren eine Komponente schnell mit Symbolen oder aussagekräftigen Abkürzungen identifizieren. Autoren können jetzt die Komponenten finden, die erforderlich sind, um ihre Web-Erlebnisse schneller als je zuvor zu erstellen.
 
@@ -36,9 +36,9 @@ Der Komponenten-Browser wird nun in einem konsistenten grauen Design angezeigt u
 
 ### Abkürzungen {#abbreviations}
 
-Standardmäßig werden die ersten beiden Zeichen des Komponententitels (**[cq:Component]@jcr:title**) als Abkürzung verwendet. Wenn beispielsweise **[cq:Component]@jcr:title=Article-Liste** , wird die Abkürzung als &quot;**Ar**&quot;angezeigt.
+Standardmäßig werden die ersten beiden Zeichen des Komponententitels (**[cq:Component]@jcr:title**) als Abkürzung verwendet. Beispiel: Wenn **[cq:Component]@jcr:title=Article Liste** die Abkürzung als &quot;**Ar**&quot;angezeigt wird.
 
-Die Abkürzung kann über die **[Eigenschaft cq:Component]@abkürzung** angepasst werden. Dieser Wert kann zwar mehr als 2 Zeichen enthalten, es wird jedoch empfohlen, die Abkürzung auf 2 Zeichen zu beschränken, um visuelle Störungen zu vermeiden.
+Die Abkürzung kann über die Eigenschaft **[cq:Component]@abkürzung** angepasst werden. Dieser Wert kann zwar mehr als 2 Zeichen enthalten, es wird jedoch empfohlen, die Abkürzung auf 2 Zeichen zu beschränken, um visuelle Störungen zu vermeiden.
 
 ```plain
 /apps/.../components/content/my-component
@@ -46,9 +46,9 @@ Die Abkürzung kann über die **[Eigenschaft cq:Component]@abkürzung** angepass
   - abbreviation = "AL"
 ```
 
-### CoralUI-Symbole {#coralui-icons}
+### CoralUI Icons {#coralui-icons}
 
-Die von AEM bereitgestellten CoralUI-Symbole können für Komponentensymbole verwendet werden. Um ein CoralUI-Symbol zu konfigurieren, legen Sie eine **[cq:Component]@cq:icon** -Eigenschaft auf den HTML-Attributwert des gewünschten CoralUI-Symbols fest (in der Dokumentation [](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)zur CoralUI aufgeführt).
+Die von AEM bereitgestellten CoralUI-Symbole können für Komponentensymbole verwendet werden. Um ein CoralUI-Symbol zu konfigurieren, legen Sie eine **[cq:Component]@cq:icon**-Eigenschaft auf den HTML-Attributwert des gewünschten CoralUI-Symbols fest (aufgeführt in der [CoralUI-Dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)).
 
 ```plain
 /apps/.../components/content/my-component
@@ -58,11 +58,11 @@ Die von AEM bereitgestellten CoralUI-Symbole können für Komponentensymbole ver
 
 ### PNG-Bilder {#png-images}
 
-PNG-Bilder können für Komponentensymbole verwendet werden. Um ein PNG-Bild als Komponentensymbol zu konfigurieren, fügen Sie das gewünschte Bild als **nt:file** mit dem Namen **cq:icon.png** unter &quot; **[cq:Component]**&quot;hinzu.
+PNG-Bilder können für Komponentensymbole verwendet werden. Um ein PNG-Bild als Komponentensymbol zu konfigurieren, fügen Sie das gewünschte Bild als **nt:file** mit dem Namen **cq:icon.png** unter **[cq:Component]** hinzu.
 
-Die PNG-Datei sollte einen transparenten Hintergrund oder eine Hintergrundfarbe **#707070** haben.
+Die PNG-Datei sollte einen transparenten Hintergrund oder eine Hintergrundfarbe auf **#707070** setzen.
 
-Die PNG-Bilder werden auf **20 px** skaliert. Um Retina-Displays mit **40px** x **40px** zu unterbringen, ist es jedoch empfehlenswert.
+Die PNG-Bilder werden auf **20px um 20px** skaliert. Zur Aufnahme von Retina-Anzeigen ist es jedoch empfehlenswert, **40px** von **40px** anzuzeigen.
 
 ```plain
 /apps/.../components/content/my-component
@@ -73,9 +73,9 @@ Die PNG-Bilder werden auf **20 px** skaliert. Um Retina-Displays mit **40px** x 
 
 ### SVG-Bilder {#svg-images}
 
-SVG-Bilder (vektorbasiert) können für Komponentensymbole verwendet werden. Um ein SVG-Bild als Komponentensymbol zu konfigurieren, fügen Sie das gewünschte SVG als **nt:file** mit dem Namen **cq:icon.svg** unter der **[cq:Component]** hinzu.
+SVG-Bilder (vektorbasiert) können für Komponentensymbole verwendet werden. Um ein SVG-Bild als Komponentensymbol zu konfigurieren, fügen Sie das gewünschte SVG als **nt:file** mit dem Namen **cq:icon.svg** unter **[cq:Component]** hinzu.
 
-SVG-Bilder sollten eine Hintergrundfarbe auf **#707070** und eine Größe von **20 px mal 20 px haben.**
+SVG-Bilder sollten eine Hintergrundfarbe auf **#707070** und eine Größe von **20px x x.** haben.
 
 ```plain
 /apps/.../components/content/my-component
