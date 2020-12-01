@@ -16,7 +16,7 @@ ht-degree: 1%
 ---
 
 
-# Closed User Groups{#using-closed-user-groups-with-aem-assets}
+# Geschlossene Benutzergruppen{#using-closed-user-groups-with-aem-assets}
 
 Closed User Groups (CUGs) ist eine Funktion, mit der der Zugriff auf Inhalte auf eine bestimmte Benutzergruppe auf einer veröffentlichten Site eingeschränkt wird. In diesem Video wird gezeigt, wie mit Adobe Experience Manager Assets geschlossene Benutzergruppen verwendet werden können, um den Zugriff auf einen bestimmten Asset-Ordner zu beschränken. Die Unterstützung für geschlossene Benutzergruppen mit AEM Assets wurde erstmals in AEM 6.4 eingeführt.
 
@@ -30,13 +30,13 @@ Closed User Groups (CUGs) ist eine Funktion, mit der der Zugriff auf Inhalte auf
 * CUG-Richtlinien werden automatisch von allen Unterordnern und angewendeten Assets geerbt.
 * CUG-Richtlinien können durch Unterordner überschrieben werden, indem eine neue CUG-Richtlinie festgelegt wird. Dies sollte nur sparsam eingesetzt werden und wird nicht als bewährte Praxis betrachtet.
 
-## CUG-Vertretung im JCR {#cug-representation-in-the-jcr}
+## CUG-Darstellung in JCR {#cug-representation-in-the-jcr}
 
 ![CUG-Vertretung im JCR](assets/closed-user-groups/folder-properties-closed-user-groups.png)
 
 Wir.Retail-Mitglieder Gruppe wurde als geschlossene Benutzergruppe zu Ordner hinzugefügt: /content/dam/we-retail/en/beta-products
 
-Eine Mischung aus **rep:CugMixin** wird auf den Ordner **/content/dam/we-retail/en/beta-products** angewendet. Unter dem Ordner wird ein Knoten **rep:cugPolicy** hinzugefügt, und wir-retail-Mitglieder werden als Prinzipal angegeben. Eine andere Mischung aus **granite:AuthenticationRequired** wird auf den Ordner beta-products angewendet, und die Eigenschaft** granite:loginPath** gibt die Anmeldeseite an, die verwendet werden soll, wenn ein Benutzer nicht authentifiziert ist, und versucht, ein Asset unterhalb des Ordners **beta-products** anzufordern.
+Eine Mischung aus **rep:CugMixin** wird auf den Ordner **/content/dam/we-retail/en/beta-products** angewendet. Unter dem Ordner wird ein Knoten von **rep:cugPolicy** hinzugefügt und wir-für-den-Mitglieder werden als Prinzipal angegeben. Eine andere Mischung von **granite:AuthenticationRequired** wird auf den Ordner &quot;beta-products&quot;angewendet. Die Eigenschaft** granite:loginPath** gibt die Anmeldeseite an, die verwendet werden soll, wenn ein Benutzer nicht authentifiziert ist, und versucht, ein Asset unter dem Ordner **beta-products** anzufordern.
 
 JCR-Beschreibung unten:
 
@@ -50,13 +50,13 @@ JCR-Beschreibung unten:
          - rep:principalNames = we-retail-members
 ```
 
-## Listen für geschlossene Benutzergruppen und Zugriffskontrollen {#closed-user-groups-vs-access-control-lists}
+## Geschlossene Benutzergruppen im Vergleich zu Listen der Zugriffskontrolle {#closed-user-groups-vs-access-control-lists}
 
 Sowohl Closed User Groups (CUG) als auch Zugriffskontrolle Listen (ACL) werden verwendet, um den Zugriff auf Inhalte in AEM zu steuern, und zwar auf der Grundlage AEM Sicherheitsbenutzer und -gruppen. Die Anwendung und Implementierung dieser Funktionen ist jedoch sehr unterschiedlich. Die folgende Tabelle fasst die Unterschiede zwischen den beiden Funktionen zusammen.
 
 |  | ACL | CUG |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Vorgesehene Verwendung | Konfigurieren und wenden Sie Berechtigungen für Inhalte auf der **aktuellen** AEM an. | Konfigurieren Sie CUG-Richtlinien für Inhalte in AEM **Autoreninstanz** . Wenden Sie CUG-Richtlinien für Inhalte auf AEM **Veröffentlichungsinstanz** an. |
+| Vorgesehene Verwendung | Konfigurieren und wenden Sie Berechtigungen für Inhalte auf der AEM **current**-Instanz an. | Konfigurieren Sie CUG-Richtlinien für Inhalte in AEM **author**-Instanz. Wenden Sie CUG-Richtlinien für Inhalte auf AEM **publish**-Instanz(en) an. |
 | Berechtigungsstufen | Definiert zugeteilte/verweigerte Berechtigungen für Benutzer/Gruppen für alle Ebenen: Lesen, Ändern, Erstellen, Löschen, Lesen, ACL bearbeiten, Replizieren. | Gewährt Lesezugriff auf eine Gruppe von Benutzern/Gruppen. Lese-Zugriff auf alle anderen Benutzer/Gruppen verweigert. |
 | Replikation | ACLs werden nicht mit Inhalten repliziert. | CUG-Richtlinien werden mit Inhalten repliziert. |
 
