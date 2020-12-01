@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# Darstellung nur für Platzierung (FPO){#for-placement-only-rendition}
+# Nur für Platzierung (FPO) Darstellung{#for-placement-only-rendition}
 
 Hier erfahren Sie, wie Sie eine Darstellung nur für Platzierung (For Placement Only, FPO) für AEM Assets erstellen und verwenden.
 
