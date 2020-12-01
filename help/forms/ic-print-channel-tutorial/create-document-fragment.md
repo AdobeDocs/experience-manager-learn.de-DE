@@ -27,13 +27,13 @@ In diesem Teil erstellen wir ein Dokument-Fragment, das den Namen und die Adress
 
 >[!VIDEO](https://video.tv.adobe.com/v/22350/?quality=9&learn=on)
 
-Dokument-Fragmente enthalten den Textinhalt von interaktiven Dokumenten. Dieser Textinhalt kann statischer Text sein oder aus den Werten der zugrunde liegenden Datenmodellelemente eingefügt werden. Beispiel: **Liebe _{Name}_**, wobei Liebe statischer Text und Name der Elementname des Formulardatenmodells ist. Zur Laufzeit wird dies zu **Liebe Gloria Rios**oder **Liebe John Jacobs**je nach Wert des name-Elements aufgelöst.
+Dokument-Fragmente enthalten den Textinhalt von interaktiven Dokumenten. Dieser Textinhalt kann statischer Text sein oder aus den Werten der zugrunde liegenden Datenmodellelemente eingefügt werden. Beispiel: **Sehr geehrte _{name}_**, wobei Liebe statischer Text und Name der Elementname des Formulardatenmodells ist. Zur Laufzeit wird dies auf **Sehr geehrte Gloria Rios**oder **Sehr geehrte John Jacobs**je nach Wert des name-Elements aufgelöst.
 
 Rich-Text-Editor ist intuitiv genug, damit ein Geschäftsbenutzer Text verfassen und Formulardaten-Elemente einfügen kann. Der Dokument-Fragment-Editor kann Text formatieren, Schriftarten und Stile angeben, Sonderzeichen einfügen und Hyperlinks erstellen.
 
-Der Dokument-Fragment-Editor hat auch die Möglichkeit, Inline-Bedingungen in Ihren Text einzufügen, wie in diesem [Video gezeigt](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
+Der Dokument-Fragment-Editor hat auch die Möglichkeit, Inline-Bedingungen in Ihren Text einzufügen, wie in diesem [Video](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
 
 >[!NOTE]
 >
->Vergewissern Sie sich, dass die Formulardatenmodellelemente, die Sie in ein Dokument-Fragment einfügen, untergeordnete Elemente des Stammelements sind. In diesem Verwendungsfall müssen Sie beispielsweise sicherstellen, dass die Elemente des Benutzerobjekts, die Sie auswählen, das untergeordnete Element des gleichmäßigen Objekts sind
+>Stellen Sie sicher, dass die Formulardatenmodellelemente, die Sie in ein Dokument-Fragment einfügen, untergeordnete Elemente des Stammelements sind. In diesem Verwendungsfall müssen Sie beispielsweise sicherstellen, dass die Elemente des Benutzerobjekts, die Sie auswählen, das untergeordnete Element des gleichmäßigen Objekts sind
 
