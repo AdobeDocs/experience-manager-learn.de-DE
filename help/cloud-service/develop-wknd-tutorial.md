@@ -9,7 +9,7 @@ translation-type: tm+mt
 source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
 workflow-type: tm+mt
 source-wordcount: '354'
-ht-degree: 57%
+ht-degree: 58%
 
 ---
 
@@ -26,11 +26,11 @@ In diesem mehrteiligen Tutorial lernen Entwickler, die gerade mit AEM beginnen, 
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
-Das Tutorial wurde für die Verwendung mit **AEM als Cloud Service** konzipiert und ist abwärtskompatibel mit **AEM 6.5+** und **AEM 6.4.2+**.
+Das Tutorial wurde für die Verwendung mit **AEM als Cloud Service** entwickelt und ist rückwärtskompatibel mit **AEM 6.5+** und **AEM 6.4.2+**.
 
-**[Ansicht das Tutorial hier!](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
+**[Sehen Sie sich das Tutorial hier an!](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
 
-## Deploying WKND to AEM as a Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
+## Bereitstellen von WKND für AEM als Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
 
 Nach Abschluss des WKND-Tutorials können Sie sich im folgenden Video einen Überblick darüber verschaffen, wie das WKND-Projekt als Cloud Service AEM bereitgestellt werden kann.
 
@@ -42,4 +42,4 @@ Das Video zeigt, wie das WKND-Site-Projekt sein kann:
 2. Wird an ein Upstream Adobe Cloud Manager Git-Repository gesendet, das bei einem AEM als Cloud Service-Programm registriert ist
 3. Wird über Cloud Manager-Pipelines bereitgestellt, um als Cloud Service-Umgebung AEM
 
-Eine vollständige Übersicht über die Bereitstellung AEM Projekts für AEM als Cloud-Dienst finden Sie in der Videoreihe zur [Integration von Git in Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html).
+Einen vollständigen Überblick über die Bereitstellung AEM Projekts für AEM als Cloud-Dienst erhalten Sie in der Videoreihe [Integration von Git in Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html).
