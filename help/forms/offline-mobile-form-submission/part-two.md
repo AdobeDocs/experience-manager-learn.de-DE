@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # PDF-Übermittlung verarbeiten
 
-In diesem Teil erstellen wir ein einfaches Servlet, das auf AEM Publish ausgeführt wird, um die PDF-Übermittlung von Acrobat/Reader zu verarbeiten. Dieses Servlet stellt wiederum eine HTTP-POST an ein Servlet, das in einer AEM Autoreninstanz ausgeführt wird, die für das Speichern der gesendeten Daten als `nt:file` Knoten im Repository von AEM Author zuständig ist.
+In diesem Teil erstellen wir ein einfaches Servlet, das auf AEM Publish ausgeführt wird, um die PDF-Übermittlung von Acrobat/Reader zu verarbeiten. Dieses Servlet stellt wiederum eine HTTP-POST an ein Servlet, das in einer AEM Autoreninstanz ausgeführt wird, die für das Speichern der gesendeten Daten als `nt:file`-Knoten im Repository von AEM Author zuständig ist.
 
 Im Folgenden finden Sie den Code des Servlets, das die PDF-Übermittlung verarbeitet. In diesem Servlet führen wir einen POST-Aufruf an ein Servlet aus, das auf **/bin/startworkflow** in einer AEM Author-Instanz gemountet ist. Dieses Servlet speichert die Formulardaten im Repository von AEM Author.
 
@@ -102,7 +102,7 @@ public class HandlePDFSubmission extends SlingAllMethodsServlet {
 
 ## AEM Authoring-Servlet
 
-Der nächste Schritt besteht darin, die gesendeten Daten im Repository von AEM Author zu speichern. Das Servlet, auf dem die gesendeten Daten gemountet `/bin/startworkflow` werden, speichert die gesendeten Daten.
+Der nächste Schritt besteht darin, die gesendeten Daten im Repository von AEM Author zu speichern. Das auf `/bin/startworkflow` bereitgestellte Servlet speichert die gesendeten Daten.
 
 ```java
 import java.io.BufferedReader;
@@ -200,7 +200,7 @@ public class StartWorkflow extends SlingAllMethodsServlet {
 }
 ```
 
-Ein AEM Workflow-Starter wird so konfiguriert, dass er jedes Mal ausgelöst wird, wenn eine neue Ressource vom Typ unter dem `nt:file` Knoten erstellt `/content/pdfsubmissions` wird. Dieser Arbeitsablauf erstellt nicht interaktive oder statische PDF-Dateien, indem die gesendeten Daten mit der xdp-Vorlage zusammengeführt werden. Die generierte PDF wird dann einem Benutzer zur Überprüfung und Genehmigung zugewiesen.
+Ein AEM Workflow-Starter wird so konfiguriert, dass er jedes Mal ausgelöst wird, wenn unter dem Knoten `/content/pdfsubmissions` eine neue Ressource des Typs `nt:file` erstellt wird. Dieser Arbeitsablauf erstellt nicht interaktive oder statische PDF-Dateien, indem die gesendeten Daten mit der xdp-Vorlage zusammengeführt werden. Die generierte PDF wird dann einem Benutzer zur Überprüfung und Genehmigung zugewiesen.
 
-Zur Speicherung der gesendeten Daten unter dem `/content/pdfsubmissions` Knoten, verwenden wir den `GetResolver` OSGi-Dienst ermöglicht es uns, die gesendeten Daten mit dem `fd-service` Systembenutzer zu speichern, der in jeder AEM Forms-Installation verfügbar ist.
+Um die gesendeten Daten unter dem Knoten `/content/pdfsubmissions` zu speichern, verwenden wir den Dienst `GetResolver` OSGi, um die gesendeten Daten mit dem `fd-service`-Systembenutzer zu speichern, der in jeder AEM Forms-Installation verfügbar ist.
 
