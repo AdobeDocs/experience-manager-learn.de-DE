@@ -19,7 +19,7 @@ ht-degree: 71%
 
 # Erste Schritte mit dem AEM SPA-Editor und Angular {#spa-angular-tutorial}
 
-+ [Übersicht](overview.md)
++ [Überblick](overview.md)
 + [SPA Editor Project](create-project.md)
 + [SPA integrieren](integrate-spa.md)
 + [Zuordnen SPA Komponenten](map-components.md)
