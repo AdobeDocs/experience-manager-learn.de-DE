@@ -22,7 +22,7 @@ ht-degree: 0%
 ---
 
 
-# Hinzufügen von Komponenten zum Bedienfeld &quot;Personen&quot; {#adding-components-to-people-panel}
+# Hinzufügen von Komponenten zum Personen-Bedienfeld {#adding-components-to-people-panel}
 
 Konfigurieren Sie das Bedienfeld &quot;Personen&quot;, indem Sie das Fragment &quot;Details zum Ehegatten&quot;hinzufügen. Es wird eine Regel erstellt, mit der das Fragment zum Ehegatten angezeigt wird, wenn der Familienstand des Antragstellers verheiratet ist.
 
