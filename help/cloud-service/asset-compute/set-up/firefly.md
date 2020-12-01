@@ -1,6 +1,6 @@
 ---
-title: Adobe Project Firefly für Asset Compute-Erweiterbarkeit einrichten
-description: Asset Compute-Projekte sind eigens definierte Adobe Project Firefly-Projekte und erfordern daher Zugriff auf Adobe Project Firefly in der Adobe Developer Console, um sie einzurichten und bereitzustellen.
+title: Adobe Project Firefly für Asset compute-Erweiterbarkeit einrichten
+description: asset compute-Projekte sind speziell definierte Adobe Project Firefly-Projekte und erfordern daher Zugriff auf Adobe Project Firefly in der Adobe Developer Console, um sie einzurichten und bereitzustellen.
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -20,51 +20,51 @@ ht-degree: 0%
 
 # Adobe-Projekt einrichten
 
-Asset Compute-Projekte sind eigens definierte Adobe Project Firefly-Projekte und erfordern daher Zugriff auf Adobe Project Firefly in der Adobe Developer Console, um sie einzurichten und bereitzustellen.
+asset compute-Projekte sind speziell definierte Adobe Project Firefly-Projekte und erfordern daher Zugriff auf Adobe Project Firefly in der Adobe Developer Console, um sie einzurichten und bereitzustellen.
 
-## Adobe Project Firefly in der Adobe Developer Console erstellen und einrichten{#set-up}
+## Adobe Project Firefly in Adobe Developer Console {#set-up} erstellen und einrichten
 
 >[!VIDEO](https://video.tv.adobe.com/v/40183/?quality=12&learn=on)
 
 _Clickthrough der Einrichtung des Adobe Project Firefly (Kein Audio)_
 
-1. Melden Sie sich bei der [Adobe Developer Console](https://console.adobe.io) mit dem Adobe ID an, das mit den bereitgestellten [Konten und Diensten](./accounts-and-services.md)verknüpft ist. Stellen Sie sicher, dass Sie für die richtige Adobe ein __Systemadministrator__ oder in der __Entwicklerrolle__ sind.
-1. Erstellen Sie ein Firefly-Projekt, indem Sie auf Neues Projekt __erstellen > Projekt aus Vorlage > Projekt Firefly tippen__
+1. Melden Sie sich bei [Adobe Developer Console](https://console.adobe.io) mit dem Adobe ID an, das den bereitgestellten [Konten und Diensten](./accounts-and-services.md) zugeordnet ist. Vergewissern Sie sich, dass Sie ein __Systemadministrator__ oder __Entwicklerrolle__ für die richtige Adobe-Reihenfolge verwenden.
+1. Erstellen Sie ein Firefly-Projekt, indem Sie auf __Neues Projekt erstellen > Projekt aus Vorlage > Projekt Firefly__ tippen
 
-   _Wenn entweder die Schaltfläche Neues Projekt____erstellen oder der__ Projektarchiv __nicht verfügbar ist, bedeutet dies, dass Ihr Adobe-Org nicht mit Project Firefly[bereitgestellt](#request-adobe-project-firefly)wird._
+   _Wenn entweder__ Create new __projectButton oder der__ Project __Firefytype nicht verfügbar ist, bedeutet dies, dass Ihre Adobe Org nicht  [mit Project Firefly](#request-adobe-project-firefly) bereitgestellt wird._
 
-   + __Titel__ des Projekts: `WKND AEM Asset Compute`
-   + __App-Name__: `wkndAemAssetCompute<YourName>`
+   + __Titel__ des Projekts:  `WKND AEM Asset Compute`
+   + __App-Name__:  `wkndAemAssetCompute<YourName>`
       + Der __App-Name__ muss für alle Firefly-Projekte eindeutig sein und kann später nicht geändert werden. Das Präzisieren des Namens Ihrer Firma oder Organisation und das Präfix mit einem aussagekräftigen Suffix ist ein guter Ansatz, z. B.: `wkndAemAssetCompute`.
-      + Für die Selbstaktivierung ist es oft am besten, Ihren Namen an den __App-Namen__ anzuhängen, z. B. um Kollisionen mit anderen Projekt-Firefly-Projekten `wkndAemAssetComputeJaneDoe` zu vermeiden.
-   + Fügen Sie unter __Arbeitsflächen__ eine neue Umgebung mit dem Namen `Development`
-   + Stellen Sie sicher, dass unter __Adobe I/O Runtime__ die Option &quot; __Laufzeitumgebung mit jedem Arbeitsbereich__ einschließen&quot;ausgewählt ist.
-   + Tap __Save__ to save the project
-1. Wählen Sie im Projekt Adobe Firefly `Development` aus der Arbeitsflächenauswahl
-1. Tippen Sie auf __+ Hinzufügen Dienst > API__ , um den __Hinzufügen API__ -Assistenten zu öffnen. Verwenden Sie diese Methode, um die folgenden APIs hinzuzufügen:
+      + Für die Selbstaktivierung ist es oft am besten, Ihren Namen dem __App-Namen__ hinzuzufügen, z. B. `wkndAemAssetComputeJaneDoe`, um Kollisionen mit anderen Project Firefly-Projekten zu vermeiden.
+   + Fügen Sie unter __Workspaces__ eine neue Umgebung mit dem Namen `Development` hinzu.
+   + Stellen Sie sicher, dass unter __Adobe I/O Runtime__ __Laufzeitumgebung mit jedem Arbeitsbereich__ einschließen ausgewählt ist.
+   + Tippen Sie auf __Speichern__, um das Projekt zu speichern
+1. Wählen Sie im Projekt &quot;Adobe Firefly&quot;aus der Arbeitsbereichsauswahl die Option `Development`
+1. Tippen Sie auf __+ Hinzufügen Service > API__, um den Assistenten __Hinzufügen API__ zu öffnen. Verwenden Sie diesen Ansatz, um die folgenden APIs hinzuzufügen:
 
-   + __Experience Cloud > Asset-Berechnung__
-      + Wählen Sie __Generate a key pair__ , tippen Sie auf die Schaltfläche __Generate keypair__ , und speichern Sie die heruntergeladene `config.zip` Datei für die [spätere Verwendung an einem sicheren Speicherort](#private-key)
+   + __Experience Cloud > Asset compute__
+      + Wählen Sie __Generieren Sie ein Schlüsselpaar__ und tippen Sie auf die Schaltfläche __Generate keypair__ und speichern Sie die heruntergeladene `config.zip` an einem sicheren Speicherort für [spätere Verwendung](#private-key)
       + Tippen Sie auf __Weiter__
-      + Wählen Sie Product Profil __Integrations - Cloud Service__ und tippen Sie auf Konfigurierte API __speichern__
-   + __Adobe Services > I/O-Ereignis__ und tippen Sie auf Konfigurierte API __speichern__
-   + __Adobe Services > I/O-Management-API__ und tippen Sie auf Konfigurierte API __speichern__
+      + Wählen Sie das Profil __Integrationen - Cloud Service__ und tippen Sie auf __Konfigurierte API speichern__
+   + __Adobe Services > I/O-__ Ereignisse und tippen Sie auf Konfigurierte API  __speichern__
+   + __Adobe Services > I/O-Management-__ APIs und tippen Sie auf Konfigurierte API  __speichern__
 
 ## Zugriff auf private.key{#private-key}
 
-Beim Einrichten der [Asset Compute API-Integration](#set-up) wurde ein neues Schlüsselpaar generiert und eine `config.zip` Datei automatisch heruntergeladen. Dies `config.zip` enthält das generierte öffentliche Zertifikat und die zugehörige `private.key` Datei.
+Beim Einrichten der [Asset compute-API-Integration](#set-up) wurde ein neues Schlüsselpaar generiert und eine `config.zip`-Datei wurde automatisch heruntergeladen. Dieses `config.zip` enthält das generierte öffentliche Zertifikat und die zugehörige `private.key`-Datei.
 
-1. Entpacken Sie `config.zip` die ZIP-Datei an eine sichere Stelle in Ihrem Dateisystem, da die `private.key` später [verwendet wird.](../develop/environment-variables.md)
+1. Dekomprimieren Sie `config.zip` an eine sichere Stelle im Dateisystem, da `private.key` [später ](../develop/environment-variables.md) verwendet wird.
    + Geheimnisse und private Schlüssel sollten niemals aus Sicherheitsgründen zu Git hinzugefügt werden.
 
 ## Überprüfen Sie die Berechtigungen für das Dienstkonto (JWT).
 
-Die Anmeldeinformationen dieses Adoben-E/A-Projekts werden vom lokalen [Asset Compute Development Tool](../develop/development-tool.md) für die Interaktion mit Adobe I/O Runtime verwendet und müssen in das Asset Compute-Projekt integriert werden. Machen Sie sich mit den JWT-Anmeldeinformationen vertraut.
+Die Anmeldeinformationen dieses Adobe I/O-Projekts werden vom lokalen [Asset compute Development Tool](../develop/development-tool.md) verwendet, um mit Adobe I/O Runtime zu interagieren, und müssen in das Asset compute-Projekt integriert werden. Machen Sie sich mit den JWT-Anmeldeinformationen vertraut.
 
 ![Adobe Developer Service-Kontoanmeldeinformationen](./assets/firefly/service-account.png)
 
-1. Vergewissern Sie sich, dass der `Development` Arbeitsbereich im Projekt &quot;I/O-Projekt - Firefly&quot;ausgewählt ist.
-1. Tippen Sie auf __Dienstkonto (JWT)__ unter __Anmeldeinformationen__
-1. Überprüfen Sie die angezeigten E/A-Anmeldeinformationen der Adobe.
-   + Der unten aufgelistete __öffentliche Schlüssel__ hat das __private.key__ -Gegenstück im `config.zip` heruntergeladenen Dokument, wenn diesem Projekt die __Asset Compute-API__ hinzugefügt wurde.
-      + Wenn der private Schlüssel verloren geht oder beschädigt wird, kann der entsprechende öffentliche Schlüssel entfernt und ein neues Schlüsselpaar generiert oder über diese Schnittstelle in die Adobe-E/A hochgeladen werden.
+1. Stellen Sie sicher, dass im Projekt Adobe I/O Project Firefly die Arbeitsfläche `Development` ausgewählt ist.
+1. Tippen Sie auf __Dienstkonto (JWT)__ unter __Berechtigungen__
+1. Überprüfen Sie die angezeigten Adobe I/O-Berechtigungen.
+   + Der unten aufgeführte __öffentliche Schlüssel__ hat das Gegenstück __private.key__ im heruntergeladenen `config.zip`, wenn die __Asset compute API__ zu diesem Projekt hinzugefügt wurde.
+      + Wenn der private Schlüssel verloren geht oder beschädigt wird, kann der entsprechende öffentliche Schlüssel entfernt und ein neues Schlüsselpaar generiert oder über diese Schnittstelle in Adobe I/O hochgeladen werden.
