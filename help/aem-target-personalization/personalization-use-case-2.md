@@ -26,7 +26,7 @@ Die WKND-Site hat ihre Startseite neu gestaltet und möchte ihre aktuellen Besuc
 
 Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufgaben ausführen, für die Sie möglicherweise administrativen Zugriff benötigen.
 
-* **Content Producer/Content Editor** (Adobe Experience Manager)
+* **Content Producer/Content Editor**  (Adobe Experience Manager)
 * **Marketer** (Adobe Target/Optimierungsteam)
 
 ### WKND-Site-Startseite
@@ -36,10 +36,10 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 ### Voraussetzungen
 
 * **AEM**
-   * [AEM Autoreninstanz](./implementation.md#getting-aem) und Veröffentlichungsinstanz, die auf localhost 4502 bzw. 4503 ausgeführt wird.
+   * [AEM Autoren- und Veröffentlichungsinstancerunning ](./implementation.md#getting-aem) auf localhost 4502 bzw. 4503.
    * [AEM mit Adobe Experience Platform Launch integriert](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
-   * Zugriff auf Ihre Organisationen Adobe Experience Cloud - <https://>`<yourcompany>`.experienceCloud.adobe.com
+   * Zugriff auf Ihre Organisationen Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
    * Experience Cloud mit den folgenden Lösungen
       * [Adobe Target](https://experiencecloud.adobe.com)
 
@@ -52,29 +52,29 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 ## Aktivitäten von Marketingexperten
 
 1. Marketer erstellt eine A/B-Zielgruppe-Aktivität mit dem Umleitungs-Angebot als Erlebnis und 100 % Website-Traffic, der der neuen Startseite mit Erfolgsziel und hinzugefügten Metriken zugeordnet wird.
-   1. Navigieren Sie im Adobe Target-Fenster zur Registerkarte &quot; **Aktivitäten** &quot;.
-   2. Klicken Sie auf **Aktivität** erstellen und wählen Sie den Typ der Aktivität als **A/B-Test**
+   1. Navigieren Sie im Adobe Target-Fenster zur Registerkarte **Aktivitäten**.
+   2. Klicken Sie auf die Schaltfläche **Aktivität erstellen** und wählen Sie den Typ der Aktivität als **A/B-Test**
 
       ![Adobe Target - Aktivität erstellen](assets/personalization-use-case-2/create-ab-activity.png)
-   3. Wählen Sie den **Web** Kanal und dann **Visual Experience Composer**.
-   4. Geben Sie die **Aktivitäten-URL** ein und klicken Sie auf **Weiter** , um den Visual Experience Composer zu öffnen.
+   3. Wählen Sie den Kanal **Web** und wählen Sie **Visual Experience Composer**.
+   4. Geben Sie die **Aktivitäten-URL** ein und klicken Sie auf **Weiter**, um den Visual Experience Composer zu öffnen.
       ![Adobe Target - Aktivität erstellen](assets/personalization-use-case-2/create-activity-ab-name.png)
-   5. Damit **Visual Experience Composer** geladen wird, aktivieren Sie **Zulassen von nicht sicheren Skripten** in Ihrem Browser und laden Sie Ihre Seite neu.
+   5. Damit **Visual Experience Composer** geladen werden kann, aktivieren Sie **Unsichere Skripte** in Ihrem Browser laden und laden Sie Ihre Seite neu.
       ![Erlebnis-Targeting-Aktivität](assets/personalization-use-case-1/load-unsafe-scripts.png)
    6. Beachten Sie, dass die WKND-Site-Startseite im Visual Experience Composer-Editor geöffnet ist.
       ![VEC](assets/personalization-use-case-2/vec.png)
    7. Bewegen Sie den Mauszeiger über **Erlebnis B** und wählen Sie Ansicht andere Optionen.
       ![Erlebnis B](assets/personalization-use-case-2/redirect-url.png)
-   8. Wählen Sie die Option &quot; **Zu URL** umleiten&quot;und geben Sie die URL zur neuen WKND-Startseite ein. (http://localhost:4503/content/wknd/en1.html)
+   8. Wählen Sie die Option **Zu URL** umleiten und geben Sie die URL zur neuen WKND-Startseite ein. (http://localhost:4503/content/wknd/en1.html)
       ![Erlebnis B](assets/personalization-use-case-2/redirect-url-2.png)
-   9. **Speichern** Sie Ihre Änderungen und fahren Sie mit den nächsten Schritten zur Erstellung der Aktivität fort.
-   10. Wählen Sie die **Traffic-Zuordnungsmethode** als manuell aus und weisen Sie **Erlebnis B**100 % Traffic zu.
+   9. **Speichern Sie** Ihre Änderungen und fahren Sie mit den nächsten Schritten zur Erstellung der Aktivität fort.
+   10. Wählen Sie die **Traffic-Zuordnungsmethode** als manuell aus und weisen Sie **Erlebnis B** 100 % Traffic zu.
       ![Erlebnis B-Traffic](assets/personalization-use-case-2/traffic.png)
    11. Klicken Sie auf **Weiter**.
    12. Geben Sie **Zielmetriken** für Ihre Aktivität an und speichern und schließen Sie Ihren A/B-Test.
       ![A/B-Testziel-Metrik](assets/personalization-use-case-2/goal-metric.png)
    13. Geben Sie einen Namen (**WKND Startseite Redesign**) für Ihre Aktivität ein und speichern Sie Ihre Änderungen.
-   14. Achten Sie im Bildschirm &quot;Aktivität&quot; darauf, Ihre Aktivität zu **aktivieren** .
+   14. Vergewissern Sie sich im Bildschirm &quot;Aktivität Details&quot;auf **Aktivieren** Ihrer Aktivität.
       ![Aktivität aktivieren](assets/personalization-use-case-2/ab-activate.png)
    15. Navigieren Sie zur WKND-Startseite (http://localhost:4503/content/wknd/en.html) und Sie werden zur neu gestalteten WKND-Site-Startseite (http://localhost:4503/content/wknd/en1.html) weitergeleitet.
       ![WKND-Startseite neu gestaltet](assets/personalization-use-case-2/WKND-home-page-redesign.png)
