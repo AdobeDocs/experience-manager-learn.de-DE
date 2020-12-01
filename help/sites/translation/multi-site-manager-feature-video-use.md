@@ -15,14 +15,14 @@ translation-type: tm+mt
 source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
 workflow-type: tm+mt
 source-wordcount: '171'
-ht-degree: 9%
+ht-degree: 11%
 
 ---
 
 
 # Verwenden von Multi-Site-Manager {#using-multi-site-manager-with-aem-sites}
 
-[!UICONTROL Live Copy-Übersicht] und [!UICONTROL Blueprint Configuration Manager] sind AEM-Autorenschnittstellen für die Arbeit mit der Multi-Site-Manager-Funktion von Adobe Experience Manager Sites.
+[!UICONTROL Live Copy ] Overviewer und  [!UICONTROL Blueprint Configuration ] Manager sind AEM Author-Schnittstellen für die Arbeit mit der Multi-Site-Manager-Funktion von Adobe Experience Manager Sites.
 
 ## Live Copy-Übersicht {#live-copy-overview}
 
