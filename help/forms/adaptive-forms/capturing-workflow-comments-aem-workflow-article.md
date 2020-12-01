@@ -28,18 +28,18 @@ Eine häufige Anforderung besteht darin, dass die vom Aufgaben-Reviewer eingegeb
 
 Um diese Anforderung zu erfüllen, wird ein OSGi-Beispielpaket bereitgestellt, das zum Erfassen von Kommentaren und zum Speichern dieser Kommentare als Workflow-Metadateneigenschaft verwendet werden kann.
 
-Der folgende Screenshot zeigt Ihnen, wie Sie mit dem Prozessschritt im [AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) Kommentare erfassen und als Metadateneigenschaft speichern können. &quot;Workflow-Kommentare erfassen&quot;ist der Name der Java-Klasse, die im Prozessschritt verwendet werden muss. Sie müssen den Namen der Metadateneigenschaft übergeben, der die Kommentare enthalten soll. Im folgenden Screenshot ist managerComments die Metadateneigenschaft, in der die Kommentare gespeichert werden.
+Der folgende Screenshot zeigt Ihnen, wie Sie mithilfe des Prozessschritts in [AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) Kommentare erfassen und als Metadateneigenschaft speichern können. &quot;Workflow-Kommentare erfassen&quot;ist der Name der Java-Klasse, die im Prozessschritt verwendet werden muss. Sie müssen den Namen der Metadateneigenschaft übergeben, der die Kommentare enthalten soll. Im folgenden Screenshot ist managerComments die Metadateneigenschaft, in der die Kommentare gespeichert werden.
 
-![workflowcomments1](assets/workflowcomments1.gif)
+![workflows comments1](assets/workflowcomments1.gif)
 
 Gehen Sie wie folgt vor, um diese Funktion auf Ihrem System zu testen:
 * [Stellen Sie sicher, dass der Prozessschritt im Workflow so konfiguriert ist, dass die &quot;Workflow-Kommentare erfassen&quot;verwendet werden](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)
 
 * [Developing with serviceUser-Bundle bereitstellen](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [Stellen Sie das SetValue-Bundle](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)bereit. Dieses Bundle enthält den Beispielcode zum Erfassen der Kommentare und zum Speichern als Metadateneigenschaft
+* [Stellen Sie das SetValue-Bundle](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar) bereit. Dieses Bundle enthält den Beispielcode zum Erfassen der Kommentare und zum Speichern als Metadateneigenschaft
 
-* [Laden Sie die Assets, die sich auf diesen Artikel beziehen, herunter und dekomprimieren Sie sie auf Ihr Dateisystem](assets/capturecomments.zip) . Die Assets enthalten Workflow-Modell und adaptives Musterformular.
+* [Laden Sie die Assets, die sich auf diesen Artikel beziehen, herunter und dekomprimieren Sie sie in Ihr Dateisystem. Die Assets enthalten ](assets/capturecomments.zip) das Workflow-Modell und das adaptive Musterformular.
 
 * Importieren Sie die 2 ZIP-Dateien mit dem Package Manager in AEM
 
