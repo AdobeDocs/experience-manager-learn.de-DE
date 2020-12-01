@@ -28,4 +28,4 @@ In diesem Teil erstellen wir eine REST-gesicherte Datenquelle.  Im folgenden Vid
 
 >[!VIDEO](https://video.tv.adobe.com/v/27765/?quality=9&learn=on)
 
-Bitte verwenden Sie die Swagger-Datei, die Sie im Rahmen der Elemente zu diesem Lernprogramm erhalten haben. Die Assets stehen in [Einführung](introduction.md) dieses Tutorials zur Verfügung.
+Bitte verwenden Sie die Swagger-Datei, die Sie im Rahmen der Elemente zu diesem Lernprogramm erhalten haben. Die Assets sind in [Einführung](introduction.md) dieses Lernprogramms verfügbar.
