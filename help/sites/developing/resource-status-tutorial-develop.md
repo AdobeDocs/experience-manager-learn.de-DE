@@ -19,7 +19,7 @@ ht-degree: 3%
 
 Adobe Experience Managers Ressourcen-Status-APIs ist ein Plug-in-Framework zur Bereitstellung von Statusmeldungen in AEM verschiedenen Web-UIs des Editors.
 
-## Überblick {#overview}
+## Überblick{#overview}
 
 Das Resource Status for Editors-Framework bietet serverseitige und clientseitige APIs zum Anzeigen und Interagieren mit Editorstatus auf einheitliche Weise.
 
@@ -33,7 +33,7 @@ Beispiele für Anwendungsfälle für benutzerdefinierte Ressourcenstatusanbieter
 
 ![Übersicht über den Status der AEM](assets/sample-editor-resource-status-screenshot.png)
 
-## Ressourcen-Status-Framework {#resource-status-provider-framework}
+## Resource Status Provider Framework {#resource-status-provider-framework}
 
 Bei der Entwicklung benutzerdefinierter Ressourcenstatus umfasst die Entwicklungsarbeit Folgendes:
 
@@ -42,21 +42,21 @@ Bei der Entwicklung benutzerdefinierter Ressourcenstatus umfasst die Entwicklung
 
    ![Ressourcenstatusarchitektur](assets/sample-editor-resource-status-application-architecture.png)
 
-3. Die Statusressource, die im Rahmen der Editoren für Seite, Erlebnisfragment und Vorlage bereitgestellt wird, wird über die Eigenschaft resources &quot;[!DNL statusType]&quot;ein Typ zugewiesen.
+3. Die Statusressource, die im Rahmen der Editoren für Seite, Erlebnisfragment und Vorlage bereitgestellt wird, wird über die Eigenschaft &quot;[!DNL statusType]&quot;der Ressourcen ein Typ zugewiesen.
 
-   * Page editor: `editor`
+   * Seiten-Editor: `editor`
    * Erlebnisfragment-Editor: `editor`
    * Vorlagen-Editor: `template-editor`
 
-4. Die Statusressource `statusType` ist mit der registrierten `CompositeStatusType` OSGi-konfigurierten `name` Eigenschaft übereinstimmen.
+4. Die `statusType`-Eigenschaft der Statusressource wird mit der registrierten `CompositeStatusType` OSGi-konfigurierten `name`-Eigenschaft abgeglichen.
 
-   Bei allen Übereinstimmungen werden die `CompositeStatusType's` Typen erfasst und zum Erfassen der `ResourceStatusProvider` Implementierungen mit diesem Typ verwendet, über `ResourceStatusProvider.getType()`.
+   Bei allen Übereinstimmungen werden die `CompositeStatusType's`-Typen erfasst und zum Erfassen der `ResourceStatusProvider`-Implementierungen mit diesem Typ über `ResourceStatusProvider.getType()` verwendet.
 
-5. Die Übereinstimmung `ResourceStatusProvider` wird im Editor übergeben und bestimmt, ob der Status angezeigt werden `resource` `resource` soll. Wenn der Status benötigt wird, ist diese Implementierung dafür verantwortlich, dass 0 oder viele zurückgegeben werden, wobei jede einen anzuzeigenden Status darstellt. `ResourceStatuses`
+5. Das übereinstimmende `ResourceStatusProvider` wird im Editor an das `resource` übergeben und bestimmt, ob der `resource`-Status angezeigt werden soll. Wenn der Status benötigt wird, ist diese Implementierung dafür verantwortlich, dass 0 oder viele `ResourceStatuses` zurückgegeben werden, die jeweils einen anzuzeigenden Status darstellen.
 
-   Normalerweise gibt ein `ResourceStatusProvider` Wert 0 oder 1 `ResourceStatus` pro `resource`Wert zurück.
+   Normalerweise gibt ein `ResourceStatusProvider` 0 oder 1 `ResourceStatus` pro `resource` zurück.
 
-6. ResourceStatus ist eine Schnittstelle, die vom Kunden implementiert werden kann, oder die hilfreiche Schnittstelle `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` kann zum Aufbau eines Status verwendet werden. Ein Status besteht aus:
+6. ResourceStatus ist eine Schnittstelle, die vom Kunden implementiert werden kann, oder die hilfreiche `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` kann zum Aufbau eines Status verwendet werden. Ein Status besteht aus:
 
    * Titel
    * Nachricht
@@ -66,7 +66,7 @@ Bei der Entwicklung benutzerdefinierter Ressourcenstatus umfasst die Entwicklung
    * Aktionen   
    * Daten
 
-7. Wenn `Actions` für das `ResourceStatus` Objekt bereitgestellt wird, sind optional unterstützende clientlibs erforderlich, um Funktionen an die Aktionslinks in der Statusleiste zu binden.
+7. Wenn `Actions` für das `ResourceStatus`-Objekt bereitgestellt wird, müssen unterstützende clientlibs die Funktionalität an die Aktionslinks in der Statusleiste binden.
 
    ```js
    (function(jQuery, document) {
