@@ -28,7 +28,7 @@ In diesem Teil fügen wir den im Layout(xdp) definierten Zielgruppen Bilder und 
 
 Nachdem Sie Ihr erstes Dokument-Fragment erstellt haben, das den Namen und die Adresse des Empfängers enthalten wird, müssen wir das Dokument-Fragment zum Dokument &quot;print Kanal&quot;hinzufügen.
 
-Sie können dem Dokument &quot;Dokument&quot;Inhalte verschiedener Typen wie &quot;Fragmente&quot;, &quot;Bilder&quot;, &quot;Layout-Fragmente&quot;usw. hinzufügen.
+Sie können dem Print-Kanal-Dokument Inhalte verschiedener Typen hinzufügen, z. B. Dokument-Fragmente, Bilder, Layout-Fragmente usw.
 
 Um dem Dokument für den Druck-Kanal Inhalte hinzuzufügen, befolgen Sie bitte das folgende Video.
 
