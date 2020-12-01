@@ -38,7 +38,7 @@ Die Daten des adaptiven Formulars werden wie oben gezeigt unter dem Datenelement
 
 >[!NOTE]
 >
->**AEM Forms 6.5.0** - Wenn Sie eine Variable vom Typ XML erstellen, um die gesendeten Daten in Ihrem Workflow-Modell zu erfassen, verknüpfen Sie die XSD nicht mit der Variablen. Dies liegt daran, dass beim Senden eines XSD-basierten adaptiven Formulars die gesendeten Daten nicht mit der XSD konform sind. Die XSD-Beschreibungsdaten sind im Element /afData/afBoundData/ enthalten.
+>**AEM Forms 6.5.0** - Wenn Sie eine Variable des Typs XML erstellen, um die gesendeten Daten in Ihrem Workflow-Modell zu erfassen, verknüpfen Sie die XSD nicht mit der Variablen. Dies liegt daran, dass beim Senden eines XSD-basierten adaptiven Formulars die gesendeten Daten nicht mit der XSD konform sind. Die XSD-Beschreibungsdaten sind im Element /afData/afBoundData/ enthalten.
 >
 >**AEM Forms 6.5.1** - Wenn Sie XSD mit Ihrer XML-Variablen verknüpfen, können Sie die Schema-Elemente durchsuchen, um die Variablenzuordnung vorzunehmen. Sie können nicht auf Formulardaten zugreifen, die nicht an Schema-Elemente gebunden sind. Wenn Sie in diesem Fall auf Daten zugreifen möchten, die sowohl an Schema-Elemente als auch an ungebundene Daten gebunden sind, binden Sie im Workflow kein Schema an Ihre XML-Variable. Sie müssen den entsprechenden XPath-Ausdruck verwenden, um die benötigten Daten zu erhalten
 
@@ -59,7 +59,7 @@ Die Daten des adaptiven Formulars werden wie oben gezeigt unter dem Datenelement
 Um die Assets auf Ihrem System zu verwenden, führen Sie die folgenden Schritte aus:
 
 * [Herunterladen und Importieren von Assets in AEM mit dem Paketmanager](assets/xmlandstringvariable.zip)
-* [Durchsuchen Sie das Workflow-Modell](http://localhost:4502/editor.html/conf/global/settings/workflow/models/vacationrequest.html) , um die Variablen zu verstehen, die im Workflow verwendet werden.
+* [Überprüfen Sie das Workflow-](http://localhost:4502/editor.html/conf/global/settings/workflow/models/vacationrequest.html) Modell, um die Variablen zu verstehen, die im Workflow verwendet werden.
 * [E-Mail-Dienst konfigurieren](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
 * [Adaptives Formular öffnen](http://localhost:4502/content/dam/formsanddocuments/applicationfortimeoff/jcr:content?wcmmode=disabled)
 * Füllen Sie die Details aus und senden Sie das Formular ab.
