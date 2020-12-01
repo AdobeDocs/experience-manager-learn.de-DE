@@ -16,13 +16,13 @@ ht-degree: 13%
 ---
 
 
-# Erweitern von Seiteneigenschaften {#extending-page-properties-in-aem-sites}
+# Erweitern der Seiteneigenschaften {#extending-page-properties-in-aem-sites}
 
 Das Anpassen der Metadatenfelder für die Seiteneigenschaften ist eine gängige Anforderung in jeder Sites-Implementierung. In diesem Video wird erläutert, wie dies mit den Funktionen des Sling Resource Merger am effektivsten erreicht werden kann.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25173?quality=9&learn=on)
 
-Das obige Video zeigt die Anpassung der Seiteneigenschaften für die Web.Retail-Anwendung in **AEM 6.4** unter Verwendung verschiedener Funktionen des Sling Resource Merger. Sie ermöglicht die folgenden Anpassungen:
+Das obige Video zeigt die Anpassung der Seiteneigenschaften für die Anwendung &quot;We.Retail&quot;in **AEM 6.4** unter Verwendung verschiedener Funktionen des Sling Resource Merger. Sie ermöglicht die folgenden Anpassungen:
 
 * Benutzerdefiniertes Register, das vor der Registerkarte Einfach eingefügt wurde.
 * Neues Textfeld, das als Teil der Registerkarte Einfach eingefügt wird.
