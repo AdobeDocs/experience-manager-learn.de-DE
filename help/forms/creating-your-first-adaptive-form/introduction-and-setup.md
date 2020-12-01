@@ -20,7 +20,7 @@ ht-degree: 33%
 ---
 
 
-# Getting Started With Adaptive Forms {#getting-started-with-adaptive-forms}
+# Erste Schritte mit dem adaptiven Forms {#getting-started-with-adaptive-forms}
 
 Dieses Lernprogramm führt Sie durch die Schritte, die beim Erstellen eines adaptiven Formulars mit mehreren Registerkarten erforderlich sind. Sie lernen, wie Sie mit Tabellen, Akkordeon-Layout und Regeleditor Geschäftsregeln erstellen können.
 
@@ -36,8 +36,8 @@ Sie benötigen Folgendes:
 
 * **Es wird davon ausgegangen, dass Sie AEM Forms Version 6.4 oder höher auf localhost:4502 ausführen.**
 
-* [Laden Sie das client-libs-and-logo](assets/client-libs-and-logo.zip) und das [getting-started-fragment](assets/getting-started-fragment.zip) auf Ihre Festplatte herunter.
+* [Laden Sie die client-libs-and-](assets/client-libs-and-logo.zip) logoand  [getting-started-](assets/getting-started-fragment.zip) fragmentdatei auf Ihre Festplatte herunter.
 
-* Importieren Sie die ZIP-Dateien mit dem [Paketmanager in AEM ](http://localhost:4502/crx/packmgr/index.jsp)
+* Importieren Sie die ZIP-Dateien mit [Package Manager ](http://localhost:4502/crx/packmgr/index.jsp) in AEM
 
 
