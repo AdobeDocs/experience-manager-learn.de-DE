@@ -22,13 +22,13 @@ ht-degree: 0%
 
 # Auflisten benutzerdefinierter Asset-Typen in AEM Forms {#listing-custom-asset-types-in-aem-forms}
 
-## Creating custom template {#creating-custom-template}
+## Erstellen einer benutzerdefinierten Vorlage {#creating-custom-template}
 
 
 Für die Zwecke dieses Artikels erstellen wir eine benutzerdefinierte Vorlage, um die benutzerdefinierten Asset-Typen und die OOTB-Asset-Typen auf derselben Seite anzuzeigen. Um eine benutzerdefinierte Vorlage zu erstellen, befolgen Sie die folgenden Anweisungen
 
 1. Erstellen Sie ein Sling: Ordner unter /apps. Benennen Sie es &quot; myportalcomponent &quot;
-1. Fügen Sie eine fpContentType-Eigenschaft hinzu. Legen Sie den Wert auf &quot;**/libs/fd/fp/formTemplate&quot;fest.**
+1. Fügen Sie eine fpContentType-Eigenschaft hinzu. Setzen Sie den Wert auf &quot;**/libs/fd/ fp/formTemplate&quot;.**
 1. hinzufügen Sie eine Eigenschaft &quot;title&quot;und legen Sie als Wert &quot;custom template&quot;fest. Dieser Name wird in der Dropdown-Liste der Komponente &quot;Search &amp; Lister&quot;angezeigt.
 1. Erstellen Sie unter diesem Ordner &quot;template.html&quot;. Diese Datei enthält den Code zum Formatieren und Anzeigen der verschiedenen Asset-Typen.
 
@@ -76,9 +76,9 @@ Im folgenden Code werden die verschiedenen Asset-Typen mithilfe der Such- und Li
 >
 >Um das adaptive Forms in dieser Vorlage Liste, erstellen Sie ein neues div und legen Sie das data-type-Attribut auf &quot;guide&quot;fest. Sie können den div kopieren und einfügen, dessen data-type=&quot;printForm&quot;lautet, und den Datentyp des neu kopierten div auf &quot;guide&quot; setzen
 
-## Configure Search And Lister Component {#configure-search-and-lister-component}
+## Konfigurieren der Komponente &quot;Search &amp; Lister&quot; {#configure-search-and-lister-component}
 
-Sobald wir die benutzerdefinierte Vorlage definiert haben, müssen wir diese benutzerdefinierte Vorlage mit der Komponente &quot;Search and Lister&quot;verknüpfen. Verweisen Sie Ihren Browser [auf diese URL ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
+Sobald wir die benutzerdefinierte Vorlage definiert haben, müssen wir diese benutzerdefinierte Vorlage mit der Komponente &quot;Search and Lister&quot;verknüpfen. Stellen Sie den Browser [auf diese URL ](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
 
 Wechseln Sie in den Designmodus und konfigurieren Sie das Absatzsystem, um die Komponente &quot;Search &amp; Lister&quot;in die Gruppe der zulässigen Komponenten aufzunehmen. Die Komponente &quot;Search &amp; Lister&quot;ist Teil der Dokument Services-Gruppe.
 
@@ -108,10 +108,11 @@ Der folgende Screenshot zeigt Ihnen die Asset-Typen, die für die Auflistung kon
 
 ![Assettypen](assets/assettypes.png)
 
-Nachdem Sie die Komponente &quot;Search &amp; Lister Portal&quot;konfiguriert haben, ist es an der Zeit, den Listener in Aktion zu sehen. Verweisen Sie Ihren Browser [auf diese URL ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). Die Ergebnisse sollten ungefähr dem unten gezeigten Bild entsprechen.
+Nachdem Sie die Komponente &quot;Search &amp; Lister Portal&quot;konfiguriert haben, ist es an der Zeit, den Listener in Aktion zu sehen. Stellen Sie den Browser [auf diese URL ](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). Das Ergebnis sollte ungefähr dem unten gezeigten Bild entsprechen.
 
 >[!NOTE]
 >
->Wenn Ihr Portal benutzerdefinierte Asset-Typen auf einem Veröffentlichungsserver auflistet, vergewissern Sie sich bitte, dass Sie dem Benutzer &quot;fd-service&quot;die &quot;read&quot;-Berechtigung für den Knoten **/apps/fd/fp/extensions/querybuilder erteilen**
+>Wenn Ihr Portal benutzerdefinierte Asset-Typen auf einem Veröffentlichungsserver auflistet, vergewissern Sie sich bitte, dass Sie dem Benutzer &quot;fd-service&quot;die &quot;read&quot;-Berechtigung für den Knoten **/apps/fd/fp/extensions/querybuilder** erteilen.
 
-![Assettypen](assets/assettypeslistings.png)[Bitte laden Sie dieses Paket mit Package Manager herunter und installieren Sie es.](assets/customassettypekt1.zip) Dies enthält Beispiel-MP4- und Word-Dokumente und XDP-Dateien, die als Asset-Typen zur Liste mit der Such- und Listster-Komponente verwendet werden.
+![Assettypen ](assets/assettypeslistings.png)
+[Bitte laden Sie dieses Paket mit Package Manager herunter und installieren Sie es.](assets/customassettypekt1.zip) Dies enthält Beispiel-MP4- und Word-Dokumente und XDP-Dateien, die als Asset-Typen zur Liste mit der Such- und Listster-Komponente verwendet werden.
