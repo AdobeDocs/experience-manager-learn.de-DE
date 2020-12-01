@@ -23,7 +23,7 @@ ht-degree: 0%
 
 In diesem Teil füllen wir das adaptive Formular mit Informationen zum Profil aus, die aus dem ACS abgerufen werden. AEM Forms verfügt über diese leistungsstarke Funktion zum Vorausfüllen adaptiver Formulare.
 
-Weitere Informationen zum Vorausfüllen von adaptiven Formularen finden Sie in diesem [Lernprogramm](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html).
+Weitere Informationen zum Vorausfüllen von adaptiven Formularen finden Sie in diesem [Tutorial](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html).
 
 Um adaptives Formular durch Abrufen von Daten aus ACS vorab auszufüllen, gehen wir davon aus, dass es in ACS Profil gibt, das dieselbe E-Mail wie der angemeldete AEM hat. Wenn beispielsweise die E-Mail-ID des angemeldeten AEM csimms@adobe.com lautet, wird erwartet, dass in ACS ein Profil mit der E-Mail-Adresse csimms@adobe.com gefunden wird.
 
