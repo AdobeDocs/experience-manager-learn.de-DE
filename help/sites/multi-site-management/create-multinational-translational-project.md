@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Create a multi-language Translation Project {#create-multi-language-translation-projects}
+# Erstellen eines mehrsprachigen Übersetzungsprojekts {#create-multi-language-translation-projects}
 
 Erfahren Sie, wie Sie ein mehrsprachiges Übersetzungsprojekt für Ihre Sprachkopie in AEM Projektkonsole erstellen, bearbeiten und verwalten. In dieser Konsole
 
