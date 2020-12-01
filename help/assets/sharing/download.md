@@ -19,7 +19,7 @@ ht-degree: 8%
 ---
 
 
-# Download
+# Herunterladen
 
 Erfahren Sie, wie Sie Assets und deren Darstellungen zur Verwendung und Freigabe auf Ihren lokalen Computer herunterladen können.
 
