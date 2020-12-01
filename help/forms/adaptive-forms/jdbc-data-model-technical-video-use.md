@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Verwenden von JDBC-basierten Formulardatenmodellen mit AEM Forms {#using-jdbc-based-form-data-models-with-aem-forms}
+# JDBC-basierte Formulardatenmodelle mit AEM Forms {#using-jdbc-based-form-data-models-with-aem-forms}
 
 In diesem Video wird gezeigt, wie ein Formulardatenmodell auf der Grundlage einer JDBC-Datenquelle, ein auf dem Formulardatenmodell basierendes adaptives Formular und der Vorgang &quot;INSERT&quot;mithilfe des Formulardatenmodells erstellt werden.
 
@@ -28,5 +28,5 @@ In diesem Video wird gezeigt, wie ein Formulardatenmodell auf der Grundlage eine
 
 >[!NOTE]
 >
->Jede RDBMS-Datenquelle kann verwendet werden, solange die erforderlichen Datenbanktreiber als OSGi-Bundle AEM werden. Die Einrichtung einer RDBMS-Datenquelle in AEM wird unter [Einrichten der Datenintegration mit AEM Forms](/help/forms/adaptive-forms/data-integration-technical-video-setup.md)behandelt.
+>Jede RDBMS-Datenquelle kann verwendet werden, solange die erforderlichen Datenbanktreiber als OSGi-Bundle AEM werden. Das Einrichten einer RDBMS-Datenquelle in AEM wird unter [Einrichten der Datenintegration mit AEM Forms](/help/forms/adaptive-forms/data-integration-technical-video-setup.md) behandelt.
 
