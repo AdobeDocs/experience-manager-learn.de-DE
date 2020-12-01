@@ -35,19 +35,19 @@ Die WKND-Site-Startseite zeigt Aktivitäten oder das Beste, was man in einer Sta
 
 ## Schritte zum Erstellen eines A/B-Tests mit Visual Experience Composer (VEC)
 
-1. Bei [Adobe Experience Cloud](https://experience.adobe.com/)anmelden, auf __Zielgruppe__ tippen und zur Registerkarte __Aktivitäten__ navigieren
+1. Melden Sie sich bei [Adobe Experience Cloud](https://experience.adobe.com/) an, tippen Sie auf __Zielgruppe__ und navigieren Sie zur Registerkarte __Aktivitäten__
 
-   + Wenn Sie keine __Zielgruppe__ auf dem Experience Cloud-Dashboard sehen, stellen Sie sicher, dass im Organisationsschalter oben rechts die richtige Organisation für die Adobe ausgewählt ist und dass Sie Zugriff auf die Zielgruppe in [Adobe Admin Console](https://adminconsole.adobe.com/)erhalten haben.
+   + Wenn __Zielgruppe__ im Experience Cloud-Dashboard nicht angezeigt wird, stellen Sie sicher, dass im Organisationswechsel oben rechts die richtige Organisation für die Adobe ausgewählt ist und dass Sie unter [Adobe Admin Console](https://adminconsole.adobe.com/) Zugriff auf die Zielgruppe erhalten haben.
 
-1. Klicken Sie auf **Aktivität** erstellen und wählen Sie dann **A/B-Test** -Aktivität
+1. Klicken Sie auf die Schaltfläche **Aktivität erstellen** und wählen Sie dann **A/B-Test** Aktivität
 
    ![A/B-Aktivität](assets/ab-target-activity.png)
 
-1. Wählen Sie die Option **Visual Experience Composer** , geben Sie die Aktivitäten-URL ein und klicken Sie auf **Weiter**
+1. Wählen Sie die Option **Visual Experience Composer**, geben Sie die Aktivitäten-URL ein und klicken Sie auf **Weiter**
 
    ![Aktivitäten-URL](assets/ab-test-url.png)
 
-1. Der Visual Experience Composer zeigt nach Erstellung einer neuen Aktivität auf der linken Seite zwei Registerkarten an: *Erlebnis A* und *Erlebnis B*. Wählen Sie ein Erlebnis aus der Liste. Sie können der Liste mithilfe der Schaltfläche **Hinzufügen Erlebnis** neue Erlebnisse hinzufügen.
+1. Der Visual Experience Composer zeigt nach Erstellung einer neuen Aktivität auf der linken Seite zwei Registerkarten an: *Erlebnis A* und *Erlebnis B*. Wählen Sie ein Erlebnis aus der Liste. Mit der Schaltfläche **Hinzufügen Erlebnis** können Sie der Liste neue Erlebnisse hinzufügen.
 
    ![Erlebnis A](assets/experience.png)
 
@@ -59,12 +59,12 @@ Die WKND-Site-Startseite zeigt Aktivitäten oder das Beste, was man in einer Sta
 
    ![Abenteuer](assets/adventures.png)
 
-1. Umbenennen von *Erlebnis A* zu *Abenteuer*
-1. Ebenso aktualisieren Sie den Text zu *Erlebnis B* vom *Camping in Westaustralien* , um die australische Wildnis zu *entdecken*.
+1. Umbenennen von *Erlebnis A* in *Abenteuer*
+1. Aktualisieren Sie den Text auf *Erlebnis B* von *Camping in Westaustralien* auf *Die australische Wildnis*.
 
    ![Entdecken](assets/explore.png)
 
-1. Klicken Sie auf **Weiter** , um zum Targeting zu wechseln, und bewahren Sie die manuelle Traffic-Zuordnung zwischen den beiden Erlebnissen auf 50-50.
+1. Klicken Sie auf **Weiter**, um zum Targeting zu wechseln, und bewahren Sie die manuelle Traffic-Zuordnung von 50-50 zwischen den beiden Erlebnissen auf.
 
    ![Targeting](assets/targeting.png)
 
