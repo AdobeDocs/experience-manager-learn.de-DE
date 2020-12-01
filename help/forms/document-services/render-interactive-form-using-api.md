@@ -26,7 +26,7 @@ In diesem Artikel sehen Sie sich den folgenden Dienst an:
 
 * FormsService - Dies ist ein sehr vielseitiger Dienst, mit dem Sie Daten aus und in eine PDF-Datei exportieren/importieren und interaktive PDF-Dateien generieren können, indem Sie XML-Daten in eine XDP-Vorlage zusammenführen
 
-Die offizielle javadoc for AEM Forms API ist [hier aufgeführt](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+Die offizielle JavaScript-API für AEM Forms ist [hier](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html) aufgeführt
 
 Im folgenden Codefragment wird interaktives PDF-Dokument mit dem Vorgang renderPDFForm des FormsService gerendert. Die Vorlage &quot;schengen.xdp&quot;wird zum Zusammenführen der XML-Daten verwendet.
 
@@ -67,6 +67,6 @@ Zeile 11: Gibt die generierte interaktive PDF-Datei an die aufrufende Anwendung 
 1. Die interaktive PDF sollte auf Ihr lokales System heruntergeladen werden
 
 
-Das Musterpaket enthält das benutzerdefinierte Profil, das mit dem Mobile Form verknüpft ist. Bitte entdecken Sie die Datei [customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp) . Diese JSP extrahiert die Daten aus dem mobilen Formular und stellt eine POST zum Servlet auf ***/bin/generateinteractivepdf*** -Pfad bereit. Das Servlet gibt die interaktive PDF an die aufrufende Anwendung zurück. Der Code in customtoolbar.jsp lädt dann die Datei auf Ihr lokales System herunter
+Das Musterpaket enthält das benutzerdefinierte Profil, das mit dem Mobile Form verknüpft ist. Bitte entdecken Sie die Datei [customtoolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp). Diese JSP extrahiert die Daten aus dem mobilen Formular und stellt eine POST zum Servlet auf dem Pfad ***/bin/generateinteractivepdf*** bereit. Das Servlet gibt die interaktive PDF an die aufrufende Anwendung zurück. Der Code in customtoolbar.jsp lädt dann die Datei auf Ihr lokales System herunter
 
 
