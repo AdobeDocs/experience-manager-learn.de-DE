@@ -26,7 +26,7 @@ ht-degree: 0%
 
 In diesem Teil verwenden wir benutzerdefinierte Funktionen und den Code-Editor, um Geschäftsregeln zu erstellen.
 
-Sie haben die [ClientLib bereits mit der benutzerdefinierten Funktion](assets/client-libs-and-logo.zip) installiert.
+haben Sie die [ClientLib mit der benutzerdefinierten Funktion](assets/client-libs-and-logo.zip) bereits zuvor in diesem Lernprogramm installiert.
 
 Normalerweise besteht eine Client-Bibliothek aus CSS- und JavaScript-Dateien. Diese Client-Bibliothek enthält die JavaScript-Datei, die eine Funktion zum Ausfüllen von Dropdown-Listen bereitstellt.
 
@@ -35,11 +35,11 @@ Normalerweise besteht eine Client-Bibliothek aus CSS- und JavaScript-Dateien. Di
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=9&learn=on)
 
-### Übersichtstitel des Bedienfelds festlegen {#set-the-summary-title-of-panels}
+### Übersichtstitel des Bedienfelds {#set-the-summary-title-of-panels} festlegen
 
 >[!VIDEO](https://video.tv.adobe.com/v/28387?quality=9&learn=on)
 
-#### Überprüfungsbedienfeld {#validate-panels-using-rule-editor}
+#### Bedienfeld {#validate-panels-using-rule-editor} überprüfen
 
 >[!VIDEO](https://video.tv.adobe.com/v/28409?quality=9&learn=on)
 
