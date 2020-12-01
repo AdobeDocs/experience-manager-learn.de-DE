@@ -15,11 +15,11 @@ ht-degree: 4%
 ---
 
 
-# Suchaufstieg mit Asset-Metadaten {#search-boost-asset}
+# Suchverstärkung mit Asset-Metadaten {#search-boost-asset}
 
 >[!VIDEO](https://video.tv.adobe.com/v/16766/?quality=12&learn=on)
 
-## Die Suchverstärkung in AEM Assets{#understanding-search-boosting-in-aem-assets}
+## Suchverstärkung in AEM Assets{#understanding-search-boosting-in-aem-assets}
 
 Eine ausführliche Betrachtung der AEM Assets-Suchverstärkung und ihrer Funktionsweise im weiteren Kontext der AEM.
 
