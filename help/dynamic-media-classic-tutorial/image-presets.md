@@ -38,8 +38,8 @@ Eine Bildvorgabe hat auf beiden Seiten ihres Namens ein Dollarzeichen ($) und fo
 >
 >Erstellen Sie eine Bildvorgabe pro individueller Bildgröße auf Ihrer Site. Wenn Sie z. B. ein Bild mit 350 x 350 für die Produktdetailseite, ein Bild mit 120 x 120 für die Durchsuchen-/Suchseiten und ein Bild mit 90 x 90 für ein Querverkauf-/Sonderelement benötigen, dann benötigen Sie drei Bildvorgaben, unabhängig davon, ob Sie über 500 oder 500.00000 verfügen.
 
-- Weitere Informationen zu [Bildvorgaben](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
-- Erfahren Sie, wie Sie eine Bildvorgabe [erstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
+- Erfahren Sie mehr über [Bildvorgaben](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
+- Erfahren Sie, wie Sie eine Bildvorgabe [erstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset) erstellen.
 
 ## Bildvorgaben und Scharfzeichnen
 
@@ -61,12 +61,12 @@ Die folgende Grafik zeigt drei Stufen des Scharfzeichnens. Von rechts nach links
 
 Dynamic Media Classic ermöglicht drei Arten des Scharfzeichnens: Einfaches Scharfzeichnen, Resamplingmodus und Unschärfemaske.
 
-Erfahren Sie mehr über die [Dynamischen Medien - Classic-Scharfzeichnungsoptionen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
+Erfahren Sie mehr über [Optionen für das Scharfzeichnen in dynamischen Medien](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
 
 ## Zusätzliche Ressourcen
 
-[Anleitung](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf)zu Bildvorgaben. Zu verwendende Einstellungen zur Optimierung der Bildqualität und der Ladegeschwindigkeit.
+[Anleitung](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf) zu Bildvorgaben. Zu verwendende Einstellungen zur Optimierung der Bildqualität und der Ladegeschwindigkeit.
 
 [Bild ist alles Teil 2: Es ist nie nur ein Weichzeichner — Qualität im Vergleich zur Geschwindigkeit](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/). Ein Blog-Beitrag, in dem die Verwendung von Bildvorgaben für die Bereitstellung hochwertiger, schnell ladender Bilder diskutiert wird.
 
-[Bild ist alles Webinare](https://dynamicmediaseries2019.enterprise.adobeevents.com/). Links zu Aufzeichnungen aller drei Webinare in der Serie _Bild ist alles_ . [Webinar 2](https://seminars.adobeconnect.com/p6lqaotpjnd3) behandelt Bildvorgaben.
+[Bild ist alles Webinare](https://dynamicmediaseries2019.enterprise.adobeevents.com/). Links zu Aufzeichnungen aller drei Webinare der Serie _Bild ist alles_. [Webinar 2 ](https://seminars.adobeconnect.com/p6lqaotpjnd3) behandelt Bildvorgaben.
