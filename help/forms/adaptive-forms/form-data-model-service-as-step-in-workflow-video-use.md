@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Formulardatenmodelldienst als Schritt im Workflow verwenden {#using-form-data-model-service-as-step-in-workflow}
+# Verwenden des Formulardatenmodelldienstes als Schritt im Workflow {#using-form-data-model-service-as-step-in-workflow}
 
 Ab AEM Forms 6.4 haben wir jetzt die Möglichkeit, das Formulardatenmodell als Teil AEM Arbeitsablaufs zu verwenden. Im folgenden Video werden die Schritte erläutert, die zum Konfigurieren des Formulardatenmodellschritts im Arbeitsablauf AEM Arbeitsablauf erforderlich sind
 
@@ -29,16 +29,16 @@ Ab AEM Forms 6.4 haben wir jetzt die Möglichkeit, das Formulardatenmodell als T
 
 Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisungen
 * [Laden Sie das SetValue-Bundle herunter und stellen Sie es bereit](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGI-Bundle, das Metadateneigenschaften festlegt.
->!![NOTE]In AEM Forms 6.5 und höher ist diese Funktion standardmäßig verfügbar, wie hier [beschrieben.](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
+>!![NOTE]In AEM Forms 6.5 und höher ist diese Funktion standardmäßig verfügbar, wie hier  [beschrieben.](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
-* Setup tomcat mit der Datei SampleRest.war, wie [hier](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)beschrieben. Die in Tomcat bereitgestellte Kriegsdatei hat den Code, um die Bonität des Antragstellers zurückzugeben. Die Bonitätsbewertung ist eine Zufallszahl zwischen 200 und 800
+* Setup tomcat mit der Datei SampleRest.war, wie [hier](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html) beschrieben. Die in Tomcat bereitgestellte Kriegsdatei hat den Code, um die Bonität des Antragstellers zurückzugeben. Die Bonitätsbewertung ist eine Zufallszahl zwischen 200 und 800
 
-* [Importieren Sie die Assets mit Package Manager](assets/invoke-fdm-as-service-step.zip)in AEM. Das Paket enthält Folgendes:
+* [Importieren Sie die Assets mit Package Manager](assets/invoke-fdm-as-service-step.zip) in AEM. Das Paket enthält Folgendes:
 
    * Workflow-Modell, das FDM-Schritt verwendet.
    * Formulardatenmodell, das im FDM-Schritt verwendet wird.
    * Adaptives Formular, um den Workflow beim Senden auszulösen.
-* Öffnen Sie das [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Füllen Sie die Details aus und senden Sie sie ab. Beim Senden des Formulars wird der [Anmeldevorgang](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) ausgelöst.
+* Öffnen Sie [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Füllen Sie die Details aus und senden Sie sie ab. Beim Senden des Formulars wird der [Darlehensanwendungs-Workflow](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) ausgelöst.
 
 ![ Workflow ](assets/fdm-as-service-step-workflow.PNG).
 Der Arbeitsablauf nutzt die Komponente &quot;Oder teilen&quot;, um die Anwendung an den Administrator weiterzuleiten, wenn die Bonität über 500 liegt. Wenn die Bonität unter 500 liegt, wird der Antrag zur Auszahlung weitergeleitet
