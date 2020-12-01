@@ -15,7 +15,7 @@ ht-degree: 19%
 
 # AEM Foundation-Videos und -Tutorials {#foundation}
 
-+ [Übersicht](./overview.md)
++ [Überblick](./overview.md)
 + Administration {#administration}
    + [Gründe für die Aktualisierung AEM](./administration/understand-reasons-to-upgrade.md)
    + [Indizes mithilfe von oak-run.jar verwalten](./administration/use-oak-run-jar-to-manage-indexes.md)
@@ -23,7 +23,7 @@ ht-degree: 19%
    + [Verwenden Sie das Dashboard Systemübersicht](./administration/use-the-system-overview-dashboard.md)
 + Authentifizierung {#authentication}
    + [OAuth-Authentifizierung](authentication/oauth-code-sample-develop.md)
-   + [Öffentliche/private Schlüssel zur Verwendung mit Adobe-E/A einrichten](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
+   + [Öffentliche/private Schlüssel für die Verwendung mit Adobe I/O einrichten](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
    + [Authentifizierung](authentication/authentication-support-article-understand.md)
    + [IMS-Authentifizierung unter AMS verstehen](authentication/adobe-ims-authentication-technical-video-understand.md)
 + Adobe Cloud Manager{#cloud-manager}
