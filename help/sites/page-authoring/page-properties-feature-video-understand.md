@@ -20,7 +20,7 @@ ht-degree: 40%
 ---
 
 
-# Seiteneigenschaften {#understanding-page-properties-aem-sites}
+# Die Seiteneigenschaften {#understanding-page-properties-aem-sites}
 
 Im folgenden Video werden die Seiteneigenschaften vorgestellt, die einer Seite in Adobe Experience Manager zugeordnet sind.
 
@@ -50,10 +50,10 @@ In diesem Video werden die folgenden Elemente der Seiteneigenschaft behandelt:
    * Vorlageneinstellungen
    * Authentifizierungspflicht
    * Export
-* Miniaturansicht      
+* Miniaturansicht 
 * Freigabe in Social Media
 * Cloud Services-Konfigurationen
-* Personalisierung  
+* Personalisierung 
    * ContextHub-Konfigurationen
    * Konfiguration für Targeting
 * Berechtigungen
