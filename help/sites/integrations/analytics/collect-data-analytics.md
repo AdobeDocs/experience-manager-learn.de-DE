@@ -12,8 +12,8 @@ thumbnail: 5332-collect-data-analytics.jpg
 translation-type: tm+mt
 source-git-commit: 64c167ec1d625fdd8be1bc56f7f5e59460b8fed3
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2415'
+ht-degree: 5%
 
 ---
 
