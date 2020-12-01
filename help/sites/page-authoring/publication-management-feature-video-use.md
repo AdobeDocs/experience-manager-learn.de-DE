@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# Publishing pages {#using-publication-management-with-aem-sites}
+# Veröffentlichen von Seiten {#using-publication-management-with-aem-sites}
 
 AEM Sites bietet verschiedene Optionen zum Veröffentlichen und Rückgängigmachen der Veröffentlichung von Inhalten. In diesem Video werden die verschiedenen Methoden und ihre Fähigkeiten untersucht.
 
