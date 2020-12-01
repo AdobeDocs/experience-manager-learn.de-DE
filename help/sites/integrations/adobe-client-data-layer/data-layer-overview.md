@@ -13,12 +13,12 @@ translation-type: tm+mt
 source-git-commit: e13a5171fbeb9e1eb5f78d1c691bc8b4b896a998
 workflow-type: tm+mt
 source-wordcount: '775'
-ht-degree: 6%
+ht-degree: 8%
 
 ---
 
 
-# Using the Adobe Client Data Layer with AEM Core Components {#overview}
+# Verwenden der Adobe Client-Datenschicht mit AEM Kernkomponenten {#overview}
 
 Die Adobe Client Data Layer bietet eine Standardmethode zum Erfassen und Speichern von Daten zu Besuchern auf einer Webseite und erleichtert den Zugriff auf diese Daten. Die Adobe Client-Datenschicht ist plattformunabhängig, aber für die Verwendung mit AEM vollständig in die Kernkomponenten integriert.
 
@@ -30,14 +30,14 @@ Die Adobe Client Data Layer bietet eine Standardmethode zum Erfassen und Speiche
 
 ## Datenschicht
 
-Sie können sich die integrierte Funktionalität der Adobe Client Data Layer mit den Entwicklerwerkzeugen Ihres Browsers und der Live- [WKND-Referenz-Website](https://wknd.site/)vorstellen.
+Sie können sich die integrierte Funktionalität der Adobe Client Data Layer mit den Entwicklerwerkzeugen Ihres Browsers und der Live-Referenz-Website [WKND](https://wknd.site/) vorstellen.
 
 >[!NOTE]
 >
 > Screenshots unten, aufgenommen vom Chrome-Browser.
 
 1. Navigieren Sie zu [https://wknd.site](https://wknd.site)
-1. Öffnen Sie die Entwicklerwerkzeuge und geben Sie den folgenden Befehl in die **Konsole** ein:
+1. Öffnen Sie Ihre Entwicklerwerkzeuge und geben Sie in **Console** den folgenden Befehl ein:
 
    ```js
    window.adobeDataLayer.getState();
@@ -92,13 +92,13 @@ Es empfiehlt sich, benutzerspezifischen Code auf der Grundlage eines Ereignisses
    }
    ```
 
-   Der obige Code überprüft das `event` Objekt und ruft mithilfe der `adobeDataLayer.getState` Methode den aktuellen Status des Objekts ab, das das Ereignis ausgelöst hat. Die Helper-Methode überprüft dann die `filter` Kriterien und wird nur dann zurückgegeben, wenn die aktuelle Version den Filter `dataObject` erfüllt.
+   Der obige Code überprüft das `event`-Objekt und verwendet die `adobeDataLayer.getState`-Methode, um den aktuellen Status des Objekts abzurufen, das das Ereignis ausgelöst hat. Die Helper-Methode überprüft dann das `filter`-Kriterium und nur dann, wenn das aktuelle `dataObject` den Filter erfüllt, wird es zurückgegeben.
 
    >[!CAUTION]
    >
-   > Es ist wichtig, den Browser während dieser Übung **nicht** zu aktualisieren, da sonst das Konsolen-JavaScript verloren geht.
+   > Es ist wichtig, dass **nicht** den Browser während dieser Übung aktualisiert wird, da sonst das Konsolen-JavaScript verloren geht.
 
-1. Geben Sie als Nächstes einen Ereignis-Handler ein, der aufgerufen wird, wenn eine **Teaser** -Komponente in einem **Karussell** angezeigt wird.
+1. Geben Sie als Nächstes einen Ereignis-Handler ein, der aufgerufen wird, wenn eine **Teaser**-Komponente in einem **Karussell** angezeigt wird.
 
    ```js
    function teaserShownHandler(event) {
@@ -110,9 +110,9 @@ Es empfiehlt sich, benutzerspezifischen Code auf der Grundlage eines Ereignisses
    }
    ```
 
-   Die `teaserShownHandler` Methode ruft die `getDataObjectHelper` Methode auf und übergibt einen Filter von `wknd/components/teaser` als `@type` , um von anderen Komponenten ausgelöste Ereignis zu filtern.
+   Das `teaserShownHandler` ruft die `getDataObjectHelper`-Methode auf und übergibt einen Filter von `wknd/components/teaser` als `@type`, um Ereignis auszufiltern, die von anderen Komponenten ausgelöst werden.
 
-1. Schieben Sie anschließend einen Ereignis-Listener auf die Datenschicht, um auf das `cmp:show` Ereignis zu achten.
+1. Schieben Sie anschließend einen Ereignis-Listener auf die Datenschicht, um auf das Ereignis `cmp:show` zu hören.
 
    ```js
    window.adobeDataLayer.push(function (dl) {
@@ -120,13 +120,13 @@ Es empfiehlt sich, benutzerspezifischen Code auf der Grundlage eines Ereignisses
    });
    ```
 
-   Das `cmp:show` Ereignis wird von vielen verschiedenen Komponenten ausgelöst, z. B. wenn eine neue Folie im **Karussell** angezeigt wird oder wenn eine neue Registerkarte in der **Registerkartenkomponente** ausgewählt ist.
+   Das `cmp:show`-Ereignis wird von vielen verschiedenen Komponenten ausgelöst, z. B. wenn eine neue Folie in der Komponente **Karussell** angezeigt wird oder wenn eine neue Registerkarte in der Komponente **Registerkarte** ausgewählt ist.
 
 1. Schalten Sie auf der Seite die Karussellfolien um und beachten Sie die Konsolenanweisungen:
 
    ![Karussell umschalten und Ereignis-Listener anzeigen](assets/teaser-console-slides.png)
 
-1. Entfernen Sie den Ereignis-Listener aus der Datenschicht, um das Listening auf das `cmp:show` Ereignis zu beenden:
+1. Entfernen Sie den Ereignis-Listener aus der Datenschicht, um das Listening auf das `cmp:show`-Ereignis zu beenden:
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -149,9 +149,9 @@ Es empfiehlt sich, benutzerspezifischen Code auf der Grundlage eines Ereignisses
    }
    ```
 
-   Beachten Sie, dass der Ressourcentyp zum Filtern des Ereignisses verwendet `wknd/components/page` wird.
+   Beachten Sie, dass der Ressourcentyp `wknd/components/page` zum Filtern des Ereignisses verwendet wird.
 
-1. Schieben Sie anschließend einen Ereignis-Listener auf die Datenschicht, um das `cmp:show` Ereignis abzurufen, und rufen Sie die `pageShownHandler`Variable auf.
+1. Schieben Sie anschließend einen Ereignis-Listener auf die Datenschicht, um auf das `cmp:show`-Ereignis zu warten, und rufen Sie das `pageShownHandler`-Ereignis auf.
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -164,16 +164,16 @@ Es empfiehlt sich, benutzerspezifischen Code auf der Grundlage eines Ereignisses
 
    ![Seitenansichtsdaten](assets/page-show-console-data.png)
 
-   Das `cmp:show` Ereignis für die Seite wird bei jedem Seitenladevorgang am oberen Seitenrand ausgelöst. Sie fragen sich vielleicht, warum der Ereignis-Handler ausgelöst wurde, wenn die Seite eindeutig bereits geladen wurde.
+   Das `cmp:show`-Ereignis für die Seite wird bei jedem Seitenladevorgang am oberen Seitenrand ausgelöst. Sie fragen sich vielleicht, warum der Ereignis-Handler ausgelöst wurde, wenn die Seite eindeutig bereits geladen wurde.
 
-   Dies ist eine der einzigartigen Funktionen der Adobe Client Data Layer, da Sie Ereignis-Listener **vor** oder **nach** der Initialisierung der Datenschicht registrieren können. Dies ist ein entscheidender Faktor, um Racebedingungen zu vermeiden.
+   Dies ist eine der einzigartigen Funktionen der Adobe Client Data Layer, da Sie Ereignis-Listener **vor** oder **nach der Initialisierung der Datenschicht registrieren können.** Dies ist ein entscheidender Faktor, um Racebedingungen zu vermeiden.
 
-   Die Datenschicht behält ein Warteschlangenarray aller sequenziell aufgetretenen Ereignis bei. Die Datenschicht löst standardmäßig Ereignis-Rückrufe für Ereignis aus, die in der **Vergangenheit** aufgetreten sind, sowie für Ereignis in der **Zukunft**. Es ist möglich, die Ereignis nach Vergangenheit oder Zukunft zu filtern. [Weitere Informationen finden Sie in der Dokumentation](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
+   Die Datenschicht behält ein Warteschlangenarray aller sequenziell aufgetretenen Ereignis bei. Die Datenschicht löst standardmäßig Ereignis-Rückrufe für Ereignis aus, die in **after** aufgetreten sind, sowie für Ereignis in **future**. Es ist möglich, die Ereignis nach Vergangenheit oder Zukunft zu filtern. [Weitere Informationen finden Sie in der Dokumentation](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
 
 
 ## Nächste Schritte
 
-Sehen Sie sich das folgende Lernprogramm an, um zu erfahren, wie Sie mit der Ereignis-basierten Adobe-Client-Datenschicht Seitendaten [erfassen und an Adobe Analytics](../analytics/collect-data-analytics.md)senden können.
+Sehen Sie sich das folgende Lernprogramm an, um zu erfahren, wie Sie die Ereignis-basierte Adobe Client Data-Ebene verwenden, um [Seitendaten zu erfassen und an Adobe Analytics](../analytics/collect-data-analytics.md) zu senden.
 
 
 ## Zusätzliche Ressourcen {#additional-resources}
