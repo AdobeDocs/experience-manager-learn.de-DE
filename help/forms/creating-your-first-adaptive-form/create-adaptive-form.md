@@ -21,7 +21,7 @@ ht-degree: 0%
 ---
 
 
-# Creating Adaptive Form {#creating-adaptive-form}
+# Erstellen eines adaptiven Formulars {#creating-adaptive-form}
 
 In Teil 1 erstellen wir ein adaptives Formular basierend auf der in der vorherigen Lektion erstellten Vorlage und konfigurieren die Symbolleiste mit den entsprechenden Schaltflächen.
 
