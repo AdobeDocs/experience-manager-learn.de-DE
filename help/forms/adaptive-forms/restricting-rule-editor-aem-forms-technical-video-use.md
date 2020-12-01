@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Beschränkung des Regeleditors auf bestimmte Gruppen in AEM Forms {#restricting-the-rule-editor-to-specific-groups-in-aem-forms}
+# Einschränkung des Regeleditors auf bestimmte Gruppen in AEM Forms {#restricting-the-rule-editor-to-specific-groups-in-aem-forms}
 
 Eingrenzen des Regeleditors für adaptive Formulare auf bestimmte Gruppen in AEM
 
