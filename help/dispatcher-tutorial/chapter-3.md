@@ -24,7 +24,7 @@ Dies ist Teil 3 einer Dreierreihe zum Zwischenspeichern in AEM. Wo die ersten be
 
 ## Zwischenspeicherung im Allgemeinen
 
-[Kapitel 1](chapter-1.md) und [Kapitel 2](chapter-2.md) dieser Serie konzentrierten sich hauptsächlich auf den Dispatcher. Wir haben die Grundlagen, die Einschränkungen und die Bedingungen erläutert, in denen Sie bestimmte Kompromisse eingehen müssen.
+[Kapitel 1](chapter-1.md) und  [Kapitel 2](chapter-2.md) dieser Serie konzentrierten sich hauptsächlich auf den Dispatcher. Wir haben die Grundlagen, die Einschränkungen und die Bedingungen erläutert, in denen Sie bestimmte Kompromisse eingehen müssen.
 
 Die Komplexität und Komplexität der Zwischenspeicherung sind keine Probleme, die sich nur auf den Dispatcher beziehen. Zwischenspeichern ist im Allgemeinen schwierig.
 
@@ -93,19 +93,19 @@ Aber wo in dieser Kette macht es Sinn, Cache zu machen? Am Anfang? Am Ende? Übe
 
 Um Ihnen eine grobe Vorstellung davon zu geben, welche Faktoren Sie berücksichtigen könnten,
 
-**Zeit zum Leben** - Wenn Objekte eine kurze inhärente Live-Zeit haben (Traffic-Daten können kürzer sein als Wetterdaten), lohnt es sich möglicherweise nicht, zwischengespeichert zu werden.
+**Zeit zum Leben** : Wenn Objekte eine kurze inhärente Live-Zeit haben (Traffic-Daten können kürzer sein als Wetterdaten), lohnt es sich möglicherweise nicht, zwischengespeichert zu werden.
 
-**Produktionskosten -** Wie teuer ist die Reproduktion und der Versand eines Objekts (gemessen an CPU-Zyklen und I/O). Wenn es billige Zwischenspeicherung ist, ist möglicherweise nicht nötig.
+**Produktionskosten -** Wie teuer ist (im Hinblick auf CPU-Zyklen und I/O) die Reproduktion und der Versand eines Objekts. Wenn es billige Zwischenspeicherung ist, ist möglicherweise nicht nötig.
 
-**Größe** - Große Objekte benötigen mehr Ressourcen zum Zwischenspeichern. Das könnte ein begrenzender Faktor sein und muss gegen den Nutzen abgewogen werden.
+**Größe** : Große Objekte benötigen mehr Ressourcen zum Zwischenspeichern. Das könnte ein begrenzender Faktor sein und muss gegen den Nutzen abgewogen werden.
 
 **Zugriffshäufigkeit** : Wenn selten auf Objekte zugegriffen wird, ist die Zwischenspeicherung möglicherweise nicht wirksam. Sie würden einfach statisch oder ungültig werden, bevor sie zum zweiten Mal aus dem Cache abgerufen werden. Solche Elemente würden lediglich Speicherressourcen blockieren.
 
 **Freigegebener Zugriff** : Daten, die von mehr als einer Entität verwendet werden, sollten weiter oben in der Kette zwischengespeichert werden. Tatsächlich ist die Cachekette keine Kette, sondern ein Baum. Ein Datenelement im Repository kann von mehr als einem Modell verwendet werden. Diese Modelle können wiederum von mehr als einem Render-Skript verwendet werden, um HTML-Fragmente zu generieren. Diese Fragmente sind auf mehreren Seiten enthalten, die mit ihren privaten Caches im Browser an mehrere Benutzer verteilt werden. &quot;Teilen&quot; bedeutet also nicht, dass man nur zwischen Leuten und nicht zwischen Softwareteilen teilt. Wenn Sie einen potenziellen &quot;gemeinsamen&quot; Cache finden möchten, verfolgen Sie einfach den Baum zum Stamm zurück und finden Sie einen gemeinsamen Vorfahren - dort sollten Sie zwischenspeichern.
 
-**Geodatenverteilung** - Wenn Ihre Benutzer über die ganze Welt verteilt sind, kann die Verwendung eines verteilten Netzwerks von Caches dazu beitragen, Latenzzeiten zu reduzieren.
+**Geodatenverteilung** : Wenn Ihre Benutzer über die ganze Welt verteilt sind, kann die Verwendung eines verteilten Cache-Netzwerks dazu beitragen, Latenzzeiten zu reduzieren.
 
-**Netzwerkbandbreite und -latenz** - Sprechen Sie von Latenzzeit, wer sind Ihre Kunden und welche Netzwerkart nutzen sie? Vielleicht sind Ihre Kunden mobile Kunden in einem unterentwickelten Land, das 3G-Verbindungen von Smartphones der älteren Generation verwendet? Erwägen Sie, kleinere Objekte zu erstellen und sie im Browser-Cache zu zwischenspeichern.
+**Netzwerkbandbreite und -Latenz**  - Vorstellung von Latenzzeit, wer sind Ihre Kunden und welche Art von Netzwerk verwenden sie? Vielleicht sind Ihre Kunden mobile Kunden in einem unterentwickelten Land, das 3G-Verbindungen von Smartphones der älteren Generation verwendet? Erwägen Sie, kleinere Objekte zu erstellen und sie im Browser-Cache zu zwischenspeichern.
 
 Diese Liste ist bei weitem nicht umfassend, aber wir glauben, dass Sie jetzt die Idee bekommen.
 
@@ -122,8 +122,8 @@ Jede im letzten Kapitel eingeführte Ebene bietet einen Wert in der Cache-Kette.
 Es gibt drei grundlegende Invalidierungsstrategien:
 
 * **TTL, Time to Live:** Ein Objekt läuft nach einem bestimmten Zeitraum ab (z. B. &quot;2 Stunden von jetzt&quot;)
-* **Ablaufdatum:** Das Objekt läuft zu einem festgelegten Zeitpunkt in der Zukunft ab (z. B. &quot;10. Juni 2019 um 17:00 Uhr&quot;)
-* **Ereignis-basiert:** Das Objekt wird explizit durch ein Ereignis ungültig gemacht, das auf der Plattform aufgetreten ist (z. B. wenn eine Seite geändert und aktiviert wurde).
+* **Ablaufdatum:** Das Objekt läuft zu einem festgelegten Zeitpunkt in der Zukunft ab (z. B. &quot;10. Juni 2019, 17.00 Uhr&quot;)
+* **Ereignis:** Das Objekt wird explizit durch ein Ereignis ungültig gemacht, das auf der Plattform aufgetreten ist (z. B. wenn eine Seite geändert und aktiviert wurde)
 
 Jetzt können Sie verschiedene Strategien auf verschiedenen Cache-Ebenen verwenden, aber es gibt einige &quot;giftige&quot;.
 
@@ -141,7 +141,7 @@ Einfach ausgedrückt werden die Zwischenspeicher nach der Objektänderung für u
 
 Sie müssen nur eine Regel beachten:
 
-Immer von innen bis außen ungültig machen. Wenn Sie zuerst einen äußeren Cache ungültig gemacht haben, wird möglicherweise statischer Inhalt von einem inneren erneut zwischengespeichert. Machen Sie keine Annahmen, wann ein Cache wieder neu ist - stellen Sie sicher. Am besten durch Auslösen der Ungültigmachung des äußeren Cache _nach_ dem Ungültigmachen des inneren Cache.
+Immer von innen bis außen ungültig machen. Wenn Sie zuerst einen äußeren Cache ungültig gemacht haben, wird möglicherweise statischer Inhalt von einem inneren erneut zwischengespeichert. Machen Sie keine Annahmen, wann ein Cache wieder neu ist - stellen Sie sicher. Am besten durch Auslösen der Ungültigmachung des äußeren Cache _nach der Ungültigmachung des inneren Cache_.
 
 Das ist die Theorie. Aber in der Praxis gibt es eine Reihe von Problemen. Die Ereignis müssen verteilt werden - potenziell über ein Netzwerk. In der Praxis ist es daher am schwierigsten, das System der Ungültigmachung anzuwenden.
 
@@ -167,7 +167,7 @@ Es ist leicht zu implementieren. Leider ist es schwer, die effektive Lebensdauer
 
 <br> 
 
-Betrachten Sie die Abbildung oben. Jede Zwischenspeicherebene führt eine TTL von 2 Min. ein. Nun - die gesamte TTL muss auch 2 Min. Nicht ganz. Wenn die äußere Ebene das Objekt kurz vor dem Anhalten abruft, verlängert die äußere Schicht die effektive Livedauer des Objekts. Die effektive Live-Zeit kann in diesem Fall zwischen 2 und 4 Minuten betragen. Nehmen wir an, Sie haben mit Ihrer Geschäftsabteilung abgestimmt, eines Tages ist tolerierbar - und Sie haben vier Schichten von Caches. Die eigentliche TTL auf jeder Ebene darf nicht länger als sechs Stunden sein... die Cache-Abwesenheitsrate erhöhen...
+Betrachten Sie die Abbildung oben. Jede Zwischenspeicherebene führt eine TTL von 2 Min. ein. Nun - die gesamte TTL muss auch 2 Min. Nicht ganz. Wenn die äußere Ebene das Objekt kurz vor dem Anhalten abruft, verlängert die äußere Schicht die effektive Livedauer des Objekts. Die effektive Live-Zeit kann in diesem Fall zwischen 2 und 4 Minuten betragen. Nehmen wir an, Sie haben mit Ihrer Geschäftsabteilung abgestimmt, eines Tages ist tolerierbar - und Sie haben vier Schichten von Caches. Die tatsächliche TTL auf jeder Ebene darf nicht länger als sechs Stunden sein... die Cache-Abwesenheitsrate erhöhen...
 
 Wir sagen nicht, dass es ein schlechtes Schema ist. Du solltest nur seine Grenzen kennen. Und es ist eine nette und einfache Strategie, mit der man Beginn machen kann. Nur wenn der Traffic Ihrer Site zunimmt, sollten Sie eine genauere Strategie in Betracht ziehen.
 
@@ -223,7 +223,7 @@ Sie können mit der Phase des Rendervorgangs verbinden, um Zwischenspeicherebene
 
 #### Zugriffskontrolle respektieren
 
-Die hier beschriebenen Techniken sind ziemlich leistungsstark und _müssen_ in jedem AEM Entwickler-Toolbox. Aber seien Sie nicht zu aufgeregt, benutzen Sie sie weise. Wenn Sie ein Objekt in einem Cache speichern und es in Folgeanforderungen an andere Benutzer freigeben, bedeutet dies in der Tat, die Zugriffskontrolle zu umgehen. Dies ist normalerweise kein Problem auf öffentlich zugänglichen Websites, kann aber sein, wenn sich ein Benutzer anmelden muss, bevor er Zugriff erhält.
+Die hier beschriebenen Techniken sind recht leistungsstark und ein _must-have_ in jeder AEM Developer&#39;s Toolbox. Aber seien Sie nicht zu aufgeregt, benutzen Sie sie weise. Wenn Sie ein Objekt in einem Cache speichern und es in Folgeanforderungen an andere Benutzer freigeben, bedeutet dies in der Tat, die Zugriffskontrolle zu umgehen. Dies ist normalerweise kein Problem auf öffentlich zugänglichen Websites, kann aber sein, wenn sich ein Benutzer anmelden muss, bevor er Zugriff erhält.
 
 Beachten Sie, dass Sie das HTML-Markup eines Site-Hauptmenüs in einem Arbeitsspeichercache speichern, um es zwischen verschiedenen Seiten freizugeben. Das ist eigentlich ein perfektes Beispiel für die Speicherung von teilweise gerendertem HTML, da die Erstellung einer Navigation normalerweise teuer ist, da sie viele Seiten durchlaufen muss.
 
@@ -247,7 +247,7 @@ Was bedeutet das?
 
 4. Auch wenn Sie einen dünnen &quot;Wrapper&quot;um eine Ressource aus AEM erstellen, dürfen Sie dies nicht zwischenspeichern - auch wenn es sich um Ihre eigene und unveränderliche. Das umschlossene Objekt wäre ein Verweis (den wir vorher verbieten), und wenn wir scharf aussehen, schafft das im Grunde dieselben Probleme wie im letzten Artikel beschrieben.
 
-5. Wenn Sie zwischenspeichern möchten, erstellen Sie Ihre eigenen Objekte, indem Sie Grunddaten in Ihre eigenen shallo-Objekte kopieren. Möglicherweise möchten Sie eine Verknüpfung zwischen Ihren eigenen Objekten anhand von Verweisen herstellen, z. B. eine Struktur von Objekten zwischenspeichern. Das ist in Ordnung - aber nur Cache-Objekte, die Sie gerade in der gleichen Anforderung erstellt haben - und keine Objekte, die von einem anderen angefordert wurden (auch wenn es sich um den Namensraum Ihres Objekts handelt). _Das Kopieren von Objekten_ ist der Schlüssel. Achten Sie darauf, die gesamte Struktur der verknüpften Objekte auf einmal zu bereinigen und eingehende und ausgehende Verweise auf Ihre Struktur zu vermeiden.
+5. Wenn Sie zwischenspeichern möchten, erstellen Sie Ihre eigenen Objekte, indem Sie Grunddaten in Ihre eigenen shallo-Objekte kopieren. Möglicherweise möchten Sie eine Verknüpfung zwischen Ihren eigenen Objekten anhand von Verweisen herstellen, z. B. eine Struktur von Objekten zwischenspeichern. Das ist in Ordnung - aber nur Cache-Objekte, die Sie gerade in der gleichen Anforderung erstellt haben - und keine Objekte, die von einem anderen angefordert wurden (auch wenn es sich um den Namensraum Ihres Objekts handelt). _Das Kopieren von_ Objekten ist der Schlüssel. Achten Sie darauf, die gesamte Struktur der verknüpften Objekte auf einmal zu bereinigen und eingehende und ausgehende Verweise auf Ihre Struktur zu vermeiden.
 
 6. Ja - und behalten Sie Ihre Objekte unverändert bei. Private Eigenschaften, nur und keine Setter.
 
@@ -259,13 +259,13 @@ In dieser Reihe geht es darum, Konzepte zu verstehen und Sie zu befähigen, eine
 
 Insbesondere fördern wir kein Instrument. Aber geben Sie Ihnen Hinweise, wie Sie sie bewerten können. Beispielsweise verfügt AEM seit Version 6.0 über einen einfachen integrierten Cache mit einer festen TTL. Sollen Sie es benutzen? Wahrscheinlich nicht bei der Veröffentlichung, wenn ein Ereignis-basierter Cache in der Kette folgt (Hinweis: Dispatcher). Aber es könnte eine anständige Wahl für einen Autor sein. Es gibt auch einen HTTP-Cache nach Adobe-ACS-Commons, der es wert sein könnte, beachtet zu werden.
 
-Oder Sie erstellen Ihre eigene, basierend auf einem ausgereiften Cache-Framework wie [Ehcache](https://www.ehcache.org). Auf diese Weise können Java-Objekte und gerenderte Markierungen (`String` Objekte) zwischengespeichert werden.
+Oder Sie erstellen Ihre eigene, basierend auf einem ausgereiften Cache-Framework wie [Ehcache](https://www.ehcache.org). Auf diese Weise können Java-Objekte und gerenderte Markup-Objekte (`String`-Objekte) zwischengespeichert werden.
 
 In einigen einfachen Fällen können Sie auch mit der Verwendung von gleichzeitigen Hash-Karten auskommen - hier werden Sie schnell Grenzen sehen - entweder im Tool oder in Ihren Fähigkeiten. Die Gleichzeitigkeit ist so schwer Übergeordnet wie Benennung und Zwischenspeicherung.
 
 #### Verweise
 
-* [ACS Commons http Cache ](https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html)
+* [ACS Commons http Cache  ](https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html)
 * [Cache-Cache-Framework](https://www.ehcache.org)
 
 ### Grundlegende Begriffe
@@ -274,7 +274,7 @@ Wir werden hier nicht zu tief in die Zwischenspeicherungstheorie gehen, aber wir
 
 #### Cache-Bereitstellung
 
-Wir haben viel über Invalidierung und Säuberung gesprochen. _Die Cache-Entfernung_ bezieht sich auf folgende Begriffe: Nach einem Eintrag wird er entfernt, ist er nicht mehr verfügbar. Eine Entfernung erfolgt jedoch nicht, wenn ein Eintrag veraltet ist, sondern wenn der Cache voll ist. Neuere oder &quot;wichtigere&quot;Elemente führen ältere oder weniger wichtige Elemente aus dem Cache. Welche Einträge Sie opfern müssen, ist eine Einzelfallentscheidung. Vielleicht möchten Sie die ältesten oder diejenigen, die sehr selten oder zuletzt aufgerufen wurden, vertreiben.
+Wir haben viel über Invalidierung und Säuberung gesprochen. _Cache-_ Entfernung bezieht sich auf folgende Begriffe: Nach einem Eintrag wird er entfernt, ist er nicht mehr verfügbar. Eine Entfernung erfolgt jedoch nicht, wenn ein Eintrag veraltet ist, sondern wenn der Cache voll ist. Neuere oder &quot;wichtigere&quot;Elemente führen ältere oder weniger wichtige Elemente aus dem Cache. Welche Einträge Sie opfern müssen, ist eine Einzelfallentscheidung. Vielleicht möchten Sie die ältesten oder diejenigen, die sehr selten oder zuletzt aufgerufen wurden, vertreiben.
 
 #### Preemptive Caching
 
@@ -357,7 +357,7 @@ Früher, als Sie JSP als Vorlagentool verwendet haben, wurde häufig ein benutze
 
 Das benutzerdefinierte Tag, als würde seinen Körper erfassen und in den Cache schreiben oder die Ausführung seines Körpers verhindern und stattdessen die Nutzlast des Cache-Eintrags ausgeben.
 
-Der Schlüssel ist der Komponentenpfad, den er auf der Homepage haben würde. Wir verwenden nicht den Pfad der Komponente auf der aktuellen Seite, da dies einen Cache-Eintrag pro Seite schaffen würde - das würde unserer Absicht widersprechen, diese Komponente freizugeben. Wir verwenden auch nicht nur den Komponenten relativen Pfad (`jcr:conten/mainnavigation`), da dies uns davon abhalten würde, verschiedene Navigationskomponenten auf verschiedenen Sites zu verwenden.
+Der Schlüssel ist der Komponentenpfad, den er auf der Homepage haben würde. Wir verwenden nicht den Pfad der Komponente auf der aktuellen Seite, da dies einen Cache-Eintrag pro Seite schaffen würde - das würde unserer Absicht widersprechen, diese Komponente freizugeben. Wir verwenden nicht nur den Komponenten-relativen Pfad (`jcr:conten/mainnavigation`), da dies uns daran hindern würde, verschiedene Navigationskomponenten auf verschiedenen Sites zu verwenden.
 
 &quot;Cache&quot;ist ein Indikator, an dem der Eintrag gespeichert werden soll. Normalerweise verfügen Sie über mehr als einen Cache, in dem Sie Elemente speichern. Jeder von ihnen könnte sich etwas anders verhalten. Es ist also gut zu unterscheiden, was gespeichert wird - auch wenn es am Ende nur Zeichenfolgen sind.
 
@@ -377,7 +377,7 @@ Der Fragmentcache wird verwendet, wenn Sie im Kontext einer sich ändernden Umge
 
 Sie haben aber auch das Gegenteil, einen relativ konstanten Kontext (eine Seite, die sich selten ändert) und einige sich ständig verändernde Fragmente auf dieser Seite (z.B. einen Live-Ticker).
 
-In diesem Fall können Sie [Sling Dynamic Includes](https://sling.apache.org/documentation/bundles/dynamic-includes.html) eine Chance geben. Im Wesentlichen handelt es sich hierbei um einen Komponentenfilter, der die dynamische Komponente umschließt und nicht nur die Komponente in die Seite rendert, sondern einen Verweis erstellt. Dieser Verweis kann ein Ajax-Aufruf sein, sodass die Komponente vom Browser eingeschlossen wird und die umliegende Seite statisch zwischengespeichert werden kann. Oder - alternativ - Sling Dynamic Include kann eine SSI-Direktive generieren (Server Side Include). Diese Direktive wird auf dem Apache-Server ausgeführt. Sie können sogar ESI - Edge Side Include-Anweisungen verwenden, wenn Sie Varnish oder ein CDN verwenden, das ESI-Skripte unterstützt.
+In diesem Fall könnten Sie [Sling Dynamic Includes](https://sling.apache.org/documentation/bundles/dynamic-includes.html) eine Chance geben. Im Wesentlichen handelt es sich hierbei um einen Komponentenfilter, der die dynamische Komponente umschließt und nicht nur die Komponente in die Seite rendert, sondern einen Verweis erstellt. Dieser Verweis kann ein Ajax-Aufruf sein, sodass die Komponente vom Browser eingeschlossen wird und die umliegende Seite statisch zwischengespeichert werden kann. Oder - alternativ - Sling Dynamic Include kann eine SSI-Direktive generieren (Server Side Include). Diese Direktive wird auf dem Apache-Server ausgeführt. Sie können sogar ESI - Edge Side Include-Anweisungen verwenden, wenn Sie Varnish oder ein CDN verwenden, das ESI-Skripte unterstützt.
 
 ![Sequenzdiagramm einer Anforderung mit Sling Dynamic Include](assets/chapter-3/sequence-diagram-sling-dynamic-include.png)
 
@@ -387,7 +387,7 @@ In diesem Fall können Sie [Sling Dynamic Includes](https://sling.apache.org/doc
 
 In der SDI-Dokumentation heißt es, dass Sie die Zwischenspeicherung für URLs deaktivieren sollten, die auf &quot;*.nocache.html&quot;enden. Dies ist sinnvoll - da Sie es mit dynamischen Komponenten zu tun haben.
 
-Möglicherweise sehen Sie eine andere Option zur Verwendung von SDI: Wenn Sie den Dispatcher-Cache für die Includes _nicht_ deaktivieren, fungiert der Dispatcher wie ein Fragment-Cache, der dem im letzten Kapitel beschriebenen ähnelt: Seiten und Komponentenfragmente werden gleichmäßig und unabhängig im Dispatcher zwischengespeichert und vom SSI-Skript im Apache-Server zusammengeführt, wenn die Seite angefordert wird. Auf diese Weise können Sie freigegebene Komponenten wie die Hauptnavigation implementieren (vorausgesetzt, Sie verwenden immer dieselbe Komponenten-URL).
+Möglicherweise sehen Sie eine andere Option zur Verwendung von SDI: Wenn Sie _den Dispatcher-Cache für die Includes nicht deaktivieren, fungiert der Dispatcher wie ein Fragment-Cache ähnlich dem, den wir im letzten Kapitel beschrieben haben: Seiten und Komponentenfragmente werden gleichmäßig und unabhängig im Dispatcher zwischengespeichert und vom SSI-Skript im Apache-Server zusammengeführt, wenn die Seite angefordert wird._ Auf diese Weise können Sie freigegebene Komponenten wie die Hauptnavigation implementieren (vorausgesetzt, Sie verwenden immer dieselbe Komponenten-URL).
 
 Das sollte funktionieren - theoretisch. Aber...
 
@@ -413,7 +413,7 @@ Wir empfehlen Ihnen, die SDI-Dokumentation sorgfältig zu prüfen. Es gibt noch 
 
 Lassen Sie uns den Fall erneut mit der Navigation betrachten. Wir gingen davon aus, dass jede Seite dasselbe Markup der Navigation erfordert.
 
-Aber vielleicht ist das nicht der Fall. Möglicherweise möchten Sie ein anderes Markup für das Element in der Navigation darstellen, das die _aktuelle Seite_ darstellt.
+Aber vielleicht ist das nicht der Fall. Möglicherweise möchten Sie ein anderes Markup für das Element in der Navigation rendern, das die _aktuelle Seite_ darstellt.
 
 ```
 Travel Destinations
@@ -444,7 +444,7 @@ News
 <is
 ```
 
-Das sind zwei völlig unterschiedliche Darstellungen. Dennoch ist das _Geschäftsobjekt_ - der vollständige Navigationsbaum - das gleiche.  Das _Geschäftsobjekt_ hier ist ein Objektdiagramm, das die Knoten in der Struktur darstellt. Dieses Diagramm kann problemlos in einem Arbeitsspeichercache gespeichert werden. Beachten Sie jedoch, dass dieses Diagramm kein Objekt enthalten darf und kein Objekt referenzieren darf, das Sie selbst nicht erstellt haben - insbesondere jetzt JCR-Knoten.
+Das sind zwei völlig unterschiedliche Darstellungen. Dennoch ist das _Business-Objekt_ - die vollständige Navigationsstruktur - identisch.  Das _Geschäftsobjekt_ hier ist ein Objektdiagramm, das die Knoten in der Struktur darstellt. Dieses Diagramm kann problemlos in einem Arbeitsspeichercache gespeichert werden. Beachten Sie jedoch, dass dieses Diagramm kein Objekt enthalten darf und kein Objekt referenzieren darf, das Sie selbst nicht erstellt haben - insbesondere jetzt JCR-Knoten.
 
 #### Zwischenspeicherung im Browser
 
@@ -474,7 +474,7 @@ Es gibt nur eine Sache, die Sie nicht tun sollten, wenn Sie Ihren Cache debuggen
 
 Laden Sie keine Seiten im Browser neu!
 
-Ein &quot;Browser-Neuladen&quot;, ein _einfaches Neuladen_ sowie ein _erzwungenes Neuladen_ (&quot;_Shift-Reload_&quot;) sind nicht dasselbe wie eine normale Seitenanforderung. Eine einfache Neuladungsanforderung setzt einen Header
+Eine &quot;Browser-Neuladung&quot;, ein _simple-reload_ sowie ein _erzwungenes Neuladen_ (&quot;_shift-reload_&quot;) sind nicht mit einer normalen Seitenanforderung identisch. Eine einfache Neuladungsanforderung setzt einen Header
 
 ```
 Cache-Control: max-age=0
@@ -488,7 +488,7 @@ Cache-Control: no-cache
 
 Beide Header haben ähnliche, aber leicht unterschiedliche Effekte - vor allem unterscheiden sie sich jedoch vollständig von einer normalen Anforderung, wenn Sie eine URL aus dem URL-Slot oder durch Links auf der Site öffnen. Beim normalen Browsen werden keine Cache-Control-Header eingestellt, sondern wahrscheinlich ein if-modify-since-Header.
 
-Wenn Sie also das normale Browsing-Verhalten debuggen möchten, sollten Sie genau das tun: _Gehen Sie normal_ vor. Die Schaltfläche &quot;Neu laden&quot;Ihres Browsers ist die beste Möglichkeit, keine Cache-Konfigurationsfehler in Ihrer Konfiguration zu sehen.
+Wenn Sie also das normale Browsing-Verhalten debuggen möchten, sollten Sie genau das tun: _Durchsuchen Sie normal_. Die Schaltfläche &quot;Neu laden&quot;Ihres Browsers ist die beste Möglichkeit, keine Cache-Konfigurationsfehler in Ihrer Konfiguration zu sehen.
 
 Benutze deinen Charles Proxy, um zu sehen, wovon wir sprechen. Ja - und während Sie es geöffnet haben - können Sie die Anfragen hier erneut abspielen. Es ist nicht erforderlich, dass Sie den Browser neu laden.
 
