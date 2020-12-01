@@ -20,7 +20,7 @@ ht-degree: 71%
 ---
 
 
-# AEM Sites Benutzeroberfläche und Navigation {#basic-handling-aem-sites}
+# AEM Sites-Benutzeroberfläche und -Navigation {#basic-handling-aem-sites}
 
 Das folgende Video bietet einen Überblick über die grundlegende Handhabung bei der Verwendung der AEM Authoring-Umgebung. Als Grundlage wird die Sites-Konsole verwendet.
 
@@ -37,7 +37,7 @@ In diesem Video werden die folgenden Funktionen und Funktionen behandelt:
       | Assets | In diesen Konsolen können Sie digitale Assets, wie Bilder, Videos, Dokumente und Audiodateien, importieren und verwalten. Diese Assets können dann von jeder Website verwendet werden, die auf derselben AEM-Instanz ausgeführt wird | Communities | In dieser Konsole können Sie Community-Sites für die Interaktion und Aktivierung erstellen und verwalten | Commerce | Damit können Sie Produkte, Produktkataloge und Bestellungen verwalten, die im Zusammenhang mit Ihren Commerce-Websites stehen |
       | Experience Fragments | Bei einem Experience Fragment handelt es sich um ein einzelnes Erlebnis, das kanalübergreifend wiederverwendet werden kann und Variationen aufweist. So erübrigt sich das wiederholte Kopieren und Einfügen von Erlebnissen oder Teilen von Erlebnissen |
       | Formulare | In dieser Konsole können Sie Formulare und Dokumente erstellen, verwalten und verarbeiten |
-      | Personalisierung   | Diese Konsole bietet ein Framework aus Tools für die Bearbeitung von Inhalt für eine bestimmte Zielgruppe und die Darstellung personalisierter Erlebnisse |
+      | Personalisierung  | Diese Konsole bietet ein Framework aus Tools für die Bearbeitung von Inhalt für eine bestimmte Zielgruppe und die Darstellung personalisierter Erlebnisse |
       | Projekte | Die Projektekonsole bietet Ihnen direkten Zugriff auf Ihre Projekte . Projekte sind virtuelle Dashboards. Sie können sie verwenden, um ein Team zusammenzustellen, diesem Team Zugriff auf Ressourcen, Workflows und Aufgaben zu gewähren und verschiedenen Personen so die Möglichkeit zu geben, gemeinsam an einer Aufgabe zu arbeiten |
       | Sites | Mit der Konsole „Sites“ können Sie Websites erstellen, anzeigen und verwalten, die auf Ihrer AEM-Instanz ausgeführt werden. Mithilfe dieser Konsolen können Sie Seiten auf der Website erstellen, bearbeiten, kopieren, verschieben, löschen und veröffentlichen |
 
