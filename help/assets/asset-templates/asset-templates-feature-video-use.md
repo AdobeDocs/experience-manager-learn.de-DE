@@ -22,9 +22,9 @@ Mit der AEM Assets-Vorlage können Marketingexperten digitale Assets für die di
 
 >[!NOTE]
 >
->Anweisungen zum Konfigurieren von InDesign Server finden Sie unter [Asset-Vorlagen mit InDesign Server](asset-templates-technical-video-setup.md)einrichten.
+>Anweisungen zum Konfigurieren von InDesign Server finden Sie unter [Asset-Vorlagen mit InDesign Server](asset-templates-technical-video-setup.md) einrichten.
 
-## Überblick {#overview}
+## Überblick{#overview}
 
 In diesem Video werden Konzepte und Schritte zum Generieren druckfertiger Assets in AEM mit Adobe InDesign, Adobe InDesign Server und AEM Assets erläutert.
 
