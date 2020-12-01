@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Verwenden von Reduzierfunktionen in AEM Forms - Diagramme{#using-reducer-functions-in-aem-forms-charts}
+# Verwenden von Reduzierungsfunktionen in AEM Forms - Diagramme{#using-reducer-functions-in-aem-forms-charts}
 
 Reduzierungsfunktionen werden zum Aggregat oder zur Gruppierung von Werten verwendet, die im Diagramm angezeigt werden.
 
