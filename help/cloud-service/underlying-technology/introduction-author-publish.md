@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Einführung in die Ebene &quot;Autor&quot;und &quot;Veröffentlichen&quot; {#introduction-author-publish}
+# Einführung in die Authoring- und Veröffentlichungsstufe {#introduction-author-publish}
 
 Eine Einführung in die Stufen &quot;Autor&quot;und &quot;Veröffentlichen&quot;als Teil der Architektur in Adobe Experience Manager.
 
