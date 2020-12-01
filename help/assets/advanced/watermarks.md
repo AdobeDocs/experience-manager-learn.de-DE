@@ -26,7 +26,7 @@ AEM als Wasserzeichenfunktion eines Cloud Service können benutzerdefinierte Bil
 
 ## OSGi-Konfiguration
 
-Der folgende OSGi-Konfigurationsabschnitt kann aktualisiert und dem `ui.config` Unterprojekt Ihres AEM hinzugefügt werden.
+Der folgende OSGi-Konfigurationsabschnitt kann aktualisiert und dem Unterprojekt `ui.config` Ihres AEM hinzugefügt werden.
 
 `/apps/example/osgiconfig/config.author/com.adobe.cq.assetcompute.impl.profile.WatermarkingProfileServiceImpl.cfg.json`
 
