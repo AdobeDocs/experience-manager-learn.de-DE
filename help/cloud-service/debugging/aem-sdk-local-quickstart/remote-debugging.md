@@ -30,14 +30,14 @@ $ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar a
 ```
 
 + `address` gibt an, dass der Anschluss auf Remotedebug-Verbindungen AEM überwacht und auf einen beliebigen verfügbaren Anschluss auf dem lokalen Entwicklungscomputer geändert werden kann.
-+ Der letzte Parameter (z. `aem-author-p4502.jar`) ist die AEM SKD Quickstart Jar. Dies kann entweder der AEM Author-Dienst (`aem-author-p4502.jar`) oder der AEM Publish-Dienst (`aem-publish-p4503.jar`) sein.
++ Der letzte Parameter (z. `aem-author-p4502.jar`) ist die AEM SKD Quickstart Jar. Dabei kann es sich entweder um den AEM Author-Dienst (`aem-author-p4502.jar`) oder um den AEM Publish-Dienst (`aem-publish-p4503.jar`) handeln.
 
 ## Anweisungen zur IDE-Einrichtung
 
 Die meisten Java-IDEs bieten Unterstützung für das Remote-Debugging von Java-Programmen, jedoch unterscheiden sich die genauen Einrichtungsschritte der einzelnen IDE voneinander. Bitte lesen Sie die Anleitungen zum Remote-Debugging Ihrer IDE für die genauen Schritte. Normalerweise erfordern IDE-Konfigurationen:
 
-+ Der lokale Schnellstart AEM SDKs des Hosts wird überwacht, was `localhost`der Fall ist.
-+ Der Port AEM SDK&#39;s local quickstart überwacht die Remotedebug-Verbindung. Dies ist der Anschluss, der vom `address` Parameter beim Starten AEM lokalen Schnellstarts des SDK angegeben wird.
++ Der lokale Schnellstart des Host AEM SDK wird überwacht, was `localhost` ist.
++ Der lokale Schnellstart AEM SDK überwacht die Remotedebug-Verbindung. Dies ist der Anschluss, der vom Parameter `address` angegeben wird, wenn AEM lokaler Schnellstart des SDK gestartet wird.
 + Gelegentlich müssen die Maven-Projekte, die den Quellcode für das Remote-Debugging bereitstellen, angegeben werden. dies ist Ihr OSGi Bundle Maven Projekte Projekt(e).
 
 ### Einrichten von Anweisungen
