@@ -28,9 +28,9 @@ Aktivieren benutzerdefinierter Asset-Typen für die Auflistung im AEMForms Porta
 >
 >Vergewissern Sie sich, dass Sie AEM 6.3 mit SP1 und die entsprechende AEM Forms Hinzufügen On Installed haben. Diese Funktion funktioniert nur mit AEM Forms 6.3 SP1 und höher
 
-## Basispfad angeben {#specify-base-path}
+## Basispfad {#specify-base-path} angeben
 
-Der Basispfad ist der Repository-Pfad auf der obersten Ebene, der alle Assets umfasst, die ein Benutzer in der Such- und Listenkomponente Liste haben soll. Bei Bedarf kann der Benutzer auch bestimmte Orte innerhalb des Basispfads im Dialogfeld zum Bearbeiten von Komponenten konfigurieren, sodass die Suche an bestimmten Orten ausgelöst wird, anstatt alle Knoten im Basispfad zu durchsuchen. Standardmäßig wird der Basispfad als Suchpfadkriterium zum Abrufen der Assets verwendet, es sei denn, der Benutzer konfiguriert einen Satz spezifischer Pfade von diesem Speicherort aus. Es ist wichtig, einen optimalen Wert für diesen Pfad zu haben, um eine leistungsfähige Suche zu ermöglichen. Der Standardwert für den Basispfad bleibt unverändert bei **_/content/dam/formsanddocuments_** , da sich alle AEM Forms-Elemente in **_/content/dam/formsanddocuments befinden._**
+Der Basispfad ist der Repository-Pfad auf der obersten Ebene, der alle Assets umfasst, die ein Benutzer in der Such- und Listenkomponente Liste haben soll. Bei Bedarf kann der Benutzer auch bestimmte Orte innerhalb des Basispfads im Dialogfeld zum Bearbeiten von Komponenten konfigurieren, sodass die Suche an bestimmten Orten ausgelöst wird, anstatt alle Knoten im Basispfad zu durchsuchen. Standardmäßig wird der Basispfad als Suchpfadkriterium zum Abrufen der Assets verwendet, es sei denn, der Benutzer konfiguriert einen Satz spezifischer Pfade von diesem Speicherort aus. Es ist wichtig, einen optimalen Wert für diesen Pfad zu haben, um eine leistungsfähige Suche zu ermöglichen. Der Standardwert für den Basispfad bleibt **_/content/dam/formsanddocuments_**, da sich alle AEM Forms-Elemente in **_/content/dam/formsanddocuments befinden._**
 
 Schritte zum Konfigurieren des Basispfads
 
@@ -41,7 +41,7 @@ Schritte zum Konfigurieren des Basispfads
 1. Stellen Sie sicher, dass die Überlagerung &quot;/apps/&quot;lautet.
 1. Klicken Sie auf OK
 1. Klicken Sie auf „Speichern“.
-1. Navigieren Sie zur neuen Struktur, die unter **/apps/fd/fp/extensions/querybuilder/basepath erstellt wurde.**
+1. Navigieren Sie zur neuen Struktur, die unter **/apps/fd/fp/extensions/querybuilder/basepath** erstellt wurde.
 
 1. Ändern Sie den Wert der Eigenschaft path in **&quot;/content/dam&quot;**
 1. Klicken Sie auf „Speichern“.
@@ -50,7 +50,7 @@ Durch Angabe der Pfadeigenschaft zu **&quot;/content/dam&quot;** setzen Sie im G
 
 ![basepath](assets/basepath.png)
 
-## Benutzerdefinierte Asset-Typen registrieren {#register-custom-asset-types}
+## Benutzerdefinierte Asset-Typen {#register-custom-asset-types} registrieren
 
 Wir haben eine neue Registerkarte (Asset-Auflistung) zur Komponente &quot;Suche und Lister&quot;hinzugefügt. Auf dieser Registerkarte werden standardmäßig Asset-Typen und weitere von Ihnen konfigurierte Asset-Typen Liste. Standardmäßig werden die folgenden Asset-Typen aufgelistet
 
@@ -61,12 +61,12 @@ Wir haben eine neue Registerkarte (Asset-Auflistung) zur Komponente &quot;Suche 
 
 **Schritte zum Registrieren benutzerdefinierter Asset-Typen**
 
-1. Überlagerungsknoten **/libs/fd/fp/extensions/querybuilder/assettypes erstellen**
+1. Überlagerungsknoten von **/libs/fd/fp/extensions/querybuilder/assettypes**
 
 1. Überlagerungsspeicherort auf &quot;/apps&quot;festlegen
 1. Navigieren Sie zur neuen Struktur, die unter **/apps/fd/fp/extensions/querybuilder/assettypes ** erstellt wurde.
 
-1. Erstellen Sie unter diesem Speicherort einen Knoten &#39;nt:unstructured&#39; für den zu registrierenden Typ und geben Sie dem Knoten **mp4files einen Namen. hinzufügen Sie die folgenden beiden Eigenschaften zu diesem mp4files-Knoten**
+1. Erstellen Sie unter diesem Speicherort einen Knoten &#39;nt:unstructured&#39; für den zu registrierenden Typ und nennen Sie den Knoten **mp4files. hinzufügen Sie die folgenden beiden Eigenschaften zu diesem mp4files-Knoten**
 
    1. hinzufügen Eigenschaft &quot;jcr:title&quot;, um den Anzeigenamen des Asset-Typs anzugeben. Legen Sie den Wert von jcr:title auf &quot;MP4-Dateien&quot;fest.
    1. hinzufügen Eigenschaft &quot;type&quot;und legen Sie ihren Wert auf &quot;videos&quot;fest. Dies ist der Wert, den wir in unserer Vorlage zur Liste von Assets des Typs Videos verwenden. Speichern Sie Ihre Änderungen.
@@ -87,7 +87,7 @@ Nachdem Sie die oben genannten Schritte ausgeführt haben, wird der neue Asset-T
 
 ![mp4files](assets/mp4files.png)
 
-[Wenn Sie Probleme haben, dies zu erreichen, können Sie das folgende Paket importieren.](assets/assettypeskt1.zip) Für das Paket sind zwei benutzerdefinierte Asset-Typen definiert. MP4-Dateien und Worddocuments. Sehen Sie sich die **/apps/fd/fp/extensions/querybuilder/assettypes an**
+[Wenn Sie Probleme haben, dies zu erreichen, können Sie das folgende Paket importieren.](assets/assettypeskt1.zip) Für das Paket sind zwei benutzerdefinierte Asset-Typen definiert. MP4-Dateien und Worddocuments. Sehen Sie sich die /apps/fd/fp/extensions/querybuilder/assettypes **an.**
 
-[Installieren Sie das Paket](assets/customportalpage.zip)customeportal. Dieses Paket enthält eine Beispielportalseite. Diese Seite wird in Teil 2 dieses Lernprogramms verwendet
+[Installieren Sie das Paket](assets/customportalpage.zip) customeportal. Dieses Paket enthält eine Beispielportalseite. Diese Seite wird in Teil 2 dieses Lernprogramms verwendet
 
