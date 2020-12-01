@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Create a Language Copy {#create-language-copy}
+# Eine Sprachkopie {#create-language-copy} erstellen
 
 Erfahren Sie, wie Sie mithilfe des Assistenten &quot;Sprachkopie erstellen&quot;eine Sprachkopie für Ihre AEM Website erstellen.
 
