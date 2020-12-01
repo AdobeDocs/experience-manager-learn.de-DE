@@ -18,7 +18,7 @@ ht-degree: 16%
 ---
 
 
-# Grundlegende Komponenten{#understanding-core-components}
+# Die Kernkomponenten{#understanding-core-components}
 
 AEM Core-Komponenten sind Standardkomponenten, die mit Adobe Experience Manager verwendet werden. Basierend auf den Best Practices und Standards der Adobe bieten Core-Komponenten einen grundlegenden Funktionssatz für jede Sites-Implementierung.
 
