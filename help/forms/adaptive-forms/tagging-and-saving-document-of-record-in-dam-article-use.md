@@ -20,7 +20,7 @@ ht-degree: 1%
 ---
 
 
-# Tagging und Speichern des AEM Forms DoR in DAM {#tagging-and-storing-aem-forms-dor-in-dam}
+# Tagging und Speichern von AEM Forms DoR in DAM {#tagging-and-storing-aem-forms-dor-in-dam}
 
 In diesem Artikel wird der Verwendungsfall zum Speichern und Taggen des DoR, das von AEM Forms in AEM DAM generiert wurde, erläutert. Das Tagging des Dokuments erfolgt auf der Grundlage der gesendeten Formulardaten.
 
@@ -54,12 +54,12 @@ Gehen Sie wie folgt vor, um dieses Beispiel auf Ihrem System zu verwenden:
 
 * Klicken Sie auf Erstellen | Datei-Upload und Hochladen der Datei &quot;sampleadaptiveform.zip&quot;
 
-* [Artikelelemente](assets/tag-and-store-in-dam-assets.zip) mit AEM Package Manager importieren
-* Öffnen Sie das [Musterformular im Vorschau-Modus](http://localhost:4502/content/dam/formsanddocuments/summit/peakform/jcr:content?wcmmode=disabled). Füllen Sie den Abschnitt Personen aus und senden Sie das Formular.
+* [Artikelelemente ](assets/tag-and-store-in-dam-assets.zip) mit AEM Paketmanager importieren
+* Öffnen Sie das Musterformular [im Vorschau-Modus](http://localhost:4502/content/dam/formsanddocuments/summit/peakform/jcr:content?wcmmode=disabled). Füllen Sie den Abschnitt Personen aus und senden Sie das Formular.
 * [Navigieren Sie zum Ordner Peak in DAM](http://localhost:4502/assets.html/content/dam/Peak). Sie sollten DoR im Ordner Peak sehen. Überprüfen Sie die Eigenschaften des Dokuments. Es sollte angemessen getaggt werden.
 Herzlichen Glückwunsch!! Sie haben das Muster erfolgreich auf Ihrem System installiert.
 
-* Lassen Sie uns den [Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) untersuchen, der beim Senden des Formulars ausgelöst wird.
+* Sehen wir uns den [Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) an, der beim Senden des Formulars ausgelöst wird.
 * Der erste Schritt im Arbeitsablauf erstellt einen eindeutigen Dateinamen, indem der Name des Antragstellers mit dem Land des Wohnsitzes verknüpft wird.
 * Der zweite Schritt des Workflows besteht aus der Tag-Hierarchie und den Formularfeldelementen, die mit Tags versehen werden müssen. Der Prozessschritt extrahiert den Wert aus den gesendeten Daten und erstellt den Tag-Titel, der das Dokument taggen muss.
 * Wenn Sie DoR in einem anderen Ordner im DAM speichern möchten, geben Sie den Speicherort des Ordners mithilfe der Konfigurationseigenschaften an, wie im Screenshot unten angegeben.
