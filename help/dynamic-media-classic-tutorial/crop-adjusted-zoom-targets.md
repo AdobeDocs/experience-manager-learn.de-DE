@@ -41,10 +41,10 @@ Dynamic Media Classic verfügt über einige Bildbearbeitungswerkzeuge, die in de
 
 ### Verwenden des Beschneidungswerkzeugs
 
-Sie können auf das Beschneidungswerkzeug in Dynamic Media Classic über die Seite &quot;Details&quot;für ein Asset oder über die Schaltfläche &quot; **Bearbeiten** &quot;zugreifen. Sie können das Werkzeug auf zwei Arten beschneiden:
+Sie können auf das Beschneidungswerkzeug in Dynamic Media Classic von der Seite &quot;Details&quot;für ein Asset oder über die Schaltfläche **Bearbeiten** zugreifen. Sie können das Werkzeug auf zwei Arten beschneiden:
 
-- Der Standard-Beschneidungsmodus, in dem Sie die Griffe des Beschneidungsfensters oder die Typwerte im Feld &quot;Größe&quot;ziehen. Erfahren Sie, wie Sie [manuell zuschneiden](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop).
-- Beschneiden. Verwenden Sie diese Option, um zusätzliche Leerzeichen um Ihr Bild zu entfernen, indem Sie die Anzahl der Pixel berechnen, die nicht mit Ihrem Bild übereinstimmen. Erfahren Sie, wie Sie [Beschneiden durch Beschneiden](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
+- Der Standard-Beschneidungsmodus, in dem Sie die Griffe des Beschneidungsfensters oder die Typwerte im Feld &quot;Größe&quot;ziehen. Erfahren Sie, wie Sie [Manuelles Zuschneiden](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop) durchführen.
+- Beschneiden. Verwenden Sie diese Option, um zusätzliche Leerzeichen um Ihr Bild zu entfernen, indem Sie die Anzahl der Pixel berechnen, die nicht mit Ihrem Bild übereinstimmen. Erfahren Sie, wie Sie [Beschneiden nach Beschneiden](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
 
 ### _Manuelles Beschneiden_
 
@@ -64,19 +64,19 @@ Das Bild auf der rechten Seite wird deutlich hervorgehoben, indem der zusätzlic
 
 >[!NOTE]
 >
->&quot;Beschneiden&quot;schafft keine Transparenz um das Bild. Dazu müssen Sie einen Beschneidungspfad in das Bild einbetten und die Option &quot;Maske aus Clip-Pfad **-Upload** erstellen&quot;verwenden.
+>&quot;Beschneiden&quot;schafft keine Transparenz um das Bild. Dazu müssen Sie einen Beschneidungspfad in das Bild einbetten und die Upload-Option **Maske aus Clip-Pfad erstellen** verwenden.
 >
->Wenn Sie ein Bild nach dem Beschneiden mit der Option &quot; **Speichern** &quot;wieder in seinen ursprünglichen Zustand zurückversetzen möchten, zeigen Sie das Bild im Anzeigebereich &quot;Beschneidungseditor&quot;an und klicken Sie auf die Schaltfläche &quot; **Zurücksetzen** &quot;.
+>Um ein Bild nach dem Beschneiden wieder in seinen ursprünglichen Zustand zu versetzen, nachdem Sie die Option **Speichern** verwendet haben, zeigen Sie das Bild im Anzeigebereich &quot;Beschneidungseditor&quot;an und klicken Sie auf die Schaltfläche **Zurücksetzen**.
 
 ### _Beschneiden beim Hochladen_
 
-Wie bereits erwähnt, können Sie die Bilder beim Hochladen auch beschneiden. Um beim Hochladen den Zuschnitt zu verwenden, klicken Sie auf die Schaltfläche &quot; **Auftragsoptionen** &quot;und wählen Sie unter &quot;Beschneidungsoptionen&quot;die Option &quot; **Beschneiden**&quot;.
+Wie bereits erwähnt, können Sie die Bilder beim Hochladen auch beschneiden. Um beim Hochladen den Zuschnitt zu verwenden, klicken Sie auf die Schaltfläche **Auftragsoptionen** und wählen Sie unter &quot;Zuschnittoptionen&quot;die Option **Zuschneiden**.
 
 Diese Option wird beim nächsten Hochladen von Dynamic Media Classic gespeichert. Möglicherweise möchten Sie, dass Bilder für diesen Upload beschnitten werden, jedoch nicht bei jedem Upload zugeschnitten werden. Eine andere Möglichkeit wäre, einen speziellen geplanten FTP-Upload-Auftrag festzulegen und die Optionen für das Beschneiden dorthin zu verschieben. Auf diese Weise würden Sie den Auftrag nur ausführen, wenn Sie Ihre Bilder beschneiden müssten.
 
 >[!IMPORTANT]
 >
->Wenn Sie eine Beschneidung für Ihren Upload festlegen, setzt Dynamic Media Classic ein Cookie, um sich diese Einstellung zum nächsten Mal zu merken. Als Best Practice sollten Sie vor dem nächsten Hochladen auf die Schaltfläche &quot; **Auf Standardwerte** zurücksetzen&quot;klicken, um alle Optionen für das Beschneiden zu löschen, die beim letzten Hochladen übrig geblieben sind. Andernfalls können Sie versehentlich den nächsten Bildstapel beschneiden.
+>Wenn Sie eine Beschneidung für Ihren Upload festlegen, setzt Dynamic Media Classic ein Cookie, um sich diese Einstellung zum nächsten Mal zu merken. Als Best Practice sollten Sie vor dem nächsten Hochladen auf die Schaltfläche **Zurücksetzen auf Firmen-Standardwerte** klicken, um alle beim letzten Hochladen verbleibenden Beschneidungsoptionen zu löschen. Andernfalls können Sie versehentlich den nächsten Bildstapel beschneiden.
 
 ### Beschneiden nach URL
 
@@ -84,7 +84,8 @@ Auch wenn dies in Dynamic Media Classic nicht offensichtlich ist, können Sie au
 
 Wenn Sie das Werkzeug &quot;Beschneiden&quot;verwenden, werden im Feld unten URL-Werte angezeigt. Sie können diese Werte als URL-Modifikatoren direkt auf ein Bild anwenden.
 
-![Modifikatoren für den Befehl &quot;](assets/crop-adjusted-zoom-targets/cropping-by-url.png)Beschneiden&quot;des Bilds _am unteren Rand des Beschneidungseditors_
+![Modifikatoren für ](assets/crop-adjusted-zoom-targets/cropping-by-url.png)
+_den Befehl &quot;imageCrop&quot;am unteren Rand des Beschneidungseditors_
 
 ![image](assets/crop-adjusted-zoom-targets/uncropped-cropped.png)
 
@@ -94,15 +95,16 @@ Da die Größe beim Zuschneiden per Bild berechnet werden muss, kann sie nicht �
 
 Bildvorgaben verfügen über ein Feld, in dem Sie zusätzliche Image-Server-Befehle hinzufügen können. Um der Bildvorgabe die gleiche Beschneidung wie oben hinzuzufügen, bearbeiten Sie die Vorgabe und fügen Sie die Werte in das Feld &quot;URL-Modifikatoren&quot;ein und speichern und veröffentlichen Sie sie.
 
-![den URL-Modifikatoren der Bildvorgabe](assets/crop-adjusted-zoom-targets/cropping-in-image-preset.jpg)Hinzufügen Beschneidungsbefehle (oder einen beliebigen Befehl) zuschneiden _._
+![Fügen Sie ](assets/crop-adjusted-zoom-targets/cropping-in-image-preset.jpg)
+_den URL-Modifikatoren der Bildvorgabe Zuschneidebefehle (oder einen beliebigen Befehl) hinzu._
 
 Die Beschneidung ist nun Teil dieser Bildvorgabe und wird bei jeder Verwendung automatisch angewendet. Diese Methode hängt natürlich von allen Bildern ab, die denselben Beschneidungsbetrag benötigen. Wenn Ihre Bilder nicht alle auf dieselbe Weise aufgenommen werden, funktioniert diese Methode nicht für Sie.
 
 ## Angepasste Bilder
 
-Wenn Sie das Werkzeug &quot;Beschneiden&quot;verwenden, haben Sie die Möglichkeit, als zusätzliche Ansicht von Übergeordnet **zu speichern**. Beim Speichern wird dadurch eine neue Art von Dynamisches Media Classic-Asset erstellt — ein angepasstes Bild. Ein angepasstes Bild, auch als Derivat bezeichnet, ist ein virtuelles Bild. Es ist eigentlich gar kein Bild; Es handelt sich um einen Datenbankverweis (wie ein Alias oder eine Verknüpfung) auf das physische Übergeordnet-Bild.
+Wenn Sie das Werkzeug &quot;Beschneiden&quot;verwenden, haben Sie die Option **Als zusätzliche Ansicht von Übergeordnet** speichern. Beim Speichern wird dadurch eine neue Art von Dynamisches Media Classic-Asset erstellt — ein angepasstes Bild. Ein angepasstes Bild, auch als Derivat bezeichnet, ist ein virtuelles Bild. Es ist eigentlich gar kein Bild; Es handelt sich um einen Datenbankverweis (wie ein Alias oder eine Verknüpfung) auf das physische Übergeordnet-Bild.
 
-### Stehen Sie bitte auf dem richtigen Bild?`?`
+### Wird das tatsächliche Bild bitte stehen`?`
 
 Können Sie feststellen, welches das angepasste Bild ist und welches das Übergeordnete ist?
 
@@ -116,13 +118,14 @@ Ein angepasstes Bild verwendet keinen Speicherplatz, da es nur als Zeilenelement
 
 In der Regel erstellen Sie angepasste Bilder mit dem Werkzeug &quot;Beschneiden&quot;. sie können jedoch auch mit anderen Bildeditoren erstellt werden — die Werkzeuge &quot;Anpassen&quot;und &quot;Scharfzeichnen&quot;.
 
-Für angepasste Bilder ist eine eindeutige Asset-ID erforderlich. Nach der Veröffentlichung (Sie müssen sie wie jedes andere Asset veröffentlichen) fungieren sie als jedes andere Bild und werden anhand ihrer Asset-ID für eine URL aufgerufen. Auf der Seite &quot;Details&quot;können Sie auf der Registerkarte &quot; **Aufbau und Ableitungen** &quot;die mit einem Übergeordnet verknüpften angepassten Bilder Ansicht haben.
+Für angepasste Bilder ist eine eindeutige Asset-ID erforderlich. Nach der Veröffentlichung (Sie müssen sie wie jedes andere Asset veröffentlichen) fungieren sie als jedes andere Bild und werden anhand ihrer Asset-ID für eine URL aufgerufen. Auf der Seite &quot;Details&quot;können Sie unter der Registerkarte **Aufbau und Ableitungen** die mit einem Übergeordnet verknüpften Ansichten anpassen.
 
-![Image](assets/crop-adjusted-zoom-targets/derivatives.jpg)_Adjusted Ansichten for Übergeordnet image ASIAN_BR_MAIN_
+![ansichten ](assets/crop-adjusted-zoom-targets/derivatives.jpg)
+_für Übergeordnet-Image ASIAN_BR_MAIN_
 
 ## Zoom-Zielgruppen
 
-Zoom-Zielgruppen finden Sie auch auf der Seite &quot; **Bearbeiten** &quot;und &quot; **Details** &quot;eines Bildes. Damit können Sie Hotspots festlegen, um bestimmte Merchandising-Funktionen eines Zoombilds hervorzuheben. Statt separate Bilder zu erstellen, indem ein großer Übergeordnete beschnitten wird, kann der Zoom-Viewer die Details auf dem Bild zusammen mit einer kurzen Beschriftung, die Sie erstellen, auffüllen.
+Zoom-Zielgruppen befinden sich auch auf der Seite **Bearbeiten** und **Details** eines Bildes. Damit können Sie Hotspots festlegen, um bestimmte Merchandising-Funktionen eines Zoombilds hervorzuheben. Statt separate Bilder zu erstellen, indem ein großer Übergeordnete beschnitten wird, kann der Zoom-Viewer die Details auf dem Bild zusammen mit einer kurzen Beschriftung, die Sie erstellen, auffüllen.
 
 ![image](assets/crop-adjusted-zoom-targets/arm-with-watch.jpg)
 
@@ -132,7 +135,7 @@ Der Prozess ist sehr einfach — Klicken Sie auf die Funktion, geben Sie ihr ein
 
 Ein weiterer Faktor bei der Entscheidung, ob Sie Zoom-Zielgruppen verwenden möchten, ist Ihre Auswahl an Viewern. Nicht alle Viewer-Typen können Zoom-Zielgruppen anzeigen (z. B. unterstützt der Flyout-Viewer sie nicht).
 
-Erfahren Sie, wie Sie Zoom-Zielgruppen [erstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets).
+Erfahren Sie, wie Sie [Zoom-Zielgruppen ](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets) erstellen.
 
 ![image](assets/crop-adjusted-zoom-targets/zoom-targets.jpg)
 
@@ -140,15 +143,15 @@ Erfahren Sie, wie Sie Zoom-Zielgruppen [erstellen](https://docs.adobe.com/conten
 
 Im Folgenden finden Sie den Arbeitsablauf zum Erstellen von Zielgruppen in Dynamic Media Classic.
 
-1. Navigieren Sie zu Ihrem Bild, klicken Sie auf die Schaltfläche &quot; **Bearbeiten** &quot;und wählen Sie &quot; **Zoom-Zielgruppen**&quot;.
+1. Navigieren Sie zu Ihrem Bild, klicken Sie auf die Schaltfläche **Bearbeiten** und wählen Sie **Zoom-Zielgruppen**.
 2. Der Zoom-Zielgruppe-Editor wird geladen. Sie sehen Ihr Bild in der Mitte, einige Schaltflächen oben und ein leeres Zielgruppe-Bedienfeld rechts. In der linken unteren Ecke sehen Sie eine ausgewählte Viewer-Vorgabe. Die Standardeinstellung ist &quot;Zoom1-Guided&quot;.
 3. Bewegen Sie den roten Kasten mit der Maus und klicken Sie auf , um eine neue Zielgruppe zu erstellen.
 
    - Der rote Kasten ist der Bereich der Zielgruppe. Wenn ein Benutzer auf diese Zielgruppe klickt, wird er auf den Bereich innerhalb des Felds heranzoomen.
-   - Die Größe der Zielgruppe wird durch die Größe der Ansicht in der Viewer-Vorgabe bestimmt. Dadurch wird die Größe des Hauptzoombilds bestimmt. Siehe _Einstellen der Ansicht_ unten.
+   - Die Größe der Zielgruppe wird durch die Größe der Ansicht in der Viewer-Vorgabe bestimmt. Dadurch wird die Größe des Hauptzoombilds bestimmt. Siehe _Einstellen der Ansicht_, unten.
 
 4. Sie sehen die soeben erstellte Zielgruppe blau, und rechts sehen Sie eine Miniaturansicht der Zielgruppe sowie den Standardnamen &quot;Zielgruppe-0&quot;.
-5. Um Ihre Zielgruppe umzubenennen, klicken Sie auf ihre Miniaturansicht, geben Sie einen neuen **Namen** ein und klicken Sie auf **Eingabetaste** oder **Registerkarte** — Wenn Sie einfach auf &quot;Weiter&quot; klicken, wird Ihr Name nicht gespeichert.
+5. Um Ihre Zielgruppe umzubenennen, klicken Sie auf ihre Miniaturansicht, geben Sie einen neuen **Name** ein und klicken Sie auf **Geben Sie** oder **Registerkarte** — Wenn Sie einfach auf &quot;Weiter&quot; klicken, wird Ihr Name nicht gespeichert.
 6. Während die Zielgruppe ausgewählt ist, werden an dem Feld grüne gestrichelte Linien angezeigt. Sie können die Größe ändern und verschieben. Ziehen Sie die Ecken, um die Größe zu ändern, oder ziehen Sie das Feld &quot;Zielgruppe&quot;, um es zu verschieben.
 
    - Dadurch wird das Bild im standardmäßigen benutzerdefinierten Zoom-Viewer geladen. Vergewissern Sie sich, dass die Viewer-Vorgabe Zoom-Zielgruppen unterstützt — Im Allgemeinen wurden alle Standardvorgaben mit dem Wort &quot;-Guided&quot;für die Verwendung mit Zoom-Zielgruppen entwickelt. Um die Zielgruppen zu verwenden, halten Sie den Mauszeiger über die Miniaturansicht der Zielgruppe (oder das Hotspot-Symbol), um die Beschriftung anzuzeigen, und klicken Sie darauf, um den Viewer auf diese Funktion heranzoomen.
@@ -156,9 +159,9 @@ Im Folgenden finden Sie den Arbeitsablauf zum Erstellen von Zielgruppen in Dynam
 
       ![image](assets/crop-adjusted-zoom-targets/zoom-target-green-box.jpg)
 
-7. Wenn Sie eine Zielgruppe entfernen möchten, wählen Sie sie aus, indem Sie auf die Miniaturansicht klicken und dann auf die Schaltfläche &quot;Zielgruppe **** löschen&quot;klicken oder die Taste DELETE auf der Tastatur drücken.
+7. Wenn Sie eine Zielgruppe entfernen müssen, wählen Sie sie aus, indem Sie auf die Miniaturansicht klicken und dann die Taste **Zielgruppe löschen** drücken oder die Taste DELETE drücken.
 8. Klicken Sie nach dem Hinzufügen auf , um neue Zielgruppen hinzuzufügen, umzubenennen und/oder die Größe zu ändern.
-9. Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **Speichern** und dann auf **Vorschau**.
+9. Klicken Sie abschließend auf die Schaltfläche **Speichern** und dann auf **Vorschau**.
 
 ### Einstellen der Größe der Ansicht in der Zoom-Viewer-Vorgabe
 
@@ -178,7 +181,7 @@ Sie können sehen, dass die integrierte Vorgabe eine Größe von 900 x 550 hat, 
 
 Um die Größe der Ansicht festzulegen, erstellen oder bearbeiten Sie eine Viewer-Vorgabe, die Zoom-Zielgruppen unterstützt.
 
-1. Wechseln Sie in der Viewer-Vorgabe zur Option **Zoomeinstellungen** .
+1. Wechseln Sie in der Viewer-Vorgabe zur Option **Zoomeinstellungen**.
 2. Legen Sie Breite und Höhe fest.
 3. Speichern Sie die Vorgabe und schließen Sie sie. Wenn Sie diese Vorgabe auf Ihrer Live-Site verwenden möchten, müssen Sie später auch veröffentlichen.
 4. Gehen Sie zum Zoom-Zielgruppe-Werkzeug und wählen Sie unten links die bearbeitete Vorgabe aus. Die neue Ansicht wird sofort in Ihren Zielgruppen angezeigt.
