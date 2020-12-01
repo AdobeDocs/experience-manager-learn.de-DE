@@ -20,11 +20,11 @@ ht-degree: 0%
 
 # Debuggen von AEM als Cloud Service mit CRXDE Lite
 
-CRXDE Lite ist __NUR__ auf AEM als Cloud Service Development Umgebung (sowie das lokale AEM SDK) verfügbar.
+CRXDE Lite ist __NUR__ auf AEM als Cloud Service Development Umgebung verfügbar (sowie das lokale AEM SDK).
 
 ## Zugriff auf CRXDE Lite auf AEM Author
 
-CRXDE Lite ist __nur__ auf AEM als Umgebung zur Entwicklung von Cloud Services verfügbar und ist auf Stage- oder Produktions-Umgebung __nicht__ verfügbar.
+Die CRXDE Lite ist auf AEM Umgebung zur Entwicklung von Cloud Services nur __verfügbar und ist__ nicht __auf Stage- oder Produktions-Umgebung verfügbar.__
 
 So greifen Sie auf die CRXDE Lite auf AEM Author zu:
 
@@ -37,7 +37,7 @@ Dadurch wird die CRXDE Lite mit den Anmeldeinformationen und Berechtigungen für
 
 CRXDE Lite bietet direkten Zugriff auf die JCR. Der Inhalt, der über die CRXDE Lite sichtbar ist, ist durch die Berechtigungen begrenzt, die Ihrem Benutzer erteilt wurden. Das bedeutet, dass Sie möglicherweise nicht alle Inhalte der JCR je nach Zugriff sehen oder ändern können.
 
-Beachten Sie, dass `/apps`und `/libs` `/oak:index` sind unveränderlich, d. h. sie können zur Laufzeit von keinem Benutzer geändert werden. Diese Speicherorte im JCR können nur über Codebereitstellungen geändert werden.
+Beachten Sie, dass `/apps`, `/libs` und `/oak:index` unveränderlich sind, d. h., dass sie zur Laufzeit von keinem Benutzer geändert werden können. Diese Speicherorte im JCR können nur über Codebereitstellungen geändert werden.
 
 + Die JCR-Struktur wird mithilfe des linken Navigationsbereichs navigiert und bearbeitet
 + Wenn Sie eine Node im linken Navigationsbereich auswählen, werden die Node-Eigenschaften im unteren Bereich angezeigt.
@@ -48,7 +48,7 @@ Beachten Sie, dass `/apps`und `/libs` `/oak:index` sind unveränderlich, d. h. s
 ![CRXDE Lite - Debugging von Inhalten](./assets/crxde-lite/debugging-content.png)
 
 Änderungen an veränderbaren Inhalten zur Laufzeit in AEM als Cloud Service-Entwicklungs-Umgebung über CRXDE Lite müssen mit Vorsicht vorgenommen werden.
-Änderungen, die direkt an AEM über CRXDE Lite vorgenommen werden, können schwer rückverfolgt und gesteuert werden. Vergewissern Sie sich gegebenenfalls, dass über die CRXDE Lite vorgenommene Änderungen zu den mutbaren Inhaltspaketen des AEM-Projekts (`ui.content`) zurückgehen und sich zu Git verpflichten, um sicherzustellen, dass das Problem gelöst wird. Idealerweise stammen alle Änderungen am Anwendungsinhalt aus der Codebasis und fließen über Implementierungen in AEM, anstatt direkt über die CRXDE Lite Änderungen an der AEM vorzunehmen.
+Änderungen, die direkt an AEM über CRXDE Lite vorgenommen werden, können schwer rückverfolgt und gesteuert werden. Stellen Sie gegebenenfalls sicher, dass über die CRXDE Lite vorgenommene Änderungen wieder zu den mutbaren Inhaltspaketen des AEM-Projekts (`ui.content`) zurückgehen und sich zu Git verpflichten, um sicherzustellen, dass das Problem behoben wird. Idealerweise stammen alle Änderungen am Anwendungsinhalt aus der Codebasis und fließen über Implementierungen in AEM, anstatt direkt über die CRXDE Lite Änderungen an der AEM vorzunehmen.
 
 ### Debugging von Zugriffskontrollen
 
@@ -66,18 +66,18 @@ Um auf die Testkonsole in CRXDE Lite zuzugreifen, navigieren Sie zu:
 
 Die Ergebnisse werden unten angezeigt:
 
-+ __Pfad__ wiederholt den ausgewerteten Pfad
-+ __Prinzipal__ wiederholt den Benutzer oder die Gruppe, für die der Pfad ausgewertet wurde
-+ __Prinzipale__ Liste alle Prinzipale, die der ausgewählte Prinzipal ist Teil von.
-   + Dies ist hilfreich, um die Übergangsgruppenmitgliedschaften zu verstehen, die Berechtigungen über Vererbung bereitstellen können.
-+ __Berechtigungen auf Pfad__ -Listen umfassen alle JCR-Berechtigungen, die der ausgewählte Prinzipal auf dem ausgewerteten Pfad hat
++ __Der ausgewertete Pfad__ wird Pathreiteriert
++ ____ Principalweist den Benutzer oder die Gruppe erneut darauf hin, dass der Pfad für
++ ____ Principalsliste enthält alle Prinzipale, zu denen der ausgewählte Prinzipal gehört.
+   + Dies ist hilfreich, um die transitiven Gruppenmitgliedschaften zu verstehen, die Berechtigungen über Vererbung bereitstellen können.
++ __Berechtigungen unter__ Pathlisten alle JCR-Berechtigungen, die der ausgewählte Prinzipal auf dem ausgewerteten Pfad besitzt
 
 ### Nicht unterstützte Debugging-Aktivitäten
 
-Im Folgenden werden Debugging-Aktivitäten beschrieben, die in der CRXDE Lite __nicht__ ausgeführt werden können.
+Im Folgenden werden Debugging-Aktivitäten beschrieben, die in der CRXDE Lite ausgeführt werden können, wobei __nicht__ ausgeführt werden kann.
 
 ### Debuggen von OSGi-Konfigurationen
 
-Bereitgestellte OSGi-Konfigurationen können nicht über CRXDE Lite überprüft werden. OSGi-Konfigurationen werden im `ui.apps` Codepaket des AEM Projekts beibehalten, `/apps/example/config.xxx`jedoch werden die OSGi-Konfigurationsressourcen bei der Bereitstellung auf AEM als Cloud Service-Umgebung nicht auf der JCR-Datei beibehalten und sind daher nicht über die CRXDE Lite sichtbar.
+Bereitgestellte OSGi-Konfigurationen können nicht über CRXDE Lite überprüft werden. OSGi-Konfigurationen werden im `ui.apps`-Codepaket des AEM-Projekts unter `/apps/example/config.xxx` beibehalten. Bei der Bereitstellung auf AEM als Cloud Service-Umgebung werden die OSGi-Konfigurationsressourcen jedoch nicht auf dem JCR beibehalten, daher nicht über die CRXDE Lite sichtbar.
 
-Verwenden Sie stattdessen [Developer Console > Konfigurationen](./developer-console.md#configurations) , um bereitgestellte OSGi-Konfigurationen zu überprüfen.
+Verwenden Sie stattdessen [Developer Console > Configurations](./developer-console.md#configurations), um bereitgestellte OSGi-Konfigurationen zu überprüfen.
