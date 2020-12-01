@@ -1,6 +1,6 @@
 ---
-title: Umgebung für Asset Compute-Erweiterbarkeit konfigurieren
-description: Umgebung-Variablen werden in der .env-Datei für die lokale Entwicklung beibehalten und zur Bereitstellung von Adobe-E/A-Anmeldeinformationen und Cloud-Datenspeicherung-Anmeldeinformationen verwendet, die für die lokale Entwicklung erforderlich sind.
+title: Umgebung-Variablen für Asset compute-Erweiterbarkeit konfigurieren
+description: Umgebung-Variablen werden in der .env-Datei für die lokale Entwicklung beibehalten und zur Bereitstellung von Adobe I/O-Anmeldeinformationen und Cloud-Datenspeicherung-Anmeldeinformationen verwendet, die für die lokale Entwicklung erforderlich sind.
 feature: asset-compute
 topics: renditions, development
 version: cloud-service
@@ -22,20 +22,20 @@ ht-degree: 0%
 
 ![dot env-Datei](assets/environment-variables/dot-env-file.png)
 
-Bevor Sie mit der Entwicklung von Asset Compute-Mitarbeitern beginnen, stellen Sie sicher, dass das Projekt mit den Adobe-E/A- und Cloud-Datenspeicherung-Informationen konfiguriert ist. Diese Informationen werden im Projekt gespeichert, `.env` das nur für die lokale Entwicklung verwendet wird und nicht in Git gespeichert wird. Die `.env` Datei bietet eine komfortable Möglichkeit, Schlüssel/Werte-Paare der lokalen Asset Compute-Umgebung zur lokalen Entwicklung bereitzustellen. Bei der [Bereitstellung](../deploy/runtime.md) von Asset Compute-Workern auf Adobe I/O Runtime wird die `.env` Datei nicht verwendet, sondern eine Untergruppe von Werten wird über Umgebung-Variablen übergeben. Andere benutzerdefinierte Parameter und Geheimnisse können auch in der `.env` Datei gespeichert werden, z. B. Entwicklungsberechtigungen für Drittanbieter-Webdienste.
+Bevor Sie mit der Entwicklung von Asset compute-Workern beginnen, stellen Sie sicher, dass das Projekt mit Adobe I/O- und Cloud-Datenspeicherung-Informationen konfiguriert ist. Diese Informationen werden im `.env` des Projekts gespeichert, das nur für die lokale Entwicklung verwendet wird und nicht in Git gespeichert wird. Die `.env`-Datei bietet eine praktische Möglichkeit, Schlüssel/Werte-Paare der lokalen Asset compute-Umgebung für die lokale Entwicklung bereitzustellen. Wenn [Asset compute-Worker unter Adobe I/O Runtime bereitstellen, wird die `.env`-Datei nicht verwendet, sondern eine Untergruppe von Werten wird über Umgebung-Variablen übergeben. ](../deploy/runtime.md) Andere benutzerdefinierte Parameter und Geheimnisse können auch in der Datei `.env` gespeichert werden, z. B. Entwicklungsberechtigungen für Drittanbieter-Webdienste.
 
-## Verweis auf `private.key`
+## Referenz auf `private.key`
 
 ![privater Schlüssel](assets/environment-variables/private-key.png)
 
-Öffnen Sie die `.env` Datei, heben Sie den Kommentar- `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` Schlüssel auf und geben Sie den absoluten Pfad auf Ihrem Dateisystem zu den `private.key` , die mit dem öffentlichen Zertifikat, das zu Ihrem Adobe-I/O FireFly-Projekt hinzugefügt.
+Öffnen Sie die Datei `.env`, heben Sie den Kommentar für `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` auf und geben Sie den absoluten Pfad zu dem `private.key` an, der mit dem öffentlichen Zertifikat verknüpft ist, das Ihrem Adobe I/O FireFly-Projekt hinzugefügt wurde.
 
-+ Wenn Ihr Schlüsselpaar von der Adobe-E/A generiert wurde, wurde es automatisch als Teil der `config.zip`heruntergeladen.
-+ Wenn Sie den öffentlichen Schlüssel für die Adobe I/O angegeben haben, sollten Sie auch im Besitz des entsprechenden privaten Schlüssels sein.
++ Wenn Ihr Schlüsselpaar von Adobe I/O generiert wurde, wurde es automatisch als Teil von `config.zip` heruntergeladen.
++ Wenn Sie den öffentlichen Schlüssel für Adobe I/O bereitgestellt haben, sollten Sie auch im Besitz des entsprechenden privaten Schlüssels sein.
 + Wenn Sie diese Schlüsselpaare nicht haben, können Sie am unteren Rand neue Schlüsselpaare erstellen oder neue öffentliche Schlüssel hochladen:
-   [https://console.adobe.com](https://console.adobe.io) > Ihr Asset-Compute-Projekt > Arbeitsbereiche bei Entwicklung > Dienstkonto (JWT).
+   [https://console.adobe.com](https://console.adobe.io) > Ihr Asset compute Firefly-Projekt > Arbeitsbereiche bei Entwicklung > Dienstkonto (JWT).
 
-Denken Sie daran, dass die `private.key` Datei nicht in Git überprüft werden sollte, da sie Geheimnisse enthält, sondern sollte an einem sicheren Ort außerhalb des Projekts gespeichert werden.
+Denken Sie daran, dass die `private.key`-Datei nicht in Git geprüft werden sollte, da sie Geheimnisse enthält, sondern sollte an einem sicheren Ort außerhalb des Projekts gespeichert werden.
 
 Unter macOS könnte dies beispielsweise wie folgt aussehen:
 
@@ -47,19 +47,19 @@ ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=/Users/example-user/credentials/aem-guides-w
 
 ## Anmeldeinformationen für die Cloud-Datenspeicherung konfigurieren
 
-Die lokale Entwicklung von Asset Compute-Mitarbeitern erfordert Zugriff auf die [Cloud-Datenspeicherung](../set-up/accounts-and-services.md#cloud-storage). Die für die lokale Entwicklung verwendeten Anmeldeinformationen für die Cloud-Datenspeicherung werden in der `.env` Datei bereitgestellt.
+Die lokale Entwicklung von Asset compute-Mitarbeitern erfordert Zugriff auf [Cloud-Datenspeicherung](../set-up/accounts-and-services.md#cloud-storage). Die für die lokale Entwicklung verwendeten Anmeldeinformationen für die Cloud-Datenspeicherung werden in der Datei `.env` bereitgestellt.
 
-Dieses Tutorial bevorzugt die Verwendung der Datenspeicherung von Azurblauch, aber Amazon S3 und seine entsprechenden Schlüssel in der `.env` Datei kann verwendet werden.
+Dieses Tutorial bevorzugt die Verwendung der Datenspeicherung von Azurblauch, aber Amazon S3 und es sind die entsprechenden Schlüssel in der `.env` Datei können stattdessen verwendet werden.
 
 ### Verwendung der Datenspeicherung aus Blütenzellenband
 
-Heben Sie den Kommentar auf und füllen Sie die folgenden Tasten in der `.env` Datei aus, und füllen Sie sie mit den Werten für die bereitgestellten Cloud-Datenspeicherung aus Azurblase Portal.
+Heben Sie die Auskommentierung auf und füllen Sie die folgenden Schlüssel in der Datei `.env` aus und füllen Sie sie mit den Werten für die bereitgestellten Cloud-Datenspeicherung aus Azurblase Portal.
 
 ![Azurblauch-Datenspeicherung](./assets/environment-variables/azure-portal-credentials.png)
 
-1. Wert für den `AZURE_STORAGE_CONTAINER_NAME` Schlüssel
-1. Wert für den `AZURE_STORAGE_ACCOUNT` Schlüssel
-1. Wert für den `AZURE_STORAGE_KEY` Schlüssel
+1. Wert für den Schlüssel `AZURE_STORAGE_CONTAINER_NAME`
+1. Wert für den Schlüssel `AZURE_STORAGE_ACCOUNT`
+1. Wert für den Schlüssel `AZURE_STORAGE_KEY`
 
 Dies könnte beispielsweise wie folgt aussehen (nur Werte zur Veranschaulichung):
 
@@ -71,15 +71,15 @@ AZURE_STORAGE_CONTAINER_NAME=asset-compute
 ...
 ```
 
-Die resultierende `.env` Datei sieht wie folgt aus:
+Die resultierende Datei `.env` sieht wie folgt aus:
 
 ![Azurblauch-Datenspeicherung-Anmeldeinformationen](assets/environment-variables/cloud-storage-credentials.png)
 
-Wenn Sie NICHT mit der Datenspeicherung von Microsoft Azurblut arbeiten, entfernen Sie diese kommentiert (durch Präfix mit `#`) oder lassen Sie sie auskommentiert.
+Wenn Sie NICHT mit der Datenspeicherung von Microsoft Azurblauch arbeiten, entfernen oder lassen Sie diese auskommentiert (durch Präfix `#`).
 
 ### Verwenden der Amazon S3 Cloud-Datenspeicherung{#amazon-s3}
 
-Wenn Sie die Amazon S3 Cloud-Datenspeicherung verwenden, heben Sie den Kommentar auf und füllen Sie die folgenden Tasten in der `.env` Datei aus.
+Wenn Sie die Amazon S3 Cloud-Datenspeicherung verwenden, heben Sie den Kommentar auf und füllen Sie die folgenden Tasten in der `.env`-Datei aus.
 
 Dies könnte beispielsweise wie folgt aussehen (nur Werte zur Veranschaulichung):
 
@@ -94,22 +94,22 @@ AWS_REGION=us-east-1
 
 ## Projektkonfiguration überprüfen
 
-Nachdem das generierte Asset Compute-Projekt konfiguriert wurde, überprüfen Sie die Konfiguration, bevor Sie Codeänderungen vornehmen, um sicherzustellen, dass die unterstützenden Dienste in den `.env` Dateien bereitgestellt werden.
+Nachdem das generierte Asset compute-Projekt konfiguriert wurde, überprüfen Sie die Konfiguration, bevor Sie Codeänderungen vornehmen, um sicherzustellen, dass die unterstützenden Dienste in den `.env`-Dateien bereitgestellt werden.
 
-So Beginn Asset Compute Development Tool for the Asset Compute project:
+So Beginn Asset compute Development Tool für das Asset compute-Projekt:
 
-1. Öffnen Sie eine Befehlszeile im Projektstamm &quot;Asset Compute&quot;(im VS-Code kann diese über Terminal > New Terminal direkt in der IDE geöffnet werden) und führen Sie den Befehl aus:
+1. Öffnen Sie eine Befehlszeile im Asset compute-Projektstamm (in VS-Code kann diese über Terminal > New Terminal direkt in der IDE geöffnet werden) und führen Sie den Befehl aus:
 
    ```
    $ aio app run
    ```
 
-1. Das lokale Asset Compute Development Tool wird in Ihrem Standard-Webbrowser unter __http://localhost:9000__ geöffnet.
+1. Das lokale Asset compute Development Tool wird in Ihrem Standard-Webbrowser unter __http://localhost:9000__ geöffnet.
 
    ![App-Ausführung](assets/environment-variables/aio-app-run.png)
 
 1. Beobachten Sie die Befehlszeilenausgabe und den Webbrowser auf Fehlermeldungen während der Initialisierung des Entwicklungstools.
-1. Um das Asset Compute Development Tool zu beenden, tippen Sie `Ctrl-C` im Fenster, das ausgeführt wurde, auf , um den Prozess `aio app run` zu beenden.
+1. Um das Asset compute-Entwicklungstool zu beenden, tippen Sie im Fenster, das `aio app run` ausgeführt hat, auf `Ctrl-C`, um den Vorgang zu beenden.
 
 ## Fehlerbehebung
 
