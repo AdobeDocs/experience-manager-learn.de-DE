@@ -39,21 +39,21 @@ Eine konsolidierte Ansicht der von AEM unterstützten Authentifizierungsmechanis
         </tr>
         <tr>
             <td>Grundlegende Authentifizierung</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
+            <td>they</td>
+            <td>they</td>
+            <td>they</td>
         </tr>
         <tr>
             <td>Forms-basiert</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
+            <td>they</td>
+            <td>they</td>
+            <td>they</td>
         </tr>
         <tr>
-            <td>Token-basiert (mit/ <a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">verkapseltem Token</a>)</td>
-            <td>✔</td>
-            <td>✔</td>
-            <td>✔</td>
+            <td>Token-basiert (w/ <a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">verkapseltes Token</a>)</td>
+            <td>they</td>
+            <td>they</td>
+            <td>they</td>
         </tr>
         <tr>
             <td><strong>Nicht-AEM-System als kanonischer Identitätsanbieter</strong></td>
@@ -62,27 +62,27 @@ Eine konsolidierte Ansicht der von AEM unterstützten Authentifizierungsmechanis
             <td></td>
             <tr>
                 <td><a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/ldap-config.html" target="_blank">LDAP</a></td>
-                <td>✔</td>
-                <td>✔</td>
-                <td>✔</td>
+                <td>they</td>
+                <td>they</td>
+                <td>they</td>
             </tr>
             <tr>
                 <td><a href="https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/single-sign-on.html" target="_blank">SSO (Single Sign-On, einmalige Anmeldung)</a></td>
-                <td>✔</td>
-                <td>✔</td>
-                <td>✔</td>
+                <td>they</td>
+                <td>they</td>
+                <td>they</td>
             </tr>
             <tr>
                 <td><a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/saml-2-0-authenticationhandler.html" target="_blank">SAML 2.0</a></td>
-                <td>✔</td>
-                <td>✔</td>
-                <td>✔</td>
+                <td>they</td>
+                <td>they</td>
+                <td>they</td>
             </tr>
             <tr>
                 <td><a href="https://helpx.adobe.com/de/experience-manager/kt/eseminars/gems/aem-oauth-server-functionality-in-aem.html" target="_blank">OAuth 1.0a und 2.0</a></td>
-                <td>✔</td>
-                <td>✔</td>
-                <td>✔</td>
+                <td>they</td>
+                <td>they</td>
+                <td>they</td>
             </tr>
             <tr>
                 <td><a href="https://sling.apache.org/documentation/the-sling-engine/authentication/authentication-authenticationhandler/openid-authenticationhandler.html" target="_blank">OpenID</a></td>
@@ -93,4 +93,4 @@ Eine konsolidierte Ansicht der von AEM unterstützten Authentifizierungsmechanis
     </tbody>
 </table>
 
-⁕ über Gemeinschaftsprojekte *bereitgestellt, aber nicht direkt von der Adobe unterstützt.*
+⁕ *Wird über Gemeinschaftsprojekte bereitgestellt, aber nicht direkt von der Adobe unterstützt.*
