@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Creating a Page {#creating-page-aem-sites}
+# Erstellen einer Seite {#creating-page-aem-sites}
 
 Erfahren Sie, wie Sie Site-Seiten mit Seitenvorlagen in Adobe Experience Manager erstellen.
 
