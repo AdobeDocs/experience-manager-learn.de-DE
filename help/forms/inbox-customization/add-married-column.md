@@ -82,12 +82,12 @@ return isMarried(inboxItem);
 * [Bei AEM Webkonsole anmelden](http://localhost:4502/system/console/bundles)
 * [Anpassungspaket für Beginn und Posteingang bereitstellen](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
 * [Posteingang öffnen](http://localhost:4502/aem/inbox)
-* Öffnen Sie die Admin-Steuerung, indem Sie auf das Symbol _Liste Ansicht_ neben der Schaltfläche _Erstellen_ klicken
+* Öffnen Sie die Admin-Steuerung, indem Sie auf das Symbol _Liste-Ansicht_ neben _Erstellen_ klicken
 * hinzufügen Spalte &quot;Verheiratet&quot;in &quot;Posteingang&quot;und speichern Sie Ihre Änderungen
 * [Wechseln zur Benutzeroberfläche &quot;FormsAndDocuments&quot;](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [Importieren des Musterformulars](assets/snap-form.zip) durch Auswahl von _Datei-Upload_ im Menü _Erstellen_
+* [Importieren Sie das Beispielformular, ](assets/snap-form.zip) indem Sie im Menü &quot; _Erstellen&quot;die Option_ &quot;Datei  __ hochladen&quot;wählen
 * [Nutzen Sie die Funktion zur Formularvorschau.](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* Wählen Sie den _Familienstand_ aus und senden Sie das Formular
+* Wählen Sie _Familienstand_ und senden Sie das Formular
    [ansicht-Posteingang](http://localhost:4502/aem/inbox)
 
 Das Senden des Formulars löst den Workflow aus und dem Benutzer &quot;admin&quot;wird eine Aufgabe zugewiesen. Sie sollten einen Wert unter der Spalte Verheiratet sehen, wie in diesem Screenshot dargestellt
