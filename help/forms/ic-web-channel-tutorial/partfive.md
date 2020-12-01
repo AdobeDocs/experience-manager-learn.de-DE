@@ -20,7 +20,7 @@ ht-degree: 0%
 ---
 
 
-# Erstellen von Dokument-Fragmenten, die den Namen und die Adresse des Empfängers enthalten {#creating-document-fragments-to-hold-the-recipient-name-and-address}
+# Erstellen von Dokument-Fragmenten, die den Empfänger und die Adresse {#creating-document-fragments-to-hold-the-recipient-name-and-address} enthalten
 
 In diesem Teil erstellen wir ein Dokument-Fragment, das den Namen und die Adresse des Empfängers enthält.
 
@@ -30,7 +30,7 @@ Dokument-Fragmente enthalten den Textinhalt von interaktiven Dokumenten. Dieser 
 
 Der Rich-Text-Editor ist intuitiv genug, damit ein Geschäftsbenutzer Text verfassen und Formulardaten-Elemente einfügen kann. Der Dokument-Fragment-Editor kann Text formatieren, Schriftarten und Stile angeben, Sonderzeichen einfügen und Hyperlinks erstellen.
 
-Der Dokument-Fragment-Editor hat auch die Möglichkeit, Inline-Bedingungen in Ihren Text einzufügen, wie in diesem [Video gezeigt](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
+Der Dokument-Fragment-Editor hat auch die Möglichkeit, Inline-Bedingungen in Ihren Text einzufügen, wie in diesem [Video](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
 
 >[!NOTE]
 >
