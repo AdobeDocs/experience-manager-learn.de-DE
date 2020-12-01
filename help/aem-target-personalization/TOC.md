@@ -22,11 +22,11 @@ ht-degree: 46%
 
 # Erste Schritte mit AEM und Target {#aem-target-tutorial}
 
-+ [Übersicht](./overview.md)
++ [Überblick](./overview.md)
 + [Personalisierung mit AEM Erlebnisfragmenten](./personalization-use-case-1.md)
 + [Personalisierung mit Visual Experience Composer](./personalization-use-case-3.md)
 + [Personalisierung vollständiger Webseiten-Erlebnisse](./personalization-use-case-2.md)
 + Implementierung {#aem-target-implementation}
    + [Einführung](./implementation.md)
-   + [AEM und Adobe Target mit I/O für Start und Adobe](./using-launch-adobe-io.md)
+   + [AEM und Adobe Target mit Launch und Adobe I/O](./using-launch-adobe-io.md)
    + [AEM und Adobe Target mit älteren Cloud Services](./using-aem-cloud-services.md)
