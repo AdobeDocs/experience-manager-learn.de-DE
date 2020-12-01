@@ -15,7 +15,7 @@ ht-degree: 36%
 
 # AEM Assets-Videos und -Tutorials {#assets}
 
-+ [Übersicht](overview.md)
++ [Überblick](overview.md)
 
 + Konfiguration{#configuring}
    + [Grundlegende Ordner](configuring/baseline-folders.md)
@@ -69,7 +69,7 @@ ht-degree: 36%
       + [Designing Asset Share Commons](./sharing/asset-share-commons-feature-video-theming.md)
    + [Connected Assets](./sharing/connected-assets.md)
 
-+ Integration in kreative Workflows{#creative-workflows}
++ Integration mit Creative Workflows{#creative-workflows}
    + [AEM Desktop App](./creative-workflows/aem-desktop-app.md)
    + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
