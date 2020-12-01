@@ -15,13 +15,13 @@ ht-degree: 10%
 ---
 
 
-# Einfache Implementierung der Suche{#simple-search-implementation-guide}
+# Anleitung zur einfachen Suchimplementierung{#simple-search-implementation-guide}
 
-The Simple search implementation are the materials from the **Adobe Summit lab AEM Search Demystified**. Diese Seite enthält die Materialien aus diesem Labor. Für eine Führung durch das Labor, Ansicht der Lab-Arbeitsmappe im Abschnitt Präsentation dieser Seite.
+Die Implementierung der einfachen Suche sind die Materialien aus dem **Adobe Summit Labor AEM Search Demystified**. Diese Seite enthält die Materialien aus diesem Labor. Für eine Führung durch das Labor, Ansicht der Lab-Arbeitsmappe im Abschnitt Präsentation dieser Seite.
 
 ![Übersicht über die Sucharchitektur](assets/l4080/simple-search-application.png)
 
-## Pressematerial {#bookmarks}
+## Präsentationsmaterialien {#bookmarks}
 
 * [Lab-Arbeitsmappe](assets/l4080/l4080-lab-workbook.pdf)
 * [Präsentation](assets/l4080/l4080-presentation.pdf)
@@ -39,7 +39,7 @@ The Simple search implementation are the materials from the **Adobe Summit lab A
 
 ### Kapitel {#chapters}
 
-*Die folgenden Kapitellinks gehen davon aus, dass die[anfänglichen Pakete](#initialpackages)auf AEM Author unter`http://localhost:4502`*
+*Die folgenden Kapitellinks gehen davon  [aus, dass die ](#initialpackages) anfänglichen Pakete auf AEM Author unter`http://localhost:4502`*
 
 * [Kapitel 1](http://localhost:4502/editor.html/content/summit/l4080/chapter-1.html)
 * [Kapitel 2](http://localhost:4502/editor.html/content/summit/l4080/chapter-2.html)
@@ -75,7 +75,7 @@ The Simple search implementation are the materials from the **Adobe Summit lab A
 * [Sling-Modelle](https://sling.apache.org/documentation/bundles/models.html)
 * [Sling Model Exporter](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)
 * [QueryBuilder-API](https://docs.adobe.com/docs/en/aem/6-2/develop/search/querybuilder-api.html)
-* [AEM Chrome-Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode) ([Dokumentationsseite](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/))
+* [AEM Chrome-Plugin](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode)  ([Dokumentationsseite](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/))
 
 ## Korrekturen und Folgemaßnahmen {#corrections-and-follow-up}
 
@@ -83,18 +83,18 @@ Korrekturen und Klarstellungen aus den Laborgesprächen und Antworten auf Folgef
 
 1. **Wie kann man eine Neuindizierung stoppen?**
 
-   Die Neuindizierung kann über den IndexStats MBean beendet werden, der über [AEM Web-Konsole > JMX verfügbar ist.](http://localhost:4502/system/console/jmx)
+   Die Neuindizierung kann über das IndexStats MBean beendet werden, das über [AEM Web-Konsole > JMX](http://localhost:4502/system/console/jmx) verfügbar ist.
 
    * [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats)
-      * Wird ausgeführt, `abortAndPause()` um die Neuindizierung abzubrechen. Dadurch wird der Index für eine weitere Neuindizierung gesperrt, bis er aufgerufen `resume()` wird.
-      * Bei Ausführung `resume()` wird der Indexierungsvorgang neu gestartet.
+      * Führen Sie `abortAndPause()` aus, um die Neuindizierung abzubrechen. Dadurch wird der Index für eine weitere Neuindizierung gesperrt, bis `resume()` aufgerufen wird.
+      * Wenn Sie `resume()` ausführen, wird der Indexierungsvorgang neu gestartet.
    * Dokumentation: [https://jackrabbit.apache.org/oak/docs/query/indexing.html#async-index-mbean](https://jackrabbit.apache.org/oak/docs/query/indexing.html#async-index-mbean)
 
 2. **Wie können Eichenindizes mehrere Mandanten unterstützen?**
 
-   Oak unterstützt die Platzierung von Indizes durch die Inhaltsstruktur, und diese Indizes werden nur innerhalb dieser Unterstruktur indiziert. So **`/content/site-a/oak:index/cqPageLucene`** könnte z. B. erstellt werden, um Inhalte nur unter **`/content/site-a`zu indizieren.**
+   Oak unterstützt die Platzierung von Indizes durch die Inhaltsstruktur, und diese Indizes werden nur innerhalb dieser Unterstruktur indiziert. Zum Beispiel könnte **`/content/site-a/oak:index/cqPageLucene`** nur unter **`/content/site-a`zum Indexieren von Inhalten erstellt werden.**
 
-   Ein gleichwertiger Ansatz ist die Verwendung der **`includePaths`** und **`queryPaths`** Eigenschaften auf einem Index unter **`/oak:index`**. Beispiel:
+   Eine gleichwertige Methode besteht darin, die Eigenschaften **`includePaths`** und **`queryPaths`** für einen Index unter **`/oak:index`** zu verwenden. Beispiel:
 
    * `/oak:index/siteAcqPageLucene@includePaths=/content/site-a`
    * `/oak:index/siteAcqPageLucene@queryPaths=/content/site-a`
@@ -118,7 +118,7 @@ Korrekturen und Klarstellungen aus den Laborgesprächen und Antworten auf Folgef
 
 4. **Wie kann ich in derselben Abfrage nach Seiten und Assets suchen?**
 
-   Neu in AEM 6.3 ist die Möglichkeit zur Abfrage für mehrere Node-Typen in derselben bereitgestellten Abfrage. Die folgende QueryBuilder-Abfrage. Beachten Sie, dass jede &quot;Unter-Abfrage&quot;in einen eigenen Index aufgelöst werden kann. In diesem Beispiel wird die `cq:Page` Unter-Abfrage aufgelöst, `/oak:index/cqPageLucene` und die `dam:Asset` Unter-Abfrage wird in `/oak:index/damAssetLucene`aufgelöst.
+   Neu in AEM 6.3 ist die Möglichkeit zur Abfrage für mehrere Node-Typen in derselben bereitgestellten Abfrage. Die folgende QueryBuilder-Abfrage. Beachten Sie, dass jede &quot;Unter-Abfrage&quot;zu einem eigenen Index aufgelöst werden kann. In diesem Beispiel wird die `cq:Page`-Untergruppe zu `/oak:index/cqPageLucene` aufgelöst und die `dam:Asset`-Untergruppe zu `/oak:index/damAssetLucene` aufgelöst.
 
    ```plain
    group.p.or=true
@@ -136,7 +136,7 @@ Korrekturen und Klarstellungen aus den Laborgesprächen und Antworten auf Folgef
    PLAN: [cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) *:* */ union [dam:Asset] as [a] /* lucene:damAssetLucene(/oak:index/damAssetLucene) *:* */
    ```
 
-   Erfahren Sie mehr über die Abfrage und die Ergebnisse mit dem [QueryBuilder-Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Ddam%3AAsset%0D%0A%23+add+all+asset+restrictions+to+this+group) und dem [AEM Chrome-Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US).
+   Erkunden Sie die Abfrage und die Ergebnisse mit dem [QueryBuilder-Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Ddam%3AAsset%0D%0A%23+add+all+asset+restrictions+to+this+group) und [AEM Chrome-Plugin](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US).
 
 5. **Wie kann ich mehrere Pfade in derselben Abfrage durchsuchen?**
 
@@ -160,4 +160,4 @@ Korrekturen und Klarstellungen aus den Laborgesprächen und Antworten auf Folgef
    PLAN: [cq:Page] as [a] /* traverse "/content/docs/en/6-2//*" where isdescendantnode([a], [/content/docs/en/6-2]) */ union [cq:Page] as [a] /* traverse "/content/docs/en/6-3//*" where isdescendantnode([a], [/content/docs/en/6-3]) */
    ```
 
-   Erfahren Sie mehr über die Abfrage und die Ergebnisse mit dem [QueryBuilder-Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0Agroup.1_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-2%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Dcq%3APage%0D%0Agroup.2_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-3%0D%0A%23+add+all+asset+restrictions+to+this+group) und dem [AEM Chrome-Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US).
+   Erkunden Sie die Abfrage und die Ergebnisse mit dem [QueryBuilder-Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0Agroup.1_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-2%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Dcq%3APage%0D%0Agroup.2_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-3%0D%0A%23+add+all+asset+restrictions+to+this+group) und [AEM Chrome-Plugin](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US).
