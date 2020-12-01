@@ -17,7 +17,7 @@ ht-degree: 0%
 ---
 
 
-# Connected Assets mit AEM Assets verwenden{#using-connected-assets-with-aem-assets}
+# Verbinden von Assets mit AEM Assets{#using-connected-assets-with-aem-assets}
 
 Die Funktion &quot;Verbundene Assets&quot;ermöglicht es einem AEM Sites-Autor, digitale Assets, die auf einer anderen Instanz von AEM gehostet werden, nahtlos freizugeben.
 
@@ -28,4 +28,4 @@ Die Funktion &quot;Verbundene Assets&quot;ermöglicht es einem AEM Sites-Autor, 
 * 03:30 — Verwenden eines Bildes aus den verbundenen Assets
 * 04:42 — Administratorkonfigurationen zur Aktivierung der Funktion &quot;Verbundene Assets&quot;
 
-Bitte lesen Sie sich die [unterstützten Bereitstellungen für verbundene Assets](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites) durch, um zu verstehen, ob Ihre AEM Connected Assets unterstützen können.
+Lesen Sie sich die [unterstützten Bereitstellungen für verbundene Assets](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites) durch, um zu verstehen, ob Ihre AEM Bereitstellung verbundene Assets unterstützen kann.
