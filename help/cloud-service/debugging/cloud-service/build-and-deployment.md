@@ -32,23 +32,23 @@ Der Validierungsschritt stellt einfach sicher, dass die grundlegenden Cloud Mana
 
 + __Fehlermeldung:__ Die Umgebung befindet sich in einem ungültigen Status.
    ![Die Umgebung hat einen ungültigen Status](./assets/build-and-deployment/validation__invalid-state.png)
-+ __Ursache:__ Die Umgebung der Zielgruppe der Pipeline befindet sich in einem Übergangszustand, zu dem sie keine neuen Gebäude annehmen kann.
-+ __Lösung:__ Warten Sie, bis der Status auf den Status &quot;Wird ausgeführt (oder Update verfügbar)&quot;aufgelöst wird. Wenn die Umgebung gelöscht wird, erstellen Sie die Umgebung neu oder wählen Sie eine andere Umgebung, die erstellt werden soll.
++ __Ursache:__ Die Umgebung der Zielgruppe der Pipeline befindet sich in einem Übergangszustand, zu dem sie keine neuen Builds akzeptieren kann.
++ __Auflösung:__ Warten Sie, bis der Status in einen Status aufgelöst ist, der ausgeführt wird (oder auf &quot;verfügbar&quot;aktualisiert wird). Wenn die Umgebung gelöscht wird, erstellen Sie die Umgebung neu oder wählen Sie eine andere Umgebung, die erstellt werden soll.
 
 ### Die mit der Pipeline verbundene Umgebung kann nicht gefunden werden
 
 + __Fehlermeldung:__ Die Umgebung ist als gelöscht markiert.
    ![Die Umgebung wird als gelöscht markiert](./assets/build-and-deployment/validation__environment-marked-as-deleted.png)
 + __Ursache:__ Die Umgebung, für die die Pipeline konfiguriert wurde, wurde gelöscht.
-Auch wenn eine neue Umgebung mit demselben Namen neu erstellt wird, verknüpft Cloud Manager die Pipeline nicht automatisch mit dieser gleichnamigen Umgebung.
-+ __Lösung:__ Bearbeiten Sie die Pipeline-Konfiguration und wählen Sie die Umgebung, für die Sie bereitstellen möchten, erneut aus.
+Auch wenn eine neue Umgebung desselben Namens neu erstellt wird, verknüpft Cloud Manager die Pipeline nicht automatisch mit dieser gleichnamigen Umgebung.
++ __Auflösung:__ Bearbeiten Sie die Pipeline-Konfiguration und wählen Sie die Umgebung, für die Sie bereitstellen möchten, erneut aus.
 
 ### Die mit der Pipeline verbundene Git-Verzweigung kann nicht gefunden werden
 
 + __Fehlermeldung:__ Ungültige Pipeline: XXXX. Grund=Verzweigung=xxxx im Repository nicht gefunden.
-   ![Ungültige Pipeline: XXXX. Grund=Verzweigung=xxxx im Repository nicht gefunden](./assets/build-and-deployment/validation__branch-not-found.png)
+   ![Ungültige Pipeline: XXXX. Grund=Verzweigung=xxxx im Repository](./assets/build-and-deployment/validation__branch-not-found.png) nicht gefunden
 + __Ursache:__ Die Git-Verzweigung, für die die Pipeline konfiguriert wurde, wurde gelöscht.
-+ __Lösung:__ Erstellen Sie die fehlende Git-Verzweigung unter exakt demselben Namen erneut oder konfigurieren Sie die Pipeline neu, um eine andere, vorhandene Verzweigung zu erstellen.
++ __Auflösung:__ Erstellen Sie die fehlende Git-Verzweigung unter exakt demselben Namen erneut oder konfigurieren Sie die Pipeline neu, um sie aus einer anderen, vorhandenen Verzweigung zu erstellen.
 
 ## Test- und Unit-Tests
 
@@ -58,10 +58,10 @@ In der Phase Build and Unit Testing wird ein Maven-Build (`mvn clean package`) d
 
 In dieser Phase identifizierte Fehler sollten mit folgenden Ausnahmen reproduzierbar sein, um das Projekt lokal zu erstellen:
 
-+ Es wird eine maven-Abhängigkeit verwendet, die auf [Maven Central](https://search.maven.org/) nicht verfügbar ist, und das Maven-Repository, das die Abhängigkeit enthält, ist entweder:
++ Es wird eine maven-Abhängigkeit verwendet, die für [Maven Central](https://search.maven.org/) nicht verfügbar ist, und das Maven-Repository, das die Abhängigkeit enthält, lautet entweder:
    + Unerreichbar von Cloud Manager, z. B. einem internen Maven-Repository, oder dem Maven-Repository erfordert eine Authentifizierung, und die falschen Anmeldeinformationen wurden bereitgestellt.
-   + Nicht explizit im Projekt registriert `pom.xml`. Beachten Sie, dass die Einbindung von Maven-Repositorys entmutigt wird, da dies die Buildzeit verlängert.
-+ Komponententests schlagen aufgrund von Zeitfehlern fehl. Dies kann vorkommen, wenn Komponententests zeitempfindlich sind. Ein starker Indikator stützt sich `.sleep(..)` im Testcode.
+   + Nicht explizit im Projekt `pom.xml` registriert. Beachten Sie, dass die Einbindung von Maven-Repositorys entmutigt wird, da dies die Buildzeit verlängert.
++ Komponententests schlagen aufgrund von Zeitfehlern fehl. Dies kann vorkommen, wenn Komponententests zeitempfindlich sind. Ein starker Indikator setzt im Testcode auf `.sleep(..)`.
 + Die Verwendung nicht unterstützter Maven-Plugins.
 
 ## Codescans
@@ -70,11 +70,11 @@ In dieser Phase identifizierte Fehler sollten mit folgenden Ausnahmen reproduzie
 
 Die Codeprüfung führt eine statische Code-Analyse durch, wobei eine Mischung aus Java und AEM Best Practices verwendet wird.
 
-Die Codeprüfung führt zu einem Buildfehler, wenn im Code eine Sicherheitslücke vorhanden ist. Geringere Verletzungen können überschrieben werden, es wird jedoch empfohlen, sie zu beheben. Beachten Sie, dass das Scannen von Code unvollkommen ist und zu [Falsch-Positiv-Werten](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/understand-test-results.html#dealing-with-false-positives)führen kann.
+Die Codeprüfung führt zu einem Buildfehler, wenn im Code eine Sicherheitslücke vorhanden ist. Geringere Verletzungen können überschrieben werden, es wird jedoch empfohlen, sie zu beheben. Beachten Sie, dass die Codesuche nicht perfekt ist und zu [false-Positiven](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/understand-test-results.html#dealing-with-false-positives) führen kann.
 
-Um Probleme mit dem Scannen von Code zu lösen, laden Sie den CSV-formatierten Bericht herunter, der von Cloud Manager über die Schaltfläche &quot; **Details** herunterladen&quot;bereitgestellt wird, und überprüfen Sie alle Einträge.
+Um Probleme mit der Codeprüfung zu lösen, laden Sie den CSV-formatierten Bericht herunter, der von Cloud Manager über die Schaltfläche **Download Details** bereitgestellt wird, und überprüfen Sie alle Einträge.
 
-Weitere Informationen finden Sie AEM spezifischen Regeln in den Cloud Manager-Dokumentationen zu den [benutzerdefinierten AEM-spezifischen Code-Scanregeln](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html).
+Weitere Informationen finden Sie AEM spezifischen Regeln unter Cloud Manager-Dokumentation [Benutzerspezifische AEM-spezifische Code-Scanregeln](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html).
 
 ## Build-Images
 
@@ -96,27 +96,27 @@ set the ‘mergeConfigurations’ flag to ‘true’ if you want to merge multip
 
 #### Ursache 1
 
-+ __Ursache:__ Das Paket &quot;all&quot;des AEM-Projekts enthält mehrere Codepakete, und dieselbe OSGi-Konfiguration wird von mehr als einem der Codepakete bereitgestellt, was zu einem Konflikt führt, sodass der Schritt &quot;Build Image&quot;nicht entscheiden kann, welches verwendet werden soll, wodurch der Build Image-Schritt fehlschlägt. Beachten Sie, dass dies nicht für OSGi-Fabrikkonfigurationen gilt, solange sie eindeutige Namen haben.
-+ __Lösung:__ Überprüfen Sie, ob alle im Rahmen der AEM bereitgestellten Codepakete (einschließlich aller enthaltenen Drittanbieter-Codepakete) nach Duplikat-OSGi-Konfigurationen suchen, die im Ausführungsmodus zur Zielgruppe-Umgebung aufgelöst werden. Die Anleitung der Fehlermeldung &quot;Setzen Sie das Flag mergeConfigurations auf true&quot;ist in AEM Cloud-Dienst nicht möglich und sollte ignoriert werden.
++ __Ursache:__ Das gesamte Paket des AEM-Projekts enthält mehrere Codepakete, und dieselbe OSGi-Konfiguration wird von mehreren Codepaketen bereitgestellt, was zu einem Konflikt führt, sodass der Schritt Image erstellen nicht entscheiden kann, welches verwendet werden soll, und somit der Build-Image-Schritt fehlschlägt. Beachten Sie, dass dies nicht für OSGi-Fabrikkonfigurationen gilt, solange sie eindeutige Namen haben.
++ __Lösung:__ Überprüfen Sie alle Codepakete (einschließlich aller enthaltenen Drittanbieter-Codepakete), die im Rahmen der AEM bereitgestellt werden, und suchen Sie nach Duplikat-OSGi-Konfigurationen, die im Ausführungsmodus zur Zielgruppe aufgelöst werden. Die Anleitung der Fehlermeldung &quot;Setzen Sie das Flag mergeConfigurations auf true&quot;ist in AEM Cloud-Dienst nicht möglich und sollte ignoriert werden.
 
 #### Ursache 2
 
-+ __Ursache:__ Das AEM-Projekt enthält fälschlicherweise das gleiche Codepaket zweimal, was zur Duplizierung einer OSGi-Konfiguration im Paket führt.
-+ __Lösung:__ Überprüfen Sie alle pom.xml-Pakete, die in das Projekt &quot;all&quot;eingebettet sind, und stellen Sie sicher, dass die `filevault-package-maven-plugin` Konfiguration [auf](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) `<cloudManagerTarget>none</cloudManagerTarget>`eingestellt ist.
++ __Ursache:__ Das AEM-Projekt enthält fälschlicherweise das gleiche Codepaket zweimal, was zur Duplizierung einer beliebigen OSGi-Konfiguration im Paket führt.
++ __Lösung:__ Überprüfen Sie alle Pakete von &quot;pom.xml&quot;im gesamten Projekt, und stellen Sie sicher, dass sie die  `filevault-package-maven-plugin` [](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) Konfiguration auf  `<cloudManagerTarget>none</cloudManagerTarget>`.
 
 ### Falsches Repoinit-Skript
 
 Skripten zum Zurückweisen definieren den Ausgangsinhalt, Benutzer, Zugriffssteuerungslisten usw. In AEM als Cloud Service werden repoinit-Skripten während des Build Image angewendet, jedoch werden sie beim lokalen Schnellstart AEM SDKs angewendet, wenn die OSGi-werkseitige Konfiguration aktiviert wird. Aus diesem Grund schlagen Repoinit-Skripten möglicherweise leise fehl (mit Protokollierung) beim lokalen Schnellstart AEM SDK, führen aber zu einem Fehler beim Erstellen des Bilds, wodurch die Bereitstellung gestoppt wird.
 
 + __Ursache:__ Ein Repoinit-Skript ist fehlerhaft. Beachten Sie, dass sich Ihr Repository in einem unvollständigen Zustand befindet, da alle Repoinit-Skripte nach Ausführung des fehlerhaften Skripts gegen das Repository ausgeführt werden.
-+ __Lösung:__ Überprüfen Sie den lokalen Schnellstart des AEM SDK, wenn die OSGi-Konfiguration des Repoinit-Skripts bereitgestellt wird, um festzustellen, ob und was die Fehler sind.
++ __Lösung:__ Überprüfen Sie den lokalen Schnellstart des AEM-SDK, wenn die OSGi-Konfiguration für das Wiederholungsskript bereitgestellt ist, um festzustellen, ob und was die Fehler sind.
 
 ### Inhaltsabhängigkeit bei nicht zufrieden stellendem Rempoinit
 
 Skripten zum Zurückweisen definieren den Ausgangsinhalt, Benutzer, Zugriffssteuerungslisten usw. Im lokalen Schnellstart AEM SDKs werden repoinit-Skripten angewendet, wenn die OSGi-werkseigene Konfiguration für die Weiterleitung aktiviert wird, d. h. nachdem das Repository aktiv ist und Inhaltsänderungen direkt oder über Inhaltspakete eingetreten sein können. In AEM als Cloud Service werden beim Erstellen eines Bilds Skripten für ein Repository angewendet, das möglicherweise keine Inhalte enthält, von denen das Skript &quot;repoinit&quot;abhängig ist.
 
-+ __Ursache:__ Ein repoinit-Skript hängt von Inhalten ab, die nicht vorhanden sind.
-+ __Lösung:__ Stellen Sie sicher, dass der Inhalt, von dem das Skript repoinit abhängt, vorhanden ist. Oft deutet dies auf unangemessen definierte Repoinit-Skripte hin, bei denen Richtlinien fehlen, die diese fehlenden, aber erforderlichen Inhaltsstrukturen definieren. Dies kann lokal reproduziert werden, indem AEM gelöscht, die JAR-Datei entpackt und die OSGi-Konfiguration mit dem Repoinit-Skript zum Installationsordner hinzugefügt und AEM gestartet werden. Der Fehler wird in der Datei &quot;error.log&quot;des lokalen Schnellstarts des AEM SDK angezeigt.
++ __Ursache:__ Ein Repoinit-Skript hängt von Inhalten ab, die nicht vorhanden sind.
++ __Auflösung:__ Stellen Sie sicher, dass der Inhalt, von dem das Skript repoinit abhängt, vorhanden ist. Oft deutet dies auf unangemessen definierte Repoinit-Skripte hin, bei denen Richtlinien fehlen, die diese fehlenden, aber erforderlichen Inhaltsstrukturen definieren. Dies kann lokal reproduziert werden, indem AEM gelöscht, die JAR-Datei entpackt und die OSGi-Konfiguration mit dem Repoinit-Skript zum Installationsordner hinzugefügt und AEM gestartet werden. Der Fehler wird in der Datei &quot;error.log&quot;des lokalen Schnellstarts des AEM SDK angezeigt.
 
 
 ### Version der Hauptkomponenten der Anwendung ist größer als die bereitgestellte Version
@@ -127,14 +127,14 @@ AEM als Cloud Service wird in jeder AEM Version automatisch die neueste Core-Kom
 
 Ist möglich, schlägt der Schritt Bild erstellen fehl, wenn:
 
-+ Die Bereitstellung der Anwendung aktualisiert die Core-Komponenten und macht die Abhängigkeitsversion im `core` (OSGi-Bundle) Projekt
++ Die Bereitstellungsanwendung aktualisiert die Abhängigkeitsversion der Kernkomponenten im Projekt `core` (OSGi Bundle)
 + Die Bereitstellungsanwendung wird dann in einer Sandbox (ohne Produktionsumgebung) AEM als Cloud Service-Umgebung bereitgestellt, die noch nicht für die Verwendung einer AEM Version mit dieser neuen Core-Komponentenversion aktualisiert wurde.
 
-Um diesen Fehler zu vermeiden, müssen Sie das Update bei jeder Verfügbarkeit einer Update-Umgebung des AEM als Cloud Service als Teil der nächsten Erstellung/Bereitstellung einschließen und sicherstellen, dass die Updates nach dem Inkrementieren der Core-Komponenten-Version in die Anwendungscodebasis einbezogen werden.
+Um diesen Fehler zu vermeiden, müssen Sie das Update bei Verfügbarkeit einer Update-Umgebung für AEM als Cloud Service als Teil der nächsten Erstellung/Bereitstellung einschließen und sicherstellen, dass die Updates nach dem Inkrementieren der Core-Komponenten-Version in die Anwendungscodebasis einbezogen werden.
 
 + __Symptome:__
-Der Schritt &quot;Bild erstellen&quot;schlägt mit einem FEHLER-Berichte fehl, der 
-`com.adobe.cq.wcm.core.components...` Paket(e) in bestimmten Versionsbereichen konnten nicht vom `core` Projekt importiert werden.
+Der Schritt Bild erstellen schlägt mit einem FEHLER-Berichte fehl, der 
+`com.adobe.cq.wcm.core.components...` Pakete in bestimmten Versionsbereichen konnten nicht vom  `core` Projekt importiert werden.
 
    ```
    [ERROR] Bundle com.example.core:0.0.3-SNAPSHOT is importing package(s) Package com.adobe.cq.wcm.core.components.models;version=[12.13,13) in start level 20 but no bundle is exporting these for that start level in the required version range.
@@ -144,7 +144,7 @@ Der Schritt &quot;Bild erstellen&quot;schlägt mit einem FEHLER-Berichte fehl, d
    [INFO] ------------------------------------------------------------------------
    ```
 
-+ __Ursache:__  Das OSGi-Bundle der Anwendung (im `core` Projekt definiert) importiert Java-Klassen aus der Kernabhängigkeit der Core-Komponenten auf einer anderen Versionsebene als das, was AEM als Cloud Service bereitgestellt wird.
++ __Ursache:__  Das OSGi-Bundle der Anwendung (im  `core` Projekt definiert) importiert Java-Klassen aus der Kernabhängigkeit der Kernkomponenten auf einer anderen Versionsstufe als die, die AEM als Cloud Service bereitgestellt wird.
 + __Auflösung:__
    + Wenn Sie Git verwenden, kehren Sie zu einem funktionierenden Commit zurück, der vor der Inkrementierung der Core-Komponentenversion existiert. Übergeben Sie diese Übertragung an eine Cloud Manager Git-Verzweigung und führen Sie eine Aktualisierung der Umgebung von dieser Verzweigung aus durch. Dadurch wird AEM als Cloud Service auf die neueste AEM Version aktualisiert, die die spätere Version der Core-Komponenten enthält. Sobald die AEM als Cloud Service auf die neueste AEM Version aktualisiert wurde, die die neueste Version der Core-Komponenten enthält, stellen Sie den ursprünglich fehlerhaft verwendeten Code erneut bereit.
    + Um dieses Problem lokal zu reproduzieren, stellen Sie sicher, dass die AEM SDK-Version mit der AEM Version übereinstimmt, die AEM als Cloud Service-Umgebung verwendet.
@@ -154,7 +154,7 @@ Der Schritt &quot;Bild erstellen&quot;schlägt mit einem FEHLER-Berichte fehl, d
 
 Wenn das Problem mit den oben genannten Problembehebungsansätzen nicht gelöst werden kann, erstellen Sie bitte eine Adobe Support-Anfrage über:
 
-+ [Adobe Admin Console](https://adminconsole.adobe.com) > Support > Registerkarte > Fall erstellen
++ [Adobe Admin Console](https://adminconsole.adobe.com)  > Registerkarte &quot;Support&quot;> &quot;Fall erstellen&quot;
 
    _Wenn Sie Mitglied von mehreren Adoben Orgs sind, stellen Sie sicher, dass die Adobe Org, die fehlerhafte Pipeline hat, in der Adobe Orgs Umschalter ausgewählt ist, bevor Sie den Vorgang erstellen._
 
@@ -162,7 +162,7 @@ Wenn das Problem mit den oben genannten Problembehebungsansätzen nicht gelöst 
 
 Der Schritt &quot;Bereitstellen auf&quot;ist dafür verantwortlich, dass das in &quot;Bild erstellen&quot;generierte Code-Artefakt übernommen wird, dass Beginn neue AEM Author- und Publish-Dienste verwenden und dass bei Erfolg alle alten AEM Author- und Publish-Dienste entfernt werden. Auch in diesem Schritt werden Pakete mit veränderlichem Inhalt und Indizes installiert und aktualisiert.
 
-Machen Sie sich mit [AEM als Cloud Service-Protokoll](./logs.md) vertraut, bevor Sie den Schritt &quot;Bereitstellen auf&quot;debuggen. Das `aemerror` Protokoll enthält Informationen zum Hochfahren und Herunterfahren von Pods, die für die Bereitstellung auf Probleme relevant sein können. Beachten Sie, dass das Protokoll, das über die Schaltfläche &quot;Protokoll herunterladen&quot;im Schritt &quot;Bereitstellen auf&quot;von Cloud Manager verfügbar ist, nicht im Protokoll `aemerror` enthalten ist und keine detaillierten Informationen zum Beginn Ihrer Anwendungen enthält.
+Machen Sie sich mit [AEM als Cloud Service logs](./logs.md) vertraut, bevor Sie den Schritt &quot;Bereitstellen auf&quot;debuggen. Das `aemerror`-Protokoll enthält Informationen zum Hochfahren und Herunterfahren von Pods, die für die Bereitstellung auf Probleme relevant sein können. Beachten Sie, dass das Protokoll, das über die Schaltfläche &quot;Protokoll herunterladen&quot;im Schritt &quot;Bereitstellen auf&quot;von Cloud Manager verfügbar ist, nicht im Protokoll `aemerror` aufgeführt ist und keine detaillierten Informationen zum Beginn Ihrer Anwendungen enthält.
 
 ![Bereitstellen unter](./assets/build-and-deployment/deploy-to.png)
 
@@ -170,7 +170,7 @@ Die drei Hauptgründe, warum der Schritt &quot;Bereitstellen auf&quot;fehlschlag
 
 ### Die Cloud Manager-Pipeline enthält eine alte AEM
 
-+ __Ursache:__ Eine Cloud Manager-Pipeline enthält eine ältere Version AEM als die Version, die auf der Zielgruppe-Umgebung bereitgestellt wird. Dies kann vorkommen, wenn eine Pipeline wiederverwendet wird und auf eine neue Umgebung zeigt, die eine spätere Version von AEM ausführt. Dies lässt sich erkennen, indem Sie überprüfen, ob die AEM der Umgebung größer als die AEM-Version der Pipeline ist.
++ __Ursache:__ Eine Cloud Manager-Pipeline enthält eine ältere Version AEM als die in der Zielgruppe-Umgebung bereitgestellte Version. Dies kann vorkommen, wenn eine Pipeline wiederverwendet wird und auf eine neue Umgebung zeigt, die eine spätere Version von AEM ausführt. Dies lässt sich erkennen, indem Sie überprüfen, ob die AEM der Umgebung größer als die AEM-Version der Pipeline ist.
    ![Die Cloud Manager-Pipeline enthält eine alte AEM](./assets/build-and-deployment/deploy-to__pipeline-holds-old-aem-version.png)
 + __Auflösung:__
    + Wenn für die Umgebung &quot;Zielgruppe&quot;ein Update verfügbar ist, wählen Sie in den Aktionen der Umgebung &quot;Aktualisieren&quot;und führen Sie dann den Build erneut aus.
@@ -181,21 +181,21 @@ Die drei Hauptgründe, warum der Schritt &quot;Bereitstellen auf&quot;fehlschlag
 
 Der Code, der während des Beginns des neu bereitgestellten AEM ausgeführt wird, dauert so lange, bis Cloud Manager beendet wird, bevor die Bereitstellung abgeschlossen werden kann. In diesen Fällen kann die Bereitstellung möglicherweise erfolgreich sein, selbst wenn der Cloud Manager-Status als &quot;Fehlgeschlagen&quot;gemeldet wurde.
 
-+ __Ursache:__ Benutzerdefinierter Code kann Vorgänge wie große Abfragen oder Inhaltsdurchläufe ausführen, die frühzeitig im OSGi-Bundle oder in Komponenten-Lebenszyklen ausgelöst werden, wodurch sich die Zeitdauer des Beginns AEM erheblich verzögert.
-+ __Lösung:__ Überprüfen Sie die Implementierung für Code, der frühzeitig im Lebenszyklus des OSGi-Bundles ausgeführt wird, und überprüfen Sie die `aemerror` Protokolle für AEM Author- und Publish-Dienste rund um die Zeit des Fehlers (Protokollzeit in GMT), wie vom Cloud Manager gezeigt, und suchen Sie nach Protokollmeldungen, die auf alle benutzerdefinierten Prozesse hinweisen, die im Protokoll ausgeführt werden.
++ __Ursache:__ Benutzerdefinierter Code kann Vorgänge wie große Abfragen oder Inhaltsdurchläufe ausführen, die frühzeitig im OSGi-Bundle oder in Komponenten-Lebenszyklen ausgelöst werden, wodurch sich die AEM des Beginns erheblich verzögert.
++ __Lösung:__ Überprüfen Sie die Implementierung auf Code, der frühzeitig im Lebenszyklus des OSGi-Bundles ausgeführt wird, und überprüfen Sie die  `aemerror` Protokolle für AEM Author- und Publish-Dienste rund um die Zeit des Fehlers (Protokollzeit in GMT), wie vom Cloud Manager gezeigt, und suchen Sie nach Protokollmeldungen, die alle benutzerdefinierten Prozesse zur Ausführung des Protokolls anzeigen.
 
 ### Inkompatibler Code oder Konfiguration
 
 Die meisten Code- und Konfigurationsverletzungen werden früher im Build erfasst, es ist jedoch möglich, dass benutzerdefinierter Code oder die Konfiguration mit dem AEM als Cloud Service inkompatibel sind und bis zur Ausführung im Container unerkannt bleiben.
 
-+ __Ursache:__ Benutzerdefinierter Code kann längere Vorgänge wie große Abfragen oder Inhaltsdurchläufe aufrufen, die frühzeitig im OSGi-Bundle oder in Komponenten-Lebenszyklen ausgelöst werden, wodurch sich die Zeitdauer des Beginns AEM erheblich verzögert.
-+ __Lösung:__ Überprüfen Sie die `aemerror` Protokolle für AEM Author- und Publish-Dienste rund um die Zeit (Login-GMT) des Fehlers, wie vom Cloud Manager angezeigt.
-   1. Überprüfen Sie die Protokolle auf alle FEHLER, die von den von der benutzerdefinierten Anwendung bereitgestellten Java-Klassen ausgegeben werden. Wenn Probleme gefunden werden, lösen Sie den festen Code und erstellen Sie die Pipeline neu.
-   1. Überprüfen Sie die Protokolle auf alle FEHLER, die von Aspekten der AEM gemeldet werden, mit denen Sie in Ihrer benutzerdefinierten Anwendung erweitern/interagieren, und untersuchen Sie diese. Diese FEHLER werden möglicherweise nicht direkt Java-Klassen zugeordnet. Wenn Probleme gefunden werden, lösen Sie den festen Code und erstellen Sie die Pipeline neu.
++ __Ursache:__ Benutzerdefinierter Code kann lange Vorgänge wie große Abfragen oder Inhaltsdurchläufe aufrufen, die frühzeitig im OSGi-Bundle oder in Komponenten-Lebenszyklen ausgelöst werden und die Beginn-Betriebszeit von AEM erheblich verzögern.
++ __Lösung:__ Überprüfen Sie die  `aemerror` Protokolle für AEM Author- und Publish-Dienste rund um die Zeit (Protokollzeit in GMT) des Fehlers, wie vom Cloud Manager gezeigt.
+   1. Überprüfen Sie die Protokolle auf alle FEHLER, die von den von der benutzerdefinierten Anwendung bereitgestellten Java-Klassen ausgegeben werden. Wenn Probleme auftreten, lösen Sie den festen Code und erstellen Sie die Pipeline neu.
+   1. Überprüfen Sie die Protokolle auf alle FEHLER, die von Aspekten der AEM gemeldet werden, mit denen Sie in Ihrer benutzerdefinierten Anwendung erweitern/interagieren, und untersuchen Sie diese. Diese FEHLER werden möglicherweise nicht direkt Java-Klassen zugeordnet. Wenn Probleme auftreten, lösen Sie den festen Code und erstellen Sie die Pipeline neu.
 
 ### Einbeziehen von /var in das Inhaltspaket
 
-`/var` ist veränderbar und enthält eine Vielzahl von transienten Laufzeitinhalten. Einschließlich `/var` in Inhaltspaketen (z. B. `ui.content`), die über Cloud Manager bereitgestellt werden, kann dazu führen, dass der Schritt &quot;Bereitstellen&quot;fehlschlägt.
+`/var` ist veränderbar und enthält eine Vielzahl von transienten Laufzeitinhalten. Einbeziehen von `/var` in Inhaltspakete (z. B. `ui.content`), die über Cloud Manager bereitgestellt werden, kann dazu führen, dass der Schritt &quot;Bereitstellen&quot;fehlschlägt.
 
 Dieses Problem lässt sich nur schwer identifizieren, da es nicht zu einem Fehler bei der ersten Bereitstellung führt, sondern nur bei nachfolgenden Bereitstellungen. Bemerkenswerte Symptome sind:
 
@@ -205,7 +205,7 @@ Dieses Problem lässt sich nur schwer identifizieren, da es nicht zu einem Fehle
 
 Das Validieren dieses Problems ist der Grund für das Fehlverhalten:
 
-1. Wenn Sie feststellen, dass mindestens ein Inhaltspaket, das Teil der Bereitstellung ist, geschrieben wird `/var`.
+1. Wenn Sie feststellen, dass mindestens ein Inhaltspaket, das Teil der Bereitstellung ist, in `/var` geschrieben wird.
 1. Stellen Sie sicher, dass die primäre Verteilungswarteschlange (fett) blockiert wird bei:
    + AEM Authoring > Werkzeuge > Bereitstellung > Distribution
       ![Blockierte Verteilungswarteschlange](./assets/build-and-deployment/deploy-to__var--distribution.png)
@@ -227,16 +227,16 @@ Das Validieren dieses Problems ist der Grund für das Fehlverhalten:
 
    Beachten Sie, dass dieses Protokoll diese Indikatoren bei den ersten Bereitstellungen, die als erfolgreich gemeldet werden, nicht enthält, sondern nur bei nachfolgenden fehlgeschlagenen Bereitstellungen.
 
-+ __Ursache:__ AEM Replizierungsdienstbenutzer, der zum Bereitstellen von Inhaltspaketen für den AEM Publish-Dienst verwendet wird, kann nicht in `/var` AEM Publish schreiben. Dadurch schlägt die Bereitstellung des Inhaltspakets für den AEM Publish-Dienst fehl.
-+ __Lösung:__ Die folgenden Methoden zur Lösung dieses Problems sind in der Reihenfolge der Voreinstellungen aufgeführt:
-   1. Wenn die `/var` Ressourcen nicht erforderlich sind, entfernen Sie alle Ressourcen aus `/var` den Inhaltspaketen, die als Teil Ihrer Anwendung bereitgestellt werden.
-   2. Wenn die `/var` Ressourcen erforderlich sind, definieren Sie die Knotenstrukturen mithilfe von [repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit). Repoinit-Skripten können über OSGi-Ausführungsmodi auf AEM Author, AEM Publish oder beide ausgerichtet werden.
-   3. Wenn die `/var` Ressourcen nur für AEM Autor erforderlich sind und nicht mit [Reminit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit)modelliert werden können, verschieben Sie sie in ein diskretes Inhaltspaket, das nur auf AEM Author installiert wird, indem Sie es in das Paket in einen AEM Author-Ordner (runmode) [einbetten](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds) , und zwar in einem AEM Author-Ordner ( `all``<target>/apps/example-packages/content/install.author</target>`).
++ __Ursache:__ AEM Replizierungsdienstbenutzer, der zum Bereitstellen von Inhaltspaketen für den AEM Publish-Dienst verwendet wird, können  `/var` in AEM Publish nicht schreiben. Dadurch schlägt die Bereitstellung des Inhaltspakets für den AEM Publish-Dienst fehl.
++ __Lösung:__ Die folgenden Möglichkeiten zur Lösung dieser Probleme werden in der Reihenfolge der Präferenz aufgeführt:
+   1. Wenn die `/var`-Ressourcen nicht erforderlich sind, entfernen Sie alle Ressourcen unter `/var` aus Inhaltspaketen, die als Teil Ihrer Anwendung bereitgestellt werden.
+   2. Wenn die `/var`-Ressourcen erforderlich sind, definieren Sie die Knotenstrukturen mit [repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit). Repoinit-Skripten können über OSGi-Ausführungsmodi auf AEM Author, AEM Publish oder beide ausgerichtet werden.
+   3. Wenn die `/var`-Ressourcen nur für AEM Autor erforderlich sind und nicht mit [repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit) nach vernünftigem Ermessen modelliert werden können, verschieben Sie sie in ein diskretes Inhaltspaket, das nur auf AEM Author installiert wird, indem Sie es [in das `all`-Paket in einem AEM Author-Ordner im Ausführungsmodus (`<target>/apps/example-packages/content/install.author</target>`) einbetten.](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds)
 
 ### Adoben-Unterstützungsfall erstellen
 
 Wenn das Problem mit den oben genannten Problembehebungsansätzen nicht gelöst werden kann, erstellen Sie bitte eine Adobe Support-Anfrage über:
 
-+ [Adobe Admin Console](https://adminconsole.adobe.com) > Support > Registerkarte > Fall erstellen
++ [Adobe Admin Console](https://adminconsole.adobe.com)  > Registerkarte &quot;Support&quot;> &quot;Fall erstellen&quot;
 
    _Wenn Sie Mitglied von mehreren Adoben Orgs sind, stellen Sie sicher, dass die Adobe Org, die fehlerhafte Pipeline hat, in der Adobe Orgs Umschalter ausgewählt ist, bevor Sie den Vorgang erstellen._
