@@ -32,7 +32,7 @@ Melden Sie sich bei AEM Forms an und navigieren Sie zu Adobe Experience Manager 
 
 Mit AEM Forms 6.4 ist es ganz einfach, Daten mit verschiedenen Diagrammtypen anzuzeigen. Wir werden ein Liniendiagramm verwenden, um die Salden nach Jahren anzuzeigen.
 
-Tippen Sie auf der rechten Seite auf die Zielgruppe **Kontostatus** und klicken Sie auf das Pluszeichen, um das Dialogfeld Komponente einfügen aufzurufen.
+Tippen Sie auf der rechten Seite auf den Bereich **Zielgruppe** und klicken Sie auf das Symbol &quot;+&quot;, um das Dialogfeld &quot;Komponente einfügen&quot;aufzurufen.
 
 Wählen Sie Diagramm, um die Diagrammkomponente einzufügen.
 
