@@ -21,17 +21,17 @@ ht-degree: 4%
 
 ## Get empID-Parameter
 
-Der nächste Schritt ist der Zugriff auf den Parameter empID aus der URL. Der Wert des Abfrageparameters empID wird dann an den **_get_** -Dienstvorgang des Formulardatenmodells weitergeleitet.
+Der nächste Schritt ist der Zugriff auf den Parameter empID aus der URL. Der Wert des Anforderungsparameters empID wird dann an den Dienstvorgang **_get_** des Formulardatenmodells übergeben.
 Für die Zwecke dieses Kurses haben wir die folgenden erstellt und bereitgestellt:
 
-* Vorlage für adaptives Formular mit dem Namen **_FDMDemo_**
-* Seitenkomponente **_fdmdemo_**
+* Adaptive Formularvorlage mit dem Namen **_FDMDemo_**
+* Seitenkomponente mit dem Namen **_fdmdemo_**
 * Einschließlich benutzerdefinierter JSP-Dateien mit der Seitenkomponente
 * Die Vorlage für das adaptive Formular wurde der Seitenkomponente zugeordnet.
 
 Auf diese Weise wird unser Code in der benutzerdefinierten JSP nur ausgeführt, wenn das adaptive Formular, das auf dieser benutzerdefinierten Vorlage basiert, wiedergegeben wird
 
-* [Paket](assets/template-page-component.zip) mit [Package Manager importieren](http://localhost:4502/crx/packmgr/index.jsp)
+* [Importieren des ](assets/template-page-component.zip) Pakets mit dem  [Paketmanager](http://localhost:4502/crx/packmgr/index.jsp)
 * [Öffnen Sie fdmrequest.jsp](http://localhost:4502/crx/de/index.jsp#/apps/fdmdemo/component/page/fdmdemo/fdmrequest.jsp)
 * Entfernen Sie die Auskommentierung der kommentierten Zeilen.
 * Speichern Sie Ihre Änderungen
