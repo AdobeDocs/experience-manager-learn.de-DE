@@ -21,7 +21,7 @@ ht-degree: 1%
 ---
 
 
-# Einführung in das Thema &quot;Asset-Freigabe&quot;-Commons {#asset-share-commons-theme}
+# Einführung in das Design in Asset-Share-Commons {#asset-share-commons-theme}
 
 Eine kurze Einführung zum Thema in Asset Share Commons. Das Video erläutert die Erstellung eines neuen Designs mit einem benutzerdefinierten Farbschema.
 
@@ -80,7 +80,7 @@ In diesem Video wird ein neues Design erstellt, das auf dem Design &quot;Asset S
 @msgWarningBackgroundColor: @yellow;
 ```
 
-Benutzerdefiniertes [Client-Bibliotheksobjekt herunterladen](assets/asc-theme-demo.zip)
+[Benutzerdefiniertes Client-Bibliotheks-Design](assets/asc-theme-demo.zip) herunterladen
 
 ## Zusätzliche Ressourcen{#additional-resources}
 
