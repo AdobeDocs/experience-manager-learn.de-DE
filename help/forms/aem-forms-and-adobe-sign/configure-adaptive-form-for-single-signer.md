@@ -24,4 +24,4 @@ In dem Video werden die verschiedenen Schritte erläutert, die zum Konfigurieren
 
 Assets, die mit diesem Video zusammenhängen, können über den folgenden Link heruntergeladen werden
 
-* [Änderung des Zuschussformulars ](assets/change-of-beneficiary-form.zip)
+* [Änderung des Zuschussformulars  ](assets/change-of-beneficiary-form.zip)
