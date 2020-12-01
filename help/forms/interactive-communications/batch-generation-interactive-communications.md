@@ -26,8 +26,8 @@ Dieser Artikel enthält Beispiel-Assets zum Generieren von interaktiven Kommunik
 
 ## Stapelgenerierung mit überwachtem Ordner
 
-* Importieren Sie die Vorlage [für](assets/Beneficiaries-confirmation.zip) interaktive Kommunikation in Ihren AEM Forms-Server.
-* Importieren Sie die [Konfiguration](assets/batch-generation-api.zip)des überwachten Ordners. Dadurch wird ein Ordner erstellt, der im Laufwerk `batchAPI` &quot;C&quot;aufgerufen wird.
+* Importieren Sie die Vorlage [Interaktive Kommunikation](assets/Beneficiaries-confirmation.zip) in Ihren AEM Forms-Server.
+* Importieren Sie die Konfiguration des überwachten Ordners [a1/>. ](assets/batch-generation-api.zip) Dadurch wird ein Ordner mit dem Namen `batchAPI` im Laufwerk C erstellt.
 
 **Wenn Sie AEM Forms unter einem Nicht-Windows-Betriebssystem ausführen, führen Sie die folgenden 3 Schritte aus:**
 
@@ -37,9 +37,9 @@ Dieser Artikel enthält Beispiel-Assets zum Generieren von interaktiven Kommunik
 
 ![path](assets/watched-folder-batch-api-basic.PNG)
 
-* Laden Sie den Inhalt der [ZIP-Datei](assets/jsonfile.zip)herunter und extrahieren Sie ihn. Die ZIP-Datei enthält den Ordner `jsonfile` , der die `beneficiaries.json` Datei enthält. Diese Datei enthält die Daten, um 3 Dokumente zu generieren.
+* Laden Sie den Inhalt der [ZIP-Datei](assets/jsonfile.zip) herunter und extrahieren Sie ihn. Die ZIP-Datei enthält den Ordner `jsonfile`, der die Datei `beneficiaries.json` enthält. Diese Datei enthält die Daten, um 3 Dokumente zu generieren.
 
-* Legen Sie den `jsonfile` Ordner im Eingabeordner des überwachten Ordners ab.
+* Legen Sie den Ordner `jsonfile` in den Eingabeordner Ihres überwachten Ordners ab.
 * Nachdem der Ordner zur Verarbeitung aufgenommen wurde, überprüfen Sie den Ergebnisordner Ihres überwachten Ordners. Es sollten 3 generierte PDF-Dateien angezeigt werden.
 
 ## Stapelgenerierung mit REST-Anforderungen
@@ -53,12 +53,13 @@ Die bereitgestellten Beispiel-Assets stellen den REST-Endpunkt zum Generieren vo
 * channelType - Print, Web oder beides
 * recordId - JSON-Pfad zu einem Element zum Festlegen des Namens einer interaktiven Kommunikation
 
-Der folgende Screenshot zeigt die Parameter und ihre Werte![-Musteranforderung](assets/generate-ic-batch-servlet.PNG)
+Der folgende Screenshot zeigt die Parameter und ihre Werte
+![Beispielanforderung](assets/generate-ic-batch-servlet.PNG)
 
 ## Beispielelemente auf dem Server bereitstellen
 
-* Importieren von [IKT-Vorlagen](assets/ICTemplate.zip) mit dem [Paketmanager](http://localhost:4502/crx/packmgr/index.jsp)
-* Importieren [des benutzerdefinierten Sendehandlers](assets/BatchAPICustomSubmit.zip) mit dem [Paketmanager](http://localhost:4502/crx/packmgr/index.jsp)
-* Adaptives [Formular](assets/BatchGenerationAPIAF.zip) über die Benutzeroberfläche von [Forms und Dokument importieren](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* Bereitstellen und Beginn von [benutzerdefiniertem OSGI-Bundle](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar) mithilfe der [Felix-Webkonsole](http://localhost:4502/system/console/bundles)
+* [ICTemplate](assets/ICTemplate.zip) mithilfe von [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) importieren
+* [Benutzerspez. Sendehandler](assets/BatchAPICustomSubmit.zip) mit [Paketmanager](http://localhost:4502/crx/packmgr/index.jsp) importieren
+* [Adaptives Formular](assets/BatchGenerationAPIAF.zip) mithilfe der [Forms- und Dokument-Schnittstelle](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) importieren
+* [Benutzerdefiniertes OSGI-Bundle](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar) mithilfe von [Felix-Webkonsole ](http://localhost:4502/system/console/bundles) bereitstellen und Beginn
 * [Batchgenerierung durch Senden des Formulars auslösen](http://localhost:4502/content/dam/formsanddocuments/batchgenerationapi/jcr:content?wcmmode=disabled)
