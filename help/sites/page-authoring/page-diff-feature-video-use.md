@@ -21,7 +21,7 @@ ht-degree: 1%
 ---
 
 
-# Verwenden der Funktion &quot;Seitendifferenz&quot; {#using-page-difference-with-aem-sites}
+# Verwenden der Seitendifferenz-Funktion {#using-page-difference-with-aem-sites}
 
 Die Seitenunterschiede-Funktion von AEM-Sites bietet eine schnelle, farbkodierte Ansicht der Inhaltsänderungen auf einer Seite (Version, Live Copy, Launches, Sprachkopie).
 
