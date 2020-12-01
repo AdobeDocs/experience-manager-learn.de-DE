@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Einführung in [!DNL OSGi] {#introduction-osgi}
 
-Eine Einführung in [!DNL OSGi]eine dynamische, modulare Architektur für [!DNL Java] Anwendungen, die die Grundlage für Adobe Experience Manager ist.
+Eine Einführung in [!DNL OSGi], eine dynamische, modulare Architektur für [!DNL Java] Anwendungen, die die Grundlage für Adobe Experience Manager bildet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32031/?quality=12&learn=on)
