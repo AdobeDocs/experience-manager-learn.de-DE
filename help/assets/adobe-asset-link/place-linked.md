@@ -18,7 +18,7 @@ ht-degree: 2%
 ---
 
 
-# Verknüpfte Platzierung{#place-linked}
+# Platzieren Sie verknüpft{#place-linked}
 
 Erfahren Sie, wie Sie Assets aus AEM Assets mit dem Vorgang &quot;Verknüpfen platzieren&quot;verwenden.
 
