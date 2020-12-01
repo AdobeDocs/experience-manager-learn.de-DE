@@ -19,7 +19,7 @@ ht-degree: 1%
 ---
 
 
-# Verwenden von Panorama- und Vertikal-Bild-Viewern mit dynamischen AEM Assets-Medien{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
+# Verwenden von Panorama- und Vertikal-Bild-Viewer mit AEM Assets Dynamic Media{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
 
 Zu den Verbesserungen des dynamischen Media Viewers in AEM 6.4 zählen der Panorama-Bild-Viewer, der Panorama-Viewer für die virtuelle Realität und der vertikale Bild-Viewer. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein eindrucksvolles Erlebnis im Raum, der Immobilie, der Lage oder der Landschaft ohne eigene Entwicklung zu bieten.
 
@@ -27,7 +27,7 @@ Zu den Verbesserungen des dynamischen Media Viewers in AEM 6.4 zählen der Panor
 
 >[!NOTE]
 >
->Video geht davon aus, dass Ihre AEM-Instanz im Modus &quot;Dynamische Medien - S7&quot;ausgeführt wird. [Anweisungen zum Einrichten von AEM mit dynamischen Medien finden Sie hier.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>Video geht davon aus, dass Ihre AEM-Instanz im Modus Dynamische Medien S7 ausgeführt wird. [Anweisungen zum Einrichten von AEM mit dynamischen Medien finden Sie hier.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## Panoramaanzeige und Panoramaanzeige
 
@@ -56,7 +56,7 @@ Bei horizontalen Farbfeldern sind die Farbfelder je nach Desktop-Bildschirmgrö�
    <td>DMS7 und dynamische Medien</td>
   </tr>
   <tr>
-   <td>Nutzungsszenario      </td>
+   <td>Nutzungsszenario </td>
    <td><p>Panoramabilder und der Viewer für die virtuelle Realität bieten Benutzern ein ansprechenderes Erlebnis. Ein Benutzer kann ein Hotelzimmer auschecken, bevor er eine Buchung vornimmt, oder eine Mietwohnung auschecken, ohne einen Termin planen zu müssen. Ein Benutzer kann einen Ort und viele weitere Möglichkeiten auschecken. Der Hauptschwerpunkt liegt hier darin, dem Verbraucher beim Besuch Ihrer Website ein besseres Erlebnis zu bieten und schließlich Ihren Konversionsrate zu erhöhen.</p> <p> </p> </td> 
    <td><p>Der vertikale Bild-Viewer unterstützt Sie bei der Maximierung des Ansichtserlebnisses von Produktbildern, um den Verbrauchern die bestmögliche Darstellung des Produkts zu geben, wodurch Konversionen gefördert und die Renditen minimiert werden.</p> <p> </p> </td>
   </tr>
