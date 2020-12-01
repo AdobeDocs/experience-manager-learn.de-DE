@@ -203,5 +203,5 @@ public class MarketoConfigurationService {
 ```
 
 1. Erstellen Sie das Bundle und stellen Sie es auf Ihrem AEM Server bereit.
-1. [Verweisen Sie Ihren Browser auf configMgr](http://localhost:4502/system/console/configMgr) und suchen Sie nach &quot;Konfiguration des Marketing-Anmeldeinformationsdienstes&quot;
+1. [Verweisen Sie Ihren Browser auf die ](http://localhost:4502/system/console/configMgr) configMgrand-Suche nach &quot;Konfiguration des Marketing-Anmeldeinformationsdienstes&quot;.
 1. Geben Sie die entsprechenden Eigenschaften für Ihre Marketing-Instanz an
