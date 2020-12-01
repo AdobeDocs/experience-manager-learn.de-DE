@@ -39,7 +39,7 @@ In diesem Teil werden wir interaktive Kommunikation für Web Kanal erstellen.
 
    1. Deaktivieren Sie das Kontrollkästchen Kanal drucken. Wir erstellen kein Dokument für den Kanal.
    1. Web: Wählen Sie diese Option, um das Dokument für den Web-Kanal zu erstellen
-   1. Interaktive Kommunikation: Vorlage: **global>** RetirementAccountStatement(Dies ist die Vorlage, die im vorherigen Schritt erstellt wurde)
+   1. Interaktive Kommunikation: Vorlage: **global>RetirementAccountStatemen** t(Dies ist die Vorlage, die im vorherigen Schritt erstellt wurde)
    1. Design:** Referenzthema ->Arbeitsfläche 2.0**
 
 1. Tippen Sie auf Erstellen
