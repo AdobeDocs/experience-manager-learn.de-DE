@@ -6,10 +6,10 @@ user-guide-description: Sammlung von AEM Forms-Ressourcen für Anfänger und erf
 breadcrumb-title: AEM Forms-Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 787a79663472711b78d467977d633e3d410803e5
+source-git-commit: c0db84f25334106c798d555c754d550113e91eac
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -40,6 +40,7 @@ ht-degree: 6%
    + [Benachrichtigung zur Zuweisung von Aufgaben anpassen](handling-form-submissions/customize-assign-task-notification.md)
 + Nützliche Integrationen{#some-useful-integrations}
    + [Zweifaktorauthentifizierung](some-useful-integrations/two-factor-authentication.md)
+   + [OCR Data Extraktion](some-useful-integrations/ocr-data-extraction.md)
 
 + Adaptive Formulare {#adaptive-forms}
    + [Installieren von AEM Forms unter Windows](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
