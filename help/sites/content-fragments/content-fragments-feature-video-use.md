@@ -7,12 +7,12 @@ topics: authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
+version: cloud-service
 translation-type: tm+mt
-source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
+source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 10%
+source-wordcount: '374'
+ht-degree: 11%
 
 ---
 
@@ -20,11 +20,6 @@ ht-degree: 10%
 # Authoring von Inhaltsfragmenten {#authoring-content-fragments}
 
 Inhaltsfragmente sind eine Inhaltsabstraktion in AEM, mit der textbasierte Inhalte unabhängig von den unterstützten Kanälen erstellt und verwaltet werden können.
-
->[!NOTE]
->
->Die in diesen Videos behandelte AEM Content Fragment-Funktion wurde erstmals in [AEM 6.3 + FP 19008 und FP19614](https://helpx.adobe.com/experience-manager/6-3/release-notes/content-services-fragments-featurepack.html) eingeführt.
-
 
 AEM Inhaltsfragmente sind textbasierte redaktionelle Inhalte, die mit einigen strukturierten Datenelementen verknüpft sein können, die jedoch ohne Design- oder Layoutinformationen als reiner Inhalt betrachtet werden. Inhaltsfragmente werden in der Regel als Kanal-agnostischer Inhalt erstellt, der für die Verwendung und Wiederverwendung über Kanal hinweg vorgesehen ist, wodurch der Inhalt wiederum in ein kontextspezifisches Erlebnis eingeschlossen wird.
 
