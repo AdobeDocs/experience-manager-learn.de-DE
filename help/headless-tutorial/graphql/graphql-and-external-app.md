@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: null
 thumbnail: null
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 64d88ef98ec1fe3e2dbe727fc59b350bb0a2134b
 workflow-type: tm+mt
-source-wordcount: '1441'
+source-wordcount: '1418'
 ht-degree: 1%
 
 ---
@@ -208,40 +208,40 @@ Das Starten der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlich
 1. Öffnen Sie in Ihrer IDE die Datei: `src/components/Adventures.js`. Diese Datei stellt die Abenteuerkomponente des Home Experience dar, die für die Abenteuer-Karten Abfrage wird und die diese anzeigt.
 1. Inspect die Funktion `filterQuery(activity)`, die nicht verwendet wird, aber vorbereitet wurde, um eine GraphQL-Abfrage zu formulieren, dass Filter Abenteuer von `activity`.
 
-Beachten Sie, dass der Parameter `activity` im Feld `adventureActivity` als Teil eines Felds `filter` in die GraphQL-Abfrage eingefügt wird. Der Feldwert muss mit dem Parameterwert übereinstimmen.
+   Beachten Sie, dass der Parameter `activity` im Feld `adventureActivity` als Teil eines Felds `filter` in die GraphQL-Abfrage eingefügt wird. Der Feldwert muss mit dem Parameterwert übereinstimmen.
 
-    &quot;
-    javascriptfunction filterQuery(Aktivität) {
-    return `
-    {
-    adventures (filter: {
-    adventureActivity: {
-    _Ausdruck: [
-    {
-    Wert: &quot;${Aktivität}&quot;
-    }
-    ]
-    }
-    ){
-    items {
-    _
-    
-    
-    
-    pathadventureTitleadventurePriceadventureTripLengthadventurePrimaryImage {
-    .. auf ImageRef {
-    _
-    
-    
-    pathmimeTypeWidthheight
-    }
-    }
-    }
-    }
-    `;
-    }
-     
-    &quot;
+   ```javascript
+   function filterQuery(activity) {
+       return `
+           {
+           adventures (filter: {
+               adventureActivity: {
+               _expressions: [
+                   {
+                   value: "${activity}"
+                   }
+                 ]
+               }
+           }){
+               items {
+               _path
+               adventureTitle
+               adventurePrice
+               adventureTripLength
+               adventurePrimaryImage {
+               ... on ImageRef {
+                   _path
+                   mimeType
+                   width
+                   height
+               }
+               }
+             }
+         }
+       }
+       `;
+   }
+   ```
 
 1. Aktualisieren Sie die `return`-Anweisung der Komponente &quot;React Adventures&quot;, um Schaltflächen hinzuzufügen, die die neue parametrisierte `filterQuery(activity)` aufrufen, um die Abenteuer der Liste bereitzustellen.
 
@@ -266,7 +266,7 @@ Beachten Sie, dass der Parameter `activity` im Feld `adventureActivity` als Teil
    }
    ```
 
-1. Speichern Sie die Änderungen und laden Sie die React-App erneut im Webbrowser. Die drei neuen Schaltflächen werden oben angezeigt und durch Klicken auf diese Schaltflächen werden automatisch die Abfragen für Inhaltsfragmente von Adventure mit der entsprechenden Aktivität neu AEM.
+1. Speichern Sie die Änderungen und laden Sie die React-App erneut im Webbrowser. Die drei neuen Schaltflächen werden oben angezeigt und durch Klicken auf diese Schaltflächen werden automatisch die Abfragen für die Inhaltsfragmente von Adventure mit der entsprechenden Aktivität neu AEM.
 
    ![Abenteuer nach Aktivität filtern](./assets/graphql-and-external-app/filter-by-activity.png)
 
