@@ -8,10 +8,10 @@ doc-type: tutorial
 activity: develop
 audience: developer
 mini-toc-levels: 1
-kt: null
-thumbnail: null
+kt: 6716
+thumbnail: KT-6716.jpg
 translation-type: tm+mt
-source-git-commit: 64d88ef98ec1fe3e2dbe727fc59b350bb0a2134b
+source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 1%
@@ -266,7 +266,7 @@ Das Starten der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlich
    }
    ```
 
-1. Speichern Sie die Änderungen und laden Sie die React-App erneut im Webbrowser. Die drei neuen Schaltflächen werden oben angezeigt und durch Klicken auf diese Schaltflächen werden automatisch die Abfragen für die Inhaltsfragmente von Adventure mit der entsprechenden Aktivität neu AEM.
+1. Speichern Sie die Änderungen und laden Sie die React-App erneut im Webbrowser. Die drei neuen Schaltflächen werden oben angezeigt und durch Klicken auf diese Schaltflächen werden automatisch die Abfragen für Inhaltsfragmente von Adventure mit der entsprechenden Aktivität neu AEM.
 
    ![Abenteuer nach Aktivität filtern](./assets/graphql-and-external-app/filter-by-activity.png)
 
