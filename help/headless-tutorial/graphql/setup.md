@@ -8,12 +8,12 @@ doc-type: tutorial
 activity: develop
 audience: developer
 mini-toc-levels: 1
-kt: null
-thumbnail: null
+kt: 6386
+thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: 2e0352b051bf25a491b67468a76522084e53a71f
+source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
 workflow-type: tm+mt
-source-wordcount: '1553'
+source-wordcount: '1590'
 ht-degree: 2%
 
 ---
@@ -67,6 +67,10 @@ Dieses Lernprogramm verwendet die AEM [als Cloud Service-SDK](https://experience
 1. Geben Sie ein Administratorkennwort als `admin` ein. Jedes Admin-Kennwort ist zulässig. Es wird jedoch empfohlen, den Standard für die lokale Entwicklung zu verwenden, um eine Neukonfiguration zu vermeiden.
 1. Nach einigen Minuten wird die Installation der AEM beendet und ein neues Browserfenster sollte unter [http://localhost:4502](http://localhost:4502) geöffnet werden.
 1. Melden Sie sich mit dem Benutzernamen `admin` und dem Kennwort `admin` an.
+
+>[!CAUTION]
+>
+> Um das Setup fortzusetzen, muss die GraphQL-Funktion jetzt manuell im Quickstart-SDK aktiviert werden. Für weitere Informationen wenden Sie sich bitte an Ihre Adobe. Dieser manuelle Schritt ist nur erforderlich, bis die Funktion im Jahr 2021 veröffentlicht wird.
 
 ## Beispielinhalt{#wknd-site} installieren
 
