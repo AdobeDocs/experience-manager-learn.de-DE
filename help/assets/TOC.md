@@ -5,9 +5,9 @@ breadcrumb-title: AEM Assets-Tutorials
 sub-product: Assets
 team: TM
 translation-type: tm+mt
-source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
+source-git-commit: aa349fba9e0f1df97316105ada62ff9b32501573
 workflow-type: tm+mt
-source-wordcount: '253'
+source-wordcount: '257'
 ht-degree: 36%
 
 ---
@@ -64,7 +64,7 @@ ht-degree: 36%
    + [Assets herunterladen](./sharing/download.md)
    + [Brand Portal](./sharing/brand-portal.md)
    + Asset-Freigabe{#assets-share}
-      + [Asset-Freigabe - Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
+      + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [Asset-Freigabe-Commons auf lokalen AEM einrichten](./sharing/asset-share-commons-technical-video-setup.md)
       + [Designing Asset Share Commons](./sharing/asset-share-commons-feature-video-theming.md)
    + [Connected Assets](./sharing/connected-assets.md)
@@ -87,7 +87,7 @@ ht-degree: 36%
    + [Asset-Suche](./adobe-asset-link/asset-search.md)
 
 + Dynamic Media{#dynamic-media}
-   + [Übersicht über dynamische Medien](dynamic-media/dynamic-media-overview-feature-video-use.md)
+   + [Dynamic Media-Übersicht](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Smartes Zuschneiden](dynamic-media/smart-crop-feature-video-use.md)
    + [Experience Fragments](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
    + [Interaktives Video](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
@@ -101,7 +101,8 @@ ht-degree: 36%
    + [Viewer mit Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
    + [Dynamic Media Classic Desktop-Anwendung](dynamic-media/dynamic-media-classic-desktop-application.md)
    + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + [Video zum Zuschneiden von dynamischen Medien](dynamic-media/dynamic-media-smart-crop-video.md)
+   + [Dynamic Media Smart Crop-Video](dynamic-media/dynamic-media-smart-crop-video.md)
+   + [Dynamic Media Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
 
 + Übersetzung {#translation}
    + [Quelldateiübersetzung](translation/source-file-translation-feature-video-use.md)
