@@ -4,10 +4,10 @@ user-guide-description: Eine Sammlung von Videos und Tutorials für Adobe Experi
 breadcrumb-title: AEM Sites-Tutorials
 sub-product: Sites
 translation-type: tm+mt
-source-git-commit: 16c73d19584eefff3c9551d2a3174b5b8ed6d427
+source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
-source-wordcount: '441'
-ht-degree: 26%
+source-wordcount: '447'
+ht-degree: 35%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 26%
    + [Site-Struktur ](page-authoring/content-hierarchy-feature-video-use.md)
    + [Seitenerstellung](page-authoring/creating-page-feature-video-use.md)
    + [Bearbeiten von Seiten](page-authoring/page-authoring-overview-feature-video-use.md)
-   + [Seiten-Editor](page-authoring/page-editor-feature-video-use.md)
+   + [Seiteneditor](page-authoring/page-editor-feature-video-use.md)
    + [Seiten-Tagging](page-authoring/page-tagging-feature-video-use.md)
    + [Seitenversionen](page-authoring/page-versioning-feature-video-use.md)
    + [Vergleich von Seitenversionen](page-authoring/page-diff-feature-video-use.md)
@@ -48,10 +48,10 @@ ht-degree: 26%
    + [Inhaltsfragmente und Erlebnisfragmente](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + Entwickeln {#developing}
    + [AEM-Projektarchetyp](developing/aem-project-archetype.md)
-   + [Erste Schritte mit AEM Sites](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+   + [Erste Schritte mit AEM Sites](https://docs.adobe.com/content/help/de/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [Erste Schritte mit AEM Headless](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/getting-started-with-aem-headless/overview.html)
-   + [Erste Schritte mit AEM SPA Editor und React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [Erste Schritte mit AEM SPA Editor und Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [Erste Schritte mit AEM SPA Editor und React](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-react-tutorial/overview.html)
+   + [Erste Schritte mit AEM SPA Editor und Angular](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [Erweitern von Seiteneigenschaften](developing/page-properties-technical-video-develop.md)
    + [Entwickeln mit dem Stilsystem](developing/style-system-technical-video-understand.md)
    + [Best Practices für Stilsysteme](developing/style-organization-style-system-understand-article.md)
@@ -98,6 +98,7 @@ ht-degree: 26%
       + [Debuggen einer Implementierung starten](integrations/experience-platform-launch/debug-launch-implementation.md)
    + Adobe Client-Datenschicht {#adobe-client-data-layer}
       + [Verwenden der Adobe Client-Datenschicht](integrations/adobe-client-data-layer/data-layer-overview.md)
+      + [Anpassen der Adobe Client-Datenschicht](integrations/adobe-client-data-layer/data-layer-customize.md)
    + Analyse {#analytics}
       + [Seitendaten mit Adobe Analytics erfassen](integrations/analytics/collect-data-analytics.md)
       + [Klickende Komponente mit Adobe Analytics verfolgen](integrations/analytics/track-clicked-component.md)
