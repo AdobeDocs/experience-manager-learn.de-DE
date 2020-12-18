@@ -5,35 +5,27 @@ description: 'Eine Sammlung von Videos und Tutorials für Adobe Experience Manag
 seo-description: Eine Sammlung von Videos und Tutorials für Adobe Experience Manager Sites
 sub-product: Sites, Content-Services
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 26%
+source-wordcount: '337'
+ht-degree: 35%
 
 ---
 
 
-# Überblick{#overview}
+# Überblick {#overview}
 
 Adobe Experience Manager (AEM) Sites ist eine führende Plattform für Erlebnismanagement. Dieses Benutzerhandbuch enthält Videos und Tutorials zu den zahlreichen Funktionen und Funktionen von AEM Sites.
 
 ## Neue Funktionen
 
-* **[Erste Schritte mit AEMSPA Editor und React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)  (Tutorial)**
+* **[Anpassen der Adobe Client-Datenschicht mit AEM](./integrations/adobe-client-data-layer/data-layer-customize.md)**
 
-   *Erste Schritte für Entwickler zur Integration von Einzelseitenanwendungen (SPA) mit AEM mithilfe von React*
+   *Erfahren Sie, wie Sie die Adobe Client-Datenschicht mit Inhalten aus benutzerdefinierten AEM aktualisieren.*
 
-* **[Erste Schritte mit AEM SPA Editor und Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)  (Tutorial)**
+* **[Erste Schritte mit AEMHeadless GraphQL (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
-   *Erste Schritte für Entwickler zur Integration von Einzelseitenanwendungen (SPA) mit AEM mithilfe von Angular*
-
-* **[Erste Schritte mit AEM ohne Kopf (Tutorial)](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html)**
-
-   *Wie Sie Inhalte aus AEM für die Verwendung durch eine native mobile App bereitstellen, in einem kopflosen CMS-Szenario.*
-
-* **[Verwenden von Erlebnisfragmenten (Videoreihen)](./experience-fragments/experience-fragments-feature-video-use.md)**
-
-   *Erfahren Sie mehr über AEM Erlebnisfragmente zur Förderung von Inhalten über Kanal hinweg.*
+   *Wie Sie mithilfe von AEM GraphQL-APIs Inhalte aus AEM bereitstellen, die von einer nativen mobilen App genutzt werden können.*
 
 * **[Verwenden von Inhaltsfragmenten (Videoreihen)](./content-fragments/content-fragments-feature-video-use.md)**
 
@@ -48,7 +40,7 @@ Adobe Experience Manager (AEM) Sites ist eine führende Plattform für Erlebnism
 <table>
 <tr>
   <td>
-    <a href="https://docs.adobe.com/content/help/de-DE/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
+    <a href="https://docs.adobe.com/content/help/de/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
       <img alt="Erste Schritte mit AEM Sites - WKND-Tutorial" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
@@ -61,7 +53,7 @@ Adobe Experience Manager (AEM) Sites ist eine führende Plattform für Erlebnism
     <p>
   </td>
   <td>
-    <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-with-aem-headless/overview.html">
+    <a href="https://docs.adobe.com/content/help/de-DE/experience-manager-learn/getting-started-with-aem-headless/overview.html">
     <img alt="Erste Schritte mit AEM Headless" src="./assets/aem-headless-tutorial.png" />
     </a>
     <div>
@@ -74,7 +66,7 @@ Adobe Experience Manager (AEM) Sites ist eine führende Plattform für Erlebnism
     </p>
   </td>
   <td>
-    <a href="https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html">
+    <a href="https://docs.adobe.com/content/help/de/experience-manager-learn/spa-react-tutorial/overview.html">
       <img alt="Erste Schritte mit AEM SPA Editor" src="./assets/aem-wknd-spa-editor-tutorial.png" />
     </a>
      <div>
