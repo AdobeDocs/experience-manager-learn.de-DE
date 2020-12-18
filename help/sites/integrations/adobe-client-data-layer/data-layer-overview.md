@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6261
 thumbnail: 41195.jpg
 translation-type: tm+mt
-source-git-commit: e13a5171fbeb9e1eb5f78d1c691bc8b4b896a998
+source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '788'
 ht-degree: 8%
 
 ---
@@ -174,6 +174,8 @@ Es empfiehlt sich, benutzerspezifischen Code auf der Grundlage eines Ereignisses
 ## Nächste Schritte
 
 Sehen Sie sich das folgende Lernprogramm an, um zu erfahren, wie Sie die Ereignis-basierte Adobe Client Data-Ebene verwenden, um [Seitendaten zu erfassen und an Adobe Analytics](../analytics/collect-data-analytics.md) zu senden.
+
+Oder lernen Sie [Anpassen der Adobe-Client-Datenschicht mit AEM Komponenten](./data-layer-customize.md)
 
 
 ## Zusätzliche Ressourcen {#additional-resources}
