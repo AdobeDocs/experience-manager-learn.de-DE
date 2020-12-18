@@ -4,21 +4,29 @@ description: Eine Reihe von Tutorials für Adobe Experience Manager (AEM) als Cl
 sub-product: Sites, Cloud-Manager, Stiftung, Assets
 kt: 3289
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: 322f618469126656dc735263abd55548eb0a3cbf
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '265'
 ht-degree: 11%
 
 ---
 
 
-# Überblick{#overview}
+# Überblick {#overview}
 
 Adobe Experience Manager (AEM) ist nun as a Cloud Service verfügbar. AEM als Cloud Service führt die nächste Generation der Produktlinie des Experience Managers ein und baut dabei auf bisherigen Investitionen und Innovationen auf, bewahrt und erweitert alle Anwendungsfälle und Funktionalitäten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
 
 ## Neue Funktionen
+
+* **[Massenimport (Video)](./migration/bulk-import.md)**
+
+   *Erfahren Sie, wie Sie Assets in AEM aus der Azurblase-Datenspeicherung oder Amazon S3 stapeln können*
+
+* **[asset compute-Metadaten-Mitarbeiter (Tutorial)](./asset-compute/advanced/metadata.md)**
+
+   *Erfahren Sie, wie Sie Asset-Metadaten von einem Asset compute-Mitarbeiter zurück in AEM schreiben können*
 
 * **[asset compute microservices extensibility (Tutorial)](./asset-compute/overview.md)**
 
@@ -31,14 +39,6 @@ Adobe Experience Manager (AEM) ist nun as a Cloud Service verfügbar. AEM als Cl
 * **[Debugging von AEM als Cloud Service (Tutorial)](./debugging/cloud-service/overview.md)**
 
    *Debugging von AEM als Cloud Service*
-
-* **[Debugging AEM SDK (Tutorial)](./debugging/aem-sdk-local-quickstart/overview.md)**
-
-   *Lernen Sie die verschiedenen Tools kennen, mit denen Sie Ihre Anwendung auf dem AEM als lokaler Schnellstart des Cloud Service-SDK debuggen können.*
-
-* **[Einrichtung einer Umgebung für lokale Entwicklung (Tutorial)](./local-development-environment/overview.md)**
-
-   *Erfahren Sie, wie Sie Ihren lokalen Entwicklungscomputer für AEM als Cloud Service einrichten.*
 
 ## Personalauswahl
 
