@@ -6,7 +6,7 @@ user-guide-description: Sammlung von AEM Forms-Ressourcen für Anfänger und erf
 breadcrumb-title: AEM Forms-Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: c0db84f25334106c798d555c754d550113e91eac
+source-git-commit: 243e26e2403e3d7816a0dd024ffbe73743827c7c
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -34,7 +34,7 @@ ht-degree: 0%
    + [Konfigurieren des adaptiven Formulars zum Auslösen des Workflows](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [Danksagungsseite anzeigen](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
    + [An externen Endpunkt senden](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
-   + [E-Mail senden](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
+   + [Senden von E-Mails](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
    + [Arbeitsablauf für gebührenpflichtige Zeitüberschreitung bei Anforderung](handling-form-submissions/paid-time-off-request-workflow.md)
    + [Konfigurieren des adaptiven Formulars zum Auslösen AEM Arbeitsablaufs - Video](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
    + [Benachrichtigung zur Zuweisung von Aufgaben anpassen](handling-form-submissions/customize-assign-task-notification.md)
@@ -182,6 +182,7 @@ ht-degree: 0%
    + [Verwendungsrechte auf hochgeladene PDF-Dateien anwenden](document-services/apply-reader-extension-rights-to-pdf.md)
    + [Dokumente zertifizieren](document-services/certifying-documents-aem-forms-tutorial.md)
    + [Zusammenstellen von Formularanlagen](document-services/assemble-form-attachments.md)
+   + [Nützliche Dienstprogrammdienste](document-services/useful-utility-services.md)
 + Interaktive Kommunikation mit Print Kanal
 {#ic-print-channel-tutorial}
    + [Einführung](ic-print-channel-tutorial/introduction.md)
