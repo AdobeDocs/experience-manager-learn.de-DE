@@ -10,9 +10,9 @@ version: cloud-service
 kt: 6265
 thumbnail: KT-6265.jpg
 translation-type: tm+mt
-source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
+source-git-commit: 46936876de355de9923f7a755aa6915a13cca354
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2027'
 ht-degree: 4%
 
 ---
@@ -38,9 +38,9 @@ In diesem Lernprogramm werden Sie verschiedene Optionen zum Erweitern der Adobe 
 
 Eine **lokale Entwicklungs-Umgebung** ist erforderlich, um dieses Lernprogramm abzuschließen. Screenshots und Videos werden mit dem AEM als Cloud Service-SDK erfasst, das auf einem macOS ausgeführt wird. Befehle und Code sind unabhängig vom lokalen Betriebssystem, sofern nicht anders angegeben.
 
-**Neu bei AEM as a Cloud Service?** Sehen Sie sich das  [folgende Handbuch an, um eine lokale Entwicklungs-Umgebung mit dem AEM als Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) einzurichten.
+**Neu bei AEM as a Cloud Service?** Sehen Sie sich das  [folgende Handbuch an, um eine lokale Entwicklungs-Umgebung mit dem AEM als Cloud Service-SDK](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) einzurichten.
 
-**Neu zu AEM 6.5?** Sehen Sie sich das  [folgende Handbuch an, um eine lokale Entwicklungs-Umgebung](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html) einzurichten.
+**Neu zu AEM 6.5?** Sehen Sie sich das  [folgende Handbuch an, um eine lokale Entwicklungs-Umgebung](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html) einzurichten.
 
 ## Herunterladen und Bereitstellen der WKND-Referenz-Website {#set-up-wknd-site}
 
@@ -112,6 +112,8 @@ Um Daten über die Komponente in die Datenschicht einzufügen, müssen wir zunä
 1. hinzufügen die folgenden Importanweisungen am Anfang der Datei:
 
    ```java
+   import java.util.HashMap;
+   import java.util.Map;
    import org.apache.sling.api.resource.Resource;
    import com.fasterxml.jackson.core.JsonProcessingException;
    import com.fasterxml.jackson.databind.ObjectMapper;
@@ -163,17 +165,6 @@ Um Daten über die Komponente in die Datenschicht einzufügen, müssen wir zunä
 
    `ObjectMapper` wird verwendet, um die Eigenschaften zu serialisieren und eine JSON-Zeichenfolge zurückzugeben. Diese JSON-Zeichenfolge kann dann in die Datenschicht eingefügt werden.
 
-1. Öffnen Sie die Datei `package-info.java` bei `core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java` und aktualisieren Sie die Version von `1.0` auf `2.0`:
-
-   ```java
-   @Version("2.0")
-   package com.adobe.aem.guides.wknd.core.models;
-   
-   import org.osgi.annotation.versioning.Version;
-   ```
-
-   Da die Schnittstelle `Byline.java` geändert wurde, muss die Java-Paketversion aktualisiert werden.
-
 1. Öffnen Sie ein Terminal-Fenster. Erstellen und implementieren Sie nur das `core`-Modul mit Ihren Maven-Fähigkeiten:
 
    ```shell
@@ -194,13 +185,11 @@ Für jede AEM Komponente wird ein spezielles Datenattribut `data-cmp-data-layer`
 
 1. Aktualisieren Sie `byline.html`, um das `data-cmp-data-layer`-Attribut einzuschließen:
 
-   ```html
-    <div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline"
+   ```diff
+     <div data-sly-use.byline="com.adobe.aem.guides.wknd.core.models.Byline"
        data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
        data-sly-test.hasContent="${!byline.empty}"
-       <!--/* Add the data-cmp-data-layer */-->
-       data-cmp-data-layer="${byline.data}"
-   
+   +   data-cmp-data-layer="${byline.data}"
        class="cmp-byline">
        ...
    ```
@@ -256,8 +245,11 @@ Klickbare Elemente sind in der Regel eine CTA-Schaltfläche oder ein Navigations
 
 1. Aktualisieren Sie `byline.html`, um das `data-cmp-clickable`-Attribut im **name**-Element der Autorenzeile einzuschließen:
 
-   ```html
-   <h2 class="cmp-byline__name" data-cmp-clickable>${byline.name}</h2>
+   ```diff
+     <h2 class="cmp-byline__name" 
+   +    data-cmp-clickable="${byline.data ? true : false}">
+        ${byline.name}
+     </h2>
    ```
 
 1. Öffnen Sie ein neues Terminal. Erstellen und implementieren Sie nur das `ui.apps`-Modul mit Ihren Maven-Fähigkeiten:
@@ -289,7 +281,7 @@ Klickbare Elemente sind in der Regel eine CTA-Schaltfläche oder ein Navigations
 
    ```javascript
    window.adobeDataLayer.push(function (dl) {
-        dl.addEventListener("cmp:show", bylineClickHandler);
+        dl.addEventListener("cmp:click", bylineClickHandler);
    });
    ```
 
@@ -419,6 +411,13 @@ Eine Dienstprogrammklasse, `DataLayerBuilder`, existiert, um die meisten Schwers
    ```
 
    Beachten Sie, dass es nun ein `image`-Objekt innerhalb des `byline`-Komponenteneintrags gibt. Das enthält viele weitere Informationen zum Asset im DAM. Beachten Sie auch, dass die Werte `@type` und die eindeutige ID (in diesem Fall `byline-136073cfcb`) automatisch ausgefüllt wurden, sowie die Zeichen `repo:modifyDate`, die angeben, wann die Komponente geändert wurde.
+
+## Weitere Beispiele {#additional-examples}
+
+1. Ein weiteres Beispiel zum Erweitern der Datenschicht kann durch Prüfen der Komponente `ImageList` in der WKND-Codebasis angezeigt werden:
+   * `ImageList.java` - Java-Schnittstelle im  `core` Modul.
+   * `ImageListImpl.java` - Sling-Modell im  `core` Modul.
+   * `image-list.html` - HTML-Vorlage im  `ui.apps` Modul.
 
    >[!NOTE]
    >
