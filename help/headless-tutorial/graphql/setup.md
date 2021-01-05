@@ -33,7 +33,7 @@ Dieses Kapitel Angebot eine schnelle Einrichtung einer lokalen Umgebung, um zu s
 Die folgenden Tools sollten lokal installiert werden:
 
 * [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fdc jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=Liste&amp;p.offset=0&amp;p.limit=14)
-* [Node.js v10+](https://nodejs.org/de/)
+* [Node.js v10+](https://nodejs.org/en/)
 * [npm 6+](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
 
