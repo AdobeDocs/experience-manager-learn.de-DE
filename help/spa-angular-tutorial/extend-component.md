@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
 workflow-type: tm+mt
 source-wordcount: '1984'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -29,15 +29,15 @@ Erfahren Sie, wie Sie eine bestehende Core-Komponente erweitern, um sie mit dem 
 2. Verstehen Sie die Grundlagen der Komponentenvererbung mit der Verwendung von `sling:resourceSuperType`.
 3. Erfahren Sie, wie Sie das [Delegationsmuster](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) für Sling-Modelle nutzen können, um vorhandene Logik und Funktionalität wiederzuverwenden.
 
-## Was Sie erstellen
+## Was Sie erstellen werden
 
-In diesem Kapitel wird eine neue Komponente `Card` erstellt. Die Komponente `Card` erweitert die [Image-Core-Komponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/image.html) um zusätzliche Inhaltsfelder wie Titel und Aktionsaufruf, um die Rolle eines Teasers für andere Inhalte innerhalb der SPA auszuführen.
+In diesem Kapitel wird eine neue Komponente `Card` erstellt. Die Komponente `Card` erweitert die [Image-Core-Komponente](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/image.html) um zusätzliche Inhaltsfelder wie Titel und Aktionsaufruf, um die Rolle eines Teasers für andere Inhalte innerhalb der SPA auszuführen.
 
 ![Endgültiges Authoring der Kartenkomponente](assets/extend-component/final-authoring-card.png)
 
 >[!NOTE]
 >
-> In einer realen Implementierung ist es möglicherweise angemessener, einfach die [Teaser-Komponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/teaser.html) zu verwenden und dann die [Image-Core-Komponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) zu erweitern, um je nach Projektanforderungen eine `Card`-Komponente zu erstellen. Es wird immer empfohlen, [Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html) nach Möglichkeit direkt zu verwenden.
+> In einer realen Implementierung ist es möglicherweise angemessener, einfach die [Teaser-Komponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/teaser.html) zu verwenden und dann die [Image-Core-Komponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) zu erweitern, um je nach Projektanforderungen eine `Card`-Komponente zu erstellen. Es wird immer empfohlen, [Kernkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html) nach Möglichkeit direkt zu verwenden.
 
 ## Voraussetzungen
 
@@ -91,7 +91,7 @@ Eine anfängliche Kartenkomponente wurde vom Kapitelstartercode bereitgestellt. 
 
    Die Eigenschaft `sling:resourceSuperType` verweist auf `wknd-spa-angular/components/image`, um anzugeben, dass die `Card`-Komponente alle Funktionen der WKND-SPA Image-Komponente übernimmt.
 
-3. Inspect Sie die Datei `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image/.content.xml`:
+3. Prüfen Sie die Datei `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image/.content.xml`:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -131,7 +131,7 @@ Eine anfängliche Kartenkomponente wurde vom Kapitelstartercode bereitgestellt. 
 
    ![Angular Component Beginn](assets/extend-component/angular-card-component-start.png)
 
-7. Inspect Sie die Datei `card.component.ts`.
+7. Prüfen Sie die Datei `card.component.ts`.
 
    Die Komponente wurde bereits zur Zuordnung zur AEM `Card`-Komponente mithilfe der Standardfunktion `MapTo` gestoppt.
 
@@ -216,7 +216,7 @@ Um die Werte des Komponentendialogs letztendlich der Angular-Komponente zur Verf
 
 Kehren Sie zur IDE Ihrer Wahl zurück und öffnen Sie das Modul `core`.
 
-1. Öffnen Sie die Datei `Card.java` bei `core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/Card.java`.
+1. Öffnen Sie die Datei `Card.java` unter `core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/Card.java`.
 
    Beachten Sie, dass die `Card`-Schnittstelle derzeit `com.adobe.cq.wcm.core.components.models.Image` erweitert und daher alle Methoden der `Image`-Schnittstelle übernimmt. Die `Image`-Schnittstelle erweitert bereits die `ComponentExporter`-Schnittstelle, mit der das Sling-Modell als JSON exportiert und vom SPA-Editor zugeordnet werden kann. Daher müssen wir die `ComponentExporter`-Schnittstelle nicht explizit erweitern, wie wir es im [Kapitel &quot;Benutzerspezifische Komponente](custom-component.md) getan haben.
 
