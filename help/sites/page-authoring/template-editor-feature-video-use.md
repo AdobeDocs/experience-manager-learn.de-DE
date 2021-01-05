@@ -40,5 +40,5 @@ URL der bearbeitbaren Vorlagen (lokale AEM): [http://localhost:4502/libs/wcm/cor
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Bearbeitbare Seitenvorlagen - Dokumentation](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/templates/page-templates-editable.html)
+* [Bearbeitbare Seitenvorlagen - Dokumentation](https://docs.adobe.com/content/help/de/experience-manager-65/developing/platform/templates/page-templates-editable.html)
 * [Erstellen von Seitenvorlagen - Dokumentation](https://docs.adobe.com/content/help/de/experience-manager-65/authoring/siteandpage/templates.html)
