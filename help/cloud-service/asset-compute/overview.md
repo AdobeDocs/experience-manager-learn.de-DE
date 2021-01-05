@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
 workflow-type: tm+mt
 source-wordcount: '1028'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -146,7 +146,7 @@ Im Folgenden finden Sie verschiedene Adoben-Ressourcen, die weitere Informatione
 
 ### Dokumentation
 
-+ [Dokumentation zum asset compute-Dienst](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html)
++ [Dokumentation zum asset compute-Dienst](https://docs.adobe.com/content/help/de/asset-compute/using/extend/understand-extensibility.html)
 + [asset compute Development Tool - Bitte lesen](https://github.com/adobe/asset-compute-devtool)
 + [asset compute-Beispielarbeiter](https://github.com/adobe/asset-compute-example-workers)
 
