@@ -12,7 +12,7 @@ translation-type: tm+mt
 source-git-commit: a3d3612713decefb5c7e1cf5b2d4d21afff0a2f5
 workflow-type: tm+mt
 source-wordcount: '393'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
 
@@ -40,7 +40,7 @@ Durch Klicken auf die einzelnen Bundles erhalten Sie Informationen zum Debugging
 + Überprüfen, ob ein OSGi-Bundle aktiv ist
 + Bestimmen, ob ein OSGi-Bundle nicht zufrieden stellende Importe aufweist, die den Start verhindern
 
-## Komponenten
+## Komponenten 
 
 >[!VIDEO](https://video.tv.adobe.com/v/34336/?quality=12&learn=on)
 
