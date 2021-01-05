@@ -64,7 +64,7 @@ Diese Reihenfolge ist eine allgemeine Regel, d.h. es gibt Ausnahmen. Folgende Gr
 
 AEM APIs bieten Abstraktionen und Funktionen, die spezifisch für produktive Anwendungsfälle gelten.
 
-Beispielsweise bieten AEM [PageManager](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)- und [Page](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/model/Page.html)-APIs Abstraktionen für `cq:Page`-Knoten in AEM, die Webseiten darstellen.
+Beispielsweise bieten AEM [PageManager](https://helpx.adobe.com/de/experience-manager/6-3/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/api/PageManager.html)- und [Page](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/day/cq/wcm/foundation/model/Page.html)-APIs Abstraktionen für `cq:Page`-Knoten in AEM, die Webseiten darstellen.
 
 Während diese Knoten über [!DNL Sling]-APIs als Ressourcen und JCR-APIs als Knoten verfügbar sind, bieten AEM APIs Abstraktionen für häufige Anwendungsfälle. Die Verwendung der AEM-APIs gewährleistet ein konsistentes Verhalten zwischen AEM Produkt und zu AEM Anpassungen und Erweiterungen.
 
