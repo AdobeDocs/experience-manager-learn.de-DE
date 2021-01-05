@@ -333,7 +333,7 @@ SpeicherortSpeicherort des Workflow-Modells in 6.4+
 
    1. Inhalt bearbeiten
    1. Genehmigung
-   1. Veröffentlichen
+   1. Veröffentlichung
 
    ![Konfiguration der Workflow-Phasen](./assets/develop-aem-projects/workflow-model-stage-properties.png)
 
@@ -627,7 +627,7 @@ Beim Starten eines Workflows aus einem Projekt müssen Sie einen Assistenten ang
 
 Die Erstellung eines benutzerdefinierten Assistenten kann sehr leistungsstark sein, da Sie wichtige Informationen vor den Workflow-Beginn erfassen können. Die Daten werden als Teil der Metadaten des Workflows gespeichert, und Workflow-Prozesse können dies lesen und das Verhalten dynamisch ändern, basierend auf den eingegebenen Werten. Wir erstellen einen benutzerdefinierten Assistenten, um die erste Aufgabe im Workflow dynamisch auf der Grundlage eines Beginn-Assistentenwerts zuzuweisen.
 
-1. In CRXDE-Lite erstellen wir einen Unterordner unter dem Ordner `/apps/aem-guides/projects-tasks/projects` mit dem Namen &quot;wizards&quot;. Kopieren Sie den Standardassistenten aus: `/libs/cq/core/content/projects/workflowwizards/default_workflow` unter dem neu erstellten Assistenten-Ordner umbenennen und in **content-approval-Beginn** umbenennen. Der vollständige Pfad sollte nun sein: `/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`.
+1. In CRXDE-Lite erstellen wir einen Unterordner unter dem Ordner `/apps/aem-guides/projects-tasks/projects` mit dem Namen &quot;wizards&quot;. Kopieren Sie den Standardassistenten aus: `/libs/cq/core/content/projects/workflowwizards/default_workflow` unterhalb des neu erstellten Assistenten-Ordners und benennen Sie ihn in **content-approval-Beginn** um. Der vollständige Pfad sollte nun sein: `/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`.
 
    Der Standardassistent ist ein zweispaltiger Assistent mit der ersten Spalte, in der Titel, Beschreibung und Miniaturansicht des Workflow-Modells ausgewählt sind. Die zweite Spalte enthält die Felder für den Workflow-Titel, den Beginn-Kommentar und den Nutzlastpfad. Der Assistent ist ein Standard-Touch-UI-Formular und verwendet zum Ausfüllen der Felder die Standardkomponenten [Granite UI Form](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html).
 
