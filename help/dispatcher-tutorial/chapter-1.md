@@ -327,7 +327,7 @@ Da beide Seiten denselben Teaser anzeigen, wäre es unnötig, den Autor zu bitte
 
 `<sling:include resource="/content/home/destinations/canada" addSelectors="teaser" />`
 
- oder
+oder
 
 `<sling:include resource="/content/home/destinations/canada/jcr:content/teaser" />`
 
@@ -717,7 +717,7 @@ Es gibt drei Probleme, bei denen die zwischengespeicherten Dateien nicht physisc
 
 1. Sie verschwenden Datenspeicherung - ganz offensichtlich. Zugegeben - Datenspeicherung ist in den letzten Jahren billiger und billiger geworden. Aber auch Bildauflösungen und Dateigrößen sind in den letzten Jahren gewachsen - mit dem Aufkommen von Retina-ähnlichen Displays, die nach Kristallspitzen sehnen.
 
-2. Auch wenn Festplatten billiger geworden sind, ist &quot;Datenspeicherung&quot;möglicherweise nicht billiger geworden. Wir haben eine Tendenz zu haben, nicht (billig) Bare Metal HDD Datenspeicherung, sondern Vermietung virtuelle Datenspeicherung auf einem NAS von Ihrem Rechenzentrumsanbieter. Diese Datenspeicherung ist etwas zuverlässiger und skalierbarer, aber auch etwas teurer. Sie möchten es vielleicht nicht verschwenden, indem Sie veralteten Müll lagern. Dies betrifft nicht nur die primäre Datenspeicherung - denken Sie auch an Backups. Wenn Sie über eine vordefinierte Sicherungslösung verfügen, können Sie die Cache-Ordner möglicherweise nicht ausschließen. Am Ende sichern Sie auch Mülldaten.
+2. Auch wenn Festplatten billiger geworden sind, ist &quot;Datenspeicherung&quot;möglicherweise nicht billiger geworden. Wir haben einen Trend zu haben, nicht (billig) Bare Metal HDD-Datenspeicherung, sondern mieten virtuelle Datenspeicherung auf einem NAS von Ihrem Rechenzentrumsanbieter. Diese Datenspeicherung ist etwas zuverlässiger und skalierbarer, aber auch etwas teurer. Sie möchten es vielleicht nicht verschwenden, indem Sie veralteten Müll lagern. Dies betrifft nicht nur die primäre Datenspeicherung - denken Sie auch an Backups. Wenn Sie über eine vordefinierte Sicherungslösung verfügen, können Sie die Cache-Ordner möglicherweise nicht ausschließen. Am Ende sichern Sie auch Mülldaten.
 
 3. Schlimmer noch: Sie haben ggf. nur für begrenzte Zeit Nutzungslizenzen für bestimmte Bilder gekauft - solange Sie diese benötigen. Wenn Sie das Bild nach Ablauf einer Lizenz noch speichern, wird dies möglicherweise als Urheberrechtsverletzung betrachtet. Sie können das Bild nicht mehr in Ihren Webseiten verwenden - aber Google wird es trotzdem finden.
 
