@@ -11,7 +11,7 @@ translation-type: tm+mt
 source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
 workflow-type: tm+mt
 source-wordcount: '531'
-ht-degree: 20%
+ht-degree: 22%
 
 ---
 
@@ -31,11 +31,11 @@ In dieser Videoserie werden die wichtigsten Funktionen von Cloud Manager AEM erl
 * [CI/CD Nicht-Produktionsrohre](#cicd-non-production-pipeline)
 * [Aktivität](#activity)
 
-Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html).
+Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](https://docs.adobe.com/content/help/de/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html).
 
 ## Programme {#programs}
 
-[Cloud Manager-](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/setting-up-program.html) Programme stellen AEM Umgebung dar, die logische Gruppen von Geschäftsinitiativen unterstützen, die in der Regel einem erworbenen Service Level Agreement (SLA) entsprechen. Beispielsweise kann ein Programm die AEM zur Unterstützung der globalen öffentlichen Websites darstellen, während ein anderes Programm einen internen DAM darstellt.
+[Cloud Manager-](https://docs.adobe.com/content/help/de/experience-manager-cloud-manager/using/getting-started/setting-up-program.html) Programme stellen AEM Umgebung dar, die logische Gruppen von Geschäftsinitiativen unterstützen, die in der Regel einem erworbenen Service Level Agreement (SLA) entsprechen. Beispielsweise kann ein Programm die AEM zur Unterstützung der globalen öffentlichen Websites darstellen, während ein anderes Programm einen internen DAM darstellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313/?quality=12&learn=on)
 
