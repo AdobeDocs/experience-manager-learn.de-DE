@@ -57,7 +57,7 @@ Wir werden AEM Best Practices einsetzen und Folgendes nutzen:
 
 ## Komponententests und Adobe Cloud Manager {#unit-testing-and-adobe-cloud-manager}
 
-[Adobe Cloud ](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) Manager integriert die Ausführung von Komponententests und  [ ](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) Codeberichte in seine CI/CD-Pipeline, um die Best Practice für Komponententests AEM Code zu fördern und zu fördern.
+[Adobe Cloud ](https://docs.adobe.com/content/help/de/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) Manager integriert die Ausführung von Komponententests und  [ ](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) Codeberichte in seine CI/CD-Pipeline, um die Best Practice für Komponententests AEM Code zu fördern und zu fördern.
 
 Obwohl Komponententestcode für jede Codebasis eine gute Vorgehensweise ist, ist es bei der Verwendung von Cloud Manager wichtig, die Codequalitätstests und die Berichte-Funktionen zu nutzen, indem Komponententests für die Ausführung von Cloud Manager bereitgestellt werden.
 
