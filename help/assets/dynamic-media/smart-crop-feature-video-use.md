@@ -1,6 +1,6 @@
 ---
-title: Verwenden von Smart-Zuschneiden mit AEM Assets Dynamic Media
-seo-title: Verwenden von Smart-Zuschneiden mit AEM Assets Dynamic Media
+title: Verwenden von Smart Crop mit AEM Assets Dynamic Media
+seo-title: Verwenden von Smart Crop mit AEM Assets Dynamic Media
 description: Smart Crop nutzt Adobe Sensei, um zeitaufwendige und kostspielige Aufgaben beim Zuschneiden von Inhalten für reaktionsfähiges Design zu vermeiden.
 seo-description: Smart Crop nutzt Adobe Sensei, um zeitaufwendige und kostspielige Aufgaben beim Zuschneiden von Inhalten für reaktionsfähiges Design zu vermeiden.
 uuid: 2cb27aa8-644d-4b17-8ffc-f6a99f95cfd2
@@ -21,7 +21,7 @@ ht-degree: 13%
 ---
 
 
-# Verwenden von Smart-Zuschneiden mit AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
+# Verwenden von &quot;Smart Crop&quot;mit AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
 
 Smart Crop nutzt Adobe Sensei, um zeitaufwendige und kostspielige Aufgaben beim Zuschneiden von Inhalten für reaktionsfähiges Design zu vermeiden.
 
@@ -29,14 +29,14 @@ Smart Crop nutzt Adobe Sensei, um zeitaufwendige und kostspielige Aufgaben beim 
 
 >[!NOTE]
 >
->Video geht davon aus, dass Ihre AEM-Instanz im Modus Dynamische Medien S7 ausgeführt wird. [Anweisungen zum Einrichten von AEM mit dynamischen Medien finden Sie hier.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>Video geht davon aus, dass Ihre AEM Instanz im Dynamic Media S7-Modus ausgeführt wird. [Anweisungen zur Einrichtung von AEM mit Dynamic Media finden Sie hier.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
-## Adobe Experience Managers Funktion zum Zuschneiden auf dynamische Medien umfasst
+## Adobe Experience Managers Dynamic Media Smart Crop-Funktion umfasst
 
 * AEM Asset-Administratoren können auf einfache Weise Profile für das intelligente Beschneiden auf der Grundlage der Gerätegröße und -breite erstellen.
 * Intelligente Beschneidung kann für ein einzelnes Asset oder für alle Assets in einem Ordner durchgeführt werden.
 * Die Größe des Layouts für die Bearbeitung intelligenter Zuschnitte kann zur besseren Sichtbarkeit angepasst werden.
-* Die Komponente &quot;Dynamische Medien&quot;von AEM-Sites unterstützt Smart Crop.
+* Die Dynamic Media-Komponente von AEM Sites unterstützt Smart Crop.
 * Die veröffentlichte URL für das Asset mit intelligenten Zuschnitten ist verfügbar und kann mit Drittanbieteranwendungen verwendet werden, die gehostete Assets akzeptieren.
 
 >[!NOTE]
