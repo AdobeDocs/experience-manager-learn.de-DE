@@ -12,7 +12,7 @@ translation-type: tm+mt
 source-git-commit: 892cb074814eabd347ba7aef883721df0ee4d431
 workflow-type: tm+mt
 source-wordcount: '3171'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 >[!WARNING]
 >
-> Dieses Tutorial ist **nicht mehr unterstützt**. Es wird empfohlen, entweder [Erste Schritte mit dem AEM SPA Editor und Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html) oder [Erste Schritte mit dem AEM SPA Editor und React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+> Dieses Tutorial ist **nicht mehr unterstützt**. Es wird empfohlen, entweder [Erste Schritte mit dem AEM SPA Editor und Angular](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-angular-tutorial/overview.html) oder [Erste Schritte mit dem AEM SPA Editor und React](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-react-tutorial/overview.html)
 
 AEM SPA Editor unterstützt die kontextbezogene Bearbeitung einer Einzelseitenanwendung oder eines SPA. Dieses Lernprogramm stellt eine Einführung in SPA Entwicklung dar, die mit AEM SPA Editor JS SDK verwendet werden soll. Das Lernprogramm erweitert die App &quot;We.Retail&quot;um eine benutzerdefinierte Komponente &quot;Hello World&quot;. Die Benutzer können das Lernprogramm mithilfe von React- oder Angular-Frameworks abschließen.
 
@@ -51,7 +51,7 @@ In diesem Lernprogramm sollten die folgenden Technologien und Werkzeuge installi
 
 1. [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 2. [Apache Maven - 3.3.1+](https://maven.apache.org/)
-3. [Node.js - 8.11.1+](https://nodejs.org/de/) und npm 5.6.0+ (npm wird mit node.js installiert)
+3. [Node.js - 8.11.1+](https://nodejs.org/en/) und npm 5.6.0+ (npm wird mit node.js installiert)
 
 Dublette überprüfen Sie die Installation der oben genannten Tools, indem Sie ein neues Terminal öffnen und Folgendes ausführen:
 
@@ -69,7 +69,7 @@ $ npm --version
 6.1.0
 ```
 
-## Überblick{#overview}
+## Überblick {#overview}
 
 Das Grundkonzept besteht darin, eine SPA Komponente einer AEM Komponente zuzuordnen. AEM Komponenten, die serverseitig ausgeführt werden, exportieren Inhalte in Form von JSON. Der JSON-Inhalt wird vom SPA genutzt, wobei clientseitig im Browser ausgeführt wird. Es wird eine 1:1-Zuordnung zwischen SPA Komponenten und einer AEM Komponente erstellt.
 
@@ -306,7 +306,7 @@ Als Nächstes wird ein [!DNL Sling Model] erstellt, um die [!DNL Hello World]-Ko
 
 >[!NOTE]
 >
->Als Best Practice sollten Entwickler nach Möglichkeit [AEM Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html) verwenden. Neben anderen Funktionen stellen Core-Komponenten [!DNL Sling Models] eine JSON-Ausgabe bereit, die &quot;SPA-bereit&quot;ist, sodass sich Entwickler mehr auf die Front-End-Präsentation konzentrieren können.
+>Als Best Practice sollten Entwickler nach Möglichkeit [AEM Kernkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html) verwenden. Neben anderen Funktionen stellen Core-Komponenten [!DNL Sling Models] eine JSON-Ausgabe bereit, die &quot;SPA-bereit&quot;ist, sodass sich Entwickler mehr auf die Front-End-Präsentation konzentrieren können.
 
 1. Öffnen Sie im Editor Ihrer Wahl das **we-retail-Protokoll-commons**-Projekt ( `<src>/aem-sample-we-retail-journal/bundles/commons`).
 1. Im Paket `com.adobe.cq.sample.spa.commons.impl.models`:
@@ -488,7 +488,7 @@ Als Nächstes wird die React-Komponente erstellt. Öffnen Sie das Modul **respon
    }
    ```
 
-1. Implementieren Sie eine Bearbeitungskonfigurationsmethode. Diese Methode wird über den Helfer `MapTo` weitergeleitet und stellt dem AEM Editor Informationen zur Verfügung, um einen Platzhalter anzuzeigen, falls die Komponente leer ist. Dies tritt auf, wenn die Komponente dem SPA hinzugefügt, aber noch nicht erstellt wurde. hinzufügen Sie Folgendes unter der `HelloWorld`-Klasse:
+1. Implementieren Sie eine Bearbeitungskonfigurationsmethode. Diese Methode wird über den Helfer `MapTo` weitergeleitet und stellt dem AEM Editor Informationen zur Verfügung, um einen Platzhalter anzuzeigen, falls die Komponente leer ist. Dies tritt auf, wenn die Komponente dem SPA hinzugefügt, aber noch nicht verfasst wurde. hinzufügen Sie Folgendes unter der `HelloWorld`-Klasse:
 
    ```js
    ...
