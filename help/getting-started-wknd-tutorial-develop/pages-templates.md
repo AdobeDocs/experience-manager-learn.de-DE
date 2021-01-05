@@ -57,7 +57,7 @@ Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-gu
 1. Machen Sie sich mit den Details bearbeitbarer Vorlagen vertraut und erfahren Sie, wie Richtlinien verwendet werden können, um eine granulare Steuerung des Seiteninhalts zu erzwingen.
 1. Erfahren Sie, wie Vorlagen und Seiten verknüpft werden
 
-## {#what-you-will-build}
+## Was Sie erstellen werden {#what-you-will-build}
 
 In diesem Teil des Tutorials erstellen Sie eine neue Artikelseitenvorlage, mit der neue Artikelseiten erstellt und an einer gemeinsamen Struktur ausgerichtet werden können. Die Artikelseitenvorlage basiert auf Designs und einem UI-Kit, das in AdobeXD erstellt wurde. Dieses Kapitel konzentriert sich nur auf das Erstellen der Struktur oder des Skeletts der Vorlage. Es werden keine Stile implementiert, aber die Vorlage und die Seiten funktionieren.
 
@@ -101,7 +101,7 @@ Im Folgenden finden Sie die Schritte auf hoher Ebene, die im obigen Video ausgef
 
 Wenn Sie eine Seite erstellen, müssen Sie eine Vorlage auswählen. Diese wird als Grundlage für die Erstellung der neuen Seite verwendet. Die Vorlage definiert die Struktur der Zielseite, den anfänglichen Inhalt und die zulässigen Komponenten.
 
-Es gibt 3 Hauptbereiche von [Bearbeitbare Vorlagen](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/templates/page-templates-editable.html):
+Es gibt 3 Hauptbereiche von [Bearbeitbare Vorlagen](https://docs.adobe.com/content/help/de/experience-manager-65/developing/platform/templates/page-templates-editable.html):
 
 1. **Struktur** : Definiert Komponenten, die Teil der Vorlage sind. Diese können von Inhaltserstellern nicht bearbeitet werden.
 1. **Anfänglicher Inhalt** : Definiert Komponenten, mit denen die Vorlage Beginn wird. Diese können von Inhaltserstellern bearbeitet und/oder gelöscht werden
