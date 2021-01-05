@@ -40,7 +40,7 @@ Adobe Experience Manager (AEM) Sites ist eine führende Plattform für Erlebnism
 <table>
 <tr>
   <td>
-    <a href="https://docs.adobe.com/content/help/de/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
+    <a href="https://docs.adobe.com/content/help/de-DE/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
       <img alt="Erste Schritte mit AEM Sites - WKND-Tutorial" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
