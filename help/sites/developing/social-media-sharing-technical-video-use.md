@@ -22,7 +22,7 @@ Erfahren Sie, wie Sie die Komponente Social Media Sharing einrichten und verwend
 
 >[!VIDEO](https://video.tv.adobe.com/v/18897/?quality=9&learn=on)
 
-In diesem Video werden die folgenden Funktionen der Komponente &quot;Social Media Sharing&quot;(Teil von [AEM Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html)) mithilfe der Beispiel-Website [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) untersucht.
+In diesem Video werden die folgenden Funktionen der Komponente &quot;Social Media Sharing&quot;(Teil von [AEM Kernkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html)) mithilfe der Beispiel-Website [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) untersucht.
 
 * 0:00 - Hinzufügen und Konfigurieren der Komponente &quot;Social Media Sharing&quot;
 * 1:00 - Freigeben auf Facebook
