@@ -1,8 +1,8 @@
 ---
 title: Farb-Management mit AEM Dynamic Media
 seo-title: Farb-Management mit AEM Dynamic Media
-description: In diesem Video erforschen wir das dynamische Medienfarbmanagement und wie es zur Bereitstellung von Vorschauen zur Farbkorrektur in AEM Assets verwendet werden kann.
-seo-description: In diesem Video erforschen wir das dynamische Medienfarbmanagement und wie es zur Bereitstellung von Vorschauen zur Farbkorrektur in AEM Assets verwendet werden kann.
+description: In diesem Video erforschen wir Dynamic Media Color Management und wie es verwendet werden kann, um Funktionen zur Vorschau von Farbkorrekturen in für AEM Assets bereitzustellen.
+seo-description: In diesem Video erforschen wir Dynamic Media Color Management und wie es verwendet werden kann, um Funktionen zur Vorschau von Farbkorrekturen in für AEM Assets bereitzustellen.
 uuid: dc14d067-11a2-4662-acfd-f9f6f1d738ee
 discoiquuid: b2b9ccc9-96b5-4bea-9995-2e6b353c469d
 sub-product: dynamic-media
@@ -23,7 +23,7 @@ ht-degree: 24%
 
 # Farb-Management mit AEM Dynamic Media{#understanding-color-management-with-aem-dynamic-media}
 
-In diesem Video erforschen wir das dynamische Medienfarbmanagement und wie es zur Bereitstellung von Vorschauen zur Farbkorrektur in AEM Assets verwendet werden kann.
+In diesem Video erforschen wir Dynamic Media Color Management und wie es verwendet werden kann, um Funktionen zur Vorschau von Farbkorrekturen in für AEM Assets bereitzustellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16792/?quality=9&learn=on)
 
