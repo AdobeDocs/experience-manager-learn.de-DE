@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: ff75a9d10e9d00510e4c49dea0dcc36e68ca46c4
 workflow-type: tm+mt
 source-wordcount: '2104'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -28,7 +28,7 @@ Verstehen Sie, wie der Quellcode für eine Einzelseitenanwendung (SPA), die in R
 2. Erfahren Sie, wie Sie einen Webpack-Entwicklungsserver für die dedizierte Front-End-Entwicklung verwenden.
 3. Erforschen Sie die Verwendung einer **Proxy**- und statischen **Modell**-Datei für die Entwicklung mit der AEM JSON-Modell-API
 
-## Was Sie erstellen
+## Was Sie erstellen werden
 
 In diesem Kapitel wird eine einfache `Header`-Komponente zur SPA hinzugefügt. Bei der Erstellung dieser statischen `Header` Komponente werden verschiedene Ansätze zur AEM SPA Entwicklung verwendet.
 
@@ -80,7 +80,7 @@ Weitere Informationen zum Front-End-Build können [hier finden Sie](https://docs
 
 Überprüfen Sie anschließend das `ui.frontend`-Modul, um die SPA zu verstehen, die automatisch vom [AEM Projektarchiv](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-react.html) generiert wurden.
 
-1. Öffnen Sie in der IDE Ihrer Wahl das AEM Projekt für die WKND SPA. In diesem Lernprogramm wird die [Visual Studio-Code-IDE](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code) verwendet.
+1. Öffnen Sie in der IDE Ihrer Wahl das AEM Projekt für die WKND SPA. In diesem Lernprogramm wird die [Visual Studio-Code-IDE](https://docs.adobe.com/content/help/de/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code) verwendet.
 
    ![VSCode - AEM WKND SPA](./assets/integrate-spa/vscode-ide-openproject.png)
 
@@ -125,9 +125,9 @@ Weitere Informationen zum Front-End-Build können [hier finden Sie](https://docs
 
    Das Modul [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) wird dazu verwendet.
 
-6. Inspect Sie die Datei `ui.frontend/clientlib.config.js`. Diese Konfigurationsdatei wird von [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) verwendet, um zu bestimmen, wie die Client-Bibliothek generiert wird.
+6. Prüfen Sie die Datei `ui.frontend/clientlib.config.js`. Diese Konfigurationsdatei wird von [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) verwendet, um zu bestimmen, wie die Client-Bibliothek generiert wird.
 
-7. Inspect Sie die Datei `ui.frontend/pom.xml`. Diese Datei wandelt den Ordner `ui.frontend` in ein [Maven-Modul](http://maven.apache.org/guides/mini/guide-multiple-modules.html) um. Die Datei `pom.xml` wurde aktualisiert, um das [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) zu **test** und **build** den SPA während eines Maven-Builds zu verwenden.
+7. Prüfen Sie die Datei `ui.frontend/pom.xml`. Diese Datei wandelt den Ordner `ui.frontend` in ein [Maven-Modul](http://maven.apache.org/guides/mini/guide-multiple-modules.html) um. Die Datei `pom.xml` wurde aktualisiert, um das [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) zu **test** und **build** den SPA während eines Maven-Builds zu verwenden.
 
 8. Inspect Sie die Datei `index.js` bei `ui.frontend/src/index.js`:
 
@@ -354,7 +354,7 @@ Die anfängliche Einrichtung des JSON-Musters erfordert **eine lokale AEM**.
 
    ![JSON-Datei des Moodmodells](./assets/integrate-spa/mock-model-json-created.png)
 
-4. Öffnen Sie die Datei `index.html` bei `ui.frontend/public/index.html`. Aktualisieren Sie die Metadateneigenschaft für das AEM Seitenmodell, um auf eine Variable `%REACT_APP_PAGE_MODEL_PATH%` zu verweisen:
+4. Öffnen Sie die Datei `index.html` unter `ui.frontend/public/index.html`. Aktualisieren Sie die Metadateneigenschaft für das AEM Seitenmodell, um auf eine Variable `%REACT_APP_PAGE_MODEL_PATH%` zu verweisen:
 
    ```html
        <!-- AEM page model -->
