@@ -13,12 +13,12 @@ translation-type: tm+mt
 source-git-commit: f568c991cd33c5c5349da32f505cff356a6ebfd2
 workflow-type: tm+mt
 source-wordcount: '715'
-ht-degree: 12%
+ht-degree: 15%
 
 ---
 
 
-# Erstellen Sie Ihre erste Angular-SPA in AEM {#introduction}
+# Erstellen Ihres ersten Angular-SPA-Projekts in AEM {#introduction}
 
 Willkommen bei einem mehrteiligen Lernprogramm, das für Entwickler entwickelt wurde, die mit der Funktion **SPA Editor** in Adobe Experience Manager (AEM) neu arbeiten. Dieses Tutorial durchläuft die Implementierung einer Angular Anwendung für eine fiktive Lifestyle Marke, die WKND. Die Angular-App wird entwickelt und für die Bereitstellung mit AEM SPA Editor entwickelt, der Angular-Komponenten AEM Komponenten zuordnet. Die fertige SPA, die in AEM bereitgestellt wird, kann mit den traditionellen Inline-Bearbeitungswerkzeugen von AEM dynamisch erstellt werden.
 
@@ -32,9 +32,9 @@ Ziel dieses mehrteiligen Lernprogramms ist es, Entwicklern beizubringen, wie ein
 
 Das Tutorial wurde für die Verwendung mit **AEM als Cloud Service** entwickelt und ist rückwärtskompatibel mit **AEM 6.5.4+** und **AEM 6.4.8+**. Die SPA wird wie folgt implementiert:
 
-* [Maven-AEM-Projektarchetyp](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/archetype/overview.html)
+* [Maven-AEM-Projektarchetyp](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/developing/archetype/overview.html)
 * [AEM SPA Editor](https://docs.adobe.com/content/help/en/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
-* [Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html)
+* [Kernkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html)
 * [Angular](https://angular.io/)
 
 *Schätzen Sie sich 1-2 Stunden, um die einzelnen Teile des Tutorials zu durchlaufen.*
@@ -53,8 +53,8 @@ Bevor Sie mit diesem Lernprogramm beginnen, benötigen Sie Folgendes:
 * Grundlegende Kenntnis von [Angular](https://angular.io/)
 * [AEM als Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk),  [AEM 6.5.4+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65) oder  [AEM 6.4.8+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
-* [Apache Maven](https://maven.apache.org/) (3.3.9 oder neuer)
-* [Node.](https://nodejs.org/de/) jsand  [npm](https://www.npmjs.com/)
+* [Apache Maven](https://maven.apache.org/) (3.3.9 oder höher)
+* [Node.](https://nodejs.org/en/) jsand  [npm](https://www.npmjs.com/)
 
 *Auch wenn dies nicht erforderlich ist, ist es von Vorteil, ein grundlegendes Verständnis für die  [Entwicklung traditioneller AEM Sites-Komponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) zu haben.*
 
@@ -64,9 +64,9 @@ Eine Umgebung zur lokalen Entwicklung ist erforderlich, um dieses Lernprogramm a
 
 >[!NOTE]
 >
-> **Neu AEM als Cloud Service?** Sehen Sie sich das  [folgende Handbuch an, um eine lokale Entwicklungs-Umgebung mit dem AEM als Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) einzurichten.
+> **Neu bei AEM as a Cloud Service?** Sehen Sie sich das  [folgende Handbuch an, um eine lokale Entwicklungs-Umgebung mit dem AEM als Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) einzurichten.
 >
-> **Neu zu AEM 6.5?** Sehen Sie sich das  [folgende Handbuch an, um eine lokale Entwicklungs-Umgebung](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html) einzurichten.
+> **Neu zu AEM 6.5?** Sehen Sie sich das  [folgende Handbuch an, um eine lokale Entwicklungs-Umgebung](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html) einzurichten.
 
 ## Nächste Schritte {#next-steps}
 
