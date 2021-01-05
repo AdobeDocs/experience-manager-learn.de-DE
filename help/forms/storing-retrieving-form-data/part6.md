@@ -31,7 +31,7 @@ Gehen Sie wie folgt vor, um diese Funktion auf Ihrer AEM Forms-Instanz zu testen
 * Laden Sie die JAR-Dateien für den [MySQL-Treiber unter ](assets/mysqldriver.jar) mit der [felix-Webkonsole](http://localhost:4502/system/console/bundles) herunter und stellen Sie sie bereit
 * Laden Sie das [OSGi-Bundle](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar) mit der [felix-Webkonsole](http://localhost:4502/system/console/bundles) herunter und stellen Sie es bereit
 * Laden Sie das [Paket mit Client-lib, Vorlage für adaptive Formulare und die benutzerdefinierte Seitenkomponente](assets/store-and-fetch-af-with-data.zip) mit dem [Paketmanager](http://localhost:4502/crx/packmgr/index.jsp) herunter und installieren Sie es und installieren Sie es mithilfe des &lt;a2/>Paketmanagers&lt;a3/>
-* Importieren Sie das adaptive Beispielformular [mithilfe der](assets/sample-adaptive-form.zip) [FormsAndDocuments-Schnittstelle](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Importieren Sie das adaptive Beispielformular [mithilfe der [FormsAndDocuments-Schnittstelle](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)](assets/sample-adaptive-form.zip)
 
 * Importieren Sie [form-data-db.sql](assets/form-data-db.sql) mit MySql Workbench. Dadurch werden die erforderlichen Schemas und Tabellen in Ihrer Datenbank erstellt, damit dieses Lernprogramm funktioniert.
 * Melden Sie sich bei [configMgr an.](http://localhost:4502/system/console/configMgr) Suchen Sie nach &quot;Apache Sling Connection Pooled DataSource. Erstellen Sie einen neuen Apache Sling Connection Pooled DataSource-Eintrag namens **SaveAndContinue** mit den folgenden Eigenschaften:
