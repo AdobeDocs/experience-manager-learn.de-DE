@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: 64c167ec1d625fdd8be1bc56f7f5e59460b8fed3
 workflow-type: tm+mt
 source-wordcount: '1831'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 4%
 
 Verwenden Sie die Ereignis-basierte [Adobe Client Data Layer mit AEM Core Components](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/data-layer/overview.html), um Klicks auf bestimmte Komponenten auf einer Adobe Experience Manager-Site zu verfolgen. Erfahren Sie, wie Sie Regeln in Experience Platform Launch verwenden, um Klick-Ereignisse zu überwachen, nach Komponenten zu filtern und die Daten mit einem Verfolgungs-Linkbeacon an Adobe Analytics zu senden.
 
-## Was Sie erstellen
+## Was Sie erstellen werden
 
 Das WKND-Marketingteam möchte wissen, welche Aktionsaufruf-Schaltflächen auf der Startseite die beste Leistung erbringen. In diesem Lernprogramm fügen wir in Experience Platform Launch eine neue Regel hinzu, die auf `cmp:click`-Ereignis von **Teaser**- und **Button**-Komponenten überwacht und die Komponenten-ID und ein neues Ereignis neben dem Tracking-Link-Beacon an Adobe Analytics sendet.
 
