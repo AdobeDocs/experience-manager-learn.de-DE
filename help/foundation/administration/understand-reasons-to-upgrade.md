@@ -11,7 +11,7 @@ translation-type: tm+mt
 source-git-commit: 1519856731758ece2860615c06fc0d64edb104a5
 workflow-type: tm+mt
 source-wordcount: '3540'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -55,7 +55,7 @@ AEM Assets baut weiterhin auf seinen umfangreichen Asset-Management-Funktionen a
 + **Adobe** Stockintegration ermöglicht den direkten Zugriff auf Adobe Stock-Bilder direkt vom AEM Assets-Erlebnis aus, wodurch eine nahtlose Inhaltserkennung entsteht.
 + **AEM Desktop-** Apps Version 2.0 und die Neugestaltung der Benutzeroberfläche bei gleichzeitiger Verbesserung der Leistung und Stabilität.
 + **Connected** Assets unterstützen separate AEM Sites-Instanzen, um auf Assets von einer anderen AEM Assets-Instanz aus nahtlos zuzugreifen und sie zu verwenden.
-+ Die Videounterstützung in **Dynamische Medien** wurde aktualisiert, einschließlich **360 Video** und **Benutzerspezifische Videominiaturen**.
++ Die Videounterstützung in **Dynamic Media** wurde aktualisiert, einschließlich **360 Video** und **Benutzerdefinierte Videominiaturen**.
 
 ### Inhaltsintelligenz
 
@@ -214,7 +214,7 @@ Unten finden Sie eine Matrix der wichtigsten Fundamentmerkmale, die von AEM ange
             <td>they</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/operations-dashboard.html" target="_blank">Operations-Dashboard</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/operations-dashboard.html" target="_blank">Operations-Dashboard</a>:</strong>
  Führen Sie Wartungsarbeiten durch, überwachen Sie den Serverstatus und analysieren Sie die Leistung von AEM aus.</td>
             <td></td>
             <td>they</td>
@@ -895,7 +895,7 @@ Nachstehend finden Sie eine Übersicht der wichtigsten Assets-Funktionen, die vo
 <table>
     <thead>
         <tr>
-            <td>Funktion für dynamische Medien</td>
+            <td>Dynamic Media-Funktion</td>
             <td>5.6.x</td>
             <td>6,0</td>
             <td>6.1</td>
@@ -964,7 +964,7 @@ Nachstehend finden Sie eine Übersicht der wichtigsten Assets-Funktionen, die vo
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/delivering-dynamic-media-assets.html" target="_blank">Versand</a>:</strong>
-            Flexible Optionen für die Verknüpfung oder Einbettung von Inhalt und Versand dynamischer Medien über HTTP/2-Protokoll.</td>
+            Flexible Optionen für die Verknüpfung oder Einbettung von Dynamic Media-Inhalten und Versand über HTTP/2-Protokoll.</td>
             <td> </td>
             <td>they</td>
             <td>they</td>
@@ -974,8 +974,8 @@ Nachstehend finden Sie eine Übersicht der wichtigsten Assets-Funktionen, die vo
             <td>they</td>
         </tr>
         <tr>
-            <td><strong>Aktualisierung von Scene7 auf dynamische Medien: </strong>
-            Möglichkeit zur Migration von Übergeordnet Assets und Weiterverwendung vorhandener S7-URLs.</td>
+            <td><strong>Aktualisierung von Scene7 auf Dynamic Media: </strong>
+            Möglichkeit zur Migration von Übergeordnet-Assets und zur weiteren Verwendung vorhandener S7-URLs.</td>
             <td> </td>
             <td> </td>
             <td> </td>
