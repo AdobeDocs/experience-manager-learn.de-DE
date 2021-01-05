@@ -28,6 +28,6 @@ AEM Core-Komponenten sind Standardkomponenten, die mit Adobe Experience Manager 
 
 * [GitHub-Projekt](https://github.com/adobe/aem-core-wcm-components)
 * [Beispiele für Hauptkomponenten](https://www.aemcomponents.dev/)
-* [Dokumentation der Hauptkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html)
+* [Dokumentation der Hauptkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html)
 
 
