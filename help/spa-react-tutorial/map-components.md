@@ -30,7 +30,7 @@ Dieses Kapitel enthält einen tieferen Einstieg in die AEM JSON-Modell-API und w
 2. Verstehen Sie den Unterschied zwischen den Komponenten **Container** und **Content**.
 3. Erstellen Sie eine neue React-Komponente, die einer vorhandenen AEM zugeordnet ist.
 
-## Was Sie erstellen
+## Was Sie erstellen werden
 
 In diesem Kapitel wird untersucht, wie die bereitgestellte SPA der AEM `Text`Komponente zugeordnet wird. `Text` Es wird eine neue Komponente `Image` SPA erstellt, die in der SPA verwendet und in AEM verfasst werden kann. Standardmäßig werden die Funktionen der **Layout-Container**- und **Vorlagen-Editor**-Richtlinien auch verwendet, um eine Ansicht zu erstellen, die im Erscheinungsbild etwas abwechslungsreicher ist.
 
@@ -182,7 +182,7 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
 ## Erstellen der Bildkomponente
 
-Erstellen Sie anschließend eine Remact-Komponente, die der AEM `Image`Image-Komponente[ zugeordnet ist. ](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/image.html) Die Komponente `Image` ist ein weiteres Beispiel für eine Komponente **content**.
+Erstellen Sie anschließend eine Remact-Komponente, die der AEM `Image`Image-Komponente[ zugeordnet ist. ](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/image.html) Die Komponente `Image` ist ein weiteres Beispiel für eine Komponente **content**.
 
 ### Inspect the JSON
 
