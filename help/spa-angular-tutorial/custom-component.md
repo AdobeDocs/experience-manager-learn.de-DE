@@ -29,7 +29,7 @@ Erfahren Sie, wie Sie eine benutzerdefinierte Komponente erstellen, die mit dem 
 2. Erfahren Sie, wie Sie neue Dialogfelder AEM Komponenten erstellen.
 3. Lernen Sie, eine **benutzerdefinierte** AEM Komponente zu erstellen, die mit dem SPA Editor-Framework kompatibel ist.
 
-## Was Sie erstellen
+## Was Sie erstellen werden
 
 Der Fokus früherer Kapitel lag auf der Entwicklung SPA Komponenten und deren Zuordnung zu *vorhandenen* AEM Kernkomponenten. Dieses Kapitel konzentriert sich auf die Erstellung und Erweiterung von *neuen* AEM Komponenten und die Bearbeitung des von AEM bereitgestellten JSON-Modells.
 
@@ -157,13 +157,13 @@ Eine AEM Komponente wird als Knoten und Eigenschaften definiert. Im Projekt werd
    >
    > Sie können viel mehr [Beispiele für Dialoge durch Ansicht der Core-Komponentendefinitionen](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components) anzeigen. Sie können auch zusätzliche Formularfelder wie `select`, `textarea`, `pathfield`, `/libs/granite/ui/components/coral/foundation/form` unter [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form) Ansicht werden.
 
-   Bei einer herkömmlichen AEM ist in der Regel ein Skript [HTL](https://docs.adobe.com/content/help/de-DE/experience-manager-htl/using/overview.html) erforderlich. Da der SPA die Komponente wiedergibt, ist kein HTML-Skript erforderlich.
+   Bei einer herkömmlichen AEM ist in der Regel ein Skript [HTL](https://docs.adobe.com/content/help/de/experience-manager-htl/using/overview.html) erforderlich. Da der SPA die Komponente wiedergibt, ist kein HTML-Skript erforderlich.
 
 ## Sling-Modell erstellen
 
 Sling-Modelle sind von Anmerkungen angetriebene Java-&quot;POJOs&quot;(einfache alte Java-Objekte), die die Zuordnung von Daten aus der JCR zu Java-Variablen erleichtern. [Sling-](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/component-basics.html#sling-models) Modelle können typischerweise komplexe serverseitige Geschäftslogik für AEM Komponenten enthalten.
 
-Im Kontext des SPA-Editors stellen Sling-Modelle den Inhalt einer Komponente über das JSON-Modell mithilfe einer Funktion unter Verwendung des [Sling Model Exporter](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/develop-sling-model-exporter.html) offen.
+Im Kontext des SPA-Editors stellen Sling-Modelle den Inhalt einer Komponente über das JSON-Modell mithilfe einer Funktion unter Verwendung des [Sling Model Exporter](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/foundation/development/develop-sling-model-exporter.html) offen.
 
 1. Öffnen Sie in der IDE Ihrer Wahl das Modul `core`. `CustomComponent.java` und  `CustomComponentImpl.java` wurden bereits als Teil des Kapitelstartercodes erstellt und ausstohlen.
 
