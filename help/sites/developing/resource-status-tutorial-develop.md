@@ -19,7 +19,7 @@ ht-degree: 3%
 
 Adobe Experience Managers Ressourcen-Status-APIs ist ein Plug-in-Framework zur Bereitstellung von Statusmeldungen in AEM verschiedenen Web-UIs des Editors.
 
-## Überblick{#overview}
+## Überblick {#overview}
 
 Das Resource Status for Editors-Framework bietet serverseitige und clientseitige APIs zum Anzeigen und Interagieren mit Editorstatus auf einheitliche Weise.
 
