@@ -24,7 +24,7 @@ Für dieses Lernprogramm müssen die folgenden Dienste über das Adobe ID des Le
 
 Alle Adobe-Services müssen über dieselbe Adobe Org, mit Ihrem Adobe ID zugänglich sein.
 
-+ [AEM as a Cloud Service](#aem-as-a-cloud-service)
++ [ zu AEM as a Cloud Service](#aem-as-a-cloud-service)
 + [Adobe Project FireFly](#adobe-project-firefly)
    + Die Bereitstellung kann zwischen 2 und 10 Tagen dauern
 + Cloud-Datenspeicherung
