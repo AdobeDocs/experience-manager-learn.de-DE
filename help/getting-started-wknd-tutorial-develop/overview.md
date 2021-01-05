@@ -15,7 +15,7 @@ translation-type: tm+mt
 source-git-commit: 69c1767098cc9da8ec0ae2bd83d25417d330f393
 workflow-type: tm+mt
 source-wordcount: '970'
-ht-degree: 17%
+ht-degree: 21%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 17%
 
 Willkommen bei einem mehrteiligen Tutorial, das für Entwickler entwickelt wurde, die neu in Adobe Experience Manager (AEM) sind. Dieses Tutorial durchläuft die Implementierung einer AEM Website für eine fiktive Lifestyle-Marke der WKND. Das Lernprogramm behandelt grundlegende Themen wie Projekteinrichtung, Kernkomponenten, bearbeitbare Vorlagen, clientseitige Bibliotheken und Komponentenentwicklung mit Adobe Experience Manager Sites.
 
-## Überblick{#wknd-tutorial-overview}
+## Überblick {#wknd-tutorial-overview}
 
 Ziel dieses mehrteiligen Lernprogramms ist es, Entwicklern beizubringen, wie eine Website mit den neuesten Standards und Technologien in Adobe Experience Manager (AEM) implementiert wird. Nach Abschluss dieses Lernprogramms sollte ein Entwickler die Grundlagen der Plattform und die Kenntnisse über gängige Designmuster in AEM verstehen.
 
@@ -72,18 +72,18 @@ Darüber hinaus hat jeder Teil des Tutorials seine eigene Filiale in GitHub. Ein
 
 Eine Umgebung zur lokalen Entwicklung ist erforderlich, um dieses Lernprogramm abzuschließen. Screenshots und Videos werden mit dem AEM als Cloud Service-SDK erfasst, das auf einer Mac OS-Umgebung ausgeführt wird. Befehle und Code sollten unabhängig vom lokalen Betriebssystem sein, sofern nicht anders angegeben.
 
-**Neu AEM als Cloud Service?** Sehen Sie sich das  [folgende Handbuch an, um eine lokale Entwicklungs-Umgebung mit dem AEM als Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) einzurichten.
+**Neu bei AEM as a Cloud Service?** Sehen Sie sich das  [folgende Handbuch an, um eine lokale Entwicklungs-Umgebung mit dem AEM als Cloud Service-SDK](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) einzurichten.
 
-**Neu zu AEM 6.5?** Sehen Sie sich das  [folgende Handbuch an, um eine lokale Entwicklungs-Umgebung](https://docs.adobe.com/content/help/en/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html) einzurichten.
+**Neu zu AEM 6.5?** Sehen Sie sich das  [folgende Handbuch an, um eine lokale Entwicklungs-Umgebung](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html) einzurichten.
 
 ### Erforderliche Software
 
 Folgendes sollte lokal installiert werden:
 
-* [AEM als Cloud Service-](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk) SDK oder  [AEM 6.5 ](https://helpx.adobe.com/de/experience-manager/6-5/sites/deploying/using/technical-requirements.html) oder  [AEM 6.4 + SP2](https://helpx.adobe.com/de/experience-manager/6-4/release-notes/sp-release-notes.html)
+* [AEM as a Cloud Service-SDK](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk) oder [AEM 6.5](https://helpx.adobe.com/de/experience-manager/6-5/sites/deploying/using/technical-requirements.html) oder [AEM 6.4 + SP2](https://helpx.adobe.com/de/experience-manager/6-4/release-notes/sp-release-notes.html)
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)  (nur AEM 6.5+)
-* [Apache Maven](https://maven.apache.org/) (3.3.9 oder neuer)
-* [Node.js v10+](https://nodejs.org/de/)
+* [Apache Maven](https://maven.apache.org/) (3.3.9 oder höher)
+* [Node.js v10+](https://nodejs.org/en/)
 * [npm 6+](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
 
