@@ -169,7 +169,7 @@ Das folgende Diagramm zeigt die Gesamtarchitektur AEM Inhaltsfragmente
 
 + [Inhaltsfragmente - Benutzerhandbuch](https://helpx.adobe.com/experience-manager/6-5/assets/user-guide.html?topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
 + [Inhaltsfragmente in AEM](https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-feature-video-use.html)
-+ [Inhaltsfragment-Komponente AEM WCM-Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/content-fragment-component.html)
++ [Inhaltsfragment-Komponente AEM WCM-Kernkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/content-fragment-component.html)
 + [Inhaltsfragmente und AEM Content Services verwenden](https://helpx.adobe.com/experience-manager/kt/sites/using/structured-fragments-content-services-feature-video-use.html)
 + [Erste Schritte mit AEM Content Services](https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html)
 
