@@ -1,8 +1,8 @@
 ---
-title: Verwenden von Panorama- und Vertikal-Bild-Viewern mit dynamischen AEM Assets-Medien
-seo-title: Verwenden von Panorama- und Vertikal-Bild-Viewern mit dynamischen AEM Assets-Medien
-description: Zu den Verbesserungen des dynamischen Media Viewers in AEM 6.4 zählen der Panorama-Bild-Viewer, der Panorama-Viewer für die virtuelle Realität und der vertikale Bild-Viewer. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein eindrucksvolles Erlebnis im Raum, der Immobilie, der Lage oder der Landschaft ohne eigene Entwicklung zu bieten.
-seo-description: Zu den Verbesserungen des dynamischen Media Viewers in AEM 6.4 zählen der Panorama-Bild-Viewer, der Panorama-Viewer für die virtuelle Realität und der vertikale Bild-Viewer. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein eindrucksvolles Erlebnis im Raum, der Immobilie, der Lage oder der Landschaft ohne eigene Entwicklung zu bieten.
+title: Verwenden von Panorama- und Vertikalbild-Viewern mit AEM Assets Dynamic Media
+seo-title: Verwenden von Panorama- und Vertikalbild-Viewern mit AEM Assets Dynamic Media
+description: Zu den Verbesserungen des Dynamic Media Viewers in AEM 6.4 gehören der Panorama-Bild-Viewer, der Panorama-Viewer für die virtuelle Realität und der vertikale Bildbetrachter. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein eindrucksvolles Erlebnis im Raum, der Immobilie, der Lage oder der Landschaft ohne eigene Entwicklung zu bieten.
+seo-description: Zu den Verbesserungen des Dynamic Media Viewers in AEM 6.4 gehören der Panorama-Bild-Viewer, der Panorama-Viewer für die virtuelle Realität und der vertikale Bildbetrachter. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein eindrucksvolles Erlebnis im Raum, der Immobilie, der Lage oder der Landschaft ohne eigene Entwicklung zu bieten.
 sub-product: dynamic-media
 feature: video-profiles, video-profiles, vr-360
 topics: videos, renditions, authoring
@@ -19,15 +19,15 @@ ht-degree: 1%
 ---
 
 
-# Verwenden von Panorama- und Vertikal-Bild-Viewer mit AEM Assets Dynamic Media{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
+# Verwenden von Panorama- und Vertikalbild-Viewer mit AEM Assets Dynamic Media{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
 
-Zu den Verbesserungen des dynamischen Media Viewers in AEM 6.4 zählen der Panorama-Bild-Viewer, der Panorama-Viewer für die virtuelle Realität und der vertikale Bild-Viewer. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein eindrucksvolles Erlebnis im Raum, der Immobilie, der Lage oder der Landschaft ohne eigene Entwicklung zu bieten.
+Zu den Verbesserungen des Dynamic Media Viewers in AEM 6.4 gehören der Panorama-Bild-Viewer, der Panorama-Viewer für die virtuelle Realität und der vertikale Bildbetrachter. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein eindrucksvolles Erlebnis im Raum, der Immobilie, der Lage oder der Landschaft ohne eigene Entwicklung zu bieten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/24156/?quality=9&learn=on)
 
 >[!NOTE]
 >
->Video geht davon aus, dass Ihre AEM-Instanz im Modus Dynamische Medien S7 ausgeführt wird. [Anweisungen zum Einrichten von AEM mit dynamischen Medien finden Sie hier.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>Video geht davon aus, dass Ihre AEM Instanz im Dynamic Media S7-Modus ausgeführt wird. [Anweisungen zur Einrichtung von AEM mit Dynamic Media finden Sie hier.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## Panoramaanzeige und Panoramaanzeige
 
@@ -51,9 +51,9 @@ Bei horizontalen Farbfeldern sind die Farbfelder je nach Desktop-Bildschirmgrö�
    <td>Vertikaler Bild-Viewer</td>
   </tr>
   <tr>
-   <td>Dynamischer Medienlaufmodus</td>
-   <td>Nur Scene7-Modus für dynamische Medien</td>
-   <td>DMS7 und dynamische Medien</td>
+   <td>Dynamic Media-Ausführungsmodus</td>
+   <td>Nur Dynamic Media Scene7-Modus</td>
+   <td>DMS7 und Dynamic Media</td>
   </tr>
   <tr>
    <td>Nutzungsszenario </td>
@@ -68,9 +68,9 @@ Bei horizontalen Farbfeldern sind die Farbfelder je nach Desktop-Bildschirmgrö�
  </tbody>
 </table>
 
-[Dynamische Medien im Scene7-Modus konfigurieren](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[Konfigurieren von Dynamic Media im Scene7-Modus](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
 
-[Konfigurieren dynamischer Medien im Hybridmodus](https://helpx.adobe.com/de/experience-manager/6-5/assets/using/config-dynamic.html)
+[Konfigurieren von Dynamic Media im Hybridmodus](https://helpx.adobe.com/de/experience-manager/6-5/assets/using/config-dynamic.html)
 
 >[!NOTE]
 >
