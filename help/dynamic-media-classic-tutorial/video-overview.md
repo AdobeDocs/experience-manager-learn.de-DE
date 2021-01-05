@@ -1,6 +1,6 @@
 ---
 title: Videoüberblick
-description: Im Lieferumfang von Dynamic Media Classic sind automatische Konvertierungen von Videos beim Hochladen, Video-Streaming auf Desktop- und Mobilgeräte sowie adaptive Videosets enthalten, die für die Wiedergabe auf Grundlage des Geräts und der Bandbreite optimiert wurden. Erfahren Sie mehr über Videos in Dynamic Media Classic und erhalten Sie einen Einstieg in Videokonzepte und Terminologie. Tauchen Sie anschließend ein in die Vorgehensweise zum Hochladen und Kodieren von Videos und wählen Sie Video-Vorgaben zum Hochladen, Hinzufügen oder Bearbeiten einer Videovorgabe, Vorschau von Videos in einem Video-Viewer, Bereitstellen von Videos auf Websites und mobilen Sites, Hinzufügen von Untertiteln und Kapitelmarken zu Videos und Veröffentlichen von Video-Viewern für Desktop- und Mobilbenutzer.
+description: Im Lieferumfang von Dynamic Media Classic sind automatische Konvertierungen von Videos beim Hochladen, Video-Streaming auf Desktop- und Mobilgeräte sowie adaptive Videosets enthalten, die für die Wiedergabe je nach Gerät und Bandbreite optimiert sind. Erfahren Sie mehr über Videos in Dynamic Media Classic und lernen Sie Videoneuschnitte und Terminologie kennen. Tauchen Sie anschließend ein in die Vorgehensweise zum Hochladen und Kodieren von Videos und wählen Sie Video-Vorgaben zum Hochladen, Hinzufügen oder Bearbeiten einer Videovorgabe, Vorschau von Videos in einem Video-Viewer, Bereitstellen von Videos auf Websites und mobilen Sites, Hinzufügen von Untertiteln und Kapitelmarken zu Videos und Veröffentlichen von Video-Viewern für Desktop- und Mobilbenutzer.
 sub-product: dynamic-media
 feature: Viewer Presets
 doc-type: tutorial
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # Videoüberblick {#video-overview}
 
-Im Lieferumfang von Dynamic Media Classic sind automatische Konvertierungen von Videos beim Hochladen, Video-Streaming auf Desktop- und Mobilgeräte sowie adaptive Videosets enthalten, die für die Wiedergabe auf Grundlage des Geräts und der Bandbreite optimiert wurden. Eines der wichtigsten Dinge an Videos ist, dass der Workflow einfach ist — — Es wurde so konzipiert, dass jeder es verwenden kann, selbst wenn er mit Videotechnologie nicht sehr vertraut ist.
+Im Lieferumfang von Dynamic Media Classic sind automatische Konvertierungen von Videos beim Hochladen, Video-Streaming auf Desktop- und Mobilgeräte sowie adaptive Videosets enthalten, die für die Wiedergabe je nach Gerät und Bandbreite optimiert sind. Eines der wichtigsten Dinge an Videos ist, dass der Workflow einfach ist — — Es wurde so konzipiert, dass jeder es verwenden kann, selbst wenn er mit Videotechnologie nicht sehr vertraut ist.
 
 Am Ende dieses Abschnitts des Tutorials erfahren Sie, wie:
 
@@ -34,25 +34,25 @@ Am Ende dieses Abschnitts des Tutorials erfahren Sie, wie:
 >
 >Alle URLs in diesem Kapitel dienen nur zu Veranschaulichungszwecken; es handelt sich nicht um Live-Links.
 
-## Übersicht über das Classic-Video für dynamische Medien
+## Überblick über Dynamic Media Classic Video
 
 Lassen Sie uns zunächst ein besseres Bild von den Möglichkeiten für Videos mit Dynamic Media Classic machen.
 
 ### Funktionen
 
-Die Videoplattform &quot;Dynamic Media Classic&quot;Angebot alle Teile der Videolösung — Hochladen, Konvertieren und Verwalten von Videos; die Möglichkeit, einem Video Untertitel und Kapitelmarken hinzuzufügen; und die Möglichkeit, Vorgaben für eine einfache Wiedergabe zu verwenden.
+Die Dynamic Media Classic-Videoplattform Angebot alle Teile der Videolösung — Hochladen, Konvertieren und Verwalten von Videos; die Möglichkeit, einem Video Untertitel und Kapitelmarken hinzuzufügen; und die Möglichkeit, Vorgaben für eine einfache Wiedergabe zu verwenden.
 
 Damit ist es ganz einfach, hochwertige adaptive Videos für das Streaming über mehrere Bildschirme zu veröffentlichen, einschließlich Desktop-, iOS-, Android-, Blackberry- und Windows-Mobilgeräten. Es umfasst Versionen desselben Videos, die mit unterschiedlichen Bitraten und Formaten kodiert wurden, wie 400 kBit/s, 800 kBit/s und 1000 kBit/s. Der Desktop-Computer oder das Mobilgerät erkennt die verfügbare Bandbreite.
 
-Darüber hinaus wird die Videoqualität automatisch eingestellt, wenn sich die Netzwerkbedingungen auf dem Desktop oder auf dem Mobilgerät ändern. Wenn ein Kunde auf einem Desktop in den Vollbildmodus wechselt, reagiert das adaptive Video-Set mit einer besseren Auflösung und verbessert so die Sichtbarkeit des Kunden. Mit adaptiven Video-Sets erhalten Sie die bestmögliche Wiedergabe von Videos, die von Kunden auf mehreren Bildschirmen und Geräten wiedergegeben werden.
+Darüber hinaus wird die Videoqualität automatisch eingestellt, wenn sich die Netzwerkbedingungen auf dem Desktop oder auf dem Mobilgerät ändern. Wenn ein Kunde auf einem Desktop in den Vollbildmodus wechselt, reagiert das adaptive Video-Set mit einer besseren Auflösung und verbessert so die Sichtbarkeit des Kunden. Mit adaptiven Video-Sets erhalten Sie die bestmögliche Wiedergabe von Dynamic Media Classic-Videos auf mehreren Bildschirmen und Geräten.
 
 ### Videomanagement
 
-Das Arbeiten mit Videos kann komplexer sein als das Arbeiten mit digitalen Standbildern. Mit Videos haben Sie es mit zahlreichen Formaten und Standards zu tun und die Unsicherheit, ob Ihre Audience Ihre Clips wiedergeben kann. Mit Dynamic Media Classic können Sie ganz einfach mit Videos arbeiten, indem Sie viele leistungsstarke Tools &quot;unter der Haube&quot;bereitstellen, aber die Komplexität der Arbeit mit ihnen entfällt.
+Das Arbeiten mit Videos kann komplexer sein als das Arbeiten mit digitalen Standbildern. Mit Videos haben Sie es mit zahlreichen Formaten und Standards zu tun und die Unsicherheit, ob Ihre Audience Ihre Clips wiedergeben kann. Mit Dynamic Media Classic ist es einfach, mit Videos zu arbeiten, da es viele leistungsstarke Tools &quot;unter der Haube&quot;bietet, die aber die Komplexität der Arbeit mit ihnen beseitigt.
 
 Dynamic Media Classic erkennt und kann mit vielen verschiedenen verfügbaren Quellformaten arbeiten. Das Lesen des Videos ist jedoch nur ein Teil der Anstrengung — Sie müssen das Video auch in ein webfreundliches Format konvertieren. Dynamic Media Classic sorgt dafür, dass Sie Videos in H.264-Videos konvertieren können.
 
-Das Konvertieren des Videos selbst kann mit den vielen professionellen und begeisterten Werkzeugen sehr kompliziert werden. Dynamische Medien-Classic sorgen für eine einfache Handhabung durch einfache Vorgaben, die für unterschiedliche Qualitätseinstellungen optimiert sind. Wenn Sie jedoch etwas benutzerspezifischeres wünschen, können Sie auch eigene Vorgaben erstellen.
+Das Konvertieren des Videos selbst kann mit den vielen professionellen und begeisterten Werkzeugen sehr kompliziert werden. Dynamic Media Classic bietet einfache Vorgaben, die für unterschiedliche Qualitätseinstellungen optimiert sind. Wenn Sie jedoch etwas benutzerspezifischeres wünschen, können Sie auch eigene Vorgaben erstellen.
 
 Wenn Sie viele Videos haben, werden Sie die Möglichkeit schätzen, alle Ihre Assets zusammen mit Ihren Bildern und anderen Medien in Dynamic Media Classic zu verwalten. Sie können Ihre Assets, einschließlich Video-Assets, organisieren, katalogisieren und durchsuchen, indem Sie leistungsstarke XMP Metadaten unterstützen.
 
@@ -60,19 +60,19 @@ Wenn Sie viele Videos haben, werden Sie die Möglichkeit schätzen, alle Ihre As
 
 Ähnlich wie beim Konvertieren von Videos, um sie webfreundlich und barrierefrei zu gestalten, besteht auch das Problem bei der Implementierung und Bereitstellung von Videos auf Ihrer Site. Die Entscheidung, ob Sie einen Spieler kaufen oder einen eigenen bauen, ihn für verschiedene Geräte und Bildschirme kompatibel machen und dann Ihre Spieler zu pflegen, kann eine Vollzeit-Besetzung sein.
 
-Auch hier können Sie mit dem Ansatz von Dynamic Media Classic die Vorgabe und den Viewer auswählen, die Ihren Anforderungen entsprechen. Sie haben viele verschiedene Viewer-Optionen und eine Bibliothek mit zahlreichen Vorgaben zur Verfügung.
+Auch hier können Sie mit Dynamic Media Classic die Vorgabe und den Viewer auswählen, die Ihren Anforderungen entsprechen. Sie haben viele verschiedene Viewer-Optionen und eine Bibliothek mit zahlreichen Vorgaben zur Verfügung.
 
 Sie können Videos auf einfache Weise für das Web und mobile Geräte bereitstellen, da Dynamic Media Classic HTML5-Videos unterstützt. Dadurch können Sie Zielgruppen für Benutzer mit verschiedenen Browsern sowie für Android- und iOS-Plattformbenutzer erstellen. Streaming-Video ermöglicht die reibungslose Wiedergabe von längeren oder hochauflösenden Inhalten, während progressive HTML5-Videos Vorgaben enthalten, die für den kleinen Bildschirm optimiert sind.
 
 Viewer-Vorgaben für Videos sind je nach Viewer-Typ teilweise konfigurierbar.
 
-Die Integration erfolgt wie bei allen Viewern über eine einzige URL für die dynamische Medienklassifizierung pro Viewer oder Video.
+Wie alle Viewer erfolgt die Integration über eine einzige Dynamic Media Classic-URL pro Viewer oder Video.
 
 >[!NOTE]
 >
->Als bewährte Methode verwenden Sie die HTML5-Video-Viewer von Dynamic Media Classic. Die in HTML5-Video-Viewern verwendeten Vorgaben sind robuste Video-Player. Durch die Kombination der Möglichkeit, die Wiedergabekomponenten mit HTML5 und CSS zu gestalten, die eingebettete Wiedergabe zu nutzen und je nach Browserfunktionalität adaptives und progressives Streaming zu verwenden, erweitern Sie die Reichweite Ihrer Rich-Media-Inhalte auf Desktop-, Tablet- und Mobilbenutzer und stellen eine optimierte Videoerfahrung sicher.
+>Als Best Practice sollten Sie die HTML5-Video-Viewer von Dynamic Media Classic verwenden. Die in HTML5-Video-Viewern verwendeten Vorgaben sind robuste Video-Player. Durch die Kombination der Möglichkeit, die Wiedergabekomponenten mit HTML5 und CSS zu gestalten, die eingebettete Wiedergabe zu nutzen und je nach Browserfunktionalität adaptives und progressives Streaming zu verwenden, erweitern Sie die Reichweite Ihrer Rich-Media-Inhalte auf Desktop-, Tablet- und Mobilbenutzer und stellen eine optimierte Videoerfahrung sicher.
 
-Ein letzter Hinweis zum Video zu Dynamic Media Classic, das für einige Kunden gelten kann: Es ist nicht möglich, dass für alle Firmen die automatische Konvertierung, das Streaming oder Video-Vorgaben aktiviert sind. Wenn Sie aus irgendeinem Grund nicht auf die URLs für das Streaming von Videos zugreifen können, kann dies der Grund sein. Sie können weiterhin progressiv heruntergeladene Videos hochladen und veröffentlichen und haben Zugriff auf alle Video-Viewer. Um jedoch alle Videofunktionen von Dynamic Media Classic nutzen zu können, wenden Sie sich an Ihren Kundenbetreuer oder Vertriebsmanager, um diese Funktionen zu aktivieren.
+Ein letzter Hinweis zu Dynamic Media Classic-Videos, die für einige Kunden gelten können: Es ist nicht möglich, dass für alle Firmen die automatische Konvertierung, das Streaming oder Video-Vorgaben aktiviert sind. Wenn Sie aus irgendeinem Grund nicht auf die URLs für das Streaming von Videos zugreifen können, kann dies der Grund sein. Sie können weiterhin progressiv heruntergeladene Videos hochladen und veröffentlichen und haben Zugriff auf alle Video-Viewer. Um jedoch die gesamten Videofunktionen von Dynamic Media Classic nutzen zu können, sollten Sie sich an Ihren Kundenbetreuer oder Vertriebsmanager wenden, um diese Funktionen zu aktivieren.
 
 Erfahren Sie mehr über [Video in Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/quick-start-video.html).
 
@@ -125,10 +125,10 @@ Bevor wir beginnen, sollten wir einige Begriffe besprechen, mit denen Sie vertra
 - **Framerate (Einzelbilder pro Sekunde oder FPS).** Die Anzahl der Frames oder Standbilder pro Sekunde des Videos. Normalerweise wird Nordamerikanisches Fernsehen (NTSC) mit 29,97 FPS ausgestrahlt. Das europäische und asiatische Fernsehen (PAL) wird in 25 FPS ausgestrahlt. und Film (analog und digital) sind in der Regel in 24 (23,976) FPS.
 
    - Um die Dinge verwirrender zu machen, gibt es auch progressive und interlaced Rahmen. Jeder progressive Rahmen enthält einen gesamten Bildrahmen, während Interlaced-Rahmen jede zweite Pixelzeile in einem Bildrahmen enthalten. Die Frames werden dann sehr schnell wiedergegeben und scheinen miteinander zu verschmelzen. Film verwendet eine progressive Scan-Methode, während digitale Videos in der Regel interlaced sind.
-   - Im Allgemeinen spielt es keine Rolle, ob Ihr Quellmaterial interlaced ist oder nicht — — Mit Dynamic Media Classic wird die Scanmethode im konvertierten Video beibehalten.
+   - Im Allgemeinen spielt es keine Rolle, ob Ihr Quellmaterial interlaced ist oder nicht — — Dynamic Media Classic behält die Scanmethode im konvertierten Video bei.
    - Streaming/Progressiver Versand. Beim Video-Streaming handelt es sich um das Senden von Medien in einem kontinuierlichen Stream, der beim Eintreffen wiedergegeben werden kann, während progressiv heruntergeladene Videos wie jede andere Datei von einem Server heruntergeladen und lokal im Browser zwischengespeichert werden.
 
-Mit diesem Leitfaden werden hoffentlich die verschiedenen Optionen für die Verwendung von Dynamic Media Classic-Videos veranschaulicht.
+Hoffentlich hilft Ihnen dieser Leitfaden, die verschiedenen Optionen, die mit der Verwendung von Dynamic Media Classic Video.
 
 ## Videoarbeitsablauf
 
@@ -136,7 +136,7 @@ Beim Arbeiten mit Videos in Dynamic Media Classic folgen Sie einem grundlegenden
 
 ![image](assets/video-overview/video-overview-2.png)
 
-1. Beginn durch Hochladen von Videodateien in Dynamic Media Classic. Öffnen Sie dazu das Menü **Tools** unten im Erweiterungs-Bedienfeld von Dynamic Media Classic und wählen Sie **In Dynamic Media Classic hochladen > Dateien in Ordnername** oder **In Dynamic Media Classic hochladen > Ordner in Ordnername**. &quot;Ordnername&quot;ist der Ordner, den Sie derzeit mit der Erweiterung durchsuchen. Videodateien können groß sein. Daher empfehlen wir, große Dateien mit FTP hochzuladen. Wählen Sie beim Hochladen eine oder mehrere Video-Vorgaben zum Kodieren Ihrer Videos aus. Videos können beim Hochladen in MP4-Videos transkodiert werden. Weitere Informationen zur Verwendung und Erstellung von Kodierungsvorgaben finden Sie im Thema Video-Vorgaben unten. Erfahren Sie mehr über [Hochladen und Kodieren von Videos](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/uploading-encoding-videos.html).
+1. Beginn durch Hochladen von Videodateien in Dynamic Media Classic. Öffnen Sie dazu das Menü **Tools** unten im Dynamic Media Classic Extension-Bedienfeld und wählen Sie **In Dynamic Media Classic hochladen > Dateien in Ordnername** oder **In Dynamic Media Classic hochladen > Ordner in Ordnername**. &quot;Ordnername&quot;ist der Ordner, den Sie derzeit mit der Erweiterung durchsuchen. Videodateien können groß sein. Daher empfehlen wir, große Dateien mit FTP hochzuladen. Wählen Sie beim Hochladen eine oder mehrere Video-Vorgaben zum Kodieren Ihrer Videos aus. Videos können beim Hochladen in MP4-Videos transkodiert werden. Weitere Informationen zur Verwendung und Erstellung von Kodierungsvorgaben finden Sie im Thema Video-Vorgaben unten. Erfahren Sie mehr über [Hochladen und Kodieren von Videos](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/uploading-encoding-videos.html).
 2. Wählen oder wählen Sie eine Video-Viewer-Vorgabe aus und ändern Sie sie und erstellen Sie eine Vorschau. Sie können entweder eine vordefinierte Viewer-Vorgabe auswählen oder Ihre eigene anpassen. Wenn Sie auf mobile Benutzer abzielen, müssen Sie hier nichts tun, da mobile Plattformen keinen Viewer oder keine Vorgabe benötigen. Erfahren Sie mehr über [Anzeigen einer Vorschau von Videos in einem Video-Viewer](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/previewing-videos-video-viewer.html) und [Hinzufügen oder Bearbeiten einer Video-Viewer-Vorgabe](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/previewing-videos-video-viewer.html#adding-or-editing-a-video-viewer-preset).
 3. Führen Sie eine Videoveröffentlichung aus, rufen Sie die URL ab und integrieren Sie sie. Der Hauptunterschied zwischen diesem Schritt für den Video-Workflow und dem Bild-Workflow besteht darin, dass Sie anstelle der standardmäßigen Image Serving-Veröffentlichung eine spezielle Videoveröffentlichung ausführen. Die Integration des Video-Viewers auf dem Desktop funktioniert genau wie die Integration des BildViewers, bei mobilen Geräten ist die Integration jedoch noch einfacher. — benötigen Sie lediglich die URL zum Video selbst.
 
@@ -144,21 +144,21 @@ Beim Arbeiten mit Videos in Dynamic Media Classic folgen Sie einem grundlegenden
 
 Transkodierung wurde früher definiert als der Prozess der Konvertierung von einer Kodierungsmethode in eine andere. Bei Dynamic Media Classic wird das Quellvideo aus dem aktuellen Format in das MP4-Format konvertiert. Dies ist erforderlich, bevor Ihr Video im Desktop-Browser oder auf einem Mobilgerät angezeigt wird.
 
-Dynamic Media Classic kann die Transkodierung für Sie durchführen - ein enormer Vorteil. Sie können das Video selbst transkodieren und die Dateien hochladen, die bereits in MP4 konvertiert wurden. Dies kann jedoch ein komplexer Prozess sein, der hoch entwickelte Software erfordert. Wenn Sie nicht wissen, was Sie tun, erhalten Sie normalerweise keine guten Ergebnisse bei Ihrem ersten Versuch.
+Dynamic Media Classic kann die Transkodierung für Sie durchführen - ein großer Vorteil. Sie können das Video selbst transkodieren und die Dateien hochladen, die bereits in MP4 konvertiert wurden. Dies kann jedoch ein komplexer Prozess sein, der hoch entwickelte Software erfordert. Wenn Sie nicht wissen, was Sie tun, erhalten Sie normalerweise keine guten Ergebnisse bei Ihrem ersten Versuch.
 
-Mit Dynamic Media Classic werden die Dateien nicht nur für Sie konvertiert, sondern auch durch benutzerfreundliche Vorgaben erleichtert. Sie müssen wirklich nicht viel über die technische Seite dieses Prozesses wissen — — Sie sollten nur wissen, ob es sich um die endgültige(n) Größe(en) handelt, die Sie aus dem System herausbekommen möchten, und wie viel Bandbreite Ihre Endbenutzer haben.
+Dynamic Media Classic konvertiert die Dateien nicht nur für Sie, sondern macht sie auch einfach, indem es einfach zu bedienende Vorgaben bereitstellt. Sie müssen wirklich nicht viel über die technische Seite dieses Prozesses wissen — — Sie sollten nur wissen, ob es sich um die endgültige(n) Größe(en) handelt, die Sie aus dem System herausbekommen möchten, und wie viel Bandbreite Ihre Endbenutzer haben.
 
 Die vordefinierten Vorgaben sind zwar praktisch und decken die meisten Anforderungen ab, aber manchmal möchten Sie etwas benutzerspezifischeres. In diesem Fall können Sie eine eigene Kodierungsvorgabe erstellen. In Dynamic Media Classic wird eine Kodierungsvorgabe als Video-Vorgabe bezeichnet. Dies wird weiter unten in diesem Kapitel erklärt.
 
 ### Info zu Streaming
 
-Eine weitere wichtige Funktion ist das Video-Streaming, eine Standardfunktion der Videoplattform &quot;Dynamic Media Classic&quot;. Streaming-Medien werden während der Auslieferung ständig von einem Endbenutzer empfangen und ihm präsentiert. Dies ist aus einer Reihe von Gründen wichtig und wünschenswert.
+Eine weitere wichtige Funktion ist das Video-Streaming, eine Standardfunktion der Dynamic Media Classic Videoplattform. Streaming-Medien werden während der Auslieferung ständig von einem Endbenutzer empfangen und ihm präsentiert. Dies ist aus einer Reihe von Gründen wichtig und wünschenswert.
 
-Streaming erfordert in der Regel weniger Bandbreite als progressives Herunterladen, da nur der Teil des Videos, der angesehen wird, tatsächlich bereitgestellt wird. Der Video-Streaming-Server und die Viewer von Dynamic Media Classic verwenden die automatische Bandbreitenerkennung, um den bestmöglichen Stream für die Internetverbindung des Benutzers bereitzustellen.
+Streaming erfordert in der Regel weniger Bandbreite als progressives Herunterladen, da nur der Teil des Videos, der angesehen wird, tatsächlich bereitgestellt wird. Der Dynamic Media Classic Video-Streaming-Server und die Viewer verwenden die automatische Bandbreitenerkennung, um den bestmöglichen Stream für die Internetverbindung des Benutzers bereitzustellen.
 
 Beim Streaming werden die Beginn früher abgespielt, als andere Methoden. Außerdem werden Netzwerkressourcen effizienter genutzt, da nur die Teile des Videos, die angezeigt werden, an den Client gesendet werden.
 
-Die andere Versand-Methode ist progressives Herunterladen. Im Vergleich zum Streaming-Video gibt es nur einen einzigen konsistenten Vorteil für den progressiven Download — — Sie benötigen keinen Streaming-Server, um das Video bereitzustellen. Und hier kommt natürlich Dynamic Media Classic hinzu — Dynamic Media Classic verfügt über einen Streaming-Server, der in die Plattform integriert ist. Daher benötigen Sie weder die Mühe noch zusätzliche Kosten für die Wartung dieser dedizierten Hardware.
+Die andere Versand-Methode ist progressives Herunterladen. Im Vergleich zum Streaming-Video gibt es nur einen einzigen konsistenten Vorteil für den progressiven Download — — Sie benötigen keinen Streaming-Server, um das Video bereitzustellen. Und hier kommt natürlich Dynamic Media Classic ins Spiel — Dynamic Media Classic verfügt über einen Streaming-Server, der in die Plattform integriert ist. Daher benötigen Sie weder die Mühe noch zusätzliche Kosten für die Wartung dieser dedizierten Hardware.
 
 Progressives Download-Video kann von jedem normalen Webserver bereitgestellt werden. Dies kann praktisch und potenziell kosteneffizient sein, aber beachten Sie, dass progressive Downloads nur über eingeschränkte Such- und Navigationsfunktionen verfügen und Benutzer auf Ihre Inhalte zugreifen und sie erneut verwenden können. In einigen Fällen, wie z. B. bei der Wiedergabe hinter sehr strikten Netzwerk-Firewalls, kann Streaming-Versand blockiert werden. In diesen Fällen kann eine Rückführung auf den progressiven Versand wünschenswert sein.
 
@@ -178,7 +178,7 @@ Adaptive Video-Vorgaben sind standardmäßig aktiviert, d. h. sie sind für die 
 
 Erfahren Sie, wie Sie [Video-Vorgaben aktivieren oder deaktivieren](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/uploading-encoding-videos.html#activating-or-deactivating-video-encoding-presets).
 
-Sie können eine von vielen vordefinierten Vorgaben auswählen, die mit Dynamic Media Classic geliefert werden, oder Sie können eigene Vorgaben erstellen. Standardmäßig werden jedoch keine Vorgaben für das Hochladen ausgewählt. Anders ausgedrückt: **Wenn Sie beim Hochladen keine Video-Vorgabe auswählen, wird Ihr Video nicht konvertiert und kann möglicherweise nicht veröffentlicht werden.** Sie können das Video jedoch auch offline konvertieren und hochladen und veröffentlichen. Video-Vorgaben sind nur erforderlich, wenn Sie möchten, dass Dynamic Media Classic die Konvertierung für Sie durchführt.
+Sie können eine von vielen vordefinierten Vorgaben auswählen, die im Lieferumfang von Dynamic Media Classic enthalten sind, oder Sie können eigene Vorgaben erstellen. Standardmäßig werden jedoch keine Vorgaben für das Hochladen ausgewählt. Anders ausgedrückt: **Wenn Sie beim Hochladen keine Video-Vorgabe auswählen, wird Ihr Video nicht konvertiert und kann möglicherweise nicht veröffentlicht werden.** Sie können das Video jedoch auch offline konvertieren und hochladen und veröffentlichen. Video-Vorgaben sind nur erforderlich, wenn die Konvertierung von Dynamic Media Classic für Sie durchgeführt werden soll.
 
 Beim Hochladen wählen Sie eine Video-Vorgabe aus, indem Sie im Bedienfeld &quot;Auftragsoptionen&quot;die Option **Videooptionen** wählen. Wählen Sie dann aus, ob Sie die Kodierung für Computer, Mobil oder Tablet vornehmen möchten.
 
@@ -207,7 +207,7 @@ Video-Vorgaben bestimmen, wie Ihr Video kodiert werden soll, indem Sie diese Ein
 
 ### Bestimmen der Datenrate oder &quot;Bitrate&quot; für Ihr Video
 
-Die Berechnung der Bitrate für Ihr Video ist einer der am wenigsten verstandenen Faktoren für die Bereitstellung von Videos im Internet, möglicherweise jedoch der wichtigste, da es sich direkt auf die Benutzererfahrung auswirkt. Wenn Sie die Bitrate zu hoch einstellen, haben Sie eine hohe Videoqualität, aber eine schlechte Leistung. Benutzer mit langsameren Internetverbindungen werden gezwungen zu warten, während das Video während der Wiedergabe andauernd angehalten wird. Wenn Sie es jedoch zu niedrig einstellen, leidet die Qualität. Innerhalb der Video-Vorgabe schlägt Dynamic Media Classic einen Datenbereich vor, der von der Bandbreite Ihrer Zielgruppe abhängt. Das ist ein guter Ort zum Beginn.
+Die Berechnung der Bitrate für Ihr Video ist einer der am wenigsten verstandenen Faktoren für die Bereitstellung von Videos im Internet, möglicherweise jedoch der wichtigste, da es sich direkt auf die Benutzererfahrung auswirkt. Wenn Sie die Bitrate zu hoch einstellen, haben Sie eine hohe Videoqualität, aber eine schlechte Leistung. Benutzer mit langsameren Internetverbindungen werden gezwungen zu warten, während das Video während der Wiedergabe andauernd angehalten wird. Wenn Sie es jedoch zu niedrig einstellen, leidet die Qualität. Innerhalb der Video-Vorgabe schlägt Dynamic Media Classic eine Reihe von Daten vor, die von der Bandbreite Ihrer Zielgruppe abhängen. Das ist ein guter Ort zum Beginn.
 
 Wenn Sie es jedoch selbst herausfinden möchten, benötigen Sie einen Bitratenrechner. Dieses Tool wird von Videoprofis und -fans häufig verwendet, um zu schätzen, wie viele Daten in einen bestimmten Stream oder ein bestimmtes Medienelement (z. B. eine DVD) passen.
 
@@ -228,14 +228,14 @@ Manchmal benötigen Sie eine spezielle Video-Vorgabe, die nicht mit den Einstell
 4. Geben Sie zunächst ein **Vorgabenname** ein, um in der Liste der Vorgaben angezeigt zu werden. Im obigen Beispiel ist diese Vorgabe für Video-Lernprogramme zur Bildschirmerfassung vorgesehen.
 5. Die Option **Beschreibung** ist optional, gibt Ihren Benutzern jedoch eine QuickInfo, in der der Zweck dieser Vorgabe beschrieben wird.
 6. Das **Encode File Suffix** wird an das Ende des Namens des Videos angehängt, das Sie hier erstellen. Denken Sie daran, dass Sie sowohl über ein Übergeordnet-Video als auch über dieses kodierte Video verfügen, das vom Übergeordnete abgeleitet ist, und dass nicht zwei Assets in Dynamic Media Classic dieselbe Asset-ID haben können.
-7. **Wiedergabe-** Geräte, auf denen Sie das gewünschte Videodateiformat auswählen (Computer, Mobil oder Tablet). Denken Sie daran, dass Mobile und Tablet dasselbe MP4-Format erzeugen. Dynamic Media Classic muss lediglich wissen, in welcher Kategorie die Vorgabe platziert werden soll. Der theoretische Unterschied ist jedoch, dass Tablet-Vorgaben in der Regel für eine schnellere Internetverbindung geeignet sind, da alle WiFi unterstützen.
+7. **Wiedergabe-** Geräte, auf denen Sie das gewünschte Videodateiformat auswählen (Computer, Mobil oder Tablet). Denken Sie daran, dass Mobile und Tablet dasselbe MP4-Format erzeugen. Dynamic Media Classic muss nur wissen, in welcher Kategorie die Vorgabe platziert werden soll. Der theoretische Unterschied ist jedoch, dass Tablet-Vorgaben in der Regel für eine schnellere Internetverbindung geeignet sind, da alle WiFi unterstützen.
 8. **Zielgruppe Data** Rateis ist etwas, das Sie selbst herausfinden müssen, aber Sie können einen vorgeschlagenen Bereich auf dem Bild unten sehen. Sie können alternativ den Schieberegler auf die ungefähre Bandbreite der Zielgruppe ziehen. Für eine genauere Abbildung verwenden Sie einen Bitratenrechner. Es geht um eine gewisse Testphase und einen Fehler.
 
    ![image](assets/video-overview/video-overview-5.jpg)
 
 9. Legen Sie das **Seitenverhältnis der Quelldatei** fest. Diese Einstellung ist direkt an die Größe unten gebunden. Wenn Sie _Benutzerdefiniert_ wählen, müssen Sie sowohl Breite als auch Höhe manuell eingeben.
-10. Wenn Sie ein Seitenverhältnis auswählen, legen Sie einen Wert für **Auflösung** fest und der Wert für &quot;Dynamische Medien Classic&quot;wird automatisch ausgefüllt. Geben Sie für ein benutzerdefiniertes Seitenverhältnis jedoch beide Werte ein. Ihre Größe sollte mit Ihrer Datenrate übereinstimmen. Wenn Sie eine sehr niedrige Datenrate und eine große Größe festlegen, würden Sie davon ausgehen, dass die Qualität schlecht ist.
-11. Klicken Sie auf **Speichern**, um Ihre Vorgabe zu speichern. Im Gegensatz zu jeder anderen Vorgabe müssen Sie zu diesem Zeitpunkt keine Veröffentlichungen vornehmen, da die Vorgaben nur zum Hochladen von Dateien verwendet werden. Später müssen Sie die kodierten Videos veröffentlichen, aber die Vorgaben dienen nur der internen Verwendung von Dynamic Media Classic.
+10. Wenn Sie ein Seitenverhältnis auswählen, legen Sie einen Wert für **Auflösung** fest, und der andere Wert wird automatisch von Dynamic Media Classic ausgefüllt. Geben Sie für ein benutzerdefiniertes Seitenverhältnis jedoch beide Werte ein. Ihre Größe sollte mit Ihrer Datenrate übereinstimmen. Wenn Sie eine sehr niedrige Datenrate und eine große Größe festlegen, würden Sie davon ausgehen, dass die Qualität schlecht ist.
+11. Klicken Sie auf **Speichern**, um Ihre Vorgabe zu speichern. Im Gegensatz zu jeder anderen Vorgabe müssen Sie zu diesem Zeitpunkt keine Veröffentlichungen vornehmen, da die Vorgaben nur zum Hochladen von Dateien verwendet werden. Später müssen Sie die kodierten Videos veröffentlichen, aber die Vorgaben dienen nur der internen Dynamic Media Classic-Nutzung.
 12. Um zu überprüfen, ob sich Ihre Videovorgabe auf der Upload-Liste befindet, gehen Sie zu **Hochladen**.Wählen Sie **Auftragsoptionen** und erweitern Sie **Videooptionen**. Ihre Vorgabe wird in der Kategorie des ausgewählten Wiedergabegeräts (Computer, Mobil oder Tablet) aufgeführt.
 
 Erfahren Sie mehr über [Hinzufügen oder Bearbeiten einer Video-Vorgabe](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/uploading-encoding-videos.html#adding-or-editing-a-video-encoding-preset).
@@ -256,7 +256,7 @@ Erfahren Sie, wie Sie [Hinzufügen Kapitelmarkierungen in Video](https://docs.ad
 
 ### URL veröffentlichen und kopieren
 
-Der letzte Schritt im Arbeitsablauf für dynamische Medien-Classic besteht darin, Ihre Videoinhalte zu veröffentlichen. Videos haben jedoch einen eigenen Veröffentlichungsauftrag, der als Video-Server-Veröffentlichung bezeichnet wird und unter &quot;Erweitert&quot;gefunden wird.
+Der letzte Schritt im Arbeitsablauf von Dynamic Media Classic besteht darin, Ihre Videoinhalte zu veröffentlichen. Videos haben jedoch einen eigenen Veröffentlichungsauftrag, der als Video-Server-Veröffentlichung bezeichnet wird und unter &quot;Erweitert&quot;gefunden wird.
 
 ![image](assets/video-overview/video-overview-6.jpg)
 
@@ -292,17 +292,17 @@ Die Suchmaschinenoptimierung (SEO) ist der Prozess zur Verbesserung der Sichtbar
 
 Wenn Sie Video-Sitemaps und mRSS-Feeds erstellen, entscheiden Sie, welche Metadatenfelder aus Videodateien einbezogen werden sollen. Auf diese Weise beschreiben Sie Ihre Videos für Suchmaschinen, damit Suchmaschinen den Traffic zu Videos auf Ihrer Website genauer leiten können.
 
-Nachdem Sie die Sitemap oder den Feed erstellt haben, können Sie sie automatisch veröffentlichen, manuell veröffentlichen oder einfach eine Datei generieren, die Sie später bearbeiten können. Darüber hinaus kann die Datei von Dynamic Media Classic jeden Tag automatisch generiert und veröffentlicht werden.
+Nachdem die Sitemap oder der Feed erstellt wurde, können Sie sie von Dynamic Media Classic automatisch veröffentlichen, manuell veröffentlichen oder einfach eine Datei erstellen lassen, die Sie später bearbeiten können. Zusätzlich kann Dynamic Media Classic diese Datei jeden Tag automatisch erstellen und veröffentlichen.
 
-Am Ende des Prozesses senden Sie die Datei oder URL an Ihre Suchmaschine. Diese Aufgabe erfolgt außerhalb von Dynamic Media Classic. aber wir werden es unten kurz besprechen.
+Am Ende des Prozesses senden Sie die Datei oder URL an Ihre Suchmaschine. Diese Aufgabe findet außerhalb von Dynamic Media Classic statt. aber wir werden es unten kurz besprechen.
 
 ### Anforderungen für Sitemap-/mRSS-Dateien
 
-Damit Google und andere Suchmaschinen Ihre Dateien nicht zurückweisen können, müssen sie im richtigen Format vorliegen und bestimmte Informationen enthalten. Dynamic Media Classic generiert eine ordnungsgemäß formatierte Datei. Wenn die Informationen jedoch für einige Ihrer Videos nicht verfügbar sind, werden sie nicht in die Datei aufgenommen.
+Damit Google und andere Suchmaschinen Ihre Dateien nicht zurückweisen können, müssen sie im richtigen Format vorliegen und bestimmte Informationen enthalten. Dynamic Media Classic erstellt eine ordnungsgemäß formatierte Datei. Wenn die Informationen jedoch für einige Ihrer Videos nicht verfügbar sind, werden sie nicht in die Datei aufgenommen.
 
 Die erforderlichen Felder sind Landingpage (URL der Seite, die das Video bereitstellt, nicht die URL des Videos selbst), Titel und Beschreibung. Jedes Video muss einen Eintrag für diese Elemente enthalten, oder es wird nicht in die generierte Datei aufgenommen. Optionale Felder sind Tags und Kategorie.
 
-Es gibt zwei weitere erforderliche Felder — Inhalts-URL, URL zum Videoasset selbst und Miniaturansicht, URL zum Miniaturbild des Videos — Dynamische Medien Classic füllen diese Werte automatisch aus.
+Es gibt zwei weitere erforderliche Felder — Inhalts-URL, URL zum Videoasset selbst und Miniaturansicht, URL zum Miniaturbild des Videos — dynamic media Classic füllt diese Werte automatisch für Sie aus.
 
 Der empfohlene Arbeitsablauf besteht darin, diese Daten vor dem Hochladen mit XMP Metadaten in Ihre Videos einzubetten, und Dynamic Media Classic extrahiert sie beim Hochladen. Sie würden eine Anwendung wie Adobe Bridge — die in allen Adobe Creative Cloud-Anwendungen enthalten sind — , um die Daten in Standard-Metadatenfelder zu füllen.
 
@@ -348,21 +348,21 @@ Beispiel:
 
 Der letzte Schritt des Prozesses besteht darin, Ihre Dateien und/oder URLs an Suchmaschinen zu senden. Dynamic Media Classic kann diesen Schritt nicht für Sie ausführen. Wenn Sie jedoch die URL und nicht die XML-Datei selbst senden, sollte Ihr Feed aktualisiert werden, wenn Ihre Datei das nächste Mal generiert und eine Veröffentlichung erfolgt.
 
-Die Methode zum Übermitteln an Ihre Suchmaschine wird unterschiedlich sein, für Google verwenden Sie jedoch Google Webmaster Tools. Wechseln Sie dann zu **Site-Konfiguration > Sitemaps** und klicken Sie auf die Schaltfläche **Eine Sitemap** senden. Hier können Sie die URL von Dynamic Media Classic in Ihre SEO-Datei(en) einfügen.
+Die Methode zum Übermitteln an Ihre Suchmaschine wird unterschiedlich sein, für Google verwenden Sie jedoch Google Webmaster Tools. Wechseln Sie dann zu **Site-Konfiguration > Sitemaps** und klicken Sie auf die Schaltfläche **Eine Sitemap** senden. Hier können Sie die Dynamic Media Classic URL in Ihre SEO-Datei(en) einfügen.
 
 ### Video SEO-Bericht
 
-Dynamic Media Classic stellt einen Bericht bereit, der Ihnen zeigt, wie viele Videos erfolgreich in die Dateien aufgenommen wurden, und vor allem, welche aufgrund von Fehlern nicht eingeschlossen wurden. Um auf den Bericht zuzugreifen, gehen Sie zu **Einstellungen > Anwendungseinstellungen > Video SEO > Bericht**.
+Dynamic Media Classic stellt einen Bericht bereit, der Ihnen zeigt, wie viele Videos erfolgreich in die Dateien aufgenommen wurden, und was noch wichtiger ist, welche aufgrund von Fehlern nicht eingeschlossen wurden. Um auf den Bericht zuzugreifen, gehen Sie zu **Einstellungen > Anwendungseinstellungen > Video SEO > Bericht**.
 
 ![image](assets/video-overview/video-overview-9.jpg)
 
 ## Mobile-Implementierung für MP4-Video
 
-Dynamische Medien-Classic enthält keine Viewer-Vorgaben für Mobilgeräte, da Viewer zur Wiedergabe von Videos auf unterstützten Mobilgeräten nicht erforderlich sind. Solange Sie das Format H.264 MP4 kodieren — entweder durch Konvertierung beim Hochladen oder durch Vorkodierung auf dem Desktop — unterstützte Tablets und Smartphones können Ihre Videos abspielen, ohne dass ein Viewer erforderlich ist. Dies wird auf Android- und iOS-Geräten (iPhone und iPad) unterstützt.
+Dynamic Media Classic enthält keine Viewer-Vorgaben für Mobilgeräte, da Viewer zur Wiedergabe von Videos auf unterstützten Mobilgeräten nicht erforderlich sind. Solange Sie das Format H.264 MP4 kodieren — entweder durch Konvertierung beim Hochladen oder durch Vorkodierung auf dem Desktop — unterstützte Tablets und Smartphones können Ihre Videos abspielen, ohne dass ein Viewer erforderlich ist. Dies wird auf Android- und iOS-Geräten (iPhone und iPad) unterstützt.
 
 Der Grund dafür, dass kein Viewer erforderlich ist, ist, dass beide Plattformen native H.264-Unterstützung haben. Sie können das Video entweder in eine HTML5-Webseite einbetten oder das Video in die Anwendung selbst einbetten. Die Betriebssysteme Android und iOS bieten einen Controller, mit dem das Video wiedergegeben werden kann.
 
-Aus diesem Grund gibt Ihnen Dynamic Media Classic keine URL für einen Viewer für Mobilgeräte, sondern eine URL direkt für das Video. Im Fenster &quot;Vorschau&quot;für ein MP4-Video werden Links für Desktop und Mobil angezeigt. Die Mobil-URL verweist auf das veröffentlichte Video.
+Aus diesem Grund gibt Dynamic Media Classic keine URL für einen Viewer für Mobilgeräte, sondern eine URL direkt für das Video. Im Fenster &quot;Vorschau&quot;für ein MP4-Video werden Links für Desktop und Mobil angezeigt. Die Mobil-URL verweist auf das veröffentlichte Video.
 
 Bei veröffentlichten Videos ist zu beachten, dass die URL den vollständigen Pfad zum Video Liste, nicht nur die Asset-ID. Beim Umgang mit Bildern rufen Sie das Bild unabhängig von der Ordnerstruktur anhand der Asset-ID auf. Für Videos müssen Sie jedoch auch die Ordnerstruktur angeben. In den oben stehenden URLs wird das Video im Pfad gespeichert:
 
@@ -380,10 +380,10 @@ Diese Methode funktioniert auch für Desktop-Web, allerdings kann es bei der Bro
 
 ### Methode Nr. 2: App-Wiedergabe unter iOS — Media Player Framework
 
-Alternativ dazu können Sie das Video für das dynamische Medienklassiker MP4 in den Code Ihrer mobilen Anwendung einbetten. Im Folgenden finden Sie ein allgemeines Beispiel für iOS mit dem Media Player-Framework, das nur zu Veranschaulichungszwecken angegeben wird:
+Alternativ dazu können Sie das Video &quot;Dynamic Media Classic MP4&quot;in den Code Ihrer mobilen Anwendung einbetten. Im Folgenden finden Sie ein allgemeines Beispiel für iOS mit dem Media Player-Framework, das nur zu Veranschaulichungszwecken angegeben wird:
 
 ![image](assets/video-overview/app-playback.png)
 
 ## Zusätzliche Ressourcen
 
-Sehen Sie sich den [Dynamic Media Skill Builder an: Video im On-Demand-Webinar von Dynamic Media Classic](https://seminars.adobeconnect.com/p2ueiaswkuze), um zu erfahren, wie die Videofunktionen in Dynamic Media Classic verwendet werden.
+Sehen Sie sich den [Dynamic Media Skill Builder an: Video im Dynamic Media Classic](https://seminars.adobeconnect.com/p2ueiaswkuze)-On-Demand-Webinar, um zu erfahren, wie die Videofunktionen in Dynamic Media Classic verwendet werden.
