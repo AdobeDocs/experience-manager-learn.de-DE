@@ -71,8 +71,8 @@ Erfahren Sie mehr über [Bereitstellen von Inhaltsfragmenten](content-fragments-
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [Bereitstellen von Inhaltsfragmenten](content-fragments-delivery-feature-video-use.md)
-* [AEM WCM-Hauptkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html)
-* [AEM WCM-Kerninhaltsfragment-Komponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/content-fragment-component.html)
+* [AEM WCM-Hauptkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html)
+* [AEM WCM-Kerninhaltsfragment-Komponente](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/content-fragment-component.html)
 
 So laden Sie das unten stehende Paket auf eine AEM 6.4+-Instanz für den finalen Status aus der Videoreihe herunter und installieren es:
 
