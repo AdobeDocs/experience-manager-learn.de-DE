@@ -35,7 +35,7 @@ Dieses Lernprogramm umfasst die Erstellung eines Maven-Multi-Module-Projekts zur
 1. Machen Sie sich mit den verschiedenen Modulen vertraut, die vom AEM-Projektarchetyp generiert wurden und wie sie zusammenarbeiten.
 1. Verstehen Sie, wie AEM Kernkomponenten in ein AEM Projekt einbezogen werden.
 
-## {#what-build}
+## Was Sie erstellen werden {#what-build}
 
 >[!VIDEO](https://video.tv.adobe.com/v/30152/?quality=12&learn=on)
 
@@ -207,7 +207,7 @@ Nachdem wir ein neues Projekt erstellt haben, können wir den Projektcode auf ei
 
 1. Navigieren Sie zu Package Manager auf Ihrer lokalen AEM: [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). Es sollten drei Pakete für `aem-guides-wknd.ui.apps`, `aem-guides-wknd.ui.content` und `aem-guides-wknd.all` angezeigt werden.
 
-   Es sollten auch mehrere Pakete für [AEM Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html) angezeigt werden, die vom Archetyp im Projekt enthalten sind. Dies wird später im Tutorial behandelt.
+   Es sollten auch mehrere Pakete für [AEM Kernkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html) angezeigt werden, die vom Archetyp im Projekt enthalten sind. Dies wird später im Tutorial behandelt.
 
 1. Navigieren Sie zur Sites-Konsole: [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content). Die WKND-Site wird eine der Sites sein. Es wird eine Site-Struktur mit einer Hierarchie der US- und Sprachmeister enthalten. Diese Site-Hierarchie basiert auf den Werten für `language_country` und `isSingleCountryWebsite`, wenn das Projekt mit dem Archetyp generiert wird.
 
