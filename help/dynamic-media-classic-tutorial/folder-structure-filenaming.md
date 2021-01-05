@@ -1,6 +1,6 @@
 ---
 title: Bestimmen der Ordnerstruktur und Dateibenennungskonvention
-description: Die Dateibenennung ist möglicherweise die wichtigste Entscheidung, die Sie bei der Implementierung von Dynamic Media Classic treffen werden. Die Ordnerstruktur ist ebenfalls wichtig. Erfahren Sie, warum es so wichtig und möglich ist, Ansätze für Ihre Ordnerstruktur und Dateinamen zu verwenden.
+description: Die Dateibenennung ist vielleicht die wichtigste Entscheidung, die Sie bei der Implementierung von Dynamic Media Classic treffen werden. Die Ordnerstruktur ist ebenfalls wichtig. Erfahren Sie, warum es so wichtig und möglich ist, Ansätze für Ihre Ordnerstruktur und Dateinamen zu verwenden.
 sub-product: dynamic-media
 feature: null
 doc-type: tutorial
@@ -26,13 +26,13 @@ Die Dateibenennung ist im Allgemeinen die wichtigste Entscheidung, die Sie bezü
 
 ### Ordnerhierarchie
 
-Die Ordnerhierarchie ist nur für Sie und Ihre Firma aus organisatorischen Gründen wichtig — Ihre URLs für dynamische Medien-Classic verweisen nur auf den Asset-Namen, nicht auf den Ordner oder Pfad. Unabhängig davon, wo Sie eine Datei hochladen, ist die URL identisch. Das unterscheidet sich ganz von der Art, wie die meisten Menschen ihre Bilder und Inhalte für das Web organisieren, aber mit Dynamic Media Classic macht es keinen Unterschied.
+Die Ordnerhierarchie ist nur für Sie und Ihre Firma aus organisatorischen Gründen wichtig — Ihre Dynamic Media Classic-URLs verweisen nur auf den Asset-Namen, nicht auf den Ordner oder Pfad. Unabhängig davon, wo Sie eine Datei hochladen, ist die URL identisch. Das unterscheidet sich ganz von der Art, wie die meisten Leute ihre Bilder und Inhalte für das Web organisieren, aber mit Dynamic Media Classic macht es keinen Unterschied.
 
-Ein weiterer wichtiger Aspekt ist die Anzahl der Assets oder Ordner, die in jedem Ordner gespeichert werden sollen. Wenn viele Assets in einem Ordner gespeichert sind, wird die Leistung bei der Anzeige von Assets in Dynamic Media Classic beeinträchtigt. Speichern Sie nicht Tausende von Assets in einem Ordner. Entwickeln Sie stattdessen eine hierarchische Struktur mit weniger als 500 Assets oder Ordnern in einer bestimmten Hierarchieabteilung. Dies ist keine strikte Anforderung, trägt jedoch dazu bei, dass akzeptable Reaktionszeiten beim Anzeigen oder Suchen von Assets beibehalten werden. Die Empfehlung besteht darin, Hierarchien zu erstellen, die breit und flach sind, anstatt schmal und tief.
+Ein weiterer wichtiger Aspekt ist die Anzahl der Assets oder Ordner, die in jedem Ordner gespeichert werden sollen. Wenn viele Assets in einem Ordner gespeichert sind, wird die Leistung beim Anzeigen von Assets in Dynamic Media Classic beeinträchtigt. Speichern Sie nicht Tausende von Assets in einem Ordner. Entwickeln Sie stattdessen eine hierarchische Struktur mit weniger als 500 Assets oder Ordnern in einer bestimmten Hierarchieabteilung. Dies ist keine strikte Anforderung, trägt jedoch dazu bei, dass akzeptable Reaktionszeiten beim Anzeigen oder Suchen von Assets beibehalten werden. Die Empfehlung besteht darin, Hierarchien zu erstellen, die breit und flach sind, anstatt schmal und tief.
 
-Die einfachste Möglichkeit zum Erstellen von Ordnern besteht darin, die gesamte Ordnerstruktur per FTP hochzuladen und die Option **Unterordner einschließen** zu aktivieren. Diese Option bewirkt, dass Dynamic Media Classic die Ordnerstruktur auf der FTP-Site in Dynamic Media Classic neu erstellt.
+Die einfachste Möglichkeit zum Erstellen von Ordnern besteht darin, die gesamte Ordnerstruktur per FTP hochzuladen und die Option **Unterordner einschließen** zu aktivieren. Diese Option veranlasst Dynamic Media Classic, die Ordnerstruktur auf der FTP-Site in Dynamic Media Classic neu zu erstellen.
 
-Wir möchten, dass Sie Ihre Ordnerstruktur berücksichtigen, bevor Sie den Beginn haben, alle Ihre Dateien hochzuladen, da es wesentlich einfacher ist, Ihre Dateien und Ordner lokal auf Ihrem Computer zu organisieren und zu verwalten, als dies in Dynamic Media Classic der Fall ist. Sie können beispielsweise nur Dateien, jedoch nicht ganze Ordner, innerhalb von Dynamic Media Classic ziehen und ablegen.
+Wir möchten, dass Sie Ihre Ordnerstruktur berücksichtigen, bevor Sie den Beginn haben, alle Ihre Dateien hochzuladen, da es wesentlich einfacher ist, Ihre Dateien und Ordner lokal auf Ihrem Computer zu organisieren und zu verwalten, als es in Dynamic Media Classic der Fall ist. Sie können beispielsweise nur Dateien, jedoch nicht ganze Ordner, innerhalb von Dynamic Media Classic per Drag &amp; Drop verschieben.
 
 ### Ordnerstrategien
 
@@ -44,17 +44,17 @@ Berücksichtigen Sie bei Ihrer Ordnerstrategie, was für Ihr Unternehmen sinnvol
 
 ## Dateibenennungsregel
 
-Wie Sie sich entscheiden, Ihre Dateien zu benennen, ist vielleicht die wichtigste frühe Entscheidung, die Sie in Bezug auf Dynamic Media Classic treffen werden. Dies liegt daran, dass alle Assets in Dynamic Media Classic eindeutige Namen haben müssen, unabhängig davon, wo sie im Konto gespeichert werden.
+Wie Sie sich entscheiden, Ihre Dateien zu benennen, ist vielleicht die wichtigste frühe Entscheidung, die Sie in Bezug auf Dynamic Media Classic treffen werden. Dies liegt daran, dass alle Assets in Dynamic Media Classic eindeutige Namen haben müssen, unabhängig davon, wo sie im Konto gespeichert sind.
 
 Alle URLs und Transaktionen in Dynamic Media Classic werden von einer Asset-ID gesteuert, der eindeutigen Kennung eines Assets in der Datenbank. Wenn Sie eine Datei hochladen, wird die Asset-ID erstellt, indem Sie den Dateinamen verwenden und die Erweiterung entfernen. Beispiel: _896649.jpg_ erhält Asset _ID 896649_.
 
 Regeln für Asset-IDs:
 
-- In Dynamic Media Classic dürfen zwei Assets unabhängig vom Ordner, in dem sich die Assets befinden, nicht denselben Namen haben.
+- In Dynamic Media Classic dürfen zwei Assets nicht denselben Namen haben, unabhängig davon, in welchem Ordner sich die Assets befinden.
 - Bei Namen muss die Groß-/Kleinschreibung beachtet werden. Beispielsweise würden &quot;Chair.jpg&quot;, &quot;chair.jpg&quot;und &quot;CHAIR.jpg&quot;drei verschiedene Asset-IDs erstellen.
 - Als bewährtes Verfahren sollten Asset-IDs keine Leerzeichen oder Symbole enthalten. Die Verwendung von Leerzeichen und Symbolen erschwert die Implementierung, da Sie diese Zeichen URL-kodieren müssen. Beispiel: Ein Leerzeichen &quot; wird &quot;%20&quot;.
 
-Ihre Benennungskonvention ist im Wesentlichen die Art und Weise, wie Sie mit Dynamic Media Classic integrieren. Sie integrieren Ihre Back-Office-Systeme normalerweise nicht in Dynamic Media Classic, da es sich um ein geschlossenes System handelt. Es ist ein passiver Partner, der auf Anweisungen in Form von URLs wartet.
+Ihre Benennungskonvention ist im Wesentlichen die Art und Weise, wie Sie mit Dynamic Media Classic integrieren. Normalerweise integrieren Sie Ihre Back-Office-Systeme nicht in Dynamic Media Classic, da es sich um ein geschlossenes System handelt. Es ist ein passiver Partner, der auf Anweisungen in Form von URLs wartet.
 
 Die meisten Benutzer basieren bei ihren Benennungsregeln auf ihrer internen SKU oder Produkt-IDs, sodass beim Aufruf einer Webseite mit Informationen zu dieser SKU automatisch nach einem Bild mit einem ähnlichen Namen gesucht werden kann. Wenn keine Verbindung zwischen dem Dateinamen und der SKU oder ID besteht, muss Ihr Backoffice-System die Dateinamen manuell verfolgen und eine Person muss diese Verbindungen unterhalten — — Kurz gesagt, eine Menge Arbeit für die IT- und Inhaltsteams.
 
