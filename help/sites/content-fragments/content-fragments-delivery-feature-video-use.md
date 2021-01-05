@@ -37,7 +37,7 @@ Diese Videoreihe behandelt die Optionen zum Versand für die Verwendung von Inha
 
 >[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
 
-Inhaltsfragmente können auf AEM Sites-Seiten oder ähnlich wie Erlebnisfragmente verwendet werden, indem die AEM WCM-Kernkomponenten [Inhaltsfragment-Komponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/content-fragment-component.html) verwendet werden.
+Inhaltsfragmente können auf AEM Sites-Seiten oder ähnlich wie Erlebnisfragmente verwendet werden, indem die AEM WCM-Kernkomponenten [Inhaltsfragment-Komponente](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/content-fragment-component.html) verwendet werden.
 
 Inhaltsfragmentkomponenten können mit AEM Stilsystem formatiert werden, um den Inhalt nach Bedarf anzuzeigen.
 
@@ -78,7 +78,7 @@ Es gibt zwei Optionen, um Inhaltsfragment als JSON verfügbar zu machen, um eine
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [Authoring von Inhaltsfragmenten](content-fragments-feature-video-use.md)
-* [AEM WCM-Hauptkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html)
+* [AEM WCM-Hauptkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html)
 * [AEM WCM-Kerninhaltsfragment-Komponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html)
 
 So laden Sie das unten stehende Paket auf eine AEM 6.4+-Instanz für den finalen Status aus der Videoreihe herunter und installieren es:\
