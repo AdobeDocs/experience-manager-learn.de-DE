@@ -34,7 +34,7 @@ In diesem Kapitel werden wir die zugrunde liegende Technologie einer Adobe Exper
 1. Verstehen Sie, wie Dialoge verwendet werden, um das Authoring von Inhalten zu erleichtern.
 1. Hier lernen Sie die Grundlagen der clientseitigen Bibliotheken kennen, um CSS und JavaScript zur Unterstützung einer Komponente einzuschließen.
 
-## {#what-you-will-build}
+## Was Sie erstellen werden {#what-you-will-build}
 
 In diesem Kapitel führen Sie einige Änderungen an einer sehr einfachen `HelloWorld` Komponente durch. Im Zuge der Aktualisierung der Komponente `HelloWorld` erfahren Sie mehr über die wichtigsten Bereiche der Entwicklung AEM Komponenten.
 
