@@ -1,6 +1,6 @@
 ---
-title: Verwenden von Viewern für dynamische Medien mit Adobe Analytics und Adoben-Start
-seo-title: Verwenden von Viewern für dynamische Medien mit Adobe Analytics und Adoben-Start
+title: Verwenden von Dynamic Media Viewern mit Adobe Analytics und Adobe Launch
+seo-title: Verwenden von Dynamic Media Viewern mit Adobe Analytics und Adobe Launch
 description: Mit der Erweiterung für Dynamic Media-Viewer für Adobe Launch und der Dynamic Media-Viewer-Version 5.13 können Kunden von Dynamic Media, Adobe Analytics und Adobe Launch Ereignisse und Daten verwenden, die für die Dynamic Media-Viewer in ihrer Adobe Launch-Konfiguration spezifisch sind.
 seo-description: 'Mit der Erweiterung für Dynamic Media-Viewer für Adobe Launch und der Dynamic Media-Viewer-Version 5.13 können Kunden von Dynamic Media, Adobe Analytics und Adobe Launch Ereignisse und Daten verwenden, die für die Dynamic Media-Viewer in ihrer Adobe Launch-Konfiguration spezifisch sind. '
 sub-product: dynamic-media, analytics
@@ -19,17 +19,17 @@ ht-degree: 32%
 ---
 
 
-# Verwenden von Viewern für dynamische Medien mit Adobe Analytics und Adobe Launch{#using-dynamic-media-viewers-adobe-analytics-launch}
+# Verwenden von Dynamic Media Viewern mit Adobe Analytics und Adobe Launch{#using-dynamic-media-viewers-adobe-analytics-launch}
 
-Für Kunden mit dynamischen Medien und Adobe Analytics können Sie jetzt die Nutzung von Dynamischen Medien-Viewern auf Ihrer Website mit der Dynamischen Media Viewer-Erweiterung verfolgen.
+Für Kunden mit Dynamic Media und Adobe Analytics können Sie jetzt die Nutzung von Dynamic Media Viewern auf Ihrer Website mit der Dynamic Media Viewer Extension verfolgen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29308/?quality=12&learn=on)
 
 >[!NOTE]
 >
-> Führen Sie für diese Funktion Adobe Experience Manager im Scene7-Modus für dynamische Medien aus. Sie müssen außerdem [Adobe Experience Platform Launch in Ihre AEM-Instanz](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html) integrieren.
+> Führen Sie für diese Funktion Adobe Experience Manager im Dynamic Media Scene7-Modus aus. Sie müssen außerdem [Adobe Experience Platform Launch in Ihre AEM-Instanz](https://docs.adobe.com/content/help/de/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html) integrieren.
 
-Mit der Einführung der Dynamischen Medien-Viewer-Erweiterung bietet Adobe Experience Manager jetzt erweiterte Analyseunterstützung für Assets, die mit Dynamischen Media-Viewern (5.13) bereitgestellt werden, und bietet so eine genauere Kontrolle über die Verfolgung von Ereignissen, wenn ein Dynamischer Media Viewer auf einer Siteseite verwendet wird.
+Mit der Einführung der Dynamic Media Viewer-Erweiterung bietet Adobe Experience Manager jetzt erweiterte Analytics-Unterstützung für Assets, die mit Dynamic Media-Viewern (5.13) bereitgestellt werden, und bietet eine genauere Kontrolle über die Verfolgung von Ereignissen, wenn ein Dynamic Media Viewer auf einer Siteseite verwendet wird.
 
 Wenn Sie bereits über AEM Assets und Sites verfügen, können Sie Ihre Launch-Eigenschaft in Ihre AEM Autoreninstanz integrieren. Sobald Ihre Startintegration mit Ihrer Website verknüpft ist, können Sie Ihrer Seite eine dynamische Medienkomponente hinzufügen, bei der die Ereignis-Verfolgung für Viewer aktiviert ist.
 
@@ -169,5 +169,5 @@ In der folgenden Tabelle sind die Dynamic Media-Viewer-Ereignisse sowie die unte
 ## Zusätzliche Ressourcen{#additional-resources}
 
 * [Integration von Adobe Experience Manager mit Adobe Launch](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/integrations/adobe-launch-integration-tutorial-understand.html)
-* [Ausführen von Adobe Experience Manager im Scene7-Modus für dynamische Medien](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
-* [Integrieren von Dynamic Media-Viewern mit Adobe Analytics und Adobe Launch](https://helpx.adobe.com/experience-manager/6-5/assets/using/launch.html)
+* [Adobe Experience Manager im Dynamic Media Scene7-Modus ausführen](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+* [Integrieren von Dynamic Media-Viewern mit Adobe Analytics und Adobe Experience Platform Launch](https://helpx.adobe.com/experience-manager/6-5/assets/using/launch.html)
