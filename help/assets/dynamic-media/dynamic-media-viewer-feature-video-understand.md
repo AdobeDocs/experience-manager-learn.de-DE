@@ -1,8 +1,8 @@
 ---
 title: Verwenden des Asset-Viewers mit AEM Dynamic Media
 seo-title: Verwenden des Asset-Viewers mit AEM Dynamic Media
-description: AEM Verbesserungen des dynamischen Media Viewers ermöglichen es AEM Autoren, die Erlebnis-Assets zu definieren und anzupassen, die Benutzern der Website präsentiert werden.
-seo-description: AEM Verbesserungen des dynamischen Media Viewers ermöglichen es AEM Autoren, die Erlebnis-Assets zu definieren und anzupassen, die Benutzern der Website präsentiert werden.
+description: AEM Verbesserungen am Dynamic Media Viewer ermöglichen es AEM Autoren, die Erlebnis-Assets zu definieren und anzupassen, die Benutzern der Website präsentiert werden.
+seo-description: AEM Verbesserungen am Dynamic Media Viewer ermöglichen es AEM Autoren, die Erlebnis-Assets zu definieren und anzupassen, die Benutzern der Website präsentiert werden.
 uuid: 5762c0a2-4371-4719-8400-849c7a11926d
 discoiquuid: a0be2cd0-4fdb-431f-a8c7-e4620b8b129b
 products: SG_EXPERIENCEMANAGER/6.3/ASSETS
@@ -24,7 +24,7 @@ ht-degree: 16%
 
 # Verwenden des Asset-Viewers mit AEM Dynamic Media{#understanding-the-asset-viewer-with-aem-dynamic-media}
 
-AEM Verbesserungen des dynamischen Media Viewers ermöglichen es AEM Autoren, die Erlebnis-Assets zu definieren und anzupassen, die Benutzern der Website präsentiert werden.
+AEM Verbesserungen am Dynamic Media Viewer ermöglichen es AEM Autoren, die Erlebnis-Assets zu definieren und anzupassen, die Benutzern der Website präsentiert werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/17783/?quality=9&learn=on)
 
