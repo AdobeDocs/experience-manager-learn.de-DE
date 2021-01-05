@@ -1,8 +1,8 @@
 ---
-title: Übersicht über dynamische Medien mit AEM Assets
-seo-title: Übersicht über dynamische Medien mit AEM Assets
-description: Diese Videoreihe gibt Ihnen einen Überblick darüber, wie Medieninhalte mithilfe von Adobe Experience Manager Dynamic Media als Inhaltsbereitstellungsdienst verwaltet und aufgerufen werden. Dynamische Medien ermöglichen die Verwaltung und Veröffentlichung dynamischer digitaler Erlebnisse — eine für Experience Manager Assets einzigartige Funktion. Mit unserem Framework und der Suite an Komponenten können Marketingexperten interaktive Multimedia-Erlebnisse auf allen Geräten anpassen und bereitstellen.
-seo-description: Diese Videoreihe gibt Ihnen einen Überblick darüber, wie Medieninhalte mithilfe von Adobe Experience Manager Dynamic Media als Inhaltsbereitstellungsdienst verwaltet und aufgerufen werden. Dynamische Medien ermöglichen die Verwaltung und Veröffentlichung dynamischer digitaler Erlebnisse — eine für Experience Manager Assets einzigartige Funktion. Mit unserem Framework und der Suite an Komponenten können Marketingexperten interaktive Multimedia-Erlebnisse auf allen Geräten anpassen und bereitstellen.
+title: Überblick über Dynamic Media mit AEM Assets
+seo-title: Überblick über Dynamic Media mit AEM Assets
+description: Diese Videoreihe gibt Ihnen einen Überblick darüber, wie Medieninhalte mithilfe von Adobe Experience Manager Dynamic Media als Inhaltsbereitstellungsdienst verwaltet und aufgerufen werden. Mit Dynamic Media können Sie dynamische digitale Erlebnisse verwalten und veröffentlichen — eine für Experience Manager Assets einzigartige Funktion. Mit unserem Framework und der Suite an Komponenten können Marketingexperten interaktive Multimedia-Erlebnisse auf allen Geräten anpassen und bereitstellen.
+seo-description: Diese Videoreihe gibt Ihnen einen Überblick darüber, wie Medieninhalte mithilfe von Adobe Experience Manager Dynamic Media als Inhaltsbereitstellungsdienst verwaltet und aufgerufen werden. Mit Dynamic Media können Sie dynamische digitale Erlebnisse verwalten und veröffentlichen — eine für Experience Manager Assets einzigartige Funktion. Mit unserem Framework und der Suite an Komponenten können Marketingexperten interaktive Multimedia-Erlebnisse auf allen Geräten anpassen und bereitstellen.
 sub-product: dynamic-media
 feature: smart-crop, video-profiles, image-profiles, viewer-presets, vr-360, sets
 topics: videos, renditions, authoring, best-practices
@@ -19,19 +19,19 @@ ht-degree: 0%
 ---
 
 
-# Verwenden von dynamischen Medien mit AEM Assets {#understanding-aem-dynamic-media}
+# Verwenden von Dynamic Media mit AEM Assets {#understanding-aem-dynamic-media}
 
-Diese mehrteilige Videoserie gibt Ihnen einen Überblick darüber, wie Medieninhalte mithilfe von Adobe Experience Manager Dynamic Media als Inhaltsbereitstellungsdienst verwaltet und aufgerufen werden. Dynamische Medien ermöglichen die Verwaltung und Veröffentlichung dynamischer digitaler Erlebnisse — eine für Experience Manager Assets einzigartige Funktion. Mit unserem Framework und der Suite an Komponenten können Marketingexperten interaktive Multimedia-Erlebnisse auf allen Geräten anpassen und bereitstellen.
+Diese mehrteilige Videoserie gibt Ihnen einen Überblick darüber, wie Medieninhalte mithilfe von Adobe Experience Manager Dynamic Media als Inhaltsbereitstellungsdienst verwaltet und aufgerufen werden. Mit Dynamic Media können Sie dynamische digitale Erlebnisse verwalten und veröffentlichen — eine für Experience Manager Assets einzigartige Funktion. Mit unserem Framework und der Suite an Komponenten können Marketingexperten interaktive Multimedia-Erlebnisse auf allen Geräten anpassen und bereitstellen.
 
-## Übersicht über dynamische Medien
+## Dynamic Media-Übersicht
 
 >[!VIDEO](https://video.tv.adobe.com/v/27144/?quality=9&learn=on)
 
 >[!NOTE]
 >
->Die hier demonstrierte Funktionalität ist mit dem Dynamic Media DMS7-Ausführungsmodus verfügbar, unserem derzeit unterstützten Ausführungsmodus, nicht notwendigerweise mit dem DMHybrid-Ausführungsmodus, den DMS7 ersetzt hat.
+>Die hier demonstrierte Funktionalität ist für den Dynamic Media DMS7-Ausführungsmodus verfügbar, unseren derzeit unterstützten Ausführungsmodus, nicht notwendigerweise den DMHybrid-Ausführungsmodus, den DMS7 ersetzt hat.
 
-In diesem Video wird beschrieben, wie Medieninhalte mithilfe von Adobe Experience Manager Dynamic Media als Inhaltsbereitstellungsdienst verwaltet und aufgerufen werden. Dynamische Medien arbeiten mit einer einzigen Übergeordnet Asset-Methode, bei der Sie ein Bild- oder Videoasset hochladen, das angefordert werden kann, eine unbegrenzte Anzahl erforderlicher brauchbarer Varianten oder abgeleiteter Darstellungen zu erfüllen. Einbezogen:
+In diesem Video wird beschrieben, wie Medieninhalte mithilfe von Adobe Experience Manager Dynamic Media als Inhaltsbereitstellungsdienst verwaltet und aufgerufen werden. Dynamic Media arbeitet mit einer einzigen Übergeordnet Asset-Methode, bei der Sie ein Bild- oder Videoasset hochladen, das angefordert werden kann, eine unbegrenzte Anzahl erforderlicher brauchbarer Varianten oder abgeleiteter Darstellungen zu erfüllen. Einbezogen:
 
 * Einzelne Übergeordnet Asset-zu-URL-Produkt verfügbar erklärt
 * Bildverarbeitungsoptionen
@@ -39,36 +39,36 @@ In diesem Video wird beschrieben, wie Medieninhalte mithilfe von Adobe Experienc
 * Kopieren von URLs in Bilder und responsive Viewer
 * Variationen von Smart-Zuschneiden auf URLs
 
-## Dynamische Medien mit AEM Sites und anderen CMS
+## Dynamic Media mit AEM Sites und jedem anderen CMS
 
 >[!VIDEO](https://video.tv.adobe.com/v/27145/?quality=9&learn=on)
 
 >[!NOTE]
 >
->Die hier demonstrierte Funktionalität ist mit dem Dynamic Media DMS7-Ausführungsmodus verfügbar, unserem derzeit unterstützten Ausführungsmodus, nicht notwendigerweise mit dem DMHybrid-Ausführungsmodus, den DMS7 ersetzt hat. In diesem Video werden die in Teil 1 (Übersicht über dynamische Medien) beschriebenen Konzepte beschrieben.
+>Die hier demonstrierte Funktionalität ist für den Dynamic Media DMS7-Ausführungsmodus verfügbar, unseren derzeit unterstützten Ausführungsmodus, nicht notwendigerweise den DMHybrid-Ausführungsmodus, den DMS7 ersetzt hat. In diesem Video werden die in Teil 1 (Dynamic Media-Übersicht) beschriebenen Konzepte beschrieben.
 
 In diesem Video wird beschrieben, wie Medieninhalte in Adobe Experience Manager Dynamic Media verwaltet werden und in AEM Sites mit einer Komponente einfach und automatisch zugeschnitten werden können, um eine Optimierung basierend auf der responsiven Seitenbreite zu ermöglichen. Erstellen Sie auf einfache Weise interaktive Bildbanner und generieren Sie eine URL zum Kopieren, die Sie in einem beliebigen Content-Management-System verwenden können.
 
-* Flexibilität der Komponente &quot;AEM Sites Dynamic Media&quot;
+* AEM Sites Dynamic Media - Komponentenflexibilität
 * Lokales Herunterladen mit Bildvorgaben
 * Interaktives Banner erstellen und veröffentlichen
 
-## Dynamische Medien zum Erstellen einer gemischten Medienerfassung und eines benutzerdefinierten Viewers
+## Dynamic Media zum Erstellen einer gemischten Mediensammlung und eines benutzerdefinierten Viewers
 
 >[!VIDEO](https://video.tv.adobe.com/v/27146/?quality=9&learn=on)
 
 >[!NOTE]
 >
->Die hier demonstrierte Funktionalität ist mit dem Dynamic Media DMS7-Ausführungsmodus verfügbar, unserem derzeit unterstützten Ausführungsmodus, nicht notwendigerweise mit dem DMHybrid-Ausführungsmodus, den DMS7 ersetzt hat. In diesem Video werden die in Teil 1 (Übersicht über dynamische Medien) beschriebenen Konzepte beschrieben.
+>Die hier demonstrierte Funktionalität ist für den Dynamic Media DMS7-Ausführungsmodus verfügbar, unseren derzeit unterstützten Ausführungsmodus, nicht notwendigerweise den DMHybrid-Ausführungsmodus, den DMS7 ersetzt hat. In diesem Video werden die in Teil 1 (Dynamic Media-Übersicht) beschriebenen Konzepte beschrieben.
 
 In diesem Video wird der einfache Erstellungsprozess für eine Viewer-Sammlung mit gemischten Medien mit Medienelementen beschrieben, einschließlich eines Rotationssets, Videos und einer Sammlung von Produktbildern. hinzufügen Sie Inhalte in das gemischte Medienset und erstellen Sie einen benutzerdefinierten Viewer zur Auswahl in der endgültigen Komponente &quot;URL kopieren&quot;oder &quot;AEM Sites&quot;.
 
 * Rotationsset aus entsprechenden Produktfotos erstellen
-* Hochladen und Kodieren von Videomaterial für Videos mit dynamischen Medien
+* Video zum Hochladen und Kodieren von Videomaterial für Dynamic Media-Videos
 * Erstellen eines gemischten Mediensets aus Rotationsset, Video und Fotos
 * Bearbeiten und Verwenden des benutzerdefinierten Viewers für gemischte Medien
 
-## Bildvorgaben für dynamische Medien
+## Dynamic Media-Bildvorgaben
 
 >[!VIDEO](https://video.tv.adobe.com/v/27320/?quality=9&learn=on)
 
@@ -79,19 +79,19 @@ In diesem Video wird beschrieben, wie Bildvorgaben erstellt werden und wie eine 
 * Immer Scharfzeichnen verwenden
 * Feld &quot;URL-Modifizierer&quot;, um zusätzliche Befehle zur Größenanpassung der Bildvorgabe hinzuzufügen
 
-## Modifikatoren für erweiterte URLs für dynamische Medien
+## Dynamic Media Advanced URL-Modifikatoren
 
 >[!VIDEO](https://video.tv.adobe.com/v/27319/?quality=9&learn=on)
 
-In diesem Video wird beschrieben, wie Sie Bilder über die Größenanpassung hinaus skalieren, um die Funktionen der Quelldatei selbst zu nutzen - Hintergrundtransparenz, integrierte Beschneidungspfade und Text als Variablen - mit URL-Modifikatoren für dynamische Medien.
+In diesem Video wird beschrieben, wie Sie die Größe von Bildern über die Größe hinaus ändern, um die Funktionen der Quelldatei selbst zu nutzen - Hintergrundtransparenz, integrierte Beschneidungspfade und Text als Variablen - mit den URL-Modifikatoren von Dynamic Media.
 
-* Verwenden von URL-Modifikatoren im Feld &quot;Modifikator für dynamische Medien&quot;
+* Verwenden von URL-Modifikatoren im Feld &quot;Dynamic Media-Modifikator&quot;
 * Ändern der Hintergrundfarbe bei Bildern mit Transparenz
 * Beschneiden auf einen Bildpfad
 * Beschneiden auf einen Bildpfad
 * Erstellen einer Textvorlage aus einer Photoshop-Datei
 
-## JPEG-Dateigröße für dynamische Medien in Kilobytes
+## Dynamic Media JPEG-Dateigröße in Kilobytes steuern
 
 >[!VIDEO](https://video.tv.adobe.com/v/27404/?quality=9&learn=on)
 
@@ -102,11 +102,11 @@ In diesem Video wird beschrieben, wie Sie Bilder über die Größenanpassung hin
 
 Stellen Sie die Qualität des JPEG-Bildes mit der resultierenden Dateigröße (in Kilobyte) in Einklang, um die Seitenladegeschwindigkeit zu erhöhen, indem Sie 2 Befehle verwenden, um die JPEG-Komprimierungseinstellungen anzupassen. QLT definiert die Bildqualität durch die Einstellung der JPEG-Komprimierungsqualität. Mit dem Befehl &quot;JPEG-Größe&quot;können Sie festlegen, welche Dateigröße mithilfe der Komprimierung erreicht werden soll.
 
-## hinzufügen CC-Untertitel für Videos mit dynamischen Medien
+## hinzufügen CC-Untertitel für Dynamic Media-Video
 
 >[!VIDEO](https://video.tv.adobe.com/v/28074/?quality=9&learn=on)
 
-Fügen Sie dem Video &quot;Dynamic Media&quot;ganz einfach Untertitel hinzu, indem Sie die Option &quot;URL kopieren&quot;an ein zusätzliches Dokument für die Untertitel-Datei anhängen, eine web.VTT-Sidecar-Datei, die die CC-Informationen für alle Videos enthält.
+Fügen Sie Dynamic Media-Videos Untertitel einfach hinzu, indem Sie die Option &quot;URL kopieren&quot;an ein zusätzliches Dokument für Untertitel anhängen, eine web.VTT-Sidecar-Datei, die die CC-Informationen für alle Videos enthält.
 
 ## Verwenden des Scharfzeichnens von Bildern mit AEM Dynamic Media
 
