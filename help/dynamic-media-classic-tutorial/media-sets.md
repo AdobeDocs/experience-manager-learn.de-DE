@@ -1,6 +1,6 @@
 ---
 title: Bild-, Muster-, Rotationsset- und gemischte Mediensets
-description: Eine der nützlichsten und leistungsfähigsten Funktionen von Dynamic Media Classic ist die Unterstützung für das Erstellen von Rich-Media-Sets wie Bild, Muster, Rotationsset und gemischte Mediensets. Erfahren Sie, was jedes Rich-Media-Set ist und wie Sie jeden Typ in Dynamic Media Classic erstellen. Erfahren Sie mehr über Stapelsatzvorgaben, mit denen die Erstellung von Rich-Media-Sets beim Hochladen automatisiert wird.
+description: Eine der nützlichsten und leistungsfähigsten Funktionen von Dynamic Media Classic ist die Unterstützung für das Erstellen von Rich-Media-Sets wie Bild, Muster, Rotationsset und gemischte Mediensets. Erfahren Sie, was jedes Rich-Media-Set ist und wie Sie die einzelnen Typen in Dynamic Media Classic erstellen. Erfahren Sie mehr über Stapelsatzvorgaben, mit denen die Erstellung von Rich-Media-Sets beim Hochladen automatisiert wird.
 sub-product: dynamic-media
 feature: sets
 doc-type: tutorial
@@ -18,7 +18,7 @@ ht-degree: 2%
 
 # Bild-, Muster-, Rotationsset- und gemischte Mediensets {#media-sets}
 
-Durch die Verwendung einzelner Bilder für dynamische Größen und Zoomen lassen sich mit den Sammlungen von Dynamic Media Classic-Mediensets bessere Online-Erlebnisse schaffen. In diesem Abschnitt des Tutorials wird untersucht, wie die folgenden Rich-Media-Sets in Dynamic Media Classic erstellt werden:
+Die Dynamic Media Classic-Set-Sammlungen, die über Einzelbilder hinausgehen, um die Größe und Größe dynamisch zu gestalten, bieten eine umfassendere Online-Erfahrung. In diesem Teil des Lernprogramms wird die Erstellung der folgenden Rich-Media-Sets in Dynamic Media Classic untersucht:
 
 - Bildset
 - Musterset
@@ -29,13 +29,13 @@ Außerdem wird erläutert, wie die Erstellung von Sets mithilfe von Stapelsatzvo
 
 ## Alles, was Sie immer über Sets wissen möchten
 
-Neben der grundlegenden dynamischen Größenanpassung und dem Zoomen sind Sätze wahrscheinlich das am häufigsten verwendete Unterprodukt von Dynamic Media Classic. Sätze sind im Wesentlichen &quot;virtuelle&quot;Assets, die keine tatsächlichen Bilder enthalten, aber aus einer Reihe von Beziehungen zu anderen Bildern und/oder Videos bestehen. Die Hauptattraktion von Sets ist, dass es sich um Mini-Anwendungen handelt, die &quot;aus dem Regal&quot;fertig sind. Damit meinen wir, dass jeder Set-Viewer seine eigene Logik und Oberfläche enthält, sodass Sie nur auf der Site aufrufen müssen. Darüber hinaus müssen Sie nur eine einzelne Asset-ID pro Set verfolgen, anstatt alle Elemente und Beziehungen selbst verwalten zu müssen.
+Neben der grundlegenden dynamischen Größenanpassung und dem Zoomen sind Sätze wahrscheinlich das am häufigsten verwendete Dynamic Media Classic-Unterprodukt. Sätze sind im Wesentlichen &quot;virtuelle&quot;Assets, die keine tatsächlichen Bilder enthalten, aber aus einer Reihe von Beziehungen zu anderen Bildern und/oder Videos bestehen. Die Hauptattraktion von Sets ist, dass es sich um Mini-Anwendungen handelt, die &quot;aus dem Regal&quot;fertig sind. Damit meinen wir, dass jeder Set-Viewer seine eigene Logik und Oberfläche enthält, sodass Sie nur auf der Site aufrufen müssen. Darüber hinaus müssen Sie nur eine einzelne Asset-ID pro Set verfolgen, anstatt alle Elemente und Beziehungen selbst verwalten zu müssen.
 
 Wenn Sie einen Satz erstellen, wird dieser Satz als separates Asset verwaltet, das zur Veröffentlichung markiert und veröffentlicht werden muss, bevor er über eine URL bereitgestellt werden kann. Alle zugehörigen Mitgliederelemente müssen ebenfalls veröffentlicht werden.
 
 ### Typen von Sets
 
-Lernen Sie die vier Arten von Sets kennen, die Sie in Dynamic Media Classic erstellen können: Bild-, Muster-, Rotationsset- und gemischte Mediensets.
+Lernen wir die vier Typen von Sets kennen, die Sie in Dynamic Media Classic erstellen können: Bild-, Muster-, Rotationsset- und gemischte Mediensets.
 
 ## Bildset
 
@@ -58,7 +58,7 @@ Dieser Set-Typ wird normalerweise verwendet, um farbige Ansichten desselben Elem
 
 Der Hauptunterschied zwischen einem Musterset und einem Bildsatz besteht darin, dass Mustersets ein anderes Bild als klickbares Farbfeld verwenden, während Bildsätze eine Miniaturansicht und eine Miniaturansicht des Originalbilds verwenden.
 
-Mustersets färben keine Bilder (eine häufig auftretende falsche Vorstellung). Die Bilder werden einfach ausgetauscht, genau wie in einem Bildsatz. Die Mini-Musterbilder hätten mit Photoshop erstellt werden können, jede Farbe hätte einzeln fotografiert werden können oder das Werkzeug &quot;Beschneiden&quot;in Dynamic Media Classic hätte verwendet werden können, um ein Farbfeld aus einem der farbigen Bilder zu erstellen.
+Mustersets färben keine Bilder (eine häufig auftretende falsche Vorstellung). Die Bilder werden einfach ausgetauscht, genau wie in einem Bildsatz. Die Mini-Musterbilder hätten mit Photoshop erstellt werden können, jede Farbe hätte einzeln fotografiert werden können, oder das Beschneidungswerkzeug in Dynamic Media Classic hätte verwendet werden können, um ein Farbfeld aus einem der farbigen Bilder zu erstellen.
 
 ![image](assets/media-sets/image-set-2.jpg)
 
@@ -104,13 +104,13 @@ Die URL für das oben stehende gemischte Medienset könnte wie folgt aussehen:
 
 - Erfahren Sie, wie Sie ein gemischtes Medienset [erstellen.](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set)
 
-Um ein Bild für Zoom, Set oder Video auf Ihrer Website anzuzeigen, rufen Sie es in einem &quot;Viewer&quot;für Dynamic Media Classic auf. Dynamic Media Classic umfasst Viewer für Rich-Media-Assets wie Mustersets, Rotationssets, Video und viele andere.
+Um ein Bild für Zoom, Set oder Video auf Ihrer Website anzuzeigen, rufen Sie es in einem Dynamic Media Classic-&quot;Viewer&quot;auf. Dynamic Media Classic umfasst Viewer für Rich-Media-Assets wie Mustersets, Rotationssets, Videos und viele andere.
 
 Erfahren Sie mehr über [Viewer für AEM Assets und Dynamic Media Classic](https://docs.adobe.com/content/help/de-DE/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html).
 
 ## Stapelsatzvorgaben
 
-Bislang haben wir darüber diskutiert, wie Sätze mithilfe der Funktion &quot;Dynamischer Medienklassiker-Build&quot;manuell erstellt werden können. Die Erstellung von Bildsätzen und Rotationssets kann jedoch mithilfe einer Stapelsatzvorgabe automatisiert werden, sofern eine standardisierte Benennungskonvention vorliegt.
+Bisher haben wir bereits darüber diskutiert, wie Sätze manuell mithilfe der Dynamic Media Classic Build-Funktion erstellt werden können. Die Erstellung von Bildsätzen und Rotationssets kann jedoch mithilfe einer Stapelsatzvorgabe automatisiert werden, sofern eine standardisierte Benennungskonvention vorliegt.
 
 Jede Vorgabe ist ein eindeutig benannter, in sich abgeschlossener Satz von Anweisungen, die definieren, wie der Satz mithilfe von Bildern, die den definierten Benennungsregeln entsprechen, erstellt wird. In der Vorgabe definieren Sie zuerst Benennungsregeln für die Assets, die Sie in einem Satz gruppieren möchten. Anschließend kann eine Stapelsatzvorgabe erstellt werden, um auf diese Bilder zu verweisen.
 
@@ -119,7 +119,7 @@ Es ist zwar möglich, die Vorgabe selbst zu erstellen (sie finden Sie unter **Ei
 - Stapelsatzvorgaben können komplex eingerichtet werden — Sie werden von regulären Ausdrücken betrieben, und wenn Sie kein Entwickler sind, kann diese Syntax unbekannt oder verwirrend sein.
 - Nach der Erstellung sind sie standardmäßig aktiviert. Es gibt keine Rückgängig-Funktion. Wenn Sie Beginn haben, Tausende von Bildern hochzuladen und Ihre Vorgabe falsch konfiguriert ist, können Sie am Ende Hunderte oder Tausende von beschädigten Sets haben, die Sie manuell finden und löschen müssen.
 
-Eine einfache Benennungsregel wurde früher vorgeschlagen, die sehr einfach in eine Stapelsatzvorgabe integriert werden kann. Da die Vorgaben jedoch sehr flexibel sind, können sie komplexe Benennungsstrategien handhaben. Kurz gesagt, die Bilder, die zu einem Satz gehören, sollten durch einen gemeinsamen Namen zusammengeführt werden — häufig die SKU-Nummer oder Produkt-ID. In Dynamic Media Classic legen Sie entweder eine Standardbenennungsregel für alle Bilder fest, die für eine Vorgabe verwendet werden sollen, oder Sie können mehrere Vorgaben mit jeweils unterschiedlichen Benennungsregeln erstellen.
+Eine einfache Benennungsregel wurde früher vorgeschlagen, die sehr einfach in eine Stapelsatzvorgabe integriert werden kann. Da die Vorgaben jedoch sehr flexibel sind, können sie komplexe Benennungsstrategien handhaben. Kurz gesagt, die Bilder, die zu einem Satz gehören, sollten durch einen gemeinsamen Namen zusammengeführt werden — häufig die SKU-Nummer oder Produkt-ID. In Dynamic Media Classic haben Sie entweder eine Standardbenennungsregel für alle Bilder festgelegt, die für eine Vorgabe verwendet werden sollen, oder Sie können mehrere Vorgaben mit jeweils unterschiedlichen Benennungsregeln erstellen.
 
 Stapelsatzvorgaben werden nur beim Hochladen angewendet. sie können nach dem Hochladen der Bilder nicht mehr ausgeführt werden. Daher ist es wichtig, Ihre Benennungsregeln zu planen und eine Vorgabe zu erstellen, bevor Sie alle Beginn hochladen.
 
