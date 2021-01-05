@@ -12,7 +12,7 @@ translation-type: tm+mt
 source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
 workflow-type: tm+mt
 source-wordcount: '291'
-ht-degree: 4%
+ht-degree: 8%
 
 ---
 
@@ -25,7 +25,7 @@ Sie können eine Vorlage verwenden, um die Daten zu formatieren, die in Posteing
 
 ## Sightly-Vorlage
 
-Im Folgenden finden Sie die Vorlage. Der Code in der Vorlage zeigt das Symbol abhängig vom Einkommen an. Die Symbole sind als Teil der [Korallen-UI-Bibliothek](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) verfügbar, die mit AEM geliefert wird.
+Im Folgenden finden Sie die Vorlage. Der Code in der Vorlage zeigt das Symbol abhängig vom Einkommen an. Die Symbole sind als Teil der [Korallen-UI-Bibliothek](https://helpx.adobe.com/de/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) verfügbar, die mit AEM geliefert wird.
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
