@@ -1,6 +1,6 @@
 ---
 title: Smart Imaging
-description: Intelligente Bildbearbeitung in Dynamic Media Classic verbessert die Leistung von Image-Versänden, indem Bildformat und Bildqualität automatisch auf der Grundlage der Browserfunktionen des Kunden optimiert werden. Dies geschieht durch die Nutzung der AI-Funktionen von Adobe Sensei und die Arbeit mit vorhandenen Bildvorgaben. Erfahren Sie mehr über Smart Imaging und wie Sie damit bessere Kundenerlebnisse durch schnelleres Laden von Seiten erzielen können.
+description: Smart Imaging in Dynamic Media Classic steigert die Leistung von Image Versand durch die automatische Optimierung von Bildformat und -qualität auf der Grundlage der Browserfunktionen des Kunden. Dies geschieht durch die Nutzung der AI-Funktionen von Adobe Sensei und die Arbeit mit vorhandenen Bildvorgaben. Erfahren Sie mehr über Smart Imaging und wie Sie damit bessere Kundenerlebnisse durch schnelleres Laden von Seiten erzielen können.
 sub-product: dynamic-media
 feature: smart-crop
 doc-type: tutorial
@@ -18,7 +18,7 @@ ht-degree: 5%
 
 # Intelligente Bildbearbeitung {#smart-imaging}
 
-Einer der wichtigsten Aspekte des Kundenerlebnisses auf Ihrer Website, mobilen Site oder App ist die Seitenladezeit. Kunden verlassen oft eine Site oder App, wenn das Laden einer Seite zu lange dauert. Bilder stellen den Großteil der Seitenladezeit dar. Intelligente Bildbearbeitung in Dynamic Media Classic verbessert die Leistung von Image-Versänden, indem Bildformat und Bildqualität automatisch auf der Grundlage der Browserfunktionen des Kunden optimiert werden. Dies geschieht durch die Nutzung der AI-Funktionen von Adobe Sensei und die Arbeit mit vorhandenen Bildvorgaben. Smart Imaging reduziert Bildgrößen um 30 Prozent oder mehr — das zu schnelleren Seitenladevorgängen und besseren Kundenerlebnissen führt.
+Einer der wichtigsten Aspekte des Kundenerlebnisses auf Ihrer Website, mobilen Site oder App ist die Seitenladezeit. Kunden verlassen oft eine Site oder App, wenn das Laden einer Seite zu lange dauert. Bilder stellen den Großteil der Seitenladezeit dar. Smart Imaging in Dynamic Media Classic steigert die Leistung von Image Versand durch die automatische Optimierung von Bildformat und -qualität auf der Grundlage der Browserfunktionen des Kunden. Dies geschieht durch die Nutzung der AI-Funktionen von Adobe Sensei und die Arbeit mit vorhandenen Bildvorgaben. Smart Imaging reduziert Bildgrößen um 30 Prozent oder mehr — das zu schnelleren Seitenladevorgängen und besseren Kundenerlebnissen führt.
 
 Smart Imaging profitiert auch von der zusätzlichen Leistungssteigerung, die durch die vollständige Integration mit dem erstklassigen Premium-Service der Adobe entsteht. Dieser Dienst ermittelt die optimale Internet-Route zwischen Servern, Netzwerken und Austauschpunkten mit niedrigster Latenz und/oder Paketverlustrate im Vergleich zur Standardroute im Internet.
 
@@ -46,7 +46,7 @@ Die intelligente Bildbearbeitung funktioniert mit Bildern, die über HTTP, HTTPS
 >
 >Wenn Sie zu Smart Imaging wechseln, wird Ihr Cache im CDN gelöscht. Der Cache im CDN wird in der Regel innerhalb von ein oder zwei Tagen wieder aufgebaut.
 
-Smart Imaging ist im Lieferumfang Ihrer Lizenz für Dynamic Media Classic enthalten. Für diese Funktion fallen keine zusätzlichen Kosten an. Um diese Vorteile zu nutzen, müssen Sie zwei Anforderungen erfüllen: haben ein CDN mit Adobe und eine dedizierte Domäne. Dann müssen Sie es für Ihr Konto aktivieren, da es nicht automatisch aktiviert ist.
+Smart Imaging ist in Ihrer bestehenden Lizenz von Dynamic Media Classic enthalten. Für diese Funktion fallen keine zusätzlichen Kosten an. Um diese Vorteile zu nutzen, müssen Sie zwei Anforderungen erfüllen: haben ein CDN mit Adobe und eine dedizierte Domäne. Dann müssen Sie es für Ihr Konto aktivieren, da es nicht automatisch aktiviert ist.
 
 Aktivieren von Smart Imaging-Beginn, wenn Sie eine Anfrage an den technischen Support senden, indem Sie |Erstellen eines Supportfalls| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). Der Support arbeitet mit Ihnen zusammen, um eine benutzerdefinierte Domäne einzurichten, die Sie mit Smart Imaging verbinden. Sie ändern einen Parameter im Zusammenhang mit der Zwischenspeicherung (Time To Live oder TTL) und die Unterstützung löscht den Cache. Sie können auch einen optionalen Staging-Schritt ausführen, bevor Sie zur Produktion wechseln. Wenn Smart Imaging dann aktiviert ist, liefern Sie den Kunden kleinere Bilder, aber mit der gleichen Qualität, die sie angefordert haben. Das bedeutet, dass die Seitenladezeiten schneller ablaufen — Und das alles geschieht automatisch, weil Adobe Sensei dabei hilft, die effizienteste Größe zu wählen.
 
@@ -56,4 +56,4 @@ Sie haben wahrscheinlich noch weitere Fragen zu Smart Imaging. Wir haben eine Li
 
 ## Zusätzliche Ressourcen
 
-Sehen Sie sich das On-Demand-Webinar [Dynamic Media Classic Optimizing Page Performance Builder](https://seminars.adobeconnect.com/pzc1gw0cihpv) an, um mehr über Smart Imaging zu erfahren.
+Sehen Sie sich das Webinar [Dynamic Media Classic Optimizing Page Performance Builder](https://seminars.adobeconnect.com/pzc1gw0cihpv) an, um mehr über Smart Imaging zu erfahren.
