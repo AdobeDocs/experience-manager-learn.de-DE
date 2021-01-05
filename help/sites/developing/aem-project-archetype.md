@@ -27,4 +27,4 @@ Das AEM-Projekt enthält sämtlichen Code und alle Konfigurationen für eine Imp
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [GitHub-Projekt](https://github.com/adobe/aem-project-archetype)
-* [AEM Dokumentation zum Projektarchiv](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/archetype/overview.html)
+* [AEM Dokumentation zum Projektarchiv](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/developing/archetype/overview.html)
