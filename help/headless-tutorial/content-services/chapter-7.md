@@ -198,7 +198,7 @@ Führen Sie nach jedem Schritt eine Pull-to-Aktualisierung der mobilen App durch
 Weitere Informationen zu AEM Content Services und AEM als Headless-CMS finden Sie in der Dokumentation und den Unterstützungsmaterialien der Adobe:
 
 * [Inhaltsfragmente verwenden](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
-* [Benutzerhandbuch zu AEM WCM-Hauptkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html)
+* [Benutzerhandbuch zu AEM WCM-Hauptkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html)
 * [Bibliothek der WCM-Hauptkomponenten](https://opensource.adobe.com/aem-core-wcm-components/library.html)
 * [AEM WCM Kernkomponenten GitHub-Projekt](https://github.com/adobe/aem-core-wcm-components)
 * [AEM WCM-Kernkomponenten - Fragen Sie den Experten](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
