@@ -1,5 +1,5 @@
 ---
-title: Dynamische Medien - Classic Hauptarbeitsablauf und Anzeigen einer Asset-Vorschau
+title: Dynamic Media Classic Hauptarbeitsablauf und Anzeigen einer Asset-Vorschau
 description: Erfahren Sie mehr über den Hauptarbeitsablauf in Dynamic Media Classic, der die drei Schritte "Erstellen"(und "Hochladen"), "Verfassen"(und "Veröffentlichen") und "Bereitstellen"umfasst. Erfahren Sie dann, wie Sie Assets in Dynamic Media Classic Vorschau haben.
 sub-product: dynamic-media
 feature: workflow
@@ -16,13 +16,13 @@ ht-degree: 5%
 ---
 
 
-# Dynamische Medien - Classic Hauptarbeitsablauf und Anzeigen einer Asset-Vorschau {#main-workflow}
+# Dynamic Media Classic Hauptarbeitsablauf und Anzeigen einer Asset-Vorschau {#main-workflow}
 
-Dynamische Medien unterstützen einen Workflow zum Erstellen (und Hochladen), Verfassen (und Veröffentlichen) und Bereitstellen. Beginn werden durch Hochladen von Assets und anschließende Bearbeitung dieser Assets erstellt, z. B. durch Erstellen eines Bildsatzes und schließlich durch Veröffentlichen, um sie zu aktivieren. Der Schritt &quot;Erstellen&quot;ist für einige Workflows optional. Wenn Ihr Ziel beispielsweise darin besteht, nur Bilder dynamisch zu vergrößern oder Videos für das Streaming zu konvertieren und zu veröffentlichen, gibt es keine erforderlichen Erstellungsschritte.
+Dynamic Media unterstützt Arbeitsabläufe zum Erstellen (und Hochladen), Verfassen (und Veröffentlichen) und Bereitstellen. Beginn werden durch Hochladen von Assets und anschließende Bearbeitung dieser Assets erstellt, z. B. durch Erstellen eines Bildsatzes und schließlich durch Veröffentlichen, um sie zu aktivieren. Der Schritt &quot;Erstellen&quot;ist für einige Workflows optional. Wenn Ihr Ziel beispielsweise darin besteht, nur Bilder dynamisch zu vergrößern oder Videos für das Streaming zu konvertieren und zu veröffentlichen, gibt es keine erforderlichen Erstellungsschritte.
 
 ![image](assets/main-workflow/create-author-deliver.jpg)
 
-Der Arbeitsablauf in Lösungen von Dynamic Media Classic besteht aus drei Hauptschritten:
+Der Arbeitsablauf in Dynamic Media Classic-Lösungen umfasst drei Hauptschritte:
 
 1. SourceContent erstellen (und hochladen)
 2. Assets erstellen (und veröffentlichen)
@@ -37,7 +37,7 @@ Siehe die vollständige Liste von [Unterstützte Dateitypen](https://docs.adobe.
 Sie können Quellinhalte auf verschiedene Arten hochladen:
 
 - Direkt vom Desktop oder lokalen Netzwerk aus. [Erfahren Sie, wie](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-sps-desktop-application).
-- Von einem Dynamic Media Classic-FTP-Server. [Erfahren Sie, wie](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp).
+- Von einem Dynamic Media Classic FTP-Server. [Erfahren Sie, wie](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp).
 
 Der Standardmodus ist &quot;Von Desktop&quot;, in dem Sie nach Dateien im lokalen Netzwerk suchen und den Upload-Beginn ausführen.
 
@@ -68,19 +68,19 @@ Obwohl dies nicht erforderlich ist, können Sie beim Hochladen mit einer der bei
 
 Erfahren Sie mehr über [Auftragsoptionen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options).
 
-Das Hochladen ist der erste notwendige Schritt in einem Workflow, da Dynamic Media Classic nicht mit Inhalten arbeiten kann, die sich noch nicht im System befinden. Hinter den Kulissen beim Hochladen registriert das System jedes hochgeladene Asset mit der zentralisierten Datenbank &quot;Dynamic Media Classic&quot;, weist eine ID zu und kopiert es in die Datenspeicherung. Darüber hinaus konvertiert das System Bilddateien in ein Format, das eine dynamische Größenanpassung und Zoom ermöglicht, und konvertiert Videodateien in das webfreundliche Format MP4.
+Das Hochladen ist der erste notwendige Schritt in einem Workflow, da Dynamic Media Classic nicht mit Inhalten arbeiten kann, die sich noch nicht im System befinden. Hinter den Kulissen beim Hochladen registriert das System jedes hochgeladene Asset mit der zentralen Dynamic Media Classic-Datenbank, weist eine ID zu und kopiert es in die Datenspeicherung. Darüber hinaus konvertiert das System Bilddateien in ein Format, das eine dynamische Größenanpassung und Zoom ermöglicht, und konvertiert Videodateien in das webfreundliche Format MP4.
 
 ### Konzept: Folgendes passiert mit Bildern, wenn Sie sie in Dynamic Media Classic hochladen
 
-Wenn Sie ein Bild eines beliebigen Typs in Dynamic Media Classic hochladen, wird es in ein Übergeordnet-Bildformat namens Pyramid TIFF oder P-TIFF konvertiert. Ein P-TIFF ähnelt dem Format eines TIFF-Bitmapbilds mit Ebenen, allerdings enthält die Datei anstelle verschiedener Ebenen mehrere Größen (Auflösungen) desselben Bildes.
+Wenn Sie ein Bild eines beliebigen Typs in Dynamic Media Classic hochladen, wird es in das Übergeordnet-Bildformat Pyramid TIFF oder P-TIFF konvertiert. Ein P-TIFF ähnelt dem Format eines TIFF-Bitmapbilds mit Ebenen, allerdings enthält die Datei anstelle verschiedener Ebenen mehrere Größen (Auflösungen) desselben Bildes.
 
 ![image](assets/main-workflow/pyramid-p-tiff.png)
 
-Während der Konvertierung des Bildes erstellt Dynamic Media Classic einen &quot;Schnappschuss&quot;der vollen Bildgröße, skaliert ihn um die Hälfte und speichert ihn, skaliert ihn erneut um die Hälfte und speichert ihn usw., bis es mit einem Vielfachen der Originalgröße gefüllt ist. Ein P-TIFF mit 2000 Pixel hat beispielsweise die Größen 1000, 500, 250 und 125 Pixel (und kleiner) in derselben Datei. Die P-TIFF-Datei ist das Format des so genannten &quot;Übergeordnet image&quot;in Dynamic Media Classic.
+Während der Bildkonvertierung erstellt Dynamic Media Classic einen &quot;Schnappschuss&quot;der Bildgröße, skaliert ihn um die Hälfte und speichert ihn, skaliert ihn erneut um die Hälfte und speichert ihn usw., bis er mit mehreren Originalgrößen gefüllt ist. Ein P-TIFF mit 2000 Pixel hat beispielsweise die Größen 1000, 500, 250 und 125 Pixel (und kleiner) in derselben Datei. Die P-TIFF-Datei ist das Format des so genannten &quot;Übergeordnet image&quot;in Dynamic Media Classic.
 
-Wenn Sie ein Bild in einer bestimmten Größe anfordern, ermöglicht es das Erstellen des P-TIFF dem Image-Server für Dynamic Media Classic, schnell die nächste größere Größe zu finden und sie zu verkleinern. Wenn Sie beispielsweise ein 2000-Pixel-Bild hochladen und ein 100-Pixel-Bild anfordern, findet Dynamic Media Classic die 125-Pixel-Version und skaliert es auf 100 Pixel, anstatt von 2000 auf 100 Pixel zu skalieren. Das macht die Operation sehr schnell. Wenn ein Bild gezoomt wird, kann der Zoom-Viewer darüber hinaus nur eine Kachel des gezoomten Bilds anfordern und nicht das gesamte Bild mit voller Auflösung. So unterstützt das Übergeordnet-Bildformat, die P-TIFF-Datei, sowohl dynamische Größen- als auch Zoomfunktionen.
+Wenn Sie ein Bild in einer bestimmten Größe anfordern, kann der Image-Server für Dynamic Media Classic beim Erstellen des P-TIFF schnell die nächste größere Größe finden und herunterskalieren. Wenn Sie beispielsweise ein 2000-Pixel-Bild hochladen und ein 100-Pixel-Bild anfordern, findet Dynamic Media Classic die 125-Pixel-Version und skaliert sie auf 100 Pixel, anstatt von 2000 auf 100 Pixel zu skalieren. Das macht die Operation sehr schnell. Wenn ein Bild gezoomt wird, kann der Zoom-Viewer darüber hinaus nur eine Kachel des gezoomten Bilds anfordern und nicht das gesamte Bild mit voller Auflösung. So unterstützt das Übergeordnet-Bildformat, die P-TIFF-Datei, sowohl dynamische Größen- als auch Zoomfunktionen.
 
-Ebenso können Sie Ihr Übergeordnet-Quellvideo in Dynamic Media Classic hochladen und beim Hochladen von Dynamic Media Classic die Größe automatisch anpassen und in das webfreundliche MP4-Format konvertieren.
+Ebenso können Sie Ihr Übergeordnet-Quellvideo in Dynamic Media Classic hochladen und Dynamic Media Classic kann es beim Hochladen automatisch anpassen und in das webfreundliche MP4-Format konvertieren.
 
 ### Regeln für die Bestimmung der optimalen Größe für die hochgeladenen Bilder
 
@@ -105,7 +105,7 @@ Nach dem Erstellen und Hochladen Ihrer Inhalte erstellen Sie neue Rich-Media-Ass
 >
 >Vergewissern Sie sich, dass alle Assets zur Veröffentlichung markiert sind. Während standardmäßig alle Assets beim Hochladen automatisch zur Veröffentlichung markiert werden, müssen neu erstellte Assets aus Ihren hochgeladenen Inhalten ebenfalls zur Veröffentlichung markiert werden.
 
-Nachdem Sie Ihr neues Asset erstellt haben, führen Sie einen Veröffentlichungsauftrag aus. Sie können dies manuell oder einen Veröffentlichungsauftrag planen, der automatisch ausgeführt wird. Beim Veröffentlichen werden alle Inhalte aus dem privaten, dynamischen Medien-Classic-Bereich in den öffentlichen Veröffentlichungsserver der Gleichung kopiert. Das Produkt eines Veröffentlichungsauftrags für dynamische Medien ist eine eindeutige URL für jedes veröffentlichte Asset.
+Nachdem Sie Ihr neues Asset erstellt haben, führen Sie einen Veröffentlichungsauftrag aus. Sie können dies manuell oder einen Veröffentlichungsauftrag planen, der automatisch ausgeführt wird. Beim Veröffentlichen werden alle Inhalte aus dem privaten, Dynamic Media Classic-Bereich in den öffentlichen Veröffentlichungsserver kopiert. Bei einem Dynamic Media Publish-Auftrag handelt es sich um eine eindeutige URL für jedes veröffentlichte Asset.
 
 Der Server, auf dem Sie veröffentlichen, hängt vom Typ des Inhalts und des Workflows ab. Beispielsweise werden alle Bilder an den Image-Server gesendet und Video an den FMS-Server gesendet. Aus praktischen Gründen sprechen wir von einem &quot;Veröffentlichen&quot; als ein einzelnes Ereignis auf einem einzelnen Server.
 
@@ -115,9 +115,9 @@ Beim Veröffentlichen werden alle zur Veröffentlichung markierten Inhalte verö
 >
 >Automatisieren Sie Ihre Veröffentlichungsaufträge und planen Sie die Ausführung einer Vollversion für jeden Tag um 12.00 Uhr oder zu einem beliebigen späteren Zeitpunkt am Abend.
 
-### Konzept: Grundlegendes zur URL von Dynamic Media Classic
+### Konzept: Die Dynamic Media Classic-URL
 
-Das Endprodukt eines Arbeitsablaufs für Dynamic Media Classic ist eine URL, die auf das Asset verweist (unabhängig davon, ob es sich um ein Bildset oder ein adaptives Videoset handelt). Diese URLs sind sehr vorhersagbar und folgen demselben Muster. Bei Bildern wird jedes Bild aus dem P-TIFF-Übergeordnet-Bild generiert.
+Das Endprodukt eines Dynamic Media Classic-Workflows ist eine URL, die auf das Asset verweist (unabhängig davon, ob es sich um ein Bildset oder ein adaptives Videoset handelt). Diese URLs sind sehr vorhersagbar und folgen demselben Muster. Bei Bildern wird jedes Bild aus dem P-TIFF-Übergeordnet-Bild generiert.
 
 Die folgende Syntax für die URL eines Bildes enthält einige Beispiele:
 
@@ -129,7 +129,7 @@ Im ersten Beispiel lautet der virtuelle Pfad zum Bild &quot;Backpack_A&quot;`htt
 
 Das zweite Beispiel wendet das so genannte &quot;Bild-Vorgabe&quot;auf dasselbe Backpack_A-Bild an, wie es in $!_template300$. Die $-Symbole auf beiden Seiten des Ausdrucks weisen darauf hin, dass eine Bildvorgabe, ein zusammengesetzter Satz von Bildmodifikatoren, auf das Bild angewendet wird.
 
-Sobald Sie wissen, wie URLs von Dynamic Media Classic zusammengestellt werden, verstehen Sie, wie Sie sie programmgesteuert ändern und wie Sie sie tiefer in Ihre Site- und Backend-Systeme integrieren können.
+Sobald Sie wissen, wie Dynamic Media Classic-URLs zusammengestellt werden, verstehen Sie, wie Sie sie programmgesteuert ändern und wie Sie sie tiefer in Ihre Site- und Backend-Systeme integrieren können.
 
 ### Konzept: Die Cache-Verzögerung
 
@@ -148,11 +148,11 @@ Erfahren Sie, wie Sie den Cache für die URLs, die aktualisiert werden müssen, 
 
 ## Schritt 3: Bereitstellung
 
-Denken Sie daran, dass das Endprodukt eines Arbeitsablaufs für Dynamic Media Classic eine URL ist, die auf das Asset verweist. Die URL kann auf ein einzelnes Bild, einen Bildsatz, ein Rotationsset oder eine andere Bildsatzsammlung oder ein Video verweisen. Sie müssen diese URL verwenden und etwas damit anfangen, z. B. Ihren HTML-Code so bearbeiten, dass die `<IMG>`-Tags auf das Bild von Dynamic Media Classic zeigen, anstatt auf ein Bild zu verweisen, das von Ihrer aktuellen Site stammt.
+Denken Sie daran, dass das Endprodukt eines Dynamic Media Classic-Workflows eine URL ist, die auf das Asset verweist. Die URL kann auf ein einzelnes Bild, einen Bildsatz, ein Rotationsset oder eine andere Bildsatzsammlung oder ein Video verweisen. Sie müssen diese URL verwenden und etwas damit anfangen, z. B. Ihren HTML-Code so bearbeiten, dass die `<IMG>`-Tags auf das Dynamic Media Classic-Bild verweisen, anstatt auf ein Bild zu verweisen, das von Ihrer aktuellen Site stammt.
 
 Im Bereitstellungsschritt müssen Sie diese URLs in Ihre Website, mobile App, E-Mail-Kampagne oder einen anderen digitalen Berührungspunkt integrieren, an dem Sie das Asset anzeigen möchten.
 
-Beispiel für die Integration der URL für ein Bild in eine Website:
+Beispiel für die Integration der Dynamic Media Classic-URL für ein Bild in eine Website:
 
 ![image](assets/main-workflow/example-url-1.png)
 
@@ -168,7 +168,7 @@ Beispiel eines Links (in rot), über den ein Bildsatz in einem Viewer in einem n
 
 >[!IMPORTANT]
 >
->Sie müssen die URLs für dynamische Medien-Classic in Ihre Website, mobile App, E-Mail und andere digitale Touchpoints integrieren — Dynamic Media Classic kann das nicht für Sie tun!
+>Sie müssen die Dynamic Media Classic-URLs in Ihre Website, mobile App, E-Mail und andere digitale Touchpoints integrieren — Dynamic Media Classic kann das nicht für Sie tun!
 
 ## Anzeigen von Assets in einer Vorschau
 
