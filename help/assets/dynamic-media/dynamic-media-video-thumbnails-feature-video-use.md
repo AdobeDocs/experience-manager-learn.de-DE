@@ -33,4 +33,4 @@ Benutzerdefinierte Video-Miniaturansichten von AEM Assets bieten Autoren die Mö
 
 >[!NOTE]
 >
->Sie sollten Ihre [AEM Instanz im Modus &quot;Dynamische Medien](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html)&quot;ausführen
+>Sie sollten Ihre [AEM Instanz im Modus Dynamic Media](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html) ausführen
