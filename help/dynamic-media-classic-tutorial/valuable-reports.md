@@ -22,7 +22,7 @@ In diesem letzten Kapitel möchten wir Ihnen lediglich zwei wertvolle Berichte e
 
 ## Bericht &quot;Bandbreite und Datenspeicherung&quot;
 
-Der Bericht &quot;Bandbreite und Datenspeicherung&quot;zeigt an, wie viel Bildserverbandbreite pro Monat verbraucht wurde und welche Datenspeicherung Sie für Dynamic Media Classic eingehen. Datenspeicherung ist ein vertraglich vereinbarter Betrag, daher ist es wichtig, dass Sie überprüfen und sicherstellen, dass Sie unter Ihrer Grenze bleiben, um Übernachtungskosten zu vermeiden.
+Der Bericht &quot;Bandbreite und Datenspeicherung&quot;zeigt an, wie viel Bildserverbandbreite pro Monat verbraucht wurde und welche Datenspeicherung Sie in Dynamic Media Classic aufrufen. Datenspeicherung ist ein vertraglich vereinbarter Betrag, daher ist es wichtig, dass Sie überprüfen und sicherstellen, dass Sie unter Ihrer Grenze bleiben, um Übernachtungskosten zu vermeiden.
 
 ![image](assets/valuable-reports/reports-1.jpg)
 
@@ -42,9 +42,9 @@ Wir hoffen, dass Sie den Inhalt in diesem Leitfaden für Best Practices gefunden
 
 Weitere Informationen zu Dynamic Media Classic finden Sie in den folgenden Ressourcen:
 
-- [Dynamic Media Classic unter Experience League - Vorteile](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
-- [Dynamic Media Classic auf Experience League - Mehr](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
-- [Die Archive des Newsletters für dynamische Medien](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
-- [Seite &quot;Dynamischer MedienNewsletter&quot;-Abonnement](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
+- [Dynamic Media Classic auf Experience League - Vorteile](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
+- [Dynamic Media Classic auf Experience League - Weitere Informationen](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
+- [Die Dynamic Media Newsletter-Archive](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
+- [Abonnement des Dynamic Media-Newsletters](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
 - [Dokumentation zu Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/home.html)
 - [Rich Media-Blog-Beiträge](https://theblog.adobe.com/tag/dynamic-media)
