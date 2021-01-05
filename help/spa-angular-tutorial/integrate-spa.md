@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
 workflow-type: tm+mt
 source-wordcount: '2202'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -29,7 +29,7 @@ Verstehen Sie, wie der Quellcode für eine in Angular geschriebene Einzelseitena
 2. Erfahren Sie, wie Sie einen lokalen Entwicklungsserver für die dedizierte Front-End-Entwicklung verwenden.
 3. Erforschen Sie die Verwendung einer **Proxy**- und statischen **Modell**-Datei für die Entwicklung mit der AEM JSON-Modell-API
 
-## Was Sie erstellen
+## Was Sie erstellen werden
 
 In diesem Kapitel wird eine einfache `Header`-Komponente zur SPA hinzugefügt. Bei der Erstellung dieser statischen `Header` Komponente werden verschiedene Ansätze zur AEM SPA Entwicklung verwendet.
 
@@ -81,7 +81,7 @@ Weitere Informationen zum Front-End-Build können [hier finden Sie](https://docs
 
 Überprüfen Sie anschließend das `ui.frontend`-Modul, um die SPA zu verstehen, die automatisch vom [AEM Projektarchiv](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) generiert wurden.
 
-1. Öffnen Sie in der IDE Ihrer Wahl das AEM Projekt für die WKND SPA. In diesem Lernprogramm wird die [Visual Studio-Code-IDE](https://docs.adobe.com/content/help/en/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code) verwendet.
+1. Öffnen Sie in der IDE Ihrer Wahl das AEM Projekt für die WKND SPA. In diesem Lernprogramm wird die [Visual Studio-Code-IDE](https://docs.adobe.com/content/help/de/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code) verwendet.
 
    ![VSCode - AEM WKND SPA](./assets/integrate-spa/vscode-ide-openproject.png)
 
@@ -132,9 +132,9 @@ Weitere Informationen zum Front-End-Build können [hier finden Sie](https://docs
 
    Weitere Informationen zu den verfügbaren Skripten finden Sie [hier](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html).
 
-6. Inspect Sie die Datei `ui.frontend/clientlib.config.js`. Diese Konfigurationsdatei wird von [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) verwendet, um zu bestimmen, wie die Client-Bibliothek generiert wird.
+6. Prüfen Sie die Datei `ui.frontend/clientlib.config.js`. Diese Konfigurationsdatei wird von [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) verwendet, um zu bestimmen, wie die Client-Bibliothek generiert wird.
 
-7. Inspect Sie die Datei `ui.frontend/pom.xml`. Diese Datei wandelt den Ordner `ui.frontend` in ein [Maven-Modul](http://maven.apache.org/guides/mini/guide-multiple-modules.html) um. Die Datei `pom.xml` wurde aktualisiert, um das [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) zu **test** und **build** den SPA während eines Maven-Builds zu verwenden.
+7. Prüfen Sie die Datei `ui.frontend/pom.xml`. Diese Datei wandelt den Ordner `ui.frontend` in ein [Maven-Modul](http://maven.apache.org/guides/mini/guide-multiple-modules.html) um. Die Datei `pom.xml` wurde aktualisiert, um das [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) zu **test** und **build** den SPA während eines Maven-Builds zu verwenden.
 
 8. Inspect Sie die Datei `app.component.ts` bei `ui.frontend/src/app/app.component.ts`:
 
@@ -169,7 +169,7 @@ Weitere Informationen zum Front-End-Build können [hier finden Sie](https://docs
 
 Fügen Sie anschließend eine neue Komponente zum SPA hinzu und stellen Sie die Änderungen auf einer lokalen AEM bereit, um die Integration anzuzeigen.
 
-1. Öffnen Sie ein neues Terminalfenster und navigieren Sie zum Ordner `ui.frontend`:
+1. Öffnen Sie ein neues Terminal-Fenster und navigieren Sie zum Ordner `ui.frontend`:
 
    ```shell
    $ cd aem-guides-wknd-spa/ui.frontend
