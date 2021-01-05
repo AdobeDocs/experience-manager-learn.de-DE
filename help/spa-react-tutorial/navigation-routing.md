@@ -28,7 +28,7 @@ Erfahren Sie, wie mehrere Ansichten im SPA durch Zuordnen zu AEM Seiten mit dem 
 1. Hier erfahren Sie, wie Sie mit [React Router](https://reacttraining.com/react-router/) zwischen verschiedenen Ansichten der SPA navigieren.
 1. Implementieren Sie eine dynamische Navigation, die von der AEM Seitenhierarchie gesteuert wird.
 
-## Was Sie erstellen
+## Was Sie erstellen werden
 
 In diesem Kapitel wird ein Navigationsmenü zu einer vorhandenen Komponente `Header` hinzugefügt. Das Navigationsmenü wird von der AEM-Seitenhierarchie gesteuert und verwendet das JSON-Modell, das von der [Navigationskernkomponente](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/navigation.html) bereitgestellt wird.
 
@@ -68,7 +68,7 @@ Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-gu
 
 ## Inspect Header-Updates {#inspect-header}
 
-In vorherigen Kapiteln wurde die Komponente `Header` als reine React-Komponente hinzugefügt, die über `App.js` eingeschlossen wurde. In diesem Kapitel wurde die Komponente `Header` entfernt und wird über den [Vorlageneditor](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html) hinzugefügt. Auf diese Weise können Benutzer das Navigationsmenü von `Header` innerhalb von AEM konfigurieren.
+In vorherigen Kapiteln wurde die Komponente `Header` als reine React-Komponente hinzugefügt, die über `App.js` eingeschlossen wurde. In diesem Kapitel wurde die Komponente `Header` entfernt und wird über den [Vorlageneditor](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html) hinzugefügt. Auf diese Weise können Benutzer das Navigationsmenü von `Header` innerhalb von AEM konfigurieren.
 
 >[!NOTE]
 >
@@ -354,7 +354,7 @@ Implementieren Sie anschließend das Navigationsmenü als Teil von `Header`. Wir
    ```
 
    Wie bereits erwähnt, implementieren wir anstelle der Implementierung der Navigation innerhalb der `Header` den Großteil der Logik in der `Navigation`-Komponente.  Die Eigenschaftsvariablen von `Header` enthalten die JSON-Struktur, die zum Erstellen des Menüs erforderlich ist. Wir übergeben alle Props.
-1. Öffnen Sie die Datei `Navigation.js` bei `ui.frontend/src/components/Navigation/Navigation.js`.
+1. Öffnen Sie die Datei `Navigation.js` unter `ui.frontend/src/components/Navigation/Navigation.js`.
 1. Implementieren Sie die `renderGroupNav(children)`-Methode:
 
    ```js
