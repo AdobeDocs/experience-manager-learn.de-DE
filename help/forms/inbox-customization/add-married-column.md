@@ -17,7 +17,7 @@ ht-degree: 7%
 ---
 
 
-# Hinzufügen benutzerdefinierter Spalten    
+# Hinzufügen benutzerdefinierter Spalten 
 
 Um Workflow-Daten im Posteingang anzuzeigen, müssen wir Variablen im Workflow definieren und füllen. Der Variablenwert muss festgelegt werden, bevor eine Aufgabe einem Benutzer zugewiesen wird. Um Ihnen einen Beginn zu geben, haben wir einen Beispielarbeitsablauf bereitgestellt, der auf Ihrem AEM bereitgestellt werden kann.
 
