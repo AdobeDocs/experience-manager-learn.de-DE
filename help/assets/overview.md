@@ -1,6 +1,6 @@
 ---
 title: AEM Assets-Videos und -Tutorials
-description: Eine Sammlung von Videos und Tutorials zu Adobe Experience Manager-Assets
+description: Eine Sammlung von Videos und Tutorials zu Adobe Experience Manager Assets
 sub-product: assets, dynamic-media
 translation-type: tm+mt
 source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
@@ -11,7 +11,7 @@ ht-degree: 21%
 ---
 
 
-# Überblick{#overview}
+# Überblick {#overview}
 
 Adobe Experience Manager Assets ist ein Werkzeug zur Verwaltung digitaler Assets auf AEM Plattform, mit dem Benutzer ihre digitalen Assets (Bilder, Videos, Dokumente und Audioclips) in einem webbasierten Repository erstellen, verwalten und freigeben können. Dieses Benutzerhandbuch enthält Videos und Tutorials zu den zahlreichen Funktionen und Funktionen von AEM Assets.
 
@@ -68,15 +68,15 @@ Adobe Experience Manager Assets ist ein Werkzeug zur Verwaltung digitaler Assets
 </td>
 <td>
    <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-   <img alt="Übersicht über dynamische Medien" src="./assets/overview/dynamic-media.png" />
+   <img alt="Dynamic Media-Übersicht" src="./assets/overview/dynamic-media.png" />
    </a>
    <div>
       <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-      <strong>Übersicht über dynamische Medien</strong>
+      <strong>Dynamic Media-Übersicht</strong>
       </a>
    </div>
    <p>
-      <em>Verwalten und Zugreifen auf Medieninhalte mit dynamischen Medien</em>
+      <em>Verwalten und Zugreifen auf Medieninhalte mit Dynamic Media</em>
    <p>
 </td>
 </table>
