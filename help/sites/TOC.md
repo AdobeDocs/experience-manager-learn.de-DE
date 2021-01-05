@@ -48,7 +48,7 @@ ht-degree: 35%
    + [Inhaltsfragmente und Erlebnisfragmente](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + Entwickeln {#developing}
    + [AEM-Projektarchetyp](developing/aem-project-archetype.md)
-   + [Erste Schritte mit AEM Sites](https://docs.adobe.com/content/help/de/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+   + [Erste Schritte mit AEM Sites](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [Erste Schritte mit AEM Headless](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/getting-started-with-aem-headless/overview.html)
    + [Erste Schritte mit AEM SPA Editor und React](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-react-tutorial/overview.html)
    + [Erste Schritte mit AEM SPA Editor und Angular](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-angular-tutorial/overview.html)
