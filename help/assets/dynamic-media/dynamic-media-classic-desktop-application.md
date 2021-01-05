@@ -1,8 +1,8 @@
 ---
-title: Verwenden der Desktop-Anwendung "Dynamic Media Classic"
-seo-title: Verwenden der Desktop-Anwendung "Dynamic Media Classic"
-description: Adobe führt eine Desktop-Anwendung für Benutzer von Dynamic Media Classic ein, die im Browser nicht mehr auf Adobe Flash-Technologie angewiesen ist.
-seo-description: Adobe führt eine Desktop-Anwendung für Benutzer von Dynamic Media Classic ein, die im Browser nicht mehr auf Adobe Flash-Technologie angewiesen ist.
+title: Verwenden der Dynamic Media Classic Desktop-Anwendung
+seo-title: Verwenden der Dynamic Media Classic Desktop-Anwendung
+description: Adobe führt eine Desktop-Anwendung für Dynamic Media Classic-Benutzer ein, die im Browser nicht mehr auf Adobe Flash-Technologie angewiesen sind.
+seo-description: Adobe führt eine Desktop-Anwendung für Dynamic Media Classic-Benutzer ein, die im Browser nicht mehr auf Adobe Flash-Technologie angewiesen sind.
 sub-product: dynamic-media
 feature: desktop-application, classic
 topics: authoring, operations
@@ -21,9 +21,9 @@ ht-degree: 0%
 ---
 
 
-# Verwenden der Desktop-Anwendung &quot;Dynamic Media Classic&quot;{#using-dynamic-media-desktop-application}
+# Verwenden der Dynamic Media Classic Desktop-Anwendung{#using-dynamic-media-desktop-application}
 
-Adobe führt eine Desktopanwendung für Dynamic Media Classic ein, die einem Browser ähnelt, und eine funktionell gleichwertige Benutzeroberfläche, die nicht vom Adobe Flash Player abhängig ist.
+Adobe führt eine Desktopanwendung für Dynamic Media Classic ein, die einem Browser ähnelt, und eine funktionell gleichwertige Benutzeroberfläche, die nicht vom Adobe Flash Player abhängt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/36645/?quality=12)
 
@@ -33,7 +33,7 @@ Adobe führt eine Desktopanwendung für Dynamic Media Classic ein, die einem Bro
 
 ## Systemanforderungen
 
-Die Desktop-App &quot;Adobe Dynamic Media Classic&quot;ist mit den folgenden Betriebssystemen kompatibel:
+Die Desktop-App der Adobe Dynamic Media Classic ist mit den folgenden Betriebssystemen kompatibel:
 
 * macOS 10.10 oder neuer
 * Windows 7 oder neuer
@@ -41,6 +41,6 @@ Die Desktop-App &quot;Adobe Dynamic Media Classic&quot;ist mit den folgenden Bet
 ## Unterstützende Materialien
 
 * [Dokumentation zur Adobe Dynamic Media Classic Desktop-Anwendung](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html)
-* [Häufig gestellte Fragen zur Adobe Dynamischer Medien](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/new-ui-2020.html)
+* [Adobe Dynamic Media Häufig gestellte Fragen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/new-ui-2020.html)
 * [Download - Disk Image File for macOS (.dmg)](http://download.macromedia.com/dynamic-media-classic/20.20.1/adobe-dynamic-media-classic-20.20.1.dmg)
 * [Download - Ausführbare Datei für Windows (.exe)](http://download.macromedia.com/dynamic-media-classic/20.20.1/adobe-dynamic-media-classic-20.20.1.exe)
