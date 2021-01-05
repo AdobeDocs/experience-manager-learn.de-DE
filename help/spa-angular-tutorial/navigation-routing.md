@@ -29,7 +29,7 @@ Erfahren Sie, wie mehrere Ansichten im SPA mithilfe von AEM und SPA Editor SDK u
 2. Hier erfahren Sie, wie Sie mit [Angular-Routing](https://angular.io/guide/router) zwischen verschiedenen Ansichten der SPA navigieren.
 3. Implementieren Sie eine dynamische Navigation, die von der AEM Seitenhierarchie gesteuert wird.
 
-## Was Sie erstellen
+## Was Sie erstellen werden
 
 In diesem Kapitel wird einer vorhandenen Komponente `Header` ein Navigationsmenü hinzugefügt. Das Navigationsmenü wird von der AEM-Seitenhierarchie gesteuert und verwendet das JSON-Modell, das von der [Navigationskernkomponente](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/navigation.html) bereitgestellt wird.
 
@@ -69,7 +69,7 @@ Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-gu
 
 ## Inspect HeaderComponent-Updates {#inspect-header}
 
-In vorherigen Kapiteln wurde die Komponente `HeaderComponent` als reine Angular-Komponente hinzugefügt, die über `app.component.html` eingeschlossen wurde. In diesem Kapitel wird die Komponente `HeaderComponent` aus der App entfernt und über den [Vorlagen-Editor](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html) hinzugefügt. Dadurch können Benutzer das Navigationsmenü von `HeaderComponent` aus AEM konfigurieren.
+In vorherigen Kapiteln wurde die Komponente `HeaderComponent` als reine Angular-Komponente hinzugefügt, die über `app.component.html` eingeschlossen wurde. In diesem Kapitel wird die Komponente `HeaderComponent` aus der App entfernt und über den [Vorlagen-Editor](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html) hinzugefügt. Dadurch können Benutzer das Navigationsmenü von `HeaderComponent` aus AEM konfigurieren.
 
 >[!NOTE]
 >
@@ -643,7 +643,7 @@ Nachdem die Navigation implementiert wurde, überprüfen Sie das Routing in AEM.
 
    `AemPageRouteReuseStrategy`, bereitgestellt vom AEM SPA Editor JS SDK, ist eine benutzerspezifische  [](https://angular.io/api/router/RouteReuseStrategy) RouteReuseStrategy, die die Wiederverwendung der  `PageComponent` Routen verhindert. Andernfalls kann Inhalt von Seite &quot;A&quot;beim Navigieren zu Seite &quot;B&quot;angezeigt werden.
 
-2. Öffnen Sie die Datei `page.component.ts` bei `ui.frontend/src/app/components/page/`.
+2. Öffnen Sie die Datei `page.component.ts` unter `ui.frontend/src/app/components/page/`.
 
    ```js
    ...
