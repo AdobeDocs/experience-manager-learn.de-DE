@@ -20,7 +20,7 @@ ht-degree: 6%
 
 # Clientseitige Bibliotheken und Front-End-Workflow {#client-side-libraries}
 
-Erfahren Sie, wie clientlibs und clientlibs zum Bereitstellen und Verwalten von CSS und JavaScript für eine Implementierung von Adobe Experience Manager (AEM) Sites verwendet werden. In diesem Lernprogramm wird auch erläutert, wie das [ui.frontend](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/archetype/uifrontend.html)-Modul, ein entkoppeltes [Webpack](https://webpack.js.org/)-Projekt, in den End-to-End-Build-Prozess integriert werden kann.
+Erfahren Sie, wie clientlibs und clientlibs zum Bereitstellen und Verwalten von CSS und JavaScript für eine Implementierung von Adobe Experience Manager (AEM) Sites verwendet werden. In diesem Lernprogramm wird auch erläutert, wie das [ui.frontend](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/developing/archetype/uifrontend.html)-Modul, ein entkoppeltes [Webpack](https://webpack.js.org/)-Projekt, in den End-to-End-Build-Prozess integriert werden kann.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -56,7 +56,7 @@ Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-gu
 1. Erfahren Sie, wie Sie das UI.Frontend-Modul und einen Webpack-Entwicklungsserver für die dedizierte Front-End-Entwicklung verwenden.
 1. Machen Sie sich mit dem durchgängigen Arbeitsablauf für die Bereitstellung von kompiliertem CSS und JavaScript in einer Sites-Implementierung vertraut.
 
-## {#what-you-will-build}
+## Was Sie erstellen werden {#what-you-will-build}
 
 In diesem Kapitel fügen Sie einige Baseline-Stile für die WKND-Site und die Artikelseitenvorlage hinzu, um die Implementierung näher an die [UI-Designmodelle](assets/pages-templates/wknd-article-design.xd) heranzuführen. Sie verwenden einen erweiterten Front-End-Arbeitsablauf, um ein Webpack-Projekt in eine AEM Client-Bibliothek zu integrieren.
 
@@ -78,7 +78,7 @@ Stellen Sie die Startercodebasis in einer lokalen AEM-Instanz bereit und navigie
 
 ## Clientseitige Bibliotheksorganisation {#organization}
 
-Anschließend werden wir die Organisation der clientlibs durch das [AEM Projekt Archetype](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/archetype/overview.html) generiert.
+Anschließend werden wir die Organisation der clientlibs durch das [AEM Projekt Archetype](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/developing/archetype/overview.html) generiert.
 
 ![Allgemeine clientlibrary-Organisation](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -372,7 +372,7 @@ Jetzt fügen wir einige Basisstile für die Marke WKND hinzu, indem wir einige S
 
    ![Verteilte Site-CSS](assets/client-side-libraries/ui-frontend-dist-site-css.png)
 
-1. Inspect Sie die Datei `ui.frontend/clientlib.config.js`. Dies ist die Konfigurationsdatei für ein npm-Plugin, [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator). **aem-clientlib-** generatoris ist das Tool, das für die Transformation des kompilierten CSS/JavaScript verantwortlich ist und es in das  **ui.** appsmodul kopiert.
+1. Prüfen Sie die Datei `ui.frontend/clientlib.config.js`. Dies ist die Konfigurationsdatei für ein npm-Plugin, [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator). **aem-clientlib-** generatoris ist das Tool, das für die Transformation des kompilierten CSS/JavaScript verantwortlich ist und es in das  **ui.** appsmodul kopiert.
 
 1. Inspect Sie die Datei `site.css` im Modul **ui.apps** unter `ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs/clientlib-site/css/site.css`. Dies sollte eine identische Kopie der Datei `site.css` aus dem Modul **ui.frontend** sein. Nun, da es sich im Modul **ui.apps** befindet, kann es in AEM bereitgestellt werden.
 
@@ -410,7 +410,7 @@ Als Nächstes werden wir prüfen, wie das Projekt so eingerichtet ist, dass die 
    */-->
    ```
 
-1. Inspect Sie die Datei `customfooterlibs.html`. Diese Datei, z. B. `customheaderlibs.html` soll durch die Implementierung von Projekten überschrieben werden. Hier bedeutet die Zeile `${clientlib.js @ categories='wknd.base'}`, dass das JavaScript von **clientlib-base** unten auf allen Seiten eingeschlossen wird.
+1. Prüfen Sie die Datei `customfooterlibs.html`. Diese Datei, z. B. `customheaderlibs.html` soll durch die Implementierung von Projekten überschrieben werden. Hier bedeutet die Zeile `${clientlib.js @ categories='wknd.base'}`, dass das JavaScript von **clientlib-base** unten auf allen Seiten eingeschlossen wird.
 
 1. Erstellen und Bereitstellen des Projekts auf einer lokalen AEM mit Maven:
 
@@ -520,8 +520,8 @@ Der Schwerpunkt dieses Tutorials liegt auf clientseitigen Bibliotheken und poten
 
 * [Breadcrumb](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/breadcrumb.html)
 * [Download](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/download.html)
-* [Bild](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/image.html)
-* [Liste](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/list.html)
+* [Bild](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/image.html)
+* [Liste](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/list.html)
 * [Navigation](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/navigation.html)
 * [Schnellsuche](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/quick-search.html)
 * [Trennzeichen](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/separator.html)
