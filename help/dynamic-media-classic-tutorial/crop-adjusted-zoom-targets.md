@@ -1,6 +1,6 @@
 ---
 title: Beschneiden, Anpassen von Zielgruppen und Zoomen
-description: Das Übergeordnet erstellte Bild von Dynamic Media Classic unterstützt die Erstellung separater Versionen für jedes Bild, um Details oder Muster anzuzeigen, ohne dass für jedes Bild eine separate Version erstellt werden muss. Erfahren Sie, wie Sie Bilder in Dynamic Media Classic beschneiden und als neue Übergeordnet- oder virtuelle Datei speichern, virtuelle Angepasste Bilder speichern und anstelle von Übergeordnet-Assets verwenden sowie Zoom-Zielgruppen für Ihre Bilder erstellen, um hervorgehobene Details anzuzeigen.
+description: Das Übergeordnet erstellte Bild von Dynamic Media Classic unterstützt die Erstellung separater Versionen für jedes Bild, um Details oder Muster anzuzeigen, ohne dass für jedes Bild separate Versionen erstellt werden müssen. Erfahren Sie, wie Sie Bilder in Dynamic Media Classic beschneiden und als neue Übergeordnet- oder virtuelle Datei speichern, virtuelle angepasste Bilder speichern und anstelle von Übergeordnet-Assets verwenden sowie Zoom-Zielgruppen für Ihre Bilder erstellen, um hervorgehobene Details anzuzeigen.
 sub-product: dynamic-media
 feature: smart-crop
 doc-type: tutorial
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Beschneiden, Anpassen von Zielgruppen und Zoomen {#crop-adjusted-zoom-targets}
 
-Eine der Hauptvorteile des Dynamic Media Classic Übergeordnet Image-Konzepts besteht darin, dass Sie das Bild-Asset für viele Zwecke wiederverwenden können. Traditionell müssen Sie separate, zugeschnittene Versionen jedes Bildes erstellen, um Details oder Muster anzuzeigen. Bei Verwendung von Dynamic Media Classic können Sie die gleichen Aufgaben auf Ihrem einzigen Übergeordnete ausführen und diese zugeschnittenen Versionen entweder als neue physische Dateien oder als virtuelle Ableitungen speichern, die keinen Platz für die Datenspeicherung benötigen.
+Eine der Hauptvorteile des Dynamic Media Classic Übergeordnet Image-Konzepts besteht darin, dass Sie das Bild-Asset für viele Zwecke wiederverwenden können. Traditionell müssen Sie separate, zugeschnittene Versionen jedes Bildes erstellen, um Details oder Muster anzuzeigen. Wenn Sie Dynamic Media Classic verwenden, können Sie dieselben Aufgaben auf Ihrem einzelnen Übergeordnete ausführen und diese zugeschnittenen Versionen entweder als neue physische Dateien oder als virtuelle Ableitungen speichern, die keinen Platz für die Datenspeicherung benötigen.
 
 Am Ende dieses Abschnitts des Tutorials erfahren Sie, wie:
 
@@ -28,12 +28,12 @@ Am Ende dieses Abschnitts des Tutorials erfahren Sie, wie:
 
 ## Beschneiden
 
-Dynamic Media Classic verfügt über einige Bildbearbeitungswerkzeuge, die in der Benutzeroberfläche bequem verfügbar sind, einschließlich des Beschneidungswerkzeugs. Aus verschiedenen Gründen möchten Sie möglicherweise Ihr Übergeordnet-Image in Dynamic Media Classic beschneiden. Beispiel:
+Dynamic Media Classic verfügt über einige Bildbearbeitungswerkzeuge, die in der Benutzeroberfläche bequem verfügbar sind, einschließlich des Beschneidungswerkzeugs. Sie können aus verschiedenen Gründen Ihr Übergeordnet-Image in Dynamic Media Classic beschneiden. Beispiel:
 
-- Sie haben keinen Zugriff auf die Originaldatei. Sie möchten das Bild mit einem anderen Zuschnitt- oder Seitenverhältnis anzeigen, haben aber nicht die Originaldatei auf Ihrem Computer oder arbeiten von zu Hause aus. In diesem Fall können Sie zu Dynamic Media Classic gehen, das Bild suchen, es beschneiden und speichern oder es als neue Version speichern.
+- Sie haben keinen Zugriff auf die Originaldatei. Sie möchten das Bild mit einem anderen Zuschnitt- oder Seitenverhältnis anzeigen, haben aber nicht die Originaldatei auf Ihrem Computer oder arbeiten von zu Hause aus. In diesem Fall können Sie nach Dynamic Media Classic gehen, das Bild suchen, es beschneiden und speichern oder es als neue Version speichern.
 - So entfernen Sie überschüssigen Leerraum. Das Bild wurde mit zu viel weißem Raum fotografiert, wodurch das Produkt klein aussieht. Sie möchten, dass Ihre Miniaturbilder die Arbeitsfläche so gut wie möglich ausfüllen.
 - Um angepasste Bilder zu erstellen, verwenden Sie virtuelle Kopien von Bildern, die keinen Speicherplatz benötigen. Einige Firmen verfügen über Geschäftsregeln, nach denen sie separate Kopien desselben Bildes mit einem anderen Namen aufbewahren müssen. Oder Sie möchten vielleicht eine beschnittene und unbeschnittene Version desselben Bildes.
-- So erstellen Sie neue Bilder aus einem Quellbild. Sie können beispielsweise Farbfelder oder Details des Hauptbilds erstellen. Sie können dies in Adobe Photoshop tun und separat hochladen oder das Werkzeug &quot;Beschneiden&quot;in Dynamic Media Classic verwenden.
+- So erstellen Sie neue Bilder aus einem Quellbild. Sie können beispielsweise Farbfelder oder Details des Hauptbilds erstellen. Sie können dies in Adobe Photoshop tun und separat hochladen oder das Beschneidungswerkzeug in Dynamic Media Classic verwenden.
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ Sie können auf das Beschneidungswerkzeug in Dynamic Media Classic von der Seite
 
 Wenn Sie eine manuell zugeschnittene Version speichern, wird das Bild dauerhaft abgeschnitten. Dynamic Media Classic blendet die Pixel aus, indem ein interner URL-Modifikator zum Beschneiden des Bilds hinzugefügt wird. Wenn Sie veröffentlichen, wird jedem angezeigt, dass das Bild beschnitten wird. Sie können jedoch zum Beschneidungseditor zurückkehren und die Beschneidung zu einem späteren Zeitpunkt entfernen.
 
-Sie können dann auswählen, ob Sie das Bild als neues Übergeordnet oder als zusätzliche Ansicht des Übergeordneten speichern möchten. Ein neuer Übergeordnete ist eine neue physische Datei (wie TIFF oder JPEG), die Platz für die Datenspeicherung benötigt. Eine zusätzliche Ansicht ist ein virtuelles Bild, das keinen Serverraum belegt. Es wird nicht empfohlen, die Option &quot;Original ersetzen&quot;zu wählen, da dadurch Ihr Übergeordnete überschrieben wird und die Ernte dauerhaft ist. Wenn Sie als neuer Übergeordnete oder als zusätzliche Ansicht speichern, müssen Sie eine neue Asset-ID wählen. Wie andere Asset-IDs muss dies ein eindeutiger Name in Dynamic Media Classic sein.
+Sie können dann auswählen, ob Sie das Bild als neues Übergeordnet oder als zusätzliche Ansicht des Übergeordneten speichern möchten. Ein neuer Übergeordnete ist eine neue physische Datei (wie TIFF oder JPEG), die Platz für die Datenspeicherung benötigt. Eine zusätzliche Ansicht ist ein virtuelles Bild, das keinen Serverraum belegt. Es wird nicht empfohlen, die Option &quot;Original ersetzen&quot;zu wählen, da dadurch Ihr Übergeordnete überschrieben wird und die Ernte dauerhaft ist. Wenn Sie als neuer Übergeordnete oder als zusätzliche Ansicht speichern, müssen Sie eine neue Asset-ID wählen. Wie andere Asset-IDs muss es sich hierbei um einen eindeutigen Namen in Dynamic Media Classic handeln.
 
 ### _Beschneiden_
 
@@ -72,7 +72,7 @@ Das Bild auf der rechten Seite wird deutlich hervorgehoben, indem der zusätzlic
 
 Wie bereits erwähnt, können Sie die Bilder beim Hochladen auch beschneiden. Um beim Hochladen den Zuschnitt zu verwenden, klicken Sie auf die Schaltfläche **Auftragsoptionen** und wählen Sie unter &quot;Zuschnittoptionen&quot;die Option **Zuschneiden**.
 
-Diese Option wird beim nächsten Hochladen von Dynamic Media Classic gespeichert. Möglicherweise möchten Sie, dass Bilder für diesen Upload beschnitten werden, jedoch nicht bei jedem Upload zugeschnitten werden. Eine andere Möglichkeit wäre, einen speziellen geplanten FTP-Upload-Auftrag festzulegen und die Optionen für das Beschneiden dorthin zu verschieben. Auf diese Weise würden Sie den Auftrag nur ausführen, wenn Sie Ihre Bilder beschneiden müssten.
+Dynamic Media Classic speichert diese Option beim nächsten Hochladen. Möglicherweise möchten Sie, dass Bilder für diesen Upload beschnitten werden, jedoch nicht bei jedem Upload zugeschnitten werden. Eine andere Möglichkeit wäre, einen speziellen geplanten FTP-Upload-Auftrag festzulegen und die Optionen für das Beschneiden dorthin zu verschieben. Auf diese Weise würden Sie den Auftrag nur ausführen, wenn Sie Ihre Bilder beschneiden müssten.
 
 >[!IMPORTANT]
 >
@@ -80,7 +80,7 @@ Diese Option wird beim nächsten Hochladen von Dynamic Media Classic gespeichert
 
 ### Beschneiden nach URL
 
-Auch wenn dies in Dynamic Media Classic nicht offensichtlich ist, können Sie auch nur über die URL zuschneiden (oder einer Bildvorgabe sogar zuschneiden).
+Auch wenn es in Dynamic Media Classic nicht offensichtlich ist, können Sie auch rein über die URL zuschneiden (oder einer Bildvorgabe sogar zuschneiden).
 
 Wenn Sie das Werkzeug &quot;Beschneiden&quot;verwenden, werden im Feld unten URL-Werte angezeigt. Sie können diese Werte als URL-Modifikatoren direkt auf ein Bild anwenden.
 
@@ -102,7 +102,7 @@ Die Beschneidung ist nun Teil dieser Bildvorgabe und wird bei jeder Verwendung a
 
 ## Angepasste Bilder
 
-Wenn Sie das Werkzeug &quot;Beschneiden&quot;verwenden, haben Sie die Option **Als zusätzliche Ansicht von Übergeordnet** speichern. Beim Speichern wird dadurch eine neue Art von Dynamisches Media Classic-Asset erstellt — ein angepasstes Bild. Ein angepasstes Bild, auch als Derivat bezeichnet, ist ein virtuelles Bild. Es ist eigentlich gar kein Bild; Es handelt sich um einen Datenbankverweis (wie ein Alias oder eine Verknüpfung) auf das physische Übergeordnet-Bild.
+Wenn Sie das Werkzeug &quot;Beschneiden&quot;verwenden, haben Sie die Option **Als zusätzliche Ansicht von Übergeordnet** speichern. Nach dem Speichern entsteht dadurch eine neue Art von Dynamic Media Classic-Asset — ein angepasstes Bild. Ein angepasstes Bild, auch als Derivat bezeichnet, ist ein virtuelles Bild. Es ist eigentlich gar kein Bild; Es handelt sich um einen Datenbankverweis (wie ein Alias oder eine Verknüpfung) auf das physische Übergeordnet-Bild.
 
 ### Wird das tatsächliche Bild bitte stehen`?`
 
@@ -110,7 +110,7 @@ Können Sie feststellen, welches das angepasste Bild ist und welches das Überge
 
 ![image](assets/crop-adjusted-zoom-targets/real-image-stand-up.png)
 
-Sie sollten dies nicht erkennen können, ohne in Dynamic Media Classic zu sehen und den Asset-Typ &quot;Angepasstes Bild&quot;für SBR_MAIN2 anzuzeigen.
+Sie sollten es nicht erkennen können, ohne in Dynamic Media Classic zu sehen und den Asset-Typ &quot;Angepasstes Bild&quot;für SBR_MAIN2 anzuzeigen.
 
 Ein angepasstes Bild verwendet keinen Speicherplatz, da es nur als Zeilenelement in der Datenbank vorhanden ist. Er ist auch dauerhaft an den ursprünglichen Vermögenswert gebunden. Wenn das Original gelöscht wird, wird auch das angepasste Bild gelöscht. Es kann aus einem ganzen, unbeschnittenen Bild oder nur einem Teil eines Bilds (einer Beschneidung) bestehen.
 
@@ -131,7 +131,7 @@ Zoom-Zielgruppen befinden sich auch auf der Seite **Bearbeiten** und **Details**
 
 Da Zoom-Zielgruppen im Wesentlichen eine Merchandising-Funktion sind und Kenntnisse über die Verkaufspunkte eines Produkts erfordern, würden sie normalerweise von einer Person im Merchandising- oder Produktteam zu einer Firma erstellt.
 
-Der Prozess ist sehr einfach — Klicken Sie auf die Funktion, geben Sie ihr einen beschreibenden Namen und speichern Sie sie. Zielgruppen können von einem Bild in ein anderes kopiert werden, wenn sie ähnlich sind. Es handelt sich dabei jedoch um eine manuelle Kopie. In Dynamic Media Classic gibt es keine Möglichkeit, die Erstellung von Zoom-Zielgruppen zu automatisieren, da jedes Bild unterschiedlich ist und unterschiedliche Funktionen aufweist.
+Der Prozess ist sehr einfach — Klicken Sie auf die Funktion, geben Sie ihr einen beschreibenden Namen und speichern Sie sie. Zielgruppen können von einem Bild in ein anderes kopiert werden, wenn sie ähnlich sind. Es handelt sich dabei jedoch um eine manuelle Kopie. In Dynamic Media Classic gibt es keine Möglichkeit, die Erstellung von Zoom-Zielgruppen zu automatisieren, da jedes Bild unterschiedlich ist und andere Funktionen aufweist.
 
 Ein weiterer Faktor bei der Entscheidung, ob Sie Zoom-Zielgruppen verwenden möchten, ist Ihre Auswahl an Viewern. Nicht alle Viewer-Typen können Zoom-Zielgruppen anzeigen (z. B. unterstützt der Flyout-Viewer sie nicht).
 
