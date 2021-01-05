@@ -15,7 +15,7 @@ translation-type: tm+mt
 source-git-commit: f568c991cd33c5c5349da32f505cff356a6ebfd2
 workflow-type: tm+mt
 source-wordcount: '284'
-ht-degree: 7%
+ht-degree: 12%
 
 ---
 
@@ -42,5 +42,5 @@ Laden Sie das entsprechende [WKND SPA Paket](https://github.com/adobe/aem-guides
 
 Eine ausführliche Anleitung zum Entwickeln mit dem SPA Editor finden Sie unter:
 
-* [Erste Schritte mit dem AEM SPA-Editor und Angular](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-angular-tutorial/overview.html)
-* [Erste Schritte mit dem AEM SPA-Editor und React](https://docs.adobe.com/content/help/en/experience-manager-learn/spa-react-tutorial/overview.html)
+* [Erste Schritte mit dem AEM SPA-Editor und Angular](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-angular-tutorial/overview.html)
+* [Erste Schritte mit dem AEM SPA-Editor und React](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-react-tutorial/overview.html)
