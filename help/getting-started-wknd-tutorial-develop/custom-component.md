@@ -15,7 +15,7 @@ translation-type: tm+mt
 source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
 workflow-type: tm+mt
 source-wordcount: '4011'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -60,7 +60,7 @@ Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-gu
 1. Erfahren Sie, wie Sie Geschäftslogik mit Sling-Modellen einbinden können
 1. Verstehen Sie, wie Sie ein Sling-Modell aus einem HTML-Skript verwenden.
 
-## {#byline-component}
+## Was Sie erstellen werden {#byline-component}
 
 >[!VIDEO](https://video.tv.adobe.com/v/30181/?quality=12&learn=on)
 
