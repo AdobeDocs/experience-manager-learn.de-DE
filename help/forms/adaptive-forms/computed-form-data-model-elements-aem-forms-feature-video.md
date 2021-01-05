@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # Erstellen von Datenmodellelementen für berechnete Formulare in AEM Forms{#creating-computed-form-data-model-elements-in-aem-forms}
 
-Berechnete Formulardatenmodellelemente ermöglichen es Ihnen, das Manipulationsergebnis auf einem oder mehreren Formulardatenmodellelementen zu speichern. So können Sie beispielsweise das Monatsgehalt berechnen und speichern, indem Sie eine mathematische Operation im Gehaltsfeld durchführen. Dazu teilen Sie das Gehalt durch 12 auf und speichern das Ergebnis in einem berechneten Formulardatenmodell-Element namens &quot;monthSalary&quot;.
+Berechnete Formulardatenmodellelemente ermöglichen es Ihnen, das Manipulationsergebnis auf einem oder mehreren Formulardatenmodellelementen zu speichern. So können Sie beispielsweise das Monatsgehalt berechnen und speichern, indem Sie eine mathematische Operation im Gehaltsfeld durchführen. Dazu teilen Sie das Gehalt durch 12 auf und speichern das Ergebnis in dem berechneten Datenmodellelement &quot;monthSalary&quot;.
 
 Ein weiteres Beispiel zum Erstellen eines berechneten Formulardatenmodells ist die Verkettung von zwei oder mehr Formulardatenmodellelementen. Sie können beispielsweise die Elemente des Status- und ZIP-Formulardatenmodells mit einem Bindestrich zwischen den beiden Elementen verknüpfen.
 
