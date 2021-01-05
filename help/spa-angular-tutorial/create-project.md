@@ -28,7 +28,7 @@ Erfahren Sie, wie Sie ein Adobe Experience Manager (AEM) Maven-Projekt als Ausga
 1. Machen Sie sich mit der Struktur eines neuen AEM SPA Editor-Projekts vertraut, das auf einem Maven-Archetyp basiert.
 2. Stellen Sie das Startprojekt auf einer lokalen Instanz von AEM bereit.
 
-## Was Sie erstellen
+## Was Sie erstellen werden
 
 In diesem Kapitel wird ein neues AEM Projekt bereitgestellt, das auf dem [AEM Projektarchiv](https://github.com/adobe/aem-project-archetype) basiert. Das AEM Projekt wird mit einem sehr einfachen Ausgangspunkt für die Angular-SPA ausgestattet. Das in diesem Kapitel verwendete Projekt wird als Grundlage für die Umsetzung der SPA dienen und in künftigen Kapiteln aufbauen.
 
@@ -147,7 +147,7 @@ Kompilieren Sie dann den Projektcode und stellen Sie ihn mithilfe von Maven auf 
 
    Der gesamte für das Projekt erforderliche benutzerdefinierte Code wird in diese Pakete gebündelt und auf der AEM Laufzeit installiert.
 
-6. Sie sollten auch mehrere Pakete für `spa.project.core` und `core.wcm.components` sehen. Diese Abhängigkeiten werden automatisch vom Archetyp eingeschlossen. Weitere Informationen zu [AEM Hauptkomponenten finden Sie hier](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html).
+6. Sie sollten auch mehrere Pakete für `spa.project.core` und `core.wcm.components` sehen. Diese Abhängigkeiten werden automatisch vom Archetyp eingeschlossen. Weitere Informationen zu [AEM Hauptkomponenten finden Sie hier](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html).
 
 ## Autoreninhalt
 
