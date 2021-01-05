@@ -1,6 +1,6 @@
 ---
 title: Bildvorgaben
-description: Bildvorgaben in Dynamic Media Classic alle Einstellungen enthalten, die zum Erstellen eines Bildes in einer bestimmten Größe, einem bestimmten Format, einer bestimmten Qualität und einem bestimmten Scharfzeichnen erforderlich sind. Bildvorgaben sind eine wichtige Komponente der dynamischen Größe. Wenn Sie sich eine URL in Dynamic Media Classic ansehen, können Sie leicht erkennen, ob eine Bildvorgabe verwendet wird. Erfahren Sie mehr über Bildvorgaben, warum sie so nützlich sind und wie man sie erstellt.
+description: Bildvorgaben in Dynamic Media Classic alle Einstellungen enthalten, die zum Erstellen eines Bildes in einer bestimmten Größe, einem bestimmten Format, einer bestimmten Qualität und einer bestimmten Scharfzeichnung erforderlich sind. Bildvorgaben sind eine wichtige Komponente der dynamischen Größe. Wenn Sie sich eine URL in Dynamic Media Classic ansehen, können Sie leicht erkennen, ob eine Bildvorgabe verwendet wird. Erfahren Sie mehr über Bildvorgaben, warum sie so nützlich sind und wie man sie erstellt.
 sub-product: dynamic-media
 feature: image-presets
 doc-type: tutorial
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 Eine Bildvorgabe ist im Wesentlichen ein Rezept, das alle Einstellungen enthält, die zum Erstellen eines Bildes in einer bestimmten Größe, einem bestimmten Format, einer bestimmten Qualität und einem bestimmten Scharfzeichnen erforderlich sind. Bildvorgaben sind eine wichtige Komponente der dynamischen Größe.
 
-Wenn Sie sich die URLs von nahezu jedem Kunden von Dynamic Media Classic ansehen, wird wahrscheinlich eine Bildvorgabe verwendet. Suchen Sie einfach nach $name$ am Ende der URL (wobei jedes Wort oder jedes Wort den Namen ersetzt).
+Wenn Sie sich die URLs von nahezu jedem Dynamic Media Classic-Kunden ansehen, wird wahrscheinlich eine Bildvorgabe verwendet. Suchen Sie einfach nach $name$ am Ende der URL (wobei jedes Wort oder jedes Wort den Namen ersetzt).
 
 Bildvorgaben verkürzen die URL, sodass Sie, anstatt mehrere Image-Server-Anweisungen pro Anforderung zu schreiben, eine einzige Bildvorgabe schreiben können. Diese beiden URLs erzeugen beispielsweise dasselbe JPEG-Bild mit 300 x 300 Pixeln und Scharfzeichnen, bei der zweiten URL wird jedoch eine Bildvorgabe verwendet:
 
@@ -61,7 +61,7 @@ Die folgende Grafik zeigt drei Stufen des Scharfzeichnens. Von rechts nach links
 
 Dynamic Media Classic ermöglicht drei Arten des Scharfzeichnens: Einfaches Scharfzeichnen, Resamplingmodus und Unschärfemaske.
 
-Erfahren Sie mehr über [Optionen für das Scharfzeichnen in dynamischen Medien](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
+Weitere Informationen zu [Dynamic Media Classic Sharpening Options](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
 
 ## Zusätzliche Ressourcen
 
