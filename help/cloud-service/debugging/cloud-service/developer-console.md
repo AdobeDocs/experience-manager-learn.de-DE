@@ -80,7 +80,7 @@ Bundles unterstützen Sie beim Debugging von:
 + Auflisten des Status jedes OSGi-Bundles; , auch wenn sie aktiv sind oder nicht
 + Bereitstellen von Details zu ungelösten Abhängigkeiten, die dazu führen, dass OSGi-Pakete nicht aktiv werden
 
-### Komponenten
+### Komponenten 
 
 Komponenten Liste aller OSGi-Komponenten in AEM. Diese Funktion ähnelt der lokalen OSGi-Komponente des AEM-SDK unter [.](http://localhost:4502/system/console/components)`/system/console/components`
 
