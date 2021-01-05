@@ -40,7 +40,7 @@ Wir müssen eine benutzerdefinierte Authentifizierung verwenden, um REST-Aufrufe
 
 Zur Verwendung der benutzerdefinierten Authentifizierung müssen wir eine OSGi-Komponente entwickeln, die die IAuthentication-Schnittstelle implementiert
 
-Die Methode getAuthDetails muss implementiert werden. Diese Methode gibt das AuthenticationDetails-Objekt zurück. Für dieses AuthenticationDetails-Objekt sind die erforderlichen HTTP-Header festgelegt, die zum Aufrufen der REST-API an Adobe Campaign erforderlich sind.
+Die Methode getAuthDetails muss implementiert werden. Diese Methode gibt das Objekt AuthenticationDetails zurück. Für dieses AuthenticationDetails-Objekt sind die erforderlichen HTTP-Header festgelegt, die zum Aufrufen der REST-API an Adobe Campaign erforderlich sind.
 
 Im Folgenden finden Sie den Code, der bei der Erstellung der benutzerdefinierten Authentifizierung verwendet wurde. Die Methode getAuthDetails führt die gesamte Arbeit aus. Wir erstellen ein AuthenticationDetails-Objekt. Dann fügen wir dem Objekt die entsprechenden HttpHeaders hinzu und geben dieses Objekt zurück.
 
