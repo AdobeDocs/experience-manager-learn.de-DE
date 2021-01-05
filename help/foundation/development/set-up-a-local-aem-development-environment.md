@@ -1,5 +1,5 @@
 ---
-title: Einrichten einer Umgebung zur lokalen AEM
+title: Lokale AEM-Entwicklungsumgebung einrichten
 description: Handbuch zur Einrichtung einer lokalen Entwicklung für Adobe Experience Manager, AEM. Behandelt wichtige Themen wie lokale Installation, Apache Maven, integrierte Entwicklungs-Umgebung und Debugging/Fehlerbehebung. Die Entwicklung mit Eclipse IDE, CRXDE-Lite, Visual Studio Code und IntelliJ werden diskutiert.
 version: 6.4, 6.5
 feature: maven-archetype
@@ -10,12 +10,12 @@ translation-type: tm+mt
 source-git-commit: c85a59a8bd180d5affe2a5bf5939dabfb2776d73
 workflow-type: tm+mt
 source-wordcount: '2590'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
 
-# Einrichten einer Umgebung zur lokalen AEM
+# Lokale AEM-Entwicklungsumgebung einrichten
 
 Handbuch zur Einrichtung einer lokalen Entwicklung für Adobe Experience Manager, AEM. Behandelt wichtige Themen wie lokale Installation, Apache Maven, integrierte Entwicklungs-Umgebung und Debugging/Fehlerbehebung. Die Entwicklung mit **[!DNL Eclipse IDE], [!DNL CRXDE Lite], [!DNL Visual Studio Code] und[!DNL IntelliJ]** werden erläutert.
 
