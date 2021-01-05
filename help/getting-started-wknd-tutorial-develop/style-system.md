@@ -58,7 +58,7 @@ Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-gu
 1. Erfahren Sie mehr über die BEM-Notation und wie sie zum sorgfältigen Scope von Stilen verwendet werden kann.
 1. Wenden Sie erweiterte Richtlinienkonfigurationen mit bearbeitbaren Vorlagen an.
 
-## {#what-you-will-build}
+## Was Sie erstellen werden {#what-you-will-build}
 
 In diesem Kapitel verwenden wir die Funktion [Stilsystem](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html), um mehrere Varianten von Komponenten zu erstellen, die auf der Artikelseite verwendet werden. Außerdem verwenden wir das Stilsystem, um Varianten für Strukturelemente wie Kopf-/Fußzeile und Layout-Container zu erstellen.
 
@@ -66,7 +66,7 @@ In diesem Kapitel verwenden wir die Funktion [Stilsystem](https://docs.adobe.com
 
 ## Hintergrund {#background}
 
-Das [Stilsystem](https://docs.adobe.com/content/help/de-DE/experience-manager-65/developing/components/style-system.html) ermöglicht es Entwicklern und Vorlageneditoren, mehrere visuelle Varianten einer Komponente zu erstellen. Autoren können dann wiederum entscheiden, welcher Stil beim Erstellen einer Seite verwendet werden soll. Wir werden das Stilsystem während des gesamten Tutorials nutzen, um mehrere einzigartige Stile zu erzielen und gleichzeitig die Kernkomponenten in einem Low-Code-Ansatz zu nutzen.
+Das [Stilsystem](https://docs.adobe.com/content/help/de/experience-manager-65/developing/components/style-system.html) ermöglicht es Entwicklern und Vorlageneditoren, mehrere visuelle Varianten einer Komponente zu erstellen. Autoren können dann wiederum entscheiden, welcher Stil beim Erstellen einer Seite verwendet werden soll. Wir werden das Stilsystem während des gesamten Tutorials nutzen, um mehrere einzigartige Stile zu erzielen und gleichzeitig die Kernkomponenten in einem Low-Code-Ansatz zu nutzen.
 
 Die allgemeine Idee beim Stilsystem ist, dass Autoren verschiedene Stile für das Aussehen einer Komponente wählen können. Die &quot;Stile&quot;werden durch zusätzliche CSS-Klassen unterstützt, die in das äußere div einer Komponente injiziert werden. In den Client-Bibliotheken werden CSS-Regeln auf Grundlage dieser Stilklassen hinzugefügt, sodass sich das Erscheinungsbild der Komponente ändert.
 
