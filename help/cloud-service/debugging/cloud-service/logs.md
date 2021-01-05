@@ -60,7 +60,7 @@ Nur AEM Publish Dispatcher stellt Apache-Webserver- und Dispatcher-Protokolle be
    + Staging: `WARN`
    + Produktion: `ERROR`
 
-## Cloud Manager{#cloud-manager}
+## Cloud Manager{#cloud-manager}
 
 Adobe Cloud Manager ermöglicht das tägliche Herunterladen von Protokollen über die Aktion &quot;Protokolle herunterladen&quot;einer Umgebung.
 
