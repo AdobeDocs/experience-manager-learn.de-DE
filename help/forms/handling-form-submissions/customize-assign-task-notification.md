@@ -14,7 +14,7 @@ translation-type: tm+mt
 source-git-commit: c7ae9a51800bb96de24ad577863989053d53da6b
 workflow-type: tm+mt
 source-wordcount: '446'
-ht-degree: 5%
+ht-degree: 7%
 
 ---
 
@@ -128,7 +128,7 @@ Nachdem die OSGi-Aufgabe erstellt und auf AEM Server bereitgestellt wurde, konfi
 
 ## So versuchen Sie es auf Ihrem Server
 
-* [Konfigurieren des Day CQ Mail Service](https://docs.adobe.com/content/help/en/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
+* [Konfigurieren des Day CQ Mail Service](https://docs.adobe.com/content/help/de/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
 * Verknüpfen Sie eine gültige E-Mail-ID mit [Admin-Benutzer](http://localhost:4502/security/users.html)
 * Laden Sie die [Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip) mit [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) herunter und installieren Sie sie.
 * Laden Sie [Adaptives Formular](assets/request-travel-authorization.zip) herunter und importieren Sie es aus dem [Formular und Dokumente ui](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) in AEM.
