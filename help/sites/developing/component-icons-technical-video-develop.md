@@ -10,7 +10,7 @@ translation-type: tm+mt
 source-git-commit: c85a59a8bd180d5affe2a5bf5939dabfb2776d73
 workflow-type: tm+mt
 source-wordcount: '375'
-ht-degree: 2%
+ht-degree: 7%
 
 ---
 
@@ -48,7 +48,7 @@ Die Abkürzung kann über die Eigenschaft **[cq:Component]@abkürzung** angepass
 
 ### CoralUI Icons {#coralui-icons}
 
-Die von AEM bereitgestellten CoralUI-Symbole können für Komponentensymbole verwendet werden. Um ein CoralUI-Symbol zu konfigurieren, legen Sie eine **[cq:Component]@cq:icon**-Eigenschaft auf den HTML-Attributwert des gewünschten CoralUI-Symbols fest (aufgeführt in der [CoralUI-Dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)).
+Die von AEM bereitgestellten CoralUI-Symbole können für Komponentensymbole verwendet werden. Um ein CoralUI-Symbol zu konfigurieren, legen Sie eine **[cq:Component]@cq:icon**-Eigenschaft auf den HTML-Attributwert des gewünschten CoralUI-Symbols fest (aufgeführt in der [CoralUI-Dokumentation](https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)).
 
 ```plain
 /apps/.../components/content/my-component
