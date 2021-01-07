@@ -4,7 +4,7 @@ seo-title: Erste Schritte mit AEM Content Services - Kapitel 1 - Lernprogramm ei
 description: Kapitel 1 des AEMHeadless-Lernprogramms enthält die Grundeinstellung für die AEM Instanz des Lernprogramms.
 seo-description: Kapitel 1 des AEMHeadless-Lernprogramms enthält die Grundeinstellung für die AEM Instanz des Lernprogramms.
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 52824c178ddf930df134608ecb01bb661d6c514c
 workflow-type: tm+mt
 source-wordcount: '17502'
 ht-degree: 0%
@@ -599,7 +599,7 @@ Auch das basiert auf der Erfahrung im wahren Leben. Wir haben alle diese Muster 
 >
 >Das ist ein Anti-Muster. Verwenden Sie es nicht. Immer.
 
-Haben Sie schon einmal Abfragen wie `?ck=398547283745` gesehen? Sie werden als Cache-Killer (&quot;ck&quot;) bezeichnet. Wenn Sie einen Abfrage-Parameter hinzufügen, wird die Ressource nicht abgefangen. Wenn Sie eine Zufallszahl als Parameterwert hinzufügen (z. B. &quot;398547283745&quot;), wird die URL eindeutig und Sie stellen sicher, dass kein anderer Cache zwischen dem AEM und dem Bildschirm zwischengespeichert werden kann. Normalerweise sind Zwischenverdächtige ein &quot;Varnish&quot;-Cache vor dem Dispatcher, ein CDN oder sogar der Browser-Cache. Wieder: Tu das nicht! Sie möchten, dass Ihre Ressourcen so lange wie möglich zwischengespeichert werden. Der Cache ist dein Freund. Töte keine Freunde.
+Haben Sie schon einmal Abfragen wie `?ck=398547283745` gesehen? Sie werden als Cache-Killer (&quot;ck&quot;) bezeichnet. Wenn Sie einen Abfrage-Parameter hinzufügen, wird die Ressource nicht zwischengespeichert. Wenn Sie eine Zufallszahl als Parameterwert hinzufügen (z. B. &quot;398547283745&quot;), wird die URL eindeutig und Sie stellen sicher, dass kein anderer Cache zwischen dem AEM und dem Bildschirm zwischengespeichert werden kann. Normalerweise sind Zwischenverdächtige ein &quot;Varnish&quot;-Cache vor dem Dispatcher, ein CDN oder sogar der Browser-Cache. Wieder: Tu das nicht! Sie möchten, dass Ihre Ressourcen so lange wie möglich zwischengespeichert werden. Der Cache ist dein Freund. Töte keine Freunde.
 
 #### Automatische Ungültigmachung
 
