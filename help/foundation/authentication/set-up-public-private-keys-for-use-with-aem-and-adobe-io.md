@@ -9,9 +9,9 @@ audience: architect, developer, implementer
 doc-type: tutorial
 kt: 2450
 translation-type: tm+mt
-source-git-commit: c85a59a8bd180d5affe2a5bf5939dabfb2776d73
+source-git-commit: 3f973e36531a2d04cbaf6bb8dd70b39fef7d8b2f
 workflow-type: tm+mt
-source-wordcount: '726'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -114,10 +114,14 @@ Wenn Sie dazu aufgefordert werden, einen Keystore zu erstellen, führen Sie dies
 Klicken Sie in der Keystore-Konsole des Benutzers auf **[!UICONTROL Hinzufügen KeyStore-Datei für den privaten Schlüssel]** und fügen Sie die folgenden Informationen hinzu:
 
 * **[!UICONTROL Neuer Alias]**: den Alias des Schlüssels in AEM. Dies kann alles sein und muss nicht mit dem Namen des Keystore übereinstimmen, der mit dem Befehl openssl erstellt wurde.
-* **[!UICONTROL Keystore-Datei]**: Ausgabe des Befehls openssl pkcs12 (keystore.p12)
-* **[!UICONTROL Alias]** für privaten Schlüssel: Das im Befehl openssl pkcs12 festgelegte Kennwort  `-  passout` über ein Argument.
+* **[!UICONTROL KeyStore-Datei]**: Ausgabe des Befehls openssl pkcs12 (keystore.p12)
+* **[!UICONTROL KeyStore-Dateikennwort]**: Das im Befehl openssl pkcs12 festgelegte Kennwort  `-passout` über ein Argument.
+* **[!UICONTROL Alias]** für privaten Schlüssel: Der Wert, der dem  `-name` Argument im Befehl openssl pkcs12 oben (d.h.  `my-key`).
+* **[!UICONTROL Kennwort]** für privaten Schlüssel: Das im Befehl openssl pkcs12 festgelegte Kennwort  `-passout` über ein Argument.
 
-* **[!UICONTROL Kennwort]** für privaten Schlüssel: Das im Befehl openssl pkcs12 festgelegte Kennwort  `-  passout` über ein Argument.
+>[!CAUTION]
+>
+>Das KeyStore-Dateikennwort und das Kennwort für den privaten Schlüssel sind für beide Eingaben gleich. Wenn Sie ein nicht übereinstimmendes Kennwort eingeben, wird der Schlüssel nicht importiert.
 
 ### Vergewissern Sie sich, dass der private Schlüssel in den AEM-Keystore {#verify-the-private-key-is-loaded-into-the-aem-keystore} geladen wird.
 
