@@ -10,9 +10,9 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 translation-type: tm+mt
-source-git-commit: 4cfbf975919eb38413be8446b70b107bbfebb845
+source-git-commit: 398b9f855556fc425b034986a7f21159297dcba5
 workflow-type: tm+mt
-source-wordcount: '1406'
+source-wordcount: '1614'
 ht-degree: 2%
 
 ---
@@ -111,6 +111,39 @@ $ cp aem-sdk-Quickstart-XXX.jar ~/aem-sdk/publish/aem-publish-p4503.jar
 $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
+
+## Inhaltsverteilung simulieren {#content-distribution}
+
+In einem echten Cloud Service werden Inhalte der Umgebung vom Autorendienst an den Veröffentlichungsdienst mit [Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html) und der Adobe Pipeline verteilt. Die [Adobe-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution) ist ein isolierter Mikrodienst, der nur in der Cloud-Umgebung verfügbar ist.
+
+Während der Entwicklung ist es möglicherweise wünschenswert, die Verteilung von Inhalten mithilfe des lokalen Autoren- und Veröffentlichungsdiensts zu simulieren. Dies kann durch Aktivierung der alten Replizierungsagenten erreicht werden.
+
+>[!NOTE]
+>
+> Replizierungsagenten sind nur für die Verwendung in der lokalen Quickstart-JAR verfügbar und stellen nur eine Simulation der Inhaltsverteilung bereit.
+
+1. Melden Sie sich beim Dienst **Autor** an und navigieren Sie zu [http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html).
+1. Klicken Sie auf **Standardagent (publish)**, um den standardmäßigen Replizierungsagenten zu öffnen.
+1. Klicken Sie auf **Bearbeiten**, um die Konfiguration des Agenten zu öffnen.
+1. Aktualisieren Sie unter der Registerkarte **Einstellungen** die folgenden Felder:
+
+   + **Aktiviert**  - Prüfung true
+   + **Agent-Benutzer-ID**  - Dieses Feld leer lassen
+
+   ![Replication Agent-Konfiguration - Einstellungen](assets/aem-runtime/settings-config.png)
+
+1. Aktualisieren Sie unter der Registerkarte **Transport** die folgenden Felder:
+
+   + **URI** - `http://localhost:4503/bin/receive?sling:authRequestLogin=1`
+   + **User** - `admin`
+   + **Kennwort** - `admin`
+
+   ![Replication Agent-Konfiguration - Transport](assets/aem-runtime/transport-config.png)
+
+1. Klicken Sie auf **OK**, um die Konfiguration zu speichern und den Replizierungsagenten **Default** zu aktivieren.
+1. Sie können jetzt Änderungen an Inhalten im Autorendienst vornehmen und sie im Veröffentlichungsdienst veröffentlichen.
+
+![Seite veröffentlichen](assets/aem-runtime/publish-page-changes.png)
 
 ## Schnellstart-Jar-Beginn-Up-Modus
 
