@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: c551eb984d8fefe19a979ce8c556289caa6805d8
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '759'
 ht-degree: 3%
 
 ---
@@ -58,7 +58,7 @@ Führen Sie im Stammverzeichnis des neu erstellten Asset compute-Projekts den fo
 $ aio app use
 ```
 
-Vergewissern Sie sich, dass die aktuellen Workspace-Details korrekt sind und `Y` oder geben Sie ein, um ein `console.json` zu generieren. Wenn `.env` und `.aio` bereits als vorhanden erkannt werden, tippen Sie auf `x`, um die Erstellung zu überspringen.
+Überprüfen Sie, ob die aktuellen Workspace-Details korrekt sind, drücken Sie die Taste `Y` oder geben Sie die Eingabetaste ein, um ein `console.json` zu generieren. Wenn `.env` und `.aio` bereits als vorhanden erkannt werden, tippen Sie auf `x`, um die Erstellung zu überspringen.
 
 ## Überprüfen Sie die Anatomie des Projekts
 
