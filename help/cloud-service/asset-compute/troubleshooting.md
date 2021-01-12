@@ -10,9 +10,9 @@ audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 649d971ecaa67c0d1dd2636f3c212bfee3d13561
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1241'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,15 @@ Im Folgenden finden Sie eine Übersicht über häufig auftretende Probleme und F
 + __Auflösung__: Überprüfen Sie den benutzerdefinierten Worker-Code und stellen Sie sicher, dass alle asynchronen Aufrufe synchron mit  `await`erfolgen.
 
 ## Entwicklungstool{#development-tool}
+
+### Console.json-Datei fehlt im Asset compute-Projekt{#missing-console-json}
+
++ __Fehler:__ Fehler: Fehlende erforderliche Dateien bei der Überprüfung (...)/node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY) bei async setupAssetCompute (.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
++ __Ursache:__ Die  `console.json` Datei fehlt im Stammverzeichnis des Asset compute-Projekts
++ __Lösung:__ Laden Sie ein neues  `console.json` Formular für Ihr Adobe I/O-Projekt herunter
+   1. Öffnen Sie in console.adobe.io das Adobe I/O-Projekt, für das das Asset compute-Projekt konfiguriert ist,
+   1. Tippen Sie oben rechts auf die Schaltfläche __Download__
+   1. Speichern Sie die heruntergeladene Datei unter dem Dateinamen `console.json` im Stammverzeichnis Ihres Asset compute-Projekts.
 
 ### Falscher YAML-Einzug in manifest.yml{#incorrect-yaml-indentation}
 
@@ -95,7 +104,6 @@ asset compute Development Tool kann einen Status eingeben, in dem statische Date
    + Oder überprüfen Sie die testgenerierte Datei bei `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`, überprüfen Sie sie auf ihre Richtigkeit und verwenden Sie sie als erwartete Darstellungsdatei.
 
 ## Debug
-
 
 ### Debugger wird nicht angehängt{#debugger-does-not-attach}
 
