@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6713
 thumbnail: 22451.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '806'
+source-wordcount: '815'
 ht-degree: 2%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
-> Die AEM GraphQL API für Content Fragment Versand wird Anfang 2021 veröffentlicht.
-> Die zugehörige Dokumentation steht zu Vorschauen zur Verfügung.
+> Die AEM GraphQL-API für den Versand &quot;Inhaltsfragmente&quot;steht auf Anfrage zur Verfügung.
+> Wenden Sie sich an den Support für Adoben, um die API für Ihre AEM als Cloud Service-Programm zu aktivieren.
 
 In diesem Kapitel erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf dem [neu definierten Inhaltsfragmentmodell des Beitragenden](./content-fragment-models.md) basiert. Außerdem erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
 
@@ -69,7 +69,7 @@ Im vorherigen Kapitel [Definieren von Inhaltsfragmentmodellen](./content-fragmen
 
 1. Geben Sie für **Vollständiger Name** Folgendes ein: **Stacey Roswells**.
 1. Geben Sie für **Biografie** eine kurze Biografie ein. Benötigen Sie Anregungen? Sie können diese [Textdatei](assets/author-content-fragments/stacey-roswells-bio.txt) erneut verwenden.
-1. Klicken Sie für **Picture Reference** auf das Symbol **folder** und navigieren Sie zu **WKND-Site** > **English** > **Mitarbeiter** > **stacey-roswells.jpg&lt;a111/>.** Dies wird anhand des Pfads ausgewertet: `/content/dam/wknd/en/contributors/stacey-roswells.jpg`.
+1. Klicken Sie für **Picture Reference** auf das Symbol **folder** und navigieren Sie zu **WKND-Site** > **English** > **Mitarbeiter** > **stacey-roswells.jpg**. Dies wird anhand des Pfads ausgewertet: `/content/dam/wknd/en/contributors/stacey-roswells.jpg`.
 1. Wählen Sie für **Beruf** **Fotograf**.
 
    ![Erstelltes Fragment](assets/author-content-fragments/stacye-roswell-fragment-authored.png)
