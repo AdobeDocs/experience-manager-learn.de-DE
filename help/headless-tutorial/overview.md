@@ -2,9 +2,9 @@
 title: AEM Übungen ohne Kopf
 description: Eine Sammlung von Übungen zur Verwendung von Adobe Experience Manager als Headless-CMS.
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '373'
 ht-degree: 5%
 
 ---
@@ -18,8 +18,8 @@ Adobe Experience Manager verfügt über mehrere Optionen zum Definieren von Head
 
 >[!CAUTION]
 >
-> Die AEM GraphQL API für Content Fragment Versand wird Anfang 2021 veröffentlicht.
-> Die zugehörige Dokumentation steht zu Vorschauen zur Verfügung.
+> Die AEM GraphQL-API für den Versand &quot;Inhaltsfragmente&quot;steht auf Anfrage zur Verfügung.
+> Wenden Sie sich an den Support für Adoben, um die API für Ihre AEM als Cloud Service-Programm zu aktivieren.
 
 AEM GraphQL APIs für Inhaltsfragmente
 unterstützt kopflose CMS-Szenarien, in denen externe Clientanwendungen Erlebnisse mit in AEM verwalteten Inhalten wiedergeben.
