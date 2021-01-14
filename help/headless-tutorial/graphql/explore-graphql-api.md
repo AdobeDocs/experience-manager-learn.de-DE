@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '1030'
+source-wordcount: '1039'
 ht-degree: 1%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 1%
 
 >[!CAUTION]
 >
-> Die AEM GraphQL API für Content Fragment Versand wird Anfang 2021 veröffentlicht.
-> Die zugehörige Dokumentation steht zu Vorschauen zur Verfügung.
+> Die AEM GraphQL-API für den Versand &quot;Inhaltsfragmente&quot;steht auf Anfrage zur Verfügung.
+> Wenden Sie sich an den Support für Adoben, um die API für Ihre AEM als Cloud Service-Programm zu aktivieren.
 
 Die GraphQL API von AEM bietet eine leistungsstarke Abfrage, um Daten von Inhaltsfragmenten für nachgeschaltete Anwendungen verfügbar zu machen. Inhaltsfragmentmodelle definieren das Schema, das von Inhaltsfragmenten verwendet wird. Bei jeder Erstellung oder Aktualisierung eines Inhaltsfragmentmodells wird das Schema übersetzt und dem &quot;Diagramm&quot;, aus dem die GraphQL-API besteht, hinzugefügt.
 
@@ -63,7 +63,7 @@ Eine gängige Anforderung ist die Abfrage mehrerer Inhaltsfragmente.
 
    ![Ergebnisse der mitwirkenden Liste](assets/explore-graphql-api/contributorlist-results.png)
 
-1. Positionieren Sie den Cursor unter dem Text `_path` und geben Sie **STRG+Space** ein, um Codehinweise auszulösen. hinzufügen `fullName` und `occupation` zur Abfrage.
+1. Positionieren Sie den Cursor unter dem Text `_path` und geben Sie **STRG+Space** ein, um Trigger-Codehinweise anzuzeigen. hinzufügen `fullName` und `occupation` zur Abfrage.
 
    ![Abfrage mit Code-Treffern aktualisieren](assets/explore-graphql-api/update-query-codehinting.png)
 
