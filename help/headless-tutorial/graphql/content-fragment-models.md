@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '980'
 ht-degree: 2%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
-> Die AEM GraphQL API für Content Fragment Versand wird Anfang 2021 veröffentlicht.
-> Die zugehörige Dokumentation steht zu Vorschauen zur Verfügung.
+> Die AEM GraphQL-API für den Versand &quot;Inhaltsfragmente&quot;steht auf Anfrage zur Verfügung.
+> Wenden Sie sich an den Support für Adoben, um die API für Ihre AEM als Cloud Service-Programm zu aktivieren.
 
 In diesem Kapitel erfahren Sie, wie Sie Inhalte modellieren und ein Schema mit **Inhaltsfragmentmodellen** erstellen. Sie werden vorhandene Modelle überprüfen und ein neues Modell erstellen. Außerdem erfahren Sie mehr über die verschiedenen Datentypen, mit denen ein Schema als Teil des Modells definiert werden kann.
 
