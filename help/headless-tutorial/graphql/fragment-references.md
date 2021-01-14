@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '858'
 ht-degree: 2%
 
 ---
@@ -23,8 +23,8 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
-> Die AEM GraphQL API für Content Fragment Versand wird Anfang 2021 veröffentlicht.
-> Die zugehörige Dokumentation steht zu Vorschauen zur Verfügung.
+> Die AEM GraphQL-API für den Versand &quot;Inhaltsfragmente&quot;steht auf Anfrage zur Verfügung.
+> Wenden Sie sich an den Support für Adoben, um die API für Ihre AEM als Cloud Service-Programm zu aktivieren.
 
 Es ist möglich, ein Inhaltsfragment aus einem anderen Inhaltsfragment zu referenzieren. Dadurch kann ein Benutzer komplexe Datenmodelle mit Beziehungen zwischen Fragmenten erstellen.
 
