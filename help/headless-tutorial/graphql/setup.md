@@ -11,10 +11,10 @@ mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: 2ea667d3bdb73fa4da87b877f14db77d896448a7
+source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
 workflow-type: tm+mt
-source-wordcount: '1590'
-ht-degree: 2%
+source-wordcount: '1599'
+ht-degree: 3%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
-> Die AEM GraphQL API für Content Fragment Versand wird Anfang 2021 veröffentlicht.
-> Die zugehörige Dokumentation steht zu Vorschauen zur Verfügung.
+> Die AEM GraphQL-API für den Versand &quot;Inhaltsfragmente&quot;steht auf Anfrage zur Verfügung.
+> Wenden Sie sich an den Support für Adoben, um die API für Ihre AEM als Cloud Service-Programm zu aktivieren.
 
 Dieses Kapitel Angebot eine schnelle Einrichtung einer lokalen Umgebung, um zu sehen, wie eine externe Anwendung Inhalte von AEM mit AEM GraphQL APIs nutzt. Später Kapitel im Tutorial werden aus dieser Einrichtung aufbauen.
 
@@ -111,7 +111,7 @@ Beispielinhalte von der WKND-Referenz-Website werden installiert, um das Tutoria
 
 >[!NOTE]
 >
-> Wenn Sie eine Cloud Service-Umgebung verwenden, lesen Sie die Dokumentation, wie [Sie eine Codebasis wie die WKND-Referenz-Website für eine Cloud Service-Umgebung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=en#deploying) bereitstellen.
+> Wenn Sie eine Cloud Service-Umgebung verwenden, lesen Sie die Dokumentation, wie [Sie eine Codebasis wie die WKND-Referenz-Website für eine Cloud Service-Umgebung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=de#deploying) bereitstellen.
 
 ## GraphQL-Endpunkte installieren{#graphql-endpoint}
 
