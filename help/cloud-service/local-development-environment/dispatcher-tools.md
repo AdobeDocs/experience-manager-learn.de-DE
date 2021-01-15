@@ -11,9 +11,9 @@ audience: developer
 kt: 4679
 thumbnail: 30603.jpg
 translation-type: tm+mt
-source-git-commit: 1b4a927a68d24eeb08d0ee244e85519323482910
+source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1566'
 ht-degree: 2%
 
 ---
@@ -96,7 +96,7 @@ Optional können die Dispatcher- und Apache-Webserverkonfigurationen (über `htt
 
 + Nutzung:
    + Windows: `bin\validate src`
-   + macOS/Linux: `./bin/validate ./src`
+   + macOS/Linux: `./bin/validate.sh ./src`
 
 ## Dispatcher lokal ausführen
 
@@ -185,6 +185,13 @@ Ein oder mehrere Parameter können an `docker_run` übergeben werden
 >[!VIDEO](https://video.tv.adobe.com/v/30604/?quality=12&learn=on)
 
 *In diesem Video wird macOS zur Veranschaulichung verwendet. Die entsprechenden Windows/Linux-Befehle können verwendet werden, um ähnliche Ergebnisse zu erzielen*
+
+### Protokolldateizugriff
+
+Apache-Webserver- und AEM Dispatcher-Protokolle können direkt im Docker-Container aufgerufen werden:
+
++ [Zugriff auf Protokolle im Docker-Container](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-access-logs)
++ [Kopieren der Docker-Protokolle in das lokale Dateisystem](../debugging/aem-sdk-local-quickstart/logs.md#dispatcher-tools-copy-logs)
 
 ## Wann werden die Dispatcher-Tools aktualisiert?{#dispatcher-tools-version}
 
