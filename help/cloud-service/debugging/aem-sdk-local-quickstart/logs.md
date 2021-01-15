@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 kt: 5252
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '394'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ Oft ist es nützlich, die `error.log` zu &quot;schwinden&quot;, die ihre Ausgabe
 
 Dispatcher-Protokolle werden ausgegeben, um abzustürzen, wenn `bin/docker_run` aufgerufen wird. Protokolle können jedoch direkt mit in der Docker-Datei aufgerufen werden.
 
-### Zugriff auf Protokolle im Docker-Container
+### Zugriff auf Protokolle im Container Docker{#dispatcher-tools-access-logs}
 
 Dispatcher-Protokolle können direkt auf den Docker-Container unter `/etc/httpd/logs` zugreifen.
 
@@ -73,7 +73,10 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 /# exit
 ```
 
-### Kopieren der Docker-Protokolle in das lokale Dateisystem
+_Das  `<CONTAINER ID>` in  `docker exec -it <CONTAINER ID> /bin/sh` muss durch die Zielgruppe Docker CONTAINER-ID ersetzt werden, die im  `docker ps` Befehl aufgeführt ist._
+
+
+### Kopieren der Docker-Protokolle in das lokale Dateisystem{#dispatcher-tools-copy-logs}
 
 Dispatcher-Protokolle können aus dem Docker-Container unter `/etc/httpd/logs` in das lokale Dateisystem kopiert werden, um sie mit Ihrem bevorzugten Tool zur Analyse von Protokolldateien zu überprüfen. Beachten Sie, dass es sich hierbei um eine Point-in-Time-Kopie handelt, die keine Aktualisierungen in Echtzeit für die Protokolle bereitstellt.
 
@@ -90,3 +93,4 @@ $ ls
     dispatcher.log          healthcheck_access_log  httpd_access.log        httpd_error.log
 ```
 
+_Das  `<CONTAINER_ID>` in  `docker cp <CONTAINER_ID>:/var/log/apache2 ./` muss durch die Zielgruppe Docker CONTAINER-ID ersetzt werden, die im  `docker ps` Befehl aufgeführt ist._
