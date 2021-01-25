@@ -6,9 +6,9 @@ user-guide-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger un
 breadcrumb-title: AEM Forms-Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 243e26e2403e3d7816a0dd024ffbe73743827c7c
+source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '938'
 ht-degree: 6%
 
 ---
@@ -31,12 +31,12 @@ ht-degree: 6%
    + [Verwenden von benutzerdefinierten Funktionen und Code-Editor](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
 + Verarbeiten von Formularübermittlungen {#handling-af-form-submissions}
    + [Erstellen eines Review-Workflows](handling-form-submissions/creating-a-review-workflow.md)
-   + [Konfigurieren des adaptiven Formulars zum Auslösen des Workflows](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
+   + [Konfigurieren des Arbeitsablaufs &quot;Adaptives Formular für Trigger&quot;](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [Danksagungsseite anzeigen](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
    + [An externen Endpunkt senden](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
    + [Senden von E-Mails](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
    + [Arbeitsablauf für gebührenpflichtige Zeitüberschreitung bei Anforderung](handling-form-submissions/paid-time-off-request-workflow.md)
-   + [Konfigurieren des adaptiven Formulars zum Auslösen AEM Arbeitsablaufs - Video](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
+   + [Konfigurieren des adaptiven Formulars für Trigger AEM Arbeitsablauf - Video](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
    + [Benachrichtigung zur Zuweisung von Aufgaben anpassen](handling-form-submissions/customize-assign-task-notification.md)
 + Nützliche Integrationen{#some-useful-integrations}
    + [Zweifaktorauthentifizierung](some-useful-integrations/two-factor-authentication.md)
@@ -125,6 +125,18 @@ ht-degree: 6%
    + [PDF-Formular in adaptives Formular konvertieren](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [Konvertiertes adaptives Formular konfigurieren](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Verwenden von XDP-Vorlagen mit Adobe Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
++ Mehrere Forms signieren{#sign-multiple-documents}
+   + [Einführung](sign-multiple-documents/introduction.md)
+   + [Datenquelle konfigurieren](sign-multiple-documents/configure-data-source.md)
+   + [OSGi-Dienst erstellen](sign-multiple-documents/create-osgi-service.md)
+   + [Hauptarbeitsablauf erstellen](sign-multiple-documents/create-main-workflow.md)
+   + [Arbeitsablauf für Signaturstatus aktualisieren](sign-multiple-documents/update-signature-status.md)
+   + [Zusammenfassungskomponente anpassen](sign-multiple-documents/customize-summary-component.md)
+   + [Client-Bibliothek erstellen](sign-multiple-documents/create-client-lib.md)
+   + [Formularvorlage erstellen](sign-multiple-documents/create-af-template.md)
+   + [Erstes Formular erstellen](sign-multiple-documents/create-initial-form.md)
+   + [Forms zum Signieren erstellen](sign-multiple-documents/create-forms-for-signing.md)
+   + [Testen der Lösung](sign-multiple-documents/testing-and-trouble-shooting.md)
 + Variablen in AEM Workflow{#variables-aem-workflow}
    + [Einführung - Variablen im Workflow](variables-aem-workflow/introduction.md)
    + [XML-Variablen](variables-aem-workflow/part1.md)
