@@ -11,7 +11,7 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: eb2b556c5947b15a31a74a86dadd525fb06bcf14
+source-git-commit: bfcc9dbb70753f985a2e47f329dbb9f43f5805e2
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 1%
@@ -73,7 +73,7 @@ Eine gängige Anforderung ist die Abfrage mehrerer Inhaltsfragmente.
 
    `fullName` und  `occupation` sind einfache Eigenschaften. Rufen Sie im Kapitel [Definieren von Inhaltsfragmentmodellen](./content-fragment-models.md) auf, dass `fullName` und `occupation` die Werte sind, die beim Definieren des **Eigenschaftsnamens** der entsprechenden Felder verwendet werden.
 
-1. `pictureReference` und  `biography` stellen komplexere Felder dar. Aktualisieren Sie die Abfrage mit den folgenden Elementen, um Daten zu den Feldern `pictureReference` und `biography` zurückzugeben.
+1. `pictureReference` und  `biographyText` stellen komplexere Felder dar. Aktualisieren Sie die Abfrage mit den folgenden Elementen, um Daten zu den Feldern `pictureReference` und `biographyText` zurückzugeben.
 
    ```graphql
    {
@@ -82,7 +82,7 @@ Eine gängige Anforderung ist die Abfrage mehrerer Inhaltsfragmente.
          _path
          fullName
          occupation
-         biography {
+         biographyText {
            html
          }
          pictureReference {
@@ -97,7 +97,7 @@ Eine gängige Anforderung ist die Abfrage mehrerer Inhaltsfragmente.
    }
    ```
 
-   `biography` ist ein mehrzeiliges Textfeld und die GraphQL API ermöglicht es uns, eine Vielzahl von Formaten für die Ergebnisse wie  `html`,  `markdown`,  `json` oder  `plaintext`.
+   `biographyText` ist ein mehrzeiliges Textfeld und die GraphQL API ermöglicht es uns, eine Vielzahl von Formaten für die Ergebnisse wie  `html`,  `markdown`,  `json` oder  `plaintext`.
 
    `pictureReference` ist ein Inhaltsverweis und es wird erwartet, dass es ein Bild ist, daher wird ein integriertes  `ImageRef` Objekt verwendet. Auf diese Weise können wir zusätzliche Daten über das referenzierende Bild anfordern, z. B. `width` und `height`.
 
