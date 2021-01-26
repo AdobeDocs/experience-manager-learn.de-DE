@@ -5,10 +5,10 @@ breadcrumb-title: AEM Assets-Tutorials
 sub-product: Assets
 team: TM
 translation-type: tm+mt
-source-git-commit: aa349fba9e0f1df97316105ada62ff9b32501573
+source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
 workflow-type: tm+mt
-source-wordcount: '257'
-ht-degree: 36%
+source-wordcount: '259'
+ht-degree: 37%
 
 ---
 
@@ -62,6 +62,7 @@ ht-degree: 36%
 
 + Freigabe und Verteilung{#sharing}
    + [Assets herunterladen](./sharing/download.md)
+   + [Assets veröffentlichen](./sharing/publish.md)
    + [Brand Portal](./sharing/brand-portal.md)
    + Asset-Freigabe{#assets-share}
       + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
