@@ -10,9 +10,9 @@ audience: developer
 kt: 6785
 thumbnail: 330519.jpg
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: c4f3d437b5ecfe6cb97314076cd3a5e31b184c79
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '1824'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,11 @@ Integrationen mit AEM als Cloud Service müssen sicher authentifizieren können,
 
 Dienst-Anmeldeinformationen können ähnliche [Lokale Entwicklungs-Zugriffstoken](./local-development-access-token.md) erscheinen, sich jedoch in einigen wichtigen Punkten unterscheiden:
 
-+ Dienstanmeldeinformationen sind _keine_-Zugriffstoken, sondern Anmeldeinformationen, die zum Abrufen von Zugriffstoken verwendet werden.
-+ Dienstberechtigungen sind dauerhaft und ändern sich nur, wenn sie widerrufen werden, während Zugriffstoken für lokale Entwicklung täglich ablaufen.
++ Dienstanmeldeinformationen sind _keine_-Zugriffstoken, sondern Anmeldeinformationen, die für _get_-Zugriffstoken verwendet werden.
++ Dienstberechtigungen sind dauerhafter (alle 365 Tage ablaufen) und ändern sich nur, wenn sie widerrufen werden, während Zugriffstoken für lokale Entwicklung täglich ablaufen.
 + Dienstberechtigungen für eine AEM als Cloud Service-Umgebung sind einem einzelnen AEM zugeordnet, während sich Zugriffstoken für lokale Entwicklung als AEM Benutzer authentifizieren, der das Zugriffstoken generiert hat.
+
+Sowohl die Anmeldeinformationen der Dienste als auch die von ihnen erstellten Zugriffstoken sowie die Zugriffstoken für die lokale Entwicklung sollten geheim gehalten werden, da alle drei genutzt werden können, um als Cloud Service-Umgebung Zugriff auf ihre jeweiligen AEM zu erhalten
 
 ## Dienstberechtigungen generieren
 
@@ -39,7 +41,7 @@ Die Generierung von Dienstanmeldeinformationen erfolgt in zwei Schritte:
 
 ### Initialisierung von Dienstanmeldeinformationen
 
-Dienstberechtigungen erfordern im Gegensatz zu lokalen Entwicklungs-Zugriffstoken eine einmalige Initialisierung durch Ihren Adobe Org IMS Administrator, bevor sie heruntergeladen werden können.
+Dienstberechtigungen erfordern im Gegensatz zu Zugriffstoken für lokale Entwicklung eine _einmalige Initialisierung_ durch Ihren Adobe Organisations-IMS-Administrator, bevor sie heruntergeladen werden können.
 
 ![Dienstanmeldeinformationen initialisieren](assets/service-credentials/initialize-service-credentials.png)
 
@@ -55,7 +57,7 @@ __Dies ist eine einmalige Initialisierung pro AEM als Cloud Service-Umgebung__
 
 ![AEM Developer Console - Integrationen - Get Service Credentials](./assets/service-credentials/developer-console.png)
 
-Sobald die Anmeldeinformationen der AEM als Cloud Service-Umgebung initialisiert wurden, können andere Benutzer sie herunterladen.
+Sobald die AEM als Dienstanmeldeinformationen der Cloud Service-Umgebung initialisiert wurden, können andere AEM Entwickler in Ihrer Adobe IMS Org sie herunterladen.
 
 ### Dienstberechtigungen herunterladen
 
@@ -71,7 +73,7 @@ Beim Herunterladen der Dienstberechtigungen werden dieselben Schritte wie bei de
 1. Tippen Sie auf die Registerkarte __Integrationen__
 1. Tippen Sie auf die Schaltfläche __Dienstanmeldeinformationen abrufen__
 1. Tippen Sie auf die Schaltfläche &quot;Herunterladen&quot;in der oberen linken Ecke, um die JSON-Datei mit dem Wert &quot;Dienstanmeldeinformationen&quot;herunterzuladen und die Datei an einem sicheren Speicherort zu speichern.
-   + _Wenn diese Dienstberechtigungen beeinträchtigt sind, wenden Sie sich umgehend an den Support der Adobe, damit diese widerrufen werden._
+   + _Wenn die Dienstberechtigungen beeinträchtigt sind, wenden Sie sich umgehend an den Support der Adobe, damit diese widerrufen werden._
 
 ## Dienstberechtigungen installieren
 
@@ -137,38 +139,38 @@ Diese Beispielanwendung basiert auf Node.js. Daher sollten Sie das Modul [@adobe
 
 1. Aktualisieren Sie `getAccessToken(..)`, um den Inhalt der JSON-Datei zu überprüfen und festzustellen, ob sie ein lokales Entwicklungs-Zugriffstoken oder eine Dienstberechtigung darstellt. Dies lässt sich leicht erreichen, indem geprüft wird, ob die `.accessToken`-Eigenschaft vorhanden ist, die nur für das Local Development Zugriffstoken JSON vorhanden ist.
 
-Wenn Dienstberechtigungen angegeben sind, generiert die Anwendung eine JWT und tauscht sie mit der Adobe IMS gegen ein Zugriffstoken aus. Wir verwenden die [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)-Funktion `auth(...)`, die beide eine JWT generiert und sie in einem Funktionsaufruf gegen ein Zugriffstoken eintauscht.  Die Parameter für `auth(..)` sind ein [JSON-Objekt, das aus spezifischen Informationen](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) besteht, die im JSON-Dienst &quot;Dienstberechtigungen&quot;verfügbar sind, wie unten im Code beschrieben.
+   Wenn Dienstberechtigungen angegeben sind, generiert die Anwendung eine JWT und tauscht sie mit der Adobe IMS gegen ein Zugriffstoken aus. Wir verwenden die [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)-Funktion `auth(...)`, die beide eine JWT generiert und sie in einem Funktionsaufruf gegen ein Zugriffstoken eintauscht.  Die Parameter für `auth(..)` sind ein [JSON-Objekt, das aus spezifischen Informationen](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) besteht, die im JSON-Dienst &quot;Dienstberechtigungen&quot;verfügbar sind, wie unten im Code beschrieben.
 
-```javascript
- async function getAccessToken(developerConsoleCredentials) {
+   ```javascript
+    async function getAccessToken(developerConsoleCredentials) {
+   
+        if (developerConsoleCredentials.accessToken) {
+            // This is a Local Development access token
+            return developerConsoleCredentials.accessToken;
+        } else {
+            // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
+            let serviceCredentials = developerConsoleCredentials.integration;
+   
+            // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
+            // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
+            let { access_token } = await auth({
+                clientId: serviceCredentials.technicalAccount.clientId, // Client Id
+                technicalAccountId: serviceCredentials.id,              // Technical Account Id
+                orgId: serviceCredentials.org,                          // Adobe IMS Org Id
+                clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
+                privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
+                metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
+                ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
+            });
+   
+            return access_token;
+        }
+    }
+   ```
 
-     if (developerConsoleCredentials.accessToken) {
-         // This is a Local Development access token
-         return developerConsoleCredentials.accessToken;
-     } else {
-         // This is the Service Credentials JSON object that must be exchanged with Adobe IMS for an access token
-         let serviceCredentials = developerConsoleCredentials.integration;
+   Je nachdem, welche JSON-Datei - entweder das Local Development Zugriffstoken JSON oder das Service Credentials JSON - über den Befehlszeilenparameter `file` weitergegeben wird, leitet die Anwendung nun ein Zugriffstoken ab.
 
-         // Use the @adobe/jwt-auth library to pass the service credentials generated a JWT and exchange that with Adobe IMS for an access token.
-         // If other programming languages are used, please see these code samples: https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md
-         let { access_token } = await auth({
-             clientId: serviceCredentials.technicalAccount.clientId, // Client Id
-             technicalAccountId: serviceCredentials.id,              // Technical Account Id
-             orgId: serviceCredentials.org,                          // Adobe IMS Org Id
-             clientSecret: serviceCredentials.technicalAccount.clientSecret, // Client Secret
-             privateKey: serviceCredentials.privateKey,              // Private Key to sign the JWT
-             metaScopes: serviceCredentials.metascopes.split(','),   // Meta Scopes defining level of access the access token should provide
-             ims: `https://${serviceCredentials.imsEndpoint}`,       // IMS endpoint used to obtain the access token from
-         });
-
-         return access_token;
-     }
- }
-```
-
-    Je nachdem, welche JSON-Datei - entweder das Local Development Zugriffstoken JSON oder das Service Credentials JSON - über diesen Kommandozeilenparameter &quot;file&quot;weitergegeben wird, leitet die Anwendung nun ein Zugriffstoken ab.
-    
-    Denken Sie daran, dass die Dienstberechtigungen zwar nicht ablaufen, JWT und das entsprechende Zugriffstoken dies jedoch tun und 12 Stunden nach der Ausgabe aktualisiert werden müssen. Dies kann mithilfe eines &quot;refresh_token&quot;[bereitgestellt von Adobe IMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens) erfolgen.
+   Denken Sie daran, dass die Dienstberechtigungen zwar nicht ablaufen, JWT und das zugehörige Zugriffstoken dies jedoch tun und vor Ablauf aktualisiert werden müssen. Dies kann mithilfe von `refresh_token` [erfolgen, die von der Adobe IMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens) bereitgestellt werden.
 
 1. Nachdem diese Änderungen vorgenommen wurden und die JSON-Datei &quot;Dienstberechtigungen&quot;von der AEM Developer Console heruntergeladen wurde (und aus Gründen der Einfachheit im Ordner `service_token.json` mit diesem `index.js` gespeichert wurde), führen Sie die Anwendung aus, die den Befehlszeilenparameter `file` durch `service_token.json` ersetzt, und aktualisieren Sie `propertyValue` auf einen neuen Wert, damit die Auswirkungen in AEM sichtbar werden.
 
@@ -241,11 +243,6 @@ Die Ausgabe an das Terminal sieht wie folgt aus:
 1. Überprüfen Sie den Wert der aktualisierten Eigenschaft, z. B. __Copyright__, der der aktualisierten `metadata/dc:rights` JCR-Eigenschaft zugeordnet wird, die nun den Wert widerspiegelt, der im Parameter `propertyValue` angegeben wurde, z. B. __Eingeschränkte Verwendung mit WKND__
 
 ![Aktualisierung von WKND mit eingeschränkter Verwendung von Metadaten](./assets/service-credentials/asset-metadata.png)
-
-## Dienstberechtigungen sperren
-
-
-
 
 ## Herzlichen Glückwunsch!
 
