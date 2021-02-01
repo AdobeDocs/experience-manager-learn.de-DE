@@ -11,20 +11,15 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: bfcc9dbb70753f985a2e47f329dbb9f43f5805e2
+source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1009'
 ht-degree: 1%
 
 ---
 
 
 # GraphQL APIs {#explore-graphql-apis}
-
->[!CAUTION]
->
-> Die AEM GraphQL-API für den Versand &quot;Inhaltsfragmente&quot;steht auf Anfrage zur Verfügung.
-> Wenden Sie sich an den Support für Adoben, um die API für Ihre AEM als Cloud Service-Programm zu aktivieren.
 
 Die GraphQL API von AEM bietet eine leistungsstarke Abfrage, um Daten von Inhaltsfragmenten für nachgeschaltete Anwendungen verfügbar zu machen. Inhaltsfragmentmodelle definieren das Schema, das von Inhaltsfragmenten verwendet wird. Bei jeder Erstellung oder Aktualisierung eines Inhaltsfragmentmodells wird das Schema übersetzt und dem &quot;Diagramm&quot;, aus dem die GraphQL-API besteht, hinzugefügt.
 
