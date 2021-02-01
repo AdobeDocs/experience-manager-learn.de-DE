@@ -1,8 +1,7 @@
 ---
 title: Verstehen der Multitasking- und Gleichzeitigkeitsentwicklung
 seo-title: Verstehen der Multitasking- und Gleichzeitigkeitsentwicklung
-description: 'null'
-seo-description: 'null'
+description: Erfahren Sie mehr über die Vorteile, Herausforderungen und Techniken zur Verwaltung einer Multi-Mandant-Implementierung mit Adobe Experience Manager Assets.
 uuid: 682093fe-ce55-4ef8-af10-99f7062f8b1b
 discoiquuid: 0dfcdf39-7423-459f-8f35-ee5b4b829f2c
 feature: connected-assets
@@ -12,10 +11,10 @@ doc-type: article
 activity: understand
 version: 6.5
 translation-type: tm+mt
-source-git-commit: 99f2a8cdfe0b4f5f6f1a149d96affd2a9e8bcf75
+source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
 workflow-type: tm+mt
-source-wordcount: '2009'
-ht-degree: 1%
+source-wordcount: '2024'
+ht-degree: 0%
 
 ---
 
@@ -120,7 +119,7 @@ Wenn zwischen den verschiedenen Geschäftsbereichen kein Konsens erzielt werden 
 
 ### Workflow-Starter {#workflow-launchers}
 
-AEM verwendet Workflow-Starter, um die Ausführung des Workflows automatisch auszulösen, wenn bestimmte Änderungen im Repository vorgenommen werden. AEM bietet verschiedene Starter, z. B. zum Ausführen von Prozessen zur Generierung von Darstellungen und zur Extraktion von Metadaten für neue und aktualisierte Assets. Es ist zwar möglich, diese Launcher wie bisher zu belassen, aber in einer mehrteiligen Umgebung, wenn Mieter unterschiedliche Anforderungen an das Launcher- und/oder Workflow-Modell haben, ist es wahrscheinlich, dass für jeden Mieter einzelne Launcher erstellt und gepflegt werden müssen. Diese Starter müssen so konfiguriert sein, dass sie auf die Aktualisierungen ihres Mandanten zugreifen können, während Inhalte anderer Mieter unberührt bleiben. Dies lässt sich ganz einfach erreichen, indem Launcher auf bestimmte Repository-Pfade angewendet werden, die für Pächter spezifisch sind.
+AEM verwendet Workflow-Starter, um die Ausführung des Trigger-Workflows automatisch auszuführen, wenn bestimmte Änderungen im Repository vorgenommen werden. AEM bietet verschiedene Starter, z. B. zum Ausführen von Prozessen zur Generierung von Darstellungen und zur Extraktion von Metadaten für neue und aktualisierte Assets. Es ist zwar möglich, diese Launcher wie bisher zu belassen, aber in einer mehrteiligen Umgebung, wenn Mieter unterschiedliche Anforderungen an das Launcher- und/oder Workflow-Modell haben, ist es wahrscheinlich, dass für jeden Mieter einzelne Launcher erstellt und gepflegt werden müssen. Diese Starter müssen so konfiguriert sein, dass sie auf die Aktualisierungen ihres Mandanten zugreifen können, während Inhalte anderer Mieter unberührt bleiben. Dies lässt sich ganz einfach erreichen, indem Launcher auf bestimmte Repository-Pfade angewendet werden, die für Pächter spezifisch sind.
 
 ### Vanity-URLs {#vanity-urls}
 
