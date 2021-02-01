@@ -1,5 +1,6 @@
 ---
 title: PDF-Formular in adaptives Formular konvertieren
+description: Der von Adobe Sensei unterstützte Dienst für die automatische Formularkonvertierung von AEM Forms konvertiert Ihre PDF-Formulare automatisch in gerätefreundliche und responsive adaptive Formulare. Unabhängig davon, ob Sie nicht-interaktive PDF-Formulare, Acro Forms oder XFA-basierte PDF-Formulare verwenden, kann der Dienst für die automatische Formularkonvertierung diese Formulare problemlos in adaptive Formulare konvertieren.
 feature: adaptive-forms
 topics: development
 audience: developer
@@ -8,10 +9,10 @@ activity: implement
 thumbnail: 39495.jpg
 kt: 6115
 translation-type: tm+mt
-source-git-commit: f262cca1cc23c12e61595a0cc9e3f5020c25dcb5
+source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 60%
+source-wordcount: '125'
+ht-degree: 75%
 
 ---
 
