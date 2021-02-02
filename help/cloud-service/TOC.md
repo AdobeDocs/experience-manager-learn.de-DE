@@ -5,10 +5,10 @@ breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
 translation-type: tm+mt
-source-git-commit: 81c704240f163ccd151a61643f589f825a288705
+source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 37%
+source-wordcount: '270'
+ht-degree: 41%
 
 ---
 
@@ -16,24 +16,48 @@ ht-degree: 37%
 # Tutorials zu Adobe Experience Manager as a Cloud Service {#cloud-service}
 
 + [Überblick](./overview.md)
++ Einführung in AEM as a Cloud Service{#introduction}
+   + [Was ist AEM als Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
+   + [Evolution](./introduction/evolution.md)
+   + [Architektur](./introduction/architecture.md)
+   + [Cloud Manager](./introduction/cloud-manager.md)
 + Basistechnologie {#underlying-technology}
-   + [Einführung in AEM Architektur](./underlying-technology/introduction-architecture.md)
-   + [Einführung in OSGi](./underlying-technology/introduction-osgi.md)
-   + [Einführung in Java Content Repository](./underlying-technology/introduction-jcr.md)
-   + [Einführung in Sling](./underlying-technology/introduction-sling.md)
-   + [Einführung in die Ebene &quot;Autor&quot;und &quot;Veröffentlichen&quot;](./underlying-technology/introduction-author-publish.md)
-   + [Einführung in Dispatcher](./underlying-technology/introduction-dispatcher.md)
+   + [AEM-Architektur](./underlying-technology/introduction-architecture.md)
+   + [OSGi-](./underlying-technology/introduction-osgi.md)
+   + [Java Content Repository ](./underlying-technology/introduction-jcr.md)
+   + [Sling](./underlying-technology/introduction-sling.md)
+   + [Autoren- und Veröffentlichungsdienste](./underlying-technology/introduction-author-publish.md)
+   + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Cloud Manager {#cloud-manager}
    + [Programme](./cloud-manager/programs.md)
    + [Umgebungen](./cloud-manager/environments.md)
    + [CI/CD-Produktionsleitung](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD-Non-Production-Pipeline](./cloud-manager/cicd-non-production-pipeline.md)
    + [Aktivität](./cloud-manager/activity.md)
+   + Dev Ops{#devops}
+      + [Bereitstellen von Code](./cloud-manager/devops/deploy-code.md)
+      + [Projekte zusammenführen](./cloud-manager/devops/merge-projects.md)
+      + [Pipelines konfigurieren](./cloud-manager/devops/configure-pipelines.md)
+      + [Kontinuierliche Integration](./cloud-manager/devops/continuous-integration.md)
+      + [Testergebnisse analysieren](./cloud-manager/devops/analyze-test-results.md)
+      + [Dispatcherkonfigurationen](./cloud-manager/devops/dispatcher-configurations.md)
+      + [Cloud Manager-APIs](./cloud-manager/devops/cloud-manager-apis.md)
 + Umgebung für lokale Entwicklung{#local-development-environment-set-up}
    + [Überblick](./local-development-environment/overview.md)
    + [Entwicklungstools](./local-development-environment/development-tools.md)
    + [Lokale AEM Laufzeit](./local-development-environment/aem-runtime.md)
    + [Lokale Dispatcher-Tools](./local-development-environment/dispatcher-tools.md)
++ Entwickeln{#developing}
+   + Entwicklungsgrundlagen{#basics}
+      + [AEM SDK](./developing/basics/aem-sdk.md)
+      + [Lokale Entwicklungsumgebung](./developing/basics/local-development-environment.md)
+      + [AEM-Projektarchetyp](./developing/basics/aem-project-archetype.md)
+      + [Struktur von AEM-Projekten](./developing/basics/project-structure.md)
+      + [Mutable und nicht veränderliche Inhalte](./developing/basics/mutable-immutable.md)
+      + [Repository-Strukturpaket](./developing/basics/repository-structure-package.md)
+      + [Veröffentlichung von Inhalten](./developing/basics/content-publishing.md)
+      + [OSGi-Konfigurationen](./developing/basics/osgi-configurations.md)
+      + [Migration der Dispatcher-Konfiguration](./developing/basics/dispatcher-configuration.md)
 + Debugging AEM{#debugging}
    + Debuggen des AEM SDK{#debugging-aem-sdk}
       + [Überblick](./debugging/aem-sdk-local-quickstart/overview.md)
