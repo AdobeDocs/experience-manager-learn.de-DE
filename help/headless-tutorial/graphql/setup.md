@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: c752106cc68774eb7e8b9fe525273bb7088d38e5
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1547'
 ht-degree: 3%
 
 ---
@@ -49,6 +49,10 @@ Dieses Lernprogramm verwendet die AEM [als Cloud Service-SDK](https://experience
 1. Navigieren Sie zum **[Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM als Cloud Service** und laden Sie die neueste Version des **AEM SDK** herunter.
 
    ![Software Distribution Portal](assets/setup/software-distribution-portal-download.png)
+
+   >[!CAUTION]
+   >
+   > Die GraphQL-Funktion ist standardmäßig nur für das AEM SDK von 2021-02-04 oder höher aktiviert.
 
 1. Dekomprimieren Sie den Download und kopieren Sie die Quickstart-JAR-Datei (`aem-sdk-quickstart-XXX.jar`) in einen dedizierten Ordner, z. B. `~/aem-sdk/author`.
 1. Benennen Sie die JAR-Datei erneut in `aem-author-p4502.jar`.
