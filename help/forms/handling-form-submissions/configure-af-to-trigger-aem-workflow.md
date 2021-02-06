@@ -1,8 +1,8 @@
 ---
-title: Konfigurieren des adaptiven Formulars zum Auslösen AEM Workflows
-seo-title: Konfigurieren des adaptiven Formulars zum Auslösen AEM Workflows
-description: Verstehen der verschiedenen Optionen beim Konfigurieren des adaptiven Formulars, um AEM Workflow auszulösen
-seo-description: Verstehen der verschiedenen Optionen beim Konfigurieren des adaptiven Formulars, um AEM Workflow auszulösen
+title: Konfigurieren des adaptiven Formulars für Trigger AEM Arbeitsablauf
+seo-title: Konfigurieren des adaptiven Formulars für Trigger AEM Arbeitsablauf
+description: Verstehen der verschiedenen Optionen beim Konfigurieren des adaptiven Formulars für Trigger AEM Arbeitsablauf
+seo-description: Verstehen der verschiedenen Optionen beim Konfigurieren des adaptiven Formulars für Trigger AEM Arbeitsablauf
 sub-product: Formulare
 feature: workflow
 topics: integrations
@@ -19,7 +19,7 @@ ht-degree: 2%
 ---
 
 
-# Konfigurieren des adaptiven Formulars zum Auslösen AEM Workflows
+# Konfigurieren des adaptiven Formulars für Trigger AEM Arbeitsablauf
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28316?quality=9&learn=on)
