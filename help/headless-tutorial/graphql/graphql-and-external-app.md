@@ -261,7 +261,7 @@ Das Starten der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlich
    }
    ```
 
-1. Speichern Sie die Änderungen und laden Sie die React-App erneut im Webbrowser. Die drei neuen Schaltflächen werden oben angezeigt und durch Klicken auf diese Schaltflächen werden automatisch die Abfragen für Inhaltsfragmente von Adventure mit der entsprechenden Aktivität neu AEM.
+1. Speichern Sie die Änderungen und laden Sie die React-App erneut im Webbrowser. Die drei neuen Schaltflächen werden oben angezeigt und durch Klicken auf diese Schaltflächen werden automatisch die Abfragen für die Inhaltsfragmente von Adventure mit der entsprechenden Aktivität neu AEM.
 
    ![Abenteuer nach Aktivität filtern](./assets/graphql-and-external-app/filter-by-activity.png)
 
