@@ -90,6 +90,6 @@ return isMarried(inboxItem);
 * Wählen Sie _Familienstand_ und senden Sie das Formular
    [ansicht-Posteingang](http://localhost:4502/aem/inbox)
 
-Das Senden des Formulars löst den Workflow aus und dem Benutzer &quot;admin&quot;wird eine Aufgabe zugewiesen. Sie sollten einen Wert unter der Spalte Verheiratet sehen, wie in diesem Screenshot dargestellt
+Beim Senden des Formulars wird der Arbeitsablauf Trigger und dem Benutzer &quot;admin&quot;wird eine Aufgabe zugewiesen. Sie sollten einen Wert unter der Spalte Verheiratet sehen, wie in diesem Screenshot dargestellt
 
 ![heiratet-column](assets/married-column.PNG)
