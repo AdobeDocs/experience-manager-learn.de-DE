@@ -39,7 +39,7 @@ Sie können auch über POST an den externen Endpunkt senden. Um dies zu erreiche
 
 Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisungen:
 
-* Importieren Sie die mit diesem Artikel verknüpfte Asset-Datei mit dem Package Manager[ in AEM.](assets/submittingtorestendpoint.zip)
+* Importieren Sie die mit diesem Artikel verknüpfte Asset-Datei mit dem Package Manager](assets/submittingtorestendpoint.zip) in AEM.[
 * Verweisen Sie Ihren Browser auf das Anforderungsformular [Zeitüberschreitung](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * Füllen Sie das erforderliche Feld aus und senden Sie das Formular
 * Sie sollten eine Dankeseite mit Ihren auf der Seite ausgefüllten Informationen erhalten
