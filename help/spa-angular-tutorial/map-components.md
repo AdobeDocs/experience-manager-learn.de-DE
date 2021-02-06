@@ -13,8 +13,8 @@ thumbnail: 5311-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: 28b5522e094a41d81116acb923dc0390478e2308
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2387'
+ht-degree: 2%
 
 ---
 
