@@ -29,7 +29,7 @@ Erfahren Sie, wie Sie eine Adobe Target-Aktivität mit AEM Experience Fragment-A
 Um Adobe Target-Aktivitäten mithilfe von Experience Fragment-Angeboten zu erstellen, müssen die folgenden Schritte durchgeführt werden:
 
 1. [hinzufügen von Adobe Target zu Ihrer AEM Website](./add-target-launch-extension.md)
-1. [Auslösen eines Adobe Target-Aufrufs beim Start](./load-and-fire-target.md)
+1. [Trigger und Adobe Target-Aufruf von Launch](./load-and-fire-target.md)
 1. [AEM Author-Dienst in Adobe Target integrieren](./setup-aem-target-cloud-service.md)
 1. [Exportieren von AEM Experience Fragments nach Adobe Target](./export-experience-fragment-target.md)
 
