@@ -62,4 +62,4 @@ Der folgende Screenshot zeigt die Parameter und ihre Werte
 * [Benutzerspez. Sendehandler](assets/BatchAPICustomSubmit.zip) mit [Paketmanager](http://localhost:4502/crx/packmgr/index.jsp) importieren
 * [Adaptives Formular](assets/BatchGenerationAPIAF.zip) mithilfe der [Forms- und Dokument-Schnittstelle](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) importieren
 * [Benutzerdefiniertes OSGI-Bundle](assets/batchgenerationapi.batchgenerationapi.core-1.0-SNAPSHOT.jar) mithilfe von [Felix-Webkonsole ](http://localhost:4502/system/console/bundles) bereitstellen und Beginn
-* [Batchgenerierung durch Senden des Formulars auslösen](http://localhost:4502/content/dam/formsanddocuments/batchgenerationapi/jcr:content?wcmmode=disabled)
+* [Stapelgenerierung von Triggern durch Senden des Formulars](http://localhost:4502/content/dam/formsanddocuments/batchgenerationapi/jcr:content?wcmmode=disabled)
