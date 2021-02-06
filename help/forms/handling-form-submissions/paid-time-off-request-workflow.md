@@ -29,7 +29,7 @@ In diesem Artikel wird ein einfacher Arbeitsablauf für die Anforderung der beza
 
 Um die oben genannte Anforderung zu erfüllen, verwenden wir ein unsichtbares Feld mit dem Namen **initialstep** im Formular und der Standardwert ist auf &quot;Ja&quot;festgelegt. Wenn das Formular gesendet wird, setzt der erste Schritt im Workflow den Wert initialstep auf Nein. Das Formular verfügt über Geschäftsregeln, um die entsprechenden Abschnitte basierend auf dem Wert des ersten Schritts auszublenden und anzuzeigen.
 
-**Formular zum Auslösen AEM Arbeitsablaufs konfigurieren**
+**Konfigurieren des Arbeitsablaufs &quot;Formular für Trigger AEM&quot;**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28406?quality=9&learn=on)
 
