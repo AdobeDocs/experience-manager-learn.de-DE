@@ -1,8 +1,8 @@
 ---
-title: AEM Workflow bei der Übermittlung des HTML5-Formulars auslösen
-seo-title: AEM Workflow bei der Übermittlung von HTML5-Formularen auslösen
-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie ein mobiles Formular, um AEM Workflow auszulösen
-seo-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie ein mobiles Formular, um AEM Workflow auszulösen
+title: Arbeitsablauf für Trigger AEM HTML5-Formularübermittlung
+seo-title: Trigger AEM Workflow bei der Übermittlung von HTML5-Formularen
+description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie das Mobile-Formular an den Trigger AEM Arbeitsablauf
+seo-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie das Mobile-Formular an den Trigger AEM Arbeitsablauf
 feature: mobile-forms
 topics: development
 audience: developer
