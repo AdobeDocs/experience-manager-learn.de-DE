@@ -450,9 +450,9 @@ Es wäre ein wenig über diesen Leitfaden hinausgehend, um die Details, aber wir
 
 1. Wissen Sie wirklich, was Sie tun. Die Ungültigmachung richtig zu machen, ist wirklich schwer. Das ist ein Grund, warum die automatische Ungültigmachung so streng ist. um die Bereitstellung veralteter Inhalte zu vermeiden.
 
-2. Wenn Ihr Agent einen HTTP-Header `CQ-Action-Scope: ResourceOnly` sendet, bedeutet das, dass diese einzelne Ungültigungsanforderung keine automatische Ungültigmachung auslöst. Dieser Code ( [https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle](https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle)) könnte ein guter Ausgangspunkt für Ihren eigenen Replizierungsagenten sein.
+2. Wenn Ihr Agent einen HTTP-Header `CQ-Action-Scope: ResourceOnly` sendet, bedeutet das, dass diese einzelne Ungültigungsanforderung keine automatische Ungültigmachung Trigger. Dieser Code ( [https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle](https://github.com/cqsupport/webinar-dispatchercache/tree/master/src/refetching-flush-agent/refetch-bundle)) könnte ein guter Ausgangspunkt für Ihren eigenen Replizierungsagenten sein.
 
-3. `ResourceOnly`, verhindert nur die automatische Ungültigmachung. Um die notwendige Abhängigkeitsauflösung und Ungültigmachung tatsächlich zu tun, müssen Sie die Ungültigkeitserfordernisse selbst auslösen. Möglicherweise möchten Sie sich die Dispatcher-Flush-Regeln ([https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html)) für das Paket ansehen, um zu erfahren, wie das tatsächlich passieren könnte.
+3. `ResourceOnly`, verhindert nur die automatische Ungültigmachung. Um die erforderliche Abhängigkeitsauflösung und Ungültigmachung zu tun, müssen Sie die Ungültigmachung selbst Trigger geben. Möglicherweise möchten Sie sich die Dispatcher-Flush-Regeln ([https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html](https://adobe-consulting-services.github.io/acs-aem-commons/features/dispatcher-flush-rules/index.html)) für das Paket ansehen, um zu erfahren, wie das tatsächlich passieren könnte.
 
 Es wird nicht empfohlen, ein Abhängigkeitsauflösungssystem zu erstellen. Es gibt einfach zu viel Mühe und wenig Gewinn - und wie bereits gesagt, es gibt zu viel, dass Sie sich irren werden.
 
@@ -771,7 +771,7 @@ AEM weiß auch wenig über Abhängigkeiten. Es fehlt an einer richtigen Semantik
 
 AEM sind einige der Verweise bekannt. Es verwendet dieses Wissen, um Sie zu warnen, wenn Sie versuchen, eine referenzierte Seite oder ein Asset zu löschen oder zu verschieben. Dies erfolgt durch Abfrage der internen Suche beim Löschen eines Assets. Inhaltsreferenzen haben ein ganz bestimmtes Formular. Es handelt sich um Ausdruck, die mit &quot;/content&quot;beginnen. Sie können also problemlos im Volltext indiziert und bei Bedarf abgefragt werden.
 
-In unserem Fall benötigen wir einen benutzerdefinierten Replizierungsagenten im Veröffentlichungssystem, der eine Suche nach einem bestimmten Pfad auslöst, wenn sich dieser Pfad geändert hat.
+In unserem Fall benötigen wir einen benutzerdefinierten Replizierungsagenten im Veröffentlichungssystem, der nach einem bestimmten Pfad sucht, wenn sich dieser Pfad geändert hat.
 
 Sagen wir mal
 
@@ -1255,7 +1255,7 @@ Zweitens sollten sie genau sein. Wenn das System einen neuen &quot;relativen&quo
 
 In unserem Projekt wurden häufig neue relative Seiten angezeigt. Aber sie wurden nicht als &quot;alternative&quot; Links zustande gebracht. Wenn beispielsweise die `de-de/produkte`-Seite auf der deutschen Website veröffentlicht wurde, war sie nicht sofort auf den anderen Seiten sichtbar.
 
-Der Grund dafür war, dass die Sites bei unserem Setup unabhängig sein sollten. Eine Änderung auf der deutschen Website löste also keine Ininvalidierung auf der französischen Website aus.
+Der Grund dafür war, dass die Sites bei unserem Setup unabhängig sein sollten. Eine Änderung auf der deutschen Website hat daher keinen Trigger zur Ungültigmachung auf der französischen Website.
 
 Sie kennen bereits eine Lösung, wie man dieses Problem löst. Verringern Sie einfach den Status-Level auf 2, um die Ungültigkeitsdomäne zu erweitern. Das verringert natürlich auch das Cache-Trefferverhältnis - insbesondere bei Veröffentlichungen - und führt daher häufiger zu Ungültigmachungen.
 
@@ -1616,7 +1616,7 @@ Content-Length: 207
 /content/my-brand/products/product-2.html
 ```
 
-Wenn eine solche Anforderung dem Dispatcher angezeigt wird, wird die automatische Ungültigmachung wie gewohnt ausgelöst und es werden sofort Anforderungen in die Warteschlange gestellt, um neue Inhalte aus dem Veröffentlichungssystem abzurufen.
+Wenn der Dispatcher eine solche Anforderung sieht, wird die automatische Ungültigmachung wie gewohnt Trigger und es werden sofort Anforderungen in die Warteschlange gestellt, um neue Inhalte aus dem Veröffentlichungssystem abzurufen.
 
 Da wir jetzt einen Anforderungstext verwenden, müssen wir auch Content-Typ und Inhaltslänge entsprechend dem HTTP-Standard einstellen.
 
