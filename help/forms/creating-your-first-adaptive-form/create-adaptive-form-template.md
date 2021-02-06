@@ -24,7 +24,7 @@ Das folgende Video zeigt Ihnen den grundlegenden Vorgang zum Erstellen einer Vor
 
 >[!VIDEO](https://video.tv.adobe.com/v/37324/quality=9)
 
-Weitere Informationen finden Sie in der Dokumentation zu adaptiven Formularvorlagen[](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)
+Weitere Informationen finden Sie in der Dokumentation zu adaptiven Formularvorlagen](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html)[
 
 Bei Bedarf können Sie die [Vorlage für adaptive Formulare](assets/peak-application-template.zip) herunterladen und mit dem [Paketmanager](http://localhost:4502/crx/packmgr/index.jsp) in AEM importieren.
 
