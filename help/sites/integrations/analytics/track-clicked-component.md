@@ -127,7 +127,7 @@ Die Adobe Client-Datenschicht ist eine **Ereignis**-gesteuerte Datenschicht. Wen
 
    Das obige Codefragment fügt einen Ereignis-Listener hinzu, indem [eine Funktion](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function) in die Datenschicht gedrückt wird. Wenn das Ereignis `cmp:click` ausgelöst wird, wird die Funktion `componentClickedHandler` aufgerufen. In dieser Funktion werden einige Sanitätsprüfungen hinzugefügt und ein neues `event`-Objekt wird mit dem neuesten [Status der Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki#getstate) für die Komponente erstellt, die das Ereignis ausgelöst hat.
 
-   Danach wird `trigger(event)` aufgerufen. `trigger()` ist ein reservierter Name in Launch und löst die Launch-Regel aus. Wir übergeben das `event`-Objekt als Parameter, der wiederum durch einen anderen reservierten Namen in Launch namens `event` verfügbar gemacht wird. Datenelemente in Launch können jetzt auf verschiedene Eigenschaften verweisen: `event.component['someKey']`.
+   Danach wird `trigger(event)` aufgerufen. `trigger()` ist ein reservierter Name in Launch und &quot;Trigger&quot; die Launch-Regel. Wir übergeben das `event`-Objekt als Parameter, der wiederum durch einen anderen reservierten Namen in Launch namens `event` verfügbar gemacht wird. Datenelemente in Launch können jetzt auf verschiedene Eigenschaften verweisen: `event.component['someKey']`.
 
 1. Speichern Sie die Änderungen.
 1. Klicken Sie anschließend unter **Aktionen** auf **Hinzufügen**, um den Assistenten **Aktionskonfiguration** zu öffnen.
@@ -235,9 +235,9 @@ Aktualisieren Sie anschließend die Regel **CTA, die auf** geklickt wurde, um si
 
 1. Speichern Sie die Änderungen.
 
-## Festlegen von Analytics-Variablen und Auslösen des Beacons für die Verfolgung von Links
+## Festlegen von Analytics-Variablen und Trigger-Beacon für Link-Verfolgung
 
-Derzeit gibt die Regel **CTA, auf die geklickt wurde** eine Konsolenanweisung aus. Als Nächstes verwenden Sie die Datenelemente und die Analytics-Erweiterung, um Analytics-Variablen als **Aktion** festzulegen. Wir werden außerdem eine zusätzliche Aktion einrichten, um den **Link verfolgen** auszulösen und die erfassten Daten an Adobe Analytics zu senden.
+Derzeit gibt die Regel **CTA, auf die geklickt wurde** eine Konsolenanweisung aus. Als Nächstes verwenden Sie die Datenelemente und die Analytics-Erweiterung, um Analytics-Variablen als **Aktion** festzulegen. Wir werden außerdem eine zusätzliche Aktion einrichten, um den **Link verfolgen** Trigger und die erfassten Daten an Adobe Analytics zu senden.
 
 1. In der **CTA-Regel** **remove** die Aktion **Core - Benutzerspezifischer Code** (die Konsolenanweisungen):
 
@@ -306,7 +306,7 @@ Nachdem die Regel **CTA, auf die geklickt wurde** den Analytics-Beacon sendet, s
 
 1. Beobachten Sie in der Browser-Konsole die Meldung *&quot;Benutzerspezifischer Code&quot;für Regel &quot;CTA angeklickt&quot;wurde nicht erfüllt*.
 
-   Das liegt daran, dass die Navigationskomponente ein `cmp:click` Ereignis *aber* auslöst, weil wir die Methode gegen den Ressourcentyp überprüfen, wird keine Aktion durchgeführt.
+   Dies liegt daran, dass die Navigationskomponente Trigger eines `cmp:click`-Ereignisses *aber* macht, weil wir den Vorgang gegen den Ressourcentyp überprüfen, wird keine Aktion durchgeführt.
 
    >[!NOTE]
    >
