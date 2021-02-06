@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Im folgenden Video wird erläutert, wie AEM als Cloud Service mit Adobe Target verbunden werden können.
 
-Diese Integration ermöglicht es dem AEM Author-Dienst, direkt mit Adobe Target zu kommunizieren und Erlebnisfragmente als Angebote von AEM in die Zielgruppe zu übertragen.  Diese Integration fügt Adobe Target JavaScript (AT.js) nicht zu AEM Sites-Webseiten hinzu, da diese *AEM mit Launch unter Verwendung der Erweiterung des Zieldatensatzes* integrieren.[](../experience-platform-launch/connect-aem-launch-adobe-io.md)
+Diese Integration ermöglicht es dem AEM Author-Dienst, direkt mit Adobe Target zu kommunizieren und Erlebnisfragmente als Angebote von AEM in die Zielgruppe zu übertragen.  Diese Integration fügt Adobe Target JavaScript (AT.js) nicht zu AEM Sites-Webseiten hinzu, da diese [AEM mit Launch unter Verwendung der Erweiterung des Zieldatensatzes](../experience-platform-launch/connect-aem-launch-adobe-io.md) integrieren.**
 
 >[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
 
