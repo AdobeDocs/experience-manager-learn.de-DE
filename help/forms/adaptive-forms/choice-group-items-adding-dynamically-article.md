@@ -99,7 +99,7 @@ So versuchen Sie es auf Ihrem System:
 * [Offenes Forms und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicken Sie auf &quot;Erstellen | Datei-Upload&quot;und laden Sie die Datei hoch, die Sie im vorherigen Schritt heruntergeladen haben.
 * [Vorschau der Formulare](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)
-* Geben Sie den Kreditbetrag und die Registerkarte aus dem Feld ein. Dadurch wird die Regel ausgelöst, die das Feld für die Kreditzeit anzeigt.
+* Geben Sie den Kreditbetrag und die Registerkarte aus dem Feld ein. Dies Trigger die Regel, die das Feld für die Kreditlaufzeit anzeigt.
 * Wählen Sie den entsprechenden Kreditzeitraum aus (Die Elemente für den Kreditzeitraum werden aus dem Rest-Aufruf ausgefüllt)
 * Wählen Sie den Zinssatz aus und klicken Sie auf &quot;Amortisierungszeitplan abrufen&quot;
 * Die Abschreibungstabelle sollte ausgefüllt werden. Der Tilgungsplan wird mithilfe eines REST-Aufrufs abgerufen.
