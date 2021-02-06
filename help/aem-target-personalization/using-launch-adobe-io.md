@@ -25,7 +25,7 @@ ht-degree: 4%
       * [Adobe I/O Console](https://console.adobe.io)
 
       >[!NOTE]
-      >Sie sollten über die Berechtigung zum Entwickeln, Genehmigen, Veröffentlichen, Verwalten von Erweiterungen und Verwalten von Umgebung beim Start verfügen. Wenn Sie diese Schritte nicht ausführen können, da die Benutzeroberflächenoptionen nicht verfügbar sind, wenden Sie sich an Ihren Experience Cloud-Administrator, um Zugriff anzufordern. Weitere Informationen zu Startberechtigungen finden Sie in der Dokumentation[.](https://docs.adobelaunch.com/administration/user-permissions)
+      >Sie sollten über die Berechtigung zum Entwickeln, Genehmigen, Veröffentlichen, Verwalten von Erweiterungen und Verwalten von Umgebung beim Start verfügen. Wenn Sie diese Schritte nicht ausführen können, da die Benutzeroberflächenoptionen nicht verfügbar sind, wenden Sie sich an Ihren Experience Cloud-Administrator, um Zugriff anzufordern. Weitere Informationen zu Startberechtigungen finden Sie in der Dokumentation](https://docs.adobelaunch.com/administration/user-permissions).[
 
 
 * **Browser-Plugins**
