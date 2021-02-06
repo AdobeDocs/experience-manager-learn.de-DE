@@ -186,7 +186,7 @@ Die Testabhängigkeiten **JUnit5**, **Mockito** und **AEM Mocks** werden dem Pro
 
    Ein paralleler Quellordner im Projekt **core** enthält die Komponententests und alle zugehörigen Testdateien. Dieser Ordner **test** ermöglicht die Trennung von Testklassen vom Quellcode, ermöglicht es den Tests jedoch, so zu handeln, als ob sie in denselben Paketen wie der Quellcode leben.
 
-## JUnit-Testerstellen {#creating-the-junit-test}
+## JUnit-Test {#creating-the-junit-test} erstellen
 
 Komponententests ordnen in der Regel 1-zu-1 Java-Klassen zu. In diesem Kapitel schreiben wir einen JUnit-Test für **BylineImpl.java**, das Sling-Modell, das die Byline-Komponente unterstützt.
 
@@ -206,9 +206,9 @@ Komponententests ordnen in der Regel 1-zu-1 Java-Klassen zu. In diesem Kapitel s
 
    * `src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`
 
-1. Unterscheiden Sie aber auch die Testdatei.    Das Suffix `Test` in der Testdatei der Einheit `BylineImplTest.java` ist eine Konvention, die es uns ermöglicht,
+2. Unterscheiden Sie aber auch die Testdatei.    Das Suffix `Test` in der Testdatei der Einheit `BylineImplTest.java` ist eine Konvention, die es uns ermöglicht,
 1. Identifizieren Sie sie einfach als Testdatei _für_ `BylineImpl.java`
-1. Unterscheiden Sie aber auch die Testdatei _von_ der zu testenden Klasse, `BylineImpl.java`
+2. Unterscheiden Sie aber auch die Testdatei _von_ der zu testenden Klasse, `BylineImpl.java`
 
 ## Überprüfen von BylineImplTest.java {#reviewing-bylineimpltest-java}
 
