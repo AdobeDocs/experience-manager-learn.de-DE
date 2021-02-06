@@ -140,5 +140,5 @@ Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisu
 * Laden Sie die erstellte ZIP-Datei herunter. Diese ZIP-Datei enthält die vom Output-Dienst generierten PDF-Dateien.
 
 >[!NOTE]
->Es gibt mehrere Möglichkeiten, diese Funktion auszulösen. In diesem Beispiel haben wir eine Weboberfläche verwendet, um die Vorlage und die Datendatei zu verschieben, um die Funktionalität zu demonstrieren.
+>Es gibt mehrere Möglichkeiten, diese Funktion Trigger. In diesem Beispiel haben wir eine Weboberfläche verwendet, um die Vorlage und die Datendatei zu verschieben, um die Funktionalität zu demonstrieren.
 
