@@ -163,7 +163,7 @@ document.querySelectorAll('[data-aem-asset-id]').forEach(function(element) {
 });
 ```
 
-* assetAnalytics.core.assetLoaded() : wird beim Abschluss des Seitenladevorgangs aufgerufen und löst Asset-Impressionen für alle nachverfolgbaren Bilder aus.
+* assetAnalytics.core.assetLoaded() : wird bei Abschluss des Seitenladevorgangs aufgerufen und ist Trigger Asset Impressions für alle nachverfolgbaren Bilder
 * Analytics-Variable, die die geladene Asset-Liste enthält: **contextData[&#39;c.a.assets.idList&#39;]**
 * assetAnalytics.core.assetClicked() : wird aufgerufen, wenn das Asset-DOM-Element über ein Verankerungs-Tag mit einem gültigen href-Wert verfügt. Wenn auf ein Asset geklickt wird, wird ein Cookie mit der angeklickten Asset-ID als Wert erstellt.**(Cookie-Name: a.assets.clickedid)**
 * Analytics-Variable, die die geladene Asset-Liste enthält: **contextData[&#39;c.a.assets.clickedid&#39;]**
