@@ -42,7 +42,7 @@ In diesem Handbuch werden die folgenden Kernfunktionen von Dynamic Media Classic
 - **Video.** Laden Sie endgültige Videos hoch, veröffentlichen Sie sie und laden Sie sie schrittweise in konfigurierbare Video-Viewer herunter.
 - **Smart Imaging.** Technologie, die die Adobe Sensei AI-Funktionen nutzt und mit vorhandenen &quot;Bildvorgaben&quot;arbeitet, um die Leistung des Versands zu verbessern, indem Bildformat, -größe und -qualität automatisch auf der Grundlage der Browserfunktionen des Clients optimiert werden.
 
-Weitere Lösungsfunktionen finden Sie in der Dokumentation für Dynamic Media Classic[.](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/intro/introduction.html)
+Weitere Lösungsfunktionen finden Sie in der Dokumentation für Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/intro/introduction.html).[
 
 ## Die Dynamic Media Classic-Benutzeroberfläche
 
@@ -72,4 +72,4 @@ _Dynamic Media Classic-Benutzeroberfläche_
 >
 >Aktivieren Sie im Dialogfeld &quot;Hochladen&quot;das Kontrollkästchen **Nach dem Hochladen veröffentlichen, um Assets beim Hochladen automatisch zu veröffentlichen.**
 
-Weitere Informationen zum Navigieren in der Benutzeroberfläche von Dynamic Media Classic[.](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/getting-started/navigation-basics.html)
+Weitere Informationen zum Navigieren in der Benutzeroberfläche von Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/getting-started/navigation-basics.html).[
