@@ -1,8 +1,8 @@
 ---
-title: AEM Workflow bei der Übermittlung des HTML5-Formulars auslösen
-seo-title: AEM Workflow bei der Übermittlung von HTML5-Formularen auslösen
-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie ein mobiles Formular, um AEM Workflow auszulösen
-seo-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie ein mobiles Formular, um AEM Workflow auszulösen
+title: Arbeitsablauf für Trigger AEM HTML5-Formularübermittlung
+seo-title: Trigger AEM Workflow bei der Übermittlung von HTML5-Formularen
+description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie das Mobile-Formular an den Trigger AEM Arbeitsablauf
+seo-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie das Mobile-Formular an den Trigger AEM Arbeitsablauf
 feature: mobile-forms
 topics: development
 audience: developer
@@ -147,6 +147,6 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 ```
 
 Zur Ansicht der Möglichkeit, interaktive PDF-Dateien von teilweise ausgefüllten mobilen Formularen herunterzuladen, klicken Sie [hier](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content).
-Nach dem Herunterladen der PDF-Datei müssen Sie die PDF-Datei senden, um einen AEM Workflow auszulösen. In diesem Arbeitsablauf werden die Daten aus der gesendeten PDF zusammengeführt und nicht interaktive PDF zur Überprüfung generiert.
+Nach dem Herunterladen der PDF-Datei müssen Sie die PDF-Datei als Nächstes an Trigger und AEM Workflow senden. In diesem Arbeitsablauf werden die Daten aus der gesendeten PDF zusammengeführt und nicht interaktive PDF zur Überprüfung generiert.
 
 Das für diesen Anwendungsfall erstellte benutzerdefinierte Profil steht als Teil dieser Übungselemente zur Verfügung.
