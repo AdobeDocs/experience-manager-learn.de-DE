@@ -1,8 +1,8 @@
 ---
-title: AEM Workflow bei der Übermittlung des HTML5-Formulars auslösen
-seo-title: AEM Workflow bei der Übermittlung von HTML5-Formularen auslösen
-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie ein mobiles Formular, um AEM Workflow auszulösen
-seo-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie ein mobiles Formular, um AEM Workflow auszulösen
+title: Arbeitsablauf für Trigger AEM HTML5-Formularübermittlung
+seo-title: Trigger AEM Workflow bei der Übermittlung von HTML5-Formularen
+description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie das Mobile-Formular an den Trigger AEM Arbeitsablauf
+seo-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie das Mobile-Formular an den Trigger AEM Arbeitsablauf
 feature: mobile-forms
 topics: development
 audience: developer
@@ -25,7 +25,7 @@ Um diesen Verwendungsfall zu erreichen, müssen wir die folgenden Schritte ausf�
 
 * Möglichkeit, interaktive/ausfüllbare PDF-Dateien mit den Daten zu generieren, die in das mobile Formular eingegeben wurden
 * Verarbeiten der PDF-Übermittlung von Acrobat/Reader
-* Auslösen des Adobe Experience Manager (AEM)-Workflows zum Überprüfen der gesendeten PDF
+* Arbeitsablauf von Trigger Adobe Experience Manager (AEM) zum Überprüfen der gesendeten PDF
 
 Dieses Lernprogramm führt Sie durch die Schritte, die zur Durchführung des oben genannten Anwendungsfalls erforderlich sind. Beispielcode und Assets zu diesem Tutorial sind [hier verfügbar.](part-four.md)
 
