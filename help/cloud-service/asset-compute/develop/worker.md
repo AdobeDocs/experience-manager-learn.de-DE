@@ -178,7 +178,7 @@ exports.main = worker(async (source, rendition, params) => {
 
 ## Ablauffehler{#errors}
 
-asset compute-Workers können auf Situationen stoßen, die zu Fehlern führen. Das Adobe Asset compute SDK stellt [eine Reihe vordefinierter Fehler](https://github.com/adobe/asset-compute-commons#asset-compute-errors) bereit, die bei Auftreten solcher Situationen ausgegeben werden können. Wenn kein spezifischer Fehlertyp angewendet wird, kann das `GenericError` verwendet werden oder es können spezifische `ClientErrors` benutzerdefinierte &lt;a1/> definiert werden.
+asset compute-Workers können auf Situationen stoßen, die zu Fehlern führen. Das Adobe Asset compute SDK stellt [eine Reihe vordefinierter Fehler](https://github.com/adobe/asset-compute-commons#asset-compute-errors) bereit, die bei Auftreten solcher Situationen ausgegeben werden können. Wenn kein spezifischer Fehlertyp angewendet wird, kann das `GenericError` verwendet werden oder es können spezifische `ClientErrors` benutzerdefinierte  definiert werden.
 
 Bevor Sie mit der Verarbeitung der Darstellung beginnen, überprüfen Sie, ob alle Parameter gültig und im Kontext dieses Workers unterstützt sind:
 
