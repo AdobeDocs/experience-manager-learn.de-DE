@@ -78,6 +78,6 @@ Wenn sich die Asset compute-Projektversion ändert, ändern sich auch die Arbeit
 
 ## Workspace API-Bereitstellung{#workspace-api-provisioning}
 
-Beim Einrichten des Projekts &quot;Adobe-Projekt - Firefly&quot;in Adobe I/O[ zur Unterstützung der lokalen Entwicklung wurde ein neuer Entwicklungsarbeitsbereich erstellt und ](../set-up/firefly.md)Asset compute, I/O-Ereignis __und__ I/O-Ereignisse-Management-APIs __hinzugefügt.__
+Beim Einrichten des Projekts &quot;Adobe-Projekt - Firefly&quot;in Adobe I/O](../set-up/firefly.md) zur Unterstützung der lokalen Entwicklung wurde ein neuer Entwicklungsarbeitsbereich erstellt und __Asset compute, I/O-Ereignis__ und __I/O-Ereignisse-Management-APIs__ hinzugefügt.[
 
 Die APIs __Asset compute, I/O-Ereignis__ und __I/O-Ereignisse-Management-APIs__ werden nur explizit zu den für die lokale Entwicklung verwendeten Arbeitsbereichen hinzugefügt. Arbeitsflächen, die (ausschließlich) mit AEM als Cloud Service-Umgebung integrieren, benötigen __nicht__ diese APIs explizit, da die APIs natürlich als Cloud Service AEM zur Verfügung gestellt werden.
