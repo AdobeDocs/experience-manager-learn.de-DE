@@ -55,7 +55,7 @@ Die Bereitstellung einer Seite von einem Server zum Browser eines Clients erfolg
 
 <br> 
 
-Beginn wir unsere Reise mit Daten, die auf einer Festplatte gespeichert sind und in einem Browser angezeigt werden müssen.
+Lassen Sie uns unsere Journey mit einem Datenelement auf einer Festplatte Beginn machen, das in einem Browser angezeigt werden muss.
 
 #### Hardware und Betriebssystem
 
