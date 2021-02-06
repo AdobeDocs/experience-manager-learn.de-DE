@@ -74,7 +74,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 Um dem Formular für Mobilgeräte ein Bild hinzuzufügen und dieses Bild im PDF-Format anzuzeigen, haben wir Folgendes verwendet:
 
-XDP-Vorlage - In der XDP-Vorlage haben wir ein Bildfeld und eine Schaltfläche namens btnAddImage hinzugefügt. Der folgende Code behandelt das click-Ereignis des btnAddImage in unserem benutzerdefinierten Profil. Wie Sie sehen können, lösen wir das Ereignis file1 click aus. Für diesen Verwendungsfall ist keine Kodierung in der xdp erforderlich.
+XDP-Vorlage - In der XDP-Vorlage haben wir ein Bildfeld und eine Schaltfläche namens btnAddImage hinzugefügt. Der folgende Code behandelt das click-Ereignis des btnAddImage in unserem benutzerdefinierten Profil. Wie Sie sehen können, Trigger der Datei1 klicken Ereignis. Für diesen Verwendungsfall ist keine Kodierung in der xdp erforderlich.
 
 ```javascript
 $(".btnAddImage").click(function(){
@@ -84,7 +84,7 @@ $("#file1").click();
 });
 ```
 
-[Benutzerdefiniertes Profil](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). Mithilfe von benutzerdefiniertem Profil ist es einfacher, HTML-DOM-Objekte des mobilen Formulars zu bearbeiten. Dem HTML.jsp wird ein ausgeblendetes Dateielement hinzugefügt. Wenn der Benutzer auf &quot;Hinzufügen Ihr Foto&quot;klickt, wird das click-Ereignis des Dateielements ausgelöst. Dadurch kann der Benutzer das anzuhängende Foto durchsuchen und auswählen. Anschließend verwenden wir das javascript FileReader-Objekt, um die Base64-kodierte Zeichenfolge des Bildes abzurufen. Die base64-Bildzeichenfolge wird im Textfeld im Formular gespeichert. Wenn das Formular gesendet wird, extrahieren wir diesen Wert und fügen ihn in das img-Element der XML ein. Diese XML wird dann zum Zusammenführen mit der xdp verwendet, um die endgültige PDF zu generieren.
+[Benutzerdefiniertes Profil](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). Mithilfe von benutzerdefiniertem Profil ist es einfacher, HTML-DOM-Objekte des mobilen Formulars zu bearbeiten. Dem HTML.jsp wird ein ausgeblendetes Dateielement hinzugefügt. Wenn der Benutzer auf &quot;Hinzufügen Ihr Foto&quot;klickt, wird das click-Ereignis des Dateielements Trigger. Dadurch kann der Benutzer das anzuhängende Foto durchsuchen und auswählen. Anschließend verwenden wir das javascript FileReader-Objekt, um die Base64-kodierte Zeichenfolge des Bildes abzurufen. Die base64-Bildzeichenfolge wird im Textfeld im Formular gespeichert. Wenn das Formular gesendet wird, extrahieren wir diesen Wert und fügen ihn in das img-Element der XML ein. Diese XML wird dann zum Zusammenführen mit der xdp verwendet, um die endgültige PDF zu generieren.
 
 Das für diesen Artikel verwendete benutzerdefinierte Profil wurde Ihnen als Teil der Assets dieses Artikels zur Verfügung gestellt.
 
@@ -106,12 +106,12 @@ function readURL(input) {
         }
 ```
 
-Der obige Code wird ausgeführt, wenn das click-Ereignis des Dateielements ausgelöst wird. In Zeile 5 wird der Inhalt der hochgeladenen Datei als base64-Zeichenfolge extrahiert und im Textfeld gespeichert. Dieser Wert wird dann extrahiert, wenn das Formular an unser Servlet gesendet wird.
+Der obige Code wird ausgeführt, wenn das click-Ereignis des Dateielements Trigger wird. In Zeile 5 wird der Inhalt der hochgeladenen Datei als base64-Zeichenfolge extrahiert und im Textfeld gespeichert. Dieser Wert wird dann extrahiert, wenn das Formular an unser Servlet gesendet wird.
 
 Anschließend konfigurieren wir die folgenden Eigenschaften (erweitert) unseres mobilen Formulars in AEM
 
 * Sende-URL - http://localhost:4502/bin/handlemobileformsubmission. Dies ist unser Servlet, das die gesendeten Daten mit der xdp-Vorlage zusammenführt.
-* HTML-Render-Profil - Stellen Sie sicher, dass Sie &quot;AddImageToMobileForm&quot;auswählen. Dadurch wird der Code ausgelöst, um dem Formular ein Bild hinzuzufügen.
+* HTML-Render-Profil - Stellen Sie sicher, dass Sie &quot;AddImageToMobileForm&quot;auswählen. Dadurch wird der Code zum Hinzufügen eines Bilds zum Formular Trigger.
 
 Gehen Sie wie folgt vor, um diese Funktion auf Ihrem eigenen Server zu testen:
 
