@@ -153,7 +153,7 @@ Damit die Adobe I/O-CLI mit Cloud Manager kommunizieren kann, muss in der Adobe 
 1. Laden Sie die Datei `private.key` in die Adobe I/O-CLI
    + `$ aio config:set jwt-auth.jwt_private_key PATH_TO_PRIVATE_KEY_FILE --file`
 
-Starten Sie die Ausführung von Befehlen[ für Cloud Manager über die Adobe I/O-Befehlszeilenschnittstelle.](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands)
+Starten Sie die Ausführung von Befehlen](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) für Cloud Manager über die Adobe I/O-Befehlszeilenschnittstelle.[
 
 ## Einrichten der Entwicklungs-IDE
 
