@@ -25,7 +25,7 @@ Dieses Kapitel behandelt die Aktivierung und Definition von Inhaltsfragmentmodel
 
 ## Aktivieren von Inhaltsfragmentmodellen  
 
-Inhaltsfragmentmodelle **müssen über**[ AEM [!UICONTROL Konfigurationsbrowser]](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-service/implementing/developing/configurations.html)**&lt;a6/> aktiviert werden.**
+Inhaltsfragmentmodelle **müssen über**[ AEM [!UICONTROL Konfigurationsbrowser]](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-service/implementing/developing/configurations.html)**** aktiviert werden.
 
 Wenn Inhaltsfragmentmodelle für eine Konfiguration **nicht** aktiviert sind, wird die Schaltfläche **[!UICONTROL Erstellen] > [!UICONTROL Inhaltsfragment]** für die entsprechende AEM-Konfiguration nicht angezeigt.
 
