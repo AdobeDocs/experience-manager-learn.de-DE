@@ -70,7 +70,7 @@ Die direkte Serialisierung von [!DNL Sling Models] ermöglicht es ihnen, sowohl 
 
 >[!NOTE]
 >
->[!DNL Sling Model Exporter] *serialize* [!DNL Sling Models] &lt;a3/> kann auch als Java-Objekte exportiert werden. Der Export in andere Java-Objekte spielt im HTTP-Anforderungsfluss keine Rolle und wird daher nicht im obigen Diagramm angezeigt.
+>[!DNL Sling Model Exporter] *serialize* [!DNL Sling Models]  kann auch als Java-Objekte exportiert werden. Der Export in andere Java-Objekte spielt im HTTP-Anforderungsfluss keine Rolle und wird daher nicht im obigen Diagramm angezeigt.
 
 ## Begleitmaterialien
 
