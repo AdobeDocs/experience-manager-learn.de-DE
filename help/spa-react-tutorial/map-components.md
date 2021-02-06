@@ -182,7 +182,7 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
 ## Erstellen der Bildkomponente
 
-Erstellen Sie anschließend eine Remact-Komponente, die der AEM `Image`Image-Komponente[ zugeordnet ist. ](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/image.html) Die Komponente `Image` ist ein weiteres Beispiel für eine Komponente **content**.
+Erstellen Sie anschließend eine Remact-Komponente, die der AEM [Image-Komponente](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/image.html) zugeordnet ist. `Image` Die Komponente `Image` ist ein weiteres Beispiel für eine Komponente **content**.
 
 ### Inspect the JSON
 
