@@ -130,7 +130,7 @@ Ziel dieses Lernprogramms ist es, die App &quot;We.Retail Protokoll&quot;um eine
 
    >[!CAUTION]
    >
-   > Wenn Sie während des Builds einen Fehler erhalten, stellen Sie sicher, dass Ihre Maven settings.xml-Datei das Maven Artefakt-Repository der Adobe enthält[.](https://helpx.adobe.com/de/experience-manager/kb/SetUpTheAdobeMavenRepository.html)
+   > Wenn Sie während des Builds einen Fehler erhalten, stellen Sie sicher, dass Ihre Maven settings.xml-Datei das Maven Artefakt-Repository der Adobe enthält](https://helpx.adobe.com/de/experience-manager/kb/SetUpTheAdobeMavenRepository.html).[
 
 1. Navigieren Sie zu:
 
@@ -159,7 +159,7 @@ Ziel dieses Lernprogramms ist es, die App &quot;We.Retail Protokoll&quot;um eine
 
 SPA Entwicklungsiterationen erfolgen unabhängig von AEM. Wenn die SPA bereit ist, in AEM eingesetzt zu werden, finden die folgenden hochrangigen Schritte statt (wie oben gezeigt).
 
-1. Der AEM Projekterstellung wird aufgerufen, was wiederum einen Build des SPA auslöst. Das Protokoll We.Retail verwendet das [**frontend-maven-plugin**](https://github.com/eirslett/frontend-maven-plugin).
+1. Der AEM Projekterstellung wird aufgerufen, was wiederum einen Build des SPA-Projekts Trigger. Das Protokoll We.Retail verwendet das [**frontend-maven-plugin**](https://github.com/eirslett/frontend-maven-plugin).
 1. Der SPA des Projekts [**aem-clientlib-generator**](https://www.npmjs.com/package/aem-clientlib-generator) bettet die kompilierte SPA als AEM Client-Bibliothek in das AEM Projekt ein.
 1. Das AEM Projekt generiert ein AEM Paket, einschließlich des kompilierten SPA, sowie alle anderen AEM.
 
@@ -488,7 +488,7 @@ Als Nächstes wird die React-Komponente erstellt. Öffnen Sie das Modul **respon
    }
    ```
 
-1. Implementieren Sie eine Bearbeitungskonfigurationsmethode. Diese Methode wird über den Helfer `MapTo` weitergeleitet und stellt dem AEM Editor Informationen zur Verfügung, um einen Platzhalter anzuzeigen, falls die Komponente leer ist. Dies tritt auf, wenn die Komponente dem SPA hinzugefügt, aber noch nicht verfasst wurde. hinzufügen Sie Folgendes unter der `HelloWorld`-Klasse:
+1. Implementieren Sie eine Bearbeitungskonfigurationsmethode. Diese Methode wird über den Helfer `MapTo` weitergeleitet und stellt dem AEM Editor Informationen zur Verfügung, um einen Platzhalter anzuzeigen, falls die Komponente leer ist. Dies tritt auf, wenn die Komponente dem SPA hinzugefügt, aber noch nicht erstellt wurde. hinzufügen Sie Folgendes unter der `HelloWorld`-Klasse:
 
    ```js
    ...
@@ -803,7 +803,7 @@ Als Nächstes wird die Angular-Komponente erstellt. Öffnen Sie das Modul **angu
 [Abgeschlossene Lösung für die Komponente HelloWorld](assets/spa-editor-helloworld-tutorial-use/aem-sample-we-retail-journal-HelloWorldSolution.zip)
 
 * Vollständiger Quellcode für [[!DNL We.Retail Journal] auf GitHub](https://github.com/adobe/aem-sample-we-retail-journal)
-* Sehen Sie sich ein ausführlicheres Tutorial zur Entwicklung von React mit [[!DNL Getting Started with the AEM SPA Editor - WKND Tutorial]](https://helpx.adobe.com/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html) an.
+* Sehen Sie sich ein ausführlicheres Tutorial zur Entwicklung von React mit [[!DNL Getting Started with the AEM SPA Editor - WKND Tutorial]](https://helpx.adobe.com/de/experience-manager/kt/sites/using/getting-started-spa-wknd-tutorial-develop.html) an.
 
 ## Fehlerbehebung {#troubleshooting}
 
