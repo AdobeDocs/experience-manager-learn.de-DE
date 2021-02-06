@@ -161,7 +161,7 @@ Um Daten über die Komponente in die Datenschicht einzufügen, müssen wir zunä
    }
    ```
 
-   In der obigen Methode wird ein neuer `HashMap` verwendet, um die Eigenschaften zu erfassen, die wir als JSON verfügbar machen möchten. Beachten Sie, dass vorhandene Methoden wie `getName()` und `getOccupations()` verwendet werden. `@type` stellt den eindeutigen Ressourcentyp der Komponente dar. Auf diese Weise kann ein Client Ereignis und/oder Auslöser anhand des Komponententyps leicht identifizieren.
+   In der obigen Methode wird ein neuer `HashMap` verwendet, um die Eigenschaften zu erfassen, die wir als JSON verfügbar machen möchten. Beachten Sie, dass vorhandene Methoden wie `getName()` und `getOccupations()` verwendet werden. `@type` stellt den eindeutigen Ressourcentyp der Komponente dar. Auf diese Weise kann ein Client Ereignis und/oder Trigger anhand des Komponententyps leicht identifizieren.
 
    `ObjectMapper` wird verwendet, um die Eigenschaften zu serialisieren und eine JSON-Zeichenfolge zurückzugeben. Diese JSON-Zeichenfolge kann dann in die Datenschicht eingefügt werden.
 
@@ -236,7 +236,7 @@ Für jede AEM Komponente wird ein spezielles Datenattribut `data-cmp-data-layer`
 
 ## hinzufügen eines Click-Ereignisses {#click-event}
 
-Die Adobe Client-Datenschicht wird vom Ereignis gesteuert, und eines der gebräuchlichsten Ereignis, um eine Aktion auszulösen, ist das `cmp:click`-Ereignis. Die AEM Core-Komponenten erleichtern die Registrierung der Komponente mithilfe des Datenelements: `data-cmp-clickable`.
+Die Adobe Client-Datenschicht wird vom Ereignis gesteuert und eines der häufigsten Ereignis für den Trigger einer Aktion ist das `cmp:click`-Ereignis. Die AEM Core-Komponenten erleichtern die Registrierung der Komponente mithilfe des Datenelements: `data-cmp-clickable`.
 
 Klickbare Elemente sind in der Regel eine CTA-Schaltfläche oder ein Navigationslink. Leider hat die Byline-Komponente keines davon, aber wir werden sie auf jeden Fall registrieren, da dies für andere benutzerdefinierte Komponenten üblich sein könnte.
 
@@ -297,7 +297,7 @@ Klickbare Elemente sind in der Regel eine CTA-Schaltfläche oder ein Navigations
 
    Sie sollten die Konsolenmeldung `Byline Clicked!` und den Autorenzeilennamen sehen.
 
-   Das `cmp:click`-Ereignis ist am einfachsten einzubinden. Für komplexere Komponenten und zur Verfolgung anderer Verhaltensweisen ist es möglich, benutzerspezifische JavaScript hinzuzufügen, um neue Ereignis hinzuzufügen und zu registrieren. Ein gutes Beispiel ist die Karussell-Komponente, die ein `cmp:show`-Ereignis auslöst, sobald eine Folie umgeschaltet wird. Weitere Informationen finden Sie unter [Quellcode](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js#L219).
+   Das `cmp:click`-Ereignis ist am einfachsten einzubinden. Für komplexere Komponenten und zur Verfolgung anderer Verhaltensweisen ist es möglich, benutzerspezifische JavaScript hinzuzufügen, um neue Ereignis hinzuzufügen und zu registrieren. Ein gutes Beispiel ist die Karussell-Komponente, die ein `cmp:show`-Ereignis Trigger, wenn eine Folie umgeschaltet wird. Weitere Informationen finden Sie unter [Quellcode](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js#L219).
 
 ## Verwenden Sie das DataLayerBuilder-Dienstprogramm {#data-layer-builder}
 
