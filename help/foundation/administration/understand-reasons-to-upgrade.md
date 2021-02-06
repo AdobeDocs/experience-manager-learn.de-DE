@@ -975,7 +975,7 @@ Nachstehend finden Sie eine Übersicht der wichtigsten Assets-Funktionen, die vo
         </tr>
         <tr>
             <td><strong>Aktualisierung von Scene7 auf Dynamic Media: </strong>
-            Möglichkeit zur Migration von Übergeordnet-Assets und zur weiteren Verwendung vorhandener S7-URLs.</td>
+            Möglichkeit zur Migration von Übergeordnet Assets und zur weiteren Verwendung vorhandener S7-URLs.</td>
             <td> </td>
             <td> </td>
             <td> </td>
