@@ -26,7 +26,7 @@ Hier erfahren Sie, wie Sie die integrierten Funktionen der [Adobe Client Data La
 
 ![Seitendatenverfolgung](assets/collect-data-analytics/analytics-page-data-tracking.png)
 
-In diesem Lernprogramm lösen Sie eine auf einem Ereignis aus der Adobe Client Data Layer basierende Startregel aus, fügen Bedingungen für den Zeitpunkt hinzu, zu dem die Regel ausgelöst werden soll, und senden die Seiten **a und** und **einer AEM an Adobe Analytics.**
+In diesem Lernprogramm erstellen Sie einen Trigger für eine Launch-Regel, die auf einem Ereignis aus der Adobe Client Data Layer basiert, fügen Bedingungen für den Zeitpunkt hinzu, zu dem die Regel ausgelöst werden soll, und senden die Seiten **und** und **Seitenvorlage** einer AEM an Adobe Analytics.
 
 ### Ziele {#objective}
 
@@ -109,7 +109,7 @@ Das [WKND-Referenzprojekt](https://github.com/adobe/aem-guides-wknd) wurde mit A
 
 ## Eine Regel zum Laden einer Seite erstellen
 
-Die Adobe Client-Datenschicht ist eine **Ereignis**-gesteuerte Datenschicht. Wenn die AEM **Seite**-Datenschicht geladen wird, löst sie ein Ereignis `cmp:show` aus. Erstellen Sie eine Regel, die basierend auf dem `cmp:show`-Ereignis ausgelöst wird.
+Die Adobe Client-Datenschicht ist eine **Ereignis**-gesteuerte Datenschicht. Wenn die AEM **Seite**-Datenschicht geladen wird, wird ein Ereignis `cmp:show` Trigger. Erstellen Sie eine Regel, die basierend auf dem `cmp:show`-Ereignis ausgelöst wird.
 
 1. Navigieren Sie zum Experience Platform Launch und zur Webeigenschaft, die in die AEM Site integriert ist.
 1. Navigieren Sie zum Abschnitt **Regeln** in der Benutzeroberfläche &quot;Starten&quot;und klicken Sie dann auf **Neue Regel erstellen**.
@@ -155,7 +155,7 @@ Die Adobe Client-Datenschicht ist eine **Ereignis**-gesteuerte Datenschicht. Wen
 
    Das obige Codefragment fügt einen Ereignis-Listener hinzu, indem [eine Funktion](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function) in die Datenschicht gedrückt wird. Wenn das Ereignis `cmp:show` ausgelöst wird, wird die Funktion `pageShownEventHandler` aufgerufen. In dieser Funktion werden einige Sanitätsprüfungen hinzugefügt und ein neuer `event` wird mit dem neuesten [Status der Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki#getstate) für die Komponente erstellt, die das Ereignis ausgelöst hat.
 
-   Danach wird `trigger(event)` aufgerufen. `trigger()` ist ein reservierter Name in Launch und löst die Launch-Regel aus. Wir übergeben das `event`-Objekt als Parameter, der wiederum durch einen anderen reservierten Namen in Launch namens `event` verfügbar gemacht wird. Datenelemente in Launch können jetzt auf verschiedene Eigenschaften verweisen: `event.component['someKey']`.
+   Danach wird `trigger(event)` aufgerufen. `trigger()` ist ein reservierter Name in Launch und &quot;Trigger&quot; die Launch-Regel. Wir übergeben das `event`-Objekt als Parameter, der wiederum durch einen anderen reservierten Namen in Launch namens `event` verfügbar gemacht wird. Datenelemente in Launch können jetzt auf verschiedene Eigenschaften verweisen: `event.component['someKey']`.
 
 1. Speichern Sie die Änderungen.
 1. Klicken Sie anschließend unter **Aktionen** auf **Hinzufügen**, um den Assistenten **Aktionskonfiguration** zu öffnen.
@@ -299,9 +299,9 @@ Aktualisieren Sie anschließend die Regel **Seitenladevorgang**, um das Datenele
 
 1. Speichern Sie die Änderungen.
 
-## Festlegen von Analytics-Variablen und Auslösen des Beacons für die Ansicht von Seiten
+## Festlegen der Analytics-Variablen und des Trigger-Seiten-Ansicht-Beacon
 
-Derzeit gibt die Regel **Seite geladen** einfach eine Konsolenanweisung aus. Verwenden Sie anschließend die Datenelemente und die Analytics-Erweiterung, um Analytics-Variablen als **Aktion** in der Regel **Seite geladen** festzulegen. Wir werden außerdem eine zusätzliche Aktion einrichten, um das **Seitenbeacon** auszulösen und die erfassten Daten an Adobe Analytics zu senden.
+Derzeit gibt die Regel **Seite geladen** einfach eine Konsolenanweisung aus. Verwenden Sie anschließend die Datenelemente und die Analytics-Erweiterung, um Analytics-Variablen als **Aktion** in der Regel **Seite geladen** festzulegen. Wir werden auch eine zusätzliche Aktion einstellen, um das **Seitenbeacon** Trigger und die erfassten Daten an Adobe Analytics zu senden.
 
 1. In der Regel **Seite geladen** **entfernen** die Aktion **Core - Benutzerspezifischer Code** (die Konsolenanweisungen):
 
@@ -363,7 +363,7 @@ Nachdem nun die Regel **Seitenladevorgang** den Analytics-Beacon sendet, sollten
 
    ![Bedingung nicht erfüllt](assets/collect-data-analytics/condition-not-met.png)
 
-   Das liegt daran, dass das Karussell ein `cmp:show`-Ereignis *aber* auslöst, weil wir das **Component Resource Type** überprüfen, wird kein Ereignis ausgelöst.
+   Das liegt daran, dass das Karussell ein `cmp:show`-Ereignis *aber* ausführt, weil wir das **Komponentenressource-Typ** überprüfen, wird kein Ereignis ausgelöst.
 
    >[!NOTE]
    >
