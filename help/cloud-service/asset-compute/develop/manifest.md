@@ -51,7 +51,7 @@ packages:
 
 Jeder Worker kann die [limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) für seinen Ausführungskontext in Adobe I/O Runtime konfigurieren. Diese Werte sollten so eingestellt werden, dass eine optimale Größenanpassung für den Arbeiter möglich ist, basierend auf der Menge, der Rate und der Art der zu berechnenden Assets sowie der Art der von ihm ausgeführten Arbeit.
 
-Überprüfen Sie die Anleitung zur Größenanpassung der Adobe[, bevor Sie Grenzwerte festlegen. ](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers) asset compute-Workern kann bei der Verarbeitung von Assets der Arbeitsspeicher ausgehen, was dazu führt, dass die Adobe I/O Runtime-Ausführung abgebrochen wird, sodass die Größe des Arbeitnehmers für den Umgang mit allen möglichen Assets angemessen ist.
+Überprüfen Sie die Anleitung zur Größenanpassung der Adobe](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers), bevor Sie Grenzwerte festlegen. [ asset compute-Workern kann bei der Verarbeitung von Assets der Arbeitsspeicher ausgehen, was dazu führt, dass die Adobe I/O Runtime-Ausführung abgebrochen wird, sodass die Größe des Arbeitnehmers für den Umgang mit allen möglichen Assets angemessen ist.
 
 1. hinzufügen Sie einen Abschnitt `inputs` zum neuen Eintrag `wknd-asset-compute` actions. Dies ermöglicht die Abstimmung der Gesamtleistung und Ressourcenzuordnung des Asset compute-Workers.
 
