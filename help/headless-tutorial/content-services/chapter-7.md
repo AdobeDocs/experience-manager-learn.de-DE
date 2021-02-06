@@ -85,7 +85,7 @@ Da die bearbeitbare Vorlage der Ereignisses-API (`/content/wknd-mobile/en/api/ev
 
 ### Code-Fluss auf hoher Ebene
 
-1. Beim Öffnen der App wird eine [!DNL WKND Mobile]-Anforderung an AEM Publish unter `HTTP GET` aufgerufen, um den Inhalt zum Füllen der Benutzeroberfläche der mobilen App zu erfassen.`/content/wknd-mobile/en/api/events.model.json`
+1. Beim Öffnen der App wird eine `HTTP GET`-Anforderung an AEM Publish unter `/content/wknd-mobile/en/api/events.model.json` aufgerufen, um den Inhalt zum Füllen der Benutzeroberfläche der mobilen App zu erfassen.[!DNL WKND Mobile]
 2. Nach Erhalt des Inhalts von AEM werden alle drei Ansichten der Mobile App, das **logo, die Tag-Zeile und die Ereignis-Liste**, mit dem Inhalt von AEM initialisiert.
    * Um den AEM an das Element &quot;Ansicht&quot;der mobilen App zu binden, ist das JSON, das jede AEM darstellt, ein Objekt, das einem Java-POJO zugeordnet ist, das wiederum an das Element &quot;Android-Ansicht&quot;gebunden ist.
       * Bildkomponente JSON → Logo-POJO → Logo-ImageView
@@ -154,7 +154,7 @@ public class LogoViewBinder implements ViewBinder {
 
 Die erste Zeile von `bind(...)` navigiert die JSON-Antwort mit den Schlüsseln **:items → root → :items**, die den AEM Layout-Container darstellen, dem die Komponenten hinzugefügt wurden.
 
-Von hier aus wird nach einem Schlüssel mit dem Namen **image** geprüft, der die Image-Komponente darstellt (erneut ist es wichtig, dass dieser Knotenname → JSON-Schlüssel stabil ist). Wenn dieses Objekt vorhanden ist, wird es über die Bibliothek Jackson ](#image-pojo) gelesen und der benutzerdefinierten Bild-POJO[ zugeordnet. `ObjectMapper` Das Bild-POJO wird unten beschrieben.
+Von hier aus wird nach einem Schlüssel mit dem Namen **image** geprüft, der die Image-Komponente darstellt (erneut ist es wichtig, dass dieser Knotenname → JSON-Schlüssel stabil ist). Wenn dieses Objekt vorhanden ist, wird es über die Bibliothek Jackson `ObjectMapper` gelesen und der benutzerdefinierten Bild-POJO](#image-pojo) zugeordnet. [ Das Bild-POJO wird unten beschrieben.
 
 Schließlich wird das Logo `src` mithilfe der Hilfsbibliothek [!DNL Glide] in die Android ImageView geladen.
 
