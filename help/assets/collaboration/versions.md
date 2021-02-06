@@ -13,8 +13,8 @@ thumbnail: 32052.jpg
 translation-type: tm+mt
 source-git-commit: 8d0e6f2c4c979e6704cae08e766300baf7ef8ad0
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '19'
+ht-degree: 15%
 
 ---
 
