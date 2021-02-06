@@ -477,7 +477,7 @@ Nachdem die Navigation implementiert wurde, überprüfen Sie das Routing in AEM.
 
    ![Seite drei XHR-Anforderung](assets/navigation-routing/page-3-xhr-request.png)
 
-   Der AEM Model Manager erkennt, dass der JSON-Inhalt von **Seite 3** nicht verfügbar ist und löst automatisch die zusätzliche XHR-Anforderung aus.
+   Der AEM Modell-Manager erkennt, dass der JSON-Inhalt von **Seite 3** nicht verfügbar ist und Trigger automatisch die zusätzliche XHR-Anforderung.
 
 1. Fahren Sie mit den verschiedenen Navigationslinks der Komponente `Header` weiter durch die SPA. Beachten Sie, dass keine weiteren XHR-Anforderungen gestellt werden und keine vollständige Aktualisierung der Seite erfolgt. Dadurch wird der SPA für den Endbenutzer schnell und unnötige Anforderungen werden auf AEM reduziert.
 
