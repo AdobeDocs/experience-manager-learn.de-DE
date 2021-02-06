@@ -124,7 +124,7 @@ Dynamic Media Classic verwendet den Dateinamen dieser Schriftart (ACaslonPro-Sem
 
 Wenn Sie Schriftarten über die URL ändern müssen, müssen Sie den RTF-Namen der Schriftart aufrufen (nicht die Asset-ID), andernfalls wird ein Fehler ausgegeben. In diesem Fall wäre der richtige Name für diese Schrift &quot;Adobe Caslon Pro&quot;. Weitere Informationen zu Schriftarten und RTF finden Sie unten im Thema RTF und Textparameter.
 
-Die gängigsten Schriftartdateiformate auf Windows- und Mac-Systemen sind OpenType und TrueType. OpenType verfügt über die Erweiterung .OTF, während TrueType .TTF ist. Beide Formate funktionieren in Dynamic Media Classic gleichermaßen gut.
+Die gängigsten Schriftartdateiformate auf Windows- und Mac-Systemen sind OpenType und TrueType. OpenType hat die Erweiterung .OTF, während TrueType .TTF ist. Beide Formate funktionieren in Dynamic Media Classic gleichermaßen gut.
 
 ### Optionen beim Hochladen der PSD-Datei auswählen
 
