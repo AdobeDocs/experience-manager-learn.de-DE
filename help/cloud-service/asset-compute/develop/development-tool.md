@@ -42,7 +42,7 @@ Dadurch wird das Entwicklungstool unter __http://localhost:9000__ Beginn und aut
 1. __asset compute-Profil(s)-Definition:__ Definiert den auszuführenden Asset compute-Worker einschließlich der folgenden Parameter: einschließlich des URL-Endpunkts des Workers, des Ausgabenamens und aller Parameter
 1. __Ausführen:__ Die Schaltfläche &quot;Ausführen&quot;führt das Asset compute-Profil aus, wie im Editor für Asset compute Configuration Profil definiert.
 1. __Abbruch:__ Die Schaltfläche Abbrechen bricht eine Ausführung ab, die durch Tippen auf die Schaltfläche Ausführen eingeleitet wurde
-1. __Anforderung/Antwort:__ Stellt die HTTP-Anforderung und -Antwort an/von dem in Adobe I/O Runtime ausgeführten Asset compute-Worker bereit. Dies kann beim Debugging hilfreich sein
+1. __Anforderung/Antwort:__ Stellt die HTTP-Anforderung und -Antwort an/von dem Asset compute-Worker bereit, der in Adobe I/O Runtime ausgeführt wird. Dies kann beim Debugging hilfreich sein
 1. __Aktivierung Logs:__ Die Protokolle, die die Ausführung des Asset compute-Workers zusammen mit etwaigen Fehlern beschreiben. Diese Informationen finden Sie auch im Standard-Out von `aio app run`
 1. __Darstellungen:__ Zeigt alle Darstellungen an, die durch die Ausführung des Asset compute Worker generiert wurden
 1. __devToolToken-Abfrage:__ Das Asset compute Development Tool-Token erfordert einen gültigen  `devToolToken` Abfrage-Parameter. Dieses Token wird automatisch jedes Mal generiert, wenn ein neues Entwicklungstool erzeugt wird
