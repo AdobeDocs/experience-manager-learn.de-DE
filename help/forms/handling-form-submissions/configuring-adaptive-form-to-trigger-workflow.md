@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren des adaptiven Formulars zum Auslösen AEM Workflows
+title: Konfigurieren des adaptiven Formulars für Trigger AEM Arbeitsablauf
 description: Payload-Optionen beim Auslösen AEM Workflows bei Formularübermittlung konfigurieren
 sub-product: Formulare
 feature: workflow
@@ -19,7 +19,7 @@ ht-degree: 8%
 ---
 
 
-# Konfigurieren des adaptiven Formulars zum Auslösen AEM Workflows
+# Konfigurieren des adaptiven Formulars für Trigger AEM Arbeitsablauf
 
 ## Voraussetzungen
 
@@ -38,7 +38,7 @@ Das in diesem Workflow verwendete Musterformular basiert auf einer benutzerdefin
 * Klicken Sie auf Erstellen -> Datei-Upload
 * Das adaptive Beispielformular wird in einem Ordner namens [Application Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
 
-Im folgenden Video wird erläutert, wie ein adaptives Formular so konfiguriert wird, dass ein AEM Workflow ausgelöst wird
+Im folgenden Video wird erläutert, wie ein adaptives Formular für den Trigger eines AEM Arbeitsablaufs konfiguriert wird
 >[!VIDEO](https://video.tv.adobe.com/v/40258/?quality=9&learn=on)
 
 Das folgende Video zeigt die Workflow-Nutzlast und andere Details im CRX-Repository
