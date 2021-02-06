@@ -71,7 +71,7 @@ Sie können sich die integrierte Funktionalität der Adobe Client Data Layer mit
 
 ## Arbeiten mit Ereignissen
 
-Es empfiehlt sich, benutzerspezifischen Code auf der Grundlage eines Ereignisses aus der Datenschicht auszulösen. Erforschen Sie als Nächstes die Registrierung und das Listening verschiedener Ereignis.
+Es empfiehlt sich, benutzerspezifischen Code auf der Grundlage eines Ereignisses aus der Datenschicht Trigger. Erforschen Sie als Nächstes die Registrierung und das Listening verschiedener Ereignis.
 
 1. Geben Sie die folgende Helper-Methode in Ihre Konsole ein:
 
@@ -168,7 +168,7 @@ Es empfiehlt sich, benutzerspezifischen Code auf der Grundlage eines Ereignisses
 
    Dies ist eine der einzigartigen Funktionen der Adobe Client Data Layer, da Sie Ereignis-Listener **vor** oder **nach der Initialisierung der Datenschicht registrieren können.** Dies ist ein entscheidender Faktor, um Racebedingungen zu vermeiden.
 
-   Die Datenschicht behält ein Warteschlangenarray aller sequenziell aufgetretenen Ereignis bei. Die Datenschicht löst standardmäßig Ereignis-Rückrufe für Ereignis aus, die in **after** aufgetreten sind, sowie für Ereignis in **future**. Es ist möglich, die Ereignis nach Vergangenheit oder Zukunft zu filtern. [Weitere Informationen finden Sie in der Dokumentation](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
+   Die Datenschicht behält ein Warteschlangenarray aller sequenziell aufgetretenen Ereignis bei. Die Datenschicht ruft standardmäßig Trigger-Ereignis-Rückrufe für Ereignis auf, die in **after** aufgetreten sind, sowie für Ereignis in **future**. Es ist möglich, die Ereignis nach Vergangenheit oder Zukunft zu filtern. [Weitere Informationen finden Sie in der Dokumentation](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
 
 
 ## Nächste Schritte
