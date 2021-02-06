@@ -36,7 +36,7 @@ Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisu
 
    * Workflow-Modell, das FDM-Schritt verwendet.
    * Formulardatenmodell, das im FDM-Schritt verwendet wird.
-   * Adaptives Formular, um den Workflow beim Senden auszulösen.
+   * Adaptives Formular zum Trigger des Workflows beim Senden.
 * Öffnen Sie [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Füllen Sie die Details aus und senden Sie sie ab. Beim Senden des Formulars wird der [Darlehensanwendungs-Workflow](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) ausgelöst.
 
 ![ Workflow ](assets/invokefdm651.PNG).
