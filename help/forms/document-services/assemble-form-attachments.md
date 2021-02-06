@@ -28,7 +28,7 @@ Stellen Sie beim Senden des Formulars die Formularanlagen zusammen, um ein PDF-D
 
 Erstellen Sie eine OSGi-Komponente, die die [com.adobe.granite.workflow.exec.WorkflowProcess-Schnittstelle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html) implementiert. Der Code in dieser Komponente kann mit der Prozessschrittkomponente im AEM Workflow verknüpft werden. Die Ausführungsmethode der Schnittstelle com.adobe.granite.workflow.exec.WorkflowProcess wird in dieser Komponente implementiert.
 
-Wenn ein adaptives Formular gesendet wird, um einen AEM Workflow auszulösen, werden die gesendeten Daten in der angegebenen Datei im Payload-Ordner gespeichert. Dies ist beispielsweise die gesendete Datendatei. Wir müssen die Anlagen zusammenstellen, die unter dem Tag &quot;idcard&quot;und &quot;bankstatement&quot;angegeben sind.
+Wenn ein adaptives Formular an Trigger und AEM Workflow gesendet wird, werden die gesendeten Daten in der angegebenen Datei im Payload-Ordner gespeichert. Dies ist beispielsweise die gesendete Datendatei. Wir müssen die Anlagen zusammenstellen, die unter dem Tag &quot;idcard&quot;und &quot;bankstatement&quot;angegeben sind.
 ![gesendete Daten](assets/submitted-data.JPG).
 
 ### Abrufen der Tag-Namen
@@ -141,7 +141,7 @@ Im Folgenden wird die Struktur des Payload-Ordners dargestellt, nachdem die Form
 * Stellen Sie das Bundle mit der [Webkonsole](http://localhost:4502/system/console/bundles) bereit und Beginn
 * Verweisen Sie Ihren Browser auf [AssembleAttachments Form](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
 * hinzufügen einer Anlage im ID-Dokument und ein paar PDF-Dokumente zum Abschnitt &quot;Bankauszüge&quot;
-* Senden des Formulars zum Auslösen des Workflows
+* Senden des Formulars an den Trigger des Workflows
 * Überprüfen Sie den Ordner [Payload im Workflow](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) auf die assemblierte PDF-Datei
 
 >[!NOTE]
