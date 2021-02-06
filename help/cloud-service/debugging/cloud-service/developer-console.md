@@ -82,7 +82,7 @@ Bundles unterstützen Sie beim Debugging von:
 
 ### Komponenten 
 
-Komponenten Liste aller OSGi-Komponenten in AEM. Diese Funktion ähnelt der lokalen OSGi-Komponente des AEM-SDK unter [.](http://localhost:4502/system/console/components)`/system/console/components`
+Komponenten Liste aller OSGi-Komponenten in AEM. Diese Funktion ähnelt der lokalen OSGi-Komponente des AEM-SDK unter `/system/console/components`.[](http://localhost:4502/system/console/components)
 
 Komponenten helfen beim Debugging durch:
 
@@ -93,7 +93,7 @@ Komponenten helfen beim Debugging durch:
 
 ### Konfigurationen
 
-Konfigurationen Listen aller Konfigurationen der OSGi-Komponente (OSGi-Eigenschaften und -Werte). Diese Funktionalität ähnelt der des lokalen Schnellstarts des AEM-SDKs OSGi Configuration Manager[ unter ](http://localhost:4502/system/console/configMgr).`/system/console/configMgr`
+Konfigurationen Listen aller Konfigurationen der OSGi-Komponente (OSGi-Eigenschaften und -Werte). Diese Funktionalität ähnelt der des lokalen Schnellstarts des AEM-SDKs OSGi Configuration Manager](http://localhost:4502/system/console/configMgr) unter `/system/console/configMgr`.[
 
 Konfigurationen helfen beim Debugging von:
 
@@ -118,7 +118,7 @@ Hilfe zu OSGi-Diensten beim Debugging von:
 
 ### Sling-Aufträge
 
-Bei Sling-Aufträgen werden alle Warteschlangen für Sling-Aufträge Liste. Diese Funktionalität ähnelt der des lokalen Schnellstarts des AEM-SDKs Aufträge[ bei ](http://localhost:4502/system/console/slingevent).`/system/console/slingevent`
+Bei Sling-Aufträgen werden alle Warteschlangen für Sling-Aufträge Liste. Diese Funktionalität ähnelt der des lokalen Schnellstarts des AEM-SDKs Aufträge](http://localhost:4502/system/console/slingevent) bei `/system/console/slingevent`.[
 
 Hilfe zu Sling-Aufträgen beim Debugging von:
 
