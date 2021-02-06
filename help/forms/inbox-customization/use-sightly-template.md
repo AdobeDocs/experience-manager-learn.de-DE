@@ -92,4 +92,4 @@ return val;
 * Wählen Sie _Familienstand_ und senden Sie das Formular
 * [Ansicht-Posteingang](http://localhost:4502/aem/inbox)
 
-Das Senden des Formulars löst den Workflow aus und dem Benutzer &quot;admin&quot;wird eine Aufgabe zugewiesen. Sie sollten das entsprechende Symbol unter der Einkommensspalte sehen
+Beim Senden des Formulars wird der Arbeitsablauf Trigger und dem Benutzer &quot;admin&quot;wird eine Aufgabe zugewiesen. Sie sollten das entsprechende Symbol unter der Einkommensspalte sehen
