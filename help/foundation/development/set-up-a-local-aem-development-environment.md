@@ -50,7 +50,7 @@ Es ist auch *kritischer*-Testcode für eine lokale ***Instanz im Veröffentlichu
        /publish
    ```
 
-4. Benennen Sie die JAR-Datei in [!DNL QuickStart]aem-author-p4502.jar ***um und platzieren Sie sie unter dem Ordner***. `/author` hinzufügen Sie die Datei ***[!DNL license.properties]*** unter dem Ordner `/author`.
+4. Benennen Sie die JAR-Datei in ***aem-author-p4502.jar*** um und platzieren Sie sie unter dem Ordner `/author`. [!DNL QuickStart] hinzufügen Sie die Datei ***[!DNL license.properties]*** unter dem Ordner `/author`.
 5. Erstellen Sie eine Kopie der JAR [!DNL QuickStart], benennen Sie sie in ***aem-publish-p4503.jar*** um und platzieren Sie sie unter dem Ordner `/publish`. hinzufügen eine Kopie der Datei ***[!DNL license.properties]*** unter dem Ordner `/publish`.
 
    ```plain
