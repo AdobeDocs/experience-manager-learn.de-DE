@@ -121,7 +121,7 @@ Es ist zwar möglich, die Vorgabe selbst zu erstellen (sie finden Sie unter **Ei
 
 Eine einfache Benennungsregel wurde früher vorgeschlagen, die sehr einfach in eine Stapelsatzvorgabe integriert werden kann. Da die Vorgaben jedoch sehr flexibel sind, können sie komplexe Benennungsstrategien handhaben. Kurz gesagt, die Bilder, die zu einem Satz gehören, sollten durch einen gemeinsamen Namen zusammengeführt werden — häufig die SKU-Nummer oder Produkt-ID. In Dynamic Media Classic haben Sie entweder eine Standardbenennungsregel für alle Bilder festgelegt, die für eine Vorgabe verwendet werden sollen, oder Sie können mehrere Vorgaben mit jeweils unterschiedlichen Benennungsregeln erstellen.
 
-Stapelsatzvorgaben werden nur beim Hochladen angewendet. sie können nach dem Hochladen der Bilder nicht mehr ausgeführt werden. Daher ist es wichtig, Ihre Benennungsregeln zu planen und eine Vorgabe zu erstellen, bevor Sie alle Beginn hochladen.
+Stapelsatzvorgaben werden nur beim Hochladen angewendet. sie können nach dem Hochladen der Bilder nicht mehr ausgeführt werden. Daher ist es wichtig, dass Sie Ihre Benennungsregeln planen und eine Vorgabe erstellen, bevor Sie alle Beginn hochladen.
 
 Nachdem die Vorgaben erstellt wurden, kann der Administrator der Firma wählen, ob sie aktiv oder inaktiv sind. Aktiv bedeutet, dass sie auf der Upload-Seite unter **Auftragsoptionen** angezeigt werden, während inaktive Vorgaben ausgeblendet bleiben.
 
