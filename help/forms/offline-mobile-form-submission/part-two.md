@@ -1,8 +1,8 @@
 ---
-title: AEM Workflow bei der Übermittlung des HTML5-Formulars auslösen
-seo-title: AEM Workflow bei der Übermittlung von HTML5-Formularen auslösen
-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie ein mobiles Formular, um AEM Workflow auszulösen
-seo-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie ein mobiles Formular, um AEM Workflow auszulösen
+title: Arbeitsablauf für Trigger AEM HTML5-Formularübermittlung
+seo-title: Trigger AEM Workflow bei der Übermittlung von HTML5-Formularen
+description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie das Mobile-Formular an den Trigger AEM Arbeitsablauf
+seo-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie das Mobile-Formular an den Trigger AEM Arbeitsablauf
 feature: mobile-forms
 topics: development
 audience: developer
@@ -200,7 +200,7 @@ public class StartWorkflow extends SlingAllMethodsServlet {
 }
 ```
 
-Ein AEM Workflow-Starter wird so konfiguriert, dass er jedes Mal ausgelöst wird, wenn unter dem Knoten `/content/pdfsubmissions` eine neue Ressource des Typs `nt:file` erstellt wird. Dieser Arbeitsablauf erstellt nicht interaktive oder statische PDF-Dateien, indem die gesendeten Daten mit der xdp-Vorlage zusammengeführt werden. Die generierte PDF wird dann einem Benutzer zur Überprüfung und Genehmigung zugewiesen.
+Ein AEM Workflow-Starter wird für den Trigger jedes Mal konfiguriert, wenn eine neue Ressource des Typs `nt:file` unter dem Knoten `/content/pdfsubmissions` erstellt wird. Dieser Arbeitsablauf erstellt nicht interaktive oder statische PDF-Dateien, indem die gesendeten Daten mit der xdp-Vorlage zusammengeführt werden. Die generierte PDF wird dann einem Benutzer zur Überprüfung und Genehmigung zugewiesen.
 
 Um die gesendeten Daten unter dem Knoten `/content/pdfsubmissions` zu speichern, verwenden wir den Dienst `GetResolver` OSGi, um die gesendeten Daten mit dem `fd-service`-Systembenutzer zu speichern, der in jeder AEM Forms-Installation verfügbar ist.
 
