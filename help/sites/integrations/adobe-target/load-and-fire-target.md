@@ -26,7 +26,7 @@ Erfahren Sie, wie Sie mithilfe einer Startregel Zielgruppen laden, Parameter an 
 
 ## Seitenladeregel
 
-Die Adobe Client Data Layer ist eine vom Ereignis gesteuerte Datenschicht. Wenn die AEM-Seitendatenschicht geladen wird, löst sie ein Ereignis `cmp:show` aus. Im Video wird die `Launch Library Loaded`-Regel mithilfe eines benutzerdefinierten Ereignisses aufgerufen. Unten finden Sie die Codeausschnitte, die im Video sowohl für das benutzerdefinierte Ereignis als auch für die Datenelemente verwendet werden.
+Die Adobe Client Data Layer ist eine vom Ereignis gesteuerte Datenschicht. Wenn die AEM-Seitendatenschicht geladen wird, wird ein Ereignis `cmp:show` Trigger. Im Video wird die `Launch Library Loaded`-Regel mithilfe eines benutzerdefinierten Ereignisses aufgerufen. Unten finden Sie die Codeausschnitte, die im Video sowohl für das benutzerdefinierte Ereignis als auch für die Datenelemente verwendet werden.
 
 ### Angezeigtes benutzerdefiniertes Ereignis{#page-event}
 
@@ -78,7 +78,7 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-Eine benutzerdefinierte Funktion definiert das `pageShownEventHandler` und überwacht die von AEM Core-Komponenten emittierten Ereignis, leitet die relevanten Informationen aus der Core-Komponente ab, packt sie in ein Ereignis-Objekt und löst das Launch-Ereignis mit den abgeleiteten Ereignis-Informationen bei der Nutzlast aus.
+Eine benutzerdefinierte Funktion definiert das `pageShownEventHandler` und überwacht die von AEM Core-Komponenten emittierten Ereignis, leitet die relevanten Informationen aus der Core-Komponente ab, packt sie in ein Ereignis-Objekt und Trigger das Launch-Ereignis mit den abgeleiteten Ereignis-Informationen bei der Nutzlast.
 
 Die Startregel wird mithilfe der Funktion `trigger(...)` des Launches ausgelöst, die nur __in der Codeausschnittdefinition des Ereignisses für benutzerspezifischen Code verfügbar ist.__
 
