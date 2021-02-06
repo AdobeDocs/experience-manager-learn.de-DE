@@ -21,7 +21,7 @@ ht-degree: 1%
 # Speichern von Übermittlungen adaptiver Formulare in der Datenbank
 
 Es gibt mehrere Möglichkeiten, die gesendeten Formulardaten in der Datenbank Ihrer Wahl zu speichern. Eine JDBC-Datenquelle kann verwendet werden, um die Daten direkt in der Datenbank zu speichern. Ein benutzerdefiniertes OSGI-Bundle kann geschrieben werden, um die Daten in der Datenbank zu speichern. In diesem Artikel werden die Daten mithilfe eines benutzerdefinierten Prozessschritts im Arbeitsablauf gespeichert, der AEM Arbeitsablauf.
-Der Anwendungsfall besteht darin, einen AEM Workflow bei einer Übermittlung des adaptiven Formulars auszulösen und die gesendeten Daten in der Datenbank in einem Schritt im Workflow zu speichern.
+Der Anwendungsfall besteht darin, einen AEM Arbeitsablauf bei einer Übermittlung des adaptiven Formulars Trigger und die gesendeten Daten in der Datenbank zu speichern.
 
 **Gehen Sie wie folgt vor, um dieses Programm auf Ihrem System zu verwenden**
 
