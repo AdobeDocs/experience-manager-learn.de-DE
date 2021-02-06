@@ -103,7 +103,7 @@ body {
 
 ### Include the authoring clientlib CSS via the page component {#include-the-authoring-clientlib-css-via-the-page-component}
 
-Schließen Sie die Authoring-clientlibs-Kategorie direkt vor dem `/apps/my-project/components/structure/page/customheaderlibs.html`-Tag auf der Basisseite des Projekts ein, um sicherzustellen, dass die Stile geladen werden.`</head>`
+Schließen Sie die Authoring-clientlibs-Kategorie direkt vor dem `</head>`-Tag auf der Basisseite des Projekts ein, um sicherzustellen, dass die Stile geladen werden.`/apps/my-project/components/structure/page/customheaderlibs.html`
 
 Diese Stile sollten auf die Modi [!UICONTROL Bearbeiten] und [!UICONTROL Vorschau] WCM beschränkt sein.
 
