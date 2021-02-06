@@ -39,7 +39,7 @@ Adobe Experience Managers Inhaltsfragmente und Erlebnisfragmente mögen oberflä
 </tr><tr><td><strong>Kernlegende</strong></td>
 <td><ul>
 <li>Inhaltsorientiert</li>
-<li>Definiert durch ein strukturiertes, formularbasiertes Datenmodell.<a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-models.html" target="_blank"></a></li>
+<li>Definiert durch ein strukturiertes, formularbasiertes Datenmodell.</a><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/content-fragments-models.html" target="_blank"></a></li>
 <li>Design und Layout agnostisch.</li>
 <li>Dem Kanal gehört die Präsentation des Inhalts des Inhaltsfragments (Layout und Design)</li>
 </ul>
