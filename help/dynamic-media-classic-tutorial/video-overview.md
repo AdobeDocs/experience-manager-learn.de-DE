@@ -264,8 +264,8 @@ Erfahren Sie, wie Sie Ihr Video [veröffentlichen.](https://docs.adobe.com/conte
 
 Nachdem Sie eine Videoveröffentlichung ausgeführt haben, können Sie eine URL abrufen, um auf Ihre Videos und alle standardmäßigen Dynamic Media Classic Viewer-Vorgaben in einem Webbrowser zuzugreifen. Wenn Sie jedoch Ihre eigene Video-Viewer-Vorgabe anpassen oder erstellen, müssen Sie weiterhin eine separate Veröffentlichung für den Image-Server ausführen.
 
-- Erfahren Sie, wie Sie eine URL mit einer mobilen Site oder einer Website[ verknüpfen.](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#linking-a-video-url-to-a-mobile-site-or-a-website)
-- Erfahren Sie, wie Sie den Video-Viewer auf einer Webseite[ einbetten.](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#embedding-the-video-viewer-on-a-web-page)
+- Erfahren Sie, wie Sie eine URL mit einer mobilen Site oder einer Website](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#linking-a-video-url-to-a-mobile-site-or-a-website) verknüpfen.[
+- Erfahren Sie, wie Sie den Video-Viewer auf einer Webseite](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#embedding-the-video-viewer-on-a-web-page) einbetten.[
 
 Sie können Ihr Video auch mit einem Drittanbieter- oder benutzerdefinierten Video-Player bereitstellen.
 
