@@ -27,7 +27,7 @@ Erfahren Sie, wie Sie mit Visual Experience Composer (VEC) eine Aktivität zur A
 Zur Verwendung von VEC auf einer AEM Website muss die folgende Einrichtung abgeschlossen sein:
 
 1. [hinzufügen von Adobe Target zu Ihrer AEM Website](./add-target-launch-extension.md)
-1. [Auslösen eines Adobe Target-Aufrufs beim Start](./load-and-fire-target.md)
+1. [Trigger und Adobe Target-Aufruf von Launch](./load-and-fire-target.md)
 
 ## Szenario-Übersicht
 
