@@ -38,7 +38,7 @@ Bevor Sie den Schritt E-Mail senden verwenden, stellen Sie sicher, dass Sie den 
 
 Als Teil der mit diesem Artikel verknüpften Assets erhalten Sie Folgendes
 
-1. Adaptives Formular, das den Workflow beim Senden auslöst
+1. Adaptives Formular, das den Arbeitsablauf beim Senden Trigger
 1. Beispielarbeitsablauf, der eine E-Mail mit DOR als Anlage sendet
 1. OSGi-Bundle, das die Metadateneigenschaften erstellt
 
