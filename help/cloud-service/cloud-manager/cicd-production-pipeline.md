@@ -22,7 +22,7 @@ ht-degree: 20%
 
 ## Konfiguration
 
-Die Konfiguration [CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html) definiert den Auslöser, der die Pipeline auslöst, Parameter, die die Bereitstellung der Produktion und die Leistungstests-Parameter steuern.
+Die [CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html)-Konfiguration definiert den Trigger, der die Pipeline initiiert, die Parameter, die die Produktionsimplementierung und die Leistungstests steuern.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314/?quality=12&learn=on)
 
