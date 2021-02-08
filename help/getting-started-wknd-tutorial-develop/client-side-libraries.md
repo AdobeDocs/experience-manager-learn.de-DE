@@ -10,9 +10,9 @@ audience: developer
 kt: 4083
 thumbnail: 30359.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '3257'
+source-wordcount: '3291'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 4%
 
 # Clientseitige Bibliotheken und Front-End-Workflow {#client-side-libraries}
 
-Erfahren Sie, wie clientlibs und clientlibs zum Bereitstellen und Verwalten von CSS und JavaScript für eine Implementierung von Adobe Experience Manager (AEM) Sites verwendet werden. In diesem Lernprogramm wird auch erläutert, wie das [ui.frontend](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/developing/archetype/uifrontend.html)-Modul, ein entkoppeltes [Webpack](https://webpack.js.org/)-Projekt, in den End-to-End-Build-Prozess integriert werden kann.
+Erfahren Sie, wie clientlibs und clientlibs zum Bereitstellen und Verwalten von CSS und JavaScript für eine Implementierung von Adobe Experience Manager (AEM) Sites verwendet werden. In diesem Lernprogramm wird auch erläutert, wie das [ui.frontend](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/archetype/uifrontend.html)-Modul, ein entkoppeltes [Webpack](https://webpack.js.org/)-Projekt, in den End-to-End-Build-Prozess integriert werden kann.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -89,7 +89,7 @@ Stellen Sie die Startercodebasis in einer lokalen AEM-Instanz bereit und navigie
 
 ## Clientseitige Bibliotheksorganisation {#organization}
 
-Anschließend werden wir die Organisation der clientlibs durch das [AEM Projekt Archetype](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/developing/archetype/overview.html) generiert.
+Anschließend werden wir die Organisation der clientlibs durch das [AEM Projekt Archetype](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/archetype/overview.html) generiert.
 
 ![Allgemeine clientlibrary-Organisation](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -144,7 +144,7 @@ Clientseitige Bibliotheken haben einige Einschränkungen bei der Unterstützung 
 
    Jede Datei ist einer Kernkomponente wie der [Akkordeon-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/accordion.html?lang=en#components) zugeordnet. Jede Core-Komponente wird mit [Block-Elementmodifikator](https://getbem.com/) oder BEM-Notation erstellt, um die Zielgruppe bestimmter CSS-Klassen mit Stilregeln zu vereinfachen. Die Dateien unter `/components` wurden vom AEM Project Archetype mit den verschiedenen BEM-Regeln für jede Komponente gestubelt.
 
-1. Laden Sie die WKND-Basisformate **[wknd-base-styles-src.zip](./assets/client-side-libraries/wknd-base-styles-src.zip)** und **unzip** herunter.
+1. Laden Sie die WKND-Basisformate **[wknd-base-styles-src.zip](./assets/client-side-libraries/wknd-base-styles-srcv2.zip)** und **unzip** herunter.
 
    ![WKND-Basisstile](assets/client-side-libraries/wknd-base-styles-unzipped.png)
 
@@ -307,6 +307,10 @@ Als Nächstes sollten wir überprüfen, wie auf die clientlibs auf der AEM Seite
    ...
    </body>
    ```
+
+   >[!NOTE]
+   >
+   > Wenn Sie auf 6.5/6.4 folgen, werden die clientseitigen Bibliotheken nicht automatisch minimiert. Lesen Sie die Dokumentation zum [HTML-Bibliotheksmanager, um minfication (empfohlen)](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors) zu aktivieren.
 
    >[!WARNING]
    >
