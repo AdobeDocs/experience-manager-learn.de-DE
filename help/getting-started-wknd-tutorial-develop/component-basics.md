@@ -12,9 +12,9 @@ mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '1066'
+source-wordcount: '1145'
 ht-degree: 4%
 
 ---
@@ -27,6 +27,8 @@ In diesem Kapitel werden wir die zugrunde liegende Technologie einer Adobe Exper
 ## Voraussetzungen {#prerequisites}
 
 Überprüfen Sie die erforderlichen Werkzeuge und Anweisungen zum Einrichten einer [lokalen Entwicklungs-Umgebung](overview.md#local-dev-environment).
+
+Die in den Videos verwendete IDE ist [Visual Studio-Code](https://code.visualstudio.com/) und das [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)-Plugin.
 
 ## Vorgabe {#objective}
 
@@ -98,7 +100,7 @@ Im Folgenden finden Sie die Schritte auf hoher Ebene, die im obigen Video ausgef
 
 ## HTML (HTML-Vorlagensprache) und Dialoge {#htl-dialogs}
 
-Die HTML-Vorlagensprache oder **[HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/getting-started/getting-started.html)** ist eine leichte, serverseitige Vorlagensprache, die von AEM zum Wiedergeben von Inhalten verwendet wird.
+Die HTML-Vorlagensprache oder **[HTL](https://docs.adobe.com/content/help/de-DE/experience-manager-htl/using/getting-started/getting-started.html)** ist eine leichte, serverseitige Vorlagensprache, die von AEM zum Wiedergeben von Inhalten verwendet wird.
 
 **&quot;** Dialog&quot;definiert die verfügbaren Konfigurationen, die für eine Komponente festgelegt werden können.
 
@@ -110,7 +112,7 @@ Im Folgenden finden Sie die Schritte auf hoher Ebene, die im obigen Video ausgef
 
 1. Wechseln Sie zur IDE und öffnen Sie das Projekt zum Modul `ui.apps`.
 1. Öffnen Sie die Datei `helloworld.html` und ändern Sie das HTML-Markup.
-1. Verwenden Sie die IDE-Werkzeuge, um die Dateiänderung mit der lokalen AEM zu synchronisieren.
+1. Verwenden Sie die IDE-Werkzeuge wie [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync), um die Dateiänderung mit der lokalen AEM zu synchronisieren.
 1. Kehren Sie zum Browser zurück und beobachten Sie, dass sich der Komponentenrendering geändert hat.
 1. Öffnen Sie die Datei `.content.xml`, die das Dialogfeld für die Komponente `HelloWorld` unter folgender Adresse definiert:
 
@@ -209,14 +211,14 @@ Als Nächstes werden wir einige Aktualisierungen am Sling-Modell `HelloWorldMode
        ...
    
        @ValueMapValue
-       protected String title;
+       private String title;
    
        @ValueMapValue
-       protected String text;
+       private String text;
    
-           @PostConstruct
-           protected void init() {
-               ...
+       @PostConstruct
+       protected void init() {
+           ...
    ```
 
 1. hinzufügen Sie die folgende Methode `getTitle()` zur `HelloWorldModel`-Klasse, die den Wert der Eigenschaft `title` zurückgibt. Diese Methode fügt die zusätzliche Logik hinzu, um den Zeichenfolgenwert &quot;Standardwert hier!&quot;zurückzugeben. wenn die Eigenschaft `title` null oder leer ist:
@@ -349,6 +351,10 @@ Im Folgenden finden Sie die Schritte auf hoher Ebene, die im obigen Video ausgef
    ```
 
 1. Stellen Sie die Änderungen mithilfe des Developer-Plugins oder mithilfe Ihrer Maven-Fähigkeiten auf einer lokalen Instanz von AEM bereit.
+
+   >[!NOTE]
+   >
+   > CSS und JavaScript werden häufig aus Leistungsgründen vom Browser zwischengespeichert. Wenn Sie die Änderung für die Client-Bibliothek nicht sofort sehen, führen Sie eine harte Aktualisierung durch und leeren Sie den Cache des Browsers. Es kann hilfreich sein, ein Inkognito-Fenster zu verwenden, um einen neuen Cache zu gewährleisten.
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
