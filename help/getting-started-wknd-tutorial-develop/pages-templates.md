@@ -13,10 +13,10 @@ mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '1724'
-ht-degree: 2%
+source-wordcount: '3074'
+ht-degree: 1%
 
 ---
 
@@ -94,6 +94,66 @@ Erstellen Sie anschließend eine neue Vorlage in AEM, die der Struktur der Siche
 
 >[!VIDEO](https://video.tv.adobe.com/v/330991/?quality=12&learn=on)
 
+Schritte auf hoher Ebene für das folgende Video:
+
+### Strukturkonfigurationen
+
+1. Erstellen Sie eine neue Vorlage mit dem Namen **Seitentyp** mit dem Namen **Artikelseite**.
+1. Wechseln Sie in den Modus **Struktur**.
+1. hinzufügen Sie eine Komponente **Erlebnisfragment**, die als **Kopfzeile** oben in der Vorlage fungiert.
+   * Konfigurieren Sie die Komponente so, dass sie auf `/content/experience-fragments/wknd/us/en/site/header/master` verweist.
+   * Legen Sie die Richtlinie auf **Seitenüberschrift** fest und stellen Sie sicher, dass das **Standardelement** auf `header` eingestellt ist. Das `header`Element wird im nächsten Kapitel mit CSS behandelt.
+1. hinzufügen Sie eine Komponente **Erlebnisfragment**, die als **Fußzeile** am unteren Rand der Vorlage fungiert.
+   * Konfigurieren Sie die Komponente so, dass sie auf `/content/experience-fragments/wknd/us/en/site/footer/master` verweist.
+   * Legen Sie die Richtlinie auf **Seitenfuß** fest und stellen Sie sicher, dass das **Standardelement** auf `footer` eingestellt ist. Das `footer`-Element wird im nächsten Kapitel mit CSS behandelt.
+1. Sperren Sie den Container **main**, der beim Erstellen der Vorlage enthalten war.
+   * Legen Sie die Richtlinie auf **Seite Main** fest und stellen Sie sicher, dass das **Standardelement** auf `main` eingestellt ist. Das `main`-Element wird im nächsten Kapitel mit CSS behandelt.
+1. hinzufügen Sie eine **Image**-Komponente in den Container **main**.
+   * Entsperren Sie die Komponente **Bild**.
+1. hinzufügen Sie eine **Breadcrumb**-Komponente unter der **Image**-Komponente im Container.
+   * Erstellen Sie eine neue Richtlinie für die Komponente **Breadcrumb** mit dem Namen **Article Page - Breadcrumb**. Legen Sie **Navigations-Beginn-Ebene** auf **4** fest.
+1. hinzufügen Sie eine **Container**-Komponente unter der Komponente **Breadcrumb** und innerhalb des Containers **main**. Dies fungiert als **Content Container** für die Vorlage.
+   * Entsperren Sie den Container **Content**.
+   * Legen Sie die Richtlinie auf **Seiteninhalt** fest.
+1. hinzufügen Sie eine weitere Komponente **Container** unter dem **Content Container**. Dies dient als **Seitenleiste**-Container für die Vorlage.
+   * Entsperren Sie den Container **Seitenleiste**.
+   * Erstellen Sie eine neue Richtlinie mit dem Namen **Artikelseite - Seitenleiste**.
+   * Konfigurieren Sie die **Zulässige Komponenten** unter **WKND-Sites-Projekt - Inhalt** so, dass Folgendes enthalten ist: **Schaltfläche**, **Herunterladen**, **Bild**, **Liste**, **Trennzeichen**, **Social Media Sharing**, &lt;a11 6/>Text **und** Titel **.**
+1. Aktualisieren Sie die Richtlinie des Seitenstamm-Containers. Dies ist der äußere Container der Vorlage. Legen Sie die Richtlinie auf **Seitenstamm** fest.
+   * Legen Sie unter **Container Settings** **Layout** auf **Responsive Grid** fest.
+1. Interagieren Sie den Layoutmodus für den **Content Container**. Ziehen Sie den Griff von rechts nach links und verkleinern Sie den Container auf 8 Spalten breit.
+1. Layout-Modus für **Seitenleiste** einbinden. Ziehen Sie den Griff von rechts nach links und verkleinern Sie den Container auf 4 Spalten breit. Ziehen Sie dann den linken Griff von links nach rechts 1, um den Container 3 zu breit zu machen, und belassen Sie eine 1-Spalten-Lücke zwischen dem **Content Container**.
+1. Öffnen Sie den mobilen Emulator und wechseln Sie zu einem mobilen Haltepunkt. Schließen Sie den Layoutmodus erneut ein und stellen Sie den **Content Container** und den **Seitenleiste-Container** auf die volle Seitenbreite. Dadurch werden die Container vertikal im Haltepunkt des Mobilgeräts stapelt.
+1. Aktualisieren Sie die Richtlinie der Komponente **Text** in **Content Container**.
+   * Legen Sie die Richtlinie auf **Content text** fest.
+   * Markieren Sie unter **Plugins** > **Absatzformate** **Absatzformate aktivieren** und stellen Sie sicher, dass der **Anführungsblock** aktiviert ist.
+
+### Konfigurationen für den anfänglichen Inhalt
+
+1. Wechseln Sie zum Modus **Anfänglicher Inhalt**.
+1. hinzufügen Sie eine **title**-Komponente in den **Content Container**. Dies wird als Artikeltitel fungieren. Wenn sie leer gelassen wird, wird automatisch der Titel der aktuellen Seite angezeigt.
+1. hinzufügen eine zweite Komponente **Title** unter der Komponente &quot;first Title&quot;.
+   * Konfigurieren Sie die Komponente mit dem Text: &quot;Nach Autor&quot;. Dies ist ein Platzhalter für Text.
+   * Legen Sie den Typ auf `H4` fest.
+1. hinzufügen Sie eine Komponente **Text** unter der Komponente **Nach Autor** Titel.
+1. hinzufügen Sie eine **title**-Komponente in den **Container der seitlichen Leiste**.
+   * Konfigurieren Sie die Komponente mit dem Text: &quot;Diese Geschichte teilen&quot;.
+   * Legen Sie den Typ auf `H5` fest.
+1. hinzufügen Sie eine **Social Media Sharing**-Komponente unter der Komponente **Diese Meldung teilen** Titel.
+1. hinzufügen Sie eine **Trennzeichenkomponente** unter der Komponente **Social Media Sharing**.
+1. hinzufügen eine **Komponente** unter der Komponente **Trennzeichen** herunterladen.
+1. hinzufügen eine **Liste**-Komponente unter der Komponente **Herunterladen**.
+1. Aktualisieren Sie die **Eigenschaften der Anfangsseite** für die Vorlage.
+   * Markieren Sie unter **Social Media** > **Social Media Sharing** **Facebook** und **Pinterest**
+
+### Aktivieren der Vorlage und Hinzufügen einer Miniaturansicht
+
+1. Ansicht der Vorlage in der Vorlagenkonsole durch Navigieren zu [http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd)
+1. **Die Vorlage &quot;Artikelseite&quot;** aktivieren.
+1. Bearbeiten Sie die Eigenschaften der Vorlage &quot;Artikelseite&quot;und laden Sie die folgende Miniaturansicht hoch, um die mit der Vorlage &quot;Artikelseite&quot;erstellten Seiten schnell zu identifizieren:
+
+   ![Miniaturansicht der Artikelseitenvorlage](assets/pages-templates/article-page-template-thumbnail.png)
+
 ## Kopf- und Fußzeile mit Erlebnisfragmenten aktualisieren {#experience-fragments}
 
 Eine gängige Praxis bei der Erstellung globaler Inhalte, wie Kopf- oder Fußzeilen, ist die Verwendung eines [Erlebnisfragments](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html). Erlebnisfragmente ermöglichen es Benutzern, mehrere Komponenten zu kombinieren, um eine einzelne, referenzierbare Komponente zu erstellen. Erlebnisfragmente haben den Vorteil, dass die Verwaltung mehrerer Sites und [lokale Anpassung](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure) unterstützt werden.
@@ -102,13 +162,73 @@ Der AEM-Projektarchiv generiert eine Kopf- und Fußzeile. Aktualisieren Sie ansc
 
 >[!VIDEO](https://video.tv.adobe.com/v/330992/?quality=12&learn=on)
 
-Laden Sie das Beispielinhaltspaket **[WKND-PagesTemplates-Content-Assets.zip](assets/pages-templates/WKND-PagesTemplates-Content-Assets.zip)** herunter und installieren Sie es.
+Schritte auf hoher Ebene für das folgende Video:
+
+1. Laden Sie das Beispiel-Inhaltspaket **[WKND-PagesTemplates-Content-Assets.zip](assets/pages-templates/WKND-PagesTemplates-Content-Assets.zip)** herunter.
+1. Laden Sie das Inhaltspaket mit Package Manager unter [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp) hoch und installieren Sie es.
+1. Aktualisieren Sie die Vorlage für Webvariationen, die die Vorlage für Erlebnisfragmente unter [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/xf-web-variation/structure.html) ist.
+   * Aktualisieren Sie die Richtlinie auf die Komponente **Container** in der Vorlage.
+   * Legen Sie die Richtlinie auf **XF-Stamm** fest.
+   * Wählen Sie unter **Zulässige Komponenten** die Komponentengruppe **Projekt der WKND-Sites - Struktur** aus, um die Komponenten **Sprachnavigation**, **Navigation** und **Schnellsuche** einzuschließen.
+
+### Header Experience Fragment aktualisieren
+
+1. Öffnen Sie das Erlebnisfragment, das die Kopfzeile unter [http://localhost:4502/editor.html/content/experience-fragments/wknd/us/en/site/header/master.html](http://localhost:4502/editor.html/content/experience-fragments/wknd/us/en/site/header/master.html) rendert.
+1. Konfigurieren Sie den Stamm **Container** des Fragments. Dies ist der äußerste **Container**.
+   * Setzen Sie das **Layout** auf **Reaktionsraster**
+1. hinzufügen Sie das dunkle **WKND-Logo** als Bild oben auf dem **Container**. Das Logo wurde in dem Paket enthalten, das in einem vorherigen Schritt installiert wurde.
+   * Ändern Sie das Layout des dunklen **WKND-Logos** in **2**-Spalten. Ziehen Sie die Griffe von rechts nach links.
+   * Konfigurieren Sie das Logo mit **Alternativtext** von &quot;WKND-Logo&quot;.
+   * Konfigurieren Sie das Logo auf **Link** zur `/content/wknd/us/en`-Startseite.
+1. Konfigurieren Sie die Komponente **Navigation**, die bereits auf der Seite platziert wurde.
+   * Stellen Sie die **Root-Stufen ausschließen** auf **1** ein.
+   * Setzen Sie die **Navigationsstrukturtiefe** auf **1**.
+   * Ändern Sie das Layout der Komponente **Navigation** in **8** in die Breite der Spalten. Ziehen Sie die Griffe von rechts nach links.
+1. Entfernen Sie die Komponente **Sprachnavigation**.
+1. Ändern Sie das Layout der Komponente **Suche** in **2** um. Ziehen Sie die Griffe von rechts nach links. Alle Komponenten sollten nun horizontal an einer einzelnen Zeile ausgerichtet werden.
+
+### Fußzeilenerlebnisfragment aktualisieren
+
+1. Öffnen Sie das Erlebnisfragment, das die Fußzeile unter [http://localhost:4502/editor.html/content/experience-fragments/wknd/us/en/site/footer/master.html](http://localhost:4502/editor.html/content/experience-fragments/wknd/us/en/site/footer/master.html) rendert
+1. Konfigurieren Sie den Stamm **Container** des Fragments. Dies ist der äußerste **Container**.
+   * Setzen Sie das **Layout** auf **Reaktionsraster**
+1. hinzufügen Sie das **WKND-Lichtlogo** als Bild oben auf dem **Container**. Das Logo wurde in dem Paket enthalten, das in einem vorherigen Schritt installiert wurde.
+   * Ändern Sie das Layout des **WKND-Leuchtlogos** in **2**-Spalten. Ziehen Sie die Griffe von rechts nach links.
+   * Konfigurieren Sie das Logo mit **Alternativtext** von &quot;WKND Logo Light&quot;.
+   * Konfigurieren Sie das Logo auf **Link** zur `/content/wknd/us/en`-Startseite.
+1. hinzufügen eine **Navigation**-Komponente unter dem Logo. Konfigurieren Sie die Komponente **Navigation**:
+   * Stellen Sie die **Root-Stufen ausschließen** auf **1** ein.
+   * Deaktivieren Sie **Alle untergeordneten Seiten** erfassen.
+   * Setzen Sie die **Navigationsstrukturtiefe** auf **1**.
+   * Ändern Sie das Layout der Komponente **Navigation** in **8** in die Breite der Spalten. Ziehen Sie die Griffe von rechts nach links.
 
 ## Artikelseite erstellen
 
 Erstellen Sie anschließend eine neue Seite mit der Vorlage &quot;Artikelseite&quot;. Verfassen Sie den Inhalt der Seite so, dass er mit den Site-Modellen übereinstimmt. Gehen Sie wie folgt vor:
 
 >[!VIDEO](https://video.tv.adobe.com/v/330993/?quality=12&learn=on)
+
+Schritte auf hoher Ebene für das folgende Video:
+
+1. Navigieren Sie zur Sites-Konsole unter [http://localhost:4502/sites.html/content/wknd/us/en/magazine](http://localhost:4502/sites.html/content/wknd/us/en/magazine).
+1. Erstellen Sie eine neue Seite unter **WKND** > **US** > **EN** > **Zeitschrift**.
+   * Wählen Sie die Vorlage **Artikelseite**.
+   * Legen Sie unter **Eigenschaften** den **Titel** auf &quot;Ultimate Guide to LA Skateparks&quot;fest.
+   * Setzen Sie **Name** auf &quot;guide-la-skateparks&quot;
+1. Ersetzen Sie den Titel **durch &quot;Autor**&quot;durch den Text &quot;By Stacey Roswells&quot;.
+1. Aktualisieren Sie die Komponente **Text**, um einen Absatz zum Füllen des Artikels einzuschließen. Sie können die folgende Textdatei als Kopie verwenden: [la-skate-parks-copy.txt](assets/pages-templates/la-skateparks-copy.txt).
+1. hinzufügen einer weiteren Komponente **Text**.
+   * Aktualisieren Sie die Komponente, um das Angebot einzuschließen: &quot;Es gibt keinen besseren Ort zum Shreddern als Los Angeles.&quot;
+   * Bearbeiten Sie den Rich-Text-Editor im Vollbildmodus und ändern Sie das obige Anführungszeichen, um das Element **Anführungsblock** zu verwenden.
+1. Füllen Sie weiterhin den Hauptteil des Artikels aus, damit er mit den Musterbildern übereinstimmt.
+1. Konfigurieren Sie die Komponente **Download**, um eine PDF-Version des Artikels zu verwenden.
+   * Klicken Sie unter **Download** > **Eigenschaften** auf das Kontrollkästchen **Den Titel aus dem DAM-Asset abrufen**.
+   * Setzen Sie **Description** auf: &quot;Get the Full Story&quot;.
+   * Setzen Sie **Aktionstext** auf: &quot;PDF herunterladen&quot;.
+1. Konfigurieren Sie die Komponente **Liste**.
+   * Wählen Sie unter **Listen-Einstellungen** > **Liste mit** erstellen **Untergeordnete Seiten**.
+   * Stellen Sie die **Übergeordnete Seite** auf `/content/wknd/us/en/magazine` ein.
+   * Aktivieren Sie unter **Elementeinstellungen** **Elemente verknüpfen** und aktivieren Sie **Datum anzeigen**.
 
 ## Inspect der Knotenstruktur {#node-structure}
 
