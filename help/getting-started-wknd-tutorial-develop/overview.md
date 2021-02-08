@@ -12,9 +12,9 @@ mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '893'
 ht-degree: 21%
 
 ---
@@ -32,12 +32,12 @@ Ziel dieses mehrteiligen Lernprogramms ist es, Entwicklern beizubringen, wie ein
 
 Das Tutorial wurde für die Verwendung mit **AEM als Cloud Service** entwickelt und ist rückwärtskompatibel mit **AEM 6.5.5.0+** und **AEM 6.4.8.1+**. Die Site wird wie folgt implementiert:
 
-* [Maven-AEM-Projektarchetyp](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/overview.html)
-* [Kernkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html)
+* [Maven-AEM-Projektarchetyp](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/archetype/overview.html)
+* [Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html)
 * [HTL](https://docs.adobe.com/content/help/en/experience-manager-htl/using/getting-started/getting-started.html)
 * Sling-Modelle
 * [Bearbeitbare Vorlagen](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
-* [Stilsystem](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
+* [Stilsystem](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
 
 *Schätzen Sie sich 1-2 Stunden, um die einzelnen Teile des Tutorials zu durchlaufen.*
 
@@ -55,6 +55,8 @@ Folgendes sollte lokal installiert werden:
 * [Node.js](https://nodejs.org/en/) (LTS - Langfristige Unterstützung)
 * [npm 6+](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
+* [Visual Studio-](https://code.visualstudio.com/) Codeoder eine entsprechende IDE
+   * [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  - Tool wird während des Lernprogramms verwendet
 
 >[!NOTE]
 >
