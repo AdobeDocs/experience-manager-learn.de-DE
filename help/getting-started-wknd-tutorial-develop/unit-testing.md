@@ -206,9 +206,9 @@ Komponententests ordnen in der Regel 1-zu-1 Java-Klassen zu. In diesem Kapitel s
 
    * `src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`
 
-2. Unterscheiden Sie aber auch die Testdatei.    Das Suffix `Test` in der Testdatei der Einheit `BylineImplTest.java` ist eine Konvention, die es uns ermöglicht,
-1. Identifizieren Sie sie einfach als Testdatei _für_ `BylineImpl.java`
-2. Unterscheiden Sie aber auch die Testdatei _von_ der zu testenden Klasse, `BylineImpl.java`
+   Unterscheiden Sie aber auch die Testdatei.    Das Suffix `Test` in der Testdatei der Einheit `BylineImplTest.java` ist eine Konvention, die es uns ermöglicht,
+      1. Identifizieren Sie sie einfach als Testdatei _für_ `BylineImpl.java`
+      2. Unterscheiden Sie aber auch die Testdatei _von_ der zu testenden Klasse, `BylineImpl.java`
 
 ## Überprüfen von BylineImplTest.java {#reviewing-bylineimpltest-java}
 
