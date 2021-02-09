@@ -5,9 +5,9 @@ breadcrumb-title: AEM Assets-Tutorials
 sub-product: Assets
 team: TM
 translation-type: tm+mt
-source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
+source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '262'
 ht-degree: 37%
 
 ---
@@ -33,6 +33,7 @@ ht-degree: 37%
    + [Grundlegende Vorgänge](./authoring/basic-operations.md)
    + [Metadaten](./authoring/metadata.md)
    + [Ausgabeformate](./authoring/renditions.md)
+   + [Beziehungen und Aufhebung der Verbindung](./authoring/relate-unrelate.md)
 
 + Zusammenarbeit{#collaboration}
    + [Zeitschiene und Posteingang](./collaboration/timeline-and-inbox.md)
