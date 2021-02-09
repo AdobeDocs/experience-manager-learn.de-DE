@@ -1,20 +1,18 @@
 ---
 title: Navigation
 description: Lernen Sie die Grundlagen für die Navigation in AEM Assets kennen.
-sub-product: Assets
-feature: null
-topics: authoring
-audience: author
-doc-type: feature video
-activity: use
+feature: Asset Management
+topics: Content Management
+role: Business Practitioner
+level: Beginner
 version: cloud-service
 kt: 4305
 thumbnail: 32046.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
 workflow-type: tm+mt
-source-wordcount: '17'
-ht-degree: 17%
+source-wordcount: '16'
+ht-degree: 12%
 
 ---
 
