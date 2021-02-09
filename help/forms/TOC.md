@@ -6,9 +6,9 @@ user-guide-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger un
 breadcrumb-title: AEM Forms-Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 48060b4d8c4b502e0c099ae8081695f97b423037
+source-git-commit: 1e945afddda3d7735005029952a9d7ec46828bc6
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '947'
 ht-degree: 6%
 
 ---
@@ -91,12 +91,12 @@ ht-degree: 6%
    + [Formulardatenmodell konfigurieren](prefill-fdm-db/configuring-form-data-model.md)
    + [Anforderungsparameter abrufen](prefill-fdm-db/get-request-parameter.md)
    + [Adaptives Formular erstellen](prefill-fdm-db/create-adaptive-form.md)
-+ Posteingangsanpassung{#inbox-customization}
++ Anpassen des Postfachs{#inbox-customization}
    + [Einführung](inbox-customization/introduction.md)
    + [hinzufügen benutzerspezifische Spalte](inbox-customization/add-married-column.md)
    + [Verwenden der Vorlage](inbox-customization/use-sightly-template.md)
 
-+ Adaptives Formular speichern und abrufen{#store-and-retrieve-af-with-2fa}
++ Speichern und Abrufen des adaptiven Formulars{#store-and-retrieve-af-with-2fa}
    + [Einführung](store-and-retrieve-af-with-2fa/introduction.md)
    + [Datenquelle konfigurieren](store-and-retrieve-af-with-2fa/configure-data-source.md)
    + [Formularanlagen speichern](store-and-retrieve-af-with-2fa/store-form-attachments.md)
@@ -183,6 +183,7 @@ ht-degree: 6%
    + [Teil 4: ACS-Profil mithilfe des Formulardatenmodells erstellen](aem-forms-with-adobe-campaign/partfour.md)
 
 + Document Services {#document-services}
+   + [PDF forms](document-services/pdf-forms-and-documents.md)
    + [Assembler-Dienst in AEM Forms verwenden](document-services/using-assembler-service-in-aem-forms.md)
    + [Verwenden des überwachten Ordners in AEM Forms](document-services/watched-folders-document-services-article-use.md)
    + [Barcode-Dienst in AEM Forms verwenden](document-services/barcode-service-adaptive-forms-article.md)
