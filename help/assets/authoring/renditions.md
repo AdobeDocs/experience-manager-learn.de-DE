@@ -1,20 +1,18 @@
 ---
 title: Ausgabeformate
 description: Erfahren Sie mehr über Darstellungen in AEM Assets und wie sie in der Vorschau angezeigt werden können.
-sub-product: Assets
-feature: null
-topics: authoring, renditions
-audience: author
-doc-type: feature video
-activity: use
+feature: Renditions
+topics: Content Management
+role: Business Practitioner
+level: Beginner
 version: cloud-service
 kt: 4496
 thumbnail: 32047.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
 workflow-type: tm+mt
-source-wordcount: '27'
-ht-degree: 11%
+source-wordcount: '26'
+ht-degree: 7%
 
 ---
 
