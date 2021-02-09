@@ -10,9 +10,9 @@ audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
 translation-type: tm+mt
-source-git-commit: 398b9f855556fc425b034986a7f21159297dcba5
+source-git-commit: 39ea3dd6133477a52fd91ee696936cd226fce5ea
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1652'
 ht-degree: 2%
 
 ---
@@ -135,7 +135,7 @@ Während der Entwicklung ist es möglicherweise wünschenswert, die Verteilung v
 1. Aktualisieren Sie unter der Registerkarte **Transport** die folgenden Felder:
 
    + **URI** - `http://localhost:4503/bin/receive?sling:authRequestLogin=1`
-   + **User** - `admin`
+   + **Benutzer** - `admin`
    + **Kennwort** - `admin`
 
    ![Replication Agent-Konfiguration - Transport](assets/aem-runtime/transport-config.png)
@@ -180,6 +180,10 @@ Um diese Einstellungen zu ändern, müssen möglicherweise Anpassungen an AEM SD
 ## Anhalten einer lokalen AEM Laufzeit
 
 Um eine lokale AEM zu beenden, öffnen Sie entweder den AEM Author- oder den Publish-Dienst das Befehlszeilenfenster, das zum Beginn der AEM Runtime verwendet wurde, und tippen Sie auf `Ctrl-C`. Warten Sie, bis AEM heruntergefahren ist. Nach Abschluss des Herunterfahrens ist die Eingabeaufforderung verfügbar.
+
+## Optionale Aufgaben zur Einrichtung der lokalen AEM
+
++ __OSGi-Konfigurationsvariablen und geheime__ Variablen werden  [speziell für die AEM lokale Laufzeit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=de#local-development) festgelegt, anstatt sie mithilfe der AIO-CLI zu verwalten.
 
 ## Wann wird die Schnellstartjar aktualisiert?
 
