@@ -8,12 +8,12 @@ feature: APIs
 activity: develop
 audience: developer
 kt: 6785
-thumbnail: 330519.jpg
+thumbnail: 330460.jpg
 translation-type: tm+mt
-source-git-commit: 733382dc0e0ca14d4bd6e49174ba33f8d7fc517d
+source-git-commit: 0b1150cd7ca32382cfaa880f9f956b55bfb65a33
 workflow-type: tm+mt
 source-wordcount: '585'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 In diesem Tutorial sollten Sie genau untersuchen, wie eine externe Anwendung programmgesteuert authentifizieren und mit AEM als Cloud Service über HTTP mithilfe von Zugriffstoken interagieren kann.
 
->[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330460/?quality=12&learn=on)
 
 ## Voraussetzungen
 
@@ -35,7 +35,7 @@ Stellen Sie sicher, dass folgende Elemente vorhanden sind, bevor Sie mit diesem 
 
 ## Überblick über externe Anwendungen
 
-Dieses Lernprogramm verwendet eine [einfache Node.js-Anwendung](./assets/aem-guides_token-authentication-external-application.zip), die von der Befehlszeile ausgeführt wird, um Asset-Metadaten auf AEM als Cloud Service mit der [Assets HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html) zu aktualisieren.
+Dieses Lernprogramm verwendet eine [einfache Node.js-Anwendung](./assets/aem-guides_token-authentication-external-application.zip), die von der Befehlszeile ausgeführt wird, um Asset-Metadaten auf AEM als Cloud Service mit der [Assets HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=de) zu aktualisieren.
 
 Der Ausführungsfluss der Node.js-Anwendung lautet wie folgt:
 
