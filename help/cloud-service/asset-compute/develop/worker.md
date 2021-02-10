@@ -10,9 +10,9 @@ doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: 2d7ae5e46acb25eaaf7a1a35d9bbf20f7c14042e
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -116,7 +116,7 @@ In diesem Worker verwenden wir das Jimp [jimp](https://www.npmjs.com/package/jim
 
 >[!WARNING]
 >
->Nicht alle NPM-Module zur Asset-Manipulation werden von Asset compute unterstützt. npm-Module, die auf die vorhandenen Anwendungen wie ImageMagick oder OS-abhängige Bibliotheken angewiesen sind. Es ist am besten, die Verwendung von NPM-Modulen mit JavaScript zu beschränken.
+>Nicht alle NPM-Module zur Asset-Manipulation werden von Asset compute unterstützt. npm-Module, die auf die Existenz von Anwendungen wie ImageMagick oder anderen betriebssystemabhängigen Bibliotheken angewiesen sind, werden nicht unterstützt. Es ist am besten, die Verwendung von NPM-Modulen mit JavaScript zu beschränken.
 
 1. Öffnen Sie die Befehlszeile im Stammverzeichnis Ihres Asset compute-Projekts (dies kann über __Terminal > New Terminal__ im VS-Code erfolgen) und führen Sie den Befehl aus:
 
