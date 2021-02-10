@@ -10,9 +10,9 @@ audience: developer
 kt: 5434
 thumbnail: kt-5424.jpg
 translation-type: tm+mt
-source-git-commit: a405cf14d3f71bf51e32e50c828c3216d29aa253
+source-git-commit: b9fb3cb0c12afcabf4a92ded3d7d330ac9d229d6
 workflow-type: tm+mt
-source-wordcount: '2517'
+source-wordcount: '2537'
 ht-degree: 0%
 
 ---
@@ -232,6 +232,7 @@ Das Validieren dieses Problems ist der Grund für das Fehlverhalten:
    1. Wenn die `/var`-Ressourcen nicht erforderlich sind, entfernen Sie alle Ressourcen unter `/var` aus Inhaltspaketen, die als Teil Ihrer Anwendung bereitgestellt werden.
    2. Wenn die `/var`-Ressourcen erforderlich sind, definieren Sie die Knotenstrukturen mit [repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit). Repoinit-Skripten können über OSGi-Ausführungsmodi auf AEM Author, AEM Publish oder beide ausgerichtet werden.
    3. Wenn die `/var`-Ressourcen nur für AEM Autor erforderlich sind und nicht mit [repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit) nach vernünftigem Ermessen modelliert werden können, verschieben Sie sie in ein diskretes Inhaltspaket, das nur auf AEM Author installiert wird, indem Sie es [in das `all`-Paket in einem AEM Author-Ordner im Ausführungsmodus (`<target>/apps/example-packages/content/install.author</target>`) einbetten.](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds)
+   4. Stellen Sie dem Dienstbenutzer `sling-distribution-importer` entsprechende ACLs bereit, wie in dieser [Adobe KB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html) beschrieben.
 
 ### Adoben-Unterstützungsfall erstellen
 
