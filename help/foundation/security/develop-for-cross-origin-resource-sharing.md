@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 doc-type: tutorial
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: c657eefa69b383c1b1a9e2845276245d3db00e6f
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -96,12 +96,12 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## Dispatcher-Konfiguration {#dispatcher-configuration}
 
-Um die Zwischenspeicherung und Bereitstellung von [!DNL CORS]-Headern für zwischengespeicherten Inhalt zuzulassen, fügen Sie allen unterstützenden AEM Publish `dispatcher.any`-Dateien die folgende Konfiguration hinzu.
+Um die Zwischenspeicherung und Bereitstellung von CORS-Headern für zwischengespeicherten Inhalt zuzulassen, fügen Sie allen unterstützenden AEM Publish `dispatcher.any`-Dateien die folgende [/clientheaders-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) hinzu.
 
 ```
 /cache { 
   ...
-  /headers {
+  /clientheaders {
       "Access-Control-Allow-Origin",
       "Access-Control-Expose-Headers",
       "Access-Control-Max-Age",
@@ -115,7 +115,7 @@ Um die Zwischenspeicherung und Bereitstellung von [!DNL CORS]-Headern für zwisc
 
 **Starten Sie die Webserver-** Anwendung neu, nachdem Sie Änderungen an der  `dispatcher.any` Datei vorgenommen haben.
 
-Es ist wahrscheinlich erforderlich, den Cache vollständig zu leeren, um sicherzustellen, dass Header bei der nächsten Anforderung nach einem `/headers`-Konfigurationsupdate ordnungsgemäß zwischengespeichert werden.
+Es ist wahrscheinlich erforderlich, den Cache vollständig zu leeren, um sicherzustellen, dass Header bei der nächsten Anforderung nach einem `/clientheaders`-Konfigurationsupdate ordnungsgemäß zwischengespeichert werden.
 
 ## Unterstützende Materialien {#supporting-materials}
 
