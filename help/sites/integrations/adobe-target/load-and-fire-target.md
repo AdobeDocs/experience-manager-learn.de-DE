@@ -10,7 +10,7 @@ version: cloud-service
 kt: 6133
 thumbnail: 41243.jpg
 translation-type: tm+mt
-source-git-commit: 988e390dd9e1fc6033b3651db151e6a60ce4efaa
+source-git-commit: 9102505bbd826e17bf924cec719d7a430eea5095
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 4%
@@ -133,9 +133,13 @@ Dieser Code gibt den Titel der AEM Seite zurück.
 
 ### Warum werden meine Mboxes nicht auf meinen Webseiten ausgelöst?
 
-#### Fehlermeldung, wenn das Cookie &quot;mboxDisable&quot;nicht gesetzt wurde**
+#### Fehlermeldung, wenn kein mboxDisable-Cookie gesetzt wurde
 
 ![Zielgruppe Cookie-Domänenfehler](assets/target-cookie-error.png)
+
+```
+> AT: [page-init] Adobe Target content delivery is disabled. Ensure that you can save cookies to your current domain, there is no "mboxDisable" cookie and there is no "mboxDisable" parameter in the query string.
+```
 
 #### Lösung
 
