@@ -9,7 +9,7 @@ activity: understand
 audience: architect, developer
 doc-type: article
 translation-type: tm+mt
-source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
+source-git-commit: bc14783840a47fb79ddf1876aca1ef44729d097e
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 1%
@@ -139,12 +139,12 @@ Um die Zwischenspeicherung von CORS-Headern zu ermöglichen, fügen Sie allen un
 ```
 /cache { 
   ...
-  /headers {
-      "Access-Control-Allow-Origin",
-      "Access-Control-Expose-Headers",
-      "Access-Control-Max-Age",
-      "Access-Control-Allow-Credentials",
-      "Access-Control-Allow-Methods",
+  /clientheaders {
+      "Access-Control-Allow-Origin"
+      "Access-Control-Expose-Headers"
+      "Access-Control-Max-Age"
+      "Access-Control-Allow-Credentials"
+      "Access-Control-Allow-Methods"
       "Access-Control-Allow-Headers"
   }
   ...
@@ -153,7 +153,7 @@ Um die Zwischenspeicherung von CORS-Headern zu ermöglichen, fügen Sie allen un
 
 Denken Sie daran, **die Webserver-Anwendung** neu zu starten, nachdem Sie Änderungen an der Datei `dispatcher.any` vorgenommen haben.
 
-Es ist wahrscheinlich, dass das Löschen des Cache vollständig erforderlich ist, um sicherzustellen, dass die Header bei der nächsten Anforderung nach einem `/headers` Konfigurationsupdate ordnungsgemäß zwischengespeichert werden.
+Es ist wahrscheinlich, dass das Löschen des Cache vollständig erforderlich ist, um sicherzustellen, dass die Header bei der nächsten Anforderung nach einem `/clientheaders` Konfigurationsupdate ordnungsgemäß zwischengespeichert werden.
 
 ## Fehlerbehebung für CORS
 
@@ -168,7 +168,7 @@ Die Protokollierung ist unter `com.adobe.granite.cors` verfügbar:
 * Überprüfen Sie, ob die Anforderung vom CORS-Handler abgelehnt wurde und nicht vom Authentifizierungs-, CSRF-Token-, Dispatcher-Filter oder anderen Sicherheitsebenen
    * Wenn der CORS-Handler mit 200 antwortet, der `Access-Control-Allow-Origin`-Header jedoch in der Antwort fehlt, überprüfen Sie die Protokolle auf Ablehnungen unter [!DNL DEBUG] in `com.adobe.granite.cors`
 * Wenn die Dispatcher-Zwischenspeicherung von [!DNL CORS]-Anforderungen aktiviert ist
-   * Vergewissern Sie sich, dass die `/headers`-Konfiguration auf `dispatcher.any` angewendet wurde und der Webserver erfolgreich neu gestartet wurde
+   * Vergewissern Sie sich, dass die `/clientheaders`-Konfiguration auf `dispatcher.any` angewendet wurde und der Webserver erfolgreich neu gestartet wurde
    * Stellen Sie sicher, dass der Cache nach OSGi oder Dispatcher ordnungsgemäß geleert wurde. Konfigurationsänderungen wurden vorgenommen.
 * Überprüfen Sie bei Bedarf, ob Authentifizierungsberechtigungen für die Anforderung vorhanden sind.
 
