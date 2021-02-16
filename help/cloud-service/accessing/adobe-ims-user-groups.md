@@ -10,15 +10,20 @@ doc-type: feature video
 kt: 4999
 thumbnail: 39150.jpg
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: f30d15f0578b7e529e4acefb8e1d2e29157ab359
 workflow-type: tm+mt
-source-wordcount: '62'
+source-wordcount: '92'
 ht-degree: 0%
 
 ---
 
 
 # Adobe IMS-Benutzergruppen
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_adobeims_usergroups"
+>title="Adobe IMS-Benutzergruppen"
+>abstract="Adobe-IMS-Benutzergruppen erstellen logische Benutzergruppen, die AEM ausgesetzt sind, wobei sie genutzt werden können, um Feinabstimmungsberechtigungen für AEM festzulegen."
 
  Adobe-IMS-Benutzergruppen erstellen logische Benutzergruppen, die AEM ausgesetzt sind, wobei sie genutzt werden können, um Feinabstimmungsberechtigungen für AEM festzulegen.
 
