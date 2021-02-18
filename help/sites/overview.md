@@ -5,10 +5,10 @@ description: 'Eine Sammlung von Videos und Tutorials für Adobe Experience Manag
 seo-description: Eine Sammlung von Videos und Tutorials für Adobe Experience Manager Sites
 sub-product: Sites, Content-Services
 translation-type: tm+mt
-source-git-commit: aa48c94413f83e794c5d062daaac85c97b451b82
+source-git-commit: ac2e937613eba4857d0f9bf8c5a39d5611157cbd
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 35%
+source-wordcount: '363'
+ht-degree: 34%
 
 ---
 
@@ -19,11 +19,15 @@ Adobe Experience Manager (AEM) Sites ist eine führende Plattform für Erlebnism
 
 ## Neue Funktionen
 
-* **[Anpassen der Adobe Client-Datenschicht mit AEM](./integrations/adobe-client-data-layer/data-layer-customize.md)**
+* **[Verwenden von Starts mit AEM Sites (Video)](./spa-editor/spa-editor-framework-feature-video-use.md)**
+
+   *Erfahren Sie mehr über die Launches von AEM-Sites und wie diese zur Vorbereitung von Website-Inhalten für die künftige Version verwendet werden können.*
+
+* **[Anpassen der Adobe Client-Datenschicht mit AEM (Tutorial)](./integrations/adobe-client-data-layer/data-layer-customize.md)**
 
    *Erfahren Sie, wie Sie die Adobe Client-Datenschicht mit Inhalten aus benutzerdefinierten AEM aktualisieren.*
 
-* **[Erste Schritte mit AEMHeadless GraphQL (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
+* **[Erste Schritte mit AEMHeadless GraphQL (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de)**
 
    *Wie Sie mithilfe von AEM GraphQL-APIs Inhalte aus AEM bereitstellen, die von einer nativen mobilen App genutzt werden können.*
 
