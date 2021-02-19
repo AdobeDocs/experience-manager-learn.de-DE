@@ -4,10 +4,10 @@ description: Eine Reihe von Tutorials für Adobe Experience Manager (AEM) als Cl
 sub-product: Sites, Cloud-Manager, Stiftung, Assets
 kt: 3289
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 11%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Manager (AEM) ist nun as a Cloud Service verfügbar. AEM als Cl
 
 ## Neue Funktionen
 
-* **[Authentifizierung für AEM als Cloud Service aus einer externen Anwendung (Tutorial)](../headless-tutorial/authentication/overview.md)**
+* **[Token-basierte Authentifizierung (Tutorial)](../headless-tutorial/authentication/overview.md)**
 
    *Erfahren Sie, wie Sie mit Token-basierter Authentifizierung mit AEM als Cloud Service über HTTP interagieren.*
 
