@@ -5,10 +5,10 @@ breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
 translation-type: tm+mt
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 41%
+source-wordcount: '282'
+ht-degree: 37%
 
 ---
 
@@ -23,8 +23,8 @@ ht-degree: 41%
    + [Cloud Manager](./introduction/cloud-manager.md)
 + Basistechnologie {#underlying-technology}
    + [AEM-Architektur](./underlying-technology/introduction-architecture.md)
-   + [OSGi-](./underlying-technology/introduction-osgi.md)
-   + [Java Content Repository ](./underlying-technology/introduction-jcr.md)
+   + [OSGi](./underlying-technology/introduction-osgi.md)
+   + [Java Content Repository](./underlying-technology/introduction-jcr.md)
    + [Sling](./underlying-technology/introduction-sling.md)
    + [Autoren- und Veröffentlichungsdienste](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
@@ -70,8 +70,8 @@ ht-degree: 41%
       + [Überblick](./debugging/cloud-service/overview.md)
       + [Protokolle](./debugging/cloud-service/logs.md)
       + [Erstellen und Bereitstellen](./debugging/cloud-service/build-and-deployment.md)
-      + [Entwicklerkonsole](./debugging/cloud-service/developer-console.md)
-      + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md)
+      + [Developer Console](./debugging/cloud-service/developer-console.md)
+      + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md) 
 + Zugriff auf AEM{#accessing}
    + [Überblick](./accessing/overview.md)
    + [Adobe IMS-Benutzer](./accessing/adobe-ims-users.md)
@@ -80,7 +80,7 @@ ht-degree: 41%
    + [AEM, Gruppen und Berechtigungen](./accessing/aem-users-groups-and-permissions.md)
    + [Konfigurieren des Zugriffs auf AEM](./accessing/walk-through.md)
 + Migration {#migration}
-   + [Content Transfer-Tool](./migration/content-transfer-tool.md)
+   + [Content Transfer Tool](./migration/content-transfer-tool.md)
    + [Massenimport von Assets](./migration/bulk-import.md)
 + asset compute-Erweiterbarkeit{#asset-compute}
    + [Überblick](./asset-compute/overview.md)
@@ -103,5 +103,11 @@ ht-degree: 41%
    + Erweitert{#advanced}
       + [Metadatenarbeiter](./asset-compute/advanced/metadata.md)
    + [Fehlerbehebung](./asset-compute/troubleshooting.md)
++ Mehrstufige Tutorials{#multi-step-tutorials}
+   + [AEM Sites-Entwicklung](./develop-wknd-tutorial.md)
+   + [GraphQL](../headless-tutorial/graphql/overview.md)
+   + [SPA Editor (React)](../spa-react-tutorial/overview.md)
+   + [SPA-Editor (Angular)](../spa-angular-tutorial/overview.md)
+   + [AEM Sites und Adobe Target](../aem-target-personalization/overview.md)
+   + [Token-basierte Authentifizierung](../headless-tutorial/authentication/overview.md)
 
-+ [Erste Schritte bei der Entwicklung von AEM Sites – WKND-Tutorial](./develop-wknd-tutorial.md)
