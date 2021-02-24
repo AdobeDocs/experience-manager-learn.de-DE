@@ -5,9 +5,9 @@ breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
 translation-type: tm+mt
-source-git-commit: 91399ff4ab26655de27bbecab4ff773f6666d86a
+source-git-commit: c7b3a6e408e46338a6a540c6403601be8c0893e2
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '329'
 ht-degree: 35%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 35%
       + [Testergebnisse analysieren](./cloud-manager/devops/analyze-test-results.md)
       + [Dispatcherkonfigurationen](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager-APIs](./cloud-manager/devops/cloud-manager-apis.md)
-+ Umgebung für lokale Entwicklung{#local-development-environment-set-up}
++ Umgebung für lokale Entwicklung {#local-development-environment-setup}
    + [Überblick](./local-development-environment/overview.md)
    + [Entwicklungstools](./local-development-environment/development-tools.md)
    + [Lokale AEM Laufzeit](./local-development-environment/aem-runtime.md)
@@ -58,6 +58,7 @@ ht-degree: 35%
       + [Veröffentlichung von Inhalten](./developing/basics/content-publishing.md)
       + [OSGi-Konfigurationen](./developing/basics/osgi-configurations.md)
       + [Migration der Dispatcher-Konfiguration](./developing/basics/dispatcher-configuration.md)
+   + [AEM SDK API JavaDocs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/)
 + Debugging AEM{#debugging}
    + Debuggen des AEM SDK{#debugging-aem-sdk}
       + [Überblick](./debugging/aem-sdk-local-quickstart/overview.md)
@@ -107,7 +108,7 @@ ht-degree: 35%
    + [AEM Sites-Entwicklung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/develop-wknd-tutorial.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de)
    + [SPA Editor (React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
-   + [SPA-Editor (Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
+   + [SPA Editor (Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [AEM Sites und Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
    + [Token-basierte Authentifizierung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
 
