@@ -1,35 +1,24 @@
 ---
-title: Verwenden Sie den Posteingang in AEM
+title: Verwendung des Posteingangs in AEM
 description: AEM Posteingang erleichtert die Zusammenarbeit und Sichtbarkeit in Aufgaben und Arbeitsabläufen.
-version: 6.3, 6.4, 6.5
-feature: inbox
-topics: collaboration, governance
-activity: use
-audience: author, analyst
-doc-type: feature video
+version: 6.3, 6.4, 6.5, cloud-service
+topic: Zusammenarbeit
+feature: Posteingang
+role: Geschäftspraktiker
+level: Zwischenschaltung
+kt: 159
+thumbnail: 16827.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 2760064642002a684b3fd70337a81a7d6e28a343
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 0%
+source-wordcount: '81'
+ht-degree: 2%
 
 ---
 
 
 # Verwenden des Posteingangs in AEM
 
-AEM Posteingang erleichtert die Zusammenarbeit und Sichtbarkeit in Aufgaben und Arbeitsabläufen.
+AEM Inbox erleichtert die Zusammenarbeit und Sichtbarkeit in Aufgaben und Arbeitsabläufen. Die Ansicht des Inbox-Kalenders verfolgt Projekte und Aufgaben in einer zeitbasierten Ansicht, um die Projektverwaltung und -planung zu vereinfachen. Mit der Ansicht des Kalenders erhalten die Benutzer eine Gesamtübersicht über die derzeit laufenden, geplanten, demnächst fälligen und überfälligen Aufgaben.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16827/?quality=12&learn=on)
-
-In diesem Video werden Highlights AEM Inbox behandelt.
-
-* Inbox-Spalten
-* Aufgaben- und Workflow-Arbeitselemente
-* Verwaltung von Aufgaben (Bearbeiten, Zuweisen, Anzeigen von zugewiesenen Inhalten)
-* Arbeitsmappen-Management (vollständig, Schritt-zurück, delegiert, kommentiert)
-* Workflow-Info-Konsole
-* Ad-hoc-Aufgaben erstellen
-* Sichtbarkeit von Aufgaben und Arbeitselementen
-* [!DNL Inbox] und  [!DNL Omnisearch] Integration
-* [!DNL Inbox] und  [!DNL AEM Projects] Integration
