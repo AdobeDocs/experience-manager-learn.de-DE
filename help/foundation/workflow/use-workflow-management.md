@@ -1,20 +1,18 @@
 ---
-title: Workflow-Management verwenden
+title: Verwalten des Arbeitsablaufs in AEM
 description: 'AEM Workflow-Management bietet einem Benutzer mehr Sichtbarkeit über Inhalte im Workflow und ermöglicht eine einfachere Verwaltung der Workflow-Modelldefinitionen. '
-seo-title: Verwenden des Workflow-Managements in AEM
-seo-description: Das EM Workflow-Management bietet einem Benutzer mehr Sichtbarkeit über Inhalte im Workflow und ermöglicht eine einfachere Verwaltung der Workflow-Modelldefinitionen.
-version: 6.5
-sub-product: Stiftung, Stätten, Vermögenswerte
-feature: workflow
-topics: governance, collaboration
-activity: use
-audience: administrator
-doc-type: feature video
+version: 6.5, cloud-service
+feature: Workflow
+topic: Content Management
+role: 'Administrator  '
+level: Zwischenschaltung
+kt: 2557
+thumbnail: 27848.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 46dead200ec61acf9fdf537f18818f5bb60dbc90
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 0%
+source-wordcount: '136'
+ht-degree: 2%
 
 ---
 
@@ -23,19 +21,18 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/27848/?quality=12&learn=on)
 
-In diesem Video werden die folgenden, in AEM 6.5 eingeführten Aspekte des Workflow-Managements untersucht:
+In diesem Video werden die folgenden Aspekte des Workflow-Managements untersucht:
 
-+ Aktivieren Sie Workflow-Metadaten unter &quot;Einstellungen für die Ansicht von Listen&quot;.
-+ Einfache Navigation zur Workflow-Zeitleiste von der Ansicht der Liste
-+ Kopieren und Einfügen eines vorhandenen OOTB-Workflows zum Anpassen oder Überschreiben der Standardfunktion
-+ Durchführen einer schnellen Veröffentlichung für [!DNL Workflow Models] und [!DNL Launchers]
-+ Verwalten Sie die Veröffentlichung für [!DNL Workflow Models] und [!DNL Launchers].
-+ Benachrichtigen Sie Benutzer über eine QuickInfo zur Warnung, wenn Sie versuchen, ein OOTB-Workflow-Modell oder einen Starter zu bearbeiten.
-+ Möglichkeit zur Wiederherstellung von Änderungen, die an einem OOTB Workflow Model oder Launchers vorgenommen wurden.
++ Aktivieren von Workflow-Metadaten unter &quot;Einstellungen für die Ansicht von Listen&quot;
++ Navigieren zur Zeitleiste des Workflows für Inhalte in AEM
++ Anpassen eines Workflows, der von AEM bereitgestellt wird
++ Schnellveröffentlichung für [!DNL Workflow Models] und [!DNL Launchers]
++ Verwalten der Veröffentlichung für [!DNL Workflow Models] und [!DNL Launchers]
++ Änderungen an einem Workflow-Modell oder einem Launcher wiederherstellen
 
-In diesem Video wird [!DNL Workflow models] verwendet, um diesen Satz von Funktionen zu demonstrieren, sie gelten jedoch auch für [!DNL AEM Launchers].
+In diesem Video wird [!DNL Workflow Models] verwendet, um diesen Satz von Funktionen zu demonstrieren, sie gelten jedoch auch für [!DNL AEM Launchers].
 
 
 >[!NOTE]
 >
-> Video verwendet die AEM Sites-Benutzeroberfläche, um die Metadatenfunktion für den Workflow-Status zu demonstrieren. Workflow-Status-Metadaten gelten auch für die AEM Assets-Benutzeroberfläche. Wählen Sie unbedingt die Ansicht Liste aus, um die Workflow-Statusmetadaten in der Benutzeroberfläche zu aktivieren.
+> Video verwendet AEM Sites, um die Metadatenfunktion für den Workflow-Status zu demonstrieren. Workflow-Status-Metadaten gelten auch für AEM Assets. Um den Workflow-Status für Assets anzuzeigen, stellen Sie sicher, dass die Ansicht der Liste aktiviert ist.
