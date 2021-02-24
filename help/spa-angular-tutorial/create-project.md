@@ -1,6 +1,6 @@
 ---
 title: SPA Editor Project | Erste Schritte mit dem AEM SPA Editor und Angular
-description: Erfahren Sie, wie Sie ein Adobe Experience Manager (AEM) Maven-Projekt als Ausgangspunkt für eine Angular-Anwendung verwenden, die mit dem AEM SPA Editor integriert ist.
+description: Erfahren Sie, wie Sie ein Adobe Experience Manager (AEM) Maven-Projekt als Ausgangspunkt für eine in den AEM SPA Editor integrierte Angular-Anwendung verwenden.
 sub-product: Sites
 feature: maven-archetype
 topics: development
@@ -13,7 +13,7 @@ thumbnail: 5309-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1110'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 # SPA Editor Project {#create-project}
 
-Erfahren Sie, wie Sie ein Adobe Experience Manager (AEM) Maven-Projekt als Ausgangspunkt für eine Angular-Anwendung verwenden, die mit dem AEM SPA Editor integriert ist.
+Erfahren Sie, wie Sie ein Adobe Experience Manager (AEM) Maven-Projekt als Ausgangspunkt für eine in den AEM SPA Editor integrierte Angular-Anwendung verwenden.
 
 ## Vorgabe
 
@@ -80,7 +80,7 @@ Es gibt mehrere Optionen, um ein Maven-Multi-Modul-Projekt für AEM zu erstellen
    |-----------------|---------------------------------------|
    | aemVersion | Wolke |
    | appTitle | WKND SPA Angular |
-   | appId | worknd-spa-angular |
+   | appId | wknd-spa-angular |
    | groupId | com.adobe.aem.guides |
    | frontendModule | angular |
    | package | com.adobe.aem.guides.wknd.spa.angular |
@@ -88,7 +88,7 @@ Es gibt mehrere Optionen, um ein Maven-Multi-Modul-Projekt für AEM zu erstellen
 
    >[!NOTE]
    >
-   > Beachten Sie die Eigenschaft `frontendModule=angular`. Dies weist den AEM Project Archetype an, das Projekt mit einem Startpunkt [Angular-Code-Basis](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) zu bootstrappen, der mit dem AEM SPA Editor verwendet werden soll.
+   > Beachten Sie die Eigenschaft `frontendModule=angular`. Dies weist den AEM Project Archetype an, das Projekt mit einem Startpunkt [Angular-Code-Basis](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) zu bootstrapping, der mit dem AEM SPA Editor verwendet werden soll.
 
 ## Projekt erstellen
 
@@ -147,7 +147,7 @@ Kompilieren Sie dann den Projektcode und stellen Sie ihn mithilfe von Maven auf 
 
    Der gesamte für das Projekt erforderliche benutzerdefinierte Code wird in diese Pakete gebündelt und auf der AEM Laufzeit installiert.
 
-6. Sie sollten auch mehrere Pakete für `spa.project.core` und `core.wcm.components` sehen. Diese Abhängigkeiten werden automatisch vom Archetyp eingeschlossen. Weitere Informationen zu [AEM Hauptkomponenten finden Sie hier](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html).
+6. Sie sollten auch mehrere Pakete für `spa.project.core` und `core.wcm.components` sehen. Diese Abhängigkeiten werden automatisch vom Archetyp eingeschlossen. Weitere Informationen zu [AEM Hauptkomponenten finden Sie hier](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html).
 
 ## Autoreninhalt
 
@@ -192,7 +192,7 @@ Vergewissern Sie sich anschließend, dass es sich um eine Einzelseitenanwendung 
    ...
    ```
 
-   `clientlib-angular.min.js` ist der Angular-SPA, der auf die Seite geladen wird und für die Wiedergabe des Inhalts verantwortlich ist.
+   `clientlib-angular.min.js` ist die Angular-SPA, die auf die Seite geladen wird und für die Wiedergabe des Inhalts verantwortlich ist.
 
    *Woher kommen die Inhalte?*
 
