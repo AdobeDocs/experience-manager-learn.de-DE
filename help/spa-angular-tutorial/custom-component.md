@@ -2,7 +2,7 @@
 title: Erstellen einer benutzerspezifischen Komponente | Erste Schritte mit dem AEM SPA Editor und Angular
 description: Erfahren Sie, wie Sie eine benutzerdefinierte Komponente erstellen, die mit dem AEM SPA Editor verwendet werden soll. Erfahren Sie, wie Sie Authoring-Dialoge und Sling-Modelle entwickeln, um das JSON-Modell zu erweitern und eine benutzerdefinierte Komponente zu füllen.
 sub-product: Sites
-feature: SPA Editor
+feature: SPA
 doc-type: tutorial
 topics: development
 version: cloud-service
@@ -13,7 +13,7 @@ thumbnail: 5831-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: 1fd4d31770a4eac37a88a7c6960fd51845601bee
 workflow-type: tm+mt
-source-wordcount: '1505'
+source-wordcount: '1507'
 ht-degree: 3%
 
 ---
@@ -157,7 +157,7 @@ Eine AEM Komponente wird als Knoten und Eigenschaften definiert. Im Projekt werd
    >
    > Sie können viel mehr [Beispiele für Dialoge durch Ansicht der Core-Komponentendefinitionen](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components) anzeigen. Sie können auch zusätzliche Formularfelder wie `select`, `textarea`, `pathfield`, `/libs/granite/ui/components/coral/foundation/form` unter [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form) Ansicht werden.
 
-   Bei einer herkömmlichen AEM ist in der Regel ein Skript [HTL](https://docs.adobe.com/content/help/de/experience-manager-htl/using/overview.html) erforderlich. Da der SPA die Komponente wiedergibt, ist kein HTML-Skript erforderlich.
+   Bei einer herkömmlichen AEM ist in der Regel ein Skript [HTL](https://docs.adobe.com/content/help/de-DE/experience-manager-htl/using/overview.html) erforderlich. Da der SPA die Komponente wiedergibt, ist kein HTML-Skript erforderlich.
 
 ## Sling-Modell erstellen
 
@@ -204,7 +204,7 @@ Im Kontext des SPA-Editors stellen Sling-Modelle den Inhalt einer Komponente üb
    static final String RESOURCE_TYPE = "wknd-spa-angular/components/custom-component";
    ```
 
-   Der Ressourcentyp der Komponente ist der, der das Sling-Modell an die AEM Komponente bindet und letztendlich der Angular-Komponente zugeordnet wird.
+   Der Ressourcentyp der Komponente ist der Typ, der das Sling-Modell an die AEM-Komponente bindet und letztendlich der Angular-Komponente zugeordnet wird.
 
 6. hinzufügen Sie die `getExportedType()`-Methode an die `CustomComponentImpl`-Klasse, um den Komponentenressourcentyp zurückzugeben:
 
@@ -215,7 +215,7 @@ Im Kontext des SPA-Editors stellen Sling-Modelle den Inhalt einer Komponente üb
    }
    ```
 
-   Diese Methode ist bei der Implementierung der `ComponentExporter`-Schnittstelle erforderlich und stellt den Ressourcentyp offen, der die Zuordnung zur Angular-Komponente ermöglicht.
+   Diese Methode ist bei der Implementierung der `ComponentExporter`-Schnittstelle erforderlich und stellt den Ressourcentyp bereit, der die Zuordnung zur Angular-Komponente ermöglicht.
 
 7. Aktualisieren Sie die `getMessage()`-Methode, um den Wert der `message`-Eigenschaft zurückzugeben, die vom Autorendialogfeld beibehalten wird. Verwenden Sie die Anmerkung `@ValueMap`, um den JCR-Wert `message` einer Java-Variablen zuzuordnen:
 
@@ -240,7 +240,7 @@ Im Kontext des SPA-Editors stellen Sling-Modelle den Inhalt einer Komponente üb
 
 ## Angular-Komponente aktualisieren
 
-Der Angular-Code für die benutzerdefinierte Komponente wurde bereits erstellt. Nehmen Sie als Nächstes einige Aktualisierungen vor, um die Angular-Komponente der AEM Komponente zuzuordnen.
+Der Angular-Code für die benutzerdefinierte Komponente wurde bereits erstellt. Nehmen Sie als Nächstes einige Aktualisierungen vor, um die Angular-Komponente der AEM zuzuordnen.
 
 1. Öffnen Sie im Modul `ui.frontend` die Datei `ui.frontend/src/app/components/custom/custom.component.ts`
 2. Beachten Sie die Zeile `@Input() message: string;`. Es wird erwartet, dass der transformierte Großbuchstabenwert dieser Variablen zugeordnet wird.
@@ -336,4 +336,4 @@ Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-gu
 
 ### Nächste Schritte {#next-steps}
 
-[Erweitern einer Core-Komponente](extend-component.md)  - Erfahren Sie, wie Sie eine bestehende Core-Komponente erweitern, um sie mit dem AEM SPA Editor zu verwenden. Das Verständnis, wie Eigenschaften und Inhalte zu einer vorhandenen Komponente hinzugefügt werden, ist eine leistungsstarke Methode, um die Funktionen einer AEM SPA Editor-Implementierung zu erweitern.
+[Erweitern einer Core-Komponente](extend-component.md)  - Erfahren Sie, wie Sie eine bestehende Core-Komponente erweitern, um sie mit dem AEM SPA Editor zu verwenden. Das Verstehen, wie Eigenschaften und Inhalte zu einer vorhandenen Komponente hinzugefügt werden, ist eine leistungsstarke Methode, um die Funktionen einer AEM SPA Editor-Implementierung zu erweitern.
