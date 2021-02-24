@@ -4,10 +4,10 @@ description: Eine Reihe von Tutorials für Adobe Experience Manager (AEM) als Cl
 sub-product: Sites, Cloud-Manager, Stiftung, Assets
 kt: 3289
 translation-type: tm+mt
-source-git-commit: 3e719ffd035623803c92ec814911413ec571ab30
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '275'
+ht-degree: 13%
 
 ---
 
@@ -20,9 +20,13 @@ Adobe Experience Manager (AEM) ist nun as a Cloud Service verfügbar. AEM als Cl
 
 ## Neue Funktionen
 
-* **[Token-basierte Authentifizierung (Tutorial)](../headless-tutorial/authentication/overview.md)**
+* **[Token-basierte Authentifizierung (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
 
    *Erfahren Sie, wie Sie mit Token-basierter Authentifizierung mit AEM als Cloud Service über HTTP interagieren.*
+
+* **[Headless GraphQL (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
+
+   *Erfahren Sie, wie Sie mit AEM GraphQL APIs Erlebnisse in einer externen Anwendung aktivieren.*
 
 * **[Massenimport (Video)](./migration/bulk-import.md)**
 
@@ -35,11 +39,6 @@ Adobe Experience Manager (AEM) ist nun as a Cloud Service verfügbar. AEM als Cl
 * **[asset compute microservices extensibility (Tutorial)](./asset-compute/overview.md)**
 
    *Hier erfahren Sie, wie Sie Asset compute-Workers entwickeln, um benutzerdefinierte Asset-Darstellungen zu erstellen.*
-
-* **[Konfigurieren des Zugriffs auf AEM als Cloud Service (Tutorial)](./accessing/overview.md)**
-
-   *Erfahren Sie, wie Sie IMS-Benutzer in Adobe Admin Console so konfigurieren, dass sie auf AEM zugreifen können*
-
 
 ## Personalauswahl
 
