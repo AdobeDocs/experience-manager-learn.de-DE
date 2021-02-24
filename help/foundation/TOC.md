@@ -5,10 +5,10 @@ user-guide-description: 'Eine Sammlung von Videos und Tutorials für die Adobe E
 sub-product: Stiftung
 index: y
 translation-type: tm+mt
-source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
+source-git-commit: 2760064642002a684b3fd70337a81a7d6e28a343
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 19%
+source-wordcount: '147'
+ht-degree: 21%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 19%
    + [Verwenden Sie das Dashboard Systemübersicht](./administration/use-the-system-overview-dashboard.md)
 + Authentifizierung {#authentication}
    + [OAuth-Authentifizierung](authentication/oauth-code-sample-develop.md)
-   + [Öffentliche/private Schlüssel für die Verwendung mit Adobe I/O einrichten](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
+   + [Öffentliche/private Schlüssel zur Verwendung mit Adobe I/O einrichten](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
    + [Authentifizierung](authentication/authentication-support-article-understand.md)
    + [IMS-Authentifizierung unter AMS verstehen](authentication/adobe-ims-authentication-technical-video-understand.md)
 + Adobe Cloud Manager{#cloud-manager}
@@ -46,6 +46,5 @@ ht-degree: 19%
 + Workflow {#workflow}
    + [Workflow-Editor verwenden](./workflow/use-the-workflow-editor.md)
    + [Workflow-Management verwenden](./workflow/use-workflow-management.md)
-   + [Verwenden Sie die Ansicht &quot;Kalender&quot;mit AEM &quot;Projekte&quot;und &quot;Posteingang&quot;](./workflow/use-the-calendar-view-with-aem-projects-and-inbox.md)
    + [Verwenden des Posteingangs](./workflow/use-the-inbox.md)
 
