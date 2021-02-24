@@ -11,9 +11,9 @@ mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '966'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ In diesem Kapitel erstellen Sie ein neues Modell für einen **Mitarbeiter**. Die
 
 ## Voraussetzungen {#prerequisites}
 
-Dies ist ein mehrteiliges Tutorial und es wird davon ausgegangen, dass die in [Schnelleinrichtung](./setup.md) beschriebenen Schritte abgeschlossen wurden.
+Dies ist ein mehrteiliges Lernprogramm und es wird davon ausgegangen, dass die unter [Schnelleinrichtung](./setup.md) beschriebenen Schritte abgeschlossen wurden.
 
 ## Ziele {#objectives}
 
@@ -133,13 +133,13 @@ Als Nächstes erstellen Sie ein neues Modell für einen **Mitarbeiter**. Dies is
 
 ## Beitragsmodell aktivieren
 
-Inhaltsfragmentmodelle werden beim ersten Erstellen standardmäßig als **Entwurf**-Status verwendet. Auf diese Weise können Benutzer das Inhaltsfragmentmodell vor **a** verfeinern, sodass Autoren es verwenden können. Denken Sie daran, dass die Änderung des Felds **Eigenschaftsname** eines Schemas im Modell das zugrunde liegende Datenfeld ändert und erhebliche nachgelagerte Auswirkungen auf vorhandene Fragmente und externe Anwendungen haben kann. Es wird empfohlen, die Benennungskonvention für die Felder **Eigenschaftsname** sorgfältig zu planen.
+Inhaltsfragmentmodelle müssen **Aktiviert** sein, bevor Inhaltsersteller sie verwenden können. Es ist möglich, ein Inhaltsfragmentmodell **zu deaktivieren, wodurch Autoren die Verwendung untersagt wird.** Denken Sie daran, dass die Änderung des Felds **Eigenschaftsname** eines Schemas im Modell das zugrunde liegende Datenfeld ändert und erhebliche nachgelagerte Auswirkungen auf vorhandene Fragmente und externe Anwendungen haben kann. Es wird empfohlen, die Benennungskonvention für die Felder **Eigenschaftsname** sorgfältig zu planen, bevor das Inhaltsfragmentmodell für Benutzer aktiviert wird.
 
-1. Beachten Sie, dass sich das **Mitarbeiter-Modell** derzeit im Status **Entwurf** befindet.
+1. Stellen Sie sicher, dass sich das **Mitarbeiter-Modell** derzeit im Status **Aktiviert** befindet.
 
-1. Aktivieren Sie das **Mitarbeiter-Modell**, indem Sie den Mauszeiger über die Karte halten und auf das Symbol **Aktivieren** klicken:
+   ![Benutzerdefiniertes Beitragsmodell](assets/content-fragment-models/enable-contributor-model.png)
 
-   ![Beitragsmodell aktivieren](assets/content-fragment-models/enable-contributor-model.png)
+   Sie können den Status eines Inhaltsfragmentmodells umschalten, indem Sie den Mauszeiger über die Karte halten und auf das Symbol **Deaktivieren** / **Aktivieren** klicken.
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
