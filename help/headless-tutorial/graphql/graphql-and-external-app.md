@@ -11,10 +11,10 @@ mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '1397'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -68,7 +68,7 @@ Das Starten der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlich
 
 1. Überprüfen Sie die App unter [http://localhost:3000/](http://localhost:3000/). Die React-Beispielanwendung besteht aus zwei Hauptteilen:
 
-   * Das Home-Erlebnis fungiert als Index der WKND-Abenteuer, fragt jedoch __Adventure__ Inhaltsfragmente in AEM mit GraphQL ab. In diesem Kapitel werden wir diese Ansicht ändern, um die Filterung von Abenteuern nach Aktivität zu unterstützen.
+   * Das Home-Erlebnis fungiert als Index der WKND-Abenteuer, indem AEM mithilfe von GraphQL __Adventure__ Inhaltsfragmente abgefragt werden. In diesem Kapitel werden wir diese Ansicht ändern, um die Filterung von Abenteuern nach Aktivität zu unterstützen.
 
       ![WKND GraphQL React App - Home Experience](./assets/graphql-and-external-app/react-home-view.png)
 
@@ -203,7 +203,7 @@ Das Starten der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlich
 1. Öffnen Sie in Ihrer IDE die Datei: `src/components/Adventures.js`. Diese Datei stellt die Abenteuerkomponente des Home Experience dar, die für die Abenteuer-Karten Abfrage wird und die diese anzeigt.
 1. Inspect die Funktion `filterQuery(activity)`, die nicht verwendet wird, aber vorbereitet wurde, um eine GraphQL-Abfrage zu formulieren, dass Filter Abenteuer von `activity`.
 
-   Beachten Sie, dass der Parameter `activity` im Feld `adventureActivity` als Teil eines Felds `filter` in die GraphQL-Abfrage eingefügt wird. Der Feldwert muss mit dem Parameterwert übereinstimmen.
+   Beachten Sie, dass der Parameter `activity` als Teil eines Felds `filter` im Feld `adventureActivity` in die GraphQL-Abfrage injiziert wird, sodass der Feldwert dem Parameterwert entsprechen muss.
 
    ```javascript
    function filterQuery(activity) {
@@ -261,7 +261,7 @@ Das Starten der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlich
    }
    ```
 
-1. Speichern Sie die Änderungen und laden Sie die React-App erneut im Webbrowser. Die drei neuen Schaltflächen werden oben angezeigt und durch Klicken auf diese Schaltflächen werden automatisch die Abfragen für die Inhaltsfragmente von Adventure mit der entsprechenden Aktivität neu AEM.
+1. Speichern Sie die Änderungen und laden Sie die React-App erneut im Webbrowser. Die drei neuen Schaltflächen werden oben angezeigt und durch Klicken auf diese Schaltflächen werden automatisch die Abfragen für Inhaltsfragmente von Adventure mit der entsprechenden Aktivität neu AEM.
 
    ![Abenteuer nach Aktivität filtern](./assets/graphql-and-external-app/filter-by-activity.png)
 
