@@ -11,10 +11,10 @@ mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '1009'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 Die GraphQL API von AEM bietet eine leistungsstarke Abfrage, um Daten von Inhaltsfragmenten für nachgeschaltete Anwendungen verfügbar zu machen. Inhaltsfragmentmodelle definieren das Schema, das von Inhaltsfragmenten verwendet wird. Bei jeder Erstellung oder Aktualisierung eines Inhaltsfragmentmodells wird das Schema übersetzt und dem &quot;Diagramm&quot;, aus dem die GraphQL-API besteht, hinzugefügt.
 
-In diesem Kapitel werden wir einige gängige GraphQL-Abfragen untersuchen, um Inhalte zu sammeln. In AEM integriert ist eine IDE mit dem Namen [GraphiQL](https://github.com/graphql/graphiql). Mit der GraphiQL IDE können Sie die zurückgegebenen Abfragen und Daten schnell testen und verfeinern. GraphiQL bietet außerdem einen einfachen Zugriff auf die Dokumentation, sodass Sie leicht erkennen und verstehen können, welche Methoden verfügbar sind.
+In diesem Kapitel werden wir einige gängige GraphQL-Abfragen untersuchen, um Inhalte mithilfe einer IDE mit dem Namen [GraphiQL](https://github.com/graphql/graphiql) zu erfassen. Mit der GraphiQL IDE können Sie die zurückgegebenen Abfragen und Daten schnell testen und verfeinern. GraphiQL bietet außerdem einen einfachen Zugriff auf die Dokumentation, sodass Sie leicht erkennen und verstehen können, welche Methoden verfügbar sind.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -36,6 +36,23 @@ Dies ist ein mehrteiliges Lernprogramm und es wird davon ausgegangen, dass die i
 * Erfahren Sie, wie Sie bestimmte Datenattribute filtern und anfordern.
 * Erfahren Sie, wie Sie eine Variation eines Inhaltsfragments Abfrage haben.
 * Erfahren Sie, wie Sie einer Abfrage mehrerer Inhaltsfragmentmodelle beitreten.
+
+## GraphiQL-Tool {#install-graphiql} installieren
+
+Die GraphiQL IDE ist ein Entwicklungstool und wird nur auf Umgebung der unteren Ebene wie einer Entwicklungs- oder lokalen Instanz benötigt. Daher ist sie nicht im AEM Projekt enthalten, sondern als separates Paket, das auf Ad-hoc-Basis installiert werden kann.
+
+1. Navigieren Sie zum **[Softwareverteilungsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM als Cloud Service**.
+1. Suchen Sie nach &quot;GraphiQL&quot; (stellen Sie sicher, dass Sie **i** in **GraphiQL** einschließen.
+1. Laden Sie das neueste **GraphiQL Content Package v.x.x.x** herunter
+
+   ![Herunterladen des GraphiQL-Pakets](assets/explore-graphql-api/software-distribution.png)
+
+   Die ZIP-Datei ist ein AEM Paket, das direkt installiert werden kann.
+
+1. Navigieren Sie im Menü **AEM Beginn** zu **Tools** > **Bereitstellung** > **Pakete**.
+1. Klicken Sie auf **Paket hochladen** und wählen Sie das im vorherigen Schritt heruntergeladene Paket. Klicken Sie auf **Installieren**, um das Paket zu installieren.
+
+   ![Installieren des GraphiQL-Pakets](assets/explore-graphql-api/install-graphiql-package.png)
 
 ## Abfrage einer Liste von Inhaltsfragmenten {#query-list-cf}
 
@@ -181,7 +198,7 @@ Es ist auch möglich, ein einzelnes Inhaltsfragment direkt Abfrage. Inhalte in A
        item {
          _path
          fullName
-         biography {
+         biographyText {
            html
          }
        }
@@ -193,7 +210,7 @@ Es ist auch möglich, ein einzelnes Inhaltsfragment direkt Abfrage. Inhalte in A
 
    In der vorherigen Übung haben Sie mithilfe eines Filters eine Liste der Ergebnisse eingegrenzt. Sie können eine ähnliche Syntax verwenden, um nach Pfad zu filtern. Die obige Syntax wird jedoch aus Leistungsgründen bevorzugt.
 
-1. Rufen Sie im Kapitel [Inhaltsfragmente erstellen](./author-content-fragments.md) auf, dass eine **Zusammenfassung**-Variante für **statische Roswells** erstellt wurde. Aktualisieren Sie die Abfrage, um die Variation **Zusammenfassung** zurückzugeben:
+1. Rufen Sie im Kapitel [Inhaltsfragmente erstellen](./author-content-fragments.md) auf, dass eine **Zusammenfassung**-Variation für **statische Roswells** erstellt wurde. Aktualisieren Sie die Abfrage, um die Variation **Zusammenfassung** zurückzugeben:
 
    ```graphql
    {
@@ -205,7 +222,7 @@ Es ist auch möglich, ein einzelnes Inhaltsfragment direkt Abfrage. Inhalte in A
        item {
          _path
          fullName
-         biography {
+         biographyText {
            html
          }
        }
@@ -217,7 +234,7 @@ Es ist auch möglich, ein einzelnes Inhaltsfragment direkt Abfrage. Inhalte in A
 
 1. Führen Sie die Abfrage aus und stellen Sie fest, dass das `biography`-Feld ein viel kürzeres `html`-Ergebnis enthält.
 
-## Abfrage für mehrere Inhaltsfragmentmodelle {#query-multiple-models}
+## Abfrage für Fragmentmodelle mit mehreren Inhalten {#query-multiple-models}
 
 Es ist auch möglich, separate Abfragen in einer einzigen Abfrage zu kombinieren. Dies ist nützlich, um die Anzahl der HTTP-Anforderungen zu minimieren, die zur Stromversorgung der Anwendung erforderlich sind. Beispielsweise kann die *Home*-Ansicht einer Anwendung Inhalte anzeigen, die auf **zwei** unterschiedlichen Inhaltsfragmentmodellen basieren. Statt zwei separate Abfragen **auszuführen, können wir die Abfragen zu einer einzigen Anforderung kombinieren.**
 
