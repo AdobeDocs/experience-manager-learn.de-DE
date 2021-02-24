@@ -1,18 +1,18 @@
 ---
-title: Verwenden Sie den Workflow-Editor in AEM
-description: Der Workflow ermöglicht die Verwaltung von Geschäftsprozessen im Experience Manager und wird für die automatische Verarbeitung von Inhalten sowie zur Erleichterung von Governance- und Prozessabläufen verwendet, die eine persönliche Entscheidungsfindung erfordern. Workflow wird über Workflow-Modelle definiert, die aus einer Reihe von Schritten bestehen und im Workflow-Modell-Editor erstellt und verwaltet werden.
-version: 6.4, 6.5
-sub-product: Stiftung, Stätten, Vermögenswerte
-feature: workflow
-topics: governance, collaboration
-activity: use
-audience: administrator, implementer
-doc-type: feature video
+title: Erstellen von Workflows in AEM
+description: Der Workflow ermöglicht die Verwaltung von Geschäftsprozessen im Experience Manager und wird für die automatische Verarbeitung von Inhalten sowie zur Erleichterung von Governance- und Prozessabläufen verwendet, die eine persönliche Entscheidungsfindung erfordern.
+version: 6.4, 6.5, cloud-service
+feature: Workflow
+topic: Content Management
+level: Zwischenschaltung
+role: Administrator, Entwickler
+kt: 657
+thumbnail: 22201.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: a08b1dd31d27284b9cfa128b68e5b8739ad9eab0
 workflow-type: tm+mt
-source-wordcount: '113'
-ht-degree: 0%
+source-wordcount: '93'
+ht-degree: 5%
 
 ---
 
