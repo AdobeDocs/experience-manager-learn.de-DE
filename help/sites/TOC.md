@@ -4,10 +4,10 @@ user-guide-description: Eine Sammlung von Videos und Tutorials für Adobe Experi
 breadcrumb-title: AEM Sites-Tutorials
 sub-product: Sites
 translation-type: tm+mt
-source-git-commit: ac2e937613eba4857d0f9bf8c5a39d5611157cbd
+source-git-commit: fcfb33f93e57d40b08e0527d38cfce8553095e65
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 35%
+source-wordcount: '447'
+ht-degree: 36%
 
 ---
 
@@ -44,7 +44,7 @@ ht-degree: 35%
    + [Inhaltsfragmente und Erlebnisfragmente](content-fragments/understand-content-fragments-and-experience-fragments.md)
 + Experience Fragments {#experience-fragments}
    + [Verwenden von Experience Fragments](experience-fragments/experience-fragments-feature-video-use.md)
-   + [Erlebnisfragmente](experience-fragments/experience-fragments-feature-video-understand.md)
+   + [Bausteine](experience-fragments/building-blocks.md)
    + [Einrichten von Social-Beiträgen mit Erlebnisfragmenten](experience-fragments/experience-fragments-social-technical-video-setup.md)
    + [Inhaltsfragmente und Erlebnisfragmente](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
 + Entwickeln {#developing}
