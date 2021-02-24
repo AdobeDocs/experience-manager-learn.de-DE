@@ -1,8 +1,8 @@
 ---
 title: Komponente erweitern | Erste Schritte mit dem AEM SPA Editor und Angular
-description: Erfahren Sie, wie Sie eine bestehende Core-Komponente erweitern, um sie mit dem AEM SPA Editor zu verwenden. Das Verständnis, wie Eigenschaften und Inhalte zu einer vorhandenen Komponente hinzugefügt werden, ist eine leistungsstarke Methode, um die Funktionen einer AEM SPA Editor-Implementierung zu erweitern. Erfahren Sie, wie Sie mit dem Delegierungsparameter Sling-Modelle und Funktionen von Sling Resource Merger erweitern können.
+description: Erfahren Sie, wie Sie eine bestehende Core-Komponente erweitern, um sie mit dem AEM SPA Editor zu verwenden. Das Verstehen, wie Eigenschaften und Inhalte zu einer vorhandenen Komponente hinzugefügt werden, ist eine leistungsstarke Methode, um die Funktionen einer AEM SPA Editor-Implementierung zu erweitern. Erfahren Sie, wie Sie mit dem Delegierungsparameter Sling-Modelle und Funktionen von Sling Resource Merger erweitern können.
 sub-product: Sites
-feature: SPA Editor
+feature: SPA
 doc-type: tutorial
 topics: development
 version: cloud-service
@@ -13,7 +13,7 @@ thumbnail: 5871-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '1986'
 ht-degree: 4%
 
 ---
@@ -37,7 +37,7 @@ In diesem Kapitel wird eine neue Komponente `Card` erstellt. Die Komponente `Car
 
 >[!NOTE]
 >
-> In einer realen Implementierung ist es möglicherweise angemessener, einfach die [Teaser-Komponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/teaser.html) zu verwenden und dann die [Image-Core-Komponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) zu erweitern, um je nach Projektanforderungen eine `Card`-Komponente zu erstellen. Es wird immer empfohlen, [Kernkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html) nach Möglichkeit direkt zu verwenden.
+> In einer realen Implementierung ist es möglicherweise angemessener, einfach die [Teaser-Komponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/teaser.html) zu verwenden und dann die [Image-Core-Komponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) zu erweitern, um je nach Projektanforderungen eine `Card`-Komponente zu erstellen. Es wird immer empfohlen, [Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html) nach Möglichkeit direkt zu verwenden.
 
 ## Voraussetzungen
 
@@ -149,7 +149,7 @@ Eine anfängliche Kartenkomponente wurde vom Kapitelstartercode bereitgestellt. 
    </div>
    ```
 
-   In diesem Beispiel haben wir die vorhandene Angular Image-Komponente `app-image` wiederverwendet, indem wir einfach die Parameter `@Input` von `card.component.ts` übergeben. Später im Tutorial werden zusätzliche Eigenschaften hinzugefügt und angezeigt.
+   In diesem Beispiel haben wir die bestehende Angular Image-Komponente `app-image` wiederverwendet, indem wir einfach die `@Input`-Parameter von `card.component.ts` übergeben. Später im Tutorial werden zusätzliche Eigenschaften hinzugefügt und angezeigt.
 
 ## Vorlagenrichtlinie aktualisieren
 
@@ -199,7 +199,7 @@ Als Nächstes erstellen Sie die Komponente `Card` mit dem AEM SPA Editor.
 
 6. Aktualisieren Sie die Registerkarte **Asset-Metadaten**, um Werte für **Alternativtext** und **Beschriftung** hinzuzufügen.
 
-   Derzeit werden nach der Aktualisierung des Dialogfelds keine weiteren Änderungen angezeigt. Um die neuen Felder der Angular-Komponente zugänglich zu machen, müssen wir das Sling-Modell für die Komponente `Card` aktualisieren.
+   Derzeit werden nach der Aktualisierung des Dialogfelds keine weiteren Änderungen angezeigt. Um die neuen Felder der Angular-Komponente zur Verfügung zu stellen, müssen wir das Sling-Modell für die Komponente `Card` aktualisieren.
 
 7. Öffnen Sie eine neue Registerkarte und navigieren Sie zu [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd-spa-angular/us/en/home/jcr%3Acontent/root/responsivegrid/card). Inspect Sie die Inhaltsknoten unter `/content/wknd-spa-angular/us/en/home/jcr:content/root/responsivegrid`, um den `Card`-Komponenteninhalt zu suchen.
 
@@ -449,7 +449,7 @@ Nun, da das JSON-Modell mit neuen Eigenschaften für `ctaLinkURL`, `ctaText`, `c
 
    >[!NOTE]
    >
-   > Sie können den fertigen [Angular-Kartenkomponentencode hier](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card) Ansicht geben.
+   > Sie können den fertigen [Angular-Kartenkomponentencode hier](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card) Ansicht durchführen.
 
 5. Stellen Sie mithilfe von Maven die vollständigen Änderungen an AEM aus dem Stammordner des Projekts bereit:
 
