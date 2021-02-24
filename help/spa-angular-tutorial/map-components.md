@@ -1,8 +1,8 @@
 ---
 title: Zuordnen SPA Komponenten zu AEM Komponenten | Erste Schritte mit dem AEM SPA Editor und Angular
-description: Erfahren Sie, wie Sie Angular-Komponenten mit dem AEM SPA Editor JS SDK Adobe Experience Manager (AEM) Komponenten zuordnen. Mithilfe der Komponentenzuordnung können Benutzer im AEM SPA Editor dynamische Aktualisierungen an SPA Komponenten vornehmen, ähnlich wie beim herkömmlichen AEM Authoring.
+description: Erfahren Sie, wie Sie mit dem AEM SPA Editor JS SDK Angular-Komponenten Adobe Experience Manager-(AEM-)Komponenten zuordnen. Mithilfe der Komponentenzuordnung können Benutzer im AEM SPA Editor dynamische Aktualisierungen an SPA Komponenten vornehmen, ähnlich wie beim herkömmlichen AEM Authoring.
 sub-product: Sites
-feature: SPA Editor
+feature: SPA
 topics: development
 doc-type: tutorial
 version: cloud-service
@@ -13,7 +13,7 @@ thumbnail: 5311-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: 28b5522e094a41d81116acb923dc0390478e2308
 workflow-type: tm+mt
-source-wordcount: '2387'
+source-wordcount: '2389'
 ht-degree: 2%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 2%
 
 # Zuordnen SPA Komponenten zu AEM Komponenten {#map-components}
 
-Erfahren Sie, wie Sie Angular-Komponenten mit dem AEM SPA Editor JS SDK Adobe Experience Manager (AEM) Komponenten zuordnen. Mithilfe der Komponentenzuordnung können Benutzer im AEM SPA Editor dynamische Aktualisierungen an SPA Komponenten vornehmen, ähnlich wie beim herkömmlichen AEM Authoring.
+Erfahren Sie, wie Sie mit dem AEM SPA Editor JS SDK Angular-Komponenten Adobe Experience Manager-(AEM-)Komponenten zuordnen. Mithilfe der Komponentenzuordnung können Benutzer im AEM SPA Editor dynamische Aktualisierungen an SPA Komponenten vornehmen, ähnlich wie beim herkömmlichen AEM Authoring.
 
-Dieses Kapitel enthält einen tieferen Einstieg in die AEM JSON-Modell-API und wie der JSON-Inhalt, der von einer AEM Komponente offen gelegt wird, automatisch als Props in eine Angular-Komponente injiziert werden kann.
+Dieses Kapitel enthält einen tieferen Einstieg in die AEM JSON-Modell-API und wie der von einer AEM offen gelegte JSON-Inhalt automatisch als Props in eine Angular-Komponente eingefügt werden kann.
 
 ## Vorgabe
 
@@ -69,9 +69,9 @@ Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-gu
 
 Das Grundkonzept besteht darin, eine SPA Komponente einer AEM Komponente zuzuordnen. AEM Komponenten, serverseitig ausführen, Inhalte als Teil der JSON-Modell-API exportieren Der JSON-Inhalt wird vom SPA genutzt, wobei clientseitig im Browser ausgeführt wird. Es wird eine 1:1-Zuordnung zwischen SPA Komponenten und einer AEM Komponente erstellt.
 
-![Überblick über die Zuordnung einer AEM Komponente zu einer Angular-Komponente auf hoher Ebene](./assets/map-components/high-level-approach.png)
+![Überblick über die Zuordnung einer AEM Komponente zu einer Angular](./assets/map-components/high-level-approach.png)
 
-*Überblick über die Zuordnung einer AEM Komponente zu einer Angular-Komponente auf hoher Ebene*
+*Überblick über die Zuordnung einer AEM Komponente zu einer Angular*
 
 ## Inspect der Textkomponente
 
@@ -132,7 +132,7 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
    [@Input()](https://angular.io/api/core/Input) decorator wird verwendet, um Felder zu deklarieren, deren Werte über das zugeordnete JSON-Objekt festgelegt werden, das zuvor überprüft wurde.
 
-   `@HostBinding('innerHtml') get content()` ist eine Methode, die den verfassten Textinhalt aus dem Wert  `this.text`von verfügbar macht. Wenn der Inhalt Rich Text (bestimmt durch das `this.richText`-Flag) ist, wird die integrierte Sicherheit von Angular umgangen. Angular&#39;s [DomSanitizer](https://angular.io/api/platform-browser/DomSanitizer) wird verwendet, um die Rohdaten-HTML zu &quot;scrubben&quot; und um Site-übergreifende Skriptverwundbarkeiten zu verhindern. Die Methode wird mit dem Dekorator [@HostBinding](https://angular.io/api/core/HostBinding) an die Eigenschaft `innerHtml` gebunden.
+   `@HostBinding('innerHtml') get content()` ist eine Methode, die den verfassten Textinhalt aus dem Wert  `this.text`von verfügbar macht. Ist der Inhalt Rich Text (bestimmt durch das `this.richText`-Flag), wird die integrierte Sicherheit umgangen. Angular [DomSanitizer](https://angular.io/api/platform-browser/DomSanitizer) wird zum &quot;Scrubben&quot;des HTML-Rohmaterials und zur Vermeidung von Sicherheitslücken beim Cross-Site Scripting verwendet. Die Methode wird mit dem Dekorator [@HostBinding](https://angular.io/api/core/HostBinding) an die Eigenschaft `innerHtml` gebunden.
 
 5. Überprüfen Sie anschließend `TextEditConfig` in ~Zeile 24:
 
@@ -199,7 +199,7 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
 ## Erstellen der Bildkomponente
 
-Erstellen Sie anschließend eine Angular-Komponente `Image`, die der AEM [Image-Komponente](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/image.html) zugeordnet wird. Die Komponente `Image` ist ein weiteres Beispiel für eine Komponente **content**.
+Erstellen Sie anschließend eine `Image`-Angular-Komponente, die der AEM [Image-Komponente](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/image.html) zugeordnet ist. Die Komponente `Image` ist ein weiteres Beispiel für eine Komponente **content**.
 
 ### Inspect the JSON
 
@@ -253,7 +253,7 @@ Prüfen Sie vor dem Aufrufen des SPA-Codes das von AEM bereitgestellte JSON-Mode
 ### Komponente &quot;Bild&quot;implementieren
 
 1. Beenden Sie den **webpack dev server**, falls gestartet.
-2. Erstellen Sie eine neue Image-Komponente, indem Sie den Befehl für die Angular-CLI `ng generate component` aus dem Ordner `ui.frontend` ausführen:
+2. Erstellen Sie eine neue Image-Komponente, indem Sie den Angular CLI-Befehl `ng generate component` aus dem Ordner `ui.frontend` ausführen:
 
    ```shell
    $ ng generate component components/image
@@ -373,7 +373,7 @@ Die Komponente `ImageComponent` ist nur im **webpack dev server** sichtbar. Stel
 
    ![Container-Richtlinie](./assets/map-components/layout-container-policy.png)
 
-4. Aktivieren Sie unter **Zulässige Komponenten** > **WKND SPA Angular - Content** > die Komponente **Bild**:
+4. Überprüfen Sie unter **Zulässige Komponenten** > **WKND SPA Angular - Inhalt** die Komponente **Bild**:
 
    ![Bildkomponente ausgewählt](assets/map-components/check-image-component.png)
 
@@ -463,13 +463,13 @@ Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-gu
 
 ### Nächste Schritte {#next-steps}
 
-[Navigation und Routing](navigation-routing.md)  - Erfahren Sie, wie mehrere Ansichten im SPA durch Zuordnen zu AEM Seiten mit dem SPA Editor SDK unterstützt werden können. Die dynamische Navigation wird mithilfe des Angular-Routers implementiert und einer vorhandenen Header-Komponente hinzugefügt.
+[Navigation und Routing](navigation-routing.md)  - Erfahren Sie, wie mehrere Ansichten im SPA durch Zuordnen zu AEM Seiten mit dem SPA Editor SDK unterstützt werden können. Die dynamische Navigation wird mithilfe des Angular Routers implementiert und einer vorhandenen Header-Komponente hinzugefügt.
 
 ## Bonus - Beständige Konfigurationen zur Quellcodeverwaltung {#bonus}
 
 In vielen Fällen, besonders zu Beginn eines AEM Projekts, ist es nützlich, Konfigurationen wie Vorlagen und zugehörige Inhaltsrichtlinien zur Quellcodeverwaltung beizubehalten. Dadurch wird sichergestellt, dass alle Entwickler mit demselben Inhaltssatz und denselben Konfigurationen arbeiten und zusätzliche Konsistenz zwischen den Umgebung sicherstellen. Sobald ein Projekt eine gewisse Reife erreicht hat, kann die Verwaltung von Vorlagen einer speziellen Gruppe von Stromverbrauchern überlassen werden.
 
-Die nächsten Schritte werden mit der Code-IDE von Visual Studio und [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) durchgeführt. Sie können jedoch jedes Tool und jede IDE verwenden, die Sie für **ull**- oder **import**-Inhalte aus einer lokalen Instanz von AEM konfiguriert haben.
+Die nächsten Schritte werden mit der Code-IDE von Visual Studio und [VSCode AEM Synchronisierung](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) durchgeführt. Sie können jedoch ein beliebiges Tool und jede IDE verwenden, die Sie für **ull**- oder **import**-Inhalte aus einer lokalen Instanz von AEM konfiguriert haben.
 
 1. Stellen Sie in der Code-IDE von Visual Studio sicher, dass **VSCode AEM Sync** über die Marketplace-Erweiterung installiert ist:
 
