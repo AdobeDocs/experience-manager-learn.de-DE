@@ -2,7 +2,7 @@
 title: hinzufügen Navigation und Routing | Erste Schritte mit dem AEM SPA Editor und Angular
 description: Erfahren Sie, wie mehrere Ansichten im SPA mithilfe von AEM und SPA Editor SDK unterstützt werden. Die dynamische Navigation wird mithilfe von Angular-Routen implementiert und einer vorhandenen Kopfzeilenkomponente hinzugefügt.
 sub-product: Sites
-feature: SPA Editor
+feature: SPA
 topics: development
 doc-type: tutorial
 version: cloud-service
@@ -13,7 +13,7 @@ thumbnail: 5312-spa-angular.jpg
 translation-type: tm+mt
 source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '2722'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Erfahren Sie, wie mehrere Ansichten im SPA mithilfe von AEM und SPA Editor SDK u
 ## Vorgabe
 
 1. Machen Sie sich mit den Optionen für das Routing des SPA-Modells vertraut, die bei Verwendung des SPA-Editors verfügbar sind.
-2. Hier erfahren Sie, wie Sie mit [Angular-Routing](https://angular.io/guide/router) zwischen verschiedenen Ansichten der SPA navigieren.
+2. Hier erfahren Sie, wie Sie mit dem Routing [Angular](https://angular.io/guide/router) zwischen verschiedenen Ansichten des SPA navigieren.
 3. Implementieren Sie eine dynamische Navigation, die von der AEM Seitenhierarchie gesteuert wird.
 
 ## Was Sie erstellen werden
@@ -167,7 +167,7 @@ In vorherigen Kapiteln wurde die Komponente `HeaderComponent` als reine Angular-
 
 Anschließend erstellen Sie zusätzliche Seiten in AEM, die als verschiedene Ansichten im SPA dienen. Wir werden auch die hierarchische Struktur des von AEM bereitgestellten JSON-Modells überprüfen.
 
-1. Navigieren Sie zur Konsole **Sites**: [http://localhost:4502/sites.html/content/wknd-spa-angular/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-angular/us/en/home). Wählen Sie die Startseite **WKND SPA Angular aus und klicken Sie auf**[!UICONTROL  Create ]**>**[!UICONTROL  Page ]**:**
+1. Navigieren Sie zur Konsole **Sites**: [http://localhost:4502/sites.html/content/wknd-spa-angular/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-angular/us/en/home). Wählen Sie die **WKND SPA Angular-Startseite** aus und klicken Sie auf **[!UICONTROL Erstellen]** > **[!UICONTROL Seite]**:
 
    ![Neue Seite erstellen](assets/navigation-routing/create-new-page.png)
 
@@ -313,7 +313,7 @@ Implementieren Sie anschließend das Navigationsmenü mit einem neuen `Navigatio
 
    Die hierarchische Natur der AEM Seiten wird im JSON modelliert, das zum Ausfüllen eines Navigationsmenüs verwendet werden kann. Denken Sie daran, dass die `Header`-Komponente alle Funktionen der [Navigationskernkomponente](https://www.aemcomponents.dev/content/core-components-examples/library/templating/navigation.html) übernimmt und der über JSON offen gelegte Inhalt automatisch der Angular `@Input`-Anmerkung zugeordnet wird.
 
-2. Öffnen Sie ein neues Terminalfenster und navigieren Sie zum Ordner `ui.frontend` des SPA. Erstellen Sie ein neues `NavigationComponent` mit dem Angular-CLI-Tool:
+2. Öffnen Sie ein neues Terminalfenster und navigieren Sie zum Ordner `ui.frontend` des SPA. Erstellen Sie ein neues `NavigationComponent` mit dem Angular CLI-Tool:
 
    ```shell
    $ cd ui.frontend
@@ -633,7 +633,7 @@ Nachdem die Navigation implementiert wurde, überprüfen Sie das Routing in AEM.
 
    Das `routes: Routes = [];`-Array definiert die Routen oder Navigationspfade zu Angular-Komponentenzuordnungen.
 
-   `AemPageMatcher` ist ein benutzerdefinierter Angular-Router- [UrlMatcher](https://angular.io/api/router/UrlMatcher), der mit allem übereinstimmt, was in AEM Angular-Anwendung &quot;aussieht&quot;.
+   `AemPageMatcher` ist ein benutzerdefinierter Angular-Router  [UrlMatcher](https://angular.io/api/router/UrlMatcher), der mit allem übereinstimmt, was in AEM Angular-Anwendung &quot;aussieht&quot;.
 
    `PageComponent` ist die Angular-Komponente, die eine Seite in AEM darstellt, und die entsprechenden Routen werden aufgerufen. Die `PageComponent` werden weiter geprüft.
 
@@ -669,7 +669,7 @@ Nachdem die Navigation implementiert wurde, überprüfen Sie das Routing in AEM.
 
    `PageComponent` ist erforderlich, um die JSON zu verarbeiten, die von AEM abgerufen wurde, und wird als Angular-Komponente zum Rendern der Routen verwendet.
 
-   `ActivatedRoute`, das vom Angular Router-Modul bereitgestellt wird, enthält den Status, der angibt, welcher JSON-Inhalt AEM Seite in diese Angular Page-Komponenteninstanz geladen werden soll.
+   `ActivatedRoute`, das vom Angular Router-Modul bereitgestellt wird, enthält den Status, der angibt, welcher AEM JSON-Inhalt der Seite in diese Angular Page-Komponenteninstanz geladen werden soll.
 
    `ModelManagerService`, ruft die JSON-Daten basierend auf der Route ab und ordnet die Daten Klassenvariablen zu  `path`,  `items`,  `itemsOrder`. Diese werden dann an die [AEMPageComponent](https://www.npmjs.com/package/@adobe/cq-angular-editable-components#aempagecomponent.md) weitergeleitet.
 
@@ -685,7 +685,7 @@ Nachdem die Navigation implementiert wurde, überprüfen Sie das Routing in AEM.
    </aem-page>
    ```
 
-   `aem-page` enthält die  [AEMPageComponent](https://www.npmjs.com/package/@adobe/cq-angular-editable-components#aempagecomponent.md). Die Variablen `path`, `items` und `itemsOrder` werden an `AEMPageComponent` übergeben. Die über die JavaScript-SDKs des SPA Editors bereitgestellten `AemPageComponent`-Variablen iterieren dann diese Daten und instanziieren Angular-Komponenten basierend auf den JSON-Daten, wie im Tutorial [Komponenten zuordnen](./map-components.md) dargestellt.
+   `aem-page` enthält die  [AEMPageComponent](https://www.npmjs.com/package/@adobe/cq-angular-editable-components#aempagecomponent.md). Die Variablen `path`, `items` und `itemsOrder` werden an `AEMPageComponent` übergeben. Die über die JavaScript-SDKs des SPA Editors bereitgestellten `AemPageComponent`-Variablen durchlaufen diese Daten und instanziieren dynamisch Angular-Komponenten basierend auf den JSON-Daten, wie im Tutorial [Komponenten zuordnen](./map-components.md) dargestellt.
 
    Das `PageComponent` ist wirklich nur ein Proxy für das `AEMPageComponent` und es ist das `AEMPageComponent`, das den Großteil der schweren Anhebung ausführt, um das JSON-Modell korrekt den Angular-Komponenten zuzuordnen.
 
@@ -726,7 +726,7 @@ Nachdem die Navigation implementiert wurde, überprüfen Sie das Routing in AEM.
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
-Herzlichen Glückwunsch, Sie haben gelernt, wie mehrere Ansichten im SPA durch Zuordnen zu AEM Seiten mit dem SPA Editor SDK unterstützt werden können. Die dynamische Navigation wurde mithilfe des Angular-Routings implementiert und der Komponente `Header` hinzugefügt.
+Herzlichen Glückwunsch, Sie haben gelernt, wie mehrere Ansichten im SPA durch Zuordnen zu AEM Seiten mit dem SPA Editor SDK unterstützt werden können. Die dynamische Navigation wurde mithilfe von Angular Routing implementiert und der Komponente `Header` hinzugefügt.
 
 Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution) oder lokal prüfen, indem Sie zur Verzweigung `Angular/navigation-routing-solution` wechseln.
 
