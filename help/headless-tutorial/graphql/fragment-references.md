@@ -1,6 +1,6 @@
 ---
 title: Erweiterte Datenmodellierung mit Fragmentverweisen - Erste Schritte mit AEM Kopflos - GraphQL
-description: Beginnen Sie mit Adobe Experience Manager (AEM) und GraphQL. Erfahren Sie, wie Sie mit der Funktion "Fragmentverweis"eine erweiterte Datenmodellierung durchführen und eine Beziehung zwischen zwei verschiedenen Inhaltsfragmenten erstellen können. Erfahren Sie, wie Sie eine GraphQL-Abfrage ändern, um Felder aus einem referenzierten Modell einzuschließen.
+description: Beginnen Sie mit Adobe Experience Manager (AEM) und GraphQL. Erfahren Sie, wie Sie die Funktion "Fragmentverweis"für erweiterte Datenmodellierung verwenden und eine Beziehung zwischen zwei verschiedenen Inhaltsfragmenten erstellen. Erfahren Sie, wie Sie eine GraphQL-Abfrage ändern, um Felder aus einem referenzierten Modell einzuschließen.
 sub-product: Assets
 topics: headless
 version: cloud-service
@@ -11,10 +11,10 @@ mini-toc-levels: 1
 kt: 6718
 thumbnail: KT-6718.jpg
 translation-type: tm+mt
-source-git-commit: 8c5b425e6dcf23cbef042097f17db9e51bdf63c9
+source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -234,13 +234,10 @@ Aktualisieren Sie anschließend die Abfragen, die von der React-Anwendung verwen
 
    ![Mitarbeiter in der App hinzugefügt](assets/fragment-references/contributor-added-detail.png)
 
-## Zusätzliche Ressourcen
-
-Weitere Informationen zu Inhaltsfragmenten und GraphQL finden Sie in den folgenden Ressourcen:
-
-* [Versand ohne Inhalt mit Inhaltsfragmenten mit GraphQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html)
-* [AEM GraphQL API zur Verwendung mit Inhaltsfragmenten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html)
-
 ## Herzlichen Glückwunsch!{#congratulations}
 
 Herzlichen Glückwunsch! Sie haben ein vorhandenes Inhaltsfragmentmodell aktualisiert, um mit dem Feld **Fragmentverweis** auf ein verschachteltes Inhaltsfragment zu verweisen. Sie haben auch gelernt, wie Sie eine GraphQL-Abfrage ändern, um Felder aus einem referenzierten Modell einzuschließen.
+
+## Nächste Schritte {#next-steps}
+
+Im nächsten Kapitel [Bereitstellung der Produktion mit einer AEM Publish-Umgebung](./production-deployment.md) erfahren Sie mehr über AEM Author- und Publish-Dienste und das empfohlene Bereitstellungsmuster für kostenlose Anwendungen. Sie aktualisieren eine bestehende Anwendung, um anhand von Umgebung einen GraphQL-Endpunkt basierend auf der Umgebung der Zielgruppe dynamisch zu ändern. Außerdem erfahren Sie, wie Sie AEM für Cross-Herkunft Resource Sharing (CORS) ordnungsgemäß konfigurieren.
