@@ -1,46 +1,41 @@
 ---
-title: Verwenden der Übersetzung mit AEM Inhaltsfragmenten
-description: AEM 6.3 bietet die Möglichkeit, Inhaltsfragmente zu übersetzen. Assets mit gemischten Medien und Asset-Sammlungen, die mit einem Inhaltsfragment verknüpft sind, können ebenfalls extrahiert und übersetzt werden.
-sub-product: Sites, Assets, Content-Services
-feature: content-fragments, multi-site-manager
-topics: localization, content-architecture
-audience: all
-doc-type: feature video
-activity: use
-version: 6.3, 6.4, 6.5
+title: Übersetzungsunterstützung für AEM Inhaltsfragmente
+description: Erfahren Sie, wie Inhaltsfragmente mit Adobe Experience Manager lokalisiert und übersetzt werden können. Assets mit gemischten Medien, die mit einem Inhaltsfragment verknüpft sind, können ebenfalls extrahiert und übersetzt werden.
+feature: Inhaltsfragmente, Multi-Site-Manager
+topics: Localization
+role: Geschäftspraktiker
+level: Zwischenschaltung
+version: 6.3, 6.4, 6.5, cloud-service
+kt: 201
+thumbnail: 18131.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 4620acc18a08d71994753903b79247a8ed3fd8f5
 workflow-type: tm+mt
-source-wordcount: '252'
-ht-degree: 6%
+source-wordcount: '250'
+ht-degree: 2%
 
 ---
 
 
-# Verwenden der Übersetzung mit AEM Inhaltsfragmenten{#using-translation-with-aem-content-fragments}
+# Übersetzungsunterstützung für AEM Inhaltsfragmente {#translation-support-content-fragments}
 
-AEM 6.3 bietet die Möglichkeit, Inhaltsfragmente zu übersetzen. Assets mit gemischten Medien und Asset-Sammlungen, die mit einem Inhaltsfragment verknüpft sind, können ebenfalls extrahiert und übersetzt werden.
+Erfahren Sie, wie Inhaltsfragmente mit Adobe Experience Manager lokalisiert und übersetzt werden können. Assets mit gemischten Medien, die mit einem Inhaltsfragment verknüpft sind, können ebenfalls extrahiert und übersetzt werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/18131/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/18131/?quality=12&learn=on)
 
 ## Übersetzung von Inhaltsfragmenten - Verwendungsfälle {#content-fragment-translation-use-cases}
 
-Inhaltsfragmente sind ein erkannter Inhaltstyp, der AEM extrahiert und an einen externen Übersetzungsdienst gesendet wird. Einige Anwendungsfälle werden standardmäßig unterstützt:
+Inhaltsfragmente sind ein erkannter Inhaltstyp, AEM Auszüge an einen externen Übersetzungsdienst gesendet werden. Einige Anwendungsfälle werden standardmäßig unterstützt:
 
 1. Ein Inhaltsfragment kann direkt in der Assets-Konsole für Sprachkopie und Übersetzung ausgewählt werden
 2. Inhaltsfragmente, auf die auf einer Seite &quot;Sites&quot;verwiesen wird, werden in den entsprechenden Sprachordner kopiert und zur Übersetzung extrahiert, wenn die Seite &quot;Sites&quot;für die Sprachkopie ausgewählt wird
 3. Inline-Medien-Assets, die in ein Inhaltsfragment eingebettet sind, können extrahiert und übersetzt werden.
 4. Mit einem Inhaltsfragment verknüpfte Asset-Sammlungen können extrahiert und übersetzt werden.
 
-## Übersetzungskonfigurationsoptionen {#translation-config-options}
+## Editor für Übersetzungsregeln {#translation-rules-editor}
 
-Die standardmäßige Übersetzungskonfiguration unterstützt mehrere Optionen zum Übersetzen von Inhaltsfragmenten. Standardmäßig werden Inline-Medien-Assets und zugehörige Asset-Sammlungen NICHT übersetzt. Um die Übersetzungskonfiguration zu aktualisieren, navigieren Sie zu [http://localhost:4502/etc/cloudservices/translation/default_translation.html](http://localhost:4502/etc/cloudservices/translation/default_translation.html).
+Das Übersetzungsverhalten von Experience Managern kann mit dem **Übersetzungsregel-Editor** aktualisiert werden. Um die Übersetzung zu aktualisieren, navigieren Sie zu **Tools** > **Allgemein** > **Übersetzungskonfiguration** unter [http://localhost:4502/libs/cq/translation/translationrules/contexts.html](http://localhost:4502/libs/cq/translation/translationrules/contexts.html).
 
-Es gibt vier Optionen zum Übersetzen von Inhaltsfragment-Assets:
+Standardmäßige Konfigurationen verweisen auf Inhaltsfragmente bei `fragmentPath` mit einem Ressourcentyp von `core/wcm/components/contentfragment/v1/contentfragment`. Alle Komponenten, die von `v1/contentfragment` erben, werden von der Standardkonfiguration erkannt.
 
-1. **Nicht übersetzen (Standard)**
-2. **Nur Inline-Medienassets**
-3. **Nur verknüpfte Asset-Sammlungen**
-4. **Eingebundene Medien-Assets und zugeordnete Sammlungen**
-
-![Übersetzungskonfiguration](assets/classic-ui-dialog.png)
+![Editor für Übersetzungsregeln](assets/translation-configuration.png)
