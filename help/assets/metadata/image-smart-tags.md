@@ -1,19 +1,18 @@
 ---
 title: Smart-Tags für Bilder mit AEM Assets
 description: Smart-Tags für Bilder erweitern AEM Suchfunktionen durch das automatische und intelligente Hinzufügen von Metadaten-Tags zu Bild-Assets, basierend auf dem Bildinhalt.
-feature: smart-tags
-topics: metadata, search
-audience: all
-doc-type: feature video
-activity: understand
-version: 6.3, 6.4, 6.5
-kt: 5244
+topic: Content Management
+feature: Smart-Tags
+role: Geschäftspraktiker
+level: Zwischenschaltung
+version: 6.3, 6.4, 6.5, cloud-service
+kt: 645
 thumbnail: 17019.jpg
 translation-type: tm+mt
-source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
+source-git-commit: a5fb96275194ddc46169832c0fb79a2587833564
 workflow-type: tm+mt
-source-wordcount: '217'
-ht-degree: 43%
+source-wordcount: '225'
+ht-degree: 44%
 
 ---
 
@@ -45,4 +44,4 @@ Im Video werden die folgenden Aufgaben erläutert, die zum Konfigurieren des Ado
 
 ## Zusätzliche Ressourcen
 
-* [Dokumentation zu AEM Assets Smart Tags](https://helpx.adobe.com/experience-manager/6-3/assets/using/touch-ui-smart-tags.html)
+* [Dokumentation zu AEM Assets Smart Tags](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/manage/smart-tags.html)
