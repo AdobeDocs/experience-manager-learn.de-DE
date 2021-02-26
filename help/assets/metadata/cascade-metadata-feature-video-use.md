@@ -1,20 +1,18 @@
 ---
 title: Verwenden von Kaskadenmetadaten in AEM Assets
-seo-title: Verwenden von Kaskadenmetadaten in AEM Assets
 description: Das erweiterte Metadatenmanagement ermöglicht es Benutzern, kaskadierte Feldregeln zu erstellen, um kontextbezogene Beziehungen zwischen Metadaten in AEM Assets zu erstellen. Im folgenden Video werden neue dynamische Regeln für Feldanforderungen, Sichtbarkeit und Kontextoptionen veranschaulicht. Im Video werden auch die Schritte erläutert, die ein Administrator ausführen muss, um diese Regeln auf ein benutzerdefiniertes Metadaten-Schema anzuwenden.
-seo-description: Das erweiterte Metadatenmanagement ermöglicht es Benutzern, kaskadierte Feldregeln zu erstellen, um kontextbezogene Beziehungen zwischen Metadaten in AEM Assets zu erstellen. Im folgenden Video werden neue dynamische Regeln für Feldanforderungen, Sichtbarkeit und Kontextoptionen veranschaulicht. Im Video werden auch die Schritte erläutert, die ein Administrator ausführen muss, um diese Regeln auf ein benutzerdefiniertes Metadaten-Schema anzuwenden.
-uuid: 470c1b1a-f888-4c90-87d7-acfa9a5fa6b1
-discoiquuid: ccd1acb1-bb7f-48c2-91e0-cccbeedad831
-topics: metadata
-audience: all
-doc-type: feature video
-activity: use
-version: 6.3, 6.4, 6.5
+version: 6.3, 6.4, 6.5, cloud-service
+topic: Content Management
+feature: 'Metadaten  '
+role: Geschäftspraktiker
+level: Zwischenschaltung
+kt: 616
+thumbnail: 20702.jpg
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: a414284d497a74bb1a617d205a5bb034ea5b8005
 workflow-type: tm+mt
-source-wordcount: '318'
-ht-degree: 0%
+source-wordcount: '196'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +21,7 @@ ht-degree: 0%
 
 Das erweiterte Metadatenmanagement ermöglicht es Benutzern, kaskadierte Feldregeln zu erstellen, um kontextbezogene Beziehungen zwischen Metadaten in AEM Assets zu erstellen. Im folgenden Video werden neue dynamische Regeln für Feldanforderungen, Sichtbarkeit und Kontextoptionen veranschaulicht. Im Video werden auch die Schritte erläutert, die ein Administrator ausführen muss, um diese Regeln auf ein benutzerdefiniertes Metadaten-Schema anzuwenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/20702/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/20702/?quality=12&learn=on)
 
 Es gibt drei dynamische Regelsätze, die für ein bestimmtes Metadatenfeld aktiviert werden können:
 
@@ -32,14 +30,3 @@ Es gibt drei dynamische Regelsätze, die für ein bestimmtes Metadatenfeld aktiv
 2. **Sichtbarkeit** : Felder können immer sichtbar oder nur sichtbar sein, je nach Wert eines anderen Dropdown-Felds.
 
 3. **Optionen** : (nur auf Dropdown-Felder anwendbar) filtern Sie die Auswahlmöglichkeiten, die dem Benutzer basierend auf dem aktuell ausgewählten Wert eines anderen Dropdown-Felds angezeigt werden.
-
->[!NOTE]
->
->Kaskadenregeln können NUR basierend auf den Werten eines Dropdown-Felds erstellt werden. Es ist möglich, alle drei Regelsätze auf dasselbe Metadatenfeld anzuwenden. Es empfiehlt sich jedoch, jeden Regelsatz von derselben Metadaten-Dropdown-Liste abhängig zu machen.
-
-[Benutzerdefiniertes Metadatenpaket](assets/cascade-metadata-values-001.zip) herunterladen
-
-## Zusätzliche Ressourcen{#additional-resources}
-
-Benutzerdefiniertes Metadaten-Schema, erstellt unter: `/conf/global/settings/dam/adminui-extension/metadataschema/custom`. Im folgenden AEM wird benutzerdefiniertes Schema auf den Ordner angewendet: `/content/dam/we-retail/en/activities`:
-
