@@ -14,8 +14,8 @@ kt: 2214
 translation-type: tm+mt
 source-git-commit: bdb62b3361f20a0d0f27f5818cb82276980755d1
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 46%
+source-wordcount: '66'
+ht-degree: 45%
 
 ---
 
@@ -28,5 +28,5 @@ ht-degree: 46%
 + [Personalisierung vollständiger Webseiten-Erlebnisse](./personalization-use-case-2.md)
 + Implementierung {#aem-target-implementation}
    + [Einführung](./implementation.md)
-   + [AEM und Adobe Target mit Launch und Adobe I/O](./using-launch-adobe-io.md)
+   + [AEM und Adobe Target mit Start und Adobe I/O](./using-launch-adobe-io.md)
    + [AEM und Adobe Target mit älteren Cloud Services](./using-aem-cloud-services.md)
