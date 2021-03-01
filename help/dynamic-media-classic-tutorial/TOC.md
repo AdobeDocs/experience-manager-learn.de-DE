@@ -28,5 +28,5 @@ ht-degree: 47%
 + [Beschneiden, Anpassen von Zielgruppen und Zoomen](./crop-adjusted-zoom-targets.md)
 + [Einführung in einfache Vorlagen](./basic-templates.md)
 + [Videoüberblick](./video-overview.md)
-+ [Smart Imaging](./smart-imaging.md)
++ [Intelligente Bildbearbeitung](./smart-imaging.md)
 + [Wertvolle Berichte für Administratoren](./valuable-reports.md)
