@@ -7,10 +7,10 @@ topics: development
 activity: develop
 audience: developer
 translation-type: tm+mt
-source-git-commit: c85a59a8bd180d5affe2a5bf5939dabfb2776d73
+source-git-commit: 947ffbfcc64f0e2e010a0515c8e6cf1530ec4ea9
 workflow-type: tm+mt
-source-wordcount: '2590'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -188,6 +188,20 @@ Alle AEM Projekte sollten auf der neuesten Version des **[!DNL AEM Project Arche
 Eine integrierte Entwicklungs-Umgebung oder IDE ist eine Anwendung, die einen Texteditor, Syntaxunterstützung und Buildwerkzeuge kombiniert. Je nach Art der Entwicklung, die Sie durchführen, ist eine IDE möglicherweise besser als eine andere. Unabhängig von der IDE ist es wichtig, regelmäßig ***push***-Code an eine lokale AEM-Instanz senden zu können, um sie zu testen. Es ist auch wichtig, gelegentlich ***Konfigurationen von einer lokalen AEM in Ihr AEM Projekt zu ziehen, um zu einem Quellcodeverwaltungssystem wie Git zu gelangen.***
 
 Im Folgenden finden Sie einige der beliebtesten IDEs, die mit AEM Entwicklung mit entsprechenden Videos verwendet werden, die die Integration mit einer lokalen AEM zeigen.
+
+>[!NOTE]
+>
+> Das WKND-Projekt wurde aktualisiert, um standardmäßig AEM als Cloud Service zu bearbeiten. Es wurde aktualisiert, um [rückwärtskompatibel mit 6.5/6.4](https://github.com/adobe/aem-guides-wknd#building-for-aem-6xx) zu sein. Wenn Sie AEM 6.5 oder 6.4 verwenden, hängen Sie das `classic`-Profil an beliebige Maven-Befehle an.
+
+```shell
+$ mvn clean install -PautoInstallSinglePackage -Pclassic
+```
+
+Wenn Sie eine IDE verwenden, überprüfen Sie `classic` in Ihrer Maven Profil Registerkarte.
+
+![Registerkarte &quot;Maven Profil&quot;](assets/set-up-a-local-aem-development-environment/intelliJMavenProfiles.png)
+
+*IntelliJ Maven Profil*
 
 ### [!DNL Eclipse] IDE
 
