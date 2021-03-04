@@ -2,19 +2,18 @@
 title: Versionen
 description: Erfahren Sie, wie AEM Asset-Versionen erstellen und verwalten.
 sub-product: Assets
-feature: null
-topics: authoring, collaboration
-audience: author
-doc-type: feature video
-activity: use
+feature: Asset-Verwaltung
 version: cloud-service
 kt: 4671
 thumbnail: 32052.jpg
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 8d0e6f2c4c979e6704cae08e766300baf7ef8ad0
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '19'
-ht-degree: 15%
+source-wordcount: '26'
+ht-degree: 19%
 
 ---
 
