@@ -1,16 +1,19 @@
 ---
 title: Einrichten von ContextHub für Personalisierung mit AEM Sites
 description: ContextHub ist ein Framework zum Speichern, Ändern und Darstellen von Kontextdaten. Mit der ContextHub-JavaScript-API können Sie auf Speicher zugreifen, um Daten bei Bedarf zu erstellen, zu aktualisieren und zu löschen. Daher stellt ContextHub eine Datenschicht auf Ihren Seiten dar. Auf dieser Seite wird beschrieben, wie Sie den Kontext-Hub zu den Seiten Ihrer AEM hinzufügen.
-feature: context-hub
+feature: Context-Hub
 topics: personalization
 audience: developer, architect
 doc-type: technical video
 activity: setup
 version: 6.4, 6.5
+topic: 'Personalisierung '
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 1faf22f2e664b775c11e16cb1dfa18b363a7316b
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '426'
+source-wordcount: '431'
 ht-degree: 35%
 
 ---
@@ -50,7 +53,7 @@ Erstellen Sie AEM Segmente, die als Regeln für die Teaser fungieren. Das heißt
 
 Zuweisen des Cloud-Konfigurationspfades, des Segmentierungspfads und des ContextHub-Pfads zu Ihrem Site-Stammknoten, damit Sie ein personalisiertes Erlebnis für Ihre Audience erstellen können. Mithilfe des ContextHub können Sie die Kontextdaten bearbeiten und aufgelöste Segmente testen.
 
-![CRXDE Lite](assets/crx-de-properties.png)
+![CRXDE Lite](assets/crx-de-properties.png) 
 
 Weitere Informationen zu ContextHub und zur Segmentierung finden Sie unten:
 
