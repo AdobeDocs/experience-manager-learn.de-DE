@@ -1,12 +1,14 @@
 ---
-title: Kapitel 1 - Lernprogramme einrichten und herunterladen
-seo-title: Erste Schritte mit AEM Content Services - Kapitel 1 - Lernprogramm einrichten
-description: Kapitel 1 des AEMHeadless-Lernprogramms enthält die Grundeinstellung für die AEM Instanz des Lernprogramms.
-seo-description: Kapitel 1 des AEMHeadless-Lernprogramms enthält die Grundeinstellung für die AEM Instanz des Lernprogramms.
+title: '"Kapitel 1 - Dispatcher-Konzepte, -Muster und -Muster"'
+description: Dieses Kapitel enthält eine kurze Einführung in die Geschichte und Mechanik des Dispatchers und beschreibt, wie sich dies auf die Gestaltung seiner Komponenten durch einen AEM-Entwickler auswirkt.
+feature: Dispatcher
+topic: Architektur
+role: Architekt
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '17502'
+source-wordcount: '17489'
 ht-degree: 0%
 
 ---
@@ -1577,7 +1579,7 @@ Ihre Site hat ein sehr spezifisches Zugriffsmuster. Sie haben eine hohe Traffic-
 
 Nun werden diese Seiten sehr wahrscheinlich im Dispatcher zwischengespeichert, da sie so häufig angefordert werden.
 
-An den Dispatcher wird eine Anfrage zur willkürlichen Ungültigmachung gesendet, wodurch alle Seiten - einschließlich Ihrer bevorzugten Einmaligkeit - ungültig werden.
+An den Dispatcher wird eine Anfrage zur willkürlichen Ungültigmachung gesendet, wodurch alle Seiten - einschließlich der bevorzugten einmal - ungültig werden.
 
 Da diese Seiten so beliebt sind, gibt es neue eingehende Anforderungen von verschiedenen Browsern. Nehmen wir die Startseite als Beispiel.
 
