@@ -3,7 +3,7 @@ title: Grundlegender Umgang mit AEM Sites
 seo-title: Neue Seite in Adobe Experience Manager Sites erstellen
 description: Das folgende Video bietet einen Überblick über die grundlegende Handhabung bei der Verwendung der AEM Authoring-Umgebung. Als Grundlage wird die Sites-Konsole verwendet.
 seo-description: Das folgende Video bietet einen Überblick über die grundlegende Handhabung bei der Verwendung der AEM Authoring-Umgebung. Als Grundlage wird die Sites-Konsole verwendet.
-feature: page-editor, template-editor
+feature: Seiten-Editor, bearbeitbare Vorlagen
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,11 +11,14 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4495
 thumbnail: 31784.jpg
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 26760a76cfa523d28399c8e44c8db070cac49496
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 71%
+source-wordcount: '379'
+ht-degree: 70%
 
 ---
 
@@ -30,7 +33,7 @@ In diesem Video werden die folgenden Funktionen und Funktionen behandelt:
 
 * Touch-aktivierte Benutzeroberfläche
 * Globale Navigation besteht aus:
-   * Navigation – dargestellt durch einen Kompass     
+   * Navigation – dargestellt durch einen Kompass 
 
       | Konsole | Zweck |
       |---|---|
