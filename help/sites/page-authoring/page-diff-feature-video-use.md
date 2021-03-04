@@ -3,7 +3,6 @@ title: Seitendifferenz mit AEM Sites verwenden
 seo-title: Seitendifferenz mit AEM Sites verwenden
 description: Die Seitenunterschiede-Funktion von AEM-Sites bietet eine schnelle, farbkodierte Ansicht der Inhaltsänderungen auf einer Seite (Version, Live Copy, Launches, Sprachkopie).
 seo-description: Die Seitenunterschiede-Funktion von AEM-Sites bietet eine schnelle, farbkodierte Ansicht der Inhaltsänderungen auf einer Seite (Version, Live Copy, Launches, Sprachkopie).
-feature: page-diff
 topics: authoring
 audience: author, marketer
 doc-type: feature video
@@ -12,11 +11,14 @@ version: 6.3, 6.4, 6.5
 uuid: e096a08b-528d-48c7-93fb-73b10c0a9259
 kt: 4633
 thumbnail: 32152.jpg
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 1%
+source-wordcount: '156'
+ht-degree: 2%
 
 ---
 
