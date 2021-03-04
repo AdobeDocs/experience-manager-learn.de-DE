@@ -4,18 +4,21 @@ seo-title: An Danksagungsseite übermitteln
 description: Danksagungsseite beim Senden des adaptiven Formulars anzeigen
 seo-description: Danksagungsseite beim Senden des adaptiven Formulars anzeigen
 uuid: ec695b87-083a-47f6-92ac-c9a6dc2b85fb
-feature: adaptive Formulare
+feature: Adaptive Formulare
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 58c6bf42-efe5-41a3-8023-d84f3675f689
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 5%
+source-wordcount: '280'
+ht-degree: 7%
 
 ---
 
