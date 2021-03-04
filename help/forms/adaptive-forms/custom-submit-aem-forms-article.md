@@ -3,7 +3,7 @@ title: Schreiben von benutzerdefinierten Übermittlungen in AEM Forms
 seo-title: Schreiben von benutzerdefinierten Übermittlungen in AEM Forms
 description: Schnelle und einfache Möglichkeit, eigene benutzerdefinierte Übermittlungsaktionen für adaptive Formulare zu erstellen
 seo-description: Schnelle und einfache Möglichkeit, eigene benutzerdefinierte Übermittlungsaktionen für adaptive Formulare zu erstellen
-feature: adaptive Formulare
+feature: Adaptive Formulare
 topics: integrations
 audience: developer
 doc-type: article
@@ -11,11 +11,14 @@ activity: implement
 version: 6.3,6.4,6.5
 uuid: a26db0b9-7db4-4e80-813d-5c0438fabd1e
 discoiquuid: 28611011-2ff9-477e-b654-e62e7374096a
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 2%
+source-wordcount: '232'
+ht-degree: 4%
 
 ---
 
