@@ -3,7 +3,7 @@ title: Einstellungen der Datenquellenkonfiguration ändern.
 seo-title: Einstellungen der Datenquellenkonfiguration ändern.
 description: Ändern Sie den Hostnamen und andere Einstellungen in den Datenquellenkonfigurationseinstellungen.
 seo-description: Ändern Sie den Hostnamen und andere Einstellungen in den Einstellungen für Datenquellenkonfigurationen.
-feature: integrations
+feature: Adaptive Formulare
 topics: form-data-model
 audience: developer
 doc-type: technical video
@@ -11,11 +11,14 @@ activity: setup
 version: 6.5
 uuid: 31e297c9-3d12-4a7a-b1ff-1e347e17b24c
 discoiquuid: de227e8f-0f59-4506-828b-3b6b18b61eb1
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '156'
-ht-degree: 0%
+source-wordcount: '161'
+ht-degree: 2%
 
 ---
 
