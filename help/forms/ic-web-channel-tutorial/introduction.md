@@ -3,17 +3,20 @@ title: Erstellen der ersten interaktiven Kommunikation für Web Kanal
 seo-title: Erstellen der ersten interaktiven Kommunikation für Web Kanal
 description: Interaktive Kommunikation ist neu bei AEM Forms 6.4. Dieses Dokument führt Sie durch die Schritte, die erforderlich sind, um eine interaktive Kommunikation für den Web-Kanal zu erstellen.
 seo-description: Interaktive Kommunikation ist neu bei AEM Forms 6.4. Dieses Dokument führt Sie durch die Schritte, die erforderlich sind, um eine interaktive Kommunikation für den Web-Kanal zu erstellen.
-feature: interactive-communication
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 2%
+source-wordcount: '219'
+ht-degree: 4%
 
 ---
 
