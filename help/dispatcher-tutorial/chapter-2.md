@@ -1,12 +1,10 @@
 ---
 title: Kapitel 2 - Definieren von Ereignis Content Fragment-Modellen
-seo-title: Erste Schritte mit AEM Content Services - Kapitel 2 - Definieren von Ereignis Content Fragment-Modellen
 description: Kapitel 2 des Lernprogramms "AEM ohne Kopf"umfasst die Aktivierung und Definition von Inhaltsfragmentmodellen, mit denen eine normalisierte Datenstruktur und eine Authoring-Oberfläche zum Erstellen von Ereignissen definiert werden.
-seo-description: Kapitel 2 des Lernprogramms "AEM ohne Kopf"umfasst die Aktivierung und Definition von Inhaltsfragmentmodellen, mit denen eine normalisierte Datenstruktur und eine Authoring-Oberfläche zum Erstellen von Ereignissen definiert werden.
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1917'
+source-wordcount: '1879'
 ht-degree: 0%
 
 ---
@@ -80,7 +78,7 @@ Der Lastenausgleich &quot;pings&quot;, eine bestimmte Seite, um zu sehen, ob der
 
 #### Weltweiter Vertrieb
 
-&quot;Worldwide Distribution&quot;ist ein Setup, bei dem mehrere Dispatcher vor jedem Publishing-System stehen - jetzt weltweit verteilt, um näher an den Kunden heranzukommen und eine bessere Performance zu erzielen. Natürlich haben Sie in diesem Szenario keinen zentralen Lastenausgleich, sondern ein DNS- und Geo-IP-basiertes Lastenausgleichsschema.
+&quot;Worldwide Distribution&quot;ist ein Setup, bei dem mehrere Dispatcher vor jedem Publishing-System stehen - jetzt weltweit verteilt, um näher an den Kunden heranzukommen und eine bessere Leistung zu erzielen. Natürlich haben Sie in diesem Szenario keinen zentralen Lastenausgleich, sondern ein DNS- und Geo-IP-basiertes Lastenausgleichsschema.
 
 >[!NOTE]
 >
