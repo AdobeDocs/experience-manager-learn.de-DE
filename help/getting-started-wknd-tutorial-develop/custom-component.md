@@ -2,7 +2,7 @@
 title: Benutzerdefinierte Komponente
 description: Behandelt die End-to-End-Erstellung einer benutzerdefinierten byline-Komponente, die verfassten Inhalt anzeigt. Umfasst die Entwicklung eines Sling-Modells zur Kapselung der Geschäftslogik zum Füllen der byline-Komponente und der zugehörigen HTL zum Rendern der Komponente.
 sub-product: Sites
-feature: sling-models
+feature: '"Hauptkomponenten, APIs"'
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,10 +11,13 @@ audience: developer
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
+topic: '"Content-Management, Entwicklung"'
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3961'
+source-wordcount: '3969'
 ht-degree: 1%
 
 ---
@@ -104,7 +107,7 @@ Das Dialogfeld zeigt die Schnittstelle an, über die Autoren Inhalte bereitstell
        sling:resourceSuperType="core/wcm/components/image/v2/image"/>
    ```
 
-   Die obige XML-Datei enthält die Definition der Komponente, einschließlich Titel, Beschreibung und Gruppe. Die `sling:resourceSuperType` verweist auf `core/wcm/components/image/v2/image`, die [Core-Image-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html).
+   Die obige XML-Datei enthält die Definition der Komponente, einschließlich Titel, Beschreibung und Gruppe. Die `sling:resourceSuperType` verweist auf `core/wcm/components/image/v2/image`, die [Core-Image-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=de).
 
 ### HTML-Skript {#create-the-htl-script} erstellen
 
@@ -1002,7 +1005,7 @@ Dazu müssen wir die aktuelle byline-Ressource einschließen, aber den Ressource
 
 Die Sling Models Status-Ansicht [AEM Web Console zeigt alle registrierten Sling-Modelle in AEM an. ](http://localhost:4502/system/console/status-slingmodels) Das Byline-Sling-Modell kann überprüft werden, ob es installiert und erkannt wurde, indem diese Liste überprüft wird.
 
-Wenn **BylineImpl** in dieser Liste nicht angezeigt wird, liegt wahrscheinlich ein Problem mit den Anmerkungen des Sling-Modells vor oder das Sling-Modell wurde dem registrierten Sling-Modellpaket (com.adobe.aem.guides.wknd.core.models) nicht hinzugefügt.
+Wenn **BylineImpl** in dieser Liste nicht angezeigt wird, liegt wahrscheinlich ein Problem mit den Anmerkungen des Sling-Modells vor oder das Sling-Modell wurde nicht zum registrierten Sling-Modellpaket (com.adobe.aem.guides.wknd.core.models) im Kernprojekt hinzugefügt.
 
 ![Byline Sling Model registriert](assets/custom-component/osgi-sling-models.png)
 
