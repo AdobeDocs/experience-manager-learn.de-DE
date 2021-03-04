@@ -4,18 +4,20 @@ seo-title: AEM Forms-Tutorials und -Videos
 description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler
 seo-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler
 sub-product: Formulare
+topic: Entwicklung
+role: Entwickler
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 31%
+source-wordcount: '305'
+ht-degree: 32%
 
 ---
 
 
 # Überblick {#overview}
 
-Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie komplexe digitale Formulare erstellen, verwalten, veröffentlichen und aktualisieren und dabei in Back-End-Prozesse, Geschäftsregeln und Daten integrieren können. Dieses Benutzerhandbuch enthält Videos und Lernprogramme zu den zahlreichen Funktionen und Funktionen von AEM Forms
+Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie komplexe digitale Formulare erstellen, verwalten, veröffentlichen und aktualisieren und dabei in Back-End-Prozesse, Geschäftsregeln und Daten integrieren können. Dieses Benutzerhandbuch enthält Videos und Übungen zu den zahlreichen Funktionen und Funktionen von AEM Forms
 
 ## Neue Funktionen
 
