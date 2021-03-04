@@ -2,17 +2,20 @@
 title: Verstehen Sie Inhaltsfragmente und Erlebnisfragmente.
 description: Adobe Experience Managers Inhaltsfragmente und Erlebnisfragmente mögen oberflächlich ähnlich aussehen, spielen jedoch in verschiedenen Anwendungsfällen eine Schlüsselrolle. Erfahren Sie, wie Inhaltsfragmente und Erlebnisfragmente ähnlich, unterschiedlich sind und wann und wie sie verwendet werden.
 sub-product: Assets, Sites, Inhaltsdienste
-feature: content fragments, experience fragments
+feature: Inhaltsfragmente, Erlebnisfragmente
 topics: headless
 version: 6.3, 6.4, 6.5
 doc-type: article
 activity: understand
 audience: all
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 03db12de4d95ced8fabf36b8dc328581ec7a2749
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '998'
-ht-degree: 7%
+source-wordcount: '1007'
+ht-degree: 8%
 
 ---
 
@@ -25,7 +28,7 @@ Adobe Experience Managers Inhaltsfragmente und Erlebnisfragmente mögen oberflä
 
 <table>
 <tbody><tr><td><strong> </strong></td>
-<td><strong>Inhaltsfragmente (CF)</strong></td>
+<td><strong>Inhaltsfragmente</strong></td>
 <td><strong>Erlebnisfragmente (XF)</strong></td>
 </tr><tr><td><strong>Definition</strong></td>
 <td><ul>
@@ -96,7 +99,7 @@ Adobe Experience Managers Inhaltsfragmente und Erlebnisfragmente mögen oberflä
 <li>Übersetzung/lokale Anpassung</li>
 </ul>
 </td>
-</tr><tr><td><strong>Verwenden</strong></td>
+</tr><tr><td><strong>Verwenden Sie</strong></td>
 <td><ul>
 <li><a href="https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/content-fragment-component.html" target="_blank">AEM Inhaltsfragment-</a> Komponente für Kernkomponenten zur Verwendung in AEM Sites, AEM Screens oder in Erlebnisfragmenten.</li>
 <li>JSON-Export über <a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-services-tutorial-use.html" target="_blank">AEM Content Services</a> für den Verbrauch durch Dritte</li>
@@ -106,7 +109,7 @@ Adobe Experience Managers Inhaltsfragmente und Erlebnisfragmente mögen oberflä
 <td><ul>
 <li>AEM Erlebnisfragment-Komponente zur Verwendung in AEM Sites, AEM Screens oder anderen Erlebnisfragmenten.</li>
 <li>Als <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html#ThePlainHTMLRendition" target="_blank">Nur HTML</a> zur Verwendung durch Drittanbietersysteme exportieren</li>
-<li><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/experience-fragments-target.html" target="_blank">HTML-Export in Adobe </a> Target für zielgerichtete Angebot</li>
+<li><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/experience-fragments-target.html" target="_blank">HTML-Export in Adobe </a> Target für zielgerichtete Angebot</li>
 <li>JSON-Export nach Adobe Target für zielgerichtete Angebot</li>
 </ul>
 </td>
