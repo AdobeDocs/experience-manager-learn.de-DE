@@ -2,17 +2,20 @@
 title: Verwenden der Tabellenkomponente im AEM Forms Print Kanal Dokument
 seo-title: Verwenden der Tabellenkomponente im AEM Forms Print Kanal Dokument
 description: Im folgenden Video werden die Schritte erläutert, die erforderlich sind, um die Tabellenkomponente in der interaktiven Kommunikation für Dokumente von Kanälen zu verwenden.
-feature: interactive-communication
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: technical video
 activity: implement
 version: 6.4,6.5
+topic: Entwicklung
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 0%
+source-wordcount: '281'
+ht-degree: 2%
 
 ---
 
