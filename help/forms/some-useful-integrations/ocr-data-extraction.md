@@ -1,17 +1,20 @@
 ---
 title: OCR Data Extraktion
 description: Extrahieren Sie Daten aus staatlich ausgegebenen Dokumenten, um Formulare auszufüllen.
-feature: integrations
+feature: Barcoded Forms
 topics: adaptive forms
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 kt: 6679
+topic: Entwicklung
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: c0db84f25334106c798d555c754d550113e91eac
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '652'
 ht-degree: 3%
 
 ---
@@ -76,7 +79,7 @@ Wenn Sie die Beispielelemente mit Ihrem API-Schlüssel verwenden möchten, führ
 * Das adaptive Beispielformular herunterladen kann [von hier heruntergeladen werden. ](assets/adaptive-form-dl.zip) Dieses Musterformular verwendet die Dienstaufrufe des Formulardatenmodells, das als Teil dieses Artikels bereitgestellt wird.
 * Importieren Sie das Formular in AEM aus der Benutzeroberfläche [Forms und Dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Öffnen Sie das Formular im Bearbeitungsmodus [](http://localhost:4502/editor.html/content/forms/af/driverslicenseandpassport.html)
-* Geben Sie Ihren API-Schlüssel als Standardwert im Feld apikey an und speichern Sie die Änderungen
+* Geben Sie den API-Schlüssel als Standardwert im Feld apikey an und speichern Sie die Änderungen
 * Öffnen Sie den Regeleditor für das Feld Base 64 String. Beachten Sie den Dienstaufruf, wenn der Wert dieses Felds geändert wird.
 * Speichern Sie das Formular
 * [Vorschau des Formulars](http://localhost:4502/content/dam/formsanddocuments/driverslicenseandpassport/jcr:content?wcmmode=disabled), Hochladen des Titelbildes Ihres Führerscheinführerscheins
