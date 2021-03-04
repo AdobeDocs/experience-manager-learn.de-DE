@@ -7,11 +7,14 @@ audience: author, marketer, developer
 doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
+topic: Lokalisierung
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 2%
+source-wordcount: '340'
+ht-degree: 5%
 
 ---
 
@@ -42,6 +45,6 @@ Autoren können jetzt schnell und einfach mehrsprachige Übersetzungsprojekte di
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Übersetzen von Inhalten für mehrsprachige Sites](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/translation.html)
+* [Übersetzen von Inhalten für mehrsprachige Sites](https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/translation.html)
 * [https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html)
 * [Best Practices für die Übersetzung](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-bp.html)
