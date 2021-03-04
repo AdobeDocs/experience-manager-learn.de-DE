@@ -1,18 +1,21 @@
 ---
 title: Verwenden von XDP-Vorlagen mit AEM Forms und Adobe Sign
 description: Verwenden von XDP-Vorlagen mit AEM Forms und Adobe Sign. Ein Video, das Details zur Nutzung vorhandener XDP-Vorlagen mit AEM Forms- und Sign-Integration enthält.
-feature: adaptive Formulare
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39705.jpg
 kt: 6143
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '68'
-ht-degree: 2%
+source-wordcount: '72'
+ht-degree: 8%
 
 ---
 
