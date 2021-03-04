@@ -1,16 +1,19 @@
 ---
 title: Sprachkopie mit AEM Sites verwenden
-feature: language-copy
+feature: Sprachkopie
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
+topic: Lokalisierung
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '59'
-ht-degree: 8%
+source-wordcount: '65'
+ht-degree: 12%
 
 ---
 
