@@ -1,17 +1,20 @@
 ---
 title: OKTA mit AEM konfigurieren
 description: Verstehen Sie verschiedene Konfigurationseinstellungen für die Verwendung von Single Sign-On mit okta.
-feature: administration
+feature: Adaptive Formulare
 topics: development, authentication, security
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.5
+topic: Administration
+role: 'Administrator  '
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: 0b48ae445f4b32deeec08bcb68f805bf19992c9e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 2%
+source-wordcount: '767'
+ht-degree: 3%
 
 ---
 
@@ -82,7 +85,7 @@ Suchen und öffnen Sie &quot;Apache Sling Werber Filter&quot;. Legen Sie die fol
 * **Hosts** zulassen: Hostname von IdP (in Ihrem Fall anders)
 * **Regexp-Host** zulassen: Hostname von IdP (in Ihrem Fall anders) Der Screenshot zu den Eigenschaften des Sling-Werber-Werbers
 
-![werber-Filter](assets/sling-referrer-filter.PNG)
+![Werber-Filter](assets/sling-referrer-filter.PNG)
 
 #### DEBUG-Protokollierung für die OKTA-Integration konfigurieren
 
