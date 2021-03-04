@@ -1,17 +1,20 @@
 ---
 title: Verwenden der Stapel-API zum Generieren von Dokumenten für interaktive Kommunikation
 description: Beispiel-Assets zum Generieren von Dokumenten für den Kanal mit der Batch-API
-feature: interactive-communication
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
+topic: Entwicklung
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 6%
+source-wordcount: '421'
+ht-degree: 7%
 
 ---
 
