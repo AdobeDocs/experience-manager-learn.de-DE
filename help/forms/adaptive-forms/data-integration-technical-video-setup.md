@@ -3,7 +3,7 @@ title: Einrichten der Datenintegration mit AEM Forms
 seo-title: Einrichten der Datenintegration mit AEM Forms
 description: Einrichten der Datenverbindung zu einer JDBC-Datenquelle
 seo-description: Einrichten der Datenverbindung zu einer JDBC-Datenquelle
-feature: adaptive-forms,form-data-model
+feature: '"Adaptives Forms, Workflow"'
 topics: integrations
 audience: developer
 doc-type: technical video
@@ -11,11 +11,14 @@ activity: setup
 version: 6.4,6.5
 uuid: 267de794-4462-4421-adee-d40a469fabb3
 discoiquuid: 41864584-cb99-4c54-abda-8eb83829cb90
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 11%
+source-wordcount: '96'
+ht-degree: 12%
 
 ---
 
