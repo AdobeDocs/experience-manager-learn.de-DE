@@ -1,21 +1,18 @@
 ---
 title: Anpassung des Postfachs
 description: hinzufügen benutzerdefinierter Spalten, um zusätzliche Daten des Workflows mit einer Vorlage anzuzeigen
-feature: Adaptive Formulare
+feature: adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
-topic: Entwicklung
-role: Entwickler
-level: Erfahren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '296'
-ht-degree: 9%
+source-wordcount: '292'
+ht-degree: 8%
 
 ---
 
