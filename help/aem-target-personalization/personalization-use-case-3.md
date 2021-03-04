@@ -3,11 +3,15 @@ title: Personalisierung mit Adobe Target Visual Experience Composer
 seo-title: Personalisierung mit Adobe Target Visual Experience Composer (VEC)
 description: Ein durchgehendes Lernprogramm, in dem gezeigt wird, wie mit dem Adobe Target Visual Experience Composer (VEC) personalisierte Erlebnisse erstellt und bereitgestellt werden.
 seo-description: Ein durchgehendes Lernprogramm, in dem gezeigt wird, wie mit dem Adobe Target Visual Experience Composer (VEC) personalisierte Erlebnisse erstellt und bereitgestellt werden.
+feature: Experience Fragments
+topic: 'Personalisierung '
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 0443c8ff42e773021ff8b6e969f5c1c31eea3ae4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '610'
-ht-degree: 2%
+source-wordcount: '615'
+ht-degree: 3%
 
 ---
 
@@ -33,7 +37,7 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 
 ### Voraussetzungen
 
-* **AEM**
+* **AEM-**
    * [AEM ](./implementation.md#getting-aem) Installation am 4503 veröffentlichen
    * [AEM mit Adobe Experience Platform Launch integriert](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
