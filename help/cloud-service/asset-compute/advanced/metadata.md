@@ -1,7 +1,7 @@
 ---
 title: Entwickeln eines Asset compute-Metadatenarbeiters
 description: Hier erfahren Sie, wie Sie einen Asset compute-Metadaten-Arbeitsablauf erstellen, der die am häufigsten verwendeten Farben in einem Bild-Asset ableitet und die Farbnamen in die Metadaten des Assets in AEM schreibt.
-feature: asset-compute
+feature: asset compute Microservices
 topics: metadata, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
+topic: Integrationen, Entwicklung
+role: Entwickler
+level: Vermittelt, erfahren
 translation-type: tm+mt
-source-git-commit: c2a8e6c3ae6dcaa45816b1d3efe569126c6c1e60
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1442'
 ht-degree: 1%
 
 ---
