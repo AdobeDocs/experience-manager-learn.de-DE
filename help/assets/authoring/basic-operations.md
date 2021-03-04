@@ -1,18 +1,18 @@
 ---
 title: Grundlegende Vorgänge
 description: Erfahren Sie mehr über die grundlegenden Vorgänge von AEM Assets, einschließlich der Erstellung von Ordnern sowie dem Hochladen, Kopieren, Verschieben und Löschen von Assets.
-feature: Asset Management
-topics: Content Management
-role: Business Practitioner
-level: Beginner
+feature: Asset-Verwaltung
+role: Geschäftspraktiker
+level: Anfänger
 version: cloud-service
 kt: 4299
 thumbnail: 32044.jpg
+topic: Content Management
 translation-type: tm+mt
-source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '48'
-ht-degree: 0%
+source-wordcount: '55'
+ht-degree: 3%
 
 ---
 
