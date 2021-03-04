@@ -4,18 +4,21 @@ seo-title: Kampagne Profil mithilfe des Formulardatenmodells erstellen
 description: Schritte zum Erstellen von Adobe Campaign Standard-Profilen mit dem AEM Forms-Formulardatenmodell
 seo-description: Schritte zum Erstellen von Adobe Campaign Standard-Profilen mit dem AEM Forms-Formulardatenmodell
 uuid: 3216827e-e1a2-4203-8fe3-4e2a82ad180a
-feature: adaptive-forms, form-data-model
+feature: Ausgabe-Service
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 461c532e-7a07-49f5-90b7-ad0dcde40984
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '447'
-ht-degree: 2%
+source-wordcount: '452'
+ht-degree: 3%
 
 ---
 
@@ -40,7 +43,7 @@ Wir müssen eine benutzerdefinierte Authentifizierung verwenden, um REST-Aufrufe
 
 Zur Verwendung der benutzerdefinierten Authentifizierung müssen wir eine OSGi-Komponente entwickeln, die die IAuthentication-Schnittstelle implementiert
 
-Die Methode getAuthDetails muss implementiert werden. Diese Methode gibt das AuthenticationDetails-Objekt zurück. Für dieses AuthenticationDetails-Objekt sind die erforderlichen HTTP-Header festgelegt, die zum Aufrufen der REST-API an Adobe Campaign erforderlich sind.
+Die Methode getAuthDetails muss implementiert werden. Diese Methode gibt das Objekt AuthenticationDetails zurück. Für dieses AuthenticationDetails-Objekt sind die erforderlichen HTTP-Header festgelegt, die zum Aufrufen der REST-API an Adobe Campaign erforderlich sind.
 
 Im Folgenden finden Sie den Code, der bei der Erstellung der benutzerdefinierten Authentifizierung verwendet wurde. Die Methode getAuthDetails führt die gesamte Arbeit aus. Wir erstellen ein AuthenticationDetails-Objekt. Dann fügen wir dem Objekt die entsprechenden HttpHeaders hinzu und geben dieses Objekt zurück.
 
