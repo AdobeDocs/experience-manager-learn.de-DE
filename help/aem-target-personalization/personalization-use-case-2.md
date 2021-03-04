@@ -3,11 +3,15 @@ title: Personalisierung mit Adobe Target
 seo-title: Personalisierung mit Adobe Target
 description: Ein durchgehendes Lernprogramm, das zeigt, wie Sie mit Adobe Target personalisierte Erlebnisse erstellen und bereitstellen können.
 seo-description: Ein durchgehendes Lernprogramm, das zeigt, wie Sie mit Adobe Target personalisierte Erlebnisse erstellen und bereitstellen können.
+feature: Experience Fragments
+topic: 'Personalisierung '
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 0443c8ff42e773021ff8b6e969f5c1c31eea3ae4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 2%
+source-wordcount: '611'
+ht-degree: 3%
 
 ---
 
@@ -35,7 +39,7 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 
 ### Voraussetzungen
 
-* **AEM**
+* **AEM-**
    * [AEM Autoren- und Veröffentlichungsinstancerunning ](./implementation.md#getting-aem) auf localhost 4502 bzw. 4503.
    * [AEM mit Adobe Experience Platform Launch integriert](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
