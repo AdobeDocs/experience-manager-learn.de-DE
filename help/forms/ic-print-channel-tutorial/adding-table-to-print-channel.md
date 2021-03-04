@@ -4,7 +4,7 @@ seo-title: Tabelle zu Beitragsabschnitt hinzufügen
 description: Dies ist Teil 9 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments.In diesem Teil fügen wir eine Tabelle zum Beitragsabschnitt hinzu.
 seo-description: Dies ist Teil 9 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments.In diesem Teil fügen wir eine Tabelle zum Beitragsabschnitt hinzu.
 uuid: 9475e769-a3f8-4aec-9b46-e0dc182b78a0
-feature: Interaktive Kommunikation
+feature: interactive-communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,14 +13,11 @@ version: 6.4,6.5
 kt: 5994
 thumbnail: 37953.jpg
 discoiquuid: 36c1f67f-b5bb-431e-893c-fd5032918dd7
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 2%
+source-wordcount: '134'
+ht-degree: 0%
 
 ---
 
