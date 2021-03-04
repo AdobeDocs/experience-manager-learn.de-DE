@@ -5,20 +5,17 @@ description: Dies ist Teil 6 eines mehrstufigen Tutorials zum Erstellen Ihres er
 seo-description: Dies ist Teil 6 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil werden wir interaktive Kommunikation für Web Kanal erstellen.
 uuid: a1b29c5b-a323-4bda-aa99-5fb98614b690
 discoiquuid: b44ff855-9ead-471e-8f0f-b562b88a5337
-feature: Interaktive Kommunikation
+feature: interactive-communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 15%
+source-wordcount: '200'
+ht-degree: 13%
 
 ---
 
