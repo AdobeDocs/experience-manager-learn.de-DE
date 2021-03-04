@@ -11,10 +11,14 @@ audience: developer
 kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
+feature: '"Kernkomponenten, Stilsystem"'
+topic: '"Content-Management, Entwicklung"'
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1996'
+source-wordcount: '2005'
 ht-degree: 3%
 
 ---
@@ -69,7 +73,7 @@ Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-gu
 
 ## Was Sie erstellen werden {#what-you-will-build}
 
-In diesem Kapitel verwenden wir die Funktion [Stilsystem](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html), um Varianten der Komponenten **title** und **Text** zu erstellen, die auf der Artikelseite verwendet werden.
+In diesem Kapitel verwenden wir die Funktion [Stilsystem](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html), um Varianten der Komponenten **title** und **Text** zu erstellen, die auf der Artikelseite verwendet werden.
 
 ![Für Titel verfügbare Stile](assets/style-system/styles-added-title.png)
 
@@ -77,7 +81,7 @@ In diesem Kapitel verwenden wir die Funktion [Stilsystem](https://docs.adobe.com
 
 ## Hintergrund {#background}
 
-Das [Stilsystem](https://docs.adobe.com/content/help/de/experience-manager-65/developing/components/style-system.html) ermöglicht es Entwicklern und Vorlageneditoren, mehrere visuelle Varianten einer Komponente zu erstellen. Autoren können dann wiederum entscheiden, welcher Stil beim Erstellen einer Seite verwendet werden soll. Wir werden das Stilsystem während des gesamten Tutorials nutzen, um mehrere einzigartige Stile zu erzielen und gleichzeitig die Kernkomponenten in einem Low-Code-Ansatz zu nutzen.
+Das [Stilsystem](https://docs.adobe.com/content/help/de-DE/experience-manager-65/developing/components/style-system.html) ermöglicht es Entwicklern und Vorlageneditoren, mehrere visuelle Varianten einer Komponente zu erstellen. Autoren können dann wiederum entscheiden, welcher Stil beim Erstellen einer Seite verwendet werden soll. Wir werden das Stilsystem während des gesamten Tutorials nutzen, um mehrere einzigartige Stile zu erzielen und gleichzeitig die Kernkomponenten in einem Low-Code-Ansatz zu nutzen.
 
 Die allgemeine Idee beim Stilsystem ist, dass Autoren verschiedene Stile für das Aussehen einer Komponente wählen können. Die &quot;Stile&quot;werden durch zusätzliche CSS-Klassen unterstützt, die in das äußere div einer Komponente injiziert werden. In den Client-Bibliotheken werden CSS-Regeln auf Grundlage dieser Stilklassen hinzugefügt, sodass sich das Erscheinungsbild der Komponente ändert.
 
@@ -427,7 +431,7 @@ Herzlichen Glückwunsch, die Artikelseite ist fast vollständig formatiert und S
 
 ### Nächste Schritte {#next-steps}
 
-Lernen Sie die Schritte von Ende zu Ende zu erstellen, um eine [benutzerdefinierte AEM-Komponente](custom-component.md) zu erstellen, die in einem Dialog verfasste Inhalte anzeigt, und untersuchen Sie die Entwicklung eines Sling-Modells, um eine Geschäftslogik zu kapseln, die die HTML der Komponente ausfüllt.
+Lernen Sie die Schritte von Ende zu Ende, um eine [benutzerdefinierte AEM-Komponente](custom-component.md) zu erstellen, die in einem Dialog verfasste Inhalte anzeigt, und erforschen Sie die Entwicklung eines Sling-Modells, um eine Geschäftslogik einzukapseln, die die HTML-Datei der Komponente ausfüllt.
 
 Ansicht des fertigen Codes auf [GitHub](https://github.com/adobe/aem-guides-wknd) oder lokale Überprüfung und Bereitstellung des Codes in der Git-Klammer `tutorial/style-system-solution`.
 
