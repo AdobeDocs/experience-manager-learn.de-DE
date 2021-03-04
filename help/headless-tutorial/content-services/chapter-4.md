@@ -3,11 +3,15 @@ title: Kapitel 4 - Definieren von Content Services-Vorlagen - Content Services
 seo-title: Erste Schritte mit AEM Kopflos - Kapitel 4 - Definieren von Content Services-Vorlagen
 description: Kapitel 4 des AEM Headless-Lernprogramms behandelt die Rolle AEM bearbeitbarer Vorlagen im Kontext von AEM Content Services. Bearbeitbare Vorlagen werden verwendet, um die JSON-Inhaltsstruktur zu definieren, die Content Services letztendlich bereitstellt.
 seo-description: Kapitel 4 des AEM Headless-Lernprogramms behandelt die Rolle AEM bearbeitbarer Vorlagen im Kontext von AEM Content Services. Bearbeitbare Vorlagen werden verwendet, um die JSON-Inhaltsstruktur zu definieren, die Content Services letztendlich bereitstellt.
+feature: Inhaltsfragmente, APIs
+topic: Kopflos, Content-Management
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 1%
+source-wordcount: '845'
+ht-degree: 2%
 
 ---
 
