@@ -2,15 +2,18 @@
 title: Dynamic Media Classic Hauptarbeitsablauf und Anzeigen einer Asset-Vorschau
 description: Erfahren Sie mehr über den Hauptarbeitsablauf in Dynamic Media Classic, der die drei Schritte "Erstellen"(und "Hochladen"), "Verfassen"(und "Veröffentlichen") und "Bereitstellen"umfasst. Erfahren Sie dann, wie Sie Assets in Dynamic Media Classic Vorschau haben.
 sub-product: dynamic-media
-feature: workflow
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring, architecture, publishing
 audience: all
 activity: use
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2729'
+source-wordcount: '2737'
 ht-degree: 5%
 
 ---
@@ -76,7 +79,7 @@ Wenn Sie ein Bild eines beliebigen Typs in Dynamic Media Classic hochladen, wird
 
 ![image](assets/main-workflow/pyramid-p-tiff.png)
 
-Während der Bildkonvertierung erstellt Dynamic Media Classic einen &quot;Schnappschuss&quot;der Bildgröße, skaliert ihn um die Hälfte und speichert ihn, skaliert ihn erneut um die Hälfte und speichert ihn usw., bis er mit mehreren Originalgrößen gefüllt ist. Ein P-TIFF mit 2000 Pixel hat beispielsweise die Größen 1000, 500, 250 und 125 Pixel (und kleiner) in derselben Datei. Die P-TIFF-Datei ist das Format des so genannten &quot;Übergeordnet image&quot;in Dynamic Media Classic.
+Während der Bildkonvertierung erstellt Dynamic Media Classic einen &quot;Schnappschuss&quot;der vollen Bildgröße, skaliert ihn um die Hälfte und speichert ihn, skaliert ihn erneut um die Hälfte und speichert ihn usw., bis er mit einem Vielfachen der Originalgröße gefüllt ist. Ein P-TIFF mit 2000 Pixel hat beispielsweise die Größen 1000, 500, 250 und 125 Pixel (und kleiner) in derselben Datei. Die P-TIFF-Datei ist das Format des so genannten &quot;Übergeordnet image&quot;in Dynamic Media Classic.
 
 Wenn Sie ein Bild in einer bestimmten Größe anfordern, kann der Image-Server für Dynamic Media Classic beim Erstellen des P-TIFF schnell die nächste größere Größe finden und herunterskalieren. Wenn Sie beispielsweise ein 2000-Pixel-Bild hochladen und ein 100-Pixel-Bild anfordern, findet Dynamic Media Classic die 125-Pixel-Version und skaliert sie auf 100 Pixel, anstatt von 2000 auf 100 Pixel zu skalieren. Das macht die Operation sehr schnell. Wenn ein Bild gezoomt wird, kann der Zoom-Viewer darüber hinaus nur eine Kachel des gezoomten Bilds anfordern und nicht das gesamte Bild mit voller Auflösung. So unterstützt das Übergeordnet-Bildformat, die P-TIFF-Datei, sowohl dynamische Größen- als auch Zoomfunktionen.
 
