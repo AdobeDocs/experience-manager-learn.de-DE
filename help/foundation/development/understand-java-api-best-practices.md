@@ -3,23 +3,26 @@ title: Bewährte Verfahren für Java-API in AEM
 description: AEM basiert auf einem umfangreichen Open-Source-Softwarestapel, der viele Java-APIs zur Verwendung während der Entwicklung bereitstellt. In diesem Artikel werden die wichtigsten APIs untersucht und erläutert, wann und warum sie verwendet werden sollten.
 version: 6.2, 6.3, 6.4, 6.5
 sub-product: Stiftung, Vermögenswerte, Sites
-feature: null
+feature: APIs
 topics: best-practices, development
 activity: develop
 audience: developer
 doc-type: article
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: fcb47ee3878f6a789b2151e283431c4806e12564
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '2023'
-ht-degree: 5%
+source-wordcount: '2027'
+ht-degree: 8%
 
 ---
 
 
 # Best Practices für die Java-API
 
-Adobe Experience Manager (AEM) basiert auf einem umfangreichen Open-Source-Softwarestapel, der viele Java-APIs zur Verwendung während der Entwicklung bereitstellt. In diesem Artikel werden die wichtigsten APIs untersucht und erläutert, wann und warum sie verwendet werden sollten.
+Adobe Experience Manager (AEM) basiert auf umfassender Open-Source-Software-Technologie, über die zahlreiche Java-APIs zur Verwendung während der Entwicklung bereitgestellt werden. In diesem Artikel werden die wichtigsten APIs untersucht und erläutert, wann und warum sie verwendet werden sollten.
 
 AEM basiert auf 4 primären Java-API-Sets.
 
@@ -43,10 +46,10 @@ AEM basiert auf 4 primären Java-API-Sets.
 
 Die allgemeine Regel besteht darin, die APIs/Abstraktionen in der folgenden Reihenfolge vorzuziehen:
 
-1. **AEM**
+1. **AEM-**
 1. **[!DNL Sling]**
 1. **JCR**
-1. **OSGi-**
+1. **OSGi**
 
 Wenn eine API von AEM bereitgestellt wird, bevorzugen Sie sie lieber als [!DNL Sling], JCR und OSGi. Wenn AEM keine API bereitstellt, bevorzugen Sie [!DNL Sling] lieber als JCR und OSGi.
 
@@ -84,7 +87,7 @@ Neue Abstraktionen wie [!DNL Content Fragments] und [!DNL Experience Fragments] 
 
 ### Abfrage-APIs
 
-AEM unterstützt mehrere Abfragen. Die drei Hauptsprachen sind [JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html), XPath und [AEM Abfrage Builder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html).
+AEM unterstützt mehrere Abfragen. Die drei Hauptsprachen sind [JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html), XPath und [AEM Abfrage Builder](https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/querybuilder-api.html).
 
 Das wichtigste Anliegen ist die Beibehaltung einer einheitlichen Abfrage in der gesamten Codebasis, um die Komplexität und die Kosten für das Verständnis zu reduzieren.
 
@@ -93,7 +96,7 @@ Alle Sprachen der Abfrage haben im Grunde dieselben Performance-Profil, da [!DNL
 Die bevorzugte API ist [AEM Abfrage Builder](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html), die höchste Abstraktion, stellt eine robuste API zum Erstellen, Ausführen und Abrufen von Ergebnissen für Abfragen bereit und bietet Folgendes:
 
 * Einfache, parametrisierte Abfrage (Abfrage Params modelliert als Karte)
-* Native [Java-API und HTTP-APIs](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/querybuilder-api.html)
+* Native [Java-API und HTTP-APIs](https://helpx.adobe.com/de/experience-manager/6-3/sites/developing/using/querybuilder-api.html)
 * [OOTB Abfrage Debugger](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-api.html#TestingandDebugging)
 * [OOTB-](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) Prädikaturen, die gemeinsame Anforderungen an die Abfrage erfüllen
 
@@ -198,7 +201,7 @@ Im Folgenden finden Sie allgemeine Ausnahmen von den oben definierten Regeln.
 
 ### Abfrage-APIs
 
-* AEM QueryBuilder unterstützt nicht nur bestimmte Funktionen wie [Abfrage](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions), Rechtschreibprüfung und Indexhinweise. Zur Abfrage mit diesen Funktionen wird JCR-SQL2 bevorzugt.
+* AEM QueryBuilder unterstützt nicht nur bestimmte Funktionen wie [Abfrage](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions), Rechtschreibprüfung und Indexhinweise, sondern auch weniger häufig verwendete Funktionen. Zur Abfrage mit diesen Funktionen wird JCR-SQL2 bevorzugt.
 
 ### [!DNL Sling] Servlet-Registrierung  {#sling-servlet-registration}
 
