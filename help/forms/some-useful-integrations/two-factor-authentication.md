@@ -1,17 +1,20 @@
 ---
 title: SMS-Zwei-Faktor-Authentifizierung
 description: hinzufügen einer zusätzlichen Sicherheitsschicht, um die Identität eines Benutzers zu bestätigen, wenn er bestimmte Aktivitäten durchführen möchte
-feature: integrations
+feature: Adaptive Formulare
 topics: adaptive forms
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 kt: 6317
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: 4c08b09f59be0eb6644aaec729807b92bc339e82
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '608'
 ht-degree: 3%
 
 ---
