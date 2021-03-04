@@ -1,17 +1,20 @@
 ---
 title: Erstellen des ersten OSGi-Bundles mit AEM Formularen
 description: Erstellen Sie das erste OSGi-Bundle mit Maven und Eclipse
-feature: administration
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.4,6.5
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 48060b4d8c4b502e0c099ae8081695f97b423037
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '830'
-ht-degree: 2%
+source-wordcount: '835'
+ht-degree: 3%
 
 ---
 
