@@ -2,17 +2,20 @@
 title: SPA integrieren | Erste Schritte mit dem AEM SPA Editor und React
 description: Verstehen Sie, wie der Quellcode für eine Einzelseitenanwendung (SPA), die in React geschrieben wurde, in ein Adobe Experience Manager (AEM) Projekt integriert werden kann. Erfahren Sie, wie Sie mit modernen Front-End-Werkzeugen wie einem Webpack-Dev-Server die SPA schnell mit der AEM JSON-Modell-API entwickeln.
 sub-product: Sites
-feature: maven-archetype, SPA Editor
+feature: SPA
 topics: development
 version: cloud-service
 activity: develop
 audience: developer
 kt: 4853
 thumbnail: 4853-spa-react.jpg
+topic: SPA
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: ff75a9d10e9d00510e4c49dea0dcc36e68ca46c4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2109'
 ht-degree: 2%
 
 ---
@@ -80,7 +83,7 @@ Weitere Informationen zum Front-End-Build können [hier finden Sie](https://docs
 
 Überprüfen Sie anschließend das `ui.frontend`-Modul, um die SPA zu verstehen, die automatisch vom [AEM Projektarchiv](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-react.html) generiert wurden.
 
-1. Öffnen Sie in der IDE Ihrer Wahl das AEM Projekt für die WKND SPA. In diesem Lernprogramm wird die [Visual Studio-Code-IDE](https://docs.adobe.com/content/help/de/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code) verwendet.
+1. Öffnen Sie in der IDE Ihrer Wahl das AEM Projekt für die WKND SPA. In diesem Lernprogramm wird die [Visual Studio-Code-IDE](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code) verwendet.
 
    ![VSCode - AEM WKND SPA](./assets/integrate-spa/vscode-ide-openproject.png)
 
