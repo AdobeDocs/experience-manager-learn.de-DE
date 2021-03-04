@@ -1,18 +1,21 @@
 ---
 title: Debuggen von Dispatcher-Tools
 description: Die Dispatcher-Tools bieten eine Container-Apache-Webserver-Umgebung, mit der AEM als lokaler Dispatcher des AEM Publish-Dienstes des Cloud Services simuliert werden können. Das Debuggen der Protokolle und Inhalte der Dispatcher-Tools kann entscheidend sein, um sicherzustellen, dass die End-to-End-AEM-Anwendung und die unterstützten Cache- und Sicherheitskonfigurationen korrekt sind.
-feature: dispatcher, aem-sdk
+feature: Dispatcher
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5918
+topic: Entwicklung
+role: Entwickler
+level: Anfänger, Intermediate
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 0%
+source-wordcount: '234'
+ht-degree: 1%
 
 ---
 
