@@ -3,7 +3,7 @@ title: Erstellen einer neuen Seite in AEM Sites
 seo-title: Neue Seite in Adobe Experience Manager Sites erstellen
 description: Im folgenden Video wird das Erstellen einer Siteseite anhand einer Vorlage in Adobe Experience Manager erläutert.
 seo-description: Im folgenden Video wird das Erstellen einer Siteseite anhand einer Vorlage in Adobe Experience Manager erläutert.
-feature: page-editor, template-editor
+feature: Seiten-Editor, bearbeitbare Vorlagen
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,11 +11,14 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4244
 thumbnail: 31827.jpg
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '68'
-ht-degree: 0%
+source-wordcount: '77'
+ht-degree: 2%
 
 ---
 
