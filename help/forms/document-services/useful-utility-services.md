@@ -1,17 +1,20 @@
 ---
 title: Nützliche Dienstprogramme
 description: Einige nützliche Dienstprogramme für AEM Forms-Entwickler
-feature: document-services
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: Entwicklung
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 243e26e2403e3d7816a0dd024ffbe73743827c7c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 5%
+source-wordcount: '160'
+ht-degree: 8%
 
 ---
 
