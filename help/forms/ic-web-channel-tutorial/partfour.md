@@ -4,18 +4,21 @@ seo-title: Erstellen einer Web Kanal Dokument-Vorlage AEM Forms
 description: Dies ist Teil 4 des mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil erstellen wir eine Vorlage für Web-Kanal-Dokument.
 seo-description: Dies ist Teil 4 des mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil erstellen wir eine Vorlage für Web-Kanal-Dokument.
 uuid: b4c9f68b-3091-4f87-988d-705f0296a8d8
-feature: interactive-communication
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 95ca401b-69ea-49e2-a9ae-e144444e481e
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 0%
+source-wordcount: '156'
+ht-degree: 2%
 
 ---
 
