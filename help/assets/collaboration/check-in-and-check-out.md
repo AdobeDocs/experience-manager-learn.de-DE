@@ -2,19 +2,18 @@
 title: Ein- und Auschecken
 description: Erfahren Sie, wie Sie AEM Funktionen zum Ein- und Auschecken verwenden können, um die Zusammenarbeit mit mehreren Benutzern bei Assets zu erleichtern.
 sub-product: Assets
-feature: null
-topics: authoring, collaboration
-audience: author
-doc-type: feature video
-activity: use
+feature: Asset-Verwaltung
 version: cloud-service
 kt: 4542
 thumbnail: 32048.jpg
+topic: Zusammenarbeit
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 2%
+source-wordcount: '51'
+ht-degree: 3%
 
 ---
 
