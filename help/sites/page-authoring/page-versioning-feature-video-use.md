@@ -1,7 +1,6 @@
 ---
 title: Erstellen von Seitenversionen für AEM Site-Seiten
 description: Im folgenden Video wird das Erstellen einer Seitenversion, einer Vorschau, des Wiederherstellens einer Seitenversion und des Vergleichs der aktuellen Seitenversion mit einer gespeicherten Seitenversion erläutert.
-feature: page-diff
 topics: authoring
 audience: author, marketer
 doc-type: feature video
@@ -9,11 +8,14 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4630
 thumbnail: 32151.jpg
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '143'
-ht-degree: 0%
+source-wordcount: '148'
+ht-degree: 1%
 
 ---
 
