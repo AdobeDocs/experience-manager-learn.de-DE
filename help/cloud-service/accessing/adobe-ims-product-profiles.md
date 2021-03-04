@@ -1,19 +1,17 @@
 ---
 title: Adobe IMS-Profil und AEM
 description: Adobe-IMS-Profil gestatten es Benutzern, sich bei einem AEM Author-Dienst anzumelden und eine Grundeinstellung für den Zugriff bereitzustellen, je nachdem, welchem Produkt-Profil sie angehören.
-feature: users-and-groups
-topics: authorization, permissions
-version: cloud-service
-activity: setup
-audience: administrator
-doc-type: feature video
+feature: 'Benutzer und Gruppen '
 kt: 5000
 thumbnail: 39156.jpg
+topic: Administration, Sicherheit
+role: 'Administrator  '
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: f30d15f0578b7e529e4acefb8e1d2e29157ab359
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 6%
+source-wordcount: '155'
+ht-degree: 9%
 
 ---
 
