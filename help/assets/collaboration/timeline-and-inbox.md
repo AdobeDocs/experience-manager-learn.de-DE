@@ -2,19 +2,18 @@
 title: Zeitschiene und Posteingang
 description: Machen Sie sich mit den wichtigsten Webkonsolen in AEM Assets vertraut, die für die Zusammenarbeit verwendet werden.
 sub-product: Assets
-feature: inbox
-topics: authoring, collaboration
-audience: author
-doc-type: feature video
-activity: use
+feature: Workflow
 version: cloud-service
 kt: 4540
 thumbnail: 32051.jpg
+topic: Zusammenarbeit
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '37'
-ht-degree: 2%
+source-wordcount: '42'
+ht-degree: 7%
 
 ---
 
