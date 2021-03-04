@@ -3,7 +3,7 @@ title: Erstellen Sie wiederverwendbare AEM Forms Workflow-Modelle.
 seo-title: Erstellen Sie wiederverwendbare AEM Forms Workflow-Modelle.
 description: Workflow-Modelle unabhängig von Adaptive Forms.
 seo-description: Workflow-Modelle unabhängig von Adaptive Forms.
-feature:  Workflow
+feature: Workflow
 topics: development
 audience: developer
 doc-type: article
@@ -11,11 +11,14 @@ activity: setup
 version: 6.5
 uuid: 3a082743-3e56-42f4-a44b-24fa34165926
 discoiquuid: 9f18c314-39d1-4c82-b1bc-d905ea472451
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 0%
+source-wordcount: '294'
+ht-degree: 1%
 
 ---
 
