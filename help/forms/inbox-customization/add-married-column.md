@@ -1,18 +1,21 @@
 ---
 title: Anpassung des Postfachs
 description: hinzufügen benutzerdefinierter Spalten zur Anzeige zusätzlicher Daten des Workflows
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: ecbd4d21c5f41b2bc6db3b409767b767f00cc5d1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 7%
+source-wordcount: '311'
+ht-degree: 8%
 
 ---
 
@@ -88,7 +91,7 @@ return isMarried(inboxItem);
 * [Importieren Sie das Beispielformular, ](assets/snap-form.zip) indem Sie im Menü &quot; _Erstellen&quot;die Option_ &quot;Datei  __ hochladen&quot;wählen
 * [Nutzen Sie die Funktion zur Formularvorschau.](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
 * Wählen Sie _Familienstand_ und senden Sie das Formular
-   [ansicht-Posteingang](http://localhost:4502/aem/inbox)
+   [Ansicht-Posteingang](http://localhost:4502/aem/inbox)
 
 Beim Senden des Formulars wird der Arbeitsablauf Trigger und dem Benutzer &quot;admin&quot;wird eine Aufgabe zugewiesen. Sie sollten einen Wert unter der Spalte Verheiratet sehen, wie in diesem Screenshot dargestellt
 
