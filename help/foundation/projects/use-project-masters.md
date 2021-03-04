@@ -1,18 +1,22 @@
 ---
 title: Verwendung von Projektmeistern in AEM
 description: Projektmanager vereinfachen die Benutzer- und Teamverwaltung mit AEM Projekten erheblich.
-version: 6.4, 6.5, cloud-service
-topic: Content Management
-feature: Projekte
-level: Zwischenschaltung
+version: 6.4, 6.5, Cloud Service
+feature: Projekte, Benutzer und Gruppen
+topics: administration, collaboration, performance
+activity: use
+audience: administrator, implementer, architect
+doc-type: article
+topic: Zusammenarbeit
 role: Geschäftspraktiker
+level: Anfänger
 kt: 256
 thumbnail: 17740.jpg
 translation-type: tm+mt
-source-git-commit: 2d38baad8e8351d9debbef758050b9b63d860fe9
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 1%
+source-wordcount: '376'
+ht-degree: 0%
 
 ---
 
