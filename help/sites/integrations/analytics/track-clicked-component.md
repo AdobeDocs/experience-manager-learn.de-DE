@@ -1,7 +1,7 @@
 ---
 title: Klickende Komponente mit Adobe Analytics verfolgen
 description: Verwenden Sie die Ereignis-gesteuerte Adobe Client Data-Ebene, um Klicks auf bestimmte Komponenten auf einer Adobe Experience Manager-Site zu verfolgen. Erfahren Sie, wie Sie in Experience Platform Launch Regeln verwenden, um auf diese Ereignis zu hören und Daten mit einem Tracking-Link-Beacon an ein Adobe Analytics zu senden.
-feature: analytics
+feature: Analyse
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: setup
 version: cloud-service
 kt: 6296
 thumbnail: KT-6296.jpg
+topic: Integrationen
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 64c167ec1d625fdd8be1bc56f7f5e59460b8fed3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1835'
 ht-degree: 5%
 
 ---
@@ -252,7 +255,7 @@ Derzeit gibt die Regel **CTA, auf die geklickt wurde** eine Konsolenanweisung au
    * `prop8` -  `%Component ID%`
    * `event8`
 
-   ![EVar-Prop und Ereignis festlegen](assets/track-clicked-component/set-evar-prop-event.png)
+   ![eVar-Prop und Ereignis festlegen](assets/track-clicked-component/set-evar-prop-event.png)
 
    >[!NOTE]
    >
