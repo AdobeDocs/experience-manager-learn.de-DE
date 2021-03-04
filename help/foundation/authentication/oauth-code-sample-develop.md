@@ -2,16 +2,19 @@
 title: Entwicklung von OAuth-Bereichen in AEM
 description: Die erweiterbaren OAuth Scopes von Adobe Experience Manager ermöglichen die Zugriffskontrolle von Ressourcen aus einer Clientanwendung, die von einem Endbenutzer autorisiert wurde. Das unten stehende Diagramm zeigt den Anforderungsfluss im Kontext von AEM.
 version: 6.3, 6.4, 6.5
-feature: Authentifizierung
+feature: 'Benutzer und Gruppen '
 topics: authentication, security
 activity: develop
 audience: developer
 doc-type: code
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 1%
+source-wordcount: '185'
+ht-degree: 3%
 
 ---
 
