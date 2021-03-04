@@ -1,7 +1,7 @@
 ---
 title: Erstellen Sie das erste Formular, um den Prozess Trigger.
 description: Erstellen Sie ein erstes Formular, um die E-Mail-Benachrichtigung an den Beginn des Signiervorgangs Trigger.
-feature: Adaptive Formulare
+feature: adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,14 +9,11 @@ activity: implement
 version: 6.4,6.5
 kt: 6892
 thumbnail: 6892.jpg
-topic: Entwicklung
-role: Geschäftspraktiker
-level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 13%
+source-wordcount: '169'
+ht-degree: 11%
 
 ---
 
@@ -38,7 +35,7 @@ Das anfängliche Formular (Refinanzierung des Formulars) wird zum Signieren mehr
 
 
 Das anfängliche Formular muss so konfiguriert werden, dass ein AEM Arbeitsablauf namens **signmultipleforms** Trigger wird
-Stellen Sie sicher, dass der Datendateipfad auf **Data.xml** eingestellt ist. Dies ist sehr wichtig, da der Beispielcode nach einer Datei namens &quot;Data.xml&quot;in der Payload sucht, während der Prozess der Formularübermittlung gesendet wird.
+Stellen Sie sicher, dass der Datendateipfad auf **Data.xml** eingestellt ist. Dies ist sehr wichtig, da der Beispielcode nach einer Datei namens &quot;Data.xml&quot;in der Nutzlast des Prozesses der Formularübermittlung sucht.
 
 ## Assets
 
