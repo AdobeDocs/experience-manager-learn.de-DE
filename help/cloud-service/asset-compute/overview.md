@@ -1,7 +1,7 @@
 ---
 title: asset compute microservices-Erweiterbarkeit für AEM als Cloud Service
 description: Dieses Lernprogramm führt Sie durch die Erstellung eines einfachen Asset compute-Workers, der eine Asset-Darstellung erstellt, indem das ursprüngliche Asset auf einen Kreis zugeschnitten und konfigurierbare Kontrast- und Helligkeitseinstellungen angewendet werden. Obwohl der Mitarbeiter selbst ein Grundelement ist, verwendet dieses Lernprogramm es, um die Erstellung, Entwicklung und Bereitstellung eines benutzerdefinierten Asset compute-Workers für die Verwendung mit AEM als Cloud Service zu untersuchen.
-feature: asset-compute
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
+topic: Integrationen, Entwicklung
+role: Entwickler
+level: Vermittelt, erfahren
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1036'
 ht-degree: 3%
 
 ---
@@ -72,7 +75,7 @@ asset compute-Projekte, die einen oder mehrere Asset compute-Mitarbeiter enthalt
 
 ### Umgebungsvariablen konfigurieren
 
-Die Variablen &quot;Umgebung&quot;werden in der Datei `.env` für die lokale Entwicklung beibehalten und dienen zur Bereitstellung von Adobe I/O-Anmeldeinformationen und Cloud-Datenspeicherung-Anmeldeinformationen, die für die lokale Entwicklung erforderlich sind.
+Die Variablen &quot;Umgebung&quot;werden in der Datei `.env` für die lokale Entwicklung beibehalten und dienen zur Bereitstellung der Anmeldeinformationen für die Adobe I/O und die Cloud-Datenspeicherung, die für die lokale Entwicklung erforderlich sind.
 
 + [Umgebung konfigurieren](./develop/environment-variables.md)
 
