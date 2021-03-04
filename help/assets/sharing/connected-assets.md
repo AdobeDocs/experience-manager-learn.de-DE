@@ -1,18 +1,16 @@
 ---
 title: Verwenden von verbundenen Assets mit AEM Sites
 description: Die Funktion "Verbundene Assets"ermöglicht es einem AEM Sites-Autor, digitale Assets, die auf einer anderen Instanz von AEM gehostet werden, nahtlos freizugeben.
-feature: connected-assets
-topics: authoring, operations, sharing, publishing
-audience: all
-doc-type: feature video
-activity: use
+feature: Connected Assets
 version: 6.5
-redirect-from: https://docs.adobe.com
+topic: Content Management
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '103'
-ht-degree: 0%
+source-wordcount: '109'
+ht-degree: 4%
 
 ---
 
