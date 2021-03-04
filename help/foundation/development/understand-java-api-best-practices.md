@@ -3,18 +3,15 @@ title: Bewährte Verfahren für Java-API in AEM
 description: AEM basiert auf einem umfangreichen Open-Source-Softwarestapel, der viele Java-APIs zur Verwendung während der Entwicklung bereitstellt. In diesem Artikel werden die wichtigsten APIs untersucht und erläutert, wann und warum sie verwendet werden sollten.
 version: 6.2, 6.3, 6.4, 6.5
 sub-product: Stiftung, Vermögenswerte, Sites
-feature: APIs
+feature: null
 topics: best-practices, development
 activity: develop
 audience: developer
 doc-type: article
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2023'
 ht-degree: 8%
 
 ---
