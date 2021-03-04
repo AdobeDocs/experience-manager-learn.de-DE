@@ -1,20 +1,17 @@
 ---
 title: Erstellen einer Vorlage für ein adaptives Formular
 description: Die Vorlage definiert die Struktur und den anfänglichen Inhalt des adaptiven Formulars.
-feature: Adaptive Formulare
+feature: adaptive Formulare
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 thumbnail: 37324.jpg
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 6%
+source-wordcount: '134'
+ht-degree: 3%
 
 ---
 
