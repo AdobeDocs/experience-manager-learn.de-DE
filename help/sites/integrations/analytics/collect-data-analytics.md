@@ -1,7 +1,7 @@
 ---
 title: Seitendaten mit Adobe Analytics erfassen
 description: Verwenden Sie die Ereignis-basierte Adobe Client Data-Ebene, um Daten zur Aktivität von Benutzern auf einer mit Adobe Experience Manager erstellten Website zu erfassen. Erfahren Sie, wie Sie in Experience Platform Launch Regeln verwenden, um auf diese Ereignis zu hören und Daten an eine Adobe Analytics Report Suite zu senden.
-feature: analytics
+feature: Analyse
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: setup
 version: cloud-service
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
+topic: Integrationen
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 64c167ec1d625fdd8be1bc56f7f5e59460b8fed3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2415'
+source-wordcount: '2419'
 ht-degree: 5%
 
 ---
@@ -92,7 +95,7 @@ Das [WKND-Referenzprojekt](https://github.com/adobe/aem-guides-wknd) wurde mit A
    ```json
    page-2eee4f8914:
        @type: "wknd/components/page"
-       dc:description: "WKND is a collective of outdoors, music, crafts, adventure sports, and travel enthusiasts that want to share our experiences, connections, and expertise with the world."
+       dc:description: WKND is a collective of outdoors, music, crafts, adventure sports, and travel enthusiasts that want to share our experiences, connections, and expertise with the world.
        dc:title: "WKND Adventures and Travel"
        repo:modifyDate: "2020-08-31T21:02:21Z"
        repo:path: "/content/wknd/us/en.html"
@@ -283,7 +286,7 @@ Fügen Sie dann der Eigenschaft &quot;Start&quot;die Analytics-Erweiterung hinzu
 
 ## hinzufügen einer Bedingung für die Regel &quot;Seite geladen&quot;
 
-Aktualisieren Sie anschließend die Regel **Seitenladevorgang**, um das Datenelement **Komponentenressource-Typ** zu verwenden, um sicherzustellen, dass die Regel nur ausgelöst wird, wenn das `cmp:show`-Ereignis für **page** gilt. Andere Komponenten können das Ereignis `cmp:show` auslösen, z. B. wird es von der Karussell-Komponente ausgelöst, wenn sich die Folien ändern. Daher ist es wichtig, eine Bedingung für diese Regel hinzuzufügen.
+Aktualisieren Sie anschließend die Regel **Seitenladevorgang**, um das Datenelement **Komponentenressource-Typ** zu verwenden, um sicherzustellen, dass die Regel nur ausgelöst wird, wenn das `cmp:show`-Ereignis für **Seite** gilt. Andere Komponenten können das Ereignis `cmp:show` auslösen, z. B. wird es von der Karussell-Komponente ausgelöst, wenn sich die Folien ändern. Daher ist es wichtig, eine Bedingung für diese Regel hinzuzufügen.
 
 1. Navigieren Sie in der Benutzeroberfläche &quot;Start&quot;zur zuvor erstellten Regel **Seite geladen**.
 1. Klicken Sie unter **Conditions** auf **Hinzufügen**, um den Assistenten **Bedingungskonfiguration** zu öffnen.
@@ -312,7 +315,7 @@ Derzeit gibt die Regel **Seite geladen** einfach eine Konsolenanweisung aus. Ver
 
    ![Aktionserweiterung auf Analytics-Set-Variablen festlegen](assets/collect-data-analytics/analytics-set-variables-action.png)
 
-1. Wählen Sie im Hauptbereich eine verfügbare **eVar** und legen Sie als Wert des Datenelements **Seitenvorlage** fest. Verwenden Sie das Symbol Datenelemente ![Datenelement](assets/collect-data-analytics/cylinder-icon.png), um das Element **Seitenvorlage** auszuwählen.
+1. Wählen Sie im Hauptbereich eine verfügbare **eVar** und legen Sie als Wert des Datenelements **Seitenvorlage** fest. Verwenden Sie das Symbol für Datenelemente ![Datenelement](assets/collect-data-analytics/cylinder-icon.png), um das Element **Seitenvorlage** auszuwählen.
 
    ![Als eVar-Seitenvorlage festlegen](assets/collect-data-analytics/set-evar-page-template.png)
 
