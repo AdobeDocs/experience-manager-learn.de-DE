@@ -2,18 +2,17 @@
 title: Dateien und Sammlungen
 description: Erfahren Sie, wie Sie schnell und einfach über das Bedienfeld "Asset-Link"auf AEM Assets-Dateien und -Sammlungen zugreifen können.
 sub-product: Assets
-feature: adobe-asset-link
-topics: authoring, collaboration, operations, sharing, metadata, images
-audience: all
-doc-type: feature video
-activity: use
-version: null
+feature: Adobe Asset Link
+version: 6.4, 6.5, cloud-service
 thumbnail: 33884.jpg
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 2%
+source-wordcount: '51'
+ht-degree: 11%
 
 ---
 
