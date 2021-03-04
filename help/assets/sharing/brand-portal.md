@@ -1,20 +1,16 @@
 ---
 title: Verwenden des Markenportals
-seo-title: Verwenden des Markenportals mit AEM Assets
 description: Video-Durchläufe der Integration von AEM Author und AEM Assets Brand Portal.
-seo-description: Video-Durchläufe der Integration von AEM Author und AEM Assets Brand Portal.
-feature: brand-portal
-topics: authoring, sharing, collaboration, search, integrations, publishing, metadata, images, renditions, administration
-audience: all
-doc-type: feature video
-activity: use
+feature: Brand Portal
 version: 6.3, 6.4, 6.5
-team: tm
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1788'
-ht-degree: 46%
+source-wordcount: '1777'
+ht-degree: 47%
 
 ---
 
@@ -70,7 +66,7 @@ Auch gilt Folgendes:
 * \*Klettern gibt alle Assets zurück, deren Wörter mit Zeichen enden, die in ihrem Titel klettern.
 * \*kletb\* gibt alle Assets zurück, deren Wörter aus den Zeichen bestehen, die in ihrem Titelwort klettern.
 
-#### Aktivieren der Ordnerhierarchie    
+#### Aktivieren der Ordnerhierarchie
 
 Administratoren können jetzt konfigurieren, wie Ordner für Benutzer ohne Administratorrechte (Bearbeiter, Betrachter und Gastbenutzer) bei der Anmeldung angezeigt werden.
 Die Konfiguration [Ordnerhierarchie aktivieren](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) wird in den Allgemeinen Einstellungen im Admin Tools-Bereich hinzugefügt. Wenn die Konfiguration:
@@ -98,7 +94,7 @@ Vorschau der Dynamic Media-Videos ist möglich auf/in:
 
 Dynamic Media-Videokodierungen können heruntergeladen werden über:
 
-* Brand Portal
+* Markenportal
 * Freigegebenen Link
 
 ### Geplante Veröffentlichung in Brand Portal
@@ -161,7 +157,7 @@ Es wurden sechs neue Konfigurationen hinzugefügt, damit Administratoren folgend
 
 ### Adobe I/O Hosts-Benutzeroberfläche zum Konfigurieren von Auth-Integrationen
 
-Brand Portal verwendet Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)-Schnittstelle, um eine JWT-Anwendung zu erstellen, die die Konfiguration von Auth-Integrationen ermöglicht, um die AEM Assets-Integration mit dem Markenportal zu ermöglichen. Zuvor wurde die Benutzeroberfläche zum Konfigurieren von OAuth-Integrationen unter `https://marketing.adobe.com/developer/` gehostet. Weitere Informationen zur Integration von AEM Assets mit Brand Portal, um Assets und Sammlungen in Brand Portal zu veröffentlichen, finden Sie unter [Konfigurieren der Integration von AEM Assets mit Brand Portal](https://helpx.adobe.com/de/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
+Brand Portal verwendet die Benutzeroberfläche [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/) zur Erstellung einer JWT-Anwendung, mit der Auth-Integrationen konfiguriert werden können, um die AEM Assets-Integration in das Markenportal zu ermöglichen. Zuvor wurde die Benutzeroberfläche zum Konfigurieren von OAuth-Integrationen unter `https://marketing.adobe.com/developer/` gehostet. Weitere Informationen zur Integration von AEM Assets mit Brand Portal, um Assets und Sammlungen in Brand Portal zu veröffentlichen, finden Sie unter [Konfigurieren der Integration von AEM Assets mit Brand Portal](https://helpx.adobe.com/de/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
 
 ## Markenportal Februar 2018 - Funktionen und Verbesserungen{#brand-portal-features-and-enhancements-632}
 
