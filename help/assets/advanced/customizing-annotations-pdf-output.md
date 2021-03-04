@@ -1,18 +1,16 @@
 ---
 title: Anpassen von Anmerkungen in AEM Assets
-seo-title: Anpassen von Anmerkungen in AEM Assets
 description: Format und Stil von AEM Assets bei der Ausgabe in PDF können von AEM Entwicklern konfiguriert werden.
-feature: asset-share
-topics: authoring, collaboration, operations, sharing
-audience: developer
-doc-type: feature video
-activity: developer
+feature: Zusammenarbeit
 version: 6.3, 6.4, 6.5
+topic: Zusammenarbeit
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 0%
+source-wordcount: '64'
+ht-degree: 4%
 
 ---
 
