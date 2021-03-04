@@ -1,16 +1,14 @@
 ---
 title: 'InDesign von Dateien und Asset-Vorlagen in AEM Assets '
 description: Diese Videoschulung erläutert die Definition einer InDesign-Datei und alle zugehörigen Überlegungen zur Verwendung in der Asset-Vorlagenfunktion von AEM Assets.
-feature: catalogs, asset-templates
-topics: authoring, renditions, documents
-audience: all
-doc-type: tutorial
-activity: understand
 version: 6.3, 6.4, 6.5
+topic: Content Management
+role: Geschäftspraktiker
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '488'
 ht-degree: 1%
 
 ---
