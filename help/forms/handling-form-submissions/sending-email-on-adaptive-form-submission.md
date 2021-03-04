@@ -4,17 +4,20 @@ seo-title: Senden von E-Mails beim Senden von adaptiven Formularen
 description: Senden von Bestätigungs-E-Mail beim Senden des adaptiven Formulars mit der Komponente "E-Mail senden"
 seo-description: Senden von Bestätigungs-E-Mail beim Senden des adaptiven Formulars mit der Komponente "E-Mail senden"
 uuid: 6c9549ba-cb56-4d69-902c-45272a8fd17e
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: authoring, integrations
 audience: developer
 doc-type: article
 activity: use
 discoiquuid: 1187357f-2f36-4a04-b708-44bb9c174fb5
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 272e43ee4aeb756a3a1fd0ce55eaca94a9553fa4
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '232'
-ht-degree: 2%
+source-wordcount: '237'
+ht-degree: 3%
 
 ---
 
