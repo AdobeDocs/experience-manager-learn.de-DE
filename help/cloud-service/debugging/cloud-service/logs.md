@@ -1,7 +1,7 @@
 ---
 title: Protokolle
 description: Protokolle fungieren als Frontline für das Debugging AEM Anwendungen in AEM als Cloud Service, sind jedoch von einer angemessenen Anmeldung in der bereitgestellten AEM abhängig.
-feature: null
+feature: Entwicklertools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 5432
 thumbnail: kt-5432.jpg
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7fd232d6821f91c342dd04fcdd04b9b505cb7250
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '995'
 ht-degree: 3%
 
 ---
@@ -43,19 +46,19 @@ Sowohl AEM Author- als auch AEM Publishing-Dienste stellen AEM Laufzeitserverpro
    + Entwicklung: `DEBUG`
    + Staging: `WARN`
    + Produktion: `ERROR`
-+ `aemaccess` liste von HTTP-Anforderungen an den AEM-Dienst mit Details
-+ `aemrequest` listen HTTP-Anfragen an AEM Dienst und die zugehörige HTTP-Antwort
++ `aemaccess` Liste von HTTP-Anforderungen an den AEM-Dienst mit Details
++ `aemrequest` Listen HTTP-Anfragen an AEM Dienst und die zugehörige HTTP-Antwort
 
 ## AEM Publishing Dispatcher-Protokolle
 
 Nur AEM Publish Dispatcher stellt Apache-Webserver- und Dispatcher-Protokolle bereit, da diese Aspekte nur auf der AEM Publish-Ebene und nicht auf der AEM Author-Ebene vorhanden sind.
 
-+ `httpdaccess` listen HTTP-Anfragen, die an den Apache-Webserver/Dispatcher des AEM-Dienstes gesendet wurden.
-+ `httperror`  listen protokollieren Meldungen vom Apache-Webserver und unterstützen beim Debugging unterstützter Apache-Module wie  `mod_rewrite`.
++ `httpdaccess` Listen HTTP-Anfragen, die an den Apache-Webserver/Dispatcher des AEM-Dienstes gesendet wurden.
++ `httperror`  Listen protokollieren Meldungen vom Apache-Webserver und unterstützen beim Debugging unterstützter Apache-Module wie  `mod_rewrite`.
    + Entwicklung: `DEBUG`
    + Staging: `WARN`
    + Produktion: `ERROR`
-+ `aemdispatcher` listen protokollieren Meldungen aus den Dispatcher-Modulen, einschließlich Filtern und Versenden von Cache-Nachrichten.
++ `aemdispatcher` Listen protokollieren Meldungen aus den Dispatcher-Modulen, einschließlich Filtern und Versenden von Cache-Nachrichten.
    + Entwicklung: `DEBUG`
    + Staging: `WARN`
    + Produktion: `ERROR`
@@ -68,11 +71,11 @@ Adobe Cloud Manager ermöglicht das tägliche Herunterladen von Protokollen übe
 
 Diese Protokolle können über beliebige Tools zur Analyse von Protokolldateien heruntergeladen und geprüft werden.
 
-## Adobe I/O CLI mit Cloud Manager-Plugin{#aio}
+## Adobe I/O-CLI mit Cloud Manager-Plugin{#aio}
 
-Adobe Cloud Manager unterstützt den Zugriff auf AEM als Cloud Service-Login über die [Adobe I/O CLI](https://github.com/adobe/aio-cli) mit dem [Cloud Manager-Plugin für die Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager).
+Adobe Cloud Manager unterstützt den Zugriff auf AEM als Cloud Service-Login über die [Adobe I/O-CLI](https://github.com/adobe/aio-cli) mit dem [Cloud Manager-Plugin für die Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
-Zunächst [richten Sie das Adobe I/O mit dem Cloud Manager-Plugin](../../local-development-environment/development-tools.md#aio-cli) ein.
+Zunächst [richten Sie die Adobe I/O mit dem Cloud Manager-Plugin](../../local-development-environment/development-tools.md#aio-cli) ein.
 
 Vergewissern Sie sich, dass die entsprechende Programm-ID und Umgebung-ID identifiziert wurden, und verwenden Sie [Liste-available-log-options](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerlist-available-log-options-environmentid), um die Protokolloptionen für [tail](#aio-cli-tail-logs)- oder [download](#aio-cli-download-logs)-Protokolle Liste.
 
@@ -106,7 +109,7 @@ Environment Id Service    Name
 
 ### Verfolgen von Protokollen{#aio-cli-tail-logs}
 
-Die Adobe I/O CLI bietet die Möglichkeit, Protokolle in Echtzeit von AEM als Cloud Service mit dem Befehl [tail-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name) einzustellen. Tailing ist hilfreich, um die Echtzeit-Protokollfunktion zu überwachen, wenn Aktionen auf dem AEM als Cloud Service-Umgebung ausgeführt werden.
+Adobe I/O CLI bietet die Möglichkeit, Protokolle in Echtzeit von AEM als Cloud Service mit dem Befehl [tail-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name) zu verlängern. Tailing ist hilfreich, um die Echtzeit-Protokollfunktion zu überwachen, wenn Aktionen auf dem AEM als Cloud Service-Umgebung ausgeführt werden.
 
 ```
 $ aio config:set cloudmanager_programid <PROGRAM ID>
@@ -173,7 +176,7 @@ Die für jeden Umgebung-Typ am besten geeignete Protokollierungsstufe wird mit A
 
 ### Umgebung-spezifische Variablen zum Festlegen der Java-Protokollebene
 
-Eine Alternative zum Einstellen der statischen und bekannten Java-Protokollierungsstufen für jede Umgebung besteht darin, AEM als Cloud Service [Umgebung spezifische Variablen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values) zu verwenden, um die Protokollierungsstufen zu parametrisieren, sodass die Werte dynamisch über die [Adobe I/O CLI mit Cloud Manager-Plugin](#aio-cli) geändert werden können.
+Eine Alternative zum Einstellen der statischen und bekannten Java-Protokollierungsstufen für jede Umgebung besteht darin, AEM als Cloud Service [Umgebung spezifische Variablen](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values) zu verwenden, um die Protokollierungsstufen zu parametrisieren, sodass die Werte dynamisch über die [Adobe I/O-CLI mit Cloud Manager-Plugin](#aio-cli) geändert werden können.
 
 Dazu müssen die OSGi-Konfigurationen für die Protokollierung aktualisiert werden, um die Platzhalter für die spezifischen Variablen der Umgebung zu verwenden. [Standardwerte ](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values) für Protokollebenen sollten gemäß den Empfehlungen der  [Adobe](#log-levels) festgelegt werden. Beispiel:
 
@@ -189,7 +192,7 @@ Dazu müssen die OSGi-Konfigurationen für die Protokollierung aktualisiert werd
 Dieser Ansatz hat Nachteile, die berücksichtigt werden müssen:
 
 + [Eine begrenzte Anzahl von Umgebung ist zulässig](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#number-of-variables), und beim Erstellen einer Variablen zur Verwaltung der Protokollebene wird eine Variable verwendet.
-+ Umgebung-Variablen können nur programmgesteuert über [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) oder [Cloud Manager HTTP-APIs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#cloud-manager-api-format-for-setting-properties) verwaltet werden.
++ Umgebung können nur programmgesteuert über die CLI[Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) oder [Cloud Manager HTTP-APIs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#cloud-manager-api-format-for-setting-properties) verwaltet werden.
 + Änderungen an Umgebung-Variablen müssen von einem unterstützten Tool manuell zurückgesetzt werden. Wenn Sie vergessen haben, eine Umgebung mit hohem Traffic, wie z. B. &quot;Produktion&quot;, auf eine weniger ausführliche Protokollierungsstufe zurückzusetzen, werden die Protokolle möglicherweise überschwemmt und AEM Leistung beeinträchtigt.
 
 _Umgebung-spezifische Variablen funktionieren nicht für Apache-Webserver- oder Dispatcher-Protokollkonfigurationen, da diese nicht über OSGi konfiguriert werden._
