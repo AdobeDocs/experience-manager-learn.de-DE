@@ -2,17 +2,20 @@
 title: Zuordnen SPA Komponenten zu AEM Komponenten | Erste Schritte mit dem AEM SPA Editor und React
 description: Erfahren Sie, wie Sie React-Komponenten mit dem AEM SPA Editor JS SDK Adobe Experience Manager (AEM) Komponenten zuordnen. Mithilfe der Komponentenzuordnung können Benutzer im AEM SPA Editor dynamische Aktualisierungen an SPA Komponenten vornehmen, ähnlich wie beim herkömmlichen AEM Authoring.
 sub-product: Sites
-feature: maven-archetype, SPA Editor
+feature: SPA
 topics: development
 version: cloud-service
 activity: develop
 audience: developer
 kt: 4854
 thumbnail: 4854-spa-react.jpg
+topic: SPA
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 52748ff530e98c4ec21b84250bd73543899db4e4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2259'
+source-wordcount: '2264'
 ht-degree: 2%
 
 ---
@@ -182,7 +185,7 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
 ## Erstellen der Bildkomponente
 
-Erstellen Sie anschließend eine Remact-Komponente, die der AEM [Image-Komponente](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/image.html) zugeordnet ist. `Image` Die Komponente `Image` ist ein weiteres Beispiel für eine Komponente **content**.
+Erstellen Sie anschließend eine Remact-Komponente, die der AEM [Image-Komponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/image.html) zugeordnet ist. `Image` Die Komponente `Image` ist ein weiteres Beispiel für eine Komponente **content**.
 
 ### Inspect the JSON
 
@@ -438,7 +441,7 @@ Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-gu
 
 In vielen Fällen, besonders zu Beginn eines AEM Projekts, ist es nützlich, Konfigurationen wie Vorlagen und zugehörige Inhaltsrichtlinien zur Quellcodeverwaltung beizubehalten. Dadurch wird sichergestellt, dass alle Entwickler mit demselben Inhaltssatz und denselben Konfigurationen arbeiten und zusätzliche Konsistenz zwischen den Umgebung sicherstellen. Sobald ein Projekt eine gewisse Reife erreicht hat, kann die Verwaltung von Vorlagen einer speziellen Gruppe von Stromverbrauchern überlassen werden.
 
-Die nächsten Schritte werden mit der Code-IDE von Visual Studio und [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) durchgeführt. Sie können jedoch jedes Tool und jede IDE verwenden, die Sie für **ull**- oder **import**-Inhalte aus einer lokalen Instanz von AEM konfiguriert haben.
+Die nächsten Schritte werden mit der Code-IDE von Visual Studio und [VSCode AEM Synchronisierung](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) durchgeführt. Sie können jedoch ein beliebiges Tool und jede IDE verwenden, die Sie für **ull**- oder **import**-Inhalte aus einer lokalen Instanz von AEM konfiguriert haben.
 
 1. Stellen Sie in der Code-IDE von Visual Studio sicher, dass **VSCode AEM Sync** über die Marketplace-Erweiterung installiert ist:
 
