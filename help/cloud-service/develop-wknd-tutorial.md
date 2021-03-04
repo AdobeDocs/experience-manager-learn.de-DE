@@ -5,18 +5,22 @@ description: Steigen Sie gerade in die Entwicklung mit AEM ein? Benötigen Sie e
 seo-description: Steigen Sie gerade in die Entwicklung mit AEM ein? Benötigen Sie einen Auffrischungskurs zu Best Practices? Dann sind Sie hier richtig! In diesem mehrteiligen Tutorial lernen Entwickler, die gerade mit AEM beginnen, wie sie eine Website in AEM mit den neuesten Standards und Technologien implementieren.
 content-type: reference
 topic-tags: introduction
+feature: AEM Projektarchiv, Hauptkomponenten, Seiten-Editor, bearbeitbare Vorlagen
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 58%
+source-wordcount: '366'
+ht-degree: 57%
 
 ---
 
 
-# Erste Schritte bei der Entwicklung von AEM Sites – WKND-Tutorial{#getting-started-developing-aem-sites-wknd-tutorial}
+# Erste Schritte bei der Entwicklung von AEM Sites – WKND-Tutorial {#getting-started-developing-aem-sites-wknd-tutorial}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Steigen Sie gerade in die Entwicklung mit Adobe Experience Manager as a Cloud Service ein? Benötigen Sie einen Auffrischungskurs zu den Best Practices? Dann sind Sie hier richtig!
 
