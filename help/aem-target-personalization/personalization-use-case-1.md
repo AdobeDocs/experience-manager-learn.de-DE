@@ -3,10 +3,14 @@ title: Personalisierung mit AEM Erlebnisfragmenten und Adobe Target
 seo-title: Personalisierung mit Adobe Experience Manager (AEM) Experience Fragments und Adobe Target
 description: Ein durchgehendes Lernprogramm, in dem gezeigt wird, wie mit Adobe Experience Manager Experience Fragments und Adobe Target personalisierte Erlebnisse erstellt und bereitgestellt werden.
 seo-description: Ein durchgehendes Lernprogramm, in dem gezeigt wird, wie mit Adobe Experience Manager Experience Fragments und Adobe Target personalisierte Erlebnisse erstellt und bereitgestellt werden.
+feature: Experience Fragments
+topic: 'Personalisierung '
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 892cb074814eabd347ba7aef883721df0ee4d431
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1734'
 ht-degree: 1%
 
 ---
@@ -35,7 +39,7 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 
 ### Voraussetzungen
 
-* **AEM**
+* **AEM-**
    * [AEM Autoren- und Veröffentlichungsinstancerunning ](./implementation.md#getting-aem) auf localhost 4502 bzw. 4503.
 * **Experience Cloud**
    * Zugriff auf Ihre Organisationen Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
@@ -100,7 +104,7 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 1. Klicken Sie auf **Wählen Sie** und wählen Sie eine der folgenden Optionen aus:
    * Land
    * **Bundesland** *(Bundesland für WKND Site SkateFest-Kampagne auswählen)*
-   * Ort
+   * Stadt
    * Postleitzahl
    * Breite
    * Länge
