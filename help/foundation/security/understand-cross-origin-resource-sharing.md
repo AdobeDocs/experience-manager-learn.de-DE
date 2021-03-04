@@ -3,17 +3,15 @@ title: Verstehen Sie Cross-Herkunft Resource Sharing (CORS) mit AEM
 description: Adobe Experience Managers Cross-Herkunft Resource Sharing (CORS) ermöglicht es nicht-AEM Webeigenschaften, clientseitige Aufrufe zu AEM, sowohl authentifiziert als auch nicht authentifiziert, um Inhalte abzurufen oder direkt mit AEM zu interagieren.
 version: 6.3, 6,4, 6.5
 sub-product: Stiftung, Inhaltsdienste, Sites
+feature: null
 topics: security, development, content-delivery
 activity: understand
 audience: architect, developer
 doc-type: article
-topic: Sicherheit
-role: Entwickler
-level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '917'
 ht-degree: 1%
 
 ---
