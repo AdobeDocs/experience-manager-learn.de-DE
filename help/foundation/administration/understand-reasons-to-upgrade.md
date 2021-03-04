@@ -7,11 +7,14 @@ topics: best-practices, upgrade
 audience: all
 activity: understand
 doc-type: article
+topic: Aktualisierung
+role: '"Leader, Architekt, Entwickler, Administrator, Business Practitioner"'
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 1519856731758ece2860615c06fc0d64edb104a5
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3540'
-ht-degree: 5%
+source-wordcount: '3548'
+ht-degree: 6%
 
 ---
 
@@ -147,7 +150,7 @@ Unten finden Sie eine Matrix der wichtigsten Fundamentmerkmale, die von AEM ange
             <td><sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/revision-cleanup.html" target="_blank">Online-Überarbeitungsbereinigung</a>: </strong>
+            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/deploying/using/revision-cleanup.html" target="_blank">Online-Überarbeitungsbereinigung</a>: </strong>
                 Führen Sie eine Repository-Wartung ohne Serverausfall durch.</td>
             <td> </td>
             <td> </td>
@@ -308,7 +311,7 @@ Nachfolgend finden Sie eine Übersicht der wichtigsten Sicherheitsfunktionen, di
         <td>they</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank">Key Store </a></strong>
+        <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/saml-2-0-authenticationhandler.html" target="_blank">Key Store </a></strong>
             <br> ManagementGlobaler Trust Store, Zertifikate und Schlüssel, die alle im Repository verwaltet werden.</td>
         <td></td>
         <td>they</td>
@@ -491,8 +494,8 @@ Nachfolgend finden Sie eine Übersicht der wichtigsten Funktionen von AEM. Einig
             <td><sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/spa-overview.html" target="_blank">SPA-Editor</a>: </strong>
-            Erstellen Sie autorfähige, erfassbare Web-Erlebnisse mithilfe von SPA-Frameworks (Single Page Application), die auf "React"oder "Angular"basieren.</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/spa-overview.html" target="_blank">SPA-Editor</a>:</strong>
+            Erstellen Sie autoritäre Erlebnisse und aktivieren Sie sie mithilfe von Einzelseitenanwendungs-(SPA-)Frameworks, die auf React oder Angular basieren.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -502,7 +505,7 @@ Nachfolgend finden Sie eine Übersicht der wichtigsten Funktionen von AEM. Einig
             <td><sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/release-notes/style-system-fp.html" target="_blank">Stilsystem</a>: </strong>
+            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/release-notes/style-system-fp.html" target="_blank">Stilsystem</a>: </strong>
             Erhöhen Sie die Wiederverwendung AEM Komponente, indem Sie ihr Erscheinungsbild mithilfe des kontextbezogenen Stilsystems definieren.</td>
             <td> </td>
             <td> </td>
@@ -838,7 +841,7 @@ Nachstehend finden Sie eine Übersicht der wichtigsten Assets-Funktionen, die vo
             <td>they</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/desktop-app/aem-desktop-app.html" target="_blank">AEM Desktop-App</a>: </strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=de" target="_blank">AEM Desktop-App</a>: </strong>
             Synchronisieren Sie Assets mit dem lokalen Desktop, um sie mit Creative Suiten zu bearbeiten.
             </td>
             <td> </td>
@@ -952,7 +955,7 @@ Nachstehend finden Sie eine Übersicht der wichtigsten Assets-Funktionen, die vo
             <td>they</td>
         </tr>
         <tr>
-            <td><strong><a href="https://docs.adobe.com/docs/en/aem/6-5/administer/content/dynamic-media/viewer-presets.html" target="_blank">Viewer</a>:</strong>
+            <td><strong><a href="https://docs.adobe.com/docs/de-DE/aem/6-5/administer/content/dynamic-media/viewer-presets.html" target="_blank">Viewer</a>:</strong>
             Benutzerdefinierte Rich-Media-Player und -Vorgaben mit Unterstützung für verschiedene Bildschirme/Geräte.</td>
             <td> </td>
             <td>they</td>
@@ -1197,7 +1200,7 @@ Im Folgenden finden Sie eine Übersicht der wichtigsten AEM Communities Hinzufü
     <thead>
         <tr>
             <td> </td>
-            <td>Communities Funktion</td>
+            <td>Communities-Funktion</td>
             <td>6,0</td>
             <td>6.1</td>
             <td>6,2</td>
