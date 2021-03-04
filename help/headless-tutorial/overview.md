@@ -1,10 +1,14 @@
 ---
 title: AEM Übungen ohne Kopf
 description: Eine Sammlung von Übungen zur Verwendung von Adobe Experience Manager als Headless-CMS.
+feature: '"Inhaltsfragmente, APIs"'
+topic: '"Headless, Content-Management"'
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: eabd8650886fa78d9d177f3c588374a443ac1ad6
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '468'
 ht-degree: 4%
 
 ---
