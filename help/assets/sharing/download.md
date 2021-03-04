@@ -2,19 +2,18 @@
 title: Download
 description: Erfahren Sie, wie Sie Assets und deren Darstellungen zur Verwendung und Freigabe auf Ihren lokalen Computer herunterladen können.
 sub-product: Assets
-feature: null
-topics: authoring
-audience: author
-doc-type: feature video
-activity: use
+feature: Asset-Verwaltung
 version: cloud-service
 kt: 4300
 thumbnail: 32194.jpg
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '35'
-ht-degree: 8%
+source-wordcount: '42'
+ht-degree: 11%
 
 ---
 
