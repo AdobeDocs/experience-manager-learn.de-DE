@@ -1,12 +1,10 @@
 ---
 title: Kapitel 1 - Lernprogramme einrichten und herunterladen
-seo-title: Erste Schritte mit AEM Content Services - Kapitel 1 - Lernprogramm einrichten
 description: Kapitel 1 des AEMHeadless-Lernprogramms enthält die Grundeinstellung für die AEM Instanz des Lernprogramms.
-seo-description: Kapitel 1 des AEMHeadless-Lernprogramms enthält die Grundeinstellung für die AEM Instanz des Lernprogramms.
 translation-type: tm+mt
-source-git-commit: 52824c178ddf930df134608ecb01bb661d6c514c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '17502'
+source-wordcount: '17476'
 ht-degree: 0%
 
 ---
@@ -40,7 +38,7 @@ Die Empfehlung sollte den Entwickler davon abhalten, Code vorzeitig zu optimiere
 
 ### Architektonische Entscheidungen und Artefakte
 
-Die Empfehlung &quot;zuerst machen es funktioniert - dann schnell machen&quot; ist jedoch völlig falsch, wenn es um &quot;architektonische&quot; Entscheidungen geht. Was sind architektonische Entscheidungen? Einfach gesagt, es sind die Entscheidungen, die teuer, schwierig und/oder unmöglich danach zu ändern sind. Denken Sie daran, dass &quot;teuer&quot;manchmal genauso ist wie &quot;unmöglich&quot;.  Wenn Ihr Projekt beispielsweise nicht mehr über das Budget verfügt, sind kostspielige Änderungen nicht mehr möglich. Infrastrukturveränderungen sind die allerersten Veränderungen in dieser Kategorie, die den meisten Menschen am Herzen liegen. Es gibt aber auch eine andere Art von &quot;architektonischen&quot;Artefakten, die sich sehr unangenehm ändern können:
+Die Empfehlung &quot;zuerst machen es funktioniert - dann schnell machen&quot; ist jedoch völlig falsch, wenn es um &quot;architektonische&quot; Entscheidungen geht. Was sind architektonische Entscheidungen? Einfach gesagt, es sind die Entscheidungen, die teuer, schwierig und/oder unmöglich danach zu ändern sind. Denken Sie daran, dass &quot;teuer&quot;manchmal genauso ist wie &quot;unmöglich&quot;.  Wenn Ihr Projekt beispielsweise nicht mehr über das Budget verfügt, sind kostspielige Änderungen nicht mehr möglich. Infrastrukturveränderungen sind die allerersten Veränderungen in dieser Kategorie, die den meisten Menschen am Herzen liegen. Aber es gibt auch eine andere Art von &quot;architektonischen&quot;Artefakten, die sich sehr unangenehm ändern können:
 
 1. Codeabschnitte im &quot;Zentrum&quot; einer Anwendung, auf die viele andere Teile angewiesen sind. Um diese zu ändern, müssen alle Abhängigkeiten gleichzeitig geändert und erneut getestet werden.
 
@@ -197,7 +195,7 @@ und
 
 `http://domain.com/home.html/suffix.html`
 
-Sie sind in AEM absolut gültig. Sie würden kein Problem auf Ihrer lokalen Entwicklungsmaschine sehen (ohne Dispatcher). Wahrscheinlich werden Sie auch bei UAT- oder Load-Tests keine Probleme haben. Das Problem, vor dem wir stehen, ist so subtil, dass es die meisten Tests durchläuft.  Es wird Sie hart treffen, wenn Sie sich in der Spitzenzeit befinden und Sie sind auf Zeit begrenzt, um es zu beheben, wahrscheinlich haben Sie keinen Serverzugriff und keine Ressourcen, um es zu beheben. Wir waren dort...
+Sie sind in AEM absolut gültig. Sie würden kein Problem auf Ihrer lokalen Entwicklungsmaschine sehen (ohne Dispatcher). Wahrscheinlich werden Sie auch bei UAT- oder Load-Tests keine Probleme haben. Das Problem, vor dem wir stehen, ist so subtil, dass es die meisten Tests durchläuft.  Es wird Sie hart treffen, wenn Sie sich in der Spitzenzeit befinden und Sie sind auf die Zeit beschränkt, um es zu beheben, wahrscheinlich haben Sie keinen Serverzugriff oder Ressourcen, um es zu beheben. Wir waren dort...
 
 Also... Was ist das Problem?
 
@@ -350,9 +348,9 @@ Jetzt hat der Vermarkter gelernt, dass Teaser-Schlagzeilen umsetzbar sein sollte
 
 Er veröffentlicht die bearbeitete Seite &quot;Kanada&quot;und besucht die zuvor veröffentlichte Startseite erneut, um seine Änderungen zu sehen. Aber dort hat sich nichts geändert. Es zeigt immer noch den alten Teaser. Die Dublette schaut auf die &quot;Winteraktion&quot;. Diese Seite wurde zuvor noch nie angefordert und wird daher nicht statisch im Dispatcher zwischengespeichert. Diese Seite wird also frisch von Publish gerendert und diese Seite enthält jetzt den neuen Teaser &quot;Visit Canada&quot;.
 
-![Dispatcher zum Speichern von statisch eingeschlossenen Inhalten in der Startseite](assets/chapter-1/dispatcher-storing-stale-content.png)
+![Dispatcher zum Speichern von im Stack enthaltenen Inhalten in der Startseite](assets/chapter-1/dispatcher-storing-stale-content.png)
 
-*Dispatcher zum Speichern von statisch eingeschlossenen Inhalten in der Startseite*
+*Dispatcher zum Speichern von im Stack enthaltenen Inhalten in der Startseite*
 
 <br> 
 
@@ -364,7 +362,7 @@ Die Seite &quot;Winter Special&quot;wurde noch nicht gerendert, daher gibt es ke
 
 Sie könnten denken, dass der Dispatcher jede Ressource, die er berührt, beim Rendern und Löschen aller Seiten, die diese Ressource verwendet haben, verfolgen würde, wenn sich diese Ressource ändert. Der Dispatcher gibt die Seiten jedoch nicht wieder. Das Rendering wird vom Veröffentlichungssystem durchgeführt. Der Dispatcher weiß nicht, welche Ressourcen in eine gerenderte HTML-Datei fließen.
 
-Noch nicht überzeugt? Sie können denken, dass *&quot;es eine Möglichkeit geben muss, eine Art Abhängigkeitsverfolgung zu implementieren&quot;*. Nun, es gibt, oder genauer gesagt, *war*. Communiqué 3, der Ururururgroßvater von AEM, hatte einen Abhängigkeitstracker implementiert in der _session_, die zum Rendern einer Seite verwendet wurde.
+Noch nicht überzeugt? Sie denken vielleicht, dass *&quot;es eine Möglichkeit geben muss, eine Art Abhängigkeitsverfolgung zu implementieren&quot;*. Nun, es gibt, oder genauer gesagt, *war*. Communiqué 3, der Ururururgroßvater von AEM, hatte einen Abhängigkeitstracker implementiert in der _session_, die zum Rendern einer Seite verwendet wurde.
 
 Während einer Anforderung wurde jede Ressource, die über diese Sitzung erfasst wurde, als Abhängigkeit von der URL verfolgt, die derzeit gerendert wurde.
 
@@ -474,7 +472,7 @@ Wir wollen diese Mechanik nun auf eine Art von Komponenten anwenden, die Sie wah
 
 #### Die Komponente &quot;Responsive Image&quot;
 
-Lassen Sie uns ein gemeinsames Muster (oder ein Anti-Muster) einer Komponente mit miteinander verbundenen Binärdateien illustrieren. Wir werden eine Komponente &quot;respi&quot; erstellen - für &quot;responsiv-image&quot;. Diese Komponente sollte das angezeigte Bild an das Gerät anpassen können, auf dem es angezeigt wird. Auf Desktops und Tablets zeigt es die volle Auflösung des Bildes, auf Smartphones eine kleinere Version mit schmalem Beschneiden - oder vielleicht sogar ein ganz anderes Motiv (dies wird in der reaktionsfähigen Welt als &quot;Kunstrichtung&quot;bezeichnet).
+Lassen Sie uns ein gemeinsames Muster (oder ein Anti-Muster) einer Komponente mit miteinander verbundenen Binärdateien illustrieren. Wir werden eine Komponente &quot;respi&quot; erstellen - für &quot;responsiv-image&quot;. Diese Komponente sollte das angezeigte Bild an das Gerät anpassen können, auf dem es angezeigt wird. Auf Desktops und Tablets zeigt es die volle Auflösung des Bildes, auf Smartphones eine kleinere Version mit schmalem Beschneiden - oder vielleicht sogar ein ganz anderes Motiv (in der reaktionsfähigen Welt als &quot;Kunstrichtung&quot; bezeichnet).
 
 Die Assets werden in den DAM-Bereich von AEM hochgeladen und nur _referenziert_ in der Komponente mit responsiven Bildern.
 
@@ -1377,7 +1375,7 @@ Wir verwendeten URL-Fingerabdrücke, als wir das Muster für den Spooler einfüh
 
 Normalerweise richten wir für normale Dateien ein festes Schema ein, z. B. HTML alle 30 Minuten erneut überprüfen, Bilder alle 4 Stunden usw.
 
-Die Zwischenspeicherung im Browser ist im Autorensystem äußerst hilfreich. Sie möchten so viel Zwischenspeicher wie möglich im Browser zwischenspeichern, um die Bearbeitung zu verbessern. Leider sind die teuersten Assets, die HTML-Seiten können nicht zwischengespeichert werden... sie sollen sich häufig auf dem Autor ändern.
+Die Zwischenspeicherung im Browser ist im Autorensystem äußerst hilfreich. Sie möchten so viel Zwischenspeicher wie möglich im Browser zwischenspeichern, um die Bearbeitung zu verbessern. Leider sind die teuersten Assets, die HTML-Seiten können nicht zwischengespeichert werden ... sie sollen sich häufig auf dem Autor ändern.
 
 Die Granitbibliotheken, aus denen AEM Benutzeroberfläche bestehen, können für eine gewisse Zeit zwischengespeichert werden. Sie können Ihre Sites auch als statische Dateien (Schriftarten, CSS und JavaScript) im Browser zwischenspeichern. Auch Bilder in `/content/dam` können normalerweise für ca. 15 Minuten zwischengespeichert werden, da sie nicht so oft wie Text auf den Seiten geändert werden. Bilder werden in AEM nicht interaktiv bearbeitet. Sie werden zuerst bearbeitet und genehmigt, bevor sie in AEM hochgeladen werden. Sie können also davon ausgehen, dass sie sich nicht so häufig ändern wie Text.
 
@@ -1423,7 +1421,7 @@ Wir könnten die Probleme lösen, indem wir den Cache neu strukturieren. Wir hat
 
 Auch der abschneidende Teil war sehr einfach.  AEM generierte abgeschnittene Links aufgrund einer entsprechenden Konfiguration in `/etc/map`.
 
-Wenn nun eine Anforderung `/home.html` auf den Dispatcher trifft, wird zuerst eine Umschreibungsregel angewendet, die den Pfad intern erweitert.
+Wenn nun eine Anforderung `/home.html` auf den Dispatcher trifft, wird zunächst eine Umschreibungsregel angewendet, die den Pfad intern erweitert.
 
 Diese Regel wurde in jeder vhost-Konfiguration statisch eingerichtet. Einfach ausgedrückt, die Regeln sahen so aus:
 
@@ -1577,7 +1575,7 @@ Ihre Site hat ein sehr spezifisches Zugriffsmuster. Sie haben eine hohe Traffic-
 
 Nun werden diese Seiten sehr wahrscheinlich im Dispatcher zwischengespeichert, da sie so häufig angefordert werden.
 
-An den Dispatcher wird eine Anfrage zur willkürlichen Ungültigmachung gesendet, wodurch alle Seiten - einschließlich Ihrer bevorzugten Einmaligkeit - ungültig werden.
+An den Dispatcher wird eine Anfrage zur willkürlichen Ungültigmachung gesendet, wodurch alle Seiten - einschließlich der bevorzugten einmal - ungültig werden.
 
 Da diese Seiten so beliebt sind, gibt es neue eingehende Anforderungen von verschiedenen Browsern. Nehmen wir die Startseite als Beispiel.
 
