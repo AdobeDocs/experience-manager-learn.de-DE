@@ -1,10 +1,14 @@
 ---
 title: Kapitel 5 - Authoring von Content Services-Seiten - Content Services
 description: In Kapitel 5 des AEM-Lernprogramms "Kopflos"werden die Seiten aus den in Kapitel 4 definierten Vorlagen erstellt. Diese Seiten fungieren als JSON HTTP-Endpunkte.
+feature: '"Inhaltsfragmente, APIs"'
+topic: '"Headless, Content-Management"'
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '604'
 ht-degree: 1%
 
 ---
@@ -60,7 +64,7 @@ Kapitel 5 des AEMHeadless-Lernprogramms umfasst das Erstellen der Seite anhand d
 
 Die JSON-Ausgabe und ihr Format können überprüft werden, indem die Seite mit der Auswahl `.model.json` angefordert wird.
 
-Diese JSON-Struktur (oder Schema) muss von den Nutzern dieser API gut verstanden werden. Es ist wichtig, dass Benutzer der API verstehen, welche Aspekte der Struktur fest sind (d.h. das Logo (Image) und das Tag live (Text) der Ereignis-APIs, die fließend sind (d.h. ereignis, die unter &quot;Inhaltsfragment-Liste&quot;aufgeführt sind).
+Diese JSON-Struktur (oder Schema) muss von den Nutzern dieser API gut verstanden werden. Es ist wichtig, dass Benutzer der API verstehen, welche Aspekte der Struktur fest sind (d.h. das Logo (Image) und das Tag live (Text) der Ereignis-APIs, die fließend sind (d.h. Ereignis, die unter &quot;Inhaltsfragment-Liste&quot;aufgeführt sind).
 
 Wenn Sie diesen Vertrag auf einer veröffentlichten API brechen, kann dies zu einem fehlerhaften Verhalten in den konsumierenden Apps führen.
 
