@@ -1,7 +1,6 @@
 ---
 title: Erstellen einer Experience Platform Launch-Eigenschaft
 description: Erfahren Sie, wie Sie eine Launch-Eigenschaft mit der Konfiguration erstellen, die für die Einrichtung der restlichen Integration unbedingt erforderlich ist. Die Benutzer erhalten eine Einführung in die Benutzeroberfläche "Starten"und erfahren mehr über Erweiterungen, Regeln und Workflows.
-feature: launch
 topics: integrations
 audience: administrator
 doc-type: technical video
@@ -9,11 +8,14 @@ activity: setup
 version: cloud-service
 kt: 5980
 thumbnail: 38553.jpg
+topic: Integrationen
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: eabc325c498b4d5b8b5a53b9004f0e89d82cefe3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 14%
+source-wordcount: '112'
+ht-degree: 16%
 
 ---
 
