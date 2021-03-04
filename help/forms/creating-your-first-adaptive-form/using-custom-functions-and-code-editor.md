@@ -4,7 +4,7 @@ seo-title: Funktionen und Code-Editor
 description: Verwenden von Funktionen und Code-Editor zum Erstellen von Geschäftsregeln
 seo-description: Verwenden von Funktionen und Code-Editor zum Erstellen von Geschäftsregeln
 uuid: 578e91f8-0d93-4192-b7af-1579df2feaf8
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: authoring
 audience: developer
 doc-type: tutorial
@@ -13,11 +13,14 @@ version: 6.4,6.5
 discoiquuid: f480ef3e-7e38-4a6b-a223-c102787aea7f
 kt: 4270
 thumbnail: 22282.jpg
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: c60a46027cc8d71fddd41aa31dbb569e4df94823
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 0%
+source-wordcount: '155'
+ht-degree: 2%
 
 ---
 
