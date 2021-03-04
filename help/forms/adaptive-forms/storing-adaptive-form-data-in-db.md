@@ -3,19 +3,16 @@ title: Speichern von adaptiven Formulardaten
 seo-title: Speichern von adaptiven Formulardaten
 description: Speichern adaptiver Formulardaten in DataBase als Teil Ihres AEM-Workflows
 seo-description: Speichern adaptiver Formulardaten in DataBase als Teil Ihres AEM-Workflows
-feature: '"Adaptives Forms,Workflow,Formulardatenmodell"'
+feature: adaptive Formulare,Workflow
 topics: integrations
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
-topic: Entwicklung
-role: Entwickler
-level: Erfahren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '392'
 ht-degree: 1%
 
 ---
