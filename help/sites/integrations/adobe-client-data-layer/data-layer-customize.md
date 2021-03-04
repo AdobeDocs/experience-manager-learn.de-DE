@@ -1,7 +1,7 @@
 ---
 title: Anpassen der Adobe Client-Datenschicht mit AEM
 description: Erfahren Sie, wie Sie die Adobe Client-Datenschicht mit Inhalten aus benutzerdefinierten AEM anpassen. Erfahren Sie, wie Sie mithilfe der von AEM Core-Komponenten bereitgestellten APIs die Datenschicht erweitern und anpassen können.
-feature: core-component
+feature: Adobe Client Data Layer, Core Component
 topics: integrations
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: use
 version: cloud-service
 kt: 6265
 thumbnail: KT-6265.jpg
+topic: Integrationen
+role: Entwickler
+level: Vermittelt, erfahren
 translation-type: tm+mt
-source-git-commit: 46936876de355de9923f7a755aa6915a13cca354
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2027'
-ht-degree: 4%
+source-wordcount: '2037'
+ht-degree: 5%
 
 ---
 
