@@ -1,7 +1,7 @@
 ---
 title: Formulardatenmodell konfigurieren
 description: Formulardatenmodell basierend auf der RDBMS-Datenquelle erstellen
-feature: Adaptive Formulare
+feature: adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
@@ -9,14 +9,11 @@ activity: implement
 version: 6.4,6.5
 kt: 5812
 thumbnail: kt-5812.jpg
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '497'
-ht-degree: 4%
+source-wordcount: '493'
+ht-degree: 3%
 
 ---
 
@@ -72,7 +69,7 @@ Die zwischen Datenbankentitäten definierten Verknüpfungen werden nicht automat
 Die folgenden Schritte führen Sie durch den Prozess der Erstellung der Eins-zu-viele-Verbindung
 
 * Wählen Sie eine neue Entität und klicken Sie auf _Hinzufügen Association_
-* Geben Sie einen aussagekräftigen Titel und einen Bezeichner für die Zuordnung und andere Eigenschaften ein, wie im folgenden Screenshot gezeigt
+* Geben Sie einen aussagekräftigen Titel und einen Bezeichner für die Zuordnung und andere Eigenschaften ein, wie im folgenden Screenshot dargestellt
    ![Association](assets/association-entities-1.png)
 
 * Klicken Sie auf das Symbol _edit_ unter dem Abschnitt Argumente
