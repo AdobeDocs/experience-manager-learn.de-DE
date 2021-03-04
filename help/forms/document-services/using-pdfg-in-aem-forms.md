@@ -11,11 +11,14 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 7f570f12-ce43-4da7-a249-ef6bd0fe48e5
+topic: Entwicklung
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 1%
+source-wordcount: '285'
+ht-degree: 3%
 
 ---
 
@@ -31,7 +34,7 @@ Die mit diesem Artikel verknüpften Assets ermöglichen es Ihnen, MS Office- ode
 
 So installieren Sie die Demoelemente
 
-1. PDFG wie in diesem Dokument [hier](https://helpx.adobe.com/experience-manager/6-4/forms/using/install-configure-pdf-generator.html) erwähnt konfigurieren.
+1. PDFG wie in diesem Dokument [hier](https://helpx.adobe.com/de/experience-manager/6-4/forms/using/install-configure-pdf-generator.html) erwähnt konfigurieren.
 1. Bitte befolgen Sie die entsprechende Dokumentation zu Ihrer AEM Forms-Version.
 1. [Importieren und installieren Sie Assets, die sich auf diesen Artikel beziehen, mit dem Package Manager.](assets/createpdfgdemov2.zip)
 1. [Navigieren Sie zu post.](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) jspin Ihrer CRX
