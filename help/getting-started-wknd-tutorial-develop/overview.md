@@ -11,10 +11,14 @@ KT: 4132
 mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
+feature: '"Hauptkomponenten, Seiten-Editor, bearbeitbare Vorlagen, AEM Projektarchiv"'
+topic: '"Content-Management, Entwicklung"'
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '893'
+source-wordcount: '907'
 ht-degree: 21%
 
 ---
@@ -22,7 +26,7 @@ ht-degree: 21%
 
 # Erste Schritte mit AEM Sites - WKND-Tutorial {#introduction}
 
-Willkommen bei einem mehrteiligen Tutorial, das für Entwickler entwickelt wurde, die neu in Adobe Experience Manager (AEM) sind. Dieses Tutorial durchläuft die Implementierung einer AEM Website für eine fiktive Lifestyle-Marke der WKND. Das Lernprogramm behandelt grundlegende Themen wie Projekteinrichtung, Kernkomponenten, bearbeitbare Vorlagen, clientseitige Bibliotheken und Komponentenentwicklung mit Adobe Experience Manager Sites.
+Willkommen bei einem mehrteiligen Tutorial, das für Entwickler konzipiert wurde, die neu in Adobe Experience Manager (AEM) sind. Dieses Tutorial durchläuft die Implementierung einer AEM Website für eine fiktive Lifestyle-Marke der WKND. Das Lernprogramm behandelt grundlegende Themen wie Projekteinrichtung, Kernkomponenten, bearbeitbare Vorlagen, clientseitige Bibliotheken und Komponentenentwicklung mit Adobe Experience Manager Sites.
 
 ## Überblick {#wknd-tutorial-overview}
 
