@@ -1,12 +1,10 @@
 ---
 title: Kapitel 3 - Themen der erweiterten Zwischenspeicherung
-seo-title: AEM Dispatcher-Cache demystified - Kapitel 3 - Advanced Caching-Themen
 description: Kapitel 3 des Demystified-Tutorials AEM Dispatcher-Cache beschreibt, wie die in Kapitel 2 beschriebenen Einschränkungen überwunden werden können.
-seo-description: Kapitel 3 des Demystified-Tutorials AEM Dispatcher-Cache beschreibt, wie die in Kapitel 2 beschriebenen Einschränkungen überwunden werden können.
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '6187'
+source-wordcount: '6162'
 ht-degree: 0%
 
 ---
@@ -167,7 +165,7 @@ Es ist leicht zu implementieren. Leider ist es schwer, die effektive Lebensdauer
 
 <br> 
 
-Betrachten Sie die Abbildung oben. Jede Zwischenspeicherebene führt eine TTL von 2 Min. ein. Nun - die gesamte TTL muss auch 2 Min. Nicht ganz. Wenn die äußere Ebene das Objekt kurz vor dem Anhalten abruft, verlängert die äußere Schicht die effektive Livedauer des Objekts. Die effektive Live-Zeit kann in diesem Fall zwischen 2 und 4 Minuten betragen. Nehmen wir an, Sie haben mit Ihrer Geschäftsabteilung abgestimmt, eines Tages ist tolerierbar - und Sie haben vier Schichten von Caches. Die tatsächliche TTL auf jeder Ebene darf nicht länger als sechs Stunden sein... die Cache-Abwesenheitsrate erhöhen...
+Betrachten Sie die Abbildung oben. Jede Zwischenspeicherebene führt eine TTL von 2 Min. ein. Nun - die gesamte TTL muss auch 2 Min. Nicht ganz. Wenn die äußere Ebene das Objekt kurz vor dem Anhalten abruft, verlängert die äußere Schicht die effektive Livedauer des Objekts. Die effektive Live-Zeit kann in diesem Fall zwischen 2 und 4 Minuten betragen. Nehmen wir an, Sie haben mit Ihrer Geschäftsabteilung abgestimmt, eines Tages ist tolerierbar - und Sie haben vier Schichten von Caches. Die eigentliche TTL auf jeder Ebene darf nicht länger als sechs Stunden sein... die Cache-Abwesenheitsrate erhöhen...
 
 Wir sagen nicht, dass es ein schlechtes Schema ist. Du solltest nur seine Grenzen kennen. Und es ist eine nette und einfache Strategie, mit der man Beginn machen kann. Nur wenn der Traffic Ihrer Site zunimmt, sollten Sie eine genauere Strategie in Betracht ziehen.
 
