@@ -1,7 +1,7 @@
 ---
 title: Erstellen eines Asset compute-Projekts zur Asset compute-Erweiterbarkeit
-description: asset compute-Projekte sind Node.js-Projekte, die mit der Adobe I/O CLI generiert wurden und eine bestimmte Struktur aufweisen, die es ermöglicht, sie in Adobe I/O Runtime zu implementieren und als Cloud Service mit AEM zu integrieren.
-feature: asset-compute
+description: asset compute-Projekte sind Node.js-Projekte, die mithilfe der Adobe I/O-CLI generiert wurden und eine bestimmte Struktur aufweisen, die es ermöglicht, sie in Adobe I/O Runtime zu implementieren und als Cloud Service mit AEM zu integrieren.
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,18 +9,21 @@ audience: developer
 doc-type: tutorial
 kt: 6269
 thumbnail: 40197.jpg
+topic: Integrationen, Entwicklung
+role: Entwickler
+level: Vermittelt, erfahren
 translation-type: tm+mt
-source-git-commit: 23c91551673197cebeb517089e5ab6591f084846
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 3%
+source-wordcount: '912'
+ht-degree: 4%
 
 ---
 
 
 # Erstellen eines Asset compute-Projekts
 
-asset compute-Projekte sind Node.js-Projekte, die mit der Adobe I/O CLI generiert wurden und eine bestimmte Struktur aufweisen, die es ermöglicht, sie in Adobe I/O Runtime zu implementieren und als Cloud Service mit AEM zu integrieren. Ein einzelnes Asset compute-Projekt kann einen oder mehrere Asset compute-Workers enthalten, wobei jeder über einen separaten HTTP-Endpunkt verfügt, der von einem AEM als Cloud Service-Verarbeitungs-Profil referenzierbar ist.
+asset compute-Projekte sind Node.js-Projekte, die mithilfe der Adobe I/O-CLI generiert wurden und eine bestimmte Struktur aufweisen, die es ermöglicht, sie in Adobe I/O Runtime zu implementieren und als Cloud Service mit AEM zu integrieren. Ein einzelnes Asset compute-Projekt kann einen oder mehrere Asset compute-Workers enthalten, wobei jeder über einen separaten HTTP-Endpunkt verfügt, der von einem AEM als Cloud Service-Verarbeitungs-Profil referenzierbar ist.
 
 ## Projekt erstellen
 
@@ -28,18 +31,18 @@ asset compute-Projekte sind Node.js-Projekte, die mit der Adobe I/O CLI generier
 
 _Clickthrough zum Generieren eines Asset compute-Projekts (ohne Audio)_
 
-Verwenden Sie das [Adobe I/O CLI Asset compute-Plug-in](../set-up/development-environment.md#aio-cli), um ein neues, leeres Asset compute-Projekt zu erstellen.
+Verwenden Sie das [Adobe I/O CLI-Asset compute-Plug-in](../set-up/development-environment.md#aio-cli), um ein neues, leeres Asset compute-Projekt zu erstellen.
 
 1. Navigieren Sie in der Befehlszeile zum Ordner, in dem das Projekt enthalten sein soll.
 1. Führen Sie in der Befehlszeile `aio app init` aus, um mit der CLI für die interaktive Projekterstellung zu beginnen.
-   + Durch diesen Befehl wird möglicherweise ein Webbrowser ausgelöst, der zur Authentifizierung bei Adobe I/O auffordert. Wenn dies der Fall ist, geben Sie die Anmeldeinformationen Ihrer Adobe an, die mit den [erforderlichen Adoben und Produkten](../set-up/accounts-and-services.md) verknüpft sind. Wenn Sie sich nicht anmelden können, befolgen Sie die folgenden Anweisungen zum Generieren eines Projekts](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user).[
+   + Dieser Befehl erzeugt möglicherweise einen Webbrowser, der zur Authentifizierung zur Adobe I/O auffordert. Wenn dies der Fall ist, geben Sie die Anmeldeinformationen Ihrer Adobe an, die mit den [erforderlichen Adoben und Produkten](../set-up/accounts-and-services.md) verknüpft sind. Wenn Sie sich nicht anmelden können, befolgen Sie die folgenden Anweisungen zum Generieren eines Projekts](https://github.com/AdobeDocs/project-firefly/blob/master/getting_started/first_app.md#42-developer-is-not-logged-in-as-enterprise-organization-user).[
 1. __Org auswählen__
    + Wählen Sie die Adobe Org, die AEM als Cloud Service, Projekt Firefly sind registriert bei
 1. __Projekt auswählen__
    + Suchen Sie das Projekt und wählen Sie es aus. Dies ist der [Projekttitel](../set-up/firefly.md), der aus der Firefly-Projektvorlage erstellt wurde, in diesem Fall `WKND AEM Asset Compute`
 1. __Arbeitsbereich auswählen__
    + Wählen Sie den Arbeitsbereich `Development` aus
-1. __Welche Adobe I/O App-Funktionen möchten Sie für dieses Projekt aktivieren? Zu berücksichtigende Komponenten auswählen__
+1. __Welche Adobe I/O-App-Funktionen möchten Sie für dieses Projekt aktivieren? Zu berücksichtigende Komponenten auswählen__
    + Wählen Sie nun eine der folgenden Optionen aus `Actions: Deploy runtime actions`
    + Wählen Sie die Pfeiltasten aus, geben Sie den Abstand ein, um die Auswahl aufzuheben/auszuwählen, und geben Sie die Eingabetaste ein, um die Auswahl zu bestätigen
 1. __Zu generierende Aktionstypen auswählen__
@@ -51,9 +54,9 @@ Verwenden Sie das [Adobe I/O CLI Asset compute-Plug-in](../set-up/development-en
 
 ## Generieren von console.json
 
-Für das Developer Tool ist eine Datei mit dem Namen `console.json` erforderlich, die die erforderlichen Anmeldeinformationen für die Verbindung mit Adobe I/O enthält. Diese Datei wird von der Adobe I/O-Konsole heruntergeladen.
+Für das Developer Tool ist eine Datei mit dem Namen `console.json` erforderlich, die die erforderlichen Berechtigungen zum Herstellen einer Verbindung mit der Adobe I/O enthält. Diese Datei wird von der Adobe I/O Console heruntergeladen.
 
-1. Öffnen Sie das [Adobe I/O](https://console.adobe.io)-Projekt des Asset compute-Workers
+1. Öffnen Sie das Projekt [Adobe I/O](https://console.adobe.io) des Asset compute-Workers
 1. Wählen Sie den Projektarbeitsbereich aus, für den Sie die `console.json`-Anmeldedaten herunterladen möchten. Wählen Sie in diesem Fall `Development`
 1. Gehen Sie zum Stammverzeichnis des Adobe I/O-Projekts und tippen Sie oben rechts auf __Alle herunterladen__.
 1. Eine Datei wird als `.json`-Datei heruntergeladen, der das Projekt und der Arbeitsbereich vorangestellt werden, z. B.: `wkndAemAssetCompute-81368-Development.json`
@@ -67,7 +70,7 @@ Für das Developer Tool ist eine Datei mit dem Namen `console.json` erforderlich
 
 
 > HINWEIS
-> Die Datei enthält Anmeldeinformationen. Wenn Sie die Datei in Ihrem Projekt speichern, stellen Sie sicher, dass Sie sie Ihrer `.gitignore`-Datei hinzufügen, damit sie nicht freigegeben wird. Dasselbe gilt für die Datei `.env` — Diese Anmeldeinformationsdateien dürfen nicht freigegeben oder in Git gespeichert werden.
+> Die Datei  enthält Anmeldeinformationen. Wenn Sie die Datei in Ihrem Projekt speichern, stellen Sie sicher, dass Sie sie Ihrer `.gitignore`-Datei hinzufügen, damit sie nicht freigegeben wird. Dasselbe gilt für die Datei `.env` — Diese Anmeldeinformationsdateien dürfen nicht freigegeben oder in Git gespeichert werden.
 
 ## Überprüfen Sie die Anatomie des Projekts
 
