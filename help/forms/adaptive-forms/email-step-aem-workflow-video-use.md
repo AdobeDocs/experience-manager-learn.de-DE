@@ -4,17 +4,20 @@ seo-title: Verwenden des Forms Workflows "E-Mail senden"
 description: Send Email step wurde in AEM Forms 6.4 eingeführt. Mithilfe dieses Schritts können wir Geschäftsprozesse oder Arbeitsabläufe erstellen, mit denen Sie E-Mails mit oder ohne Anlagen senden können. Im folgenden Video werden die Schritte zum Konfigurieren der Komponente "E-Mail senden"erläutert
 seo-description: Send Email step wurde in AEM Forms 6.4 eingeführt. Mithilfe dieses Schritts können wir Geschäftsprozesse oder Arbeitsabläufe erstellen, mit denen Sie E-Mails mit oder ohne Anlagen senden können. Im folgenden Video werden die Schritte zum Konfigurieren der Komponente "E-Mail senden"erläutert
 uuid: d054ebfb-3b9b-4ca4-8355-0eb0ee7febcb
-feature:  Workflow
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
 discoiquuid: 3a11f602-2f4c-423a-baef-28824c0325a1
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '497'
 ht-degree: 3%
 
 ---
