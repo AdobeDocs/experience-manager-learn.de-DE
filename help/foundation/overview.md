@@ -3,11 +3,13 @@ title: AEM Foundation-Videos und -Tutorials
 seo-title: AEM Foundation-Videos und -Tutorials
 description: 'Eine Sammlung von Videos und Tutorials für die Adobe Experience Manager Foundation. '
 seo-description: Eine Sammlung von Videos und Tutorials für die Adobe Experience Manager Foundation
+role: '"Leader, Architekt, Entwickler, Administrator, Business Practitioner"'
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 23664bae44b74ee35ab7f7cb415d2ba017ea8752
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '261'
-ht-degree: 22%
+source-wordcount: '268'
+ht-degree: 21%
 
 ---
 
@@ -25,7 +27,7 @@ Adobe Experience Manager bietet einen gemeinsamen Satz von Funktionen, die Benut
    *Cloud Manager für AEM ermöglicht eine einfache Verwaltung, Überprüfung und Selbstbedienung von AEM Umgebung.*
 
 * **[Öffentliche und private Schlüssel zur Verwendung mit Adobe I/O einrichten (Tutorial)](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *Erfahren Sie, wie Schlüssel und Keystores mit  [!DNL openssl] AEM und Adobe I/O generiert werden.*
+   *Erfahren Sie, wie Schlüssel und Keystores mit  [!DNL openssl] der AEM und Adobe I/O generiert werden.*
 
 * **[Verwenden der CI/CD-Pipeline von Cloud Manager (Video)](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
    *Erfahren Sie, wie Sie die CI/CD-Pipeline von Cloud Manager verwenden, um eine sichere und konsistente Bereitstellung zu gewährleisten.*
