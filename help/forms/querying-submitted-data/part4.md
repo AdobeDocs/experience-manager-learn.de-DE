@@ -3,20 +3,17 @@ title: AEM Forms mit JSON-Schema und -Daten[Teil 4]
 seo-title: AEM Forms mit JSON-Schema und -Daten[Teil 4]
 description: Mehrteilige Übung, um Sie durch die Schritte zu führen, die beim Erstellen eines adaptiven Formulars mit JSON-Schema und beim Abfragen der gesendeten Daten erforderlich sind.
 seo-description: Mehrteilige Übung, um Sie durch die Schritte zu führen, die beim Erstellen eines adaptiven Formulars mit JSON-Schema und beim Abfragen der gesendeten Daten erforderlich sind.
-feature: Adaptive Formulare
+feature: adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: Entwicklung
-role: Entwickler
-level: Erfahren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '480'
-ht-degree: 1%
+source-wordcount: '476'
+ht-degree: 0%
 
 ---
 
@@ -76,7 +73,7 @@ So führen Sie dieses Beispiel auf Ihrem lokalen System aus
 1. [Vergewissern Sie sich, dass Sie alle hier genannten Schritte ausgeführt haben](part2.md)
 1. [Importieren Sie die Datei &quot;Dashboard2.zip&quot;mit AEM Package Manager.](assets/dashboardv2.zip) Dieses Paket enthält alle erforderlichen Bundles, Konfigurationseinstellungen, benutzerdefinierte Senden- und Beispieldaten zur Abfrage.
 1. Erstellen eines adaptiven Formulars mit dem JSON-Schema
-1. Konfigurieren des adaptiven Formulars für die Übermittlung an benutzerdefinierte Übermittlungsaktion &quot;customsubmithelpx&quot;
+1. Konfigurieren Sie das adaptive Formular für die Übermittlung an die benutzerdefinierte Übermittlungsaktion &quot;customsubmithelpx&quot;
 1. Ausfüllen des Formulars und Senden
 1. Verweisen Sie auf [Dashboard.html](http://localhost:4502/content/AemForms/dashboard.html)
 1. Wählen Sie das Formular aus und führen Sie eine einfache Abfrage durch
