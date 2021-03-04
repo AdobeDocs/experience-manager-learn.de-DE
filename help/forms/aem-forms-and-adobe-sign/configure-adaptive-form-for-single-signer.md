@@ -1,18 +1,21 @@
 ---
 title: Adaptives Formular mit einem einzelnen Unterzeichner
 description: Adaptives Formular mit einem einzelnen Unterzeichner. In dem Video werden die verschiedenen Schritte erläutert, die zum Konfigurieren eines adaptiven Formulars mit einem einzelnen Unterzeichner erforderlich sind.
-feature: adaptive-forms
+feature: '"Adaptives Forms, Adobe Sign"'
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 thumbnail: 39475.jpg
 kt: 6103
+topic: Entwicklung
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '61'
-ht-degree: 0%
+source-wordcount: '69'
+ht-degree: 1%
 
 ---
 
