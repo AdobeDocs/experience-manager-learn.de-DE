@@ -1,19 +1,18 @@
 ---
 title: Benutzerdefinierte Smart-Tags für Bilder in AEM Assets
 description: Erfahren Sie, wie Sie die Smart-Tags von AEM Assets trainieren, um benutzerdefinierte Begriffe auf Assets anzuwenden.
-feature: smart-tags
-topics: metadata
-audience: developer, administrator
-doc-type: technical video
-activity: setup
+feature: Smart-Tags
 version: 6.4, 6.5, cloud-services
 kt: 795
 thumbnail: 22254.jpg
+topic: Content Management
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 159e9d7ea363768f202db91a1d0555c2e57ebb13
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 1%
+source-wordcount: '155'
+ht-degree: 4%
 
 ---
 
@@ -32,7 +31,7 @@ Benutzerdefinierte intelligente Tags oder erweiterte intelligente Tags können d
 
 Für benutzerdefinierte intelligente Tags für Bilder sind [intelligente Tags erforderlich, damit Bilder eingerichtet werden.](./image-smart-tags.md#set-up)
 
-Erfahren Sie, wie Sie mithilfe des Smart Content Service und Adobe I/O die Schulung für intelligente Tags in AEM Assets konfigurieren. Benutzerdefinierte intelligente Tags für Bilder
+Erfahren Sie, wie Sie mithilfe des Smart Content Service und der Adobe I/O die Schulung für intelligente Tags in AEM Assets konfigurieren. Benutzerdefinierte intelligente Tags für Bilder
 
 >[!VIDEO](https://video.tv.adobe.com/v/23405/?quality=12&learn=on)
 
