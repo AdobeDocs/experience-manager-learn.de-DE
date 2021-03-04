@@ -1,18 +1,21 @@
 ---
 title: Remote-Debugging des AEM SDK
 description: Der lokale Schnellstart des AEM-SDK ermöglicht das Remote-Java-Debugging von Ihrer IDE aus, sodass Sie die Ausführung von Live-Code in AEM ausführen können, um den genauen Ausführungsfluss zu verstehen.
-feature: null
+feature: Entwicklertools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5251
+topic: Entwicklung
+role: Entwickler
+level: Anfänger, Intermediate
 translation-type: tm+mt
-source-git-commit: a3d3612713decefb5c7e1cf5b2d4d21afff0a2f5
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 0%
+source-wordcount: '281'
+ht-degree: 1%
 
 ---
 
