@@ -2,17 +2,20 @@
 title: Authoring von Inhaltsfragmenten in AEM
 description: 'Inhaltsfragmente sind eine Inhaltsabstraktion in AEM, mit der textbasierte Inhalte unabhängig von den unterstützten Kanälen erstellt und verwaltet werden können. '
 sub-product: content-services
-feature: content-fragments
+feature: Inhaltsfragmente
 topics: authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
 version: cloud-service
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '374'
-ht-degree: 11%
+source-wordcount: '381'
+ht-degree: 12%
 
 ---
 
@@ -62,7 +65,7 @@ AEM Inhaltsfragmente können als ZIP-Datei mit Varianten, Elementen und Metadate
 
 >[!NOTE]
 >
-> Anmerkungen und Versionsvergleich für Inhaltsfragmente wurden in [AEM 6.4 Service Pack 2](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) und [AEM 6.3 Service Pack 3](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp3-release-notes.html) eingeführt.
+> Anmerkungen und Versionsvergleich für Inhaltsfragmente wurden in [AEM 6.4 Service Pack 2](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=de) und [AEM 6.3 Service Pack 3](https://helpx.adobe.com/de/experience-manager/6-3/release-notes/sp3-release-notes.html) eingeführt.
 
 ## Nächste Schritte
 
