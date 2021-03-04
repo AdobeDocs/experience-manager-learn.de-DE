@@ -3,7 +3,7 @@ title: Verwenden von LDAP mit AEM Forms Workflow
 seo-title: Verwenden von LDAP mit AEM Forms Workflow
 description: Zuweisen der AEM Forms Workflow-Aufgabe zum Manager des Absenders
 seo-description: Zuweisen der AEM Forms Workflow-Aufgabe zum Manager des Absenders
-feature: adaptive-forms,workflow
+feature: '"Adaptives Forms, Workflow"'
 topics: integrations
 audience: developer
 doc-type: article
@@ -11,11 +11,14 @@ activity: setup
 version: 6.3,6.4,6.5
 uuid: 3e32c3a7-387f-4652-8a94-4e6aa6cd5ab8
 discoiquuid: 671872b3-3de0-40da-9691-f8b7e88a9443
+topic: Entwicklung
+role: 'Administrator  '
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 0%
+source-wordcount: '549'
+ht-degree: 1%
 
 ---
 
