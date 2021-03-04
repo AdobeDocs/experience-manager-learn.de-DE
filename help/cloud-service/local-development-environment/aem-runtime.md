@@ -1,7 +1,7 @@
 ---
 title: Einrichten der lokalen AEM für AEM als Cloud Service-Entwicklung
 description: Richten Sie die Local AEM Runtime mithilfe des AEM als QuickStart-Jar des Cloud Service-SDK ein.
-feature: null
+feature: Entwicklertools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: develop
 audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 39ea3dd6133477a52fd91ee696936cd226fce5ea
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1652'
-ht-degree: 2%
+source-wordcount: '1657'
+ht-degree: 3%
 
 ---
 
@@ -28,7 +31,7 @@ Beachten Sie, dass `~` als Kurzbezeichnung für das Benutzerverzeichnis verwende
 
 Experience Manager ist eine Java-Anwendung und erfordert daher das Java-SDK, um die Entwicklungs-Tools zu unterstützen.
 
-1. [Laden Sie das neueste Java SDK 11 herunter und installieren Sie es](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fdc jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=Liste&amp;p.offset=0&amp;p.limit=14)
+1. [Laden Sie das neueste Java SDK 11 herunter und installieren Sie es](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=Liste&amp;p.offset=0&amp;p.limit=14)
 1. Stellen Sie sicher, dass Java 11 SDK installiert ist, indem Sie den Befehl ausführen:
    + Windows:`java -version`
    + macOS/Linux: `java --version`
@@ -147,7 +150,7 @@ Während der Entwicklung ist es möglicherweise wünschenswert, die Verteilung v
 
 ## Schnellstart-Jar-Beginn-Up-Modus
 
-Die Benennung der Schnellstartjar `aem-<tier>_<environment>-p<port number>.jar` gibt an, wie sie Beginn wird. Sobald AEM in einer bestimmten Ebene gestartet, verfasst oder veröffentlicht wurde, kann sie nicht mehr in eine andere Ebene geändert werden. Dazu muss der Ordner `crx-Quickstart`, der während der ersten Ausführung generiert wurde, gelöscht und die Schnellstart-JAR-Datei erneut ausgeführt werden. Umgebung und Anschlüsse können geändert werden, allerdings ist ein Stopp/Beginn der lokalen AEM erforderlich.
+Die Benennung der Schnellstartjar, `aem-<tier>_<environment>-p<port number>.jar` gibt an, wie sie Beginn wird. Sobald AEM in einer bestimmten Ebene gestartet, verfasst oder veröffentlicht wurde, kann sie nicht mehr in eine andere Ebene geändert werden. Dazu muss der Ordner `crx-Quickstart`, der während der ersten Ausführung generiert wurde, gelöscht und die Schnellstart-JAR-Datei erneut ausgeführt werden. Umgebung und Anschlüsse können geändert werden, allerdings ist ein Stopp/Beginn der lokalen AEM erforderlich.
 
 Das Ändern der Umgebung `dev`, `stage` und `prod` kann für Entwickler nützlich sein, um sicherzustellen, dass Umgebung-spezifische Konfigurationen korrekt definiert und von AEM gelöst werden. Es wird empfohlen, die lokale Entwicklung primär gegen den standardmäßigen `dev`-Umgebung-Ausführungsmodus durchzuführen.
 
@@ -223,7 +226,7 @@ oder zum Beginn des AEM Publish-Dienstes `cd` in den Ordner mit der Schnellstart
 
 ## Starten der Schnellstart-Jar über die Befehlszeile wird sofort abgebrochen{#troubleshooting-java-8}
 
-Beim Starten der Schnellstart-JAR-Datei über die Befehlszeile wird der Vorgang sofort abgebrochen und der AEM-Dienst wird nicht Beginn, mit der folgenden Fehlermeldung:
+Beim Starten der Schnellstart-JAR-Datei über die Befehlszeile wird der Vorgang sofort abgebrochen und der AEM-Dienst wird nicht Beginn, mit folgendem Fehler:
 
 ```shell
 ➜  ~/aem-sdk/author: java -jar aem-author-p4502.jar
@@ -236,7 +239,7 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-Der Grund dafür ist, dass AEM als Cloud Service Java SDK 11 erfordert und Sie eine andere Version, höchstwahrscheinlich Java 8, ausführen. Um dieses Problem zu beheben, laden Sie [Oracle Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fdc jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=Liste&amp;p.offset=0&amp;p.limit=14) herunter und installieren Sie es.
+Der Grund dafür ist, dass AEM als Cloud Service Java SDK 11 erfordert und Sie eine andere Version, höchstwahrscheinlich Java 8, ausführen. Um dieses Problem zu beheben, laden Sie [Oracle Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=Liste&amp;p.offset=0&amp;p.limit=14) herunter und installieren Sie es.
 Nachdem Java SDK 11 installiert wurde, überprüfen Sie, ob es sich um die aktive Version handelt, indem Sie Folgendes über die Befehlszeile ausführen:
 
 Nachdem Java 11 SDK installiert wurde, überprüfen Sie, ob es sich um die aktive Version handelt, indem Sie den Befehl über die Befehlszeile ausführen:
