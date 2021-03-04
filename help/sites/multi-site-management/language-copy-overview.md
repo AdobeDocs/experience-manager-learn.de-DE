@@ -3,7 +3,7 @@ title: Einführung in die Sprachkopie
 seo-title: Einführung in die Sprachkopie
 description: Verschaffen Sie sich einen Überblick über die Erstellung einer mehrsprachigen Website mit Sprachkopie in AEM Sites
 seo-description: Verschaffen Sie sich einen Überblick über die Erstellung einer mehrsprachigen Website mit Sprachkopie in AEM Sites
-feature: language-copy, live-copy, multi-site-manager
+feature: Sprachkopie, Multi-Site-Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -11,11 +11,14 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 5370
 thumbnail: 36487.jpg
+topic: Lokalisierung
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 309bed2f0c137bdd245c017cd1f94d7f6ca2d396
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '60'
-ht-degree: 0%
+source-wordcount: '69'
+ht-degree: 1%
 
 ---
 
