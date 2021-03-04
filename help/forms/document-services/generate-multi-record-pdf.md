@@ -1,16 +1,19 @@
 ---
 title: Generieren mehrerer PDFs aus einer Datendatei
 seo-title: Generieren mehrerer PDFs aus einer Datendatei
-feature: output-service
+feature: Ausgabe-Service
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '501'
 ht-degree: 2%
 
 ---
