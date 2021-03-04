@@ -1,16 +1,19 @@
 ---
 title: Code für das AEM-Stilsystem
 description: In diesem Video betrachten wir die Anatomie von CSS (oder LESS) und JavaScript, die zum Stilen der Core Title-Komponente von Adobe Experience Manager mithilfe des Style-Systems verwendet werden, sowie die Anwendung dieser Stile auf HTML und DOM.
-feature: style-system
+feature: Stilsystem
 topics: development, components, front-end-development
 audience: developer, implementer
 doc-type: technical video
 activity: understand
 version: 6.4, 6.5
+topic: Entwicklung
+role: Entwickler
+level: Vermittelt, erfahren
 translation-type: tm+mt
-source-git-commit: 664d3964df796d508973067f8fa4fe5ef83c5fec
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1151'
 ht-degree: 4%
 
 ---
@@ -22,7 +25,7 @@ In diesem Video sehen wir uns die Anatomie der CSS (oder [!DNL LESS]) und JavaSc
 
 >[!NOTE]
 >
->Das AEM Style System wurde mit [AEM 6.3 SP1](https://helpx.adobe.com/experience-manager/6-1/release-notes/sp3-release-notes.html) + [Feature Pack 20593](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-20593) eingeführt.
+>Das AEM Style System wurde mit [AEM 6.3 SP1](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp1-release-notes.html) + [Feature Pack 20593](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-20593) eingeführt.
 >
 >Das Video geht davon aus, dass die Komponente &quot;We.Retail Title&quot;aktualisiert wurde, um von [Core Components v2.0.0+](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases) zu übernehmen.
 
