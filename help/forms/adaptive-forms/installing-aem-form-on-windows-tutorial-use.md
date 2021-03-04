@@ -4,18 +4,21 @@ seo-title: Vereinfachte Schritte für die Installation von AEM Forms unter Windo
 description: Schnelle und einfache Installation von AEM Forms auf Windows
 seo-description: Schnelle und einfache Installation von AEM Forms auf Windows
 uuid: a148b8f0-83db-47f6-89d3-c8a9961be289
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: administration
 audience: developer
 doc-type: article
 activity: setup
 version: 6.4,6.5
 discoiquuid: 1182ef4d-5838-433b-991d-e24ab805ae0e
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '613'
-ht-degree: 7%
+source-wordcount: '618'
+ht-degree: 9%
 
 ---
 
