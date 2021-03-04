@@ -4,16 +4,19 @@ description: Das Content Transfer Tool ist die empfohlene Methode, um Inhalte vo
 version: cloud-service
 doc-type: technical-video
 topics: migration
-feature: content-transfer-tool
+feature: Migration
 activity: develop
 audience: developer
 kt: 5352
 thumbnail: kt-5352.jpg
+topic: Migration
+role: Architekt, Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 44734103ede53f559bbdfe848f5ca308ff4e128b
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '82'
-ht-degree: 2%
+source-wordcount: '87'
+ht-degree: 16%
 
 ---
 
@@ -26,4 +29,4 @@ Das Content Transfer Tool ist die empfohlene Methode, um Inhalte von einer lokal
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Übersicht über das Content Transfer Tool](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
+* [Übersicht über das Content Transfer Tool](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
