@@ -1,7 +1,7 @@
 ---
 title: Debuggen eines Asset compute-Workers
 description: asset compute-Worker können auf verschiedene Weise debuggt werden, von einfachen Debug-Protokollanweisungen über angehängten VS-Code als Remote-Debugger bis hin zum Abruf von Protokollen für Aktivierungen in Adobe I/O Runtime, die von AEM als Cloud Service initiiert wurden.
-feature: asset-compute
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
+topic: Integrationen, Entwicklung
+role: Entwickler
+level: Vermittelt, erfahren
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
@@ -93,7 +96,7 @@ _Clickthrough zum Debuggen eines Asset compute-Workers mit wskdebug (Kein Audio)
 
 [AEM als Cloud Service nutzt Asset compute-Mitarbeiter über die Verarbeitung von ](../deploy/processing-profiles.md) Profilen, indem sie sie direkt in Adobe I/O Runtime aufrufen. Da diese Aufrufe keine lokale Entwicklung beinhalten, können ihre Ausführung nicht mit lokalen Tools wie Asset compute Development Tool oder wskdebug debuggt werden. Stattdessen kann die Adobe I/O-CLI verwendet werden, um Protokolle vom Worker abzurufen, der in einem bestimmten Arbeitsbereich in Adobe I/O Runtime ausgeführt wird.
 
-1. Vergewissern Sie sich, dass die Variablen [Workspace-spezifische Umgebung](../deploy/runtime.md) über `AIO_runtime_namespace` und `AIO_runtime_auth` festgelegt werden, basierend auf dem zu debuggenden Arbeitsbereich.
+1. Stellen Sie sicher, dass die Variablen [Workspace-spezifische Umgebung](../deploy/runtime.md) über `AIO_runtime_namespace` und `AIO_runtime_auth` festgelegt werden, basierend auf dem zu debuggenden Arbeitsbereich.
 1. Führen Sie in der Befehlszeile `aio app logs` aus.
    + Wenn der Arbeitsbereich stark frequentiert wird, erweitern Sie die Anzahl der Aktivierungen-Protokolle über das `--limit`-Flag:
       `$ aio app logs --limit=25`
