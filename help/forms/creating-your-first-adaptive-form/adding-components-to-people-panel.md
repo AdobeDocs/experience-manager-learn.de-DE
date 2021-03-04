@@ -4,7 +4,7 @@ seo-title: Hinzufügen von Komponenten zum Bedienfeld "Personen"
 description: Konfigurieren Sie das Bedienfeld "Personen", indem Sie das Fragment "Details zum Ehegatten"hinzufügen. Es wird eine Regel erstellt, mit der das Fragment zum Ehegatten angezeigt wird, wenn der Familienstand des Antragstellers verheiratet ist.
 seo-description: Konfigurieren Sie das Bedienfeld "Personen", indem Sie das Fragment "Details zum Ehegatten"hinzufügen. Es wird eine Regel erstellt, mit der das Fragment zum Ehegatten angezeigt wird, wenn der Familienstand des Antragstellers verheiratet ist.
 uuid: be5d2cff-797b-44ea-90e9-2423f1ec8983
-feature: Adaptive Formulare
+feature: adaptive Formulare
 topics: authoring
 audience: developer
 doc-type: tutorial
@@ -13,14 +13,11 @@ version: 6.4,6.5
 kt: 4210
 thumbail: 28385.jpg
 discoiquuid: 520c8633-925f-4d3f-b800-ea34710f68d7
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 3%
+source-wordcount: '112'
+ht-degree: 0%
 
 ---
 
