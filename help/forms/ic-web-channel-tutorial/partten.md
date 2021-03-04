@@ -4,21 +4,18 @@ seo-title: Konfigurieren des Outlook-Bedienfelds für Ruhestand
 description: Dies ist Teil 10 eines mehrstufigen Tutorials zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil konfigurieren wir das Retirement Outlook-Bedienfeld, indem wir Text- und Diagrammkomponenten hinzufügen.
 seo-description: Dies ist Teil 10 eines mehrstufigen Tutorials zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil konfigurieren wir das Retirement Outlook-Bedienfeld, indem wir Text- und Diagrammkomponenten hinzufügen.
 uuid: 1d5119b5-e797-4bf0-9b10-995b3f051f92
-feature: Interaktive Kommunikation
+feature: interactive-communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 1%
+source-wordcount: '379'
+ht-degree: 0%
 
 ---
 
