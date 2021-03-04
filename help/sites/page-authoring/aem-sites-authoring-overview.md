@@ -3,7 +3,7 @@ title: Überblick über Authoring in AEM Sites
 seo-title: Überblick über Authoring in AEM Sites
 description: Das folgende Video bietet einen Überblick über grundlegende Konzepte des Authoring in einer AEM Authoring-Umgebung. Als Grundlage wird die Sites-Konsole verwendet.
 seo-description: Das folgende Video bietet einen Überblick über grundlegende Konzepte des Authoring in einer AEM Authoring-Umgebung. Als Grundlage wird die Sites-Konsole verwendet.
-feature: page-editor, template-editor
+feature: Seiten-Editor, bearbeitbare Vorlagen
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,10 +11,13 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4242
 thumbnail: 33594.jpg
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '115'
+source-wordcount: '124'
 ht-degree: 24%
 
 ---
