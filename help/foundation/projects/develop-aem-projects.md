@@ -2,16 +2,19 @@
 title: Projekte in AEM entwickeln
 description: Ein Entwicklungs-Tutorial, in dem die Entwicklung für AEM Projekte erläutert wird.  In diesem Lernprogramm erstellen wir eine benutzerdefinierte Projektvorlage, mit der neue Projekte in AEM zur Verwaltung von Workflows und Aufgaben für das Authoring von Inhalten erstellt werden können.
 version: 6.3, 6.4, 6.5
-feature: projects, workflow
+feature: '"Projekte, Workflow"'
 topics: collaboration, development, governance
 activity: develop
 audience: developer, implementer, administrator
 doc-type: tutorial
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '4649'
-ht-degree: 0%
+source-wordcount: '4654'
+ht-degree: 1%
 
 ---
 
@@ -333,7 +336,7 @@ SpeicherortSpeicherort des Workflow-Modells in 6.4+
 
    1. Inhalt bearbeiten
    1. Genehmigung
-   1. Veröffentlichung
+   1. Veröffentlichen
 
    ![Konfiguration der Workflow-Phasen](./assets/develop-aem-projects/workflow-model-stage-properties.png)
 
@@ -454,7 +457,7 @@ SpeicherortSpeicherort des Workflow-Modells in 6.4+
    }
    ```
 
-   *Beachten Sie, dass wir eine direkte String-Übereinstimmung durchführen, um die Route zu bestimmen. Daher ist es wichtig, dass die in den Zweigskripten festgelegten Werte mit den in Schritt 4 festgelegten Route-Werten übereinstimmen.
+   *Beachten Sie, dass wir eine direkte String-Übereinstimmung durchführen, um die Route zu bestimmen. Daher ist es wichtig, dass die in den Zweigskripten eingestellten Werte mit den in Schritt 4 festgelegten Route-Werten übereinstimmen.
 
 1. Ziehen Sie mit Drag &amp; Drop einen weiteren Schritt (**Projektversion erstellen**) auf das Aufgabe nach links (Zweig 1) unter der ODER-Teilung. Füllen Sie das Dialogfeld mit den folgenden Eigenschaften aus:
 
