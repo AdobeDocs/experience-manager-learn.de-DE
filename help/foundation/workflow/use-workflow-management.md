@@ -1,17 +1,22 @@
 ---
 title: Verwalten des Arbeitsablaufs in AEM
 description: 'AEM Workflow-Management bietet einem Benutzer mehr Sichtbarkeit über Inhalte im Workflow und ermöglicht eine einfachere Verwaltung der Workflow-Modelldefinitionen. '
-version: 6.5, cloud-service
+version: 6.5
+sub-product: Stiftung, Stätten, Vermögenswerte
 feature: Workflow
-topic: Content Management
-role: 'Administrator  '
-level: Zwischenschaltung
+topics: governance, collaboration
+activity: use
+audience: administrator
+doc-type: feature video
+topic: Zusammenarbeit
+role: Entwickler
+level: Anfänger
 kt: 2557
 thumbnail: 27848.jpg
 translation-type: tm+mt
-source-git-commit: 46dead200ec61acf9fdf537f18818f5bb60dbc90
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '138'
 ht-degree: 2%
 
 ---
