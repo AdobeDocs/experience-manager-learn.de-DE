@@ -1,7 +1,7 @@
 ---
 title: Erstellen des wichtigsten adaptiven Formulars
 description: Erstellen Sie die adaptiven Formulare, um die Informationen zum Antragsteller und das adaptive Formular zum Abrufen des gespeicherten adaptiven Formulars zu erfassen.
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6552
 thumbnail: 6552.jpg
+topic: Entwicklung
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '203'
-ht-degree: 0%
+source-wordcount: '209'
+ht-degree: 1%
 
 ---
 
