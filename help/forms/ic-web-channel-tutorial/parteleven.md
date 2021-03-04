@@ -4,18 +4,21 @@ seo-title: Konfigurieren des Investment Mix-Bedienfelds
 description: Dies ist Teil 11 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil werden Kreisdiagramme hinzugefügt, um den aktuellen und Modell-Investment-Mix anzuzeigen.
 seo-description: Dies ist Teil 11 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil werden Kreisdiagramme hinzugefügt, um den aktuellen und Modell-Investment-Mix anzuzeigen.
 uuid: b0132912-cb6e-4dec-8309-5125d29ad291
-feature: interactive-communication
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 77de4e76-53ee-467c-a71c-d1d3ea15283b
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '359'
-ht-degree: 0%
+source-wordcount: '363'
+ht-degree: 1%
 
 ---
 
