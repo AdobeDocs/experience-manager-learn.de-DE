@@ -2,17 +2,20 @@
 title: hinzufügen Navigation und Routing | Erste Schritte mit dem AEM SPA Editor und React
 description: Erfahren Sie, wie mehrere Ansichten im SPA durch Zuordnen zu AEM Seiten mit dem SPA Editor SDK unterstützt werden können. Die dynamische Navigation wird mithilfe des React Routers implementiert und einer vorhandenen Header-Komponente hinzugefügt.
 sub-product: Sites
-feature: maven-archetype, SPA Editor
+feature: SPA
 topics: development
 version: cloud-service
 activity: develop
 audience: developer
 kt: 4988
 thumbnail: 4988-spa-react.jpg
+topic: SPA
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 892cb074814eabd347ba7aef883721df0ee4d431
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2112'
+source-wordcount: '2117'
 ht-degree: 2%
 
 ---
