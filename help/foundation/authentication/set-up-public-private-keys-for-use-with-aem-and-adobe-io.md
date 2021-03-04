@@ -1,17 +1,20 @@
 ---
 seo: Set up public and private keys for use with AEM and Adobe I/O
-description: 'AEM verwendet Paare öffentlicher/privater Schlüssel, um sicher mit Adobe I/O und anderen Webdiensten zu kommunizieren. Dieses kurze Lernprogramm zeigt, wie kompatible Schlüssel und Keystores mit dem OpenSSL-Befehlszeilenwerkzeug generiert werden können, das sowohl mit AEM als auch mit Adobe I/O funktioniert. '
+description: 'AEM verwendet Paare öffentlicher/privater Schlüssel, um sicher mit Adobe I/O und anderen Webdiensten zu kommunizieren. Dieses kurze Lernprogramm zeigt, wie kompatible Schlüssel und Keystores mithilfe des Befehls openssl generiert werden können, das sowohl mit AEM als auch mit Adobe I/O funktioniert. '
 version: 6.4, 6.5
-feature: authentication
+feature: 'Benutzer und Gruppen '
 topics: authentication, integrations
 activity: setup
 audience: architect, developer, implementer
 doc-type: tutorial
 kt: 2450
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: 3f973e36531a2d04cbaf6bb8dd70b39fef7d8b2f
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '774'
 ht-degree: 0%
 
 ---
@@ -130,22 +133,22 @@ Klicken Sie in der Keystore-Konsole des Benutzers auf **[!UICONTROL Hinzufügen 
 
 Wenn der private Schlüssel erfolgreich aus dem bereitgestellten Keystore in den AEM Keystore geladen wurde, werden die Metadaten des privaten Schlüssels in der Keystore-Konsole des Benutzers angezeigt.
 
-## Hinzufügen des öffentlichen Schlüssels zu Adobe I/O {#adding-the-public-key-to-adobe-i-o}
+## Öffentlichen Schlüssel zur Adobe I/O {#adding-the-public-key-to-adobe-i-o} hinzufügen
 
-Der entsprechende öffentliche Schlüssel muss nach Adobe I/O hochgeladen werden, damit der AEM-Dienstbenutzer, der über den entsprechenden privaten Schlüssel verfügt, sicher kommunizieren kann.
+Der entsprechende öffentliche Schlüssel muss in die Adobe I/O hochgeladen werden, damit der AEM-Dienstbenutzer, der über den entsprechenden privaten Schlüssel verfügt, sicher kommunizieren kann.
 
-### Neue Adobe I/O-Integration {#create-a-adobe-i-o-new-integration} erstellen
+### Eine neue Adobe I/O-Integration {#create-a-adobe-i-o-new-integration} erstellen
 
-![Neue Adobe I/O-Integration erstellen](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--create-new-integration.png)
+![Neue Adobe I/O erstellen](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--create-new-integration.png)
 
-*[[!UICONTROL Adobe I/O-Integration]](https://console.adobe.io/)  erstellen >  [!UICONTROL Neue Integration]*
+*[[!UICONTROL Integration]](https://console.adobe.io/)  der Adobe I/O erstellen >  [!UICONTROL Neue Integration]*
 
 Zum Erstellen einer neuen Integration in Adobe I/O muss ein öffentliches Zertifikat hochgeladen werden. Laden Sie die Datei **certificate.crt** hoch, die mit dem Befehl `openssl req` generiert wurde.
 
-### Vergewissern Sie sich, dass die öffentlichen Schlüssel in Adobe I/O geladen wurden.{#verify-the-public-keys-are-loaded-in-adobe-i-o}
+### Vergewissern Sie sich, dass die öffentlichen Schlüssel in Adobe I/O {#verify-the-public-keys-are-loaded-in-adobe-i-o} geladen wurden.
 
 ![Öffentliche Schlüssel in Adobe I/O überprüfen](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--public-keys.png)
 
-Die installierten öffentlichen Schlüssel und ihr Ablaufdatum werden in der Konsole [!UICONTROL Integrationen] unter Adobe I/O aufgeführt. Über die Schaltfläche **[!UICONTROL Hinzufügen einem öffentlichen Schlüssel]** können mehrere öffentliche Schlüssel hinzugefügt werden.
+Die installierten öffentlichen Schlüssel und ihr Ablaufdatum werden in der Adobe I/O in der Konsole [!UICONTROL Integrationen] aufgeführt. Über die Schaltfläche **[!UICONTROL Hinzufügen einem öffentlichen Schlüssel]** können mehrere öffentliche Schlüssel hinzugefügt werden.
 
-Jetzt halten AEM den privaten Schlüssel und die Adobe I/O-Integration enthält den entsprechenden öffentlichen Schlüssel, sodass AEM sicher mit Adobe I/O kommunizieren können.
+Jetzt halten AEM den privaten Schlüssel und die Adobe I/O-Integration enthält den entsprechenden öffentlichen Schlüssel, sodass AEM sicher mit der Adobe I/O kommunizieren können.
