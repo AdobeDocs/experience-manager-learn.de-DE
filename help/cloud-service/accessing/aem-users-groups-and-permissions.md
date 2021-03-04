@@ -1,7 +1,7 @@
 ---
 title: AEM, Benutzergruppen und Berechtigungen
 description: Adobe Experience Manager baut auf Adobe-IMS-Benutzern, Benutzergruppen und Produkt-Profilen auf, um Benutzern benutzerdefinierbaren Zugriff auf AEM zu ermöglichen. Erfahren Sie, wie Sie AEM Gruppen und Berechtigungen definieren und wie diese in Abstimmung mit Adobe IMS-Abstraktionen funktionieren, um einen nahtlosen und anpassbaren Zugriff auf AEM zu ermöglichen.
-feature: users-and-groups
+feature: 'Benutzer und Gruppen '
 topics: authentication
 version: cloud-service
 activity: setup
@@ -9,11 +9,14 @@ audience: administrator
 doc-type: feature video
 kt: 6060
 thumbnail: 39151.jpg
+topic: Administration, Sicherheit
+role: 'Administrator  '
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: f30d15f0578b7e529e4acefb8e1d2e29157ab359
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 16%
+source-wordcount: '232'
+ht-degree: 18%
 
 ---
 
