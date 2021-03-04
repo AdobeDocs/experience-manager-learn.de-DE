@@ -9,10 +9,14 @@ activity: develop
 audience: developer
 kt: 4083
 thumbnail: 30359.jpg
+feature: '"Hauptkomponenten, AEM Projektarchiv"'
+topic: '"Content-Management, Entwicklung"'
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 76462bb75ceda1921db2fa37606ed7c5a1eadb81
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3291'
+source-wordcount: '3301'
 ht-degree: 4%
 
 ---
@@ -195,7 +199,7 @@ Diese Integration wird vom AEM Project Archetype automatisch eingerichtet. Erfah
    > Dies geschieht normalerweise, weil sich Ihre Umgebung seit der Ausführung von `npm install` geändert hat.
    > Führen Sie `npm rebuild node-sass` aus, um das Problem zu beheben. Dies geschieht, wenn sich die auf Ihrem lokalen Dev-Computer installierte Version von `npm` von der Version unterscheidet, die von der Maven `frontend-maven-plugin` in der Datei `aem-guides-wknd/pom.xml` verwendet wird. Sie können dies dauerhaft beheben, indem Sie die Version in der Pom-Datei so ändern, dass sie Ihrer lokalen Version entspricht oder umgekehrt.
 
-1. Der Befehl `npm run dev` sollte den Quellcode für das Webpack-Projekt erstellen und kompilieren und schließlich die **clientlib-site** und **clientlib-Abhängigkeiten** im Modul **ui.apps** füllen.
+1. Der Befehl `npm run dev` sollte den Quellcode für das Webpack-Projekt erstellen und kompilieren und letztendlich die **clientlib-site** und **clientlib-Abhängigkeiten** im Modul **ui.apps** füllen.
 
    >[!NOTE]
    >
