@@ -3,23 +3,21 @@ title: AEM Desktop App
 description: Verwenden Sie AEM Desktop-App, um den Zugriff auf alle Assets, die auf dem Desktop verwaltet werden, für alle Anwendungs- und Dateiformate zu vereinfachen.
 kt: 2551
 sub-product: Assets
-feature: desktop-app
-topics: authoring, collaboration, content-velocity
+feature: Experience Manager Desktop App
 version: 6.5, 6.4, 6.3
-doc-type: feature video
-activity: use
-team: TM
-audience: author, marketer
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 13%
+source-wordcount: '146'
+ht-degree: 16%
 
 ---
 
 
-# Verwenden der AEM Desktop App
+# Verwenden des AEM Desktop-Programms
 
 Verwenden Sie AEM Desktop-App, um den Zugriff auf alle Assets, die auf dem Desktop verwaltet werden, für alle Anwendungs- und Dateiformate zu vereinfachen.
 
@@ -36,4 +34,4 @@ Verwenden Sie AEM Desktop-App, um den Zugriff auf alle Assets, die auf dem Deskt
 
 ## Zusätzliche Ressourcen
 
-+ [Laden Sie die neueste AEM Desktop-App herunter](https://docs.adobe.com/content/help/en/experience-manager-desktop-app/using/release-notes.html)
++ [Laden Sie die neueste AEM Desktop-App herunter](https://docs.adobe.com/content/help/de-DE/experience-manager-desktop-app/using/release-notes.html)
