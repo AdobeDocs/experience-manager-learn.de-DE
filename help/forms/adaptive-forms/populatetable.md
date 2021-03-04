@@ -3,17 +3,20 @@ title: 'Tabelle für adaptives Formular ausfüllen '
 seo-title: Tabelle für adaptives Formular ausfüllen
 description: Füllen Sie die Tabelle "Adaptives Formular"mit den Ergebnissen von Formulardatenmodell-Dienstaufrufen
 seo-description: Füllen Sie die Tabelle "Adaptives Formular"mit den Ergebnissen von Formulardatenmodell-Dienstaufrufen
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: Entwicklung
+role: Geschäftspraktiker
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 0%
+source-wordcount: '260'
+ht-degree: 1%
 
 ---
 
