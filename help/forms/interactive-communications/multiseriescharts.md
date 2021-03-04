@@ -3,17 +3,20 @@ title: Multi-Serie Charts in AEM Forms
 seo-title: Multi-Serie Charts in AEM Forms
 description: Erstellen Sie ein geeignetes Formulardatenmodell, um mehrere Seriendiagramme in Print- und Web-Kanal-Dokumenten zu erstellen.
 seo-description: Erstellen Sie ein geeignetes Formulardatenmodell, um mehrere Seriendiagramme in Print- und Web-Kanal-Dokumenten zu erstellen.
-feature: interactive-communication
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 0%
+source-wordcount: '306'
+ht-degree: 1%
 
 ---
 
