@@ -4,21 +4,18 @@ seo-title: Konfigurieren des Liniendiagramms für Ihr erstes interaktives Kommun
 description: Dies ist Teil 8 eines mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil fügen wir dem Bedienfeld Kontofortschritt ein Liniendiagramm hinzu.
 seo-description: Dies ist Teil 8 eines mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil fügen wir dem Bedienfeld Kontofortschritt ein Liniendiagramm hinzu.
 uuid: 08c3e7af-e3cb-4ee0-bdc1-d112bfa70e40
-feature: Interaktive Kommunikation
+feature: interactive-communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 4292303c-3ef4-4df2-b537-fdb011412670
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 2%
+source-wordcount: '229'
+ht-degree: 0%
 
 ---
 
