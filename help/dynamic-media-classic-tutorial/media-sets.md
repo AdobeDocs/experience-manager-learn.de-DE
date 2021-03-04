@@ -2,15 +2,18 @@
 title: Bild-, Muster-, Rotationsset- und gemischte Mediensets
 description: Eine der nützlichsten und leistungsfähigsten Funktionen von Dynamic Media Classic ist die Unterstützung für das Erstellen von Rich-Media-Sets wie Bild, Muster, Rotationsset und gemischte Mediensets. Erfahren Sie, was jedes Rich-Media-Set ist und wie Sie die einzelnen Typen in Dynamic Media Classic erstellen. Erfahren Sie mehr über Stapelsatzvorgaben, mit denen die Erstellung von Rich-Media-Sets beim Hochladen automatisiert wird.
 sub-product: dynamic-media
-feature: sets
+feature: Dynamic Media Classic, Bildsätze, Mix-Mediensets, Rotationssets
 doc-type: tutorial
 topics: sets, development, authoring, configuring
 audience: all
 activity: use
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: e7a02900b0582fe9b329e5f9bd568f3c54d8d63d
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1471'
 ht-degree: 2%
 
 ---
@@ -121,7 +124,7 @@ Es ist zwar möglich, die Vorgabe selbst zu erstellen (sie finden Sie unter **Ei
 
 Eine einfache Benennungsregel wurde früher vorgeschlagen, die sehr einfach in eine Stapelsatzvorgabe integriert werden kann. Da die Vorgaben jedoch sehr flexibel sind, können sie komplexe Benennungsstrategien handhaben. Kurz gesagt, die Bilder, die zu einem Satz gehören, sollten durch einen gemeinsamen Namen zusammengeführt werden — häufig die SKU-Nummer oder Produkt-ID. In Dynamic Media Classic haben Sie entweder eine Standardbenennungsregel für alle Bilder festgelegt, die für eine Vorgabe verwendet werden sollen, oder Sie können mehrere Vorgaben mit jeweils unterschiedlichen Benennungsregeln erstellen.
 
-Stapelsatzvorgaben werden nur beim Hochladen angewendet. sie können nach dem Hochladen der Bilder nicht mehr ausgeführt werden. Daher ist es wichtig, dass Sie Ihre Benennungsregeln planen und eine Vorgabe erstellen, bevor Sie alle Beginn hochladen.
+Stapelsatzvorgaben werden nur beim Hochladen angewendet. sie können nach dem Hochladen der Bilder nicht mehr ausgeführt werden. Daher ist es wichtig, Ihre Benennungsregeln zu planen und eine Vorgabe zu erstellen, bevor Sie alle Beginn hochladen.
 
 Nachdem die Vorgaben erstellt wurden, kann der Administrator der Firma wählen, ob sie aktiv oder inaktiv sind. Aktiv bedeutet, dass sie auf der Upload-Seite unter **Auftragsoptionen** angezeigt werden, während inaktive Vorgaben ausgeblendet bleiben.
 
