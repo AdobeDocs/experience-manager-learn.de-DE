@@ -1,7 +1,7 @@
 ---
 title: Bereitstellen von Asset compute-Mitarbeitern in Adobe I/O Runtime zur Verwendung mit AEM als Cloud Service
 description: 'asset compute-Projekte und die darin enthaltenen Arbeiter müssen nach Adobe I/O Runtime entsandt werden, damit AEM als Cloud Service verwendet werden kann. '
-feature: asset-compute
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6286
 thumbnail: KT-6286.jpg
+topic: Integrationen, Entwicklung
+role: Entwickler
+level: Vermittelt, erfahren
 translation-type: tm+mt
-source-git-commit: af610f338be4878999e0e9812f1d2a57065d1829
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '656'
 ht-degree: 0%
 
 ---
@@ -20,7 +23,7 @@ ht-degree: 0%
 
 # Auf Adobe I/O Runtime bereitstellen
 
-asset compute-Projekte und die darin enthaltenen Arbeitskräfte müssen über die Adobe I/O-CLI nach Adobe I/O Runtime entsandt werden, um von AEM als Cloud Service genutzt werden zu können.
+asset compute-Projekte und die darin enthaltenen Arbeiter müssen über die Adobe I/O-CLI nach Adobe I/O Runtime entsandt werden, um von AEM als Cloud Service genutzt werden zu können.
 
 Bei der Bereitstellung auf Adobe I/O Runtime zur Verwendung durch AEM als Cloud Service Author-Dienst sind nur zwei Umgebung erforderlich:
 
@@ -53,7 +56,7 @@ Wenn Sie True Umgebung-Variablen festlegen, werden Werte für die gleichnamigen 
 
 Der allgemeine Ansatz, der normalerweise von einem CI/CD-System automatisiert wird, für die Bereitstellung auf Stage- und Production-Umgebung lautet:
 
-1. Stellen Sie sicher, dass das Modul [Adobe I/O CLI npm und das Asset compute-Plug-in](../set-up/development-environment.md#aio) installiert sind.
+1. Stellen Sie sicher, dass das CLI-Modul und das Asset compute-Plug-in [Adobe I/O](../set-up/development-environment.md#aio) installiert sind.
 1. Sehen Sie sich das von Git bereitzustellende Asset compute-Projekt an.
 1. Legen Sie die Umgebung mit den Werten fest, die der Zielgruppe Workspace (Phase oder Produktion) entsprechen
    + Die beiden erforderlichen Variablen sind `AIO_runtime_namespace` und `AIO_runtime_auth` und werden per Workspace in der Adobe I/O Developer Console über die Funktion __Alle herunterladen__ abgerufen.
@@ -78,6 +81,6 @@ Wenn sich die Asset compute-Projektversion ändert, ändern sich auch die Arbeit
 
 ## Workspace API-Bereitstellung{#workspace-api-provisioning}
 
-Beim Einrichten des Projekts &quot;Adobe-Projekt - Firefly&quot;in Adobe I/O](../set-up/firefly.md) zur Unterstützung der lokalen Entwicklung wurde ein neuer Entwicklungsarbeitsbereich erstellt und __Asset compute, I/O-Ereignis__ und __I/O-Ereignisse-Management-APIs__ hinzugefügt.[
+Beim Einrichten des Projekts &quot;Adobe - Projekt - Firefly&quot;in Adobe I/O](../set-up/firefly.md) zur Unterstützung der lokalen Entwicklung wurde ein neuer Arbeitsbereich für Entwicklung erstellt und __Asset compute, I/O-Ereignis__ und __I/O-Ereignisse-Management-APIs__ hinzugefügt.[
 
 Die APIs __Asset compute, I/O-Ereignis__ und __I/O-Ereignisse-Management-APIs__ werden nur explizit zu den für die lokale Entwicklung verwendeten Arbeitsbereichen hinzugefügt. Arbeitsflächen, die (ausschließlich) mit AEM als Cloud Service-Umgebung integrieren, benötigen __nicht__ diese APIs explizit, da die APIs natürlich als Cloud Service AEM zur Verfügung gestellt werden.
