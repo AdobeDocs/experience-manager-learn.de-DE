@@ -3,17 +3,20 @@ title: Generieren von interaktivem Communications-Dokument für den Druck von Ka
 seo-title: Generieren von interaktivem Communications-Dokument für den Druck von Kanal mithilfe des Mechanismus für überwachte Ordner
 description: Verwenden des überwachten Ordners zum Generieren von Dokumenten für den Kanal
 seo-description: Verwenden des überwachten Ordners zum Generieren von Dokumenten für den Kanal
-feature: interactive-communication
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: Entwicklung
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 449202af47b6bbcd9f860d5c5391d1f7096d489e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 0%
+source-wordcount: '487'
+ht-degree: 1%
 
 ---
 
