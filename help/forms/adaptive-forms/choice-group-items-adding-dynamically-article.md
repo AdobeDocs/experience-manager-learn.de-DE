@@ -3,19 +3,16 @@ title: Hinzufügen von Elementen zur Auswahlgruppenkomponente
 seo-title: Hinzufügen von Elementen zur Auswahlgruppenkomponente
 description: Elemente dynamisch zur Auswahlgruppenkomponente Hinzufügen
 seo-description: Elemente dynamisch zur Auswahlgruppenkomponente Hinzufügen
-feature: Adaptive Formulare
+feature: adaptive Formulare
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
-topic: Entwicklung
-role: Geschäftspraktiker
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '528'
 ht-degree: 3%
 
 ---
