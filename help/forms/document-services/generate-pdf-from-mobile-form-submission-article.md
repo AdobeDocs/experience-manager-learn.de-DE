@@ -4,17 +4,20 @@ seo-title: Generiert PDF-Dateien aus HTML5-Formularübermittlung.
 description: Generiert PDF-Dateien aus der Übermittlung des Mobile Forms
 seo-description: Generiert PDF-Dateien aus der Übermittlung des Mobile Forms
 uuid: 61f07029-d440-44ec-98bc-f2b5eef92b59
-feature: mobile-forms
+feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 816f1a75-6ceb-457b-ba18-daf229eed057
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
@@ -22,7 +25,7 @@ ht-degree: 0%
 
 # Generiert PDF-Dateien aus der HTML5-Formularübermittlung {#generate-pdf-from-htm-form-submission}
 
-Dieser Artikel führt Sie durch die Schritte zum Generieren von PDF-Dateien aus einer HTML5-Formularübermittlung (auch Mobile Forms genannt). In dieser Demo werden auch die Schritte erläutert, die zum Hinzufügen eines Bildes zum HTML5-Formular und zum Zusammenführen des Bildes in der endgültigen PDF-Datei erforderlich sind.
+In diesem Artikel werden Sie durch die Schritte geführt, die beim Generieren von PDF-Dateien aus einer HTML5-Formularübermittlung (auch Mobile Forms genannt) erforderlich sind. In dieser Demo werden auch die Schritte erläutert, die zum Hinzufügen eines Bildes zum HTML5-Formular und zum Zusammenführen des Bildes in der endgültigen PDF-Datei erforderlich sind.
 
 Um eine Live-Demonstration dieser Funktion anzuzeigen, besuchen Sie bitte den [Beispielserver](https://forms.enablementadobe.com/content/samples/samples.html?query=0) und suchen Sie nach &quot;Mobile Form To PDF&quot;.
 
