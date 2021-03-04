@@ -3,18 +3,21 @@ title: 'Verwenden automatisierter Tests mit AEM adaptiven Forms '
 seo-title: 'Verwenden automatisierter Tests mit AEM adaptiven Forms '
 description: Automatisches Testen des adaptiven Forms mit dem Calvin SDK
 seo-description: Automatisches Testen des adaptiven Forms mit dem Calvin SDK
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
 uuid: 3ad4e6d6-d3b1-4e4d-9169-847f74ba06be
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 5%
+source-wordcount: '465'
+ht-degree: 6%
 
 ---
 
