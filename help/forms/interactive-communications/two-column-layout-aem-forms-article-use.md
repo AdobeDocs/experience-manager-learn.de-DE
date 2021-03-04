@@ -3,17 +3,20 @@ title: Erstellen von zweispaltigen Layouts für Print Kanal-Dokumente
 seo-title: Erstellen von zweispaltigen Layouts für Print Kanal-Dokumente
 description: Erstellen von 2 Spalten-Layouts für Print Kanal Dokument
 seo-description: Erstellen von 2 Spalten-Layouts für Print Kanal Dokument
-feature: interactive-communication
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
+topic: Entwicklung
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 314f798f7a80f9c554e5bea052f8a64ae397d0de
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '238'
-ht-degree: 0%
+source-wordcount: '243'
+ht-degree: 2%
 
 ---
 
