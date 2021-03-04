@@ -1,7 +1,7 @@
 ---
 title: Einrichten von Entwicklungstools für AEM als Cloud Service-Entwicklung
 description: Richten Sie eine lokale Entwicklungsmaschine mit allen grundlegenden Werkzeugen ein, die zur Entwicklung gegen AEM lokal erforderlich sind.
-feature: null
+feature: Entwicklertools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: develop
 audience: developer
 kt: 4267
 thumbnail: 25907.jpg
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: debf13d8e376979548bcbf55f71661d8cb8eb823
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1366'
-ht-degree: 2%
+source-wordcount: '1371'
+ht-degree: 3%
 
 ---
 
@@ -28,7 +31,7 @@ Beachten Sie, dass `~` als Kurzbezeichnung für das Benutzerverzeichnis verwende
 
 Experience Manager ist eine Java-Anwendung und erfordert daher das Java SDK, um die Entwicklung und die AEM als Cloud Service-SDK zu unterstützen.
 
-1. [Laden Sie das neueste Java 11 SDK herunter und installieren Sie es](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fdc jcr%3AlastModified&amp;orderby.sort=desc&amp;layout=Liste&amp;p.offset=0&amp;p.limit=14)
+1. [Laden Sie das neueste Java 11 SDK herunter und installieren Sie es](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=Liste&amp;p.offset=0&amp;p.limit=14)
 1. Stellen Sie sicher, dass Java 11 SDK installiert ist, indem Sie den Befehl ausführen:
    + Windows: `java -version`
    + macOS/Linux: `java --version`
@@ -109,28 +112,28 @@ Apache Maven ist das Open-Source-Java-Befehlszeilenwerkzeug zum Erstellen AEM Pr
 
 ![Maven](./assets/development-tools/maven.png)
 
-## Adobe I/O CLI einrichten{#aio-cli}
+## Einrichten der Adobe I/O-CLI{#aio-cli}
 
-Die [Adobe I/O CLI](https://github.com/adobe/aio-cli) oder `aio` bietet Befehlszeilenzugriff auf eine Vielzahl von Adoben-Diensten, einschließlich [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) und [Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). Die Adobe I/O CLI spielt eine wesentliche Rolle bei der Entwicklung AEM als Cloud Service, da sie Entwicklern Folgendes ermöglicht:
+Die [Adobe I/O-CLI](https://github.com/adobe/aio-cli) oder `aio` bietet Befehlszeilenzugriff auf eine Vielzahl von Adobe-Diensten, einschließlich [Cloud-Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) und [Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). Die Adobe I/O-CLI spielt eine wesentliche Rolle bei der Entwicklung AEM Cloud Service, da sie Entwicklern Folgendes ermöglicht:
 
 + Datenprotokolle von AEM als Cloud Services-Services
 + Verwalten von Cloud Manager-Pipelines über die CLI
 
-### Adobe I/O CLI installieren
+### Installieren der Adobe I/O-CLI
 
-1. Vergewissern Sie sich, dass [Node.js installiert ist, da die Adobe I/O-CLI ein npm-Modul ist.](#node-js)
+1. Stellen Sie sicher, dass [Node.js installiert ist, da die Adobe I/O-CLI ein npm-Modul ist.](#node-js)
    + Führen Sie `node --version` zur Bestätigung aus
 1. Führen Sie `npm install -g @adobe/aio-cli` aus, um das `aio` npm-Modul global zu installieren.
 
 ### Einrichten des Adobe I/O CLI Cloud Manager-Plugins{#aio-cloud-manager}
 
-Mit dem Adobe I/O Cloud Manager-Plugin kann die AIO-CLI über den Befehl `aio cloudmanager` mit Adobe Cloud Manager interagieren.
+Mit dem Adobe I/O Cloud Manager-Plugin kann die API-CLI über den Befehl `aio cloudmanager` mit Adobe Cloud Manager interagieren.
 
 1. Führen Sie `aio plugins:install @adobe/aio-cli-plugin-cloudmanager` aus, um das [AIO Cloud Manager-Plugin](https://github.com/adobe/aio-cli-plugin-cloudmanager) zu installieren.
 
-### Einrichten des Adobe I/O CLI Asset compute-Plugins{#aio-asset-compute}
+### Adobe I/O CLI Asset compute plugin{#aio-asset-compute} einrichten
 
-Mit dem Adobe I/O Cloud Manager-Plugin kann die AIO-CLI Asset compute-Mitarbeiter über den Befehl `aio asset-compute` generieren und ausführen.
+Mit dem Adobe I/O Cloud Manager-Plugin kann die API-Befehlszeilenschnittstelle Asset compute-Arbeiter über den Befehl `aio asset-compute` generieren und ausführen.
 
 1. Führen Sie `aio plugins:install @adobe/aio-cli-plugin-asset-compute` aus, um das [aio-Asset compute-Plug-in](https://github.com/adobe/aio-cli-plugin-asset-compute) zu installieren.
 
@@ -143,17 +146,17 @@ Damit die Adobe I/O-CLI mit Cloud Manager kommunizieren kann, muss in der Adobe 
 1. Melden Sie sich bei [console.adobe.io](https://console.adobe.io) an
 1. Stellen Sie sicher, dass Ihr Unternehmen, das das Cloud Manager-Produkt enthält, mit dem eine Verbindung hergestellt werden soll, im Adobe Org Switcher aktiv ist.
 1. Neues [Adobe I/O-Programm ](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md) erstellen oder öffnen
-   + Adobe I/O Console Programme sind einfach organisatorische Integrationsgruppierungen, die Erstellung oder Verwendung und das vorhandene Programm, je nach Verwaltung Ihrer Integrationen
+   + Adobe I/O Console-Programm sind einfach organisatorische Integrationsgruppierungen, erstellen oder verwenden Sie bestehende Programme, je nach Art der Verwaltung Ihrer Integrationen
    + Wenn Sie ein neues Projekt erstellen, wählen Sie bei entsprechender Aufforderung &quot;Leeres Projekt&quot;(im Gegensatz zu &quot;Aus Vorlage erstellen&quot;)
    + Adobe I/O Console-Programm unterscheiden sich von Cloud Manager-Programmen
 1. Neue Cloud Manager-API-Integration mit dem Profil &quot;Developer - Cloud Service&quot; erstellen
-1. Die Anmeldeinformationen für das Dienstkonto (JWT) müssen mit der Adobe I/O-CLI [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication) gefüllt werden
+1. Die Anmeldeinformationen für das Dienstkonto (JWT) müssen mit der CLI [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication) der Adobe I/O gefüllt werden
 1. Laden Sie die Datei `config.json` in die Adobe I/O-CLI
    + `$ aio config:set jwt-auth PATH_TO_CONFIG_JSON_FILE --file --json`
 1. Laden Sie die Datei `private.key` in die Adobe I/O-CLI
    + `$ aio config:set jwt-auth.jwt_private_key PATH_TO_PRIVATE_KEY_FILE --file`
 
-Starten Sie die Ausführung von Befehlen](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) für Cloud Manager über die Adobe I/O-Befehlszeilenschnittstelle.[
+Starten Sie die Ausführung von Befehlen](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) für Cloud Manager über die Adobe I/O-CLI.[
 
 ## Einrichten der Entwicklungs-IDE
 
