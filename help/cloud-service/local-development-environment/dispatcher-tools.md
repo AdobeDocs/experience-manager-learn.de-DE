@@ -2,7 +2,7 @@
 title: Einrichten von Dispatcher-Tools für AEM als Cloud Service-Entwicklung
 description: AEM Dispatcher Tools von SDK erleichtern die lokale Entwicklung von Adobe Experience Manager (AEM)-Projekten, indem sie die Installation, Ausführung und Fehlerbehebung von Dispatcher lokal erleichtern.
 sub-product: Stiftung
-feature: dispatcher
+feature: Dispatcher, Entwicklerwerkzeuge
 topics: development, caching, security
 version: cloud-service
 doc-type: tutorial
@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 4679
 thumbnail: 30603.jpg
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 178ba3dbcb6f2050a9c56303bbabbcfcbead3e79
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1572'
 ht-degree: 2%
 
 ---
