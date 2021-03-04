@@ -1,7 +1,7 @@
 ---
 title: Fehlerbehebung bei der Asset compute-Erweiterbarkeit für AEM Assets
 description: Im Folgenden finden Sie eine Übersicht über häufig auftretende Probleme und Fehler sowie die entsprechenden Lösungen, die beim Entwickeln und Bereitstellen von benutzerdefinierten Asset compute-Workern für AEM Assets auftreten können.
-feature: asset-compute
+feature: asset compute Microservices
 topics: renditions, metadata, development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
+topic: Integrationen, Entwicklung
+role: Entwickler
+level: Vermittelt, erfahren
 translation-type: tm+mt
-source-git-commit: 649d971ecaa67c0d1dd2636f3c212bfee3d13561
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1249'
 ht-degree: 0%
 
 ---
@@ -40,7 +43,7 @@ Im Folgenden finden Sie eine Übersicht über häufig auftretende Probleme und F
 + __Fehler:__ Fehler: Fehlende erforderliche Dateien bei der Überprüfung (...)/node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY) bei async setupAssetCompute (.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
 + __Ursache:__ Die  `console.json` Datei fehlt im Stammverzeichnis des Asset compute-Projekts
 + __Lösung:__ Laden Sie ein neues  `console.json` Formular für Ihr Adobe I/O-Projekt herunter
-   1. Öffnen Sie in console.adobe.io das Adobe I/O-Projekt, für das das Asset compute-Projekt konfiguriert ist,
+   1. Öffnen Sie in console.adobe.io das Adobe I/O-Projekt, für das das Asset compute konfiguriert ist,
    1. Tippen Sie oben rechts auf die Schaltfläche __Download__
    1. Speichern Sie die heruntergeladene Datei unter dem Dateinamen `console.json` im Stammverzeichnis Ihres Asset compute-Projekts.
 
@@ -127,7 +130,7 @@ asset compute Development Tool kann einen Status eingeben, in dem statische Date
 
 ### Worker-Timeout beim Debugging{#worker-times-out-while-debugging}
 
-+ __Fehler__: Debug-Konsolenberichte &quot;Action will timeout in -XXX Millisekunden&quot;oder die  [Ausgabeformations-Vorschau des ](./develop/development-tool.md) Asset compute-Entwicklungstools drehen sich unendlich oder
++ __Fehler__: Debug-Konsolenberichte &quot;Action will timeout in -XXX Millisekunden&quot;oder die  [Ausgabeformations-Vorschau des ](./develop/development-tool.md) Asset compute-Entwicklungstools werden unendlich oder
 + __Ursache__: Das Zeitlimit des Workers, wie in  [manifest.](./develop/manifest.md) ymlis definiert, wurde während des Debuggens überschritten.
 + __Auflösung__: Erhöhen Sie vorübergehend die Zeitüberschreitung des Workers in den  [Aktivitäten manifest.](./develop/manifest.md) ymlor, um das Debugging zu beschleunigen.
 
