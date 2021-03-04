@@ -1,7 +1,7 @@
 ---
 title: AEM-Projektarchetyp
 description: 'Der AEM-Projektarchetyp erstellt ein Adobe Experience Manager-Projekt mit minimalen Best Practices als Ausgangspunkt für Ihre eigenen AEM-Projekte. '
-feature: maven-archetype
+feature: AEM-Projektarchetyp
 topics: development
 audience: developer
 doc-type: technical video
@@ -9,11 +9,14 @@ activity: understand
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4675
 thumbnail: 32550.jpg
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 51%
+source-wordcount: '83'
+ht-degree: 54%
 
 ---
 
@@ -27,4 +30,4 @@ Das AEM-Projekt enthält sämtlichen Code und alle Konfigurationen für eine Imp
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [GitHub-Projekt](https://github.com/adobe/aem-project-archetype)
-* [AEM Dokumentation zum Projektarchiv](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/developing/archetype/overview.html)
+* [AEM Dokumentation zum Projektarchiv](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/archetype/overview.html)
