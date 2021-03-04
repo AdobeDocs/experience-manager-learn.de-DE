@@ -4,7 +4,7 @@ seo-title: Verwenden von AEM Experience Fragment-Angeboten in Adobe Target
 description: Adobe Experience Manager 6.4 stellt den Personalisierungsarbeitsablauf zwischen AEM und Zielgruppe vor. Erlebnisse, die in AEM erstellt wurden, können jetzt direkt als HTML-Angebot an Adobe Target übermittelt werden. Marketingexperten können Inhalte nahtlos über verschiedene Kanal hinweg testen und personalisieren.
 seo-description: Adobe Experience Manager 6.4 stellt den Personalisierungsarbeitsablauf zwischen AEM und Zielgruppe vor. Erlebnisse, die in AEM erstellt wurden, können jetzt direkt als HTML-Angebot an Adobe Target übermittelt werden. Marketingexperten können Inhalte nahtlos über verschiedene Kanal hinweg testen und personalisieren.
 sub-product: content-services
-feature: experience-fragments
+feature: Experience Fragments
 topics: integrations, personalization
 audience: all
 doc-type: feature video
@@ -12,10 +12,13 @@ activity: setup
 version: 6.4, 6.5
 uuid: 7b91f65d-5a35-419a-8cf7-be850165dd33
 discoiquuid: 45fc8d83-73fb-42e5-9c92-ce588c085ed4
+topic: 'Personalisierung '
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7a830d5a04ce53014b86f9f05238dd64f79edffc
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '465'
 ht-degree: 11%
 
 ---
