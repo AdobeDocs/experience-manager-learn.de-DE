@@ -4,21 +4,18 @@ seo-title: Formulardatenmodell erstellen
 description: Dies ist Teil 3 eines mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil erstellen wir ein Formulardatenmodell. Mit dem Formulardatenmodell können Sie unterschiedliche Datenquellen konfigurieren und eine Verbindung zu diesen herstellen. Es bietet eine intuitive Benutzeroberfläche, um ein einheitliches Schema für die Datendarstellung von Geschäftseinheiten und Diensten aus verbundenen Datenquellen zu erstellen. Im folgenden Video werden die Schritte zum Erstellen des Formulardatenmodells erläutert.
 seo-description: Dies ist Teil 3 eines mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil erstellen wir ein Formulardatenmodell. Mit dem Formulardatenmodell können Sie unterschiedliche Datenquellen konfigurieren und eine Verbindung zu ihnen herstellen. Es bietet eine intuitive Benutzeroberfläche, um ein einheitliches Schema für die Datendarstellung von Unternehmenseinheiten und Diensten aus verbundenen Datenquellen zu erstellen. Im folgenden Video werden die Schritte zum Erstellen des Formulardatenmodells erläutert.
 uuid: c3bfd212-049d-4abd-9849-64129dae2a83
-feature: Interaktive Kommunikation
+feature: interactive-communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 723b7ef3-f552-4710-b2a4-410b0b1b7525
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '327'
-ht-degree: 1%
+source-wordcount: '323'
+ht-degree: 0%
 
 ---
 
