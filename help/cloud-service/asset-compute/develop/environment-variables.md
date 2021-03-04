@@ -1,7 +1,7 @@
 ---
 title: Umgebung-Variablen für Asset compute-Erweiterbarkeit konfigurieren
-description: Umgebung-Variablen werden in der .env-Datei für die lokale Entwicklung beibehalten und zur Bereitstellung von Adobe I/O-Anmeldeinformationen und Cloud-Datenspeicherung-Anmeldeinformationen verwendet, die für die lokale Entwicklung erforderlich sind.
-feature: asset-compute
+description: Umgebung-Variablen werden in der .env-Datei für die lokale Entwicklung beibehalten und zur Bereitstellung von Anmeldeinformationen für Adoben I/O und Cloud-Datenspeicherung verwendet, die für die lokale Entwicklung erforderlich sind.
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6270
 thumbnail: KT-6270.jpg
+topic: Integrationen, Entwicklung
+role: Entwickler
+level: Vermittelt, erfahren
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -22,16 +25,16 @@ ht-degree: 0%
 
 ![dot env-Datei](assets/environment-variables/dot-env-file.png)
 
-Bevor Sie mit der Entwicklung von Asset compute-Workern beginnen, stellen Sie sicher, dass das Projekt mit Adobe I/O- und Cloud-Datenspeicherung-Informationen konfiguriert ist. Diese Informationen werden im `.env` des Projekts gespeichert, das nur für die lokale Entwicklung verwendet wird und nicht in Git gespeichert wird. Die `.env`-Datei bietet eine praktische Möglichkeit, Schlüssel/Werte-Paare der lokalen Asset compute-Umgebung für die lokale Entwicklung bereitzustellen. Wenn [Asset compute-Worker unter Adobe I/O Runtime bereitstellen, wird die `.env`-Datei nicht verwendet, sondern eine Untergruppe von Werten wird über Umgebung-Variablen übergeben. ](../deploy/runtime.md) Andere benutzerdefinierte Parameter und Geheimnisse können auch in der Datei `.env` gespeichert werden, z. B. Entwicklungsberechtigungen für Drittanbieter-Webdienste.
+Bevor Sie mit der Entwicklung von Asset compute-Workern beginnen, stellen Sie sicher, dass das Projekt mit Informationen zur Adobe I/O und Cloud-Datenspeicherung konfiguriert ist. Diese Informationen werden im `.env` des Projekts gespeichert, das nur für die lokale Entwicklung verwendet wird und nicht in Git gespeichert wird. Die `.env`-Datei bietet eine praktische Möglichkeit, Schlüssel/Werte-Paare der lokalen Asset compute-Umgebung für die lokale Entwicklung bereitzustellen. Wenn [Asset compute-Worker unter Adobe I/O Runtime bereitstellen, wird die `.env`-Datei nicht verwendet, sondern eine Untergruppe von Werten wird über Umgebung-Variablen übergeben. ](../deploy/runtime.md) Andere benutzerdefinierte Parameter und Geheimnisse können auch in der Datei `.env` gespeichert werden, z. B. Entwicklungsberechtigungen für Drittanbieter-Webdienste.
 
 ## Referenz auf `private.key`
 
 ![privater Schlüssel](assets/environment-variables/private-key.png)
 
-Öffnen Sie die Datei `.env`, heben Sie den Kommentar für `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` auf und geben Sie den absoluten Pfad zu dem `private.key` an, der mit dem öffentlichen Zertifikat verknüpft ist, das Ihrem Adobe I/O FireFly-Projekt hinzugefügt wurde.
+Öffnen Sie die Datei `.env`, heben Sie den Kommentar für `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` auf und geben Sie den absoluten Pfad zu dem `private.key` an, der mit dem öffentlichen Zertifikat verknüpft ist, das zu Ihrer Adobe I/O FireFly hinzugefügt wurde.
 
-+ Wenn Ihr Schlüsselpaar von Adobe I/O generiert wurde, wurde es automatisch als Teil von `config.zip` heruntergeladen.
-+ Wenn Sie den öffentlichen Schlüssel für Adobe I/O bereitgestellt haben, sollten Sie auch im Besitz des entsprechenden privaten Schlüssels sein.
++ Wenn Ihr Schlüsselpaar durch Adobe I/O generiert wurde, wurde es automatisch als Teil von `config.zip` heruntergeladen.
++ Wenn Sie den öffentlichen Schlüssel zur Adobe I/O bereitgestellt haben, sollten Sie auch im Besitz des entsprechenden privaten Schlüssels sein.
 + Wenn Sie diese Schlüsselpaare nicht haben, können Sie am unteren Rand neue Schlüsselpaare erstellen oder neue öffentliche Schlüssel hochladen:
    [https://console.adobe.com](https://console.adobe.io) > Ihr Asset compute Firefly-Projekt > Arbeitsbereiche bei Entwicklung > Dienstkonto (JWT).
 
