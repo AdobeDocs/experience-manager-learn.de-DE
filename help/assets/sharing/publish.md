@@ -2,24 +2,23 @@
 title: Veröffentlichen von Assets mit AEM
 description: Erfahren Sie, wie Sie Assets und deren Darstellungen von AEM Author auf AEM Publish veröffentlichen.
 sub-product: Assets
-feature: Publishing
-topics: Content Management
-audience: author
-doc-type: feature video
-activity: use
+feature: Asset-Verwaltung
 version: cloud-service
 kt: 330932
 thumbnail: 32194.jpg
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 94ea85d4a96bf9da62c5658961474a12663ac77b
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '51'
-ht-degree: 3%
+source-wordcount: '58'
+ht-degree: 6%
 
 ---
 
 
-# Veröffentlichung
+# Veröffentlichen
 
 Erfahren Sie, wie Sie Assets und deren Darstellungen von AEM Author auf AEM Publish veröffentlichen.
 
