@@ -4,7 +4,7 @@ seo-title: Erstellen der DataSource-Konfiguration in AEM Forms
 description: Dies ist Teil 2 des mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil erstellen wir eine REST-gesicherte Datenquelle.  Im folgenden Video werden die Schritte zum Erstellen der Datenquelle beschrieben.
 seo-description: Dies ist Teil 2 des mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil erstellen wir eine REST-gesicherte Datenquelle.  Im folgenden Video werden die Schritte zum Erstellen der Datenquelle beschrieben.
 uuid: b9d5c220-3e86-4e7d-8ea0-a7f604dde925
-feature: interactive-communication
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,11 +13,14 @@ version: 6.4,6.5
 targetaudience: target-audience ongoing
 thumbnail: 27765.jpg
 kt: 5954
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 0%
+source-wordcount: '144'
+ht-degree: 2%
 
 ---
 
