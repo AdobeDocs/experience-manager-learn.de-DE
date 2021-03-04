@@ -3,17 +3,20 @@ title: Verwenden des Formulardatenmodelldienstes als Schritt in AEM 6.5-Arbeitsa
 seo-title: Verwenden des Formulardatenmodelldienstes als Schritt in AEM 6.5-Arbeitsablauf
 description: AEM Forms 6.5 bietet die Möglichkeit, Variablen im AEM Workflow zu erstellen. Mit dieser neuen Funktion ist die Verwendung des "Formulardatenmodelldienstes aufrufen"in AEM Arbeitsablauf sehr einfach geworden. Im folgenden Video werden Sie durch die Schritte geführt, die bei der Verwendung des Dienstes "Formulardatenmodell aufrufen"im Arbeitsablauf AEM.
 seo-description: AEM Forms 6.5 bietet die Möglichkeit, Variablen im AEM Workflow zu erstellen. Mit dieser neuen Funktion ist die Verwendung des "Formulardatenmodelldienstes aufrufen"in AEM Arbeitsablauf sehr einfach geworden. Im folgenden Video werden Sie durch die Schritte geführt, die bei der Verwendung des Dienstes "Formulardatenmodell aufrufen"im Arbeitsablauf AEM.
-feature: workflow.
+feature: Workflow
 topics: workflow.
 audience: developer.
 doc-type: technical video.
 activity: setup.
 version: 6.5.
+topic: Entwicklung
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '334'
-ht-degree: 1%
+source-wordcount: '338'
+ht-degree: 2%
 
 ---
 
