@@ -4,18 +4,21 @@ seo-title: Auflisten benutzerdefinierter Asset-Typen in AEM Forms
 description: Teil 2 der Auflistung benutzerdefinierter Asset-Typen in AEM Forms
 seo-description: Teil 2 der Auflistung benutzerdefinierter Asset-Typen in AEM Forms
 uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
 discoiquuid: 4b940465-0bd7-45a2-8d01-e4d640c9aedf
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: defefc1451e2873e81cd81e3cccafa438aa062e3
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '611'
-ht-degree: 0%
+source-wordcount: '616'
+ht-degree: 1%
 
 ---
 
@@ -74,7 +77,7 @@ Im folgenden Code werden die verschiedenen Asset-Typen mithilfe der Such- und Li
 >
 >Zeile 11 - Bitte ändern Sie die Bild src, um auf ein Bild Ihrer Wahl in DAM zu zeigen.
 >
->Um das adaptive Forms in dieser Vorlage Liste, erstellen Sie ein neues div und legen Sie das data-type-Attribut auf &quot;guide&quot;fest. Sie können den div kopieren und einfügen, dessen data-type=&quot;printForm&quot;lautet, und den Datentyp des neu kopierten div auf &quot;guide&quot; setzen
+>Um das adaptive Forms in dieser Vorlage Liste, erstellen Sie ein neues div und legen Sie das data-type-Attribut auf &quot;guide&quot;fest. Sie können den div kopieren und einfügen, dessen data-type=&quot;printForm&quot; lautet, und den Datentyp des neu kopierten div auf &quot;guide&quot; setzen
 
 ## Konfigurieren der Komponente &quot;Search &amp; Lister&quot; {#configure-search-and-lister-component}
 
