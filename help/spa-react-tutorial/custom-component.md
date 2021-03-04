@@ -2,7 +2,7 @@
 title: Erstellen einer benutzerspezifischen Komponente | Erste Schritte mit dem AEM SPA Editor und React
 description: Erfahren Sie, wie Sie eine benutzerdefinierte Komponente erstellen, die mit dem AEM SPA Editor verwendet werden soll. Erfahren Sie, wie Sie Authoring-Dialoge und Sling-Modelle entwickeln, um das JSON-Modell zu erweitern und eine benutzerdefinierte Komponente zu füllen.
 sub-product: Sites
-feature: SPA Editor
+feature: SPA
 doc-type: tutorial
 topics: development
 version: cloud-service
@@ -10,11 +10,14 @@ activity: develop
 audience: developer
 kt: 5878
 thumbnail: 5878-spa-react.jpg
+topic: SPA
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: e6da018a21155eca3a52dd562e469296b3c68c0d
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1486'
-ht-degree: 3%
+source-wordcount: '1491'
+ht-degree: 4%
 
 ---
 
@@ -157,7 +160,7 @@ Eine AEM Komponente wird als Knoten und Eigenschaften definiert. Im Projekt werd
    >
    > Sie können viel mehr [Beispiele für Dialoge durch Ansicht der Core-Komponentendefinitionen](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components) anzeigen. Sie können auch zusätzliche Formularfelder wie `select`, `textarea`, `pathfield`, `/libs/granite/ui/components/coral/foundation/form` unter [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form) Ansicht werden.
 
-   Bei einer herkömmlichen AEM ist in der Regel ein Skript [HTL](https://docs.adobe.com/content/help/de/experience-manager-htl/using/overview.html) erforderlich. Da der SPA die Komponente wiedergibt, ist kein HTML-Skript erforderlich.
+   Bei einer herkömmlichen AEM ist in der Regel ein Skript [HTL](https://docs.adobe.com/content/help/de-DE/experience-manager-htl/using/overview.html) erforderlich. Da der SPA die Komponente wiedergibt, ist kein HTML-Skript erforderlich.
 
 ## Sling-Modell erstellen
 
@@ -336,4 +339,4 @@ Sie können den fertigen Code auf [GitHub](https://github.com/adobe/aem-guides-w
 
 ### Nächste Schritte {#next-steps}
 
-[Erweitern einer Core-Komponente](extend-component.md)  - Erfahren Sie, wie Sie eine bestehende Core-Komponente erweitern, um sie mit dem AEM SPA Editor zu verwenden. Das Verständnis, wie Eigenschaften und Inhalte zu einer vorhandenen Komponente hinzugefügt werden, ist eine leistungsstarke Methode, um die Funktionen einer AEM SPA Editor-Implementierung zu erweitern.
+[Erweitern einer Core-Komponente](extend-component.md)  - Erfahren Sie, wie Sie eine bestehende Core-Komponente erweitern, um sie mit dem AEM SPA Editor zu verwenden. Das Verstehen, wie Eigenschaften und Inhalte zu einer vorhandenen Komponente hinzugefügt werden, ist eine leistungsstarke Methode, um die Funktionen einer AEM SPA Editor-Implementierung zu erweitern.
