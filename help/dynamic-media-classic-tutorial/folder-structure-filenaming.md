@@ -2,15 +2,18 @@
 title: Bestimmen der Ordnerstruktur und Dateibenennungskonvention
 description: Die Dateibenennung ist vielleicht die wichtigste Entscheidung, die Sie bei der Implementierung von Dynamic Media Classic treffen werden. Die Ordnerstruktur ist ebenfalls wichtig. Erfahren Sie, warum es so wichtig und möglich ist, Ansätze für Ihre Ordnerstruktur und Dateinamen zu verwenden.
 sub-product: dynamic-media
-feature: null
+feature: Dynamic Media Classic
 doc-type: tutorial
 activity: develop
 topics: development, authoring, configuring, architecture
 audience: all
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: e7a02900b0582fe9b329e5f9bd568f3c54d8d63d
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1211'
+source-wordcount: '1219'
 ht-degree: 0%
 
 ---
