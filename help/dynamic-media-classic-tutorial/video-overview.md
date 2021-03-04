@@ -2,15 +2,18 @@
 title: Videoüberblick
 description: Im Lieferumfang von Dynamic Media Classic sind automatische Konvertierungen von Videos beim Hochladen, Video-Streaming auf Desktop- und Mobilgeräte sowie adaptive Videosets enthalten, die für die Wiedergabe je nach Gerät und Bandbreite optimiert sind. Erfahren Sie mehr über Videos in Dynamic Media Classic und lernen Sie Videoneuschnitte und Terminologie kennen. Tauchen Sie anschließend ein in die Vorgehensweise zum Hochladen und Kodieren von Videos und wählen Sie Video-Vorgaben zum Hochladen, Hinzufügen oder Bearbeiten einer Videovorgabe, Vorschau von Videos in einem Video-Viewer, Bereitstellen von Videos auf Websites und mobilen Sites, Hinzufügen von Untertiteln und Kapitelmarken zu Videos und Veröffentlichen von Video-Viewern für Desktop- und Mobilbenutzer.
 sub-product: dynamic-media
-feature: Viewer Presets
+feature: Dynamic Media Classic, Video-Profile, Viewer-Vorgaben
 doc-type: tutorial
 topics: development, authoring, configuring, videos, video-profiles
 audience: all
 activity: use
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '6222'
+source-wordcount: '6234'
 ht-degree: 1%
 
 ---
@@ -62,7 +65,7 @@ Wenn Sie viele Videos haben, werden Sie die Möglichkeit schätzen, alle Ihre As
 
 Auch hier können Sie mit Dynamic Media Classic die Vorgabe und den Viewer auswählen, die Ihren Anforderungen entsprechen. Sie haben viele verschiedene Viewer-Optionen und eine Bibliothek mit zahlreichen Vorgaben zur Verfügung.
 
-Sie können Videos auf einfache Weise für das Web und mobile Geräte bereitstellen, da Dynamic Media Classic HTML5-Videos unterstützt. Dadurch können Sie Zielgruppen für Benutzer mit verschiedenen Browsern sowie für Android- und iOS-Plattformbenutzer erstellen. Streaming-Video ermöglicht die reibungslose Wiedergabe von längeren oder hochauflösenden Inhalten, während progressive HTML5-Videos Vorgaben enthalten, die für den kleinen Bildschirm optimiert sind.
+Sie können Videos auf einfache Weise für das Web und mobile Geräte bereitstellen, da Dynamic Media Classic HTML5-Videos unterstützt. Dadurch können Sie Zielgruppen für Benutzer mit verschiedenen Browsern sowie für Android- und iOS-Plattformbenutzer erstellen. Streaming-Video ermöglicht eine reibungslose Wiedergabe von längeren oder hochauflösenden Inhalten, während progressive HTML5-Videos Vorgaben enthalten, die für den kleinen Bildschirm optimiert sind.
 
 Viewer-Vorgaben für Videos sind je nach Viewer-Typ teilweise konfigurierbar.
 
@@ -302,7 +305,7 @@ Damit Google und andere Suchmaschinen Ihre Dateien nicht zurückweisen können, 
 
 Die erforderlichen Felder sind Landingpage (URL der Seite, die das Video bereitstellt, nicht die URL des Videos selbst), Titel und Beschreibung. Jedes Video muss einen Eintrag für diese Elemente enthalten, oder es wird nicht in die generierte Datei aufgenommen. Optionale Felder sind Tags und Kategorie.
 
-Es gibt zwei weitere erforderliche Felder — Inhalts-URL, URL zum Videoasset selbst und Miniaturansicht, URL zum Miniaturbild des Videos — dynamic media Classic füllt diese Werte automatisch für Sie aus.
+Es gibt zwei weitere erforderliche Felder — Inhalts-URL, URL zum Videoasset selbst und Miniaturansicht, URL zum Miniaturbild des Videos — Dynamic Media Classic füllt diese Werte automatisch für Sie aus.
 
 Der empfohlene Arbeitsablauf besteht darin, diese Daten vor dem Hochladen mit XMP Metadaten in Ihre Videos einzubetten, und Dynamic Media Classic extrahiert sie beim Hochladen. Sie würden eine Anwendung wie Adobe Bridge — die in allen Adobe Creative Cloud-Anwendungen enthalten sind — , um die Daten in Standard-Metadatenfelder zu füllen.
 
