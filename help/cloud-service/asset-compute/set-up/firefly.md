@@ -1,7 +1,7 @@
 ---
 title: Adobe Project Firefly für Asset compute-Erweiterbarkeit einrichten
 description: asset compute-Projekte sind speziell definierte Adobe Project Firefly-Projekte und erfordern daher Zugriff auf Adobe Project Firefly in der Adobe Developer Console, um sie einzurichten und bereitzustellen.
-feature: asset-compute
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
+topic: Integrationen, Entwicklung
+role: Entwickler
+level: Vermittelt, erfahren
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -63,8 +66,8 @@ Die Anmeldeinformationen dieses Adobe I/O-Projekts werden vom lokalen [Asset com
 
 ![Adobe Developer Service-Kontoanmeldeinformationen](./assets/firefly/service-account.png)
 
-1. Stellen Sie sicher, dass im Projekt Adobe I/O Project Firefly die Arbeitsfläche `Development` ausgewählt ist.
+1. Vergewissern Sie sich, dass im Projekt &quot;Adobe I/O-Projekt - Firefly&quot;der Arbeitsbereich `Development` ausgewählt ist.
 1. Tippen Sie auf __Dienstkonto (JWT)__ unter __Berechtigungen__
-1. Überprüfen Sie die angezeigten Adobe I/O-Berechtigungen.
+1. Überprüfen Sie die angezeigten Adoben I/O-Anmeldeinformationen.
    + Der unten aufgeführte __öffentliche Schlüssel__ hat das Gegenstück __private.key__ im heruntergeladenen `config.zip`, wenn die __Asset compute API__ zu diesem Projekt hinzugefügt wurde.
-      + Wenn der private Schlüssel verloren geht oder beschädigt wird, kann der entsprechende öffentliche Schlüssel entfernt und ein neues Schlüsselpaar generiert oder über diese Schnittstelle in Adobe I/O hochgeladen werden.
+      + Wenn der private Schlüssel verloren geht oder beschädigt wird, kann der entsprechende öffentliche Schlüssel entfernt und ein neues Schlüsselpaar generiert oder mit dieser Schnittstelle in die Adobe I/O hochgeladen werden.
