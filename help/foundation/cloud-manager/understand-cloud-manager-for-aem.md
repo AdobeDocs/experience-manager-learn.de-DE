@@ -2,16 +2,18 @@
 title: Adobe Cloud Manager
 description: Adobe Cloud Manager bietet eine einfache und dennoch robuste Lösung, die eine einfache Verwaltung, Selbstprüfung und Selbstbedienung von AEM Umgebung ermöglicht.
 sub-product: cloud-manager, Stiftung
-feature: Pipelines, Programme, Projekte, Qualitätstore, Berichte
 topics: best-practices, cicd, development, operations, governance
 doc-type: feature video
 activity: understand
 audience: developer, implementer, administrator, architect
+topic: Architektur
+role: Architekt
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '536'
-ht-degree: 21%
+source-wordcount: '534'
+ht-degree: 22%
 
 ---
 
