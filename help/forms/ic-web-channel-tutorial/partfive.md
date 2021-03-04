@@ -4,18 +4,21 @@ seo-title: Erstellen von Dokument-Fragmenten, die den Namen und die Adresse des 
 description: 'Dies ist Teil 5 eines mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil erstellen wir ein Dokument-Fragment, das den Namen und die Adresse des Empfängers enthält. '
 seo-description: 'Dies ist Teil 5 eines mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil erstellen wir ein Dokument-Fragment, das den Namen und die Adresse des Empfängers enthält. '
 uuid: 689931e4-a026-4e62-9acd-552918180819
-feature: interactive-communication
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 404eed65-ec55-492a-85b5-59773896b217
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 22ccd6627a035b37edb180eb4633bc3b57470c0c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 0%
+source-wordcount: '282'
+ht-degree: 1%
 
 ---
 
