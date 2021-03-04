@@ -1,7 +1,7 @@
 ---
 title: Adaptives Formular erstellen
 description: Erstellen und konfigurieren Sie adaptive Formulare für die Verwendung des Vorfülldienstes des Formulardatenmodells
-feature: adaptive Formulare
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 5813
 thumbnail: kt-5813.jpg
+topic: Entwicklung
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '607'
-ht-degree: 1%
+source-wordcount: '612'
+ht-degree: 2%
 
 ---
 
