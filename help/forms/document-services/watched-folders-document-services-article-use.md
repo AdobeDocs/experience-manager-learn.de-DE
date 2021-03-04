@@ -4,18 +4,21 @@ seo-title: Verwenden von überwachten Ordnern in AEM Forms
 description: Überwachte Ordner in AEM Forms konfigurieren und verwenden
 seo-description: Überwachte Ordner in AEM Forms konfigurieren und verwenden
 uuid: 32c4bda2-363d-4294-925e-405a176f7f8d
-feature: output-service
+feature: Ausgabe-Service
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: a40e2381-0dc8-4784-9b80-15e27b244035
+topic: Entwicklung
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 3d54a8158d0564a3289a2100bbbc59e5ae38f175
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 20%
+source-wordcount: '444'
+ht-degree: 21%
 
 ---
 
@@ -45,7 +48,7 @@ Gehen Sie wie folgt vor, um überwachten Ordner auf Ihrem System einzurichten:
       * Speichern Sie Ihre Änderungen
       * Der oben erwähnte Speicherort ist Ihr überwachter Ordner.
 
-Legen Sie die Ordner &quot;SamplePdfFile&quot;und &quot;SampleXdpFile&quot;im Ordner &quot;input&quot;des überwachten Ordners ab. Bei erfolgreicher Verarbeitung der Dateien werden die Ergebnisse im Ergebnisordner des überwachten Ordners abgelegt.
+Legen Sie die Ordner &quot;SamplePdfFile&quot;und &quot;SampleXdpFile&quot;im Ordner &quot;input&quot;des überwachten Ordners ab. Bei erfolgreicher Verarbeitung der Dateien werden die Ergebnisse im Ergebnisordner Ihres überwachten Ordners abgelegt.
 
 
 >[!NOTE]
