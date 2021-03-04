@@ -3,18 +3,21 @@ title: Verwenden von bearbeitbaren Seitenvorlagen mit AEM Sites
 seo-title: Verwenden von bearbeitbaren Seitenvorlagen mit Adobe Experience Manager Sites
 description: Bearbeitbare Vorlagen ermöglichen es spezialisierten Autoren, Seitenvorlagen zu erstellen und zu aktualisieren und erweiterte Richtlinienkonfigurationen mit AEM Sites zu verwalten.
 seo-description: Bearbeitbare Vorlagen ermöglichen es spezialisierten Autoren, Seitenvorlagen zu erstellen und zu aktualisieren und erweiterte Richtlinienkonfigurationen mit Adobe Experience Manager Sites zu verwalten.
-feature: template-editor
+feature: Bearbeitbare Vorlagen
 topics: authoring
 audience: all
 doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 kt: 193
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 41e2c27cd089e7111b2eb1ef6c344d27980f0741
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '252'
-ht-degree: 11%
+source-wordcount: '259'
+ht-degree: 13%
 
 ---
 
@@ -40,5 +43,5 @@ URL der bearbeitbaren Vorlagen (lokale AEM): [http://localhost:4502/libs/wcm/cor
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Bearbeitbare Seitenvorlagen - Dokumentation](https://docs.adobe.com/content/help/de/experience-manager-65/developing/platform/templates/page-templates-editable.html)
+* [Bearbeitbare Seitenvorlagen - Dokumentation](https://docs.adobe.com/content/help/de-DE/experience-manager-65/developing/platform/templates/page-templates-editable.html)
 * [Erstellen von Seitenvorlagen - Dokumentation](https://docs.adobe.com/content/help/de/experience-manager-65/authoring/siteandpage/templates.html)
