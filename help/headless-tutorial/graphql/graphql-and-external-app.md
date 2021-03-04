@@ -10,10 +10,14 @@ audience: developer
 mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
+feature: Inhaltsfragmente, GraphQL-APIs
+topic: Kopflos, Content-Management
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1406'
 ht-degree: 1%
 
 ---
@@ -100,7 +104,7 @@ Das Starten der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlich
 
    Dies ist ein [React Effect Hook](https://reactjs.org/docs/hooks-overview.html#effect-hook), der auf Änderungen am `query` der App wartet. Bei Änderung wird eine HTTP-POST an den AEM GraphQL-Endpunkt gesendet und die JSON-Antwort auf die App zurückgegeben.
 
-   Jedes Mal, wenn die React-App eine GraphQL-Abfrage erstellen muss, ruft sie diesen benutzerdefinierten Haken (`useGraphQL(query)`) auf und übergibt den GraphQL an AEM.
+   Jedes Mal, wenn die React-App eine GraphQL-Abfrage erstellen muss, ruft sie diesen benutzerdefinierten Haken `useGraphQL(query)` auf und übergibt die GrafikQL an AEM.
 
    Dieses Hook verwendet das einfache Modul `fetch`, um die HTTP-POST GraphQL-Anforderung zu erstellen. Andere Module wie der [Apollo GraphQL-Client](https://www.apollographql.com/docs/react/) können jedoch ähnlich verwendet werden.
 
