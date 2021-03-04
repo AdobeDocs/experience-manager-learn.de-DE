@@ -3,7 +3,7 @@ title: Formulardatenmodell ohne Datenquelle erstellen
 seo-title: Formulardatenmodell ohne Datenquelle erstellen
 description: Ab AEM Forms 6.4 können wir jetzt Formulardatenmodell (FDM) definieren, ohne es mit einer Datenquelle zu verknüpfen. Im folgenden Video werden die Schritte zum Erstellen von FDM ohne Datenquelle erläutert.
 seo-description: Ab AEM Forms 6.4 können wir jetzt Formulardatenmodell (FDM) definieren, ohne es mit einer Datenquelle zu verknüpfen. Im folgenden Video werden die Schritte zum Erstellen von FDM ohne Datenquelle erläutert.
-feature: form-data-model
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: technical video
@@ -11,11 +11,14 @@ activity: setup
 version: 6.4,6.5
 uuid: eeb6165c-5465-4692-a3a9-8ef10780678d
 discoiquuid: 54fdce05-486b-4fb5-aed4-8552fe2040fd
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 0%
+source-wordcount: '183'
+ht-degree: 1%
 
 ---
 
