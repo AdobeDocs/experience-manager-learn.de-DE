@@ -4,21 +4,18 @@ seo-title: Erste Schritte mit dem adaptiven Forms
 description: 'Dieses Lernprogramm führt Sie durch die Schritte, die beim Erstellen eines adaptiven Formulars mit mehreren Registerkarten erforderlich sind. Sie lernen, wie Sie mit Tabellen, Akkordeon-Layout und Regeleditor Geschäftsregeln erstellen können. '
 seo-description: 'Dieses Lernprogramm führt Sie durch die Schritte, die beim Erstellen eines adaptiven Formulars mit mehreren Registerkarten erforderlich sind. Sie lernen, wie Sie mit Tabellen, Akkordeon-Layout und Regeleditor Geschäftsregeln erstellen können. '
 uuid: 6f73cb1c-94e2-4ac7-89e5-a72141a06bbe
-feature: Adaptive Formulare
+feature: adaptive Formulare
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.3,6.4,6.5
 discoiquuid: b6863d3d-8528-4a96-ae37-c8d1aa62d443
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 34%
+source-wordcount: '242'
+ht-degree: 33%
 
 ---
 
