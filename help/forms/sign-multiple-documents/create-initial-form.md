@@ -1,7 +1,7 @@
 ---
 title: Erstellen Sie das erste Formular, um den Prozess Trigger.
 description: Erstellen Sie ein erstes Formular, um die E-Mail-Benachrichtigung an den Beginn des Signiervorgangs Trigger.
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6892
 thumbnail: 6892.jpg
+topic: Entwicklung
+role: Geschäftspraktiker
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 11%
+source-wordcount: '174'
+ht-degree: 13%
 
 ---
 
@@ -24,7 +27,7 @@ Das anfängliche Formular (Refinanzierung des Formulars) wird zum Signieren mehr
 
 
 
-| Feldtyp | Name | Zweck | Ausgeblendet       | Standardwert |
+| Feldtyp | Name | Zweck | Ausgeblendet  | Standardwert |
 ------------------------|---------------------------------------|--------------------|--------|-----------------
 | TextField | signed | So geben Sie den Unterschriftsstatus an | J | N |
 | TextField | guid | So identifizieren Sie das Formular eindeutig | J | 3889 |
@@ -35,7 +38,7 @@ Das anfängliche Formular (Refinanzierung des Formulars) wird zum Signieren mehr
 
 
 Das anfängliche Formular muss so konfiguriert werden, dass ein AEM Arbeitsablauf namens **signmultipleforms** Trigger wird
-Stellen Sie sicher, dass der Datendateipfad auf **Data.xml** eingestellt ist. Dies ist sehr wichtig, da der Beispielcode nach einer Datei namens &quot;Data.xml&quot;in der Nutzlast des Prozesses der Formularübermittlung sucht.
+Stellen Sie sicher, dass der Datendateipfad auf **Data.xml** eingestellt ist. Dies ist sehr wichtig, da der Beispielcode nach einer Datei namens &quot;Data.xml&quot;in der Payload sucht, während der Prozess der Formularübermittlung gesendet wird.
 
 ## Assets
 
