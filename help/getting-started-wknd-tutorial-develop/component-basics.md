@@ -2,7 +2,7 @@
 title: Erste Schritte mit AEM Sites - Grundlagen der Komponenten
 description: Machen Sie sich mit der zugrunde liegenden Technologie einer Adobe Experience Manager (AEM) Sites-Komponente durch ein einfaches "HelloWorld"-Beispiel vertraut. Themen wie HTML, Sling-Modelle, clientseitige Bibliotheken und Autorendialoge werden erforscht.
 sub-product: Sites
-feature: '"Hauptkomponenten, Entwicklerwerkzeuge"'
+feature: Komponenten, Sling-Modelle, htl
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -11,13 +11,10 @@ audience: developer
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
-topic: '"Content-Management, Entwicklung"'
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1148'
 ht-degree: 4%
 
 ---
