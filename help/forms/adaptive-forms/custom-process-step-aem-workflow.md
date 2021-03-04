@@ -3,16 +3,19 @@ title: Implementieren eines benutzerdefinierten Prozessschritts
 seo-title: Implementieren eines benutzerdefinierten Prozessschritts
 description: Schreiben von Anlagen für adaptive Formulare in das Dateisystem mithilfe eines benutzerdefinierten Prozessschritts
 seo-description: Schreiben von Anlagen für adaptive Formulare in das Dateisystem mithilfe eines benutzerdefinierten Prozessschritts
-feature:  Workflow
+feature: Workflow
 topics: development
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '899'
 ht-degree: 1%
 
 ---
