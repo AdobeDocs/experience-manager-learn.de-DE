@@ -1,7 +1,7 @@
 ---
 title: OSGi-Dienst erstellen
 description: OSGi-Dienst zum Speichern der zu signierenden Formulare erstellen
-feature: adaptive-forms
+feature: Workflow
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 6886.jpg
 kt: 6886
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 0%
+source-wordcount: '356'
+ht-degree: 1%
 
 ---
 
