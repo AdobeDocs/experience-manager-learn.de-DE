@@ -4,21 +4,18 @@ seo-title: Formulardatenmodelldienst als Schritt im Workflow verwenden
 description: Ab AEM Forms 6.4 haben wir jetzt die Möglichkeit, das Formulardatenmodell als Teil AEM Arbeitsablaufs zu verwenden. Im folgenden Video werden die Schritte erläutert, die zum Konfigurieren des Formulardatenmodells im Arbeitsablauf AEM erforderlich sind.
 seo-description: Ab AEM Forms 6.4 haben wir jetzt die Möglichkeit, das Formulardatenmodell als Teil AEM Arbeitsablaufs zu verwenden. Im folgenden Video werden die Schritte erläutert, die zum Konfigurieren des Formulardatenmodells im Arbeitsablauf AEM erforderlich sind.
 uuid: ecd5d5aa-01eb-48fb-872f-66c656ae14df.
-feature: Workflow
+feature:  Workflow
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
 discoiquuid: c442f439-1e5d-4f96-85df-b818c28389ff
-topic: Entwicklung
-role: Entwickler
-level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 1%
+source-wordcount: '327'
+ht-degree: 0%
 
 ---
 
