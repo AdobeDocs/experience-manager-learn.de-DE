@@ -1,22 +1,17 @@
 ---
 title: Verwenden von Dynamic Media 360 Videos und benutzerdefinierten Video-Miniaturbildern mit AEM Assets
-seo-title: Verwenden von Dynamic Media 360 Videos und benutzerdefinierten Video-Miniaturbildern mit AEM Assets
 description: Zu den Verbesserungen des Dynamic Media Viewers in AEM 6.5 gehören die zusätzliche Unterstützung von 360-Video-Rendering, 360-Medien-Viewern (video360Social und video360VR) und die Möglichkeit, benutzerdefinierte Videominiaturen auszuwählen.
-seo-description: Zu den Verbesserungen des Dynamic Media Viewers in AEM 6.5 gehören die zusätzliche Unterstützung von 360-Video-Rendering, 360-Medien-Viewern (video360Social und video360VR) und die Möglichkeit, benutzerdefinierte Videominiaturen auszuwählen.
-uuid: 44b91c22-635c-48c2-af27-49bdbfb61639
-discoiquuid: 67d5e0f2-3fde-4ea7-9e53-4fc0cf8b9f2a
 sub-product: dynamic-media
-feature: video-profiles, viewer-presets
-topics: images, videos, renditions, authoring, integrations, publishing, metadata
-doc-type: feature video
-audience: all
-activity: use
+feature: Videoprofile
 version: 6.3, 6.4, 6.5
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '435'
-ht-degree: 2%
+source-wordcount: '402'
+ht-degree: 5%
 
 ---
 
@@ -29,7 +24,7 @@ Zu den Verbesserungen des Dynamic Media Viewers in AEM 6.5 gehören die zusätzl
 
 >[!NOTE]
 >
->Video geht davon aus, dass Ihre AEM Instanz im Dynamic Media S7-Modus ausgeführt wird.  [Anweisungen zur Einrichtung von AEM mit Dynamic Media finden Sie hier](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). Beim Hochladen eines Videos verarbeitet Dynamic Media das Filmmaterial standardmäßig als 360-Grad-Video, wenn das Seitenverhältnis 2:1 beträgt. das Verhältnis von Breite zu Höhe ist 2:1.
+>Video geht davon aus, dass Ihre AEM Instanz im Dynamic Media S7-Modus ausgeführt wird.  [Anweisungen zur Einrichtung von AEM mit Dynamic Media finden Sie hier](https://helpx.adobe.com/de/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). Beim Hochladen eines Videos verarbeitet Dynamic Media das Filmmaterial standardmäßig als 360-Grad-Video, wenn das Seitenverhältnis 2:1 beträgt. das Verhältnis von Breite zu Höhe ist 2:1.
 
 >[!NOTE]
 >
