@@ -1,21 +1,18 @@
 ---
 title: Anpassung des Postfachs
 description: 'Anpassen des Posteingangs durch Hinzufügen neuer Spalten, die auf Workflow-Daten basieren '
-feature: Adaptive Formulare
+feature: adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
 kt: 5830
-topic: Entwicklung
-role: Entwickler
-level: Erfahren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 25%
+source-wordcount: '202'
+ht-degree: 24%
 
 ---
 
