@@ -2,15 +2,18 @@
 title: Beschneiden, Anpassen von Zielgruppen und Zoomen
 description: Das Übergeordnet erstellte Bild von Dynamic Media Classic unterstützt die Erstellung separater Versionen für jedes Bild, um Details oder Muster anzuzeigen, ohne dass für jedes Bild separate Versionen erstellt werden müssen. Erfahren Sie, wie Sie Bilder in Dynamic Media Classic beschneiden und als neue Übergeordnet- oder virtuelle Datei speichern, virtuelle angepasste Bilder speichern und anstelle von Übergeordnet-Assets verwenden sowie Zoom-Zielgruppen für Ihre Bilder erstellen, um hervorgehobene Details anzuzeigen.
 sub-product: dynamic-media
-feature: smart-crop
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2665'
+source-wordcount: '2673'
 ht-degree: 0%
 
 ---
@@ -64,7 +67,7 @@ Das Bild auf der rechten Seite wird deutlich hervorgehoben, indem der zusätzlic
 
 >[!NOTE]
 >
->&quot;Beschneiden&quot;schafft keine Transparenz um das Bild. Dazu müssen Sie einen Beschneidungspfad in das Bild einbetten und die Upload-Option **Maske aus Clip-Pfad erstellen** verwenden.
+>&quot;Beschneiden&quot;schafft keine Transparenz um das Bild. Dazu müssen Sie einen Beschneidungspfad in das Bild einbetten und die Option **Maske aus Clip-Pfad erstellen** hochladen verwenden.
 >
 >Um ein Bild nach dem Beschneiden wieder in seinen ursprünglichen Zustand zu versetzen, nachdem Sie die Option **Speichern** verwendet haben, zeigen Sie das Bild im Anzeigebereich &quot;Beschneidungseditor&quot;an und klicken Sie auf die Schaltfläche **Zurücksetzen**.
 
@@ -120,7 +123,7 @@ In der Regel erstellen Sie angepasste Bilder mit dem Werkzeug &quot;Beschneiden&
 
 Für angepasste Bilder ist eine eindeutige Asset-ID erforderlich. Nach der Veröffentlichung (Sie müssen sie wie jedes andere Asset veröffentlichen) fungieren sie als jedes andere Bild und werden anhand ihrer Asset-ID für eine URL aufgerufen. Auf der Seite &quot;Details&quot;können Sie unter der Registerkarte **Aufbau und Ableitungen** die mit einem Übergeordnet verknüpften Ansichten anpassen.
 
-![ansichten ](assets/crop-adjusted-zoom-targets/derivatives.jpg)
+![Ansichten ](assets/crop-adjusted-zoom-targets/derivatives.jpg)
 _für Übergeordnet-Image ASIAN_BR_MAIN_
 
 ## Zoom-Zielgruppen
