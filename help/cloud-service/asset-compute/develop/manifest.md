@@ -1,7 +1,7 @@
 ---
 title: manifest.yml eines Asset compute-Projekts konfigurieren
 description: Die Datei "manifest.yml"des Asset compute-Projekts beschreibt alle in diesem Projekt bereitzustellenden Arbeiter.
-feature: asset-compute
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,11 +9,14 @@ audience: developer
 doc-type: tutorial
 kt: 6281
 thumbnail: KT-6281.jpg
+topic: Integrationen, Entwicklung
+role: Entwickler
+level: Vermittelt, erfahren
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 2%
+source-wordcount: '445'
+ht-degree: 3%
 
 ---
 
@@ -28,7 +31,7 @@ Das `manifest.yml`, das sich im Stammverzeichnis des Asset compute-Projekts befi
 
 Arbeiter werden als Adobe I/O Runtime-Aktionseinträge unter `actions` definiert und bestehen aus einer Gruppe von Konfigurationen.
 
-Mitarbeiter, die auf andere Adobe I/O-Integrationen zugreifen, müssen die `annotations -> require-adobe-auth`-Eigenschaft auf `true` setzen, da [die Adobe I/O-Anmeldeinformationen des Workers](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) über das `params.auth`-Objekt verfügbar macht. Dies ist in der Regel erforderlich, wenn der Mitarbeiter Adobe I/O-APIs wie die Adobe Photoshop-, Lightroom- oder Sensei-APIs abruft und pro Mitarbeiter umgeschaltet werden kann.
+Arbeiter, die auf andere Adobe I/O-Integrationen zugreifen, müssen die `annotations -> require-adobe-auth`-Eigenschaft auf `true` setzen, da [die Anmeldeinformationen der Adobe I/O des Workers](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) über das `params.auth`-Objekt verfügbar macht. Dies ist in der Regel erforderlich, wenn der Mitarbeiter Adobe I/O-APIs wie die Adobe Photoshop-, Lightroom- oder Sensei-APIs abruft und pro Mitarbeiter umgeschaltet werden kann.
 
 1. Öffnen und überprüfen Sie den automatisch generierten Worker `manifest.yml`. Projekte, die mehrere Asset compute-Worker enthalten, müssen einen Eintrag für jeden Arbeitnehmer unter dem `actions`-Array definieren.
 
