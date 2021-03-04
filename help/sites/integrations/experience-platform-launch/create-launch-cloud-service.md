@@ -1,7 +1,6 @@
 ---
 title: Konfiguration von Launch Cloud Service erstellen
 description: Erfahren Sie, wie Sie eine neue Startkonfiguration für Cloud Services erstellen. Die Startkonfiguration kann dann auf eine bestehende Site angewendet werden, und das Laden der Startbibliotheken kann sowohl in der Authoring- als auch in der Publish-Umgebung beobachtet werden.
-feature: launch
 topics: integrations
 audience: administrator
 doc-type: technical video
@@ -9,11 +8,14 @@ activity: setup
 version: cloud-service
 kt: 5982
 thumbnail: 38566.jpg
+topic: Integrationen
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: eabc325c498b4d5b8b5a53b9004f0e89d82cefe3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '96'
-ht-degree: 2%
+source-wordcount: '99'
+ht-degree: 4%
 
 ---
 
