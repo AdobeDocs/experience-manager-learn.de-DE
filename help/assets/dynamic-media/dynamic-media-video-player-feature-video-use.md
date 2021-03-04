@@ -1,22 +1,17 @@
 ---
 title: Verwenden des Video-Players in AEM Dynamic Media
-seo-title: Verwenden des Video-Players in AEM Dynamic Media
 description: AEM Dynamic Media-Videoplayer, der früher zur Unterstützung des adaptiven Video-Streaming auf Desktop-Clients und Browsern auf Flash-Laufzeitumgebung angewiesen war, wurde beim Flash-basierten Content-Streaming aggressiver. Mit der Einführung von HLS (Apple's HTTP Live Streaming Video Versand Protocol) können Inhalte jetzt gestreamt werden, ohne auf Flash angewiesen zu sein.
-seo-description: AEM Dynamic Media-Videoplayer, der früher zur Unterstützung des adaptiven Video-Streaming auf Desktop-Clients und Browsern auf Flash-Laufzeitumgebung angewiesen war, wurde beim Flash-basierten Content-Streaming aggressiver. Mit der Einführung von HLS (Apple's HTTP Live Streaming Video Versand Protocol) können Inhalte jetzt gestreamt werden, ohne auf Flash angewiesen zu sein.
-uuid: aac6f471-4bed-4773-890f-0dd2ceee381d
-discoiquuid: b01cc46b-ef64-4db9-b3b4-52d3f27bddf5
 sub-product: dynamic-media
-feature: media-player, video-profiles
-topics: videos, renditions, authoring, best-practices
-doc-type: feature video
-audience: all
-activity: use
+feature: Videoprofile
 version: 6.3, 6.4, 6.5
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '271'
-ht-degree: 29%
+source-wordcount: '221'
+ht-degree: 34%
 
 ---
 
@@ -65,7 +60,7 @@ Die folgende HLS-Browserunterstützung gilt für nicht unterstützte Browser als
   <tr> 
    <td> <p>Desktop</p> </td>
    <td> <p>Chrome</p> </td>
-   <td> <p>HLS Video-Streaming</p> </td>
+   <td> <p>HLS-Video-Streaming</p> </td>
   </tr>
   <tr> 
    <td> <p>Desktop</p> </td>
