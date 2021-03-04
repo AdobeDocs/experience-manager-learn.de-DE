@@ -4,17 +4,20 @@ seo-title: Tagging und Speichern des AEM Forms DoR in DAM
 description: In diesem Artikel wird der Verwendungsfall zum Speichern und Taggen des DoR, das von AEM Forms in AEM DAM generiert wurde, erläutert. Das Tagging des Dokuments erfolgt auf der Grundlage der gesendeten Formulardaten.
 seo-description: In diesem Artikel wird der Verwendungsfall zum Speichern und Taggen des DoR, das von AEM Forms in AEM DAM generiert wurde, erläutert. Das Tagging des Dokuments erfolgt auf der Grundlage der gesendeten Formulardaten.
 uuid: b9ba13ed-52d5-4389-a7d5-bf85e58fea49
-feature: adaptive Formulare,Workflow
+feature: Adaptives Forms, Workflow
 topics: developing
 audience: implementer
 doc-type: article
 activity: develop
 version: 6.4,6.5
 discoiquuid: 53961454-633b-4cd8-aef7-e64ab4e528e4
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '661'
 ht-degree: 1%
 
 ---
