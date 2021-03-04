@@ -1,7 +1,7 @@
 ---
 title: Developer Console
 description: AEM als Cloud Service bietet eine Entwicklerkonsole für jede Umgebung, die verschiedene Details des ausgeführten AEM-Dienstes anzeigt, die beim Debugging hilfreich sind.
-feature: null
+feature: Entwicklertools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 5433
 thumbnail: kt-5433.jpg
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 1af3661e5c18206d58d339d51d5189834e843023
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1344'
+source-wordcount: '1349'
 ht-degree: 2%
 
 ---
