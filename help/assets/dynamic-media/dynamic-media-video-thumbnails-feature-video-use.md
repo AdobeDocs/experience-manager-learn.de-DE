@@ -1,22 +1,17 @@
 ---
 title: Verwenden der benutzerdefinierten Videominiatur mit AEM Dynamic Media
-seo-title: Verwenden der benutzerdefinierten Videominiatur mit AEM Dynamic Media
 description: Benutzerdefinierte Video-Miniaturansichten von AEM Assets bieten Autoren die Möglichkeit, eine entsprechende Miniaturansicht aus einem Satz generierter Miniaturansichten auszuwählen. Die Anzahl der für ein Video generierten Miniaturansichten kann einfach angepasst werden.
-seo-description: Benutzerdefinierte Video-Miniaturansichten von AEM Assets bieten Autoren die Möglichkeit, eine entsprechende Miniaturansicht aus einem Satz generierter Miniaturansichten auszuwählen. Die Anzahl der für ein Video generierten Miniaturansichten kann einfach angepasst werden.
-uuid: 1559b1bc-daca-49e9-b6de-0b93798658a8
-discoiquuid: 5e168b37-2906-4ab5-9840-086ae7efa281
 sub-product: dynamic-media
-feature: media-player, video-profiles
-topics: videos, renditions, authoring, best-practices
-doc-type: feature video
-audience: all
-activity: use
+feature: Videoprofile
 version: 6.3, 6.4, 6.5
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 16%
+source-wordcount: '112'
+ht-degree: 25%
 
 ---
 
@@ -33,4 +28,4 @@ Benutzerdefinierte Video-Miniaturansichten von AEM Assets bieten Autoren die Mö
 
 >[!NOTE]
 >
->Sie sollten Ihre [AEM Instanz im Modus Dynamic Media](https://docs.adobe.com/docs/en/aem/6-3/administer/content/dynamic-media/config-dynamic.html) ausführen
+>Sie sollten Ihre [AEM Instanz im Modus Dynamic Media](https://docs.adobe.com/docs/de-DE/aem/6-3/administer/content/dynamic-media/config-dynamic.html) ausführen
