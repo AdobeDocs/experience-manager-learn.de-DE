@@ -4,18 +4,21 @@ seo-title: Erstellen von Datenmodellelementen für berechnete Formulare in AEM F
 description: Erstellen von Datenmodellelementen für berechnete Formulare
 seo-description: Erstellen von Datenmodellelementen für berechnete Formulare
 uuid: 30d72569-6a38-44f6-a091-b9a595d5ac77
-feature:  Workflow
+feature: Workflow
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
 discoiquuid: b7b6d05b-7378-4028-add3-4f2a03a7455d
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 0%
+source-wordcount: '163'
+ht-degree: 1%
 
 ---
 
