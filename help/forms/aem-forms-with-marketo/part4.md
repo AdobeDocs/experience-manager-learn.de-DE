@@ -3,19 +3,16 @@ title: AEM Forms mit Marketo (Teil 4)
 seo-title: AEM Forms mit Marketo (Teil 4)
 description: Lernprogramm zur Integration von AEM Forms in Marketing mit dem AEM Forms-Formulardatenmodell.
 seo-description: Lernprogramm zur Integration von AEM Forms in Marketing mit dem AEM Forms-Formulardatenmodell.
-feature: '"Adaptives Forms, Formulardatenmodell"'
+feature: adaptive Formulare, form-data-model
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
-topic: Entwicklung
-role: Entwickler
-level: Erfahren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '316'
+source-wordcount: '310'
 ht-degree: 0%
 
 ---
