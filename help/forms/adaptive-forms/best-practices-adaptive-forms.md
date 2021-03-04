@@ -3,17 +3,20 @@ title: Benennungskonventionen und Best Practices beim Erstellen adaptiver Formul
 seo-title: Benennungskonventionen und Best Practices beim Erstellen adaptiver Formulare
 description: Benennungskonventionen und Best Practices beim Erstellen adaptiver Formulare
 seo-description: Benennungskonventionen und Best Practices beim Erstellen adaptiver Formulare
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: best-practices
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 5b05dbe45babfcfcfc81995d9d48bc9b26b9b6c8
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 7%
+source-wordcount: '316'
+ht-degree: 8%
 
 ---
 
