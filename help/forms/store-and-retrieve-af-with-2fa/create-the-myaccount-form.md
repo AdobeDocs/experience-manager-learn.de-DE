@@ -1,7 +1,7 @@
 ---
 title: MyAccountForm erstellen
 description: Erstellen Sie das Formular "myaccount", um das teilweise ausgefüllte Formular bei erfolgreicher Überprüfung der Anwendungs-ID und der Telefonnummer abzurufen.
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6599
 thumbnail: 6599.jpg
+topic: Entwicklung
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 0%
+source-wordcount: '261'
+ht-degree: 1%
 
 ---
 
@@ -32,7 +35,7 @@ Dieses Formular verwendet den Aufruf der POST des Formulardatenmodells, um die M
 >[!NOTE]
 > Sie müssen den API-Schlüssel und die für Ihr [Nexmo](https://dashboard.nexmo.com/)-Konto spezifischen Werte für den geheimen API-Schlüssel in den entsprechenden Feldern von MyAccountForm angeben.
 
-![trigger-submit](assets/trigger-submit.JPG)
+![Trigger-submit](assets/trigger-submit.JPG)
 
 
 
