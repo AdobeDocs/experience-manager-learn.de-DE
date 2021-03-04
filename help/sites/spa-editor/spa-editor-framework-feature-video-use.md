@@ -3,7 +3,7 @@ title: Verwenden des SPA-Editors mit AEM Sites
 seo-title: Verwenden des SPA Editor-Frameworks mit AEM Sites
 description: AEM Einzelseitenanwendungs-Editor-Framework bietet Autoren die Möglichkeit, Inhalte für eine Einzelseitenanwendung oder SPA zu bearbeiten. Entwickler, die entweder React- oder Angular-Frameworks verwenden, erstellen eine SPA und ordnen dann Bereiche der SPA AEM Komponenten zu, sodass Autoren vertraute AEM Sites-Bearbeitungswerkzeuge verwenden können.
 sub-product: Sites, Content-Services
-feature: spa-editor
+feature: Spa-Editor
 topics: authoring, single-page-applications
 audience: all
 doc-type: feature video
@@ -11,10 +11,13 @@ activity: use
 version: 6.4, 6.5, cloud-service
 kt: 1047
 thumbnail: 22229.jpg
+topic: SPA
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: f568c991cd33c5c5349da32f505cff356a6ebfd2
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '289'
 ht-degree: 12%
 
 ---
