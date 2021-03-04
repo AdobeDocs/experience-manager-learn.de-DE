@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 5311
 thumbnail: 5311-spa-angular.jpg
+topic: SPA
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 28b5522e094a41d81116acb923dc0390478e2308
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2389'
+source-wordcount: '2392'
 ht-degree: 2%
 
 ---
@@ -199,7 +202,7 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
 ## Erstellen der Bildkomponente
 
-Erstellen Sie anschließend eine `Image`-Angular-Komponente, die der AEM [Image-Komponente](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/image.html) zugeordnet ist. Die Komponente `Image` ist ein weiteres Beispiel für eine Komponente **content**.
+Erstellen Sie anschließend eine `Image`-Angular-Komponente, die der AEM [Image-Komponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/image.html) zugeordnet ist. Die Komponente `Image` ist ein weiteres Beispiel für eine Komponente **content**.
 
 ### Inspect the JSON
 
