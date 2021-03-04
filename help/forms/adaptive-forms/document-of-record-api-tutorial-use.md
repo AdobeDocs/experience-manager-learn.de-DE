@@ -3,7 +3,7 @@ title: Verwenden der API zum Generieren eines Dokuments aus Datensatz mit AEM Fo
 seo-title: Verwenden der API zum Generieren eines Dokuments aus Datensatz mit AEM Forms
 description: Dokument aus Datensatz (DOR) programmgesteuert generieren
 seo-description: Verwenden der API zum Generieren eines Dokuments aus Datensatz mit AEM Forms
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
@@ -11,11 +11,14 @@ activity: implement
 version: 6.4,6.5
 uuid: 94ac3b13-01b4-4198-af81-e5609c80324c
 discoiquuid: ba91d9df-dc61-47d8-8e0a-e3f66cae6a87
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 4%
+source-wordcount: '281'
+ht-degree: 6%
 
 ---
 
