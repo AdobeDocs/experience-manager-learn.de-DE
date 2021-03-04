@@ -1,10 +1,14 @@
 ---
 title: Kapitel 7 - AEM Content Services von einer mobilen App verwenden - Content Services
 description: Kapitel 7 des Tutorials führt die Android Mobile App aus, um von AEM Content Services erstellte Inhalte zu nutzen.
+feature: '"Inhaltsfragmente, APIs"'
+topic: '"Headless, Content-Management"'
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1416'
 ht-degree: 1%
 
 ---
@@ -198,7 +202,7 @@ Führen Sie nach jedem Schritt eine Pull-to-Aktualisierung der mobilen App durch
 Weitere Informationen zu AEM Content Services und AEM als Headless-CMS finden Sie in der Dokumentation und den Unterstützungsmaterialien der Adobe:
 
 * [Inhaltsfragmente verwenden](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
-* [Benutzerhandbuch zu AEM WCM-Hauptkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html)
+* [Benutzerhandbuch zu AEM WCM-Hauptkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html)
 * [Bibliothek der WCM-Hauptkomponenten](https://opensource.adobe.com/aem-core-wcm-components/library.html)
 * [AEM WCM Kernkomponenten GitHub-Projekt](https://github.com/adobe/aem-core-wcm-components)
 * [AEM WCM-Kernkomponenten - Fragen Sie den Experten](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
