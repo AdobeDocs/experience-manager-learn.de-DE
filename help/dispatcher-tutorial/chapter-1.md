@@ -1,10 +1,12 @@
 ---
 title: Kapitel 1 - Lernprogramme einrichten und herunterladen
+seo-title: Erste Schritte mit AEM Content Services - Kapitel 1 - Lernprogramm einrichten
 description: Kapitel 1 des AEMHeadless-Lernprogramms enthält die Grundeinstellung für die AEM Instanz des Lernprogramms.
+seo-description: Kapitel 1 des AEMHeadless-Lernprogramms enthält die Grundeinstellung für die AEM Instanz des Lernprogramms.
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '17476'
+source-wordcount: '17502'
 ht-degree: 0%
 
 ---
@@ -647,7 +649,7 @@ Aber wir haben die Startseite nicht aktiviert, oder? Und warum sollten wir eine 
 >
 >Das ist ein Anti-Muster. Verwenden Sie es nur kurzfristig, um etwas Zeit zu kaufen und eine raffiniertere Lösung zu finden.
 
-Der verzögerte Administrator setzt in der Regel &quot;_die automatische Ungültigmachung auf jpgs und die statfile-Ebene auf null - dies hilft immer bei der Zwischenspeicherung von Problemen aller Art_&quot;. Sie finden diese Ratschläge in technischen Foren, und sie helfen Ihnen bei Ihrem Ungültigmachungsproblem.
+Der verzögerte Administrator setzt in der Regel &quot;_die automatische Ungültigmachung auf jpgs und die statfile-Ebene auf null - dies hilft immer bei der Zwischenspeicherung von Problemen aller Art_&quot;. Sie finden diese Ratschläge in technischen Foren, und sie helfen bei Ihrer Ungültigmachung.
 
 Bisher haben wir noch nicht über die statfile-Ebene gesprochen. Die automatische Ungültigmachung funktioniert grundsätzlich nur bei Dateien in derselben Unterstruktur. Das Problem besteht jedoch darin, dass Seiten und Assets in der Regel nicht in derselben Unterstruktur leben. Seiten befinden sich irgendwo unterhalb von `/content/mysite`, während Assets unterhalb von `/content/dam` leben.
 
@@ -1575,7 +1577,7 @@ Ihre Site hat ein sehr spezifisches Zugriffsmuster. Sie haben eine hohe Traffic-
 
 Nun werden diese Seiten sehr wahrscheinlich im Dispatcher zwischengespeichert, da sie so häufig angefordert werden.
 
-An den Dispatcher wird eine Anfrage zur willkürlichen Ungültigmachung gesendet, wodurch alle Seiten - einschließlich der bevorzugten einmal - ungültig werden.
+An den Dispatcher wird eine Anfrage zur willkürlichen Ungültigmachung gesendet, wodurch alle Seiten - einschließlich Ihrer bevorzugten Einmaligkeit - ungültig werden.
 
 Da diese Seiten so beliebt sind, gibt es neue eingehende Anforderungen von verschiedenen Browsern. Nehmen wir die Startseite als Beispiel.
 
