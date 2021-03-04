@@ -4,18 +4,21 @@ seo-title: Kampagne Profil mithilfe des Formulardatenmodells erstellen
 description: Schritte zum Erstellen von Adobe Campaign Standard-Profilen mit dem AEM Forms-Formulardatenmodell
 seo-description: Schritte zum Erstellen von Adobe Campaign Standard-Profilen mit dem AEM Forms-Formulardatenmodell
 uuid: 3216827e-e1a2-4203-8fe3-4e2a82ad180a
-feature: adaptive Formulare, form-data-model
+feature: Ausgabe-Service
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 461c532e-7a07-49f5-90b7-ad0dcde40984
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 2%
+source-wordcount: '452'
+ht-degree: 3%
 
 ---
 
