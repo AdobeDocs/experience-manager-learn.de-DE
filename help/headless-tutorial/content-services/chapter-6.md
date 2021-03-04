@@ -1,10 +1,14 @@
 ---
 title: Kapitel 6 - Bereitstellen des Inhalts auf AEM Publish als JSON - Content Services
 description: Kapitel 6 des AEM Headless-Lernprogramms umfasst die Sicherstellung, dass alle erforderlichen Pakete, Konfigurationen und Inhalte auf AEM Publish verfügbar sind, damit der Verbrauch über die mobile App möglich ist.
+feature: '"Inhaltsfragmente, APIs"'
+topic: '"Headless, Content-Management"'
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '473'
 ht-degree: 2%
 
 ---
@@ -62,6 +66,6 @@ Beachten Sie, dass dies erforderlich ist, da die Ereignisses-API die Komponente 
 
 ## Nächster Schritt
 
-Es sind keine zusätzlichen Pakete zu installieren. Vergewissern Sie sich, dass der Inhalt und die Konfiguration, die in diesem Abschnitt erläutert werden, in AEM Publish veröffentlicht sind. Andernfalls funktionieren nachfolgende Kapitel nicht.
+Es sind keine zusätzlichen Pakete zu installieren. Vergewissern Sie sich, dass die in diesem Abschnitt beschriebenen Inhalte und Konfigurationen in AEM Publish veröffentlicht wurden. Andernfalls funktionieren die nachfolgenden Kapitel nicht.
 
 * [Kapitel 7 - Verwenden AEM Content Services von einer mobilen App](./chapter-7.md)
