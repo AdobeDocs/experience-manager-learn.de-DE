@@ -1,17 +1,20 @@
 ---
 title: Entwickeln für Seitenunterschiede in AEM Sites
 description: In diesem Video wird gezeigt, wie Sie benutzerdefinierte Stile für die Seitendifferenz-Funktion von AEM-Sites bereitstellen.
-feature: page-diff
+feature: 'Authoring – '
 topics: development
 audience: developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 6%
+source-wordcount: '297'
+ht-degree: 7%
 
 ---
 
@@ -47,7 +50,7 @@ Stellen Sie sicher, dass `authoring` clientlib für Ihr Projekt unter `/apps/my-
 
 ### Geben Sie die benutzerdefinierte CSS {#provide-the-custom-css} an
 
-hinzufügen auf die `authoring`-clientlib des Projekts ein `css.txt`, die auf die less-Datei verweist, die die überschreibenden Stile bereitstellt. [](https://lesscss.org/) Lessis wird aufgrund seiner zahlreichen praktischen Funktionen bevorzugt, einschließlich der in diesem Beispiel verwendeten Klassenumhüllung.
+hinzufügen auf die clientlib-Datei `authoring` des Projekts `css.txt`, die auf die less-Datei verweist, die die überschreibenden Stile bereitstellt. [](https://lesscss.org/) Lessis wird aufgrund seiner zahlreichen praktischen Funktionen bevorzugt, einschließlich der in diesem Beispiel verwendeten Klassenumhüllung.
 
 ```shell
 base=./css
