@@ -3,11 +3,15 @@ title: Kapitel 3 - Inhaltsfragmente für Authoring von Ereignissen - Content Ser
 seo-title: Erste Schritte mit AEM Content Services - Kapitel 3 - Inhaltsfragmente im Authoring-Ereignis
 description: Kapitel 3 des AEMHeadless-Lernprogramms umfasst das Erstellen und Authoring von Inhaltsfragmenten aus dem Inhaltsfragmentmodell, das in Kapitel 2 erstellt wurde.
 seo-description: Kapitel 3 des AEMHeadless-Lernprogramms umfasst das Erstellen und Authoring von Inhaltsfragmenten aus dem Inhaltsfragmentmodell, das in Kapitel 2 erstellt wurde.
+feature: Inhaltsfragmente, APIs
+topic: Kopflos, Content-Management
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 3%
+source-wordcount: '518'
+ht-degree: 4%
 
 ---
 
