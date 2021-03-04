@@ -1,20 +1,17 @@
 ---
 title: Verwenden von Panorama- und Vertikalbild-Viewern mit AEM Assets Dynamic Media
-seo-title: Verwenden von Panorama- und Vertikalbild-Viewern mit AEM Assets Dynamic Media
 description: Zu den Verbesserungen des Dynamic Media Viewers in AEM 6.4 gehören der Panorama-Bild-Viewer, der Panorama-Viewer für die virtuelle Realität und der vertikale Bildbetrachter. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein eindrucksvolles Erlebnis im Raum, der Immobilie, der Lage oder der Landschaft ohne eigene Entwicklung zu bieten.
-seo-description: Zu den Verbesserungen des Dynamic Media Viewers in AEM 6.4 gehören der Panorama-Bild-Viewer, der Panorama-Viewer für die virtuelle Realität und der vertikale Bildbetrachter. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein eindrucksvolles Erlebnis im Raum, der Immobilie, der Lage oder der Landschaft ohne eigene Entwicklung zu bieten.
 sub-product: dynamic-media
-feature: video-profiles, video-profiles, vr-360
-topics: videos, renditions, authoring
-doc-type: feature video
-audience: all
-activity: use
+feature: Video-Profile, Video-Profile, 360 VR-Video
 version: 6.4, 6.5
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 1%
+source-wordcount: '548'
+ht-degree: 3%
 
 ---
 
@@ -27,7 +24,7 @@ Zu den Verbesserungen des Dynamic Media Viewers in AEM 6.4 gehören der Panorama
 
 >[!NOTE]
 >
->Video geht davon aus, dass Ihre AEM Instanz im Dynamic Media S7-Modus ausgeführt wird. [Anweisungen zur Einrichtung von AEM mit Dynamic Media finden Sie hier.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>Video geht davon aus, dass Ihre AEM Instanz im Dynamic Media S7-Modus ausgeführt wird. [Anweisungen zur Einrichtung von AEM mit Dynamic Media finden Sie hier.](https://helpx.adobe.com/de/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## Panoramaanzeige und Panoramaanzeige
 
