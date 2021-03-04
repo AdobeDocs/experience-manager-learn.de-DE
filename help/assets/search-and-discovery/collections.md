@@ -2,19 +2,18 @@
 title: Sammlungen
 description: Erfahren Sie, wie Sammlungen eine alternative Ansicht in AEM Assets bieten.
 sub-product: Assets
-feature: collections
-topics: authoring
-audience: author
-doc-type: feature video
-activity: use
+feature: Sammlungen
 version: cloud-service
 kt: 4301
 thumbnail: 32053.jpg
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '23'
-ht-degree: 13%
+source-wordcount: '29'
+ht-degree: 20%
 
 ---
 
