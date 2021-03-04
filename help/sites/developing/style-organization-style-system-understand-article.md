@@ -1,16 +1,19 @@
 ---
 title: Best Practices für das Stilsystem mit AEM Sites
 description: Ein ausführlicher Artikel, in dem die Best Practices für die Implementierung des Stilsystems mit Adobe Experience Manager Sites erläutert werden.
-feature: style-system
+feature: Stilsystem
 topics: development, components, front-end-development
 audience: developer
 doc-type: article
 activity: understand
 version: 6.4, 6.5
+topic: Entwicklung
+role: Entwickler
+level: Vermittelt, erfahren
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1544'
 ht-degree: 3%
 
 ---
@@ -29,7 +32,7 @@ Es gibt zwei Hauptformate oder -stile, die für das AEM-Stilsystem implementiert
 
 **Layout-** Stile wirken sich auf viele Elemente einer Komponente aus, um eine gut definierte und identifizierbare Darstellung (Design und Layout) der Komponente zu erstellen und sie oft an einem bestimmten wiederverwendbaren Markenkonzept auszurichten. Beispielsweise kann eine Teaser-Komponente im klassischen kartenbasierten Layout, im horizontalen Promotionstil oder als Hero-Layout-Überlagerungstext auf einem Bild dargestellt werden.
 
-**Anzeigestile** werden verwendet, um kleinere Änderungen an Layoutstilen zu beeinflussen. Sie ändern jedoch nicht die grundlegende Natur oder Absicht des Layoutstils. Ein Hero-Layoutstil kann beispielsweise Anzeigestile aufweisen, die das Farbschema vom primären Markenfarbschema zum sekundären Markenfarbschema ändern.
+**Anzeigestile** wirken sich auf geringfügige Änderungen an Layoutstilen aus, ändern jedoch nicht die grundlegende Natur oder Absicht des Layoutstils. Ein Hero-Layoutstil kann beispielsweise Anzeigestile aufweisen, die das Farbschema vom primären Markenfarbschema zum sekundären Markenfarbschema ändern.
 
 ## Best Practices für die Stilorganisation {#style-organization-best-practices}
 
