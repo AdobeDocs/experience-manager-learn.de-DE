@@ -3,20 +3,17 @@ title: Versand des Dokuments für interaktive Kommunikation - Web Kanal AEM Form
 seo-title: Versand des Dokuments für interaktive Kommunikation - Web Kanal AEM Forms
 description: Versand des Web-Kanal-Dokumente per Link in E-Mail
 seo-description: Versand des Web-Kanal-Dokumente per Link in E-Mail
-feature: Interaktive Kommunikation
+feature: interactive-communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '298'
-ht-degree: 1%
+source-wordcount: '294'
+ht-degree: 0%
 
 ---
 
