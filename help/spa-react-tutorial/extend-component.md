@@ -1,8 +1,8 @@
 ---
 title: Komponente erweitern | Erste Schritte mit dem AEM SPA Editor und React
-description: Erfahren Sie, wie Sie eine bestehende Core-Komponente erweitern, um sie mit dem AEM SPA Editor zu verwenden. Das Verständnis, wie Eigenschaften und Inhalte zu einer vorhandenen Komponente hinzugefügt werden, ist eine leistungsstarke Methode, um die Funktionen einer AEM SPA Editor-Implementierung zu erweitern. Erfahren Sie, wie Sie mit dem Delegierungsparameter Sling-Modelle und Funktionen von Sling Resource Merger erweitern können.
+description: Erfahren Sie, wie Sie eine bestehende Core-Komponente erweitern, um sie mit dem AEM SPA Editor zu verwenden. Das Verstehen, wie Eigenschaften und Inhalte zu einer vorhandenen Komponente hinzugefügt werden, ist eine leistungsstarke Methode, um die Funktionen einer AEM SPA Editor-Implementierung zu erweitern. Erfahren Sie, wie Sie mit dem Delegierungsparameter Sling-Modelle und Funktionen von Sling Resource Merger erweitern können.
 sub-product: Sites
-feature: SPA Editor
+feature: SPA Editor, Hauptkomponenten
 doc-type: tutorial
 topics: development
 version: cloud-service
@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 5879
 thumbnail: 5879-spa-react.jpg
+topic: SPA
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: ff75a9d10e9d00510e4c49dea0dcc36e68ca46c4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1969'
+source-wordcount: '1976'
 ht-degree: 4%
 
 ---
@@ -31,13 +34,13 @@ Erfahren Sie, wie Sie eine bestehende Core-Komponente erweitern, um sie mit dem 
 
 ## Was Sie erstellen werden
 
-In diesem Kapitel wird eine neue Komponente `Card` erstellt. Die Komponente `Card` erweitert die [Image-Core-Komponente](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/image.html) um zusätzliche Inhaltsfelder wie Titel und Aktionsaufruf, um die Rolle eines Teasers für andere Inhalte innerhalb der SPA auszuführen.
+In diesem Kapitel wird eine neue Komponente `Card` erstellt. Die Komponente `Card` erweitert die [Image-Core-Komponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/image.html) um zusätzliche Inhaltsfelder wie Titel und Aktionsaufruf, um die Rolle eines Teasers für andere Inhalte innerhalb der SPA auszuführen.
 
 ![Endgültiges Authoring der Kartenkomponente](assets/extend-component/final-authoring-card.png)
 
 >[!NOTE]
 >
-> In einer realen Implementierung ist es möglicherweise angemessener, einfach die [Teaser-Komponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/teaser.html) zu verwenden und dann die [Image-Core-Komponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) zu erweitern, um je nach Projektanforderungen eine `Card`-Komponente zu erstellen. Es wird immer empfohlen, [Kernkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html) nach Möglichkeit direkt zu verwenden.
+> In einer realen Implementierung ist es möglicherweise angemessener, einfach die [Teaser-Komponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/teaser.html) zu verwenden und dann die [Image-Core-Komponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) zu erweitern, um je nach Projektanforderungen eine `Card`-Komponente zu erstellen. Es wird immer empfohlen, [Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html) nach Möglichkeit direkt zu verwenden.
 
 ## Voraussetzungen
 
