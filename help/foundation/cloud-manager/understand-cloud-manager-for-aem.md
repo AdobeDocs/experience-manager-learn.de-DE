@@ -2,15 +2,17 @@
 title: Adobe Cloud Manager
 description: Adobe Cloud Manager bietet eine einfache und dennoch robuste Lösung, die eine einfache Verwaltung, Selbstprüfung und Selbstbedienung von AEM Umgebung ermöglicht.
 sub-product: cloud-manager, Stiftung
-feature: pipelines, programs, projects, quality-gates, reports
 topics: best-practices, cicd, development, operations, governance
 doc-type: feature video
 activity: understand
 audience: developer, implementer, administrator, architect
+topic: Architektur
+role: Architekt
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '531'
+source-wordcount: '534'
 ht-degree: 22%
 
 ---
@@ -31,11 +33,11 @@ In dieser Videoserie werden die wichtigsten Funktionen von Cloud Manager AEM erl
 * [CI/CD Nicht-Produktionsrohre](#cicd-non-production-pipeline)
 * [Aktivität](#activity)
 
-Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](https://docs.adobe.com/content/help/de/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html).
+Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html).
 
 ## Programme {#programs}
 
-[Cloud Manager-](https://docs.adobe.com/content/help/de/experience-manager-cloud-manager/using/getting-started/setting-up-program.html) Programme stellen AEM Umgebung dar, die logische Gruppen von Geschäftsinitiativen unterstützen, die in der Regel einem erworbenen Service Level Agreement (SLA) entsprechen. Beispielsweise kann ein Programm die AEM zur Unterstützung der globalen öffentlichen Websites darstellen, während ein anderes Programm einen internen DAM darstellt.
+[Cloud Manager-](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-manager/using/getting-started/setting-up-program.html) Programme stellen AEM Umgebung dar, die logische Gruppen von Geschäftsinitiativen unterstützen, die in der Regel einem erworbenen Service Level Agreement (SLA) entsprechen. Beispielsweise kann ein Programm die AEM zur Unterstützung der globalen öffentlichen Websites darstellen, während ein anderes Programm einen internen DAM darstellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313/?quality=12&learn=on)
 
@@ -71,7 +73,7 @@ Die [CI/CD Production Pipeline](https://docs.adobe.com/content/help/en/experienc
 
 >[!VIDEO](https://video.tv.adobe.com/v/26317/?quality=12&learn=on)
 
-## CI/CD Nicht-Produktionsrohre {#cicd-non-production-pipeline}
+## CI/CD Nicht-Produktion Pipelines {#cicd-non-production-pipeline}
 
 [CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Codequalität-Pipelines und Bereitstellungs-Pipelines. ](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html#non-production--code-quality-only-pipelines) Codequalität-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll. Bereitstellungs-Pipelines unterstützen die automatisierte Bereitstellung von Code aus dem Git-Repository in einer Nicht-Produktions-Umgebung, d. h. jeder bereitgestellten AEM Umgebung, die nicht Stage oder Produktion ist.
 
