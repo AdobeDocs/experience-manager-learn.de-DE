@@ -1,14 +1,10 @@
 ---
 title: Kapitel 5 - Authoring von Content Services-Seiten - Content Services
 description: In Kapitel 5 des AEM-Lernprogramms "Kopflos"werden die Seiten aus den in Kapitel 4 definierten Vorlagen erstellt. Diese Seiten fungieren als JSON HTTP-Endpunkte.
-feature: '"Inhaltsfragmente, APIs"'
-topic: '"Headless, Content-Management"'
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '604'
+source-wordcount: '596'
 ht-degree: 1%
 
 ---
