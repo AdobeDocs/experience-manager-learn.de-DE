@@ -2,19 +2,18 @@
 title: Schema des Metadatenordners
 description: Mit den Metadaten-Ordnern können Schema Metadaten verwalten und überprüfen, die mit Asset-Ordnern selbst verknüpft sind, und nicht direkt auf Assets.
 sub-product: Assets
-feature: metadata-schemas
-topics: configuring, content-architecture, metadata
-audience: administrator, implementer
-doc-type: feature video
-activity: use
+feature: 'Metadaten  '
 version: cloud-service
 kt: 4983
 thumbnail: 34071.jpg
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: a2772bd8dd65e8bcb4caf660709f6aceb6e28eb4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '47'
-ht-degree: 2%
+source-wordcount: '53'
+ht-degree: 7%
 
 ---
 
