@@ -2,15 +2,18 @@
 title: Einführung in einfache Vorlagen
 description: Erfahren Sie mehr über Grundlegende Vorlagen in Dynamic Media Classic, bildbasierte Vorlagen, die vom Image-Server aufgerufen werden und aus Bildern und gerendertem Text bestehen. Eine Vorlage kann nach der Veröffentlichung der Vorlage dynamisch über die URL geändert werden. Hier erfahren Sie, wie Sie eine Photoshop PSD-Datei in Dynamic Media Classic hochladen, um sie als Grundlage für eine Vorlage zu verwenden. Erstellen Sie eine einfache Merchandising-Grundvorlage, die aus Bildebenen besteht. hinzufügen Textebenen und machen sie mithilfe von Parametern variabel. Erstellen Sie eine Vorlagen-URL und bearbeiten Sie das Bild dynamisch über den Webbrowser.
 sub-product: dynamic-media
-feature: templates
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 5eeeb197f9a2ee4216e1f9220c830751c36f01ab
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '6301'
+source-wordcount: '6309'
 ht-degree: 0%
 
 ---
@@ -110,7 +113,7 @@ Sie können Ihre Schriftarten auch hochladen und veröffentlichen, wenn Sie dyna
 
 Jede Firma ist dafür verantwortlich, eine Lizenz zur Verwendung einer Schrift im Internet zu erhalten — Wenn Sie eine Schriftart einfach auf Ihrem Computer installiert haben, haben Sie nicht das Recht, sie kommerziell im Internet zu verwenden, und Ihre Firma könnte ohne Erlaubnis vor Gericht gestellt werden. Darüber hinaus gelten unterschiedliche Lizenzbedingungen — Sie benötigen z. B. separate Lizenzen für Druck- und Bildschirmdarstellung.
 
-Dynamic Media Classic unterstützt die Standardschriftarten OpenType (OTF), TrueType (TTF) und Type 1 Postscript. Schreibgeschützte Kofferschriftarten, Typkollektionsdateien, Windows-Systemschriftarten und proprietäre Maschinenschriftarten (wie Schriftarten, die von Gravierungs- oder Stickereimaschinen verwendet werden) werden nicht unterstützt — Sie müssen sie in eines der Standardschriftformate konvertieren oder eine ähnliche Schriftart ersetzen, die in Dynamic Media Classic und auf dem Image-Server verwendet werden soll.
+Dynamic Media Classic unterstützt Standardschriftarten wie OpenType (OTF), TrueType (TTF) und Type 1 Postscript. Schreibgeschützte Kofferschriftarten, Typkollektionsdateien, Windows-Systemschriftarten und proprietäre Maschinenschriftarten (wie Schriftarten, die von Gravierungs- oder Stickereimaschinen verwendet werden) werden nicht unterstützt — Sie müssen sie in eines der Standardschriftformate konvertieren oder eine ähnliche Schriftart ersetzen, die in Dynamic Media Classic und auf dem Image-Server verwendet werden soll.
 
 Nachdem Schriftarten wie andere Assets nach Dynamic Media Classic hochgeladen wurden, müssen sie auch auf dem Image-Server veröffentlicht werden. Ein sehr häufiger Vorlagenfehler besteht darin, die Veröffentlichung der Schriftarten zu vergessen, was zu einem Bildfehler führt — der Image-Server ersetzt keine andere Schrift an ihrer Stelle. Wenn Sie beim Hochladen die Option **Text extrahieren** verwenden möchten, müssen Sie Ihre Schriftartdateien hochladen, bevor Sie die PSD-Datei hochladen, die diese Schriftarten verwendet. Die Funktion **Text extrahieren** versucht, Ihren Text als bearbeitbare Textebene neu zu erstellen und ihn in einer Dynamic Media Classic-Vorlage zu platzieren. Dies wird im nächsten Thema, PSD-Optionen, erläutert.
 
@@ -341,7 +344,7 @@ Das Erstellen einer Vorgabe für Ihre Vorlage ist kein erforderlicher Schritt. E
 
 Eine Bildvorgabe für eine Vorlage hat nichts Besonderes. Wenn Sie bereits eine Vorgabe für ein statisches Bild in derselben Größe haben, können Sie sie stattdessen verwenden.
 
-### Veröffentlichung
+### Veröffentlichen
 
 Sie müssen eine Veröffentlichung ausführen, um zu sehen, wie die Änderungen live auf dem Image-Server veröffentlicht werden. Denken Sie daran, was veröffentlicht werden muss: die verschiedenen Bildelementebenen, die Schriftarten für dynamischen Text und die Vorlage selbst. Ähnlich wie bei anderen Rich-Media-Assets von Dynamic Media Classic wie Bildsätze und Rotationssets ist eine einfache Vorlage eine künstliche Konstruktion — Es ist ein Zeilenelement in der Datenbank, das mithilfe einer Reihe von Image Serving-Befehlen auf die Bilder und Schriftarten verweist. Wenn Sie also die Vorlage veröffentlichen, aktualisieren Sie nur Daten auf dem Image-Server.
 
