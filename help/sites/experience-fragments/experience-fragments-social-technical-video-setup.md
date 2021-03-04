@@ -2,17 +2,20 @@
 title: Einrichten von Social-Beiträgen mit AEM Erlebnisfragmenten
 description: Erlebnisfragmente ermöglichen es Marketingexperten, in AEM erstellte Erlebnisse auf Plattformen sozialer Medien zu veröffentlichen. Im folgenden Video werden die Einstellungen und Konfigurationen erläutert, die zum Veröffentlichen von Erlebnisfragmenten auf Facebook und Pinterest erforderlich sind.
 sub-product: Sites, Content-Services
-feature: experience-fragments
+feature: Experience Fragments
 topics: integrations, content-delivery
 audience: administrator, implementer, developer
 doc-type: setup
 activity: use
 version: 6.3, 6.4, 6.5
+topic: Content Management
+role: Administrator, Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 3a3832a05ed9598d970915adbc163254c6eb83f1
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 0%
+source-wordcount: '175'
+ht-degree: 3%
 
 ---
 
