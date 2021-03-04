@@ -3,18 +3,20 @@ title: Verwenden Sie den SSL-Assistenten in AEM
 description: Adobe Experience Managers SSL-Setup-Assistent, um die Einrichtung einer AEM Instanz zur Ausführung über HTTPS zu erleichtern.
 seo-description: Adobe Experience Managers SSL-Setup-Assistent, um die Einrichtung einer AEM Instanz zur Ausführung über HTTPS zu erleichtern.
 version: 6.3, 6,4, 6.5
-feature: null
 topics: security, operations
 activity: use
 audience: administrator
 doc-type: technical video
 uuid: 82a6962e-3658-427a-bfad-f5d35524f93b
 discoiquuid: 9e666741-0f76-43c9-ab79-1ef149884686
+topic: Sicherheit
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 0%
+source-wordcount: '216'
+ht-degree: 1%
 
 ---
 
