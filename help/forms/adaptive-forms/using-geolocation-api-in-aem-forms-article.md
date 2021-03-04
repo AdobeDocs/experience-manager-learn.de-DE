@@ -4,18 +4,21 @@ seo-title: Verwenden von Geolocation-APIs in adaptiven Forms
 description: Ausfüllen von Adressfeldern in Ihrem Formular mithilfe der API
 seo-description: Ausfüllen von Adressfeldern in Ihrem Formular mithilfe der API
 uuid: 5a461659-6873-4ea1-9f37-8296e5a9d895
-feature: adaptive-forms,
+feature: Adaptive Formulare
 topics: integrations
 audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
 discoiquuid: 3400251b-aee0-4d69-994b-e1643fabc868
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: e99779b5d42bb9a3b258e2bbe815defde9d40bf7
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 3%
+source-wordcount: '434'
+ht-degree: 4%
 
 ---
 
