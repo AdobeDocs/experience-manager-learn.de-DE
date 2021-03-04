@@ -4,13 +4,11 @@ seo-title: AEM Forms-Tutorials und -Videos
 description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler
 seo-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler
 sub-product: Formulare
-topic: Entwicklung
-role: Entwickler
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 32%
+source-wordcount: '303'
+ht-degree: 31%
 
 ---
 
