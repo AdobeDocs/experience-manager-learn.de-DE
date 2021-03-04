@@ -1,12 +1,14 @@
 ---
-title: Kapitel 2 - Definieren von Ereignis Content Fragment-Modellen
-seo-title: Erste Schritte mit AEM Content Services - Kapitel 2 - Definieren von Ereignis Content Fragment-Modellen
-description: Kapitel 2 des Lernprogramms "AEM ohne Kopf"umfasst die Aktivierung und Definition von Inhaltsfragmentmodellen, mit denen eine normalisierte Datenstruktur und eine Authoring-Oberfläche zum Erstellen von Ereignissen definiert werden.
-seo-description: Kapitel 2 des Lernprogramms "AEM ohne Kopf"umfasst die Aktivierung und Definition von Inhaltsfragmentmodellen, mit denen eine normalisierte Datenstruktur und eine Authoring-Oberfläche zum Erstellen von Ereignissen definiert werden.
+title: '"Kapitel 2 - Dispatcher-Infrastruktur"'
+description: Verstehen Sie die Veröffentlichungs- und Dispatcher-Topologie. Erfahren Sie mehr über die gängigsten Topologien und Setups.
+feature: Dispatcher
+topic: Architektur
+role: Architekt
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1917'
+source-wordcount: '1868'
 ht-degree: 0%
 
 ---
