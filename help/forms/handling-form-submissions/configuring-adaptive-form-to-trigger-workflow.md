@@ -2,7 +2,7 @@
 title: Konfigurieren des adaptiven Formulars für Trigger AEM Arbeitsablauf
 description: Payload-Optionen beim Auslösen AEM Workflows bei Formularübermittlung konfigurieren
 sub-product: Formulare
-feature: Workflow
+feature:  Workflow
 topics: integrations
 audience: developer
 doc-type: article
@@ -10,14 +10,11 @@ activity: setup
 version: 6.4,6.5
 kt: 5407
 thumbnail: 40258.jpg
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '170'
-ht-degree: 10%
+source-wordcount: '167'
+ht-degree: 8%
 
 ---
 
