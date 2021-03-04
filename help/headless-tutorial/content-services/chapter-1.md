@@ -3,10 +3,14 @@ title: Kapitel 1 - Lernprogramme einrichten und Downloads - Content Services
 seo-title: Erste Schritte mit AEM Content Services - Kapitel 1 - Lernprogramm einrichten
 description: Kapitel 1 des AEMHeadless-Lernprogramms enthält die Grundeinstellung für die AEM Instanz des Lernprogramms.
 seo-description: Kapitel 1 des AEMHeadless-Lernprogramms enthält die Grundeinstellung für die AEM Instanz des Lernprogramms.
+feature: '"Inhaltsfragmente, APIs"'
+topic: '"Headless, Content-Management"'
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '446'
 ht-degree: 1%
 
 ---
