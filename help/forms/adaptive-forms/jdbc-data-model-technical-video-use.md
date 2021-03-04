@@ -4,21 +4,18 @@ seo-title: Verwenden von JDBC-basierten Formulardatenmodellen mit AEM Forms
 description: In diesem Video wird gezeigt, wie ein Formulardatenmodell auf der Grundlage einer JDBC-Datenquelle, ein auf dem Formulardatenmodell basierendes adaptives Formular und der Vorgang "INSERT"mithilfe des Formulardatenmodells erstellt werden.
 seo-description: In diesem Video wird gezeigt, wie ein Formulardatenmodell auf der Grundlage einer JDBC-Datenquelle, ein auf dem Formulardatenmodell basierendes adaptives Formular und der Vorgang "INSERT"mithilfe des Formulardatenmodells erstellt werden.
 uuid: 5c664b16-c089-48ad-8bf6-9766d0ddc3c4
-feature: Adaptive Formulare
+feature: Integrationen
 topics: form-data-model
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
 discoiquuid: 4e5f947c-b49a-423e-9139-51c0c5648318
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 2%
+source-wordcount: '171'
+ht-degree: 0%
 
 ---
 
