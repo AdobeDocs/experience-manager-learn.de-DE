@@ -1,7 +1,7 @@
 ---
 title: Formular vorausfüllen mit Formulardatenmodell
 description: 'Vorausfüllen des adaptiven Formulars mit dem Anforderungsattribut des Formulardatenmodells '
-feature: adaptive Formulare
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 4419
 thumbnail: kt-4419.jpg
+topic: Entwicklung
+role: Geschäftspraktiker
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 0%
+source-wordcount: '131'
+ht-degree: 3%
 
 ---
 
