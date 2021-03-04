@@ -2,7 +2,7 @@
 title: SPA Editor Project | Erste Schritte mit dem AEM SPA Editor und React
 description: Erfahren Sie, wie Sie ein Adobe Experience Manager (AEM) Maven-Projekt als Ausgangspunkt für eine React-Anwendung verwenden, die mit dem AEM SPA Editor integriert ist.
 sub-product: Sites
-feature: maven-archetype, SPA Editor
+feature: SPA Editor, AEM Projektarchiv
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -10,10 +10,13 @@ activity: develop
 audience: developer
 kt: 413
 thumbnail: 413-spa-react.jpg
+topic: SPA
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: ab5b92dd9c901075347cc521bf0abe0dfc0e5319
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1136'
 ht-degree: 3%
 
 ---
@@ -150,7 +153,7 @@ Kompilieren Sie dann den Projektcode und stellen Sie ihn mithilfe von Maven auf 
 
    Der gesamte für das Projekt erforderliche benutzerdefinierte Code wird in diese Pakete gebündelt und auf der AEM Laufzeit installiert.
 
-6. Sie sollten auch mehrere Pakete für `spa.project.core` und `core.wcm.components` sehen. Diese Abhängigkeiten werden automatisch vom Archetyp eingeschlossen. Weitere Informationen zu [AEM Hauptkomponenten finden Sie hier](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html).
+6. Sie sollten auch mehrere Pakete für `spa.project.core` und `core.wcm.components` sehen. Diese Abhängigkeiten werden automatisch vom Archetyp eingeschlossen. Weitere Informationen zu [AEM Hauptkomponenten finden Sie hier](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html).
 
    `spa.project.core` ist eine Abhängigkeit, die zum Generieren der JSON-Modell-API benötigt wird, die der SPA Editor erwartet.
 
