@@ -4,18 +4,21 @@ seo-title: Senden des adaptiven Formulars an den externen Server
 description: Senden des adaptiven Formulars an den REST-Endpunkt, der auf einem externen Server ausgeführt wird
 seo-description: Senden des adaptiven Formulars an den REST-Endpunkt, der auf einem externen Server ausgeführt wird
 uuid: 1a46e206-6188-4096-816a-d59e9fb43263
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 9e936885-4e10-4c05-b572-b8da56fcac73
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 10%
+source-wordcount: '367'
+ht-degree: 11%
 
 ---
 
