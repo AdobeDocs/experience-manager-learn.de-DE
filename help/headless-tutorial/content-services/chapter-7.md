@@ -1,10 +1,14 @@
 ---
 title: Kapitel 7 - AEM Content Services von einer mobilen App verwenden - Content Services
 description: Kapitel 7 des Tutorials führt die Android Mobile App aus, um von AEM Content Services erstellte Inhalte zu nutzen.
+feature: Inhaltsfragmente, APIs
+topic: Kopflos, Content-Management
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1408'
+source-wordcount: '1416'
 ht-degree: 1%
 
 ---
