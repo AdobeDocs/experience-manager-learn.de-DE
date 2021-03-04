@@ -1,19 +1,16 @@
 ---
 title: Verwenden von AEM Forms mit Adobe Sign
 description: Adobe Sign und AEM Forms ermöglichen die Automatisierung komplexer Transaktionen und die Einbeziehung legaler E-Signaturen als Teil einer nahtlosen digitalen Erfahrung.
-feature: '"Adaptives Forms, Adobe Sign"'
+feature: adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '159'
 ht-degree: 40%
 
 ---
