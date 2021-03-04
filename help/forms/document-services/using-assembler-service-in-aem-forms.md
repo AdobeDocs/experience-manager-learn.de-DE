@@ -4,21 +4,18 @@ seo-title: Assembler-Dienst in AEM Forms verwenden
 description: Assembler-Dienst in AEM Forms zum Zusammenstellen mehrerer PDF-Dateien verwenden
 seo-description: Assembler-Dienst in AEM Forms zum Zusammenstellen mehrerer PDF-Dateien verwenden
 uuid: 7895b1a3-6f9d-4413-bb7f-692ea0380fcd
-feature: Assembler
+feature: assembler
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: a12f52af-7039-4452-a58d-9ad2c0096347
-topic: Entwicklung
-role: Entwickler
-level: Erfahren
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 5%
+source-wordcount: '225'
+ht-degree: 4%
 
 ---
 
