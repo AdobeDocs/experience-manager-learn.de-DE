@@ -1,10 +1,12 @@
 ---
 title: Kapitel 3 - Themen der erweiterten Zwischenspeicherung
+seo-title: AEM Dispatcher-Cache demystified - Kapitel 3 - Advanced Caching-Themen
 description: Kapitel 3 des Demystified-Tutorials AEM Dispatcher-Cache beschreibt, wie die in Kapitel 2 beschriebenen Einschränkungen überwunden werden können.
+seo-description: Kapitel 3 des Demystified-Tutorials AEM Dispatcher-Cache beschreibt, wie die in Kapitel 2 beschriebenen Einschränkungen überwunden werden können.
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '6162'
+source-wordcount: '6187'
 ht-degree: 0%
 
 ---
