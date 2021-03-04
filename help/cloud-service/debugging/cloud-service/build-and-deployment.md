@@ -1,7 +1,7 @@
 ---
 title: Erstellen und Bereitstellen
 description: Adobe Cloud Manager erleichtert die Codeerstellung und -bereitstellungen, die als Cloud Service AEM werden. Fehler können während der Schritte im Build-Prozess auftreten, die eine entsprechende Aktion erfordern. Dieser Leitfaden erläutert die gängigen Fehler bei der Bereitstellung und wie sie am besten anzugehen sind.
-feature: null
+feature: Entwicklertools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: develop
 audience: developer
 kt: 5434
 thumbnail: kt-5424.jpg
+topic: Entwicklung
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b9fb3cb0c12afcabf4a92ded3d7d330ac9d229d6
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2537'
+source-wordcount: '2542'
 ht-degree: 0%
 
 ---
@@ -40,7 +43,7 @@ Der Validierungsschritt stellt einfach sicher, dass die grundlegenden Cloud Mana
 + __Fehlermeldung:__ Die Umgebung ist als gelöscht markiert.
    ![Die Umgebung wird als gelöscht markiert](./assets/build-and-deployment/validation__environment-marked-as-deleted.png)
 + __Ursache:__ Die Umgebung, für die die Pipeline konfiguriert wurde, wurde gelöscht.
-Auch wenn eine neue Umgebung desselben Namens neu erstellt wird, verknüpft Cloud Manager die Pipeline nicht automatisch mit dieser gleichnamigen Umgebung.
+Auch wenn eine neue Umgebung mit demselben Namen neu erstellt wird, verknüpft Cloud Manager die Pipeline nicht automatisch mit dieser gleichnamigen Umgebung.
 + __Auflösung:__ Bearbeiten Sie die Pipeline-Konfiguration und wählen Sie die Umgebung, für die Sie bereitstellen möchten, erneut aus.
 
 ### Die mit der Pipeline verbundene Git-Verzweigung kann nicht gefunden werden
@@ -130,7 +133,7 @@ Ist möglich, schlägt der Schritt Bild erstellen fehl, wenn:
 + Die Bereitstellungsanwendung aktualisiert die Abhängigkeitsversion der Kernkomponenten im Projekt `core` (OSGi Bundle)
 + Die Bereitstellungsanwendung wird dann in einer Sandbox (ohne Produktionsumgebung) AEM als Cloud Service-Umgebung bereitgestellt, die noch nicht für die Verwendung einer AEM Version mit dieser neuen Core-Komponentenversion aktualisiert wurde.
 
-Um diesen Fehler zu vermeiden, müssen Sie das Update bei Verfügbarkeit einer Update-Umgebung für AEM als Cloud Service als Teil der nächsten Erstellung/Bereitstellung einschließen und sicherstellen, dass die Updates nach dem Inkrementieren der Core-Komponenten-Version in die Anwendungscodebasis einbezogen werden.
+Um diesen Fehler zu vermeiden, müssen Sie das Update bei jeder Verfügbarkeit einer Update-Umgebung des AEM als Cloud Service als Teil der nächsten Erstellung/Bereitstellung einschließen und sicherstellen, dass die Updates nach dem Inkrementieren der Core-Komponenten-Version in die Anwendungscodebasis einbezogen werden.
 
 + __Symptome:__
 Der Schritt Bild erstellen schlägt mit einem FEHLER-Berichte fehl, der 
