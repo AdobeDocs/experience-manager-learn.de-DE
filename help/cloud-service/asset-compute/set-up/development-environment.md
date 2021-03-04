@@ -1,7 +1,7 @@
 ---
 title: Lokale Entwicklungs-Umgebung für Asset compute-Erweiterbarkeit einrichten
 description: Die Entwicklung von Asset compute-Workern, bei denen es sich um JavaScript-Anwendungen von Node.js handelt, erfordert spezielle Entwicklungs-Tools, die sich von der herkömmlichen AEM unterscheiden, von Node.js und verschiedenen NPM-Modulen bis hin zu Docker Desktop und Microsoft Visual Studio-Code.
-feature: asset-compute
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,10 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6266
 thumbnail: KT-6266.jpg
+topic: Integrationen, Entwicklung
+role: Entwickler
+level: Vermittelt, erfahren
 translation-type: tm+mt
-source-git-commit: 6f5df098e2e68a78efc908c054f9d07fcf22a372
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
@@ -37,7 +40,7 @@ Im Folgenden finden Sie eine Anleitung zur Einrichtung des Abkürzungssystems. D
 
 1. [Installieren von Visual Studio-Code](https://code.visualstudio.com/download)
 1. [Node.js 10+ installieren](../../local-development-environment/development-tools.md#node-js)
-1. Installieren Sie die erforderlichen NPM-Module und Adobe I/O CLI-Plug-Ins über die Befehlszeile:
+1. Installieren Sie die erforderlichen NPM-Module und Adobe I/O-CLI-Plug-Ins über die Befehlszeile:
 
    ```
    $ npm i -g @adobe/aio-cli @openwhisk/wskdebug ngrok --unsafe-perm=true \
@@ -73,15 +76,15 @@ asset compute-Worker sind [Node.js](https://nodejs.org/)-basiert und benötigen 
 
 + [Installieren Sie Node.js (und npm) ](../../local-development-environment/development-tools.md#node-js) auf die gleiche Weise wie bei der herkömmlichen AEM.
 
-## Adobe I/O CLI{#aio} installieren
+## Installieren der Adobe I/O-CLI{#aio}
 
-[Installieren Sie das Adobe I/O CLI](../../local-development-environment/development-tools.md#aio-cli) oder  ____ aiois ein Befehlszeilenmodul (CLI), das die Verwendung von Adobe I/O-Technologien und deren Interaktion mit diesen ermöglicht. Es wird sowohl für Generierungs- als auch für die lokale Entwicklung von benutzerdefinierten Asset compute-Workern verwendet.
+[Installieren Sie die Adobe I/O CLI](../../local-development-environment/development-tools.md#aio-cli) oder  ____ aiois ein Befehlszeilenmodul (CLI), das den Einsatz von Adobe I/O-Technologien und deren Interaktion erleichtert. Es wird sowohl für die Generierung als auch für die lokale Entwicklung von benutzerdefinierten Asset compute-Workern verwendet.
 
 ```
 $ npm install -g @adobe/aio-cli
 ```
 
-## Installieren Sie das Adobe I/O CLI Asset compute-Plugin{#aio-asset-compute}
+## Installieren Sie das Adobe I/O CLI Asset compute plugin{#aio-asset-compute}
 
 Das [Adobe I/O CLI Asset compute-Plugin](https://github.com/adobe/aio-cli-plugin-asset-compute)
 
