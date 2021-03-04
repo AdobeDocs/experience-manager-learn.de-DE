@@ -3,10 +3,14 @@ title: Erste Schritte mit AEM und Adobe Target
 seo-title: Erste Schritte mit AEM und Adobe Target
 description: Ein durchgehendes Lernprogramm, in dem gezeigt wird, wie mit Adobe Experience Manager und Adobe Target personalisierte Erlebnisse erstellt und bereitgestellt werden. In diesem Lernprogramm erfahren Sie auch, welche Personen am Ende des Prozesses beteiligt sind und wie sie miteinander zusammenarbeiten.
 seo-description: Ein durchgehendes Lernprogramm, in dem gezeigt wird, wie mit Adobe Experience Manager und Adobe Target personalisierte Erlebnisse erstellt und bereitgestellt werden können. In diesem Lernprogramm erfahren Sie auch, welche Personen am Ende des Prozesses beteiligt sind und wie sie miteinander zusammenarbeiten.
+feature: Experience Fragments
+topic: 'Personalisierung '
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: c4ddafe392f74be8401f3ef6e07fc9d463d7620a
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '894'
 ht-degree: 2%
 
 ---
@@ -41,7 +45,7 @@ Wir haben jetzt personalisierte Inhalte in Form von Angeboten aus AEM in der Zie
 
 **Um dieses Szenario zu implementieren, müssen Sie:**
 
-* [AEM und Adobe Target mit Launch und Adobe I/O integrieren](./implementation.md#integrating-aem-target-options)
+* [Integrieren von AEM und Adobe Target mithilfe von Start und Adobe I/O](./implementation.md#integrating-aem-target-options)
 * [AEM und Adobe Target mit älteren Cloud Services](./implementation.md#integrating-aem-target-options)
 
 ***Nach der Implementierung der oben genannten Integrationen sollten Sie das  [Szenario im Detail](./personalization-use-case-1.md) untersuchen.***
@@ -62,7 +66,7 @@ VEC ist eines der Hauptmerkmale von Adobe Target. Mit VEC können Marketingexper
 
 **Um dieses Szenario zu implementieren, müssen Sie:**
 
-* [AEM und Adobe Target mit Launch und Adobe I/O integrieren](./implementation.md#integrating-aem-target-options)
+* [Integrieren von AEM und Adobe Target mithilfe von Start und Adobe I/O](./implementation.md#integrating-aem-target-options)
 
 ***Nach der Implementierung der oben genannten Integration sollten Sie das  [Szenario genauer untersuchen.](./personalization-use-case-3.md)***
 
@@ -80,6 +84,6 @@ Die Integration von Adobe Experience Manager mit Adobe Target hilft Ihnen, Ihren
 
 **Um dieses Szenario zu implementieren, müssen Sie:**
 
-* [AEM und Adobe Target mit Launch und Adobe I/O integrieren](./implementation.md#integrating-aem-target-options)
+* [Integrieren von AEM und Adobe Target mithilfe von Start und Adobe I/O](./implementation.md#integrating-aem-target-options)
 
 ***Nach der Implementierung der oben genannten Integration sollten Sie das  [Szenario genauer untersuchen.](./personalization-use-case-2.md)***
