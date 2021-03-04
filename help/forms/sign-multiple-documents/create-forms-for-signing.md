@@ -1,7 +1,7 @@
 ---
 title: Forms zum Signieren erstellen
 description: Erstellen Sie Formulare, die in das Signierungspaket eingeschlossen werden müssen.
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6893
 thumbnail: 6893.jpg
+topic: Entwicklung
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 049574ab2536b784d6b303f474dba0412007e18c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 0%
+source-wordcount: '332'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +32,7 @@ Der nächste Schritt besteht darin, die adaptiven Formulare zu erstellen, die im
 * Die Formulare müssen die Komponente &quot;Unterschriftsschritt&quot;verwenden.
 * Das Formular muss auch die benutzerdefinierte Komponente **Mehrere Formulare signieren** verwenden. Mit dieser Komponente können Sie zum nächsten Formular navigieren, um sich im Paket anzumelden.
 * Die Übermittlung des Formulars muss auf Trigger AEM Arbeitsablauf **Signaturstatus aktualisieren** konfiguriert werden
-* Stellen Sie sicher, dass der Datendateipfad auf **Data.xml** eingestellt ist. Dies ist sehr wichtig, da der Beispielcode nach einer Datei namens &quot;Data.xml&quot;in der Nutzlast des Prozesses der Formularübermittlung sucht.
+* Stellen Sie sicher, dass der Datendateipfad auf **Data.xml** eingestellt ist. Dies ist sehr wichtig, da der Beispielcode nach einer Datei namens &quot;Data.xml&quot;in der Payload sucht, während der Prozess der Formularübermittlung gesendet wird.
 
 Nachdem Sie Ihr Formular erstellt haben, fügen Sie das adaptive Formularfragment **commonfields** in das Formular ein. Das Fragment wird als ausgeblendet markiert. Dieses Fragment enthält die folgenden Felder.
 
