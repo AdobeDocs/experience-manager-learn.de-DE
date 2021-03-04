@@ -1,17 +1,20 @@
 ---
 title: Entwickeln mit dem AEM SPA Editor - "Hello World Tutorial"
-description: AEM SPA Editor unterstützt die kontextbezogene Bearbeitung einer Einzelseitenanwendung oder eines SPA. Dieses Lernprogramm stellt eine Einführung in SPA Entwicklung dar, die mit AEM SPA Editor JS SDK verwendet werden soll. Das Lernprogramm erweitert die App "We.Retail"um eine benutzerdefinierte Komponente "Hello World". Die Benutzer können das Lernprogramm mithilfe von React- oder Angular-Frameworks abschließen.
+description: AEM SPA Editor unterstützt die kontextbezogene Bearbeitung einer Einzelseitenanwendung oder eines SPA. Dieses Lernprogramm stellt eine Einführung in SPA Entwicklung dar, die mit AEM SPA Editor JS SDK verwendet werden soll. Das Lernprogramm erweitert die App "We.Retail"um eine benutzerdefinierte Komponente "Hello World". Die Benutzer können das Lernprogramm mit React- oder Angular-Frameworks abschließen.
 sub-product: Sites, Content-Services
-feature: spa-editor
+feature: Spa-Editor
 topics: development, single-page-applications
 audience: developer
 doc-type: tutorial
 activity: use
 version: 6.3, 6.4, 6.5
+topic: SPA
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 892cb074814eabd347ba7aef883721df0ee4d431
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '3171'
+source-wordcount: '3176'
 ht-degree: 3%
 
 ---
@@ -23,7 +26,7 @@ ht-degree: 3%
 >
 > Dieses Tutorial ist **nicht mehr unterstützt**. Es wird empfohlen, entweder [Erste Schritte mit dem AEM SPA Editor und Angular](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-angular-tutorial/overview.html) oder [Erste Schritte mit dem AEM SPA Editor und React](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-react-tutorial/overview.html)
 
-AEM SPA Editor unterstützt die kontextbezogene Bearbeitung einer Einzelseitenanwendung oder eines SPA. Dieses Lernprogramm stellt eine Einführung in SPA Entwicklung dar, die mit AEM SPA Editor JS SDK verwendet werden soll. Das Lernprogramm erweitert die App &quot;We.Retail&quot;um eine benutzerdefinierte Komponente &quot;Hello World&quot;. Die Benutzer können das Lernprogramm mithilfe von React- oder Angular-Frameworks abschließen.
+AEM SPA Editor unterstützt die kontextbezogene Bearbeitung einer Einzelseitenanwendung oder eines SPA. Dieses Lernprogramm stellt eine Einführung in SPA Entwicklung dar, die mit AEM SPA Editor JS SDK verwendet werden soll. Das Lernprogramm erweitert die App &quot;We.Retail&quot;um eine benutzerdefinierte Komponente &quot;Hello World&quot;. Die Benutzer können das Lernprogramm mit React- oder Angular-Frameworks abschließen.
 
 >[!NOTE]
 >
@@ -33,13 +36,13 @@ AEM SPA Editor unterstützt die kontextbezogene Bearbeitung einer Einzelseitenan
 
 ## Voraussetzung für das Lesen {#prereq}
 
-Dieses Lernprogramm soll die Schritte hervorheben, die erforderlich sind, um eine SPA Komponente einer AEM Komponente zuzuordnen, um die Bearbeitung im Kontext zu aktivieren. Benutzer, die dieses Tutorial beginnen, sollten sich mit den Grundkonzepten der Entwicklung mit Adobe Experience Manager, AEM sowie mit der Entwicklung von React of Angular Frameworks vertraut machen. Das Lernprogramm umfasst sowohl Back-End- als auch Front-End-Entwicklungs-Aufgaben.
+Dieses Lernprogramm soll die Schritte hervorheben, die erforderlich sind, um eine SPA Komponente einer AEM Komponente zuzuordnen, um die Bearbeitung im Kontext zu aktivieren. Benutzer, die dieses Tutorial beginnen, sollten sich mit den Grundkonzepten der Entwicklung mit Adobe Experience Manager, AEM sowie der Entwicklung mit React of Angular Frameworks vertraut machen. Das Lernprogramm umfasst sowohl Back-End- als auch Front-End-Entwicklungs-Aufgaben.
 
 Es wird empfohlen, die folgenden Ressourcen zu überprüfen, bevor dieses Lernprogramm beginnt:
 
 * [Video](spa-editor-framework-feature-video-use.md)  zur Funktion SPA Editor - Eine Videoübersicht über die SPA Editor- und Web.Retail-Protokoll-App.
 * [React.js Tutorial](https://reactjs.org/tutorial/tutorial.html)  - Eine Einführung in die Entwicklung mit dem React Framework.
-* [Angular Tutorial](https://angular.io/tutorial)  - Eine Einführung in die Entwicklung mit Angular
+* [Angular Tutorial](https://angular.io/tutorial)  - Einführung in die Entwicklung mit Angular
 
 ## Lokale Entwicklungsumgebung {#local-dev}
 
@@ -75,7 +78,7 @@ Das Grundkonzept besteht darin, eine SPA Komponente einer AEM Komponente zuzuord
 
 ![SPA](assets/spa-editor-helloworld-tutorial-use/mapto.png)
 
-Beliebte Frameworks [React JS](https://reactjs.org/) und [Angular](https://angular.io/) werden standardmäßig unterstützt. Benutzer können dieses Lernprogramm entweder in Angular oder React durchführen, mit welchem Framework sie am besten vertraut sind.
+Beliebte Frameworks [React JS](https://reactjs.org/) und [Angular](https://angular.io/) werden standardmäßig unterstützt. Die Benutzer können dieses Lernprogramm entweder mit Angular oder mit React abschließen, mit welchem Framework sie am besten vertraut sind.
 
 ## Projekt-Setup {#project-setup}
 
@@ -115,9 +118,9 @@ Ziel dieses Lernprogramms ist es, die App &quot;We.Retail Protokoll&quot;um eine
    * `ui.apps`: enthält die /apps Teile des Projekts, d.h. JS &amp; CSS clientlibs, Komponenten, runmode-spezifische Konfigurationen.
    * `ui.content`: enthält Strukturinhalt und Konfigurationen (`/content`,  `/conf`)
    * `react-app`: Wir.Retail Protokoll React Applikation. Dies ist sowohl ein Maven-Modul als auch ein Webpack-Projekt.
-   * `angular-app`: Wir.Retail Protokoll Angular Anwendung. Dies ist sowohl ein [!DNL Maven]-Modul als auch ein Webpack-Projekt.
+   * `angular-app`: We.Retail Protokoll Angular. Dies ist sowohl ein [!DNL Maven]-Modul als auch ein Webpack-Projekt.
 
-1. Öffnen Sie ein neues Terminalfenster und führen Sie den folgenden Befehl aus, um die gesamte App auf einer lokalen AEM zu erstellen und bereitzustellen, die auf [http://localhost:4502](http://localhost:4502) ausgeführt wird.
+1. Öffnen Sie ein neues Terminalfenster und führen Sie den folgenden Befehl aus, um die gesamte App auf einer lokalen AEM-Instanz zu erstellen, die auf [http://localhost:4502](http://localhost:4502) ausgeführt wird.
 
    ```shell
    $ cd <src>/aem-sample-we-retail-journal
@@ -306,7 +309,7 @@ Als Nächstes wird ein [!DNL Sling Model] erstellt, um die [!DNL Hello World]-Ko
 
 >[!NOTE]
 >
->Als Best Practice sollten Entwickler nach Möglichkeit [AEM Kernkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html) verwenden. Neben anderen Funktionen stellen Core-Komponenten [!DNL Sling Models] eine JSON-Ausgabe bereit, die &quot;SPA-bereit&quot;ist, sodass sich Entwickler mehr auf die Front-End-Präsentation konzentrieren können.
+>Als Best Practice sollten Entwickler nach Möglichkeit [AEM Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html) verwenden. Neben anderen Funktionen stellen Core-Komponenten [!DNL Sling Models] eine JSON-Ausgabe bereit, die &quot;SPA-bereit&quot;ist, sodass sich Entwickler mehr auf die Front-End-Präsentation konzentrieren können.
 
 1. Öffnen Sie im Editor Ihrer Wahl das **we-retail-Protokoll-commons**-Projekt ( `<src>/aem-sample-we-retail-journal/bundles/commons`).
 1. Im Paket `com.adobe.cq.sample.spa.commons.impl.models`:
@@ -397,7 +400,7 @@ Als Nächstes wird ein [!DNL Sling Model] erstellt, um die [!DNL Hello World]-Ko
 
    >[!NOTE]
    >
-   > Der Methodenname `getDisplayMessage` ist wichtig. Wenn das [!DNL Sling Model] mit dem [!DNL Jackson Exporter] serialisiert wird, wird es als JSON-Eigenschaft bereitgestellt: `displayMessage`. Die [!DNL Jackson Exporter] serialisiert und stellt alle `getter`-Methoden bereit, die keinen Parameter verwenden (es sei denn, sie werden explizit ignoriert). Später in der &quot;React / Angular&quot;-App lesen wir diesen Eigenschaftswert und zeigen ihn als Teil der Anwendung an.
+   > Der Methodenname `getDisplayMessage` ist wichtig. Wenn das [!DNL Sling Model] mit dem [!DNL Jackson Exporter] serialisiert wird, wird es als JSON-Eigenschaft bereitgestellt: `displayMessage`. Die [!DNL Jackson Exporter] serialisiert und stellt alle `getter`-Methoden bereit, die keinen Parameter verwenden (es sei denn, sie werden explizit ignoriert). Später in der React / Angular App lesen wir diesen Eigenschaftswert und zeigen ihn als Teil der Anwendung an.
 
    Die Methode `getExportedType` ist ebenfalls wichtig. Der Wert der Komponente `resourceType` wird verwendet, um die JSON-Daten der Front-End-Komponente (Angular / React) zuzuordnen. Wir werden dies im nächsten Abschnitt untersuchen.
 
@@ -488,7 +491,7 @@ Als Nächstes wird die React-Komponente erstellt. Öffnen Sie das Modul **respon
    }
    ```
 
-1. Implementieren Sie eine Bearbeitungskonfigurationsmethode. Diese Methode wird über den Helfer `MapTo` weitergeleitet und stellt dem AEM Editor Informationen zur Verfügung, um einen Platzhalter anzuzeigen, falls die Komponente leer ist. Dies tritt auf, wenn die Komponente dem SPA hinzugefügt, aber noch nicht erstellt wurde. hinzufügen Sie Folgendes unter der `HelloWorld`-Klasse:
+1. Implementieren Sie eine Bearbeitungskonfigurationsmethode. Diese Methode wird über den Helfer `MapTo` weitergeleitet und stellt dem AEM Editor Informationen zur Verfügung, um einen Platzhalter anzuzeigen, falls die Komponente leer ist. Dies tritt auf, wenn die Komponente dem SPA hinzugefügt, aber noch nicht verfasst wurde. hinzufügen Sie Folgendes unter der `HelloWorld`-Klasse:
 
    ```js
    ...
@@ -567,7 +570,7 @@ Als Nächstes wird die React-Komponente erstellt. Öffnen Sie das Modul **respon
    > **app.** jsis die gebündelte React-App. Der Code ist für Menschen nicht mehr lesbar. Der Befehl `npm run build` hat einen optimierten Build ausgelöst, der kompiliertes JavaScript ausgibt, das von modernen Browsern interpretiert werden kann.
 
 
-## Angular-Komponente erstellen {#angular-component}
+## Angular-Komponente {#angular-component} erstellen
 
 **Persona: Front-End-Entwickler**
 
@@ -779,7 +782,7 @@ Als Nächstes wird die Angular-Komponente erstellt. Öffnen Sie das Modul **angu
 
 ## Alles zusammenbringen {#putting-together}
 
-1. Navigieren Sie zu den Seiten &quot;Angular&quot;oder &quot;React&quot;:
+1. Navigieren Sie zu den Seiten &quot;Angular&quot;oder &quot;Reagieren&quot;:
 
    * [http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html)
    * [http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html)
@@ -833,6 +836,6 @@ Wenn eine AEM Abhängigkeit nicht erfüllt ist, entweder im **[!UICONTROL AEM Pa
 
 **Auflösung**: Löschen Sie den Verlauf/Cache Ihres Browsers und/oder öffnen Sie einen neuen Browser oder verwenden Sie den Inkognito-Modus. Wenn dies nicht funktioniert, machen Sie den Client-Bibliothekscache auf der lokalen AEM ungültig. AEM versucht, große Clientbibliotheken zu zwischenspeichern, um effizient zu sein. Manchmal muss der Cache manuell ungültig gemacht werden, um Probleme zu beheben, bei denen veralteter Code zwischengespeichert wird.
 
-Navigieren Sie zu: [http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) und klicken Sie auf Cache ungültig. Kehren Sie zur Seite &quot;React/Angular&quot;zurück und aktualisieren Sie die Seite.
+Navigieren Sie zu: [http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) und klicken Sie auf Cache ungültig. Kehren Sie zu Ihrer React/Angular zurück und aktualisieren Sie die Seite.
 
 ![Client-Bibliothek neu erstellen](assets/spa-editor-helloworld-tutorial-use/invalidatecache.png)
