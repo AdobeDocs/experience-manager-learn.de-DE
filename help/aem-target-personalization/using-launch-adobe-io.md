@@ -3,11 +3,15 @@ title: Integration von Adobe Experience Manager mit Adobe Target unter Verwendun
 seo-title: Integration von Adobe Experience Manager mit Adobe Target unter Verwendung von Experience Platform Launch und Adobe I/O
 description: Schrittweise Anleitung zur Integration von Adobe Experience Manager mit Adobe Target mithilfe von Experience Platform Launch und Adobe I/O
 seo-description: Schrittweise Anleitung zur Integration von Adobe Experience Manager mit Adobe Target mithilfe von Experience Platform Launch und Adobe I/O
+feature: Experience Fragments
+topic: 'Personalisierung '
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 1209064fd81238d4611369b8e5b517365fc302e3
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 4%
+source-wordcount: '1103'
+ht-degree: 5%
 
 ---
 
@@ -134,9 +138,9 @@ Die Erweiterung des Zieldatensatzes besteht aus zwei Teilen:
 
 >[!NOTE]
 >
-> Gewähren Sie der Adobe I/O-Integration Zugriff auf ausgewählte Arbeitsbereiche mit der entsprechenden Rolle [und ermöglichen Sie es einem zentralen Team, API-gesteuerte Änderungen in nur wenigen Arbeitsbereichen](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html) vorzunehmen.
+> Gewähren Sie der Integration der Adobe I/O Zugriff auf ausgewählte Arbeitsbereiche mit der entsprechenden [Rolle, damit ein zentrales Team nur in wenigen Arbeitsbereichen ](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html) API-gesteuerte Änderungen vornehmen kann.
 
-1. Erstellen Sie die IMS-Integration in AEM mit den Anmeldeinformationen von Adobe I/O. (01:12 bis 03:55)
+1. Erstellen Sie die IMS-Integration in AEM mithilfe von Anmeldeinformationen aus der Adobe I/O. (01:12 bis 03:55)
 2. Erstellen Sie in Experience Platform Launch eine Eigenschaft. (abgedeckt [über](#create-launch-property))
 3. Erstellen Sie mithilfe der IMS-Integration aus Schritt 1 eine Experience Platform Launch-Integration, um Ihre Launch-Eigenschaft zu importieren.
 4. Ordnen Sie AEM die Experience Platform Launch-Integration mithilfe der Browserkonfiguration einer Site zu. (05:28 bis 06:14)
