@@ -1,21 +1,18 @@
 ---
 title: Formularfragment erstellen
 description: AEM Forms bietet einen bequemen Mechanismus, um Formularsegmente wie Bereiche oder Gruppen von Feldern nur einmal zu erstellen und sie in adaptiven Formularen wiederzuverwenden.
-feature: Adaptive Formulare
+feature: adaptive Formulare
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 kt: 5862
 thumbnail: 37325.jpg
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 40%
+source-wordcount: '108'
+ht-degree: 37%
 
 ---
 
