@@ -3,10 +3,14 @@ title: Kapitel 2 - Definieren von Ereignis Content Fragment-Modellen - Content S
 seo-title: Erste Schritte mit AEM Content Services - Kapitel 2 - Definieren von Ereignis Content Fragment-Modellen
 description: Kapitel 2 des Lernprogramms "AEM ohne Kopf"umfasst die Aktivierung und Definition von Inhaltsfragmentmodellen, mit denen eine normalisierte Datenstruktur und eine Authoring-Oberfläche zum Erstellen von Ereignissen definiert werden.
 seo-description: Kapitel 2 des Lernprogramms "AEM ohne Kopf"umfasst die Aktivierung und Definition von Inhaltsfragmentmodellen, mit denen eine normalisierte Datenstruktur und eine Authoring-Oberfläche zum Erstellen von Ereignissen definiert werden.
+feature: '"Inhaltsfragmente, APIs"'
+topic: '"Headless, Content-Management"'
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 5012433a5f1c7169b1a3996453bfdbd5d78e5b1c
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '996'
+source-wordcount: '1004'
 ht-degree: 11%
 
 ---
@@ -31,7 +35,7 @@ Wenn Inhaltsfragmentmodelle für eine Konfiguration **nicht** aktiviert sind, wi
 
 >[!NOTE]
 >
->AEM Konfigurationen stellen einen Satz von [kontextsensitiven Mandantenkonfigurationen](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) dar, die unter `/conf` gespeichert werden. Normalerweise korrelieren AEM Konfigurationen mit einer bestimmten Website, die in AEM Sites verwaltet wird, oder mit einer Geschäftseinheit, die für einen Teil des Inhalts (Assets, Seiten usw.) verantwortlich ist. aem
+>AEM Konfigurationen stellen einen Satz von [kontextsensitiven Mandantenkonfigurationen](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) dar, die unter `/conf` gespeichert werden. Normalerweise korrelieren AEM Konfigurationen mit einer bestimmten Website, die in AEM Sites verwaltet wird, oder mit einer Geschäftseinheit, die für einen Teil des Inhalts (Assets, Seiten usw.) verantwortlich ist. AEM
 >
 >Damit eine Konfiguration eine Inhaltshierarchie beeinflussen kann, muss über die `cq:conf`-Eigenschaft in dieser Inhaltshierarchie auf die Konfiguration verwiesen werden. (Dies wird für die [!DNL WKND Mobile]-Konfiguration unter **Schritt 5** erreicht).
 >
