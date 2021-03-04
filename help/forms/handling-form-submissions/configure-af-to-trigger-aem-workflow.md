@@ -4,20 +4,17 @@ seo-title: Konfigurieren des adaptiven Formulars für Trigger AEM Arbeitsablauf
 description: Verstehen der verschiedenen Optionen beim Konfigurieren des adaptiven Formulars für Trigger AEM Arbeitsablauf
 seo-description: Verstehen der verschiedenen Optionen beim Konfigurieren des adaptiven Formulars für Trigger AEM Arbeitsablauf
 sub-product: Formulare
-feature: Workflow
+feature:  Workflow
 topics: integrations
 audience: developer
 doc-type: technical video
 activity: setup
 version: 6.4,6.5
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
 translation-type: tm+mt
-source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
+source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 8%
+source-wordcount: '47'
+ht-degree: 4%
 
 ---
 
