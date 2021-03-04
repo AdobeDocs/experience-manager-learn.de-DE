@@ -2,16 +2,19 @@
 title: Smart Imaging
 description: Smart Imaging in Dynamic Media Classic steigert die Leistung von Image Versand durch die automatische Optimierung von Bildformat und -qualität auf der Grundlage der Browserfunktionen des Kunden. Dies geschieht durch die Nutzung der AI-Funktionen von Adobe Sensei und die Arbeit mit vorhandenen Bildvorgaben. Erfahren Sie mehr über Smart Imaging und wie Sie damit bessere Kundenerlebnisse durch schnelleres Laden von Seiten erzielen können.
 sub-product: dynamic-media
-feature: smart-crop
+feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring, renditions, images
 audience: all
 activity: use
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 317fb625e7af57b7ad0079014c341eab9adda376
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 5%
+source-wordcount: '702'
+ht-degree: 8%
 
 ---
 
@@ -22,7 +25,7 @@ Einer der wichtigsten Aspekte des Kundenerlebnisses auf Ihrer Website, mobilen S
 
 Smart Imaging profitiert auch von der zusätzlichen Leistungssteigerung, die durch die vollständige Integration mit dem erstklassigen Premium-Service der Adobe entsteht. Dieser Dienst ermittelt die optimale Internet-Route zwischen Servern, Netzwerken und Austauschpunkten mit niedrigster Latenz und/oder Paketverlustrate im Vergleich zur Standardroute im Internet.
 
-Erfahren Sie mehr über [Smart Imaging](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html).
+Erfahren Sie mehr über [Smart Imaging](https://docs.adobe.com/content/help/de-DE/experience-manager-64/assets/dynamic/imaging-faq.html).
 
 ## Vorteile von Smart Imaging
 
@@ -48,7 +51,7 @@ Die intelligente Bildbearbeitung funktioniert mit Bildern, die über HTTP, HTTPS
 
 Smart Imaging ist in Ihrer bestehenden Lizenz von Dynamic Media Classic enthalten. Für diese Funktion fallen keine zusätzlichen Kosten an. Um diese Vorteile zu nutzen, müssen Sie zwei Anforderungen erfüllen: haben ein CDN mit Adobe und eine dedizierte Domäne. Dann müssen Sie es für Ihr Konto aktivieren, da es nicht automatisch aktiviert ist.
 
-Aktivieren von Smart Imaging-Beginn, wenn Sie eine Anfrage an den technischen Support senden, indem Sie |Erstellen eines Supportfalls| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). Der Support arbeitet mit Ihnen zusammen, um eine benutzerdefinierte Domäne einzurichten, die Sie mit Smart Imaging verbinden. Sie ändern einen Parameter im Zusammenhang mit der Zwischenspeicherung (Time To Live oder TTL) und die Unterstützung löscht den Cache. Sie können auch einen optionalen Staging-Schritt ausführen, bevor Sie zur Produktion wechseln. Wenn Smart Imaging dann aktiviert ist, liefern Sie den Kunden kleinere Bilder, aber mit der gleichen Qualität, die sie angefordert haben. Das bedeutet, dass die Seitenladezeiten schneller ablaufen — Und das alles geschieht automatisch, weil Adobe Sensei dabei hilft, die effizienteste Größe zu wählen.
+Aktivieren von Smart Imaging-Beginn, wenn Sie eine Anfrage an den technischen Support senden, indem Sie |Erstellen eines Supportfalls| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/de/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). Der Support arbeitet mit Ihnen zusammen, um eine benutzerdefinierte Domäne einzurichten, die Sie mit Smart Imaging verbinden. Sie ändern einen Parameter im Zusammenhang mit der Zwischenspeicherung (Time To Live oder TTL) und die Unterstützung löscht den Cache. Sie können auch einen optionalen Staging-Schritt ausführen, bevor Sie zur Produktion wechseln. Wenn Smart Imaging dann aktiviert ist, liefern Sie den Kunden kleinere Bilder, aber mit der gleichen Qualität, die sie angefordert haben. Das bedeutet, dass die Seitenladezeiten schneller ablaufen — Und das alles geschieht automatisch, weil Adobe Sensei dabei hilft, die effizienteste Größe zu wählen.
 
 Sobald Sie Smart Imaging aktiviert haben, sollten Sie überprüfen, ob es erwartungsgemäß funktioniert.
 
