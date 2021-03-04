@@ -2,17 +2,19 @@
 title: Verwenden Sie das Dashboard Systemübersicht in AEM
 description: In früheren Versionen AEM Administratoren mussten mehrere Standorte durchsuchen, um ein vollständiges Bild der AEM zu erhalten. Die Systemübersicht zielt darauf ab, dies zu lösen, indem eine hohe Ansicht der Konfiguration, Hardware und des Gesundheitszustands der AEM Instanz von einem einzigen Dashboard bereitgestellt wird.
 version: 6.4, 6.5
-feature: null
 topics: administration, operations, monitoring
 activity: use
 audience: administrator, architect, developer, implementer
 doc-type: technical video
 contentOwner: dgordon
+topic: Administration
+role: 'Administrator  '
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 0%
+source-wordcount: '145'
+ht-degree: 1%
 
 ---
 
