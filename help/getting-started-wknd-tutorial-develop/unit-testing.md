@@ -9,11 +9,15 @@ audience: developer
 kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
+feature: '"APIs, AEM Projektarchiv"'
+topic: '"Content-Management, Entwicklung"'
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '3015'
-ht-degree: 0%
+source-wordcount: '3024'
+ht-degree: 1%
 
 ---
 
@@ -77,7 +81,7 @@ Wir werden AEM Best Practices einsetzen und Folgendes nutzen:
 
 ## Komponententests und Adobe Cloud Manager {#unit-testing-and-adobe-cloud-manager}
 
-[Adobe Cloud ](https://docs.adobe.com/content/help/de/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) Manager integriert die Ausführung von Komponententests und  [ ](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) Codeberichte in seine CI/CD-Pipeline, um die Best Practice für Komponententests AEM Code zu fördern und zu fördern.
+[Adobe Cloud ](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) Manager integriert die Ausführung von Komponententests und  [ ](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) Codeberichte in seine CI/CD-Pipeline, um die Best Practice für Komponententests AEM Code zu fördern und zu fördern.
 
 Obwohl Komponententestcode für jede Codebasis eine gute Vorgehensweise ist, ist es bei der Verwendung von Cloud Manager wichtig, die Codequalitätstests und die Berichte-Funktionen zu nutzen, indem Komponententests für die Ausführung von Cloud Manager bereitgestellt werden.
 
@@ -206,9 +210,9 @@ Komponententests ordnen in der Regel 1-zu-1 Java-Klassen zu. In diesem Kapitel s
 
    * `src/test/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImplTest.java`
 
-   Unterscheiden Sie aber auch die Testdatei.    Das Suffix `Test` in der Testdatei der Einheit `BylineImplTest.java` ist eine Konvention, die es uns ermöglicht,
-      1. Identifizieren Sie sie einfach als Testdatei _für_ `BylineImpl.java`
-      2. Unterscheiden Sie aber auch die Testdatei _von_ der zu testenden Klasse, `BylineImpl.java`
+2. Unterscheiden Sie aber auch die Testdatei.    Das Suffix `Test` in der Testdatei der Einheit `BylineImplTest.java` ist eine Konvention, die es uns ermöglicht,
+1. Identifizieren Sie sie einfach als Testdatei _für_ `BylineImpl.java`
+2. Unterscheiden Sie aber auch die Testdatei _von_ der zu testenden Klasse, `BylineImpl.java`
 
 ## Überprüfen von BylineImplTest.java {#reviewing-bylineimpltest-java}
 
@@ -459,7 +463,7 @@ Nachdem wir nun ein einfaches Modell-Kontextmenü eingerichtet haben, schreiben 
 
    *testGetName()-Fehler aufgrund der Zusicherung*
 
-   Wir erhalten einen **AssertionError**, was bedeutet, dass die Assertionsbedingung im Test fehlgeschlagen ist. Er sagt uns, dass der erwartete Wert **&quot;Jane Doe&quot;** lautet, der **tatsächliche Wert jedoch null** ist. Dies ist sinnvoll, da die Eigenschaft &quot;**name&quot;** nicht der Ressourcendefinition von mock **/content/byline** in **BylineImplTest.json** hinzugefügt wurde. Fügen Sie also Folgendes hinzu:
+   Wir erhalten einen **AssertionError**, was bedeutet, dass die Assertionsbedingung im Test fehlgeschlagen ist. Der **erwartete Wert lautet &quot;Jane Doe&quot;**, der **tatsächliche Wert ist jedoch null**. Dies ist sinnvoll, da die Eigenschaft &quot;**name&quot;** nicht der Ressourcendefinition von mock **/content/byline** in **BylineImplTest.json** hinzugefügt wurde. Fügen Sie also Folgendes hinzu:
 
 1. **BylineImplTest.json** aktualisieren, um `"name": "Jane Doe".` zu definieren
 
