@@ -1,7 +1,7 @@
 ---
 title: Daten mit Analysis Workspace analysieren
 description: Erfahren Sie, wie Sie von einer Adobe Experience Manager-Site erfasste Daten Metriken und Dimensionen in Adobe Analytics-Report Suites zuordnen. Erfahren Sie, wie Sie mit der Analysis Workspace-Funktion von Adobe Analytics ein detailliertes Berichte-Dashboard erstellen.
-feature: analytics
+feature: Analyse
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,10 +9,13 @@ activity: setup
 version: cloud-service
 kt: 6409
 thumbnail: KT-6296.jpg
+topic: Integrationen
+role: Geschäftspraktiker
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 55beee99b91c44f96cd37d161bb3b4ffe38d2687
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '2202'
+source-wordcount: '2207'
 ht-degree: 1%
 
 ---
@@ -65,7 +68,7 @@ eVars eignen sich am besten zur Messung von Ursache und Wirkung, z. B.:
 
 * Welche internen Kampagnen beeinflussten den Umsatz
 * Welche Banneranzeigen führten letztendlich zu einer Registrierung?
-* Wie oft eine interne Suche verwendet wurde, bevor eine Bestellung aufgegeben wurde
+* Die Häufigkeit, mit der eine interne Suche verwendet wurde, bevor eine Bestellung aufgegeben wurde
 
 Erfolgsereignisse sind Ereignis, die verfolgt werden können. Sie bestimmen, was ein Erfolgsereignis ist. Wenn ein Besucher beispielsweise auf eine CTA-Schaltfläche klickt, könnte das click-Ereignis als ein Erfolgsereignis-Ereignis betrachtet werden.
 
