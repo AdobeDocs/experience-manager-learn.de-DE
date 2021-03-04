@@ -2,16 +2,19 @@
 title: Indizes mithilfe von oak-run.jar verwalten
 description: Der index-Befehl von oak-run.jar fasst eine Reihe von Funktionen zusammen, um Oak-Indizes in AEM zu verwalten, von der Erfassung von Indexstatistiken über die Durchführung von Indexkonsistenzprüfungen bis zum erneuten/Indizieren von Indizes selbst.
 version: 6.4, 6.5
-feature: Eiche
+feature: Suchen
 topics: search
 activity: use
 audience: architect, developer, implementer
 doc-type: technical video
+topic: Leistung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 3%
+source-wordcount: '453'
+ht-degree: 4%
 
 ---
 
