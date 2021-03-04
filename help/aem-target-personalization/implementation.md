@@ -3,11 +3,15 @@ title: Integration von Adobe Experience Manager mit Adobe Target
 seo-title: In diesem Artikel werden verschiedene Möglichkeiten zur Integration von Adobe Experience Manager(AEM) in Adobe Target für die Bereitstellung personalisierter Inhalte beschrieben.
 description: In diesem Artikel wird beschrieben, wie Sie Adobe Experience Manager mit Adobe Target für verschiedene Szenarien einrichten.
 seo-description: In diesem Artikel wird beschrieben, wie Sie Adobe Experience Manager mit Adobe Target für verschiedene Szenarien einrichten.
+feature: Experience Fragments
+topic: 'Personalisierung '
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 0443c8ff42e773021ff8b6e969f5c1c31eea3ae4
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 5%
+source-wordcount: '704'
+ht-degree: 6%
 
 ---
 
@@ -46,7 +50,7 @@ Für AEM Kunden, die Erlebnisfragment-Angebot verwenden möchten, um eine Aktivi
 
 >[!NOTE]
 >
-> Der Kunde muss über den [Support für Adoben](https://helpx.adobe.com/de/contact/enterprise-support.ec.html) mit Experience Platform Launch und Adobe I/O versorgt werden oder Sie müssen Kontakt zu Ihrem Systemadministrator aufnehmen.
+> Der Kunde muss Experience Platform Launch und Adobe I/O von [Adobe Support](https://helpx.adobe.com/de/contact/enterprise-support.ec.html) erhalten oder sich an Ihren Systemadministrator wenden
 
 ### Einrichten AEM{#set-up-aem}
 
