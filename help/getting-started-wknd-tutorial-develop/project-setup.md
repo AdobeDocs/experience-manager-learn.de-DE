@@ -3,7 +3,7 @@ title: Erste Schritte mit AEM Sites - Projekteinrichtung
 seo-title: Erste Schritte mit AEM Sites - Projekteinrichtung
 description: Behandelt die Erstellung eines Maven Multi-Module-Projekts zur Verwaltung des Codes und der Konfigurationen für eine AEM Site.
 sub-product: Sites
-feature: maven-archetype
+feature: AEM-Projektarchetyp
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,10 +12,13 @@ audience: developer
 mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
+topic: '"Content-Management, Entwicklung"'
+role: Entwickler
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '1887'
+source-wordcount: '1895'
 ht-degree: 5%
 
 ---
@@ -210,7 +213,7 @@ Weitere Informationen zu den Maven-Modulen finden Sie in der AEM [Dokumentation 
 
 ### Aufnahme der Kernkomponenten {#core-components}
 
-[AEM Core ](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html) Components sind ein Satz standardisierter Web-Content-Management-Komponenten (WCM) für AEM. Diese Komponenten bieten einen Grundsatz an Funktionen und sind so konzipiert, dass sie für einzelne Projekte gestaltet, angepasst und erweitert werden können.
+[AEM Core ](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html) Components sind ein Satz standardisierter Web-Content-Management-Komponenten (WCM) für AEM. Diese Komponenten bieten einen Grundsatz an Funktionen und sind so konzipiert, dass sie für einzelne Projekte gestaltet, angepasst und erweitert werden können.
 
 AEM als Cloud Service-Umgebung enthalten die neueste Version von [AEM Kernkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/introduction.html). Daher enthalten für AEM als Cloud Service generierte Projekte **nicht** eine Einbettung AEM Kernkomponenten.
 
@@ -276,7 +279,7 @@ Das **[core](https://docs.adobe.com/content/help/en/experience-manager-core-comp
 
 ### Ui.apps- und Ui.content-Module {#apps-content-module}
 
-Das Maven-Modul **[ui.apps](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uiapps.html)** enthält den gesamten Rendercode, der für die Site unter `/apps` benötigt wird. Dazu gehört auch CSS/JS, das im AEM Format [clientlibs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/clientlibs.html) gespeichert wird. Dazu gehören auch [HTL](https://docs.adobe.com/content/help/de/experience-manager-htl/using/overview.html)-Skripte zum Rendern von dynamischem HTML. Sie können sich das Modul **ui.apps** als Zuordnung zur Struktur in der JCR vorstellen, jedoch in einem Format, das auf einem Dateisystem gespeichert und der Quellcodeverwaltung verpflichtet werden kann. Das Modul **ui.apps** enthält nur Code.
+Das Maven-Modul **[ui.apps](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uiapps.html)** enthält den gesamten Rendercode, der für die Site unter `/apps` benötigt wird. Dazu gehört auch CSS/JS, das im AEM Format [clientlibs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/clientlibs.html) gespeichert wird. Dazu gehören auch [HTL](https://docs.adobe.com/content/help/de-DE/experience-manager-htl/using/overview.html)-Skripte zum Rendern von dynamischem HTML. Sie können sich das Modul **ui.apps** als Zuordnung zur Struktur in der JCR vorstellen, jedoch in einem Format, das auf einem Dateisystem gespeichert und der Quellcodeverwaltung verpflichtet werden kann. Das Modul **ui.apps** enthält nur Code.
 
 So erstellen Sie das folgende Modul:
 
