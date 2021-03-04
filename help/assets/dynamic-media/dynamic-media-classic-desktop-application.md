@@ -1,22 +1,19 @@
 ---
 title: Verwenden der Dynamic Media Classic Desktop-Anwendung
-seo-title: Verwenden der Dynamic Media Classic Desktop-Anwendung
 description: Adobe führt eine Desktop-Anwendung für Dynamic Media Classic-Benutzer ein, die im Browser nicht mehr auf Adobe Flash-Technologie angewiesen sind.
-seo-description: Adobe führt eine Desktop-Anwendung für Dynamic Media Classic-Benutzer ein, die im Browser nicht mehr auf Adobe Flash-Technologie angewiesen sind.
 sub-product: dynamic-media
-feature: desktop-application, classic
-topics: authoring, operations
-doc-type: feature-video
-audience: all
-activity: use
+feature: Dynamic Media Classic
 version: 6.5
 kt: 5808
 thumbnail: 36645.jpg
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 9cf01dbf9461df4cc96d5bd0a96c0d4d900af089
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 0%
+source-wordcount: '212'
+ht-degree: 1%
 
 ---
 
