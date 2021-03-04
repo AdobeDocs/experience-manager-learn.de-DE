@@ -1,16 +1,15 @@
 ---
 title: Verwenden von Adobe Stock-Assets mit AEM Assets
 description: 'AEM bietet Benutzern die Möglichkeit, Adobe Stock-Assets direkt von AEM aus zu suchen, zu Vorschau, zu speichern und zu lizenzieren. Unternehmen können nun ihren Adobe Stock Enterprise-Plan mit AEM Assets integrieren, um sicherzustellen, dass lizenzierte Assets jetzt für ihre Kreativ- und Marketingprojekte verfügbar sind, mit den leistungsstarken Asset-Management-Funktionen von AEM. '
-feature: creative-cloud-integration
-topics: authoring, collaboration, operations, sharing, metadata, images, stock
-audience: all
-doc-type: feature video
-activity: use
+feature: Adobe Stock
 version: 6.4, 6.5
+topic: Content Management
+role: Geschäftspraktiker
+level: Anfänger
 translation-type: tm+mt
-source-git-commit: 67ca08bf386a217807da3755d46abed225050d02
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '966'
+source-wordcount: '973'
 ht-degree: 15%
 
 ---
@@ -64,7 +63,7 @@ Die Integration von Adobe Stock und AEM Assets ermöglicht es Autoren und Market
 
 ## Einrichten von Adobe Stock mit AEM Assets{#set-up-adobe-stock-with-aem-assets}
 
-AEM 6.4.2 bietet Benutzern die Möglichkeit, Adobe Stock-Assets direkt von AEM aus zu suchen, zu Vorschau, zu speichern und zu lizenzieren. In diesem Video wird eine kurze Anleitung zum Einrichten von Adoben-Stocks mit AEM Assets mithilfe der Adobe I/O-Konsole beschrieben.
+AEM 6.4.2 bietet Benutzern die Möglichkeit, Adobe Stock-Assets direkt von AEM aus zu suchen, zu Vorschau, zu speichern und zu lizenzieren. In diesem Video wird eine kurze Anleitung zum Einrichten von Adobe Stocks mit AEM Assets mithilfe der Adobe I/O Console beschrieben.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25043/?quality=12&learn=on)
 
@@ -79,9 +78,9 @@ AEM 6.4.2 bietet Benutzern die Möglichkeit, Adobe Stock-Assets direkt von AEM a
 ### Installation {#installations}
 
 * Für AEM 6.4 müssen Sie das [AEM Service Pack 2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.2.0) installieren und dann die Datei &quot;cq-dam-stock-integration-content-1.0.4.zip&quot;neu installieren.
-* Vergewissern Sie sich, dass Sie über Administratorberechtigungen für [Adobe I/O Console](https://console.adobe.io/), [Adobe Admin Console](https://adminconsole.adobe.com/) und Adobe Experience Manager verfügen, um die Integration einzurichten.
+* Vergewissern Sie sich, dass Sie über Administratorberechtigungen für [Adobe I/O-Konsole](https://console.adobe.io/), [Adobe Admin Console](https://adminconsole.adobe.com/) und Adobe Experience Manager verfügen, um die Integration einzurichten.
 
-#### Einrichten der Adobe-IMS-Konfiguration mit der Adobe I/O-Konsole {#set-up-adobe-ims-configuration-using-adobe-i-o-console}
+#### Einrichten der Adobe-IMS-Konfiguration mithilfe der Adobe I/O-Konsole {#set-up-adobe-ims-configuration-using-adobe-i-o-console}
 
 1. Erstellen Sie eine Adobe der IMS-Konfiguration für das technische Konto unter **Tools > Security**
 2. Wählen Sie die *Cloud-Lösung* als *Adobe Stock* und erstellen Sie ein neues Zertifikat oder verwenden Sie ein vorhandenes Zertifikat für die Konfiguration erneut.
