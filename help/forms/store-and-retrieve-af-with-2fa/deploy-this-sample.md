@@ -1,7 +1,7 @@
 ---
 title: Beispiel bereitstellen
 description: Anwendungsfall auf Ihrer lokalen AEM Forms-Instanz ausführen
-feature: adaptive-forms
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,11 +9,14 @@ activity: implement
 version: 6.4,6.5
 kt: 6602
 thumbnail: 6602.jpg
+topic: Entwicklung
+role: Entwickler
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: 9d4e864f42fa6c0b2f9b895257db03311269ce2e
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '370'
-ht-degree: 1%
+source-wordcount: '375'
+ht-degree: 2%
 
 ---
 
