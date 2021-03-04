@@ -4,17 +4,20 @@ seo-title: Erstellen von Kampagne-Profil beim Senden von adaptiven Formularen
 description: In diesem Artikel werden die Schritte erläutert, die zum Erstellen eines Profils in Adobe Campaign Standard bei der Übermittlung eines adaptiven Formulars erforderlich sind. Bei diesem Vorgang wird ein benutzerdefinierter Übermittlungsmechanismus verwendet, um die Übermittlung des adaptiven Formulars zu verarbeiten.
 seo-description: In diesem Artikel werden die Schritte erläutert, die zum Erstellen eines Profils in Adobe Campaign Standard bei der Übermittlung eines adaptiven Formulars erforderlich sind. Bei diesem Vorgang wird ein benutzerdefinierter Übermittlungsmechanismus verwendet, um die Übermittlung des adaptiven Formulars zu verarbeiten.
 uuid: f3cb7b3c-1a1c-49eb-9447-a9e52c675244
-feature: adaptive-forms, form-data-model
+feature: '"Adaptives Forms, Formulardatenmodell"'
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 46ec4136-4898-4b01-86bb-ac638a29b242
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 7d7034026826a5a46a91b6425a5cebfffab2934d
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '408'
 ht-degree: 0%
 
 ---
