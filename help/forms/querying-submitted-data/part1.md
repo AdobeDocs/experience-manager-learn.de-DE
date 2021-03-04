@@ -3,17 +3,20 @@ title: AEM Forms mit JSON-Schema und -Daten[Teil 1]
 seo-title: AEM Forms mit JSON-Schema und -Daten[Teil1]
 description: Mehrteilige Übung, um Sie durch die Schritte zu führen, die beim Erstellen eines adaptiven Formulars mit JSON-Schema und beim Abfragen der gesendeten Daten erforderlich sind.
 seo-description: Mehrteilige Übung, um Sie durch die Schritte zu führen, die beim Erstellen eines adaptiven Formulars mit JSON-Schema und beim Abfragen der gesendeten Daten erforderlich sind.
-feature: adaptive Formulare
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
+topic: Entwicklung
+role: Entwickler
+level: Erfahren
 translation-type: tm+mt
-source-git-commit: b040bdf97df39c45f175288608e965e5f0214703
+source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 2%
+source-wordcount: '299'
+ht-degree: 3%
 
 ---
 
