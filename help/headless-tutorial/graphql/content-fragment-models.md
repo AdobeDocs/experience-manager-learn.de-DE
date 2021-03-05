@@ -15,9 +15,9 @@ topic: Kopflos, Content-Management
 role: Entwickler
 level: Anfänger
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: cae6e32baa256d4c94fe317eb31cd5163cdae41f
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '1027'
 ht-degree: 2%
 
 ---
@@ -44,6 +44,10 @@ Dies ist ein mehrteiliges Lernprogramm und es wird davon ausgegangen, dass die u
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
 Das obige Video bietet einen Überblick über die Arbeit mit Inhaltsfragmentmodellen.
+
+>[!CAUTION]
+>
+> Das obige Video zeigt die Erstellung des Modells **Mitarbeiter** mit dem Namen `Contributors`. Stellen Sie bei der Ausführung der Schritte in Ihrer eigenen Umgebung sicher, dass der Titel das Singular-Formular verwendet: `Contributor` ohne **s**. Die Benennung des Inhaltsfragmentmodells führt zu den GraphQL-API-Aufrufen, die später im Lernprogramm ausgeführt werden.
 
 ## Inspect the Adventure Content Fragment Model
 
