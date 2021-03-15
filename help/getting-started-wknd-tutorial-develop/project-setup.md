@@ -16,9 +16,9 @@ topic: Content-Management, Entwicklung
 role: Entwickler
 level: Anfänger
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b11039ef9d373685a4279c01dbd08eb6464acd29
 workflow-type: tm+mt
-source-wordcount: '1895'
+source-wordcount: '1947'
 ht-degree: 5%
 
 ---
@@ -134,6 +134,24 @@ Die nächste Reihe von Schritten erfolgt mit einem UNIX-basierten Befehlszeilent
            |--- pom.xml
            |--- README.md
            |--- .gitignore
+   ```
+
+### Version von Project Analytics aktualisieren
+
+>[!CAUTION]
+>
+> Ein [bekanntes Problem ist in Archetype Version 25 vorhanden, das ein Update der Version des **Projektanalysators** im erstellten Projekt erfordert. ](https://github.com/adobe/aem-project-archetype/issues/638) Die folgenden Schritte sind **nur** erforderlich für Projekte, die mit `aemVersion="cloud"` generiert wurden.
+
+1. Öffnen Sie die Datei `aem-guides-wknd/poml.xml` mit Ihrem Lieblings-Texteditor.
+1. Aktualisieren Sie `aemanalyser.version` auf **`0.9.2`**:
+
+   ```diff
+    <properties>
+       ...
+   -   <aemanalyser.version>0.0.18</aemanalyser.version>
+   +   <aemanalyser.version>0.9.2</aemanalyser.version>
+       ...
+    </properties>
    ```
 
 ## Bereitstellen und Erstellen des Projekts {#build}
