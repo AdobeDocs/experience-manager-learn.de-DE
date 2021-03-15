@@ -16,9 +16,9 @@ topic: Content-Management, Entwicklung
 role: Entwickler
 level: Anfänger
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b5b43ae8231bf23e0c53777b1e9c16bcc3fc188a
 workflow-type: tm+mt
-source-wordcount: '3083'
+source-wordcount: '3106'
 ht-degree: 1%
 
 ---
@@ -82,6 +82,10 @@ In den meisten Fällen ist die Planung für einen neuen Website-Beginn mit Mocku
 >[!VIDEO](https://video.tv.adobe.com/v/30214/?quality=12&learn=on)
 
 **Laden Sie die  [WKND-Artikelentwurfsdatei](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd)** herunter.
+
+>[!NOTE]
+>
+> Ein generisches [AEM Core-Komponenten-UI-Kit ist ebenfalls als Ausgangspunkt für benutzerdefinierte Projekte verfügbar.](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd)
 
 ## Erstellen der Artikelseitenvorlage
 
