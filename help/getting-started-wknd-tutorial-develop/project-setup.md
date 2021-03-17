@@ -16,9 +16,9 @@ topic: Content-Management, Entwicklung
 role: Entwickler
 level: Anfänger
 translation-type: tm+mt
-source-git-commit: b11039ef9d373685a4279c01dbd08eb6464acd29
+source-git-commit: 600d3e217b93b30cc673af85c1fd1b62ccc37eb1
 workflow-type: tm+mt
-source-wordcount: '1947'
+source-wordcount: '1890'
 ht-degree: 5%
 
 ---
@@ -50,11 +50,11 @@ In diesem Kapitel erstellen Sie ein neues Adobe Experience Manager-Projekt mit d
 
 ## Projekt {#create} erstellen
 
-Es gibt mehrere Optionen zum Erstellen eines Maven-Multi-Modul-Projekts für AEM. Dieses Tutorial nutzt den AEM [Maven-Projekttyp **25**](https://github.com/adobe/aem-project-archetype). Cloud Manager bietet außerdem einen UI-Assistenten](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/create-an-application-project.html), um die Erstellung eines AEM Anwendungsprojekts zu starten. [ Das zugrunde liegende Projekt, das von der Benutzeroberfläche von Cloud Manager generiert wurde, ergibt dieselbe Struktur wie die direkte Verwendung des Archetyps.
+Es gibt mehrere Optionen zum Erstellen eines Maven-Multi-Modul-Projekts für AEM. Dieses Tutorial nutzt den AEM [Maven-Projekttyp **26**](https://github.com/adobe/aem-project-archetype). Cloud Manager bietet außerdem einen UI-Assistenten](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/getting-started/create-an-application-project.html), um die Erstellung eines AEM Anwendungsprojekts zu starten. [ Das zugrunde liegende Projekt, das von der Benutzeroberfläche von Cloud Manager generiert wurde, ergibt dieselbe Struktur wie die direkte Verwendung des Archetyps.
 
 >[!NOTE]
 >
->Dieses Lernprogramm verwendet Version **25** des Archetyps. Es empfiehlt sich immer, die **letzte** Version des Archetyps zu verwenden, um ein neues Projekt zu erstellen.
+>Dieses Lernprogramm verwendet Version **26** des Archetyps. Es empfiehlt sich immer, die **letzte** Version des Archetyps zu verwenden, um ein neues Projekt zu erstellen.
 
 Die nächste Reihe von Schritten erfolgt mit einem UNIX-basierten Befehlszeilenterminal, sollte jedoch bei Verwendung eines Windows-Terminals ähnlich sein.
 
@@ -100,7 +100,7 @@ Die nächste Reihe von Schritten erfolgt mit einem UNIX-basierten Befehlszeilent
    mvn -B archetype:generate \
        -D archetypeGroupId=com.adobe.aem \
        -D archetypeArtifactId=aem-project-archetype \
-       -D archetypeVersion=25 \
+       -D archetypeVersion=26 \
        -D appTitle="WKND Sites Project" \
        -D appId="wknd" \
        -D groupId="com.adobe.aem.guides.wknd" \
@@ -111,7 +111,7 @@ Die nächste Reihe von Schritten erfolgt mit einem UNIX-basierten Befehlszeilent
 
    >[!NOTE]
    >
-   > Wenn Sie AEM 6.5.5.0+ oder 6.4.8.1+ verwenden, ersetzen Sie `aemVersion="cloud"` durch Ihre Zielgruppe-Version von AEM, d.h. `aemVersion="6.5.5"` oder `aemVersion="6.4.8.1"`
+   > Bei Targeting AEM 6.5.5+ ersetzen Sie `aemVersion="cloud"` durch `aemVersion="6.5.5"`. Verwenden Sie beim Targeting von 6.4.8+ `aemVersion="6.4.8"`.
 
    Eine vollständige Liste der verfügbaren Eigenschaften zum Konfigurieren eines Projekts [finden Sie hier](https://github.com/adobe/aem-project-archetype#available-properties).
 
@@ -134,24 +134,6 @@ Die nächste Reihe von Schritten erfolgt mit einem UNIX-basierten Befehlszeilent
            |--- pom.xml
            |--- README.md
            |--- .gitignore
-   ```
-
-### Version von Project Analytics aktualisieren
-
->[!CAUTION]
->
-> Ein [bekanntes Problem ist in Archetype Version 25 vorhanden, das ein Update der Version des **Projektanalysators** im erstellten Projekt erfordert. ](https://github.com/adobe/aem-project-archetype/issues/638) Die folgenden Schritte sind **nur** erforderlich für Projekte, die mit `aemVersion="cloud"` generiert wurden.
-
-1. Öffnen Sie die Datei `aem-guides-wknd/poml.xml` mit Ihrem Lieblings-Texteditor.
-1. Aktualisieren Sie `aemanalyser.version` auf **`0.9.2`**:
-
-   ```diff
-    <properties>
-       ...
-   -   <aemanalyser.version>0.0.18</aemanalyser.version>
-   +   <aemanalyser.version>0.9.2</aemanalyser.version>
-       ...
-    </properties>
    ```
 
 ## Bereitstellen und Erstellen des Projekts {#build}
