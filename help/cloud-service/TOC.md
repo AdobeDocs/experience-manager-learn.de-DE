@@ -5,9 +5,9 @@ breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
 translation-type: tm+mt
-source-git-commit: 59b786d95d1428916adad37ceca4412b93463e9b
+source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '353'
 ht-degree: 35%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 35%
 
 # Tutorials zu Adobe Experience Manager as a Cloud Service {#cloud-service}
 
-+ [Überblick](./overview.md)
++ [Übersicht](./overview.md)
 + Einführung in AEM as a Cloud Service{#introduction}
    + [Was ist AEM als Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
    + [Evolution](./introduction/evolution.md)
@@ -43,7 +43,7 @@ ht-degree: 35%
       + [Dispatcherkonfigurationen](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager-APIs](./cloud-manager/devops/cloud-manager-apis.md)
 + Umgebung für lokale Entwicklung {#local-development-environment-set-up}
-   + [Überblick](./local-development-environment/overview.md)
+   + [Übersicht](./local-development-environment/overview.md)
    + [Entwicklungstools](./local-development-environment/development-tools.md)
    + [Lokale AEM Laufzeit](./local-development-environment/aem-runtime.md)
    + [Lokale Dispatcher-Tools](./local-development-environment/dispatcher-tools.md)
@@ -61,20 +61,20 @@ ht-degree: 35%
    + [AEM SDK API JavaDocs](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/)
 + Debugging AEM{#debugging}
    + Debuggen des AEM SDK{#debugging-aem-sdk}
-      + [Überblick](./debugging/aem-sdk-local-quickstart/overview.md)
+      + [Übersicht](./debugging/aem-sdk-local-quickstart/overview.md)
       + [Protokolle](./debugging/aem-sdk-local-quickstart/logs.md)
       + [Remote-Debugging](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
       + [OSGi-Webkonsole](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher Tools](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [Andere Werkzeuge](./debugging/aem-sdk-local-quickstart/other-tools.md)
    + Debuggen von AEM als Cloud Service{#debugging-aem-as-a-cloud-service}
-      + [Überblick](./debugging/cloud-service/overview.md)
+      + [Übersicht](./debugging/cloud-service/overview.md)
       + [Protokolle](./debugging/cloud-service/logs.md)
       + [Erstellen und Bereitstellen](./debugging/cloud-service/build-and-deployment.md)
       + [Developer Console](./debugging/cloud-service/developer-console.md)
       + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md) 
 + Zugriff auf AEM{#accessing}
-   + [Überblick](./accessing/overview.md)
+   + [Übersicht](./accessing/overview.md)
    + [Adobe IMS-Benutzer](./accessing/adobe-ims-users.md)
    + [Adobe IMS-Benutzergruppen](./accessing/adobe-ims-user-groups.md)
    + [Adobe IMS-Profil](./accessing/adobe-ims-product-profiles.md)
@@ -83,8 +83,17 @@ ht-degree: 35%
 + Migration {#migration}
    + [Content Transfer Tool](./migration/content-transfer-tool.md)
    + [Massenimport von Assets](./migration/bulk-import.md)
++ Forms{#forms}
+   + [Integration mit Salesforce]{#integrate-with-salesforce}
+      + [Einführung](./forms/integrate-with-salesforce/introduction.md)
+      + [Erstellen einer verbundenen App](./forms/integrate-with-salesforce/create-connected-app.md)
+      + [Swagger-Datei erstellen](./forms/integrate-with-salesforce/describe-rest-api.md)
+      + [Datenquelle erstellen](./forms/integrate-with-salesforce/create-data-source.md)
+      + [Formulardatenmodell erstellen](./forms/integrate-with-salesforce/create-form-data-model.md)
+      + [Testformularübermittlung](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
+      + [Test-Klick-Ereignis](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + asset compute-Erweiterbarkeit{#asset-compute}
-   + [Überblick](./asset-compute/overview.md)
+   + [Übersicht](./asset-compute/overview.md)
    + Setup{#set-up}
       + [Konto- und Dienstbereitstellung](./asset-compute/set-up/accounts-and-services.md)
       + [Umgebung der lokalen Entwicklung](./asset-compute/set-up/development-environment.md)
@@ -111,4 +120,3 @@ ht-degree: 35%
    + [SPA Editor (Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
    + [AEM Sites und Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html)
    + [Token-basierte Authentifizierung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)
-
