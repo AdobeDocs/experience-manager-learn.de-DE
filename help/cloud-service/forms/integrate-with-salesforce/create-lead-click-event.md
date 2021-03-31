@@ -1,7 +1,6 @@
 ---
 title: 'Erstellen eines Interessentenobjekts in der Salesforce-Datenbank auf dem click-Ereignis einer Schaltfläche '
 description: Erstellen Sie "s Lead", indem Sie den Post-Vorgang des Formulardatenmodells aufrufen
-product: aem
 type: Dokumentation
 role: Entwickler
 level: Anfänger, Intermediate
@@ -10,7 +9,7 @@ feature: Adaptive Formulare
 topic: Entwicklung
 kt: 7193
 translation-type: tm+mt
-source-git-commit: d9799acb28dfc3c9767374798828754d5a50831f
+source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 12%
