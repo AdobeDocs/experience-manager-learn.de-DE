@@ -15,9 +15,9 @@ topic: Entwicklung
 role: Entwickler
 level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '613'
 ht-degree: 2%
 
 ---
@@ -29,10 +29,9 @@ Verwenden der Output- und Forms-Dienst-API in AEM Forms
 
 In diesem Artikel werden wir uns folgende Themen ansehen:
 
-* Output-Dienst - In der Regel wird dieser Dienst zum Zusammenführen von XML-Daten mit einer XDP-Vorlage oder PDF-Datei verwendet, um reduzierte PDF-Dateien zu generieren
-* FormsService - Dies ist ein sehr vielseitiger Dienst, mit dem Sie Daten aus und in eine PDF-Datei exportieren/importieren können
+* Output-Dienst - Dieser Dienst wird in der Regel zum Zusammenführen von XML-Daten mit einer XDP-Vorlage oder PDF-Datei verwendet, um reduzierte PDF-Dateien zu generieren. Weitere Informationen zum Output-Dienst finden Sie unter [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html).
+* FormsService - Dies ist ein sehr vielseitiger Dienst, mit dem Sie Daten aus und in eine PDF-Datei exportieren/importieren können. Weitere Informationen zum Forms-Dienst finden Sie unter [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/forms/api/class-use/FormsService.html).
 
-Die offizielle JavaScript-API für AEM Forms ist [hier](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html) aufgeführt
 
 Der folgende Codeausschnitt exportiert Daten aus der PDF-Datei
 
