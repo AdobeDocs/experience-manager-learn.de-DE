@@ -2,19 +2,19 @@
 title: Adobe Sign Cloud-Konfiguration erstellen
 description: Erstellen Sie die AEM Forms- und Adobe Sign-Integration mithilfe der Cloud-Services-Konfiguration.
 solution: Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
 feature: Adaptive Formulare
 topic: Entwicklung
-kt: 7427
+kt: 7428
 thumbnail: 332437.jpg
 translation-type: tm+mt
-source-git-commit: 27f21bb9c1b905a2100a5013fe3b75760b9d6821
+source-git-commit: cb4f678be79ad39110cc199b8c66349f311a431d
 workflow-type: tm+mt
-source-wordcount: '67'
-ht-degree: 7%
+source-wordcount: '63'
+ht-degree: 4%
 
 ---
 
