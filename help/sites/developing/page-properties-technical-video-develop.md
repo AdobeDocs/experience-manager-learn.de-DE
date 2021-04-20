@@ -1,9 +1,9 @@
 ---
 title: Erweitern von Seiteneigenschaften in AEM Sites
 description: Erfahren Sie, wie Sie die Metadatenfelder der Seiteneigenschaften in Adobe Experience Manager Sites erweitern. In diesem Video wird erläutert, wie dies mit den Funktionen des Sling Resource Merger am effektivsten erreicht werden kann.
-topic: Entwicklung
-feature: Kernkomponenten
-role: Entwickler
+topic: Development
+feature: Core Components
+role: Developer
 version: cloud-service
 kt: 243
 thumbnail: 25173.jpg

@@ -4,9 +4,9 @@ seo-title: Personalisierung mit Adobe Experience Manager (AEM) Experience Fragme
 description: Ein durchgehendes Lernprogramm, in dem gezeigt wird, wie mit Adobe Experience Manager Experience Fragments und Adobe Target personalisierte Erlebnisse erstellt und bereitgestellt werden.
 seo-description: Ein durchgehendes Lernprogramm, in dem gezeigt wird, wie mit Adobe Experience Manager Experience Fragments und Adobe Target personalisierte Erlebnisse erstellt und bereitgestellt werden.
 feature: Experience Fragments
-topic: 'Personalisierung '
-role: Entwickler
-level: Zwischenschaltung
+topic: Personalization
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,12 +2,12 @@
 title: Beginn konfigurieren
 description: hinzufügen einer statischen Textkomponente in das Bedienfeld "Beginn".
 solution: Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 kt: 7388
 thumbnail: 332235.jpg
 translation-type: tm+mt

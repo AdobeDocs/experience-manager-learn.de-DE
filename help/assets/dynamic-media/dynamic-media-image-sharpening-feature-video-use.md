@@ -2,11 +2,11 @@
 title: Verwenden des Scharfzeichnens von Bildern mit AEM Dynamic Media
 description: In diesem Video wird erläutert, warum das Scharfzeichnen eines Bildes für die Aufrechterhaltung der Bildtreue und für die Verwendung erweiterter Einstellungen für die Erstellung des perfekten Bildes von entscheidender Bedeutung ist.
 sub-product: dynamic-media
-feature: Profile, Viewer-Vorgaben
+feature: Image Profiles, Viewer Presets
 version: 6.3, 6.4, 6.5
-topic: Content Management
-role: Geschäftspraktiker
-level: Anfänger
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

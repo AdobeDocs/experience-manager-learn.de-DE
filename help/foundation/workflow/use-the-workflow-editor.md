@@ -3,9 +3,9 @@ title: Erstellen von Workflows in AEM
 description: Der Workflow ermöglicht die Verwaltung von Geschäftsprozessen im Experience Manager und wird für die automatische Verarbeitung von Inhalten sowie zur Erleichterung von Governance- und Prozessabläufen verwendet, die eine persönliche Entscheidungsfindung erfordern.
 version: 6.4, 6.5, cloud-service
 feature: Workflow
-topic: Content Management
-level: Zwischenschaltung
-role: Administrator, Entwickler
+topic: Content Management
+level: Intermediate
+role: Administrator, Developer
 kt: 657
 thumbnail: 22201.jpg
 translation-type: tm+mt

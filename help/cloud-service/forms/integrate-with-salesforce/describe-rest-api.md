@@ -2,12 +2,12 @@
 title: Erstellen einer Swagger-Datei zur Beschreibung der Salesforce REST API
 description: Die Swagger-Datei definiert die API-Endpunkte sowie die Eingabe- und Ausgabeparameter
 solution: Experience Manager, Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 kt: 7147
 thumbnail: 331754.jpg
 translation-type: tm+mt

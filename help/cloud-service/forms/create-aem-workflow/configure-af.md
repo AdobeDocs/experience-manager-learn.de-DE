@@ -2,12 +2,12 @@
 title: Arbeitsablauf für adaptives Formular für Trigger konfigurieren
 description: Arbeitsablauf für Trigger beim Senden des adaptiven Formulars.
 solution: Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 kt: 7425
 thumbnail: 332435.pg
 translation-type: tm+mt

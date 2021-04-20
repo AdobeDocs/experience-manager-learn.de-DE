@@ -1,7 +1,7 @@
 ---
 title: Umgebung-Variablen für Asset compute-Erweiterbarkeit konfigurieren
 description: Umgebung-Variablen werden in der .env-Datei für die lokale Entwicklung beibehalten und zur Bereitstellung von Anmeldeinformationen für Adoben I/O und Cloud-Datenspeicherung verwendet, die für die lokale Entwicklung erforderlich sind.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6270
 thumbnail: KT-6270.jpg
-topic: Integrationen, Entwicklung
-role: Entwickler
-level: Vermittelt, erfahren
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

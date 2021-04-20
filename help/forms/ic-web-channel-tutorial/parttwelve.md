@@ -4,16 +4,16 @@ seo-title: Einrichten des Versands von Web Kanal Dokument
 description: Dies ist der letzte Teil eines mehrstufigen Tutorials zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil betrachten wir den Versand des Web-Kanal-Dokuments per E-Mail.
 seo-description: Dies ist der letzte Teil eines mehrstufigen Tutorials zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil betrachten wir den Versand des Web-Kanal-Dokuments per E-Mail.
 uuid: c1066600-1abd-4401-b04f-b93c28603cc7
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

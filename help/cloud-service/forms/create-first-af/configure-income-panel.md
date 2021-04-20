@@ -2,12 +2,12 @@
 title: Einkommensbedienfeld konfigurieren
 description: hinzufügen Tabellenkomponente zur Einkommensleiste.
 solution: Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 kt: 7379
 thumbnail: 332233.jpg
 translation-type: tm+mt

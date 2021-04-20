@@ -3,16 +3,16 @@ title: Verwenden von bearbeitbaren Seitenvorlagen mit AEM Sites
 seo-title: Verwenden von bearbeitbaren Seitenvorlagen mit Adobe Experience Manager Sites
 description: Bearbeitbare Vorlagen ermöglichen es spezialisierten Autoren, Seitenvorlagen zu erstellen und zu aktualisieren und erweiterte Richtlinienkonfigurationen mit AEM Sites zu verwalten.
 seo-description: Bearbeitbare Vorlagen ermöglichen es spezialisierten Autoren, Seitenvorlagen zu erstellen und zu aktualisieren und erweiterte Richtlinienkonfigurationen mit Adobe Experience Manager Sites zu verwalten.
-feature: Bearbeitbare Vorlagen
+feature: Editable Templates
 topics: authoring
 audience: all
 doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
 kt: 193
-topic: Content Management
-role: Geschäftspraktiker
-level: Anfänger
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

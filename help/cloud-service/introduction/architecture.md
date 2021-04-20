@@ -1,10 +1,10 @@
 ---
 title: Architektur von AEM as a Cloud Service
 description: Entdecken Sie die zugrunde liegende Architektur und wichtige AEM als Cloud Service. Tauchen Sie tief in Cloud Manager und die APIs ein.
-role: Architekt, Entwickler
-level: Anfänger
+role: Architect, Developer
+level: Beginner
 type: Tutorial
-topic: Architektur
+topic: Architecture
 kt: 6919
 thumbnail: 330542.jpg
 translation-type: tm+mt

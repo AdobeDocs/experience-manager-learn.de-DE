@@ -1,13 +1,13 @@
 ---
 title: Benutzerdefinierte Smart-Tags für Bilder in AEM Assets
 description: Erfahren Sie, wie Sie die Smart-Tags von AEM Assets trainieren, um benutzerdefinierte Begriffe auf Assets anzuwenden.
-feature: Smart-Tags
+feature: Smart Tags
 version: 6.4, 6.5, cloud-services
 kt: 795
 thumbnail: 22254.jpg
-topic: Content Management
-role: Entwickler
-level: Zwischenschaltung
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,9 +2,9 @@
 title: '"Kapitel 2 - Dispatcher-Infrastruktur"'
 description: Verstehen Sie die Veröffentlichungs- und Dispatcher-Topologie. Erfahren Sie mehr über die gängigsten Topologien und Setups.
 feature: Dispatcher
-topic: Architektur
-role: Architekt
-level: Anfänger
+topic: Architecture
+role: Architect
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

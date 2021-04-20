@@ -4,7 +4,7 @@ seo-title: Interaktive Kommunikation für Print Kanal erstellen
 description: Dies ist Teil 6 des mehrteiligen Lernprogramms zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments für den Print-Kanal. In diesem Teil wird das Interactive Communication Dokument for Print Kanal erstellt.
 seo-description: Dies ist Teil 6 des mehrteiligen Lernprogramms zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments für den Print-Kanal. In diesem Teil wird das Interactive Communication Dokument for Print Kanal erstellt.
 uuid: 25318a2a-be9d-47d8-806b-d99c8e1c6a74
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,9 +13,9 @@ version: 6.4,6.5
 discoiquuid: 6e3f9c8c-8ec4-4084-bf35-1c97a5b463f1
 kt: 5972
 thumbnail: 37888.jpg
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

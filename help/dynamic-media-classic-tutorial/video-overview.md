@@ -2,14 +2,14 @@
 title: Videoüberblick
 description: Im Lieferumfang von Dynamic Media Classic sind automatische Konvertierungen von Videos beim Hochladen, Video-Streaming auf Desktop- und Mobilgeräte sowie adaptive Videosets enthalten, die für die Wiedergabe je nach Gerät und Bandbreite optimiert sind. Erfahren Sie mehr über Videos in Dynamic Media Classic und lernen Sie Videoneuschnitte und Terminologie kennen. Tauchen Sie anschließend ein in die Vorgehensweise zum Hochladen und Kodieren von Videos und wählen Sie Video-Vorgaben zum Hochladen, Hinzufügen oder Bearbeiten einer Videovorgabe, Vorschau von Videos in einem Video-Viewer, Bereitstellen von Videos auf Websites und mobilen Sites, Hinzufügen von Untertiteln und Kapitelmarken zu Videos und Veröffentlichen von Video-Viewern für Desktop- und Mobilbenutzer.
 sub-product: dynamic-media
-feature: Dynamic Media Classic, Video-Profile, Viewer-Vorgaben
+feature: Dynamic Media Classic, Video Profiles, Viewer Presets
 doc-type: tutorial
 topics: development, authoring, configuring, videos, video-profiles
 audience: all
 activity: use
-topic: Content Management
-role: Geschäftspraktiker
-level: Anfänger
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

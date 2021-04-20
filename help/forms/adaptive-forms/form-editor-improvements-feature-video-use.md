@@ -3,7 +3,7 @@ title: Verbesserungen am Formulareditor in AEM Forms
 seo-title: Verbesserungen am Formulareditor in AEM Forms
 description: AEM 6.3 bietet in dieser Version eine Reihe neuer Funktionen und Verbesserungen, um das Authoring adaptiver Formulare und Dokumente zu vereinfachen. Diese Verbesserungen tragen zur Verkürzung der Markteinführungszeit bei und ermöglichen Anwendern in Unternehmen die Arbeit mit Formularen und Dokumenten
 seo-description: AEM 6.3 bietet in dieser Version eine Reihe neuer Funktionen und Verbesserungen, um das Authoring adaptiver Formulare und Dokumente zu vereinfachen. Diese Verbesserungen tragen zur Verkürzung der Markteinführungszeit bei und ermöglichen Anwendern in Unternehmen die Arbeit mit Formularen und Dokumenten
-feature: Adaptive Formulare
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: technical video
@@ -11,9 +11,9 @@ activity: setup
 version: 6.3,6.4,6.5
 uuid: 9e76a2b8-f843-47b8-abf8-596c64fbcbb6
 discoiquuid: 7a7bad50-c604-4182-accb-acb85571ba78
-topic: Entwicklung
-role: Geschäftspraktiker
-level: Anfänger
+topic: Development
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

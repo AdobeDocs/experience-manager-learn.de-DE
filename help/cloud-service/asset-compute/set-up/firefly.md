@@ -1,7 +1,7 @@
 ---
 title: Adobe Project Firefly für Asset compute-Erweiterbarkeit einrichten
 description: asset compute-Projekte sind speziell definierte Adobe Project Firefly-Projekte und erfordern daher Zugriff auf Adobe Project Firefly in der Adobe Developer Console, um sie einzurichten und bereitzustellen.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6268
 thumbnail: 40183.jpg
-topic: Integrationen, Entwicklung
-role: Entwickler
-level: Vermittelt, erfahren
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

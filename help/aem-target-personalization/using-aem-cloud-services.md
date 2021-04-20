@@ -4,9 +4,9 @@ seo-title: Integration von Adobe Experience Manager (AEM) mit Adobe Target mithi
 description: Schrittweise Anleitung zur Integration von Adobe Experience Manager (AEM) in Adobe Target mit AEM Cloud Service
 seo-description: Schrittweise Anleitung zur Integration von Adobe Experience Manager (AEM) in Adobe Target mit AEM Cloud Service
 feature: Experience Fragments
-topic: 'Personalisierung '
-role: Entwickler
-level: Zwischenschaltung
+topic: Personalization
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: Grundlegende Komponenten
 description: 'AEM Core-Komponenten sind Standardkomponenten, die mit Adobe Experience Manager verwendet werden. Basierend auf den Best Practices und Standards der Adobe bieten Core-Komponenten einen grundlegenden Funktionssatz für jede Sites-Implementierung. '
-feature: Kernkomponenten
+feature: Core Components
 topics: authoring
 audience: all
 activity: use
@@ -9,9 +9,9 @@ doc-type: feature video
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4676
 thumbnail: 18926.jpg
-topic: Entwicklung
-role: Geschäftspraktiker
-level: Anfänger
+topic: Development
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

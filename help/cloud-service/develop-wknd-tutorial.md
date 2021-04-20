@@ -5,10 +5,10 @@ description: Steigen Sie gerade in die Entwicklung mit AEM ein? Benötigen Sie e
 seo-description: Steigen Sie gerade in die Entwicklung mit AEM ein? Benötigen Sie einen Auffrischungskurs zu Best Practices? Dann sind Sie hier richtig! In diesem mehrteiligen Tutorial lernen Entwickler, die gerade mit AEM beginnen, wie sie eine Website in AEM mit den neuesten Standards und Technologien implementieren.
 content-type: reference
 topic-tags: introduction
-feature: AEM Projektarchiv, Hauptkomponenten, Seiten-Editor, bearbeitbare Vorlagen
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
+feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

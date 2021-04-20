@@ -4,16 +4,16 @@ seo-title: Kalenderprojekte und AEM Ansichten verwenden
 description: 'AEM Kalender-Ansicht verfolgt Projekte und Aufgaben in einer Kalenderversion, um die Projektverwaltung und -planung zu vereinfachen. Mit der Ansicht des Kalenders erhalten die Benutzer eine Gesamtübersicht über die derzeit laufenden, geplanten, demnächst fälligen und überfälligen Aufgaben. '
 seo-description: AEM Kalender-Ansicht verfolgt Projekte und Aufgaben in einer Kalenderversion, um die Projektverwaltung und -planung zu vereinfachen. Mit der Ansicht des Kalenders erhalten die Benutzer eine Gesamtübersicht über die derzeit laufenden, geplanten, demnächst fälligen und überfälligen Aufgaben.
 version: 6.3, 6.4, 6.5
-feature: Arbeitsablauf, Projekte
+feature: Workflow, Projects
 topics: governance, collaboration
 activity: use
 audience: author, analyst
 doc-type: feature video
 uuid: 3dc9999c-eddf-4e42-9aa9-87a37a47699d
 discoiquuid: 5ad21858-a4a2-486c-98dc-4f5ba46a3bc1
-topic: Zusammenarbeit
-role: Geschäftspraktiker
-level: Anfänger
+topic: Collaboration
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,12 +2,12 @@
 title: Bedienfeld für Assets konfigurieren
 description: hinzufügen ein Akkordeon-Layout-Bedienfeld in das Asset-Bedienfeld.
 solution: Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 kt: 7380
 thumbnail: 332232.jpg
 translation-type: tm+mt

@@ -1,14 +1,14 @@
 ---
 title: Exportieren gesendeter Formulardaten im CSV-Format
 description: Exportieren gesendeter adaptiver Formulardaten im CSV-Format
-feature: Adaptive Formulare
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
-topic: Entwicklung
-role: Entwickler
-level: Erfahren
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: Fehlerbehebung bei der Asset compute-Erweiterbarkeit für AEM Assets
 description: Im Folgenden finden Sie eine Übersicht über häufig auftretende Probleme und Fehler sowie die entsprechenden Lösungen, die beim Entwickeln und Bereitstellen von benutzerdefinierten Asset compute-Workern für AEM Assets auftreten können.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, metadata, development
 version: cloud-service
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
-topic: Integrationen, Entwicklung
-role: Entwickler
-level: Vermittelt, erfahren
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

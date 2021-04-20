@@ -2,13 +2,13 @@
 title: Verstehen der verschiedenen Typen von PDF forms und Dokumenten
 description: PDF ist eigentlich eine Familie von Dateiformaten. Dieser Artikel beschreibt die Typen von PDFs, die für Formularentwickler wichtig und relevant sind.
 solution: Experience Manager, Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger,Zwischenraum
+type: Documentation
+role: Developer
+level: Beginner,Intermediate
 version: 6.3,6.4,6.5
 feature: Document Services
 kt: 7071
-topic: Entwicklung
+topic: Development
 translation-type: tm+mt
 source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt

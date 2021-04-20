@@ -3,15 +3,15 @@ title: Entwicklung mit Output- und Forms-Diensten in AEM Forms
 seo-title: Entwicklung mit Output- und Forms-Diensten in AEM Forms
 description: Verwenden der Output- und Forms-Dienst-API in AEM Forms
 seo-description: Verwenden der Output- und Forms-Dienst-API in AEM Forms
-feature: Formularservice
+feature: Forms Service
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Entwicklung
-role: Entwickler
-level: Zwischenschaltung
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

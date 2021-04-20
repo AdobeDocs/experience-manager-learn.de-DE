@@ -2,13 +2,13 @@
 title: Download
 description: Erfahren Sie, wie Sie Assets und deren Darstellungen zur Verwendung und Freigabe auf Ihren lokalen Computer herunterladen können.
 sub-product: Assets
-feature: Asset-Verwaltung
+feature: Asset Management
 version: cloud-service
 kt: 4300
 thumbnail: 32194.jpg
-topic: Content Management
-role: Geschäftspraktiker
-level: Anfänger
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: Bereitstellen von Asset compute-Mitarbeitern in Adobe I/O Runtime zur Verwendung mit AEM als Cloud Service
 description: 'asset compute-Projekte und die darin enthaltenen Arbeiter müssen nach Adobe I/O Runtime entsandt werden, damit AEM als Cloud Service verwendet werden kann. '
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6286
 thumbnail: KT-6286.jpg
-topic: Integrationen, Entwicklung
-role: Entwickler
-level: Vermittelt, erfahren
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

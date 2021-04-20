@@ -1,10 +1,10 @@
 ---
 title: Erste Schritte mit AEM ohne Kopfdaten - Content Services
 description: Ein Tutorial, in dem von Anfang bis Ende erläutert wird, wie Inhalte mithilfe von AEM Headless aufgebaut und bereitgestellt werden können.
-feature: Inhaltsfragmente, APIs
-topic: Kopflos, Content-Management
-role: Entwickler
-level: Anfänger
+feature: Content Fragments, APIs
+topic: Headless, Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

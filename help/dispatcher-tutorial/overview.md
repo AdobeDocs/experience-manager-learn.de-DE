@@ -4,9 +4,9 @@ seo-title: AEM Dispatcher Cache-Tutorial
 description: Das Ziel dieses Tutorials ist es, Ihnen dabei zu helfen, besser zu verstehen, wie der Dispatcher funktioniert und wie Sie damit arbeiten können.
 seo-description: Das Ziel dieses Tutorials ist es, Ihnen dabei zu helfen, besser zu verstehen, wie der Dispatcher funktioniert und wie Sie damit arbeiten können.
 feature: Dispatcher
-topic: Architektur
-role: Architekt
-level: Anfänger
+topic: Architecture
+role: Architect
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,10 +2,10 @@
 title: Intelligente Übersetzungssuche mit AEM Assets einrichten
 description: Die intelligente Übersetzungssuche ermöglicht die Verwendung von Suchbegriffen, die nicht Englisch sind, um auf englische Inhalte zu gelangen. Um AEM für die Suche nach intelligenten Übersetzungen einzurichten, muss das Apache Oak Search Machine Translation OSGi Bundle installiert und konfiguriert werden sowie die entsprechenden kostenlosen und Open Source Apache Joshua Sprachpakete, die die Übersetzungsregeln enthalten.
 version: 6.3, 6.4, 6.5
-feature: Suchen
-topic: Content Management
-role: Entwickler
-level: Anfänger
+feature: Search
+topic: Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

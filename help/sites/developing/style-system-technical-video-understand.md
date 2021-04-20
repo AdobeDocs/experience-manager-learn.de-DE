@@ -1,15 +1,15 @@
 ---
 title: Code für das AEM-Stilsystem
 description: In diesem Video betrachten wir die Anatomie von CSS (oder LESS) und JavaScript, die zum Stilen der Core Title-Komponente von Adobe Experience Manager mithilfe des Style-Systems verwendet werden, sowie die Anwendung dieser Stile auf HTML und DOM.
-feature: Stilsystem
+feature: Style System
 topics: development, components, front-end-development
 audience: developer, implementer
 doc-type: technical video
 activity: understand
 version: 6.4, 6.5
-topic: Entwicklung
-role: Entwickler
-level: Vermittelt, erfahren
+topic: Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

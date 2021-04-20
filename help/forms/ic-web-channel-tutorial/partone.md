@@ -4,16 +4,16 @@ seo-title: Tomcat installieren und konfigurieren
 description: Dies ist Teil 1 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil werden wir TOMCAT installieren und die sampleRest.war-Datei in TOMCAT bereitstellen. Der REST-Endpunkt, der von dieser WAR-Datei offen gelegt wird, wird die Grundlage für unser Datenquellen- und Formulardatenmodell bilden.
 seo-description: Dies ist Teil 1 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil werden wir TOMCAT installieren und die sampleRest.war-Datei in TOMCAT bereitstellen. Der REST-Endpunkt, der von dieser WAR-Datei offen gelegt wird, wird die Grundlage für unser Datenquellen- und Formulardatenmodell bilden.
 uuid: c6d4c74c-ea16-4c63-92c9-182d087fd88c
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 4f400c22-6c96-4018-851c-70d988ce7c6c
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

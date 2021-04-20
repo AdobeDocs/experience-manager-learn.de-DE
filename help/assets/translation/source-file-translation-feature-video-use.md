@@ -2,9 +2,9 @@
 title: Verwenden der Quelldateiübersetzung mit AEM Assets
 description: Mit Adobe Experience Manager (AEM) Assets können Sie Assets identifizieren, die gemeinsame Attribute gemeinsam haben, und sie mit der neuen Funktion "Zugehörige Assets"als verwandt markieren. Außerdem können Benutzer eine Quell-/abgeleitete Beziehung zwischen Assets definieren, wodurch die Herkunft eines Assets leicht identifiziert werden kann. Wenn Sie einen Übersetzungsarbeitsablauf für ein abgeleitetes Asset ausführen, werden alle Assets abgerufen, auf die die Quelldatei verweist, und für die Übersetzung eingeschlossen. Dadurch wird der Aufwand für die Pflege mehrerer Sites verringert.
 version: 6.3, 6.4, 6.5
-topic: Content Management
-role: Geschäftspraktiker
-level: Zwischenschaltung
+topic: Content Management
+role: Business Practitioner
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

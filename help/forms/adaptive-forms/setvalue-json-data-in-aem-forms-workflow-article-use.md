@@ -4,16 +4,16 @@ seo-title: Wert des JSON-Datenelements im AEM Forms-Workflow festlegen
 description: Da ein adaptives Formular in AEM Arbeitsablauf an verschiedene Benutzer weitergeleitet wird, müssen bestimmte Felder oder Bereiche je nach dem Benutzer, der das Formular überprüft, ein- oder ausgeblendet werden. Um diese Anwendungsfälle zu befriedigen, legen wir in der Regel einen Wert für ein unsichtbares Feld fest. Basierend auf den Wertregeln dieses verborgenen Felds können Geschäftsregeln erstellt werden, um geeignete Bereiche oder Felder auszublenden/zu deaktivieren.
 seo-description: Da ein adaptives Formular in AEM Arbeitsablauf an verschiedene Benutzer weitergeleitet wird, müssen bestimmte Felder oder Bereiche je nach dem Benutzer, der das Formular überprüft, ein- oder ausgeblendet werden. Um diese Anwendungsfälle zu befriedigen, legen wir in der Regel einen Wert für ein unsichtbares Feld fest. Basierend auf den Wertregeln dieses verborgenen Felds können Geschäftsregeln erstellt werden, um geeignete Bereiche oder Felder auszublenden/zu deaktivieren.
 uuid: a4ea6aef-a799-49e5-9682-3fa3b7a442fb
-feature: Adaptive Formulare
+feature: Adaptive Forms
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.4
 discoiquuid: 548fb2ec-cfcf-4fe2-a02a-14f267618d68
-topic: Entwicklung
-role: Entwickler
-level: Erfahren
+topic: Development
+role: Developer
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

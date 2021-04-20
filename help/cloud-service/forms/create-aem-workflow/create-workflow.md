@@ -2,12 +2,12 @@
 title: Einen AEM Workflow erstellen
 description: Erstellen Sie ein Workflow-Modell, um Ihren Geschäftsprozess zu imitieren.
 solution: Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 kt: 7424
 thumbnail: 332434.pg
 translation-type: tm+mt

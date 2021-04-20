@@ -2,11 +2,11 @@
 title: Verwenden von interaktiven Videos mit AEM Dynamic Media
 description: AEM Assets' bietet jetzt die Möglichkeit, interaktive Videos zu erstellen, bei denen Benutzer ein Video in kleinere Segmente aufteilen oder kleine Segmente kombinieren können, um ein großes Segment zu erstellen, wodurch Benutzer Aktionsaufrufe verknüpfen können.
 sub-product: dynamic-media
-feature: Video-Profile, Viewer-Vorgaben, Mix-Mediensets
+feature: Video Profiles, Viewer Presets, Mix Media Sets
 version: 6.3, 6.4, 6.5
-topic: Content Management
-role: Geschäftspraktiker
-level: Anfänger
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

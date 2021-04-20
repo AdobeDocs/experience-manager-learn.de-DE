@@ -2,10 +2,10 @@
 title: Verwendung des Posteingangs in AEM
 description: AEM Posteingang erleichtert die Zusammenarbeit und Sichtbarkeit in Aufgaben und Arbeitsabläufen.
 version: 6.3, 6.4, 6.5, cloud-service
-topic: Zusammenarbeit
-feature: Posteingang
-role: Geschäftspraktiker
-level: Zwischenschaltung
+topic: Collaboration
+feature: Inbox
+role: Business Practitioner
+level: Intermediate
 kt: 159
 thumbnail: 16827.jpg
 translation-type: tm+mt

@@ -2,15 +2,15 @@
 title: Entwickeln mit dem AEM SPA Editor - "Hello World Tutorial"
 description: AEM SPA Editor unterstützt die kontextbezogene Bearbeitung einer Einzelseitenanwendung oder eines SPA. Dieses Lernprogramm stellt eine Einführung in SPA Entwicklung dar, die mit AEM SPA Editor JS SDK verwendet werden soll. Das Lernprogramm erweitert die App "We.Retail"um eine benutzerdefinierte Komponente "Hello World". Die Benutzer können das Lernprogramm mit React- oder Angular-Frameworks abschließen.
 sub-product: Sites, Content-Services
-feature: Spa-Editor
+feature: Spa Editor
 topics: development, single-page-applications
 audience: developer
 doc-type: tutorial
 activity: use
 version: 6.3, 6.4, 6.5
 topic: SPA
-role: Entwickler
-level: Anfänger
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

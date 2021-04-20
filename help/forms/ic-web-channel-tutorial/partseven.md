@@ -4,16 +4,16 @@ seo-title: Hinzufügen von Text- und Bildinhalten zum Web-Kanal-Dokument
 description: 'Dies ist Teil 7 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil fügen wir dem Kopfzeilenbedienfeld Bilder und Textinhalte hinzu. '
 seo-description: 'Dies ist Teil 7 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil fügen wir dem Kopfzeilenbedienfeld Bilder und Textinhalte hinzu. '
 uuid: 440f8b74-3be7-4e58-a46e-4110065b7705
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 3dd64e7d-3f13-4022-bb75-c9dc1884bc19
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

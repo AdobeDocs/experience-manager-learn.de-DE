@@ -2,15 +2,15 @@
 title: Verstehen Sie die Authentifizierungsunterstützung in AEM
 description: 'Eine konsolidierte Ansicht der von AEM unterstützten Authentifizierungsmechanismen (und gelegentlich auch der Autorisierungsmechanismen). '
 version: 6.3, 6.4, 6.5
-feature: 'Benutzer und Gruppen '
+feature: Users and Groups
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
 doc-type: article
 kt: 406
-topic: Architektur
-role: Architekt
-level: Erfahren
+topic: Architecture
+role: Architect
+level: Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

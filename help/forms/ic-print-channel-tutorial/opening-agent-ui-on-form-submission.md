@@ -4,7 +4,7 @@ seo-title: Benutzeroberfläche des Agenten beim Senden der POST öffnen
 description: Dies ist Teil 11 des mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments für den Print-Kanal. In diesem Teil starten wir die Benutzeroberfläche des Agenten-UI zum Erstellen der Ad-hoc-Korrespondenz beim Senden des Formulars.
 seo-description: Dies ist Teil 11 des mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments für den Print-Kanal. In diesem Teil starten wir die Benutzeroberfläche des Agenten-UI zum Erstellen der Ad-hoc-Korrespondenz beim Senden des Formulars.
 uuid: 96f34986-a5c3-400b-b51b-775da5d2cbd7
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,9 +12,9 @@ activity: implement
 version: 6.4,6.5
 kt: 6168
 thumbnail: 40122.jpg
-topic: Entwicklung
-role: Entwickler
-level: Zwischenschaltung
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

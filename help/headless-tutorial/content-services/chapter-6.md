@@ -1,10 +1,10 @@
 ---
 title: Kapitel 6 - Bereitstellen des Inhalts auf AEM Publish als JSON - Content Services
 description: Kapitel 6 des AEM Headless-Lernprogramms umfasst die Sicherstellung, dass alle erforderlichen Pakete, Konfigurationen und Inhalte auf AEM Publish verfügbar sind, damit der Verbrauch über die mobile App möglich ist.
-feature: Inhaltsfragmente, APIs
-topic: Kopflos, Content-Management
-role: Entwickler
-level: Anfänger
+feature: Content Fragments, APIs
+topic: Headless, Content Management
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

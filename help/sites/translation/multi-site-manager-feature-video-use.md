@@ -3,7 +3,7 @@ title: Verwenden von Multi-Site-Manager mit AEM Sites
 seo-title: Multi-Site Manager Touch-Benutzeroberfläche mit Adobe Experience Manager
 description: Übersicht über Live Copy und Blueprint Configuration Manager sind Touch UI-fähige Schnittstellen für die Arbeit mit Multi-Site-Manager.
 seo-description: Übersicht über Live Copy und Blueprint Configuration Manager sind Touch UI-fähige Schnittstellen für die Arbeit mit Multi Site Manager mit Adobe Experience Manager.
-feature: Multi-Site-Manager
+feature: Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -11,9 +11,9 @@ activity: use
 version: 6.3, 6.4, 6.5
 uuid: 76f295d0-78dd-429c-9129-9182b3a706a6
 discoiquuid: a0dc581e-300f-45ef-916a-1cbac0429899
-topic: Lokalisierung
-role: Geschäftspraktiker
-level: Anfänger
+topic: Localization
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -1,7 +1,7 @@
 ---
 title: Einrichten von Entwicklungstools für AEM als Cloud Service-Entwicklung
 description: Richten Sie eine lokale Entwicklungsmaschine mit allen grundlegenden Werkzeugen ein, die zur Entwicklung gegen AEM lokal erforderlich sind.
-feature: Entwicklertools
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 kt: 4267
 thumbnail: 25907.jpg
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

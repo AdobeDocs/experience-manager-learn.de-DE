@@ -2,12 +2,12 @@
 title: Erstellen von adaptiven Formularfragmenten
 description: Ein Fragment ist ein wiederverwendbarer Teil eines Formulars. Beispielsweise kann ein Fragment einen Adressblock oder Copyright-Informationen enthalten.
 solution: Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 kt: 7383
 thumbnail: 332231.jpg
 translation-type: tm+mt

@@ -2,12 +2,12 @@
 title: Formular mit der Übermittlungsaktion des Formulardatenmodells senden
 description: Erstellen Sie ein adaptives Formular, um die Salesforce-Integration zu testen, indem Sie ein Interessentenobjekt beim Senden des Formulars erstellen
 solution: Experience Manager, Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 kt: 7151
 thumbnail: 331758.jpg
 translation-type: tm+mt

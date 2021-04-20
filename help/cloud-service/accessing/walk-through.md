@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren des Zugriffs auf AEM
 description: Eine gekürzte, durchgängige Konfiguration der Adobe IMS-Profil, -Benutzergruppen und -Produkte in der AdminConsole und wie diese Adobe-IMS-Abstraktionen in AEM Author genutzt werden können, um spezifische gruppenbasierte Berechtigungen zu definieren und zu verwalten.
-feature: 'Benutzer und Gruppen '
+feature: Users and Groups
 topics: authentication, permissions
 version: cloud-service
 activity: setup
@@ -9,9 +9,9 @@ audience: administrator
 doc-type: technical video
 kt: 6061
 thumbnail: 39155.jpg
-topic: Administration, Sicherheit
-role: 'Administrator  '
-level: Anfänger
+topic: Administration, Security
+role: Administrator
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

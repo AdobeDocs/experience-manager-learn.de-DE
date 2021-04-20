@@ -4,9 +4,9 @@ seo-title: In diesem Artikel werden verschiedene Möglichkeiten zur Integration 
 description: In diesem Artikel wird beschrieben, wie Sie Adobe Experience Manager mit Adobe Target für verschiedene Szenarien einrichten.
 seo-description: In diesem Artikel wird beschrieben, wie Sie Adobe Experience Manager mit Adobe Target für verschiedene Szenarien einrichten.
 feature: Experience Fragments
-topic: 'Personalisierung '
-role: Entwickler
-level: Zwischenschaltung
+topic: Personalization
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

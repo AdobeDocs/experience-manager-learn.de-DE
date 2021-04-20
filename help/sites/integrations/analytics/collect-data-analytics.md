@@ -1,7 +1,7 @@
 ---
 title: Seitendaten mit Adobe Analytics erfassen
 description: Verwenden Sie die Ereignis-basierte Adobe Client Data-Ebene, um Daten zur Aktivität von Benutzern auf einer mit Adobe Experience Manager erstellten Website zu erfassen. Erfahren Sie, wie Sie in Experience Platform Launch Regeln verwenden, um auf diese Ereignis zu hören und Daten an eine Adobe Analytics Report Suite zu senden.
-feature: Analyse
+feature: analytics
 topics: integrations
 audience: administrator
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: setup
 version: cloud-service
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
-topic: Integrationen
-role: Entwickler
-level: Zwischenschaltung
+topic: Integrations
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

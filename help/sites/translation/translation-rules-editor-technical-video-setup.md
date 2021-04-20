@@ -1,15 +1,15 @@
 ---
 title: Einrichten von Übersetzungsregeln in AEM
 description: Die Benutzeroberfläche der Übersetzungskonfiguration ermöglicht es dem Benutzer, Regeln für die Übersetzung von Inhalten in AEM Sites zu verwalten. In diesem Video wird die Erstellung einer neuen Übersetzungsregel für eine benutzerdefinierte Komponente erläutert.
-feature: Sprachkopie
+feature: Language Copy
 topics: localization, content-architecture
 audience: developer, administrator
 doc-type: technical video
 activity: setup
 version: 6.4, 6.5
-topic: Lokalisierung
-role: Geschäftspraktiker
-level: Anfänger
+topic: Localization
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

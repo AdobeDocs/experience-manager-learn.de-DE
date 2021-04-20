@@ -1,7 +1,7 @@
 ---
 title: Laden und Auslösen eines Zielgruppe-Aufrufs
 description: Erfahren Sie, wie Sie mithilfe einer Startregel Zielgruppen laden, Parameter an Seitenanfragen übergeben und einen Seitenaufruf von Ihrer Site auslösen können. Seiteninformationen werden mithilfe der Adobe Client Data Layer abgerufen und als Parameter übergeben, mit denen Sie Daten über das Erlebnis der Besucher auf einer Webseite erfassen und speichern können, um so den Zugriff auf diese Daten zu erleichtern.
-feature: Hauptkomponenten, Adobe Client-Datenschicht
+feature: Core Components, Adobe Client Data Layer
 topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
@@ -9,9 +9,9 @@ activity: setup
 version: cloud-service
 kt: 6133
 thumbnail: 41243.jpg
-topic: Integrationen
-role: Entwickler
-level: Zwischenschaltung
+topic: Integrations
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

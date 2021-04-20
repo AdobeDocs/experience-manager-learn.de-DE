@@ -2,15 +2,15 @@
 title: Verstehen Sie Inhaltsfragmente und Erlebnisfragmente.
 description: Adobe Experience Managers Inhaltsfragmente und Erlebnisfragmente mögen oberflächlich ähnlich aussehen, spielen jedoch in verschiedenen Anwendungsfällen eine Schlüsselrolle. Erfahren Sie, wie Inhaltsfragmente und Erlebnisfragmente ähnlich, unterschiedlich sind und wann und wie sie verwendet werden.
 sub-product: Assets, Sites, Inhaltsdienste
-feature: Inhaltsfragmente, Erlebnisfragmente
+feature: Content Fragments, Experience Fragments
 topics: headless
 version: 6.3, 6.4, 6.5
 doc-type: article
 activity: understand
 audience: all
-topic: Content Management
-role: Geschäftspraktiker
-level: Anfänger
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

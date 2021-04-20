@@ -1,7 +1,7 @@
 ---
 title: Protokolle
 description: Protokolle fungieren als Frontline für das Debugging AEM Anwendungen in AEM als Cloud Service, sind jedoch von einer angemessenen Anmeldung in der bereitgestellten AEM abhängig.
-feature: Entwicklertools
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 kt: 5432
 thumbnail: kt-5432.jpg
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

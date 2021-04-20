@@ -2,11 +2,11 @@
 title: 'Cloud-Services-Konfiguration erstellen '
 description: Datenquelle erstellen, um mit den OAuth-Anmeldeinformationen eine Verbindung mit Salesforce herzustellen
 solution: Experience Manager, Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-topic: Entwicklung
+topic: Development
 kt: 7148
 thumbnail: 331755.jpg
 translation-type: tm+mt

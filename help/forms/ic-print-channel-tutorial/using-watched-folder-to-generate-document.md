@@ -4,7 +4,7 @@ seo-title: Generieren von Print Kanal-Dokumenten mit überwachten Ordnern
 description: Dies ist Teil 10 eines mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments für den Print-Kanal. In diesem Teil generieren wir Dokumente für den Druck von Kanälen mithilfe des Mechanismus für überwachte Ordner.
 seo-description: Dies ist Teil 10 eines mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments für den Print-Kanal. In diesem Teil generieren wir Dokumente für den Druck von Kanälen mithilfe des Mechanismus für überwachte Ordner.
 uuid: 9e39f4e3-1053-4839-9338-09961ac54f81
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,9 +12,9 @@ activity: implement
 version: 6.4,6.5
 contentOwner: gbedekar
 discoiquuid: 23fbada3-d776-4b77-b381-22d3ec716ae9
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

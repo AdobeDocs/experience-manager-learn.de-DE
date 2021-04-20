@@ -2,11 +2,11 @@
 title: Verwenden von Dynamic Media 360 Videos und benutzerdefinierten Video-Miniaturbildern mit AEM Assets
 description: Zu den Verbesserungen des Dynamic Media Viewers in AEM 6.5 gehören die zusätzliche Unterstützung von 360-Video-Rendering, 360-Medien-Viewern (video360Social und video360VR) und die Möglichkeit, benutzerdefinierte Videominiaturen auszuwählen.
 sub-product: dynamic-media
-feature: Videoprofile
+feature: Video Profiles
 version: 6.3, 6.4, 6.5
-topic: Content Management
-role: Geschäftspraktiker
-level: Anfänger
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

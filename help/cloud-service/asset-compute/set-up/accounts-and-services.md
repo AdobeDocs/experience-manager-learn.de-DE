@@ -1,7 +1,7 @@
 ---
 title: Einrichten von Konten und Diensten für die Asset compute-Erweiterbarkeit
 description: Entwickler von Asset compute-Mitarbeitern benötigen Zugriff auf Konten und Dienste, einschließlich AEM als Cloud Service, Adobe Project Firefly und Cloud-Datenspeicherung von Microsoft oder Amazon.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6264
 thumbnail: 40377.jpg
-topic: Integrationen, Entwicklung
-role: Entwickler
-level: Vermittelt, erfahren
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

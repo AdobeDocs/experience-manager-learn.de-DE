@@ -1,10 +1,10 @@
 ---
 title: Asset-Berichte in AEM Assets
 description: 'AEM Assets bietet ein Berichte-Framework auf Unternehmensebene, das für große Repositorys durch eine intuitive Benutzererfahrung skaliert wird. '
-feature: 'Asset-Berichte '
+feature: Asset Reports
 topic: Administration
-role: Geschäftspraktiker
-level: Zwischenschaltung
+role: Business Practitioner
+level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 648
 thumbnail: 22140.jpg

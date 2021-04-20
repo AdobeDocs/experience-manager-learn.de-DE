@@ -1,10 +1,10 @@
 ---
 title: Verwendung von Launches in AEM Sites
 description: Starts in AEM Sites bieten eine Möglichkeit, Inhalte für zukünftige Versionen zu erstellen, zu erstellen und zu überprüfen.
-topic: Content Management
+topic: Content Management
 feature: Launches
-level: Vermittelt, erfahren
-role: 'Administrator  '
+level: Intermediate, Experienced
+role: Administrator
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 6970
 thumbnail: 331285.jpg

@@ -3,7 +3,7 @@ title: Status des Übersetzungsauftrags
 seo-title: Status des Übersetzungsauftrags
 description: Verstehen Sie die verschiedenen Status, die mit einem Übersetzungsauftrag oder einem Artikel im Auftrag verknüpft sind.
 seo-description: Verstehen Sie die verschiedenen Status, die mit einem Übersetzungsauftrag oder einem Artikel im Auftrag verknüpft sind.
-feature: Sprachkopie, Multi-Site-Manager
+feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -11,9 +11,9 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 5846
 thumbnail: 36685.jpg
-topic: Lokalisierung
-role: Geschäftspraktiker
-level: Anfänger
+topic: Localization
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

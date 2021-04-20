@@ -2,9 +2,9 @@
 title: '"Kapitel 3 - Themen zum erweiterten Dispatcher-Zwischenspeichern"'
 description: Dies ist Teil 3 einer dreiteiligen Serie zum Zwischenspeichern in AEM. Wo die ersten beiden Teile sich auf die einfache HTTP-Zwischenspeicherung im Dispatcher und welche Einschränkungen es gibt. In diesem Teil werden einige Ideen diskutiert, wie diese Einschränkungen überwunden werden können.
 feature: Dispatcher
-topic: Architektur
-role: Architekt
-level: Zwischenschaltung
+topic: Architecture
+role: Architect
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

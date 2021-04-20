@@ -2,10 +2,10 @@
 title: Verwenden von Metadaten-Import und -Export in AEM Assets
 description: Erfahren Sie, wie Sie die Import- und Exportfunktionen von Adobe Experience Manager Assets verwenden. Mit den Import- und Exportfunktionen können Autoren von Inhalten Metadaten für vorhandene Assets stapelweise aktualisieren.
 version: 6.3, 6.4, 6.5, cloud-service
-topic: Content Management
-feature: 'Metadaten  '
+topic: Content Management
+feature: Metadata
 role: Admin
-level: Zwischenschaltung
+level: Intermediate
 kt: 647, 917
 thumbnail: 22132.jpg
 translation-type: tm+mt

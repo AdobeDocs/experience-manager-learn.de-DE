@@ -3,7 +3,7 @@ title: Erste Schritte mit AEM Sites - Projekteinrichtung
 seo-title: Erste Schritte mit AEM Sites - Projekteinrichtung
 description: Behandelt die Erstellung eines Maven Multi-Module-Projekts zur Verwaltung des Codes und der Konfigurationen für eine AEM Site.
 sub-product: Sites
-feature: AEM-Projektarchetyp
+feature: AEM Project Archetype
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -12,9 +12,9 @@ audience: developer
 mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
-topic: Content-Management, Entwicklung
-role: Entwickler
-level: Anfänger
+topic: Content Management, Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: 600d3e217b93b30cc673af85c1fd1b62ccc37eb1
 workflow-type: tm+mt

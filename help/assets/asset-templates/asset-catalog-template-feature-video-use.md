@@ -2,9 +2,9 @@
 title: Verwenden des Asset-Katalogs mit AEM Commerce und InDesign Server
 description: Die Erweiterung AEM 6.4-Katalogs bietet die Möglichkeit, Katalogseiten mit AEM Asset-Vorlagen und InDesign Server zu erstellen.  Ein Benutzer kann eine Katalogseite mit der InDesign-Vorlage erstellen und die Produkteigenschaften editierbaren Feldern zuordnen, die später verwendet werden können, um ähnliche-Seiten für verschiedene Produkte zu erstellen.
 version: 6.3, 6.4, 6.5
-topic: Content Management
-role: Geschäftspraktiker
-level: Anfänger
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

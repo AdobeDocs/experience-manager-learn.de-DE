@@ -1,15 +1,15 @@
 ---
 title: Entwickeln für Seitenunterschiede in AEM Sites
 description: In diesem Video wird gezeigt, wie Sie benutzerdefinierte Stile für die Seitendifferenz-Funktion von AEM-Sites bereitstellen.
-feature: 'Authoring – '
+feature: Authoring
 topics: development
 audience: developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

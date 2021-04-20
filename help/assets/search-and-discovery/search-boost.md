@@ -1,10 +1,10 @@
 ---
 title: Was ist Suchverstärkung in AEM Assets?
 description: Erfahren Sie, wie Sie Schlüsselwörter und -ausdrücke hinzufügen, um die Suchrelevanz eines Assets in Adobe Experience Manager zu erhöhen.
-topic: Content Management
-feature: Suchen
-role: Geschäftspraktiker
-level: Zwischenschaltung
+topic: Content Management
+feature: Search
+role: Business Practitioner
+level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 103
 thumbnail: 16766.jpg

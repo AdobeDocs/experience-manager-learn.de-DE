@@ -1,7 +1,7 @@
 ---
 title: asset compute Development Tool
 description: Das Asset compute Development Tool ist eine lokale Webanwendung, mit der Entwickler Asset Computer-Arbeiter lokal konfigurieren und ausführen können, außerhalb des Kontexts des AEM SDK gegen die Asset compute-Ressourcen in Adobe I/O Runtime.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6283
 thumbnail: 40241.jpg
-topic: Integrationen, Entwicklung
-role: Entwickler
-level: Vermittelt, erfahren
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

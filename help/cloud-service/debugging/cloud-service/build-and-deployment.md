@@ -1,7 +1,7 @@
 ---
 title: Erstellen und Bereitstellen
 description: Adobe Cloud Manager erleichtert die Codeerstellung und -bereitstellungen, die als Cloud Service AEM werden. Fehler können während der Schritte im Build-Prozess auftreten, die eine entsprechende Aktion erfordern. Dieser Leitfaden erläutert die gängigen Fehler bei der Bereitstellung und wie sie am besten anzugehen sind.
-feature: Entwicklertools
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,9 +9,9 @@ activity: develop
 audience: developer
 kt: 5434
 thumbnail: kt-5424.jpg
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

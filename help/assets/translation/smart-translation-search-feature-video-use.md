@@ -2,10 +2,10 @@
 title: Intelligente Übersetzungssuche mit AEM Assets
 description: Die intelligente Suche nach Übersetzungen ermöglicht die automatische Suche und Erkennung von Inhalten in mehreren Sprachen, sowohl über Assets als auch über Seiten hinweg. Dadurch werden mehr als 50 Sprachen unterstützt und die manuelle Übersetzung von Inhalten wird reduziert.
 version: 6.3, 6.4, 6.5
-feature: Suchen
-topic: Content Management
-role: Geschäftspraktiker
-level: Anfänger
+feature: Search
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

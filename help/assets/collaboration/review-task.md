@@ -2,13 +2,13 @@
 title: Prüfungsaufgabe
 description: Erfahren Sie, wie die Review-Aufgabe von AEM Assets die gängigste Workflows für Review und Genehmigung erleichtert.
 sub-product: Assets
-feature: Zusammenarbeit
+feature: Collaboration
 version: cloud-service
 kt: 4670
 thumbnail: 32050.jpg
-topic: Zusammenarbeit
-role: Geschäftspraktiker
-level: Anfänger
+topic: Collaboration
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

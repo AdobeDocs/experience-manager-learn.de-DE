@@ -1,7 +1,7 @@
 ---
 title: Integrieren von Asset compute-Workern mit AEM-Profilen
 description: AEM als Cloud Service integriert mit Asset compute-Mitarbeitern, die über AEM Assets Processing-Profil in Adobe I/O Runtime bereitgestellt werden. Verarbeitungsdateien werden im Autorendienst so konfiguriert, dass bestimmte Profil mit benutzerdefinierten Workern verarbeitet und die von den Workern erzeugten Dateien als Asset-Darstellungen gespeichert werden.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,9 +9,9 @@ audience: developer
 doc-type: tutorial
 kt: 6287
 thumbnail: KT-6287.jpg
-topic: Integrationen, Entwicklung
-role: Entwickler
-level: Vermittelt, erfahren
+topic: Integrations, Development
+role: Developer
+level: Intermediate, Experienced
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

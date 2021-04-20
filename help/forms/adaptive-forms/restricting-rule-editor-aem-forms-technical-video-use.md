@@ -4,7 +4,7 @@ seo-title: Beschränkung des Regeleditors auf bestimmte Gruppen in AEM Forms
 description: Eingrenzen des Regeleditors für adaptive Formulare auf bestimmte Gruppen in AEM
 seo-description: Eingrenzen des Regeleditors für adaptive Formulare auf bestimmte Gruppen in AEM
 uuid: b50f3736-b72e-4154-9ca5-95e10606f4ad
-feature: Adaptive Formulare
+feature: Adaptive Forms
 topics: authoring
 audience: developer
 doc-type: technical video
@@ -12,8 +12,8 @@ activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 5aa35204-1c6d-4a1e-b8cd-79170653471a
 topic: Administration
-role: Geschäftspraktiker
-level: Anfänger
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

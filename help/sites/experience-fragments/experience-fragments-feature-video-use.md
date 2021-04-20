@@ -3,9 +3,9 @@ title: Verwenden AEM Erlebnisfragmente
 description: Erlebnisfragmente ermöglichen es Autoren von Inhalten, Inhalte über verschiedene Kanal hinweg wiederzuverwenden, einschließlich Siteseiten und Drittanbietersystemen.
 sub-product: Sites, Content-Services
 feature: Experience Fragments
-topic: Content Management
-role: Architektur, Entwickler, Administrator, Geschäftspraktiker
-level: Anfänger
+topic: Content Management
+role: Architect, Developer, Administrator, Business Practitioner
+level: Beginner
 doc-type: feature video
 version: cloud-service
 kt: 194

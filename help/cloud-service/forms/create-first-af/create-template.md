@@ -2,12 +2,12 @@
 title: Erstellen einer adaptiven Formularvorlage
 description: Die Vorlage für das adaptive Formular definiert die Struktur und den anfänglichen Inhalt des adaptiven Formulars.
 solution: Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 kt: 7382
 thumbnail: 332223.jpg
 translation-type: tm+mt

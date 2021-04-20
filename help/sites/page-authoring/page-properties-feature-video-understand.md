@@ -3,7 +3,7 @@ title: Seiteneigenschaften in AEM Sites
 seo-title: Seiteneigenschaften in Adobe Experience Manager Sites
 description: Im folgenden Video werden die Seiteneigenschaften-Metadaten vorgestellt, die mit einer Seite in Adobe Experience Manager verknüpft sind.
 seo-description: 'Im folgenden Video werden die Seiteneigenschaften-Metadaten vorgestellt, die mit einer Seite in Adobe Experience Manager verknüpft sind. '
-feature: Seiteneditor
+feature: Page Editor
 topics: authoring, metadata
 audience: author, marketer
 doc-type: feature video
@@ -11,9 +11,9 @@ activity: understand
 version: 6.3, 6.4, 6.5
 kt: 4321
 thumbnail: 32192.jpg
-topic: Content Management
-role: Geschäftspraktiker
-level: Anfänger
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

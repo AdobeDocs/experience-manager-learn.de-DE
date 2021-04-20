@@ -2,12 +2,12 @@
 title: Erstellen Sie eine mit Salesforce verbundene App.
 description: Mit der vernetzten App können Sie Salesforce mit Drittanbieteranwendungen wie AEM Forms und Salesforce integrieren.
 solution: Experience Manager, Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 kt: 7152
 thumbnail: 331757.jpg
 translation-type: tm+mt

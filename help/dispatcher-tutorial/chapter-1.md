@@ -2,9 +2,9 @@
 title: '"Kapitel 1 - Dispatcher-Konzepte, -Muster und -Muster"'
 description: Dieses Kapitel enthält eine kurze Einführung in die Geschichte und Mechanik des Dispatchers und beschreibt, wie sich dies auf die Gestaltung seiner Komponenten durch einen AEM-Entwickler auswirkt.
 feature: Dispatcher
-topic: Architektur
-role: Architekt
-level: Anfänger
+topic: Architecture
+role: Architect
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -1,12 +1,12 @@
 ---
 title: 'Erstellen eines Interessentenobjekts in der Salesforce-Datenbank auf dem click-Ereignis einer Schaltfläche '
 description: Erstellen Sie "s Lead", indem Sie den Post-Vorgang des Formulardatenmodells aufrufen
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 kt: 7193
 thumbnail: 331892.jpg
 translation-type: tm+mt

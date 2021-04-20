@@ -3,15 +3,15 @@ title: Generieren von Print Kanal-Dokument durch Zusammenführen von Daten
 seo-title: Generieren von Print Kanal-Dokument durch Zusammenführen von Daten
 description: Erfahren Sie, wie Sie ein Dokument für den Druck von Kanal generieren, indem Sie Daten zusammenführen, die im Eingabestream enthalten sind
 seo-description: Erfahren Sie, wie Sie ein Dokument für den Druck von Kanal generieren, indem Sie Daten zusammenführen, die im Eingabestream enthalten sind
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Entwicklung
-role: Entwickler
-level: Zwischenschaltung
+topic: Development
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

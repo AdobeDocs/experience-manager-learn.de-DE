@@ -4,7 +4,7 @@ seo-title: Konfigurieren des Liniendiagramms für Ihr erstes interaktives Kommun
 description: Dies ist Teil 8 eines mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments für den Kanal. In diesem Teil fügen wir ein Liniendiagramm hinzu, um den Kontostand anzuzeigen.
 seo-description: Dies ist Teil 8 eines mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments für den Kanal. In diesem Teil fügen wir ein Liniendiagramm hinzu, um den Kontostand anzuzeigen.
 uuid: a4394874-a080-4b6a-a3eb-ffc71504919d
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,9 +13,9 @@ version: 6.4,6.5
 discoiquuid: 9110e5c6-50ee-4c3e-a779-b680ff49ef23
 kt: 5993
 thumbnail: 22386.jpg
-topic: Entwicklung
-role: Entwickler
-level: Anfänger
+topic: Development
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

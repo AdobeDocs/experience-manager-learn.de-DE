@@ -2,10 +2,10 @@
 title: Verwenden von Kaskadenmetadaten in AEM Assets
 description: Das erweiterte Metadatenmanagement ermöglicht es Benutzern, kaskadierte Feldregeln zu erstellen, um kontextbezogene Beziehungen zwischen Metadaten in AEM Assets zu erstellen. Im folgenden Video werden neue dynamische Regeln für Feldanforderungen, Sichtbarkeit und Kontextoptionen veranschaulicht. Im Video werden auch die Schritte erläutert, die ein Administrator ausführen muss, um diese Regeln auf ein benutzerdefiniertes Metadaten-Schema anzuwenden.
 version: 6.3, 6.4, 6.5, cloud-service
-topic: Content Management
-feature: 'Metadaten  '
-role: Geschäftspraktiker
-level: Zwischenschaltung
+topic: Content Management
+feature: Metadata
+role: Business Practitioner
+level: Intermediate
 kt: 616
 thumbnail: 20702.jpg
 translation-type: tm+mt

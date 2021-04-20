@@ -4,9 +4,9 @@ description: Bausteine sind eine Unterfunktion von Erlebnisfragmenten, die die W
 sub-product: Sites, Content-Services
 version: cloud-service
 feature: Experience Fragments
-topic: Content Management
-level: Anfänger, Intermediate
-role: Architektur, Entwickler, Administrator, Geschäftspraktiker
+topic: Content Management
+level: Beginner, Intermediate
+role: Architect, Developer, Administrator, Business Practitioner
 doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg

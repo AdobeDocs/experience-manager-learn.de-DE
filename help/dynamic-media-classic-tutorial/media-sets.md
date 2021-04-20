@@ -2,14 +2,14 @@
 title: Bild-, Muster-, Rotationsset- und gemischte Mediensets
 description: Eine der nützlichsten und leistungsfähigsten Funktionen von Dynamic Media Classic ist die Unterstützung für das Erstellen von Rich-Media-Sets wie Bild, Muster, Rotationsset und gemischte Mediensets. Erfahren Sie, was jedes Rich-Media-Set ist und wie Sie die einzelnen Typen in Dynamic Media Classic erstellen. Erfahren Sie mehr über Stapelsatzvorgaben, mit denen die Erstellung von Rich-Media-Sets beim Hochladen automatisiert wird.
 sub-product: dynamic-media
-feature: Dynamic Media Classic, Bildsätze, Mix-Mediensets, Rotationssets
+feature: Dynamic Media Classic, Image Sets, Mix Media Sets, Spin Sets
 doc-type: tutorial
 topics: sets, development, authoring, configuring
 audience: all
 activity: use
-topic: Content Management
-role: Geschäftspraktiker
-level: Anfänger
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

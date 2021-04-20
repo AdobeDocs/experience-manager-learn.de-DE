@@ -2,7 +2,7 @@
 title: hinzufügen Navigation und Routing | Erste Schritte mit dem AEM SPA Editor und Angular
 description: Erfahren Sie, wie mehrere Ansichten im SPA mithilfe von AEM und SPA Editor SDK unterstützt werden. Die dynamische Navigation wird mithilfe von Angular-Routen implementiert und einer vorhandenen Kopfzeilenkomponente hinzugefügt.
 sub-product: Sites
-feature: SPA
+feature: SPA Editor
 topics: development
 doc-type: tutorial
 version: cloud-service
@@ -11,8 +11,8 @@ audience: developer
 kt: 5312
 thumbnail: 5312-spa-angular.jpg
 topic: SPA
-role: Entwickler
-level: Anfänger
+role: Developer
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

@@ -2,15 +2,15 @@
 title: Authoring von Inhaltsfragmenten in AEM
 description: 'Inhaltsfragmente sind eine Inhaltsabstraktion in AEM, mit der textbasierte Inhalte unabhängig von den unterstützten Kanälen erstellt und verwaltet werden können. '
 sub-product: content-services
-feature: Inhaltsfragmente
+feature: Content Fragments
 topics: authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
 version: cloud-service
-topic: Content Management
-role: Geschäftspraktiker
-level: Anfänger
+topic: Content Management
+role: Business Practitioner
+level: Beginner
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

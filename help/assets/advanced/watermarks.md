@@ -1,13 +1,13 @@
 ---
 title: Wasserzeichen in AEM Assets
 description: AEM als Wasserzeichenfunktion eines Cloud Service können benutzerdefinierte Bilddarstellungen mit einem beliebigen PNG-Bild mit einem Wasserzeichen versehen werden.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 version: cloud-service
 kt: 6357
 thumbnail: 41536.jpg
-topic: Content Management
-role: Entwickler
-level: Zwischenschaltung
+topic: Content Management
+role: Developer
+level: Intermediate
 translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt

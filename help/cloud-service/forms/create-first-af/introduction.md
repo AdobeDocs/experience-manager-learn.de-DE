@@ -2,12 +2,12 @@
 title: Erstellen Sie Ihr erstes adaptives Formular
 description: Einführung in den Kurs zum Erstellen des ersten adaptiven Formulars
 solution: Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 kt: 7464
 thumbnail: 332571.jpg
 translation-type: tm+mt

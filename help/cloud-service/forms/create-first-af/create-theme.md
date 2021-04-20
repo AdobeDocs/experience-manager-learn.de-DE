@@ -2,12 +2,12 @@
 title: Erstellen eines Designs für ein adaptives Formular
 description: Design ist eine AEM Client-Bibliothek, die das Erscheinungsbild Ihres adaptiven Formulars definiert.
 solution: Experience Manager Forms
-type: Dokumentation
-role: Entwickler
-level: Anfänger, Intermediate
+type: Documentation
+role: Developer
+level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 kt: 7386
 thumbnail: 332229.jpg
 translation-type: tm+mt
