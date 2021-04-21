@@ -6,9 +6,9 @@ user-guide-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger un
 breadcrumb-title: AEM Forms-Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: 1e945afddda3d7735005029952a9d7ec46828bc6
+source-git-commit: da7837d45a9d5f614a4f6527b7bfe98aaf980d4f
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '952'
 ht-degree: 6%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 6%
 
 # AEM Forms-Videos und -Tutorials {#forms}
 
-+ [Überblick](overview.md)
++ [Übersicht](overview.md)
 + [Bewährte Verfahren](adaptive-forms/best-practices-adaptive-forms.md)
 + [Einrichten der OKTA-Authentifizierung mit AEM Author](adaptive-forms/single-sign-on-with-okta.md)
 + [Erstellen des ersten OSGi-Bundles](adaptive-forms/create-your-first-osgi-bundle.md)
@@ -45,6 +45,7 @@ ht-degree: 6%
 
 + Adaptive Formulare {#adaptive-forms}
    + [Installieren von AEM Forms unter Windows](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
+   + [Installieren von 32-Bit-Paketen unter Linux](adaptive-forms/installing-aem-form-on-linux.md)
    + [Vorfülldienst im adaptiven Forms](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [Benutzerdefiniertes Senden im adaptiven Forms](adaptive-forms/custom-submit-aem-forms-article.md)
    + [Captcha in Adaptives Forms](adaptive-forms/forms-captcha-feature-video-use.md)
