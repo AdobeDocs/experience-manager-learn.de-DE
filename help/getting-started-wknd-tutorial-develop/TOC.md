@@ -10,10 +10,10 @@ user-guide-description: Ein mehrteiliges Tutorial für Entwickler, die neu bei A
 breadcrumb-title: AEM Sites WKND-Tutorials
 index: y
 translation-type: tm+mt
-source-git-commit: e03d84f92be11623704602fb448273e461c70b4e
+source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
 workflow-type: tm+mt
-source-wordcount: '56'
-ht-degree: 66%
+source-wordcount: '59'
+ht-degree: 64%
 
 ---
 
@@ -21,10 +21,12 @@ ht-degree: 66%
 # Erste Schritte mit AEM Sites - WKND-Tutorial {#getting-started-wknd-tutorial-develop}
 
 + [WKND Tutorial](overview.md)
-+ [1 - Projekteinrichtung](project-setup.md)
-+ [2 - Komponenten](component-basics.md)
-+ [3 - Seiten und Vorlagen](pages-templates.md)
-+ [4 - Clientseitige Bibliotheken](client-side-libraries.md)
-+ [5 - Stilsystem](style-system.md)
-+ [6 - Benutzerspezifische Komponente](custom-component.md)
-+ [7 - Komponententests](unit-testing.md)
++ Projektarchiv {#project-archetype}
+   + [Übersicht](./project-archetype/overview.md)
+   + [1 - Projekteinrichtung](./project-archetype/project-setup.md)
+   + [2 - Komponenten](./project-archetype/component-basics.md)
+   + [3 - Seiten und Vorlagen](./project-archetype/pages-templates.md)
+   + [4 - Clientseitige Bibliotheken](./project-archetype/client-side-libraries.md)
+   + [5 - Stilsystem](./project-archetype/style-system.md)
+   + [6 - Benutzerspezifische Komponente](./project-archetype/custom-component.md)
+   + [7 - Komponententests](./project-archetype/unit-testing.md)
