@@ -2,19 +2,16 @@
 title: Erste Schritte mit AEM Sites - Projektarchiv
 description: Erste Schritte mit AEM Sites - Projektarchiv. Das WKND-Tutorial ist ein mehrteiliges Tutorial, das für Entwickler konzipiert ist, die neu in Adobe Experience Manager sind. Das Tutorial durchläuft die Implementierung einer AEM Website für eine fiktive Lifestyle-Marke, die WKND. Das Lernprogramm behandelt grundlegende Themen wie Projekteinrichtung, Maven-Archetypen, Core-Komponenten, bearbeitbare Vorlagen, Client-Bibliotheken und Komponentenentwicklung.
 sub-product: Sites
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
-mini-toc-levels: 1
-index: y
+version: 6.4, 6.5, Cloud Service
+type: Tutorial
 feature: Hauptkomponenten, Seiten-Editor, bearbeitbare Vorlagen, AEM Projektarchiv
 topic: Content-Management, Entwicklung
 role: Developer
 level: Beginner
+mini-toc-levels: 1
+index: y
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 31%
