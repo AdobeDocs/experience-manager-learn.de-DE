@@ -14,9 +14,9 @@ topic: Content-Management, Entwicklung
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: fb6c56dfc85fbcb36a68210f068fd496849c352e
+source-git-commit: e8c36a85bc47adbf76e614f245c3f47d7a50826e
 workflow-type: tm+mt
-source-wordcount: '3022'
+source-wordcount: '3016'
 ht-degree: 0%
 
 ---
@@ -213,7 +213,9 @@ Komponententests ordnen in der Regel 1-zu-1 Java-Klassen zu. In diesem Kapitel s
    Das Suffix `Test` in der Testdatei der Einheit `BylineImplTest.java` ist eine Konvention, die es uns ermöglicht,
 
    1. Identifizieren Sie sie einfach als Testdatei _für_ `BylineImpl.java`
-   2. Unterscheiden Sie aber auch die Testdatei _von_ der zu testenden Klasse, `BylineImpl.java`
+   1. Unterscheiden Sie aber auch die Testdatei _von_ der zu testenden Klasse, `BylineImpl.java`
+
+
 
 ## Überprüfen von BylineImplTest.java {#reviewing-bylineimpltest-java}
 
