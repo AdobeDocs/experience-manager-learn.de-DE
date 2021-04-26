@@ -1,7 +1,7 @@
 ---
 title: Developer Console
 description: AEM als Cloud Service bietet eine Entwicklerkonsole für jede Umgebung, die verschiedene Details des ausgeführten AEM-Dienstes anzeigt, die beim Debugging hilfreich sind.
-feature: Developer Tools
+feature: Entwickler-Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,13 +9,13 @@ activity: develop
 audience: developer
 kt: 5433
 thumbnail: kt-5433.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 048a37a9813e7b61ff069c4606b8d23cc6b6844f
 workflow-type: tm+mt
-source-wordcount: '1349'
+source-wordcount: '1351'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ Um auf die Developer Console zugreifen und diese verwenden zu können, müssen d
 1. Stellen Sie sicher, dass die Adobe Org, die Cloud Manager und AEM als Cloud Service-Produkte hat, in der Adobe Org Switcher aktiv ist.
 1. Der Entwickler muss Mitglied des Cloud Manager-Profils __Developer - Cloud Service__ sein.
    + Wenn diese Mitgliedschaft nicht vorhanden ist, kann sich der Entwickler nicht bei der Developer Console anmelden.
-1. Der Entwickler muss Mitglied des Profils __AEM Administratoren__ des AEM-Autor- und Veröffentlichungsdiensts sein.
+1. Der Entwickler muss Mitglied des __AEM Users__ oder __AEM Administrators__ Product Profil unter AEM Author und/oder Publish sein.
    + Wenn diese Mitgliedschaft nicht vorhanden ist, wird bei den Dumps [status](#status) der Timeout-Wert 401 Unauthorized error (Nicht autorisiert) ausgeführt.
 
 ### Fehlerbehebung beim Zugriff auf die Developer Console
