@@ -8,9 +8,9 @@ level: Beginner
 kt: 7629
 thumbnail: kt-7629.jpeg
 translation-type: tm+mt
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '729'
 ht-degree: 5%
 
 ---
@@ -75,8 +75,8 @@ Dieses Tutorial hat eine Abhängigkeit vom __WKND 0.3.0+&#39;s__ Projekt (für I
 
 Zur schnellen Einrichtung werden AEM Pakete bereitgestellt, die die endgültige AEM und den Inhalt des Tutorials enthalten.
 
-1. `wknd-app.all.x.x.x.zip` aus dem DemoHub-Asset-Pod herunterladen
-1. `wknd-app.ui.content.sample.x.x.x.zip` aus dem DemoHub-Asset-Pod herunterladen
+1. [Download `wknd-app.all.x.x.x.zip`](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [Herunterladen  `wknd-app.ui.content.sample.x.x.x.zip`](./assets/quick-setup/wknd-app.ui.content.sample-1.0.0.zip)
 1. Melden Sie sich bei AEM Package Manager unter [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) mit den `admin`-Anmeldeinformationen an.
 1. __Laden Sie die in Schritt 1__ heruntergeladenen Dateien  `wknd-app.all.x.x.x.zip` hoch.
 1. Tippen Sie auf die Schaltfläche __Install__ für den Eintrag `wknd-app.all.x.x.x.zip`
