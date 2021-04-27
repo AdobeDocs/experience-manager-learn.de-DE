@@ -8,9 +8,9 @@ level: Beginner
 kt: 7630
 thumbnail: kt-7630.jpg
 translation-type: tm+mt
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '694'
 ht-degree: 5%
 
 ---
@@ -67,35 +67,37 @@ Dieses Lernprogramm setzt voraus,
 
 Quick Setup bringt Sie in 15 Minuten mit dem WKND App SPA und AEM SPA Editor. Mit diesem beschleunigten Setup gelangen Sie direkt zum Endstatus des Tutorials, sodass Sie das Authoring der SPA im AEM SPA Editor erforschen können.
 
-+ [Schnelleinrichtung](./quick-setup.md)
++ [Informationen zur schnellen Einrichtung](./quick-setup.md)
 
-## AEM für SPA Editor konfigurieren
+## 1. AEM für SPA Editor konfigurieren
 
 AEM Konfigurationen sind erforderlich, um die SPA mit AEM Editor zu integrieren. Diese Konfigurationen werden über ein AEM Projekt verwaltet und bereitgestellt. In diesem Kapitel erfahren Sie, welche Konfigurationen erforderlich sind und wie sie definiert werden.
 
-+ [Konfigurieren von AEM](./aem-configure.md)
++ [Erfahren Sie, wie Sie AEM für SPA Editor konfigurieren](./aem-configure.md)
 
-## Bootstrap der SPA
+## 2. Bootstrap der SPA
 
 Damit AEM SPA Editor einen SPA in seinen Autorenkontext integrieren kann, müssen einige SPA hinzugefügt werden.
 
-+ [Bootstrap der SPA für AEM SPA Editor](./spa-bootstrap.md)
++ [Erfahren Sie, wie Sie die SPA für AEM SPA Editor bootstrapping](./spa-bootstrap.md)
 
-## Bearbeitbare feste Komponenten
+## 3. Bearbeitbare feste Komponenten
 
 Beginnen Sie zunächst damit, dem SPA eine bearbeitbare &quot;feste Komponente&quot;hinzuzufügen. Dies zeigt, wie Entwickler eine bestimmte bearbeitbare Komponente in die SPA platzieren können. Der Autor kann zwar den Inhalt der Komponente ändern, kann die Komponente jedoch weder entfernen noch ihre Platzierung, Positionierung oder Größe ändern.
 
-+ [Bearbeitbare feste Komponenten](./spa-fixed-component.md)
++ [Informationen zu bearbeitbaren festen Komponenten](./spa-fixed-component.md)
 
-## Bearbeitbare Container-Komponenten
+## 4. Bearbeitbare Container-Komponenten
 
 Anschließend können Sie eine bearbeitbare &quot;Container-Komponente&quot;zum SPA hinzufügen. Dies zeigt, wie Entwickler eine Container-Komponente in die SPA setzen können. Mit Container-Komponenten können Autoren zulässige Komponenten darin platzieren und das Layout der Komponenten anpassen.
 
-## Dynamische Routen und bearbeitbare Komponenten
++ [Weitere Informationen zu editierbaren Container-Komponenten](./spa-container-component.md)
+
+## 5. Dynamische Routen und bearbeitbare Komponenten
 
 Schließlich sollten die in den vorhergehenden Kapiteln erläuterten Konzepte auf dynamische Strecken angewandt werden; Routen, die unterschiedliche Inhalte basierend auf dem Parameter der Route anzeigen. Dies veranschaulicht, wie AEM SPA Editor verwendet werden kann, um Inhalte auf Routen zu erstellen, die programmgesteuert gesteuert und abgeleitet werden.
 
-+ [Dynamische Routen und bearbeitbare Komponenten](./spa-dynamic-routes.md)
++ [Informationen zu dynamischen Routen und bearbeitbaren Komponenten](./spa-dynamic-routes.md)
 
 ## Zusätzliche Ressourcen
 
