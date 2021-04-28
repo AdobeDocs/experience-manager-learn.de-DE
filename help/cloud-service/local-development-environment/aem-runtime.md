@@ -1,7 +1,7 @@
 ---
 title: Einrichten der lokalen AEM für AEM als Cloud Service-Entwicklung
 description: Richten Sie die Local AEM Runtime mithilfe des AEM als QuickStart-Jar des Cloud Service-SDK ein.
-feature: Developer Tools
+feature: Entwickler-Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,19 +9,26 @@ activity: develop
 audience: developer
 kt: 4678, 4677
 thumbnail: 32551.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1734'
 ht-degree: 3%
 
 ---
 
 
 # Lokale AEM einrichten
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_aemruntime"
+>title="Lokale AEM Laufzeit"
+>abstract="Adobe Experience Manager (AEM) kann lokal mit dem AEM als QuickStart-Jar des Cloud Service-SDK ausgeführt werden. Auf diese Weise können Entwickler benutzerdefinierten Code, Konfiguration und Inhalt bereitstellen und testen, bevor sie sich an die Quellcodeverwaltung wenden, und ihn als Cloud Service-Umgebung auf einem AEM bereitstellen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service-SDK"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="AEM als Cloud Service-SDK herunterladen"
 
 Adobe Experience Manager (AEM) kann lokal mit dem AEM als QuickStart-Jar des Cloud Service-SDK ausgeführt werden. Auf diese Weise können Entwickler benutzerdefinierten Code, Konfiguration und Inhalt bereitstellen und testen, bevor sie sich an die Quellcodeverwaltung wenden, und ihn als Cloud Service-Umgebung auf einem AEM bereitstellen.
 
