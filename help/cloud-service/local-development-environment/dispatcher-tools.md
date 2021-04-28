@@ -2,7 +2,7 @@
 title: Einrichten von Dispatcher-Tools für AEM als Cloud Service-Entwicklung
 description: AEM Dispatcher Tools von SDK erleichtern die lokale Entwicklung von Adobe Experience Manager (AEM)-Projekten, indem sie die Installation, Ausführung und Fehlerbehebung von Dispatcher lokal erleichtern.
 sub-product: Stiftung
-feature: Dispatcher, Developer Tools
+feature: Dispatcher, Entwicklerwerkzeuge
 topics: development, caching, security
 version: cloud-service
 doc-type: tutorial
@@ -10,19 +10,26 @@ activity: develop
 audience: developer
 kt: 4679
 thumbnail: 30603.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
 workflow-type: tm+mt
-source-wordcount: '1572'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
 
 
 # Lokale Dispatcher-Tools einrichten
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_localdev_dispatcher"
+>title="Lokale Dispatcher-Tools"
+>abstract="Dispatcher ist ein integraler Bestandteil der Gesamtarchitektur des Experience Managers und sollte Teil der lokalen Entwicklungskonzepte sein. Das AEM als Cloud Service-SDK enthält die empfohlene Dispatcher-Tools-Version, die die Konfiguration, Validierung und Simulation von Dispatcher lokal erleichtert."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/disp-overview.html" text="Dispatcher in der Cloud"
+>additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="AEM als Cloud Service-SDK herunterladen"
 
 Der Dispatcher von Adobe Experience Manager (AEM) ist ein Apache HTTP-Webservermodul, das eine Sicherheits- und Leistungsebene zwischen der CDN- und der AEM Publish-Stufe bereitstellt. Dispatcher ist ein integraler Bestandteil der Gesamtarchitektur des Experience Managers und sollte Teil der lokalen Entwicklungskonzepte sein.
 
