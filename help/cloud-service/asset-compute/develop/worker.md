@@ -1,7 +1,7 @@
 ---
 title: Entwickeln eines Asset compute-Workers
 description: asset compute-Worker sind der Kern eines Asset compute-Projekts, da sie benutzerdefinierte Funktionen bereitstellen, mit denen die an einem Asset geleistete Arbeit zur Erstellung einer neuen Darstellung ausgeführt oder orchestriert wird.
-feature: Asset Compute Microservices
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6282
 thumbnail: KT-6282.jpg
-topic: Integrations, Development
+topic: Integrationen, Entwicklung
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: 1e5d8171832ec6b26969a8485ae970e295962828
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1426'
 ht-degree: 0%
 
 ---
@@ -340,6 +340,7 @@ Nachdem der Worker-Code abgeschlossen ist und zuvor im [manifest.yml](./manifest
        ]
    }
    ```
+
 1. Tippen Sie auf __Ausführen__ und warten Sie, bis die Darstellung generiert wird.
 1. Im Abschnitt __Ausgabeformate__ wird die generierte Darstellung Vorschau. Tippen Sie auf die Vorschau Darstellung, um die vollständige Darstellung herunterzuladen
 
