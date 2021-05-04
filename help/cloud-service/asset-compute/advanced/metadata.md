@@ -1,7 +1,7 @@
 ---
 title: Entwickeln eines Asset compute-Metadatenarbeiters
 description: Hier erfahren Sie, wie Sie einen Asset compute-Metadaten-Arbeitsablauf erstellen, der die am häufigsten verwendeten Farben in einem Bild-Asset ableitet und die Farbnamen in die Metadaten des Assets in AEM schreibt.
-feature: Asset Compute Microservices
+feature: asset compute Microservices
 topics: metadata, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
-topic: Integrations, Development
+topic: Integrationen, Entwicklung
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
-source-wordcount: '1442'
+source-wordcount: '1439'
 ht-degree: 1%
 
 ---
@@ -205,6 +205,7 @@ Da unser Asset compute-Projekt zwei Arbeiter enthält (die vorherige [Kreisdarst
        ]
    }
    ```
+
 1. Tippen Sie auf __Ausführen__ und warten Sie, bis die XML-Darstellung generiert wird.
    + Da beide Profil in der Definition aufgeführt sind, werden beide Darstellungen generiert. Optional kann die oberste Profil-Definition, die auf den [Kreis-Darstellungs-Worker](../develop/worker.md) verweist, gelöscht werden, um eine Ausführung aus dem Entwicklungstool zu vermeiden.
 1. Im Abschnitt __Ausgabeformate__ wird die generierte Darstellung Vorschau. Tippen Sie auf das `rendition.xml`, um es herunterzuladen, und öffnen Sie es in VS-Code (oder Ihrem bevorzugten XML-/Texteditor), um es zu überprüfen.
@@ -301,7 +302,7 @@ Um die Farbmetadaten zu überprüfen, ordnen Sie zwei neue Felder im Metadaten-S
 
 ## Verarbeiten von Assets
 
-![Asset-Details     ](./assets/metadata/asset-details.png)
+![Asset-Details](./assets/metadata/asset-details.png)
 
 1. Navigieren Sie im AEM Author-Dienst zu __Assets > Files__
 1. Navigieren Sie zum Ordner oder Unterordner, auf den das Profil &quot;Verarbeitung&quot;angewendet wird
