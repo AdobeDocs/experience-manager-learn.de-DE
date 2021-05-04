@@ -1,7 +1,7 @@
 ---
 title: Debuggen eines Asset compute-Workers
 description: asset compute-Worker können auf verschiedene Weise debuggt werden, von einfachen Debug-Protokollanweisungen über angehängten VS-Code als Remote-Debugger bis hin zum Abruf von Protokollen für Aktivierungen in Adobe I/O Runtime, die von AEM als Cloud Service initiiert wurden.
-feature: Asset Compute Microservices
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
-topic: Integrations, Development
+topic: Integrationen, Entwicklung
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '623'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,7 @@ _Clickthrough zum Debuggen eines Asset compute-Workers mit wskdebug (Kein Audio)
    ```
    ℹ Info: Deploying package [wkndAemAssetCompute-0.0.1]...
    ```
+
 1. Beginn einer neuen Instanz des Asset compute Development Tool mit dem Befehl `npx adobe-asset-compute devtool`
 1. Tippen Sie im VS-Code auf das Debug-Symbol in der linken Navigation
    + Wenn Sie dazu aufgefordert werden, tippen Sie auf __Datei &quot;launch.json&quot;> &quot;Node.js__&quot;, um eine neue `launch.json`-Datei zu erstellen.
