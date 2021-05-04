@@ -1,7 +1,7 @@
 ---
 title: Testen eines Asset compute-Workers
 description: Das Asset compute-Projekt definiert ein Muster für die einfache Erstellung und Durchführung von Tests von Asset compute-Workern.
-feature: Asset Compute Microservices
+feature: asset compute Microservices
 topics: renditions, development
 version: cloud-service
 activity: develop
@@ -9,13 +9,13 @@ audience: developer
 doc-type: tutorial
 kt: 6284
 thumbnail: KT-6284.jpg
-topic: Integrations, Development
+topic: Integrationen, Entwicklung
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '636'
 ht-degree: 1%
 
 ---
@@ -80,7 +80,9 @@ Dieser Test-Fall bestätigt, dass die parametrisierte Eingabe (`params.json`) f�
        "brightness": "-0.50"
    }
    ```
+
    Dabei handelt es sich um die gleichen Schlüssel/Werte, die an die Asset compute-Profil-Definition des [Entwicklungstools](../develop/development-tool.md), abzüglich der `worker`-Taste übergeben werden.
+
 1. hinzufügen Sie die erwartete Datei [Darstellung](./assets/test/success-parameterized/rendition.png) in diesen Testfall und geben Sie `rendition.png` einen Namen. Diese Datei stellt die erwartete Ausgabe des Workers für die angegebene Eingabe dar.`file.jpg`
 1. Führen Sie in der Befehlszeile die Tests des Projektstamms durch, indem Sie `aio app test`
    + Stellen Sie sicher, dass [Docker Desktop](../set-up/development-environment.md#docker) und unterstützende Docker-Bilder installiert und gestartet wurden.
