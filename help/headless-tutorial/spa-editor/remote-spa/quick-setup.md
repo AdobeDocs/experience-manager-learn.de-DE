@@ -8,9 +8,9 @@ level: Beginner
 kt: 7629
 thumbnail: kt-7629.jpeg
 translation-type: tm+mt
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: d3a237b196ac872beda6119c854a0cae29510437
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '794'
 ht-degree: 5%
 
 ---
@@ -32,8 +32,11 @@ Dieses Lernprogramm erfordert Folgendes:
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
++ Nur MacOS-Voraussetzungen
+   + [Befehlszeilenwerkzeuge ](https://developer.apple.com/xcode/) Xcode oder  [Xcode](https://developer.apple.com/xcode/resources/)
 + [aem-guides-wknd.all.0.3.0.zip oder höher](https://github.com/adobe/aem-guides-wknd/releases)
 + [aem-guides-wknd-graphql-Quellcode](https://github.com/adobe/aem-guides-wknd-graphql)
+
 
 Dieses Lernprogramm setzt voraus,
 
@@ -90,7 +93,8 @@ Laden Sie den Quellcode der WKND-App von Github.com herunter und wechseln Sie in
 ```
 $ mkdir -p ~/Code/wknd-app
 $ cd ~/Code/wknd-app
-$ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
+$ git clone https://github.com/adobe/aem-guides-wknd-graphql.git
+$ cd aem-guides-wknd-graphql
 $ git checkout -b feature/spa-editor
 $ git pull origin feature/spa-editor
 ```
@@ -146,6 +150,8 @@ Bevor Sie Inhalte erstellen, ordnen Sie die Browser-Fenster so an, dass sich AEM
 1. Tippen Sie auf die Karte __Bali Surf Camp__ und navigieren Sie zu ihrer dynamischen Route
 1. hinzufügen, Ändern oder Entfernen von Komponenten aus der Container-Komponente, die sich über der Überschrift __Itinerary__ befindet
 1. Aktualisieren Sie die SPA, die auf `http://localhost:3000` ausgeführt wird, und sehen Sie, dass die Änderungen übernommen wurden.
+
+Neue AEM unter der __WKND App-Startseite > Adventure__ _muss_ einen AEM Seitennamen haben, der dem entsprechenden Inhaltsfragment-Namen des Abenteuers entspricht. Dies liegt daran, dass die SPA Route zu AEM Seitenzuordnung auf dem letzten Segment der Route basiert, dem Namen des Inhaltsfragments.
 
 ## Herzlichen Glückwunsch!
 
