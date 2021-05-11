@@ -1,21 +1,21 @@
 ---
 title: Weitere Tools zum Debugging AEM SDK
 description: Eine Reihe anderer Tools können beim Debugging des lokalen Schnellstarts des AEM SDK helfen.
-feature: Developer Tools
+feature: Entwickler-Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5251
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner, Intermediate
 translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 5fcc7eec120debf1a8ac08716154599467e66759
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 11%
+source-wordcount: '222'
+ht-degree: 13%
 
 ---
 
@@ -55,14 +55,4 @@ QueryBuilder Debugger ist ein webbasiertes Tool, mit dem Sie mithilfe der AEM [Q
 Der QueryBuilder-Debugger befindet sich unter:
 
 + [http://localhost:4502/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
-
-## Sling Log Tracer und AEM Chrome Plug-In
-
-![Sling Log Tracer und AEM Chrome Plug-In](./assets/other-tools/log-tracer.png)
-
-[Der Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html), der mit dem lokalen Schnellstart AEM SDK geliefert wird, ermöglicht eine detaillierte Verfolgung von HTTP-Anforderungen und bietet detaillierte Debugging-Informationen pro Anforderung. Die [Log Tracer OSGi-Konfiguration muss konfiguriert werden, um diese Funktion zu aktivieren.](https://sling.apache.org/documentation/bundles/log-tracers.html#configuration-1)
-
-Das Open Source [AEM Chrome-Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US) für den [Google Chrome-Webbrowser](https://www.google.com/chrome/) ist mit Log Tracer integriert und stellt die Debugging-Informationen direkt in den Entwicklungs-Tools von Chrome bereit.
-
-_Das AEM Chrome-Plug-in ist ein Open-Source-Tool und wird von Adobe nicht unterstützt._
 
