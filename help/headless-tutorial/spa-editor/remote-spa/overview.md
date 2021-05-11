@@ -8,7 +8,7 @@ level: Beginner
 kt: 7630
 thumbnail: kt-7630.jpg
 translation-type: tm+mt
-source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
+source-git-commit: ec692af56afa83330097bb9d8db0d2f2f4fde1c1
 workflow-type: tm+mt
 source-wordcount: '694'
 ht-degree: 5%
@@ -35,7 +35,7 @@ Das Lernprogramm ist für die Verwendung mit **AEM als Cloud Service** konzipier
 
 ## Neuester Code
 
-+ Der Code dieses Lernprogramms befindet sich auf [GitHub](https://github.com/adobe/aem-guides-wknd-graphq) in der Verzweigung `feature/spa-editor`.
++ Der Code dieses Lernprogramms befindet sich auf [GitHub](https://github.com/adobe/aem-guides-wknd-graphql) in der Verzweigung `feature/spa-editor`.
 
 ## Voraussetzungen
 
