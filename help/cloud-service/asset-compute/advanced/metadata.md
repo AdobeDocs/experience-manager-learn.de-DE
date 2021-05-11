@@ -13,7 +13,7 @@ topic: Integrationen, Entwicklung
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
 workflow-type: tm+mt
 source-wordcount: '1439'
 ht-degree: 1%
@@ -270,7 +270,7 @@ Rufen Sie den Arbeiter von AEM auf, indem Sie einen neuen oder einen vorhandenen
 1. Definieren des neuen Dienstes
    + __Metadaten-Darstellung__ erstellen: Zu aktiv wechseln
    + __Endpunkt:__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/metadata-colors`
-      + Dies ist die URL für den Arbeiter, die während des [deploy](#deploy) oder mithilfe des Befehls `aio app get-url` abgerufen wurde. Stellen Sie sicher, dass die URL auf der Grundlage der AEM als Cloud Service-Umgebung auf den richtigen Arbeitsbereich verweist.
+      + Dies ist die URL für den Arbeiter, die beim [deploy](#deploy) oder beim Verwenden des Befehls `aio app get-url` abgerufen wurde. Stellen Sie sicher, dass die URL auf der Grundlage der AEM als Cloud Service-Umgebung auf den richtigen Arbeitsbereich verweist.
    + __Dienstparameter__
       + Tippen Sie auf __Hinzufügen Parameter__
          + Schlüssel: `colorFamily`
