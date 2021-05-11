@@ -13,7 +13,7 @@ topic: Integrationen, Entwicklung
 role: Developer
 level: Intermediate, Experienced
 translation-type: tm+mt
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
 workflow-type: tm+mt
 source-wordcount: '623'
 ht-degree: 0%
@@ -59,6 +59,7 @@ _Clickthrough zum Debuggen eines Asset compute-Workers mit wskdebug (Kein Audio)
    ```
    ℹ Info: Deploying package [wkndAemAssetCompute-0.0.1]...
    ```
+
 
 1. Beginn einer neuen Instanz des Asset compute Development Tool mit dem Befehl `npx adobe-asset-compute devtool`
 1. Tippen Sie im VS-Code auf das Debug-Symbol in der linken Navigation
