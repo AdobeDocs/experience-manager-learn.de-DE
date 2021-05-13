@@ -2,13 +2,12 @@
 title: 'InDesign von Dateien und Asset-Vorlagen in AEM Assets '
 description: Diese Videoschulung erläutert die Definition einer InDesign-Datei und alle zugehörigen Überlegungen zur Verwendung in der Asset-Vorlagenfunktion von AEM Assets.
 version: 6.3, 6.4, 6.5
-topic: Content Management
+topic: Content Management
 role: Business Practitioner
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b4fa992abe22e3a546d651e465d6ffc9e415aee2
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '496'
 ht-degree: 1%
 
 ---
@@ -74,4 +73,4 @@ InDesign der Vorlagendatei und unterstützende Bilder
 [InDesign-Vorlagendatei und unterstützende Bilder herunterladen](assets/asset-templates-tutorial-video--supporting-files-1.zip)
 
 * [InDesign CC-Testdownload](https://creative.adobe.com/products/download/indesign)
-* [InDesign Server Testdownload](https://www.adobe.com/devnet/indesign/indesign-server-trial-downloads.html)
+* [CC-Unternehmenskunden können sich an ihren Kundenbetreuer wenden, um eine Testlizenz für InDesign Server anzufordern](https://www.adobe.com/products/indesignserver/faq.html)
