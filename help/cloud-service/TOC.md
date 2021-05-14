@@ -4,10 +4,9 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-translation-type: tm+mt
-source-git-commit: 98cfc9e007770e7a8291343bdd63fd523f747bb9
+source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '440'
 ht-degree: 30%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 30%
 
 # Tutorials zu Adobe Experience Manager as a Cloud Service {#cloud-service}
 
-+ [Übersicht](./overview.md)
++ [Überblick](./overview.md)
 + Einführung in AEM as a Cloud Service{#introduction}
    + [Was ist AEM als Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
    + [Evolution](./introduction/evolution.md)
@@ -40,10 +39,10 @@ ht-degree: 30%
       + [Pipelines konfigurieren](./cloud-manager/devops/configure-pipelines.md)
       + [Kontinuierliche Integration](./cloud-manager/devops/continuous-integration.md)
       + [Testergebnisse analysieren](./cloud-manager/devops/analyze-test-results.md)
-      + [Dispatcherkonfigurationen](./cloud-manager/devops/dispatcher-configurations.md)
+      + [Dispatcher-Konfigurationen](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager-APIs](./cloud-manager/devops/cloud-manager-apis.md)
 + Umgebung für lokale Entwicklung {#local-development-environment-set-up}
-   + [Übersicht](./local-development-environment/overview.md)
+   + [Überblick](./local-development-environment/overview.md)
    + [Entwicklungstools](./local-development-environment/development-tools.md)
    + [Lokale AEM Laufzeit](./local-development-environment/aem-runtime.md)
    + [Lokale Dispatcher-Tools](./local-development-environment/dispatcher-tools.md)
@@ -61,20 +60,20 @@ ht-degree: 30%
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + Debugging AEM{#debugging}
    + Debuggen des AEM SDK{#debugging-aem-sdk}
-      + [Übersicht](./debugging/aem-sdk-local-quickstart/overview.md)
+      + [Überblick](./debugging/aem-sdk-local-quickstart/overview.md)
       + [Protokolle](./debugging/aem-sdk-local-quickstart/logs.md)
       + [Remote-Debugging](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
       + [OSGi-Webkonsole](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher Tools](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [Andere Werkzeuge](./debugging/aem-sdk-local-quickstart/other-tools.md)
    + Debuggen von AEM als Cloud Service{#debugging-aem-as-a-cloud-service}
-      + [Übersicht](./debugging/cloud-service/overview.md)
+      + [Überblick](./debugging/cloud-service/overview.md)
       + [Protokolle](./debugging/cloud-service/logs.md)
       + [Erstellen und Bereitstellen](./debugging/cloud-service/build-and-deployment.md)
       + [Developer Console](./debugging/cloud-service/developer-console.md)
-      + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md) 
+      + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md)
 + Zugriff auf AEM{#accessing}
-   + [Übersicht](./accessing/overview.md)
+   + [Überblick](./accessing/overview.md)
    + [Adobe IMS-Benutzer](./accessing/adobe-ims-users.md)
    + [Adobe IMS-Benutzergruppen](./accessing/adobe-ims-user-groups.md)
    + [Adobe IMS-Profil](./accessing/adobe-ims-product-profiles.md)
@@ -96,6 +95,14 @@ ht-degree: 30%
       + [Bedienfeld für Assets konfigurieren](./forms/create-first-af/configure-assets-panel.md)
       + [Beginn konfigurieren](./forms/create-first-af/configure-start-panel.md)
       + [Symbolleiste Hinzufügen und konfigurieren](./forms/create-first-af/add-configure-toolbar.md)
+   + Document Cloud-API und AEM Forms CS{#doc-cloud-sdk}
+      + [Einführung](./forms/doc-cloud-sdk/introduction.md)
+      + [Adobe-IO-Projekt erstellen](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
+      + [OSGI-Konfiguration erstellen](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
+      + [Schnittstelle definieren](./forms/doc-cloud-sdk/create-interface.md)
+      + [Oberfläche implementieren](./forms/doc-cloud-sdk/implement-interface.md)
+      + [JSON-Teil erstellen](./forms/doc-cloud-sdk/get-content-analyzer.md)
+      + [Benutzerdefinierter Prozessschritt](./forms/doc-cloud-sdk/custom-process-step.md)
    + Review-Workflow{#create-aem-workflow} erstellen
       + [Workflow-Modell erstellen](./forms/create-aem-workflow/create-workflow.md)
       + [Arbeitsablauf für Trigger](./forms/create-aem-workflow/configure-af.md)
@@ -114,7 +121,7 @@ ht-degree: 30%
       + [Testformularübermittlung](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [Test-Klick-Ereignis](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + asset compute-Erweiterbarkeit{#asset-compute}
-   + [Übersicht](./asset-compute/overview.md)
+   + [Überblick](./asset-compute/overview.md)
    + Setup{#set-up}
       + [Konto- und Dienstbereitstellung](./asset-compute/set-up/accounts-and-services.md)
       + [Umgebung der lokalen Entwicklung](./asset-compute/set-up/development-environment.md)
