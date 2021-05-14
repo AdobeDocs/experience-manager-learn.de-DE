@@ -1,24 +1,27 @@
 ---
 title: Adobe Experience Manager Forms als Cloud Service mit Document Cloud integrieren
-description: Erstellen von PDFs mit der Document Cloud-API
+description: Erstellen von PDFs mit der Document Cloud REST API
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: cloud-service
 topic: Entwicklung
-thumbnail: 331891.jpg
-kt: 7192
-translation-type: tm+mt
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+thumbnail: 333241.jpg
+kt: 7857
+source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
 workflow-type: tm+mt
-source-wordcount: '36'
+source-wordcount: '40'
 ht-degree: 5%
 
 ---
 
+
+
+
 # Einführung
 
-Einführung in die Integration von Adobe Experience Manager Forms als Cloud-Dienst und Document Cloud-API.
+Einführung in das Anwendungsbeispiel für die Integration von Adobe Experience Manager Forms als Cloud Service- und Document Cloud-APIs.
 
->[!VIDEO](https://video.tv.adobe.com/v/331891/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333241/?quality=12&learn=on)
+
