@@ -7,12 +7,11 @@ role: Developer
 level: Beginner, Intermediate
 version: cloud-service
 topic: Entwicklung
-thumbnail: 331891.jpg
-kt: 7192
-translation-type: tm+mt
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+thumbnail: 7818.jpg
+kt: 7818
+source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
 workflow-type: tm+mt
-source-wordcount: '63'
+source-wordcount: '64'
 ht-degree: 3%
 
 ---
@@ -21,7 +20,11 @@ ht-degree: 3%
 
 Erstellen Sie eine benutzerdefinierte OSGi-Konfiguration, um die Anmeldeinformationen Ihres Dokument Cloud-Kontos zu erfassen.
 
+
 Um eine benutzerdefinierte OSGi-Konfiguration zu erstellen, müssen wir zunächst eine Schnittstelle erstellen, deren öffentliche Methoden die Felder in der Konfiguration darstellen.
+
+![doc-cloud-config](assets/doc-cloud-configuration.JPG)
+
 
 Erstellen Sie eine Schnittstelle mit dem Namen DocumentCloudConfiguration und fügen Sie den folgenden Code darin ein.
 
