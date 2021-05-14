@@ -10,11 +10,10 @@ topics: content-delivery
 activity: develop, understand
 kt: 2963
 index: y
-translation-type: tm+mt
-source-git-commit: b6f63110f14ede51fa2dd740aea7cbb623cbec60
+source-git-commit: e4abfe07f1b4e67f973f39186aafc33715592b2f
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 25%
+source-wordcount: '142'
+ht-degree: 23%
 
 ---
 
@@ -23,13 +22,15 @@ ht-degree: 25%
 
 + [Übersicht AEM](./overview.md)
 + GraphQL {#graphql}
-   + [Übersicht](./graphql/overview.md)
+   + [Überblick](./graphql/overview.md)
    + Videoserie{#video-series}
       + [1 - Grundlagen der Modellierung](./graphql/video-series/modeling-basics.md)
       + [2 - Erweiterte Modellierung](./graphql/video-series/advanced-modeling.md)
       + [3 - Erstellen von GraphQL-Abfragen](./graphql/video-series/creating-graphql-queries.md)
+      + [4 - Authoring- und Veröffentlichungsarchitektur](./graphql/video-series/author-publish-architecture.md)
+      + [5 - Inhaltsfragmentvarianten](./graphql/video-series/content-fragment-variations.md)
    + Mehrstufige Übung{#multi-step}
-      + [Übersicht](./graphql/multi-step/overview.md)
+      + [Überblick](./graphql/multi-step/overview.md)
       + [1 - Schnelleinrichtung](./graphql/multi-step/setup.md)
       + [2 - Definieren von Inhaltsfragmentmodellen](./graphql/multi-step/content-fragment-models.md)
       + [3 - Authoring von Inhaltsfragmenten](./graphql/multi-step/author-content-fragments.md)
@@ -39,7 +40,7 @@ ht-degree: 25%
       + [7 - Produktionsimplementierung](./graphql/multi-step/production-deployment.md)
 + SPA Editor{#spa-editor}
    + Remote SPA{#remote-spa}
-      + [Übersicht](./spa-editor/remote-spa/overview.md)
+      + [Überblick](./spa-editor/remote-spa/overview.md)
       + [Schnelleinrichtung](./spa-editor/remote-spa/quick-setup.md)
       + [1 - AEM konfigurieren](./spa-editor/remote-spa/aem-configure.md)
       + [2 - Bootstrap der SPA](./spa-editor/remote-spa/spa-bootstrap.md)
@@ -47,11 +48,11 @@ ht-degree: 25%
       + [4 - Komponenten von Containern](./spa-editor/remote-spa/spa-container-component.md)
       + [5 - Dynamische Routen](./spa-editor/remote-spa/spa-dynamic-routes.md)
 + Token-basierte Authentifizierung {#authentication}
-   + [Übersicht](./authentication/overview.md)
+   + [Überblick](./authentication/overview.md)
    + [1 - Zugriffstoken für lokale Entwicklung](./authentication/local-development-access-token.md)
    + [2 - Dienstberechtigungen](./authentication/service-credentials.md)
 + Content Services {#content-services}
-   + [Übersicht](./content-services/overview.md)
+   + [Überblick](./content-services/overview.md)
    + [1 - Lernprogramm einrichten](./content-services/chapter-1.md)
    + [2 - Definieren von Ereignis Content Fragment-Modellen](./content-services/chapter-2.md)
    + [3 - Erstellen von Inhaltsfragmenten für Ereignisse](./content-services/chapter-3.md)
