@@ -2,7 +2,7 @@
 title: SPA Editor Project | Erste Schritte mit dem AEM SPA Editor und React
 description: Erfahren Sie, wie Sie ein Adobe Experience Manager (AEM) Maven-Projekt als Ausgangspunkt für eine React-Anwendung verwenden, die mit dem AEM SPA Editor integriert ist.
 sub-product: Sites
-feature: SPA Editor, AEM Project Archetype
+feature: SPA Editor, AEM Projektarchiv
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -13,10 +13,9 @@ thumbnail: 413-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 375df47a13b1820911a7ceb73af0dad15c68740e
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1134'
 ht-degree: 3%
 
 ---
@@ -122,23 +121,23 @@ Kompilieren Sie dann den Projektcode und stellen Sie ihn mithilfe von Maven auf 
    Die verschiedenen Projektmodule sollten kompiliert und für AEM bereitgestellt werden.
 
    ```plain
-    [INFO] ------------------------------------------------------------------------
-    [INFO] Reactor Summary for wknd-spa-react 1.0.0-SNAPSHOT:
-    [INFO] 
-    [INFO] wknd-spa-react ..................................... SUCCESS [  0.523 s]
-    [INFO] WKND SPA React - Core .............................. SUCCESS [  8.069 s]
-    [INFO] wknd-spa-react.ui.frontend - UI Frontend ........... SUCCESS [01:23 min]
-    [INFO] WKND SPA React - Repository Structure Package ...... SUCCESS [  0.830 s]
-    [INFO] WKND SPA React - UI apps ........................... SUCCESS [  4.654 s]
-    [INFO] WKND SPA React - UI content ........................ SUCCESS [  1.607 s]
-    [INFO] WKND SPA React - All ............................... SUCCESS [  0.384 s]
-    [INFO] WKND SPA React - Integration Tests Bundles ......... SUCCESS [  0.770 s]
-    [INFO] WKND SPA React - Integration Tests Launcher ........ SUCCESS [  1.407 s]
-    [INFO] WKND SPA React - Dispatcher ........................ SUCCESS [  0.055 s]
-    [INFO] ------------------------------------------------------------------------
-    [INFO] BUILD SUCCESS
-    [INFO] ------------------------------------------------------------------------
-    [INFO] Total time:  01:44 min
+   [INFO] ------------------------------------------------------------------------
+   [INFO] Reactor Summary for wknd-spa-react 1.0.0-SNAPSHOT:
+   [INFO] 
+   [INFO] wknd-spa-react ..................................... SUCCESS [  0.523 s]
+   [INFO] WKND SPA React - Core .............................. SUCCESS [  8.069 s]
+   [INFO] wknd-spa-react.ui.frontend - UI Frontend ........... SUCCESS [01:23 min]
+   [INFO] WKND SPA React - Repository Structure Package ...... SUCCESS [  0.830 s]
+   [INFO] WKND SPA React - UI apps ........................... SUCCESS [  4.654 s]
+   [INFO] WKND SPA React - UI content ........................ SUCCESS [  1.607 s]
+   [INFO] WKND SPA React - All ............................... SUCCESS [  0.384 s]
+   [INFO] WKND SPA React - Integration Tests Bundles ......... SUCCESS [  0.770 s]
+   [INFO] WKND SPA React - Integration Tests Launcher ........ SUCCESS [  1.407 s]
+   [INFO] WKND SPA React - Dispatcher ........................ SUCCESS [  0.055 s]
+   [INFO] ------------------------------------------------------------------------
+   [INFO] BUILD SUCCESS
+   [INFO] ------------------------------------------------------------------------
+   [INFO] Total time:  01:44 min
    ```
 
    Das Maven-Profil ***autoInstallSinglePackage*** kompiliert die einzelnen Projektmodule und stellt ein einzelnes Paket für die AEM Instanz bereit. Standardmäßig wird dieses Paket auf einer AEM Instanz bereitgestellt, die lokal am Port **4502** ausgeführt wird, und mit den Anmeldeinformationen von **admin:admin**.
