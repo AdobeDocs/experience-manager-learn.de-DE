@@ -5,11 +5,10 @@ description: 'Eine Sammlung von Videos und Tutorials für die Adobe Experience M
 seo-description: Eine Sammlung von Videos und Tutorials für die Adobe Experience Manager Foundation
 role: Leader, Architect, Developer, Administrator, Business Practitioner
 level: Beginner
-translation-type: tm+mt
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 01053f3d8de0405cfc7058f46443647154c508c4
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 21%
+source-wordcount: '261'
+ht-degree: 22%
 
 ---
 
@@ -20,14 +19,15 @@ Adobe Experience Manager bietet einen gemeinsamen Satz von Funktionen, die Benut
 
 ## Neue Funktionen
 
-* **[Verwenden des Workflow-Managements in AEM (Video)](./workflow/use-workflow-management.md)**
-   *AEM ermöglicht die Sichtbarkeit laufender Workflows und erleichtert die Verwaltung von  [!DNL Workflow] Definitionen.*
+* **[Workflow-AEM verwenden (Video)](./workflow/use-workflow.md)**
+
+   *AEM Workflow bietet eine Möglichkeit zur Zusammenarbeit, Verwaltung und Verarbeitung von Inhalten in AEM.*
 
 * **[Erläuterung von Cloud Manager für AEM (Video)](./cloud-manager/understand-cloud-manager-for-aem.md)**\
    *Cloud Manager für AEM ermöglicht eine einfache Verwaltung, Überprüfung und Selbstbedienung von AEM Umgebung.*
 
 * **[Öffentliche und private Schlüssel zur Verwendung mit Adobe I/O einrichten (Tutorial)](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *Erfahren Sie, wie Schlüssel und Keystores mit  [!DNL openssl] der AEM und Adobe I/O generiert werden.*
+   *Erfahren Sie, wie Schlüssel und Keystores mit  [!DNL openssl] AEM und Adobe I/O generiert werden.*
 
 * **[Verwenden der CI/CD-Pipeline von Cloud Manager (Video)](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
    *Erfahren Sie, wie Sie die CI/CD-Pipeline von Cloud Manager verwenden, um eine sichere und konsistente Bereitstellung zu gewährleisten.*
