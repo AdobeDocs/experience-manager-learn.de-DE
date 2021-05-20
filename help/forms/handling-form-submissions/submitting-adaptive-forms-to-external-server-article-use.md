@@ -1,43 +1,42 @@
 ---
-title: Senden des adaptiven Formulars an den externen Server
-seo-title: Senden des adaptiven Formulars an den externen Server
+title: Übermitteln des adaptiven Formulars an einen externen Server
+seo-title: Übermitteln des adaptiven Formulars an einen externen Server
 description: Senden des adaptiven Formulars an den REST-Endpunkt, der auf einem externen Server ausgeführt wird
 seo-description: Senden des adaptiven Formulars an den REST-Endpunkt, der auf einem externen Server ausgeführt wird
 uuid: 1a46e206-6188-4096-816a-d59e9fb43263
-feature: Adaptive Forms
+feature: Adaptive Formulare
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 9e936885-4e10-4c05-b572-b8da56fcac73
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '365'
 ht-degree: 11%
 
 ---
 
 
-# Senden des adaptiven Formulars an externen Server {#submitting-adaptive-form-to-external-server}
+# Senden des adaptiven Formulars an einen externen Server {#submitting-adaptive-form-to-external-server}
 
-Verwenden Sie die Aktion An REST-Endpunkt übermitteln, um die gesendeten Daten an eine REST-URL zu senden. Die URL kann sich auf einem internen (der Server, auf dem das Formular wiedergegeben wird) oder auf einem externen Server befinden.
+Verwenden Sie die Aktion &quot;An REST-Endpunkt übermitteln&quot;, um die gesendeten Daten an eine REST-URL zu posten. Die URL kann sich auf einem internen (der Server, auf dem das Formular wiedergegeben wird) oder auf einem externen Server befinden.
 
 Normalerweise möchten Kunden die Formulardaten zur weiteren Verarbeitung an einen externen Server senden.
 
-Um Daten an einen internen Server zu senden, geben Sie einen Pfad der Ressource an. Die Daten werden an den Pfad der Ressource veröffentlicht. Beispiel: &lt;/content/restEndPoint> . Bei solchen Post-Anfragen werden die Authentifizierungsinformationen der Senden-Anforderung verwendet.
+Um Daten an einen internen Server zu posten, geben Sie einen Pfad der Ressource an. Die Daten werden an den Pfad der Ressource veröffentlicht. Beispiel: &lt;/content/restEndPoint> . Für solche Post-Anfragen werden die Authentifizierungsinformationen der Sendeanforderung verwendet.
 
-Stellen Sie die URL bereit, um Daten an einen externen Server zu veröffentlichen. Das Format der URL ist <http://host:port/path_to_rest_end_point>. Vergewissern Sie sich, dass Sie den Pfad für die anonyme Verarbeitung der POST konfiguriert haben.
+Stellen Sie die URL bereit, um Daten an einen externen Server zu veröffentlichen. Das Format der URL ist <http://host:port/path_to_rest_end_point>. Stellen Sie sicher, dass Sie den Pfad für die anonyme Verarbeitung der POST-Anfrage konfiguriert haben.
 
-Für die Zwecke dieses Artikels habe ich eine einfache Kriegsdatei geschrieben, die auf Ihrer Tomcat-Instanz bereitgestellt werden kann. Wenn Ihr tomcat auf Port 8080 ausgeführt wird, wird die POST-URL
+Für die Zwecke dieses Artikels habe ich eine einfache War-Datei geschrieben, die auf Ihrer Tomcat-Instanz bereitgestellt werden kann. Wenn Ihr Tomcat auf Port 8080 ausgeführt wird, wird die POST-URL
 
 <http://localhost:8080/AemFormsEnablement/HandleFormSubmission>
 
-Wenn Sie das adaptive Formular so konfigurieren, dass es an diesen Endpunkt gesendet wird, können die Formulardaten und die Anlagen, falls vorhanden, mit dem folgenden Code im Servlet extrahiert werden
+Wenn Sie Ihr adaptives Formular so konfigurieren, dass es an diesen Endpunkt gesendet wird, können die Formulardaten und die Anlagen, falls vorhanden, durch den folgenden Code im Servlet extrahiert werden
 
 ```java
 System.out.println("form was submitted");
@@ -55,14 +54,14 @@ String data = request.getParameter(paramName);System.out.println("The data  is "
 }
 ```
 
-![FormularübermittlungUm dies auf Ihrem Server zu testen, führen Sie ](assets/formsubmission.gif)
-folgende Schritte durch
+![](assets/formsubmission.gif)
+formsubmissionUm dies auf Ihrem Server zu testen, gehen Sie wie folgt vor
 
-1. Installieren Sie Tomcat, wenn Sie es nicht bereits haben. [Anweisungen zur Installation von Tomcat finden Sie hier](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)
-1. Laden Sie die mit diesem Artikel verknüpfte ZIP-Datei [herunter. ](assets/aemformsenablement.zip) Dekomprimieren Sie die Datei, um die Kriegsdatei abzurufen.
-1. Stellen Sie die Kriegsdatei auf Ihrem Tomcat-Server bereit.
-1. Erstellen Sie ein einfaches adaptives Formular mit der Dateianlagenkomponente und konfigurieren Sie die Sendeaktion, wie im Screenshot oben gezeigt. Die POST-URL ist <http://localhost:8080/AemFormsEnablement/HandleFormSubmission>. Wenn Ihr AEM und Ihre Tomcat nicht auf localhost ausgeführt werden, ändern Sie bitte die URL entsprechend.
+1. Installieren Sie Tomcat, falls noch nicht geschehen. [Anweisungen zur Installation von Tomcat finden Sie hier .](https://helpx.adobe.com/experience-manager/kt/forms/using/preparing-datasource-for-form-data-model-tutorial-use.html)
+1. Laden Sie die mit diesem Artikel verknüpfte [zip-Datei](assets/aemformsenablement.zip) herunter. Entpacken Sie die Datei, um die War-Datei zu erhalten.
+1. Stellen Sie die WAR-Datei auf Ihrem Tomcat-Server bereit.
+1. Erstellen Sie ein einfaches adaptives Formular mit der Dateianlagenkomponente und konfigurieren Sie die Sendeaktion wie im Screenshot oben gezeigt. Die POST-URL lautet <http://localhost:8080/AemFormsEnablement/HandleFormSubmission>. Wenn Ihre AEM und Tomcat nicht auf localhost ausgeführt werden, ändern Sie die URL entsprechend.
 1. Um die Übermittlung mehrteiliger Formulardaten zu aktivieren, fügen Sie das folgende Attribut zum Kontextelement von &lt;tomcatInstallDir>\conf\context.xml hinzu und starten Sie Ihren Tomcat-Server neu.
 1. **&lt;context allowCasualMultipartParsing=&quot;true&quot;>**
-1. Vorschau des adaptiven Formulars, Hinzufügen eines Anhangs und Senden. Überprüfen Sie, ob Meldungen im Fenster Tomcat-Konsole angezeigt werden.
+1. Zeigen Sie eine Vorschau des adaptiven Formulars an, fügen Sie einen Anhang hinzu und senden Sie ihn. Überprüfen Sie das Fenster der Tomcat-Konsole auf Meldungen.
 
