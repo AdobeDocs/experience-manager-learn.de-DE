@@ -1,45 +1,44 @@
 ---
 title: Entwickeln für Seitenunterschiede in AEM Sites
-description: In diesem Video wird gezeigt, wie Sie benutzerdefinierte Stile für die Seitendifferenz-Funktion von AEM-Sites bereitstellen.
-feature: Authoring
+description: In diesem Video wird gezeigt, wie Sie benutzerdefinierte Stile für die Seitenunterschiede-Funktion von AEM Sites bereitstellen.
+feature: 'Authoring – '
 topics: development
 audience: developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 7%
+source-wordcount: '295'
+ht-degree: 6%
 
 ---
 
 
-# Entwickeln für Seitendifferenz {#developing-for-page-difference}
+# Entwicklung für Seitenunterschiede {#developing-for-page-difference}
 
-In diesem Video wird gezeigt, wie Sie benutzerdefinierte Stile für die Seitendifferenz-Funktion von AEM-Sites bereitstellen.
+In diesem Video wird gezeigt, wie Sie benutzerdefinierte Stile für die Seitenunterschiede-Funktion von AEM Sites bereitstellen.
 
-## Anpassen von Seitenunterschieden-Stilen {#customizing-page-difference-styles}
+## Anpassen der Seitendifferenz-Stile {#customizing-page-difference-styles}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18871/?quality=9&learn=on)
 
 >[!NOTE]
 >
->In diesem Video wird der Client-Bibliothek we.Retail benutzerdefinierte CSS hinzugefügt, wobei diese Änderungen am AEM Sites-Projekt des Kunden vorgenommen werden sollten. im folgenden Beispielcode: `my-project`.
+>In diesem Video wird der Client-Bibliothek &quot;we.Retail&quot;benutzerdefiniertes CSS hinzugefügt, wobei diese Änderungen am AEM Sites-Projekt des Anpassers vorgenommen werden sollten. im folgenden Beispielcode: `my-project`.
 
 AEM Seitendifferenz ruft die OOTB-CSS über eine direkte Last von `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css` ab.
 
-Aufgrund dieser direkten Belastung mit CSS anstatt mit einer Client-Bibliotheks-Kategorie müssen wir einen weiteren Einfügepunkt für die benutzerdefinierten Stile finden. Dieser benutzerdefinierte Einfügepunkt ist der Authoring-Client des Projekts.
+Aufgrund dieser direkten Belastung von CSS anstatt einer Client-Bibliothekskategorie müssen wir einen weiteren Einfügepunkt für die benutzerdefinierten Stile finden. Dieser benutzerdefinierte Einfügepunkt ist die Authoring-Client-Bibliothek des Projekts.
 
-Dies hat den Vorteil, dass diese benutzerdefinierten Stilüberschreibungen für Pächter spezifisch sein können.
+Dies hat den Vorteil, dass diese benutzerdefinierten Stilüberschreibungen mandantenspezifisch sein können.
 
 ### Vorbereiten der Authoring-Client-Bibliothek {#prepare-the-authoring-clientlib}
 
-Stellen Sie sicher, dass `authoring` clientlib für Ihr Projekt unter `/apps/my-project/clientlib/authoring.` vorhanden ist.
+Stellen Sie sicher, dass eine `authoring` clientlib für Ihr Projekt unter `/apps/my-project/clientlib/authoring.` vorhanden ist.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -48,9 +47,9 @@ Stellen Sie sicher, dass `authoring` clientlib für Ihr Projekt unter `/apps/my-
         categories="[my-project.authoring]"/>
 ```
 
-### Geben Sie die benutzerdefinierte CSS {#provide-the-custom-css} an
+### Bereitstellen des benutzerdefinierten CSS {#provide-the-custom-css}
 
-hinzufügen auf die clientlib-Datei `authoring` des Projekts `css.txt`, die auf die less-Datei verweist, die die überschreibenden Stile bereitstellt. [](https://lesscss.org/) Lessis wird aufgrund seiner zahlreichen praktischen Funktionen bevorzugt, einschließlich der in diesem Beispiel verwendeten Klassenumhüllung.
+Fügen Sie der clientlib des Projekts `authoring` eine `css.txt` hinzu, die auf die Datei less verweist, die die übergeordneten Stile bereitstellt. [](https://lesscss.org/) Lessis wird aufgrund seiner vielen praktischen Funktionen bevorzugt, darunter auch das Klassenwrapping, das in diesem Beispiel verwendet wird.
 
 ```shell
 base=./css
@@ -58,7 +57,7 @@ base=./css
 htmldiff.less
 ```
 
-Erstellen Sie die Datei `less`, die die Stilüberschreibungen unter `/apps/my-project/clientlibs/authoring/css/htmldiff.less` enthält, und stellen Sie die gewünschten Überlaufstile bereit.
+Erstellen Sie die `less`-Datei, die die Stilüberschreibungen unter `/apps/my-project/clientlibs/authoring/css/htmldiff.less` enthält, und stellen Sie nach Bedarf die übergeordneten Stile bereit.
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -104,11 +103,11 @@ body {
 }
 ```
 
-### Include the authoring clientlib CSS via the page component {#include-the-authoring-clientlib-css-via-the-page-component}
+### Fügen Sie die clientlib-CSS für die Bearbeitung über die Seitenkomponente {#include-the-authoring-clientlib-css-via-the-page-component} ein.
 
-Schließen Sie die Authoring-clientlibs-Kategorie direkt vor dem `</head>`-Tag auf der Basisseite des Projekts ein, um sicherzustellen, dass die Stile geladen werden.`/apps/my-project/components/structure/page/customheaderlibs.html`
+Fügen Sie die Kategorie &quot;Authoring-Client-Bibliotheken&quot;direkt vor dem Tag `</head>` auf der Basisseite des Projekts ein, um sicherzustellen, dass die Stile geladen werden.`/apps/my-project/components/structure/page/customheaderlibs.html`
 
-Diese Stile sollten auf die Modi [!UICONTROL Bearbeiten] und [!UICONTROL Vorschau] WCM beschränkt sein.
+Diese Stile sollten auf die WCM-Modi [!UICONTROL Bearbeiten] und [!UICONTROL Vorschau] beschränkt sein.
 
 ```xml
 <head>
@@ -124,6 +123,6 @@ Das Endergebnis einer diff&#39;d-Seite mit den oben genannten Stilen würde wie 
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Beispielseite &quot;we.Retail&quot;herunterladen](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
+* [Beispielsite &quot;we.Retail&quot;herunterladen](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
 * [Verwenden AEM Client-Bibliotheken](https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [Weniger CSS-Dokumentation](https://lesscss.org/)
