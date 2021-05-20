@@ -1,40 +1,39 @@
 ---
 title: AEM Forms mit JSON-Schema und -Daten[Teil 2]
 seo-title: AEM Forms mit JSON-Schema und -Daten[Teil 2]
-description: Mehrteilige Übung, um Sie durch die Schritte zu führen, die beim Erstellen eines adaptiven Formulars mit JSON-Schema und beim Abfragen der gesendeten Daten erforderlich sind.
-seo-description: Mehrteilige Übung, um Sie durch die Schritte zu führen, die beim Erstellen eines adaptiven Formulars mit JSON-Schema und beim Abfragen der gesendeten Daten erforderlich sind.
-feature: Adaptive Forms
+description: Mehrteilige Anleitung, um Sie durch die Schritte zu führen, die zum Erstellen eines adaptiven Formulars mit JSON-Schema und zum Abfragen der gesendeten Daten erforderlich sind.
+seo-description: Mehrteilige Anleitung, um Sie durch die Schritte zu führen, die zum Erstellen eines adaptiven Formulars mit JSON-Schema und zum Abfragen der gesendeten Daten erforderlich sind.
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 1%
+source-wordcount: '374'
+ht-degree: 0%
 
 ---
 
 
-# Speichern gesendeter Daten in der Datenbank
+# Speichern gesendeter Daten in Datenbank
 
 
 >[!NOTE]
 >
->Es wird empfohlen, MySQL 8 als Datenbank zu verwenden, da es den JSON-Datentyp unterstützt. Außerdem müssen Sie den entsprechenden Treiber für MySQL DB installieren. Ich habe den unter diesem Speicherort verfügbaren Treiber verwendet https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.12
+>Es wird empfohlen, MySQL 8 als Ihre Datenbank zu verwenden, da es den JSON-Datentyp unterstützt. Außerdem müssen Sie den entsprechenden Treiber für MySQL DB installieren. Ich habe den Treiber verwendet, der hier verfügbar ist https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.12
 
-Um die gesendeten Daten in der Datenbank zu speichern, schreiben wir ein Servlet, um die gebundenen Daten sowie den Formulardamen und die Speicherung zu extrahieren. Der vollständige Code zur Verarbeitung der Formularübermittlung und zur Speicherung der afBoundData in der Datenbank ist unten aufgeführt.
+Um die gesendeten Daten in der Datenbank zu speichern, schreiben wir ein Servlet, um die gebundenen Daten sowie den Namen und die Speicherung des Formulars zu extrahieren. Der vollständige Code zur Verarbeitung der Formularübermittlung und zum Speichern der afBoundData in der Datenbank ist unten angegeben.
 
-Wir haben eine benutzerdefinierte Übermittlung erstellt, um die Formularübermittlung zu bearbeiten. In diesem benutzerspezifischen submit&#39;s post.POST.jsp senden wir die Anfrage an unser Servlet.
+Wir haben eine benutzerdefinierte Übermittlung erstellt, um die Formularübermittlung zu handhaben. In der Datei &quot;post.POST.jsp&quot;dieses benutzerdefinierten Sendevorgangs senden wir die Anfrage an unser Servlet weiter.
 
-Weitere Informationen zu benutzerdefinierten Übermittlungsbedingungen finden Sie in diesem [Artikel](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
+Weitere Informationen zu benutzerdefinierten Übermittlungsthemen finden Sie in diesem [Artikel](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
 
-com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,&quot;/bin/stobekräfsubmission&quot;,null,null);
+com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,&quot;/bin/storepsubmission&quot;,null,null);
 
 ```java
 package com.aemforms.json.core.servlets;
@@ -142,16 +141,16 @@ public class HandleAdaptiveFormSubmission extends SlingAllMethodsServlet {
 }
 ```
 
-![connectionPool](assets/connectionpooled.gif)
+![connectionpool](assets/connectionpooled.gif)
 
-Gehen Sie wie folgt vor, um das System funktionsfähig zu machen
+Gehen Sie wie folgt vor, um dieses System zu verwenden
 
 * [Herunterladen und Entpacken der ZIP-Datei](assets/aemformswithjson.zip)
-* Erstellen Sie adaptives Formular mit JSON-Schema. Sie können das JSON-Schema als Teil dieser Artikelelemente verwenden. Stellen Sie sicher, dass die Sendeaktion des Formulars ordnungsgemäß konfiguriert ist. Die Übermittlungsaktion muss mit &quot;CustomSubmitHelpx&quot;konfiguriert werden.
-* Erstellen Sie ein Schema in Ihrer MySQL-Instanz, indem Sie die Datei &quot;Schema.sql&quot;mit dem Tool &quot;MySQL Workbench&quot;importieren. Die Datei &quot;Schema.sql&quot;wird Ihnen auch als Teil dieser Lernelemente bereitgestellt.
-* Apache Sling Connection Pooled DataSource über die Felix-Webkonsole konfigurieren
-* Achten Sie darauf, den Namen Ihrer Datenquelle &quot;aemformswithjson&quot;zu nennen. Dies ist der Name, der vom Beispiel-OSGi-Bundle verwendet wird, das Ihnen zur Verfügung gestellt wird
-* Die Eigenschaften finden Sie im obigen Bild. Dies setzt voraus, dass Sie MySQL als Datenbank verwenden werden.
-* Stellen Sie die OSGi-Bundles bereit, die als Teil dieser Artikelelemente bereitgestellt werden.
-* Vorschau des Formulars und Senden.
-* Die JSON-Daten werden in der Datenbank gespeichert, die beim Importieren der Datei &quot;Schema.sql&quot;erstellt wurde.
+* Adaptives Formular mit JSON-Schema erstellen. Sie können das JSON-Schema verwenden, das als Teil dieses Artikel-Assets bereitgestellt wird. Stellen Sie sicher, dass die Sendeaktion des Formulars entsprechend konfiguriert ist. Die Übermittlungsaktion muss für &quot;CustomSubmitHelpx&quot;konfiguriert werden.
+* Erstellen Sie ein Schema in Ihrer MySQL-Instanz, indem Sie die Datei schema.sql mit dem Tool MySQL Workbench importieren. Die Datei schema.sql wird Ihnen auch im Rahmen dieses Tutorials zur Verfügung gestellt.
+* Konfigurieren der Apache Sling Connection Pooled DataSource über die Felix-Webkonsole
+* Vergewissern Sie sich, dass Sie Ihren Datenquellennamen &quot;aemformswithjson&quot;nennen. Dies ist der Name, der vom Beispiel-OSGi-Bundle verwendet wird, das Ihnen bereitgestellt wird
+* Eigenschaften finden Sie in der Abbildung oben. Dies setzt voraus, dass Sie MySQL als Ihre Datenbank verwenden werden.
+* Stellen Sie die OSGi-Bundles bereit, die als Teil dieser Artikel-Assets bereitgestellt werden.
+* Vorschau des Formulars und Senden
+* Die JSON-Daten werden in der Datenbank gespeichert, die beim Import der Datei &quot;schema.sql&quot;erstellt wurde.
