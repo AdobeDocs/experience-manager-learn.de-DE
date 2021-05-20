@@ -1,8 +1,8 @@
 ---
 title: Implementieren eines benutzerdefinierten Prozessschritts
 seo-title: Implementieren eines benutzerdefinierten Prozessschritts
-description: Schreiben von Anlagen für adaptive Formulare in das Dateisystem mithilfe eines benutzerdefinierten Prozessschritts
-seo-description: Schreiben von Anlagen für adaptive Formulare in das Dateisystem mithilfe eines benutzerdefinierten Prozessschritts
+description: Schreiben von adaptiven Formularanlagen in das Dateisystem mithilfe eines benutzerdefinierten Prozessschritts
+seo-description: Schreiben von adaptiven Formularanlagen in das Dateisystem mithilfe eines benutzerdefinierten Prozessschritts
 feature: Workflow
 topics: development
 audience: developer
@@ -12,7 +12,6 @@ version: 6.5
 topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
 workflow-type: tm+mt
 source-wordcount: '833'
@@ -23,35 +22,35 @@ ht-degree: 1%
 
 # Benutzerdefinierter Prozessschritt
 
-Dieses Lernprogramm richtet sich an AEM Forms-Kunden, die einen benutzerdefinierten Prozessschritt implementieren müssen. Ein Prozessschritt kann ein ECMA-Skript ausführen oder benutzerdefinierten Java-Code aufrufen, um Vorgänge auszuführen. In diesem Lernprogramm werden die Schritte erläutert, die zur Implementierung von WorkflowProcess, der durch den Prozessschritt ausgeführt wird, erforderlich sind.
+Dieses Tutorial richtet sich an AEM Forms-Kunden, die benutzerdefinierte Prozessschritte implementieren müssen. Ein Prozessschritt kann ein ECMA-Skript ausführen oder benutzerdefinierten Java-Code aufrufen, um Vorgänge auszuführen. In diesem Tutorial werden die Schritte erläutert, die zur Implementierung von WorkflowProcess erforderlich sind, der vom Prozessschritt ausgeführt wird.
 
-Der Hauptgrund für die Implementierung des benutzerdefinierten Prozessschritts ist die Erweiterung des AEM Arbeitsablaufs. Wenn Sie beispielsweise AEM Forms-Komponenten in Ihrem Workflow-Modell verwenden, sollten Sie die folgenden Vorgänge durchführen
+Der Hauptgrund für die Implementierung eines benutzerdefinierten Prozessschritts besteht darin, den AEM Workflow zu erweitern. Wenn Sie beispielsweise AEM Forms-Komponenten in Ihrem Workflow-Modell verwenden, sollten Sie die folgenden Vorgänge durchführen
 
-* Adaptive Formularanlagen im Dateisystem speichern
+* Speichern Sie die Anlagen des adaptiven Formulars im Dateisystem
 * Bearbeiten der gesendeten Daten
 
-Um den oben genannten Verwendungsfall zu erreichen, schreiben Sie normalerweise einen OSGi-Dienst, der vom Prozessschritt ausgeführt wird.
+Um den oben genannten Anwendungsfall durchzuführen, schreiben Sie normalerweise einen OSGi-Dienst, der vom Prozessschritt ausgeführt wird.
 
 ## Maven-Projekt erstellen
 
-Der erste Schritt besteht darin, ein Maven-Projekt mit der entsprechenden Adobe Maven Archetype zu erstellen. Die detaillierten Schritte sind in diesem [Artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en) aufgeführt. Nachdem Sie Ihr Maven-Projekt in Eclipse importiert haben, können Sie Ihre erste OSGi-Komponente, die in Ihrem Prozessschritt verwendet werden kann, zum Beginn schreiben.
+Der erste Schritt besteht darin, ein Maven-Projekt mit dem entsprechenden Adobe-Maven-Archetyp zu erstellen. Die detaillierten Schritte finden Sie in diesem [Artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en). Sobald Sie Ihr Maven-Projekt in Eclipse importiert haben, können Sie mit dem Schreiben Ihrer ersten OSGi-Komponente beginnen, die in Ihrem Prozessschritt verwendet werden kann.
 
 
-### Klasse erstellen, die WorkflowProcess implementiert
+### Erstellen einer Klasse, die WorkflowProcess implementiert
 
-Öffnen Sie das Maven-Projekt in Ihrer Eclipse-IDE. Erweitern Sie den Ordner **Projektname** > **core**. Erweitern Sie den Ordner src/main/java. Sie sollten ein Paket sehen, das mit &quot;core&quot;endet. Erstellen Sie eine Java-Klasse, die WorkflowProcess in diesem Paket implementiert. Sie müssen die Ausführungsmethode überschreiben. Die Signatur der execute-Methode lautet wie folgt
+Öffnen Sie das Maven-Projekt in Ihrer Eclipse IDE. Erweitern Sie den Ordner **Projektname** > **core** . Erweitern Sie den Ordner src/main/java . Sie sollten ein Paket sehen, das mit &quot;core&quot;endet. Erstellen Sie eine Java-Klasse, die WorkflowProcess in diesem Paket implementiert. Sie müssen die Ausführungsmethode überschreiben. Die Signatur der execute-Methode lautet wie folgt
 public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)throws WorkflowException
-Die execute-Methode gibt Zugriff auf die folgenden 3 Variablen
+Die execute -Methode bietet Zugriff auf die folgenden 3 Variablen
 
 **WorkItem**: Die Variable &quot;workItem&quot;gibt Zugriff auf Daten im Zusammenhang mit dem Workflow. Die öffentliche API-Dokumentation ist [hier verfügbar.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**WorkflowSession**: Diese Variable &quot;workflowSession&quot;gibt Ihnen die Möglichkeit, den Workflow zu steuern. Die öffentliche API-Dokumentation ist [hier ](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html) verfügbar
+**WorkflowSession**: Diese Variable workflowSession bietet Ihnen die Möglichkeit, den Workflow zu steuern. Die öffentliche API-Dokumentation ist [hier](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html) verfügbar.
 
-**MetaDataMap**: Alle mit dem Workflow verknüpften Metadaten. Alle Prozessargumente, die an den Prozessschritt übergeben werden, stehen mit dem MetaDataMap-Objekt zur Verfügung.[API-Dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
+**MetaDataMap**: Alle mit dem Workflow verknüpften Metadaten. Alle Prozessargumente, die an den Prozessschritt übergeben werden, sind mit dem MetaDataMap -Objekt verfügbar.[API-Dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
-In diesem Lernprogramm schreiben wir die Anlagen, die dem adaptiven Formular im Rahmen des AEM Arbeitsablaufs hinzugefügt wurden.
+In diesem Tutorial werden wir die Anlagen schreiben, die dem adaptiven Formular als Teil des AEM-Workflows zum Dateisystem hinzugefügt wurden.
 
-Um diesen Verwendungsfall zu ermöglichen, wurde die folgende Java-Klasse geschrieben
+Um diesen Anwendungsfall durchzuführen, wurde die folgende Java-Klasse geschrieben
 
 Sehen wir uns diesen Code an
 
@@ -134,37 +133,37 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 			}
 ```
 
-Zeile 1 - definiert die Eigenschaften für unsere Komponente. Die Eigenschaft process.label wird beim Verknüpfen der OSGi-Komponente mit dem Prozessschritt angezeigt, wie in einem der folgenden Screenshots dargestellt.
+Zeile 1 - definiert die Eigenschaften für unsere Komponente. Die Eigenschaft &quot;process.label&quot;wird angezeigt, wenn Sie die OSGi-Komponente mit dem Prozessschritt verknüpfen, wie in einem der folgenden Screenshots dargestellt.
 
-Zeilen 13-15 - Die an diese OSGi-Komponente übergebenen Prozessargumente werden mithilfe des Trennzeichens &quot;,&quot;aufgeteilt. Die Werte für &quot;attachmentPath&quot;und &quot;saveToLocation&quot;werden dann aus dem Zeichenfolgenarray extrahiert.
+Zeilen 13-15 - Die an diese OSGi-Komponente übergebenen Prozessargumente werden mithilfe des Trennzeichens &quot;,&quot;aufgeteilt. Die Werte für attachmentPath und saveToLocation werden dann aus dem String-Array extrahiert.
 
-* attachmentPath - Dies ist der gleiche Speicherort, den Sie im adaptiven Formular angegeben haben, wenn Sie die Übermittlungsaktion des adaptiven Formulars zum Aufrufen AEM Workflows konfiguriert haben. Dies ist ein Name des Ordners, in dem die Anlagen im AEM relativ zur Nutzlast des Workflows gespeichert werden sollen.
+* attachmentPath - Dies ist der gleiche Speicherort, den Sie beim Konfigurieren der Sendeaktion für das adaptive Formular für den Aufruf AEM Workflows im adaptiven Formular angegeben haben. Dies ist ein Name des Ordners, in dem die Anlagen AEM der Payload des Workflows gespeichert werden sollen.
 
-* saveToLocation - Dies ist der Speicherort, an dem die Anlagen im Dateisystem des AEM-Servers gespeichert werden sollen.
+* saveToLocation - Dies ist der Speicherort, an dem die Anlagen im Dateisystem Ihres AEM-Servers gespeichert werden sollen.
 
-Diese beiden Werte werden als Prozessargumente übergeben, wie im Screenshot unten dargestellt.
+Diese beiden Werte werden als Prozessargumente übergeben, wie im folgenden Screenshot gezeigt.
 
 ![ProcessStep](assets/implement-process-step.gif)
 
-Der QueryBuilder-Dienst wird zur Abfrage von Knoten des Typs nt:file unter dem Ordner attachmentsPath verwendet. Der Rest des Codes durchläuft die Suchergebnisse, um ein Dokument-Objekt zu erstellen und es im Dateisystem zu speichern
+Der QueryBuilder-Dienst wird zum Abfragen von Knoten des Typs nt:file im Ordner attachmentsPath verwendet. Der Rest des Codes durchläuft die Suchergebnisse, um das Dokumentobjekt zu erstellen und im Dateisystem zu speichern
 
 
 >[!NOTE]
 >
->Da wir ein für AEM Forms spezifisches Dokument-Objekt verwenden, müssen Sie die aemfd-client-sdk-Abhängigkeit in Ihr Maven-Projekt einbeziehen. Die Gruppen-ID lautet com.adobe.aemfd und die Artefakt-ID aemfd-client-sdk.
+>Da wir ein AEM Forms-spezifisches Dokumentobjekt verwenden, müssen Sie die aemfd-client-sdk-Abhängigkeit in Ihr Maven-Projekt einbeziehen. Die Gruppen-ID lautet com.adobe.aemfd und die Artefakt-ID aemfd-client-sdk.
 
 #### Erstellen und Bereitstellen
 
 [Erstellen Sie das Bundle wie ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en#build-your-project)
-[hier beschriebenStellen Sie sicher, dass das Bundle bereitgestellt ist und sich im aktiven Status befindet.](http://localhost:4502/system/console/bundles)
+[hier beschrieben. Stellen Sie sicher, dass das Bundle bereitgestellt ist und sich im aktiven Status befindet.](http://localhost:4502/system/console/bundles)
 
-Workflow-Modell erstellen. Ziehen Sie den Prozessschritt per Drag &amp; Drop in das Workflow-Modell. Verknüpfen Sie den Prozessschritt mit &quot;Adaptive Formularanlagen im Dateisystem speichern&quot;.
+Workflow-Modell erstellen. Ziehen Sie den Prozessschritt in das Workflow-Modell. Verknüpfen Sie den Prozessschritt mit &quot;Speichern von adaptiven Formularanlagen im Dateisystem&quot;.
 
-Geben Sie die erforderlichen Prozessargumente getrennt durch ein Komma ein. Beispiel: Anlagen, c:\\scrappp\\. Das erste Argument ist der Ordner, in dem die Anlagen des adaptiven Formulars relativ zur Workflow-Nutzlast gespeichert werden. Dieser Wert muss mit dem Wert übereinstimmen, den Sie beim Konfigurieren der Sendeaktion des adaptiven Formulars angegeben haben. Das zweite Argument ist der Speicherort, an dem die Anlagen gespeichert werden sollen.
+Geben Sie die erforderlichen Prozessargumente getrennt durch Kommas an. Beispiel: Anlagen, c:\\scrappp\\. Das erste Argument ist der Ordner, in dem Ihre adaptiven Formularanlagen relativ zur Workflow-Nutzlast gespeichert werden. Dieser Wert muss mit dem Wert übereinstimmen, den Sie beim Konfigurieren der Sendeaktion des adaptiven Formulars angegeben haben. Das zweite Argument ist der Speicherort, an dem die Anlagen gespeichert werden sollen.
 
-Erstellen Sie ein adaptives Formular. Ziehen Sie die Komponente &quot;Dateianlagen&quot;per Drag &amp; Drop in das Formular. Konfigurieren Sie die Übermittlungsaktion des Formulars, um den in den vorherigen Schritten erstellten Workflow aufzurufen. Geben Sie den entsprechenden Pfad für die Anlage an.
+Erstellen Sie ein adaptives Formular. Ziehen Sie die Komponente Dateianlagen in das Formular. Konfigurieren Sie die Sendeaktion des Formulars, um den in den vorherigen Schritten erstellten Workflow aufzurufen. Geben Sie den entsprechenden Anlagenpfad an.
 
 Speichern Sie die Einstellungen.
 
-Vorschau des Formulars. hinzufügen ein paar Anlagen und senden Sie das Formular. Die Anlagen sollten im Dateisystem an dem von Ihnen im Workflow angegebenen Speicherort gespeichert werden.
+Vorschau des Formulars Fügen Sie einige Anhänge hinzu und senden Sie das Formular. Die Anlagen sollten im Dateisystem an dem Speicherort gespeichert werden, den Sie im Workflow angegeben haben.
 
