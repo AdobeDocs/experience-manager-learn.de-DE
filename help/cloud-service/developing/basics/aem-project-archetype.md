@@ -1,24 +1,23 @@
 ---
-title: Erstellen eines AEM Projekts mit dem AEM Maven Project Archetype
-description: Erfahren Sie, wie Sie mit dem AEM Maven Project-Archetyp ein neues AEM Anwendungsprojekt erstellen, um Best Practices anzupassen und den Beginn der AEM zu beschleunigen.
+title: Erstellen eines AEM-Projekts mit dem Maven-Projektarchetyp AEM
+description: Erfahren Sie, wie Sie mit dem Archetyp AEM Maven-Projekt ein neues AEM-Anwendungsprojekt erstellen, um die Best Practices abzugleichen und den Beginn der AEM zu beschleunigen.
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Development
-feature: AEM Project Archetype
+topic: Entwicklung
+feature: AEM-Projektarchetyp
 kt: 6929
 thumbnail: 330551.jpg
-translation-type: tm+mt
 source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 0%
+source-wordcount: '78'
+ht-degree: 5%
 
 ---
 
 
-# Erstellen AEM Projekts mithilfe des AEM Projektarchivs
+# Erstellen AEM Projekts mit dem Projektarchetyp AEM
 
-Erfahren Sie, wie Sie mit dem AEM Maven Project-Archetyp ein neues AEM Anwendungsprojekt erstellen, um Best Practices anzupassen und den Beginn der AEM zu beschleunigen.
+Erfahren Sie, wie Sie mit dem Archetyp AEM Maven-Projekt ein neues AEM-Anwendungsprojekt erstellen, um die Best Practices abzugleichen und den Beginn der AEM zu beschleunigen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330551/?quality=12&learn=on)
