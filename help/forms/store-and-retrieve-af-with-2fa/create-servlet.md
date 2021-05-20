@@ -1,7 +1,7 @@
 ---
 title: Servlet erstellen
-description: Erstellen Sie das Servlet, um die POST-Anfragen zum Speichern der Formulardaten zu bearbeiten
-feature: Adaptive Forms
+description: Erstellen eines Servlets zur Verarbeitung der POST-Anforderungen zum Speichern der Formulardaten
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,20 +9,19 @@ activity: implement
 version: 6.4,6.5
 kt: 6539
 thumbnail: 6539.pg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 4%
+source-wordcount: '86'
+ht-degree: 3%
 
 ---
 
 # Servlet erstellen
 
-Als Nächstes erstellen Sie ein Servlet, das die entsprechenden Methoden unseres benutzerdefinierten OSGi-Dienstes aufruft. Das Servlet hat Zugriff auf die Daten des adaptiven Formulars, Dateianlagen-Informationen. Das Servlet gibt eine eindeutige Anwendungs-ID zurück, mit der das teilweise ausgefüllte adaptive Formular abgerufen werden kann.
+Der nächste Schritt besteht darin, ein Servlet zu erstellen, das die entsprechenden Methoden unseres benutzerdefinierten OSGi-Dienstes aufruft. Das Servlet hat Zugriff auf die Daten des adaptiven Formulars, Dateianlagen-Informationen. Das Servlet gibt eine eindeutige Anwendungs-ID zurück, die zum Abrufen des teilweise ausgefüllten adaptiven Formulars verwendet werden kann.
 
 Dieses Servlet wird aufgerufen, wenn der Benutzer im adaptiven Formular auf die Schaltfläche Speichern und Beenden klickt
 
