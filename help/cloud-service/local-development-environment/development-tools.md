@@ -12,10 +12,10 @@ thumbnail: 25907.jpg
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
+source-git-commit: 6b4b9d7039b7b1c60ed1a7e5ec4ed42250499cec
 workflow-type: tm+mt
-source-wordcount: '1426'
-ht-degree: 3%
+source-wordcount: '1430'
+ht-degree: 4%
 
 ---
 
@@ -145,22 +145,20 @@ Mit dem Adobe I/O Cloud Manager-Plug-in kann die aio-CLI Asset compute-Sekundär
 
 ### Einrichten der Adobe I/O CLI-Authentifizierung
 
-Damit die Adobe I/O-CLI mit Cloud Manager kommunizieren kann, muss eine Cloud Manager-Integration in der Adobe I/O Console erstellt werden und die Anmeldeinformationen müssen für die erfolgreiche Authentifizierung erhalten werden.
-
->[!VIDEO](https://video.tv.adobe.com/v/35094?quality=12&learn=on)
+Damit die Adobe I/O-CLI mit Cloud Manager kommunizieren kann, muss eine [Cloud Manager-Integration in der Adobe I/O Console](https://github.com/adobe/aio-cli-plugin-cloudmanager) erstellt werden und die Anmeldeinformationen müssen für die erfolgreiche Authentifizierung erhalten werden.
 
 1. Melden Sie sich bei [console.adobe.io](https://console.adobe.io) an.
 1. Stellen Sie sicher, dass Ihr Unternehmen, das das Cloud Manager-Produkt enthält, mit dem eine Verbindung hergestellt werden soll, im Adobe Org-Umschalter aktiv ist.
 1. Erstellen Sie ein neues oder öffnen Sie ein vorhandenes [Adobe I/O-Programm](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)
    + Adobe I/O Console-Programme sind einfach organisatorische Zusammenstellungen von Integrationen, erstellen oder verwenden Sie ein vorhandenes Programm, je nachdem, wie Sie Ihre Integrationen verwalten möchten.
-   + Wenn Sie ein neues Projekt erstellen, wählen Sie bei entsprechender Aufforderung &quot;Leeres Projekt&quot;aus (vs. Aus Vorlage erstellen)
+   + Wenn Sie ein neues Projekt erstellen, wählen Sie bei entsprechender Aufforderung (vs. &quot;Aus Vorlage erstellen&quot;)
    + Adobe I/O Console-Programme unterscheiden sich von Cloud Manager-Programmen
 1. Erstellen Sie eine neue Cloud Manager-API-Integration mit dem Profil &quot;Entwickler - Cloud Service&quot;.
 1. Rufen Sie die Anmeldedaten für das Dienstkonto (JWT) ab, um die [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication) der Adobe I/O CLI zu füllen.
 1. Laden Sie die Datei `config.json` in die Adobe I/O-CLI.
-   + `$ aio config:set jwt-auth PATH_TO_CONFIG_JSON_FILE --file --json`
+   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager PATH_TO_CONFIG_JSON_FILE --file --json`
 1. Laden Sie die Datei `private.key` in die Adobe I/O-CLI.
-   + `$ aio config:set jwt-auth.jwt_private_key PATH_TO_PRIVATE_KEY_FILE --file`
+   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key PATH_TO_PRIVATE_KEY_FILE --file`
 
 Starten Sie [Ausführen von Befehlen](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) für Cloud Manager über die Adobe I/O-CLI.
 
