@@ -1,47 +1,46 @@
 ---
-title: Entwickeln für Cross-Herkunft Resource Sharing (CORS) mit AEM
-description: Ein kurzes Beispiel für die Nutzung von CORS für den Zugriff auf AEM Inhalte einer externen Webanwendung über clientseitiges JavaScript.
+title: Entwickeln für Cross-Origin Resource Sharing (CORS) mit AEM
+description: Ein kurzes Beispiel für die Nutzung von CORS für den Zugriff auf AEM Inhalt von einer externen Webanwendung über clientseitiges JavaScript.
 version: 6.3, 6,4, 6.5
-sub-product: Stiftung, Inhaltsdienste, Sites
+sub-product: foundation, content-services, sites
 topics: security, development, content-delivery
 activity: develop
 audience: developer
 doc-type: tutorial
-topic: Security
+topic: Sicherheit
 role: Developer
 level: Beginner
-feature:  
-translation-type: tm+mt
+feature: null
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
 
 
-# Entwickeln für Cross-Herkunft Resource Sharing (CORS)
+# Für Cross-Origin Resource Sharing (CORS) entwickeln
 
-Ein kurzes Beispiel für die Nutzung von [!DNL CORS] für den Zugriff auf AEM Inhalte einer externen Webanwendung über clientseitiges JavaScript.
+Ein kurzes Beispiel für die Nutzung von [!DNL CORS] für den Zugriff auf AEM Inhalt von einer externen Web-Anwendung über clientseitiges JavaScript.
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837/?quality=12&learn=on)
 
 In diesem Video:
 
-* **www.example.** commaps to localhost über  `/etc/hosts`
-* **aem-publish.** localmaps für localhost über  `/etc/hosts`
-* [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)  (ein Wrapper für  [[!DNL Python]den SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)) liefert die HTML-Seite über Port 8000.
-* [!DNL AEM Dispatcher] läuft auf  [!DNL Apache HTTP Web Server] 2.4 und umgekehrte Proxying-Anfrage  `aem-publish.local` zu  `localhost:4503`.
+* **www.example.** commaps auf localhost via  `/etc/hosts`
+* **aem-publish.** localmaps to localhost via  `/etc/hosts`
+* [SimpleHTTPServer](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)  (ein Wrapper für  [[!DNL Python]den SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)) versorgt die HTML-Seite über Port 8000.
+* [!DNL AEM Dispatcher] wird in Version  [!DNL Apache HTTP Web Server] 2.4 ausgeführt und die Anfrage zur umgekehrten Proxy  `aem-publish.local` an  `localhost:4503`.
 
-Weitere Informationen finden Sie unter [Informationen zum Cross-Herkunft Resource Sharing (CORS) in AEM](./understand-cross-origin-resource-sharing.md).
+Weitere Informationen finden Sie unter [Informationen zur Cross-Origin Resource Sharing (CORS) in AEM](./understand-cross-origin-resource-sharing.md).
 
-## www.example.com von HTML und JavaScript
+## www.example.com HTML und JavaScript
 
-Diese Webseite hat eine Logik, die
+Diese Webseite weist eine Logik auf, dass
 
-1. Klicken auf die Schaltfläche
-1. Fordert [!DNL AJAX GET] an `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json` an
-1. Ruft das `jcr:title` aus der JSON-Antwort ab
+1. Nach Klicken auf die Schaltfläche
+1. Stellt eine [!DNL AJAX GET] -Anfrage an `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
+1. Ruft die `jcr:title` aus der JSON-Antwort ab
 1. injiziert das `jcr:title` in das DOM
 
 ```xml
@@ -75,7 +74,7 @@ Diese Webseite hat eine Logik, die
 </html>
 ```
 
-## OSGi-Factory-Konfiguration
+## OSGi-Werkskonfiguration
 
 Die OSGi-Konfigurationsfactory für [!DNL Cross-Origin Resource Sharing] ist verfügbar über:
 
@@ -99,7 +98,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## Dispatcher-Konfiguration {#dispatcher-configuration}
 
-Um die Zwischenspeicherung und Bereitstellung von CORS-Headern für zwischengespeicherten Inhalt zuzulassen, fügen Sie allen unterstützenden AEM Publish `dispatcher.any`-Dateien die folgende [/clientheaders-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) hinzu.
+Um das Zwischenspeichern und Bereitstellen von CORS-Headern für zwischengespeicherten Inhalt zu ermöglichen, fügen Sie allen unterstützenden AEM Publish-Dateien `dispatcher.any` die folgende [/clientheaders-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) hinzu.
 
 ```
 /cache { 
@@ -118,15 +117,15 @@ Um die Zwischenspeicherung und Bereitstellung von CORS-Headern für zwischengesp
 
 **Starten Sie die Webserver-** Anwendung neu, nachdem Sie Änderungen an der  `dispatcher.any` Datei vorgenommen haben.
 
-Es ist wahrscheinlich erforderlich, den Cache vollständig zu leeren, um sicherzustellen, dass Header bei der nächsten Anforderung nach einem `/clientheaders`-Konfigurationsupdate ordnungsgemäß zwischengespeichert werden.
+Es ist wahrscheinlich, dass der Cache vollständig gelöscht werden muss, um sicherzustellen, dass Kopfzeilen bei der nächsten Anfrage nach einer `/clientheaders`-Konfigurationsaktualisierung ordnungsgemäß zwischengespeichert werden.
 
 ## Unterstützende Materialien {#supporting-materials}
 
-* [AEM OSGi-Konfigurationsfactory für Richtlinien zum Cross-Herkunft Resource Sharing](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
+* [AEM OSGi-Konfigurationsfactory für Cross-Origin Resource Sharing-Richtlinien](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
 * [SimpleHTTPServer für macOS](https://itunes.apple.com/us/app/simple-http-server/id441002840?mt=12)
-* [Python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) (kompatibel mit Windows/macOS/Linux)
+* [Python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)  (Windows/macOS/Linux-kompatibel)
 
-* [Grundlegendes zum Cross-Herkunft Resource Sharing (CORS) in AEM](./understand-cross-origin-resource-sharing.md)
-* [Cross-Herkunft Resource Sharing (W3C)](https://www.w3.org/TR/cors/)
-* [HTTP-Zugriffskontrolle (Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+* [Verstehen der Cross-Origin Resource Sharing (CORS) in AEM](./understand-cross-origin-resource-sharing.md)
+* [Cross-Origin Resource Sharing (W3C)](https://www.w3.org/TR/cors/)
+* [HTTP-Zugriffssteuerung (Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
 
