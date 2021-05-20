@@ -4,7 +4,6 @@ user-guide-description: Eine Sammlung von Videos und Tutorials zu Adobe Experien
 breadcrumb-title: AEM Assets-Tutorials
 sub-product: Assets
 team: TM
-translation-type: tm+mt
 source-git-commit: 0d012d61b7740e461e641dddd6c5255a022305ea
 workflow-type: tm+mt
 source-wordcount: '262'
@@ -23,20 +22,20 @@ ht-degree: 37%
    + [Tagging](configuring/tagging.md)
    + [Metadatenschemata](configuring/metadata-schemas.md)
    + [Metadatenprofile](configuring/metadata-profiles.md)
-   + [Schema des Metadatenordners](configuring/metadata-folder-schemas.md)
-   + [Assets, Admin-Suchleiste](configuring/assets-admin-search-rail.md)
+   + [Metadatenordnerschemata](configuring/metadata-folder-schemas.md)
+   + [Asset-Admin-Suchleiste](configuring/assets-admin-search-rail.md)
    + [Verarbeitungsprofile](configuring/processing-profiles.md)
-   + [Workflows](configuring/auto-start-workflows.md)
+   + [Automatisch startende Workflows](configuring/auto-start-workflows.md)
 
 + Authoring{#authoring}
    + [Navigation](./authoring/navigation.md)
    + [Grundlegende Vorgänge](./authoring/basic-operations.md)
-   + [Metadaten](./authoring/metadata.md)
+   + [Metadaten  ](./authoring/metadata.md)
    + [Ausgabeformate](./authoring/renditions.md)
-   + [Beziehungen und Beziehung aufheben](./authoring/relate-unrelate.md)
+   + [Relation und Relation aufheben](./authoring/relate-unrelate.md)
 
 + Zusammenarbeit{#collaboration}
-   + [Zeitschiene und Posteingang](./collaboration/timeline-and-inbox.md)
+   + [Zeitleiste und Posteingang](./collaboration/timeline-and-inbox.md)
    + [Kommentare und Anmerkungen](./collaboration/comments-and-annotations.md)
    + [Ein- und Auschecken](./collaboration/check-in-and-check-out.md)
    + [Versionen](./collaboration/versions.md)
@@ -57,17 +56,17 @@ ht-degree: 37%
 + Erweiterte Metadatenverwaltung{#metadata}
    + [Kaskadierende Metadaten](metadata/cascade-metadata-feature-video-use.md)
    + [Smart-Tags für Bilder](metadata/image-smart-tags.md)
-   + [Benutzerdefinierte intelligente Tags für Bilder](metadata/custom-smart-tags.md)
+   + [Benutzerdefinierte Smart-Tags für Bilder](metadata/custom-smart-tags.md)
    + [Smart-Tags für Videos](metadata/video-smart-tags.md)
    + [Importieren und Exportieren von Metadaten](metadata/metadata-import-export.md)
 
 + Freigabe und Verteilung{#sharing}
-   + [Assets herunterladen](./sharing/download.md)
+   + [Herunterladen von Assets](./sharing/download.md)
    + [Assets veröffentlichen](./sharing/publish.md)
    + [Brand Portal](./sharing/brand-portal.md)
    + Asset-Freigabe{#assets-share}
       + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
-      + [Asset-Freigabe-Commons auf lokalen AEM einrichten](./sharing/asset-share-commons-technical-video-setup.md)
+      + [Einrichten von Asset Share Commons auf lokalen AEM](./sharing/asset-share-commons-technical-video-setup.md)
       + [Designing Asset Share Commons](./sharing/asset-share-commons-feature-video-theming.md)
    + [Connected Assets](./sharing/connected-assets.md)
 
@@ -77,46 +76,46 @@ ht-degree: 37%
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
 
 + Adobe Asset Link{#adobe-asset-link}
-   + [Asset-Link auf Adobe](./adobe-asset-link/launch-adobe-asset-link.md)
-   + [Bereichsübersicht](./adobe-asset-link/panel-overview.md)
+   + [Zugriff auf Adobe Asset Link](./adobe-asset-link/launch-adobe-asset-link.md)
+   + [Bedienfeldübersicht](./adobe-asset-link/panel-overview.md)
    + [Dateien und Sammlungen](./adobe-asset-link/files-and-collections.md)
    + [Herunterladen und Hochladen](./adobe-asset-link/download-and-upload.md)
    + [Checkin-Checkout](./adobe-asset-link/check-in-check-out.md)
    + [Versionierung und Kommentare](./adobe-asset-link/file-versioning-and-comments.md)
-   + [Kopieren platzieren](./adobe-asset-link/place-copy.md)
-   + [Verknüpfte Platzierung](./adobe-asset-link/place-linked.md)
-   + [Nur für Praktika (FPO)](./adobe-asset-link/for-placement-only.md)
+   + [Platzieren von Kopien](./adobe-asset-link/place-copy.md)
+   + [Platzieren von Links](./adobe-asset-link/place-linked.md)
+   + [Nur für Platzierungen (FPO)](./adobe-asset-link/for-placement-only.md)
    + [Asset-Suche](./adobe-asset-link/asset-search.md)
 
 + Dynamic Media{#dynamic-media}
-   + [Dynamic Media-Übersicht](dynamic-media/dynamic-media-overview-feature-video-use.md)
+   + [Übersicht über Dynamic Media](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Smartes Zuschneiden](dynamic-media/smart-crop-feature-video-use.md)
    + [Experience Fragments](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
    + [Interaktives Video](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
    + [Videoplayer](dynamic-media/dynamic-media-video-player-feature-video-use.md)
    + [360-Grad-Video](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
    + [Benutzerdefinierte Videominiaturen](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
-   + [Bildschärfe](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
+   + [Scharfzeichnen von Bildern](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
    + [Farbmanagement](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
    + [Viewer](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
    + [Panorama- und Vertikalbild-Viewer](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
    + [Viewer mit Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
-   + [Dynamic Media Classic Desktop-Anwendung](dynamic-media/dynamic-media-classic-desktop-application.md)
+   + [Dynamic Media Classic Desktop Application](dynamic-media/dynamic-media-classic-desktop-application.md)
    + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
    + [Dynamic Media Smart Crop-Video](dynamic-media/dynamic-media-smart-crop-video.md)
-   + [Dynamic Media Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
+   + [Dynamic Media-Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
 
 + Übersetzung {#translation}
    + [Quelldateiübersetzung](translation/source-file-translation-feature-video-use.md)
-   + [Suche nach intelligenter Übersetzung](translation/smart-translation-search-feature-video-use.md)
+   + [Smart Translation - Suche](translation/smart-translation-search-feature-video-use.md)
    + [Einrichten der Suche nach intelligenter Übersetzung](translation/smart-translation-search-technical-video-setup.md)
 
 + Asset-Vorlagen{#asset-templates}
    + [Grundlagen zu Asset-Vorlagen](asset-templates/asset-templates-tutorial-understand.md)
    + [Verwenden von Asset-Vorlagen](asset-templates/asset-templates-feature-video-use.md)
-   + [Asset-Vorlagen einrichten](asset-templates/asset-templates-technical-video-setup.md)
+   + [Einrichten von Asset-Vorlagen](asset-templates/asset-templates-technical-video-setup.md)
    + [Verwenden von Asset-Katalogen](asset-templates/asset-catalog-template-feature-video-use.md)
 
 + Bereitstellung{#deployment}
-   + [Multi-Mandate und gleichzeitige Entwicklung](deployment/multitenancy-concurrent-article-understand.md)
+   + [Multi-Tenancy und gleichzeitige Entwicklung](deployment/multitenancy-concurrent-article-understand.md)
 
