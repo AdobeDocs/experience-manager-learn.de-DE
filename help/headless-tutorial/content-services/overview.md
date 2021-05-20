@@ -1,37 +1,36 @@
 ---
-title: Erste Schritte mit AEM ohne Kopfdaten - Content Services
+title: Erste Schritte mit AEM Headless - Content Services
 description: Ein Tutorial, in dem von Anfang bis Ende erläutert wird, wie Inhalte mithilfe von AEM Headless aufgebaut und bereitgestellt werden können.
-feature: Content Fragments, APIs
+feature: Inhaltsfragmente, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 6%
+source-wordcount: '221'
+ht-degree: 5%
 
 ---
 
 
-# Erste Schritte mit AEM ohne Kopfdaten - Content Services
+# Erste Schritte mit AEM Headless - Content Services
 
-Ein durchgehendes Tutorial, in dem erläutert wird, wie Inhalte mithilfe von AEM erstellt und bereitgestellt werden können, die von einer nativen mobilen App genutzt werden, in einem kopflosen CMS-Szenario.
+Ein durchgängiges Tutorial, in dem erläutert wird, wie Inhalte mithilfe von AEM erstellt und bereitgestellt werden, die von einer nativen mobilen App in einem Headless-CMS-Szenario genutzt werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28315/?quality=12&learn=on)
 
-In diesem Lernprogramm wird untersucht, wie AEM Content Services genutzt werden kann, um die Leistung einer mobilen App zu steigern, die Informationen zum Ereignis (Musik, Performance, Kunst usw.) anzeigt. die vom WKND-Team kuratiert wird.
+In diesem Tutorial wird untersucht, wie AEM Content Services genutzt werden kann, um das Erlebnis einer Mobile App zu optimieren, die Ereignisinformationen (Musik, Leistung, Kunst usw.) anzeigt. wird vom WKND-Team kuratiert.
 
-Dieses Lernprogramm behandelt die folgenden Themen:
+In diesem Tutorial werden die folgenden Themen behandelt:
 
 * Erstellen von Inhalten, die ein Ereignis mit Inhaltsfragmenten darstellen
-* Definieren Sie AEM Content Services-Endpunkte mithilfe der AEM-Sites und -Seiten, die die Ereignis-Daten als JSON verfügbar machen
-* Erfahren Sie, wie AEM WCM-Kernkomponenten verwendet werden können, damit Marketingexperten JSON-Endpunkte erstellen können.
-* Content Services JSON aus einer mobilen Anwendung AEM
-   * Die Verwendung von Android liegt daran, dass es einen plattformübergreifenden Emulator hat, den alle Benutzer (Windows, macOS und Linux) dieses Lernprogramms verwenden können, um die native App auszuführen.
+* Definieren Sie AEM Content Services-Endpunkte mithilfe der Vorlagen und Seiten von AEM Sites, die die Ereignisdaten als JSON verfügbar machen
+* Erfahren Sie, wie AEM WCM-Kernkomponenten verwendet werden können, damit Marketing-Experten JSON-Endpunkte erstellen können.
+* Content Services-JSON aus einer Mobile App AEM verwenden
+   * Die Verwendung von Android liegt daran, dass es über einen plattformübergreifenden Emulator verfügt, mit dem alle Benutzer (Windows, macOS und Linux) dieses Tutorials die native App ausführen können.
 
 ## GitHub-Projekt
 
-Der Quellcode und die Inhaltspakete stehen unter [AEM Guides - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile) zur Verfügung.
+Der Quellcode und die Inhaltspakete sind in den [AEM Handbüchern - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile) verfügbar.
 
-Wenn Sie ein Problem mit dem Tutorial oder dem Code finden, hinterlassen Sie bitte eine [GitHub-Ausgabe](https://github.com/adobe/aem-guides-wknd-mobile/issues).
+Wenn Sie ein Problem mit dem Tutorial oder dem Code finden, hinterlassen Sie bitte ein [GitHub-Problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
