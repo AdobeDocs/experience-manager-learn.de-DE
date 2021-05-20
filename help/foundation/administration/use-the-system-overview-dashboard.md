@@ -1,6 +1,6 @@
 ---
-title: Verwenden Sie das Dashboard Systemübersicht in AEM
-description: In früheren Versionen AEM Administratoren mussten mehrere Standorte durchsuchen, um ein vollständiges Bild der AEM zu erhalten. Die Systemübersicht zielt darauf ab, dies zu lösen, indem eine hohe Ansicht der Konfiguration, Hardware und des Gesundheitszustands der AEM Instanz von einem einzigen Dashboard bereitgestellt wird.
+title: Verwenden Sie das Dashboard "Systemübersicht"in AEM
+description: In früheren Versionen von AEM-Administratoren mussten mehrere Standorte angesehen werden, um ein vollständiges Bild der AEM-Instanz zu erhalten. Die Systemübersicht soll dieses Problem lösen, indem sie einen allgemeinen Überblick über Konfiguration, Hardware und Zustand der AEM-Instanz über ein Dashboard bietet.
 version: 6.4, 6.5
 topics: administration, operations, monitoring
 activity: use
@@ -10,27 +10,26 @@ contentOwner: dgordon
 topic: Administration
 role: Administrator
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 1%
+source-wordcount: '143'
+ht-degree: 0%
 
 ---
 
 
-# Verwenden Sie das Dashboard Systemübersicht
+# Verwenden des Dashboards &quot;Systemübersicht&quot;
 
-Adobe Experience Managers (AEM) [!UICONTROL Systemübersicht] bietet eine Ansicht der Konfiguration, Hardware und des Gesundheitszustands der AEM Instanz auf hoher Ebene aus einem einzigen Dashboard.
+Adobe Experience Managers (AEM) [!UICONTROL Systemübersicht] bietet einen allgemeinen Überblick über die Konfiguration, Hardware und den Zustand der AEM Instanz, die alle von einem Dashboard aus betrachtet werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
 
-1. Die Systemübersicht ist abrufbar unter: **AEM Beginn** > **[!UICONTROL Tools]** > **[!UICONTROL Vorgänge]** > **[!UICONTROL Systemübersicht]**
+1. Die Systemübersicht kann wie folgt aufgerufen werden: **AEM Start** > **[!UICONTROL Tools]** > **[!UICONTROL Vorgänge]** > **[!UICONTROL Systemübersicht]**
 
-   Direkt bei **`<server-host>/libs/granite/operations/content/systemoverview.html`**
+   Direkt unter **`<server-host>/libs/granite/operations/content/systemoverview.html`**
 
-1. Die Informationen aus der [!UICONTROL Systemübersicht] können exportiert werden, indem Sie auf die Schaltfläche [!UICONTROL Herunterladen] klicken. Die Informationen werden auch über den folgenden [!DNL REST]-Endpunkt offen gelegt:
-1. Im Folgenden finden Sie eine Beispielausgabe der JSON-Datei, die aus der Datei [!UICONTROL Systemübersicht] exportiert wird:
+1. Die Informationen aus der [!UICONTROL Systemübersicht] können exportiert werden, indem Sie auf die Schaltfläche [!UICONTROL Herunterladen] klicken. Die Informationen werden auch über den folgenden [!DNL REST]-Endpunkt verfügbar gemacht:
+1. Nachfolgend finden Sie eine Beispielausgabe der JSON, die aus der [!UICONTROL Systemübersicht] exportiert wird:
 
    ```json
    {
