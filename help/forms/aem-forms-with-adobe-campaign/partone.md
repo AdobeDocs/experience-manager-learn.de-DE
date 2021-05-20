@@ -1,45 +1,44 @@
 ---
-title: 'JSON-WebToken und -Zugriffstoken erstellen '
-seo-title: 'JSON-WebToken und -Zugriffstoken erstellen '
-description: In diesem Artikel wird der Code erläutert, der zum Generieren von JWT und Zugriffstoken für REST-Aufrufe an Adobe Campaign Standard erforderlich ist
-seo-description: In diesem Artikel wird der Code erläutert, der zum Generieren von JWT und Zugriffstoken für REST-Aufrufe an Adobe Campaign Standard erforderlich ist
+title: 'JSON-Web-Token und Zugriffstoken erstellen '
+seo-title: 'JSON-Web-Token und Zugriffstoken erstellen '
+description: In diesem Artikel wird der Code erläutert, der zum Generieren von JWT und Zugriffstoken benötigt wird, um REST-Aufrufe an Adobe Campaign Standard durchzuführen
+seo-description: In diesem Artikel wird der Code erläutert, der zum Generieren von JWT und Zugriffstoken benötigt wird, um REST-Aufrufe an Adobe Campaign Standard durchzuführen
 uuid: 5b780eee-1e7c-4e1c-a164-49ce64939b91
-feature: Adaptive Forms, Form Data Model
+feature: Adaptives Forms, Formulardatenmodell
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: cc268946-a7e4-42b3-bfad-5509e215871a
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 1%
+source-wordcount: '267'
+ht-degree: 0%
 
 ---
 
 
-# Generieren von JSON-WebToken und -Zugriffstoken {#generating-json-web-token-and-access-token}
+# Generieren von JSON-Web-Token und Zugriffstoken {#generating-json-web-token-and-access-token}
 
-In diesem Artikel wird der Code erläutert, der zum Generieren von JWT und Zugriffstoken für REST-Aufrufe an Adobe Campaign Standard erforderlich ist
+In diesem Artikel wird der Code erläutert, der zum Generieren von JWT und Zugriffstoken benötigt wird, um REST-Aufrufe an Adobe Campaign Standard durchzuführen
 
-## JSON-WebToken {#generate-json-web-token} generieren
+## JSON-Web-Token generieren {#generate-json-web-token}
 
-Der erste Schritt bei der Verwendung der Adobe Campaign-API ist die Generierung von JWT. Es gibt zahlreiche Codebeispiele zum Generieren von JWT für ACS. Sie können diesem [Java-Codebeispiel](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java) folgen, um JWT zu generieren.
+Der erste Schritt bei der Verwendung der Adobe Campaign-API besteht in der Generierung von JWT. Es gibt zahlreiche Codebeispiele zum Generieren von JWT für ACS. Sie können diesem [Java-Codebeispiel](https://github.com/AdobeDocs/adobeio-auth/tree/stage/JWT/samples/adobe-jwt-java) folgen, um JWT zu generieren.
 
-Um die ACS-API mit AEM Forms verwenden zu können, müssen wir JWT in einem OSGi-Bundle erstellen. Das folgende Codefragment wurde zur Generierung von JWT in diesem OSGI-Beispielpaket verwendet. Die Details zur ACS-Instanz werden aus den OSGI-Konfigurationseigenschaften abgerufen, die wie oben gezeigt eingestellt werden.
+Um die ACS-API mit AEM Forms verwenden zu können, müssen wir JWT in einem OSGi-Bundle erstellen. Das folgende Code-Snippet wurde verwendet, um JWT in diesem OSGi-Beispielpaket zu generieren. Die Details zur ACS-Instanz werden aus den OSGi-Konfigurationseigenschaften abgerufen, die wie oben gezeigt festgelegt sind.
 
 ![Konfiguration](assets/campaignconfiguration.gif)
 
 **A.** Die hier gezeigten Werte sind Platzhalterwerte
 
-Der folgende Code ruft die Details zum Adobe Campaign-Server aus der OSGI-Konfiguration ab. Wir erstellen einen privaten Schlüssel von den Zeilen 80 bis 104.
+Der folgende Code ruft die Details zum Adobe Campaign-Server aus der OSGi-Konfiguration ab. Wir erstellen einen privaten Schlüssel von den Zeilen 80 bis 104.
 
-Sobald wir den privaten Schlüssel haben, erstellen wir JSON Web Token.
+Sobald der private Schlüssel vorhanden ist, erstellen wir JSON Web Token.
 
 ```java
 package aemformwithcampaign.core.services.impl;
@@ -248,6 +247,6 @@ public class CampaignServiceImpl implements CampaignService {
  }
 ```
 
-## Zugriffstoken {#generate-access-token} generieren
+## Zugriffstoken generieren {#generate-access-token}
 
-Dann tauschen wir die generierte JWT gegen ein Zugriffstoken aus, indem wir einen POST-Aufruf durchführen. Dieses Zugriffstoken wird dann als Autorisierungsschlüssel in der HTTP-Kopfzeile für nachfolgende REST-Aufrufe gesendet
+Dann tauschen wir das generierte JWT gegen ein Zugriffstoken aus, indem wir einen POST-Aufruf ausführen. Dieses Zugriffstoken wird dann als Autorisierungsschlüssel in der HTTP-Kopfzeile für nachfolgende REST-Aufrufe gesendet
