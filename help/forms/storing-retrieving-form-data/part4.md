@@ -1,30 +1,29 @@
 ---
 title: Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank
-description: Lernprogramm mit mehreren Teilen, um Sie durch die Schritte zum Speichern und Abrufen von Formulardaten zu führen
-feature: Adaptive Forms
+description: Mehrteiliges Tutorial, das Sie durch die Schritte führt, die zum Speichern und Abrufen von Formulardaten erforderlich sind
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '149'
+source-wordcount: '147'
 ht-degree: 2%
 
 ---
 
 # Client-Bibliothek erstellen
 
-AEM Client Library verwaltet den gesamten clientseitigen JavaScript-Code. Für diesen Artikel habe ich ein einfaches JavaScript erstellt, um die Daten des adaptiven Formulars mit der Guide Bridge-API abzurufen. Sobald die Daten des adaptiven Formulars abgerufen wurden, wird die POST an das Servlet gesendet, um die Daten des adaptiven Formulars in die Datenbank einzufügen oder zu aktualisieren. Die Funktion getALLUrlParams gibt die Parameter in der URL zurück. Wenn der guid-Parameter in der URL vorhanden ist, müssen wir den Aktualisierungsvorgang durchführen, wenn es sich nicht um einen Einfügevorgang handelt. Der Rest der Funktionalität wird im Code behandelt, der dem click-Ereignis der .savebutton-Klasse zugeordnet ist.
+AEM Client Library verwaltet den gesamten clientseitigen JavaScript-Code. Für diesen Artikel habe ich ein einfaches JavaScript erstellt, um die adaptiven Formulardaten mithilfe der Guide Bridge-API abzurufen. Sobald die Daten des adaptiven Formulars abgerufen wurden, wird die POST zum Servlet aufgerufen, um die Daten des adaptiven Formulars entweder in die Datenbank einzufügen oder zu aktualisieren. Die Funktion getALLUrlParams gibt die Parameter in der URL zurück. Wenn der Parameter guid in der URL vorhanden ist, müssen wir den Aktualisierungsvorgang durchführen, wenn es sich nicht um einen Einfügevorgang handelt. Der Rest der Funktionalität wird im Code verarbeitet, der mit dem click -Ereignis der Klasse .savebutton verknüpft ist.
 
 >[!NOTE]
 >
->Die Client-Bibliothek wird als Teil dieser Lernelemente bereitgestellt
+>Die Client-Bibliothek wird im Rahmen dieses Tutorials bereitgestellt
 
 ```javascript
 function getAllUrlParams(url) {
