@@ -1,24 +1,23 @@
 ---
-title: Verwendung von Launches in AEM Sites
-description: Starts in AEM Sites bieten eine Möglichkeit, Inhalte für zukünftige Versionen zu erstellen, zu erstellen und zu überprüfen.
-topic: Content Management
+title: Verwenden von Launches in AEM Sites
+description: Launches in AEM Sites bieten eine Möglichkeit, Inhalte für künftige Versionen zu erstellen, zu erstellen und zu überprüfen.
+topic: Content Management
 feature: Launches
 level: Intermediate, Experienced
 role: Administrator
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 6970
 thumbnail: 331285.jpg
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 7%
+source-wordcount: '68'
+ht-degree: 5%
 
 ---
 
 
-# Starts
+# Launches 
 
-Die Starts in AEM Sites bieten eine Möglichkeit, Website-Inhalte für zukünftige Versionen zu erstellen, zu erstellen und zu überprüfen. Während der Gründung der Produktion Website kann sich weiter entwickeln und ändern Sie jeden Tag, wie es normalerweise der Fall wäre.
+Launches in AEM Sites bieten eine Möglichkeit, Website-Inhalte für künftige Versionen zu erstellen, zu erstellen und zu überprüfen. Während der Erstellung des Launches kann sich die Produktions-Website weiterentwickeln und sich von Tag zu Tag ändern, wie es normalerweise der Fall ist.
 
 >[!VIDEO](https://video.tv.adobe.com/v/331285?quality=12&learn=on)
