@@ -1,6 +1,6 @@
 ---
-title: Cloud Manager-Leitungen konfigurieren
-description: Konfigurieren Sie eine Pipeline auf AEM und untersuchen Sie die verschiedenen Pipelines.
+title: Cloud Manager-Pipelines konfigurieren
+description: Konfigurieren Sie eine Pipeline auf AEM und untersuchen Sie die verschiedenen Pipelinetypen.
 role: Developer
 level: Beginner
 type: Tutorial
@@ -8,11 +8,10 @@ topic: Entwicklung
 feature: Entwickler-Tools
 kt: 6916
 thumbnail: 330539.jpg
-translation-type: tm+mt
 source-git-commit: e295d77a11c99310aaae10ecb8a2eaa20ad49285
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '74'
+ht-degree: 10%
 
 ---
 
