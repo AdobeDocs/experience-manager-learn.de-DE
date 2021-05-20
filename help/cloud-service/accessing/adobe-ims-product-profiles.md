@@ -1,34 +1,33 @@
 ---
-title: Adobe IMS-Profil und AEM
-description: Adobe-IMS-Profil gestatten es Benutzern, sich bei einem AEM Author-Dienst anzumelden und eine Grundeinstellung für den Zugriff bereitzustellen, je nachdem, welchem Produkt-Profil sie angehören.
-feature: Users and Groups
+title: Adobe IMS-Produktprofile und -AEM
+description: Adobe IMS-Produktprofile berechtigen Benutzer dazu, sich bei einem AEM-Autorendienst anzumelden und eine Grundlinie für den Zugriff bereitzustellen, je nachdem, welchem Produktprofil sie angehören.
+feature: 'Benutzer und Gruppen '
 kt: 5000
 thumbnail: 39156.jpg
-topic: Administration, Security
+topic: Administration, Sicherheit
 role: Administrator
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '155'
-ht-degree: 9%
+source-wordcount: '153'
+ht-degree: 8%
 
 ---
 
 
-# Adobe IMS-Profil
+# Adobe IMS-Produktprofile
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_productprofiles"
->title="Adobe IMS-Profil"
->abstract="Adobe-IMS-Profil gestatten es Benutzern, sich bei einem AEM Author-Dienst anzumelden und eine Grundeinstellung für den Zugriff bereitzustellen, je nachdem, welchem Produkt-Profil sie angehören. Erfahren Sie mehr über die Adobe IMS-Profil."
+>title="Adobe IMS-Produktprofile"
+>abstract="Adobe IMS-Produktprofile berechtigen Benutzer dazu, sich bei einem AEM-Autorendienst anzumelden und eine Grundlinie für den Zugriff bereitzustellen, je nachdem, welchem Produktprofil sie angehören. Erfahren Sie mehr über Adobe IMS-Produktprofile."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#introduction" text="Verwalten von Produkten und Benutzerzugriff in der Admin Console"
 
-Adobe-IMS-Profil gestatten es Benutzern, sich bei einem AEM Author-Dienst anzumelden und eine Grundeinstellung für den Zugriff bereitzustellen, je nachdem, welchem Produkt-Profil sie angehören.
+Adobe IMS-Produktprofile berechtigen Benutzer dazu, sich bei einem AEM-Autorendienst anzumelden und eine Grundlinie für den Zugriff bereitzustellen, je nachdem, welchem Produktprofil sie angehören.
 
 >[!VIDEO](https://video.tv.adobe.com/v/39156/?quality=12&learn=on)
 
 ## Zusätzliche Ressourcen
 
-+ [Verwalten von Produkten und Benutzerzugriff in der Dokumentation zur Admin Console](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)
++ [Verwalten von Produkten und Benutzerzugriff in der Dokumentation zu Admin Console](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)
 
