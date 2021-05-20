@@ -1,19 +1,18 @@
 ---
 title: Einrichten von Übersetzungsregeln in AEM
-description: Die Benutzeroberfläche der Übersetzungskonfiguration ermöglicht es dem Benutzer, Regeln für die Übersetzung von Inhalten in AEM Sites zu verwalten. In diesem Video wird die Erstellung einer neuen Übersetzungsregel für eine benutzerdefinierte Komponente erläutert.
-feature: Language Copy
+description: Über die Benutzeroberfläche für die Übersetzungskonfiguration können Benutzer Regeln für die Übersetzung von Inhalten in AEM Sites verwalten. In diesem Video wird die Erstellung einer neuen Übersetzungsregel für eine benutzerdefinierte Komponente beschrieben.
+feature: Sprachkopie
 topics: localization, content-architecture
 audience: developer, administrator
 doc-type: technical video
 activity: setup
 version: 6.4, 6.5
-topic: Localization
+topic: Lokalisierung
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '324'
 ht-degree: 7%
 
 ---
@@ -21,29 +20,29 @@ ht-degree: 7%
 
 # Einrichten von Übersetzungsregeln {#set-up-translation-rules-in-aem}
 
-Die Benutzeroberfläche der Übersetzungskonfiguration ermöglicht es dem Benutzer, Regeln für die Übersetzung von Inhalten in AEM Sites zu verwalten. In diesem Video wird die Erstellung einer neuen Übersetzungsregel für eine benutzerdefinierte Komponente erläutert.
+Über die Benutzeroberfläche für die Übersetzungskonfiguration können Benutzer Regeln für die Übersetzung von Inhalten in AEM Sites verwalten. In diesem Video wird die Erstellung einer neuen Übersetzungsregel für eine benutzerdefinierte Komponente beschrieben.
 
 >[!NOTE]
 >
-> Das folgende Video wurde am AEM 6.3 aufgenommen. AEM 6.4+ führt eine neue Repository-Struktur zum Speichern der XML-Datei mit den Übersetzungsregeln ein. Bei Verwendung der Benutzeroberfläche der Übersetzungskonfiguration in AEM 6.4+ werden die Regeln am Speicherort `/conf/global/settings/translation/rules/translation_rules.xml` gespeichert. Weitere Informationen finden Sie unter [Identifizieren von zu übersetzenden Inhalten](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html).
+> Das folgende Video wurde in AEM 6.3 aufgezeichnet. AEM 6.4+ führt eine neue Repository-Struktur zum Speichern der XML-Datei für Übersetzungsregeln ein. Bei Verwendung der Benutzeroberfläche für die Übersetzungskonfiguration in AEM 6.4+ werden die Regeln am Speicherort `/conf/global/settings/translation/rules/translation_rules.xml` gespeichert. Weitere Informationen finden Sie unter [Identifizieren von zu übersetzenden Inhalten](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html) .
 
 >[!VIDEO](https://video.tv.adobe.com/v/18135/?quality=9&learn=on)
 
-Übersetzungsregeln identifizieren Inhalte in AEM, die zur Übersetzung extrahiert werden sollen. Vordefinierte Übersetzungsregeln decken gängige Anwendungsfälle wie Textkomponenten und Alternativtext für Bildkomponenten ab. Je nach Übersetzungsanforderungen eines Projekts sind ggf. zusätzliche Regeln erforderlich. Im Allgemeinen können Benutzer mithilfe von Übersetzungsregeln Folgendes angeben:
+Übersetzungsregeln identifizieren Inhalte in AEM, die zur Übersetzung extrahiert werden sollen. Vordefinierte Übersetzungsregeln decken gängige Anwendungsfälle ab, wie Textkomponenten und Alternativtext für Bildkomponenten. Abhängig von den Anforderungen an die Übersetzung von Projekten können zusätzliche Regeln erforderlich sein. Im Allgemeinen ermöglichen es Übersetzungsregeln Benutzern, Folgendes anzugeben:
 
-1. Eigenschaften, die basierend auf Pfad und/oder Ressourcentyp übersetzt werden sollten
-2. Filter für Eigenschaften, die NICHT übersetzt werden sollten
-3. Referenzierte Inhalte, die übersetzt werden sollen (z. B. Bilder oder Inhaltsfragmente)
+1. Eigenschaften, die basierend auf Pfad und/oder Ressourcentyp übersetzt werden sollen
+2. Filter für Eigenschaften, die NICHT übersetzt werden sollen
+3. Referenzierte Inhalte, die übersetzt werden sollen (d. h. Bilder oder Inhaltsfragmente)
 
-Der Übersetzungsregel-Editor, der die XML-Datei für die Übersetzung aktualisiert. Die Benutzeroberfläche der Übersetzungskonfiguration erleichtert die Verwaltung verschiedener Übersetzungsregeln und schützt vor Typos, wenn XML direkt bearbeitet wird.
+Der Übersetzungsregel-Editor, der die XML-Übersetzungsdatei aktualisiert. Die Benutzeroberfläche für die Übersetzungskonfiguration erleichtert die Verwaltung verschiedener Übersetzungsregeln und schützt vor Typos bei der direkten Bearbeitung von XML.
 
-Zugriff auf die Benutzeroberfläche der Übersetzungskonfiguration:
+Greifen Sie auf die Benutzeroberfläche der Übersetzungskonfiguration zu:
 
-* **[!UICONTROL Menü]  AEM Beginn >  [!UICONTROL Extras]  >  [!UICONTROL Allgemein] >  [[!UICONTROL Übersetzungskonfiguration]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
+* **[!UICONTROL AEM Startmenü]  >  [!UICONTROL Tools]  >  [!UICONTROL Allgemein]  >  [[!UICONTROL Übersetzungskonfiguration]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
 
 ## Vor AEM 6.3 {#prior-to-aem}
 
-In früheren AEM wurden die Übersetzungsregeln manuell aktualisiert, indem eine XML-Datei bearbeitet wurde, die sich im Arbeitsablauf für die Übersetzung befindet: `/etc/workflow/models/translation/translation_rules.xml`.
+In früheren AEM wurden die Übersetzungsregeln der Version manuell aktualisiert, indem eine XML-Datei bearbeitet wurde, die sich im Übersetzungs-Workflow befindet: `/etc/workflow/models/translation/translation_rules.xml`.
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
