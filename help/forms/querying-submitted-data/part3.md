@@ -1,21 +1,20 @@
 ---
-title: AEM Forms mit JSON-Schema und -Daten[Teil 3]
-seo-title: AEM Forms mit JSON-Schema und -Daten[Teil 3]
-description: Mehrteilige Übung, um Sie durch die Schritte zu führen, die beim Erstellen eines adaptiven Formulars mit JSON-Schema und beim Abfragen der gesendeten Daten erforderlich sind.
-seo-description: Mehrteilige Übung, um Sie durch die Schritte zu führen, die beim Erstellen eines adaptiven Formulars mit JSON-Schema und beim Abfragen der gesendeten Daten erforderlich sind.
-feature: Adaptive Forms
+title: AEM Forms mit JSON-Schema und Daten[Teil 3]
+seo-title: AEM Forms mit JSON-Schema und Daten[Teil 3]
+description: Mehrteilige Anleitung, um Sie durch die Schritte zu führen, die zum Erstellen eines adaptiven Formulars mit JSON-Schema und zum Abfragen der gesendeten Daten erforderlich sind.
+seo-description: Mehrteilige Anleitung, um Sie durch die Schritte zu führen, die zum Erstellen eines adaptiven Formulars mit JSON-Schema und zum Abfragen der gesendeten Daten erforderlich sind.
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '285'
 ht-degree: 1%
 
 ---
@@ -24,9 +23,9 @@ ht-degree: 1%
 # Speichern des JSON-Schemas in der Datenbank {#storing-json-schema-in-database}
 
 
-Um Abfragen zu den gesendeten Daten vornehmen zu können, müssen wir das mit dem gesendeten Formular verknüpfte JSON-Schema speichern. Das JSON-Schema wird im Abfrage Builder zum Erstellen der Abfrage verwendet.
+Um die gesendeten Daten abfragen zu können, müssen wir das mit dem gesendeten Formular verknüpfte JSON-Schema speichern. Das JSON-Schema wird im Query Builder zum Erstellen der Abfrage verwendet.
 
-Wenn ein adaptives Formular gesendet wird, prüfen wir, ob sich das zugehörige JSON-Schema in der Datenbank befindet. Wenn das JSON-Schema nicht vorhanden ist, rufen wir das JSON-Schema ab und speichern das Schema in der entsprechenden Tabelle. Wir verknüpfen den Formularnamen auch mit dem JSON-Schema. Der folgende Screenshot zeigt die Tabelle, in der die JSON-Schema gespeichert werden.
+Wenn ein adaptives Formular gesendet wird, überprüfen wir, ob das zugehörige JSON-Schema in der Datenbank enthalten ist. Wenn das JSON-Schema nicht vorhanden ist, rufen wir das JSON-Schema ab und speichern das Schema in der entsprechenden Tabelle. Wir verknüpfen auch den Formularnamen mit dem JSON-Schema. Der folgende Screenshot zeigt die Tabelle, in der die JSON-Schemas gespeichert sind.
 
 ![jsonschema](assets/jsonschemas.gif)
 
@@ -108,9 +107,9 @@ public String getJSONSchema(String afPath) {
 
 >[!NOTE]
 >
->Beim Erstellen eines adaptiven Formulars können Sie entweder das JSON-Schema verwenden, das sich im Repository befindet, oder ein JSON-Schema hochladen. Der oben genannte Code funktioniert in beiden Fällen.
+>Beim Erstellen eines adaptiven Formulars können Sie entweder das JSON-Schema verwenden, das sich im Repository befindet, oder ein JSON-Schema hochladen. Der obige Code funktioniert für beide Fälle.
 
-Das abgerufene Schema wird in der Datenbank unter Verwendung der standardmäßigen JDBC-Vorgänge gespeichert. Mit dem folgenden Code wird das Schema in die Datenbank eingefügt
+Das abgerufene Schema wird mithilfe der standardmäßigen JDBC-Vorgänge in der Datenbank gespeichert. Der folgende Code fügt das Schema in die Datenbank ein
 
 ```java
 public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
@@ -148,10 +147,10 @@ public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
 
 Zusammenfassend haben wir bisher Folgendes getan
 
-* Adaptives Formular basierend auf JSON-Schema erstellen
+* Erstellen eines adaptiven Formulars basierend auf dem JSON-Schema
 * Wenn das Formular zum ersten Mal gesendet wird, speichern wir das mit dem Formular verknüpfte JSON-Schema in der Datenbank.
 * Die gebundenen Daten des adaptiven Formulars werden in der Datenbank gespeichert.
 
-Als Nächstes verwenden Sie QueryBuilder, um die zu suchenden Felder basierend auf dem JSON-Schema anzuzeigen
+Die nächsten Schritte wären die Verwendung von QueryBuilder zum Anzeigen der Felder, die basierend auf dem JSON-Schema durchsucht werden sollen
 
 
