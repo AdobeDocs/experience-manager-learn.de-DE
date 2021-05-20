@@ -1,8 +1,7 @@
 ---
 title: AEM Assets-Videos und -Tutorials
 description: Eine Sammlung von Videos und Tutorials zu Adobe Experience Manager Assets
-sub-product: assets, dynamic-media
-translation-type: tm+mt
+sub-product: Assets, dynamic-media
 source-git-commit: d89cd051f9fc8800d94ad11851ceaf4212f3c797
 workflow-type: tm+mt
 source-wordcount: '230'
@@ -13,31 +12,31 @@ ht-degree: 20%
 
 # Überblick {#overview}
 
-Adobe Experience Manager Assets ist ein Werkzeug zur Verwaltung digitaler Assets auf AEM Plattform, mit dem Benutzer ihre digitalen Assets (Bilder, Videos, Dokumente und Audioclips) in einem webbasierten Repository erstellen, verwalten und freigeben können. Dieses Benutzerhandbuch enthält Videos und Tutorials zu den zahlreichen Funktionen und Funktionen von AEM Assets.
+Adobe Experience Manager Assets ist ein digitales Asset-Management-Tool in AEM Platform, mit dem Benutzer ihre digitalen Assets (Bilder, Videos, Dokumente und Audioclips) in einem webbasierten Repository erstellen, verwalten und freigeben können. Dieses Benutzerhandbuch enthält Videos und Tutorials zu den zahlreichen Funktionen und Features von AEM Assets.
 
 ## Neue Funktionen
 
-* **[Beziehungen und Beziehung aufheben (Video)](./authoring/relate-unrelate.md)**
+* **[Relation und Aufheben der Verknüpfung (Video)](./authoring/relate-unrelate.md)**
 
-   *Erfahren Sie, wie Sie Beziehungen zwischen Assets in AEM erstellen und verwalten*
+   *Erfahren Sie, wie Sie in AEM Beziehungen zwischen Assets herstellen und verwalten.*
 
-* **[Assets veröffentlichen (Video)](./sharing/publish.md)**
+* **[Veröffentlichen von Assets (Video)](./sharing/publish.md)**
 
-   *Informationen zum Ein- und Ausstieg beim Veröffentlichen von Assets von AEM Author zu AEM Publish*
+   *Lernen Sie die Ins- und Outs der Veröffentlichung von Assets von der AEM-Autoreninstanz zur AEM-Veröffentlichung kennen*
 
 * **[Wasserzeichen (Video)](./advanced/watermarks.md)**
 
-   *Erfahren Sie, wie Sie Assets in AEM als Cloud Service mit Wasserzeichen versehen*
+   *Erfahren Sie, wie Sie Asset-Ausgabedarstellungen in AEM as a Cloud Service mit Wasserzeichen versehen.*
 
 * **[Grundlegende Berechtigungen (Video)](./configuring/baseline-permissions.md)**
 
-   *Erfahren Sie, wie und warum es wichtig ist, AEM Assets mit Grundberechtigungen zu konfigurieren*
+   *Erfahren Sie, wie und warum es wichtig ist, AEM Assets mit Basisberechtigungen zu konfigurieren*
 
-* **[Workflows (Video)](./configuring/auto-start-workflows.md)**
+* **[Automatisch startende Workflows (Video)](./configuring/auto-start-workflows.md)**
 
-   *Erfahren Sie, wie Sie AEM Arbeitsablauf bei hochgeladenen oder erneut verarbeiteten Assets automatisch aufrufen*
+   *Erfahren Sie, wie Sie AEM Workflow für hochgeladene oder erneut verarbeitete Assets automatisch aufrufen*
 
-## Personalauswahl
+## Mitarbeiterauswahl
 
 <table>
 <td>
@@ -50,7 +49,7 @@ Adobe Experience Manager Assets ist ein Werkzeug zur Verwaltung digitaler Assets
       </a>
    </div>
    <p>
-      <em>Zugriff auf Assets in AEM direkt vom Desktop aus</em>
+      <em>Zugreifen auf Assets in AEM direkt über den Desktop</em>
    </p>
 </td>
 <td>
@@ -59,24 +58,24 @@ Adobe Experience Manager Assets ist ein Werkzeug zur Verwaltung digitaler Assets
    </a>
    <div>
       <a href="./advanced/asset-insights-launch-tutorial.md">
-      <strong>Verwenden AEM Asset Insights beim Start</strong>
+      <strong>Verwenden AEM Asset Insights mit Launch</strong>
       </a>
    </div>
    <p>
-      <em>Erhalten Sie Einblicke in die Verwendung von Assets</em>
+      <em>Gewinnen Sie Einblicke in die Verwendung von Assets</em>
    <p>
 </td>
 <td>
    <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-   <img alt="Dynamic Media-Übersicht" src="./assets/overview/dynamic-media.png" />
+   <img alt="Übersicht über Dynamic Media" src="./assets/overview/dynamic-media.png" />
    </a>
    <div>
       <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-      <strong>Dynamic Media-Übersicht</strong>
+      <strong>Übersicht über Dynamic Media</strong>
       </a>
    </div>
    <p>
-      <em>Verwalten und Zugreifen auf Medieninhalte mit Dynamic Media</em>
+      <em>Medieninhalte mit Dynamic Media verwalten und aufrufen</em>
    <p>
 </td>
 </table>
@@ -84,7 +83,7 @@ Adobe Experience Manager Assets ist ein Werkzeug zur Verwaltung digitaler Assets
 ## Zusätzliche Ressourcen
 
 * [Experience League - AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Assets-Dokumentation](https://helpx.adobe.com/de/experience-manager/6-5/assets/user-guide.html)
+* [Dokumentation zu AEM Assets](https://helpx.adobe.com/de/experience-manager/6-5/assets/user-guide.html)
 * [Tutorials zu AEM as a Cloud Service](/help/cloud-service/overview.md)
 * [AEM Sites-Tutorials](/help/sites/overview.md)
 * [AEM Forms-Tutorials](/help/forms/overview.md)
