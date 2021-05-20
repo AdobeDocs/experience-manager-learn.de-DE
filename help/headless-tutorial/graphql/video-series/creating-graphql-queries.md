@@ -1,9 +1,9 @@
 ---
 title: Erstellen von GraphQL-Abfragen
-description: Erfahren Sie, wie Sie GraphQL-Abfragen erstellen, um Inhalte von Adobe Experience Manager (AEM) zurückzugeben, und wie Sie mit dem GraphiQL-Tool Abfragen schnell testen, verfeinern und debuggen können.
+description: Erfahren Sie, wie Sie GraphQL-Abfragen erstellen, um Inhalte aus Adobe Experience Manager (AEM) zurückzugeben, und wie Sie mit dem GraphiQL-Tool Abfragen schnell testen, verfeinern und debuggen können.
 sub-product: Assets
 version: cloud-service
-topic: Kopflos, Content-Management
+topic: Headless, Content Management
 feature: Inhaltsfragmente, GraphQL-APIs
 role: Developer
 level: Beginner
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # Erstellen von GraphQL-Abfragen
 
-Erfahren Sie, wie Sie GraphQL-Abfragen erstellen, um Inhalte von Adobe Experience Manager (AEM) zurückzugeben, und wie Sie mit dem GraphiQL-Tool Abfragen schnell testen, verfeinern und debuggen können.
+Erfahren Sie, wie Sie GraphQL-Abfragen erstellen, um Inhalte aus Adobe Experience Manager (AEM) zurückzugeben, und wie Sie mit dem GraphiQL-Tool Abfragen schnell testen, verfeinern und debuggen können.
 
 In diesem Video werden Sie:
 
-+ Verstehen Sie die Stärke der GraphQL-Sprache
-+ Erfahren Sie, wie Sie eine Liste von Inhaltsfragmenten und einem einzelnen Inhaltsfragment Abfrage haben
-+ Erfahren Sie, wie Sie bestimmte Datenattribute filtern und anfordern
++ Machen Sie sich mit der Macht der GraphQL-Sprache vertraut.
++ Erfahren Sie, wie Sie eine Liste von Inhaltsfragmenten und ein einzelnes Inhaltsfragment abfragen
++ Erfahren Sie, wie Sie bestimmte Datenattribute filtern und anfordern.
 + Erfahren Sie, wie Sie das GraphiQL-Tool installieren und verwenden
 
 >[!VIDEO](https://video.tv.adobe.com/v/332860/?quality=12&learn=on)
