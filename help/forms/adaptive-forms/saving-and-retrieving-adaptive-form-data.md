@@ -3,16 +3,15 @@ title: Speichern und Abrufen von adaptiven Formulardaten
 seo-title: Speichern und Abrufen von adaptiven Formulardaten
 description: Speichern und Abrufen adaptiver Formulardaten aus der Datenbank. Mit dieser Funktion können Formularausfüller das Formular speichern und das Formular zu einem späteren Zeitpunkt ausfüllen.
 seo-description: Speichern und Abrufen adaptiver Formulardaten aus der Datenbank. Mit dieser Funktion können Formularausfüller das Formular speichern und das Formular zu einem späteren Zeitpunkt ausfüllen.
-feature: adaptive-forms
+feature: adaptive Formulare
 topics: developing
 audience: developer,implementer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
-translation-type: tm+mt
 source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
 workflow-type: tm+mt
-source-wordcount: '645'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
@@ -20,31 +19,31 @@ ht-degree: 0%
 
 # Speichern und Abrufen von adaptiven Formulardaten
 
-Dieser Artikel führt Sie durch die Schritte zum Speichern und Abrufen adaptiver Formulardaten aus der Datenbank. Die Daten des adaptiven Formulars wurden in der MySQL-Datenbank gespeichert. Auf hoher Ebene werden die folgenden Schritte unternommen, um den Verwendungsfall zu erreichen:
+In diesem Artikel werden Sie durch die Schritte geführt, die zum Speichern und Abrufen von adaptiven Formulardaten aus der Datenbank erforderlich sind. Die MySQL-Datenbank wurde zum Speichern der adaptiven Formulardaten verwendet. Auf hoher Ebene sind die folgenden Schritte erforderlich, um den Anwendungsfall zu erreichen:
 
 * [Datenquelle konfigurieren](#Configure-Data-Source)
-* [Servlet zum Schreiben von Daten in die Datenbank erstellen](#create-servlet)
-* [OSGI-Dienst zum Abrufen gespeicherter Daten erstellen](#create-osgi-service)
+* [Erstellen eines Servlets zum Schreiben von Daten in die Datenbank](#create-servlet)
+* [Erstellen eines OSGi-Dienstes zum Abrufen gespeicherter Daten](#create-osgi-service)
 * [Client-Bibliothek erstellen](#create-client-library)
-* [Erstellen von Vorlagen für adaptive Formulare und Seitenkomponenten](#form-template-and-page-component)
+* [Erstellen der Vorlage für adaptive Formulare und der Seitenkomponente](#form-template-and-page-component)
 * [Funktionsnachweis](#capability-demo)
-* [Auf dem Server bereitstellen](#deploy-on-your-server)
+* [Auf Ihrem Server bereitstellen](#deploy-on-your-server)
 
 ## Datenquelle konfigurieren {#Configure-Data-Source}
 
-Apache Sling Connection Pooled DataSource ist so konfiguriert, dass sie auf die Datenbank verweist, in der die Daten des adaptiven Formulars gespeichert werden. Der folgende Screenshot zeigt die Konfiguration für meine Instanz. Die folgenden Eigenschaften können kopiert und eingefügt werden
+Apache Sling Connection Pooled DataSource ist so konfiguriert, dass sie auf die Datenbank verweist, die zum Speichern der adaptiven Formulardaten verwendet wird. Der folgende Screenshot zeigt die Konfiguration für meine Instanz. Die folgenden Eigenschaften können kopiert und eingefügt werden
 
-* Datasource Name:aemformstutorial - Dies ist der Name, der in meinem Code verwendet wird.
+* Datenquellenname:aemformstutorial - Dies ist der Name, der in meinem Code verwendet wird.
 
 * JDBC-Treiberklasse:com.mysql.jdbc.Driver
 
 * JDBC-Verbindungs-URL:jdbc:mysql://localhost:3306/aemformstutorial
 
-![connectionPool](assets/storingdata.PNG)
+![connectionpool](assets/storingdata.PNG)
 
-### Servlet {#create-servlet} erstellen
+### Servlet erstellen {#create-servlet}
 
-Im Folgenden sehen Sie den Code des Servlets, mit dem adaptive Formulardaten in die Datenbank eingefügt/aktualisiert werden. Die gepoolte DataSource für die Apache Sling-Verbindung wird mithilfe von AEM ConfigMgr konfiguriert und dasselbe wird in Zeile 26 referenziert. Der Rest des Codes ist ziemlich einfach. Der Code fügt entweder eine neue Zeile in die Datenbank ein oder aktualisiert eine vorhandene Zeile. Die gespeicherten Daten des adaptiven Formulars sind mit einer GUID verknüpft. Die gleiche GUID wird dann verwendet, um die Formulardaten zu aktualisieren.
+Im Folgenden finden Sie den Code des Servlets, das adaptive Formulardaten in die Datenbank einfügt/aktualisiert. Die Apache Sling Connection Pooled DataSource wird mit dem AEM ConfigMgr konfiguriert und dasselbe wird in Zeile 26 referenziert. Der Rest des Codes ist ziemlich einfach. Der Code fügt entweder eine neue Zeile in die Datenbank ein oder aktualisiert eine vorhandene Zeile. Die gespeicherten Daten des adaptiven Formulars sind mit einer GUID verknüpft. Dieselbe GUID wird dann zum Aktualisieren der Formulardaten verwendet.
 
 ```java
 package com.techmarketing.core.servlets;
@@ -212,9 +211,9 @@ public class StoreDataInDB extends SlingAllMethodsServlet {
 }
 ```
 
-## OSGI-Dienst zum Abrufen von Daten erstellen {#create-osgi-service}
+## Erstellen eines OSGi-Dienstes zum Abrufen von Daten {#create-osgi-service}
 
-Der folgende Code wurde geschrieben, um die gespeicherten Daten des adaptiven Formulars abzurufen. Eine einfache Abfrage wird verwendet, um die mit einer bestimmten GUID verknüpften adaptiven Formulardaten abzurufen. Die abgerufenen Daten werden dann an die aufrufende Anwendung zurückgegeben. Dieselbe Datenquelle, die im ersten Schritt erstellt wurde und auf die in diesem Code verwiesen wird.
+Der folgende Code wurde geschrieben, um die gespeicherten Daten des adaptiven Formulars abzurufen. Eine einfache Abfrage wird verwendet, um die mit einer bestimmten GUID verknüpften adaptiven Formulardaten abzurufen. Die abgerufenen Daten werden dann an die aufrufende Anwendung zurückgegeben. Dieselbe Datenquelle, die im ersten Schritt erstellt wurde, verweist in diesem Code.
 
 ```java
 package com.techmarketing.core.impl;
@@ -279,7 +278,7 @@ public class AemformWithDB implements AemFormsAndDB {
 
 ## Client-Bibliothek erstellen {#create-client-library}
 
-AEM Client Library verwaltet den gesamten clientseitigen JavaScript-Code. Für diesen Artikel habe ich ein einfaches JavaScript erstellt, um die adaptiven Formulardaten mit der Guide Bridge-API abzurufen. Sobald die Daten des adaptiven Formulars abgerufen wurden, wird die POST an das Servlet gesendet, um die Daten des adaptiven Formulars in die Datenbank einzufügen oder zu aktualisieren. Die Funktion getALLUrlParams gibt die Parameter in der URL zurück. Dies wird verwendet, wenn Sie die Daten aktualisieren möchten. Der Rest der Funktionalität wird im Code behandelt, der mit dem click-Ereignis der .savebutton-Klasse verknüpft ist. Wenn der guid-Parameter in der URL vorhanden ist, müssen wir den Aktualisierungsvorgang durchführen, wenn nicht ein Einfügevorgang.
+AEM Client-Bibliothek verwaltet den gesamten clientseitigen JavaScript-Code. Für diesen Artikel habe ich ein einfaches JavaScript erstellt, um die adaptiven Formulardaten mithilfe der Guide Bridge-API abzurufen. Sobald die Daten des adaptiven Formulars abgerufen wurden, wird die POST zum Servlet aufgerufen, um die Daten des adaptiven Formulars entweder in die Datenbank einzufügen oder zu aktualisieren. Die Funktion getALLUrlParams gibt die Parameter in der URL zurück. Dies wird verwendet, wenn Sie die Daten aktualisieren möchten. Der Rest der Funktionalität wird im Code verarbeitet, der mit dem click -Ereignis der .savebutton-Klasse verknüpft ist. Wenn der Parameter guid in der URL vorhanden ist, müssen wir den Aktualisierungsvorgang durchführen, falls es sich nicht um einen Einfügevorgang handelt.
 
 ```javascript
 function getAllUrlParams(url) {
@@ -405,7 +404,7 @@ $(document).ready(function()
 });
 ```
 
-## Erstellen von Vorlagen für adaptive Formulare und Seitenkomponenten {#form-template-and-page-component}
+## Erstellen einer Vorlage für adaptives Formular und einer Seitenkomponente {#form-template-and-page-component}
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
@@ -414,17 +413,17 @@ $(document).ready(function()
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=9&learn=on)
 
-#### Auf dem Server {#deploy-on-your-server} bereitstellen
+#### Bereitstellen auf Ihrem Server {#deploy-on-your-server}
 
-Gehen Sie wie folgt vor, um diese Funktion auf Ihrer AEM Forms-Instanz zu testen
+Um diese Funktion auf Ihrer AEM Forms-Instanz zu testen, führen Sie die folgenden Schritte aus
 
-* [Laden Sie die Datei DemoAssets.zip auf Ihr lokales System herunter und dekomprimieren Sie sie.](assets/demoassets.zip)
-* Stellen Sie die Pakete techmarketingdemos.jar und mysqldriver.jar mithilfe der Felix-Webkonsole bereit und Beginn bereit.
-*** Importieren Sie aemformstutorial.sql mit MYSQL Workbench. Dadurch werden die erforderlichen Schemas und Tabellen in Ihrer Datenbank erstellt.
-* Importieren Sie &quot;StoreAndRetrieve.zip&quot;mit AEM Package Manager. Dieses Paket enthält die Vorlage für das adaptive Formular, die Client-Bibliothek für die Seitenkomponente sowie die Beispiel-Konfiguration für das adaptive Formular und die Datenquelle.
+* [Laden Sie DemoAssets.zip auf Ihr lokales System herunter und entpacken Sie es.](assets/demoassets.zip)
+* Stellen Sie die Pakete &quot;techmarketingdemos.jar&quot;und &quot;mysqldriver.jar&quot;mithilfe der Felix-Webkonsole bereit und starten Sie sie.
+*** Importieren Sie aemformstutorial.sql mit MYSQL Workbench. Dadurch werden das erforderliche Schema und die Tabellen in Ihrer Datenbank erstellt
+* Importieren Sie StoreAndRetrieve.zip mit AEM Package Manager. Dieses Paket enthält die Vorlage für adaptive Formulare, die Client-Bibliothek für Seitenkomponenten sowie die Beispiel-Konfiguration für adaptive Formulare und Datenquellen.
 * Melden Sie sich bei configMgr an. Suchen Sie nach &quot;Apache Sling Connection Pooled DataSource. Öffnen Sie den mit aemformstutorial verknüpften Datenquelleneintrag und geben Sie den Benutzernamen und das Kennwort für Ihre Datenbankinstanz ein.
-* Adaptives Formular öffnen
-* Füllen Sie einige Details aus und klicken Sie auf die Schaltfläche &quot;Speichern und weiter&quot;
+* Öffnen Sie das adaptive Formular
+* Füllen Sie einige Details aus und klicken Sie auf die Schaltfläche &quot;Speichern und weiter später&quot;
 * Sie sollten eine URL mit einer GUID zurückerhalten.
-* Kopieren Sie die URL und fügen Sie sie auf der Registerkarte eines neuen Browsers ein
-* Adaptives Formular sollte mit den Daten aus dem vorherigen Schritt gefüllt werden**
+* Kopieren Sie die URL und fügen Sie sie in eine neue Browser-Registerkarte ein.
+* Das adaptive Formular sollte mit den Daten aus dem vorherigen Schritt gefüllt werden**
