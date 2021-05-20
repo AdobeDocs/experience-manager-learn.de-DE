@@ -8,7 +8,6 @@ audience: developer
 user-guide-title: Erste Schritte mit dem AEM SPA-Editor und React
 user-guide-description: Erstellen Sie Ihre erste React-Einzelseitenanwendung (SPA), die in AEM mit der WKND-SPA bearbeitet werden kann.
 breadcrumb-title: AEM SPA-Editor und React-Tutorial
-translation-type: tm+mt
 source-git-commit: 172a1369cb572b367c78e04c692db8e02e7287e7
 workflow-type: tm+mt
 source-wordcount: '59'
@@ -20,7 +19,7 @@ ht-degree: 71%
 # Erste Schritte mit dem AEM SPA-Editor und React {#spa-react-tutorial}
 
 + [Überblick](overview.md)
-+ [SPA Editor Project](create-project.md)
++ [SPA Editor-Projekt](create-project.md)
 + [SPA integrieren](integrate-spa.md)
 + [Zuordnen SPA Komponenten](map-components.md)
 + [Navigation und Routing](navigation-routing.md)
