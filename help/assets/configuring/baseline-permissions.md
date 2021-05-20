@@ -1,18 +1,17 @@
 ---
 title: Grundlegende Berechtigungen
-description: Die Verwaltung des Benutzerzugriffs auf die Basisordner für Assets ist ein wichtiger Aspekt der Verwaltung und stellt sicher, dass die Prozesse ordnungsgemäß unterstützt werden können.
+description: Die Verwaltung des Benutzerzugriffs auf die grundlegenden Asset-Ordner ist ein wichtiger Aspekt in der Governance und stellt sicher, dass die Prozesse ordnungsgemäß unterstützt werden können.
 sub-product: Assets
-feature: Asset Management
+feature: Asset-Verwaltung
 version: cloud-service
 kt: 4870
 thumbnail: 37696.jpg
-topic: Content Management
+topic: Content Management
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '56'
+source-wordcount: '53'
 ht-degree: 5%
 
 ---
@@ -20,6 +19,6 @@ ht-degree: 5%
 
 # Grundlegende Berechtigungen
 
-Die Verwaltung des Benutzerzugriffs auf die Grundlegende Asset-Ordner [ist ein wichtiger Aspekt in der Verwaltung und stellt sicher, dass die Prozesse ordnungsgemäß unterstützt werden können.](./baseline-folders.md)
+Die Verwaltung des Benutzerzugriffs auf die [Grundlinien-Asset-Ordner](./baseline-folders.md) ist ein wichtiger Aspekt in der Governance und stellt sicher, dass die Prozesse ordnungsgemäß unterstützt werden können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/37696/?quality=12&learn=on&hidetitle=true)
