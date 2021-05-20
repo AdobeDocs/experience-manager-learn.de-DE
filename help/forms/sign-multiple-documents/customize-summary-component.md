@@ -1,7 +1,7 @@
 ---
-title: Zusammenfassungskomponente anpassen
-description: Erweitern Sie die Komponente für den Übersichtsschritt, um die Funktion zum Navigieren zum nächsten Formular im Paket einzuschließen.
-feature: Adaptive Forms
+title: Anpassen der Zusammenfassungskomponente
+description: Erweitern Sie die Komponente Zusammenfassungsschritt , um die Funktion zum Navigieren zum nächsten Formular im Paket einzuschließen.
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,13 +9,12 @@ activity: implement
 version: 6.4,6.5
 kt: 6894
 thumbnail: 6894.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '180'
 ht-degree: 2%
 
 ---
@@ -23,22 +22,22 @@ ht-degree: 2%
 
 # Übersichtsschritt anpassen
 
-Die Komponente Zusammenfassungsschritt wird verwendet, um die Zusammenfassung Ihrer Formularübermittlung mit einem Link zum Herunterladen des signierten Formulars anzuzeigen. Der Übersichtsschritt wird normalerweise im letzten Bereich des Formulars platziert.
-Für diesen Verwendungsfall haben wir eine neue Komponente erstellt, die auf der gebrauchsfertigen Zusammenfassungskomponente basiert, und die Funktion erweitert, um benutzerdefinierte clientlib einzubeziehen.
+Die Zusammenfassungsschritt-Komponente wird verwendet, um die Zusammenfassung Ihrer Formularübermittlung mit einem Link zum Herunterladen des signierten Formulars anzuzeigen. Der Übersichtsschritt wird normalerweise im letzten Bedienfeld Ihres Formulars platziert.
+Für diesen Anwendungsfall haben wir eine neue Komponente erstellt, die auf der vordefinierten Zusammenfassungskomponente basiert, und die Funktion erweitert, um benutzerdefinierte clientlib einzuschließen.
 
-Diese Komponente wird durch die Beschriftung &quot;Mehrere Formulare signieren&quot;gekennzeichnet
+Diese Komponente wird durch die Bezeichnung Sign Multiple Form identifiziert
 
-Der folgende Screenshot zeigt die neue Komponente, die erstellt wurde, um die Meldung nach Abschluss der Unterzeichnungszeremonie anzuzeigen
+Der folgende Screenshot zeigt die neue Komponente, die erstellt wurde, um die Nachricht nach Abschluss der Unterzeichnungszeremonie anzuzeigen
 
 ![Zusammenfassungskomponente](assets/summary.PNG)
 
-Die neue Komponente basiert auf der sofort einsetzbaren Übersichtskomponente.
+Die neue Komponente basiert auf der vordefinierten Übersichtskomponente .
 ![component-prop](assets/componentprop.PNG)
 
-Wir haben eine Schaltfläche hinzugefügt, um zum nächsten Formular zum Unterschreiben zu navigieren
+Wir haben eine Schaltfläche hinzugefügt, über die Sie zum nächsten Formular zum Signieren navigieren können
 ![template-code](assets/template-code.PNG)
 
-Die Datei &quot;summary.jsp&quot;hat den folgenden Code. Es enthält einen Verweis auf die Client-Bibliothek, die durch die Kategorien-ID **getnextform** identifiziert wird.
+Die summary.jsp hat den folgenden Code. Sie enthält einen Verweis auf die Client-Bibliothek, die durch die Kategorie-ID **getnextform** identifiziert wird.
 
 ```java
 <%--
@@ -51,6 +50,6 @@ Die Datei &quot;summary.jsp&quot;hat den folgenden Code. Es enthält einen Verwe
 
 ## Assets
 
-Die Komponente für die benutzerspezifische Zusammenfassung kann [von hier heruntergeladen werden](assets/custom-summary-step.zip)
+Die benutzerdefinierte Zusammenfassungskomponente kann [von hier heruntergeladen werden](assets/custom-summary-step.zip)
 
 
