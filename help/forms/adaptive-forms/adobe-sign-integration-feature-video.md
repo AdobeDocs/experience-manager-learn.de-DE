@@ -11,7 +11,6 @@ targetaudience: target-audience advanced
 index: y
 internal: n
 snippet: y
-translation-type: tm+mt
 source-git-commit: 4e1db553d9e8b4fcf5460c805874d3fc2ae5527c
 workflow-type: tm+mt
 source-wordcount: '91'
@@ -26,10 +25,10 @@ Verwenden von Adobe Sign mit AEM Forms
 
 >[!VIDEO](https://video.tv.adobe.com/v/18696?quality=9&learn=on)
 
-*In diesem Video werden die Einrichtung des Adobe Sign Cloud-Dienstes und das Hinzufügen mehrerer Unterschriftsfelder zu einem AEM adaptiven Formular erläutert.*
+*In diesem Video werden die Einrichtung des Adobe Sign-Cloud-Dienstes und das Hinzufügen mehrerer Signaturfelder zu einem AEM adaptiven Formular erläutert.*
 
 >[!NOTE]
 >
->Diese Funktion ist ab AEM 6.3 verfügbar.
+>Diese Funktion ist nur ab AEM 6.3 verfügbar.
 
 Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) für einen Link zu einer Live-Demo dieser Funktion.
