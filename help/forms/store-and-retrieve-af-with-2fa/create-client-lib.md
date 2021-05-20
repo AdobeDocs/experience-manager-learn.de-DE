@@ -1,7 +1,7 @@
 ---
-title: Erstellen von Clientbibliotheken
-description: Erstellen Sie clientlibrary, um das click-Ereignis der Schaltfläche "Speichern und beenden"zu verarbeiten
-feature: Adaptive Forms
+title: Erstellen von Client-Bibliotheken
+description: Erstellen Sie eine Client-Bibliothek, um das Klickereignis der Schaltfläche "Speichern und Beenden"zu verarbeiten.
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,22 +9,21 @@ activity: implement
 version: 6.4,6.5
 kt: 6597
 thumbnail: 6597.pg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '144'
 ht-degree: 8%
 
 ---
 
 # Client-Bibliothek erstellen
 
-Erstellen Sie [client lib](https://docs.adobe.com/content/help/de-DE/experience-manager-65/developing/introduction/clientlibs.html), die den Code zum Aufrufen der `doAjaxSubmitWithFileAttachment`-API für das click-Ereignis der Schaltfläche enthält, das von der CSS-Klasse **savebutton** identifiziert wird.  `guideBridge`  Die adaptiven Formulardaten `fileMap` und `mobileNumber` werden an den Endpunkt weitergeleitet, der `**/bin/storeafdatawithattachments` überwacht
+Erstellen Sie [client lib](https://docs.adobe.com/content/help/de-DE/experience-manager-65/developing/introduction/clientlibs.html) , die den Code zum Aufrufen der Methode `doAjaxSubmitWithFileAttachment` der `guideBridge`-API beim Klickereignis der Schaltfläche enthält, das von der CSS-Klasse **savebutton** identifiziert wird.  Wir übergeben die adaptiven Formulardaten `fileMap` und die `mobileNumber` an den Endpunkt, der unter `**/bin/storeafdatawithattachments` überwacht.
 
-Nach dem Speichern der Formulardaten wird eine eindeutige Anwendungs-ID generiert und dem Benutzer in einem Dialogfeld angezeigt. Wenn das Dialogfeld geschlossen wird, wird der Benutzer zum Formular weitergeleitet, damit er das gespeicherte adaptive Formular mit der eindeutigen Anwendungs-ID abrufen kann.
+Nachdem die Formulardaten gespeichert wurden, wird eine eindeutige Anwendungs-ID generiert und dem Benutzer in einem Dialogfeld angezeigt. Wenn das Dialogfeld geschlossen wird, wird der Benutzer zum Formular geleitet, über das er das gespeicherte adaptive Formular mit der eindeutigen Anwendungs-ID abrufen kann.
 
 ```java
 $(document).ready(function () {
@@ -70,6 +69,6 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> Wir haben [Bootbox-Javascript-Bibliothek](http://bootboxjs.com/examples.html) verwendet, um das Dialogfeld anzuzeigen
+> Wir haben [Bootbox-JavaScript-Bibliothek](http://bootboxjs.com/examples.html) verwendet, um das Dialogfeld anzuzeigen
 
-Die in diesem Beispiel verwendeten Clientbibliotheken können [von hier heruntergeladen werden](assets/client-libraries.zip)
+Die in diesem Beispiel verwendeten Client-Bibliotheken können [von hier heruntergeladen](assets/client-libraries.zip) werden.
