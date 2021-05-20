@@ -11,14 +11,13 @@ activity: setup
 version: 6.4,6.5
 uuid: bd63e207-4f4d-4f34-9ac4-7572ed26f646
 discoiquuid: 5e184e44-e385-4df7-b7ed-085239f2a642
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 12%
+source-wordcount: '246'
+ht-degree: 11%
 
 ---
 
@@ -31,34 +30,34 @@ Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/con
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336/?quality=9&learn=on)
 
-*In diesem Video wird der Vorgang zum Hinzufügen eines CAPTCHA zu einem AEM adaptiven Formular mithilfe des integrierten AEM CAPTCHA-Dienstes sowie des Google-Dienstes reCAPTCHA erläutert.*
+*Dieses Video führt Sie durch den Prozess, ein CAPTCHA zu einem AEM adaptiven Formular hinzuzufügen, das sowohl den integrierten CAPTCHA-Dienst AEM als auch den reCAPTCHA-Dienst von Google verwendet.*
 
 >[!NOTE]
 >
->Diese Funktion ist ab AEM 6.3 verfügbar.
+>Diese Funktion ist nur ab AEM 6.3 verfügbar.
 
 >[!NOTE]
 >
 >**Gehen Sie wie folgt vor, um reCaptcha in der Veröffentlichungsinstanz zu konfigurieren**
 >
->reCaptach in der Autoreninstanz konfigurieren
+>Konfigurieren von reCaptach in der Autoreninstanz
 >
->Öffnen Sie die felix [Webkonsole](http://localhost:4502/system/console/bundles) in der Autoreninstanz
+>Öffnen Sie die Felix [Web Console](http://localhost:4502/system/console/bundles) in der Autoreninstanz.
 >
->suchen Sie nach com.adobe.granite.crypto.file bundle
+>Suchen Sie nach com.adobe.granite.crypto.file bundle .
 >
->Notieren Sie die Bündel-ID. In meinem Fall ist es 20
+>Notieren Sie die Bundle-ID. In meiner Instanz ist es 20
 >
->Navigieren Sie zur Bundle-ID im Dateisystem Ihrer Autoreninstanz
+>Navigieren Sie zur Bundle-ID im Dateisystem in Ihrer Autoreninstanz.
 >
 >* &lt;Autor-AEM-Installationsverzeichnis>/crx-quickstart/launchpad/felix/bundle20/data
 * Kopieren Sie die HMAC- und die Master-Dateien
 
-Öffnen Sie die [felix-Webkonsole](http://localhost:4502/system/console/bundles) in Ihrer Veröffentlichungsinstanz. Suchen Sie nach com.adobe.granite.crypto.file bundle. Notieren Sie die Bündel-ID
-Navigieren Sie zur Bundle-ID im Dateisystem Ihrer Veröffentlichungsinstanz
+Öffnen Sie die [felix-Webkonsole](http://localhost:4502/system/console/bundles) in Ihrer Veröffentlichungsinstanz. Suchen Sie nach dem com.adobe.granite.crypto.file -Bundle. Beachten Sie die Bundle-ID
+Navigieren Sie zur Bundle-ID im Dateisystem Ihrer Veröffentlichungsinstanz.
 * &lt;Veröffentlichung-AEM-Installationsverzeichnis>/crx-quickstart/launchpad/felix/bundle20/data
-* die vorhandenen HMAC- und Übergeordnet-Dateien löschen.
-* Fügen Sie die aus der Autoreninstanz kopierten HMAC- und Übergeordnet-Dateien ein.
+* Löschen Sie die vorhandenen HMAC- und Übergeordneten Dateien.
+* Fügen Sie die HMAC- und Übergeordneten Dateien ein, die aus der Autoreninstanz kopiert wurden.
 
 AEM Veröffentlichungsserver neu starten
 
