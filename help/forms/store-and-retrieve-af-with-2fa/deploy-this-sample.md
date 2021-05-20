@@ -1,7 +1,7 @@
 ---
-title: Beispiel bereitstellen
-description: Anwendungsfall auf Ihrer lokalen AEM Forms-Instanz ausführen
-feature: Adaptive Forms
+title: Bereitstellen des Beispiels
+description: Anwendungsfall abrufen, der auf Ihrer lokalen AEM Forms-Instanz ausgeführt wird
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,22 +9,21 @@ activity: implement
 version: 6.4,6.5
 kt: 6602
 thumbnail: 6602.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '375'
-ht-degree: 2%
+source-wordcount: '373'
+ht-degree: 1%
 
 ---
 
 
 
-# Beispiel bereitstellen
+# Bereitstellen des Beispiels
 
-Gehen Sie wie folgt vor, um diesen Verwendungsfall auf Ihrem System zu verwenden:
+Um dieses Anwendungsbeispiel auf Ihrem System verwenden zu können, folgen Sie den folgenden Anweisungen:
 
 >[!NOTE]
 >Es wird davon ausgegangen, dass Sie AEM Forms auf Port 4502 ausführen.
@@ -32,7 +31,7 @@ Gehen Sie wie folgt vor, um diesen Verwendungsfall auf Ihrem System zu verwenden
 
 ## Datenbank erstellen
 
-In diesem Beispiel werden die Daten des adaptiven Formulars mit der MySQL-Datenbank gespeichert. Sie müssen das [Datenbank-Schema erstellen, indem Sie die Schema-Datei](assets/data-base-schema.sql) in MySQL Workbench importieren.
+In diesem Beispiel wird die MySQL-Datenbank verwendet, um die Daten des adaptiven Formulars zu speichern. Sie müssen das Datenbankschema [erstellen, indem Sie die Schemadatei](assets/data-base-schema.sql) in MySQL Workbench importieren.
 
 ## Datenquelle erstellen
 
@@ -40,35 +39,35 @@ Sie müssen eine Datenquelle mit dem Namen **StoreAndRetrieveAfData** erstellen.
 
 ## Formulardatenmodell erstellen
 
-Das Formulardatenmodell muss auf der Grundlage dieser Datenquelle mit dem Namen **StoreAndRetrieveAfData** erstellt werden. Dieses Formulardatenmodell wird verwendet, um die mit der Anwendungs-ID verknüpfte Mobiltelefonnummer abzurufen. Das Formulardatenmodell kann [von hier heruntergeladen werden.](assets/2-Factor-Authentication-DataSource-and-FDM.zip)
+Das Formulardatenmodell muss auf Grundlage dieser Datenquelle mit dem Namen **StoreAndRetrieveAfData** erstellt werden. Dieses Formulardatenmodell wird verwendet, um die Mobiltelefonnummer abzurufen, die mit der Anwendungs-ID verknüpft ist. Das Formulardatenmodell kann [von hier heruntergeladen werden.](assets/2-Factor-Authentication-DataSource-and-FDM.zip)
 
-## Erstellen Sie ein Entwicklerkonto mit nexmo
+## Erstellen eines Entwicklerkontos mit nexmo
 
-Erstellen Sie ein Entwicklerkonto mit [Nexmo](https://dashboard.nexmo.com/) zum Senden und Überprüfen von OTP-Codes. Notieren Sie sich den API-Schlüssel und den geheimen API-Schlüssel. Die Datenquelle und das Formulardatenmodell wurden für Sie bereits für diesen Dienst erstellt und sind mit den im vorherigen Schritt erwähnten Elementen enthalten.
+Erstellen Sie ein Entwicklerkonto mit [Nexmo](https://dashboard.nexmo.com/) zum Senden und Überprüfen von OTP-Codes. Notieren Sie sich den API-Schlüssel und den API-Geheimschlüssel. Die Datenquelle und das Formulardatenmodell wurden für Sie bereits für diesen Dienst erstellt und sind mit den im vorherigen Schritt erwähnten Assets enthalten.
 
 ## Bereitstellen der folgenden OSGi-Pakete
 
-Stellen Sie das Bundle bereit, das den [Code zum Speichern und Abrufen von Daten aus der Datenbank ](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar) enthält.
+Stellen Sie das Bundle bereit, das über den [Code zum Speichern und Abrufen von Daten aus der Datenbank](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar) verfügt.
 Stellen Sie das [DevelopingWithServiceUser-Bundle](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar) bereit.
 
 ## Client-Bibliothek bereitstellen
 
 Das Beispiel verwendet 2 Client-Bibliotheken. Importieren Sie diese [Client-Bibliotheken](assets/client-libraries.zip) in AEM.
 
-## Benutzerdefinierte Vorlage für adaptive Formulare importieren
+## Importieren der benutzerdefinierten adaptiven Formularvorlage
 
-Die in dieser Demo verwendeten Musterformulare basieren auf einer benutzerdefinierten Vorlage. [benutzerdefinierte Vorlage in AEM](assets/custom-template-with-page-component.zip) importieren
+Die in dieser Demo verwendeten Musterformulare basieren auf einer benutzerdefinierten Vorlage. Importieren Sie die benutzerdefinierte Vorlage [in AEM](assets/custom-template-with-page-component.zip)
 
-## Importieren der adaptiven Musterformulare
+## Importieren der adaptiven Beispielformulare
 
-Die beiden Formulare, aus denen dieses Muster besteht, müssen in AEM importiert werden. Die Musterformulare können [von hier heruntergeladen werden](assets/sample-forms.zip)
+Die beiden Formulare, aus denen dieses Muster besteht, müssen in AEM importiert werden. Die Beispielformulare können [von hier heruntergeladen werden](assets/sample-forms.zip)
 
-Öffnen Sie [MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) im Bearbeitungsmodus. Geben Sie die Werte für API-Schlüssel und API-geheim in den entsprechenden Feldern im adaptiven Formular an.
+Öffnen Sie [MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) im Bearbeitungsmodus. Geben Sie die Werte für API-Schlüssel und API-Geheimnis in den entsprechenden Feldern im adaptiven Formular an.
 
 ## Testen der Lösung
 
-Vorschau der [StoreAFWithAttachments](http://localhost:4502/content/dam/formsanddocuments/storeafwithattachments/jcr:content?wcmmode=disabled)
-Geben Sie Ihre Mobiltelefonnummer einschließlich des Ländercodes ein, geben Sie Ihre Benutzerdaten ein und fügen Sie einige Anlagen hinzu. Klicken Sie auf die Schaltfläche &quot;Speichern und beenden&quot;, um das adaptive Formular und seine Anlagen zu speichern.
+Anzeigen einer Vorschau der [StoreAFWithAttachments](http://localhost:4502/content/dam/formsanddocuments/storeafwithattachments/jcr:content?wcmmode=disabled)
+Geben Sie Ihre Mobiltelefonnummer einschließlich Ländercode ein, geben Sie Ihre Benutzerdetails ein und fügen Sie einige Anhänge hinzu. Klicken Sie auf die Schaltfläche &quot;Speichern und beenden&quot;, um das adaptive Formular und seine Anlagen zu speichern.
 
 
 ## Nachweis des Anwendungsfalls
