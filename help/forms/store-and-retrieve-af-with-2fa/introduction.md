@@ -1,7 +1,7 @@
 ---
-title: Speichern und Abrufen von Formulardaten mit Anlagen aus der MySQL-Datenbank
-description: Mehrteilige Übung, um Sie durch die Schritte zum Speichern und Abrufen von Formulardaten mit Anlagen zu führen
-feature: Adaptive Forms
+title: Speichern und Abrufen von Formulardaten mit Anhängen aus der MySQL-Datenbank
+description: Mehrteilige Anleitung, um Sie durch die Schritte zu führen, die zum Speichern und Abrufen von Formulardaten mit Anhängen erforderlich sind
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,27 +9,26 @@ activity: implement
 version: 6.4,6.5
 kt: 6593
 thumbnail: 327122.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '210'
 ht-degree: 4%
 
 ---
 
 
-# Speichern und Abrufen adaptiver Formulardaten mit 2FA
+# Speichern und Abrufen von adaptiven Formulardaten mit 2FA
 
-Dieses Lernprogramm führt Sie durch die Schritte zum Speichern und Abrufen adaptiver Formulardaten mit Anlagen mit 2FA. In diesem Lernprogramm wurde die MySQL-Datenbank verwendet, um Daten des adaptiven Formulars zu speichern. Datenbank Ihrer Wahl kann verwendet werden, um die Daten zu speichern, solange Sie die datenbankspezifischen Treiber in AEM bereitgestellt haben. Auf hoher Ebene sind die folgenden Schritte erforderlich, um den Verwendungsfall zu erreichen:
+In diesem Tutorial werden Sie durch die Schritte geführt, die zum Speichern und Abrufen von adaptiven Formulardaten mit Anhängen mit 2FA erforderlich sind. In diesem Tutorial wurde die MySQL-Datenbank zum Speichern von adaptiven Formulardaten verwendet. Datenbank Ihrer Wahl kann zum Speichern der Daten verwendet werden, solange Sie die datenbankspezifischen Treiber in AEM bereitgestellt haben. Auf hoher Ebene sind die folgenden Schritte erforderlich, um den Anwendungsfall zu erreichen:
 
-* Verwenden Sie die GuideBridge-API, um Zugriff auf die Daten des adaptiven Formulars zu erhalten
+* Zugriff auf die Daten des adaptiven Formulars über die GuideBridge-API erhalten
 
-* Führen Sie einen POST-Aufruf an ein Servlet aus. Dieses Servlet speichert die Daten in der Datenbank und die Formularanlagen im CRX-Repository. Die in der Datenbank gespeicherten Daten sind mit einer GUID verknüpft.
+* Führen Sie einen POST-Aufruf an ein Servlet durch. Dieses Servlet speichert die Daten in der Datenbank und die Formularanlagen im CRX-Repository. Die in der Datenbank gespeicherten Daten sind einer GUID zugeordnet.
 
-* Wenn Sie das adaptive Formular mit den gespeicherten Daten füllen möchten, rufen Sie die mit der GUID verknüpften Daten ab und füllen das adaptive Formular mit der Methode **request.setAttribute**.
+* Wenn Sie das adaptive Formular mit den gespeicherten Daten füllen möchten, rufen Sie die mit der GUID verknüpften Daten ab und füllen das adaptive Formular mit der Methode **request.setAttribute** aus.
 
 ## Nachweis des Anwendungsfalls
 
@@ -37,9 +36,9 @@ Dieses Lernprogramm führt Sie durch die Schritte zum Speichern und Abrufen adap
 
 ## Voraussetzungen
 
-Die Audience dieses Inhalts wird voraussichtlich einige Erfahrungen in den folgenden Bereichen aufweisen:
+Die Zielgruppe dieses Inhalts wird voraussichtlich über Erlebnisse in den folgenden Bereichen verfügen:
 
 * Adaptives Formular
 * Formulardatenmodell
-* OSGi-Dienste/Komponenten
+* OSGi-Dienste/-Komponenten
 * AEM Client-Bibliotheken
