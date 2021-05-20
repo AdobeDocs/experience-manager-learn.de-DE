@@ -1,25 +1,24 @@
 ---
-title: Assets, Admin-Suchleiste
-description: Die Suchleiste "Assets Admin"ermöglicht die Suche nach Assets anhand benutzerdefinierter Kriterien in Omniture.
+title: Asset-Admin-Suchleiste
+description: Die Asset-Admin-Suchleiste ermöglicht die Suche nach Assets mithilfe benutzerdefinierter Kriterien in Omnisearch.
 sub-product: Assets
-feature: Search
+feature: Suchen
 version: cloud-service
 kt: 4995
 thumbnail: 35842.jpg
-topic: Content Management
+topic: Content Management
 role: Administrator
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 10%
+source-wordcount: '44'
+ht-degree: 9%
 
 ---
 
 
-# Assets, Admin-Suchleiste
+# Asset-Admin-Suchleiste
 
-Die Suchleiste &quot;Assets Admin&quot;ermöglicht die Suche nach Assets anhand benutzerdefinierter Kriterien in Omniture.
+Die Asset-Admin-Suchleiste ermöglicht die Suche nach Assets mithilfe benutzerdefinierter Kriterien in Omnisearch.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35842/?quality=12&learn=on&hidetitle=true)
