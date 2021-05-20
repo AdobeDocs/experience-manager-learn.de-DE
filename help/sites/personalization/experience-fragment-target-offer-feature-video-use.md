@@ -1,8 +1,8 @@
 ---
-title: Verwenden von AEM Experience Fragment-Angeboten in Adobe Target
-seo-title: Verwenden von AEM Experience Fragment-Angeboten in Adobe Target
-description: Adobe Experience Manager 6.4 stellt den Personalisierungsarbeitsablauf zwischen AEM und Zielgruppe vor. Erlebnisse, die in AEM erstellt wurden, können jetzt direkt als HTML-Angebot an Adobe Target übermittelt werden. Marketingexperten können Inhalte nahtlos über verschiedene Kanal hinweg testen und personalisieren.
-seo-description: Adobe Experience Manager 6.4 stellt den Personalisierungsarbeitsablauf zwischen AEM und Zielgruppe vor. Erlebnisse, die in AEM erstellt wurden, können jetzt direkt als HTML-Angebot an Adobe Target übermittelt werden. Marketingexperten können Inhalte nahtlos über verschiedene Kanal hinweg testen und personalisieren.
+title: Verwenden AEM Experience Fragment-Angebote in Adobe Target
+seo-title: Verwenden AEM Experience Fragment-Angebote in Adobe Target
+description: Adobe Experience Manager 6.4 stellt den Personalisierungs-Workflow zwischen AEM und Target um. Erlebnisse, die in AEM erstellt wurden, können jetzt direkt als HTML-Angebote an Adobe Target übermittelt werden. Damit können Marketingexperten Inhalte kanalübergreifend nahtlos testen und personalisieren.
+seo-description: Adobe Experience Manager 6.4 stellt den Personalisierungs-Workflow zwischen AEM und Target um. Erlebnisse, die in AEM erstellt wurden, können jetzt direkt als HTML-Angebote an Adobe Target übermittelt werden. Damit können Marketingexperten Inhalte kanalübergreifend nahtlos testen und personalisieren.
 sub-product: content-services
 feature: Experience Fragments
 topics: integrations, personalization
@@ -12,13 +12,12 @@ activity: setup
 version: 6.4, 6.5
 uuid: 7b91f65d-5a35-419a-8cf7-be850165dd33
 discoiquuid: 45fc8d83-73fb-42e5-9c92-ce588c085ed4
-topic: Personalization
+topic: 'Personalisierung '
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '462'
 ht-degree: 11%
 
 ---
@@ -26,24 +25,24 @@ ht-degree: 11%
 
 # Verwenden von Experience Fragment-Angeboten in Adobe Target{#using-experience-fragment-offers-within-adobe-target}
 
-Adobe Experience Manager 6.4 stellt den Personalisierungsarbeitsablauf zwischen AEM und Zielgruppe vor. Erlebnisse, die in AEM erstellt wurden, können jetzt direkt als HTML-Angebot an Adobe Target übermittelt werden. Marketingexperten können Inhalte nahtlos über verschiedene Kanal hinweg testen und personalisieren.
+Adobe Experience Manager 6.4 stellt den Personalisierungs-Workflow zwischen AEM und Target um. Erlebnisse, die in AEM erstellt wurden, können jetzt direkt als HTML-Angebote an Adobe Target übermittelt werden. Damit können Marketingexperten Inhalte kanalübergreifend nahtlos testen und personalisieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/22383/?quality=12&learn=on)
 
 >[!NOTE]
 >
->Es wird empfohlen, die at.js-Client-Bibliothek zu verwenden. Es empfiehlt sich, Tag-Management-Lösungen wie Launch by Adobe, Adobe DTM oder eine Drittanbieter-Tag-Management-Lösung zu verwenden, um Ihren Siteseiten Zielgruppe-Bibliotheken hinzuzufügen.
+>Es wird empfohlen, die at.js-Client-Bibliothek zu verwenden. Es empfiehlt sich daher, Tag-Management-Lösungen wie Launch by Adobe, Adobe DTM oder beliebige Drittanbieter-Tag-Management-Lösungen zu verwenden, um Ihren Siteseiten Zielbibliotheken hinzuzufügen
 
 >[!NOTE]
 >
->AEM Experience Fragment-Angebot in Adobe Target sind auch als Feature Pack für AEM 6.3 verfügbar. Im folgenden Abschnitt finden Sie Funktionspakete und Abhängigkeiten.
+>AEM Experience Fragment-Angebote in Adobe Target sind auch als Feature Pack für AEM 6.3-Benutzer verfügbar. Im folgenden Abschnitt finden Sie Feature Packs und Abhängigkeiten.
 
 
-* Adobe Experience Managers benutzerfreundlicher und leistungsstarker Content-Erstellungsmechanismus sowie Adobe Targets künstliche Intelligenz (AI) und maschinelles Lernen unterstützen Autoren bei der Erstellung und Verwaltung von Inhalten für alle Kanal an einem zentralen Ort. Mit der Möglichkeit, Erlebnisfragmente als HTML-Angebot in Adobe Target zu exportieren, haben Marketingexperten jetzt mehr Flexibilität, um mit diesen Angeboten ein personalisierteres Erlebnis zu erstellen, und können nun jedes von ihnen erstellte Erlebnis testen und skalieren.
-* Der Hauptunterschied zwischen den HTML-Angeboten und den Experience Fragment-Angeboten besteht darin, dass die Bearbeitung für die spätere Bearbeitung nur in AEM und dann mit Adobe Target synchronisiert werden kann
-* Die auf den Experience Fragment-Ordner angewendete Konfiguration des Zielgruppe Cloud-Dienstes erbt alle Erlebnisfragmente, die direkt im übergeordneten Ordner erstellt wurden. Die Konfiguration der übergeordneten Cloud-Dienste wird nicht vom untergeordneten Ordner übernommen.
-* Um ein personalisiertes Angebot zu erstellen, können wir jetzt auf einfache Weise in AEM gespeicherte Inhalte nutzen.
-* Sie können verschiedene Aktivitäten der Zielgruppe erstellen, einschließlich der Sensei-basierten Aktivitäten wie &quot;Autom. zuordnen&quot;, &quot;Auto-Zielgruppe&quot;und &quot;Automated Personalization&quot;
+* Adobe Experience Managers benutzerfreundlicher und leistungsstarker Mechanismus zur Inhaltserstellung sowie die künstliche Intelligenz (AI) und maschinelles Lernen von Adobe Target helfen Inhaltsautoren bei der Erstellung und Verwaltung von Inhalten für alle Kanäle an einem zentralen Ort. Mit der Möglichkeit, Experience Fragments als HTML-Angebote in Adobe Target zu exportieren, haben Marketingexperten jetzt mehr Flexibilität, mit diesen Angeboten ein personalisierteres Erlebnis zu erstellen, und können nun jedes von ihnen erstellte Erlebnis testen und skalieren.
+* Der Hauptunterschied zwischen den HTML-Angeboten und Experience Fragment-Angeboten besteht darin, dass die Bearbeitung für die spätere Bearbeitung nur in AEM und dann mit Adobe Target synchronisiert werden kann
+* Die auf den Experience Fragment-Ordner angewendete Target Cloud-Dienstkonfiguration erbt alle Experience Fragments, die direkt im übergeordneten Ordner erstellt wurden. Der untergeordnete Ordner übernimmt nicht die übergeordnete Cloud Services-Konfiguration.
+* Um ein personalisiertes Angebot zu erstellen, können wir nun einfach die in AEM gespeicherten Inhalte nutzen.
+* Sie können Target-Aktivitätstypen erstellen, einschließlich Sensei-gestützter Aktivitäten wie automatisierte Zuordnung, automatisches Targeting und Automated Personalization
 
 ## AEM 6.3 Feature Packs und Abhängigkeiten {#aem-feature-packs-and-dependencies}
 
@@ -55,5 +54,5 @@ Adobe Experience Manager 6.4 stellt den Personalisierungsarbeitsablauf zwischen 
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Dokumentation zu Erlebnisfragmenten](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html)
+* [Dokumentation zu Experience Fragments](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html)
 * [Verwenden von Experience Fragments](/help/sites/experience-fragments/experience-fragments-feature-video-use.md)
