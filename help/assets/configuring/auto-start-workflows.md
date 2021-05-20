@@ -1,25 +1,24 @@
 ---
-title: Workflows
-description: Der automatische Beginn Workflows die Verarbeitung von Assets erweitern, indem beim Hochladen oder erneuten Verarbeiten automatisch ein benutzerdefinierter Workflow aufgerufen wird.
+title: Automatisch startende Workflows
+description: Automatisch startende Workflows erweitern die Asset-Verarbeitung, indem beim Hochladen oder erneuten Verarbeiten automatisch ein benutzerdefinierter Workflow aufgerufen wird.
 sub-product: Assets
-feature: Asset Compute Microservices, Workflow
+feature: asset compute Microservices, Workflow
 version: cloud-service
 kt: 4994
 thumbnail: 37323.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 6%
+source-wordcount: '44'
+ht-degree: 4%
 
 ---
 
 
-# Workflows
+# Automatisch startende Workflows
 
-Der automatische Beginn Workflows die Verarbeitung von Assets in AEM als Cloud Service erweitern, indem beim Hochladen oder erneuten Verarbeiten automatisch ein benutzerdefinierter Workflow aufgerufen wird.
+Workflows mit automatischem Start erweitern die Asset-Verarbeitung in AEM als Cloud Service, indem beim Hochladen oder erneuten Verarbeiten automatisch ein benutzerdefinierter Workflow aufgerufen wird.
 
 >[!VIDEO](https://video.tv.adobe.com/v/37323/?quality=12&learn=on&hidetitle=true)
