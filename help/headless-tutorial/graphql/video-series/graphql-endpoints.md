@@ -3,7 +3,7 @@ title: GraphQL-Endpunkte
 description: 'Erfahren Sie, wie Sie GraphQL-Endpunkte aktivieren, Abfragen ausführen und veröffentlichen und schützen können. '
 sub-product: Assets
 version: cloud-service
-topic: Kopflos, Content-Management
+topic: Headless, Content Management
 feature: Inhaltsfragmente, GraphQL-APIs
 role: Developer
 level: Beginner
@@ -24,7 +24,7 @@ Erfahren Sie, wie Sie sichere GraphQL-Endpunkte aktivieren, Abfragen ausführen 
 In diesem Video werden Sie:
 
 + Erfahren Sie, wie Sie GraphQL-Endpunkte aktivieren
-+ Erfahren Sie, wie Sie GraphQL-Abfragen für Endpunkte ausführen
-+ Verstehen Sie, wie GraphQL-Endpunkte veröffentlicht und geschützt werden.
++ Erfahren Sie, wie Sie GraphQL-Abfragen für Endpunkte ausführen.
++ Verstehen Sie, wie Sie GraphQL-Endpunkte veröffentlichen und sichern
 
 >[!VIDEO](https://video.tv.adobe.com/v/333339/?quality=12&learn=on)
