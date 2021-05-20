@@ -1,9 +1,9 @@
 ---
-title: Erstellen einer Seite in AEM Sites
-seo-title: Im folgenden Video wird das Erstellen einer neuen Seite in Adobe Experience Manager Sites mithilfe der Benutzeroberfläche des Site-Editors veranschaulicht.
-description: Im folgenden Video wird das Erstellen einer neuen Seite in Adobe Experience Manager Sites mithilfe der Benutzeroberfläche des Site-Editors veranschaulicht.
-seo-description: Im folgenden Video wird das Erstellen einer neuen Seite in Adobe Experience Manager Sites mithilfe der Benutzeroberfläche des Site-Editors veranschaulicht.
-feature: Page Editor, Editable Templates
+title: Seitenbearbeitung in AEM Sites
+seo-title: Im folgenden Video wird gezeigt, wie eine neue Seite in Adobe Experience Manager Sites mithilfe der Benutzeroberfläche des Site-Editors erstellt wird
+description: Im folgenden Video wird gezeigt, wie eine neue Seite in Adobe Experience Manager Sites mithilfe der Benutzeroberfläche des Site-Editors erstellt wird
+seo-description: Im folgenden Video wird gezeigt, wie eine neue Seite in Adobe Experience Manager Sites mithilfe der Benutzeroberfläche des Site-Editors erstellt wird
+feature: Seiten-Editor, bearbeitbare Vorlagen
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,40 +11,39 @@ activity: use
 version: 6.3, 6.4, 6.5
 kt: 4497
 thumbnail: 31828.jpg
-topic: Content Management
+topic: Content Management
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 17%
+source-wordcount: '182'
+ht-degree: 18%
 
 ---
 
 
-# Erstellen einer Seite {#authoring-page-aem-sites}
+# Verfassen einer Seite {#authoring-page-aem-sites}
 
 Erfahren Sie, wie Sie eine Seite in Adobe Experience Manager Sites mithilfe der Benutzeroberfläche des Site-Editors erstellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/31828?quality=12&learn=on)
 
-In diesem Video werden die folgenden Funktionen und Funktionen behandelt:
+In diesem Video werden die folgenden Funktionen behandelt:
 
 * Erstellen einer Seite basierend auf einer Vorlage
-* Stellt verschiedene Authoring-Modi für eine Seite vor
+* Führt verschiedene Authoring-Modi für eine Seite ein
    * Bearbeiten
    * Layout
    * Entwickler
    * Timewarp 
 * Funktionen des Seiteneditors
-   * Komponentensuche
+   * Komponenten-Finder
    * Asset-Suche
 * Hinzufügen von Inhalten zu einer vorhandenen Komponente
-* Hinzufügen einer neuen Komponente zur Seite
+* Hinzufügen einer neuen Komponente zu Ihrer Seite
 * Seiteneigenschaften
    * Seite veröffentlichen
-   * Seite &quot;Veröffentlichung rückgängig machen&quot;
+   * Veröffentlichung der Seite rückgängig machen
    * Vorlage bearbeiten
    * Als veröffentlicht anzeigen
 
