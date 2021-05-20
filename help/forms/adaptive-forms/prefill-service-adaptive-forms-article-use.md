@@ -1,10 +1,10 @@
 ---
-title: Vorfülldienst im adaptiven Forms
-seo-title: Vorfülldienst im adaptiven Forms
-description: Vorauffüllen adaptiver Formulare durch Abrufen von Daten aus Back-End-Datenquellen
-seo-description: Vorauffüllen adaptiver Formulare durch Abrufen von Daten aus Back-End-Datenquellen
+title: Vorbefüllungsdienst in Adaptive Forms
+seo-title: Vorbefüllungsdienst in Adaptive Forms
+description: Vorausfüllen adaptiver Formulare durch Abrufen von Daten aus Back-End-Datenquellen.
+seo-description: Vorausfüllen adaptiver Formulare durch Abrufen von Daten aus Back-End-Datenquellen.
 sub-product: Formulare
-feature: Adaptive Forms
+feature: Adaptive Formulare
 topics: integrations
 audience: developer
 doc-type: article
@@ -12,29 +12,28 @@ activity: implement
 version: 6.4,6.5
 uuid: 26a8cba3-7921-4cbb-a182-216064e98054
 discoiquuid: 936ea5e9-f5f0-496a-9188-1a8ffd235ee5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '481'
 ht-degree: 7%
 
 ---
 
 
-# UsingPrefill-Dienst im adaptiven Forms
+# Verwenden des Vorbefüllungs-Dienstes in Adaptive Forms
 
-Sie können die Felder eines adaptiven Formulars mit vorhandenen Daten vorbefüllen. Wenn ein Benutzer ein Formular öffnet, werden die Werte für diese Felder vorbefüllt. Es gibt mehrere Möglichkeiten, adaptive Formularfelder im Voraus auszufüllen. In diesem Artikel werden wir uns mit dem Vorausfüllen des adaptiven Formulars mit dem AEM Forms-Vorfülldienst beschäftigen.
+Sie können die Felder eines adaptiven Formulars mit vorhandenen Daten vorbefüllen. Wenn ein Benutzer ein Formular öffnet, werden die Werte für diese Felder vorbefüllt. Es gibt mehrere Möglichkeiten, adaptive Formularfelder vorab auszufüllen. In diesem Artikel werden wir uns das Vorausfüllen adaptiver Formulare mithilfe des AEM Forms-Vorbefüllungs-Dienstes ansehen.
 
-Weitere Informationen zu den verschiedenen Methoden zum Vorausfüllen adaptiver Formulare finden Sie in [dieser Dokumentation](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
+Weitere Informationen zu verschiedenen Methoden zum Vorausfüllen adaptiver Formulare finden Sie in [dieser Dokumentation](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
 
-Um ein adaptives Formular mit dem Vorfülldienst vorab auszufüllen, müssen Sie eine Klasse erstellen, die die DataProvider-Schnittstelle implementiert. Die Methode getPrefillData verfügt über die Logik zum Erstellen und Zurückgeben von Daten, die das adaptive Formular zum Vorausfüllen der Felder benötigt. Bei dieser Methode können Sie die Daten von einer beliebigen Quelle abrufen und den Eingabestream des Dokuments zurückgeben. Der folgende Beispielcode ruft die Benutzerdaten des angemeldeten Profils ab und erstellt ein XML-Dokument, dessen Eingabestream zurückgegeben wird, um von den adaptiven Formularen genutzt zu werden.
+Um das adaptive Formular mit dem Vorbefüllungs-Dienst vorab auszufüllen, müssen Sie eine Klasse erstellen, die die DataProvider-Schnittstelle implementiert. Die Methode getPrefillData verfügt über die Logik zum Erstellen und Zurückgeben von Daten, die das adaptive Formular zum Vorausfüllen der Felder benötigt. Bei dieser Methode können Sie die Daten aus einer beliebigen Quelle abrufen und den Eingabestream des Datendokuments zurückgeben. Der folgende Beispielcode ruft die Benutzerprofilinformationen des angemeldeten Benutzers ab und erstellt ein XML-Dokument, dessen Eingabestream zurückgegeben wird, um von den adaptiven Formularen genutzt zu werden.
 
-Im folgenden Codeausschnitt finden Sie eine Klasse, die die DataProvider-Schnittstelle implementiert. Wir erhalten Zugriff auf den angemeldeten Benutzer und rufen dann die Informationen zum Profil des angemeldeten Benutzers ab. Anschließend erstellen wir ein XML-Dokument mit einem Stamm-Node-Element namens &quot;data&quot;und hängen entsprechende Elemente an diese Daten-Node an. Nachdem das XML-Dokument erstellt wurde, wird der Eingabestream des XML-Dokuments zurückgegeben.
+Im folgenden Codefragment haben wir eine Klasse, die die DataProvider-Schnittstelle implementiert. Wir erhalten Zugriff auf den angemeldeten Benutzer und rufen dann die Profilinformationen des angemeldeten Benutzers ab. Anschließend erstellen wir ein XML-Dokument mit einem Stammknotenelement namens &quot;data&quot;und hängen entsprechende Elemente an diesen Datenknoten an. Nachdem das XML-Dokument erstellt wurde, wird der Eingabestream des XML-Dokuments zurückgegeben.
 
-Diese Klasse wird dann zu OSGi-Bundle verarbeitet und in AEM bereitgestellt. Sobald das Bundle bereitgestellt ist, steht dieser Vorfülldienst als Vorfülldienst für Ihr adaptives Formular zur Verfügung.
+Diese Klasse wird dann in ein OSGi-Bundle umgewandelt und in AEM bereitgestellt. Sobald das Bundle bereitgestellt ist, ist dieser Vorbefüllungs-Dienst verfügbar, der als Vorbefüllungs-Dienst für Ihr adaptives Formular verwendet werden kann.
 
 ```java
 public class PrefillAdaptiveForm implements DataProvider {
@@ -90,17 +89,17 @@ public class PrefillAdaptiveForm implements DataProvider {
 
 Um diese Funktion auf Ihrem Server zu testen, führen Sie die folgenden Schritte aus
 
-* [Herunterladen und Extrahieren des Inhalts der ZIP-Datei auf Ihren Computer](assets/prefillservice.zip)
-* Vergewissern Sie sich, dass die [Profil des Benutzers](http://localhost:4502/libs/granite/security/content/useradmin)-Anmeldung vollständig ausgefüllt ist. Dies ist eine Voraussetzung, damit das Beispiel funktioniert. Das Beispiel enthält keine Fehlerprüfung auf fehlende Eigenschaften des Profils.
-* Stellen Sie das Bundle mit der [AEM Webkonsole](http://localhost:4502/system/console/bundles) bereit.
-* Adaptives Formular mit der XSD erstellen
-* Verknüpfen Sie &quot;Custom AEM Form Pre Fill Service&quot;als Vorausfülldienst für Ihr adaptives Formular.
-* Ziehen Sie Schema-Elemente per Drag &amp; Drop in das Formular
+* [Laden Sie den Inhalt der ZIP-Datei herunter und extrahieren Sie ihn auf Ihren Computer](assets/prefillservice.zip)
+* Vergewissern Sie sich, dass die angemeldeten [Benutzerprofile](http://localhost:4502/libs/granite/security/content/useradmin) vollständig ausgefüllt sind. Dies ist erforderlich, damit das Beispiel funktioniert. Für das Beispiel gibt es keine Fehlerprüfung auf fehlende Benutzerprofileigenschaften.
+* Stellen Sie das Bundle mithilfe der [AEM Web-Konsole](http://localhost:4502/system/console/bundles) bereit.
+* Erstellen eines adaptiven Formulars mit der XSD
+* Verknüpfen Sie &quot;Custom AEM Form Pre Fill Service&quot;als Vorbefüllungs-Dienst für Ihr adaptives Formular
+* Ziehen Sie Schemaelemente per Drag-and-Drop in das Formular
 * Nutzen Sie die Funktion zur Formularvorschau.
 
 >[!NOTE]
 >
->Wenn das adaptive Formular auf XSD basiert, stellen Sie sicher, dass das vom Vorausfülldienst zurückgegebene XML-Dokument mit der XSD übereinstimmt, auf der Ihr adaptives Formular basiert.
+>Wenn das adaptive Formular auf XSD basiert, stellen Sie sicher, dass das vom Vorbefüllungs-Dienst zurückgegebene XML-Dokument mit der XSD übereinstimmt, auf der Ihr adaptives Formular basiert.
 >
->Wenn das adaptive Formular nicht auf XSD basiert, müssen Sie die Felder manuell binden. Um beispielsweise ein adaptives Formularfeld an ein fname-Element in den XML-Daten zu binden, verwenden Sie `/data/fname` in der Bindungsreferenz des adaptiven Formularfelds.
+>Wenn das adaptive Formular nicht auf XSD basiert, müssen Sie die Felder manuell binden. Um beispielsweise ein Feld im adaptiven Formular an ein Fname-Element in den XML-Daten zu binden, verwenden Sie `/data/fname` in der Bindungsverweis des Felds für das adaptive Formular.
 
