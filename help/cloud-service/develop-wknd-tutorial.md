@@ -5,14 +5,13 @@ description: Steigen Sie gerade in die Entwicklung mit AEM ein? Benötigen Sie e
 seo-description: Steigen Sie gerade in die Entwicklung mit AEM ein? Benötigen Sie einen Auffrischungskurs zu Best Practices? Dann sind Sie hier richtig! In diesem mehrteiligen Tutorial lernen Entwickler, die gerade mit AEM beginnen, wie sie eine Website in AEM mit den neuesten Standards und Technologien implementieren.
 content-type: reference
 topic-tags: introduction
-feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
-topic: Development
+feature: AEM Projektarchetyp, Kernkomponenten, Seiten-Editor, bearbeitbare Vorlagen
+topic: Entwicklung
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '364'
 ht-degree: 57%
 
 ---
@@ -34,16 +33,16 @@ Das Tutorial wurde für die Verwendung mit **AEM als Cloud Service** entwickelt 
 
 **[Sehen Sie sich das Tutorial hier an!](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
 
-## Bereitstellen von WKND für AEM als Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
+## Bereitstellen von WKND in AEM als Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
 
-Nach Abschluss des WKND-Tutorials können Sie sich im folgenden Video einen Überblick darüber verschaffen, wie das WKND-Projekt als Cloud Service AEM bereitgestellt werden kann.
+Nach Abschluss des WKND-Tutorials finden Sie im folgenden Video einen Überblick darüber, wie Sie das WKND-Projekt in AEM als Cloud Service bereitstellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30191?quality=12&learn=on)
 
-Das Video zeigt, wie das WKND-Site-Projekt sein kann:
+Das Video zeigt, wie das WKND Site-Projekt:
 
-1. Wird von einem Drittanbieter-Git-Repository, in diesem Fall Github.com, bereitgestellt, könnte aber ein beliebiges Git-Repository sein
-2. Wird an ein Upstream Adobe Cloud Manager Git-Repository gesendet, das bei einem AEM als Cloud Service-Programm registriert ist
-3. Wird über Cloud Manager-Pipelines bereitgestellt, um als Cloud Service-Umgebung AEM
+1. Wird von einem Drittanbieter-Git-Repository bezogen, in diesem Fall von Github.com, kann aber ein beliebiges Git-Repository sein
+2. Wird an ein vorgelagertes Adobe Cloud Manager-Git-Repository gesendet, das bei einem AEM as a Cloud Service-Programm registriert ist
+3. Wird über Cloud Manager-Pipelines in AEM as a Cloud Service-Umgebungen bereitgestellt
 
-Einen vollständigen Überblick über die Bereitstellung AEM Projekts für AEM als Cloud-Dienst erhalten Sie in der Videoreihe [Integration von Git in Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html).
+Eine vollständige Übersicht über die Bereitstellung AEM Projekts für AEM as a Cloud Service finden Sie in der Videoreihe [Integrieren von Git in Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html).
