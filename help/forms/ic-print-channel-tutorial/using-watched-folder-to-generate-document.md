@@ -1,10 +1,10 @@
 ---
-title: Generieren von Print Kanal-Dokumenten mit überwachten Ordnern
-seo-title: Generieren von Print Kanal-Dokumenten mit überwachten Ordnern
-description: Dies ist Teil 10 eines mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments für den Print-Kanal. In diesem Teil generieren wir Dokumente für den Druck von Kanälen mithilfe des Mechanismus für überwachte Ordner.
-seo-description: Dies ist Teil 10 eines mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments für den Print-Kanal. In diesem Teil generieren wir Dokumente für den Druck von Kanälen mithilfe des Mechanismus für überwachte Ordner.
+title: Generieren von Druckkanaldokumenten mit einem überwachten Ordner
+seo-title: Generieren von Druckkanaldokumenten mit einem überwachten Ordner
+description: Dies ist Teil 10 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments für den Druckkanal. In diesem Teil generieren wir Druckkanaldokumente mithilfe des Mechanismus für überwachte Ordner.
+seo-description: Dies ist Teil 10 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments für den Druckkanal. In diesem Teil generieren wir Druckkanaldokumente mithilfe des Mechanismus für überwachte Ordner.
 uuid: 9e39f4e3-1053-4839-9338-09961ac54f81
-feature: Interactive Communication
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,29 +12,28 @@ activity: implement
 version: 6.4,6.5
 contentOwner: gbedekar
 discoiquuid: 23fbada3-d776-4b77-b381-22d3ec716ae9
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '381'
 ht-degree: 1%
 
 ---
 
 
-# Generieren von Print Kanal-Dokumenten mit überwachten Ordnern
+# Generieren von Druckkanaldokumenten mit einem überwachten Ordner
 
-In diesem Teil generieren wir Dokumente für den Druck von Kanälen mithilfe des Mechanismus für überwachte Ordner.
+In diesem Teil generieren wir Druckkanaldokumente mithilfe des Mechanismus für überwachte Ordner.
 
-Nach dem Erstellen und Testen Ihres Print-Kanal-Dokuments benötigen wir einen Mechanismus, um dieses Dokument im Stapelmodus oder bei Bedarf zu generieren. Normalerweise werden solche Dokumente im Stapelmodus generiert und der häufigste Mechanismus ist der Einsatz von überwachten Ordnern.
+Nach dem Erstellen und Testen Ihres Druckkanaldokuments benötigen wir einen Mechanismus, um dieses Dokument im Batch-Modus oder bei Bedarf zu generieren. In der Regel werden diese Arten von Dokumenten im Batch-Modus generiert und der gängigste Mechanismus ist die Verwendung von überwachten Ordnern.
 
-Wenn Sie einen überwachten Ordner in AEM konfigurieren, verknüpfen Sie ein ECMA-Skript oder einen Java-Code, der ausgeführt wird, wenn eine Datei im überwachten Ordner abgelegt wird. In diesem Artikel konzentrieren wir uns auf das ECMA-Skript, das Dokumente zum Drucken von Kanälen generiert und im Dateisystem speichert.
+Wenn Sie einen überwachten Ordner in AEM konfigurieren, verknüpfen Sie ein ECMA-Skript oder einen Java-Code, der ausgeführt wird, wenn eine Datei im überwachten Ordner abgelegt wird. In diesem Artikel werden wir uns auf das ECMA-Skript konzentrieren, das Druckkanaldokumente generiert und im Dateisystem speichert.
 
-Die Konfiguration des überwachten Ordners und das ECMA-Skript sind Teil der Elemente, die Sie am [Beginn dieses Lernprogramms ](introduction.md) importiert haben
+Die Konfiguration des überwachten Ordners und das ECMA-Skript sind Teil der Assets, die Sie am [Anfang dieses Tutorials](introduction.md) importiert haben
 
-Die Eingabedatei, die im überwachten Ordner abgelegt wird, hat folgende Struktur. Das ECMA-Skript liest die Kontonummern und generiert für jedes dieser Kanal ein Print-Dokument.
+Die Eingabedatei, die im überwachten Ordner abgelegt wird, weist die folgende Struktur auf. Das ECMA-Skript liest die Kontonummern und generiert ein Druckkanaldokument für jedes dieser Konten.
 
 Weitere Informationen zum ECMA-Skript zum Generieren von Dokumenten finden Sie in [diesem Artikel](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
@@ -51,15 +50,15 @@ Weitere Informationen zum ECMA-Skript zum Generieren von Dokumenten finden Sie i
 </accountnumbers>
 ```
 
-Gehen Sie wie folgt vor, um mit dem Watched Folder-Mechanismus ein Print Kanal-Dokument zu generieren:
+Gehen Sie wie folgt vor, um Druckkanaldokumente mithilfe des Mechanismus für überwachte Ordner zu generieren:
 
-* [Führen Sie die in diesem Dokument beschriebenen Schritte aus](/help/forms/adaptive-forms/service-user-tutorial-develop.md)
+* [Führen Sie die in diesem Dokument beschriebenen Schritte aus.](/help/forms/adaptive-forms/service-user-tutorial-develop.md)
 
 * Melden Sie sich bei crx an und navigieren Sie zu /etc/fd/watchfolder/scripts/PrintPDF.ecma
 
-* Stellen Sie sicher, dass der Pfad zu interactiveCommunicationsDocument auf das richtige Dokument verweist, das Sie drucken möchten.( Zeile 1)
-* Notieren Sie sich die saveLocation(Line 2).Sie können sie nach Ihren Bedürfnissen ändern.
-* Stellen Sie sicher, dass der Eingabeparameter des Formulardatenmodells an das Anforderungsattribut gebunden ist und der Bindungswert auf &quot;Kontonummer&quot;festgelegt ist. Siehe Screenshot unten.
+* Stellen Sie sicher, dass der Pfad zu InteractiveCommunicationsDocument auf das richtige Dokument verweist, das Sie drucken möchten.( Zeile 1)
+* Notieren Sie sich die saveLocation (Zeile 2). Sie können sie nach Bedarf ändern.
+* Stellen Sie sicher, dass der Eingabeparameter für das Formulardatenmodell an das Anforderungsattribut gebunden ist und der Bindungswert auf &quot;Anschlussnummer&quot;eingestellt ist. Siehe Screenshot unten.
    ![request](assets/requestattributeprintchannel.gif)
 
 * Erstellen Sie die Datei &quot;accountnumbers.xml&quot;mit folgendem Inhalt
@@ -75,7 +74,7 @@ Gehen Sie wie folgt vor, um mit dem Watched Folder-Mechanismus ein Print Kanal-D
 </accountnumbers>
 ```
 
-* Legen Sie die XML-Datei in C:\RenderPrintChannel\input ab.
+* Legen Sie die XML-Datei unter C:\RenderPrintChannel\input ab.
 
 * Überprüfen Sie die PDF-Dateien am Speicherort, wie im ECMA-Skript angegeben.
 
