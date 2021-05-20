@@ -1,17 +1,16 @@
 ---
-title: Erste Schritte mit AEM Sites - Grundlagen der Komponenten
-description: Machen Sie sich mit der zugrunde liegenden Technologie einer Adobe Experience Manager (AEM) Sites-Komponente durch ein einfaches "HelloWorld"-Beispiel vertraut. Themen wie HTML, Sling-Modelle, clientseitige Bibliotheken und Autorendialoge werden erforscht.
+title: Erste Schritte mit AEM Sites - Komponentengrundlagen
+description: Machen Sie sich mit der zugrunde liegenden Technologie einer Adobe Experience Manager (AEM) Sites-Komponente durch ein einfaches "HelloWorld"-Beispiel vertraut. Themen zu HTL, Sling-Modellen, Client-seitigen Bibliotheken und Autorendialogfeldern werden untersucht.
 sub-product: Sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
-feature: Hauptkomponenten, Entwicklerwerkzeuge
-topic: Content-Management, Entwicklung
+feature: Kernkomponenten, Entwicklertools
+topic: Content Management, Entwicklung
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
-translation-type: tm+mt
 source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
 source-wordcount: '1152'
@@ -22,37 +21,37 @@ ht-degree: 4%
 
 # Komponenten – Grundlagen {#component-basics}
 
-In diesem Kapitel werden wir die zugrunde liegende Technologie einer Adobe Experience Manager (AEM) Sites-Komponente durch ein einfaches `HelloWorld`-Beispiel untersuchen. Es werden kleine Änderungen an einer vorhandenen Komponente vorgenommen, die Themen Authoring, HTL, Sling-Modelle, clientseitige Bibliotheken abdecken.
+In diesem Kapitel werden wir die zugrunde liegende Technologie einer Adobe Experience Manager (AEM) Sites-Komponente anhand eines einfachen `HelloWorld`-Beispiels untersuchen. Es werden kleine Änderungen an einer vorhandenen Komponente vorgenommen, die Themen wie Authoring, HTL, Sling-Modelle, Client-seitige Bibliotheken abdecken.
 
 ## Voraussetzungen {#prerequisites}
 
-Überprüfen Sie die erforderlichen Werkzeuge und Anweisungen zum Einrichten einer [lokalen Entwicklungs-Umgebung](./overview.md#local-dev-environment).
+Überprüfen Sie die erforderlichen Tools und Anweisungen zum Einrichten einer [lokalen Entwicklungsumgebung](./overview.md#local-dev-environment).
 
-Die in den Videos verwendete IDE ist [Visual Studio-Code](https://code.visualstudio.com/) und das [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)-Plugin.
+Die in den Videos verwendete IDE ist [Visual Studio Code](https://code.visualstudio.com/) und das Plug-in [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) .
 
 ## Vorgabe {#objective}
 
-1. Erfahren Sie, welche Rolle HTML-Vorlagen und Sling-Modelle beim dynamischen Rendern von HTML spielen.
-1. Verstehen Sie, wie Dialoge verwendet werden, um das Authoring von Inhalten zu erleichtern.
-1. Hier lernen Sie die Grundlagen der clientseitigen Bibliotheken kennen, um CSS und JavaScript zur Unterstützung einer Komponente einzuschließen.
+1. Erfahren Sie mehr über die Rolle von HTL-Vorlagen und Sling-Modellen zum dynamischen Rendern von HTML.
+1. Erfahren Sie, wie Dialogfelder zur Erleichterung der Inhaltserstellung verwendet werden.
+1. Lernen Sie die Grundlagen von Client-seitigen Bibliotheken kennen, um CSS und JavaScript einzuschließen und eine Komponente zu unterstützen.
 
 ## Was Sie erstellen werden {#what-you-will-build}
 
-In diesem Kapitel führen Sie einige Änderungen an einer sehr einfachen `HelloWorld` Komponente durch. Im Zuge der Aktualisierung der Komponente `HelloWorld` erfahren Sie mehr über die wichtigsten Bereiche der Entwicklung AEM Komponenten.
+In diesem Kapitel nehmen Sie einige Änderungen an einer sehr einfachen `HelloWorld`-Komponente vor. Im Zuge der Aktualisierung der Komponente `HelloWorld` erfahren Sie mehr über die wichtigsten Bereiche der Entwicklung AEM Komponenten.
 
 ## Chapter Starter Project {#starter-project}
 
-Dieses Kapitel baut auf einem generischen Projekt auf, das vom [AEM Projektarchiv](https://github.com/adobe/aem-project-archetype) generiert wurde. Sehen Sie sich das folgende Video an und überprüfen Sie die [Voraussetzungen](#prerequisites), um loszulegen!
+Dieses Kapitel baut auf einem generischen Projekt auf, das vom [AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype) generiert wurde. Sehen Sie sich das folgende Video an und sehen Sie sich die [Voraussetzungen](#prerequisites) an, um loszulegen!
 
 >[!NOTE]
 >
-> Wenn Sie das vorherige Kapitel erfolgreich abgeschlossen haben, können Sie das Projekt erneut verwenden und die Schritte zum Auschecken des Startprojekts überspringen.
+> Wenn Sie das vorherige Kapitel erfolgreich abgeschlossen haben, können Sie das Projekt wiederverwenden und die Schritte zum Auschecken des Starterprojekts überspringen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330985/?quality=12&learn=on)
 
-Öffnen Sie ein neues Befehlszeilenterminal und führen Sie die folgenden Schritte aus.
+Öffnen Sie ein neues Befehlszeilen-Terminal und führen Sie die folgenden Aktionen aus.
 
-1. In einem leeren Verzeichnis klonen Sie das [aem-guides-work](https://github.com/adobe/aem-guides-wknd)-Repository:
+1. Klonen Sie in einem leeren Verzeichnis das Repository [aem-guides-wknd](https://github.com/adobe/aem-guides-wknd):
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd.git --branch tutorial/component-basics-start --single-branch
@@ -60,15 +59,15 @@ Dieses Kapitel baut auf einem generischen Projekt auf, das vom [AEM Projektarchi
 
    >[!NOTE]
    >
-   > Optional können Sie das im vorherigen Kapitel [Projekt-Setup](./project-setup.md) generierte Projekt weiterhin verwenden.
+   > Optional können Sie das im vorherigen Kapitel generierte Projekt [Projekt-Setup](./project-setup.md) weiterhin verwenden.
 
-1. Navigieren Sie zum Ordner `aem-guides-wknd`.
+1. Navigieren Sie zum Ordner `aem-guides-wknd` .
 
    ```shell
    $ cd aem-guides-wknd
    ```
 
-1. Erstellen Sie das Projekt und stellen Sie es mit dem folgenden Befehl auf einer lokalen Instanz von AEM bereit:
+1. Erstellen Sie das Projekt und stellen Sie es mit dem folgenden Befehl in einer lokalen Instanz von AEM bereit:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -76,51 +75,51 @@ Dieses Kapitel baut auf einem generischen Projekt auf, das vom [AEM Projektarchi
 
    >[!NOTE]
    >
-   > Wenn Sie AEM 6.5 oder 6.4 verwenden, hängen Sie das `classic`-Profil an beliebige Maven-Befehle an.
+   > Wenn Sie AEM 6.5 oder 6.4 verwenden, hängen Sie das Profil `classic` an beliebige Maven-Befehle an.
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-1. Importieren Sie das Projekt in Ihre bevorzugte IDE, indem Sie die Anweisungen zum Einrichten einer [lokalen Entwicklungs-Umgebung](overview.md#local-dev-environment) befolgen.
+1. Importieren Sie das Projekt in Ihre bevorzugte IDE, indem Sie die Anweisungen zum Einrichten einer [lokalen Entwicklungsumgebung](overview.md#local-dev-environment) befolgen.
 
-## Komponenten-Authoring {#component-authoring}
+## Komponentenbearbeitung {#component-authoring}
 
-Komponenten können als kleine Bausteine einer Webseite betrachtet werden. Zur Wiederverwendung von Komponenten müssen die Komponenten konfigurierbar sein. Dies erfolgt über den Autorendialog. Als Nächstes erstellen wir eine einfache Komponente und überprüfen, wie Werte aus dem Dialog in AEM beibehalten werden.
+Komponenten können als kleine modulare Bausteine einer Webseite betrachtet werden. Um Komponenten wiederzuverwenden, müssen die Komponenten konfigurierbar sein. Dies erfolgt über das Dialogfeld &quot;Autor&quot;. Als Nächstes erstellen wir eine einfache Komponente und überprüfen, wie Werte aus dem Dialogfeld in AEM beibehalten werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330986/?quality=12&learn=on)
 
-Im Folgenden finden Sie die Schritte auf hoher Ebene, die im obigen Video ausgeführt werden.
+Im Folgenden finden Sie die allgemeinen Schritte, die im obigen Video ausgeführt werden.
 
-1. Erstellen Sie eine neue Seite mit dem Namen **Komponenten-Grundlagen** unter **WKND-Site** `>` **US** `>` **en**.
-1. hinzufügen Sie die **Hello World-Komponente** auf die neu erstellte Seite.
+1. Erstellen Sie eine neue Seite mit dem Namen **Komponentengrundlagen** unter **WKND-Site** `>` **US** `>` **en**.
+1. Fügen Sie der neu erstellten Seite die Komponente **Hello World** hinzu.
 1. Öffnen Sie das Dialogfeld für die Komponente und geben Sie Text ein. Speichern Sie die Änderungen, um die Meldung auf der Seite anzuzeigen.
-1. Wechseln Sie in den Entwicklermodus und Ansicht des Inhaltspfads in CRXDE-Lite und überprüfen Sie die Eigenschaften der Komponenteninstanz.
-1. Verwenden Sie CRXDE-Lite, um das `cq:dialog`- und `helloworld.html`-Skript unter `/apps/wknd/components/content/helloworld` Ansicht.
+1. Wechseln Sie in den Entwicklermodus, zeigen Sie den Inhaltspfad in CRXDE-Lite an und überprüfen Sie die Eigenschaften der Komponenteninstanz.
+1. Verwenden Sie CRXDE-Lite, um das Skript `cq:dialog` und `helloworld.html` anzuzeigen, das sich unter `/apps/wknd/components/content/helloworld` befindet.
 
-## HTML (HTML-Vorlagensprache) und Dialoge {#htl-dialogs}
+## HTL (HTML-Vorlagensprache) und Dialogfelder {#htl-dialogs}
 
-Die HTML-Vorlagensprache oder **[HTL](https://docs.adobe.com/content/help/de-DE/experience-manager-htl/using/getting-started/getting-started.html)** ist eine leichte, serverseitige Vorlagensprache, die von AEM zum Wiedergeben von Inhalten verwendet wird.
+HTML-Vorlagensprache oder **[HTL](https://docs.adobe.com/content/help/de-DE/experience-manager-htl/using/getting-started/getting-started.html)** ist eine leichte, serverseitige Vorlagensprache, die von AEM Komponenten zum Rendern von Inhalten verwendet wird.
 
-**&quot;** Dialog&quot;definiert die verfügbaren Konfigurationen, die für eine Komponente festgelegt werden können.
+**** Dialogfelder definieren die verfügbaren Konfigurationen, die für eine Komponente vorgenommen werden können.
 
-Als Nächstes werden wir das `HelloWorld` HTML-Skript aktualisieren, um eine zusätzliche Begrüßung vor der Textnachricht anzuzeigen.
+Als Nächstes wird das HTML-Skript `HelloWorld` aktualisiert, um vor der Textnachricht einen zusätzlichen Gruß anzuzeigen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330987/?quality=12&learn=on)
 
-Im Folgenden finden Sie die Schritte auf hoher Ebene, die im obigen Video ausgeführt werden.
+Im Folgenden finden Sie die allgemeinen Schritte, die im obigen Video ausgeführt werden.
 
-1. Wechseln Sie zur IDE und öffnen Sie das Projekt zum Modul `ui.apps`.
-1. Öffnen Sie die Datei `helloworld.html` und ändern Sie das HTML-Markup.
-1. Verwenden Sie die IDE-Werkzeuge wie [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync), um die Dateiänderung mit der lokalen AEM zu synchronisieren.
-1. Kehren Sie zum Browser zurück und beobachten Sie, dass sich der Komponentenrendering geändert hat.
-1. Öffnen Sie die Datei `.content.xml`, die das Dialogfeld für die Komponente `HelloWorld` unter folgender Adresse definiert:
+1. Wechseln Sie zur IDE und öffnen Sie das Projekt zum Modul `ui.apps` .
+1. Öffnen Sie die Datei `helloworld.html` und nehmen Sie eine Änderung am HTML-Markup vor.
+1. Verwenden Sie die IDE-Tools wie [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync), um die Dateiänderung mit der lokalen AEM-Instanz zu synchronisieren.
+1. Kehren Sie zum Browser zurück und beobachten Sie, dass sich der Komponenten-Renderer geändert hat.
+1. Öffnen Sie die Datei `.content.xml` , die das Dialogfeld für die Komponente `HelloWorld` definiert, unter:
 
    ```plain
    <code>/aem-guides-wknd/ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/_cq_dialog/.content.xml
    ```
 
-1. Aktualisieren Sie das Dialogfeld, um ein zusätzliches Textfeld mit dem Namen **title** mit dem Namen `./title` hinzuzufügen:
+1. Aktualisieren Sie das Dialogfeld, um ein zusätzliches Textfeld mit dem Namen **Titel** mit dem Namen `./title` hinzuzufügen:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -153,13 +152,13 @@ Im Folgenden finden Sie die Schritte auf hoher Ebene, die im obigen Video ausgef
    </jcr:root>
    ```
 
-1. Öffnen Sie die Datei `helloworld.html`, die das HTML-Hauptskript darstellt, das für die Wiedergabe der `HelloWorld`-Komponente verantwortlich ist, erneut unter:
+1. Öffnen Sie die Datei `helloworld.html` erneut, die das HTL-Haupt darstellt, das für die Wiedergabe der `HelloWorld`-Komponente verantwortlich ist. Sie befindet sich unter:
 
    ```plain
        <code>/aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/helloworld/helloworld.html
    ```
 
-1. Aktualisieren Sie `helloworld.html`, um den Wert des Textfelds **Gruß** als Teil eines `H1`-Tags anzuzeigen:
+1. Aktualisieren Sie `helloworld.html` , um den Wert des Textfelds **Grußformel** als Teil eines `H1` -Tags anzuzeigen:
 
    ```html
    <div class="cmp-helloworld" data-cmp-is="helloworld">
@@ -168,30 +167,30 @@ Im Folgenden finden Sie die Schritte auf hoher Ebene, die im obigen Video ausgef
    </div>
    ```
 
-1. Stellen Sie die Änderungen mithilfe des Developer-Plugins oder mithilfe Ihrer Maven-Fähigkeiten auf einer lokalen Instanz von AEM bereit.
+1. Stellen Sie die Änderungen mithilfe des Entwickler-Plug-ins oder mithilfe Ihrer Maven-Fähigkeiten auf einer lokalen Instanz von AEM bereit.
 
 ## Sling-Modelle {#sling-models}
 
-Sling-Modelle sind durch Anmerkungen angetriebene Java-&quot;POJOs&quot;(einfache alte Java-Objekte), die die Zuordnung von Daten aus der JCR zu Java-Variablen erleichtern und eine Reihe anderer Schönheiten bei der Entwicklung im Kontext von AEM bieten.
+Sling-Modelle sind von Anmerkungen gesteuerte Java-&quot;POJOs&quot;(Plain Old Java Objects), die die Zuordnung von Daten aus dem JCR zu Java-Variablen erleichtern und eine Reihe anderer Eigenschaften bei der Entwicklung im Kontext von AEM bieten.
 
-Als Nächstes werden wir einige Aktualisierungen am Sling-Modell `HelloWorldModel` vornehmen, um eine gewisse Geschäftslogik auf die in der JCR gespeicherten Werte anzuwenden, bevor sie an die Seite ausgegeben werden.
+Als Nächstes nehmen wir einige Aktualisierungen am Sling-Modell `HelloWorldModel` vor, um eine gewisse Geschäftslogik auf die im JCR gespeicherten Werte anzuwenden, bevor sie an die Seite ausgegeben werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330988/?quality=12&learn=on)
 
-1. Öffnen Sie die Datei `HelloWorldModel.java`, bei der es sich um das Sling-Modell handelt, das mit der Komponente `HelloWorld` verwendet wird.
+1. Öffnen Sie die Datei `HelloWorldModel.java`, die das Sling-Modell ist, das mit der Komponente `HelloWorld` verwendet wird.
 
    ```plain
    <code>/aem-guides-wknd.core/src/main/java/com/adobe/aem/guides/wknd/core/models/HelloWorldModel.java
    ```
 
-1. hinzufügen die folgenden Importanweisungen:
+1. Fügen Sie die folgenden Importanweisungen hinzu:
 
    ```java
    import org.apache.commons.lang.StringUtils;
    import org.apache.sling.models.annotations.DefaultInjectionStrategy;
    ```
 
-1. Aktualisieren Sie die `@Model`-Anmerkung, um eine `DefaultInjectionStrategy` zu verwenden:
+1. Aktualisieren Sie die `@Model` -Anmerkung, um eine `DefaultInjectionStrategy` zu verwenden:
 
    ```java
    @Model(adaptables = Resource.class,
@@ -200,7 +199,7 @@ Als Nächstes werden wir einige Aktualisierungen am Sling-Modell `HelloWorldMode
       ...
    ```
 
-1. hinzufügen Sie die folgenden Zeilen der `HelloWorldModel`-Klasse zu, um die Werte der JCR-Eigenschaften `title` und `text` der Komponente Java-Variablen zuzuordnen:
+1. Fügen Sie der Klasse `HelloWorldModel` die folgenden Zeilen hinzu, um die Werte der JCR-Eigenschaften der Komponente `title` und `text` Java-Variablen zuzuordnen:
 
    ```java
    ...
@@ -221,7 +220,7 @@ Als Nächstes werden wir einige Aktualisierungen am Sling-Modell `HelloWorldMode
            ...
    ```
 
-1. hinzufügen Sie die folgende Methode `getTitle()` zur `HelloWorldModel`-Klasse, die den Wert der Eigenschaft `title` zurückgibt. Diese Methode fügt die zusätzliche Logik hinzu, um den Zeichenfolgenwert &quot;Standardwert hier!&quot;zurückzugeben. wenn die Eigenschaft `title` null oder leer ist:
+1. Fügen Sie der `HelloWorldModel`-Klasse die folgende Methode `getTitle()` hinzu, die den Wert der Eigenschaft `title` zurückgibt. Diese Methode fügt die zusätzliche Logik hinzu, um den Zeichenfolgenwert &quot;Default Value here&quot;zurückzugeben. wenn die Eigenschaft `title` null oder leer ist:
 
    ```java
    /***
@@ -233,7 +232,7 @@ Als Nächstes werden wir einige Aktualisierungen am Sling-Modell `HelloWorldMode
    }
    ```
 
-1. hinzufügen Sie die folgende Methode `getText()` zur `HelloWorldModel`-Klasse, die den Wert der Eigenschaft `text` zurückgibt. Diese Methode wandelt den String in alle Großbuchstaben um.
+1. Fügen Sie der `HelloWorldModel`-Klasse die folgende Methode `getText()` hinzu, die den Wert der Eigenschaft `text` zurückgibt. Diese Methode wandelt den String in alle Großbuchstaben um.
 
    ```java
        /***
@@ -245,7 +244,7 @@ Als Nächstes werden wir einige Aktualisierungen am Sling-Modell `HelloWorldMode
    }
    ```
 
-1. Erstellen und stellen Sie das Bundle über das `core`-Modul bereit:
+1. Erstellen und stellen Sie das Bundle über das Modul `core` bereit:
 
    ```shell
    $ cd core
@@ -256,7 +255,7 @@ Als Nächstes werden wir einige Aktualisierungen am Sling-Modell `HelloWorldMode
    >
    > Verwenden Sie bei Verwendung von AEM 6.4/6.5 `mvn clean install -PautoInstallBundle -Pclassic`
 
-1. Aktualisieren Sie die Datei `helloworld.html` bei `aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html`, um die neu erstellten Methoden des `HelloWorld`-Modells zu verwenden:
+1. Aktualisieren Sie die Datei `helloworld.html` unter `aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html`, um die neu erstellten Methoden des `HelloWorld`-Modells zu verwenden:
 
    ```html
    <div class="cmp-helloworld" data-cmp-is="helloworld"
@@ -277,19 +276,19 @@ Als Nächstes werden wir einige Aktualisierungen am Sling-Modell `HelloWorldMode
    </div>
    ```
 
-1. Stellen Sie die Änderungen mithilfe des Eclipse Developer-Plugins oder mithilfe Ihrer Maven-Fähigkeiten auf einer lokalen Instanz von AEM bereit.
+1. Stellen Sie die Änderungen mithilfe des Eclipse Developer-Plug-ins oder mithilfe Ihrer Maven-Fähigkeiten auf einer lokalen Instanz von AEM bereit.
 
 ## Client-seitige Bibliotheken {#client-side-libraries}
 
-Clientseitige Bibliotheken, kurz clientlibs, bieten einen Mechanismus zum Organisieren und Verwalten von CSS- und JavaScript-Dateien, die für eine AEM Sites-Implementierung erforderlich sind. Clientseitige Bibliotheken sind die Standardmethode, um CSS und JavaScript auf einer Seite in AEM einzuschließen.
+Client-seitige Bibliotheken, kurz clientlibs , bieten einen Mechanismus zum Organisieren und Verwalten von CSS- und JavaScript-Dateien, die für eine AEM Sites-Implementierung erforderlich sind. Clientseitige Bibliotheken sind die Standardmethode zum Einschließen von CSS und JavaScript in eine Seite in AEM.
 
-Als Nächstes werden wir einige CSS-Stile für die Komponente `HelloWorld` einschließen, um die Grundlagen clientseitiger Bibliotheken zu verstehen.
+Als Nächstes werden wir einige CSS-Stile für die Komponente `HelloWorld` einfügen, um die Grundlagen der clientseitigen Bibliotheken zu verstehen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330989/?quality=12&learn=on)
 
-Im Folgenden finden Sie die Schritte auf hoher Ebene, die im obigen Video ausgeführt werden.
+Im Folgenden finden Sie die allgemeinen Schritte, die im obigen Video ausgeführt werden.
 
-1. unter `/aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs` einen neuen Ordner mit dem Namen `clientlib-helloworld` erstellen.
+1. Erstellen Sie unter `/aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/clientlibs` einen neuen Ordner mit dem Namen `clientlib-helloworld`.
 1. Erstellen Sie einen Ordner und eine Dateistruktur wie die folgende unter `clientlibs`
 
    ```plain
@@ -329,7 +328,7 @@ Im Folgenden finden Sie die Schritte auf hoher Ebene, die im obigen Video ausgef
    helloworld.js
    ```
 
-1. Aktualisieren Sie die Datei `clientlib-helloworld/.conten.xml`, um die folgenden Eigenschaften einzuschließen:
+1. Aktualisieren Sie die Datei `clientlib-helloworld/.conten.xml` , um die folgenden Eigenschaften einzuschließen:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -339,7 +338,7 @@ Im Folgenden finden Sie die Schritte auf hoher Ebene, die im obigen Video ausgef
        categories="[wknd.helloworld]" />
    ```
 
-1. Aktualisieren Sie die `clientlibs/clientlib-base/.content.xml`-Datei auf **embed** die `wknd.helloworld`-Kategorie:
+1. Aktualisieren Sie die `clientlibs/clientlib-base/.content.xml`-Datei auf **embed** die Kategorie `wknd.helloworld` :
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -350,18 +349,18 @@ Im Folgenden finden Sie die Schritte auf hoher Ebene, die im obigen Video ausgef
        embed="[core.wcm.components.accordion.v1,core.wcm.components.tabs.v1,core.wcm.components.carousel.v1,core.wcm.components.image.v2,core.wcm.components.breadcrumb.v2,core.wcm.components.search.v1,core.wcm.components.form.text.v2,core.wcm.components.pdfviewer.v1,core.wcm.components.commons.datalayer.v1,wknd.grid,wknd.helloworld]"/>
    ```
 
-1. Stellen Sie die Änderungen mithilfe des Developer-Plugins oder mithilfe Ihrer Maven-Fähigkeiten auf einer lokalen Instanz von AEM bereit.
+1. Stellen Sie die Änderungen mithilfe des Entwickler-Plug-ins oder mithilfe Ihrer Maven-Fähigkeiten auf einer lokalen Instanz von AEM bereit.
 
    >[!NOTE]
    >
-   > CSS und JavaScript werden häufig aus Leistungsgründen vom Browser zwischengespeichert. Wenn Sie die Änderung für die Client-Bibliothek nicht sofort sehen, führen Sie eine harte Aktualisierung durch und leeren Sie den Cache des Browsers. Es kann hilfreich sein, ein Inkognito-Fenster zu verwenden, um einen neuen Cache zu gewährleisten.
+   > CSS und JavaScript werden aus Leistungsgründen häufig vom Browser zwischengespeichert. Wenn Sie die Änderung für die Client-Bibliothek nicht sofort sehen, führen Sie eine harte Aktualisierung durch und löschen Sie den Cache des Browsers. Es kann hilfreich sein, ein Inkognito-Fenster zu verwenden, um einen neuen Cache sicherzustellen.
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
-Herzlichen Glückwunsch, Sie haben gerade die Grundlagen der Komponentenentwicklung in Adobe Experience Manager gelernt!
+Herzlichen Glückwunsch! Sie haben gerade die Grundlagen der Komponentenentwicklung in Adobe Experience Manager gelernt!
 
 ### Nächste Schritte {#next-steps}
 
-Machen Sie sich mit Adobe Experience Manager-Seiten und -Vorlagen im nächsten Kapitel [Seiten und Vorlagen](pages-templates.md) vertraut. Verstehen Sie, wie Kernkomponenten in das Projekt integriert werden, und lernen Sie erweiterte Richtlinienkonfigurationen bearbeitbarer Vorlagen kennen, um eine gut strukturierte Artikelseitenvorlage zu erstellen.
+Machen Sie sich mit Adobe Experience Manager-Seiten und -Vorlagen im nächsten Kapitel [Seiten und Vorlagen](pages-templates.md) vertraut. Erfahren Sie, wie Kernkomponenten in das Projekt integriert werden, und lernen Sie erweiterte Richtlinienkonfigurationen bearbeitbarer Vorlagen kennen, um eine gut strukturierte Artikelseitenvorlage zu erstellen.
 
-Ansicht des fertigen Codes auf [GitHub](https://github.com/adobe/aem-guides-wknd) oder lokale Überprüfung und Bereitstellung des Codes auf der Git-Verzweigung `tutorial/component-basics-solution`.
+Zeigen Sie den fertigen Code auf [GitHub](https://github.com/adobe/aem-guides-wknd) an oder überprüfen Sie den Code und stellen Sie ihn lokal auf der Git-Verzweigung `tutorial/component-basics-solution` bereit.
