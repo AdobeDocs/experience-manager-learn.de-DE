@@ -1,6 +1,6 @@
 ---
-title: Erste Schritte mit AEM praxisnahen Übungen - GraphQL
-description: Ein durchgehendes Lernprogramm, in dem erläutert wird, wie Inhalte mithilfe AEM GraphQL-APIs erstellt und bereitgestellt werden.
+title: Erste Schritte mit AEM Headless-Hands-On-Tutorial - GraphQL
+description: Ein durchgehendes Tutorial, in dem erläutert wird, wie Inhalte mithilfe AEM GraphQL-APIs erstellt und bereitgestellt werden.
 sub-product: Sites
 topics: headless
 version: cloud-service
@@ -11,10 +11,9 @@ mini-toc-levels: 1
 kt: 6678
 thumbnail: 328618.jpg
 feature: Inhaltsfragmente, GraphQL-APIs
-topic: Kopflos, Content-Management
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
 workflow-type: tm+mt
 source-wordcount: '202'
@@ -25,24 +24,24 @@ ht-degree: 0%
 
 # Erste Schritte mit AEM Headless - GraphQL
 
-Ein durchgehendes Lernprogramm, in dem erläutert wird, wie Inhalte mithilfe AEM GraphQL-APIs erstellt und bereitgestellt werden können, die in einem kopflosen CMS-Szenario von einer externen App genutzt werden.
+Ein durchgehendes Tutorial, in dem erläutert wird, wie Inhalte mithilfe AEM GraphQL-APIs erstellt und bereitgestellt werden, die von einer externen App in einem Headless-CMS-Szenario genutzt werden.
 
-In diesem Lernprogramm wird untersucht, wie AEM GraphQL-APIs und kopflosen Funktionen verwendet werden können, um die Erlebnisse in einer externen App zu optimieren.
+In diesem Tutorial wird untersucht, wie AEM GraphQL-APIs und Headless-Funktionen verwendet werden können, um die in einer externen App angezeigten Erlebnisse zu optimieren.
 
-Dieses Lernprogramm behandelt die folgenden Themen:
+In diesem Tutorial werden die folgenden Themen behandelt:
 
-* Erstellen Sie Inhaltsfragmentmodelle, um die Mitarbeiter in AEM zu modellieren
-* Inhaltsfragmente des Verfassers mithilfe des neu erstellten Inhaltsfragmentmodells
+* Erstellen von Inhaltsfragmentmodellen zum Modellieren von Mitwirkenden in AEM
+* Autor-Mitarbeiter-Inhaltsfragmente, die das neu erstellte Inhaltsfragmentmodell verwenden
 * Erfahren Sie, wie Inhaltsfragmente in AEM mithilfe des integrierten GraphiQL-Entwicklungstools abgefragt werden können.
-* Verwenden AEM GraphQL-APIs aus einer WKND GraphQL React-App
-* Erweiterte Datenmodellierung mit Fragmentverweisen
+* Verwenden AEM GraphQL-APIs aus einer WKND GraphQL React-Beispielanwendung
+* Erweiterte Datenmodellierung mit Fragmentverweisen durchführen
 
 ## Fangen wir an!
 
-Beginn das AEM GraphQL-Tutorial, indem du in das [Quick Setup](./setup.md) Kapitel springst!
+Starten Sie das AEM GraphQL-Tutorial, indem Sie in das Kapitel [Quick Setup](./setup.md) springen!
 
 ## GitHub-Projekt
 
-Der Quellcode und die Inhaltspakete stehen im [AEM Guides - WKND GraphQL GitHub Project](https://github.com/adobe/aem-guides-wknd-graphql) zur Verfügung.
+Der Quellcode und die Inhaltspakete sind im [AEM Guides - WKND GraphQL GitHub Project](https://github.com/adobe/aem-guides-wknd-graphql) verfügbar.
 
-Wenn Sie ein Problem mit dem Tutorial oder dem Code finden, hinterlassen Sie bitte eine [GitHub-Ausgabe](https://github.com/adobe/aem-guides-wknd-graphql/issues).
+Wenn Sie ein Problem mit dem Tutorial oder dem Code finden, hinterlassen Sie bitte ein [GitHub-Problem](https://github.com/adobe/aem-guides-wknd-graphql/issues).
