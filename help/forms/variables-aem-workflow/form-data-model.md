@@ -1,6 +1,6 @@
 ---
-title: Variablen des Formulardatenmodells des Typs
-description: Verwenden von Variablen vom Typ Formulardatenmodell in einem AEM Arbeitsablauf.
+title: Variablen vom Typ Formulardatenmodell
+description: Verwenden von Variablen vom Typ Formulardatenmodell in einem AEM Workflow.
 feature: Workflow
 topics: development
 audience: developer
@@ -9,21 +9,20 @@ activity: understand
 version: 6.5
 kt: 6347
 thumbnail: 41238.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 4%
+source-wordcount: '63'
+ht-degree: 3%
 
 ---
 
 
-# Variablen des Formulardatenmodells des Typs
+# Variablen vom Typ Formulardatenmodell
 
-Variablen vom Typ Formulardatenmodell werden im Allgemeinen verwendet, um Zeilen in die zugrunde liegende Datenquelle des Formulardatenmodells einzufügen. In diesem Video werden die Schritte erläutert, die zum Einfügen einer Zeile in die Datenbank mithilfe AEM Arbeitsablaufs erforderlich sind.
+Variablen vom Typ Formulardatenmodell werden im Allgemeinen verwendet, um Zeilen in die zugrunde liegende Datenquelle des Formulardatenmodells einzufügen. In diesem Video werden die Schritte erläutert, die zum Einfügen einer Zeile in die Datenbank mithilfe AEM Workflows erforderlich sind.
 
 
 
