@@ -1,6 +1,6 @@
 ---
-title: Developer Console
-description: AEM als Cloud Service bietet eine Entwicklerkonsole für jede Umgebung, die verschiedene Details des ausgeführten AEM-Dienstes anzeigt, die beim Debugging hilfreich sind.
+title: Entwicklerkonsole
+description: AEM as a Cloud Service stellt eine Entwicklerkonsole für jede Umgebung bereit, die verschiedene Details des ausgeführten AEM-Dienstes anzeigt, die beim Debugging hilfreich sind.
 feature: Entwickler-Tools
 topics: development
 version: cloud-service
@@ -12,7 +12,6 @@ thumbnail: kt-5433.jpg
 topic: Entwicklung
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: 048a37a9813e7b61ff069c4606b8d23cc6b6844f
 workflow-type: tm+mt
 source-wordcount: '1351'
@@ -21,147 +20,147 @@ ht-degree: 2%
 ---
 
 
-# Debuggen von AEM als Cloud Service mit der Developer Console
+# Debugging von AEM als Cloud Service mit der Developer Console
 
-AEM als Cloud Service bietet eine Entwicklerkonsole für jede Umgebung, die verschiedene Details des ausgeführten AEM-Dienstes anzeigt, die beim Debugging hilfreich sind.
+AEM as a Cloud Service stellt eine Entwicklerkonsole für jede Umgebung bereit, die verschiedene Details des ausgeführten AEM-Dienstes anzeigt, die beim Debugging hilfreich sind.
 
 Jede AEM als Cloud Service-Umgebung verfügt über eine eigene Entwicklerkonsole.
 
 ## Zugriff auf die Developer Console
 
-Um auf die Developer Console zugreifen und diese verwenden zu können, müssen die folgenden Berechtigungen über die [Admin Console der Adobe](https://adminconsole.adobe.com) an das Adobe ID des Entwicklers vergeben werden.
+Um auf die Entwicklerkonsole zuzugreifen und sie zu verwenden, müssen die folgenden Berechtigungen über die Admin Console [der Adobe](https://adminconsole.adobe.com) der Adobe ID des Entwicklers gewährt werden.
 
-1. Stellen Sie sicher, dass die Adobe Org, die Cloud Manager und AEM als Cloud Service-Produkte hat, in der Adobe Org Switcher aktiv ist.
-1. Der Entwickler muss Mitglied des Cloud Manager-Profils __Developer - Cloud Service__ sein.
+1. Stellen Sie sicher, dass die Adobe-Organisation, die Cloud Manager und AEM as a Cloud Service-Produkte ausgeführt hat, im Adobe-Org-Umschalter aktiv ist.
+1. Der Entwickler muss Mitglied des Cloud Manager-Produktprofils __Entwickler - Cloud Service__ sein.
    + Wenn diese Mitgliedschaft nicht vorhanden ist, kann sich der Entwickler nicht bei der Developer Console anmelden.
-1. Der Entwickler muss Mitglied des __AEM Users__ oder __AEM Administrators__ Product Profil unter AEM Author und/oder Publish sein.
-   + Wenn diese Mitgliedschaft nicht vorhanden ist, wird bei den Dumps [status](#status) der Timeout-Wert 401 Unauthorized error (Nicht autorisiert) ausgeführt.
+1. Der Entwickler muss Mitglied des Produktprofils __AEM Benutzer__ oder __AEM Administratoren__ in der AEM-Autoreninstanz und/oder -Veröffentlichungsinstanz sein.
+   + Wenn diese Mitgliedschaft nicht vorhanden ist, werden die [status](#status)-Dumps mit einem 401 Unauthorized-Fehler als Zeitüberschreitung gekennzeichnet.
 
-### Fehlerbehebung beim Zugriff auf die Developer Console
+### Fehlerbehebung für den Zugriff auf die Developer Console
 
-#### 401 Unzulässiger Fehler beim Dumping
+#### 401 Unzulässiger Fehler beim Dumpingstatus
 
-![Developer Console - 401 Nicht autorisiert](./assets/developer-console/troubleshooting__401-unauthorized.png)
+![Entwicklerkonsole - 401 Nicht autorisiert](./assets/developer-console/troubleshooting__401-unauthorized.png)
 
-Wenn ein Status als &quot;401 Unauthorized error&quot; (Unautorisierter Fehler) gemeldet wird, bedeutet dies, dass Ihr Benutzer noch nicht mit den erforderlichen Berechtigungen in AEM als Cloud Service vorhanden ist oder die verwendeten Login-Token ungültig sind oder abgelaufen sind.
+Wenn ein Status-Fehler 401 &quot;Nicht autorisiert&quot;gemeldet wird, bedeutet dies, dass Ihr Benutzer noch nicht über die erforderlichen Berechtigungen in AEM als Cloud Service verfügt oder die verwendeten Anmelde-Token ungültig sind oder abgelaufen sind.
 
-Beheben des Problems mit 401 nicht autorisierten Benutzern:
+So beheben Sie das Problem 401 Unerlaubt :
 
-1. Vergewissern Sie sich, dass Ihr Benutzer Mitglied der entsprechenden Adobe des IMS Product Profils (AEM Administratoren oder AEM) für die mit der Developer Console verbundene AEM als Cloud Service-Produktinstanz ist.
-   + Denken Sie daran, dass die Developer Console auf die IMS-Produktinstanzen der 2-Adobe zugreifen kann. die AEM als Produktinstanzen für Autoren- und Veröffentlichungsmodus verwenden, stellen Sie sicher, dass die richtigen Profil verwendet werden, je nachdem, welche Dienststufe über die Developer Console Zugriff erfordert.
-1. Melden Sie sich beim AEM als Cloud Service an (Autor oder Veröffentlichen) und stellen Sie sicher, dass Ihre Benutzer und Gruppen ordnungsgemäß mit AEM synchronisiert wurden.
-   + Für die Entwicklerkonsole muss der Benutzerdatensatz in der entsprechenden AEM erstellt werden, damit er sich auf dieser Dienstebene authentifizieren kann.
-1. Löschen Sie die Browser-Cookies sowie den Anwendungszustand (lokale Datenspeicherung) und melden Sie sich erneut bei der Developer Console an, um sicherzustellen, dass das Zugriffstoken, das die Developer Console verwendet, korrekt und nicht abgelaufen ist.
+1. Stellen Sie sicher, dass Ihr Benutzer Mitglied der entsprechenden Adobe des IMS-Produktprofils (AEM Administratoren oder AEM Benutzer) für die zugehörige AEM der Developer Console als Cloud Service-Produktinstanz ist.
+   + Denken Sie daran, dass die Developer Console auf 2 Adobe IMS-Produktinstanzen zugreifen kann. Stellen Sie die AEM als Cloud Service-Autoren- und -Veröffentlichungsinstanzen sicher, dass die richtigen Produktprofile verwendet werden, je nachdem, welche Dienststufe Zugriff über die Developer Console erfordert.
+1. Melden Sie sich bei der AEM als Cloud Service an (Autor oder Veröffentlichung) und stellen Sie sicher, dass Ihre Benutzer und Gruppen ordnungsgemäß mit AEM synchronisiert wurden.
+   + Entwicklerkonsole erfordert, dass Ihr Benutzerdatensatz in der entsprechenden AEM Dienststufe erstellt wird, damit er sich bei dieser Dienststufe authentifizieren kann.
+1. Löschen Sie Ihre Browser-Cookies sowie den Anwendungsstatus (lokaler Speicher) und melden Sie sich erneut bei der Developer Console an, um sicherzustellen, dass das Zugriffstoken Developer Console richtig und nicht abgelaufen ist.
 
 ## Pod
 
-AEM als Cloud Service-Authoring- und -Veröffentlichungsdienste bestehen aus mehreren Instanzen, um Traffic-Variablen und rollierende Aktualisierungen ohne Ausfallzeiten zu verarbeiten. Diese Instanzen werden als Pods bezeichnet. Die Pod-Auswahl in der Entwicklerkonsole definiert den Umfang der Daten, die über die anderen Steuerelemente offen gelegt werden.
+AEM als Cloud Service-Autoren- und -Veröffentlichungsdienste bestehen aus mehreren Instanzen, um Traffic-Variablen und rollierende Aktualisierungen ohne Ausfallzeiten zu verarbeiten. Diese Instanzen werden als Pods bezeichnet. Die Auswahl von Werbeunterbrechungen in der Developer Console definiert den Umfang der Daten, die über die anderen Steuerelemente verfügbar gemacht werden.
 
 ![Developer Console - Pod](./assets/developer-console/pod.png)
 
-+ Ein Pod ist eine separate Instanz, die Teil eines AEM-Dienstes (Autor oder Veröffentlichen) ist.
-+ Pods sind transient, d. h., AEM ein Cloud Service sie nach Bedarf erstellt und zerstört.
-+ Nur Pods, die Teil der zugehörigen AEM als Cloud Service-Umgebung sind, werden im Pod-Umschalter der Entwicklerkonsole der Umgebung aufgeführt.
-+ Am unteren Rand des Pod-Umschalters können Sie mit den praktischen Optionen Pods nach Diensttyp auswählen:
++ Ein Pod ist eine separate Instanz, die Teil eines AEM-Dienstes (Autor oder Veröffentlichung) ist.
++ Pods sind transient, d. h. AEM als Cloud Service sie nach Bedarf erstellt und zerstört
++ Nur Pods, die Teil der zugehörigen AEM als Cloud Service-Umgebung sind, werden im Pod-Umschalter der Entwicklerkonsole dieser Umgebung aufgelistet.
++ Unten im Pod-Umschalter können Sie mithilfe der bequemen Optionen Pods nach Diensttyp auswählen:
    + Alle Autoren
    + Alle Herausgeber
    + Alle Instanzen
 
 ## Status
 
-Status bietet Optionen zum Ausgeben eines bestimmten AEM Laufzeitstatus in der Text- oder JSON-Ausgabe. Die Developer Console bietet ähnliche Informationen wie die OSGi-Webkonsole des AEM SDKs mit lokalem Schnellstart, mit dem deutlichen Unterschied, dass Developer Console schreibgeschützt ist.
+Status bietet Optionen zum Ausgeben eines bestimmten AEM Laufzeitstatus in der Text- oder JSON-Ausgabe. Die Developer Console bietet ähnliche Informationen wie die lokale Schnellstart-OSGi-Web-Konsole des AEM SDK, mit dem deutlichen Unterschied, dass die Developer Console schreibgeschützt ist.
 
-![Developer Console - Status](./assets/developer-console/status.png)
+![Entwicklerkonsole - Status](./assets/developer-console/status.png)
 
 ### Bundles
 
-Bundles Listen aller OSGi-Pakete in AEM. Diese Funktionalität ähnelt der von [AEM SDKs lokalem Schnellstart OSGi-Pakete](http://localhost:4502/system/console/bundles) bei `/system/console/bundles`.
+Bundles listen alle OSGi-Bundles in AEM auf. Diese Funktion ähnelt den lokalen Schnellstart-OSGi-Bundles des AEM-SDK[unter `/system/console/bundles`.](http://localhost:4502/system/console/bundles)
 
-Bundles unterstützen Sie beim Debugging von:
+Bundles helfen beim Debugging durch:
 
-+ Auflisten aller OSGi-Pakete, die für AEM als Dienst bereitgestellt werden
++ Auflisten aller OSGi-Pakete, die in AEM as a Service bereitgestellt werden
 + Auflisten des Status jedes OSGi-Bundles; , auch wenn sie aktiv sind oder nicht
-+ Bereitstellen von Details zu ungelösten Abhängigkeiten, die dazu führen, dass OSGi-Pakete nicht aktiv werden
++ Bereitstellen von Details zu nicht aufgelösten Abhängigkeiten, die dazu führen, dass OSGi-Bundles aktiv werden
 
 ### Komponenten 
 
-Komponenten Liste aller OSGi-Komponenten in AEM. Diese Funktion ähnelt der lokalen OSGi-Komponente des AEM-SDK unter `/system/console/components`.[](http://localhost:4502/system/console/components)
+Komponenten listen alle OSGi-Komponenten in AEM auf. Diese Funktion ähnelt den lokalen Schnellstart-OSGi-Komponenten des AEM-SDK[unter `/system/console/components`.](http://localhost:4502/system/console/components)
 
 Komponenten helfen beim Debugging durch:
 
 + Auflisten aller OSGi-Komponenten, die AEM als Cloud Service bereitgestellt wurden
-+ Bereitstellung des Status jeder OSGi-Komponente; auch wenn sie aktiv oder unzufrieden sind
-+ Das Bereitstellen von Details zu nicht zufrieden stellenden Dienstverweisen kann dazu führen, dass OSGi-Komponenten aktiv werden
++ Bereitstellen des Status jeder OSGi-Komponente; , auch wenn sie aktiv oder unzufrieden sind
++ Die Bereitstellung von Details zu nicht zufrieden stellenden Service-Referenzen kann dazu führen, dass OSGi-Komponenten aktiv werden
 + Auflisten von OSGi-Eigenschaften und deren Werten, die an die OSGi-Komponente gebunden sind
 
 ### Konfigurationen
 
-Konfigurationen Listen aller Konfigurationen der OSGi-Komponente (OSGi-Eigenschaften und -Werte). Diese Funktionalität ähnelt der des lokalen Schnellstarts des AEM-SDKs OSGi Configuration Manager](http://localhost:4502/system/console/configMgr) unter `/system/console/configMgr`.[
+Konfigurationen führen alle Konfigurationen der OSGi-Komponente (OSGi-Eigenschaften und -Werte) auf. Diese Funktion ähnelt dem lokalen Schnellstart-OSGi Configuration Manager des [AEM SDK unter `/system/console/configMgr`.](http://localhost:4502/system/console/configMgr)
 
-Konfigurationen helfen beim Debugging von:
+Hilfe beim Debugging von Konfigurationen durch:
 
 + Auflisten von OSGi-Eigenschaften und deren Werten nach OSGi-Komponente
-+ Suchen und Identifizieren falsch konfigurierter Eigenschaften
++ Fehlkonfigurierte Eigenschaften suchen und identifizieren
 
 ### Oak-Indizes
 
-Oak-Indizes stellen eine Ablagerung der unter `/oak:index` definierten Knoten bereit. Beachten Sie, dass hier keine zusammengeführten Indizes angezeigt werden, die auftreten, wenn ein AEM geändert wird.
+Oak-Indizes bieten einen Dump der Knoten, die unter `/oak:index` definiert sind. Beachten Sie, dass dies keine zusammengeführten Indizes anzeigt, die auftreten, wenn ein AEM geändert wird.
 
-Oak-Indizes helfen beim Debugging von:
+Oak-Indizes helfen beim Debugging durch:
 
-+ Auflistung aller Oak Index-Definitionen, die Einblicke in die Ausführung von Abfragen in AEM bieten. Beachten Sie, dass die Änderungen an AEM Indizes hier nicht übernommen werden. Diese Ansicht ist nur für Indizes hilfreich, die ausschließlich von AEM bereitgestellt werden oder die ausschließlich vom benutzerspezifischen Code bereitgestellt werden.
++ Auflisten aller Oak-Index-Definitionen, die Einblicke in die Ausführung von Suchanfragen in AEM bieten. Beachten Sie, dass Änderungen an AEM Indizes hier nicht übernommen werden. Diese Ansicht ist nur für Indizes hilfreich, die ausschließlich von AEM bereitgestellt werden oder ausschließlich vom benutzerspezifischen Code bereitgestellt werden.
 
 ### OSGi-Dienste
 
-Komponenten Liste aller OSGi-Dienste. Diese Funktionalität ähnelt der von [AEM SDKs lokalem Schnellstart OSGi Services](http://localhost:4502/system/console/services) bei `/system/console/services`.
+Komponenten listen alle OSGi-Dienste auf. Diese Funktion ähnelt den lokalen Schnellstart-OSGi-Services des AEM-SDK](http://localhost:4502/system/console/services) unter `/system/console/services`.[
 
-Hilfe zu OSGi-Diensten beim Debugging von:
+Hilfe zu OSGi-Diensten beim Debugging durch:
 
-+ Auflisten aller OSGi-Dienste in AEM, einschließlich des OSGi-Bundles und aller OSGi-Pakete, die es verwenden
++ Auflisten aller OSGi-Dienste in AEM zusammen mit dem bereitgestellten OSGi-Bundle und allen OSGi-Bundles, die es nutzen
 
-### Sling-Aufträge
+### Sling Jobs
 
-Bei Sling-Aufträgen werden alle Warteschlangen für Sling-Aufträge Liste. Diese Funktionalität ähnelt der des lokalen Schnellstarts des AEM-SDKs Aufträge](http://localhost:4502/system/console/slingevent) bei `/system/console/slingevent`.[
+In Sling-Aufträgen werden alle Warteschlangen für Sling-Aufträge aufgelistet. Diese Funktion ähnelt den lokalen Schnellstart-Aufträgen des AEM SDK](http://localhost:4502/system/console/slingevent) unter `/system/console/slingevent`.[
 
-Hilfe zu Sling-Aufträgen beim Debugging von:
+Hilfe zu Sling-Aufträgen beim Debugging durch:
 
-+ Liste der Warteschlangen von Sling-Aufträgen und deren Konfigurationen
-+ Einblicke in die Anzahl der aktiven, in die Warteschlange gestellten und verarbeiteten Sling-Aufträge, was beim Debugging von Problemen mit Workflow, Transient Workflow und anderen von Sling Jobs in AEM ausgeführten Arbeiten hilfreich ist.
++ Auflistung der Sling-Auftragswarteschlangen und deren Konfigurationen
++ Bereitstellung von Einblicken in die Anzahl der aktiven, in der Warteschlange befindlichen und verarbeiteten Sling-Aufträge, was beim Debugging von Problemen mit Workflow, Übergangs-Workflow und anderen von Sling-Aufträgen in AEM durchgeführten Arbeiten hilfreich ist.
 
 ## Java-Pakete
 
-Java-Pakete ermöglichen die Überprüfung, ob ein Java-Paket und eine Java-Version zur Verwendung in AEM als Cloud Service verfügbar sind. Diese Funktionalität ist mit der des lokalen Schnellstart-Abhängigkeitssuche des [AEM SDK bei `/system/console/depfinder` identisch.](http://localhost:4502/system/console/depfinder)
+Java-Pakete ermöglichen die Überprüfung, ob ein Java-Paket und eine -Version zur Verwendung in AEM as a Cloud Service verfügbar sind. Diese Funktion entspricht der von [AEM SDKs verwendeten Dependency Finder](http://localhost:4502/system/console/depfinder) unter `/system/console/depfinder`.
 
-![Developer Console - Java Packages](./assets/developer-console/java-packages.png)
+![Entwicklerkonsole - Java-Pakete](./assets/developer-console/java-packages.png)
 
-Java Packages wird verwendet, um Probleme zu schießen Bundles nicht starten wegen ungelöster Importe, oder ungelöste Klassen in Skripten (HTL, JSP, etc.). Wenn Java Packages keine Bundles ein Java-Paket exportieren (oder die Version nicht mit der von einem OSGi-Bundle importierten Version übereinstimmt):
+Java-Pakete werden verwendet, um Probleme beim Erstellen von Bundles zu vermeiden, die aufgrund nicht aufgelöster Importe oder nicht aufgelöster Klassen in Skripten (HTL, JSP usw.) nicht gestartet werden. Wenn Java Packages keine Pakete exportiert, exportiert dies ein Java-Paket (oder die Version stimmt nicht mit der von einem OSGi-Bundle importierten Version überein):
 
-+ Vergewissern Sie sich, dass die AEM-API der jeweiligen Abhängigkeitsversion mit der AEM Release-Version der Umgebung übereinstimmt (und wenn möglich, aktualisieren Sie alles auf die neueste Version).
++ Stellen Sie sicher, dass die Version der AEM API-Maven-Abhängigkeit Ihres Projekts mit der AEM Release-Version der Umgebung übereinstimmt (und aktualisieren Sie nach Möglichkeit alles auf die neueste Version).
 + Wenn zusätzliche Maven-Abhängigkeiten im Maven-Projekt verwendet werden
-   + Stellen Sie fest, ob stattdessen eine alternative API verwendet werden kann, die von der AEM SDK API-Abhängigkeit bereitgestellt wird.
-   + Wenn die zusätzliche Abhängigkeit erforderlich ist, stellen Sie sicher, dass sie als OSGi-Bundle bereitgestellt wird (und nicht als einfache JAR-Datei) und dass sie in das Codepaket Ihres Projekts eingebettet ist (`ui.apps`), ähnlich wie das OSGi-Kernpaket im `ui.apps`-Paket eingebettet ist.
+   + Bestimmen Sie, ob stattdessen eine alternative API verwendet werden kann, die von der AEM SDK-API-Abhängigkeit bereitgestellt wird.
+   + Wenn die zusätzliche Abhängigkeit erforderlich ist, stellen Sie sicher, dass sie als OSGi-Bundle (anstatt als einfache JAR-Datei) bereitgestellt und in das Code-Paket Ihres Projekts (`ui.apps`) eingebettet ist, ähnlich wie das Core-OSGi-Bundle in das `ui.apps`-Paket eingebettet ist.
 
 ## Servlets
 
-Servlets werden verwendet, um Einblicke darüber zu erhalten, wie AEM eine URL zu einem Java-Servlet oder -Skript (HTL, JSP) löst, das die Anforderung letztendlich verarbeitet. Diese Funktionalität ist mit dem lokalen Schnellstart-Sling Servlet-Resolver des [AEM SDK identisch.](http://localhost:4502/system/console/servletresolver)`/system/console/servletresolver`
+Servlets werden verwendet, um Einblicke darüber zu erhalten, wie AEM eine URL zu einem Java-Servlet oder -Skript (HTL, JSP) auflöst, das die Anfrage letztendlich verarbeitet. Diese Funktion entspricht der des lokalen Schnellstarts für den Sling Servlet Resolver](http://localhost:4502/system/console/servletresolver) des AEM SDK unter `/system/console/servletresolver`.[
 
 ![Developer Console - Servlets](./assets/developer-console/servlets.png)
 
-Servlets helfen beim Debugging, Folgendes zu ermitteln:
+Servlets helfen beim Debugging der Bestimmung:
 
-+ Wie eine URL in ihre adressierbaren Teile zerlegt wird (Ressource, Selektor, Erweiterung).
-+ Zu welchem Servlet oder Skript eine URL aufgelöst wird, was die Identifizierung von falsch formatierten URLs oder falsch registrierten Servlets/Skripten erleichtert.
++ Wie eine URL in adressierbare Teile (Ressource, Selektor, Erweiterung) zerlegt wird.
++ Welches Servlet oder Skript eine URL auflöst, hilft bei der Identifizierung von falsch formatierten URLs oder falsch registrierten Servlets/Skripten.
 
 ## Abfragen
 
-Abfragen helfen dabei, Einblicke darüber zu erhalten, was und wie Abfragen auf AEM ausgeführt werden. Diese Funktion ist mit der AEM-Konsole von [Tools > Abfrage Performance ](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) identisch.
+Abfragen bieten Einblicke in was und wie Suchanfragen auf AEM ausgeführt werden. Diese Funktion entspricht der Konsole &quot;Tools > Abfrageleistung ](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html)&quot;AEM SDK für den lokalen Schnellstart.[
 
-Abfragen können nur ausgeführt werden, wenn ein bestimmter Pod ausgewählt ist, da die Webkonsole für die Abfrage-Performance des Pods geöffnet wird, sodass der Entwickler Zugriff auf den AEM haben muss.
+Abfragen funktionieren nur, wenn ein bestimmter Pod ausgewählt ist, da die Webkonsole &quot;Abfrageleistung&quot;dieses Pods geöffnet wird. Entwickler müssen Zugriff auf den AEM haben.
 
-![Developer Console - Abfragen - Abfrage erläutern](./assets/developer-console/queries__explain-query.png)
+![Entwicklerkonsole - Abfragen - Abfrage erläutern](./assets/developer-console/queries__explain-query.png)
 
-Abfragen helfen beim Debugging durch:
+Abfragen erleichtern das Debugging durch:
 
-+ Erläuterung, wie Abfragen von Oak interpretiert, analysiert und ausgeführt werden. Dies ist sehr wichtig, wenn rückverfolgt wird, warum eine Abfrage langsam ist und wie sie beschleunigt werden kann.
-+ Auflistung der beliebtesten Abfragen, die in AEM ausgeführt werden, mit der Möglichkeit, sie zu erläutern.
-+ Auflistung der langsamsten Abfragen, die in AEM ausgeführt werden, mit der Möglichkeit, sie zu erläutern.
++ Erläuterung der Interpretation, Analyse und Ausführung von Abfragen durch Oak. Dies ist sehr wichtig, wenn Sie nachverfolgen möchten, warum eine Abfrage langsam ist, und wissen, wie sie beschleunigt werden kann.
++ Auflisten der beliebtesten Abfragen, die in AEM ausgeführt werden, mit der Möglichkeit, sie zu erläutern.
++ Auflisten der langsamsten Abfragen, die in AEM ausgeführt werden, mit der Möglichkeit, sie zu erläutern.
