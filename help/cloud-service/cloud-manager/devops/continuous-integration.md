@@ -1,5 +1,5 @@
 ---
-title: Kontinuierliche Integration mit AEM Cloud Manager
+title: Verwenden der kontinuierlichen Integration mit AEM Cloud Manager
 description: Machen Sie sich mit Best Practices und kontinuierlicher Integration mithilfe von Adobe Cloud Manager vertraut.
 role: Developer
 level: Beginner
@@ -8,11 +8,10 @@ topic: Entwicklung
 feature: Entwickler-Tools
 kt: 6914
 thumbnail: 330536.jpg
-translation-type: tm+mt
 source-git-commit: e295d77a11c99310aaae10ecb8a2eaa20ad49285
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '64'
+ht-degree: 10%
 
 ---
 
