@@ -3,7 +3,7 @@ title: Inhaltsfragmentvarianten
 description: Erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen und einige gängige Anwendungsfälle untersuchen.
 sub-product: Assets
 version: cloud-service
-topic: Kopflos, Content-Management
+topic: Headless, Content Management
 feature: Inhaltsfragmente, GraphQL-APIs
 role: Developer
 level: Beginner
@@ -25,7 +25,7 @@ In diesem Video werden Sie:
 
 + Erfahren Sie, wie Sie eine Variante eines Inhaltsfragments erstellen
 + Erfahren Sie, wie Varianten in einem realen Szenario verwendet werden können.
-+ Überprüfen Sie die GraphQL-Syntax, um eine bestimmte Variation anzufordern.
++ Überprüfen Sie die GraphQL-Syntax, um eine bestimmte Variante anzufordern.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333295/?quality=12&learn=on)
 
