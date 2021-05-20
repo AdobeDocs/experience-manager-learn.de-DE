@@ -1,7 +1,7 @@
 ---
-title: Signaturstatus des Formulars in der Datenbank aktualisieren
+title: Aktualisieren des Signaturstatus des Formulars in der Datenbank
 description: Signaturstatus des signierten Formulars in der Datenbank mithilfe des AEM-Workflows aktualisieren
-feature: Adaptive Forms
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,26 +9,25 @@ activity: implement
 version: 6.4,6.5
 kt: 6888
 thumbnail: 6888.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '109'
-ht-degree: 4%
+source-wordcount: '107'
+ht-degree: 3%
 
 ---
 
 
-# Signaturstatus aktualisieren
+# Aktualisierung des Signaturstatus
 
-Der UpdateSignatureStatus-Arbeitsablauf wird ausgelöst, wenn der Benutzer die Signaturzeremonie abgeschlossen hat. Im Folgenden wird der Workflow beschrieben
+Der Workflow UpdateSignatureStatus wird ausgelöst, wenn der Benutzer die Signaturzeremonie abgeschlossen hat. Im Folgenden wird der Workflow beschrieben.
 
 ![main-workflow](assets/update-signature.PNG)
 
 &quot;Signaturstatus aktualisieren&quot;ist ein benutzerdefinierter Prozessschritt.
-Der Hauptgrund für die Implementierung eines benutzerdefinierten Prozessschritts ist die Erweiterung eines AEM Arbeitsablaufs. Im Folgenden finden Sie den benutzerspezifischen Code zur Aktualisierung des Signaturstatus.
+Der Hauptgrund für die Implementierung eines benutzerdefinierten Prozessschritts besteht darin, einen AEM Workflow zu erweitern. Im Folgenden finden Sie den benutzerdefinierten Code, mit dem der Signaturstatus aktualisiert wird.
 Code in diesem benutzerdefinierten Prozessschritt verweist auf den SignMultipleForms-Dienst.
 
 
@@ -75,5 +74,5 @@ public class UpdateSignatureStatusWorkflowStep implements WorkflowProcess {
 
 ## Assets
 
-Der Arbeitsablauf zum Aktualisieren des Signaturstatus kann [von hier heruntergeladen werden](assets/update-signature-status-workflow.zip)
+Der Workflow zum Aktualisieren des Signaturstatus kann [von hier heruntergeladen werden](assets/update-signature-status-workflow.zip)
 
