@@ -1,9 +1,9 @@
 ---
 title: Erweiterte Modellierung für GraphQL
-description: Erfahren Sie, wie Sie Beziehungen zwischen Inhaltsfragmentmodellen in Adobe Experience Manager (AEM) erstellen und wie Sie diese Beziehungen in GraphQL-Abfragen nutzen können.
+description: Erfahren Sie, wie Sie Beziehungen zwischen Inhaltsfragmentmodellen in Adobe Experience Manager erstellen (AEM) und wie Sie diese Beziehungen in GraphQL-Abfragen nutzen können.
 sub-product: Assets
 version: cloud-service
-topic: Kopflos, Content-Management
+topic: Headless, Content Management
 feature: Inhaltsfragmente, GraphQL-APIs
 role: Developer
 level: Beginner
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # Erweiterte Modellierung für GraphQL
 
-Erfahren Sie, wie Sie Beziehungen zwischen Inhaltsfragmentmodellen in Adobe Experience Manager (AEM) erstellen und wie Sie diese Beziehungen in GraphQL-Abfragen nutzen können.
+Erfahren Sie, wie Sie Beziehungen zwischen Inhaltsfragmentmodellen in Adobe Experience Manager erstellen (AEM) und wie Sie diese Beziehungen in GraphQL-Abfragen nutzen können.
 
 In diesem Video werden Sie:
 
-+ Erfahren Sie, wie Sie mit Inhaltsfragmentverweisen eine oder mehrere Inhaltsfragmente verknüpfen können
++ Erfahren Sie, wie Sie mit Inhaltsfragmentverweisen eine oder mehrere Inhaltsfragmente verknüpfen
 + Erfahren Sie, wie Sie einen Deep Link zu anderen Inhaltsfragmenten in einem Rich-Text-Feld erstellen
-+ GraphQL-Abfragen erstellen, die Daten aus referenzierten Inhaltsfragmenten zurückgeben
++ Erstellen von GraphQL-Abfragen, die Daten aus referenzierten Inhaltsfragmenten zurückgeben
 
 >[!VIDEO](https://video.tv.adobe.com/v/332859/?quality=12&learn=on)
 
