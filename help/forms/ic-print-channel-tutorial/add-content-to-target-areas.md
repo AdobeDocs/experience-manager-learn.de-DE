@@ -1,10 +1,10 @@
 ---
-title: Hinzufügen von Textinhalten und Bildinhalten zum Dokument von Kanal
-seo-title: Hinzufügen von Textinhalten und Bildinhalten zum Dokument von Kanal
-description: 'Dies ist Teil 7 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil fügen wir den im Layout(xdp) definierten Zielgruppen Bilder und Textinhalte hinzu. '
-seo-description: 'Dies ist Teil 7 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil fügen wir den im Layout(xdp) definierten Zielgruppen Bilder und Textinhalte hinzu. '
+title: Hinzufügen von Text- und Bildinhalten zum Druckkanaldokument
+seo-title: Hinzufügen von Text- und Bildinhalten zum Druckkanaldokument
+description: 'Dies ist Teil 7 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil fügen wir den im Layout (xdp) definierten Zielbereichen Bilder und Textinhalte hinzu. '
+seo-description: 'Dies ist Teil 7 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil fügen wir den im Layout (xdp) definierten Zielbereichen Bilder und Textinhalte hinzu. '
 uuid: f20d6974-6faf-4b90-a7ff-8aa8a620fcaa
-feature: Interactive Communication
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,29 +13,28 @@ version: 6.4,6.5
 discoiquuid: a79bf219-2423-4819-89fc-dcfe976e08b7
 kt: 5992
 thumbnail: 22379.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '199'
 ht-degree: 1%
 
 ---
 
 
-# Hinzufügen von Textinhalten und Bildinhalten zum Dokument von Kanal
+# Hinzufügen von Text- und Bildinhalten zum Druckkanaldokument
 
-In diesem Teil fügen wir den im Layout(xdp) definierten Zielgruppen Bilder und Textinhalte hinzu.
+In diesem Teil fügen wir den im Layout (xdp) definierten Zielbereichen Bilder und Textinhalte hinzu.
 
-Nachdem Sie Ihr erstes Dokument-Fragment erstellt haben, das den Namen und die Adresse des Empfängers enthalten wird, müssen wir das Dokument-Fragment zum Dokument &quot;print Kanal&quot;hinzufügen.
+Nachdem Sie Ihr erstes Dokumentfragment erstellt haben, das den Namen und die Adresse des Empfängers enthalten wird, müssen wir das Dokumentfragment zum Dokument des Druckkanals hinzufügen.
 
-Sie können dem Print-Kanal-Dokument Inhalte verschiedener Typen hinzufügen, z. B. Dokument-Fragmente, Bilder, Layout-Fragmente usw.
+Sie können dem Dokument für den Druckkanal Inhalte verschiedener Typen wie Dokumentfragmente, Bilder, Layout-Fragmente usw. hinzufügen.
 
-Um dem Dokument für den Druck-Kanal Inhalte hinzuzufügen, befolgen Sie bitte das folgende Video.
+Um dem Dokument zum Druckkanal Inhalt hinzuzufügen, folgen Sie dem folgenden Video.
 
-Das Video führt Sie durch die Schritte, die beim Hinzufügen von Inhalten zu den entsprechenden Zielgruppen im Print Kanal-Dokument erforderlich sind.
+Das Video führt Sie durch die Schritte, die zum Hinzufügen von Inhalten zu den entsprechenden Zielbereichen im Druckkanaldokument erforderlich sind.
 
 >[!VIDEO](https://video.tv.adobe.com/v/22379t2/?quality=9&learn=on)
 
