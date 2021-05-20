@@ -1,33 +1,32 @@
 ---
-title: Anzeigen von Inline-Bildern im adaptiven Forms
-seo-title: Anzeigen von Inline-Bildern im adaptiven Forms
-description: Hochgeladene Bilder inline im adaptiven Forms anzeigen
-seo-description: Hochgeladene Bilder inline im adaptiven Forms anzeigen
-feature: Adaptive Forms
+title: Anzeigen von Inline-Bildern in Adaptive Forms
+seo-title: Anzeigen von Inline-Bildern in Adaptive Forms
+description: Inline-Anzeige hochgeladener Bilder in Adaptive Forms
+seo-description: Inline-Anzeige hochgeladener Bilder in Adaptive Forms
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
 activity: setup
 version: 6.3,6.4,6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '241'
 ht-degree: 1%
 
 ---
 
 
-# Inline-Bilder im adaptiven Forms
+# Inline-Bilder in Adaptive Forms
 
-In der Regel wird das hochgeladene Bild als Inline-Bild im adaptiven Formular angezeigt. Standardmäßig wird das hochgeladene Bild als Link angezeigt. Dieses Erlebnis kann durch die Anzeige des Bildes im adaptiven Formular verbessert werden. In diesem Artikel werden Sie durch die Schritte zur Anzeige des Inline-Bildes geführt.
+Ein gängiger Anwendungsfall besteht darin, das hochgeladene Bild als Inline-Bild im adaptiven Formular anzuzeigen. Standardmäßig wird das hochgeladene Bild als Link angezeigt und dieses Erlebnis kann durch die Anzeige des Bildes im adaptiven Formular verbessert werden. Dieser Artikel führt Sie durch die Schritte, die für die Anzeige von Inline-Bildern erforderlich sind.
 
-## hinzufügen Platzhalterbild
+## Platzhalterbild hinzufügen
 
-Der erste Schritt besteht darin, der Dateianlagenkomponente ein Platzhalterdiv vorzustellen. Im Code unter der Dateianlagenkomponente wird der CSS-Klassenname des Foto-Uploads angegeben. Die JavaScript-Funktion ist Teil der Client-Bibliothek, die mit den adaptiven Formularen verknüpft ist. Diese Funktion wird im initialize-Ereignis der Dateianlagenkomponente aufgerufen.
+Der erste Schritt besteht darin, der Dateianlagenkomponente ein Platzhalter-div vorzuhängen. Im folgenden Code wird die Dateianlagenkomponente durch den CSS-Klassennamen des Foto-Uploads identifiziert. Die JavaScript-Funktion ist Teil der Client-Bibliothek, die mit den adaptiven Formularen verknüpft ist. Diese Funktion wird im initialize-Ereignis der Dateianlagenkomponente aufgerufen.
 
 ```javascript
 /**
@@ -68,9 +67,9 @@ function consumeImage (file) {
 }
 ```
 
-### Auf dem Server bereitstellen
+### Auf Ihrem Server bereitstellen
 
-* Laden Sie die [Client-Bibliothek](assets/inline-image-client-library.zip) mit AEM Package Manager auf Ihre AEM-Instanz herunter und installieren Sie sie.
-* Laden Sie das [Beispielformular](assets/inline-image-af.zip) mit AEM Package Manager auf Ihre AEM-Instanz herunter und installieren Sie es.
-* Zeigen Sie Ihren Browser auf [Hinzufügen Inline-Bild](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
+* Laden Sie die [Client-Bibliothek](assets/inline-image-client-library.zip) mit AEM Paketmanager auf Ihre AEM-Instanz herunter und installieren Sie sie.
+* Laden Sie das [Beispielformular](assets/inline-image-af.zip) mit AEM Paketmanager auf Ihre AEM-Instanz herunter und installieren Sie es.
+* Zeigen Sie Ihren Browser auf [Inline-Bild hinzufügen](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
 * Klicken Sie auf die Schaltfläche &quot;Foto anhängen&quot;, um ein Bild hinzuzufügen.
