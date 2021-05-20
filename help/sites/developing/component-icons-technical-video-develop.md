@@ -1,19 +1,18 @@
 ---
-title: Anpassen der Komponentensymbole in Adobe Experience Manager Sites
+title: Anpassen von Komponentensymbolen in Adobe Experience Manager Sites
 description: Mithilfe von Komponentensymbolen können Autoren eine Komponente schnell mit Symbolen oder aussagekräftigen Abkürzungen identifizieren. Autoren können jetzt die Komponenten finden, die erforderlich sind, um ihre Web-Erlebnisse schneller als je zuvor zu erstellen.
 topics: components
 audience: administrator, developer
 doc-type: technical video
 activity: develop
 version: 6.3, 6.4, 6.5
-feature: Core Components
-topic: Development
+feature: Kernkomponenten
+topic: Entwicklung
 role: Business Practitioner
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '381'
+source-wordcount: '378'
 ht-degree: 8%
 
 ---
@@ -25,7 +24,7 @@ Mithilfe von Komponentensymbolen können Autoren eine Komponente schnell mit Sym
 
 >[!VIDEO](https://video.tv.adobe.com/v/16778/?quality=9&learn=on)
 
-Der Komponenten-Browser wird nun in einem konsistenten grauen Design angezeigt und zeigt Folgendes an:
+Der Komponenten-Browser wird jetzt in einem konsistenten grauen Design angezeigt, in dem Folgendes angezeigt wird:
 
 * **[!UICONTROL Komponentengruppe]**
 * **[!UICONTROL Komponentenname]**
@@ -36,13 +35,13 @@ Der Komponenten-Browser wird nun in einem konsistenten grauen Design angezeigt u
    * Benutzerdefiniertes SVG-Bild *(von einem Entwickler konfiguriert)*
    * CoralUI-Symbol *(von einem Entwickler konfiguriert)*
 
-## Konfigurationsoptionen für Komponentensymbole {#component-icon-configuration-options}
+## Konfigurationsoptionen für Komponenten-Symbol {#component-icon-configuration-options}
 
 ### Abkürzungen {#abbreviations}
 
-Standardmäßig werden die ersten beiden Zeichen des Komponententitels (**[cq:Component]@jcr:title**) als Abkürzung verwendet. Beispiel: Wenn **[cq:Component]@jcr:title=Article Liste** die Abkürzung als &quot;**Ar**&quot;angezeigt wird.
+Standardmäßig werden die ersten beiden Zeichen des Komponententitels (**[cq:Component]@jcr:title**) als Abkürzung verwendet. Beispiel: Wenn **[cq:Component]@jcr:title=Article List**, würde die Abkürzung als &quot;**Ar**&quot;angezeigt werden.
 
-Die Abkürzung kann über die Eigenschaft **[cq:Component]@abkürzung** angepasst werden. Dieser Wert kann zwar mehr als 2 Zeichen enthalten, es wird jedoch empfohlen, die Abkürzung auf 2 Zeichen zu beschränken, um visuelle Störungen zu vermeiden.
+Die Abkürzung kann über die Eigenschaft **[cq:Component]@abbreviation** angepasst werden. Dieser Wert kann zwar mehr als 2 Zeichen enthalten, es wird jedoch empfohlen, die Abkürzung auf 2 Zeichen zu beschränken, um visuelle Störungen zu vermeiden.
 
 ```plain
 /apps/.../components/content/my-component
@@ -50,9 +49,9 @@ Die Abkürzung kann über die Eigenschaft **[cq:Component]@abkürzung** angepass
   - abbreviation = "AL"
 ```
 
-### CoralUI Icons {#coralui-icons}
+### CoralUI-Symbole {#coralui-icons}
 
-Die von AEM bereitgestellten CoralUI-Symbole können für Komponentensymbole verwendet werden. Um ein CoralUI-Symbol zu konfigurieren, legen Sie eine **[cq:Component]@cq:icon**-Eigenschaft auf den HTML-Attributwert des gewünschten CoralUI-Symbols fest (aufgeführt in der [CoralUI-Dokumentation](https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)).
+CoralUI-Symbole, die von AEM bereitgestellt werden, können für Komponenten-Symbole verwendet werden. Um ein CoralUI-Symbol zu konfigurieren, legen Sie eine **[cq:Component]@cq:icon** -Eigenschaft auf den HTML-Symbolattributwert des gewünschten CoralUI-Symbols fest (aufgezählt in der [CoralUI-Dokumentation](https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html).
 
 ```plain
 /apps/.../components/content/my-component
@@ -64,9 +63,9 @@ Die von AEM bereitgestellten CoralUI-Symbole können für Komponentensymbole ver
 
 PNG-Bilder können für Komponentensymbole verwendet werden. Um ein PNG-Bild als Komponentensymbol zu konfigurieren, fügen Sie das gewünschte Bild als **nt:file** mit dem Namen **cq:icon.png** unter **[cq:Component]** hinzu.
 
-Die PNG-Datei sollte einen transparenten Hintergrund oder eine Hintergrundfarbe auf **#707070** setzen.
+Das PNG sollte einen transparenten Hintergrund haben oder eine Hintergrundfarbe, die auf **#7070** festgelegt ist.
 
-Die PNG-Bilder werden auf **20px um 20px** skaliert. Zur Aufnahme von Retina-Anzeigen ist es jedoch empfehlenswert, **40px** von **40px** anzuzeigen.
+Die PNG-Bilder werden auf **20px um 20px** skaliert. Um Retina-Anzeigen zu ermöglichen, ist es möglicherweise empfehlenswert, **40px** von **40px** anzuzeigen.
 
 ```plain
 /apps/.../components/content/my-component
@@ -77,9 +76,9 @@ Die PNG-Bilder werden auf **20px um 20px** skaliert. Zur Aufnahme von Retina-Anz
 
 ### SVG-Bilder {#svg-images}
 
-SVG-Bilder (vektorbasiert) können für Komponentensymbole verwendet werden. Um ein SVG-Bild als Komponentensymbol zu konfigurieren, fügen Sie das gewünschte SVG als **nt:file** mit dem Namen **cq:icon.svg** unter **[cq:Component]** hinzu.
+SVG-Bilder (vektorbasiert) können für Komponentensymbole verwendet werden. Um ein SVG-Bild als Komponentensymbol zu konfigurieren, fügen Sie die gewünschte SVG als **nt:file** mit dem Namen **cq:icon.svg** unter **[cq:Component]** hinzu.
 
-SVG-Bilder sollten eine Hintergrundfarbe auf **#707070** und eine Größe von **20px x x.** haben.
+SVG-Bilder sollten eine Hintergrundfarbe haben, die auf **#7070** und eine Größe von **20px x x 20px eingestellt ist.**
 
 ```plain
 /apps/.../components/content/my-component
