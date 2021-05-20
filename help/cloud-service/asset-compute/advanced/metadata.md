@@ -1,6 +1,6 @@
 ---
-title: Entwickeln eines Asset compute-Metadatenarbeiters
-description: Hier erfahren Sie, wie Sie einen Asset compute-Metadaten-Arbeitsablauf erstellen, der die am häufigsten verwendeten Farben in einem Bild-Asset ableitet und die Farbnamen in die Metadaten des Assets in AEM schreibt.
+title: Entwickeln eines Asset compute-Metadaten-Sekundärs
+description: Erfahren Sie, wie Sie einen Asset compute-Metadaten-Worker erstellen, der die am häufigsten verwendeten Farben in einem Bild-Asset ableitet und die Farbnamen in die Metadaten des Assets in AEM schreibt.
 feature: asset compute Microservices
 topics: metadata, development
 version: cloud-service
@@ -12,7 +12,6 @@ thumbnail: 327313.jpg
 topic: Integrationen, Entwicklung
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
 source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
 workflow-type: tm+mt
 source-wordcount: '1439'
@@ -21,45 +20,45 @@ ht-degree: 1%
 ---
 
 
-# Entwickeln eines Asset compute-Metadatenarbeiters
+# Entwickeln eines Asset compute-Metadaten-Sekundärs
 
-Benutzerdefinierte Asset compute-Mitarbeiter können XMP (XML) Daten erstellen, die an AEM zurückgesendet und als Metadaten für ein Asset gespeichert werden.
+Benutzerdefinierte Asset compute-Sekundäre können XMP (XML) Daten erstellen, die zurück an AEM gesendet und als Metadaten für ein Asset gespeichert werden.
 
 Häufige Anwendungsfälle sind:
 
 + Integrationen mit Drittanbietersystemen, z. B. einem PIM (Product Information Management System), bei dem zusätzliche Metadaten abgerufen und im Asset gespeichert werden müssen
-+ Integration mit Adobe-Diensten wie Content and Commerce AI zur Erweiterung von Asset-Metadaten um zusätzliche Attribute für maschinelles Lernen
++ Integrationen mit Adobe-Diensten wie Content and Commerce AI zur Erweiterung von Asset-Metadaten um zusätzliche Attribute für maschinelles Lernen
 + Ableiten von Metadaten zum Asset aus seiner Binärdatei und Speichern als Asset-Metadaten in AEM als Cloud Service
 
 ## Was Sie tun werden
 
 >[!VIDEO](https://video.tv.adobe.com/v/327313?quality=12&learn=on)
 
-In diesem Lernprogramm erstellen wir einen Asset compute-Metadaten-Mitarbeiter, der die am häufigsten verwendeten Farben in einem Bild-Asset ableitet und die Farbnamen zurück in die Metadaten des Assets in AEM schreibt. Obwohl der Arbeiter selbst ein grundlegendes Element ist, wird in diesem Lernprogramm untersucht, wie Asset compute-Workers verwendet werden können, um Metadaten als Cloud Service in Assets AEM zu schreiben.
+In diesem Tutorial erstellen wir einen Asset compute Metadaten-Worker, der die am häufigsten verwendeten Farben in einem Bild-Asset ableitet und die Farbnamen in die Metadaten des Assets in AEM schreibt. Obwohl das Sekundärprogramm selbst einfach ist, wird in diesem Tutorial untersucht, wie Asset compute-Sekundärprogramme zum Zurückschreiben von Metadaten in Assets in AEM als Cloud Service verwendet werden können.
 
-## Logischer Fluss eines Asset compute-Metadaten-Workers beim Aufrufen
+## Logischer Ablauf eines Asset compute-Metadaten-Worker-Aufrufs
 
-Der Aufruf von Asset compute-Metadaten-Workern ist fast identisch mit dem von [Binärdarstellung, wodurch Worker](../develop/worker.md) generiert werden, wobei der Hauptunterschied der Rückgabetyp eine XMP (XML) Darstellung ist, deren Werte auch in die Metadaten des Assets geschrieben werden.
+Der Aufruf von Asset compute-Metadatenarbeitern ist fast identisch mit dem von [binäre Ausgabedarstellung, die Sekundäre](../develop/worker.md) generiert, wobei der Hauptunterschied der Rückgabetyp ist eine XMP (XML)-Ausgabedarstellung, deren Werte auch in die Metadaten des Assets geschrieben werden.
 
-asset compute-Worker implementieren den Asset compute SDK-Worker-API-Vertrag in der Funktion `renditionCallback(...)`, die konzeptionell Folgendes beinhaltet:
+asset compute-Worker implementieren den Asset compute SDK Worker API-Vertrag in der `renditionCallback(...)`-Funktion, die konzeptionell lautet:
 
-+ __Eingabe:__ Originalparameter des binären und verarbeitenden Profils eines AEM Assets
-+ __Ausgabe:__ Eine XMP (XML)-Darstellung blieb beim AEM Asset als Darstellung und den Metadaten des Assets erhalten
++ __Eingabe:__ Die ursprünglichen binären Parameter und Verarbeitungsprofil eines AEM Assets
++ __Ausgabe:__ Eine XMP (XML)-Ausgabedarstellung, die als Ausgabedarstellung am AEM Asset und den Metadaten des Assets beibehalten wird
 
-![Logikfluss des asset compute Metadaten-Workflows](./assets/metadata/logical-flow.png)
+![Logischer Ablauf des asset compute-Metadaten-Workflows](./assets/metadata/logical-flow.png)
 
-1. Der AEM Author-Dienst ruft den Asset compute-Metadaten-Worker auf und stellt die Parameter __(1a)__ original binär und __(1b)__ bereit, die im Profil &quot;Verarbeitung&quot;definiert sind.
-1. Das Asset compute-SDK orchestriert die Ausführung der `renditionCallback(...)`-Funktion des benutzerdefinierten Asset compute-Metadaten-Workers und leitet eine XMP (XML)-Darstellung ab, die auf der binären __(1a)__-Darstellung des Assets und allen Verarbeitungsparametern __(1b)__ basiert.
-1. Der Asset compute-Worker speichert die XMP (XML)-Darstellung auf `rendition.path`.
-1. Die XMP (XML) Daten, die in `rendition.path` geschrieben wurden, werden über das Asset compute SDK an den AEM Author-Dienst übertragen und als __(4a)__ eine Texterstellung und __(4b)__ auf dem Metadaten-Knoten des Assets beibehalten.
+1. Der AEM-Autorendienst ruft den Asset compute-Metadaten-Worker auf und stellt die __(1a)__ ursprüngliche Binärdatei des Assets sowie __(1b)__ alle im Verarbeitungsprofil definierten Parameter bereit.
+1. Das Asset compute SDK orchestriert die Ausführung der `renditionCallback(...)`-Funktion des benutzerdefinierten Asset compute-Metadatenarbeiters und leitet eine XMP (XML)-Ausgabedarstellung ab, die auf der binären __(1a)__-Datei des Assets und den Verarbeitungsprofilparametern __(1b)__ basiert.
+1. Der Asset compute Worker speichert die XMP (XML)-Darstellung in `rendition.path`.
+1. Die XMP (XML)-Daten, die in `rendition.path` geschrieben wurden, werden über das Asset compute SDK an den AEM-Autorendienst übertragen und als __(4a)__ Textausgabe und __(4b)__ im Metadatenknoten des Assets gespeichert.
 
-## manifest.yml{#manifest} konfigurieren
+## Konfigurieren von manifest.yml{#manifest}
 
-Alle Asset compute-Arbeiter müssen im Ordner [manifest.yml](../develop/manifest.md) registriert sein.
+Alle Asset compute-Sekundäre müssen in [manifest.yml](../develop/manifest.md) registriert sein.
 
-Öffnen Sie den Eintrag `manifest.yml` des Projekts und fügen Sie einen Eintrag für den Arbeiter hinzu, der den neuen Arbeiter konfiguriert, in diesem Fall `metadata-colors`.
+Öffnen Sie die `manifest.yml` des Projekts und fügen Sie einen Worker-Eintrag hinzu, der den neuen Worker konfiguriert, in diesem Fall `metadata-colors`.
 
-_Denken Sie daran, dass  `.yml` Whitespace sensibel ist._
+_Beachten Sie, dass  `.yml` Whitespace-Einstellungen berücksichtigt werden._
 
 ```
 packages:
@@ -84,17 +83,17 @@ packages:
           memorySize: 512 # in MB   
 ```
 
-`function` verweist auf die im  [nächsten Schritt](#metadata-worker) erstellte Worker-Implementierung. Benennen Sie Arbeiter semantisch (z. B. `actions/worker/index.js` könnte besser `actions/rendition-circle/index.js` benannt sein), wie diese in der [Worker-URL](#deploy) und bestimmen Sie auch den Ordnernamen [Worker für die Testsuite](#test).
+`function` verweist auf die Worker-Implementierung, die im  [nächsten Schritt](#metadata-worker) erstellt wurde. Benennen Sie Sekundäre semantisch (z. B. `actions/worker/index.js` wurde besser `actions/rendition-circle/index.js` genannt), wie sie in der [Worker-URL](#deploy) angezeigt werden, und bestimmen Sie auch den Ordner-Namen der [Worker-Test-Suite](#test).
 
-Die Werte `limits` und `require-adobe-auth` werden diskret pro Worker konfiguriert. In diesem Worker wird `512 MB` des Speichers zugeordnet, wenn der Code (potenziell) große binäre Bilddaten überprüft. Die anderen `limits` werden entfernt, um Standardwerte zu verwenden.
+Die `limits` und `require-adobe-auth` werden diskret pro Worker konfiguriert. In diesem Worker wird `512 MB` des Speichers zugewiesen, wenn der Code (potenziell) große binäre Bilddaten prüft. Die anderen `limits` werden entfernt, um Standardwerte zu verwenden.
 
-## Entwickeln eines Metadatenarbeiters{#metadata-worker}
+## Entwickeln eines Metadaten-Workers{#metadata-worker}
 
-Erstellen Sie im Asset compute-Projekt eine neue JavaScript-Metadatenarbeiterdatei unter dem Pfad [defined manifest.yml für den neuen Worker](#manifest) unter `/actions/metadata-colors/index.js`
+Erstellen Sie eine neue Metadaten-Worker-JavaScript-Datei im Asset compute-Projekt unter dem Pfad [defined manifest.yml für den neuen Worker](#manifest) unter `/actions/metadata-colors/index.js`
 
 ### Installieren von npm-Modulen
 
-Installieren Sie die zusätzlichen npm-Module ([@adobe/asset-compute-xmp](https://www.npmjs.com/package/@adobe/asset-compute-xmp?activeTab=versions), [get-image-color](https://www.npmjs.com/package/get-image-colors) und [color-namer](https://www.npmjs.com/package/color-namer)), die in diesem Asset compute-Worker verwendet werden.
+Installieren Sie die zusätzlichen NPM-Module ([@adobe/asset-compute-xmp](https://www.npmjs.com/package/@adobe/asset-compute-xmp?activeTab=versions), [get-image-color](https://www.npmjs.com/package/get-image-colors) und [color-namer](https://www.npmjs.com/package/color-namer)), die in diesem Asset compute Worker verwendet werden.
 
 ```
 $ npm install @adobe/asset-compute-xmp
@@ -102,9 +101,9 @@ $ npm install get-image-colors
 $ npm install color-namer
 ```
 
-### Metadaten-Arbeitscode
+### Metadaten-Worker-Code
 
-Dieser Worker sieht dem [rendition-generator](../develop/worker.md) sehr ähnlich. Der Hauptunterschied besteht darin, XMP (XML) Daten in das `rendition.path` zu schreiben, um wieder in AEM gespeichert zu werden.
+Dieser Worker sieht dem [rendition-generate worker](../develop/worker.md) sehr ähnlich. Der Hauptunterschied besteht darin, XMP (XML) Daten in `rendition.path` zu schreiben, um wieder in AEM gespeichert zu werden.
 
 
 ```javascript
@@ -181,18 +180,18 @@ function getColorName(colorsFamily, color) {
 }
 ```
 
-## Ausführen des Metadaten-Workers lokal{#development-tool}
+## Führen Sie den Metadaten-Worker lokal aus{#development-tool}
 
-Wenn der Arbeitscode abgeschlossen ist, kann er mit dem lokalen Asset compute Development Tool ausgeführt werden.
+Wenn der Worker-Code abgeschlossen ist, kann er mit dem lokalen Asset compute Development Tool ausgeführt werden.
 
-Da unser Asset compute-Projekt zwei Arbeiter enthält (die vorherige [Kreisdarstellung](../develop/worker.md) und dieser `metadata-colors`-Arbeiter), werden mit dem [Asset compute Development Tool](../develop/development-tool.md)-Profil-Definitionstool Profile zur Ausführung von Listen für beide Arbeitskräfte erstellt. Die zweite Profil-Definition verweist auf den neuen `metadata-colors`-Worker.
+Da unser Asset compute-Projekt zwei Sekundärprogramme enthält (das vorherige [Kreisausgabeformat](../develop/worker.md) und dieses `metadata-colors` -Sekundärprogramm), listet die Profildefinition des [Asset compute-Entwicklungstools ](../develop/development-tool.md) Ausführungsprofile für beide Sekundäre auf. Die zweite Profildefinition verweist auf den neuen Worker `metadata-colors` .
 
-![XML-Metadaten-Darstellung](./assets/metadata/metadata-rendition.png)
+![XML-Metadaten-Ausgabe](./assets/metadata/metadata-rendition.png)
 
-1. Aus der Wurzel des Asset compute-Projekts
-1. Führen Sie `aio app run` aus, um das Asset compute Development Tool Beginn
-1. Wählen Sie im Ordner __eine Datei aus...__ Dropdown-Liste wählen Sie ein [Beispielbild](../assets/samples/sample-file.jpg) zur Verarbeitung aus.
-1. Aktualisieren Sie in der Definition-Konfiguration des zweiten Profils, die auf den `metadata-colors`-Worker verweist, `"name": "rendition.xml"`, da dieser Worker eine XMP (XML)-Darstellung generiert. Optional können Sie einen Parameter `colorsFamily` (unterstützte Werte `basic`, `hex`, `html`, `ntc`, `pantone`, `roygbiv`) hinzufügen.
+1. Aus dem Stammverzeichnis des Asset compute-Projekts
+1. Führen Sie `aio app run` aus, um das Asset compute Development Tool zu starten.
+1. Wählen Sie im __Datei auswählen...__ Dropdown-Liste wählen Sie ein [Beispielbild](../assets/samples/sample-file.jpg) zur Verarbeitung aus
+1. Aktualisieren Sie in der zweiten Profildefinitionskonfiguration, die auf den Worker `metadata-colors` verweist, `"name": "rendition.xml"` , da dieser Worker eine XMP (XML)-Ausgabedarstellung generiert. Optional können Sie einen Parameter `colorsFamily` hinzufügen (unterstützte Werte `basic`, `hex`, `html`, `ntc`, `pantone`, `roygbiv`).
 
    ```json
    {
@@ -206,13 +205,13 @@ Da unser Asset compute-Projekt zwei Arbeiter enthält (die vorherige [Kreisdarst
    }
    ```
 
-1. Tippen Sie auf __Ausführen__ und warten Sie, bis die XML-Darstellung generiert wird.
-   + Da beide Profil in der Definition aufgeführt sind, werden beide Darstellungen generiert. Optional kann die oberste Profil-Definition, die auf den [Kreis-Darstellungs-Worker](../develop/worker.md) verweist, gelöscht werden, um eine Ausführung aus dem Entwicklungstool zu vermeiden.
-1. Im Abschnitt __Ausgabeformate__ wird die generierte Darstellung Vorschau. Tippen Sie auf das `rendition.xml`, um es herunterzuladen, und öffnen Sie es in VS-Code (oder Ihrem bevorzugten XML-/Texteditor), um es zu überprüfen.
+1. Tippen Sie auf __Ausführen__ und warten Sie, bis die XML-Ausgabe generiert wird.
+   + Da beide Sekundäre in der Profildefinition aufgeführt sind, werden beide Ausgabedarstellungen generiert. Optional kann die obere Profildefinition, die auf den [Kreis-Ausgabedarstellungs-Worker](../develop/worker.md) verweist, gelöscht werden, um die Ausführung nicht über das Entwicklungstool zu vermeiden.
+1. Im Abschnitt __Ausgabeformate__ wird eine Vorschau der generierten Ausgabedarstellung angezeigt. Tippen Sie auf `rendition.xml`, um es herunterzuladen, und öffnen Sie es in VS Code (oder Ihrem bevorzugten XML/Texteditor), um es zu überprüfen.
 
-## Testen Sie den Worker{#test}
+## Testen Sie den Worker.{#test}
 
-Metadaten-Mitarbeiter können mit dem [gleichen Asset compute-Testframework getestet werden wie binäre Darstellungen](../test-debug/test.md). Der einzige Unterschied ist die `rendition.xxx`-Datei im Testfall muss die erwartete XMP (XML)-Darstellung sein.
+Metadaten-Sekundäre können mit dem [gleichen Asset compute-Test-Framework wie binäre Ausgabeformate](../test-debug/test.md) getestet werden. Der einzige Unterschied ist die `rendition.xxx`-Datei im Testfall muss die erwartete XMP (XML)-Ausgabedarstellung sein.
 
 1. Erstellen Sie die folgende Struktur im Asset compute-Projekt:
 
@@ -225,7 +224,7 @@ Metadaten-Mitarbeiter können mit dem [gleichen Asset compute-Testframework gete
    ```
 
 2. Verwenden Sie die Beispieldatei [a1/> als Testfall `file.jpg`.](../assets/samples/sample-file.jpg)
-3. hinzufügen Sie die folgende JSON auf `params.json`.
+3. Fügen Sie die folgende JSON zum `params.json` hinzu.
 
    ```
    {
@@ -234,96 +233,96 @@ Metadaten-Mitarbeiter können mit dem [gleichen Asset compute-Testframework gete
    }
    ```
 
-   Beachten Sie, dass `"fmt": "xml"` erforderlich ist, um die Testsuite anzuweisen, eine textbasierte Darstellung zu generieren.`.xml`
+   Beachten Sie, dass `"fmt": "xml"` erforderlich ist, um die Test-Suite anzuweisen, eine textbasierte Ausgabe zu generieren, die `.xml`.
 
-4. Geben Sie die erwartete XML in der Datei `rendition.xml` an. Das können Sie wie folgt abrufen:
-   + Ausführen der Testeingabedatei über das Entwicklungstool und Speichern der (validierten) XML-Darstellung.
+4. Geben Sie die erwartete XML in die Datei `rendition.xml` ein. Dies erhalten Sie durch:
+   + Ausführen der Testeingabedatei über das Entwicklungstool und Speichern der (validierten) XML-Ausgabe.
 
    ```
    <?xml version="1.0" encoding="UTF-8"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:wknd="https://wknd.site/assets/1.0/"><rdf:Description><wknd:colors><rdf:Seq><rdf:li>Silver</rdf:li><rdf:li>Black</rdf:li><rdf:li>Outer Space</rdf:li></rdf:Seq></wknd:colors><wknd:colorsFamily>pantone</wknd:colorsFamily></rdf:Description></rdf:RDF>
    ```
 
-5. Führen Sie `aio app test` aus dem Stammverzeichnis des Asset compute-Projekts aus, um alle Testsuiten auszuführen.
+5. Führen Sie `aio app test` aus dem Stammverzeichnis des Asset compute-Projekts aus, um alle Test-Suites auszuführen.
 
-### Mitarbeiter unter Adobe I/O Runtime bereitstellen{#deploy}
+### Bereitstellen des Sekundärs in Adobe I/O Runtime{#deploy}
 
-Um diesen neuen Metadaten-Worker aus AEM Assets aufzurufen, muss er unter Verwendung des Befehls unter Adobe I/O Runtime bereitgestellt werden:
+Um diesen neuen Metadaten-Worker aus AEM Assets aufzurufen, muss er mithilfe des folgenden Befehls in Adobe I/O Runtime bereitgestellt werden:
 
 ```
 $ aio app deploy
 ```
 
-![Bereitstellung der App](./assets/metadata/aio-app-deploy.png)
+![aio app deploy](./assets/metadata/aio-app-deploy.png)
 
-Beachten Sie, dass dadurch alle Arbeiter im Projekt bereitgestellt werden. Lesen Sie die [ungekürzten Bereitstellungsanweisungen](../deploy/runtime.md), um zu erfahren, wie Sie in den Arbeitsbereichen &quot;Stage&quot;und &quot;Produktion&quot;bereitstellen.
+Beachten Sie, dass dadurch alle im Projekt enthaltenen Arbeiter bereitgestellt werden. Überprüfen Sie die [ungekürzten Bereitstellungsanweisungen](../deploy/runtime.md), um zu erfahren, wie Sie in Staging- und Produktionsarbeitsbereichen bereitstellen.
 
-### Integration mit AEM-Profilen{#processing-profile}
+### Integration mit AEM Verarbeitungsprofilen{#processing-profile}
 
-Rufen Sie den Arbeiter von AEM auf, indem Sie einen neuen oder einen vorhandenen benutzerdefinierten Verarbeitungsdienst erstellen, der diesen bereitgestellten Profil aufruft.
+Rufen Sie den Worker von AEM auf, indem Sie einen neuen oder einen vorhandenen benutzerdefinierten Verarbeitungsprofildienst erstellen, der diesen bereitgestellten Worker aufruft.
 
-![Profil wird verarbeitet](./assets/metadata/processing-profile.png)
+![Verarbeitungsprofil](./assets/metadata/processing-profile.png)
 
-1. Melden Sie sich bei AEM als Cloud Service-Autorendienst als __AEM Administrator__ an
-1. Navigieren Sie zu __Tools > Assets > Processing Profils__
-1. __Erstellen__ eines neuen oder  ____ bearbeiteten, bereits vorhandenen Profils
-1. Tippen Sie auf die Registerkarte __Benutzerdefiniert__ und dann auf __Hinzufügen Neu__
+1. Melden Sie sich bei AEM als Cloud Service-Autorendienst als __AEM Administrator__ an.
+1. Navigieren Sie zu __Tools > Assets > Verarbeitungsprofile__ .
+1. ____ Erstellen Sie ein neues oder  ____ bearbeiten Sie vorhandenes Verarbeitungsprofil.
+1. Tippen Sie auf die Registerkarte __Benutzerdefiniert__ und dann auf __Neu hinzufügen__
 1. Definieren des neuen Dienstes
-   + __Metadaten-Darstellung__ erstellen: Zu aktiv wechseln
+   + __Erstellen von Metadaten-Ausgabeformaten__: Aktivieren
    + __Endpunkt:__ `https://...adobeioruntime.net/api/v1/web/wkndAemAssetCompute-0.0.1/metadata-colors`
-      + Dies ist die URL für den Arbeiter, die beim [deploy](#deploy) oder beim Verwenden des Befehls `aio app get-url` abgerufen wurde. Stellen Sie sicher, dass die URL auf der Grundlage der AEM als Cloud Service-Umgebung auf den richtigen Arbeitsbereich verweist.
+      + Dies ist die URL für den Worker, der während des [deploy](#deploy) oder mithilfe des Befehls `aio app get-url` abgerufen wurde. Stellen Sie sicher, dass die URL auf den richtigen Arbeitsbereich verweist, basierend auf der AEM als Cloud Service-Umgebung.
    + __Dienstparameter__
-      + Tippen Sie auf __Hinzufügen Parameter__
+      + Tippen Sie auf __Parameter__ hinzufügen
          + Schlüssel: `colorFamily`
          + Wert: `pantone`
             + Unterstützte Werte: `basic`, `hex`, `html`, `ntc`, `pantone`, `roygbiv`
    + __MIME-Typen__
       + __Umfasst:__ `image/jpeg`,  `image/png`,  `image/gif`,  `image/svg`
-         + Dies sind die einzigen MIME-Typen, die von den npm-Modulen von Drittanbietern unterstützt werden, die zur Ableitung der Farben verwendet werden.
+         + Dies sind die einzigen MIME-Typen, die von npm-Modulen von Drittanbietern unterstützt werden, die zum Ableiten der Farben verwendet werden.
       + __Schließt Folgendes aus:__ `Leave blank`
-1. Tippen Sie oben rechts auf __Speichern__
-1. Wenden Sie das Profil &quot;Verarbeitung&quot;auf einen AEM Assets-Ordner an, falls noch nicht geschehen
+1. Tippen Sie oben rechts auf __Speichern__ .
+1. Wenden Sie das Verarbeitungsprofil auf einen Ordner &quot;AEM Assets&quot;an, falls nicht bereits geschehen.
 
-### Schema für Metadaten aktualisieren{#metadata-schema}
+### Aktualisieren des Metadatenschemas{#metadata-schema}
 
-Um die Farbmetadaten zu überprüfen, ordnen Sie zwei neue Felder im Metadaten-Schema des Bilds den neuen Metadaten-Dateneigenschaften zu, die der Arbeiter ausfüllt.
+Um die Farbmetadaten zu überprüfen, ordnen Sie zwei neue Felder im Metadatenschema des Bildes den neuen Metadaten-Eigenschaften zu, die der Worker füllt.
 
 ![Metadatenschema](./assets/metadata/metadata-schema.png)
 
-1. Navigieren Sie im AEM Author-Dienst zu __Tools > Assets > Metadaten-Schema__
-1. Navigieren Sie zu __default__, wählen Sie __image__ aus und bearbeiten Sie es und fügen Sie schreibgeschützte Formularfelder hinzu, um die generierten Farbmetadaten verfügbar zu machen.
-1. hinzufügen eines __Einzelzeilentextes__
+1. Navigieren Sie im AEM-Autorendienst zu __Tools > Assets > Metadatenschemata__
+1. Navigieren Sie zu __default__, wählen Sie __image__ aus und bearbeiten Sie sie und fügen Sie schreibgeschützte Formularfelder hinzu, um die generierten Farbmetadaten anzuzeigen.
+1. Fügen Sie einen __einzeiligen Text__ hinzu.
    + __Feldbezeichnung__: `Colors Family`
    + __Zu Eigenschaft zuordnen__: `./jcr:content/metadata/wknd:colorsFamily`
-   + __Regeln > Feld > Bearbeitung__ deaktivieren: Überprüft
-1. hinzufügen eines __Multi-Value-Textes__
+   + __Regeln > Feld > Bearbeitung__ deaktivieren: Aktiviert
+1. Fügen Sie einen __Mehrwerttext__ hinzu.
    + __Feldbezeichnung__: `Colors`
    + __Zu Eigenschaft zuordnen__: `./jcr:content/metadata/wknd:colors`
-1. Tippen Sie oben rechts auf __Speichern__
+1. Tippen Sie oben rechts auf __Speichern__ .
 
 ## Verarbeiten von Assets
 
 ![Asset-Details](./assets/metadata/asset-details.png)
 
-1. Navigieren Sie im AEM Author-Dienst zu __Assets > Files__
-1. Navigieren Sie zum Ordner oder Unterordner, auf den das Profil &quot;Verarbeitung&quot;angewendet wird
-1. Laden Sie ein neues Bild (JPEG, PNG, GIF oder SVG) in den Ordner hoch oder verarbeiten Sie vorhandene Bilder mit dem aktualisierten [Profil für die Verarbeitung](#processing-profile) erneut.
-1. Wenn die Verarbeitung abgeschlossen ist, wählen Sie das Asset aus und tippen Sie in der oberen Aktionsleiste auf __properties__, um die Metadaten anzuzeigen
-1. Überprüfen Sie die Felder `Colors Family` und `Colors` [Metadatenfelder](#metadata-schema) für die Metadaten, die vom benutzerdefinierten Asset compute-Metadatenarbeiter zurückgeschrieben wurden.
+1. Navigieren Sie im AEM-Autorendienst zu __Assets > Dateien__
+1. Navigieren Sie zum Ordner oder Unterordner, auf den das Verarbeitungsprofil angewendet wird.
+1. Laden Sie ein neues Bild (JPEG, PNG, GIF oder SVG) in den Ordner hoch oder verarbeiten Sie vorhandene Bilder mit dem aktualisierten [Verarbeitungsprofil](#processing-profile) erneut.
+1. Wenn die Verarbeitung abgeschlossen ist, wählen Sie das Asset aus und tippen Sie in der oberen Aktionsleiste auf __properties__ , um dessen Metadaten anzuzeigen
+1. Überprüfen Sie die Felder `Colors Family` und `Colors` [Metadaten](#metadata-schema) für die Metadaten, die vom benutzerdefinierten Asset compute-Metadaten-Worker zurückgeschrieben wurden.
 
-Bei den Farbmetadaten, die in die Metadaten des Assets geschrieben wurden, werden diese Metadaten über die `[dam:Asset]/jcr:content/metadata`-Ressource indiziert und können mithilfe dieser Begriffe über die Suche leichter erkannt werden. Sie können sogar in die Binärdatei des Assets zurückgeschrieben werden, wenn anschließend __DAM Metadata Writeback__ aufgerufen wird.
+Nachdem die Farbmetadaten in die Metadaten des Assets geschrieben wurden, werden diese Metadaten in der Ressource `[dam:Asset]/jcr:content/metadata` indiziert und können mithilfe dieser Begriffe über die Suche besser erkannt werden. Sie können sogar zurück in die Binärdatei des Assets geschrieben werden, wenn dann der Workflow __DAM Metadata Writeback__ aufgerufen wird.
 
-### Metadaten-Darstellung in AEM Assets
+### Metadaten-Ausgabedarstellung in AEM Assets
 
-![AEM Assets Metadaten-Darstellungsdatei](./assets/metadata/cqdam-metadata-rendition.png)
+![AEM Assets-Metadaten-Ausgabedarstellungsdatei](./assets/metadata/cqdam-metadata-rendition.png)
 
-Die vom Asset compute-Metadaten-Worker generierte tatsächliche XMP-Datei wird auch als diskrete Darstellung des Assets gespeichert. Diese Datei wird im Allgemeinen nicht verwendet, sondern die angewendeten Werte für den Metadaten-Knoten des Assets werden verwendet, aber die XML-Rohausgabe des Workers ist in AEM verfügbar.
+Die tatsächliche XMP-Datei, die vom Asset compute-Metadaten-Worker generiert wurde, wird ebenfalls als eigenständiges Ausgabeformat für das Asset gespeichert. Diese Datei wird im Allgemeinen nicht verwendet. Stattdessen werden die auf den Metadatenknoten des Assets angewendeten Werte verwendet, aber die XML-Rohausgabe des Workers ist in AEM verfügbar.
 
-## Metadaten-Farben-Arbeitercode auf Github
+## Metadaten-Farben-Workercode auf Github
 
 Das endgültige `metadata-colors/index.js` ist auf Github verfügbar unter:
 
 + [aem-guides-wknd-asset-compute/actions/metadata-colors/index.js](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/actions/metadata-colors/index.js)
 
-Die finale `test/asset-compute/metadata-colors` Testsuite ist auf Github verfügbar unter:
+Die endgültige `test/asset-compute/metadata-colors` Test-Suite ist auf Github verfügbar unter:
 
-+ [aem-guides-work-asset-compute/test/asset-compute/metadata-color](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/test/asset-compute/metadata-colors)
++ [aem-guides-wknd-asset-compute/test/asset-compute/metadata-color](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/test/asset-compute/metadata-colors)
