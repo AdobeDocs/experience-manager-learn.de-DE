@@ -1,6 +1,6 @@
 ---
-title: OSGi-Dienst erstellen
-description: OSGi-Dienst zum Speichern der zu signierenden Formulare erstellen
+title: Erstellen eines OSGi-Dienstes
+description: Erstellen des OSGi-Dienstes zum Speichern der zu signierenden Formulare
 feature: Workflow
 topics: development
 audience: developer
@@ -9,25 +9,24 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 6886.jpg
 kt: 6886
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '354'
 ht-degree: 1%
 
 ---
 
 
-# OSGi-Dienst erstellen
+# Erstellen des OSGi-Dienstes
 
-Der folgende Code wurde geschrieben, um die zu unterschreibenden Formulare zu speichern. Jedes zu signierende Formular ist mit einer eindeutigen ID und einer Kunden-ID verknüpft. So können einem oder mehreren Formularen dieselbe Kunden-ID zugeordnet werden, dem Formular wird jedoch eine eindeutige GUID zugewiesen.
+Der folgende Code wurde zum Speichern der zu signierenden Formulare geschrieben. Jedes zu signierende Formular ist mit einer eindeutigen Kennung und einer Kunden-ID verknüpft. So können einem oder mehreren Formularen dieselbe Kunden-ID zugeordnet werden, dem Formular wird jedoch eine eindeutige GUID zugewiesen.
 
 ## Benutzeroberfläche
 
-Im Folgenden finden Sie die verwendete Schnittstellendeklaration
+Im Folgenden finden Sie die verwendete Schnittstellendeklaration.
 
 ```java
 package com.aem.forms.signmultipleforms;
@@ -46,7 +45,7 @@ public interface SignMultipleForms
 
 ## Daten einfügen
 
-Die Methode zum Einfügen von Daten fügt eine Zeile in die Datenbank ein, die von der Datenquelle identifiziert wird. Jede Zeile in der Datenbank entspricht einem Formular und wird durch eine GUID und eine Kunden-ID eindeutig identifiziert. Die Formulardaten und die Formular-URL werden auch in dieser Zeile gespeichert. Die Statusspalte gibt an, ob das Formular ausgefüllt und unterzeichnet wurde. Der Wert 0 bedeutet, dass das Formular noch nicht unterzeichnet werden muss.
+Die Dateneinfüge-Methode fügt eine Zeile in die Datenbank ein, die von der Datenquelle identifiziert wird. Jede Zeile in der Datenbank entspricht einem Formular und wird durch eine GUID und eine Kunden-ID eindeutig identifiziert. Die Formulardaten und die Formular-URL werden ebenfalls in dieser Zeile gespeichert. In der Statusspalte wird angezeigt, ob das Formular ausgefüllt und signiert wurde. Der Wert 0 zeigt an, dass das Formular noch nicht signiert werden muss.
 
 ```java
 @Override
@@ -135,7 +134,7 @@ public String getFormData(String guid) {
 
 ## Signaturstatus aktualisieren
 
-Der erfolgreiche Abschluss der Unterzeichnungszeremonie Trigger und AEM Arbeitsablauf für das Formular. Der erste Schritt im Workflow ist ein Prozessschritt, der den Status in der Datenbank für die durch die GUID und Kunden-ID identifizierte Zeile aktualisiert. Der Wert des unterschriebenen Elements in den Formulardaten wurde auch auf Y gesetzt, um anzugeben, dass das Formular ausgefüllt und unterzeichnet wurde. Das adaptive Formular wird mit diesen Daten ausgefüllt und der Wert des unterschriebenen Datenelements in den XML-Daten wird verwendet, um die entsprechende Meldung anzuzeigen. Der Code updateSignatureStatus wird im benutzerdefinierten Prozessschritt aufgerufen.
+Erfolgreicher Abschluss der Unterzeichnungszeremonie Trigger und AEM Workflow für das Formular. Der erste Schritt im Workflow ist ein Prozessschritt, der den Status in der Datenbank für die Zeile aktualisiert, die durch die GUID und die Kunden-ID identifiziert wird. Außerdem setzen wir den Wert des signierten Elements in den Formulardaten auf Y, um anzugeben, dass das Formular ausgefüllt und signiert wurde. Das adaptive Formular wird mit diesen Daten ausgefüllt und der Wert des signierten Datenelements in den XML-Daten wird verwendet, um die entsprechende Nachricht anzuzeigen. Der Code updateSignatureStatus wird aus dem benutzerdefinierten Prozessschritt aufgerufen.
 
 
 ```java
@@ -169,7 +168,7 @@ public void updateSignatureStatus(String formData, String guid) {
 
 ## Nächstes Formular zum Signieren abrufen
 
-Der folgende Code wurde verwendet, um das nächste Formular zum Signieren für eine bestimmte customerID mit dem Status 0 abzurufen. Wenn die sql-Abfrage keine Zeilen zurückgibt, geben wir die Zeichenfolge **&quot;AllDone&quot;** zurück, die angibt, dass es keine weiteren Formulare zum Signieren für die angegebene Kunden-ID gibt.
+Der folgende Code wurde verwendet, um das nächste Formular zum Signieren für eine bestimmte customerID mit dem Status 0 abzurufen. Wenn die SQL-Abfrage keine Zeilen zurückgibt, geben wir die Zeichenfolge **&quot;AllDone&quot;** zurück, die angibt, dass es keine weiteren Formulare zum Signieren für die angegebene Kunden-ID gibt.
 
 ```java
 @Override
