@@ -1,46 +1,45 @@
 ---
-title: Erstellen von zweispaltigen Layouts für Print Kanal-Dokumente
-seo-title: Erstellen von zweispaltigen Layouts für Print Kanal-Dokumente
-description: Erstellen von 2 Spalten-Layouts für Print Kanal Dokument
-seo-description: Erstellen von 2 Spalten-Layouts für Print Kanal Dokument
-feature: Interactive Communication
+title: Erstellen von zwei Spaltenlayouts für Druckkanaldokumente
+seo-title: Erstellen von zwei Spaltenlayouts für Druckkanaldokumente
+description: Erstellen von 2 Spaltenlayouts für das Dokument "Druckkanal"
+seo-description: Erstellen von 2 Spaltenlayouts für das Dokument "Druckkanal"
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '241'
 ht-degree: 2%
 
 ---
 
 
-# Zwei Spaltenlayouts im Dokument &quot;Kanal drucken&quot;
+# Zwei Spaltenlayouts im Dokument &quot;Druckkanal&quot;
 
-In diesem kurzen Artikel werden die Schritte erläutert, die zum Erstellen eines zweispaltigen Layouts in Print Kanal erforderlich sind. Der Anwendungsfall besteht darin, 2 Dokumente mit Seite 1 mit 2 Spaltenlayout und Seite 2 mit dem standardmäßigen 1 Spaltenlayout zu generieren.
+In diesem kurzen Artikel werden die Schritte erläutert, die zum Erstellen eines zweispaltigen Layouts im Druckkanal erforderlich sind. Der Anwendungsfall besteht darin, zwei Seitendokumente mit Seite 1 mit 2 Spaltenlayout und Seite 2 mit dem standardmäßigen Spaltenlayout 1 zu erstellen.
 
-Im Folgenden werden die Schritte auf hoher Ebene beschrieben, die beim Erstellen von 2-Spalten-Layouts mit AEM Forms Designer durchgeführt werden müssen.
+Im Folgenden werden die allgemeinen Schritte zum Erstellen von zweispaltigen Layouts mit AEM Forms Designer beschrieben.
 
-* Erstellen Sie zwei Inhaltsbereiche auf Seite 1 Übergeordnet
-* Benennen Sie die beiden Inhaltsbereiche &quot;linke Spalte&quot;und &quot;rechte Spalte&quot;
-* Zweite Übergeordnet-Seite mit einem Inhaltsbereich erstellen (dies ist die Standardseite)
-* Wählen Sie die Registerkarte &quot;Paginierung&quot;(unbenannt - Teilformular) (Seite 1) und (unbenannt - Teilformular) (Seite 2) und legen Sie die Eigenschaften wie in den Screenshots unten dargestellt fest.
+* Erstellen von zwei Inhaltsbereichen auf Seite 1 Übergeordnete Seite
+* Benennen Sie die beiden Inhaltsbereiche &quot;linke Spalte&quot;und &quot;rechte Spalte&quot;.
+* Zweite Übergeordnete Seite mit einem Inhaltsbereich erstellen (dies ist die Standardeinstellung)
+* Wählen Sie die Registerkarte &quot;Paginierung&quot;(unbenanntes Teilformular) (Seite 1) und (unbenanntes Teilformular) (Seite 2) und legen Sie die Eigenschaften wie in den Screenshots unten dargestellt fest.
 
 ![page1](assets/untitledsubform_paginationproperties.gif)
 
 ![page2](assets/untitled_subformpage2.gif)
 
-Sobald die Paginierungseigenschaften festgelegt sind, können wir Teilformulare oder Zielgruppen unter (unbenanntes Teilformular) (Seite 1) hinzufügen.
+Sobald die Paginierungseigenschaften festgelegt sind, können wir Teilformulare oder Zielbereiche unter (unbenanntes Teilformular) (Seite 1) hinzufügen.
 
-Anschließend können wir Dokument-Fragmente zu diesen Teilformularen oder Zielgruppen hinzufügen. Wenn die linke Spalte voll ist, fließt der Inhalt in die rechte Spalte.
+Anschließend können wir diesen Teilformularen oder Zielbereichen Dokumentfragmente hinzufügen. Wenn die linke Spalte voll ist, fließt der Inhalt in die rechte Spalte.
 
-Um dies auf Ihrem lokalen Server zu testen, laden Sie die Assets herunter, die mit diesem Artikel in Verbindung stehen. Bildlauf nach unten bis zum Ende dieser Seite
+Um dies auf Ihrem lokalen Server zu testen, laden Sie die Assets herunter, die mit diesem Artikel in Verbindung stehen. Scrollen Sie nach unten zum Ende dieser Seite
 
-* [Herunterladen und Installieren des Beispieldrucken-Kanal-Dokuments mithilfe des Paketmanagers](assets/print-channel-with-two-column-layout.zip)
-* [Vorschau des Print Kanal-Dokuments](http://localhost:4502/content/dam/formsanddocuments/2columnlayout/jcr:content?channel=print&amp;mode=preview&amp;dataRef=service%3A%2F%2FFnDTestData&amp;wcmmode=disabled)
+* [Laden Sie das Beispiel-Druckkanaldokument mit Package Manager herunter und installieren Sie es.](assets/print-channel-with-two-column-layout.zip)
+* [Vorschau des Druckkanaldokuments anzeigen](http://localhost:4502/content/dam/formsanddocuments/2columnlayout/jcr:content?channel=print&amp;mode=preview&amp;dataRef=service%3A%2F%2FFnDTestData&amp;wcmmode=disabled)
