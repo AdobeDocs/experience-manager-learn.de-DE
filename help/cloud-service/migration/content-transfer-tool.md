@@ -1,6 +1,6 @@
 ---
-title: Verwenden des Inhaltsübermittlungstools
-description: Das Content Transfer Tool ist die empfohlene Methode, um Inhalte von einer lokalen oder AMS-gehosteten Version von AEM zu einer AEM als Cloud Service-Umgebung zu migrieren.
+title: Verwenden des Content Transfer Tool
+description: Das Content Transfer Tool ist die empfohlene Methode, um Inhalte von einer On-Premise- oder AMS-gehosteten Version von AEM in eine AEM als Cloud Service-Umgebung zu migrieren.
 version: cloud-service
 doc-type: technical-video
 topics: migration
@@ -12,18 +12,17 @@ thumbnail: kt-5352.jpg
 topic: Migration
 role: Architect, Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '87'
+source-wordcount: '84'
 ht-degree: 16%
 
 ---
 
 
-# Verwenden des Inhaltsübermittlungstools
+# Verwenden des Content Transfer Tool
 
-Das Content Transfer Tool ist die empfohlene Methode, um Inhalte von einer lokalen oder AMS-gehosteten Version von AEM zu einer AEM als Cloud Service-Umgebung zu migrieren.
+Das Content Transfer Tool ist die empfohlene Methode, um Inhalte von einer On-Premise- oder AMS-gehosteten Version von AEM in eine AEM als Cloud Service-Umgebung zu migrieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/35460/?quality=12&learn=on)
 
