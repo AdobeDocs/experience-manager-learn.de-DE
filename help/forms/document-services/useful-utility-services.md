@@ -1,27 +1,26 @@
 ---
 title: Nützliche Dienstprogramme
-description: Einige nützliche Dienstprogramme für AEM Forms-Entwickler
-feature: Adaptive Forms
+description: Einige nützliche Dienstprogrammdienste für AEM Forms-Entwickler
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 8%
+source-wordcount: '158'
+ht-degree: 7%
 
 ---
 
 
 # Nützliche Dienstprogramme
 
-Dieses Beispielpaket bietet nützliche Dienstprogramme, die von einem AEM Forms-Entwickler verwendet werden können. Folgende Dienste sind verfügbar.
+Dieses Beispielpaket bietet nützliche Dienstprogrammdienste, die von einem AEM Forms-Entwickler verwendet werden können. Folgende Dienste sind verfügbar.
 
 
 ```java
@@ -40,9 +39,9 @@ public abstract String saveDocumentInCrx(String jcrPath,String fileExtension, Do
 
 Das Beispielpaket kann [von hier heruntergeladen werden](assets/aemformsutilityfunctions.aemformsutilityfunctions.core-1.0-SNAPSHOT.jar)
 
-## Beispielcode zur Verwendung der Dienstprogramme
+## Beispielcode für die Verwendung der Dienstprogramme
 
-Der folgende Code wurde auf der JSP-Seite verwendet, um org.w3c.dom.Dokument aus einer Zeichenfolge zu erstellen und das Dokument zu konvertieren und im CRX-Repository zu speichern, wie im folgenden Codefragment dargestellt.
+Im Folgenden finden Sie den Code, der auf der JSP-Seite verwendet wurde, um org.w3c.dom.Document aus der Zeichenfolge zu erstellen und das Dokument zu konvertieren und im CRX-Repository zu speichern, wie im folgenden Codefragment gezeigt.
 
 ```java
  aemformsutilityfunctions.core.AemFormsUtilities aemFormsUtilities = sling.getService(aemformsutilityfunctions.core.AemFormsUtilities.class);
@@ -53,8 +52,8 @@ aemFormsUtilities.saveDocumentInCrx("/content/xmlfiles",".xml",xmlStringDoc);
 ## Voraussetzungen
 
 
-Sie müssen [DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar) bereitstellen und das Bundle Beginn ausführen.
+Sie müssen [DevelopingWithServiceUserBundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/DevelopingWithServiceUser.jar) bereitstellen und das Bundle starten.
 
 
-Wenn Sie Dokumente mit diesem Dienstprogrammdienst im CRX-Repository speichern möchten, befolgen Sie die Anweisungen unter [Entwickeln mit Dienstbenutzer-Artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms). Stellen Sie sicher, dass Sie die erforderlichen Berechtigungen für [in den entsprechenden CRX-Ordnern dem fd-service-Benutzer bereitstellen.](http://localhost:4502/useradmin)
+Wenn Sie Dokumente mit diesem Dienstprogrammdienst im CRX-Repository speichern möchten, befolgen Sie den Artikel [Entwickeln mit Dienstbenutzern](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html?lang=en#adaptive-forms). Stellen Sie sicher, dass Sie die [erforderlichen Berechtigungen](http://localhost:4502/useradmin) für die entsprechenden CRX-Ordner dem Benutzer fd-service bereitstellen.
 
