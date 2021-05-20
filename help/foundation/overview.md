@@ -15,47 +15,47 @@ ht-degree: 22%
 
 # Überblick {#overview}
 
-Adobe Experience Manager bietet einen gemeinsamen Satz von Funktionen, die Benutzern von AEM Sites, [!DNL Assets] und [!DNL Forms] zur Verfügung stehen.
+Adobe Experience Manager bietet eine Reihe gemeinsamer Funktionen, die Benutzern von AEM Sites, [!DNL Assets] und [!DNL Forms] zur Verfügung stehen.
 
 ## Neue Funktionen
 
 * **[Workflow-AEM verwenden (Video)](./workflow/use-workflow.md)**
 
-   *AEM Workflow bietet eine Möglichkeit zur Zusammenarbeit, Verwaltung und Verarbeitung von Inhalten in AEM.*
+   *AEM Workflow bietet eine Möglichkeit, Inhalte in AEM zusammenzuarbeiten, zu verwalten und zu verarbeiten.*
 
 * **[Erläuterung von Cloud Manager für AEM (Video)](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-   *Cloud Manager für AEM ermöglicht eine einfache Verwaltung, Überprüfung und Selbstbedienung von AEM Umgebung.*
+   *Cloud Manager für AEM ermöglicht eine einfache Verwaltung, Inspektion und Self-Service von AEM Umgebungen.*
 
-* **[Öffentliche und private Schlüssel zur Verwendung mit Adobe I/O einrichten (Tutorial)](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *Erfahren Sie, wie Schlüssel und Keystores mit  [!DNL openssl] AEM und Adobe I/O generiert werden.*
+* **[Einrichten von öffentlichen und privaten Schlüsseln für die Verwendung mit Adobe I/O (Tutorial)](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
+   *Erfahren Sie, wie Schlüssel und Keystores mit  [!DNL openssl] der AEM und Adobe I/O generiert werden.*
 
 * **[Verwenden der CI/CD-Pipeline von Cloud Manager (Video)](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-   *Erfahren Sie, wie Sie die CI/CD-Pipeline von Cloud Manager verwenden, um eine sichere und konsistente Bereitstellung zu gewährleisten.*
+   *Erfahren Sie, wie Sie die CI/CD-Pipeline von Cloud Manager verwenden, um eine sichere und konsistente Bereitstellung sicherzustellen.*
 
-## Personalauswahl
+## Mitarbeiterauswahl
 
 <table>
 <tr>
   <td>
     <a href="./cloud-manager/understand-cloud-manager-for-aem.md">
-    <img alt="Erläuterung von Cloud Manager für AEM" src="./cloud-manager/assets/understand-cloud-manager-for-aem/thumbnail.png" />
+    <img alt="Grundlegendes zu Cloud Manager für AEM" src="./cloud-manager/assets/understand-cloud-manager-for-aem/thumbnail.png" />
     </a>
     <div>
      <a href="./cloud-manager/understand-cloud-manager-for-aem.md">
-    <strong>Erläuterung von Cloud Manager für AEM</strong>
+    <strong>Grundlegendes zu Cloud Manager für AEM</strong>
     </a>
     </div>
     <p>
-    <em>Cloud Manager für AEM bietet eine einfache, aber robuste Lösung, die eine einfache Verwaltung, Überprüfung und Selbstbedienung von AEM Umgebung ermöglicht.</em>
+    <em>Cloud Manager für AEM bietet eine einfache, aber robuste Lösung, die eine einfache Verwaltung, Inspektion und Self-Service von AEM Umgebungen ermöglicht.</em>
     <p>
   </td>
    <td>
     <a href="./development/set-up-sling-dynamic-include.md">
-    <img alt="Sling Dynamic Include (SDI) einrichten" src="./development/assets/set-up-sling-dynamic-include/thumbnail.png" />
+    <img alt="Einrichten von Sling Dynamic Include (SDI)" src="./development/assets/set-up-sling-dynamic-include/thumbnail.png" />
     </a>
      <div>
      <a href="./development/set-up-sling-dynamic-include.md">
-    <strong>Sling Dynamic Include (SDI) einrichten</strong>
+    <strong>Einrichten von Sling Dynamic Include (SDI)</strong>
     </a>
     </div>
     <p>
@@ -64,7 +64,7 @@ Adobe Experience Manager bietet einen gemeinsamen Satz von Funktionen, die Benut
   </td>
   <td>
     <a href="./administration/understand-reasons-to-upgrade.md">
-    <img alt="Gründe für die Aktualisierung der AEM" src="./administration/assets/understand-reasons-to-upgrade/thumbnail.png" />
+    <img alt="Gründe für die Aktualisierung AEM" src="./administration/assets/understand-reasons-to-upgrade/thumbnail.png" />
     </a>
     <div>
     <a href="./administration/understand-reasons-to-upgrade.md">
@@ -72,7 +72,7 @@ Adobe Experience Manager bietet einen gemeinsamen Satz von Funktionen, die Benut
     </a>
     </div>
     <p>
-    <em>Eine detaillierte Aufschlüsselung der wichtigsten Funktionen, die Sie kennen sollten, wenn Sie ein Upgrade auf die neueste Version von AEM in Erwägung ziehen.</em>
+    <em>Eine allgemeine Aufschlüsselung der wichtigsten Funktionen, die Sie verstehen sollten, wenn Sie ein Upgrade auf die neueste Version von AEM in Erwägung ziehen.</em>
     </p>
   </td>
 </tr>
