@@ -1,9 +1,9 @@
 ---
-title: Erstellen von Dokument-Fragment
-description: 'Dies ist Teil 5 eines mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil erstellen wir ein Dokument-Fragment, das den Namen und die Adresse des Empfängers enthält. '
-seo-description: 'Dies ist Teil 5 eines mehrstufigen Lernprogramms zur Erstellung Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil erstellen wir ein Dokument-Fragment, das den Namen und die Adresse des Empfängers enthält. '
+title: Erstellen von Dokumentfragmenten
+description: 'Dies ist Teil 5 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil erstellen wir ein Dokumentfragment, das den Namen und die Adresse des Empfängers enthält. '
+seo-description: 'Dies ist Teil 5 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil erstellen wir ein Dokumentfragment, das den Namen und die Adresse des Empfängers enthält. '
 uuid: 7fd8a0f2-a921-4e70-91c9-908dae9aeab2
-feature: Interactive Communication
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,31 +12,30 @@ version: 6.4,6.5
 discoiquuid: 47d3aa97-0bff-48e0-8a65-55e5332f811b
 kt: 5958
 thumbnail: 22350.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '255'
 ht-degree: 1%
 
 ---
 
 
-# Erstellen von Dokument-Fragment
+# Erstellen von Dokumentfragmenten
 
-In diesem Teil erstellen wir ein Dokument-Fragment, das den Namen und die Adresse des Empfängers enthält.
+In diesem Teil erstellen wir ein Dokumentfragment, das den Namen und die Adresse des Empfängers enthält.
 
 >[!VIDEO](https://video.tv.adobe.com/v/22350/?quality=9&learn=on)
 
-Dokument-Fragmente enthalten den Textinhalt von interaktiven Dokumenten. Dieser Textinhalt kann statischer Text sein oder aus den Werten der zugrunde liegenden Datenmodellelemente eingefügt werden. Beispiel: **Sehr geehrte _{name}_**, wobei Liebe statischer Text und Name der Elementname des Formulardatenmodells ist. Zur Laufzeit wird dies auf **Sehr geehrte Gloria Rios**oder **Sehr geehrte John Jacobs**je nach Wert des name-Elements aufgelöst.
+Dokumentfragmente enthalten den Textinhalt interaktiver Kommunikationsdokumente. Dieser Textinhalt kann statischer Text sein oder aus den zugrunde liegenden Datenmodell-Elementwerten eingefügt werden. Beispiel: **Lieber _{name}_**, wobei &quot;Liebe&quot;statischer Text und &quot;Name&quot;der Elementname des Formulardatenmodells ist. Zur Laufzeit wird dies in **Lieber Gloria Rios**oder **Lieber John Jacobs**aufgelöst, je nach Wert des name-Elements.
 
-Rich-Text-Editor ist intuitiv genug, damit ein Geschäftsbenutzer Text verfassen und Formulardaten-Elemente einfügen kann. Der Dokument-Fragment-Editor kann Text formatieren, Schriftarten und Stile angeben, Sonderzeichen einfügen und Hyperlinks erstellen.
+Der Rich-Text-Editor ist intuitiv genug, damit ein Geschäftsbenutzer Text erstellen und Formulardaten-Elemente einfügen kann. Der Dokumentfragment-Editor bietet die Möglichkeit, Text zu formatieren, Schriftarten und -stile anzugeben, Sonderzeichen einzufügen und Hyperlinks zu erstellen.
 
-Der Dokument-Fragment-Editor hat auch die Möglichkeit, Inline-Bedingungen in Ihren Text einzufügen, wie in diesem [Video](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
+Der Dokumentfragment-Editor kann auch Inline-Bedingungen in Ihren Text einfügen, wie in diesem [Video](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
 
 >[!NOTE]
 >
->Stellen Sie sicher, dass die Formulardatenmodellelemente, die Sie in ein Dokument-Fragment einfügen, untergeordnete Elemente des Stammelements sind. In diesem Verwendungsfall müssen Sie beispielsweise sicherstellen, dass die Elemente des Benutzerobjekts, die Sie auswählen, das untergeordnete Element des gleichmäßigen Objekts sind
+>Stellen Sie sicher, dass die Formulardatenmodellelemente, die Sie in Dokumentfragmente einfügen, untergeordnete Elemente des Stammelements sind. Stellen Sie beispielsweise in diesem Anwendungsfall sicher, dass die von Ihnen ausgewählten Elemente des User-Objekts das untergeordnete Element des Balanceobjekts sind.
 
