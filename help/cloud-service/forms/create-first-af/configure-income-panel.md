@@ -1,27 +1,26 @@
 ---
-title: Einkommensbedienfeld konfigurieren
-description: hinzufügen Tabellenkomponente zur Einkommensleiste.
+title: Einkommensbereich konfigurieren
+description: Fügen Sie dem Einkommensbereich eine Tabellenkomponente hinzu.
 solution: Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Forms
-topic: Development
+feature: Adaptive Formulare
+topic: Entwicklung
 kt: 7379
 thumbnail: 332233.jpg
-translation-type: tm+mt
 source-git-commit: 67be45dbd72a8af8b9ab60452ff15081c6f9f192
 workflow-type: tm+mt
-source-wordcount: '33'
-ht-degree: 15%
+source-wordcount: '29'
+ht-degree: 10%
 
 ---
 
 
-# Einkommensbedienfeld konfigurieren
+# Einkommensbereich konfigurieren
 
-hinzufügen Tabellenkomponente zur Einkommenskategorie, um die Einkommensquellen des Antragstellers zu erfassen.
+Fügen Sie dem Einkommensbereich eine Tabellenkomponente hinzu, um die Einkommensquellen des Antragstellers zu erfassen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332233?quality=12&learn=on)
 
