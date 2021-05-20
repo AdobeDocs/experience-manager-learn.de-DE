@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Zielgruppe-Aktivität mit Experience Fragment-Angeboten
+title: Erstellen einer Target-Aktivität mit Experience Fragment-Angeboten
 description: Erfahren Sie, wie Sie eine Adobe Target-Aktivität mit AEM Experience Fragment-Angeboten erstellen und testen.
 feature: Experience Fragments
 topics: integrations, authoring, personalization, activity, offers
@@ -9,19 +9,18 @@ activity: use
 version: cloud-service
 kt: 6351
 thumbnail: 41246.jpg
-topic: Integrations
+topic: Integrationen
 role: Business Practitioner
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 8%
+source-wordcount: '121'
+ht-degree: 9%
 
 ---
 
 
-# Adobe Target-Aktivität mit Experience Fragment-Angeboten {#target-activity-experience-fragment} erstellen
+# Erstellen von Adobe Target-Aktivitäten mit Experience Fragment-Angeboten {#target-activity-experience-fragment}
 
 Erfahren Sie, wie Sie eine Adobe Target-Aktivität mit AEM Experience Fragment-Angeboten erstellen und testen.
 
@@ -29,11 +28,11 @@ Erfahren Sie, wie Sie eine Adobe Target-Aktivität mit AEM Experience Fragment-A
 
 ## Voraussetzungen
 
-Um Adobe Target-Aktivitäten mithilfe von Experience Fragment-Angeboten zu erstellen, müssen die folgenden Schritte durchgeführt werden:
+Um Adobe Target-Aktivitäten mithilfe von Experience Fragment-Angeboten zu erstellen, muss die folgende Einrichtung abgeschlossen sein:
 
-1. [hinzufügen von Adobe Target zu Ihrer AEM Website](./add-target-launch-extension.md)
-1. [Trigger und Adobe Target-Aufruf von Launch](./load-and-fire-target.md)
-1. [AEM Author-Dienst in Adobe Target integrieren](./setup-aem-target-cloud-service.md)
+1. [Hinzufügen von Adobe Target zu Ihrer AEM Website](./add-target-launch-extension.md)
+1. [Trigger eines Adobe Target-Aufrufs von Launch](./load-and-fire-target.md)
+1. [Integrieren des AEM Author-Dienstes in Adobe Target](./setup-aem-target-cloud-service.md)
 1. [Exportieren von AEM Experience Fragments nach Adobe Target](./export-experience-fragment-target.md)
 
 ## Unterstützende Links
