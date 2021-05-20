@@ -1,32 +1,31 @@
 ---
-title: Generieren von Print Kanal-Dokument durch Zusammenführen von Daten
-seo-title: Generieren von Print Kanal-Dokument durch Zusammenführen von Daten
-description: Erfahren Sie, wie Sie ein Dokument für den Druck von Kanal generieren, indem Sie Daten zusammenführen, die im Eingabestream enthalten sind
-seo-description: Erfahren Sie, wie Sie ein Dokument für den Druck von Kanal generieren, indem Sie Daten zusammenführen, die im Eingabestream enthalten sind
-feature: Interactive Communication
+title: Generieren des Druckkanaldokuments durch Zusammenführen von Daten
+seo-title: Generieren des Druckkanaldokuments durch Zusammenführen von Daten
+description: Erfahren Sie, wie Sie ein Dokument für den Druckkanal generieren, indem Sie die im Eingabestream enthaltenen Daten zusammenführen.
+seo-description: Erfahren Sie, wie Sie ein Dokument für den Druckkanal generieren, indem Sie die im Eingabestream enthaltenen Daten zusammenführen.
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '504'
 ht-degree: 2%
 
 ---
 
-# Generieren von Print Kanal-Dokumenten mit gesendeten Daten
+# Generieren von Druckkanaldokumenten mit gesendeten Daten
 
-Print Kanal-Dokumente werden in der Regel durch Abrufen von Daten aus einer Back-End-Datenquelle über den get-Dienst des Formulardatenmodells generiert. In einigen Fällen müssen Sie eventuell Dokumente für den Druck mit den bereitgestellten Daten generieren. Beispiel: Der Kunde füllt das Formular des Empfängers aus und Sie können ein Dokument für den Kanal mit Daten aus dem gesendeten Formular generieren. Um diesen Verwendungsfall zu erreichen, müssen die folgenden Schritte befolgt werden
+Druckkanaldokumente werden in der Regel durch Abrufen von Daten aus einer Backend-Datenquelle über den get-Dienst des Formulardatenmodells generiert. In einigen Fällen müssen Sie möglicherweise Druckkanaldokumente mit den bereitgestellten Daten generieren. Beispiel: Der Kunde füllt die Änderung des Empfängerformulars aus und Sie können ein Druckkanaldokument mit Daten aus dem gesendeten Formular generieren. Gehen Sie wie folgt vor, um dieses Anwendungsbeispiel zu erstellen:
 
-## Erstellen eines Prefill-Dienstes
+## Vorbefüllungsdienst erstellen
 
-Der Dienstname &quot;ccm-print-test&quot; wird verwendet, um auf diesen Dienst zuzugreifen. Sobald dieser Pre-fill-Dienst definiert ist, können Sie entweder in Ihrer Servlet- oder Workflow-Prozessschrittimplementierung auf diesen Dienst zugreifen, um das Print-Kanal-Dokument zu generieren.
+Der Dienstname &quot;ccm-print-test&quot;wird für den Zugriff auf diesen Dienst verwendet. Sobald dieser Vorbefüllungs-Dienst definiert ist, können Sie in Ihrer Servlet- oder Workflow-Prozessschrittimplementierung auf diesen Dienst zugreifen, um das Dokument für den Druckkanal zu generieren.
 
 ```java
 import java.io.InputStream;
@@ -66,17 +65,17 @@ public PrefillData getPrefillData(DataOptions options) throws FormsException {
 }
 ```
 
-### WorkflowProcess-Implementierung erstellen
+### Erstellen der WorkflowProcess-Implementierung
 
-Das Codefragment zur WorkflowProcess-Implementierung wird unten angezeigt. Dieser Code wird ausgeführt, wenn der Prozessschritt im AEM Workflow mit dieser Implementierung verknüpft ist. Diese Implementierung erwartet 3 Prozessargumente, die im Folgenden beschrieben werden:
+Das Code-Snippet zur WorkflowProcess-Implementierung wird unten gezeigt. Dieser Code wird ausgeführt, wenn der Prozessschritt im AEM Workflow mit dieser Implementierung verknüpft ist. Diese Implementierung erwartet drei Prozessargumente, die unten beschrieben werden:
 
 * Name des DataFile-Pfads, der beim Konfigurieren des adaptiven Formulars angegeben wird
-* Name der Druckvorlage für den Kanal
-* Name des generierten Dokuments &quot;print Kanal&quot;
+* Name der Druckkanalvorlage
+* Name des generierten Druckkanaldokuments
 
-Zeile 98 - Da das adaptive Formular auf dem Formulardatenmodell basiert, werden die Daten, die sich in der Daten-Node von afBoundData befinden, extrahiert.
-Zeile 128 - Der Dienstname für Datenoptionen ist festgelegt. Notieren Sie den Dienstnamen. Es muss mit dem in Zeile 45 der vorherigen Codeliste zurückgegebenen Namen übereinstimmen.
-Zeile 135 - Dokument wird mithilfe der Render-Methode des PrintChannel-Objekts generiert
+Zeile 98 - Da das adaptive Formular auf dem Formulardatenmodell basiert, werden die Daten, die sich im Datenknoten von afBoundData befinden, extrahiert.
+Zeile 128 - Der Name des Datenoptionen-Dienstes ist festgelegt. Notieren Sie den Dienstnamen. Sie muss mit dem in Zeile 45 der vorherigen Codeauflistung zurückgegebenen Namen übereinstimmen.
+Zeile 135 - Dokument wird mithilfe der Rendermethode des PrintChannel-Objekts generiert
 
 
 ```java
@@ -163,13 +162,13 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
             }
 ```
 
-Gehen Sie wie folgt vor, um dies auf Ihrem Server zu testen:
+Führen Sie die folgenden Schritte aus, um dies auf Ihrem Server zu testen:
 
-* [Konfigurieren Sie den Day CQ Mail Service.](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html) Dies ist erforderlich, um E-Mails mit dem als Anhang generierten Dokument zu senden.
-* [Bereitstellen des Developer with Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* Vergewissern Sie sich, dass Sie den folgenden Eintrag in der Konfiguration des Apache Sling Service User Mapper Service hinzugefügt haben
+* [Konfigurieren Sie den Day CQ Mail Service.](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html) Dies ist erforderlich, um E-Mails mit dem als Anhang erstellten Dokument zu senden.
+* [Bereitstellen des Entwicklungs- mit Dienstbenutzer-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* Stellen Sie sicher, dass Sie den folgenden Eintrag in der Konfiguration des Apache Sling Service User Mapper Service hinzugefügt haben
 * **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**
-* [Laden Sie die mit diesem Artikel verknüpften Assets auf Ihr Dateisystem herunter und dekomprimieren Sie sie.](assets/prefillservice.zip)
+* [Laden Sie die Assets herunter und entpacken Sie sie, die mit diesem Artikel in in Verbindung stehen, in Ihr Dateisystem.](assets/prefillservice.zip)
 * [Importieren Sie die folgenden Pakete mit dem AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
    1. beneficiaryconfirmationic.zip
    2. changeofbeneficiaryform.zip
@@ -179,8 +178,8 @@ Gehen Sie wie folgt vor, um dies auf Ihrem Server zu testen:
    * GenerateIC.GenerateIC.core-1.0-SNAPSHOT.jar. Dieses Bundle enthält den in diesem Artikel erwähnten Code.
 
 * [Open ChangeOfBeneficiaryForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
-* Vergewissern Sie sich, dass das adaptive Formular wie unten gezeigt für das Senden an AEM Workflow konfiguriert ist.
+* Stellen Sie sicher, dass das adaptive Formular für die Übermittlung an AEM Workflow wie unten gezeigt konfiguriert ist.
    ![image](assets/generateic.PNG)
-* [Konfigurieren Sie das Workflow-Modell.](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)Stellen Sie sicher, dass Prozessschritt- und Senden-E-Mail-Komponenten gemäß Ihrer Umgebung konfiguriert sind.
-* [Vorschau der ChangeOfBeneficiaryForm.](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) Füllen Sie einige Details aus und senden Sie
-* Der Workflow sollte aufgerufen werden, und das IC-Kanal-Dokument sollte an den Empfänger gesendet werden, der in der Komponente &quot;E-Mail senden&quot;als Anlage angegeben ist
+* [Konfigurieren Sie das Workflow-Modell.](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)Stellen Sie sicher, dass die Prozessschritte und E-Mail-Komponenten gemäß Ihrer Umgebung konfiguriert sind.
+* [Vorschau des ChangeOfBeneficiaryForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) Füllen Sie einige Details aus und senden Sie
+* Der Workflow sollte aufgerufen werden und das IC-Druckkanaldokument sollte an den Empfänger gesendet werden, der in der Komponente E-Mail senden als Anlage angegeben ist.
