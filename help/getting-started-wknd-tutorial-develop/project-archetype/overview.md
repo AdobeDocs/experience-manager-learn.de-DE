@@ -1,16 +1,15 @@
 ---
-title: Erste Schritte mit AEM Sites - Projektarchiv
-description: Erste Schritte mit AEM Sites - Projektarchiv. Das WKND-Tutorial ist ein mehrteiliges Tutorial, das für Entwickler konzipiert ist, die neu in Adobe Experience Manager sind. Das Tutorial durchläuft die Implementierung einer AEM Website für eine fiktive Lifestyle-Marke, die WKND. Das Lernprogramm behandelt grundlegende Themen wie Projekteinrichtung, Maven-Archetypen, Core-Komponenten, bearbeitbare Vorlagen, Client-Bibliotheken und Komponentenentwicklung.
+title: Erste Schritte mit AEM Sites - Projektarchetyp
+description: Erste Schritte mit AEM Sites - Projektarchetyp. Das WKND-Tutorial ist ein mehrteiliges Tutorial, das für Entwickler konzipiert ist, die neu bei Adobe Experience Manager sind. Das Tutorial führt durch die Implementierung einer AEM Site für eine fiktive Lifestyle-Marke, die WKND. Das Tutorial behandelt grundlegende Themen wie Projekteinrichtung, Maven-Archetypen, Kernkomponenten, bearbeitbare Vorlagen, Client-Bibliotheken und Komponentenentwicklung.
 sub-product: Sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
-feature: Hauptkomponenten, Seiten-Editor, bearbeitbare Vorlagen, AEM Projektarchiv
-topic: Content-Management, Entwicklung
+feature: Kernkomponenten, Seiten-Editor, bearbeitbare Vorlagen, AEM Projektarchetyp
+topic: Content Management, Entwicklung
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 index: y
-translation-type: tm+mt
 source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
 workflow-type: tm+mt
 source-wordcount: '502'
@@ -19,13 +18,13 @@ ht-degree: 31%
 ---
 
 
-# Erste Schritte mit AEM Sites - Projektarchiv {#project-archetype}
+# Erste Schritte mit AEM Sites - Projektarchetyp {#project-archetype}
 
-Willkommen bei einem mehrteiligen Tutorial, das für Entwickler entwickelt wurde, die neu in Adobe Experience Manager (AEM) sind. Dieses Tutorial durchläuft die Implementierung einer AEM Website für eine fiktive Lifestyle-Marke der WKND.
+Willkommen bei einem mehrteiligen Tutorial, das für Entwickler konzipiert ist, die neu in Adobe Experience Manager (AEM) sind. Dieses Tutorial führt Sie durch die Implementierung einer AEM Website für eine fiktive Lifestyle-Marke, die WKND.
 
-Dieses Lernprogramm wird mit dem AEM [Projektarchiv](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de) durchgeführt, um ein neues Beginn zu erstellen.
+Dieses Tutorial beginnt mit der Verwendung des [AEM Projektarchetyps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de) zum Generieren eines neuen Projekts.
 
-Das Tutorial wurde für die Verwendung mit **AEM als Cloud Service** entwickelt und ist rückwärtskompatibel mit **AEM 6.5.5.0+** und **AEM 6.4.8.1+**. Die Site wird wie folgt implementiert:
+Das Tutorial wurde für die Verwendung mit **AEM als Cloud Service** entwickelt und ist rückwärtskompatibel mit **AEM 6.5.5.0+** und **AEM 6.4.8.1+**. Die Site wird mit folgenden Elementen implementiert:
 
 * [Maven-AEM-Projektarchetyp](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/archetype/overview.html)
 * [Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html)
@@ -34,11 +33,11 @@ Das Tutorial wurde für die Verwendung mit **AEM als Cloud Service** entwickelt 
 * [Bearbeitbare Vorlagen](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html)
 * [Stilsystem](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html)
 
-*Schätzen Sie sich 1-2 Stunden, um die einzelnen Teile des Tutorials zu durchlaufen.*
+*Schätzen Sie 1-2 Stunden, um die einzelnen Teile des Tutorials zu durchlaufen.*
 
 ## Lokale Entwicklungsumgebung {#local-dev-environment}
 
-Eine Umgebung zur lokalen Entwicklung ist erforderlich, um dieses Lernprogramm abzuschließen. Screenshots und Videos werden mit dem AEM als Cloud Service-SDK erfasst, das auf einer Mac OS-Umgebung mit [Visual Studio-Code](https://code.visualstudio.com/) als IDE ausgeführt wird. Befehle und Code sollten unabhängig vom lokalen Betriebssystem sein, sofern nicht anders angegeben.
+Zum Abschluss dieses Tutorials ist eine lokale Entwicklungsumgebung erforderlich. Screenshots und Videos werden mit dem AEM as a Cloud Service SDK erfasst, das in einer Mac OS-Umgebung mit [Visual Studio Code](https://code.visualstudio.com/) als IDE ausgeführt wird. Befehle und Code sollten unabhängig vom lokalen Betriebssystem sein, sofern nicht anders angegeben.
 
 ### Erforderliche Software
 
@@ -47,26 +46,26 @@ Folgendes sollte lokal installiert werden:
 * Lokale AEM **Autoreninstanz** (Cloud Service SDK, 6.5.5+ oder 6.4.8.1+)
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) (3.3.9 oder höher)
-* [Node.js](https://nodejs.org/en/) (LTS - Langfristige Unterstützung)
+* [Node.js](https://nodejs.org/en/)  (LTS - Langfristige Unterstützung)
 * [npm 6+](https://www.npmjs.com/)
 * [Git](https://git-scm.com/)
-* [Visual Studio-](https://code.visualstudio.com/) Codeoder eine entsprechende IDE
-   * [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  - Tool wird während des Lernprogramms verwendet
+* [Visual Studio ](https://code.visualstudio.com/) Codeor-Entsprechung IDE
+   * [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync)  - Tool, das während des Tutorials verwendet wird
 
 >[!NOTE]
 >
-> **Neu bei AEM as a Cloud Service?** Sehen Sie sich das  [folgende Handbuch an, um eine lokale Entwicklungs-Umgebung mit dem AEM als Cloud Service-SDK](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) einzurichten.
+> **Neu bei AEM as a Cloud Service?** Sehen Sie sich die  [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit dem AEM as a Cloud Service SDK](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) an.
 >
-> **Neu zu AEM 6.5?** Sehen Sie sich das  [folgende Handbuch an, um eine lokale Entwicklungs-Umgebung](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html) einzurichten.
+> **Neu bei AEM 6.5?** Sehen Sie sich die  [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html) an.
 
 ## GitHub {#github}
 
-Der gesamte Code für das Projekt finden Sie auf Github im AEM Guide Repo:
+Den gesamten Code für das Projekt finden Sie auf Github im AEM Guide Repo:
 
-**[GitHub: WKND-Sites-Projekt](https://github.com/adobe/aem-guides-wknd)**
+**[GitHub: WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd)**
 
-Darüber hinaus hat jeder Teil des Tutorials seine eigene Filiale in GitHub. Ein Benutzer kann das Lernprogramm an einem beliebigen Punkt beginnen, indem er einfach die Verzweigung ausprobiert, die dem vorherigen Teil entspricht.
+Darüber hinaus hat jeder Teil des Tutorials eine eigene Verzweigung in GitHub. Ein Benutzer kann das Lernprogramm an einem beliebigen Punkt beginnen, indem er einfach die Verzweigung ausprobiert, die dem vorherigen Teil entspricht.
 
 ## Nächste Schritte {#next-steps}
 
-Worauf wartest du? Beginn Sie das Lernprogramm, indem Sie zum Kapitel [Projektualisierung](project-setup.md) navigieren und lernen, wie ein neues Adobe Experience Manager-Projekt mit dem AEM-Projektarchiv erstellt wird.
+Worauf wartest du?! Starten Sie das Tutorial, indem Sie zum Kapitel [Projekteinrichtung](project-setup.md) navigieren und erfahren Sie, wie Sie ein neues Adobe Experience Manager-Projekt mithilfe des AEM Projektarchetyps erstellen.
