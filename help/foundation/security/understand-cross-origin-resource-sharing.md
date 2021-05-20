@@ -1,8 +1,8 @@
 ---
-title: Verstehen Sie Cross-Herkunft Resource Sharing (CORS) mit AEM
-description: Adobe Experience Managers Cross-Herkunft Resource Sharing (CORS) ermöglicht es nicht-AEM Webeigenschaften, clientseitige Aufrufe zu AEM, sowohl authentifiziert als auch nicht authentifiziert, um Inhalte abzurufen oder direkt mit AEM zu interagieren.
+title: Verstehen Cross-Origin Resource Sharing (CORS) mit AEM
+description: Die Cross-Origin Resource Sharing (CORS) von Adobe Experience Manager ermöglicht es AEM Webeigenschaften, clientseitige Aufrufe an AEM durchzuführen, sowohl authentifiziert als auch nicht authentifiziert, um Inhalte abzurufen oder direkt mit AEM zu interagieren.
 version: 6.3, 6,4, 6.5
-sub-product: Stiftung, Inhaltsdienste, Sites
+sub-product: foundation, content-services, sites
 topics: security, development, content-delivery
 activity: understand
 audience: architect, developer
@@ -18,76 +18,76 @@ ht-degree: 1%
 ---
 
 
-# Verstehen Sie das Cross-Herkunft Resource Sharing ([!DNL CORS]).
+# Verstehen Cross-Origin Resource Sharing ([!DNL CORS])
 
-Adobe Experience Managers Cross-Herkunft Resource Sharing ([!DNL CORS]) ermöglicht es AEM Webeigenschaften, clientseitige Aufrufe an AEM durchzuführen, sowohl authentifiziert als auch nicht authentifiziert, um Inhalte abzurufen oder direkt mit AEM zu interagieren.
+Die Cross-Origin Resource Sharing ([!DNL CORS]) von Adobe Experience Manager erleichtert nicht AEM Webeigenschaften das Ausführen von clientseitigen Aufrufen an AEM, sowohl authentifiziert als auch nicht authentifiziert, um Inhalte abzurufen oder direkt mit AEM zu interagieren.
 
-## Adobe Granite Cross-Herkunft Resource Sharing Policy OSGi-Konfiguration
+## OSGi-Konfiguration der Adobe Granite Cross-Origin Resource Sharing Policy
 
-CORS-Konfigurationen werden als OSGi-Konfigurationsfabriken in AEM verwaltet, wobei jede Richtlinie als eine Instanz der Factory dargestellt wird.
+CORS-Konfigurationen werden in AEM als OSGi-Konfigurationsfabriken verwaltet, wobei jede Richtlinie als eine Instanz der Factory dargestellt wird.
 
 * `http://<host>:<port>/system/console/configMgr > Adobe Granite Cross Origin Resource Sharing Policy`
 
-![Adobe Granite Cross-Herkunft Resource Sharing Policy OSGi-Konfiguration](./assets/understand-cross-origin-resource-sharing/cors-osgi-config.png)
+![OSGi-Konfiguration der Adobe Granite Cross-Origin Resource Sharing Policy](./assets/understand-cross-origin-resource-sharing/cors-osgi-config.png)
 
 [!DNL Adobe Granite Cross-Origin Resource Sharing Policy] (`com.adobe.granite.cors.impl.CORSPolicyImpl`)
 
 ### Richtlinienauswahl
 
-Eine Richtlinie wird ausgewählt, indem die Variable
+Eine Richtlinie wird durch Vergleich der
 
 * `Allowed Origin` mit dem  `Origin` Anforderungsheader
-* und `Allowed Paths` mit dem Anforderungspfad.
+* und `Allowed Paths` mit dem Anfragepfad.
 
-Die erste Richtlinie, die diesen Werten entspricht, wird verwendet. Wenn keine gefunden wird, wird jede [!DNL CORS] Anforderung verweigert.
+Es wird die erste Richtlinie verwendet, die diesen Werten entspricht. Wenn keine gefunden wird, wird jede [!DNL CORS] -Anfrage abgelehnt.
 
-Wenn überhaupt keine Richtlinie konfiguriert ist, werden [!DNL CORS]-Anforderungen auch nicht beantwortet, da der Handler deaktiviert und somit effektiv verweigert wird - solange kein anderes Modul des Servers auf [!DNL CORS] antwortet.
+Wenn überhaupt keine Richtlinie konfiguriert ist, werden [!DNL CORS]-Anforderungen auch nicht beantwortet, da der Handler deaktiviert und daher effektiv verweigert wird - solange kein anderes Modul des Servers auf [!DNL CORS] antwortet.
 
 ### Eigenschaften für „Policy“
 
-#### [!UICONTROL Zulässige Herkünfte]
+#### [!UICONTROL Zulässiger Ursprung]
 
 * `"alloworigin" <origin> | *`
-* Liste der Parameter `origin`, die URIs angeben, die auf die Ressource zugreifen dürfen. Bei Anforderungen ohne Anmeldeinformationen kann der Server * als Platzhalter angeben, damit jede Herkunft auf die Ressource zugreifen kann. *Es wird absolut nicht empfohlen,  `Allow-Origin: *` in der Produktion zu verwenden, da es jedem fremden (d.h. Angreifer) Website erlaubt, Anfragen zu stellen, die ohne CORS streng verboten sind durch Browser.*
+* Liste der `origin`-Parameter, die URIs angeben, die auf die Ressource zugreifen können. Bei Anfragen ohne Anmeldeinformationen kann der Server * als Platzhalter angeben, sodass jeder Ursprung auf die Ressource zugreifen kann. *Es wird absolut nicht empfohlen,  `Allow-Origin: *` in der Produktion zu verwenden, da es jeder fremden (d. h. Angreifer-) Website erlaubt, Anfragen zu stellen, die ohne CORS von Browsern streng verboten sind.*
 
-#### [!UICONTROL Zulässige Herkünfte (Regexp)]
+#### [!UICONTROL Zulässiger Ursprung (Regexp)]
 
 * `"alloworiginregexp" <regexp>`
-* Liste von `regexp` regulären Ausdrücken, die URIs angeben, die auf die Ressource zugreifen können. *Reguläre Ausdruck können zu unbeabsichtigten Übereinstimmungen führen, wenn sie nicht sorgfältig erstellt wurden, sodass ein Angreifer einen benutzerdefinierten Domänennamen verwenden kann, der ebenfalls mit der Richtlinie übereinstimmt.* Es wird generell empfohlen, separate Richtlinien für jeden bestimmten Hostnamen einer Herkunft zu verwenden,  `alloworigin`auch wenn dies eine wiederholte Konfiguration der anderen Richtlinieneigenschaften bedeutet. Verschiedene Herkünfte haben in der Regel unterschiedliche Lebenszyklen und Anforderungen und profitieren somit von einer klaren Trennung.
+* Liste der `regexp` regulären Ausdrücke, die URIs angeben, die auf die Ressource zugreifen können. *Reguläre Ausdrücke können zu unbeabsichtigten Übereinstimmungen führen, wenn sie nicht sorgfältig erstellt wurden, sodass ein Angreifer einen benutzerdefinierten Domänennamen verwenden kann, der auch mit der Richtlinie übereinstimmt.* Es wird allgemein empfohlen, für jeden bestimmten Herkunfts-Hostnamen separate Richtlinien zu verwenden,  `alloworigin`auch wenn dies eine wiederholte Konfiguration der anderen Richtlinieneigenschaften bedeutet. Verschiedene Ursprünge weisen in der Regel unterschiedliche Lebenszyklen und Anforderungen auf und profitieren somit von einer klaren Trennung.
 
 #### [!UICONTROL Zulässige Pfade]
 
 * `"allowedpaths" <regexp>`
-* Liste von `regexp` regulären Ausdrücken, die Ressourcenpfade angeben, für die die Richtlinie gilt.
+* Liste der `regexp` regulären Ausdrücke, die die Ressourcenpfade angeben, für die die Richtlinie gilt.
 
 #### [!UICONTROL Verfügbare Kopfzeilen]
 
 * `"exposedheaders" <header>`
-* Liste der Header-Parameter, die die Anforderungsheader anzeigen, auf die Browser zugreifen dürfen.
+* Liste der Kopfzeilenparameter, die angeben, auf welche Anforderungsheader Browser zugreifen dürfen.
 
-#### [!UICONTROL Max. Alter]
+#### [!UICONTROL Höchstalter]
 
 * `"maxage" <seconds>`
-* Ein `seconds`-Parameter, der angibt, wie lange die Ergebnisse einer Preflight-Anfrage zwischengespeichert werden können.
+* Ein Parameter `seconds` , der angibt, wie lange die Ergebnisse einer Pre-Flight-Anfrage zwischengespeichert werden können.
 
-#### [!UICONTROL Unterstützte Header]
+#### [!UICONTROL Unterstützte Kopfzeilen]
 
 * `"supportedheaders" <header>`
-* Liste der Parameter `header`, die angeben, welche HTTP-Header bei der eigentlichen Anforderung verwendet werden können.
+* Liste der Parameter `header`, die angeben, welche HTTP-Header bei der eigentlichen Anfrage verwendet werden können.
 
 #### [!UICONTROL Zulässige Methoden]
 
 * `"supportedmethods"`
-* Liste von Methodenparametern, die angeben, welche HTTP-Methoden bei der eigentlichen Anforderung verwendet werden können.
+* Liste der Methodenparameter, die angeben, welche HTTP-Methoden bei der eigentlichen Anfrage verwendet werden können.
 
-#### [!UICONTROL Unterstützt Anmeldeinformationen]
+#### [!UICONTROL Unterstützt Anmeldedaten]
 
 * `"supportscredentials" <boolean>`
-* Ein `boolean`, der angibt, ob die Antwort auf die Anforderung dem Browser angezeigt werden kann. Bei Verwendung als Teil einer Antwort auf eine Preflight-Anforderung gibt dies an, ob die eigentliche Anforderung mit Anmeldeinformationen erfolgen kann.
+* Ein `boolean` , der angibt, ob die Antwort auf die Anfrage dem Browser angezeigt werden kann oder nicht. Bei Verwendung als Teil einer Antwort auf eine Preflight-Anfrage gibt dies an, ob die eigentliche Anfrage mit Anmeldeinformationen erfolgen kann.
 
 ### Beispielkonfigurationen
 
-Site 1 ist ein einfaches, anonym zugängliches schreibgeschütztes Szenario, bei dem Inhalte über [!DNL GET]-Anforderungen konsumiert werden:
+Site 1 ist ein einfaches, anonym zugängliches schreibgeschütztes Szenario, bei dem Inhalte über [!DNL GET]-Anforderungen genutzt werden:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -123,19 +123,19 @@ Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-
 />
 ```
 
-## Probleme mit der Dispatcher-Zwischenspeicherung und Konfiguration {#dispatcher-caching-concerns-and-configuration}
+## Caching-Bedenken und Konfiguration des Dispatchers {#dispatcher-caching-concerns-and-configuration}
 
-Ab Dispatcher 4.1.1 können Antwortkopfzeilen zwischengespeichert werden. Dadurch ist es möglich, [!DNL CORS]-Header mit den [!DNL CORS]-angeforderten Ressourcen zu zwischenspeichern, solange die Anforderung anonym ist.
+Ab Dispatcher 4.1.1 können Antwortheader zwischengespeichert werden. Dies ermöglicht das Zwischenspeichern von [!DNL CORS]-Headern entlang der [!DNL CORS]-angeforderten Ressourcen, solange die Anfrage anonym ist.
 
-Im Allgemeinen können dieselben Überlegungen zum Zwischenspeichern von Inhalten in Dispatcher auf die Zwischenspeicherung von CORS-Antwort-Headern beim Dispatcher angewendet werden. Die folgende Tabelle definiert, wann [!DNL CORS]-Header (und damit [!DNL CORS]-Anforderungen) zwischengespeichert werden können.
+Im Allgemeinen können dieselben Überlegungen zum Zwischenspeichern von Inhalten im Dispatcher auf das Zwischenspeichern von CORS-Antwort-Headern beim Dispatcher angewendet werden. Die folgende Tabelle definiert, wann [!DNL CORS] -Kopfzeilen (und damit [!DNL CORS] -Anforderungen) zwischengespeichert werden können.
 
-| cache | Umgebung | Authentifizierungsstatus | Erklärung |
+| zwischenspeicherbar | Umgebung | Authentifizierungsstatus | Erklärung |
 |-----------|-------------|-----------------------|-------------|
-| Nein | AEM Publish | authentifiziert | Die Dispatcher-Zwischenspeicherung in AEM Author ist auf statische, nicht verfasste Assets beschränkt. Dadurch ist es schwierig und unpraktisch, die meisten Ressourcen in AEM Author, einschließlich HTTP-Antwort-Kopfzeilen, zwischenzuleiten. |
-| Nein | AEM Publish | authentifiziert | Vermeiden Sie das Zwischenspeichern von CORS-Headern bei authentifizierten Anforderungen. Dies entspricht den allgemeinen Richtlinien, authentifizierte Anforderungen nicht zwischenspeichern zu lassen, da schwer zu bestimmen ist, wie der Authentifizierungs-/Autorisierungsstatus des anfordernden Benutzers die bereitgestellte Ressource beeinflusst. |
-| Ja | AEM Publish | Anonym | Anonyme Anforderungen, die beim Dispatcher zwischengespeichert werden können, können auch ihre Antwort-Header zwischenspeichern. Dadurch wird sichergestellt, dass zukünftige CORS-Anforderungen auf den zwischengespeicherten Inhalt zugreifen können. Jede Änderung der CORS-Konfiguration bei AEM Publish **muss mit einer Ungültigmachung der betroffenen zwischengespeicherten Ressourcen einhergehen.** Die Best Practices gelten für Code- oder Konfigurationsimplementierungen, bei denen der Dispatcher-Cache geleert wird, da es schwierig ist zu bestimmen, welche Inhalte im Cache gespeichert werden. |
+| Nein | AEM Publish | Authentifiziert | Die Dispatcher-Zwischenspeicherung in der AEM-Autoreninstanz ist auf statische, nicht erstellte Assets beschränkt. Dadurch wird es schwierig und unmöglich, die meisten Ressourcen in der AEM-Autoreninstanz zwischenzuspeichern, einschließlich HTTP-Antwortheadern. |
+| Nein | AEM-Veröffentlichung | Authentifiziert | Vermeiden Sie das Zwischenspeichern von CORS-Headern bei authentifizierten Anforderungen. Dies steht im Einklang mit der allgemeinen Anleitung, authentifizierte Anforderungen nicht zwischenspeichern zu lassen, da es schwierig ist zu bestimmen, wie sich der Authentifizierungs-/Autorisierungsstatus des anfragenden Benutzers auf die bereitgestellte Ressource auswirkt. |
+| Ja | AEM-Veröffentlichung | Anonym | Anonyme Anfragen, die im Dispatcher zwischengespeichert werden können, können auch ihre Antwortheader zwischenspeichern, sodass zukünftige CORS-Anfragen auf den zwischengespeicherten Inhalt zugreifen können. Jede CORS-Konfigurationsänderung in AEM Publish **muss** von einer Invalidierung der betroffenen zwischengespeicherten Ressourcen gefolgt sein. Best Practices erfordern die Bereinigung des Dispatcher-Caches durch Code- oder Konfigurationsbereitstellungen, da es schwierig ist zu bestimmen, welche zwischengespeicherten Inhalte möglicherweise ausgeführt werden. |
 
-Um die Zwischenspeicherung von CORS-Headern zu ermöglichen, fügen Sie allen unterstützten AEM Publish dispatcher.any-Dateien die folgende Konfiguration hinzu.
+Um das Zwischenspeichern von CORS-Headern zu ermöglichen, fügen Sie allen unterstützenden AEM Publish dispatcher.any-Dateien die folgende Konfiguration hinzu.
 
 ```
 /cache { 
@@ -155,27 +155,27 @@ Um die Zwischenspeicherung von CORS-Headern zu ermöglichen, fügen Sie allen un
 
 Denken Sie daran, **die Webserver-Anwendung** neu zu starten, nachdem Sie Änderungen an der Datei `dispatcher.any` vorgenommen haben.
 
-Es ist wahrscheinlich, dass das Löschen des Cache vollständig erforderlich ist, um sicherzustellen, dass die Header bei der nächsten Anforderung nach einem `/cache/headers` Konfigurationsupdate ordnungsgemäß zwischengespeichert werden.
+Wahrscheinlich ist es erforderlich, den Cache vollständig zu löschen, um sicherzustellen, dass die Kopfzeilen bei der nächsten Anfrage nach einer `/cache/headers`-Konfigurationsaktualisierung entsprechend zwischengespeichert werden.
 
 ## Fehlerbehebung für CORS
 
 Die Protokollierung ist unter `com.adobe.granite.cors` verfügbar:
 
-* `DEBUG` aktivieren, um Details darüber anzuzeigen, warum eine [!DNL CORS]-Anforderung abgelehnt wurde
-* `TRACE` aktivieren, um Details zu allen Anforderungen anzuzeigen, die den CORS-Handler durchlaufen.
+* `DEBUG` aktivieren, um Details darüber anzuzeigen, warum eine [!DNL CORS]-Anfrage abgelehnt wurde
+* `TRACE` aktivieren, um Details zu allen Anforderungen anzuzeigen, die über den CORS-Handler laufen.
 
 ### Tipps:
 
-* Erstellen Sie XHR-Anforderungen manuell mithilfe von Curl, stellen Sie jedoch sicher, dass alle Header und Details kopiert werden, da jede einzelne einen Unterschied machen kann. einige Browserkonsolen erlauben, den Befehl curl zu kopieren
-* Überprüfen Sie, ob die Anforderung vom CORS-Handler abgelehnt wurde und nicht vom Authentifizierungs-, CSRF-Token-, Dispatcher-Filter oder anderen Sicherheitsebenen
-   * Wenn der CORS-Handler mit 200 antwortet, der `Access-Control-Allow-Origin`-Header jedoch in der Antwort fehlt, überprüfen Sie die Protokolle auf Ablehnungen unter [!DNL DEBUG] in `com.adobe.granite.cors`
-* Wenn die Dispatcher-Zwischenspeicherung von [!DNL CORS]-Anforderungen aktiviert ist
-   * Vergewissern Sie sich, dass die `/cache/headers`-Konfiguration auf `dispatcher.any` angewendet wurde und der Webserver erfolgreich neu gestartet wurde
-   * Stellen Sie sicher, dass der Cache nach OSGi oder Dispatcher ordnungsgemäß geleert wurde. Konfigurationsänderungen wurden vorgenommen.
-* Überprüfen Sie bei Bedarf, ob Authentifizierungsberechtigungen für die Anforderung vorhanden sind.
+* Erstellen Sie XHR-Anforderungen manuell mithilfe von curl, stellen Sie jedoch sicher, dass Sie alle Kopfzeilen und Details kopieren, da jede davon einen Unterschied machen kann. In einigen Browserkonsolen kann der curl-Befehl kopiert werden
+* Überprüfen Sie, ob die Anfrage vom CORS-Handler und nicht vom Authentifizierungs-, CSRF-Token-, Dispatcher-Filter oder anderen Sicherheitsschichten abgelehnt wurde.
+   * Wenn der CORS-Handler mit 200 antwortet, die `Access-Control-Allow-Origin`-Kopfzeile jedoch in der Antwort fehlt, überprüfen Sie die Protokolle unter [!DNL DEBUG] in `com.adobe.granite.cors` auf Ablehnungen.
+* Wenn die Dispatcher-Zwischenspeicherung von [!DNL CORS] -Anforderungen aktiviert ist
+   * Stellen Sie sicher, dass die `/cache/headers`-Konfiguration auf `dispatcher.any` angewendet wird und der Webserver erfolgreich neu gestartet wurde.
+   * Stellen Sie sicher, dass der Cache ordnungsgemäß gelöscht wurde, nachdem sich OSGi- oder Dispatcher-Konfigurationen geändert haben.
+* Überprüfen Sie bei Bedarf, ob Authentifizierungsberechtigungen für die Anfrage vorhanden sind.
 
-## Begleitmaterialien
+## Unterstützende Materialien
 
-* [AEM OSGi-Konfigurationsfactory für Richtlinien zum Cross-Herkunft Resource Sharing](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
-* [Cross-Herkunft Resource Sharing (W3C)](https://www.w3.org/TR/cors/)
-* [HTTP-Zugriffskontrolle (Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+* [AEM OSGi-Konfigurationsfactory für Cross-Origin Resource Sharing-Richtlinien](http://localhost:4502/system/console/configMgr/com.adobe.granite.cors.impl.CORSPolicyImpl)
+* [Cross-Origin Resource Sharing (W3C)](https://www.w3.org/TR/cors/)
+* [HTTP-Zugriffssteuerung (Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
