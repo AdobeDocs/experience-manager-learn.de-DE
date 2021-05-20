@@ -11,52 +11,51 @@ doc-type: article
 activity: setup
 version: 6.3,6.4
 discoiquuid: d5e40650-3b1f-4875-91b2-e22d932b5e7c
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 1%
+source-wordcount: '395'
+ht-degree: 0%
 
 ---
 
 
 # Erfassen von Workflow-Kommentaren im adaptiven Forms Workflow{#capturing-workflow-comments-in-adaptive-forms-workflow}
 
->[Gilt nur für AEM Forms 6.4. In AEM Forms 6.5 verwenden Sie bitte die Variablenfunktion, um diesen Verwendungsfall zu erreichen.]
+>[Gilt nur für AEM Forms 6.4. Verwenden Sie in AEM Forms 6.5 die Variablenfunktion, um dieses Anwendungsbeispiel zu erreichen.]
 
-Eine häufige Anforderung besteht darin, dass die vom Aufgaben-Reviewer eingegebenen Kommentare in eine E-Mail eingefügt werden können. In AEM Forms 6.4 gibt es keine standardmäßige Methode, um die vom Benutzer eingegebenen Kommentare zu erfassen und diese in E-Mails einzuschließen.
+Eine gängige Anfrage besteht darin, die vom Aufgabenvalidierer eingegebenen Kommentare in eine E-Mail einzuschließen. In AEM Forms 6.4 gibt es keinen nativen Mechanismus, um die vom Benutzer eingegebenen Kommentare zu erfassen und diese Kommentare in die E-Mail einzuschließen.
 
 Um diese Anforderung zu erfüllen, wird ein OSGi-Beispielpaket bereitgestellt, das zum Erfassen von Kommentaren und zum Speichern dieser Kommentare als Workflow-Metadateneigenschaft verwendet werden kann.
 
-Der folgende Screenshot zeigt Ihnen, wie Sie mithilfe des Prozessschritts in [AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) Kommentare erfassen und als Metadateneigenschaft speichern können. &quot;Workflow-Kommentare erfassen&quot;ist der Name der Java-Klasse, die im Prozessschritt verwendet werden muss. Sie müssen den Namen der Metadateneigenschaft übergeben, der die Kommentare enthalten soll. Im folgenden Screenshot ist managerComments die Metadateneigenschaft, in der die Kommentare gespeichert werden.
+Der folgende Screenshot zeigt Ihnen, wie Sie mit dem Prozessschritt in [AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) Kommentare erfassen und als Metadateneigenschaft speichern können. &quot;Capture Workflow Comments&quot;ist der Name der Java-Klasse, die im Prozessschritt verwendet werden muss. Sie müssen den Metadaten-Eigenschaftsnamen übergeben, der die Kommentare enthält. Im folgenden Screenshot ist managerComments die Metadateneigenschaft, in der die Kommentare gespeichert werden.
 
-![workflows comments1](assets/workflowcomments1.gif)
+![workflowcomments1](assets/workflowcomments1.gif)
 
-Gehen Sie wie folgt vor, um diese Funktion auf Ihrem System zu testen:
-* [Stellen Sie sicher, dass der Prozessschritt im Workflow so konfiguriert ist, dass die &quot;Workflow-Kommentare erfassen&quot;verwendet werden](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)
+Um diese Funktion auf Ihrem System zu testen, führen Sie die folgenden Schritte aus:
+* [Stellen Sie sicher, dass der Prozessschritt im Workflow so konfiguriert ist, dass er die &quot;Capture Workflow Comments&quot;verwendet](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)
 
-* [Developing with serviceUser-Bundle bereitstellen](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [Bereitstellen des Entwicklungs-mit-Service-Benutzer-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [Stellen Sie das SetValue-Bundle](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar) bereit. Dieses Bundle enthält den Beispielcode zum Erfassen der Kommentare und zum Speichern als Metadateneigenschaft
+* [Stellen Sie das SetValue-Bundle bereit](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dieses Bundle enthält den Beispielcode zum Erfassen der Kommentare und zum Speichern als Metadateneigenschaft
 
-* [Laden Sie die Assets, die sich auf diesen Artikel beziehen, herunter und dekomprimieren Sie sie in Ihr Dateisystem. Die Assets enthalten ](assets/capturecomments.zip) das Workflow-Modell und das adaptive Musterformular.
+* [Laden Sie die Assets herunter und dekomprimieren Sie sie für diesen Artikel in Ihr Dateisystem.Die Assets enthalten ](assets/capturecomments.zip) das Workflow-Modell und das Beispiel-adaptive Formular.
 
-* Importieren Sie die 2 ZIP-Dateien mit dem Package Manager in AEM
+* Importieren Sie die zwei ZIP-Dateien in AEM mit Package Manager.
 
-* [Vorschau des Formulars unter dieser URL](http://localhost:4502/content/dam/formsanddocuments/capturecomments/jcr:content?wcmmode=disabled)
+* [Zeigen Sie eine Vorschau des Formulars an, indem Sie zu dieser URL navigieren.](http://localhost:4502/content/dam/formsanddocuments/capturecomments/jcr:content?wcmmode=disabled)
 
-* Füllen Sie die Formularfelder aus und senden Sie das Formular
+* Füllen Sie die Formularfelder aus und senden Sie das Formular.
 
-* [AEM](http://localhost:4502/aem/inbox)
+* [Überprüfen des AEM-Posteingangs](http://localhost:4502/aem/inbox)
 
 * Öffnen Sie die Aufgabe aus dem Posteingang und senden Sie das Formular. Geben Sie bei Aufforderung einige Kommentare ein.
 
-Die Kommentare werden in der Metadateneigenschaft managerComments in crx gespeichert. Um nach Kommentaren zu suchen, melden Sie sich bei crx als admin an. Die Workflow-Instanzen werden im folgenden Pfad gespeichert
+Die Kommentare werden in der Metadateneigenschaft managerComments in crx gespeichert. Um nach den Kommentaren zu suchen, melden Sie sich bei crx als Administrator an. Die Workflow-Instanzen werden im folgenden Pfad gespeichert
 
 /var/workflow/instances/server0
 
-Wählen Sie die entsprechende Workflow-Instanz aus und suchen Sie im Metadaten-Knoten nach der Eigenschaft managerComments.
+Wählen Sie die entsprechende Workflow-Instanz aus und suchen Sie im Metadatenknoten nach der Eigenschaft managerComments .
 
