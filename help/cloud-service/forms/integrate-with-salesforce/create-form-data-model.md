@@ -6,20 +6,19 @@ type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Forms
-topic: Development
+feature: Adaptive Formulare
+topic: Entwicklung
 kt: 7149
 thumbnail: 331756.jpg
-translation-type: tm+mt
 source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 20%
+source-wordcount: '41'
+ht-degree: 17%
 
 ---
 
 # Formulardatenmodell erstellen
 
-Formulardatenmodell basierend auf der im vorherigen Schritt konfigurierten Datenquelle erstellen
+Erstellen Sie ein Formulardatenmodell basierend auf der im vorherigen Schritt konfigurierten Datenquelle.
 
 >[!VIDEO](https://video.tv.adobe.com/v/331756/?quality=12&learn=on)
