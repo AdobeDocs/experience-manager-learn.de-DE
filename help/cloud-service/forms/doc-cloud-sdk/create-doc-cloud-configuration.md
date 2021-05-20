@@ -1,6 +1,6 @@
 ---
-title: Benutzerdefinierte OSGi-Konfiguration erstellen
-description: Benutzerdefinierte OSGi-Konfiguration zur Erfassung von Dokument Cloud-spezifischen Details
+title: Erstellen einer benutzerdefinierten OSGi-Konfiguration
+description: Benutzerdefinierte OSGi-Konfiguration zum Erfassen von Dokument-Cloud-spezifischen Details
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 # Einführung
 
-Erstellen Sie eine benutzerdefinierte OSGi-Konfiguration, um die Anmeldeinformationen Ihres Dokument Cloud-Kontos zu erfassen.
+Erstellen Sie eine benutzerdefinierte OSGi-Konfiguration, um die Anmeldeinformationen Ihres Document Cloud-Kontos zu erfassen.
 
 
 Um eine benutzerdefinierte OSGi-Konfiguration zu erstellen, müssen wir zunächst eine Schnittstelle erstellen, deren öffentliche Methoden die Felder in der Konfiguration darstellen.
@@ -26,7 +26,7 @@ Um eine benutzerdefinierte OSGi-Konfiguration zu erstellen, müssen wir zunächs
 ![doc-cloud-config](assets/doc-cloud-configuration.JPG)
 
 
-Erstellen Sie eine Schnittstelle mit dem Namen DocumentCloudConfiguration und fügen Sie den folgenden Code darin ein.
+Erstellen Sie eine Schnittstelle mit dem Namen DocumentCloudConfiguration und fügen Sie den folgenden Code ein.
 
 ```java
 package com.aemforms.doccloud.core;
