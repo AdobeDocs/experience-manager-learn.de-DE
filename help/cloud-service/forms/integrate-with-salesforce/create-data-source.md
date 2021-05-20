@@ -1,24 +1,23 @@
 ---
-title: 'Cloud-Services-Konfiguration erstellen '
-description: Datenquelle erstellen, um mit den OAuth-Anmeldeinformationen eine Verbindung mit Salesforce herzustellen
+title: 'Erstellen einer Cloud Services-Konfiguration '
+description: Erstellen einer Datenquelle für die Verbindung mit Salesforce mithilfe der OAuth-Anmeldeinformationen
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: cloud-service
-topic: Development
+topic: Entwicklung
 kt: 7148
 thumbnail: 331755.jpg
-translation-type: tm+mt
 source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
-source-wordcount: '39'
-ht-degree: 7%
+source-wordcount: '35'
+ht-degree: 2%
 
 ---
 
 # Datenquelle erstellen
 
-Erstellen einer REST-gesicherten Datenquelle mithilfe der im vorherigen Schritt erstellten Swagger-Datei
+Erstellen Sie eine REST-gesicherte Datenquelle mithilfe der Swagger-Datei, die Sie im vorherigen Schritt erstellt haben.
 
 >[!VIDEO](https://video.tv.adobe.com/v/331755/?quality=12&learn=on)
