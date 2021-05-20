@@ -1,61 +1,60 @@
 ---
-title: Einfacher Arbeitsablauf für gebührenpflichtige Zeitüberschreitung bei Anforderung
-description: Bedienfelder für adaptive Formulare in AEM Workflow ausblenden und einblenden
+title: Einfacher Workflow für die gebührenpflichtige Zeitüberschreitung bei Anfrage
+description: Ausblenden und Anzeigen adaptiver Formularbedienfelder in AEM Workflow
 uuid: 28ceb72b-24d9-488e-92af-7e85775dc682
-feature: Adaptive Forms
+feature: Adaptive Formulare
 topics: workflow
 audience: developer
 doc-type: article
 activity: use
 version: 6.4,6.5
 discoiquuid: 1c4822e6-76ce-446b-98cb-408900d68b24
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '337'
-ht-degree: 1%
+source-wordcount: '335'
+ht-degree: 0%
 
 ---
 
 
-# Einfacher Arbeitsablauf für gebührenpflichtige Zeitüberschreitung bei Anforderung
+# Einfacher Workflow für die gebührenpflichtige Zeitüberschreitung bei Anfrage
 
-In diesem Artikel wird ein einfacher Arbeitsablauf für die Anforderung der bezahlten Zeitüberschreitung beschrieben. Die Geschäftsanforderungen lauten wie folgt:
+In diesem Artikel sehen wir uns einen einfachen Workflow an, der für die Anforderung der gebührenpflichtigen Zeitüberschreitung verwendet wird. Die Geschäftsanforderungen lauten wie folgt:
 
 * Benutzer A fordert eine Zeitüberschreitung durch Ausfüllen eines adaptiven Formulars an.
-* Das Formular wird an AEM Admin-Benutzer weitergeleitet (in der Realität wird es an den Manager des Absenders weitergeleitet)
-* Admin öffnet das Formular. Admin sollte keine vom Übermittler eingegebenen Informationen bearbeiten können.
-* Der Abschnitt &quot;Genehmigende Person&quot;sollte für den Genehmiger sichtbar sein (in diesem Fall ist er der AEM Administrator).
+* Das Formular wird an AEM Admin-Benutzer weitergeleitet (in der Praxis wird es an den Manager des Absenders weitergeleitet)
+* Der Administrator öffnet das Formular. Der Administrator sollte keine vom Absender eingegebenen Informationen bearbeiten können.
+* Der Abschnitt Genehmiger sollte für den Genehmiger sichtbar sein (in diesem Fall ist es der AEM Administrator).
 
-Um die oben genannte Anforderung zu erfüllen, verwenden wir ein unsichtbares Feld mit dem Namen **initialstep** im Formular und der Standardwert ist auf &quot;Ja&quot;festgelegt. Wenn das Formular gesendet wird, setzt der erste Schritt im Workflow den Wert initialstep auf Nein. Das Formular verfügt über Geschäftsregeln, um die entsprechenden Abschnitte basierend auf dem Wert des ersten Schritts auszublenden und anzuzeigen.
+Um die obige Anforderung zu erfüllen, verwenden wir ein ausgeblendetes Feld namens **initialstep** im Formular und dessen Standardwert ist auf Ja gesetzt. Wenn das Formular gesendet wird, setzt der erste Schritt im Workflow den Wert des initialstep auf Nein. Das Formular enthält Geschäftsregeln, mit denen die entsprechenden Abschnitte basierend auf dem Wert des ersten Schritts ausgeblendet und angezeigt werden.
 
-**Konfigurieren des Arbeitsablaufs &quot;Formular für Trigger AEM&quot;**
+**Konfigurieren des Arbeitsablaufs &quot;Formular in Trigger AEM&quot;**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28406?quality=9&learn=on)
 
-**Workflow-Durchlauf**
+**Workflow-exemplarische Vorgehensweise**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28407?quality=9&learn=on)
 
-**Ansicht des Formulars zur Zeitüberschreitung durch den Absender**
+**Ansicht des Absenders des Formulars zur Zeit der Anforderung**
 
 ![initialstep](assets/initialstep.gif)
 
-**Genehmigende Ansicht des Formulars**
+**Ansicht &quot;Genehmiger&quot;des Formulars**
 
-![viewansicht](assets/approversview.gif)
+![Approverview](assets/approversview.gif)
 
-In der Genehmiger-Ansicht kann der Genehmiger die gesendeten Daten nicht bearbeiten. Es gibt auch einen neuen Abschnitt, der nur für Genehmiger gedacht ist.
+In der Genehmigeransicht kann der Genehmiger die gesendeten Daten nicht bearbeiten. Es gibt auch einen neuen Abschnitt, der nur für Genehmigende gedacht ist.
 
-Gehen Sie wie folgt vor, um diesen Workflow auf Ihrem System zu testen:
+Um diesen Workflow auf Ihrem System zu testen, führen Sie die folgenden Schritte aus:
 * [Herunterladen und Bereitstellen von DevelopingWitheServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* [SetValue Custom OSGI Bundle herunterladen und bereitstellen](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
-* [Importieren Sie die Assets, die sich auf diesen Artikel beziehen, in AEM](assets/helpxworkflow.zip)
-* Öffnen Sie das Anforderungsformular [Zeitüberschreitung](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* [Herunterladen und Bereitstellen des SetValue Custom OSGI-Bundles](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
+* [Importieren Sie die mit diesem Artikel verknüpften Assets in AEM](assets/helpxworkflow.zip)
+* Öffnen Sie das Formular [Zeitüberschreitung der Anforderung](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled).
 * Füllen Sie die Details aus und senden Sie
-* Öffnen Sie den Posteingang [inbox](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html). Ihnen sollte eine neue Aufgabe zugewiesen werden. Öffnen Sie das Formular. Die Daten des Übermittlers sollten schreibgeschützt sein und ein neuer Abschnitt für die Genehmigung sollte sichtbar sein.
-* [Workflow-Modell](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html)
-* Überprüfen Sie den Prozessschritt. Dies ist der Schritt, der den Wert von initialstep auf &quot;Nein&quot;setzt.
+* Öffnen Sie den Posteingang [inbox](http://localhost:4502/mnt/overlay/cq/inbox/content/inbox.html). Es sollte eine neue Aufgabe zugewiesen werden. Öffnen Sie das Formular. Die Daten des Übermittlers sollten schreibgeschützt sein und ein neuer Abschnitt zur Validierung sollte sichtbar sein.
+* Durchsuchen Sie das [Workflow-Modell](http://localhost:4502/editor.html/conf/global/settings/workflow/models/helpxworkflow.html).
+* Durchsuchen Sie den Prozessschritt. Dies ist der Schritt, der den Wert von initialstep auf &quot;Nein&quot;setzt.
