@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer Experience Platform Launch-Eigenschaft
-description: Erfahren Sie, wie Sie eine Launch-Eigenschaft mit der Konfiguration erstellen, die für die Einrichtung der restlichen Integration unbedingt erforderlich ist. Die Benutzer erhalten eine Einführung in die Benutzeroberfläche "Starten"und erfahren mehr über Erweiterungen, Regeln und Workflows.
+description: Erfahren Sie, wie Sie eine Launch-Eigenschaft mit der Konfiguration erstellen, die für die Einrichtung des restlichen Integrationsbereichs unbedingt erforderlich ist. Benutzer erhalten eine Einführung in die Launch-Benutzeroberfläche und erfahren mehr über Erweiterungen, Regeln und Veröffentlichungs-Workflows.
 topics: integrations
 audience: administrator
 doc-type: technical video
@@ -8,27 +8,26 @@ activity: setup
 version: cloud-service
 kt: 5980
 thumbnail: 38553.jpg
-topic: Integrations
+topic: Integrationen
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 16%
+source-wordcount: '110'
+ht-degree: 15%
 
 ---
 
 
 # Erstellen einer Experience Platform Launch-Eigenschaft {#create-launch-property}
 
-Erfahren Sie, wie Sie eine Launch-Eigenschaft mit der Konfiguration erstellen, die für die Einrichtung der restlichen Integration mit Adobe Experience Manager unbedingt erforderlich ist. Benutzer werden in die Benutzeroberfläche &quot;Starten&quot;eingeführt und erhalten Informationen zu Erweiterungen, Regeln und Workflows.
+Erfahren Sie, wie Sie eine Launch-Eigenschaft mit der Mindestkonfiguration erstellen, die zum Einrichten der restlichen Integration mit Adobe Experience Manager erforderlich ist. Benutzer werden in die Launch-Benutzeroberfläche eingeführt und erfahren mehr über Erweiterungen, Regeln und Veröffentlichungs-Workflows.
 
 >[!VIDEO](https://video.tv.adobe.com/v/38553?quality=12&learn=on)
 
 ## Nächste Schritte
 
-[AEM mit Launch mit Adobe I/O verbinden](connect-aem-launch-adobe-io.md)
+[AEM mit Launch über Adobe I/O verbinden](connect-aem-launch-adobe-io.md)
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
