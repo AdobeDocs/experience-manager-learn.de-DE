@@ -1,31 +1,30 @@
 ---
-title: Variablen im AEM Workflow
-seo-title: Variablen im AEM Workflow
-description: Variablen des Typs xml,json,arraylist,Dokument im AEM-Workflow verwenden
-seo-description: Variablen des Typs xml,json,arraylist,Dokument im AEM-Workflow verwenden
+title: Variablen in AEM Workflow
+seo-title: Variablen in AEM Workflow
+description: Verwenden von Variablen des Typs xml,json,arraylist,document im AEM-Workflow
+seo-description: Verwenden von Variablen des Typs xml,json,arraylist,document im AEM-Workflow
 feature: Workflow
 topics: development
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 9%
+source-wordcount: '126'
+ht-degree: 8%
 
 ---
 
 
-# Variablen im AEM Workflow
+# Variablen in AEM Workflow
 
-Ab AEM 6.5 können Sie jetzt Variablen im AEM Workflow erstellen und verwenden. Zuvor erstellten Workflow-Autoren Schlüssel in der Regel mithilfe der Workflow-Metadaten-Zuordnung. Dies bedeutete, dass Sie einen benutzerdefinierten Code schreiben mussten, um diese Schlüssel zu erstellen und zu füllen. Mit diesem neuen Arbeitsablauf für Funktionen können Autoren nun einfach Variablen erstellen und diese Variablen überall im Arbeitsablauf verwenden.
+Ab AEM 6.5 können Sie jetzt Variablen in AEM Workflow erstellen und verwenden. Zuvor erstellten Workflow-Autoren Schlüssel in der Regel mithilfe der Workflow-Metadatenzuordnung. Dies bedeutete das Schreiben von benutzerdefiniertem Code zum Erstellen und Ausfüllen dieser Schlüssel. Mit diesem neuen Funktionsarbeitsablauf können Autoren jetzt einfach Variablen erstellen und diese Variablen überall im Workflow verwenden.
 
-Die Variablen können die folgenden Typen sein:
+Die Variablen können die folgenden Typen aufweisen
 
 * Long
 * Doppelt
@@ -42,6 +41,6 @@ Die Variablen können die folgenden Typen sein:
 
 * [XML-Variablen](part1.md)
 * [JSON-Variablen](part2.md)
-* [Dokument-Variablen](part3.md)
+* [Dokumentvariablen](part3.md)
 * [ArrayList-Variable](part4.md)
 * [Regeleditor in AEM Workflow](part5.md)
