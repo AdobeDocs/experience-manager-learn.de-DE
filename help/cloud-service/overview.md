@@ -1,9 +1,8 @@
 ---
 title: Tutorials zu Adobe Experience Manager as Cloud Service
-description: Eine Reihe von Tutorials für Adobe Experience Manager (AEM) als Cloud Service
-sub-product: Sites, Cloud-Manager, Stiftung, Assets
+description: Eine Sammlung von Tutorials für Adobe Experience Manager (AEM) als Cloud Service
+sub-product: Sites, Cloud-Manager, Foundation, Assets
 kt: 3289
-translation-type: tm+mt
 source-git-commit: ce4a35f763862c6d6a42795fd5e79d9c59ff645a
 workflow-type: tm+mt
 source-wordcount: '275'
@@ -14,7 +13,7 @@ ht-degree: 13%
 
 # Überblick {#overview}
 
-Adobe Experience Manager (AEM) ist nun as a Cloud Service verfügbar. AEM als Cloud Service führt die nächste Generation der Produktlinie des Experience Managers ein und baut dabei auf bisherigen Investitionen und Innovationen auf, bewahrt und erweitert alle Anwendungsfälle und Funktionalitäten.
+Adobe Experience Manager (AEM) ist nun as a Cloud Service verfügbar. AEM as a Cloud Service führt die nächste Generation der Experience Manager-Produktlinie ein, aufbauend auf früheren Investitionen und Innovationen, wobei alle Anwendungsfälle und Funktionen beibehalten und erweitert werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
 
@@ -22,25 +21,25 @@ Adobe Experience Manager (AEM) ist nun as a Cloud Service verfügbar. AEM als Cl
 
 * **[Token-basierte Authentifizierung (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html)**
 
-   *Erfahren Sie, wie Sie mit Token-basierter Authentifizierung mit AEM als Cloud Service über HTTP interagieren.*
+   *Erfahren Sie, wie Sie mit Token-basierter Authentifizierung mit AEM als Cloud Service über HTTP interagieren*
 
 * **[Headless GraphQL (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html)**
 
-   *Erfahren Sie, wie Sie mit AEM GraphQL APIs Erlebnisse in einer externen Anwendung aktivieren.*
+   *Erfahren Sie, wie Sie mit AEM GraphQL-APIs Erlebnisse in einer externen Anwendung nutzen können.*
 
 * **[Massenimport (Video)](./migration/bulk-import.md)**
 
-   *Erfahren Sie, wie Sie Assets in AEM aus der Azurblase-Datenspeicherung oder Amazon S3 stapeln können*
+   *Erfahren Sie, wie Sie Assets in AEM aus Azure Blob Storage oder Amazon S3 stapelweise importieren*
 
-* **[asset compute-Metadaten-Mitarbeiter (Tutorial)](./asset-compute/advanced/metadata.md)**
+* **[asset compute Metadaten-Worker (Tutorial)](./asset-compute/advanced/metadata.md)**
 
-   *Erfahren Sie, wie Sie Asset-Metadaten von einem Asset compute-Mitarbeiter zurück in AEM schreiben können*
+   *Erfahren Sie, wie Sie Asset-Metadaten von einem Asset compute-Worker zurück in AEM schreiben*
 
-* **[asset compute microservices extensibility (Tutorial)](./asset-compute/overview.md)**
+* **[Erweiterbarkeit von asset compute-Microservices (Tutorial)](./asset-compute/overview.md)**
 
-   *Hier erfahren Sie, wie Sie Asset compute-Workers entwickeln, um benutzerdefinierte Asset-Darstellungen zu erstellen.*
+   *Erfahren Sie, wie Sie Asset compute-Sekundäre entwickeln, um benutzerdefinierte Asset-Ausgabedarstellungen zu generieren*
 
-## Personalauswahl
+## Mitarbeiterauswahl
 
 <table>
    <td>
@@ -49,7 +48,7 @@ Adobe Experience Manager (AEM) ist nun as a Cloud Service verfügbar. AEM als Cl
       </a>
       <div>
          <a href="./accessing/overview.md">
-         <strong>Konfigurieren des Zugriffs auf AEM Lernprogramm</strong>
+         <strong>Zugriff auf AEM Tutorial konfigurieren</strong>
          </a>
       </div>
       <p>
@@ -58,20 +57,20 @@ Adobe Experience Manager (AEM) ist nun as a Cloud Service verfügbar. AEM als Cl
    </td>   
    <td>
       <a href="./local-development-environment/overview.md">
-      <img alt="Umgebung zur lokalen Entwicklung - Lernprogramm" src="./assets/overview/staff-pick__local-development-environment-set-up.png"/>
+      <img alt="Tutorial zur Einrichtung einer lokalen Entwicklungsumgebung" src="./assets/overview/staff-pick__local-development-environment-set-up.png"/>
       </a>
       <div>
          <a href="./local-development-environment/overview.md">
-         <strong>Umgebung zur lokalen Entwicklung - Lernprogramm</strong>
+         <strong>Tutorial zur Einrichtung einer lokalen Entwicklungsumgebung</strong>
          </a>
       </div>
       <p>
-         <em>Bereiten Sie Ihre dev-Maschine vor Ort AEM als Cloud Service-Entwicklung!</em>
+         <em>Holen Sie sich Ihre lokale Entwicklungsmaschine für AEM als Cloud Service-Entwicklung bereit!</em>
       <p>
    </td>   
    <td>
       <a href="./debugging/aem-sdk-local-quickstart/overview.md">
-      <img alt="Lokaler Schnellstart AEM SDK debuggen" src="./assets/overview/staff-pick__debugging.png"/>
+      <img alt="Debuggen AEM lokalen Schnellstarts des SDK" src="./assets/overview/staff-pick__debugging.png"/>
       </a>
       <div>
          <a href="./debugging/aem-sdk-local-quickstart/overview.md">
@@ -79,7 +78,7 @@ Adobe Experience Manager (AEM) ist nun as a Cloud Service verfügbar. AEM als Cl
          </a>
       </div>
       <p>
-         <em>Erfahren Sie, welche Tools zum Debuggen der Anwendung auf dem AEM als lokaler Schnellstart des Cloud Service-SDK verwendet werden.</em>
+         <em>Erfahren Sie mehr über die Tools, die zum Debugging Ihrer Anwendung auf dem AEM als lokalen Schnellstart des Cloud Service SDK verwendet werden.</em>
       <p>
    </td>
 </table>
@@ -87,4 +86,4 @@ Adobe Experience Manager (AEM) ist nun as a Cloud Service verfügbar. AEM als Cl
 ## Zusätzliche Ressourcen
 
 * [Experience League - Adobe Experience Manager erkunden](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [Adobe Experience Manager als Cloud Service-Dokumentation](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-service/landing/home.translate.html)
+* [Dokumentation zu Adobe Experience Manager as a Cloud Service](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-service/landing/home.translate.html)
