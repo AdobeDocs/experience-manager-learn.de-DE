@@ -9,14 +9,13 @@ audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-feature: Forms Service
-topic: Development
+feature: Formularservice
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '393'
 ht-degree: 12%
 
 ---
@@ -24,11 +23,11 @@ ht-degree: 12%
 
 # Anwenden von Reader-Erweiterungen
 
-Mit Reader Extensions können Sie Verwendungsrechte für PDF-Dokumente bearbeiten. Nutzungsrechte gelten für Funktionen, die standardmäßig in Acrobat, nicht jedoch in Adobe Reader zur Verfügung stehen. Die von Reader Extensions gesteuerte Funktion ermöglicht das Hinzufügen von Kommentaren zu einem Dokument, das Ausfüllen von Formularen und das Speichern des Dokuments. PDF-Dokumente, für die Nutzungsrechte gelten, werden als Dokumente mit aktivierten Nutzungsrechten bezeichnet. Benutzer, die ein PDF-Dokument mit aktivierten Nutzungsrechten in Adobe Reader öffnen, können Vorgänge durchführen, die für dieses Dokument aktiviert sind.
-Um diese Funktion zu testen, können Sie diesen [Link](https://forms.enablementadobe.com/content/samples/samples.html?query=0) ausprobieren. Der Beispielname lautet &quot;Render XDP with RE&quot;.
+Mit Reader Extensions können Sie Verwendungsrechte für PDF-Dokumente bearbeiten. Nutzungsrechte gelten für Funktionen, die standardmäßig in Acrobat, nicht jedoch in Adobe Reader zur Verfügung stehen. Die von Reader Extensions gesteuerte Funktion ermöglicht das Hinzufügen von , das Ausfüllen von Formularen und das Speichern von Dokumenten. PDF-Dokumente, für die Nutzungsrechte gelten, werden als Dokumente mit aktivierten Nutzungsrechten bezeichnet. Benutzer, die ein PDF-Dokument mit aktivierten Nutzungsrechten in Adobe Reader öffnen, können Vorgänge durchführen, die für dieses Dokument aktiviert sind.
+Um diese Funktion zu testen, können Sie [link](https://forms.enablementadobe.com/content/samples/samples.html?query=0) ausprobieren. Der Beispielname lautet &quot;Render XDP with RE&quot;
 
-Um diesen Verwendungsfall zu erreichen, müssen wir die folgenden Schritte ausführen:
-* hinzufügen das Reader Extensions-Zertifikat auf &quot;fd-service&quot;-Benutzer. Die Schritte zum Hinzufügen der Berechtigung für Reader-Erweiterungen sind [hier](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html) aufgelistet
+Um dieses Anwendungsbeispiel zu erstellen, müssen wir Folgendes tun:
+* Fügen Sie dem Benutzer &quot;fd-service&quot;das Reader Extensions-Zertifikat hinzu. Die Schritte zum Hinzufügen von Reader Extensions-Anmeldedaten sind [hier](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html) aufgeführt.
 
 * Erstellen Sie einen benutzerdefinierten OSGi-Dienst, der Verwendungsrechte auf die Dokumente anwendet. Der Code, um dies zu erreichen, ist unten aufgeführt
 
@@ -72,10 +71,10 @@ public Document applyUsageRights(Document pdfDocument,UsageRights usageRights) {
 
 ## Erstellen eines Servlets zum Streamen der PDF {#create-servlet-to-stream-the-pdf}
 
-Im nächsten Schritt erstellen Sie ein Servlet mit einer POST, um dem Leser die erweiterte PDF-Datei zurückzugeben. In diesem Fall wird der Benutzer aufgefordert, die PDF-Datei in seinem Dateisystem zu speichern. Das liegt daran, dass die PDF-Datei als dynamisches PDF gerendert wird und die mit den Browsern mitgelieferten PDF-Viewer keine dynamischen PDF-Dateien verarbeiten.
+Der nächste Schritt besteht darin, ein Servlet mit einer POST-Methode zu erstellen, um die Lesererweiterte PDF-Datei an den Benutzer zurückzugeben. In diesem Fall wird der Benutzer aufgefordert, die PDF-Datei in seinem Dateisystem zu speichern. Dies liegt daran, dass die PDF-Datei als dynamisches PDF gerendert wird und die PDF-Viewer, die mit den Browsern geliefert werden, keine dynamischen PDF-Dateien verarbeiten.
 
 Im Folgenden finden Sie den Code für das Servlet. Das Servlet wird von der Aktion **customsubmit** des adaptiven Formulars aufgerufen.
-Servlet erstellt UsageRights-Objekt und legt seine Eigenschaften auf der Grundlage der vom Benutzer im adaptiven Formular eingegebenen Werte fest. Das Servlet ruft dann die **applyUsageRights**-Methode des zu diesem Zweck erstellten Dienstes auf.
+Servlet erstellt das Objekt UsageRights und legt seine Eigenschaften auf der Grundlage der vom Benutzer im adaptiven Formular eingegebenen Werte fest. Das Servlet ruft dann die Methode **applyUsageRights** des zu diesem Zweck erstellten Dienstes auf.
 
 ```java
 package com.aemforms.ares.core.servlets;
@@ -192,15 +191,15 @@ try {
 }
 ```
 
-Um dies auf Ihrem lokalen Server zu testen, führen Sie die folgenden Schritte aus:
+Führen Sie die folgenden Schritte aus, um dies auf Ihrem lokalen Server zu testen:
 1. [Herunterladen und Installieren des DevelopingWithServiceUser-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [Laden Sie das ares.ares.core-ares-Bundle herunter und installieren Sie es](assets/ares.ares.core-ares.jar). Dies umfasst den benutzerdefinierten Dienst und das Servlet, um Verwendungsrechte anzuwenden und die PDF-Datei zurückzustreamen.
-1. [Client-Bibliotheken importieren und benutzerdefiniertes Senden](assets/applyaresdemo.zip)
-1. [Adaptives Formular importieren](assets/applyaresform.zip)
-1. hinzufügen Reader Extensions-Zertifikat auf &quot;fd-service&quot;-Benutzer
-1. [Adaptives Vorschau-Formular](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
-1. Wählen Sie die entsprechenden Rechte aus und laden Sie die PDF-Datei hoch
-1. Klicken Sie auf Senden, um eine erweiterte PDF-Datei für Reader zu erhalten
+1. [Laden Sie das Paket ares.ares.core-ares herunter und installieren Sie es](assets/ares.ares.core-ares.jar). Dies umfasst den benutzerdefinierten Dienst und das Servlet, um Verwendungsrechte anzuwenden und das PDF-Dokument zurückzustreamen.
+1. [Importieren von Client-Bibliotheken und benutzerdefiniertem Senden](assets/applyaresdemo.zip)
+1. [Importieren des adaptiven Formulars](assets/applyaresform.zip)
+1. Hinzufügen des Reader Extensions-Zertifikats zum Benutzer &quot;fd-service&quot;
+1. [Vorschau des adaptiven Formulars](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
+1. Wählen Sie die entsprechenden Berechtigungen aus und laden Sie die PDF-Datei hoch.
+1. Klicken Sie auf Senden , um Reader Extended PDF zu erhalten
 
 
 
