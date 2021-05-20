@@ -1,45 +1,44 @@
 ---
-title: Hinzufügen von Elementen zur Auswahlgruppenkomponente
-seo-title: Hinzufügen von Elementen zur Auswahlgruppenkomponente
-description: Elemente dynamisch zur Auswahlgruppenkomponente Hinzufügen
-seo-description: Elemente dynamisch zur Auswahlgruppenkomponente Hinzufügen
-feature: Adaptive Forms
+title: Hinzufügen von Elementen zur Auswahlgruppen-Komponente
+seo-title: Hinzufügen von Elementen zur Auswahlgruppen-Komponente
+description: Dynamisches Hinzufügen von Elementen zur Auswahlgruppen-Komponente
+seo-description: Dynamisches Hinzufügen von Elementen zur Auswahlgruppen-Komponente
+feature: Adaptive Formulare
 topics: authoring
 audience: developer
 doc-type: tutorial
 activity: understand
 version: 6.5
-topic: Development
+topic: Entwicklung
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '530'
 ht-degree: 3%
 
 ---
 
 
 
-# Dynamisches Hinzufügen von Elementen zur Auswahlgruppenkomponente
+# Dynamisches Hinzufügen von Elementen zur Auswahlgruppen-Komponente
 
-AEM Forms 6.5 bietet die Möglichkeit, Elemente dynamisch zu einer Auswahlgruppe für adaptive Forms hinzuzufügen, z. B. Kontrollkästchen, Optionsfelder und Bild-Listen.
+AEM Forms 6.5 bietet die Möglichkeit, Elemente dynamisch zu einer Adaptive Forms-Auswahlgruppenkomponente hinzuzufügen, z. B. Kontrollkästchen, Optionsfelder und Bildliste.
 
-[Diese Funktion ist live auf dem Samples Server](https://forms.enablementadobe.com/content/samples/samples.html?query=0) verfügbar. Suchen Sie nach einer Karte mit dynamischen Kontrollkästchen und klicken Sie auf &quot;Testen&quot;.
+[Diese Funktion ist live auf dem Samples Server](https://forms.enablementadobe.com/content/samples/samples.html?query=0) verfügbar. Suchen Sie nach der Karte Dynamische Checkbox-Elemente und klicken Sie auf &quot;Testen&quot;.
 
 
-Sie können Elemente je nach Anwendungsfall im Visual Editor sowie im Code-Editor hinzufügen.
+Sie können Elemente je nach Anwendungsfall mithilfe des Visual Editor sowie des Code-Editors hinzufügen.
 
-**Verwenden des Visual Editor:** Sie können die Elemente der Auswahlgruppe aus den Ergebnissen eines Funktionsaufrufs oder Dienstaufrufs füllen. Sie können beispielsweise die Elemente der Auswahlgruppe festlegen, indem Sie die Antwort eines REST-API-Aufrufs verwenden.
+**Verwenden des Visual Editors:** Sie können die Elemente der Auswahlgruppe aus den Ergebnissen eines Funktionsaufrufs oder Dienstaufrufs ausfüllen. Sie können beispielsweise die Elemente der Auswahlgruppe festlegen, indem Sie die Antwort eines REST-API-Aufrufs nutzen.
 
 Im folgenden Screenshot stellen wir die Optionen der Kreditlaufzeit(n) auf die Ergebnisse eines Dienstaufrufs namens getLoanPeriods ein.
 
 ![Regeleditor](assets/ruleeditor.png)
 
-**Verwenden des Code-Editors**: Wenn Sie die Elemente in der Auswahlgruppe basierend auf den im Formular eingegebenen Werten dynamisch festlegen möchten. Im folgenden Codefragment werden die Elemente des Kontrollkästchens beispielsweise auf die Werte gesetzt, die in die Felder &quot;Name des Antragstellers&quot;und &quot;Ehegatte&quot;des adaptiven Formulars eingegeben wurden.
+**Verwenden des Code-Editors**: Wenn Sie die Elemente in der Auswahlgruppe dynamisch basierend auf den im Formular eingegebenen Werten festlegen möchten. Beispielsweise setzt das folgende Codefragment die Elemente des Kontrollkästchens auf die Werte, die in die Felder &quot;applicant name&quot;und &quot;spouse&quot;des adaptiven Formulars eingegeben wurden.
 
-Im Codefragment legen wir die Elemente von WorkingMembers fest, die eine Kontrollkästchenkomponente sind. Das Array für die Elemente wird dynamisch erstellt, indem die Werte der Textfelder &quot;applicatorName&quot;und &quot;Ehegatte&quot;der adaptiven Formulare abgerufen werden
+Im Codeausschnitt legen wir die Elemente von WorkingMembers fest, die eine Kontrollkästchenkomponente sind. Das Array für die Elemente wird dynamisch erstellt, indem die Werte der Textfelder &quot;applicantName&quot;und &quot;spouse&quot;der adaptiven Formulare abgerufen werden.
 
 ```javascript
  
@@ -83,29 +82,29 @@ Die übermittelten Daten lauten wie folgt:
 
 So versuchen Sie es auf Ihrem System:
 
-**Hinzufügen von Elementen mit dem Code-Editor**
+**Hinzufügen von Elementen mithilfe des Code-Editors**
 
 * [Herunterladen der Assets](assets/usingthecodeeditor.zip)
-* [Offenes Forms und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* Klicken Sie auf &quot;Erstellen | Datei-Upload&quot;und laden Sie die Datei hoch, die Sie im vorherigen Schritt heruntergeladen haben.
-* [Vorschau der Formulare](http://localhost:4502/content/dam/formsanddocuments/simpleform/jcr:content?wcmmode=disabled)
-* Geben Sie den Namen des Antragstellers ein und wählen Sie den Familienstand für die Verheiratete aus.
-* Name des Ehegatten eingeben
+* [Öffnen von Forms und Dokumenten](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Klicken Sie auf &quot;Erstellen&quot; | Datei-Upload&quot; und laden Sie die Datei hoch, die Sie im vorherigen Schritt heruntergeladen haben.
+* [Vorschau der Formulare anzeigen](http://localhost:4502/content/dam/formsanddocuments/simpleform/jcr:content?wcmmode=disabled)
+* Geben Sie den Namen des Antragstellers ein und wählen Sie den Familienstand zu Verheiratet aus.
+* Ehepartner-Namen eingeben
 * Klicken Sie auf Weiter
-* Das Kontrollkästchen mit dem Namen des Antragstellers und dem Namen des Ehegatten sollte angezeigt werden, wenn der Familistatus verheiratet ist
+* Es sollte ein Kontrollkästchen mit dem Namen des Antragstellers und dem Namen des Ehegatten angezeigt werden, wenn der Familienstand verheiratet ist.
 
-**Hinzufügen von Elementen mit dem Visual Editor**
+**Hinzufügen von Elementen mithilfe des Visual Editor**
 
 * [Herunterladen der Assets](assets/usingthevisualeditor.zip)
-* Installieren Sie Tomcat, wenn Sie es nicht bereits haben. [Anweisungen zur Installation von Tomcat finden Sie hier](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
+* Installieren Sie Tomcat, falls noch nicht geschehen. [Anweisungen zur Installation von Tomcat finden Sie hier .](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
 * [SampleRest.war-Datei in Tomcat bereitstellen](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
-* [Offenes Forms und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* Klicken Sie auf &quot;Erstellen | Datei-Upload&quot;und laden Sie die Datei hoch, die Sie im vorherigen Schritt heruntergeladen haben.
-* [Vorschau der Formulare](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)
-* Geben Sie den Kreditbetrag und die Registerkarte aus dem Feld ein. Dies Trigger die Regel, die das Feld für die Kreditlaufzeit anzeigt.
-* Wählen Sie den entsprechenden Kreditzeitraum aus (Die Elemente für den Kreditzeitraum werden aus dem Rest-Aufruf ausgefüllt)
-* Wählen Sie den Zinssatz aus und klicken Sie auf &quot;Amortisierungszeitplan abrufen&quot;
+* [Öffnen von Forms und Dokumenten](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Klicken Sie auf &quot;Erstellen&quot; | Datei-Upload&quot; und laden Sie die Datei hoch, die Sie im vorherigen Schritt heruntergeladen haben.
+* [Vorschau der Formulare anzeigen](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)
+* Geben Sie den Darlehensbetrag und den Tab aus dem Feld ein. Dadurch wird die Regel Trigger, die das Feld Kreditzeitraum anzeigt.
+* Wählen Sie den entsprechenden Kreditzeitraum aus (die Elemente für den Kreditzeitraum werden aus dem Rest-Aufruf ausgefüllt)
+* Wählen Sie den Zinssatz aus und klicken Sie auf &quot;Amortisierungszeitplan abrufen&quot;.
 * Die Abschreibungstabelle sollte ausgefüllt werden. Der Tilgungsplan wird mithilfe eines REST-Aufrufs abgerufen.
 
 >[!NOTE]
-> Es wird angenommen, dass tomcat auf Port 8080 und AEM auf Port 4502 ausgeführt wird
+> Es wird davon ausgegangen, dass Tomcat auf Port 8080 und AEM auf Port 4502 läuft
