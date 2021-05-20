@@ -2,7 +2,7 @@
 user-guide-title: Tutorials zu Adobe Experience Manager as a Cloud Service
 user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manager as a Cloud Service.
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
-sub-product: cloud-service
+sub-product: Cloud-Service
 team: TM
 source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
 workflow-type: tm+mt
@@ -16,11 +16,11 @@ ht-degree: 30%
 
 + [Überblick](./overview.md)
 + Einführung in AEM as a Cloud Service{#introduction}
-   + [Was ist AEM als Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
-   + [Evolution](./introduction/evolution.md)
+   + [Was ist AEM Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
+   + [Entwicklung](./introduction/evolution.md)
    + [Architektur](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
-+ Basistechnologie {#underlying-technology}
++ Zugrunde liegende Technologie {#underlying-technology}
    + [AEM-Architektur](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
    + [Java Content Repository](./underlying-technology/introduction-jcr.md)
@@ -30,21 +30,21 @@ ht-degree: 30%
 + Cloud Manager {#cloud-manager}
    + [Programme](./cloud-manager/programs.md)
    + [Umgebungen](./cloud-manager/environments.md)
-   + [CI/CD-Produktionsleitung](./cloud-manager/cicd-production-pipeline.md)
-   + [CI/CD-Non-Production-Pipeline](./cloud-manager/cicd-non-production-pipeline.md)
+   + [CI/CD-Produktions-Pipeline](./cloud-manager/cicd-production-pipeline.md)
+   + [CI/CD-produktionsfremde Pipeline](./cloud-manager/cicd-non-production-pipeline.md)
    + [Aktivität](./cloud-manager/activity.md)
    + Dev Ops{#devops}
       + [Bereitstellen von Code](./cloud-manager/devops/deploy-code.md)
-      + [Projekte zusammenführen](./cloud-manager/devops/merge-projects.md)
+      + [Zusammenführen von Projekten](./cloud-manager/devops/merge-projects.md)
       + [Pipelines konfigurieren](./cloud-manager/devops/configure-pipelines.md)
       + [Kontinuierliche Integration](./cloud-manager/devops/continuous-integration.md)
-      + [Testergebnisse analysieren](./cloud-manager/devops/analyze-test-results.md)
+      + [Analysieren von Testergebnissen](./cloud-manager/devops/analyze-test-results.md)
       + [Dispatcher-Konfigurationen](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager-APIs](./cloud-manager/devops/cloud-manager-apis.md)
-+ Umgebung für lokale Entwicklung {#local-development-environment-set-up}
++ Einrichtung der lokalen Entwicklungsumgebung {#local-development-environment-set-up}
    + [Überblick](./local-development-environment/overview.md)
    + [Entwicklungstools](./local-development-environment/development-tools.md)
-   + [Lokale AEM Laufzeit](./local-development-environment/aem-runtime.md)
+   + [Lokale AEM Runtime](./local-development-environment/aem-runtime.md)
    + [Lokale Dispatcher-Tools](./local-development-environment/dispatcher-tools.md)
 + Entwickeln{#developing}
    + Entwicklungsgrundlagen{#basics}
@@ -52,21 +52,21 @@ ht-degree: 30%
       + [Lokale Entwicklungsumgebung](./developing/basics/local-development-environment.md)
       + [AEM-Projektarchetyp](./developing/basics/aem-project-archetype.md)
       + [Struktur von AEM-Projekten](./developing/basics/project-structure.md)
-      + [Mutable und nicht veränderliche Inhalte](./developing/basics/mutable-immutable.md)
+      + [Veränderlicher und unveränderlicher Inhalt](./developing/basics/mutable-immutable.md)
       + [Repository-Strukturpaket](./developing/basics/repository-structure-package.md)
-      + [Veröffentlichung von Inhalten](./developing/basics/content-publishing.md)
+      + [Inhaltsveröffentlichung](./developing/basics/content-publishing.md)
       + [OSGi-Konfigurationen](./developing/basics/osgi-configurations.md)
-      + [Migration der Dispatcher-Konfiguration](./developing/basics/dispatcher-configuration.md)
-   + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
+      + [Dispatcher-Konfigurationsmigration](./developing/basics/dispatcher-configuration.md)
+   + [AEM SDK-API-JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + Debugging AEM{#debugging}
-   + Debuggen des AEM SDK{#debugging-aem-sdk}
+   + Debugging des AEM SDK{#debugging-aem-sdk}
       + [Überblick](./debugging/aem-sdk-local-quickstart/overview.md)
       + [Protokolle](./debugging/aem-sdk-local-quickstart/logs.md)
       + [Remote-Debugging](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
-      + [OSGi-Webkonsole](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
+      + [OSGi-Web-Konsole](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher Tools](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
-      + [Andere Werkzeuge](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + Debuggen von AEM als Cloud Service{#debugging-aem-as-a-cloud-service}
+      + [Andere Tools](./debugging/aem-sdk-local-quickstart/other-tools.md)
+   + Debugging von AEM als Cloud Service{#debugging-aem-as-a-cloud-service}
       + [Überblick](./debugging/cloud-service/overview.md)
       + [Protokolle](./debugging/cloud-service/logs.md)
       + [Erstellen und Bereitstellen](./debugging/cloud-service/build-and-deployment.md)
@@ -76,9 +76,9 @@ ht-degree: 30%
    + [Überblick](./accessing/overview.md)
    + [Adobe IMS-Benutzer](./accessing/adobe-ims-users.md)
    + [Adobe IMS-Benutzergruppen](./accessing/adobe-ims-user-groups.md)
-   + [Adobe IMS-Profil](./accessing/adobe-ims-product-profiles.md)
-   + [AEM, Gruppen und Berechtigungen](./accessing/aem-users-groups-and-permissions.md)
-   + [Konfigurieren des Zugriffs auf AEM](./accessing/walk-through.md)
+   + [Adobe IMS-Produktprofile](./accessing/adobe-ims-product-profiles.md)
+   + [AEM von Benutzern, Gruppen und Berechtigungen](./accessing/aem-users-groups-and-permissions.md)
+   + [Zugriff auf AEM konfigurieren](./accessing/walk-through.md)
 + Migration {#migration}
    + [Content Transfer Tool](./migration/content-transfer-tool.md)
    + [Massenimport von Assets](./migration/bulk-import.md)
@@ -89,30 +89,30 @@ ht-degree: 30%
       + [Vorlage erstellen](./forms/create-first-af/create-template.md)
       + [Fragment erstellen](./forms/create-first-af/create-fragments.md)
       + [Formular erstellen](./forms/create-first-af/create-af.md)
-      + [Stammbereich konfigurieren](./forms/create-first-af/configure-root-panel.md)
-      + [Personenbedienfeld konfigurieren](./forms/create-first-af/configure-people-panel.md)
-      + [Einkommensbedienfeld konfigurieren](./forms/create-first-af/configure-income-panel.md)
-      + [Bedienfeld für Assets konfigurieren](./forms/create-first-af/configure-assets-panel.md)
-      + [Beginn konfigurieren](./forms/create-first-af/configure-start-panel.md)
-      + [Symbolleiste Hinzufügen und konfigurieren](./forms/create-first-af/add-configure-toolbar.md)
+      + [Konfigurieren des Stammbereichs](./forms/create-first-af/configure-root-panel.md)
+      + [Personen-Bedienfeld konfigurieren](./forms/create-first-af/configure-people-panel.md)
+      + [Einkommensbereich konfigurieren](./forms/create-first-af/configure-income-panel.md)
+      + [Asset-Bedienfeld konfigurieren](./forms/create-first-af/configure-assets-panel.md)
+      + [Konfigurieren des Startbereichs](./forms/create-first-af/configure-start-panel.md)
+      + [Symbolleiste hinzufügen und konfigurieren](./forms/create-first-af/add-configure-toolbar.md)
    + Document Cloud-API und AEM Forms CS{#doc-cloud-sdk}
       + [Einführung](./forms/doc-cloud-sdk/introduction.md)
-      + [Adobe-IO-Projekt erstellen](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
-      + [OSGI-Konfiguration erstellen](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
+      + [Adobe IO-Projekt erstellen](./forms/doc-cloud-sdk/create-document-cloud-credentials.md)
+      + [OSGi-Konfiguration erstellen](./forms/doc-cloud-sdk/create-doc-cloud-configuration.md)
       + [Schnittstelle definieren](./forms/doc-cloud-sdk/create-interface.md)
-      + [Oberfläche implementieren](./forms/doc-cloud-sdk/implement-interface.md)
+      + [Implementieren der Oberfläche](./forms/doc-cloud-sdk/implement-interface.md)
       + [JSON-Teil erstellen](./forms/doc-cloud-sdk/get-content-analyzer.md)
       + [Benutzerdefinierter Prozessschritt](./forms/doc-cloud-sdk/custom-process-step.md)
-   + Review-Workflow{#create-aem-workflow} erstellen
+   + Erstellen eines Überprüfungs-Workflows{#create-aem-workflow}
       + [Workflow-Modell erstellen](./forms/create-aem-workflow/create-workflow.md)
-      + [Arbeitsablauf für Trigger](./forms/create-aem-workflow/configure-af.md)
+      + [Trigger-Workflow](./forms/create-aem-workflow/configure-af.md)
    + Adobe Sign mit AEM Forms{#forms-and-sign}
       + [Einführung](./forms/forms-and-sign/introduction.md)
       + [Adobe Sign API-Anwendung](./forms/forms-and-sign/create-sign-api-application.md)
       + [Cloud-Konfiguration für Adobe Sign](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
       + [Adaptives Formular erstellen](./forms/forms-and-sign/create-adaptive-form.md)
       + [Konfigurieren für Ausfüllen und Signieren](./forms/forms-and-sign/configure-form-fill-and-sign.md)
-   + Integration mit Salesforce{#integrate-with-salesforce}
+   + Integrieren mit Salesforce{#integrate-with-salesforce}
       + [Einführung](./forms/integrate-with-salesforce/introduction.md)
       + [Erstellen einer verbundenen App](./forms/integrate-with-salesforce/create-connected-app.md)
       + [Swagger-Datei erstellen](./forms/integrate-with-salesforce/describe-rest-api.md)
@@ -120,24 +120,24 @@ ht-degree: 30%
       + [Formulardatenmodell erstellen](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [Testformularübermittlung](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [Test-Klick-Ereignis](./forms/integrate-with-salesforce/create-lead-click-event.md)
-+ asset compute-Erweiterbarkeit{#asset-compute}
++ asset compute Extensibility{#asset-compute}
    + [Überblick](./asset-compute/overview.md)
    + Setup{#set-up}
       + [Konto- und Dienstbereitstellung](./asset-compute/set-up/accounts-and-services.md)
-      + [Umgebung der lokalen Entwicklung](./asset-compute/set-up/development-environment.md)
-      + [Projekt Adobe](./asset-compute/set-up/firefly.md)
-   + Entwicklung{#develop}
+      + [Lokale Entwicklungsumgebung](./asset-compute/set-up/development-environment.md)
+      + [Adobe Project Firefly](./asset-compute/set-up/firefly.md)
+   + Entwickeln{#develop}
       + [Erstellen eines Asset compute-Projekts](./asset-compute/develop/project.md)
       + [Umgebungsvariablen konfigurieren](./asset-compute/develop/environment-variables.md)
-      + [manifest.yml konfigurieren](./asset-compute/develop/manifest.md)
-      + [Entwickeln eines Arbeitnehmers](./asset-compute/develop/worker.md)
+      + [Konfigurieren von manifest.yml](./asset-compute/develop/manifest.md)
+      + [Entwickeln eines Sekundärs](./asset-compute/develop/worker.md)
       + [Verwenden des Entwicklungstools](./asset-compute/develop/development-tool.md)
-   + Test and Debug{#test-debug}
-      + [Arbeiter testen](./asset-compute/test-debug/test.md)
-      + [Debuggen eines Arbeitnehmers](./asset-compute/test-debug/debug.md)
+   + Testen und Debuggen{#test-debug}
+      + [Worker testen](./asset-compute/test-debug/test.md)
+      + [Debuggen eines Sekundärs](./asset-compute/test-debug/debug.md)
    + Bereitstellen{#deploy}
-      + [Auf Adobe I/O Runtime bereitstellen](./asset-compute/deploy/runtime.md)
-      + [In AEM integrieren](./asset-compute/deploy/processing-profiles.md)
+      + [Bereitstellen in Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
+      + [Integrieren mit AEM](./asset-compute/deploy/processing-profiles.md)
    + Erweitert{#advanced}
       + [Metadatenarbeiter](./asset-compute/advanced/metadata.md)
    + [Fehlerbehebung](./asset-compute/troubleshooting.md)
