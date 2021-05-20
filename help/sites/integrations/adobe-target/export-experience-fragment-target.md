@@ -1,6 +1,6 @@
 ---
 title: Exportieren von Experience Fragments nach Adobe Target
-description: Erfahren Sie, wie Sie AEM Erlebnisfragment als Adobe Target-Angebot veröffentlichen und exportieren.
+description: Erfahren Sie, wie Sie AEM Experience Fragment als Adobe Target-Angebote veröffentlichen und exportieren.
 feature: Experience Fragments
 topics: integrations, authoring
 audience: all
@@ -9,50 +9,49 @@ activity: use
 version: cloud-service
 kt: 6350
 thumbnail: 41245.jpg
-topic: Integrations
+topic: Integrationen
 role: Business Practitioner
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '198'
+source-wordcount: '195'
 ht-degree: 8%
 
 ---
 
 
-# Erlebnisfragment nach Adobe Target exportieren {#experience-fragment-target}
+# Experience Fragment nach Adobe Target exportieren {#experience-fragment-target}
 
-Erfahren Sie, wie Sie AEM Erlebnisfragment als Adobe Target-Angebot exportieren.
+Erfahren Sie, wie Sie AEM Experience Fragment als Adobe Target-Angebote exportieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/41245?quality=12&learn=on)
 
 ## Nächste Schritte
 
-+ [Erstellen einer Zielgruppe-Aktivität mit Experience Fragment-Angeboten](./create-target-activity.md)
++ [Erstellen einer Target-Aktivität mit Experience Fragment-Angeboten](./create-target-activity.md)
 
 ## Fehlerbehebung
 
-### Exportieren von Erlebnisfragmenten in die Zielgruppe schlägt fehl
+### Exportieren von Experience Fragments in Target schlägt fehl
 
 #### Fehler
 
-Beim Exportieren von Erlebnisfragment nach Adobe Target ohne die richtigen Berechtigungen in Adobe Admin Console wird der folgende Fehler beim AEM Author-Dienst angezeigt:
+Der Export von Experience Fragment in Adobe Target ohne die richtigen Berechtigungen in Adobe Admin Console führt zum folgenden Fehler beim AEM-Autorendienst:
 
-    ![UI-Fehler der Zielgruppe-API](assets/error-target-offer.png)
+    ![Target API UI Error](assets/error-target-offer.png)
 
-... und die folgenden Protokollmeldungen im `aemerror`-Protokoll:
+... und die folgenden Protokollmeldungen im Protokoll `aemerror`:
 
-    ![Zielgruppe API Console Error](assets/target-console-error.png)
+    ![Target API Console Error](assets/target-console-error.png)
 
 #### Auflösung
 
-1. Melden Sie sich bei [Admin Console](https://adminconsole.adobe.com/) mit Administratorrechten für das verwendete Adobe Target Product Profil an, aber die AEM Integration
-2. Wählen Sie __Produkte > Adobe Target > Produkt-Profil__
-3. Wählen Sie auf der Registerkarte __Integrationen__ die Integration für Ihren AEM als Cloud Service-Umgebung (gleicher Name wie das Adobe I/O-Projekt) aus.
-4. Rolle __Editor__ oder __Genehmigende Person__ zuweisen
+1. Melden Sie sich bei [Admin Console](https://adminconsole.adobe.com/) mit Administratorrechten für das verwendete Adobe Target-Produktprofil an, aber die AEM.
+2. Wählen Sie __Produkte > Adobe Target > Produktprofil__
+3. Wählen Sie auf der Registerkarte __Integrationen__ die Integration für Ihre AEM als Cloud Service-Umgebung aus (gleicher Name wie das Adobe I/O-Projekt).
+4. Zuweisen der Rolle __Bearbeiter__ oder __Genehmiger__
 
-   ![Zielgruppen-API-Fehler](assets/target-permissions.png)
+   ![Target-API-Fehler](assets/target-permissions.png)
 
 Durch Hinzufügen der richtigen Berechtigung zur Adobe Target-Integration sollte dieser Fehler behoben werden.
 
