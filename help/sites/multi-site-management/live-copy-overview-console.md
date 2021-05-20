@@ -1,7 +1,7 @@
 ---
 title: Live Copy-Konsole
-description: Im folgenden Video wird erläutert, wie die Vererbung auf einer Site Ansicht oder verwaltet oder Rollout-Vorgänge mithilfe der Live Copy-Übersichtskonsole durchgeführt werden.
-feature: Language Copy, Multi Site Manager
+description: Im folgenden Video erfahren Sie, wie Sie die Vererbung auf einer Site anzeigen oder verwalten oder Rollout-Vorgänge mithilfe der Konsole "Live Copy-Übersicht"durchführen.
+feature: Sprachkopie, Multi-Site-Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -9,13 +9,12 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 5373
 thumbnail: 36680.jpg
-topic: Localization
+topic: Lokalisierung
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '58'
+source-wordcount: '55'
 ht-degree: 1%
 
 ---
@@ -23,6 +22,6 @@ ht-degree: 1%
 
 # Live Copy-Konsole {#live-copy-console}
 
-Erfahren Sie, wie die Vererbung auf einer Site Ansicht oder verwaltet wird oder wie Rollout-Vorgänge mithilfe der Live Copy-Übersichtskonsole durchgeführt werden.
+Erfahren Sie, wie Sie die Vererbung auf einer Site anzeigen oder verwalten oder Rollout-Vorgänge mithilfe der Konsole &quot;Live Copy-Übersicht&quot;durchführen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/36680?quality=12&learn=on)
