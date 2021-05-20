@@ -1,9 +1,9 @@
 ---
-title: Grundlegender Umgang mit AEM Sites
+title: Grundlegende Handhabung in AEM Sites
 seo-title: Neue Seite in Adobe Experience Manager Sites erstellen
-description: Das folgende Video bietet einen Überblick über die grundlegende Handhabung bei der Verwendung der AEM Authoring-Umgebung. Als Grundlage wird die Sites-Konsole verwendet.
-seo-description: Das folgende Video bietet einen Überblick über die grundlegende Handhabung bei der Verwendung der AEM Authoring-Umgebung. Als Grundlage wird die Sites-Konsole verwendet.
-feature: Page Editor, Editable Templates
+description: Das folgende Video bietet einen Überblick über die grundlegende Handhabung der AEM Autorenumgebung. Als Grundlage wird die Sites-Konsole verwendet.
+seo-description: Das folgende Video bietet einen Überblick über die grundlegende Handhabung der AEM Autorenumgebung. Als Grundlage wird die Sites-Konsole verwendet.
+feature: Seiten-Editor, bearbeitbare Vorlagen
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
@@ -11,13 +11,12 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4495
 thumbnail: 31784.jpg
-topic: Content Management
+topic: Content Management
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '376'
 ht-degree: 70%
 
 ---
@@ -25,14 +24,14 @@ ht-degree: 70%
 
 # AEM Sites-Benutzeroberfläche und -Navigation {#basic-handling-aem-sites}
 
-Das folgende Video bietet einen Überblick über die grundlegende Handhabung bei der Verwendung der AEM Authoring-Umgebung. Als Grundlage wird die Sites-Konsole verwendet.
+Das folgende Video bietet einen Überblick über die grundlegende Handhabung der AEM Autorenumgebung. Als Grundlage wird die Sites-Konsole verwendet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/31784?quality=12&learn=on)
 
-In diesem Video werden die folgenden Funktionen und Funktionen behandelt:
+In diesem Video werden die folgenden Funktionen behandelt:
 
-* Touch-aktivierte Benutzeroberfläche
-* Globale Navigation besteht aus:
+* Touch-optimierte Benutzeroberfläche
+* Das globale Navigationsfenster besteht aus:
    * Navigation – dargestellt durch einen Kompass 
 
       | Konsole | Zweck |
@@ -45,13 +44,13 @@ In diesem Video werden die folgenden Funktionen und Funktionen behandelt:
       | Sites | Mit der Konsole „Sites“ können Sie Websites erstellen, anzeigen und verwalten, die auf Ihrer AEM-Instanz ausgeführt werden. Mithilfe dieser Konsolen können Sie Seiten auf der Website erstellen, bearbeiten, kopieren, verschieben, löschen und veröffentlichen |
 
    * Tools – dargestellt durch einen Hammer
-* Omni-Suche
+* Omni Search
 * Lösungsschalter
 * Hilfe
 * Benachrichtigungen
 * Benutzereigenschaften
 * Leistenauswahl
-* AEM Site-Konsolen-Ansichten
+* AEM Site-Konsolenansichten
    * Listenansicht
    * Spaltenansicht
    * Kartenansicht
