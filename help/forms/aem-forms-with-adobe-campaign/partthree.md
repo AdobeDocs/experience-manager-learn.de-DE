@@ -1,50 +1,49 @@
 ---
 title: Vorausfüllen des adaptiven Formulars mit dem ACS-Profil
 seo-title: Vorausfüllen des adaptiven Formulars mit dem ACS-Profil
-description: Vorausfüllen des adaptiven Forms mit dem ACS-Profil
-seo-description: Vorausfüllen des adaptiven Forms mit dem ACS-Profil
+description: Vorausfüllen des adaptiven Forms mithilfe des ACS-Profils
+seo-description: Vorausfüllen des adaptiven Forms mithilfe des ACS-Profils
 uuid: 9bff6f61-96e9-40d4-a977-a80008cfbeee
-feature: Adaptive Forms, Form Data Model
+feature: Adaptives Forms, Formulardatenmodell
 topics: integrations
 audience: developer
 doc-type: tutorial
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: a2ffcb84-4dd8-45e5-8e2c-0da74202851b
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '353'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
 
 # Vorausfüllen des adaptiven Formulars mit dem ACS-Profil {#prefilling-adaptive-form-using-acs-profile}
 
-In diesem Teil füllen wir das adaptive Formular mit Informationen zum Profil aus, die aus dem ACS abgerufen werden. AEM Forms verfügt über diese leistungsstarke Funktion zum Vorausfüllen adaptiver Formulare.
+In diesem Teil füllen wir das adaptive Formular mit Profilinformationen aus ACS vorab aus. AEM Forms verfügt über diese leistungsstarke Funktion zum Vorausfüllen adaptiver Formulare.
 
-Weitere Informationen zum Vorausfüllen von adaptiven Formularen finden Sie in diesem [Tutorial](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html).
+Weitere Informationen zum Vorausfüllen adaptiver Formulare finden Sie in diesem [Tutorial](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html).
 
-Um adaptives Formular durch Abrufen von Daten aus ACS vorab auszufüllen, gehen wir davon aus, dass es in ACS Profil gibt, das dieselbe E-Mail wie der angemeldete AEM hat. Wenn beispielsweise die E-Mail-ID des angemeldeten AEM csimms@adobe.com lautet, wird erwartet, dass in ACS ein Profil mit der E-Mail-Adresse csimms@adobe.com gefunden wird.
+Um das adaptive Formular durch Abrufen von Daten aus ACS im Voraus auszufüllen, gehen wir davon aus, dass es in ACS ein Profil gibt, das dieselbe E-Mail wie der angemeldete AEM hat. Wenn beispielsweise die E-Mail-ID der AEM angemeldeten Person csimms@adobe.com lautet, erwarten wir, ein Profil in ACS zu finden, dessen E-Mail-Adresse csimms@adobe.com lautet.
 
-Die folgenden Schritte sind erforderlich, um Profil-Informationen aus ACS mithilfe der REST-API abzurufen
+Die folgenden Schritte sind erforderlich, um Profilinformationen mithilfe der REST-API aus ACS abzurufen
 
 * JWT generieren
-* Exchange JWT für Zugriffstoken
-* Nehmen Sie einen REST-Aufruf an ACS vor und rufen Sie Profil per E-Mail ab
-* XML-Dokument mit den Profil-Informationen erstellen
-* Return InputStream des XML-Dokuments, das von AEM Forms genutzt wird
+* JWT für Zugriffstoken austauschen
+* Führen Sie einen REST-Aufruf an ACS durch und rufen Sie das Profil per E-Mail ab
+* XML-Dokument mit Profilinformationen erstellen
+* Return InputStream des XML-Dokuments, das von AEM Forms verwendet wird
 
-![prefillservice](assets/prefillserviceaf.gif)
+![prefillService](assets/prefillserviceaf.gif)
 
-Verknüpfen des Vorfülldienstes mit dem adaptiven Formular
+Verknüpfen des Vorbefüllungs-Dienstes mit einem adaptiven Formular
 
-Im Folgenden finden Sie den Code zum Abrufen und Zurückgeben von Profil-Informationen aus ACS.
+Im Folgenden finden Sie den Code zum Abrufen und Zurückgeben von Profilinformationen aus ACS.
 
-In Zeile 68 rufen wir die E-Mail-ID des AEM ab. Die Details zum Profil werden durch einen REST-Aufruf an Adobe Campaign Standard abgerufen. Aus den abgerufenen Profil-Details wird XML-Dokument so konstruiert, dass AEM Forms es versteht. Der Eingangsstrom dieses Dokuments wird von AEM Forms zum Verbrauch zurückgegeben.
+In Zeile 68 rufen wir die E-Mail-ID des AEM-Benutzers ab. Die Profildetails werden durch einen REST-Aufruf an Adobe Campaign Standard abgerufen. Aus den abgerufenen Profildetails wird das XML-Dokument so erstellt, dass es von AEM Forms verstanden wird. Der Eingabestream dieses Dokuments wird zur Verwendung durch AEM Forms zurückgegeben.
 
 ```java
 package aemforms.campaign.core;
@@ -236,10 +235,10 @@ return "Pre Fill Forms Using Campaign Profile";
 }
 ```
 
-Gehen Sie wie folgt vor, um das Programm auf Ihrem System zu installieren:
+Gehen Sie wie folgt vor, um die Arbeit an Ihrem System zu ermöglichen:
 
 * [Vergewissern Sie sich, dass Sie die hier beschriebenen Schritte ausgeführt haben](aem-forms-with-campaign-standard-getting-started-tutorial.md)
-* [Adaptives Beispielformular mit dem Package Manager in AEM importieren](assets/pre-fill-af-from-campaign.zip)
-* Melden Sie sich bei einem AEM an, dessen E-Mail-ID von einem Profil in Adobe Campaign freigegeben wurde. Wenn die E-Mail-ID des AEM beispielsweise &quot;johndoe@adobe.com&quot;lautet, müssen Sie über ein Profil in ACS verfügen, dessen E-Mail-Adresse &quot;johndoe@adobe.com&quot;lautet.
-* [Vorschau des Formulars](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled).
+* [Importieren des adaptiven Beispielformulars in AEM mithilfe des Paketmanagers](assets/pre-fill-af-from-campaign.zip)
+* Melden Sie sich bei AEM mit einem Benutzer an, dessen E-Mail-Adresse von einem Profil in Adobe Campaign freigegeben wurde. Wenn die E-Mail-ID des AEM-Benutzers beispielsweise johndoe@adobe.com lautet, müssen Sie über ein Profil in ACS verfügen, dessen E-Mail-Adresse johndoe@adobe.com lautet.
+* [Vorschau des Formulars](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled) anzeigen.
 
