@@ -1,7 +1,7 @@
 ---
 title: Erstellen des Hauptarbeitsablaufs zum Trigger des Signaturprozesses
-description: Workflow zum Speichern der Formulare zur Signatur in der Datenbank erstellen
-feature: Adaptive Forms
+description: Erstellen eines Workflows zum Speichern der Formulare zur Signatur in der Datenbank
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,29 +9,28 @@ activity: implement
 version: 6.4,6.5
 thumbnail: 6887.jpg
 kt: 6887
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '165'
 ht-degree: 2%
 
 ---
 
 
-# Hauptarbeitsablauf erstellen
+# Haupt-Workflow erstellen
 
-Der Hauptarbeitsablauf wird ausgelöst, wenn der Benutzer das ursprüngliche Formular (**RefinanceForm**) sendet. Im Folgenden wird der Workflow beschrieben
+Der Haupt-Workflow wird ausgelöst, wenn der Benutzer das erste Formular sendet (**RefinanceForm**). Im Folgenden wird der Workflow beschrieben.
 
 ![main-workflow](assets/main-workflow.PNG)
 
-**Forms zum** Signieren speichern ist ein benutzerdefinierter Prozessschritt.
+**Forms zu** Signis speichern - ein benutzerdefinierter Prozessschritt.
 
 Die Motivation für die Implementierung eines benutzerdefinierten Prozessschritts besteht darin, einen AEM Workflow zu erweitern. Der folgende Code implementiert einen benutzerdefinierten Prozessschritt. Der Code extrahiert die Namen der zu signierenden Formulare und übergibt die gesendeten Formulardaten an die `insertData`-Methode im SignMultipleForms-Dienst. Die `insertData`-Methode fügt dann die Zeilen in die Datenbank ein, die von der Datenquelle **aemformstutorial** identifiziert werden.
 
-Code in diesem benutzerdefinierten Prozessschritt verweist auf den `SignMultipleForms`-Dienst.
+Code in diesem benutzerdefinierten Prozessschritt verweist auf den Dienst `SignMultipleForms` .
 
 
 
@@ -122,7 +121,7 @@ public class StoreFormsToSignWorkflowStep implements WorkflowProcess {
 
 ## Assets
 
-Der in diesem Artikel verwendete Arbeitsablauf &quot;Mehrere Forms signieren&quot;kann [von hier heruntergeladen werden.](assets/sign-multiple-forms-workflows.zip)
+Der in diesem Artikel verwendete Workflow Sign Multiple Forms kann [von hier heruntergeladen werden](assets/sign-multiple-forms-workflows.zip)
 
 >[!NOTE]
-> Bitte stellen Sie sicher, dass Sie den Day CQ Mail Service konfigurieren, um E-Mail-Benachrichtigungen zu senden. Die E-Mail-Vorlage wird auch im oben stehenden Paket bereitgestellt.
+> Stellen Sie sicher, dass Sie den Day CQ Mail Service konfigurieren, um E-Mail-Benachrichtigungen zu versenden. Die E-Mail-Vorlage wird auch im obigen Paket bereitgestellt.
