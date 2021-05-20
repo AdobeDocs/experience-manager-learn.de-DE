@@ -1,7 +1,7 @@
 ---
-title: Erstellen einer Seite "Sprachkopie"
+title: Erstellen einer Sprachkopie-Seite
 description: Erfahren Sie, wie Sie eine Seite in einer vorhandenen Sprachkopie erstellen und den Inhalt dann in eine andere Sprachkopie übersetzen.
-feature: Language Copy, Multi Site Manager
+feature: Sprachkopie, Multi-Site-Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
@@ -9,19 +9,18 @@ activity: use
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 5848
 thumbnail: 36682.jpg
-topic: Localization
+topic: Lokalisierung
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '59'
+source-wordcount: '56'
 ht-degree: 1%
 
 ---
 
 
-# Eine Sprachkopieseite {#create-language-copy-page} erstellen
+# Erstellen einer Sprachkopie-Seite {#create-language-copy-page}
 
 Erfahren Sie, wie Sie eine Seite in einer vorhandenen Sprachkopie erstellen und den Inhalt dann in eine andere Sprachkopie übersetzen.
 
