@@ -1,53 +1,52 @@
 ---
 title: Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank
-description: Lernprogramm mit mehreren Teilen, um Sie durch die Schritte zum Speichern und Abrufen von Formulardaten zu führen
-feature: Adaptive Forms
+description: Mehrteiliges Tutorial, das Sie durch die Schritte führt, die zum Speichern und Abrufen von Formulardaten erforderlich sind
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '283'
+source-wordcount: '281'
 ht-degree: 12%
 
 ---
 
 
-# Bereitstellen auf dem Server
+# Bereitstellen auf Ihrem Server
 
 >[!NOTE]
 >
->Die folgenden Schritte sind erforderlich, um diese Funktion auf Ihrem System ausführen zu können
+>Folgendes ist erforderlich, damit dies auf Ihrem System ausgeführt werden kann
 >
->* AEM Forms(Version 6.3 oder höher)
->* MySql-Datenbank
+>* AEM Forms (Version 6.3 oder höher)
+>* MySql Database
 
 
-Gehen Sie wie folgt vor, um diese Funktion auf Ihrer AEM Forms-Instanz zu testen
+Um diese Funktion auf Ihrer AEM Forms-Instanz zu testen, führen Sie die folgenden Schritte aus
 
-* Laden Sie die JAR-Dateien für den [MySQL-Treiber unter ](assets/mysqldriver.jar) mit der [felix-Webkonsole](http://localhost:4502/system/console/bundles) herunter und stellen Sie sie bereit
-* Laden Sie das [OSGi-Bundle](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar) mit der [felix-Webkonsole](http://localhost:4502/system/console/bundles) herunter und stellen Sie es bereit
-* Laden Sie das [Paket mit Client-lib, Vorlage für adaptive Formulare und die benutzerdefinierte Seitenkomponente](assets/store-and-fetch-af-with-data.zip) mit dem [Paketmanager](http://localhost:4502/crx/packmgr/index.jsp) herunter und installieren Sie es und installieren Sie es mithilfe des Paketmanagers
-* Importieren Sie das adaptive Beispielformular [mithilfe der [FormsAndDocuments-Schnittstelle](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)](assets/sample-adaptive-form.zip)
+* Laden Sie die [MySql Driver Jar](assets/mysqldriver.jar)-Dateien mit der [felix-Web-Konsole](http://localhost:4502/system/console/bundles) herunter und stellen Sie sie bereit.
+* Laden Sie das [OSGi-Bundle](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar) herunter und stellen Sie es mithilfe der [felix-Webkonsole](http://localhost:4502/system/console/bundles) bereit.
+* Laden Sie das [Paket mit Client-Bibliothek, adaptiver Formularvorlage und der benutzerdefinierten Seitenkomponente](assets/store-and-fetch-af-with-data.zip) mit dem [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) herunter und installieren Sie es.
+* Importieren Sie das [Beispiel-Adaptive Formular](assets/sample-adaptive-form.zip) mithilfe der [FormsAndDocuments-Schnittstelle](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-* Importieren Sie [form-data-db.sql](assets/form-data-db.sql) mit MySql Workbench. Dadurch werden die erforderlichen Schemas und Tabellen in Ihrer Datenbank erstellt, damit dieses Lernprogramm funktioniert.
-* Melden Sie sich bei [configMgr an.](http://localhost:4502/system/console/configMgr) Suchen Sie nach &quot;Apache Sling Connection Pooled DataSource. Erstellen Sie einen neuen Apache Sling Connection Pooled DataSource-Eintrag namens **SaveAndContinue** mit den folgenden Eigenschaften:
+* Importieren Sie [form-data-db.sql](assets/form-data-db.sql) mithilfe von MySql Workbench. Dadurch werden das erforderliche Schema und die Tabellen in Ihrer Datenbank erstellt, damit dieses Tutorial funktioniert.
+* Melden Sie sich bei [configMgr an.](http://localhost:4502/system/console/configMgr) Suchen Sie nach &quot;Apache Sling Connection Pooled DataSource. Erstellen Sie mit den folgenden Eigenschaften einen neuen Eintrag für die Datenquelle der Apache Sling Connection Pooled mit dem Namen **SaveAndContinue**:
 
 | Eigenschaftsname | Wert |
 ------------------------|---------------------------------------
 | Datasource Name | SaveAndContinue |
 | JDBC-Treiberklasse | com.mysql.cj.jdbc.Driver |
-| JDBC-Verbindungsuri | jdbc:mysql://localhost:3306/aemformstutorial |
+| JDBC-Verbindungs-URI | jdbc:mysql://localhost:3306/aemformstutorial |
 
 
-* Öffnen Sie das [Adaptive Formular](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled)
-* Füllen Sie einige Details aus und klicken Sie auf die Schaltfläche &quot;Später speichern und weiter&quot;.
+* Öffnen Sie das [Adaptive Formular](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled).
+* Füllen Sie einige Details aus und klicken Sie auf die Schaltfläche &quot;Speichern und weiter später&quot;.
 * Sie sollten eine URL mit einer GUID zurückerhalten.
-* Kopieren Sie die URL und fügen Sie sie in eine neue Registerkarte des Browsers ein. **Stellen Sie sicher, dass am Ende der URL kein Leerzeichen steht.**
-* Adaptives Formular sollte mit den Daten aus dem vorherigen Schritt gefüllt werden.
+* Kopieren Sie die URL und fügen Sie sie in eine neue Registerkarte des Browsers ein. **Stellen Sie sicher, dass am Ende der URL kein leerer Leerraum vorhanden ist.**
+* Das adaptive Formular sollte mit den Daten aus dem vorherigen Schritt gefüllt werden.
