@@ -1,9 +1,9 @@
 ---
-title: HTML5-Forms mithilfe des Datenattributs vorauffüllen.
-seo-title: HTML5-Forms mithilfe des Datenattributs vorauffüllen.
+title: HTML5-Forms mit Datenattribut vorbefüllen.
+seo-title: HTML5-Forms mit Datenattribut vorbefüllen.
 description: Füllen Sie HTML5-Formulare, indem Sie Daten aus der Backend-Quelle abrufen.
 seo-description: Füllen Sie HTML5-Formulare, indem Sie Daten aus der Backend-Quelle abrufen.
-feature: Adaptive Forms
+feature: Adaptive Formulare
 topics: mobile-forms
 audience: developer
 doc-type: article
@@ -11,56 +11,55 @@ activity: implement
 version: 6.3,6.4,6.5.
 uuid: 889d2cd5-fcf2-4854-928b-0c2c0db9dbc2
 discoiquuid: 3aa645c9-941e-4b27-a538-cca13574b21c
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '513'
 ht-degree: 2%
 
 ---
 
 
-# HTML5-Forms mit Datenattribut {#prepopulate-html-forms-using-data-attribute} vorbeleben
+# HTML5-Forms mit Datenattribut {#prepopulate-html-forms-using-data-attribute} auffüllen
 
 Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) für einen Link zu einer Live-Demo dieser Funktion.
 
-XDP-Vorlagen, die mit AEM Forms im HTML-Format wiedergegeben werden, werden als HTML5- oder Mobile Forms bezeichnet. In der Regel werden diese Formulare bei der Wiedergabe vorab ausgefüllt.
+XDP-Vorlagen, die mit AEM Forms im HTML-Format wiedergegeben werden, werden als HTML5 oder Mobile Forms bezeichnet. Ein gängiger Anwendungsfall besteht darin, diese Formulare vorab auszufüllen, wenn sie wiedergegeben werden.
 
-Es gibt 2 Möglichkeiten, Daten mit der xdp-Vorlage zusammenzuführen, wenn sie als HTML wiedergegeben werden.
+Es gibt 2 Möglichkeiten, Daten mit der XDP-Vorlage zusammenzuführen, wenn sie als HTML gerendert werden.
 
 **dataRef**: Sie können den Parameter dataRef in der URL verwenden. Dieser Parameter gibt den absoluten Pfad der Datendatei an, die mit der Vorlage zusammengeführt wird. Dieser Parameter kann eine URL zu einem REST-Dienst sein, der die Daten im XML-Format zurückgibt.
 
-**data**: Dieser Parameter gibt die UTF-8-kodierten Datenbyte an, die mit der Vorlage zusammengeführt werden. Wenn dieser Parameter festgelegt ist, wird der Parameter „dataRef“ im HTML5-Formular ignoriert. Als Best Practice empfehlen wir die Verwendung des Datenansatzes.
+**data**: Dieser Parameter gibt die UTF-8-kodierten Datenbytes an, die mit der Vorlage zusammengeführt werden. Wenn dieser Parameter festgelegt ist, wird der Parameter „dataRef“ im HTML5-Formular ignoriert. Als Best Practice wird empfohlen, den Datenansatz zu verwenden.
 
-Die empfohlene Methode besteht darin, das Datenattribut in der Anforderung mit den Daten festzulegen, mit denen das Formular im Voraus gefüllt werden soll.
+Es wird empfohlen, das Datenattribut in der Anfrage mit den Daten festzulegen, mit denen das Formular vorausgefüllt werden soll.
 
 slingRequest.setAttribute(&quot;data&quot;, content);
 
-In diesem Beispiel legen wir das Datenattribut mit dem Inhalt fest. Der Inhalt stellt die Daten dar, mit denen Sie das Formular vorab füllen möchten. Normalerweise würden Sie den &quot;Inhalt&quot;abrufen, indem Sie einen REST-Aufruf an einen internen Dienst richten.
+In diesem Beispiel legen wir das Datenattribut mit dem Inhalt fest. Der Inhalt stellt die Daten dar, mit denen Sie das Formular vorab ausfüllen möchten. Normalerweise würden Sie den &quot;Inhalt&quot;abrufen, indem Sie einen REST-Aufruf an einen internen Dienst durchführen.
 
-Um dies zu erreichen, müssen Sie ein benutzerdefiniertes Profil erstellen. Die Details zum Erstellen von benutzerdefiniertem Profil sind in der [AEM Forms-Dokumentation hier](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html) eindeutig dokumentiert.
+Dazu müssen Sie ein benutzerdefiniertes Profil erstellen. Die Details zum Erstellen eines benutzerdefinierten Profils werden in der [AEM Forms-Dokumentation hier](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html) erläutert.
 
-Nachdem Sie Ihr benutzerdefiniertes Profil erstellt haben, erstellen Sie eine JSP-Datei, die die Daten abruft, indem Sie Aufrufe an Ihr Backend-System tätigen. Nach dem Abrufen der Daten verwenden Sie slingRequest.setAttribute(&quot;data&quot;, content); zum Vorausfüllen des Formulars
+Nachdem Sie Ihr benutzerdefiniertes Profil erstellt haben, erstellen Sie eine JSP-Datei, die die Daten abruft, indem Sie Aufrufe an Ihr Backend-System vornehmen. Nachdem die Daten abgerufen wurden, verwenden Sie slingRequest.setAttribute(&quot;data&quot;, content); zum Vorausfüllen des Formulars
 
-Wenn die XDP gerendert wird, können Sie auch einige Parameter an die xdp übergeben und basierend auf dem Wert des Parameters können Sie die Daten vom Backend-System abrufen.
+Wenn die XDP gerendert wird, können Sie auch einige Parameter an die xdp übergeben und basierend auf dem Wert des Parameters können Sie die Daten aus dem Backend-System abrufen.
 
-[Beispielsweise hat diese URL den Parameter name](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=john)
+[Beispielsweise hat diese URL den Parameter name .](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=john)
 
-Die von Ihnen geschriebene JSP hat Zugriff auf den Parameter name über request.getParameter(&quot;name&quot;) . Anschließend können Sie den Wert dieses Parameters an Ihren Backend-Prozess übergeben, um die erforderlichen Daten abzurufen.
-Gehen Sie wie folgt vor, um diese Funktion auf Ihrem System zu verwenden:
+Die JSP, die Sie schreiben, hat Zugriff auf den Parameter name über request.getParameter(&quot;name&quot;) . Anschließend können Sie den Wert dieses Parameters an Ihren Backend-Prozess übergeben, um die erforderlichen Daten abzurufen.
+Um diese Funktion auf Ihrem System verwenden zu können, führen Sie die folgenden Schritte aus:
 
-* [Herunterladen und Importieren der Assets AEM mit Package ](assets/prepopulatemobileform.zip)
-ManagerDas Paket installiert Folgendes
+* [Laden Sie die Assets herunter und importieren Sie sie in AEM mit Package ](assets/prepopulatemobileform.zip)
+Manager. Das Paket installiert Folgendes
 
    * CustomProfile
    * Beispiel-XDP
-   * Beispiel-POST-Endpunkt, der Daten zum Ausfüllen des Formulars zurückgibt
+   * Beispielendpunkt für POST, der Daten zum Ausfüllen des Formulars zurückgibt
 
 >[!NOTE]
 >
->Wenn Sie Ihr Formular durch Aufrufen von Workbench-Prozess ausfüllen möchten, sollten Sie callWorkbenchProcess.jsp anstelle von setdata.jsp in /apps/AEMFormsDemoListings/customprofiles/PrepopulateForm/html.jsp einfügen
+>Wenn Sie Ihr Formular durch Aufrufen des Workbench-Prozesses ausfüllen möchten, sollten Sie die callWorkbenchProcess.jsp in Ihre /apps/AEMFormsDemoListings/customprofiles/PrepopulateForm/html.jsp anstatt in setdata.jsp aufnehmen.
 
-* [Verweisen Sie Ihren bevorzugten Browser auf diese URL](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=Adobe%20Systems). Das Formular sollte vorab mit dem Wert des Parameters name ausgefüllt werden
+* [Verweisen Sie Ihren bevorzugten Browser auf diese URL](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=Adobe%20Systems). Das Formular sollte vorab mit dem Wert des Parameter name ausgefüllt werden
