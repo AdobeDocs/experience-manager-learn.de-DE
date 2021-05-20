@@ -1,24 +1,23 @@
 ---
 title: Verwenden von Microsoft Dynamics mit AEM Forms
 seo-title: Verwenden von Microsoft Dynamics mit AEM Forms
-description: In diesem Video erfahren Sie, wie AEM Forms mit Microsoft Dynamics als Back-End-Datenquelle interaktive, personalisierte Kommunikation bereitstellen kann.
-seo-description: In diesem Video erfahren Sie, wie AEM Forms mit Microsoft Dynamics als Back-End-Datenquelle interaktive, personalisierte Kommunikation bereitstellen kann.
+description: In diesem Video wird ein Workflow erläutert, der zeigt, wie AEM Forms mit Microsoft Dynamics als Back-End-Datenquelle arbeiten kann, um interaktive, personalisierte Kommunikation bereitzustellen.
+seo-description: In diesem Video wird ein Workflow erläutert, der zeigt, wie AEM Forms mit Microsoft Dynamics als Back-End-Datenquelle arbeiten kann, um interaktive, personalisierte Kommunikation bereitzustellen.
 uuid: 33d63899-1f58-49b3-a05e-6c57b01ef911
-feature: Adaptive Forms
+feature: Adaptive Formulare
 topics: integrations
 audience: developer
 doc-type: feature video
 activity: setup
 version: 6.3,6.4,6.5
 discoiquuid: 6cb82275-55bc-4b9e-b958-75b906c6afa9
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '172'
-ht-degree: 33%
+source-wordcount: '170'
+ht-degree: 32%
 
 ---
 
@@ -33,11 +32,11 @@ Relationale Datenbanken: MySQL, Microsoft SQL Server, IBM DB2 und Oracle RDBMS
 1. SOAP-basierte Webservices
 1. OData-Dienstleistungen
 
-In diesem Video erfahren Sie, wie AEM Forms mit Microsoft Dynamics als Back-End-Datenquelle interaktive, personalisierte Kommunikation bereitstellen kann.
+In diesem Video wird ein Workflow erläutert, der zeigt, wie AEM Forms mit Microsoft Dynamics als Back-End-Datenquelle arbeiten kann, um interaktive, personalisierte Kommunikation bereitzustellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/20971?quality=9&learn=on)
 
 >[!NOTE]
 >
->Diese Funktion ist nur ab AEM 6.3 FP1 verfügbar. Installieren Sie das AEM Forms-Add-on, bevor Sie es einrichten.
+>Diese Funktion ist nur ab AEM 6.3 FP1 verfügbar. Installieren Sie das AEM Forms-Add-on, bevor Sie die Einrichtung vornehmen.
 
