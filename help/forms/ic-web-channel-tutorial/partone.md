@@ -1,45 +1,44 @@
 ---
-title: Tomcat installieren und konfigurieren
-seo-title: Tomcat installieren und konfigurieren
-description: Dies ist Teil 1 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil werden wir TOMCAT installieren und die sampleRest.war-Datei in TOMCAT bereitstellen. Der REST-Endpunkt, der von dieser WAR-Datei offen gelegt wird, wird die Grundlage für unser Datenquellen- und Formulardatenmodell bilden.
-seo-description: Dies ist Teil 1 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikations-Dokuments. In diesem Teil werden wir TOMCAT installieren und die sampleRest.war-Datei in TOMCAT bereitstellen. Der REST-Endpunkt, der von dieser WAR-Datei offen gelegt wird, wird die Grundlage für unser Datenquellen- und Formulardatenmodell bilden.
+title: Installieren und Konfigurieren von Tomcat
+seo-title: Installieren und Konfigurieren von Tomcat
+description: Dies ist Teil 1 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil installieren wir TOMCAT und stellen die Datei sampleRest.war in TOMCAT bereit. Der von dieser WAR-Datei angezeigte REST-Endpunkt wird die Grundlage für unsere Datenquelle und unser Formulardatenmodell sein.
+seo-description: Dies ist Teil 1 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil installieren wir TOMCAT und stellen die Datei sampleRest.war in TOMCAT bereit. Der von dieser WAR-Datei angezeigte REST-Endpunkt wird die Grundlage für unsere Datenquelle und unser Formulardatenmodell sein.
 uuid: c6d4c74c-ea16-4c63-92c9-182d087fd88c
-feature: Interactive Communication
+feature: Interaktive Kommunikation
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 4f400c22-6c96-4018-851c-70d988ce7c6c
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '311'
 ht-degree: 1%
 
 ---
 
 
-# Tomcat {#install-and-configure-tomcat} installieren und konfigurieren
+# Installieren und Konfigurieren von Tomcat {#install-and-configure-tomcat}
 
-In diesem Teil werden wir TOMCAT installieren und die Datei sampleRest.war in TOMCAT bereitstellen. Der REST-Endpunkt, der von dieser WAR-Datei offen gelegt wird, wird die Grundlage für unser Datenquellen- und Formulardatenmodell bilden.
+In diesem Teil werden wir TOMCAT installieren und die Datei sampleRest.war in TOMCAT bereitstellen. Der von dieser WAR-Datei angezeigte REST-Endpunkt wird die Grundlage für unsere Datenquelle und unser Formulardatenmodell sein.
 
-Um Tomcat einzurichten, befolgen Sie bitte die folgenden Anweisungen:
+Um Tomcat einzurichten, befolgen Sie die folgenden Anweisungen:
 
 1. Laden Sie JDK1.8 herunter und installieren Sie es.
-2. Setzen Sie JAVA_HOME so, dass er auf JDK1.8 verweist.
-3. Laden Sie [tomcat](https://tomcat.apache.org/) herunter. Diese Kriegsdatei wurde mit den Tomcat-Versionen 8.5.x und 9.0.x getestet.
-4. Laden Sie die Tomcat-Version Ihrer Präferenz herunter. Sie können die ZIP-Datei für 64-Bit-Fenster unter dem Hauptabschnitt herunterladen.
-5. Dekomprimieren Sie die Inhalte auf Ihre c:\tomcat.
-6. Je nach der Version Ihres Tomcat sollten Sie ungefähr Folgendes in Ihrem c-Laufwerk **c:\tomcat\apache-tomcat-8.5.27** sehen
-7. Erstellen Sie eine Variable &quot;Umgebung&quot;mit dem Namen &quot;CATALINA_HOME&quot;und legen Sie als Wert c:\tomcat\apache- tomcat-8.5.27 den Beispielordner &quot;tomcat&quot;fest.
-8. Kopieren Sie die Datei &quot;SampleRest.war&quot;in den Ordner &quot;webapps&quot;Ihrer Tomcat-Installation
-9. Beginn neues Fenster mit Eingabeaufforderung.
-10. Navigieren Sie zu &quot;\bin&quot;und führen Sie die Datei &quot;startup.bat&quot;aus.
-11. Nachdem der Tomcat gestartet wurde, testen Sie den von der WAR-Datei offen gelegten Endpunkt, indem Sie [hier ](http://localhost:8080/SampleRest/webapi/getStatement/9586) klicken
-12. Als Ergebnis dieses Aufrufs sollten Sie Musterdaten abrufen.
+2. Setzen Sie JAVA_HOME auf JDK1.8.
+3. Laden Sie [tomcat](https://tomcat.apache.org/) herunter. Diese WAR-Datei wurde mit den Tomcat-Versionen 8.5.x und 9.0.x getestet.
+4. Laden Sie die Tomcat-Version Ihrer Voreinstellung herunter. Sie können die 64-Bit-Windows-Zip unter den Kernabschnitt herunterladen.
+5. Entpacken Sie den Inhalt in Ihre c:\tomcat.
+6. Je nach der Version Ihres Tomcat sollte dieses in Ihrem c-Laufwerk **c:\tomcat\apache-tomcat-8.5.27** angezeigt werden.
+7. Erstellen Sie eine Umgebungsvariable mit dem Namen &quot;CATALINA_HOME&quot;und legen Sie ihren Wert auf den Tomcat-Installationsordner fest, Beispiel c:\tomcat\apache- tomcat-8.5.27
+8. Kopieren Sie die Datei SampleRest.war in den Ordner webapps Ihrer Tomcat-Installation.
+9. Starten Sie ein neues Eingabeaufforderungsfenster.
+10. Navigieren Sie zu &lt;Tomcat-Installationsordner>\bin und führen Sie die Datei startup.bat aus.
+11. Sobald Ihr Tomcat gestartet wurde, testen Sie den von der WAR-Datei angezeigten Endpunkt, indem Sie [hier klicken](http://localhost:8080/SampleRest/webapi/getStatement/9586)
+12. Sie sollten Beispieldaten als Ergebnis dieses Aufrufs erhalten.
 
-Herzlichen Glückwunsch !!!. Sie haben die Datei SampleRest.war eingerichtet und bereitgestellt.
+Herzlichen Glückwunsch !!!. Sie haben für Tomcat eingerichtet und die Datei SampleRest.war bereitgestellt.
