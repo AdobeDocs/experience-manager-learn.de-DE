@@ -1,29 +1,28 @@
 ---
-title: Einfache Implementierung der Suche
-description: Bei der Implementierung der einfachen Suche handelt es sich um die Materialien vom Summit Lab „AEM Search Demystified“ von 2017. Diese Seite enthält die Materialien aus diesem Labor. Für eine Führung durch das Labor, Ansicht der Lab-Arbeitsmappe im Abschnitt Präsentation dieser Seite.
+title: Implementierungshandbuch für einfache Suchen
+description: Bei der Implementierung der einfachen Suche handelt es sich um die Materialien vom Summit Lab „AEM Search Demystified“ von 2017. Diese Seite enthält die Materialien aus diesem Labor. Eine Führung durch das Labor erhalten Sie in der Arbeitsmappe für den Lab im Abschnitt Präsentation dieser Seite.
 topics: development, search
 audience: developer
 doc-type: tutorial
 activity: develop
 version: 6.3, 6.4, 6.5
-feature: Search
-topic: Development
+feature: Suchen
+topic: Entwicklung
 role: Developer
 level: Intermediate, Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '904'
 ht-degree: 10%
 
 ---
 
 
-# Anleitung zur einfachen Suchimplementierung{#simple-search-implementation-guide}
+# Implementierungshandbuch für einfache Suchen{#simple-search-implementation-guide}
 
-Die Implementierung der einfachen Suche sind die Materialien aus dem **Adobe Summit Labor AEM Search Demystified**. Diese Seite enthält die Materialien aus diesem Labor. Für eine Führung durch das Labor, Ansicht der Lab-Arbeitsmappe im Abschnitt Präsentation dieser Seite.
+Die Implementierung der einfachen Suche sind die Materialien aus dem **Adobe Summit Labor AEM Search Demystified**. Diese Seite enthält die Materialien aus diesem Labor. Eine Führung durch das Labor erhalten Sie in der Arbeitsmappe für den Lab im Abschnitt Präsentation dieser Seite.
 
-![Übersicht über die Sucharchitektur](assets/l4080/simple-search-application.png)
+![Sucharchitektur - Überblick](assets/l4080/simple-search-application.png)
 
 ## Präsentationsmaterialien {#bookmarks}
 
@@ -36,14 +35,14 @@ Die Implementierung der einfachen Suche sind die Materialien aus dem **Adobe Sum
 
 * [Index-Manager](http://localhost:4502/libs/granite/operations/content/diagnosis/tool.html/granite_oakindexmanager)
 * [Abfrage erläutern](http://localhost:4502/libs/granite/operations/content/diagnosis/tool.html/granite_queryperformance)
-* [CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/oak%3Aindex/cqPageLucene) > /oak:index/cqPageLucene
+* [CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/oak%3Aindex/cqPageLucene)  > /oak:index/cqPageLucene
 * [CRX Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
 * [QueryBuilder-Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?)
 * [Oak Index Definition Generator](https://oakutils.appspot.com/generate/index)
 
 ### Kapitel {#chapters}
 
-*Die folgenden Kapitellinks gehen davon  [aus, dass die ](#initialpackages) anfänglichen Pakete auf AEM Author unter`http://localhost:4502`*
+*Die folgenden Kapitellinks gehen davon aus, dass die  [anfänglichen ](#initialpackages) Pakete auf der AEM-Autoreninstanz unter`http://localhost:4502`*
 
 * [Kapitel 1](http://localhost:4502/editor.html/content/summit/l4080/chapter-1.html)
 * [Kapitel 2](http://localhost:4502/editor.html/content/summit/l4080/chapter-2.html)
@@ -57,7 +56,7 @@ Die Implementierung der einfachen Suche sind die Materialien aus dem **Adobe Sum
 
 ## Pakete {#packages}
 
-### Ursprüngliche Pakete {#initial-packages}
+### Erstpakete {#initial-packages}
 
 * [Tags](assets/l4080/summit-tags.zip)
 * [Einfaches Suchanwendungspaket](assets/l4080/simple.ui.apps-0.0.1-snapshot.zip)
@@ -68,61 +67,61 @@ Die Implementierung der einfachen Suche sind die Materialien aus dem **Adobe Sum
 * [Kapitel 2 Lösung](assets/l4080/l4080-chapter2.zip)
 * [Kapitel 3 Lösung](assets/l4080/l4080-chapter3.zip)
 * [Kapitel 4 Lösung](assets/l4080/l4080-chapter4.zip)
-* [Kapitel 5-Einrichtung](assets/l4080/l4080-chapter5-setup.zip)
+* [Einrichten von Kapitel 5](assets/l4080/l4080-chapter5-setup.zip)
 * [Kapitel 5 Lösung](assets/l4080/l4080-chapter5-solution.zip)
 * [Kapitel 6 Lösung](assets/l4080/l4080-chapter6.zip)
 * [Kapitel 9 Lösung](assets/l4080/l4080-chapter9.zip)
 
 ## Referenzierte Materialien {#reference-materials}
 
-* [Github-Repository](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/master/simple-search-guide)
+* [GitHub-Repository](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/master/simple-search-guide)
 * [Sling-Modelle](https://sling.apache.org/documentation/bundles/models.html)
 * [Sling Model Exporter](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)
 * [QueryBuilder-API](https://docs.adobe.com/docs/en/aem/6-2/develop/search/querybuilder-api.html)
-* [AEM Chrome-Plugin](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode)  ([Dokumentationsseite](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/))
+* [AEM Chrome-Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode)  ([Dokumentationsseite](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/))
 
 ## Korrekturen und Folgemaßnahmen {#corrections-and-follow-up}
 
-Korrekturen und Klarstellungen aus den Laborgesprächen und Antworten auf Folgefragen von Teilnehmern.
+Korrekturen und Erläuterungen aus den Labordiskussionen und Antworten auf Folgefragen von Teilnehmern.
 
-1. **Wie kann man eine Neuindizierung stoppen?**
+1. **Wie kann ich die Neuindizierung stoppen?**
 
-   Die Neuindizierung kann über das IndexStats MBean beendet werden, das über [AEM Web-Konsole > JMX](http://localhost:4502/system/console/jmx) verfügbar ist.
+   Die Neuindizierung kann über das MBean IndexStats gestoppt werden, das über [AEM Web-Konsole > JMX](http://localhost:4502/system/console/jmx) verfügbar ist.
 
    * [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats)
       * Führen Sie `abortAndPause()` aus, um die Neuindizierung abzubrechen. Dadurch wird der Index für eine weitere Neuindizierung gesperrt, bis `resume()` aufgerufen wird.
-      * Wenn Sie `resume()` ausführen, wird der Indexierungsvorgang neu gestartet.
+      * Wenn Sie `resume()` ausführen, wird der Indizierungsprozess neu gestartet.
    * Dokumentation: [https://jackrabbit.apache.org/oak/docs/query/indexing.html#async-index-mbean](https://jackrabbit.apache.org/oak/docs/query/indexing.html#async-index-mbean)
 
-2. **Wie können Eichenindizes mehrere Mandanten unterstützen?**
+2. **Wie können Oak-Indizes mehrere Mandanten unterstützen?**
 
-   Oak unterstützt die Platzierung von Indizes durch die Inhaltsstruktur, und diese Indizes werden nur innerhalb dieser Unterstruktur indiziert. Zum Beispiel könnte **`/content/site-a/oak:index/cqPageLucene`** nur unter **`/content/site-a`zum Indexieren von Inhalten erstellt werden.**
+   Oak unterstützt das Platzieren von Indizes über die Inhaltsstruktur, und diese Indizes werden nur innerhalb dieser Unterstruktur indiziert. Beispielsweise könnte **`/content/site-a/oak:index/cqPageLucene`** so erstellt werden, dass Inhalte nur unter **`/content/site-a`.** indiziert werden.
 
    Eine gleichwertige Methode besteht darin, die Eigenschaften **`includePaths`** und **`queryPaths`** für einen Index unter **`/oak:index`** zu verwenden. Beispiel:
 
    * `/oak:index/siteAcqPageLucene@includePaths=/content/site-a`
    * `/oak:index/siteAcqPageLucene@queryPaths=/content/site-a`
 
-   Bei diesem Ansatz werden folgende Überlegungen angestellt:
+   Bei diesem Ansatz werden folgende Aspekte berücksichtigt:
 
-   * Abfragen MÜSSEN eine Pfadbeschränkung angeben, die dem Pfadbereich der Abfrage des Indexes entspricht oder dort untergeordnet sein muss.
-   * Umfassendere Scoped-Indizes (z. B. `/oak:index/cqPageLucene`) indizieren auch die Daten, was zu doppelter Erfassung und zu Kosten für die Festplattennutzung führt.
-   * Kann doppelte Konfigurationsverwaltung erfordern (z. B. die gleichen indexRules über mehrere Mandanten-Indizes hinweg hinzufügen, wenn sie dieselben Abfragen erfüllen müssen)
-   * Dieser Ansatz wird am besten auf der AEM Publish-Ebene für die benutzerdefinierte Site-Suche angewandt, da es bei AEM Author üblich ist, dass Abfragen oben in der Inhaltsstruktur für verschiedene Mieter ausgeführt werden (z. B. über OmniSearch) - unterschiedliche Indexdefinitionen können zu einem unterschiedlichen Verhalten führen, das nur auf der Pfadbeschränkung basiert.
+   * Abfragen MÜSSEN eine Pfadbeschränkung angeben, die dem Abfragepfadbereich des Index entspricht oder dort untergeordnet ist.
+   * Umfassendere Indizes (z. B. `/oak:index/cqPageLucene`) indizieren die Daten ebenfalls, was zu doppelter Erfassung und Kosten für die Festplattennutzung führt.
+   * Kann eine doppelte Konfigurationsverwaltung erfordern (z. B. Hinzufügen von gleichen indexRules über mehrere Mandanten-Indizes hinweg, wenn sie denselben Abfragesätzen entsprechen müssen)
+   * Dieser Ansatz wird am besten auf der AEM-Veröffentlichungsstufe für die benutzerdefinierte Site-Suche bereitgestellt, da es in der AEM-Autoreninstanz üblich ist, Abfragen oben in der Inhaltsstruktur für verschiedene Mandanten auszuführen (z. B. über OmniSearch) - unterschiedliche Indexdefinitionen können zu unterschiedlichem Verhalten führen, das nur auf der Pfadbeschränkung basiert.
 
 
 3. **Wo ist eine Liste aller verfügbaren Analyzer?**
 
-   Oak stellt eine Reihe von Analyzer-Konfigurationselementen zur Verwendung in AEM bereit.
+   Oak stellt eine Reihe von Lucene-bereitgestellten Analyzer-Konfigurationselementen zur Verwendung in AEM bereit.
 
-   * [Dokumentation zu Apache Oak Analytics](http://jackrabbit.apache.org/oak/docs/query/lucene.html#analyzers)
+   * [Dokumentation zu Apache Oak Analyzers](http://jackrabbit.apache.org/oak/docs/query/lucene.html#analyzers)
       * [Tokenizers](https://cwiki.apache.org/confluence/display/solr/Tokenizers)
       * [Filter](https://cwiki.apache.org/confluence/display/solr/Filter+Descriptions)
       * [CharFilters](https://cwiki.apache.org/confluence/display/solr/CharFilterFactories)
 
-4. **Wie kann ich in derselben Abfrage nach Seiten und Assets suchen?**
+4. **Wie kann in derselben Abfrage nach Seiten und Assets gesucht werden?**
 
-   Neu in AEM 6.3 ist die Möglichkeit zur Abfrage für mehrere Node-Typen in derselben bereitgestellten Abfrage. Die folgende QueryBuilder-Abfrage. Beachten Sie, dass jede &quot;Unter-Abfrage&quot;zu einem eigenen Index aufgelöst werden kann. In diesem Beispiel wird die `cq:Page`-Untergruppe zu `/oak:index/cqPageLucene` aufgelöst und die `dam:Asset`-Untergruppe zu `/oak:index/damAssetLucene` aufgelöst.
+   Neu in AEM 6.3 ist die Möglichkeit, mehrere Knotentypen in derselben bereitgestellten Abfrage abzufragen. Die folgende QueryBuilder-Abfrage. Beachten Sie, dass jede &quot;Sub-Abfrage&quot;in einen eigenen Index aufgelöst werden kann. In diesem Beispiel wird die `cq:Page`-Unterabfrage zu `/oak:index/cqPageLucene` und die `dam:Asset`-Unterabfrage zu `/oak:index/damAssetLucene` aufgelöst.
 
    ```plain
    group.p.or=true
@@ -132,7 +131,7 @@ Korrekturen und Klarstellungen aus den Laborgesprächen und Antworten auf Folgef
    # add all asset restrictions to this group
    ```
 
-   Ergebnisse des folgenden Abfrage- und Abfrage-Plans:
+   Ergebnisse im folgenden Abfrage- und Abfrageplan:
 
    ```plain
    QUERY:(//element(*, cq:Page) | //element(*, dam:Asset))
@@ -140,11 +139,11 @@ Korrekturen und Klarstellungen aus den Laborgesprächen und Antworten auf Folgef
    PLAN: [cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) *:* */ union [dam:Asset] as [a] /* lucene:damAssetLucene(/oak:index/damAssetLucene) *:* */
    ```
 
-   Erkunden Sie die Abfrage und die Ergebnisse mit dem [QueryBuilder-Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Ddam%3AAsset%0D%0A%23+add+all+asset+restrictions+to+this+group) und [AEM Chrome-Plugin](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US).
+   Erkunden Sie die Abfrage und Ergebnisse über [QueryBuilder-Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Ddam%3AAsset%0D%0A%23+add+all+asset+restrictions+to+this+group) und [AEM Chrome-Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US).
 
-5. **Wie kann ich mehrere Pfade in derselben Abfrage durchsuchen?**
+5. **Wie kann in derselben Abfrage über mehrere Pfade gesucht werden?**
 
-   Neu in AEM 6.3 ist die Möglichkeit, über mehrere Pfade in derselben bereitgestellten Abfrage Abfrage. Die folgende QueryBuilder-Abfrage. Beachten Sie, dass jede &quot;Unter-Abfrage&quot;in einen eigenen Index aufgelöst werden kann.
+   Neu in AEM 6.3 ist die Möglichkeit, mehrere Pfade in derselben bereitgestellten Abfrage abzufragen. Die folgende QueryBuilder-Abfrage. Beachten Sie, dass jede &quot;Sub-Abfrage&quot;in einen eigenen Index aufgelöst werden kann.
 
    ```plain
    group.p.or=true
@@ -156,7 +155,7 @@ Korrekturen und Klarstellungen aus den Laborgesprächen und Antworten auf Folgef
    # add all asset restrictions to this group
    ```
 
-   Ergebnisse des folgenden Abfrage- und Abfrage-Plans
+   Ergebnisse im folgenden Abfrage- und Abfrageplan
 
    ```plain
    QUERY: (/jcr:root/content/docs/en/_x0036_-2//element(*, cq:Page) | /jcr:root/content/docs/en/_x0036_-3//element(*, cq:Page))
@@ -164,4 +163,4 @@ Korrekturen und Klarstellungen aus den Laborgesprächen und Antworten auf Folgef
    PLAN: [cq:Page] as [a] /* traverse "/content/docs/en/6-2//*" where isdescendantnode([a], [/content/docs/en/6-2]) */ union [cq:Page] as [a] /* traverse "/content/docs/en/6-3//*" where isdescendantnode([a], [/content/docs/en/6-3]) */
    ```
 
-   Erkunden Sie die Abfrage und die Ergebnisse mit dem [QueryBuilder-Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0Agroup.1_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-2%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Dcq%3APage%0D%0Agroup.2_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-3%0D%0A%23+add+all+asset+restrictions+to+this+group) und [AEM Chrome-Plugin](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US).
+   Erkunden Sie die Abfrage und Ergebnisse über [QueryBuilder-Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0Agroup.1_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-2%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Dcq%3APage%0D%0Agroup.2_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-3%0D%0A%23+add+all+asset+restrictions+to+this+group) und [AEM Chrome-Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=en-US).
