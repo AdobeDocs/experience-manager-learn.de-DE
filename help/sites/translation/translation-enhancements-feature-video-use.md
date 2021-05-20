@@ -7,13 +7,12 @@ audience: author, marketer, developer
 doc-type: feature video
 activity: use
 version: 6.3, 6.4, 6.5
-topic: Localization
+topic: Lokalisierung
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '337'
 ht-degree: 5%
 
 ---
@@ -27,21 +26,21 @@ AEM leistungsfähiges Übersetzungs-Framework ermöglicht die nahtlose Übersetz
 
 >[!VIDEO](https://video.tv.adobe.com/v/27405?quality=9&learn=on)
 
-AEM 6.5-Verbesserungen bei der Übersetzung umfassen:
+AEM 6.5-Übersetzungsverbesserungen umfassen:
 
-**Übersetzungsaufträge** automatisch genehmigen: Das Genehmigungszeichen im Übersetzungsauftrag ist eine binäre Eigenschaft. Es wird nicht mit vordefinierten Workflows für die Überprüfung und Genehmigung unterstützt oder integriert. Damit die Anzahl der Schritte in einem Übersetzungsauftrag minimal bleibt, ist standardmäßig unter [!UICONTROL Erweiterte Eigenschaften] eines Übersetzungsprojekts auf &quot;Automatisch genehmigen&quot;eingestellt. Wenn Ihr Unternehmen die Genehmigung für einen Übersetzungsauftrag benötigt, können Sie die Option &quot;Automatisch genehmigen&quot;in [!UICONTROL Erweiterte Eigenschaften] eines Übersetzungsprojekts deaktivieren.
+**Automatische Genehmigung von Übersetzungsaufträgen**: Das Genehmigungszeichen im Übersetzungsauftrag ist eine binäre Eigenschaft. Es werden keine vordefinierten Überprüfungs- und Genehmigungs-Workflows gesteuert oder integriert. Damit die Anzahl der Schritte in einem Übersetzungsauftrag minimal bleibt, ist standardmäßig unter [!UICONTROL Erweiterte Eigenschaften] eines Übersetzungsprojekts auf &quot;automatisch genehmigen&quot;eingestellt. Wenn Ihr Unternehmen die Genehmigung für einen Übersetzungsauftrag erfordert, können Sie die Option &quot;Automatisch genehmigen&quot;in [!UICONTROL Erweiterte Eigenschaften] eines Übersetzungsprojekts deaktivieren.
 
-**Übersetzungsstarts** automatisch löschen: Statt Übersetzungen in Launches Admin manuell zu löschen, ist es jetzt möglich, nach dem Upgrade automatisch gestartete Übersetzungen zu löschen.
+**Automatische Löschung von Übersetzungsstarts**: Anstatt Übersetzungsstarts in Launches Admin manuell zu löschen, ist es jetzt möglich, Übersetzungsstarts nach ihrer Förderung automatisch zu löschen.
 
-**Exportieren von Übersetzungsobjekten im JSON-Format**: AEM 6.4 und frühere Versionen unterstützen die XML- und XLIFF-Formate von Übersetzungsobjekten. Sie können das Exportformat jetzt mit der Systemkonsole [!UICONTROL Config Manager] im JSON-Format konfigurieren. Suchen Sie nach [!UICONTROL Translation Platform Configuration] und wählen Sie dann das Exportformat als JSON aus.
+**Exportieren von Übersetzungsobjekten im JSON-Format**: AEM 6.4 und frühere Versionen unterstützen XML- und XLIFF-Formate von Übersetzungsobjekten. Sie können jetzt das Exportformat im JSON-Format mithilfe Ihrer Systemkonsole [!UICONTROL Config Manager] konfigurieren. Suchen Sie nach [!UICONTROL Konfiguration der Übersetzungsplattform] und wählen Sie dann das Exportformat als JSON aus.
 
-**Aktualisieren übersetzter AEM in Translation Memory (TMS)**: Lokaler Autor, der keinen Zugriff auf AEM hat, kann bereits übersetzte Inhalte, die bereits wieder in AEM integriert wurden, direkt im TM (Translation Memory, in TMS) aktualisieren und die Übersetzungen in AEM aktualisieren, indem er den Übersetzungsauftrag von TMS an AEM
+**Aktualisieren Sie übersetzte AEM in Translation Memory (TMS)**: Lokale Autoren, die keinen Zugriff auf AEM haben, können Aktualisierungen an übersetzten Inhalten vornehmen, die bereits wieder in AEM aufgenommen wurden, direkt im TM (Translation Memory, in TMS) und die Übersetzungen in AEM aktualisieren, indem sie Übersetzungsaufträge von TMS an AEM
 
 ## Übersetzungsverbesserungen in AEM 6.4
 
 >[!VIDEO](https://video.tv.adobe.com/v/21309?quality=9&learn=on)
 
-Autoren können jetzt schnell und einfach mehrsprachige Übersetzungsprojekte direkt vom Sites-Administrator oder vom Projektadministrator erstellen, diese Projekte so einrichten, dass sie automatisch Starts fördern, und sogar Zeitpläne für die Automatisierung festlegen.
+Autoren können jetzt schnell und einfach mehrsprachige Übersetzungsprojekte direkt vom Sites-Administrator oder vom Projekt-Administrator erstellen, diese Projekte so einrichten, dass sie automatisch Launches bewerben, und sogar Zeitpläne für die Automatisierung festlegen.
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
