@@ -1,6 +1,6 @@
 ---
-title: Authoring von Inhaltsfragmenten - Erste Schritte mit AEM ohne Kopf - GraphQL
-description: Beginnen Sie mit Adobe Experience Manager (AEM) und GraphQL. Erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf einem Inhaltsfragmentmodell basiert. Erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
+title: Authoring von Inhaltsfragmenten - Erste Schritte mit AEM Headless - GraphQL
+description: Erste Schritte mit Adobe Experience Manager (AEM) und GraphQL. Erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf einem Inhaltsfragmentmodell basiert. Erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
 sub-product: Assets
 topics: headless
 version: cloud-service
@@ -11,10 +11,9 @@ mini-toc-levels: 1
 kt: 6713
 thumbnail: 22451.jpg
 feature: Inhaltsfragmente, GraphQL-APIs
-topic: Kopflos, Content-Management
+topic: Headless, Content Management
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
 workflow-type: tm+mt
 source-wordcount: '792'
@@ -23,53 +22,53 @@ ht-degree: 3%
 ---
 
 
-# Authoring-Inhaltsfragment {#authoring-content-fragments}
+# Authoring von Inhaltsfragmenten {#authoring-content-fragments}
 
-In diesem Kapitel erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf dem [neu definierten Inhaltsfragmentmodell des Beitragenden](./content-fragment-models.md) basiert. Außerdem erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
+In diesem Kapitel erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf dem [neu definierten Contributor Content Fragment Model](./content-fragment-models.md) basiert. Außerdem erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
 
 ## Voraussetzungen {#prerequisites}
 
-Dies ist ein mehrteiliges Lernprogramm und es wird davon ausgegangen, dass die unter [Definieren von Inhaltsfragmentmodellen](./content-fragment-models.md) beschriebenen Schritte abgeschlossen wurden.
+Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die unter [Definieren von Inhaltsfragmentmodellen](./content-fragment-models.md) beschriebenen Schritte abgeschlossen sind.
 
 ## Ziele {#objectives}
 
-* Erstellen eines Inhaltsfragments basierend auf einem Inhaltsfragmentmodell
-* Eine Inhaltsfragmentvariation erstellen
+* Inhaltsfragment basierend auf einem Inhaltsfragmentmodell erstellen
+* Erstellen einer Inhaltsfragmentvariante
 
-## Inhaltsfragment-Authoring-Übersicht {#overview}
+## Inhaltsfragmentbearbeitung - Überblick {#overview}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22451/?quality=12&learn=on)
 
-Das obige Video bietet einen Überblick über das Authoring von Inhaltsfragmenten auf hoher Ebene.
+Das obige Video bietet einen allgemeinen Überblick über die Bearbeitung von Inhaltsfragmenten.
 
-## Inhaltsfragment {#create-content-fragment} erstellen
+## Erstellen eines Inhaltsfragments {#create-content-fragment}
 
-Im vorherigen Kapitel [Definieren von Inhaltsfragmentmodellen](./content-fragment-models.md) wurde ein **Mitarbeiter**-Modell erstellt. Erstellen Sie ein neues Inhaltsfragment mit diesem Modell.
+Im vorherigen Kapitel [Definieren von Inhaltsfragmentmodellen](./content-fragment-models.md) wurde ein **Contributor**-Modell erstellt. Erstellen Sie mit diesem Modell ein neues Inhaltsfragment.
 
-1. Navigieren Sie im Menü **AEM Beginn** zu **Assets** > **Dateien**.
-1. Klicken Sie durch die Ordner, um zu **WKND-Site** > **Englisch** > **Mitarbeiter** zu navigieren. Dieser Ordner enthält eine Liste von Kopfaufnahmen für Mitarbeiter der Marke WKND.
+1. Navigieren Sie im Menü **AEM Start** zu **Assets** > **Dateien**.
+1. Klicken Sie durch die Ordner, um zu **WKND Site** > **English** > **Contributors** zu navigieren. Dieser Ordner enthält eine Liste von Kopfbildern für Mitarbeiter der WKND-Marke.
 
-1. Klicken Sie oben rechts auf **Erstellen** und wählen Sie **Inhaltsfragment**:
+1. Klicken Sie oben rechts auf **Erstellen** und wählen Sie **Inhaltsfragment** aus:
 
-   ![Klicken Sie auf Neues Fragment erstellen](assets/author-content-fragments/create-content-fragment-menu.png)
+   ![Klicken Sie auf Neues Fragment erstellen .](assets/author-content-fragments/create-content-fragment-menu.png)
 
-1. Wählen Sie das Modell **Mitarbeiter** und klicken Sie auf **Weiter**.
+1. Wählen Sie das Modell **Contributor** und klicken Sie auf **Next**.
 
-   ![Benutzerdefiniertes Beitragsmodell auswählen](assets/author-content-fragments/select-contributor-model.png)
+   ![Contributor Model auswählen](assets/author-content-fragments/select-contributor-model.png)
 
-   Dies ist dasselbe **Mitarbeiter**-Modell, das im vorherigen Kapitel erstellt wurde.
+   Dies ist dasselbe **Contributor**-Modell, das im vorherigen Kapitel erstellt wurde.
 
-1. Geben Sie für den Titel **Stacey Roswells** ein und klicken Sie auf **Erstellen**.
-1. Klicken Sie auf **Öffnen** im Dialogfeld **Erfolg**, um das neu erstellte Fragment zu öffnen.
+1. Geben Sie **Stacey Roswells** für den Titel ein und klicken Sie auf **Erstellen**.
+1. Klicken Sie im Dialogfeld **Erfolg** auf **, um das neu erstellte Fragment zu öffnen.**
 
    ![Neues Inhaltsfragment erstellt](assets/author-content-fragments/new-content-fragment.png)
 
-   Beachten Sie, dass die vom Modell definierten Felder jetzt verfügbar sind, um diese Instanz des Inhaltsfragments zu erstellen.
+   Beachten Sie, dass die vom Modell definierten Felder jetzt für die Erstellung dieser Instanz des Inhaltsfragments verfügbar sind.
 
-1. Geben Sie für **Vollständiger Name** Folgendes ein: **Stacey Roswells**.
-1. Geben Sie für **Biografie** eine kurze Biografie ein. Benötigen Sie Anregungen? Sie können diese [Textdatei](assets/author-content-fragments/stacey-roswells-bio.txt) erneut verwenden.
-1. Klicken Sie für **Picture Reference** auf das Symbol **folder** und navigieren Sie zu **WKND-Site** > **English** > **Mitarbeiter** > **stacey-roswells.jpg**. Dies wird anhand des Pfads ausgewertet: `/content/dam/wknd/en/contributors/stacey-roswells.jpg`.
-1. Wählen Sie für **Beruf** **Fotograf**.
+1. Geben Sie für **Vollständiger Name** ein: **Stacey Roswells**.
+1. Geben Sie für **Biografie** eine kurze Biografie ein. Benötigen Sie Anregungen? Sie können diese [Textdatei](assets/author-content-fragments/stacey-roswells-bio.txt) einfach wiederverwenden.
+1. Klicken Sie für **Picture Reference** auf das Symbol **folder** und navigieren Sie zu **WKND Site** > **English** > **Contributors** > **stacey-roswells.jpg** . Dies wird zum Pfad ausgewertet: `/content/dam/wknd/en/contributors/stacey-roswells.jpg`.
+1. Wählen Sie für **Beruf** **Fotograf** aus.
 
    ![Erstelltes Fragment](assets/author-content-fragments/stacye-roswell-fragment-authored.png)
 
@@ -77,56 +76,56 @@ Im vorherigen Kapitel [Definieren von Inhaltsfragmentmodellen](./content-fragmen
 
 ## Erstellen einer Inhaltsfragmentvariante
 
-Alle Inhaltsfragmente Beginn mit einer Variation von **Übergeordnet**. Die Variation **Übergeordnet** kann als Standardinhalt *des Fragments betrachtet werden und wird automatisch verwendet, wenn der Inhalt über die GraphQL-APIs verfügbar gemacht wird.* Es ist auch möglich, Varianten eines Inhaltsfragments zu erstellen. Diese Funktion Angebot zusätzliche Flexibilität beim Entwerfen einer Implementierung.
+Alle Inhaltsfragmente beginnen mit einer **Übergeordnet** -Variante. Die **Übergeordnet**-Variante kann als *Standardinhalt* des Fragments betrachtet werden und wird automatisch verwendet, wenn der Inhalt über die GraphQL-APIs verfügbar gemacht wird. Es ist auch möglich, Varianten eines Inhaltsfragments zu erstellen. Diese Funktion bietet zusätzliche Flexibilität beim Entwerfen einer Implementierung.
 
-Varianten können zur Zielgruppe bestimmter Kanal verwendet werden. Beispielsweise könnte eine Variation **mobile** erstellt werden, die eine kleinere Textmenge enthält oder auf ein Kanal-spezifisches Bild verweist. Wie Varianten verwendet werden, hängt wirklich von der Implementierung ab. Wie bei allen Funktionen sollte vor der Verwendung eine sorgfältige Planung durchgeführt werden.
+Varianten können verwendet werden, um bestimmte Kanäle auszuwählen. Beispielsweise kann eine **mobile** Variante erstellt werden, die eine kleinere Textmenge enthält oder auf ein kanalspezifisches Bild verweist. Wie Varianten verwendet werden, hängt in der Tat von der Implementierung ab. Wie jede Funktion sollte vor der Verwendung eine sorgfältige Planung erfolgen.
 
-Anschließend erstellen Sie eine neue Variante, um eine Vorstellung von den verfügbaren Funktionen zu erhalten.
+Erstellen Sie anschließend eine neue Variante, um sich einen Überblick über die verfügbaren Funktionen zu verschaffen.
 
-1. Öffnen Sie das Inhaltsfragment **statische Roswells** erneut.
+1. Öffnen Sie das Inhaltsfragment **Stacey Roswells** erneut.
 1. Klicken Sie in der linken Seitenleiste auf **Variante erstellen**.
 1. Geben Sie im Modal **Neue Variante** einen Titel von **Zusammenfassung** ein.
 
    ![Neue Variante - Zusammenfassung](assets/author-content-fragments/new-variation-summary.png)
 
-1. Klicken Sie in das mehrzeilige Feld **Biografie** und klicken Sie auf die Schaltfläche **Erweitern**, um die Vollbildanzeige für das mehrzeilige Feld einzugeben.
+1. Klicken Sie in das mehrzeilige Feld **Biografie** und klicken Sie auf die Schaltfläche **Erweitern** , um die Vollbildansicht für das mehrzeilige Feld einzugeben.
 
-   ![Vollbildmodus aktivieren - Ansicht](assets/author-content-fragments/enter-full-screen-view.png)
+   ![Vollbildansicht eingeben](assets/author-content-fragments/enter-full-screen-view.png)
 
-1. Klicken Sie im Menü oben rechts auf **Text zusammenfassen**.
+1. Klicken Sie oben rechts im Menü auf **Text zusammenfassen**.
 
-1. Geben Sie eine **Zielgruppe** von **50** ein und klicken Sie auf **Beginn**.
+1. Geben Sie **Target** von **50** ein und klicken Sie auf **Start**.
 
-   ![Zusammenfassende Vorschau](assets/author-content-fragments/summarize-text-preview.png)
+   ![Vorschau einer Zusammenfassung](assets/author-content-fragments/summarize-text-preview.png)
 
-   Dadurch wird eine Vorschau zur Zusammenfassung eröffnet. AEM maschinelle Sprachverarbeitung versucht, den Text anhand der Anzahl der Zielgruppen zusammenzufassen. Sie können auch verschiedene Sätze zum Entfernen auswählen.
+   Dadurch wird eine Vorschau der Zusammenfassung geöffnet. AEM maschineller Sprachprozessor versucht, den Text anhand der Zielwortzahl zusammenzufassen. Sie können auch verschiedene Sätze zum Entfernen auswählen.
 
-1. Klicken Sie auf **Zusammenfassen**, wenn Sie mit der Zusammenfassung zufrieden sind. Klicken Sie in das mehrzeilige Textfeld und schalten Sie die Schaltfläche **Erweitern** um, um zur Haupt-Ansicht zurückzukehren.
+1. Klicken Sie auf **Zusammenfassung**, wenn Sie mit der Zusammenfassung zufrieden sind. Klicken Sie in das mehrzeilige Textfeld und schalten Sie die Schaltfläche **Erweitern** um, um zur Hauptansicht zurückzukehren.
 
 1. Klicken Sie auf **Speichern**, um die Änderungen zu speichern.
 
 ## Erstellen eines zusätzlichen Inhaltsfragments
 
-Wiederholen Sie die Schritte unter [Inhaltsfragment](#create-content-fragment) erstellen, um einen weiteren **Mitarbeiter** zu erstellen. Dies wird im nächsten Kapitel als Beispiel für die Abfrage mehrerer Fragmente verwendet.
+Wiederholen Sie die unter [Erstellen eines Inhaltsfragments](#create-content-fragment) beschriebenen Schritte, um einen zusätzlichen **Mitarbeiter** zu erstellen. Dies wird im nächsten Kapitel als Beispiel für die Abfrage mehrerer Fragmente verwendet.
 
-1. Klicken Sie im Ordner **Mitarbeiter** rechts oben auf **Erstellen** und wählen Sie **Inhaltsfragment**:
-1. Wählen Sie das Modell **Mitarbeiter** und klicken Sie auf **Weiter**.
-1. Geben Sie für den Titel **Jacob Wester** ein und klicken Sie auf **Erstellen**.
-1. Klicken Sie auf **Öffnen** im Dialogfeld **Erfolg**, um das neu erstellte Fragment zu öffnen.
-1. Geben Sie für **Vollständiger Name** Folgendes ein: **Jacob Wester**.
-1. Geben Sie für **Biografie** eine kurze Biografie ein. Benötigen Sie Anregungen? Sie können diese [Textdatei](assets/author-content-fragments/jacob-wester.txt) erneut verwenden.
-1. Klicken Sie für **Picture Reference** auf das Symbol **folder** und navigieren Sie zu **WKND-Site** > **English** > **Mitarbeiter** > **jacob_wester.jpg**. Dies wird anhand des Pfads ausgewertet: `/content/dam/wknd/en/contributors/jacob_wester.jpg`.
-1. Wählen Sie für **Beruf** **Writer**.
-1. Klicken Sie auf **Speichern**, um die Änderungen zu speichern. Es ist nicht nötig, eine Variante zu erstellen, es sei denn, Sie wollen!
+1. Klicken Sie im Ordner **Contributors** rechts oben auf **Create** und wählen Sie **Content Fragment** aus:
+1. Wählen Sie das Modell **Contributor** und klicken Sie auf **Next**.
+1. Geben Sie **Jacob Wester** für den Titel ein und klicken Sie auf **Erstellen**.
+1. Klicken Sie im Dialogfeld **Erfolg** auf **, um das neu erstellte Fragment zu öffnen.**
+1. Geben Sie für **Vollständiger Name** ein: **Jacob Wester**.
+1. Geben Sie für **Biografie** eine kurze Biografie ein. Benötigen Sie Anregungen? Sie können diese [Textdatei](assets/author-content-fragments/jacob-wester.txt) einfach wiederverwenden.
+1. Klicken Sie für **Picture Reference** auf das Symbol **folder** und navigieren Sie zu **WKND Site** > **English** > **Contributors** > **jacob_wester.jpg**. Dies wird zum Pfad ausgewertet: `/content/dam/wknd/en/contributors/jacob_wester.jpg`.
+1. Wählen Sie für **Occupation** **Writer**.
+1. Klicken Sie auf **Speichern**, um die Änderungen zu speichern. Es ist nicht erforderlich, eine Variante zu erstellen, es sei denn, Sie möchten sie!
 
    ![Zusätzliches Inhaltsfragment](assets/author-content-fragments/additional-content-fragment.png)
 
-   Sie sollten jetzt zwei **Mitarbeiter**-Fragmente haben.
+   Sie sollten jetzt zwei **Mitwirkende** Fragmente haben.
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
-Herzlichen Glückwunsch, Sie haben gerade mehrere Inhaltsfragmente erstellt und eine Variante erstellt.
+Herzlichen Glückwunsch! Sie haben gerade mehrere Inhaltsfragmente erstellt und eine Variante erstellt.
 
 ## Nächste Schritte {#next-steps}
 
-Im nächsten Kapitel [Grafik-QL-APIs](explore-graphql-api.md) entdecken Sie AEM GraphQL-APIs mit dem integrierten GrapiQL-Tool. Erfahren Sie, wie AEM basierend auf einem Inhaltsfragmentmodell automatisch ein GraphQL-Schema generiert. Sie experimentieren mit der Erstellung grundlegender Abfragen mit der GraphQL-Syntax.
+Im nächsten Kapitel [GraphQL-APIs](explore-graphql-api.md) durchsuchen Sie AEM GraphQL-APIs mit dem integrierten GrapiQL-Tool. Erfahren Sie, wie AEM basierend auf einem Inhaltsfragmentmodell automatisch ein GraphQL-Schema generiert. Sie experimentieren mit der Erstellung grundlegender Abfragen unter Verwendung der GraphQL-Syntax.
