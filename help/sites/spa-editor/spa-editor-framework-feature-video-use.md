@@ -1,9 +1,9 @@
 ---
 title: Verwenden des SPA-Editors mit AEM Sites
 seo-title: Verwenden des SPA Editor-Frameworks mit AEM Sites
-description: AEM Einzelseitenanwendungs-Editor-Framework bietet Autoren die Möglichkeit, Inhalte für eine Einzelseitenanwendung oder SPA zu bearbeiten. Entwickler, die entweder React- oder Angular-Frameworks verwenden, erstellen eine SPA und ordnen dann Bereiche der SPA AEM Komponenten zu, sodass Autoren vertraute AEM Sites-Bearbeitungswerkzeuge verwenden können.
+description: AEM Framework für den Editor für Einzelseiten-Apps bietet Autoren die Möglichkeit, Inhalte für Einzelseiten-Apps oder -SPA zu bearbeiten. Entwickler, die React- oder Angular-Frameworks verwenden, erstellen eine SPA und ordnen dann Bereiche der SPA AEM Komponenten zu, sodass Autoren vertraute AEM Sites-Bearbeitungswerkzeuge verwenden können.
 sub-product: Sites, Content-Services
-feature: Spa Editor
+feature: SPA-Editor
 topics: authoring, single-page-applications
 audience: all
 doc-type: feature video
@@ -14,10 +14,9 @@ thumbnail: 22229.jpg
 topic: SPA
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '287'
 ht-degree: 12%
 
 ---
@@ -25,25 +24,25 @@ ht-degree: 12%
 
 # Verwenden des SPA-Editors mit AEM Sites {#using-the-spa-editor-with-aem-sites}
 
-Videoüberblick über das Authoring von Inhalten für eine Einzelseitenanwendung in AEM Sites.
+Videoüberblick über das Authoring von Inhalten für eine Einzelseiten-App in AEM Sites.
 
-AEM SPA Editor bietet Autoren die Möglichkeit, Inhalte für eine Einzelseitenanwendung oder einen SPA zu bearbeiten. Entwickler, die das Framework ihrer Wahl verwenden (React oder Angular), erstellen eine SPA und ordnen dann Bereiche der SPA AEM Komponenten zu, sodass Autoren vertraute AEM Sites-Bearbeitungswerkzeuge verwenden können. Das folgende Video zeigt einige der kontextbezogenen Bearbeitungsfunktionen mit der WKND-SPA Beispiel-Site. Das WKND SPA Projekt umfasst sowohl eine React- als auch eine Angular-Implementierung.
+AEM Editor bietet Autoren die Möglichkeit, Inhalte für Einzelseiten-Apps oder -SPA zu bearbeiten. Entwickler, die das Framework ihrer Wahl verwenden (React oder Angular), erstellen eine SPA und ordnen dann Bereiche der SPA AEM Komponenten zu, sodass Autoren vertraute AEM Sites-Bearbeitungswerkzeuge verwenden können. Das folgende Video zeigt einige kontextbezogene Bearbeitungsfunktionen mit der WKND-SPA Beispielsite. Das WKND SPA Projekt umfasst sowohl eine React- als auch eine Angular-Implementierung.
 
 >[!VIDEO](https://video.tv.adobe.com/v/22229?quality=12&learn=on)
 
 >[!NOTE]
 >
-> Für die Funktion zum Editor für Einzelseitenanwendungen (SPA) ist AEM 6.4 Service Pack 2 oder höher erforderlich.
+> Für die Funktion &quot;Single Page Application (SPA) Editor&quot;ist AEM Service Pack 2 (oder höher) 6.4 erforderlich.
 >
-> Der SPA Editor ist die empfohlene Lösung für Projekte, bei denen SPA Framework-basiertes clientseitiges Rendering (z.B. React oder Angular) erforderlich ist.
+> Der SPA Editor ist die empfohlene Lösung für Projekte, die SPA Framework-basiertes Client-seitiges Rendering erfordern (z. B. React oder Angular).
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-Die WKND SPA Implementierung unterstützt nur AEM 6.4.8+, AEM 6.5.5+ und AEM als Cloud Service.
+Die WKND-SPA-Implementierung unterstützt nur AEM 6.4.8+, AEM 6.5.5+ und AEM als Cloud Service.
 
-Laden Sie das entsprechende [WKND SPA Paket](https://github.com/adobe/aem-guides-wknd-spa/releases) auf Grundlage Ihrer Version von AEM herunter und installieren Sie es. Es gibt separate Versionen für **React** und **Angular**.
+Laden Sie das entsprechende [WKND SPA Paket](https://github.com/adobe/aem-guides-wknd-spa/releases) herunter und installieren Sie es basierend auf Ihrer Version von AEM. Es gibt separate Versionen für **React** und **Angular**.
 
-Eine ausführliche Anleitung zum Entwickeln mit dem SPA Editor finden Sie unter:
+Eine detaillierte Anleitung zum Entwickeln mit dem SPA-Editor finden Sie unter:
 
 * [Erste Schritte mit dem AEM SPA-Editor und Angular](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-angular-tutorial/overview.html)
 * [Erste Schritte mit dem AEM SPA-Editor und React](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-react-tutorial/overview.html)
