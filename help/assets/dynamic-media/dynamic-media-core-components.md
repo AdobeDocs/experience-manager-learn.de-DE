@@ -1,17 +1,16 @@
 ---
 title: Verwenden von Dynamic Media mit AEM Sites-Kernkomponenten
-description: Erfahren Sie, wie Sie Dynamic Media mit Adobe Experience Manager Sites verwenden. Die Image-Komponente, die Teil der Experience Manager-Core-Komponenten ist, unterstützt Dynamic Media. Die Image-Komponente ermöglicht es einem Inhaltsersteller, Funktionen von Dynamic Media wie Bildvorgaben, Smart-Zuschneiden und Bildmodifikatoren auf einer AEM Sites-Seite zu verwenden.
+description: Erfahren Sie, wie Sie Dynamic Media mit Adobe Experience Manager Sites verwenden. Die Bildkomponente, die Teil der Experience Manager-Kernkomponenten ist, bietet integrierte Unterstützung für Dynamic Media. Die Bildkomponente ermöglicht es einem Inhaltsautor, Funktionen von Dynamic Media wie Bildvorgaben, smartes Zuschneiden und Bildmodifikatoren auf einer AEM Sites-Seite zu verwenden.
 sub-product: dynamic-media
-feature: Core Components, Smart Crop, Image profiles, Image presets
+feature: Kernkomponenten, Smartes Zuschneiden, Bildprofile, Bildvorgaben
 version: cloud-service
 kt: 6630
-topic: Content Management
+topic: Content Management
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '152'
 ht-degree: 2%
 
 ---
@@ -19,11 +18,11 @@ ht-degree: 2%
 
 # Verwenden von Dynamic Media mit AEM Sites-Kernkomponenten {#dynamic-media-sites-core-components}
 
-Die Image-Komponente, die Teil der Experience Manager-Core-Komponenten ist, unterstützt Dynamic Media. Die Image-Komponente ermöglicht es einem Inhaltsersteller, Funktionen von Dynamic Media wie Bildvorgaben, Smart-Zuschneiden und Bildmodifikatoren auf einer AEM Sites-Seite zu verwenden.
+Die Bildkomponente, die Teil der Experience Manager-Kernkomponenten ist, bietet integrierte Unterstützung für Dynamic Media. Die Bildkomponente ermöglicht es einem Inhaltsautor, Funktionen von Dynamic Media wie Bildvorgaben, smartes Zuschneiden und Bildmodifikatoren auf einer AEM Sites-Seite zu verwenden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/329331/?quality=12&learn=on)
 
 ## Zusätzliche Ressourcen
 
-* [Dokumentation zur Image-Core-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=en#dynamic-media)
+* [Dokumentation zur Kernkomponente &quot;Bild&quot;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=en#dynamic-media)
 * [Dynamic Media-Befehlsreferenz](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=en#image-serving-api)
