@@ -1,6 +1,6 @@
 ---
-title: Integration von Experience Platform Launch und AEM
-description: Experience Platform Launch ist die Tag-Management-Plattform der nächsten Generation der Adobe und die beste Möglichkeit, Adobe Analytics, Zielgruppe, Audience Manager und viele weitere Lösungen bereitzustellen. Hier erhalten Sie einen Überblick über Launch und die empfohlene Integration mit Adobe Experience Manager.
+title: Integrieren von Experience Platform Launch und AEM
+description: Experience Platform Launch ist die Tag-Management-Plattform der nächsten Generation der Adobe und die beste Methode zur Bereitstellung von Adobe Analytics, Target, Audience Manager und vielen weiteren Lösungen. Verschaffen Sie sich einen Überblick über Launch und die empfohlene Integration mit Adobe Experience Manager.
 topics: integrations
 audience: administrator
 doc-type: technical video
@@ -8,13 +8,12 @@ activity: setup
 version: cloud-service
 kt: 5979
 thumbnail: 39090.jpg
-topic: Integrations
+topic: Integrationen
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '140'
 ht-degree: 21%
 
 ---
@@ -22,7 +21,7 @@ ht-degree: 21%
 
 # Integrieren von Experience Platform Launch und AEM {#overview}
 
-Experience Platform Launch ist die Tag-Management-Plattform der nächsten Generation der Adobe und die beste Möglichkeit, Adobe Analytics, Zielgruppe, Audience Manager und viele weitere Lösungen bereitzustellen. Hier erhalten Sie einen Überblick über Launch und die empfohlene Integration mit Adobe Experience Manager.
+Experience Platform Launch ist die Tag-Management-Plattform der nächsten Generation der Adobe und die beste Methode zur Bereitstellung von Adobe Analytics, Target, Audience Manager und vielen weiteren Lösungen. Verschaffen Sie sich einen Überblick über Launch und die empfohlene Integration mit Adobe Experience Manager.
 
 >[!VIDEO](https://video.tv.adobe.com/v/39090?quality=12&learn=on)
 
