@@ -1,7 +1,7 @@
 ---
-title: Speichern des adaptiven Formulars abrufen
+title: Abrufen gespeicherter adaptiver Formulare
 description: Servlet zum Rendern des adaptiven Formulars mit gespeicherten Daten
-feature: Adaptive Forms
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,21 +9,20 @@ activity: implement
 version: 6.4,6.5
 kt: 6553
 thumbnail: 6553.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 3%
+source-wordcount: '106'
+ht-degree: 2%
 
 ---
 
 # Gespeichertes Formular abrufen
 
-Im nächsten Schritt erstellen Sie ein Servlet, das das adaptive Formular mit den gespeicherten Daten und ihren Anlagen wiedergibt.
-Der folgende Servlet-Code wird ausgeführt, nachdem der OTP-Code überprüft wurde. Die mit der eindeutigen Anwendungs-ID verknüpften adaptiven Formulardaten und ihre Dateianhänge werden aus der Datenbank abgerufen. Das Anforderungsobjekt wird mit den gespeicherten Daten des adaptiven Formulars und der Zuordnung der Dateianlagen gefüllt. Die Anforderung wird dann weitergeleitet, um das mit den Originaldaten und Anlagen vorab ausgefüllte Formular &quot;stoeuwithattachments&quot;wiederzugeben.
+Der nächste Schritt besteht darin, ein Servlet zu erstellen, das das adaptive Formular mit den gespeicherten Daten und seinen Anhängen rendert.
+Der folgende Servlet-Code wird ausgeführt, nachdem der OTP-Code überprüft wurde. Die mit der eindeutigen Anwendungs-ID verknüpften adaptiven Formulardaten und ihre Dateianhänge werden aus der Datenbank abgerufen. Das Anfrageobjekt wird mit den gespeicherten adaptiven Formulardaten und der Dateianlagenzuordnung gefüllt. Die Anfrage wird dann weitergeleitet, um das Formular &quot;storepwithattachments&quot;vorab mit den Originaldaten und ihren Anlagen auszufüllen.
 
 ```java
 package store.and.fetch.core.servlets;
