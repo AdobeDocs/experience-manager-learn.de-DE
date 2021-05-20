@@ -1,34 +1,33 @@
 ---
-title: Anpassung des Postfachs
-description: hinzufügen benutzerdefinierter Spalten, um zusätzliche Daten des Workflows mit einer Vorlage anzuzeigen
-feature: Adaptive Forms
+title: Anpassung des Posteingangs
+description: Fügen Sie benutzerdefinierte Spalten hinzu, um mithilfe einer Vorlage zusätzliche Daten aus einem Workflow anzuzeigen
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '294'
 ht-degree: 9%
 
 ---
 
-# Anzeigen von Posteingangsdaten mit einer Vorlage
+# Sichtbare Vorlage zur Anzeige von Posteingangsdaten verwenden
 
-Sie können eine Vorlage verwenden, um die Daten zu formatieren, die in Posteingangsspalten angezeigt werden sollen. In diesem Beispiel werden je nach Wert der Einkommensspalte Symbole für Koral-Ui angezeigt. Der folgende Screenshot zeigt die Verwendung von Symbolen in der Einkommensspalte
+Sie können eine Sichtvorlage verwenden, um die Daten zu formatieren, die in Posteingangsspalten angezeigt werden sollen. In diesem Beispiel werden je nach Wert der Einkommensspalte Symbole für &quot;coral-ui&quot;angezeigt. Der folgende Screenshot zeigt die Verwendung von Symbolen in der Einkommensspalte
 ![Einkommen-Symbole](assets/income-column.PNG)
 
-[Die leicht ](assets/sightly-template.zip) zu bedienende Vorlage zum Anzeigen der benutzerdefinierten Coral-Ui-Symbole ist Teil dieses Artikels.
+[Die visuelle ](assets/sightly-template.zip) Vorlage zum Anzeigen der benutzerdefinierten Coral-Ui-Symbole wird als Teil dieses Artikels bereitgestellt.
 
 ## Sightly-Vorlage
 
-Im Folgenden finden Sie die Vorlage. Der Code in der Vorlage zeigt das Symbol abhängig vom Einkommen an. Die Symbole sind als Teil der [Korallen-UI-Bibliothek](https://helpx.adobe.com/de/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) verfügbar, die mit AEM geliefert wird.
+Im Folgenden finden Sie die visuelle Vorlage. Der Code in der Vorlage zeigt je nach Einkommen ein Symbol an. Die Symbole sind als Teil der [coral ui icon library](https://helpx.adobe.com/de/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) verfügbar, die mit AEM geliefert wird.
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
@@ -47,7 +46,7 @@ Im Folgenden finden Sie die Vorlage. Der Code in der Vorlage zeigt das Symbol ab
 
 Der folgende Code ist die Dienstimplementierung zur Anzeige der Einkommensspalte.
 
-Zeile 12 ordnet die Spalte der Vorlage zu
+Zeile 12 ordnet die Spalte der Sichtvorlage zu
 
 ```java
 import java.util.Map;
@@ -78,21 +77,21 @@ return val;
 }
 ```
 
-## Testen auf dem Server
+## Testen auf Ihrem Server
 
 >[!NOTE]
 >
->In diesem Artikel wird davon ausgegangen, dass Sie den [Beispielworkflow](assets/review-workflow.zip) und das [Beispielformular](assets/snap-form.zip) aus [vorherigen Artikel](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/inbox-customization/add-married-column.md) in dieser Reihe installiert haben.
+>In diesem Artikel wird davon ausgegangen, dass Sie den [Beispiel-Workflow](assets/review-workflow.zip) und das [Beispielformular](assets/snap-form.zip) aus [vorherigen Artikel](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/inbox-customization/add-married-column.md) in dieser Reihe installiert haben.
 
-* [Bei CRX als Administrator anmelden](http://localhost:4502/crx/de/index.jsp)
-* [Vorlage importieren](assets/sightly-template.zip)
-* [Bei AEM Webkonsole anmelden](http://localhost:4502/system/console/bundles)
-* [Anpassungspaket für Beginn und Posteingang bereitstellen](assets/income-column-customization.jar)
+* [Melden Sie sich bei crx als Administrator an](http://localhost:4502/crx/de/index.jsp)
+* [Sichtbare Importvorlage](assets/sightly-template.zip)
+* [Melden Sie sich bei AEM Web Console an](http://localhost:4502/system/console/bundles)
+* [Posteingang-Anpassungs-Bundle bereitstellen und starten](assets/income-column-customization.jar)
 * [Posteingang öffnen](http://localhost:4502/aem/inbox)
-* Öffnen Sie die Admin-Steuerung, indem Sie neben der Schaltfläche Erstellen auf Liste Ansicht klicken
-* hinzufügen Einkommensspalte in Inbox und speichern Sie Ihre Änderungen
+* Öffnen Sie Admin Control, indem Sie auf die Listenansicht neben der Schaltfläche Erstellen klicken.
+* Einkommensspalte zum Posteingang hinzufügen und Ihre Änderungen speichern
 * [Nutzen Sie die Funktion zur Formularvorschau.](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* Wählen Sie _Familienstand_ und senden Sie das Formular
-* [Ansicht-Posteingang](http://localhost:4502/aem/inbox)
+* Wählen Sie den _Familienstand_ aus und senden Sie das Formular
+* [Posteingang anzeigen](http://localhost:4502/aem/inbox)
 
-Beim Senden des Formulars wird der Arbeitsablauf Trigger und dem Benutzer &quot;admin&quot;wird eine Aufgabe zugewiesen. Sie sollten das entsprechende Symbol unter der Einkommensspalte sehen
+Durch das Senden des Formulars wird der Workflow Trigger und eine Aufgabe wird &quot;admin&quot;-Benutzern zugewiesen. Unter der Einkommensspalte sollte das entsprechende Symbol angezeigt werden.
