@@ -1,19 +1,18 @@
 ---
-title: Generieren mehrerer PDFs aus einer Datendatei
-seo-title: Generieren mehrerer PDFs aus einer Datendatei
-feature: Output Service
+title: Erstellen mehrerer PDFs aus einer Datendatei
+seo-title: Erstellen mehrerer PDFs aus einer Datendatei
+feature: Ausgabe-Service
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '501'
+source-wordcount: '499'
 ht-degree: 2%
 
 ---
@@ -21,30 +20,30 @@ ht-degree: 2%
 
 # Generieren eines Satzes von PDF-Dokumenten aus einer XML-Datendatei
 
-OutputService bietet eine Reihe von Methoden zum Erstellen von Dokumenten mit einem Formularentwurf und Daten zum Zusammenführen mit dem Formularentwurf. Im folgenden Artikel wird der Verwendungsfall erläutert, mit dem mehrere PDFs aus einer großen XML mit mehreren einzelnen Datensätzen generiert werden.
-Im Folgenden sehen Sie den Screenshot der XML-Datei, die mehrere Datensätze enthält.
+OutputService bietet eine Reihe von Methoden zum Erstellen von Dokumenten mit einem Formularentwurf und Daten zum Zusammenführen mit dem Formularentwurf. Im folgenden Artikel wird der Anwendungsfall erläutert, mit dem mehrere PDF-Dateien aus einer großen XML-Datei mit mehreren einzelnen Datensätzen generiert werden.
+Im Folgenden finden Sie den Screenshot einer XML-Datei mit mehreren Datensätzen.
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-Die Daten-XML enthält 2 Datensätze. Jeder Datensatz wird durch das form1-Element dargestellt. Diese XML wird an die OutputService [generatePDFOutputBatch-Methode](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) übergeben. Es wird eine Liste der PDF-Dokumente(ein pro Datensatz) erhalten.
-Die Signatur der generatePDFOutputBatch-Methode akzeptiert die folgenden Parameter
+Die Daten-XML enthält 2 Datensätze. Jeder Datensatz wird durch das Element form1 dargestellt. Diese XML-Datei wird an die OutputService-Methode [generatePDFOutputBatch-Methode](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) übergeben. Es wird eine Liste von PDF-Dokumenten (eines pro Datensatz) abgerufen.
+Die Signatur der generatePDFOutputBatch -Methode akzeptiert die folgenden Parameter
 
 * templates - Zuordnung, die die Vorlage enthält, durch einen Schlüssel identifiziert
-* data - Zuordnung mit XML-Dokumenten, identifiziert durch Schlüssel
+* data - Zuordnung mit XML-Datendokumenten, identifiziert durch Schlüssel
 * pdfOutputOptions - Optionen zum Konfigurieren der PDF-Generierung
-* batchOptions - Optionen zum Konfigurieren des Stapels
+* batchOptions - Optionen zum Konfigurieren des Batches
 
 >[!NOTE]
 >
->Dieser Verwendungsfall ist als Live-Beispiel auf dieser [Website](https://forms.enablementadobe.com/content/samples/samples.html?query=0) verfügbar.
+>Dieses Anwendungsbeispiel ist als Live-Beispiel auf dieser [Website](https://forms.enablementadobe.com/content/samples/samples.html?query=0) verfügbar.
 
-## Falldetails{#use-case-details}
+## Anwendungsfalldetails{#use-case-details}
 
-In diesem Fall stellen wir eine einfache Weboberfläche bereit, um die Vorlage und die Datei data(xml) hochzuladen. Sobald der Hochladevorgang abgeschlossen ist und die POST an AEM Servlet gesendet wird. Dieses Servlet extrahiert die Dokumente und ruft die generatePDFOutputBatch-Methode des OutputService auf. Die generierten PDFs werden in eine ZIP-Datei komprimiert und dem Endbenutzer zum Herunterladen vom Webbrowser zur Verfügung gestellt.
+In diesem Anwendungsbeispiel stellen wir eine einfache Web-Oberfläche zum Hochladen der Vorlage und der Datei data(xml) bereit. Sobald der Upload der Dateien abgeschlossen ist und die POST-Anfrage an AEM Servlet gesendet wird. Dieses Servlet extrahiert die Dokumente und ruft die Methode generatePDFOutputBatch des OutputService auf. Die generierten PDFs werden in eine ZIP-Datei komprimiert und dem Endbenutzer zum Herunterladen vom Webbrowser zur Verfügung gestellt.
 
 ## Servlet-Code{#servlet-code}
 
-Im Folgenden finden Sie das Codefragment vom Servlet. Code extrahiert die Vorlage(xdp) und die Datendatei(xml) aus der Anforderung. Die Vorlagendatei wird im Dateisystem gespeichert. Es werden zwei Maps erstellt: templateMap und dataFileMap, die die Vorlagen- bzw. XML(data)-Dateien enthalten. Anschließend wird ein Aufruf zur generateMultipleRecords-Methode des DocumentServices-Dienstes ausgeführt.
+Im Folgenden finden Sie das Code-Snippet aus dem Servlet. Code extrahiert die Vorlage (xdp) und die Datendatei (xml) aus der Anforderung. Die Vorlagendatei wird im Dateisystem gespeichert. Zwei Karten werden erstellt - templateMap und dataFileMap , die die Vorlage und die XML(data)-Dateien enthalten. Anschließend wird die generateMultipleRecords -Methode des DocumentServices-Dienstes aufgerufen.
 
 ```java
 for (final java.util.Map.Entry < String, org.apache.sling.api.request.RequestParameter[] > pairs: params
@@ -77,9 +76,9 @@ Document zippedDocument = documentServices.generateMultiplePdfs(templateMap, dat
 ....
 ```
 
-### Interface-Implementierungscode{#Interface-Implementation-Code}
+### Code für die Implementierung der Benutzeroberfläche{#Interface-Implementation-Code}
 
-Der folgende Code generiert mehrere PDFs mit generatePDFOutputBatch des OutputService und gibt eine ZIP-Datei mit den PDF-Dateien an das aufrufende Servlet zurück.
+Der folgende Code generiert mehrere PDF-Dateien mithilfe des generatePDFOutputBatch des OutputService und gibt eine ZIP-Datei mit den PDF-Dateien an das aufrufende Servlet zurück
 
 ```java
 public Document generateMultiplePdfs(HashMap < String, String > templateMap, HashMap < String, Document > dataFileMap, String saveLocation) {
@@ -128,20 +127,20 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 }
 ```
 
-### Auf Ihrem Server bereitstellen{#Deploy-on-your-server}
+### Bereitstellen auf Ihrem Server{#Deploy-on-your-server}
 
 Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisungen:
 
-* [Laden Sie die ZIP-Dateiinhalte herunter und extrahieren Sie sie in Ihr Dateisystem](assets/mult-records-template-and-xml-file.zip). Diese ZIP-Datei enthält die Vorlage und die XML-Datendatei.
-* [Verweisen Sie Ihren Browser auf die Felix-Webkonsole](http://localhost:4502/system/console/bundles)
+* [Laden Sie den Inhalt der ZIP-Datei herunter und extrahieren Sie ihn in Ihr Dateisystem](assets/mult-records-template-and-xml-file.zip). Diese ZIP-Datei enthält die Vorlage und die XML-Datendatei.
+* [Verweisen Sie Ihren Browser auf die Felix-Webkonsole.](http://localhost:4502/system/console/bundles)
 * [Bereitstellen des DevelopingWithServiceUser-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
-* [Bereitstellen des benutzerdefinierten AEMFormsDocumentServices Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Custom Bundle, das die PDF-Dateien mithilfe der OutputService-API generiert
-* [Verweisen Sie auf den Package Manager Ihres Browsers](http://localhost:4502/crx/packmgr/index.jsp)
+* [Bereitstellen des benutzerdefinierten Bundles AEMFormsDocumentServices Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Custom , das die PDF-Dateien mithilfe der OutputService-API generiert
+* [Verweisen Sie Ihren Browser auf Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
 * [Importieren und installieren Sie das Paket](assets/generate-multiple-pdf-from-xml.zip). Dieses Paket enthält eine HTML-Seite, auf der Sie die Vorlage und die Datendateien ablegen können.
 * [Verweisen Sie Ihren Browser auf MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html?)
-* Ziehen und Ablegen der Vorlage und der XML-Datendatei
+* Ziehen Sie die Vorlage und die XML-Datendatei zusammen.
 * Laden Sie die erstellte ZIP-Datei herunter. Diese ZIP-Datei enthält die vom Output-Dienst generierten PDF-Dateien.
 
 >[!NOTE]
->Es gibt mehrere Möglichkeiten, diese Funktion Trigger. In diesem Beispiel haben wir eine Weboberfläche verwendet, um die Vorlage und die Datendatei zu verschieben, um die Funktionalität zu demonstrieren.
+>Es gibt mehrere Möglichkeiten, diese Funktion Trigger. In diesem Beispiel haben wir eine Web-Oberfläche verwendet, um die Vorlage und die Datendatei abzulegen, um die Funktion zu demonstrieren.
 
