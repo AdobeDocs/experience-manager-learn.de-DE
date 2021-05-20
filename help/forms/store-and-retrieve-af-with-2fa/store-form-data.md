@@ -1,7 +1,7 @@
 ---
 title: Formulardaten speichern
-description: Formulardaten zusammen mit der neuen Anlagenzuordnung in der Datenbank speichern
-feature: Adaptive Forms
+description: Speichern von Formulardaten zusammen mit der neuen Anlagenzuordnung in der Datenbank
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
@@ -9,27 +9,26 @@ activity: implement
 version: 6.3,6.4,6.5
 kt: 6538
 thumbnail: 6538.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 5%
+source-wordcount: '72'
+ht-degree: 4%
 
 ---
 
 # Formulardaten speichern
 
-Im nächsten Schritt erstellen Sie einen Dienst zum Einfügen einer neuen Zeile in die Datenbank, um die Daten des adaptiven Formulars und die dazugehörigen Anlagen zu speichern.
+Als Nächstes erstellen Sie einen Dienst, um eine neue Zeile in die Datenbank einzufügen, in der die Daten des adaptiven Formulars und die zugehörigen Anhänge gespeichert werden.
 Der folgende Screenshot zeigt eine Zeile in der Datenbank.
 
 
-![sample row](assets/sample-row.JPG)
+![Beispielzeile](assets/sample-row.JPG)
 
 
-Mit dem folgenden Code wird eine neue Zeile mit den entsprechenden Daten in die Datenbank eingefügt
+Der folgende Code fügt eine neue Zeile mit den entsprechenden Daten in die Datenbank ein
 
 ```java
 public String storeFormData(String formData, String attachmentsInfo, String telephoneNumber) {
