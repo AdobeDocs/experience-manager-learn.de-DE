@@ -1,10 +1,10 @@
 ---
 title: Hinzufügen von Komponenten zum Bedienfeld "Personen"
 seo-title: Hinzufügen von Komponenten zum Bedienfeld "Personen"
-description: Konfigurieren Sie das Bedienfeld "Personen", indem Sie das Fragment "Details zum Ehegatten"hinzufügen. Es wird eine Regel erstellt, mit der das Fragment zum Ehegatten angezeigt wird, wenn der Familienstand des Antragstellers verheiratet ist.
-seo-description: Konfigurieren Sie das Bedienfeld "Personen", indem Sie das Fragment "Details zum Ehegatten"hinzufügen. Es wird eine Regel erstellt, mit der das Fragment zum Ehegatten angezeigt wird, wenn der Familienstand des Antragstellers verheiratet ist.
+description: Konfigurieren Sie den Bereich Personen , indem Sie das Fragment mit den Ehedetails hinzufügen. Es wird eine Regel erstellt, die das Fragment zum Ehegatten anzeigt, wenn der Familienstand der Kläger verheiratet ist.
+seo-description: Konfigurieren Sie den Bereich Personen , indem Sie das Fragment mit den Ehedetails hinzufügen. Es wird eine Regel erstellt, die das Fragment zum Ehegatten anzeigt, wenn der Familienstand der Kläger verheiratet ist.
 uuid: be5d2cff-797b-44ea-90e9-2423f1ec8983
-feature: Adaptive Forms
+feature: Adaptive Formulare
 topics: authoring
 audience: developer
 doc-type: tutorial
@@ -13,27 +13,26 @@ version: 6.4,6.5
 kt: 4210
 thumbail: 28385.jpg
 discoiquuid: 520c8633-925f-4d3f-b800-ea34710f68d7
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '116'
-ht-degree: 3%
+source-wordcount: '114'
+ht-degree: 2%
 
 ---
 
 
-# Hinzufügen von Komponenten zum Personen-Bedienfeld {#adding-components-to-people-panel}
+# Hinzufügen von Komponenten zum Bedienfeld &quot;Personen&quot;{#adding-components-to-people-panel}
 
-Konfigurieren Sie das Bedienfeld &quot;Personen&quot;, indem Sie das Fragment &quot;Details zum Ehegatten&quot;hinzufügen. Es wird eine Regel erstellt, mit der das Fragment zum Ehegatten angezeigt wird, wenn der Familienstand des Antragstellers verheiratet ist.
+Konfigurieren Sie den Bereich Personen , indem Sie das Fragment mit den Ehedetails hinzufügen. Es wird eine Regel erstellt, die das Fragment zum Ehegatten anzeigt, wenn der Familienstand der Kläger verheiratet ist.
 
 **Personen-Bedienfeld in AEM Forms 6.3 und 6.4 konfigurieren**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22193?quality=9&learn=on)
 
-**Personen-Bedienfeld in AEM Forms 6.5 und höher konfigurieren**
+**Konfigurieren des Personen-Bedienfelds in AEM Forms 6.5 und höher**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28385)
 
