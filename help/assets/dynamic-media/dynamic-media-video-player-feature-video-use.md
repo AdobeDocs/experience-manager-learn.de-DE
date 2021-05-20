@@ -1,16 +1,15 @@
 ---
 title: Verwenden des Video-Players in AEM Dynamic Media
-description: AEM Dynamic Media-Videoplayer, der früher zur Unterstützung des adaptiven Video-Streaming auf Desktop-Clients und Browsern auf Flash-Laufzeitumgebung angewiesen war, wurde beim Flash-basierten Content-Streaming aggressiver. Mit der Einführung von HLS (Apple's HTTP Live Streaming Video Versand Protocol) können Inhalte jetzt gestreamt werden, ohne auf Flash angewiesen zu sein.
+description: AEM Dynamic Media-Videoplayer, der bisher zur Unterstützung des adaptiven Video-Streaming auf Desktop-Clients und Browsern auf Flash-Laufzeitumgebung angewiesen war, wurde beim Flash-basierten Content-Streaming aggressiver. Mit der Einführung von HLS (dem HTTP Live Streaming Video-Versandprotokoll von Apple) können Inhalte jetzt gestreamt werden, ohne auf Flash angewiesen zu sein.
 sub-product: dynamic-media
-feature: Video Profiles
+feature: Videoprofile
 version: 6.3, 6.4, 6.5
-topic: Content Management
+topic: Content Management
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '218'
 ht-degree: 34%
 
 ---
@@ -18,15 +17,15 @@ ht-degree: 34%
 
 # Verwenden des Video-Players in AEM Dynamic Media{#using-the-video-player-in-aem-dynamic-media}
 
-AEM Dynamic Media-Videoplayer, der früher zur Unterstützung des adaptiven Video-Streaming auf Desktop-Clients und Browsern auf Flash-Laufzeitumgebung angewiesen war, wurde beim Flash-basierten Content-Streaming aggressiver. Mit der Einführung von HLS (Apple&#39;s HTTP Live Streaming Video Versand Protocol) können Inhalte jetzt gestreamt werden, ohne auf Flash angewiesen zu sein.
+AEM Dynamic Media-Videoplayer, der bisher zur Unterstützung des adaptiven Video-Streaming auf Desktop-Clients und Browsern auf Flash-Laufzeitumgebung angewiesen war, wurde beim Flash-basierten Content-Streaming aggressiver. Mit der Einführung von HLS (dem HTTP Live Streaming Video-Versandprotokoll von Apple) können Inhalte jetzt gestreamt werden, ohne auf Flash angewiesen zu sein.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
 
-## Schneller Einblick in den Videoplayer für Nicht-Flash {#quick-look-into-non-flash-video-player}
+## Schnellzugriff auf Nicht-Flash-Videoplayer {#quick-look-into-non-flash-video-player}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
 
-Die folgende HLS-Browserunterstützung gilt für nicht unterstützte Browser als Progressiv-Video-Versand
+Die HLS-Browserunterstützung sieht wie folgt aus: Für nicht unterstützte Browser wechseln wir zurück zur progressiven Videobereitstellung
 
 <table> 
  <thead> 
