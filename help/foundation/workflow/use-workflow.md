@@ -1,6 +1,6 @@
 ---
-title: Verwendung des Arbeitsablaufs in AEM
-description: AEM Workflow bietet eine Möglichkeit zur Zusammenarbeit, Verwaltung und Verarbeitung von Inhalten in AEM.
+title: Verwendung von Workflows in AEM
+description: AEM Workflow bietet eine Möglichkeit, Inhalte in AEM zusammenzuarbeiten, zu verwalten und zu verarbeiten.
 version: 6.5, cloud-service
 feature: Workflow
 topic: Content Management
@@ -16,12 +16,12 @@ ht-degree: 4%
 ---
 
 
-# Arbeitsablauf verwenden
+# Workflow verwenden
 
-AEM Workflow bietet eine Möglichkeit zur Zusammenarbeit, Verwaltung und Verarbeitung von Inhalten in AEM.
+AEM Workflow bietet eine Möglichkeit, Inhalte in AEM zusammenzuarbeiten, zu verwalten und zu verarbeiten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27848/?quality=12&learn=on)
 
 >[!NOTE]
 >
-> Video verwendet AEM Sites, um die Metadatenfunktion für den Workflow-Status zu demonstrieren. Workflow-Status-Metadaten gelten auch für AEM Assets. Um den Workflow-Status für Assets anzuzeigen, stellen Sie sicher, dass die Ansicht der Liste aktiviert ist.
+> Video verwendet AEM Sites, um die Workflow-Status-Metadatenfunktion zu demonstrieren. Workflow-Status-Metadaten können auch auf AEM Assets angewendet werden. Um den Workflow-Status für Assets anzuzeigen, stellen Sie sicher, dass die Listenansicht aktiviert ist.
