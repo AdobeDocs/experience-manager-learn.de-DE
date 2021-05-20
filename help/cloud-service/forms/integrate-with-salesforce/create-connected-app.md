@@ -1,29 +1,28 @@
 ---
-title: Erstellen Sie eine mit Salesforce verbundene App.
-description: Mit der vernetzten App können Sie Salesforce mit Drittanbieteranwendungen wie AEM Forms und Salesforce integrieren.
+title: Mit Salesforce verbundene App erstellen.
+description: Mit der Connected App können Sie Salesforce mit Drittanbieteranwendungen wie AEM Forms mit Salesforce integrieren.
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: cloud-service
-feature: Adaptive Forms
-topic: Development
+feature: Adaptive Formulare
+topic: Entwicklung
 kt: 7152
 thumbnail: 331757.jpg
-translation-type: tm+mt
 source-git-commit: 1b4512fdb047bec15d72a8278fd0ce5dfafa309f
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 4%
+source-wordcount: '97'
+ht-degree: 3%
 
 ---
 
 
-# Angeschlossene App erstellen
+# Connected App erstellen
 
-Eine verbundene App ist ein Framework, das eine externe Anwendung in die Integration mit Salesforce mithilfe von APIs und Standardprotokollen wie SAML, OAuth und OpenID Connect ermöglicht. Angeschlossene Apps verwenden diese Protokolle, um sich zu authentifizieren, zu autorisieren und Single Sign-On (SSO) für externe Apps bereitzustellen.
+Eine verbundene App ist ein Framework, mit dem eine externe Anwendung mithilfe von APIs und Standardprotokollen wie SAML, OAuth und OpenID Connect in Salesforce integriert werden kann. Verbundene Apps verwenden diese Protokolle, um externe Apps zu authentifizieren, zu autorisieren und Single Sign-On (SSO) bereitzustellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/331757?quality=12&learn=on)
 
 >[!NOTE]
->Stellen Sie sicher, dass Sie ein Konto in der [Salesforce Developer Edition](https://developer.salesforce.com/signup) erstellen, da die REST-APIs in der Entwicklerversion standardmäßig aktiviert sind.
+>Stellen Sie sicher, dass Sie ein Konto in der [Salesforce Developer Edition](https://developer.salesforce.com/signup) erstellen, da die REST-APIs in der Entwicklerbearbeitung standardmäßig aktiviert sind.
