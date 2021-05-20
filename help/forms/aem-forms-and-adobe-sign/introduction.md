@@ -1,19 +1,18 @@
 ---
 title: Verwenden von AEM Forms mit Adobe Sign
-description: Adobe Sign und AEM Forms ermöglichen die Automatisierung komplexer Transaktionen und die Einbeziehung legaler E-Signaturen als Teil einer nahtlosen digitalen Erfahrung.
+description: Adobe Sign und AEM Forms ermöglichen die Automatisierung komplexer Transaktionen und die Einbeziehung legaler E-Signaturen als Teil eines nahtlosen digitalen Erlebnisses.
 feature: Adaptive Forms,Adobe Sign
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '163'
 ht-degree: 40%
 
 ---
@@ -23,9 +22,9 @@ ht-degree: 40%
 Adobe Sign aktiviert Arbeitsabläufe für E-Signaturen für adaptive Formulare. E-Signaturen verbessern die Workflows bei der Verarbeitung von Dokumenten in den Bereichen Recht, Vertrieb, Gehaltsabrechnung, Personalverwaltung u. a.
 Die Integration zwischen AEM Forms und Adobe Sign ermöglicht Ihnen Folgendes:
 
-* Verwenden Sie Adaptives Forms, um Daten zu erfassen und automatisch generiertes Dokument aus Datensatz(DoR) für Unterschriften vorzustellen
-* Erstellen Sie adaptives Forms basierend auf Ihrer PDF-Vorlage. Daten mit der PDF-Vorlage zusammenführen und für Unterschriften gleich darstellen
-* Senden von Dokumenten zum Signieren mit der Workflow-Komponente &quot;Dokument signieren&quot;
+* Verwenden Sie Adaptive Forms, um Daten zu erfassen und automatisch generiertes Datensatzdokument (DoR) für Signaturen anzuzeigen.
+* Erstellen Sie Adaptive Forms basierend auf Ihrer PDF-Vorlage. Zusammenführen der Daten mit der PDF-Vorlage und Anzeigen derselben für Unterschriften
+* Dokumente zum Signieren mit der Workflow-Komponente &quot;Dokument unterschreiben&quot;senden
 
 ## Voraussetzungen
 
