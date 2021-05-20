@@ -1,6 +1,6 @@
 ---
 title: Erstellen eines Workflows zum Überprüfen der gesendeten Daten
-description: Erstellen AEM Workflow-Modells mit AEM Forms-Workflow-Komponenten zum Überprüfen der gesendeten Daten.
+description: Erstellen AEM Workflow-Modells mit AEM Forms-Workflow-Komponenten zum Überprüfen gesendeter Daten.
 sub-product: Formulare
 feature: Workflow
 topics: integrations
@@ -10,13 +10,12 @@ activity: setup
 version: 6.4,6.5
 kt: 4271
 thumbnail: 40242.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '143'
 ht-degree: 6%
 
 ---
@@ -24,17 +23,17 @@ ht-degree: 6%
 
 # Erstellen eines Workflows zum Überprüfen der gesendeten Daten
 
-Workflows werden normalerweise verwendet, um gesendete Daten zur Überprüfung und Genehmigung weiterzuleiten. Workflows werden mit dem Workflow-Editor in AEM erstellt. Die Workflows kann beim Senden des adaptiven Formulars ausgelöst werden.
+Workflows werden normalerweise verwendet, um gesendete Daten zur Überprüfung und Genehmigung weiterzuleiten. Workflows werden mithilfe des Workflow-Editors in AEM erstellt. Die Workflows können beim Senden des adaptiven Formulars ausgelöst werden.
 
 ## Voraussetzung
 
-Vergewissern Sie sich bitte, dass Sie eine funktionierende Instanz von AEM Forms haben. Folgen Sie dem [Installationshandbuch](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html), um AEM Forms zu installieren und zu konfigurieren.
+Stellen Sie sicher, dass Sie über eine funktionierende Instanz von AEM Forms verfügen. Folgen Sie dem [Installationshandbuch](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html), um AEM Forms zu installieren und zu konfigurieren.
 
-Im folgenden Video wird die Erstellung eines Review- und Genehmigungsarbeitsablaufs mit AEM Forms Components erläutert
+Im folgenden Video wird die Erstellung des Arbeitsablaufs für Überprüfung und Genehmigung mithilfe von AEM Forms-Komponenten erläutert
 >[!VIDEO](https://video.tv.adobe.com/v/40242/?quality=9&learn=on)
 
 
-Wenn Sie aus irgendeinem Grund nicht in der Lage sind, den Workflow zu erstellen, können Sie den abgeschlossenen Workflow von [hier](assets/review-submitted-data-workflow.zip) herunterladen und dasselbe mit [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) in Ihre AEM Instanz importieren.
+Wenn Sie aus irgendeinem Grund den Workflow nicht erstellen können, können Sie den abgeschlossenen Workflow von [hier](assets/review-submitted-data-workflow.zip) herunterladen und denselben mit [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) in Ihre AEM-Instanz importieren.
 
 
 
