@@ -1,9 +1,9 @@
 ---
-title: Authoring- und Veröffentlichungsarchitektur mit AEM GraphQL
-description: Erfahren Sie, wie und wann Sie AEM Author- und Publish-Umgebung bei der Verwendung AEM GraphQL-APIs nutzen können.
+title: Autoren- und Veröffentlichungsarchitektur mit AEM GraphQL
+description: Erfahren Sie, wie und wann Sie AEM-Autoren- und Veröffentlichungsumgebungen bei der Verwendung AEM GraphQL-APIs nutzen können.
 sub-product: Assets
 version: cloud-service
-topic: Kopflos, Content-Management
+topic: Headless, Content Management
 feature: Inhaltsfragmente, GraphQL-APIs
 role: Developer
 level: Beginner
@@ -17,14 +17,14 @@ ht-degree: 1%
 ---
 
 
-# Authoring- und Veröffentlichungsarchitektur
+# Architektur der Autoren- und Veröffentlichungsinstanz
 
-Erfahren Sie, wie und wann Sie AEM Author- und Publish-Umgebung bei der Verwendung AEM GraphQL-APIs nutzen können.
+Erfahren Sie, wie und wann Sie AEM-Autoren- und Veröffentlichungsumgebungen bei der Verwendung AEM GraphQL-APIs nutzen können.
 
 In diesem Video werden Sie:
 
-+ Verstehen Sie die Architektur von AEM Author und Publish und wie Inhalte veröffentlicht werden.
-+ Bewährte Verfahren für kostenlosen Versand mit einer AEM Publish-Umgebung
-+ Untersuchen Sie, wie die Authoring-Umgebung als Vorschau für eine Anwendung verwendet werden kann.
++ Grundlegendes zur Architektur von AEM Author and Publish und zur Veröffentlichung von Inhalten
++ Best Practices für die Headless-Bereitstellung mit einer AEM-Veröffentlichungsumgebung
++ Erfahren Sie, wie die Autorenumgebung als Vorschau für eine Anwendung verwendet werden kann.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333296/?quality=12&learn=on)
