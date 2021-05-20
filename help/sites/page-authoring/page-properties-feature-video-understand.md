@@ -1,9 +1,9 @@
 ---
-title: Seiteneigenschaften in AEM Sites
-seo-title: Seiteneigenschaften in Adobe Experience Manager Sites
-description: Im folgenden Video werden die Seiteneigenschaften-Metadaten vorgestellt, die mit einer Seite in Adobe Experience Manager verknüpft sind.
-seo-description: 'Im folgenden Video werden die Seiteneigenschaften-Metadaten vorgestellt, die mit einer Seite in Adobe Experience Manager verknüpft sind. '
-feature: Page Editor
+title: Grundlegendes zu Seiteneigenschaften in AEM Sites
+seo-title: Grundlegendes zu Seiteneigenschaften in Adobe Experience Manager Sites
+description: Im folgenden Video werden die Seiteneigenschaften-Metadaten vorgestellt, die einer Seite in Adobe Experience Manager zugeordnet sind.
+seo-description: 'Im folgenden Video werden die Seiteneigenschaften-Metadaten vorgestellt, die einer Seite in Adobe Experience Manager zugeordnet sind. '
+feature: Seiteneditor
 topics: authoring, metadata
 audience: author, marketer
 doc-type: feature video
@@ -11,25 +11,24 @@ activity: understand
 version: 6.3, 6.4, 6.5
 kt: 4321
 thumbnail: 32192.jpg
-topic: Content Management
+topic: Content Management
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 40%
+source-wordcount: '174'
+ht-degree: 41%
 
 ---
 
 
-# Die Seiteneigenschaften {#understanding-page-properties-aem-sites}
+# Verstehen der Seiteneigenschaften {#understanding-page-properties-aem-sites}
 
 Im folgenden Video werden die Seiteneigenschaften vorgestellt, die einer Seite in Adobe Experience Manager zugeordnet sind.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32192?quality=12&learn=on)
 
-In diesem Video werden die folgenden Elemente der Seiteneigenschaft behandelt:
+In diesem Video werden die folgenden Seiteneigenschaftselemente behandelt:
 
 * Einfach
    * Titel und Tags
@@ -63,6 +62,6 @@ In diesem Video werden die folgenden Elemente der Seiteneigenschaft behandelt:
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Dokumentation zum Bearbeiten der Seiteneigenschaften](https://docs.adobe.com/content/help/de-DE/experience-manager-65/authoring/authoring/editing-page-properties.html)
+* [Bearbeiten der Dokumentation zu den Seiteneigenschaften](https://docs.adobe.com/content/help/de-DE/experience-manager-65/authoring/authoring/editing-page-properties.html)
 * [Bearbeiten der Dokumentation zum Seiteninhalt](https://docs.adobe.com/content/help/de-DE/experience-manager-65/authoring/authoring/editing-content.translate.html)
-* [Site-Authoring-Benutzerhandbuch](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/home.html?topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
+* [Sites-Authoring-Benutzerhandbuch](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/home.html?topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
