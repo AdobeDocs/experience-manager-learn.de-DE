@@ -1,31 +1,30 @@
 ---
-title: Arbeitsablauf für Trigger AEM HTML5-Formularübermittlung
+title: Trigger AEM Workflow bei der Übermittlung von HTML5-Formularen
 seo-title: Trigger AEM Workflow bei der Übermittlung von HTML5-Formularen
-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie das Mobile-Formular an den Trigger AEM Arbeitsablauf
-seo-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offlinemodus fort und senden Sie das Mobile-Formular an den Trigger AEM Arbeitsablauf
+description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offline-Modus fort und senden Sie das mobile Formular an den Trigger AEM Workflow
+seo-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offline-Modus fort und senden Sie das mobile Formular an den Trigger AEM Workflow
 feature: Mobile Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '258'
 ht-degree: 1%
 
 ---
 
 
-# PDF-Übermittlung verarbeiten
+# Verarbeiten von PDF-Übermittlungen
 
-In diesem Teil erstellen wir ein einfaches Servlet, das auf AEM Publish ausgeführt wird, um die PDF-Übermittlung von Acrobat/Reader zu verarbeiten. Dieses Servlet stellt wiederum eine HTTP-POST an ein Servlet, das in einer AEM Autoreninstanz ausgeführt wird, die für das Speichern der gesendeten Daten als `nt:file`-Knoten im Repository von AEM Author zuständig ist.
+In diesem Teil erstellen wir ein einfaches Servlet, das auf AEM Publish ausgeführt wird, um die PDF-Übermittlung von Acrobat/Reader zu verarbeiten. Dieses Servlet sendet wiederum eine HTTP-POST-Anfrage an ein Servlet, das in einer AEM Autoreninstanz ausgeführt wird, die für das Speichern der gesendeten Daten als `nt:file`-Knoten im Repository der AEM-Autoreninstanz verantwortlich ist.
 
-Im Folgenden finden Sie den Code des Servlets, das die PDF-Übermittlung verarbeitet. In diesem Servlet führen wir einen POST-Aufruf an ein Servlet aus, das auf **/bin/startworkflow** in einer AEM Author-Instanz gemountet ist. Dieses Servlet speichert die Formulardaten im Repository von AEM Author.
+Im Folgenden finden Sie den Code des Servlets, das die PDF-Übermittlung verarbeitet. In diesem Servlet führen wir einen POST-Aufruf an ein Servlet durch, das auf **/bin/startworkflow** in einer AEM-Autoreninstanz bereitgestellt wird. Dieses Servlet speichert die Formulardaten im Repository der AEM-Autoreninstanz.
 
 
 ## AEM Publish-Servlet
@@ -103,9 +102,9 @@ public class HandlePDFSubmission extends SlingAllMethodsServlet {
 }
 ```
 
-## AEM Authoring-Servlet
+## AEM Author-Servlet
 
-Der nächste Schritt besteht darin, die gesendeten Daten im Repository von AEM Author zu speichern. Das auf `/bin/startworkflow` bereitgestellte Servlet speichert die gesendeten Daten.
+Der nächste Schritt besteht darin, die gesendeten Daten im Repository der AEM-Autoreninstanz zu speichern. Das auf `/bin/startworkflow` bereitgestellte Servlet speichert die gesendeten Daten.
 
 ```java
 import java.io.BufferedReader;
@@ -203,7 +202,7 @@ public class StartWorkflow extends SlingAllMethodsServlet {
 }
 ```
 
-Ein AEM Workflow-Starter wird für den Trigger jedes Mal konfiguriert, wenn eine neue Ressource des Typs `nt:file` unter dem Knoten `/content/pdfsubmissions` erstellt wird. Dieser Arbeitsablauf erstellt nicht interaktive oder statische PDF-Dateien, indem die gesendeten Daten mit der xdp-Vorlage zusammengeführt werden. Die generierte PDF wird dann einem Benutzer zur Überprüfung und Genehmigung zugewiesen.
+Ein AEM Workflow-Starter wird so konfiguriert, dass er jedes Mal, wenn eine neue Ressource des Typs `nt:file` unter dem Knoten `/content/pdfsubmissions` erstellt wird, zum Trigger wird. Dieser Workflow erstellt nicht interaktive oder statische PDF-Dateien, indem die gesendeten Daten mit der xdp-Vorlage zusammengeführt werden. Das generierte PDF wird dann einem Benutzer zur Überprüfung und Genehmigung zugewiesen.
 
-Um die gesendeten Daten unter dem Knoten `/content/pdfsubmissions` zu speichern, verwenden wir den Dienst `GetResolver` OSGi, um die gesendeten Daten mit dem `fd-service`-Systembenutzer zu speichern, der in jeder AEM Forms-Installation verfügbar ist.
+Um die übermittelten Daten unter dem Knoten `/content/pdfsubmissions` zu speichern, verwenden wir den OSGi-Dienst `GetResolver`, der es uns ermöglicht, die übermittelten Daten mit dem Systembenutzer `fd-service` zu speichern, der in jeder AEM Forms-Installation verfügbar ist.
 
