@@ -1,27 +1,26 @@
 ---
 title: Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank
-description: Lernprogramm mit mehreren Teilen, um Sie durch die Schritte zum Speichern und Abrufen von Formulardaten zu führen
-feature: Adaptive Forms
+description: Mehrteiliges Tutorial, das Sie durch die Schritte führt, die zum Speichern und Abrufen von Formulardaten erforderlich sind
+feature: Adaptive Formulare
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.3,6.4,6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '98'
-ht-degree: 5%
+source-wordcount: '96'
+ht-degree: 4%
 
 ---
 
 
-# OSGi-Dienst zum Abrufen von Daten erstellen
+# Erstellen eines OSGi-Dienstes zum Abrufen von Daten
 
-Der folgende Code wurde geschrieben, um die gespeicherten Daten des adaptiven Formulars zu speichern und abzurufen. Eine einfache Abfrage wird verwendet, um die mit einer bestimmten GUID verknüpften adaptiven Formulardaten abzurufen. Die abgerufenen Daten werden dann an die aufrufende Anwendung zurückgegeben. Dieselbe Datenquelle, die im vorherigen Schritt erstellt wurde, wird in diesem Code referenziert
+Der folgende Code wurde geschrieben, um die gespeicherten adaptiven Formulardaten zu speichern und abzurufen. Eine einfache Abfrage wird verwendet, um die mit einer bestimmten GUID verknüpften adaptiven Formulardaten abzurufen. Die abgerufenen Daten werden dann an die aufrufende Anwendung zurückgegeben. Dieselbe Datenquelle, die im vorherigen Schritt erstellt wurde, wird in diesem Code referenziert
 
 
 ```java
@@ -158,7 +157,7 @@ public class FetchFormData implements com.aemforms.saveandcontinue.core.FetchSto
 
 ## Benutzeroberfläche
 
-Im Folgenden finden Sie die verwendete Schnittstellendeklaration
+Im Folgenden finden Sie die verwendete Schnittstellendeklaration.
 
 ```java
 package com.aemforms.saveandcontinue.core;
