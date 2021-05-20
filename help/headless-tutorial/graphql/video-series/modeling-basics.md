@@ -1,9 +1,9 @@
 ---
-title: Grundlagen zur GraphQL-Modellierung
+title: GraphQL-Modellierungsgrundlagen
 description: Erfahren Sie, wie Sie Inhaltsfragmente in Adobe Experience Manager (AEM) für die Verwendung mit GraphQL definieren und verwenden.
 sub-product: Assets
 version: cloud-service
-topic: Kopflos, Content-Management
+topic: Headless, Content Management
 feature: Inhaltsfragmente, GraphQL-APIs
 role: Developer
 level: Beginner
@@ -17,7 +17,7 @@ ht-degree: 1%
 ---
 
 
-# Grundlagen zur GraphQL-Modellierung
+# GraphQL-Modellierungsgrundlagen
 
 Erfahren Sie, wie Sie Inhaltsfragmente in Adobe Experience Manager (AEM) für die Verwendung mit GraphQL definieren und verwenden.
 
@@ -25,6 +25,6 @@ In diesem Video werden Sie:
 
 + Erfahren Sie, wie Sie ein Inhaltsfragmentmodell erstellen und definieren
 + Erfahren Sie mehr über die verschiedenen Datentypen und Überprüfungen, die zum Erstellen des Inhaltsfragmentmodells verwendet werden
-+ Verstehen Sie, wie das Inhaltsfragmentmodell die GraphQL API beeinflusst.
++ Verstehen Sie, wie das Inhaltsfragmentmodell die GraphQL-API steuert.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332858/?quality=12&learn=on)
