@@ -1,38 +1,37 @@
 ---
-title: Indizes mithilfe von oak-run.jar verwalten
-description: Der index-Befehl von oak-run.jar fasst eine Reihe von Funktionen zusammen, um Oak-Indizes in AEM zu verwalten, von der Erfassung von Indexstatistiken über die Durchführung von Indexkonsistenzprüfungen bis zum erneuten/Indizieren von Indizes selbst.
+title: Verwenden Sie oak-run.jar zum Verwalten von Indizes
+description: Der Indexbefehl von oak-run.jar konsolidiert eine Reihe von Funktionen zur Verwaltung von Oak-Indizes in AEM, von der Erfassung von Indexstatistiken, der Durchführung von Indexkonsistenzprüfungen und der Neuindizierung/Indizierung von Indizes selbst.
 version: 6.4, 6.5
-feature: Search
+feature: Suchen
 topics: search
 activity: use
 audience: architect, developer, implementer
 doc-type: technical video
-topic: Performance
+topic: Leistung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 4%
+source-wordcount: '451'
+ht-degree: 3%
 
 ---
 
 
-# Indizes mithilfe von oak-run.jar verwalten
+# Verwenden Sie oak-run.jar zum Verwalten von Indizes
 
-[!DNL oak-run.jar]Der Befehl index fasst eine Reihe von Funktionen zusammen, um  [!DNL Oak]200 Indizes in AEM zu verwalten, von der Erfassung von Indexstatistiken über die Durchführung von Indexkonsistenzprüfungen bis hin zum erneuten/Indizieren von Indizes selbst.
+[!DNL oak-run.jar]Der Indexbefehl von umfasst eine Reihe von Funktionen, mit denen  [!DNL Oak]200 Indizes in AEM verwaltet werden können, von der Erfassung von Indexstatistiken über die Durchführung von Indexkonsistenzprüfungen bis hin zur Neuindizierung/Indizierung von Indizes selbst.
 
 >[!NOTE]
 >
->In diesem Artikel und Videos werden die Begriffe Indizierung und Neuindizierung synonym verwendet und als dieselbe Operation betrachtet.
+>In diesem Artikel und in Videos werden die Begriffe Indizierung und Neuindizierung synonym verwendet und als derselbe Vorgang betrachtet.
 
-## [!DNL oak-run.jar] Grundlagen zu Indexbefehlen
+## [!DNL oak-run.jar] Grundlagen zum Index-Befehl
 
 >[!VIDEO](https://video.tv.adobe.com/v/21475/?quality=9&learn=on)
 
-* Die verwendete Version von [[!DNL oak-run.jar]](https://repository.apache.org/service/local/artifact/maven/redirect?r=releases&amp;g=org.apache.jackrabbit&amp;a=oak-run&amp;v=1.8.0) muss mit der Version von Oak übereinstimmen, die auf der AEM Instanz verwendet wird.
-* Bei der Verwaltung von Indizes mit [!DNL oak-run.jar] wird der Befehl **[!DNL index]** mit verschiedenen Flags verwendet, um verschiedene Vorgänge zu unterstützen.
+* Die verwendete Version von [[!DNL oak-run.jar]](https://repository.apache.org/service/local/artifact/maven/redirect?r=releases&amp;g=org.apache.jackrabbit&amp;a=oak-run&amp;v=1.8.0) muss mit der Version von Oak übereinstimmen, die in der AEM-Instanz verwendet wird.
+* Die Verwaltung von Indizes mit [!DNL oak-run.jar] nutzt den Befehl **[!DNL index]** mit verschiedenen Flags, um verschiedene Vorgänge zu unterstützen.
 
    * `java -jar oak-run*.jar index ...`
 
@@ -43,41 +42,41 @@ ht-degree: 4%
 * `oak-run.jar` sichert alle Indexdefinitionen, wichtige Indexstatistiken und Indexinhalte für Offline-Analysen. 
 * Die Indexstatistikerfassung ist sicher für die Ausführung in AEM Instanzen.
 
-## Index-Konsistenzprüfung
+## Indexkonsistenzprüfung
 
 >[!VIDEO](https://video.tv.adobe.com/v/21476/?quality=12&learn=on)
 
-* `oak-run.jar` bestimmt schnell, ob lucene Oak-Indizes beschädigt sind.
-* Die Konsistenzprüfung kann auf AEM Instanz ausgeführt werden, auf der Konsistenzprüfstufen 1 und 2 angewendet werden.
+* `oak-run.jar` schnell feststellen, ob Lucene Oak-Indizes beschädigt sind.
+* Die Konsistenzprüfung ist sicher, in AEM Instanz ausgeführt zu werden, um Konsistenzprüfungen auf den Ebenen 1 und 2 durchzuführen.
 
 ## TarMK Online-Indizierung mit [!DNL oak-run.jar] {#tarmkonlineindexingwithoakrunjar}
 
 >[!VIDEO](https://video.tv.adobe.com/v/21479/?quality=12&learn=on)
 
-* Die Online-Indizierung von [!DNL TarMK] mit [!DNL oak-run.jar] ist schneller als die Einstellung von `reindex=true` auf dem `oak:queryIndexDefinition`-Knoten. Trotz dieser Leistungssteigerung erfordert die Online-Indizierung mit [!DNL oak-run.jar] noch ein Wartungsfenster, um die Indizierung durchzuführen.
+* Die Online-Indizierung von [!DNL TarMK] mit [!DNL oak-run.jar] ist schneller als die Einstellung von `reindex=true` auf dem Knoten `oak:queryIndexDefinition` . Trotz dieser Leistungssteigerung erfordert die Online-Indizierung mit [!DNL oak-run.jar] weiterhin ein Wartungsfenster, um die Indizierung durchzuführen.
 
-* Die Online-Indizierung von [!DNL TarMK] mit [!DNL oak-run.jar] sollte **nicht** für AEM Instanzen außerhalb des AEM Instanzwartungsfensters ausgeführt werden.
+* Die Online-Indizierung von [!DNL TarMK] mit [!DNL oak-run.jar] sollte **not** für AEM Instanzen außerhalb des Wartungsfensters AEM Instanzen ausgeführt werden.
 
 ## TarMK Offline-Indizierung mit oak-run.jar
 
 >[!VIDEO](https://video.tv.adobe.com/v/21478/?quality=12&learn=on)
 
-* Die Offline-Indizierung von [!DNL TarMK] mit [!DNL oak-run.jar] ist der einfachste [!DNL oak-run.jar]-basierte Indexierungsansatz für [!DNL TarMK], da hierfür ein einzelner [!DNL oak-run.jar]-Befehl erforderlich ist. Die AEM Instanz muss jedoch beendet werden.
+* Die Offline-Indizierung von [!DNL TarMK] mit [!DNL oak-run.jar] ist der einfachste [!DNL oak-run.jar]-basierte Indizierungsansatz für [!DNL TarMK], da ein einzelner [!DNL oak-run.jar]-Befehl erforderlich ist. Es ist jedoch erforderlich, dass die AEM-Instanz heruntergefahren wird.
 
 ## TarMK Out-of-Band-Indizierung mit oak-run.jar
 
 >[!VIDEO](https://video.tv.adobe.com/v/21480/?quality=12&learn=on)
 
-* Die Out-of-Band-Indizierung bei [!DNL TarMK] mit [!DNL oak-run.jar] minimiert die Auswirkungen der Indexierung bei AEM-Instanzen in Gebrauch.
-* Die Out-of-Band-Indizierung ist der empfohlene Indexierungsansatz für AEM Installationen, bei denen die Zeit zum Neuindizieren/Indexieren die verfügbaren Wartungsfenster überschreitet.
+* Die Out-of-Band-Indizierung auf [!DNL TarMK] mit [!DNL oak-run.jar] minimiert die Auswirkungen der Indizierung auf AEM-Instanzen im Betrieb.
+* Die Out-of-Band-Indizierung ist der empfohlene Indizierungsansatz für AEM Installationen, bei denen die Zeit für die Neuindizierung/Indizierung die verfügbaren Wartungsfenster überschreitet.
 
 ## MongoMK Online-Indizierung mit oak-run.jar
 
-* Der Online-Index mit [!DNL oak-run.jar] auf [!DNL MongoMK] und [!DNL RDBMK] ist die empfohlene Methode für die Neuindizierung von [!DNL MongoMK]- (und [!DNL RDBMK]) AEM Installationen. **Es sollte keine andere Methode für  [!DNL MongoMK] oder  [!DNL RDBMK]verwendet werden.**
-* Diese Indexierung muss nur für eine einzelne AEM Instanz im Cluster ausgeführt werden.
-* Die Online-Indizierung von [!DNL MongoMK] ist sicher, um mit einem laufenden AEM Cluster ausgeführt zu werden, da der Repository-Traversal nur auf einem einzelnen [!DNL MongoDB]-Knoten ausgeführt wird, sodass die anderen weiterhin Anforderungen bereitstellen können, ohne dass dies erhebliche Auswirkungen auf die Leistung hat.
+* Der Online-Index mit [!DNL oak-run.jar] unter [!DNL MongoMK] und [!DNL RDBMK] ist die empfohlene Methode für die Neuindizierung von [!DNL MongoMK] (und [!DNL RDBMK]) AEM Installationen. **Für  [!DNL MongoMK] oder  [!DNL RDBMK]sollte keine andere Methode angewendet werden.**
+* Diese Indizierung muss nur für eine einzelne AEM-Instanz im Cluster ausgeführt werden.
+* Die Online-Indizierung von [!DNL MongoMK] kann für einen laufenden AEM-Cluster sicher ausgeführt werden, da der Repository-Traversal nur auf einem einzelnen [!DNL MongoDB]-Knoten ausgeführt wird, sodass andere weiterhin Anfragen bearbeiten können, ohne dass sich dies auf die Leistung auswirkt.
 
-Der Befehl [!DNL oak-run.jar] index, um eine Online-Indizierung von [!DNL MongoMK] durchzuführen, ist der [gleiche wie die  [!DNL TarMK] Online-Indizierung mit [!DNL oak-run.jar]](#tarmkonlineindexingwithoakrunjar) mit der Differenz, dass der Segmentspeicherparameter auf die [!DNL MongoDB]-Instanz verweist, die den Node Store enthält.
+Der Indexbefehl [!DNL oak-run.jar] zum Ausführen einer Online-Indizierung von [!DNL MongoMK] ist der [gleiche wie die  [!DNL TarMK] Online-Indizierung mit [!DNL oak-run.jar]](#tarmkonlineindexingwithoakrunjar) mit dem Unterschied, dass der Segmentspeicherparameter auf die [!DNL MongoDB]-Instanz verweist, die den Knotenspeicher enthält.
 
 ```
 java -jar oak-run*.jar index
@@ -87,8 +86,8 @@ java -jar oak-run*.jar index
  --fds-path=/path/to/datastore mongodb://server:port/aem
 ```
 
-## Begleitmaterialien
+## Unterstützende Materialien
 
 * [Download [!DNL oak-run.jar]](https://repository.apache.org/#nexus-search;gav~org.apache.jackrabbit~oak-run~~~~kw,versionexpand)
-   * *Vergewissern Sie sich, dass die heruntergeladene Version mit der auf AEM installierten Version von Oak übereinstimmt, wie oben beschrieben*
+   * *Stellen Sie sicher, dass die heruntergeladene Version mit der auf AEM installierten Version von Oak übereinstimmt, wie oben beschrieben.*
 * [Apache Jackrabbit Oak oak-run.jar Index Befehlsdokumentation](https://jackrabbit.apache.org/oak/docs/query/oak-run-indexing.html)
