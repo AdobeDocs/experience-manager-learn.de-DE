@@ -1,30 +1,29 @@
 ---
-title: Variablen im AEM Workflow[Teil 3]
-seo-title: Variablen im AEM Workflow[Teil 3]
-description: Variablen des Typs xml,json,arraylist,Dokument im AEM-Workflow verwenden
-seo-description: Variablen des Typs xml,json,arraylist,Dokument im AEM-Workflow verwenden
+title: Variablen in AEM Workflow[Teil 3]
+seo-title: Variablen in AEM Workflow[Teil 3]
+description: Verwenden von Variablen des Typs xml,json,arraylist,document im AEM-Workflow
+seo-description: Verwenden von Variablen des Typs xml,json,arraylist,document im AEM-Workflow
 feature: Workflow
 topics: development
 audience: developer
 doc-type: technical video
 activity: understand
 version: 6.5
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '99'
 ht-degree: 2%
 
 ---
 
-# Dokument-Typvariable in AEM Workflow
+# Dokumenttyp-Variable in AEM Workflow
 
 
-Variablen des Typs Dokument werden zum Speichern von Dokument aus Datensatz, adaptiven Formularanhang(en) verwendet. Diese Variablen können dann in der Komponente &quot;E-Mail senden&quot;verwendet werden, um Anlagen per E-Mail zu senden.
+Variablen des Typs &quot;Dokument&quot;werden zum Speichern von Datensatzdokumenten, adaptiven Formularanlagen verwendet. Diese Variablen können dann in der Komponente E-Mail senden verwendet werden, um Anhänge per E-Mail zu senden.
 
-In diesem Video wird die Verwendung der Variablen &quot;Dokument-Typ&quot;zum Speichern des generierten DoR hervorgehoben und dann die Variable &quot;Dokument&quot;im E-Mail-Schritt eines AEM Workflows verwendet.
+In diesem Video wird die Verwendung der Dokumenttyp-Variablen zum Speichern des generierten Datensatzdokuments und dann die document-Variable im E-Mail-Sendeschritt eines AEM Workflows verwendet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26452)
