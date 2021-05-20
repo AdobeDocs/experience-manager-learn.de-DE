@@ -1,17 +1,16 @@
 ---
 title: AEM Desktop App
-description: Verwenden Sie AEM Desktop-App, um den Zugriff auf alle Assets, die auf dem Desktop verwaltet werden, für alle Anwendungs- und Dateiformate zu vereinfachen.
+description: Verwenden Sie AEM Desktop App, um den Zugriff auf alle auf dem Desktop verwalteten Assets für Anwendungen und Dateiformate zu vereinfachen.
 kt: 2551
 sub-product: Assets
-feature: Experience Manager Desktop App
+feature: Experience Manager-Desktop-Programm
 version: 6.5, 6.4, 6.3
-topic: Content Management
+topic: Content Management
 role: Business Practitioner
 level: Beginner
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '143'
 ht-degree: 16%
 
 ---
@@ -19,19 +18,19 @@ ht-degree: 16%
 
 # Verwenden des AEM Desktop-Programms
 
-Verwenden Sie AEM Desktop-App, um den Zugriff auf alle Assets, die auf dem Desktop verwaltet werden, für alle Anwendungs- und Dateiformate zu vereinfachen.
+Verwenden Sie AEM Desktop App, um den Zugriff auf alle auf dem Desktop verwalteten Assets für Anwendungen und Dateiformate zu vereinfachen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28868/?quality=12&learn=on)
 
-+ Entdecken Sie Assets in AEM über eine eigene Desktop-Anwendung.
++ Entdecken Sie Assets in AEM über ein dediziertes Desktop-Programm, um sie zu durchsuchen und zu suchen.
 + Optimiertes Bandbreitenmanagement ermöglicht das Hochladen und Herunterladen vieler großer Assets
-+ Massen-Upload-Ordner und -Assets
++ Massen-Upload und -Download von Ordnern und Assets
 + Offline auf synchronisierte Assets zugreifen
 
 >[!NOTE]
 >
-> [Adobe Asset ](./adobe-asset-link.md) Linkis-Adobe für die Verwendung AEM Assets in Adobe Creative Cloud-Anwendungen: Photoshop, Illustrator, InDesign. Wenn Sie in diesen Anwendungen AEM Assets verwenden, wird der Asset-Link für Adoben AEM Desktop-App bevorzugt.
+> [Adobe Asset ](./adobe-asset-link.md) Link ist die spezifische Lösung der Adobe für die Arbeit mit AEM Assets in Adobe Creative Cloud-Anwendungen: Photoshop, Illustrator, InDesign. Wenn Sie AEM Assets in diesen Anwendungen verwenden, wird Adobe Asset Link AEM Desktop App vorgezogen.
 
 ## Zusätzliche Ressourcen
 
-+ [Laden Sie die neueste AEM Desktop-App herunter](https://docs.adobe.com/content/help/de-DE/experience-manager-desktop-app/using/release-notes.html)
++ [Laden Sie die neueste AEM Desktop App herunter](https://docs.adobe.com/content/help/de-DE/experience-manager-desktop-app/using/release-notes.html)
