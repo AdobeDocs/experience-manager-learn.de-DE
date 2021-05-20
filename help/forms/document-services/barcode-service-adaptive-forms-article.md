@@ -1,8 +1,8 @@
 ---
 title: Barcode-Dienst mit adaptivem Forms
 seo-title: Barcode-Dienst mit adaptivem Forms
-description: Barcode-Dienst zum Dekodieren von Barcodes und Ausfüllen von Formularfeldern aus den extrahierten Daten
-seo-description: Barcode-Dienst zum Dekodieren von Barcodes und Ausfüllen von Formularfeldern aus den extrahierten Daten
+description: Barcode-Dienst zum Dekodieren von Barcodes und Ausfüllen von Formularfeldern aus den extrahierten Daten verwenden
+seo-description: Barcode-Dienst zum Dekodieren von Barcodes und Ausfüllen von Formularfeldern aus den extrahierten Daten verwenden
 uuid: 42568b81-cbcd-479e-8d9a-cc0b244da4ae
 feature: barcoded-forms
 topics: development
@@ -11,13 +11,12 @@ doc-type: article
 activity: implement
 version: 6.4,6.5
 discoiquuid: 1224de6d-7ca1-4e9d-85fe-cd675d03e262
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Intermediate
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '403'
 ht-degree: 0%
 
 ---
@@ -25,16 +24,16 @@ ht-degree: 0%
 
 # Barcode-Dienst mit adaptivem Forms{#barcode-service-with-adaptive-forms}
 
-In diesem Artikel wird die Verwendung des Barcode-Dienstes zum Ausfüllen des adaptiven Formulars erläutert. Der Verwendungsfall lautet wie folgt:
+In diesem Artikel wird die Verwendung des Barcode-Dienstes zum Ausfüllen des adaptiven Formulars veranschaulicht. Der Anwendungsfall sieht folgendermaßen aus:
 
-1. Der Benutzer fügt PDF mit Barcode als Anhang für ein adaptives Formular hinzu.
-1. Der Pfad der Anlage wird an das Servlet gesendet
-1. Das Servlet hat den Barcode dekodiert und gibt die Daten im JSON-Format zurück
+1. Der Benutzer fügt PDF mit Barcode als Anhang für adaptives Formular hinzu.
+1. Der Pfad des Anhangs wird an das Servlet gesendet
+1. Das Servlet hat den Barcode dekodiert und gibt die Daten im JSON-Format zurück.
 1. Das adaptive Formular wird dann mit den dekodierten Daten ausgefüllt
 
 Der folgende Code dekodiert den Barcode und füllt ein JSON-Objekt mit den dekodierten Werten. Das Servlet gibt dann das JSON-Objekt in seiner Antwort auf die aufrufende Anwendung zurück.
 
-Sie können diese Funktion live sehen, besuchen Sie bitte das Portal [samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) und suchen Sie nach der Barcode Service Demo
+Sie können diese Funktion live sehen. Besuchen Sie das Portal [samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) und suchen Sie nach der Demo des Barcode Service
 
 ```java
 public JSONObject extractBarCode(Document pdfDocument) {
@@ -104,7 +103,7 @@ public class DecodeBarCode extends SlingSafeMethodsServlet {
 }
 ```
 
-Der folgende Code ist Teil der Client-Bibliothek, auf die vom adaptiven Formular verwiesen wird. Wenn ein Benutzer die Anlage zum adaptiven Formular hinzufügt, wird dieser Code ausgelöst. Der Code führt einen GET-Aufruf an das Servlet mit dem Pfad der Anlage durch, der im Anforderungsparameter übergeben wird. Die vom Servlet-Aufruf empfangenen Daten werden dann zum Ausfüllen des adaptiven Formulars verwendet.
+Der folgende Code ist Teil der Client-Bibliothek, auf die vom adaptiven Formular verwiesen wird. Wenn ein Benutzer die Anlage zum adaptiven Formular hinzufügt, wird dieser Code ausgelöst. Der Code führt einen GET-Aufruf an das Servlet durch, wobei der Pfad der Anlage im Anforderungsparameter übergeben wird. Die vom Servlet-Aufruf empfangenen Daten werden dann zum Ausfüllen des adaptiven Formulars verwendet.
 
 ```
 $(document).ready(function()
@@ -141,19 +140,19 @@ $(document).ready(function()
 
 >[!NOTE]
 >
->Das in diesem Paket enthaltene adaptive Formular wurde mit AEM Forms 6.4 erstellt. Wenn Sie dieses Paket in der AEM Forms 6.3 Umgebung verwenden möchten, erstellen Sie das adaptive Formular in AEM 6.3
+>Das in diesem Paket enthaltene adaptive Formular wurde mit AEM Forms 6.4 erstellt. Wenn Sie dieses Paket in der AEM Forms 6.3-Umgebung verwenden möchten, erstellen Sie das adaptive Formular in AEM Formular 6.3
 
-Zeile 12 - Benutzerdefinierter Code zum Abrufen des Dienstauflösers. Dieses Bundle ist Teil dieser Artikel-Assets.
+Zeile 12 - Benutzerspezifischer Code zum Abrufen des Service-Resolvers. Dieses Bundle ist Teil dieser Artikel-Assets.
 
-Zeile 23 - Aufruf der DocumentServices-Methode &quot;extractBarCode&quot;, um das JSON-Objekt mit dekodierten Daten zu füllen
+Zeile 23 - Rufen Sie die Methode &quot;DocumentServices extractBarCode&quot;auf, um das JSON-Objekt mit dekodierten Daten auszufüllen.
 
-Gehen Sie wie folgt vor, um dieses System auf Ihrem System laufen zu lassen
+Führen Sie die folgenden Schritte aus, um dies auf Ihrem System auszuführen
 
-1. [Laden Sie BarcodeService.](assets/barcodeservice.zip) zipand herunter und importieren Sie mit dem Package Manager in AEM
-1. [Herunterladen und Installieren des benutzerdefinierten DocumentServices-Bundles](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+1. [Laden Sie die Datei &quot;BarcodeService.](assets/barcodeservice.zip) zip&quot;herunter und importieren Sie sie mithilfe des Paketmanagers in AEM.
+1. [Herunterladen und Installieren des Custom Document Services Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [Herunterladen und Installieren des DevelopingWithServiceUser-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [PDF-Musterformular herunterladen](assets/barcode.pdf)
-1. Verweisen Sie Ihren Browser auf das adaptive Beispielformular [](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
-1. Hochladen der bereitgestellten Musterdatei
+1. [Herunterladen des PDF-Musterformulars](assets/barcode.pdf)
+1. Zeigen Sie Ihren Browser auf das adaptive Beispielformular [a1/>](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
+1. Laden Sie die bereitgestellte Beispiel-PDF hoch
 1. Sie sollten die Formulare sehen, die mit den Daten gefüllt sind
 
