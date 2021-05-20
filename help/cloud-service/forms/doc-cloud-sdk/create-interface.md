@@ -1,6 +1,6 @@
 ---
-title: Benutzeroberfläche des Dienstes erstellen
-description: Definieren Sie die Methoden in der Benutzeroberfläche, die Sie bereitstellen möchten
+title: Benutzeroberfläche "Dienst erstellen"
+description: Definieren Sie die Methoden in der Benutzeroberfläche, die Sie verfügbar machen möchten
 solution: Experience Manager
 type: Documentation
 role: Developer
