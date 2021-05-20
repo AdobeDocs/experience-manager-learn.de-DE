@@ -9,13 +9,12 @@ activity: implement
 version: 6.4,6.5
 kt: 6406
 thumbnail: kt-6406.jpg
-topic: Development
+topic: Entwicklung
 role: Developer
 level: Experienced
-translation-type: tm+mt
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '635'
 ht-degree: 2%
 
 ---
@@ -23,24 +22,24 @@ ht-degree: 2%
 
 # Zusammenführen von Formularanlagen
 
-Dieser Artikel enthält Assets, um adaptive Formularanhänge in einer bestimmten Reihenfolge zusammenzustellen. Die Formularanhänge müssen im PDF-Format vorliegen, damit dieser Beispielcode funktioniert. Im Folgenden wird der Verwendungsfall beschrieben.
-Beim Ausfüllen eines adaptiven Formulars wird ein oder mehrere PDF-Dokumente an das Formular angehängt.
-Stellen Sie beim Senden des Formulars die Formularanlagen zusammen, um ein PDF-Dokument zu erstellen. Sie können die Reihenfolge angeben, in der die Anlagen zusammengestellt werden, um die endgültige PDF zu generieren.
+Dieser Artikel stellt Assets bereit, um adaptive Formularanhänge in einer angegebenen Reihenfolge zusammenzuführen. Die Formularanhänge müssen im PDF-Format vorliegen, damit dieser Beispielcode funktioniert. Im Folgenden finden Sie den Anwendungsfall.
+Benutzer, die ein adaptives Formular ausfüllen, hängt ein oder mehrere PDF-Dokumente an das Formular an.
+Assemblieren Sie beim Senden des Formulars die Formularanhänge, um ein PDF-Dokument zu generieren. Sie können die Reihenfolge angeben, in der die Anlagen zusammengestellt werden, um das endgültige PDF zu generieren.
 
-## OSGi-Komponente erstellen, die die WorkflowProcess-Schnittstelle implementiert
+## Erstellen einer OSGi-Komponente, die die WorkflowProcess-Oberfläche implementiert
 
-Erstellen Sie eine OSGi-Komponente, die die [com.adobe.granite.workflow.exec.WorkflowProcess-Schnittstelle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html) implementiert. Der Code in dieser Komponente kann mit der Prozessschrittkomponente im AEM Workflow verknüpft werden. Die Ausführungsmethode der Schnittstelle com.adobe.granite.workflow.exec.WorkflowProcess wird in dieser Komponente implementiert.
+Erstellen Sie eine OSGi-Komponente, die die [com.adobe.granite.workflow.exec.WorkflowProcess -Schnittstelle](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html) implementiert. Der Code in dieser Komponente kann mit der Prozessschrittkomponente im AEM Workflow verknüpft werden. Die Ausführungsmethode der Schnittstelle com.adobe.granite.workflow.exec.WorkflowProcess wird in dieser Komponente implementiert.
 
-Wenn ein adaptives Formular an Trigger und AEM Workflow gesendet wird, werden die gesendeten Daten in der angegebenen Datei im Payload-Ordner gespeichert. Dies ist beispielsweise die gesendete Datendatei. Wir müssen die Anlagen zusammenstellen, die unter dem Tag &quot;idcard&quot;und &quot;bankstatement&quot;angegeben sind.
-![gesendete Daten](assets/submitted-data.JPG).
+Wenn ein adaptives Formular an Trigger gesendet wird, werden die gesendeten Daten in der angegebenen Datei im Payload-Ordner gespeichert. Dies ist beispielsweise die gesendete Datendatei. Wir müssen die Anlagen zusammenführen, die unter dem Tag idcard und bankstatement angegeben sind.
+![submit-data](assets/submitted-data.JPG).
 
 ### Abrufen der Tag-Namen
 
-Die Reihenfolge der Anlagen wird als Prozessschrittargument im Workflow angegeben, wie im Screenshot unten dargestellt. Hier montieren wir die Anlagen, die dem Feldausweis hinzugefügt werden, gefolgt von Bankausweisen
+Die Reihenfolge der Anlagen wird als Prozessschrittargumente im Workflow angegeben, wie im Screenshot unten dargestellt. Hier stellen wir die Anlagen zusammen, die dem Feld-IDcard hinzugefügt werden, gefolgt von Bankausweisen
 
-![process-step](assets/process-step.JPG)
+![Prozessschritt](assets/process-step.JPG)
 
-Im folgenden Codefragment werden die Anlagennamen aus den Prozessargumenten extrahiert
+Das folgende Codefragment extrahiert die Anlagennamen aus den Prozessargumenten
 
 ```java
 String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(",");
@@ -48,13 +47,13 @@ String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(
 
 ### Erstellen von DDX aus den Anlagennamen
 
-Anschließend müssen wir ein [Dokument Description XML (DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)-Dokument erstellen, das vom Assembler-Dienst zum Zusammenführen von Dokumenten verwendet wird. Im Folgenden finden Sie das DDX, das aus den Prozessargumenten erstellt wurde. Mit dem NoForms-Element können Sie XFA-basierte Dokumente reduzieren, bevor sie assembliert werden. Beachten Sie, dass sich die PDF-Quellelemente in der richtigen Reihenfolge befinden, wie in den Prozessargumenten angegeben.
+Anschließend müssen wir das Dokument [Document Description XML (DDX)](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf) erstellen, das vom Assembler-Dienst zum Zusammenführen von Dokumenten verwendet wird. Im Folgenden finden Sie die DDX, die aus den Prozessargumenten erstellt wurde. Mit dem Element NoForms können Sie XFA-basierte Dokumente reduzieren, bevor sie zusammengestellt werden. Beachten Sie, dass sich die PDF-Quellelemente in der richtigen Reihenfolge befinden, wie in den Prozessargumenten angegeben.
 
 ![ddx-xml](assets/ddx.PNG)
 
-### Imagemap von Dokumenten erstellen
+### Erstellen von Dokumentzuordnungen
 
-Anschließend erstellen wir eine Zuordnung von Dokumenten mit dem Anlagennamen als Schlüssel und der Anlage als Wert. Der Abfrage Builder-Dienst wurde verwendet, um die Anlagen unter dem Payload-Pfad Abfrage und die Zuordnung der Dokumente zu erstellen. Diese Karte des Dokuments zusammen mit dem DDX wird benötigt, damit der Assembler-Dienst die endgültige PDF zusammenstellen kann.
+Anschließend erstellen wir eine Zuordnung von Dokumenten mit dem Anlagennamen als Schlüssel und dem Anhang als Wert. Der Query Builder-Dienst wurde verwendet, um die Anlagen unter dem Payload-Pfad abzufragen und die Zuordnung der Dokumente zu erstellen. Diese Dokumentzuordnung zusammen mit dem DDX ist erforderlich, damit der Assembler-Dienst das endgültige PDF zusammenstellen kann.
 
 ```java
 public Map<String, Object> createMapOfDocuments(String payloadPath,WorkflowSession workflowSession )
@@ -91,8 +90,8 @@ return mapOfDocuments;
 
 ### AssemblerService zum Zusammenführen der Dokumente verwenden
 
-Nachdem DDX und die Dokument-Map erstellt wurden, besteht der nächste Schritt darin, die Dokumente mit AssemblerService zusammenzustellen.
-Mit dem folgenden Code wird die zusammengeführte PDF zusammengestellt und zurückgegeben.
+Nachdem das DDX und die Dokumentzuordnung erstellt wurden, ist der nächste Schritt die Verwendung des AssemblerService zum Zusammenführen der Dokumente.
+Der folgende Code assembliert und gibt das assemblierte PDF-Dokument zurück.
 
 ```java
 private com.adobe.aemfd.docmanager.Document assembleDocuments(Map<String, Object> mapOfDocuments, com.adobe.aemfd.docmanager.Document ddxDocument)
@@ -114,10 +113,10 @@ private com.adobe.aemfd.docmanager.Document assembleDocuments(Map<String, Object
 }
 ```
 
-### Speichern Sie die assemblierte PDF unter dem Payload-Ordner
+### Speichern Sie das assemblierte PDF unter dem Payload-Ordner
 
-Der letzte Schritt besteht darin, die zusammengesetzte PDF-Datei im Payload-Ordner zu speichern. Diese PDF-Datei kann dann in den nachfolgenden Schritten des Workflows zur weiteren Verarbeitung aufgerufen werden.
-Das folgende Codefragment wurde zum Speichern der Datei im Ordner &quot;Payload&quot;verwendet
+Der letzte Schritt besteht darin, das zusammengestellte PDF-Dokument im Payload-Ordner zu speichern. Auf dieses PDF-Dokument können Sie dann in den nachfolgenden Schritten des Workflows zur weiteren Verarbeitung zugreifen.
+Das folgende Codefragment wurde verwendet, um die Datei im Payload-Ordner zu speichern
 
 ```java
 Session session = workflowSession.adaptTo(Session.class);
@@ -131,22 +130,22 @@ log.debug("Saved !!!!!!");
 session.save();
 ```
 
-Im Folgenden wird die Struktur des Payload-Ordners dargestellt, nachdem die Formularanhänge zusammengestellt und gespeichert wurden.
+Im Folgenden finden Sie die Struktur des Payload-Ordners, nachdem die Formularanlagen zusammengestellt und gespeichert wurden.
 
-![payload-Struktur](assets/payload-structure.JPG)
+![payload-structure](assets/payload-structure.JPG)
 
-### So funktioniert diese Funktion auf Ihrem AEM
+### So können Sie diese Funktion auf Ihrem AEM-Server verwenden
 
-* Laden Sie das Formular [Formularanhänge zusammenstellen](assets/assemble-form-attachments-af.zip) auf Ihr lokales System herunter.
-* Importieren Sie das Formular von der Seite [Forms und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
-* Laden Sie [workflow](assets/assemble-form-attachments.zip) herunter und importieren Sie mit dem Package Manager in AEM.
-* [benutzerdefiniertes Bundle](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar) herunterladen
-* Stellen Sie das Bundle mit der [Webkonsole](http://localhost:4502/system/console/bundles) bereit und Beginn
-* Verweisen Sie Ihren Browser auf [AssembleAttachments Form](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
-* hinzufügen einer Anlage im ID-Dokument und ein paar PDF-Dokumente zum Abschnitt &quot;Bankauszüge&quot;
+* Laden Sie das Formular [Formularanhänge zusammenführen](assets/assemble-form-attachments-af.zip) auf Ihr lokales System herunter.
+* Importieren Sie das Formular von der Seite [Forms und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) .
+* Laden Sie [workflow](assets/assemble-form-attachments.zip) herunter und importieren Sie mit Package Manager in AEM.
+* Laden Sie das [benutzerdefinierte Bundle](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar) herunter
+* Stellen Sie das Bundle mithilfe der [Web-Konsole](http://localhost:4502/system/console/bundles) bereit und starten Sie es.
+* Zeigen Sie Ihren Browser auf [AssembleAttachments Form](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
+* Fügen Sie im ID-Dokument einen Anhang und im Abschnitt Bankübersichten ein paar PDF-Dokumente hinzu.
 * Senden des Formulars an den Trigger des Workflows
-* Überprüfen Sie den Ordner [Payload im Workflow](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) auf die assemblierte PDF-Datei
+* Überprüfen Sie den Ordner [payload des Workflows in crx](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) auf das assemblierte PDF
 
 >[!NOTE]
-> Wenn Sie die Protokollfunktion für das benutzerdefinierte Bundle aktiviert haben, wird die DDX- und die assemblierte Datei in den Ordner Ihrer AEM-Installation geschrieben.
+> Wenn Sie die Protokollierung für das benutzerdefinierte Bundle aktiviert haben, werden DDX und die assemblierte Datei in den Ordner Ihrer AEM-Installation geschrieben.
 
