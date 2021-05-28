@@ -7,7 +7,7 @@ role: Developer, Architect
 level: Beginner
 kt: 7633
 thumbnail: kt-7633.jpeg
-source-git-commit: 0eb086242ecaafa53c59c2018f178e15f98dd76f
+source-git-commit: 5dea9cf646762c0f4aff43d9e48a35ab6ebc0af8
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 2%
@@ -277,7 +277,7 @@ Fügen Sie die SCSS-Dateien AEM responsiven Rasters zum SPA hinzu.
 1. Laden Sie die beiden folgenden Dateien herunter und kopieren Sie sie in `src/styles`
    + [_grid.scss](./assets/spa-bootstrap/_grid.scss)
       + Der SCSS-Generator AEM responsiven Rasters
-   + [_grid-init.scss](./assets/spa-bootstrap/_grid.scss)
+   + [_grid-init.scss](./assets/spa-bootstrap/_grid-init.scss)
       + Ruft `_grid.scss` mithilfe der SPA spezifischen Haltepunkte (Desktop und Mobilgerät) und Spalten (12) auf.
 1. Öffnen Sie `src/App.scss` und importieren Sie `./styles/grid-init.scss`
 
