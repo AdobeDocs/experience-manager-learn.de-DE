@@ -12,15 +12,17 @@ thumbnail: 330460.jpg
 topic: Headless, Integrationen
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 3%
+source-wordcount: '647'
+ht-degree: 2%
 
 ---
 
 
 # Token-basierte Authentifizierung für AEM als Cloud Service
+
+AEM stellt eine Vielzahl von HTTP-Endpunkten bereit, mit denen per Headless interagiert werden kann, von GraphQL über Content Services bis hin zur Assets-HTTP-API. Häufig müssen sich diese Headless-Konsumenten bei AEM authentifizieren, um auf geschützte Inhalte oder Aktionen zugreifen zu können. Um dies zu erleichtern, unterstützt AEM die Token-basierte Authentifizierung von HTTP-Anforderungen von externen Anwendungen, Diensten oder Systemen.
 
 In diesem Tutorial erfahren Sie, wie sich eine externe Anwendung programmgesteuert authentifizieren und mit AEM als Cloud Service über HTTP über Zugriffstoken interagieren kann.
 
