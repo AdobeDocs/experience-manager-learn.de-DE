@@ -5,15 +5,21 @@ feature: Inhaltsfragmente, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 5%
+source-wordcount: '340'
+ht-degree: 4%
 
 ---
 
 
 # Erste Schritte mit AEM Headless - Content Services
+
+AEM Content Services nutzt herkömmliche AEM Seiten, um Headless-REST-API-Endpunkte zu erstellen, und AEM Komponenten definieren oder referenzieren den Inhalt, der für diese Endpunkte verfügbar gemacht werden soll.
+
+AEM Content Services ermöglicht die Verwendung der gleichen Inhaltsabstraktionen, die für die Erstellung von Web-Seiten in AEM Sites verwendet werden, um den Inhalt und die Schemas dieser HTTP-APIs zu definieren. Durch die Verwendung von AEM Seiten und AEM-Komponenten können Marketingexperten flexible JSON-APIs, die für jede Anwendung geeignet sind, schnell erstellen und aktualisieren.
+
+## Content Services-Tutorial
 
 Ein durchgängiges Tutorial, in dem erläutert wird, wie Inhalte mithilfe von AEM erstellt und bereitgestellt werden, die von einer nativen mobilen App in einem Headless-CMS-Szenario genutzt werden.
 
@@ -34,3 +40,12 @@ In diesem Tutorial werden die folgenden Themen behandelt:
 Der Quellcode und die Inhaltspakete sind in den [AEM Handbüchern - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile) verfügbar.
 
 Wenn Sie ein Problem mit dem Tutorial oder dem Code finden, hinterlassen Sie bitte ein [GitHub-Problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
+
+## AEM GraphQL vs. AEM Content Services
+
+|  | AEM GraphQL-APIs | AEM Content Services |
+|--------------------------------|:-----------------|:---------------------|
+| Schemadefinition | Strukturierte Inhaltsfragmentmodelle | AEM von Komponenten |
+| Inhalt | Inhaltsfragmente | AEM von Komponenten |
+| Inhaltssuche | Nach GraphQL-Abfrage | Nach AEM Seite |
+| Versandformat | GraphQL JSON | AEM ComponentExporter JSON |
