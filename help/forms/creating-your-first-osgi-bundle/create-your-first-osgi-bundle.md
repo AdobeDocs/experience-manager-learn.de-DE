@@ -6,7 +6,7 @@ feature: Adaptive Formulare
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: c74c6f5627e69e32bbf0098d6b6bab122cace798
+source-git-commit: 22437e93cbf8f36d723dc573fa327562cb51b562
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 3%
@@ -115,7 +115,9 @@ Erweitern Sie `src/main/java` unter dem Ordner `learningaemforms.core` . Dies is
 
 ## Projekt erstellen
 
+
 Nachdem Sie Ihren OSGi-Dienst oder Servlet geschrieben haben, müssen Sie Ihr Projekt erstellen, um das OSGi-Bundle zu generieren, das mithilfe der Felix-Webkonsole bereitgestellt werden kann. Bitte lesen Sie [AEMFD Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) , um das entsprechende Client-SDK in Ihr Maven-Projekt aufzunehmen. Sie müssen das AEM FD Client SDK wie unten dargestellt in den Abhängigkeitsabschnitt von `pom.xml` des Kernprojekts einbeziehen.
+
 
 ```xml
 <dependency>
