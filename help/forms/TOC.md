@@ -5,9 +5,9 @@ user-guide-title: AEM Forms-Videos und -Tutorials
 user-guide-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler.
 breadcrumb-title: AEM Forms-Tutorials
 index: y
-source-git-commit: c74c6f5627e69e32bbf0098d6b6bab122cace798
+source-git-commit: 22437e93cbf8f36d723dc573fa327562cb51b562
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '970'
 ht-degree: 6%
 
 ---
@@ -98,6 +98,9 @@ ht-degree: 6%
    + [Einführung](inbox-customization/introduction.md)
    + [Benutzerdefinierte Spalte hinzufügen](inbox-customization/add-married-column.md)
    + [Verwenden einer sightly-Vorlage](inbox-customization/use-sightly-template.md)
++ ZIP-Formular-Anhänge{#zipping-form-attachments}
+   + [Einführung](zipping-form-attachments/introduction.md)
+   + [Benutzerdefinierter Prozess](zipping-form-attachments/custom-process-step.md)
 
 + Speichern und Abrufen von adaptiven Formularen{#store-and-retrieve-af-with-2fa}
    + [Einführung](store-and-retrieve-af-with-2fa/introduction.md)
@@ -205,7 +208,7 @@ ht-degree: 6%
    + [Einführung](ic-print-channel-tutorial/introduction.md)
    + [Tomcat einrichten](ic-print-channel-tutorial/set-up-tomcat.md)
    + [Datenquelle erstellen](ic-print-channel-tutorial/create-data-source.md)
-   + [Formulardatenmodell erstellen](ic-print-channel-tutorial/create-form-data-model.md)
+   + [Erstellen von Formulardatenmodellen](ic-print-channel-tutorial/create-form-data-model.md)
    + [Erstellen des XDP-Layouts mit Forms Designer](ic-print-channel-tutorial/create-xdp-layout-using-forms-designer.md)
    + [Dokumentfragment erstellen](ic-print-channel-tutorial/create-document-fragment.md)
    + [Druckkanaldokument erstellen](ic-print-channel-tutorial/create-print-channel-document.md)
@@ -227,7 +230,7 @@ ht-degree: 6%
    + [Einführung](ic-web-channel-tutorial/introduction.md)
    + [Tomcat einrichten](ic-web-channel-tutorial/partone.md)
    + [Datenquelle erstellen](ic-web-channel-tutorial/parttwo.md)
-   + [Formulardatenmodell erstellen](ic-web-channel-tutorial/partthree.md)
+   + [Erstellen von Formulardatenmodellen](ic-web-channel-tutorial/partthree.md)
    + [Erstellen einer Webkanal-Dokumentvorlage](ic-web-channel-tutorial/partfour.md)
    + [Erstellen von Dokumentfragmenten](ic-web-channel-tutorial/partfive.md)
    + [Erstellen des interaktiven Kommunikationsdokuments](ic-web-channel-tutorial/partsix.md)
