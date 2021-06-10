@@ -5,9 +5,9 @@ user-guide-title: AEM Forms-Videos und -Tutorials
 user-guide-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler.
 breadcrumb-title: AEM Forms-Tutorials
 index: y
-source-git-commit: 22437e93cbf8f36d723dc573fa327562cb51b562
+source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '973'
 ht-degree: 6%
 
 ---
@@ -101,7 +101,7 @@ ht-degree: 6%
 + ZIP-Formular-Anhänge{#zipping-form-attachments}
    + [Einführung](zipping-form-attachments/introduction.md)
    + [Benutzerdefinierter Prozess](zipping-form-attachments/custom-process-step.md)
-
+   + [Testen der Lösung](zipping-form-attachments/test.md)
 + Speichern und Abrufen von adaptiven Formularen{#store-and-retrieve-af-with-2fa}
    + [Einführung](store-and-retrieve-af-with-2fa/introduction.md)
    + [Datenquelle konfigurieren](store-and-retrieve-af-with-2fa/configure-data-source.md)
