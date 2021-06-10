@@ -11,10 +11,10 @@ thumbnail: 39090.jpg
 topic: Integrationen
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
 workflow-type: tm+mt
-source-wordcount: '140'
-ht-degree: 21%
+source-wordcount: '138'
+ht-degree: 15%
 
 ---
 
@@ -32,5 +32,5 @@ Experience Platform Launch ist die Tag-Management-Plattform der nächsten Genera
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [Experience Platform-Integrationen mit Experience Cloud-Anwendungen](https://docs.adobe.com/content/help/en/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
-* [Benutzeranleitung für Experience Platform Launch](https://docs.adobe.com/content/help/de-DE/launch/using/overview.html)
+* [Benutzeranleitung für Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/home.html)
 * [Implementieren von Experience Cloud in Websites mit Launch](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/index.html)
