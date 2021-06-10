@@ -6,10 +6,10 @@ feature: Adaptive Formulare
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: 22437e93cbf8f36d723dc573fa327562cb51b562
+source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 3%
+source-wordcount: '843'
+ht-degree: 4%
 
 ---
 
@@ -116,7 +116,12 @@ Erweitern Sie `src/main/java` unter dem Ordner `learningaemforms.core` . Dies is
 ## Projekt erstellen
 
 
-Nachdem Sie Ihren OSGi-Dienst oder Servlet geschrieben haben, müssen Sie Ihr Projekt erstellen, um das OSGi-Bundle zu generieren, das mithilfe der Felix-Webkonsole bereitgestellt werden kann. Bitte lesen Sie [AEMFD Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) , um das entsprechende Client-SDK in Ihr Maven-Projekt aufzunehmen. Sie müssen das AEM FD Client SDK wie unten dargestellt in den Abhängigkeitsabschnitt von `pom.xml` des Kernprojekts einbeziehen.
+
+
+Nachdem Sie Ihren OSGi-Dienst oder Servlet geschrieben haben, müssen Sie Ihr Projekt erstellen, um das OSGi-Bundle zu generieren, das mithilfe der Felix-Webkonsole bereitgestellt werden kann. Bitte lesen Sie [AEMFD Client SDK](https://repo.adobe.com/nexus/content/groups/public/com/adobe/aemfd/aemfd-client-sdk-) , um das entsprechende Client-SDK in Ihr Maven-Projekt aufzunehmen. Sie müssen das AEM FD Client SDK wie unten dargestellt in den Abhängigkeitsabschnitt von `pom.xml` des Kernprojekts einbeziehen.
+
+
+
 
 
 ```xml
@@ -131,5 +136,6 @@ Gehen Sie wie folgt vor, um Ihr Projekt zu erstellen:
 
 * Öffnen Sie **das Befehlszeilenfenster**
 * Navigieren Sie zu `c:\aemformsbundles\learningaemforms\core`
-* Führen Sie den Befehl `mvn clean install` aus.
-Wenn alles gut geht, sollte das Bundle an der folgenden Stelle `C:\AEMFormsBundles\learningaemforms\core\target` angezeigt werden. Dieses Bundle kann jetzt mithilfe der Felix-Webkonsole in AEM bereitgestellt werden.
+* Führen Sie den Befehl `mvn clean install -PautoInstallBundle` aus.
+Der obige Befehl erstellt und installiert das Bundle auf dem AEM Server, der auf `http://localhost:4502` ausgeführt wird. Das Bundle ist auch im Dateisystem unter
+   `C:\AEMFormsBundles\learningaemforms\core\target` und kann mithilfe der  [Felix-Webkonsole bereitgestellt werden](http://localhost:4502/system/console/bundles)
