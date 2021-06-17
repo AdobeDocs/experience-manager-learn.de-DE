@@ -4,10 +4,10 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: Cloud-Service
 team: TM
-source-git-commit: 84499d5a7c8adac87196f08c6328e8cb428c0130
+source-git-commit: e2bdc73aff012bde5a1ff8f5c85ac0a183dc441d
 workflow-type: tm+mt
 source-wordcount: '440'
-ht-degree: 30%
+ht-degree: 31%
 
 ---
 
@@ -69,7 +69,7 @@ ht-degree: 30%
    + Debugging von AEM als Cloud Service{#debugging-aem-as-a-cloud-service}
       + [Überblick](./debugging/cloud-service/overview.md)
       + [Protokolle](./debugging/cloud-service/logs.md)
-      + [Erstellen und Bereitstellen](./debugging/cloud-service/build-and-deployment.md)
+      + [Erstellung und Implementierung](./debugging/cloud-service/build-and-deployment.md)
       + [Developer Console](./debugging/cloud-service/developer-console.md)
       + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md)
 + Zugriff auf AEM{#accessing}
@@ -142,7 +142,7 @@ ht-degree: 30%
       + [Metadatenarbeiter](./asset-compute/advanced/metadata.md)
    + [Fehlerbehebung](./asset-compute/troubleshooting.md)
 + Mehrstufige Tutorials{#multi-step-tutorials}
-   + [AEM Sites-Entwicklung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/develop-wknd-tutorial.html)
+   + [AEM Sites-Entwicklung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de)
    + [SPA Editor (React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [SPA Editor (Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)
