@@ -7,10 +7,10 @@ role: Developer, Architect
 level: Beginner
 kt: 7629
 thumbnail: 333181.jpg
-source-git-commit: 73c75f8dac85615f4ed2dfdcc2ee4d0e9e5d161a
+source-git-commit: 6981a1ad5019fd383b1ca1f6fbfbec87e81a6e31
 workflow-type: tm+mt
 source-wordcount: '801'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -29,7 +29,7 @@ _Ein Video mit einer Anleitung zur schnellen Einrichtung_
 
 Dieses Tutorial erfordert Folgendes:
 
-+ [AEM as a Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en)
++ [AEM as a Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=de)
 + [Node.js v14+](https://nodejs.org/en/)
 + [npm v7+](https://www.npmjs.com/)
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
@@ -96,10 +96,8 @@ Laden Sie den Quellcode der WKND-App von Github.com herunter und wechseln Sie di
 ```
 $ mkdir -p ~/Code/wknd-app
 $ cd ~/Code/wknd-app
-$ git clone https://github.com/adobe/aem-guides-wknd-graphql.git
+$ git clone --branch feature/spa-editor https://github.com/adobe/aem-guides-wknd-graphql.git
 $ cd aem-guides-wknd-graphql
-$ git checkout -b feature/spa-editor
-$ git pull origin feature/spa-editor
 ```
 
 ## Starten Sie die SPA.
