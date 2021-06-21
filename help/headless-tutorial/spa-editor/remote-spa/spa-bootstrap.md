@@ -7,9 +7,9 @@ role: Developer, Architect
 level: Beginner
 kt: 7633
 thumbnail: kt-7633.jpeg
-source-git-commit: 5dea9cf646762c0f4aff43d9e48a35ab6ebc0af8
+source-git-commit: 76b10941ca8aeb5aa15ca39d354d9f7e7fb24522
 workflow-type: tm+mt
-source-wordcount: '1192'
+source-wordcount: '1227'
 ht-degree: 2%
 
 ---
@@ -18,6 +18,18 @@ ht-degree: 2%
 # Bootstrap der Remote-SPA für SPA Editor
 
 Bevor die bearbeitbaren Bereiche zur Remote-SPA hinzugefügt werden können, müssen sie mit dem JavaScript-SDK für den AEM SPA Editor und einigen anderen Konfigurationen per Bootstrapping versehen werden.
+
+
+## WKND-App-Quelle herunterladen
+
+Sofern noch nicht geschehen, laden Sie den Quellcode der WKND-App von Github.com herunter und wechseln Sie die Verzweigung mit den Änderungen an der in diesem Tutorial durchgeführten SPA.
+
+```
+$ mkdir -p ~/Code/wknd-app
+$ cd ~/Code/wknd-app
+$ git clone --branch feature/spa-editor https://github.com/adobe/aem-guides-wknd-graphql.git
+$ cd aem-guides-wknd-graphql
+```
 
 ## Hinzufügen AEM Editor-JS-SDK-NPM-Abhängigkeiten
 
@@ -100,7 +112,7 @@ Die Datei `src/index.js` sollte wie folgt aussehen:
 Beim Abrufen bearbeitbarer Inhalte aus AEM in der SPA ist es am besten, einen [internen Proxy in der SPA](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) einzurichten, der so konfiguriert ist, dass die entsprechenden Anforderungen an AEM weitergeleitet werden. Dies geschieht mithilfe des npm-Moduls [http-proxy-middleware](https://www.npmjs.com/package/http-proxy-middleware), das bereits von der WKND GraphQL App installiert wird.
 
 1. Öffnen Sie das Remote SPA-Projekt in Ihrer IDE.
-1. Erstellen einer Datei unter `src/proxy/setupProxy.spa-editor.auth.basic.js`
+1. Erstellen Sie eine Datei unter `src/proxy/setupProxy.spa-editor.auth.basic.js`.
 1. Fügen Sie der Datei den folgenden Code hinzu:
 
    ```
