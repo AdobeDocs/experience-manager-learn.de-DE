@@ -4,17 +4,17 @@ user-guide-description: Eine Sammlung von Videos und Tutorials zu Adobe Experien
 breadcrumb-title: AEM Assets-Tutorials
 sub-product: Assets
 team: TM
-source-git-commit: 0d012d61b7740e461e641dddd6c5255a022305ea
+source-git-commit: 53312e573ca022f09faa44cbbf51c5b8b0ed90ee
 workflow-type: tm+mt
-source-wordcount: '262'
-ht-degree: 37%
+source-wordcount: '265'
+ht-degree: 36%
 
 ---
 
 
 # AEM Assets-Videos und -Tutorials {#assets}
 
-+ [Überblick](overview.md)
++ [Übersicht](overview.md)
 
 + Konfiguration{#configuring}
    + [Grundlegende Ordner](configuring/baseline-folders.md)
@@ -30,7 +30,7 @@ ht-degree: 37%
 + Authoring{#authoring}
    + [Navigation](./authoring/navigation.md)
    + [Grundlegende Vorgänge](./authoring/basic-operations.md)
-   + [Metadaten  ](./authoring/metadata.md)
+   + [Metadaten](./authoring/metadata.md)
    + [Ausgabeformate](./authoring/renditions.md)
    + [Relation und Relation aufheben](./authoring/relate-unrelate.md)
 
@@ -86,6 +86,9 @@ ht-degree: 37%
    + [Platzieren von Links](./adobe-asset-link/place-linked.md)
    + [Nur für Platzierungen (FPO)](./adobe-asset-link/for-placement-only.md)
    + [Asset-Suche](./adobe-asset-link/asset-search.md)
+
++ Inhaltsautomatisierung{#content-automation}
+   + [Übersicht](./content-automation/overview.md)
 
 + Dynamic Media{#dynamic-media}
    + [Übersicht über Dynamic Media](dynamic-media/dynamic-media-overview-feature-video-use.md)
