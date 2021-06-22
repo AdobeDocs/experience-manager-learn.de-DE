@@ -12,7 +12,7 @@ thumbnail: 4988-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '1625'
 ht-degree: 1%
@@ -54,7 +54,7 @@ Dieses Kapitel fügt einem SPA in AEM Navigation hinzu. Das Navigationsmenü wir
 
    Wählen Sie unter **Zulässige Komponenten** > **Allgemein** die Komponente **Layout-Container** aus.
 
-   Wählen Sie unter **Zulässige Komponenten** > **WKND SPA REACT - STRUCTURE** > die Komponente **Header** aus:
+   Wählen Sie unter **Zulässige Komponenten** > **WKND SPA REACT - STRUCTURE** > die Komponente **Navigation** aus:
 
    ![Navigationskomponente auswählen](assets/navigation-routing/select-navigation-component.png)
 
