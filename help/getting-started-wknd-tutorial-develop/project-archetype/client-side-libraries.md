@@ -10,7 +10,7 @@ role: Developer
 level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 32320905786682a852baf7d777cb06de0072c439
 workflow-type: tm+mt
 source-wordcount: '3299'
 ht-degree: 4%
@@ -108,7 +108,7 @@ Als Nächstes werden wir die Organisation von Client-Bibliotheken untersuchen, d
 
 1. Die folgende Tabelle fasst die Client-Bibliotheken zusammen. Weitere Informationen zu [einschließlich Client-Bibliotheken finden Sie hier](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/including-clientlibs.html?lang=en#developing).
 
-   | Name | Beschreibung | Hinweise |
+   | Name | Beschreibung | Anmerkungen |
    |-------------------| ------------| ------|
    | `clientlib-base` | Grundlegende CSS- und JavaScript-Ebene, die für die Funktion der WKND-Site erforderlich sind | bettet Client-Bibliotheken der Kernkomponente ein |
    | `clientlib-grid` | Erzeugt das für die Funktion [Layout-Modus](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html) erforderliche CSS. | Mobile-/Tablet-Haltepunkte können hier konfiguriert werden |
@@ -130,7 +130,8 @@ Client-seitige Bibliotheken haben einige Einschränkungen bei der Unterstützung
 
    `main.scss` ist der Einstiegspunkt zu allen Sass-Dateien im  `ui.frontend` Modul. Sie enthält die Datei `_variables.scss`, die eine Reihe von Markenvariablen enthält, die in den verschiedenen Sass-Dateien des Projekts verwendet werden sollen. Die `_base.scss`-Datei ist ebenfalls enthalten und definiert einige grundlegende Stile für HTML-Elemente. Ein regulärer Ausdruck enthält alle Stile für einzelne Komponentenstile unter `src/main/webpack/components`. Ein weiterer regulärer Ausdruck enthält alle Dateien unter `src/main/webpack/site/styles`.
 
-1. Prüfen Sie die Datei `main.ts`. `main.ts` enthält  `main.scss` und enthält einen regulären Ausdruck zum Erfassen beliebiger  `.js` oder  `.ts` Dateien im Projekt. Dieser Einstiegspunkt wird von den [webpack-Konfigurationsdateien](https://webpack.js.org/configuration/) als Einstiegspunkt für das gesamte `ui.frontend`-Modul verwendet.
+1. 
+   1. Prüfen Sie die Datei `main.ts`. Sie enthält `main.scss` und einen regulären Ausdruck, um alle `.js`- oder `.ts`-Dateien im Projekt zu erfassen. Dieser Einstiegspunkt wird von den [webpack-Konfigurationsdateien](https://webpack.js.org/configuration/) als Einstiegspunkt für das gesamte `ui.frontend`-Modul verwendet.
 
 1. Inspect die Dateien unter `src/main/webpack/site/styles`:
 
@@ -201,7 +202,7 @@ Der AEM Projektarchetyp richtet diese Integration automatisch ein. Erfahren Sie,
    >
    >Es gibt auch ein `npm run prod`-Profil, das JS und CSS minimiert. Dies ist die Standardkompilierung, sobald der Webpack-Build über Maven ausgelöst wird. Weitere Informationen zum Modul [ui.frontend finden Sie hier](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html).
 
-1. Inspect die Datei `site.css` unter `ui.frontend/dist/clientlib-site/css/site.css`. Dies ist das kompilierte CSS, das auf den Sass-Quelldateien basiert.
+1. Inspect die Datei `site.css` unter `ui.frontend/dist/clientlib-site/site.css`. Dies ist das kompilierte CSS, das auf den Sass-Quelldateien basiert.
 
    ![Verteilte Site-CSS](assets/client-side-libraries/ui-frontend-dist-site-css.png)
 
@@ -310,7 +311,7 @@ Als Nächstes sehen wir, wie die clientlibs auf der AEM Seite referenziert werde
 
    >[!NOTE]
    >
-   > Wenn Sie auf 6.5/6.4 folgen, werden die clientseitigen Bibliotheken nicht automatisch minimiert. Weitere Informationen finden Sie in der Dokumentation zum [HTML Library Manager zur Aktivierung der Minimierung (empfohlen)](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors).
+   > Wenn Sie auf 6.5/6.4 folgen, werden die clientseitigen Bibliotheken nicht automatisch minimiert. Weitere Informationen finden Sie in der Dokumentation zum [HTML Library Manager zur Aktivierung der Minimierung (empfohlen)](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=de#using-preprocessors).
 
    >[!WARNING]
    >
