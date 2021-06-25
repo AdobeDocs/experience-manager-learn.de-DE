@@ -2,17 +2,13 @@
 title: Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank
 description: Mehrteiliges Tutorial, das Sie durch die Schritte führt, die zum Speichern und Abrufen von Formulardaten erforderlich sind
 feature: Adaptive Formulare
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
-version: 6.3,6.4,6.5
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+version: 6.3,6.4,6.5
+source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '280'
 ht-degree: 12%
 
 ---
@@ -39,11 +35,10 @@ Um diese Funktion auf Ihrer AEM Forms-Instanz zu testen, führen Sie die folgend
 * Melden Sie sich bei [configMgr an.](http://localhost:4502/system/console/configMgr) Suchen Sie nach &quot;Apache Sling Connection Pooled DataSource. Erstellen Sie mit den folgenden Eigenschaften einen neuen Eintrag für die Datenquelle der Apache Sling Connection Pooled mit dem Namen **SaveAndContinue**:
 
 | Eigenschaftsname | Wert |
-------------------------|---------------------------------------
+| ------------------------|---------------------------------------|
 | Datasource Name | SaveAndContinue |
 | JDBC-Treiberklasse | com.mysql.cj.jdbc.Driver |
 | JDBC-Verbindungs-URI | jdbc:mysql://localhost:3306/aemformstutorial |
-
 
 * Öffnen Sie das [Adaptive Formular](http://localhost:4502/content/dam/formsanddocuments/demostoreandretrieveformdata/jcr:content?wcmmode=disabled).
 * Füllen Sie einige Details aus und klicken Sie auf die Schaltfläche &quot;Speichern und weiter später&quot;.
