@@ -1,18 +1,14 @@
 ---
 title: Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank
 description: Mehrteiliges Tutorial, das Sie durch die Schritte führt, die zum Speichern und Abrufen von Formulardaten erforderlich sind
-feature: Adaptive Formulare
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
 version: 6.3,6.4,6.5
+feature: Adaptive Formulare
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '199'
 ht-degree: 6%
 
 ---
@@ -35,9 +31,7 @@ Die SQL-Datei zum Erstellen des Schemas kann [von hier heruntergeladen werden](a
 >Benennen Sie Ihre Datenquelle **SaveAndContinue**. Der Beispielcode verwendet den Namen, um eine Verbindung zur Datenbank herzustellen.
 
 | Eigenschaftsname | Wert |
-------------------------|---------------------------------------
+| ------------------------|---------------------------------------|
 | Datasource Name | SaveAndContinue |
 | JDBC-Treiberklasse | com.mysql.cj.jdbc.Driver |
 | JDBC-Verbindungs-URI | jdbc:mysql://localhost:3306/aemformstutorial |
-
-
