@@ -5,7 +5,7 @@ feature: Dispatcher
 topic: Architektur
 role: Architect
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 67e55e92cf95e03388ab3de49eff5a80786fb3a7
 workflow-type: tm+mt
 source-wordcount: '17487'
 ht-degree: 0%
@@ -77,7 +77,7 @@ Später in diesem Artikel werden wir verschiedene Möglichkeiten zum Einrichten 
 
 *Grundlegende Funktionalität eines Dispatcher-Caches*
 
-<br> 
+<br>
 
 Die Grundlagen des Dispatchers werden hier erläutert. Der Dispatcher ist ein einfacher Reverse-Proxy zum Zwischenspeichern mit der Möglichkeit, HTTP-Anfragen zu empfangen und zu erstellen. Ein normaler Anforderungs-/Antwortzyklus sieht wie folgt aus:
 
@@ -684,8 +684,10 @@ Auf diese Weise kann Ihr benutzerdefinierter Dispatcher Flushing-Agent einfach e
 
 Es spielt keine Rolle, welchen Pfad Sie dem Dispatcher zur Invalidierung vorschreiben - solange er sich auf derselben Site befindet, im selben &quot;Unterbaum&quot;. Sie müssen nicht einmal einen echten Ressourcenpfad verwenden. Sie kann auch &quot;virtuell&quot;sein:
 
-`GET /dispatcher-invalidate
-Invalidate-path /content/mysite/dummy`
+```
+GET /dispatcher-invalidate
+Invalidate-path /content/mysite/dummy
+```
 
 ![](assets/chapter-1/resource-path.png)
 
@@ -908,8 +910,10 @@ Dadurch wird der Cache umgangen und das Veröffentlichungssystem wird geladen. E
 
 Die Verringerung der Anzahl der Selektoren war ein guter Anfang. Als Faustregel gilt, dass Sie die Anzahl der gültigen Parameter immer auf ein absolutes Minimum beschränken sollten. Wenn Sie dies klug tun, können Sie sogar eine Web-Anwendungs-Firewall außerhalb AEM verwenden, indem Sie einen statischen Satz von Filtern ohne tiefes Wissen über das zugrunde liegende AEM System verwenden, um Ihre Systeme zu schützen:
 
-`Allow: /content/dam/(-\_/a-z0-9)+/(-\_a-z0-9)+
-\.respi\.q-(20|40|60|80|100)\.jpg`
+```
+Allow: /content/dam/(-\_/a-z0-9)+/(-\_a-z0-9)+
+       \.respi\.q-(20|40|60|80|100)\.jpg
+```
 
 Wenn Sie keine Webanwendungs-Firewall haben, müssen Sie im Dispatcher oder in AEM selbst filtern. Wenn Sie es in AEM tun, stellen Sie bitte sicher, dass
 
@@ -1102,7 +1106,7 @@ In diesem Beispiel würden Sie `statfileslevel` lieber auf `1` setzen.
 
 Wenn Sie jetzt veröffentlichen - und damit `/content/site-b/home` oder eine andere Ressource unter `/content/site-b` invalidieren, wird die `.stat`-Datei unter `/content/site-b/` erstellt.
 
-Inhalte unter `/content/site-a/` sind nicht betroffen. Dieser Inhalt würde mit einer `.stat`-Datei unter `/content/site-a/` verglichen. Wir haben zwei separate Invalidierungsdomänen erstellt.
+Inhalte unter `/content/site-a/` sind nicht betroffen. Dieser Inhalt wird mit einer `.stat`-Datei unter `/content/site-a/` verglichen. Wir haben zwei separate Invalidierungsdomänen erstellt.
 
 ![Eine statfileslevel &quot;1&quot;erstellt unterschiedliche Invalidierungsdomänen](assets/chapter-1/statfiles-level-1.png)
 
