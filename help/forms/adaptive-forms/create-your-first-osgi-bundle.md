@@ -10,7 +10,7 @@ version: 6.4,6.5
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 3a9778c97d57e55e3da740b492472456768fb32c
 workflow-type: tm+mt
 source-wordcount: '833'
 ht-degree: 3%
@@ -77,7 +77,7 @@ Gehen Sie wie folgt vor, um Ihr erstes Maven-Projekt zu erstellen:
 Das Maven-Projekt wird interaktiv generiert und Sie werden aufgefordert, Werte für eine Reihe von Eigenschaften bereitzustellen, z. B.
 
 | Eigenschaftsname | Signifikanz | Wert |
-------------------------|---------------------------------------|---------------------
+|------------------------|---------------------------------------|---------------------|
 | groupId | groupId identifiziert Ihr Projekt in allen Projekten eindeutig | com.learningaemforms.adobe |
 | appsFolderName | Name des Ordners, der Ihre Projektstruktur enthalten wird | learningaemforms |
 | artifactId | artifactId ist der Name der JAR-Datei ohne Version. Wenn Sie es erstellt haben, können Sie wählen, welchen Namen Sie mit Kleinbuchstaben und ohne seltsame Symbole wünschen. | learningaemforms |
