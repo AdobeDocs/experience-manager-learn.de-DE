@@ -12,9 +12,9 @@ thumbnail: 330519.jpg
 topic: Headless, Integrationen
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e0822ad4aaf4022a849825ef625e1c29eb6e78f3
 workflow-type: tm+mt
-source-wordcount: '1827'
+source-wordcount: '1828'
 ht-degree: 0%
 
 ---
@@ -172,7 +172,7 @@ Diese Beispielanwendung basiert auf Node.js. Daher ist es am besten, das Modul [
 
    Je nachdem, welche JSON-Datei - entweder die JSON-Datei &quot;Local Development Access Token&quot;oder die JSON-Datei &quot;Service Credentials&quot;- über den Befehlszeilenparameter `file` übergeben wird, leitet die Anwendung ein Zugriffstoken ab.
 
-   Beachten Sie, dass die Service-Anmeldedaten zwar nicht ablaufen, JWT und das entsprechende Zugriffstoken dies jedoch tun und vor Ablauf der Gültigkeit aktualisiert werden müssen. Dies kann durch Verwendung von `refresh_token` [erfolgen, die von der Adobe IMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens) bereitgestellt wird.
+   Beachten Sie, dass die Service-Anmeldedaten zwar alle 365 Tage ablaufen, JWT und das entsprechende Zugriffstoken jedoch häufig ablaufen und vor ihrem Ablauf aktualisiert werden müssen. Dies kann durch Verwendung von `refresh_token` [erfolgen, die von der Adobe IMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens) bereitgestellt wird.
 
 1. Nachdem diese Änderungen vorgenommen wurden und die JSON-Dienstanmeldeinformationen von der AEM Developer Console heruntergeladen wurde (und zur Vereinfachung als `service_token.json` im selben Ordner wie `index.js` gespeichert wurde), führen Sie die Anwendung aus, die den Befehlszeilenparameter `file` durch `service_token.json` ersetzt, und aktualisieren Sie `propertyValue` auf einen neuen Wert, sodass die Auswirkungen in AEM sichtbar sind.
 
