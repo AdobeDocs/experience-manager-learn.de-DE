@@ -2,17 +2,17 @@
 title: Grundlegende Ordner
 description: 'Die Definition von Basisordnern in AEM Assets hilft bei der Einrichtung einer soliden Inhaltsarchitektur und der Grundlage für Ihr Digital Asset Management. '
 sub-product: Assets
-feature: Asset-Verwaltung
+feature: Asset-Management
 version: cloud-service
 kt: 4870
 thumbnail: 33496.jpg
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '47'
-ht-degree: 6%
+ht-degree: 10%
 
 ---
 
