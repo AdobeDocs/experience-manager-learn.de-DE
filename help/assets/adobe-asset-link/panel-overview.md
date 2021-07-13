@@ -7,9 +7,9 @@ version: cloud-service
 kt: 4905
 thumbnail: 33734.jpg
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 6%
@@ -17,7 +17,7 @@ ht-degree: 6%
 ---
 
 
-# Adobe Asset Link Panel - Überblick {#adobe-asset-link-panel-overview}
+# Übersicht über das Bedienfeld &quot;Adobe-Asset-Link&quot; {#adobe-asset-link-panel-overview}
 
 Adobe Asset Link bietet kreativen Benutzern die Möglichkeit, in AEM Assets gespeicherte Assets über das In-App-Bedienfeld in InDesign, Photoshop und Illustrator zu durchsuchen, zu suchen, auszuchecken und einzuchecken. Lernen Sie die Benutzeroberfläche und Funktionen des Bedienfelds &quot;Adobe Asset Link&quot;kennen.
 
