@@ -8,9 +8,9 @@ activity: develop
 topics: development, authoring, configuring, architecture
 audience: all
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '1216'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 ---
 
 
-# Bestimmen der Ordnerstruktur und Dateibenennungskonvention {#folder-structure-filenaming}
+# Bestimmen der Ordnerstruktur und der Dateinamenkonvention {#folder-structure-filenaming}
 
 Bevor Sie mit dem Hochladen des gesamten Inhalts beginnen, sollten Sie die Ordnerstruktur, die Sie verwenden, und insbesondere Ihre Dateibenennungskonvention berücksichtigen. Dadurch sparen Sie wahrscheinlich Zeit und müssen Aufgaben später erneut ausführen. Am besten koordinieren Sie diese Entscheidungen über alle Gruppen hinweg.
 
