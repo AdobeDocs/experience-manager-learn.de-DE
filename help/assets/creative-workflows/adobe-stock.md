@@ -4,9 +4,9 @@ description: 'AEM bietet Benutzern die Möglichkeit, Adobe Stock-Assets direkt a
 feature: Adobe Stock
 version: 6.4, 6.5
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '970'
 ht-degree: 15%
@@ -79,7 +79,7 @@ AEM 6.4.2 bietet Benutzern die Möglichkeit, Adobe Stock-Assets direkt aus AEM z
 * Für AEM 6.4 müssen Sie das [AEM Service Pack 2](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq640/servicepack/AEM-6.4.2.0) installieren und dann die Datei cq-dam-stock-integration-content-1.0.4.zip erneut installieren.
 * Stellen Sie sicher, dass Sie über Administratorberechtigungen für [Adobe I/O Console](https://console.adobe.io/), [Adobe Admin Console](https://adminconsole.adobe.com/) und Adobe Experience Manager verfügen, um die Integration einzurichten.
 
-#### Einrichten der Adobe IMS-Konfiguration mithilfe der Adobe I/O Console {#set-up-adobe-ims-configuration-using-adobe-i-o-console}
+#### Einrichten der Adobe-IMS-Konfiguration mithilfe der Adobe I/O Console {#set-up-adobe-ims-configuration-using-adobe-i-o-console}
 
 1. Erstellen Sie unter **Tools > Sicherheit** eine Adobe für die Konfiguration des technischen IMS-Kontos.
 2. Wählen Sie *Cloud Solution* als *Adobe Stock* aus und erstellen Sie ein neues Zertifikat oder verwenden Sie ein vorhandenes Zertifikat erneut für die Konfiguration.
@@ -91,7 +91,7 @@ AEM 6.4.2 bietet Benutzern die Möglichkeit, Adobe Stock-Assets direkt aus AEM z
 
 ![Technisches Adobe IMS-Konto](assets/screen_shot_2018-10-22at12219pm.png)
 
-#### Einrichten von Adobe Stock-Cloud Services {#set-up-adobe-stock-cloud-services}
+#### Einrichten von Adobe Stock Cloud Services {#set-up-adobe-stock-cloud-services}
 
 1. Erstellen Sie eine neue Cloud-Dienstkonfiguration für Adobe Stock unter **Tools > Cloud Services.**
 2. Wählen Sie die im obigen Abschnitt erstellte *Adobe IMS Configuration* für Ihre *Adobe Stock Cloud*-Konfiguration aus.
