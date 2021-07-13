@@ -8,9 +8,9 @@ topics: development, authoring, configuring, architecture, publishing
 audience: all
 activity: use
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '2734'
 ht-degree: 5%
@@ -18,7 +18,7 @@ ht-degree: 5%
 ---
 
 
-# Dynamic Media Classic Hauptarbeitsablauf und Vorschau von Assets {#main-workflow}
+# Dynamic Media Classic - Hauptarbeitsablauf und Asset-Vorschau {#main-workflow}
 
 Dynamic Media unterstützt einen Workflow-Prozess zum Erstellen (und Hochladen), Erstellen (und Veröffentlichen) und Bereitstellen . Sie beginnen damit, Assets hochzuladen, dann etwas mit diesen Assets zu tun, z. B. ein Bildset zu erstellen und schließlich zu veröffentlichen, um sie live zu schalten. Der Schritt Erstellen ist für einige Workflows optional. Wenn Ihr Ziel beispielsweise darin besteht, Bilder nur dynamisch zu skalieren und zu zoomen oder Videos für Streaming zu konvertieren und zu veröffentlichen, sind keine erforderlichen Erstellungsschritte erforderlich.
 
