@@ -8,9 +8,9 @@ activity: develop
 version: 6.3, 6.4, 6.5
 feature: Kernkomponenten
 topic: Entwicklung
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 8%
@@ -18,7 +18,7 @@ ht-degree: 8%
 ---
 
 
-# Anpassen der Komponentensymbole {#developing-component-icons-in-aem-sites}
+# Anpassen von Komponentensymbolen {#developing-component-icons-in-aem-sites}
 
 Mithilfe von Komponentensymbolen können Autoren eine Komponente schnell mit Symbolen oder aussagekräftigen Abkürzungen identifizieren. Autoren können jetzt die Komponenten finden, die erforderlich sind, um ihre Web-Erlebnisse schneller als je zuvor zu erstellen.
 
@@ -35,7 +35,7 @@ Der Komponenten-Browser wird jetzt in einem konsistenten grauen Design angezeigt
    * Benutzerdefiniertes SVG-Bild *(von einem Entwickler konfiguriert)*
    * CoralUI-Symbol *(von einem Entwickler konfiguriert)*
 
-## Konfigurationsoptionen für Komponenten-Symbol {#component-icon-configuration-options}
+## Konfigurationsoptionen für Komponenten-Symbole {#component-icon-configuration-options}
 
 ### Abkürzungen {#abbreviations}
 
