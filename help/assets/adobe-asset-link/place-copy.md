@@ -6,9 +6,9 @@ feature: Adobe Asset Link
 version: cloud-service
 thumbnail: 34049.jpg
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 15%
@@ -16,7 +16,7 @@ ht-degree: 15%
 ---
 
 
-# Platzierungskopie {#place-copy}
+# Platzieren von Kopien {#place-copy}
 
 Erfahren Sie, wie Sie mithilfe des Vorgangs &quot;Place Copy&quot;Assets aus AEM Assets verwenden.
 
