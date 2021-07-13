@@ -12,9 +12,9 @@ uuid: e096a08b-528d-48c7-93fb-73b10c0a9259
 kt: 4633
 thumbnail: 32152.jpg
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 2%
@@ -22,7 +22,7 @@ ht-degree: 2%
 ---
 
 
-# Verwenden der Funktion &quot;Seitendifferenz&quot;{#using-page-difference-with-aem-sites}
+# Verwenden der Funktion &quot;Seitendifferenz&quot; {#using-page-difference-with-aem-sites}
 
 Die Seitendifferenz-Funktionen von AEM Sites bieten eine schnelle, farbcodierte Ansicht des Inhalts, der sich auf einer Seite geändert hat (Version, Live Copy, Launches, Sprachkopie).
 
