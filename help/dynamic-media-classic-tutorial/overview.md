@@ -8,9 +8,9 @@ audience: all
 activity: develop, use
 feature: Dynamic Media Classic
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 1%
@@ -43,7 +43,7 @@ In diesem Handbuch besprechen wir die folgenden Kernfunktionen von Dynamic Media
 
 - **Dynamic Imaging.** Der Dachbegriff für Echtzeitbearbeitung, Formatierung und Größenanpassung sowie interaktives Zoomen und Schwenken; Farb- und Texturbeobachtung; 360-Grad-Rotation; Bildvorlagen; und Multimedia-Viewern.
 - **Video.** Laden Sie endgültige Videos hoch, veröffentlichen Sie sie und laden Sie sie schrittweise in konfigurierbare Video-Viewer herunter.
-- **Smart Imaging.** Technologie, die die AI-Funktionen von Adobe Sensei nutzt und mit vorhandenen &quot;Bildvorgaben&quot;zusammenarbeitet, um die Leistung bei der Bildbereitstellung zu verbessern, indem Bildformat, -größe und -qualität basierend auf den Funktionen des Client-Browsers automatisch optimiert werden.
+- **Intelligente Bildbearbeitung.** Technologie, die die AI-Funktionen von Adobe Sensei nutzt und mit vorhandenen &quot;Bildvorgaben&quot;zusammenarbeitet, um die Leistung bei der Bildbereitstellung zu verbessern, indem Bildformat, -größe und -qualität basierend auf den Funktionen des Client-Browsers automatisch optimiert werden.
 
 Weitere Funktionen der Lösung finden Sie in der [Dokumentation für Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/intro/introduction.html).
 
