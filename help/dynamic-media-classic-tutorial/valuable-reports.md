@@ -8,9 +8,9 @@ topics: development, authoring, configuring, reports
 audience: all
 activity: use
 topic: Content Management
-role: Administrator
+role: Admin
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 9%
@@ -45,7 +45,7 @@ Wir hoffen, dass Sie die Inhalte in diesem Best Practices-Handbuch bei den erste
 Weitere Informationen zu Dynamic Media Classic finden Sie in den folgenden Ressourcen:
 
 - [Dynamic Media Classic auf Experience League - Vorteile](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
-- [Dynamic Media Classic auf Experience League - Weitere Informationen](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
+- [Dynamic Media Classic auf Experience League - Mehr dazu](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
 - [Die Archive des Dynamic Media Newsletters](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
 - [Dynamic Media Newsletter-Abonnementseite](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
 - [Dokumentation zu Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/home.html)
