@@ -12,17 +12,17 @@ version: 6.3, 6.4, 6.5
 kt: 4321
 thumbnail: 32192.jpg
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '174'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
 
-# Verstehen der Seiteneigenschaften {#understanding-page-properties-aem-sites}
+# Grundlegendes zu Seiteneigenschaften {#understanding-page-properties-aem-sites}
 
 Im folgenden Video werden die Seiteneigenschaften vorgestellt, die einer Seite in Adobe Experience Manager zugeordnet sind.
 
@@ -52,10 +52,10 @@ In diesem Video werden die folgenden Seiteneigenschaftselemente behandelt:
    * Vorlageneinstellungen
    * Authentifizierungspflicht
    * Export
-* Miniaturansicht 
+* Miniaturansicht
 * Freigabe in Social Media
 * Cloud Services-Konfigurationen
-* Personalisierung 
+* Personalisierung
    * ContextHub-Konfigurationen
    * Konfiguration für Targeting
 * Berechtigungen
