@@ -13,9 +13,9 @@ version: 6.3, 6.4, 6.5
 uuid: 045473d2-5abe-4414-b91c-d369f3069ead
 discoiquuid: 912e0c41-83cf-49f7-b515-09519b6718c1
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 7%
@@ -35,7 +35,7 @@ Diese Videoreihe behandelt die Bereitstellungsoptionen für die Verwendung von I
 2. Bereitstellen von Inhaltsfragmenten als JSON mithilfe von AEM Content Services
 3. Verwenden der Assets-HTTP-API
 
-## Verwenden von Inhaltsfragmenten in Web-Seiten {#using-content-fragments-in-web-pages}
+## Verwenden von Inhaltsfragmenten in Webseiten {#using-content-fragments-in-web-pages}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
 
