@@ -9,9 +9,9 @@ doc-type: feature video
 activity: use
 version: cloud-service
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 12%
@@ -19,7 +19,7 @@ ht-degree: 12%
 ---
 
 
-# Authoring von Inhaltsfragmenten {#authoring-content-fragments}
+# Erstellen von Inhaltsfragmenten {#authoring-content-fragments}
 
 Inhaltsfragmente sind eine Inhaltsabstraktion in AEM, mit der textbasierte Inhalte unabhängig von den unterstützten Kanälen erstellt und verwaltet werden können.
 
@@ -38,7 +38,7 @@ Diese Videoreihe behandelt den Lebenszyklus von Inhaltsfragmenten für die Bearb
 
 AEM Inhaltsfragmentmodelle, die Datenschemata von Inhaltsfragmenten, müssen über AEM [[!UICONTROL Konfigurationsbrowser]](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-service/implementing/developing/configurations.html) aktiviert werden, wodurch Inhaltsfragmentmodelle je nach Konfiguration definiert werden können.
 
-## Erstellen von Inhaltsfragmenten  {#creating-content-fragments}
+## Erstellen von Inhaltsfragmenten    {#creating-content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22451/?quality=12&learn=on)
 
@@ -58,7 +58,7 @@ AEM Inhaltsfragmente können von der AEM-Autoreninstanz als ZIP-Datei mit Varian
 *Beispiel für eine ZIP-Datei zum Herunterladen von Inhaltsfragmenten:*\
 **[daniel_schreder.zip](assets/daniel_schreder.zip)**
 
-## Inhaltsfragmente, redaktionelle Funktionen {#editorial-capabilities}
+## Funktionen für Inhaltsfragmente {#editorial-capabilities}
 
 >[!VIDEO](https://video.tv.adobe.com/v/25891/?quality=12&learn=on)
 
