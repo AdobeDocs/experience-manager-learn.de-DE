@@ -7,9 +7,9 @@ version: 6.5
 kt: 5808
 thumbnail: 36645.jpg
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 ---
 
 
-# Verwenden von Dynamic Media Classic Desktop Application{#using-dynamic-media-desktop-application}
+# Verwenden des Dynamic Media Classic Desktop-Programms{#using-dynamic-media-desktop-application}
 
 Adobe führt ein Desktop-Programm für Dynamic Media Classic ein, das ein ähnliches Erlebnis wie ein Browser bietet und eine funktionell gleichwertige Benutzeroberfläche bietet, die nicht vom Adobe Flash-Player abhängig ist.
 
