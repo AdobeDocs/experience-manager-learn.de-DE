@@ -4,9 +4,9 @@ description: Video-Durchläufe der AEM-Autoren- und AEM Assets Brand Portal-Inte
 feature: Brand Portal
 version: 6.3, 6.4, 6.5
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '1774'
 ht-degree: 47%
@@ -32,7 +32,7 @@ Die Asset-Beschaffung von Brand Portal wird verwendet, um Assets von Agenturen u
 
 Anweisungen zum Konfigurieren und Einrichten der Asset-Beschaffung in der Experience Manager-Autoreninstanz finden Sie unter [Aktivieren der Experience Manager-Autoreninstanz für die Asset-Beschaffung](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) .
 
-## Brand Portal Februar 2019 Funktionen und Verbesserungen{#brand-portal-features-and-enhancements-644}
+## Brand Portal - Funktionen und Verbesserungen im Februar 2019{#brand-portal-features-and-enhancements-644}
 
 >[!VIDEO](https://video.tv.adobe.com/v/26354/?quality=9&learn=on)
 
@@ -113,7 +113,7 @@ Eine AEM-Autoreninstanz kann jedoch nur mit der Mandanten-ID-URL [konfiguriert]
 
 **Anwendungsfall** : Unternehmen können ihre Branding-Anforderungen erfüllen, indem sie die Portal-URL anpassen, anstatt an der von Adobe bereitgestellten URL zu festhalten.
 
-## Brand Portal Dezember 2018 Funktionen und Verbesserungen{#brand-portal-features-and-enhancements-642}
+## Brand Portal - Funktionen und Verbesserungen vom Dezember 2018{#brand-portal-features-and-enhancements-642}
 
 >[!VIDEO](https://video.tv.adobe.com/v/23707/?quality=9&learn=on)
 
@@ -158,7 +158,7 @@ Es wurden sechs neue Konfigurationen hinzugefügt, damit Administratoren folgend
 
 Brand Portal verwendet die Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)-Schnittstelle zum Erstellen der JWT-Anwendung, die die Konfiguration von oAuth-Integrationen ermöglicht, um die Integration von AEM Assets mit Brand Portal zu ermöglichen. Zuvor wurde die Benutzeroberfläche zum Konfigurieren von OAuth-Integrationen unter `https://marketing.adobe.com/developer/` gehostet. Weitere Informationen zur Integration von AEM Assets mit Brand Portal, um Assets und Sammlungen in Brand Portal zu veröffentlichen, finden Sie unter [Konfigurieren der Integration von AEM Assets mit Brand Portal](https://helpx.adobe.com/de/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
 
-## Brand Portal Februar 2018 Funktionen und Verbesserungen{#brand-portal-features-and-enhancements-632}
+## Brand Portal - Funktionen und Verbesserungen im Februar 2018{#brand-portal-features-and-enhancements-632}
 
 Neue Funktionen, die auf die Ausrichtung von Brand Portal an AEM ausgerichtet sind.
 
