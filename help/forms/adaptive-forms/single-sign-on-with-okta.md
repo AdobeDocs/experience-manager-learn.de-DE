@@ -8,11 +8,11 @@ doc-type: tutorial
 activity: setup
 version: 6.5
 topic: Administration
-role: Administrator
+role: Admin
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '762'
 ht-degree: 3%
 
 ---
@@ -70,7 +70,7 @@ Im Folgenden werden die wichtigsten Eigenschaften beschrieben, die angegeben wer
 * **CRX-Benutzer automatisch erstellen**:true
 * **Zu Gruppen hinzufügen**: true
 * **Standardgruppen**: Interaktionsgruppen (dies ist die Gruppe, der die Benutzer hinzugefügt werden. Sie können jede bestehende Gruppe in AEM bereitstellen.)
-* **NamedIDPolicy**: Gibt Einschränkungen für die Namenskennung an, die zur Darstellung des angeforderten Betreffs verwendet werden soll. Kopieren Sie die folgende hervorgehobene Zeichenfolge **urn:oasis:names:tc:SAML:2.0:nameidformat:emailAddress**
+* **NamedIDPolicy**: Gibt Einschränkungen für die Namenskennung an, die zur Darstellung des angeforderten Betreffs verwendet werden soll. Kopieren Sie die folgende hervorgehobene Zeichenfolge **urn:oasis:names:tc:SAML:2.0:nameidformat:emailAddress** und fügen Sie sie ein.
 * **Synchronisierte Attribute**  - Dies sind die Attribute, die aus der SAML-Assertion in AEM Profil gespeichert werden.
 
 ![saml-authentication-handler](assets/saml-authentication-settings-blurred.PNG)
