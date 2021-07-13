@@ -6,11 +6,11 @@ version: cloud-service
 feature: Experience Fragments
 topic: Content Management
 level: Beginner, Intermediate
-role: Architect, Developer, Administrator, Business Practitioner
+role: Architect, Developer, Admin, User
 doc-type: feature video
 kt: 660
 thumbnail: 331786.jpg
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 ---
 
 
-# Bausteine mit Experience Fragments {#building-blocks}
+# Erstellen von Bausteinen mit Experience Fragments {#building-blocks}
 
 Bausteine sind eine Unterfunktion von Experience Fragments. Anhand von Bausteinen können Inhaltsautoren Komponenten in verschiedenen Varianten von Experience Fragments wiederverwenden.
 
