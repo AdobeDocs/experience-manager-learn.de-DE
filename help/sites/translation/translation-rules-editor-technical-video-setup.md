@@ -8,9 +8,9 @@ doc-type: technical video
 activity: setup
 version: 6.4, 6.5
 topic: Lokalisierung
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 7%
@@ -36,7 +36,7 @@ ht-degree: 7%
 
 Der Übersetzungsregel-Editor, der die XML-Übersetzungsdatei aktualisiert. Die Benutzeroberfläche für die Übersetzungskonfiguration erleichtert die Verwaltung verschiedener Übersetzungsregeln und schützt vor Typos bei der direkten Bearbeitung von XML.
 
-Greifen Sie auf die Benutzeroberfläche der Übersetzungskonfiguration zu:
+Zugriff auf die Benutzeroberfläche der Übersetzungskonfiguration:
 
 * **[!UICONTROL AEM Startmenü]  >  [!UICONTROL Tools]  >  [!UICONTROL Allgemein]  >  [[!UICONTROL Übersetzungskonfiguration]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
 
