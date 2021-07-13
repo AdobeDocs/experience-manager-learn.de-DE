@@ -8,9 +8,9 @@ topics: development, authoring, configuring, videos, video-profiles
 audience: all
 activity: use
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '6231'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 ---
 
 
-# Videoübersicht {#video-overview}
+# Videoüberblick {#video-overview}
 
 Dynamic Media Classic bietet eine automatische Konvertierung von Videos beim Hochladen, Video-Streaming auf Desktop- und Mobilgeräte sowie adaptive Videosets, die für die Wiedergabe auf der Grundlage von Gerät und Bandbreite optimiert sind. Eines der wichtigsten Dinge an Videos ist, dass der Workflow einfach ist - er wurde so entwickelt, dass jeder ihn verwenden kann, auch wenn er nicht sehr mit der Videotechnologie vertraut ist.
 
