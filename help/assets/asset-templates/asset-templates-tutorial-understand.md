@@ -3,9 +3,9 @@ title: 'Grundlegendes zu InDesign-Dateien und Asset-Vorlagen in AEM Assets '
 description: In diesem Video-Tutorial erfahren Sie, wie Sie eine InDesign-Datei definieren und alle zugehörigen Überlegungen zur Verwendung in der Funktion "Asset-Vorlagen"von AEM Assets aufrufen.
 version: 6.3, 6.4, 6.5
 topic: Content Management
-role: Business Practitioner
+role: User
 level: Intermediate
-source-git-commit: b4fa992abe22e3a546d651e465d6ffc9e415aee2
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 1%
