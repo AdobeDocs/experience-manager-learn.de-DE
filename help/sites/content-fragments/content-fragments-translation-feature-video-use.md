@@ -3,12 +3,12 @@ title: Übersetzungsunterstützung für AEM Inhaltsfragmente
 description: Erfahren Sie, wie Inhaltsfragmente mit Adobe Experience Manager lokalisiert und übersetzt werden können. Mit einem Inhaltsfragment verknüpfte gemischte Medien-Assets können ebenfalls extrahiert und übersetzt werden.
 feature: Inhaltsfragmente, Multi-Site-Manager
 topic: Lokalisierung
-role: Business Practitioner
+role: User
 level: Intermediate
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 201
 thumbnail: 18131.jpg
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: b0bca57676813bd353213b4808f99c463272de85
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 2%
