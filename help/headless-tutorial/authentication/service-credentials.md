@@ -12,9 +12,9 @@ thumbnail: 330519.jpg
 topic: Headless, Integrationen
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: e0822ad4aaf4022a849825ef625e1c29eb6e78f3
+source-git-commit: b902ced3d7f7cf827d0a487bf741ff370f7c1f04
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1863'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,10 @@ Dienstanmeldeinformationen erfordern im Gegensatz zu Zugriffstoken für die loka
 
 __Dies ist eine einmalige Initialisierung pro AEM als Cloud Service-Umgebung.__
 
-1. Stellen Sie sicher, dass Sie als Administrator Ihrer Adobe IMS-Org angemeldet sind.
+1. Stellen Sie sicher, dass Sie als angemeldet sind:
+   + Ihr Adobe-IMS-Org-Administrator
+   + Mitglied von __Cloud Manager - Entwickler__ IMS-Produktprofil
+   + Mitglied von __AEM Benutzer__ oder __AEM Administratoren__ IMS-Produktprofil unter __AEM Author__
 1. Melden Sie sich bei [Adobe Cloud Manager](https://my.cloudmanager.adobe.com) an.
 1. Öffnen Sie das Programm, das die AEM als Cloud Service-Umgebung enthält, um die Einrichtung der Dienstanmeldeinformationen für
 1. Tippen Sie im Abschnitt __Umgebungen__ auf das Auslassungszeichen neben der Umgebung und wählen Sie __Entwicklerkonsole__ aus.
@@ -67,8 +70,10 @@ Sobald die Dienstanmeldeinformationen der AEM als Cloud Service-Umgebung initial
 
 Beim Herunterladen der Dienstanmeldeinformationen werden dieselben Schritte wie bei der Initialisierung ausgeführt. Wenn die Initialisierung noch nicht erfolgt ist, wird dem Benutzer ein Fehler angezeigt, bei dem auf die Schaltfläche __Get Service Credentials__ getippt wird.
 
-1. Stellen Sie sicher, dass Sie Mitglied des IMS-Produktprofils __Cloud Manager - Entwickler__ sind (das Zugriff auf AEM Developer Console gewährt).
-   + Sandbox-AEM als Cloud Service-Umgebung erfordert nur eine Mitgliedschaft im __AEM-Administrator__ oder __AEM-Profil für Benutzer__
+1. Stellen Sie sicher, dass Sie als angemeldet sind:
+   + Mitglied des __Cloud Manager - Entwickler__ IMS-Produktprofils (gewährt Zugriff auf AEM Developer Console)
+      + Sandbox-AEM als Cloud Service-Umgebung erfordert diese __Cloud Manager - Entwickler__ -Mitgliedschaft nicht
+   + Mitglied von __AEM Benutzer__ oder __AEM Administratoren__ IMS-Produktprofil unter __AEM Author__
 1. Melden Sie sich bei [Adobe Cloud Manager](https://my.cloudmanager.adobe.com) an.
 1. Öffnen Sie das Programm, das die AEM als Cloud Service-Umgebung enthält, in die integriert werden soll.
 1. Tippen Sie im Abschnitt __Umgebungen__ auf das Auslassungszeichen neben der Umgebung und wählen Sie __Entwicklerkonsole__ aus.
@@ -100,7 +105,7 @@ Die Service Credentials, ein vollständig geformtes JSON-Objekt, sind nicht mit 
 1. Adobe IMS gibt ein Zugriffstoken zurück, das für den Zugriff auf AEM als Cloud Service verwendet werden kann
    + Für Zugriffstoken kann ein Ablauf angefordert werden. Es ist am besten, die Lebensdauer des Zugriffstokens kurz zu halten und bei Bedarf zu aktualisieren.
 1. Die externe Anwendung sendet HTTP-Anfragen an AEM als Cloud Service und fügt das Zugriffstoken als Trägertoken zum Autorisierungs-Header der HTTP-Anforderungen hinzu
-1. AEM als Cloud Service die HTTP-Anforderung erhält, die Anfrage authentifiziert, die von der HTTP-Anforderung angeforderten Arbeiten durchführt und eine HTTP-Antwort an die externe Anwendung zurückgibt
+1. AEM als Cloud Service die HTTP-Anforderung erhält, die Anforderung authentifiziert, die von der HTTP-Anforderung angeforderten Arbeiten durchführt und eine HTTP-Antwort an die externe Anwendung zurückgibt
 
 ### Aktualisierungen der externen Anwendung
 
