@@ -4,17 +4,17 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: Cloud-Service
 team: TM
-source-git-commit: e2bdc73aff012bde5a1ff8f5c85ac0a183dc441d
+source-git-commit: 680043f5717bf938bf6f0b960d9ed5939d13544c
 workflow-type: tm+mt
-source-wordcount: '440'
-ht-degree: 31%
+source-wordcount: '460'
+ht-degree: 30%
 
 ---
 
 
 # Tutorials zu Adobe Experience Manager as a Cloud Service {#cloud-service}
 
-+ [Überblick](./overview.md)
++ [Übersicht](./overview.md)
 + Einführung in AEM as a Cloud Service{#introduction}
    + [Was ist AEM Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
    + [Entwicklung](./introduction/evolution.md)
@@ -42,7 +42,7 @@ ht-degree: 31%
       + [Dispatcher-Konfigurationen](./cloud-manager/devops/dispatcher-configurations.md)
       + [Cloud Manager-APIs](./cloud-manager/devops/cloud-manager-apis.md)
 + Einrichtung der lokalen Entwicklungsumgebung {#local-development-environment-set-up}
-   + [Überblick](./local-development-environment/overview.md)
+   + [Übersicht](./local-development-environment/overview.md)
    + [Entwicklungstools](./local-development-environment/development-tools.md)
    + [Lokale AEM Runtime](./local-development-environment/aem-runtime.md)
    + [Lokale Dispatcher-Tools](./local-development-environment/dispatcher-tools.md)
@@ -57,23 +57,30 @@ ht-degree: 31%
       + [Inhaltsveröffentlichung](./developing/basics/content-publishing.md)
       + [OSGi-Konfigurationen](./developing/basics/osgi-configurations.md)
       + [Dispatcher-Konfigurationsmigration](./developing/basics/dispatcher-configuration.md)
-   + [AEM SDK-API-JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
+   + AEM-Projekte{#aem-projects}
+      + [AEM Maven-Projekt](./developing/projects/maven-project-structure.md)
++ OSGi Services{#osgi-services}
+   + [Grundlagen zum OSGi-Dienst](./developing/osgi-services/basics.md)
+   + [Lebenszyklus von OSGi-Komponenten](./developing/osgi-services/lifecycle.md)
+   + [Grundlagen zu OSGi-Konfigurationen](./developing/osgi-services/configurations.md)
+   + [OSGi-Konfigurationen mit OCD](./developing/osgi-services/configurations-ocd.md)
++ [AEM SDK-API-JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + Debugging AEM{#debugging}
    + Debugging des AEM SDK{#debugging-aem-sdk}
-      + [Überblick](./debugging/aem-sdk-local-quickstart/overview.md)
+      + [Übersicht](./debugging/aem-sdk-local-quickstart/overview.md)
       + [Protokolle](./debugging/aem-sdk-local-quickstart/logs.md)
       + [Remote-Debugging](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
       + [OSGi-Web-Konsole](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher Tools](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [Andere Tools](./debugging/aem-sdk-local-quickstart/other-tools.md)
    + Debugging von AEM als Cloud Service{#debugging-aem-as-a-cloud-service}
-      + [Überblick](./debugging/cloud-service/overview.md)
+      + [Übersicht](./debugging/cloud-service/overview.md)
       + [Protokolle](./debugging/cloud-service/logs.md)
       + [Erstellung und Implementierung](./debugging/cloud-service/build-and-deployment.md)
       + [Developer Console](./debugging/cloud-service/developer-console.md)
       + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md)
 + Zugriff auf AEM{#accessing}
-   + [Überblick](./accessing/overview.md)
+   + [Übersicht](./accessing/overview.md)
    + [Adobe IMS-Benutzer](./accessing/adobe-ims-users.md)
    + [Adobe IMS-Benutzergruppen](./accessing/adobe-ims-user-groups.md)
    + [Adobe IMS-Produktprofile](./accessing/adobe-ims-product-profiles.md)
@@ -117,11 +124,11 @@ ht-degree: 31%
       + [Erstellen einer verbundenen App](./forms/integrate-with-salesforce/create-connected-app.md)
       + [Swagger-Datei erstellen](./forms/integrate-with-salesforce/describe-rest-api.md)
       + [Datenquelle erstellen](./forms/integrate-with-salesforce/create-data-source.md)
-      + [Formulardatenmodell erstellen](./forms/integrate-with-salesforce/create-form-data-model.md)
+      + [Erstellen des Formulardatenmodells](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [Testformularübermittlung](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [Test-Klick-Ereignis](./forms/integrate-with-salesforce/create-lead-click-event.md)
 + asset compute Extensibility{#asset-compute}
-   + [Überblick](./asset-compute/overview.md)
+   + [Übersicht](./asset-compute/overview.md)
    + Setup{#set-up}
       + [Konto- und Dienstbereitstellung](./asset-compute/set-up/accounts-and-services.md)
       + [Lokale Entwicklungsumgebung](./asset-compute/set-up/development-environment.md)
@@ -135,7 +142,7 @@ ht-degree: 31%
    + Testen und Debuggen{#test-debug}
       + [Worker testen](./asset-compute/test-debug/test.md)
       + [Debuggen eines Sekundärs](./asset-compute/test-debug/debug.md)
-   + Bereitstellen{#deploy}
+   + Bereitstellen von{#deploy}
       + [Bereitstellen in Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
       + [Integrieren mit AEM](./asset-compute/deploy/processing-profiles.md)
    + Erweitert{#advanced}
