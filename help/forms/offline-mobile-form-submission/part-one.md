@@ -12,9 +12,9 @@ version: 6.4, 6.5
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '345'
 ht-degree: 0%
 
 ---
@@ -148,7 +148,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-Um die Möglichkeit zum Herunterladen interaktiver PDF-Dateien von teilweise ausgefüllten mobilen Formularen anzuzeigen, klicken Sie [bitte hier](https://forms.enablementadobe.com/content/dam/formsanddocuments/schengen.xdp/jcr:content).
+Um die Möglichkeit zum Herunterladen interaktiver PDF-Dateien von teilweise ausgefüllten mobilen Formularen anzuzeigen, klicken Sie [bitte hier](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content).
 Nach dem Herunterladen der PDF-Datei besteht der nächste Schritt darin, die PDF-Datei an den Trigger mit einem AEM Workflow zu senden. Dieser Workflow führt die Daten aus der gesendeten PDF-Datei zusammen und generiert nicht interaktive PDF-Dateien zur Überprüfung.
 
 Das für diesen Anwendungsfall erstellte benutzerdefinierte Profil ist als Teil dieses Tutorials verfügbar.
