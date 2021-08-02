@@ -8,8 +8,8 @@ version: cloud-service
 feature: Document Services
 topic: Entwicklung
 kt: 7432
-thumbnail: 332439.jpg
-source-git-commit: 33cb3d18b744d9a8e54a87152079b42ed09212f2
+thumbnail: 334859.jpg
+source-git-commit: f2a94910fbc29b705f82a66d8248cbcf54366874
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 4%
@@ -24,3 +24,5 @@ In diesem Kurs werden wir die Dokumenterstellungsmikrodienste verwenden, um ein 
 1. Erstellen Sie ein JSON-Web-Token (JWT) aus den Dienstanmeldeinformationen und tauschen Sie dasselbe für ein Zugriffstoken aus.
 1. Zugriff für das technische Konto konfigurieren in AEM
 1. HTTP-Aufrufe mithilfe des Zugriffstokens durchführen
+
+>[!VIDEO](https://video.tv.adobe.com/v/334859/?quality=12&learn=on)
