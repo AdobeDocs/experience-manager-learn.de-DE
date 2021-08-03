@@ -14,10 +14,10 @@ discoiquuid: aefb4124-91a0-4548-94a3-86785ea04549
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 55a6ff5d01898b994aee60f214126c5c18a06a5e
 workflow-type: tm+mt
-source-wordcount: '433'
-ht-degree: 0%
+source-wordcount: '445'
+ht-degree: 2%
 
 ---
 
@@ -28,11 +28,11 @@ Ein gängiges Anwendungsbeispiel besteht darin, xdp in PDF zu rendern und Reader
 
 Wenn ein Benutzer beispielsweise im Forms Portal von AEM Forms auf XDP klickt, kann XDP als PDF gerendert und der Leser die PDF-Datei erweitert werden.
 
-Um diese Funktion zu testen, können Sie [link](https://forms.enablementadobe.com/content/samples/samples.html?query=0) ausprobieren. Der Beispielname lautet &quot;Render XDP with RE&quot;
+Um diese Funktion zu testen, können Sie [link](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse2) ausprobieren. Der Beispielname lautet &quot;Render and Reader Extend XDP&quot;.
 
 Um dieses Anwendungsbeispiel zu erstellen, müssen wir die folgenden Schritte ausführen.
 
-* Fügen Sie dem Benutzer &quot;fd-service&quot;das Reader Extensions-Zertifikat hinzu. Die Schritte zum Hinzufügen von Reader Extensions-Anmeldedaten sind [hier](https://helpx.adobe.com/experience-manager/6-3/forms/using/configuring-document-services.html) aufgeführt.
+* Fügen Sie dem Benutzer &quot;fd-service&quot;das Reader Extensions-Zertifikat hinzu. Die Schritte zum Hinzufügen von Reader Extensions-Anmeldedaten sind [hier](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=de) aufgeführt.
 
 * Erstellen Sie einen benutzerdefinierten OSGi-Dienst, der Nutzungsrechte rendert und anwendet. Der Code, um dies zu erreichen, ist unten aufgeführt
 
@@ -202,6 +202,8 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
 Um dies auf Ihrem lokalen Server zu testen, führen Sie die folgenden Schritte aus
 1. [Herunterladen und Installieren des DevelopingWithServiceUser-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [Herunterladen und Installieren des AEMFormsDocumentServices-Bundles](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+
+1. [Herunterladen des HTML-Codes der benutzerdefinierten Portalvorlage](assets/render-and-extend-template.zip)
 1. [Laden Sie die mit diesem Artikel verknüpften Assets mit Package Manager in AEM herunter und importieren Sie sie.](assets/renderandextendxdp.zip)
    * Dieses Paket enthält Beispielportal und XDP-Datei
 1. Hinzufügen des Reader Extensions-Zertifikats zum Benutzer &quot;fd-service&quot;
