@@ -4,7 +4,7 @@ user-guide-description: Eine Sammlung von Videos und Tutorials zu Adobe Experien
 breadcrumb-title: AEM Assets-Tutorials
 sub-product: Assets
 team: TM
-source-git-commit: 53312e573ca022f09faa44cbbf51c5b8b0ed90ee
+source-git-commit: 46f270c5b26baeb546997f2191cc28801444a290
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 36%
@@ -31,7 +31,7 @@ ht-degree: 36%
    + [Navigation](./authoring/navigation.md)
    + [Grundlegende Vorgänge](./authoring/basic-operations.md)
    + [Metadaten](./authoring/metadata.md)
-   + [Ausgabeformate](./authoring/renditions.md)
+   + [Ausgabedarstellungen](./authoring/renditions.md)
    + [Relation und Relation aufheben](./authoring/relate-unrelate.md)
 
 + Zusammenarbeit{#collaboration}
@@ -121,4 +121,3 @@ ht-degree: 36%
 
 + Bereitstellung{#deployment}
    + [Multi-Tenancy und gleichzeitige Entwicklung](deployment/multitenancy-concurrent-article-understand.md)
-
