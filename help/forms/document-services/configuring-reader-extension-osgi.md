@@ -11,10 +11,10 @@ version: 6.4,6.5
 topic: Administration
 role: Admin
 level: Beginner
-source-git-commit: 55a6ff5d01898b994aee60f214126c5c18a06a5e
+source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 14%
+source-wordcount: '212'
+ht-degree: 10%
 
 ---
 
@@ -40,6 +40,15 @@ Die Berechtigung für Reader Extensions ist mit dem Benutzer fd-service verknüp
 Bitte folgen Sie dem Video, um die Anmeldeinformationen zum fd-service-Benutzer hinzuzufügen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335849?quality=9&learn=on)
+
+
+Der Befehl zum Auflisten der Details der pfx-Datei lautet. Der folgende Befehl setzt voraus, dass Sie sich im selben Ordner wie die pfx-Datei befinden.
+
+**keytool -v -list -storetype pkcs12 -keystore  &lt;name of=&quot;&quot; your=&quot;&quot;>**
+
+Beispiel: keytool -v -list -storetype pkcs12 -keystore 1005566.pfx , wobei 1005566.pfx der Name meiner pfx-Datei ist
+
+
 
 
 
