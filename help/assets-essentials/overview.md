@@ -2,10 +2,10 @@
 title: Videos zu AEM Assets Essentials
 description: Eine Videosammlung für Adobe Experience Manager Assets Essentials
 sub-product: Assets
-source-git-commit: 36346a8a45fc20b5e6d71d6d00345d74b6b04c2a
+source-git-commit: c385183bee58bc062f4d46253096828c03e058c3
 workflow-type: tm+mt
-source-wordcount: '126'
-ht-degree: 14%
+source-wordcount: '133'
+ht-degree: 13%
 
 ---
 
@@ -35,16 +35,16 @@ Sehen Sie sich unsere Videos an, wie Sie Ihre Assets mit Assets Essentials verwa
    </p>
 </td>
 <td>
-   <a href="./basics/collaborating.md">
-   <img alt="" src="./assets/overview/collaboration.png"/>
+   <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
+   <img alt="" src="./assets/overview/assets-essentials-docs.png"/>
    </a>
    <div>
-      <a href="./basics/collaborating.md">
-      <strong>Zusammenarbeit mit Assets Essentials</strong>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
+      <strong>Assets Essentials-Dokumentation</strong>
       </a>
    </div>
    <p>
-      <em>Erfahren Sie, wie Assets Essentials einfache Aufgabenverwaltung für die Verwaltung der Lebenszyklen Ihrer Assets bietet!</em>
+      <em>Sehen Sie sich die Assets Essentials-Produktdokumentation an!</em>
    <p>
 </td>
 <td>
@@ -53,7 +53,7 @@ Sehen Sie sich unsere Videos an, wie Sie Ihre Assets mit Assets Essentials verwa
    </a>
    <div>
       <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
-      <strong>Adobe Journey Optimizer</strong>
+      <strong>Adobe Journey Optimizer-Integration</strong>
       </a>
    </div>
    <p>
