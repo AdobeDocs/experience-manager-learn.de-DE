@@ -4,9 +4,9 @@ user-guide-description: Eine Sammlung von Videos und Tutorials zu Adobe Experien
 breadcrumb-title: AEM Assets-Tutorials
 sub-product: Assets
 team: TM
-source-git-commit: 46f270c5b26baeb546997f2191cc28801444a290
+source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '273'
 ht-degree: 36%
 
 ---
@@ -121,3 +121,5 @@ ht-degree: 36%
 
 + Bereitstellung{#deployment}
    + [Multi-Tenancy und gleichzeitige Entwicklung](deployment/multitenancy-concurrent-article-understand.md)
+
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html)
