@@ -7,9 +7,9 @@ topic: Content Management
 role: User
 level: Beginner
 thumbnail: 28988.jpg
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
 workflow-type: tm+mt
-source-wordcount: '997'
+source-wordcount: '1029'
 ht-degree: 3%
 
 ---
@@ -20,6 +20,13 @@ ht-degree: 3%
 Adobe Experience Manager-Assets können von Designern und kreativen Benutzern in ihren bevorzugten Adobe Creative Cloud-Desktop-Applikationen verwendet werden.
 
 Adobe Asset Link-Erweiterung für Adobe Creative Cloud for enterprise erweitert die Funktion zum Suchen, Durchsuchen, Sortieren, Anzeigen, Hochladen von Assets, Auschecken, Ändern, Einchecken und Anzeigen von Metadaten AEM Assets in Creative Cloud-Anwendungen.
+
+
+## Adobe Asset Link und AEM kreativen Workflows
+
+Im folgenden Video wird ein häufig verwendeter Workflow veranschaulicht, der von Kreativen verwendet wird, die in Adobe Creative Cloud-Anwendungen arbeiten und die direkt in AEM über Adobe Asset Link integriert werden.
+
+>[!VIDEO](https://video.tv.adobe.com/v/335927/?quality=12&learn=on)
 
 ## Adobe Asset Link-Funktionen
 
