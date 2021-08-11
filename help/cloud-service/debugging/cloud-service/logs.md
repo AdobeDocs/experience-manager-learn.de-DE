@@ -12,10 +12,10 @@ thumbnail: kt-5432.jpg
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: e2473a1584ccf315fffe5b93cb6afaed506fdbce
 workflow-type: tm+mt
-source-wordcount: '993'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -37,11 +37,21 @@ AEM as a Cloud Services unterstützt keine benutzerdefinierten Protokolldateien,
 
 Damit Java-Protokolle in AEM als Cloud Service verfügbar sind (über [Cloud Manager](#cloud-manager) oder [Adobe I/O CLI](#aio)), müssen benutzerdefinierte Protokollanweisungen in `error.log` geschrieben werden. Protokolle, die in benutzerdefinierte benannte Protokolle wie `example.log` geschrieben wurden, sind von AEM als Cloud Service nicht zugänglich.
 
+Protokolle können mit einer OSGi-Konfigurationseigenschaft Sling LogManager in den `org.apache.sling.commons.log.LogManager.factory.config~example.cfg.json`-Dateien der Anwendung in die `error.log` geschrieben werden.
+
+```
+{
+   ...
+   "org.apache.sling.commons.log.file": "logs/error.log"
+   ...
+}
+```
+
 ## Protokolle des AEM-Autoren- und Veröffentlichungsdienstes
 
 Sowohl der AEM-Autoren- als auch der Veröffentlichungsdienst stellen AEM Laufzeitserver-Protokolle bereit:
 
-+ `aemerror` ist das Java-Fehlerprotokoll (zu finden unter  `/crx-quickstart/error.log` dem lokalen Schnellstart des AEM SDK). Im Folgenden finden Sie die [empfohlenen Protokollebenen](#log-levels) für benutzerdefinierte Logger nach Umgebungstyp:
++ `aemerror` ist das Java-Fehlerprotokoll (zu finden unter  `/crx-quickstart/logs/error.log` dem lokalen Schnellstart des AEM SDK). Im Folgenden finden Sie die [empfohlenen Protokollebenen](#log-levels) für benutzerdefinierte Logger nach Umgebungstyp:
    + Entwicklung: `DEBUG`
    + Staging: `WARN`
    + Produktion: `ERROR`
@@ -106,7 +116,7 @@ Environment Id Service    Name
 22295          dispatcher aemdispatcher 
 ```
 
-### Trackinglogs{#aio-cli-tail-logs}
+### Versandlogs{#aio-cli-tail-logs}
 
 Adobe I/O CLI bietet die Möglichkeit, Protokolle in Echtzeit von AEM als Cloud Service mithilfe des Befehls [tail-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagertail-log-environmentid-service-name) zu verfolgen. Das Tailing ist nützlich, um Echtzeit-Protokollaktivitäten zu beobachten, wenn Aktionen auf der AEM als Cloud Service-Umgebung ausgeführt werden.
 
@@ -123,7 +133,7 @@ $ aio cloudmanager:tail-logs 12345 author | grep com.example.MySlingModel
 
 ... zeigt nur Protokollanweisungen an, die von `com.example.MySlingModel` generiert wurden oder diese Zeichenfolge enthalten.
 
-### Herunterladen von Protokollen{#aio-cli-download-logs}
+### Protokolle herunterladen{#aio-cli-download-logs}
 
 Adobe I/O CLI bietet die Möglichkeit, Protokolle von AEM als Cloud Service mit dem Befehl [download-logs](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerdownload-logs-environmentid-service-name-days) herunterzuladen. Dies liefert dasselbe Endergebnis wie das Herunterladen der Protokolle aus der Cloud Manager-Web-Benutzeroberfläche, wobei der Unterschied darin besteht, dass der Befehl `download-logs` die Protokolle über Tage hinweg konsolidiert, basierend darauf, wie viele Tage Protokolle angefordert werden.
 
