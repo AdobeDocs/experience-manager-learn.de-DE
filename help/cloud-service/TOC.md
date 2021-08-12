@@ -4,9 +4,9 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: Cloud-Service
 team: TM
-source-git-commit: e442c6d67a02aae4c6ce9241e754c15abc920c67
+source-git-commit: aa90b2c1a066dc36d4ba26ecdb8b58939445ef34
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '478'
 ht-degree: 30%
 
 ---
@@ -77,7 +77,7 @@ ht-degree: 30%
       + [Übersicht](./debugging/cloud-service/overview.md)
       + [Protokolle](./debugging/cloud-service/logs.md)
       + [Erstellung und Implementierung](./debugging/cloud-service/build-and-deployment.md)
-      + [Developer Console](./debugging/cloud-service/developer-console.md)
+      + [Entwicklerkonsole](./debugging/cloud-service/developer-console.md)
       + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md)
 + Zugriff auf AEM{#accessing}
    + [Übersicht](./accessing/overview.md)
@@ -110,6 +110,12 @@ ht-degree: 30%
       + [Implementieren der Oberfläche](./forms/doc-cloud-sdk/implement-interface.md)
       + [JSON-Teil erstellen](./forms/doc-cloud-sdk/get-content-analyzer.md)
       + [Benutzerdefinierter Prozessschritt](./forms/doc-cloud-sdk/custom-process-step.md)
+   + Azure Portal-Speicher{#forms-cs-azure-portal}
+      + [Einführung](./forms/forms-cs-azure-portal/introduction.md)
+      + [Erstellen von Formulardatenmodellen](./forms/forms-cs-azure-portal/create-fdm.md)
+      + [Speichern von Formulardaten in Azure Storage](./forms/forms-cs-azure-portal/create-af.md)
+      + [Formular vorab ausfüllen](./forms/forms-cs-azure-portal/prefill-af-storage.md)
+      + [Abfragesendungen](./forms/forms-cs-azure-portal/query-submitted-data.md)
    + Erstellen eines Überprüfungs-Workflows{#create-aem-workflow}
       + [Workflow-Modell erstellen](./forms/create-aem-workflow/create-workflow.md)
       + [Trigger-Workflow](./forms/create-aem-workflow/configure-af.md)
