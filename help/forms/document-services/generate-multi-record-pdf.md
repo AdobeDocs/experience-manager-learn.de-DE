@@ -1,6 +1,6 @@
 ---
 title: Erstellen mehrerer PDFs aus einer Datendatei
-seo-title: Erstellen mehrerer PDFs aus einer Datendatei
+description: OutputService bietet eine Reihe von Methoden zum Erstellen von Dokumenten mit einem Formularentwurf und Daten zum Zusammenführen mit dem Formularentwurf. Erfahren Sie, wie Sie mehrere PDF-Dateien aus einer großen XML-Datei generieren, die mehrere einzelne Datensätze enthält.
 feature: Ausgabe-Service
 topics: development
 audience: developer
@@ -10,9 +10,9 @@ version: 6.4,6.5
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: fb6c21a9a88b5ebcbfb14213182a9b8cba6fe6ae
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '526'
 ht-degree: 2%
 
 ---
@@ -76,7 +76,7 @@ Document zippedDocument = documentServices.generateMultiplePdfs(templateMap, dat
 ....
 ```
 
-### Code für die Implementierung der Benutzeroberfläche{#Interface-Implementation-Code}
+### Implementierungscode der Schnittstelle{#Interface-Implementation-Code}
 
 Der folgende Code generiert mehrere PDF-Dateien mithilfe des generatePDFOutputBatch des OutputService und gibt eine ZIP-Datei mit den PDF-Dateien an das aufrufende Servlet zurück
 
@@ -127,7 +127,7 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 }
 ```
 
-### Bereitstellen auf Ihrem Server{#Deploy-on-your-server}
+### Auf Ihrem Server bereitstellen{#Deploy-on-your-server}
 
 Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisungen:
 
