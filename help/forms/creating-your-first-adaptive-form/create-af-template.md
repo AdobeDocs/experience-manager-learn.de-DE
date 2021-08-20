@@ -1,17 +1,16 @@
 ---
 title: Erstellen einer adaptiven Formularvorlage
 description: Die Vorlage definiert die Struktur und den anfänglichen Inhalt des adaptiven Formulars.
-feature: adaptive Formulare
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
+feature: Adaptive Formulare
+topic: Entwicklung
+role: Developer
+level: Beginner
 kt: 5859
-thumbnail: 37324
-source-git-commit: c60a46027cc8d71fddd41aa31dbb569e4df94823
+thumbnail: 37324.jpg
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -24,7 +23,7 @@ Das folgende Video zeigt Ihnen den grundlegenden Prozess der Erstellung einer ad
 
 >[!VIDEO](https://video.tv.adobe.com/v/37324/quality=9)
 
-Weitere Informationen finden Sie in der [Dokumentation zu adaptiven Formularvorlagen](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html) .
+Weitere Informationen finden Sie in der [Dokumentation zu adaptiven Formularvorlagen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html) .
 
 Bei Bedarf können Sie die [adaptive Formularvorlage](assets/peak-application-template.zip) herunterladen und mit dem [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) in AEM importieren.
 
