@@ -1,28 +1,20 @@
 ---
 title: Campaign-Profil mit Formulardatenmodell erstellen
-seo-title: Campaign-Profil mit Formulardatenmodell erstellen
 description: Schritte zum Erstellen eines Adobe Campaign Standard-Profils mit dem AEM Forms-Formulardatenmodell
-seo-description: Schritte zum Erstellen eines Adobe Campaign Standard-Profils mit dem AEM Forms-Formulardatenmodell
-uuid: 3216827e-e1a2-4203-8fe3-4e2a82ad180a
-feature: Ausgabe-Service
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
+feature: Adaptive Formulare
 version: 6.3,6.4,6.5
-discoiquuid: 461c532e-7a07-49f5-90b7-ad0dcde40984
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '429'
 ht-degree: 3%
 
 ---
 
 
-# Kampagnenprofil mit Formulardatenmodell erstellen {#create-campaign-profile-using-form-data-model}
+# Campaign-Profil mit Formulardatenmodell erstellen {#create-campaign-profile-using-form-data-model}
 
 Schritte zum Erstellen eines Adobe Campaign Standard-Profils mit dem AEM Forms-Formulardatenmodell
 
@@ -30,7 +22,7 @@ Schritte zum Erstellen eines Adobe Campaign Standard-Profils mit dem AEM Forms-F
 
 Beim Erstellen der Datenquelle mit der Swagger-Datei unterstützt AEM Forms die folgenden Authentifizierungstypen
 
-* Kein
+* Ohne
 * OAuth 2.0
 * Einfache Authentifizierung
 * API-Schlüssel
@@ -115,7 +107,7 @@ Eine Datenquelle wird mithilfe der Swagger-Datei erstellt. Beim Erstellen der Da
 
 Die Beispiel-Swagger-Datei wird Ihnen als Teil des Assets bereitgestellt, das mit diesem Artikel in Verbindung steht.**Stellen Sie sicher, dass Sie Host und basePath in der Swagger-Datei so ändern, dass sie mit Ihrer ACS-Instanz übereinstimmen.**
 
-## Testen Sie die Lösung {#test-the-solution}.
+## Testen der Lösung {#test-the-solution}
 
 Gehen Sie wie folgt vor, um die Lösung zu testen:
 * [Vergewissern Sie sich, dass Sie die hier beschriebenen Schritte ausgeführt haben](aem-forms-with-campaign-standard-getting-started-tutorial.md)
