@@ -1,21 +1,15 @@
 ---
 title: Speichern von adaptiven Formulardaten
-seo-title: Speichern von adaptiven Formulardaten
 description: Speichern adaptiver Formulardaten in DataBase als Teil Ihres AEM-Workflows
-seo-description: Speichern adaptiver Formulardaten in DataBase als Teil Ihres AEM-Workflows
-feature: Adaptives Forms,Workflow,Formulardatenmodell
-topics: integrations
-audience: implementer
-doc-type: article
-activity: setup
+feature: Adaptives Forms, Formulardatenmodell
 version: 6.3,6.4,6.5
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 1%
+source-wordcount: '380'
+ht-degree: 2%
 
 ---
 
@@ -46,7 +40,7 @@ Der Anwendungsfall besteht darin, einen AEM Workflow für die Übermittlung eine
 
    ![insertdata](assets/insertdata.PNG)
 
-* Erstellen Sie ein adaptives Formular.
+* Erstellen eines adaptiven Formulars.
 
 * Verknüpfen Sie das adaptive Formular mit AEM Workflow(StoreAFValuesinDB), wie im Screenshot unten dargestellt.
 
