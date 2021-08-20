@@ -1,28 +1,20 @@
 ---
 title: Erste Schritte mit Adaptive Forms
-seo-title: Erste Schritte mit Adaptive Forms
 description: 'Dieses Tutorial führt Sie durch die Schritte, die zum Erstellen eines adaptiven Formulars mit mehreren Registerkarten erforderlich sind. Sie erfahren, wie Sie mit Tabellen, Accordion-Layout und Regeleditor Geschäftsregeln erstellen können. '
-seo-description: 'Dieses Tutorial führt Sie durch die Schritte, die zum Erstellen eines adaptiven Formulars mit mehreren Registerkarten erforderlich sind. Sie erfahren, wie Sie mit Tabellen, Accordion-Layout und Regeleditor Geschäftsregeln erstellen können. '
-uuid: 6f73cb1c-94e2-4ac7-89e5-a72141a06bbe
 feature: Adaptive Formulare
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
 version: 6.3,6.4,6.5
-discoiquuid: b6863d3d-8528-4a96-ae37-c8d1aa62d443
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 34%
+source-wordcount: '210'
+ht-degree: 39%
 
 ---
 
 
-# Erste Schritte mit adaptiver Forms {#getting-started-with-adaptive-forms}
+# Erste Schritte mit Adaptive Forms {#getting-started-with-adaptive-forms}
 
 Dieses Tutorial führt Sie durch die Schritte, die zum Erstellen eines adaptiven Formulars mit mehreren Registerkarten erforderlich sind. Sie erfahren, wie Sie mit Tabellen, Accordion-Layout und Regeleditor Geschäftsregeln erstellen können.
 
