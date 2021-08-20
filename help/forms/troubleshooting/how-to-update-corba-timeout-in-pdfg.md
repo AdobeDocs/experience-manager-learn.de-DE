@@ -1,15 +1,14 @@
 ---
 title: Wie kann ich das CORBA-Timeout in PDFG aktualisieren, um Probleme mit dem Transaktions-Rollback zu vermeiden?
-description: Konfigurieren der CORBA-Zeitüberschreitung in AEM Forms PDF Generator zum Beheben von Problemen im Zusammenhang mit dem Transaktions-Rollback
+description: CORBA-Zeitüberschreitung in AEM Forms PDF Generator konfigurieren, um Probleme im Zusammenhang mit dem Transaktions-Rollback zu beheben
 type: Troubleshooting
-product: forms
 role: Admin
 level: Intermediate
 version: 6.5
 feature: 'PDF Generator  '
 topic: Administration
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 5%
