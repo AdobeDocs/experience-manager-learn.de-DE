@@ -2,18 +2,14 @@
 title: SMS-Zwei-Faktor-Authentifizierung
 description: Fügen Sie eine zusätzliche Sicherheitsebene hinzu, um die Identität eines Benutzers zu bestätigen, wenn er bestimmte Aktivitäten durchführen möchte
 feature: Adaptive Formulare
-topics: adaptive forms
-audience: developer
-doc-type: article
-activity: use
 version: 6.4,6.5
 kt: 6317
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '602'
 ht-degree: 3%
 
 ---
@@ -51,11 +47,11 @@ Verwenden Sie den [Swagger-Editor](https://editor.swagger.io/), um Ihre Swagger-
 
 ## Datenquelle erstellen
 
-Um AEM/AEM Forms mit Drittanbieteranwendungen zu integrieren, müssen wir [eine Datenquelle ](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) in der Cloud-Services-Konfiguration erstellen.
+Um AEM/AEM Forms mit Drittanbieteranwendungen zu integrieren, müssen wir [eine Datenquelle ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) in der Cloud-Services-Konfiguration erstellen.
 
-## Formulardatenmodell erstellen
+## Erstellen von Formulardatenmodellen
 
-Die AEM Forms-Datenintegration bietet eine intuitive Benutzeroberfläche zum Erstellen und Verwenden von [Formulardatenmodellen](https://docs.adobe.com/content/help/en/experience-manager-65/forms/form-data-model/create-form-data-models.html). Ein Formulardatenmodell nutzt Datenquellen für den Datenaustausch.
+Die AEM Forms-Datenintegration bietet eine intuitive Benutzeroberfläche zum Erstellen und Verwenden von [Formulardatenmodellen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html). Ein Formulardatenmodell nutzt Datenquellen für den Datenaustausch.
 Das ausgefüllte Formulardatenmodell kann [von hier heruntergeladen werden](assets/sms-2fa-fdm.zip)
 
 ![fdm](assets/2FA-fdm.PNG)
