@@ -2,14 +2,13 @@
 title: So aktivieren Sie die Leistungsprotokollierung in AEM Forms, um Probleme im Zusammenhang mit Forms und dem Ausgabedienst zu beheben
 description: Schritte zum Aktivieren der Leistungsprotokollierung zum Debuggen von Problemen im Zusammenhang mit Forms oder dem Ausgabedienst
 type: Troubleshooting
-product: forms
 role: Admin
 level: Intermediate
 version: 6.5
-feature: Output Service , Forms Service
+feature: Output-Dienst, Forms-Dienst
 topic: Administration
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 1%
