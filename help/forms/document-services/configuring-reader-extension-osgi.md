@@ -2,16 +2,13 @@
 title: Konfigurieren von Reader Extensions in AEM Forms OSGi
 description: Berechtigung für Reader Extensions zum Trust Store in AEM Forms OSGi hinzufügen
 feature: Reader Extensions
-feature-set: Reader Extensions
-topics: development
 audience: developer
-doc-type: Tutorial
-activity: implement
+type: Tutorial
 version: 6.4,6.5
 topic: Administration
 role: Admin
 level: Beginner
-source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 10%
