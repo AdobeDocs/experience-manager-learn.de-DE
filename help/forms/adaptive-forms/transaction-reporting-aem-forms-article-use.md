@@ -1,22 +1,14 @@
 ---
 title: Verwenden von Transaktionsberichten in AEM Forms
-seo-title: Verwenden von Transaktionsberichten in AEM Forms
 description: Mit Transaktionsberichten in AEM Forms können Sie alle Transaktionen zählen, die seit einem bestimmten Datum in Ihrer AEM Forms-Bereitstellung stattgefunden haben.
-seo-description: Mit Transaktionsberichten in AEM Forms können Sie alle Transaktionen zählen, die seit einem bestimmten Datum in Ihrer AEM Forms-Bereitstellung stattgefunden haben.
-uuid: e6133f7e-c79c-4006-89e7-3bebf7b8229e
 feature: Adaptive Formulare
-topics: developing
-audience: administrator
-doc-type: article
-activity: setup
 version: 6.4.1,6.5
-discoiquuid: 1abdf07a-b9f0-4c58-a1c6-08ae57db2014
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '370'
 ht-degree: 2%
 
 ---
@@ -26,7 +18,7 @@ ht-degree: 2%
 
 Mit AEM Forms 6.4.1 wurden Transaktionsberichte eingeführt, um die Anzahl der Formularübermittlungen, die Darstellung von Dokumenten mithilfe von Document Services und die Darstellung interaktiver Kommunikation (Web- und Druckkanäle) zu erfassen. Diese Funktion richtet sich in erster Linie an Kunden, die die Software auf der Grundlage der Anzahl der Formularübermittlungen und/oder wiedergegebenen Dokumente lizenzieren möchten. Diese Funktion ist derzeit nur für AEM Forms OSGI-Stack verfügbar.
 
-## Aktivieren von Transaktionsberichten {#enabling-transaction-reporting}
+## Aktivieren der Transaktionsberichterstellung {#enabling-transaction-reporting}
 
 Standardmäßig ist die Transaktionserfassung deaktiviert. Gehen Sie zur Aktivierung der Transaktionsaufzeichnung wie folgt vor:
 
