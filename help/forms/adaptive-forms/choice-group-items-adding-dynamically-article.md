@@ -1,21 +1,15 @@
 ---
 title: Hinzufügen von Elementen zur Auswahlgruppen-Komponente
-seo-title: Hinzufügen von Elementen zur Auswahlgruppen-Komponente
 description: Dynamisches Hinzufügen von Elementen zur Auswahlgruppen-Komponente
-seo-description: Dynamisches Hinzufügen von Elementen zur Auswahlgruppen-Komponente
 feature: Adaptive Formulare
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
 version: 6.5
 topic: Entwicklung
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '530'
-ht-degree: 3%
+source-wordcount: '515'
+ht-degree: 4%
 
 ---
 
@@ -96,7 +90,7 @@ So versuchen Sie es auf Ihrem System:
 **Hinzufügen von Elementen mithilfe des Visual Editor**
 
 * [Herunterladen der Assets](assets/usingthevisualeditor.zip)
-* Installieren Sie Tomcat, falls noch nicht geschehen. [Anweisungen zur Installation von Tomcat finden Sie hier .](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
+* Installieren Sie Tomcat, falls noch nicht geschehen. [Anweisungen zur Installation von Tomcat finden Sie hier .](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
 * [SampleRest.war-Datei in Tomcat bereitstellen](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
 * [Öffnen von Forms und Dokumenten](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicken Sie auf &quot;Erstellen&quot; | Datei-Upload&quot; und laden Sie die Datei hoch, die Sie im vorherigen Schritt heruntergeladen haben.
