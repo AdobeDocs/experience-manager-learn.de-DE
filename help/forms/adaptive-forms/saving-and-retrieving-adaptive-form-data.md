@@ -1,17 +1,14 @@
 ---
 title: Speichern und Abrufen von adaptiven Formulardaten
-seo-title: Speichern und Abrufen von adaptiven Formulardaten
 description: Speichern und Abrufen adaptiver Formulardaten aus der Datenbank. Mit dieser Funktion können Formularausfüller das Formular speichern und das Formular zu einem späteren Zeitpunkt ausfüllen.
-seo-description: Speichern und Abrufen adaptiver Formulardaten aus der Datenbank. Mit dieser Funktion können Formularausfüller das Formular speichern und das Formular zu einem späteren Zeitpunkt ausfüllen.
-feature: adaptive Formulare
-topics: developing
-audience: developer,implementer
-doc-type: article
-activity: setup
+feature: Adaptive Formulare
+topic: Entwicklung
+role: Developer
+type: Tutorial
 version: 6.3,6.4,6.5
-source-git-commit: a0e5a99408237c367ea075762ffeb3b9e9a5d8eb
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '615'
 ht-degree: 0%
 
 ---
@@ -404,16 +401,16 @@ $(document).ready(function()
 });
 ```
 
-## Erstellen einer Vorlage für adaptives Formular und einer Seitenkomponente {#form-template-and-page-component}
+## Erstellen der Vorlage für adaptive Formulare und der Seitenkomponente {#form-template-and-page-component}
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=9&learn=on)
 
-### Nachweis der Funktion {#capability-demo}
+### Nachweis der Fähigkeit {#capability-demo}
 
 >[!VIDEO](https://video.tv.adobe.com/v/27829?quality=9&learn=on)
 
-#### Bereitstellen auf Ihrem Server {#deploy-on-your-server}
+#### Auf Ihrem Server bereitstellen {#deploy-on-your-server}
 
 Um diese Funktion auf Ihrer AEM Forms-Instanz zu testen, führen Sie die folgenden Schritte aus
 
