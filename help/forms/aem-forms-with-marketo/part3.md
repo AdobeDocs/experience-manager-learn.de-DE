@@ -1,21 +1,15 @@
 ---
 title: AEM Forms mit Marketo (Teil 3)
-seo-title: AEM Forms mit Marketo (Teil 3)
 description: Tutorial zur Integration von AEM Forms mit Marketo mithilfe des AEM Forms-Formulardatenmodells.
-seo-description: Tutorial zur Integration von AEM Forms mit Marketo mithilfe des AEM Forms-Formulardatenmodells.
 feature: Adaptives Forms, Formulardatenmodell
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
 version: 6.3,6.4,6.5
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '403'
-ht-degree: 13%
+source-wordcount: '385'
+ht-degree: 14%
 
 ---
 
@@ -26,9 +20,9 @@ Mit der AEM Forms-Datenintegration können Sie unterschiedliche Datenquellen kon
 
 1. Relationale Datenbanken: MySQL, Microsoft SQL Server, IBM DB2 und Oracle RDBMS
 1. AEM-Benutzerprofil 
-1. RESTful Webservices 
+1. RESTful-Webservices
 1. SOAP-basierte Webservices
-1. OData-Dienstleistungen
+1. OData-Services
 
 Für die Integration von AEM Forms mit Marketo werden wir RESTful-Webdienste verwenden. Der erste Schritt bei der Integration besteht darin, eine [Datenquelle zu konfigurieren.](https://helpx.adobe.com/experience-manager/6-4/forms/using/configure-data-sources.html#ConfigureRESTfulwebservices) Verwenden Sie die Swagger-Datei, die im Rahmen dieses Tutorials bereitgestellt wird. Der folgende Screenshot zeigt die wichtigen Eigenschaften, die beim Konfigurieren der Datenquelle angegeben werden müssen.
 ![datasource](assets/datasource.jfif)
@@ -37,7 +31,7 @@ Für die Integration von AEM Forms mit Marketo werden wir RESTful-Webdienste ver
 Der Eigenschaftenhost ist spezifisch für Ihre Marketo-Instanz.
 Der Authentifizierungstyp ist benutzerdefiniert und die Authentifizierungsimplementierung muss mit &quot;AEM Forms mit Marketo&quot;übereinstimmen. (Sofern Sie dies nicht in Ihrem Code geändert haben).
 
-## Formulardatenmodell erstellen
+## Erstellen von Formulardatenmodellen
 
 Nach dem Konfigurieren der Datenquelle besteht der nächste Schritt darin, ein Formulardatenmodell zu erstellen, das auf der zuvor konfigurierten Datenquelle basiert. Gehen Sie wie folgt vor, um ein Formulardatenmodell zu erstellen:
 
