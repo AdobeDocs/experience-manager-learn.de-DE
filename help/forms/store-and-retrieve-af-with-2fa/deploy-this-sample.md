@@ -2,19 +2,16 @@
 title: Bereitstellen des Beispiels
 description: Anwendungsfall abrufen, der auf Ihrer lokalen AEM Forms-Instanz ausgeführt wird
 feature: Adaptive Formulare
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+type: Tutorial
 version: 6.4,6.5
 kt: 6602
 thumbnail: 6602.jpg
 topic: Entwicklung
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '371'
 ht-degree: 1%
 
 ---
@@ -37,7 +34,7 @@ In diesem Beispiel wird die MySQL-Datenbank verwendet, um die Daten des adaptive
 
 Sie müssen eine Datenquelle mit dem Namen **StoreAndRetrieveAfData** erstellen. Der Code im OSGi-Bundle verwendet diesen Datenquellennamen
 
-## Formulardatenmodell erstellen
+## Erstellen von Formulardatenmodellen
 
 Das Formulardatenmodell muss auf Grundlage dieser Datenquelle mit dem Namen **StoreAndRetrieveAfData** erstellt werden. Dieses Formulardatenmodell wird verwendet, um die Mobiltelefonnummer abzurufen, die mit der Anwendungs-ID verknüpft ist. Das Formulardatenmodell kann [von hier heruntergeladen werden.](assets/2-Factor-Authentication-DataSource-and-FDM.zip)
 
@@ -48,7 +45,7 @@ Erstellen Sie ein Entwicklerkonto mit [Nexmo](https://dashboard.nexmo.com/) zum 
 ## Bereitstellen der folgenden OSGi-Pakete
 
 Stellen Sie das Bundle bereit, das über den [Code zum Speichern und Abrufen von Daten aus der Datenbank](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar) verfügt.
-Stellen Sie das [DevelopingWithServiceUser-Bundle](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar) bereit.
+Stellen Sie das [DevelopingWithServiceUser-Bundle](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar) bereit.
 
 ## Client-Bibliothek bereitstellen
 
