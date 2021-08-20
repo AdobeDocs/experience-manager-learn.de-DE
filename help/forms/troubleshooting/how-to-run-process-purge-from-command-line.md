@@ -2,13 +2,12 @@
 title: Ausführen des Bereinigungs-Tools über die Befehlszeile
 description: Schritte zum Ausführen des Prozessbereinigungs-Tools über die Befehlszeile zum Löschen von Datensätzen aus der Job Manager-Tabelle
 type: Troubleshooting
-product: forms
 role: Developer
 level: Intermediate
 version: 6.5
-topic: Entwickler
+topic: Entwicklung
 index: y
-source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 2%
