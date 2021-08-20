@@ -2,16 +2,12 @@
 title: Dokumente zur Signatur mithilfe eines Workflows senden
 description: Senden von Dokumenten zur Signatur mithilfe des Workflows. Erstellen Sie einen AEM Workflow mit der Komponente Dokument signieren . Verwenden Sie das automatisch generierte DoR, um mithilfe der Signaturkomponente Unterschriften zu senden. In diesem Video werden die verschiedenen Schritte erläutert, die zum Erstellen eines effektiven Workflows zum Senden von Dokumenten zur Signatur erforderlich sind.
 feature: Adaptive Forms,Adobe Sign
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 thumbnail: 38182.jpg
 kt: 6035
 topic: Entwicklung
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 1%
