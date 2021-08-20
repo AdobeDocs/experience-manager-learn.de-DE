@@ -2,17 +2,14 @@
 title: Datenquelle konfigurieren
 description: Erstellen Sie DataSource mit Verweis auf die MySQL-Datenbank
 feature: Adaptive Formulare
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+type: Tutorial
 version: 6.4,6.5
 kt: 6541
 thumbnail: 6541.jpg
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 4%
@@ -49,7 +46,7 @@ Die folgende Datenbank wurde für die Zwecke dieses Anwendungsbeispiels verwende
 Erstellen Sie die Datenbank durch Import des [Datenbankschemas](assets/data-base-schema.sql)
 Verwendung von MySQL Workbench.
 
-## Formulardatenmodell erstellen
+## Erstellen von Formulardatenmodellen
 
 Erstellen Sie ein Formulardatenmodell und basieren Sie es auf der Datenquelle, die Sie im vorherigen Schritt erstellt haben.
 Konfigurieren Sie den Dienst **get** dieses Formulardatenmodells, wie im Screenshot unten dargestellt.
