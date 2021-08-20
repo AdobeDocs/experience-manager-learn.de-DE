@@ -2,15 +2,11 @@
 title: Erstellen mehrerer PDFs aus einer Datendatei
 description: OutputService bietet eine Reihe von Methoden zum Erstellen von Dokumenten mit einem Formularentwurf und Daten zum Zusammenführen mit dem Formularentwurf. Erfahren Sie, wie Sie mehrere PDF-Dateien aus einer großen XML-Datei generieren, die mehrere einzelne Datensätze enthält.
 feature: Ausgabe-Service
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: fb6c21a9a88b5ebcbfb14213182a9b8cba6fe6ae
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '526'
 ht-degree: 2%
