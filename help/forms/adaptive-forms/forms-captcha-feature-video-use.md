@@ -1,23 +1,15 @@
 ---
 title: Verwenden von CAPTCHAs mit AEM adaptiven Forms
-seo-title: Verwenden von CAPTCHAs mit AEM adaptiven Forms
 description: Hinzufügen und Verwenden eines CAPTCHA mit AEM adaptiven Forms.
-seo-description: Hinzufügen und Verwenden eines CAPTCHA mit AEM adaptiven Forms.
 feature: Adaptive Forms,Workflow
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
 version: 6.4,6.5
-uuid: bd63e207-4f4d-4f34-9ac4-7572ed26f646
-discoiquuid: 5e184e44-e385-4df7-b7ed-085239f2a642
 topic: Entwicklung
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 11%
+source-wordcount: '232'
+ht-degree: 13%
 
 ---
 
@@ -26,7 +18,7 @@ ht-degree: 11%
 
 Hinzufügen und Verwenden eines CAPTCHA mit AEM adaptiven Forms.
 
-Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) für einen Link zu einer Live-Demo dieser Funktion.
+Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1) für einen Link zu einer Live-Demo dieser Funktion.
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336/?quality=9&learn=on)
 
