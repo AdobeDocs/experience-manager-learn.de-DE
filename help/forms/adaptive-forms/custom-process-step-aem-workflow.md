@@ -1,21 +1,15 @@
 ---
 title: Implementieren eines benutzerdefinierten Prozessschritts
-seo-title: Implementieren eines benutzerdefinierten Prozessschritts
 description: Schreiben von adaptiven Formularanlagen in das Dateisystem mithilfe eines benutzerdefinierten Prozessschritts
-seo-description: Schreiben von adaptiven Formularanlagen in das Dateisystem mithilfe eines benutzerdefinierten Prozessschritts
 feature: Workflow
-topics: development
-audience: developer
-doc-type: tutorial
-activity: understand
 version: 6.5
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 1%
+source-wordcount: '818'
+ht-degree: 4%
 
 ---
 
@@ -46,7 +40,7 @@ Die execute -Methode bietet Zugriff auf die folgenden 3 Variablen
 
 **WorkflowSession**: Diese Variable workflowSession bietet Ihnen die Möglichkeit, den Workflow zu steuern. Die öffentliche API-Dokumentation ist [hier](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html) verfügbar.
 
-**MetaDataMap**: Alle mit dem Workflow verknüpften Metadaten. Alle Prozessargumente, die an den Prozessschritt übergeben werden, sind mit dem MetaDataMap -Objekt verfügbar.[API-Dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
+**MetaDataMap**: Alle mit dem Workflow verknüpften Metadaten. Alle Prozessargumente, die an den Prozessschritt übergeben werden, sind mit dem MetaDataMap -Objekt verfügbar.[API-Dokumentation](https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
 In diesem Tutorial werden wir die Anlagen schreiben, die dem adaptiven Formular als Teil des AEM-Workflows zum Dateisystem hinzugefügt wurden.
 
@@ -139,7 +133,7 @@ Zeilen 13-15 - Die an diese OSGi-Komponente übergebenen Prozessargumente werden
 
 * attachmentPath - Dies ist der gleiche Speicherort, den Sie beim Konfigurieren der Sendeaktion für das adaptive Formular für den Aufruf AEM Workflows im adaptiven Formular angegeben haben. Dies ist ein Name des Ordners, in dem die Anlagen AEM der Payload des Workflows gespeichert werden sollen.
 
-* saveToLocation - Dies ist der Speicherort, an dem die Anlagen im Dateisystem Ihres AEM-Servers gespeichert werden sollen.
+* saveToLocation - Dies ist der Speicherort, an dem die Anlagen im Dateisystem des AEM-Servers gespeichert werden sollen.
 
 Diese beiden Werte werden als Prozessargumente übergeben, wie im folgenden Screenshot gezeigt.
 
@@ -157,11 +151,11 @@ Der QueryBuilder-Dienst wird zum Abfragen von Knoten des Typs nt:file im Ordner 
 [Erstellen Sie das Bundle wie ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en#build-your-project)
 [hier beschrieben. Stellen Sie sicher, dass das Bundle bereitgestellt ist und sich im aktiven Status befindet.](http://localhost:4502/system/console/bundles)
 
-Workflow-Modell erstellen. Ziehen Sie den Prozessschritt in das Workflow-Modell. Verknüpfen Sie den Prozessschritt mit &quot;Speichern von adaptiven Formularanlagen im Dateisystem&quot;.
+Erstellen eines Workflow-Modells. Ziehen Sie den Prozessschritt in das Workflow-Modell. Verknüpfen Sie den Prozessschritt mit &quot;Speichern von adaptiven Formularanlagen im Dateisystem&quot;.
 
 Geben Sie die erforderlichen Prozessargumente getrennt durch Kommas an. Beispiel: Anlagen, c:\\scrappp\\. Das erste Argument ist der Ordner, in dem Ihre adaptiven Formularanlagen relativ zur Workflow-Nutzlast gespeichert werden. Dieser Wert muss mit dem Wert übereinstimmen, den Sie beim Konfigurieren der Sendeaktion des adaptiven Formulars angegeben haben. Das zweite Argument ist der Speicherort, an dem die Anlagen gespeichert werden sollen.
 
-Erstellen Sie ein adaptives Formular. Ziehen Sie die Komponente Dateianlagen in das Formular. Konfigurieren Sie die Sendeaktion des Formulars, um den in den vorherigen Schritten erstellten Workflow aufzurufen. Geben Sie den entsprechenden Anlagenpfad an.
+Erstellen eines adaptiven Formulars. Ziehen Sie die Komponente Dateianlagen in das Formular. Konfigurieren Sie die Sendeaktion des Formulars, um den in den vorherigen Schritten erstellten Workflow aufzurufen. Geben Sie den entsprechenden Anlagenpfad an.
 
 Speichern Sie die Einstellungen.
 
