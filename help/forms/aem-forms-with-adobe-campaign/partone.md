@@ -1,28 +1,20 @@
 ---
 title: 'JSON-Web-Token und Zugriffstoken erstellen '
-seo-title: 'JSON-Web-Token und Zugriffstoken erstellen '
 description: In diesem Artikel wird der Code erläutert, der zum Generieren von JWT und Zugriffstoken benötigt wird, um REST-Aufrufe an Adobe Campaign Standard durchzuführen
-seo-description: In diesem Artikel wird der Code erläutert, der zum Generieren von JWT und Zugriffstoken benötigt wird, um REST-Aufrufe an Adobe Campaign Standard durchzuführen
-uuid: 5b780eee-1e7c-4e1c-a164-49ce64939b91
 feature: Adaptives Forms, Formulardatenmodell
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: setup
 version: 6.3,6.4,6.5
-discoiquuid: cc268946-a7e4-42b3-bfad-5509e215871a
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '267'
+source-wordcount: '239'
 ht-degree: 0%
 
 ---
 
 
-# Generieren von JSON-Web-Token und Zugriffstoken {#generating-json-web-token-and-access-token}
+# JSON-Web-Token und Zugriffstoken erstellen {#generating-json-web-token-and-access-token}
 
 In diesem Artikel wird der Code erläutert, der zum Generieren von JWT und Zugriffstoken benötigt wird, um REST-Aufrufe an Adobe Campaign Standard durchzuführen
 
