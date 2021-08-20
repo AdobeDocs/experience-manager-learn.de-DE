@@ -2,26 +2,23 @@
 title: Erstellen von Client-Bibliotheken
 description: Erstellen Sie eine Client-Bibliothek, um das Klickereignis der Schaltfläche "Speichern und Beenden"zu verarbeiten.
 feature: Adaptive Formulare
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+type: Tutorial
 version: 6.4,6.5
 kt: 6597
 thumbnail: 6597.pg
 topic: Entwicklung
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '144'
-ht-degree: 8%
+source-wordcount: '142'
+ht-degree: 2%
 
 ---
 
 # Client-Bibliothek erstellen
 
-Erstellen Sie [client lib](https://docs.adobe.com/content/help/de-DE/experience-manager-65/developing/introduction/clientlibs.html) , die den Code zum Aufrufen der Methode `doAjaxSubmitWithFileAttachment` der `guideBridge`-API beim Klickereignis der Schaltfläche enthält, das von der CSS-Klasse **savebutton** identifiziert wird.  Wir übergeben die adaptiven Formulardaten `fileMap` und die `mobileNumber` an den Endpunkt, der unter `**/bin/storeafdatawithattachments` überwacht.
+Erstellen Sie [client lib](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) , die den Code zum Aufrufen der Methode `doAjaxSubmitWithFileAttachment` der `guideBridge`-API beim Klickereignis der Schaltfläche enthält, das von der CSS-Klasse **savebutton** identifiziert wird.  Wir übergeben die adaptiven Formulardaten `fileMap` und die `mobileNumber` an den Endpunkt, der unter `**/bin/storeafdatawithattachments` überwacht.
 
 Nachdem die Formulardaten gespeichert wurden, wird eine eindeutige Anwendungs-ID generiert und dem Benutzer in einem Dialogfeld angezeigt. Wenn das Dialogfeld geschlossen wird, wird der Benutzer zum Formular geleitet, über das er das gespeicherte adaptive Formular mit der eindeutigen Anwendungs-ID abrufen kann.
 
