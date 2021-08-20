@@ -1,25 +1,17 @@
 ---
 title: Hinzufügen untergeordneter Bedienfelder zum Stammbedienfeld
-seo-title: Hinzufügen untergeordneter Bedienfelder zum Stammbedienfeld
 description: Konfigurieren des Root-Bedienfeldlayouts zu "Registerkarten auf der linken Seite"und Hinzufügen untergeordneter Bedienfelder zum Stammbedienfeld.
-seo-description: Konfigurieren des Root-Bedienfeldlayouts zu "Registerkarten auf der linken Seite"und Hinzufügen untergeordneter Bedienfelder zum Stammbedienfeld.
-uuid: ef9f7c02-ead8-4f96-aabd-40d586127aa7
 feature: Adaptive Formulare
-topics: authoring
-audience: developer
-doc-type: tutorial
-activity: understand
 version: 6.4,6.5
-discoiquuid: e748b7c3-99c9-4caa-98b1-4433046c24b8
 thumbnail: 28536.jpg
 kt: 4209
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 3%
+source-wordcount: '61'
+ht-degree: 4%
 
 ---
 
