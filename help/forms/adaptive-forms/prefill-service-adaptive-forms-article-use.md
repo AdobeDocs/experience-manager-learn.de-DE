@@ -1,23 +1,14 @@
 ---
 title: Vorbefüllungsdienst in Adaptive Forms
-seo-title: Vorbefüllungsdienst in Adaptive Forms
 description: Vorausfüllen adaptiver Formulare durch Abrufen von Daten aus Back-End-Datenquellen.
-seo-description: Vorausfüllen adaptiver Formulare durch Abrufen von Daten aus Back-End-Datenquellen.
-sub-product: Formulare
 feature: Adaptive Formulare
-topics: integrations
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
-uuid: 26a8cba3-7921-4cbb-a182-216064e98054
-discoiquuid: 936ea5e9-f5f0-496a-9188-1a8ffd235ee5
 topic: Entwicklung
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '465'
 ht-degree: 7%
 
 ---
