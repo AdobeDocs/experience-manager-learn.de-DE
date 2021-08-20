@@ -1,28 +1,21 @@
 ---
 title: Verwenden des Formulardatenmodelldienstes als Schritt im Workflow
-seo-title: Verwenden des Formulardatenmodelldienstes als Schritt im Workflow
 description: Ab AEM Forms 6.4 haben wir jetzt die Möglichkeit, das Formulardatenmodell als Teil AEM Arbeitsablaufs zu verwenden. Im folgenden Video werden die Schritte erläutert, die zum Konfigurieren des Schritts "Formulardatenmodell"in AEM Workflow erforderlich sind.
-seo-description: Ab AEM Forms 6.4 haben wir jetzt die Möglichkeit, das Formulardatenmodell als Teil AEM Arbeitsablaufs zu verwenden. Im folgenden Video werden die Schritte erläutert, die zum Konfigurieren des Schritts "Formulardatenmodell"in AEM Workflow erforderlich sind.
-uuid: ecd5d5aa-01eb-48fb-872f-66c656ae14df.
 feature: Workflow
-topics: integrations
-audience: developer
-doc-type: technical video
-activity: setup
+type: Tutorial
 version: 6.4,6.5
-discoiquuid: c442f439-1e5d-4f96-85df-b818c28389ff
 topic: Entwicklung
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '328'
-ht-degree: 0%
+source-wordcount: '281'
+ht-degree: 1%
 
 ---
 
 
-# Verwenden des Formulardatenmodelldienstes als Schritt in Workflow {#using-form-data-model-service-as-step-in-workflow}
+# Verwenden des Formulardatenmodelldienstes als Schritt im Workflow {#using-form-data-model-service-as-step-in-workflow}
 
 Ab AEM Forms 6.4 haben wir jetzt die Möglichkeit, das Formulardatenmodell als Teil AEM Arbeitsablaufs zu verwenden. Im folgenden Video werden die Schritte erläutert, die zum Konfigurieren des Schritts &quot;Formulardatenmodell&quot;in AEM Workflow erforderlich sind
 
@@ -33,7 +26,7 @@ Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisu
 * [Laden Sie das SetValue-Bundle herunter und stellen Sie es bereit](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGI-Bundle, das Metadateneigenschaften festlegt.
 >!![NOTE]In AEM Forms 6.5 und höher ist diese Funktion standardmäßig verfügbar, wie hier  [beschrieben.](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
-* Richten Sie tomcat mit der Datei SampleRest.war ein, wie [hier](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html) beschrieben. Die in Tomcat bereitgestellte WAR-Datei hat den Code, um die Kreditwürdigkeit des Antragstellers zurückzugeben. Die Bonität ist eine Zufallszahl zwischen 200 und 800
+* Richten Sie tomcat mit der Datei SampleRest.war ein, wie [hier](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html) beschrieben. Die in Tomcat bereitgestellte WAR-Datei hat den Code, um die Kreditwürdigkeit des Antragstellers zurückzugeben. Die Bonität ist eine Zufallszahl zwischen 200 und 800
 
 * [Importieren Sie die Assets mit Package Manager](assets/invoke-fdm-as-service-step.zip) in AEM. Das Paket enthält Folgendes:
 
