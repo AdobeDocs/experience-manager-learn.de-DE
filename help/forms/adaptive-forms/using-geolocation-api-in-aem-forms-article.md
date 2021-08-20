@@ -1,22 +1,14 @@
 ---
 title: Verwenden von Geolocation-APIs in Adaptive Forms
-seo-title: Verwenden von Geolocation-APIs in Adaptive Forms
-description: Füllen Sie Adressfelder in Ihrem Formular mithilfe der API für die Geolocation aus.
-seo-description: Füllen Sie Adressfelder in Ihrem Formular mithilfe der API für die Geolocation aus.
-uuid: 5a461659-6873-4ea1-9f37-8296e5a9d895
+description: Füllen Sie Adressfelder in Ihrem Formular mithilfe der Geolocation-APIs aus.
 feature: Adaptive Formulare
-topics: integrations
-audience: developer
-doc-type: article
-activity: develop
 version: 6.3,6.4,6.5
-discoiquuid: 3400251b-aee0-4d69-994b-e1643fabc868
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '417'
 ht-degree: 4%
 
 ---
@@ -24,7 +16,7 @@ ht-degree: 4%
 
 # Verwenden von Geolocation-APIs in Adaptive Forms{#using-geolocation-api-s-in-adaptive-forms}
 
-Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) für einen Link zu einer Live-Demo dieser Funktion.
+Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1) für einen Link zu einer Live-Demo dieser Funktion.
 
 In diesem Artikel werden wir uns die Verwendung der Geolocation-API von Google ansehen, um Felder eines adaptiven Formulars auszufüllen. Dieser Anwendungsfall wird häufig verwendet, wenn Sie die aktuellen Adressfelder in einem Formular ausfüllen möchten.
 
