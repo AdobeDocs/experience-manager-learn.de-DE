@@ -1,20 +1,14 @@
 ---
 title: Entwickeln mit Output- und Forms-Diensten in AEM Forms
-seo-title: Entwickeln mit Output- und Forms-Diensten in AEM Forms
 description: Verwenden der Output- und Forms Service-API in AEM Forms
-seo-description: Verwenden der Output- und Forms Service-API in AEM Forms
 feature: Formularservice
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: Entwicklung
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '332'
 ht-degree: 2%
 
 ---
@@ -65,7 +59,7 @@ Zeile 11: Gibt das generierte interaktive PDF-Dokument an die aufrufende Anwendu
 1. Fügen Sie den folgenden Pfad in die ausgeschlossenen Abschnitte hinzu und speichern Sie
 1. /bin/generateinteractivepdf
 1. [Öffnen Sie das Mobile-Formular](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
-1. Füllen Sie einige Felder aus und klicken Sie dann auf ***Herunterladen und Ausfüllen ....*** button
+1. Füllen Sie einige Felder aus und klicken Sie dann auf ***Herunterladen und Ausfüllen ....*** Schaltfläche
 1. Das interaktive PDF-Dokument sollte auf Ihr lokales System heruntergeladen werden
 
 
