@@ -1,23 +1,15 @@
 ---
 title: Verwenden der API zum Generieren des Datensatzdokuments mit AEM Forms
-seo-title: Verwenden der API zum Generieren des Datensatzdokuments mit AEM Forms
 description: Generieren des Datensatzdokuments (DOR) programmgesteuert
-seo-description: Verwenden der API zum Generieren des Datensatzdokuments mit AEM Forms
 feature: Adaptive Formulare
-topics: development
-audience: developer
-doc-type: article
-activity: implement
 version: 6.4,6.5
-uuid: 94ac3b13-01b4-4198-af81-e5609c80324c
-discoiquuid: ba91d9df-dc61-47d8-8e0a-e3f66cae6a87
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 5%
+source-wordcount: '257'
+ht-degree: 6%
 
 ---
 
@@ -26,7 +18,7 @@ ht-degree: 5%
 
 Generieren des Datensatzdokuments (DOR) programmgesteuert
 
-Dieser Artikel veranschaulicht die Verwendung von `com.adobe.aemds.guide.addon.dor.DoRService API` zum programmgesteuerten Generieren von **Datensatzdokument**. [Das Dokument ](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) Recordis ist eine PDF-Version der im adaptiven Formular erfassten Daten.
+Dieser Artikel veranschaulicht die Verwendung von `com.adobe.aemds.guide.addon.dor.DoRService API` zum programmgesteuerten Generieren von **Datensatzdokument**. [Das Dokument ](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) Recordis ist eine PDF-Version der im adaptiven Formular erfassten Daten.
 
 1. Im Folgenden finden Sie das Code-Snippet. Die erste Zeile erhält den DOR-Dienst.
 1. Legen Sie die DoROptions fest.
