@@ -1,22 +1,17 @@
 ---
 title: 'Verwenden automatisierter Tests mit AEM adaptiven Forms '
-seo-title: 'Verwenden automatisierter Tests mit AEM adaptiven Forms '
 description: Automatisierte Tests von Adaptive Forms mit Calvin SDK
-seo-description: Automatisierte Tests von Adaptive Forms mit Calvin SDK
 feature: Adaptive Formulare
-topics: development
-audience: developer
 doc-type: article
 activity: develop
 version: 6.3,6.4,6.5
-uuid: 3ad4e6d6-d3b1-4e4d-9169-847f74ba06be
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 6%
+source-wordcount: '446'
+ht-degree: 4%
 
 ---
 
@@ -25,7 +20,7 @@ ht-degree: 6%
 
 Automatisierte Tests von Adaptive Forms mit Calvin SDK
 
-Calvin SDK ist eine Dienstprogramm-API für Entwickler von adaptiven Formularen zum Testen von adaptiven Formularen. Calvin SDK basiert auf dem [Hobbes.js-Test-Framework](https://docs.adobe.com/docs/de/aem/6-3/develop/ref/test-api/index.html). Calvin SDK ist ab AEM Forms 6.3 verfügbar.
+Calvin SDK ist eine Dienstprogramm-API für Entwickler von adaptiven Formularen zum Testen von adaptiven Formularen. Calvin SDK basiert auf dem [Hobbes.js-Test-Framework](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html). Calvin SDK ist ab AEM Forms 6.3 verfügbar.
 
 In diesem Tutorial erstellen Sie Folgendes:
 
@@ -86,7 +81,7 @@ Testfälle können der Test-Suite hinzugefügt werden, die für ein adaptives Fo
 
 ![calvinsdk](assets/calvinimage.png)
 
-## Probieren Sie die Beispiel-Test-Suites {#try-out-the-sample-test-suites} aus.
+## Testbeispielsuiten ausprobieren {#try-out-the-sample-test-suites}
 
 Als Teil des Beispielpakets gibt es drei weitere Testsuiten. Sie können sie ausprobieren, indem Sie die entsprechenden Dateien wie unten gezeigt in die Datei js.txt der Client-Bibliothek einfügen:
 
