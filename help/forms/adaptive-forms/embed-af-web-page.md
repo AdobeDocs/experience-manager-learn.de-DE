@@ -2,17 +2,13 @@
 title: Einbetten von adaptiven Forms-/HTML5-Formularen in Webseiten
 description: Konfigurationsschritte, die zum Einbetten von adaptiven Forms- oder HTML5-Formularen in eine AEM Web-Seite erforderlich sind.
 feature: Adaptive Formulare
-feature-set: Adaptive Forms
-topics: development
-audience: developer
-doc-type: Tutorial
-activity: implement
+type: Tutorial
 version: 6.4,6.5
-topic: Administration
-role: Admin
+topic: Entwicklung
+role: Developer
 level: Beginner
 kt: 8390
-source-git-commit: 2fc4f748fd3b8f820d1451d08c5fe01d11892029
+source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 28%
