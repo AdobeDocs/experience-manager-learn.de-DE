@@ -1,23 +1,17 @@
 ---
 title: Verwenden des SPA-Editors mit AEM Sites
-seo-title: Verwenden des SPA Editor-Frameworks mit AEM Sites
 description: AEM Framework für den Editor für Einzelseiten-Apps bietet Autoren die Möglichkeit, Inhalte für Einzelseiten-Apps oder -SPA zu bearbeiten. Entwickler, die React- oder Angular-Frameworks verwenden, erstellen eine SPA und ordnen dann Bereiche der SPA AEM Komponenten zu, sodass Autoren vertraute AEM Sites-Bearbeitungswerkzeuge verwenden können.
-sub-product: Sites, Content-Services
-feature: SPA-Editor
-topics: authoring, single-page-applications
-audience: all
-doc-type: feature video
-activity: use
 version: 6.4, 6.5, cloud-service
-kt: 1047
-thumbnail: 22229.jpg
 topic: SPA
+feature: SPA Editor
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 1047
+thumbnail: 22229.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '287'
-ht-degree: 12%
+source-wordcount: '277'
+ht-degree: 7%
 
 ---
 
@@ -44,5 +38,5 @@ Laden Sie das entsprechende [WKND SPA Paket](https://github.com/adobe/aem-guides
 
 Eine detaillierte Anleitung zum Entwickeln mit dem SPA-Editor finden Sie unter:
 
-* [Erste Schritte mit dem AEM SPA-Editor und Angular](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-angular-tutorial/overview.html)
-* [Erste Schritte mit dem AEM SPA-Editor und React](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-react-tutorial/overview.html)
+* [Erste Schritte mit dem AEM SPA-Editor und Angular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
+* [Erste Schritte mit dem AEM SPA-Editor und React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
