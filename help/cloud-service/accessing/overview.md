@@ -1,18 +1,14 @@
 ---
 title: Konfigurieren des Zugriffs auf AEM as a Cloud Service
 description: 'AEM as a Cloud Service ist die Cloud-native Möglichkeit, die AEM-Anwendungen zu nutzen, und nutzt daher die Adobe IMS (Identity Management System), um die Anmeldung von Benutzern, sowohl Administratoren als auch reguläre Benutzer, beim AEM-Autorendienst zu erleichtern. Erfahren Sie, wie Adobe IMS-Benutzer, Benutzergruppen und Produktprofile gemeinsam mit AEM und Berechtigungen verwendet werden, um bestimmten Zugriff auf AEM Author zu gewähren.  '
-feature: 'Benutzer und Gruppen '
-topics: authentication
 version: cloud-service
-activity: setup
-audience: administrator
-doc-type: article
-kt: 5882
-thumbnail: KT-5882.jpg
 topic: Administration, Sicherheit
+feature: Benutzer und Gruppen
 role: Admin
 level: Beginner
-source-git-commit: 36346a8a45fc20b5e6d71d6d00345d74b6b04c2a
+kt: 5882
+thumbnail: KT-5882.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 7%
