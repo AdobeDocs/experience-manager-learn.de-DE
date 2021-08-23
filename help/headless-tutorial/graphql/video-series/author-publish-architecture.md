@@ -1,18 +1,17 @@
 ---
 title: Autoren- und Veröffentlichungsarchitektur mit AEM GraphQL
 description: Erfahren Sie, wie und wann Sie AEM-Autoren- und Veröffentlichungsumgebungen bei der Verwendung AEM GraphQL-APIs nutzen können.
-sub-product: Assets
 version: cloud-service
 topic: Headless, Content Management
-feature: Inhaltsfragmente, GraphQL-APIs
+feature: Inhaltsfragmente,GraphQL-API
 role: Developer
 level: Beginner
 kt: 7873
 thumbnail: 333296.jpg
-source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 0%
+source-wordcount: '103'
+ht-degree: 3%
 
 ---
 
