@@ -10,9 +10,9 @@ feature: Dynamic Media Classic
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '897'
 ht-degree: 1%
 
 ---
@@ -45,13 +45,13 @@ In diesem Handbuch besprechen wir die folgenden Kernfunktionen von Dynamic Media
 - **Video.** Laden Sie endgültige Videos hoch, veröffentlichen Sie sie und laden Sie sie schrittweise in konfigurierbare Video-Viewer herunter.
 - **Intelligente Bildbearbeitung.** Technologie, die die AI-Funktionen von Adobe Sensei nutzt und mit vorhandenen &quot;Bildvorgaben&quot;zusammenarbeitet, um die Leistung bei der Bildbereitstellung zu verbessern, indem Bildformat, -größe und -qualität basierend auf den Funktionen des Client-Browsers automatisch optimiert werden.
 
-Weitere Funktionen der Lösung finden Sie in der [Dokumentation für Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/intro/introduction.html).
+Weitere Funktionen der Lösung finden Sie in der [Dokumentation für Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html).
 
 ## Die Benutzeroberfläche von Dynamic Media Classic
 
 Die Hauptbenutzeroberfläche von Dynamic Media Classic besteht aus drei Hauptbereichen: die globale Navigationsleiste, die Asset-Bibliothek und das Durchsuchenbedienfeld/Build-Bedienfeld.
 
-![image](assets/overview/overview-dmc-ui-ew.png)
+![Bild](assets/overview/overview-dmc-ui-ew.png)
 
 _Dynamic Media Classic-Benutzeroberfläche_
 
@@ -69,10 +69,10 @@ _Dynamic Media Classic-Benutzeroberfläche_
 >
 >Neben jeder Asset-ID befindet sich der Schalter **Zur Veröffentlichung markieren** . Wenn der Umschalter aktiviert ist (grün), zeigt dies an, dass das Asset zur Veröffentlichung markiert ist.
 
-![image](assets/overview/overview-mark-for-publish.png)
+![Bild](assets/overview/overview-mark-for-publish.png)
 
 >[!TIP]
 >
 >Aktivieren Sie im Dialogfeld &quot;Hochladen&quot;das Kontrollkästchen **Nach dem Hochladen veröffentlichen** , um Assets beim Hochladen automatisch zu veröffentlichen.
 
-Erfahren Sie mehr über [Navigieren in der Benutzeroberfläche von Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/getting-started/navigation-basics.html).
+Erfahren Sie mehr über [Navigieren in der Benutzeroberfläche von Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html).
