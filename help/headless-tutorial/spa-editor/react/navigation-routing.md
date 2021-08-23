@@ -12,10 +12,10 @@ thumbnail: 4988-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1625'
-ht-degree: 1%
+source-wordcount: '1623'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 Erfahren Sie, wie mehrere Ansichten im SPA unterstützt werden können, indem Sie sie mit dem SPA Editor SDK AEM Seiten zuordnen. Die dynamische Navigation wird mit React-Router und React-Kernkomponenten implementiert.
 
-## Vorgabe
+## Ziele
 
 1. Machen Sie sich mit den SPA Routing-Optionen vertraut, die bei Verwendung des SPA-Editors verfügbar sind.
 1. Erfahren Sie, wie Sie mit [React Router](https://reacttraining.com/react-router/) zwischen verschiedenen Ansichten der SPA navigieren können.
@@ -32,7 +32,7 @@ Erfahren Sie, wie mehrere Ansichten im SPA unterstützt werden können, indem Si
 
 ## Was Sie erstellen werden
 
-Dieses Kapitel fügt einem SPA in AEM Navigation hinzu. Das Navigationsmenü wird von der AEM-Seitenhierarchie gesteuert und nutzt das JSON-Modell, das von der [Navigations-Kernkomponente](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/navigation.html) bereitgestellt wird.
+Dieses Kapitel fügt einem SPA in AEM Navigation hinzu. Das Navigationsmenü wird von der AEM-Seitenhierarchie gesteuert und nutzt das JSON-Modell, das von der [Navigations-Kernkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html) bereitgestellt wird.
 
 ![Navigation hinzugefügt](assets/navigation-routing/navigation-added.png)
 
@@ -40,7 +40,7 @@ Dieses Kapitel fügt einem SPA in AEM Navigation hinzu. Das Navigationsmenü wir
 
 Überprüfen Sie die erforderlichen Tools und Anweisungen zum Einrichten einer [lokalen Entwicklungsumgebung](overview.md#local-dev-environment). Dieses Kapitel ist eine Fortsetzung des Kapitels [Zuordnungskomponenten](map-components.md). Um jedoch alles zu befolgen, was Sie benötigen, ist ein SPA-aktiviertes AEM-Projekt, das auf einer lokalen AEM-Instanz bereitgestellt wird.
 
-## Fügen Sie die Navigation der Vorlage {#add-navigation-template} hinzu.
+## Hinzufügen der Navigation zur Vorlage {#add-navigation-template}
 
 1. Öffnen Sie einen Browser und melden Sie sich AEM [http://localhost:4502/](http://localhost:4502/) an. Die Basis für den Startcode sollte bereits bereitgestellt werden.
 1. Navigieren Sie zur SPA **Seitenvorlage**: [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
@@ -121,7 +121,7 @@ Als Nächstes erstellen Sie zusätzliche Seiten in AEM , die als verschiedene An
 
    Beachten Sie, dass die nachfolgende Navigation nach dem ersten Laden der Seite nicht zu einer vollständigen Seitenaktualisierung führt und dass der Netzwerk-Traffic bei der Rückkehr zu zuvor besuchten Seiten minimiert wird.
 
-## Hierarchieseite JSON-Modell {#hierarchy-page-json-model}
+## JSON-Modell für Hierarchieseite {#hierarchy-page-json-model}
 
 Überprüfen Sie anschließend das JSON-Modell, das das mehrdimensionale Erlebnis des SPA steuert.
 
@@ -208,7 +208,7 @@ Als Nächstes erstellen Sie zusätzliche Seiten in AEM , die als verschiedene An
 
 1. Experimentieren Sie mit Deep-Links, indem Sie direkt zu folgenden Elementen navigieren: [http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html). Beachten Sie außerdem, dass die Zurück-Schaltfläche des Browsers weiterhin funktioniert.
 
-## Inspect React Routing {#react-routing}
+## Inspect React Routing  {#react-routing}
 
 Die Navigation und das Routing werden mit [React Router](https://reactrouter.com/) implementiert. React Router sind eine Sammlung von Navigationskomponenten für React-Anwendungen. [AEM React-Kernkomponenten ](https://github.com/adobe/aem-react-core-wcm-components-base) verwenden die Funktionen des React-Routers, um die in den vorherigen Schritten verwendete  **** Navigationskomponente zu implementieren.
 
