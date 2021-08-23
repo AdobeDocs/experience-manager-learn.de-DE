@@ -11,10 +11,10 @@ doc-type: article
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2025'
-ht-degree: 8%
+source-wordcount: '2029'
+ht-degree: 7%
 
 ---
 
@@ -100,7 +100,7 @@ Die bevorzugte API ist [AEM Query Builder](https://helpx.adobe.com/experience-ma
 * [OOTB-](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/querybuilder-predicate-reference.html) Eigenschaften, die gemeinsame Abfrageanforderungen unterstützen
 
 * Erweiterbare API, die die Entwicklung benutzerdefinierter [Abfrageeigenschaften](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/implementing-custom-predicate-evaluator.html) ermöglicht
-* JCR-SQL2 und XPath können direkt über [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-) und [JCR-APIs](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html) ausgeführt werden. Die Ergebnisse werden jeweils [[!DNL Sling] Ressourcen](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html) oder [JCR-Knoten](https://docs.adobe.com/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) zurückgegeben.
+* JCR-SQL2 und XPath können direkt über [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-) und [JCR-APIs](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/query/package-summary.html) ausgeführt werden. Die Ergebnisse werden jeweils [[!DNL Sling] Ressourcen](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html) oder [JCR-Knoten](https://docs.adobe.com/content/docs/en/spec/jsr170/javadocs/jcr-2.0/javax/jcr/Node.html) zurückgegeben.
 
 >[!CAUTION]
 >
@@ -137,9 +137,9 @@ Die bevorzugte API ist [AEM Query Builder](https://helpx.adobe.com/experience-ma
 
 ## JCR-APIs
 
-* **[JCR 2.0 JavaDocs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
+* **[JCR 2.0 JavaDocs](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html)**
 
-Die [JCR (Java Content Repository) 2.0-APIs](https://docs.adobe.com/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) ist Teil einer Spezifikation für JCR-Implementierungen (im Fall von AEM [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/)). Alle JCR-Implementierungen müssen diesen APIs entsprechen und implementieren. Daher ist sie die niedrigste API für die Interaktion mit AEM Inhalt.
+Die [JCR (Java Content Repository) 2.0-APIs](https://docs.adobe.com/content/docs/en/spec/javax.jcr/javadocs/jcr-2.0/index.html) ist Teil einer Spezifikation für JCR-Implementierungen (im Fall von AEM [Apache Jackrabbit Oak](https://jackrabbit.apache.org/oak/)). Alle JCR-Implementierungen müssen diesen APIs entsprechen und implementieren. Daher ist sie die niedrigste API für die Interaktion mit AEM Inhalt.
 
 Das JCR selbst ist ein hierarchischer/baumbasierter NoSQL-Datenspeicher, der AEM als Content-Repository verwendet. Das JCR verfügt über eine Vielzahl unterstützter APIs, von Inhalts-CRUD bis hin zur Abfrage von Inhalten. Trotz dieser robusten API werden sie selten gegenüber den übergeordneten AEM und [!DNL Sling] Abstraktionen bevorzugt.
 
@@ -202,11 +202,11 @@ Im Folgenden finden Sie allgemeine Ausnahmen von den oben definierten Regeln.
 
 * AEM QueryBuilder unterstützt nicht nur bestimmte Abfragefunktionen wie [Vorschläge](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#Suggestions), Rechtschreibprüfung und Indexhinweise, sondern auch weniger häufig verwendete Funktionen. Für die Abfrage mit diesen Funktionen wird JCR-SQL2 bevorzugt.
 
-### [!DNL Sling] Servlet-Registrierung  {#sling-servlet-registration}
+### [!DNL Sling] Servlet-Registrierung {#sling-servlet-registration}
 
 * [!DNL Sling] Servlet-Registrierung,  [OSGi DS 1.2-Anmerkungen mit/ @](https://sling.apache.org/documentation/the-sling-engine/servlets.html) SlingServletResourceTypesover vorziehen  `@SlingServlet`
 
-### [!DNL Sling] Registrierung filtern  {#sling-filter-registration}
+### [!DNL Sling] Registrierung filtern {#sling-filter-registration}
 
 * [!DNL Sling] Filterregistrierung,  [OSGi DS 1.2-Anmerkungen mit/ @](https://sling.apache.org/documentation/the-sling-engine/filters.html) SlingServletFilterover vorziehen  `@SlingFilter`
 
@@ -297,7 +297,7 @@ Page page = pageManager.getContainingPage(resource);
 Page page2 = pageManager.getContainingPage("/content/path/to/page/jcr:content/or/component");
 ```
 
-#### Alternativer Ansatz {#alternative-approach-1}
+#### Alternativansatz {#alternative-approach-1}
 
 Um eine Ressource an eine Seite anzupassen, muss die Ressource selbst der Knoten `cq:Page` sein.
 
@@ -325,7 +325,7 @@ String title = asset.getMetadataValue("dc:title");
 Calendar lastModified = (Calendar) asset.getMetadata("cq:lastModified");
 ```
 
-### Lesen Sie [!DNL Sling] [!DNL Resource] Eigenschaften {#read-sling-resource-properties}
+### Eigenschaften lesen [!DNL Sling] [!DNL Resource] {#read-sling-resource-properties}
 
 Wenn Eigenschaften in Speicherorten (Eigenschaften oder relative Ressourcen) gespeichert werden, in denen die AEM-APIs (Seite, Asset) nicht direkt darauf zugreifen können, können die [!DNL Sling] Ressourcen und ValueMaps zum Abrufen der Daten verwendet werden.
 
