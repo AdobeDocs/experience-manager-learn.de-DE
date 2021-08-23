@@ -3,13 +3,14 @@ title: OSGi-Konfigurationen als ObjectClassDefinition-Objekte
 description: Erfahren Sie, wie Sie ObjectClassDefinitions in einem OSGi-Dienst als OSGi-Konfigurationsdarstellungen erstellen und zuweisen.
 role: Developer
 level: Beginner
-topic: Anfänger
+topic: Entwicklung
+feature: OSGI
 kt: 8269
 thumbnail: 335730.jpeg
-source-git-commit: 680043f5717bf938bf6f0b960d9ed5939d13544c
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 2%
+source-wordcount: '106'
+ht-degree: 3%
 
 ---
 
