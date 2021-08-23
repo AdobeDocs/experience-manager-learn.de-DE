@@ -6,9 +6,9 @@ version: 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '107'
+source-wordcount: '105'
 ht-degree: 3%
 
 ---
@@ -25,4 +25,4 @@ Mit der Funktion &quot;Connected Assets&quot;kann ein AEM Sites-Autor nahtlos di
 * 03:30 — Verwenden eines Bildes aus den Connected Assets
 * 04:42 — Administratorkonfigurationen zum Aktivieren der Funktion &quot;Connected Assets&quot;
 
-In den [unterstützten Bereitstellungen für Connected Assets](https://docs.adobe.com/content/help/en/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites) finden Sie Informationen dazu, ob Ihre AEM-Bereitstellung Connected Assets unterstützen kann.
+In den [unterstützten Bereitstellungen für Connected Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html#prerequisites) finden Sie Informationen dazu, ob Ihre AEM-Bereitstellung Connected Assets unterstützen kann.
