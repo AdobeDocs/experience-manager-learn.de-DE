@@ -12,10 +12,10 @@ thumbnail: 32550.jpg
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '81'
-ht-degree: 54%
+source-wordcount: '79'
+ht-degree: 53%
 
 ---
 
@@ -29,4 +29,4 @@ Das AEM-Projekt enthält den gesamten Code und die Konfigurationen für eine Imp
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [GitHub-Projekt](https://github.com/adobe/aem-project-archetype)
-* [AEM Dokumentation zum Projektarchetyp](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/archetype/overview.html)
+* [AEM Dokumentation zum Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de)
