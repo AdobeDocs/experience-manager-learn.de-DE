@@ -10,21 +10,21 @@ version: 6.3, 6.4, 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '213'
-ht-degree: 11%
+source-wordcount: '207'
+ht-degree: 10%
 
 ---
 
 
-# Verwenden der Freigabe in Social Media {#using-social-media-sharing-in-aem-sites}
+# Social Media-Freigabe verwenden {#using-social-media-sharing-in-aem-sites}
 
 Erfahren Sie mehr über die Einrichtung und Verwendung der Social Media-Sharing-Komponente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/18897/?quality=9&learn=on)
 
-In diesem Video werden die folgenden Funktionen der Social Media-Sharing-Komponente (Teil von [AEM Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html)) mithilfe der Beispiel-Website [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) untersucht.
+In diesem Video werden die folgenden Funktionen der Social Media-Sharing-Komponente (Teil von [AEM Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de)) mithilfe der Beispiel-Website [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) untersucht.
 
 * 0:00 - Hinzufügen und Konfigurieren der Social Media-Sharing-Komponente
 * 1:00 - Freigeben für Facebook
@@ -39,10 +39,10 @@ In diesem Video werden die folgenden Funktionen der Social Media-Sharing-Kompone
 
 [AEM ](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/externalizer.html) externalizer sollten sowohl in der AEM-Autoreninstanz als auch in der AEM-Veröffentlichungsinstanz eingerichtet werden, um den Veröffentlichungs-Ausführungsmodus der öffentlich zugänglichen Domäne zuzuordnen, die für den Zugriff auf AEM Publish verwendet wird.
 
-In diesem Video verwenden wir `/etc/hosts`, um *www.example.com* zum Auflösen in localhost zu verwenden, und verwenden eine [grundlegende AEM Dispatcher-Konfiguration](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/dispatcher-install.html), um www.example.com zu ermöglichen, AEM Publish zu unterstützen.
+In diesem Video verwenden wir `/etc/hosts`, um *www.example.com* zum Auflösen in localhost zu verwenden, und verwenden eine [grundlegende AEM Dispatcher-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html), um www.example.com zu ermöglichen, AEM Publish zu unterstützen.
 
 ## Unterstützende Materialien {#supporting-materials}
 
 * [Herunterladen der AEM Kernkomponenten](https://github.com/adobe/aem-core-wcm-components/releases)
 * [We.Retail herunterladen](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
-* [Installieren des Dispatchers](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/getting-started/dispatcher-install.html)
+* [Installieren des Dispatchers](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/getting-started/dispatcher-install.html)
