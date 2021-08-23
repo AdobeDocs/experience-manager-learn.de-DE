@@ -1,19 +1,14 @@
 ---
 title: Entwickeln mit dem AEM-SPA-Editor - Tutorial "Hello World"
 description: AEM SPA Editor unterstützt die kontextbezogene Bearbeitung von Einzelseiten-Apps oder -SPA. Dieses Tutorial ist eine Einführung in SPA Entwicklung, die mit AEM Editor JS SDK verwendet werden SPA. Im Tutorial wird die Anwendung "We.Retail Journal"erweitert, indem eine benutzerdefinierte Komponente "Hello World"hinzugefügt wird. Benutzer können das Tutorial mit React- oder Angular-Frameworks abschließen.
-sub-product: Sites, Content-Services
-feature: SPA-Editor
-topics: development, single-page-applications
-audience: developer
-doc-type: tutorial
-activity: use
 version: 6.3, 6.4, 6.5
 topic: SPA
+feature: SPA Editor
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3174'
+source-wordcount: '3170'
 ht-degree: 3%
 
 ---
@@ -23,7 +18,7 @@ ht-degree: 3%
 
 >[!WARNING]
 >
-> Dieses Tutorial ist **veraltet**. Es wird empfohlen, Folgendes zu tun: [Erste Schritte mit dem AEM-SPA-Editor und Angular](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-angular-tutorial/overview.html) oder [Erste Schritte mit dem AEM-SPA-Editor und React](https://docs.adobe.com/content/help/de/experience-manager-learn/spa-react-tutorial/overview.html)
+> Dieses Tutorial ist **veraltet**. Es wird empfohlen, Folgendes zu tun: [Erste Schritte mit dem AEM-SPA-Editor und Angular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html) oder [Erste Schritte mit dem AEM-SPA-Editor und React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
 
 AEM SPA Editor unterstützt die kontextbezogene Bearbeitung von Einzelseiten-Apps oder -SPA. Dieses Tutorial ist eine Einführung in SPA Entwicklung, die mit AEM Editor JS SDK verwendet werden SPA. Im Tutorial wird die Anwendung &quot;We.Retail Journal&quot;erweitert, indem eine benutzerdefinierte Komponente &quot;Hello World&quot;hinzugefügt wird. Benutzer können das Tutorial mit React- oder Angular-Frameworks abschließen.
 
@@ -71,7 +66,7 @@ $ npm --version
 6.1.0
 ```
 
-## Überblick {#overview}
+## Übersicht {#overview}
 
 Das grundlegende Konzept besteht darin, eine SPA Komponente einer AEM Komponente zuzuordnen. AEM Komponenten, die serverseitig ausgeführt werden, exportieren Inhalte in Form von JSON. Der JSON-Inhalt wird vom SPA verwendet, der clientseitig im Browser ausgeführt wird. Es wird eine 1:1-Zuordnung zwischen SPA Komponenten und einer AEM Komponente erstellt.
 
@@ -134,7 +129,7 @@ Ziel dieses Tutorials ist es, die We.Retail Journal-App um eine neue Komponente 
    >
    > Wenn beim Build ein Fehler auftritt, [stellen Sie sicher, dass die Maven-Datei settings.xml das Maven-Artefakt-Repository](https://helpx.adobe.com/de/experience-manager/kb/SetUpTheAdobeMavenRepository.html) der Adobe enthält.
 
-1. Navigieren Sie zu:
+1. Gehen Sie zu:
 
    * [http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/react/en/home.html)
    * [http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html](http://localhost:4502/editor.html/content/we-retail-journal/angular/en/home.html)
@@ -165,7 +160,7 @@ SPA Entwicklungsdurchläufe erfolgen unabhängig von AEM. Wenn die SPA bereit f�
 1. Der [**aem-clientlib-generator**](https://www.npmjs.com/package/aem-clientlib-generator) des SPA-Projekts bettet die kompilierte SPA als AEM Client-Bibliothek in das AEM Projekt ein.
 1. Das AEM-Projekt generiert ein AEM-Paket, einschließlich des kompilierten SPA, sowie weiteren unterstützenden AEM-Code.
 
-## Erstellen AEM Komponente {#aem-component}
+## AEM Komponente erstellen {#aem-component}
 
 **Persona: AEM Entwickler**
 
@@ -308,7 +303,7 @@ Als Nächstes wird ein [!DNL Sling Model] erstellt, um die [!DNL Hello World]-Ko
 
 >[!NOTE]
 >
->Als Best Practice sollten Entwickler nach Möglichkeit [AEM Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html) verwenden. Neben anderen Funktionen bieten Kernkomponenten [!DNL Sling Models] eine JSON-Ausgabe, die &quot;SPA-bereit&quot;ist, sodass sich Entwickler mehr auf die Frontend-Präsentation konzentrieren können.
+>Als Best Practice sollten Entwickler nach Möglichkeit [AEM Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de) verwenden. Neben anderen Funktionen bieten Kernkomponenten [!DNL Sling Models] eine JSON-Ausgabe, die &quot;SPA-bereit&quot;ist, sodass sich Entwickler mehr auf die Frontend-Präsentation konzentrieren können.
 
 1. Öffnen Sie im Editor Ihrer Wahl das Projekt **we-retail-journal-commons** ( `<src>/aem-sample-we-retail-journal/bundles/commons`).
 1. Im Paket `com.adobe.cq.sample.spa.commons.impl.models`:
@@ -430,7 +425,7 @@ Als Nächstes wird ein [!DNL Sling Model] erstellt, um die [!DNL Hello World]-Ko
    com.adobe.cq.sample.spa.commons.impl.models.HelloWorld exports 'we-retail-journal/components/helloworld' with selector 'model' and extension '[Ljava.lang.String;@6480f3e5' with exporter 'jackson'
    ```
 
-## React-Komponente erstellen {#react-component}
+## Erstellen einer React-Komponente {#react-component}
 
 **Persona: Frontend-Entwickler**
 
@@ -569,7 +564,7 @@ Als Nächstes wird die React-Komponente erstellt. Öffnen Sie das Modul **react-
    > **app.** js ist die gebündelte React-App. Der Code ist nicht mehr für Menschen lesbar. Der Befehl `npm run build` hat einen optimierten Build ausgelöst, der kompiliertes JavaScript ausgibt, das von modernen Browsern interpretiert werden kann.
 
 
-## Erstellen einer Angular-Komponente {#angular-component}
+## Angular-Komponente erstellen {#angular-component}
 
 **Persona: Frontend-Entwickler**
 
@@ -823,7 +818,7 @@ Als Nächstes wird die Angular-Komponente erstellt. Öffnen Sie das Modul **angu
 
 **Lösung:** Versuchen Sie, den  `node_modules` Ordner unter der  **React-App zu löschen**. Führen Sie den Apache Maven-Befehl `mvn  clean install -PautoInstallSinglePackage` im Stammverzeichnis des Projekts erneut aus.
 
-### Nicht erfüllte Abhängigkeiten in AEM {#unsatisfied-dependencies-in-aem}
+### Nicht zufrieden stellende Abhängigkeiten in AEM {#unsatisfied-dependencies-in-aem}
 
 ![Fehler bei Package Manager-Abhängigkeit](assets/spa-editor-helloworld-tutorial-use/we-retail-journal-package-dependency.png)
 
