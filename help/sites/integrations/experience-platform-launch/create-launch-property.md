@@ -11,9 +11,9 @@ thumbnail: 38553.jpg
 topic: Integrationen
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '110'
+source-wordcount: '108'
 ht-degree: 15%
 
 ---
@@ -31,4 +31,4 @@ Erfahren Sie, wie Sie eine Launch-Eigenschaft mit der Mindestkonfiguration erste
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Erstellen einer Experience Platform Launch-Eigenschaft](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch.html)
+* [Erstellen einer Experience Platform Launch-Eigenschaft](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html)
