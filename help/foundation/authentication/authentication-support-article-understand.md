@@ -2,7 +2,7 @@
 title: Grundlegendes zur Authentifizierungsunterstützung in AEM
 description: 'Ein konsolidierter Überblick über die von AEM unterstützten Authentifizierungsmechanismen (und gelegentlich Autorisierungsmechanismen). '
 version: 6.3, 6.4, 6.5
-feature: 'Benutzer und Gruppen '
+feature: Benutzer und Gruppen
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
@@ -11,10 +11,10 @@ kt: 406
 topic: Architektur
 role: Architect
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 11%
+source-wordcount: '134'
+ht-degree: 15%
 
 ---
 
@@ -52,7 +52,7 @@ Ein konsolidierter Überblick über die von AEM unterstützten Authentifizierung
             <td>ms</td>
         </tr>
         <tr>
-            <td>Token-basiert (w/ <a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">verkapseltes Token</a>)</td>
+            <td>Token-basiert (w/ <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">verkapseltes Token</a>)</td>
             <td>ms</td>
             <td>ms</td>
             <td>ms</td>
@@ -63,19 +63,19 @@ Ein konsolidierter Überblick über die von AEM unterstützten Authentifizierung
             <td></td>
             <td></td>
             <tr>
-                <td><a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/ldap-config.html" target="_blank">LDAP</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ldap-config.html" target="_blank">LDAP</a></td>
                 <td>ms</td>
                 <td>ms</td>
                 <td>ms</td>
             </tr>
             <tr>
-                <td><a href="https://docs.adobe.com/content/help/en/experience-manager-65/deploying/configuring/single-sign-on.html" target="_blank">SSO (Single Sign-On, einmalige Anmeldung)</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/single-sign-on.html?lang=de" target="_blank">SSO (Single Sign-On, einmalige Anmeldung)</a></td>
                 <td>ms</td>
                 <td>ms</td>
                 <td>ms</td>
             </tr>
             <tr>
-                <td><a href="https://docs.adobe.com/content/help/en/experience-manager-65/administering/security/saml-2-0-authenticationhandler.html" target="_blank">SAML 2.0</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/saml-2-0-authenticationhandler.html" target="_blank">SAML 2.0</a></td>
                 <td>ms</td>
                 <td>ms</td>
                 <td>ms</td>
