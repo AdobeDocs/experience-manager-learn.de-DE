@@ -11,9 +11,9 @@ thumbnail: 5878-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1228'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 Erfahren Sie, wie Sie eine benutzerdefinierte Wetterkomponente erstellen, die mit dem AEM SPA Editor verwendet werden kann. Erfahren Sie, wie Sie Bearbeitungsdialogfelder und Sling-Modelle entwickeln, um das JSON-Modell zu erweitern und eine benutzerdefinierte Komponente zu füllen. Die [Open Weather API](https://openweathermap.org) und die [React Open Weather-Komponente](https://www.npmjs.com/package/react-open-weather) werden verwendet.
 
-## Vorgabe
+## Ziele
 
 1. Machen Sie sich mit der Rolle von Sling-Modellen bei der Bearbeitung der von AEM bereitgestellten JSON-Modell-API vertraut.
 2. Erfahren Sie, wie Sie neue AEM-Komponentendialogfelder erstellen.
@@ -145,7 +145,7 @@ Eine AEM Komponente ist als Knoten und Eigenschaften definiert. Im Projekt werde
    >
    > Sie können viel mehr [Beispiele für Dialogfelder anzeigen, indem Sie die Kernkomponentendefinitionen](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components) anzeigen. Sie können auch zusätzliche Formularfelder anzeigen, wie `select`, `textarea`, `pathfield`, die unter `/libs/granite/ui/components/coral/foundation/form` unter [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form) verfügbar sind.
 
-   Bei einer herkömmlichen AEM-Komponente ist in der Regel ein [HTL](https://docs.adobe.com/content/help/de-DE/experience-manager-htl/using/overview.html)-Skript erforderlich. Da das SPA die Komponente rendert, ist kein HTL-Skript erforderlich.
+   Bei einer herkömmlichen AEM-Komponente ist in der Regel ein [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=de)-Skript erforderlich. Da das SPA die Komponente rendert, ist kein HTL-Skript erforderlich.
 
 ## Sling-Modell erstellen
 
