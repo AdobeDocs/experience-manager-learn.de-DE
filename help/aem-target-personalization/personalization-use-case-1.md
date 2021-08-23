@@ -4,12 +4,12 @@ seo-title: Personalisierung mit Adobe Experience Manager (AEM) Experience Fragme
 description: Ein durchgehendes Tutorial, in dem gezeigt wird, wie mit Adobe Experience Manager Experience Fragments und Adobe Target personalisierte Erlebnisse erstellt und bereitgestellt werden.
 seo-description: Ein durchgehendes Tutorial, in dem gezeigt wird, wie mit Adobe Experience Manager Experience Fragments und Adobe Target personalisierte Erlebnisse erstellt und bereitgestellt werden.
 feature: Experience Fragments
-topic: 'Personalisierung '
+topic: Personalisierung
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1728'
 ht-degree: 1%
 
 ---
@@ -58,8 +58,8 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 1. Basierend auf den Anforderungen erstellt AEM Inhaltseditor ein Experience Fragment für den Inhaltsbaustein und exportiert es als Angebot in Adobe Target. Um personalisierte Inhalte für alle US-Bundesstaaten bereitzustellen, kann der Inhaltsautor eine Übergeordnete Variante des Experience Fragment erstellen und dann 50 weitere Varianten erstellen, eine für jeden Bundesstaat. Inhalte für jede Statusvariante mit relevanten Bildern und Text können dann manuell bearbeitet werden. Beim Erstellen eines Experience Fragments können Inhaltseditoren schnell auf alle in AEM Assets verfügbaren Assets zugreifen, indem sie die Asset-Finder-Option verwenden. Wenn ein Experience Fragment nach Adobe Target exportiert wird, werden alle Varianten auch als Angebote an Adobe Target gesendet.
 
 1. Nach dem Exportieren von Experience Fragment aus AEM in Adobe Target als Angebote können Marketing-Experten in Target mithilfe dieser Angebote Aktivitäten erstellen. Basierend auf der SkateFest-Kampagne auf der WKND-Site muss der Marketing-Experte ein personalisiertes Erlebnis für WKND-Site-Besucher aus jedem Bundesstaat erstellen und bereitstellen. Um eine Erlebnis-Targeting-Aktivität zu erstellen, muss der Marketing-Experte die Zielgruppen identifizieren. Für unsere WKND SkateFest-Kampagne müssen wir 50 separate Zielgruppen erstellen, basierend auf ihrem Standort, von dem aus sie die WKND-Website besuchen.
-   * [](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) Zielgruppen definieren die Zielgruppe für Ihre Aktivität und werden überall dort verwendet, wo Targeting verfügbar ist. Zielgruppen sind ein festgelegter Satz von Besucherkriterien. Angebote können auf bestimmte Zielgruppen (oder Segmente) ausgerichtet werden. Nur Besucher, die zu dieser Zielgruppe gehören, sehen das Erlebnis, das für sie bestimmt ist.  Sie können beispielsweise ein Angebot für eine Zielgruppe bereitstellen, das aus Besuchern besteht, die einen bestimmten Browser oder einen bestimmten geografischen Standort verwenden.
-   * Ein [Angebot](https://docs.adobe.com/content/help/en/target/using/introduction/target-key-concepts.html#section_973D4CC4CEB44711BBB9A21BF74B89E9) ist der Inhalt, der während Kampagnen oder Aktivitäten auf Ihren Webseiten angezeigt wird. Wenn Sie Ihre Webseiten testen, messen Sie den Erfolg jedes Erlebnisses mit verschiedenen Angeboten an Ihren Standorten. Ein Angebot kann verschiedene Inhaltstypen enthalten, darunter:
+   * [](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_3F32DA46BDF947878DD79DBB97040D01) Zielgruppen definieren die Zielgruppe für Ihre Aktivität und werden überall dort verwendet, wo Targeting verfügbar ist. Zielgruppen sind ein festgelegter Satz von Besucherkriterien. Angebote können auf bestimmte Zielgruppen (oder Segmente) ausgerichtet werden. Nur Besucher, die zu dieser Zielgruppe gehören, sehen das Erlebnis, das für sie bestimmt ist.  Sie können beispielsweise ein Angebot für eine Zielgruppe bereitstellen, das aus Besuchern besteht, die einen bestimmten Browser oder einen bestimmten geografischen Standort verwenden.
+   * Ein [Angebot](https://experienceleague.adobe.com/docs/target/using/introduction/target-key-concepts.html#section_973D4CC4CEB44711BBB9A21BF74B89E9) ist der Inhalt, der während Kampagnen oder Aktivitäten auf Ihren Webseiten angezeigt wird. Wenn Sie Ihre Webseiten testen, messen Sie den Erfolg jedes Erlebnisses mit verschiedenen Angeboten an Ihren Standorten. Ein Angebot kann verschiedene Inhaltstypen enthalten, darunter:
       * Bild
       * Text
       * **HTML**
