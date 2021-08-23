@@ -4,13 +4,13 @@ seo-title: Integrieren von Adobe Experience Manager mit Adobe Target mithilfe vo
 description: Schrittweise Anleitung zur Integration von Adobe Experience Manager in Adobe Target mithilfe von Experience Platform Launch und Adobe I/O
 seo-description: Schrittweise Anleitung zur Integration von Adobe Experience Manager in Adobe Target mithilfe von Experience Platform Launch und Adobe I/O
 feature: Experience Fragments
-topic: 'Personalisierung '
+topic: Personalisierung
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 4%
+source-wordcount: '1098'
+ht-degree: 5%
 
 ---
 
@@ -87,7 +87,7 @@ Eine Eigenschaft ist ein Container, den Sie beim Bereitstellen von Tags auf Ihre
 
 #### Hinzufügen der Target-Erweiterung
 
-Die Adobe Target-Erweiterung unterstützt clientseitige Implementierungen mit Target JavaScript SDK für das moderne Web, `at.js`. Kunden, die noch die ältere Target-Bibliothek `mbox.js`, [verwenden, sollten ein Upgrade auf at.js](https://docs.adobe.com/content/help/en/target/using/implement-target/client-side/upgrading-from-atjs-1x-to-atjs-20.html) durchführen, um Launch zu verwenden.
+Die Adobe Target-Erweiterung unterstützt clientseitige Implementierungen mit Target JavaScript SDK für das moderne Web, `at.js`. Kunden, die noch die ältere Target-Bibliothek `mbox.js`, [verwenden, sollten ein Upgrade auf at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html) durchführen, um Launch zu verwenden.
 
 Die Target-Erweiterung besteht aus zwei Hauptteilen:
 
@@ -137,7 +137,7 @@ Die Target-Erweiterung besteht aus zwei Hauptteilen:
 
 >[!NOTE]
 >
-> Gewähren Sie der Adobe I/O-Integration Zugriff auf ausgewählte Arbeitsbereiche mit der entsprechenden [Rolle, damit ein Zentralteam API-gesteuerte Änderungen in nur wenigen Arbeitsbereichen vornehmen kann](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html).
+> Gewähren Sie der Adobe I/O-Integration Zugriff auf ausgewählte Arbeitsbereiche mit der entsprechenden [Rolle, damit ein Zentralteam API-gesteuerte Änderungen in nur wenigen Arbeitsbereichen vornehmen kann](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html).
 
 1. Erstellen Sie die IMS-Integration in AEM mit Anmeldeinformationen von Adobe I/O. (01:12 bis 03:55)
 2. Erstellen Sie in Experience Platform Launch eine Eigenschaft. (abgedeckt [über](#create-launch-property))
