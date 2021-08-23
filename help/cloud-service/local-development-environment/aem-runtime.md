@@ -12,9 +12,9 @@ thumbnail: 32551.jpg
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: d49ae402b332ba972a78cdbd8f5bf962b91c83b1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1732'
 ht-degree: 3%
 
 ---
@@ -121,7 +121,7 @@ $ cd ~/aem-sdk/publish
 $ java -jar aem-publish-p4503.jar
 ```
 
-## Simulieren der Inhaltsverteilung {#content-distribution}
+## Inhaltsverteilung simulieren {#content-distribution}
 
 In einer echten Cloud Service-Umgebung werden Inhalte vom Autorendienst mithilfe von [Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html) und der Adobe Pipeline an den Veröffentlichungsdienst verteilt. Die [Adobe-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution) ist ein isolierter Microservice, der nur in der Cloud-Umgebung verfügbar ist.
 
@@ -214,7 +214,7 @@ Beachten Sie, dass die Verwendung der oben genannten Ansätze zur Codepflege zwi
 
 ## Fehlerbehebung
 
-## Doppelklicken auf die Schnellstart-JAR-Datei führt zu einem Fehler{#troubleshooting-double-click}
+## Durch Doppelklicken auf die Schnellstart-JAR-Datei wird ein Fehler ausgegeben{#troubleshooting-double-click}
 
 Wenn Sie auf die Schnellstart-JAR-Datei doppelklicken, wird ein Fehler-Modal angezeigt, das verhindert, dass AEM lokal gestartet werden.
 
@@ -230,7 +230,7 @@ oder um den AEM-Veröffentlichungsdienst zu starten, `cd` in den Ordner, der die
 
 `$ java -jar aem-publish-p4503.jar`
 
-## Starten des Schnellstart-JAR über die Befehlszeile bricht sofort ab{#troubleshooting-java-8}
+## Starten der Schnellstart-JAR-Datei über die Befehlszeile wird sofort abgebrochen{#troubleshooting-java-8}
 
 Beim Starten der Schnellstart-JAR-Datei über die Befehlszeile wird der Prozess sofort abgebrochen und der AEM-Dienst startet nicht, mit dem folgenden Fehler:
 
@@ -258,4 +258,4 @@ Dies liegt daran, dass AEM als Cloud Service Java SDK 11 erfordert und Sie eine 
 + [AEM SDK herunterladen](https://experience.adobe.com/#/downloads)
 + [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
 + [Docker herunterladen](https://www.docker.com/)
-+ [Experience Manager Dispatcher-Dokumentation](https://docs.adobe.com/content/help/de-DE/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience Manager Dispatcher-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=de)
