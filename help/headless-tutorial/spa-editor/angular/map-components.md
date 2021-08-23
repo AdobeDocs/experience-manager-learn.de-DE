@@ -13,10 +13,10 @@ thumbnail: 5311-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2390'
-ht-degree: 2%
+source-wordcount: '2384'
+ht-degree: 1%
 
 ---
 
@@ -27,7 +27,7 @@ Erfahren Sie, wie Sie Angular-Komponenten Adobe Experience Manager-Komponenten (
 
 In diesem Kapitel werden die AEM JSON-Modell-API und die Möglichkeiten erläutert, wie der von einer AEM-Komponente angezeigte JSON-Inhalt automatisch als Props in eine Angular-Komponente eingefügt werden kann.
 
-## Vorgabe
+## Ziele
 
 1. Erfahren Sie, wie Sie AEM Komponenten SPA Komponenten zuordnen.
 2. Machen Sie sich mit dem Unterschied zwischen den Komponenten **Container** und **Inhalt** vertraut.
@@ -77,7 +77,7 @@ Das grundlegende Konzept besteht darin, eine SPA Komponente einer AEM Komponente
 
 ## Inspect der Textkomponente
 
-Der [AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype) stellt eine `Text`-Komponente bereit, die der AEM [Textkomponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/text.html) zugeordnet ist. Dies ist ein Beispiel für eine **content** -Komponente, da sie *content* von AEM rendert.
+Der [AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype) stellt eine `Text`-Komponente bereit, die der AEM [Textkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) zugeordnet ist. Dies ist ein Beispiel für eine **content** -Komponente, da sie *content* von AEM rendert.
 
 Sehen wir uns an, wie die Komponente funktioniert.
 
@@ -201,7 +201,7 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
 ## Erstellen der Bildkomponente
 
-Erstellen Sie anschließend eine `Image`-Angular-Komponente, die der AEM [Bildkomponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/image.html) zugeordnet ist. Die Komponente `Image` ist ein weiteres Beispiel für eine **content** -Komponente.
+Erstellen Sie anschließend eine `Image`-Angular-Komponente, die der AEM [Bildkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) zugeordnet ist. Die Komponente `Image` ist ein weiteres Beispiel für eine **content** -Komponente.
 
 ### Inspect the JSON
 
@@ -437,7 +437,7 @@ Unterstützung für den **Layout-Container** wird automatisch vom AEM SPA Editor
 
    Die Komponente **Layout-Container** hat den Wert `sling:resourceType` von `wcm/foundation/components/responsivegrid` und wird vom SPA Editor mit der Eigenschaft `:type` erkannt, genau wie die Komponenten `Text` und `Image`.
 
-   Die gleichen Funktionen zum Neuskalieren einer Komponente mit [Layout-Modus](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) sind auch im SPA Editor verfügbar.
+   Die gleichen Funktionen zum Neuskalieren einer Komponente mit [Layout-Modus](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) sind auch im SPA Editor verfügbar.
 
 3. Kehren Sie zu [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html) zurück. Fügen Sie weitere **Bild**-Komponenten hinzu und versuchen Sie, sie mithilfe der Option **Layout** neu zu skalieren:
 
