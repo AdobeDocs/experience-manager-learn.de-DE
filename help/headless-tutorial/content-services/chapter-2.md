@@ -7,10 +7,10 @@ feature: Inhaltsfragmente, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1002'
-ht-degree: 11%
+source-wordcount: '998'
+ht-degree: 10%
 
 ---
 
@@ -28,7 +28,7 @@ In diesem Kapitel wird die Aktivierung und Definition von Inhaltsfragmentmodelle
 
 ## Aktivieren von Inhaltsfragmentmodellen  
 
-Inhaltsfragmentmodelle **müssen** über **[AEM [!UICONTROL Konfigurations-Browser]](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-service/implementing/developing/configurations.html)** aktiviert werden.
+Inhaltsfragmentmodelle **müssen** über **[AEM [!UICONTROL Konfigurations-Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)** aktiviert werden.
 
 Wenn Inhaltsfragmentmodelle für eine Konfiguration **nicht** aktiviert sind, wird die Schaltfläche **[!UICONTROL Erstellen] > [!UICONTROL Inhaltsfragment]** nicht für die entsprechende AEM angezeigt.
 
@@ -40,7 +40,7 @@ Wenn Inhaltsfragmentmodelle für eine Konfiguration **nicht** aktiviert sind, wi
 >
 >Wenn die `global`-Konfiguration verwendet wird, gilt die Konfiguration für alle Inhalte und `cq:conf` muss nicht festgelegt werden.
 >
->Weitere Informationen finden Sie in der [[!UICONTROL Dokumentation zum Konfigurations-Browser]](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/configurations.html) .
+>Weitere Informationen finden Sie in der Dokumentation zum [[!UICONTROL Konfigurationsbrowser].](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)
 
 1. Melden Sie sich bei der AEM-Autoreninstanz als Benutzer mit entsprechenden Berechtigungen an, um die entsprechende Konfiguration zu ändern.
    * Für dieses Tutorial kann der Benutzer **admin** verwendet werden.
