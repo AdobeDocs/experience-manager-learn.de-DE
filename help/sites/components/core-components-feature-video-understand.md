@@ -12,10 +12,10 @@ thumbnail: 18926.jpg
 topic: Entwicklung
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 14%
+source-wordcount: '146'
+ht-degree: 13%
 
 ---
 
@@ -36,4 +36,4 @@ AEM Kernkomponenten sind Standardkomponenten, die mit Adobe Experience Manager v
 
 * [GitHub-Projekt](https://github.com/adobe/aem-core-wcm-components)
 * [Beispiele für Kernkomponenten](https://www.aemcomponents.dev/)
-* [Dokumentation der Kernkomponenten](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/introduction.html)
+* [Dokumentation der Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de)
