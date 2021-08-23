@@ -12,9 +12,9 @@ thumbnail: KT-6284.jpg
 topic: Integrationen, Entwicklung
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '634'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 # Asset compute Worker testen
 
-Das Asset compute-Projekt definiert ein Muster zum einfachen Erstellen und Ausführen von [Tests von Asset compute-Sekundären](https://docs.adobe.com/content/help/en/asset-compute/using/extend/test-custom-application.html).
+Das Asset compute-Projekt definiert ein Muster zum einfachen Erstellen und Ausführen von [Tests von Asset compute-Sekundären](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html).
 
 ## Anatomie eines Worker-Tests
 
@@ -85,7 +85,7 @@ In diesem Testfall wird die parametrisierte Eingabe (`params.json`) für die Ein
 1. Fügen Sie diesem Testfall die erwartete [Ausgabedarstellungsdatei](./assets/test/success-parameterized/rendition.png) hinzu und nennen Sie sie `rendition.png`. Diese Datei stellt die erwartete Ausgabe des Sekundärs für die angegebene Eingabe dar `file.jpg`.
 1. Führen Sie in der Befehlszeile die Tests für den Projektstamm durch, indem Sie `aio app test` ausführen.
    + Stellen Sie sicher, dass [Docker Desktop](../set-up/development-environment.md#docker) und unterstützende Docker-Bilder installiert und gestartet sind.
-   + Beenden laufender Entwicklungstool-Instanzen
+   + Beenden Sie alle laufenden Entwicklungstool-Instanzen.
 
 ![Test - Erfolg  ](./assets/test/success-parameterized/result.png)
 
@@ -110,7 +110,7 @@ In diesem Testfall wird geprüft, ob der Worker den entsprechenden Fehler ausgib
 1. Da während einer fehlerhaften Ausführung keine Ausgabedarstellung generiert werden sollte, ist keine `rendition.<extension>`-Datei erforderlich.
 1. Führen Sie die Test-Suite aus dem Stammverzeichnis des Projekts aus, indem Sie den Befehl `aio app test` ausführen.
    + Stellen Sie sicher, dass [Docker Desktop](../set-up/development-environment.md#docker) und unterstützende Docker-Bilder installiert und gestartet sind.
-   + Beenden laufender Entwicklungstool-Instanzen
+   + Beenden Sie alle laufenden Entwicklungstool-Instanzen.
 
 ![Test - Fehlerkontrast](./assets/test/error-contrast/result.png)
 
