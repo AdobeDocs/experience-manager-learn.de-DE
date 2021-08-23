@@ -12,10 +12,10 @@ thumbnail: kt-5424.jpg
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2540'
-ht-degree: 0%
+source-wordcount: '2529'
+ht-degree: 1%
 
 ---
 
@@ -72,11 +72,11 @@ Fehler, die in dieser Phase identifiziert werden, sollten beim lokalen Erstellen
 
 Beim Codescan wird eine statische Codeanalyse durchgeführt, bei der eine Mischung aus Java- und AEM-spezifischen Best Practices verwendet wird.
 
-Das Prüfen von Code führt zu einem Build-Fehler, wenn im Code kritische Sicherheitslücken vorhanden sind. Weniger Verstöße können überschrieben werden, es wird jedoch empfohlen, sie zu beheben. Beachten Sie, dass das Scannen von Code nicht perfekt ist und zu [false positives ](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/understand-test-results.html#dealing-with-false-positives) führen kann.
+Das Prüfen von Code führt zu einem Build-Fehler, wenn im Code kritische Sicherheitslücken vorhanden sind. Weniger Verstöße können überschrieben werden, es wird jedoch empfohlen, sie zu beheben. Beachten Sie, dass das Scannen von Code nicht perfekt ist und zu [false positives ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html#dealing-with-false-positives) führen kann.
 
 Laden Sie den von Cloud Manager über die Schaltfläche **Download Details** bereitgestellten CSV-formatierten Bericht herunter, um Probleme beim Codescannen zu beheben, und überprüfen Sie alle Einträge.
 
-Weitere Informationen finden Sie AEM spezifischen Regeln unter Cloud Manager-Dokumentationen [benutzerdefinierte AEM-spezifische Regeln für das Codescan](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html).
+Weitere Informationen finden Sie AEM spezifischen Regeln unter Cloud Manager-Dokumentationen [benutzerdefinierte AEM-spezifische Regeln für das Codescan](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html).
 
 ## Build-Images
 
@@ -104,7 +104,7 @@ set the ‘mergeConfigurations’ flag to ‘true’ if you want to merge multip
 #### Ursache 2
 
 + __Ursache:__ Das AEM-Projekt enthält fälschlicherweise dasselbe Code-Paket zweimal, was zur Duplizierung einer beliebigen OSGi-Konfiguration führt, die in dem Paket enthalten ist.
-+ __Lösung:__ Überprüfen Sie alle pom.xml-Pakete, die in das gesamte Projekt eingebettet sind, und stellen Sie sicher, dass für sie die  `filevault-package-maven-plugin` [](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) Konfiguration  `<cloudManagerTarget>none</cloudManagerTarget>`festgelegt ist.
++ __Lösung:__ Überprüfen Sie alle pom.xml-Pakete, die in das gesamte Projekt eingebettet sind, und stellen Sie sicher, dass für sie die  `filevault-package-maven-plugin` [](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) Konfiguration  `<cloudManagerTarget>none</cloudManagerTarget>`festgelegt ist.
 
 ### Fehlerhaftes repoinit-Skript
 
@@ -232,8 +232,8 @@ Die Validierung dieses Problems ist die Ursache für das fehlerhafte Verhalten:
 + __Ursache:__ AEM Replikationsdienstbenutzer, der zum Bereitstellen von Inhaltspaketen für den AEM Publish-Dienst verwendet wird, kann nicht in  `/var` AEM Publish schreiben. Dies führt dazu, dass die Bereitstellung des Inhaltspakets für den AEM-Veröffentlichungsdienst fehlschlägt.
 + __Lösung:__ Die folgenden Methoden zur Lösung dieser Probleme werden in der Reihenfolge ihrer Präferenz aufgelistet:
    1. Wenn die Ressourcen `/var` nicht erforderlich sind, entfernen Sie alle Ressourcen unter `/var` aus Inhaltspaketen, die als Teil Ihrer Anwendung bereitgestellt werden.
-   2. Wenn die Ressourcen `/var` erforderlich sind, definieren Sie die Knotenstrukturen mit [repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit). Repoinit-Skripte können über OSGi-Ausführungsmodi auf AEM Author, AEM Publish oder beides ausgerichtet werden.
-   3. Wenn die `/var`-Ressourcen nur für AEM Autor erforderlich sind und nicht mit [repoinit](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit) nach vernünftigem Ermessen modelliert werden können, verschieben Sie sie in ein diskretes Inhaltspaket, das nur auf der AEM-Autoreninstanz installiert wird, indem Sie [ ](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds) in das `all`-Paket in einen AEM Author-Runmode-Ordner (`<target>/apps/example-packages/content/install.author</target>`) einbetten.
+   2. Wenn die Ressourcen `/var` erforderlich sind, definieren Sie die Knotenstrukturen mit [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit). Repoinit-Skripte können über OSGi-Ausführungsmodi auf AEM Author, AEM Publish oder beides ausgerichtet werden.
+   3. Wenn die `/var`-Ressourcen nur für AEM Autor erforderlich sind und nicht mit [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit) nach vernünftigem Ermessen modelliert werden können, verschieben Sie sie in ein diskretes Inhaltspaket, das nur auf der AEM-Autoreninstanz installiert wird, indem Sie [ ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds) in das `all`-Paket in einen AEM Author-Runmode-Ordner (`<target>/apps/example-packages/content/install.author</target>`) einbetten.
    4. Stellen Sie dem Dienstbenutzer `sling-distribution-importer` die entsprechenden ACLs bereit, wie in dieser [Adobe KB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html) beschrieben.
 
 ### Support-Fall für Adobe erstellen
