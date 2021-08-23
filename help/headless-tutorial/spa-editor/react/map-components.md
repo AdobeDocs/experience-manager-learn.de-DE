@@ -12,9 +12,9 @@ thumbnail: 4854-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2273'
+source-wordcount: '2267'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Erfahren Sie, wie Sie React-Komponenten mit dem AEM SPA Editor JS SDK Adobe Expe
 
 In diesem Kapitel werden die AEM JSON-Modell-API und die Möglichkeiten erläutert, wie der von einer AEM-Komponente angezeigte JSON-Inhalt automatisch als Props in eine React-Komponente eingefügt werden kann.
 
-## Vorgabe
+## Ziele
 
 1. Erfahren Sie, wie Sie AEM Komponenten SPA Komponenten zuordnen.
 1. Inspect wie eine React-Komponente dynamische Eigenschaften verwendet, die von AEM übergeben werden.
@@ -52,7 +52,7 @@ Das grundlegende Konzept besteht darin, eine SPA Komponente einer AEM Komponente
 
 ## Inspect der Textkomponente
 
-Der [AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype) stellt eine `Text`-Komponente bereit, die der AEM [Textkomponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/text.html) zugeordnet ist. Dies ist ein Beispiel für eine **content** -Komponente, da sie *content* von AEM rendert.
+Der [AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype) stellt eine `Text`-Komponente bereit, die der AEM [Textkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) zugeordnet ist. Dies ist ein Beispiel für eine **content** -Komponente, da sie *content* von AEM rendert.
 
 Sehen wir uns an, wie die Komponente funktioniert.
 
@@ -223,7 +223,7 @@ Unterstützung für den **Layout-Container** wird automatisch vom AEM SPA Editor
 
    Die Komponente **Layout-Container** hat den Wert `sling:resourceType` von `wcm/foundation/components/responsivegrid` und wird vom SPA Editor mit der Eigenschaft `:type` erkannt, genau wie die Komponenten `Text` und `Image`.
 
-   Die gleichen Funktionen zum Neuskalieren einer Komponente mit [Layout-Modus](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) sind auch im SPA Editor verfügbar.
+   Die gleichen Funktionen zum Neuskalieren einer Komponente mit [Layout-Modus](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) sind auch im SPA Editor verfügbar.
 
 2. Kehren Sie zu [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html) zurück. Fügen Sie weitere **Bild**-Komponenten hinzu und versuchen Sie, sie mithilfe der Option **Layout** neu zu skalieren:
 
@@ -286,9 +286,9 @@ Die nächsten Schritte werden mit der Visual Studio Code-IDE und [VSCode AEM Syn
 
    Vergleichen Sie `ui.content/src/main/content/META-INF/vault/filter.xml` und `ui.apps/src/main/content/META-INF/vault/filter.xml` , um die verschiedenen Knoten zu verstehen, die von den einzelnen Modulen verwaltet werden.
 
-## (Bonus) Benutzerdefinierte Bildkomponente erstellen {#bonus-image}
+## (Bonus) Erstellen einer benutzerdefinierten Bildkomponente {#bonus-image}
 
-Eine SPA Bildkomponente wurde bereits von den React-Kernkomponenten bereitgestellt. Wenn Sie jedoch eine zusätzliche Übung wünschen, erstellen Sie Ihre eigene React-Implementierung, die der AEM [Bildkomponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/image.html) zugeordnet ist. Die Komponente `Image` ist ein weiteres Beispiel für eine **content** -Komponente.
+Eine SPA Bildkomponente wurde bereits von den React-Kernkomponenten bereitgestellt. Wenn Sie jedoch eine zusätzliche Übung wünschen, erstellen Sie Ihre eigene React-Implementierung, die der AEM [Bildkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) zugeordnet ist. Die Komponente `Image` ist ein weiteres Beispiel für eine **content** -Komponente.
 
 ### Inspect the JSON
 
