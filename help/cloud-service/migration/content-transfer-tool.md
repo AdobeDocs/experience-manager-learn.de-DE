@@ -12,10 +12,10 @@ thumbnail: kt-5352.jpg
 topic: Migration
 role: Architect, Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '84'
-ht-degree: 16%
+source-wordcount: '82'
+ht-degree: 4%
 
 ---
 
@@ -28,4 +28,4 @@ Das Content Transfer Tool ist die empfohlene Methode, um Inhalte von einer On-Pr
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Übersicht über das Content Transfer Tool](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
+* [Übersicht über das Content Transfer Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
