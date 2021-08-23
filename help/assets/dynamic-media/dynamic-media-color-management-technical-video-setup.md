@@ -7,9 +7,9 @@ version: 6.3, 6.4, 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '326'
 ht-degree: 24%
 
 ---
@@ -23,11 +23,11 @@ In diesem Video erfahren Sie, wie das Dynamic Media-Farbmanagement genutzt werde
 
 >[!NOTE]
 >
->[Aktivieren Sie AEM Dynamic ](https://docs.adobe.com/docs/en/aem/6-0/administer/integration/dynamic-media/enabling-dynamic-media.html) Media , um diese Funktion zu verwenden.
+>[Aktivieren Sie AEM Dynamic ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) Media , um diese Funktion zu verwenden.
 
 Diese Funktion ist für AEM 6.1- und 6.2-Versionen als Feature Pack verfügbar.
 
-## XML-Vorlage für den Farbmanagement-Konfigurationsknoten {#xml-template-for-the-color-management-configuration-node}
+## XML-Vorlage für den Konfigurationsknoten Farbmanagement {#xml-template-for-the-color-management-configuration-node}
 
 Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten Farbmanagement . Diese XML-Vorlage kann in das AEM Entwicklungsprojekt kopiert und mit den projektspezifischen Konfigurationen konfiguriert werden.
 
@@ -85,7 +85,7 @@ Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten Farbmanage
 />
 ```
 
-### Die Liste der Standardfarbprofile für Adoben finden Sie unter {#list-of-default-adobe-color-profiles-are-listed-below}
+### Die Standardfarbprofile der Adobe sind unten aufgeführt {#list-of-default-adobe-color-profiles-are-listed-below}
 
 | Name | Farbraum | Beschreibung |
 | ------------------- | ---------- | ------------------------------------- |
