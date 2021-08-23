@@ -10,9 +10,9 @@ activity: use
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '6231'
+source-wordcount: '6195'
 ht-degree: 1%
 
 ---
@@ -76,7 +76,7 @@ Wie alle Viewer erfolgt die Integration über eine einzelne Dynamic Media Classi
 
 Ein letzter Hinweis zum Video zu Dynamic Media Classic, das für einige Kunden gelten kann: Es ist nicht möglich, dass für alle Unternehmen die automatische Konvertierung, das Streaming oder Videovorgaben für ihr Konto aktiviert sind. Wenn Sie aus irgendeinem Grund nicht auf die URLs für Streaming-Videos zugreifen können, kann dies der Grund sein. Sie können weiterhin progressiv heruntergeladene Videos hochladen und veröffentlichen und auf alle Video-Viewer zugreifen. Um jedoch die gesamten Videokompetenzen von Dynamic Media Classic nutzen zu können, sollten Sie sich an Ihren Kundenbetreuer oder Vertriebsmanager wenden, um diese Funktionen zu aktivieren.
 
-Erfahren Sie mehr über [Video in Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/quick-start-video.html).
+Erfahren Sie mehr über [Video in Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html).
 
 ## Video 101
 
@@ -107,7 +107,7 @@ Bevor wir anfangen, besprechen wir einige Begriffe, mit denen Sie vertraut sein 
    - Ein Videoplayer dekodiert das Video entsprechend seinem Codec und zeigt dann eine Reihe von Bildern oder Frames auf dem Bildschirm an.
    - Zu den gängigen Video-Codecs gehören H.264, On2 VP6 und H.263.
 
-![image](assets/video-overview/bird-video.png)
+![Bild](assets/video-overview/bird-video.png)
 
 - **Auflösung.** Höhe und Breite des Videos in Pixel.
 
@@ -136,10 +136,10 @@ Hoffentlich hilft Ihnen dieser Leitfaden, die verschiedenen Optionen bei der Ver
 
 Beim Arbeiten mit Videos in Dynamic Media Classic folgen Sie einem grundlegenden Arbeitsablauf, der dem Arbeiten mit Bildern ähnelt.
 
-![image](assets/video-overview/video-overview-2.png)
+![Bild](assets/video-overview/video-overview-2.png)
 
-1. Laden Sie zunächst Videodateien in Dynamic Media Classic hoch. Öffnen Sie dazu das Menü **Tools** unten im Dynamic Media Classic-Erweiterungsfenster und wählen Sie **Zum Dynamic Media Classic hochladen > Dateien zum Ordnernamen** oder **Zum Dynamic Media Classic hochladen > Ordner zum Ordnernamen**. &quot;Ordnername&quot;ist der Ordner, den Sie derzeit mit der Erweiterung durchsuchen. Videodateien können groß sein. Daher empfehlen wir, FTP zum Hochladen großer Dateien zu verwenden. Wählen Sie im Rahmen des Uploads eine oder mehrere Videovorgaben für die Videokodierung aus. Videos können beim Hochladen in MP4-Videos transkodiert werden. Weitere Informationen zur Verwendung und Erstellung von Kodierungsvorgaben finden Sie unten im Thema &quot;Videovorgaben&quot;. Erfahren Sie mehr über [Hochladen und Kodieren von Videos](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/uploading-encoding-videos.html).
-2. Wählen Sie eine Video-Viewer-Vorgabe aus, wählen Sie sie aus und ändern Sie sie, und zeigen Sie eine Vorschau des Videos an. Sie würden entweder eine vordefinierte Viewer-Vorgabe auswählen oder Ihre eigene anpassen. Wenn Sie Benutzer mit Mobilgeräten ansprechen, müssen Sie hier nichts tun, da mobile Plattformen keinen Viewer oder keine Vorgabe benötigen. Erfahren Sie mehr über [Anzeigen einer Vorschau von Videos in einem Video-Viewer](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/previewing-videos-video-viewer.html) und [Hinzufügen oder Bearbeiten einer Video-Viewer-Vorgabe](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/previewing-videos-video-viewer.html#adding-or-editing-a-video-viewer-preset).
+1. Laden Sie zunächst Videodateien in Dynamic Media Classic hoch. Öffnen Sie dazu das Menü **Tools** unten im Dynamic Media Classic-Erweiterungsfenster und wählen Sie **Zum Dynamic Media Classic hochladen > Dateien zum Ordnernamen** oder **Zum Dynamic Media Classic hochladen > Ordner zum Ordnernamen**. &quot;Ordnername&quot;ist der Ordner, den Sie derzeit mit der Erweiterung durchsuchen. Videodateien können groß sein. Daher empfehlen wir, FTP zum Hochladen großer Dateien zu verwenden. Wählen Sie im Rahmen des Uploads eine oder mehrere Videovorgaben für die Videokodierung aus. Videos können beim Hochladen in MP4-Videos transkodiert werden. Weitere Informationen zur Verwendung und Erstellung von Kodierungsvorgaben finden Sie unten im Thema &quot;Videovorgaben&quot;. Erfahren Sie mehr über [Hochladen und Kodieren von Videos](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html).
+2. Wählen Sie eine Video-Viewer-Vorgabe aus, wählen Sie sie aus und ändern Sie sie, und zeigen Sie eine Vorschau des Videos an. Sie würden entweder eine vordefinierte Viewer-Vorgabe auswählen oder Ihre eigene anpassen. Wenn Sie Benutzer mit Mobilgeräten ansprechen, müssen Sie hier nichts tun, da mobile Plattformen keinen Viewer oder keine Vorgabe benötigen. Erfahren Sie mehr über [Anzeigen einer Vorschau von Videos in einem Video-Viewer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html) und [Hinzufügen oder Bearbeiten einer Video-Viewer-Vorgabe](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html#adding-or-editing-a-video-viewer-preset).
 3. Führen Sie eine Videoveröffentlichung aus, rufen Sie die URL ab und integrieren Sie sie. Der Hauptunterschied zwischen diesem Schritt für den Video-Workflow und dem Bild-Workflow besteht darin, dass Sie eine spezielle Videoveröffentlichung anstelle der standardmäßigen Image Serving-Veröffentlichung (oder vielleicht auch der standardmäßigen) ausführen. Die Video-Viewer-Integration auf dem Desktop funktioniert genau wie die Bild-Viewer-Integration. Bei Mobilgeräten ist sie jedoch noch einfacher. Sie benötigen lediglich die URL zum Video selbst.
 
 ### Über Transkodierung
@@ -174,11 +174,11 @@ Wenn Sie sich schließlich Gedanken darüber machen, Ihre Medien für Fragen des
 
 Beim Hochladen eines Videos wählen Sie eine oder mehrere Vorgaben aus, die die Einstellungen zum Konvertieren des Übergeordneten Videos in ein Web-freundliches Format durch Kodierung enthalten. Videovorgaben sind in zwei Varianten verfügbar: &quot;Adaptive Videovorgaben&quot;und &quot;Einzelne Kodierungsvorgaben&quot;.
 
-Siehe [Verfügbare Videovorgaben](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files).
+Siehe [Verfügbare Videovorgaben](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files).
 
 Adaptive Videovorgaben sind standardmäßig aktiviert, d. h. sie sind für die Kodierung verfügbar. Wenn Sie eine einzelne Kodierungsvorgabe verwenden möchten, muss Ihr Administrator sie aktivieren, damit sie in der Liste der Videovorgaben angezeigt wird.
 
-Erfahren Sie, wie Sie [Videovorgaben aktivieren oder deaktivieren](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/uploading-encoding-videos.html#activating-or-deactivating-video-encoding-presets).
+Erfahren Sie, wie Sie [Videovorgaben aktivieren oder deaktivieren](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html#activating-or-deactivating-video-encoding-presets).
 
 Sie können eine von vielen vordefinierten Vorgaben auswählen, die mit Dynamic Media Classic geliefert werden, oder Sie können eigene Vorgaben erstellen. Standardmäßig werden jedoch keine Vorgaben für den Upload ausgewählt. Mit anderen Worten: **Wenn Sie beim Hochladen keine Videovorgabe auswählen, wird Ihr Video nicht konvertiert und kann möglicherweise nicht veröffentlicht werden**. Sie können das Video jedoch selbst offline konvertieren und einfach hochladen und veröffentlichen. Videovorgaben sind nur erforderlich, wenn Sie möchten, dass Dynamic Media Classic die Konvertierung für Sie durchführt.
 
@@ -199,7 +199,7 @@ Welches Seitenverhältnis hat es? Wenn Sie um das konvertierte Video schwarze Ba
 
 Anhand von Videovorgaben wird bestimmt, wie Ihr Video kodiert wird, indem diese Einstellungen festgelegt werden. Wenn Sie mit diesen Begriffen nicht vertraut sind, lesen Sie bitte das Thema Grundlegende Videokonzepte und Terminologie weiter oben.
 
-![image](assets/video-overview/video-overview-3.jpg)
+![Bild](assets/video-overview/video-overview-3.jpg)
 
 - **Seitenverhältnis.** Normalerweise Standard 4:3 oder wide-screen16:9.
 - **Größe.** Dies entspricht der Anzeigeauflösung und wird in Pixel gemessen. Dies hängt mit dem Seitenverhältnis zusammen. Bei einem Verhältnis von 16:9 beträgt ein Video 432 x 240 Pixel, während es bei 4:3 320 x 240 Pixel betragen wird.
@@ -223,7 +223,7 @@ Manchmal benötigen Sie eine spezielle Videovorgabe, die nicht mit den Einstellu
 
    - Jedes Streaming-Video-Konto verfügt über Dutzende von Vorgaben, und wenn Sie eigene benutzerdefinierte Vorgaben erstellen, sehen Sie sie auch hier.
    - Über das Dropdown-Menü können Sie nach Typ filtern. Die Vorgaben sind in Computer, Mobil und Tablet unterteilt.
-      ![image](assets/video-overview/video-overview-4.jpg)
+      ![Bild](assets/video-overview/video-overview-4.jpg)
 
 2. In der Spalte Aktiv können Sie auswählen, ob alle Vorgaben beim Hochladen oder nur die von Ihnen ausgewählten angezeigt werden sollen. Wenn Sie sich in den USA befinden, möchten Sie möglicherweise die europäischen PAL-Vorgaben deaktivieren und in Großbritannien/EMEA die NTSC-Vorgaben deaktivieren.
 3. Klicken Sie auf die Schaltfläche **Hinzufügen** , um eine benutzerdefinierte Vorgabe zu erstellen. Dadurch wird der Bereich Videovorgabe hinzufügen geöffnet. Der Prozess hier ähnelt dem Erstellen einer Bildvorgabe.
@@ -233,26 +233,26 @@ Manchmal benötigen Sie eine spezielle Videovorgabe, die nicht mit den Einstellu
 7. **Wiedergabegeräte,** auf denen Sie das gewünschte Videodateiformat auswählen (Computer, Mobilgerät oder Tablet). Beachten Sie, dass Mobile und Tablet dasselbe MP4-Format erzeugen. Dynamic Media Classic muss nur wissen, in welcher Kategorie die Vorgabe platziert werden soll. Der theoretische Unterschied besteht jedoch darin, dass Tablet-Vorgaben in der Regel für eine schnellere Internetverbindung sorgen, da alle WLAN unterstützen.
 8. **Target Data** Ratings ist etwas, das Sie selbst herausfinden müssen. Sie können jedoch einen vorgeschlagenen Bereich auf dem Bild unten sehen. Alternativ können Sie den Schieberegler auf die ungefähre Zielbandbreite ziehen. Verwenden Sie einen Bitratenrechner, um eine genauere Zahl zu erhalten. Es gibt ein wenig Versuch und Fehler.
 
-   ![image](assets/video-overview/video-overview-5.jpg)
+   ![Bild](assets/video-overview/video-overview-5.jpg)
 
 9. Legen Sie das **Seitenverhältnis** der Quelldatei fest. Diese Einstellung ist direkt an die unten stehende Größe gebunden. Wenn Sie _Benutzerdefiniert_ auswählen, müssen Sie sowohl die Breite als auch die Höhe manuell eingeben.
 10. Wenn Sie ein Seitenverhältnis auswählen, legen Sie einen Wert für **Auflösungsgröße** fest, und der andere Wert wird von Dynamic Media Classic automatisch ausgefüllt. Geben Sie jedoch für ein benutzerdefiniertes Seitenverhältnis beide Werte ein. Ihre Größe sollte Ihrer Datenrate entsprechen. Wenn Sie eine sehr niedrige Datenrate und eine große Datenmenge festlegen, erwarten Sie, dass die Qualität schlecht ist.
 11. Klicken Sie auf **Speichern** , um Ihre Vorgabe zu speichern. Im Gegensatz zu anderen Vorgaben müssen Sie zu diesem Zeitpunkt keine Veröffentlichung vornehmen, da die Vorgaben nur zum Hochladen von Dateien verwendet werden. Später müssen Sie die kodierten Videos veröffentlichen, aber die Vorgaben dienen nur der internen Verwendung von Dynamic Media Classic.
 12. Um sicherzustellen, dass Ihre Videovorgabe auf der Upload-Liste steht, gehen Sie zu **Upload**.Wählen Sie **Auftragsoptionen** und erweitern Sie **Videooptionen**. Ihre Vorgabe wird in der Kategorie für das Wiedergabegerät aufgeführt, das Sie ausgewählt haben (Computer, Mobil oder Tablet).
 
-Erfahren Sie mehr über [Hinzufügen oder Bearbeiten einer Videovorgabe](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/uploading-encoding-videos.html#adding-or-editing-a-video-encoding-preset).
+Erfahren Sie mehr über [Hinzufügen oder Bearbeiten einer Videovorgabe](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html#adding-or-editing-a-video-encoding-preset).
 
 ## Hinzufügen von Untertiteln zu Videos
 
 In einigen Fällen kann es nützlich sein, Ihrem Video Untertitel hinzuzufügen, z. B. wenn Sie das Video für Betrachter in mehreren Sprachen bereitstellen müssen, das Audio jedoch nicht in einer anderen Sprache abspielen oder das Video erneut in separaten Sprachen aufzeichnen möchten. Darüber hinaus bietet das Hinzufügen von Untertiteln für Personen mit eingeschränktem Hörvermögen und die Verwendung von Untertiteln eine größere Barrierefreiheit. Dynamic Media Classic erleichtert das Hinzufügen von Untertiteln zu Videos.
 
-Erfahren Sie, wie Sie [Untertitel zu Video hinzufügen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/adding-captions-video.html).
+Erfahren Sie, wie Sie [Untertitel zu Video hinzufügen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/adding-captions-video.html).
 
 ## Hinzufügen von Kapitelmarken zu Ihrem Video
 
 Bei langen Videos schätzen Ihre Betrachter wahrscheinlich die Möglichkeiten und den Komfort, die Ihnen durch die Navigation Ihres Videos mit Kapitelmarken geboten werden. Dynamic Media Classic bietet die Möglichkeit, Kapitelmarken einfach zu Ihrem Video hinzuzufügen.
 
-Erfahren Sie, wie Sie [Kapitelmarken zu Video hinzufügen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/adding-chapter-markers-video.html).
+Erfahren Sie, wie Sie [Kapitelmarken zu Video hinzufügen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/adding-chapter-markers-video.html).
 
 ## Themen zur Videoimplementierung
 
@@ -260,22 +260,22 @@ Erfahren Sie, wie Sie [Kapitelmarken zu Video hinzufügen](https://docs.adobe.co
 
 Der letzte Schritt im Dynamic Media Classic-Workflow besteht darin, Ihre Videoinhalte zu veröffentlichen. Das Video verfügt jedoch über einen eigenen Veröffentlichungsauftrag, den so genannten &quot;Video Server Publish&quot;, der unter &quot;Erweitert&quot;zu finden ist.
 
-![image](assets/video-overview/video-overview-6.jpg)
+![Bild](assets/video-overview/video-overview-6.jpg)
 
-Erfahren Sie, wie Sie [Ihr Video veröffentlichen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#publishing-video).
+Erfahren Sie, wie Sie [Ihr Video veröffentlichen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#publishing-video).
 
 Nachdem Sie eine Videoveröffentlichung ausgeführt haben, erhalten Sie eine URL, über die Sie in einem Webbrowser auf Ihre Videos und alle standardmäßigen Dynamic Media Classic-Viewer-Vorgaben zugreifen können. Wenn Sie jedoch Ihre eigene Video-Viewer-Vorgabe anpassen oder erstellen, müssen Sie weiterhin eine separate Veröffentlichung für den Image-Server ausführen.
 
-- Erfahren Sie, wie Sie [eine URL mit einer mobilen Site oder einer Website verknüpfen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#linking-a-video-url-to-a-mobile-site-or-a-website).
-- Erfahren Sie, wie Sie [den Video-Viewer auf einer Web-Seite](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#embedding-the-video-viewer-on-a-web-page) einbetten.
+- Erfahren Sie, wie Sie [eine URL mit einer mobilen Site oder einer Website verknüpfen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#linking-a-video-url-to-a-mobile-site-or-a-website).
+- Erfahren Sie, wie Sie [den Video-Viewer auf einer Web-Seite](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#embedding-the-video-viewer-on-a-web-page) einbetten.
 
 Sie können Ihr Video auch mit einem Drittanbieter- oder benutzerdefinierten Videoplayer bereitstellen.
 
-Erfahren Sie, wie Sie [Video mit einem Video-Player eines Drittanbieters bereitstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#deploying-video-using-a-third-party-video-player).
+Erfahren Sie, wie Sie [Video mit einem Video-Player eines Drittanbieters bereitstellen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#deploying-video-using-a-third-party-video-player).
 
 Wenn Sie auch die Videominiaturen verwenden möchten - das aus dem Video extrahierte Bild - müssen Sie außerdem eine Veröffentlichung für den Image-Server ausführen. Dies liegt daran, dass sich das Miniaturbild für das Video auf dem Image-Server befindet, während sich das Video selbst auf dem Video-Server befindet. Videominiaturen können in Videosuchergebnissen und Videowiedergabelisten verwendet werden und als erster &quot;Posterrahmen&quot;verwendet werden, der im Video-Viewer angezeigt wird, bevor das Video wiedergegeben wird.
 
-Erfahren Sie mehr über [Arbeiten mit Videominiaturen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#working-with-video-thumbnails).
+Erfahren Sie mehr über [Arbeiten mit Videominiaturen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#working-with-video-thumbnails).
 
 ### Auswählen und Anpassen einer Viewer-Vorgabe
 
@@ -310,15 +310,15 @@ Der empfohlene Arbeitsablauf besteht darin, diese Daten vor dem Hochladen mit XM
 
 Bei dieser Methode müssen Sie diese Daten nicht manuell mit Dynamic Media Classic eingeben. Sie können jedoch auch Metadatenvorgaben in Dynamic Media Classic verwenden, um schnell und einfach dieselben Daten jedes Mal eingeben zu können.
 
-Weitere Informationen zu diesem Thema finden Sie unter [Anzeigen, Hinzufügen und Exportieren von Metadaten](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html).
+Weitere Informationen zu diesem Thema finden Sie unter [Anzeigen, Hinzufügen und Exportieren von Metadaten](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html).
 
-![image](assets/video-overview/video-overview-7.jpg)
+![Bild](assets/video-overview/video-overview-7.jpg)
 
 Nachdem die Metadaten ausgefüllt wurden, können Sie sie in der Detailansicht für dieses Video-Asset sehen. Keywords sind möglicherweise ebenfalls vorhanden, befinden sich jedoch auf der Registerkarte Keywords .
 
-- Erfahren Sie mehr über [Hinzufügen von Keywords](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html#add-or-edit-keywords).
-- Erfahren Sie mehr über [Video SEO](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html).
-- Erfahren Sie mehr über [Einstellungen für Video SEO](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html#choosing-video-seo-settings).
+- Erfahren Sie mehr über [Hinzufügen von Keywords](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html#add-or-edit-keywords).
+- Erfahren Sie mehr über [Video SEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html).
+- Erfahren Sie mehr über [Einstellungen für Video SEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html#choosing-video-seo-settings).
 
 #### Einrichten von Video SEO
 
@@ -334,17 +334,17 @@ Das Einrichten von Video SEO beginnt mit der Auswahl des gewünschten Formats, d
 
 Die generierten Dateien werden im Stammverzeichnis (Basisverzeichnis) Ihres Kontos angezeigt.
 
-![image](assets/video-overview/video-overview-8.jpg)
+![Bild](assets/video-overview/video-overview-8.jpg)
 
 Diese Dateien müssen veröffentlicht werden, da das Video SEO-Tool eine Veröffentlichung nicht allein ausführen kann. Solange sie zur Veröffentlichung markiert sind, werden sie beim nächsten Ausführen einer Veröffentlichung an die Veröffentlichungsserver gesendet.
 
 Nach der Veröffentlichung sind Ihre Dateien in diesem URL-Format verfügbar.
 
-![image](assets/video-overview/video-url-format.png)
+![Bild](assets/video-overview/video-url-format.png)
 
 Beispiel:
 
-![image](assets/video-overview/video-format-example.png)
+![Bild](assets/video-overview/video-format-example.png)
 
 ### Übermitteln an Suchmaschinen
 
@@ -356,7 +356,7 @@ Die Methode zum Senden an Ihre Suchmaschine wird variieren, für Google verwende
 
 Dynamic Media Classic bietet einen Bericht, der anzeigt, wie viele Videos erfolgreich in die Dateien eingeschlossen wurden, vor allem aber, welche nicht aufgrund von Fehlern enthalten waren. Um auf den Bericht zuzugreifen, gehen Sie zu **Einrichtung > Anwendungseinstellungen > Video SEO > Bericht**.
 
-![image](assets/video-overview/video-overview-9.jpg)
+![Bild](assets/video-overview/video-overview-9.jpg)
 
 ## Mobile Implementierung für MP4-Video
 
@@ -368,7 +368,7 @@ Aus diesem Grund gibt Ihnen Dynamic Media Classic keine URL für einen Viewer f�
 
 Wichtig zum Hinweis auf veröffentlichte Videos ist, dass die URL den vollständigen Pfad zum Video auflistet, nicht nur die Asset-ID. Beim Umgang mit Bildern rufen Sie das Bild unabhängig von der Ordnerstruktur anhand der Asset-ID auf. Für Videos müssen Sie jedoch auch die Ordnerstruktur angeben. In den oben genannten URLs wird das Video im Pfad gespeichert:
 
-![image](assets/video-overview/mobile-implement-1.png)
+![Bild](assets/video-overview/mobile-implement-1.png)
 
 Dies kann auch als Firmenname/Ordnerpfad/Videoname ausgedrückt werden.
 
@@ -376,7 +376,7 @@ Dies kann auch als Firmenname/Ordnerpfad/Videoname ausgedrückt werden.
 
 Verwenden Sie zum Einbetten Ihres MP4-Videos in eine Webseite das HTML5-Video-Tag .
 
-![image](assets/video-overview/browser-playback.png)
+![Bild](assets/video-overview/browser-playback.png)
 
 Diese Methode funktioniert auch für das Desktop-Web, kann jedoch bei der Browserunterstützung zu Problemen führen. Nicht alle Desktop-Webbrowser unterstützen nativ H.264-Videos, einschließlich Firefox.
 
@@ -384,7 +384,7 @@ Diese Methode funktioniert auch für das Desktop-Web, kann jedoch bei der Browse
 
 Alternativ können Sie das MP4-Video von Dynamic Media Classic in den Code Ihrer Mobile App einbetten. Hier finden Sie ein generisches Beispiel für iOS, das das Media Player-Framework verwendet, das nur zu Veranschaulichungszwecken bereitgestellt wird:
 
-![image](assets/video-overview/app-playback.png)
+![Bild](assets/video-overview/app-playback.png)
 
 ## Zusätzliche Ressourcen
 
