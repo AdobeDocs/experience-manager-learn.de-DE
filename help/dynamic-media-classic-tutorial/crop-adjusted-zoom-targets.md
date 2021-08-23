@@ -10,9 +10,9 @@ activity: use
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2670'
+source-wordcount: '2659'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Eine der Hauptvorteile des Übergeordneten Bildkonzepts von Dynamic Media Classi
 
 Am Ende dieses Abschnitts des Tutorials erfahren Sie, wie Sie:
 
-- Beschneiden Sie Bilder in Dynamic Media Classic und speichern Sie sie als neue Übergeordnete Dateien oder als virtuelle Bilder. [Weitere Informationen](https://docs.adobe.com/help/en/dynamic-media-classic/using/master-files/cropping-image.html)
-- Speichern Sie virtuelle angepasste Bilder und verwenden Sie sie anstelle von Übergeordneten Assets. [Weitere Informationen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/adjusting-image.html)
-- Erstellen Sie Zoomziele für Ihre Bilder, um ihre Highlights anzuzeigen. [Weitere Informationen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html)
+- Beschneiden Sie Bilder in Dynamic Media Classic und speichern Sie sie als neue Übergeordnete Dateien oder als virtuelle Bilder. [Weitere Informationen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html)
+- Speichern Sie virtuelle angepasste Bilder und verwenden Sie sie anstelle von Übergeordneten Assets. [Weitere Informationen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/adjusting-image.html)
+- Erstellen Sie Zoomziele für Ihre Bilder, um ihre Highlights anzuzeigen. [Weitere Informationen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html)
 
 ## Beschneiden
 
@@ -45,8 +45,8 @@ Dynamic Media Classic verfügt über einige Bildbearbeitungswerkzeuge, die in de
 
 Sie können auf das Zuschnittwerkzeug in Dynamic Media Classic über die Detailseite für ein Asset oder durch Klicken auf die Schaltfläche **Bearbeiten** zugreifen. Sie können das Tool auf zwei Arten verwenden, um zuzuschneiden:
 
-- Der standardmäßige Zuschneidemodus, in den Sie die Griffe des Zuschnittfensters ziehen oder Werte in das Feld &quot;Größe&quot;eingeben. Erfahren Sie, wie Sie [Manuelles Zuschneiden](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop) durchführen.
-- Zuschneiden. Verwenden Sie dies, um zusätzliche Leerzeichen um Ihr Bild zu entfernen, indem Sie die Anzahl der Pixel berechnen, die nicht mit Ihrem Bild übereinstimmen. Erfahren Sie, wie Sie [Zuschneiden durch Zuschneiden](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
+- Der standardmäßige Zuschneidemodus, in den Sie die Griffe des Zuschnittfensters ziehen oder Werte in das Feld &quot;Größe&quot;eingeben. Erfahren Sie, wie Sie [Manuelles Zuschneiden](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop) durchführen.
+- Zuschneiden. Verwenden Sie dies, um zusätzliche Leerzeichen um Ihr Bild zu entfernen, indem Sie die Anzahl der Pixel berechnen, die nicht mit Ihrem Bild übereinstimmen. Erfahren Sie, wie Sie [Zuschneiden durch Zuschneiden](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
 
 ### _Manuelles Zuschneiden_
 
@@ -60,7 +60,7 @@ Wenn Sie ein Bild mit zu viel Leerzeichen (zusätzliche Arbeitsfläche) um das H
 
 Vergleichen Sie diese beiden Versionen desselben Bildes.
 
-![image](assets/crop-adjusted-zoom-targets/trim-cropping.jpg)
+![Bild](assets/crop-adjusted-zoom-targets/trim-cropping.jpg)
 
 Das Bild auf der rechten Seite wird deutlich hervorgehoben, indem der zusätzliche Platz um das Produkt herum entfernt wird. Das Zuschneiden kann jeweils nur ein Bild mit dem Zuschnitt-Tool erfolgen oder beim Hochladen als Batch-Prozess ausgeführt werden. Wir empfehlen die Ausführung als Batch-Prozess, wenn Sie möchten, dass alle Bilder konsistent an die Grenzen des Hauptbetreffs zugeschnitten werden. Zuschneiden schneidet zu dem Begrenzungsrahmen zu - dem Rechteck, das das Bild umgibt.
 
@@ -89,7 +89,7 @@ Bei jeder Verwendung des Zuschnitt-Tools werden im Feld unten URL-Werte angezeig
 ![](assets/crop-adjusted-zoom-targets/cropping-by-url.png)
 _Befehl-Modifikatoren imageCrop am unteren Rand des Beschneidungs-Editors_
 
-![image](assets/crop-adjusted-zoom-targets/uncropped-cropped.png)
+![Bild](assets/crop-adjusted-zoom-targets/uncropped-cropped.png)
 
 Da die Größe pro Bild berechnet werden muss, wenn Sie Zuschnitte durch Zuschneiden verwenden, kann sie nicht über die URL automatisiert werden. Das Zuschneiden kann nur beim Hochladen oder durch gleichzeitiges Anwenden eines Bildes ausgeführt werden.
 
@@ -110,13 +110,13 @@ Wenn Sie das Zuschnittwerkzeug verwenden, haben Sie die Möglichkeit, **Als zus�
 
 Können Sie feststellen, welches das Übergeordnete und welches das angepasste Bild ist?
 
-![image](assets/crop-adjusted-zoom-targets/real-image-stand-up.png)
+![Bild](assets/crop-adjusted-zoom-targets/real-image-stand-up.png)
 
 Sie sollten dies nicht erkennen können, ohne in Dynamic Media Classic zu suchen und den Asset-Typ &quot;Angepasstes Bild&quot;für SBR_MAIN2 anzuzeigen.
 
 Ein angepasstes Bild belegt keinen Speicherplatz, da es nur als Zeileneintrag in der Datenbank vorhanden ist. Es ist auch dauerhaft mit dem ursprünglichen Asset verknüpft. Wenn das Original gelöscht wird, wird auch das angepasste Bild gelöscht. Sie kann aus einem ganzen, nicht zugeschnittenen Bild oder nur einem Teil eines Bildes (einem Zuschnitt) bestehen.
 
-![image](assets/crop-adjusted-zoom-targets/adjusted-image.png)
+![Bild](assets/crop-adjusted-zoom-targets/adjusted-image.png)
 
 Normalerweise erstellen Sie angepasste Bilder mit dem Zuschnittwerkzeug. Sie können jedoch auch mit anderen Bildeditoren erstellt werden, den Tools Anpassen und Scharfzeichnen.
 
@@ -129,7 +129,7 @@ _imageAdjusted Views for Übergeordnet image ASIAN_BR_MAIN_
 
 Zoomziele befinden sich auch auf der Seite **Bearbeiten** und **Details** eines Bildes. Sie ermöglichen es Ihnen, &quot;Hotspots&quot;festzulegen, um bestimmte Merchandising-Funktionen eines Zoombilds hervorzuheben. Anstatt separate Bilder durch Zuschneiden eines großen Übergeordneten zu erstellen, kann der Zoom-Viewer die Details über dem Bild zusammen mit einer kurzen Beschriftung, die Sie erstellen, bereitstellen.
 
-![image](assets/crop-adjusted-zoom-targets/arm-with-watch.jpg)
+![Bild](assets/crop-adjusted-zoom-targets/arm-with-watch.jpg)
 
 Da Zoom-Ziele im Wesentlichen eine Merchandising-Funktion sind und Kenntnisse über die Verkaufspunkte eines Produkts erfordern, werden sie normalerweise von einer Person im Merchandising- oder Produktteam eines Unternehmens erstellt.
 
@@ -137,9 +137,9 @@ Der Prozess ist sehr einfach - klicken Sie auf die Funktion, geben Sie ihr einen
 
 Ein weiterer Faktor bei der Entscheidung, ob Sie Zoomziele verwenden möchten, ist Ihre Auswahl an Viewern. Nicht alle Viewer-Typen können Zoom-Ziele anzeigen (z. B. unterstützt der Fly-out-Viewer sie nicht).
 
-Erfahren Sie, wie Sie [Zoomziele erstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets).
+Erfahren Sie, wie Sie [Zoomziele erstellen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets).
 
-![image](assets/crop-adjusted-zoom-targets/zoom-targets.jpg)
+![Bild](assets/crop-adjusted-zoom-targets/zoom-targets.jpg)
 
 ### Verwenden des Zoomziel-Tools
 
@@ -159,7 +159,7 @@ Im Folgenden finden Sie den Workflow zum Erstellen von Zielen in Dynamic Media C
    - Dadurch wird das Bild im standardmäßigen benutzerdefinierten Zoom-Viewer geladen. Stellen Sie sicher, dass die Viewer-Vorgabe Zoomziele unterstützt - im Allgemeinen wurden alle Standardvorgaben mit dem Wort &quot;-Guided&quot;für die Verwendung mit Zoomzielen entwickelt. Um die Ziele zu verwenden, bewegen Sie den Mauszeiger über die Miniaturansicht der Zielgruppe (oder das Hotspot-Symbol), um die Bezeichnung anzuzeigen, und klicken Sie darauf, um den Viewer auf diese Funktion zu zoomen.
    - Wie alle anderen Arbeiten, die Sie in Dynamic Media Classic durchführen, müssen Sie veröffentlichen, damit Ihre Zoomziele im Internet verfügbar sind. Wenn Sie bereits einen Viewer verwenden, der Ziele unterstützt, werden diese sofort angezeigt (sobald der Cache geleert wurde). Wenn Sie jedoch keinen für Zoom-Target aktivierten Viewer verwenden, bleiben diese ausgeblendet.
 
-      ![image](assets/crop-adjusted-zoom-targets/zoom-target-green-box.jpg)
+      ![Bild](assets/crop-adjusted-zoom-targets/zoom-target-green-box.jpg)
 
 7. Wenn Sie ein Ziel entfernen müssen, wählen Sie es aus, indem Sie auf die Miniaturansicht klicken, und drücken Sie die Schaltfläche **Target löschen** oder drücken Sie die DELETE-Taste auf Ihrer Tastatur.
 8. Klicken Sie nach dem Hinzufügen weiterhin auf , um neue Ziele hinzuzufügen, umzubenennen und/oder die Größe zu ändern.
@@ -175,7 +175,7 @@ Standardmäßig ist die Anzeigegröße jedoch leer (auf 0 x 0 eingestellt), da d
 
 Wenn Sie das Zoomziel-Tool laden, wird die Anzeigegröße neben dem Namen der Vorgabe angezeigt. Vergleichen Sie die Anzeigegröße zwischen der integrierten Zoom1-Guided-Vorgabe und der benutzerdefinierten ZT_AUTHORING-Vorgabe.
 
-![image](assets/crop-adjusted-zoom-targets/view-size.jpg)
+![Bild](assets/crop-adjusted-zoom-targets/view-size.jpg)
 
 Sie können sehen, dass die integrierte Vorgabe eine Größe von 900 x 550 hat, was bedeutet, dass das Ziel nie kleiner werden kann als diese eher große. Das ist wahrscheinlich zu groß. Wenn Sie ein 2000-Pixel-Bild haben, können Sie nur eine Funktion aufrufen, die mindestens 900 Pixel breit ist. Der Benutzer kann manuell weiter zoomen, aber Sie können ihn nicht näher führen. Wenn Sie die Anzeigegröße auf 350 x 350 festlegen, können Ziele ziemlich nah heranzoomen oder die Größe vergrößern. Wenn Sie jedoch ein größeres Zoombild in Ihrem Viewer wünschen, müssen Sie eine neue Vorgabe erstellen, da Ihre mit 350 Pixel gesperrt ist.
 
