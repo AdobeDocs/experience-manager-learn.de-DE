@@ -10,10 +10,10 @@ activity: use
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2734'
-ht-degree: 5%
+source-wordcount: '2714'
+ht-degree: 4%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 Dynamic Media unterstützt einen Workflow-Prozess zum Erstellen (und Hochladen), Erstellen (und Veröffentlichen) und Bereitstellen . Sie beginnen damit, Assets hochzuladen, dann etwas mit diesen Assets zu tun, z. B. ein Bildset zu erstellen und schließlich zu veröffentlichen, um sie live zu schalten. Der Schritt Erstellen ist für einige Workflows optional. Wenn Ihr Ziel beispielsweise darin besteht, Bilder nur dynamisch zu skalieren und zu zoomen oder Videos für Streaming zu konvertieren und zu veröffentlichen, sind keine erforderlichen Erstellungsschritte erforderlich.
 
-![image](assets/main-workflow/create-author-deliver.jpg)
+![Bild](assets/main-workflow/create-author-deliver.jpg)
 
 Der Workflow in Dynamic Media Classic-Lösungen besteht aus drei Hauptschritten:
 
@@ -34,16 +34,16 @@ Der Workflow in Dynamic Media Classic-Lösungen besteht aus drei Hauptschritten:
 
 Dies ist der Anfang des Workflows. In diesem Schritt sammeln oder erstellen Sie den Quellinhalt, der in den verwendeten Workflow passt, und laden ihn in Dynamic Media Classic hoch. Das System unterstützt mehrere Dateitypen für Bilder, Videos und Schriftarten, aber auch für PDF, Adobe Illustrator und Adobe InDesign.
 
-Siehe die vollständige Liste der [Unterstützten Dateitypen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats).
+Siehe die vollständige Liste der [Unterstützten Dateitypen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats).
 
 Sie können Quellinhalte auf verschiedene Arten hochladen:
 
-- Direkt über Ihren Desktop oder Ihr lokales Netzwerk. [Erfahren Sie, wie](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-sps-desktop-application).
-- Von einem Dynamic Media Classic FTP-Server aus. [Erfahren Sie, wie](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp).
+- Direkt über Ihren Desktop oder Ihr lokales Netzwerk. [Erfahren Sie, wie](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-sps-desktop-application).
+- Von einem Dynamic Media Classic FTP-Server aus. [Erfahren Sie, wie](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp).
 
 Der Standardmodus ist Von Desktop, wo Sie nach Dateien in Ihrem lokalen Netzwerk suchen und den Upload starten.
 
-![image](assets/main-workflow/upload.jpg)
+![Bild](assets/main-workflow/upload.jpg)
 
 >[!TIP]
 >
@@ -64,11 +64,11 @@ Erfordert das Hochladen des Ersatzbilds in denselben Ordner wie das Originalbild
 
 - **In jedem Ordner Assets mit ident. Namen unabhängig von der Erweiterung** überschreiben. Diese Option ist die am wenigsten einschränkende Ersetzungsregel. Sie können ein Ersatzbild in einen anderen Ordner hochladen als den, in dem sich das Originalbild befindet, und eine Datei mit einer anderen Dateierweiterung verwenden, um die Originaldatei zu ersetzen. Wenn sich die Originaldatei in einem anderen Ordner befindet, bleibt das Ersatzbild in dem neuen Ordner, in den es hochgeladen wurde.
 
-Erfahren Sie mehr über die Option [Bilder überschreiben](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option).
+Erfahren Sie mehr über die Option [Bilder überschreiben](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option).
 
 Obwohl dies nicht erforderlich ist, können Sie beim Hochladen mit einer der beiden oben genannten Methoden &quot;Auftragsoptionen&quot;für diesen bestimmten Upload angeben, z. B. um einen wiederkehrenden Upload zu planen, beim Hochladen Zuschneideoptionen festzulegen und viele andere. Diese können für einige Workflows nützlich sein. Daher sollten Sie überlegen, ob sie für Ihre Aufgaben geeignet sind.
 
-Erfahren Sie mehr über [Auftragsoptionen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options).
+Erfahren Sie mehr über [Auftragsoptionen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options).
 
 Das Hochladen ist der erste erforderliche Schritt in einem Workflow, da Dynamic Media Classic nicht mit Inhalten arbeiten kann, die noch nicht in seinem System enthalten sind. Hinter den Kulissen beim Hochladen registriert das System jedes hochgeladene Asset mit der zentralisierten Dynamic Media Classic-Datenbank, weist eine ID zu und kopiert es in den Speicher. Darüber hinaus konvertiert das System Bilddateien in ein Format, das die dynamische Größenanpassung und den Zoom ermöglicht, und konvertiert Videodateien in das webfreundliche MP4-Format.
 
@@ -76,7 +76,7 @@ Das Hochladen ist der erste erforderliche Schritt in einem Workflow, da Dynamic 
 
 Wenn Sie ein Bild eines beliebigen Typs in Dynamic Media Classic hochladen, wird es in ein Übergeordnetes Bildformat namens Pyramid TIFF oder P-TIFF konvertiert. Ein P-TIFF-Bild ähnelt dem Format eines mehrschichtigen TIFF-Bitmapbilds, allerdings enthält die Datei anstelle verschiedener Ebenen mehrere Größen (Auflösungen) desselben Bildes.
 
-![image](assets/main-workflow/pyramid-p-tiff.png)
+![Bild](assets/main-workflow/pyramid-p-tiff.png)
 
 Beim Konvertieren des Bildes erstellt Dynamic Media Classic einen &quot;Schnappschuss&quot;der Bildgröße, skaliert ihn um die Hälfte und speichert ihn, skaliert ihn erneut um die Hälfte und speichert ihn usw., bis es mit mehreren Originalgrößen gefüllt ist. Eine 2000-Pixel-P-TIFF-Datei hat beispielsweise eine Größe von 1000, 500, 250 und 125 Pixel (und kleiner) in derselben Datei. Die P-TIFF-Datei ist das Format eines so genannten &quot;Übergeordneten Bildes&quot;in Dynamic Media Classic.
 
@@ -97,7 +97,7 @@ Auf ähnliche Weise können Sie Ihr Übergeordnetes Quellvideo in Dynamic Media 
 
 **Obwohl es kein Minimum für die Bildgröße gibt, empfehlen wir nicht, riesige Bilder hochzuladen.** Ein riesiges Bild kann als 4000+ Pixel betrachtet werden. Das Hochladen von Bildern dieser Größe kann mögliche Fehler wie Staub- oder Haarkörner im Bild zeigen. Solche Bilder benötigen auch mehr Speicherplatz auf dem Dynamic Media Classic-Server, was dazu führen kann, dass Sie die vertraglich festgelegten Speichergrenzen überschreiten.
 
-Erfahren Sie mehr über [Hochladen von Dateien](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files).
+Erfahren Sie mehr über [Hochladen von Dateien](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files).
 
 ## Schritt 2: Autor (und Veröffentlichen)
 
@@ -123,7 +123,7 @@ Das Endprodukt eines Dynamic Media Classic-Workflows ist eine URL, die auf das A
 
 Hier finden Sie die Syntax für die URL eines Bildes mit einigen Beispielen:
 
-![image](assets/main-workflow/dmc-url.jpg)
+![Bild](assets/main-workflow/dmc-url.jpg)
 
 In der URL ist alles, was links neben dem Fragezeichen steht, der virtuelle Pfad zu einem bestimmten Bild. Alles rechts neben dem Fragezeichen befindet sich ein Image Server-Modifikator, eine Anleitung zur Verarbeitung des Bildes. Wenn Sie mehrere Modifikatoren haben, werden diese durch kaufmännische Und-Zeichen getrennt.
 
@@ -139,14 +139,14 @@ Neu hochgeladene und veröffentlichte Assets werden sofort angezeigt, aktualisie
 
 Dies ist in der Regel kein Problem, es sei denn, es ist ein Fehler aufgetreten und das Bild/Asset hat denselben Namen wie die zuvor veröffentlichte Version. Es gibt jedoch ein Problem mit dem Bild. Beispielsweise haben Sie versehentlich eine Version mit niedriger Auflösung hochgeladen oder Ihr Kunstdirektor hat das Bild nicht genehmigt. In diesem Fall möchten Sie das Originalbild abrufen und es mit derselben Asset-ID durch eine neue Version ersetzen.
 
-Erfahren Sie, wie Sie [den Cache für die zu aktualisierenden URLs manuell löschen](https://docs.adobe.com/content/help/en/experience-manager-65/assets/dynamic/invalidate-cdn-cached-content.html).
+Erfahren Sie, wie Sie [den Cache für die zu aktualisierenden URLs manuell löschen](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/invalidate-cdn-cached-content.html).
 
 >[!TIP]
 >
 >Um Probleme mit der Caching-Verzögerung zu vermeiden, arbeiten Sie immer voraus - einen Abend, einen Tag, zwei Wochen usw. Führen Sie rechtzeitig eine Qualitätssicherung/Akzeptanz durch, damit interne Parteien Ihre Arbeit vor der Veröffentlichung nachweisen können. Auch wenn Sie einen Abend vorher arbeiten, können Sie an diesem Abend Änderungen vornehmen und erneut veröffentlichen. Am Morgen sind die zehn Stunden vergangen und der Cache wird mit dem richtigen Bild aktualisiert.
 
-- Erfahren Sie mehr über [Erstellen eines Veröffentlichungsauftrags](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html#creating-a-publish-job).
-- Erfahren Sie mehr über [Publishing](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/upload-publish/publishing-files.html).
+- Erfahren Sie mehr über [Erstellen eines Veröffentlichungsauftrags](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html#creating-a-publish-job).
+- Erfahren Sie mehr über [Publishing](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html).
 
 ## Schritt 3: Versand
 
@@ -156,7 +156,7 @@ Im Schritt Versand müssen Sie diese URLs in Ihre Website, App, E-Mail-Kampagne 
 
 Beispiel für die Integration der Dynamic Media Classic-URL für ein Bild in eine Website:
 
-![image](assets/main-workflow/example-url-1.png)
+![Bild](assets/main-workflow/example-url-1.png)
 
 Die URL in Rot ist das einzige für Dynamic Media Classic spezifische Element.
 
@@ -166,7 +166,7 @@ Bei komplexeren Lösungen wie Zoom-Viewern oder Viewern, die Zoom und alternativ
 
 Beispiel eines Links (in rot), der ein Bildset in einem Viewer in einem neuen Popup-Fenster öffnet:
 
-![image](assets/main-workflow/example-url-2.png)
+![Bild](assets/main-workflow/example-url-2.png)
 
 >[!IMPORTANT]
 >
@@ -184,4 +184,4 @@ Mit der Vorschau **Größen** können Sie eine Vorschau Ihrer Bilder in mehreren
 
 Sie können auch die Option **Zoom** verwenden, um Ihre Bildvorschau in einer von vielen vordefinierten Zoom-Vorgaben anzuzeigen, die auf verschiedenen eingeschlossenen Zoom-Viewern basieren.
 
-Erfahren Sie mehr über [Vorschau von Assets](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/managing-assets/previewing-asset.html).
+Erfahren Sie mehr über [Vorschau von Assets](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/previewing-asset.html).
