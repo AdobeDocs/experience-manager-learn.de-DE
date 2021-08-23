@@ -13,10 +13,10 @@ thumbnail: 5312-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2723'
-ht-degree: 2%
+source-wordcount: '2717'
+ht-degree: 1%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 Erfahren Sie, wie mehrere Ansichten in der SPA mithilfe von AEM Seiten und dem SPA Editor SDK unterstützt werden. Die dynamische Navigation wird mithilfe von Angular-Routen implementiert und zu einer vorhandenen Kopfzeilenkomponente hinzugefügt.
 
-## Vorgabe
+## Ziele
 
 1. Machen Sie sich mit den SPA Routing-Optionen vertraut, die bei Verwendung des SPA-Editors verfügbar sind.
 2. Erfahren Sie, wie Sie mit [Angular-Routing](https://angular.io/guide/router) zwischen verschiedenen Ansichten der SPA navigieren können.
@@ -33,7 +33,7 @@ Erfahren Sie, wie mehrere Ansichten in der SPA mithilfe von AEM Seiten und dem S
 
 ## Was Sie erstellen werden
 
-Dieses Kapitel fügt ein Navigationsmenü zu einer vorhandenen `Header`-Komponente hinzu. Das Navigationsmenü wird von der AEM Seitenhierarchie gesteuert und verwendet das JSON-Modell, das von der [Navigations-Kernkomponente](https://docs.adobe.com/content/help/de/experience-manager-core-components/using/components/navigation.html) bereitgestellt wird.
+Dieses Kapitel fügt ein Navigationsmenü zu einer vorhandenen `Header`-Komponente hinzu. Das Navigationsmenü wird von der AEM Seitenhierarchie gesteuert und verwendet das JSON-Modell, das von der [Navigations-Kernkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html) bereitgestellt wird.
 
 ![Implementierung der Navigation](assets/navigation-routing/final-navigation-implemented.gif)
 
@@ -69,9 +69,9 @@ Dieses Kapitel fügt ein Navigationsmenü zu einer vorhandenen `Header`-Komponen
 
 Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/navigation-routing-solution) anzeigen oder den Code lokal auschecken, indem Sie zu der Verzweigung `Angular/navigation-routing-solution` wechseln.
 
-## Inspect HeaderComponent-Updates {#inspect-header}
+## Aktualisierungen der Inspect HeaderComponent {#inspect-header}
 
-In vorherigen Kapiteln wurde die Komponente `HeaderComponent` als reine Angular-Komponente hinzugefügt, die über `app.component.html` eingeschlossen ist. In diesem Kapitel wird die Komponente `HeaderComponent` aus der App entfernt und über den [Vorlagen-Editor](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html) hinzugefügt. Dadurch können Benutzer das Navigationsmenü des `HeaderComponent` von AEM aus konfigurieren.
+In vorherigen Kapiteln wurde die Komponente `HeaderComponent` als reine Angular-Komponente hinzugefügt, die über `app.component.html` eingeschlossen ist. In diesem Kapitel wird die Komponente `HeaderComponent` aus der App entfernt und über den [Vorlagen-Editor](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html) hinzugefügt. Dadurch können Benutzer das Navigationsmenü des `HeaderComponent` von AEM aus konfigurieren.
 
 >[!NOTE]
 >
@@ -116,9 +116,9 @@ In vorherigen Kapiteln wurde die Komponente `HeaderComponent` als reine Angular-
        componentGroup="WKND SPA Angular - Structure"/>
    ```
 
-   Die AEM `Header`-Komponente übernimmt alle Funktionen der [Navigations-Kernkomponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/navigation.html) über die `sling:resourceSuperType`-Eigenschaft.
+   Die AEM `Header`-Komponente übernimmt alle Funktionen der [Navigations-Kernkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html) über die `sling:resourceSuperType`-Eigenschaft.
 
-## Fügen Sie die HeaderComponent zur SPA Vorlage {#add-header-template} hinzu.
+## Hinzufügen der HeaderComponent zur SPA Vorlage {#add-header-template}
 
 1. Öffnen Sie einen Browser und melden Sie sich AEM [http://localhost:4502/](http://localhost:4502/) an. Die Basis für den Startcode sollte bereits bereitgestellt werden.
 2. Navigieren Sie zur SPA **[!UICONTROL Seitenvorlage]**: [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html).
