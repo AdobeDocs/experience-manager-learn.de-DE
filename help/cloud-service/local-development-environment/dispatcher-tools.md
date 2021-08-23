@@ -13,9 +13,9 @@ thumbnail: 30603.jpg
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1639'
+source-wordcount: '1637'
 ht-degree: 2%
 
 ---
@@ -216,7 +216,7 @@ _Beachten Sie, dass die Dispatcher Tools-Version selbst nicht mit der Experience
 
 ## Fehlerbehebung
 
-### docker_run führt zu &#39;Warten, bis host.docker.internal verfügbar ist&#39; message{#troubleshooting-host-docker-internal}
+### docker_run führt die Meldung &#39;Warten, bis host.docker.internal verfügbar ist&#39; aus.{#troubleshooting-host-docker-internal}
 
 `host.docker.internal` ist ein Hostname, der dem Docker-enthält bereitgestellt wird und zum Host aufgelöst wird. Per docs.docker.com ([macOS](https://docs.docker.com/docker-for-mac/networking/#i-want-to-connect-from-a-container-to-a-service-on-the-host), [Windows](https://docs.docker.com/docker-for-windows/networking/)):
 
@@ -262,7 +262,7 @@ operable program or batch file.
 ** error: Deployment folder not found: c:\Users\My User\aem-sdk\dispatcher\out
 ```
 
-### docker_run kann unter Windows{#troubleshooting-windows-compatible} nicht gestartet werden
+### docker_run kann unter Windows nicht gestartet werden{#troubleshooting-windows-compatible}
 
 Wenn Sie `docker_run` unter Windows ausführen, kann der folgende Fehler auftreten, was den Start des Dispatchers verhindert. Dies ist ein gemeldetes Problem mit dem Dispatcher unter Windows und wird in einer zukünftigen Version behoben.
 
@@ -293,4 +293,4 @@ AH00016: Configuration Failed
 + [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
 + [Docker herunterladen](https://www.docker.com/)
 + [AEM Referenz-Website (WKND) herunterladen](https://github.com/adobe/aem-guides-wknd/releases)
-+ [Experience Manager Dispatcher-Dokumentation](https://docs.adobe.com/content/help/de-DE/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience Manager Dispatcher-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=de)
