@@ -2,7 +2,7 @@
 seo: Set up public and private keys for use with AEM and Adobe I/O
 description: 'AEM verwendet Public/Private Key Paare, um sicher mit Adobe I/O und anderen Webdiensten zu kommunizieren. Dieses kurze Tutorial zeigt, wie kompatible Schlüssel und Keystores mithilfe des OpenSSL-Befehlszeilen-Tools generiert werden können, das sowohl mit AEM als auch mit Adobe I/O funktioniert. '
 version: 6.4, 6.5
-feature: 'Benutzer und Gruppen '
+feature: Benutzer und Gruppen
 topics: authentication, integrations
 activity: setup
 audience: architect, developer, implementer
@@ -11,7 +11,7 @@ kt: 2450
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 0%
@@ -27,7 +27,7 @@ AEM verwendet Public/Private Key Paare, um sicher mit Adobe I/O und anderen Webd
 >
 >In diesem Handbuch werden selbstsignierte Schlüssel erstellt, die für die Entwicklung und Verwendung in niedrigeren Umgebungen nützlich sind. In Produktionsszenarios werden Schlüssel in der Regel vom IT-Sicherheitsteam eines Unternehmens generiert und verwaltet.
 
-## Generieren Sie das Paar aus öffentlichem/privatem Schlüssel {#generate-the-public-private-key-pair}
+## Generieren Sie das Schlüsselpaar aus öffentlichem/privatem Schlüssel . {#generate-the-public-private-key-pair}
 
 Der Befehl [[!DNL req] ](https://www.openssl.org/docs/man1.0.2/man1/openssl.html) des Befehlszeilen-Tools [[!DNL openssl]command](https://www.openssl.org/docs/man1.0.2/man1/req.html) kann verwendet werden, um ein Schlüsselpaar zu generieren, das mit Adobe I/O und Adobe Experience Manager kompatibel ist.
 
@@ -108,7 +108,7 @@ Navigieren Sie zu **AEM > [!UICONTROL Tools] > [!UICONTROL Sicherheit] > [!UICON
 
 Wenn Sie dazu aufgefordert werden, einen Keystore zu erstellen, tun Sie dies. Dieser Keystore existiert nur in AEM und ist NICHT der Keystore, der über openssl erstellt wurde. Das Kennwort kann beliebig sein und muss nicht mit dem Kennwort übereinstimmen, das im Befehl [!DNL openssl] verwendet wird.
 
-### Installieren Sie den privaten Schlüssel über den Keystore {#install-the-private-key-via-the-keystore}.
+### Installieren Sie den privaten Schlüssel über den Keystore. {#install-the-private-key-via-the-keystore}
 
 ![Privaten Schlüssel in ](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--add-private-key.png)
 *[!UICONTROL AEMUser hinzufügen]  >  [!UICONTROL Keystore]  > privaten Schlüssel aus Keystore  [!UICONTROL hinzufügen]*
@@ -125,7 +125,7 @@ Klicken Sie in der Keystore-Konsole des Benutzers auf **[!UICONTROL Add Private 
 >
 >Das Kennwort für die KeyStore-Datei und das Kennwort für den privaten Schlüssel sind für beide Eingaben identisch. Wenn Sie ein nicht übereinstimmendes Kennwort eingeben, wird der Schlüssel nicht importiert.
 
-### Überprüfen Sie, ob der private Schlüssel in den AEM-Keystore geladen wird {#verify-the-private-key-is-loaded-into-the-aem-keystore}
+### Überprüfen, ob der private Schlüssel in den AEM-Keystore geladen wird {#verify-the-private-key-is-loaded-into-the-aem-keystore}
 
 ![Überprüfen des privaten Schlüssels in ](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/aem--keystore.png)
 *[!UICONTROL AEMser]  >  [!UICONTROL Keystore]*
@@ -144,7 +144,7 @@ Der entsprechende öffentliche Schlüssel muss in Adobe I/O hochgeladen werden, 
 
 Für das Erstellen einer neuen Integration in Adobe I/O ist das Hochladen eines öffentlichen Zertifikats erforderlich. Laden Sie die **certificate.crt** hoch, die vom `openssl req`-Befehl generiert wurde.
 
-### Überprüfen Sie, ob die öffentlichen Schlüssel in Adobe I/O {#verify-the-public-keys-are-loaded-in-adobe-i-o} geladen werden.
+### Überprüfen, ob die öffentlichen Schlüssel in Adobe I/O geladen werden {#verify-the-public-keys-are-loaded-in-adobe-i-o}
 
 ![Überprüfen der öffentlichen Schlüssel in Adobe I/O](assets/set-up-public-private-keys-for-use-with-aem-and-adobe-io/adobe-io--public-keys.png)
 
