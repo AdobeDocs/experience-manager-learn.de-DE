@@ -1,19 +1,18 @@
 ---
 title: Produktionsbereitstellung mit einem AEM-Veröffentlichungsdienst - Erste Schritte mit AEM Headless - GraphQL
 description: Erfahren Sie mehr über die AEM-Autoren- und Veröffentlichungsdienste und das empfohlene Bereitstellungsmuster für Headless-Anwendungen. In diesem Tutorial erfahren Sie, wie Sie Umgebungsvariablen verwenden können, um einen GraphQL-Endpunkt basierend auf der Zielumgebung dynamisch zu ändern. Erfahren Sie, wie Sie AEM für Cross-Origin Resource Sharing (CORS) ordnungsgemäß konfigurieren.
-sub-product: Assets
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
+feature: Inhaltsfragmente,GraphQL-API
+topic: Headless, Content Management
+role: Developer
+level: Beginner
 mini-toc-levels: 1
 kt: 7131
 thumbnail: KT-7131.jpg
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2361'
-ht-degree: 4%
+source-wordcount: '2367'
+ht-degree: 7%
 
 ---
 
@@ -34,11 +33,11 @@ Erfahren Sie mehr über:
 * Erfahren Sie mehr über Best Practices für die Verwaltung von Umgebungsvariablen.
 * Erfahren Sie, wie Sie AEM für Cross-Origin Resource Sharing (CORS) ordnungsgemäß konfigurieren.
 
-## Bereitstellungsmuster für Autoren-Veröffentlichungen {#deployment-pattern}
+## Bereitstellungsmuster für Autoren- und Veröffentlichungsinstanz {#deployment-pattern}
 
-Eine vollständige AEM-Umgebung besteht aus einer Autoren-, Veröffentlichungs- und Dispatcher-Umgebung. Im Autorendienst erstellen, verwalten und zeigen interne Benutzer Inhalte in der Vorschau an. Der Veröffentlichungsdienst wird als &quot;Live&quot;-Umgebung betrachtet und ist in der Regel das, mit dem Endbenutzer interagieren. Inhalte, die nach der Bearbeitung und Genehmigung im Autorendienst erstellt wurden, werden an den Veröffentlichungsdienst verteilt.
+Eine vollständige AEM-Umgebung besteht aus einer Autoren-, Veröffentlichungs- und Dispatcher-Komponente. Der Autoren-Service, mit dem interne Anwender Inhalte erstellen, verwalten und in der Vorschau anzeigen. Der Veröffentlichungsdienst wird als &quot;Live&quot;-Umgebung betrachtet und ist in der Regel das, mit dem Endbenutzer interagieren. Inhalte werden nach der Bearbeitung und Genehmigung im Autoren-Service an den Veröffentlichungs-Service weitergeleitet.
 
-Das häufigste Bereitstellungsmuster bei AEM Headless-Anwendungen besteht darin, die Produktionsversion der Anwendung mit einem AEM Publish-Dienst zu verbinden.
+Das häufigste Bereitstellungsmuster bei AEM Headless-Programmen besteht darin, die Produktionsversion des Programms mit dem Veröffentlichungs-Service von AEM zu verbinden.
 
 ![Implementierungsmuster auf hoher Ebene](assets/publish-deployment/high-level-deployment.png)
 
@@ -57,7 +56,7 @@ Am Ende werden drei lokale Server ausgeführt:
 * http://localhost:4503 - Veröffentlichungsinstanz
 * http://localhost:5000 - React-App im Produktionsmodus, die eine Verbindung zur Veröffentlichungsinstanz herstellt.
 
-## Installieren AEM SDK - Veröffentlichungsmodus {#aem-sdk-publish}
+## AEM SDK installieren - Veröffentlichungsmodus {#aem-sdk-publish}
 
 Derzeit befindet sich eine laufende Instanz des SDK im Modus **Autor** . Das SDK kann auch im Modus **Publish** gestartet werden, um eine AEM-Veröffentlichungsumgebung zu simulieren.
 
@@ -81,7 +80,7 @@ Eine detailliertere Anleitung zum Einrichten einer lokalen Entwicklungsumgebung 
 
    Es wird erwartet, dass eine 404 Not Found -Seite zurückgegeben wird. Dies ist eine brandneue AEM-Instanz, und es wurde kein Inhalt installiert.
 
-## Beispielinhalt und GraphQL-Endpunkte {#wknd-site-content-endpoints} installieren
+## Beispielinhalt und GraphQL-Endpunkte installieren {#wknd-site-content-endpoints}
 
 Genau wie in der -Autoreninstanz muss für die Veröffentlichungsinstanz die GraphQL-Endpunkte aktiviert sein und Beispielinhalte erforderlich sein. Installieren Sie anschließend die WKND-Referenz-Site auf der Veröffentlichungsinstanz.
 
@@ -101,7 +100,7 @@ Genau wie in der -Autoreninstanz muss für die Veröffentlichungsinstanz die Gra
 
    Im Gegensatz zur AEM-Autoreninstanz wird für die AEM-Veröffentlichungsinstanzen standardmäßig der anonyme schreibgeschützte Zugriff verwendet. Wir möchten das Erlebnis eines anonymen Benutzers beim Ausführen der React-Anwendung simulieren.
 
-## Aktualisieren Sie Umgebungsvariablen, um auf die Veröffentlichungsinstanz {#react-app-publish} zu verweisen.
+## Aktualisieren von Umgebungsvariablen, um auf die Veröffentlichungsinstanz zu verweisen {#react-app-publish}
 
 Aktualisieren Sie anschließend die von der React-Anwendung verwendeten Umgebungsvariablen, um auf die Veröffentlichungsinstanz zu verweisen. Die React-App sollte **nur** im Produktionsmodus eine Verbindung zur Veröffentlichungsinstanz herstellen.
 
@@ -186,7 +185,7 @@ Die React-App kann über den Webpack-Server gestartet werden, dies dient jedoch 
 
    Beachten Sie, dass für `adventureContributor` ein GraphQL-Fehler ausgegeben wird. In den nächsten Übungen werden die fehlerhaften Bilder und die `adventureContributor`-Probleme behoben.
 
-## Absolute Bildreferenzen {#absolute-image-references}
+## Absolute Bildverweise {#absolute-image-references}
 
 Die Bilder scheinen beschädigt zu sein, da das `<img src` -Attribut auf einen relativen Pfad festgelegt ist und schließlich auf den statischen Node-Server unter `http://localhost:5000/` verweist. Stattdessen sollten diese Bilder auf die AEM-Veröffentlichungsinstanz verweisen. Dazu gibt es mehrere mögliche Lösungen. Wenn Sie den Webpack Development Server verwenden, richten Sie die Datei `react-app/src/setupProxy.js` für alle Anfragen an `/content` einen Proxy zwischen dem Webpack-Server und der AEM Autoreninstanz ein. Eine Proxy-Konfiguration kann in einer Produktionsumgebung verwendet werden, muss jedoch auf der Ebene des Webservers konfiguriert werden. Zum Beispiel [Apache&#39;s Proxy Module](https://httpd.apache.org/docs/2.4/mod/mod_proxy.html).
 
