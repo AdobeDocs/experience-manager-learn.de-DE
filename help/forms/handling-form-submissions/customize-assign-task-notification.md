@@ -1,7 +1,7 @@
 ---
 title: Anpassen der Benachrichtigung zu Assign Task
 description: Formulardaten in E-Mails für Aufgabenbenachrichtigungen zuweisen einschließen
-sub-product: Formulare
+sub-product: forms
 feature: Workflow
 topics: integrations
 audience: developer
@@ -13,10 +13,10 @@ thumbnail: KT-6279.jpg
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '448'
-ht-degree: 8%
+source-wordcount: '444'
+ht-degree: 5%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 8%
 # Anpassen der Benachrichtigung zu Assign Task
 
 Die Komponente &quot;Aufgabe zuweisen&quot;wird verwendet, um Workflow-Teilnehmern Aufgaben zuzuweisen. Wenn eine Aufgabe einem Benutzer oder einer Gruppe zugewiesen wird, wird eine E-Mail-Benachrichtigung an die definierten Benutzer- oder Gruppenmitglieder gesendet.
-Diese E-Mail-Benachrichtigung enthält normalerweise dynamische Daten zur Aufgabe. Diese dynamischen Daten werden mithilfe des Systems abgerufen, das [Metadateneigenschaften](https://docs.adobe.com/content/help/en/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification) generiert hat.
+Diese E-Mail-Benachrichtigung enthält normalerweise dynamische Daten zur Aufgabe. Diese dynamischen Daten werden mithilfe des Systems abgerufen, das [Metadateneigenschaften](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification) generiert hat.
 Um Werte aus den gesendeten Formulardaten in die E-Mail-Benachrichtigung einzubeziehen, müssen wir eine benutzerdefinierte Metadateneigenschaft erstellen und diese benutzerdefinierten Metadateneigenschaften dann in der E-Mail-Vorlage verwenden
 
 
@@ -130,7 +130,7 @@ Nachdem die OSGi-Komponente auf AEM Server erstellt und bereitgestellt wurde, ko
 
 ## So versuchen Sie es auf Ihrem Server
 
-* [Konfigurieren des Day CQ Mail Service](https://docs.adobe.com/content/help/de-DE/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
+* [Konfigurieren des Day CQ Mail Service](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
 * Verknüpfen einer gültigen E-Mail-ID mit [Admin-Benutzer](http://localhost:4502/security/users.html)
 * Laden Sie die [Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip) herunter und installieren Sie sie mithilfe von [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
 * Laden Sie [Adaptives Formular](assets/request-travel-authorization.zip) herunter und importieren Sie es in AEM aus der [Formular- und Dokumentdatei-Benutzeroberfläche](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
