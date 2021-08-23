@@ -10,10 +10,10 @@ doc-type: tutorial
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '4652'
-ht-degree: 0%
+source-wordcount: '4585'
+ht-degree: 1%
 
 ---
 
@@ -41,7 +41,7 @@ In diesem Tutorial wird der Code erläutert, der zum Erstellen einer benutzerdef
 * [Abgeschlossenes Tutorial-Paket](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Vollständiges Code-Repository auf GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-In diesem Tutorial werden grundlegende Kenntnisse zu [AEM Entwicklungspraktiken](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/the-basics.html) und einige Kenntnisse zu [AEM Maven-Projekt-Setup](https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/ht-projects-maven.html) vorausgesetzt. Der gesamte erwähnte Code sollte als Referenz verwendet und nur in einer [lokalen AEM-Instanz](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted) bereitgestellt werden.
+In diesem Tutorial werden grundlegende Kenntnisse zu [AEM Entwicklungspraktiken](https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/the-basics.html) und einige Kenntnisse zu [AEM Maven-Projekt-Setup](https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/ht-projects-maven.html) vorausgesetzt. Der gesamte erwähnte Code sollte als Referenz verwendet und nur in einer [lokalen AEM-Instanz](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingStarted) bereitgestellt werden.
 
 ## Struktur einer Projektvorlage
 
@@ -131,7 +131,7 @@ Da wir in erster Linie Knoten kopieren/konfigurieren werden, wird CRXDE Lite ver
    1. Fügen Sie einen neuen Knoten **nt:unstructured** unter authoring-project/gadgets mit dem Namen **tasks** hinzu.
    1. Fügen Sie dem Aufgabenknoten Zeichenfolgeneigenschaften für **cardWeight** = &quot;100&quot;, **jcr:title**=&quot;Aufgaben&quot; und **sling:resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot; hinzu.
 
-   Jetzt wird die Kachel [Aufgaben](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#Tasks) standardmäßig angezeigt, wenn ein neues Projekt erstellt wird.
+   Jetzt wird die Kachel [Aufgaben](https://experienceleague.adobe.com/docs/#Tasks) standardmäßig angezeigt, wenn ein neues Projekt erstellt wird.
 
    ```shell
    ../projects/templates/authoring-project
@@ -261,7 +261,7 @@ Jetzt können wir unsere Projektvorlage testen, indem wir ein neues Projekt erst
 
 1. Klicken Sie auf &quot;Erstellen&quot;, um das Projekt anhand der benutzerdefinierten Vorlage zu erstellen. Sie werden im Projekt-Dashboard feststellen, dass die Aufgabenkachel und die anderen unter Gadgets konfigurierten Kacheln automatisch angezeigt werden.
 
-   ![Aufgabenkachel  ](./assets/develop-aem-projects/tasks-tile.png)
+   ![Aufgabenkachel](./assets/develop-aem-projects/tasks-tile.png)
 
 
 ## Warum Workflow?
@@ -282,7 +282,7 @@ Aufgaben können wie Teilnehmer-Schritte dynamisch zugewiesen und weitergeleitet
 
 Aufgaben haben zwar einige Vorteile gegenüber Teilnehmer-Schritten, sind aber außerhalb eines Projekts nicht so nützlich, sondern mit zusätzlichen Mehraufwand verbunden. Zusätzlich muss das dynamische Verhalten von Aufgaben mit Ecma-Skripten mit eigenen Einschränkungen codiert werden.
 
-## Anwendungsfallanforderungen {#goals-tutorial}
+## Beispielanwendungsfallanforderungen {#goals-tutorial}
 
 ![Workflow-Prozessdiagramm](./assets/develop-aem-projects/workflow-process-diagram.png)
 
@@ -623,7 +623,7 @@ task.setCurrentAssignee(projectApproverGrp);
    }
    ```
 
-## Erstellen Sie den Assistenten &quot;Workflow starten&quot; {#start-workflow-wizard}
+## Erstellen des Assistenten &quot;Workflow starten&quot; {#start-workflow-wizard}
 
 Beim Starten eines Workflows innerhalb eines Projekts müssen Sie einen Assistenten angeben, um den Workflow zu starten. Der Standardassistent: `/libs/cq/core/content/projects/workflowwizards/default_workflow` ermöglicht dem Benutzer die Eingabe eines Workflow-Titels, eines Start-Kommentars und eines Payload-Pfads für die Ausführung des Workflows. Es gibt auch einige weitere Beispiele unter: `/libs/cq/core/content/projects/workflowwizards`.
 
@@ -631,13 +631,13 @@ Die Erstellung eines benutzerdefinierten Assistenten kann sehr leistungsstark se
 
 1. In CRXDE-Lite erstellen wir einen Unterordner unter `/apps/aem-guides/projects-tasks/projects` Ordner namens &quot;wizards&quot;. Kopieren Sie den Standardassistenten aus: `/libs/cq/core/content/projects/workflowwizards/default_workflow` unterhalb des neu erstellten Assistenten-Ordners und benennen Sie ihn in **content-approval-start** um. Der vollständige Pfad sollte jetzt sein: `/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`.
 
-   Der Standardassistent ist ein zweispaltiger Assistent, der in der ersten Spalte den Titel, die Beschreibung und die Miniaturansicht des ausgewählten Workflow-Modells anzeigt. Die zweite Spalte enthält Felder für den Workflow-Titel, den Startkommentar und den Payload-Pfad. Der Assistent ist ein standardmäßiges Formular für die Touch-optimierte Benutzeroberfläche und verwendet zum Ausfüllen der Felder die standardmäßigen [Granite-Benutzeroberfläche Formularkomponenten](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/index.html).
+   Der Standardassistent ist ein zweispaltiger Assistent, der in der ersten Spalte den Titel, die Beschreibung und die Miniaturansicht des ausgewählten Workflow-Modells anzeigt. Die zweite Spalte enthält Felder für den Workflow-Titel, den Startkommentar und den Payload-Pfad. Der Assistent ist ein standardmäßiges Formular für die Touch-optimierte Benutzeroberfläche und verwendet zum Ausfüllen der Felder die standardmäßigen [Granite-Benutzeroberfläche Formularkomponenten](https://experienceleague.adobe.com/docs/?lang=de).
 
    ![Arbeitsablauf für die Inhaltsvalidierung](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
 1. Wir fügen dem Assistenten ein zusätzliches Feld hinzu, mit dem der Verantwortliche der ersten Aufgabe im Workflow festgelegt wird (siehe [Workflow-Modell erstellen](#create-workflow-model): Schritt 5).
 
-   Erstellen Sie unter `../content-approval-start/jcr:content/items/column2/items` einen neuen Knoten des Typs `nt:unstructured` mit dem Namen **&quot;assign&quot;**. Wir werden die Komponente &quot;Projekt-Benutzerauswahl&quot;verwenden (die auf der [Granite-Benutzerauswahlkomponente](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/userpicker/index.html) basiert). Dieses Formularfeld ermöglicht es, die Benutzer- und Gruppenauswahl auf diejenigen zu beschränken, die zum aktuellen Projekt gehören.
+   Erstellen Sie unter `../content-approval-start/jcr:content/items/column2/items` einen neuen Knoten des Typs `nt:unstructured` mit dem Namen **&quot;assign&quot;**. Wir werden die Komponente &quot;Projekt-Benutzerauswahl&quot;verwenden (die auf der [Granite-Benutzerauswahlkomponente](https://experienceleague.adobe.com/docs/) basiert). Dieses Formularfeld ermöglicht es, die Benutzer- und Gruppenauswahl auf diejenigen zu beschränken, die zum aktuellen Projekt gehören.
 
    Nachfolgend finden Sie die XML-Darstellung des Knotens **assign** :
 
@@ -657,7 +657,7 @@ Die Erstellung eines benutzerdefinierten Assistenten kann sehr leistungsstark se
 
 1. Außerdem fügen wir ein Feld für die Prioritätsauswahl hinzu, das die Priorität der ersten Aufgabe im Workflow bestimmt (siehe [Erstellen des Workflow-Modells](#create-workflow-model): Schritt 5).
 
-   Erstellen Sie unter `/content-approval-start/jcr:content/items/column2/items` einen neuen Knoten des Typs `nt:unstructured` mit dem Namen **priority**. Wir verwenden die Komponente [Granite UI Select component](https://docs.adobe.com/docs/en/aem/6-2/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/select/index.html), um das Formularfeld auszufüllen.
+   Erstellen Sie unter `/content-approval-start/jcr:content/items/column2/items` einen neuen Knoten des Typs `nt:unstructured` mit dem Namen **priority**. Wir verwenden die Komponente [Granite UI Select component](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html), um das Formularfeld auszufüllen.
 
    Unter dem Knoten **priority** fügen wir den Knoten **items** des Knotens **nt:unstructured** hinzu. Fügen Sie unter dem Knoten **items** 3 weitere Knoten hinzu, um die Auswahloptionen für &quot;Hoch&quot;, &quot;Mittel&quot;und &quot;Niedrig&quot;auszufüllen. Jeder Knoten hat den Typ **nt:unstructured** und sollte über eine Eigenschaft **text** und **value** verfügen. Text und Wert sollten denselben Wert aufweisen:
 
@@ -693,7 +693,7 @@ Die Erstellung eines benutzerdefinierten Assistenten kann sehr leistungsstark se
    </priority>
    ```
 
-1. Wir erlauben es dem Workflow-Initiator, das Fälligkeitsdatum der ersten Aufgabe festzulegen. Wir werden das Formularfeld [Granite UI DatePicker](https://docs.adobe.com/docs/en/aem/6-5/develop/ref/granite-ui/api/jcr_root/libs/granite/ui/components/coral/foundation/form/datepicker/index.html) verwenden, um diese Eingabe zu erfassen. Wir fügen außerdem ein ausgeblendetes Feld mit dem Wert [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) hinzu, um sicherzustellen, dass die Eingabe als Eigenschaft vom Typ Datum im JCR gespeichert wird.
+1. Wir erlauben es dem Workflow-Initiator, das Fälligkeitsdatum der ersten Aufgabe festzulegen. Wir werden das Formularfeld [Granite UI DatePicker](https://experienceleague.adobe.com/docs/) verwenden, um diese Eingabe zu erfassen. Wir fügen außerdem ein ausgeblendetes Feld mit dem Wert [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) hinzu, um sicherzustellen, dass die Eingabe als Eigenschaft vom Typ Datum im JCR gespeichert wird.
 
    Fügen Sie zwei **nt:unstructured** -Knoten mit den folgenden Eigenschaften hinzu, die unten in XML dargestellt werden:
 
