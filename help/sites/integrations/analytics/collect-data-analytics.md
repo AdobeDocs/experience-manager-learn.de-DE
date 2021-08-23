@@ -1,28 +1,24 @@
 ---
 title: Erfassen von Seitendaten mit Adobe Analytics
 description: Verwenden Sie die ereignisbasierte Adobe Client Data-Ebene, um Daten zur Benutzeraktivität auf einer mit Adobe Experience Manager erstellten Website zu erfassen. Erfahren Sie, wie Sie in Experience Platform Launch mithilfe von Regeln auf diese Ereignisse warten und Daten an eine Adobe Analytics Report Suite senden können.
-feature: Analyse
-topics: integrations
-audience: administrator
-doc-type: tutorial
-activity: setup
 version: cloud-service
-kt: 5332
-thumbnail: 5332-collect-data-analytics.jpg
 topic: Integrationen
+feature: Adobe Client-Datenschicht
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 5332
+thumbnail: 5332-collect-data-analytics.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2417'
-ht-degree: 5%
+source-wordcount: '2378'
+ht-degree: 4%
 
 ---
 
 
 # Erfassen von Seitendaten mit Adobe Analytics
 
-Erfahren Sie, wie Sie die integrierten Funktionen der [Adobe Client-Datenschicht mit AEM Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/data-layer/overview.html) verwenden können, um Daten zu einer Seite in Adobe Experience Manager Sites zu erfassen. [Experience Platform Launch und die Adobe Analytics-Erweiterung werden verwendet, um Regeln zum Senden von Seitendaten an Adobe Analytics zu erstellen.](https://www.adobe.com/experience-platform/launch.html)[](https://docs.adobe.com/content/help/de-DE/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)
+Erfahren Sie, wie Sie die integrierten Funktionen der [Adobe Client-Datenschicht mit AEM Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de) verwenden können, um Daten zu einer Seite in Adobe Experience Manager Sites zu erfassen. [Experience Platform Launch und die Adobe Analytics-Erweiterung werden verwendet, um Regeln zum Senden von Seitendaten an Adobe Analytics zu erstellen.](https://www.adobe.com/experience-platform/launch.html)[](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)
 
 ## Was Sie erstellen werden
 
@@ -41,9 +37,9 @@ In diesem Tutorial erstellen Sie eine Launch-Regel basierend auf einem Ereignis 
 Folgendes ist erforderlich:
 
 * **Experience Platform** LaunchProperty
-* **Report Suite-ID und Tracking-Server für Adobe** Analytics-Tests/Entwicklung. Weitere Informationen finden Sie in der folgenden Dokumentation für [Erstellen einer neuen Report Suite](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html).
-* [Experience Platform ](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) Debugger-Browsererweiterung. Screenshots in diesem Tutorial, die aus dem Chrome-Browser erfasst wurden.
-* (Optional) AEM Site mit der aktivierten Adobe Client-Datenschicht ](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation). [ In diesem Tutorial wird die öffentliche Site [https://wknd.site/us/en.html](https://wknd.site/us/en.html) verwendet, Sie können jedoch Ihre eigene Website verwenden.
+* **Report Suite-ID und Tracking-Server für Adobe** Analytics-Tests/Entwicklung. Weitere Informationen finden Sie in der folgenden Dokumentation für [Erstellen einer neuen Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html).
+* [Experience Platform ](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) Debugger-Browsererweiterung. Screenshots in diesem Tutorial, die aus dem Chrome-Browser erfasst wurden.
+* (Optional) AEM Site mit der aktivierten Adobe Client-Datenschicht ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation). [ In diesem Tutorial wird die öffentliche Site [https://wknd.site/us/en.html](https://wknd.site/us/en.html) verwendet, Sie können jedoch Ihre eigene Website verwenden.
 
 >[!NOTE]
 >
@@ -51,12 +47,12 @@ Folgendes ist erforderlich:
 
 ## Wechseln von Launch-Umgebungen für WKND-Site
 
-[https://wknd.](https://wknd.site) siteis ist eine öffentliche Website, die auf  [einem Open-Source-](https://github.com/adobe/aem-guides-wknd) Projekt basiert und als Referenz und  [](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) Tutorial für AEM Implementierungen konzipiert ist.
+[https://wknd.](https://wknd.site) siteis ist eine öffentliche Website, die auf  [einem Open-Source-](https://github.com/adobe/aem-guides-wknd) Projekt basiert und als Referenz und  [](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) Tutorial für AEM Implementierungen konzipiert ist.
 
-Anstatt eine AEM Umgebung einzurichten und die WKND-Codebasis zu installieren, können Sie den Experience Platform-Debugger zu **switch** the live [https://wknd.site/](https://wknd.site/) zu *your* Launch-Eigenschaft verwenden. Natürlich können Sie Ihre eigene AEM-Site verwenden, wenn die [Adobe Client-Datenschicht bereits aktiviert ist](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
+Anstatt eine AEM Umgebung einzurichten und die WKND-Codebasis zu installieren, können Sie den Experience Platform-Debugger zu **switch** the live [https://wknd.site/](https://wknd.site/) zu *your* Launch-Eigenschaft verwenden. Natürlich können Sie Ihre eigene AEM-Site verwenden, wenn die [Adobe Client-Datenschicht bereits aktiviert ist](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
 
-1. Melden Sie sich bei Experience Platform Launch an und erstellen Sie [eine Launch-Eigenschaft](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch.html) (falls noch nicht geschehen).
-1. Stellen Sie sicher, dass eine erste Launch [Bibliothek](https://docs.adobe.com/content/help/en/launch/using/reference/publish/libraries.html#create-a-library) erstellt und in eine Launch [Umgebung](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html) weitergeleitet wurde.
+1. Melden Sie sich bei Experience Platform Launch an und erstellen Sie [eine Launch-Eigenschaft](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html) (falls noch nicht geschehen).
+1. Stellen Sie sicher, dass eine erste Launch [Bibliothek](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) erstellt und in eine Launch [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html) weitergeleitet wurde.
 1. Kopieren Sie den Launch-Einbettungscode aus der Umgebung, in der Ihre Bibliothek veröffentlicht wurde.
 
    ![Kopieren des eingebetteten Launch-Codes](assets/collect-data-analytics/launch-environment-copy.png)
@@ -76,10 +72,10 @@ Anstatt eine AEM Umgebung einzurichten und die WKND-Codebasis zu installieren, k
 
 ## Überprüfen der Adobe Client-Datenschicht auf der WKND-Site
 
-Das [WKND-Referenzprojekt](https://github.com/adobe/aem-guides-wknd) wurde mit AEM Kernkomponenten erstellt und verfügt standardmäßig über die [Adobe Client-Datenschicht](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation). Überprüfen Sie als Nächstes, ob die Adobe Client-Datenschicht aktiviert ist.
+Das [WKND-Referenzprojekt](https://github.com/adobe/aem-guides-wknd) wurde mit AEM Kernkomponenten erstellt und verfügt standardmäßig über die [Adobe Client-Datenschicht](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation). Überprüfen Sie als Nächstes, ob die Adobe Client-Datenschicht aktiviert ist.
 
 1. Navigieren Sie zu [https://wknd.site](https://wknd.site).
-1. Öffnen Sie die Entwicklertools des Browsers und navigieren Sie zur **Konsole**. Führen Sie folgenden Befehl aus:
+1. Öffnen Sie die Entwicklertools des Browsers und navigieren Sie zur **Konsole**. Führen Sie den folgenden Befehl aus:
 
    ```js
    adobeDataLayer.getState();
@@ -103,11 +99,11 @@ Das [WKND-Referenzprojekt](https://github.com/adobe/aem-guides-wknd) wurde mit A
        xdm:template: "/conf/wknd/settings/wcm/templates/landing-page-template"
    ```
 
-   Wir verwenden Standardeigenschaften, die aus dem [Seitenschema](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page), `dc:title`, `xdm:language` und `xdm:template` der Datenschicht abgeleitet wurden, um Seitendaten an Adobe Analytics zu senden.
+   Wir verwenden Standardeigenschaften, die aus dem [Seitenschema](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page), `dc:title`, `xdm:language` und `xdm:template` der Datenschicht abgeleitet wurden, um Seitendaten an Adobe Analytics zu senden.
 
    >[!NOTE]
    >
-   > Das JavaScript-Objekt `adobeDataLayer` wird nicht angezeigt? Stellen Sie sicher, dass die Adobe Client Data Layer](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation) auf Ihrer Site aktiviert wurde.[
+   > Das JavaScript-Objekt `adobeDataLayer` wird nicht angezeigt? Stellen Sie sicher, dass die Adobe Client Data Layer](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation) auf Ihrer Site aktiviert wurde.[
 
 ## Erstellen einer Regel &quot;Seite geladen&quot;
 
@@ -174,13 +170,13 @@ Die Adobe Client-Datenschicht ist eine **event**-gesteuerte Datenschicht. Wenn d
    console.debug("Page template: " + event.component['xdm:template']);
    ```
 
-   Das `event`-Objekt wird von der `trigger()`-Methode übergeben, die im benutzerdefinierten Ereignis aufgerufen wird. `component` ist die aktuelle Seite, die von der Datenschicht  `getState` im benutzerdefinierten Ereignis abgeleitet wurde. Erinnern Sie sich an das frühere von der Datenschicht angezeigte [Seitenschema](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page), um die verschiedenen standardmäßig angezeigten Schlüssel anzuzeigen.
+   Das `event`-Objekt wird von der `trigger()`-Methode übergeben, die im benutzerdefinierten Ereignis aufgerufen wird. `component` ist die aktuelle Seite, die von der Datenschicht  `getState` im benutzerdefinierten Ereignis abgeleitet wurde. Erinnern Sie sich an das frühere von der Datenschicht angezeigte [Seitenschema](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page), um die verschiedenen standardmäßig angezeigten Schlüssel anzuzeigen.
 
-1. Speichern Sie die Änderungen und führen Sie einen [Build](https://docs.adobe.com/content/help/en/launch/using/reference/publish/builds.html) in Launch aus, um den Code in die auf Ihrer AEM Site verwendete [Umgebung](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html) weiterzuleiten.
+1. Speichern Sie die Änderungen und führen Sie einen [Build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) in Launch aus, um den Code in die auf Ihrer AEM Site verwendete [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html) weiterzuleiten.
 
    >[!NOTE]
    >
-   > Es kann sehr nützlich sein, den [Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) zu verwenden, um den Einbettungscode in eine **Entwicklungsumgebung** zu wechseln.
+   > Es kann sehr nützlich sein, den [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) zu verwenden, um den Einbettungscode in eine **Entwicklungsumgebung** zu wechseln.
 
 1. Navigieren Sie zu Ihrer AEM-Site und öffnen Sie die Entwickler-Tools, um die Konsole anzuzeigen. Aktualisieren Sie die Seite. Sie sollten sehen, dass die Konsolenmeldungen protokolliert wurden:
 
@@ -190,7 +186,7 @@ Die Adobe Client-Datenschicht ist eine **event**-gesteuerte Datenschicht. Wenn d
 
 Erstellen Sie anschließend mehrere Datenelemente , um andere Werte als die Adobe Client-Datenschicht zu erfassen. Wie wir in der vorherigen Übung gesehen haben, ist es möglich, direkt über benutzerdefinierten Code auf die Eigenschaften der Datenschicht zuzugreifen. Der Vorteil der Verwendung von Datenelementen besteht darin, dass sie über Launch-Regeln hinweg wiederverwendet werden können.
 
-Erinnern Sie sich an das frühere [Seitenschema](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#page), das von der Datenschicht verfügbar gemacht wird:
+Erinnern Sie sich an das frühere [Seitenschema](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page), das von der Datenschicht verfügbar gemacht wird:
 
 Datenelemente werden den Eigenschaften `@type`, `dc:title` und `xdm:template` zugeordnet.
 
