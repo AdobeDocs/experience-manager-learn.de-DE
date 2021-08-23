@@ -1,28 +1,23 @@
 ---
 title: Authoring von Inhaltsfragmenten - Erste Schritte mit AEM Headless - GraphQL
 description: Erste Schritte mit Adobe Experience Manager (AEM) und GraphQL. Erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf einem Inhaltsfragmentmodell basiert. Erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
-sub-product: Assets
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6713
 thumbnail: 22451.jpg
-feature: Inhaltsfragmente, GraphQL-APIs
+feature: Inhaltsfragmente,GraphQL-API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '791'
 ht-degree: 3%
 
 ---
 
 
-# Authoring von Inhaltsfragmenten {#authoring-content-fragments}
+# Erstellen von Inhaltsfragmenten {#authoring-content-fragments}
 
 In diesem Kapitel erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf dem [neu definierten Contributor Content Fragment Model](./content-fragment-models.md) basiert. Außerdem erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
 
