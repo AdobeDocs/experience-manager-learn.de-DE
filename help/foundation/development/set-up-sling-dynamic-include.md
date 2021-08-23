@@ -11,17 +11,17 @@ doc-type: technical video
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 10%
+source-wordcount: '261'
+ht-degree: 9%
 
 ---
 
 
 # Setup [!DNL Sling Dynamic Include]
 
-Ein Video-Beispiel zur Installation und Verwendung von [!DNL Apache Sling Dynamic Include] mit [AEM Dispatcher](https://docs.adobe.com/content/help/de-DE/experience-manager-dispatcher/using/dispatcher.html), das auf [!DNL Apache HTTP Web Server] ausgeführt wird.
+Ein Video-Beispiel zur Installation und Verwendung von [!DNL Apache Sling Dynamic Include] mit [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=de), das auf [!DNL Apache HTTP Web Server] ausgeführt wird.
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040/?quality=12&learn=on)
 
@@ -150,7 +150,7 @@ Ein Video-Beispiel zur Installation und Verwendung von [!DNL Apache Sling Dynami
 
 >[!NOTE]
 >
->Wenn Sie [!DNL Sling Dynamic Includes] für die Bereitstellung von Edge-Side Includes (ESI) verwenden, achten Sie darauf, relevante [Antwort-Header im Dispatcher-Cache](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders) zwischenzuspeichern. Mögliche Kopfzeilen sind:
+>Wenn Sie [!DNL Sling Dynamic Includes] für die Bereitstellung von Edge-Side Includes (ESI) verwenden, achten Sie darauf, relevante [Antwort-Header im Dispatcher-Cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders) zwischenzuspeichern. Mögliche Kopfzeilen sind:
 >
 >* &quot;Cache-Control&quot;
 >* &quot;content-disposition&quot;
