@@ -10,17 +10,17 @@ role: Developer
 level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
-source-git-commit: 32320905786682a852baf7d777cb06de0072c439
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3299'
-ht-degree: 4%
+source-wordcount: '3285'
+ht-degree: 3%
 
 ---
 
 
 # Client-seitige Bibliotheken und Frontend-Workflow {#client-side-libraries}
 
-Erfahren Sie, wie Client-seitige Bibliotheken oder Client-Bibliotheken zum Bereitstellen und Verwalten von CSS und JavaScript für eine Adobe Experience Manager (AEM) Sites-Implementierung verwendet werden. In diesem Tutorial wird auch erläutert, wie das [ui.frontend](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/archetype/uifrontend.html)-Modul, ein entkoppeltes [webpack](https://webpack.js.org/)-Projekt, in den End-to-End-Build-Prozess integriert werden kann.
+Erfahren Sie, wie Client-seitige Bibliotheken oder Client-Bibliotheken zum Bereitstellen und Verwalten von CSS und JavaScript für eine Adobe Experience Manager (AEM) Sites-Implementierung verwendet werden. In diesem Tutorial wird auch erläutert, wie das [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)-Modul, ein entkoppeltes [webpack](https://webpack.js.org/)-Projekt, in den End-to-End-Build-Prozess integriert werden kann.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -81,7 +81,7 @@ Client-seitige Bibliotheken bieten einen Mechanismus zum Organisieren und Verwal
 1. Verwalten von Abhängigkeiten von Drittanbieter-Frameworks auf organisierte Weise
 1. Minimieren Sie die Anzahl der clientseitigen Anforderungen, indem Sie CSS/JS in eine oder zwei Anforderungen verketten.
 
-Weitere Informationen zur Verwendung Client-seitiger Bibliotheken [finden Sie hier](https://docs.adobe.com/content/help/de-DE/experience-manager-65/developing/introduction/clientlibs.html).
+Weitere Informationen zur Verwendung Client-seitiger Bibliotheken [finden Sie hier](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html).
 
 Clientseitige Bibliotheken haben einige Einschränkungen. Insbesondere ist eine begrenzte Unterstützung für beliebte Frontend-Sprachen wie Sass, LESS und TypeScript. Im Tutorial werden wir sehen, wie das Modul **ui.frontend** dabei helfen kann.
 
@@ -89,7 +89,7 @@ Stellen Sie die Starter-Codebasis in einer lokalen AEM-Instanz bereit und navigi
 
 ## Client-seitige Bibliotheksorganisation {#organization}
 
-Als Nächstes werden wir die Organisation von Client-Bibliotheken untersuchen, die vom [AEM Projektarchetyp](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/archetype/overview.html) generiert wurden.
+Als Nächstes werden wir die Organisation von Client-Bibliotheken untersuchen, die vom [AEM Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) generiert wurden.
 
 ![Allgemeine Client-Bibliotheksorganisation](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -117,9 +117,9 @@ Als Nächstes werden wir die Organisation von Client-Bibliotheken untersuchen, d
 
 1. Beachten Sie, dass `clientlib-site` und `clientlib-dependencies` von der Quell-Code-Verwaltung ignoriert werden. Dies ist beabsichtigt, da diese zum Zeitpunkt der Erstellung durch das Modul `ui.frontend` generiert werden.
 
-## Aktualisieren von Basistypen {#base-styles}
+## Basistypen aktualisieren {#base-styles}
 
-Aktualisieren Sie anschließend die im Modul **[ui.frontend](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html)** definierten Basisstile. Die Dateien im Modul `ui.frontend` generieren die Bibliotheken `clientlib-site` und `clientlib-dependecies`, die das Site-Design und alle Abhängigkeiten von Drittanbietern enthalten.
+Aktualisieren Sie anschließend die im Modul **[ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)** definierten Basisstile. Die Dateien im Modul `ui.frontend` generieren die Bibliotheken `clientlib-site` und `clientlib-dependecies`, die das Site-Design und alle Abhängigkeiten von Drittanbietern enthalten.
 
 Client-seitige Bibliotheken haben einige Einschränkungen bei der Unterstützung von Sprachen wie [Sass](https://sass-lang.com/) oder [TypeScript](https://www.typescriptlang.org/). Es gibt eine Reihe von Open-Source-Tools wie [NPM](https://www.npmjs.com/) und [webpack](https://webpack.js.org/), die die Front-End-Entwicklung beschleunigen und optimieren. Das Ziel des Moduls **ui.frontend** besteht darin, diese Tools zur Verwaltung der meisten Frontend-Quelldateien verwenden zu können.
 
@@ -164,7 +164,7 @@ Client-seitige Bibliotheken haben einige Einschränkungen bei der Unterstützung
 
    Inspect die geänderten Dateien, um Details zur WKND-Stilimplementierung anzuzeigen.
 
-## Inspect the ui.frontend integration {#ui-frontend-integration}
+## Inspect: ui.frontend-Integration {#ui-frontend-integration}
 
 Ein wichtiges Integrationselement, das in das Modul **ui.frontend** integriert ist, [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator), nimmt die kompilierten CSS- und JS-Artefakte aus einem webpack/npm-Projekt und wandelt sie in AEM Client-seitige Bibliotheken um.
 
@@ -200,7 +200,7 @@ Der AEM Projektarchetyp richtet diese Integration automatisch ein. Erfahren Sie,
 
    >[!NOTE]
    >
-   >Es gibt auch ein `npm run prod`-Profil, das JS und CSS minimiert. Dies ist die Standardkompilierung, sobald der Webpack-Build über Maven ausgelöst wird. Weitere Informationen zum Modul [ui.frontend finden Sie hier](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend.html).
+   >Es gibt auch ein `npm run prod`-Profil, das JS und CSS minimiert. Dies ist die Standardkompilierung, sobald der Webpack-Build über Maven ausgelöst wird. Weitere Informationen zum Modul [ui.frontend finden Sie hier](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html).
 
 1. Inspect die Datei `site.css` unter `ui.frontend/dist/clientlib-site/site.css`. Dies ist das kompilierte CSS, das auf den Sass-Quelldateien basiert.
 
@@ -236,7 +236,7 @@ Der AEM Projektarchetyp richtet diese Integration automatisch ein. Erfahren Sie,
 >
 > Die Verwendung des Moduls **ui.frontend** ist möglicherweise nicht für alle Projekte erforderlich. Das Modul **ui.frontend** erhöht die Komplexität und ist es nicht erforderlich/wünschenswert, einige dieser erweiterten Frontend-Tools (Sass, Webpack, npm..) zu verwenden, ist dies möglicherweise nicht erforderlich.
 
-## Seiten- und Vorlagenaufnahme {#page-inclusion}
+## Seiten- und Vorlageneinbindung {#page-inclusion}
 
 Als Nächstes sehen wir, wie die clientlibs auf der AEM Seite referenziert werden. Eine gängige Best Practice bei der Webentwicklung besteht darin, CSS in die HTML-Kopfzeile `<head>` und JavaScript direkt vor dem Schließen des Tags `</body>` einzuschließen.
 
@@ -315,7 +315,7 @@ Als Nächstes sehen wir, wie die clientlibs auf der AEM Seite referenziert werde
 
    >[!WARNING]
    >
-   >Auf der Veröffentlichungsseite ist es wichtig, dass die Client-Bibliotheken **nicht** von **/apps** bereitgestellt werden, da dieser Pfad aus Sicherheitsgründen mithilfe des Abschnitts [Dispatcher-Filter](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section) eingeschränkt werden sollte. Die [allowProxy-Eigenschaft](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) der Client-Bibliothek stellt sicher, dass CSS und JS von **/etc.clientlibs** bereitgestellt werden.
+   >Auf der Veröffentlichungsseite ist es wichtig, dass die Client-Bibliotheken **nicht** von **/apps** bereitgestellt werden, da dieser Pfad aus Sicherheitsgründen mithilfe des Abschnitts [Dispatcher-Filter](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section) eingeschränkt werden sollte. Die [allowProxy-Eigenschaft](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) der Client-Bibliothek stellt sicher, dass CSS und JS von **/etc.clientlibs** bereitgestellt werden.
 
 ## Webpack DevServer - Statisches Markup {#webpack-dev-static}
 
