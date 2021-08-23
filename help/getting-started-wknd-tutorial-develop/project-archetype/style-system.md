@@ -12,10 +12,10 @@ level: Beginner
 kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2003'
-ht-degree: 3%
+source-wordcount: '1999'
+ht-degree: 2%
 
 ---
 
@@ -61,7 +61,7 @@ Sehen Sie sich den Basis-Code an, auf dem das Tutorial aufbaut:
 
 Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/style-system-solution) anzeigen oder den Code lokal auschecken, indem Sie zu der Verzweigung `tutorial/style-system-solution` wechseln.
 
-## Vorgabe
+## Ziele
 
 1. Erfahren Sie, wie Sie das Stilsystem verwenden, um markenspezifische CSS auf AEM Kernkomponenten anzuwenden.
 1. Erfahren Sie mehr über die BEM-Notation und wie sie verwendet werden kann, um Stile sorgfältig zu definieren.
@@ -69,7 +69,7 @@ Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-gu
 
 ## Was Sie erstellen werden {#what-you-will-build}
 
-In diesem Kapitel verwenden wir die Funktion [Stilsystem](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html), um Varianten der auf der Artikelseite verwendeten Komponenten **Titel** und **Text** zu erstellen.
+In diesem Kapitel verwenden wir die Funktion [Stilsystem](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html), um Varianten der auf der Artikelseite verwendeten Komponenten **Titel** und **Text** zu erstellen.
 
 ![Für Titel verfügbare Stile](assets/style-system/styles-added-title.png)
 
@@ -77,7 +77,7 @@ In diesem Kapitel verwenden wir die Funktion [Stilsystem](https://docs.adobe.com
 
 ## Hintergrund {#background}
 
-Mit dem [Stilsystem](https://docs.adobe.com/content/help/de-DE/experience-manager-65/developing/components/style-system.html) können Entwickler und Vorlagen-Editoren mehrere visuelle Varianten einer Komponente erstellen. Autoren können dann entscheiden, welcher Stil beim Erstellen einer Seite verwendet werden soll. Wir werden das Stilsystem im Rest des Tutorials nutzen, um mehrere einzigartige Stile zu erreichen und gleichzeitig Kernkomponenten in einem Ansatz mit geringem Code zu nutzen.
+Mit dem [Stilsystem](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html) können Entwickler und Vorlagen-Editoren mehrere visuelle Varianten einer Komponente erstellen. Autoren können dann entscheiden, welcher Stil beim Erstellen einer Seite verwendet werden soll. Wir werden das Stilsystem im Rest des Tutorials nutzen, um mehrere einzigartige Stile zu erreichen und gleichzeitig Kernkomponenten in einem Ansatz mit geringem Code zu nutzen.
 
 Die allgemeine Idee des Stilsystems besteht darin, dass Autoren verschiedene Stile dafür wählen können, wie eine Komponente aussehen soll. Die &quot;Stile&quot;werden durch zusätzliche CSS-Klassen unterstützt, die in das äußere div einer Komponente eingefügt werden. In den Client-Bibliotheken werden CSS-Regeln basierend auf diesen Stilklassen hinzugefügt, sodass die Komponente das Erscheinungsbild ändert.
 
@@ -236,7 +236,7 @@ Als Autor können wir schließlich festlegen, dass der Unterstrichstil auf besti
 
    Verwenden Sie Ihre Browser-Entwickler-Tools, um zu überprüfen, ob das Markup um die Titelkomponente mit der CSS-Klasse `cmp-title--underline` auf das äußere div angewendet wird.
 
-## Stil des Anführungszeichens - Text {#text-component}
+## Anführungszeichenblock-Stil - Text {#text-component}
 
 Wiederholen Sie anschließend ähnliche Schritte, um einen eindeutigen Stil auf die [Textkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) anzuwenden. Die Textkomponente wurde im Projekt unter `/apps/wknd/components/text` als Teil des Moduls **ui.apps** bereitgestellt. Die Standardstile von Absatzelementen wurden bereits in **ui.frontend** implementiert.
 
