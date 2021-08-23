@@ -10,10 +10,10 @@ activity: use
 topic: Content Management
 role: Admin
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '342'
-ht-degree: 9%
+source-wordcount: '338'
+ht-degree: 7%
 
 ---
 
@@ -26,7 +26,7 @@ In diesem letzten Kapitel möchten wir Ihnen lediglich zwei wertvolle Berichte v
 
 Der Bericht &quot;Bandbreite und Speicher&quot;zeigt an, wie viel Bandbreite der Image-Server pro Monat beansprucht wurde und welchen Speicher Sie in Dynamic Media Classic nutzen. Die Lagerung ist ein vertraglich vereinbarter Betrag, daher ist es wichtig zu überprüfen und sicherzustellen, dass Sie unter Ihrem Limit bleiben, um Übernachtungsgebühren zu vermeiden.
 
-![image](assets/valuable-reports/reports-1.jpg)
+![Bild](assets/valuable-reports/reports-1.jpg)
 
 _Der Bericht &quot;Bandbreite und Speicher&quot;zeigt dieses Konto weit über die 30-GB-Speichergrenze an._
 
@@ -34,7 +34,7 @@ _Der Bericht &quot;Bandbreite und Speicher&quot;zeigt dieses Konto weit über di
 
 Wenn eine URL ein fehlendes Bild anfordert, generiert der Image-Server einen Fehler. Sie können ein Standardbild einrichten, das in diesen Fällen angezeigt wird. Sie sollten sich jedoch der Fehler bewusst sein. Der Bericht &quot;Bildfehler&quot;enthält eine Liste der 20 häufigsten Bildfehler in den letzten 24 Stunden mit Details wie der Häufigkeit des Fehlers, dem Bild, das den Fehler enthält, und der Seite mit dem Problembild. Wenn die Antwort &quot;STANDARD&quot;lautet, bedeutet dies, dass Ihr Standardbild stattdessen bereitgestellt wurde.
 
-![image](assets/valuable-reports/reports-2.jpg)
+![Bild](assets/valuable-reports/reports-2.jpg)
 
 _Bildfehlerbericht._
 
@@ -46,7 +46,7 @@ Weitere Informationen zu Dynamic Media Classic finden Sie in den folgenden Resso
 
 - [Dynamic Media Classic auf Experience League - Vorteile](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
 - [Dynamic Media Classic auf Experience League - Mehr dazu](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
-- [Die Archive des Dynamic Media Newsletters](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/dynamic-media-newsletter.html)
+- [Die Archive des Dynamic Media Newsletters](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
 - [Dynamic Media Newsletter-Abonnementseite](https://www.adobe.com/subscription/dynamic-media-newsletter.html)
-- [Dokumentation zu Dynamic Media Classic](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/home.html)
+- [Dokumentation zu Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)
 - [Rich Media-Blog-Beiträge](https://theblog.adobe.com/tag/dynamic-media)
