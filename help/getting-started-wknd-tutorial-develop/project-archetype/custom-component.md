@@ -11,9 +11,9 @@ level: Beginner
 kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
-source-git-commit: 66d35a41d63d4c33f71a118e9471c5aa58dc48a7
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '4108'
+source-wordcount: '4106'
 ht-degree: 1%
 
 ---
@@ -58,7 +58,7 @@ Sehen Sie sich den Basis-Code an, auf dem das Tutorial aufbaut:
 
 Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/custom-component-solution) anzeigen oder den Code lokal auschecken, indem Sie zu der Verzweigung `tutorial/custom-component-solution` wechseln.
 
-## Zielsetzung
+## Ziele
 
 1. Informationen zum Erstellen einer benutzerdefinierten AEM-Komponente
 1. Erfahren Sie, wie Sie Geschäftslogik mit Sling-Modellen einbinden können.
@@ -381,7 +381,7 @@ Das Byline-Sling-Modell stützt sich auf mehrere von AEM bereitgestellte Java-AP
 
    `uber-jar` ist nur enthalten, wenn das Profil `classic` aufgerufen wird, d. h. `mvn clean install -PautoInstallSinglePackage -Pclassic`. Auch dies ist für dieses Projekt einzigartig. In einem realen Projekt, das vom AEM Projektarchetyp generiert wurde, ist `uber-jar` die Standardeinstellung, wenn die angegebene Version von AEM 6.5 oder 6.4 ist.
 
-   Das [uber-jar](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) enthält alle öffentlichen Java-APIs, die von AEM 6.x bereitgestellt werden. Die Version wird im übergeordneten Reaktorpom verwaltet, der sich im Stammverzeichnis des Projekts `aem-guides-wknd/pom.xml` befindet.
+   Das [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) enthält alle öffentlichen Java-APIs, die von AEM 6.x bereitgestellt werden. Die Version wird im übergeordneten Reaktorpom verwaltet, der sich im Stammverzeichnis des Projekts `aem-guides-wknd/pom.xml` befindet.
 
 1. Suchen Sie die Abhängigkeit für `core.wcm.components.core`:
 
