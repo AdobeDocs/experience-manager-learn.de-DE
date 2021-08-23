@@ -13,9 +13,9 @@ thumbnail: 5831-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1508'
+source-wordcount: '1502'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 3%
 
 Erfahren Sie, wie Sie eine benutzerdefinierte Komponente erstellen, die mit dem AEM SPA Editor verwendet werden kann. Erfahren Sie, wie Sie Bearbeitungsdialogfelder und Sling-Modelle entwickeln, um das JSON-Modell zu erweitern und eine benutzerdefinierte Komponente zu füllen.
 
-## Vorgabe
+## Ziele
 
 1. Machen Sie sich mit der Rolle von Sling-Modellen bei der Bearbeitung der von AEM bereitgestellten JSON-Modell-API vertraut.
 2. Erfahren Sie, wie Sie neue AEM-Komponentendialogfelder erstellen.
@@ -77,7 +77,7 @@ Eine AEM Komponente ist als Knoten und Eigenschaften definiert. Im Projekt werde
 
 >[!NOTE]
 >
-> Ein kurzer Auffrischungskurs zu den [Grundlagen AEM Komponenten kann hilfreich sein](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/component-basics.html).
+> Ein kurzer Auffrischungskurs zu den [Grundlagen AEM Komponenten kann hilfreich sein](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html).
 
 1. Öffnen Sie in der IDE Ihrer Wahl den Ordner `ui.apps` .
 2. Navigieren Sie zu `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components` und erstellen Sie einen neuen Ordner mit dem Namen `custom-component`.
@@ -159,13 +159,13 @@ Eine AEM Komponente ist als Knoten und Eigenschaften definiert. Im Projekt werde
    >
    > Sie können viel mehr [Beispiele für Dialogfelder anzeigen, indem Sie die Kernkomponentendefinitionen](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components) anzeigen. Sie können auch zusätzliche Formularfelder anzeigen, wie `select`, `textarea`, `pathfield`, die unter `/libs/granite/ui/components/coral/foundation/form` unter [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form) verfügbar sind.
 
-   Bei einer herkömmlichen AEM-Komponente ist in der Regel ein [HTL](https://docs.adobe.com/content/help/de-DE/experience-manager-htl/using/overview.html)-Skript erforderlich. Da das SPA die Komponente rendert, ist kein HTL-Skript erforderlich.
+   Bei einer herkömmlichen AEM-Komponente ist in der Regel ein [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=de)-Skript erforderlich. Da das SPA die Komponente rendert, ist kein HTL-Skript erforderlich.
 
 ## Sling-Modell erstellen
 
-Sling-Modelle sind von Anmerkungen gesteuerte Java-&quot;POJOs&quot;(Plain Old Java Objects), die die Zuordnung von Daten aus dem JCR zu Java-Variablen erleichtern. [Sling-](https://docs.adobe.com/content/help/en/experience-manager-learn/getting-started-wknd-tutorial-develop/component-basics.html#sling-models) Modelle funktionieren normalerweise, um komplexe serverseitige Geschäftslogik für AEM Komponenten zu verkapseln.
+Sling-Modelle sind von Anmerkungen gesteuerte Java-&quot;POJOs&quot;(Plain Old Java Objects), die die Zuordnung von Daten aus dem JCR zu Java-Variablen erleichtern. [Sling-](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models) Modelle funktionieren normalerweise, um komplexe serverseitige Geschäftslogik für AEM Komponenten zu verkapseln.
 
-Im Kontext des SPA-Editors stellen Sling-Modelle den Inhalt einer Komponente über das JSON-Modell mithilfe einer Funktion mit dem [Sling Model Exporter](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/foundation/development/develop-sling-model-exporter.html) bereit.
+Im Kontext des SPA-Editors stellen Sling-Modelle den Inhalt einer Komponente über das JSON-Modell mithilfe einer Funktion mit dem [Sling Model Exporter](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html) bereit.
 
 1. Öffnen Sie in der IDE Ihrer Wahl das Modul `core` . `CustomComponent.java` und  `CustomComponentImpl.java` wurden bereits als Teil des Kapitel-Starter-Codes erstellt und ausgelagert.
 
