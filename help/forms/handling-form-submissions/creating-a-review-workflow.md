@@ -1,7 +1,7 @@
 ---
 title: Erstellen eines Workflows zum Überprüfen der gesendeten Daten
 description: Erstellen AEM Workflow-Modells mit AEM Forms-Workflow-Komponenten zum Überprüfen gesendeter Daten.
-sub-product: Formulare
+sub-product: forms
 feature: Workflow
 topics: integrations
 audience: developer
@@ -13,9 +13,9 @@ thumbnail: 40242.jpg
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '141'
 ht-degree: 6%
 
 ---
@@ -27,7 +27,7 @@ Workflows werden normalerweise verwendet, um gesendete Daten zur Überprüfung u
 
 ## Voraussetzung
 
-Stellen Sie sicher, dass Sie über eine funktionierende Instanz von AEM Forms verfügen. Folgen Sie dem [Installationshandbuch](https://docs.adobe.com/content/help/en/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html), um AEM Forms zu installieren und zu konfigurieren.
+Stellen Sie sicher, dass Sie über eine funktionierende Instanz von AEM Forms verfügen. Folgen Sie dem [Installationshandbuch](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html), um AEM Forms zu installieren und zu konfigurieren.
 
 Im folgenden Video wird die Erstellung des Arbeitsablaufs für Überprüfung und Genehmigung mithilfe von AEM Forms-Komponenten erläutert
 >[!VIDEO](https://video.tv.adobe.com/v/40242/?quality=9&learn=on)
