@@ -10,9 +10,9 @@ activity: use
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '6306'
+source-wordcount: '6292'
 ht-degree: 0%
 
 ---
@@ -66,14 +66,14 @@ Da grundlegende Vorlagen in der Regel in Photoshop entworfen, aber über eine UR
 
 Vorlagenprojekte können je nach Geschäftsregeln und Anforderungen der Anwendung relativ einfach oder äußerst komplex sein. Grundlegende Vorlagen werden vom Image-Server aufgerufen. Aufgrund der Flexibilität der Dynamic Media Classic-Umgebung können Sie jedoch auch Vorlagen in anderen Vorlagen verschachteln, sodass Sie relativ komplexe Bilder erstellen können, die mit häufig benannten Variablen verknüpft werden können.
 
-- Erfahren Sie mehr über [Vorlagengrundlagen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/quick-start-template-basics.html).
-- Erfahren Sie, wie Sie eine [einfache Vorlage](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template.html#creating_a_template) erstellen.
+- Erfahren Sie mehr über [Vorlagengrundlagen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/quick-start-template-basics.html).
+- Erfahren Sie, wie Sie eine [einfache Vorlage](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#creating_a_template) erstellen.
 
 ## Erstellen einer einfachen Vorlage
 
 Beim Arbeiten mit einer einfachen Vorlage folgen Sie normalerweise den Workflow-Schritten im unten stehenden Diagramm. Schritte, die mit gepunkteten Linien markiert sind, sind optional, wenn Sie dynamische Textebenen verwenden. Sie werden in den Anweisungen unten als &quot;Text-Workflow&quot;angegeben. Wenn Sie keinen Text verwenden, folgen Sie nur dem Hauptpfad.
 
-![image](assets/basic-templates/basic-templates-1.png)
+![Bild](assets/basic-templates/basic-templates-1.png)
 
 _Workflow &quot;Grundlegende Vorlage&quot;._
 
@@ -92,10 +92,10 @@ Bevor Sie Ihre Vorlagen-Assets in Dynamic Media Classic hochladen, müssen Sie e
 
 Bevor Sie Ihre Photoshop-Datei in Dynamic Media Classic hochladen, vereinfachen Sie die Ebenen in Photoshop, um die Arbeit mit und die größtmögliche Kompatibilität mit dem Image-Server zu erleichtern. Ihre PSD-Datei besteht oft aus vielen Elementen, die von Dynamic Media Classic nicht erkannt werden, und Sie können auch mit vielen kleinen Elementen enden, die schwierig zu handhaben sind. Achten Sie darauf, eine Sicherungskopie Ihrer Übergeordneten PSD zu speichern, falls Sie das Original später bearbeiten müssen. Sie laden die vereinfachte Kopie hoch, nicht die Übergeordnete.
 
-![image](assets/basic-templates/basic-templates-2.jpg)
+![Bild](assets/basic-templates/basic-templates-2.jpg)
 
 1. Vereinfachen Sie die Ebenenstruktur durch Zusammenführen/Reduzieren verwandter Ebenen, die zusammen in eine einzige Ebene eingeschaltet/deaktiviert werden müssen. Beispielsweise werden die Bezeichnung &quot;NEU&quot;und das blaue Banner in einer Ebene zusammengeführt, sodass Sie sie mit einem Klick ein- oder ausblenden können.
-   ![image](assets/basic-templates/basic-templates-3.jpg)
+   ![Bild](assets/basic-templates/basic-templates-3.jpg)
 2. Einige Ebenentypen und Ebeneneffekte werden von Dynamic Media Classic oder dem Image-Server nicht unterstützt und müssen vor dem Hochladen gerastert werden. Andernfalls können die Effekte ignoriert oder die Ebenen verworfen werden. Das Rastern einer Ebene bedeutet, dass die bearbeitbare Ebene in nicht bearbeitbar umgewandelt wird. Um Ebeneneffekte oder Textebenen zu rastern, erstellen Sie eine leere Ebene, wählen Sie beide aus und führen Sie sie mit **Ebenen > Ebenen zusammenführen** oder STRG + E/CMD + E zusammen.
 
    - Dynamic Media Classic kann Ebenen nicht gruppieren oder verknüpfen. Alle Ebenen einer Gruppe oder eines verknüpften Sets werden in separate Ebenen konvertiert, die nicht mehr gruppiert/verknüpft sind.
@@ -118,7 +118,7 @@ Nachdem Schriftarten wie jedes andere Asset in Dynamic Media Classic hochgeladen
 
 Beachten Sie, dass Schriftarten mehrere interne Namen haben, die sich häufig von ihrem externen Dateinamen unterscheiden. Sie können alle zugehörigen Namen auf der Detailseite für dieses Asset in Dynamic Media Classic sehen. Im Folgenden finden Sie die Namen der Schriftart Adobe Caslon Pro Semifold, die auf der Registerkarte Metadaten in Dynamic Media Classic aufgeführt ist:
 
-![image](assets/basic-templates/basic-templates-4.jpg)
+![Bild](assets/basic-templates/basic-templates-4.jpg)
 
 _Registerkarte &quot;Metadaten&quot;auf der Detailseite für eine Schriftart in Dynamic Media Classic._
 
@@ -148,7 +148,7 @@ Machen wir uns zunächst mit der Benutzeroberfläche vertraut.
 
 In der linken Mitte befindet sich Ihr Arbeitsbereich mit einer Vorschau Ihrer endgültigen Vorlage. Auf der rechten Seite befinden sich die Bereiche Ebenen und Ebeneneigenschaften . In diesen Bereichen werden Sie am meisten arbeiten.
 
-![image](assets/basic-templates/basic-templates-5.jpg)
+![Bild](assets/basic-templates/basic-templates-5.jpg)
 
 _Seite &quot;Grundlagen der Vorlage erstellen&quot;._
 
@@ -181,7 +181,7 @@ Der Image-Server unterstützt einige programmatische Ebeneneffekte - Spezialeffe
 - **Äußeres Leuchten**. Wendet einen Glüheffekt gleichmäßig auf alle Kanten der Ebene an.
 - **Glühen nach innen**. Wendet einen Glüheffekt gleichmäßig innerhalb aller Kanten der Ebene an.
 
-![image](assets/basic-templates/basic-templates-6.jpg)
+![Bild](assets/basic-templates/basic-templates-6.jpg)
 
 _Eine Ebene mit und ohne Schlagschatten_
 
@@ -189,7 +189,7 @@ Um einen Effekt hinzuzufügen, klicken Sie auf **Effekt hinzufügen** und wähle
 
 Schatteneffekte werden horizontal oder vertikal von der Ebene weg versetzt, während Schatteneffekte gleichmäßig in alle Richtungen angewendet werden. Inner-Effekte wirken auf die undurchsichtigen Teile der Ebene, während Außeneffekte nur die transparenten Bereiche betreffen.
 
-Erfahren Sie mehr über[Hinzufügen von Ebeneneffekten](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template.html#using-shadow-and-glow-effects-on-layers).
+Erfahren Sie mehr über[Hinzufügen von Ebeneneffekten](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template.html#using-shadow-and-glow-effects-on-layers).
 
 ### Parameter hinzufügen
 
@@ -199,7 +199,7 @@ In Dynamic Media Classic ist ein Parameter eine Variable, die mit einer Vorlagen
 
 Wenn Sie keinen Parameter für eine Eigenschaft hinzufügen, bleibt diese Eigenschaft in der Dynamic Media Classic-Datenbank verborgen und wird nicht in der URL angezeigt.
 
-![image](assets/basic-templates/parameters.png)
+![Bild](assets/basic-templates/parameters.png)
 
 Ohne Parameter wären Ihre URLs in der Regel viel länger, insbesondere wenn Sie auch dynamischen Text verwenden. Text fügt viele Dutzende von zusätzlichen Zeichen zu jeder URL hinzu.
 
@@ -226,7 +226,7 @@ Dies ist der Workflow zum Erstellen von Parametern:
 >
 >Kann keinen Parameter hinzufügen, da die Eigenschaft nicht angezeigt wird? Ändern Sie einfach die Eigenschaft der Ebene von der Standardeinstellung (durch Verschieben, Ändern der Größe, Ausblenden usw.). Diese Eigenschaft sollte jetzt angezeigt werden.
 
-Erfahren Sie mehr über [Vorlagenparameter](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template-parameters.html).
+Erfahren Sie mehr über [Vorlagenparameter](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html).
 
 ## Erstellen einer Vorlage mit Textebenen
 
@@ -265,7 +265,7 @@ Sie können Textebenen in einer Vorlage in Dynamic Media Classic auf zwei Arten 
 
 Sie geben Text mit dem Texteditor ein. Der Texteditor ist eine WYSIWYG-Benutzeroberfläche, mit der Sie Text mit Formatierungssteuerelementen eingeben und formatieren können, die denen in Photoshop oder Illustrator ähneln.
 
-![image](assets/basic-templates/basic-templates-9.jpg)
+![Bild](assets/basic-templates/basic-templates-9.jpg)
 
 _Text-Editor für Vorlagengrundlagen_
 
@@ -301,11 +301,11 @@ Wir gehen nun ähnlich vor wie bei Ebenenparametern vor, um Textparameter hinzuz
 
 Im Gegensatz zu Ebenenparametern wählen Sie nur den Wert aus, den Sie ändern möchten, und fügen einen Parameter hinzu, anstatt einen Parameter zur gesamten Eigenschaft hinzuzufügen.
 
-![image](assets/basic-templates/basic-templates-10.jpg)
+![Bild](assets/basic-templates/basic-templates-10.jpg)
 
 Beispiel-RTF:
 
-![image](assets/basic-templates/sample-rtf.png)
+![Bild](assets/basic-templates/sample-rtf.png)
 
 Bei der Untersuchung des RTF müssen Sie herausfinden, wo jede Einstellung geändert werden soll. In der obigen RTF-Datei kann es sinnvoll sein, einige davon zu verwenden, und Sie können sehen, woher die Formatierung stammt.
 
@@ -315,7 +315,7 @@ Sie können die Phrase Schokolade Mint Sandal sehen - das ist der Text selbst.
 - Ein RGB-Wert wird angezeigt: \red56\green53\blue4  - dies ist die Textfarbe.
 - Obwohl die Schriftgröße 20 ist, wird die Zahl 20 nicht angezeigt. Sie sehen jedoch den Befehl \fs40 - aus irgendeinem seltsamen Grund misst RTF Schriftarten als Halbpunkte. So ist \fs40 die Schriftgröße!
 
-Sie verfügen über genügend Informationen, um Ihre Parameter zu erstellen. Es gibt jedoch eine vollständige Referenz aller RTF-Befehle in der Image Serving-Dokumentation. Besuchen Sie die [Image Serving Documentation](https://docs.adobe.com/content/help/en/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html#concept-0d3136db7f6f49668274541cd4b6364c).
+Sie verfügen über genügend Informationen, um Ihre Parameter zu erstellen. Es gibt jedoch eine vollständige Referenz aller RTF-Befehle in der Image Serving-Dokumentation. Besuchen Sie die [Image Serving Documentation](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/text-formatting/c-text-formatting.html#concept-0d3136db7f6f49668274541cd4b6364c).
 
 #### Hinzufügen von Parametern zu Textebenen
 
@@ -333,7 +333,7 @@ Im Folgenden finden Sie die Schritte zum Hinzufügen von Parametern zu Textebene
 >
 >Um Parameter zur Textfarbe hinzuzufügen, fügen Sie Parameter für Rot, Grün und Blau separat hinzu. Wenn das RTF-Format beispielsweise `\red56\green53\blue46` ist, fügen Sie separate rote, grüne und blaue Parameter für die Werte 56, 53 und 46 hinzu. In der URL ändern Sie die Farbe, indem Sie alle drei aufrufen: `&$red=56&$green=53&$blue=46`.
 
-Erfahren Sie, wie Sie [Dynamische Textparameter erstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/creating-template-parameters.html#creating-dynamic-text-parameters).
+Erfahren Sie, wie Sie [Dynamische Textparameter erstellen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/creating-template-parameters.html#creating-dynamic-text-parameters).
 
 ## Veröffentlichen und Erstellen von Vorlagen-URLs
 
@@ -347,13 +347,13 @@ Eine Bildvorgabe für eine Vorlage hat nichts Besonderes. Wenn Sie bereits über
 
 Sie müssen eine Veröffentlichung ausführen, damit Ihre Änderungen live auf den Image-Server übertragen werden. Beachten Sie, was veröffentlicht werden muss: die verschiedenen Bild-Asset-Ebenen, die Schriftarten für dynamischen Text und die Vorlage selbst. Ähnlich wie bei anderen Rich-Media-Assets in Dynamic Media Classic wie Bildsets und Rotationssets ist eine einfache Vorlage eine künstliche Konstruktion. Sie ist ein Zeilenelement in der Datenbank, das mithilfe einer Reihe von Image Serving-Befehlen auf die Bilder und Schriftarten verweist. Wenn Sie also die Vorlage veröffentlichen, aktualisieren Sie lediglich die Daten auf dem Image-Server.
 
-Erfahren Sie mehr über [Veröffentlichen Ihrer Vorlage](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/template-basics/publishing-templates.html).
+Erfahren Sie mehr über [Veröffentlichen Ihrer Vorlage](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/template-basics/publishing-templates.html).
 
 ### Vorlagen-URL-Erstellung
 
 Eine einfache Vorlage hat dieselbe wesentliche URL-Syntax wie ein normaler Bildaufruf, wie zuvor erläutert. Eine Vorlage verfügt in der Regel über mehr Modifikatoren (Befehle durch ein kaufmännisches Und-Zeichen (&amp;) getrennt), z. B. Parameter mit Werten. Der Hauptunterschied besteht jedoch darin, dass Sie als Hauptbild die Vorlage aufrufen, anstatt ein statisches Bild aufzurufen.
 
-![image](assets/basic-templates/basic-templates-11.jpg)
+![Bild](assets/basic-templates/basic-templates-11.jpg)
 
 Im Gegensatz zu Bildvorgaben, die auf jeder Seite des Vorgabennamens ein Dollarzeichen ($) aufweisen, haben Parameter am Anfang ein einzelnes Dollarzeichen. Die Platzierung dieser Dollarzeichen ist wichtig.
 
