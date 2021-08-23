@@ -3,16 +3,12 @@ user-guide-title: Erste Schritte mit AEM Headless
 user-guide-description: Ein Tutorial, in dem von Anfang bis Ende erläutert wird, wie Inhalte mithilfe von AEM Headless aufgebaut und bereitgestellt werden können.
 breadcrumb-title: AEM Headless-Tutorial
 version: cloud-service
-sub-product: content-services
-audience: architect, developer, implementer
-doc-type: tutorial
-topics: content-delivery
-activity: develop, understand
+feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '181'
 ht-degree: 20%
 
 ---
@@ -22,7 +18,7 @@ ht-degree: 20%
 
 + [AEM Headless-Übersicht](./overview.md)
 + GraphQL {#graphql}
-   + [Überblick](./graphql/overview.md)
+   + [Übersicht](./graphql/overview.md)
    + Videoserie{#video-series}
       + [1 - Modellierungsgrundlagen](./graphql/video-series/modeling-basics.md)
       + [2 - Erweiterte Modellierung](./graphql/video-series/advanced-modeling.md)
@@ -32,7 +28,7 @@ ht-degree: 20%
       + [6 - Architektur der Autoren- und Veröffentlichungsinstanz](./graphql/video-series/author-publish-architecture.md)
       + [7 - GraphQL - Persistente Abfragen](./graphql/video-series/graphql-persisted-queries.md)
    + Mehrstufiges Tutorial{#multi-step}
-      + [Überblick](./graphql/multi-step/overview.md)
+      + [Übersicht](./graphql/multi-step/overview.md)
       + [1 - Schnelleinrichtung](./graphql/multi-step/setup.md)
       + [2 - Definieren von Inhaltsfragmentmodellen](./graphql/multi-step/content-fragment-models.md)
       + [3 - Erstellen von Inhaltsfragmenten](./graphql/multi-step/author-content-fragments.md)
@@ -42,7 +38,7 @@ ht-degree: 20%
       + [7 - Produktionsbereitstellung](./graphql/multi-step/production-deployment.md)
 + SPA Editor{#spa-editor}
    + React{#react}
-      + [Überblick](./spa-editor/react/overview.md)
+      + [Übersicht](./spa-editor/react/overview.md)
       + [1 - Projekt erstellen](./spa-editor/react/create-project.md)
       + [2 - SPA integrieren](./spa-editor/react/integrate-spa.md)
       + [3 - Zuordnen SPA Komponenten](./spa-editor/react/map-components.md)
@@ -50,7 +46,7 @@ ht-degree: 20%
       + [5 - Benutzerdefinierte Komponente](./spa-editor/react/custom-component.md)
       + [6 - Komponente erweitern](./spa-editor/react/extend-component.md)
    + Angular{#angular}
-      + [Überblick](./spa-editor/angular/overview.md)
+      + [Übersicht](./spa-editor/angular/overview.md)
       + [1 - SPA Editor-Projekt](./spa-editor/angular/create-project.md)
       + [2 - SPA integrieren](./spa-editor/angular/integrate-spa.md)
       + [3 - Zuordnen SPA Komponenten](./spa-editor/angular/map-components.md)
@@ -58,7 +54,7 @@ ht-degree: 20%
       + [5 - Benutzerdefinierte Komponente](./spa-editor/angular/custom-component.md)
       + [6 - Komponente erweitern](./spa-editor/angular/extend-component.md)
    + Remote SPA{#remote-spa}
-      + [Überblick](./spa-editor/remote-spa/overview.md)
+      + [Übersicht](./spa-editor/remote-spa/overview.md)
       + [Schnelleinstellungen](./spa-editor/remote-spa/quick-setup.md)
       + [1 - AEM konfigurieren](./spa-editor/remote-spa/aem-configure.md)
       + [2 - Bootstrap des SPA](./spa-editor/remote-spa/spa-bootstrap.md)
@@ -66,11 +62,11 @@ ht-degree: 20%
       + [4 - Container-Komponenten](./spa-editor/remote-spa/spa-container-component.md)
       + [5 - Dynamische Routen](./spa-editor/remote-spa/spa-dynamic-routes.md)
 + Token-basierte Authentifizierung {#authentication}
-   + [Überblick](./authentication/overview.md)
+   + [Übersicht](./authentication/overview.md)
    + [1 - Zugriffstoken für lokale Entwicklung](./authentication/local-development-access-token.md)
    + [2 - Service Credentials](./authentication/service-credentials.md)
 + Content Services {#content-services}
-   + [Überblick](./content-services/overview.md)
+   + [Übersicht](./content-services/overview.md)
    + [1 - Tutorial-Einrichtung](./content-services/chapter-1.md)
    + [2 - Definieren von Ereignisinhaltsfragmentmodellen](./content-services/chapter-2.md)
    + [3 - Erstellen von Inhaltsfragmenten für Ereignisse](./content-services/chapter-3.md)
