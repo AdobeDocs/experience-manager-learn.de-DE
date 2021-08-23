@@ -1,12 +1,7 @@
 ---
 title: Veröffentlichen von Seiten mit AEM Sites
-seo-title: Veröffentlichen von Seiten mit Adobe Experience Manager Sites
 description: Adobe Experience Manager Sites bietet verschiedene Optionen zum Veröffentlichen und Rückgängigmachen der Veröffentlichung von Inhalten. In diesem Video werden die verschiedenen Methoden und ihre Funktionen untersucht.
-seo-description: Adobe Experience Manager Sites bietet verschiedene Optionen zum Veröffentlichen und Rückgängigmachen der Veröffentlichung von Inhalten. In diesem Video werden die verschiedenen Methoden und ihre Funktionen untersucht.
-topics: publishing
-audience: all
-doc-type: feature video
-activity: use
+feature-set: Experience Manager
 version: 6.3, 6.4, 6.5, cloud-service
 kt: 4322
 thumbnail: 32193.jpg
@@ -14,10 +9,10 @@ feature: Veröffentlichung
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 2%
+source-wordcount: '137'
+ht-degree: 3%
 
 ---
 
@@ -40,4 +35,4 @@ AEM Sites bietet verschiedene Methoden zum Veröffentlichen und Rückgängigmach
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Dokumentation zur Veröffentlichung von Seiten](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/authoring/publishing-pages.html)
+* [Dokumentation zur Veröffentlichung von Seiten](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/publishing-pages.html)
