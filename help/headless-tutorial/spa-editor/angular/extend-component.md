@@ -13,10 +13,10 @@ thumbnail: 5871-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1989'
-ht-degree: 4%
+source-wordcount: '1967'
+ht-degree: 3%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 4%
 
 Erfahren Sie, wie Sie eine vorhandene Kernkomponente erweitern, um sie mit dem AEM SPA Editor zu verwenden. Das Verständnis, wie eine vorhandene Komponente erweitert wird, ist eine leistungsstarke Methode, um die Funktionen einer AEM SPA Editor-Implementierung anzupassen und zu erweitern.
 
-## Vorgabe
+## Ziele
 
 1. Erweitern einer vorhandenen Kernkomponente mit zusätzlichen Eigenschaften und Inhalten.
 2. Verstehen Sie die Grundlagen der Komponentenvererbung mit der Verwendung von `sling:resourceSuperType`.
@@ -33,13 +33,13 @@ Erfahren Sie, wie Sie eine vorhandene Kernkomponente erweitern, um sie mit dem A
 
 ## Was Sie erstellen werden
 
-In diesem Kapitel wird eine neue `Card` -Komponente erstellt. Die Komponente `Card` erweitert die [Bild-Kernkomponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/image.html) und fügt zusätzliche Inhaltsfelder wie einen Titel und eine Schaltfläche &quot;Aktionsaufruf&quot;hinzu, um die Rolle eines Teasers für andere Inhalte in der SPA auszuführen.
+In diesem Kapitel wird eine neue `Card` -Komponente erstellt. Die Komponente `Card` erweitert die [Bild-Kernkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=de) und fügt zusätzliche Inhaltsfelder wie einen Titel und eine Schaltfläche &quot;Aktionsaufruf&quot;hinzu, um die Rolle eines Teasers für andere Inhalte in der SPA auszuführen.
 
 ![Abschließendes Authoring der Kartenkomponente](assets/extend-component/final-authoring-card.png)
 
 >[!NOTE]
 >
-> In einer realen Implementierung ist es möglicherweise sinnvoller, einfach die [Teaser-Komponente](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/components/teaser.html) zu verwenden und dann die [Bild-Kernkomponente](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/components/image.html) zu erweitern, um eine `Card`-Komponente entsprechend den Projektanforderungen zu erstellen. Es wird immer empfohlen, [Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html) nach Möglichkeit direkt zu verwenden.
+> In einer realen Implementierung ist es möglicherweise sinnvoller, einfach die [Teaser-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html) zu verwenden und dann die [Bild-Kernkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) zu erweitern, um eine `Card`-Komponente entsprechend den Projektanforderungen zu erstellen. Es wird immer empfohlen, [Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de) nach Möglichkeit direkt zu verwenden.
 
 ## Voraussetzungen
 
@@ -106,13 +106,13 @@ Eine anfängliche Kartenkomponente wurde vom Code des Kapitelstarters bereitgest
 
    Beachten Sie, dass `sling:resourceSuperType` auf `core/wcm/components/image/v2/image` verweist. Dies bedeutet, dass die WKND SPA Image-Komponente alle Funktionen vom Kernkomponentenbild übernimmt.
 
-   Die Vererbung der Sling-Ressource wird auch als [Proxy-Muster](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) Sling-Ressource bezeichnet und ist ein leistungsstarkes Designmuster, mit dem untergeordnete Komponenten Funktionen übernehmen und bei Bedarf das Verhalten erweitern/überschreiben können. Die Sling-Vererbung unterstützt mehrere Vererbungsstufen, sodass letztendlich die neue Komponente `Card` die Funktionalität der Kernkomponente &quot;Bild&quot;übernimmt.
+   Die Vererbung der Sling-Ressource wird auch als [Proxy-Muster](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) Sling-Ressource bezeichnet und ist ein leistungsstarkes Designmuster, mit dem untergeordnete Komponenten Funktionen übernehmen und bei Bedarf das Verhalten erweitern/überschreiben können. Die Sling-Vererbung unterstützt mehrere Vererbungsstufen, sodass letztendlich die neue Komponente `Card` die Funktionalität der Kernkomponente &quot;Bild&quot;übernimmt.
 
    Viele Entwicklungsteams streben danach, D.R.Y. zu sein (wiederholen Sie sich nicht selbst). Die Sling-Vererbung ermöglicht dies mit AEM.
 
 4. Öffnen Sie unter dem Ordner `card` die Datei `_cq_dialog/.content.xml`.
 
-   Diese Datei ist die Definition des Komponentendialogfelds für die Komponente `Card` . Bei Verwendung der Sling-Vererbung ist es möglich, Funktionen des [Sling Resource Merger](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/sling-resource-merger.html) zu verwenden, um Teile des Dialogfelds zu überschreiben oder zu erweitern. In diesem Beispiel wurde dem Dialogfeld eine neue Registerkarte hinzugefügt, um zusätzliche Daten von einem Autor zu erfassen und die Kartenkomponente zu füllen.
+   Diese Datei ist die Definition des Komponentendialogfelds für die Komponente `Card` . Bei Verwendung der Sling-Vererbung ist es möglich, Funktionen des [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=de) zu verwenden, um Teile des Dialogfelds zu überschreiben oder zu erweitern. In diesem Beispiel wurde dem Dialogfeld eine neue Registerkarte hinzugefügt, um zusätzliche Daten von einem Autor zu erfassen und die Kartenkomponente zu füllen.
 
    Mit Eigenschaften wie `sling:orderBefore` können Entwickler festlegen, wo neue Registerkarten oder Formularfelder eingefügt werden sollen. In diesem Fall wird die Registerkarte `Text` vor der Registerkarte `asset` eingefügt. Um den Sling Resource Merger vollständig zu nutzen, ist es wichtig, die ursprüngliche Dialogfeldknotenstruktur für das [Bild-Komponentendialogfeld](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml) zu kennen.
 
@@ -296,7 +296,7 @@ Kehren Sie zur IDE Ihrer Wahl zurück und öffnen Sie das Modul `core` .
    }
    ```
 
-   Das `@PostConstruct initModel()` wird immer aufgerufen, wenn das Sling-Modell initialisiert wird. Daher ist es eine gute Gelegenheit, Objekte zu initialisieren, die von anderen Methoden im Modell verwendet werden können. Das `pageManager` ist eines von mehreren [Java-unterstützten globalen Objekten](https://docs.adobe.com/content/help/en/experience-manager-htl/using/htl/global-objects.html#java-backed-objects), die Sling-Modellen über die Anmerkung `@ScriptVariable` zur Verfügung gestellt werden. Die [getPage](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-)-Methode nimmt einen Pfad an und gibt ein AEM [Page](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-service/implementing/developing/ref/javadoc/com/day/cq/wcm/api/Page.html)-Objekt oder null zurück, wenn der Pfad nicht auf eine gültige Seite verweist.
+   Das `@PostConstruct initModel()` wird immer aufgerufen, wenn das Sling-Modell initialisiert wird. Daher ist es eine gute Gelegenheit, Objekte zu initialisieren, die von anderen Methoden im Modell verwendet werden können. Das `pageManager` ist eines von mehreren [Java-unterstützten globalen Objekten](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/global-objects.html#java-backed-objects), die Sling-Modellen über die Anmerkung `@ScriptVariable` zur Verfügung gestellt werden. Die [getPage](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-)-Methode nimmt einen Pfad an und gibt ein AEM [Page](https://docs.adobe.com/content/help/en/experience-manager-cloud-service-javadoc/com/day/cq/wcm/api/Page.html)-Objekt oder null zurück, wenn der Pfad nicht auf eine gültige Seite verweist.
 
    Dadurch wird die Variable `cardPage` initialisiert, die von den anderen neuen Methoden verwendet wird, um Daten über die zugrunde liegende verknüpfte Seite zurückzugeben.
 
