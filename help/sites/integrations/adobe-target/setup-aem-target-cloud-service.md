@@ -11,9 +11,9 @@ thumbnail: 41244.jpg
 topic: Integrationen
 role: Admin
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '144'
+source-wordcount: '142'
 ht-degree: 0%
 
 ---
@@ -29,5 +29,5 @@ Durch diese Integration kann der AEM-Autorendienst direkt mit Adobe Target kommu
 
 >[!CAUTION]
 >
->Es gibt ein bekanntes Problem mit der Adobe Target Cloud Services-Konfiguration, das im Video angezeigt wird. Bis dieses Problem behoben ist, führen Sie dieselben Schritte im Video aus, verwenden Sie jedoch die [alte Adobe Target-Cloud Services-Konfiguration](https://docs.adobe.com/content/help/en/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html).
+>Es gibt ein bekanntes Problem mit der Adobe Target Cloud Services-Konfiguration, das im Video angezeigt wird. Bis dieses Problem behoben ist, führen Sie dieselben Schritte im Video aus, verwenden Sie jedoch die [alte Adobe Target-Cloud Services-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html).
 
