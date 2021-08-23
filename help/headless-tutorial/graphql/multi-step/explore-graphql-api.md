@@ -1,22 +1,17 @@
 ---
 title: GraphQL-APIs - Erste Schritte mit AEM Headless - GraphQL
 description: Erste Schritte mit Adobe Experience Manager (AEM) und GraphQL. Erkunden Sie AEM GraphQL-APIs mit der integrierten GrapiQL-IDE. Erfahren Sie, wie AEM basierend auf einem Inhaltsfragmentmodell automatisch ein GraphQL-Schema generiert. Experimentieren Sie mit der Erstellung grundlegender Abfragen mithilfe der GraphQL-Syntax.
-sub-product: Assets
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6714
 thumbnail: KT-6714.jpg
-feature: Inhaltsfragmente, GraphQL-APIs
+feature: Inhaltsfragmente,GraphQL-API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1140'
 ht-degree: 2%
 
 ---
@@ -57,7 +52,7 @@ Die GraphiQL-IDE ist ein Entwicklungstool und wird nur in Umgebungen auf niedrig
 
    ![Installieren des GraphiQL-Pakets](assets/explore-graphql-api/install-graphiql-package.png)
 
-## Abfragen einer Liste von Inhaltsfragmenten {#query-list-cf}
+## Liste von Inhaltsfragmenten abfragen {#query-list-cf}
 
 Eine gängige Anforderung besteht darin, mehrere Inhaltsfragmente abzufragen.
 
@@ -237,7 +232,7 @@ Es ist auch möglich, ein einzelnes Inhaltsfragment direkt abzufragen. Der Inhal
 
 1. Führen Sie die Abfrage aus und beachten Sie, dass das `biography` -Feld ein wesentlich kürzeres `html` -Ergebnis enthält.
 
-## Abfrage nach mehreren Inhaltsfragmentmodellen {#query-multiple-models}
+## Abfrage für mehrere Inhaltsfragmentmodelle {#query-multiple-models}
 
 Es ist auch möglich, separate Abfragen in einer einzigen Abfrage zu kombinieren. Dies ist nützlich, um die Anzahl der HTTP-Anfragen zu minimieren, die zum Hochladen der Anwendung erforderlich sind. Beispielsweise kann die Ansicht *Home* einer Anwendung Inhalte basierend auf **zwei** verschiedenen Inhaltsfragmentmodellen anzeigen. Anstatt **zwei** separate Abfragen auszuführen, können wir die Abfragen zu einer einzigen Anfrage zusammenfassen.
 
