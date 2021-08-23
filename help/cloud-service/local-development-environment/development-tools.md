@@ -12,15 +12,15 @@ thumbnail: 25907.jpg
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: 6b4b9d7039b7b1c60ed1a7e5ec4ed42250499cec
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1430'
+source-wordcount: '1428'
 ht-degree: 4%
 
 ---
 
 
-# Einrichten von Entwicklungstools
+# Einrichten von Entwicklungs-Tools
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_devtools"
@@ -66,7 +66,7 @@ Wenn Sie Homebrew verwenden, befolgen Sie die Anweisungen __Installieren mit Hom
 
 ## Git installieren
 
-[](https://git-scm.com/) Gibt das von  [Adobe Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/requirements/source-code-repository.html) verwendete Quellcodeverwaltungssystem an und ist daher für die Entwicklung erforderlich.
+[](https://git-scm.com/) Gibt das von  [Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html) verwendete Quellcodeverwaltungssystem an und ist daher für die Entwicklung erforderlich.
 
 + Git mithilfe von Homebrew installieren
    1. Öffnen Sie Ihr Terminal/Ihre Eingabeaufforderung.
@@ -79,7 +79,7 @@ Wenn Sie Homebrew verwenden, befolgen Sie die Anweisungen __Installieren mit Hom
 
 ![Git](./assets/development-tools/git.png)
 
-## Installieren Sie Node.js (und npm){#node-js}
+## Installieren von Node.js (und npm){#node-js}
 
 [Node.](https://nodejs.org) jsis ist eine JavaScript-Laufzeitumgebung, die zum Arbeiten mit den Frontend-Assets des  __ui.__ frontendsub-Projekts eines AEM Projekts verwendet wird. Node.js wird mit [npm](https://www.npmjs.com/) bereitgestellt. Dies ist der De-facto-Paketmanager von Node.js, der zur Verwaltung von JavaScript-Abhängigkeiten verwendet wird.
 
@@ -118,7 +118,7 @@ Apache Maven ist das Open-Source-Java-Befehlszeilenwerkzeug, mit dem AEM Projekt
 
 ![Maven](./assets/development-tools/maven.png)
 
-## Einrichten von Adobe I/O CLI{#aio-cli}
+## Einrichten der Adobe I/O-CLI{#aio-cli}
 
 Die [Adobe I/O-CLI](https://github.com/adobe/aio-cli) oder `aio` bietet Befehlszeilenzugriff auf eine Vielzahl von Adobe-Services, einschließlich [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) und [Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). Die Adobe I/O-CLI spielt eine wesentliche Rolle bei der Entwicklung von AEM as a Cloud Service, da sie Entwicklern Folgendes ermöglicht:
 
@@ -131,13 +131,13 @@ Die [Adobe I/O-CLI](https://github.com/adobe/aio-cli) oder `aio` bietet Befehlsz
    + Führen Sie `node --version` zur Bestätigung aus
 1. Führen Sie `npm install -g @adobe/aio-cli` aus, um das `aio` npm-Modul global zu installieren.
 
-### Adobe I/O CLI Cloud Manager-Plugin{#aio-cloud-manager} einrichten
+### Einrichten des Adobe I/O CLI Cloud Manager-Plug-ins{#aio-cloud-manager}
 
 Mit dem Adobe I/O Cloud Manager-Plug-in kann die aio-CLI über den Befehl `aio cloudmanager` mit Adobe Cloud Manager interagieren.
 
 1. Führen Sie `aio plugins:install @adobe/aio-cli-plugin-cloudmanager` aus, um das [aio Cloud Manager-Plug-in](https://github.com/adobe/aio-cli-plugin-cloudmanager) zu installieren.
 
-### Einrichten des Adobe I/O CLI-Asset compute-Plugins{#aio-asset-compute}
+### Einrichten des Adobe I/O CLI Asset compute-Plug-ins{#aio-asset-compute}
 
 Mit dem Adobe I/O Cloud Manager-Plug-in kann die aio-CLI Asset compute-Sekundäre über den Befehl `aio asset-compute` generieren und ausführen.
 
