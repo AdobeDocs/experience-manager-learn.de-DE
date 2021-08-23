@@ -10,9 +10,9 @@ activity: use
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '706'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Wenn Sie sich die URLs von nahezu jedem Dynamic Media Classic-Kunden ansehen, wi
 
 Bildvorgaben verkürzen die URL. Anstatt also mehrere Image Serving-Anweisungen pro Anfrage zu schreiben, können Sie eine einzelne Bildvorgabe schreiben. Diese beiden URLs generieren beispielsweise dasselbe 300 x 300 JPEG-Bild mit Scharfzeichnung, die zweite verwendet jedoch eine Bildvorgabe:
 
-![image](assets/image-presets/image-preset-2.png)
+![Bild](assets/image-presets/image-preset-2.png)
 
 Der wahre Wert von Bildvorgaben besteht darin, dass jeder Unternehmensadministrator die Definition dieser Bildvorgabe aktualisieren und jedes Bild mit diesem Format beeinflussen kann, ohne dass ein Webcode geändert wird. Sie sehen die Ergebnisse jeder Änderung an einer Bildvorgabe, nachdem der Cache für die URL gelöscht wurde.
 
@@ -40,8 +40,8 @@ Eine Bildvorgabe weist auf beiden Seiten ihres Namens ein Dollarzeichen ($) auf 
 >
 >Erstellen Sie eine Bildvorgabe pro eindeutiger Bildgröße auf Ihrer Site. Wenn Sie z. B. ein Bild mit dem Format 350 x 350 für die Produktdetailseite, ein Bild mit dem Format 120 x 120 für die Durchsuchen-/Suchseiten und ein Bild mit dem Format 90 x 90 für ein Querverkauf-/Funktionselement benötigen, benötigen Sie drei Bildvorgaben, unabhängig davon, ob Sie 500 oder 500.0000000.
 
-- Erfahren Sie mehr über [Bildvorgaben](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
-- Erfahren Sie, wie Sie [eine Bildvorgabe erstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
+- Erfahren Sie mehr über [Bildvorgaben](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
+- Erfahren Sie, wie Sie [eine Bildvorgabe erstellen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
 
 ## Bildvorgaben und Scharfzeichnen
 
@@ -59,11 +59,11 @@ Wie viel Scharfzeichnung hinzugefügt werden soll, ist völlig subjektiv. Manche
 
 Die folgende Grafik zeigt drei Stufen der Scharfzeichnung. Von rechts nach links haben Sie keine Scharfzeichnung, nur den richtigen Betrag und zu viel.
 
-![image](assets/image-presets/image-presets-1.jpg)
+![Bild](assets/image-presets/image-presets-1.jpg)
 
 Dynamic Media Classic ermöglicht drei Arten der Scharfzeichnung: Einfaches Scharfzeichnen, Neuberechnen und Unschärfemaske.
 
-Erfahren Sie mehr über [Dynamic Media Classic-Scharfzeichnungsoptionen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
+Erfahren Sie mehr über [Dynamic Media Classic-Scharfzeichnungsoptionen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
 
 ## Zusätzliche Ressourcen
 
