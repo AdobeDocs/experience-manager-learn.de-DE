@@ -7,18 +7,18 @@ audience: developer, architect
 doc-type: technical video
 activity: setup
 version: 6.4, 6.5
-topic: 'Personalisierung '
+topic: Personalisierung
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '429'
-ht-degree: 35%
+source-wordcount: '427'
+ht-degree: 33%
 
 ---
 
 
-# Einrichten von ContextHub für Personalisierung {#set-up-contexthub}
+# Einrichten von ContextHub für die Personalisierung {#set-up-contexthub}
 
 ContextHub ist ein Framework zum Speichern, Ändern und Darstellen von Kontextdaten. Mit der ContextHub-JavaScript-API können Sie auf Speicher zugreifen, um Daten bei Bedarf zu erstellen, zu aktualisieren und zu löschen. Daher stellt ContextHub eine Datenschicht auf Ihren Seiten dar. Auf dieser Seite wird beschrieben, wie Sie Ihren AEM Seiten einen ContextHub hinzufügen.
 
@@ -42,7 +42,7 @@ Um die ContextHub-Funktionen zu aktivieren und eine Verknüpfung mit den Context
 
 ## Site-Konfiguration und ContextHub-Segmente {#site-configuration-and-contexthub-segments}
 
-ContextHub enthält eine Segmentations-Engine, die Segmente verwaltet und bestimmt, welche Segmente für den aktuellen Kontext aufgelöst werden. Mehrere Segmente sind definiert. Sie können die Javascript-API verwenden, um [aufgelöste Segmente zu ermitteln](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments). Aktivieren Sie die ContextHub-Segmente für Ihre Site unter [[!UICONTROL Konfigurationsbrowser]](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-service/implementing/developing/configurations.html).
+ContextHub enthält eine Segmentations-Engine, die Segmente verwaltet und bestimmt, welche Segmente für den aktuellen Kontext aufgelöst werden. Mehrere Segmente sind definiert. Sie können die Javascript-API verwenden, um [aufgelöste Segmente zu ermitteln](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments). Aktivieren Sie die ContextHub-Segmente für Ihre Site unter [[!UICONTROL Konfigurationsbrowser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html).
 
 ## Segmente erstellen {#create-segments}
 
@@ -52,7 +52,7 @@ Erstellen Sie AEM Segmente, die als Regeln für die Teaser dienen. Das heißt, s
 
 Weisen Sie den Cloud-Konfigurationspfad, den Segmentierungspfad und den ContextHub-Pfad Ihrem Site-Stammknoten zu, damit Sie ein personalisiertes Erlebnis für Ihre Zielgruppe erstellen können. Mithilfe des ContextHub können Sie die Kontextdaten bearbeiten und Ihre aufgelösten Segmente testen.
 
-![CRXDE Lite](assets/crx-de-properties.png) 
+![CRXDE Lite](assets/crx-de-properties.png)
 
 Weitere Informationen zu ContextHub und zur Segmentierung finden Sie unten:
 
