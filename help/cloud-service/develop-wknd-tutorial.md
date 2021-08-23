@@ -9,29 +9,29 @@ feature: AEM Projektarchetyp, Kernkomponenten, Seiten-Editor, bearbeitbare Vorla
 topic: Entwicklung
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '364'
-ht-degree: 57%
+source-wordcount: '362'
+ht-degree: 55%
 
 ---
 
 
-# Erste Schritte bei der Entwicklung von AEM Sites – WKND-Tutorial {#getting-started-developing-aem-sites-wknd-tutorial}
+# Erste Schritte bei der Entwicklung von AEM Sites – WKND-Tutorial{#getting-started-developing-aem-sites-wknd-tutorial}
 
-## Überblick {#overview}
+## Übersicht {#overview}
 
 Steigen Sie gerade in die Entwicklung mit Adobe Experience Manager as a Cloud Service ein? Benötigen Sie einen Auffrischungskurs zu den Best Practices? Dann sind Sie hier richtig!
 
 In diesem mehrteiligen Tutorial lernen Entwickler, die gerade mit AEM beginnen, wie sie eine Website in AEM mit den neuesten Standards und Technologien implementieren. Im Laufe dieses Tutorials lernen Sie die Grundlagen der AEM-Plattform und einige allgemeine Designmuster kennen.
 
-## WKND-Entwickler-Tutorial {#wknd-developer-tutorial}
+## WKND-Entwickler-Tutorial  {#wknd-developer-tutorial}
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
 Das Tutorial wurde für die Verwendung mit **AEM als Cloud Service** entwickelt und ist rückwärtskompatibel mit **AEM 6.5+** und **AEM 6.4.2+**.
 
-**[Sehen Sie sich das Tutorial hier an!](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
+**[Sehen Sie sich das Tutorial hier an!](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)**
 
 ## Bereitstellen von WKND in AEM als Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
 
