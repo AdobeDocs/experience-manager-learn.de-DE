@@ -2,12 +2,12 @@
 user-guide-title: AEM Assets-Videos und -Tutorials
 user-guide-description: Eine Sammlung von Videos und Tutorials zu Adobe Experience Manager Assets.
 breadcrumb-title: AEM Assets-Tutorials
-sub-product: Assets
+feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 team: TM
-source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 36%
+source-wordcount: '343'
+ht-degree: 34%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 36%
    + [Grundlegende Ordner](configuring/baseline-folders.md)
    + [Grundlegende Berechtigungen](configuring/baseline-permissions.md)
    + [Tagging](configuring/tagging.md)
-   + [Metadatenschemata](configuring/metadata-schemas.md)
+   + [Metadatenschemas](configuring/metadata-schemas.md)
    + [Metadatenprofile](configuring/metadata-profiles.md)
    + [Metadatenordnerschemata](configuring/metadata-folder-schemas.md)
    + [Asset-Admin-Suchleiste](configuring/assets-admin-search-rail.md)
@@ -63,12 +63,18 @@ ht-degree: 36%
 + Freigabe und Verteilung{#sharing}
    + [Herunterladen von Assets](./sharing/download.md)
    + [Assets veröffentlichen](./sharing/publish.md)
-   + [Brand Portal](./sharing/brand-portal.md)
+
+   + Brand Portal{#brand-portal}
+      + [Brand Portal](./sharing/brand-portal.md)
+      + [Konfigurieren von AEM Brand Portal](brand-portal/configure.md)
+      + [Konfigurieren der Asset-Beschaffung](brand-portal/configure-asset-sourcing.md)
+      + [Ausgabedarstellungs-Downloads aktivieren](brand-portal/enable-renditions-download.md)
    + Asset-Freigabe{#assets-share}
       + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [Einrichten von Asset Share Commons auf lokalen AEM](./sharing/asset-share-commons-technical-video-setup.md)
       + [Designing Asset Share Commons](./sharing/asset-share-commons-feature-video-theming.md)
    + [Connected Assets](./sharing/connected-assets.md)
+
 
 + Integration mit Creative Workflows{#creative-workflows}
    + [AEM Desktop App](./creative-workflows/aem-desktop-app.md)
@@ -107,6 +113,22 @@ ht-degree: 36%
    + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
    + [Dynamic Media Smart Crop-Video](dynamic-media/dynamic-media-smart-crop-video.md)
    + [Dynamic Media-Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
+
+   + Tutorials zu {#tutorials}
+      + [Erstellen von Karussellsets](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
+      + [Erstellen von Bildsets](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
+      + [Erstellen von Bildvorgaben](dynamic-media/tutorials/creating-image-presets.md)
+      + [Erstellen von Bildprofilen für smartes Zuschneiden](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
+      + [Erstellen von Videoprofilen](dynamic-media/tutorials/creating-video-profile-to-process-videos-in-dynamic-media.md)
+      + [Verarbeitung von Assets](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
+      + [Konfigurieren eines sicheren Vorschau-Servers](dynamic-media/tutorials/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
+      + [Erstellen von URLs und Einbettungscodes](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
+      + [Auslösen eines Exportauftrags](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
+      + [Invalidierung des CDN-Cache](dynamic-media/tutorials/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
+      + [Verwenden von Dynamic Media-Kernkomponenten](dynamic-media/tutorials/using-dm-components-on-site-page.md)
+      + [Löschen der Dynamic Media-Konfiguration](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
+      + [Herunterladen von Assets in der Dynamic Media Classic-App](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
+      + [Dynamic Media Classic IPS-APIs](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
 + Übersetzung {#translation}
    + [Quelldateiübersetzung](translation/source-file-translation-feature-video-use.md)
