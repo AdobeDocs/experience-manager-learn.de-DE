@@ -2,17 +2,13 @@
 title: Bild-, Farb-, Rotations- und Sets für gemischte Medien
 description: Eine der nützlichsten und leistungsfähigsten Funktionen von Dynamic Media Classic ist die Unterstützung für das Erstellen von Rich-Media-Sets wie Bild, Muster, Rotation und gemischten Mediensets. Erfahren Sie, was jedes Rich-Media-Set ist und wie Sie die einzelnen Typen in Dynamic Media Classic erstellen. Erfahren Sie mehr über Stapelsatzvorgaben, die die Erstellung von Rich-Media-Sets beim Hochladen automatisieren.
 sub-product: dynamic-media
-feature: Dynamic Media Classic, Bildsets, Mix-Media-Sets, Rotationssets
-doc-type: tutorial
-topics: sets, development, authoring, configuring
-audience: all
-activity: use
+feature: Dynamic Media Classic, Bildsets, gemischte Mediensets, Rotationssets
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1446'
 ht-degree: 2%
 
 ---
@@ -43,16 +39,16 @@ Im Folgenden werden die vier Arten von Sets vorgestellt, die Sie in Dynamic Medi
 
 Dies ist der am häufigsten verwendete Set-Typ. Normalerweise verwenden Sie sie für alternative Ansichten desselben Elements. Es besteht aus mehreren Bildern, die Sie in den Viewer laden, indem Sie auf die zugehörige Miniaturansicht des Bildes klicken.
 
-![image](assets/media-sets/image-set-1.jpg)
+![Bild](assets/media-sets/image-set-1.jpg)
 
 _Beispiel eines Bildsets_
 
 Die URL für das obige Bildset könnte wie folgt aussehen:
 
-![image](assets/media-sets/image-set-url-1.png)
+![Bild](assets/media-sets/image-set-url-1.png)
 
-- Erfahren Sie mehr über Bildsets mit [Schnellstart zu Bildsets](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sets/quick-start-image-sets.html).
-- Erfahren Sie, wie Sie [ein Bildset](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set) erstellen.
+- Erfahren Sie mehr über Bildsets mit [Schnellstart zu Bildsets](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/quick-start-image-sets.html).
+- Erfahren Sie, wie Sie [ein Bildset](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sets/creating-image-set.html#creating-an-image-set) erstellen.
 
 ### Musterset
 
@@ -62,16 +58,16 @@ Der Hauptunterschied zwischen einem Muster und einem Bildset besteht darin, dass
 
 Mustersets färben keine Bilder (eine häufige falsche Vorstellung). Die Bilder werden einfach ausgetauscht, genau wie in einem Bildset. Die Mini-Musterbilder hätten mit Photoshop erstellt werden können, jede Farbe hätte einzeln fotografiert werden können oder das Zuschnitt-Tool in Dynamic Media Classic hätte verwendet werden können, um aus einem der farbigen Bilder ein Muster zu machen.
 
-![image](assets/media-sets/image-set-2.jpg)
+![Bild](assets/media-sets/image-set-2.jpg)
 
 _Beispiel eines Mustersets_
 
 Die URL für das obige Musterset könnte wie folgt aussehen:
 
-![image](assets/media-sets/image-set_url.png)
+![Bild](assets/media-sets/image-set_url.png)
 
-- Erfahren Sie mehr über Mustersets mit [Schnellstart zu Mustersets](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html).
-- Erfahren Sie, wie Sie [ein Musterset](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set) erstellen.
+- Erfahren Sie mehr über Mustersets mit [Schnellstart zu Mustersets](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/quick-start-swatch-sets.html).
+- Erfahren Sie, wie Sie [ein Musterset](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/swatch-sets/creating-swatch-set.html#creating-a-swatch-set) erstellen.
 
 ### Rotationsset
 
@@ -79,38 +75,38 @@ Dieser Satz wird normalerweise verwendet, um eine 360-Grad-Ansicht eines Element
 
 Rotationssets können sich entweder in eine Richtung entlang einer einzelnen Achse drehen oder alternativ als 2D-Rotationsset erstellt werden, das auf mehreren Achsen gedreht wird. Beispielsweise kann ein Auto gedreht werden, während sich alle Räder auf dem Boden befinden, und dann auch auf den Hinterrädern nach oben gedreht werden. Für ein ordnungsgemäß eingerichtetes 2D-Rotationsset sollte die Anzahl der Bilder pro Zeile für jede Achse gleich sein. Anders ausgedrückt: Wenn Sie sich auf zwei Achsen drehen, benötigen Sie doppelt so viele Bilder wie eine Drehung um einen Winkel.
 
-![image](assets/media-sets/image-set-3.png)
+![Bild](assets/media-sets/image-set-3.png)
 
 _Beispiel eines Rotationssets_
 
 Die URL für das obige Rotationsset könnte wie folgt aussehen:
 
-![image](assets/media-sets/spin-set.png)
+![Bild](assets/media-sets/spin-set.png)
 
-- Erfahren Sie mehr über Rotationssets mit [Schnellstart zu Rotationssets](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html).
-- Erfahren Sie, wie Sie [ein Rotationsset](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set) erstellen.
+- Erfahren Sie mehr über Rotationssets mit [Schnellstart zu Rotationssets](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/quick-start-spin-sets.html).
+- Erfahren Sie, wie Sie [ein Rotationsset](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/spin-sets/creating-spin-set.html#creating-a-spin-set) erstellen.
 
 ## Gemischtes Medienset
 
 Dies ist ein Kombinationssatz. Dadurch können Sie alle vorherigen Sets sowie Videos in einem einzigen Viewer kombinieren. In diesem Workflow erstellen Sie zunächst einen der Komponentensätze und stellen sie dann in einem gemischten Medienset zusammen.
 
-![image](assets/media-sets/image-set-4.png)
+![Bild](assets/media-sets/image-set-4.png)
 
 _Beispiel eines gemischten Mediensets_
 
 Die URL für das obige gemischte Medienset könnte wie folgt aussehen:
 
-![image](assets/media-sets/image-set-url-1.png)
+![Bild](assets/media-sets/image-set-url-1.png)
 
-- Erfahren Sie mehr über gemischte Mediensets mit [Schnellstart zu gemischten Mediensets](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html).
+- Erfahren Sie mehr über gemischte Mediensets mit [Schnellstart zu gemischten Mediensets](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/quick-start-mixed-media-sets.html).
 
-- Erfahren Sie, wie Sie [ein gemischtes Medienset](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set) erstellen.
+- Erfahren Sie, wie Sie [ein gemischtes Medienset](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/mixed-media-sets/creating-mixed-media-set.html#creating-a-mixed-media-set) erstellen.
 
 Um ein Bild für den Zoom, ein Set oder ein Video auf Ihrer Website anzuzeigen, nennen Sie es in einem Dynamic Media Classic-&quot;Viewer&quot;. Dynamic Media Classic umfasst Viewer für Rich-Media-Assets wie Mustersets, Rotationssets, Videos und viele andere.
 
-Erfahren Sie mehr über [Viewer für AEM Assets und Dynamic Media Classic](https://docs.adobe.com/content/help/de-DE/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html).
+Erfahren Sie mehr über [Viewer für AEM Assets und Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/library/viewers-aem-assets-dmc/c-html5-s7-aem-asset-viewers.html?lang=de).
 
-## Stapelsatzvorgaben
+## Stapelsatz-Vorgaben
 
 Bisher haben wir besprochen, wie Sets mithilfe der Dynamic Media Classic Build-Funktion manuell erstellt werden. Es ist jedoch möglich, die Erstellung von Bild- und Rotationssets mithilfe einer Stapelsatzvorgabe zu automatisieren, sofern Sie über eine standardisierte Benennungskonvention verfügen.
 
@@ -127,7 +123,7 @@ Stapelsatzvorgaben werden nur beim Hochladen angewendet; sie können nach dem Ho
 
 Nachdem die Vorgaben erstellt wurden, kann der Unternehmensadministrator auswählen, ob sie aktiv oder inaktiv sind. Aktiv bedeutet, dass sie auf der Upload-Seite unter **Auftragsoptionen** angezeigt werden, während inaktive Vorgaben ausgeblendet bleiben.
 
-Erfahren Sie, wie Sie [eine Stapelsatzvorgabe erstellen](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset).
+Erfahren Sie, wie Sie [eine Stapelsatzvorgabe erstellen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#creating-a-batch-set-preset).
 
 ### Verwenden von Stapelsatzvorgaben beim Hochladen
 
@@ -138,4 +134,4 @@ So verwenden Sie Stapelsatzvorgaben beim Hochladen nach deren Erstellung:
 3. Öffnen Sie die Option **Stapelsatzvorgaben** und aktivieren oder deaktivieren Sie die Vorgabe, um sie mit dem Upload zu verwenden.
 4. Nachdem der Upload abgeschlossen ist, suchen Sie in Ihrem Ordner nach den fertigen Sets.
 
-Erfahren Sie mehr über [Stapelsatzvorgaben](https://docs.adobe.com/content/help/en/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets).
+Erfahren Sie mehr über [Stapelsatzvorgaben](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#batch-set-presets).
