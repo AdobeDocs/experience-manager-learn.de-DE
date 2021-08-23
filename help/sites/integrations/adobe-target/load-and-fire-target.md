@@ -12,9 +12,9 @@ thumbnail: 41243.jpg
 topic: Integrationen
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '615'
 ht-degree: 5%
 
 ---
@@ -30,7 +30,7 @@ Erfahren Sie, wie Sie mit einer Launch-Regel laden, Parameter an Seitenanfragen 
 
 Die Adobe Client-Datenschicht ist eine ereignisgesteuerte Datenschicht. Wenn die AEM-Datenschicht geladen wird, wird ein -Ereignis `cmp:show` Trigger. Im Video wird die Regel `Launch Library Loaded` mithilfe eines benutzerdefinierten Ereignisses aufgerufen. Unten finden Sie die Code-Snippets, die im Video für das benutzerspezifische Ereignis sowie für die Datenelemente verwendet werden.
 
-### Angezeigte benutzerspezifische Seite - Ereignis{#page-event}
+### Benutzerdefiniertes Seitenereignis{#page-event}
 
 ![Auf der Seite angezeigte Ereigniskonfiguration und benutzerdefinierter Code](assets/load-and-fire-target-call.png)
 
@@ -163,5 +163,5 @@ window.targetGlobalSettings = {
 + [Dokumentation zur Adobe Client-Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki)
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-+ [Verwenden der Dokumentation zur Adobe Client-Datenschicht und zu Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/data-layer/overview.html)
-+ [Einführung in den Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html)
++ [Verwenden der Dokumentation zur Adobe Client-Datenschicht und zu Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de)
++ [Einführung in den Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)
