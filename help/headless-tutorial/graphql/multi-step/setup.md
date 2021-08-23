@@ -1,22 +1,17 @@
 ---
 title: Quick Setup - Erste Schritte mit AEM Headless - GraphQL
 description: Erste Schritte mit Adobe Experience Manager (AEM) und GraphQL. Installieren Sie das AEM SDK, fügen Sie Beispielinhalte hinzu und stellen Sie eine Anwendung bereit, die mithilfe ihrer GraphQL-APIs Inhalte aus AEM verbraucht. Erfahren Sie, wie AEM kanalübergreifende Erlebnisse ermöglicht.
-sub-product: Sites
-topics: headless
 version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
-feature: Inhaltsfragmente, GraphQL-APIs
+feature: Inhaltsfragmente,GraphQL-API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 81626b8d853f3f43d9c51130acf02561f91536ac
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1829'
 ht-degree: 4%
 
 ---
@@ -51,7 +46,7 @@ In diesem Tutorial werden die [AEM als Cloud Service-SDK](https://experienceleag
 
 1. Navigieren Sie zum **[Software Distribution-Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM als Cloud Service** und laden Sie die neueste Version des **AEM SDK** herunter.
 
-   ![Software Distribution-Portal](assets/setup/software-distribution-portal-download.png)
+   ![Software-Verteilungs-Portal](assets/setup/software-distribution-portal-download.png)
 
    >[!CAUTION]
    >
@@ -73,7 +68,7 @@ In diesem Tutorial werden die [AEM als Cloud Service-SDK](https://experienceleag
 1. Nach einigen Minuten wird die Installation der AEM-Instanz abgeschlossen und ein neues Browser-Fenster sollte unter [http://localhost:4502](http://localhost:4502) geöffnet werden.
 1. Melden Sie sich mit dem Benutzernamen `admin` und dem Kennwort `admin` an.
 
-## Beispielinhalt und GraphQL-Endpunkte {#wknd-site-content-endpoints} installieren
+## Beispielinhalt und GraphQL-Endpunkte installieren {#wknd-site-content-endpoints}
 
 Beispielinhalte von der **WKND-Referenz-Site** werden installiert, um das Tutorial zu beschleunigen. Die WKND ist eine fiktive Lebensmarke, die häufig in Verbindung mit AEM Training verwendet wird.
 
