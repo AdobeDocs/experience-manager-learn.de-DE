@@ -12,9 +12,9 @@ version: 6.4,6.5
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '472'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 1%
 Gehen Sie wie folgt vor, um dieses Anwendungsbeispiel auf Ihrem lokalen System zu verwenden:
 
 * Installieren Sie die AEM-Autoreninstanz auf Port 4502 und die AEM-Veröffentlichungsinstanz auf Port 4503
-* [Befolgen Sie die Anweisungen, die bei der Entwicklung mit Dienstbenutzern in AEM Forms](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html) angegeben wurden. Stellen Sie sicher, dass Sie den Dienstbenutzer erstellen und das Bundle in Ihrer AEM-Autoren- und Veröffentlichungsinstanz bereitstellen.
+* [Befolgen Sie die Anweisungen, die bei der Entwicklung mit Dienstbenutzern in AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/service-user-tutorial-develop.html) angegeben wurden. Stellen Sie sicher, dass Sie den Dienstbenutzer erstellen und das Bundle in Ihrer AEM-Autoren- und Veröffentlichungsinstanz bereitstellen.
 * [Öffnen Sie die OSGi-Konfiguration  ](http://localhost:4503/system/console/configMgr).
 * Suchen Sie nach **Apache Sling Referrer Filter**. Stellen Sie sicher, dass das Kontrollkästchen Leere erlauben aktiviert ist.
 * [Stellen Sie das benutzerdefinierte AEMFormDocumentService-Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar) bereit. Dieses Bundle muss auf Ihrer AEM-Veröffentlichungsinstanz bereitgestellt werden. Dieses Bundle enthält den Code zum Generieren interaktiver PDF-Dateien aus einem mobilen Formular.
