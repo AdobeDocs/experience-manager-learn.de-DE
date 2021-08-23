@@ -12,9 +12,9 @@ level: Beginner
 mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3106'
+source-wordcount: '3100'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ Sehen Sie sich den Basis-Code an, auf dem das Tutorial aufbaut:
 
 Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-guides-wknd/tree/pages-templates/solution) anzeigen oder den Code lokal auschecken, indem Sie zu der Verzweigung `tutorial/pages-templates-solution` wechseln.
 
-## Vorgabe
+## Ziele
 
 1. Inspect ist ein in Adobe XD erstellter Seitenentwurf und ordnet ihn Kernkomponenten zu.
 1. Machen Sie sich mit den Details bearbeitbarer Vorlagen vertraut und erfahren Sie, wie Richtlinien verwendet werden können, um eine granulare Steuerung des Seiteninhalts zu erzwingen.
@@ -159,7 +159,7 @@ Allgemeine Schritte für das folgende Video:
 
 ## Kopf- und Fußzeile mit Experience Fragments aktualisieren {#experience-fragments}
 
-Eine gängige Praxis bei der Erstellung globaler Inhalte wie Kopf- oder Fußzeilen besteht darin, ein [Experience Fragment](https://docs.adobe.com/content/help/en/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html) zu verwenden. Experience Fragments ermöglicht es Benutzern, mehrere Komponenten zu kombinieren, um eine einzelne, referenzierbare Komponente zu erstellen. Experience Fragments bieten den Vorteil, dass die Verwaltung mehrerer Websites und [Lokalisierung](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure) unterstützt werden.
+Eine gängige Praxis bei der Erstellung globaler Inhalte wie Kopf- oder Fußzeilen besteht darin, ein [Experience Fragment](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html) zu verwenden. Experience Fragments ermöglicht es Benutzern, mehrere Komponenten zu kombinieren, um eine einzelne, referenzierbare Komponente zu erstellen. Experience Fragments bieten den Vorteil, dass die Verwaltung mehrerer Websites und [Lokalisierung](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/experience-fragment.html?lang=en#localized-site-structure) unterstützt werden.
 
 Der AEM Projektarchetyp generiert eine Kopf- und Fußzeile. Aktualisieren Sie anschließend die Experience Fragments, um sie an die Modelle anzupassen. Führen Sie die folgenden Schritte aus:
 
@@ -261,7 +261,7 @@ Verwenden Sie das CRXDE-Lite-Tool auf einer lokalen AEM-Instanz, um die zugrunde
 
    Beachten Sie, dass sich unter der Seitenkomponente nur zwei HTL-Skripte befinden: `customfooterlibs.html` und `customheaderlibs.html`. *Wie rendert diese Komponente die Seite?*
 
-   Die Eigenschaft `sling:resourceSuperType` verweist auf `core/wcm/components/page/v2/page`. Mit dieser Eigenschaft kann die Seitenkomponente der WKND **alle** der Funktionalität der Kernkomponente-Seitenkomponente übernehmen. Dies ist das erste Beispiel für etwas, das [Proxy Component Pattern](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern) genannt wird. Weitere Informationen finden Sie [hier.](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/guidelines.html).
+   Die Eigenschaft `sling:resourceSuperType` verweist auf `core/wcm/components/page/v2/page`. Mit dieser Eigenschaft kann die Seitenkomponente der WKND **alle** der Funktionalität der Kernkomponente-Seitenkomponente übernehmen. Dies ist das erste Beispiel für etwas, das [Proxy Component Pattern](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern) genannt wird. Weitere Informationen finden Sie [hier.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html).
 
 1. Inspect eine weitere Komponente innerhalb der WKND-Komponenten, die Komponente `Breadcrumb` unter: `/apps/wknd/components/breadcrumb`. Beachten Sie, dass dieselbe `sling:resourceSuperType`-Eigenschaft gefunden werden kann, diesmal jedoch auf `core/wcm/components/breadcrumb/v2/breadcrumb` verweist. Dies ist ein weiteres Beispiel für die Verwendung des Proxy-Komponentenmusters zum Einschließen einer Kernkomponente. Tatsächlich sind alle Komponenten in der WKND-Codebasis Proxys von AEM Kernkomponenten (mit Ausnahme unserer berühmten Komponente &quot;HelloWorld&quot;). Es empfiehlt sich, möglichst viele der Funktionen von Kernkomponenten erneut zu verwenden *bevor* benutzerdefinierten Code schreibt.
 
