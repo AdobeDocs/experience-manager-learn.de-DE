@@ -13,10 +13,10 @@ kt: 193
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 13%
+source-wordcount: '252'
+ht-degree: 5%
 
 ---
 
@@ -42,5 +42,5 @@ Bearbeitbare Vorlagen-URL (lokale AEM-Instanz): [http://localhost:4502/libs/wcm/
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Bearbeitbare Seitenvorlagen - Dokumentation](https://docs.adobe.com/content/help/de-DE/experience-manager-65/developing/platform/templates/page-templates-editable.html)
-* [Erstellen von Seitenvorlagen - Dokumentation](https://docs.adobe.com/content/help/de/experience-manager-65/authoring/siteandpage/templates.html)
+* [Bearbeitbare Seitenvorlagen - Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)
+* [Erstellen von Seitenvorlagen - Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/templates.html)
