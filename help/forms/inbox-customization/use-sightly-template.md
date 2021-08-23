@@ -11,9 +11,9 @@ kt: 5830
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '292'
 ht-degree: 9%
 
 ---
@@ -81,7 +81,7 @@ return val;
 
 >[!NOTE]
 >
->In diesem Artikel wird davon ausgegangen, dass Sie den [Beispiel-Workflow](assets/review-workflow.zip) und das [Beispielformular](assets/snap-form.zip) aus [vorherigen Artikel](https://docs.adobe.com/content/help/en/experience-manager-learn/forms/inbox-customization/add-married-column.md) in dieser Reihe installiert haben.
+>In diesem Artikel wird davon ausgegangen, dass Sie den [Beispiel-Workflow](assets/review-workflow.zip) und das [Beispielformular](assets/snap-form.zip) aus [vorherigen Artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.md) in dieser Reihe installiert haben.
 
 * [Melden Sie sich bei crx als Administrator an](http://localhost:4502/crx/de/index.jsp)
 * [Sichtbare Importvorlage](assets/sightly-template.zip)
