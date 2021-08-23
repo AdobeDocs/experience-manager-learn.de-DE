@@ -7,7 +7,7 @@ feature: Experience Fragments
 topic: Personalisierung
 role: Developer
 level: Intermediate
-source-git-commit: e82cc5e5de6db33e82b7c71c73bb606f16b98ea6
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '700'
 ht-degree: 5%
@@ -20,7 +20,7 @@ ht-degree: 5%
 In diesem Abschnitt besprechen wir, wie Adobe Experience Manager mit Adobe Target für verschiedene Szenarien eingerichtet wird. Basierend auf Ihrem Szenario und Ihren organisatorischen Anforderungen.
 
 * **Adobe Target-JavaScript-Bibliothek hinzufügen (für alle Szenarien erforderlich)**
-Für auf AEM gehostete Websites können Sie Ihrer Site Target-Bibliotheken mit  [Launch](https://experienceleague.adobe.com/docs/launch/using/home.html) hinzufügen. Launch bietet eine einfache Möglichkeit, alle Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse erforderlich sind.
+Für auf AEM gehostete Websites können Sie Ihrer Site Target-Bibliotheken mit  [Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) hinzufügen. Launch bietet eine einfache Möglichkeit, alle Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse erforderlich sind.
 * **Fügen Sie die Adobe Target-Cloud Services hinzu (erforderlich für das Experience Fragments-Szenario)**
 AEM Kunden, die Experience Fragment-Angebote zur Erstellung einer Aktivität in Adobe Target verwenden möchten, müssen Sie Adobe Target mithilfe der veralteten Cloud Services mit AEM integrieren. Diese Integration ist erforderlich, um Erlebnisfragmente als HTML-/JSON-Angebote von AEM in Target zu übertragen und die Angebote mit AEM zu synchronisieren. 
 *Diese Integration ist für die Implementierung von Szenario 1 erforderlich.*
