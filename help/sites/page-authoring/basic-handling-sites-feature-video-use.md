@@ -14,10 +14,10 @@ thumbnail: 31784.jpg
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 70%
+source-wordcount: '372'
+ht-degree: 68%
 
 ---
 
@@ -49,7 +49,7 @@ In diesem Video werden die folgenden Funktionen behandelt:
 * Hilfe
 * Benachrichtigungen
 * Benutzereigenschaften
-* Leistenauswahl
+* Schienenauswahl
 * AEM Site-Konsolenansichten
    * Listenansicht
    * Spaltenansicht
@@ -62,5 +62,5 @@ In diesem Video werden die folgenden Funktionen behandelt:
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Bearbeiten der Dokumentation zum Seiteninhalt](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.translate.html)
-* [Schnellstartanleitung zum Verfassen von Seiten (Authoring)](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+* [Bearbeiten der Dokumentation zum Seiteninhalt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
+* [Schnellstartanleitung zum Verfassen von Seiten (Authoring)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
