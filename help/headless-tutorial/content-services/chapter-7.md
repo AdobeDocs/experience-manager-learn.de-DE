@@ -5,9 +5,9 @@ feature: Inhaltsfragmente, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1412'
 ht-degree: 1%
 
 ---
@@ -201,7 +201,7 @@ Erstellen Sie nach jedem Schritt eine Pull-to-Aktualisierungsaktion für die mob
 Weitere Informationen zu AEM Content Services und AEM as a Headless CMS finden Sie in der anderen Dokumentation und den Aktivierungsmaterialien der Adobe:
 
 * [Verwenden von Inhaltsfragmenten](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
-* [Benutzerhandbuch zu AEM WCM-Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html)
+* [Benutzerhandbuch zu AEM WCM-Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de)
 * [AEM WCM-Kernkomponentenbibliothek](https://opensource.adobe.com/aem-core-wcm-components/library.html)
 * [GitHub-Projekt AEM WCM-Kernkomponenten](https://github.com/adobe/aem-core-wcm-components)
 * [AEM WCM-Kernkomponenten - Fragen an Experten](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
