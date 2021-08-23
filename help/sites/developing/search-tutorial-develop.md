@@ -10,17 +10,17 @@ feature: Suchen
 topic: Entwicklung
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '904'
-ht-degree: 10%
+source-wordcount: '899'
+ht-degree: 11%
 
 ---
 
 
 # Implementierungshandbuch für einfache Suchen{#simple-search-implementation-guide}
 
-Die Implementierung der einfachen Suche sind die Materialien aus dem **Adobe Summit Labor AEM Search Demystified**. Diese Seite enthält die Materialien aus diesem Labor. Eine Führung durch das Labor erhalten Sie in der Arbeitsmappe für den Lab im Abschnitt Präsentation dieser Seite.
+Bei der Implementierung der einfachen Suche handelt es sich um die Materialien aus dem **Adobe Summit-Labor AEM Search Demystified**. Diese Seite enthält die Materialien aus diesem Labor. Eine Führung durch das Labor erhalten Sie in der Arbeitsmappe für den Lab im Abschnitt Präsentation dieser Seite.
 
 ![Sucharchitektur - Überblick](assets/l4080/simple-search-application.png)
 
@@ -77,7 +77,7 @@ Die Implementierung der einfachen Suche sind die Materialien aus dem **Adobe Sum
 * [GitHub-Repository](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/master/simple-search-guide)
 * [Sling-Modelle](https://sling.apache.org/documentation/bundles/models.html)
 * [Sling Model Exporter](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)
-* [QueryBuilder-API](https://docs.adobe.com/docs/en/aem/6-2/develop/search/querybuilder-api.html)
+* [QueryBuilder-API](https://experienceleague.adobe.com/docs/?lang=de)
 * [AEM Chrome-Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode)  ([Dokumentationsseite](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/))
 
 ## Korrekturen und Folgemaßnahmen {#corrections-and-follow-up}
