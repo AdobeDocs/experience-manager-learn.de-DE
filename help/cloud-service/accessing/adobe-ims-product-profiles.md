@@ -1,16 +1,16 @@
 ---
 title: Adobe IMS-Produktprofile und -AEM
 description: Adobe IMS-Produktprofile berechtigen Benutzer dazu, sich bei einem AEM-Autorendienst anzumelden und eine Grundlinie für den Zugriff bereitzustellen, je nachdem, welchem Produktprofil sie angehören.
-feature: 'Benutzer und Gruppen '
-kt: 5000
-thumbnail: 39156.jpg
 topic: Administration, Sicherheit
+feature: Benutzer und Gruppen
 role: Admin
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+kt: 5000
+thumbnail: 39156.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 8%
+source-wordcount: '151'
+ht-degree: 12%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 8%
 >id="aemcloud_adobeims_productprofiles"
 >title="Adobe IMS-Produktprofile"
 >abstract="Adobe IMS-Produktprofile berechtigen Benutzer dazu, sich bei einem AEM-Autorendienst anzumelden und eine Grundlinie für den Zugriff bereitzustellen, je nachdem, welchem Produktprofil sie angehören. Erfahren Sie mehr über Adobe IMS-Produktprofile."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#introduction" text="Verwalten von Produkten und Benutzerzugriff in der Admin Console"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=de#introduction" text="Verwalten von Produkten und Benutzerzugriff in der Admin Console"
 
 Adobe IMS-Produktprofile berechtigen Benutzer dazu, sich bei einem AEM-Autorendienst anzumelden und eine Grundlinie für den Zugriff bereitzustellen, je nachdem, welchem Produktprofil sie angehören.
 
@@ -29,5 +29,5 @@ Adobe IMS-Produktprofile berechtigen Benutzer dazu, sich bei einem AEM-Autorendi
 
 ## Zusätzliche Ressourcen
 
-+ [Verwalten von Produkten und Benutzerzugriff in der Dokumentation zu Admin Console](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)
++ [Verwalten von Produkten und Benutzerzugriff in der Dokumentation zu Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)
 
