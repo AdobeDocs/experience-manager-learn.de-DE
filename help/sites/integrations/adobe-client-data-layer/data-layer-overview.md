@@ -1,20 +1,15 @@
 ---
 title: Verwenden der Adobe Client-Datenschicht in Verbindung mit AEM Kernkomponenten
 description: Die Adobe Client-Datenschicht führt eine Standardmethode ein, um Daten über ein Besuchererlebnis auf einer Webseite zu erfassen und zu speichern und so den Zugriff auf diese Daten zu erleichtern. Die Adobe Client-Datenschicht ist plattformunabhängig, aber für die Verwendung mit AEM vollständig in die Kernkomponenten integriert.
-feature: core-component
-topics: integrations
-audience: developer
-doc-type: feature video
-activity: use
-version: cloud-service
-kt: 6261
-thumbnail: 41195.jpg
 topic: Integrationen
+feature: Adobe Client-Datenschicht, Kernkomponenten
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6261
+thumbnail: 41195.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '791'
 ht-degree: 8%
 
 ---
@@ -28,7 +23,7 @@ Die Adobe Client-Datenschicht führt eine Standardmethode ein, um Daten über ei
 
 >[!NOTE]
 >
-> Möchten Sie die Adobe Client-Datenschicht auf Ihrer AEM aktivieren? [Die Anweisungen finden Sie hier](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation).
+> Möchten Sie die Adobe Client-Datenschicht auf Ihrer AEM aktivieren? [Die Anweisungen finden Sie hier](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation).
 
 ## Datenschicht durchsuchen
 
@@ -183,4 +178,4 @@ Oder erfahren Sie, wie Sie die Adobe Client-Datenschicht mit AEM Komponenten ](.
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [Dokumentation zur Adobe Client-Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [Verwenden der Dokumentation zur Adobe Client-Datenschicht und zu Kernkomponenten](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Verwenden der Dokumentation zur Adobe Client-Datenschicht und zu Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
