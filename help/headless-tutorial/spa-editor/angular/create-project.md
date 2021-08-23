@@ -13,9 +13,9 @@ thumbnail: 5309-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: bf9ab30f57faa23721d7d27b837d8e0f0e8cf4f1
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1111'
 ht-degree: 3%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 3%
 
 Erfahren Sie, wie Sie ein Adobe Experience Manager-Maven-Projekt (AEM) als Ausgangspunkt für eine mit dem AEM SPA Editor integrierte Angular-Anwendung verwenden.
 
-## Vorgabe
+## Ziele
 
 1. Machen Sie sich mit der Struktur eines neuen AEM SPA Editor-Projekts vertraut, das aus einem Maven-Archetyp erstellt wurde.
 2. Stellen Sie das Starterprojekt auf einer lokalen Instanz von AEM bereit.
@@ -90,7 +90,7 @@ Es gibt mehrere Möglichkeiten, ein Maven-Projekt mit mehreren Modulen für AEM 
 
    >[!NOTE]
    >
-   > Beachten Sie die Eigenschaft `frontendModule=angular` . Dies weist den AEM Projektarchetyp an, das Projekt mit einem Starter [Angular-Code-Base](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) zu bootstrapping durchzuführen, der mit dem AEM SPA Editor verwendet werden soll.
+   > Beachten Sie die Eigenschaft `frontendModule=angular` . Dies weist den AEM Projektarchetyp an, das Projekt mit einem Starter [Angular-Code-Base](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) zu bootstrapping durchzuführen, der mit dem AEM SPA Editor verwendet werden soll.
 
 ## Projekt erstellen
 
@@ -149,7 +149,7 @@ Kompilieren, erstellen und stellen Sie anschließend mithilfe von Maven den Proj
 
    Der gesamte für das Projekt benötigte benutzerspezifische Code wird in diesen Paketen gebündelt und zur AEM Laufzeit installiert.
 
-6. Sie sollten auch mehrere Pakete für `spa.project.core` und `core.wcm.components` sehen. Hierbei handelt es sich um Abhängigkeiten, die automatisch vom Archetyp eingeschlossen werden. Weitere Informationen zu [AEM Kernkomponenten finden Sie hier](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/introduction.html).
+6. Sie sollten auch mehrere Pakete für `spa.project.core` und `core.wcm.components` sehen. Hierbei handelt es sich um Abhängigkeiten, die automatisch vom Archetyp eingeschlossen werden. Weitere Informationen zu [AEM Kernkomponenten finden Sie hier](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de).
 
 ## Autoreninhalt
 
