@@ -8,9 +8,9 @@ thumbnail: 22254.jpg
 topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '153'
+source-wordcount: '151'
 ht-degree: 3%
 
 ---
@@ -36,6 +36,6 @@ Erfahren Sie, wie Sie das Training für Smart-Tags in AEM Assets mithilfe des Sm
 
 ## Zusätzliche Ressourcen
 
-* Für AEM 6.4 ist das [neueste Service Pack](https://docs.adobe.com/content/help/en/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64) erforderlich.
+* Für AEM 6.4 ist das [neueste Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64) erforderlich.
 
 
