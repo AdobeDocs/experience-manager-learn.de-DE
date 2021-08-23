@@ -11,9 +11,9 @@ kt: 5251
 topic: Entwicklung
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: 5fcc7eec120debf1a8ac08716154599467e66759
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '220'
 ht-degree: 13%
 
 ---
@@ -25,7 +25,7 @@ Eine Vielzahl anderer Tools kann beim Debugging Ihrer Anwendung auf dem lokalen 
 
 ## CRXDE Lite
 
-![CRXDE Lite](./assets/other-tools/crxde-lite.png) 
+![CRXDE Lite](./assets/other-tools/crxde-lite.png)
 
 CRXDE Lite ist eine webbasierte Schnittstelle für die Interaktion mit dem JCR, AEM Datenrepository. CRXDE Lite bietet vollständige Sichtbarkeit in das JCR, einschließlich Knoten, Eigenschaften, Eigenschaftswerten und Berechtigungen.
 
@@ -49,7 +49,7 @@ Erläuterung des webbasierten Abfragetools im lokalen Schnellstart AEM SDK, das 
 
 ![QueryBuilder-Debugger](./assets/other-tools/query-debugger.png)
 
-QueryBuilder Debugger ist ein webbasiertes Tool, mit dem Sie Suchanfragen mithilfe der AEM [QueryBuilder](https://docs.adobe.com/content/help/en/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)-Syntax debuggen und verstehen können.
+QueryBuilder Debugger ist ein webbasiertes Tool, mit dem Sie Suchanfragen mithilfe der AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)-Syntax debuggen und verstehen können.
 
 QueryBuilder Debugger befindet sich unter:
 
