@@ -1,5 +1,5 @@
 ---
-title: Smart Imaging
+title: Intelligente Bildbearbeitung
 description: Die intelligente Bildbearbeitung in Dynamic Media Classic verbessert die Leistung bei der Bildbereitstellung, indem das Bildformat und die Qualität basierend auf den Funktionen des Client-Browsers automatisch optimiert werden. Dies geschieht durch Nutzung der AI-Funktionen von Adobe Sensei und Arbeiten mit vorhandenen Bildvorgaben. Erfahren Sie mehr über die intelligente Bildbearbeitung und wie Sie damit durch schnelleres Laden von Seiten bessere Kundenerlebnisse bieten können.
 sub-product: dynamic-media
 feature: Dynamic Media Classic
@@ -10,10 +10,10 @@ activity: use
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '699'
-ht-degree: 9%
+source-wordcount: '693'
+ht-degree: 6%
 
 ---
 
@@ -24,19 +24,19 @@ Einer der wichtigsten Aspekte des Kundenerlebnisses auf Ihrer Website, Ihrer mob
 
 Die intelligente Bildbearbeitung profitiert auch von der zusätzlichen Leistungssteigerung durch die vollständige Integration mit dem erstklassigen Premium-Service von Adobe. Dieser Dienst ermittelt die optimale Internet-Route zwischen Servern, Netzwerken und Austauschpunkten mit niedrigster Latenz und/oder Paketverlustrate im Vergleich zur Standardroute im Internet.
 
-Erfahren Sie mehr über [Intelligente Bildbearbeitung](https://docs.adobe.com/content/help/de-DE/experience-manager-64/assets/dynamic/imaging-faq.html).
+Erfahren Sie mehr über [Intelligente Bildbearbeitung](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html).
 
 ## Vorteile der intelligenten Bildbearbeitung
 
 Da Bilder den Großteil der Ladezeit einer Seite ausmachen, kann die Leistungsverbesserung durch die intelligente Bildbearbeitung grundlegende Auswirkungen auf geschäftliche KPIs haben, z. B. höhere Konversionsraten, Besuchszeiten pro Site und niedrigere Absprungraten pro Site.
 
-![image](assets/smart-imaging/smart-imaging-1.png)
+![Bild](assets/smart-imaging/smart-imaging-1.png)
 
 ## Funktionsweise der intelligenten Bildbearbeitung
 
 Wie bereits erwähnt, nutzt die intelligente Bildbearbeitung die AI-Funktionen von Adobe Sensei und arbeitet mit vorhandenen Bildvorgaben zusammen, um Bilder automatisch in optimale Bildformate der nächsten Generation wie WebP zu konvertieren und dabei die visuelle Wiedergabetreue zu wahren.
 
-Erfahren Sie mehr über [Funktionsweise der intelligenten Bildbearbeitung](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work), einschließlich Details wie unterstützte Bildformate (und was passiert, wenn Sie diese Formate nicht verwenden) und deren Auswirkungen auf vorhandene verwendete Bildvorgaben.
+Erfahren Sie mehr über [Funktionsweise der intelligenten Bildbearbeitung](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work), einschließlich Details wie unterstützte Bildformate (und was passiert, wenn Sie diese Formate nicht verwenden) und deren Auswirkungen auf vorhandene verwendete Bildvorgaben.
 
 ## Auswirkungen der intelligenten Bildbearbeitung
 
@@ -54,7 +54,7 @@ Die Aktivierung der intelligenten Bildbearbeitung beginnt mit dem Versand einer 
 
 Nachdem Sie die intelligente Bildbearbeitung aktiviert haben, möchten Sie überprüfen, ob sie erwartungsgemäß funktioniert.
 
-Sie haben wahrscheinlich zusätzliche Fragen zur intelligenten Bildbearbeitung. Wir haben eine Liste häufig gestellter Fragen mit Antworten zusammengestellt. Lesen Sie die [FAQs](https://docs.adobe.com/content/help/en/experience-manager-64/assets/dynamic/imaging-faq.html).
+Sie haben wahrscheinlich zusätzliche Fragen zur intelligenten Bildbearbeitung. Wir haben eine Liste häufig gestellter Fragen mit Antworten zusammengestellt. Lesen Sie die [FAQs](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html).
 
 ## Zusätzliche Ressourcen
 
