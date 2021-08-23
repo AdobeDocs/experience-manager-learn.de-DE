@@ -12,9 +12,9 @@ thumbnail: KT-6282.jpg
 topic: Integrationen, Entwicklung
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 2efb7050b0b0c783c5f34c1f2e375cf21fa7a6cd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1426'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ asset compute-Worker implementieren den Asset compute SDK Worker API-Vertrag in 
 1. Der Asset compute Worker speichert die Binärdaten der neuen Ausgabedarstellung in `rendition.path`.
 1. Die Binärdaten, die in `rendition.path` geschrieben wurden, werden über das Asset compute-SDK an den AEM-Autorendienst übertragen und als __(4a)__ Textausgabe und __(4b)__ im Metadatenknoten des Assets gespeichert.
 
-Das obige Diagramm zeigt die Asset compute-Entwickleranliegen und den logischen Fluss zum Asset compute Worker-Aufruf. Für das Merkwürdige sind die [internen Details der Asset compute-Ausführung](https://docs.adobe.com/content/help/en/asset-compute/using/extend/custom-application-internals.html) verfügbar, es können jedoch nur die öffentlichen Asset compute SDK-API-Verträge angefordert werden.
+Das obige Diagramm zeigt die Asset compute-Entwickleranliegen und den logischen Fluss zum Asset compute Worker-Aufruf. Für das Merkwürdige sind die [internen Details der Asset compute-Ausführung](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html) verfügbar, es können jedoch nur die öffentlichen Asset compute SDK-API-Verträge angefordert werden.
 
 ## Anatomie eines Arbeitnehmers
 
