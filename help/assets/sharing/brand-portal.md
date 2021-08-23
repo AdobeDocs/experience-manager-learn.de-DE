@@ -6,9 +6,9 @@ version: 6.3, 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1767'
 ht-degree: 47%
 
 ---
@@ -30,7 +30,7 @@ Die Asset-Beschaffung von Brand Portal wird verwendet, um Assets von Agenturen u
 
 *Für die Verwendung der Asset-Beschaffung ist Experience Manager Author 6.5 SP2 (6.5.2) oder höher erforderlich*
 
-Anweisungen zum Konfigurieren und Einrichten der Asset-Beschaffung in der Experience Manager-Autoreninstanz finden Sie unter [Aktivieren der Experience Manager-Autoreninstanz für die Asset-Beschaffung](https://docs.adobe.com/content/help/en/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) .
+Anweisungen zum Konfigurieren und Einrichten der Asset-Beschaffung in der Experience Manager-Autoreninstanz finden Sie unter [Aktivieren der Experience Manager-Autoreninstanz für die Asset-Beschaffung](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) .
 
 ## Brand Portal - Funktionen und Verbesserungen im Februar 2019{#brand-portal-features-and-enhancements-644}
 
@@ -206,6 +206,6 @@ Neue Funktionen, die auf die Ausrichtung von Brand Portal an AEM ausgerichtet si
 * [AEM-Agenten für die Autorenreplikation](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [Anleitung zum beschleunigten Download](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [Dokumente zur Adobe von AEM Assets Brand Portal](https://helpx.adobe.com/de/experience-manager/brand-portal/using/brand-portal.html)
-* [Dokumente zur Adobe von AEM Assets Dynamic Media](https://docs.adobe.com/docs/de/aem/6-3/author/assets/dynamic-media.html)
+* [Dokumente zur Adobe von AEM Assets Dynamic Media](https://experienceleague.adobe.com/docs/?lang=de)
 * [Herunterladen von Aspera Connect](https://downloads.asperasoft.com/connect2/)
 * [Aspera Connect-Testserver](https://test-connect.asperasoft.com/)
