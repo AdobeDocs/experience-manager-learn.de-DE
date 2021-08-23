@@ -1,28 +1,24 @@
 ---
 title: Verfolgen geklickter Komponenten mit Adobe Analytics
 description: Verwenden Sie die ereignisbasierte Adobe Client Data-Schicht, um Klicks auf bestimmte Komponenten auf einer Adobe Experience Manager-Site zu verfolgen. Erfahren Sie, wie Sie in Experience Platform Launch mithilfe von Regeln auf diese Ereignisse warten und Daten mit einem Verfolgungslink-Beacon an eine Adobe Analytics senden können.
-feature: Analyse
-topics: integrations
-audience: administrator
-doc-type: tutorial
-activity: setup
 version: cloud-service
-kt: 6296
-thumbnail: KT-6296.jpg
 topic: Integrationen
+feature: Adobe Client-Datenschicht
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6296
+thumbnail: KT-6296.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1833'
-ht-degree: 5%
+source-wordcount: '1814'
+ht-degree: 4%
 
 ---
 
 
 # Verfolgen geklickter Komponenten mit Adobe Analytics
 
-Verwenden Sie die ereignisbasierte [Adobe Client-Datenschicht mit AEM Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/data-layer/overview.html), um Klicks auf bestimmte Komponenten auf einer Adobe Experience Manager-Site zu verfolgen. Erfahren Sie, wie Sie Regeln in Experience Platform Launch verwenden, um Klick-Ereignisse zu überwachen, nach Komponenten zu filtern und die Daten mit einem Verfolgungs-Linkbeacon an Adobe Analytics zu senden.
+Verwenden Sie die ereignisbasierte [Adobe Client-Datenschicht mit AEM Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de), um Klicks auf bestimmte Komponenten auf einer Adobe Experience Manager-Site zu verfolgen. Erfahren Sie, wie Sie Regeln in Experience Platform Launch verwenden, um Klick-Ereignisse zu überwachen, nach Komponenten zu filtern und die Daten mit einem Verfolgungs-Linkbeacon an Adobe Analytics zu senden.
 
 ## Was Sie erstellen werden
 
@@ -40,16 +36,16 @@ Das WKND-Marketing-Team möchte wissen, welche Aktionsaufruf-Schaltflächen (CTA
 
 Dieses Tutorial stellt eine Fortsetzung von [Erfassen von Seitendaten mit Adobe Analytics](./collect-data-analytics.md) dar und geht davon aus, dass Sie über Folgendes verfügen:
 
-* Eine **Launch-Eigenschaft** mit der aktivierten [Adobe Analytics-Erweiterung](https://docs.adobe.com/content/help/de-DE/launch/using/extensions-ref/adobe-extension/analytics-extension/overview.html)
-* **Report Suite-ID und Tracking-Server für Adobe** Analytics-Tests/Entwicklung. Weitere Informationen finden Sie in der folgenden Dokumentation für [Erstellen einer neuen Report Suite](https://docs.adobe.com/content/help/en/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html).
-* [Experience Platform ](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) DebuggerBrowser-Erweiterung, die mit Ihrer Launch-Eigenschaft konfiguriert wurde, die auf  [https://wknd.site/us/en.](https://wknd.site/us/en.html) html oder einer AEM Site geladen wurde, auf der die Adobe-Datenschicht aktiviert ist.
+* Eine **Launch-Eigenschaft** mit der aktivierten [Adobe Analytics-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)
+* **Report Suite-ID und Tracking-Server für Adobe** Analytics-Tests/Entwicklung. Weitere Informationen finden Sie in der folgenden Dokumentation für [Erstellen einer neuen Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html).
+* [Experience Platform ](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) DebuggerBrowser-Erweiterung, die mit Ihrer Launch-Eigenschaft konfiguriert wurde, die auf  [https://wknd.site/us/en.](https://wknd.site/us/en.html) html oder einer AEM Site geladen wurde, auf der die Adobe-Datenschicht aktiviert ist.
 
 ## Inspect des Schaltflächen- und Teaser-Schemas
 
-Bevor Sie Regeln in Launch erstellen, sollten Sie das [Schema für die Schaltfläche und den Teaser](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#item) überprüfen und in der Datenschichtimplementierung überprüfen.
+Bevor Sie Regeln in Launch erstellen, sollten Sie das [Schema für die Schaltfläche und den Teaser](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item) überprüfen und in der Datenschichtimplementierung überprüfen.
 
 1. Navigieren Sie zu [https://wknd.site/us/en.html](https://wknd.site/us/en.html)
-1. Öffnen Sie die Entwicklertools des Browsers und navigieren Sie zur **Konsole**. Führen Sie folgenden Befehl aus:
+1. Öffnen Sie die Entwicklertools des Browsers und navigieren Sie zur **Konsole**. Führen Sie den folgenden Befehl aus:
 
    ```js
    adobeDataLayer.getState();
@@ -82,7 +78,7 @@ Bevor Sie Regeln in Launch erstellen, sollten Sie das [Schema für die Schaltfl�
        xdm:linkURL: "/content/wknd/us/en/magazine/san-diego-surf.html"
    ```
 
-   Diese basieren auf dem [Komponenten-/Container-Element-Schema](https://docs.adobe.com/content/help/en/experience-manager-core-components/using/developing/data-layer/overview.html#item). Die Regel, die wir in Launch erstellen, verwendet dieses Schema.
+   Diese basieren auf dem [Komponenten-/Container-Element-Schema](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item). Die Regel, die wir in Launch erstellen, verwendet dieses Schema.
 
 ## Erstellen einer auf CTA geklickten Regel
 
@@ -148,11 +144,11 @@ Die Adobe Client-Datenschicht ist eine **event**-gesteuerte Datenschicht. Wenn a
 
    Das `event`-Objekt wird von der `trigger()`-Methode übergeben, die im benutzerdefinierten Ereignis aufgerufen wird. `component` ist der aktuelle Status der Komponente, der von der Datenschicht abgeleitet wurde,  `getState` die den Klick ausgelöst hat.
 
-1. Speichern Sie die Änderungen und führen Sie einen [Build](https://docs.adobe.com/content/help/en/launch/using/reference/publish/builds.html) in Launch aus, um den Code in die auf Ihrer AEM Site verwendete [Umgebung](https://docs.adobe.com/content/help/en/launch/using/reference/publish/environments.html) weiterzuleiten.
+1. Speichern Sie die Änderungen und führen Sie einen [Build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) in Launch aus, um den Code in die auf Ihrer AEM Site verwendete [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html) weiterzuleiten.
 
    >[!NOTE]
    >
-   > Es kann sehr nützlich sein, den [Adobe Experience Platform Debugger](https://docs.adobe.com/content/help/en/platform-learn/tutorials/data-ingestion/web-sdk/introduction-to-the-experience-platform-debugger.html) zu verwenden, um den Einbettungscode in eine **Entwicklungsumgebung** zu wechseln.
+   > Es kann sehr nützlich sein, den [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) zu verwenden, um den Einbettungscode in eine **Entwicklungsumgebung** zu wechseln.
 
 1. Navigieren Sie zur [WKND-Site](https://wknd.site/us/en.html) und öffnen Sie die Entwickler-Tools, um die Konsole anzuzeigen. Wählen Sie **Protokoll beibehalten** aus.
 
