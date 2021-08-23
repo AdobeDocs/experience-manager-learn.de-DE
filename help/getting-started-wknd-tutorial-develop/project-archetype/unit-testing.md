@@ -11,9 +11,9 @@ level: Beginner
 kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3017'
+source-wordcount: '3013'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Sehen Sie sich den Basis-Code an, auf dem das Tutorial aufbaut:
 
 Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/unit-testing-start) anzeigen oder den Code lokal auschecken, indem Sie zu der Verzweigung `tutorial/unit-testing-start` wechseln.
 
-## Vorgabe
+## Ziele
 
 1. Machen Sie sich mit den Grundlagen von Komponententests vertraut.
 1. Erfahren Sie mehr über Frameworks und Tools, die häufig zum Testen AEM Codes verwendet werden.
@@ -78,7 +78,7 @@ Wir werden AEM Best Practices verwenden und Folgendes verwenden:
 
 ## Unit-Tests und Adobe Cloud Manager {#unit-testing-and-adobe-cloud-manager}
 
-[Adobe Cloud ](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) Manager integriert die Ausführung von Komponententests und die Berichterstellung zur  [Codeabdeckung in die CI/CD-](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) Pipeline, um Best Practices für Unit-Tests AEM Code zu fördern.
+[Adobe Cloud ](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=de) Manager integriert die Ausführung von Komponententests und die Berichterstellung zur  [Codeabdeckung in die CI/CD-](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html#code-quality-testing) Pipeline, um Best Practices für Unit-Tests AEM Code zu fördern.
 
 Obwohl Einheitentestcode für jede Codebasis eine gute Vorgehensweise ist, ist es bei der Verwendung von Cloud Manager wichtig, die Codequalitätstests und Reporting-Funktionen zu nutzen, indem für Cloud Manager Komponententests bereitgestellt werden.
 
@@ -288,7 +288,7 @@ In diesem Tutorial wird der letztgenannte Ansatz verwendet (da wir in einem vorh
 
 TDD im Kontext von AEM erfordert ein hohes Maß an Fachwissen und wird am besten von AEM Entwicklern übernommen, die über AEM Entwicklung und Unit-Tests von AEM Code verfügen.
 
-## Einrichten AEM Testkontexts {#setting-up-aem-test-context}
+## Einrichten AEM Testkontexts  {#setting-up-aem-test-context}
 
 Der Großteil des für AEM geschriebenen Codes beruht auf JCR-, Sling- oder AEM-APIs, die wiederum erfordern, dass der Kontext einer ausgeführten AEM ordnungsgemäß ausgeführt wird.
 
@@ -702,7 +702,7 @@ Beachten Sie, dass diese Prüfung es uns ermöglicht hat, Tests zu überspringen
 
 ![Alle Tests bestehen](./assets/unit-testing/all-tests-pass.png)
 
-## Ausführen von Komponententests als Teil des Builds {#running-unit-tests-as-part-of-the-build}
+## Ausführen von Komponententests im Rahmen des Builds {#running-unit-tests-as-part-of-the-build}
 
 Unit-Tests werden ausgeführt, um als Teil des Maven-Builds zu bestehen. Dadurch wird sichergestellt, dass alle Tests erfolgreich bestanden werden, bevor eine Anwendung bereitgestellt wird. Wenn Sie Maven-Ziele wie Paket oder Installation ausführen, wird automatisch aufgerufen und die Übergabe aller Komponententests im Projekt ist erforderlich.
 
@@ -720,6 +720,6 @@ Ebenso schlägt der Build fehl, wenn wir eine Testmethode so ändern, dass sie f
 
 ![MVN-Paket schlägt fehl](assets/unit-testing/mvn-package-fail.png)
 
-## Überprüfen Sie den Code {#review-the-code}
+## Code überprüfen {#review-the-code}
 
 Zeigen Sie den fertigen Code auf [GitHub](https://github.com/adobe/aem-guides-wknd) an oder überprüfen Sie den Code und stellen Sie ihn lokal in der Git-Klammer `tutorial/unit-testing-solution` bereit.
