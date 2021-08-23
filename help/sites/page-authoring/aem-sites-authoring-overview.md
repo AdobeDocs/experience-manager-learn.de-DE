@@ -14,10 +14,10 @@ thumbnail: 33594.jpg
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '121'
-ht-degree: 24%
+source-wordcount: '117'
+ht-degree: 17%
 
 ---
 
@@ -30,5 +30,5 @@ Das folgende Video bietet einen Überblick über die grundlegenden Konzepte des 
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Bearbeiten der Dokumentation zum Seiteninhalt](https://docs.adobe.com/content/help/de-DE/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.translate.html)
-* [Sites-Authoring-Benutzerhandbuch](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/home.html?topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
+* [Bearbeiten der Dokumentation zum Seiteninhalt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
+* [Sites-Authoring-Benutzerhandbuch](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html&amp;topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
