@@ -12,9 +12,9 @@ thumbnail: KT-6281.jpg
 topic: Integrationen, Entwicklung
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '438'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Das `manifest.yml` im Stammverzeichnis des Asset compute-Projekts beschreibt all
 
 Arbeitnehmer werden als Adobe I/O Runtime-Aktionseinträge unter `actions` definiert und bestehen aus einer Reihe von Konfigurationen.
 
-Arbeitnehmer, die auf andere Adobe I/O-Integrationen zugreifen, müssen die `annotations -> require-adobe-auth` -Eigenschaft auf `true` setzen, da [die Anmeldeinformationen der Worker für die Adobe I/O](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) über das `params.auth` -Objekt verfügbar macht. Dies ist normalerweise erforderlich, wenn der Worker Adobe I/O-APIs wie die Adobe Photoshop-, Lightroom- oder Sensei-APIs abruft und pro Worker umgeschaltet werden kann.
+Arbeitnehmer, die auf andere Adobe I/O-Integrationen zugreifen, müssen die `annotations -> require-adobe-auth` -Eigenschaft auf `true` setzen, da [die Anmeldeinformationen der Worker für die Adobe I/O](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) über das `params.auth` -Objekt verfügbar macht. Dies ist normalerweise erforderlich, wenn der Worker Adobe I/O-APIs wie die Adobe Photoshop-, Lightroom- oder Sensei-APIs abruft und pro Worker umgeschaltet werden kann.
 
 1. Öffnen und überprüfen Sie den automatisch generierten Worker `manifest.yml`. Projekte, die mehrere Asset compute-Sekundäre enthalten, müssen einen Eintrag für jeden Worker unter dem Array `actions` definieren.
 
@@ -53,7 +53,7 @@ packages:
 
 Jeder Worker kann die [limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) für den Ausführungskontext in Adobe I/O Runtime konfigurieren. Diese Werte sollten angepasst werden, um eine optimale Skalierung für den Worker zu ermöglichen, basierend auf der Menge, Rate und Art der zu berechnenden Assets sowie der Art der von ihm durchgeführten Arbeit.
 
-Lesen Sie [Anleitung zur Dimensionierung von Adoben](https://docs.adobe.com/content/help/en/asset-compute/using/extend/develop-custom-application.html#sizing-workers) , bevor Sie Begrenzungen festlegen. asset compute-Sekundäre können bei der Verarbeitung von Assets nicht genügend Arbeitsspeicher haben, was dazu führt, dass die Adobe I/O Runtime-Ausführung beendet wird. Stellen Sie daher sicher, dass die Größe des Sekundärs für die Verarbeitung aller Kandidaten-Assets angemessen ist.
+Lesen Sie [Anleitung zur Dimensionierung von Adoben](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#sizing-workers) , bevor Sie Begrenzungen festlegen. asset compute-Sekundäre können bei der Verarbeitung von Assets nicht genügend Arbeitsspeicher haben, was dazu führt, dass die Adobe I/O Runtime-Ausführung beendet wird. Stellen Sie daher sicher, dass die Größe des Sekundärs für die Verarbeitung aller Kandidaten-Assets angemessen ist.
 
 1. Fügen Sie dem neuen Aktionseintrag `wknd-asset-compute` den Abschnitt `inputs` hinzu. Dies ermöglicht die Abstimmung der Gesamtleistung und Ressourcenzuordnung des Asset compute Worker.
 
