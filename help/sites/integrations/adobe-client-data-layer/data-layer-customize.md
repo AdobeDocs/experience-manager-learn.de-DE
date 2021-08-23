@@ -1,20 +1,16 @@
 ---
 title: Anpassen der Adobe Client-Datenschicht mit AEM Komponenten
 description: Erfahren Sie, wie Sie die Adobe Client-Datenschicht mit Inhalten aus benutzerdefinierten AEM anpassen. Erfahren Sie, wie Sie mit den von AEM Kernkomponenten bereitgestellten APIs die Datenschicht erweitern und anpassen können.
-feature: Adobe Client-Datenschicht, Kernkomponente
-topics: integrations
-audience: developer
-doc-type: tutorial
-activity: use
 version: cloud-service
-kt: 6265
-thumbnail: KT-6265.jpg
 topic: Integrationen
+feature: Adobe Client-Datenschicht, Kernkomponenten
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+kt: 6265
+thumbnail: KT-6265.jpg
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '2034'
+source-wordcount: '2028'
 ht-degree: 4%
 
 ---
@@ -40,9 +36,9 @@ In diesem Tutorial werden Sie verschiedene Optionen zum Erweitern der Adobe Clie
 
 Um dieses Tutorial abzuschließen, ist eine **lokale Entwicklungsumgebung** erforderlich. Screenshots und Videos werden mit dem AEM as a Cloud Service SDK erfasst, das auf einem macOS ausgeführt wird. Befehle und Code sind unabhängig vom lokalen Betriebssystem, sofern nicht anders angegeben.
 
-**Neu bei AEM as a Cloud Service?** Sehen Sie sich die  [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit dem AEM as a Cloud Service SDK](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) an.
+**Neu bei AEM as a Cloud Service?** Sehen Sie sich die  [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit dem AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) an.
 
-**Neu bei AEM 6.5?** Sehen Sie sich die  [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung](https://docs.adobe.com/content/help/de-DE/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html) an.
+**Neu bei AEM 6.5?** Sehen Sie sich die  [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=de) an.
 
 ## Herunterladen und Bereitstellen der WKND-Referenz-Website {#set-up-wknd-site}
 
@@ -85,7 +81,7 @@ In diesem Tutorial wird die Byline-Komponente auf der WKND-Referenz-Site erweite
 
    Beachten Sie, dass die Byline-Komponente nicht auf der Datenschicht aufgeführt ist.
 
-## Aktualisieren Sie das Byline-Sling-Modell {#sling-model}
+## Aktualisieren des Byline Sling-Modells {#sling-model}
 
 Um Daten über die Komponente in die Datenschicht einzufügen, müssen wir zunächst das Sling-Modell der Komponente aktualisieren. Aktualisieren Sie anschließend die Java-Schnittstelle von Byline und die Sling-Modell-Implementierung, um eine neue Methode `getData()` hinzuzufügen. Diese Methode enthält die Eigenschaften, die wir in die Datenschicht einfügen möchten.
 
@@ -236,7 +232,7 @@ Ein spezielles Datenattribut `data-cmp-data-layer` für jede AEM Komponente wird
 
    Beachten Sie, dass die angezeigten Eigenschaften dieselben sind, die im Sling-Modell im `HashMap` hinzugefügt werden.
 
-## Hinzufügen eines Klickereignisses {#click-event}
+## Klickereignis hinzufügen {#click-event}
 
 Die Adobe Client-Datenschicht ist ereignisgesteuert und eines der häufigsten Ereignisse zum Trigger einer Aktion ist das `cmp:click`-Ereignis. Die AEM Kernkomponenten vereinfachen die Registrierung Ihrer Komponente mithilfe des Datenelements: `data-cmp-clickable`.
 
@@ -437,4 +433,4 @@ Sie haben gerade einige Möglichkeiten untersucht, um die Adobe Client-Datenschi
 
 * [Dokumentation zur Adobe Client-Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki)
 * [Datenschichtintegration mit den Kernkomponenten](https://github.com/adobe/aem-core-wcm-components/blob/master/DATA_LAYER_INTEGRATION.md)
-* [Verwenden der Dokumentation zur Adobe Client-Datenschicht und zu Kernkomponenten](https://docs.adobe.com/content/help/de-DE/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Verwenden der Dokumentation zur Adobe Client-Datenschicht und zu Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
