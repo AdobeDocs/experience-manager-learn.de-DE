@@ -10,9 +10,9 @@ doc-type: article
 topic: Aktualisierung
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '3541'
+source-wordcount: '3529'
 ht-degree: 6%
 
 ---
@@ -343,7 +343,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sicherheitsfunktionen, die vo
         <td>ms</td>
     </tr>
     <tr>
-        <td><strong><a href="https://docs.adobe.com/docs/en/aem/6-5/administer/security/saml-2-0-authenticationhandler.html" target="_blank">Verbesserte </a><br>
+        <td><strong><a href="https://experienceleague.adobe.com/docs/?lang=de" target="_blank">Verbesserte </a><br>
  </strong>Unterstützung der SAML-AuthentifizierungVerbesserte SAML-Umleitung, optimierte Gruppeninformationen und gelöste Schlüsselverschlüsselungsprobleme. 
             <br>
         </td>
@@ -954,7 +954,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Funktionen von AEM Assets. Ei
             <td>ms</td>
         </tr>
         <tr>
-            <td><strong><a href="https://docs.adobe.com/docs/de-DE/aem/6-5/administer/content/dynamic-media/viewer-presets.html" target="_blank">Viewer</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/" target="_blank">Viewer</a>:</strong>
             Benutzerdefinierte Rich-Media-Player mit Branding und Vorgaben mit Unterstützung für verschiedene Bildschirme/Geräte.</td>
             <td> </td>
             <td>ms</td>
