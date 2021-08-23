@@ -12,9 +12,9 @@ thumbnail: KT-5802.jpg
 topic: Integrationen, Entwicklung
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1031'
 ht-degree: 3%
 
 ---
@@ -44,7 +44,7 @@ Dieses Tutorial führt Sie durch die Erstellung eines einfachen Asset compute-Se
 
 Erfahren Sie, wie Sie sich ordnungsgemäß auf die Erweiterung von Asset compute-Workern vorbereiten und verstehen, welche Dienste und Konten bereitgestellt und konfiguriert werden müssen, sowie Software, die für die Entwicklung lokal installiert wird.
 
-### Kontobereitstellung und Dienstbereitstellung{#accounts-and-services}
+### Konto- und Dienstbereitstellung{#accounts-and-services}
 
 Die folgenden Konten und Dienste erfordern die Bereitstellung und den Zugriff auf , um das Tutorial, AEM als Cloud Service-Entwicklungsumgebung oder Sandbox-Programm, abzuschließen und auf Adobe Project Firefly und Microsoft Azure Blob Storage zuzugreifen.
 
@@ -112,7 +112,7 @@ asset compute-Sekundäre bieten verschiedene Debugging-Ebenen, von der herkömml
 
 + [Debuggen eines Sekundärs](./test-debug/debug.md)
 
-## Bereitstellen
+## Bereitstellen von
 
 Erfahren Sie, wie Sie benutzerdefinierte Asset compute-Sekundäre in AEM as a Cloud Service integrieren können, indem Sie sie zuerst in Adobe I/O Runtime bereitstellen und dann über die Verarbeitungsprofile von AEM Assets von AEM as a Cloud Service Author aufrufen.
 
@@ -148,7 +148,7 @@ Im Folgenden finden Sie verschiedene Adoben-Ressourcen, die weitere Informatione
 
 ### Dokumentation
 
-+ [asset compute-Service-Dokumentation](https://docs.adobe.com/content/help/de/asset-compute/using/extend/understand-extensibility.html)
++ [asset compute-Service-Dokumentation](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=de)
 + [asset compute Development Tool - Bitte lesen](https://github.com/adobe/asset-compute-devtool)
 + [asset compute-Beispiel-Sekundäre](https://github.com/adobe/asset-compute-example-workers)
 
