@@ -1,18 +1,17 @@
 ---
 title: Erweiterte Modellierung für GraphQL
 description: Erfahren Sie, wie Sie Beziehungen zwischen Inhaltsfragmentmodellen in Adobe Experience Manager erstellen (AEM) und wie Sie diese Beziehungen in GraphQL-Abfragen nutzen können.
-sub-product: Assets
 version: cloud-service
 topic: Headless, Content Management
-feature: Inhaltsfragmente, GraphQL-APIs
+feature: Inhaltsfragmente,GraphQL-API
 role: Developer
 level: Beginner
 kt: 7620
 thumbnail: 332859.jpg
-source-git-commit: 1853960cce1e17ade43e4b2d7b521f63c4d04d71
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
-source-wordcount: '117'
-ht-degree: 0%
+source-wordcount: '116'
+ht-degree: 3%
 
 ---
 
