@@ -2,18 +2,14 @@
 title: Entwicklung von OAuth-Bereichen in AEM
 description: Die erweiterbaren OAuth-Bereiche von Adobe Experience Manager ermöglichen die Zugriffskontrolle für Ressourcen von einer Clientanwendung, die von einem Endbenutzer autorisiert wurde. Das folgende Diagramm zeigt den Anforderungsfluss im Kontext von AEM.
 version: 6.3, 6.4, 6.5
-feature: 'Benutzer und Gruppen '
-topics: authentication, security
-activity: develop
-audience: developer
-doc-type: code
+feature: Benutzer und Gruppen
 topic: Entwicklung
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
 workflow-type: tm+mt
 source-wordcount: '183'
-ht-degree: 3%
+ht-degree: 1%
 
 ---
 
