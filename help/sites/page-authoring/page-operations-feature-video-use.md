@@ -1,23 +1,17 @@
 ---
 title: Grundlegende Seitenvorgänge in AEM Sites
-seo-title: Grundlegende Seitenvorgänge in AEM Sites
 description: Im folgenden Video erfahren Sie, wie Sie grundlegende Seitenverwaltungsvorgänge für eine Adobe Experience Manager Sites-Seite durchführen.
-seo-description: Im folgenden Video erfahren Sie, wie Sie grundlegende Seitenverwaltungsvorgänge für eine Adobe Experience Manager Sites-Seite durchführen.
-feature: Seiten-Editor, bearbeitbare Vorlagen
-topics: authoring, publishing
-audience: author, marketer
-doc-type: feature video
-activity: use
 version: 6.3, 6.4, 6.5
-kt: 4245
-thumbnail: 32147.jpg
-topic: Content Management
+topic: Content Management
+feature: Page Editor, Editable Templates
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+kt: 4245
+thumbnail: 32147.jpg
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '101'
-ht-degree: 3%
+source-wordcount: '69'
+ht-degree: 11%
 
 ---
 
@@ -32,4 +26,4 @@ Erfahren Sie, wie Sie grundlegende Seitenverwaltungsvorgänge für eine Adobe Ex
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [Bearbeiten der Dokumentation zum Seiteninhalt](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [Sites-Authoring-Benutzerhandbuch](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html&amp;topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
+* [Schnellstartanleitung zum Verfassen von Seiten (Authoring)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
