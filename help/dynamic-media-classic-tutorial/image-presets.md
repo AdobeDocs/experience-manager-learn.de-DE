@@ -2,17 +2,17 @@
 title: Bildvorgaben
 description: Bildvorgaben in Dynamic Media Classic alle Einstellungen enthalten, die zum Erstellen eines Bildes in einer bestimmten Größe, einem bestimmten Format, einer bestimmten Qualität und einer bestimmten Scharfzeichnung erforderlich sind. Bildvorgaben sind eine Schlüsselkomponente der dynamischen Größe. Wenn Sie sich eine URL in Dynamic Media Classic ansehen, können Sie leicht erkennen, ob eine Bildvorgabe verwendet wird. Erfahren Sie mehr über Bildvorgaben, warum sie so nützlich sind und wie man sie erstellt.
 sub-product: dynamic-media
-feature: Dynamic Media Classic, Bildvorgaben
+feature: Dynamic Media Classic, Image Presets
 doc-type: tutorial
 topics: development, authoring, configuring
 audience: all
 activity: use
-topic: Content Management
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '670'
 ht-degree: 1%
 
 ---
@@ -70,5 +70,3 @@ Erfahren Sie mehr über [Dynamic Media Classic-Scharfzeichnungsoptionen](https:/
 [Anleitung zur Bildvorgabe](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf). Einstellungen, die zur Optimierung der Bildqualität und Ladegeschwindigkeit verwendet werden.
 
 [Bild ist alles Teil 2: Es ist nie nur ein Weichzeichner - Qualität gegen Geschwindigkeit](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/). In einem Blog-Beitrag wird die Verwendung von Bildvorgaben für die Bereitstellung hochwertiger, schnell ladender Bilder besprochen.
-
-[Bild ist alles Webinare](https://dynamicmediaseries2019.enterprise.adobeevents.com/). Links zu Aufzeichnungen aller drei Webinare in der Serie _Bild ist alles_. [Webinar 2](https://seminars.adobeconnect.com/p6lqaotpjnd3) behandelt Bildvorgaben.
