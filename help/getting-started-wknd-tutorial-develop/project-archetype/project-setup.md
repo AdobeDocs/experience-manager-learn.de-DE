@@ -1,20 +1,20 @@
 ---
 title: Erste Schritte mit AEM Sites - Projekteinrichtung
-seo-title: Erste Schritte mit AEM Sites - Projekteinrichtung
+seo-title: Getting Started with AEM Sites - Project Setup
 description: Behandelt die Erstellung eines Maven-Multi-Module-Projekts zur Verwaltung des Codes und der Konfigurationen für eine AEM Site.
-sub-product: Sites
+sub-product: sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
-feature: AEM-Projektarchetyp
-topic: Content Management, Entwicklung
+feature: AEM Project Archetype
+topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1843'
 ht-degree: 4%
 
 ---
@@ -275,7 +275,7 @@ Das Modul **[core](https://experienceleague.adobe.com/docs/experience-manager-co
 
 ### Ui.apps- und Ui.content-Module {#apps-content-module}
 
-Das Maven-Modul **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** enthält den gesamten Rendercode, der für die Site unter `/apps` benötigt wird. Dazu gehört auch CSS/JS, das im AEM Format [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/clientlibs.html?lang=de-DE) gespeichert wird. Dazu gehören auch [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=de)-Skripte zum Rendern von dynamischem HTML. Sie können sich das Modul **ui.apps** als Zuordnung zur Struktur im JCR vorstellen, jedoch in einem Format, das auf einem Dateisystem gespeichert und an die Quell-Code-Verwaltung übertragen werden kann. Das Modul **ui.apps** enthält nur Code.
+Das Maven-Modul **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** enthält den gesamten Rendercode, der für die Site unter `/apps` benötigt wird. Dazu gehört auch CSS/JS, das im AEM Format [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) gespeichert wird. Dazu gehören auch [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=de)-Skripte zum Rendern von dynamischem HTML. Sie können sich das Modul **ui.apps** als Zuordnung zur Struktur im JCR vorstellen, jedoch in einem Format, das auf einem Dateisystem gespeichert und an die Quell-Code-Verwaltung übertragen werden kann. Das Modul **ui.apps** enthält nur Code.
 
 So erstellen Sie das Modul nur dieses:
 
@@ -346,6 +346,6 @@ So erstellen Sie das Modul nur dieses:
 
    Auch hier wird ein Build-Fehler erwartet, wenn keine AEM Instanz verfügbar ist, die auf Port **4504** ausgeführt wird. Der Parameter `aem.port` wird in der POM-Datei unter `aem-guides-wknd/pom.xml` definiert.
 
-Das Modul **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.htm)** ist auf dieselbe Weise strukturiert wie das Modul **ui.apps**. Der einzige Unterschied besteht darin, dass das Modul **ui.content** Inhalte enthält, die als **veränderlicher** -Inhalt bezeichnet werden. **** Veränderlicher Inhalt bezieht sich im Wesentlichen auf Nicht-Code-Konfigurationen wie Vorlagen, Richtlinien oder Ordnerstrukturen, die in der Quell-Code-Verwaltung gespeichert sind,  **** aber direkt auf einer AEM-Instanz geändert werden können. Dies wird im Kapitel über Seiten und Vorlagen ausführlicher untersucht.
+Das Modul **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** ist auf dieselbe Weise strukturiert wie das Modul **ui.apps**. Der einzige Unterschied besteht darin, dass das Modul **ui.content** Inhalte enthält, die als **veränderlicher** -Inhalt bezeichnet werden. **** Veränderlicher Inhalt bezieht sich im Wesentlichen auf Nicht-Code-Konfigurationen wie Vorlagen, Richtlinien oder Ordnerstrukturen, die in der Quell-Code-Verwaltung gespeichert sind,  **** aber direkt auf einer AEM-Instanz geändert werden können. Dies wird im Kapitel über Seiten und Vorlagen ausführlicher untersucht.
 
 Mit denselben Maven-Befehlen, die zum Erstellen des Moduls **ui.apps** verwendet werden, können Sie das Modul **ui.content** erstellen. Wiederholen Sie die oben genannten Schritte im Ordner **ui.content** .
