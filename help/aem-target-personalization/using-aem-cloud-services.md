@@ -1,15 +1,15 @@
 ---
 title: Integrieren von Adobe Experience Manager mit Adobe Target mithilfe von Cloud Services
-seo-title: Integrieren von Adobe Experience Manager (AEM) mit Adobe Target mithilfe älterer Cloud Services
+seo-title: Integrating Adobe Experience Manager (AEM) with Adobe Target using Legacy Cloud Services
 description: Schrittweise Anleitung zur Integration von Adobe Experience Manager (AEM) mit Adobe Target mithilfe von AEM Cloud Service
-seo-description: Schrittweise Anleitung zur Integration von Adobe Experience Manager (AEM) mit Adobe Target mithilfe von AEM Cloud Service
+seo-description: Step by step walkthrough on how to integrate Adobe Experience Manager (AEM) with Adobe Target using AEM Cloud Service
 feature: Experience Fragments
-topic: 'Personalisierung '
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '351'
 ht-degree: 3%
 
 ---
@@ -32,14 +32,13 @@ Damit Sie mit AEM Experience Fragment-Angeboten Personalisierungsaktivitäten nu
    * AEM Autoren- und Veröffentlichungsinstanz sind erforderlich, um dieses Tutorial abzuschließen. Wenn Sie Ihre AEM-Instanz noch nicht eingerichtet haben, können Sie die Schritte [hier](./implementation.md#set-up-aem) ausführen.
 
 * **Experience Cloud**
-   * Zugriff auf Ihre Organisationen Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * Zugriff auf Ihre Organisationen Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud, das mit den folgenden Lösungen bereitgestellt wurde
       * [Adobe Target](https://experiencecloud.adobe.com)
 
       >[!NOTE]
       >
       > Der Kunde muss Experience Platform Launch und Adobe I/O von [Adobe-Support](https://helpx.adobe.com/de/contact/enterprise-support.ec.html) erhalten oder sich an Ihren Systemadministrator wenden
-
 
 
 ### AEM in Adobe Target integrieren
