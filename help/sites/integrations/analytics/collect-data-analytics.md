@@ -2,15 +2,15 @@
 title: Erfassen von Seitendaten mit Adobe Analytics
 description: Verwenden Sie die ereignisbasierte Adobe Client Data-Ebene, um Daten zur Benutzeraktivität auf einer mit Adobe Experience Manager erstellten Website zu erfassen. Erfahren Sie, wie Sie in Experience Platform Launch mithilfe von Regeln auf diese Ereignisse warten und Daten an eine Adobe Analytics Report Suite senden können.
 version: cloud-service
-topic: Integrationen
-feature: Adobe Client-Datenschicht
+topic: Integrations
+feature: Adobe Client Data Layer
 role: Developer
 level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2378'
+source-wordcount: '2375'
 ht-degree: 4%
 
 ---
@@ -52,7 +52,7 @@ Folgendes ist erforderlich:
 Anstatt eine AEM Umgebung einzurichten und die WKND-Codebasis zu installieren, können Sie den Experience Platform-Debugger zu **switch** the live [https://wknd.site/](https://wknd.site/) zu *your* Launch-Eigenschaft verwenden. Natürlich können Sie Ihre eigene AEM-Site verwenden, wenn die [Adobe Client-Datenschicht bereits aktiviert ist](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
 
 1. Melden Sie sich bei Experience Platform Launch an und erstellen Sie [eine Launch-Eigenschaft](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html) (falls noch nicht geschehen).
-1. Stellen Sie sicher, dass eine erste Launch [Bibliothek](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) erstellt und in eine Launch [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html) weitergeleitet wurde.
+1. Stellen Sie sicher, dass eine erste Launch [Bibliothek](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) erstellt und in eine Launch [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) weitergeleitet wurde.
 1. Kopieren Sie den Launch-Einbettungscode aus der Umgebung, in der Ihre Bibliothek veröffentlicht wurde.
 
    ![Kopieren des eingebetteten Launch-Codes](assets/collect-data-analytics/launch-environment-copy.png)
@@ -172,7 +172,7 @@ Die Adobe Client-Datenschicht ist eine **event**-gesteuerte Datenschicht. Wenn d
 
    Das `event`-Objekt wird von der `trigger()`-Methode übergeben, die im benutzerdefinierten Ereignis aufgerufen wird. `component` ist die aktuelle Seite, die von der Datenschicht  `getState` im benutzerdefinierten Ereignis abgeleitet wurde. Erinnern Sie sich an das frühere von der Datenschicht angezeigte [Seitenschema](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page), um die verschiedenen standardmäßig angezeigten Schlüssel anzuzeigen.
 
-1. Speichern Sie die Änderungen und führen Sie einen [Build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) in Launch aus, um den Code in die auf Ihrer AEM Site verwendete [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html) weiterzuleiten.
+1. Speichern Sie die Änderungen und führen Sie einen [Build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) in Launch aus, um den Code in die auf Ihrer AEM Site verwendete [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) weiterzuleiten.
 
    >[!NOTE]
    >
