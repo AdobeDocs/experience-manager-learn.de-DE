@@ -1,20 +1,16 @@
 ---
 title: Erste Schritte mit AEM Sites - Seiten und Vorlagen
-seo-title: Erste Schritte mit AEM Sites - Seiten und Vorlagen
 description: Erfahren Sie mehr über die Beziehung zwischen einer Basisseitenkomponente und bearbeitbaren Vorlagen. Erfahren Sie, wie Kernkomponenten in das Projekt integriert werden, und lernen Sie erweiterte Richtlinienkonfigurationen bearbeitbarer Vorlagen kennen, um eine gut strukturierte Artikelseitenvorlage basierend auf einem Modell aus Adobe XD zu erstellen.
-sub-product: Sites
-version: 6.4, 6.5, Cloud Service
-type: Tutorial
-feature: Kernkomponenten, bearbeitbare Vorlagen, Seiten-Editor
-topic: Content Management, Entwicklung
+feature: Core Components, Editable Templates, Page Editor
+topic: Content Management, Development
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '3100'
+source-wordcount: '3082'
 ht-degree: 1%
 
 ---
@@ -57,7 +53,7 @@ Sehen Sie sich den Basis-Code an, auf dem das Tutorial aufbaut:
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-guides-wknd/tree/pages-templates/solution) anzeigen oder den Code lokal auschecken, indem Sie zu der Verzweigung `tutorial/pages-templates-solution` wechseln.
+Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/pages-templates-solution) anzeigen oder den Code lokal auschecken, indem Sie zu der Verzweigung `tutorial/pages-templates-solution` wechseln.
 
 ## Ziele
 
