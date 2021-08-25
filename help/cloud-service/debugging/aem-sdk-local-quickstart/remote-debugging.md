@@ -1,20 +1,16 @@
 ---
 title: Remote-Debugging des AEM SDK
 description: Der lokale Schnellstart des AEM SDK ermöglicht das Remote-Java-Debugging von Ihrer IDE aus, sodass Sie die Live-Codeausführung in AEM schrittweise durchführen können, um den genauen Ausführungsfluss zu verstehen.
-feature: Entwickler-Tools
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
 kt: 5251
-topic: Entwicklung
+topic: Development
+feature: Developer Tools
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+thumbnail: 34338.jpeg
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '278'
-ht-degree: 1%
+source-wordcount: '275'
+ht-degree: 0%
 
 ---
 
@@ -45,5 +41,5 @@ Die meisten Java IDEs bieten Unterstützung für das Remote-Debugging von Java-P
 ### Anweisungen einrichten
 
 + [VS Code Java Remote Debugger eingerichtet](https://code.visualstudio.com/docs/java/java-debugging)
-+ [Einrichten des IntelliJ IDEA Remote Debugger](https://www.jetbrains.com/help/idea/run-debug-configuration-remote-debug.html)
++ [Einrichten des IntelliJ IDEA Remote Debugger](https://www.jetbrains.com/help/idea/tutorial-remote-debug.html)
 + [Einrichten von Eclipse Remote Debugger](https://javapapers.com/core-java/java-remote-debug-with-eclipse/)
