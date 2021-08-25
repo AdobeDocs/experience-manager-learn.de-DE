@@ -1,7 +1,7 @@
 ---
 title: Einrichten der Entwicklungstools für AEM as a Cloud Service-Entwicklung
 description: Richten Sie eine lokale Entwicklungsmaschine mit allen Grundlinien-Tools ein, die für die lokale Entwicklung mit AEM erforderlich sind.
-feature: Entwickler-Tools
+feature: Developer Tools
 topics: development
 version: cloud-service
 doc-type: tutorial
@@ -9,13 +9,13 @@ activity: develop
 audience: developer
 kt: 4267
 thumbnail: 25907.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1428'
-ht-degree: 4%
+source-wordcount: '1435'
+ht-degree: 3%
 
 ---
 
@@ -190,9 +190,9 @@ Visual Studio Code ist die ideale Wahl für Frontend-Entwickler, die in erster L
 
 ### Eclipse
 
-__[Eclipse ](https://www.eclipse.org/ide/)__ IDEs ist eine beliebte IDEs für die Java-Entwicklung und unterstützt das   __[AEM Developer ](https://eclipse.adobe.com/aem/dev-tools/)__ Toolslug-in von Adobe, das ein In-IDE-GUI für das Authoring und die Synchronisierung von JCR-Inhalten mit einer lokalen AEM-Instanz bereitstellt.
+__[Eclipse ](https://www.eclipse.org/ide/)__ IDEs ist eine beliebte IDEs für die Java-Entwicklung und unterstützt das   __[AEM Developer ](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)__ Toolslug-in von Adobe, das ein In-IDE-GUI für das Authoring und die Synchronisierung von JCR-Inhalten mit einer lokalen AEM-Instanz bereitstellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
 + [Eclipse herunterladen](https://www.eclipse.org/ide/)
-+ [Herunterladen der Eclipse Dev Tools](https://eclipse.adobe.com/aem/dev-tools/)
++ [Herunterladen der Eclipse Dev Tools](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)
