@@ -3,13 +3,13 @@ title: Verwenden von Brand Portal
 description: Video-Durchläufe der AEM-Autoren- und AEM Assets Brand Portal-Integration.
 feature: Brand Portal
 version: 6.3, 6.4, 6.5
-topic: Content Management
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1767'
-ht-degree: 47%
+source-wordcount: '1764'
+ht-degree: 48%
 
 ---
 
@@ -30,7 +30,7 @@ Die Asset-Beschaffung von Brand Portal wird verwendet, um Assets von Agenturen u
 
 *Für die Verwendung der Asset-Beschaffung ist Experience Manager Author 6.5 SP2 (6.5.2) oder höher erforderlich*
 
-Anweisungen zum Konfigurieren und Einrichten der Asset-Beschaffung in der Experience Manager-Autoreninstanz finden Sie unter [Aktivieren der Experience Manager-Autoreninstanz für die Asset-Beschaffung](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/configure-asset-sourcing-in-aem/brand-portal-enable-asset-sourcing.html) .
+Anweisungen zum Konfigurieren und Einrichten der Asset-Beschaffung in der Experience Manager-Autoreninstanz finden Sie unter [Aktivieren der Experience Manager-Autoreninstanz für die Asset-Beschaffung](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=de) .
 
 ## Brand Portal - Funktionen und Verbesserungen im Februar 2019{#brand-portal-features-and-enhancements-644}
 
