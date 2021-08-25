@@ -1,16 +1,16 @@
 ---
 title: Integrieren von Adobe Experience Manager mit Adobe Target mithilfe von Experience Platform Launch und Adobe I/O
-seo-title: Integrieren von Adobe Experience Manager mit Adobe Target mithilfe von Experience Platform Launch und Adobe I/O
+seo-title: Integrating Adobe Experience Manager with Adobe Target using Experience Platform Launch and Adobe I/O
 description: Schrittweise Anleitung zur Integration von Adobe Experience Manager in Adobe Target mithilfe von Experience Platform Launch und Adobe I/O
-seo-description: Schrittweise Anleitung zur Integration von Adobe Experience Manager in Adobe Target mithilfe von Experience Platform Launch und Adobe I/O
+seo-description: Step by step walk-through on how to integrate Adobe Experience Manager with Adobe Target using Experience Platform Launch and Adobe I/O
 feature: Experience Fragments
-topic: Personalisierung
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1098'
-ht-degree: 5%
+source-wordcount: '1064'
+ht-degree: 4%
 
 ---
 
@@ -21,14 +21,14 @@ ht-degree: 5%
 
 * [AEM Autoren- und ](./implementation.md#set-up-aem) Veröffentlichungsinstanz auf localhost Port 4502 bzw. 4503
 * **Experience Cloud**
-   * Zugriff auf Ihre Organisationen Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * Zugriff auf Ihre Organisationen Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud, das mit den folgenden Lösungen bereitgestellt wurde
       * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
       * [Adobe I/O Console](https://console.adobe.io)
 
       >[!NOTE]
-      >Sie sollten in Launch über die Berechtigungen &quot;Entwickeln&quot;, &quot;Genehmigen&quot;, &quot;Veröffentlichen&quot;, &quot;Erweiterungen verwalten&quot;und &quot;Umgebungen verwalten&quot;verfügen. Wenn Sie einen dieser Schritte nicht ausführen können, da die Optionen in der Benutzeroberfläche nicht verfügbar sind, wenden Sie sich an Ihren Experience Cloud-Administrator, um Zugriff anzufordern. Weitere Informationen zu Launch-Berechtigungen finden Sie in der Dokumentation](https://docs.adobelaunch.com/administration/user-permissions).[
+      >Sie sollten in Launch über die Berechtigungen &quot;Entwickeln&quot;, &quot;Genehmigen&quot;, &quot;Veröffentlichen&quot;, &quot;Erweiterungen verwalten&quot;und &quot;Umgebungen verwalten&quot;verfügen. Wenn Sie einen dieser Schritte nicht ausführen können, da die Optionen in der Benutzeroberfläche nicht verfügbar sind, wenden Sie sich an Ihren Experience Cloud-Administrator, um Zugriff anzufordern. Weitere Informationen zu Launch-Berechtigungen finden Sie in der Dokumentation](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).[
 
 
 * **Browser-Plugins**
@@ -66,7 +66,7 @@ In diesem Abschnitt werden die folgenden Integrationsschritte behandelt:
 
 Eine Eigenschaft ist ein Container, den Sie beim Bereitstellen von Tags auf Ihrer Site mit Erweiterungen, Regeln, Datenelementen und Bibliotheken füllen.
 
-1. Navigieren Sie zu Ihrem Unternehmen [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (<https://>`<yourcompany>`.experiencecloud.adobe.com).
+1. Navigieren Sie zu Ihrem Unternehmen [Adobe Experience Cloud](https://experiencecloud.adobe.com/) (`https://<yourcompany>.experiencecloud.adobe.com`).
 2. Melden Sie sich mit Ihrer Adobe ID an und stellen Sie sicher, dass Sie sich in der richtigen Organisation befinden.
 3. Klicken Sie im Lösungsmenü auf **Launch** und wählen Sie dann die Schaltfläche **Go To Launch** aus.
 
@@ -75,7 +75,7 @@ Eine Eigenschaft ist ein Container, den Sie beim Bereitstellen von Tags auf Ihre
 4. Vergewissern Sie sich, dass Sie sich in der richtigen Organisation befinden, und fahren Sie dann mit dem Erstellen einer Launch-Eigenschaft fort.
    ![Experience Cloud - Launch](assets/using-launch-adobe-io/launch-create-property.png)
 
-   *Weitere Informationen zum Erstellen von Eigenschaften finden Sie unter  [Erstellen einer ](https://docs.adobelaunch.com/administration/companies-and-properties#create-a-property) Eigenschaft in der Produktdokumentation.*
+   *Weitere Informationen zum Erstellen von Eigenschaften finden Sie unter  [Erstellen einer ](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#create-or-configure-a-property) Eigenschaft in der Produktdokumentation.*
 5. Klicken Sie auf die Schaltfläche **Neue Eigenschaft** .
 6. Geben Sie einen Namen für Ihre Eigenschaft ein (z. B. *AEM Target-Tutorial*)
 7. Geben Sie als Domäne *localhost.com* ein, da dies die Domäne ist, auf der die WKND-Demosite ausgeführt wird. Obwohl das Feld &quot;*Domäne*&quot;erforderlich ist, funktioniert die Launch-Eigenschaft in jeder Domäne, in der sie implementiert ist. Primärer Zweck dieses Felds ist es, Menüoptionen im Regel-Builder vorab auszufüllen.
