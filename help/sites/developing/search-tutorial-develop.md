@@ -1,18 +1,14 @@
 ---
 title: Implementierungshandbuch für einfache Suchen
 description: Bei der Implementierung der einfachen Suche handelt es sich um die Materialien vom Summit Lab „AEM Search Demystified“ von 2017. Diese Seite enthält die Materialien aus diesem Labor. Eine Führung durch das Labor erhalten Sie in der Arbeitsmappe für den Lab im Abschnitt Präsentation dieser Seite.
-topics: development, search
-audience: developer
-doc-type: tutorial
-activity: develop
 version: 6.3, 6.4, 6.5
-feature: Suchen
-topic: Entwicklung
+feature: Search
+topic: Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '897'
 ht-degree: 11%
 
 ---
@@ -114,7 +110,7 @@ Korrekturen und Erläuterungen aus den Labordiskussionen und Antworten auf Folge
 
    Oak stellt eine Reihe von Lucene-bereitgestellten Analyzer-Konfigurationselementen zur Verwendung in AEM bereit.
 
-   * [Dokumentation zu Apache Oak Analyzers](http://jackrabbit.apache.org/oak/docs/query/lucene.html#analyzers)
+   * [Dokumentation zu Apache Oak Analyzers](https://jackrabbit.apache.org/oak/docs/query/lucene.html#analyzers)
       * [Tokenizers](https://cwiki.apache.org/confluence/display/solr/Tokenizers)
       * [Filter](https://cwiki.apache.org/confluence/display/solr/Filter+Descriptions)
       * [CharFilters](https://cwiki.apache.org/confluence/display/solr/CharFilterFactories)
