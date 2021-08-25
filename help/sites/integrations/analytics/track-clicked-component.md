@@ -2,16 +2,16 @@
 title: Verfolgen geklickter Komponenten mit Adobe Analytics
 description: Verwenden Sie die ereignisbasierte Adobe Client Data-Schicht, um Klicks auf bestimmte Komponenten auf einer Adobe Experience Manager-Site zu verfolgen. Erfahren Sie, wie Sie in Experience Platform Launch mithilfe von Regeln auf diese Ereignisse warten und Daten mit einem Verfolgungslink-Beacon an eine Adobe Analytics senden können.
 version: cloud-service
-topic: Integrationen
-feature: Adobe Client-Datenschicht
+topic: Integrations
+feature: Adobe Client Data Layer
 role: Developer
 level: Intermediate
 kt: 6296
 thumbnail: KT-6296.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1814'
-ht-degree: 4%
+source-wordcount: '1810'
+ht-degree: 3%
 
 ---
 
@@ -144,7 +144,7 @@ Die Adobe Client-Datenschicht ist eine **event**-gesteuerte Datenschicht. Wenn a
 
    Das `event`-Objekt wird von der `trigger()`-Methode übergeben, die im benutzerdefinierten Ereignis aufgerufen wird. `component` ist der aktuelle Status der Komponente, der von der Datenschicht abgeleitet wurde,  `getState` die den Klick ausgelöst hat.
 
-1. Speichern Sie die Änderungen und führen Sie einen [Build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) in Launch aus, um den Code in die auf Ihrer AEM Site verwendete [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments.html) weiterzuleiten.
+1. Speichern Sie die Änderungen und führen Sie einen [Build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) in Launch aus, um den Code in die auf Ihrer AEM Site verwendete [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) weiterzuleiten.
 
    >[!NOTE]
    >
