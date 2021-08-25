@@ -1,19 +1,15 @@
 ---
 title: Grundlegendes zum Code für das AEM Stilsystem
 description: In diesem Video werden wir uns die Anatomie von CSS (oder LESS) und JavaScript ansehen, die zum Formatieren der Kerntitelkomponente von Adobe Experience Manager mithilfe des Stilsystems verwendet werden, sowie die Anwendung dieser Stile auf HTML und DOM.
-feature: Stilsystem
-topics: development, components, front-end-development
-audience: developer, implementer
-doc-type: technical video
-activity: understand
+feature: Style System
 version: 6.4, 6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1148'
-ht-degree: 4%
+source-wordcount: '1092'
+ht-degree: 2%
 
 ---
 
@@ -22,21 +18,16 @@ ht-degree: 4%
 
 In diesem Video werden wir uns die Anatomie der CSS (oder [!DNL LESS]) und JavaScript ansehen, die zum Stilen der Kerntitelkomponente von Experience Manager mithilfe des Stilsystems verwendet werden, sowie die Art und Weise, wie diese Stile auf HTML und DOM angewendet werden.
 
->[!NOTE]
->
->Das AEM Stilsystem wurde mit [AEM 6.3 SP1](https://helpx.adobe.com/de/experience-manager/6-3/release-notes/sp1-release-notes.html) + [Feature Pack 20593](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq630/featurepack/cq-6.3.0-featurepack-20593) eingeführt.
->
->Das Video geht davon aus, dass die Komponente &quot;We.Retail Title&quot;aktualisiert wurde, um [Kernkomponenten v2.0.0+](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components/releases) zu übernehmen.
 
 ## Grundlegendes zum Code für das Stilsystem {#understanding-how-to-code-for-the-style-system}
 
->[!VIDEO](https://video.tv.adobe.com/v/21538/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21538/?quality=12&learn=on)
 
 Das bereitgestellte AEM-Paket (**technical-review.sites.style-system-1.0.0.zip**) installiert den Beispieltitelstil, Beispielrichtlinien für die Komponenten &quot;We.Retail Layout Container&quot;und &quot;Titel&quot;sowie eine Beispielseite.
 
 [technical-review.sites.style-system-1.0.0.zip](assets/technical-review.sites.style-system-1.0.0.zip)
 
-### CSS {#the-css}
+### Die CSS {#the-css}
 
 Im Folgenden finden Sie die [!DNL LESS] -Definition für den Beispielstil, der unter gefunden wird:
 
