@@ -1,7 +1,7 @@
 ---
 title: SPA integrieren | Erste Schritte mit dem AEM SPA Editor und Angular
 description: Erfahren Sie, wie der Quellcode für eine Einzelseiten-App (SPA), die auf Angular geschrieben wurde, in ein Adobe Experience Manager (AEM)-Projekt integriert werden kann. Erfahren Sie, wie Sie mit modernen Frontend-Tools wie dem Frontend-CLI-Tool die SPA schnell mit der AEM JSON-Modell-API entwickeln können.
-sub-product: Sites
+sub-product: sites
 feature: SPA Editor
 topics: development
 doc-type: tutorial
@@ -13,9 +13,9 @@ thumbnail: 5310-spa-angular.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2195'
+source-wordcount: '2191'
 ht-degree: 2%
 
 ---
@@ -136,7 +136,7 @@ Weitere Informationen zum Front-End-Build finden Sie unter [hier](https://experi
 
 6. Prüfen Sie die Datei `ui.frontend/clientlib.config.js`. Diese Konfigurationsdatei wird von [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) verwendet, um zu bestimmen, wie die Client-Bibliothek generiert wird.
 
-7. Prüfen Sie die Datei `ui.frontend/pom.xml`. Diese Datei wandelt den Ordner `ui.frontend` in einen Ordner [Maven-Modul](http://maven.apache.org/guides/mini/guide-multiple-modules.html) um. Die Datei `pom.xml` wurde aktualisiert, um das [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) zu **test** und **build** SPA während eines Maven-Builds zu verwenden.
+7. Prüfen Sie die Datei `ui.frontend/pom.xml`. Diese Datei wandelt den Ordner `ui.frontend` in einen Ordner [Maven-Modul](https://maven.apache.org/guides/mini/guide-multiple-modules.html) um. Die Datei `pom.xml` wurde aktualisiert, um das [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) zu **test** und **build** SPA während eines Maven-Builds zu verwenden.
 
 8. Inspect die Datei `app.component.ts` unter `ui.frontend/src/app/app.component.ts`:
 
