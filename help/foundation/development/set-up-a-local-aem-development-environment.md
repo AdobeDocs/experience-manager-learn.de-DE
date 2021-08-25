@@ -2,16 +2,16 @@
 title: Lokale AEM-Entwicklungsumgebung einrichten
 description: Anleitung zum Einrichten einer lokalen Entwicklung für Adobe Experience Manager, AEM. Behandelt wichtige Themen wie lokale Installation, Apache Maven, integrierte Entwicklungsumgebungen und Debugging/Fehlerbehebung. Die Entwicklung mit Eclipse IDE, CRXDE-Lite, Visual Studio Code und IntelliJ werden besprochen.
 version: 6.4, 6.5
-feature: Entwickler-Tools
+feature: Developer Tools
 topics: development
 activity: develop
 audience: developer
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2655'
+source-wordcount: '2658'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 Anleitung zum Einrichten einer lokalen Entwicklung für Adobe Experience Manager, AEM. Behandelt wichtige Themen wie lokale Installation, Apache Maven, integrierte Entwicklungsumgebungen und Debugging/Fehlerbehebung. Die Entwicklung mit **[!DNL Eclipse IDE], [!DNL CRXDE Lite], [!DNL Visual Studio Code] und[!DNL IntelliJ]** wird besprochen.
 
-## Überblick
+## Übersicht
 
 Die Einrichtung einer lokalen Entwicklungsumgebung ist der erste Schritt bei der Entwicklung für Adobe Experience Manager oder AEM. Nehmen Sie sich Zeit für die Einrichtung einer qualitätsorientierten Entwicklungsumgebung, um Ihre Produktivität zu steigern und schnelleren Code zu schreiben. Wir können eine AEM lokale Entwicklungsumgebung in vier Bereiche unterteilen:
 
@@ -207,12 +207,12 @@ Wenn Sie eine IDE verwenden, überprüfen Sie `classic` in Ihrer Maven-Profil-Re
 
 ### [!DNL Eclipse] IDE
 
-Die **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** ist eine der beliebtesten IDEs für die Java-Entwicklung, zum großen Teil, weil sie Open Source und ***free*** ist. Adobe bietet ein Plug-in **[[!DNL AEM Developer Tools]](https://eclipse.adobe.com/aem/dev-tools/)** für [!DNL Eclipse], um die Entwicklung mit einer netten grafischen Benutzeroberfläche zu erleichtern, mit der Code mit einer lokalen AEM synchronisiert werden kann. Die [!DNL Eclipse] IDE wird für Entwickler empfohlen, die zum großen Teil neu AEM, da die GUI von [!DNL AEM Developer Tools] unterstützt wird.
+Die **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** ist eine der beliebtesten IDEs für die Java-Entwicklung, zum großen Teil, weil sie Open Source und ***free*** ist. Adobe bietet ein Plug-in **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html)** für [!DNL Eclipse], um die Entwicklung mit einer netten grafischen Benutzeroberfläche zu erleichtern, mit der Code mit einer lokalen AEM synchronisiert werden kann. Die [!DNL Eclipse] IDE wird für Entwickler empfohlen, die zum großen Teil neu AEM, da die GUI von [!DNL AEM Developer Tools] unterstützt wird.
 
 #### Installation und Einrichtung
 
 1. Laden Sie die [!DNL Eclipse] IDE für [!DNL Java EE Developers] herunter und installieren Sie sie: [https://www.eclipse.org](https://www.eclipse.org/)
-1. Befolgen Sie die Anweisungen zum Installieren des Plug-ins [!DNL AEM Developer Tools] : [https://eclipse.adobe.com/aem/dev-tools/](https://eclipse.adobe.com/aem/dev-tools/)
+1. Befolgen Sie die Anweisungen zum Installieren des Plug-ins [!DNL AEM Developer Tools] : [https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html](https://eclipse.adobe.com/aem/dev-tools/)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
@@ -309,7 +309,7 @@ Standardmäßig ist **error.log** so konfiguriert, dass *[!DNL INFO]*-Anweisunge
 
 ![Protokollierungskonfiguration in AEM](./assets/set-up-a-local-aem-development-environment/logging.png)
 
-#### Das Bundle befindet sich in einem installierten Zustand {#bundle-active}
+#### Bundle befindet sich im Status &quot;Installiert&quot; {#bundle-active}
 
 Alle Bundles (außer Fragmente) sollten den Status **[!UICONTROL Aktiv]** aufweisen. Wenn Ihr Code-Bundle in einem Status [!UICONTROL Installiert] angezeigt wird, muss ein Problem behoben werden. Meistens handelt es sich um ein Abhängigkeitsproblem:
 
