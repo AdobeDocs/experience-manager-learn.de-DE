@@ -1,23 +1,17 @@
 ---
 title: Grundlegendes zu Seiteneigenschaften in AEM Sites
-seo-title: Grundlegendes zu Seiteneigenschaften in Adobe Experience Manager Sites
 description: Im folgenden Video werden die Seiteneigenschaften-Metadaten vorgestellt, die einer Seite in Adobe Experience Manager zugeordnet sind.
-seo-description: 'Im folgenden Video werden die Seiteneigenschaften-Metadaten vorgestellt, die einer Seite in Adobe Experience Manager zugeordnet sind. '
-feature: Seiteneditor
-topics: authoring, metadata
-audience: author, marketer
-doc-type: feature video
-activity: understand
 version: 6.3, 6.4, 6.5
-kt: 4321
-thumbnail: 32192.jpg
-topic: Content Management
+topic: Content Management
+feature: Page Editor
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+kt: 4321
+thumbnail: 32192.jpg
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 33%
+source-wordcount: '138'
+ht-degree: 42%
 
 ---
 
@@ -64,4 +58,5 @@ In diesem Video werden die folgenden Seiteneigenschaftselemente behandelt:
 
 * [Bearbeiten der Dokumentation zu den Seiteneigenschaften](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
 * [Bearbeiten der Dokumentation zum Seiteninhalt](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [Sites-Authoring-Benutzerhandbuch](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html&amp;topic=/experience-manager/6-5/sites/authoring/morehelp/page-authoring.ug.js)
+* [Schnellstartanleitung zum Verfassen von Seiten (Authoring)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+
