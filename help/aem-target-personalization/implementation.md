@@ -1,16 +1,16 @@
 ---
 title: Integrieren von Adobe Experience Manager mit Adobe Target
-seo-title: Ein Artikel, der verschiedene Möglichkeiten zur Integration von Adobe Experience Manager(AEM) in Adobe Target für die Bereitstellung personalisierter Inhalte behandelt.
+seo-title: An article covering different ways to integrate Adobe Experience Manager(AEM) with Adobe Target for delivering personalized content.
 description: Ein Artikel, der die Einrichtung von Adobe Experience Manager mit Adobe Target für verschiedene Szenarien behandelt.
-seo-description: Ein Artikel, der die Einrichtung von Adobe Experience Manager mit Adobe Target für verschiedene Szenarien behandelt.
+seo-description: An article covering how to set up Adobe Experience Manager with Adobe Target for different scenarios.
 feature: Experience Fragments
-topic: Personalisierung
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '700'
-ht-degree: 5%
+source-wordcount: '662'
+ht-degree: 4%
 
 ---
 
@@ -36,7 +36,7 @@ AEM Kunden, die Experience Fragment-Angebote zur Erstellung einer Aktivität in 
       * [Digitale Datenschicht](assets/implementation/digital-data-layer.zip)
 
 * **Experience Cloud**
-   * Zugriff auf Ihre Organisationen Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * Zugriff auf Ihre Organisationen Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud, das mit den folgenden Lösungen bereitgestellt wurde
       * [Adobe Experience Platform Launch](https://experiencecloud.adobe.com)
       * [Adobe Target](https://experiencecloud.adobe.com)
