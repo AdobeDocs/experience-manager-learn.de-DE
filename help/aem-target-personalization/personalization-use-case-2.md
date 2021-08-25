@@ -1,15 +1,15 @@
 ---
 title: Personalisierung mit Adobe Target
-seo-title: Personalisierung mit Adobe Target
+seo-title: Personalization using Adobe Target
 description: Ein durchgehendes Tutorial, in dem gezeigt wird, wie mit Adobe Target personalisierte Erlebnisse erstellt und bereitgestellt werden.
-seo-description: Ein durchgehendes Tutorial, in dem gezeigt wird, wie mit Adobe Target personalisierte Erlebnisse erstellt und bereitgestellt werden.
+seo-description: An end-to-end tutorial showing how to create and deliver personalized experience using Adobe Target.
 feature: Experience Fragments
-topic: 'Personalisierung '
+topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '587'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
    * [AEM Autoren- und ](./implementation.md#getting-aem) Veröffentlichungsinstanz auf localhost 4502 bzw. 4503.
    * [AEM mit Adobe Target mit Adobe Experience Platform Launch integriert](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
-   * Zugriff auf Ihre Organisationen Adobe Experience Cloud - <https://>`<yourcompany>`.experiencecloud.adobe.com
+   * Zugriff auf Ihre Organisationen Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud, das mit den folgenden Lösungen bereitgestellt wurde
       * [Adobe Target](https://experiencecloud.adobe.com)
 
