@@ -2,17 +2,12 @@
 title: Gründe für die Aktualisierung
 description: Eine allgemeine Aufschlüsselung der wichtigsten Funktionen für Kunden, die ein Upgrade auf die neueste Version von Adobe Experience Manager in Erwägung ziehen.
 version: 6.5
-sub-product: Assets, Cloud-Manager, Commerce, Content-Services, dynamic-media, Formulare, Foundation, Bildschirme, Sites
-topics: best-practices, upgrade
-audience: all
-activity: understand
-doc-type: article
-topic: Aktualisierung
+topic: Upgrade
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '3529'
+source-wordcount: '3462'
 ht-degree: 6%
 
 ---
@@ -504,8 +499,8 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sites-Funktionen, die von AEM
             <td><sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/release-notes/style-system-fp.html" target="_blank">Stilsystem</a>:</strong>
-             Erhöhen Sie die Wiederverwendung AEM Komponente, indem Sie ihr visuelles Erscheinungsbild mit dem kontextbezogenen Stilsystem definieren.</td>
+            <td><strong>Stilsystem: </strong>
+            Erhöhen Sie die Wiederverwendung AEM Komponente, indem Sie ihr visuelles Erscheinungsbild mit dem kontextbezogenen Stilsystem definieren.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -559,7 +554,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sites-Funktionen, die von AEM
             <td>ms</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/sites/using/content-fragments-feature-video-understand.html" target="_blank">Inhaltsfragmente</a>:</strong>
+            <td><strong>Inhaltsfragmente: </strong>
             Erstellen und kuratieren Sie redaktionelle Inhalte, die von der Präsentation entkoppelt sind, um sie einfach wiederzuverwenden.</td>
             <td> </td>
             <td> </td>
@@ -581,7 +576,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sites-Funktionen, die von AEM
             <td><sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/release-notes/content-services-fragments-featurepack.html" target="_blank">Content Services</a>:</strong>
+            <td><strong>Content Services:</strong>
             Exportieren Sie Inhalte aus AEM als JSON für die Verwendung auf allen Geräten und Anwendungen.</td>
             <td> </td>
             <td> </td>
@@ -636,7 +631,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sites-Funktionen, die von AEM
             <td>ms</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/aem-screens-introduction.html" target="_blank">Screens</a>:</strong>
+            <td><strong>Screens: </strong>
             Verwalten Sie Erlebnisse für digitale Beschilderung und Kiosks.</td>
             <td> </td>
             <td> </td>
@@ -993,8 +988,6 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Funktionen von AEM Assets. Ei
 
 Nachstehend finden Sie eine Matrix der wichtigsten AEM Forms Add-on-Funktionen, die von AEM angeboten werden. Einige dieser Funktionen wurden in früheren Versionen eingeführt, um die in den einzelnen Versionen hinzugefügten inkrementellen Verbesserungen zu verbessern.
 
-+ [Versionshinweise zu AEM Forms](https://helpx.adobe.com/experience-manager/6-5/release-notes/forms.html)
-
 ***✔ <sup>und </sup> wichtige Verbesserungen der Funktion in dieser Version.***
 
 ***✔ <sup></sup> SPgibt an, dass die Funktion über ein Service Pack oder Feature Pack verfügbar ist.***
@@ -1149,8 +1142,8 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Forms Add-on-Funktionen, 
             <td><sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/pdf/aem-forms/6-5/WorkbenchHelp.pdf" target="_blank">Workflow (J2EE) für die Forms-Verarbeitung</a>:</strong>
-             Erstellen Sie komplexe Formulare/dokumentorientierte Workflows mit einer intuitiven IDE.</td>
+            <td><strong>Workflow (J2EE) für die Forms-Verarbeitung: </strong>
+            Erstellen Sie komplexe Formulare/dokumentorientierte Workflows mit einer intuitiven IDE.</td>
             <td></td>
             <td>ms</td>
             <td>ms</td>
@@ -1188,8 +1181,6 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Forms Add-on-Funktionen, 
 ## Communities-Funktionen
 
 Nachstehend finden Sie eine Matrix der wichtigsten AEM Communities Add-on-Funktionen, die von AEM angeboten werden. Einige dieser Funktionen wurden in früheren Versionen eingeführt, um die in den einzelnen Versionen hinzugefügten inkrementellen Verbesserungen zu verbessern.
-
-+ [AEM Communities - Übersicht über neue Funktionen](https://helpx.adobe.com/experience-manager/6-5/communities/using/whats-new-aem-communities.html#main-pars_text)
 
 ***✔ <sup>und </sup> wichtige Verbesserungen der Funktion in dieser Version.***
 
@@ -1629,7 +1620,7 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Communities Add-on-Funkti
     </tbody>
 </table>
 
-AEM Communities fügt [Verbesserungen](https://helpx.adobe.com/experience-manager/6-5/communities/using/whats-new-aem-communities.html) über Versionen hinzu, um Unternehmen die Interaktion und Aktivierung ihrer Benutzer zu ermöglichen, indem sie:
+AEM Communities bietet Verbesserungen durch Versionen, die Unternehmen die Interaktion und Aktivierung ihrer Benutzer ermöglichen, indem sie:
 
 + **@** mentionsupport in benutzergenerierten Inhalten
 + Verbesserungen der Barrierefreiheit durch **Tastaturnavigation** in **Aktivierung** -Komponenten.
