@@ -7,12 +7,12 @@ doc-type: tutorial
 topics: development, authoring, configuring, architecture, publishing
 audience: all
 activity: use
-topic: Content Management
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '2714'
+source-wordcount: '2710'
 ht-degree: 4%
 
 ---
@@ -139,7 +139,7 @@ Neu hochgeladene und veröffentlichte Assets werden sofort angezeigt, aktualisie
 
 Dies ist in der Regel kein Problem, es sei denn, es ist ein Fehler aufgetreten und das Bild/Asset hat denselben Namen wie die zuvor veröffentlichte Version. Es gibt jedoch ein Problem mit dem Bild. Beispielsweise haben Sie versehentlich eine Version mit niedriger Auflösung hochgeladen oder Ihr Kunstdirektor hat das Bild nicht genehmigt. In diesem Fall möchten Sie das Originalbild abrufen und es mit derselben Asset-ID durch eine neue Version ersetzen.
 
-Erfahren Sie, wie Sie [den Cache für die zu aktualisierenden URLs manuell löschen](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/invalidate-cdn-cached-content.html).
+Erfahren Sie, wie Sie [den Cache für die zu aktualisierenden URLs manuell löschen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/invalidate-cdn-cache-dynamic-media.html?lang=en).
 
 >[!TIP]
 >
