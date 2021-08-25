@@ -5,13 +5,13 @@ version: cloud-service
 mini-toc-levels: 1
 kt: 6386
 thumbnail: KT-6386.jpg
-feature: Inhaltsfragmente,GraphQL-API
+feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1814'
 ht-degree: 4%
 
 ---
@@ -158,11 +158,7 @@ Eines der Ziele dieses Tutorials besteht darin, zu zeigen, wie AEM Inhalte von e
 
    ![GraphQL Endpoint XHR-Anfrage](assets/setup/endpoint-gql.png)
 
-1. Sie können die Parameter und die JSON-Antwort auch anzeigen, indem Sie die Netzwerkanforderung überprüfen. Es kann hilfreich sein, eine Browsererweiterung wie [GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm) für Chrome zu installieren, um ein besseres Verständnis der Abfrage und Antwort zu erhalten.
-
-   ![GraphQL-Netzwerkerweiterung](assets/setup/GraphQL-extension.png)
-
-   *Verwenden des GraphQL-Netzwerks der Chrome-Erweiterung*
+1. Sie können die Parameter und die JSON-Antwort auch anzeigen, indem Sie die Netzwerkanforderung überprüfen. Es kann hilfreich sein, eine Browsererweiterung wie [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln) für Chrome zu installieren, um ein besseres Verständnis der Abfrage und Antwort zu erhalten.
 
 ## Inhaltsfragment ändern
 
