@@ -5,13 +5,13 @@ version: cloud-service
 mini-toc-levels: 1
 kt: 6716
 thumbnail: KT-6716.jpg
-feature: Inhaltsfragmente,GraphQL-API
+feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1398'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die in d
 
 _IDE-Screenshots in diesem Kapitel stammen aus  [Visual Studio Code](https://code.visualstudio.com/)_
 
-Installieren Sie optional eine Browsererweiterung wie [GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm), um weitere Details zu einer GraphQL-Abfrage anzeigen zu können.
+Installieren Sie optional eine Browsererweiterung wie [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln), um weitere Details zu einer GraphQL-Abfrage anzeigen zu können.
 
 ## Ziele
 
@@ -74,7 +74,7 @@ Der Start der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlicher
 
       ![WKND GraphQL-React-App - Detailerlebnis](./assets/graphql-and-external-app/react-details-view.png)
 
-1. Verwenden Sie die Entwicklungs-Tools des Browsers und eine Browsererweiterung wie [GraphQL Network](https://chrome.google.com/webstore/detail/graphql-network/igbmhmnkobkjalekgiehijefpkdemocm), um die an AEM gesendeten GraphQL-Abfragen und deren JSON-Antworten zu überprüfen. Dieser Ansatz kann verwendet werden, um GraphQL-Anforderungen und -Antworten zu überwachen, um sicherzustellen, dass sie korrekt formuliert sind und ihre Antworten erwartungsgemäß sind.
+1. Verwenden Sie die Entwicklungs-Tools des Browsers und eine Browsererweiterung wie [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln), um die an AEM gesendeten GraphQL-Abfragen und deren JSON-Antworten zu überprüfen. Dieser Ansatz kann verwendet werden, um GraphQL-Anforderungen und -Antworten zu überwachen, um sicherzustellen, dass sie korrekt formuliert sind und ihre Antworten erwartungsgemäß sind.
 
    ![Raw-Abfrage für AdventureList](assets/graphql-and-external-app/raw-query-chrome-extension.png)
 
