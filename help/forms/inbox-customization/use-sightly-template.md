@@ -1,20 +1,20 @@
 ---
 title: Anpassung des Posteingangs
 description: Fügen Sie benutzerdefinierte Spalten hinzu, um mithilfe einer Vorlage zusätzliche Daten aus einem Workflow anzuzeigen
-feature: Adaptive Formulare
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 9%
+source-wordcount: '289'
+ht-degree: 8%
 
 ---
 
@@ -81,7 +81,7 @@ return val;
 
 >[!NOTE]
 >
->In diesem Artikel wird davon ausgegangen, dass Sie den [Beispiel-Workflow](assets/review-workflow.zip) und das [Beispielformular](assets/snap-form.zip) aus [vorherigen Artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.md) in dieser Reihe installiert haben.
+>In diesem Artikel wird davon ausgegangen, dass Sie den [Beispiel-Workflow](assets/review-workflow.zip) und das [Beispielformular](assets/snap-form.zip) aus [vorherigen Artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html) in dieser Reihe installiert haben.
 
 * [Melden Sie sich bei crx als Administrator an](http://localhost:4502/crx/de/index.jsp)
 * [Sichtbare Importvorlage](assets/sightly-template.zip)

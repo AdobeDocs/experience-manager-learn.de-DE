@@ -5,9 +5,9 @@ user-guide-title: AEM Forms-Videos und -Tutorials
 user-guide-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler.
 breadcrumb-title: AEM Forms-Tutorials
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '1602'
+source-wordcount: '1597'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,6 @@ ht-degree: 4%
 + [Übersicht](overview.md)
 + [Best Practices zu befolgen](adaptive-forms/best-practices-adaptive-forms.md)
 + [Einrichten der OKTA-Authentifizierung mit der AEM-Autoreninstanz](adaptive-forms/single-sign-on-with-okta.md)
-+ [Erstellen des ersten OSGi-Bundles](adaptive-forms/create-your-first-osgi-bundle.md)
 + Erstellen Ihres ersten adaptiven Formulars {#creating-your-first-adaptive-form}
    + [Einführung und Einrichtung](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [Erstellen einer Vorlage für ein adaptives Formular](creating-your-first-adaptive-form/create-adaptive-form-template.md)

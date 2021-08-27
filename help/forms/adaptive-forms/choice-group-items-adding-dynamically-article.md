@@ -1,15 +1,15 @@
 ---
 title: Hinzufügen von Elementen zur Auswahlgruppen-Komponente
 description: Dynamisches Hinzufügen von Elementen zur Auswahlgruppen-Komponente
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.5
-topic: Entwicklung
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '515'
-ht-degree: 4%
+source-wordcount: '520'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 AEM Forms 6.5 bietet die Möglichkeit, Elemente dynamisch zu einer Adaptive Forms-Auswahlgruppenkomponente hinzuzufügen, z. B. Kontrollkästchen, Optionsfelder und Bildliste.
 
-[Diese Funktion ist live auf dem Samples Server](https://forms.enablementadobe.com/content/samples/samples.html?query=0) verfügbar. Suchen Sie nach der Karte Dynamische Checkbox-Elemente und klicken Sie auf &quot;Testen&quot;.
+[Diese Funktion ist live auf dem Samples Server](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1) verfügbar. Suchen Sie nach der Karte Dynamische Checkbox-Elemente und klicken Sie auf &quot;Testen&quot;.
 
 
 Sie können Elemente je nach Anwendungsfall mithilfe des Visual Editor sowie des Code-Editors hinzufügen.
@@ -91,7 +91,7 @@ So versuchen Sie es auf Ihrem System:
 
 * [Herunterladen der Assets](assets/usingthevisualeditor.zip)
 * Installieren Sie Tomcat, falls noch nicht geschehen. [Anweisungen zur Installation von Tomcat finden Sie hier .](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
-* [SampleRest.war-Datei in Tomcat bereitstellen](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
+* [Stellen Sie die Datei SampleRest.war bereit, die in dieser ZIP-Datei enthalten ist.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
 * [Öffnen von Forms und Dokumenten](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicken Sie auf &quot;Erstellen&quot; | Datei-Upload&quot; und laden Sie die Datei hoch, die Sie im vorherigen Schritt heruntergeladen haben.
 * [Vorschau der Formulare anzeigen](http://localhost:4502/content/dam/formsanddocuments/amortizationschedule/jcr:content?wcmmode=disabled)

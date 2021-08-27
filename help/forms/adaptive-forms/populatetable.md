@@ -1,15 +1,15 @@
 ---
 title: 'Tabelle "Adaptives Formular"ausfüllen '
 description: Füllen Sie die Tabelle "Adaptives Formular"mit den Ergebnissen aus Formulardatenmodell-Dienstaufrufen
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: Entwicklung
+topic: Development
 role: User
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 1%
+source-wordcount: '245'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +25,9 @@ Zeile1 ist so konfiguriert, dass sie entsprechend den vom Dienstaufruf zurückge
 
 ## Bereitstellen auf Ihrem Server
 
-[Installieren Sie Tomcat wie ](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
-[hier angegebenBereitstellen der ](https://forms.enablementadobe.com/content/DemoServerBundles/SampleRest.war)
-[Datei SampleRest.warInstallieren Sie die Assets  ](assets/amortizationschedule.zip) mit AEM Paketmanager 
+[Tomcat wie ](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
+[hier angegeben installierenBereitstellen der Datei SampleRest.war in dieser ZIP-](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
+[Datei enthalten.Installieren Sie die Assets  ](assets/amortizationschedule.zip) mit AEM Paketmanager 
 [Öffnen Sie das ](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
-Formular für den AmortisierungszeitplanGeben Sie den entsprechenden Wert ein und klicken Sie auf &quot;Automatisierungsplanung berechnen&quot;, um in Ihrem Formular auszufüllen.
+Formular für den Amortisierungszeitplan Geben Sie den entsprechenden Wert ein und klicken Sie auf &quot;Amortisierungszeitplan berechnen&quot;, um in Ihrem Formular auszufüllen.
 

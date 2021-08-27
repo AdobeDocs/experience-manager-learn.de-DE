@@ -1,17 +1,17 @@
 ---
 title: Bereitstellen des Beispiels
 description: Anwendungsfall abrufen, der auf Ihrer lokalen AEM Forms-Instanz ausgeführt wird
-feature: Adaptive Formulare
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6602
 thumbnail: 6602.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '378'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,8 @@ Erstellen Sie ein Entwicklerkonto mit [Nexmo](https://dashboard.nexmo.com/) zum 
 ## Bereitstellen der folgenden OSGi-Pakete
 
 Stellen Sie das Bundle bereit, das über den [Code zum Speichern und Abrufen von Daten aus der Datenbank](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar) verfügt.
-Stellen Sie das [DevelopingWithServiceUser-Bundle](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar) bereit.
+Laden Sie die Datei [developing-with-service-user.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/developing-with-service-user.zip) herunter und dekomprimieren Sie sie.
+Stellen Sie die Datei &quot;DevelopingWithServiceUser.jar&quot;mithilfe der Felix-Webkonsole bereit.
 
 ## Client-Bibliothek bereitstellen
 
