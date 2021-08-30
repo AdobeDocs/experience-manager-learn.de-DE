@@ -1,13 +1,13 @@
 ---
 title: Kapitel 7 - AEM von Content Services aus einer Mobile App - Content Services
 description: In Kapitel 7 des Tutorials wird die Android Mobile App ausgeführt, um erstellte Inhalte aus AEM Content Services zu nutzen.
-feature: Inhaltsfragmente, APIs
+feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '1412'
+source-wordcount: '1406'
 ht-degree: 1%
 
 ---
@@ -205,4 +205,4 @@ Weitere Informationen zu AEM Content Services und AEM as a Headless CMS finden S
 * [AEM WCM-Kernkomponentenbibliothek](https://opensource.adobe.com/aem-core-wcm-components/library.html)
 * [GitHub-Projekt AEM WCM-Kernkomponenten](https://github.com/adobe/aem-core-wcm-components)
 * [AEM WCM-Kernkomponenten - Fragen an Experten](https://helpx.adobe.com/experience-manager/kt/eseminars/ask-the-expert/aem-content-services.html)
-* [Codebeispiel für Komponenten-Exporter](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/bundle/src/main/java/com/adobe/acs/samples/models/SampleComponentExporter.java)
+* [Codebeispiel für Komponenten-Exporter](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/models/SampleComponentExporter.java)

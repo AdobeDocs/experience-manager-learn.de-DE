@@ -9,10 +9,10 @@ audience: developer
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
 workflow-type: tm+mt
-source-wordcount: '2658'
-ht-degree: 3%
+source-wordcount: '2661'
+ht-degree: 2%
 
 ---
 
@@ -212,7 +212,7 @@ Die **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** ist eine der beliebte
 #### Installation und Einrichtung
 
 1. Laden Sie die [!DNL Eclipse] IDE für [!DNL Java EE Developers] herunter und installieren Sie sie: [https://www.eclipse.org](https://www.eclipse.org/)
-1. Befolgen Sie die Anweisungen zum Installieren des Plug-ins [!DNL AEM Developer Tools] : [https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html](https://eclipse.adobe.com/aem/dev-tools/)
+1. Befolgen Sie die Anweisungen zum Installieren des Plug-ins [!DNL AEM Developer Tools] : [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
