@@ -6,9 +6,9 @@ version: 6.4,6.5
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '240'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ Zeile1 ist so konfiguriert, dass sie entsprechend den vom Dienstaufruf zurückge
 
 ## Bereitstellen auf Ihrem Server
 
-[Tomcat wie ](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
-[hier angegeben installierenBereitstellen der Datei SampleRest.war in dieser ZIP-](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/assets/common-osgi-bundles/sample-rest.zip)
-[Datei enthalten.Installieren Sie die Assets  ](assets/amortizationschedule.zip) mit AEM Paketmanager 
-[Öffnen Sie das ](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
-Formular für den Amortisierungszeitplan Geben Sie den entsprechenden Wert ein und klicken Sie auf &quot;Amortisierungszeitplan berechnen&quot;, um in Ihrem Formular auszufüllen.
+[Installieren Sie Tomcat wie ](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
+[hier angegebenStellen Sie die Datei SampleRest.war in dieser ZIP-Datei in Ihrer ](assets/sample-rest.zip)
+[TomcatInstallieren Sie die Assets  ](assets/amortizationschedule.zip) mithilfe AEM Paketmanagers 
+[Öffnen Sie das Amortisierungszeitschema-](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
+Formular. Geben Sie den entsprechenden Wert ein und klicken Sie auf Automatisierungszeitplan berechnen , um in Ihrem Formular auszufüllen.
 
