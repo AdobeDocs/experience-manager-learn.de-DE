@@ -1,21 +1,18 @@
 ---
 title: Lokale Entwicklungsumgebung für AEM als Cloud Service
 description: Übersicht über die lokale Entwicklungsumgebung in Adobe Experience Manager (AEM).
-feature: Entwickler-Tools
-topics: development
-version: cloud-service
+feature: Developer Tools
+version: Cloud Service
 doc-type: article
-activity: troubleshoot
-audience: developer
 kt: 3290
 thumbnail: 32565.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 9a78cbdb5fd35e4aa7169382494dd014aa8098e9
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '549'
-ht-degree: 3%
+source-wordcount: '546'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +21,7 @@ ht-degree: 3%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_overview"
->title="Überblick"
+>title="Übersicht"
 >abstract="Das Einrichten einer lokalen Entwicklungsumgebung für AEM as a Cloud Service umfasst Entwicklungs-Tools, die zum Entwickeln, Erstellen und Kompilieren von AEM-Projekten erforderlich sind, sowie lokale Laufzeitumgebungen, mit denen Entwickler neue Funktionen schnell lokal validieren können, bevor sie über Adobe Cloud Manager in AEM als Cloud Service bereitgestellt werden."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=de" text="Entwicklungsrichtlinien"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html" text="Entwicklungsgrundlagen"

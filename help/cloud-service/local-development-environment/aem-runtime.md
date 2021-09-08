@@ -1,20 +1,16 @@
 ---
 title: Einrichten von Local AEM Runtime für die Entwicklung von AEM als Cloud Service
 description: Richten Sie die Local AEM Runtime mithilfe des Schnellstart-JAR des AEM as a Cloud Service SDK ein.
-feature: Entwickler-Tools
-topics: development
-version: cloud-service
-doc-type: tutorial
-activity: develop
-audience: developer
+feature: Developer Tools
+version: Cloud Service
 kt: 4678, 4677
 thumbnail: 32551.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '1732'
+source-wordcount: '1729'
 ht-degree: 3%
 
 ---

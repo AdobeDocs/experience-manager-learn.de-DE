@@ -1,18 +1,15 @@
 ---
 title: Erste Schritte bei der Entwicklung von AEM Sites – WKND-Tutorial
-seo-title: Erste Schritte bei der Entwicklung von AEM Sites – WKND-Tutorial
 description: Steigen Sie gerade in die Entwicklung mit AEM ein? Benötigen Sie einen Auffrischungskurs zu Best Practices? Dann sind Sie hier richtig! In diesem mehrteiligen Tutorial lernen Entwickler, die gerade mit AEM beginnen, wie sie eine Website in AEM mit den neuesten Standards und Technologien implementieren.
-seo-description: Steigen Sie gerade in die Entwicklung mit AEM ein? Benötigen Sie einen Auffrischungskurs zu Best Practices? Dann sind Sie hier richtig! In diesem mehrteiligen Tutorial lernen Entwickler, die gerade mit AEM beginnen, wie sie eine Website in AEM mit den neuesten Standards und Technologien implementieren.
-content-type: reference
-topic-tags: introduction
-feature: AEM Projektarchetyp, Kernkomponenten, Seiten-Editor, bearbeitbare Vorlagen
-topic: Entwicklung
+feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+thumbnail: 30476.jpeg
+source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
 workflow-type: tm+mt
-source-wordcount: '362'
-ht-degree: 55%
+source-wordcount: '300'
+ht-degree: 49%
 
 ---
 
