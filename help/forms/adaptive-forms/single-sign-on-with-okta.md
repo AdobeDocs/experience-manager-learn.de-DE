@@ -1,15 +1,15 @@
 ---
 title: Konfigurieren von OKTA mit AEM
 description: Verstehen Sie verschiedene Konfigurationseinstellungen für die Verwendung von Single Sign-on mit okta.
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.5
 topic: Administration
 role: Admin
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+source-git-commit: 3109d406ed4788ab492a148d4eac94f7e5ad9f2d
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 3%
+source-wordcount: '759'
+ht-degree: 2%
 
 ---
 
@@ -76,11 +76,11 @@ Im Folgenden werden die wichtigsten Eigenschaften beschrieben, die angegeben wer
 Navigieren Sie zu [configMgr](http://localhost:4502/system/console/configMgr).
 Suchen und öffnen Sie &quot;Apache Sling Referrer Filter&quot;. Legen Sie die folgenden Eigenschaften wie unten angegeben fest:
 
-* **Leere erlauben**: true
+* **Leere erlauben**: false
 * **Hosts zulassen**: Hostname von IdP (in Ihrem Fall anders)
 * **Regexp-Host** zulassen: Hostname des IdP (wird in Ihrem Fall anders sein) Screenshot der Eigenschaften des Referrer-Filters &quot;Sling Referrer&quot;
 
-![referrer-filter](assets/sling-referrer-filter.PNG)
+![referrer-filter](assets/okta-referrer.png)
 
 #### Konfigurieren der DEBUG-Protokollierung für die OKTA-Integration
 
