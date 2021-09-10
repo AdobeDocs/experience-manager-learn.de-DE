@@ -3,18 +3,17 @@ title: Verwenden von Assets Essentials
 description: Erfahren Sie, wie Sie Assets in Assets Essentials herunterladen können.
 version: cloud-service
 feature: Assets Essentials
-topic: Content Management
+topic: Content Management
 role: User
 level: Beginner
 kt: 8380
 thumbnai: 335861.jpeg
-source-git-commit: b247bb18eab3e610d40d3e01a63ba7e311fafde0
+source-git-commit: 7fde77ac287d01ce2ad4924b2b10939d8df4c3e5
 workflow-type: tm+mt
-source-wordcount: '32'
-ht-degree: 12%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-
 
 # Verwenden von Assets Essentials
 
