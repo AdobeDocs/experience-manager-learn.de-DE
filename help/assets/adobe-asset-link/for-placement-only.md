@@ -1,21 +1,21 @@
 ---
 title: Nur für Platzierungsausgabe (FPO)
-description: 'Adobe Experience Manager-Assets können jetzt von Designern und kreativen Benutzern in ihren bevorzugten Adobe Creative Cloud-Desktop-Applikationen verwendet werden. Adobe Asset Link-Erweiterung für Adobe Creative Cloud Enterprise erweitert die Funktion zum Suchen, Durchsuchen, Sortieren, Anzeigen, Hochladen von Assets, Auschecken, Ändern, Einchecken und Anzeigen von Metadaten AEM Assets in Creative Cloud-Tools wie Adobe Photoshop, InDesign und Illustrator. '
-sub-product: Assets
+description: Adobe Experience Manager-Assets können jetzt von Designern und kreativen Benutzern in ihren bevorzugten Adobe Creative Cloud-Desktop-Applikationen verwendet werden. Adobe Asset Link-Erweiterung für Adobe Creative Cloud Enterprise erweitert die Funktion zum Suchen, Durchsuchen, Sortieren, Anzeigen, Hochladen von Assets, Auschecken, Ändern, Einchecken und Anzeigen von Metadaten AEM Assets in Creative Cloud-Tools wie Adobe Photoshop, InDesign und Illustrator.
+sub-product: assets
 feature: Adobe Asset Link
-version: cloud-service
+version: Cloud Service
 kt: 4916
 thumbnail: 34259.jpg
-topic: Content Management
+topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 940608db-6e84-441a-b031-e8cf52459597
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 6%
+source-wordcount: '86'
+ht-degree: 0%
 
 ---
-
 
 # Nur für Platzierungsausgabe (FPO){#for-placement-only-rendition}
 

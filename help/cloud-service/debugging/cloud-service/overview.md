@@ -1,23 +1,23 @@
 ---
 title: Debugging von AEM als Cloud Service
 description: auf der Self-Service-, skalierbaren, Cloud-Infrastruktur, die es AEM Entwicklern erforderlich macht, zu verstehen, wie sie verschiedene Facetten von AEM als Cloud Service verstehen und debuggen können, von der Erstellung und Bereitstellung bis hin zum Abrufen von Details zu laufenden AEM-Anwendungen.
-feature: Entwickler-Tools
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5346
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 8092fbb4-234f-472e-a405-8a45734b7c65
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 2%
+source-wordcount: '308'
+ht-degree: 1%
 
 ---
-
 
 # Debugging von AEM als Cloud Service
 
@@ -35,7 +35,7 @@ Adobe Cloud Manager-Pipelines stellen AEM Anwendung in einer Reihe von Schritten
 
 [Debugging von AEM als Cloud Service-Build und -Bereitstellung](./build-and-deployment.md)
 
-## Developer Console
+## Entwicklerkonsole
 
 Die Entwicklerkonsole bietet eine Vielzahl von Informationen und Einleitungen in AEM as a Cloud Service-Umgebungen, die nützlich sind, um zu verstehen, wie Ihre Anwendung von erkannt wird und in AEM als Cloud Service funktioniert.
 

@@ -1,24 +1,24 @@
 ---
 title: Entwickeln eines Asset compute-Metadaten-Sekundärs
 description: Erfahren Sie, wie Sie einen Asset compute-Metadaten-Worker erstellen, der die am häufigsten verwendeten Farben in einem Bild-Asset ableitet und die Farbnamen in die Metadaten des Assets in AEM schreibt.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: metadata, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6448
 thumbnail: 327313.jpg
-topic: Integrationen, Entwicklung
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+exl-id: 6ece6e82-efe9-41eb-adf8-78d9deed131e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1434'
 ht-degree: 1%
 
 ---
-
 
 # Entwickeln eines Asset compute-Metadaten-Sekundärs
 
@@ -27,7 +27,7 @@ Benutzerdefinierte Asset compute-Sekundäre können XMP (XML) Daten erstellen, d
 Häufige Anwendungsfälle sind:
 
 + Integrationen mit Drittanbietersystemen, z. B. einem PIM (Product Information Management System), bei dem zusätzliche Metadaten abgerufen und im Asset gespeichert werden müssen
-+ Integrationen mit Adobe-Diensten wie Content and Commerce AI zur Erweiterung von Asset-Metadaten um zusätzliche Attribute für maschinelles Lernen
++ Integrationen mit Adobe-Diensten, z. B. Inhalts- und Commerce-KI, um Asset-Metadaten mit zusätzlichen Attributen für maschinelles Lernen zu ergänzen
 + Ableiten von Metadaten zum Asset aus seiner Binärdatei und Speichern als Asset-Metadaten in AEM als Cloud Service
 
 ## Was Sie tun werden
@@ -48,7 +48,7 @@ asset compute-Worker implementieren den Asset compute SDK Worker API-Vertrag in 
 ![Logischer Ablauf des asset compute-Metadaten-Workflows](./assets/metadata/logical-flow.png)
 
 1. Der AEM-Autorendienst ruft den Asset compute-Metadaten-Worker auf und stellt die __(1a)__ ursprüngliche Binärdatei des Assets sowie __(1b)__ alle im Verarbeitungsprofil definierten Parameter bereit.
-1. Das Asset compute SDK orchestriert die Ausführung der `renditionCallback(...)`-Funktion des benutzerdefinierten Asset compute-Metadatenarbeiters und leitet eine XMP (XML)-Ausgabedarstellung ab, die auf der binären __(1a)__-Datei des Assets und den Verarbeitungsprofilparametern __(1b)__ basiert.
+1. Das Asset compute SDK orchestriert die Ausführung der `renditionCallback(...)`-Funktion des benutzerdefinierten Asset compute-Metadatenarbeiters und leitet eine XMP (XML)-Ausgabedarstellung ab, die auf der binären __(1a)__-Binärdatei des Assets und allen Verarbeitungsprofilparametern __(1b)__ basiert.
 1. Der Asset compute Worker speichert die XMP (XML)-Darstellung in `rendition.path`.
 1. Die XMP (XML)-Daten, die in `rendition.path` geschrieben wurden, werden über das Asset compute SDK an den AEM-Autorendienst übertragen und als __(4a)__ Textausgabe und __(4b)__ im Metadatenknoten des Assets gespeichert.
 
@@ -87,7 +87,7 @@ packages:
 
 Die `limits` und `require-adobe-auth` werden diskret pro Worker konfiguriert. In diesem Worker wird `512 MB` des Speichers zugewiesen, wenn der Code (potenziell) große binäre Bilddaten prüft. Die anderen `limits` werden entfernt, um Standardwerte zu verwenden.
 
-## Entwickeln eines Metadaten-Workers{#metadata-worker}
+## Entwickeln eines Metadaten-Sekundärs{#metadata-worker}
 
 Erstellen Sie eine neue Metadaten-Worker-JavaScript-Datei im Asset compute-Projekt unter dem Pfad [defined manifest.yml für den neuen Worker](#manifest) unter `/actions/metadata-colors/index.js`
 
@@ -180,7 +180,7 @@ function getColorName(colorsFamily, color) {
 }
 ```
 
-## Führen Sie den Metadaten-Worker lokal aus{#development-tool}
+## Lokales Ausführen des Metadaten-Workers{#development-tool}
 
 Wenn der Worker-Code abgeschlossen ist, kann er mit dem lokalen Asset compute Development Tool ausgeführt werden.
 

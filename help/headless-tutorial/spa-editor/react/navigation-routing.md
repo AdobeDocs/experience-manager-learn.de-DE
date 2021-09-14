@@ -1,10 +1,10 @@
 ---
 title: Hinzufügen von Navigation und Routing | Erste Schritte mit dem AEM SPA Editor und React
 description: Erfahren Sie, wie mehrere Ansichten im SPA unterstützt werden können, indem Sie sie mit dem SPA Editor SDK AEM Seiten zuordnen. Die dynamische Navigation wird mit React-Router und React-Kernkomponenten implementiert.
-sub-product: Sites
+sub-product: sites
 feature: SPA Editor
 topics: development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 kt: 4988
@@ -12,13 +12,13 @@ thumbnail: 4988-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
-
 
 # Hinzufügen von Navigation und Routing {#navigation-routing}
 
@@ -329,4 +329,3 @@ Die Navigation und das Routing werden mit [React Router](https://reactrouter.com
 ## Herzlichen Glückwunsch! {#congratulations}
 
 Herzlichen Glückwunsch! Sie haben erfahren, wie mehrere Ansichten im SPA durch die Zuordnung zu AEM Seiten mit dem SPA Editor SDK unterstützt werden können. Die dynamische Navigation wurde mit dem React-Router implementiert und der Komponente `Header` hinzugefügt.
-

@@ -1,28 +1,28 @@
 ---
 title: Erweitern einer Kernkomponente | Erste Schritte mit dem AEM SPA Editor und React
 description: Erfahren Sie, wie Sie das JSON-Modell für eine vorhandene Kernkomponente erweitern, die mit dem AEM SPA Editor verwendet werden soll. Das Verständnis, wie Eigenschaften und Inhalte zu einer vorhandenen Komponente hinzugefügt werden, ist eine leistungsstarke Methode, um die Funktionen einer AEM SPA Editor-Implementierung zu erweitern. Erfahren Sie, wie Sie das Delegationsmuster zum Erweitern von Sling-Modellen und Funktionen von Sling Resource Merger verwenden.
-sub-product: Sites
-feature: SPA Editor, Kernkomponenten
+sub-product: sites
+feature: SPA Editor, Core Components
 doc-type: tutorial
-version: cloud-service
+version: Cloud Service
 kt: 5879
 thumbnail: 5879-spa-react.jpg
 topic: SPA
 role: Developer
 level: Beginner
-source-git-commit: 24d70ebaa6a63cfd4a73f43188f25b375dc702ec
+exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1097'
+source-wordcount: '1091'
 ht-degree: 3%
 
 ---
-
 
 # Erweitern einer Kernkomponente {#extend-component}
 
 Erfahren Sie, wie Sie eine vorhandene Kernkomponente erweitern, um sie mit dem AEM SPA Editor zu verwenden. Das Verständnis, wie eine vorhandene Komponente erweitert wird, ist eine leistungsstarke Methode, um die Funktionen einer AEM SPA Editor-Implementierung anzupassen und zu erweitern.
 
-## Vorgabe
+## Ziele
 
 1. Erweitern einer vorhandenen Kernkomponente mit zusätzlichen Eigenschaften und Inhalten.
 2. Verstehen Sie die Grundlagen der Komponentenvererbung mit der Verwendung von `sling:resourceSuperType`.
@@ -172,7 +172,7 @@ Die Datei `_cq_editConfig.xml` bestimmt das Drag-and-Drop-Verhalten in der AEM A
 
    Für die meisten Komponenten ist kein `_cq_editConfig` erforderlich. Bildkomponenten und untergeordnete Elemente bilden die Ausnahme.
 
-## Erweitern des Dialogfelds {#extend-dialog}
+## Dialogfeld erweitern {#extend-dialog}
 
 Für unsere Komponente `Banner` ist ein zusätzliches Textfeld im Dialogfeld erforderlich, um die `bannerText` zu erfassen. Da wir die Sling-Vererbung verwenden, können wir Funktionen des [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=de) verwenden, um Teile des Dialogfelds zu überschreiben oder zu erweitern. In diesem Beispiel wurde dem Dialogfeld eine neue Registerkarte hinzugefügt, um zusätzliche Daten von einem Autor zu erfassen und die Kartenkomponente zu füllen.
 
@@ -495,4 +495,3 @@ Implementieren Sie anschließend das Sling-Modell für die `BannerModel`-Schnitt
 ## Herzlichen Glückwunsch! {#congratulations}
 
 Herzlichen Glückwunsch! Sie haben gelernt, wie eine AEM-Komponente mithilfe der erweitert wird und wie Sling-Modelle und -Dialogfelder mit dem JSON-Modell funktionieren.
-

@@ -1,21 +1,21 @@
 ---
 title: Produktionsbereitstellung mit einem AEM-Veröffentlichungsdienst - Erste Schritte mit AEM Headless - GraphQL
 description: Erfahren Sie mehr über die AEM-Autoren- und Veröffentlichungsdienste und das empfohlene Bereitstellungsmuster für Headless-Anwendungen. In diesem Tutorial erfahren Sie, wie Sie Umgebungsvariablen verwenden können, um einen GraphQL-Endpunkt basierend auf der Zielumgebung dynamisch zu ändern. Erfahren Sie, wie Sie AEM für Cross-Origin Resource Sharing (CORS) ordnungsgemäß konfigurieren.
-version: cloud-service
-feature: Inhaltsfragmente,GraphQL-API
+version: Cloud Service
+feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 mini-toc-levels: 1
 kt: 7131
 thumbnail: KT-7131.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 8c8b2620-6bc3-4a21-8d8d-8e45a6e9fc70
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2367'
+source-wordcount: '2360'
 ht-degree: 7%
 
 ---
-
 
 # Produktionsbereitstellung mit einem AEM-Veröffentlichungsdienst
 

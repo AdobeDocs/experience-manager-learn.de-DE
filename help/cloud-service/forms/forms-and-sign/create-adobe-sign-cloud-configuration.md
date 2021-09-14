@@ -5,15 +5,16 @@ solution: Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
-feature: Adaptive Formulare
-topic: Entwicklung
+version: Cloud Service
+feature: Adaptive Forms
+topic: Development
 kt: 7428
 thumbnail: 332437.jpg
-source-git-commit: cb4f678be79ad39110cc199b8c66349f311a431d
+exl-id: a55773a5-0486-413f-ada6-bb589315f0b1
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '63'
-ht-degree: 4%
+source-wordcount: '60'
+ht-degree: 0%
 
 ---
 
@@ -24,4 +25,3 @@ Mit der Cloud Services-Konfiguration in AEM können Sie eine Integration zwische
 Das folgende Video führt Sie durch die Schritte, die zum Erstellen der Cloud Services-Konfiguration zur Integration von AEM in Adobe Sign erforderlich sind
 
 >[!VIDEO](https://video.tv.adobe.com/v/332437?quality=12&learn=on)
-

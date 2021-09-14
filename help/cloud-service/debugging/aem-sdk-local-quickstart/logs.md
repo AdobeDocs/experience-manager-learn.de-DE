@@ -1,23 +1,23 @@
 ---
 title: Debugging AEM SDK mithilfe von Protokollen
 description: Protokolle dienen als erste Anlaufstelle für das Debugging AEM Anwendungen, hängen jedoch von einer angemessenen Protokollierung in der bereitgestellten AEM ab.
-feature: Entwickler-Tools
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5252
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 91aa4a10-47fe-4313-acd2-ca753e5484d9
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '397'
-ht-degree: 3%
+source-wordcount: '394'
+ht-degree: 2%
 
 ---
-
 
 # Debugging AEM SDK mithilfe von Protokollen
 

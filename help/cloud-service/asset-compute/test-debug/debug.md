@@ -1,24 +1,24 @@
 ---
 title: Asset compute Worker debuggen
 description: asset compute-Sekundäre können auf verschiedene Weise debuggt werden, von einfachen Debug-Protokollanweisungen über angehängten VS-Code als Remote-Debugger bis hin zum Abruf von Protokollen für Aktivierungen in Adobe I/O Runtime, die von AEM as a Cloud Service initiiert wurden.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6285
 thumbnail: 40383.jpg
-topic: Integrationen, Entwicklung
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: dbc0a35ae96594fec1e10f411d57d2a3812c1cf2
+exl-id: 4dea9cc4-2133-4ceb-8ced-e9b9874f6d89
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
-
 
 # Asset compute Worker debuggen
 
@@ -93,7 +93,7 @@ _Clickthrough des Debuggens eines Asset compute Sekundärs mit wskdebug (kein Au
 1. Navigieren Sie zurück zu VS-Code, zu `/actions/worker/index.js` und gehen Sie durch den Code.
 1. Um das Debuggable Development Tool zu beenden, tippen Sie im Terminal, das den Befehl `npx adobe-asset-compute devtool` in Schritt 6 ausgeführt hat, auf `Ctrl-C` .
 
-## Zugriff auf Protokolle von Adobe I/O Runtime{#aio-app-logs}
+## Zugriff auf Protokolle aus Adobe I/O Runtime{#aio-app-logs}
 
 [AEM as a Cloud Service nutzt Asset compute-Sekundäre über Verarbeitungsprofile, ](../deploy/processing-profiles.md) indem sie sie direkt in Adobe I/O Runtime aufrufen. Da diese Aufrufe keine lokale Entwicklung erfordern, können ihre Ausführungen nicht mit lokalen Tools wie Asset compute Development Tool oder wskdebug debuggt werden. Stattdessen kann die Adobe I/O-CLI verwendet werden, um Protokolle vom Worker abzurufen, der in einem bestimmten Arbeitsbereich in Adobe I/O Runtime ausgeführt wird.
 

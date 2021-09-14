@@ -1,21 +1,21 @@
 ---
 title: Definieren von Inhaltsfragmentmodellen - Erste Schritte mit AEM Headless - GraphQL
 description: Erste Schritte mit Adobe Experience Manager (AEM) und GraphQL. Erfahren Sie in AEM, wie Sie Inhalte modellieren und ein Schema mit Inhaltsfragmentmodellen erstellen. Überprüfen Sie vorhandene Modelle und erstellen Sie ein neues Modell. Erfahren Sie mehr über die verschiedenen Datentypen, mit denen ein Schema definiert werden kann.
-version: cloud-service
+version: Cloud Service
 mini-toc-levels: 1
 kt: 6712
 thumbnail: 22452.jpg
-feature: Inhaltsfragmente,GraphQL-API
+feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1017'
 ht-degree: 2%
 
 ---
-
 
 # Definieren von Inhaltsfragmentmodellen {#content-fragment-models}
 

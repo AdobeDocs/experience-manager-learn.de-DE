@@ -1,21 +1,21 @@
 ---
 title: Zeitleiste und Posteingang
 description: Machen Sie sich mit den wichtigsten Webkonsolen in AEM Assets vertraut, die für die Zusammenarbeit verwendet werden.
-sub-product: Assets
+sub-product: assets
 feature: Workflow
-version: cloud-service
+version: Cloud Service
 kt: 4540
 thumbnail: 32051.jpg
-topic: Zusammenarbeit
+topic: Collaboration
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 868dc44b-23ca-4e52-a0bc-229480cfae10
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '39'
-ht-degree: 7%
+source-wordcount: '36'
+ht-degree: 0%
 
 ---
-
 
 # Zeitleiste und Posteingang
 

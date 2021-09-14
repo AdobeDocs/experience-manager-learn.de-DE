@@ -1,20 +1,20 @@
 ---
 title: Inhaltsautomatisierung mit Creative Cloud-Diensten
 description: Wenden Sie Photoshop- und Lightroom-Funktionen mit Adobe Experience Manager Assets Content Automation an.
-version: cloud-service
-topic: Content Management
-feature: Asset-Verarbeitung, Ausgabeformate
+version: Cloud Service
+topic: Content Management
+feature: Asset Processing, Renditions
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 kt: 7803
 thumbnail: 333197.jpeg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: be5ca0e7-54fb-4d19-bf7a-8985b11b3aba
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '45'
-ht-degree: 4%
+source-wordcount: '40'
+ht-degree: 0%
 
 ---
-
 
 # Übersicht über die Inhaltsautomatisierung mit Creative Cloud-Diensten
 

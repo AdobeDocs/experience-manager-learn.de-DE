@@ -1,7 +1,7 @@
 ---
-sub-product: Sites
+sub-product: sites
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -9,9 +9,9 @@ user-guide-title: Erste Schritte mit AEM Sites - WKND-Tutorial
 user-guide-description: Ein mehrteiliges Tutorial für Entwickler, die neu bei AEM sind. Implementieren Sie eine AEM Website für eine fiktive Lifestyle-Marke namens WKND.
 breadcrumb-title: AEM Sites WKND-Tutorials
 index: y
-source-git-commit: 3c9bff3238a057e976868c13ad185ea687600dea
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '73'
+source-wordcount: '72'
 ht-degree: 56%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 56%
 
 + [WKND-Tutorial - Überblick](overview.md)
 + Projektarchetyp {#project-archetype}
-   + [Überblick](./project-archetype/overview.md)
+   + [Übersicht](./project-archetype/overview.md)
    + [1 - Projekt-Setup](./project-archetype/project-setup.md)
    + [2 - Komponentengrundlagen](./project-archetype/component-basics.md)
    + [3 - Seiten und Vorlagen](./project-archetype/pages-templates.md)
@@ -30,7 +30,7 @@ ht-degree: 56%
    + [6 - Benutzerdefinierte Komponente](./project-archetype/custom-component.md)
    + [7 - Unit-Tests](./project-archetype/unit-testing.md)
 + Site-Vorlage {#site-template}
-   + [Überblick](./site-template/overview.md)
+   + [Übersicht](./site-template/overview.md)
    + [1 - Erstellen einer Site](./site-template/create-site.md)
    + [2 - Verfassen von Inhalten und Veröffentlichen von Änderungen](./site-template/author-content-publish.md)
    + [3 - Seitenvorlagen](./site-template/page-templates.md)

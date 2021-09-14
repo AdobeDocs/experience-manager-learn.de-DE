@@ -1,18 +1,18 @@
 ---
 title: Exportauftrag in AEM Dynamic Media auslösen
-description: 'Schritte zum Trigger des Exportvorgangs beim Sendevorgang in Dynamic Media.  '
+description: Schritte zum Trigger des Exportvorgangs beim Sendevorgang in Dynamic Media.
 role: Developer
 level: Intermediate
-version: cloud-service
-topic: Entwicklung
+version: Cloud Service
+topic: Development
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 2df133dc-8c9d-445c-895b-d2fb43cbd39e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '47'
-ht-degree: 2%
+source-wordcount: '46'
+ht-degree: 0%
 
 ---
-
 
 # Exportauftrag in AEM Dynamic Media auslösen
 

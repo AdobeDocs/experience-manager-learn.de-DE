@@ -1,19 +1,19 @@
 ---
 title: Verwenden von Dynamic Media-Kernkomponenten
-description: 'Schritte zur Verwendung von Dynamic Media-Komponenten auf der Sites-Seite  '
+description: Schritte zur Verwendung von Dynamic Media-Komponenten auf der Sites-Seite
 role: Developer
 level: Intermediate
-version: cloud-service
-feature: Kernkomponenten
-topic: Entwicklung
+version: Cloud Service
+feature: Core Components
+topic: Development
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: b500261a-5b96-41b8-8270-fb6bde95d48a
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '38'
-ht-degree: 7%
+source-wordcount: '35'
+ht-degree: 0%
 
 ---
-
 
 # Verwenden von Dynamic Media-Kernkomponenten
 

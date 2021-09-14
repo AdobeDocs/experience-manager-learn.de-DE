@@ -1,7 +1,7 @@
 ---
 title: Lokales Entwicklungs-Zugriffstoken
 description: AEM Zugriffstoken für die lokale Entwicklung werden verwendet, um die Entwicklung von Integrationen mit AEM als Cloud Service zu beschleunigen, der programmgesteuert mit AEM Author- oder Publish-Diensten über HTTP interagiert.
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
 feature: APIs
@@ -9,16 +9,16 @@ activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330477.jpg
-topic: Headless, Integrationen
+topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
-
 
 # Lokales Entwicklungs-Zugriffstoken
 
@@ -46,7 +46,7 @@ Das Zugriffstoken für lokale Entwicklung bietet Zugriff auf die Autoren- und Ve
 
 ![AEM Developer Console - Integrationen - Abrufen eines lokalen Entwicklungstokens](./assets/local-development-access-token/developer-console.png)
 
-## Verwenden Sie das Zugriffstoken für die lokale Entwicklung{#use-local-development-access-token}
+## Verwenden des Zugriffstokens auf die lokale Entwicklung{#use-local-development-access-token}
 
 ![Lokales Entwicklungs-Zugriffstoken - Externe Anwendung](assets/local-development-access-token/local-development-access-token-external-application.png)
 
@@ -55,7 +55,7 @@ Das Zugriffstoken für lokale Entwicklung bietet Zugriff auf die Autoren- und Ve
 1. Es wird eine externe Anwendung entwickelt, die programmgesteuert mit AEM als Cloud Service interagiert
 1. Die externe Anwendung liest im Zugriffstoken für die lokale Entwicklung
 1. Die externe Anwendung erstellt HTTP-Anfragen an AEM als Cloud Service und fügt das Lokale Entwicklungs-Zugriffstoken als Trägertoken zum Autorisierungs-Header der HTTP-Anforderungen hinzu.
-1. AEM als Cloud Service die HTTP-Anforderung erhält, die Anfrage authentifiziert, die von der HTTP-Anforderung angeforderten Arbeiten durchführt und eine HTTP-Antwort an die externe Anwendung zurückgibt
+1. AEM als Cloud Service die HTTP-Anforderung erhält, die Anforderung authentifiziert, die von der HTTP-Anforderung angeforderten Arbeiten durchführt und eine HTTP-Antwort an die externe Anwendung zurückgibt
 
 ### Die Beispiel-externe Anwendung
 

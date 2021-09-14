@@ -1,20 +1,20 @@
 ---
 title: Geschlossene Benutzergruppen in AEM Assets
 description: Geschlossene Benutzergruppen (CUGs) sind eine Funktion, mit der der Zugriff auf Inhalte auf eine ausgewählte Benutzergruppe auf einer veröffentlichten Site beschränkt wird. In diesem Video wird gezeigt, wie geschlossene Benutzergruppen mit Adobe Experience Manager Assets verwendet werden können, um den Zugriff auf einen bestimmten Asset-Ordner zu beschränken.
-version: 6.3, 6.4, 6.5, cloud-service
-topic: Administration, Sicherheit
-feature: Benutzer und Gruppen
+version: 6.3, 6.4, 6.5, Cloud Service
+topic: Administration, Security
+feature: User and Groups
 role: Admin
 level: Intermediate
 kt: 649
 thumbnail: 22155.jpg
-source-git-commit: 407840a0e0c90c4f004390a052d036f9b69fa8df
+exl-id: a2bf8a82-15ee-478c-b7c3-de8a991dfeb8
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '377'
 ht-degree: 1%
 
 ---
-
 
 # Geschlossene Benutzergruppen{#using-closed-user-groups-with-aem-assets}
 
@@ -30,7 +30,7 @@ Geschlossene Benutzergruppen (CUGs) sind eine Funktion, mit der der Zugriff auf 
 * CUG-Richtlinien werden automatisch von allen Unterordnern und angewendeten Assets übernommen.
 * CUG-Richtlinien können durch Unterordner überschrieben werden, indem eine neue CUG-Richtlinie festgelegt wird. Dies sollte sparsam verwendet werden und wird nicht als Best Practice betrachtet.
 
-## Geschlossene Benutzergruppen vs. Zugriffssteuerungslisten {#closed-user-groups-vs-access-control-lists}
+## Geschlossene Benutzergruppen und Zugriffssteuerungslisten {#closed-user-groups-vs-access-control-lists}
 
 Sowohl geschlossene Benutzergruppen (CUG) als auch Zugriffssteuerungslisten (ACL) werden verwendet, um den Zugriff auf Inhalte in AEM zu steuern, und basieren auf AEM Sicherheitsbenutzern und -gruppen. Die Anwendung und Implementierung dieser Funktionen ist jedoch sehr unterschiedlich. Die folgende Tabelle fasst die Unterscheidungen zwischen den beiden Funktionen zusammen.
 

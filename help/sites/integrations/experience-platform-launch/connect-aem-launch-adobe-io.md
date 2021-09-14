@@ -5,21 +5,21 @@ topics: integrations
 audience: administrator
 doc-type: technical video
 activity: setup
-version: cloud-service
+version: Cloud Service
 kt: 5981
 thumbnail: 38555.jpg
-topic: Integrationen
+topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 92dbd185-bad4-4a4d-b979-0d8f5d47c54b
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 3%
+source-wordcount: '98'
+ht-degree: 2%
 
 ---
 
-
-# AEM mit Launch über die Adobe I/O {#connect-aem-launch-adobe-io} verbinden
+# AEM mit Launch über Adobe I/O verbinden {#connect-aem-launch-adobe-io}
 
 Erfahren Sie, wie Sie eine IMS-Konfiguration mit Adobe I/O erstellen, um AEM mit der Launch-API zu authentifizieren. Sobald diese Integration eingerichtet ist, können AEM über die Launch-API kommunizieren, um auf die Launch-Eigenschaften zuzugreifen.
 

@@ -1,7 +1,7 @@
 ---
 title: Authentifizierung bei AEM als Cloud Service über eine externe Anwendung
 description: Erfahren Sie, wie eine externe Anwendung mithilfe von Zugriffstoken für lokale Entwicklung und Dienstanmeldeinformationen programmatisch authentifiziert und mit AEM als Cloud Service über HTTP interagieren kann.
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
 feature: APIs
@@ -9,16 +9,16 @@ activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330460.jpg
-topic: Headless, Integrationen
+topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
+exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '644'
 ht-degree: 2%
 
 ---
-
 
 # Token-basierte Authentifizierung für AEM als Cloud Service
 
@@ -34,7 +34,7 @@ Stellen Sie sicher, dass Folgendes vorhanden ist, bevor Sie mit diesem Tutorial 
 
 1. Zugriff auf AEM als Cloud Service-Umgebung (vorzugsweise eine Entwicklungsumgebung oder ein Sandbox-Programm)
 1. Mitgliedschaft in der AEM als Cloud Service-Umgebung - Autorendienste AEM Administrator-Produktprofil
-1. Mitgliedschaft in oder Zugriff auf Ihre Adobe IMS-Organisationsadministrator (sie müssen die [Dienstanmeldeinformationen](./service-credentials.md) einmal initialisieren)
+1. Mitgliedschaft in oder Zugriff auf Ihren Adobe IMS-Organisationsadministrator (dieser muss die [Dienstanmeldeinformationen](./service-credentials.md) einmal initialisieren)
 1. Die neueste [WKND-Site](https://github.com/adobe/aem-guides-wknd), die in Ihrer Cloud Service-Umgebung bereitgestellt wurde
 
 ## Übersicht über externe Anwendungen
@@ -67,7 +67,7 @@ Lokale Entwicklungs-Zugriffstoken werden für eine bestimmte AEM als Cloud Servi
 
 ## Dienstberechtigungen
 
-Service Credentials sind die Anmeldeinformationen, die in allen Nicht-Entwicklungs-Szenarien verwendet werden - am offensichtlichsten in der Produktion -, die es einer externen Anwendung oder dem System ermöglichen, sich über HTTP AEM als Cloud Service zu authentifizieren und mit ihnen zu interagieren. Dienstanmeldeinformationen werden nicht zur Authentifizierung an AEM gesendet. Stattdessen verwendet die externe Anwendung diese zum Generieren eines JWT, der mit den APIs von Adobe IMS _für_ ein Zugriffstoken ausgetauscht wird, das dann zur Authentifizierung von HTTP-Anfragen an AEM als Cloud Service verwendet werden kann.
+Service Credentials sind die Anmeldeinformationen, die in allen Nicht-Entwicklungs-Szenarien verwendet werden - am offensichtlichsten in der Produktion -, die es einer externen Anwendung oder dem System ermöglichen, sich über HTTP AEM als Cloud Service zu authentifizieren und mit ihnen zu interagieren. Service-Anmeldeinformationen werden nicht zur Authentifizierung an AEM gesendet. Stattdessen verwendet die externe Anwendung diese zum Generieren eines JWT-Codes, der mit den APIs von Adobe IMS _für_ ausgetauscht wird und dann zum Authentifizieren von HTTP-Anfragen an AEM als Cloud Service verwendet werden kann.
 
 + [Verwendung von Dienstanmeldeinformationen](./service-credentials.md)
 

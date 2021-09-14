@@ -1,24 +1,24 @@
 ---
 title: asset compute-Microservices-Erweiterbarkeit für AEM als Cloud Service
 description: Dieses Tutorial führt Sie durch die Erstellung eines einfachen Asset compute-Sekundärs, der eine Asset-Ausgabedarstellung erstellt, indem das Original-Asset auf einen Kreis zugeschnitten und konfigurierbarer Kontrast und Helligkeit angewendet wird. Obwohl der Worker selbst grundlegend ist, nutzt dieses Tutorial es, um das Erstellen, Entwickeln und Bereitstellen eines benutzerdefinierten Asset compute-Sekundärs für die Verwendung mit AEM als Cloud Service zu untersuchen.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
-topic: Integrationen, Entwicklung
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 575b12f9-b57f-41f7-bd39-56d242de4747
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1026'
 ht-degree: 3%
 
 ---
-
 
 # Erweiterbarkeit von asset compute-Microservices
 

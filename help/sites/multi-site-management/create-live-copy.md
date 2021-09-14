@@ -1,24 +1,24 @@
 ---
 title: Erstellen Sie eine Live Copy
 description: Erfahren Sie, wie Sie mithilfe des Assistenten "Live Copy erstellen"eine Live Copy für Ihre Site aus einem Blueprint erstellen.
-feature: Sprachkopie, Multi-Site-Manager
+feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 5375
 thumbnail: 36677.jpg
-topic: Lokalisierung
+topic: Localization
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 44540dee-909b-4140-b007-402ef9af58c4
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '52'
+source-wordcount: '46'
 ht-degree: 17%
 
 ---
-
 
 # Erstellen Sie eine Live Copy {#create-livecopy}
 

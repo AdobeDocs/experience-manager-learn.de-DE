@@ -1,24 +1,24 @@
 ---
 title: Laden und Auslösen eines Target-Aufrufs
 description: Erfahren Sie, wie Sie mit einer Launch-Regel laden, Parameter an Seitenanfragen übergeben und einen Target-Aufruf von Ihrer Site-Seite aus auslösen können. Seiteninformationen werden mithilfe der Adobe Client-Datenschicht abgerufen und als Parameter übergeben, mit der Sie Daten zum Besuchererlebnis auf einer Webseite erfassen und speichern und anschließend den Zugriff auf diese Daten erleichtern können.
-feature: Kernkomponenten, Adobe Client-Datenschicht
+feature: Core Components, Adobe Client Data Layer
 topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
 activity: setup
-version: cloud-service
+version: Cloud Service
 kt: 6133
 thumbnail: 41243.jpg
-topic: Integrationen
+topic: Integrations
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '615'
-ht-degree: 5%
+source-wordcount: '608'
+ht-degree: 4%
 
 ---
-
 
 # Laden und Auslösen eines Target-Aufrufs {#load-fire-target}
 

@@ -1,24 +1,24 @@
 ---
 title: Umgebungsvariablen für die Asset compute-Erweiterbarkeit konfigurieren
 description: Umgebungsvariablen werden in der .env-Datei für die lokale Entwicklung gepflegt und zur Bereitstellung von Anmeldeinformationen für die Adobe I/O und Cloud-Speicher verwendet, die für die lokale Entwicklung erforderlich sind.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6270
 thumbnail: KT-6270.jpg
-topic: Integrationen, Entwicklung
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: c63c5c75-1deb-4c16-ba33-e2c338ef6251
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
-
 
 # Umgebungsvariablen konfigurieren
 
@@ -79,7 +79,7 @@ Die resultierende Datei `.env` sieht wie folgt aus:
 
 Wenn Sie NICHT Microsoft Azure Blob Storage verwenden, entfernen oder lassen Sie diese auskommentiert (durch Präfix `#`).
 
-### Verwenden von Amazon S3 Cloud Storage{#amazon-s3}
+### Verwenden des Amazon S3-Cloud-Speichers{#amazon-s3}
 
 Wenn Sie Amazon S3-Cloud-Speicher verwenden, heben Sie die Auskommentierung auf und füllen Sie die folgenden Schlüssel in der Datei `.env` aus.
 

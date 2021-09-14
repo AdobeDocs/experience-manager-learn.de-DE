@@ -1,26 +1,26 @@
 ---
 title: Grundlegende Handhabung in AEM Sites
-seo-title: Neue Seite in Adobe Experience Manager Sites erstellen
+seo-title: Create a new page in Adobe Experience Manager Sites
 description: Das folgende Video bietet einen Überblick über die grundlegende Handhabung der AEM Autorenumgebung. Als Grundlage wird die Sites-Konsole verwendet.
-seo-description: Das folgende Video bietet einen Überblick über die grundlegende Handhabung der AEM Autorenumgebung. Als Grundlage wird die Sites-Konsole verwendet.
-feature: Seiten-Editor, bearbeitbare Vorlagen
+seo-description: The following video provides an overview of basic handling when using the AEM author environment. It uses the Sites console as a basis.
+feature: Page Editor, Editable Templates
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5, cloud-service
+version: 6.3, 6.4, 6.5, Cloud Service
 kt: 4495
 thumbnail: 31784.jpg
-topic: Content Management
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 896d378c-c20e-4343-b592-277f4c71065e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 68%
+source-wordcount: '334'
+ht-degree: 73%
 
 ---
-
 
 # Benutzeroberfläche und Navigation von AEM Sites {#basic-handling-aem-sites}
 

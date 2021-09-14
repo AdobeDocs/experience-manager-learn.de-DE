@@ -1,20 +1,20 @@
 ---
 title: Daten mit Analysis Workspace analysieren
 description: Erfahren Sie, wie Sie von einer Adobe Experience Manager-Site erfasste Daten Metriken und Dimensionen in Adobe Analytics Report Suites zuordnen. Erfahren Sie, wie Sie mit der Analysis Workspace-Funktion von Adobe Analytics ein detailliertes Berichts-Dashboard erstellen.
-version: cloud-service
-topic: Integrationen
-feature: Adobe Client-Datenschicht
+version: Cloud Service
+topic: Integrations
+feature: Adobe Client Data Layer
 role: User
 level: Intermediate
 kt: 6409
 thumbnail: KT-6296.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '2184'
-ht-degree: 1%
+source-wordcount: '2179'
+ht-degree: 0%
 
 ---
-
 
 # Daten mit Analysis Workspace analysieren
 
@@ -265,4 +265,3 @@ Als Nächstes laden wir die Classification-Vorlage für die Variable Button-ID (
 ## Herzlichen Glückwunsch!
 
 Sie haben soeben erfahren, wie Sie von einer Adobe Experience Manager-Site erfasste Daten Metriken und Dimensionen in Adobe Analytics-Report Suites zuordnen, eine Classification für die Metriken durchführen und mithilfe der Analysis Workspace-Funktion von Adobe Analytics ein detailliertes Berichts-Dashboard erstellen.
-

@@ -5,19 +5,19 @@ topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
 activity: setup
-version: cloud-service
+version: Cloud Service
 kt: 6044
 thumbnail: 41244.jpg
-topic: Integrationen
+topic: Integrations
 role: Admin
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: dd6c17ae-8e08-4db3-95f9-081cc7dbd86e
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
-
 
 # Adobe Target Cloud Service-Konto erstellen {#adobe-target-cloud-service}
 
@@ -30,4 +30,3 @@ Durch diese Integration kann der AEM-Autorendienst direkt mit Adobe Target kommu
 >[!CAUTION]
 >
 >Es gibt ein bekanntes Problem mit der Adobe Target Cloud Services-Konfiguration, das im Video angezeigt wird. Bis dieses Problem behoben ist, führen Sie dieselben Schritte im Video aus, verwenden Sie jedoch die [alte Adobe Target-Cloud Services-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html).
-

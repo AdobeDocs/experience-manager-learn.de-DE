@@ -1,24 +1,24 @@
 ---
 title: Einrichten von Konten und Diensten für die Asset compute-Erweiterbarkeit
 description: Die Entwicklung von Asset compute-Workern erfordert Zugriff auf Konten und Dienste, einschließlich AEM as a Cloud Service, Adobe Project Firefly und Cloud-Speicher, die von Microsoft oder Amazon bereitgestellt werden.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6264
 thumbnail: 40377.jpg
-topic: Integrationen, Entwicklung
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 2%
+source-wordcount: '627'
+ht-degree: 3%
 
 ---
-
 
 # Einrichten von Konten und Diensten
 
@@ -39,7 +39,7 @@ Alle Adobe-Dienste müssen über dieselbe Adobe Org mit Ihrer Adobe ID verfügba
 > 
 > In den folgenden Abschnitten erfahren Sie, wie Sie die erforderlichen Dienste einrichten und bereitstellen.
 
-## AEM as a Cloud Service{#aem-as-a-cloud-service}
+## AEM als Cloud Service{#aem-as-a-cloud-service}
 
 Der Zugriff auf eine AEM as a Cloud Service-Umgebung ist erforderlich, um AEM Assets-Verarbeitungsprofile so zu konfigurieren, dass der benutzerdefinierte Asset compute Worker aufgerufen wird.
 

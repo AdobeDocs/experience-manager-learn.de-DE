@@ -1,24 +1,24 @@
 ---
 title: Entwicklerkonsole
 description: AEM as a Cloud Service stellt eine Entwicklerkonsole für jede Umgebung bereit, die verschiedene Details des ausgeführten AEM-Dienstes anzeigt, die beim Debugging hilfreich sind.
-feature: Entwickler-Tools
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5433
 thumbnail: kt-5433.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 048a37a9813e7b61ff069c4606b8d23cc6b6844f
+exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1351'
+source-wordcount: '1348'
 ht-degree: 2%
 
 ---
-
 
 # Debugging von AEM als Cloud Service mit der Developer Console
 
@@ -46,7 +46,7 @@ Wenn ein Status-Fehler 401 &quot;Nicht autorisiert&quot;gemeldet wird, bedeutet 
 
 So beheben Sie das Problem 401 Unerlaubt :
 
-1. Stellen Sie sicher, dass Ihr Benutzer Mitglied der entsprechenden Adobe des IMS-Produktprofils (AEM Administratoren oder AEM Benutzer) für die zugehörige AEM der Developer Console als Cloud Service-Produktinstanz ist.
+1. Stellen Sie sicher, dass Ihr Benutzer Mitglied des entsprechenden Adobe IMS-Produktprofils (AEM Administratoren oder AEM Benutzer) für die zugehörige AEM der Developer Console als Cloud Service-Produktinstanz ist.
    + Denken Sie daran, dass die Developer Console auf 2 Adobe IMS-Produktinstanzen zugreifen kann. Stellen Sie die AEM als Cloud Service-Autoren- und -Veröffentlichungsinstanzen sicher, dass die richtigen Produktprofile verwendet werden, je nachdem, welche Dienststufe Zugriff über die Developer Console erfordert.
 1. Melden Sie sich bei der AEM als Cloud Service an (Autor oder Veröffentlichung) und stellen Sie sicher, dass Ihre Benutzer und Gruppen ordnungsgemäß mit AEM synchronisiert wurden.
    + Entwicklerkonsole erfordert, dass Ihr Benutzerdatensatz in der entsprechenden AEM Dienststufe erstellt wird, damit er sich bei dieser Dienststufe authentifizieren kann.
@@ -82,7 +82,7 @@ Bundles helfen beim Debugging durch:
 + Auflisten des Status jedes OSGi-Bundles; , auch wenn sie aktiv sind oder nicht
 + Bereitstellen von Details zu nicht aufgelösten Abhängigkeiten, die dazu führen, dass OSGi-Bundles aktiv werden
 
-### Komponenten 
+### Komponenten
 
 Komponenten listen alle OSGi-Komponenten in AEM auf. Diese Funktion ähnelt den lokalen Schnellstart-OSGi-Komponenten des AEM-SDK[unter `/system/console/components`.](http://localhost:4502/system/console/components)
 

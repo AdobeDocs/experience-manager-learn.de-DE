@@ -3,17 +3,17 @@ title: So aktivieren Sie den Download von Ausgabeformaten in der Brand Portal.
 description: Schritte zum Aktivieren des Herunterladens der Ausgabedarstellung in Brand Portal
 role: Developer
 level: Beginner
-version: cloud-service
+version: Cloud Service
 feature: Brand Portal
-topic: Entwicklung
+topic: Development
 index: y
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 78664b38-b64a-4220-bb7a-83f09bdd441a
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '46'
-ht-degree: 6%
+source-wordcount: '43'
+ht-degree: 0%
 
 ---
-
 
 # Aktivieren des Herunterladens von Ausgabedarstellungen in der Brand Portal
 

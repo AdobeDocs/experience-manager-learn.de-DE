@@ -1,23 +1,23 @@
 ---
 title: Weitere Tools zum Debugging AEM SDK
 description: Eine Vielzahl anderer Tools kann beim Debugging des lokalen Schnellstarts des AEM SDK helfen.
-feature: Entwickler-Tools
+feature: Developer Tools
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5251
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 11fb83e9-dbaf-46e5-8102-ae8cc716c6ba
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '220'
-ht-degree: 13%
+source-wordcount: '217'
+ht-degree: 12%
 
 ---
-
 
 # Weitere Tools zum Debugging AEM SDK
 
@@ -54,4 +54,3 @@ QueryBuilder Debugger ist ein webbasiertes Tool, mit dem Sie Suchanfragen mithil
 QueryBuilder Debugger befindet sich unter:
 
 + [http://localhost:4502/libs/cq/search/content/querydebug.html](http://localhost:4502/libs/cq/search/content/querydebug.html)
-

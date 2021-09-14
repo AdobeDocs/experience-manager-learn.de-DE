@@ -1,24 +1,24 @@
 ---
 title: Bereitstellen von Asset compute-Arbeitern in Adobe I/O Runtime zur Verwendung mit AEM as a Cloud Service
-description: 'asset compute-Projekte und die darin enthaltenen Arbeiter müssen in Adobe I/O Runtime bereitgestellt werden, damit sie von AEM als Cloud Service verwendet werden können. '
-feature: asset compute Microservices
+description: asset compute-Projekte und die darin enthaltenen Arbeiter müssen in Adobe I/O Runtime bereitgestellt werden, damit sie von AEM als Cloud Service verwendet werden können.
+feature: Asset Compute Microservices
 topics: renditions, development
-version: cloud-service
+version: Cloud Service
 activity: develop
 audience: developer
 doc-type: tutorial
 kt: 6286
 thumbnail: KT-6286.jpg
-topic: Integrationen, Entwicklung
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 0327cf61-fd51-4fa7-856d-3febd49c01a0
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '648'
 ht-degree: 0%
 
 ---
-
 
 # Bereitstellen in Adobe I/O Runtime
 
@@ -45,7 +45,7 @@ So stellen Sie für den Arbeitsbereich bereit, der in der Datei `.env` der Proje
 
 Wenn Entwicklungsumgebungen für lokale Entwicklungs- und AEM als Cloud Service-Entwicklungsumgebungen separate Asset compute-Bereitstellungen verwenden, können Bereitstellungen für AEM as a Cloud Service Dev auf dieselbe Weise verwaltet werden wie [Staging- und Produktionsimplementierungen](#stage-and-production).
 
-## Staging- und Produktionsarbeitsbereiche{#stage-and-production}
+## Arbeitsbereiche für Staging- und Produktionsumgebungen{#stage-and-production}
 
 Die Bereitstellung in Staging- und Produktionsarbeitsbereichen erfolgt normalerweise durch Ihr CI/CD-System Ihrer Wahl. Das Asset compute-Projekt muss diskret in jedem Arbeitsbereich (Staging und dann Produktion) bereitgestellt werden.
 

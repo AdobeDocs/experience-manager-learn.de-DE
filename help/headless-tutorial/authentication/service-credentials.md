@@ -1,7 +1,7 @@
 ---
 title: Dienstberechtigungen
 description: AEM Service Credentials werden verwendet, um externe Anwendungen, Systeme und Dienste zu erleichtern, damit sie programmgesteuert mit AEM Author- oder Publish-Diensten über HTTP interagieren können.
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
 feature: APIs
@@ -9,16 +9,16 @@ activity: develop
 audience: developer
 kt: 6785
 thumbnail: 330519.jpg
-topic: Headless, Integrationen
+topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: b902ced3d7f7cf827d0a487bf741ff370f7c1f04
+exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1860'
 ht-degree: 0%
 
 ---
-
 
 # Dienstberechtigungen
 
@@ -254,4 +254,3 @@ Die Ausgabe an das Terminal sieht wie folgt aus:
 ## Herzlichen Glückwunsch!
 
 Jetzt, da wir programmatisch auf AEM als Cloud Service mithilfe eines lokalen Entwicklungs-Zugriffstokens sowie eines produktionsbereiten Service-to-Service-Zugriffs-Tokens zugegriffen haben!
-

@@ -1,9 +1,9 @@
 ---
 title: Erste Schritte mit AEM Sites - WKND-Tutorial
 description: Erste Schritte mit AEM Sites - WKND-Tutorial. Das WKND-Tutorial ist ein mehrteiliges Tutorial, das für Entwickler konzipiert ist, die neu bei Adobe Experience Manager sind. Das Tutorial führt durch die Implementierung einer AEM Site für eine fiktive Lifestyle-Marke, die WKND. Das Tutorial behandelt grundlegende Themen wie Projekteinrichtung, Maven-Archetypen, Kernkomponenten, bearbeitbare Vorlagen, Client-Bibliotheken und Komponentenentwicklung.
-sub-product: Sites
+sub-product: sites
 topics: development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
@@ -11,23 +11,23 @@ KT: 4132
 mini-toc-levels: 1
 index: y
 thumbnail: 30476.jpg
-feature: Kernkomponenten, Seiten-Editor, bearbeitbare Vorlagen, AEM Projektarchetyp
-topic: Content Management, Entwicklung
+feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
+topic: Content Management, Development
 role: Developer
 level: Beginner
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '619'
 ht-degree: 6%
 
 ---
-
 
 # Erste Schritte mit AEM Sites - WKND-Tutorial {#introduction}
 
 Willkommen bei einem mehrteiligen Tutorial, das für Entwickler konzipiert ist, die neu in Adobe Experience Manager (AEM) sind. Dieses Tutorial führt Sie durch die Implementierung einer AEM Website für eine fiktive Lifestyle-Marke, die WKND. Das Tutorial behandelt grundlegende Themen wie Projekteinrichtung, Kernkomponenten, bearbeitbare Vorlagen, Client-seitige Bibliotheken und Komponentenentwicklung mit Adobe Experience Manager Sites.
 
-## Überblick {#wknd-tutorial-overview}
+## Übersicht {#wknd-tutorial-overview}
 
 Ziel dieses mehrteiligen Tutorials ist es, Entwicklern beizubringen, wie eine Website mit den neuesten Standards und Technologien in Adobe Experience Manager (AEM) implementiert wird. Nach Abschluss dieses Tutorials sollte ein Entwickler die grundlegende Grundlage der Plattform und Kenntnisse über allgemeine Designmuster in AEM verstehen.
 

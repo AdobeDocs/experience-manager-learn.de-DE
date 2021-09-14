@@ -1,24 +1,24 @@
 ---
 title: Fehlerbehebung bei der Asset compute-Erweiterbarkeit für AEM Assets
 description: Im Folgenden finden Sie einen Index häufiger Probleme und Fehler sowie Lösungen, die bei der Entwicklung und Bereitstellung von benutzerdefinierten Asset compute-Sekundären für AEM Assets auftreten können.
-feature: asset compute Microservices
+feature: Asset Compute Microservices
 topics: renditions, metadata, development
-version: cloud-service
+version: Cloud Service
 doc-type: tutorial
 activity: develop
 audience: developer
 kt: 5802
 thumbnail: KT-5802.jpg
-topic: Integrationen, Entwicklung
+topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: d851d315-ed0e-46b8-bcd8-417e1e58c0c4
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1239'
 ht-degree: 0%
 
 ---
-
 
 # Fehlerbehebung bei der Asset compute-Erweiterbarkeit
 
@@ -26,7 +26,7 @@ Im Folgenden finden Sie einen Index häufiger Probleme und Fehler sowie Lösunge
 
 ## Entwickeln{#develop}
 
-### Das Ausgabeformat wird teilweise gezeichnet/beschädigt{#rendition-returned-partially-drawn-or-corrupt} zurückgegeben
+### Ausgabedarstellung wird teilweise gezeichnet/beschädigt zurückgegeben{#rendition-returned-partially-drawn-or-corrupt}
 
 + __Fehler__: Die Ausgabedarstellung wird nicht vollständig (wenn ein Bild beschädigt ist) oder nicht geöffnet.
 
@@ -39,26 +39,26 @@ Im Folgenden finden Sie einen Index häufiger Probleme und Fehler sowie Lösunge
 
 ### Datei &quot;Console.json&quot;fehlt im Asset compute-Projekt{#missing-console-json}
 
-+ __Fehler:__ Fehler: Fehlende erforderliche Dateien bei Validierung (.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY) bei async setupAssetCompute (.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY)
++ __Fehler:__ Fehler: Fehlende erforderliche Dateien bei Validierung (.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.:XX:jsYY) at async setupAssetCompute (.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.:XX:jsYY)
 + __Ursache:__ Die  `console.json` Datei fehlt im Stammverzeichnis des Asset compute-Projekts
 + __Lösung:__ Laden Sie ein neues  `console.json` Formular für Ihr Adobe I/O-Projekt herunter.
    1. Öffnen Sie in console.adobe.io das Adobe I/O-Projekt, für das das Asset compute-Projekt konfiguriert ist.
    1. Tippen Sie oben rechts auf die Schaltfläche __Download__ .
    1. Speichern Sie die heruntergeladene Datei im Stammverzeichnis Ihres Asset compute-Projekts unter Verwendung des Dateinamens `console.json`.
 
-### Falscher YAML-Einzug in manifest.yml{#incorrect-yaml-indentation}
+### Falsche YAML-Einrückung in manifest.yml{#incorrect-yaml-indentation}
 
 + __Fehler:__ YAMLException: schlechter Einzug eines Zuordnungseintrags in Zeile X, Spalte Y: (standardmäßig aus  `aio app run` Befehl)
 + __Ursache:__ Bei Yaml-Dateien wird der weiße Abstand berücksichtigt. Wahrscheinlich ist der Einzug falsch.
 + __Lösung:__ Überprüfen Sie Ihre  `manifest.yml` und stellen Sie sicher, dass alle Einzüge korrekt sind.
 
-### memorySize limit ist auf low{#memorysize-limit-is-set-too-low} gesetzt
+### Speichergrößenlimit ist zu niedrig eingestellt{#memorysize-limit-is-set-too-low}
 
 + __Fehler:__  Local Dev Server OpenWhiskError: PUT https://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true Zurückgegeben HTTP 400 (Ungültige Anfrage) —> &quot;Der Anfrageinhalt war fehlerhaft:Anforderung fehlgeschlagen: Arbeitsspeicher 64 MB unter dem zulässigen Schwellenwert von 134217728 B&quot;
 + __Ursache:__ Eine  `memorySize` Begrenzung für den Worker in  `manifest.yml` wurde unter dem erlaubten Mindestschwellenwert festgelegt, der von der Fehlermeldung in Byte gemeldet wird.
 + __Lösung:__  Prüfen Sie die  `memorySize` Grenzwerte in der  `manifest.yml` und stellen Sie sicher, dass alle über dem erlaubten Mindestschwellenwert liegen.
 
-### Das Entwicklungstool kann nicht gestartet werden, da private.key{#missing-private-key} fehlt.
+### Das Entwicklungstool kann nicht gestartet werden, da private.key fehlt.{#missing-private-key}
 
 + __Fehler:__ Local Dev ServerError: Fehlende erforderliche Dateien bei validatePrivateKeyFile... (über den Standardbefehl `aio app run` )
 + __Ursache:__ Der  `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` Wert in der  `.env` Datei verweist nicht auf  `private.key` oder  `private.key` kann vom aktuellen Benutzer nicht gelesen werden.
@@ -88,7 +88,7 @@ Das asset compute Development Tool kann einen Status eingeben, in dem veraltete 
 
 ## Testen{#test}
 
-### Keine Wiedergabe während der Testausführung generiert{#test-no-rendition-generated}
+### Keine Ausgabedarstellung während der Testausführung generiert{#test-no-rendition-generated}
 
 + __Fehler:__ Fehler: Keine Ausgabedarstellung generiert.
 + __Ursache:__ Der Worker konnte aufgrund eines unerwarteten Fehlers wie einem JavaScript-Syntaxfehler keine Ausgabedarstellung generieren.
@@ -96,7 +96,7 @@ Das asset compute Development Tool kann einen Status eingeben, in dem veraltete 
 
    ![Fehlerbehebung - Keine Ausgabedarstellung generiert](./assets/troubleshooting/test__no-rendition-generated.png)
 
-### Test generiert eine falsche Ausgabedarstellung, wodurch der Test fehlschlägt{#tests-generates-incorrect-rendition}
+### Test generiert falsche Ausgabedarstellung, wodurch der Test fehlschlägt{#tests-generates-incorrect-rendition}
 
 + __Fehler:__ Fehler: Ausgabe &quot;rendition.xxx&quot;nicht erwartungsgemäß.
 + __Ursache:__ Der Worker gibt eine Ausgabedarstellung aus, die nicht mit der im Testfall  `rendition.<extension>` bereitgestellten übereinstimmt.
@@ -107,7 +107,7 @@ Das asset compute Development Tool kann einen Status eingeben, in dem veraltete 
 
 ## Debug
 
-### Debugger hängt nicht an{#debugger-does-not-attach}
+### Debugger wird nicht angehängt{#debugger-does-not-attach}
 
 + __Fehler__: Start der Fehlerverarbeitung: Fehler: Verbindung zum Debug-Ziel konnte nicht hergestellt werden unter..
 + __Ursache__: Docker Desktop wird nicht auf dem lokalen System ausgeführt. Überprüfen Sie dies, indem Sie die VS-Code-Debug-Konsole (Ansicht > Debug-Konsole) überprüfen und bestätigen, dass dieser Fehler gemeldet wird.
@@ -122,7 +122,7 @@ Das asset compute Development Tool kann einen Status eingeben, in dem veraltete 
 + __Ursache:__ Der VS-Code-Debugger wurde angehalten/getrennt.
 + __Lösung:__ Starten Sie den VS-Code-Debugger neu und überprüfen Sie die Anhänge, indem Sie die VS Code Debug Output Console (Ansicht > Debug-Konsole) ansehen.
 
-#### VS-Code-Debugger hinzugefügt, nachdem die Ausführung des Workflows gestartet wurde{#vs-code-debugger-attached-after-worker-execution-began}
+#### VS-Code-Debugger nach Beginn der Ausführung des Workflows angehängt{#vs-code-debugger-attached-after-worker-execution-began}
 
 + __Ursache:__ Der VS-Code-Debugger wurde nicht vor dem Tippen auf das  ____ Runin Development Tool angehängt.
 + __Lösung:__ Stellen Sie sicher, dass der Debugger angehängt ist, indem Sie die Debug-Konsole von VS Code (Ansicht > Debug-Konsole) überprüfen und dann den Asset compute Worker über das Entwicklungstool erneut ausführen.
@@ -145,7 +145,7 @@ Das asset compute Development Tool kann einen Status eingeben, in dem veraltete 
 
    ![Fehlerbehebung - aio-Aktualisierung](./assets/troubleshooting/debug__terminate.png)
 
-## Bereitstellen{#deploy}
+## Bereitstellen von{#deploy}
 
 ### Benutzerdefinierte Ausgabedarstellung fehlt im Asset in AEM{#custom-rendition-missing-from-asset}
 
@@ -161,10 +161,8 @@ Das asset compute Development Tool kann einen Status eingeben, in dem veraltete 
 + __Ursache:__ Das Asset befindet sich unter einem Ordner, auf den das benutzerdefinierte Worker-Verarbeitungsprofil angewendet wurde. Zwischen diesem Ordner und dem Asset wurde jedoch ein anderes Verarbeitungsprofil angewendet, das den Kunden nicht verwendet.
 + __Lösung:__ Kombinieren oder anderweitig abstimmen Sie die beiden Verarbeitungsprofile und entfernen Sie das Zwischen-Verarbeitungsprofil.
 
-### Die Asset-Verarbeitung schlägt AEM{#asset-processing-fails} fehl
+### Die Asset-Verarbeitung schlägt AEM fehl{#asset-processing-fails}
 
 + __Fehler:__ Badge zur Asset-Verarbeitung fehlgeschlagen wird auf Asset angezeigt
 + __Ursache:__ Bei der Ausführung des benutzerdefinierten Sekundärs ist ein Fehler aufgetreten.
 + __Lösung:__ Befolgen Sie die Anweisungen zum  [Debugging von Adobe I/O Runtime-](./test-debug/debug.md#aio-app-logs) Aktivierungen mit  `aio app logs`.
-
-

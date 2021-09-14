@@ -1,19 +1,19 @@
 ---
 title: Adobe Asset Link und AEM
-description: 'Adobe Experience Manager-Assets können von Designern und kreativen Benutzern in ihren bevorzugten Adobe Creative Cloud-Desktop-Applikationen verwendet werden. Adobe Asset Link-Erweiterung für Adobe Creative Cloud for enterprise erweitert die Funktion zum Suchen, Durchsuchen, Sortieren, Anzeigen, Hochladen von Assets, Auschecken, Ändern, Einchecken und Anzeigen von Metadaten AEM Assets in Creative Cloud-Tools wie Adobe XD, Photoshop, InDesign und Illustrator. '
+description: Adobe Experience Manager-Assets können von Designern und kreativen Benutzern in ihren bevorzugten Adobe Creative Cloud-Desktop-Applikationen verwendet werden. Adobe Asset Link-Erweiterung für Adobe Creative Cloud for enterprise erweitert die Funktion zum Suchen, Durchsuchen, Sortieren, Anzeigen, Hochladen von Assets, Auschecken, Ändern, Einchecken und Anzeigen von Metadaten AEM Assets in Creative Cloud-Tools wie Adobe XD, Photoshop, InDesign und Illustrator.
 feature: Adobe Asset Link
-version: 6.4, 6.5, cloud-service
-topic: Content Management
+version: 6.4, 6.5, Cloud Service
+topic: Content Management
 role: User
 level: Beginner
 thumbnail: 28988.jpg
-source-git-commit: 0cfa83bdbd534f0fa06b3fa0013971feb188224e
+exl-id: 6c49f8c2-f468-4b29-b7b6-029c8ab39ce9
+source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
-source-wordcount: '1029'
-ht-degree: 3%
+source-wordcount: '1052'
+ht-degree: 2%
 
 ---
-
 
 # Adobe Asset Link 3.0
 
@@ -21,6 +21,9 @@ Adobe Experience Manager-Assets können von Designern und kreativen Benutzern in
 
 Adobe Asset Link-Erweiterung für Adobe Creative Cloud for enterprise erweitert die Funktion zum Suchen, Durchsuchen, Sortieren, Anzeigen, Hochladen von Assets, Auschecken, Ändern, Einchecken und Anzeigen von Metadaten AEM Assets in Creative Cloud-Anwendungen.
 
+>[!TIP]
+>
+> Erfahren Sie mehr darüber, wie Sie mithilfe des [Adobe XD Premium-Schulungsprogramms](https://spark.adobe.com/page/wU7OXv8qKGugO/) Asset Link in Ihren Adobe Experience Manager-Workflow integrieren können.
 
 ## Adobe Asset Link und AEM kreativen Workflows
 
