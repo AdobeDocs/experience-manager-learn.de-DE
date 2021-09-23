@@ -1,6 +1,6 @@
 ---
 title: Suchen und Indizieren in AEM als Cloud Service
-description: Erfahren Sie mehr über AEM als Suchindizes eines Cloud Service, wie Sie AEM 6 Indexdefinitionen in AEM als Cloud Service-kompatibel konvertieren und wie Sie Indizes bereitstellen ... (Beschreibungen sollten zwischen 60 und 160 Zeichen lang sein)
+description: Erfahren Sie mehr über AEM als Suchindizes eines Cloud Service, wie Sie AEM 6 Indexdefinitionen konvertieren und wie Sie Indizes bereitstellen.
 version: Cloud Service
 feature: Search
 topic: Migration, Upgrade
@@ -8,13 +8,13 @@ role: Developer
 level: Experienced
 kt: 8634
 thumbnail: 336963.jpeg
-source-git-commit: f22a37f80a9c9698718e1c75576b7ca705e658fc
+exl-id: f752df86-27d4-4dbf-a3cb-ee97b7d9a17e
+source-git-commit: c0b8e598bd8bb968ae5e48b4033d6c3d46b71710
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '66'
 ht-degree: 0%
 
 ---
-
 
 # Suchen und Indizieren
 
