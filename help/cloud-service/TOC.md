@@ -4,9 +4,9 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: 598d00578e5179f76b6f309c5c14dc7b1634f051
+source-git-commit: 5452ab85523fc10d0aaa55e95d42c37ec33fd2ed
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '564'
 ht-degree: 32%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 32%
 
 + [Übersicht](./overview.md)
 + Einführung in AEM as a Cloud Service{#introduction}
-   + [Was ist AEM Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
+   + [Was ist AEM as a Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
    + [Entwicklung](./introduction/evolution.md)
    + [Architektur](./introduction/architecture.md)
    + [Cloud Manager ](./introduction/cloud-manager.md)
@@ -64,6 +64,8 @@ ht-degree: 32%
       + [Lebenszyklus von OSGi-Komponenten](./developing/osgi-services/lifecycle.md)
       + [Grundlagen zu OSGi-Konfigurationen](./developing/osgi-services/configurations.md)
       + [OSGi-Konfigurationen mit OCD](./developing/osgi-services/configurations-ocd.md)
+   + Erweitert{#advanced}
+      + [Service-Benutzer](./developing/advanced/service-users.md)
    + [AEM SDK-API-JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + Debugging AEM{#debugging}
    + Debugging des AEM SDK{#debugging-aem-sdk}
@@ -73,7 +75,7 @@ ht-degree: 32%
       + [OSGi-Web-Konsole](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher Tools](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [Andere Tools](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + Debugging von AEM als Cloud Service{#debugging-aem-as-a-cloud-service}
+   + Debugging AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [Übersicht](./debugging/cloud-service/overview.md)
       + [Protokolle](./debugging/cloud-service/logs.md)
       + [Erstellung und Implementierung](./debugging/cloud-service/build-and-deployment.md)
@@ -104,7 +106,7 @@ ht-degree: 32%
          + [Massenimport-Dienst](./migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md)
          + [Content Transfer Tool](./migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md)
       + [Fehlerbehebung](./migration/moving-to-aem-as-a-cloud-service/troubleshooting.md)
-      + AEM Forms als Cloud Service {#aem-forms}
+      + AEM Forms as a Cloud Service {#aem-forms}
          + [Einführung](./migration/moving-to-aem-as-a-cloud-service/aem-forms/introduction.md)
          + [Digitale Registrierung](./migration/moving-to-aem-as-a-cloud-service/aem-forms/digital-enrollment.md)
          + [Kommunikation](./migration/moving-to-aem-as-a-cloud-service/aem-forms/communications.md)
