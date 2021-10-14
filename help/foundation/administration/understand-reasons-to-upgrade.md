@@ -1,21 +1,21 @@
 ---
 title: Gründe für die Aktualisierung
-description: Eine allgemeine Aufschlüsselung der wichtigsten Funktionen für Kunden, die ein Upgrade auf die neueste Version von Adobe Experience Manager in Erwägung ziehen.
+description: Eine allgemeine Aufschlüsselung der wichtigsten Funktionen für Kunden, die ein Upgrade auf die neueste Version von Adobe Experience Manager 6 in Erwägung ziehen.
 version: 6.5
 topic: Upgrade
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
+source-git-commit: 278433e7d9a2d524198efcebae336dca01a15259
 workflow-type: tm+mt
 source-wordcount: '3462'
 ht-degree: 6%
 
 ---
 
-
 # Gründe für die Aktualisierung
 
-Eine allgemeine Aufschlüsselung der wichtigsten Funktionen für Kunden, die ein Upgrade auf die neueste Version von Adobe Experience Manager in Erwägung ziehen.
+Eine allgemeine Aufschlüsselung der wichtigsten Funktionen für Kunden, die ein Upgrade auf die neueste Version von Adobe Experience Manager 6 in Erwägung ziehen.
 
 ## Wichtige Funktionen für die Aktualisierung auf AEM 6.5
 
@@ -62,7 +62,7 @@ AEM baut seine Integration mit intelligenten Technologien fort, nutzt maschinell
 
 ### Integrationen
 
-AEM verbessert seine Fähigkeit, sich mit anderen Adobe-Services zu integrieren:
+AEM verbessert seine Fähigkeit, eine Integration mit anderen Adobe-Services herzustellen:
 
 + **Experience** Fragments vertieft ihre Integration in  **Adobe** Targeting, indem es  **Exportieren als** JSON in Adobe Target und  **Löschen von Experience Fragment-basierten** Angeboten aus  **Adobe Target** unterstützt.
 
@@ -119,7 +119,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Foundation-Funktionen, die vo
             <td>ms</td>
             <td>ms</td>
             <td>ms</td>
-            <td>ms</td>
+            <td>✔</td>
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
@@ -273,11 +273,11 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Foundation-Funktionen, die vo
 
 Nachfolgend finden Sie eine Matrix der wichtigsten Sicherheitsfunktionen, die von AEM angeboten werden. Einige dieser Funktionen wurden in früheren Versionen eingeführt, um die in den einzelnen Versionen hinzugefügten inkrementellen Verbesserungen zu verbessern.
 
-+ [Versionshinweise zur Sicherheit](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html#Security)
++ [Security release notes](https://helpx.adobe.com/experience-manager/6-5/release-notes/wcm-platform.html#Security)
 
 ***bedeutet, dass die Funktion in dieser Version erheblich verbessert wurde.***
 
-***✔ <sup>+</sup>  bedeutet, dass die Funktion über ein Service Pack oder Feature Pack verfügbar ist.***
+***✔<sup>+</sup> denotes the feature is available via a Service Pack or Feature Pack.***
 
 <table>
     <thead>
@@ -407,7 +407,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sicherheitsfunktionen, die vo
     </tr>
     <tr>
         <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ims-config-and-admin-console.html" target="_blank">Adobe IMS Authentication </a><br>
- </strong>SupportExklusiv für Adobe Managed Services (AMS), zentrale Verwaltung des Zugriffs auf AEM-Autoreninstanzen über Adobe IMS (Identity Management-System).</td>
+ </strong>SupportExclusive to Adobe Managed Services (AMS), zentrale Verwaltung des Zugriffs auf AEM-Autoreninstanzen über Adobe IMS (Identity Management System).</td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -714,12 +714,12 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Funktionen von AEM Assets. Ei
             <td><sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank"></a> Task and  <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects-with-workflows.html" target="_blank"></a> WorkflowManagement:</strong>
-            Vordefinierte Workflows und Aufgaben für die Überprüfung und Genehmigung digitaler Assets unter Verwendung AEM Projekte.</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank"></a> Aufgabe und  <a href="https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects-with-workflows.html" target="_blank"></a> WorkflowManagement:</strong>
+            Vordefinierte Workflows und Aufgaben für die Überprüfung und Genehmigung digitaler Assets mithilfe AEM Projekte.</td>
             <td> </td>
             <td>ms</td>
             <td>ms</td>
-            <td>ms</td>
+            <td>✔</td>
             <td><sup>+</sup></td>
             <td>ms</td>
             <td>ms</td>
@@ -755,7 +755,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Funktionen von AEM Assets. Ei
             <td>ms</td>
             <td>ms</td>
             <td>ms</td>
-            <td>ms</td>
+            <td>✔</td>
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/de/experience-manager/brand-portal/using/brand-portal.html" target="_blank">Brand Portal</a>:</strong>
@@ -763,8 +763,8 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Funktionen von AEM Assets. Ei
             <td> </td>
             <td> </td>
             <td> </td>
-            <td>ms</td>
-            <td>ms</td>
+            <td>✔</td>
+            <td>✔</td>
             <td>ms</td>
             <td><sup>+</sup></td>
         </tr>
@@ -848,7 +848,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Funktionen von AEM Assets. Ei
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/imaging-transcoding-library.html" target="_blank">Adobe Imaging Library</a>:</strong>
-                <br> Photoshop- und Acrobat PDF-Bibliotheken, die für die hochwertige Dateibearbeitung verwendet werden.</td>
+                <br> Photoshop- und Acrobat-PDF-Bibliotheken, die für die hochwertige Dateibearbeitung verwendet werden.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -869,8 +869,8 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Funktionen von AEM Assets. Ei
             <td><sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/aem-assets-adobe-stock.html" target="_blank">Adobe Stock-Integration</a>:</strong>
-             Nahtloser Zugriff auf und Verwendung von Adobe Stock-Bildern direkt von AEM aus.</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/aem-assets-adobe-stock.html" target="_blank">Adobe Stock Integration</a>:</strong>
+            Seamlessly access and use Adobe Stock imagery directly from AEM.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -907,10 +907,10 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Funktionen von AEM Assets. Ei
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets.html" target="_blank">Bildbearbeitung</a>:</strong>
             Dynamische Bereitstellung von Bildern in unterschiedlichen Größen und Formaten, einschließlich smartes Zuschneiden.</td>
             <td> </td>
-            <td>ms</td>
-            <td>ms</td>
-            <td>ms</td>
-            <td><sup>+</sup></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td><sup>+</sup></td>
             <td>ms</td>
         </tr>
@@ -1025,7 +1025,7 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Forms Add-on-Funktionen, 
             <td>ms</td>
             <td><sup>+</sup></td>
             <td><sup>+</sup></td>
-            <td>ms</td>
+            <td>✔</td>
             <td>ms</td>
         </tr>
         <tr>
@@ -1034,14 +1034,14 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Forms Add-on-Funktionen, 
             <td> </td>
             <td> </td>
             <td> </td>
-            <td>ms</td>
+            <td>✔</td>
             <td>ms</td>
             <td><sup>+</sup></td>
-            <td>ms</td>
+            <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/forms/using/template-editor.html" target="_blank">Vorlagen-Editor</a>:</strong>
-            Standardisieren und Implementieren von Best Practices für adaptive Formulare.</td>
+            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/forms/using/template-editor.html" target="_blank">Template Editor</a>:</strong>
+            Standardize and implement best practices for adaptive forms.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -1120,8 +1120,8 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Forms Add-on-Funktionen, 
             <td>ms</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/aem-forms-app.html" target="_blank">AEM Forms-App</a>:</strong>
-            Zulassen der Verarbeitung von Online-/Offline-Formularen in einer App unter iOS, Android oder Windows.</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/aem-forms-app.html" target="_blank">AEM Forms App</a>:</strong>
+            Zulassen der Online-/Offline-Formularverarbeitung in einer App unter iOS, Android oder Windows.</td>
             <td> </td>
             <td>ms</td>
             <td>ms</td>
@@ -1292,8 +1292,8 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Communities Add-on-Funkti
         </tr>
         <tr>
             <td rowspan="5">Aktivierung</td>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/catalog.html" target="_blank"></a> Katalogverwaltung und  <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/resource.html" target="_blank">Ressourcenverwaltung</a>:</strong>
-            Zugriff auf Aktivierungsressourcen aus dem Katalog.</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/catalog.html" target="_blank"></a> Katalogverwaltung und  <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/resource.html" target="_blank">Ressourcenverwaltung</a>: </strong>
+            Zugriff auf Aktivierungsressourcen über den Katalog.</td>
             <td> </td>
             <td><sup>+</sup></td>
             <td>ms</td>
@@ -1343,7 +1343,7 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Communities Add-on-Funkti
         </tr>
         <tr>
             <td rowspan="8">Commons</td>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/comments.html" target="_blank"></a> Kommentare und Anhänge:</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/comments.html" target="_blank"></a> Kommentare und Anhänge: </strong>
              (Social Component Framework) Als Community-Mitglied teilen Sie Meinungen und Wissen zu Inhalten auf der Communities-Site.</td>
             <td><sup>+</sup></td>
             <td>ms</td>
@@ -1482,11 +1482,11 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Communities Add-on-Funkti
             <td>ms</td>
             <td>ms</td>
             <td>ms</td>
-            <td><sup>+</sup></td>
+            <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/moderate-ugc.html#CommonModerationConcepts" target="_blank">Spam-Erkennung und Profilfilter</a>:</strong>
-             Automatische Spam-Erkennung.</td>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/moderate-ugc.html#CommonModerationConcepts" target="_blank">Spam detection and Profanity filters</a>:</strong>
+            Automatic spam detection.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -1499,9 +1499,9 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Communities Add-on-Funkti
             Verwalten Sie Benutzerprofile und Gruppen im Bereich der Mitgliederverwaltung.</td>
             <td> </td>
             <td><sup>+</sup></td>
+            <td>✔</td>
             <td>ms</td>
-            <td>ms</td>
-            <td><sup>+</sup></td>
+            <td>✔<sup>+</sup></td>
             <td>ms</td>
         </tr>
         <tr>
@@ -1537,7 +1537,7 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Communities Add-on-Funkti
             <td>ms</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/activities.html" target="_blank"></a> Aktivitäten und  <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/notifications.html" target="_blank">Benachrichtigungen</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/activities.html" target="_blank"></a> Aktivitäten und  <a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/notifications.html" target="_blank">Benachrichtigungen</a>: </strong>
             Zeigen Sie den neuesten Aktivitäts-Stream an und erhalten Sie eine Benachrichtigung über interessante Ereignisse.</td>
             <td> </td>
             <td> </td>
@@ -1571,7 +1571,7 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Communities Add-on-Funkti
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/working-with-srp.html" target="_blank">MSRP (Mongo Storage)</a>:</strong>
             Benutzergenerierte Inhalte (UGC) werden direkt in einer lokalen MongoDB-Instanz beibehalten</td>
             <td> </td>
-            <td><sup>+</sup></td>
+            <td>✔<sup>+</sup></td>
             <td>ms</td>
             <td>ms</td>
             <td>ms</td>
@@ -1584,7 +1584,7 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Communities Add-on-Funkti
             <td> </td>
             <td><sup>+</sup></td>
             <td>ms</td>
-            <td>ms</td>
+            <td>✔</td>
             <td>ms</td>
         </tr>
         <tr>
@@ -1592,8 +1592,8 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Communities Add-on-Funkti
                 Benutzergenerierte Inhalte (UGC) werden remote in einem Cloud-Service gespeichert, der von Adobe gehostet und verwaltet wird.</td>
             <td><sup>+</sup></td>
             <td>ms</td>
-            <td>ms</td>
-            <td>ms</td>
+            <td>✔</td>
+            <td>✔</td>
             <td>ms</td>
             <td>ms</td>
         </tr>
