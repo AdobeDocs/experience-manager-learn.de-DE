@@ -6,32 +6,36 @@ feature: Forms Service
 topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 72a9edb3edc73cf14f13bb53355a37e707ed4c79
+kt: 9226
+source-git-commit: 2ed78bb8b122acbe69e98d63caee1115615d568f
 workflow-type: tm+mt
-source-wordcount: '350'
+source-wordcount: '357'
 ht-degree: 0%
 
 ---
 
 
-# Herunterladen des interaktiven DoR
+# Interaktives DoR herunterladen
 
 Ein gängiges Nutzungsszenario besteht darin, ein interaktives DoR mit den adaptiven Formulardaten herunterzuladen. Das heruntergeladene DoR wird dann mit Adobe Acrobat oder Adobe Reader abgeschlossen.
 
 Um dieses Anwendungsbeispiel zu erstellen, müssen wir die folgenden Schritte ausführen
 
-## Beispieldaten für die xdp generieren
+## Beispieldaten für das XDP generieren
 
-Öffnen Sie die XDP in AEM Forms Designer.
-Datei auswählen | Formulareigenschaften | Vorschau Klicken Sie auf Vorschaudaten generieren Klicken Sie auf Generieren Geben Sie einen aussagekräftigen Dateinamen an, z. B. &quot;form-data.xml&quot;.
+* Öffnen Sie die XDP in AEM Forms Designer.
+* Datei auswählen | Formulareigenschaften | Vorschau
+* Klicken Sie auf Vorschaudaten generieren .
+* Klicken Sie auf Generieren
+* Geben Sie einen aussagekräftigen Dateinamen an, z. B. &quot;form-data.xml&quot;
 
 ## XSD aus den XML-Daten generieren
 
-Sie können jedes der kostenlosen Online-Tools verwenden, um [generieren xsd](https://www.freeformatter.com/xsd-generator.html) aus den XML-Daten, die im vorherigen Schritt generiert wurden.
+Sie können jedes der kostenlosen Online-Tools verwenden, um [XSD generieren](https://www.freeformatter.com/xsd-generator.html) aus den XML-Daten, die im vorherigen Schritt generiert wurden.
 
-## Adaptive erstellen
+## Adaptives Formular erstellen
 
-Erstellen Sie ein adaptives Formular basierend auf der xsd aus dem vorherigen Schritt. Verknüpfen Sie das Formular mit der Client-Bibliothek &quot;irs&quot;. Diese Client-Bibliothek enthält den Code, um einen POST-Aufruf an das Servlet durchzuführen, der die PDF an die aufrufende Anwendung zurückgibt. Der folgende Code wird ausgelöst, wenn die _PDF herunterladen_ angeklickt wird
+Erstellen Sie ein adaptives Formular basierend auf der XSD aus dem vorherigen Schritt. Verknüpfen Sie das Formular mit der Client-Bibliothek &quot;irs&quot;. Diese Client-Bibliothek enthält den Code, um einen POST-Aufruf an das Servlet durchzuführen, der die PDF an die aufrufende Anwendung zurückgibt. Der folgende Code wird ausgelöst, wenn die _PDF herunterladen_ angeklickt wird
 
 ```javascript
 $(document).ready(function() {
@@ -72,7 +76,7 @@ $(document).ready(function() {
 
 ## Benutzerdefiniertes Servlet erstellen
 
-Erstellen Sie ein benutzerdefiniertes Servlet, das die Daten mit der XDP-Vorlage zusammenführt und das PDF-Dokument zurückgibt. Der Code, um dies zu erreichen, ist unten aufgeführt. Das benutzerdefinierte Servlet ist Teil der [AEMFormsDocumentServices.core-1.0-SNAPSHOT Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)).
+Erstellen Sie ein benutzerdefiniertes Servlet, das die Daten mit der XDP-Vorlage zusammenführt und das PDF-Dokument zurückgibt. Der Code, um dies zu erreichen, ist unten aufgeführt. Das benutzerdefinierte Servlet ist Teil der [AEMFormsDocumentServices.core-1.0-SNAPSHOT Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)).
 
 ```java
 package com.aemformssamples.documentservices.core.servlets;
@@ -191,13 +195,16 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 Im Beispielcode ist der Vorlagenname (f8918-r14e_redo-barcode_3 2.xdp) fest codiert. Sie können den Vorlagennamen einfach an das Servlet übergeben, damit dieser Code für alle Vorlagen verwendet werden kann.
 
 
+## Bereitstellen des Beispiels auf Ihrem Server
+
 Führen Sie die folgenden Schritte aus, um dies auf Ihrem lokalen Server zu testen:
+
 1. [Herunterladen und Installieren des DevelopingWithServiceUser-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. Fügen Sie den folgenden Eintrag im Apache Sling Service User Mapper Service DevelopingWithServiceUser.core:getformsresourceresolver=fd-service hinzu.
 1. [Herunterladen und Installieren des benutzerdefinierten Document Services-Bundles](/hep/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). Dies verfügt über das Servlet, um die Daten mit der XDP-Vorlage zusammenzuführen und die PDF-Datei zurückzustreamen.
 1. [Client-Bibliothek importieren](assets/irs.zip)
 1. [Importieren des adaptiven Formulars](assets/f8918complete.zip)
-! [Importieren der XDP-Vorlage und des Schemas](assets/xdp-template-and-xsd.zip)
+1. [Importieren der XDP-Vorlage und des Schemas](assets/xdp-template-and-xsd.zip)
 1. [Vorschau des adaptiven Formulars](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. Füllen Sie einige Formularfelder aus.
 1. Klicken Sie auf PDF herunterladen , um die PDF abzurufen.
