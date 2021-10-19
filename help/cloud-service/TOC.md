@@ -4,9 +4,9 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: 5452ab85523fc10d0aaa55e95d42c37ec33fd2ed
+source-git-commit: bec04e6db13b80a8b5c4caa91acb8f2e684e70e9
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '567'
 ht-degree: 32%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 32%
    + [Entwicklung](./introduction/evolution.md)
    + [Architektur](./introduction/architecture.md)
    + [Cloud Manager ](./introduction/cloud-manager.md)
-+ Zugrunde liegende Technologie {#underlying-technology}
++ Basistechnologie {#underlying-technology}
    + [AEM-Architektur](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
    + [Java Content Repository](./underlying-technology/introduction-jcr.md)
@@ -59,7 +59,7 @@ ht-degree: 32%
       + [Dispatcher-Konfigurationsmigration](./developing/basics/dispatcher-configuration.md)
    + AEM-Projekte{#aem-projects}
       + [AEM Maven-Projekt](./developing/projects/maven-project-structure.md)
-   + OSGi Services{#osgi-services}
+   + OSGi-Dienste{#osgi-services}
       + [Grundlagen zum OSGi-Dienst](./developing/osgi-services/basics.md)
       + [Lebenszyklus von OSGi-Komponenten](./developing/osgi-services/lifecycle.md)
       + [Grundlagen zu OSGi-Konfigurationen](./developing/osgi-services/configurations.md)
@@ -67,7 +67,7 @@ ht-degree: 32%
    + Erweitert{#advanced}
       + [Service-Benutzer](./developing/advanced/service-users.md)
    + [AEM SDK-API-JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
-+ Debugging AEM{#debugging}
++ Debugging-AEM{#debugging}
    + Debugging des AEM SDK{#debugging-aem-sdk}
       + [Übersicht](./debugging/aem-sdk-local-quickstart/overview.md)
       + [Protokolle](./debugging/aem-sdk-local-quickstart/logs.md)
@@ -151,7 +151,7 @@ ht-degree: 32%
       + [Abfragesendungen](./forms/forms-cs-azure-portal/query-submitted-data.md)
 
 
-      + Erstellen eines Überprüfungs-Workflows{#create-aem-workflow}
+      + Arbeitsablauf für die Überprüfung erstellen{#create-aem-workflow}
          + [Workflow-Modell erstellen](./forms/create-aem-workflow/create-workflow.md)
          + [Trigger-Workflow](./forms/create-aem-workflow/configure-af.md)
       + Adobe Sign mit AEM Forms{#forms-and-sign}
@@ -160,7 +160,7 @@ ht-degree: 32%
          + [Cloud-Konfiguration für Adobe Sign](./forms/forms-and-sign/create-adobe-sign-cloud-configuration.md)
          + [Adaptives Formular erstellen](./forms/forms-and-sign/create-adaptive-form.md)
          + [Konfigurieren für Ausfüllen und Signieren](./forms/forms-and-sign/configure-form-fill-and-sign.md)
-      + Integrieren mit Salesforce{#integrate-with-salesforce}
+      + Integration mit Salesforce{#integrate-with-salesforce}
          + [Einführung](./forms/integrate-with-salesforce/introduction.md)
          + [Erstellen einer verbundenen App](./forms/integrate-with-salesforce/create-connected-app.md)
          + [Swagger-Datei erstellen](./forms/integrate-with-salesforce/describe-rest-api.md)
@@ -168,7 +168,7 @@ ht-degree: 32%
          + [Erstellen des Formulardatenmodells](./forms/integrate-with-salesforce/create-form-data-model.md)
          + [Testformularübermittlung](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
          + [Test-Klick-Ereignis](./forms/integrate-with-salesforce/create-lead-click-event.md)
-+ asset compute Extensibility{#asset-compute}
++ asset compute-Erweiterbarkeit{#asset-compute}
    + [Übersicht](./asset-compute/overview.md)
    + Setup{#set-up}
       + [Konto- und Dienstbereitstellung](./asset-compute/set-up/accounts-and-services.md)
@@ -183,12 +183,13 @@ ht-degree: 32%
    + Testen und Debuggen{#test-debug}
       + [Worker testen](./asset-compute/test-debug/test.md)
       + [Debuggen eines Sekundärs](./asset-compute/test-debug/debug.md)
-   + Bereitstellen von{#deploy}
+   + Implementieren von{#deploy}
       + [Bereitstellen in Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
       + [Integrieren mit AEM](./asset-compute/deploy/processing-profiles.md)
    + Erweitert{#advanced}
       + [Metadatenarbeiter](./asset-compute/advanced/metadata.md)
    + [Fehlerbehebung](./asset-compute/troubleshooting.md)
++ [AEM Expertenreihe](./aem-experts-series.md)
 + Mehrstufige Tutorials{#multi-step-tutorials}
    + [AEM Sites-Entwicklung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de)
