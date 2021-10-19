@@ -3,10 +3,10 @@ user-guide-title: AEM Sites-Videos und -Tutorials
 user-guide-description: Eine Sammlung von Videos und Tutorials für Adobe Experience Manager Sites.
 breadcrumb-title: AEM Sites-Tutorials
 feature-set: Experience Manager, Experience Manager Sites
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+source-git-commit: 5bdff2eafaa28aff722b12607b1278539072be62
 workflow-type: tm+mt
-source-wordcount: '439'
-ht-degree: 29%
+source-wordcount: '441'
+ht-degree: 30%
 
 ---
 
@@ -64,8 +64,10 @@ ht-degree: 29%
    + [Einrichten von Experience Fragments und Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [Verwenden von Experience Fragments mit Adobe Target](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [Einrichten von ContextHub](personalization/context-hub-technical-video-setup.md)
++ SEO {#seo}
+   + [Sitemaps](./seo/sitemaps.md)
 + Einzelseiten-Webanwendungen {#spa-editor}
-   + [Verwenden des SPA-Editors](spa-editor/spa-editor-framework-feature-video-use.md)
+   + [Verwenden des SPA Editors](spa-editor/spa-editor-framework-feature-video-use.md)
    + [Tutorial &quot;Hello World&quot;](spa-editor/spa-editor-helloworld-tutorial-use.md)
    + [Erste Schritte mit AEM SPA Editor und React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
    + [Erste Schritte mit AEM SPA Editor und Angular](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/angular/overview.html)
