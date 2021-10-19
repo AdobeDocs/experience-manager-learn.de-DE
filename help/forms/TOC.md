@@ -5,9 +5,9 @@ user-guide-title: AEM Forms-Videos und -Tutorials
 user-guide-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler.
 breadcrumb-title: AEM Forms-Tutorials
 index: y
-source-git-commit: e01d93591d1c00b2abec3430fdfa695b32165e54
+source-git-commit: 72a9edb3edc73cf14f13bb53355a37e707ed4c79
 workflow-type: tm+mt
-source-wordcount: '1601'
+source-wordcount: '1607'
 ht-degree: 4%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 4%
    + [Tabelle zum Einkommensbereich hinzufügen](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
    + [Konfigurieren des Asset-Bedienfelds](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [Verwenden benutzerdefinierter Funktionen und des Code-Editors](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
-+ Umgang mit Formularübermittlungen {#handling-af-form-submissions}
++ Handhabung von Formularübermittlungen {#handling-af-form-submissions}
    + [Erstellen eines Überprüfungs-Workflows](handling-form-submissions/creating-a-review-workflow.md)
    + [Workflow &quot;Adaptives Formular für Trigger konfigurieren&quot;](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [Anzeigen der Dankeseite](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
@@ -86,7 +86,7 @@ ht-degree: 4%
    + [Erstellen wiederverwendbarer Workflow-Modelle](adaptive-forms/re-usable-aem-forms-workflow-models-article.md)
    + [Workflow für benutzerdefinierte Prozessschritte AEM](adaptive-forms/custom-process-step-aem-workflow.md)
    + [Datenquellenkonfiguration ändern](adaptive-forms/modify-data-source-configuration-settings-article.md)
-   + [HTML5-Forms vorfüllen](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
+   + [Vorfüllen von HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Formulardatenmodell mit Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Dynamisches Hinzufügen von Elementen zur Auswahlkomponente](adaptive-forms/choice-group-items-adding-dynamically-article.md)
 + Vorausfüllen des adaptiven Formulars mithilfe des Formulardatenmodells{#prefill-fdm-db}
@@ -95,16 +95,16 @@ ht-degree: 4%
    + [Konfigurieren des Formulardatenmodells](prefill-fdm-db/configuring-form-data-model.md)
    + [Anforderungsparameter abrufen](prefill-fdm-db/get-request-parameter.md)
    + [Adaptives Formular erstellen](prefill-fdm-db/create-adaptive-form.md)
-+ Anpassen des Posteingangs{#inbox-customization}
++ Posteingang anpassen{#inbox-customization}
    + [Einführung](inbox-customization/introduction.md)
    + [Benutzerdefinierte Spalte hinzufügen](inbox-customization/add-married-column.md)
    + [Verwenden einer sightly-Vorlage](inbox-customization/use-sightly-template.md)
-+ E-Mail-Formularanhänge{#zipping-form-attachments}
++ E-Mail-Formularanlagen{#zipping-form-attachments}
    + [Einführung](zipping-form-attachments/introduction.md)
    + [ZIP-Formularanhänge](zipping-form-attachments/custom-process-step.md)
    + [E-Mail-Formularanhänge](zipping-form-attachments/populating-list-of-documents.md)
    + [Testen der Lösung](zipping-form-attachments/test.md)
-+ Speichern und Abrufen von adaptiven Formularen{#store-and-retrieve-af-with-2fa}
++ Speichern und Abrufen adaptiver Formulare{#store-and-retrieve-af-with-2fa}
    + [Einführung](store-and-retrieve-af-with-2fa/introduction.md)
    + [Datenquelle konfigurieren](store-and-retrieve-af-with-2fa/configure-data-source.md)
    + [Formularanlagen speichern](store-and-retrieve-af-with-2fa/store-form-attachments.md)
@@ -131,7 +131,7 @@ ht-degree: 4%
    + [Adaptives Formular für einen einzelnen Unterzeichner konfigurieren](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
    + [Adaptives Formular für zwei Unterzeichner konfigurieren](aem-forms-and-adobe-sign/configure-adaptive-form-for-two-signers.md)
    + [Automated forms conversion Service konfigurieren](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
-   + [Konvertieren eines PDF-Formulars in ein adaptives Formular](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
+   + [PDF-Formular in adaptives Formular konvertieren](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [Konvertierte adaptive Formulare konfigurieren](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Verwenden von XDP-Vorlagen mit Adobe Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
 + Mehrere Forms signieren{#sign-multiple-documents}
@@ -165,8 +165,8 @@ ht-degree: 4%
 + Auslösen AEM Workflows aus der Übermittlung mobiler Formulare{#offline-mobile-form-submission}
    + [Einführung](offline-mobile-form-submission/introduction.md)
    + [Benutzerdefiniertes Profil](offline-mobile-form-submission/part-one.md)
-   + [Verarbeiten von PDF-Übermittlungen](offline-mobile-form-submission/part-two.md)
-   + [Workflow zum Überprüfen der PDF](offline-mobile-form-submission/part-three.md)
+   + [PDF-Übermittlung handhaben](offline-mobile-form-submission/part-two.md)
+   + [Workflow zur Überprüfung der PDF](offline-mobile-form-submission/part-three.md)
    + [Auf Ihrem System bereitstellen](offline-mobile-form-submission/part-four.md)
 + Abfrage gesendeter Daten{#querying-submitted-data}
    + [Einführung](querying-submitted-data/introduction.md)
@@ -198,11 +198,12 @@ ht-degree: 4%
    + [Verwenden des PDFG-Dienstes in AEM Forms](document-services/using-pdfg-in-aem-forms.md)
    + [Verwenden von Output und Forms Service in AEM Forms](document-services/output-and-forms-services-article-develop.md)
    + [Erstellen mehrerer PDFs aus einer Datendatei](document-services/generate-multi-record-pdf.md)
-   + [Generieren von PDF-Dateien bei der Übermittlung mobiler Formulare](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [PDF bei Übermittlung mobiler Formulare generieren](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [Interaktive PDF aus Mobile Form generieren](document-services/render-interactive-form-using-api.md)
+   + [Interaktives DoR aus adaptivem Formular generieren](document-services/generate-interactive-dor.md)
    + [Reader Extensions-Berechtigungen konfigurieren](document-services/configuring-reader-extension-osgi.md)
    + [Verwendungsrechte auf PDF bei XDP-Wiedergabe anwenden](document-services/rendering-and-reader-extending-xdp-templates-article.md)
-   + [Verwendungsrechte auf hochgeladene PDF-Dateien anwenden](document-services/apply-reader-extension-rights-to-pdf.md)
+   + [Nutzungsrechte auf hochgeladene PDF anwenden](document-services/apply-reader-extension-rights-to-pdf.md)
    + [Dokumente zertifizieren](document-services/certifying-documents-aem-forms-tutorial.md)
    + [Zusammenführen von Formularanlagen](document-services/assemble-form-attachments.md)
    + [Nützliche Dienstprogrammdienste](document-services/useful-utility-services.md)
@@ -302,7 +303,7 @@ ht-degree: 4%
    + [Allgemein: Erfassen von Thread-Sicherheitskopien einer JVM auf einem Unix-Server](troubleshooting/how-to-capture-thread-dumps-of-a-jvm-on-a-unix-server.md)
    + [Allgemein: Erfassen von Thread-Sicherheitskopien einer JVM auf einem Windows-Server](troubleshooting/how-to-capture-thread-dumps-of-a-jvm-on-a-windows-server.md)
    + [Allgemein: Erstellen eines selbstsignierten Zertifikats](troubleshooting/how-to-generate-a-self-signed-certificate.md)
-   + [Allgemein: Webdienst-Aufruf aus HTML5-Formular durchführen](troubleshooting/how-to-make-web-service-call-from-html5-form.md)
+   + [Allgemein: Webdienstaufruf über das HTML5-Formular durchführen](troubleshooting/how-to-make-web-service-call-from-html5-form.md)
    + [Allgemein: Schritte zum Aktivieren der Debug-Protokollierung für alle Klassen in AEM Forms OSGI](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-aem-forms-osgi.md)
    + [Allgemein: Schritte zum Aktivieren der Debug-Protokollierung für alle Klassen in JBOSS Application Server](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-jboss-application-server.md)
    + [Allgemein: Schritte zum Aktivieren der Debug-Protokollierung für alle Klassen in Websphere Application Server](troubleshooting/steps-to-enable-debug-logging-for-any-classes-in-websphere-application-server.md)
