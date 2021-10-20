@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 kt: 9226
-source-git-commit: 2ed78bb8b122acbe69e98d63caee1115615d568f
+source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -201,10 +201,12 @@ Führen Sie die folgenden Schritte aus, um dies auf Ihrem lokalen Server zu test
 
 1. [Herunterladen und Installieren des DevelopingWithServiceUser-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. Fügen Sie den folgenden Eintrag im Apache Sling Service User Mapper Service DevelopingWithServiceUser.core:getformsresourceresolver=fd-service hinzu.
-1. [Herunterladen und Installieren des benutzerdefinierten Document Services-Bundles](/hep/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). Dies verfügt über das Servlet, um die Daten mit der XDP-Vorlage zusammenzuführen und die PDF-Datei zurückzustreamen.
+1. [Herunterladen und Installieren des benutzerdefinierten Document Services-Bundles](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). Dies verfügt über das Servlet, um die Daten mit der XDP-Vorlage zusammenzuführen und die PDF-Datei zurückzustreamen.
 1. [Client-Bibliothek importieren](assets/irs.zip)
 1. [Importieren des adaptiven Formulars](assets/f8918complete.zip)
 1. [Importieren der XDP-Vorlage und des Schemas](assets/xdp-template-and-xsd.zip)
 1. [Vorschau des adaptiven Formulars](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. Füllen Sie einige Formularfelder aus.
-1. Klicken Sie auf PDF herunterladen , um die PDF abzurufen.
+1. Klicken Sie auf PDF herunterladen , um die PDF zu erhalten. Möglicherweise müssen Sie einige Sekunden warten, bis der PDF heruntergeladen wird
+
+
