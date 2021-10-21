@@ -8,18 +8,22 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 8844
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '504'
 ht-degree: 3%
 
 ---
 
 # Installieren von Cygwin
 
+
+Cygwin ist eine POSIX-kompatible Programmierungs- und Laufzeitumgebung, die nativ unter Microsoft Windows ausgeführt wird.
 Installieren [Cygwin](https://www.cygwin.com/). Ich habe unter C:\cygwin64 folder installiert.
->[Hinweis]
+>[!NOTE]
 > Stellen Sie sicher, dass Sie die Pakete zip, unzip, curl, rsync mit Ihrer Cygwin-Installation installieren.
+
+Erstellen Sie einen Ordner mit dem Namen adoberepo unter c:\cloudmanager.
 
 [Installieren des Repo-Tools].(https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo).Installing Das Repo-Tool ist nichts anderes als das Kopieren der Repo-Datei und das Platzieren in Ihrer c:\cloudmanger\adoberepo folder.
 
@@ -27,7 +31,12 @@ Fügen Sie der Umgebungsvariablen &quot;Path&quot;Folgendes hinzu: C:\cygwin64\b
 
 ## Externe Tools einrichten
 
-Starten Sie die IntelliJ-Taste Strg+Alt+S-Tasten, um das Einstellungsfenster zu starten Wählen Sie Tools->Externe Tools. Klicken Sie dann auf das Plussymbol (+) und geben Sie Folgendes ein, wie im Screenshot gezeigt. Stellen Sie sicher, dass Sie eine Gruppe namens Repo erstellen, indem Sie im Dropdown-Feld Gruppe &quot;Repo&quot;eingeben und alle von Ihnen erstellten Befehle zum **repo** Gruppe
+* Starten von IntelliJ
+* Drücken Sie Strg+Alt+S Tasten, um das Einstellungsfenster zu starten.
+* Wählen Sie Tools > Externe Tools aus, klicken Sie auf das Pluszeichen (+) und geben Sie wie im Screenshot gezeigt Folgendes ein.
+   ![rep](assets/repo.png)
+* Stellen Sie sicher, dass Sie eine Gruppe mit dem Namen Repo erstellen, indem Sie im Dropdown-Feld Gruppe &quot;repo&quot;eingeben und alle von Ihnen erstellten Befehle zum **repo** Gruppe
+
 
 **Put-Befehl**
 **Programm**: C:\cygwin64\bin\bash

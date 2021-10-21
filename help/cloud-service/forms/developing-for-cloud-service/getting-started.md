@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 8842
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '231'
 ht-degree: 2%
 
 ---
@@ -20,8 +20,8 @@ ht-degree: 2%
 
 Dieses Tutorial führt Sie durch die Schritte, die zum Erstellen eines AEM Forms-Projekts und zum Synchronisieren des AEM Forms-Projekts mit Ihrer lokalen AEM mithilfe des IntelliJ- und Repo-Tools erforderlich sind. Außerdem erfahren Sie, wie Sie Ihr Projekt zum lokalen Git-Repository hinzufügen und das lokale Git-Repository in das Cloud Manager-Repository übertragen.
 
-Erstellen Sie die folgende Ordnerstruktur auf Ihrem c-Laufwerk
-**c:\cloudmanager\adoberepo**
+
+
 
 Dieses Tutorial wird sich künftig auf diese Ordnerstruktur beziehen.
 
@@ -32,9 +32,9 @@ Dieses Tutorial wird sich künftig auf diese Ordnerstruktur beziehen.
 
 * Erstellen Sie einen Ordner mit dem Namen **cloudmanager**(Sie können ihm einen beliebigen Namen geben) in Ihrem c-Laufwerk
 * Öffnen Sie das Eingabeaufforderungsfenster und navigieren Sie zu **c:\cloudmanager**
-* Kopieren Sie den Inhalt der Textdatei (assets/creating-maven-project.txt) und fügen Sie ihn in das Eingabeaufforderungsfenster ein. Möglicherweise müssen Sie die DarchetypeVersion=30 je nach [neueste Version](https://github.com/adobe/aem-project-archetype/releases). Die neueste Version war 30 zum Zeitpunkt des Schreibens dieses Artikels.
+* Kopieren Sie den Inhalt der [Textdatei](assets/creating-maven-project.txt) in Ihrem Eingabeaufforderungsfenster angezeigt. Möglicherweise müssen Sie die DarchetypeVersion=30 je nach [neueste Version](https://github.com/adobe/aem-project-archetype/releases). Die neueste Version war 30 zum Zeitpunkt des Schreibens dieses Artikels.
+* Führen Sie den Befehl aus, indem Sie die Eingabetaste drücken. Wenn alles ordnungsgemäß funktioniert, sollte die Build-Erfolgsmeldung angezeigt werden.
 
-* Führen Sie den Befehl aus, indem Sie die Eingabetaste drücken.  Wenn alles ordnungsgemäß funktioniert, sollte die Build-Erfolgsmeldung angezeigt werden.
 
 
 

@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 9006
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -42,10 +42,11 @@ Fügen Sie den entsprechenden Eintrag in die Datei &quot;filter.xml&quot;des ui.
 <filter root="/content/dam/formsanddocuments-fdm/registrations" mode="replace"/>
 ```
 
-Wenn Sie jetzt Ihr Projekt erstellen und bereitstellen, ist für das Projekt das Formulardatenmodell basierend auf der Cloud Services-Konfiguration in Ihrer Cloud-Instanz verfügbar
 
->!![NOTE]
-Wenn Sie diese Cloud Services-Konfiguration in Ihre Cloud-Instanz übertragen, müssen Sie den Azure-Schlüssel mithilfe der AEM-Benutzeroberfläche manuell aktualisieren. Alle verschlüsselten Werte müssen in den Cloud-Instanzen über die Benutzeroberfläche aktualisiert werden.
+>[!NOTE]
+
+>Wenn Sie jetzt Ihr Projekt erstellen und bereitstellen, ist für das Projekt das Formulardatenmodell basierend auf der Cloud Services-Konfiguration in Ihrer Cloud-Instanz verfügbar
+
 
 
 

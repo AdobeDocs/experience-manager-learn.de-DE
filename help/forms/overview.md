@@ -1,20 +1,20 @@
 ---
 title: Tutorials und Videos zu AEM Forms
-seo-title: Tutorials und Videos zu AEM Forms
+seo-title: AEM Forms Tutorials and Videos
 description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler
-seo-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler
-sub-product: Formulare
-topic: Entwicklung
+seo-description: Collection of AEM Forms resources for beginners and experienced AEM Forms developers
+sub-product: forms
+topic: Development
 role: Developer
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
+source-git-commit: d38da94bd4164163a16899b565c90b159194580a
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 31%
+source-wordcount: '500'
+ht-degree: 22%
 
 ---
 
-
-# Überblick {#overview}
+# Übersicht {#overview}
 
 Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie komplexe digitale Formulare erstellen, verwalten, veröffentlichen und aktualisieren und dabei in Back-End-Prozesse, Geschäftsregeln und Daten integrieren können. Dieses Benutzerhandbuch enthält Videos und Tutorials zu den zahlreichen Funktionen und Features von AEM Forms
 
@@ -22,7 +22,7 @@ Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie
 
 * **[Umgang mit Fehlermeldungen im Schritt &quot;Formulardatenmodelldienst aufrufen&quot;](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
 
-   *Eine Variable in einem Workflow-Modell ist eine Methode, einen Wert basierend auf seinem Datentyp zu speichern.*
+   *Eine Variable in einem Workflow-Modell bietet die Möglichkeit, einen Wert basierend auf seinem Datentyp zu speichern*
 
 * **[Diagramme mit mehreren Reihen in Dokumenten zur interaktiven Kommunikation (Video)](./interactive-communications/multiseriescharts.md)**
 
@@ -59,7 +59,7 @@ Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie
     </a>
     </div>
     <p>
-    <em>Interaktive Kommunikation zentralisiert und verwaltet die Erstellung, Zusammenstellung und Bereitstellung sicherer, personalisierter und interaktiver Schriftstücke, wie z. B. Geschäftskorrespondenz, Dokumente, Kontoauszüge, Hinweise zu Vorteilen, Marketing-E-Mails, Rechnungen und Willkommenskits.  </em>
+    <em>Interaktive Kommunikation zentralisiert und verwaltet die Erstellung, Zusammenstellung und Bereitstellung sicherer, personalisierter und interaktiver Schriftstücke, wie z. B. Geschäftskorrespondenz, Dokumente, Kontoauszüge, Hinweise zu Vorteilen, Marketing-E-Mails, Rechnungen und Willkommenskits. </em>
     <p>
   </td>
   <td>
@@ -78,9 +78,109 @@ Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie
 </tr>
 </table>
 
+>[!TIP]
+>
+>Diese Beispielsammlung veranschaulicht die verschiedenen Funktionen von AEM Forms. .
+
+
+## Beispiele für adaptive Formulare
+
+<table>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de">
+      <img alt= "Captch in AEM Forms" src="./assets/captcha1.png" />
+    </a>
+    <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/registerfornewsletter.html">
+    <strong>Google Captcha im adaptiven Formular</strong>
+    </a>
+    </div>
+    <p>
+    <em> Unterscheidung zwischen menschlichem und automatischem Zugriff auf Formulare</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
+    <img alt="Vorschau von Formulardaten" src="./assets/preview.png" />
+    </a>
+    <div>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
+    <strong>Formulardaten überprüfen</strong>
+    </a>
+    </div>
+    <p>
+    <em>Zeigen Sie eine Vorschau der Formulardaten an, bevor Sie das Formular senden.</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
+      <img alt=" Inline-Bild" src="./assets/preview.png" />
+    </a>
+     <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
+        <strong>Inline-Bild anzeigen</strong>
+      </a>
+    </div>
+    <p>
+    <em>Zeigen Sie das Bild an, das dem Formular hinzugefügt wurde.</em>
+    <p>
+  </td>
+</tr>
+</table>
+
+## Beispiele für adaptive Formulare und Signaturen
+
+<table>
+<tr>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
+      <img alt="Mietvertrag" src="./assets/rental-agreement.png" />
+    </a>
+    <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
+    <strong>Musterformular für einen Mietvertrag</strong>
+    </a>
+    </div>
+    <p>
+    <em>Mietvertrag zwischen Mieter und Vermieter, der mit AEM Forms und Adobe Sign ausgefüllt und unterzeichnet wurde</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
+    <img alt="NDA-Abkommen" src="./assets/nda.png" />
+    </a>
+    <div>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
+    <strong>Vereinbarung zur Nicht-Offenlegung generieren</strong>
+    </a>
+    </div>
+    <p>
+    <em>Dynamisches Erstellen eines NDA und Senden zum Signieren mit Adobe Sign</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
+      <img alt="Dokumentpaket unterschreiben" src="./assets/sign.png" />
+    </a>
+     <div>
+      <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
+        <strong>Signieren von Dokumentpaketen</strong>
+      </a>
+    </div>
+    <p>
+    <em>Nahtloses Signieren mehrerer Dokumente mit Forms und Adobe Sign</em>
+    <p>
+  </td>
+</tr>
+</table>
+
+
+
+
 ## Zusätzliche Ressourcen
 
-* [Experience League - AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
+* [Experience League - AEM](https://experienceleague.adobe.com/?lang=de#recommended/solutions/experience-manager)
 * [AEM Sites Authoring - Dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
 * [AEM Sites-Entwicklungsdokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
 * [Dokumentation zur Verwaltung von AEM Sites](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
