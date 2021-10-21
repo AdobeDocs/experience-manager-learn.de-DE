@@ -9,10 +9,10 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 9c1649247c65a1fa777b7574d1ab6ab49d0f722b
+source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 7%
+source-wordcount: '994'
+ht-degree: 5%
 
 ---
 
@@ -122,4 +122,106 @@ function useGraphQL(query, path) {
 
 Die App zeigt in erster Linie eine Liste von Abenteuern an und gibt Benutzern die Möglichkeit, auf die Details eines Abenteuers zu klicken.
 
-`Adventures.js` - Zeigt eine Kartenliste von Abenteuern an.
+`Adventures.js` - Zeigt eine Kartenliste von Abenteuern an.  Der anfängliche Status verwendet [Beständige Abfragen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/video-series/graphql-persisted-queries.html) , [vorverpackt](https://github.com/adobe/aem-guides-wknd/tree/master/ui.content/src/main/content/jcr_root/conf/wknd/settings/graphql/persistentQueries/adventures-all/_jcr_content) mit der WKND-Referenz-Website. Der Endpunkt lautet `/wknd/adventures-all`. Es gibt mehrere Schaltflächen, mit denen Benutzer anhand einer Aktivität mit Filterergebnissen experimentieren können:
+
+```javascript
+function filterQuery(activity) {
+  return `
+    {
+      adventureList (filter: {
+        adventureActivity: {
+          _expressions: [
+            {
+              value: "${activity}"
+            }
+          ]
+        }
+      }){
+        items {
+          _path
+        adventureTitle
+        adventurePrice
+        adventureTripLength
+        adventurePrimaryImage {
+          ... on ImageRef {
+            _path
+            mimeType
+            width
+            height
+          }
+        }
+      }
+    }
+  }
+  `;
+}
+```
+
+`AdventureDetail.js` - Zeigt eine Detailansicht des Abenteuers an. Führt eine Abfrage des GraphQL auf Grundlage des Pfads zum Abenteuer durch, der aus der URL geparst wird:
+
+```javascript
+//parse the content fragment from the url
+const contentFragmentPath = props.location.pathname.substring(props.match.url.length);
+...
+function adventureDetailQuery(_path) {
+  return `{
+    adventureByPath (_path: "${_path}") {
+      item {
+        _path
+          adventureTitle
+          adventureActivity
+          adventureType
+          adventurePrice
+          adventureTripLength
+          adventureGroupSize
+          adventureDifficulty
+          adventurePrice
+          adventurePrimaryImage {
+            ... on ImageRef {
+              _path
+              mimeType
+              width
+              height
+            }
+          }
+          adventureDescription {
+            html
+          }
+          adventureItinerary {
+            html
+          }
+      }
+    }
+  }
+  `;
+}
+```
+
+### Umgebungsvariablen
+
+Mehrere [Umgebungsvariablen](https://create-react-app.dev/docs/adding-custom-environment-variables) werden von diesem Projekt verwendet, um eine Verbindung zu einer AEM Umgebung herzustellen. Standard stellt eine Verbindung zu einer AEM Autorenumgebung her, die unter http://localhost:4502 ausgeführt wird. Wenn Sie dieses Verhalten ändern möchten, aktualisieren Sie das `.env.development` Datei dementsprechend:
+
+* `REACT_APP_HOST_URI=http://localhost:4502` - Festgelegt auf AEM Target-Host
+* `REACT_APP_GRAPHQL_ENDPOINT=/content/graphql/global/endpoint.json` - Festlegen des GraphQL-Endpunktpfads
+* `REACT_APP_AUTH_METHOD=` - Die bevorzugte Authentifizierungsmethode. Optional, standardmäßig wird keine Authentifizierung verwendet.
+   * `service-token` - Service-Token-Austausch für Cloud Env PROD verwenden
+   * `dev-token` - Verwenden des Dev-Tokens für die lokale Entwicklung mit Cloud Env
+   * `basic` - Benutzer/Übergabe für die lokale Entwicklung mit der lokalen Autorenumgebung verwenden
+   * leer lassen, keine Authentifizierungsmethode verwenden
+* `REACT_APP_AUTHORIZATION=admin:admin` - Legen Sie grundlegende Authentifizierungsberechtigungen fest, die beim Herstellen einer Verbindung zu einer AEM-Autorenumgebung verwendet werden (nur für die Entwicklung). Wenn Sie eine Verbindung zu einer Veröffentlichungsumgebung herstellen, ist diese Einstellung nicht erforderlich.
+* `REACT_APP_DEV_TOKEN` - Entwicklungstoken-Zeichenfolge. Um eine Verbindung zur Remote-Instanz herzustellen, können Sie neben der Option &quot;Grundlegende Authentifizierung (user:pass)&quot;die Option &quot;Bearer-Authentifizierung mit DEV-Token&quot;aus der Cloud-Konsole verwenden
+* `REACT_APP_SERVICE_TOKEN` - Pfad zur Dienst-Token-Datei. Um eine Verbindung zur Remote-Instanz herzustellen, kann die Authentifizierung auch über das Service-Token erfolgen (Download-Datei von der Cloud-Konsole).
+
+### Proxy-API-Anfragen
+
+Bei Verwendung des Webpack Development Servers (`npm start`) das Projekt auf eine [Proxy-Einrichtung](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) using `http-proxy-middleware`. Die Datei wird konfiguriert unter [src/setupProxy.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/setupProxy.js) und verwendet mehrere benutzerdefinierte Umgebungsvariablen, die auf `.env` und `.env.development`.
+
+Wenn Sie eine Verbindung zu einer AEM Autorenumgebung herstellen, muss die entsprechende Authentifizierungsmethode konfiguriert werden.
+
+### CORS - Cross Origin Resource Sharing
+
+Dieses Projekt beruht auf einer CORS-Konfiguration, die in der Ziel-AEM-Umgebung ausgeführt wird, und geht davon aus, dass die App im Entwicklungsmodus auf http://localhost:3000 ausgeführt wird. Die [COR-Konfiguration](https://github.com/adobe/aem-guides-wknd/blob/master/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json) ist Teil der [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd).
+
+![CORS-Konfiguration](assets/cross-origin-resource-sharing-configuration.png)
+
+*Beispiel-CORS-Konfiguration für die Autorenumgebung*
