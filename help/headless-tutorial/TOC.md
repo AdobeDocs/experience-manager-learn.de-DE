@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 9c1649247c65a1fa777b7574d1ab6ab49d0f722b
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 20%
+source-wordcount: '185'
+ht-degree: 21%
 
 ---
 
@@ -36,6 +36,9 @@ ht-degree: 20%
       + [5 - Abfrage über eine externe App](./graphql/multi-step/graphql-and-external-app.md)
       + [6 - Erweiterte Datenmodellierung mit Fragmentverweisen](./graphql/multi-step/fragment-references.md)
       + [7 - Produktionsbereitstellung](./graphql/multi-step/production-deployment.md)
+   + Beispiele {#example-apps}
+      + [React](./graphql/example-apps/react-app.md)
+      + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)
 + SPA Editor{#spa-editor}
    + React{#react}
       + [Übersicht](./spa-editor/react/overview.md)
@@ -53,7 +56,7 @@ ht-degree: 20%
       + [4 - Navigation und Routing](./spa-editor/angular/navigation-routing.md)
       + [5 - Benutzerdefinierte Komponente](./spa-editor/angular/custom-component.md)
       + [6 - Komponente erweitern](./spa-editor/angular/extend-component.md)
-   + Remote SPA{#remote-spa}
+   + Remote-SPA{#remote-spa}
       + [Übersicht](./spa-editor/remote-spa/overview.md)
       + [Schnelleinstellungen](./spa-editor/remote-spa/quick-setup.md)
       + [1 - AEM konfigurieren](./spa-editor/remote-spa/aem-configure.md)
