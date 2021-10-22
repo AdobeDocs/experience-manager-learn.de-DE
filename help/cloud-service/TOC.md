@@ -4,10 +4,10 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 31%
+source-wordcount: '599'
+ht-degree: 32%
 
 ---
 
@@ -130,8 +130,9 @@ ht-degree: 31%
       + [Setup-Git](./forms/developing-for-cloud-service/setup-git.md)
       + [IntelliJ mit AEM synchronisieren](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
       + [Formular erstellen](./forms/developing-for-cloud-service/deploy-your-first-form.md)
-      + [Push to Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [Cloud Services und FDM einschließen](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [Push to Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [In der Entwicklungsumgebung bereitstellen](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
    + Adaptives Formular erstellen{#create-first-af}
       + [Einführung](./forms/create-first-af/introduction.md)
       + [Thema erstellen](./forms/create-first-af/create-theme.md)
@@ -198,7 +199,7 @@ ht-degree: 31%
    + [Fehlerbehebung](./asset-compute/troubleshooting.md)
 + [AEM Expertenreihe](./aem-experts-series.md)
 + Mehrstufige Tutorials{#multi-step-tutorials}
-   + [AEM Sites-Entwicklung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)
+   + [AEM Sites-Entwicklung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de)
    + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de)
    + [SPA Editor (React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html)
    + [SPA Editor (Angular)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-angular-tutorial/overview.html)

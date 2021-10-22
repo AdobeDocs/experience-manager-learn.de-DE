@@ -8,9 +8,9 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 kt: 8851
-source-git-commit: d38da94bd4164163a16899b565c90b159194580a
+source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '139'
 ht-degree: 0%
 
 ---
@@ -35,10 +35,10 @@ git commit -m "My First AF"
 Dadurch werden die Dateien in die Übergeordnete Verzweigung unseres lokalen Git-Repositorys übertragen.
 
 ```
-git push -f bankingapp master:"My First AF"
+git push -f bankingapp master:"MyFirstAF"
 ```
 
-Im obigen Befehl schieben wir unsere Übergeordnete Verzweigung von unserem lokalen Git-Repository in die My First AF-Verzweigung des Cloud Manager-Repositorys, der durch den benutzerfreundlichen Namen der Bankingapp identifiziert wird
+Im obigen Befehl schieben wir unsere Übergeordnete Verzweigung von unserem lokalen Git-Repository in die MyFirstAF-Verzweigung des Cloud Manager-Repositorys, der durch den benutzerfreundlichen Namen der Bankingapp identifiziert wird.
 
 
 
