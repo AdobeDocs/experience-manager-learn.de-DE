@@ -9,7 +9,7 @@ level: Experienced
 kt: 8630
 thumbnail: 336958.jpeg
 exl-id: e9bd9035-1f2d-4a34-a581-9c1ec2c7bc04
-source-git-commit: 53a314c5cd9eaad5a26a0992c750c159f8e3697f
+source-git-commit: 1ddf6154d50a341d9a0fd4234392c37ced878a73
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 9%
@@ -24,7 +24,7 @@ Erfahren Sie mehr über die Modernisierung von Repositorys, veränderliche und u
 
 ## Repository Modernizer-Tool
 
-![Dispatcher Converter](./assets/repository-modernizer.png)
+![Repository Modernizer](./assets/repository-modernizer.png)
 
 Verwenden Sie als Teil der Refaktorierung Ihrer Codebasis die [Repository Modernizer-Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html?lang=de) , um eine 6.x-Codebasis in eine modernere Struktur umzustrukturieren.
 
