@@ -1,21 +1,19 @@
 ---
-title: AEM Sites-Tutorials
-seo-title: AEM Sites-Tutorials
-description: 'Eine Sammlung von Videos und Tutorials für Adobe Experience Manager Sites. '
-seo-description: Eine Sammlung von Videos und Tutorials für Adobe Experience Manager Sites
-sub-product: Sites, Content-Services
-topic: Content Management
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+title: AEM Sites-Videos und -Tutorials
+description: Eine Sammlung von Videos und Tutorials für Adobe Experience Manager Sites.
+sub-product: sites, content-services
+topic: Content Management
+exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '345'
 ht-degree: 28%
 
 ---
 
+# AEM Sites-Videos und -Tutorials {#overview}
 
-# Übersicht {#overview}
-
-Adobe Experience Manager (AEM) Sites ist eine führende Experience-Management-Plattform. Dieses Benutzerhandbuch enthält Videos und Tutorials zu den zahlreichen Funktionen und Features von AEM Sites.
+Adobe Experience Manager (AEM) Sites sind eine führende Experience-Management-Plattform. Dieses Benutzerhandbuch enthält Videos und Tutorials zu den zahlreichen Funktionen und Features von AEM Sites.
 
 ## Neue Funktionen
 
@@ -44,7 +42,7 @@ Adobe Experience Manager (AEM) Sites ist eine führende Experience-Management-Pl
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de">
       <img alt="Erste Schritte mit AEM Sites - WKND-Tutorial" src="./assets/aem-wknd-tutorial.png" />
     </a>
     <div>
@@ -57,7 +55,7 @@ Adobe Experience Manager (AEM) Sites ist eine führende Experience-Management-Pl
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=de">
     <img alt="Erste Schritte mit AEM Headless" src="./assets/aem-headless-tutorial.png" />
     </a>
     <div>
@@ -79,7 +77,7 @@ Adobe Experience Manager (AEM) Sites ist eine führende Experience-Management-Pl
       </a>
     </div>
     <p>
-    <em>Erste Schritte für Entwickler zur Integration von Einzelseiten-Apps (SPA) in AEM.</em>
+    <em>Erste Schritte für Entwickler zur Integration einer Einzelseiten-App (SPA) in AEM.</em>
     <p>
   </td>
 </tr>
@@ -88,10 +86,10 @@ Adobe Experience Manager (AEM) Sites ist eine führende Experience-Management-Pl
 ## Zusätzliche Ressourcen
 
 * [Experience League - AEM](https://experienceleague.adobe.com/?lang=de#recommended/solutions/experience-manager)
-* [AEM Sites Authoring - Dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/user-guide.html)
-* [AEM Sites-Entwicklungsdokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/user-guide.html)
-* [Dokumentation zur Verwaltung von AEM Sites](https://helpx.adobe.com/experience-manager/6-5/sites/administering/user-guide.html)
-* [Dokumentation zur AEM Sites-Bereitstellung](https://helpx.adobe.com/de/experience-manager/6-5/sites/deploying/user-guide.html)
+* [AEM Sites Authoring - Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Sites-Entwicklungsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
+* [Dokumentation zur Verwaltung von AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
+* [Dokumentation zur AEM Sites-Bereitstellung](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
 * [Tutorials zu AEM as a Cloud Service](/help/cloud-service/overview.md)
 * [AEM Assets-Tutorials](/help/assets/overview.md)
 * [AEM Forms-Tutorials](/help/forms/overview.md)

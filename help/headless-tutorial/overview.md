@@ -6,7 +6,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
+source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 7%
@@ -92,11 +92,11 @@ Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Ado
     </a>
     <div>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
-    <strong>Android-Beispiel</strong>
+    <strong>Android™-Beispiel</strong>
     </a>
     </div>
     <p>
-    <em>Eine Android-Anwendung, die von AEM GraphQL-APIs unterstützt wird.</em>
+    <em>Eine Android™-Anwendung, die von AEM GraphQL-APIs unterstützt wird.</em>
     </p>
   </td>
   <td>
@@ -185,7 +185,7 @@ Durchsuchen Sie die folgenden Tutorials basierend auf der verwendeten Technologi
     </a>
     </div>
     <p>
-    <em>Verwenden Sie Content Services und REST, um eine mobile Android-Anwendung zu betreiben.</em>
+    <em>Verwenden Sie Content Services und REST, um eine mobile Android™-Anwendung zu betreiben.</em>
     </p>
   </td>
   <td>
