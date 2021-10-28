@@ -8,7 +8,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-source-git-commit: 68c49f526146e2f2ba626dc2126fb96d4ae09854
+source-git-commit: d8738ef33940efc856e6fc00f6a57abb641598e5
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 32%
@@ -27,8 +27,9 @@ AEM Dynamic Media-Videoplayer, der bisher zur Unterstützung des adaptiven Video
 
 Die HLS-Browserunterstützung sieht wie folgt aus: Für nicht unterstützte Browser wechseln wir zurück zur progressiven Videobereitstellung
 
->!![NOTE]
-Dynamic Media Hybrid unterstützt Internet Explorer 11 ab Mai 2022 NICHT mehr.
+>[!NOTE]
+>
+> Dynamic Media Hybrid unterstützt Internet Explorer 11 ab Mai 2022 NICHT mehr.
 
 <table> 
  <thead> 
