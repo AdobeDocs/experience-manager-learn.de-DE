@@ -2,9 +2,9 @@
 user-guide-title: AEM Assets-Videos und -Tutorials
 user-guide-description: Eine Sammlung von Videos und Tutorials zu Adobe Experience Manager Assets.
 breadcrumb-title: AEM Assets-Tutorials
-feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
+feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 519047931bd4cbfb5dd2dd6f2b7b2871512992c5
+source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 33%
@@ -76,7 +76,7 @@ ht-degree: 33%
    + [Connected Assets](./sharing/connected-assets.md)
 
 
-+ Integration mit Creative Workflows{#creative-workflows}
++ Integration mit kreativen Workflows{#creative-workflows}
    + [AEM Desktop App](./creative-workflows/aem-desktop-app.md)
    + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
@@ -129,7 +129,7 @@ ht-degree: 33%
       + [Invalidierung des CDN-Cache](dynamic-media/tutorials/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
       + [Verwenden von Dynamic Media-Kernkomponenten](dynamic-media/tutorials/using-dm-components-on-site-page.md)
       + [Löschen der Dynamic Media-Konfiguration](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
-      + [Herunterladen von Assets in der Dynamic Media Classic-App](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
+      + [Herunterladen von Assets in der Dynamic Media Classic App](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS-APIs](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
 + Übersetzung {#translation}
