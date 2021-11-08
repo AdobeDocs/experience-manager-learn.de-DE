@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 9c1649247c65a1fa777b7574d1ab6ab49d0f722b
+source-git-commit: 846400cd3ac4eb1b04ece055dfcbbd677f11e88e
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1819'
 ht-degree: 3%
 
 ---
@@ -46,7 +46,7 @@ In diesem Tutorial wird die [AEM as a Cloud Service SDK](https://experienceleagu
 
 1. Navigieren Sie zum **[Software Distribution-Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as a Cloud Service** und laden Sie die neueste Version des **AEM SDK**.
 
-   ![Software-Verteilungs-Portal](assets/setup/software-distribution-portal-download.png)
+   ![Software Distribution-Portal](assets/setup/software-distribution-portal-download.png)
 
    >[!CAUTION]
    >
@@ -64,9 +64,9 @@ In diesem Tutorial wird die [AEM as a Cloud Service SDK](https://experienceleagu
    $ java -jar aem-author-p4502.jar
    ```
 
-1. Geben Sie ein Administratorkennwort als `admin`. Jedes Administratorkennwort ist akzeptabel. Es wird jedoch empfohlen, den Standard für die lokale Entwicklung zu verwenden, um eine Neukonfiguration zu vermeiden.
+1. Geben Sie ein Administratorkennwort als `admin`. Jedes Administratorkennwort ist akzeptabel. Es wird jedoch empfohlen, `admin` für die lokale Entwicklung, um die Notwendigkeit einer Neukonfiguration zu verringern.
 1. Nach einigen Minuten wird die Installation der AEM-Instanz abgeschlossen und ein neues Browser-Fenster sollte geöffnet werden unter [http://localhost:4502](http://localhost:4502).
-1. Anmelden mit dem Benutzernamen `admin` und Kennwort `admin`.
+1. Anmelden mit dem Benutzernamen `admin` und das während AEM ersten Starts ausgewählte Kennwort (normalerweise `admin`).
 
 ## Beispielinhalt und GraphQL-Endpunkte installieren {#wknd-site-content-endpoints}
 
