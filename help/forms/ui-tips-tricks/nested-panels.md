@@ -8,7 +8,7 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9335
-source-git-commit: 84a0c78f89f78e161b460574b5927fc4aba2fe3a
+source-git-commit: 20cae7a327131927f831ae9c49fb5eebfb00f5c4
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
@@ -27,6 +27,7 @@ Wenn Ihr Formular die Navigationsregisterkarten verlassen hat und eine der Regis
 ## Adaptives Formular erstellen
 
 Erstellen Sie ein adaptives Formular mit der folgenden Struktur. Das Stammbedienfeld enthält untergeordnete Bedienfelder, die links als Registerkarten angezeigt werden. Einige dieser &quot;**Tabs**&quot; zusätzliche untergeordnete Bedienfelder haben. Die Registerkarte &quot;Familie&quot;verfügt beispielsweise über zwei untergeordnete Bedienfelder namens &quot;Ehegatte und Kinder&quot;.
+
 Eine Symbolleiste wird auch unter dem FormContainer mit den Schaltflächen &quot;Vorschau&quot;und &quot;Weiter&quot;hinzugefügt
 
 ![toolbar-spacing](assets/multiple-panels.png)
@@ -61,4 +62,5 @@ Verwenden Sie den Stileditor, um den Titel der untergeordneten Registerkarten-Be
 >[!VIDEO](https://video.tv.adobe.com/v/338370?quality=9&learn=on)
 
 >[!NOTE]
-> Die in diesem Artikel beschriebene Funktion funktioniert auf der letzten Registerkarte nicht. Wenn beispielsweise die Registerkarte Adresse untergeordnete Bedienfelder enthält, funktioniert diese Funktion nicht.
+>
+>Die in diesem Artikel beschriebene Funktion funktioniert auf der letzten Registerkarte nicht. Wenn beispielsweise die Registerkarte Adresse untergeordnete Bedienfelder enthält, funktioniert diese Funktion nicht.
