@@ -8,7 +8,7 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9335
-source-git-commit: 3bbd3e51ced1d990532a2cb3e309bf944bab8434
+source-git-commit: 458f1c2df6472be2b4704bb68eafb92b58f48a97
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
@@ -61,10 +61,6 @@ Verwenden Sie den Stileditor, um den Titel der untergeordneten Registerkarten-Be
 
 >[!VIDEO](https://video.tv.adobe.com/v/338370?quality=9&learn=on)
 
-Die in diesem Artikel beschriebene Funktion funktioniert auf der letzten Registerkarte nicht. Wenn beispielsweise die Registerkarte Adresse untergeordnete Bedienfelder enthält, funktioniert diese Funktion nicht.
-
-<!--
 >[!NOTE]
 >
->The capability described in this article does not work in the last tab. For example if the Address tab had child panels this functionality would not work.
--->
+>Die in diesem Artikel beschriebene Funktion funktioniert auf der letzten Registerkarte nicht. Wenn beispielsweise die Registerkarte Adresse untergeordnete Bedienfelder enthält, funktioniert diese Funktion nicht.
