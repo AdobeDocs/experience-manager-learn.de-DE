@@ -1,28 +1,27 @@
 ---
-title: Generieren von PDF-Dateien aus der HTML5-Formularübermittlung
-description: Generieren von PDF-Dateien aus der Übermittlung von Mobile Forms
+title: PDF aus HTML5-Formularübermittlung generieren
+description: Generieren von PDF aus der Übermittlung von Mobile Forms
 feature: Mobile Forms
 version: 6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 91b4a134-44a7-474e-b769-fe45562105b2
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
 
+# PDF aus HTML5-Formularübermittlung generieren {#generate-pdf-from-htm-form-submission}
 
-# Generieren von PDF-Dateien aus der HTML5-Formularübermittlung {#generate-pdf-from-htm-form-submission}
+Dieser Artikel führt Sie durch die Schritte, die zum Generieren von PDF-Dateien aus einer HTML5 (auch Mobile Forms genannt)-Formularübermittlung erforderlich sind. In dieser Demo werden auch die Schritte erläutert, die zum Hinzufügen eines Bildes zum HTML5-Formular und zum Zusammenführen des Bildes in das endgültige PDF-Dokument erforderlich sind.
 
-Dieser Artikel führt Sie durch die Schritte, die zum Generieren von PDF-Dateien aus einer HTML5-Formularübermittlung (auch Mobile Forms genannt) erforderlich sind. In dieser Demo werden auch die Schritte erläutert, die zum Hinzufügen eines Bildes zum HTML5-Formular und zum Zusammenführen des Bildes in das endgültige PDF-Dokument erforderlich sind.
-
-Um eine Live-Demonstration dieser Funktion zu sehen, besuchen Sie den [Beispielserver](https://forms.enablementadobe.com/content/samples/samples.html?query=0) und suchen Sie nach &quot;Mobile Form To PDF&quot;.
 
 Gehen Sie wie folgt vor, um die übermittelten Daten mit der XDP-Vorlage zusammenzuführen
 
-Schreiben eines Servlets zur Verarbeitung der HTML5-Formularübermittlung
+Schreiben Sie ein Servlet, um die HTML5-Formularübermittlung zu handhaben
 
 * Innerhalb dieses Servlets speichern Sie die gesendeten Daten
 * Zusammenführen dieser Daten mit der xdp-Vorlage zum Generieren von PDF
@@ -78,7 +77,7 @@ $("#file1").click();
 });
 ```
 
-[Benutzerdefiniertes Profil](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). Die Verwendung eines benutzerdefinierten Profils erleichtert die Bearbeitung von HTML-DOM-Objekten des mobilen Formulars. Ein ausgeblendetes Dateielement wird der Datei &quot;HTML.jsp&quot;hinzugefügt. Wenn der Benutzer auf &quot;Foto hinzufügen&quot;klickt, wird das click -Ereignis des Dateielements Trigger. Dadurch kann der Benutzer das anzuhängende Foto durchsuchen und auswählen. Dann verwenden wir das JavaScript FileReader-Objekt, um die base64-kodierte Zeichenfolge des Bildes zu erhalten. Die base64-Bildzeichenfolge wird im Textfeld im Formular gespeichert. Wenn das Formular übermittelt wird, extrahieren wir diesen Wert und fügen ihn in das img -Element der XML ein. Diese XML wird dann verwendet, um mit der xdp zusammenzuführen und das endgültige PDF zu generieren.
+[Benutzerdefiniertes Profil](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). Die Verwendung eines benutzerdefinierten Profils erleichtert die Bearbeitung von HTML DOM-Objekten des mobilen Formulars. Ein ausgeblendetes Dateielement wird der HTML.jsp hinzugefügt. Wenn der Benutzer auf &quot;Foto hinzufügen&quot;klickt, wird das click -Ereignis des Dateielements Trigger. Dadurch kann der Benutzer das anzuhängende Foto durchsuchen und auswählen. Dann verwenden wir das JavaScript FileReader-Objekt, um die base64-kodierte Zeichenfolge des Bildes zu erhalten. Die base64-Bildzeichenfolge wird im Textfeld im Formular gespeichert. Wenn das Formular übermittelt wird, extrahieren wir diesen Wert und fügen ihn in das img -Element der XML ein. Diese XML wird dann verwendet, um mit der xdp zusammenzuführen und das endgültige PDF zu generieren.
 
 Das für diesen Artikel verwendete benutzerdefinierte Profil wurde Ihnen als Teil der Assets dieses Artikels zur Verfügung gestellt.
 
@@ -115,9 +114,8 @@ Gehen Sie wie folgt vor, um diese Funktion auf Ihrem eigenen Server zu testen:
 
 * [Laden Sie das mit diesem Artikel verknüpfte Paket herunter und installieren Sie es.](assets/pdf-from-mobile-form-submission.zip)
 
-* Vergewissern Sie sich, dass die Sende-URL und das HTML-Renderprofil korrekt eingestellt sind, indem Sie die Eigenschaftenseite von [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp) anzeigen.
+* Stellen Sie sicher, dass die Sende-URL und das HTML Render-Profil korrekt eingestellt sind, indem Sie die Eigenschaftenseite der  [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
 
 * [Anzeigen einer Vorschau der XDP als HTML](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 
-* Fügen Sie dem Formular ein Bild hinzu und senden Sie es. Sie sollten die PDF-Datei mit dem Bild zurückerhalten.
-
+* Fügen Sie dem Formular ein Bild hinzu und senden Sie es. Sie sollten PDF mit dem Bild zurückbekommen.

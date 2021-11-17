@@ -7,8 +7,8 @@ role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
 source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 32%
+source-wordcount: '516'
+ht-degree: 20%
 
 ---
 
@@ -76,6 +76,102 @@ Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie
 </tr>
 </table>
 
+>[!TIP]
+>
+>Diese Beispielsammlung veranschaulicht die verschiedenen Funktionen von AEM Forms.
+
+
+## Beispiele für adaptive Formulare
+
+<table>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de">
+      <img alt= "Captch in AEM Forms" src="./assets/captcha1.png" />
+    </a>
+    <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/registerfornewsletter.html">
+    <strong>Google Captcha im adaptiven Formular</strong>
+    </a>
+    </div>
+    <p>
+    <em> Unterscheidung zwischen menschlichem und automatischem Zugriff auf Formulare</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
+    <img alt="Vorschau von Formulardaten" src="./assets/preview.png" />
+    </a>
+    <div>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/summaryscreen/jcr:content?wcmmode=disabled">
+    <strong>Formulardaten überprüfen</strong>
+    </a>
+    </div>
+    <p>
+    <em>Zeigen Sie eine Vorschau der Formulardaten an, bevor Sie das Formular senden.</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
+      <img alt=" Inline-Bild" src="./assets/preview.png" />
+    </a>
+     <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/addinlineimage.html">
+        <strong>Inline-Bild anzeigen</strong>
+      </a>
+    </div>
+    <p>
+    <em>Zeigen Sie das Bild an, das dem Formular hinzugefügt wurde.</em>
+    <p>
+  </td>
+</tr>
+</table>
+
+## Beispiele für adaptive Formulare und Signaturen
+
+<table>
+<tr>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
+      <img alt="Mietvertrag" src="./assets/rental-agreement.png" />
+    </a>
+    <div>
+      <a href="https://forms.enablementadobe.com/content/forms/af/rentalagreement.html">
+    <strong>Musterformular für einen Mietvertrag</strong>
+    </a>
+    </div>
+    <p>
+    <em>Mietvertrag zwischen Mieter und Vermieter, der mit AEM Forms und Adobe Sign ausgefüllt und unterzeichnet wurde</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
+    <img alt="NDA-Abkommen" src="./assets/nda1.png" />
+    </a>
+    <div>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/ndawizard/jcr:content?wcmmode=disabled">
+    <strong>Vereinbarung zur Nicht-Offenlegung generieren</strong>
+    </a>
+    </div>
+    <p>
+    <em>Dynamisches Erstellen eines NDA und Senden zum Signieren mit Adobe Sign</em>
+    </p>
+  </td>
+  <td>
+    <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
+      <img alt="Dokumentpaket unterschreiben" src="./assets/sign.png" />
+    </a>
+     <div>
+      <a href="https://forms.enablementadobe.com/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled">
+        <strong>Signieren von Dokumentpaketen</strong>
+      </a>
+    </div>
+    <p>
+    <em>Nahtloses Signieren mehrerer Dokumente mit Forms und Adobe Sign</em>
+    <p>
+  </td>
+</tr>
+</table>
 
 
 

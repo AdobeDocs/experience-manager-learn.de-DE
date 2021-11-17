@@ -3,18 +3,18 @@ title: Barcode-Dienst mit adaptivem Forms
 description: Verwenden des Barcode-Dienstes, um den Barcode zu dekodieren und Formularfelder aus den extrahierten Daten auszufüllen.
 feature: Barcoded Forms
 version: 6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '385'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
 
-
-# Barcode-Dienst mit adaptivem Forms{#barcode-service-with-adaptive-forms}
+# Barcode Service With Adaptive Forms{#barcode-service-with-adaptive-forms}
 
 In diesem Artikel wird die Verwendung des Barcode-Dienstes zum Ausfüllen des adaptiven Formulars veranschaulicht. Der Anwendungsfall sieht folgendermaßen aus:
 
@@ -25,7 +25,7 @@ In diesem Artikel wird die Verwendung des Barcode-Dienstes zum Ausfüllen des ad
 
 Der folgende Code dekodiert den Barcode und füllt ein JSON-Objekt mit den dekodierten Werten. Das Servlet gibt dann das JSON-Objekt in seiner Antwort auf die aufrufende Anwendung zurück.
 
-Sie können diese Funktion live sehen. Besuchen Sie das Portal [samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) und suchen Sie nach der Demo des Barcode Service
+
 
 ```java
 public JSONObject extractBarCode(Document pdfDocument) {
@@ -95,7 +95,7 @@ public class DecodeBarCode extends SlingSafeMethodsServlet {
 }
 ```
 
-Der folgende Code ist Teil der Client-Bibliothek, auf die vom adaptiven Formular verwiesen wird. Wenn ein Benutzer die Anlage zum adaptiven Formular hinzufügt, wird dieser Code ausgelöst. Der Code führt einen GET-Aufruf an das Servlet durch, wobei der Pfad der Anlage im Anforderungsparameter übergeben wird. Die vom Servlet-Aufruf empfangenen Daten werden dann zum Ausfüllen des adaptiven Formulars verwendet.
+Der folgende Code ist Teil der Client-Bibliothek, auf die vom adaptiven Formular verwiesen wird. Wenn ein Benutzer die Anlage zum adaptiven Formular hinzufügt, wird dieser Code ausgelöst. Der Code führt einen GET-Aufruf an das Servlet durch, wobei der Pfad der Anlage im Anforderungsparameter übergeben wird. The data received from the servlet call is then used to populate the adaptive form.
 
 ```
 $(document).ready(function()
@@ -140,11 +140,10 @@ Zeile 23 - Rufen Sie die Methode &quot;DocumentServices extractBarCode&quot;auf,
 
 Führen Sie die folgenden Schritte aus, um dies auf Ihrem System auszuführen
 
-1. [Laden Sie die Datei &quot;BarcodeService.](assets/barcodeservice.zip) zip&quot;herunter und importieren Sie sie mithilfe des Paketmanagers in AEM.
+1. [Herunterladen von BarcodeService.zip](assets/barcodeservice.zip) und importieren Sie mit dem Package Manager in AEM
 1. [Herunterladen und Installieren des Custom Document Services Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [Herunterladen und Installieren des DevelopingWithServiceUser-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [Herunterladen des PDF-Musterformulars](assets/barcode.pdf)
-1. Zeigen Sie Ihren Browser auf das adaptive Beispielformular [a1/>](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
-1. Laden Sie die bereitgestellte Beispiel-PDF hoch
+1. [Herunterladen des PDF-Beispielformulars](assets/barcode.pdf)
+1. Point your browser to the [sample adaptive form](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
+1. Laden Sie die Beispieldatei-PDF hoch
 1. Sie sollten die Formulare sehen, die mit den Daten gefüllt sind
-

@@ -1,30 +1,28 @@
 ---
 title: Erstellen der ersten interaktiven Kommunikation für den Webkanal
-seo-title: Erstellen der ersten interaktiven Kommunikation für den Webkanal
+seo-title: Creating your first interactive communication for the web channel
 description: Interaktive Kommunikation ist neu in AEM Forms 6.4. Dieses Dokument führt Sie durch die Schritte, die zum Erstellen einer interaktiven Kommunikation für den Webkanal erforderlich sind.
-seo-description: Interaktive Kommunikation ist neu in AEM Forms 6.4. Dieses Dokument führt Sie durch die Schritte, die zum Erstellen einer interaktiven Kommunikation für den Webkanal erforderlich sind.
-feature: Interaktive Kommunikation
+seo-description: Interactive Communications is new to AEM Forms 6.4. This document will walk you through the steps needed to create an interactive communication for the web channel.
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 65b1af30-9e22-4df0-ab91-479d5406df61
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '157'
 ht-degree: 3%
 
 ---
 
-
 # Erstellen der ersten interaktiven Kommunikation für den Webkanal
 
 Interaktive Kommunikation ist neu in AEM Forms 6.4. Dieses Dokument führt Sie durch die Schritte, die zum Erstellen einer interaktiven Kommunikation für den Druckkanal erforderlich sind.
-
-Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) für einen Link zu einer Live-Demo dieser Funktion.
 
 ## Voraussetzungen {#prerequistes}
 
@@ -35,11 +33,7 @@ Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/con
 Nach Abschluss dieses Tutorials haben Sie Folgendes gelernt:
 
 * Datenquelle erstellen
-* Formulardatenmodell erstellen
+* Erstellen von Formulardatenmodellen
 * Erstellen von Dokumentfragmenten
 * Tabellen und Diagramme konfigurieren
 * Webkanaldokumente bereitstellen
-
-
-
-

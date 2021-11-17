@@ -6,25 +6,22 @@ version: 6.5
 topic: Development
 role: User
 level: Beginner
-source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
+exl-id: 8fbea634-7949-417f-a4d6-9e551fff63f3
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '489'
 ht-degree: 3%
 
 ---
-
-
 
 # Dynamisches Hinzufügen von Elementen zur Auswahlgruppen-Komponente
 
 AEM Forms 6.5 bietet die Möglichkeit, Elemente dynamisch zu einer Adaptive Forms-Auswahlgruppenkomponente hinzuzufügen, z. B. Kontrollkästchen, Optionsfelder und Bildliste.
 
-[Diese Funktion ist live auf dem Samples Server](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1) verfügbar. Suchen Sie nach der Karte Dynamische Checkbox-Elemente und klicken Sie auf &quot;Testen&quot;.
-
 
 Sie können Elemente je nach Anwendungsfall mithilfe des Visual Editor sowie des Code-Editors hinzufügen.
 
-**Verwenden des Visual Editors:** Sie können die Elemente der Auswahlgruppe aus den Ergebnissen eines Funktionsaufrufs oder Dienstaufrufs ausfüllen. Sie können beispielsweise die Elemente der Auswahlgruppe festlegen, indem Sie die Antwort eines REST-API-Aufrufs nutzen.
+**Verwenden des Visual Editor:** Sie können die Elemente der Auswahlgruppe aus den Ergebnissen eines Funktionsaufrufs oder Dienstaufrufs ausfüllen. Sie können beispielsweise die Elemente der Auswahlgruppe festlegen, indem Sie die Antwort eines REST-API-Aufrufs nutzen.
 
 Im folgenden Screenshot stellen wir die Optionen der Kreditlaufzeit(n) auf die Ergebnisse eines Dienstaufrufs namens getLoanPeriods ein.
 

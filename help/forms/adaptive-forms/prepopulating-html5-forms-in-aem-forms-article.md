@@ -1,22 +1,21 @@
 ---
-title: HTML5-Forms mit Datenattribut vorbefüllen.
+title: PrePopulate HTML5 Forms using data attribute.
 description: Füllen Sie HTML5-Formulare, indem Sie Daten aus der Backend-Quelle abrufen.
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.3,6.4,6.5.
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: ab0f5282-383b-4be6-9c57-cded6ab37528
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '471'
 ht-degree: 2%
 
 ---
 
+# PrePopulate HTML5 Forms using data attribute {#prepopulate-html-forms-using-data-attribute}
 
-# HTML5-Forms mit Datenattribut auffüllen {#prepopulate-html-forms-using-data-attribute}
-
-Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) für einen Link zu einer Live-Demo dieser Funktion.
 
 XDP-Vorlagen, die mit AEM Forms im HTML-Format wiedergegeben werden, werden als HTML5 oder Mobile Forms bezeichnet. Ein gängiger Anwendungsfall besteht darin, diese Formulare vorab auszufüllen, wenn sie wiedergegeben werden.
 
@@ -32,7 +31,7 @@ slingRequest.setAttribute(&quot;data&quot;, content);
 
 In diesem Beispiel legen wir das Datenattribut mit dem Inhalt fest. Der Inhalt stellt die Daten dar, mit denen Sie das Formular vorab ausfüllen möchten. Normalerweise würden Sie den &quot;Inhalt&quot;abrufen, indem Sie einen REST-Aufruf an einen internen Dienst durchführen.
 
-Dazu müssen Sie ein benutzerdefiniertes Profil erstellen. Die Details zum Erstellen eines benutzerdefinierten Profils werden in der [AEM Forms-Dokumentation hier](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html) erläutert.
+Dazu müssen Sie ein benutzerdefiniertes Profil erstellen. Die Details zur Erstellung eines benutzerdefinierten Profils werden in [Dokumentation zu AEM Forms](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html).
 
 Nachdem Sie Ihr benutzerdefiniertes Profil erstellt haben, erstellen Sie eine JSP-Datei, die die Daten abruft, indem Sie Aufrufe an Ihr Backend-System vornehmen. Nachdem die Daten abgerufen wurden, verwenden Sie slingRequest.setAttribute(&quot;data&quot;, content); zum Vorausfüllen des Formulars
 
@@ -43,8 +42,8 @@ Wenn die XDP gerendert wird, können Sie auch einige Parameter an die xdp überg
 Die JSP, die Sie schreiben, hat Zugriff auf den Parameter name über request.getParameter(&quot;name&quot;) . Anschließend können Sie den Wert dieses Parameters an Ihren Backend-Prozess übergeben, um die erforderlichen Daten abzurufen.
 Um diese Funktion auf Ihrem System verwenden zu können, führen Sie die folgenden Schritte aus:
 
-* [Laden Sie die Assets herunter und importieren Sie sie in AEM mit Package ](assets/prepopulatemobileform.zip)
-Manager. Das Paket installiert Folgendes
+* [Herunterladen und Importieren von Assets in AEM mit Package Manager](assets/prepopulatemobileform.zip)
+Das Paket installiert Folgendes
 
    * CustomProfile
    * Beispiel-XDP

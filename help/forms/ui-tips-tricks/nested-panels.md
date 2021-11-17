@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9335
-source-git-commit: 458f1c2df6472be2b4704bb68eafb92b58f48a97
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '247'
 ht-degree: 0%
 
 ---
@@ -18,11 +18,6 @@ ht-degree: 0%
 # Navigationsregisterkarten mit mehreren Bedienfeldern
 
 Wenn Ihr Formular die Navigationsregisterkarten verlassen hat und eine der Registerkarten mehrere Bedienfelder aufweist, können Sie den Titel der untergeordneten Bedienfelder ausblenden und dennoch zwischen den Registerkarten und den untergeordneten Bedienfeldern dieser Registerkarte navigieren
-
-[Diese Funktion ist in diesem Formular live](https://forms.enablementadobe.com/content/forms/af/testnav1.html)
-
-
-
 
 ## Adaptives Formular erstellen
 

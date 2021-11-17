@@ -1,30 +1,28 @@
 ---
 title: Erstellen der ersten interaktiven Kommunikation für den Druckkanal
-seo-title: Erstellen der ersten interaktiven Kommunikation für den Druckkanal
+seo-title: Creating your first interactive communication for the print channel
 description: Interaktive Kommunikation ist neu in AEM Forms 6.4. Dieses Dokument führt Sie durch die Schritte, die zum Erstellen einer interaktiven Kommunikation für den Druckkanal erforderlich sind.
-seo-description: Interaktive Kommunikation ist neu in AEM Forms 6.4. Dieses Dokument führt Sie durch die Schritte, die zum Erstellen einer interaktiven Kommunikation für den Druckkanal erforderlich sind.
-feature: Interaktive Kommunikation
+seo-description: Interactive Communications is new to AEM Forms 6.4. This document will walk you through the steps needed to create an interactive communication for the print channel.
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 1949aeff-ae56-4abd-8e63-23c2fb4859f2
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 3%
+source-wordcount: '167'
+ht-degree: 2%
 
 ---
-
 
 # Erstellen der ersten interaktiven Kommunikation für den Druckkanal
 
 Interaktive Kommunikation ist neu in AEM Forms 6.4. Dieses Dokument führt Sie durch die Schritte, die zum Erstellen einer interaktiven Kommunikation für den Druckkanal erforderlich sind.
-
-Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0) für einen Link zu einer Live-Demo dieser Funktion.
 
 ## Voraussetzungen {#prerequistes}
 
@@ -35,8 +33,7 @@ Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/con
 Nach Abschluss dieses Tutorials haben Sie Folgendes gelernt:
 
 * Datenquelle erstellen
-* Formulardatenmodell erstellen
+* Erstellen von Formulardatenmodellen
 * Erstellen von Dokumentfragmenten
 * Tabellen und Diagramme konfigurieren
 * Verwenden von überwachten Ordnern zum Generieren von Dokumenten im Batch-Modus
-

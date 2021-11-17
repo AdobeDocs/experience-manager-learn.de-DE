@@ -1,18 +1,18 @@
 ---
 title: Erstellen mehrerer PDFs aus einer Datendatei
 description: OutputService bietet eine Reihe von Methoden zum Erstellen von Dokumenten mit einem Formularentwurf und Daten zum Zusammenführen mit dem Formularentwurf. Erfahren Sie, wie Sie mehrere PDF-Dateien aus einer großen XML-Datei generieren, die mehrere einzelne Datensätze enthält.
-feature: Ausgabe-Service
+feature: Output Service
 version: 6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 58582acd-cabb-4e28-9fd3-598d3cbac43c
+source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 2%
+source-wordcount: '506'
+ht-degree: 1%
 
 ---
-
 
 # Generieren eines Satzes von PDF-Dokumenten aus einer XML-Datendatei
 
@@ -21,17 +21,14 @@ Im Folgenden finden Sie den Screenshot einer XML-Datei mit mehreren Datensätzen
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-Die Daten-XML enthält 2 Datensätze. Jeder Datensatz wird durch das Element form1 dargestellt. Diese XML-Datei wird an die OutputService-Methode [generatePDFOutputBatch-Methode](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) übergeben. Es wird eine Liste von PDF-Dokumenten (eines pro Datensatz) abgerufen.
-Die Signatur der generatePDFOutputBatch -Methode akzeptiert die folgenden Parameter
+Die Daten-XML enthält 2 Datensätze. Jeder Datensatz wird durch das Element form1 dargestellt. Diese XML-Datei wird an den OutputService übergeben. [generatePDFOutputBatch-Methode](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html) Wir erhalten eine Liste von PDF-Dokumenten (eines pro Datensatz) Die Signatur der generatePDFOutputBatch -Methode akzeptiert die folgenden Parameter
 
 * templates - Zuordnung, die die Vorlage enthält, durch einen Schlüssel identifiziert
 * data - Zuordnung mit XML-Datendokumenten, identifiziert durch Schlüssel
 * pdfOutputOptions - Optionen zum Konfigurieren der PDF-Generierung
 * batchOptions - Optionen zum Konfigurieren des Batches
 
->[!NOTE]
->
->Dieses Anwendungsbeispiel ist als Live-Beispiel auf dieser [Website](https://forms.enablementadobe.com/content/samples/samples.html?query=0) verfügbar.
+
 
 ## Anwendungsfalldetails{#use-case-details}
 
@@ -127,16 +124,15 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 
 Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisungen:
 
-* [Laden Sie den Inhalt der ZIP-Datei herunter und extrahieren Sie ihn in Ihr Dateisystem](assets/mult-records-template-and-xml-file.zip). Diese ZIP-Datei enthält die Vorlage und die XML-Datendatei.
+* [Herunterladen und Extrahieren von ZIP-Dateiinhalten in Ihr Dateisystem](assets/mult-records-template-and-xml-file.zip).Diese ZIP-Datei enthält die Vorlage und die XML-Datendatei.
 * [Verweisen Sie Ihren Browser auf die Felix-Webkonsole.](http://localhost:4502/system/console/bundles)
 * [Bereitstellen des DevelopingWithServiceUser-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
-* [Bereitstellen des benutzerdefinierten Bundles AEMFormsDocumentServices Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Custom , das die PDF-Dateien mithilfe der OutputService-API generiert
+* [Bereitstellen des benutzerdefinierten AEMFormsDocumentServices-Bundles](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).Benutzerdefiniertes Bundle, das die PDF-Dateien mithilfe der OutputService-API generiert
 * [Verweisen Sie Ihren Browser auf Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
-* [Importieren und installieren Sie das Paket](assets/generate-multiple-pdf-from-xml.zip). Dieses Paket enthält eine HTML-Seite, auf der Sie die Vorlage und die Datendateien ablegen können.
+* [Package importieren und installieren](assets/generate-multiple-pdf-from-xml.zip). Dieses Paket enthält eine HTML-Seite, auf der Sie die Vorlage und die Datendateien ablegen können.
 * [Verweisen Sie Ihren Browser auf MultiRecords.html](http://localhost:4502/content/DocumentServices/Multirecord.html?)
 * Ziehen Sie die Vorlage und die XML-Datendatei zusammen.
 * Laden Sie die erstellte ZIP-Datei herunter. Diese ZIP-Datei enthält die vom Output-Dienst generierten PDF-Dateien.
 
 >[!NOTE]
 >Es gibt mehrere Möglichkeiten, diese Funktion Trigger. In diesem Beispiel haben wir eine Web-Oberfläche verwendet, um die Vorlage und die Datendatei abzulegen, um die Funktion zu demonstrieren.
-
