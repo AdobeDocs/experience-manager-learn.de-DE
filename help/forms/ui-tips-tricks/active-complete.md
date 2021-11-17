@@ -1,0 +1,81 @@
+---
+title: Formatieren Sie die linken Navigationsregisterkarten mit Symbolen.
+description: Symbole hinzufügen, um aktive und abgeschlossene Registerkarten anzuzeigen
+feature: Adaptive Forms
+type: Tutorial
+version: 6.5
+topic: Development
+role: Developer
+level: Beginner
+kt: 9359
+source-git-commit: bbb2c352e8a4297496f248bbbc86252ac7118999
+workflow-type: tm+mt
+source-wordcount: '326'
+ht-degree: 21%
+
+---
+
+# Symbole hinzufügen, um aktive und abgeschlossene Registerkarten anzuzeigen
+
+Wenn Sie ein adaptives Formular mit Navigation auf der linken Registerkarte haben, sollten Sie Symbole anzeigen, um den Status der Registerkarte anzuzeigen. Sie möchten beispielsweise ein Symbol anzeigen, um die aktive Registerkarte und das Symbol anzuzeigen, um die abgeschlossene Registerkarte anzuzeigen, wie im Screenshot unten dargestellt.
+
+![toolbar-spacing](assets/active-completed.png)
+
+## Erstellen eines adaptiven Formulars
+
+Zum Erstellen des Beispielformulars wurde ein einfaches adaptives Formular verwendet, das auf der Basisvorlage und dem Canvas 3.0-Design basiert.
+Die [In diesem Artikel verwendete Symbole](assets/icons.zip) kann von hier heruntergeladen werden.
+
+
+## Stil des Standardstatus
+
+Öffnen Sie das Formular im Bearbeitungsmodus Vergewissern Sie sich, dass Sie sich in der Stilschicht befinden, und wählen Sie eine beliebige Registerkarte aus (z. B. Registerkarte &quot;Allgemein&quot;).
+Sie befinden sich im Standardzustand, wenn Sie den Stileditor für die Registerkarte öffnen, wie im Screenshot unten dargestellt
+![navigation-tab](assets/navigation-tab.png)
+
+Legen Sie die CSS-Eigenschaften für den Standardstatus wie unten gezeigt fest. | Kategorie | Eigenschaftsname | Eigenschaftswert | |—|:—|:—| | Dimensionen und Funktion | Breite | 50px | | Text | Schriftstärke| Fett | | Text | Farbe | #FFF | |Text | Zeilenhöhe | 3 | |Text | Textausrichtung | Links | |Hintergrund| Farbe | #056dae |
+
+Speichern Sie Ihre Änderungen
+
+## Stile für den aktiven Status festlegen
+
+Stellen Sie sicher, dass Sie den Status &quot;Aktiv&quot;haben, und gestalten Sie die folgenden CSS-Eigenschaften
+
+| Kategorie | Eigenschaftsname | Eigenschaftswert |
+|:---|:---|:---|
+| Abmessungen und Position | Breite | 50px |
+| Text | Schriftbreite | Fett |
+| Text | Farbe | #FFF |
+| Text | Zeilenhöhe | 3 |
+| Text | Text Ausrichten | Links |
+| Hintergrund | Farbe | #056dae |
+
+Formatieren Sie das Hintergrundbild, wie im Screenshot unten dargestellt
+
+Speichern Sie Ihre Änderungen.
+
+
+
+![active-state](assets/active-state.png)
+
+## Gestalten des Status &quot;Besucht&quot;
+
+Vergewissern Sie sich, dass Sie sich im besuchten Status befinden, und gestalten Sie die folgenden Eigenschaften:
+
+| Kategorie | Eigenschaftsname | Eigenschaftswert |
+|:---|:---|:---|
+| Abmessungen und Position | Breite | 50 px |
+| Text | Schriftbreite | Fett |
+| Text | Farbe | #FFF |
+| Text | Zeilenhöhe | 3 |
+| Text | Text Ausrichten | Links |
+| Hintergrund | Farbe | #056dae |
+
+Formatieren Sie das Hintergrundbild, wie im Screenshot unten dargestellt
+
+
+![visited-state](assets/visited-state.png)
+
+Speichern Sie Ihre Änderungen
+
+Zeigen Sie eine Vorschau des Formulars an und testen Sie, ob die Symbole erwartungsgemäß funktionieren.

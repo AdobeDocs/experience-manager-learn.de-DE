@@ -5,9 +5,9 @@ user-guide-title: AEM Forms-Videos und -Tutorials
 user-guide-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler.
 breadcrumb-title: AEM Forms-Tutorials
 index: y
-source-git-commit: 84a0c78f89f78e161b460574b5927fc4aba2fe3a
+source-git-commit: bbb2c352e8a4297496f248bbbc86252ac7118999
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1628'
 ht-degree: 4%
 
 ---
@@ -99,6 +99,7 @@ ht-degree: 4%
    + [Kennwortfeldtext umschalten](ui-tips-tricks/toggle-password.md)
    + [Schaltflächen in der Symbolleiste](ui-tips-tricks/toolbar-buttons.md)
    + [Navigieren in Registerkarten mit verschachtelten Bereichen](ui-tips-tricks/nested-panels.md)
+   + [Hinzufügen von Symbolen zu Navigationsregisterkarten](ui-tips-tricks/active-complete.md)
 + Posteingang anpassen{#inbox-customization}
    + [Einführung](inbox-customization/introduction.md)
    + [Benutzerdefinierte Spalte hinzufügen](inbox-customization/add-married-column.md)
@@ -275,7 +276,7 @@ ht-degree: 4%
    + [PDFG: Schritte zur Behebung akrobat-spezifischer Probleme](troubleshooting/steps-to-troubleshoot-acrobat-specific-issues.md)
    + [PDFG: Schritte zur Fehlerbehebung bei HtmltoPDF-Problemen unter Windows](troubleshooting/steps-to-troubleshoot-htmltopdf-issues-on-windows.md)
    + [PDFG: Schritte zur Fehlerbehebung bei HtmltoPDF-spezifischen Problemen unter Unix (PhantomJS)](troubleshooting/steps-to-troubleshoot-htmltopdf-specific-issues-on-unix-phantomjs.md)
-   + [PDFG: Schritte zur Fehlerbehebung bei HtmltoPDF-spezifischen Problemen bei Unix (WebKit-Konversion)](troubleshooting/steps-to-troubleshoot-htmltopdf-specific-issues-on-unix-webkit.md)
+   + [PDFG: Schritte zur Fehlerbehebung bei HtmltoPDF-spezifischen Problemen bei Unix (WebKit-Konvertierung)](troubleshooting/steps-to-troubleshoot-htmltopdf-specific-issues-on-unix-webkit.md)
    + [PDFG: Schritte zur Fehlerbehebung bei der PDFG-Konvertierung mehrerer Benutzer unter Unix](troubleshooting/steps-to-troubleshoot-multi-user-pdfg-conversion-on-unix.md)
    + [PDFG: Schritte zur Fehlerbehebung bei der PDFG-Konvertierung für mehrere Benutzer unter Windows](troubleshooting/steps-to-troubleshoot-multi-user-pdfg-conversion-on-windows.md)
    + [PDFG: Schritte zur Fehlerbehebung bei OpenOffice-spezifischen Problemen unter Unix](troubleshooting/steps-to-troubleshoot-openoffice-specific-issues-on-unix.md)
