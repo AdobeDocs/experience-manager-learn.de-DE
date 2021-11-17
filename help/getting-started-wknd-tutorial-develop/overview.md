@@ -16,9 +16,9 @@ role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '619'
+source-wordcount: '624'
 ht-degree: 6%
 
 ---
@@ -41,7 +41,7 @@ Es gibt zwei grundlegende Ansätze zum Starten eines AEM Sites-Projekts.
 
 [Starten Sie das Tutorial mit dem AEM Projektarchetyp](./project-archetype/overview.md)
 
-**AEM Site-Vorlagen** - Ein Ansatz mit niedriger Code zum Generieren einer AEM Site mithilfe einer vordefinierten Site-Vorlage. Nutzen Sie vordefinierte Komponenten und Vorlagen, um eine Site schnell einzurichten und zu nutzen. Verwenden Sie einen Designarbeitsablauf, um markenspezifische Stile und Anpassungen nur mit CSS und JavaScript anzuwenden. Wird für neue Projekte und Entwickler empfohlen. Derzeit nur für AEM as a Cloud Service verfügbar.
+**AEM Site-Vorlagen** - Wird auch als schnelle Site-Erstellung bezeichnet. Dies ist ein Ansatz mit niedriger Code-Methode zum Generieren einer AEM Site mithilfe einer vordefinierten Site-Vorlage. Nutzen Sie vordefinierte Komponenten und Vorlagen, um eine Site schnell einzurichten und zu nutzen. Verwenden Sie einen Designarbeitsablauf, um markenspezifische Stile und Anpassungen nur mit CSS und JavaScript anzuwenden. Wird für neue Projekte und Entwickler empfohlen. Nur für AEM as a Cloud Service verfügbar.
 
 [Tutorial mit einer Site-Vorlage starten](./site-template/create-site.md)
 

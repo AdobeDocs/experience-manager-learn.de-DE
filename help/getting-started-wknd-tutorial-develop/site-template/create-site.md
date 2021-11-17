@@ -1,39 +1,38 @@
 ---
-title: Erstellen einer Site
-seo-title: Erste Schritte mit AEM Sites - Erstellen einer Site
-description: Verwenden Sie AEM den Assistenten zur Site-Erstellung in Adobe Experience Manager, um eine neue Website zu erstellen. Die von Adobe bereitgestellte Standardsite-Vorlage wird als Ausgangspunkt für die neue Site verwendet.
-sub-product: Sites
+title: Erstellen einer Site | AEM SchnellSite-Erstellung
+description: Verwenden Sie im Rahmen der schnellen Site-Erstellung den Assistenten zur Site-Erstellung in Adobe Experience Manager AEM, um eine neue Website zu erstellen. Die von Adobe bereitgestellte Standardsite-Vorlage wird als Ausgangspunkt für die neue Site verwendet.
+sub-product: sites
 version: Cloud Service
 type: Tutorial
-topic: Content Management
-feature: Kernkomponenten, Seiten-Editor
+topic: Content Management
+feature: Core Components, Page Editor
 role: Developer
 level: Beginner
 kt: 7496
 thumbnail: KT-7496.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
+source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '902'
-ht-degree: 1%
+source-wordcount: '955'
+ht-degree: 2%
 
 ---
-
 
 # Erstellen einer Site {#create-site}
 
 >[!CAUTION]
 >
-> Die hier vorgestellten Funktionen zur schnellen Site-Erstellung werden im zweiten Halbjahr 2021 veröffentlicht. Die zugehörige Dokumentation steht für Vorschauzwecke zur Verfügung.
+> Das Tool für die schnelle Site-Erstellung ist derzeit eine technische Vorschau. Sie wird zu Test- und Evaluierungszwecken bereitgestellt und ist nicht zur Verwendung in der Produktion bestimmt, es sei denn, sie wurde mit der Adobe Support vereinbart.
 
-Dieses Kapitel behandelt die Erstellung einer neuen Site in Adobe Experience Manager. Die von Adobe bereitgestellte Standard-Site-Vorlage wird als Ausgangspunkt verwendet.
+Verwenden Sie im Rahmen der schnellen Site-Erstellung den Assistenten zur Site-Erstellung in Adobe Experience Manager AEM, um eine neue Website zu erstellen. Die von Adobe bereitgestellte Standardsite-Vorlage wird als Ausgangspunkt für die neue Site verwendet.
 
 ## Voraussetzungen {#prerequisites}
 
-Die Schritte in diesem Kapitel finden in einer Adobe Experience Manager as a Cloud Service -Umgebung statt. Stellen Sie sicher, dass Sie Administratorzugriff auf die AEM haben. Es wird empfohlen, zum Abschluss dieses Tutorials ein [Sandbox-Programm](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) und [Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=de) zu verwenden.
+Die Schritte in diesem Kapitel finden in einer Adobe Experience Manager as a Cloud Service-Umgebung statt. Stellen Sie sicher, dass Sie Administratorzugriff auf die AEM haben. Es wird empfohlen, eine [Sandbox-Programm](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) und [Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=de) zum Abschluss dieses Tutorials.
 
-Weitere Informationen finden Sie in der [Onboarding-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html) .
+Überprüfen Sie die [Onboarding-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=de) für weitere Details.
 
-## Vorgabe {#objective}
+## Ziel {#objective}
 
 1. Erfahren Sie, wie Sie mit dem Assistenten zur Site-Erstellung eine neue Site erstellen können.
 1. Machen Sie sich mit der Rolle von Site-Vorlagen vertraut.
@@ -41,34 +40,34 @@ Weitere Informationen finden Sie in der [Onboarding-Dokumentation](https://exper
 
 ## Bei Adobe Experience Manager Author anmelden {#author}
 
-Melden Sie sich als ersten Schritt bei Ihrer AEM als Cloud Service-Umgebung an. AEM Umgebungen sind auf einen **Autorendienst** und einen **Veröffentlichungsdienst** aufgeteilt.
+Melden Sie sich als ersten Schritt bei Ihrer AEM as a Cloud Service Umgebung an. AEM Umgebungen auf eine **Autorendienst** und **Veröffentlichungsdienst**.
 
-* **Autorendienst** : Site-Inhalte werden erstellt, verwaltet und aktualisiert. In der Regel haben nur interne Benutzer Zugriff auf den **Autorendienst** und befinden sich hinter einem Anmeldebildschirm.
-* **Veröffentlichungsdienst** : hostet die Live-Website. Dies ist der Dienst, den Endbenutzer sehen werden und der normalerweise öffentlich verfügbar ist.
+* **Autorendienst** - wo Site-Inhalte erstellt, verwaltet und aktualisiert werden. In der Regel haben nur interne Benutzer Zugriff auf die **Autorendienst** und sich hinter einem Anmeldebildschirm befindet.
+* **Veröffentlichungsdienst** - hostet die Live-Website. Dies ist der Dienst, den Endbenutzer sehen werden und der normalerweise öffentlich verfügbar ist.
 
-Der Großteil des Tutorials wird mit dem **Autorendienst** durchgeführt.
+Der Großteil des Tutorials wird mithilfe des **Autorendienst**.
 
-1. Navigieren Sie zur Adobe Experience Cloud [https://experience.adobe.com/](https://experience.adobe.com/). Melden Sie sich mit Ihrem persönlichen Konto oder einem Firmen-/Schulkonto an.
+1. Navigieren zur Adobe Experience Cloud [https://experience.adobe.com/](https://experience.adobe.com/). Melden Sie sich mit Ihrem persönlichen Konto oder einem Firmen-/Schulkonto an.
 1. Stellen Sie sicher, dass im Menü die richtige Organisation ausgewählt ist, und klicken Sie auf **Experience Manager**.
 
    ![Experience Cloud - Startseite](assets/create-site/experience-cloud-home-screen.png)
 
-1. Klicken Sie unter **Cloud Manager** auf **Launch**.
-1. Bewegen Sie den Mauszeiger über das Programm, das Sie verwenden möchten, und klicken Sie auf das Symbol **Cloud Manager-Programm** .
+1. under **Cloud Manager** click **Launch**.
+1. Bewegen Sie den Mauszeiger über das Programm, das Sie verwenden möchten, und klicken Sie auf **Cloud Manager-Programm** Symbol.
 
    ![Symbol für das Cloud Manager-Programm](assets/create-site/cloud-manager-program-icon.png)
 
 1. Klicken Sie im oberen Menü auf **Umgebungen** , um die bereitgestellten Umgebungen anzuzeigen.
 
-1. Suchen Sie die Umgebung, die Sie verwenden möchten, und klicken Sie auf die **Autoren-URL**.
+1. Suchen Sie die gewünschte Umgebung und klicken Sie auf die Schaltfläche **Autoren-URL**.
 
    ![Auf dev-Autor zugreifen](assets/create-site/access-dev-environment.png)
 
    >[!NOTE]
    >
-   >Es wird empfohlen, für dieses Tutorial eine **Entwicklungsumgebung** zu verwenden.
+   >Es wird empfohlen, eine **Entwicklung** Umgebung für dieses Tutorial.
 
-1. Der AEM **Autorendienst** wird eine neue Registerkarte angezeigt. Klicken Sie auf **Anmelden mit Adobe** und Sie sollten automatisch mit denselben Experience Cloud-Anmeldedaten angemeldet sein.
+1. Der AEM wird eine neue Registerkarte hinzugefügt **Autorendienst**. Klicken **Mit Adobe anmelden** und Sie sollten automatisch mit denselben Experience Cloud-Anmeldedaten angemeldet sein.
 
 1. Nach der Umleitung und Authentifizierung sollte nun der AEM Startbildschirm angezeigt werden.
 
@@ -76,15 +75,15 @@ Der Großteil des Tutorials wird mit dem **Autorendienst** durchgeführt.
 
 >[!NOTE]
 >
-> Haben Sie Probleme beim Zugriff auf Experience Manager? Überprüfen Sie die [Onboarding-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html).
+> Haben Sie Probleme beim Zugriff auf Experience Manager? Überprüfen Sie die [Onboarding-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)
 
 ## Herunterladen der einfachen Site-Vorlage
 
-Eine Site-Vorlage bietet einen Ausgangspunkt für eine neue Site. Eine Site-Vorlage umfasst einige grundlegende Designs, Seitenvorlagen, Konfigurationen und Beispielinhalte. Was genau in der Site-Vorlage enthalten ist, liegt beim Entwickler. Adobe bietet eine **Grundlegende Site-Vorlage** , um neue Implementierungen zu beschleunigen.
+Eine Site-Vorlage bietet einen Ausgangspunkt für eine neue Site. Eine Site-Vorlage umfasst einige grundlegende Designs, Seitenvorlagen, Konfigurationen und Beispielinhalte. Was genau in der Site-Vorlage enthalten ist, liegt beim Entwickler. Adobe bietet eine **Grundlegende Site-Vorlage** die Beschleunigung neuer Implementierungen.
 
-1. Öffnen Sie eine neue Browser-Registerkarte und navigieren Sie auf GitHub zum Projekt &quot;Grundlegende Site-Vorlage&quot;: [https://github.com/adobe/aem-site-template-basic](https://github.com/adobe/aem-site-template-basic). Das Projekt ist Open-Source-basiert und lizenziert für die Verwendung durch jedermann.
-1. Klicken Sie auf **Releases** und navigieren Sie zur [aktuellen Version](https://github.com/adobe/aem-site-template-basic/releases/latest).
-1. Erweitern Sie das Dropdown-Menü **Assets** und laden Sie die Zip-Vorlagendatei herunter:
+1. Öffnen Sie eine neue Browser-Registerkarte und navigieren Sie auf GitHub zum Projekt &quot;Grundlegende Site-Vorlage&quot;: [https://github.com/adobe/aem-site-template-standard](https://github.com/adobe/aem-site-template-standard). Das Projekt ist Open-Source-basiert und lizenziert für die Verwendung durch jedermann.
+1. Klicken **Versionen** und navigieren Sie zum [neueste Version](https://github.com/adobe/aem-site-template-standard/releases/latest).
+1. Erweitern Sie die **Assets** herunterladen und die Zip-Vorlagendatei herunterladen:
 
    ![Einfache ZIP-Site-Vorlage](assets/create-site/template-basic-zip-file.png)
 
@@ -92,38 +91,41 @@ Eine Site-Vorlage bietet einen Ausgangspunkt für eine neue Site. Eine Site-Vorl
 
    >[!NOTE]
    >
-   > Dieses Tutorial wird mit der Version **5.0.0** der Basic Site Template geschrieben. Beim Starten eines neuen Projekts wird immer empfohlen, die neueste Version zu verwenden.
+   > Dieses Tutorial wurde mit Version geschrieben **1.1.0** der Site-Grundvorlage. Wenn Sie ein neues Projekt zur Verwendung in der Produktion starten, wird immer empfohlen, die neueste Version zu verwenden.
 
 ## Neue Site erstellen
 
 Als Nächstes generieren Sie mithilfe der Site-Vorlage aus der vorherigen Übung eine neue Site.
 
 1. Kehren Sie zur AEM Umgebung zurück. Navigieren Sie im Bildschirm AEM Start zu **Sites**.
-1. Klicken Sie in der oberen rechten Ecke auf **Erstellen** > **Site (Template)**. Dadurch wird der **Site-Assistent erstellen** angezeigt.
-1. Klicken Sie unter **Wählen Sie eine Site-Vorlage** auf die Schaltfläche **Import** .
+1. Klicken Sie in der oberen rechten Ecke auf **Erstellen** > **Site (Vorlage)**. Daraus ergeben sich die **Assistent zum Erstellen von Sites**.
+1. under **Auswählen einer Site-Vorlage** klicken Sie auf **Import** Schaltfläche.
 
-   Laden Sie die Vorlagendatei **.zip** hoch, die aus der vorherigen Übung heruntergeladen wurde.
+   Hochladen der **.zip** Vorlagendatei, die aus der vorherigen Übung heruntergeladen wurde.
 
-1. Wählen Sie die **Grundlegende AEM Site-Vorlage** aus und klicken Sie auf **Weiter**.
+1. Wählen Sie die **Grundlegende AEM Site-Vorlage** und klicken Sie auf **Nächste**.
 
    ![Site-Vorlage auswählen](assets/create-site/select-site-template.png)
 
-1. Geben Sie unter **Site-Details** > **Site-Titel** `WKND Site` ein.
-1. Geben Sie unter **Site name** `wknd` ein.
+1. under **Site-Details** > **Site-Titel** enter `WKND Site`.
+
+   In einer realen Implementierung würde &quot;WKND Site&quot;durch den Markennamen Ihres Unternehmens oder Ihrer Organisation ersetzt. In diesem Tutorial simulieren wir die Erstellung einer Website für eine fiktive Lifestyle-Marke &quot;WKND&quot;.
+
+1. under **Site-Name** enter `wknd`.
 
    ![Details zur Site-Vorlage](assets/create-site/site-template-details.png)
 
    >[!NOTE]
    >
-   > Wenn Sie eine freigegebene AEM verwenden, hängen Sie eine eindeutige Kennung an den **Site-Namen** an. Beispiel `wknd-johndoe`. Dadurch wird sichergestellt, dass mehrere Benutzer dasselbe Tutorial ohne Kollisionen abschließen können.
+   > Wenn Sie eine freigegebene AEM verwenden, hängen Sie eine eindeutige Kennung an die **Site-Name**. Beispiel `wknd-site-johndoe`. Dadurch wird sichergestellt, dass mehrere Benutzer dasselbe Tutorial ohne Kollisionen abschließen können.
 
-1. Klicken Sie auf **Erstellen** , um die Site zu generieren. Klicken Sie auf **Fertig** im Dialogfeld **Erfolg** , wenn AEM die Website fertig erstellt hat.
+1. Klicken **Erstellen** , um die Site zu generieren. Klicken **Fertig** im **Erfolg** angezeigt, wenn AEM die Erstellung der Website abgeschlossen hat.
 
 ## Neue Site durchsuchen
 
 1. Navigieren Sie zur AEM Sites-Konsole, falls noch nicht vorhanden.
 1. Eine neue **WKND-Site** wurde generiert. Es wird eine Site-Struktur mit einer mehrsprachigen Hierarchie enthalten.
-1. Öffnen Sie die Seite **English** > **Home** , indem Sie die Seite auswählen und in der Menüleiste auf die Schaltfläche **Bearbeiten** klicken:
+1. Öffnen Sie die **englisch** > **Startseite** Seite durch Auswahl der Seite und Klicken auf **Bearbeiten** in der Menüleiste:
 
    ![WKND-Site-Hierarchie](assets/create-site/wknd-site-starter-hierarchy.png)
 
@@ -139,4 +141,4 @@ Herzlichen Glückwunsch, Sie haben gerade Ihre erste AEM Site erstellt!
 
 ### Nächste Schritte {#next-steps}
 
-Verwenden Sie den Seiteneditor in Adobe Experience Manager AEM, um den Inhalt der Site im Kapitel [Autoreninhalt und Veröffentlichungsinhalt](author-content-publish.md) zu aktualisieren. Erfahren Sie, wie atomische Komponenten zur Aktualisierung von Inhalten konfiguriert werden können. Machen Sie sich mit dem Unterschied zwischen einer AEM-Autoren- und Veröffentlichungsumgebung vertraut und erfahren Sie, wie Sie Aktualisierungen auf der Live-Site veröffentlichen.
+Verwenden Sie AEM den Seiteneditor in Adobe Experience Manager, um den Inhalt der Website im [Inhalte erstellen und veröffentlichen](author-content-publish.md) Kapitel. Erfahren Sie, wie atomische Komponenten zur Aktualisierung von Inhalten konfiguriert werden können. Machen Sie sich mit dem Unterschied zwischen einer AEM-Autoren- und Veröffentlichungsumgebung vertraut und erfahren Sie, wie Sie Aktualisierungen auf der Live-Site veröffentlichen.

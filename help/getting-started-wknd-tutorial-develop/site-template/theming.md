@@ -1,43 +1,42 @@
 ---
-title: Designarbeitsablauf
-seo-title: Erste Schritte mit AEM Sites - Designarbeitsablauf
-description: Erfahren Sie, wie Sie die Themenquellen einer Adobe Experience Manager-Site aktualisieren, um markenspezifische Stile anzuwenden. Erfahren Sie, wie Sie mit einem Proxy-Server eine Live-Vorschau von CSS- und JavaScript-Aktualisierungen anzeigen können. In diesem Tutorial wird auch beschrieben, wie Sie mit GitHub-Aktionen Designaktualisierungen auf einer AEM Site bereitstellen.
-sub-product: Sites
+title: Designarbeitsablauf | AEM SchnellSite-Erstellung
+description: Erfahren Sie, wie Sie die Themenquellen einer Adobe Experience Manager-Site aktualisieren, um markenspezifische Stile anzuwenden. Erfahren Sie, wie Sie mit einem Proxy-Server eine Live-Vorschau von CSS- und JavaScript-Aktualisierungen anzeigen können. In diesem Tutorial wird auch beschrieben, wie Sie Designaktualisierungen mithilfe der Frontend-Pipeline von Adobe Cloud Manager auf einer AEM Site bereitstellen.
+sub-product: sites
 version: Cloud Service
 type: Tutorial
-feature: Kernkomponenten
-topic: Content Management, Entwicklung
+feature: Core Components
+topic: Content Management, Development
 role: Developer
 level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
-source-git-commit: 67b7f5ee5fc9e42537a9622922327fb7a456d2bd
+exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
+source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
 workflow-type: tm+mt
-source-wordcount: '581'
-ht-degree: 1%
+source-wordcount: '515'
+ht-degree: 0%
 
 ---
-
 
 # Designarbeitsablauf {#theming}
 
 >[!CAUTION]
 >
-> Die hier vorgestellten Funktionen zur schnellen Site-Erstellung werden im zweiten Halbjahr 2021 veröffentlicht. Die zugehörige Dokumentation steht für Vorschauzwecke zur Verfügung.
+> Das Tool für die schnelle Site-Erstellung ist derzeit eine technische Vorschau. Sie wird zu Test- und Evaluierungszwecken bereitgestellt und ist nicht zur Verwendung in der Produktion bestimmt, es sei denn, sie wurde mit der Adobe Support vereinbart.
 
-In diesem Kapitel werden wir die Themenquellen einer Adobe Experience Manager-Site aktualisieren, um markenspezifische Stile anzuwenden. Wir werden erfahren, wie Sie mit einem Proxy-Server eine Vorschau von CSS- und JavaScript-Aktualisierungen anzeigen können, während wir Code für die Live-Site verwenden. In diesem Tutorial wird auch beschrieben, wie Sie mit GitHub-Aktionen Designaktualisierungen auf einer AEM Site bereitstellen.
+In diesem Kapitel werden wir die Themenquellen einer Adobe Experience Manager-Site aktualisieren, um markenspezifische Stile anzuwenden. Wir erfahren, wie Sie mit einem Proxy-Server eine Vorschau von CSS- und JavaScript-Aktualisierungen anzeigen können, während wir mit der Live-Site kodieren. In diesem Tutorial wird auch beschrieben, wie Sie Designaktualisierungen mithilfe der Frontend-Pipeline von Adobe Cloud Manager auf einer AEM Site bereitstellen.
 
 Am Ende wird unsere Site aktualisiert, um Stile zur Marke WKND hinzuzufügen.
 
 ## Voraussetzungen {#prerequisites}
 
-Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die im Kapitel [Seitenvorlagen](./page-templates.md) beschriebenen Schritte abgeschlossen sind.
+Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die im [Seitenvorlagen](./page-templates.md) -Kapitel abgeschlossen.
 
 ## Ziele
 
 1. Erfahren Sie, wie die Themenquellen für eine Site heruntergeladen und geändert werden können.
 1. Erfahren Sie, wie Sie Code mit der Live-Site vergleichen, um eine Echtzeitvorschau zu erhalten.
-1. Machen Sie sich mit dem durchgängigen Arbeitsablauf der Bereitstellung kompilierter CSS- und JavaScript-Aktualisierungen als Teil eines Themas mit GitHub-Aktionen vertraut.
+1. Machen Sie sich mit dem durchgängigen Arbeitsablauf für die Bereitstellung kompilierter CSS- und JavaScript-Aktualisierungen als Teil eines Designs mithilfe der Frontend-Pipeline von Adobe Cloud Manager vertraut.
 
 ## Aktualisieren eines Designs {#theme-update}
 
@@ -54,31 +53,36 @@ Allgemeine Schritte für das Video:
 
 ### Lösungsdateien
 
-Laden Sie die fertigen Stile für das [WKND-Design](assets/theming/WKND-THEME-src.zip) herunter.
+Herunterladen der fertigen Stile für die [WKND-Beispieldesign](assets/theming/WKND-THEME-src-1.1.zip)
 
-## Bereitstellen eines Designs {#deploy-theme}
+## Bereitstellen eines Designs mithilfe einer Frontend-Pipeline {#deploy-theme}
 
-Stellen Sie mithilfe von GitHub-Aktionen Aktualisierungen an einem Design in einer AEM Umgebung bereit.
+Stellen Sie mithilfe der Frontend-Pipeline von Cloud Manager Updates für ein Design in einer AEM Umgebung bereit.
 
->[!VIDEO](https://video.tv.adobe.com/v/332919/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338722/?quality=12&learn=on)
 
 Allgemeine Schritte für das Video:
 
-1. Fügen Sie Ihr Design-Quellprojekt [GitHub als neues Repository](https://docs.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line) hinzu.
-1. Erstellen Sie [ein persönliches Zugriffstoken in GitHub](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) und speichern Sie es an einem sicheren Ort.
-1. Konfigurieren Sie die GitHub-Einstellungen in Ihrer AEM-Umgebung so, dass sie auf Ihr GitHub-Repository verweisen und Ihr persönliches Zugriffstoken einschließen.
-1. Erstellen Sie die folgenden [verschlüsselten Geheimnisse](https://docs.github.com/en/actions/reference/encrypted-secrets) in Ihrem GitHub-Repository:
-   * **AEM_SITE**  - Stamm Ihrer AEM Site (d. h.  `wknd`)
-   * **AEM_URL**  - URL Ihrer AEM-Autorenumgebung
-   * **GIT_TOKEN**  - Persönliches Zugriffstoken aus Schritt 2.
-1. Führen Sie die GitHub-Aktion aus: **Erstellen und Bereitstellen von Github-Artefakten**. Dies hat den nachgelagerten Effekt, die Aktion auszuführen: **Aktualisieren Sie die Designkonfiguration auf AEM mit der Artefakt-ID**, die die Designquellen in der AEM -Umgebung bereitstellt, wie in `AEM_URL` und `AEM_SITE` angegeben.
+1. Neues Git erstellen [Repository in Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/cloud-manager-repositories.html)
+1. Fügen Sie Ihr Design-Quellen-Projekt zum Cloud Manager-Git-Repository hinzu:
+
+   ```shell
+   $ cd <PATH_TO_THEME_SOURCES_FOLDER>
+   $ git init -b main
+   $ git add .
+   $ git commit -m "initial commit"
+   $ git remote add origin <CLOUD_MANAGER_GIT_REPOSITORY_URL>
+   ```
+
+1. Konfigurieren Sie eine [Front-End-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html) in Cloud Manager , um den Frontend-Code bereitzustellen.
+1. Führen Sie die Front-End-Pipeline aus, um Aktualisierungen für die Ziel-AEM-Umgebung bereitzustellen.
 
 ### Beispielberichte
 
 Es gibt einige Beispiele für GitHub-Repos, die als Referenz verwendet werden können:
 
-* [aem-site-template-basic-theme-e2e](https://github.com/adobe/aem-site-template-basic-theme-e2e)  - Wird als Beispiel für &quot;reale&quot;Projekte verwendet.
-* [https://github.com/godanny86/wknd-theme](https://github.com/godanny86/wknd-theme)  - Wird als Beispiel für diejenigen verwendet, die dem Tutorial folgen.
+* [aem-site-template-standard](https://github.com/adobe/aem-site-template-standard)
+* [aem-site-template-basic-theme-e2e](https://github.com/adobe/aem-site-template-basic-theme-e2e) - Wird als Beispiel für &quot;reale&quot; Projekte verwendet.
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
@@ -86,4 +90,4 @@ Herzlichen Glückwunsch! Sie haben soeben ein Thema aktualisiert und AEM bereitg
 
 ### Nächste Schritte {#next-steps}
 
-Nehmen Sie einen tieferen Einblick in AEM Entwicklung und lernen Sie die zugrunde liegende Technologie kennen, indem Sie eine Website mit dem Projektarchetyp [AEM erstellen.](../project-archetype/overview.md)
+Machen Sie sich mit der AEM-Entwicklung vertraut und verstehen Sie mehr über die zugrunde liegende Technologie, indem Sie mithilfe der [AEM Projektarchetyp](../project-archetype/overview.md).
