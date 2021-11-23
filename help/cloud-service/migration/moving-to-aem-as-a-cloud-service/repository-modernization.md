@@ -9,7 +9,7 @@ level: Experienced
 kt: 8630
 thumbnail: 336958.jpeg
 exl-id: e9bd9035-1f2d-4a34-a581-9c1ec2c7bc04
-source-git-commit: 1ddf6154d50a341d9a0fd4234392c37ced878a73
+source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
 workflow-type: tm+mt
 source-wordcount: '161'
 ht-degree: 9%
@@ -28,7 +28,7 @@ Erfahren Sie mehr über die Modernisierung von Repositorys, veränderliche und u
 
 Verwenden Sie als Teil der Refaktorierung Ihrer Codebasis die [Repository Modernizer-Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/repo-modernizer.html?lang=de) , um eine 6.x-Codebasis in eine modernere Struktur umzustrukturieren.
 
-### Wichtigste Aktivitäten
+## Wichtigste Aktivitäten
 
 * Verwenden Sie die [Adobe I/O Repository Modernizer](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationrepository-modernizer) -Tool, um ein Projekt so zu strukturieren, dass es der erwarteten Struktur eines AEM as a Cloud Service Projekts entspricht.
 * Passen Sie Buildfehler in der aktualisierten Codebasis manuell an und beheben Sie sie.

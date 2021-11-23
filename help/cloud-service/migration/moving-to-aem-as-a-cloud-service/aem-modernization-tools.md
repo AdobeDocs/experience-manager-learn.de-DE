@@ -8,10 +8,10 @@ level: Experienced
 kt: 8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: 3657e7798774f9cc673ff6ccd8af1a555b1d4013
+source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
 workflow-type: tm+mt
-source-wordcount: '325'
-ht-degree: 9%
+source-wordcount: '475'
+ht-degree: 8%
 
 ---
 
@@ -28,7 +28,7 @@ Erfahren Sie, wie AEM Modernisierungs-Tools verwendet werden, um einen vorhanden
 
 AEM Modernisierungs-Tools konvertieren automatisch vorhandene AEM Seiten, die aus älteren statischen Vorlagen, Foundation-Komponenten und ParSys bestehen, um moderne Ansätze wie bearbeitbare Vorlagen, AEM WCM-Kernkomponenten und Layout-Container zu verwenden.
 
-### Wichtigste Aktivitäten
+## Wichtigste Aktivitäten
 
 + Klonen Sie AEM 6.x-Produktion, um AEM Modernisierungs-Tools für auszuführen.
 + Laden Sie die [Die neuesten AEM-Modernisierungs-Tools](https://github.com/adobe/aem-modernize-tools/releases/latest) über den AEM 6.x-Produktionsklon über Package Manager
@@ -50,8 +50,50 @@ AEM Modernisierungs-Tools konvertieren automatisch vorhandene AEM Seiten, die au
    + Führen Sie das Dialog Converter-Tool für vorhandene benutzeroberflächenbasierte Dialogfelder von ExtJS oder Coral2 aus.
    + Konvertierte Dialogfelder wieder in Git-Repository synchronisieren
 
-### Sonstige -Ressourcen
+## Übungen
+
+Wenden Sie Ihr Wissen an, indem Sie ausprobieren, was Sie mit dieser praktischen Übung gelernt haben.
+
+Bevor Sie die praktische Übung testen, müssen Sie sich das Video und die folgenden Materialien angesehen und verstanden haben:
+
++ [Über AEM as a Cloud Service anders nachdenken](./introduction.md)
++ [Repository-Modernisierung](./repository-modernization.md)
++ [Veränderlicher und unveränderlicher Inhalt](../../developing/basics/mutable-immutable.md)
++ [AEM Projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=de)
+
+Stellen Sie außerdem sicher, dass Sie die vorherige praktische Übung abgeschlossen haben:
+
++ [Praktisches Training von BPA und CAM](./bpa-and-cam.md#hands-on-exercise)
+
+<table style="border-width:0">
+    <tr>
+        <td style="width:150px">
+            <a  rel="noreferrer"
+                target="_blank"
+                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session2-migration#bootcamp---session-2-migration-methodology"><img alt="GitHub-Repository für praktische Übungen" src="./assets/github.png"/>
+            </a>        
+        </td>
+        <td style="width:100%;margin-bottom:1rem;">
+            <div style="font-size:1.25rem;font-weight:400;">Weiterführende AEM</div>
+            <p style="margin:1rem 0">
+                Erfahren Sie, wie Sie mit AEM Modernisierungs-Tools eine alte WKND-Site aktualisieren können, um AEM as a Cloud Service Best Practices zu entsprechen.
+            </p>
+            <a  rel="noreferrer"
+                target="_blank"
+                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session2-migration#bootcamp---session-2-migration-methodology" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Testen Sie die AEM Modernisierungs-Tools.</span>
+            </a>
+        </td>
+    </tr>
+</table>
+
+## Sonstige Ressourcen
 
 + [Herunterladen AEM Modernisierungs-Tools](https://github.com/adobe/aem-modernize-tools/releases/latest)
 + [Dokumentation zu AEM Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/)
 + [AEM Gems - Einführung in die AEM-Modernisierungs-Suite](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
+
+
+
+1. Stellen Sie die neu modernisierte wknd-legacy-Site im lokalen Cloud Service-SDK bereit. Hier können Sie herunterladen:
++ [Software Distribution-Portal](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.htm).
