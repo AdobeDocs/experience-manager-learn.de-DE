@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 0ab14016c27d3b91252f3cbf5f97550d89d4a0c9
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 22%
+source-wordcount: '190'
+ht-degree: 23%
 
 ---
 
@@ -19,6 +19,8 @@ ht-degree: 22%
 + [AEM Headless-Übersicht](./overview.md)
 + GraphQL {#graphql}
    + [Übersicht](./graphql/overview.md)
+   + [Schnell-Setup](./graphql/quick-setup/cloud-service.md)
+   + [Schnellsetup für lokales SDK](./graphql/quick-setup/local-sdk.md)
    + Videoserie{#video-series}
       + [1 - Modellierungsgrundlagen](./graphql/video-series/modeling-basics.md)
       + [2 - Erweiterte Modellierung](./graphql/video-series/advanced-modeling.md)
@@ -29,18 +31,17 @@ ht-degree: 22%
       + [7 - GraphQL - Persistente Abfragen](./graphql/video-series/graphql-persisted-queries.md)
    + Mehrstufiges Tutorial{#multi-step}
       + [Übersicht](./graphql/multi-step/overview.md)
-      + [1 - Schnelleinrichtung](./graphql/multi-step/setup.md)
-      + [2 - Definieren von Inhaltsfragmentmodellen](./graphql/multi-step/content-fragment-models.md)
-      + [3 - Erstellen von Inhaltsfragmenten](./graphql/multi-step/author-content-fragments.md)
-      + [4 - GraphQL-APIs erkunden](./graphql/multi-step/explore-graphql-api.md)
-      + [5 - Abfrage über eine externe App](./graphql/multi-step/graphql-and-external-app.md)
-      + [6 - Erweiterte Datenmodellierung mit Fragmentverweisen](./graphql/multi-step/fragment-references.md)
-      + [7 - Produktionsbereitstellung](./graphql/multi-step/production-deployment.md)
+      + [1 - Definieren von Inhaltsfragmentmodellen](./graphql/multi-step/content-fragment-models.md)
+      + [2 - Erstellen von Inhaltsfragmenten](./graphql/multi-step/author-content-fragments.md)
+      + [3 - GraphQL-APIs erkunden](./graphql/multi-step/explore-graphql-api.md)
+      + [4 - Abfrage von einer externen App](./graphql/multi-step/graphql-and-external-app.md)
+      + [5 - Erweiterte Datenmodellierung mit Fragmentverweisen](./graphql/multi-step/fragment-references.md)
+      + [6 - Produktionsbereitstellung](./graphql/multi-step/production-deployment.md)
    + Beispiele {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
       + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)
       + [Android](./graphql/example-apps/android-app.md)
-+ SPA Editor{#spa-editor}
++ SPA-Editor{#spa-editor}
    + React{#react}
       + [Übersicht](./spa-editor/react/overview.md)
       + [1 - Projekt erstellen](./spa-editor/react/create-project.md)

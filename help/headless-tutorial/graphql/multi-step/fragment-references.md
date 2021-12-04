@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d85b7ac3-42c1-4655-9394-29a797c0e1d7
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
 source-wordcount: '847'
 ht-degree: 2%
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 Es ist möglich, ein Inhaltsfragment aus einem anderen Inhaltsfragment zu referenzieren. Dadurch kann ein Benutzer komplexe Datenmodelle mit Beziehungen zwischen Fragmenten erstellen.
 
-In diesem Kapitel aktualisieren Sie das Abenteuer-Modell, um mithilfe des Felds **Fragmentverweis** einen Verweis auf das Contributor-Modell einzufügen. Außerdem erfahren Sie, wie Sie eine GraphQL-Abfrage ändern, um Felder aus einem referenzierten Modell einzuschließen.
+In diesem Kapitel aktualisieren Sie das Abenteuer-Modell, um mithilfe der **Fragmentverweis** -Feld. Außerdem erfahren Sie, wie Sie eine GraphQL-Abfrage ändern, um Felder aus einem referenzierten Modell einzuschließen.
 
 ## Voraussetzungen
 
@@ -39,21 +39,21 @@ In diesem Kapitel lernen wir Folgendes:
 Aktualisieren Sie das Adventure Content Fragment-Modell, um eine Referenz zum Contributor-Modell hinzuzufügen.
 
 1. Öffnen Sie einen neuen Browser und navigieren Sie zu AEM.
-1. Navigieren Sie im Menü **AEM Start** zu **Tools** > **Assets** > **Inhaltsfragmentmodelle** > **WKND-Site**.
-1. Öffnen Sie das Inhaltsfragmentmodell **Adventure**
+1. Aus dem **AEM Start** Menünavigation zu **Instrumente** > **Assets** > **Inhaltsfragmentmodelle** > **WKND-Site**.
+1. Öffnen Sie die **Abenteuer** Inhaltsfragmentmodell
 
    ![Öffnen Sie das Abenteuer-Inhaltsfragmentmodell](assets/fragment-references/adventure-content-fragment-edit.png)
 
-1. Ziehen Sie unter **Datentypen** ein Feld **Fragmentverweis** in den Hauptbereich.
+1. under **Datentypen**, ziehen Sie eine **Fragmentverweis** in den Hauptbereich.
 
    ![Fragmentverweisfeld hinzufügen](assets/fragment-references/add-fragment-reference-field.png)
 
-1. Aktualisieren Sie die **Properties** für dieses Feld mit folgenden Eigenschaften:
+1. Aktualisieren Sie die **Eigenschaften** für dieses Feld mit folgenden Eigenschaften:
 
    * Rendern als - `fragmentreference`
    * Feldbezeichnung - **Adventure Contributor**
    * Eigenschaftsname - `adventureContributor`
-   * Modelltyp - Wählen Sie das Modell **Contributor** aus.
+   * Modelltyp - Wählen Sie die **Mitarbeiter** model
    * Stammverzeichnis - `/content/dam/wknd`
 
    ![Fragmentverweiseigenschaften](assets/fragment-references/fragment-reference-properties.png)
@@ -64,14 +64,14 @@ Aktualisieren Sie das Adventure Content Fragment-Modell, um eine Referenz zum Co
 
 ## Zuweisen eines Beitragenden zu einem Abenteuer
 
-Nachdem das Abenteuer-Inhaltsfragmentmodell aktualisiert wurde, können wir ein vorhandenes Fragment bearbeiten und auf einen Mitwirkenden verweisen. Beachten Sie, dass sich die Bearbeitung des Inhaltsfragmentmodells *auf* alle vorhandenen Inhaltsfragmente auswirkt, die daraus erstellt wurden.
+Nachdem das Abenteuer-Inhaltsfragmentmodell aktualisiert wurde, können wir ein vorhandenes Fragment bearbeiten und auf einen Mitwirkenden verweisen. Beachten Sie, dass Sie das Inhaltsfragmentmodell bearbeiten *betrifft* alle vorhandenen Inhaltsfragmente, die daraus erstellt wurden.
 
-1. Navigieren Sie zu **Assets** > **Dateien** > **WKND-Site** > **Englisch** > **Abenteuer** > **[Bali Surf Camp](http://localhost:4502/assets.html/content/dam/wknd/en/adventures/bali-surf-camp)** .
+1. Navigieren Sie zu **Assets** > **Dateien** > **WKND-Site** > **englisch** > **Abenteuer** > **[Bali Surf Camp](http://localhost:4502/assets.html/content/dam/wknd/en/adventures/bali-surf-camp)**.
 
-   ![Ordner des Bali Surf Camp](assets/setup/bali-surf-camp-folder.png)
+   ![Ordner des Bali Surf Camp](../quick-setup/assets/setup/bali-surf-camp-folder.png)
 
-1. Klicken Sie in das Inhaltsfragment **Bali Surf Camp** , um den Inhaltsfragment-Editor zu öffnen.
-1. Aktualisieren Sie das Feld **Adventure Contributor** und wählen Sie einen Mitarbeiter aus, indem Sie auf das Ordnersymbol klicken.
+1. Klicken Sie in die **Bali Surf Camp** Inhaltsfragment , um den Inhaltsfragment-Editor zu öffnen.
+1. Aktualisieren Sie die **Adventure Contributor** und wählen Sie einen Mitarbeiter aus, indem Sie auf das Ordnersymbol klicken.
 
    ![Wählen Sie &quot;Stacey Roswells&quot;als Beitragenden](assets/fragment-references/stacey-roswell-contributor.png)
 
@@ -79,11 +79,11 @@ Nachdem das Abenteuer-Inhaltsfragmentmodell aktualisiert wurde, können wir ein 
 
    ![bevölkerter Pfad zum Beitragenden](assets/fragment-references/populated-path.png)
 
-   Beachten Sie, dass nur Fragmente ausgewählt werden können, die mit dem Modell **Contributor** erstellt wurden.
+   Beachten Sie, dass nur Fragmente mit dem **Mitarbeiter** -Modell ausgewählt werden können.
 
 1. Speichern Sie die Änderungen am Fragment.
 
-1. Wiederholen Sie die obigen Schritte, um Abenteuern wie [Yosemite Backpackaging](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking) und [Colorado Rock Climbing](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/colorado-rock-climbing/colorado-rock-climbing) einen Mitwirkenden zuzuweisen.
+1. Wiederholen Sie die obigen Schritte, um Abenteuern wie [Yosemite Backpacken](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/yosemite-backpacking/yosemite-backpacking) und [Colorado Rock Climbing](http://localhost:4502/editor.html/content/dam/wknd/en/adventures/colorado-rock-climbing/colorado-rock-climbing)
 
 ## Abfragen von verschachtelten Inhaltsfragmenten mit GraphiQL
 
@@ -113,7 +113,7 @@ Führen Sie anschließend eine Abfrage für ein Abenteuer durch und fügen Sie v
    }
    ```
 
-   Die obige Abfrage bezieht sich auf einen einzelnen Abenteuer-Pfad. Die Eigenschaft `adventureContributor` verweist auf das Contributor-Modell und wir können dann Eigenschaften vom verschachtelten Inhaltsfragment anfordern.
+   Die obige Abfrage bezieht sich auf einen einzelnen Abenteuer-Pfad. Die `adventureContributor` -Eigenschaft verweist auf das Contributor-Modell und wir können dann Eigenschaften vom verschachtelten Inhaltsfragment anfordern.
 
 1. Führen Sie die Abfrage aus und Sie sollten ein Ergebnis wie das folgende erhalten:
 
@@ -137,7 +137,7 @@ Führen Sie anschließend eine Abfrage für ein Abenteuer durch und fügen Sie v
    }
    ```
 
-1. Experimentieren Sie mit anderen Abfragen wie `adventureList` und fügen Sie Eigenschaften für das referenzierte Inhaltsfragment unter `adventureContributor` hinzu.
+1. Experimentieren mit anderen Abfragen wie `adventureList` und fügen Sie Eigenschaften für das referenzierte Inhaltsfragment unter hinzu `adventureContributor`.
 
 ## Aktualisieren der React-App zur Anzeige von Contributor-Inhalten
 
@@ -149,7 +149,7 @@ Aktualisieren Sie anschließend die von der React-Anwendung verwendeten Abfragen
 
    ![Adventure Detail-IDE](assets/fragment-references/adventure-detail-ide.png)
 
-1. Suchen Sie die Funktion `adventureDetailQuery(_path)`. Die Funktion `adventureDetailQuery(..)` bricht einfach eine GraphQL-Filterabfrage ein, die AEM `<modelName>ByPath`-Syntax verwendet, um ein einzelnes Inhaltsfragment abzufragen, das durch seinen JCR-Pfad identifiziert wird.
+1. Funktion suchen `adventureDetailQuery(_path)`. Die `adventureDetailQuery(..)` -Funktion umbricht einfach eine GraphQL-Filterabfrage, die AEM verwendet `<modelName>ByPath` -Syntax, um ein einzelnes Inhaltsfragment abzufragen, das durch seinen JCR-Pfad identifiziert wird.
 
 1. Aktualisieren Sie die Abfrage, um Informationen zum referenzierten Mitarbeiter hinzuzufügen:
 
@@ -197,11 +197,11 @@ Aktualisieren Sie anschließend die von der React-Anwendung verwendeten Abfragen
    }
    ```
 
-   Mit dieser Aktualisierung werden zusätzliche Eigenschaften zu `adventureContributor`, `fullName`, `occupation` und `pictureReference` in die Abfrage aufgenommen.
+   Mit dieser Aktualisierung erhalten Sie zusätzliche Eigenschaften zu `adventureContributor`, `fullName`, `occupation`und `pictureReference` wird in die Abfrage aufgenommen.
 
-1. Inspect die Komponente `Contributor`, die in die Datei `AdventureDetail.js` unter `function Contributor(...)` eingebettet ist. Diese Komponente rendert den Namen, den Beruf und das Bild des Mitwirkenden, falls die Eigenschaften vorhanden sind.
+1. Inspect `Contributor` Komponente eingebettet in `AdventureDetail.js` Datei unter `function Contributor(...)`. Diese Komponente rendert den Namen, den Beruf und das Bild des Mitwirkenden, falls die Eigenschaften vorhanden sind.
 
-   Die Komponente `Contributor` wird in der Methode `AdventureDetail(...)` `return` referenziert:
+   Die `Contributor` -Komponente wird im Abschnitt `AdventureDetail(...)` `return` -Methode:
 
    ```javascript
    function AdventureDetail(props) {
@@ -228,14 +228,14 @@ Aktualisieren Sie anschließend die von der React-Anwendung verwendeten Abfragen
    $ npm start
    ```
 
-1. Navigieren Sie zu [http://localhost:3000](http://localhost:3000/) und klicken Sie auf ein Abenteuer mit einem referenzierten Mitarbeiter. Sie sollten nun die Mitarbeiter-Informationen sehen, die unter **Itinerary** aufgelistet sind:
+1. Navigieren Sie zu [http://localhost:3000](http://localhost:3000/) und klicken Sie auf ein Abenteuer, das über einen referenzierten Mitarbeiter verfügt. Sie sollten nun die Mitarbeiter-Informationen sehen, die unten unter der **Route**:
 
    ![Mitwirkender in der App hinzugefügt](assets/fragment-references/contributor-added-detail.png)
 
 ## Herzlichen Glückwunsch!{#congratulations}
 
-Herzlichen Glückwunsch! Sie haben ein vorhandenes Inhaltsfragmentmodell mit dem Feld **Fragmentverweis** aktualisiert, um auf ein verschachteltes Inhaltsfragment zu verweisen. Außerdem haben Sie erfahren, wie Sie eine GraphQL-Abfrage ändern, um Felder aus einem referenzierten Modell einzuschließen.
+Herzlichen Glückwunsch! Sie haben ein vorhandenes Inhaltsfragmentmodell aktualisiert, um auf ein verschachteltes Inhaltsfragment zu verweisen, indem Sie die **Fragmentverweis** -Feld. Außerdem haben Sie erfahren, wie Sie eine GraphQL-Abfrage ändern, um Felder aus einem referenzierten Modell einzuschließen.
 
 ## Nächste Schritte {#next-steps}
 
-Im nächsten Kapitel [Produktionsbereitstellung mit einer AEM-Veröffentlichungsumgebung](./production-deployment.md) erfahren Sie mehr über AEM-Autoren- und Veröffentlichungsdienste und das empfohlene Bereitstellungsmuster für Headless-Anwendungen. Sie aktualisieren eine vorhandene Anwendung, um Umgebungsvariablen zu verwenden, um einen GraphQL-Endpunkt basierend auf der Zielumgebung dynamisch zu ändern. Außerdem erfahren Sie, wie Sie AEM für Cross-Origin Resource Sharing (CORS) ordnungsgemäß konfigurieren.
+Im nächsten Kapitel [Produktionsbereitstellung mithilfe einer AEM-Veröffentlichungsumgebung](./production-deployment.md), erfahren Sie mehr über die Autoren- und Veröffentlichungsdienste von AEM und das empfohlene Bereitstellungsmuster für Headless-Anwendungen. Sie aktualisieren eine vorhandene Anwendung, um Umgebungsvariablen zu verwenden, um einen GraphQL-Endpunkt basierend auf der Zielumgebung dynamisch zu ändern. Außerdem erfahren Sie, wie Sie AEM für Cross-Origin Resource Sharing (CORS) ordnungsgemäß konfigurieren.

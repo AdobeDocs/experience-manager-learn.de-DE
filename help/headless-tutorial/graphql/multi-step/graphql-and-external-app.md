@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
 workflow-type: tm+mt
-source-wordcount: '1398'
+source-wordcount: '1382'
 ht-degree: 1%
 
 ---
@@ -27,9 +27,9 @@ In diesem Tutorial wird eine einfache React-App verwendet, um Abenteuerinhalte a
 
 Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die in den vorherigen Teilen beschriebenen Schritte abgeschlossen wurden.
 
-_IDE-Screenshots in diesem Kapitel stammen aus  [Visual Studio Code](https://code.visualstudio.com/)_
+_IDE-Screenshots in diesem Kapitel stammen von [Visual Studio-Code](https://code.visualstudio.com/)_
 
-Installieren Sie optional eine Browsererweiterung wie [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln), um weitere Details zu einer GraphQL-Abfrage anzeigen zu können.
+Optional können Sie eine Browser-Erweiterung wie [GraphQL-Netzwerkinspektor](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln) , um weitere Details zu einer GraphQL-Abfrage anzeigen zu können.
 
 ## Ziele
 
@@ -42,11 +42,11 @@ In diesem Kapitel lernen wir Folgendes:
 
 ## React-App starten
 
-Da sich dieses Kapitel auf die Entwicklung eines Clients für die Verwendung von Inhaltsfragmenten über GraphQL konzentriert, muss der Quellcode der [WKND GraphQL React-App heruntergeladen und ](./setup.md#react-app) auf Ihrem lokalen Computer eingerichtet werden und das [AEM SDK wird als Autorendienst](./setup.md#aem-sdk) mit der [Beispiel-WKND-Site](./setup.md#wknd-site) ausgeführt.
+Da sich dieses Kapitel auf die Entwicklung eines Clients zur Verwendung von Inhaltsfragmenten über GraphQL konzentriert, ist das Beispiel [WKND GraphQL React App-Quellcode muss heruntergeladen und eingerichtet werden](../quick-setup/local-sdk.md) auf Ihrem lokalen Computer.
 
-Der Start der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlicher beschrieben. Die gekürzten Anweisungen können jedoch befolgt werden:
+Das Starten der React-App wird im Abschnitt [Schnelleinstellungen](../quick-setup/local-sdk.md) -Kapitel, jedoch können die abgekürzten Anweisungen befolgt werden:
 
-1. Wenn Sie dies noch nicht getan haben, klonen Sie die WKND GraphQL-React-Beispielanwendung von [Github.com](https://github.com/adobe/aem-guides-wknd-graphql)
+1. Wenn Sie dies noch nicht getan haben, klonen Sie die WKND GraphQL React-Beispielanwendung aus [Github.com](https://github.com/adobe/aem-guides-wknd-graphql)
 
    ```shell
    $ git clone --branch tutorial/react git@github.com:adobe/aem-guides-wknd-graphql.git
@@ -56,8 +56,8 @@ Der Start der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlicher
 
    ![React-App in VSCode](./assets/graphql-and-external-app/react-app-in-vscode.png)
 
-1. Navigieren Sie in der Befehlszeile zum Ordner `react-app` .
-1. Starten Sie die WKND GraphQL React-App, indem Sie den folgenden Befehl aus dem Projektstamm (Ordner `react-app` ) ausführen.
+1. Navigieren Sie in der Befehlszeile zum `react-app` Ordner
+1. Starten Sie die WKND GraphQL React-App, indem Sie den folgenden Befehl aus dem Projektstamm ausführen (die `react-app` folder)
 
    ```shell
    $ cd aem-guides-wknd-graphql/react-app
@@ -66,15 +66,15 @@ Der Start der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlicher
 
 1. Überprüfen Sie die App unter [http://localhost:3000/](http://localhost:3000/). Die React-Beispielanwendung besteht aus zwei Hauptteilen:
 
-   * Das Starterlebnis dient als Index von WKND Adventures, indem es __Adventure__ Inhaltsfragmente in AEM mit GraphQL abfragt. In diesem Kapitel werden wir diese Ansicht ändern, um die Filterung von Abenteuern nach Aktivität zu unterstützen.
+   * Das Starterlebnis dient als Index der WKND Adventures, indem es abgefragt wird. __Abenteuer__ Inhaltsfragmente in AEM mit GraphQL. In diesem Kapitel werden wir diese Ansicht ändern, um die Filterung von Abenteuern nach Aktivität zu unterstützen.
 
-      ![WKND GraphQL React App - Starterlebnis](./assets/graphql-and-external-app/react-home-view.png)
+      ![WKND GraphQL-React-App - Starterlebnis](./assets/graphql-and-external-app/react-home-view.png)
 
-   * Das Erlebnis mit Abenteuerdetails verwendet GraphQL, um das spezifische __Adventure__-Inhaltsfragment abzufragen, und zeigt weitere Datenpunkte an.
+   * Das Erlebnis mit Abenteuerdetails verwendet GraphQL, um die spezifische __Abenteuer__ Inhaltsfragment und zeigt weitere Datenpunkte an.
 
       ![WKND GraphQL-React-App - Detailerlebnis](./assets/graphql-and-external-app/react-details-view.png)
 
-1. Verwenden Sie die Entwicklungs-Tools des Browsers und eine Browsererweiterung wie [GraphQL Network Inspector](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln), um die an AEM gesendeten GraphQL-Abfragen und deren JSON-Antworten zu überprüfen. Dieser Ansatz kann verwendet werden, um GraphQL-Anforderungen und -Antworten zu überwachen, um sicherzustellen, dass sie korrekt formuliert sind und ihre Antworten erwartungsgemäß sind.
+1. Verwenden Sie die Entwicklungs-Tools des Browsers und eine Browsererweiterung wie [GraphQL-Netzwerkinspektor](https://chrome.google.com/webstore/detail/graphql-network-inspector/ndlbedplllcgconngcnfmkadhokfaaln) , um die an AEM gesendeten GraphQL-Abfragen und deren JSON-Antworten zu überprüfen. Dieser Ansatz kann verwendet werden, um GraphQL-Anforderungen und -Antworten zu überwachen, um sicherzustellen, dass sie korrekt formuliert sind und ihre Antworten erwartungsgemäß sind.
 
    ![Raw-Abfrage für AdventureList](assets/graphql-and-external-app/raw-query-chrome-extension.png)
 
@@ -88,35 +88,35 @@ Der Start der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlicher
 
    >[!NOTE]
    >
-   > Während der Entwicklung ist die React-App so konfiguriert, dass HTTP-Anforderungen über den Webpack Development Server auf AEM übertragen werden. Die React-App sendet Anfragen an `http://localhost:3000`, die sie an den AEM-Autorendienst weiterleitet, der unter `http://localhost:4502` ausgeführt wird. Weitere Informationen finden Sie in der Datei `src/setupProxy.js` und `env.development` .
+   > Während der Entwicklung ist die React-App so konfiguriert, dass HTTP-Anforderungen über den Webpack Development Server auf AEM übertragen werden. Die React-App sendet Anfragen an  `http://localhost:3000` , die sie an den AEM-Autorendienst weiterleitet, der auf `http://localhost:4502`. Überprüfen Sie die Datei. `src/setupProxy.js` und `env.development` für Details.
    >
    > In Nicht-Entwicklungs-Szenarios wird die React-App direkt konfiguriert, um Anfragen an AEM zu senden.
 
 ## GraphQL-Code der App durchsuchen
 
-1. Öffnen Sie in Ihrer IDE die Datei `src/api/useGraphQL.js`.
+1. Öffnen Sie in Ihrer IDE die -Datei. `src/api/useGraphQL.js`.
 
-   Dies ist ein [React Effect Hook](https://reactjs.org/docs/hooks-overview.html#effect-hook), der auf Änderungen am `query` der App wartet und beim Ändern eine HTTP-POST-Anfrage an den AEM GraphQL-Endpunkt sendet und die JSON-Antwort an die App zurückgibt.
+   Dies ist ein [React Effect Hook](https://reactjs.org/docs/hooks-overview.html#effect-hook) , die auf Änderungen am `query`und sendet bei Änderung eine HTTP-POST-Anfrage an den AEM GraphQL-Endpunkt und gibt die JSON-Antwort an die App zurück.
 
-   Jedes Mal, wenn die React-App eine GraphQL-Abfrage durchführen muss, ruft sie diesen benutzerdefinierten `useGraphQL(query)`-Hook auf und übergibt die GraphQL an AEM.
+   Jedes Mal, wenn die React-App eine GraphQL-Abfrage durchführen muss, ruft sie diese benutzerdefinierte `useGraphQL(query)` -Erweiterungspunkt, der die an AEM zu sendende GraphQL übergibt.
 
-   Dieses Hook verwendet das einfache `fetch`-Modul, um die HTTP-POST GraphQL-Anforderung zu erstellen. Andere Module wie der [Apollo GraphQL-Client](https://www.apollographql.com/docs/react/) können jedoch ähnlich verwendet werden.
+   Dieser Hook verwendet die einfache `fetch` -Modul, um die HTTP-POST-GraphQL-Anforderung zu erstellen, aber andere Module wie die [Apollo GraphQL-Client](https://www.apollographql.com/docs/react/) kann ähnlich verwendet werden.
 
-1. Öffnen Sie `src/components/Adventures.js` in der IDE, die für die Abenteuerliste der Startansicht zuständig ist, und überprüfen Sie den Aufruf des Hooks `useGraphQL`.
+1. Öffnen `src/components/Adventures.js` in der IDE, die für die Liste der Abenteuer in der Startansicht verantwortlich ist, und überprüfen Sie den Aufruf der `useGraphQL` Haken.
 
-   Dieser Code setzt den Standard `query` so, dass er wie unten in dieser Datei definiert den `allAdventuresQuery` darstellt.
+   Mit diesem Code wird der Standard `query` , `allAdventuresQuery` wie unten in dieser Datei definiert.
 
    ```javascript
    const [query, setQuery] = useState(allAdventuresQuery);
    ```
 
-   ... und jedes Mal, wenn sich die Variable `query` ändert, wird der Hook `useGraphQL` aufgerufen, der wiederum die GraphQL-Abfrage gegen AEM ausführt und die JSON an die Variable `data` zurückgibt, die dann zum Rendern der Abenteuerliste verwendet wird.
+   ... und jedes Mal, wenn `query` ändern, wird die `useGraphQL` Der -Erweiterungspunkt wird aufgerufen, wodurch wiederum die GraphQL-Abfrage gegen AEM ausgeführt und die JSON an die `data` -Variable, die dann zum Rendern der Abenteuerliste verwendet wird.
 
    ```javascript
    const { data, errorMessage } = useGraphQL(query);
    ```
 
-   `allAdventuresQuery` ist eine konstante GraphQL-Abfrage, die in der Datei definiert ist und alle Adventure-Inhaltsfragmente ohne Filterung abfragt und nur die Datenpunkte zurückgibt, die die Startansicht rendern müssen.
+   Die `allAdventuresQuery` ist eine konstante GraphQL-Abfrage, die in der Datei definiert ist und alle Adventure-Inhaltsfragmente ohne Filterung abfragt und nur die Datenpunkte zurückgibt, die die Startansicht rendern müssen.
 
    ```javascript
    const allAdventuresQuery = `
@@ -141,23 +141,23 @@ Der Start der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlicher
    `;
    ```
 
-1. Öffnen Sie `src/components/AdventureDetail.js`, die React-Komponente, die für die Anzeige des Erlebnisses mit Abenteuerdetails zuständig ist. Diese Ansicht fordert ein bestimmtes Inhaltsfragment an, verwendet dessen JCR-Pfad als eindeutige ID und rendert die angegebenen Details.
+1. Öffnen `src/components/AdventureDetail.js`, die React-Komponente, die für die Anzeige des Erlebnisses mit den Erlebnissen der Erlebnisdetails verantwortlich ist. Diese Ansicht fordert ein bestimmtes Inhaltsfragment an, verwendet dessen JCR-Pfad als eindeutige ID und rendert die angegebenen Details.
 
-   Ähnlich wie `Adventures.js` wird der benutzerdefinierte `useGraphQL` React Hook wiederverwendet, um diese GraphQL-Abfrage gegen AEM durchzuführen.
+   Ähnlich wie `Adventures.js`, die benutzerdefinierte `useGraphQL` React Hook wird wiederverwendet, um diese GraphQL-Abfrage gegen AEM durchzuführen.
 
-   Der Pfad des Inhaltsfragments wird vom `props` oberen Rand der Komponente erfasst und zum Angeben des Inhaltsfragments verwendet, für das abgefragt werden soll.
+   Der Pfad des Inhaltsfragments wird aus dem `props` top wird verwendet, um das Inhaltsfragment anzugeben, für das abgefragt werden soll.
 
    ```javascript
    const contentFragmentPath = props.location.pathname.substring(props.match.url.length);
    ```
 
-   ... und die parametrisierte GraphQL-Abfrage mithilfe der Funktion `adventureDetailQuery(..)` erstellt und an `useGraphQL(query)` übergeben wird, wodurch die GraphQL-Abfrage gegen AEM ausgeführt wird und die Ergebnisse an die Variable `data` zurückgegeben werden.
+   ... und die parametrisierte GraphQL-Abfrage mithilfe der `adventureDetailQuery(..)` Funktion und übergeben an `useGraphQL(query)` , das die GraphQL-Abfrage gegen AEM ausführt und die Ergebnisse an die `data` -Variable.
 
    ```javascript
    const { data, errorMessage } = useGraphQL(adventureDetailQuery(contentFragmentPath));
    ```
 
-   Die Funktion `adventureDetailQuery(..)` umschließt einfach eine GraphQL-Filterabfrage, die AEM `<modelName>ByPath`-Syntax verwendet, um ein einzelnes Inhaltsfragment abzufragen, das durch seinen JCR-Pfad identifiziert wird, und alle angegebenen Datenpunkte zurückgibt, die zum Rendern der Details des Abenteuers erforderlich sind.
+   Die `adventureDetailQuery(..)` -Funktion umbricht einfach eine GraphQL-Filterabfrage, die AEM verwendet `<modelName>ByPath` -Syntax, um ein einzelnes Inhaltsfragment abzufragen, das durch seinen JCR-Pfad identifiziert wird, und alle angegebenen Datenpunkte zurückgibt, die zum Rendern der Details des Abenteuers erforderlich sind.
 
    ```javascript
    function adventureDetailQuery(_path) {
@@ -199,9 +199,9 @@ Der Start der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlicher
 Ändern wir anschließend die React-App, um parametrisierte GraphQL-Abfragen durchzuführen, die die Startansicht durch die Aktivität der Abenteuer einschränken.
 
 1. Öffnen Sie in Ihrer IDE die Datei: `src/components/Adventures.js`. Diese Datei stellt die Abenteuer-Komponente des Starterlebnisses dar, die die Abenteuer-Karten abfragt und anzeigt.
-1. Inspect die Funktion `filterQuery(activity)`, die nicht verwendet wird, aber zur Erstellung einer GraphQL-Abfrage vorbereitet wurde, die Abenteuer durch `activity` filtert.
+1. Inspect die Funktion `filterQuery(activity)`, das nicht verwendet wird, aber vorbereitet wurde, um eine GraphQL-Abfrage zu formulieren, mit der Abenteuer durch `activity`.
 
-   Beachten Sie, dass der Parameter `activity` als Teil eines `filter` im Feld `adventureActivity` in die GraphQL-Abfrage eingefügt wird, sodass der Wert dieses Felds mit dem Parameterwert übereinstimmt.
+   Beachten Sie, dass Parameter `activity` in die GraphQL-Abfrage als Teil einer `filter` auf `adventureActivity` -Feld, das den Wert dieses Felds an den Wert des Parameters anpasst.
 
    ```javascript
    function filterQuery(activity) {
@@ -236,7 +236,7 @@ Der Start der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlicher
    }
    ```
 
-1. Aktualisieren Sie die `return`-Anweisung der React Adventures-Komponente, um Schaltflächen hinzuzufügen, die die neuen parametrisierten `filterQuery(activity)` aufrufen, um die zu listenden Abenteuer bereitzustellen.
+1. Aktualisieren der React Adventures-Komponente `return` Anweisung zum Hinzufügen von Schaltflächen, die die neuen parametrisierten `filterQuery(activity)` um die Abenteuer zu bieten, die zu listen.
 
    ```javascript
    function Adventures() {
@@ -269,7 +269,7 @@ Der Start der React-App wird im Kapitel [Quick Setup](./setup.md) ausführlicher
 
 GraphQL ist stark typisiert und kann daher hilfreiche Fehlermeldungen zurückgeben, wenn die Abfrage ungültig ist. Als Nächstes simulieren wir eine falsche Abfrage, um die zurückgegebene Fehlermeldung anzuzeigen.
 
-1. Öffnen Sie die Datei `src/api/useGraphQL.js` erneut. Inspect Sie das folgende Snippet, um die Fehlerbehandlung anzuzeigen:
+1. Datei erneut öffnen `src/api/useGraphQL.js`. Inspect Sie das folgende Snippet, um die Fehlerbehandlung anzuzeigen:
 
    ```javascript
    //useGraphQL.js
@@ -288,12 +288,12 @@ GraphQL ist stark typisiert und kann daher hilfreiche Fehlermeldungen zurückgeb
        });
    ```
 
-   Die Antwort wird daraufhin überprüft, ob sie ein `errors` -Objekt enthält. Das `errors`-Objekt wird von AEM gesendet, wenn Probleme mit der GraphQL-Abfrage auftreten, z. B. ein nicht definiertes Feld, das auf dem Schema basiert. Wenn kein `errors` -Objekt vorhanden ist, wird `data` festgelegt und zurückgegeben.
+   Die Antwort wird daraufhin überprüft, ob sie eine `errors` -Objekt. Die `errors` -Objekt wird von AEM gesendet, wenn Probleme mit der GraphQL-Abfrage auftreten, z. B. ein nicht definiertes Feld, das auf dem Schema basiert. Wenn keine `errors` -Objekt `data` festgelegt und zurückgegeben.
 
-   `window.fetch` enthält eine `.catch` -Anweisung zu *catch* alle häufigen Fehler wie eine ungültige HTTP-Anforderung oder wenn die Verbindung zum Server nicht hergestellt werden kann.
+   Die `window.fetch` enthält `.catch` Anweisung zu *catch* alle häufigen Fehler wie eine ungültige HTTP-Anforderung oder wenn die Verbindung zum Server nicht hergestellt werden kann.
 
 1. Öffnen Sie die Datei `src/components/Adventures.js`.
-1. Ändern Sie `allAdventuresQuery`, um eine ungültige Eigenschaft `adventurePetPolicy` einzuschließen:
+1. Ändern Sie die `allAdventuresQuery` , um eine ungültige Eigenschaft einzuschließen `adventurePetPolicy`:
 
    ```javascript
    /**
@@ -323,21 +323,21 @@ GraphQL ist stark typisiert und kann daher hilfreiche Fehlermeldungen zurückgeb
    `;
    ```
 
-   Wir wissen, dass `adventurePetPolicy` nicht Teil des Abenteuer-Modells ist, daher sollte dies einen Fehler Trigger haben.
+   Wir wissen, dass `adventurePetPolicy` ist nicht Teil des Abenteuer-Modells, daher sollte dies einen Trigger verursachen.
 
 1. Speichern Sie die Änderungen und kehren Sie zum Browser zurück. Es sollte eine Fehlermeldung wie die folgende angezeigt werden:
 
    ![Fehler &quot;Ungültige Eigenschaft&quot;](assets/graphql-and-external-app/invalidProperty.png)
 
-   Die GraphQL-API erkennt, dass `adventurePetPolicy` im `AdventureModel` nicht definiert ist, und gibt eine entsprechende Fehlermeldung zurück.
+   Die GraphQL-API erkennt, dass `adventurePetPolicy` nicht definiert ist im `AdventureModel` und gibt eine entsprechende Fehlermeldung zurück.
 
-1. Inspect Sie die Antwort von AEM mithilfe der Entwicklertools des Browsers, um das JSON-Objekt `errors` anzuzeigen:
+1. Inspect die Antwort von AEM mithilfe der Entwicklertools des Browsers, um die `errors` JSON-Objekt:
 
    ![Fehler JSON-Objekt](assets/graphql-and-external-app/error-json-response.png)
 
-   Das `errors` -Objekt ist ausführlich und enthält Informationen zum Speicherort der fehlerhaften Abfrage und Classification des Fehlers.
+   Die `errors` -Objekt ist ausführlich und enthält Informationen zum Speicherort der fehlerhaften Abfrage und Classification des Fehlers.
 
-1. Kehren Sie zu `Adventures.js` zurück und kehren Sie die Abfrageänderung zurück, um die App wieder in den richtigen Status zu versetzen.
+1. Zurück zu `Adventures.js` und kehren Sie die Abfrageänderung zurück, um die App in den richtigen Status zu versetzen.
 
 ## Herzlichen Glückwunsch!{#congratulations}
 
@@ -345,4 +345,4 @@ Herzlichen Glückwunsch! Sie haben den Code der WKND GraphQL React-Beispielanwen
 
 ## Nächste Schritte {#next-steps}
 
-Im nächsten Kapitel [Erweiterte Datenmodellierung mit Fragmentverweisen](./fragment-references.md) erfahren Sie, wie Sie mit der Funktion &quot;Fragmentverweis&quot;eine Beziehung zwischen zwei verschiedenen Inhaltsfragmenten erstellen. Außerdem erfahren Sie, wie Sie eine GraphQL-Abfrage ändern, um Felder aus einem referenzierten Modell einzuschließen.
+Im nächsten Kapitel [Erweiterte Datenmodellierung mit Fragmentverweisen](./fragment-references.md) Sie erfahren, wie Sie mit der Funktion &quot;Fragmentverweis&quot;eine Beziehung zwischen zwei verschiedenen Inhaltsfragmenten erstellen. Außerdem erfahren Sie, wie Sie eine GraphQL-Abfrage ändern, um Felder aus einem referenzierten Modell einzuschließen.
