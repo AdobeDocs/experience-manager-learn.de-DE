@@ -8,13 +8,13 @@ role: Developer
 level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
-source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
+exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
+source-git-commit: 94a57490edb00da072446ee8ca07c12c413ce1ac
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1072'
 ht-degree: 2%
 
 ---
-
 
 # AEM Headless-Schnelleinrichtung für AEM as a Cloud Service
 
@@ -26,13 +26,13 @@ Die folgenden Schritte sind erforderlich, um dieser schnellen Einrichtung zu fol
 
 + AEM as a Cloud Service Sandbox-Umgebung (vorzugsweise Entwicklung)
 + Zugriff auf AEM as a Cloud Service und Cloud Manager
-   + `AEM Administrator` Zugang zu AEM as a Cloud Service
-   + `Cloud Manager - Deployment Manager` Zugriff auf Cloud Manager
+   + __AEM Administrator__ Zugang zu AEM as a Cloud Service
+   + __Cloud Manager - Deployment Manager__ Zugriff auf Cloud Manager
 + Die folgenden Tools müssen lokal installiert sein:
    + [Node.js v10+](https://nodejs.org/en/)
    + [npm 6+](https://www.npmjs.com/)
    + [Git](https://git-scm.com/)
-   + Eine IDE (z. B. [Microsoft® Visual Studio Code](https://code.visualstudio.com/)
+   + Eine IDE (z. B. [Microsoft® Visual Studio Code](https://code.visualstudio.com/))
 
 ## 1. Cloud Manager-Git-Repository erstellen
 
@@ -74,15 +74,13 @@ _Screencast von Schritten_
       $ git remote add adobe https://git.cloudmanager.adobe.com/<YOUR ADOBE ORGANIZATION>/aem-headless-quick-setup/
       ```
 
-1. Push des Quellcodes des Beispielprojekts an das Cloud Manager-Git-Repository
+1. Pushen Sie den Quellcode des Beispielprojekts aus Ihrem lokalen Git-Repository in das Cloud Manager-Git-Repository.
 
-   1. Den Code aus Ihrem lokalen Git-Repository in das Cloud Manager-Git-Repository pushen
+   ```shell
+   $ git push adobe master:main
+   ```
 
-      ```shell
-      $ git push adobe master:main
-      ```
-
-      Wenn Sie nach Anmeldeinformationen gefragt werden, geben Sie die __Benutzername__ und __Passwort__ von Cloud Manager __Repository-Informationen__ modal.
+   Wenn Sie nach Anmeldeinformationen gefragt werden, geben Sie die __Benutzername__ und __Passwort__ von Cloud Manager __Repository-Informationen__ modal.
 
 ## 3. Stellen Sie die WKND-Site für AEM as a Cloud Service bereit.
 
