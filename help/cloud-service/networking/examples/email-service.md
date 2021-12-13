@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
+source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
 
 ---
-
 
 # E-Mail-Dienst
 
@@ -22,7 +22,7 @@ Senden von E-Mails von AEM as a Cloud Service durch Konfiguration von AEM `Defau
 
 Da E-Mail-Dienste (meist) nicht über HTTP/HTTPS ausgeführt werden, müssen Verbindungen zu E-Mail-Diensten von AEM as a Cloud Service abgesichert werden.
 
-+ `smtp.host` auf die OSGi-Umgebungsvariable eingestellt ist `$[env:AEM_PROXY_HOST]` so wird es durch das Egress geroutet.
++ `smtp.host` auf die OSGi-Umgebungsvariable eingestellt ist `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` so wird es durch das Egress geroutet.
 + `smtp.port` auf `portForward.portOrig` -Port, der dem Host und Port des Ziel-E-Mail-Diensts zugeordnet ist. In diesem Beispiel wird die Zuordnung verwendet: `AEM_PROXY_HOST:30002` → `smtp.sendgrid.com:465`.
 
 Da Geheimnisse nicht im Code gespeichert werden dürfen, sollten Benutzername und Kennwort des E-Mail-Dienstes am besten mit [geheime OSGi-Konfigurationsvariablen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values), die mithilfe der AIO-CLI oder der Cloud Manager-API festgelegt wird.
@@ -55,7 +55,7 @@ In diesem OSGi-Konfigurationsbeispiel wird AEM Mail OSGi-Dienst für die Verwend
 
 ```json
 {
-    "smtp.host": "$[env:AEM_PROXY_HOST]",
+    "smtp.host": "$[env:AEM_PROXY_HOST;default=proxy.tunnel]",
     "smtp.port": "30002",
     "smtp.user": "$[env:EMAIL_USERNAME;default=apikey]",
     "smtp.password": "$[secret:EMAIL_PASSWORD]",

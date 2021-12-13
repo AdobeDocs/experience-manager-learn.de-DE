@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 kt: 9350
 thumbnail: KT-9350.jpeg
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
+source-git-commit: 6ed26e5c9bf8f5e6473961f667f9638e39d1ab0e
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1035'
 ht-degree: 0%
 
 ---
-
 
 # Flexibles Port-Egress
 
@@ -168,7 +168,7 @@ Beim Erstellen von HTTP/HTTPS-Verbindungen zu nicht standardmäßigen Ports (nic
 
 AEM bietet zwei Sätze spezieller Java™-Systemvariablen, die AEM HTTP/HTTPS-Proxys zugeordnet sind.
 
-| Variablenname | Verwendung | Java™-Code | OSGi-Konfiguration | | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | Proxy-Host für HTTP-Verbindungen | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | | `AEM_HTTP_PROXY_PORT` | Proxy-Port für HTTP-Verbindungen | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` | | `AEM_HTTPS_PROXY_HOST` | Proxy-Host für HTTPS-Verbindungen | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | | `AEM_HTTPS_PROXY_PORT` | Proxy-Port für HTTPS-Verbindungen | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` |
+| Variablenname | Verwendung | Java™-Code | OSGi-Konfiguration | | - | - | - | - | | `AEM_PROXY_HOST` | Proxy-Host für beide HTTP/HTTPS-Verbindungen | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` | | `AEM_HTTP_PROXY_PORT` | Proxy-Port für HTTPS-Verbindungen (setzen Sie Fallback auf `3128`) | `System.getenv().getOrDefault("AEM_HTTP_PROXY_PORT", 3128)` | `$[env:AEM_HTTP_PROXY_PORT;default=3128]` | | `AEM_HTTPS_PROXY_PORT` | Proxy-Port für HTTPS-Verbindungen (setzen Sie Fallback auf `3128`) | `System.getenv().getOrDefault("AEM_HTTPS_PROXY_PORT", 3128)` | `$[env:AEM_HTTPS_PROXY_PORT;default=3128]` |
 
 Bei HTTP/HTTPS-Aufrufen an externe Dienste an nicht standardmäßigen Ports gibt es keine `portForwards` muss mit der Cloud Manager-API definiert werden `enableEnvironmentAdvancedNetworkingConfiguration` -Vorgang, da die &quot;Regeln&quot;für die Anschlussweiterleitung &quot;im Code&quot;definiert sind.
 
@@ -182,7 +182,7 @@ Bei HTTP/HTTPS-Aufrufen an externe Dienste an nicht standardmäßigen Ports gibt
 <tr>
 <td>
     <a  href="./examples/http-on-non-standard-ports.md"><img alt="HTTP/HTTPS bei nicht standardmäßigen Ports" src="./assets/code-examples__http.png"/></a>
-    <div><strong><a href="./examples/http-on-non-standard-ports.md">HTTP/HTTPS bei nicht standardmäßigen Ports</a></strong></div>
+    <div><strong><a href="./examples/http-on-non-standard-ports-flexible-port-egress.md">HTTP/HTTPS bei nicht standardmäßigen Ports</a></strong></div>
     <p>
         Java™-Codebeispiel, das eine HTTP/HTTPS-Verbindung von AEM as a Cloud Service zu einem externen Dienst bei nicht standardmäßigen HTTP/HTTPS-Ports herstellt.
     </p>
@@ -196,7 +196,7 @@ Bei HTTP/HTTPS-Aufrufen an externe Dienste an nicht standardmäßigen Ports gibt
 
 Beim Erstellen von Nicht-HTTP-/HTTPS-Verbindungen (z. B. SQL, SMTP usw.) aus AEM muss die Verbindung über einen speziellen Hostnamen hergestellt werden, der von AEM bereitgestellt wird.
 
-| Variablenname | Verwendung | Java™-Code | OSGi-Konfiguration | | - | - | - | - | | `AEM_PROXY_HOST` | Proxy-Host für Verbindungen ohne HTTP/HTTPS | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
+| Variablenname | Verwendung | Java™-Code | OSGi-Konfiguration | | - | - | - | - | | `AEM_PROXY_HOST` | Proxy-Host für Verbindungen ohne HTTP/HTTPS | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` |
 
 
 Verbindungen zu externen Diensten werden dann über die `AEM_PROXY_HOST` und des zugeordneten Anschlusses (`portForwards.portOrig`), die dann AEM zum zugeordneten externen Hostnamen (`portForwards.name`) und Port (`portForwards.portDest`).
@@ -209,7 +209,7 @@ Verbindungen zu externen Diensten werden dann über die `AEM_PROXY_HOST` und des
 
 <table><tr>
    <td>
-      <a  href="./examples/sql-datasourcepool.md"><img alt="SQL-Verbindung mit JDBC DataSourcePool" src="./assets//code-examples__sql-osgi.png"/></a>
+      <a  href="./examples/sql-datasourcepool.md"><img alt="SQL-Verbindung mit JDBC DataSourcePool" src="./assets/code-examples__sql-osgi.png"/></a>
       <div><strong><a href="./examples/sql-datasourcepool.md">SQL-Verbindung mit JDBC DataSourcePool</a></strong></div>
       <p>
             Java™-Codebeispiel für die Verbindung mit externen SQL-Datenbanken durch die Konfiguration AEM JDBC-Datenquellenpools.
