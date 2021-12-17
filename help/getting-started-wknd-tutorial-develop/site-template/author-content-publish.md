@@ -11,18 +11,14 @@ level: Beginner
 kt: 7497
 thumbnail: KT-7497.jpg
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
 workflow-type: tm+mt
-source-wordcount: '1364'
-ht-degree: 3%
+source-wordcount: '1333'
+ht-degree: 4%
 
 ---
 
 # Einführung in das Authoring und Publishing {#author-content-publish}
-
->[!CAUTION]
->
-> Das Tool für die schnelle Site-Erstellung ist derzeit eine technische Vorschau. Sie wird zu Test- und Evaluierungszwecken bereitgestellt und ist nicht zur Verwendung in der Produktion bestimmt, es sei denn, sie wurde mit der Adobe Support vereinbart.
 
 Es ist wichtig zu verstehen, wie ein Benutzer Inhalte für die Website aktualisiert. In diesem Kapitel werden wir die Rolle eines **Inhaltsautor** und nehmen einige redaktionelle Aktualisierungen an der im vorherigen Kapitel erstellten Site vor. Am Ende des Kapitels veröffentlichen wir die Änderungen, um zu verstehen, wie die Live-Site aktualisiert wird.
 

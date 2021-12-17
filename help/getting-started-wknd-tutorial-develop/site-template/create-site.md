@@ -11,18 +11,14 @@ level: Beginner
 kt: 7496
 thumbnail: KT-7496.jpg
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 2%
+source-wordcount: '924'
+ht-degree: 3%
 
 ---
 
 # Erstellen einer Site {#create-site}
-
->[!CAUTION]
->
-> Das Tool für die schnelle Site-Erstellung ist derzeit eine technische Vorschau. Sie wird zu Test- und Evaluierungszwecken bereitgestellt und ist nicht zur Verwendung in der Produktion bestimmt, es sei denn, sie wurde mit der Adobe Support vereinbart.
 
 Verwenden Sie im Rahmen der schnellen Site-Erstellung den Assistenten zur Site-Erstellung in Adobe Experience Manager AEM, um eine neue Website zu erstellen. Die von Adobe bereitgestellte Standardsite-Vorlage wird als Ausgangspunkt für die neue Site verwendet.
 
