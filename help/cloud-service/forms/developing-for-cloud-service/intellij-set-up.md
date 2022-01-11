@@ -8,9 +8,10 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 kt: 8843
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+exl-id: 34840d28-ad47-4a69-b15d-cd9593626527
+source-git-commit: 8d83d01fca3bfc9e6f674f7d73298b42f98a5d46
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '222'
 ht-degree: 0%
 
 ---
@@ -25,7 +26,20 @@ Installieren [IntelliJ Community Edition](https://www.jetbrains.com/idea/downloa
 * Importieren Sie das AEM Projekt, das Sie im vorherigen Schritt erstellt haben. Nach dem Importieren des Projekts sollte der Bildschirm ungefähr so aussehen: ![aem-banking-app](assets/aem-banking-app.png). Sie arbeiten normalerweise mit den Unterprojekten &quot;core,ui.apps&quot;, &quot;ui.config&quot;und &quot;ui.content&quot;.
 * Wenn das Maven- und Terminal-Fenster nicht angezeigt wird, gehen Sie zu Ansicht->Tools-Fenster und wählen Sie Maven und Terminal aus.
 
+## Schriftartenmodul hinzufügen
 
+Wenn Sie benutzerdefinierte Schriftarten in Ihrer PDF-Datei verwenden möchten, müssen Sie die benutzerdefinierten Schriftarten in die AEM Forms CS-Instanz übertragen. Führen Sie die folgenden Schritte aus
 
+* Erstellen Sie einen Ordner mit dem Namen **Schriften** in C:\CloudManager\aem-banking-application
+* Extrahieren Sie den Inhalt von [font.zip](assets/fonts.zip) in den neu erstellten Ordner für Schriftarten
+* Im Schriftartenmodul sind einige benutzerdefinierte Schriftarten enthalten. Sie können die benutzerdefinierten Schriftarten Ihres Unternehmens zum Ordner C:\CloudManager\aem-banking-application\fonts\src\main\resources folder of the fonts module hinzufügen.
+* Öffnen Sie die Datei C:\CloudManager\aem-banking-application\pom.xml .
+* Fügen Sie die folgende Zeile hinzu:  ```<module>fonts</module>``` im Modulabschnitt der pom.xml
+* Speichern Sie Ihre pom.xml
+* Aktualisieren Sie das Projekt aem-banking-application in IntelliJ
 
+Projektstruktur mit Schriftartenmodul
+![fonts-module](assets/fonts-module.png)
 
+Schriftartenmodul im Projekt-POM
+![fonts-pom](assets/fonts-module-pom.png)

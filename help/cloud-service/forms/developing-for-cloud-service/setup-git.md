@@ -8,7 +8,8 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 8848
-source-git-commit: 9063c3dfd9ab9ac537850694ce6545a3fdc840e9
+exl-id: 31487027-d528-48ea-b626-a740b94dceb8
+source-git-commit: 8d83d01fca3bfc9e6f674f7d73298b42f98a5d46
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
@@ -23,7 +24,7 @@ Wechseln Sie zur Eingabeaufforderung Navigieren Sie zu c:\cloudmanager\aem-banki
 
 ## Lokales Git-Repository initialisieren
 
-Vergewissern Sie sich, dass Sie sich unter c:\cloudmanager\aem-banking-app folder befinden.
+Stellen Sie sicher, dass Sie sich im Ordner c:\cloudmanager\aem-banking-app folder befinden.
 
 ```
 git init
@@ -61,16 +62,16 @@ git config --global credential.username "gbedekar-adobe-com"
 das Kennwort in der Konfigurationsdatei speichern
 
 ```java
-git config --global user.password "bqwxfvxq2akawtqx3oztacb5wax5a7"
+git config --global user.password "XXXX"
 ```
 
 (Das Kennwort ist Ihr Git-Repository-Kennwort für den Cloud Manager.)
 
-Registrieren Sie das Cloud Manager-Git-Repository bei Ihrem lokalen Git-Repository. Der folgende Befehl verknüpft **adobe** mit dem Remote-Git-Repository des Cloud Manager. Sie könnten einen beliebigen Namen anstelle von **adobe**
+Registrieren Sie das Cloud Manager-Git-Repository bei Ihrem lokalen Git-Repository. Der folgende Befehl verknüpft **bankingapp** mit dem Remote-Git-Repository des Cloud Manager. Sie könnten einen beliebigen Namen anstelle von **bankingapp**
 
 
-```java
-git remote add adobe https://git.cloudmanager.adobe.com/techmarketingdemos/Program2-p24107/
+```shell
+git remote add bankingapp https://git.cloudmanager.adobe.com/<cloud-manager-repo-path>
 ```
 
 (Stellen Sie sicher, dass Sie Ihre Repository-URL verwenden.)
@@ -80,6 +81,3 @@ git remote add adobe https://git.cloudmanager.adobe.com/techmarketingdemos/Progr
 ```java
 git remote -v
 ```
-
-
-
