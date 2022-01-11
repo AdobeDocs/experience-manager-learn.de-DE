@@ -12,9 +12,9 @@ mini-toc-levels: 1
 index: y
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: a366d485da3f473bd4c1ef31538231965acc825c
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '478'
 ht-degree: 29%
 
 ---
@@ -44,7 +44,7 @@ Zum Abschluss dieses Tutorials ist eine lokale Entwicklungsumgebung erforderlich
 
 Folgendes sollte lokal installiert werden:
 
-* Lokale AEM **Autor** Instanz (Cloud Service SDK, 6.5.5 oder 6.4.8.1+)
+* [Lokale AEM **Autor** instance](https://experience.adobe.com/#/downloads) (Cloud Service SDK, 6.5.5 oder 6.4.8.1+)
 * [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) (3.3.9 oder höher)
 * [Node.js](https://nodejs.org/en/) (LTS - Langfristige Unterstützung)
