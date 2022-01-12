@@ -5,13 +5,13 @@ type: Documentation
 role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
-feature: Document Services
+feature: Output Service
 topic: Development
 kt: 8185
 thumbnail: 332439.jpg
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '138'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 0%
 # Aufrufen der POST
 
 
-Der nächste Schritt besteht darin, einen HTTP-POST-Aufruf an den -Endpunkt mit den erforderlichen Parametern durchzuführen. Die Vorlage und die Datendateien werden als Ressourcendateien bereitgestellt. Die Eigenschaften des generierten PDF-Dokuments werden über den Parameter der Option in der Anfrage angegeben. Die Eigenschaften werden in der Ressourcendatei options.json angegeben. Da der Endpunkt über eine Token-basierte Authentifizierung verfügt, übergeben wir das Zugriffstoken in der Anfragekopfzeile.
+Der nächste Schritt besteht darin, einen HTTP-POST-Aufruf an den -Endpunkt mit den erforderlichen Parametern durchzuführen. Die Vorlage und die Datendateien werden als Ressourcendateien bereitgestellt. Die Eigenschaften des generierten PDF-Dokuments werden über den Parameter der Option in der Anfrage angegeben. Die Eigenschaft embedFonts wird verwendet, um benutzerdefinierte Schriftarten in das generierte PDF-Dokument einzubetten.[Befolgen Sie diese Dokumentation , um benutzerdefinierte Schriftarten für Ihre Forms-Cloud-Instanz bereitzustellen.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en) Die Eigenschaften werden in der Ressourcendatei options.json angegeben. Da der Endpunkt über eine Token-basierte Authentifizierung verfügt, übergeben wir das Zugriffstoken in der Anfragekopfzeile.
 
-Der folgende Code wurde verwendet, um Austausch-JWT für Zugriffstoken zu generieren
+Der folgende Code wurde verwendet, um PDF durch Zusammenführen von Daten mit der Vorlage zu generieren
 
 ```java
 public class DocumentGeneration
@@ -34,7 +34,7 @@ public class DocumentGeneration
                 String accessToken = cu.getAccessToken();
                 httpPost.addHeader("Authorization", "Bearer " + accessToken);
                 ClassLoader classLoader = DocumentGeneration.class.getClassLoader();
-                URL templateFile = classLoader.getResource("templates/address.xdp");
+                URL templateFile = classLoader.getResource("templates/custom_fonts.xdp");
                 File xdpTemplate = new File(templateFile.getPath());
                 URL url = classLoader.getResource("datafiles");
                 System.out.println(url.getPath());
@@ -45,7 +45,7 @@ public class DocumentGeneration
                         builder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
                         builder.addBinaryBody("data", files[i]);
                         builder.addBinaryBody("template", xdpTemplate);
-                        builder.addTextBody("options", GetOptions.getPDFOptions(), ContentType.APPLICATION_JSON);
+                        builder.addBinaryBody("options",GetOptions.getPDFOptions().getBytes(),ContentType.APPLICATION_JSON,"options"
                         try {
                                 HttpEntity entity = builder.build();
                                 httpPost.setEntity(entity);
