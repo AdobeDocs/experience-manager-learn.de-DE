@@ -1,18 +1,18 @@
 ---
-user-guide-title: Tutorial zu Adobe Experience Manager as a Cloud Service
+user-guide-title: Tutorials zu Adobe Experience Manager as a Cloud Service
 user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manager as a Cloud Service.
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
+source-git-commit: cea9a9dc003b76369db1b7fedb9549062885258d
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '656'
 ht-degree: 32%
 
 ---
 
 
-# Tutorial zu Adobe Experience Manager as a Cloud Service {#cloud-service}
+# Tutorials zu Adobe Experience Manager as a Cloud Service {#cloud-service}
 
 + [Übersicht](./overview.md)
 + Einführung in AEM as a Cloud Service{#introduction}
@@ -145,6 +145,7 @@ ht-degree: 32%
       + [Cloud Services und FDM einschließen](./forms/developing-for-cloud-service/azure-storage-fdm.md)
       + [Push to Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [In der Entwicklungsumgebung bereitstellen](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
+      + [Maven-Archetyp aktualisieren](./forms/developing-for-cloud-service/updating-project-archetype.md)
    + Adaptives Formular erstellen{#create-first-af}
       + [Einführung](./forms/create-first-af/introduction.md)
       + [Thema erstellen](./forms/create-first-af/create-theme.md)
@@ -172,6 +173,7 @@ ht-degree: 32%
       + [Formular vorab ausfüllen](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [Abfragesendungen](./forms/forms-cs-azure-portal/query-submitted-data.md)
    + Arbeitsablauf für die Überprüfung erstellen{#create-aem-workflow}
+      + [Workflow-Speicher externalisieren](./forms/create-aem-workflow/externalize-workflow.md)
       + [Workflow-Modell erstellen](./forms/create-aem-workflow/create-workflow.md)
       + [Trigger-Workflow](./forms/create-aem-workflow/configure-af.md)
    + Adobe Sign mit AEM Forms{#forms-and-sign}
