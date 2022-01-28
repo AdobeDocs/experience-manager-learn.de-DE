@@ -13,7 +13,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
-source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
+source-git-commit: 2685f2553349d6f0b48e03f2ed24dcea7ad9ac70
 workflow-type: tm+mt
 source-wordcount: '999'
 ht-degree: 3%
@@ -72,7 +72,7 @@ Nur der AEM Publish Dispatcher stellt Apache-Webserver- und Dispatcher-Protokoll
    + Staging: `WARN`
    + Produktion: `ERROR`
 
-## Cloud Manager {#cloud-manager}
+## Cloud Manager{#cloud-manager}
 
 Adobe Cloud Manager ermöglicht den täglichen Download von Protokollen über die Aktion &quot;Protokolle herunterladen&quot;einer Umgebung.
 
@@ -187,9 +187,9 @@ Die beste Protokollebene für jeden Umgebungstyp wird mit AEM as a Cloud Service
 
 Eine Alternative zum Festlegen statischer bekannter Java-Protokollebenen für jede Umgebung besteht darin, AEM als Cloud Service [Umgebungsspezifische Variablen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values) zur Parameter der Protokollebenen, sodass die Werte dynamisch über die [Adobe I/O-CLI mit Cloud Manager-Plug-in](#aio-cli).
 
-Dazu müssen die OSGi-Protokollierungskonfigurationen aktualisiert werden, um die umgebungsspezifischen Variablenplatzhalter zu verwenden. [Standardwerte](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values) für die Protokollierungsstufen sollte gemäß [Empfehlungen der Adobe](#log-levels). Zum Beispiel:
+Dazu müssen die OSGi-Protokollierungskonfigurationen aktualisiert werden, um die umgebungsspezifischen Variablenplatzhalter zu verwenden. [Standardwerte](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values) für die Protokollierungsstufen sollte gemäß [Empfehlungen der Adobe](#log-levels). Beispiel:
 
-`/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config-example.cfg.json`
+`/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config~example.cfg.json`
 
 ```
 {
