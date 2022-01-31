@@ -131,8 +131,8 @@ Erstellen Sie anschließend ein Modell, das Informationen zu einer Person enthä
 
 10. under **Nur angegebene Bildbreite akzeptieren**, wählen Sie &quot;Maximale Breite&quot;. Im **Maximal (Pixel)** eingeben. Wählen Sie dieselben Optionen für **Nur eine angegebene Bildhöhe akzeptieren**.
 
-   Diese Überprüfungen stellen sicher, dass hinzugefügte Bilder die angegebenen Werte nicht überschreiten. Die Validierungsregeln sollten jetzt wie folgt aussehen:
-   ![Validierungsregeln für Inhaltsreferenzen](assets/define-content-fragment-models/content-reference-validation.png)
+    Diese Überprüfungen stellen sicher, dass hinzugefügte Bilder die angegebenen Werte nicht überschreiten. Die Validierungsregeln sollten jetzt wie folgt aussehen:
+    ![Validierungsregeln für Inhaltsreferenzen](assets/define-content-fragment-models/content-reference-validation.png)
 
 11. Hinzufügen einer **Mehrzeiliger Text** und geben Sie ihm ein **Feldbezeichnung** der &quot;Biografie&quot;. Lassen Sie die **Standardtyp** als Standardoption &quot;Rich Text&quot;.
 
