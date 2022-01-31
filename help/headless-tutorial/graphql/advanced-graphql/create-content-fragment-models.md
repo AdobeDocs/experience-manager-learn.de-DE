@@ -136,13 +136,13 @@ Erstellen Sie anschließend ein Modell, das Informationen zu einer Person enthä
 
 11. Hinzufügen einer **Mehrzeiliger Text** und geben Sie ihm ein **Feldbezeichnung** der &quot;Biografie&quot;. Lassen Sie die **Standardtyp** als Standardoption &quot;Rich Text&quot;.
 
-   ![Biografie-Optionen](assets/define-content-fragment-models/biography.png)
+    ![Biografie-Optionen](assets/define-content-fragment-models/biography.png)
 
 12. Navigieren Sie zum **Datentypen** Registerkarte und ziehen Sie dann eine **Auflistung** Feld unter &quot;Profilbild&quot;. Anstelle der Standardeinstellung **Rendern als** auswählen **Dropdown**. Geben Sie eine Auswahl an Optionen für die Ausbilder-Erlebnisebene ein, z. B. &quot;Expert&quot;, &quot;Erweitert&quot;, &quot;Intermediate&quot;.
 
 13. Ziehen Sie als Nächstes einen weiteren **Auflistung** unter &quot;Instructor Experience Level&quot; und wählen Sie &quot;checkboxes&quot;unter der **Rendern als** -Option. Geben Sie verschiedene Fähigkeiten ein, wie Rock Climbing, Surfen, Radfahren, Skifahren und Backpacken. Die Beschriftung der Option und der Optionswert sollten wie folgt übereinstimmen:
 
-   ![Kompetenzauflistung](assets/define-content-fragment-models/skills-enum.png)
+    ![Kompetenzauflistung](assets/define-content-fragment-models/skills-enum.png)
 
 14. Erstellen Sie abschließend eine Feldbezeichnung &quot;Administrator-Details&quot;mit einer **Mehrzeiliger Text** -Feld.
 
