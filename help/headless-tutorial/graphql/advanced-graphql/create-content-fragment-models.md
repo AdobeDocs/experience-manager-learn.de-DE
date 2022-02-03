@@ -6,13 +6,13 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
-source-git-commit: 83e16ea87847182139982ea2378d8ff9f079c968
+exl-id: 2122ab13-f9df-4f36-9c7e-8980033c3b10
+source-git-commit: 7631432881de3deabbe831b2aec40d924b393442
 workflow-type: tm+mt
 source-wordcount: '1968'
 ht-degree: 1%
 
 ---
-
 
 # Erstellen von Inhaltsfragmentmodellen {#create-content-fragment-models}
 
@@ -52,7 +52,7 @@ Erstellen wir einige Inhaltsfragmentmodelle für die WKND-App. Wenn Sie eine gru
 
    ![Pfad für Inhaltsfragmentmodelle](assets/define-content-fragment-models/content-fragment-models-path.png)
 
-2. Auswählen **WKND-Site** , um die Liste der vorhandenen Inhaltsfragmentmodelle für die Site anzuzeigen.
+1. Auswählen **WKND-Site** , um die Liste der vorhandenen Inhaltsfragmentmodelle für die Site anzuzeigen.
 
 ### Kontaktdatenmodell {#contact-info-model}
 
@@ -60,11 +60,11 @@ Erstellen Sie anschließend ein Modell, das die Kontaktinformationen für eine P
 
 1. Auswählen **Erstellen** in der oberen rechten Ecke.
 
-2. Geben Sie dem Modell den Titel &quot;Kontaktinfo&quot;und wählen Sie dann **Erstellen**. Wählen Sie im angezeigten Erfolgsmodell die Option **Öffnen** , um das neu erstellte Modell zu bearbeiten.
+1. Geben Sie dem Modell den Titel &quot;Kontaktinfo&quot;und wählen Sie dann **Erstellen**. Wählen Sie im angezeigten Erfolgsmodell die Option **Öffnen** , um das neu erstellte Modell zu bearbeiten.
 
-3. Ziehen Sie zunächst einen **Einzelzeilentext** auf das Modell. Geben Sie einen **Feldbezeichnung** von &quot;Phone&quot;im **Eigenschaften** Registerkarte. Der Eigenschaftsname wird automatisch als `phone`. Aktivieren Sie das Kontrollkästchen, um das Feld zu erstellen. **Erforderlich**.
+1. Ziehen Sie zunächst einen **Einzelzeilentext** auf das Modell. Geben Sie einen **Feldbezeichnung** von &quot;Phone&quot;im **Eigenschaften** Registerkarte. Der Eigenschaftsname wird automatisch als `phone`. Aktivieren Sie das Kontrollkästchen, um das Feld zu erstellen. **Erforderlich**.
 
-4. Navigieren Sie zum **Datentypen** Registerkarte und dann ein weiteres **Einzelzeilentext** Feld unter dem Feld &quot;Telefon&quot;. Geben Sie einen **Feldbezeichnung** von &quot;E-Mail&quot;aus und setzen Sie sie auch auf **Erforderlich**.
+1. Navigieren Sie zum **Datentypen** Registerkarte und dann ein weiteres **Einzelzeilentext** Feld unter dem Feld &quot;Telefon&quot;. Geben Sie einen **Feldbezeichnung** von &quot;E-Mail&quot;aus und setzen Sie sie auch auf **Erforderlich**.
 
 Adobe Experience Manager verfügt über einige integrierte Validierungsmethoden. Mit diesen Validierungsmethoden können Sie bestimmten Feldern in Ihren Inhaltsfragmentmodellen Governance-Regeln hinzufügen. Fügen wir in diesem Fall eine Validierungsregel hinzu, um sicherzustellen, dass Benutzer beim Ausfüllen dieses Felds nur gültige E-Mail-Adressen eingeben können. Unter dem **Validierungstyp** Dropdown-Liste auswählen **E-Mail**.
 
@@ -80,20 +80,20 @@ Erstellen Sie anschließend ein Modell für eine Adresse.
 
 1. Aus dem **WKND-Site** auswählen **Erstellen** oben rechts.
 
-2. Geben Sie den Titel &quot;Adresse&quot;ein und wählen Sie dann **Erstellen**.
+1. Geben Sie den Titel &quot;Adresse&quot;ein und wählen Sie dann **Erstellen**.
 
    i. Wählen Sie im angezeigten Erfolgsmodell die Option **Öffnen** , um das neu erstellte Modell zu bearbeiten.
 
-3. Ziehen und Ablegen eines **Einzelzeilentext** auf das Modell ein und geben Sie ihm ein **Feldbezeichnung** von &quot;Street Address&quot;. Der Eigenschaftsname wird dann als `streetAddress`. Wählen Sie die **Erforderlich** aktivieren.
+1. Ziehen und Ablegen eines **Einzelzeilentext** auf das Modell ein und geben Sie ihm ein **Feldbezeichnung** von &quot;Street Address&quot;. Der Eigenschaftsname wird dann als `streetAddress`. Wählen Sie die **Erforderlich** aktivieren.
 
-4. Wiederholen Sie die obigen Schritte und fügen Sie dem Modell vier weitere Felder mit einzeiligem Text hinzu. Verwenden Sie die folgenden Beschriftungen:
+1. Wiederholen Sie die obigen Schritte und fügen Sie dem Modell vier weitere Felder mit einzeiligem Text hinzu. Verwenden Sie die folgenden Beschriftungen:
 
    * Stadt
    * Status
    * Postleitzahl
    * Land
 
-5. Auswählen **Speichern** , um die Änderungen am Adressmodell zu speichern.
+1. Auswählen **Speichern** , um die Änderungen am Adressmodell zu speichern.
 
    Das vollständige Fragmentmodell &quot;Adresse&quot;sollte wie folgt aussehen:
    ![Adressmodell](assets/define-content-fragment-models/address-model.png)
@@ -104,47 +104,47 @@ Erstellen Sie anschließend ein Modell, das Informationen zu einer Person enthä
 
 1. Wählen Sie oben rechts **Erstellen**.
 
-2. Geben Sie dem Modell den Titel &quot;Person&quot;und wählen Sie **Erstellen**. Wählen Sie im angezeigten Erfolgsmodell die Option **Öffnen** , um das neu erstellte Modell zu bearbeiten.
+1. Geben Sie dem Modell den Titel &quot;Person&quot;und wählen Sie **Erstellen**. Wählen Sie im angezeigten Erfolgsmodell die Option **Öffnen** , um das neu erstellte Modell zu bearbeiten.
 
-3. Ziehen Sie zunächst einen **Einzelzeilentext** auf das Modell. Geben Sie einen **Feldbezeichnung** von &quot;Vollständiger Name&quot;. Der Eigenschaftsname wird automatisch als `fullName`. Aktivieren Sie das Kontrollkästchen, um das Feld zu erstellen. **Erforderlich**.
+1. Ziehen Sie zunächst einen **Einzelzeilentext** auf das Modell. Geben Sie einen **Feldbezeichnung** von &quot;Vollständiger Name&quot;. Der Eigenschaftsname wird automatisch als `fullName`. Aktivieren Sie das Kontrollkästchen, um das Feld zu erstellen. **Erforderlich**.
 
    ![Optionen für vollständige Namen](assets/define-content-fragment-models/full-name.png)
 
-4. Inhaltsfragmentmodelle können in anderen Modellen referenziert werden. Navigieren Sie zum **Datentypen** und ziehen Sie die **Fragmentverweis** und geben Sie den Titel &quot;Kontaktinfo&quot;.
+1. Inhaltsfragmentmodelle können in anderen Modellen referenziert werden. Navigieren Sie zum **Datentypen** und ziehen Sie die **Fragmentverweis** und geben Sie den Titel &quot;Kontaktinfo&quot;.
 
-5. Im **Eigenschaften** Registerkarte unter **Zulässige Inhaltsfragmentmodelle** ein, wählen Sie das Ordnersymbol aus und wählen Sie dann die **Kontaktangaben** Fragmentmodell, das zuvor erstellt wurde.
+1. Im **Eigenschaften** Registerkarte unter **Zulässige Inhaltsfragmentmodelle** ein, wählen Sie das Ordnersymbol aus und wählen Sie dann die **Kontaktangaben** Fragmentmodell, das zuvor erstellt wurde.
 
-6. Hinzufügen einer **Inhaltsreferenz** und geben Sie ihm ein **Feldbezeichnung** des Profilbilds. Wählen Sie das Ordnersymbol unter **Stammverzeichnis** , um das Pfadauswahlmodul zu öffnen. Wählen Sie einen Stammpfad aus, indem Sie **content** > **Assets** und aktivieren Sie dann das Kontrollkästchen für **WKND-Site**. Verwenden Sie die **Auswählen** oben rechts, um den Pfad zu speichern. Der endgültige Texspfad sollte gelesen werden `/content/dam/wknd`.
+1. Hinzufügen einer **Inhaltsreferenz** und geben Sie ihm ein **Feldbezeichnung** des Profilbilds. Wählen Sie das Ordnersymbol unter **Stammverzeichnis** , um das Pfadauswahlmodul zu öffnen. Wählen Sie einen Stammpfad aus, indem Sie **content** > **Assets** und aktivieren Sie dann das Kontrollkästchen für **WKND-Site**. Verwenden Sie die **Auswählen** oben rechts, um den Pfad zu speichern. Der endgültige Texspfad sollte gelesen werden `/content/dam/wknd`.
 
    ![Stammverzeichnis des Inhalts](assets/define-content-fragment-models/content-reference-root-path.png)
 
-7. under **Nur angegebene Inhaltstypen akzeptieren**, wählen Sie &quot;Bild&quot;aus.
+1. under **Nur angegebene Inhaltstypen akzeptieren**, wählen Sie &quot;Bild&quot;aus.
 
    ![Profilbildoptionen](assets/define-content-fragment-models/profile-picture.png)
 
-8. Um die Größe und die Abmessungen der Bilddatei zu begrenzen, sehen wir uns einige Validierungsoptionen für das Inhaltsreferenzfeld an.
+1. Um die Größe und die Abmessungen der Bilddatei zu begrenzen, sehen wir uns einige Validierungsoptionen für das Inhaltsreferenzfeld an.
 
    under **Nur angegebene Dateigröße akzeptieren**, wählen Sie &quot;Kleiner oder gleich&quot;und unten werden zusätzliche Felder angezeigt.
    ![Nur angegebene Dateigröße akzeptieren](assets/define-content-fragment-models/accept-specified-file-size.png)
 
-9. Für **Max**, geben Sie &quot;5&quot;ein und für **Einheit auswählen**, wählen Sie &quot;Megabyte (MB)&quot;. Bei dieser Validierung können nur Bilder der angegebenen Größe ausgewählt werden.
+1. Für **Max**, geben Sie &quot;5&quot;ein und für **Einheit auswählen**, wählen Sie &quot;Megabyte (MB)&quot;. Bei dieser Validierung können nur Bilder der angegebenen Größe ausgewählt werden.
 
-10. under **Nur angegebene Bildbreite akzeptieren**, wählen Sie &quot;Maximale Breite&quot;. Im **Maximal (Pixel)** eingeben. Wählen Sie dieselben Optionen für **Nur eine angegebene Bildhöhe akzeptieren**.
+1. under **Nur angegebene Bildbreite akzeptieren**, wählen Sie &quot;Maximale Breite&quot;. Im **Maximal (Pixel)** eingeben. Wählen Sie dieselben Optionen für **Nur eine angegebene Bildhöhe akzeptieren**.
 
-    Diese Überprüfungen stellen sicher, dass hinzugefügte Bilder die angegebenen Werte nicht überschreiten. Die Validierungsregeln sollten jetzt wie folgt aussehen:
-    ![Validierungsregeln für Inhaltsreferenzen](assets/define-content-fragment-models/content-reference-validation.png)
+   Diese Überprüfungen stellen sicher, dass hinzugefügte Bilder die angegebenen Werte nicht überschreiten. Die Validierungsregeln sollten jetzt wie folgt aussehen:
+   ![Validierungsregeln für Inhaltsreferenzen](assets/define-content-fragment-models/content-reference-validation.png)
 
-11. Hinzufügen einer **Mehrzeiliger Text** und geben Sie ihm ein **Feldbezeichnung** der &quot;Biografie&quot;. Lassen Sie die **Standardtyp** als Standardoption &quot;Rich Text&quot;.
+1. Hinzufügen einer **Mehrzeiliger Text** und geben Sie ihm ein **Feldbezeichnung** der &quot;Biografie&quot;. Lassen Sie die **Standardtyp** als Standardoption &quot;Rich Text&quot;.
 
-    ![Biografie-Optionen](assets/define-content-fragment-models/biography.png)
+   ![Biografie-Optionen](assets/define-content-fragment-models/biography.png)
 
-12. Navigieren Sie zum **Datentypen** Registerkarte und ziehen Sie dann eine **Auflistung** Feld unter &quot;Profilbild&quot;. Anstelle der Standardeinstellung **Rendern als** auswählen **Dropdown**. Geben Sie eine Auswahl an Optionen für die Ausbilder-Erlebnisebene ein, z. B. &quot;Expert&quot;, &quot;Erweitert&quot;, &quot;Intermediate&quot;.
+1. Navigieren Sie zum **Datentypen** Registerkarte und ziehen Sie dann eine **Auflistung** Feld unter &quot;Profilbild&quot;. Anstelle der Standardeinstellung **Rendern als** auswählen **Dropdown**. Geben Sie eine Auswahl an Optionen für die Ausbilder-Erlebnisebene ein, z. B. &quot;Expert&quot;, &quot;Erweitert&quot;, &quot;Intermediate&quot;.
 
-13. Ziehen Sie als Nächstes einen weiteren **Auflistung** unter &quot;Instructor Experience Level&quot; und wählen Sie &quot;checkboxes&quot;unter der **Rendern als** -Option. Geben Sie verschiedene Fähigkeiten ein, wie Rock Climbing, Surfen, Radfahren, Skifahren und Backpacken. Die Beschriftung der Option und der Optionswert sollten wie folgt übereinstimmen:
+1. Ziehen Sie als Nächstes einen weiteren **Auflistung** unter &quot;Instructor Experience Level&quot; und wählen Sie &quot;checkboxes&quot;unter der **Rendern als** -Option. Geben Sie verschiedene Fähigkeiten ein, wie Rock Climbing, Surfen, Radfahren, Skifahren und Backpacken. Die Beschriftung der Option und der Optionswert sollten wie folgt übereinstimmen:
 
-    ![Kompetenzauflistung](assets/define-content-fragment-models/skills-enum.png)
+   ![Kompetenzauflistung](assets/define-content-fragment-models/skills-enum.png)
 
-14. Erstellen Sie abschließend eine Feldbezeichnung &quot;Administrator-Details&quot;mit einer **Mehrzeiliger Text** -Feld.
+1. Erstellen Sie abschließend eine Feldbezeichnung &quot;Administrator-Details&quot;mit einer **Mehrzeiliger Text** -Feld.
 
 Auswählen **Speichern** , um Ihre Änderungen zu bestätigen und den Inhaltsfragmentmodell-Editor zu schließen.
 
@@ -154,23 +154,23 @@ Das nächste Inhaltsfragmentmodell beschreibt einen physischen Speicherort. Dies
 
 1. Wählen Sie wie zuvor **Erstellen** , um ein anderes Inhaltsfragmentmodell zu erstellen. Geben Sie für den Modelltitel &quot;Position&quot;ein. Auswählen **Erstellen** gefolgt von **Öffnen** im Erfolgsmodal, das angezeigt wird.
 
-2. Hinzufügen einer **Registerkartenplatzhalter** zum Modell hinzu und beschriften es mit &quot;Standortdetails&quot;.
+1. Hinzufügen einer **Registerkartenplatzhalter** zum Modell hinzu und beschriften es mit &quot;Standortdetails&quot;.
 
-3. Ziehen Sie eine **Einzelzeilentext** und beschriften sie mit &quot;Name&quot;. Fügen Sie unterhalb dieser Feldbeschriftung eine **Mehrzeiliger Text** und beschriften sie &quot;Beschreibung&quot;.
+1. Ziehen Sie eine **Einzelzeilentext** und beschriften sie mit &quot;Name&quot;. Fügen Sie unterhalb dieser Feldbeschriftung eine **Mehrzeiliger Text** und beschriften sie &quot;Beschreibung&quot;.
 
-4. Fügen Sie als Nächstes eine **Fragmentverweis** und beschriften Sie es mit &quot;Kontaktinformationen&quot;. Auf der Registerkarte &quot;Eigenschaften&quot;unter **Zulässige Inhaltsfragmentmodelle**, wählen Sie die **Ordnersymbol** und wählen Sie das zuvor erstellte Fragmentmodell &quot;Kontaktinfo&quot;.
+1. Fügen Sie als Nächstes eine **Fragmentverweis** und beschriften Sie es mit &quot;Kontaktinformationen&quot;. Auf der Registerkarte &quot;Eigenschaften&quot;unter **Zulässige Inhaltsfragmentmodelle**, wählen Sie die **Ordnersymbol** und wählen Sie das zuvor erstellte Fragmentmodell &quot;Kontaktinfo&quot;.
 
-5. Hinzufügen einer **Inhaltsreferenz** unter &quot;Kontaktinfo&quot;. Beschriften Sie sie mit &quot;Standortbild&quot;. Die **Stammverzeichnis** sollte `/content/dam/wknd.` under **Nur angegebene Inhaltstypen akzeptieren**, wählen Sie &quot;Bild&quot;aus.
+1. Hinzufügen einer **Inhaltsreferenz** unter &quot;Kontaktinfo&quot;. Beschriften Sie sie mit &quot;Standortbild&quot;. Die **Stammverzeichnis** sollte `/content/dam/wknd.` under **Nur angegebene Inhaltstypen akzeptieren**, wählen Sie &quot;Bild&quot;aus.
 
-6. Fügen wir auch eine **JSON-Objekt** unter dem Feld &quot;Standortbild&quot;. Da dieser Datentyp flexibel ist, kann er zur Anzeige beliebiger Daten verwendet werden, die Sie in Ihren Inhalt aufnehmen möchten. In diesem Fall wird das JSON-Objekt verwendet, um Informationen über das Wetter anzuzeigen. Beschriften Sie das JSON-Objekt &quot;Wetter nach Jahreszeit&quot;. Im **Eigenschaften** Registerkarte, fügen Sie eine **Beschreibung** So ist es für den Benutzer klar, welche Daten hier eingegeben werden sollen: &quot;JSON-Daten zum Veranstaltungsort-Wetter nach Saison (Frühling, Sommer, Herbst, Winter).&quot;
+1. Fügen wir auch eine **JSON-Objekt** unter dem Feld &quot;Standortbild&quot;. Da dieser Datentyp flexibel ist, kann er zur Anzeige beliebiger Daten verwendet werden, die Sie in Ihren Inhalt aufnehmen möchten. In diesem Fall wird das JSON-Objekt verwendet, um Informationen über das Wetter anzuzeigen. Beschriften Sie das JSON-Objekt &quot;Wetter nach Jahreszeit&quot;. Im **Eigenschaften** Registerkarte, fügen Sie eine **Beschreibung** So ist es für den Benutzer klar, welche Daten hier eingegeben werden sollen: &quot;JSON-Daten zum Veranstaltungsort-Wetter nach Saison (Frühling, Sommer, Herbst, Winter).&quot;
 
    ![JSON-Objekt-Optionen](assets/define-content-fragment-models/json-object.png)
 
-7. Fügen Sie zum Erstellen der Registerkarte Standort-Adresse einen **Registerkartenplatzhalter** zum Modell hinzu und beschriften es mit &quot;Standort-Adresse&quot;.
+1. Fügen Sie zum Erstellen der Registerkarte Standort-Adresse einen **Registerkartenplatzhalter** zum Modell hinzu und beschriften es mit &quot;Standort-Adresse&quot;.
 
-8. Ziehen und Ablegen eines **Fragmentverweis** und auf der Registerkarte &quot;Eigenschaften&quot;unter **Zulässige Inhaltsfragmentmodelle**, wählen Sie die **Adresse** -Modell.
+1. Ziehen und Ablegen eines **Fragmentverweis** und auf der Registerkarte &quot;Eigenschaften&quot;unter **Zulässige Inhaltsfragmentmodelle**, wählen Sie die **Adresse** -Modell.
 
-9. Auswählen **Speichern** , um Ihre Änderungen zu bestätigen und den Inhaltsfragmentmodell-Editor zu schließen. Das fertige Standortmodell sollte wie folgt angezeigt werden:
+1. Auswählen **Speichern** , um Ihre Änderungen zu bestätigen und den Inhaltsfragmentmodell-Editor zu schließen. Das fertige Standortmodell sollte wie folgt angezeigt werden:
 
    ![Inhaltsreferenzoptionen](assets/define-content-fragment-models/location-model.png)
 
@@ -180,21 +180,21 @@ Erstellen Sie abschließend ein Modell, das ein Team von Personen beschreibt.
 
 1. Aus dem **WKND-Site** Seite, wählen Sie **Erstellen** , um ein anderes Inhaltsfragmentmodell zu erstellen. Geben Sie für den Modelltitel &quot;Team&quot;ein. Wählen Sie wie zuvor **Erstellen** gefolgt von **Öffnen** im Erfolgsmodal, das angezeigt wird.
 
-2. Hinzufügen einer **Mehrzeiliger Text** in das Formular ein. under **Feldbezeichnung**, geben Sie &quot;Beschreibung&quot;ein.
+1. Hinzufügen einer **Mehrzeiliger Text** in das Formular ein. under **Feldbezeichnung**, geben Sie &quot;Beschreibung&quot;ein.
 
-3. Hinzufügen einer **Datum und Uhrzeit** zum Modell hinzu und beschriften es mit &quot;Team Foundation Date&quot;. Behalten Sie in diesem Fall die Standardeinstellung bei **Typ** auf &quot;Datum&quot;festgelegt ist, beachten Sie jedoch, dass auch &quot;Datum und Uhrzeit&quot;oder &quot;Zeit&quot;verwendet werden kann.
+1. Hinzufügen einer **Datum und Uhrzeit** zum Modell hinzu und beschriften es mit &quot;Team Foundation Date&quot;. Behalten Sie in diesem Fall die Standardeinstellung bei **Typ** auf &quot;Datum&quot;festgelegt ist, beachten Sie jedoch, dass auch &quot;Datum und Uhrzeit&quot;oder &quot;Zeit&quot;verwendet werden kann.
 
    ![Datums- und Uhrzeitoptionen](assets/define-content-fragment-models/date-and-time.png)
 
-4. Navigieren Sie zum **Datentypen** Registerkarte. Fügen Sie unter dem &quot;Team-Gründungsdatum&quot;einen **Fragmentverweis**. Im **Rendern als** wählen Sie &quot;multifield&quot;. Für **Feldbezeichnung**, geben Sie &quot;Team Members&quot; ein. Dieses Feld ist mit dem zuvor erstellten Personenmodell verknüpft. Da es sich bei dem Datentyp um ein Mehrfachfeld handelt, können mehrere Personenfragmente hinzugefügt werden, sodass ein Personenteam erstellt werden kann.
+1. Navigieren Sie zum **Datentypen** Registerkarte. Fügen Sie unter dem &quot;Team-Gründungsdatum&quot;einen **Fragmentverweis**. Im **Rendern als** wählen Sie &quot;multifield&quot;. Für **Feldbezeichnung**, geben Sie &quot;Team Members&quot; ein. Dieses Feld ist mit dem zuvor erstellten Personenmodell verknüpft. Da es sich bei dem Datentyp um ein Mehrfachfeld handelt, können mehrere Personenfragmente hinzugefügt werden, sodass ein Personenteam erstellt werden kann.
 
    ![Fragmentverweisoptionen](assets/define-content-fragment-models/fragment-reference.png)
 
-5. under **Zulässige Inhaltsfragmentmodelle**, verwenden Sie das Ordnersymbol, um das Modal Pfad auswählen zu öffnen, und wählen Sie dann die **Person** -Modell. Verwenden Sie die **Auswählen** zum Speichern des Pfads.
+1. under **Zulässige Inhaltsfragmentmodelle**, verwenden Sie das Ordnersymbol, um das Modal Pfad auswählen zu öffnen, und wählen Sie dann die **Person** -Modell. Verwenden Sie die **Auswählen** zum Speichern des Pfads.
 
    ![Personenmodell auswählen](assets/define-content-fragment-models/select-person-model.png)
 
-6. Auswählen **Speichern** , um Ihre Änderungen zu bestätigen und den Inhaltsfragmentmodell-Editor zu schließen.
+1. Auswählen **Speichern** , um Ihre Änderungen zu bestätigen und den Inhaltsfragmentmodell-Editor zu schließen.
 
 ## Fragmentverweise zum Abenteuermodell hinzufügen {#fragment-references}
 
@@ -204,19 +204,19 @@ Erstellen Sie abschließend ein Modell, das ein Team von Personen beschreibt.
 
    ![Adventure-Bearbeitungspfad](assets/define-content-fragment-models/adventure-edit-path.png)
 
-2. Fügen Sie am unteren Rand des Formulars unter &quot;Was soll ich bringen&quot;eine **Fragmentverweis** -Feld. Geben Sie einen **Feldbezeichnung** von &quot;Ort&quot;. under **Zulässige Inhaltsfragmentmodelle**, wählen Sie die **Standort** -Modell.
+1. Fügen Sie am unteren Rand des Formulars unter &quot;Was soll ich bringen&quot;eine **Fragmentverweis** -Feld. Geben Sie einen **Feldbezeichnung** von &quot;Ort&quot;. under **Zulässige Inhaltsfragmentmodelle**, wählen Sie die **Standort** -Modell.
 
    ![Referenzoptionen für Standortfragmente](assets/define-content-fragment-models/location-fragment-reference.png)
 
-3. Mehr dazu **Fragmentverweis** und beschriften es &quot;Instructor Team&quot;. under **Zulässige Inhaltsfragmentmodelle**, wählen Sie die **Team** -Modell.
+1. Mehr dazu **Fragmentverweis** und beschriften es &quot;Instructor Team&quot;. under **Zulässige Inhaltsfragmentmodelle**, wählen Sie die **Team** -Modell.
 
    ![Referenzoptionen für Teamfragmente](assets/define-content-fragment-models/team-fragment-reference.png)
 
-4. Weitere hinzufügen **Fragmentverweis** und beschriften Sie es mit &quot;Administrator&quot;.
+1. Weitere hinzufügen **Fragmentverweis** und beschriften Sie es mit &quot;Administrator&quot;.
 
    ![Referenzoptionen für Administratorfragmente](assets/define-content-fragment-models/administrator-fragment-reference.png)
 
-5. Auswählen **Speichern** , um Ihre Änderungen zu bestätigen und den Inhaltsfragmentmodell-Editor zu schließen.
+1. Auswählen **Speichern** , um Ihre Änderungen zu bestätigen und den Inhaltsfragmentmodell-Editor zu schließen.
 
 ## Best Practices {#best-practices}
 
