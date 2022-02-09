@@ -4,10 +4,10 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: cea9a9dc003b76369db1b7fedb9549062885258d
+source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
 workflow-type: tm+mt
-source-wordcount: '656'
-ht-degree: 32%
+source-wordcount: '674'
+ht-degree: 31%
 
 ---
 
@@ -166,6 +166,12 @@ ht-degree: 32%
       + [Zusammenführen von Daten mit Vorlage](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [Testen der Lösung](./forms/doc-gen-forms-cs/test.md)
       + [Herausforderung](./forms/doc-gen-forms-cs/challenge.md)
+   + Dokumenterstellung mithilfe der Batch-API{#formscs-batch-api}
+      + [Einführung](./forms/formscs-batch-api/introduction.md)
+      + [Azure Storage konfigurieren](./forms/formscs-batch-api/configure-azure-storage.md)
+      + [Erstellen der USC-Batch-Konfiguration](./forms/formscs-batch-api/configure-usc-batch.md)
+      + [Stapelkonfiguration erstellen](./forms/formscs-batch-api/create-batch-config.md)
+      + [Batch ausführen](./forms/formscs-batch-api/execute-batch-generate-documents.md)
    + Azure Portal-Speicher{#forms-cs-azure-portal}
       + [Einführung](./forms/forms-cs-azure-portal/introduction.md)
       + [Erstellen von Formulardatenmodellen](./forms/forms-cs-azure-portal/create-fdm.md)
