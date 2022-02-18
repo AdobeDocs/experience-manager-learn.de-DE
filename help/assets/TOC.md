@@ -4,10 +4,10 @@ user-guide-description: Eine Sammlung von Videos und Tutorials zu Adobe Experien
 breadcrumb-title: AEM Assets-Tutorials
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: a5c128d92f4a4625279b6ef76c61f1afb6ed45d5
+source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 33%
+source-wordcount: '378'
+ht-degree: 32%
 
 ---
 
@@ -94,7 +94,7 @@ ht-degree: 33%
    + [Nur für Platzierungen (FPO)](./adobe-asset-link/for-placement-only.md)
    + [Asset-Suche](./adobe-asset-link/asset-search.md)
 
-+ Inhaltsautomatisierung{#content-automation}
++ Content Automation{#content-automation}
    + [Übersicht](./content-automation/overview.md)
    + [Kreative Vorgänge](./content-automation/creative-operations.md)
    + [Photoshop-Aktionen](./content-automation/photoshop-actions.md)
@@ -117,7 +117,7 @@ ht-degree: 33%
    + [Dynamic Media Smart Crop-Video](dynamic-media/dynamic-media-smart-crop-video.md)
    + [Dynamic Media-Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
 
-   + Tutorials zu {#tutorials}
+   + Tutorials {#tutorials}
       + [Erstellen von Karussellsets](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [Erstellen von Bildsets](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [Erstellen von Bildvorgaben](dynamic-media/tutorials/creating-image-presets.md)
@@ -137,6 +137,12 @@ ht-degree: 33%
    + Verbesserter Connector{#enhanced-connector}
       + [Erweiterte Connector-Grundlagen](./workfront/enhanced-connector/basics.md)
       + [Projektordner](./workfront/enhanced-connector/project-folders.md)
+      + AEM Expertenreihe{#aem-experts-series}
+         + [Übersicht](./workfront/enhanced-connector/aem-experts-series/overview.md)
+         + [Einrichtung](./workfront/enhanced-connector/aem-experts-series/setup.md)
+         + [Workfront forms und AEM Metadaten](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
+         + [Tags, projektverknüpfte Ordner und Ordnermetadaten](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)
+         + [Erweiterte Einstellungen und Workflows](./workfront/enhanced-connector/aem-experts-series/advanced-settings-and-workflows.md)
 
 + Übersetzung {#translation}
    + [Quelldateiübersetzung](translation/source-file-translation-feature-video-use.md)
