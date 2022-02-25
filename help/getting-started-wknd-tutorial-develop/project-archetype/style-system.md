@@ -1,24 +1,24 @@
 ---
 title: Entwickeln mit dem Stilsystem
-seo-title: Entwickeln mit dem Stilsystem
+seo-title: Developing with the Style System
 description: Erfahren Sie, wie Sie einzelne Stile implementieren und Kernkomponenten mithilfe des Stilsystems von Experience Manager wiederverwenden. In diesem Tutorial wird die Entwicklung für das Stilsystem beschrieben, um Kernkomponenten mit markenspezifischem CSS und erweiterten Richtlinienkonfigurationen des Vorlagen-Editors zu erweitern.
-sub-product: Sites
-version: 6.4, 6.5, Cloud Service
+sub-product: sites
+version: 6.5, Cloud Service
 type: Tutorial
-feature: Kernkomponenten, Stilsystem
-topic: Content Management, Entwicklung
+feature: Core Components, Style System
+topic: Content Management, Development
 role: Developer
 level: Beginner
 kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
+source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
 workflow-type: tm+mt
-source-wordcount: '1999'
-ht-degree: 2%
+source-wordcount: '1681'
+ht-degree: 3%
 
 ---
-
 
 # Entwickeln mit dem Stilsystem {#developing-with-the-style-system}
 
@@ -26,9 +26,9 @@ Erfahren Sie, wie Sie einzelne Stile implementieren und Kernkomponenten mithilfe
 
 ## Voraussetzungen {#prerequisites}
 
-Überprüfen Sie die erforderlichen Tools und Anweisungen zum Einrichten einer [lokalen Entwicklungsumgebung](overview.md#local-dev-environment).
+Überprüfen Sie die erforderlichen Tools und Anweisungen zum Einrichten eines [lokale Entwicklungsumgebung](overview.md#local-dev-environment).
 
-Es wird außerdem empfohlen, das Tutorial [Client-seitige Bibliotheken und Frontend-Workflow](client-side-libraries.md) zu lesen, um die Grundlagen von Client-seitigen Bibliotheken und den verschiedenen Frontend-Tools, die in das AEM Projekt integriert sind, zu verstehen.
+Außerdem wird empfohlen, die [Client-seitige Bibliotheken und Frontend-Workflow](client-side-libraries.md) Tutorial zum Verständnis der Grundlagen von Client-seitigen Bibliotheken und den verschiedenen Frontend-Tools, die in das AEM Projekt integriert sind.
 
 ### Starterprojekt
 
@@ -38,7 +38,7 @@ Es wird außerdem empfohlen, das Tutorial [Client-seitige Bibliotheken und Front
 
 Sehen Sie sich den Basis-Code an, auf dem das Tutorial aufbaut:
 
-1. Sehen Sie sich die Verzweigung `tutorial/style-system-start` von [GitHub](https://github.com/adobe/aem-guides-wknd) an.
+1. Sehen Sie sich die `tutorial/style-system-start` Verzweigung aus [GitHub](https://github.com/adobe/aem-guides-wknd)
 
    ```shell
    $ cd aem-guides-wknd
@@ -53,15 +53,15 @@ Sehen Sie sich den Basis-Code an, auf dem das Tutorial aufbaut:
 
    >[!NOTE]
    >
-   > Wenn Sie AEM 6.5 oder 6.4 verwenden, hängen Sie das Profil `classic` an beliebige Maven-Befehle an.
+   > Wenn Sie AEM 6.5 oder 6.4 verwenden, hängen Sie die `classic` Profile zu beliebigen Maven-Befehlen hinzufügen.
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/style-system-solution) anzeigen oder den Code lokal auschecken, indem Sie zu der Verzweigung `tutorial/style-system-solution` wechseln.
+Sie können den fertigen Code immer in [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/style-system-solution) oder den Code lokal auszuchecken, indem Sie zu der Verzweigung wechseln `tutorial/style-system-solution`.
 
-## Ziele
+## Ziel
 
 1. Erfahren Sie, wie Sie das Stilsystem verwenden, um markenspezifische CSS auf AEM Kernkomponenten anzuwenden.
 1. Erfahren Sie mehr über die BEM-Notation und wie sie verwendet werden kann, um Stile sorgfältig zu definieren.
@@ -69,7 +69,7 @@ Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-gu
 
 ## Was Sie erstellen werden {#what-you-will-build}
 
-In diesem Kapitel verwenden wir die Funktion [Stilsystem](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html), um Varianten der auf der Artikelseite verwendeten Komponenten **Titel** und **Text** zu erstellen.
+In diesem Kapitel verwenden wir die [Stilsystemfunktion](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html?lang=de) , um Varianten der **Titel** und **Text** Komponenten, die auf der Artikelseite verwendet werden.
 
 ![Für Titel verfügbare Stile](assets/style-system/styles-added-title.png)
 
@@ -77,89 +77,96 @@ In diesem Kapitel verwenden wir die Funktion [Stilsystem](https://experienceleag
 
 ## Hintergrund {#background}
 
-Mit dem [Stilsystem](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html) können Entwickler und Vorlagen-Editoren mehrere visuelle Varianten einer Komponente erstellen. Autoren können dann entscheiden, welcher Stil beim Erstellen einer Seite verwendet werden soll. Wir werden das Stilsystem im Rest des Tutorials nutzen, um mehrere einzigartige Stile zu erreichen und gleichzeitig Kernkomponenten in einem Ansatz mit geringem Code zu nutzen.
+Die [Stilsystem](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html) ermöglicht es Entwicklern und Vorlagen-Editoren, mehrere visuelle Varianten einer Komponente zu erstellen. Autoren können dann entscheiden, welcher Stil beim Erstellen einer Seite verwendet werden soll. Wir werden das Stilsystem im Rest des Tutorials nutzen, um mehrere einzigartige Stile zu erreichen und gleichzeitig Kernkomponenten in einem Ansatz mit geringem Code zu nutzen.
 
 Die allgemeine Idee des Stilsystems besteht darin, dass Autoren verschiedene Stile dafür wählen können, wie eine Komponente aussehen soll. Die &quot;Stile&quot;werden durch zusätzliche CSS-Klassen unterstützt, die in das äußere div einer Komponente eingefügt werden. In den Client-Bibliotheken werden CSS-Regeln basierend auf diesen Stilklassen hinzugefügt, sodass die Komponente das Erscheinungsbild ändert.
 
-Eine detaillierte Dokumentation für das Stilsystem finden Sie hier ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html?lang=de). [ Es gibt auch ein großartiges [technisches Video zum Verständnis des Stilsystems](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html).
+Sie finden [Detaillierte Dokumentation zum Stilsystem finden Sie hier .](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/style-system.html?lang=de). Es gibt auch eine große [Technisches Video zum Verständnis des Stilsystems](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html).
 
 ## Stil unterstreichen - Titel {#underline-style}
 
-Die [Titelkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/title.html) wurde im Projekt unter `/apps/wknd/components/title` als Teil des Moduls **ui.apps** bereitgestellt. Die Standardstile der Überschriftenelemente (`H1`, `H2`, `H3`...) wurden bereits im Modul **ui.frontend** implementiert.
+Die [Titelkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/title.html) wurde in das Projekt unter `/apps/wknd/components/title` als Teil der **ui.apps** -Modul. Die Standardstile für Überschriftenelemente (`H1`, `H2`, `H3`...) bereits im **ui.frontend** -Modul.
 
 Die [WKND-Artikelentwürfe](assets/pages-templates/wknd-article-design.xd) enthalten einen eindeutigen Stil für die Titelkomponente mit einer Unterstreichung. Anstatt zwei Komponenten zu erstellen oder das Komponentendialogfeld zu ändern, kann das Stilsystem verwendet werden, um Autoren die Möglichkeit zu geben, einen Unterstrichstil hinzuzufügen.
 
 ![Unterstrichener Stil - Titelkomponente](assets/style-system/title-underline-style.png)
 
-### Inspect Title-Markup
+### Eine Titelrichtlinie hinzufügen
 
-Als Frontend-Entwickler besteht der erste Schritt zum Formatieren einer Kernkomponente darin, das von der Komponente generierte Markup zu verstehen.
+Fügen Sie eine neue Richtlinie für Titel -Komponenten hinzu, damit Inhaltsautoren den Unterstrichstil auswählen können, der auf bestimmte Komponenten angewendet werden soll. Dies geschieht mit dem Vorlagen-Editor in AEM.
 
-1. Öffnen Sie einen neuen Browser und zeigen Sie die Komponente Titel auf der Website AEM Kernkomponentenbibliothek an: [https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/title.html](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/title.html)
+1. Navigieren Sie zum **Artikelseite** Vorlage unter: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html)
 
-1. Unten finden Sie das Markup für die Komponente Titel :
+1. In **Struktur** -Modus im Hauptmodus **Layout-Container**, wählen Sie die **Politik** Symbol neben **Titel** Komponente aufgeführt unter *Zugelassene Komponenten*:
+
+   ![Konfiguration der Titelrichtlinie](assets/style-system/article-template-title-policy-icon.png)
+
+1. Erstellen Sie eine neue Richtlinie für die Komponente Titel mit den folgenden Werten:
+
+   *Richtlinienname **: **WKND-Titel**
+
+   *Eigenschaften* > *Registerkarte &quot;Stile&quot;* > *Neuen Stil hinzufügen*
+
+   **Unterstreichen** : `cmp-title--underline`
+
+   ![Stilrichtlinienkonfiguration für den Titel](assets/style-system/title-style-policy.png)
+
+   Klicken **Fertig** , um die Änderungen an der Titelrichtlinie zu speichern.
+
+   >[!NOTE]
+   >
+   > Der Wert `cmp-title--underline` füllt die CSS-Klasse im äußeren div des HTML-Markups der Komponente.
+
+### Anwenden des Unterstrichstils
+
+Als Autor wenden Sie den Unterstrichstil auf bestimmte Titelkomponenten an.
+
+1. Navigieren Sie zum **La Skateparks** Artikel im AEM Sites-Editor unter: [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
+1. In **Bearbeiten** -Modus eine Titelkomponente auswählen. Klicken Sie auf **Pinsel** und wählen Sie das **Unterstreichen** style:
+
+   ![Anwenden des Unterstrichstils](assets/style-system/apply-underline-style-title.png)
+
+   >[!NOTE]
+   >
+   > An dieser Stelle erfolgt keine sichtbare Änderung, da `underline` -Stil wurde nicht implementiert. In der nächsten Übung wird dieser Stil implementiert.
+
+1. Klicken Sie auf **Seiteninformationen** Symbol > **Als veröffentlicht anzeigen** , um die Seite außerhalb AEM Editors zu überprüfen.
+1. Überprüfen Sie mithilfe der Entwicklertools Ihres Browsers, ob das Markup um die Titelkomponente über die CSS-Klasse verfügt. `cmp-title--underline` auf das äußere div angewendet.
+
+   ![Div mit angewendeter Unterstrichklasse](assets/style-system/div-underline-class-applied.png)
 
    ```html
-   <div class="cmp-title">
-       <h1 class="cmp-title__text">Lorem Ipsum</h1>
-   </div>
-   ```
-
-   Die BEM-Notation der Titelkomponente:
-
-   ```plain
-   BLOCK cmp-title
-       ELEMENT cmp-title__text
-   ```
-
-1. Das Stilsystem fügt dem äußeren div um die Komponente herum eine CSS-Klasse hinzu. Daher ähnelt das Markup, das wir als Ziel auswählen werden, etwa Folgendem:
-
-   ```html
-   <div class="STYLE-SYSTEM-CLASS-HERE"> <!-- Custom CSS class - implementation gets to define this -->
-       <div class="cmp-title">
-           <h1 class="cmp-title__text">Lorem Ipsum</h1>
+   <div class="title cmp-title--underline">
+       <div data-cmp-data-layer="{&quot;title-b6450e9cab&quot;:{&quot;@type&quot;:&quot;wknd/components/title&quot;,&quot;repo:modifyDate&quot;:&quot;2022-02-23T17:34:42Z&quot;,&quot;dc:title&quot;:&quot;Vans Off the Wall Skatepark&quot;}}" 
+       id="title-b6450e9cab" class="cmp-title">
+           <h2 class="cmp-title__text">Vans Off the Wall Skatepark</h2>
        </div>
    </div>
    ```
 
 ### Implementieren des &quot;Underline Style&quot;- ui.frontend
 
-Implementieren Sie anschließend den Stil &quot;Unterstrichen&quot;mit dem Modul **ui.frontend** unseres Projekts. Wir verwenden den Webpack Development Server, der im Paket mit dem Modul **ui.frontend** enthalten ist, um eine Vorschau der Stile *vor der* Bereitstellung auf einer lokalen Instanz von AEM anzuzeigen.
+Als Nächstes implementieren Sie den Stil &quot;Unterstrichen&quot;mit **ui.frontend** -Modul unseres Projekts. Wir verwenden den Webpack Development Server, der im Paket mit dem **ui.frontend** -Modul zur Vorschau der Stile *before* Bereitstellung in einer lokalen Instanz von AEM.
 
-1. Starten Sie den webpack-Dev-Server, indem Sie den folgenden Befehl im Modul **ui.frontend** ausführen:
+1. Starten Sie die `watch` -Prozess innerhalb von **ui.frontend** -Modul:
 
    ```shell
    $ cd ~/code/aem-guides-wknd/ui.frontend/
-   $ npm start
+   $ npm run watch
+   ```
+
+   Dadurch wird ein Prozess gestartet, der Änderungen im `ui.frontend` und synchronisieren Sie die Änderungen mit der AEM-Instanz.
+
+
+1. Geben Sie Ihre IDE zurück und öffnen Sie die Datei . `_title.scss` befindet sich unter: `ui.frontend/src/main/webpack/components/_title.scss`.
+1. Einführung einer neuen Regel, die auf die `cmp-title--underline` -Klasse:
+
+   ```scss
+   /* Default Title Styles */
+   .cmp-title {}
+   .cmp-title__text {}
+   .cmp-title__link {}
    
-   > aem-maven-archetype@1.0.0 start code/aem-guides-wknd/ui.frontend
-   > webpack-dev-server --open --config ./webpack.dev.js
-   ```
-
-   Dadurch sollte ein Browser unter [http://localhost:8080](http://localhost:8080) geöffnet werden.
-
-   >[!NOTE]
-   >
-   > Wenn Bilder fehlerhaft erscheinen, stellen Sie sicher, dass das Startprojekt auf einer lokalen Instanz von AEM bereitgestellt wurde (auf Port 4502 ausgeführt) und der verwendete Browser sich auch bei der lokalen AEM-Instanz angemeldet hat.
-
-   ![Webpack Development Server](assets/style-system/static-webpack-server.png)
-
-1. Öffnen Sie in der IDE die Datei `index.html` unter: `ui.frontend/src/main/webpack/static/index.html`. Dies ist das statische Markup, das vom Webpack Development Server verwendet wird.
-1. Suchen Sie in `index.html` nach einer Instanz der Titelkomponente, der der Unterstrichstil hinzugefügt werden soll, indem Sie im Dokument nach *cmp-title* suchen. Wählen Sie die Komponente Titel mit dem Text *&quot;Vans off the Wall Skatepark&quot;* (Zeile 218). Fügen Sie die Klasse `cmp-title--underline` zum umgebenden div hinzu:
-
-   ```diff
-   - <div class="title aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--8">
-   + <div class="cmp-title--underline title aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--8">
-        <div data-cmp-data-layer="{&#34;title-8bea562fa0&#34;:{&#34;@type&#34;:&#34;wknd/components/title&#34;,&#34;repo:modifyDate&#34;:&#34;2021-01-22T18:54:20Z&#34;,&#34;dc:title&#34;:&#34;Vans Off the Wall&#34;}}" id="title-8bea562fa0" class="cmp-title">
-            <h2 class="cmp-title__text">Vans Off the Wall</h2>
-        </div>
-    </div>
-   ```
-
-1. Kehren Sie zum Browser zurück und stellen Sie sicher, dass die zusätzliche Klasse im Markup angezeigt wird.
-1. Kehren Sie zum Modul **ui.frontend** zurück und aktualisieren Sie die Datei `title.scss` unter: `ui.frontend/src/main/webpack/components/_title.scss`:
-
-   ```css
    /* Add Title Underline Style */
    .cmp-title--underline {
        .cmp-title__text {
@@ -178,132 +185,88 @@ Implementieren Sie anschließend den Stil &quot;Unterstrichen&quot;mit dem Modul
    >
    >Es wird als Best Practice erachtet, Stile immer eng auf die Zielkomponente zu verteilen. Dadurch wird sichergestellt, dass sich zusätzliche Stile nicht auf andere Bereiche der Seite auswirken.
    >
-   >Alle Kernkomponenten halten die **[BEM-Notation](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)** ein. Es empfiehlt sich, beim Erstellen eines Standardstils für eine Komponente die äußere CSS-Klasse als Ziel festzulegen. Eine weitere Best Practice ist, Klassennamen, die von der BEM-Notation der Kernkomponente angegeben werden, anstelle von HTML-Elementen auszuwählen.
+   >Alle Kernkomponenten halten **[BEM-Notation](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)**. Es empfiehlt sich, beim Erstellen eines Standardstils für eine Komponente die äußere CSS-Klasse als Ziel festzulegen. Eine weitere Best Practice ist, Klassennamen, die von der BEM-Notation der Kernkomponente angegeben werden, anstelle von HTML-Elementen zu verwenden.
 
-1. Kehren Sie erneut zum Browser zurück und Sie sollten sehen, dass der Stil Unterstrichen hinzugefügt wurde:
+1. Kehren Sie zum Browser und zur AEM Seite zurück. Es sollte der Stil Unterstrichen hinzugefügt werden:
 
    ![Unterstrichener Stil, der auf dem Webpack Dev-Server sichtbar ist](assets/style-system/underline-implemented-webpack.png)
 
-1. Beenden Sie den Webpack Development Server.
-
-### Eine Titelrichtlinie hinzufügen
-
-Als Nächstes müssen wir eine neue Richtlinie für Titelkomponenten hinzufügen, damit Inhaltsautoren den Stil &quot;Unterstrichen&quot;wählen können, der auf bestimmte Komponenten angewendet werden soll. Dies geschieht mit dem Vorlagen-Editor in AEM.
-
-1. Stellen Sie die Codebasis mithilfe Ihrer Maven-Fähigkeiten in einer lokalen AEM-Instanz bereit:
-
-   ```shell
-   $ cd ~/code/aem-guides-wknd
-   $ mvn clean install -PautoInstallSinglePackage
-   ```
-
-1. Navigieren Sie zur Vorlage **Artikelseite** unter: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html)
-
-1. Wählen Sie im Modus **Struktur** im Hauptmodus **Layout-Container** das Symbol **Richtlinie** neben der Komponente **Titel**, die unter *Zulässige Komponenten* aufgeführt ist:
-
-   ![Konfiguration der Titelrichtlinie](assets/style-system/article-template-title-policy-icon.png)
-
-1. Erstellen Sie eine neue Richtlinie für die Komponente Titel mit den folgenden Werten:
-
-   *Richtlinienname **:  **WKND-Titel**
-
-   *Eigenschaften*  >  *Registerkarte &quot;Stile&quot;* >  *Neuen Stil hinzufügen*
-
-   **Unterstreichen** :  `cmp-title--underline`
-
-   ![Stilrichtlinienkonfiguration für den Titel](assets/style-system/title-style-policy.png)
-
-   Klicken Sie auf **Fertig** , um die Änderungen an der Titelrichtlinie zu speichern.
-
-   >[!NOTE]
-   >
-   > Der Wert `cmp-title--underline` entspricht der CSS-Klasse, die wir zuvor bei der Entwicklung im Modul **ui.frontend** angesprochen haben.
-
-### Anwenden des Unterstrichstils
-
-Als Autor können wir schließlich festlegen, dass der Unterstrichstil auf bestimmte Titelkomponenten angewendet wird.
-
-1. Navigieren Sie zum Artikel **La Skateparks** im AEM Sites-Editor unter: [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
-1. Wählen Sie im Modus **Bearbeiten** eine Titelkomponente aus. Klicken Sie auf das Symbol **aintbrush** und wählen Sie den Stil **Unterstrichen** aus:
-
-   ![Anwenden des Unterstrichstils](assets/style-system/apply-underline-style-title.png)
-
-   Als Autor sollten Sie den Stil ein-/ausschalten können.
-
-1. Klicken Sie auf das Symbol **Seiteninformationen** > **Als veröffentlicht anzeigen** , um die Seite außerhalb AEM Editors zu überprüfen.
-
-   ![Als veröffentlicht anzeigen](assets/style-system/view-as-published.png)
-
-   Verwenden Sie Ihre Browser-Entwickler-Tools, um zu überprüfen, ob das Markup um die Titelkomponente mit der CSS-Klasse `cmp-title--underline` auf das äußere div angewendet wird.
+1. Im AEM-Editor sollten Sie jetzt in der Lage sein, die **Unterstreichen** und die visuell reflektierten Änderungen zu sehen.
 
 ## Anführungszeichenblock-Stil - Text {#text-component}
 
-Wiederholen Sie anschließend ähnliche Schritte, um einen eindeutigen Stil auf die [Textkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) anzuwenden. Die Textkomponente wurde im Projekt unter `/apps/wknd/components/text` als Teil des Moduls **ui.apps** bereitgestellt. Die Standardstile von Absatzelementen wurden bereits in **ui.frontend** implementiert.
+Wiederholen Sie als Nächstes ähnliche Schritte, um einen eindeutigen Stil auf die [Textkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=de). Die Textkomponente wurde in das Projekt unter `/apps/wknd/components/text` als Teil der **ui.apps** -Modul. Die Standardstile für Absatzelemente wurden bereits im Abschnitt **ui.frontend**.
 
-Die [WKND-Artikelentwürfe](assets/pages-templates/wknd-article-design.xd) enthalten einen eindeutigen Stil für die Textkomponente mit einem Anführungsblock:
+Die [WKND-Artikelentwürfe](assets/pages-templates/wknd-article-design.xd) enthalten einen eindeutigen Stil für die Textkomponente mit einem Anführungszeichenblock:
 
 ![Anführungszeichenblock-Stil - Textkomponente](assets/style-system/quote-block-style.png)
 
-### Markup der Inspect-Textkomponente
+### Eine Textrichtlinie hinzufügen
 
-Wieder werden wir das Markup der Textkomponente überprüfen.
+Als Nächstes fügen Sie eine neue Richtlinie für die Textkomponenten hinzu.
 
-1. Überprüfen Sie das Markup für die Textkomponente unter: [https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/text.html](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/text.html)
+1. Navigieren Sie zum **Artikelseitenvorlage** befindet sich unter: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html).
 
-1. Unten finden Sie das Markup für die Textkomponente:
+1. In **Struktur** -Modus im Hauptmodus **Layout-Container**, wählen Sie die **Politik** Symbol neben **Text** Komponente aufgeführt unter *Zugelassene Komponenten*:
+
+   ![Textrichtlinienkonfiguration](assets/style-system/article-template-text-policy-icon.png)
+
+1. Aktualisieren Sie die Textkomponentenrichtlinie mit den folgenden Werten:
+
+   *Richtlinienname **: **Inhaltstext**
+
+   *Plugins* > *Absatzformate* > *Absatzstile aktivieren*
+
+   *Registerkarte &quot;Stile&quot;* > *Neuen Stil hinzufügen*
+
+   **Anführungsblock** : `cmp-text--quote`
+
+   ![Textkomponentenrichtlinie](assets/style-system/text-policy-enable-paragraphstyles.png)
+
+   ![Textkomponentenrichtlinie 2](assets/style-system/text-policy-enable-quotestyle.png)
+
+   Klicken **Fertig** , um die Änderungen an der Textrichtlinie zu speichern.
+
+### Anwenden des Anführungszeichenblock-Stils
+
+1. Navigieren Sie zum **La Skateparks** Artikel im AEM Sites-Editor unter: [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
+1. In **Bearbeiten** -Modus eine Textkomponente auswählen. Bearbeiten Sie die Komponente, um ein Anführungszeichenelement einzuschließen:
+
+   ![Konfiguration der Textkomponente](assets/style-system/configure-text-component.png)
+
+1. Wählen Sie die Textkomponente aus und klicken Sie auf die **Pinsel** und wählen Sie das **Anführungsblock** style:
+
+   ![Anwenden des Anführungszeichenblock-Stils](assets/style-system/quote-block-style-applied.png)
+
+1. Verwenden Sie die Entwicklertools des Browsers, um das Markup zu überprüfen. Sie sollten den Klassennamen sehen `cmp-text--quote` wurde zum äußeren Div der Komponente hinzugefügt:
 
    ```html
-   <div class="text">
-       <div class="cmp-text" data-cmp-data-layer="{&quot;text-2d9d50c5a7&quot;:{&quot;@type&quot;:&quot;core/wcm/components/text/v2/text&quot;,&quot;repo:modifyDate&quot;:&quot;2019-01-22T11:56:17Z&quot;,&quot;xdm:text&quot;:&quot;<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas. Varius morbi enim nunc faucibus a pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>\n&quot;}}" id="text-2d9d50c5a7">
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas. Varius morbi enim nunc faucibus a pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
-       </div>
-   </div>
-   ```
-
-   Die BEM-Notation der Textkomponente:
-
-   ```plain
-   BLOCK cmp-text
-       ELEMENT
-   ```
-
-1. Das Stilsystem fügt dem äußeren div um die Komponente herum eine CSS-Klasse hinzu. Daher ähnelt das Markup, das wir als Ziel auswählen werden, etwa Folgendem:
-
-   ```html
-   <div class="text STYLE-SYSTEM-CLASS-HERE"> <!-- Custom CSS class - implementation gets to define this -->
-       <div class="cmp-text" data-cmp-data-layer="{&quot;text-2d9d50c5a7&quot;:{&quot;@type&quot;:&quot;core/wcm/components/text/v2/text&quot;,&quot;repo:modifyDate&quot;:&quot;2019-01-22T11:56:17Z&quot;,&quot;xdm:text&quot;:&quot;<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas. Varius morbi enim nunc faucibus a pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>\n&quot;}}" id="text-2d9d50c5a7">
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu mi bibendum neque egestas congue quisque egestas. Varius morbi enim nunc faucibus a pellentesque. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
+   <!-- Quote Block style class added -->
+   <div class="text cmp-text--quote">
+       <div data-cmp-data-layer="{&quot;text-60910f4b8d&quot;:{&quot;@type&quot;:&quot;wknd/components/text&quot;,&quot;repo:modifyDate&quot;:&quot;2022-02-24T00:55:26Z&quot;,&quot;xdm:text&quot;:&quot;<blockquote>&amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;quot;There is no better place to shred then Los Angeles&amp;quot;</blockquote>\r\n<p>- Jacob Wester, Pro Skater</p>\r\n&quot;}}" id="text-60910f4b8d" class="cmp-text">
+           <blockquote>&nbsp; &nbsp; &nbsp;"There is no better place to shred then Los Angeles"</blockquote>
+           <p>- Jacob Wester, Pro Skater</p>
        </div>
    </div>
    ```
 
 ### Implementieren des Anführungszeichenblock-Stils - ui.frontend
 
-Als Nächstes implementieren wir den Stil des Anführungsblocks mit dem Modul **ui.frontend** unseres Projekts.
+Als Nächstes implementieren wir den Stil des Anführungszeichens mit der **ui.frontend** -Modul unseres Projekts.
 
-1. Starten Sie den webpack-Dev-Server, indem Sie den folgenden Befehl im Modul **ui.frontend** ausführen:
+1. Wenn sie noch nicht ausgeführt wird, starten Sie die `watch` -Prozess innerhalb von **ui.frontend** -Modul:
 
    ```shell
-   $ cd ~/code/aem-guides-wknd/ui.frontend/
-   $ npm start
+   $ npm run watch
    ```
 
-1. Öffnen Sie in der IDE die Datei `index.html` unter: `ui.frontend/src/main/webpack/static/index.html`.
-1. Suchen Sie in `index.html` eine Instanz der Textkomponente, indem Sie nach dem Text *&quot;Jacob Wester&quot;* (Zeile 210) suchen. Fügen Sie die Klasse `cmp-text--quote` zum umgebenden div hinzu:
-
-   ```diff
-   - <div class="text aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--8">
-   + <div class="cmp-text--quote text aem-GridColumn--phone--12 aem-GridColumn aem-GridColumn--default--8">
-        <div data-cmp-data-layer="{&#34;text-a15f39a83a&#34;:{&#34;@type&#34;:&#34;wknd/components/text&#34;,&#34;repo:modifyDate&#34;:&#34;2021-01-22T00:23:27Z&#34;,&#34;xdm:text&#34;:&#34;&lt;blockquote>&amp;quot;There is no better place to shred then Los Angeles.”&lt;/blockquote>\r\n&lt;p>- Jacob Wester, Pro Skater&lt;/p>\r\n&#34;}}" id="text-a15f39a83a" class="cmp-text">
-            <blockquote>&quot;There is no better place to shred then Los Angeles.”</blockquote>
-            <p>- Jacob Wester, Pro Skater</p>
-        </div>
-    </div>
-   ```
-
-1. Aktualisieren Sie die Datei `text.scss` unter: `ui.frontend/src/main/webpack/components/_text.scss`:
+1. Datei aktualisieren `text.scss` befindet sich unter: `ui.frontend/src/main/webpack/components/_text.scss`:
 
    ```css
+   /* Default text style */
+   .cmp-text {}
+   .cmp-text__paragraph {}
+   
    /* WKND Text Quote style */
    .cmp-text--quote {
        .cmp-text {
@@ -337,75 +300,29 @@ Als Nächstes implementieren wir den Stil des Anführungsblocks mit dem Modul **
 
    >[!CAUTION]
    >
-   > In diesem Fall werden rohe HTML-Elemente von den Stilen angesprochen. Dies liegt daran, dass die Textkomponente einen Rich-Text-Editor für Inhaltsautoren bereitstellt. Die Erstellung von Stilen direkt mit RTE-Inhalten sollte mit Vorsicht erfolgen, und es ist umso wichtiger, die Stile genauer zu definieren.
+   > In diesem Fall werden Roh-HTML-Elemente von den Stilen angesprochen. Dies liegt daran, dass die Textkomponente einen Rich-Text-Editor für Inhaltsautoren bereitstellt. Die Erstellung von Stilen direkt mit RTE-Inhalten sollte mit Vorsicht erfolgen, und es ist umso wichtiger, die Stile genauer zu definieren.
 
 1. Kehren Sie erneut zum Browser zurück und Sie sollten sehen, wie der Stil des Anführungsblocks hinzugefügt wurde:
 
-   ![Anführungszeichenblock-Stil auf dem Webpack-Dev-Server sichtbar](assets/style-system/quoteblock-implemented-webpack.png)
+   ![Anführungsblock-Stil sichtbar](assets/style-system/quoteblock-implemented.png)
 
 1. Beenden Sie den Webpack Development Server.
-
-### Eine Textrichtlinie hinzufügen
-
-Als Nächstes fügen Sie eine neue Richtlinie für die Textkomponenten hinzu.
-
-1. Stellen Sie die Codebasis mithilfe Ihrer Maven-Kenntnisse in einer lokalen AEM-Instanz bereit:
-
-   ```shell
-   $ cd ~/code/aem-guides-wknd
-   $ mvn clean install -PautoInstallSinglePackage
-   ```
-
-1. Navigieren Sie zur **Artikelseitenvorlage** unter: [http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html](http://localhost:4502/editor.html/conf/wknd/settings/wcm/templates/article-page/structure.html)).
-
-1. Wählen Sie im Modus **Struktur** im Hauptmodus **Layout-Container** das Symbol **Richtlinie** neben der Komponente **Text**, die unter *Zulässige Komponenten* aufgeführt ist:
-
-   ![Textrichtlinienkonfiguration](assets/style-system/article-template-text-policy-icon.png)
-
-1. Aktualisieren Sie die Textkomponentenrichtlinie mit den folgenden Werten:
-
-   *Richtlinienname **:  **Inhaltstext**
-
-   *Plug-ins*  >  *Absatzstile*  > Absatzstile  *aktivieren*
-
-   *Registerkarte &quot;Stile&quot;* >  *Neuen Stil hinzufügen*
-
-   **Anführungsblock** :  `cmp-text--quote`
-
-   ![Textkomponentenrichtlinie](assets/style-system/text-policy-enable-paragraphstyles.png)
-
-   ![Textkomponentenrichtlinie 2](assets/style-system/text-policy-enable-quotestyle.png)
-
-   Klicken Sie auf **Fertig** , um die Änderungen an der Textrichtlinie zu speichern.
-
-### Anwenden des Anführungszeichenblock-Stils
-
-1. Navigieren Sie zum Artikel **La Skateparks** im AEM Sites-Editor unter: [http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html)
-1. Wählen Sie im Modus **Bearbeiten** eine Textkomponente aus. Bearbeiten Sie die Komponente, um ein Anführungszeichenelement einzuschließen:
-
-   ![Konfiguration der Textkomponente](assets/style-system/configure-text-component.png)
-
-1. Wählen Sie die Textkomponente aus, klicken Sie auf das Symbol **pinsel** und wählen Sie den Stil **Anführungsblock** aus:
-
-   ![Anwenden des Anführungszeichenblock-Stils](assets/style-system/quote-block-style-applied.png)
-
-   Als Autor sollten Sie den Stil ein-/ausschalten können.
 
 ## Feste Breite - Container (Bonus) {#layout-container}
 
 Container-Komponenten wurden verwendet, um die grundlegende Struktur der Artikelseitenvorlage zu erstellen und die Ablageflächen bereitzustellen, damit Inhaltsautoren Inhalte auf einer Seite hinzufügen können. Container können auch das Stilsystem nutzen und Autoren von Inhalten noch mehr Optionen zum Entwerfen von Layouts bieten.
 
-Der **Hauptbehälter** der Artikelseitenvorlage enthält die beiden Container, die Authoring-fähig sind, und hat eine feste Breite.
+Die **Hauptbehälter** der Vorlage &quot;Artikelseite&quot;enthält die beiden Container, die Authoring-fähig sind, und hat eine feste Breite.
 
 ![Hauptbehälter](assets/style-system/main-container-article-page-template.png)
 
 *Hauptbehälter in der Artikelseitenvorlage*.
 
-Die Richtlinie des **Hauptcontainers** legt das Standardelement auf `main` fest:
+Die Politik der **Hauptbehälter** setzt das Standardelement auf `main`:
 
 ![Hauptbehälterrichtlinie](assets/style-system/main-container-policy.png)
 
-Das CSS, das den **Hauptcontainer** fixiert, wird im Modul **ui.frontend** unter `ui.frontend/src/main/webpack/site/styles/container_main.scss` festgelegt:
+Die CSS, die die **Hauptbehälter** festgelegt ist, wird in **ui.frontend** -Modul an `ui.frontend/src/main/webpack/site/styles/container_main.scss` :
 
 ```SCSS
 main.container {
@@ -417,9 +334,9 @@ main.container {
 }
 ```
 
-Anstatt das HTML-Element `main` als Ziel festzulegen, kann das Stilsystem verwendet werden, um einen **Stil mit fester Breite** als Teil der Container-Richtlinie zu erstellen. Das Stilsystem bietet Benutzern die Möglichkeit, zwischen **Containern mit fester Breite** und **Fluid width** umzuschalten.
+Anstatt die `main` HTML-Element verwenden, kann das Stilsystem zum Erstellen eines **Feste Breite** -Stil als Teil der Container-Richtlinie. Das Stilsystem bietet Benutzern die Möglichkeit, zwischen **Feste Breite** und **Fließbreite** Container.
 
-1. **Bonusaufgabe**  - Nutzen Sie die aus den vorherigen Übungen gewonnenen Erfahrungen und verwenden Sie das Stilsystem, um eine  **feste** Breite und  **fließende** Breitenstile für die Container-Komponente zu implementieren.
+1. **Bonusaufgabe** - Nutzung der Erfahrungen aus früheren Übungen und Verwendung des Stilsystems zur Implementierung einer **Feste Breite** und **Fließbreite** Stile für die Container-Komponente.
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
@@ -427,9 +344,9 @@ Herzlichen Glückwunsch! Die Artikelseite ist fast vollständig formatiert und S
 
 ### Nächste Schritte {#next-steps}
 
-Erfahren Sie, wie Sie eine [benutzerdefinierte AEM-Komponente](custom-component.md) erstellen, die in einem Dialogfeld verfasste Inhalte anzeigt, und wie Sie ein Sling-Modell entwickeln können, um eine Geschäftslogik einzukapseln, die die HTL der Komponente füllt.
+Hier erfahren Sie, wie Sie eine [benutzerdefinierte AEM](custom-component.md) , der Inhalte anzeigt, die in einem Dialogfeld erstellt wurden, und die Entwicklung eines Sling-Modells untersucht, um die Geschäftslogik einzukapseln, die die HTL der Komponente füllt.
 
-Zeigen Sie den fertigen Code auf [GitHub](https://github.com/adobe/aem-guides-wknd) an oder überprüfen Sie den Code und stellen Sie ihn lokal in der Git-Klammer `tutorial/style-system-solution` bereit.
+Anzeigen des fertigen Codes unter [GitHub](https://github.com/adobe/aem-guides-wknd) oder den Code lokal in der Git-Klammer überprüfen und bereitstellen `tutorial/style-system-solution`.
 
-1. Klonen Sie das Repository [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd).
-1. Sehen Sie sich die Verzweigung `tutorial/style-system-solution` an.
+1. Klonen Sie die [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd) Repository.
+1. Sehen Sie sich die `tutorial/style-system-solution` -Verzweigung.

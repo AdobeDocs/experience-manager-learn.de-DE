@@ -3,7 +3,7 @@ title: Erste Schritte mit AEM Sites - Projekteinrichtung
 seo-title: Getting Started with AEM Sites - Project Setup
 description: Behandelt die Erstellung eines Maven-Multi-Module-Projekts zur Verwaltung des Codes und der Konfigurationen für eine AEM Site.
 sub-product: sites
-version: 6.4, 6.5, Cloud Service
+version: 6.5, Cloud Service
 type: Tutorial
 feature: AEM Project Archetype
 topic: Content Management, Development
@@ -13,10 +13,10 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: a366d485da3f473bd4c1ef31538231965acc825c
+source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
 workflow-type: tm+mt
-source-wordcount: '1843'
-ht-degree: 4%
+source-wordcount: '1818'
+ht-degree: 5%
 
 ---
 
@@ -46,11 +46,11 @@ In diesem Kapitel erstellen Sie ein neues Adobe Experience Manager-Projekt mit d
 
 ## Projekt erstellen {#create}
 
-Es gibt mehrere Optionen zum Erstellen eines Maven-Multi-Modul-Projekts für AEM. In diesem Tutorial wird die [Maven AEM Projektarchetyp **26**](https://github.com/adobe/aem-project-archetype). Cloud Manager auch [stellt einen UI-Assistenten bereit](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html) , um die Erstellung eines AEM Anwendungsprojekts zu starten. Das zugrunde liegende Projekt, das von der Cloud Manager-Benutzeroberfläche generiert wurde, weist dieselbe Struktur auf wie die direkte Verwendung des Archetyps.
+Es gibt mehrere Optionen zum Erstellen eines Maven-Multi-Modul-Projekts für AEM. In diesem Tutorial wird die [Maven AEM Projektarchetyp **35**](https://github.com/adobe/aem-project-archetype). Cloud Manager auch [stellt einen UI-Assistenten bereit](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html) , um die Erstellung eines AEM Anwendungsprojekts zu starten. Das zugrunde liegende Projekt, das von der Cloud Manager-Benutzeroberfläche generiert wurde, weist dieselbe Struktur auf wie die direkte Verwendung des Archetyps.
 
 >[!NOTE]
 >
->Dieses Tutorial verwendet Version **26** des Archetyps. Es empfiehlt sich immer, die **latest** Version des Archetyps, um ein neues Projekt zu generieren.
+>Dieses Tutorial verwendet Version **35** des Archetyps. Es empfiehlt sich immer, die **latest** Version des Archetyps, um ein neues Projekt zu generieren.
 
 Die nächsten Schritte werden mit einem UNIX-basierten Befehlszeilenterminal durchgeführt, sollten jedoch bei Verwendung eines Windows-Terminals ähnlich sein.
 
@@ -63,27 +63,6 @@ Die nächsten Schritte werden mit einem UNIX-basierten Befehlszeilenterminal dur
    Java version: 11.0.4, vendor: Oracle Corporation, runtime: /Library/Java/JavaVirtualMachines/jdk-11.0.4.jdk/Contents/Home
    ```
 
-1. Stellen Sie sicher, dass **adobe-public** profile ist aktiv, indem der folgende Befehl ausgeführt wird:
-
-   ```shell
-   $ mvn help:effective-settings
-       ...
-   <activeProfiles>
-       <activeProfile>adobe-public</activeProfile>
-   </activeProfiles>
-   <pluginGroups>
-       <pluginGroup>org.apache.maven.plugins</pluginGroup>
-       <pluginGroup>org.codehaus.mojo</pluginGroup>
-   </pluginGroups>
-   </settings>
-   [INFO] ------------------------------------------------------------------------
-   [INFO] BUILD SUCCESS
-   [INFO] ------------------------------------------------------------------------
-   [INFO] Total time:  0.856 s
-   ```
-
-   Wenn Sie **not** sehen Sie die **adobe-public** Dies ist ein Hinweis darauf, dass das Adobe-Repository in Ihrer `~/.m2/settings.xml` -Datei. Lesen Sie die Schritte zur Installation und Konfiguration von Apache Maven in [eine lokale Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html#install-apache-maven).
-
 1. Navigieren Sie zu einem Ordner, in dem Sie das AEM Projekt generieren möchten. Dies kann ein beliebiger Ordner sein, in dem Sie den Quellcode Ihres Projekts verwalten möchten. Beispiel: ein Verzeichnis mit dem Namen `code` unter dem Basisverzeichnis des Benutzers:
 
    ```shell
@@ -93,21 +72,22 @@ Die nächsten Schritte werden mit einem UNIX-basierten Befehlszeilenterminal dur
 1. Fügen Sie Folgendes in die Befehlszeile ein, um [Projekt im Batch-Modus generieren](https://maven.apache.org/archetype/maven-archetype-plugin/examples/generate-batch.html):
 
    ```shell
-   mvn -B archetype:generate \
+   mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate \
        -D archetypeGroupId=com.adobe.aem \
        -D archetypeArtifactId=aem-project-archetype \
-       -D archetypeVersion=26 \
+       -D archetypeVersion=35 \
        -D appTitle="WKND Sites Project" \
        -D appId="wknd" \
-       -D groupId="com.adobe.aem.guides.wknd" \
+       -D groupId="com.adobe.aem.guides" \
        -D artifactId="aem-guides-wknd" \
+       -D package="com.adobe.aem.guides.wknd" \
        -D version="0.0.1-SNAPSHOT" \
        -D aemVersion="cloud"
    ```
 
    >[!NOTE]
    >
-   > Wenn AEM 6.5.5 oder höher ausgewählt ist, ersetzen Sie `aemVersion="cloud"` mit `aemVersion="6.5.5"`. Verwenden Sie bei der Zielgruppenbestimmung ab Version 6.4.8 `aemVersion="6.4.8"`.
+   > Wenn AEM 6.5.10 oder höher ausgewählt ist, ersetzen Sie `aemVersion="cloud"` mit `aemVersion="6.5.10"`.
 
    Eine vollständige Liste der verfügbaren Eigenschaften zum Konfigurieren eines Projekts [finden Sie hier .](https://github.com/adobe/aem-project-archetype#available-properties).
 
@@ -275,7 +255,7 @@ Die **[core](https://experienceleague.adobe.com/docs/experience-manager-core-com
 
 ### Ui.apps- und Ui.content-Module {#apps-content-module}
 
-Die **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** Das Maven-Modul enthält den gesamten Rendercode, der für die unten stehende Site benötigt wird. `/apps`. Dazu gehört auch CSS/JS, das in einem AEM namens [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html). Dazu gehören auch [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=de) Skripte zum Rendern von dynamischem HTML. Sie können sich die **ui.apps** -Modul als Zuordnung zur Struktur im JCR, jedoch in einem Format, das in einem Dateisystem gespeichert und an die Quell-Code-Verwaltung übertragen werden kann. Die **ui.apps** -Modul enthält nur Code.
+Die **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** Das Maven-Modul enthält den gesamten Rendercode, der für die unten stehende Site benötigt wird. `/apps`. Dazu gehört auch CSS/JS, das in einem AEM namens [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=de). Dazu gehören auch [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=de) Skripte zum Rendern von dynamischem HTML. Sie können sich die **ui.apps** -Modul als Zuordnung zur Struktur im JCR, jedoch in einem Format, das in einem Dateisystem gespeichert und an die Quell-Code-Verwaltung übertragen werden kann. Die **ui.apps** -Modul enthält nur Code.
 
 So erstellen Sie das Modul nur dieses:
 
@@ -349,3 +329,7 @@ So erstellen Sie das Modul nur dieses:
 Die **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** -Modul auf die gleiche Weise strukturiert wie das **ui.apps** -Modul. Der einzige Unterschied besteht darin, dass die **ui.content** enthält das so genannte **veränderlich** Inhalt. **Veränderlich** Inhalt bezieht sich im Wesentlichen auf Nicht-Code-Konfigurationen wie Vorlagen, Richtlinien oder Ordnerstrukturen, die in der Quell-Code-Verwaltung gespeichert sind **but** kann direkt in einer AEM-Instanz geändert werden. Dies wird im Kapitel über Seiten und Vorlagen ausführlicher untersucht.
 
 Dieselben Maven-Befehle, die zum Erstellen der **ui.apps** -Modul zum Erstellen der **ui.content** -Modul. Sie können die oben genannten Schritte innerhalb der **ui.content** Ordner.
+
+## Fehlerbehebung
+
+Wenn Sie Probleme beim Generieren des Projekts mithilfe des AEM Projektarchetyps haben, sehen Sie sich die Liste der [bekannte Probleme](https://github.com/adobe/aem-project-archetype#known-issues) und Liste der offenen [issues](https://github.com/adobe/aem-project-archetype/issues).
