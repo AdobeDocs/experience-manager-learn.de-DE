@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: ba2c299baeda632d6ebeff0c6ee07de5ef29b9cb
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
-source-wordcount: '1259'
-ht-degree: 1%
+source-wordcount: '1321'
+ht-degree: 2%
 
 ---
 
@@ -22,9 +22,13 @@ Erfahren Sie, wie Sie eine as a Cloud Service Verbindung mit Ihrem VPN herstelle
 
 ## Was ist ein virtuelles privates Netzwerk?
 
-Virtual Private Network (VPN) ermöglicht es einem AEM as a Cloud Service Kunden, ein Cloud Manager-Programm mit einem vorhandenen, [unterstützt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#vpn) VPN. Dies ermöglicht sichere und kontrollierte Verbindungen zwischen AEM as a Cloud Service Diensten und Diensten innerhalb des Kundennetzwerks.
+Virtual Private Network (VPN) ermöglicht einem AEM as a Cloud Service Kunden die Verbindung **AEM Umgebungen** innerhalb eines Cloud Manager-Programms auf ein vorhandenes Element verweist, [unterstützt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#vpn) VPN. Dies ermöglicht sichere und kontrollierte Verbindungen zwischen AEM as a Cloud Service Diensten und Diensten innerhalb des Kundennetzwerks.
 
 Ein Cloud Manager-Programm kann nur über eine __single__ Netzwerkinfrastrukturtyp. Stellen Sie sicher, dass das virtuelle private Netzwerk das beste ist. [geeignete Art von Netzwerkinfrastruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#general-vpn-considerations) für Ihre AEM as a Cloud Service, bevor Sie die folgenden Befehle ausführen.
+
+>[!NOTE]
+>
+>Beachten Sie, dass das Verbinden der Build-Umgebung von Cloud Manager mit einem VPN nicht unterstützt wird. Wenn Sie über ein privates Repository auf binäre Artefakte zugreifen müssen, müssen Sie ein sicheres und kennwortgeschütztes Repository mit einer URL einrichten, die im öffentlichen Internet verfügbar ist [wie hier beschrieben](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html#password-protected-maven-repositories).
 
 >[!MORELIKETHIS]
 >
@@ -32,7 +36,7 @@ Ein Cloud Manager-Programm kann nur über eine __single__ Netzwerkinfrastrukturt
 
 ## Voraussetzungen
 
-Beim Einrichten eines virtuellen privaten Netzwerks sind folgende Voraussetzungen erforderlich:
+Bei der Einrichtung eines virtuellen privaten Netzwerks sind folgende Voraussetzungen erforderlich:
 
 + Adobe-Konto mit [Berechtigungen für Business Owner in Cloud Manager](https://www.adobe.io/experience-cloud/cloud-manager/guides/getting-started/permissions/#cloud-manager-api-permissions)
 + Zugriff auf [Authentifizierungsberechtigungen der Cloud Manager-API](https://www.adobe.io/experience-cloud/cloud-manager/guides/getting-started/authentication/)

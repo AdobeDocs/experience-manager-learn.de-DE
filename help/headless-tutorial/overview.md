@@ -7,10 +7,10 @@ role: Developer
 level: Beginner
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 08146f57235f3de7fd5ab73754166cc85e1f7dda
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
-source-wordcount: '527'
-ht-degree: 7%
+source-wordcount: '529'
+ht-degree: 6%
 
 ---
 
@@ -20,7 +20,7 @@ Adobe Experience Manager (AEM) bietet mehrere Optionen zum Definieren von Headle
 
 >[!TIP]
 >
->Diese Sammlung von Tutorials richtet sich an diejenigen, die **Lernen durch**. Wenn Sie Lern-Konzepte von Grund auf bevorzugen, schauen Sie sich die [AEM Headless-Entwickler-Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/headless-journey/developer/overview.html?lang=de). Diese Tutorials und das Journey ergänzen sich.
+>Diese Sammlung von Tutorials richtet sich an diejenigen, die **Lernen durch**. Wenn Sie Lern-Konzepte von Grund auf bevorzugen, schauen Sie sich die [AEM Headless-Entwickler-Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). Diese Tutorials und das Journey ergänzen sich.
 
 ## Tutorials nach API
 

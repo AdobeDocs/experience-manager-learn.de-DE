@@ -2,7 +2,7 @@
 title: Erste Schritte mit AEM Sites - Komponentengrundlagen
 description: Machen Sie sich mit der zugrunde liegenden Technologie einer Adobe Experience Manager (AEM) Sites-Komponente durch ein einfaches "HelloWorld"-Beispiel vertraut. Themen zu HTL, Sling-Modellen, Client-seitigen Bibliotheken und Autorendialogfeldern werden untersucht.
 sub-product: sites
-version: 6.4, 6.5, Cloud Service
+version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, Developer Tools
 topic: Content Management, Development
@@ -12,7 +12,7 @@ mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
 workflow-type: tm+mt
 source-wordcount: '1146'
 ht-degree: 4%
@@ -186,7 +186,7 @@ Als Nächstes werden wir einige Aktualisierungen am `HelloWorldModel` Sling-Mode
 1. Fügen Sie die folgenden Importanweisungen hinzu:
 
    ```java
-   import org.apache.commons.lang.StringUtils;
+   import org.apache.commons.lang3.StringUtils;
    import org.apache.sling.models.annotations.DefaultInjectionStrategy;
    ```
 
