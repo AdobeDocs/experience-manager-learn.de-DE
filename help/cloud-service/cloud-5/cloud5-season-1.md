@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 83757a34cc82159326d3e035b88f018972d5dc27
+source-git-commit: a8e6e863a4d236babdb1e2ae978240cd51631981
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '334'
 ht-degree: 1%
 
 ---
@@ -51,8 +51,7 @@ Jede Jahreszeit variiert in ihrer Länge und wird nach einem festen Zeitplan ver
         <br/>
          Teil 2 ist eine Fortsetzung unserer Betrachtung des AEM as a Cloud Service CDN. Wir beantworten einige der häufigsten Fragen und Mythen über die Funktionen, die Sie mit dem neuen CDN erhalten.
       </p>
-   </td>     
-   </td>   
+   </td>
      <td>
       <img alt="Protokolldateien und Protokollierung" src="./imgs/coming-soon.png"/>
       <div>
@@ -87,12 +86,46 @@ Jede Jahreszeit variiert in ihrer Länge und wird nach einem festen Zeitplan ver
         <br/>
          April 2022
       </p>
-   </td>     
-   </td>   
+   </td>
      <td>
       <img alt="Migration (Teil 1)" src="./imgs/coming-soon.png"/>
       <div>
          <strong>Migration (Teil 1)</strong>
+         <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+      </div>
+      <p>
+        <br/>
+         April 2022
+      </p>
+   </td> 
+  </tr>
+<tr>
+   <td>
+      <img alt="Migration (Teil 2)" src="./imgs/coming-soon.png"/>
+      <div>
+        <strong>Migration (Teil 2)</strong>        
+         <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+      </div>
+      <p>
+        <br/>
+         April 2022
+      </p>
+     </td>   
+     <td>
+      <img alt="Dispatcher Validator" src="./imgs/coming-soon.png"/>
+      <div>
+         <strong>Dispatcher Validator</strong>
+         <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+      </div>
+      <p>
+        <br/>
+         April 2022
+      </p>
+   </td>
+     <td>
+      <img alt="Tipps zur Indizierung und Suche" src="./imgs/coming-soon.png"/>
+      <div>
+         <strong>Tipps zur Indizierung und Suche</strong>
          <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
       </div>
       <p>
