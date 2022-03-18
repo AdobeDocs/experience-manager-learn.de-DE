@@ -7,13 +7,13 @@ level: Intermediate
 kt: 9927
 hidefromtoc: true
 thumbnail: 341156.jpeg
-source-git-commit: 0251defef3a1f79c006ca0a5f4d8d72e8878cfe9
+exl-id: 1d000b09-52e7-4828-a0b3-32a47131e66c
+source-git-commit: 187f13c5051237915fdc8a8c0e3280dd0f0702ce
 workflow-type: tm+mt
-source-wordcount: '97'
-ht-degree: 0%
+source-wordcount: '114'
+ht-degree: 10%
 
 ---
-
 
 # Cloud 5 AEM Protokolldateien
 
@@ -26,4 +26,6 @@ Dies ist ein tiefer Einblick in den Zugriff auf Protokolle in AEM as a Cloud Ser
 + Protokolldateien [Übersicht](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html)
 + Zugriff auf Protokolldateien über die Benutzeroberfläche
 + Verwenden der Adobe-CLI
+   + [Adobe I/O Extensible CLI](https://github.com/adobe/aio-cli)
+   + [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
 + Tracking-Protokolldateien

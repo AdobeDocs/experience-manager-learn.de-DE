@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: a8e6e863a4d236babdb1e2ae978240cd51631981
+source-git-commit: 187f13c5051237915fdc8a8c0e3280dd0f0702ce
 workflow-type: tm+mt
-source-wordcount: '334'
+source-wordcount: '362'
 ht-degree: 1%
 
 ---
@@ -53,14 +53,16 @@ Jede Jahreszeit variiert in ihrer Länge und wird nach einem festen Zeitplan ver
       </p>
    </td>
      <td>
-      <img alt="Protokolldateien und Protokollierung" src="./imgs/coming-soon.png"/>
+        <a href="./cloud5-aem-log-files.md">
+            <img alt="Protokolldateien und Protokollierung" src="./imgs/003-thumb.png"/>
+        </a>
       <div>
-         <strong>Protokolldateien und Protokollierung</strong>
+         <a href="./cloud5-aem-log-files.md"><strong>Protokolldateien und Protokollierung</strong></a>
          <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
       </div>
       <p>
         <br/>
-         Vom 18. März 2022
+         Hier erhalten Sie einen schnellen Einblick in den Zugriff auf Protokolle in AEM as a Cloud Service, einschließlich des Zugriffs über die Benutzeroberfläche sowie über APIs.
       </p>
    </td> 
   </tr>
