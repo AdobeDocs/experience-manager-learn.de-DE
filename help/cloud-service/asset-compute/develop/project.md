@@ -7,17 +7,17 @@ topic: Integrations, Development
 feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
+exl-id: ebb11eab-1412-4af5-bc09-e965b9116ac9
+source-git-commit: 136049776140746c61d42ad1496df15a2d226e3a
 workflow-type: tm+mt
 source-wordcount: '896'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-
 # Erstellen eines Asset compute-Projekts
 
-asset compute-Projekte sind Node.js-Projekte, die mithilfe der Adobe I/O-CLI erstellt werden und einer bestimmten Struktur entsprechen, mit der sie in Adobe I/O Runtime bereitgestellt und in AEM as a Cloud Service integriert werden können. Ein einzelnes Asset compute-Projekt kann einen oder mehrere Asset compute-Sekundäre enthalten, wobei jeder über einen separaten HTTP-Endpunkt-Verweis verfügt, der von einem AEM als Cloud Service-Verarbeitungsprofil referenziert werden kann.
+asset compute-Projekte sind Node.js-Projekte, die mithilfe der Adobe I/O-CLI erstellt werden und einer bestimmten Struktur entsprechen, mit der sie in Adobe I/O Runtime bereitgestellt und in AEM as a Cloud Service integriert werden können. Ein einzelnes Asset compute-Projekt kann einen oder mehrere Asset compute-Worker enthalten, von denen jeder über einen separaten HTTP-Endpunkt-Verweis aus einem AEM as a Cloud Service Verarbeitungsprofil verfügt.
 
 ## Projekt erstellen
 
@@ -25,38 +25,38 @@ asset compute-Projekte sind Node.js-Projekte, die mithilfe der Adobe I/O-CLI ers
 
 _Clickthrough zum Generieren eines Asset compute-Projekts (kein Audio)_
 
-Verwenden Sie das [Adobe I/O CLI Asset compute-Plug-in](../set-up/development-environment.md#aio-cli), um ein neues, leeres Asset compute-Projekt zu generieren.
+Verwenden Sie die [Adobe I/O CLI Asset compute-Plug-in](../set-up/development-environment.md#aio-cli) , um ein neues, leeres Asset compute-Projekt zu erstellen.
 
 1. Navigieren Sie in der Befehlszeile zum Ordner, der das Projekt enthalten soll.
-1. Führen Sie in der Befehlszeile `aio app init` aus, um die CLI für die interaktive Projekterstellung zu starten.
-   + Dieser Befehl erzeugt möglicherweise einen Webbrowser, der zur Authentifizierung bei Adobe I/O auffordert. Wenn dies der Fall ist, geben Sie die Anmeldeinformationen Ihrer Adobe an, die den [erforderlichen Adobe-Diensten und -Produkten](../set-up/accounts-and-services.md) zugeordnet sind. Wenn Sie sich nicht anmelden können, befolgen Sie [diese Anweisungen zum Generieren eines Projekts](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+1. Führen Sie in der Befehlszeile `aio app init` , um die CLI für die interaktive Projekterstellung zu starten.
+   + Dieser Befehl erzeugt möglicherweise einen Webbrowser, der zur Authentifizierung bei Adobe I/O auffordert. Wenn dies der Fall ist, geben Sie Ihre Anmeldeinformationen für die Adobe an, die mit dem [erforderliche Adobe-Dienste und -Produkte](../set-up/accounts-and-services.md). Wenn Sie sich nicht anmelden können, folgen Sie [diese Anweisungen zum Generieren eines Projekts](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 1. __Organisation auswählen__
-   + Wählen Sie die Adobe-Organisation aus, die AEM als Cloud Service hat. Project Firefly ist bei registriert.
+   + Wählen Sie die Adobe-Organisation aus, die AEM as a Cloud Service ist. Project Firefly ist bei registriert.
 1. __Projekt auswählen__
-   + Suchen und wählen Sie das Projekt aus. Dies ist der [Projekttitel](../set-up/firefly.md), der aus der Firefly-Projektvorlage erstellt wurde, in diesem Fall `WKND AEM Asset Compute`
+   + Suchen und wählen Sie das Projekt aus. Dies ist die [Projekttitel](../set-up/firefly.md) aus der Firefly-Projektvorlage erstellt wurde, in diesem Fall `WKND AEM Asset Compute`
 1. __Arbeitsbereich auswählen__
-   + Wählen Sie den Arbeitsbereich `Development` aus.
-1. __Welche Adobe I/O App-Funktionen möchten Sie für dieses Projekt aktivieren? Wählen Sie Komponenten aus, die__ enthalten sollen.
+   + Wählen Sie die `Development` Arbeitsbereich
+1. __Welche Adobe I/O App-Funktionen möchten Sie für dieses Projekt aktivieren? Auswahl der einzuschließenden Komponenten__
    + Wählen Sie nun eine der folgenden Optionen aus `Actions: Deploy runtime actions`
    + Wählen Sie mithilfe der Pfeiltasten die Auswahl aus und platzieren Sie die Auswahl und geben Sie die Eingabetaste ein, um die Auswahl zu bestätigen.
 1. __Wählen Sie den zu erzeugenden Aktionstyp aus__
-   + Wählen Sie nun eine der folgenden Optionen aus `Adobe Asset Compute Worker`
+   + Wählen Sie nun eine der folgenden Optionen aus `DX Asset Compute Worker v1`
    + Verwenden Sie die auszuwählenden Pfeiltasten, stellen Sie die Auswahl ein, legen Sie die Auswahl ab und bestätigen Sie die Auswahl mit der Eingabetaste
 1. __Wie möchten Sie diese Aktion benennen?__
-   + Verwenden Sie den Standardnamen `worker`.
+   + Standardnamen verwenden `worker`.
    + Wenn Ihr Projekt mehrere Sekundäre enthält, die unterschiedliche Asset-Berechnungen durchführen, benennen Sie sie semantisch
 
 ## Generieren Sie console.json
 
-Für das Entwickler-Tool ist eine Datei mit dem Namen `console.json` erforderlich, die die erforderlichen Anmeldeinformationen für die Verbindung mit Adobe I/O enthält. Diese Datei wird von der Adobe I/O Console heruntergeladen.
+Für das Entwickler-Tool ist eine Datei mit dem Namen `console.json` , der die erforderlichen Anmeldeinformationen für die Verbindung mit Adobe I/O enthält. Diese Datei wird von der Adobe I/O Console heruntergeladen.
 
-1. Öffnen Sie das Projekt [Adobe I/O](https://console.adobe.io) des Asset compute Worker.
-1. Wählen Sie den Projektarbeitsbereich aus, für den Sie die `console.json`-Anmeldeinformationen herunterladen möchten. Wählen Sie in diesem Fall `Development` aus.
-1. Wechseln Sie zum Stammverzeichnis des Adobe I/O-Projekts und tippen Sie oben rechts auf __Alle herunterladen__ .
-1. Eine Datei wird als `.json`-Datei heruntergeladen, der das Projekt und der Arbeitsbereich vorangestellt sind, z. B.: `wkndAemAssetCompute-81368-Development.json`
+1. Öffnen Sie das Asset compute Worker-Fenster [Adobe I/O](https://console.adobe.io) Projekt
+1. Wählen Sie den Projektarbeitsbereich aus, um den `console.json` Wählen Sie in diesem Fall die Anmeldedaten für `Development`
+1. Wechseln Sie zum Stammverzeichnis des Adobe I/O-Projekts und tippen Sie auf __Alle herunterladen__ in der oberen rechten Ecke.
+1. Eine Datei wird als `.json` -Datei mit dem Präfix des Projekts und des Arbeitsbereichs, z. B.: `wkndAemAssetCompute-81368-Development.json`
 1. Wählen Sie eine der folgenden Möglichkeiten aus
-   + Benennen Sie die Datei in `config.json` um und verschieben Sie sie in das Stammverzeichnis Ihres Asset compute Worker-Projekts. Dies ist der Ansatz in diesem Tutorial.
-   + Verschieben Sie sie in einen beliebigen Ordner UND referenzieren Sie diesen Ordner aus Ihrer `.env`-Datei mit einem Konfigurationseintrag `ASSET_COMPUTE_INTEGRATION_FILE_PATH`. Der Dateipfad kann absolut oder relativ zum Stammverzeichnis Ihres Projekts sein. Beispiel:
+   + Benennen Sie die Datei als `config.json` und verschieben Sie es in den Stamm Ihres Asset compute Worker-Projekts. Dies ist der Ansatz in diesem Tutorial.
+   + Verschieben Sie sie in einen beliebigen Ordner UND referenzieren Sie diesen Ordner von Ihrer `.env` Datei mit einem Konfigurationseintrag `ASSET_COMPUTE_INTEGRATION_FILE_PATH`. Der Dateipfad kann absolut oder relativ zum Stammverzeichnis Ihres Projekts sein. Beispiel:
       + `ASSET_COMPUTE_INTEGRATION_FILE_PATH=/Users/example-user/secrets/wkndAemAssetCompute-81368-Development.json`
 
       Oder
@@ -64,7 +64,7 @@ Für das Entwickler-Tool ist eine Datei mit dem Namen `console.json` erforderlic
 
 
 > HINWEIS
-> Die Datei  enthält Anmeldeinformationen. Wenn Sie die Datei in Ihrem Projekt speichern, stellen Sie sicher, dass Sie sie Ihrer `.gitignore`-Datei hinzufügen, um zu verhindern, dass sie freigegeben wird. Dasselbe gilt für die Datei `.env` - Diese Anmeldeinformationen dürfen nicht freigegeben oder in Git gespeichert werden.
+> Die Datei  enthält Anmeldeinformationen. Wenn Sie die Datei in Ihrem Projekt speichern, stellen Sie sicher, dass Sie sie zu Ihrem `.gitignore` -Datei, um die Freigabe zu verhindern. Dasselbe gilt für die `.env` file - Diese Berechtigungsdateien dürfen nicht freigegeben oder in Git gespeichert werden.
 
 ## Überprüfen Sie die Anatomie des Projekts.
 
@@ -72,23 +72,23 @@ Das generierte Asset compute-Projekt ist ein Node.js-Projekt zur Verwendung als 
 
 + `/actions` enthält Unterordner und jeder Unterordner definiert einen Asset compute Worker.
    + `/actions/<worker-name>/index.js` definiert das JavaScript, das zur Ausführung der Arbeit dieses Workers verwendet wird.
-      + Der Ordnername `worker` ist standardmäßig und kann beliebig sein, solange er in `manifest.yml` registriert ist.
-      + Unter `/actions` können nach Bedarf mehrere Worker-Ordner definiert werden. Sie müssen jedoch im Ordner `manifest.yml` registriert sein.
-+ `/test/asset-compute` enthält die Test-Suites für jeden Worker. Ähnlich wie der Ordner `/actions` kann `/test/asset-compute` mehrere Unterordner enthalten, die jeweils dem getesteten Worker entsprechen.
+      + Der Ordnername `worker` ist eine Standardeinstellung und kann beliebig sein, solange sie im `manifest.yml`.
+      + Es können mehr als ein Worker-Ordner unter definiert werden. `/actions` sie müssen jedoch bei Bedarf im `manifest.yml`.
++ `/test/asset-compute` enthält die Test-Suites für jeden Worker. Ähnlich wie bei `/actions` Ordner, `/test/asset-compute` kann mehrere Unterordner enthalten, die jeweils dem getesteten Worker entsprechen.
    + `/test/asset-compute/worker`, die eine Test-Suite für einen bestimmten Worker darstellt, enthält Unterordner, die einen bestimmten Testfall darstellen, sowie die Testeingabe, die Parameter und die erwartete Ausgabe.
 + `/build` enthält die Ausgabe, Protokolle und Artefakte von Asset compute-Testfallausführungen.
-+ `/manifest.yml` definiert, welche Asset compute-Sekundäre das Projekt bereitstellt. Jede Worker-Implementierung muss in dieser Datei aufgezählt werden, damit sie AEM als Cloud Service zur Verfügung stehen.
++ `/manifest.yml` definiert, welche Asset compute-Sekundäre das Projekt bereitstellt. Jede Worker-Implementierung muss in dieser Datei aufgezählt werden, damit sie für AEM as a Cloud Service verfügbar ist.
 + `/console.json` definiert Adobe I/O-Konfigurationen
-   + Diese Datei kann mit dem Befehl `aio app use` erstellt/aktualisiert werden.
+   + Diese Datei kann mithilfe der `aio app use` Befehl.
 + `/.aio` enthält Konfigurationen, die vom aio CLI-Tool verwendet werden.
-   + Diese Datei kann mit dem Befehl `aio app use` erstellt/aktualisiert werden.
-+ `/.env` definiert Umgebungsvariablen in einer  `key=value` Syntax und enthält Geheimnisse, die nicht freigegeben werden sollten. Zum Schutz dieser Geheimnisse sollte diese Datei NICHT in Git eingecheckt werden und wird über die Standarddatei `.gitignore` des Projekts ignoriert.
-   + Diese Datei kann mit dem Befehl `aio app use` erstellt/aktualisiert werden.
-   + Variablen, die in dieser Datei definiert sind, können durch [Exportieren von Variablen](../deploy/runtime.md) in der Befehlszeile überschrieben werden.
+   + Diese Datei kann mithilfe der `aio app use` Befehl.
++ `/.env` definiert Umgebungsvariablen in einer `key=value` Syntax und enthält Geheimnisse, die nicht freigegeben werden sollten. Zum Schutz dieser Geheimnisse sollte diese Datei NICHT in Git eingecheckt und über die Standardeinstellung des Projekts ignoriert werden `.gitignore` -Datei.
+   + Diese Datei kann mithilfe der `aio app use` Befehl.
+   + Die in dieser Datei definierten Variablen können durch [Exportieren von Variablen](../deploy/runtime.md) in der Befehlszeile.
 
 Weitere Informationen zur Überprüfung der Projektstruktur finden Sie unter [Anatomie eines Adobe Project Firefly-Projekts](https://www.adobe.io/project-firefly/docs/guides/).
 
-Der Großteil der Entwicklung erfolgt in den `/actions` -Ordnern, die Worker-Implementierungen entwickeln, und in `/test/asset-compute` Schreibtests für die benutzerdefinierten Asset compute-Sekundäre.
+Der Großteil der Entwicklung findet im `/actions` Ordner, die Worker-Implementierungen entwickeln, und in `/test/asset-compute` Schreiben von Tests für die benutzerdefinierten Asset compute-Sekundäre.
 
 ## asset compute-Projekt auf GitHub
 
@@ -96,5 +96,4 @@ Das endgültige Asset compute-Projekt ist auf GitHub verfügbar unter:
 
 + [aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute)
 
-_GitHub enthält den endgültigen Status des Projekts, der vollständig mit den Arbeits- und Testfällen gefüllt ist, jedoch keine Anmeldeinformationen enthält, d. h.  `.env`  `console.json` oder  `.aio`._
-
+_GitHub enthält den endgültigen Status des Projekts, der vollständig mit den Arbeits- und Testfällen gefüllt ist, jedoch keine Anmeldeinformationen enthält, d. h. `.env`, `console.json` oder `.aio`._
