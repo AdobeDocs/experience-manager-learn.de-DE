@@ -1,29 +1,31 @@
 ---
-title: Anpassung des Posteingangs
-description: 'Posteingang anpassen durch Hinzufügen neuer Spalten basierend auf Workflow-Daten '
-feature: Adaptive Formulare
+title: AEM-Posteingang
+description: Posteingang anpassen durch Hinzufügen neuer Spalten basierend auf Workflow-Daten
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5
 kt: 5830
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 3e1d86ab-e0c4-45d4-b998-75a44a7e4a3f
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '204'
-ht-degree: 25%
+source-wordcount: '201'
+ht-degree: 29%
 
 ---
 
 # AEM-Posteingang
 
 AEM Posteingang konsolidiert Benachrichtigungen und Aufgaben aus verschiedenen AEM Komponenten, einschließlich Forms-Workflows. Wenn ein Forms-Workflow ausgelöst wird, der einen Schritt zur Zuweisung einer Aufgabe enthält, wird die dazugehörige Anwendung als Aufgabe im Posteingang der zugewiesenen Person angezeigt.
-In der Benutzeroberfläche des Posteingangs können die Aufgaben in einer Listen- oder einer Kalenderansicht angezeigt werden. Sie können außerdem die Einstellungen für die Anzeige konfigurieren. Sie können Aufgaben anhand verschiedener Parameter filtern
-Sie können den Experience Manager-Posteingang anpassen, um den Standardtitel einer Spalte zu ändern, die Spaltenposition neu anzuordnen und zusätzliche Spalten basierend auf den Daten eines Workflows anzuzeigen
 
+In der Benutzeroberfläche des Posteingangs können die Aufgaben in einer Listen- oder einer Kalenderansicht angezeigt werden. Sie können außerdem die Einstellungen für die Anzeige konfigurieren. Sie können die Aufgaben nach verschiedenen Parametern filtern.
+
+Sie können den Experience Manager-Posteingang anpassen, um den Standardtitel einer Spalte zu ändern, die Spaltenposition neu anzuordnen und zusätzliche Spalten basierend auf den Daten eines Workflows anzuzeigen.
 
 >[!NOTE]
 >
@@ -31,8 +33,8 @@ Sie können den Experience Manager-Posteingang anpassen, um den Standardtitel ei
 
 ## Spaltenanpassung
 
-[Launch AEM ](http://localhost:4502/aem/inbox)
-inboxÖffnen Sie das Admin Control, indem Sie auf das  _Listen-_ Viewer-Symbol klicken und dann  _Admin_ Control auswählen, wie im Screenshot unten dargestellt
+[AEM Posteingang starten](http://localhost:4502/aem/inbox)
+Öffnen Sie die Admin Control, indem Sie auf die _Listenansicht_ Symbol und wählen Sie dann _Admin Control_ wie im Screenshot unten gezeigt
 
 ![admin-control](assets/open-customization.png)
 

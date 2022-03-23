@@ -1,25 +1,25 @@
 ---
-title: Anpassung des Posteingangs
+title: Hinzufügen benutzerdefinierter Spalten
 description: Fügen Sie benutzerdefinierte Spalten hinzu, um zusätzliche Daten des Workflows anzuzeigen
-feature: Adaptive Formulare
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.5.5
 kt: 5830
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '307'
 ht-degree: 8%
 
 ---
 
-
-# Hinzufügen benutzerdefinierter Spalten 
+# Hinzufügen benutzerdefinierter Spalten
 
 Um Workflow-Daten im Posteingang anzuzeigen, müssen wir Variablen im Workflow definieren und ausfüllen. Der Wert der Variablen muss festgelegt werden, bevor eine Aufgabe einem Benutzer zugewiesen wird. Um Ihnen einen Vorsprung zu verschaffen, haben wir einen Beispiel-Workflow bereitgestellt, der für die Bereitstellung auf Ihrem AEM-Server bereit ist.
 
@@ -84,12 +84,12 @@ return isMarried(inboxItem);
 * [Melden Sie sich bei AEM Web Console an](http://localhost:4502/system/console/bundles)
 * [Posteingang-Anpassungs-Bundle bereitstellen und starten](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
 * [Posteingang öffnen](http://localhost:4502/aem/inbox)
-* Öffnen Sie die Admin Control, indem Sie auf das Symbol _Listenansicht_ neben der Schaltfläche _Erstellen_ klicken.
+* Öffnen Sie Admin Control durch Klicken auf _Listenansicht_ Symbol neben _Erstellen_ button
 * Spalte &quot;Verheiratet&quot;zum Posteingang hinzufügen und Ihre Änderungen speichern
 * [Navigieren Sie zur Benutzeroberfläche &quot;FormsAndDocuments&quot;](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [Importieren Sie das ](assets/snap-form.zip) Beispielformular, indem Sie im Menü &quot; _Datei-_ Upload  __ erstellen&quot;die Option
+* [Importieren des Beispielformulars](assets/snap-form.zip) durch Auswahl _Datei-Upload_ von _Erstellen_ Menü
 * [Nutzen Sie die Funktion zur Formularvorschau.](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* Wählen Sie den _Familienstand_ aus und senden Sie das Formular
+* Wählen Sie die _Familienstand_ und senden Sie das Formular
    [Posteingang anzeigen](http://localhost:4502/aem/inbox)
 
 Durch das Senden des Formulars wird der Workflow Trigger und eine Aufgabe wird &quot;admin&quot;-Benutzern zugewiesen. In diesem Screenshot sollte unter der Spalte Verheiratet ein Wert angezeigt werden

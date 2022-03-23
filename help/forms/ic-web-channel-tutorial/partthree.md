@@ -1,18 +1,18 @@
 ---
-title: Erstellen eines Formulardatenmodells
+title: Erstellen des Formulardatenmodells Teil 3
 description: Dies ist Teil 3 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil erstellen wir ein Formulardatenmodell. Mit dem Formulardatenmodell können Sie unterschiedliche Datenquellen konfigurieren und eine Verbindung zu ihnen herstellen. Es bietet eine intuitive Benutzeroberfläche, um ein einheitliches Datendarstellungsschema von Geschäftsentitäten und Diensten aus verbundenen Datenquellen zu erstellen. Im folgenden Video werden die Schritte zum Erstellen eines Formulardatenmodells erläutert.
-feature: Interaktive Kommunikation
-topic: Entwicklung
+feature: Interactive Communication
+topic: Development
 version: 6.4,6.5
 role: Developer
 level: Beginner
-source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
+exl-id: 798012e5-5099-4fd0-82ad-a21f64a97aca
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 1%
+source-wordcount: '246'
+ht-degree: 0%
 
 ---
-
 
 # Erstellen eines Formulardatenmodells
 

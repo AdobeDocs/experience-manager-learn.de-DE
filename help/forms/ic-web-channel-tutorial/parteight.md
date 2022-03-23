@@ -1,26 +1,26 @@
 ---
-title: Liniendiagramm für Ihr erstes interaktives Kommunikationsdokument konfigurieren
-seo-title: Liniendiagramm für Ihr erstes interaktives Kommunikationsdokument konfigurieren
+title: Liniendiagramm für Ihr erstes interaktives Kommunikationsdokument konfigurieren - Teil 8
+seo-title: Configuring line chart for your first interactive communication document
 description: Dies ist Teil 8 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil fügen wir dem Bereich für den Kontofortschritt ein Liniendiagramm hinzu.
-seo-description: Dies ist Teil 8 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil fügen wir dem Bereich für den Kontofortschritt ein Liniendiagramm hinzu.
+seo-description: This is part 8 of multistep tutorial for creating your first interactive communications document. In this part, we will add a Line chart to the account progress panel.
 uuid: 08c3e7af-e3cb-4ee0-bdc1-d112bfa70e40
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 4292303c-3ef4-4df2-b537-fdb011412670
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: ba9ce6a2-f6e8-4e84-a23a-f4803879f635
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 2%
+source-wordcount: '193'
+ht-degree: 1%
 
 ---
-
 
 # Liniendiagramm für Ihr erstes interaktives Kommunikationsdokument konfigurieren
 
@@ -34,7 +34,7 @@ Melden Sie sich bei AEM Forms an und navigieren Sie zu Adobe Experience Manager 
 
 AEM Forms 6.4 hat die Anzeige von Daten mit verschiedenen Grafiktypen sehr einfach gestaltet. Wir werden ein Liniendiagramm verwenden, um die Salden pro Jahr anzuzeigen.
 
-Tippen Sie rechts auf den Zielbereich **Account Progress** und klicken Sie auf das Symbol &quot;+&quot;, um das Dialogfeld &quot;Komponente einfügen&quot;aufzurufen.
+Tippen Sie auf die **Kontofortschritt** Zielbereich auf der rechten Seite und klicken Sie auf das &quot;+&quot;-Symbol, um das Dialogfeld &quot;Komponente einfügen&quot;aufzurufen.
 
 Wählen Sie Diagramm aus, um die Diagrammkomponente einzufügen.
 
@@ -49,5 +49,3 @@ Stellen Sie sicher, dass Sie das richtige Formulardatenmodellelement auf der X- 
 **Liniendiagrammeinstellungen in AEM Forms 6.5**
 
 ![linechart64](assets/linechart65.PNG)
-
-

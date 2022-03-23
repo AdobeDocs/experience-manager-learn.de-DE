@@ -1,22 +1,23 @@
 ---
-title: Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank
+title: Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank - Datenquelle konfigurieren
 description: Mehrteiliges Tutorial, das Sie durch die Schritte führt, die zum Speichern und Abrufen von Formulardaten erforderlich sind
 version: 6.3,6.4,6.5
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 3569d8b2a38d1cce02f6f4ff8b0c583f4dc118b6
+exl-id: dccca658-3373-4de2-8589-21ccba2b7ba6
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
 source-wordcount: '199'
-ht-degree: 6%
+ht-degree: 5%
 
 ---
 
 # Datenquelle konfigurieren
 
-Es gibt viele Möglichkeiten, mit denen AEM die Integration in externe Datenbanken ermöglicht. Eine der gängigsten und gängigsten Methoden der Datenbankintegration ist die Verwendung von Apache Sling Connection Pooled DataSource-Konfigurationseigenschaften über [configMgr](http://localhost:4502/system/console/configMgr).
-Der erste Schritt besteht darin, die entsprechenden [MySql-Treiber](https://mvnrepository.com/artifact/mysql/mysql-connector-java) in AEM herunterzuladen und bereitzustellen.
+Es gibt viele Möglichkeiten, mit denen AEM die Integration in externe Datenbanken ermöglicht. Eine der gängigsten und gängigsten Methoden der Datenbankintegration ist die Verwendung der Konfigurationseigenschaften von Apache Sling Connection Pooled DataSource über die [configMgr](http://localhost:4502/system/console/configMgr).
+Der erste Schritt besteht darin, die entsprechende [MySql-Treiber](https://mvnrepository.com/artifact/mysql/mysql-connector-java) in AEM.
 Erstellen Sie Apache Sling Connection Pooled DataSource und geben Sie die Eigenschaften wie im Screenshot unten angegeben an. Das Datenbankschema wird Ihnen im Rahmen dieses Tutorials bereitgestellt.
 
 ![data-source](assets/save-continue.PNG)
@@ -25,10 +26,10 @@ Datenbank hat eine Tabelle namens formdata mit den drei Spalten, wie im Screensh
 
 ![data-base](assets/data-base-tables.PNG)
 
-Die SQL-Datei zum Erstellen des Schemas kann [von hier heruntergeladen werden](assets/form-data-db.sql). Sie müssen diese Datei mithilfe von MySql Workbench importieren, um das Schema und die Tabelle zu erstellen.
+Die SQL-Datei zum Erstellen des Schemas kann [heruntergeladen von hier](assets/form-data-db.sql). Sie müssen diese Datei mithilfe von MySql Workbench importieren, um das Schema und die Tabelle zu erstellen.
 
 >[!NOTE]
->Benennen Sie Ihre Datenquelle **SaveAndContinue**. Der Beispielcode verwendet den Namen, um eine Verbindung zur Datenbank herzustellen.
+>Benennen Sie Ihre Datenquelle. **SaveAndContinue**. Der Beispielcode verwendet den Namen, um eine Verbindung zur Datenbank herzustellen.
 
 | Eigenschaftsname | Wert |
 | ------------------------|---------------------------------------|

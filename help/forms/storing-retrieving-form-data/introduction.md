@@ -1,19 +1,19 @@
 ---
-title: Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank
+title: Einführung in das Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank
 description: Mehrteiliges Tutorial, das Sie durch die Schritte führt, die zum Speichern und Abrufen von Formulardaten erforderlich sind
-feature: Adaptive Formulare
+feature: Adaptive Forms
 type: Tutorial
 version: 6.3,6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 95795102-4278-4556-8e0f-1b8a359ab093
+source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
 workflow-type: tm+mt
-source-wordcount: '167'
-ht-degree: 1%
+source-wordcount: '165'
+ht-degree: 0%
 
 ---
-
 
 # Speichern und Abrufen von adaptiven Formulardaten aus der MySQL-Datenbank
 
@@ -23,7 +23,7 @@ In diesem Tutorial werden Sie durch die Schritte geführt, die zum Speichern und
 
 * Führen Sie einen POST-Aufruf an ein Servlet durch. Dieses Servlet speichert die Daten in der Datenbank. Die gespeicherten Daten sind mit einer GUID verknüpft.
 
-* Wenn Sie das adaptive Formular mit den gespeicherten Daten füllen möchten, rufen Sie die mit der GUID verknüpften Daten ab und füllen das adaptive Formular mit der Methode **request.setAttribute** aus.
+* Wenn Sie das adaptive Formular mit den gespeicherten Daten füllen möchten, rufen Sie die mit der GUID verknüpften Daten ab und füllen das adaptive Formular mit der **request.setAttribute** -Methode.
 
 ## Nachweis des Anwendungsfalls
 
