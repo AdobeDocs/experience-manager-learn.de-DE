@@ -5,9 +5,9 @@ user-guide-title: AEM Forms-Videos und -Tutorials
 user-guide-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler.
 breadcrumb-title: AEM Forms-Tutorials
 index: y
-source-git-commit: 160471fdc34439da6c312d65b252eaa941b7c7a2
+source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
 workflow-type: tm+mt
-source-wordcount: '1654'
+source-wordcount: '1657'
 ht-degree: 3%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 3%
    + [Zweifaktorauthentifizierung](some-useful-integrations/two-factor-authentication.md)
    + [OCR-Datenextraktion](some-useful-integrations/ocr-data-extraction.md)
    + [Dropdown-Listen für Kaskadierende Elemente](some-useful-integrations/geonames-org.md)
+   + [Integration mit ServiceNow](some-useful-integrations/service-now.md)
 + Erstellen eines OSGi-Bundles {#creating-your-first-osgi-bundle}
    + [Einrichten der Umgebung](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [Erstellen eines OSGi-Dienstes](creating-your-first-osgi-bundle/create-osgi-service.md)
@@ -209,7 +210,7 @@ ht-degree: 3%
    + [Verwenden des PDFG-Dienstes in AEM Forms](document-services/using-pdfg-in-aem-forms.md)
    + [Verwenden von Output und Forms Service in AEM Forms](document-services/output-and-forms-services-article-develop.md)
    + [Erstellen mehrerer PDFs aus einer Datendatei](document-services/generate-multi-record-pdf.md)
-   + [PDF bei Übermittlung mobiler Formulare generieren](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [PDF bei Mobile-Formularübermittlung generieren](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [Interaktive PDF aus Mobile Form generieren](document-services/render-interactive-form-using-api.md)
    + [Interaktives DoR aus adaptivem Formular generieren](document-services/generate-interactive-dor.md)
    + [Reader Extensions-Berechtigungen konfigurieren](document-services/configuring-reader-extension-osgi.md)

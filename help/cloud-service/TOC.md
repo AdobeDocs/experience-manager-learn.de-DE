@@ -4,9 +4,9 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: 7994860f6d0ea017aa48e326482bc8e77af6f555
+source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
 workflow-type: tm+mt
-source-wordcount: '703'
+source-wordcount: '725'
 ht-degree: 30%
 
 ---
@@ -172,6 +172,14 @@ ht-degree: 30%
       + [Erstellen der USC-Batch-Konfiguration](./forms/formscs-batch-api/configure-usc-batch.md)
       + [Stapelkonfiguration erstellen](./forms/formscs-batch-api/create-batch-config.md)
       + [Batch ausführen](./forms/formscs-batch-api/execute-batch-generate-documents.md)
+   + PDF-Manipulation in Forms CS{#forms-cs-assembler}
+      + [Einführung](./forms/forms-cs-assembler/introduction.md)
+      + [Dienstberechtigungen erstellen](./forms/forms-cs-assembler/service-credentials.md)
+      + [JWT-Token erstellen](./forms/forms-cs-assembler/create-jwt.md)
+      + [Zugriffstoken erstellen](./forms/forms-cs-assembler/create-access-token.md)
+      + [Zusammenführen von PDF-Dateien](./forms/forms-cs-assembler/assemble-pdf-files.md)
+      + [Testen der Lösung](./forms/forms-cs-assembler/test.md)
+      + [Herausforderung](./forms/forms-cs-assembler/challenge.md)
    + Azure Portal-Speicher{#forms-cs-azure-portal}
       + [Einführung](./forms/forms-cs-azure-portal/introduction.md)
       + [Erstellen von Formulardatenmodellen](./forms/forms-cs-azure-portal/create-fdm.md)
