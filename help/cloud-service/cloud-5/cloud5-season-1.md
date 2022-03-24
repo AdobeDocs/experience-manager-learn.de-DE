@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: 187f13c5051237915fdc8a8c0e3280dd0f0702ce
+source-git-commit: 4976bc72228b76c02609cf63c7067cc7bad65861
 workflow-type: tm+mt
-source-wordcount: '362'
+source-wordcount: '379'
 ht-degree: 1%
 
 ---
@@ -68,14 +68,16 @@ Jede Jahreszeit variiert in ihrer Länge und wird nach einem festen Zeitplan ver
   </tr>
   <tr>
    <td>
-      <img alt="Zugriffstoken" src="./imgs/coming-soon.png"/>
+        <a href="./cloud5-getting-login-token-integrations.md">
+            <img alt="Zugriffstoken" src="./imgs/004-thumb.png"/>
+        </a>
       <div>
-        <strong>Integration mit Zugriffstoken</strong>        
+        <a href="./cloud5-getting-login-token-integrations.md"><strong>Integration mit Zugriffstoken</strong></a>        
          <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
       </div>
       <p>
         <br/>
-         Vom 25. März 2022
+         Eine kurze Übersicht und eine kurze Demo zur Interaktion mit Anmelde-Token für die Integration in Cloud Service-Umgebungen.
       </p>
      </td>   
      <td>
