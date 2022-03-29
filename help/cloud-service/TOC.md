@@ -4,7 +4,7 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: 4976bc72228b76c02609cf63c7067cc7bad65861
+source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 29%
@@ -81,7 +81,7 @@ ht-degree: 29%
       + [Protokolle](./debugging/cloud-service/logs.md)
       + [Erstellung und Implementierung](./debugging/cloud-service/build-and-deployment.md)
       + [Entwicklerkonsole](./debugging/cloud-service/developer-console.md)
-      + [CRXDE Lite](./debugging/cloud-service/crxde-lite.md)
+      + [Repository-Browser](./debugging/cloud-service/repository-browser.md)
 + Zugriff auf AEM{#accessing}
    + [Übersicht](./accessing/overview.md)
    + [Adobe IMS-Benutzer](./accessing/adobe-ims-users.md)
@@ -134,7 +134,7 @@ ht-degree: 29%
       + [Asset-Workflow-Migration Tool](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [Navigieren in Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [Verwenden von Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
-+ Forms{#forms}
++ Formulare{#forms}
 
    + Entwickeln für Forms as a Cloud Service{#developing-for-cloud-service}
       + [Erste Schritte](./forms/developing-for-cloud-service/getting-started.md)
