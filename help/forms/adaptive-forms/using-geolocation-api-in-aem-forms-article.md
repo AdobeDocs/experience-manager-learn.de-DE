@@ -1,28 +1,26 @@
 ---
 title: Verwenden von Geolocation-APIs in Adaptive Forms
 description: Füllen Sie Adressfelder in Ihrem Formular mithilfe der Geolocation-APIs aus.
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.3,6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 50db6155-ee83-4ddb-9e3a-56e8709222db
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 4%
+source-wordcount: '390'
+ht-degree: 3%
 
 ---
 
-
 # Verwenden von Geolocation-APIs in Adaptive Forms{#using-geolocation-api-s-in-adaptive-forms}
 
-Besuchen Sie die Seite [AEM Forms samples](https://forms.enablementadobe.com/content/samples/samples.html?query=0#collapse1) für einen Link zu einer Live-Demo dieser Funktion.
-
-In diesem Artikel werden wir uns die Verwendung der Geolocation-API von Google ansehen, um Felder eines adaptiven Formulars auszufüllen. Dieser Anwendungsfall wird häufig verwendet, wenn Sie die aktuellen Adressfelder in einem Formular ausfüllen möchten.
+In diesem Artikel werden wir uns die Verwendung der Geolocation-API von Google ansehen, um Felder eines adaptiven Formulars zu füllen. Dieser Anwendungsfall wird häufig verwendet, wenn Sie die aktuellen Adressfelder in einem Formular ausfüllen möchten.
 
 Die folgenden Schritte wurden zur Verwendung der Geolocation-API in Adaptive Forms ausgeführt.
 
-1. [Rufen Sie API-](https://developers.google.com/maps/documentation/javascript/get-api-key) Keywords von Google ab, um die Google Maps-Plattform zu verwenden. Sie erhalten einen Testschlüssel, der 1 Jahr gültig ist.
+1. [Abrufen des API-Schlüssels](https://developers.google.com/maps/documentation/javascript/get-api-key) von Google zur Verwendung der Google Maps-Plattform. Sie erhalten einen Testschlüssel, der 1 Jahr gültig ist.
 
 1. Das adaptive Formularfragment wurde mit Feldern für die aktuelle Adresse erstellt
 
@@ -96,12 +94,12 @@ Gehen Sie wie folgt vor, um diese Funktion auf Ihren Server zu übertragen:
 * Installieren und starten Sie den AEM Forms-Server.
 
 >!![NOTE] Diese Funktion wurde mit AEM Forms 6.3 und höher getestet.
-* [Google API-Schlüssel abrufen](https://developers.google.com/maps/documentation/javascript/get-api-key).
+* [Abrufen des Google API-Schlüssels](https://developers.google.com/maps/documentation/javascript/get-api-key).
 * [Importieren Sie die mit diesem Artikel verknüpften Assets in AEM.](assets/geolocationapi.zip)
 * [Öffnen Sie das adaptive Formularfragment im Bearbeitungsmodus.](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
 * Öffnen Sie den Regeleditor für die Komponente Bildauswahl .
-* Ersetzen Sie &lt;Ihr_api_key> durch den Google API-Schlüssel.
+* Ersetzen Sie die &lt;your_api_key> mit dem Google-API-Schlüssel.
 * Speichern Sie Ihre Änderungen.
-* [Vorschau des Formulars](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled) anzeigen.
+* [Formularvorschau](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled).
 * Klicken Sie auf das Symbol &quot;Geolocation&quot;.
 * Ihr Formular sollte mit Ihrem aktuellen Speicherort ausgefüllt werden.

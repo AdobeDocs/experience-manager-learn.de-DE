@@ -8,10 +8,10 @@ level: Experienced
 kt: 8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 8%
+source-wordcount: '438'
+ht-degree: 3%
 
 ---
 
@@ -33,22 +33,18 @@ AEM Modernisierungs-Tools konvertieren automatisch vorhandene AEM Seiten, die au
 + Klonen Sie AEM 6.x-Produktion, um AEM Modernisierungs-Tools für auszuführen.
 + Laden Sie die [Die neuesten AEM-Modernisierungs-Tools](https://github.com/adobe/aem-modernize-tools/releases/latest) über den AEM 6.x-Produktionsklon über Package Manager
 
-+ [Seitenstrukturkonverter](https://opensource.adobe.com/aem-modernize-tools/pages/tools/page-structure.html) Aktualisiert vorhandenen Seiteninhalt von einer statischen Vorlage in eine zugeordnete bearbeitbare Vorlage mithilfe von Layout-Containern.
++ [Seitenstrukturkonverter](https://opensource.adobe.com/aem-modernize-tools/pages/structure/about.html) Aktualisiert vorhandenen Seiteninhalt von einer statischen Vorlage in eine zugeordnete bearbeitbare Vorlage mithilfe von Layout-Containern.
    + Definieren von Konversionsregeln mithilfe der OSGi-Konfiguration
    + Seitenstrukturkonverter für vorhandene Seiten ausführen
 
-+ [Komponenten-Konverter](https://opensource.adobe.com/aem-modernize-tools/pages/tools/component.html) Aktualisiert vorhandenen Seiteninhalt von einer statischen Vorlage in eine zugeordnete bearbeitbare Vorlage mithilfe von Layout-Containern.
++ [Komponenten-Konverter](https://opensource.adobe.com/aem-modernize-tools/pages/component/about.html) Aktualisiert vorhandenen Seiteninhalt von einer statischen Vorlage in eine zugeordnete bearbeitbare Vorlage mithilfe von Layout-Containern.
    + Definieren von Konvertierungsregeln über JCR-Knotendefinitionen/XML
    + Ausführen des Komponenten Converter-Tools für vorhandene Seiten
 
-+ [Policy Importer](https://opensource.adobe.com/aem-modernize-tools/pages/tools/policy-importer.html) erstellt Richtlinien aus der Designkonfiguration
++ [Policy Importer](https://opensource.adobe.com/aem-modernize-tools/pages/policy/about.html) erstellt Richtlinien aus der Designkonfiguration
    + Konvertierungsregeln mithilfe von JCR-Knotendefinitionen/XML definieren
    + Richtlinien-Importer mit vorhandenen Designdefinitionen ausführen
    + Anwenden importierter Richtlinien auf AEM Komponenten und Container
-
-+ [Dialog Converter](https://opensource.adobe.com/aem-modernize-tools/pages/tools/dialog.html) konvertiert die Komponentendialogfelder Classic (ExtJS) und CoralUI 2 in TouchUI 3-basierte Dialogfelder von CoralUI 3.
-   + Führen Sie das Dialog Converter-Tool für vorhandene benutzeroberflächenbasierte Dialogfelder von ExtJS oder Coral2 aus.
-   + Konvertierte Dialogfelder wieder in Git-Repository synchronisieren
 
 ## Übungen
 
@@ -94,6 +90,5 @@ Stellen Sie außerdem sicher, dass Sie die vorherige praktische Übung abgeschlo
 + [AEM Gems - Einführung in die AEM-Modernisierungs-Suite](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
 
 
-
-1. Stellen Sie die neu modernisierte wknd-legacy-Site im lokalen Cloud Service-SDK bereit. Hier können Sie herunterladen:
-+ [Software Distribution-Portal](https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.htm).
+1. Stellen Sie die neu modernisierte wknd-legacy-Site im lokalen AEM SDK bereit. AEM ASK kann hier heruntergeladen werden:
++ [Software Distribution-Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).

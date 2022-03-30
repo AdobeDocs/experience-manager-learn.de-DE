@@ -13,7 +13,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
 source-wordcount: '2263'
 ht-degree: 2%
@@ -26,21 +26,21 @@ Erfahren Sie, wie Sie React-Komponenten mit dem AEM SPA Editor JS SDK Adobe Expe
 
 In diesem Kapitel werden die AEM JSON-Modell-API und die Möglichkeiten erläutert, wie der von einer AEM-Komponente angezeigte JSON-Inhalt automatisch als Props in eine React-Komponente eingefügt werden kann.
 
-## Ziele
+## Ziel
 
 1. Erfahren Sie, wie Sie AEM Komponenten SPA Komponenten zuordnen.
 1. Inspect wie eine React-Komponente dynamische Eigenschaften verwendet, die von AEM übergeben werden.
-1. Erfahren Sie, wie Sie vordefinierte [React AEM Kernkomponenten](https://github.com/adobe/aem-react-core-wcm-components-examples) verwenden.
+1. Erfahren Sie, wie Sie vorkonfigurierte Funktionen nutzen können. [ReactAEMKernkomponenten](https://github.com/adobe/aem-react-core-wcm-components-examples).
 
 ## Was Sie erstellen werden
 
-In diesem Kapitel wird untersucht, wie die bereitgestellte SPA `Text` der AEM `Text`Komponente zugeordnet wird. React-Kernkomponenten wie die `Image`-SPA-Komponente werden in der SPA verwendet und in AEM erstellt. Die vordefinierten Funktionen der **Layout-Container**- und **Vorlagen-Editor**-Richtlinien werden auch verwendet, um eine Ansicht zu erstellen, die in ihrer Darstellung etwas abwechslungsreicher ist.
+In diesem Kapitel wird untersucht, wie die `Text` SPA Komponente wird der AEM zugeordnet `Text`-Komponente. React-Kernkomponenten wie die `Image` SPA Komponente wird in der SPA verwendet und in AEM verfasst. Vorkonfigurierte Funktionen der **Layout-Container** und **Vorlagen-Editor** -Richtlinien werden auch verwendet, um eine Ansicht zu erstellen, die etwas abwechslungsreicher erscheint.
 
 ![Kapitelbeispiel für die endgültige Bearbeitung](./assets/map-components/final-page.png)
 
 ## Voraussetzungen
 
-Überprüfen Sie die erforderlichen Tools und Anweisungen zum Einrichten einer [lokalen Entwicklungsumgebung](overview.md#local-dev-environment). Dieses Kapitel ist eine Fortsetzung des Kapitels [Integrieren Sie das SPA](integrate-spa.md). Es ist jedoch ein SPA-aktiviertes AEM-Projekt, alles, was Sie benötigen, zu folgen.
+Überprüfen Sie die erforderlichen Tools und Anweisungen zum Einrichten eines [lokale Entwicklungsumgebung](overview.md#local-dev-environment). Dieses Kapitel ist eine Fortsetzung der [SPA integrieren](integrate-spa.md) -Kapitel zu folgen, ist jedoch ein SPA-aktiviertes AEM-Projekt.
 
 ## Mapping-Ansatz
 
@@ -52,24 +52,24 @@ Das grundlegende Konzept besteht darin, eine SPA Komponente einer AEM Komponente
 
 ## Inspect der Textkomponente
 
-Der [AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype) stellt eine `Text`-Komponente bereit, die der AEM [Textkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) zugeordnet ist. Dies ist ein Beispiel für eine **content** -Komponente, da sie *content* von AEM rendert.
+Die [AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype) bietet eine `Text` Komponente, die dem AEM zugeordnet ist [Textkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=de). Dies ist ein Beispiel für eine **content** Komponente, da sie *content* von AEM.
 
 Sehen wir uns an, wie die Komponente funktioniert.
 
 ### Inspect des JSON-Modells
 
-1. Bevor Sie in den SPA-Code springen, müssen Sie das von AEM bereitgestellte JSON-Modell verstehen. Navigieren Sie zur [Kernkomponentenbibliothek](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/text.html) und zeigen Sie die Seite für die Textkomponente an. Die Kernkomponentenbibliothek enthält Beispiele für alle AEM Kernkomponenten.
-1. Wählen Sie die Registerkarte **JSON** für eines der Beispiele aus:
+1. Bevor Sie in den SPA-Code springen, müssen Sie das von AEM bereitgestellte JSON-Modell verstehen. Navigieren Sie zum [Kernkomponentenbibliothek](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/text.html) und zeigen Sie die Seite für die Textkomponente an. Die Kernkomponentenbibliothek enthält Beispiele für alle AEM Kernkomponenten.
+1. Wählen Sie die **JSON** für eines der folgenden Beispiele:
 
    ![Text-JSON-Modell](./assets/map-components/text-json.png)
 
-   Es sollten drei Eigenschaften angezeigt werden: `text`, `richText` und `:type`.
+   Es sollten drei Eigenschaften angezeigt werden: `text`, `richText`und `:type`.
 
-   `:type` ist eine reservierte Eigenschaft, die die  `sling:resourceType` (oder den Pfad) der AEM Komponente auflistet. Der Wert `:type` wird verwendet, um die AEM Komponente der SPA zuzuordnen.
+   `:type` ist eine reservierte Eigenschaft, die die `sling:resourceType` (oder Pfad) der AEM Komponente. Der Wert von `:type` wird verwendet, um die AEM Komponente der SPA zuzuordnen.
 
-   `text` und  `richText` sind zusätzliche Eigenschaften, die der SPA-Komponente angezeigt werden.
+   `text` und `richText` sind zusätzliche Eigenschaften, die der SPA-Komponente angezeigt werden.
 
-1. Zeigen Sie die JSON-Ausgabe unter [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) an. Sie sollten einen Eintrag finden können, der in etwa wie folgt aussieht:
+1. Anzeigen der JSON-Ausgabe unter [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). Sie sollten einen Eintrag finden können, der in etwa wie folgt aussieht:
 
    ```json
    "text": {
@@ -83,9 +83,9 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
 ### Inspect der SPA-Komponente
 
-1. Öffnen Sie in der IDE Ihrer Wahl das AEM Projekt für die SPA. Erweitern Sie das Modul `ui.frontend` und öffnen Sie die Datei `Text.js` unter `ui.frontend/src/components/Text/Text.js`.
+1. Öffnen Sie in der IDE Ihrer Wahl das AEM Projekt für die SPA. Erweitern Sie die `ui.frontend` -Modul und öffnen Sie die -Datei `Text.js` under `ui.frontend/src/components/Text/Text.js`.
 
-1. Der erste Bereich, den wir untersuchen werden, ist `class Text` in ~line 40:
+1. Der erste Bereich, den wir untersuchen werden, ist der `class Text` bei ~line 40:
 
    ```js
    class Text extends Component {
@@ -108,11 +108,11 @@ Sehen wir uns an, wie die Komponente funktioniert.
    }
    ```
 
-   `Text` ist eine standardmäßige React-Komponente. Die Komponente verwendet `this.props.richText`, um zu bestimmen, ob der zu rendernde Inhalt Rich-Text oder Nur-Text sein wird. Der tatsächlich verwendete &quot;Inhalt&quot;stammt von `this.props.text`.
+   `Text` ist eine standardmäßige React-Komponente. Die Komponente verwendet `this.props.richText` , um zu bestimmen, ob es sich bei dem zu rendernden Inhalt um Rich-Text oder Nur-Text handelt. Der tatsächlich verwendete &quot;Inhalt&quot;stammt aus `this.props.text`.
 
-   Um einen potenziellen XSS-Angriff zu vermeiden, wird der Rich-Text über `DOMPurify` maskiert, bevor [gefährlichSetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml) zum Rendern des Inhalts verwendet wird. Erinnern Sie sich an die Eigenschaften `richText` und `text` aus dem JSON-Modell, das Sie zuvor in der Übung erstellt haben.
+   Um einen potenziellen XSS-Angriff zu vermeiden, wird der Rich-Text über `DOMPurify` vor der Verwendung von [dangerousSetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml) , um den Inhalt zu rendern. Erinnern Sie sich an `richText` und `text` -Eigenschaften aus dem JSON-Modell, das zu einem früheren Zeitpunkt in der Übung verwendet wurde.
 
-1. Als Nächstes sehen Sie sich `TextEditConfig` an der Zeile ~29 an:
+1. Sehen Sie sich als Nächstes die `TextEditConfig` bei ~line 29:
 
    ```js
    const TextEditConfig = {
@@ -124,23 +124,23 @@ Sehen wir uns an, wie die Komponente funktioniert.
    };
    ```
 
-   Der obige Code ist für die Bestimmung verantwortlich, wann der Platzhalter in der AEM Autorenumgebung wiedergegeben werden soll. Wenn die `isEmpty`-Methode **true** zurückgibt, wird der Platzhalter gerendert.
+   Der obige Code ist für die Bestimmung verantwortlich, wann der Platzhalter in der AEM Autorenumgebung wiedergegeben werden soll. Wenn die Variable `isEmpty` Methodenzurückgaben **true** dann wird der Platzhalter gerendert.
 
-1. Sehen Sie sich schließlich den `MapTo`-Aufruf an unter ~line 62:
+1. Sehen Sie sich abschließend die `MapTo` Aufruf bei ~line 62:
 
    ```js
    export default MapTo('wknd-spa-react/components/text')(Text, TextEditConfig);
    ```
 
-   `MapTo` wird vom AEM SPA Editor JS SDK (`@adobe/aem-react-editable-components`) bereitgestellt. Der Pfad `wknd-spa-react/components/text` stellt die `sling:resourceType` der AEM Komponente dar. Dieser Pfad wird mit dem `:type` übereinstimmen, der vom zuvor beobachteten JSON-Modell bereitgestellt wird. `MapTo` analysiert die JSON-Modellantwort und übergibt die richtigen Werte  `props` an die SPA Komponente.
+   `MapTo` wird vom AEM SPA Editor JS SDK (`@adobe/aem-react-editable-components`). Der Pfad `wknd-spa-react/components/text` steht für `sling:resourceType` der AEM Komponente. Dieser Pfad entspricht dem `:type` durch das zuvor beobachtete JSON-Modell verfügbar gemacht werden. `MapTo` Analysiert die JSON-Modellantwort und übergibt die richtigen Werte als `props` zur SPA Komponente.
 
-   Die AEM `Text`-Komponentendefinition finden Sie unter `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/text`.
+   Sie finden die AEM `Text` Komponentendefinition unter `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/text`.
 
 ## Verwenden von React-Kernkomponenten
 
-[AEM WCM-Komponenten - React Core-](https://github.com/adobe/aem-react-core-wcm-components-base) Implementierung und  [AEM WCM-Komponenten - SPA-Editor - React Core-Implementierung](https://github.com/adobe/aem-react-core-wcm-components-spa). Hierbei handelt es sich um einen Satz wiederverwendbarer Komponenten der Benutzeroberfläche, die vordefinierten AEM Komponenten zugeordnet sind. Die meisten Projekte können diese Komponenten als Ausgangspunkt für ihre eigene Implementierung wiederverwenden.
+[AEM WCM-Komponenten - React-Core-Implementierung](https://github.com/adobe/aem-react-core-wcm-components-base) und [AEM WCM-Komponenten - SPA-Editor - React-Core-Implementierung](https://github.com/adobe/aem-react-core-wcm-components-spa). Hierbei handelt es sich um einen Satz wiederverwendbarer Komponenten der Benutzeroberfläche, die vordefinierten AEM Komponenten zugeordnet sind. Die meisten Projekte können diese Komponenten als Ausgangspunkt für ihre eigene Implementierung wiederverwenden.
 
-1. Öffnen Sie im Projektcode die Datei `import-components.js` unter `ui.frontend/src/components`.
+1. Öffnen Sie die Datei im Projektcode. `import-components.js` at `ui.frontend/src/components`.
 Diese Datei importiert alle SPA Komponenten, die AEM Komponenten zugeordnet sind. Angesichts der Dynamik der SPA Editor-Implementierung müssen wir explizit auf alle SPA Komponenten verweisen, die mit AEM Authoring-fähigen Komponenten verknüpft sind. Dadurch kann ein AEM-Autor wählen, ob er eine Komponente überall in der Anwendung verwenden möchte.
 1. Die folgenden Importanweisungen enthalten SPA Komponenten, die in das Projekt geschrieben wurden:
 
@@ -151,69 +151,69 @@ Diese Datei importiert alle SPA Komponenten, die AEM Komponenten zugeordnet sind
    import './ExperienceFragment/ExperienceFragment';
    ```
 
-1. Es gibt mehrere weitere `imports` von `@adobe/aem-core-components-react-spa` und `@adobe/aem-core-components-react-base`. Diese importieren die React-Kernkomponenten und stellen sie im aktuellen Projekt zur Verfügung. Diese werden dann mit `MapTo` projektspezifischen AEM-Komponenten zugeordnet, genau wie im Komponentenbeispiel `Text` zuvor.
+1. Es gibt mehrere andere `imports` von `@adobe/aem-core-components-react-spa` und `@adobe/aem-core-components-react-base`. Diese importieren die React-Kernkomponenten und stellen sie im aktuellen Projekt zur Verfügung. Diese werden dann mithilfe der Variablen `MapTo`, genau wie bei der `Text` Komponentenbeispiel.
 
 ### AEM aktualisieren
 
 Richtlinien sind eine Funktion AEM Vorlagen, die Entwicklern und Power-Benutzern eine granulare Steuerung darüber gibt, welche Komponenten verwendet werden können. Die React-Kernkomponenten sind im SPA-Code enthalten, müssen jedoch über eine Richtlinie aktiviert werden, bevor sie in der Anwendung verwendet werden können.
 
-1. Navigieren Sie im Bildschirm AEM Start zu **Tools** > **Vorlagen** > **[WKND SPA React](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd-spa-react)**.
+1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Vorlagen** > **[WKND SPA React](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd-spa-react)**.
 
-1. Wählen Sie die Vorlage **SPA Seite** aus und öffnen Sie sie zur Bearbeitung.
+1. Auswählen und Öffnen der **SPA** Vorlage zur Bearbeitung.
 
-1. Wählen Sie den **Layout-Container** aus und klicken Sie auf das Symbol **policy** , um die Richtlinie zu bearbeiten:
+1. Wählen Sie die **Layout-Container** und klicken Sie auf **policy** Symbol zum Bearbeiten der Richtlinie:
 
    ![Layout-Container-Richtlinie](assets/map-components/edit-spa-page-template.png)
 
-1. Unter **Zulässige Komponenten** > **WKND SPA React - Content** > check **Image**, **Teaser** und **Title**.
+1. under **Zugelassene Komponenten** > **WKND SPA React - Content** > check **Bild**, **Teaser** und **Titel**.
 
    ![Aktualisierte verfügbare Komponenten](assets/map-components/update-components-available.png)
 
-   Wählen Sie unter **Standardkomponenten** > **Mapping** hinzufügen und die Komponente **Bild - WKND SPA React - Content** aus:
+   under **Standardkomponenten** > **Zuordnung hinzufügen** und wählen Sie die **Bild - WKND SPA React - Content** component:
 
    ![Standardkomponenten festlegen](./assets/map-components/default-components.png)
 
-   Geben Sie einen **MIME-Typ** von `image/*` ein.
+   Geben Sie einen **MIME-Typ** von `image/*`.
 
-   Klicken Sie auf **Fertig** , um die Richtlinienaktualisierungen zu speichern.
+   Klicken **Fertig** , um die Richtlinienaktualisierungen zu speichern.
 
-1. Klicken Sie im **Layout-Container** auf das Symbol **policy** für die Komponente **Text**.
+1. Im **Layout-Container** klicken Sie auf **policy** -Symbol für **Text** -Komponente.
 
-   Erstellen Sie eine neue Richtlinie mit dem Namen **WKND SPA Text**. Aktivieren Sie unter **Plugins** > **Formatierung** > alle Kästchen, um zusätzliche Formatierungsoptionen zu aktivieren:
+   Erstellen Sie eine neue Richtlinie mit dem Namen **WKND SPA Text**. under **Plugins** > **Formatierung** > aktivieren Sie alle Kästchen, um zusätzliche Formatierungsoptionen zu aktivieren:
 
    ![Aktivieren der RTE-Formatierung](assets/map-components/enable-formatting-rte.png)
 
-   Aktivieren Sie unter **Plugins** > **Absatzstile** das Kontrollkästchen zu **Absatzstile aktivieren**:
+   under **Plugins** > **Absatzformate** > aktivieren Sie das Kontrollkästchen **Absatzstile aktivieren**:
 
    ![Absatzformate aktivieren](./assets/map-components/text-policy-enable-paragraphstyles.png)
 
-   Klicken Sie auf **Fertig** , um die Richtlinienaktualisierung zu speichern.
+   Klicken **Fertig** , um die Richtlinienaktualisierung zu speichern.
 
 ### Autoreninhalt
 
-1. Navigieren Sie zur **Homepage** [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html).
+1. Navigieren Sie zum **Homepage** [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html).
 
-1. Sie sollten jetzt in der Lage sein, die zusätzlichen Komponenten **Bild**, **Teaser** und **Titel** auf der Seite zu verwenden.
+1. Sie sollten jetzt in der Lage sein, die zusätzlichen Komponenten zu verwenden **Bild**, **Teaser** und **Titel** auf der Seite.
 
    ![Zusätzliche Komponenten](assets/map-components/additional-components.png)
 
-1. Sie sollten auch in der Lage sein, die Komponente `Text` zu bearbeiten und zusätzliche Absatzstile im Modus **Vollbild** hinzuzufügen.
+1. Sie sollten auch die `Text` Komponente hinzufügen und zusätzliche Absatzstile in **Vollbild** -Modus.
 
    ![Rich-Text-Bearbeitung im Vollbildmodus](assets/map-components/full-screen-rte.png)
 
-1. Sie sollten auch ein Bild aus dem **Asset Finder** ziehen und ablegen können:
+1. Sie sollten auch ein Bild per Drag-and-Drop aus der **Asset-Suche**:
 
    ![Bild ziehen und ablegen](assets/map-components/drag-drop-image.png)
 
-1. Erfahren Sie mehr über die Komponenten **Titel** und **Teaser** .
+1. Erfahrung mit der **Titel** und **Teaser** Komponenten.
 
-1. Fügen Sie Ihre eigenen Bilder über [AEM Assets](http://localhost:4502/assets.html/content/dam) hinzu oder installieren Sie die fertige Codebasis für die standardmäßige [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest). Die Referenz-Website [WKND](https://github.com/adobe/aem-guides-wknd/releases/latest) enthält viele Bilder, die auf der WKND-SPA wiederverwendet werden können. Das Paket kann mit [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) installiert werden.
+1. Fügen Sie Ihre eigenen Bilder hinzu über [AEM Assets](http://localhost:4502/assets.html/content/dam) oder installieren Sie die fertige Codebasis für den Standard [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest). Die [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest) enthält viele Bilder, die auf der WKND-SPA wiederverwendet werden können. Das Paket kann mit [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
 
    ![Package Manager install wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
 ## Inspect des Layout-Containers
 
-Unterstützung für den **Layout-Container** wird automatisch vom AEM SPA Editor SDK bereitgestellt. Der **Layout-Container**, wie durch den Namen angegeben, ist eine **Container**-Komponente. Container-Komponenten sind Komponenten, die JSON-Strukturen akzeptieren, die *andere*-Komponenten darstellen und sie dynamisch instanziieren.
+Unterstützung für **Layout-Container** wird automatisch vom AEM SPA Editor SDK bereitgestellt. Die **Layout-Container**, wie durch den Namen angegeben, ist ein **container** -Komponente. Container-Komponenten sind Komponenten, die JSON-Strukturen akzeptieren, die *other* Komponenten und instanziieren sie dynamisch.
 
 Überprüfen wir nun den Layout-Container weiter.
 
@@ -221,55 +221,55 @@ Unterstützung für den **Layout-Container** wird automatisch vom AEM SPA Editor
 
    ![JSON-Modell-API - Responsives Raster](./assets/map-components/responsive-grid-modeljson.png)
 
-   Die Komponente **Layout-Container** hat den Wert `sling:resourceType` von `wcm/foundation/components/responsivegrid` und wird vom SPA Editor mit der Eigenschaft `:type` erkannt, genau wie die Komponenten `Text` und `Image`.
+   Die **Layout-Container** -Komponente verfügt über eine `sling:resourceType` von `wcm/foundation/components/responsivegrid` und vom SPA Editor mithilfe der `:type` -Eigenschaft, genau wie die `Text` und `Image` Komponenten.
 
-   Die gleichen Funktionen zum Neuskalieren einer Komponente mit [Layout-Modus](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) sind auch im SPA Editor verfügbar.
+   Die gleichen Funktionen für die Neuskalierung einer Komponente mit [Layout-Modus](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) sind mit dem SPA Editor verfügbar.
 
-2. Kehren Sie zu [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html) zurück. Fügen Sie weitere **Bild**-Komponenten hinzu und versuchen Sie, sie mithilfe der Option **Layout** neu zu skalieren:
+2. Zurück zu [http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-react/us/en/home.html). Hinzufügen zusätzlicher **Bild** Komponenten und versuchen Sie, sie mithilfe der **Layout** Option:
 
    ![Bildgröße im Layout-Modus ändern](./assets/map-components/responsive-grid-layout-change.gif)
 
-3. Öffnen Sie das JSON-Modell [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) erneut und beobachten Sie `columnClassNames` als Teil des JSON-Codes:
+3. Erneutes Öffnen des JSON-Modells [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json) und beobachten Sie die `columnClassNames` als Teil des JSON:
 
    ![Cloud-Klassennamen](./assets/map-components/responsive-grid-classnames.png)
 
-   Der Klassenname `aem-GridColumn--default--4` gibt an, dass die Komponente basierend auf einem 12-Spalten-Raster 4 Spalten breit sein sollte. Weitere Informationen zum responsiven Raster [finden Sie hier](https://adobe-marketing-cloud.github.io/aem-responsivegrid/).
+   Der Klassenname `aem-GridColumn--default--4` gibt an, dass die Komponente basierend auf einem 12-Spalten-Raster 4 Spalten breit sein sollte. Weitere Informationen zum [Responsives Raster finden Sie hier .](https://adobe-marketing-cloud.github.io/aem-responsivegrid/).
 
-4. Kehren Sie zur IDE zurück und im Modul `ui.apps` ist eine clientseitige Bibliothek definiert, die unter `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-grid` definiert ist. Öffnen Sie die Datei `less/grid.less`.
+4. Kehren Sie zur IDE zurück und im `ui.apps` -Modul gibt es eine clientseitige Bibliothek, die unter definiert ist. `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-grid`. Öffnen Sie die Datei `less/grid.less`.
 
-   Diese Datei bestimmt die Haltepunkte (`default`, `tablet` und `phone`), die vom **Layout-Container** verwendet werden. Diese Datei soll gemäß den Projektspezifikationen angepasst werden. Derzeit sind die Haltepunkte auf `1200px` und `768px` festgelegt.
+   Diese Datei bestimmt die Haltepunkte (`default`, `tablet`und `phone`) verwendet von der **Layout-Container**. Diese Datei soll gemäß den Projektspezifikationen angepasst werden. Derzeit sind die Haltepunkte auf `1200px` und `768px`.
 
-5. Sie sollten die responsiven Funktionen und die aktualisierten Rich-Text-Richtlinien der Komponente `Text` verwenden können, um eine Ansicht wie die folgende zu erstellen:
+5. Sie sollten die responsiven Funktionen und die aktualisierten Rich-Text-Richtlinien der `Text` -Komponente, um eine Ansicht wie die folgende zu erstellen:
 
    ![Kapitelbeispiel für die endgültige Bearbeitung](assets/map-components/final-page.png)
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
-Herzlichen Glückwunsch! Sie haben gelernt, wie Sie SPA Komponenten AEM Komponenten zuordnen und die React-Kernkomponenten verwendet haben. Sie haben auch die Möglichkeit erhalten, die responsiven Funktionen des **Layout-Containers** zu erkunden.
+Herzlichen Glückwunsch! Sie haben gelernt, wie Sie SPA Komponenten AEM Komponenten zuordnen und die React-Kernkomponenten verwendet haben. Außerdem haben Sie die Möglichkeit, die responsiven Funktionen der **Layout-Container**.
 
 ### Nächste Schritte {#next-steps}
 
-[Navigation und Routing](navigation-routing.md)  - Erfahren Sie, wie mehrere Ansichten im SPA durch Zuordnung zu AEM Seiten mit dem SPA Editor SDK unterstützt werden können. Die dynamische Navigation wird mit React-Router und React-Kernkomponenten implementiert.
+[Navigation und Routing](navigation-routing.md) - Erfahren Sie, wie mehrere Ansichten im SPA unterstützt werden können, indem Sie sie mit dem SPA Editor SDK AEM Seiten zuordnen. Die dynamische Navigation wird mit React-Router und React-Kernkomponenten implementiert.
 
 ## (Bonus) Beibehalten von Konfigurationen zur Quell-Code-Verwaltung {#bonus-configs}
 
 In vielen Fällen ist es insbesondere zu Beginn eines AEM-Projekts nützlich, Konfigurationen wie Vorlagen und zugehörige Inhaltsrichtlinien zur Quell-Code-Verwaltung beizubehalten. Dadurch wird sichergestellt, dass alle Entwickler mit demselben Inhalt und denselben Konfigurationen arbeiten und zusätzliche Konsistenz zwischen Umgebungen sichergestellt wird. Sobald ein Projekt einen gewissen Reifegrad erreicht hat, kann die Verwaltung von Vorlagen einer speziellen Gruppe von Power-Benutzern übertragen werden.
 
-Die nächsten Schritte werden mit der Visual Studio Code-IDE und [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) durchgeführt. Sie können jedoch jedes Tool und jede IDE verwenden, die Sie für **Pull** oder **Import**-Inhalte von einer lokalen Instanz von AEM konfiguriert haben.
+Die nächsten Schritte werden mit der Visual Studio Code-IDE und [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) kann jedoch jedes beliebige Tool und jede IDE verwenden, für die Sie konfiguriert haben **abrufen** oder **importieren** Inhalt von einer lokalen Instanz von AEM.
 
-1. Stellen Sie in der Visual Studio Code-IDE sicher, dass **VSCode AEM Sync** über die Marketplace-Erweiterung installiert ist:
+1. Stellen Sie in der Visual Studio Code-IDE sicher, dass Sie **VSCode AEM Sync** über die Marketplace-Erweiterung installiert wird:
 
    ![VSCode AEM Sync](./assets/map-components/vscode-aem-sync.png)
 
-2. Erweitern Sie das Modul **ui.content** im Projekt-Explorer und navigieren Sie zu `/conf/wknd-spa-react/settings/wcm/templates`.
+2. Erweitern Sie die **ui.content** -Modul im Projekt-Explorer ein und navigieren Sie zu `/conf/wknd-spa-react/settings/wcm/templates`.
 
-3. **Klicken Sie mit der rechten Maustaste** auf den  `templates` Ordner und wählen Sie  **Import von AEM Server** aus:
+3. **Rechts+Klicken** die `templates` Ordner und wählen Sie **Import von AEM Server**:
 
    ![VSCode-Importvorlage](./assets/map-components/import-aem-servervscode.png)
 
-4. Wiederholen Sie die Schritte zum Importieren von Inhalten, wählen Sie jedoch den Ordner **policies** unter `/conf/wknd-spa-react/settings/wcm/templates/policies` aus.
+4. Wiederholen Sie die Schritte zum Importieren von Inhalten, wählen Sie jedoch die **policies** Ordner unter `/conf/wknd-spa-react/settings/wcm/templates/policies`.
 
-5. Inspect die Datei `filter.xml` unter `ui.content/src/main/content/META-INF/vault/filter.xml`.
+5. Inspect `filter.xml` Datei unter `ui.content/src/main/content/META-INF/vault/filter.xml`.
 
    ```xml
    <!--ui.content filter.xml-->
@@ -282,43 +282,43 @@ Die nächsten Schritte werden mit der Visual Studio Code-IDE und [VSCode AEM Syn
     </workspaceFilter>
    ```
 
-   Die `filter.xml`-Datei ist dafür verantwortlich, die Pfade von Knoten zu identifizieren, die mit dem Paket installiert werden. Beachten Sie die `mode="merge"` in jedem Filter, die darauf hinweisen, dass der vorhandene Inhalt nicht geändert wird, sondern nur neue Inhalte hinzugefügt werden. Da Inhaltsautoren diese Pfade möglicherweise aktualisieren, ist es wichtig, dass bei einer Codebereitstellung **nicht** Inhalte überschrieben werden. Weitere Informationen zum Arbeiten mit Filterelementen finden Sie in der [FileVault-Dokumentation](https://jackrabbit.apache.org/filevault/filter.html) .
+   Die `filter.xml` -Datei ist für die Identifizierung der Pfade von Knoten verantwortlich, die mit dem Paket installiert werden. Beachten Sie die `mode="merge"` bei jedem Filter, der anzeigt, dass existierender Inhalt nicht geändert wird, werden nur neue Inhalte hinzugefügt. Da Inhaltsautoren diese Pfade möglicherweise aktualisieren, ist es wichtig, dass eine Codebereitstellung **not** Inhalt überschreiben. Siehe [FileVault-Dokumentation](https://jackrabbit.apache.org/filevault/filter.html) Weitere Informationen zum Arbeiten mit Filterelementen.
 
-   Vergleichen Sie `ui.content/src/main/content/META-INF/vault/filter.xml` und `ui.apps/src/main/content/META-INF/vault/filter.xml` , um die verschiedenen Knoten zu verstehen, die von den einzelnen Modulen verwaltet werden.
+   Vergleichen `ui.content/src/main/content/META-INF/vault/filter.xml` und `ui.apps/src/main/content/META-INF/vault/filter.xml` um die verschiedenen Knoten zu verstehen, die von den einzelnen Modulen verwaltet werden.
 
 ## (Bonus) Erstellen einer benutzerdefinierten Bildkomponente {#bonus-image}
 
-Eine SPA Bildkomponente wurde bereits von den React-Kernkomponenten bereitgestellt. Wenn Sie jedoch eine zusätzliche Übung wünschen, erstellen Sie Ihre eigene React-Implementierung, die der AEM [Bildkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) zugeordnet ist. Die Komponente `Image` ist ein weiteres Beispiel für eine **content** -Komponente.
+Eine SPA Bildkomponente wurde bereits von den React-Kernkomponenten bereitgestellt. Wenn Sie jedoch eine zusätzliche Übung wünschen, erstellen Sie Ihre eigene React-Implementierung, die dem AEM zugeordnet ist [Bildkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=de). Die `Image` -Komponente ist ein weiteres Beispiel für eine **content** -Komponente.
 
 ### Inspect the JSON
 
 Bevor Sie in den SPA-Code springen, überprüfen Sie das von AEM bereitgestellte JSON-Modell.
 
-1. Navigieren Sie zu den [Bildbeispielen in der Kernkomponentenbibliothek](https://www.aemcomponents.dev/content/core-components-examples/library/page-authoring/image.html).
+1. Navigieren Sie zum [Bildbeispiele in der Kernkomponentenbibliothek](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html).
 
    ![JSON der Bild-Kernkomponente](./assets/map-components/image-json.png)
 
-   Die Eigenschaften `src`, `alt` und `title` werden zum Ausfüllen der SPA `Image`-Komponente verwendet.
+   Eigenschaften von `src`, `alt`und `title` wird verwendet, um die SPA `Image` -Komponente.
 
    >[!NOTE]
    >
-   > Es gibt weitere angezeigte Bildeigenschaften (`lazyEnabled`, `widths`), die es einem Entwickler ermöglichen, eine adaptive und verzögerte Ladekomponente zu erstellen. Die in diesem Tutorial erstellte Komponente ist einfach und verwendet **nicht** diese erweiterten Eigenschaften.
+   > Es werden andere Bildeigenschaften bereitgestellt (`lazyEnabled`, `widths`), die es einem Entwickler ermöglichen, eine adaptive und verzögerte Ladekomponente zu erstellen. Die in diesem Tutorial erstellte Komponente ist einfach und wird **not** Verwenden Sie diese erweiterten Eigenschaften.
 
 ### Implementieren der Bildkomponente
 
-1. Erstellen Sie anschließend einen neuen Ordner mit dem Namen `Image` unter `ui.frontend/src/components`.
-1. Erstellen Sie unter dem Ordner `Image` eine neue Datei mit dem Namen `Image.js`.
+1. Erstellen Sie anschließend einen neuen Ordner mit dem Namen `Image` under `ui.frontend/src/components`.
+1. Unter dem `Image` Ordner erstellen Sie eine neue Datei mit dem Namen `Image.js`.
 
    ![Image.js-Datei](./assets/map-components/image-js-file.png)
 
-1. Fügen Sie die folgenden `import`-Anweisungen zu `Image.js` hinzu:
+1. Fügen Sie Folgendes hinzu: `import` Anweisungen `Image.js`:
 
    ```js
    import React, {Component} from 'react';
    import {MapTo} from '@adobe/aem-react-editable-components';
    ```
 
-1. Fügen Sie dann `ImageEditConfig` hinzu, um zu bestimmen, wann der Platzhalter in AEM angezeigt werden soll:
+1. Fügen Sie dann die `ImageEditConfig` um zu bestimmen, wann der Platzhalter in AEM angezeigt werden soll:
 
    ```js
    export const ImageEditConfig = {
@@ -331,9 +331,9 @@ Bevor Sie in den SPA-Code springen, überprüfen Sie das von AEM bereitgestellte
    };
    ```
 
-   Der Platzhalter zeigt an, ob die Eigenschaft `src` nicht festgelegt ist.
+   Der Platzhalter zeigt an, ob die `src` -Eigenschaft nicht festgelegt ist.
 
-1. Implementieren Sie als Nächstes die Klasse `Image` :
+1. Die nächste Implementierung `Image` -Klasse:
 
    ```js
     export default class Image extends Component {
@@ -359,17 +359,17 @@ Bevor Sie in den SPA-Code springen, überprüfen Sie das von AEM bereitgestellte
    }
    ```
 
-   Der obige Code rendert ein `<img>` basierend auf den Eigenschaften `src`, `alt` und `title`, die vom JSON-Modell übergeben werden.
+   Der obige Code gibt eine `<img>` basierend auf den Eigenschaften `src`, `alt`und `title` vom JSON-Modell übergeben.
 
-1. Fügen Sie den Code `MapTo` hinzu, um die React-Komponente der AEM-Komponente zuzuordnen:
+1. Fügen Sie die `MapTo` Code zum Zuordnen der React-Komponente zur AEM Komponente:
 
    ```js
    MapTo('wknd-spa-react/components/image')(Image, ImageEditConfig);
    ```
 
-   Beachten Sie, dass die Zeichenfolge `wknd-spa-react/components/image` dem Speicherort der AEM-Komponente in `ui.apps` unter: entspricht. `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/image`.
+   Beachten Sie die Zeichenfolge `wknd-spa-react/components/image` entspricht dem Speicherort der AEM Komponente in `ui.apps` unter: `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/components/image`.
 
-1. Erstellen Sie eine neue Datei mit dem Namen `Image.css` im selben Verzeichnis und fügen Sie Folgendes hinzu:
+1. Erstellen Sie eine neue Datei mit dem Namen `Image.css` im selben Ordner und fügen Sie Folgendes hinzu:
 
    ```scss
    .Image-src {
@@ -379,7 +379,7 @@ Bevor Sie in den SPA-Code springen, überprüfen Sie das von AEM bereitgestellte
    }
    ```
 
-1. Fügen Sie in `Image.js` oben unter den `import` -Anweisungen einen Verweis auf die Datei hinzu:
+1. In `Image.js` Fügen Sie oben unter der `import` -Anweisungen:
 
    ```js
    import React, {Component} from 'react';
@@ -388,7 +388,7 @@ Bevor Sie in den SPA-Code springen, überprüfen Sie das von AEM bereitgestellte
    require('./Image.css');
    ```
 
-1. Öffnen Sie die Datei `ui.frontend/src/components/import-components.js` und fügen Sie der neuen Komponente `Image` einen Verweis hinzu:
+1. Öffnen Sie die Datei `ui.frontend/src/components/import-components.js` und fügen Sie einen Verweis zum neuen `Image` component:
 
    ```js
    import './Page/Page';
@@ -398,7 +398,7 @@ Bevor Sie in den SPA-Code springen, überprüfen Sie das von AEM bereitgestellte
    import './Image/Image'; //add reference to Image component
    ```
 
-1. Kommentar in `import-components.js` zum Bild der React-Kernkomponente:
+1. In `import-components.js` kommentieren Sie das Bild der React-Kernkomponente aus:
 
    ```js
    //MapTo('wknd-spa-react/components/image')(ImageV2, {isEmpty: ImageV2IsEmptyFn});

@@ -6,13 +6,13 @@ version: 6.5
 topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 2b7f0f6c34803672cc57425811db89146b38a70a
+exl-id: 879518db-3f05-4447-86e8-5802537584e5
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '813'
 ht-degree: 3%
 
 ---
-
 
 # Benutzerdefinierter Prozessschritt
 
@@ -32,13 +32,11 @@ Der erste Schritt besteht darin, ein Maven-Projekt mit dem entsprechenden Adobe-
 
 ### Erstellen einer Klasse, die WorkflowProcess implementiert
 
-Öffnen Sie das Maven-Projekt in Ihrer Eclipse IDE. Erweitern Sie den Ordner **Projektname** > **core** . Erweitern Sie den Ordner src/main/java . Sie sollten ein Paket sehen, das mit &quot;core&quot;endet. Erstellen Sie eine Java-Klasse, die WorkflowProcess in diesem Paket implementiert. Sie müssen die Ausführungsmethode überschreiben. Die Signatur der execute-Methode lautet wie folgt
-public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)throws WorkflowException
-Die execute -Methode bietet Zugriff auf die folgenden 3 Variablen
+Öffnen Sie das Maven-Projekt in Ihrer Eclipse IDE. Erweitern **Projektname** > **core** Ordner. Erweitern Sie den Ordner src/main/java . Sie sollten ein Paket sehen, das mit &quot;core&quot;endet. Erstellen Sie eine Java-Klasse, die WorkflowProcess in diesem Paket implementiert. Sie müssen die Ausführungsmethode überschreiben. Die Signatur der execute-Methode lautet wie folgt: public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)throws WorkflowException Die execute-Methode gibt Zugriff auf die folgenden 3 Variablen
 
-**WorkItem**: Die Variable &quot;workItem&quot;gibt Zugriff auf Daten im Zusammenhang mit dem Workflow. Die öffentliche API-Dokumentation ist [hier verfügbar.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkItem**: Die Variable &quot;workItem&quot;gibt Zugriff auf Daten im Zusammenhang mit dem Workflow. Die öffentliche API-Dokumentation ist verfügbar. [hier.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**WorkflowSession**: Diese Variable workflowSession bietet Ihnen die Möglichkeit, den Workflow zu steuern. Die öffentliche API-Dokumentation ist [hier](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html) verfügbar.
+**WorkflowSession**: Diese Variable workflowSession bietet Ihnen die Möglichkeit, den Workflow zu steuern. Die öffentliche API-Dokumentation ist verfügbar. [here](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
 **MetaDataMap**: Alle mit dem Workflow verknüpften Metadaten. Alle Prozessargumente, die an den Prozessschritt übergeben werden, sind mit dem MetaDataMap -Objekt verfügbar.[API-Dokumentation](https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
@@ -133,7 +131,7 @@ Zeilen 13-15 - Die an diese OSGi-Komponente übergebenen Prozessargumente werden
 
 * attachmentPath - Dies ist der gleiche Speicherort, den Sie beim Konfigurieren der Sendeaktion für das adaptive Formular für den Aufruf AEM Workflows im adaptiven Formular angegeben haben. Dies ist ein Name des Ordners, in dem die Anlagen AEM der Payload des Workflows gespeichert werden sollen.
 
-* saveToLocation - Dies ist der Speicherort, an dem die Anlagen im Dateisystem des AEM-Servers gespeichert werden sollen.
+* saveToLocation - Dies ist der Speicherort, an dem die Anlagen im Dateisystem Ihres AEM-Servers gespeichert werden sollen.
 
 Diese beiden Werte werden als Prozessargumente übergeben, wie im folgenden Screenshot gezeigt.
 
@@ -148,8 +146,8 @@ Der QueryBuilder-Dienst wird zum Abfragen von Knoten des Typs nt:file im Ordner 
 
 #### Erstellen und Bereitstellen
 
-[Erstellen Sie das Bundle wie ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/create-your-first-osgi-bundle.html?lang=en#build-your-project)
-[hier beschrieben. Stellen Sie sicher, dass das Bundle bereitgestellt ist und sich im aktiven Status befindet.](http://localhost:4502/system/console/bundles)
+[Erstellen Sie das Bundle wie hier beschrieben.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[Stellen Sie sicher, dass das Bundle bereitgestellt ist und sich im aktiven Status befindet.](http://localhost:4502/system/console/bundles)
 
 Erstellen eines Workflow-Modells. Ziehen Sie den Prozessschritt in das Workflow-Modell. Verknüpfen Sie den Prozessschritt mit &quot;Speichern von adaptiven Formularanlagen im Dateisystem&quot;.
 
@@ -160,4 +158,3 @@ Erstellen eines adaptiven Formulars. Ziehen Sie die Komponente Dateianlagen in d
 Speichern Sie die Einstellungen.
 
 Vorschau des Formulars Fügen Sie einige Anhänge hinzu und senden Sie das Formular. Die Anlagen sollten im Dateisystem an dem Speicherort gespeichert werden, den Sie im Workflow angegeben haben.
-

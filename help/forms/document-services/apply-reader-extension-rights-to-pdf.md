@@ -7,20 +7,19 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
-source-git-commit: f1afccdad8d819604c510421204f59e7b3dc68e4
+source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 12%
+source-wordcount: '356'
+ht-degree: 13%
 
 ---
 
 # Anwenden von Reader-Erweiterungen
 
 Mit Reader Extensions können Sie Nutzungsrechte an PDF-Dokumenten bearbeiten. Nutzungsrechte gelten für Funktionen, die standardmäßig in Acrobat, nicht jedoch in Adobe Reader zur Verfügung stehen. Die von Reader Extensions gesteuerte Funktion ermöglicht das Hinzufügen von , das Ausfüllen von Formularen und das Speichern von Dokumenten. PDF-Dokumente, für die Nutzungsrechte gelten, werden als Dokumente mit aktivierten Nutzungsrechten bezeichnet. Benutzer, die ein PDF-Dokument mit aktivierten Nutzungsrechten in Adobe Reader öffnen, können Vorgänge durchführen, die für dieses Dokument aktiviert sind.
-Um diese Funktion zu testen, können Sie [link](https://forms.enablementadobe.com/content/forms/af/applyreaderextensions.html) ausprobieren.
 
 Um dieses Anwendungsbeispiel zu erstellen, müssen wir Folgendes tun:
-* [Fügen Sie dem ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) Reader das  `fd-service` Benutzererweiterungszertifikat hinzu.
+* [Zertifikat für Reader Extensions hinzufügen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) nach `fd-service` Benutzer.
 
 ## Benutzerdefinierten OSGi-Dienst erstellen
 
@@ -195,7 +194,7 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 
 Führen Sie die folgenden Schritte aus, um dies auf Ihrem lokalen Server zu testen:
 1. [Herunterladen und Installieren des DevelopingWithServiceUser-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [Laden Sie das Paket ares.ares.core-ares herunter und installieren Sie es](assets/ares.ares.core-ares.jar). Dies umfasst den benutzerdefinierten Dienst und das Servlet, um Verwendungsrechte anzuwenden und das PDF-Dokument zurückzustreamen.
+1. [Herunterladen und Installieren des Pakets ares.ares.core-ares](assets/ares.ares.core-ares.jar). Dies umfasst den benutzerdefinierten Dienst und das Servlet, um Verwendungsrechte anzuwenden und das PDF-Dokument zurückzustreamen.
 1. [Importieren von Client-Bibliotheken und benutzerdefiniertem Senden](assets/applyaresdemo.zip)
 1. [Importieren des adaptiven Formulars](assets/applyaresform.zip)
 1. Fügen Sie dem Benutzer &quot;fd-service&quot;das Reader Extensions-Zertifikat hinzu. Stellen Sie sicher, dass der Alias &quot;ares&quot;ist.
