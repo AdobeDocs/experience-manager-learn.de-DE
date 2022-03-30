@@ -8,9 +8,9 @@ feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
 exl-id: ebb11eab-1412-4af5-bc09-e965b9116ac9
-source-git-commit: 136049776140746c61d42ad1496df15a2d226e3a
+source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '589'
 ht-degree: 2%
 
 ---
@@ -29,11 +29,11 @@ Verwenden Sie die [Adobe I/O CLI Asset compute-Plug-in](../set-up/development-en
 
 1. Navigieren Sie in der Befehlszeile zum Ordner, der das Projekt enthalten soll.
 1. Führen Sie in der Befehlszeile `aio app init` , um die CLI für die interaktive Projekterstellung zu starten.
-   + Dieser Befehl erzeugt möglicherweise einen Webbrowser, der zur Authentifizierung bei Adobe I/O auffordert. Wenn dies der Fall ist, geben Sie Ihre Anmeldeinformationen für die Adobe an, die mit dem [erforderliche Adobe-Dienste und -Produkte](../set-up/accounts-and-services.md). Wenn Sie sich nicht anmelden können, folgen Sie [diese Anweisungen zum Generieren eines Projekts](https://www.adobe.io/project-firefly/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
+   + Dieser Befehl erzeugt möglicherweise einen Webbrowser, der zur Authentifizierung bei Adobe I/O auffordert. Wenn dies der Fall ist, geben Sie Ihre Anmeldeinformationen für die Adobe an, die mit dem [erforderliche Adobe-Dienste und -Produkte](../set-up/accounts-and-services.md). Wenn Sie sich nicht anmelden können, folgen Sie [diese Anweisungen zum Generieren eines Projekts](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#42-developer-is-not-logged-in-as-enterprise-organization-user).
 1. __Organisation auswählen__
-   + Wählen Sie die Adobe-Organisation aus, die AEM as a Cloud Service ist. Project Firefly ist bei registriert.
+   + Wählen Sie die Adobe-Org aus, die AEM as a Cloud Service ist, App Builder bei registriert ist.
 1. __Projekt auswählen__
-   + Suchen und wählen Sie das Projekt aus. Dies ist die [Projekttitel](../set-up/firefly.md) aus der Firefly-Projektvorlage erstellt wurde, in diesem Fall `WKND AEM Asset Compute`
+   + Suchen und wählen Sie das Projekt aus. Dies ist die [Projekttitel](../set-up/app-builder.md) aus der App Builder-Projektvorlage erstellt wurde, in diesem Fall `WKND AEM Asset Compute`
 1. __Arbeitsbereich auswählen__
    + Wählen Sie die `Development` Arbeitsbereich
 1. __Welche Adobe I/O App-Funktionen möchten Sie für dieses Projekt aktivieren? Auswahl der einzuschließenden Komponenten__
@@ -65,30 +65,6 @@ Für das Entwickler-Tool ist eine Datei mit dem Namen `console.json` , der die e
 
 > HINWEIS
 > Die Datei  enthält Anmeldeinformationen. Wenn Sie die Datei in Ihrem Projekt speichern, stellen Sie sicher, dass Sie sie zu Ihrem `.gitignore` -Datei, um die Freigabe zu verhindern. Dasselbe gilt für die `.env` file - Diese Berechtigungsdateien dürfen nicht freigegeben oder in Git gespeichert werden.
-
-## Überprüfen Sie die Anatomie des Projekts.
-
-Das generierte Asset compute-Projekt ist ein Node.js-Projekt zur Verwendung als spezialisiertes Adobe Project Firefly-Projekt. Die folgenden Strukturelemente sind für das Asset compute-Projekt spezifisch:
-
-+ `/actions` enthält Unterordner und jeder Unterordner definiert einen Asset compute Worker.
-   + `/actions/<worker-name>/index.js` definiert das JavaScript, das zur Ausführung der Arbeit dieses Workers verwendet wird.
-      + Der Ordnername `worker` ist eine Standardeinstellung und kann beliebig sein, solange sie im `manifest.yml`.
-      + Es können mehr als ein Worker-Ordner unter definiert werden. `/actions` sie müssen jedoch bei Bedarf im `manifest.yml`.
-+ `/test/asset-compute` enthält die Test-Suites für jeden Worker. Ähnlich wie bei `/actions` Ordner, `/test/asset-compute` kann mehrere Unterordner enthalten, die jeweils dem getesteten Worker entsprechen.
-   + `/test/asset-compute/worker`, die eine Test-Suite für einen bestimmten Worker darstellt, enthält Unterordner, die einen bestimmten Testfall darstellen, sowie die Testeingabe, die Parameter und die erwartete Ausgabe.
-+ `/build` enthält die Ausgabe, Protokolle und Artefakte von Asset compute-Testfallausführungen.
-+ `/manifest.yml` definiert, welche Asset compute-Sekundäre das Projekt bereitstellt. Jede Worker-Implementierung muss in dieser Datei aufgezählt werden, damit sie für AEM as a Cloud Service verfügbar ist.
-+ `/console.json` definiert Adobe I/O-Konfigurationen
-   + Diese Datei kann mithilfe der `aio app use` Befehl.
-+ `/.aio` enthält Konfigurationen, die vom aio CLI-Tool verwendet werden.
-   + Diese Datei kann mithilfe der `aio app use` Befehl.
-+ `/.env` definiert Umgebungsvariablen in einer `key=value` Syntax und enthält Geheimnisse, die nicht freigegeben werden sollten. Zum Schutz dieser Geheimnisse sollte diese Datei NICHT in Git eingecheckt und über die Standardeinstellung des Projekts ignoriert werden `.gitignore` -Datei.
-   + Diese Datei kann mithilfe der `aio app use` Befehl.
-   + Die in dieser Datei definierten Variablen können durch [Exportieren von Variablen](../deploy/runtime.md) in der Befehlszeile.
-
-Weitere Informationen zur Überprüfung der Projektstruktur finden Sie unter [Anatomie eines Adobe Project Firefly-Projekts](https://www.adobe.io/project-firefly/docs/guides/).
-
-Der Großteil der Entwicklung findet im `/actions` Ordner, die Worker-Implementierungen entwickeln, und in `/test/asset-compute` Schreiben von Tests für die benutzerdefinierten Asset compute-Sekundäre.
 
 ## asset compute-Projekt auf GitHub
 
