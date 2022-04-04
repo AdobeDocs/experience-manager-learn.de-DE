@@ -3,10 +3,10 @@ title: AEM Assets-Videos und -Tutorials
 description: Eine Sammlung von Videos und Tutorials zu Adobe Experience Manager Assets
 sub-product: assets, dynamic-media
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
+source-git-commit: b7ff3e9abd22bb0c3d791ec3ac7da3562e849912
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 22%
+source-wordcount: '186'
+ht-degree: 26%
 
 ---
 
@@ -14,27 +14,11 @@ ht-degree: 22%
 
 Adobe Experience Manager (AEM) Assets ist ein digitales Asset-Management-Tool auf AEM Plattform, mit dem Benutzer ihre digitalen Assets (Bilder, Videos, Dokumente und Audioclips) in einem webbasierten Repository erstellen, verwalten und freigeben können. Dieses Benutzerhandbuch enthält Videos und Tutorials zu den zahlreichen Funktionen und Features von AEM Assets.
 
-## Neue Funktionen
+## AEM Assets zu Fuß
 
-* **[Relation und Aufheben der Verknüpfung (Video)](./authoring/relate-unrelate.md)**
+Sehen Sie sich diesen durchgehenden Spaziergang durch AEM Assets an, in dem erklärt wird, was AEM Assets ist und wie es zur Erreichung der Geschäftsziele Ihres Unternehmens verwendet werden kann.
 
-   *Erfahren Sie, wie Sie in AEM Beziehungen zwischen Assets herstellen und verwalten.*
-
-* **[Veröffentlichen von Assets (Video)](./sharing/publish.md)**
-
-   *Lernen Sie die Ins- und Outs der Veröffentlichung von Assets von der AEM-Autoreninstanz zur AEM-Veröffentlichung kennen*
-
-* **[Wasserzeichen (Video)](./advanced/watermarks.md)**
-
-   *Erfahren Sie, wie Sie Asset-Ausgabeformate in AEM as a Cloud Service mit Wasserzeichen versehen.*
-
-* **[Grundlegende Berechtigungen (Video)](./configuring/baseline-permissions.md)**
-
-   *Erfahren Sie, wie und warum es wichtig ist, AEM Assets mit Basisberechtigungen zu konfigurieren*
-
-* **[Automatisch startende Workflows (Video)](./configuring/auto-start-workflows.md)**
-
-   *Erfahren Sie, wie Sie AEM Workflow für hochgeladene oder erneut verarbeitete Assets automatisch aufrufen*
+>[!VIDEO](https://video.tv.adobe.com/v/336196/?quality=12&learn=on)
 
 ## Mitarbeiterauswahl
 
