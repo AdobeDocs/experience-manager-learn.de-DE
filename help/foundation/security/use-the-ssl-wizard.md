@@ -13,10 +13,10 @@ topic: Security
 role: Developer
 level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
-source-git-commit: 835c01cb2ad1d154437087c51c70a2daf90493dd
+source-git-commit: 2d5446197b9b81a4dbe4eaa5a7cb4fcdd5d63f67
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 1%
+source-wordcount: '211'
+ht-degree: 0%
 
 ---
 
@@ -26,6 +26,8 @@ Adobe Experience Managers SSL-Setup-Assistent erleichtert die Einrichtung einer 
 
 >[!VIDEO](https://video.tv.adobe.com/v/17993/?quality=12&learn=on)
 
+Öffnen Sie die __SSL-Konfigurationsassistent__ kann direkt geöffnet werden, indem Sie zu __AEM-Autor > Tools > Sicherheit > SSL-Konfiguration__.
+
 >[!NOTE]
 >
 >Für verwaltete Umgebungen ist es am besten, wenn die IT-Abteilung CA-vertrauenswürdige Zertifikate und Schlüssel bereitstellt.
@@ -34,11 +36,11 @@ Adobe Experience Managers SSL-Setup-Assistent erleichtert die Einrichtung einer 
 
 ## Privater Schlüssel und selbstsignierter Zertifikatdownload
 
-Die folgende ZIP-Datei enthält [!DNL DER]- und [!DNL CRT]-Dateien, die für die Einrichtung AEM SSL auf localhost erforderlich und nur für lokale Entwicklungszwecke vorgesehen sind.
+Die folgende ZIP-Datei enthält [!DNL DER] und [!DNL CRT] Dateien, die für die Einrichtung AEM SSL auf localhost erforderlich und nur für lokale Entwicklungszwecke vorgesehen sind.
 
-Die Dateien [!DNL DER] und [!DNL CERT] werden aus praktischen Gründen bereitgestellt und mithilfe der Schritte generiert, die im Abschnitt Privaten Schlüssel und selbst signiertes Zertifikat generieren unten beschrieben werden.
+Die [!DNL DER] und [!DNL CERT] -Dateien werden aus praktischen Gründen bereitgestellt und mithilfe der Schritte generiert, die im Abschnitt Generieren eines privaten Schlüssels und eines selbst signierten Zertifikats unten beschrieben werden.
 
-Bei Bedarf lautet der Satz für die Zertifikatübergabe **admin**.
+Bei Bedarf lautet der Satz für die Zertifikatübergabe . **admin**.
 
 localhost - privater Schlüssel und selbstsigniertes certificate.zip (gültig bis Juli 2028)
 
@@ -46,7 +48,7 @@ localhost - privater Schlüssel und selbstsigniertes certificate.zip (gültig bi
 
 ## Generieren von privaten Schlüsseln und selbstsignierten Zertifikaten
 
-Das obige Video zeigt die Einrichtung und Konfiguration von SSL auf einer AEM Autoreninstanz mithilfe selbstsignierter Zertifikate. Die folgenden Befehle mit [[!DNL OpenSSL]](https://www.openssl.org/) können einen privaten Schlüssel und ein Zertifikat generieren, die in Schritt 2 des Assistenten verwendet werden sollen.
+Das obige Video zeigt die Einrichtung und Konfiguration von SSL auf einer AEM Autoreninstanz mithilfe selbstsignierter Zertifikate. Die folgenden Befehle verwenden [[!DNL OpenSSL]](https://www.openssl.org/) kann einen privaten Schlüssel und ein Zertifikat generieren, die in Schritt 2 des Assistenten verwendet werden sollen.
 
 ```shell
 ### Create Private Key
