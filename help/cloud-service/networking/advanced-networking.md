@@ -8,17 +8,24 @@ role: Architect, Developer
 level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
-source-git-commit: 6f047a76693bc05e64064fce6f25348037749f4c
+exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
+source-git-commit: 6e7130cd98700bdb5e7f330ca0506fe89ea0eb94
 workflow-type: tm+mt
-source-wordcount: '218'
-ht-degree: 0%
+source-wordcount: '268'
+ht-degree: 4%
 
 ---
 
-
 # Erweiterte Vernetzung
 
-AEM as a Cloud Service bietet drei Optionen zum Verwalten der Verbindung mit externen Diensten. Ein Cloud Manager-Programm und seine AEM as a Cloud Service Umgebungen können jeweils nur einen einzigen Typ der erweiterten Netzwerkkonfiguration verwenden. Stellen Sie daher sicher, dass der am besten geeignete Typ ausgewählt ist.
+AEM as a Cloud Service bietet erweiterte Netzwerkfunktionen, die eine präzise Verwaltung der Verbindungen zu und von AEM as a Cloud Service Programmen ermöglichen.
+
+|  | [Produktionsprogramme](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) | [Sandbox-Programme](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) |
+|---------------------------------------------------|:-----------------------:|:---------------------|
+| Unterstützt erweiterte Netzwerke | ms | ✘ |
+
+
+AEM erweiterte Vernetzung umfasst drei Optionen für die Verwaltung der Verbindung mit externen Diensten. Ein Cloud Manager-Programm und seine AEM as a Cloud Service Umgebungen können jeweils nur einen einzigen Typ der erweiterten Netzwerkkonfiguration verwenden. Stellen Sie daher sicher, dass der am besten geeignete Typ ausgewählt ist.
 
 |  | HTTP/HTTPS bei Standardanschlüssen | HTTP/HTTPS bei nicht standardmäßigen Ports | Nicht-HTTP/HTTPS-Verbindungen | Dedizierte Ausgangs-IP | Liste &quot;Keine Proxy-Hosts&quot; | Verbindung zu VPN-geschützten Diensten | Beschränken des AEM-Veröffentlichungs-Traffics nach IP |
 |-----------------------------------|:----------------------------:|:--------------------------------:|:--------------------------:|:-------------------:|:-------------------------------------:|:-------------------------------------:|:----:|
