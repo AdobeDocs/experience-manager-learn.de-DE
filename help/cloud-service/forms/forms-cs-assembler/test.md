@@ -7,9 +7,10 @@ level: Beginner, Intermediate
 version: Cloud Service
 feature: Adaptive Forms
 topic: Development
-source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
+exl-id: 5139aa84-58d5-40e3-936a-0505bd407ee8
+source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
 workflow-type: tm+mt
-source-wordcount: '174'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
@@ -20,16 +21,28 @@ ht-degree: 0%
 * Starten Sie Eclipse und importieren Sie das Projekt in Eclipse
 * Das Projekt enthält die folgenden Ordner im Ordner &quot;Ressourcen&quot;:
    * ddxFiles - Dieser Ordner enthält die ddx-Datei, um die Ausgabe zu beschreiben, die Sie generieren möchten
-   * pdfiles - Dieser Ordner enthält die PDF-Dateien, die Sie zusammenführen möchten
+   * pdfiles - Dieser Ordner enthält die PDF-Dateien, die Sie zusammenführen möchten, sowie PDF-Dateien zum Testen von PDFA-Utitiliten
+   * credentials - Dieser Ordner enthält die Datei &quot;pdfa-options.json&quot;
 
 ![resources-file](./assets/resources.png)
 
-## Testen der Lösung
+## Testen des Assemblierens von PDF-Dateien
 
 * Kopieren Sie Ihre Dienstanmeldeinformationen und fügen Sie sie in die Ressourcendatei service_token.json in das Projekt ein.
 * Öffnen Sie die Datei AssemblePDFFiles.java und geben Sie den Ordner an, in dem Sie die generierten PDF-Dateien speichern möchten
-* Öffnen Sie ExecuteAssemblerService.java. Legen Sie den Wert der Variablen assembleURL fest, um auf Ihre Instanz zu verweisen.
+* Öffnen Sie ExecuteAssemblerService.java. Wert der Variablen festlegen _AEM_FORMS_CS_ , um auf Ihre Instanz zu verweisen.
+* Heben Sie die Auskommentierung der entsprechenden Zeilen auf, um die Zusammenstellung von zwei oder mehr PDF-Dateien zu testen.
 * Ausführen von ExecuteAssemblerService.java als Java-Anwendung
+
+### Testen von PDFA-Dienstprogrammen
+
+* Kopieren Sie Ihre Dienstanmeldeinformationen und fügen Sie sie in die Ressourcendatei service_token.json in das Projekt ein.
+* Öffnen Sie die Datei PDFAUtilities.java und geben Sie den Ordner an, in dem Sie die generierten PDF-Dateien speichern möchten.
+* Öffnen Sie ExecuteAssemblerService.java. Wert der Variablen festlegen _AEM_FORMS_CS_ , um auf Ihre Instanz zu verweisen.
+* Heben Sie die Auskommentierung der entsprechenden Zeilen auf, um PDFA-Vorgänge zu testen.
+* Führen Sie ExecuteAssemblerService.java als Java-Anwendung aus.
+
+
 
 >[!NOTE]
 > Beim ersten Ausführen des Java-Programms wird der HTTP 403-Fehler angezeigt. Um dies zu überwinden, stellen Sie sicher, dass Sie [geeignete Berechtigungen für den technischen Kontobenutzer in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).

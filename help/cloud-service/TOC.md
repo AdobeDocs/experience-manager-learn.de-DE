@@ -4,9 +4,9 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: 8631d0b23e2befa22032d0b677e0f1c7122f2cb5
+source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '731'
 ht-degree: 29%
 
 ---
@@ -178,6 +178,7 @@ ht-degree: 29%
       + [JWT-Token erstellen](./forms/forms-cs-assembler/create-jwt.md)
       + [Zugriffstoken erstellen](./forms/forms-cs-assembler/create-access-token.md)
       + [Zusammenführen von PDF-Dateien](./forms/forms-cs-assembler/assemble-pdf-files.md)
+      + [PDF/A Utilities](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [Testen der Lösung](./forms/forms-cs-assembler/test.md)
       + [Herausforderung](./forms/forms-cs-assembler/challenge.md)
    + Azure Portal-Speicher{#forms-cs-azure-portal}

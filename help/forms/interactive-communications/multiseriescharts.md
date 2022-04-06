@@ -12,13 +12,13 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+exl-id: f4af7cb9-cc3b-4bec-9428-ab4f1a3cf41a
+source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '281'
 ht-degree: 2%
 
 ---
-
 
 # Diagramme mit mehreren Reihen
 
@@ -26,7 +26,7 @@ AEM Forms 6.5 bietet jetzt die Möglichkeit, mehrere Seriendiagramme zu erstelle
 
 ![multiseries](assets/seriescharts.jfif)
 
-Um in AEM Forms Diagramme mit mehreren Reihen zu erstellen, müssen Sie ein geeignetes Formulardatenmodell mit den erforderlichen Entitäten und Zuordnungen zwischen den Entitäten erstellen. Im folgenden Screenshot werden die Entitäten und die Verknüpfungen zwischen den 3 Entitäten hervorgehoben. Auf der obersten Ebene haben wir eine Organisation, die eine Eins-zu-viele-Verbindung mit der Fondsorganisation hat. Die Fondseinrichtung wiederum hat eine Eins-zu-viele-Verbindung mit der Leistungsentität.
+Um in AEM Forms Diagramme mit mehreren Reihen zu erstellen, müssen Sie ein geeignetes Formulardatenmodell mit den erforderlichen Entitäten und Zuordnungen zwischen den Entitäten erstellen. Im folgenden Screenshot werden die Entitäten und die Verbindungen zwischen den 3 Entitäten hervorgehoben. Auf der obersten Ebene haben wir eine Organisation, die eine Eins-zu-viele-Verbindung mit der Fondsorganisation hat. Die Fondseinrichtung wiederum hat eine Eins-zu-viele-Verbindung mit der Leistungsentität.
 
 ![formdatamodel](assets/formdatamodel.jfif)
 
@@ -47,6 +47,6 @@ Um dies auf Ihrem System zu testen, führen Sie die folgenden Schritte aus
 * [Laden Sie SeriesChartSampleData.json auf Ihre Festplatte herunter.](assets/serieschartsampledata.json) Dies sind die Beispieldaten, die zum Ausfüllen des Diagramms verwendet werden.
 * [Navigieren Sie zu Forms und Dokumente.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Wählen Sie die Vorlage für interaktive Kommunikation &quot;MutualFundGrowthFactSheet&quot;.
-* Klicken Sie auf Vorschau | Laden Sie Beispieldaten hoch.
+* Klicken Sie auf Vorschau | Druckkanal | Laden Sie Beispieldaten hoch.
 * Navigieren Sie zu der Beispieldatendatei, die als Teil dieses Artikels bereitgestellt wird.
 * Sehen Sie sich den Druckkanal der interaktiven Kommunikation &quot;MutualFundGrowthFactSheet&quot;mit den im vorherigen Schritt heruntergeladenen Beispieldaten an.
