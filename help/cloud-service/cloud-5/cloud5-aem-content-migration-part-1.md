@@ -1,6 +1,6 @@
 ---
 title: Migration zur Cloud - Teil 1
-description: Darin und James besprechen die Migration zur AEM Cloud und stellen einige der Techniken vor.
+description: Darin und James besprechen die Migration zur AEM Cloud und stellen einige Techniken und Best Practices vor.
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -8,16 +8,17 @@ kt: 10207
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342133.jpeg
-source-git-commit: bc14a89433ef603ef981a05efb1eb931dabcb777
+exl-id: 817ea20d-d902-4497-83d3-5800ed6aaa8f
+source-git-commit: 62a1deda2a4fda56edb0c3d0f34a5e804f78887b
 workflow-type: tm+mt
-source-wordcount: '111'
+source-wordcount: '113'
 ht-degree: 5%
 
 ---
 
 # Migration zur Cloud - Teil 1
 
-Darin und James besprechen den Dispatcher in der AEM Cloud, einschließlich einiger Best Practices und Unterschiede von AMS/On-Prem.They , berühren auch die Migration in die Cloud. Spezialgast und Cloud-Experte, [Dr. Applesmith](https://twitter.com/DrApplesmith) ein Erscheinungsbild.
+Darin und James besprechen den Dispatcher in der AEM Cloud, einschließlich einiger Best Practices und Unterschiede zu AMS/On-Premise. Sie berühren auch die Migration in die Cloud. Spezialgast und Cloud-Experte, [Dr. Applesmith](https://twitter.com/DrApplesmith) ein Erscheinungsbild.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342133/?quality=12&learn=on)
 
