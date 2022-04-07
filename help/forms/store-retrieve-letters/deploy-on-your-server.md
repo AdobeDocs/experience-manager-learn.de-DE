@@ -11,10 +11,11 @@ topic: Development
 role: Developer
 level: Intermediate
 kt: 10208
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+exl-id: 9053ee29-436a-439a-b592-c3fef9852ea4
+source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
 workflow-type: tm+mt
-source-wordcount: '149'
-ht-degree: 0%
+source-wordcount: '165'
+ht-degree: 5%
 
 ---
 
@@ -22,13 +23,18 @@ ht-degree: 0%
 
 Befolgen Sie die folgenden Anweisungen, damit diese Funktion auf Ihrem AEM funktioniert
 
-* Erstellen Sie einen Ordner mit dem Namen icdrafts in Ihrem c-Laufwerk.
 * [Datenbankschema erstellen](assets/icdrafts.sql)
 * [Client-Bibliothek importieren](assets/icdrafts.zip)
 * [Importieren des adaptiven Formulars](assets/SavedDraftsAdaptiveForm.zip)
 * Erstellen Sie eine Datenquelle namens _SaveAndContinue_
 
 ![Datenquelle erstellen](assets/data-source.png)
+
+| Eigenschaftsname | Eigenschaftswert |
+|---|---|
+| Datasource Name | SaveAndContinue |
+| JDBC-Treiberklasse | com.mysql.cj.jdbc.Driver |
+| JDBC-Verbindungs-URL | jdbc:mysql://localhost:3306/aemformstutorial?autoReconnect=true&amp;useSSL=false&amp;characterEncoding=utf8&amp;useUnicode=true |
 
 * [Bereitstellen des icdrafts-Bundles](assets/icdrafts.icdrafts.core-1.0-SNAPSHOT.jar)
 * Stellen Sie sicher, dass _Speichern mit CCRDocumentInstanceService aktivieren_ in der OSGi-Konfiguration wie unten dargestellt

@@ -5,7 +5,7 @@ user-guide-title: AEM Forms-Videos und -Tutorials
 user-guide-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler.
 breadcrumb-title: AEM Forms-Tutorials
 index: y
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
 workflow-type: tm+mt
 source-wordcount: '1667'
 ht-degree: 4%
@@ -210,8 +210,8 @@ ht-degree: 4%
    + [Verwenden des PDFG-Dienstes in AEM Forms](document-services/using-pdfg-in-aem-forms.md)
    + [Verwenden von Output und Forms Service in AEM Forms](document-services/output-and-forms-services-article-develop.md)
    + [Erstellen mehrerer PDFs aus einer Datendatei](document-services/generate-multi-record-pdf.md)
-   + [PDF bei Mobile-Formularübermittlung generieren](document-services/generate-pdf-from-mobile-form-submission-article.md)
-   + [Interaktive PDF aus Mobile-Formular generieren](document-services/render-interactive-form-using-api.md)
+   + [PDF bei Übermittlung mobiler Formulare generieren](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [Interaktive PDF aus Mobile Form generieren](document-services/render-interactive-form-using-api.md)
    + [Interaktives DoR aus adaptivem Formular generieren](document-services/generate-interactive-dor.md)
    + [Reader Extensions-Berechtigungen konfigurieren](document-services/configuring-reader-extension-osgi.md)
    + [Verwendungsrechte auf PDF bei XDP-Wiedergabe anwenden](document-services/rendering-and-reader-extending-xdp-templates-article.md)
