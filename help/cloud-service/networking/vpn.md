@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: 8b95339bc2e037d3a0d9d705a94b37f268545b4f
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -36,7 +36,7 @@ Ein Cloud Manager-Programm kann nur über eine __single__ Netzwerkinfrastrukturt
 
 ## Voraussetzungen
 
-Bei der Einrichtung eines virtuellen privaten Netzwerks sind folgende Voraussetzungen erforderlich:
+Beim Einrichten eines virtuellen privaten Netzwerks sind folgende Voraussetzungen erforderlich:
 
 + Adobe-Konto mit [Berechtigungen für Business Owner in Cloud Manager](https://www.adobe.io/experience-cloud/cloud-manager/guides/getting-started/permissions/#cloud-manager-api-permissions)
 + Zugriff auf [Authentifizierungsberechtigungen der Cloud Manager-API](https://www.adobe.io/experience-cloud/cloud-manager/guides/getting-started/authentication/)
@@ -94,6 +94,10 @@ Aktivieren Sie zunächst das virtuelle private Netzwerk auf AEM as a Cloud Servi
                "10.151.201.22",
                "10.151.202.22",
                "10.154.155.22"
+           ],
+           "domains": [
+               "wknd.site",
+               "wknd.com"
            ]
        },
        "connections": [{
