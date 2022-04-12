@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: 6ec65dca77fff2f9da47607906088e694a656f68
+source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '475'
 ht-degree: 6%
 
 ---
@@ -70,6 +70,8 @@ Sobald die am besten geeignete erweiterte Netzwerkoption, die auf den Anforderun
 ## Codebeispiele
 
 Diese Sammlung enthält Beispiele für die Konfiguration und den Code, die zur Nutzung erweiterter Netzwerkfunktionen für bestimmte Anwendungsfälle erforderlich sind.
+
+Stellen Sie sicher, dass die [erweiterte Netzwerkkonfiguration](#advanced-networking) wurde eingerichtet, bevor Sie diesen Tutorials folgen.
 
 <table><tr>
    <td>
