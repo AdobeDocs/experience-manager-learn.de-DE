@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 88797cf950dae46d0f856330df12c59a4efe6456
+source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
 workflow-type: tm+mt
-source-wordcount: '227'
-ht-degree: 22%
+source-wordcount: '231'
+ht-degree: 23%
 
 ---
 
@@ -47,7 +47,10 @@ ht-degree: 22%
       + [4 - Beständige GraphQL-Abfragen](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 - Client-Anwendungs-Integration](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
    + Verfahren {#how-to}
-      + [Arbeiten mit Rich-Text](./graphql/how-to/rich-text.md)
+      + [Rich-Text](./graphql/how-to/rich-text.md)
+      + [Bilder](./graphql/how-to/images.md)
+      + [Lokalisierte Inhalte](./graphql/how-to/localized-content.md)
+      + [AEM Headless-SDK](./graphql/how-to/aem-headless-sdk.md)
    + Beispiele {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
       + [iOS SwiftUI](./graphql/example-apps/ios-swiftui-app.md)
@@ -89,4 +92,4 @@ ht-degree: 22%
    + [4 - Definieren von Content Services-Vorlagen](./content-services/chapter-4.md)
    + [5 - Inhaltserstellung von Seiten in Content Services](./content-services/chapter-5.md)
    + [6 - Bereitstellung des Inhalts auf AEM-Veröffentlichungen zur Bereitstellung](./content-services/chapter-6.md)
-   + [7 - AEM Content Services aus einer Mobile App verwenden](./content-services/chapter-7.md)
+   + [7 - AEM Content Services von einer Mobile App aus nutzen](./content-services/chapter-7.md)

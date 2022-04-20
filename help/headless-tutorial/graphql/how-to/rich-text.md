@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit Rich-Text | AEM Headless
+title: Verwenden von Rich-Text mit AEM Headless
 description: Erfahren Sie, wie Sie mit einem mehrzeiligen Rich-Text-Editor mit Adobe Experience Manager-Inhaltsfragmenten Inhalte erstellen und referenzierte Inhalte einbetten können und wie Rich-Text von AEM GraphQL-APIs als JSON bereitgestellt wird, um von Headless-Anwendungen genutzt zu werden.
 version: Cloud Service
 doc-type: article
@@ -7,22 +7,21 @@ kt: 9985
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
-source-git-commit: 88797cf950dae46d0f856330df12c59a4efe6456
+exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
+source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1376'
 ht-degree: 0%
 
 ---
 
-
-# Arbeiten mit Rich-Text in Adobe Experience Manager Headless
+# Rich-Text mit AEM Headless
 
 Das mehrzeilige Textfeld ist ein Datentyp von Inhaltsfragmenten, mit dem Autoren Rich-Text-Inhalte erstellen können. Verweise auf andere Inhalte wie Bilder oder andere Inhaltsfragmente können dynamisch in Zeilen innerhalb des Textflusses eingefügt werden. AEM GraphQL-API bietet eine robuste Möglichkeit, Rich-Text als HTML, Nur-Text oder reinen JSON zurückzugeben. Die JSON-Darstellung ist leistungsstark, da sie der Clientanwendung die volle Kontrolle darüber gibt, wie der Inhalt gerendert werden kann.
 
 ## Mehrzeiliger Editor
 
 >[!VIDEO](https://video.tv.adobe.com/v/342104/?quality=12&learn=on)
-
 
 Im Inhaltsfragment-Editor bietet die Menüleiste des mehrzeiligen Textfelds Autoren standardmäßige Rich-Text-Formatierungsfunktionen wie **fett**, *kursiv* und unterstreichen. Das Öffnen des mehrzeiligen Felds im Vollbildmodus aktiviert [zusätzliche Formatierungswerkzeuge wie Absatztyp, Suchen und Ersetzen, Rechtschreibprüfung und mehr](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
 
