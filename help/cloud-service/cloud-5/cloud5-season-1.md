@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 210e5483-d79e-47ac-aa09-b6956cca2e62
-source-git-commit: bd60205f5561cfc8d758a15e69bc26fa1d64bd4d
+source-git-commit: 571f79cbcadff2161c3daa993ac833d9d4068f98
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -137,14 +137,16 @@ Jede Jahreszeit variiert in ihrer Länge und wird nach einem festen Zeitplan ver
       </p>
    </td>
      <td>
-      <img alt="Tipps zur Indizierung und Suche" src="./imgs/coming-soon.png"/>
+        <a href="./cloud5-aem-search-and-indexing.md">
+            <img alt="Tipps zur Indizierung und Suche" src="./imgs/009-thumb.png"/>
+        </a>
       <div>
-         <strong>Tipps zur Indizierung und Suche</strong>
+         <a href="./cloud5-aem-search-and-indexing.md"><strong>Tipps zur Indizierung und Suche</strong></a>
          <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
       </div>
       <p>
         <br/>
-         April 2022
+         Für etwas so Kompliziertes wie Indizierung und Suche zeigt Ihnen das Team einige einfache Gewinne für die Optimierung Ihrer Entwicklungszeit und die Lösung von Dingen, bevor sie Probleme werden.
       </p>
    </td> 
   </tr>
