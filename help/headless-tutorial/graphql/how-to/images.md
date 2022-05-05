@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
-source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
+exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
+source-git-commit: cca9ea744f938470b82b61d11269c1f9e8250bbe
 workflow-type: tm+mt
 source-wordcount: '1084'
 ht-degree: 3%
 
 ---
-
 
 # Bilder mit AEM Headless
 
@@ -36,7 +36,7 @@ Die Verwendung der Felder erfolgt am besten nach folgenden Kriterien:
 |--------------------|:------------------------------:|:-----------------------------:|:------------------------------:|
 | `_path` | ms | ✘ | ✘ |
 | `_authorUrl` | ✘ | ms | ✘ |
-| `_publishUrl` | ✘ | ✘ | ✔ |
+| `_publishUrl` | ✘ | ✘ | ms |
 
 Verwendung von `_authorUrl` und `_publishUrl` sollte an dem GraphQL-Endpunkt ausgerichtet sein, der für die Quelle der GraphQL-Antwort verwendet wird.
 
@@ -68,7 +68,7 @@ Geben Sie in der GraphQL-Abfrage das Feld als `ImageRef` Typ eingeben und die en
 }
 ```
 
-## GraphQL response
+## GraphQL-Antwort
 
 Die resultierende JSON-Antwort enthält die angeforderten Felder, die die URLs zu den Bild-Assets enthalten.
 
@@ -90,7 +90,7 @@ Die resultierende JSON-Antwort enthält die angeforderten Felder, die die URLs z
 
 Verwenden Sie das entsprechende Feld, um das referenzierte Bild in Ihre Anwendung zu laden. `_path`, `_authorUrl`oder `_publishUrl` des `adventurePrimaryImage` als Quell-URL des Bildes.
 
-Die Domänen der `_authorUrl` und `_publishUrl` werden automatisch von AEM as a Cloud Service mithilfe der Variablen [Externalisieren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/externalizer.htmli).
+Die Domänen der `_authorUrl` und `_publishUrl` werden automatisch von AEM as a Cloud Service mithilfe der Variablen [Externalizer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/externalizer.html).
 
 In React sieht die Anzeige des Bildes aus AEM Publish wie folgt aus:
 
@@ -154,7 +154,7 @@ Stellen Sie sicher, dass die Assets mit den neuen Ausgabeformaten [(erneut) ver�
 
 Auf Ausgabedarstellungen können Sie direkt zugreifen, indem Sie die __Ausgabedarstellungsnamen__ und __Ausgabedarstellungs-Erweiterungen__ definiert im Verarbeitungsprofil die URL des Assets.
 
-| Asset-URL | Unterpfad für Ausgabedarstellungen | Name des Ausgabeformats | Ausgabedarstellungserweiterung |  | Rendition URL |
+| Asset-URL | Unterpfad für Ausgabedarstellungen | Name des Ausgabeformats | Ausgabedarstellungserweiterung |  | Ausgabedarstellungs-URL |
 |-----------|:------------------:|:--------------:|--------------------:|:--:|---|
 | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg | /_jcr_content/renditions/ | groß | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg/_jcr_content/renditions/large.jpeg |
 | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg | /_jcr_content/renditions/ | medium | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpg/_jcr_content/renditions/medium.jpeg |
@@ -164,9 +164,9 @@ Auf Ausgabedarstellungen können Sie direkt zugreifen, indem Sie die __Ausgabeda
 
 ### GraphQL-Abfrage{#renditions-graphl-query}
 
-AEM GraphQL benötigt eine zusätzliche Syntax, um Bildausgabeformate anzufordern. Instead [images are queried](#images-graphql-query) in the usual manner, and the desired rendition is specified in-code. Es ist wichtig, [Stellen Sie sicher, dass die von der Headless-Anwendung verwendeten Bild-Assets über die gleichen benannten Ausgabeformate verfügen.](#reprocess-assets).
+AEM GraphQL benötigt eine zusätzliche Syntax, um Bildausgabeformate anzufordern. Stattdessen [Bilder werden abgefragt](#images-graphql-query) auf die übliche Weise festgelegt und die gewünschte Ausgabedarstellung im Code angegeben wird. Es ist wichtig, [Stellen Sie sicher, dass die von der Headless-Anwendung verwendeten Bild-Assets über die gleichen benannten Ausgabeformate verfügen.](#reprocess-assets).
 
-### React example
+### React-Beispiel
 
 Erstellen wir eine einfache React-Anwendung, die drei Ausgabeformate (klein, mittel und groß) eines einzelnen Bild-Assets anzeigt.
 
@@ -177,7 +177,7 @@ Erstellen wir eine einfache React-Anwendung, die drei Ausgabeformate (klein, mit
 Erstellen Sie eine React-Komponente, die die Bilder rendert. Diese Komponente akzeptiert vier Eigenschaften:
 
 + `assetUrl`: Die Bild-Asset-URL, die über die Antwort der GraphQL-Abfrage bereitgestellt wird.
-+ `renditionName`: The name of rendition to load.
++ `renditionName`: Der Name der zu ladenden Ausgabedarstellung.
 + `renditionExtension`: Die Erweiterung der zu ladenden Ausgabedarstellung.
 + `alt`: Der Alt-Text für das Bild; Zugänglichkeit ist wichtig!
 
