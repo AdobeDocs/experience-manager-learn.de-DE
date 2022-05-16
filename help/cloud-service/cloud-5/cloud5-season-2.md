@@ -1,0 +1,150 @@
+---
+title: Cloud 5 - Staffel 2
+description: In der zweiten Staffel lernen Sie Adobe Experience Manager (AEM) kennen, die von den Fachingenieuren der Adobe as a Cloud Service ist, die das Projekt erstellen, und von den Fachkräften, die es anbieten.
+sub-product: sites, cloud-manager, assets
+solution: Experience Manager as a Cloud Service, Experience Manager
+recommendations: noDisplay, noCatalog
+source-git-commit: 99424ae98bd85a8d0203f8f5d4bf24a4e4d7cb53
+workflow-type: tm+mt
+source-wordcount: '328'
+ht-degree: 2%
+
+---
+
+# Cloud 5
+
+![AEM Expertenreihe](./imgs/masthead-s2.png)
+
+## Einführung
+
+Willkommen in der zweiten Cloud 5-Serie von AEM Engineering. Eines der Hauptprobleme in der Implementierungsphase eines Produkts besteht darin, genügend Codebeispiele und/oder Live-Demonstrationen dieser Beispiele, Tools oder APIs zu haben. Ziel dieser Serie ist es, nützliche Informationen über AEM as a Cloud Service innerhalb von 5 Minuten oder weniger bereitzustellen.
+
+## Vorschlagsfeld
+
+Besuchen Sie die [Vorschlagsfeld](https://forms.office.com/r/74P5Xz4UH0) zum Einreichen von Themenvorstellungen.
+
+## Staffel 2
+
+Jede Jahreszeit variiert in ihrer Länge und wird nach einem festen Zeitplan veröffentlicht. Die Themen der zweiten Staffel stammen in erster Linie aus früheren Anforderungen, auf die wir bei unserer täglichen Interaktion mit Kunden und Partnern gestoßen sind. Besuchen Sie diese Seite für wöchentliche Updates oder folgen Sie uns im sozialen Netzwerk Ihrer Wahl.
+
+<table>
+  <tr>
+   <td>
+      <img alt="Admin Console" src="./imgs/coming-soon.png"/>
+      <div>
+         <strong>Admin Console</strong>        
+         <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+      </div>
+      <p>
+        <br/>
+         Ab 3. Juni 2022
+      </p>
+     </td>   
+     <td>
+         <img alt="Fragmente" src="./imgs/coming-soon.png"/>
+      <div>
+         <strong>Fragmente</strong>
+         <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+      </div>
+      <p>
+        <br/>
+         Ab 10. Juni 2022
+      </p>
+   </td>
+     <td>
+            <img alt="Repository Modernizer" src="./imgs/coming-soon.png"/>
+      <div>
+            <strong>Repository Modernizer</strong>
+         <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+      </div>
+      <p>
+        <br/>
+         Ab 16. Juni 2022
+      </p>
+   </td> 
+  </tr>
+  <tr>
+   <td>
+            <img alt="Sling Jobs" src="./imgs/coming-soon.png"/>
+      <div>
+            <strong>Sling-Aufträge</strong>       
+         <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+      </div>
+      <p>
+        <br/>
+         Am 24. Juni 2022
+      </p>
+     </td>   
+     <td>
+        <img alt="Repo Initializer (repoinit)" src="./imgs/coming-soon.png"/>
+      <div>
+        <strong>Repo Initializer (repoinit)</strong>
+         <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+      </div>
+      <p>
+        <br/>
+            Vom 1. Juli 2022
+      </p>
+   </td>
+     <td>
+            <img alt="Korrigieren Sie Ihre... Cache" src="./imgs/coming-soon.png"/>
+      <div>
+         <strong>Korrigieren Sie Ihre... Cache</strong>
+         <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+      </div>
+      <p>
+        <br/>
+         Ab 15. Juli 2022
+      </p>
+   </td> 
+  </tr>
+<tr>
+   <td>
+            <img alt="Korrigieren Sie Ihre... Neuschreibungen" src="./imgs/coming-soon.png"/>
+      <div>
+            <strong>Korrigieren Sie Ihre... Neuschreibungen</strong>
+         <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+      </div>
+      <p>
+        <br/>
+         Am 22. Juli 2022
+      </p>
+     </td>   
+     <td>
+            <img alt="Geheimnisse von Cloud Manager ... Erlebnisprüfung" src="./imgs/coming-soon.png"/>
+      <div>
+            <strong>Geheimnisse von Cloud Manager ... Erlebnisprüfung</strong>
+         <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+      </div>
+      <p>
+        <br/>
+        Am 29. Juli 2022
+      </p>
+   </td>
+     <td>
+            <img alt="Geheimnisse von Cloud Manager ... Unit-Tests" src="./imgs/coming-soon.png"/>
+      <div>
+            <strong>Geheimnisse von Cloud Manager ... Unit-Tests</strong>
+         <br/><em>mit Darin Kuntze &amp; Bryan Stopp, leitende Cloud-Architekten</em>
+      </div>
+      <p>
+        <br/>
+         Am 5. August 2022
+      </p>
+   </td> 
+  </tr>
+    <tr>
+        <td>
+                <img alt="Geheimnisse von Cloud Manager ... Funktionstests" src="./imgs/coming-soon.png"/>
+            <div>
+                <strong>Geheimnisse von Cloud Manager ... Funktionstests</strong><br/>        
+                <em>mit Darin Kuntze &amp; Bryan Stopp, leitende Cloud-Architekten</em>
+            </div>
+            <p><br/>
+                Am 12. August 2022
+            </p>
+        </td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
