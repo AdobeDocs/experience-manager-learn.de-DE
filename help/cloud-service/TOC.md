@@ -4,10 +4,10 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: 99424ae98bd85a8d0203f8f5d4bf24a4e4d7cb53
+source-git-commit: e666e38d6b2a7057f7016b35ad1034a4487e9bc7
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 29%
+source-wordcount: '749'
+ht-degree: 30%
 
 ---
 
@@ -89,6 +89,9 @@ ht-degree: 29%
    + [Adobe IMS-Produktprofile](./accessing/adobe-ims-product-profiles.md)
    + [AEM von Benutzern, Gruppen und Berechtigungen](./accessing/aem-users-groups-and-permissions.md)
    + [Zugriff auf AEM konfigurieren](./accessing/walk-through.md)
++ Authentifizierung{#authentication}
+   + [Übersicht](./authentication/authentication.md)
+   + [SAML 2.0](./authentication/saml-2-0.md)
 + Erweiterte Netzwerke{#networking}
    + [Übersicht](./networking/advanced-networking.md)
    + [Flexibles Port-Egress](./networking/flexible-port-egress.md)
