@@ -8,13 +8,13 @@ role: Architect, Developer
 level: Intermediate
 kt: 9351
 thumbnail: 343040.jpeg
-source-git-commit: e666e38d6b2a7057f7016b35ad1034a4487e9bc7
+exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
+source-git-commit: e4cd87e5d2d78c3113ef860b9f357cfacb2c874a
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '2775'
 ht-degree: 2%
 
 ---
-
 
 # SAML 2.0-Authentifizierung{#saml-2-0-authentication}
 
@@ -398,6 +398,10 @@ Nach erfolgreicher Authentifizierung beim IDP orchestriert der IDP eine HTTP-POS
 ```
 
 Wenn das Umschreiben der URL auf dem Apache-Webserver konfiguriert ist (`dispatcher/src/conf.d/rewrites/rewrite.rules`) stellen Sie sicher, dass Anfragen an die `.../saml_login` Endpunkte werden nicht versehentlich verwirrt.
+
+## Datensynchronisation aktivieren
+
+Die Benutzerdatensätze müssen in der AEM-Veröffentlichungsstufe synchronisiert werden, sobald durch den SAML-Authentifizierungsfluss ein Benutzer in AEM Publish erstellt wird. nach [Datensynchronisation aktivieren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization)senden Sie eine Anfrage an den Adobe-Support (über [AdminConsole](https://adminconsole.adobe.com) > Support), um die Aktivierung anzufordern.
 
 ## Bereitstellen der SAML-Konfiguration
 
