@@ -4,9 +4,9 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: e666e38d6b2a7057f7016b35ad1034a4487e9bc7
+source-git-commit: abb26a995ec81332bb6ae3617b1a41b60c9dab96
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '752'
 ht-degree: 30%
 
 ---
@@ -249,6 +249,8 @@ ht-degree: 30%
    + [Dispatcher Validator](./cloud-5/cloud5-aem-dispatcher-validator.md)
    + [Suche und Indizierung](./cloud-5/cloud5-aem-search-and-indexing.md)
    + [Adobe App Builder](./cloud-5/cloud5-adobe-app-builder.md)
+   + [Fragmente](./cloud-5/season-2/cloud5-experience-v-content-fragments.md)
+   + [Repo Modernizer](./cloud-5/season-2/cloud5-repo-modernizer.md)
 + [AEM Expertenreihe](./aem-experts-series.md)
 + Mehrstufige Tutorials{#multi-step-tutorials}
    + [AEM Sites-Entwicklung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de)
