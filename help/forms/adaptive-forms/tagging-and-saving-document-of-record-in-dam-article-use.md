@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 832f04b4-f22f-4cf9-8136-e3c1081de7a9
-source-git-commit: 55583effd0400bac2e38756483d69f5bd114cb21
+source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '611'
 ht-degree: 1%
 
 ---
@@ -160,14 +160,14 @@ Um dieses Beispiel auf Ihrem System verwenden zu können, führen Sie die folgen
 
 * [Herunterladen und Bereitstellen des setvalue-Bundles](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGI-Bundle, das die Tags aus den gesendeten Formulardaten festlegt.
 
-* [Herunterladen des adaptiven Beispielformulars](assets/tag-and-store-in-dam-assets.zip)
+* [Herunterladen des adaptiven Beispielformulars](assets/tag-and-store-in-dam-adaptive-form.zip)
 
 * [Navigieren Sie zu Forms und Dokumenten .](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-* Klicken Sie auf Erstellen | Datei-Upload und Hochladen der sampleadaptiveform.zip-Datei
+* Klicken Sie auf Erstellen | Datei-Upload und Upload des Tags und Store-in-dam-adaptive-form.zip
 
 * [Importieren von Artikel-Assets](assets/tag-and-store-in-dam-assets.zip) Verwenden AEM Package Manager
-* Öffnen Sie die [Beispielformular im Vorschaumodus](http://localhost:4502/content/dam/formsanddocuments/summit/peakform/jcr:content?wcmmode=disabled). Füllen Sie den Abschnitt Personen aus und senden Sie das Formular.
+* Öffnen Sie die [Beispielformular im Vorschaumodus](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **Füllen Sie alle Felder aus** und senden Sie das Formular.
 * [Navigieren Sie zum Ordner &quot;Peak&quot;in DAM.](http://localhost:4502/assets.html/content/dam/Peak). Sie sollten DoR im Ordner Peak sehen. Überprüfen Sie die Eigenschaften des Dokuments. Sie sollte entsprechend mit Tags versehen werden.
 Herzlichen Glückwunsch!! Sie haben das Muster erfolgreich auf Ihrem System installiert.
 

@@ -8,17 +8,17 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 9006
-source-git-commit: 8484897297940ab28619c4b1af5362a5937eadfa
+exl-id: 77c00a35-43bf-485f-ac12-0fffb307dc16
+source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
 
-
 # Cloud-Services-Konfiguration in Ihr Projekt aufnehmen
 
-Erstellen Sie einen Konfigurations-Container mit dem Namen &quot;FormsTutorial&quot;für Ihre Cloud Services-Konfiguration Erstellen Sie eine Cloud Services-Konfiguration für Azure-Speicher namens &quot;Store Form Submissions in Azure&quot;im Container &quot;FormsTutorial&quot;. Geben Sie die Details zum Azure-Speicherkonto und den Kontoschlüssel an
+Erstellen Sie einen Konfigurations-Container mit dem Namen &quot;FormTutorial&quot;für Ihre Cloud Services-Konfiguration Erstellen Sie eine Cloud-Service-Konfiguration für Azure Storage namens &quot;FormsCSAndAzureBlob&quot;im &quot;FormTutorial&quot;-Container, indem Sie die Details zum Azure-Speicherkonto und den Azure-Zugriffsschlüssel angeben.
 
 Öffnen Sie Ihr AEM Projekt in IntelliJ. Stellen Sie sicher, dass Sie den Ordner FormTutorial hinzufügen, wie unten im ui.content-Projekt gezeigt.
 ![cloud-services-configuration](assets/cloud-services-configuration.png)
@@ -45,4 +45,4 @@ Fügen Sie den entsprechenden Eintrag in die Datei &quot;filter.xml&quot;des ui.
 
 >[!NOTE]
 >
->Wenn Sie jetzt Ihr Projekt erstellen und bereitstellen, ist für das Projekt das Formulardatenmodell basierend auf der Cloud Services-Konfiguration in Ihrer Cloud-Instanz verfügbar
+>Wenn Sie jetzt Ihr Projekt mit Cloud Manager erstellen und bereitstellen, müssen Sie Ihren Azure-Zugriffsschlüssel in die Cloud-Services-Konfiguration erneut eingeben. Um zu vermeiden, dass der Zugriffsschlüssel erneut eingegeben wird, wird empfohlen, eine kontextbezogene Konfiguration mithilfe der Umgebungsvariablen zu erstellen, wie im Abschnitt [nächster Artikel](./context-aware-fdm.md)
