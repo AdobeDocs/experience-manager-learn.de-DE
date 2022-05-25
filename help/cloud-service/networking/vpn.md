@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 52a2303f75c23c72e201b1f674f7f882db00710b
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1364'
 ht-degree: 1%
 
 ---
@@ -36,7 +36,7 @@ Ein Cloud Manager-Programm kann nur über eine __single__ Netzwerkinfrastrukturt
 
 ## Voraussetzungen
 
-Bei der Einrichtung eines virtuellen privaten Netzwerks sind folgende Voraussetzungen erforderlich:
+Beim Einrichten eines virtuellen privaten Netzwerks sind folgende Voraussetzungen erforderlich:
 
 + Adobe-Konto mit [Berechtigungen für Business Owner in Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
 + Zugriff auf [Authentifizierungsberechtigungen der Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
@@ -84,7 +84,7 @@ Aktivieren Sie zunächst das virtuelle private Netzwerk auf AEM as a Cloud Servi
 
    Definieren Sie die JSON-Parameter in einer `vpn-create.json` und bereitgestellt, um zu curlen über `... -d @./vpn-create.json`.
 
-[Laden Sie das Beispiel vpn-create.json herunter](./assets/vpn-create.json)
+   [Laden Sie das Beispiel vpn-create.json herunter](./assets/vpn-create.json).  Diese Datei ist nur ein Beispiel. Konfigurieren Sie Ihre Datei nach Bedarf basierend auf den unter dokumentierten optionalen/erforderlichen Feldern. [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
    ```json
    {

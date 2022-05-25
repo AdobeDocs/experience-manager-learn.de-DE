@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
+source-git-commit: 8c75e062d2de70c294f95e5c25040d8bb9badcce
 workflow-type: tm+mt
-source-wordcount: '1055'
+source-wordcount: '1080'
 ht-degree: 1%
 
 ---
@@ -110,7 +110,7 @@ Aktivieren Sie zunächst die flexible Port-Ausfahrt auf AEM as a Cloud Service.
 
    Definieren Sie die JSON-Parameter in einer `flexible-port-egress.json` und bereitgestellt, um zu curlen über `... -d @./flexible-port-egress.json`.
 
-[Laden Sie das Beispiel flexible-port-egress.json herunter.](./assets/flexible-port-egress.json)
+   [Laden Sie das Beispiel flexible-port-egress.json herunter.](./assets/flexible-port-egress.json). Diese Datei ist nur ein Beispiel. Konfigurieren Sie Ihre Datei nach Bedarf basierend auf den unter dokumentierten optionalen/erforderlichen Feldern. [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
    ```json
    {
