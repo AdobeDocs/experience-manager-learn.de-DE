@@ -7,7 +7,8 @@ level: Intermediate
 thumbnail: 342866.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: abb26a995ec81332bb6ae3617b1a41b60c9dab96
+exl-id: de4c2a3b-e5a3-4b2c-aaa0-c0f7028dd61e
+source-git-commit: 63278aace1981aa9bfe69825e95dac5cc387b30a
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 23%
@@ -18,7 +19,7 @@ ht-degree: 23%
 
 Die Jungs untersuchen, wie der Repository-Modernisierer Ihnen beim Übergang zu AEM as a Cloud Service hilft, mit einem hilfreichen Überblick darüber, wie er funktioniert und warum.
 
->[!VIDEO](https://video.tv.adobe.com/v/342866)
+>[!VIDEO](https://video.tv.adobe.com/v/342865)
 
 ## Inhalt in diesem Video
 
