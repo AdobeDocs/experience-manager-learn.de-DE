@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: 52a2303f75c23c72e201b1f674f7f882db00710b
+source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1370'
 ht-degree: 1%
 
 ---
@@ -220,16 +220,16 @@ Aktivieren Sie zunächst das virtuelle private Netzwerk auf AEM as a Cloud Servi
 
 Wenn das Virtual Private Network aktiviert ist, können AEM Code und Konfiguration sie verwenden, um über das VPN Aufrufe an externe Dienste zu tätigen. Es gibt zwei Varianten von externen Aufrufen, die AEM unterschiedlich behandelt:
 
-1. HTTP/HTTPS-Aufrufe an externe Dienste bei nicht standardmäßigen Ports
+1. HTTP/HTTPS-Aufrufe an externe Dienste
    + Umfasst HTTP-/HTTPS-Aufrufe für Dienste, die auf anderen Ports als den standardmäßigen 80- oder 443-Ports ausgeführt werden.
 1. Nicht-HTTP-/HTTPS-Aufrufe an externe Dienste
    + Enthält alle Nicht-HTTP-Aufrufe, z. B. Verbindungen mit Mail-Servern, SQL-Datenbanken oder Services, die mit anderen Nicht-HTTP-/HTTPS-Protokollen ausgeführt werden.
 
-HTTP/HTTPS-Anfragen von AEM über Standardanschlüsse (80/443) sind standardmäßig zulässig und erfordern keine zusätzliche Konfiguration oder Überlegungen.
+HTTP/HTTPS-Anfragen von AEM über Standardanschlüsse (80/443) sind standardmäßig zulässig, sie verwenden jedoch nicht die VPN-Verbindung, wenn sie nicht wie unten beschrieben entsprechend konfiguriert sind.
 
-### HTTP/HTTPS bei nicht standardmäßigen Ports
+### HTTP/HTTPS
 
-Beim Erstellen von HTTP/HTTPS-Verbindungen zu nicht standardmäßigen Ports (nicht -80/443) aus AEM muss die Verbindung über spezielle Host- und Ports hergestellt werden, die über Platzhalter bereitgestellt werden.
+Bei der Erstellung von HTTP/HTTPS-Verbindungen von AEM aus muss die Verbindung über spezielle Host- und Ports, die über Platzhalter bereitgestellt werden, erfolgen, um eine dedizierte Ausgangs-IP-Adresse zu erhalten oder über VPN weitergeleitet zu werden.
 
 AEM bietet zwei Sätze spezieller Java™-Systemvariablen, die AEM HTTP/HTTPS-Proxys zugeordnet sind.
 
@@ -237,7 +237,7 @@ AEM bietet zwei Sätze spezieller Java™-Systemvariablen, die AEM HTTP/HTTPS-Pr
 
 Anfragen an externe HTTP/HTTPS-Dienste sollten durch Konfiguration der Proxy-Konfiguration des Java™ HTTP-Clients über AEM Proxy-Hosts/Ports-Werte erfolgen.
 
-Bei HTTP/HTTPS-Aufrufen an externe Dienste an nicht standardmäßigen Ports gibt es keine `portForwards` muss mithilfe der Cloud Manager-APIs `__enableEnvironmentAdvancedNetworkingConfiguration` -Vorgang, da die &quot;Regeln&quot;für die Anschlussweiterleitung &quot;im Code&quot;definiert sind.
+Bei HTTP-/HTTPS-Aufrufen an externe Dienste an einem beliebigen Port gibt es keine `portForwards` muss mithilfe der Cloud Manager-APIs `__enableEnvironmentAdvancedNetworkingConfiguration` -Vorgang, da die &quot;Regeln&quot;für die Anschlussweiterleitung &quot;im Code&quot;definiert sind.
 
 >[!TIP]
 >
@@ -248,10 +248,10 @@ Bei HTTP/HTTPS-Aufrufen an externe Dienste an nicht standardmäßigen Ports gibt
 <table>
 <tr>
 <td>
-    <a  href="./examples/http-on-non-standard-ports.md"><img alt="HTTP/HTTPS bei nicht standardmäßigen Ports" src="./assets/code-examples__http.png"/></a>
-    <div><strong><a href="./examples/http-on-non-standard-ports.md">HTTP/HTTPS bei nicht standardmäßigen Ports</a></strong></div>
+    <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
+    <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
     <p>
-        Java™-Codebeispiel, das eine HTTP/HTTPS-Verbindung von AEM as a Cloud Service zu einem externen Dienst bei nicht standardmäßigen HTTP/HTTPS-Ports herstellt.
+        Java™-Codebeispiel, das eine HTTP/HTTPS-Verbindung mithilfe des HTTP/HTTPS-Protokolls von AEM as a Cloud Service zu einem externen Dienst herstellt.
     </p>
 </td>
 <td></td>

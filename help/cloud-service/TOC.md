@@ -4,10 +4,10 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: 63278aace1981aa9bfe69825e95dac5cc387b30a
+source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 29%
+source-wordcount: '754'
+ht-degree: 30%
 
 ---
 
@@ -99,7 +99,7 @@ ht-degree: 29%
    + [Virtuelles privates Netzwerk](./networking/vpn.md)
    + Codebeispiele{#examples}
       + [HTTP/HTTPS bei nicht standardmäßigen Ports für flexible Port-Auslösung](./networking/examples/http-on-non-standard-ports-flexible-port-egress.md)
-      + [HTTP/HTTPS bei nicht standardmäßigen Ports für dedizierte Ausgangs-IP-Adresse/VPN](./networking/examples/http-on-non-standard-ports.md)
+      + [HTTP/HTTPS für dedizierte Ausgangs-IP-Adresse/VPN](./networking/examples/http-dedicated-egress-ip-vpn.md)
       + [SQL-Verbindungen mit DataSourcePool](./networking/examples/sql-datasourcepool.md)
       + [SQL-Verbindungen mit Java SQL-APIs](./networking/examples/sql-java-apis.md)
       + [E-Mail-Dienst](./networking/examples/email-service.md)
