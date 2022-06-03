@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: abb26a995ec81332bb6ae3617b1a41b60c9dab96
+source-git-commit: 85e00a237c09867247a0b3ccffa0bf843826ee26
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '340'
 ht-degree: 2%
 
 ---
@@ -30,18 +30,20 @@ Besuchen Sie die [Vorschlagsfeld](https://forms.office.com/r/74P5Xz4UH0) zum Ein
 Jede Jahreszeit variiert in ihrer Länge und wird nach einem festen Zeitplan veröffentlicht. Die Themen der zweiten Staffel stammen in erster Linie aus früheren Anforderungen, auf die wir bei unserer täglichen Interaktion mit Kunden und Partnern gestoßen sind. Besuchen Sie diese Seite für wöchentliche Updates oder folgen Sie uns im sozialen Netzwerk Ihrer Wahl.
 
 <table>
-  <tr>
-   <td>
-      <img alt="Fragmente" src="./imgs/coming-soon.png"/>
-      <div>
-         <strong>Fragmente</strong>        
-         <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
-      </div>
-      <p>
-        <br/>
-         Ab 3. Juni 2022
-      </p>
-     </td>   
+    <tr>
+        <td>
+            <a href="season-2/cloud5-experience-v-content-fragments.md">
+                <img alt="Fragmente" src="./imgs/s2/000-thumb.png"/>
+            </a>
+            <div>
+                <a href="season-2/cloud5-experience-v-content-fragments.md"><strong>Fragmente</strong></a>        
+                <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+            </div>
+            <p>
+                <br/>
+                Die Unterschiede zwischen Erlebnis- und Inhaltsfragmenten werden auf bunte Weise berücksichtigt. Sprecher: jeder gewinnt.
+            </p>
+        </td>   
      <td>
          <img alt="Repository Modernizer" src="./imgs/coming-soon.png"/>
       <div>
