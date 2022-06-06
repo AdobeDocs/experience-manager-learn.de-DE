@@ -1,18 +1,18 @@
 ---
 title: Erstellen Ihres ersten Servlets in AEM Forms
 description: Erstellen Sie Ihr erstes Sling-Servlet, um Daten mit einer Formularvorlage zusammenzuführen.
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 72728ed7-80a2-48b5-ae7f-d744db8a524d
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 4%
+source-wordcount: '207'
+ht-degree: 3%
 
 ---
-
 
 # Sling Servlet
 
@@ -25,8 +25,8 @@ Ein Servlet in AEM kann als OSGi-Dienst registriert werden: Sie können SlingSaf
 ## Servlet-Code
 
 ```java
+package com.mysite.core.servlets;
 import javax.servlet.Servlet;
-
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
@@ -73,17 +73,17 @@ public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 
 Gehen Sie wie folgt vor, um Ihr Projekt zu erstellen:
 
-* Öffnen Sie **das Befehlszeilenfenster**
-* Navigieren Sie zu `c:\aemformsbundles\learningaemforms\core`
-* Führen Sie den Befehl `mvn clean install -PautoInstallBundle` aus.
+* Öffnen **Eingabeaufforderungsfenster**
+* Navigieren Sie zu `c:\aemformsbundles\mysite\core`
+* Ausführen des Befehls `mvn clean install -PautoInstallBundle`
 * Mit dem obigen Befehl wird das Bundle automatisch erstellt und für Ihre AEM-Instanz bereitgestellt, die auf localhost:4502 ausgeführt wird.
 
-Das Bundle ist auch am folgenden Speicherort `C:\AEMFormsBundles\learningaemforms\core\target` verfügbar. Das Bundle kann auch über die [Felix-Webkonsole in AEM bereitgestellt werden.](http://localhost:4502/system/console/bundles)
+Das Bundle ist auch am folgenden Speicherort verfügbar: `C:\AEMFormsBundles\mysite\core\target`. Das Bundle kann auch in AEM mit der [Felix Web-Konsole.](http://localhost:4502/system/console/bundles)
 
 
 ## Servlet-Resolver testen
 
-Zeigen Sie Ihren Browser auf die [Servlet-Resolver-URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). Dadurch erhalten Sie Informationen zum Servlet, das für einen bestimmten Pfad aufgerufen wird, wie im Screenshot unten dargestellt
+Verweisen Sie den Browser auf [Servlet-Resolver-URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). Dadurch erhalten Sie Informationen zum Servlet, das für einen bestimmten Pfad aufgerufen wird, wie im Screenshot unten dargestellt
 ![servlet-resolver](assets/servlet-resolver.JPG)
 
 ## Testen des Servlets mit Postman

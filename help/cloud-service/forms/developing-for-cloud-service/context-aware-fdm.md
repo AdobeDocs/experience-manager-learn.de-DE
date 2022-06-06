@@ -8,10 +8,11 @@ level: Beginner, Intermediate
 version: cloud-service
 topic: Development
 kt: 10423
-source-git-commit: 2ac0f6b3964590e5443700f730a3fc02cb3f63bc
+exl-id: 2ce0c07b-1316-4170-a84d-23430437a9cc
+source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 11%
+source-wordcount: '386'
+ht-degree: 10%
 
 ---
 
@@ -24,14 +25,14 @@ Die folgenden Schritte sind erforderlich, um eine kontextsensitive Cloud-Konfigu
 
 ## Umgebungsvariablen erstellen
 
-Standardumgebungsvariablen können über Cloud Manager konfiguriert und verwaltet werden. Sie werden der Laufzeitumgebung bereitgestellt und können in OSGi-Konfigurationen verwendet werden. Umgebungsvariablen können umgebungsspezifische Werte oder Umgebungsgeheimnisse sein. Dies ist davon abhängig, was geändert wird.
+Standardumgebungsvariablen können über Cloud Manager konfiguriert und verwaltet werden. Sie werden der Laufzeitumgebung bereitgestellt und können in OSGi-Konfigurationen verwendet werden. [Umgebungsvariablen können umgebungsspezifische Werte oder Umgebungsgeheimnisse sein. Dies ist davon abhängig, was geändert wird.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
 
-[Umgebungsvariablen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=en)
+
 
 Der folgende Screenshot zeigt die definierten Umgebungsvariablen azure_key und azure_connection_string
 ![environment_variables](assets/environment-variables.png)
 
-Diese Umgebungsvariablen können dann in den Konfigurationsdateien angegeben werden, die in den entsprechenden Umgebungen verwendet werden sollen. Wenn Sie beispielsweise möchten, dass alle Ihre Autoreninstanzen diese Umgebungsvariablen verwenden, definieren Sie die Konfigurationsdatei im Ordner config.author wie unten angegeben.
+Diese Umgebungsvariablen können dann in den Konfigurationsdateien angegeben werden, die in der entsprechenden Umgebung verwendet werden sollen. Wenn Sie beispielsweise möchten, dass alle Ihre Autoreninstanzen diese Umgebungsvariablen verwenden, definieren Sie die Konfigurationsdatei im Ordner config.author wie unten angegeben.
 
 ## Konfigurationsdatei erstellen
 
