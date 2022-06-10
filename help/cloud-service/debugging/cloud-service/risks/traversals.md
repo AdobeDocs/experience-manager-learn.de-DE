@@ -10,15 +10,18 @@ hidefromtoc: true
 hide: true
 index: false
 thumbnail: kt-10427.jpg
-source-git-commit: 45061581322e23efb936e91c11be48ceac64183b
+exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
+source-git-commit: d30641b3a9565dd3b7121dfdf6b6969a2b401e92
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '834'
 ht-degree: 10%
 
 ---
 
-
 # Traffic-Warnhinweise
+
+>[!TIP]
+>Markieren Sie diese Seite als Referenz für die Zukunft.
 
 _Was sind traversale Warnungen?_
 
@@ -271,5 +274,3 @@ Sehen Sie sich diese anderen nützlichen Ressourcen an, um AEM Indizes, Suchvorg
 </div>
 
 </div>
-
-
