@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9351
 thumbnail: 343040.jpeg
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: f2b5adea71ec8e772385b6e0ae068369798030e0
+source-git-commit: 6d5a531f44414887e8dc6568fa6f5dcb73bfb183
 workflow-type: tm+mt
-source-wordcount: '2774'
+source-wordcount: '2815'
 ht-degree: 2%
 
 ---
@@ -399,9 +399,14 @@ Nach erfolgreicher Authentifizierung beim IDP orchestriert der IDP eine HTTP-POS
 
 Wenn das Umschreiben der URL auf dem Apache-Webserver konfiguriert ist (`dispatcher/src/conf.d/rewrites/rewrite.rules`) stellen Sie sicher, dass Anfragen an die `.../saml_login` Endpunkte werden nicht versehentlich verwirrt.
 
-## Datensynchronisation aktivieren
+## Aktivieren der Datensynchronisierung und Kapselung von Token
 
-Die Benutzerdatensätze müssen in der AEM-Veröffentlichungsstufe synchronisiert werden, sobald durch den SAML-Authentifizierungsfluss ein Benutzer in AEM Publish erstellt wird. nach [Datensynchronisation aktivieren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization)senden Sie eine Anfrage an den Adobe-Support (über [AdminConsole](https://adminconsole.adobe.com) > Support), um die Aktivierung anzufordern.
+Sobald der SAML-Authentifizierungsfluss einen Benutzer in der AEM-Veröffentlichungsinstanz erstellt, kann der AEM Benutzerknoten über die AEM-Veröffentlichungsdienststufe authentifiziert werden.
+Dies erfordert [Datensynchronisation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#data-synchronization) und [verkapselte Token](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#sticky-sessions-and-encapsulated-tokens) , die vom Adobe-Support für den AEM-Veröffentlichungsdienst aktiviert werden.
+
+Senden Sie eine Anfrage an den Adobe-Support (über [AdminConsole](https://adminconsole.adobe.com) > Support) Anfordern:
+
+> Datensynchronisation und verkapselte Token sind im AEM Publish-Dienst für Programm X und Umgebung Y aktiviert.
 
 ## Bereitstellen der SAML-Konfiguration
 
