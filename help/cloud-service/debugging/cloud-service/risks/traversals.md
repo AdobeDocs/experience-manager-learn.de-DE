@@ -11,9 +11,9 @@ hide: true
 index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
-source-git-commit: d30641b3a9565dd3b7121dfdf6b6969a2b401e92
+source-git-commit: 48943df64d9793066f8f19497ef42f8aa80e5795
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '838'
 ht-degree: 10%
 
 ---
@@ -199,7 +199,7 @@ Sehen Sie sich diese anderen nützlichen Ressourcen an, um AEM Indizes, Suchvorg
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 - Suche und Indizierung">Cloud 5 - Suche und Indizierung</a></p>
                <p class="is-size-6">Das Cloud 5-Team zeigt die Ein- und Ausgänge der Suche und Indizierung auf AEM as a Cloud Service.</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Anzeigen</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Weitere Informationen</span>
                </a>
            </div>
        </div>
@@ -222,7 +222,7 @@ Sehen Sie sich diese anderen nützlichen Ressourcen an, um AEM Indizes, Suchvorg
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="Inhaltssuche und -indizierung">Dokumentation zur Inhaltssuche und -indizierung</a></p>
                <p class="is-size-6">Erfahren Sie, wie Sie in AEM as a Cloud Service Indizes erstellen und verwalten.</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Anzeigen</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Weitere Informationen</span>
                </a>
            </div>
        </div>
@@ -244,7 +244,7 @@ Sehen Sie sich diese anderen nützlichen Ressourcen an, um AEM Indizes, Suchvorg
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="Modernisieren Ihrer Oak-Indizes">Modernisieren Ihrer Oak-Indizes</a></p>
                <p class="is-size-6">Erfahren Sie, wie Sie AEM 6 Oak-Indexdefinitionen konvertieren, um as a Cloud Service kompatibel zu sein, und die Indizes in Zukunft verwalten.</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Anzeigen</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Weitere Informationen</span>
                </a>
            </div>
        </div>
@@ -266,7 +266,7 @@ Sehen Sie sich diese anderen nützlichen Ressourcen an, um AEM Indizes, Suchvorg
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="Dokumentation zur Indexdefinition">Lucene-Indexdokumentation</a></p>
                <p class="has-ellipsis is-size-6">Der Apache Oak Jackrabbit Lucene-Indexverweis, der alle unterstützten Lucene-Indexkonfigurationen dokumentiert.</p>
                <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Anzeigen</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Weitere Informationen</span>
                </a>
            </div>
        </div>
