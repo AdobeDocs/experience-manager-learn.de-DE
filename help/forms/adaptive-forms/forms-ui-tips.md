@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 9270
-source-git-commit: 280ea1ec8fc5da644320753958361488872359cc
+source-git-commit: c462d48d26c9a7aa0e4cfc4f24005b41e8e82cb8
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '167'
 ht-degree: 8%
 
 ---
@@ -20,9 +20,6 @@ ht-degree: 8%
 Ein gängiger Anwendungsfall besteht darin, den Ausfüllern des Formulars die Anzeige des im Kennwortfeld eingegebenen Texts zu ermöglichen.
 Um diesen Anwendungsfall zu erreichen, habe ich das Augensymbol von [Font Awesome Library](https://fontawesome.com/). Die erforderliche CSS und die eye.svg sind in der Client-Bibliothek enthalten, die für diese Demonstration erstellt wurde.
 
-## Live-Beispiel
-
-[Diese Funktion kann hier getestet werden](https://forms.enablementadobe.com/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)
 
 ## Beispielcode
 

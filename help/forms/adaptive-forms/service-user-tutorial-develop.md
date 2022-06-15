@@ -6,7 +6,7 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 5fa3d52a-6a71-45c4-9b1a-0e6686dd29bc
-source-git-commit: f1afccdad8d819604c510421204f59e7b3dc68e4
+source-git-commit: c462d48d26c9a7aa0e4cfc4f24005b41e8e82cb8
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 2%
@@ -19,7 +19,7 @@ Dieser Artikel führt Sie durch den Prozess der Erstellung eines Dienstbenutzers
 
 In früheren Versionen von Adobe Experience Manager (AEM) wurde der administrative Ressourcen-Resolver für die Backend-Verarbeitung verwendet, für die der Zugriff auf das Repository erforderlich war. Die Verwendung des administrativen Ressourcen-Resolvers wird in AEM 6.3 nicht mehr unterstützt. Stattdessen wird ein Systembenutzer mit spezifischen Berechtigungen im Repository verwendet.
 
-Erfahren Sie mehr über die Details von [Erstellen und Verwenden von Dienstbenutzern in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html).
+Weitere Informationen zu [Erstellen und Verwenden von Dienstbenutzern in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html).
 
 Dieser Artikel erläutert die Erstellung eines Systembenutzers und die Konfiguration der Eigenschaften des Benutzer-Mappers.
 
@@ -29,8 +29,8 @@ Dieser Artikel erläutert die Erstellung eines Systembenutzers und die Konfigura
 1. Klicken Sie auf &quot; Systembenutzer erstellen &quot;
 1. Legen Sie den Benutzereridtyp auf &quot;Daten&quot;fest und klicken Sie auf das grüne Symbol, um die Erstellung des Systembenutzers abzuschließen.
 1. [Öffnen Sie configMgr](http://localhost:4502/system/console/configMgr)
-1. Suchen Sie nach &quot;Apache Sling Service User Mapper Service &quot;und klicken Sie auf , um die Eigenschaften zu öffnen.
-1. Klicken Sie auf das Symbol *+* (Plus), um die folgende Dienstzuordnung hinzuzufügen:
+1. Suchen Sie nach _Apache Sling Service User Mapper Service_ und klicken Sie auf , um die Eigenschaften zu öffnen
+1. Klicken Sie auf *+* Symbol (Plus) zum Hinzufügen der folgenden Dienstzuordnung
 
    * DevelopingWithServiceUser.core:getresourceresolver=data
    * DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
@@ -41,11 +41,11 @@ In der obigen Konfiguration ist die Einstellung DevelopingWithServiceUser.core d
 
 Wir können auch den Resource Resolver im Namen des fd-service-Benutzers erhalten. Dieser Dienstbenutzer wird für Document Services verwendet. Wenn Sie z. B. Nutzungsrechte zertifizieren/anwenden usw. möchten, verwenden wir den Ressourcen-Resolver des fd-service-Benutzers, um die Vorgänge auszuführen.
 
-1. [Laden Sie die mit diesem Artikel verknüpfte ZIP-Datei herunter und dekomprimieren Sie sie.](assets/developingwithserviceuser.zip)
+1. [Laden Sie die mit diesem Artikel verknüpfte ZIP-Datei herunter und entpacken Sie sie.](assets/developingwithserviceuser.zip)
 1. Navigieren Sie zu [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles)
 1. Laden Sie das OSGi-Bundle hoch und starten Sie es.
 1. Stellen Sie sicher, dass das Bundle sich im aktiven Status befindet.
-1. Sie haben jetzt erfolgreich einen *Systembenutzer* erstellt und auch das *Service User Bundle* bereitgestellt.
+1. Sie haben jetzt erfolgreich eine *Systembenutzer* und bereitgestellt *Service User Bundle*.
 
    Um Zugriff auf /content zu gewähren, erteilen Sie dem Systembenutzer (&#39; data &#39;) Leseberechtigungen für den Inhaltsknoten.
 
