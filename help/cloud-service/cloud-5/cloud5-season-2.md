@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 7985a5b36523aa090a7a9c7599e36bc1b5a9bd6f
+source-git-commit: e10617d81287a291d16aed3400ef0c01266586e6
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '394'
 ht-degree: 1%
 
 ---
@@ -72,17 +72,19 @@ Jede Jahreszeit variiert in ihrer Länge und wird nach einem festen Zeitplan ver
          </td> 
   </tr>
   <tr>
-   <td>
-            <img alt="Sling Jobs" src="./imgs/coming-soon.png"/>
-      <div>
-            <strong>Sling-Aufträge</strong>       
-         <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
-      </div>
-      <p>
-        <br/>
-         Am 24. Juni 2022
-      </p>
-     </td>   
+         <td>
+            <a href="season-2/cloud5-sling-job-scheduler.md">
+                 <img alt="Sling Jobs" src="./imgs/s2/003-thumb.png"/>
+            </a>
+            <div>
+                  <a href="season-2/cloud5-sling-job-scheduler.md"><strong>Sling-Aufträge</strong></a>
+               <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
+            </div>
+            <p>
+            <br/>
+               Darin und James besprechen die Fallstricke und Dinge, die Sie für die Planung und Nutzung von Arbeitsplätzen in AEM als Cloud Service beachten sollten.
+            </p>
+         </td>   
      <td>
         <img alt="Repo Initializer (repoinit)" src="./imgs/coming-soon.png"/>
       <div>
