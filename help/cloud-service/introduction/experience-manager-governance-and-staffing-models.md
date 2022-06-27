@@ -3,9 +3,9 @@ title: Governance- und Personalmodelle und Archetypen
 description: Erfahren Sie, wie Sie Ihre Adobe Experience Manager-Plattform (AEM) operationalisieren und den größtmöglichen Nutzen aus Ihren Bemühungen ziehen können.
 solution: Experience Manager
 exl-id: 808ab7a6-5ec5-4bbd-9a6e-cfc0b447430d
-source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
+source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1133'
 ht-degree: 0%
 
 ---
@@ -132,3 +132,5 @@ Die folgenden Rollenbeispiele für ein leichtes und schweres Client-Szenario:
 **Nutzung interner Ressourcen** - Lücken können unerwartet eintreten. Möglicherweise können Sie sie schneller füllen, indem Sie interne Team-Mitglieder beziehen, anstatt außerhalb Ihres Unternehmens zu suchen.
 
 Sehen Sie sich diese einstündige Bedienfelddiskussion an, um eine eingehendere Diskussion über Governance- und Staffelmodelle und Archetypen zu erhalten: [RollenArchetypen und Erstellen eines operativen Frameworks für [!DNL AEM Assets] und [!DNL Sites]](https://adobecustomersuccess.adobeconnect.com/p8ml5nmy0758mp4/)
+
+Erfahren Sie mehr über Strategie und Gedankenführung auf der [Kundenerfolg](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) Hub.

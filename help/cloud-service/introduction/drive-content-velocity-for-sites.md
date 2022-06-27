@@ -3,9 +3,9 @@ title: Beschleunigung von Inhalten mit Adobe Experience Manager
 description: Informieren Sie sich über die Geschwindigkeit und den Wert von Inhalten in Unternehmen. Informieren Sie sich über vier Grundsätze der effektiven Umsetzung und über die Fallstricke, nach denen Sie unterwegs suchen sollten.
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
+source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
 workflow-type: tm+mt
-source-wordcount: '2805'
+source-wordcount: '2823'
 ht-degree: 0%
 
 ---
@@ -176,3 +176,5 @@ Im Folgenden finden Sie einige potenzielle Fallstricke, die vermieden werden kö
 * Anzeigen von Lösungen in einer silolierten Weise. So wird beispielsweise nicht der volle geschäftliche Nutzen erzielt, wenn nur der technische Aspekt AEM Implementierung in den Vordergrund gestellt wird. Stattdessen empfehlen wir, geschäftliche Anwendungsfälle und Szenarien zu betrachten und dann auf Architektur und Design umzusteigen, da dies einen besseren Überblick über AEM Funktionen bietet. Anurandha Pentareddy aus Adobe-Aktien: _&quot;Ich empfehle Ihnen, Ihre Wertziele für die Plattform, die Sie implementieren, im Voraus zu prüfen.&quot;_
 
 Sehen Sie sich diese einstündige Sitzung an, um eine eingehendere Diskussion zur Inhaltsgeschwindigkeit zu erhalten. [Podiumsdiskussion](https://primetime.bluejeans.com/a2m/events/playback/e63686d4-158f-4f73-aea0-f03ebee4606d) mit Monique Misrahi (T-Mobile), Amy Bergstrom (Deloitte) und der Anuradha Pentareddy der Adobe.
+
+Erfahren Sie mehr über Strategie und Gedankenführung auf der [Kundenerfolg](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) Hub.
