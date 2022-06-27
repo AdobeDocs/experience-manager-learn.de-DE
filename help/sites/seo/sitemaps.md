@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9165
 thumbnail: 337960.jpeg
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: 71f1d32c12742cdb644dec50050d147395c3f3b6
+source-git-commit: 7cfc150989453eec776eb34eac9b4598c46b0d7c
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 1%
+source-wordcount: '224'
+ht-degree: 6%
 
 ---
 
@@ -45,6 +45,23 @@ Definiert die [OSGi-Werkskonfiguration](http://localhost:4502/system/console/con
   "searchPath": "/content/wknd"
 }
 ```
+
+### Absolute Sitemap-URLs
+
+AEM Sitemap unterstützt absolute URLs durch Verwendung von [Sling-Zuordnung](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). Dies geschieht durch Erstellen von Zuordnungsknoten für die AEM Dienste, die Sitemaps generieren.
+
+Eine Beispieldefinition für einen Sling-Zuordnungsknoten für `https://wknd.com` kann definiert werden unter `/etc/map/https` wie folgt:
+
+| Pfad  | Eigenschaftsname | Eigenschaftstyp | Eigenschaftswert |
+|------|----------|---------------|-------|
+| `/etc/map/https/wknd-site` | `jcr:primaryType` | Zeichenfolge | `nt:unstructured` |
+| `/etc/map/https/wknd-site` | `sling:internalRedirect` | Zeichenfolge | `/content/wknd/(.*)` |
+| `/etc/map/https/wknd-site` | `sling:match` | Zeichenfolge | `wknd.com/$1` |
+
+Der folgende Screenshot zeigt eine ähnliche Konfiguration, aber für `http://wknd.local` (ein lokales Hostname-Mapping, das auf `http`).
+
+![Konfiguration absoluter Sitemap-URLs](../assets/sitemaps/sitemaps-absolute-urls.jpg)
+
 
 ### Dispatcher-Zulassungsfilterregel
 
