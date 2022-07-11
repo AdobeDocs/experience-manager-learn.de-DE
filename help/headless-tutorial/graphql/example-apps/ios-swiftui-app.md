@@ -1,8 +1,8 @@
 ---
-title: iOS SwiftUI App - AEM Headless-Beispiel
+title: iOS App - Beispiel AEM Headless
 description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese iOS-Anwendung zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen können.
 version: Cloud Service
-mini-toc-levels: 1
+mini-toc-levels: 2
 kt: 9166
 thumbnail: KT-9166.jpg
 feature: Content Fragments, GraphQL API
@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: bcedb190fba7b6bc044da06bd36d097d553172a1
+source-git-commit: 8b2c116ceb6ab8c3a009dcec6629c2e97d815b7b
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '981'
 ht-degree: 4%
 
 ---
 
-# iOS SwiftUI-App
+# iOS-App
 
 Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese iOS-Anwendung zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen können.
 
@@ -131,7 +131,7 @@ query($slug: String!) {
         slug: {
           _expressions: [ { value: $slug } ]
         }
-  	}) {
+      }) {
     items {
       _path
       title
@@ -173,7 +173,7 @@ query($slug: String!) {
 }
 ```
 
-## GraphQL-persistente Abfrage ausführen
+### GraphQL-persistente Abfrage ausführen
 
 AEM persistente Abfragen werden über HTTP-GET ausgeführt und daher können keine gängigen GraphQL-Bibliotheken verwendet werden, die HTTP-POST wie Apollo verwenden. Erstellen Sie stattdessen eine benutzerdefinierte Klasse, die die persistenten HTTP-GET-Anfragen für die Abfrage an AEM ausführt.
 

@@ -2,7 +2,7 @@
 title: Android-App - AEM Headless-Beispiel
 description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Android-Anwendung zeigt, wie Inhalte mithilfe der GraphQL-APIs von AEM abgefragt werden.
 version: Cloud Service
-mini-toc-levels: 1
+mini-toc-levels: 2
 kt: 9166
 thumbnail: KT-9166.jpg
 feature: Content Fragments, GraphQL API
@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
-source-git-commit: 0204d9aaf7b79b0745adbe749f44245716203b88
+source-git-commit: 8b2c116ceb6ab8c3a009dcec6629c2e97d815b7b
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 6%
@@ -136,7 +136,7 @@ query($slug: String!) {
         slug: {
           _expressions: [ { value: $slug } ]
         }
-  	}) {
+      }) {
     items {
       _path
       title
@@ -178,7 +178,7 @@ query($slug: String!) {
 }
 ```
 
-## GraphQL-persistente Abfrage ausführen
+### GraphQL-persistente Abfrage ausführen
 
 AEM persistente Abfragen werden über HTTP-GET ausgeführt und daher die [AEM Headless-Client für Java](https://github.com/adobe/aem-headless-client-java) wird verwendet, um die beibehaltenen GraphQL-Abfragen für AEM auszuführen und den Erlebnisinhalt in die App zu laden.
 
