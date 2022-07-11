@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte mit AEM Sites - WKND-Tutorial
-description: Erste Schritte mit AEM Sites - WKND-Tutorial. Das WKND-Tutorial ist ein mehrteiliges Tutorial, das für Entwickler konzipiert ist, die neu bei Adobe Experience Manager sind. Das Tutorial führt durch die Implementierung einer AEM Site für eine fiktive Lifestyle-Marke, die WKND. Das Tutorial behandelt grundlegende Themen wie Projekteinrichtung, Maven-Archetypen, Kernkomponenten, bearbeitbare Vorlagen, Client-Bibliotheken und Komponentenentwicklung.
+description: Erfahren Sie, wie Sie eine AEM Site für eine fiktive Lifestyle-Marke namens WKND implementieren. Machen Sie sich mit grundlegenden Themen zu Experience Managern wie Projekteinrichtung, Maven-Archetypen, Kernkomponenten, bearbeitbaren Vorlagen, Client-Bibliotheken und Komponentenentwicklung vertraut.
 sub-product: sites
 topics: development
 version: Cloud Service
@@ -16,20 +16,20 @@ role: Developer
 level: Beginner
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 04096fe3c99cdcce2d43b2b29899c2bbe37ac056
+source-git-commit: 72abe1cddcf6a012403887203d38509bde8f2d23
 workflow-type: tm+mt
-source-wordcount: '624'
-ht-degree: 6%
+source-wordcount: '599'
+ht-degree: 3%
 
 ---
 
 # Erste Schritte mit AEM Sites - WKND-Tutorial {#introduction}
 
-Willkommen bei einem mehrteiligen Tutorial, das für Entwickler konzipiert ist, die neu in Adobe Experience Manager (AEM) sind. Dieses Tutorial führt Sie durch die Implementierung einer AEM Website für eine fiktive Lifestyle-Marke, die WKND. Das Tutorial behandelt grundlegende Themen wie Projekteinrichtung, Kernkomponenten, bearbeitbare Vorlagen, Client-seitige Bibliotheken und Komponentenentwicklung mit Adobe Experience Manager Sites.
+Willkommen bei einem mehrteiligen Tutorial, das für Entwickler konzipiert ist, die neu in Adobe Experience Manager (AEM) sind. Dieses Tutorial führt Sie durch die Implementierung einer AEM Site für eine fiktive Lifestyle-Marke, die WKND. Das Tutorial behandelt grundlegende Themen wie Projekteinrichtung, Kernkomponenten, bearbeitbare Vorlagen, Client-seitige Bibliotheken und Komponentenentwicklung mit Adobe Experience Manager Sites.
 
 ## Übersicht {#wknd-tutorial-overview}
 
-Ziel dieses mehrteiligen Tutorials ist es, Entwicklern beizubringen, wie eine Website mit den neuesten Standards und Technologien in Adobe Experience Manager (AEM) implementiert wird. Nach Abschluss dieses Tutorials sollte ein Entwickler die grundlegende Grundlage der Plattform und Kenntnisse über allgemeine Designmuster in AEM verstehen.
+Ziel dieses mehrteiligen Tutorials ist es, Entwicklern beizubringen, wie eine Website mit den neuesten Standards und Technologien in Adobe Experience Manager (AEM) implementiert wird. Nach Abschluss dieses Tutorials sollte ein Entwickler die grundlegende Grundlage der Plattform und die gängigen Designmuster in AEM verstehen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
@@ -64,7 +64,7 @@ Um den neuesten Code zu testen, bevor Sie mit dem Tutorial beginnen, laden Sie d
 
 ### Powered by Adobe Stock
 
-Viele der Bilder auf der WKND Reference-Website stammen aus [Adobe Stock](https://stock.adobe.com/) und sind Material von Drittanbietern, wie in den zusätzlichen Begriffen zu Demo-Asset unter definiert [https://www.adobe.com/legal/terms.html](https://www.adobe.com/de/legal/terms.html). Wenn Sie ein Adobe Stock-Bild für andere Zwecke verwenden möchten, die über die Anzeige dieser Demowebsite hinausgehen, z. B. für die Präsentation auf einer Website oder für Marketingmaterialien, können Sie eine Lizenz für Adobe Stock erwerben.
+Viele der Bilder auf der WKND Reference-Website stammen aus [Adobe Stock](https://stock.adobe.com/de) und sind Material von Drittanbietern, wie in den zusätzlichen Begriffen zu Demo-Asset unter definiert [https://www.adobe.com/legal/terms.html](https://www.adobe.com/de/legal/terms.html). Wenn Sie ein Adobe Stock-Bild für andere Zwecke verwenden möchten, die über die Anzeige dieser Demowebsite hinausgehen, z. B. für die Präsentation auf einer Website oder für Marketingmaterialien, können Sie eine Lizenz für Adobe Stock erwerben.
 
 Mit Adobe Stock haben Sie Zugriff auf mehr als 140 Millionen hochqualitative, gebührenfreie Bilder, darunter Fotos, Grafiken, Videos und Vorlagen, um Ihre Kreativprojekte zu starten.
 
