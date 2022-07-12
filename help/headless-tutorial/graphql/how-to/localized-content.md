@@ -8,17 +8,17 @@ role: Developer
 level: Intermediate
 kt: 10254
 thumbnail: KT-10254.jpeg
-source-git-commit: 4966a48c29ae1b5d0664cb43feeb4ad94f43b4e1
+source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
 workflow-type: tm+mt
-source-wordcount: '495'
-ht-degree: 0%
+source-wordcount: '513'
+ht-degree: 2%
 
 ---
 
 
 # Lokalisierte Inhalte mit AEM Headless
 
-AEM bietet eine [Framework für die Übersetzungsintegration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) für Headless-Inhalte, sodass Inhaltsfragmente und unterstützende Assets einfach übersetzt werden können, damit sie in verschiedenen Gebietsschemata verwendet werden können. Hierbei handelt es sich um dasselbe Framework, mit dem andere AEM Inhalte wie Seiten, Experience Fragments, Assets und Forms übersetzt werden. Einmal [Headless-Inhalt wurde übersetzt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html)und veröffentlicht wurde, ist es für den Verbrauch durch Headless-Anwendungen bereit.
+AEM bietet eine [Framework für die Übersetzungsintegration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) für Headless-Inhalte, sodass Inhaltsfragmente und unterstützende Assets einfach übersetzt werden können, damit sie in verschiedenen Gebietsschemata verwendet werden können. Hierbei handelt es sich um dasselbe Framework, mit dem andere AEM Inhalte wie Seiten, Experience Fragments, Assets und Forms übersetzt werden. Einmal [Headless-Inhalt wurde übersetzt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html?lang=de)und veröffentlicht wurde, ist es für den Verbrauch durch Headless-Anwendungen bereit.
 
 ## Asset-Ordnerstruktur{#assets-folder-structure}
 
@@ -36,22 +36,22 @@ Der Gebietsschema-Code ist auch der Wert, der zum Filtern der von der GraphQL-Ab
 | en | /content/dam/.../**en**/.. | englischer Inhalt |
 | es | /content/dam/.../**es**/.. | Spanischer Inhalt |
 
-## GraphQL-Abfrage
+## GraphQL-persistente Abfrage
 
-AEM bietet eine `_locale` GraphQL-Filter, der Inhalte automatisch nach Gebietsschema-Code filtert. Beispielsweise können Sie alle englischen Abenteuer im [WKND-Referenz-Demoprojekt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) würde wie folgt aussehen:
+AEM bietet eine `_locale` GraphQL-Filter, der Inhalte automatisch nach Gebietsschema-Code filtert. Beispielsweise können Sie alle englischen Abenteuer im [WKND-Referenz-Demoprojekt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) kann mit einer neuen persistenten Abfrage durchgeführt werden `wknd-shared/adventures-by-locale` definiert als:
 
 ```graphql
-{
-  adventureList(_locale: "en") {
+query($locale: String!) {
+  adventureList(_locale: $locale) {
     items {      
       _path
-      adventureTitle
+      title
     }
   }
 }
 ```
 
-Die `_locale` -Filter erfordert die Verwendung von [Lokalisierungskonvention für Asset-Ordner AEM](#assets-folder-structure).
+Die `$locale` in der Variablen `_locale` -Filter erfordert den Gebietsschema-Code (z. B. `en`, `en_us`oder `de`) wie in angegeben [Lokalisierungskonvention für Asset-Ordner AEM](#assets-folder-structure).
 
 ## React-Beispiel
 
@@ -112,31 +112,26 @@ Die Komponente Abenteuer fragt AEM alle Abenteuer nach Gebietsschema ab und list
 
 Dieser Ansatz kann auf andere Abfragen in Ihrer Anwendung erweitert werden, um sicherzustellen, dass alle Abfragen nur Inhalte enthalten, die durch die Gebietsschema-Auswahl eines Benutzers angegeben wurden.
 
-Die Abfrage nach AEM wird im benutzerdefinierten React-Haken ausgeführt [useGraphQL, ausführlicher beschrieben in der Dokumentation AEM GraphQL .](./aem-headless-sdk.md).
+Die Abfrage nach AEM wird im benutzerdefinierten React-Haken ausgeführt [getAdventuresByLocale, ausführlicher beschrieben in der Dokumentation AEM GraphQL-Abfrage](./aem-headless-sdk.md).
 
 ```javascript
 // src/Adventures.js
 
 import { useContext } from "react"
-import { useGraphQL } from './useGraphQL'
+import { useAdventuresByLocale } from './api/persistedQueries'
 import LocaleContext from './LocaleContext'
 
 export default function Adventures() {
     const { locale } = useContext(LocaleContext);
 
-    let {data} = useGraphQL(`{
-            adventureList(_locale: "${locale}") {
-                items {      
-                _path
-                adventureTitle
-             }
-        }
-    }`);
+    // Get data from AEM using GraphQL persisted query as defined above 
+    // The details of defining a React useEffect hook are explored in How to > AEM Headless SDK
+    let { data, error } = useAdventuresByLocale(locale);
 
     return (
         <ul>
             {data?.adventureList?.items?.map((adventure, index) => { 
-                return <li key={index}>{adventure.adventureTitle}</li>
+                return <li key={index}>{adventure.title}</li>
             })}
         </ul>
     )

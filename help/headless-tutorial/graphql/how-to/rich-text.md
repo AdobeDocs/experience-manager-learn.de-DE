@@ -8,9 +8,9 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: 22d5aa7299ceacd93771bd73a6b89d1903edc561
+source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1463'
 ht-degree: 0%
 
 ---
@@ -31,13 +31,13 @@ Im Inhaltsfragment-Editor bietet die Menüleiste des mehrzeiligen Textfelds Auto
 >
 > Die Rich-Text-Plug-ins im mehrzeiligen Editor können nicht angepasst werden.
 
-## Datentyp für mehrzeiligen Text {#multi-line-data-type}
+## Mehrzeiliger Texttyp {#multi-line-data-type}
 
 Verwenden Sie die **Mehrzeiliger Text** Datentyp bei der Definition Ihres Inhaltsfragmentmodells, um die Erstellung von Rich-Text zu ermöglichen.
 
 ![Datentyp &quot;Rich-Text mehrzeilig&quot;](assets/rich-text/multi-line-rich-text.png)
 
-Mehrere Eigenschaften des Felds Mehrzeilig können konfiguriert werden.
+Es können mehrere Eigenschaften des mehrzeiligen Felds konfiguriert werden.
 
 Die **Rendern als** -Eigenschaft kann auf Folgendes festgelegt werden:
 
@@ -55,7 +55,7 @@ Die **Standardtyp** beeinflusst direkt das Bearbeitungserlebnis und bestimmt, ob
 
 Sie können auch [Inline-Verweise aktivieren](#insert-fragment-references) zu anderen Inhaltsfragmenten hinzugefügt werden, indem Sie die **Fragmentverweis zulassen** und konfigurieren Sie die **Zulässige Inhaltsfragmentmodelle**.
 
-Wenn der Inhalt lokalisiert wird, überprüfen Sie die **Übersetzbar** ankreuzen. Nur Rich Text und Nur Text können lokalisiert werden. Siehe [Arbeiten mit lokalisierten Inhalten für weitere Informationen](./localized-content.md).
+Überprüfen Sie die **Übersetzbar** , wenn der Inhalt lokalisiert wird. Nur Rich Text und Nur Text können lokalisiert werden. Siehe [Arbeiten mit lokalisierten Inhalten für weitere Informationen](./localized-content.md).
 
 ## Rich-Text-Antwort mit GraphQL-API
 
@@ -63,17 +63,15 @@ Beim Erstellen einer GraphQL-Abfrage können Entwickler verschiedene Antworttype
 
 Entwickler können die [JSON-Vorschau](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html) im Inhaltsfragment-Editor, um alle Werte des aktuellen Inhaltsfragments anzuzeigen, die mit der GraphQL-API zurückgegeben werden können.
 
-### JSON-Beispiel
+## GraphQL-persistente Abfrage
 
-Die `json` Antwort bietet die größte Flexibilität für Frontend-Entwickler bei der Arbeit mit Rich-Text-Inhalten. Der Rich-Text-Inhalt wird als Array von JSON-Knotentypen bereitgestellt, die basierend auf der Client-Plattform eindeutig verarbeitet werden können.
+Auswählen der `json` Das Antwortformat für das mehrzeilige Feld bietet die größte Flexibilität beim Arbeiten mit Rich-Text-Inhalten. Der Rich-Text-Inhalt wird als Array von JSON-Knotentypen bereitgestellt, die basierend auf der Client-Plattform eindeutig verarbeitet werden können.
 
 Nachstehend finden Sie einen JSON-Antworttyp eines mehrzeiligen Felds mit dem Namen `main` , der einen Absatz enthält: &quot;*Dies ist ein Absatz mit **wichtig**Inhalt.*&quot;, wobei &quot;wichtig&quot;als **fett**.
 
-**GraphQL-Abfrage:**
-
 ```graphql
-{
-  articleByPath(_path: "/content/dam/wknd/en/magazine/sample-article")
+query ($path: String!) {
+  articleByPath(_path: $path)
   {
     item {
       _path
@@ -84,6 +82,8 @@ Nachstehend finden Sie einen JSON-Antworttyp eines mehrzeiligen Felds mit dem Na
   }
 }
 ```
+
+Die `$path` in der Variablen `_path` Der Filter erfordert den vollständigen Pfad zum Inhaltsfragment (z. B. `/content/dam/wknd/en/magazine/sample-article`).
 
 **GraphQL-Antwort:**
 
@@ -131,11 +131,11 @@ Nachfolgend finden Sie einige Beispiele für Antworttypen eines mehrzeiligen Fel
 
 Beispiel +++HTML
 
-**GraphQL-Abfrage:**
+**GraphQL-persistente Abfrage:**
 
 ```graphql
-{
-  articleByPath(_path: "/content/dam/wknd/en/magazine/sample-article")
+query ($path: String!) {
+  articleByPath(_path: $path)
   {
     item {
       _path
@@ -168,11 +168,11 @@ Beispiel +++HTML
 
 Beispiel +++Markdown
 
-**GraphQL-Abfrage:**
+**GraphQL-persistente Abfrage:**
 
 ```graphql
-{
-  articleByPath(_path: "/content/dam/wknd/en/magazine/sample-article")
+query ($path: String!) {
+  articleByPath(_path: $path)
   {
     item {
       _path
@@ -205,11 +205,11 @@ Beispiel +++Markdown
 
 +++Plaintext-Beispiel
 
-**GraphQL-Abfrage:**
+**GraphQL-persistente Abfrage:**
 
 ```graphql
-{
-  articleByPath(_path: "/content/dam/wknd/en/magazine/sample-article")
+query ($path: String!) {
+  articleByPath(_path: $path)
   {
     item {
       _path
@@ -245,7 +245,7 @@ Die `plaintext` Render-Option schneidet alle Formatierungen ab.
 
 ## Rendern einer Rich-Text-JSON-Antwort {#render-multiline-json-richtext}
 
-Die Rich-Text-JSON-Antwort des Felds Mehrzeilig ist als hierarchischer Baum strukturiert. Jedes Objekt oder jeder Knoten stellt einen anderen HTML-Block des Rich-Text-Elements dar.
+Die Rich-Text-JSON-Antwort des mehrzeiligen Felds ist als hierarchischer Baum strukturiert. Jedes Objekt oder jeder Knoten stellt einen anderen HTML-Block des Rich-Text-Elements dar.
 
 Nachfolgend finden Sie eine JSON-Beispielantwort eines mehrzeiligen Textfelds. Beachten Sie, dass jedes Objekt bzw. jeder Knoten einen `nodeType` , der den HTML-Block aus dem Rich-Text wie `paragraph`, `link`und `text`. Jeder Knoten enthält optional `content` : ein Unterarray, das alle untergeordneten Elemente des aktuellen Knotens enthält.
 
@@ -279,7 +279,7 @@ Nachfolgend finden Sie eine JSON-Beispielantwort eines mehrzeiligen Textfelds. B
 ]
 ```
 
-Die einfachste Methode zum Rendern der Zeile &quot;Multi&quot; `json` -Antwort besteht darin, jedes Objekt oder jeden Knoten in der Antwort zu verarbeiten und anschließend alle untergeordneten Elemente des aktuellen Knotens zu verarbeiten. Eine rekursive Funktion kann verwendet werden, um die JSON-Struktur zu durchlaufen.
+Die einfachste Methode zum Rendern der mehrzeiligen `json` -Antwort besteht darin, jedes Objekt oder jeden Knoten in der Antwort zu verarbeiten und anschließend alle untergeordneten Elemente des aktuellen Knotens zu verarbeiten. Eine rekursive Funktion kann verwendet werden, um die JSON-Struktur zu durchlaufen.
 
 Nachfolgend finden Sie ein Beispiel für einen Code, der einen rekursiven Traversal-Ansatz veranschaulicht. Die Beispiele sind JavaScript-basiert und verwenden React&#39;s [JSX](https://reactjs.org/docs/introducing-jsx.html), jedoch können die Programmierkonzepte auf jede Sprache angewendet werden.
 
@@ -298,7 +298,7 @@ function renderNodeList(childNodes) {
 }
 ```
 
-Die `renderNodeList` -Funktion ist der Einstiegspunkt in den rekursiven Algorithmus. Die `renderNodeList` -Funktion erwartet ein Array von `childNodes`. Jeder Knoten im Array wird dann an eine Funktion übergeben `renderNode`.
+`renderNodeList` ist eine rekursive Funktion, die ein Array von `childNodes`. Jeder Knoten im Array wird dann an eine Funktion übergeben `renderNode`, die wiederum aufruft `renderNodeList` , wenn der Knoten untergeordnete Elemente hat.
 
 ```javascript
 // renderNode - renders an individual node
@@ -333,19 +333,19 @@ Die `nodeMap` ist ein JavaScript-Objektliteral, das als Zuordnung verwendet wird
 
 Ein wiederverwendbares Rich-Text-Rendering-Dienstprogramm finden Sie im [WKND GraphQL-React-Beispiel](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
 
-* [renderRichText.js](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app/src/utils/renderRichText.js) - wiederverwendbares Dienstprogramm, das eine Funktion verfügbar macht `mapJsonRichText`. Dieses Dienstprogramm kann von Komponenten verwendet werden, die eine Rich-Text-JSON-Antwort als React JSX rendern möchten.
+* [renderRichText.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/utils/renderRichText.js) - wiederverwendbares Dienstprogramm, das eine Funktion verfügbar macht `mapJsonRichText`. Dieses Dienstprogramm kann von Komponenten verwendet werden, die eine Rich-Text-JSON-Antwort als React JSX rendern möchten.
 * [AdventureDetail.js](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/react-app/src/components/AdventureDetail.js) - Beispielkomponente, die eine GraphQL-Anforderung ausführt, die Rich-Text enthält. Die Komponente verwendet die `mapJsonRichText` -Dienstprogramm zum Rendern des Rich-Text und aller Verweise.
 
 
 ## Hinzufügen von Inline-Verweisen zu Rich-Text {#insert-fragment-references}
 
-Das Feld &quot;Mehrere Zeilen&quot;ermöglicht es Autoren, Bilder oder andere digitale Assets aus AEM Assets in den Fluss des Rich-Text-Sets einzufügen.
+Mit dem Feld &quot;Mehrere Zeilen&quot;können Autoren Bilder oder andere digitale Assets aus AEM Assets in den Fluss des Rich-Text einfügen.
 
 ![Bild einfügen](assets/rich-text/insert-image.png)
 
-Der obige Screenshot zeigt ein Bild, das im Feld &quot;Mehrere Zeilen&quot;eingefügt wurde, mithilfe der **Asset einfügen** Schaltfläche.
+Der obige Screenshot zeigt ein Bild, das im mehrzeiligen Feld mithilfe der **Asset einfügen** Schaltfläche.
 
-Verweise auf andere Inhaltsfragmente können auch über das **Inhaltsfragment einfügen** Schaltfläche.
+Verweise auf andere Inhaltsfragmente können auch über die **Inhaltsfragment einfügen** Schaltfläche.
 
 ![Inhaltsfragmentverweis einfügen](assets/rich-text/insert-contentfragment.png)
 
@@ -363,11 +363,11 @@ Sie können beispielsweise:
 
 Verwenden Sie die `json` Rückgabetyp und schließen Sie die `_references` -Objekt beim Erstellen einer GraphQL-Abfrage:
 
-**GraphQL-Abfrage:**
+**GraphQL-persistente Abfrage:**
 
 ```graphql
-{
-  articleByPath(_path: "/content/dam/wknd/en/magazine/sample-article")
+query ($path: String!) {
+  articleByPath(_path: $path)
   {
     item {
       _path
