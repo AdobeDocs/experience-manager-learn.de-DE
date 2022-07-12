@@ -9,9 +9,9 @@ version: 6.3, 6.4, 6.5, Cloud Service
 kt: 201
 thumbnail: 18131.jpg
 exl-id: cc4ffbd0-207a-42e4-bfcb-d6c83fb97237
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 1c2ee81c0d262f9e3f92f4907aba8e8787ce729f
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '250'
 ht-degree: 2%
 
 ---
@@ -26,15 +26,15 @@ Erfahren Sie, wie Inhaltsfragmente mit Adobe Experience Manager lokalisiert und 
 
 Inhaltsfragmente sind ein erkannter Inhaltstyp, der AEM Extrakte an einen externen Übersetzungsdienst sendet. Mehrere Anwendungsfälle werden standardmäßig unterstützt:
 
-1. Ein Inhaltsfragment kann direkt in der Konsole &quot;Assets&quot;für Sprachkopie und Übersetzung ausgewählt werden
-2. Inhaltsfragmente, die auf einer Sites-Seite referenziert werden, werden in den entsprechenden Sprachordner kopiert und zur Übersetzung extrahiert, wenn die Sites-Seite für die Sprachkopie ausgewählt wird
+1. Ein Inhaltsfragment kann [direkt in der Assets-Konsole für Sprachkopie und Übersetzung ausgewählt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
+2. Inhaltsfragmente, auf die auf einer Sites-Seite verwiesen wird, werden in den entsprechenden Sprachordner kopiert und zur Übersetzung extrahiert, wenn die Sites-Seite für die Sprachkopie ausgewählt wird.
 3. Inline-Medien-Assets, die in ein Inhaltsfragment eingebettet sind, können extrahiert und übersetzt werden.
 4. Mit einem Inhaltsfragment verknüpfte Asset-Sammlungen können extrahiert und übersetzt werden.
 
 ## Editor für Übersetzungsregeln {#translation-rules-editor}
 
-Das Übersetzungsverhalten von Experience Managern kann mithilfe des **Übersetzungsregel-Editors** aktualisiert werden. Um die Übersetzung zu aktualisieren, navigieren Sie zu **Tools** > **Allgemein** > **Übersetzungskonfiguration** unter [http://localhost:4502/libs/cq/translation/translationrules/contexts.html](http://localhost:4502/libs/cq/translation/translationrules/contexts.html).
+Das Übersetzungsverhalten von Experience Managern kann mithilfe des **Editor für Übersetzungsregeln**. Um die Übersetzung zu aktualisieren, navigieren Sie zu **Instrumente** > **Allgemein** > **Übersetzungskonfiguration** at [http://localhost:4502/libs/cq/translation/translationrules/contexts.html](http://localhost:4502/libs/cq/translation/translationrules/contexts.html).
 
-Standardmäßige Konfigurationen referenzieren Inhaltsfragmente unter `fragmentPath` mit dem Ressourcentyp `core/wcm/components/contentfragment/v1/contentfragment`. Alle Komponenten, die von `v1/contentfragment` erben, werden von der Standardkonfiguration erkannt.
+Vordefinierte Konfigurationen referenzieren Inhaltsfragmente unter `fragmentPath` mit dem Ressourcentyp `core/wcm/components/contentfragment/v1/contentfragment`. Alle Komponenten, die von der `v1/contentfragment` werden durch die Standardkonfiguration erkannt.
 
 ![Editor für Übersetzungsregeln](assets/translation-configuration.png)
