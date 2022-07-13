@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: 6958b1f82c609af2998d94fd868e67bf1578e848
 workflow-type: tm+mt
-source-wordcount: '1370'
-ht-degree: 1%
+source-wordcount: '1264'
+ht-degree: 2%
 
 ---
 
@@ -229,21 +229,13 @@ HTTP/HTTPS-Anfragen von AEM über Standardanschlüsse (80/443) sind standardmä�
 
 ### HTTP/HTTPS
 
-Bei der Erstellung von HTTP/HTTPS-Verbindungen von AEM aus muss die Verbindung über spezielle Host- und Ports, die über Platzhalter bereitgestellt werden, erfolgen, um eine dedizierte Ausgangs-IP-Adresse zu erhalten oder über VPN weitergeleitet zu werden.
-
-AEM bietet zwei Sätze spezieller Java™-Systemvariablen, die AEM HTTP/HTTPS-Proxys zugeordnet sind.
-
-| Variablenname | Verwendung | Java™-Code | OSGi-Konfiguration | Konfiguration des Apache-Webservers mod_proxy | | - | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | Proxy-Host für HTTP-Verbindungen | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | `${AEM_HTTP_PROXY_HOST}` | | `AEM_HTTP_PROXY_PORT` | Proxy-Port für HTTP-Verbindungen | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` |  `${AEM_HTTP_PROXY_PORT}` | | `AEM_HTTPS_PROXY_HOST` | Proxy-Host für HTTPS-Verbindungen | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | `${AEM_HTTPS_PROXY_HOST}` | | `AEM_HTTPS_PROXY_PORT` | Proxy-Port für HTTPS-Verbindungen | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` | `${AEM_HTTPS_PROXY_PORT}` |
-
-Anfragen an externe HTTP/HTTPS-Dienste sollten durch Konfiguration der Proxy-Konfiguration des Java™ HTTP-Clients über AEM Proxy-Hosts/Ports-Werte erfolgen.
-
-Bei HTTP-/HTTPS-Aufrufen an externe Dienste an einem beliebigen Port gibt es keine `portForwards` muss mithilfe der Cloud Manager-APIs `__enableEnvironmentAdvancedNetworkingConfiguration` -Vorgang, da die &quot;Regeln&quot;für die Anschlussweiterleitung &quot;im Code&quot;definiert sind.
+Bei der Erstellung von HTTP/HTTPS-Verbindungen von AEM werden bei Verwendung von VPN HTTP/HTTPS-Verbindungen automatisch aus AEM abgeleitet. Zur Unterstützung von HTTP/HTTPS-Verbindungen ist kein zusätzlicher Code oder keine zusätzliche Konfiguration erforderlich.
 
 >[!TIP]
 >
 > Weitere Informationen finden Sie in AEM Dokumentation zu Virtual Private Network von as a Cloud Service für [den vollständigen Satz von Routing-Regeln](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn-traffic-routing).
 
-#### Codebeispiele
+#### Code-Beispiele
 
 <table>
 <tr>
@@ -273,7 +265,7 @@ Verbindungen zu externen Diensten werden dann über die `AEM_PROXY_HOST` und des
 | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
 
-#### Codebeispiele
+#### Code-Beispiele
 
 <table><tr>
    <td>
