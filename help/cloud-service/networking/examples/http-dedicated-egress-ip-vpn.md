@@ -9,22 +9,22 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
-source-git-commit: aa2d0d4d6e0eb429baa37378907a9dd53edd837d
+source-git-commit: bdce84fdcc949c8f8d0690ee7110238d8e8d3e42
 workflow-type: tm+mt
-source-wordcount: '218'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
 
 # HTTP/HTTPS-Verbindungen für dedizierte Ausgangs-IP-Adresse und VPN
 
-HTTP/HTTPS-Verbindungen müssen von AEM as a Cloud Service bereitgestellt werden, sie benötigen jedoch keine speziellen `portForwards` Regeln und kann AEM `AEM_HTTP_PROXY_HOST`, `AEM_HTTP_PROXY_PORT`, `AEM_HTTPS_PROXY_HOST`und `AEM_HTTPS_PROXY_PORT`.
+HTTP/HTTPS-Verbindungen werden automatisch aus AEM as a Cloud Service mit dedizierter Ausgangs-IP-Adresse oder VPN bereitgestellt und benötigen keine speziellen `portForwards` Regeln.
 
 ## Erweiterte Netzwerkunterstützung
 
 Das folgende Codebeispiel wird von den folgenden erweiterten Netzwerkoptionen unterstützt.
 
-Stellen Sie die [geeignete](../advanced-networking.md#advanced-networking) Vor diesem Tutorial wurde eine erweiterte Netzwerkkonfiguration eingerichtet.
+Stellen Sie die [dedizierte Ausgangs-IP-Adresse oder VPN](../advanced-networking.md#advanced-networking) Vor diesem Tutorial wurde eine erweiterte Netzwerkkonfiguration eingerichtet.
 
 | Kein erweitertes Netzwerk | [Flexibles Port-Egress](../flexible-port-egress.md) | [Dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) | [Virtuelles privates Netzwerk](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
@@ -36,7 +36,7 @@ Stellen Sie die [geeignete](../advanced-networking.md#advanced-networking) Vor d
 
 ## Codebeispiel
 
-Dieses Java™-Codebeispiel ist ein OSGi-Dienst, der as a Cloud Service ausgeführt werden kann, AEM eine HTTP-Verbindung zu einem externen Webserver unter 8080 herstellt. Verbindungen zu HTTPS-Webservern verwenden die `AEM_HTTPS_PROXY_HOST` und `AEM_HTTPS_PROXY_PORT` anstelle von  `AEM_HTTP_PROXY_HOST` und `AEM_HTTP_PROXY_PORT`.
+Dieses Java™-Codebeispiel ist ein OSGi-Dienst, der as a Cloud Service ausgeführt werden kann, AEM eine HTTP-Verbindung zu einem externen Webserver unter 8080 herstellt. Die HTTPS- (oder HTTP-) Verbindungen werden von AEM as a Cloud Service automatisch bereitgestellt und erfordern keine spezielle Entwicklung.
 
 >[!NOTE]
 > Es wird empfohlen, die [Java™ 11 HTTP-APIs](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) werden verwendet, um HTTP-/HTTPS-Aufrufe von AEM durchzuführen.
