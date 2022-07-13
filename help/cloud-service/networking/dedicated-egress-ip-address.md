@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: e9aeb54f0e2b52ad2d1cc914820bd6e232e509a0
 workflow-type: tm+mt
-source-wordcount: '1238'
-ht-degree: 1%
+source-wordcount: '1146'
+ht-degree: 2%
 
 ---
 
@@ -185,17 +185,9 @@ HTTP/HTTPS-Anfragen von AEM an Standardanschlüssen (80/443) sind standardmäßi
 
 ### HTTP/HTTPS
 
-Bei der Erstellung von HTTP/HTTPS-Verbindungen aus AEM muss die Verbindung über spezielle Hosts und Ports, die über Platzhalter bereitgestellt werden, erfolgen, um eine dedizierte Ausgangs-IP-Adresse zu erhalten.
+Bei der Erstellung von HTTP/HTTPS-Verbindungen aus AEM werden bei Verwendung der dedizierten Ausgangs-IP-Adresse HTTP/HTTPS-Verbindungen automatisch über die dedizierte Ausgangs-IP-Adresse aus AEM getrieben. Zur Unterstützung von HTTP/HTTPS-Verbindungen ist kein zusätzlicher Code oder keine zusätzliche Konfiguration erforderlich.
 
-AEM bietet zwei Sätze spezieller Java™-Systemvariablen, die AEM HTTP/HTTPS-Proxys zugeordnet sind.
-
-| Variablenname | Verwendung | Java™-Code | OSGi-Konfiguration | Konfiguration des Apache-Webservers mod_proxy | | - | - | - | - | - | | `AEM_HTTP_PROXY_HOST` | Proxy-Host für HTTP-Verbindungen | `System.getenv("AEM_HTTP_PROXY_HOST")` | `$[env:AEM_HTTP_PROXY_HOST]` | `${AEM_HTTP_PROXY_HOST}` | | `AEM_HTTP_PROXY_PORT` | Proxy-Port für HTTP-Verbindungen | `System.getenv("AEM_HTTP_PROXY_PORT")` | `$[env:AEM_HTTP_PROXY_PORT]` |  `${AEM_HTTP_PROXY_PORT}` | | `AEM_HTTPS_PROXY_HOST` | Proxy-Host für HTTPS-Verbindungen | `System.getenv("AEM_HTTPS_PROXY_HOST")` | `$[env:AEM_HTTPS_PROXY_HOST]` | `${AEM_HTTPS_PROXY_HOST}` | | `AEM_HTTPS_PROXY_PORT` | Proxy-Port für HTTPS-Verbindungen | `System.getenv("AEM_HTTPS_PROXY_PORT")` | `$[env:AEM_HTTPS_PROXY_PORT]` | `${AEM_HTTPS_PROXY_PORT}` |
-
-Anfragen an externe HTTP/HTTPS-Dienste sollten durch Konfiguration der Proxy-Konfiguration des Java™ HTTP-Clients mithilfe AEM Proxyhosts/Ports-Werten erfolgen.
-
-Bei HTTP-/HTTPS-Aufrufen an externe Dienste an einem beliebigen Port gibt es keine `portForwards` muss mit der Cloud Manager-API definiert werden `enableEnvironmentAdvancedNetworkingConfiguration` -Vorgang, da die &quot;Regeln&quot;für die Anschlussweiterleitung &quot;im Code&quot;definiert sind.
-
-#### Codebeispiele
+#### Code-Beispiele
 
 <table>
 <tr>
@@ -224,7 +216,7 @@ Verbindungen zu externen Diensten werden dann über die `AEM_PROXY_HOST` und des
 |---------------------------------|----------|----------------|------------------|----------|
 | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-#### Codebeispiele
+#### Code-Beispiele
 
 <table><tr>
    <td>
