@@ -5,13 +5,13 @@ version: 6.3, 6.4, 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 5b764d86-8ced-46ed-838e-4bd2e75fd64c
+source-git-commit: 6dd7164f5ec045b4cffd7732fd83ad9a91fdd511
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
-
 
 # Einrichten von Asset-Vorlagen mit AEM Assets und InDesign Server{#set-up-asset-templates-with-aem-assets-and-indesign-server}
 
@@ -21,11 +21,11 @@ Mit Asset-Vorlagen können Marketingexperten digitale Assets für digitale und g
 
 >[!NOTE]
 >
->AEM **muss** beim Hochladen der INDD-Vorlage mit einem laufenden InDesign-Server verbunden sein. Ein Teil der anfänglichen Verarbeitung auf der INDD-Datei erfordert einen InDesign-Server.
+>AEM **must** mit einem laufenden InDesign-Server verbunden sein, wenn die INDD-Vorlage hochgeladen wird. Ein Teil der anfänglichen Verarbeitung auf der INDD-Datei erfordert einen InDesign-Server.
 
 ## InDesign Server-Testversion herunterladen {#download-indesign-server-trial}
 
-Laden Sie [InDesign Server-Testdownload-Website](https://www.adobe.com/devnet/premiere/sdk/cs5/indesign-server-trial-downloads.html) herunter.
+Download [Website zum InDesign Server-Testdownload](https://www.adobeprerelease.com/)
 
 ## Starten von InDesign Server {#starting-indesign-server}
 
