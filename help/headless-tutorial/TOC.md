@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 24%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -36,9 +36,7 @@ ht-degree: 24%
       + [1 - Definieren von Inhaltsfragmentmodellen](./graphql/multi-step/content-fragment-models.md)
       + [2 - Erstellen von Inhaltsfragmenten](./graphql/multi-step/author-content-fragments.md)
       + [3 - GraphQL-APIs erkunden](./graphql/multi-step/explore-graphql-api.md)
-      + [4 - Abfrage von einer externen App](./graphql/multi-step/graphql-and-external-app.md)
-      + [5 - Erweiterte Datenmodellierung mit Fragmentverweisen](./graphql/multi-step/fragment-references.md)
-      + [6 - Produktionsbereitstellung](./graphql/multi-step/production-deployment.md)
+      + [4 - Erstellen einer React-App](./graphql/multi-step/graphql-and-react-app.md)
    + Erweitertes Tutorial{#advanced-tutorial}
       + [Übersicht](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
       + [1 - Erstellen von Inhaltsfragmentmodellen](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)

@@ -10,112 +10,152 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Erstellen von Inhaltsfragmenten {#authoring-content-fragments}
 
-In diesem Kapitel erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf dem [neu definierten Contributor Content Fragment Model](./content-fragment-models.md) basiert. Außerdem erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
+In diesem Kapitel erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf dem [neu definiertes Inhaltsfragmentmodell](./content-fragment-models.md). Außerdem erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
 
 ## Voraussetzungen {#prerequisites}
 
-Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die unter [Definieren von Inhaltsfragmentmodellen](./content-fragment-models.md) beschriebenen Schritte abgeschlossen sind.
+Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die im [Definieren von Inhaltsfragmentmodellen](./content-fragment-models.md) wurden abgeschlossen.
 
 ## Ziele {#objectives}
 
 * Inhaltsfragment basierend auf einem Inhaltsfragmentmodell erstellen
 * Erstellen einer Inhaltsfragmentvariante
 
-## Inhaltsfragmentbearbeitung - Überblick {#overview}
+## Erstellen eines Asset-Ordners
 
->[!VIDEO](https://video.tv.adobe.com/v/22451/?quality=12&learn=on)
+Inhaltsfragmente werden in Ordnern in AEM Assets gespeichert. Um Inhaltsfragmente aus den im vorherigen Kapitel erstellten Modellen zu erstellen, muss ein Ordner erstellt werden, in dem sie gespeichert werden. Für den Ordner ist eine Konfiguration erforderlich, um die Erstellung von Fragmenten aus bestimmten Modellen zu ermöglichen.
 
-Das obige Video bietet einen allgemeinen Überblick über die Bearbeitung von Inhaltsfragmenten.
+1. Navigieren Sie im Bildschirm AEM Start zu **Assets** > **Dateien**.
+
+   ![Navigieren zu Asset-Dateien](assets/author-content-fragments/navigate-assets-files.png)
+
+1. Tippen **Erstellen** in der Ecke tippen Sie auf **Ordner**. Geben Sie im daraufhin angezeigten Dialogfeld Folgendes ein:
+
+   * Titel*: **Mein Projekt**
+   * Name: **my-project**
+
+   ![Dialogfeld „Ordner erstellen“](assets/author-content-fragments/create-folder-dialog.png)
+
+1. Wählen Sie die **Eigener Ordner** Ordner und tippen Sie auf **Eigenschaften**.
+
+   ![Ordnereigenschaften öffnen](assets/author-content-fragments/open-folder-properties.png)
+
+1. Tippen Sie auf **Cloud Services** Registerkarte. under **Cloud-Konfiguration** Verwenden Sie die Pfadsuche, um die **Mein Projekt** Konfiguration. Der Wert sollte `/conf/my-project`.
+
+   ![Cloud-Konfiguration festlegen](assets/author-content-fragments/set-cloud-config-my-project.png)
+
+   Durch Festlegen dieser Eigenschaft können Inhaltsfragmente mithilfe der im vorherigen Kapitel erstellten Modelle erstellt werden.
+
+1. Tippen Sie auf **Richtlinien** Registerkarte. under **Zulässige Inhaltsfragmentmodelle** Verwenden Sie die Pfadsuche, um die **Person** und **Team** -Modell, das zuvor erstellt wurde.
+
+   ![Zulässige Inhaltsfragmentmodelle](assets/author-content-fragments/allowed-content-fragment-models.png)
+
+   Diese Richtlinien werden automatisch von allen Unterordnern übernommen und können überschrieben werden. Beachten Sie, dass Sie auch Modelle nach Tags zulassen oder Modelle aus anderen Projektkonfigurationen aktivieren können (z. B. WKND Shared). Dieser Mechanismus bietet eine leistungsstarke Möglichkeit, Ihre Inhaltshierarchie zu verwalten.
+
+1. Tippen **Speichern und schließen** , um die Änderungen an den Ordnereigenschaften zu speichern.
+
+1. Navigieren Sie in der **Mein Projekt** Ordner.
+
+1. Erstellen Sie einen weiteren Ordner mit den folgenden Werten:
+
+   * Titel*: **englisch**
+   * Name: **en**
+
+   Es empfiehlt sich, Projekte für mehrsprachige Unterstützung einzurichten. Siehe [Weitere Informationen finden Sie auf der folgenden Dokumentationsseite .](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
+
 
 ## Erstellen eines Inhaltsfragments {#create-content-fragment}
 
-Im vorherigen Kapitel [Definieren von Inhaltsfragmentmodellen](./content-fragment-models.md) wurde ein **Contributor**-Modell erstellt. Erstellen Sie mit diesem Modell ein neues Inhaltsfragment.
+Als Nächstes werden basierend auf dem **Team** und **Person** Modelle.
 
-1. Navigieren Sie im Menü **AEM Start** zu **Assets** > **Dateien**.
-1. Klicken Sie durch die Ordner, um zu **WKND Site** > **English** > **Contributors** zu navigieren. Dieser Ordner enthält eine Liste von Kopfbildern für Mitarbeiter der WKND-Marke.
+1. Tippen Sie auf dem AEM Startbildschirm auf **Inhaltsfragmente** , um die Benutzeroberfläche für Inhaltsfragmente zu öffnen.
 
-1. Klicken Sie oben rechts auf **Erstellen** und wählen Sie **Inhaltsfragment** aus:
+   ![Inhaltsfragment-Benutzeroberfläche](assets/author-content-fragments/cf-fragment-ui.png)
 
-   ![Klicken Sie auf Neues Fragment erstellen .](assets/author-content-fragments/create-content-fragment-menu.png)
+1. Erweitern Sie in der linken Leiste **Mein Projekt** und tippen **englisch**.
+1. Tippen **Erstellen** um **Neues Inhaltsfragment** und geben Sie die folgenden Werte ein:
 
-1. Wählen Sie das Modell **Contributor** und klicken Sie auf **Next**.
+   * Speicherort: `/content/dam/my-project/en`
+   * Inhaltsfragmentmodell: **Person**
+   * Titel: **John Doe**
+   * Name: `john-doe`
 
-   ![Contributor Model auswählen](assets/author-content-fragments/select-contributor-model.png)
+   ![Neues Inhaltsfragment](assets/author-content-fragments/new-content-fragment-john-doe.png)
+1. Tippen Sie auf **Erstellen**.
+1. Wiederholen Sie die obigen Schritte, um ein neues Fragment zu erstellen, das **Alison Smith**:
 
-   Dies ist dasselbe **Contributor**-Modell, das im vorherigen Kapitel erstellt wurde.
+   * Speicherort: `/content/dam/my-project/en`
+   * Inhaltsfragmentmodell: **Person**
+   * Titel: **Alison Smith**
+   * Name: `alison-smith`
 
-1. Geben Sie **Stacey Roswells** für den Titel ein und klicken Sie auf **Erstellen**.
-1. Klicken Sie im Dialogfeld **Erfolg** auf **, um das neu erstellte Fragment zu öffnen.**
+   Tippen **Erstellen** , um das neue Personen-Fragment zu erstellen.
 
-   ![Neues Inhaltsfragment erstellt](assets/author-content-fragments/new-content-fragment.png)
+1. Wiederholen Sie als Nächstes die Schritte zum Erstellen eines neuen **Team** Fragmentdarstellung **Team Alpha**:
 
-   Beachten Sie, dass die vom Modell definierten Felder jetzt für die Erstellung dieser Instanz des Inhaltsfragments verfügbar sind.
+   * Speicherort: `/content/dam/my-project/en`
+   * Inhaltsfragmentmodell: **Team**
+   * Titel: **Team Alpha**
+   * Name: `team-alpha`
 
-1. Geben Sie für **Vollständiger Name** ein: **Stacey Roswells**.
-1. Geben Sie für **Biografie** eine kurze Biografie ein. Benötigen Sie Anregungen? Sie können diese [Textdatei](assets/author-content-fragments/stacey-roswells-bio.txt) einfach wiederverwenden.
-1. Klicken Sie für **Picture Reference** auf das Symbol **folder** und navigieren Sie zu **WKND Site** > **English** > **Contributors** > **stacey-roswells.jpg** . Dies wird zum Pfad ausgewertet: `/content/dam/wknd/en/contributors/stacey-roswells.jpg`.
-1. Wählen Sie für **Beruf** **Fotograf** aus.
+   Tippen **Erstellen** , um das neue Team-Fragment zu erstellen.
 
-   ![Erstelltes Fragment](assets/author-content-fragments/stacye-roswell-fragment-authored.png)
+1. Es sollten jetzt drei Inhaltsfragmente unter **Mein Projekt** > **englisch**:
 
-1. Klicken Sie auf **Speichern**, um die Änderungen zu speichern.
+   ![Neue Inhaltsfragmente](assets/author-content-fragments/new-content-fragments.png)
 
-## Erstellen einer Inhaltsfragmentvariante
+## Bearbeiten von Personen-Inhaltsfragmenten {#edit-person-content-fragments}
 
-Alle Inhaltsfragmente beginnen mit einer **Übergeordnet** -Variante. Die **Übergeordnet**-Variante kann als *Standardinhalt* des Fragments betrachtet werden und wird automatisch verwendet, wenn der Inhalt über die GraphQL-APIs verfügbar gemacht wird. Es ist auch möglich, Varianten eines Inhaltsfragments zu erstellen. Diese Funktion bietet zusätzliche Flexibilität beim Entwerfen einer Implementierung.
+Füllen Sie anschließend die neu erstellten Fragmente mit Daten.
 
-Varianten können verwendet werden, um bestimmte Kanäle auszuwählen. Beispielsweise kann eine **mobile** Variante erstellt werden, die eine kleinere Textmenge enthält oder auf ein kanalspezifisches Bild verweist. Wie Varianten verwendet werden, hängt in der Tat von der Implementierung ab. Wie jede Funktion sollte vor der Verwendung eine sorgfältige Planung erfolgen.
+1. Tippen Sie auf das Kontrollkästchen neben **John Doe** und tippen **Öffnen**.
 
-Erstellen Sie anschließend eine neue Variante, um sich einen Überblick über die verfügbaren Funktionen zu verschaffen.
+   ![Inhaltsfragment öffnen](assets/author-content-fragments/open-fragment-for-editing.png)
 
-1. Öffnen Sie das Inhaltsfragment **Stacey Roswells** erneut.
-1. Klicken Sie in der linken Seitenleiste auf **Variante erstellen**.
-1. Geben Sie im Modal **Neue Variante** einen Titel von **Zusammenfassung** ein.
+1. Der Inhaltsfragment-Editor enthält ein Formular, das auf dem Inhaltsfragmentmodell basiert. Füllen Sie die verschiedenen Felder aus, um dem **John Doe** Fragment. Wählen Sie für den Profilbild eines der Bilder in WKND Shared aus oder laden Sie Ihr eigenes Bild in AEM Assets hoch.
 
-   ![Neue Variante - Zusammenfassung](assets/author-content-fragments/new-variation-summary.png)
+   ![Inhaltsfragmente-Editor](assets/author-content-fragments/content-fragment-editor-jd.png)
 
-1. Klicken Sie in das mehrzeilige Feld **Biografie** und klicken Sie auf die Schaltfläche **Erweitern** , um die Vollbildansicht für das mehrzeilige Feld einzugeben.
+1. Tippen Sie als Nächstes auf **Variante erstellen** in der linken Leiste. Fügen Sie im Dialogfeld einen Typ hinzu: **Alternative** für den Variantennamen.
 
-   ![Vollbildansicht eingeben](assets/author-content-fragments/enter-full-screen-view.png)
+1. Ändern Sie einige Elemente im **Alternative** -Variante.
 
-1. Klicken Sie oben rechts im Menü auf **Text zusammenfassen**.
+   ![Alternative Version](assets/author-content-fragments/alternate-variation-john-doe-fragment.png)
 
-1. Geben Sie **Target** von **50** ein und klicken Sie auf **Start**.
+   Mit der Variantenfunktion können Autoren verschiedene Versionen desselben Inhaltsfragments erstellen. Dies kann verwendet werden, um eine Zusammenfassungsversion eines Langform-Artikels bereitzustellen. Standardmäßig ist eine **Übergeordnet** -Variante erstellt wird. Mehrzeilige Textfeldelemente einer Variante können mit der Übergeordneten Variante synchronisiert werden.
 
-   ![Vorschau einer Zusammenfassung](assets/author-content-fragments/summarize-text-preview.png)
+1. Tippen **Speichern und schließen** , um die Änderungen am Fragment &quot;Max Mustermann&quot;zu speichern.
+1. Kehren Sie zur Benutzeroberfläche &quot;Inhaltsfragment&quot;zurück und öffnen Sie die **Alison Smith** Datei zur Bearbeitung.
+1. Wiederholen Sie die obigen Schritte, um die **Alison Smith** Fragment mit Inhalt.
 
-   Dadurch wird eine Vorschau der Zusammenfassung geöffnet. AEM maschineller Sprachprozessor versucht, den Text anhand der Zielwortzahl zusammenzufassen. Sie können auch verschiedene Sätze zum Entfernen auswählen.
+## Bearbeiten von Team-Inhaltsfragmenten {#edit-team-content-fragment}
 
-1. Klicken Sie auf **Zusammenfassung**, wenn Sie mit der Zusammenfassung zufrieden sind. Klicken Sie in das mehrzeilige Textfeld und schalten Sie die Schaltfläche **Erweitern** um, um zur Hauptansicht zurückzukehren.
+1. Öffnen Sie die **Team Alpha** Inhaltsfragment mithilfe der Benutzeroberfläche für Inhaltsfragmente.
+1. Füllen Sie die Felder für **Titel**, **Kurzname** und **Beschreibung**.
+1. Wählen Sie die **John Doe** und **Alison Smith** Inhaltsfragmente zum Ausfüllen der **Team-Mitglieder** -Feld:
 
-1. Klicken Sie auf **Speichern**, um die Änderungen zu speichern.
+   ![Team-Mitglieder festlegen](assets/author-content-fragments/select-team-members.png)
 
-## Erstellen eines zusätzlichen Inhaltsfragments
+   >[!NOTE]
+   >
+   >Sie können auch neue Inhaltsfragmente inline erstellen, indem Sie die **Neues Inhaltsfragment** Schaltfläche.
 
-Wiederholen Sie die unter [Erstellen eines Inhaltsfragments](#create-content-fragment) beschriebenen Schritte, um einen zusätzlichen **Mitarbeiter** zu erstellen. Dies wird im nächsten Kapitel als Beispiel für die Abfrage mehrerer Fragmente verwendet.
+1. Tippen **Speichern und schließen** , um die Änderungen am Team Alpha-Fragment zu speichern.
 
-1. Klicken Sie im Ordner **Contributors** rechts oben auf **Create** und wählen Sie **Content Fragment** aus:
-1. Wählen Sie das Modell **Contributor** und klicken Sie auf **Next**.
-1. Geben Sie **Jacob Wester** für den Titel ein und klicken Sie auf **Erstellen**.
-1. Klicken Sie im Dialogfeld **Erfolg** auf **, um das neu erstellte Fragment zu öffnen.**
-1. Geben Sie für **Vollständiger Name** ein: **Jacob Wester**.
-1. Geben Sie für **Biografie** eine kurze Biografie ein. Benötigen Sie Anregungen? Sie können diese [Textdatei](assets/author-content-fragments/jacob-wester.txt) einfach wiederverwenden.
-1. Klicken Sie für **Picture Reference** auf das Symbol **folder** und navigieren Sie zu **WKND Site** > **English** > **Contributors** > **jacob_wester.jpg**. Dies wird zum Pfad ausgewertet: `/content/dam/wknd/en/contributors/jacob_wester.jpg`.
-1. Wählen Sie für **Occupation** **Writer**.
-1. Klicken Sie auf **Speichern**, um die Änderungen zu speichern. Es ist nicht erforderlich, eine Variante zu erstellen, es sei denn, Sie möchten sie!
+## WKND-Inhaltsfragmente durchsuchen (optional) {#explore-wknd-content-fragments}
 
-   ![Zusätzliches Inhaltsfragment](assets/author-content-fragments/additional-content-fragment.png)
+Wenn Sie [WKND Shared Sample Content installiert](./overview.md#install-sample-content) Sie können die Inhaltsfragmente nach den Modellen &quot;Adventures&quot;, &quot;Artikel&quot;und &quot;Autoren&quot;untersuchen, um weitere Ideen zum Erstellen von Inhalten zu erhalten.
 
-   Sie sollten jetzt zwei **Mitwirkende** Fragmente haben.
+![WKND-Inhaltsfragmente](assets/author-content-fragments/wknd-content-fragments.png)
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
@@ -123,4 +163,9 @@ Herzlichen Glückwunsch! Sie haben gerade mehrere Inhaltsfragmente erstellt und 
 
 ## Nächste Schritte {#next-steps}
 
-Im nächsten Kapitel [GraphQL-APIs](explore-graphql-api.md) durchsuchen Sie AEM GraphQL-APIs mit dem integrierten GrapiQL-Tool. Erfahren Sie, wie AEM basierend auf einem Inhaltsfragmentmodell automatisch ein GraphQL-Schema generiert. Sie experimentieren mit der Erstellung grundlegender Abfragen unter Verwendung der GraphQL-Syntax.
+Im nächsten Kapitel [GraphQL-APIs](explore-graphql-api.md), werden Sie AEM GraphQL-APIs mithilfe des integrierten GrapiQL-Tools untersuchen. Erfahren Sie, wie AEM basierend auf einem Inhaltsfragmentmodell automatisch ein GraphQL-Schema generiert. Sie experimentieren mit der Erstellung grundlegender Abfragen unter Verwendung der GraphQL-Syntax.
+
+## Verwandte Dokumentation
+
+* [Verwalten von Inhaltsfragmenten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html)
+* [Varianten – Erstellen von Fragmentinhalten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html)

@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
-source-wordcount: '1133'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -21,277 +21,369 @@ ht-degree: 2%
 
 Die GraphQL-API von AEM bietet eine leistungsstarke Abfragesprache, um Daten von Inhaltsfragmenten für nachgelagerte Anwendungen verfügbar zu machen. Inhaltsfragmentmodelle definieren das Datenschema, das von Inhaltsfragmenten verwendet wird. Jedes Mal, wenn ein Inhaltsfragmentmodell erstellt oder aktualisiert wird, wird das Schema übersetzt und zum &quot;Diagramm&quot;hinzugefügt, aus dem die GraphQL-API besteht.
 
-In diesem Kapitel werden wir einige gängige GraphQL-Abfragen untersuchen, um Inhalte mithilfe einer IDE namens [GraphiQL](https://github.com/graphql/graphiql) zu erfassen. Mit der GraphiQL IDE können Sie die zurückgegebenen Abfragen und Daten schnell testen und verfeinern. GraphiQL bietet außerdem einfachen Zugriff auf die Dokumentation, sodass Sie leicht wissen können, welche Methoden verfügbar sind.
+In diesem Kapitel werden wir einige gängige GraphQL-Abfragen untersuchen, um Inhalte mithilfe einer IDE namens [GraphiQL](https://github.com/graphql/graphiql). Mit der GraphiQL IDE können Sie die zurückgegebenen Abfragen und Daten schnell testen und verfeinern. GraphiQL bietet auch einen einfachen Zugang zur Dokumentation, sodass man leicht lernen und verstehen kann, welche Methoden verfügbar sind.
 
 ## Voraussetzungen {#prerequisites}
 
-Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die in [Authoring von Inhaltsfragmenten](./author-content-fragments.md) beschriebenen Schritte abgeschlossen sind.
+Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die im [Erstellen von Inhaltsfragmenten](./author-content-fragments.md) wurden abgeschlossen.
 
 ## Ziele {#objectives}
 
 * Erfahren Sie, wie Sie mit dem GraphQL-Tool eine Abfrage mithilfe der GraphQL-Syntax erstellen können.
 * Erfahren Sie, wie Sie eine Liste von Inhaltsfragmenten und ein einzelnes Inhaltsfragment abfragen.
 * Erfahren Sie, wie Sie bestimmte Datenattribute filtern und anfordern.
-* Erfahren Sie, wie Sie eine Variante eines Inhaltsfragments abfragen.
 * Erfahren Sie, wie Sie eine Abfrage mehrerer Inhaltsfragmentmodelle verbinden.
+* Erfahren Sie, wie Sie die GraphQL-Abfrage beibehalten.
 
-## Installieren des GraphiQL-Tools {#install-graphiql}
+## Aktivieren eines GraphQL-Endpunkts {#enable-graphql-endpoint}
 
-Die GraphiQL-IDE ist ein Entwicklungstool und wird nur in Umgebungen auf niedrigerer Ebene wie einer Entwicklungs- oder lokalen Instanz benötigt. Daher ist es nicht im AEM Projekt enthalten, sondern wird als separates Paket bereitgestellt, das auf Ad-hoc-Basis installiert werden kann.
+Es muss ein GraphQL-Endpunkt konfiguriert werden, um GraphQL-API-Abfragen für Inhaltsfragmente zu aktivieren.
 
-1. Navigieren Sie zum **[Software Distribution-Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM als Cloud Service**.
-1. Suchen Sie nach &quot;GraphiQL&quot;(schließen Sie **i** in **GraphiQL** ein.
-1. Laden Sie das neueste **GraphiQL Content Package v.x.x.x** herunter.
+1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Allgemein** > **GraphQL**.
 
-   ![Herunterladen des GraphiQL-Pakets](assets/explore-graphql-api/software-distribution.png)
+   ![Navigieren zum GraphQL-Endpunkt](assets/explore-graphql-api/navigate-to-graphql-endpoint.png)
 
-   Die ZIP-Datei ist ein AEM Paket, das direkt installiert werden kann.
+1. Tippen **Erstellen** in der oberen rechten Ecke. Geben Sie im Dialogfeld die folgenden Werte ein:
 
-1. Navigieren Sie im Menü **AEM Start** zu **Tools** > **Bereitstellung** > **Pakete**.
-1. Klicken Sie auf **Paket hochladen** und wählen Sie das im vorherigen Schritt heruntergeladene Paket aus. Klicken Sie auf **Installieren** , um das Paket zu installieren.
+   * Name*: **Mein Projektendpunkt**.
+   * GraphQL-Schema verwenden, das von ... * bereitgestellt wird: **Mein Projekt**
 
-   ![Installieren des GraphiQL-Pakets](assets/explore-graphql-api/install-graphiql-package.png)
+   ![GraphQL-Endpunkt erstellen](assets/explore-graphql-api/create-graphql-endpoint.png)
 
-## Liste von Inhaltsfragmenten abfragen {#query-list-cf}
+   Tippen **Erstellen** , um den Endpunkt zu speichern.
+
+   GraphQL-Endpunkte, die basierend auf einer Projektkonfiguration erstellt wurden, ermöglichen nur Abfragen für Modelle, die zu diesem Projekt gehören. In diesem Fall stellt nur die **Person** und **Team** -Modelle verwendet werden.
+
+   >[!NOTE]
+   >
+   > Es kann auch ein globaler Endpunkt erstellt werden, der Abfragen von Modellen über mehrere Projekte hinweg ermöglicht. Wenn Sie beispielsweise eine Abfrage mit den Modellen in der **WKND Shared** und im **Mein Projekt**. Dies sollte mit Vorsicht und nur bei Bedarf verwendet werden, da dadurch die Umgebung möglicherweise zusätzlichen Sicherheitslücken ausgesetzt wird.
+
+1. Es sollten nun zwei GraphQL-Endpunkte angezeigt werden, die in Ihrer Umgebung aktiviert sind (vorausgesetzt, Sie haben den freigegebenen WKND-Inhalt installiert).
+
+   ![Aktivierte grafische Endpunkte](assets/explore-graphql-api/enabled-graphql-endpoints.png)
+
+## Verwenden der GraphiQL-IDE
+
+Die [GraphiQL-Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) ermöglicht es Entwicklern, Abfragen für Inhalte in der aktuellen AEM-Umgebung zu erstellen und zu testen. Mit dem GraphQL-Tool können Benutzer auch **persist** oder speichern Sie Abfragen, die von Clientanwendungen in einer Produktionseinstellung verwendet werden sollen.
+
+Erkunden Sie als Nächstes die Leistungsfähigkeit AEM GraphQL-API mit der integrierten GraphiQL-IDE.
+
+1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Allgemein** > **GraphQL-Abfrage-Editor**.
+
+   ![Navigieren Sie zur GraphiQL-IDE.](assets/explore-graphql-api/navigate-graphql-query-editor.png)
+
+   >[!NOTE]
+   >
+   > Bei älteren Versionen von AEM ist die GraphiQL IDE möglicherweise nicht integriert. Sie kann manuell installiert werden, indem Sie den folgenden Schritten folgen: [instructions](#install-graphiql).
+
+1. Setzen Sie in der oberen rechten Ecke die **Endpunkt** nach **Mein Projektendpunkt**.
+
+   ![GraphQL-Endpunkt festlegen](assets/explore-graphql-api/set-my-project-endpoint.png)
+
+   Dadurch werden alle Abfragen auf Modelle angewendet, die in der **Mein Projekt** Projekt. Beachten Sie, dass es auch einen -Endpunkt für **WKND Shared**.
+
+### Liste von Inhaltsfragmenten abfragen {#query-list-cf}
 
 Eine gängige Anforderung besteht darin, mehrere Inhaltsfragmente abzufragen.
 
-1. Navigieren Sie zur GraphiQL IDE unter [http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html).
-1. Fügen Sie die folgende Abfrage in den linken Bereich ein (unter der Liste der Kommentare):
+1. Fügen Sie die folgende Abfrage in den Hauptbereich ein (ersetzen Sie die Liste der Kommentare):
 
    ```graphql
-   {
-     contributorList {
+   query allTeams {
+     teamList {
        items {
-           _path
-         }
+         _path
+         title
+       }
      }
-   }
+   } 
    ```
 
-1. Drücken Sie die Schaltfläche **Play** im oberen Menü, um die Abfrage auszuführen. Sie sollten die Ergebnisse der Inhaltsfragmente der Mitwirkenden aus dem vorherigen Kapitel sehen:
+1. Drücken Sie die **Play** im oberen Menü, um die Abfrage auszuführen. Sie sollten die Ergebnisse der Inhaltsfragmente aus dem vorherigen Kapitel sehen:
 
-   ![Ergebnisse der Beitragsliste](assets/explore-graphql-api/contributorlist-results.png)
+   ![Ergebnisse der Personenliste](assets/explore-graphql-api/all-teams-list.png)
 
-1. Positionieren Sie den Cursor unter dem Text `_path` und geben Sie **Strg+Leertaste** ein, um Trigger-Code-Hinweise anzuzeigen. Fügen Sie der Abfrage `fullName` und `occupation` hinzu.
+1. Positionieren Sie den Cursor unter dem `title` Text und Eingabe **STRG+Leertaste** Trigger-Code-Hinweise. Hinzufügen `shortname` und `description` zur Abfrage hinzufügen.
 
    ![Abfrage mit Code-Hash aktualisieren](assets/explore-graphql-api/update-query-codehinting.png)
 
-1. Führen Sie die Abfrage erneut aus, indem Sie auf die Schaltfläche **Abspielen** klicken. Die Ergebnisse sollten die zusätzlichen Eigenschaften von `fullName` und `occupation` enthalten.
+1. Führen Sie die Abfrage erneut aus, indem Sie die **Play** und Sie sollten sehen, dass die Ergebnisse die zusätzlichen Eigenschaften von `shortname` und `description`.
 
-   ![Vollname- und Berufsergebnisse](assets/explore-graphql-api/updated-query-fullname-occupation.png)
+   ![Kurznamen- und Beschreibungsergebnisse](assets/explore-graphql-api/updated-query-shortname-description.png)
 
-   `fullName` und  `occupation` sind einfache Eigenschaften. Erinnern Sie sich an das Kapitel [Definieren von Inhaltsfragmentmodellen](./content-fragment-models.md) , dass `fullName` und `occupation` die Werte sind, die beim Definieren der **Eigenschaftsname** der entsprechenden Felder verwendet werden.
+   Die `shortname` ist eine einfache Eigenschaft und `description` ist ein mehrzeiliges Textfeld, und die GraphQL-API ermöglicht es uns, eine Vielzahl von Formaten für die Ergebnisse auszuwählen, z. B. `html`, `markdown`, `json` oder `plaintext`.
 
-1. `pictureReference` und komplexere Felder  `biographyText` darstellen. Aktualisieren Sie die Abfrage mit folgendem Code, um Daten zu den Feldern `pictureReference` und `biographyText` zurückzugeben.
+### Abfrage für verschachtelte Fragmente
+
+Als Nächstes experimentieren Sie mit der Abfrage, indem Sie verschachtelte Fragmente abrufen. Denken Sie daran, dass die **Team** -Modell referenziert die **Person** -Modell.
+
+1. Aktualisieren Sie die Abfrage, um die `teamMembers` -Eigenschaft. Erinnern Sie sich daran, dass dies eine **Fragmentverweis** zum Personenmodell. Eigenschaften des Personen-Modells können zurückgegeben werden:
 
    ```graphql
-   {
-   contributorList {
-       items {
-         _path
-         fullName
-         occupation
-         biographyText {
-           html
-         }
-         pictureReference {
-           ... on ImageRef {
+   query allTeams {
+       teamList {
+           items {
                _path
-               width
-               height
+               title
+               shortName
+               description {
+                   plaintext
+               }
+               teamMembers {
+                   fullName
+                   occupation
                }
            }
        }
-     }
    }
    ```
 
-   `biographyText` ist ein mehrzeiliges Textfeld und die GraphQL-API ermöglicht es uns, eine Vielzahl von Formaten für die Ergebnisse wie  `html`,  `markdown`  `json` oder  `plaintext`auszuwählen.
+   JSON-Antwort:
 
-   `pictureReference` ist eine Inhaltsreferenz und es wird erwartet, dass es ein Bild ist. Daher wird ein integriertes  `ImageRef` Objekt verwendet. Auf diese Weise können wir zusätzliche Daten zum Bild anfordern, auf das verwiesen wird, z. B. `width` und `height`.
-
-1. Als Nächstes experimentieren Sie mit der Abfrage nach einer Liste von **Adventures**. Führen Sie die folgende Abfrage aus:
-
-   ```graphql
+   ```json
    {
-     adventureList {
-       items {
-         adventureTitle
-         adventureType
-         adventurePrimaryImage {
-           ...on ImageRef {
-             _path
-             mimeType
+       "data": {
+           "teamList": {
+           "items": [
+               {
+               "_path": "/content/dam/my-project/en/team-alpha",
+               "title": "Team Alpha",
+               "shortName": "team-alpha",
+               "description": {
+                   "plaintext": "This is a description of Team Alpha!"
+               },
+               "teamMembers": [
+                   {
+                   "fullName": "John Doe",
+                   "occupation": [
+                       "Artist",
+                       "Influencer"
+                   ]
+                   },
+                   {
+                   "fullName": "Alison Smith",
+                   "occupation": [
+                       "Photographer"
+                   ]
+                   }
+                 ]
            }
-         }
+           ]
+           }
        }
-     }
    }
    ```
 
-   Es sollte eine Liste von **Abenteuer** angezeigt werden. Experimentieren Sie einfach, indem Sie der Abfrage zusätzliche Felder hinzufügen.
+   Die Möglichkeit, mit verschachtelten Fragmenten abzufragen, ist eine leistungsstarke AEM GraphQL-API. In diesem einfachen Beispiel ist die Verschachtelung nur zwei Ebenen tief. Es ist jedoch möglich, Fragmente noch weiter zu verschachteln. Wenn beispielsweise **Adresse** mit einem **Person** Es wäre möglich, Daten aus allen drei Modellen in einer einzigen Abfrage zurückzugeben.
 
-## Filtern einer Liste von Inhaltsfragmenten {#filter-list-cf}
+### Filtern einer Liste von Inhaltsfragmenten {#filter-list-cf}
 
 Als Nächstes sehen wir uns an, wie es möglich ist, die Ergebnisse basierend auf einem Eigenschaftswert nach einer Untergruppe von Inhaltsfragmenten zu filtern.
 
 1. Geben Sie die folgende Abfrage in die GraphiQL-Benutzeroberfläche ein:
 
    ```graphql
-   {
-   contributorList(filter: {
-     occupation: {
-       _expressions: {
-         value: "Photographer"
+   query personByName($name:String!){
+     personList(
+       filter:{
+         fullName:{
+           _expressions:[{
+             value:$name
+             _operator:EQUALS
+           }]
          }
        }
-     }) {
-       items {
+     ){
+       items{
          _path
          fullName
          occupation
        }
      }
-   }
+   }  
    ```
 
-   Die obige Abfrage führt eine Suche für alle Mitwirkenden im System durch. Der am Anfang der Abfrage hinzugefügte Filter führt einen Vergleich für das Feld `occupation` und die Zeichenfolge &quot;**Fotograf**&quot;durch.
+   Die obige Abfrage führt eine Suche nach allen Personen-Fragmenten im System durch. Der am Anfang der Abfrage hinzugefügte Filter führt einen Vergleich der `name` -Feld und der Variablenzeichenfolge `$name`.
 
-1. Führen Sie die Abfrage aus. Es wird erwartet, dass nur ein einzelner **Mitarbeiter** zurückgegeben wird.
-1. Geben Sie die folgende Abfrage ein, um eine Liste von **Adventures** abzufragen, wobei `adventureActivity` **not** gleich **&quot;Surfen&quot;** ist:
+1. Im **Abfragevariablen** -Bereich geben Sie Folgendes ein:
+
+   ```json
+   {"name": "John Doe"}
+   ```
+
+1. Führen Sie die Abfrage aus. Es wird erwartet, dass nur **Personen** wird mit dem Wert &quot;John Doe&quot;zurückgegeben.
+
+   ![Verwenden von Abfragevariablen zum Filtern](assets/explore-graphql-api/using-query-variables-filter.png)
+
+   Es gibt viele weitere Optionen zum Filtern und Erstellen komplexer Abfragen, siehe [Verwendung von GraphQL mit AEM - Beispielinhalt und Abfragen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html?lang=de).
+
+1. Erweiterung der obigen Abfrage zum Abrufen des Profilbilds
 
    ```graphql
-   {
-     adventureList(filter: {
-       adventureActivity: {
-           _expressions: {
-               _operator: EQUALS_NOT
-               value: "Surfing"
+   query personByName($name:String!){
+     personList(
+       filter:{
+         fullName:{
+           _expressions:[{
+             value:$name
+             _operator:EQUALS
+           }]
+         }
+       }
+     ){
+       items{  
+         _path
+         fullName
+         occupation
+         profilePicture{
+           ... on ImageRef{
+             _path
+             _authorUrl
+             _publishUrl
+             height
+             width
+   
+           }
+         }
+       }
+     }
+   } 
+   ```
+
+   Die `profilePicture` ist eine Inhaltsreferenz, und es wird erwartet, dass es sich um ein Bild handelt. Daher ist es integriert `ImageRef` -Objekt verwendet wird. Dadurch können wir zusätzliche Daten zum Bild anfordern, auf das verwiesen wird, z. B. die `width` und `height`.
+
+### Einzelnes Inhaltsfragment abfragen {#query-single-cf}
+
+Es ist auch möglich, ein einzelnes Inhaltsfragment direkt abzufragen. Der Inhalt in AEM wird hierarchisch gespeichert und die eindeutige Kennung für ein Fragment basiert auf dem Pfad des Fragments.
+
+1. Geben Sie die folgende Abfrage im Editor &quot;GraphiQL&quot;ein:
+
+   ```graphql
+   query personByPath($path: String!) {
+       personByPath(_path: $path) {
+           item {
+           fullName
+           occupation
            }
        }
-   }) {
-       items {
-       _path
-       adventureTitle
-       adventureActivity
-       }
-     }
    }
    ```
 
-1. Führen Sie die Abfrage aus und überprüfen Sie die Ergebnisse. Beachten Sie, dass keines der Ergebnisse ein `adventureType` gleich **&quot;Surfen&quot;** enthält.
+1. Geben Sie Folgendes für die **Abfragevariablen**:
 
-Es gibt viele weitere Optionen zum Filtern und Erstellen komplexer Abfragen. Die obigen Beispiele sind nur einige Beispiele.
+   ```json
+   {"path": "/content/dam/my-project/en/alison-smith"}
+   ```
 
-## Einzelnes Inhaltsfragment abfragen {#query-single-cf}
+1. Führen Sie die Abfrage aus und beobachten Sie, dass das einzelne Ergebnis zurückgegeben wird.
 
-Es ist auch möglich, ein einzelnes Inhaltsfragment direkt abzufragen. Der Inhalt in AEM wird hierarchisch gespeichert und die eindeutige Kennung für ein Fragment basiert auf dem Pfad des Fragments. Wenn das Ziel darin besteht, Daten über ein einzelnes Fragment zurückzugeben, wird empfohlen, den Pfad zu verwenden und das Modell direkt abzufragen. Die Verwendung dieser Syntax bedeutet, dass die Abfragekomplexität sehr gering ist und zu einem schnelleren Ergebnis führt.
+## Dauerhafte Abfragen {#persist-queries}
 
-1. Geben Sie die folgende Abfrage im Editor &quot;GraphiQL&quot;ein:
+Sobald ein Entwickler mit der zurückgegebenen Abfrage und Daten zufrieden ist, besteht der nächste Schritt darin, die Abfrage zu speichern oder zu AEM. [Beständige Abfragen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html) ist der bevorzugte Mechanismus zur Bereitstellung der GraphQL-API für Client-Anwendungen. Nachdem eine Abfrage persistiert wurde, kann sie mithilfe einer GET-Anfrage angefordert und in den Dispatcher- und CDN-Ebenen zwischengespeichert werden. Die Leistung persistenter Abfragen ist viel besser. Zusätzlich zu den Leistungsvorteilen stellen persistente Abfragen sicher, dass zusätzliche Daten nicht versehentlich Client-Anwendungen zur Verfügung gestellt werden. Weitere Informationen [Persistierte Abfragen finden Sie hier .](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html).
+
+Speichern Sie anschließend zwei einfache Abfragen, die im nächsten Kapitel verwendet werden.
+
+1. Geben Sie in die GraphiQL IDE die folgende Abfrage ein:
 
    ```graphql
-   {
-    contributorByPath(_path: "/content/dam/wknd/en/contributors/stacey-roswells") {
-       item {
+   query allTeams {
+       teamList {
+           items {
+               _path
+               title
+               shortName
+               description {
+                   plaintext
+               }
+               teamMembers {
+                   fullName
+                   occupation
+               }
+           }
+       }
+   }
+   ```
+
+   Überprüfen Sie, ob die Abfrage funktioniert.
+
+1. Nächstes Tippen **Speichern unter** und eingeben `all-teams` als **Abfragename**.
+
+   Die Abfrage sollte jetzt unter **Beständige Abfragen** in der linken Leiste.
+
+   ![Alle Teams - beständige Abfrage](assets/explore-graphql-api/all-teams-persisted-query.png)
+1. Tippen Sie anschließend auf die Sendungen **...** neben der persistenten Abfrage und tippen Sie auf **URL kopieren** , um den Pfad in die Zwischenablage zu kopieren.
+
+   ![Persistente Abfrage-URL kopieren](assets/explore-graphql-api/copy-persistent-query-url.png)
+
+1. Öffnen Sie eine neue Registerkarte und fügen Sie den kopierten Pfad in Ihren Browser ein:
+
+   ```plain
+   https://$YOUR-AEMasCS-INSTANCEID$.adobeaemcloud.com/graphql/execute.json/my-project/all-teams
+   ```
+
+   Sie sollte dem obigen Pfad ähnlich aussehen. Sie sollten die JSON-Ergebnisse der zurückgegebenen Abfrage sehen.
+
+   Aufschlüsseln der URL:
+
+   | Name | Beschreibung |
+   | ---------|---------- |
+   | `/graphql/execute.json` | Persistenter Abfrageendpunkt |
+   | `/my-project` | Projektkonfiguration für `/conf/my-project` |
+   | `/all-teams` | Name der persistenten Abfrage |
+
+1. Kehren Sie zur GraphiQL-IDE zurück und verwenden Sie die Plusschaltfläche . **+** um die NEU-Abfrage zu beibehalten
+
+   ```graphql
+   query personByName($name: String!) {
+     personList(
+       filter: {
+         fullName:{
+           _expressions: [{
+             value: $name
+             _operator:EQUALS
+           }]
+         }
+       }){
+       items {
          _path
          fullName
+         occupation
          biographyText {
-           html
+           json
+         }
+         profilePicture {
+           ... on ImageRef {
+             _path
+             _authorUrl
+             _publishUrl
+             width
+             height
+           }
          }
        }
      }
    }
    ```
 
-1. Führen Sie die Abfrage aus und beobachten Sie, dass das einzelne Ergebnis für das Fragment **Stacey Roswells** zurückgegeben wird.
+1. Speichern Sie die Abfrage als: **person-by-name**.
+1. Sie sollten zwei persistente Abfragen speichern:
 
-   In der vorherigen Übung haben Sie einen Filter verwendet, um eine Liste von Ergebnissen einzugrenzen. Sie können eine ähnliche Syntax verwenden, um nach Pfad zu filtern. Die obige Syntax wird jedoch aus Leistungsgründen bevorzugt.
+   ![Abgeschlossene persistente Abfragen](assets/explore-graphql-api/final-persisted-queries.png)
 
-1. Erinnern Sie sich im Kapitel [Inhaltsfragmente erstellen](./author-content-fragments.md) daran, dass eine **Zusammenfassung**-Variante für **Stacey Roswells** erstellt wurde. Aktualisieren Sie die Abfrage, um die **Summary**-Variante zurückzugeben:
+## Lösungsdateien {#solution-files}
 
-   ```graphql
-   {
-   contributorByPath
-   (
-       _path: "/content/dam/wknd/en/contributors/stacey-roswells"
-       variation: "summary"
-   ) {
-       item {
-         _path
-         fullName
-         biographyText {
-           html
-         }
-       }
-     }
-   }
-   ```
+Laden Sie den Inhalt, die Modelle und die persistenten Abfragen herunter, die in den letzten drei Kapiteln erstellt wurden: [tutorial-solution-content.zip](assets/explore-graphql-api/tutorial-solution-content.zip)
 
-   Obwohl die Variante **Zusammenfassung** hieß, werden Varianten in Kleinbuchstaben beibehalten und `summary` wird verwendet.
+## Persistente WKND-Abfragen durchsuchen (optional) {#explore-wknd-content-fragments}
 
-1. Führen Sie die Abfrage aus und beachten Sie, dass das `biography` -Feld ein wesentlich kürzeres `html` -Ergebnis enthält.
+Wenn Sie [WKND Shared Sample Content installiert](./overview.md#install-sample-content) Sie können persistente Abfragen wie Abenteuer-alle, Abenteuer-für-Aktivität, Abenteuer-Pfade etc. überprüfen und ausführen.
 
-## Abfrage für mehrere Inhaltsfragmentmodelle {#query-multiple-models}
+![WKND - persistente Abfragen](assets/explore-graphql-api/wknd-persisted-queries.png)
 
-Es ist auch möglich, separate Abfragen in einer einzigen Abfrage zu kombinieren. Dies ist nützlich, um die Anzahl der HTTP-Anfragen zu minimieren, die zum Hochladen der Anwendung erforderlich sind. Beispielsweise kann die Ansicht *Home* einer Anwendung Inhalte basierend auf **zwei** verschiedenen Inhaltsfragmentmodellen anzeigen. Anstatt **zwei** separate Abfragen auszuführen, können wir die Abfragen zu einer einzigen Anfrage zusammenfassen.
-
-1. Geben Sie die folgende Abfrage im Editor &quot;GraphiQL&quot;ein:
-
-   ```graphql
-   {
-     adventureList {
-       items {
-         _path
-         adventureTitle
-       }
-     }
-     contributorList {
-       items {
-         _path
-         fullName
-       }
-     }
-   }
-   ```
-
-1. Führen Sie die Abfrage aus und stellen Sie sicher, dass die Ergebnismenge Daten von **Adventures** und **Contributors** enthält:
-
-```json
-{
-  "data": {
-    "adventureList": {
-      "items": [
-        {
-          "_path": "/content/dam/wknd/en/adventures/bali-surf-camp/bali-surf-camp",
-          "adventureTitle": "Bali Surf Camp"
-        },
-        {
-          "_path": "/content/dam/wknd/en/adventures/beervana-portland/beervana-in-portland",
-          "adventureTitle": "Beervana in Portland"
-        },
-        ...
-      ]
-    },
-    "contributorList": {
-      "items": [
-        {
-          "_path": "/content/dam/wknd/en/contributors/jacob-wester",
-          "fullName": "Jacob Wester"
-        },
-        {
-          "_path": "/content/dam/wknd/en/contributors/stacey-roswells",
-          "fullName": "Stacey Roswells"
-        }
-      ]
-    }
-  }
-}
-```
 
 ## Zusätzliche Ressourcen
 
-Weitere Beispiele für GraphQL-Abfragen finden Sie unter: [Erlernen der Verwendung von GraphQL mit AEM - Beispielinhalt und Abfragen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html?lang=de).
+Weitere Beispiele für GraphQL-Abfragen finden Sie unter: [Verwendung von GraphQL mit AEM - Beispielinhalt und Abfragen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html).
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
@@ -299,4 +391,21 @@ Herzlichen Glückwunsch! Sie haben gerade mehrere GraphQL-Abfragen erstellt und 
 
 ## Nächste Schritte {#next-steps}
 
-Im nächsten Kapitel [Abfragende AEM von einer React-App](./graphql-and-external-app.md) erfahren Sie, wie eine externe Anwendung GraphQL-Endpunkte AEM. Die externe App, die die WKND GraphQL React-Beispielanwendung ändert, um Filterungs-GraphQL-Abfragen hinzuzufügen, sodass der Anwender der App Abenteuer nach Aktivität filtern kann. Außerdem werden Sie mit der grundlegenden Fehlerbehandlung vertraut gemacht.
+Im nächsten Kapitel [React-App erstellen](./graphql-and-react-app.md)werden Sie untersuchen, wie eine externe Anwendung GraphQL-Endpunkte abfragen AEM und diese beiden beibehaltenen Abfragen nutzen kann. Außerdem werden Sie mit der grundlegenden Fehlerbehandlung vertraut gemacht.
+
+## Installieren des GraphiQL-Tools (optional) {#install-graphiql}
+
+Für einige Versionen von AEM muss das GraphiQL IDE Tool manuell installiert werden. Befolgen Sie die folgenden Anweisungen, um manuell zu installieren:
+
+1. Gehen Sie zum **[Software-Verteilungsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as a Cloud Service**.
+1. Suchen Sie nach „GraphiQL“ (stellen Sie sicher, dass Sie das **i** in **GraphiQL** einschließen.
+1. Laden Sie die neueste Version **GraphiQL Content Package v.x.x.x** herunter.
+
+   ![Herunterladen des GraphiQL-Pakets](assets/explore-graphql-api/software-distribution.png)
+
+   Die ZIP-Datei ist ein AEM Paket, das direkt installiert werden kann.
+
+1. Gehen Sie im **AEM-Startmenü** zu **Tools** > **Implementierung** > **Pakete**.
+1. Klicken Sie auf **Paket hochladen** und wählen Sie das im vorherigen Schritt heruntergeladene Paket aus. Klicken Sie auf **Installieren**, um das Paket zu installieren.
+
+   ![Installieren des GraphiQL-Pakets](assets/explore-graphql-api/install-graphiql-package.png)

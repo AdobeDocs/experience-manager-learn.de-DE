@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 0dae6243f2a30147bed7079ad06144ad35b781d8
+source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
 workflow-type: tm+mt
-source-wordcount: '1768'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -74,11 +74,11 @@ Die WKND-Referenz-Site enthält Konfigurationen, die zum Anzeigen einer [GraphQL
    >
    > Laden Sie die Standardversion herunter, die mit AEM as a Cloud Service kompatibel ist. **not** die `classic` -Version.
 
-1. Aus dem **AEM Start** Menünavigation zu **Instrumente** > **Implementierung** > **Pakete**.
+1. Gehen Sie im **AEM-Startmenü** zu **Tools** > **Implementierung** > **Pakete**.
 
    ![Navigieren Sie zu Pakete .](assets/setup/navigate-to-packages.png)
 
-1. Klicken **Paket hochladen** und wählen Sie das im vorherigen Schritt heruntergeladene WKND-Paket. Klicken **Installieren** um das Paket zu installieren.
+1. Klicken **Paket hochladen** und wählen Sie das im vorherigen Schritt heruntergeladene WKND-Paket. Klicken Sie auf **Installieren**, um das Paket zu installieren.
 
 1. Aus dem **AEM Start** Menünavigation zu **Assets** > **Dateien**.
 1. Klicken Sie durch die Ordner, um zu **WKND-Site** > **englisch** > **Abenteuer**.
@@ -128,7 +128,7 @@ Eines der Ziele dieses Tutorials besteht darin, zu zeigen, wie AEM Inhalte von e
 
    >[!NOTE]
    >
-   > In einem Produktionsszenario stellt die App eine Verbindung zu einem AEM her **Veröffentlichen** Umgebung. Weitere Informationen hierzu finden Sie im Abschnitt [Produktionsbereitstellung](../multi-step/production-deployment.md) Kapitel.
+   > In einem Produktionsszenario stellt die App eine Verbindung zu einem AEM her **Veröffentlichen** Umgebung. Weitere Informationen hierzu finden Sie im Abschnitt _Produktionsbereitstellung_ Abschnitt.
 
 1. Navigieren Sie zur `aem-guides-wknd-graphql/react-app` Ordner. Installieren und starten Sie das Programm:
 
@@ -175,18 +175,18 @@ Nachdem die React-App ausgeführt wird, aktualisieren Sie den Inhalt in AEM und 
 
 ## 5. Installieren Sie das GraphiQL-Tool {#install-graphiql}
 
-[GraphiQL](https://github.com/graphql/graphiql) ist ein Entwicklungstool und wird nur in Umgebungen auf niedrigerer Ebene wie einer Entwicklungs- oder einer lokalen Instanz benötigt. Mit der GraphiQL IDE können Sie die zurückgegebenen Abfragen und Daten schnell testen und verfeinern. GraphiQL bietet außerdem einfachen Zugriff auf die Dokumentation, sodass Sie leicht wissen können, welche Methoden verfügbar sind.
+[GraphiQL](https://github.com/graphql/graphiql) ist ein Entwicklungstool und wird nur in Umgebungen auf niedrigerer Ebene wie einer Entwicklungs- oder einer lokalen Instanz benötigt. Mit der GraphiQL IDE können Sie die zurückgegebenen Abfragen und Daten schnell testen und verfeinern. GraphiQL bietet auch einen einfachen Zugang zur Dokumentation, sodass man leicht lernen und verstehen kann, welche Methoden verfügbar sind.
 
-1. Navigieren Sie zum **[Software Distribution-Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as a Cloud Service**.
-1. Suchen Sie nach &quot;GraphiQL&quot;(stellen Sie sicher, dass Sie die **i** in **GraphiQL**.
-1. Neueste Version herunterladen **GraphiQL Content Package v.x.x.x**
+1. Gehen Sie zum **[Software-Verteilungsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as a Cloud Service**.
+1. Suchen Sie nach „GraphiQL“ (stellen Sie sicher, dass Sie das **i** in **GraphiQL** einschließen.
+1. Laden Sie die neueste Version **GraphiQL Content Package v.x.x.x** herunter.
 
    ![Herunterladen des GraphiQL-Pakets](../multi-step/assets/explore-graphql-api/software-distribution.png)
 
    Die ZIP-Datei ist ein AEM Paket, das direkt installiert werden kann.
 
-1. Aus dem **AEM Start** Menünavigation zu **Instrumente** > **Implementierung** > **Pakete**.
-1. Klicken **Paket hochladen** und wählen Sie das im vorherigen Schritt heruntergeladene Paket aus. Klicken **Installieren** um das Paket zu installieren.
+1. Gehen Sie im **AEM-Startmenü** zu **Tools** > **Implementierung** > **Pakete**.
+1. Klicken Sie auf **Paket hochladen** und wählen Sie das im vorherigen Schritt heruntergeladene Paket aus. Klicken Sie auf **Installieren**, um das Paket zu installieren.
 
    ![Installieren des GraphiQL-Pakets](../multi-step/assets/explore-graphql-api/install-graphiql-package.png)
 1. Navigieren Sie zur GraphiQL-IDE unter [http://localhost:4502/content/graphiql.html](http://localhost:4502/content/graphiql.html) und beginnen Sie mit der Erforschung der GraphQL-APIs.
@@ -217,7 +217,7 @@ So zeigen Sie die bereitgestellte Konfiguration an:
 
    >[!NOTE]
    >
-   > Die Web-Konsole ist nur im SDK verfügbar. In einer AEM as a Cloud Service Umgebung können diese Informationen über [Entwicklerkonsole](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html).
+   > Die Web-Konsole ist nur im SDK verfügbar. In einer AEM as a Cloud Service Umgebung können diese Informationen über [Entwicklerkonsole](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=de).
 
 1. Klicken Sie im oberen Menü auf **OSGi** > **Konfiguration** die [OSGi-Konfigurationen](http://localhost:4502/system/console/configMgr).
 1. Scrollen Sie nach unten **Adobe Granite Cross-Origin Resource Sharing**.
