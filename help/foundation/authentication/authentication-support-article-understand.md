@@ -1,23 +1,23 @@
 ---
 title: Grundlegendes zur Authentifizierungsunterstützung in AEM
-description: 'Ein konsolidierter Überblick über die von AEM unterstützten Authentifizierungsmechanismen (und gelegentlich Autorisierungsmechanismen). '
+description: Ein konsolidierter Überblick über die von AEM unterstützten Authentifizierungsmechanismen (und gelegentlich Autorisierungsmechanismen).
 version: 6.3, 6.4, 6.5
-feature: Benutzer und Gruppen
+feature: User and Groups
 topics: authentication, security
 activity: understand
 audience: architect, developer, implementer
 doc-type: article
 kt: 406
-topic: Architektur
+topic: Architecture
 role: Architect
 level: Experienced
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
+source-git-commit: 84d7230071544e7cdc63ecc0faa32c03ab337cd6
 workflow-type: tm+mt
-source-wordcount: '134'
-ht-degree: 15%
+source-wordcount: '130'
+ht-degree: 10%
 
 ---
-
 
 # Grundlegendes zur Authentifizierungsunterstützung in AEM 6.x
 
@@ -81,7 +81,7 @@ Ein konsolidierter Überblick über die von AEM unterstützten Authentifizierung
                 <td>ms</td>
             </tr>
             <tr>
-                <td><a href="https://helpx.adobe.com/de/experience-manager/kt/eseminars/gems/aem-oauth-server-functionality-in-aem.html" target="_blank">OAuth 1.0a und 2.0</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-gems-events/assets/oauth-server-functionality-in-aem-7-23-14.pdf" target="_blank">OAuth 1.0a und 2.0</a></td>
                 <td>ms</td>
                 <td>ms</td>
                 <td>ms</td>
