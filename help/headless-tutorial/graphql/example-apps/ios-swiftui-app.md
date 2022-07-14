@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: 8b2c116ceb6ab8c3a009dcec6629c2e97d815b7b
+source-git-commit: 5d32899a58e591b535dab991f89a8f7467b7b435
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 4%
@@ -23,7 +23,7 @@ Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Ado
 
 ![iOS SwiftUI-App mit AEM Headless](./assets/ios-swiftui-app/ios-app.png)
 
-Anzeigen der [Quellcode auf GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-swiftui-app)
+Anzeigen der [Quellcode auf GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app)
 
 ## Voraussetzungen {#prerequisites}
 
@@ -50,7 +50,7 @@ Die iOS-Anwendung ist für die Verbindung mit einem __AEM-Veröffentlichung__ -U
    git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Launch [Xcode](https://developer.apple.com/xcode/) und öffnen Sie den Ordner `ios-swiftui-app`
+1. Launch [Xcode](https://developer.apple.com/xcode/) und öffnen Sie den Ordner `ios-app`
 1. Datei ändern `Config.xcconfig` Datei und Aktualisierung `AEM_SCHEME` und `AEM_HOST` , um Ihren AEM-Veröffentlichungsdienst als Ziel festzulegen.
 
    ```plain
@@ -86,7 +86,7 @@ Die iOS-Anwendung ist für die Verbindung mit einem __AEM-Veröffentlichung__ -U
 
 ## Der Code
 
-Nachstehend finden Sie eine Zusammenfassung zur Erstellung der iOS-Anwendung, zur Verbindung mit AEM Headless zum Abrufen von Inhalten mithilfe von GraphQL-gespeicherten Abfragen und zur Darstellung dieser Daten. Den vollständigen Code finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-swiftui-app).
+Nachstehend finden Sie eine Zusammenfassung zur Erstellung der iOS-Anwendung, zur Verbindung mit AEM Headless zum Abrufen von Inhalten mithilfe von GraphQL-gespeicherten Abfragen und zur Darstellung dieser Daten. Den vollständigen Code finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app).
 
 ### Beständige Abfragen
 
