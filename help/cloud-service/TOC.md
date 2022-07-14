@@ -4,9 +4,9 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: 89982f506a5e1ffc12f84a0f616aaa1dc2e00c5b
+source-git-commit: 52587c1131620d62428ecfc464a97dce00d8a1d8
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '793'
 ht-degree: 29%
 
 ---
@@ -103,7 +103,7 @@ ht-degree: 29%
    + [Flexibles Port-Egress](./networking/flexible-port-egress.md)
    + [Dedizierte Ausgangs-IP-Adresse](./networking/dedicated-egress-ip-address.md)
    + [Virtuelles privates Netzwerk](./networking/vpn.md)
-   + Codebeispiele{#examples}
+   + Code-Beispiele{#examples}
       + [HTTP/HTTPS bei nicht standardmäßigen Ports für flexible Port-Auslösung](./networking/examples/http-on-non-standard-ports-flexible-port-egress.md)
       + [HTTP/HTTPS für dedizierte Ausgangs-IP-Adresse/VPN](./networking/examples/http-dedicated-egress-ip-vpn.md)
       + [SQL-Verbindungen mit DataSourcePool](./networking/examples/sql-datasourcepool.md)
@@ -238,7 +238,7 @@ ht-degree: 29%
       + [Debuggen eines Sekundärs](./asset-compute/test-debug/debug.md)
    + Implementieren von{#deploy}
       + [Bereitstellen in Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
-      + [Integrieren mit AEM](./asset-compute/deploy/processing-profiles.md)
+      + [Integrieren von  in AEM](./asset-compute/deploy/processing-profiles.md)
    + Erweitert{#advanced}
       + [Metadatenarbeiter](./asset-compute/advanced/metadata.md)
    + [Fehlerbehebung](./asset-compute/troubleshooting.md)
@@ -262,6 +262,7 @@ ht-degree: 29%
       + [Admin Console](./cloud-5/season-2/cloud5-admin-console.md)
       + [REPOINIT](./cloud-5/season-2/cloud5-repoinit.md)
       + [Sling-Auftragsplanung](./cloud-5/season-2/cloud5-sling-job-scheduler.md)
+      + [Cache reparieren](./cloud-5/season-2/cloud5-fix-your-cache.md)
 + [AEM Expertenreihe](./aem-experts-series.md)
 + Mehrstufige Tutorials{#multi-step-tutorials}
    + [AEM Sites-Entwicklung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de)
