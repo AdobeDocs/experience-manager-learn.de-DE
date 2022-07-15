@@ -9,10 +9,10 @@ level: Beginner
 kt: 9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
-source-git-commit: 94a57490edb00da072446ee8ca07c12c413ce1ac
+source-git-commit: b4c04a9ef7d8cfdaa5675fdfe259ab9d813fb7e0
 workflow-type: tm+mt
-source-wordcount: '1072'
-ht-degree: 2%
+source-wordcount: '1084'
+ht-degree: 3%
 
 ---
 
@@ -46,7 +46,8 @@ _Screencast von Schritten_
 1. Erstellen eines Git-Repositorys für das WKND Site-Projekt
    1. Auswählen __Repositorys__ in der oberen Navigation
    1. Auswählen __Repository hinzufügen__ in der oberen Aktionsleiste
-   1. Benennen Sie das neue Git-Repository: `aem-headless-quick-setup`
+   1. Benennen Sie das neue Git-Repository: `aem-headless-quick-setup-wknd`
+      + Git-Repository-Namen müssen pro Adobe-Organisation eindeutig sein;
    1. Auswählen __Speichern__ und warten, bis das Git-Repository initialisiert wird
 
 ## 2. Push-Beispiel für ein WKND-Site-Projekt in das Cloud Manager-Git-Repository
@@ -71,13 +72,13 @@ _Screencast von Schritten_
 
       ```shell
       $ cd aem-guides-wknd
-      $ git remote add adobe https://git.cloudmanager.adobe.com/<YOUR ADOBE ORGANIZATION>/aem-headless-quick-setup/
+      $ git remote add adobe https://git.cloudmanager.adobe.com/<YOUR ADOBE ORGANIZATION>/aem-headless-quick-setup-wknd/
       ```
 
 1. Pushen Sie den Quellcode des Beispielprojekts aus Ihrem lokalen Git-Repository in das Cloud Manager-Git-Repository.
 
    ```shell
-   $ git push adobe master:main
+   $ git push adobe main:main
    ```
 
    Wenn Sie nach Anmeldeinformationen gefragt werden, geben Sie die __Benutzername__ und __Passwort__ von Cloud Manager __Repository-Informationen__ modal.
@@ -100,10 +101,10 @@ _Screencast von Schritten_
       1. Auswählen __Bereitstellungs-Trigger > Bei Git-Änderungen__
       1. Auswählen __Verhalten bei wichtigen Metrikfehlern > Sofort fortfahren__
       1. Klicken Sie auf __Weiter__
-   1. Im __Quellcode__ tab
+   1. Auf der Registerkarte __Quell-Code__
       1. Auswählen __Vollständiger Stack-Code__ option
       1. Wählen Sie die __AEM as a Cloud Service Entwicklungsumgebung__ von __Förderfähige Bereitstellungsumgebungen__ Auswahlfeld
-      1. Auswählen `aem-headless-quick-setup` im __Repository__ Auswahlfeld
+      1. Auswählen `aem-headless-quick-setup-wknd` im __Repository__ Auswahlfeld
       1. Auswählen `main` von __Git-Verzweigung__ Auswahlfeld
       1. Wählen Sie __Speichern__ aus
 1. Führen Sie die __Dev-Bereitstellungs-Pipeline__
@@ -113,7 +114,7 @@ _Screencast von Schritten_
    1. Auswählen __Ausführen__ und bestätigen Sie im Modal
    1. Wählen Sie die __...__ rechts von der derzeit ausgeführten Pipeline
    1. Auswählen __Details anzeigen__
-1. Überwachen Sie in den Details der Pipeline-Ausführung den Fortschritt, bis er erfolgreich abgeschlossen wurde. Die Pipelineausführung sollte zwischen 45 und 60 Minuten dauern.
+1. Überwachen Sie in den Details der Pipeline-Ausführung den Fortschritt, bis er erfolgreich abgeschlossen wurde. Die Pipelineausführung sollte zwischen 30 und 40 Minuten dauern.
 
 ## 4. Laden Sie die WKND React-App herunter und führen Sie sie aus.
 
@@ -126,15 +127,15 @@ _Screencast von Schritten_
 
    ```shell
    $ cd ~/Code
-   $ git clone --branch tutorial/react git@github.com:adobe/aem-guides-wknd-graphql.git
+   $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Öffnen Sie den Ordner . `~/Code/aem-guides-wknd-graphql` in Ihrer IDE.
-1. Öffnen Sie in der IDE die -Datei. `react-app/.env.development`.
+1. Öffnen Sie den Ordner . `~/Code/aem-guides-wknd-graphql/react-app` in Ihrer IDE.
+1. Öffnen Sie in der IDE die -Datei. `.env.development`.
 1. Auf das AEM as a Cloud Service verweisen __Veröffentlichen__ Host-URI des Dienstes aus der  `REACT_APP_HOST_URI` -Eigenschaft.
 
    ```plain
-   REACT_APP_HOST_URI=https://publish-pXXXX-eYYYY.adobeaemcloud.com/
+   REACT_APP_HOST_URI=https://publish-pXXXX-eYYYY.adobeaemcloud.com
    ...
    ```
 
@@ -164,19 +165,19 @@ _Screencast von Schritten_
 >[!VIDEO](https://video.tv.adobe.com/v/339077/?quality=12&learn=on)
 
 1. Bei AEM as a Cloud Service Authoring-Dienst anmelden
-1. Navigieren Sie zu __Assets > Dateien > WKND > Englisch > Abenteuer__
+1. Navigieren Sie zu __Assets > Dateien > WKND-freigegeben > Englisch > Abenteuer__
 1. Öffnen Sie die __Radfahren in Süd-Utah__ Ordner
 1. Wählen Sie die __Radfahren in Süd-Utah__ Inhaltsfragment und wählen Sie __Bearbeiten__ in der oberen Aktionsleiste
 1. Aktualisieren Sie einige Felder des Inhaltsfragments, z. B.:
    + Titel: `Cycling Utah's National Parks`
    + Reisedauer: `6 Days`
    + Schwierigkeit: `Intermediate`
-   + Preis: `$3500`
-   + Primäres Bild: `/content/dam/wknd/en/activities/cycling/mountain-biking.jpg`
+   + Preis: `3500`
+   + Primäres Bild: `/content/dam/wknd-shared/en/activities/cycling/mountain-biking.jpg`
 1. Auswählen __Speichern__ in der oberen Aktionsleiste
 1. Auswählen __Quick Publish__ in der oberen Aktionsleiste __...__
 1. React-App aktualisieren, die ausgeführt wird [http://localhost:3000](http://localhost:3000).
-1. Wählen Sie in der React-App die jetzt aktualisierte aus und überprüfen Sie die Inhaltsänderungen, die am Inhaltsfragment vorgenommen wurden.
+1. Wählen Sie in der React-App das jetzt aktualisierte Cycling-Abenteuer aus und überprüfen Sie die Inhaltsänderungen, die am Inhaltsfragment vorgenommen wurden.
 
 1. Verwenden Sie denselben Ansatz im AEM-Autorendienst:
    1. Rückgängigmachen der Veröffentlichung eines vorhandenen Adventure-Inhaltsfragments und Überprüfen, ob es aus dem React-App-Erlebnis entfernt wurde
