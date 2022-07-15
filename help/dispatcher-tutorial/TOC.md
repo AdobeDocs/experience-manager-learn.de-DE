@@ -11,15 +11,15 @@ index: y
 team: TM
 source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
 workflow-type: tm+mt
-source-wordcount: '37'
-ht-degree: 72%
+source-wordcount: '36'
+ht-degree: 75%
 
 ---
 
 
 # AEM Dispatcher Cache-Tutorial{#dispatcher-tutorial}
 
-+ [Überblick](overview.md)
++ [Übersicht](overview.md)
 + [1 - Konzepte, Muster und Muster](chapter-1.md)
 + [2 - Infrastrukturmuster](chapter-2.md)
 + [3 - Fortgeschrittene Zwischenspeicherungsthemen](chapter-3.md)

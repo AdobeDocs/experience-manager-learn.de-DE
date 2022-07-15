@@ -6,7 +6,7 @@ sub-product: foundation
 index: y
 source-git-commit: 65a40826d3be322673e116d98124c3cbfb1d6eb4
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '220'
 ht-degree: 16%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 16%
 + Sicherheit {#security}
    + [AEM Sicherheitsbenachrichtigung (November 2018)](./security/aem-security-notification-2018-11.md)
    + [Für Cross-Origin Resource Sharing (CORS) entwickeln](./security/develop-for-cross-origin-resource-sharing.md)
-   + [Cross-Origin Resource Sharing (CORS) verstehen](./security/understand-cross-origin-resource-sharing.md)
+   + [Verstehen von Cross-Origin Resource Sharing (CORS)](./security/understand-cross-origin-resource-sharing.md)
    + [Verwenden des SSL-Assistenten](./security/use-the-ssl-wizard.md)
 + Workflow {#workflow}
    + [Workflow-Editor verwenden](./workflow/use-the-workflow-editor.md)

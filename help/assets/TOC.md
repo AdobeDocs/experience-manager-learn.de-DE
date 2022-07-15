@@ -7,7 +7,7 @@ team: TM
 source-git-commit: c6caa39075bc3c26dedeca4246e7e1f85887b124
 workflow-type: tm+mt
 source-wordcount: '378'
-ht-degree: 32%
+ht-degree: 33%
 
 ---
 
@@ -102,7 +102,7 @@ ht-degree: 32%
 + Dynamic Media{#dynamic-media}
    + [Übersicht über Dynamic Media](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Smartes Zuschneiden](dynamic-media/smart-crop-feature-video-use.md)
-   + [Experience Fragments](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
+   + [Experience Fragments ](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
    + [Interaktives Video](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
    + [Videoplayer](dynamic-media/dynamic-media-video-player-feature-video-use.md)
    + [360-Grad-Video](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
@@ -155,7 +155,7 @@ ht-degree: 32%
    + [Einrichten von Asset-Vorlagen](asset-templates/asset-templates-technical-video-setup.md)
    + [Verwenden von Asset-Katalogen](asset-templates/asset-catalog-template-feature-video-use.md)
 
-+ Bereitstellung{#deployment}
++ Implementierung{#deployment}
    + [Multi-Tenancy und gleichzeitige Entwicklung](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html)
++ [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=de)

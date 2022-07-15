@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte mit dem AEM SPA-Editor und Angular
-description: Erstellen Sie Ihre erste Angular-Einzelseiten-App (SPA), die in Adobe Experience Manager bearbeitet werden kann, AEM mit dem WKND-SPA. Erfahren Sie, wie Sie mit dem Angular JS-Framework mit AEM SPA Editor eine SPA erstellen. Dieses mehrteilige Tutorial führt durch die Implementierung einer Angular-Anwendung für eine fiktive Lifestyle-Marke, die WKND. In diesem Tutorial wird das Ende der Erstellung des SPA und die Integration mit AEM behandelt.
+description: Erstellen Sie Ihre erste Angular-Einzelseitenanwendung (SPA), die in Adobe Experience Manager mit der WKND-SPA bearbeitet werden kann. Erfahren Sie, wie Sie eine SPA mit dem Angular JS-Framework und dem SPA-Editor von AEM erstellen. Dieses mehrteilige Tutorial führt durch die Implementierung eines Angular-Programms für eine fiktive Lifestyle-Marke namens WKND. Das Tutorial beschreibt die komplette Erstellung der SPA und die Integration mit AEM.
 sub-product: sites
 topics: development
 version: Cloud Service
@@ -17,13 +17,13 @@ exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
 workflow-type: tm+mt
 source-wordcount: '698'
-ht-degree: 12%
+ht-degree: 25%
 
 ---
 
 # Erstellen Ihres ersten Angular-SPA-Projekts in AEM {#introduction}
 
-Willkommen bei einem mehrteiligen Tutorial, das für Entwickler entwickelt wurde, die mit der Funktion **SPA Editor** in Adobe Experience Manager (AEM) neu sind. Dieses Tutorial führt durch die Implementierung einer Angular-Anwendung für eine fiktive Lifestyle-Marke, die WKND. Das Angular-Programm wird entwickelt und für die Bereitstellung mit AEM SPA Editor entwickelt, der Angular-Komponenten AEM Komponenten zuordnet. Die abgeschlossene SPA, die in AEM bereitgestellt wird, kann mit herkömmlichen In-line-Bearbeitungswerkzeugen von AEM dynamisch erstellt werden.
+Willkommen bei einem mehrteiligen Tutorial, das für Entwickler konzipiert ist, die neu bei der **SPA Editor** Funktion in Adobe Experience Manager (AEM). Dieses Tutorial führt durch die Implementierung einer Angular-Anwendung für eine fiktive Lifestyle-Marke, die WKND. Das Angular-Programm wird entwickelt und für die Bereitstellung mit AEM SPA Editor entwickelt, der Angular-Komponenten AEM Komponenten zuordnet. Die abgeschlossene SPA, die in AEM bereitgestellt wird, kann mit herkömmlichen In-line-Bearbeitungswerkzeugen von AEM dynamisch erstellt werden.
 
 ![Endgültige SPA implementiert](assets/wknd-spa-implementation.png)
 
@@ -31,9 +31,9 @@ Willkommen bei einem mehrteiligen Tutorial, das für Entwickler entwickelt wurde
 
 ## Info
 
-Ziel dieses mehrteiligen Tutorials ist es, Entwicklern beizubringen, wie eine Angular-Anwendung implementiert wird, um mit der SPA Editor-Funktion von AEM zu arbeiten. In einem realen Szenario werden die Entwicklungsaktivitäten nach Persona aufgeschlüsselt, häufig unter Einbeziehung eines **Frontend-Entwicklers** und eines **Back End-Entwicklers**. Wir glauben, dass es für jeden Entwickler, der an einem AEM SPA Editor-Projekt beteiligt sein wird, von Vorteil ist, dieses Tutorial abzuschließen.
+Ziel dieses mehrteiligen Tutorials ist es, Entwicklern beizubringen, wie eine Angular-Anwendung implementiert wird, um mit der SPA Editor-Funktion von AEM zu arbeiten. In einem realen Szenario werden die Entwicklungsaktivitäten nach Persona aufgeschlüsselt, wobei häufig eine **Frontend-Entwickler** und **Back End-Entwickler**. Wir glauben, dass es für jeden Entwickler, der an einem AEM SPA Editor-Projekt beteiligt sein wird, von Vorteil ist, dieses Tutorial abzuschließen.
 
-Das Tutorial wurde für die Verwendung mit **AEM als Cloud Service** entwickelt und ist rückwärtskompatibel mit **AEM 6.5.4+** und **AEM 6.4.8+**. Die SPA wird mithilfe von implementiert:
+Das Tutorial wurde für die Verwendung mit **AEM as a Cloud Service** und ist abwärtskompatibel mit **AEM 6.5.4+** und **AEM 6.4.8+**. Die SPA wird mithilfe von implementiert:
 
 * [Maven-AEM-Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de)
 * [SPA Editor](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
@@ -46,7 +46,7 @@ Das Tutorial wurde für die Verwendung mit **AEM als Cloud Service** entwickelt 
 
 Den gesamten Tutorial-Code finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-spa).
 
-Die [neueste Codebasis](https://github.com/adobe/aem-guides-wknd-spa/releases) ist als herunterladbare AEM verfügbar.
+Die [aktuelle Codebasis](https://github.com/adobe/aem-guides-wknd-spa/releases) ist als herunterladbare AEM Packages verfügbar.
 
 ## Voraussetzungen
 
@@ -54,30 +54,30 @@ Bevor Sie mit diesem Tutorial beginnen, benötigen Sie Folgendes:
 
 * Grundlegendes zu HTML, CSS und JavaScript
 * Grundlegende Vertrautheit mit [Angular](https://angular.io/)
-* [AEM als Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html#download-the-aem-as-a-cloud-service-sdk),  [AEM 6.5.4 ](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65) oder  [AEM 6.4.8+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
+* [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=de#download-the-aem-as-a-cloud-service-sdk), [AEM 6.5.4+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#65) oder [AEM 6.4.8+](https://helpx.adobe.com/experience-manager/aem-releases-updates.html#64)
 * [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) (3.3.9 oder höher)
-* [Node.](https://nodejs.org/en/) jsand  [npm](https://www.npmjs.com/)
+* [Node.js](https://nodejs.org/en/) und [npm](https://www.npmjs.com/)
 
-*Obwohl dies nicht erforderlich ist, ist es von Vorteil, über ein grundlegendes Verständnis für die  [Entwicklung herkömmlicher AEM Sites-Komponenten](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html) zu verfügen.*
+*Es ist zwar nicht erforderlich, es ist jedoch von Vorteil, über ein grundlegendes Verständnis der [Entwickeln herkömmlicher AEM Sites-Komponenten](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de).*
 
 ## Lokale Entwicklungsumgebung {#local-dev-environment}
 
-Zum Abschluss dieses Tutorials ist eine lokale Entwicklungsumgebung erforderlich. Screenshots und Videos werden mit dem AEM as a Cloud Service SDK erfasst, das in einer Mac OS-Umgebung mit [Visual Studio Code](https://code.visualstudio.com/) als IDE ausgeführt wird. Befehle und Code sollten unabhängig vom lokalen Betriebssystem sein, sofern nicht anders angegeben.
+Zum Abschluss dieses Tutorials ist eine lokale Entwicklungsumgebung erforderlich. Screenshots und Videos werden mit dem AEM as a Cloud Service SDK erfasst, das in einer Mac OS-Umgebung mit [Visual Studio-Code](https://code.visualstudio.com/) als IDE. Befehle und Code sollten unabhängig vom lokalen Betriebssystem sein, sofern nicht anders angegeben.
 
 >[!NOTE]
 >
-> **Neu bei AEM as a Cloud Service?** Sehen Sie sich die  [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit dem AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) an.
+> **Neu bei AEM as a Cloud Service?** Sehen Sie sich die [Befolgen Sie die Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit dem AEM as a Cloud Service SDK.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de).
 >
-> **Neu bei AEM 6.5?** Sehen Sie sich die  [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=de) an.
+> **Neu bei AEM 6.5?** Sehen Sie sich die [Anleitung zum Einrichten einer lokalen Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=de).
 
 ## Nächste Schritte {#next-steps}
 
-Worauf wartest du?! Beginnen Sie das Tutorial, indem Sie zum Kapitel [SPA Editor Project](create-project.md) navigieren und erfahren Sie, wie Sie mit dem Projektarchetyp ein SPA Editor aktiviertes Projekt generieren.
+Worauf wartest du?! Starten Sie das Tutorial, indem Sie zur [SPA Editor-Projekt](create-project.md) Kapitel und erfahren Sie, wie Sie ein Projekt mit aktiviertem SPA-Editor mithilfe des Projektarchetyps AEM erstellen.
 
 ## Abwärtskompatibilität {#compatibility}
 
-Der Projektcode für dieses Tutorial wurde für AEM als Cloud Service erstellt. Um den Projektcode abwärtskompatibel für **6.5.4+** und **6.4.8+** zu machen, wurden mehrere Änderungen vorgenommen.
+Der Projektcode für dieses Tutorial wurde für AEM as a Cloud Service erstellt. Damit der Projektcode abwärtskompatibel zu **6.5.4+** und **6.4.8+** mehrere Änderungen vorgenommen wurden.
 
 Die [UberJar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#what-is-the-uberjar) **v6.4.4** wurde als Abhängigkeit einbezogen:
 
@@ -92,7 +92,7 @@ Die [UberJar](https://experienceleague.adobe.com/docs/experience-manager-65/deve
 </dependency>
 ```
 
-Es wurde ein zusätzliches Maven-Profil mit dem Namen `classic` hinzugefügt, um den Build für AEM 6.x-Umgebungen zu ändern:
+Ein zusätzliches Maven-Profil mit dem Namen `classic` wurde hinzugefügt, um den Build zu ändern, um AEM 6.x-Umgebungen auszuwählen:
 
 ```xml
   <!-- AEM 6.x Profile to include Core Components-->
@@ -106,10 +106,10 @@ Es wurde ein zusätzliches Maven-Profil mit dem Namen `classic` hinzugefügt, um
     </profile>
 ```
 
-Das Profil `classic` ist standardmäßig deaktiviert. Wenn Sie dem Tutorial mit AEM 6.x folgen, fügen Sie das Profil `classic` hinzu, wann immer Sie angewiesen sind, einen Maven-Build durchzuführen:
+Die `classic` Profil ist standardmäßig deaktiviert. Wenn Sie dem Tutorial mit AEM 6.x folgen, fügen Sie die `classic` Profil, wann immer es angewiesen wird, einen Maven-Build durchzuführen:
 
 ```shell
 $ mvn clean install -PautoInstallSinglePackage -Pclassic
 ```
 
-Verwenden Sie beim Generieren eines neuen Projekts für eine AEM-Implementierung immer die neueste Version des [AEM Projektarchetyps](https://github.com/adobe/aem-project-archetype) und aktualisieren Sie `aemVersion`, um Ihre beabsichtigte Version von AEM auszuwählen.
+Verwenden Sie beim Generieren eines neuen Projekts für eine AEM-Implementierung immer die neueste Version des [AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype) und aktualisieren Sie die `aemVersion` , um Ihre beabsichtigte Version von AEM auszuwählen.

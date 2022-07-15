@@ -6,7 +6,7 @@ feature-set: Experience Manager Sites, Experience Manager
 source-git-commit: 6f930acd0b51c1f398be7a84efa99944dd3ce704
 workflow-type: tm+mt
 source-wordcount: '435'
-ht-degree: 31%
+ht-degree: 32%
 
 ---
 
@@ -37,7 +37,7 @@ ht-degree: 31%
    + [Kernkomponenten](components/core-components-feature-video-understand.md)
    + [Komponentenkonsole](components/components-console-feature-video-use.md)
 + Inhaltsfragmente {#content-fragments}
-   + [Erstellen von Inhaltsfragmenten](content-fragments/content-fragments-feature-video-use.md)
+   + [Authoring mit Inhaltsfragmenten](content-fragments/content-fragments-feature-video-use.md)
    + [Bereitstellen von Inhaltsfragmenten](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [Übersetzen von Inhaltsfragmenten](content-fragments/content-fragments-translation-feature-video-use.md)
    + [Inhaltsfragmente im Vergleich zu Experience Fragments](content-fragments/understand-content-fragments-and-experience-fragments.md)
@@ -58,7 +58,7 @@ ht-degree: 31%
    + [Implementieren der einfachen Suche](developing/search-tutorial-develop.md)
    + [Freigabe in Social Media](developing/social-media-sharing-technical-video-use.md)
    + [Anpassen von Komponentensymbolen](developing/component-icons-technical-video-develop.md)
-+ Personalisierung {#personalization}
++ Personalisierung  {#personalization}
    + [Integration mit Adobe Target](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html)
    + [Einrichten von Experience Fragments und Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [Verwenden von Experience Fragments mit Adobe Target](personalization/experience-fragment-target-offer-feature-video-use.md)
