@@ -4,9 +4,9 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: 52587c1131620d62428ecfc464a97dce00d8a1d8
+source-git-commit: fa85f0270e21cc9857f95c541a06e87cf26d5798
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '796'
 ht-degree: 29%
 
 ---
@@ -71,6 +71,7 @@ ht-degree: 29%
       + [OSGi-Konfigurationen mit OCD](./developing/osgi-services/configurations-ocd.md)
    + Erweitert{#advanced}
       + [Service-Benutzer](./developing/advanced/service-users.md)
+      + [Zwischenspeichern von Seitenvarianten](./developing/advanced/variant-caching.md)
    + [AEM SDK-API-JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + Debugging-AEM{#debugging}
    + Debugging des AEM SDK{#debugging-aem-sdk}
