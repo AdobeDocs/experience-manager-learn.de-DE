@@ -1,56 +1,219 @@
 ---
 title: Speichern von adaptiven Formulardaten
 description: Speichern adaptiver Formulardaten in DataBase als Teil Ihres AEM-Workflows
-feature: Adaptives Forms, Formulardatenmodell
+feature: Adaptive Forms, Form Data Model
 version: 6.3,6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 3dd552da-fc7c-4fc7-97ec-f20b6cc33df0
+source-git-commit: 649e5efb34ae494be7692a7d44d8ee5a4a8bd441
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 2%
+source-wordcount: '408'
+ht-degree: 3%
 
 ---
-
 
 # Speichern von Übermittlungen adaptiver Formulare in der Datenbank
 
 Es gibt mehrere Möglichkeiten, die gesendeten Formulardaten in der Datenbank Ihrer Wahl zu speichern. Eine JDBC-Datenquelle kann verwendet werden, um die Daten direkt in der Datenbank zu speichern. Ein benutzerdefiniertes OSGI-Bundle kann geschrieben werden, um die Daten in der Datenbank zu speichern. In diesem Artikel wird der benutzerdefinierte Prozessschritt in AEM Workflow zum Speichern der Daten verwendet.
 Der Anwendungsfall besteht darin, einen AEM Workflow für die Übermittlung eines adaptiven Formulars Trigger und einen Schritt im Workflow zu speichern, um die übermittelten Daten in der Datenbank zu speichern.
 
-**Führen Sie die unten beschriebenen Schritte aus, um diese Funktion auf Ihrem System verwenden zu können.**
 
-* [Laden Sie die ZIP-Datei herunter und extrahieren Sie den Inhalt auf Ihre Festplatte](assets/storeafdataindb.zip)
 
-   * Importieren Sie die Datei StoreAFInDBWorkflow.zip mithilfe des Package Managers in AEM. Das Paket enthält einen Beispiel-Workflow, der die AF-Daten in DB speichert. Öffnen Sie das Workflow-Modell. Der Workflow umfasst nur einen Schritt. Dieser Schritt ruft den im Bundle geschriebenen Code auf, um die AF-Daten in der Datenbank zu speichern. Ich übergebe ein einziges Argument an den Prozess. Dies ist der Name des adaptiven Formulars, dessen Daten gespeichert werden.
-   * Stellen Sie die Datei &quot;insertdata.core-0.0.1-SNAPSHOT.jar&quot;mithilfe der Felix-Webkonsole bereit. Dieses Bundle enthält den Code zum Schreiben der gesendeten Formulardaten in die Datenbank
+## JDBC-Verbindungspool
 
-* Gehen Sie zu [ConfigMgr](http://localhost:4502/system/console/configMgr)
+* Navigieren Sie zu [ConfigMgr](http://localhost:4502/system/console/configMgr)
 
    * Suchen Sie nach &quot;JDBC Connection Pool&quot;. Erstellen Sie einen neuen Day Commons JDBC Connection Pool. Geben Sie die spezifischen Einstellungen für Ihre Datenbank an.
 
-   * ![JDBC-Verbindungspool](assets/jdbc-connection-pool.png)
-   * Suchen Sie nach &quot;**Formulardaten in DB** einfügen&quot;.
-   * Geben Sie die spezifischen Eigenschaften für Ihre Datenbank an.
-      * DataSourceName:Name der Datenquelle, die Sie zuvor konfiguriert haben.
-      * TableName - Name der Tabelle, in der Sie die AF-Daten speichern möchten
-      * FormName - Spaltenname für den Namen des Formulars
-      * ColumnName - Spaltenname für die AF-Daten
+   * ![JDBC-Verbindungspool](assets/aemformstutorial-jdbc.png)
 
-   ![insertdata](assets/insertdata.PNG)
+## Angeben von Datenbankdetails
 
-* Erstellen eines adaptiven Formulars.
+* Suchen Sie nach &quot;**Angeben von Datenbankdetails**&quot;
+* Geben Sie die spezifischen Eigenschaften für Ihre Datenbank an.
+   * DataSourceName:Name der Datenquelle, die Sie zuvor konfiguriert haben.
+   * TableName - Name der Tabelle, in der Sie die AF-Daten speichern möchten
+   * FormName - Spaltenname für den Namen des Formulars
+   * ColumnName - Spaltenname für die AF-Daten
 
-* Verknüpfen Sie das adaptive Formular mit AEM Workflow(StoreAFValuesinDB), wie im Screenshot unten dargestellt.
-
-* Stellen Sie sicher, dass Sie &quot;data.xml&quot;im Datendateipfad angeben, wie im Screenshot unten dargestellt
-
-   ![Sendung](assets/submissionafforms.png)
-
-* Vorschau des Formulars anzeigen und senden
-
-* Wenn alles gut funktioniert hat, sollten die Formulardaten in der von Ihnen angegebenen Tabelle und Spalte gespeichert sein
+![insertdata](assets/specify-database-details.png)
 
 
+
+## Code für die OSGi-Konfiguration
+
+```java
+package com.aemforms.dbsamples.core.insertFormData;
+
+import org.osgi.service.metatype.annotations.AttributeDefinition;
+import org.osgi.service.metatype.annotations.ObjectClassDefinition;
+
+@ObjectClassDefinition(name = "Specify Database details", description = "Specify Database details")
+
+public @interface InsertFormDataConfiguration {
+  @AttributeDefinition(name = "DataSourceName", description = "Data Source Name configured")
+  String dataSourceName() default "";
+  @AttributeDefinition(name = "TableName", description = "Name of the table")
+  String tableName() default "";
+  @AttributeDefinition(name = "FormName", description = "Column Name for form name")
+  String formName() default "";
+  @AttributeDefinition(name = "columnName", description = "Column Name for form data")
+  String columnName() default "";
+
+}
+```
+
+## Konfigurationswerte lesen
+
+```java
+package com.aemforms.dbsamples.core.insertFormData;
+import org.osgi.service.component.annotations.Activate;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.metatype.annotations.Designate;
+
+@Component(service={InsertFormDataConfigurationService.class})
+@Designate(ocd=InsertFormDataConfiguration.class)
+
+public class InsertFormDataConfigurationService {
+	public String TABLE_NAME;
+	public String DATA_SOURCE_NAME;
+	public String COLUMN_NAME;
+	public String FORM_NAME;
+	@Activate	  
+	  protected final void activate(InsertFormDataConfiguration insertFormDataConfiguration)
+	  {
+		TABLE_NAME = insertFormDataConfiguration.tableName();
+		DATA_SOURCE_NAME = insertFormDataConfiguration.dataSourceName();
+		COLUMN_NAME = insertFormDataConfiguration.columnName();
+		FORM_NAME = insertFormDataConfiguration.formName();
+	  }
+	public String getTABLE_NAME()
+	{
+		return TABLE_NAME;
+	}
+	public String getDATA_SOURCE_NAME()
+	{
+		return DATA_SOURCE_NAME;
+	}
+	public String getCOLUMN_NAME()
+	{
+		return COLUMN_NAME;
+	}
+	public String getFORM_NAME()
+	{
+		return FORM_NAME;
+	}
+}
+```
+
+## Code zum Implementieren des Prozessschritts
+
+```java
+package com.aemforms.dbsamples.core.insertFormData;
+import java.io.InputStream;
+import java.io.StringWriter;
+import java.nio.charset.StandardCharsets;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.jcr.Node;
+import javax.jcr.Session;
+import javax.sql.DataSource;
+
+import org.apache.commons.io.IOUtils;
+import org.osgi.framework.Constants;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.adobe.granite.workflow.WorkflowException;
+import com.adobe.granite.workflow.WorkflowSession;
+import com.adobe.granite.workflow.exec.WorkItem;
+import com.adobe.granite.workflow.exec.WorkflowProcess;
+import com.adobe.granite.workflow.metadata.MetaDataMap;
+import com.day.commons.datasource.poolservice.DataSourcePool;
+
+@Component(property = {
+  Constants.SERVICE_DESCRIPTION + "=Insert Form Data in Database",
+  Constants.SERVICE_VENDOR + "=Adobe Systems",
+  "process.label" + "=Insert Form Data in Database"
+})
+
+public class InsertAfData implements WorkflowProcess {
+  @Reference
+  InsertFormDataConfigurationService insertFormDataConfig;
+  @Reference
+  DataSourcePool dataSourcePool;
+  private final Logger log = LoggerFactory.getLogger(getClass());
+  @Override
+  public void execute(WorkItem workItem, WorkflowSession session, MetaDataMap metaDataMap) throws WorkflowException {
+
+    String proccesArgsVals = (String) metaDataMap.get("PROCESS_ARGS", (Object)
+      "string");
+    String[] values = proccesArgsVals.split(",");
+    String AdaptiveFormName = values[0];
+    String formDataFile = values[1];
+    String payloadPath = workItem.getWorkflowData().getPayload().toString();
+    Session jcrSession = (Session) session.adaptTo((Class) Session.class);
+    String dataFilePath = payloadPath + "/" + formDataFile + "/jcr:content";
+    log.debug("The data file path is " + dataFilePath);
+    PreparedStatement ps = null;
+    Connection con = null;
+    DataSource dbSource = null;
+
+    try {
+      dbSource = (DataSource) dataSourcePool.getDataSource(insertFormDataConfig.getDATA_SOURCE_NAME());
+      log.debug("Got db source");
+      con = dbSource.getConnection();
+
+      Node xmlDataNode = jcrSession.getNode(dataFilePath);
+      InputStream xmlDataStream = xmlDataNode.getProperty("jcr:data").getBinary().getStream();
+      StringWriter writer = new StringWriter();
+      String encoding = StandardCharsets.UTF_8.name();
+      IOUtils.copy(xmlDataStream, writer, encoding);
+      String queryStmt = "insert into " + insertFormDataConfig.TABLE_NAME + "(" + insertFormDataConfig.COLUMN_NAME + "," + insertFormDataConfig.FORM_NAME + ") values(?,?)";
+      log.debug("The query Stmt is " + queryStmt);
+      ps = con.prepareStatement(queryStmt);
+      ps.setString(1, writer.toString());
+      ps.setString(2, AdaptiveFormName);
+      ps.executeUpdate();
+
+    } catch (Exception e) {
+      log.debug("The error message is " + e.getMessage());
+    } finally {
+      if (ps != null) {
+        try {
+          ps.close();
+        } catch (SQLException sqlException) {
+          log.debug(sqlException.getMessage());
+        }
+      }
+      if (con != null) {
+        try {
+          con.close();
+        } catch (SQLException sqlException) {
+          log.error("Unable to close connection to database", sqlException);
+        }
+      }
+    }
+  }
+
+}
+```
+
+## Bereitstellen der Beispiel-Assets
+
+* Stellen Sie sicher, dass Sie Ihren JDBC-Verbindungspool konfiguriert haben
+* Geben Sie die Datenbankdetails mithilfe von configMgr an.
+* [Laden Sie die ZIP-Datei herunter und extrahieren Sie den Inhalt auf Ihre Festplatte](assets/article-assets.zip)
+
+   * Stellen Sie die JAR-Datei mit [AEM Web-Konsole](http://localhost:4502/system/console/bundles). Diese JAR-Datei enthält den Code zum Speichern der Formulardaten in der Datenbank.
+
+   * Importieren Sie die beiden ZIP-Dateien in [AEM mit Package Manager](http://localhost:4502/crx/packmgr/index.jsp). Dadurch erhalten Sie die [Beispiel-Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) und [Beispiel für ein adaptives Formular](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) wird der Workflow bei der Formularübermittlung Trigger. Beachten Sie die Prozessargumente im Workflow-Schritt. Diese Argumente geben den Formularnamen und den Namen der Datendatei an, die die Daten des adaptiven Formulars enthalten wird. Die Datendatei wird im Payload-Ordner im CRX-Repository gespeichert. Beachten Sie, wie die [adaptives Formular](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) ist so konfiguriert, dass der AEM Workflow bei der Übermittlung und die Datendateikonfiguration (data.xml) Trigger werden.
+
+   * Sehen Sie sich das Formular in der Vorschau an und füllen Sie es aus. Es sollte eine neue Zeile angezeigt werden, die in Ihrer Datenbank erstellt wurde.
 
