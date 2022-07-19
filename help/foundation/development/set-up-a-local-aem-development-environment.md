@@ -1,6 +1,6 @@
 ---
-title: Lokale AEM-Entwicklungsumgebung einrichten
-description: Anleitung zum Einrichten einer lokalen Entwicklung für Adobe Experience Manager, AEM. Behandelt wichtige Themen wie lokale Installation, Apache Maven, integrierte Entwicklungsumgebungen und Debugging/Fehlerbehebung. Die Entwicklung mit Eclipse IDE, CRXDE-Lite, Visual Studio Code und IntelliJ werden besprochen.
+title: Einrichten einer lokalen AEM-Entwicklungsumgebung
+description: 'Erfahren Sie, wie Sie eine lokale Entwicklungsumgebung für Experience Manager einrichten. Machen Sie sich mit der lokalen Installation, Apache Maven, integrierten Entwicklungsumgebungen sowie dem Debugging und der Fehlerbehebung vertraut. Verwenden Sie Eclipse IDE, CRXDE-Lite, Visual Studio Code und IntelliJ. '
 version: 6.4, 6.5
 feature: Developer Tools
 topics: development
@@ -10,9 +10,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '2582'
+source-wordcount: '2579'
 ht-degree: 2%
 
 ---
@@ -170,7 +170,7 @@ Die **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** ist eine leistungsstark
 * [**Download**](https://code.visualstudio.com/Download) **Visual Studio-Code**
 * **[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)** - FTP-ähnliches Tool für JCR-Inhalte
 * **[aemfed](https://aemfed.io/)** - Beschleunigen Sie Ihren AEM Frontend-Workflow.
-* **[AEM Sync](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - Von der Community unterstützte* Erweiterung für Visual Studio Code
+* **[AEM Sync](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - Von der Gemeinschaft gefördert&#42; Erweiterung für Visual Studio Code
 
 >[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
 

@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte mit AEM Sites - Seiten und Vorlagen
-description: Erfahren Sie mehr über die Beziehung zwischen einer Basisseitenkomponente und bearbeitbaren Vorlagen. Erfahren Sie, wie Kernkomponenten in das Projekt integriert werden, und lernen Sie erweiterte Richtlinienkonfigurationen bearbeitbarer Vorlagen kennen, um eine gut strukturierte Artikelseitenvorlage basierend auf einem Modell aus Adobe XD zu erstellen.
+description: Erfahren Sie mehr über die Beziehung zwischen einer Basisseitenkomponente und bearbeitbaren Vorlagen. Erfahren Sie, wie Kernkomponenten in das Projekt integriert werden. Erfahren Sie mehr über erweiterte Richtlinienkonfigurationen bearbeitbarer Vorlagen, um eine gut strukturierte Artikelseitenvorlage zu erstellen, die auf einem Modell von Adobe XD basiert.
 feature: Core Components, Editable Templates, Page Editor
 topic: Content Management, Development
 role: Developer
@@ -9,9 +9,9 @@ mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3081'
 ht-degree: 2%
 
 ---

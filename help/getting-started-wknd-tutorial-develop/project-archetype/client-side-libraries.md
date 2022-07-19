@@ -1,6 +1,6 @@
 ---
-title: Client-seitige Bibliotheken und Frontend-Workflow
-description: Erfahren Sie, wie Client-seitige Bibliotheken oder Client-Bibliotheken zum Bereitstellen und Verwalten von CSS und JavaScript für eine Adobe Experience Manager (AEM) Sites-Implementierung verwendet werden. In diesem Tutorial wird auch erläutert, wie das Modul ui.frontend, ein Webpack-Projekt, in den End-to-End-Build-Prozess integriert werden kann.
+title: Client-seitige Bibliotheken und Front-End-Workflow
+description: Erfahren Sie, wie Sie Client-seitige Bibliotheken oder Clientlibs verwenden, um CSS und JavaScript für eine Adobe Experience Manager (AEM) Sites-Implementierung bereitzustellen und zu verwalten. Erfahren Sie, wie das Modul ui.frontend, ein Webpack-Projekt, in den End-to-End-Build-Prozess integriert werden kann.
 sub-product: sites
 version: 6.4, 6.5, Cloud Service
 type: Tutorial
@@ -11,14 +11,14 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: 1a73d7ee1f71a5bd78114398f04e98a894847957
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '2882'
+source-wordcount: '2878'
 ht-degree: 4%
 
 ---
 
-# Client-seitige Bibliotheken und Frontend-Workflow {#client-side-libraries}
+# Client-seitige Bibliotheken und Front-End-Workflow {#client-side-libraries}
 
 Erfahren Sie, wie Client-seitige Bibliotheken oder Client-Bibliotheken zum Bereitstellen und Verwalten von CSS und JavaScript für eine Adobe Experience Manager (AEM) Sites-Implementierung verwendet werden. In diesem Tutorial wird auch erläutert, wie die [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=de) -Modul, ein entkoppeltes [Webpack](https://webpack.js.org/) -Projekt in den End-to-End-Build-Prozess integriert werden können.
 

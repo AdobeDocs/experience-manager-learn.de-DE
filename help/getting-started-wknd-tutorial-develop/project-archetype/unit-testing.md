@@ -1,6 +1,6 @@
 ---
 title: Unit-Tests
-description: In diesem Tutorial wird die Implementierung eines Unit-Tests behandelt, der das Verhalten des Sling-Modells der Byline-Komponente überprüft, das im Tutorial zur benutzerdefinierten Komponente erstellt wurde.
+description: Implementieren Sie einen Komponententest, der das Verhalten des im Tutorial zur benutzerdefinierten Komponente erstellten Sling-Modells der Byline-Komponente überprüft.
 sub-product: sites
 version: 6.5, Cloud Service
 type: Tutorial
@@ -12,16 +12,16 @@ kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
 exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
 workflow-type: tm+mt
-source-wordcount: '3025'
+source-wordcount: '3020'
 ht-degree: 0%
 
 ---
 
 # Unit-Tests {#unit-testing}
 
-In diesem Tutorial wird die Implementierung eines Unit-Tests behandelt, der das Verhalten des Sling-Modells der Byline-Komponente überprüft, das im [Benutzerdefinierte Komponente](./custom-component.md) Tutorial.
+Dieses Tutorial behandelt die Implementierung eines Komponententests, der das Verhalten des Sling-Modells der Byline-Komponente überprüft, das im [Benutzerdefinierte Komponente](./custom-component.md) Tutorial.
 
 ## Voraussetzungen {#prerequisites}
 
