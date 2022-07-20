@@ -3,14 +3,14 @@ title: iOS App - Beispiel AEM Headless
 description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese iOS-Anwendung zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen können.
 version: Cloud Service
 mini-toc-levels: 2
-kt: 9166
-thumbnail: KT-9166.jpg
+kt: 10587
+thumbnail: KT-10587.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: 4b8f7d9c6def8c121f3c975218b7214d271fa77f
+source-git-commit: cd7cb89f407f5e0c465544593563534472daf928
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 4%
