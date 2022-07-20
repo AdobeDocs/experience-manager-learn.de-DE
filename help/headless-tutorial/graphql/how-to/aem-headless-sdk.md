@@ -9,7 +9,7 @@ level: Intermediate
 kt: 10269
 thumbnail: KT-10269.jpeg
 exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: 595d990b7d8ed3c801a085892fef38d780082a15
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 1%
@@ -25,10 +25,6 @@ Das AEM Headless-SDK ist für verschiedene Plattformen verfügbar:
 + [AEM Headless SDK für Client-seitige Browser (JavaScript)](https://github.com/adobe/aem-headless-client-js)
 + [AEM Headless SDK für server-side/Node.js (JavaScript)](https://github.com/adobe/aem-headless-client-nodejs)
 + [AEM Headless-SDK für Java™](https://github.com/adobe/aem-headless-client-java)
-
-## GraphQL-Abfragen
-
-AEM unterstützt clientdefinierte GraphQL-Abfragen, es AEM jedoch Best Practice, [persistente GraphQL-Abfragen](#persisted-graphql-queries).
 
 ## Persistente GraphQL-Abfragen
 
@@ -202,3 +198,8 @@ Neu `useEffect` -Hooks können für jede persistente Abfrage erstellt werden, di
 +++
 
 <p> </p>
+
+## GraphQL-Abfragen
+
+AEM unterstützt clientdefinierte GraphQL-Abfragen, es AEM jedoch Best Practice, [persistente GraphQL-Abfragen](#persisted-graphql-queries).
+
