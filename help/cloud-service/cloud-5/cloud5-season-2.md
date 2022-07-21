@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 52587c1131620d62428ecfc464a97dce00d8a1d8
+source-git-commit: c061ea9d08606052c4b2cf5b3c84d6f1df5a57fa
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '440'
 ht-degree: 1%
 
 ---
@@ -114,14 +114,16 @@ Jede Jahreszeit variiert in ihrer Länge und wird nach einem festen Zeitplan ver
   </tr>
 <tr>
    <td>
-            <img alt="Korrigieren Sie Ihre... Neuschreibungen" src="./imgs/coming-soon.png"/>
+           <a href="season-2/cloud5-fix-your-rewrites.md">
+               <img alt="Korrigieren Sie Ihre ... Rewrites" src="./imgs/s2/006-thumb.png"/>
+            </a>
       <div>
-            <strong>Korrigieren Sie Ihre... Neuschreibungen</strong>
+            <a href="season-2/cloud5-fix-your-rewrites.md"><strong>Korrigieren Sie Ihre... Neuschreibungen</strong></a>
          <br/><em>mit Darin Kuntze &amp; James Talbot, Senior Cloud Architects</em>
       </div>
       <p>
         <br/>
-         Am 22. Juli 2022
+         Schnelle Einblicke in Dinge, die dazu beitragen, Ihre Umschreibungsentwicklung und -optimierung auf AEM as a Cloud Service zu beschleunigen.
       </p>
      </td>   
      <td>
