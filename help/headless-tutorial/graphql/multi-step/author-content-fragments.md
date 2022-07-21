@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '819'
+ht-degree: 3%
 
 ---
 
@@ -59,7 +59,7 @@ Inhaltsfragmente werden in Ordnern in AEM Assets gespeichert. Um Inhaltsfragment
 
    ![Zulässige Inhaltsfragmentmodelle](assets/author-content-fragments/allowed-content-fragment-models.png)
 
-   Diese Richtlinien werden automatisch von allen Unterordnern übernommen und können überschrieben werden. Beachten Sie, dass Sie auch Modelle nach Tags zulassen oder Modelle aus anderen Projektkonfigurationen aktivieren können (z. B. WKND Shared). Dieser Mechanismus bietet eine leistungsstarke Möglichkeit, Ihre Inhaltshierarchie zu verwalten.
+   Diese Richtlinien werden automatisch von allen Unterordnern übernommen und können überschrieben werden. Beachten Sie, dass Sie auch Modelle nach Tags zulassen oder Modelle aus anderen Projektkonfigurationen aktivieren können. Dieser Mechanismus bietet eine leistungsstarke Möglichkeit, Ihre Inhaltshierarchie zu verwalten.
 
 1. Tippen **Speichern und schließen** , um die Änderungen an den Ordnereigenschaften zu speichern.
 
@@ -121,17 +121,9 @@ Füllen Sie anschließend die neu erstellten Fragmente mit Daten.
 
    ![Inhaltsfragment öffnen](assets/author-content-fragments/open-fragment-for-editing.png)
 
-1. Der Inhaltsfragment-Editor enthält ein Formular, das auf dem Inhaltsfragmentmodell basiert. Füllen Sie die verschiedenen Felder aus, um dem **John Doe** Fragment. Wählen Sie für den Profilbild eines der Bilder in WKND Shared aus oder laden Sie Ihr eigenes Bild in AEM Assets hoch.
+1. Der Inhaltsfragment-Editor enthält ein Formular, das auf dem Inhaltsfragmentmodell basiert. Füllen Sie die verschiedenen Felder aus, um dem **John Doe** Fragment. Laden Sie für den Profilbild Ihr eigenes Bild in AEM Assets hoch.
 
    ![Inhaltsfragmente-Editor](assets/author-content-fragments/content-fragment-editor-jd.png)
-
-1. Tippen Sie als Nächstes auf **Variante erstellen** in der linken Leiste. Fügen Sie im Dialogfeld einen Typ hinzu: **Alternative** für den Variantennamen.
-
-1. Ändern Sie einige Elemente im **Alternative** -Variante.
-
-   ![Alternative Version](assets/author-content-fragments/alternate-variation-john-doe-fragment.png)
-
-   Mit der Variantenfunktion können Autoren verschiedene Versionen desselben Inhaltsfragments erstellen. Dies kann verwendet werden, um eine Zusammenfassungsversion eines Langform-Artikels bereitzustellen. Standardmäßig ist eine **Übergeordnet** -Variante erstellt wird. Mehrzeilige Textfeldelemente einer Variante können mit der Übergeordneten Variante synchronisiert werden.
 
 1. Tippen **Speichern und schließen** , um die Änderungen am Fragment &quot;Max Mustermann&quot;zu speichern.
 1. Kehren Sie zur Benutzeroberfläche &quot;Inhaltsfragment&quot;zurück und öffnen Sie die **Alison Smith** Datei zur Bearbeitung.
@@ -151,11 +143,17 @@ Füllen Sie anschließend die neu erstellten Fragmente mit Daten.
 
 1. Tippen **Speichern und schließen** , um die Änderungen am Team Alpha-Fragment zu speichern.
 
-## WKND-Inhaltsfragmente durchsuchen (optional) {#explore-wknd-content-fragments}
+## Inhaltsfragmente veröffentlichen
 
-Wenn Sie [WKND Shared Sample Content installiert](./overview.md#install-sample-content) Sie können die Inhaltsfragmente nach den Modellen &quot;Adventures&quot;, &quot;Artikel&quot;und &quot;Autoren&quot;untersuchen, um weitere Ideen zum Erstellen von Inhalten zu erhalten.
+Veröffentlichen Sie nach Überprüfung und Überprüfung die erstellten `Content Fragments`
 
-![WKND-Inhaltsfragmente](assets/author-content-fragments/wknd-content-fragments.png)
+1. Tippen Sie auf dem AEM Startbildschirm auf **Inhaltsfragmente** , um die Benutzeroberfläche für Inhaltsfragmente zu öffnen.
+
+1. Erweitern Sie in der linken Leiste **Mein Projekt** und tippen **englisch**.
+
+1. Tippen Sie auf das Kontrollkästchen neben den Inhaltsfragmenten und tippen Sie auf **Veröffentlichen**
+
+   ![Inhaltsfragment veröffentlichen](assets/author-content-fragments/publish-content-fragment.png)
 
 ## Herzlichen Glückwunsch! {#congratulations}
 

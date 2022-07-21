@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1134'
+ht-degree: 4%
 
 ---
 
@@ -27,7 +27,7 @@ Sie können auch Ihr eigenes Modell gemäß den grundlegenden Schritten erstelle
 
 ## Voraussetzungen {#prerequisites}
 
-Dies ist ein mehrteiliges Tutorial, bei dem davon ausgegangen wird, dass ein [AEM Autorenumgebung ist verfügbar](./overview.md#prerequisites) und optional die [WKND Freigegebener Beispielinhalt wurde installiert](./overview.md#install-sample-content).
+Dies ist ein mehrteiliges Tutorial, bei dem davon ausgegangen wird, dass ein [AEM Autorenumgebung ist verfügbar](./overview.md#prerequisites)
 
 ## Ziele {#objectives}
 
@@ -39,7 +39,7 @@ Dies ist ein mehrteiliges Tutorial, bei dem davon ausgegangen wird, dass ein [AE
 
 Eine Projektkonfiguration enthält alle Inhaltsfragmentmodelle, die mit einem bestimmten Projekt verknüpft sind, und bietet eine Möglichkeit, Modelle zu organisieren. Es muss mindestens ein Projekt erstellt werden **before** Erstellen eines neuen Inhaltsfragmentmodells.
 
-1. Melden Sie sich beim AEM an **Autor** Umgebung.
+1. Melden Sie sich beim AEM an **Autor** Umwelt (z. B. `https://author-pYYYY-eXXXX.adobeaemcloud.com/`)
 1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Allgemein** > **Konfigurationsbrowser**.
 
    ![Navigieren Sie zum Konfigurationsbrowser .](assets/content-fragment-models/navigate-config-browser.png)
@@ -65,7 +65,6 @@ Erstellen Sie ein neues Modell für eine **Person**: das Datenmodell, das eine P
 
    ![Navigieren zu Inhaltsfragmentmodellen](assets/content-fragment-models/navigate-cf-models.png)
 
-   Wenn Sie die [Beispielinhalt](overview.md#install-sample-content) dann werden Ihnen zwei Ordner angezeigt: **Mein Projekt** und **WKND Shared**.
 1. Navigieren Sie zur **Mein Projekt** Ordner.
 1. Tippen **Erstellen** in der oberen rechten Ecke, um die **Modell erstellen** Assistent.
 1. Für **Modelltitel** enter: **Person** und tippen **Erstellen**.
@@ -165,23 +164,23 @@ Erstellen Sie ein neues Modell für eine **Team**, das Datenmodell für ein Pers
 
    ![Zwei Modelle](assets/content-fragment-models/two-new-models.png)
 
-## Inspect der WKND-Inhaltsfragmentmodelle (optional)
+## Veröffentlichen von Projektkonfiguration und Inhaltsfragmentmodellen
 
-Wenn Sie [WKND Shared Sample Content installiert](./overview.md#install-sample-content) Sie können die Modelle &quot;Adventure&quot;, &quot;Article&quot;und &quot;Author&quot;überprüfen, um mehr Ideen für Datenmodellierungstechniken zu erhalten.
+Nach Überprüfung und Überprüfung veröffentlichen Sie die `Project Configuration` &amp; `Content Fragment Model`
 
-1. Aus dem **AEM Start** Menünavigation zu **Instrumente** > **Allgemein** > **Inhaltsfragmentmodelle**.
+1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Allgemein** > **Konfigurationsbrowser**.
 
-1. Navigieren Sie zur **WKND Shared** -Ordner und sollten drei Modelle angezeigt werden: Artikel, Abenteuer und Autor.
+1. Tippen Sie auf das Kontrollkästchen neben **Mein Projekt** und tippen **Veröffentlichen**
 
-1. Inspect der Modelle durch Bewegen des Mauszeigers über die Karte und Tippen auf das Bearbeitungssymbol (Bleistift)
+   ![Veröffentlichungsprojektkonfiguration](assets/content-fragment-models/publish-project-config.png)
 
-   ![WKND-Modelle](assets/content-fragment-models/wknd-shared-models.png)
+1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Allgemein** > **Inhaltsfragmentmodelle**.
 
-1. Dadurch wird die **Inhaltsfragmentmodell-Editor** und Sie können die verschiedenen verwendeten Datentypen überprüfen.
+1. Navigieren Sie zur **Mein Projekt** Ordner.
 
-   >[!CAUTION]
-   >
-   > Modell ändern **after** Inhaltsfragmente wurden erstellt und haben nachgelagerte Auswirkungen. Feldwerte in vorhandenen Fragmenten werden nicht mehr referenziert und das von GraphQL angezeigte Datenschema ändert sich, was sich auf bestehende Anwendungen auswirkt.
+1. Tippen **Person** und **Team** Modelle und tippen **Veröffentlichen**
+
+   ![Inhaltsfragmentmodelle veröffentlichen](assets/content-fragment-models/publish-content-fragment-model.png)
 
 ## Herzlichen Glückwunsch! {#congratulations}
 

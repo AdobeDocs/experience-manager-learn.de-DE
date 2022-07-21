@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: 410eb23534e083940bf716194576e099d22ca205
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1532'
+ht-degree: 7%
 
 ---
 
@@ -56,9 +56,9 @@ Es muss ein GraphQL-Endpunkt konfiguriert werden, um GraphQL-API-Abfragen für I
 
    >[!NOTE]
    >
-   > Es kann auch ein globaler Endpunkt erstellt werden, der Abfragen von Modellen über mehrere Projekte hinweg ermöglicht. Wenn Sie beispielsweise eine Abfrage mit den Modellen in der **WKND Shared** und im **Mein Projekt**. Dies sollte mit Vorsicht und nur bei Bedarf verwendet werden, da dadurch die Umgebung möglicherweise zusätzlichen Sicherheitslücken ausgesetzt wird.
+   > Es kann auch ein globaler Endpunkt erstellt werden, um Abfragen für Modelle über mehrere Konfigurationen hinweg zu aktivieren. Dies sollte mit Vorsicht verwendet werden, da es die Umgebung für zusätzliche Sicherheitslücken öffnen und die Verwaltung von AEM insgesamt komplexer machen kann.
 
-1. Es sollten nun zwei GraphQL-Endpunkte angezeigt werden, die in Ihrer Umgebung aktiviert sind (vorausgesetzt, Sie haben den freigegebenen WKND-Inhalt installiert).
+1. Es sollte nun ein GraphQL-Endpunkt in Ihrer Umgebung aktiviert sein.
 
    ![Aktivierte grafische Endpunkte](assets/explore-graphql-api/enabled-graphql-endpoints.png)
 
@@ -76,11 +76,11 @@ Erkunden Sie als Nächstes die Leistungsfähigkeit AEM GraphQL-API mit der integ
    >
    > Bei älteren Versionen von AEM ist die GraphiQL IDE möglicherweise nicht integriert. Sie kann manuell installiert werden, indem Sie den folgenden Schritten folgen: [instructions](#install-graphiql).
 
-1. Setzen Sie in der oberen rechten Ecke die **Endpunkt** nach **Mein Projektendpunkt**.
+1. Stellen Sie in der oberen rechten Ecke sicher, dass die **Endpunkt** auf **Mein Projektendpunkt**.
 
    ![GraphQL-Endpunkt festlegen](assets/explore-graphql-api/set-my-project-endpoint.png)
 
-   Dadurch werden alle Abfragen auf Modelle angewendet, die in der **Mein Projekt** Projekt. Beachten Sie, dass es auch einen -Endpunkt für **WKND Shared**.
+Dadurch werden alle Abfragen auf Modelle angewendet, die in der **Mein Projekt** Projekt.
 
 ### Liste von Inhaltsfragmenten abfragen {#query-list-cf}
 
@@ -370,16 +370,28 @@ Speichern Sie anschließend zwei einfache Abfragen, die im nächsten Kapitel ver
 
    ![Abgeschlossene persistente Abfragen](assets/explore-graphql-api/final-persisted-queries.png)
 
+
+## Veröffentlichen von GraphQL-Endpunkten und persistenten Abfragen
+
+Nach Überprüfung und Überprüfung veröffentlichen Sie die `GraphQL Endpoint` &amp; `Persisted Queries`
+
+1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Allgemein** > **GraphQL**.
+
+1. Tippen Sie auf das Kontrollkästchen neben **Mein Projektendpunkt** und tippen **Veröffentlichen**
+
+   ![GraphQL-Endpunkt veröffentlichen](assets/explore-graphql-api/publish-graphql-endpoint.png)
+
+1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Allgemein** > **GraphQL-Abfrage-Editor**
+
+1. Tippen Sie auf *All-Teams* Tippen Sie im Bedienfeld &quot;Persistente Abfragen&quot;auf **Veröffentlichen**
+
+   ![Persistente Abfragen veröffentlichen](assets/explore-graphql-api/publish-persisted-query.png)
+
+1. Wiederholen Sie den obigen Schritt für `person-by-name` Abfrage
+
 ## Lösungsdateien {#solution-files}
 
 Laden Sie den Inhalt, die Modelle und die persistenten Abfragen herunter, die in den letzten drei Kapiteln erstellt wurden: [tutorial-solution-content.zip](assets/explore-graphql-api/tutorial-solution-content.zip)
-
-## Persistente WKND-Abfragen durchsuchen (optional) {#explore-wknd-content-fragments}
-
-Wenn Sie [WKND Shared Sample Content installiert](./overview.md#install-sample-content) Sie können persistente Abfragen wie Abenteuer-alle, Abenteuer-für-Aktivität, Abenteuer-Pfade etc. überprüfen und ausführen.
-
-![WKND - persistente Abfragen](assets/explore-graphql-api/wknd-persisted-queries.png)
-
 
 ## Zusätzliche Ressourcen
 
