@@ -1,21 +1,21 @@
 ---
 title: Adobe IMS-Produktprofile und -AEM
 description: Adobe IMS-Produktprofile berechtigen Benutzer dazu, sich bei einem AEM-Autorendienst anzumelden und eine Grundlinie für den Zugriff bereitzustellen, je nachdem, welchem Produktprofil sie angehören.
-topic: Administration, Sicherheit
-feature: Benutzer und Gruppen
+topic: Administration, Security
+feature: User and Groups
 role: Admin
 level: Beginner
 kt: 5000
 thumbnail: 39156.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 089a557c-5155-489c-bccf-0cb97e95840c
+source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 12%
+source-wordcount: '146'
+ht-degree: 13%
 
 ---
 
-
-# Adobe IMS-Produktprofile
+# Adobe IMS-Produktprofile {#adobe-ims-product-profiles}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_productprofiles"
@@ -30,4 +30,3 @@ Adobe IMS-Produktprofile berechtigen Benutzer dazu, sich bei einem AEM-Autorendi
 ## Zusätzliche Ressourcen
 
 + [Verwalten von Produkten und Benutzerzugriff in der Dokumentation zu Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)
-

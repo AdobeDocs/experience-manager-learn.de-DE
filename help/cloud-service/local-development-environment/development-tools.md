@@ -1,5 +1,5 @@
 ---
-title: Einrichten der Entwicklungstools für AEM as a Cloud Service-Entwicklung
+title: Einrichten der Entwicklungstools für AEM as a Cloud Service Entwicklung
 description: Richten Sie eine lokale Entwicklungsmaschine mit allen Grundlinien-Tools ein, die für die lokale Entwicklung mit AEM erforderlich sind.
 feature: Developer Tools
 version: Cloud Service
@@ -8,15 +8,15 @@ thumbnail: 25907.jpg
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
+exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
+source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
 workflow-type: tm+mt
 source-wordcount: '1435'
 ht-degree: 3%
 
 ---
 
-
-# Einrichten von Entwicklungs-Tools
+# Einrichten von Entwicklungs-Tools {#set-up-development-tools}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_devtools"
@@ -27,7 +27,7 @@ ht-degree: 3%
 
 Für die Entwicklung von Adobe Experience Manager (AEM) ist ein minimaler Satz von Entwicklungs-Tools erforderlich, die auf dem Entwicklercomputer installiert und eingerichtet werden. Diese Instrumente unterstützen die Entwicklung und den Aufbau von AEM.
 
-Beachten Sie, dass `~` als Kurzbezeichnung für das Benutzerverzeichnis verwendet wird. Unter Windows entspricht dies `%HOMEPATH%`.
+Beachten Sie Folgendes: `~` wird als Kurzbezeichnung für das Benutzerverzeichnis verwendet. Unter Windows entspricht dies dem `%HOMEPATH%`.
 
 ## Java installieren
 
@@ -50,7 +50,7 @@ Homebrew ist ein Open-Source-Paketmanager für macOS, Windows und Linux. Alle un
 1. Überprüfen Sie, ob Homebrew bereits installiert ist, indem Sie den Befehl ausführen: `brew --version`.
 1. Wenn Homebrew nicht installiert ist, installieren Sie Homebrew
    + [Installieren von Homebrew auf macOS](https://brew.sh/)
-      + Für Homebrew unter macOS ist [Xcode](https://apps.apple.com/us/app/xcode/id497799835) oder [Befehlszeilenwerkzeuge](https://developer.apple.com/download/more/) erforderlich, die über den Befehl installiert werden können:
+      + Für Homebrew auf macOS [Xcode](https://apps.apple.com/us/app/xcode/id497799835) oder [Befehlszeilenwerkzeuge](https://developer.apple.com/download/more/), install-able über den Befehl:
          + `xcode-select --install`
    + [Installieren von Homebrew unter Linux](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
    + [Installieren von Homebrew unter Windows 10](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
@@ -58,11 +58,11 @@ Homebrew ist ein Open-Source-Paketmanager für macOS, Windows und Linux. Alle un
 
 ![Homebrew](./assets/development-tools/homebrew.png)
 
-Wenn Sie Homebrew verwenden, befolgen Sie die Anweisungen __Installieren mit Homebrew__ in den folgenden Abschnitten. Wenn Sie __nicht__ mit Homebrew arbeiten, installieren Sie die Tools unter Verwendung der betriebssystemspezifischen Links.
+Wenn Sie Homebrew verwenden, folgen Sie dem __Installation mit Homebrew__ Anweisungen in den folgenden Abschnitten. Wenn Sie __not__ Installieren Sie mithilfe von Homebrew die Tools mithilfe der betriebssystemspezifischen Links.
 
 ## Git installieren
 
-[](https://git-scm.com/) Gibt das von  [Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html) verwendete Quellcodeverwaltungssystem an und ist daher für die Entwicklung erforderlich.
+[Git](https://git-scm.com/) ist das von [Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html)und ist daher für die Entwicklung erforderlich.
 
 + Git mithilfe von Homebrew installieren
    1. Öffnen Sie Ihr Terminal/Ihre Eingabeaufforderung.
@@ -77,7 +77,7 @@ Wenn Sie Homebrew verwenden, befolgen Sie die Anweisungen __Installieren mit Hom
 
 ## Installieren von Node.js (und npm){#node-js}
 
-[Node.](https://nodejs.org) jsis ist eine JavaScript-Laufzeitumgebung, die zum Arbeiten mit den Frontend-Assets des  __ui.__ frontendsub-Projekts eines AEM Projekts verwendet wird. Node.js wird mit [npm](https://www.npmjs.com/) bereitgestellt. Dies ist der De-facto-Paketmanager von Node.js, der zur Verwaltung von JavaScript-Abhängigkeiten verwendet wird.
+[Node.js](https://nodejs.org) ist eine JavaScript-Laufzeitumgebung, die zum Arbeiten mit den Frontend-Assets der AEM verwendet wird. __ui.frontend__ Unterprojekt. Node.js wird mit [npm](https://www.npmjs.com/), ist der De-facto-Package-Manager von Node.js, der zur Verwaltung von JavaScript-Abhängigkeiten verwendet wird.
 
 + Installieren von Node.js mithilfe von Homebrew
    1. Öffnen Sie Ihr Terminal/Ihre Eingabeaufforderung.
@@ -96,11 +96,11 @@ Wenn Sie Homebrew verwenden, befolgen Sie die Anweisungen __Installieren mit Hom
 >
 >[AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype)-basierte AEM Projekte installieren eine isolierte Version von Node.js zum Zeitpunkt der Erstellung. Es ist gut, die Version des lokalen Entwicklungssystems mit den Node.js- und NPM-Versionen, die in der Reactor pom.xml Ihres AEM Maven-Projekts angegeben sind, synchronisieren (oder nahe daran) zu lassen.
 >
->In diesem Beispiel [AEM Project Reactor pom.xml](https://github.com/adobe/aem-guides-wknd/blob/9ac94f3f40c978a53ec88fae79fbc17dd2db72f2/pom.xml#L117-L118) finden Sie Informationen dazu, wo Sie die Build-Versionen Node.js und npm finden.
+>Siehe dieses Beispiel [AEM Project Reactor pom.xml](https://github.com/adobe/aem-guides-wknd/blob/9ac94f3f40c978a53ec88fae79fbc17dd2db72f2/pom.xml#L117-L118) für den Speicherort der Build-Versionen Node.js und npm.
 
 ## Maven installieren
 
-Apache Maven ist das Open-Source-Java-Befehlszeilenwerkzeug, mit dem AEM Projekte erstellt werden, die aus dem AEM Projekt-Maven-Archetyp generiert wurden. Alle wichtigen IDEs ([IntelliJ IDEA](https://www.jetbrains.com/idea/), [Visual Studio Code](https://code.visualstudio.com/), [Eclipse](https://www.eclipse.org/) usw.) über integrierte Maven-Unterstützung verfügen.
+Apache Maven ist das Open-Source-Java-Befehlszeilenwerkzeug, mit dem AEM Projekte erstellt werden, die aus dem AEM Projekt-Maven-Archetyp generiert wurden. Alle wichtigen IDEs ([IntelliJ IDEA](https://www.jetbrains.com/idea/), [Visual Studio-Code](https://code.visualstudio.com/), [Eclipse](https://www.eclipse.org/)usw.) über integrierte Maven-Unterstützung verfügen.
 
 + Maven mithilfe von Homebrew installieren
    1. Öffnen Sie Ihr Terminal/Ihre Eingabeaufforderung.
@@ -116,47 +116,47 @@ Apache Maven ist das Open-Source-Java-Befehlszeilenwerkzeug, mit dem AEM Projekt
 
 ## Einrichten der Adobe I/O-CLI{#aio-cli}
 
-Die [Adobe I/O-CLI](https://github.com/adobe/aio-cli) oder `aio` bietet Befehlszeilenzugriff auf eine Vielzahl von Adobe-Services, einschließlich [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) und [Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). Die Adobe I/O-CLI spielt eine wesentliche Rolle bei der Entwicklung von AEM as a Cloud Service, da sie Entwicklern Folgendes ermöglicht:
+Die [Adobe I/O CLI](https://github.com/adobe/aio-cli)oder `aio`bietet Befehlszeilenzugriff auf eine Vielzahl von Adobe-Diensten, darunter [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) und [asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). Die Adobe I/O-CLI spielt eine wesentliche Rolle bei der Entwicklung auf AEM as a Cloud Service, da sie Entwicklern Folgendes ermöglicht:
 
 + Trackinglogs von AEM as a Cloud Services services
 + Verwalten von Cloud Manager-Pipelines über die CLI
 
 ### Installieren der Adobe I/O-CLI
 
-1. Stellen Sie sicher, dass [Node.js](#node-js) installiert ist, da die Adobe I/O-CLI ein NPM-Modul ist.
-   + Führen Sie `node --version` zur Bestätigung aus
-1. Führen Sie `npm install -g @adobe/aio-cli` aus, um das `aio` npm-Modul global zu installieren.
+1. Sichern [Node.js ist installiert](#node-js) da die Adobe I/O-CLI ein NPM-Modul ist
+   + Ausführen `node --version` zur Bestätigung
+1. Ausführen `npm install -g @adobe/aio-cli` , um `aio` npm-Modul global
 
 ### Einrichten des Adobe I/O CLI Cloud Manager-Plug-ins{#aio-cloud-manager}
 
-Mit dem Adobe I/O Cloud Manager-Plug-in kann die aio-CLI über den Befehl `aio cloudmanager` mit Adobe Cloud Manager interagieren.
+Das Adobe I/O Cloud Manager-Plug-in ermöglicht der API-CLI die Interaktion mit Adobe Cloud Manager über die `aio cloudmanager` Befehl.
 
-1. Führen Sie `aio plugins:install @adobe/aio-cli-plugin-cloudmanager` aus, um das [aio Cloud Manager-Plug-in](https://github.com/adobe/aio-cli-plugin-cloudmanager) zu installieren.
+1. Ausführen `aio plugins:install @adobe/aio-cli-plugin-cloudmanager` , um [aio Cloud Manager-Plug-in](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
 ### Einrichten des Adobe I/O CLI Asset compute-Plug-ins{#aio-asset-compute}
 
-Mit dem Adobe I/O Cloud Manager-Plug-in kann die aio-CLI Asset compute-Sekundäre über den Befehl `aio asset-compute` generieren und ausführen.
+Mit dem Adobe I/O Cloud Manager-Plug-in kann die aio-CLI Asset compute-Sekundäre über die `aio asset-compute` Befehl.
 
-1. Führen Sie `aio plugins:install @adobe/aio-cli-plugin-asset-compute` aus, um das [aio Asset compute-Plug-in](https://github.com/adobe/aio-cli-plugin-asset-compute) zu installieren.
+1. Ausführen `aio plugins:install @adobe/aio-cli-plugin-asset-compute` , um [aio Asset compute-Plug-in](https://github.com/adobe/aio-cli-plugin-asset-compute).
 
 ### Einrichten der Adobe I/O CLI-Authentifizierung
 
-Damit die Adobe I/O-CLI mit Cloud Manager kommunizieren kann, muss eine [Cloud Manager-Integration in der Adobe I/O Console](https://github.com/adobe/aio-cli-plugin-cloudmanager) erstellt werden und die Anmeldeinformationen müssen für die erfolgreiche Authentifizierung erhalten werden.
+Damit die Adobe I/O-CLI mit Cloud Manager kommunizieren kann, muss ein [Die Cloud Manager-Integration muss in der Adobe I/O Console erstellt werden](https://github.com/adobe/aio-cli-plugin-cloudmanager), und die Anmeldeinformationen müssen für die erfolgreiche Authentifizierung erhalten werden.
 
-1. Melden Sie sich bei [console.adobe.io](https://console.adobe.io) an.
+1. Anmelden bei [console.adobe.io](https://console.adobe.io)
 1. Stellen Sie sicher, dass Ihr Unternehmen, das das Cloud Manager-Produkt enthält, mit dem eine Verbindung hergestellt werden soll, im Adobe Org-Umschalter aktiv ist.
-1. Erstellen Sie ein neues oder öffnen Sie ein vorhandenes [Adobe I/O-Programm](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)
+1. Erstellen Sie eine neue oder öffnen Sie eine bestehende [Adobe I/O](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)
    + Adobe I/O Console-Programme sind einfach organisatorische Zusammenstellungen von Integrationen, erstellen oder verwenden Sie ein vorhandenes Programm, je nachdem, wie Sie Ihre Integrationen verwalten möchten.
    + Wenn Sie ein neues Projekt erstellen, wählen Sie bei entsprechender Aufforderung (vs. &quot;Aus Vorlage erstellen&quot;)
    + Adobe I/O Console-Programme unterscheiden sich von Cloud Manager-Programmen
 1. Erstellen Sie eine neue Cloud Manager-API-Integration mit dem Profil &quot;Entwickler - Cloud Service&quot;.
-1. Rufen Sie die Anmeldedaten für das Dienstkonto (JWT) ab, um die [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication) der Adobe I/O CLI zu füllen.
-1. Laden Sie die Datei `config.json` in die Adobe I/O-CLI.
+1. Die Anmeldedaten für das Dienstkonto (JWT) abrufen, um die Adobe I/O-CLI zu füllen. [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication)
+1. Laden Sie die `config.json` in die Adobe I/O-CLI
    + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager PATH_TO_CONFIG_JSON_FILE --file --json`
-1. Laden Sie die Datei `private.key` in die Adobe I/O-CLI.
+1. Laden Sie die `private.key` in die Adobe I/O-CLI
    + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key PATH_TO_PRIVATE_KEY_FILE --file`
 
-Starten Sie [Ausführen von Befehlen](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) für Cloud Manager über die Adobe I/O-CLI.
+Starten [Ausführen von Befehlen](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) für Cloud Manager über die Adobe I/O-CLI.
 
 ## Einrichten der Entwicklungs-IDE
 
@@ -164,7 +164,7 @@ AEM Entwicklung besteht in erster Linie aus der Java- und Front-End-Entwicklung 
 
 ### IntelliJ IDEA
 
-__[IntelliJ ](https://www.jetbrains.com/idea/)__ IDEAist eine leistungsstarke IDE zur Java-Entwicklung. IntelliJ IDEA ist in zwei Geschmacksrichtungen erhältlich: eine kostenlose Community-Edition und eine kommerzielle (bezahlte) Ultimate-Version. Die kostenlose Community-Version reicht für AEM Entwicklung aus, aber das Ultimate [erweitert seinen Funktionssatz](https://www.jetbrains.com/idea/download).
+__[IntelliJ IDEA](https://www.jetbrains.com/idea/)__ ist eine leistungsstarke IDE für Java-Entwicklung. IntelliJ IDEA ist in zwei Geschmacksrichtungen erhältlich: eine kostenlose Community-Edition und eine kommerzielle (bezahlte) Ultimate-Version. Die freie Gemeinschaftsversion ist ausreichend für AEM Entwicklung, aber die Ultimate [Erweitert seinen Funktionssatz](https://www.jetbrains.com/idea/download).
 
 >[!VIDEO](https://video.tv.adobe.com/v/26089/?quality=12&learn=on)
 
@@ -173,9 +173,9 @@ __[IntelliJ ](https://www.jetbrains.com/idea/)__ IDEAist eine leistungsstarke ID
 
 ### Microsoft Visual Studio Code
 
-__[Visual Studio Code](https://code.visualstudio.com/)__  (VS Code) ist ein kostenloses Open-Source-Tool für Frontend-Entwickler. Visual Studio Code kann mithilfe eines Adobe-Tools, __[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)__, eingerichtet werden, um die Inhaltssynchronisierung mit AEM zu integrieren.
+__[Visual Studio-Code](https://code.visualstudio.com/)__ (VS Code) ist ein kostenloses Open-Source-Tool für Frontend-Entwickler. Visual Studio Code kann mithilfe eines Adobe-Tools eingerichtet werden, um die Inhaltssynchronisierung mit AEM zu integrieren. __[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)__.
 
-Visual Studio Code ist die ideale Wahl für Frontend-Entwickler, die in erster Linie Frontend-Code erstellen. JavaScript, CSS und HTML. Obwohl VS-Code Java-Unterstützung über [Erweiterungen](https://code.visualstudio.com/docs/java/java-tutorial) bietet, fehlen möglicherweise einige der erweiterten Funktionen, die von Java-spezifischeren bereitgestellt werden.
+Visual Studio Code ist die ideale Wahl für Frontend-Entwickler, die in erster Linie Frontend-Code erstellen. JavaScript, CSS und HTML. VS Code unterstützt Java über [Erweiterungen](https://code.visualstudio.com/docs/java/java-tutorial)kann es sein, dass einige der erweiterten Funktionen fehlen, die von Java-spezifischeren bereitgestellt werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25907?quality=12&learn=on)
 
@@ -186,7 +186,7 @@ Visual Studio Code ist die ideale Wahl für Frontend-Entwickler, die in erster L
 
 ### Eclipse
 
-__[Eclipse ](https://www.eclipse.org/ide/)__ IDEs ist eine beliebte IDEs für die Java-Entwicklung und unterstützt das   __[AEM Developer ](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)__ Toolslug-in von Adobe, das ein In-IDE-GUI für das Authoring und die Synchronisierung von JCR-Inhalten mit einer lokalen AEM-Instanz bereitstellt.
+__[Eclipse IDE](https://www.eclipse.org/ide/)__ ist eine beliebte IDE für die Java-Entwicklung und unterstützt die  __[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)__ von Adobe bereitgestelltes -Plug-in, das eine In-IDE-Anleitung für das Authoring und die Synchronisierung von JCR-Inhalten mit einer lokalen AEM-Instanz bereitstellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 

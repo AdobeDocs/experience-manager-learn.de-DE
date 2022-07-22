@@ -4,19 +4,19 @@ description: Machen Sie sich mit Best Practices und kontinuierlicher Integration
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Entwicklung
-feature: Entwickler-Tools
+topic: Development
+feature: Developer Tools
 kt: 6914
 thumbnail: 330536.jpg
-source-git-commit: e295d77a11c99310aaae10ecb8a2eaa20ad49285
+exl-id: 8fd8eb06-bbd9-489a-b41b-f8785e140f58
+source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
 workflow-type: tm+mt
-source-wordcount: '64'
-ht-degree: 10%
+source-wordcount: '61'
+ht-degree: 6%
 
 ---
 
-
-# Kontinuierliche Integration und Cloud Manager
+# Kontinuierliche Integration und Cloud Manager {#continuous-integration-and-cloud-manager}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_devops_cicd"
