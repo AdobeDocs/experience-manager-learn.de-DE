@@ -9,7 +9,7 @@ level: Intermediate
 kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: c8cc0385-9e94-4120-9fb1-aeccbfcc8aa4
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: 8e8991d128ff40f7873dd8666460e761356c2dd9
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # HTTP/HTTPS-Verbindungen auf nicht standardmäßigen Ports für flexible Port-Auslösung
 
-HTTP/HTTPS-Verbindungen an nicht standardmäßigen Ports (nicht 80/443) müssen von AEM as a Cloud Service bereitgestellt werden, sie benötigen jedoch keine speziellen `portForwards` Regeln und kann AEM `AEM_PROXY_HOST` und einen reservierten Proxyanschluss `AEM_HTTP_PROXY_HOST` oder `AEM_HTTPS_PROXY_HOST` abhängig davon, ob das Ziel HTTP/HTTPS ist.
+HTTP/HTTPS-Verbindungen an nicht standardmäßigen Ports (nicht 80/443) müssen von AEM as a Cloud Service bereitgestellt werden, sie benötigen jedoch keine speziellen `portForwards` Regeln und kann AEM `AEM_PROXY_HOST` und einen reservierten Proxyanschluss `AEM_HTTP_PROXY_PORT` oder `AEM_HTTPS_PROXY_PORT` abhängig davon, ob das Ziel HTTP/HTTPS ist.
 
 ## Erweiterte Netzwerkunterstützung
 
@@ -68,8 +68,8 @@ public class HttpExternalServiceImpl implements ExternalService {
     public boolean isAccessible() {
         HttpClient client;
 
-        // Use System.getenv("AEM_PROXY_HOST") and proxy port System.getenv("AEM_HTTP_PROXY_HOST") 
-        // or System.getenv("AEM_HTTPS_PROXY_HOST"), depending on if the destination requires HTTP/HTTPS
+        // Use System.getenv("AEM_PROXY_HOST") and proxy port System.getenv("AEM_HTTP_PROXY_PORT") 
+        // or System.getenv("AEM_HTTPS_PROXY_PORT"), depending on if the destination requires HTTP/HTTPS
 
         if (System.getenv("AEM_PROXY_HOST") != null) {
             // Create a ProxySelector that uses to AEM's provided AEM_PROXY_HOST, with a fallback of proxy.tunnel, and proxy port using the AEM_HTTP_PROXY_PORT variable. 
