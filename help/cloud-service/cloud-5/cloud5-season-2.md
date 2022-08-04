@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 6197a40888ff5a8f93cbe03fb42c85f06f324de0
+source-git-commit: 3fb0fb5b8f43dc925da2ffa05808f24bf6d5ada3
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '478'
 ht-degree: 1%
 
 ---
@@ -140,14 +140,16 @@ Jede Jahreszeit variiert in ihrer Länge und wird nach einem festen Zeitplan ver
       </p>
    </td>
      <td>
-            <img alt="Geheimnisse von Cloud Manager ... Unit-Tests" src="./imgs/coming-soon.png"/>
+            <a href="season-2/cloud5-MoCM-unit-tests.md">
+               <img alt="Geheimnisse von Cloud Manager ... Unit-Tests" src="./imgs/s2/009-thumb.png"/>
+            </a>
       <div>
-            <strong>Geheimnisse von Cloud Manager ... Unit-Tests</strong>
+            <a href="season-2/cloud5-MoCM-unit-tests.md"><strong>Geheimnisse von Cloud Manager ... Unit-Tests</strong></a>
          <br/><em>mit Darin Kuntze &amp; Bryan Stopp, leitende Cloud-Architekten</em>
       </div>
       <p>
         <br/>
-         Am 5. August 2022
+        Darin und Bryan besprechen, wie Cloud Manager die Ausführung von Komponententests und die Berichterstellung zur Codeabdeckung in die CI/CD-Pipeline integriert, um die Best Practice für Unit-Tests AEM Code zu fördern und zu fördern.
       </p>
    </td> 
   </tr>
