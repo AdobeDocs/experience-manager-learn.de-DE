@@ -6,10 +6,10 @@ version: Cloud Service
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 kt: 2963
 index: y
-source-git-commit: a49e56b6f47e477132a9eee128e62fe5a415b262
+source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '238'
+ht-degree: 25%
 
 ---
 
@@ -44,15 +44,27 @@ ht-degree: 0%
       + [3 - Erkunden der AEM GraphQL-API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
       + [4 - Beständige GraphQL-Abfragen](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 - Client-Anwendungs-Integration](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
-   + Verfahren {#how-to}
-      + [Rich-Text](./graphql/how-to/rich-text.md)
-      + [Bilder](./graphql/how-to/images.md)
-      + [Lokalisierte Inhalte](./graphql/how-to/localized-content.md)
-      + [AEM Headless-SDK](./graphql/how-to/aem-headless-sdk.md)
++ Bereitstellungen{#deployments}
+   + [Übersicht](./graphql/deployment/overview.md)
+   + [Einzelseitenanwendung](./graphql/deployment/spa.md)
+   + [Webkomponente](./graphql/deployment/web-component.md)
+   + [Mobilgerät](./graphql/deployment/mobile.md)
+   + [Server-zu-Server](./graphql/deployment/server-to-server.md)
+   + Konfigurationen{#configurations}
+      + [AEM Hosts](./graphql/deployment/configurations/aem-hosts.md)
+      + [CORS](./graphql/deployment/configurations/cors.md)
+      + [Dispatcher-Filter](./graphql/deployment/configurations/dispatcher-filters.md)
++ Verfahren {#how-to}
+   + [Rich-Text](./graphql/how-to/rich-text.md)
+   + [Bilder](./graphql/how-to/images.md)
+   + [Lokalisierte Inhalte](./graphql/how-to/localized-content.md)
+   + [AEM Headless-SDK](./graphql/how-to/aem-headless-sdk.md)
    + Beispiele {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
+      + [Webkomponente](./graphql/example-apps/web-component.md)
       + [iOS](./graphql/example-apps/ios-swiftui-app.md)
       + [Android](./graphql/example-apps/android-app.md)
+      + [Server-zu-Server](./graphql/example-apps/server-to-server-app.md)
 + SPA-Editor{#spa-editor}
    + React{#react}
       + [Übersicht](./spa-editor/react/overview.md)
