@@ -3,10 +3,10 @@ user-guide-title: AEM Sites-Videos und -Tutorials
 user-guide-description: Eine Sammlung von Videos und Tutorials für Adobe Experience Manager Sites.
 breadcrumb-title: AEM Sites-Tutorials
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 6f930acd0b51c1f398be7a84efa99944dd3ce704
+source-git-commit: ce9966d48689cd153f5de9d20240644d96d10adf
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '439'
+ht-degree: 32%
 
 ---
 
@@ -35,6 +35,7 @@ ht-degree: 0%
 + Komponenten {#components}
    + [Komponentenentwicklung](components/component-development.md)
    + [Kernkomponenten](components/core-components-feature-video-understand.md)
+   + [Web-optimierte Bildbereitstellung](components/web-optimized-image-delivery.md)
    + [Komponentenkonsole](components/components-console-feature-video-use.md)
 + Inhaltsfragmente {#content-fragments}
    + [Authoring mit Inhaltsfragmenten](content-fragments/content-fragments-feature-video-use.md)
@@ -58,7 +59,7 @@ ht-degree: 0%
    + [Implementieren der einfachen Suche](developing/search-tutorial-develop.md)
    + [Freigabe in Social Media](developing/social-media-sharing-technical-video-use.md)
    + [Anpassen von Komponentensymbolen](developing/component-icons-technical-video-develop.md)
-+ Personalisierung  {#personalization}
++ Personalisierung    {#personalization}
    + [Integration mit Adobe Target](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html)
    + [Einrichten von Experience Fragments und Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [Verwenden von Experience Fragments mit Adobe Target](personalization/experience-fragment-target-offer-feature-video-use.md)
