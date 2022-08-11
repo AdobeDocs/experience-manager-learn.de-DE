@@ -12,10 +12,10 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: 819188cabb784a2bbfa097dc4c47f75e38231b53
 workflow-type: tm+mt
-source-wordcount: '1816'
-ht-degree: 5%
+source-wordcount: '1848'
+ht-degree: 6%
 
 ---
 
@@ -332,3 +332,11 @@ Dieselben Maven-Befehle, die zum Erstellen der **ui.apps** -Modul zum Erstellen 
 ## Fehlerbehebung
 
 Wenn Sie Probleme beim Generieren des Projekts mithilfe des AEM Projektarchetyps haben, sehen Sie sich die Liste der [bekannte Probleme](https://github.com/adobe/aem-project-archetype#known-issues) und Liste der offenen [issues](https://github.com/adobe/aem-project-archetype/issues).
+
+## Herzlichen Glückwunsch noch einmal! {#congratulations-bonus}
+
+Herzlichen Glückwunsch, dass Sie durch das Bonusmaterial gehen.
+
+### Nächste Schritte {#next-steps-bonus}
+
+Machen Sie sich mit der zugrunde liegenden Technologie einer Adobe Experience Manager (AEM) Sites-Komponente durch eine einfache `HelloWorld` Beispiel mit der [Komponentengrundlagen](component-basics.md) Tutorial.
