@@ -1,25 +1,25 @@
 ---
 title: Erste Schritte mit SPA Editor und Remote SPA - Übersicht
 description: Willkommen beim mehrteiligen Tutorial für Entwickler, die eine vorhandene Remote-SPA mit bearbeitbaren AEM-Inhalten mit AEM SPA Editor erweitern möchten.
-topic: Headless, SPA, Entwicklung
-feature: SPA Editor, Kernkomponenten, APIs, Entwicklung
+topic: Headless, SPA, Development
+feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
 level: Beginner
 kt: 7630
 thumbnail: 333272.jpeg
-source-git-commit: cede0c97e0f322fe5d20d5c4f685ed10b90af1d4
+exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
+source-git-commit: fe056006ab59a3955e5f16a23e96e9e208408cf5
 workflow-type: tm+mt
-source-wordcount: '694'
-ht-degree: 5%
+source-wordcount: '693'
+ht-degree: 8%
 
 ---
 
-
-# Überblick
+# Übersicht
 
 Willkommen beim mehrteiligen Tutorial für Entwickler, die eine vorhandene React-basierte (oder Next.js) Remote-SPA mit bearbeitbaren AEM-Inhalten mit AEM SPA Editor erweitern möchten.
 
-Dieses Tutorial baut auf der [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de) auf, einer React-App, die AEM Inhaltsfragmentinhalte über AEM GraphQL-APIs nutzt, jedoch keine kontextbezogene Bearbeitung von SPA Inhalt bereitstellt.
+Dieses Tutorial baut auf dem [WKND GraphQL-App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de), eine React-App, die AEM Inhaltsfragmentinhalt über AEM GraphQL-APIs nutzt, jedoch keine kontextbezogene Bearbeitung von SPA Inhalt bereitstellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333272/?quality=12&learn=on)
 
@@ -29,39 +29,39 @@ Das Tutorial soll veranschaulichen, wie eine Remote-SPA oder eine SPA, die auße
 
 Die meisten Aktivitäten im Tutorial konzentrieren sich auf die JavaScript-Entwicklung. Kritische Aspekte, die sich um AEM drehen, werden jedoch behandelt. Zu diesen Aspekten gehört die Definition, wo der Inhalt in AEM erstellt und gespeichert wird, und die Zuordnung SPA Routen zu AEM Seiten.
 
-Das Tutorial wurde für die Verwendung mit **AEM als Cloud Service** entwickelt und umfasst zwei Projekte:
+Das Tutorial wurde für die Verwendung mit **AEM as a Cloud Service** und setzt sich aus zwei Projekten zusammen:
 
-1. Das __AEM Projekt__ enthält Konfigurationen und Inhalte, die für AEM bereitgestellt werden müssen.
-1. __WKND__ Appproject ist das SPA, das in AEM SPA Editor integriert werden soll
+1. Die __AEM__ enthält Konfigurationen und Inhalte, die für AEM bereitgestellt werden müssen.
+1. __WKND-App__ -Projekt ist das SPA, das in AEM SPA Editor integriert werden soll
 
 ## Neuester Code
 
-+ Der Code dieses Tutorials befindet sich auf [GitHub](https://github.com/adobe/aem-guides-wknd-graphql) der Verzweigung `feature/spa-editor`.
++ Der Code dieses Tutorials finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-graphql) auf `feature/spa-editor` -Verzweigung.
 
 ## Voraussetzungen
 
 Dieses Tutorial erfordert Folgendes:
 
-+ [AEM as a Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en)
-+ [Node.js v14+](https://nodejs.org/en/)
-+ [npm v7+](https://www.npmjs.com/)
++ [AEM as a Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=de)
++ [Node.js v16+](https://nodejs.org/en/)
++ [npm v8+](https://www.npmjs.com/)
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
-+ [aem-guides-wknd.all.0.3.0.zip oder höher](https://github.com/adobe/aem-guides-wknd/releases)
-+ [aem-guides-wknd-graphql-Quellcode](https://github.com/adobe/aem-guides-wknd-graphql)
++ [aem-guides-wknd.all-2.1.0.zip oder höher](https://github.com/adobe/aem-guides-wknd/releases)
++ [aem-guides-wknd-graphql-Quellcode (Verzweigung: feature/spa-editor)](https://github.com/adobe/aem-guides-wknd-graphql/tree/feature/spa-editor)
 
 Dieses Tutorial setzt voraus, dass:
 
-+ [Microsoft® Visual Studio-](https://visualstudio.microsoft.com/) Codeas als IDE
++ [Microsoft® Visual Studio Code](https://visualstudio.microsoft.com/) als IDE
 + Ein Arbeitsverzeichnis von `~/Code/wknd-app`
-+ Ausführen des AEM SDK als Autorendienst auf `http://localhost:4502`
-+ Ausführen des AEM SDK mit dem lokalen `admin`-Konto mit dem Kennwort `admin`
++ Ausführen des AEM SDK als Autorendienst in `http://localhost:4502`
++ Ausführen des AEM SDK mit dem lokalen `admin` Konto mit Kennwort `admin`
 + Ausführen des SPA auf `http://localhost:3000`
 
 >[!NOTE]
 >
-> **Benötigen Sie Hilfe bei der Einrichtung Ihrer lokalen Entwicklungsumgebung?** Sehen Sie sich die  [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit dem AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) an.
+> **Benötigen Sie Hilfe bei der Einrichtung Ihrer lokalen Entwicklungsumgebung?** Sehen Sie sich die [Befolgen Sie die Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit dem AEM as a Cloud Service SDK.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de).
 
 
 ## Schnell-Setup
@@ -102,6 +102,6 @@ Verwenden Sie abschließend die in vorherigen Kapiteln erläuterten Konzepte fü
 
 ## Zusätzliche Ressourcen
 
-+ [Bearbeiten externer SPA in AEM Dokumenten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/hybrid/editing-external-spa.html)
++ [Bearbeiten externer SPA in AEM Dokumenten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/hybrid/editing-external-spa.html)
 + [AEM WCM-Komponenten - React-Core-Implementierung](https://www.npmjs.com/package/@adobe/aem-core-components-react-base)
 + [AEM WCM-Komponenten - SPA-Editor - React-Core-Implementierung](https://www.npmjs.com/package/@adobe/aem-core-components-react-spa)
