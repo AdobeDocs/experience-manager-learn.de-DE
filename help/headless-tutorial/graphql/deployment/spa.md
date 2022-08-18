@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10587
 thumbnail: KT-10587.jpg
 mini-toc-levels: 2
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '612'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 # AEM Headless-SPA-Bereitstellungen
 
 
-AEM Headless-Single-Page-App-Bereitstellungen (SPA) beinhalten JavaScript-basierte Anwendungen, die mit Frameworks wie React, Vue oder Angular erstellt wurden, die Inhalte in AEM Headless nutzen und mit ihnen interagieren.
+AEM Headless-Single-Page-App-Bereitstellungen (SPA) beinhalten JavaScript-basierte Anwendungen, die mit Frameworks wie React oder Vue erstellt wurden, die Inhalte in AEM Headless nutzen und mit ihnen interagieren.
 
 Wenn Sie eine SPA bereitstellen, die auf Headless-Weise AEM interagiert, wird die SPA gehostet und über einen Webbrowser zugänglich gemacht.
 
