@@ -11,7 +11,7 @@ level: Beginner
 kt: 4083
 thumbnail: 30359.jpg
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
 workflow-type: tm+mt
 source-wordcount: '2878'
 ht-degree: 4%
@@ -333,7 +333,7 @@ Anzeigen des fertigen Codes unter [GitHub](https://github.com/adobe/aem-guides-w
 
 ### Webpack DevServer - Statisches Markup {#webpack-dev-static}
 
-In den vorherigen Übungen konnten wir mehrere Sass-Dateien in der **ui.frontend** -Modul und durch einen Build-Prozess sehen Sie diese Änderungen letztendlich in AEM. Als Nächstes werden wir uns mit Techniken befassen, die eine [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) die schnelle Entwicklung unserer Frontend-Stile gegen **statisch** HTML.
+In den vorherigen Übungen konnten wir mehrere Sass-Dateien in der **ui.frontend** -Modul und durch einen Build-Prozess sehen Sie diese Änderungen letztendlich in AEM. Als Nächstes werden wir uns eine Technik ansehen, die eine [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) die schnelle Entwicklung unserer Frontend-Stile gegen **statisch** HTML.
 
 Diese Technik ist praktisch, wenn die meisten Stile und Frontend-Code von einem dedizierten Frontend-Entwickler ausgeführt werden, der möglicherweise keinen einfachen Zugriff auf eine AEM-Umgebung hat. Diese Technik ermöglicht es dem FED auch, Änderungen direkt an der HTML vorzunehmen, die dann an einen AEM Entwickler übergeben werden können, um sie als Komponenten zu implementieren.
 
@@ -389,9 +389,9 @@ Diese Technik ist praktisch, wenn die meisten Stile und Frontend-Code von einem 
 
 [**aemfed**](https://aemfed.io/) ist ein Open-Source-Befehlszeilen-Tool, mit dem die Front-End-Entwicklung beschleunigt werden kann. Es wird durch  [aemsync](https://www.npmjs.com/package/aemsync), [BrowserSync](https://www.npmjs.com/package/browser-sync) und [Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html).
 
-Auf hoher Ebene **aemfed** ist so konzipiert, dass Dateiänderungen in der **ui.apps** und synchronisiert sie automatisch direkt mit einer laufenden AEM-Instanz. Basierend auf den Änderungen wird ein lokaler Browser automatisch aktualisiert, was die Front-End-Entwicklung beschleunigt. Es ist auch für die Verwendung mit Sling Log Tracker entwickelt, um Server-seitige Fehler automatisch direkt im Terminal anzuzeigen.
+Auf hoher Ebene **aemfed** ist so konzipiert, dass Dateiänderungen in der **ui.apps** und synchronisieren sie automatisch direkt mit einer laufenden AEM-Instanz. Basierend auf den Änderungen wird ein lokaler Browser automatisch aktualisiert, was die Front-End-Entwicklung beschleunigt. Es ist auch für die Verwendung mit Sling Log Tracker entwickelt, um Server-seitige Fehler automatisch direkt im Terminal anzuzeigen.
 
-Wenn Sie viel Arbeit innerhalb der **ui.apps** -Modul, Ändern von HTL-Skripten und Erstellen benutzerdefinierter Komponenten, **aemfed** kann ein sehr leistungsfähiges Tool sein. [Die vollständige Dokumentation finden Sie hier.](https://github.com/abmaonline/aemfed).
+Wenn Sie viel Arbeit innerhalb der **ui.apps** -Modul, Ändern von HTL-Skripten und Erstellen benutzerdefinierter Komponenten, **aemfed** kann ein sehr leistungsfähiges Tool sein. [Die vollständige Dokumentation finden Sie hier .](https://github.com/abmaonline/aemfed).
 
 ### Debuggen Client-seitiger Bibliotheken {#debugging-clientlibs}
 

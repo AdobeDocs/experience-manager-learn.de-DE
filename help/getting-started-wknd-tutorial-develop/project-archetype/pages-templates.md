@@ -9,7 +9,7 @@ mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
 workflow-type: tm+mt
 source-wordcount: '3081'
 ht-degree: 2%
@@ -93,7 +93,7 @@ Erstellen Sie anschließend eine neue Vorlage in AEM, die der Struktur der Siche
 
 >[!VIDEO](https://video.tv.adobe.com/v/330991/?quality=12&learn=on)
 
-Allgemeine Schritte für das folgende Video:
+Allgemeine Schritte für das obige Video:
 
 ### Strukturkonfigurationen
 
@@ -161,7 +161,7 @@ Der AEM Projektarchetyp generiert eine Kopf- und Fußzeile. Aktualisieren Sie an
 
 >[!VIDEO](https://video.tv.adobe.com/v/330992/?quality=12&learn=on)
 
-Allgemeine Schritte für das folgende Video:
+Allgemeine Schritte für das obige Video:
 
 1. Beispielinhaltspaket herunterladen **[WKND-PagesTemplates-Content-Assets.zip](assets/pages-templates/WKND-PagesTemplates-Content-Assets-1.1.zip)**.
 1. Laden Sie das Inhaltspaket mit Package Manager hoch und installieren Sie es unter [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)
@@ -207,7 +207,7 @@ Erstellen Sie anschließend eine neue Seite mithilfe der Vorlage &quot;Artikelse
 
 >[!VIDEO](https://video.tv.adobe.com/v/330993/?quality=12&learn=on)
 
-Allgemeine Schritte für das folgende Video:
+Allgemeine Schritte für das obige Video:
 
 1. Navigieren Sie zur Sites-Konsole unter [http://localhost:4502/sites.html/content/wknd/us/en/magazine](http://localhost:4502/sites.html/content/wknd/us/en/magazine).
 1. Erstellen Sie eine neue Seite unter **WKND** > **USA** > **DE** > **Magazin**.
@@ -257,7 +257,7 @@ Verwenden Sie das CRXDE-Lite-Tool auf einer lokalen AEM-Instanz, um die zugrunde
 
    Beachten Sie, dass es nur 2 HTL-Skripte gibt. `customfooterlibs.html` und `customheaderlibs.html` unterhalb der Seitenkomponente. *Wie rendert diese Komponente die Seite?*
 
-   Die `sling:resourceSuperType` -Eigenschaft verweist auf `core/wcm/components/page/v2/page`. Mit dieser Eigenschaft kann die Seitenkomponente des WKND erben **all** der Funktionalität der Kernkomponente-Seitenkomponente. Dies ist das erste Beispiel einer so genannten [Proxy-Komponentenmuster](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern). Weitere Informationen finden Sie [hier.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html).
+   Die `sling:resourceSuperType` -Eigenschaft verweist auf `core/wcm/components/page/v2/page`. Mit dieser Eigenschaft kann die Seitenkomponente des WKND erben **all** der Funktionalität der Kernkomponente-Seitenkomponente. Dies ist das erste Beispiel einer so genannten [Proxy-Komponentenmuster](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern). Weitere Informationen finden Sie [hier](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html).
 
 1. Inspect eine weitere Komponente innerhalb der WKND-Komponenten, die `Breadcrumb` Komponente unter: `/apps/wknd/components/breadcrumb`. Beachten Sie Folgendes: `sling:resourceSuperType` -Eigenschaft gefunden werden, aber diesmal verweist sie auf `core/wcm/components/breadcrumb/v2/breadcrumb`. Dies ist ein weiteres Beispiel für die Verwendung des Proxy-Komponentenmusters zum Einschließen einer Kernkomponente. Tatsächlich sind alle Komponenten in der WKND-Codebasis Proxys von AEM Kernkomponenten (mit Ausnahme unserer berühmten Komponente &quot;HelloWorld&quot;). Es empfiehlt sich, möglichst viele Funktionen von Kernkomponenten wiederzuverwenden *before* Schreiben von benutzerdefiniertem Code.
 

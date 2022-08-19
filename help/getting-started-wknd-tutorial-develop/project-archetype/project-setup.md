@@ -12,9 +12,9 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: 819188cabb784a2bbfa097dc4c47f75e38231b53
+source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
 workflow-type: tm+mt
-source-wordcount: '1848'
+source-wordcount: '1847'
 ht-degree: 6%
 
 ---
@@ -256,7 +256,7 @@ Die **[core](https://experienceleague.adobe.com/docs/experience-manager-core-com
 
 Die **[ui.apps](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uiapps.html)** Das Maven-Modul enthält den gesamten Rendercode, der für die unten stehende Site benötigt wird. `/apps`. Dazu gehört auch CSS/JS, das in einem AEM namens [clientlibs](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=de). Dazu gehören auch [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=de) Skripte zum Rendern von dynamischem HTML. Sie können sich die **ui.apps** -Modul als Zuordnung zur Struktur im JCR, jedoch in einem Format, das in einem Dateisystem gespeichert und an die Quell-Code-Verwaltung übertragen werden kann. Die **ui.apps** -Modul enthält nur Code.
 
-So erstellen Sie das Modul nur dieses:
+So erstellen Sie nur dieses Modul:
 
 1. In der Befehlszeile. Navigieren Sie zur `ui.apps` Ordner (unter `aem-guides-wknd`):
 

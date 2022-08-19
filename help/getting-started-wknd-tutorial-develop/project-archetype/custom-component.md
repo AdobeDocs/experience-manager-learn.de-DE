@@ -12,7 +12,7 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: 79d41d833ab0659f26f988678e124daa18b857f3
 workflow-type: tm+mt
 source-wordcount: '4138'
 ht-degree: 1%
@@ -447,7 +447,7 @@ Erstellen Sie eine öffentliche Java-Schnittstelle für die Byline. `Byline.java
        import org.osgi.annotation.versioning.Version;
        &quot;
    
-   Wenn Änderungen an den Dateien in diesem Paket vorgenommen werden, wird die [Paketversion muss semantisch angepasst werden](https://semver.org/). Wenn nicht, wird die [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) erkennt eine ungültige Paketversion und beschädigt die erstellte. Glücklicherweise meldet das Maven-Plug-in bei Fehlern die ungültige Java-Paketversion sowie die Version, die es sein sollte. Die `@Version("...")` Deklaration im verletzenden Java-Paket `package-info.java` auf die vom Plug-in empfohlene Version zu aktualisieren.
+Wenn Änderungen an den Dateien in diesem Paket vorgenommen werden, wird die [Paketversion muss semantisch angepasst werden](https://semver.org/). Wenn nicht, wird die [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) erkennt eine ungültige Paketversion und beschädigt die erstellte. Glücklicherweise meldet das Maven-Plug-in bei Fehlern die ungültige Java-Paketversion sowie die Version, die es sein sollte. Aktualisieren Sie einfach die `@Version("...")` Deklaration im verletzenden Java-Paket `package-info.java` auf die vom Plug-in empfohlene Version zu aktualisieren.
 
 ### Byte-Implementierung {#byline-implementation}
 
