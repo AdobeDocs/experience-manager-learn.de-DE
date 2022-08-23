@@ -1,26 +1,26 @@
 ---
 title: Anpassen von Anmerkungen in AEM Assets
-description: AEM Assets-Format und -Stil bei der Ausgabe in PDF können von AEM Entwicklern konfiguriert werden.
-feature: Zusammenarbeit
-version: 6.3, 6.4, 6.5
-topic: Zusammenarbeit
+description: AEM Assets-Format und -Stil bei der Ausgabe auf PDF können von AEM Entwicklern konfiguriert werden.
+feature: Collaboration
+version: 6.4, 6.5
+topic: Collaboration
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 972737dd-8ca6-47b4-a4ec-b73355c09cec
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '62'
-ht-degree: 3%
+source-wordcount: '60'
+ht-degree: 0%
 
 ---
 
-
 # Anpassen von Anmerkungen in AEM Assets{#using-annotations-in-aem-assets}
 
-AEM unterstützt die Anpassung der Ausgabe der Anmerkung in PDF.
+AEM unterstützt die Anpassung der Ausgabe der Anmerkung an PDF.
 
-## PDF-Anmerkung sling:OsgiConfig-Definition
+## PDF annotation sling:OsgiConfig definition
 
-Um PDF-Anmerkungen anzupassen, erstellen Sie einen **sling:OsgiConfig** -Knoten in Ihrem AEM Projekt unter
+Um PDF-Anmerkungen anzupassen, erstellen Sie eine **sling:OsgiConfig** Knoten in Ihrem AEM Projekt unter
 
 `/apps/my-project/config.author/com.day.cq.dam.core.impl.annotation.pdf.AnnotationPdfConfig.xml` und passen Sie die Werte nach Bedarf an:
 

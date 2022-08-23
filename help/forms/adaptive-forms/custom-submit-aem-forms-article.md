@@ -1,18 +1,18 @@
 ---
 title: Schreiben eines benutzerdefinierten Versands in AEM Forms
 description: Schnelle und einfache Erstellung einer eigenen benutzerdefinierten Übermittlungsaktion für adaptive Formulare
-feature: Adaptive Formulare
-version: 6.3,6.4,6.5
-topic: Entwicklung
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 4%
+source-wordcount: '206'
+ht-degree: 2%
 
 ---
-
 
 # Schreiben eines benutzerdefinierten Versands in AEM Forms {#writing-a-custom-submit-in-aem-forms}
 
@@ -24,10 +24,10 @@ Dieser Artikel führt Sie durch die Schritte, die zum Erstellen einer benutzerde
 * Erstellen Sie einen Knoten des Typs &quot;sling:folder &quot;unter Apps. Rufen wir diesen Knoten CustomSubmitHelpx auf.
 * Speichern Sie den neu erstellten Knoten.
 * Fügen Sie die folgenden beiden Eigenschaften zum neu erstellten Knoten hinzu
-* PropertyName       | Eigenschaftswert
+* PropertyName | Eigenschaftswert
 * guideComponentType | fd/af/components/guidesubmittype
-* guideDataModel     | xfa,xsd,basic
-* jcr:description   | CustomSubmitHelpx
+* guideDataModel | xfa,xsd,basic
+* jcr:description | CustomSubmitHelpx
 * Speichern Sie die Änderungen
 * Erstellen Sie eine neue Datei namens post.POST.jsp unter dem Knoten CustomSubmitHelpx . Wenn ein adaptives Formular gesendet wird, wird diese JSP aufgerufen. Sie können den JSP-Code gemäß Ihren Anforderungen in diese Datei schreiben. Der folgende Code leitet die Anfrage an das Servlet weiter.
 
@@ -64,4 +64,3 @@ Dieser Artikel führt Sie durch die Schritte, die zum Erstellen einer benutzerde
 Jetzt sehen Sie &quot;CustomSubmitHelpx&quot;in den Sendeaktionen Ihres adaptiven Formulars, wie in diesem Bild dargestellt.
 
 ![Adaptives Formular mit benutzerdefiniertem Senden](assets/capture-2.gif)
-

@@ -1,18 +1,18 @@
 ---
 title: Verbesserungen am Formulareditor in AEM Forms
 description: AEM 6.3 führt in dieser Version mehrere neue Funktionen und Verbesserungen ein, um das Authoring-Erlebnis für adaptive Formulare und Dokumente zu vereinfachen. Diese Verbesserungen tragen zur Verkürzung der Markteinführungszeit bei und ermöglichen Anwendern in Unternehmen die Arbeit mit Formularen und Dokumenten
-feature: Adaptive Formulare
-version: 6.3,6.4,6.5
-topic: Entwicklung
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: a2d21f2e-3dbb-454f-8a02-101dc3af9b1e
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 37%
+source-wordcount: '187'
+ht-degree: 43%
 
 ---
-
 
 # Verbesserungen am Formulareditor in AEM Forms {#form-editor-improvements-in-aem-forms}
 
@@ -22,7 +22,7 @@ AEM 6.3 führt in dieser Version mehrere neue Funktionen und Verbesserungen ein,
 
 **Einige der wichtigsten Verbesserungen für den adaptiven Formular-Editor sind:**
 
-* [Verbessertes Endbenutzererlebnis](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
+* [Verbessertes Endbenutzererlebnis](https://helpx.adobe.com/de/aem-forms/6-3/introduction-forms-authoring.html?lang=de-DE)
 
 * Formularfelder automatisch ausfüllen
 * Rich Text für eine Textfeldkomponente 

@@ -2,17 +2,17 @@
 title: Erfassen von Workflow-Kommentaren im adaptiven Forms Workflow
 description: Erfassen von Workflow-Kommentaren in AEM Workflow
 feature: Workflow
-version: 6.3,6.4
-topic: Entwicklung
+version: 6.4
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 5c250bbb-bac6-427d-8aca-1fbb1229e02c
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '382'
+source-wordcount: '380'
 ht-degree: 0%
 
 ---
-
 
 # Erfassen von Workflow-Kommentaren im adaptiven Forms Workflow{#capturing-workflow-comments-in-adaptive-forms-workflow}
 
@@ -22,7 +22,7 @@ Eine gängige Anfrage besteht darin, die vom Aufgabenvalidierer eingegebenen Kom
 
 Um diese Anforderung zu erfüllen, wird ein OSGi-Beispielpaket bereitgestellt, das zum Erfassen von Kommentaren und zum Speichern dieser Kommentare als Workflow-Metadateneigenschaft verwendet werden kann.
 
-Der folgende Screenshot zeigt Ihnen, wie Sie mit dem Prozessschritt in [AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) Kommentare erfassen und als Metadateneigenschaft speichern können. &quot;Capture Workflow Comments&quot;ist der Name der Java-Klasse, die im Prozessschritt verwendet werden muss. Sie müssen den Metadaten-Eigenschaftsnamen übergeben, der die Kommentare enthält. Im folgenden Screenshot ist managerComments die Metadateneigenschaft, in der die Kommentare gespeichert werden.
+Der folgende Screenshot zeigt Ihnen, wie Sie den Prozessschritt in [AEM Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html) , um Kommentare zu erfassen und sie als Metadateneigenschaft zu speichern. &quot;Capture Workflow Comments&quot;ist der Name der Java-Klasse, die im Prozessschritt verwendet werden muss. Sie müssen den Metadaten-Eigenschaftsnamen übergeben, der die Kommentare enthält. Im folgenden Screenshot ist managerComments die Metadateneigenschaft, in der die Kommentare gespeichert werden.
 
 ![workflowcomments1](assets/workflowcomments1.gif)
 
@@ -31,9 +31,9 @@ Um diese Funktion auf Ihrem System zu testen, führen Sie die folgenden Schritte
 
 * [Bereitstellen des Entwicklungs-mit-Service-Benutzer-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [Stellen Sie das SetValue-Bundle bereit](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dieses Bundle enthält den Beispielcode zum Erfassen der Kommentare und zum Speichern als Metadateneigenschaft
+* [SetValue-Bundle bereitstellen](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dieses Bundle enthält den Beispielcode zum Erfassen der Kommentare und zum Speichern als Metadateneigenschaft
 
-* [Laden Sie die Assets herunter und dekomprimieren Sie sie für diesen Artikel in Ihr Dateisystem.Die Assets enthalten ](assets/capturecomments.zip) das Workflow-Modell und das Beispiel-adaptive Formular.
+* [Laden Sie die Assets herunter und entpacken Sie sie, die mit diesem Artikel in in Verbindung stehen, in Ihr Dateisystem.](assets/capturecomments.zip) Die Assets enthalten Workflow-Modell und Beispiel-Adaptives Formular.
 
 * Importieren Sie die zwei ZIP-Dateien in AEM mit Package Manager.
 
@@ -50,4 +50,3 @@ Die Kommentare werden in der Metadateneigenschaft managerComments in crx gespeic
 /var/workflow/instances/server0
 
 Wählen Sie die entsprechende Workflow-Instanz aus und suchen Sie im Metadatenknoten nach der Eigenschaft managerComments .
-

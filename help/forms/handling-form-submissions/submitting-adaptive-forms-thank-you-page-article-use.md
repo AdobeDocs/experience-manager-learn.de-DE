@@ -1,28 +1,28 @@
 ---
 title: An Danksagungsseite übermitteln
-seo-title: An Danksagungsseite übermitteln
+seo-title: Submitting To Thank You Page
 description: Dankeseite beim Senden des adaptiven Formulars anzeigen
-seo-description: Dankeseite beim Senden des adaptiven Formulars anzeigen
+seo-description: Display a thank you page on submitting Adaptive Form
 uuid: ec695b87-083a-47f6-92ac-c9a6dc2b85fb
-feature: Adaptive Formulare
+feature: Adaptive Forms
 topics: developing
 audience: implementer
 doc-type: article
 activity: setup
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 discoiquuid: 58c6bf42-efe5-41a3-8023-d84f3675f689
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 85e1b450-39c0-4bb8-be5d-d7f50b102f3d
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '261'
 ht-degree: 6%
 
 ---
 
-
-# Senden an Danksagungsseite {#submitting-to-thank-you-page}
+# An Danksagungsseite übermitteln {#submitting-to-thank-you-page}
 
 Die Option An REST-Endpunkt übermitteln übergibt die im Formular ausgefüllten Daten im Rahmen der HTTP-GET-Anfrage an eine konfigurierte Bestätigungsseite. Sie können den Namen der Felder der Anforderung hinzufügen. Das Format der Anforderung lautet:
 
@@ -41,8 +41,7 @@ Sie können auch per POST an den externen Endpunkt senden. Um dies zu erreichen,
 
 Um diese Funktion auf Ihrem Server zu testen, folgen Sie den unten stehenden Anweisungen:
 
-* Importieren Sie die mit diesem Artikel verknüpfte Asset-Datei [in AEM mit dem Paketmanager](assets/submittingtorestendpoint.zip)
-* Verweisen Sie Ihren Browser auf das [Antragsformular für die Zeitüberschreitung](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
+* Importieren Sie die [Asset-Datei, die mit diesem Artikel in AEM mithilfe des Package Manager verknüpft ist](assets/submittingtorestendpoint.zip)
+* Verweisen Sie den Browser auf [Antragsformular für die Zeit](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 * Füllen Sie das erforderliche Feld aus und senden Sie das Formular
 * Sie sollten eine Dankeseite mit Ihren Daten auf der Seite erhalten
-

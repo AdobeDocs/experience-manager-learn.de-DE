@@ -2,17 +2,17 @@
 title: Verwenden von Brand Portal
 description: Video-Durchläufe der AEM-Autoren- und AEM Assets Brand Portal-Integration.
 feature: Brand Portal
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 42f13a19-52bf-413d-a141-63f1f0910dce
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '1764'
 ht-degree: 48%
 
 ---
-
 
 # Verwenden von Brand Portal mit AEM Assets{#using-brand-portal-with-aem-assets}
 
@@ -30,7 +30,7 @@ Die Asset-Beschaffung von Brand Portal wird verwendet, um Assets von Agenturen u
 
 *Für die Verwendung der Asset-Beschaffung ist Experience Manager Author 6.5 SP2 (6.5.2) oder höher erforderlich*
 
-Anweisungen zum Konfigurieren und Einrichten der Asset-Beschaffung in der Experience Manager-Autoreninstanz finden Sie unter [Aktivieren der Experience Manager-Autoreninstanz für die Asset-Beschaffung](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=de) .
+Überprüfen [Aktivieren der Experience Manager-Autoreninstanz für die Asset-Beschaffung](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=de) für Anweisungen zum Konfigurieren und Einrichten der Asset-Beschaffung in der Experience Manager-Autoreninstanz.
 
 ## Brand Portal - Funktionen und Verbesserungen im Februar 2019{#brand-portal-features-and-enhancements-644}
 
@@ -56,24 +56,24 @@ Beispiel: Wenn Ihr Suchformular in Brand Portal das Eigenschaftsprädikat für T
 
 In Brand Portal können Sie das Sternchen (*) in der Suchanfrage zusammen mit einem Teil des Wortes in der gesuchten Phrase verwenden.
 
-**Anwendungsfall** : Wenn Sie sich nicht sicher sind, welche genauen Wörter im gesuchten Satz vorkommen, können Sie eine Suche mit Platzhaltern durchführen, um die Lücken in Ihrer Suchabfrage zu füllen.
+**Anwendungsfall** :Wenn Sie sich nicht sicher sind, welche genauen Wörter im gesuchten Satz vorkommen, können Sie eine Platzhaltersuche verwenden, um die Lücken in Ihrer Suchabfrage zu füllen.
 
 Beispielsweise werden durch die Angabe von klettern* alle Assets zurückgegeben, deren Titelphrase Wörter enthält, die mit den Zeichen klettern beginnen, wenn das Suchformular in Brand Portal das Eigenschaftsprädikat für Teilsuche auf Asset-Titel anwendet.
 
 Auch gilt Folgendes:
 
-* \*klettern gibt alle Assets zurück, deren Titelphrase Wörter enthält, die mit den Zeichen klettern enden.
+* \*Durch die Angabe von klettern werden alle Assets zurückgegeben, deren Titelphrase Wörter enthält, die mit den Zeichen klettern enden.
 * \*klettern\* gibt alle Assets zurück, deren Titelphrase Wörter enthält, die die Zeichen klettern enthalten.
 
 #### Aktivieren der Ordnerhierarchie
 
 Administratoren können jetzt konfigurieren, wie Ordner für Benutzer ohne Administratorrechte (Bearbeiter, Betrachter und Gastbenutzer) bei der Anmeldung angezeigt werden.
-Die Konfiguration [Ordnerhierarchie aktivieren](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) wird in den Allgemeinen Einstellungen im Admin Tools-Bereich hinzugefügt. Wenn die Konfiguration:
+Die Konfiguration [Ordnerhierarchie aktivieren](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) wird in den Allgemeinen Einstellungen im Admin-Tools-Bereich hinzugefügt. Wenn die Konfiguration:
 
 * Aktiviert: Die Ordnerstruktur, die vom Stammordner beginnt, ist für Benutzer ohne Administratorrechte sichtbar. Sie können also genauso wie Administratoren navigieren.
 * Deaktiviert, werden nur die freigegebenen Ordner auf der Landingpage angezeigt.
 
-[Die Funktion Ordnerhierarchie aktivieren (sofern aktiviert) hilft Ihnen dabei, die Ordner mit denselben Namen, die von verschiedenen Hierarchien gemeinsam genutzt werden, zu unterscheiden. ](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) Bei der Anmeldung sehen Nicht-Administratoren nun die virtuellen übergeordneten (und untergeordneten) Ordner der freigegebenen Ordner.
+[Ordnerhierarchie aktivieren](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) -Funktion (sofern aktiviert) hilft Ihnen, die Ordner mit denselben Namen von verschiedenen Hierarchien zu unterscheiden. Bei der Anmeldung sehen Nicht-Administratoren nun die virtuellen übergeordneten (und untergeordneten) Ordner der freigegebenen Ordner.
 
 Die freigegebenen Ordner werden innerhalb der jeweiligen Verzeichnisse in virtuellen Ordnern angeordnet. Sie können diese virtuellen Ordner an einem Schlosssymbol erkennen.
 
@@ -107,9 +107,9 @@ Entsprechend können veröffentlichte Assets zu einem späteren Zeitpunkt aus de
 Unternehmen können ihre Portal-URL mit einem alternativen Präfix in der URL anpassen. Um einen Alias für einen Mandantenamen in der vorhandenen Portal-URL zu erhalten, müssen Unternehmen sich mit dem Adobe-Support in Verbindung setzen.
 
 Beachten Sie, dass nur das Präfix der Brand Portal-URL angepasst werden kann und nicht die gesamte URL.
-Für eine Organisation mit der vorhandenen Domäne `wknd.brand-portal.adobe.com` kann beispielsweise auf Anfrage die Domäne `wkndinc.brand-portal.adobe.com` erstellt werden.
+Für eine Organisation mit der vorhandenen Domain `wknd.brand-portal.adobe.com` kann beispielsweise auf Anfrage die Domain `wkndinc.brand-portal.adobe.com` erstellt werden.
 
-Eine AEM-Autoreninstanz kann jedoch nur mit der Mandanten-ID-URL [konfiguriert](https://helpx.adobe.com/de/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) werden und nicht mit einer (alternativen) Mandantenalias-URL.
+Eine AEM-Autoreninstanz kann jedoch nur mit der Mandanten-ID-URL [konfiguriert](https://helpx.adobe.com/de/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) werden und nicht mit einer (alternativen) Mandantenalias-URL.
 
 **Anwendungsfall** : Unternehmen können ihre Branding-Anforderungen erfüllen, indem sie die Portal-URL anpassen, anstatt an der von Adobe bereitgestellten URL zu festhalten.
 
@@ -136,7 +136,7 @@ Der Bericht protokolliert die Anzeigenamen, E-Mail-IDs, Rollen (Admin, Betrachte
 
 ### Zugriff auf Original-Ausgabeformate
 
-Administratoren können den Benutzerzugriff auf Original-Bilddateien einschränken (JPEG, TIFF, PNG, BMP, GIF, PJPEG, x-portable-anymap, x-portable-bitmap, x-portable-graymap, x-portable-pixmap, x-rgb, x-xbitmap, x-xpixmap, x-icon, image/photoshop, image/x-photoshop, psd, image/vnd.adobe Fotoshop) und Zugriff auf Ausgabeformate mit niedriger Auflösung gewähren, die sie von Brand Portal herunterladen oder über einen freigegebenen Link freigeben. Dieser Zugriff kann auf Benutzergruppenebene über die Registerkarte „Gruppen“ auf der Seite „Benutzerrollen“ im Admin Tools-Bereich gesteuert werden.
+Administratoren können den Benutzerzugriff auf Original-Bilddateien einschränken (JPEG, TIFF, PNG, BMP, GIF, PJPEG, x-portable-anymap, x-portable-bitmap, x-portable-graymap, x-portable-pixmap, x-rgb, x-xbitmap, x-xpixmap, x-icon, image/photoshop, image/x-photoshop, psd, image/vnd.adobe Fotoshop) und Zugriff auf Ausgabeformate mit niedriger Auflösung gewähren, die sie von Brand Portal herunterladen oder über einen freigegebenen Link freigeben. Dieser Zugriff kann auf Benutzergruppenebene über die Registerkarte „Gruppen“ auf der Seite „Benutzerrollen“ im Admin-Tools-Bereich gesteuert werden.
 
 ### Neue Konfigurationen
 
@@ -151,12 +151,12 @@ Es wurden sechs neue Konfigurationen hinzugefügt, damit Administratoren folgend
 
 ### Weitere Verbesserungen
 
-* *Ordnerhierarchiepfad in Karten- und Listenansichten*  - ermöglicht Benutzern, den Speicherort der in einer Brand Portal-Instanz gespeicherten Ordner zu ermitteln. Hilft Benutzern, Ordner mit demselben Namen innerhalb einer anderen Ordnerhierarchie zu unterscheiden.
-* *Option &quot;Überblick&quot;*  - bietet Benutzern ohne Administratorrechte Metadaten zum Asset/Ordner, indem sie das Asset/den Ordner auswählen und dann in der Symbolleiste die Übersichtsoption auswählen. Zeigt derzeit Titel, Erstellungsdatum und Pfad an
+* *Ordnerhierarchiepfad in Karten- und Listenansichten* - ermöglicht Benutzern, den Speicherort der Ordner zu ermitteln, die in einer Brand Portal-Instanz gespeichert sind. Hilft Benutzern, Ordner mit demselben Namen innerhalb einer anderen Ordnerhierarchie zu unterscheiden.
+* *Übersichtsoption* - bietet Benutzern ohne Administratorrechte Metadaten zum Asset/Ordner, indem sie das Asset/den Ordner auswählen und dann in der Symbolleiste die Übersichtsoption auswählen. Zeigt derzeit Titel, Erstellungsdatum und Pfad an
 
 ### Adobe I/O Hosts-Benutzeroberfläche zum Konfigurieren von oAuth-Integrationen
 
-Brand Portal verwendet die Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/)-Schnittstelle zum Erstellen der JWT-Anwendung, die die Konfiguration von oAuth-Integrationen ermöglicht, um die Integration von AEM Assets mit Brand Portal zu ermöglichen. Zuvor wurde die Benutzeroberfläche zum Konfigurieren von OAuth-Integrationen unter `https://marketing.adobe.com/developer/` gehostet. Weitere Informationen zur Integration von AEM Assets mit Brand Portal, um Assets und Sammlungen in Brand Portal zu veröffentlichen, finden Sie unter [Konfigurieren der Integration von AEM Assets mit Brand Portal](https://helpx.adobe.com/de/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
+Brand Portal verwendet Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/) -Schnittstelle zur Erstellung der JWT-Anwendung, die die Konfiguration von oAuth-Integrationen ermöglicht, um die Integration von AEM Assets mit Brand Portal zu ermöglichen. Zuvor wurde die Benutzeroberfläche zum Konfigurieren von OAuth-Integrationen unter `https://marketing.adobe.com/developer/` gehostet. Weitere Informationen zur Integration von AEM Assets mit Brand Portal, um Assets und Sammlungen in Brand Portal zu veröffentlichen, finden Sie unter [Konfigurieren der Integration von AEM Assets mit Brand Portal](https://helpx.adobe.com/de/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
 
 ## Brand Portal - Funktionen und Verbesserungen im Februar 2018{#brand-portal-features-and-enhancements-632}
 

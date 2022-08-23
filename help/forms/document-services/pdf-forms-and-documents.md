@@ -4,12 +4,12 @@ description: PDF ist eigentlich eine Familie von Dateiformaten. In diesem Artike
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: 6.3,6.4, 6.5
+version: 6.4, 6.5
 feature: PDF Generator
 kt: 7071
 topic: Development
 exl-id: ffa9d243-37e5-420c-91dc-86c73a824083
-source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '1277'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Beispieldateien können [heruntergeladen von hier](assets/pdf-file-types.zip)
 
 ## XML Forms Architecture PDF (XFA-PDF)
 
-Adobe verwendet den Begriff XFA-PDF-Formular, um auf das interaktive und dynamische Forms zu verweisen, das Sie mit AEM Forms Designer erstellen. Die Forms und die Dateien, die Sie mit Designer erstellen, basieren auf der XML Forms Architecture (XFA) von Adobe. In vielerlei Hinsicht ist das XFA-PDF-Dateiformat näher an einer HTML-Datei als an einer herkömmlichen PDF-Datei. Der folgende Code zeigt beispielsweise, wie ein einfaches Textobjekt in einer XFA-PDF-Datei aussieht.
+Adobe verwendet den Begriff XFA-PDF-Formular, um auf das interaktive und dynamische Forms zu verweisen, das Sie mit AEM Forms Designer erstellen. Die Forms und die Dateien, die Sie mit Designer erstellen, basieren auf der XML Forms Architecture (XFA) der Adobe. In vielerlei Hinsicht ist das XFA-PDF-Dateiformat näher an einer HTML-Datei als an einer herkömmlichen PDF-Datei. Der folgende Code zeigt beispielsweise, wie ein einfaches Textobjekt in einer XFA-PDF-Datei aussieht.
 
 ![Textfeld](assets/text-field.JPG)
 
@@ -82,7 +82,7 @@ Ein zertifiziertes Dokument bietet PDF-Dokumenten- und Formularempfängern zusä
 
 ### Acroforms
 
-Acroforms ist die ältere interaktive Formulartechnologie der Adobe. sie gehen zurück zur Acrobat-Version 3. Die Adobe stellt die [Acrobat Forms API-Referenz](assets/FormsAPIReference.pdf), vom Mai 2003, um die technischen Einzelheiten dieser Technologie zu nennen. Acroforms sind eine Kombination der folgenden Elemente:
+Acroforms sind die ältere interaktive Formulartechnologie der Adobe. sie gehen zurück zur Acrobat-Version 3. Die Adobe stellt die [Acrobat Forms API-Referenz](assets/FormsAPIReference.pdf), vom Mai 2003, um die technischen Einzelheiten dieser Technologie zu nennen. Acroforms sind eine Kombination der folgenden Elemente:
 
 * Eine herkömmliche PDF, die das statische Layout und die Grafiken des Formulars definiert.
 * Interaktive Formularfelder, die mit den Formularbeitern des Adobe Acrobat-Programms zusätzlich hervorgehoben werden. Diese Formularwerkzeuge sind eine kleine Teilmenge der in AEM Forms Designer verfügbaren Funktionen.
@@ -113,7 +113,7 @@ Obwohl die Dokumente gleich aussehen, wird die PDF/A-Datei mit einem blauen Balk
 
 ![pdf-img](assets/pdfa-message.png)
 
-Die Dokumentmeldungsleiste enthält Anweisungen und ggf. Schaltflächen, mit denen Sie eine Aufgabe abschließen können. Es ist farbcodiert und Sie sehen die blaue Farbe, wenn Sie spezielle PDF-Typen (wie diese PDF/A-Datei) sowie zertifizierte und digital signierte PDF öffnen. Die Leiste ändert sich in violett für PDF forms und gelb, wenn Sie an einem PDF-Review teilnehmen.
+Die Dokumentmeldungsleiste enthält Anweisungen und ggf. Schaltflächen, mit denen Sie eine Aufgabe abschließen können. Es ist farbcodiert und Sie sehen die blaue Farbe, wenn Sie bestimmte PDF-Typen (wie diese PDF/A-Datei) sowie zertifizierte und digital signierte PDF öffnen. Die Leiste ändert sich in violett für PDF forms und gelb, wenn Sie an einem PDF-Review teilnehmen.
 
 >[!NOTE]
 >

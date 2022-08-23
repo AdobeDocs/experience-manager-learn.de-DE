@@ -2,18 +2,18 @@
 title: Farb-Management mit AEM Dynamic Media
 description: In diesem Video erfahren Sie, wie das Dynamic Media-Farbmanagement genutzt werden kann, um Farbkorrektur-Vorschaufunktionen in für AEM Assets bereitzustellen.
 sub-product: dynamic-media
-feature: Bildprofile, Videoprofile
-version: 6.3, 6.4, 6.5
-topic: Content Management
+feature: Image Profiles, Video Profiles
+version: 6.4, 6.5
+topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 24%
+source-wordcount: '319'
+ht-degree: 26%
 
 ---
-
 
 # Farb-Management mit AEM Dynamic Media{#understanding-color-management-with-aem-dynamic-media}
 
@@ -23,7 +23,7 @@ In diesem Video erfahren Sie, wie das Dynamic Media-Farbmanagement genutzt werde
 
 >[!NOTE]
 >
->[Aktivieren Sie AEM Dynamic ](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) Media , um diese Funktion zu verwenden.
+>[Dynamic Media aktivieren](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=de) in AEM, um diese Funktion zu verwenden.
 
 Diese Funktion ist für AEM 6.1- und 6.2-Versionen als Feature Pack verfügbar.
 
@@ -91,11 +91,11 @@ Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten Farbmanage
 | ------------------- | ---------- | ------------------------------------- |
 | AdobeRGB | RGB | Adobe RGB (1998) |
 | AppleRGB | RGB | Apple RGB |
-| CIERGB | RGB | CIE RGB |
+| CIERGB | RGB | CIE-RGB |
 | CoatedFogra27 | CMYK | Überzogene FOGRA27 (ISO 12647-2:2004) |
 | CoatedFogra39 | CMYK | Überzogene FOGRA39 (ISO 12647-2:2004) |
 | CoatedGraCol | CMYK | Coated GRACoL 2006 (ISO 12647-2:2004) |
-| ColorMatchRGB | RGB | ColorMatch RGB |
+| ColorMatchRGB | RGB | ColorMatch-RGB |
 | EuropeISOCoated | CMYK | Europe ISO Coated FOGRA27 |
 | EuroscaleCoated | CMYK | Euroscale Coated v2 |
 | EuroscaleUngestrichen | CMYK | Euroscale Unbeschichtv2 |
@@ -107,7 +107,7 @@ Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten Farbmanage
 | NewsprintSNAP2007 | CMYK | US Newsprint (SNAP 2007) |
 | NTSC | RGB | NTSC (1953) |
 | PAL | RGB | PAL/SECAM |
-| ProFoto | RGB | ProFoto RGB |
+| ProFoto | RGB | ProFoto-RGB |
 | PS4Default | CMYK | Photoshop 4-Standard-CMYK |
 | PS5Default | CMYK | Photoshop 5-Standard-CMYK |
 | SheetfedCoated | CMYK | U.S. Sheetfed Coated v2 |
@@ -120,7 +120,7 @@ Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten Farbmanage
 | WebCoatedGrade3 | CMYK | Webbeschichteter SWOP 2006 Grad 3 Papier |
 | WebCoatedGrade5 | CMYK | Webbeschichtetes SWOP 2006 Grade 5 Papier |
 | WebUngestrichen | CMYK | U.S. Web Unxed v2 |
-| WideGamutRGB | RGB | Wide Gamut RGB |
+| WideGamutRGB | RGB | Wide Gamut-RGB |
 
 ## Zusätzliche Ressourcen{#additional-resources}
 

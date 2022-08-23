@@ -4,19 +4,19 @@ description: Die Komponentenkonsole bietet Entwicklern und Administratoren einen
 topics: components
 audience: all
 doc-type: feature video
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 activity: use
-feature: Kernkomponenten
-topic: Content Management
+feature: Core Components
+topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 6f33f121-5564-4c46-ab56-7ea382a0ab5a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 3%
+source-wordcount: '174'
+ht-degree: 1%
 
 ---
-
 
 # Verwenden der Komponentenkonsole {#using-the-components-console-with-aem-sites}
 
@@ -31,7 +31,7 @@ Die Komponentenkonsole bietet die folgenden Funktionen:
 * [!UICONTROL Richtlinien]: zeigt alle vorhandenen Richtlinien für eine bestimmte Komponente und die mit ihr verknüpfte Vorlage an
 * [!UICONTROL Live-Nutzung]: zeigt eine Liste der Seiten an, auf denen die Komponente enthalten ist
 
-Die Komponentenkonsole befindet sich unter **[!UICONTROL Tools]** > **[!UICONTROL Allgemein]** > **[!UICONTROL Komponenten]**.
+Die Komponentenkonsole finden Sie unter **[!UICONTROL Instrumente]** > **[!UICONTROL Allgemein]** > **[!UICONTROL Komponenten]**.
 URL der Komponentenkonsole (lokaler AEM-Autor): [http://localhost:4502/libs/wcm/core/content/sites/components.html](http://localhost:4502/libs/wcm/core/content/sites/components.html)
 
 ## Zusätzliche Ressourcen {#additional-resources}

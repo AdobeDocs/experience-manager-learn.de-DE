@@ -1,16 +1,16 @@
 ---
 title: Acroforms mit AEM Forms
-seo-title: Zusammenführen adaptiver Formulardaten mit Acroform
-description: Teil 1 der Integration von Acroforms mit AEM Forms. Erstellen eines adaptiven Formulars mit Acroform und Zusammenführen der Daten zum Abrufen einer PDF-Datei.
-feature: adaptive Formulare
+seo-title: Merge Adaptive Form data with Acroform
+description: Teil 1 der Integration von Acroforms mit AEM Forms. Erstellen eines adaptiven Formulars mit Acroform und Zusammenführen der Daten, um eine PDF zu erhalten.
+feature: adaptive-forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4
-source-git-commit: 451ca39511b52e90a44bba25c6739280f49a0aac
+version: 6.4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '218'
 ht-degree: 3%
 
 ---
@@ -29,13 +29,13 @@ Acroforms sind Formulare, die mit Acrobat erstellt werden. Sie können ein neues
 
 >[!NOTE]
 >
->Wenn Sie das ausfüllbare Acrobat zum Signieren mit Adobe Sign senden möchten, benennen Sie die Felder entsprechend. Sie können beispielsweise ein Feld **Sig_es_:signer1:signature** benennen. Dies ist die Syntax, die Adobe Sign versteht.
+>Wenn Sie das ausfüllbare Acrobat zum Signieren mit Adobe Sign senden möchten, benennen Sie die Felder entsprechend. Sie können beispielsweise ein Feld benennen **Sig_es_:signer1:signature**. Dies ist die Syntax, die Adobe Sign versteht.
 
 >[!NOTE]
 >
 >Wenn Sie ein XFA-basiertes Dokument senden, müssen Sie das Dokument reduzieren und die Adobe Sign-Signatur-Tags müssen als statischer Text im Dokument vorhanden sein.
 
-[Adobe Sign Text Tags-Dokument](https://helpx.adobe.com/sign/using/text-tag.html_de)
+[Adobe Sign Text Tags-Dokument](https://helpx.adobe.com/de/sign/using/text-tag.html)
 
 >[!NOTE]
 >

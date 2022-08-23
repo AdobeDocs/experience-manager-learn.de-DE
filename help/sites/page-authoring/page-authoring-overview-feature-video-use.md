@@ -1,26 +1,26 @@
 ---
 title: Seitenbearbeitung in AEM Sites
-seo-title: Im folgenden Video wird gezeigt, wie eine neue Seite in Adobe Experience Manager Sites mithilfe der Benutzeroberfläche des Site-Editors erstellt wird
+seo-title: The following video highlights how to author a new page in Adobe Experience Manager Sites using the Site Editor's UI
 description: Im folgenden Video wird gezeigt, wie eine neue Seite in Adobe Experience Manager Sites mithilfe der Benutzeroberfläche des Site-Editors erstellt wird
-seo-description: Im folgenden Video wird gezeigt, wie eine neue Seite in Adobe Experience Manager Sites mithilfe der Benutzeroberfläche des Site-Editors erstellt wird
-feature: Seiten-Editor, bearbeitbare Vorlagen
+seo-description: The following video highlights how to author a new page in Adobe Experience Manager Sites using the Site Editor's UI
+feature: Page Editor, Editable Templates
 topics: authoring, publishing
 audience: author, marketer
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 kt: 4497
 thumbnail: 31828.jpg
-topic: Content Management
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: a14c511f-504a-48ce-864b-b1a30cbaea9a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '178'
-ht-degree: 12%
+source-wordcount: '132'
+ht-degree: 21%
 
 ---
-
 
 # Verfassen einer Seite {#authoring-page-aem-sites}
 
@@ -49,5 +49,5 @@ In diesem Video werden die folgenden Funktionen behandelt:
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Bearbeiten der Dokumentation zum Seiteninhalt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
+* [Bearbeiten der Dokumentation zum Seiteninhalt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html?lang=de)
 * [Schnellstartanleitung zum Verfassen von Seiten (Authoring)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)

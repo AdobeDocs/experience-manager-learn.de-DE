@@ -1,17 +1,17 @@
 ---
 title: Einführung in das Designing in Asset Share Commons
 description: Materialien für das funktionale und technische Verständnis von Assets Share Commons
-version: 6.3, 6.4, 6.5
-topic: Content Management
+version: 6.4, 6.5
+topic: Content Management
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: b7d0b6b1-145a-4987-a9dc-7263efa4d9fb
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 3%
+source-wordcount: '113'
+ht-degree: 1%
 
 ---
-
 
 # Einführung in das Designing in Asset Share Commons {#asset-share-commons-theme}
 
@@ -72,7 +72,7 @@ In diesem Video wird ein neues Design basierend auf dem Asset Share Commons Dark
 @msgWarningBackgroundColor: @yellow;
 ```
 
-[Benutzerdefiniertes Client-Bibliotheksthema](assets/asc-theme-demo.zip) herunterladen
+Download [Benutzerdefiniertes Client-Bibliotheksthema](assets/asc-theme-demo.zip)
 
 ## Zusätzliche Ressourcen{#additional-resources}
 

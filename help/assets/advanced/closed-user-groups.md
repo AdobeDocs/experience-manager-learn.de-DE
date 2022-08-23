@@ -1,7 +1,7 @@
 ---
 title: Geschlossene Benutzergruppen in AEM Assets
 description: Geschlossene Benutzergruppen (CUGs) sind eine Funktion, mit der der Zugriff auf Inhalte auf eine ausgewählte Benutzergruppe auf einer veröffentlichten Site beschränkt wird. In diesem Video wird gezeigt, wie geschlossene Benutzergruppen mit Adobe Experience Manager Assets verwendet werden können, um den Zugriff auf einen bestimmten Asset-Ordner zu beschränken.
-version: 6.3, 6.4, 6.5, Cloud Service
+version: 6.4, 6.5, Cloud Service
 topic: Administration, Security
 feature: User and Groups
 role: Admin
@@ -9,7 +9,7 @@ level: Intermediate
 kt: 649
 thumbnail: 22155.jpg
 exl-id: a2bf8a82-15ee-478c-b7c3-de8a991dfeb8
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 1%
@@ -36,9 +36,9 @@ Sowohl geschlossene Benutzergruppen (CUG) als auch Zugriffssteuerungslisten (ACL
 
 |  | ACL | CUG |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Vorgesehene Verwendung | Konfigurieren und wenden Sie Berechtigungen für Inhalte auf der AEM **current** an. | Konfigurieren Sie CUG-Richtlinien für Inhalte in AEM **author** -Instanz. Wenden Sie CUG-Richtlinien für Inhalte auf AEM **publish**-Instanz(en) an. |
-| Berechtigungsebenen | Definiert erteilte/abgelehnte Berechtigungen für Benutzer/Gruppen für alle Ebenen: Lesen, Ändern, Erstellen, Löschen, Lesen, ACL, ACL bearbeiten, Replizieren. | Gewährt Lesezugriff für eine Reihe von Benutzern/Gruppen. Verweigert Lesezugriff auf *alle anderen* Benutzer/Gruppen. |
-| Veröffentlichung | ACLs sind *nicht*, die mit Inhalten veröffentlicht werden. | CUG-Richtlinien *sind* mit Inhalt veröffentlicht. |
+| Vorgesehene Verwendung | Konfigurieren und Anwenden von Berechtigungen für Inhalte auf **current** AEM Instanz. | Konfigurieren von CUG-Richtlinien für Inhalte in AEM **author** -Instanz. Anwenden von CUG-Richtlinien auf Inhalte in AEM **publish** Instanz(en). |
+| Berechtigungsebenen | Definiert erteilte/abgelehnte Berechtigungen für Benutzer/Gruppen für alle Ebenen: Lesen, Ändern, Erstellen, Löschen, Lesen, ACL, ACL bearbeiten, Replizieren. | Gewährt Lesezugriff für eine Reihe von Benutzern/Gruppen. Lese-Zugriff auf verweigert *alle anderen* Benutzer/Gruppen. |
+| Veröffentlichung | ACLs sind *not* mit Inhalten veröffentlicht. | CUG-Richtlinien *are* mit Inhalten veröffentlicht. |
 
 ## Unterstützende Links {#supporting-links}
 

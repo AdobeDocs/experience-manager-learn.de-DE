@@ -5,8 +5,8 @@ topics: development
 audience: developer
 doc-type: tutorial
 activity: develop
-version: 6.3, 6.4, 6.5
-source-git-commit: 03db12de4d95ced8fabf36b8dc328581ec7a2749
+version: 6.4, 6.5
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 Adobe Experience Managers Resource Status-APIs ist ein Plug-in-fähiges Framework für die Anzeige von Statusnachrichten in AEM verschiedenen Editor-Web-Benutzeroberflächen.
 
-## Überblick {#overview}
+## Übersicht {#overview}
 
 Das Framework &quot;Resource Status for Editors&quot;bietet serverseitige und Client-seitige APIs für die standardmäßige und einheitliche Anzeige und Interaktion mit den Editorstatus.
 
@@ -41,31 +41,31 @@ Bei der Entwicklung benutzerdefinierter Ressourcenstatus umfasst die Entwicklung
 
    ![Architektur des Ressourcenstatus](assets/sample-editor-resource-status-application-architecture.png)
 
-3. Die Statusressource, die im Rahmen der Editoren &quot;Seite&quot;, &quot;Experience Fragment&quot;und &quot;Vorlage&quot;bereitgestellt wird, erhält einen Typ über die Eigenschaft &quot;[!DNL statusType]&quot;der Ressourcen.
+3. Die im Seiten-, Experience Fragment- und Vorlagen-Editor bereitgestellte Statusressource erhält über die Ressourcen einen Typ[!DNL statusType]&quot;.
 
    * Seiten-Editor: `editor`
    * Experience Fragment-Editor: `editor`
    * Vorlagen-Editor: `template-editor`
 
-4. Die `statusType` der Statusressource wird mit der registrierten `CompositeStatusType` OSGi-Eigenschaft abgeglichen, die `name` konfiguriert ist.
+4. Die Statusressource `statusType` wird mit registriert abgeglichen `CompositeStatusType` OSGi-Konfiguration `name` -Eigenschaft.
 
-   Bei allen Übereinstimmungen werden die `CompositeStatusType's`-Typen erfasst und zur Erfassung der `ResourceStatusProvider`-Implementierungen mit diesem Typ über `ResourceStatusProvider.getType()` verwendet.
+   Bei allen Treffern wird die `CompositeStatusType's` werden erfasst und zur Erfassung der `ResourceStatusProvider` Implementierungen mit diesem Typ, via `ResourceStatusProvider.getType()`.
 
-5. Der übereinstimmende `ResourceStatusProvider` wird im Editor an `resource` übergeben und bestimmt, ob der `resource` -Status angezeigt werden soll. Wenn der Status erforderlich ist, ist diese Implementierung dafür verantwortlich, 0 oder viele `ResourceStatuses` zu erstellen, die zurückgegeben werden und jeweils einen anzuzeigenden Status darstellen.
+5. Die `ResourceStatusProvider` wird übergeben, `resource` im Editor und bestimmt, ob die `resource` hat den Status angezeigt werden. Wenn der Status erforderlich ist, ist diese Implementierung für das Erstellen von 0 oder vielen `ResourceStatuses` zurück, wobei jede einen anzuzeigenden Status darstellt.
 
-   Normalerweise gibt ein `ResourceStatusProvider` 0 oder 1 `ResourceStatus` pro `resource` zurück.
+   In der Regel wird ein `ResourceStatusProvider` 0 oder 1 zurückgibt `ResourceStatus` per `resource`.
 
-6. ResourceStatus ist eine Schnittstelle, die vom Kunden implementiert werden kann. Alternativ kann die hilfreiche `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` verwendet werden, um einen Status zu erstellen. Ein Status besteht aus:
+6. ResourceStatus ist eine Benutzeroberfläche, die vom Kunden oder der `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` kann verwendet werden, um einen Status zu erstellen. Ein Status besteht aus:
 
    * Titel
    * Nachricht
    * Symbol
    * Variante
    * Priorität
-   * Aktionen 
+   * Aktionen
    * Daten
 
-7. Wenn `Actions` für das `ResourceStatus`-Objekt bereitgestellt wird, sind optional unterstützende Clientlibs erforderlich, um die Funktionalität an die Aktionslinks in der Statusleiste zu binden.
+7. Optional, wenn `Actions` für die `ResourceStatus` -Objekt, das clientlibs unterstützt, erforderlich sind, um die Funktionalität an die Aktionslinks in der Statusleiste zu binden.
 
    ```js
    (function(jQuery, document) {

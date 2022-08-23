@@ -2,12 +2,12 @@
 title: AEM Forms mit Marketo (Teil 2)
 description: Tutorial zur Integration von AEM Forms mit Marketo mithilfe des AEM Forms-Formulardatenmodells.
 feature: Adaptive Forms, Form Data Model
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
-source-git-commit: 020852f16de0cdb1e17e19ad989dabf37b7f61f5
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 # Marketo-Authentifizierungsdienst
 
-Die REST-APIs von Marketo sind mit OAuth 2.0 mit zwei Legierungen authentifiziert. Für die Authentifizierung bei Marketo müssen benutzerdefinierte Authentifizierungen erstellt werden. Diese benutzerdefinierte Authentifizierung wird normalerweise in ein OSGi-Bundle geschrieben. Der folgende Code zeigt den benutzerdefinierten Authentifizierer, der im Rahmen dieses Tutorials verwendet wurde.
+Marketos REST-APIs sind mit OAuth 2.0 mit zwei Legierungen authentifiziert. Für die Authentifizierung bei Marketo müssen benutzerdefinierte Authentifizierungen erstellt werden. Diese benutzerdefinierte Authentifizierung wird normalerweise in ein OSGi-Bundle geschrieben. Der folgende Code zeigt den benutzerdefinierten Authentifizierer, der im Rahmen dieses Tutorials verwendet wurde.
 
 ## Benutzerdefinierter Authentifizierungsdienst
 
@@ -199,5 +199,5 @@ public class MarketoConfigurationService {
 ```
 
 1. Erstellen Sie das Bundle und stellen Sie es auf Ihrem AEM bereit.
-1. [Zeigen Sie Ihren Browser auf &quot;](http://localhost:4502/system/console/configMgr) configMgrand&quot;und suchen Sie nach &quot;Marketo Credentials Service Configuration&quot;.
+1. [Zeigen Sie Ihren Browser auf configMgr](http://localhost:4502/system/console/configMgr) und suchen Sie nach &quot;Marketo Credentials Service Configuration&quot;
 1. Spezifizieren Sie die entsprechenden Eigenschaften für Ihre Marketo-Instanz.

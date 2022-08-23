@@ -1,17 +1,17 @@
 ---
 title: Verwenden der Quelldateiübersetzung mit AEM Assets
 description: Mit Adobe Experience Manager (AEM) Assets können Sie Assets identifizieren, die gemeinsame Attribute aufweisen, und sie mit der neuen Funktion "Zugehörige Assets"als verwandt markieren. Außerdem können Benutzer eine Quell-/abgeleitete Beziehung zwischen Assets definieren, sodass Benutzer die Herkunft eines Assets leicht identifizieren können. Wenn Sie einen Übersetzungs-Workflow für ein abgeleitetes Asset ausführen, werden alle Assets abgerufen, auf die die Quelldatei verweist, und zur Übersetzung hinzugefügt. Dadurch wird der Aufwand für die Pflege mehrerer Sites verringert.
-version: 6.3, 6.4, 6.5
-topic: Content Management
+version: 6.4, 6.5
+topic: Content Management
 role: User
 level: Intermediate
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 19155d51-18a7-42ca-9a73-1b5fa1355d58
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
-
 
 # Verwenden der Quelldateiübersetzung mit AEM Assets {#using-source-file-translation-with-aem-assets}
 
@@ -25,6 +25,6 @@ Mit verwandten Assets können Benutzer bessere Assets verwalten, die Assets mit 
 
 * Neue Funktion &quot;Zugehörige Assets&quot;zum manuellen Zuordnen von Assets mit ähnlichen Merkmalen oder Inhalten zu derselben Kampagne oder demselben Projekt
 * Benutzer können zugehörige Dateien für ein Asset unter &quot;View Properties&quot;anzeigen. Ein Benutzer kann im Fenster mit den Ansichtseigenschaften zu den zugehörigen Dateien navigieren.
-* Wenn sich die Eigenschaften zweier verwandter Assets geändert haben, können Benutzer die Zuordnung dieser Assets mithilfe der Option Relation aufheben aufheben.
+* Wenn sich die Eigenschaften zweier verwandter Assets geändert haben, können die Benutzer die Zuordnung dieser Assets mithilfe der Option Relation aufheben aufheben.
 * Wenn Sie versuchen, ein zugehöriges Asset zu löschen, erhalten Sie eine Warnmeldung, wenn es andere zugehörige Assets enthält.
 * Wenn Sie einen Übersetzungs-Workflow für ein abgeleitetes verwandtes Asset ausführen, werden die zugehörigen Quelldateien zum Übersetzungs-Workflow hinzugefügt, wodurch die Verwaltung mehrerer Sites erleichtert wird.

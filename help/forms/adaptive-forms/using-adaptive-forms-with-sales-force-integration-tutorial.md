@@ -3,17 +3,17 @@ title: Konfigurieren von DataSource mit Salesforce in AEM Forms 6.3 und 6.4
 description: Integrieren von AEM Forms mit Salesforce mithilfe des Formulardatenmodells
 feature: Adaptive Forms, Form Data Model
 topics: integrations
-version: 6.3,6.4,6.5
+version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+exl-id: 7a4fd109-514a-41a8-a3fe-53c1de32cb6d
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurieren von DataSource mit Salesforce in AEM Forms 6.3 und 6.4{#configuring-datasource-with-salesforce-in-aem-forms-and}
 
@@ -30,17 +30,17 @@ Voraussetzungen für dieses Tutorial:
    * [Offizielle Dokumentation zur Aktivierung von SSL in AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
 
 * Sie benötigen ein Salesforce-Konto
-* Sie müssen eine Connected App erstellen. Das offizielle Dokumentationsformular von Salesforce zum Erstellen der App ist [hier](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0) aufgeführt.
+* Sie müssen eine Connected App erstellen. Die offizielle Dokumentation von Salesforce zum Erstellen der App wird aufgelistet [here](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0).
 * Bereitstellung geeigneter OAuth-Bereiche für die App (ich habe alle verfügbaren OAuth-Bereiche zum Testen ausgewählt)
 * Geben Sie die Callback-URL an. Die Callback-URL in meinem Fall war
 
-   * Wenn Sie **AEM Forms 6.3** verwenden, lautet die Callback-URL https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html. In dieser URL-Erstellung ist der Name meines Formulardatenmodells.
+   * Wenn Sie **AEM Forms 6.3** lautet die Callback-URL https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html. In dieser URL-Erstellung ist der Name meines Formulardatenmodells.
 
    * Wenn Sie** AEM Forms 6.4** verwenden, lautet die Callback-URL https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
 
 In diesem Beispiel ist gbedekar -w7-1:6443 der Name meines Servers und der Port, auf dem AEM ausgeführt wird.
 
-Nachdem Sie die Notiz &quot;Connected App&quot;erstellt haben, verwenden Sie den **Consumer Key und den geheimen Schlüssel**. Diese werden beim Erstellen der Datenquelle in AEM Forms benötigt.
+Nachdem Sie die Connected App erstellt haben, notieren Sie den Hinweis **Consumer Key und Secret Key**. Diese werden beim Erstellen der Datenquelle in AEM Forms benötigt.
 
 Nachdem Sie Ihre verbundene App erstellt haben, müssen Sie eine Swagger-Datei für die Vorgänge erstellen, die Sie in Salesforce ausführen müssen. Eine Beispiel-Swagger-Datei ist als Teil der herunterladbaren Assets enthalten. Mit dieser Swagger-Datei können Sie das &quot;Lead&quot;-Objekt bei der Übermittlung des adaptiven Formulars erstellen. Bitte schauen Sie sich diese Swagger-Datei an.
 
@@ -49,7 +49,7 @@ Der nächste Schritt besteht darin, eine Datenquelle in AEM Forms zu erstellen. 
 ## AEM Forms 6.3 {#aem-forms}
 
 * Melden Sie sich mit dem HTTPS-Protokoll bei AEM Forms an
-* Navigieren Sie zu Cloud-Services, indem Sie https://&lt;Servername>:&lt;serverport> /etc/cloudservices.html eingeben. Beispiel: https://gbedekar-w7-1:6443/etc/cloudservices.html
+* Navigieren Sie zu Cloud-Services, indem Sie https:// eingeben.&lt;servername>:&lt;serverport> /etc/cloudservices.html, z. B. https://gbedekar-w7-1:6443/etc/cloudservices.html
 * Scrollen Sie nach unten zu &quot;Formulardatenmodell&quot;.
 * Klicken Sie auf &quot;Konfigurationen anzeigen&quot;.
 * Klicken Sie auf &quot;+&quot;, um eine neue Konfiguration hinzuzufügen.
@@ -65,14 +65,14 @@ Der nächste Schritt besteht darin, eine Datenquelle in AEM Forms zu erstellen. 
 * Wählen Sie &quot;Datei&quot; als Option für Ihre Swagger-Quelldatei aus. Navigieren Sie zu der Datei, die Sie zuvor heruntergeladen haben
 * Wählen Sie Authentifizierungstyp als OAuth2.0 aus.
 * Geben Sie die Werte ClientID und Client Secret an
-* OAuth-URL ist - **https://login.salesforce.com/services/oauth2/authorize**
+* OAuth-URL lautet - **https://login.salesforce.com/services/oauth2/authorize**
 * Token-URL aktualisieren - **https://na5.salesforce.com/services/oauth2/token**
 * **Zugriffstoken-URL - https://na5.salesforce.com/services/oauth2/token**
-* Autorisierungsbereich: ** api   chatter_api full id   openid   refresh_token visualforce web**
+* Autorisierungsbereich: ** api chatter_api full id openid refresh_token visualforce web**
 * Authentifizierungs-Handler: Autorisierungsanbieter
 * Klicken Sie auf &quot;Mit OAUTH verbinden&quot;. Wenn alles gut läuft, sollten keine Fehler angezeigt werden.
 
-Nachdem Sie Ihr Formulardatenmodell mit Salesforce erstellt haben, können Sie die Formulardatenintegration mithilfe der soeben erstellten Datenquelle erstellen. Die offizielle Dokumentation zum Erstellen der Formulardatenintegration ist [hier](https://helpx.adobe.com/aem-forms/6-3/data-integration.html).
+Nachdem Sie Ihr Formulardatenmodell mit Salesforce erstellt haben, können Sie die Formulardatenintegration mithilfe der soeben erstellten Datenquelle erstellen. Die offizielle Dokumentation zum Erstellen der Formulardatenintegration finden Sie unter [here](https://helpx.adobe.com/aem-forms/6-3/data-integration.html).
 
 Stellen Sie sicher, dass Sie das Formulardatenmodell so konfigurieren, dass es den POST-Dienst einbezieht, um ein Lead-Objekt in SFDC zu erstellen.
 
@@ -97,15 +97,15 @@ Nachdem Sie das Formulardatenmodell erstellt haben, können Sie auf diesem Model
    * Suchen und wählen Sie die Swagger-Datei aus, die Sie im vorherigen Schritt heruntergeladen haben
    * Authentifizierungstyp: OAuth 2.0. Geben Sie die folgenden Werte an
    * Geben Sie die Werte ClientID und Client Secret an
-   * OAuth-URL ist - **https://login.salesforce.com/services/oauth2/authorize**
+   * OAuth-URL lautet - **https://login.salesforce.com/services/oauth2/authorize**
    * Token-URL aktualisieren - **https://na5.salesforce.com/services/oauth2/token**
-   * Access Token Ur **l - https://na5.salesforce.com/services/oauth2/token**
+   * Zugriffstoken-Benutzer **l - https://na5.salesforce.com/services/oauth2/token**
    * Autorisierungsbereich: ** api chatter_api full id openid refresh_token visualforce web**
    * Authentifizierungs-Handler: Autorisierungsanbieter
    * Klicken Sie auf die Schaltfläche &quot;Mit OAuth verbinden&quot;. Sollten Fehler auftreten, überprüfen Sie bitte die vorhergehenden Schritte, um sicherzustellen, dass alle Informationen korrekt eingegeben wurden.
 
 
-Nachdem Sie Ihre Datenquelle mit SalesForce erstellt haben, können Sie die Formulardatenintegration mithilfe der soeben erstellten Datenquelle erstellen. Der Dokumentationslink dafür ist [hier](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
+Nachdem Sie Ihre Datenquelle mit SalesForce erstellt haben, können Sie die Formulardatenintegration mithilfe der soeben erstellten Datenquelle erstellen. Der Dokumentationslink dafür lautet [here](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
 
 Stellen Sie sicher, dass Sie das Formulardatenmodell so konfigurieren, dass es den POST-Dienst einbezieht, um ein Lead-Objekt in SFDC zu erstellen.
 

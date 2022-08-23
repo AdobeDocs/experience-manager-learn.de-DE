@@ -2,18 +2,18 @@
 title: Verwenden von Dynamic Media 360-Videos und benutzerdefinierten Videominiaturen mit AEM Assets
 description: Dynamic Media Viewer-Verbesserungen in AEM 6.5 umfassen die Unterstützung von 360-Grad-Video-Rendering, 360-Grad-Media-Viewern (video360Social und video360VR) und die Möglichkeit, benutzerdefinierte Videominiaturen auszuwählen.
 sub-product: dynamic-media
-feature: Videoprofile
-version: 6.3, 6.4, 6.5
-topic: Content Management
+feature: Video Profiles
+version: 6.4, 6.5
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 4ee0b68f-3897-4104-8615-9de8dbb8f327
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '399'
-ht-degree: 5%
+source-wordcount: '394'
+ht-degree: 4%
 
 ---
-
 
 # Verwenden von Dynamic Media 360-Videos und benutzerdefinierten Videominiaturen mit AEM Assets
 
@@ -23,7 +23,7 @@ Dynamic Media Viewer-Verbesserungen in AEM 6.5 umfassen die Unterstützung von 3
 
 >[!NOTE]
 >
->Video setzt voraus, dass Ihre AEM-Instanz im Dynamic Media S7-Modus ausgeführt wird.  [Anweisungen zum Einrichten von AEM mit Dynamic Media finden Sie hier](https://helpx.adobe.com/de/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). Wenn Sie ein Video hochladen, verarbeitet Dynamic Media dieses standardmäßig als 360-Grad-Video, wenn das Seitenverhältnis 2:1 beträgt. Das Verhältnis von Breite zu Höhe ist also 2:1.
+>Video setzt voraus, dass Ihre AEM-Instanz im Dynamic Media S7-Modus ausgeführt wird.  [Anweisungen zum Einrichten von AEM mit Dynamic Media finden Sie hier .](https://helpx.adobe.com/de/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). Wenn Sie ein Video hochladen, verarbeitet Dynamic Media dieses standardmäßig als 360-Grad-Video, wenn das Seitenverhältnis 2:1 beträgt. Das Verhältnis von Breite zu Höhe ist also 2:1.
 
 >[!NOTE]
 >
@@ -54,7 +54,7 @@ Dynamic Media-Video unterstützt jetzt die Auswahl einer benutzerdefinierten Min
       </td>
    </tr>
    <tr>
-      <td>Nutzungsszenario   </td>
+      <td>Nutzungsszenario</td>
       <td>
          <p>Für Websites und Geräte, die kein Gyroskop unterstützen</p>
          <p> </p>

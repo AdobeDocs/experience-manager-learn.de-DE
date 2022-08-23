@@ -2,18 +2,18 @@
 title: Überblick über Dynamic Media mit AEM Assets
 description: In dieser Videoreihe erhalten Sie einen Überblick darüber, wie Medieninhalte mit Adobe Experience Manager Dynamic Media as a Content Serving Service verwaltet und aufgerufen werden. Mit Dynamic Media können Sie dynamische digitale Erlebnisse verwalten und veröffentlichen - eine für Experience Manager Assets einzigartige Funktion. Unser Framework und unsere Komponentensuite ermöglichen es Marketing-Experten, interaktive Multimedia-Erlebnisse auf allen Geräten anzupassen und bereitzustellen.
 sub-product: dynamic-media
-feature: Smartes Zuschneiden, Videoprofile, Bildprofile, Viewer-Vorgaben, 360-Grad-VR-Video, Bildsets, Rotationssets
-version: 6.3, 6.4, 6.5
-topic: Content Management
+feature: Smart Crop, Video Profiles, Image Profiles, Viewer Presets, 360 VR Video, Image Sets, Spin Sets
+version: 6.4, 6.5
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '888'
-ht-degree: 1%
+source-wordcount: '871'
+ht-degree: 0%
 
 ---
-
 
 # Verwenden von Dynamic Media mit AEM Assets {#understanding-aem-dynamic-media}
 
@@ -79,7 +79,7 @@ In diesem Video wird beschrieben, wie Bildvorgaben erstellt werden und was eine 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27319/?quality=9&learn=on)
 
-In diesem Video wird beschrieben, wie Sie über die Größenanpassung von Bildern hinausgehen, um die Funktionen der Quelldatei selbst zu nutzen - Hintergrundtransparenz, integrierte Beschneidungspfade und Zuschnitte sowie Text als Variablen - mit den URL-Modifikatoren von Dynamic Media.
+In diesem Video wird beschrieben, wie Sie über die Größenanpassung von Bildern hinausgehen, um die Funktionen der Quelldatei selbst zu nutzen - Hintergrundtransparenz, integrierte Beschneidungspfade und Zuschnitte sowie Text als Variablen - mit URL-Modifikatoren von Dynamic Media.
 
 * Verwenden von URL-Modifikatoren im Dynamic Media Modifier-Feld
 * Hintergrundfarbe für Bilder mit Transparenz ändern
@@ -87,7 +87,7 @@ In diesem Video wird beschrieben, wie Sie über die Größenanpassung von Bilder
 * Zuschneiden auf einen Bildpfad
 * Erstellen einer Textvorlage aus einer Photoshop-Datei
 
-## Dynamic Media zur Kontrolle der JPEG-Dateigröße in Kilobytes
+## Dynamic Media zur Steuerung der JPEG-Dateigröße in Kilobytes
 
 >[!VIDEO](https://video.tv.adobe.com/v/27404/?quality=9&learn=on)
 

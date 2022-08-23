@@ -1,14 +1,14 @@
 ---
 title: Speichern und Abrufen von adaptiven Formulardaten
 description: Speichern und Abrufen adaptiver Formulardaten aus der Datenbank. Mit dieser Funktion können Formularausfüller das Formular speichern und das Formular zu einem späteren Zeitpunkt ausfüllen.
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 role: Developer
 type: Tutorial
-version: 6.3,6.4,6.5
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+version: 6.4,6.5
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---

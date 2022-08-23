@@ -1,27 +1,27 @@
 ---
 title: Bereitstellen von Inhaltsfragmenten in AEM
-seo-title: Bereitstellen von Inhaltsfragmenten in Adobe Experience Manager
+seo-title: Delivering Content Fragments in Adobe Experience Manager
 description: Inhaltsfragmente können unabhängig vom Layout direkt in AEM Sites mit Kernkomponenten verwendet oder Headless-Implementierung an nachgelagerte Kanäle durchgeführt werden.
-seo-description: Inhaltsfragmente können unabhängig vom Layout direkt in AEM Sites mit Kernkomponenten verwendet oder Headless-Implementierung an nachgelagerte Kanäle durchgeführt werden.
+seo-description: Content Fragments, independent of layout, can be used directly in AEM Sites with Core Components or can be delivered in a headless manner to downstream channels.
 sub-product: content-services
-feature: Inhaltsfragmente
+feature: Content Fragments
 topics: authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
+version: 6.4, 6.5
 uuid: 045473d2-5abe-4414-b91c-d369f3069ead
 discoiquuid: 912e0c41-83cf-49f7-b515-09519b6718c1
-topic: Content Management
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 525cd30c-05bf-4f17-b61b-90609ce757ea
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 2%
+source-wordcount: '548'
+ht-degree: 6%
 
 ---
-
 
 # Bereitstellen von Inhaltsfragmenten {#delivering-content-fragments}
 
@@ -29,7 +29,7 @@ Adobe Experience Manager (AEM) Inhaltsfragmente sind textbasierte redaktionelle 
 
 Inhaltsfragmente können unabhängig vom Layout direkt in AEM Sites mit Kernkomponenten verwendet oder Headless-Implementierung an nachgelagerte Kanäle durchgeführt werden.
 
-Diese Videoreihe behandelt die Bereitstellungsoptionen für die Verwendung von Inhaltsfragmenten. Details zum Definieren und [Authoring von Inhaltsfragmenten finden Sie hier](content-fragments-feature-video-use.md).
+Diese Videoreihe behandelt die Bereitstellungsoptionen für die Verwendung von Inhaltsfragmenten. Details zur Definition und [Erstellen von Inhaltsfragmenten finden Sie hier .](content-fragments-feature-video-use.md).
 
 1. Verwenden von Inhaltsfragmenten auf Webseiten
 2. Bereitstellen von Inhaltsfragmenten als JSON mithilfe von AEM Content Services
@@ -39,7 +39,7 @@ Diese Videoreihe behandelt die Bereitstellungsoptionen für die Verwendung von I
 
 >[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
 
-Inhaltsfragmente können auf AEM Sites-Seiten oder auf ähnliche Weise Experience Fragments verwendet werden, die die AEM WCM-Kernkomponenten [Inhaltsfragmentkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) verwenden.
+Inhaltsfragmente können auf AEM Sites-Seiten oder auf ähnliche Weise Experience Fragments verwendet werden, die die AEM WCM-Kernkomponenten verwenden. [Inhaltsfragment-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=de).
 
 Inhaltsfragmentkomponenten können mit AEM Stilsystem formatiert werden, um den Inhalt nach Bedarf anzuzeigen.
 
@@ -49,7 +49,7 @@ Inhaltsfragmentkomponenten können mit AEM Stilsystem formatiert werden, um den 
 
 AEM Content Services ermöglicht die Erstellung von AEM seitenbasierten HTTP-Endpunkten, die Inhalte in ein normalisiertes JSON-Format ausgeben.
 
-Das obige Video verwendet die [Inhaltsfragmentkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html), um einzelne Inhaltsfragmente anzuzeigen. Die [Inhaltsfragmentlisten-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html) ist eine neue Komponente, die es einem Autor ermöglicht, eine Abfrage zu definieren, die die Seite dynamisch mit einer Liste von Inhaltsfragmenten füllt. Die Inhaltsfragmentlisten-Komponente wird bevorzugt, wenn mehrere Inhaltsfragmente verfügbar gemacht werden müssen.
+Das obige Video verwendet die [Inhaltsfragment-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) , um einzelne Inhaltsfragmente anzuzeigen. Die [Inhaltsfragmentlisten-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html) ist eine neue Komponente, die es einem Autor ermöglicht, eine Abfrage zu definieren, die die Seite dynamisch mit einer Liste von Inhaltsfragmenten füllt. Die Inhaltsfragmentlisten-Komponente wird bevorzugt, wenn mehrere Inhaltsfragmente verfügbar gemacht werden müssen.
 
 *Beispiel einer JSON-Payload des Content Services-Endpunkts:*\
 **[athletes.json](assets/athletes.json)**
@@ -60,7 +60,7 @@ Das obige Video verwendet die [Inhaltsfragmentkomponente](https://experienceleag
 
 Erste Einführung in AEM 6.5 ist die verbesserte Unterstützung für Inhaltsfragmente mit der Assets-HTTP-API. Dadurch können Entwickler auf einfache Weise CRUD-Vorgänge (Create, Read, Update, Delete, Erstellen, Lesen und Löschen) für Inhaltsfragmente durchführen.
 
-*Beispiel für POSTMAN-Anforderungen:*
+*Beispiele für POSTMAN-Anforderungen:*
 **[CRUD-CFM-API-We.Retail.postman_collection.json](assets/CRUD-CFM-API-We.Retail.postman_collection.json)**
 
 ## Welche Versandmethode verwendet wird
@@ -79,7 +79,7 @@ Es gibt zwei Möglichkeiten, Inhaltsfragment als JSON verfügbar zu machen, um e
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Erstellen von Inhaltsfragmenten](content-fragments-feature-video-use.md)
+* [Authoring mit Inhaltsfragmenten](content-fragments-feature-video-use.md)
 * [AEM WCM-Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de)
 * [AEM WCM-Kerninhaltsfragment-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 

@@ -1,17 +1,17 @@
 ---
 title: Verwenden des Asset-Katalogs mit AEM Commerce und InDesign Server
 description: AEM Erweiterung des Katalogs 6.4 bietet die Möglichkeit, Katalogseiten mit AEM Asset-Vorlagen und InDesign Server zu erstellen.  Ein Benutzer kann eine Katalogseite mithilfe der InDesign-Vorlage erstellen und Produkteigenschaften bearbeitbaren Feldern zuordnen, die später zum Erstellen ähnlicher-Seiten für verschiedene Produkte verwendet werden können.
-version: 6.3, 6.4, 6.5
-topic: Content Management
+version: 6.4, 6.5
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 45daa8e3-ce3b-43de-b3d6-276107215dd4
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '220'
 ht-degree: 0%
 
 ---
-
 
 # Verwenden des Asset-Katalogs mit AEM Commerce und InDesign Server{#using-asset-catalog-with-aem-commerce-and-indesign-server}
 
@@ -27,4 +27,4 @@ AEM Erweiterung des Katalogs 6.4 bietet die Möglichkeit, Katalogseiten mit AEM 
 * Ein Benutzer kann eine Katalogseite mit der Datei \.indd erstellen. Mit Tags versehene Inhalte in der Datei \.indd wären als bearbeitbare Felder verfügbar, sodass Inhaltsautoren Inhalte für diese Felder ändern können.
 * Die Produkteigenschaften können bearbeitbaren Feldern zugeordnet werden, sofern deren Feldtyp übereinstimmt.
 * Katalogseiten für ähnliche Produkte können einfach erstellt werden.
-* Möglichkeit, verschiedene Katalogseiten in einer einzelnen PDF- oder \.indd-Datei zusammenzuführen
+* Möglichkeit, verschiedene Katalogseiten in einer einzigen PDF- oder \.indd-Datei zusammenzuführen

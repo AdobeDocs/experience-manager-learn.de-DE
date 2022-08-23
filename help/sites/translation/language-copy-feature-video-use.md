@@ -1,22 +1,22 @@
 ---
 title: Verwenden der Sprachkopie mit AEM Sites
-description: 'Mit AEM Verbesserungen bei der Übersetzung des Assistenten für Sprachkopie erstellen können Benutzer eine Sprachkopie aus Übergeordneter Sprache erstellen, ohne eine Stammseite erstellen zu müssen. '
-feature: Sprachkopie
+description: Mit AEM Verbesserungen bei der Übersetzung des Assistenten für Sprachkopie erstellen können Benutzer eine Sprachkopie aus Übergeordneter Sprache erstellen, ohne eine Stammseite erstellen zu müssen.
+feature: Language Copy
 topics: localization, authoring, content-architecture
 audience: all
 doc-type: feature video
 activity: use
-version: 6.3, 6.4, 6.5
-topic: Lokalisierung
+version: 6.4, 6.5
+topic: Localization
 role: User
 level: Beginner
-source-git-commit: fb6c21a9a88b5ebcbfb14213182a9b8cba6fe6ae
+exl-id: 49613808-6369-4e43-bc26-fd3041265339
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '89'
-ht-degree: 8%
+source-wordcount: '86'
+ht-degree: 5%
 
 ---
-
 
 # Sprachkopie verwenden {#using-language-copy}
 

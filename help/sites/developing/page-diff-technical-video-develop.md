@@ -1,28 +1,28 @@
 ---
 title: Entwickeln für Seitenunterschiede in AEM Sites
 description: In diesem Video wird gezeigt, wie Sie benutzerdefinierte Stile für die Seitenunterschiede-Funktion von AEM Sites bereitstellen.
-feature: 'Authoring – '
+feature: Authoring
 topics: development
 audience: developer
 doc-type: technical video
 activity: develop
-version: 6.3, 6.4, 6.5
-topic: Entwicklung
+version: 6.4, 6.5
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 7d600b16-bbb3-4f21-ae33-4df59b1bb39d
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '293'
 ht-degree: 6%
 
 ---
 
-
-# Entwicklung für Seitenunterschiede {#developing-for-page-difference}
+# Entwickeln für Seitenunterschiede {#developing-for-page-difference}
 
 In diesem Video wird gezeigt, wie Sie benutzerdefinierte Stile für die Seitenunterschiede-Funktion von AEM Sites bereitstellen.
 
-## Anpassen der Seitendifferenz-Stile {#customizing-page-difference-styles}
+## Anpassen von Seitendifferenz-Stilen {#customizing-page-difference-styles}
 
 >[!VIDEO](https://video.tv.adobe.com/v/18871/?quality=9&learn=on)
 
@@ -30,15 +30,15 @@ In diesem Video wird gezeigt, wie Sie benutzerdefinierte Stile für die Seitenun
 >
 >In diesem Video wird der Client-Bibliothek &quot;we.Retail&quot;benutzerdefiniertes CSS hinzugefügt, wobei diese Änderungen am AEM Sites-Projekt des Anpassers vorgenommen werden sollten. im folgenden Beispielcode: `my-project`.
 
-AEM Seitendifferenz ruft die OOTB-CSS über eine direkte Last von `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css` ab.
+AEM Seitendifferenz ruft die OOTB-CSS über eine direkte Last von `/libs/cq/gui/components/common/admin/diffservice/clientlibs/diffservice/css/htmldiff.css`.
 
 Aufgrund dieser direkten Belastung von CSS anstatt einer Client-Bibliothekskategorie müssen wir einen weiteren Einfügepunkt für die benutzerdefinierten Stile finden. Dieser benutzerdefinierte Einfügepunkt ist die Authoring-Client-Bibliothek des Projekts.
 
 Dies hat den Vorteil, dass diese benutzerdefinierten Stilüberschreibungen mandantenspezifisch sein können.
 
-### Vorbereiten der Authoring-Client-Bibliothek {#prepare-the-authoring-clientlib}
+### Vorbereiten der Authoring-clientlib {#prepare-the-authoring-clientlib}
 
-Stellen Sie sicher, dass eine `authoring` clientlib für Ihr Projekt unter `/apps/my-project/clientlib/authoring.` vorhanden ist.
+das Vorhandensein eines `authoring` clientlib für Ihr Projekt unter `/apps/my-project/clientlib/authoring.`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -49,7 +49,7 @@ Stellen Sie sicher, dass eine `authoring` clientlib für Ihr Projekt unter `/app
 
 ### Bereitstellen des benutzerdefinierten CSS {#provide-the-custom-css}
 
-Fügen Sie der clientlib des Projekts `authoring` eine `css.txt` hinzu, die auf die Datei less verweist, die die übergeordneten Stile bereitstellt. [](https://lesscss.org/) Lessis wird aufgrund seiner vielen praktischen Funktionen bevorzugt, darunter auch das Klassenwrapping, das in diesem Beispiel verwendet wird.
+Hinzufügen zum Projekt `authoring` clientlib a `css.txt` , der auf die Datei less verweist, die die überschreibenden Stile bereitstellt. [Weniger](https://lesscss.org/) wird aufgrund der vielen praktischen Funktionen bevorzugt, darunter auch das Klassenwrapping, das in diesem Beispiel verwendet wird.
 
 ```shell
 base=./css
@@ -57,7 +57,7 @@ base=./css
 htmldiff.less
 ```
 
-Erstellen Sie die `less`-Datei, die die Stilüberschreibungen unter `/apps/my-project/clientlibs/authoring/css/htmldiff.less` enthält, und stellen Sie nach Bedarf die übergeordneten Stile bereit.
+Erstellen Sie die `less` -Datei, die den Stil enthält, überschreibt unter `/apps/my-project/clientlibs/authoring/css/htmldiff.less`und geben Sie bei Bedarf die Überschreibungsstile an.
 
 ```css
 /* Wrap with body to gives these rules more specificity than the OOTB */
@@ -103,11 +103,11 @@ body {
 }
 ```
 
-### Fügen Sie die clientlib-CSS für die Bearbeitung über die Seitenkomponente {#include-the-authoring-clientlib-css-via-the-page-component} ein.
+### Einfügen der clientlib-CSS für die Bearbeitung über die Seitenkomponente {#include-the-authoring-clientlib-css-via-the-page-component}
 
-Fügen Sie die Kategorie &quot;Authoring-Client-Bibliotheken&quot;direkt vor dem Tag `</head>` auf der Basisseite des Projekts ein, um sicherzustellen, dass die Stile geladen werden.`/apps/my-project/components/structure/page/customheaderlibs.html`
+Fügen Sie die Kategorie der Autoren-Client-Bibliotheken in die Basisseite des Projekts ein. `/apps/my-project/components/structure/page/customheaderlibs.html` direkt vor dem `</head>` -Tag, um sicherzustellen, dass die Stile geladen werden.
 
-Diese Stile sollten auf die WCM-Modi [!UICONTROL Bearbeiten] und [!UICONTROL Vorschau] beschränkt sein.
+Diese Stile sollten auf [!UICONTROL Bearbeiten] und [!UICONTROL Vorschau] WCM-Modi.
 
 ```xml
 <head>

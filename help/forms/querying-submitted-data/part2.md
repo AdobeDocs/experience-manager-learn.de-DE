@@ -1,24 +1,24 @@
 ---
 title: AEM Forms mit JSON-Schema und -Daten[Teil 2]
-seo-title: AEM Forms mit JSON-Schema und -Daten[Teil 2]
+seo-title: AEM Forms with JSON Schema and Data[Part2]
 description: Mehrteilige Anleitung, um Sie durch die Schritte zu führen, die zum Erstellen eines adaptiven Formulars mit JSON-Schema und zum Abfragen der gesendeten Daten erforderlich sind.
-seo-description: Mehrteilige Anleitung, um Sie durch die Schritte zu führen, die zum Erstellen eines adaptiven Formulars mit JSON-Schema und zum Abfragen der gesendeten Daten erforderlich sind.
-feature: Adaptive Formulare
+seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.3,6.4,6.5
-topic: Entwicklung
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 29195c70-af12-4a22-8484-3c87a1e07378
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '342'
 ht-degree: 0%
 
 ---
-
 
 # Speichern gesendeter Daten in Datenbank
 
@@ -31,7 +31,7 @@ Um die gesendeten Daten in der Datenbank zu speichern, schreiben wir ein Servlet
 
 Wir haben eine benutzerdefinierte Übermittlung erstellt, um die Formularübermittlung zu handhaben. In der Datei &quot;post.POST.jsp&quot;dieses benutzerdefinierten Sendevorgangs senden wir die Anfrage an unser Servlet weiter.
 
-Weitere Informationen zu benutzerdefinierten Übermittlungsthemen finden Sie in diesem [Artikel](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
+Weiterführende Informationen zu benutzerdefinierten Übermittlungsaktionen finden Sie in diesem Abschnitt [Artikel](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
 
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,&quot;/bin/storepsubmission&quot;,null,null);
 

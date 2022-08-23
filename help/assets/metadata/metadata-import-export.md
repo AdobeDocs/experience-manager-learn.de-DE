@@ -1,20 +1,20 @@
 ---
 title: Verwenden von Metadatenimport und -export in AEM Assets
 description: Erfahren Sie, wie Sie die Import- und Export-Metadatenfunktionen von Adobe Experience Manager Assets verwenden. Mit den Import- und Exportfunktionen können Inhaltsautoren Metadaten für vorhandene Assets stapelweise aktualisieren.
-version: 6.3, 6.4, 6.5, Cloud Service
+version: 6.4, 6.5, Cloud Service
 topic: Content Management
 feature: Metadata
 role: Admin
 level: Intermediate
 kt: 647, 917
 thumbnail: 22132.jpg
-source-git-commit: ac93d6ba636e64ba6d8bbdb0840810b8f47a25c8
+exl-id: 0681e2c4-8661-436c-9170-9aa841a6fa27
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 3%
 
 ---
-
 
 # Verwenden von Metadatenimport und -export in AEM Assets {#metadata-import-and-export}
 
@@ -37,7 +37,7 @@ Erfahren Sie, wie Sie die Import- und Export-Metadatenfunktionen von Adobe Exper
 ### Erste Zeile
 
 * Die erste Zeile der CSV-Datei definiert das Metadatenschema.
-* Die Spalte &quot;Erste&quot;ist standardmäßig auf `assetPath` festgelegt, die den absoluten JCR-Pfad für ein Asset enthält.
+* Die Standardeinstellung der ersten Spalte ist `assetPath`, der den absoluten JCR-Pfad für ein Asset enthält.
 
 * Nachfolgende Spalten in der ersten Zeile verweisen auf andere Metadateneigenschaften eines Assets.
    * Beispiel : `dc:title, dc:description, jcr:title`
@@ -53,7 +53,7 @@ Erfahren Sie, wie Sie die Import- und Export-Metadatenfunktionen von Adobe Exper
    * Falsch: `Dc:Title {{String}}`
 
 * Beim Eigenschaftstyp wird nicht zwischen Groß- und Kleinschreibung unterschieden
-* Alle gültigen [JCR-Eigenschaftstypen](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html) werden unterstützt
+* Alle gültig [JCR-Eigenschaftstypen](https://www.adobe.io/experience-manager/reference-materials/spec/jsr170/javadocs/jcr-2.0/javax/jcr/PropertyType.html) werden unterstützt
 
 * Mehrwert-Eigenschaftenformat - `<metadata property name> {{<property type : MULTI }}`
 

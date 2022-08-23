@@ -1,18 +1,18 @@
 ---
 title: Erste Schritte mit Adaptive Forms
-description: 'Dieses Tutorial führt Sie durch die Schritte, die zum Erstellen eines adaptiven Formulars mit mehreren Registerkarten erforderlich sind. Sie erfahren, wie Sie mit Tabellen, Accordion-Layout und Regeleditor Geschäftsregeln erstellen können. '
-feature: Adaptive Formulare
-version: 6.3,6.4,6.5
-topic: Entwicklung
+description: Dieses Tutorial führt Sie durch die Schritte, die zum Erstellen eines adaptiven Formulars mit mehreren Registerkarten erforderlich sind. Sie erfahren, wie Sie mit Tabellen, Accordion-Layout und Regeleditor Geschäftsregeln erstellen können.
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 8c90fe1c-0c83-4287-9766-08d806b8815a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 39%
+source-wordcount: '207'
+ht-degree: 38%
 
 ---
-
 
 # Erste Schritte mit Adaptive Forms {#getting-started-with-adaptive-forms}
 
@@ -30,8 +30,6 @@ Sie benötigen Folgendes:
 
 * **Es wird davon ausgegangen, dass Sie AEM Forms Version 6.4 oder höher auf localhost:4502 ausführen.**
 
-* [Laden Sie das client-libs-and-](assets/client-libs-and-logo.zip) logoand  [getting-started-](assets/getting-started-fragment.zip) fragment auf Ihre Festplatte herunter.
+* [Laden Sie client-libs-and-logo herunter](assets/client-libs-and-logo.zip) und [getting-started-fragment](assets/getting-started-fragment.zip) auf Ihre Festplatte.
 
 * Importieren Sie die ZIP-Dateien in AEM mit [Package Manager ](http://localhost:4502/crx/packmgr/index.jsp)
-
-

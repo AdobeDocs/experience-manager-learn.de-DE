@@ -1,14 +1,15 @@
 ---
 title: Vorausfüllen des adaptiven Formulars mit dem ACS-Profil
 description: Vorausfüllen des adaptiven Forms mithilfe des ACS-Profils
-feature: Adaptives Forms, Formulardatenmodell
-version: 6.3,6.4,6.5
-topic: Entwicklung
+feature: Adaptive Forms, Form Data Model
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 502f4bdf-d4af-409f-a611-62b7a1a6065a
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '333'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,7 @@ Um das adaptive Formular durch Abrufen von Daten aus ACS im Voraus auszufüllen,
 
 Die folgenden Schritte sind erforderlich, um Profilinformationen mithilfe der REST-API aus ACS abzurufen
 
-* JWT generieren
+* Generieren des JWT
 * JWT für Zugriffstoken austauschen
 * Führen Sie einen REST-Aufruf an ACS durch und rufen Sie das Profil per E-Mail ab
 * XML-Dokument mit Profilinformationen erstellen
@@ -232,5 +233,4 @@ Gehen Sie wie folgt vor, um die Arbeit an Ihrem System zu ermöglichen:
 * [Vergewissern Sie sich, dass Sie die hier beschriebenen Schritte ausgeführt haben](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [Importieren des adaptiven Beispielformulars in AEM mithilfe des Paketmanagers](assets/pre-fill-af-from-campaign.zip)
 * Melden Sie sich bei AEM mit einem Benutzer an, dessen E-Mail-Adresse von einem Profil in Adobe Campaign freigegeben wurde. Wenn die E-Mail-ID des AEM-Benutzers beispielsweise johndoe@adobe.com lautet, müssen Sie über ein Profil in ACS verfügen, dessen E-Mail-Adresse johndoe@adobe.com lautet.
-* [Vorschau des Formulars](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled) anzeigen.
-
+* [Formularvorschau](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled).

@@ -1,18 +1,18 @@
 ---
 title: Verwenden der intelligenten Übersetzungssuche mit AEM Assets
 description: Die intelligente Suche nach Übersetzungen ermöglicht die automatische Suche und Erkennung von Fremdsprachen über AEM Inhalte hinweg, sowohl Assets als auch Seiten, wodurch mehr als 50 Sprachen unterstützt und die manuelle Übersetzung von Inhalten verringert wird.
-version: 6.3, 6.4, 6.5
-feature: Suche
-topic: Content Management
+version: 6.4, 6.5
+feature: Search
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 4f35e3f7-ae29-4f93-bba9-48c60b800238
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 1%
+source-wordcount: '266'
+ht-degree: 0%
 
 ---
-
 
 # Verwenden der intelligenten Übersetzungssuche mit AEM Assets{#using-smart-translation-search-with-aem-assets}
 
@@ -24,7 +24,7 @@ AEM intelligente Übersetzungssuche ermöglicht es Benutzern, mithilfe von nicht
 
 Die intelligente Übersetzungssuche ist ein perfektes Kompliment für AEM Smart-Tags, die auf Assets in englischer Sprache angewendet werden.
 
-In diesem Video wird davon ausgegangen, dass [AEM Smart Translation Search](smart-translation-search-technical-video-setup.md) eingerichtet wurde.
+In diesem Video wird davon ausgegangen [AEM der intelligenten Übersetzungssuche](smart-translation-search-technical-video-setup.md) eingerichtet wurde.
 
 ## Funktionsweise der intelligenten Übersetzungssuche {#how-smart-translation-search-works}
 

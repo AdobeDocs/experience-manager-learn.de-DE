@@ -5,10 +5,11 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: cloud-service
+version: Cloud Service
 topic: Development
 kt: 8844
-source-git-commit: d38da94bd4164163a16899b565c90b159194580a
+exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
 source-wordcount: '504'
 ht-degree: 3%
@@ -84,22 +85,3 @@ Die folgenden Schritte können ausgeführt werden, um eine Cloud-fähige Instanz
 * Erstellen Sie die folgende Ordnerstruktur.C:\aemformscs\aem-sdk\author\crx-quickstart\install
 * Kopieren Sie aem-forms-addon-xxxxxx.far in den Ordner &quot;install&quot;
 * Öffnen Sie die Eingabeaufforderung und navigieren Sie zu c:\aemformscs\aem-sdk\author enter the following command java -jar aem-author-p4502.jar -gui. Dadurch werden die Formulare bereitgestellt, die im Paket in Ihrer AEM hinzugefügt werden.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

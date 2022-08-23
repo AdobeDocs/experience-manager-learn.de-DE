@@ -1,18 +1,18 @@
 ---
 title: Verwenden von Microsoft Dynamics mit AEM Forms
-description: In diesem Video wird ein Workflow erläutert, der zeigt, wie AEM Forms mit Microsoft Dynamics als Back-End-Datenquelle arbeiten kann, um interaktive, personalisierte Kommunikation bereitzustellen.
-feature: Adaptive Formulare
-version: 6.3,6.4,6.5
-topic: Entwicklung
+description: In diesem Video wird ein Workflow erläutert, der zeigt, wie AEM Forms mit Microsoft Dynamics als Back-End-Datenquelle verwendet werden kann, um interaktive, personalisierte Kommunikation bereitzustellen.
+feature: Adaptive Forms
+version: 6.4,6.5
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 3e51767b-3571-4af7-8f01-5b6c5c74734c
+source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 40%
+source-wordcount: '136'
+ht-degree: 38%
 
 ---
-
 
 # Verwenden von Microsoft Dynamics mit AEM Forms{#using-microsoft-dynamics-with-aem-forms}
 
@@ -22,13 +22,12 @@ Relationale Datenbanken: MySQL, Microsoft SQL Server, IBM DB2 und Oracle RDBMS
 1. AEM-Benutzerprofil 
 1. RESTful-Webservices
 1. SOAP-basierte Webservices
-1. OData-Services
+1. OData-Services  
 
-In diesem Video wird ein Workflow erläutert, der zeigt, wie AEM Forms mit Microsoft Dynamics als Back-End-Datenquelle arbeiten kann, um interaktive, personalisierte Kommunikation bereitzustellen.
+In diesem Video wird ein Workflow erläutert, der zeigt, wie AEM Forms mit Microsoft Dynamics als Back-End-Datenquelle verwendet werden kann, um interaktive, personalisierte Kommunikation bereitzustellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/20971?quality=9&learn=on)
 
 >[!NOTE]
 >
 >Diese Funktion ist nur ab AEM 6.3 FP1 verfügbar. Installieren Sie das AEM Forms-Add-on, bevor Sie die Einrichtung vornehmen.
-
