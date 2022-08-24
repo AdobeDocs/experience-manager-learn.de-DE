@@ -7,9 +7,9 @@ kt: 10961
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 614db8b03a823b60846ab8ccfa8fbc29a41f7791
+source-git-commit: abf5522b948c950c3ace28a8da43907959be10b4
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '180'
 ht-degree: 0%
 
 ---
@@ -18,15 +18,13 @@ ht-degree: 0%
 
 Konfigurieren und füllen Sie die Dropdown-Liste mit der Eigenschaft &quot;item load path&quot;.
 Das Feld &quot;Element-Ladepfad&quot;ermöglicht es einem Autor, eine URL bereitzustellen, aus der die in einer Dropdown-Liste verfügbaren Optionen geladen werden.
-Um einen solchen Knoten in crx zu erstellen, führen Sie die folgenden Schritte aus
-
+Gehen Sie wie folgt vor, um einen solchen Knoten in crx zu erstellen:
 * Bei crx anmelden
 * Erstellen Sie einen Knoten mit dem Namen assets (Sie können diesen Knoten gemäß Ihren Anforderungen benennen) und geben Sie sling:folder unter content ein.
 * Speichern
 * Klicken Sie auf den neu erstellten Asset-Knoten und legen Sie seine Eigenschaften wie unten gezeigt fest.
-* Sie müssen eine Eigenschaft des Typs String mit dem Namen Assettypes erstellen (Sie können sie gemäß Ihren Anforderungen benennen). Geben Sie die gewünschten Werte an und speichern Sie sie.
-
-![item-load-path](assets/item-load-path-crx.png)
+* Sie müssen eine Eigenschaft des Typs String mit dem Namen assettypes erstellen (Sie können sie gemäß Ihren Anforderungen benennen). Stellen Sie sicher, dass die Eigenschaft ein multivalue ist. Geben Sie die gewünschten Werte an und speichern Sie sie.
+   ![item-load-path](assets/item-load-path-crx.png)
 
 Um diese Werte in Ihre Dropdown-Liste zu laden, geben Sie den folgenden Pfad in die Eigenschaft &quot;item load path&quot;ein  **/content/assets/assettypes**
 
