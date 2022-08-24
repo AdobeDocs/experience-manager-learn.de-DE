@@ -1,13 +1,13 @@
 ---
 title: Entwickeln für Cross-Origin Resource Sharing (CORS) mit AEM
 description: Ein kurzes Beispiel für die Nutzung von CORS für den Zugriff auf AEM Inhalt von einer externen Webanwendung über clientseitiges JavaScript.
-version: 6,4, 6.5
+version: 6.4, 6.5
 topic: Security, Development
 role: Developer
 level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 41be8c934bba16857d503398b5c7e327acd8d20b
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 0%
