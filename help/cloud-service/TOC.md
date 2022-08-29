@@ -4,9 +4,9 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
+source-git-commit: b04e247c091634030e5377fdb8a159f8c7cce904
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '823'
 ht-degree: 28%
 
 ---
@@ -117,7 +117,7 @@ ht-degree: 28%
 
    + Wechseln zu AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
       + [Einführung   ](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
-      + [Einstieg ](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
+      + [Onboarding](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
       + [Cloud Manager](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
       + [BPA und CAM](./migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md)
       + [AEM](./migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md)
@@ -213,6 +213,7 @@ ht-degree: 28%
    + Integration mit Microsoft Power Automate{#forms-cs-and-power-automate}
       + [Integration konfigurieren](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
       + [Analysieren gesendeter Formulardaten](./forms/forms-cs-and-power-automate/send-email-notification.md)
+      + [DoR als E-Mail-Anhang senden](./forms/forms-cs-and-power-automate/send-DoR-email-attachment.md)
    + Integration mit Microsoft Dynamics{#formscs-dynamics-crm}
       + [Erstellen von Dynamics-Anwendungen](./forms/formscs-dynamics-crm/create-dynamics-account.md)
       + [Datenquelle konfigurieren](./forms/formscs-dynamics-crm/configure-odata-data-source.md)
