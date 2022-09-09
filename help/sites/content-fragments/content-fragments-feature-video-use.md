@@ -12,31 +12,36 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: 9aae58c3301a7067baca374d6499f1afc3c95b06
 workflow-type: tm+mt
-source-wordcount: '367'
-ht-degree: 6%
+source-wordcount: '383'
+ht-degree: 12%
 
 ---
 
-# Erstellen von Inhaltsfragmenten {#authoring-content-fragments}
+# Authoring mit Inhaltsfragmenten {#authoring-content-fragments}
 
 Inhaltsfragmente sind eine Inhaltsabstraktion in AEM, mit der textbasierte Inhalte unabhängig von den unterstützten Kanälen erstellt und verwaltet werden können.
 
 AEM Inhaltsfragmente sind textbasierte redaktionelle Inhalte, die einige strukturierte Datenelemente enthalten können, die verknüpft sind, aber ohne Design- oder Layoutinformationen als reine Inhalte betrachtet werden. Inhaltsfragmente werden in der Regel als kanalagnostischer Inhalt erstellt, der kanalübergreifend verwendet und wiederverwendet werden soll. Dadurch wird der Inhalt wiederum in ein kontextspezifisches Erlebnis eingeschlossen.
 
-Diese Videoreihe behandelt den Lebenszyklus von Inhaltsfragmenten für die Bearbeitung in AEM. Details zu [Bereitstellung von Inhaltsfragmenten finden Sie hier](content-fragments-delivery-feature-video-use.md).
+Diese Videoreihe behandelt den Lebenszyklus von Inhaltsfragmenten für die Bearbeitung in AEM. Details zu [Bereitstellung von Inhaltsfragmenten finden Sie hier .](content-fragments-delivery-feature-video-use.md).
 
 1. Aktivieren und Definieren von Inhaltsfragmentmodellen
-2. Erstellen von Inhaltsfragmenten
+2. Authoring mit Inhaltsfragmenten
 3. Herunterladen von Inhaltsfragmenten
 4. Redaktionelle Funktionen
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_admin_content_fragments"
+>title="Fragmente verwalten"
+>abstract="Erfahren Sie, wie Sie mit Inhaltsfragmenten seitenunabhängige Inhalte entwerfen, erstellen, kuratieren und verwenden können."
 
 ## Definieren von Inhaltsfragmentmodellen {#defining-content-fragment-models}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
 
-AEM Inhaltsfragmentmodelle, die Datenschemata von Inhaltsfragmenten, müssen über AEM [[!UICONTROL Konfigurationsbrowser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html) aktiviert werden, wodurch Inhaltsfragmentmodelle je nach Konfiguration definiert werden können.
+AEM Inhaltsfragmentmodelle, die Datenschemata von Inhaltsfragmenten, müssen über AEM aktiviert werden [[!UICONTROL Konfigurationsbrowser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=de), wodurch Inhaltsfragmentmodelle für jede Konfiguration definiert werden können.
 
 ## Erstellen von Inhaltsfragmenten {#creating-content-fragments}
 
@@ -64,17 +69,17 @@ AEM Inhaltsfragmente können von der AEM-Autoreninstanz als ZIP-Datei mit Varian
 
 >[!NOTE]
 >
-> Der Vergleich von Anmerkungen und Versionen für Inhaltsfragmente wurde in [AEM 6.4 Service Pack 2](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=de) und [AEM 6.3 Service Pack 3](https://helpx.adobe.com/de/experience-manager/6-3/release-notes/sp3-release-notes.html) eingeführt.
+> Anmerkungen und Versionsvergleiche für Inhaltsfragmente wurden eingeführt in [AEM 6.4 Service Pack 2](https://helpx.adobe.com/de/experience-manager/aem-releases-updates.html) und [AEM 6.3 Service Pack 3](https://helpx.adobe.com/de/experience-manager/6-3/release-notes/sp3-release-notes.html).
 
 ## Nächste Schritte
 
-Erfahren Sie mehr über [Bereitstellung von Inhaltsfragmenten](content-fragments-delivery-feature-video-use.md).
+Informationen zu [Bereitstellen von Inhaltsfragmenten](content-fragments-delivery-feature-video-use.md).
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [Bereitstellen von Inhaltsfragmenten](content-fragments-delivery-feature-video-use.md)
 * [AEM WCM-Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de)
-* [AEM WCM-Kerninhaltsfragment-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
+* [AEM WCM-Kerninhaltsfragment-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=de)
 
 So laden Sie das unten stehende Paket in einer AEM 6.4+ -Instanz für den finalen Status aus der Videoreihe herunter und installieren es:
 
