@@ -9,16 +9,15 @@ level: Intermediate
 kt: 10587
 thumbnail: KT-10587.jpg
 mini-toc-levels: 2
-source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
+source-git-commit: b2bf2a8e454d7ccd09819f2a38e58f7c303cb066
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '637'
 ht-degree: 1%
 
 ---
 
 
 # AEM Headless-SPA-Bereitstellungen
-
 
 AEM Headless-Single-Page-App-Bereitstellungen (SPA) beinhalten JavaScript-basierte Anwendungen, die mit Frameworks wie React oder Vue erstellt wurden, die Inhalte in AEM Headless nutzen und mit ihnen interagieren.
 
@@ -110,6 +109,27 @@ Adobe bietet eine Beispiel-Einzelseitenanwendung, die in React codiert ist.
                <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/react-app.md" title="React-App">React-App</a></p>
                <p class="is-size-6">Eine Beispiel-Einzelseitenanwendung, geschrieben in React, die Inhalte von AEM Headless GraphQL-APIs verbraucht.</p>
                <a href="../example-apps/react-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Beispiel anzeigen</span>
+               </a>
+           </div>
+       </div>
+   </div>
+</div>
+<!-- Next.js app -->
+<div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Next.js app" tabindex="0">
+   <div class="card">
+       <div class="card-image">
+           <figure class="image is-16by9">
+               <a href="../example-apps/next-js.md" title="Next.js-App" tabindex="-1">
+                   <img class="is-bordered-r-small" src="../example-apps/assets/next-js/next-js-card.png" alt="Next.js-App">
+               </a>
+           </figure>
+       </div>
+       <div class="card-content is-padded-small">
+           <div class="content">
+               <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/next-js.md" title="Next.js-App">Next.js-App</a></p>
+               <p class="is-size-6">Ein Beispiel für eine Einzelseitenanwendung, geschrieben in Next.js, die Inhalte von AEM Headless GraphQL-APIs verbraucht.</p>
+               <a href="../example-apps/next-js.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Beispiel anzeigen</span>
                </a>
            </div>

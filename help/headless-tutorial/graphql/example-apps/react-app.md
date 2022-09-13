@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: b2bf2a8e454d7ccd09819f2a38e58f7c303cb066
 workflow-type: tm+mt
 source-wordcount: '912'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 
@@ -48,7 +48,7 @@ Die React-Anwendung ist für die Verbindung mit einer __AEM-Veröffentlichung__ 
 
 ## Informationen zur Verwendung
 
-1. Klonen Sie die `adobbe/aem-guides-wknd-graphql` repository:
+1. Klonen Sie die `adobe/aem-guides-wknd-graphql` repository:
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
