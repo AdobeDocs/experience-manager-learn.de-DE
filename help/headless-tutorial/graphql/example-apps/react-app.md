@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: b2bf2a8e454d7ccd09819f2a38e58f7c303cb066
+source-git-commit: b20a29e67da0bcbf53ae8089a7cde0dfde800214
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 7%
+source-wordcount: '941'
+ht-degree: 6%
 
 ---
 
-# React App
+# React App{#react-app}
 
 Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese React-Anwendung zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen können. Der AEM Headless-Client für JavaScript wird verwendet, um die von GraphQL gespeicherten Abfragen auszuführen, die die App unterstützen.
 
@@ -26,6 +26,11 @@ Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Ado
 Anzeigen der [Quellcode auf GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
 A [Tutorial mit allen Schritten](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=de) , die beschreiben, wie diese React-App erstellt wurde, verfügbar ist.
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_sites_trial_admin_content_fragments_react_app"
+>title="Inhalt in einer React-Beispielanwendung anpassen"
+>abstract="Wir haben eine moderne React-App eingerichtet, mit der Sie erfahren können, wie Sie Inhalte mithilfe des Headless-Funktionssatzes anpassen können."
 
 ## Voraussetzungen {#prerequisites}
 
