@@ -3,10 +3,10 @@ user-guide-title: AEM Sites-Videos und -Tutorials
 user-guide-description: Eine Sammlung von Videos und Tutorials für Adobe Experience Manager Sites.
 breadcrumb-title: AEM Sites-Tutorials
 feature-set: Experience Manager Sites, Experience Manager
-source-git-commit: 552e5fbeb5dafc6d82763d5c3b31cc6d17131739
+source-git-commit: 798b366a5add2831bf60a8d89968bad16e48802c
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 34%
+source-wordcount: '434'
+ht-degree: 32%
 
 ---
 
@@ -48,6 +48,8 @@ ht-degree: 34%
    + [Verwenden von Experience Fragments](experience-fragments/experience-fragments-feature-video-use.md)
    + [Bausteine](experience-fragments/building-blocks.md)
    + [Inhaltsfragmente im Vergleich zu Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
+   + Expertenberatung {#expert-advice}
+      + [Tipps zu Inhaltsfragmenten](content-fragments/expert-advice/content-fragments.md)
 + Entwickeln {#developing}
    + [AEM-Projektarchetyp](developing/aem-project-archetype.md)
    + [Erste Schritte mit AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de)
@@ -113,3 +115,8 @@ ht-degree: 34%
       + [Target-Aktivität mit Experience Fragment-Angeboten erstellen](integrations/adobe-target/create-target-activity.md)
       + [Personalisierung mit Visual Experience Composer](integrations/adobe-target/personalization-using-vec.md)
       + [Personalisierung des gesamten Web-Seitenerlebnisses](integrations/adobe-target/personalization-web-page.md)
++ Expertenressourcen {#expert-resources}
+   + [AEM Sites-Bewertung der Reife](expert-resources/maturity-assessment.md)
+   + [Site-Wartung](expert-resources/site-maintenance.md)
+   + [AEM Champion Tips and Tricks: Sitzung 1](expert-resources/champion-tips-1.md)
+   + [AEM Champion Tips and Tricks: Sitzung 2](expert-resources/champion-tips-2.md)
