@@ -8,10 +8,10 @@ user-guide-title: Erste Schritte mit AEM Sites - WKND-Tutorial
 user-guide-description: Ein mehrteiliges Tutorial für Entwickler, die neu bei AEM sind. Implementieren Sie eine AEM Website für eine fiktive Lifestyle-Marke namens WKND. Aktivieren Sie die Front-End-Pipeline, um Ihre Entwicklung auf den Bereitstellungszyklus zu beschleunigen.
 breadcrumb-title: AEM Sites WKND-Tutorials
 index: y
-source-git-commit: 96e1c95b7cd672aa5d4f79707735abc86dae7b8a
+source-git-commit: 2e3615e9e9305165ca9c3c93b38ac7e9bdcc51fb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '108'
+ht-degree: 37%
 
 ---
 
@@ -37,5 +37,8 @@ ht-degree: 0%
    + [5 - Themen](./site-template/theming.md)
 + Front-End-Pipeline aktivieren - DevOps{#enable-frontend-pipeline-devops}
    + [Übersicht](./enable-frontend-pipeline/overview.md)
-
+   + [1 - Vollstack-Projekt überprüfen](./enable-frontend-pipeline/review-uifrontend-module.md)
+   + [2 - Projekt für die Verwendung der Frontend-Pipeline aktualisieren](./enable-frontend-pipeline/update-project.md)
+   + [3 - Bereitstellen mithilfe der Frontend-Pipeline](./enable-frontend-pipeline/create-frontend-pipeline.md)
+   + [4 - Überlegungen](./enable-frontend-pipeline/considerations.md)
 
