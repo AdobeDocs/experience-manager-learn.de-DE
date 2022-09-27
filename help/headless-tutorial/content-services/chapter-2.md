@@ -1,19 +1,19 @@
 ---
 title: Kapitel 2 - Definieren von Inhaltsfragmentmodellen für Ereignisse - Content Services
-seo-title: Erste Schritte mit AEM Content Services - Kapitel 2 - Definieren von Ereignisinhaltsfragmentmodellen
+seo-title: Getting Started with AEM Content Services - Chapter 2 - Defining Event Content Fragment Models
 description: In Kapitel 2 des Tutorials AEM Headless wird die Aktivierung und Definition von Inhaltsfragmentmodellen beschrieben, die zum Definieren einer normalisierten Datenstruktur und einer Authoring-Oberfläche zum Erstellen von Ereignissen verwendet werden.
-seo-description: In Kapitel 2 des Tutorials AEM Headless wird die Aktivierung und Definition von Inhaltsfragmentmodellen beschrieben, die zum Definieren einer normalisierten Datenstruktur und einer Authoring-Oberfläche zum Erstellen von Ereignissen verwendet werden.
-feature: Inhaltsfragmente, APIs
+seo-description: Chapter 2 of the AEM Headless tutorial covers enabling and defining Content Fragment Models used to define a normalized data structure and authoring interface for creating Events.
+feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
+source-git-commit: cfb7ed39ecb85998192ba854b34161f7e1dba19a
 workflow-type: tm+mt
-source-wordcount: '998'
-ht-degree: 10%
+source-wordcount: '965'
+ht-degree: 11%
 
 ---
-
 
 # Kapitel 2 - Verwendung von Inhaltsfragmentmodellen
 
@@ -28,49 +28,53 @@ In diesem Kapitel wird die Aktivierung und Definition von Inhaltsfragmentmodelle
 
 ## Aktivieren von Inhaltsfragmentmodellen  
 
-Inhaltsfragmentmodelle **müssen** über **[AEM [!UICONTROL Konfigurations-Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)** aktiviert werden.
+Inhaltsfragmentmodelle **must** aktiviert über **[AEM [!UICONTROL Konfigurationsbrowser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=de)**.
 
-Wenn Inhaltsfragmentmodelle für eine Konfiguration **nicht** aktiviert sind, wird die Schaltfläche **[!UICONTROL Erstellen] > [!UICONTROL Inhaltsfragment]** nicht für die entsprechende AEM angezeigt.
+Wenn Inhaltsfragmentmodelle **not** für eine Konfiguration aktiviert ist, wird die **[!UICONTROL Erstellen] > [!UICONTROL Inhaltsfragment]** wird für die entsprechende AEM nicht angezeigt.
 
 >[!NOTE]
 >
->AEM Konfigurationen stellen einen Satz von [kontextsensitiven Mandantenkonfigurationen](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) dar, die unter `/conf` gespeichert sind. Normalerweise korrelieren AEM Konfigurationen mit einer bestimmten Website, die in AEM Sites verwaltet wird, oder einer Geschäftseinheit, die für einen Inhaltsuntersatz (Assets, Seiten usw.) verantwortlich ist. in AEM.
+>AEM Konfigurationen stellen einen Satz von [kontextsensitive Mandantenkonfigurationen](https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration.html) gespeichert unter `/conf`. Normalerweise korrelieren AEM Konfigurationen mit einer bestimmten Website, die in AEM Sites verwaltet wird, oder einer Geschäftseinheit, die für einen Inhaltsuntersatz (Assets, Seiten usw.) verantwortlich ist. in AEM.
 >
->Damit sich eine Konfiguration auf eine Inhaltshierarchie auswirkt, muss über die Eigenschaft `cq:conf` in dieser Inhaltshierarchie auf die Konfiguration verwiesen werden. (Dies wird für die [!DNL WKND Mobile]-Konfiguration in **Schritt 5** unten erreicht.)
+>Damit sich eine Konfiguration auf eine Inhaltshierarchie auswirkt, muss die Konfiguration über das `cq:conf` -Eigenschaft in dieser Inhaltshierarchie. (Dies wird für die [!DNL WKND Mobile] Konfiguration in **Schritt 5** unten).
 >
->Wenn die `global`-Konfiguration verwendet wird, gilt die Konfiguration für alle Inhalte und `cq:conf` muss nicht festgelegt werden.
+>Wenn die `global` -Konfiguration verwendet wird, gilt die Konfiguration für alle Inhalte und `cq:conf` nicht festgelegt werden.
 >
 >Weitere Informationen finden Sie in der Dokumentation zum [[!UICONTROL Konfigurationsbrowser].](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)
 
 1. Melden Sie sich bei der AEM-Autoreninstanz als Benutzer mit entsprechenden Berechtigungen an, um die entsprechende Konfiguration zu ändern.
-   * Für dieses Tutorial kann der Benutzer **admin** verwendet werden.
+   * In diesem Tutorial wird die **admin** -Benutzer verwendet werden.
 1. Navigieren Sie zu **[!UICONTROL Tool] > [!UICONTROL Allgemein] > [!UICONTROL Konfigurationsbrowser]**
-1. Tippen Sie auf das **Ordnersymbol** neben **[!DNL WKND Mobile]**, um auszuwählen, und tippen Sie dann oben links auf die Schaltfläche **[!UICONTROL Bearbeiten]** .
-1. Wählen Sie **[!UICONTROL Inhaltsfragmentmodelle]** und tippen Sie oben rechts auf **[!UICONTROL Speichern und schließen]**.
+1. Tippen Sie auf **Ordnersymbol** neben **[!DNL WKND Mobile]** , um auszuwählen, und tippen Sie dann auf **[!UICONTROL Bearbeiten] button** oben links.
+1. Auswählen **[!UICONTROL Inhaltsfragmentmodelle]** und tippen Sie auf **[!UICONTROL Speichern und schließen]** oben rechts.
 
-   Dies ermöglicht Inhaltsfragmentmodelle in Inhaltsstrukturen von Asset-Ordnern, auf die die [!DNL WKND Mobile]-Konfiguration angewendet wurde.
+   Dies ermöglicht Inhaltsfragmentmodelle in Inhaltsstrukturen von Asset-Ordnern, die die [!DNL WKND Mobile] -Konfiguration angewendet.
 
    >[!NOTE]
    >
-   >Diese Konfigurationsänderung kann nicht über die Webbenutzeroberfläche [!UICONTROL AEM Konfiguration] rückgängig gemacht werden. So machen Sie diese Konfiguration rückgängig:
+   >Diese Konfigurationsänderung kann nicht über die [!UICONTROL AEM] Web-Benutzeroberfläche. So machen Sie diese Konfiguration rückgängig:
    >    
    >    1. Öffnen Sie [CRXDE Lite](http://localhost:4502/crx/de)
    >    1. Navigieren Sie zu `/conf/wknd-mobile/settings/dam/cfm`
-   >    1. Löschen Sie den Knoten `models` .
+   >    1. Löschen Sie die `models` Knoten
 
    >    
-   >Alle vorhandenen Inhaltsfragmentmodelle, die mit dieser Konfiguration erstellt wurden, werden gelöscht und ihre Definitionen werden unter `/conf/wknd-mobile/settings/dam/cfm/models` gespeichert.
+   >Alle vorhandenen Inhaltsfragmentmodelle, die mit dieser Konfiguration erstellt wurden, werden gelöscht und ihre Definitionen werden unter `/conf/wknd-mobile/settings/dam/cfm/models`.
 
-1. Wenden Sie die **[!DNL WKND Mobile]**-Konfiguration auf den Ordner **[!DNL WKND Mobile]Assets** an, damit Inhaltsfragmente aus Inhaltsfragmentmodellen in dieser Assets-Ordnerhierarchie erstellt werden können:
+1. Wenden Sie die **[!DNL WKND Mobile]** -Konfiguration **[!DNL WKND Mobile]Asset-Ordner** , damit Inhaltsfragmente aus Inhaltsfragmentmodellen in dieser Assets-Ordnerhierarchie erstellt werden können:
 
    1. Navigieren Sie zu **[!UICONTROL AEM] > [!UICONTROL Assets] > [!UICONTROL Dateien]**
-   1. Wählen Sie den Ordner **[!UICONTROL WKND Mobile]** aus.
-   1. Tippen Sie in der oberen Aktionsleiste auf die Schaltfläche **[!UICONTROL Eigenschaften]** , um [!UICONTROL Ordnereigenschaften] zu öffnen.
-   1. Tippen Sie in [!UICONTROL Ordnereigenschaften] auf die Registerkarte **[!UICONTROL Cloud Services]** .
-   1. Stellen Sie sicher, dass das Feld **[!UICONTROL Cloud-Konfiguration]** auf **/conf/wknd-mobile** gesetzt ist.
-   1. Tippen Sie oben rechts auf **[!UICONTROL Speichern und schließen]**, um Änderungen beizubehalten.
+   1. Wählen Sie die **[!UICONTROL WKND Mobile] Ordner**
+   1. Tippen Sie auf **[!UICONTROL Eigenschaften]** Schaltfläche in der oberen Aktionsleiste zum Öffnen [!UICONTROL Ordnereigenschaften]
+   1. In [!UICONTROL Ordnereigenschaften]Tippen Sie auf die **[!UICONTROL Cloud Services]** tab
+   1. Überprüfen Sie die **[!UICONTROL Cloud-Konfiguration]** -Feld auf **/conf/wknd-mobile**
+   1. Tippen **[!UICONTROL Speichern und schließen]** oben rechts, um Änderungen beizubehalten
 
 >[!VIDEO](https://video.tv.adobe.com/v/28336/?quality=12&learn=on)
+
+>[!WARNING]
+>
+> __Inhaltsfragmentmodelle__ von __Tools > Assets__ nach __Tools > Allgemein__.
 
 ## Grundlagen zum Erstellen des Inhaltsfragmentmodells
 
@@ -84,19 +88,19 @@ Mit dem Mapping bewaffnet können wir das Inhaltsfragment definieren, das zur Er
 
 ## Erstellen des Inhaltsfragmentmodells
 
-1. Navigieren Sie zu **[!UICONTROL Tools] > [!UICONTROL Assets] > [!UICONTROL Inhaltsfragmentmodelle]**.
-1. Tippen Sie auf den Ordner **[!DNL WKND Mobile]** , um ihn zu öffnen.
-1. Tippen Sie auf **[!UICONTROL Erstellen]** , um den Assistenten zur Erstellung von Inhaltsfragmentmodellen zu öffnen.
-1. Geben Sie **[!DNL Event]** als **[!UICONTROL Modelltitel]** *(Beschreibung ist optional)* ein und tippen Sie zum Speichern auf **[!UICONTROL Erstellen]**.
+1. Navigieren Sie zu **[!UICONTROL Instrumente] > [!UICONTROL Allgemein] > [!UICONTROL Inhaltsfragmentmodelle]**.
+1. Tippen Sie auf **[!DNL WKND Mobile]** Ordner, der geöffnet werden soll.
+1. Tippen **[!UICONTROL Erstellen]** , um den Assistenten zur Erstellung von Inhaltsfragmentmodellen zu öffnen.
+1. Eingabe **[!DNL Event]** als **[!UICONTROL Modelltitel]** *(Beschreibung ist optional)* und tippen **[!UICONTROL Erstellen]** speichern.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28337/?quality=12&learn=on)
 
 ## Definieren der Struktur des Inhaltsfragmentmodells
 
-1. Navigieren Sie zu **[!UICONTROL Tools] > [!UICONTROL Assets] > [!UICONTROL Inhaltsfragmentmodelle] >[!DNL WKND]**.
-1. Wählen Sie das Inhaltsfragmentmodell **[!DNL Event]** aus und tippen Sie in der oberen Aktionsleiste auf **[!UICONTROL Bearbeiten]** .
-1. Ziehen Sie vom Tab **[!UICONTROL Datentypen] auf der rechten Seite die**[!UICONTROL  Einzeilige Textanmeldung ]**in die linke Dropzone, um das Feld **[!DNL Question]**zu definieren.**
-1. Stellen Sie sicher, dass links die neue Eingabe **[!UICONTROL Einzeiliger Text]** ausgewählt ist und rechts die Registerkarte **[!UICONTROL Eigenschaften]** ausgewählt ist. Füllen Sie die Felder Eigenschaften wie folgt aus:
+1. Navigieren Sie zu **[!UICONTROL Instrumente] > [!UICONTROL Allgemein] > [!UICONTROL Inhaltsfragmentmodelle] >[!DNL WKND]**.
+1. Wählen Sie die **[!DNL Event]** Inhaltsfragmentmodell und tippen Sie auf **[!UICONTROL Bearbeiten]** in der oberen Aktionsleiste.
+1. Aus dem **[!UICONTROL Datentypen] tab** Ziehen Sie rechts die **[!UICONTROL Einzelzeilentext]** in die linke Dropzone, um die **[!DNL Question]** -Feld.
+1. Stellen Sie die neue **[!UICONTROL Einzelzeilentext]** auf der linken Seite ausgewählt ist und die **[!UICONTROL Eigenschaften] tab** auf der rechten Seite ausgewählt ist. Füllen Sie die Felder Eigenschaften wie folgt aus:
 
    * [!UICONTROL Rendern als] : `textfield`
    * [!UICONTROL Feldbezeichnung] : `Event Title`
@@ -108,7 +112,7 @@ Wiederholen Sie diese Schritte mit den unten definierten Eingabedefinitionen, um
 
 >[!NOTE]
 >
-> Die Felder **Eigenschaftsname** MÜSSEN exakt übereinstimmen, da die Android-Anwendung so programmiert ist, dass diese Namen eingegeben werden.
+> Die **Eigenschaftsname** -Felder MÜSSEN exakt übereinstimmen, da die Android-Anwendung so programmiert ist, dass sie diese Namen ausgibt.
 
 ### Ereignisbeschreibung
 
@@ -169,7 +173,7 @@ Wiederholen Sie diese Schritte mit den unten definierten Eingabedefinitionen, um
 
 >[!NOTE]
 >
->Der **[!UICONTROL Eigenschaftsname]** gibt den **beides** den JCR-Eigenschaftsnamen an, unter dem dieser Wert gespeichert wird, sowie den Schlüssel in der JSON-Datei . Dies sollte ein semantischer Name sein, der sich während der Lebensdauer des Inhaltsfragmentmodells nicht ändert.
+>Die **[!UICONTROL Eigenschaftsname]** bezeichnet die **both** den Namen der JCR-Eigenschaft, in der dieser Wert gespeichert wird, sowie den Schlüssel in der JSON-Datei . Dies sollte ein semantischer Name sein, der sich während der Lebensdauer des Inhaltsfragmentmodells nicht ändert.
 
 Nachdem Sie die Erstellung des Inhaltsfragmentmodells abgeschlossen haben, sollten Sie am Ende eine Definition haben, die wie folgt aussieht:
 
@@ -178,6 +182,6 @@ Nachdem Sie die Erstellung des Inhaltsfragmentmodells abgeschlossen haben, sollt
 
 ## Nächster Schritt
 
-Optional können Sie das Inhaltspaket [com.adobe.aem.guides.wknd-mobile.content.chapter-2.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) in der AEM-Autoreninstanz über [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) installieren. Dieses Paket enthält die Konfigurationen und Inhalte, die in diesem Teil des Tutorials beschrieben werden.
+Installieren Sie optional die [com.adobe.aem.guides.wknd-mobile.content.chapter-2.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) Inhaltspaket in der AEM-Autoreninstanz über [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp). Dieses Paket enthält die Konfigurationen und Inhalte, die in diesem Teil des Tutorials beschrieben werden.
 
 * [Kapitel 3 - Erstellen von Inhaltsfragmenten für Ereignisse](./chapter-3.md)
