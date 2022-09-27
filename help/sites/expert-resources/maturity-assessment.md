@@ -1,11 +1,12 @@
 ---
-title: Tipps zu Site-Hierarchie, Taxonomie und Tagging
-description: Best Practices für Site-Hierarchie, Taxonomie und Tagging
-hide: true
-hidefromtoc: true
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+title: Ihre AEM Sites-Alterseinstufung
+seo-title: AEM Sites Maturity Assessment
+description: Diese Checkliste bietet einen Überblick über wichtige Fragen, die Sie und Ihr Team bei der Beurteilung der Reife Ihrer AEM Sites-Instanz beantworten sollten.
+seo-description: This checklist provides an overview of key questions you and your team should be answering when evaluating the maturity of your AEM Sites instance
+audience: author, marketer, developer
+source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '332'
 ht-degree: 2%
 
 ---

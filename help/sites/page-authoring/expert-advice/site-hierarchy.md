@@ -1,11 +1,24 @@
 ---
 title: Tipps zu Site-Hierarchie, Taxonomie und Tagging
-description: Best Practices für Site-Hierarchie, Taxonomie und Tagging
+seo-title: Overview of Authoring in AEM Sites
+description: Das folgende Video bietet einen Überblick über die grundlegenden Konzepte des Authoring in einer AEM Autorenumgebung. Als Grundlage wird die Sites-Konsole verwendet.
+seo-description: The following video provides an overview of basic concepts of authoring in an AEM author environment. It uses the Sites console as a basis.
+feature: Page Editor, Editable Templates
+topics: authoring, publishing
+audience: author, marketer
+doc-type: feature video
+activity: use
+version: 6.4, 6.5, Cloud Service
+kt: 4242
+thumbnail: 33594.jpg
+topic: Content Management
+role: User
+level: Beginner
 hide: true
 hidefromtoc: true
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
 workflow-type: tm+mt
-source-wordcount: '2053'
+source-wordcount: '2033'
 ht-degree: 0%
 
 ---
@@ -16,8 +29,6 @@ ht-degree: 0%
 Metadaten und Tags sind entscheidend für die Steigerung der Effizienz in AEM. Benutzer, Führungskräfte und Management erkennen die Notwendigkeit einer ganzheitlichen Strategie, aber sie finden es schwierig, Fortschritte zu erzielen. Oft wird Wissen bei den Nutzern vernachlässigt, was eine ganzheitliche Strategie erschwert - und die Anpassung noch problematischer macht.
 
 Was ist der Unterschied zwischen Metadaten und Tags? Welche geschäftlichen Aspekte sollten bei der Umsetzung Ihrer Strategie berücksichtigt werden?
-
-Eine intensivere Zusammenfassung finden Sie hier . [here](https://adobe.sharepoint.com/:w:/r/sites/ACSSuccessServices/_layouts/15/Doc.aspx?sourcedoc=%7BFE5E873A-A3B6-4F40-BF22-A2C9F1269802%7D&amp;file=AEM_TagTaxonomyAndMetadata_BestPractice_en%20(2).docx&amp;action=default&amp;mobileredirect=true).
 
 ## Welchen Zweck haben Metadaten?
 
