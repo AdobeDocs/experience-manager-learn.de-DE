@@ -5,10 +5,10 @@ user-guide-title: AEM Forms-Videos und -Tutorials
 user-guide-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler.
 breadcrumb-title: AEM Forms-Tutorials
 index: y
-source-git-commit: 164741ce5ae7d00f904365589438c2eaaf1e05db
+source-git-commit: 5277b7a6ceba4473ab2808f980c8faa5bf69c757
 workflow-type: tm+mt
-source-wordcount: '1695'
-ht-degree: 4%
+source-wordcount: '1701'
+ht-degree: 3%
 
 ---
 
@@ -148,18 +148,19 @@ ht-degree: 4%
 + Mehrere Forms signieren{#sign-multiple-documents}
    + [Einführung   ](sign-multiple-documents/introduction.md)
    + [Datenquelle konfigurieren](sign-multiple-documents/configure-data-source.md)
-   + [Erstellen eines OSGi-Dienstes](sign-multiple-documents/create-osgi-service.md)
-   + [Hauptarbeitsablauf erstellen](sign-multiple-documents/create-main-workflow.md)
-   + [Workflow &quot;Signaturstatus aktualisieren&quot;](sign-multiple-documents/update-signature-status.md)
-   + [Anpassen der Zusammenfassungskomponente](sign-multiple-documents/customize-summary-component.md)
+   + [Erstellen des OSGi-Dienstes](sign-multiple-documents/create-osgi-service.md)
+   + [Erstellen eines Hauptarbeitsablaufs](sign-multiple-documents/create-main-workflow.md)
+   + [Workflow zum Aktualisieren des Signaturstatus](sign-multiple-documents/update-signature-status.md)
+   + [Zusammenfassungskomponente anpassen](sign-multiple-documents/customize-summary-component.md)
    + [Client-Bibliothek erstellen](sign-multiple-documents/create-client-lib.md)
    + [Formularvorlage erstellen](sign-multiple-documents/create-af-template.md)
-   + [Erstes Formular erstellen](sign-multiple-documents/create-initial-form.md)
-   + [Erstellen von Forms für Signaturen](sign-multiple-documents/create-forms-for-signing.md)
+   + [Erstellen eines anfänglichen Formulars](sign-multiple-documents/create-initial-form.md)
+   + [Formulare zum Signieren erstellen](sign-multiple-documents/create-forms-for-signing.md)
    + [Testen der Lösung](sign-multiple-documents/testing-and-trouble-shooting.md)
 + Benutzerdefinierte Workflow-Schritte{#custom-workflow-steps}
    + [Knoten aus XML-Dokument extrahieren](custom-workflow-steps/extract-xml-node.md)
    + [Dokument in Dateisystem speichern](custom-workflow-steps/write-payload-document.md)
+   + [Gesendete Daten in Zeichenfolgenvariable speichern](custom-workflow-steps/save-submitted-data-in-string-variable.md)
 + Variablen in AEM Workflow{#variables-aem-workflow}
    + [Einführung - Variablen im Workflow](variables-aem-workflow/introduction.md)
    + [XML-Variablen](variables-aem-workflow/part1.md)
