@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 kt: 9534
 exl-id: c2cd9c52-6f00-4cfe-a972-665093990e5d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '324'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Da wir das neue Maven-Projekt im Ordner cloudmanager erstellen, der bereits übe
 
 >[!NOTE]
 >
->Wenn Sie dieses neue Projekt so bereitstellen, wie es für die Cloud Service-Instanz ist, verfügen Sie nicht über HandleFormSubmission und das SubmitToAEMServlet. Dies liegt daran, dass jedes Mal, wenn Sie ein Projekt mithilfe von Cloud Manager bereitstellen, alles im Ordner &quot;apps&quot;befindliche Elemente gelöscht und überschrieben wird.
+>Wenn Sie dieses neue Projekt so bereitstellen, wie es für die Cloud Service-Instanz ist, verfügen Sie nicht über HandleFormSubmission und das SubmitToAEMServlet. Dies liegt daran, dass jedes Mal, wenn Sie ein Projekt mit Cloud Manager bereitstellen, etwas unter der `/apps` -Ordner gelöscht und überschrieben wird.
 
 ## Java-Code kopieren
 

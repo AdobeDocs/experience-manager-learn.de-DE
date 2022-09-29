@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '314'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 # Erstellen eines adaptiven Formulars mit dem Formulardatenmodell
 
 Der nächste Schritt besteht darin, ein adaptives Formular zu erstellen und es auf dem Formulardatenmodell zu basieren, das im vorherigen Schritt erstellt wurde.
-Der Benutzer gibt die Lead-ID ein und beim Abmelden des Marketo-Dienstes, um die Leads nach ID zu erhalten, wird aufgerufen. Die Ergebnisse des Dienstvorgangs werden dann den entsprechenden Feldern des adaptiven Forms zugeordnet.
+Der Benutzer gibt die Lead-ID ein und beim Senden der Tabulatortaste an den Marketo-Dienst, um die Leads nach ID abzurufen, wird aufgerufen. Die Ergebnisse des Dienstvorgangs werden dann den entsprechenden Feldern des adaptiven Forms zugeordnet.
 
 1. Erstellen Sie ein adaptives Formular und verknüpfen Sie es auf der Grundlage von &quot;Leere Formularvorlage&quot;mit dem Formulardatenmodell, das Sie im vorherigen Schritt erstellt haben.
 1. Öffnen Sie das Formular im Bearbeitungsmodus

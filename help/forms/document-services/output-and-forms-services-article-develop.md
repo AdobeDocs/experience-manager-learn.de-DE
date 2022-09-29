@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
-source-git-commit: 228da29e7ac0d61359c2b94131495b5b433a09dc
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '601'
-ht-degree: 1%
+source-wordcount: '597'
+ht-degree: 2%
 
 ---
 
@@ -60,7 +60,7 @@ Zeile 6 exportiert die xmlData aus der PDF-Datei
 1. /content/AEMFormsSamples/exportdata
 1. /content/AemFormsSamples/outputService
 1. Suchen Sie nach &quot;Sling Referrer filter&quot;.
-1. Aktivieren Sie das Kontrollkästchen &quot;Leere erlauben&quot;. (Diese Einstellung sollte nur zu Testzwecken verwendet werden.) Es gibt verschiedene Möglichkeiten, den Beispielcode zu testen. Am schnellsten und einfachsten ist die Verwendung der Postman-App. Mit Postman können Sie POST-Anfragen an Ihren Server richten. Installieren Sie die Postman-App auf Ihrem System.
+1. Aktivieren Sie das Kontrollkästchen &quot;Leere erlauben&quot;. (Diese Einstellung sollte nur zu Testzwecken verwendet werden.) Es gibt verschiedene Möglichkeiten, den Beispielcode zu testen. Am schnellsten und einfachsten ist die Verwendung der Postman-App. Mit Postman können Sie POST-Anfragen an Ihren Server richten. Installieren Sie das Postman-Programm auf Ihrem System.
 Starten Sie die App und geben Sie die folgende URL ein, um die Export-Daten-API zu testen.
 
 Stellen Sie sicher, dass Sie &quot;POST&quot;aus der Dropdown-Liste http://localhost:4502/content/AemFormsSamples/exportdata.html ausgewählt haben. Stellen Sie sicher, dass Sie &quot;Autorisierung&quot;als &quot;Einfache Autorisierung&quot;angeben. Geben Sie den Benutzernamen und das Kennwort des AEM-Servers an Navigieren Sie zur Registerkarte &quot;Hauptteil&quot;und geben Sie die Anforderungsparameter an, wie in der Abbildung unten dargestellt
@@ -87,7 +87,7 @@ Die Packung enthält 3 Proben. In den folgenden Absätzen wird erläutert, wann 
 
    * **pdfile** : Die PDF-Datei, mit der Sie Daten zusammenführen möchten
    * **xmlfile**: Die XML-Datendatei, die mit der PDF-Datei zusammengeführt wird
-   * **saveLocation**: Der Speicherort für das wiedergegebene Dokument auf Ihrem Dateisystem. Beispiel: c:\\outputsample.pdf.
+   * **saveLocation**: Der Speicherort für das wiedergegebene Dokument auf Ihrem Dateisystem. Beispiel `c:\\outputsample.pdf`.
 
 **Daten aus einer PDF-Datei exportieren**
 * Verwenden Sie FormsService zum Exportieren von Daten aus einer PDF-Datei

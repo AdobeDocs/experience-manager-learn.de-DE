@@ -1,6 +1,6 @@
 ---
 title: Seitenvorlagen
-description: Erfahren Sie, wie Sie Seitenvorlagen erstellen und ändern. Machen Sie sich mit der Beziehung zwischen einer Seitenvorlage und einer Seite vertraut. Erfahren Sie, wie Sie Richtlinien einer Seitenvorlage konfigurieren, um granulare Governance und Markenkonsistenz für Inhalte bereitzustellen.  Eine gut strukturierte Zeitschriftenartikelvorlage wird auf der Grundlage eines Mockups aus Adobe XD erstellt.
+description: Erfahren Sie, wie Sie Seitenvorlagen erstellen und ändern. Machen Sie sich mit der Beziehung zwischen einer Seitenvorlage und einer Seite vertraut. Erfahren Sie, wie Sie Richtlinien einer Seitenvorlage konfigurieren, um granulare Governance und Markenkonsistenz für Inhalte bereitzustellen.  Eine gut strukturierte Zeitschriftenartikelvorlage wird basierend auf einem Mockup aus Adobe XD erstellt.
 sub-product: sites
 version: Cloud Service
 type: Tutorial
@@ -11,10 +11,10 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
-source-git-commit: 0225b7f2e495d5c020ea5192302691e3466808ed
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '660'
-ht-degree: 5%
+source-wordcount: '652'
+ht-degree: 2%
 
 ---
 
@@ -34,16 +34,16 @@ Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die im [
 
 ## Was Sie erstellen werden {#what-you-will-build}
 
-In diesem Teil des Tutorials erstellen Sie eine neue Vorlage für Zeitschriftenartikel, mit der neue Zeitschriftenartikel erstellt und an einer gemeinsamen Struktur ausgerichtet werden können. Die Vorlage basiert auf Designs und einem in Adobe XD erstellten UI Kit. Dieses Kapitel konzentriert sich ausschließlich auf die Erstellung der Struktur oder des Skeletts der Vorlage. Es werden keine Stile implementiert, aber die Vorlage und die Seiten funktionieren.
+In diesem Teil des Tutorials erstellen Sie eine neue Vorlage für Zeitschriftenartikel, mit der neue Zeitschriftenartikel erstellt und an einer gemeinsamen Struktur ausgerichtet werden können. Die Vorlage basiert auf Designs und einem in Adobe XD erstellten UI Kit. Dieses Kapitel konzentriert sich ausschließlich auf die Erstellung der Struktur oder des Skeletts der Vorlage. Es werden keine Stile implementiert, aber die Vorlage und die Seiten sind funktionsfähig.
 
 ## Erstellen der Vorlage für die Zeitschriftenartikelseite
 
-Wenn Sie eine Seite erstellen, müssen Sie eine Vorlage auswählen. Diese wird als Grundlage für die Erstellung der neuen Seite verwendet. Die Vorlage definiert die Struktur der resultierenden Seite, den anfänglichen Inhalt und die zulässigen Komponenten.
+Beim Erstellen einer Seite müssen Sie eine Vorlage auswählen, die als Grundlage für die Erstellung der neuen Seite verwendet wird. Die Vorlage definiert die Struktur der resultierenden Seite, den anfänglichen Inhalt und die zulässigen Komponenten.
 
 Es gibt 3 Hauptbereiche von [Seitenvorlagen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/features/templates.html?lang=de):
 
 1. **Struktur** - definiert Komponenten, die Teil der Vorlage sind. Diese können von Inhaltsautoren nicht bearbeitet werden.
-1. **Anfänglicher Inhalt** - definiert Komponenten, mit denen die Vorlage beginnen soll. Diese können von Inhaltsautoren bearbeitet und/oder gelöscht werden.
+1. **Anfänglicher Inhalt** - definiert Komponenten, mit denen die Vorlage beginnt. Diese können von Inhaltsautoren bearbeitet und/oder gelöscht werden.
 1. **Richtlinien** - definiert Konfigurationen dazu, wie sich Komponenten verhalten und welche Optionen Autoren zur Verfügung stehen.
 
 Erstellen Sie anschließend eine neue Vorlage in AEM, die der Struktur der Sicherungen entspricht. Dies geschieht in einer lokalen Instanz von AEM. Führen Sie die folgenden Schritte aus:

@@ -1,8 +1,6 @@
 ---
 title: Auflisten benutzerdefinierter Asset-Typen in AEM Forms
-seo-title: Listing Custom Asset Types in AEM Forms
 description: Teil 2 der Auflistung benutzerdefinierter Asset-Typen in AEM Forms
-seo-description: Part 2 of Listing Custom Asset Types in AEM Forms
 uuid: 6467ec34-e452-4c21-9bb5-504f9630466a
 feature: Adaptive Forms
 topics: development
@@ -15,9 +13,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: f221d8ee-0452-4690-a936-74bab506d7ca
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -25,7 +23,6 @@ ht-degree: 0%
 # Auflisten benutzerdefinierter Asset-Typen in AEM Forms {#listing-custom-asset-types-in-aem-forms}
 
 ## Benutzerdefinierte Vorlage erstellen {#creating-custom-template}
-
 
 Für die Zwecke dieses Artikels erstellen wir eine benutzerdefinierte Vorlage, um die benutzerdefinierten Asset-Typen und OOTB-Asset-Typen auf derselben Seite anzuzeigen. Um eine benutzerdefinierte Vorlage zu erstellen, befolgen Sie die folgenden Anweisungen
 

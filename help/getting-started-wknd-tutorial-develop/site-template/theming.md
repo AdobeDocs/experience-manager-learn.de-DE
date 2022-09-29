@@ -11,18 +11,18 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '482'
+source-wordcount: '479'
 ht-degree: 1%
 
 ---
 
 # Designarbeitsablauf {#theming}
 
-In diesem Kapitel werden wir die Themenquellen einer Adobe Experience Manager-Site aktualisieren, um markenspezifische Stile anzuwenden. Wir erfahren, wie Sie mit einem Proxy-Server eine Vorschau von CSS- und JavaScript-Aktualisierungen anzeigen können, während wir mit der Live-Site kodieren. In diesem Tutorial wird auch beschrieben, wie Sie Designaktualisierungen mithilfe der Frontend-Pipeline von Adobe Cloud Manager auf einer AEM Site bereitstellen.
+In diesem Kapitel aktualisieren wir die Themenquellen einer Adobe Experience Manager-Site, um markenspezifische Stile anzuwenden. Wir erfahren, wie Sie einen Proxy-Server verwenden, um eine Vorschau von CSS- und JavaScript-Aktualisierungen anzuzeigen, während wir Code für die Live-Site verwenden. In diesem Tutorial wird auch beschrieben, wie Sie Designaktualisierungen mithilfe der Frontend-Pipeline von Adobe Cloud Manager auf einer AEM Site bereitstellen.
 
-Am Ende wird unsere Site aktualisiert, um Stile zur Marke WKND hinzuzufügen.
+Am Ende wird unsere Site aktualisiert und enthält Stile, die mit der WKND-Marke übereinstimmen.
 
 ## Voraussetzungen {#prerequisites}
 

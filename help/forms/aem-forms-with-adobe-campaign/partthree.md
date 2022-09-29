@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 502f4bdf-d4af-409f-a611-62b7a1a6065a
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '330'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Die folgenden Schritte sind erforderlich, um Profilinformationen mithilfe der RE
 * JWT für Zugriffstoken austauschen
 * Führen Sie einen REST-Aufruf an ACS durch und rufen Sie das Profil per E-Mail ab
 * XML-Dokument mit Profilinformationen erstellen
-* Return InputStream des XML-Dokuments, das von AEM Forms verwendet wird
+* Return InputStream des von AEM Forms verwendeten XML-Dokuments
 
 ![prefillService](assets/prefillserviceaf.gif)
 

@@ -15,9 +15,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: da613092-e03b-467c-9b9e-668142df4634
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '645'
 ht-degree: 3%
 
 ---
@@ -66,7 +66,7 @@ Wir haben der Such- und Auflistungskomponente eine neue Registerkarte (Asset-Auf
 1. Erstellen Sie den Überlagerungsknoten von **/libs/fd/fp/extensions/querybuilder/assettypes**
 
 1. Legen Sie den Überlagerungsspeicherort auf &quot;/apps&quot;fest.
-1. Navigieren Sie zur neuen Struktur, die unter **/apps/fd/fp/extensions/querybuilder/assettypes ** erstellt wurde.
+1. Navigieren Sie zur neuen Struktur, die unter `/apps/fd/fp/extensions/querybuilder/assettypes`
 
 1. Erstellen Sie unter diesem Speicherort den Knoten &quot;nt:unstructured&quot;für den zu registrierenden Typ und geben Sie ihm einen Namen. **mp4files. Fügen Sie diesem mp4files-Knoten die folgenden beiden Eigenschaften hinzu**
 

@@ -1,5 +1,5 @@
 ---
-title: Dienstberechtigungen
+title: Anmeldedaten für den Developer Console-Dienst AEM
 description: AEM Service Credentials werden verwendet, um externe Anwendungen, Systeme und Dienste zu erleichtern, damit sie programmgesteuert mit AEM Author- oder Publish-Diensten über HTTP interagieren können.
 version: Cloud Service
 doc-type: tutorial
@@ -13,7 +13,7 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: ef4579a44c1c940a3b7441e336db3790a0c7afd7
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '1901'
 ht-degree: 0%
@@ -85,7 +85,7 @@ Beim Herunterladen der Dienstanmeldeinformationen werden dieselben Schritte wie 
 
 ## Dienstanmeldeinformationen installieren
 
-Die Dienstanmeldeinformationen geben die Details an, die zum Generieren eines JWT erforderlich sind, das gegen ein Zugriffstoken ausgetauscht wird, das zur Authentifizierung mit AEM as a Cloud Service verwendet wird. Die Dienstanmeldeinformationen müssen an einem sicheren Speicherort gespeichert werden, auf den die externen Anwendungen, Systeme oder Dienste zugreifen können, die sie für den Zugriff auf AEM verwenden. Wie und wo die Service-Anmeldedaten verwaltet werden, ist pro Kunde eindeutig.
+Die Dienstanmeldeinformationen geben die Details an, die zum Generieren eines JWT erforderlich sind, das gegen ein Zugriffstoken ausgetauscht wird, das zur Authentifizierung mit AEM as a Cloud Service verwendet wird. Die Dienstanmeldeinformationen müssen an einem sicheren Speicherort gespeichert werden, auf den die externen Anwendungen, Systeme oder Dienste zugreifen können, die sie für den Zugriff auf AEM verwenden. Wie und wo die Service-Anmeldedaten verwaltet werden, sind pro Kunde eindeutig.
 
 Aus Gründen der Einfachheit übergibt dieses Tutorial die Service-Anmeldedaten über die Befehlszeile. Arbeiten Sie jedoch mit Ihrem IT Security-Team zusammen, um zu verstehen, wie Sie diese Anmeldedaten gemäß den Sicherheitsrichtlinien Ihres Unternehmens speichern und aufrufen können.
 
@@ -215,7 +215,7 @@ Sobald das technische Konto AEM Benutzer in AEM vorhanden ist (nach der ersten H
 
 1. Suchen Sie zunächst den AEM Anmeldenamen des technischen Kontos, indem Sie die von AEM Developer Console heruntergeladene JSON für Dienstanmeldungen öffnen und suchen Sie nach der `integration.email` -Wert, der in etwa wie folgt aussehen sollte: `12345678-abcd-9000-efgh-0987654321c@techacct.adobe.com`.
 1. Melden Sie sich beim Autorendienst der entsprechenden AEM als AEM Administrator an
-1. Navigieren Sie zu __Instrumente__ > __Sicherheit__ > __Benutzer__
+1. Navigieren Sie zu __Tools__ > __Sicherheit__ > __Benutzer__
 1. Suchen Sie den AEM Benutzer mit dem __Anmeldename__ in Schritt 1 identifiziert werden, und öffnen Sie die __Eigenschaften__
 1. Navigieren Sie zum __Gruppen__ und fügen Sie die __DAM-Benutzer__ Gruppe (die Schreibzugriff auf Assets hat)
 1. Tippen __Speichern und schließen__

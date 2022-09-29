@@ -2,18 +2,18 @@
 title: Verwenden des Panorama- und Vertikalbild-Viewers mit AEM Assets Dynamic Media
 description: Dynamic Media Viewer-Verbesserungen in AEM 6.4 umfassen das Hinzufügen von Viewer für Panoramabilder, Bild-Viewer für Panoramabilder mit virtueller Realität und Viewer für vertikale Bilder. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein ansprechendes, interaktives Erlebnis des Zimmers, der Eigenschaft, des Standorts oder der Landschaft ohne benutzerdefinierte Entwicklung bereitzustellen.
 sub-product: dynamic-media
-feature: Videoprofile, Videoprofile, 360-Grad-VR-Video
+feature: Video Profiles, Video Profiles, 360 VR Video
 version: 6.4, 6.5
-topic: Content Management
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '533'
 ht-degree: 3%
 
 ---
-
 
 # Verwenden des Panorama- und Vertikalbild-Viewers mit AEM Assets Dynamic Media{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
 
@@ -52,7 +52,7 @@ Bei horizontalen Farbfeldern sind die Farbfelder je nach Desktop-Bildschirmgrö�
    <td>DMS7 und Dynamic Media</td>
   </tr>
   <tr>
-   <td>Nutzungsszenario   </td>
+   <td>Nutzungsszenario</td>
    <td><p>Panorama-Viewer und Virtual Reality-Viewer bieten Benutzern ein ansprechenderes Erlebnis. Ein Benutzer kann ein Hotelzimmer auschecken, bevor er eine Buchung vornimmt, oder ein Mietobjekt auschecken, ohne einen Termin planen zu müssen. Ein Benutzer kann einen Standort und viele weitere Möglichkeiten auschecken. Der Hauptschwerpunkt hier besteht darin, Verbrauchern ein besseres Erlebnis beim Besuch Ihrer Website zu bieten und schließlich Ihre Konversionsrate zu erhöhen.</p> <p> </p> </td> 
    <td><p>Mit dem vertikalen Bild-Viewer können Sie das Anzeigeerlebnis von Produktbildern maximieren, um den Verbrauchern die bestmögliche Darstellung des Produkts zu bieten, wodurch Konversionen gefördert und die Renditen minimiert werden.</p> <p> </p> </td>
   </tr>

@@ -1,5 +1,5 @@
 ---
-title: AEM Service-Anmeldedaten
+title: AEM Forms-Dienstberechtigungen
 description: Laden Sie die Anmeldedaten für den Dienst von AEM Developer Console herunter.
 type: Documentation
 role: Developer
@@ -9,15 +9,15 @@ feature: Adaptive Forms
 topic: Development
 kt: 8192
 thumbnail: 330519.jpg
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+exl-id: 74cb8c30-4c41-426c-a1b5-fc595a3167c8
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
 
-
-# Dienstberechtigungen
+# AEM Forms-Dienstberechtigungen
 
 Integrationen mit AEM as a Cloud Service müssen sich sicher bei AEM authentifizieren können. AEM Developer Console generiert Service-Anmeldeinformationen, die von externen Anwendungen, Systemen und Diensten verwendet werden, um programmgesteuert mit AEM Author- oder Publish-Diensten über HTTP zu interagieren.
 

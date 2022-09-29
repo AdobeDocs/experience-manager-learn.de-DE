@@ -12,9 +12,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: 79d41d833ab0659f26f988678e124daa18b857f3
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '4138'
+source-wordcount: '4131'
 ht-degree: 1%
 
 ---
@@ -82,7 +82,7 @@ Die Implementierung der Byline-Komponente umfasst ein Dialogfeld, das den byline
 
 Erstellen Sie zunächst die Knotenstruktur der Byline-Komponente und definieren Sie ein Dialogfeld. Dies stellt die Komponente in AEM dar und definiert implizit den Ressourcentyp der Komponente anhand ihres Speicherorts im JCR.
 
-Das Dialogfeld stellt die Benutzeroberfläche bereit, die Autoren von Inhalten bereitstellen können. Für diese Implementierung wird die AEM WCM-Kernkomponente **Bild** -Komponente wird genutzt, um das Authoring und Rendering des Byline-Bildes zu handhaben, sodass es als die `sling:resourceSuperType`.
+Das Dialogfeld stellt die Benutzeroberfläche bereit, die Autoren von Inhalten bereitstellen können. Für diese Implementierung wird die AEM WCM-Kernkomponente **Bild** -Komponente für das Authoring und Rendering des Byline-Bildes verwendet wird, daher muss sie als `sling:resourceSuperType`.
 
 ### Komponentendefinition erstellen {#create-component-definition}
 
@@ -616,7 +616,7 @@ Es gibt zwei Möglichkeiten, dies anzugehen:
 
 Überprüfen Sie, ob die `fileReference` Die JCR-Eigenschaft wird zu einem Asset aufgelöst. *ODER* Konvertieren Sie diese Ressource in ein Bildsling-Modell der Kernkomponente und stellen Sie sicher, dass die `getSrc()` -Methode nicht leer ist.
 
-Wir werden uns für die **second** Ansatz. Der erste Ansatz ist wahrscheinlich ausreichend, aber in diesem Tutorial wird dieser verwendet werden, um uns zu ermöglichen, andere Funktionen von Sling-Modellen zu untersuchen.
+Wir entscheiden uns für die **second** Ansatz. Der erste Ansatz ist wahrscheinlich ausreichend, aber in diesem Tutorial wird dieser verwendet, um uns zu ermöglichen, andere Funktionen von Sling-Modellen zu untersuchen.
 
 1. Erstellen Sie eine private Methode, die das Bild abruft. Diese Methode ist privat, da das Bildobjekt nicht in der HTL selbst verfügbar gemacht werden muss und nur zum Antrieb von `isEmpty().`
 
@@ -790,7 +790,7 @@ Wir werden uns für die **second** Ansatz. Der erste Ansatz ist wahrscheinlich a
        /**
        * @PostConstruct is immediately called after the class has been initialized
        * but BEFORE any of the other public methods. 
-       * It is a good method to initialize variables that will be used by methods in the rest of the model
+       * It is a good method to initialize variables that is used by methods in the rest of the model
        *
        */
        @PostConstruct
@@ -1027,7 +1027,7 @@ Wenn die Variable **BylineImpl** nicht in dieser Liste angezeigt wird, liegt wah
 
 ## Byte-Stile {#byline-styles}
 
-Die Byline-Komponente muss so formatiert sein, dass sie mit dem kreativen Design für die Byline-Komponente ausgerichtet wird. Dies wird mithilfe von SCSS erreicht, AEM Unterstützung für über die **ui.frontend** Maven-Unterprojekt.
+Die Byline-Komponente muss so formatiert sein, dass sie mit dem kreativen Design für die Byline-Komponente ausgerichtet wird. Dies wird durch die Verwendung von SCSS erreicht, AEM Unterstützung für über die **ui.frontend** Maven-Unterprojekt.
 
 ### Standardstil hinzufügen
 

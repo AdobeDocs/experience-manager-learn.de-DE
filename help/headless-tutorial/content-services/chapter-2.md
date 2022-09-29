@@ -8,9 +8,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
-source-git-commit: cfb7ed39ecb85998192ba854b34161f7e1dba19a
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '962'
 ht-degree: 11%
 
 ---
@@ -84,7 +84,7 @@ Wir können die Datenpunkte, die ein Ereignis definieren, wie folgt aufschlüsse
 
 ![Erstellen des Inhaltsfragmentmodells](assets/chapter-2/design-to-model-mapping.png)
 
-Mit dem Mapping bewaffnet können wir das Inhaltsfragment definieren, das zur Erfassung und letztendlich zur Offenlegung der Ereignisdaten verwendet wird.
+Mit der Zuordnung bewaffnet können wir Inhaltsfragment definieren, das zur Erfassung und letztendlich zur Offenlegung der Ereignisdaten verwendet wird.
 
 ## Erstellen des Inhaltsfragmentmodells
 
@@ -173,7 +173,7 @@ Wiederholen Sie diese Schritte mit den unten definierten Eingabedefinitionen, um
 
 >[!NOTE]
 >
->Die **[!UICONTROL Eigenschaftsname]** bezeichnet die **both** den Namen der JCR-Eigenschaft, in der dieser Wert gespeichert wird, sowie den Schlüssel in der JSON-Datei . Dies sollte ein semantischer Name sein, der sich während der Lebensdauer des Inhaltsfragmentmodells nicht ändert.
+>Die **[!UICONTROL Eigenschaftsname]** bezeichnet die **both** den JCR-Eigenschaftsnamen, in dem dieser Wert gespeichert wird, sowie den Schlüssel in der JSON-Datei . Dies sollte ein semantischer Name sein, der sich während der Lebensdauer des Inhaltsfragmentmodells nicht ändert.
 
 Nachdem Sie die Erstellung des Inhaltsfragmentmodells abgeschlossen haben, sollten Sie am Ende eine Definition haben, die wie folgt aussieht:
 

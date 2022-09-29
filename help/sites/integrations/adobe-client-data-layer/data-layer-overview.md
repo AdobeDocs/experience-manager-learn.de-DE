@@ -1,19 +1,19 @@
 ---
 title: Verwenden der Adobe Client-Datenschicht in Verbindung mit AEM Kernkomponenten
 description: Die Adobe Client-Datenschicht führt eine Standardmethode ein, um Daten über ein Besuchererlebnis auf einer Webseite zu erfassen und zu speichern und so den Zugriff auf diese Daten zu erleichtern. Die Adobe Client-Datenschicht ist plattformunabhängig, aber für die Verwendung mit AEM vollständig in die Kernkomponenten integriert.
-topic: Integrationen
-feature: Adobe Client-Datenschicht, Kernkomponenten
+topic: Integrations
+feature: Adobe Client Data Layer, Core Components
 role: Developer
 level: Intermediate
 kt: 6261
 thumbnail: 41195.jpg
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 066693b7-2b87-45e8-93ec-8bd09a7c263e
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '780'
 ht-degree: 8%
 
 ---
-
 
 # Verwenden der Adobe Client-Datenschicht in Verbindung mit AEM Kernkomponenten {#overview}
 
@@ -23,18 +23,18 @@ Die Adobe Client-Datenschicht führt eine Standardmethode ein, um Daten über ei
 
 >[!NOTE]
 >
-> Möchten Sie die Adobe Client-Datenschicht auf Ihrer AEM aktivieren? [Die Anweisungen finden Sie hier](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation).
+> Möchten Sie die Adobe Client-Datenschicht auf Ihrer AEM aktivieren? [Anweisungen finden Sie hier .](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation).
 
 ## Datenschicht durchsuchen
 
-Sie können die integrierte Funktionalität der Adobe Client-Datenschicht einfach mithilfe der Entwicklertools Ihres Browsers und der Live-Referenz-Site [WKND](https://wknd.site/) ermitteln.
+Die integrierte Funktionalität der Client-Datenschicht von Adobe lässt sich einfach mithilfe der Entwicklertools Ihres Browsers und der Live-Umgebung ermitteln. [WKND-Referenz-Site](https://wknd.site/).
 
 >[!NOTE]
 >
 > Die folgenden Screenshots stammen aus dem Chrome-Browser.
 
 1. Navigieren Sie zu [https://wknd.site](https://wknd.site)
-1. Öffnen Sie Ihre Entwicklertools und geben Sie den folgenden Befehl in die **Console** ein:
+1. Öffnen Sie Ihre Entwickler-Tools und geben Sie den folgenden Befehl in das **Konsole**:
 
    ```js
    window.adobeDataLayer.getState();
@@ -57,7 +57,7 @@ Sie können die integrierte Funktionalität der Adobe Client-Datenschicht einfac
    });
    ```
 
-1. Führen Sie den Befehl `adobeDataLayer.getState()` erneut aus und suchen Sie nach dem Eintrag für `training-data`.
+1. Führen Sie den Befehl aus `adobeDataLayer.getState()` erneut und suchen Sie nach dem Eintrag für `training-data`.
 1. Fügen Sie anschließend einen Pfadparameter hinzu, um nur den spezifischen Status einer Komponente zurückzugeben:
 
    ```js
@@ -89,13 +89,13 @@ Es empfiehlt sich, benutzerspezifischen Code basierend auf einem Ereignis aus de
    }
    ```
 
-   Der obige Code überprüft das `event`-Objekt und ruft mithilfe der `adobeDataLayer.getState`-Methode den aktuellen Status des Objekts ab, das das Ereignis ausgelöst hat. Die Hilfsmethode prüft dann die `filter`-Kriterien und wird nur zurückgegeben, wenn die aktuelle `dataObject` den Filter erfüllt.
+   Der obige Code prüft die `event` -Objekt und verwenden Sie die `adobeDataLayer.getState` -Methode, um den aktuellen Status des Objekts abzurufen, das das Ereignis ausgelöst hat. Die Hilfsmethode prüft dann die `filter` Kriterien und nur, wenn die aktuelle `dataObject` erfüllt den Filter wird zurückgegeben.
 
    >[!CAUTION]
    >
-   > Es ist wichtig **nicht**, den Browser während dieser Übung zu aktualisieren. Andernfalls geht das Konsolen-JavaScript verloren.
+   > Es ist wichtig **not** , um den Browser während dieser Übung zu aktualisieren, da ansonsten das JavaScript-Konsolen-JavaScript verloren geht.
 
-1. Geben Sie als Nächstes einen Ereignis-Handler ein, der aufgerufen wird, wenn eine **Teaser**-Komponente in einer **Karussell** angezeigt wird.
+1. Geben Sie als Nächstes einen Ereignis-Handler ein, der aufgerufen wird, wenn eine **Teaser** -Komponente innerhalb einer **Karussell**.
 
    ```js
    function teaserShownHandler(event) {
@@ -107,9 +107,9 @@ Es empfiehlt sich, benutzerspezifischen Code basierend auf einem Ereignis aus de
    }
    ```
 
-   Der `teaserShownHandler` ruft die `getDataObjectHelper`-Methode auf und übergibt einen Filter von `wknd/components/teaser` als `@type`, um Ereignisse herauszufiltern, die von anderen Komponenten ausgelöst werden.
+   Die `teaserShownHandler` ruft die `getDataObjectHelper` -Methode verwenden und einen Filter von `wknd/components/teaser` als `@type` , um Ereignisse herauszufiltern, die von anderen Komponenten ausgelöst wurden.
 
-1. Als Nächstes pushen Sie einen Ereignis-Listener auf die Datenschicht, um auf das `cmp:show` -Ereignis zu warten.
+1. Senden Sie als Nächstes einen Ereignis-Listener auf die Datenschicht, um auf die `cmp:show` -Ereignis.
 
    ```js
    window.adobeDataLayer.push(function (dl) {
@@ -117,13 +117,13 @@ Es empfiehlt sich, benutzerspezifischen Code basierend auf einem Ereignis aus de
    });
    ```
 
-   Das `cmp:show`-Ereignis wird von vielen verschiedenen Komponenten ausgelöst, z. B. wenn eine neue Folie in **Karussell** angezeigt wird oder wenn in der Komponente **Tab** eine neue Registerkarte ausgewählt ist.
+   Die `cmp:show` -Ereignis wird von vielen verschiedenen Komponenten ausgelöst, z. B. wenn eine neue Folie im **Karussell** oder wenn eine neue Registerkarte im **Registerkarte** -Komponente.
 
 1. Auf der Seite können Sie die Karussellfolien umschalten und die Konsolenanweisungen beachten:
 
    ![Karussell umschalten und Ereignis-Listener anzeigen](assets/teaser-console-slides.png)
 
-1. Entfernen Sie den Ereignis-Listener aus der Datenschicht, um die Überwachung auf das `cmp:show` -Ereignis zu beenden:
+1. Entfernen Sie den Ereignis-Listener aus der Datenschicht, um das Listening auf die `cmp:show` event:
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -134,7 +134,7 @@ Es empfiehlt sich, benutzerspezifischen Code basierend auf einem Ereignis aus de
 
 1. Kehren Sie zur Seite zurück und schalten Sie die Karussellfolien um. Beachten Sie, dass keine weiteren Anweisungen protokolliert werden und dass das Ereignis nicht überwacht wird.
 
-1. Geben Sie als Nächstes einen Ereignis-Handler ein, der aufgerufen wird, wenn das angezeigte Seitenereignis ausgelöst wird:
+1. Erstellen Sie anschließend einen Ereignis-Handler, der aufgerufen wird, wenn das Ereignis &quot;Seite angezeigt&quot;ausgelöst wird:
 
    ```js
    function pageShownHandler(event) {
@@ -146,9 +146,9 @@ Es empfiehlt sich, benutzerspezifischen Code basierend auf einem Ereignis aus de
    }
    ```
 
-   Beachten Sie, dass der Ressourcentyp `wknd/components/page` zum Filtern des Ereignisses verwendet wird.
+   Beachten Sie, dass der Ressourcentyp `wknd/components/page` wird zum Filtern des Ereignisses verwendet.
 
-1. Als Nächstes pushen Sie einen Ereignis-Listener auf die Datenschicht, um auf das `cmp:show` -Ereignis zu warten, und rufen Sie `pageShownHandler` auf.
+1. Senden Sie als Nächstes einen Ereignis-Listener auf die Datenschicht, um auf die `cmp:show` -Ereignis, das die `pageShownHandler`.
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -161,18 +161,18 @@ Es empfiehlt sich, benutzerspezifischen Code basierend auf einem Ereignis aus de
 
    ![Seitenanzeigedaten](assets/page-show-console-data.png)
 
-   Das `cmp:show`-Ereignis für die Seite wird bei jedem Laden der Seite ganz oben auf der Seite ausgelöst. Sie fragen sich vielleicht, warum der Ereignishandler ausgelöst wurde, wenn die Seite eindeutig bereits geladen wurde.
+   Die `cmp:show` -Ereignis für die Seite wird bei jedem Laden der Seite am Anfang der Seite ausgelöst. Sie fragen sich vielleicht, warum der Ereignishandler ausgelöst wurde, wenn die Seite eindeutig bereits geladen wurde.
 
-   Dies ist eine der einzigartigen Funktionen der Adobe Client-Datenschicht, da Sie Ereignis-Listener **vor** oder **registrieren können, nachdem** die Datenschicht initialisiert wurde. Dies ist ein wichtiges Merkmal, um Wettlaufsituationen zu vermeiden.
+   Dies ist eine der einzigartigen Funktionen der Adobe Client-Datenschicht, mit der Sie Ereignis-Listener registrieren können **before** oder **after** die Datenschicht initialisiert wurde. Dies ist ein wichtiges Merkmal, um Wettlaufsituationen zu vermeiden.
 
-   Die Datenschicht verwaltet ein Warteschlangenarray aller Ereignisse, die nacheinander aufgetreten sind. Die Datenschicht Trigger standardmäßig Ereignisrückrufe für Ereignisse, die in **after** aufgetreten sind, sowie Ereignisse in **future**. Es ist möglich, die Ereignisse nach Vergangenheit oder Zukunft zu filtern. [Weitere Informationen finden Sie in der Dokumentation](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
+   Die Datenschicht verwaltet ein Warteschlangenarray aller Ereignisse, die nacheinander aufgetreten sind. Auf der Datenschicht werden standardmäßig Ereignisrückrufe für Trigger von Ereignissen durchgeführt, die in der Variablen **vergangene** sowie Ereignissen in **Future**. Es ist möglich, die Ereignisse nach Vergangenheit oder Zukunft zu filtern. [Weitere Informationen finden Sie in der Dokumentation .](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
 
 
 ## Nächste Schritte
 
-Sehen Sie sich das folgende Tutorial an, um zu erfahren, wie Sie die ereignisgesteuerte Adobe Client Data Layer verwenden, um [Seitendaten zu erfassen und an Adobe Analytics](../analytics/collect-data-analytics.md) zu senden.
+Sehen Sie sich das folgende Tutorial an, um zu erfahren, wie Sie mit der ereignisgesteuerten Adobe Client Data-Schicht [Seitendaten erfassen und an Adobe Analytics senden](../analytics/collect-data-analytics.md).
 
-Oder erfahren Sie, wie Sie die Adobe Client-Datenschicht mit AEM Komponenten ](./data-layer-customize.md) anpassen.[
+Oder lernen Sie [Anpassen der Adobe Client-Datenschicht mit AEM Komponenten](./data-layer-customize.md)
 
 
 ## Zusätzliche Ressourcen {#additional-resources}

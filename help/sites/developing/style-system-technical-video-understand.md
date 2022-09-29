@@ -1,39 +1,39 @@
 ---
 title: Grundlegendes zum Code für das AEM Stilsystem
-description: In diesem Video werden wir uns die Anatomie von CSS (oder LESS) und JavaScript ansehen, die zum Formatieren der Kerntitelkomponente von Adobe Experience Manager mithilfe des Stilsystems verwendet werden, sowie die Anwendung dieser Stile auf HTML und DOM.
+description: In diesem Video werden wir uns die Anatomie von CSS (oder LESS) und JavaScript ansehen, die verwendet werden, um die Kerntitelkomponente von Adobe Experience Manager mithilfe des Stilsystems zu gestalten, sowie die Anwendung dieser Stile auf HTML und DOM.
 feature: Style System
 version: 6.4, 6.5
 topic: Development
 role: Developer
 level: Intermediate, Experienced
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 8fbc3819-3214-4c58-8629-a27eb6f0c545
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1092'
+source-wordcount: '1090'
 ht-degree: 2%
 
 ---
 
-
 # Grundlegendes zum Code für das Stilsystem{#understanding-how-to-code-for-the-aem-style-system}
 
-In diesem Video werden wir uns die Anatomie der CSS (oder [!DNL LESS]) und JavaScript ansehen, die zum Stilen der Kerntitelkomponente von Experience Manager mithilfe des Stilsystems verwendet werden, sowie die Art und Weise, wie diese Stile auf HTML und DOM angewendet werden.
+In diesem Video werden wir uns die Anatomie des CSS (oder [!DNL LESS]) und JavaScript verwendet, um die Kerntitelkomponente von Experience Manager mithilfe des Stilsystems zu formatieren, sowie wie diese Stile auf das HTML und DOM angewendet werden.
 
 
 ## Grundlegendes zum Code für das Stilsystem {#understanding-how-to-code-for-the-style-system}
 
 >[!VIDEO](https://video.tv.adobe.com/v/21538/?quality=12&learn=on)
 
-Das bereitgestellte AEM-Paket (**technical-review.sites.style-system-1.0.0.zip**) installiert den Beispieltitelstil, Beispielrichtlinien für die Komponenten &quot;We.Retail Layout Container&quot;und &quot;Titel&quot;sowie eine Beispielseite.
+Das bereitgestellte AEM (**technical-review.sites.style-system-1.0.0.zip**) installiert den Beispieltitelstil, Beispielrichtlinien für den We.Retail-Layout-Container und die Komponenten Titel sowie eine Beispielseite.
 
 [technical-review.sites.style-system-1.0.0.zip](assets/technical-review.sites.style-system-1.0.0.zip)
 
 ### Die CSS {#the-css}
 
-Im Folgenden finden Sie die [!DNL LESS] -Definition für den Beispielstil, der unter gefunden wird:
+Im Folgenden wird die [!DNL LESS] -Definition für den Beispielstil gefunden unter:
 
 * `/apps/demo/sites/style-system/clientlib-example/components/titles/styles/example.less`
 
-Für diejenigen, die CSS bevorzugen, ist dieses Codefragment das CSS, in das dieses [!DNL LESS] kompiliert.
+Für diejenigen, die CSS bevorzugen, ist unter diesem Codefragment das CSS dies [!DNL LESS] kompiliert in.
 
 ```css
 /* LESS */
@@ -61,7 +61,7 @@ Für diejenigen, die CSS bevorzugen, ist dieses Codefragment das CSS, in das die
 }
 ```
 
-Die obigen [!DNL LESS] werden nativ durch Experience Manager in die folgende CSS kompiliert.
+Die oben genannten [!DNL LESS] wird nativ durch Experience Manager in die folgende CSS kompiliert.
 
 ```css
 /* CSS */
@@ -92,7 +92,7 @@ Das folgende JavaScript erfasst und fügt das Datum und die Uhrzeit der letzten 
 
 Die Verwendung von jQuery sowie die verwendeten Benennungskonventionen sind optional.
 
-Im Folgenden finden Sie die [!DNL LESS] -Definition für den Beispielstil, der unter gefunden wird:
+Im Folgenden wird die [!DNL LESS] -Definition für den Beispielstil gefunden unter:
 
 * `/apps/demo/sites/style-system/clientlib-example/components/titles/styles/js/title.js`
 
@@ -146,10 +146,10 @@ jQuery(function ($) {
 
 ### Best Practices für HTML {#html-best-practices}
 
-* HTML (über HTL generiert) sollte so strukturell wie möglich semantisch sein; Vermeidung unnötiger Gruppierung/Verschachtelung von Elementen.
+* HTML (über HTL generiert) sollte möglichst strukturell semantisch sein; Vermeidung unnötiger Gruppierung/Verschachtelung von Elementen.
 * HTML-Elemente sollten über CSS-Klassen im BEM-Stil adressierbar sein.
 
-**Gut** : Alle Elemente in der Komponente können mit der BEM-Notation adressiert werden:
+**Gut** - Alle Elemente in der Komponente können mit der BEM-Notation adressiert werden:
 
 ```html
 <!-- Good practice -->
@@ -160,7 +160,7 @@ jQuery(function ($) {
 </div>
 ```
 
-**Schlecht**  - Die Listen- und Listenelemente können nur nach Elementnamen adressiert werden:
+**Bad** - Die Listen- und Listenelemente können nur nach Elementnamen adressiert werden:
 
 ```html
 <!-- Bad practice -->
@@ -173,7 +173,7 @@ jQuery(function ($) {
 
 * Es ist besser, mehr Daten verfügbar zu machen und sie zu verbergen, als zu wenig Daten verfügbar zu machen, die eine zukünftige Back-End-Entwicklung erfordern, um sie verfügbar zu machen.
 
-   * Das Implementieren von Authoring-fähigen Inhaltswechseln kann dazu beitragen, diesen HTML-Lean beizubehalten, wodurch Autoren auswählen können, welche Inhaltselemente in den HTML-Code geschrieben werden. Die kann besonders beim Schreiben von Bildern in HTML wichtig sein, die möglicherweise nicht für alle Stile verwendet werden.
+   * Das Implementieren von autorfähigen Inhaltswechseln kann dazu beitragen, diesen HTML-Lean beizubehalten, wodurch Autoren auswählen können, welche Inhaltselemente auf die HTML geschrieben werden. Die kann besonders beim Schreiben von Bildern auf die HTML wichtig sein, die möglicherweise nicht für alle Stile verwendet werden.
    * Die Ausnahme von dieser Regel besteht darin, dass teure Ressourcen, z. B. Bilder, standardmäßig bereitgestellt werden, da von CSS ausgeblendete Ereignisbilder in diesem Fall unnötigerweise abgerufen werden.
 
       * Moderne Bildkomponenten verwenden häufig JavaScript, um das für den Anwendungsfall am besten geeignete Bild (Viewport) auszuwählen und zu laden.
@@ -182,23 +182,23 @@ jQuery(function ($) {
 
 >[!NOTE]
 >
->Das Stilsystem unterscheidet sich geringfügig von [BEM](https://en.bem.info/) insofern, als `BLOCK` und `BLOCK--MODIFIER` nicht auf dasselbe Element angewendet werden, wie in [BEM](https://en.bem.info/) angegeben.
+>Das Stilsystem unterscheidet sich geringfügig von [BEM](https://en.bem.info/), wobei `BLOCK` und `BLOCK--MODIFIER` nicht auf dasselbe Element angewendet werden, wie durch [BEM](https://en.bem.info/).
 >
->Stattdessen wird aufgrund von Produktbeschränkungen `BLOCK--MODIFIER` auf das übergeordnete Element des Elements `BLOCK` angewendet.
+>Stattdessen wird aufgrund von Produktbeschränkungen die `BLOCK--MODIFIER` wird auf das übergeordnete Element des `BLOCK` -Element.
 >
->Alle anderen Mandanten von [BEM](https://en.bem.info/) sollten mit ausgerichtet werden.
+>Alle anderen Mieter von [BEM](https://en.bem.info/) sollte mit angeglichen werden.
 
-* Verwenden Sie Präprozessoren wie [LESS](https://lesscss.org/) (unterstützt von AEM nativ) oder [SCSS](https://sass-lang.com/) (erfordert ein benutzerdefiniertes Build-System), um eine klare CSS-Definition und Wiederverwendbarkeit zu ermöglichen.
+* Verwenden Sie Präprozessoren wie [WENIGER](https://lesscss.org/) (von nativ AEM unterstützt) oder [SCSS](https://sass-lang.com/) (benutzerdefiniertes Build-System erforderlich), um eine klare CSS-Definition und Wiederverwendbarkeit zu ermöglichen.
 
 * Selektorgewicht/Spezifität einheitlich halten; Dies hilft, schwierige CSS-Kaskadierkonflikte zu vermeiden und zu beheben.
 * Organisieren Sie jeden Stil in einer separaten Datei.
-   * Diese Dateien können mit LESS/SCSS `@imports` kombiniert werden oder, wenn rohe CSS erforderlich ist, über die Einbindung der HTML Client-Bibliotheksdatei oder benutzerdefinierte Frontend-Asset-Build-Systeme.
+   * Diese Dateien können mit LESS/SCSS kombiniert werden `@imports` oder wenn rohe CSS erforderlich ist, über die HTML Client-Bibliotheksdatei-Einbindung oder benutzerdefinierte Front-End-Asset-Build-Systeme.
 * Vermeiden Sie das Mischen vieler komplexer Stile.
    * Je mehr Stile gleichzeitig auf eine Komponente angewendet werden können, desto größer ist die Vielfalt an Permutationen. Dies kann schwierig werden, die Markenausrichtung zu verwalten/zu überprüfen/sicherzustellen.
 * Verwenden Sie immer CSS-Klassen (nach BEM-Notation), um CSS-Regeln zu definieren.
    * Wenn die Auswahl von Elementen ohne CSS-Klassen (d. h. bloße Elemente) unbedingt erforderlich ist, verschieben Sie sie in der CSS-Definition höher, um deutlich zu machen, dass sie eine geringere Spezifität aufweisen als Kollisionen mit Elementen dieses Typs, die über auswählbare CSS-Klassen verfügen.
-* Vermeiden Sie die direkte Formatierung von `BLOCK--MODIFIER`, da diese an das responsive Raster angehängt ist. Eine Änderung der Anzeige dieses Elements kann sich auf das Rendering und die Funktionalität des responsiven Rasters auswirken. Daher wird der Stil nur auf dieser Ebene festgelegt, wenn das Verhalten des responsiven Rasters geändert werden soll.
-* Wenden Sie den Stilbereich mit `BLOCK--MODIFIER` an. `BLOCK__ELEMENT--MODIFIERS` kann in der Komponente verwendet werden, da `BLOCK` jedoch die Komponente darstellt und die Komponente den Stil aufweist, ist der Stil &quot;definiert&quot;und über `BLOCK--MODIFIER` erfasst.
+* Vermeiden Sie die Formatierung der `BLOCK--MODIFIER` direkt, da diese an das responsive Raster angehängt ist. Eine Änderung der Anzeige dieses Elements kann sich auf das Rendering und die Funktionalität des responsiven Rasters auswirken. Daher wird der Stil nur auf dieser Ebene festgelegt, wenn das Verhalten des responsiven Rasters geändert werden soll.
+* Anwenden des Stilumfangs mithilfe von `BLOCK--MODIFIER`. Die `BLOCK__ELEMENT--MODIFIERS` kann in der Komponente verwendet werden, da jedoch die `BLOCK` stellt die Komponente dar, und die Komponente ist der Stil, der Stil ist &quot;definiert&quot;und ist über `BLOCK--MODIFIER`.
 
 Beispiel für eine CSS-Selektorstruktur:
 
@@ -216,7 +216,7 @@ Beispiel für eine CSS-Selektorstruktur:
    <td valign="middle"><span class="code">.cmp-list</span></td> 
    <td valign="middle"><span class="code">.cmp-list_item</span></td> 
    <td valign="middle">→</td> 
-   <td><p><span class="code">.cmp-list—dark</span></p> <p><span class="code"> .cmp-list</span></p> <p><span class="code"> </span><strong><span class="code"> .cmp-list_item {  </span></strong></p> <p><strong> color: blau;</strong></p> <p><strong> }</strong></p> </td> 
+   <td><p><span class="code">.cmp-list—dark</span></p> <p><span class="code"> .cmp-list</span></p> <p><span class="code"> </span><strong><span class="code"> .cmp-list_item { </span></strong></p> <p><strong> color: blau;</strong></p> <p><strong> }</strong></p> </td> 
   </tr> 
   <tr> 
    <td valign="middle"><span class="code">.cmp-image—hero</span></td> 
@@ -228,7 +228,7 @@ Beispiel für eine CSS-Selektorstruktur:
  </tbody> 
 </table>
 
-Bei verschachtelten Komponenten überschreitet die CSS-Selektortiefe für diese verschachtelten Komponentenelemente die Selektortiefe der dritten Ebene. Wiederholen Sie das gleiche Muster für die verschachtelte Komponente, jedoch in den Bereich `BLOCK` der übergeordneten Komponente. Oder mit anderen Worten: Starten Sie das `BLOCK` der verschachtelten Komponente auf der dritten Ebene und das `ELEMENT` der verschachtelten Komponente befindet sich auf der vierten Selektorebene.
+Bei verschachtelten Komponenten überschreitet die CSS-Selektortiefe für diese verschachtelten Komponentenelemente die Selektortiefe der dritten Ebene. Wiederholen Sie dasselbe Muster für die verschachtelte Komponente, jedoch in den Bereich der übergeordneten Komponente. `BLOCK`. Oder mit anderen Worten, starten Sie die `BLOCK` auf der dritten Ebene und der verschachtelten Komponente `ELEMENT` befindet sich auf der vierten Selektorebene.
 
 ### Best Practices für JavaScript {#javascript-best-practices}
 
@@ -240,15 +240,15 @@ Die in diesem Abschnitt definierten Best Practices beziehen sich auf &quot;Stil-
 * Beurteilen Sie die Verwendung von JavaScript neu, wenn es neue Daten/Inhalte asynchron (über AJAX) abruft, wenn die Komponente häufig auf einer Seite angezeigt werden kann.
 * Verarbeiten Sie sowohl Veröffentlichungs- als auch Authoring-Erlebnisse.
 * Verwenden Sie nach Möglichkeit Stil-JavaScript erneut.
-   * Wenn beispielsweise mehrere Stile einer Komponente erfordern, dass das Bild in ein Hintergrundbild verschoben wird, kann das Stil-JavaScript einmal implementiert und an mehrere `BLOCK--MODIFIERs` angehängt werden.
+   * Wenn beispielsweise mehrere Stile einer Komponente erfordern, dass das Bild in ein Hintergrundbild verschoben wird, kann das Stil-JavaScript einmal implementiert und an mehrere `BLOCK--MODIFIERs`.
 * Trennen Sie style-JavaScript nach Möglichkeit von funktionalem JavaScript.
-* Bewerten Sie die Kosten von JavaScript im Vergleich zu Manifestationen dieser DOM-Änderungen im HTML-Code direkt über HTL.
+* Bewerten Sie die Kosten von JavaScript im Vergleich zu Manifestationen dieser DOM-Änderungen direkt über HTL im HTML.
    * Wenn eine Komponente, die Stil-JavaScript verwendet, eine serverseitige Änderung erfordert, sollten Sie prüfen, ob die JavaScript-Manipulation zu diesem Zeitpunkt eingebunden werden kann und welche Auswirkungen/Auswirkungen auf die Leistung und Unterstützbarkeit der Komponente haben.
 
 #### Leistungsaspekte {#performance-considerations}
 
 * Style-JavaScript sollte leicht und schlank gehalten werden.
-* Um Flackern und unnötige Wiederholungen zu vermeiden, blenden Sie die Komponente zunächst über `BLOCK--MODIFIER BLOCK` aus und zeigen Sie sie an, wenn alle DOM-Manipulationen in JavaScript abgeschlossen sind.
+* Um Flackern und unnötige Wiederholungen zu vermeiden, blenden Sie die Komponente zunächst über aus. `BLOCK--MODIFIER BLOCK`und zeigen Sie sie an, wenn alle DOM-Manipulationen in JavaScript abgeschlossen sind.
 * Die Leistung der Stil-JavaScript-Manipulationen ähnelt den grundlegenden jQuery-Plug-ins, die Elemente in DOMReady anhängen und ändern.
 * Stellen Sie sicher, dass die Anforderungen komprimiert sind und CSS und JavaScript minimiert wurden.
 

@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: cd7cb89f407f5e0c465544593563534472daf928
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '981'
 ht-degree: 4%
@@ -183,7 +183,7 @@ AEM persistente Abfragen werden über HTTP-GET ausgeführt und daher können kei
 1. Die öffentliche Funktion bezeichnet einen privaten Zweck `makeRequest(..)` , das eine asynchrone HTTP-GET-Anfrage an AEM Headless aufruft und die JSON-Daten zurückgibt.
 1. Jede öffentliche Funktion dekodiert dann die JSON-Daten und führt alle erforderlichen Prüfungen oder Umwandlungen durch, bevor die Abenteuer-Daten an die Ansicht zurückgegeben werden.
 
-+ AEM GraphQL-JSON-Daten werden mit den in `AEM/Models.swift`, die den JSON-Objekten zugeordnet ist, gab mein AEM Headless zurück.
+   + AEM GraphQL-JSON-Daten werden mit den in `AEM/Models.swift`, die den JSON-Objekten zugeordnet ist, gab mein AEM Headless zurück.
 
 ```swift
     /// # getAdventures(..)
@@ -324,5 +324,5 @@ Ein ähnlicher Ansatz kann mit der SwiftUI-nativen verwendet werden [AsyncImage]
 
 ## Zusätzliche Ressourcen
 
-+ [Erste Schritte mit AEM Headless - GraphQL-Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
++ [Erste Schritte mit AEM Headless - GraphQL-Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=de)
 + [Tutorial zu SwiftUI-Listen und Navigation](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)

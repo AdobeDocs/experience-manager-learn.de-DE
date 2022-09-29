@@ -3,9 +3,9 @@ title: Beschleunigung von Inhalten mit Adobe Experience Manager
 description: Informieren Sie sich über die Geschwindigkeit und den Wert von Inhalten in Unternehmen. Informieren Sie sich über vier Grundsätze der effektiven Umsetzung und über die Fallstricke, nach denen Sie unterwegs suchen sollten.
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2823'
+source-wordcount: '2815'
 ht-degree: 0%
 
 ---
@@ -94,19 +94,19 @@ _&quot;Wir wussten, dass zu viele Inhalte herauskamen. Wir haben also mit unsere
 
 AEM ist eine Lösung auf Unternehmensebene, die viele Teile des Unternehmens oder der Marke berührt und deren Effektivität als CMS-Tool Upstream-Abhängigkeiten aufweist.
 
-Beim Aufbau des Frameworks gibt es einige gemeinsame Paradigmen, für die Sie die richtige Lösung finden müssen. Einige dieser Elemente sind vielleicht eine Herausforderung, aber es müssen Entscheidungen getroffen werden - deshalb ist das oben genannte grundlegende Paradigma so wichtig. Dieses Framework, das erstellt wird, wird für die Skalierung in der gesamten Organisation genutzt.
+Beim Aufbau des Frameworks gibt es einige gemeinsame Paradigmen, für die Sie die richtige Lösung finden müssen. Einige dieser Elemente sind vielleicht eine Herausforderung, aber es müssen Entscheidungen getroffen werden - deshalb ist das oben genannte grundlegende Paradigma so wichtig. Dieses Framework, das derzeit erstellt wird, wird für die Skalierung in der gesamten Organisation genutzt.
 
 Im Folgenden finden Sie vier Meilensteine, die während der Ausführungsphase erstellt werden müssen:
 
 1. **Definieren Sie die Grundlagen Ihrer globalen Unternehmenstaxonomie.**
 
-   Wenn wir über Taxonomie sprechen, verweisen wir nicht nur auf die Ordnerstruktur, sondern auch auf das Verständnis, wer was und wann verfassen wird. Darüber hinaus müssen wir die [Berechtigung ändern](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html?lang=en) -Strukturen, die für jeden Autoren-Typ architektonisch erstellt werden müssen.
+   Wenn wir über eine Taxonomie sprechen, verweisen wir nicht nur auf die Ordnerstruktur, sondern auch auf das Verständnis, wer was und wann verfasst. Darüber hinaus müssen wir die [Berechtigung ändern](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/role-based-permissions.html?lang=en) -Strukturen, die für jeden Autoren-Typ architektonisch erstellt werden müssen.
 
    Überlegen Sie an dieser Stelle, ob Sie ein zentralisiertes oder dezentralisiertes Governance-Modell wollen. Einerseits schafft ein zentralisiertes Governance-Modell eine konsolidierte Taxonomie-Strategie, die strengere Qualitätskontrollen und Prozesseinblicke bietet, die unmöglich oder zumindest schwierig in einem dezentralisierten Rahmen wären.
 
    Auf der anderen Seite könnte ein zentralisiertes Modell, insbesondere wenn es von einem derzeit zu flexiblen Authoring-Erlebnis stammt, für das Team eine zu große Hürde darstellen. Die Struktur muss gemeinsame sprachliche und regionale Differenzierungsmechanismen sowie Verfahren zur Qualitätskontrolle ermöglichen. Darüber hinaus kann es für jede Facette des Authoring-Erlebnisses weniger Autonomie geben, d. h. nur bestimmte Autoren dürfen an bestimmten Seitengruppen arbeiten und nur eingeschränkte Autoren haben bearbeitbare Berechtigungen.
 
-   Obwohl zunächst ein zentralisierter Governance-Modus langsamer erscheinen mag, werden die Prozesseinblicke und die angespornte transparente Rechenschaftspflicht zwischen den Geschäftskunden letztlich schneller sein.
+   Obwohl zunächst ein zentralisierter Governance-Modus langsamer erscheinen mag, sind die Prozesseinblicke und die angespornte transparente Rechenschaftspflicht zwischen den Geschäftskunden letztlich doch schneller.
 
    Die Entscheidung, welche Richtung eingeschlagen werden soll, hängt letztlich vom übergeordneten strategischen Ziel der Organisation ab. Es kann darauf ankommen, zwischen einer größeren Flexibilität für Geschäftsbenutzer oder einem einheitlichen Erlebnis über Marken hinweg zu wählen. Die Ausrichtung am richtigen Modell ist für eine gute Ausführung von entscheidender Bedeutung.
 
@@ -116,7 +116,7 @@ Im Folgenden finden Sie vier Meilensteine, die während der Ausführungsphase er
 
    Interaktive Inhalte (häufig auf der Startseite) erfordern möglicherweise sehr interaktive Erlebnisse und erfordern daher, dass Frontend-CSS-Designer mit Geschäftsautoren zusammenarbeiten, um diese zu aktualisieren. Die Pflege der Homepage würde eine andere Berechtigungsstruktur und einen anderen Genehmigungsprozess erfordern als eine Referenzseite, die leichter zu aktualisieren wäre. Solide Governance, Effizienz und Qualität beginnen mit einer klaren Inhaltseigenschaft. Ziehen Sie die Durchführung einer Inhaltsprüfung in Erwägung, die diese Fragen beantwortet:
 
-   * Wer wird was verfassen? Und wann?
+   * Wer verfasst was? Und wann?
    * Welche verschiedenen Berechtigungsstrukturen müssen auf die einzelnen Inhaltstypen angewendet werden?
    * Welche Erlebnisse auf der Site werden sich ändern und welche bleiben relativ statisch?
    * Wer wird Inhaber welcher Inhalte sein?
@@ -177,4 +177,4 @@ Im Folgenden finden Sie einige potenzielle Fallstricke, die vermieden werden kö
 
 Sehen Sie sich diese einstündige Sitzung an, um eine eingehendere Diskussion zur Inhaltsgeschwindigkeit zu erhalten. [Podiumsdiskussion](https://primetime.bluejeans.com/a2m/events/playback/e63686d4-158f-4f73-aea0-f03ebee4606d) mit Monique Misrahi (T-Mobile), Amy Bergstrom (Deloitte) und der Anuradha Pentareddy der Adobe.
 
-Erfahren Sie mehr über Strategie und Gedankenführung auf der [Kundenerfolg](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) Hub.
+Erfahren Sie mehr über Strategie und Gedankenführung auf der [Kundenerfolg](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html) Hub.

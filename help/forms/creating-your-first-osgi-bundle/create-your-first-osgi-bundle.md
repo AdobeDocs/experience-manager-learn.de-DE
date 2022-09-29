@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
-source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '667'
 ht-degree: 3%
 
 ---
@@ -56,7 +56,7 @@ Installieren Sie die neueste Version von [Eclipse](https://www.eclipse.org/downl
 
 ## Erstellen des ersten Projekts
 
-Archetyp ist ein Maven-Projektvorlagen-Toolkit. Ein Archetyp ist definiert als ein ursprüngliches Muster oder Modell, aus dem alle anderen Elemente derselben Art hergestellt werden. Der Name passt zu dem, was wir versuchen, ein System bereitzustellen, das eine konsistente Möglichkeit zur Generierung von Maven-Projekten bietet. Archetyp hilft Autoren beim Erstellen von Maven-Projektvorlagen für Benutzer und bietet Benutzern die Möglichkeit, parametrierte Versionen dieser Projektvorlagen zu generieren.
+Archetyp ist ein Maven-Projektvorlagen-Toolkit. Ein Archetyp ist definiert als ein ursprüngliches Muster oder Modell, aus dem alle anderen Elemente derselben Art hergestellt werden. Der Name passt zu dem, was wir versuchen, ein System bereitzustellen, das eine konsistente Möglichkeit zur Generierung von Maven-Projekten bietet. Archetyp unterstützt Autoren beim Erstellen von Maven-Projektvorlagen für Benutzer und bietet Benutzern die Möglichkeit, parametrierte Versionen dieser Projektvorlagen zu generieren.
 Gehen Sie wie folgt vor, um Ihr erstes Maven-Projekt zu erstellen:
 
 * Erstellen Sie einen neuen Ordner mit dem Namen `aemformsbundles` im C-Laufwerk
@@ -93,15 +93,15 @@ Wählen Sie c:\aemformsbundles\mysite by clicking the aus. **Durchsuchen** butto
 
 Klicken **Beenden** um den Importvorgang zu starten
 
-Das Projekt wird in Eclipse importiert und es wird eine Reihe von `mysite.xxxx` Ordner
+Das Projekt wird in Eclipse importiert und Sie sehen eine Reihe von `mysite.xxxx` Ordner
 
-Erweitern Sie die `src/main/java` unter `mysite.core` Ordner. Dies ist der Ordner, in den Sie den Großteil Ihres Codes schreiben werden.
+Erweitern Sie die `src/main/java` unter `mysite.core` Ordner. Dies ist der Ordner, in den Sie den Großteil Ihres Codes schreiben.
 
 ![data-source](assets/mysite-core-project.png)
 
 ## AEMFD Client SDK einschließen
 
-Sie müssen das AEMFD-Client-SDK in Ihr Projekt einbeziehen, um verschiedene Dienste zu nutzen, die mit AEM Forms bereitgestellt werden. Siehe [AEMFD Client SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) , um das entsprechende Client-SDK in Ihr Maven-Projekt aufzunehmen. Sie müssen das AEM FD Client SDK in den Abhängigkeitsabschnitt von `pom.xml` des Kernprojekts, wie unten dargestellt.
+Sie müssen das AEMFD-Client-SDK in Ihr Projekt einbeziehen, um verschiedene Dienste zu nutzen, die mit AEM Forms bereitgestellt werden. Siehe [AEMFD Client SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) , um das entsprechende Client-SDK in Ihr Maven-Projekt aufzunehmen. Sie müssen das AEM FD Client SDK im Abschnitt Abhängigkeiten von `pom.xml` des Kernprojekts, wie unten dargestellt.
 
 ```xml
 <dependency>

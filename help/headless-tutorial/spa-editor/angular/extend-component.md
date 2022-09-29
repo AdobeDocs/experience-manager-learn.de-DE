@@ -14,10 +14,10 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
-source-git-commit: c003632d82b6a3ba2046e494ff8e7911f619945c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1935'
+ht-degree: 3%
 
 ---
 
@@ -25,25 +25,25 @@ ht-degree: 0%
 
 Erfahren Sie, wie Sie eine vorhandene Kernkomponente erweitern, um sie mit dem AEM SPA Editor zu verwenden. Das Verständnis, wie eine vorhandene Komponente erweitert wird, ist eine leistungsstarke Methode, um die Funktionen einer AEM SPA Editor-Implementierung anzupassen und zu erweitern.
 
-## Ziele
+## Ziel
 
 1. Erweitern einer vorhandenen Kernkomponente mit zusätzlichen Eigenschaften und Inhalten.
-2. Verstehen Sie die Grundlagen der Komponentenvererbung mit der Verwendung von `sling:resourceSuperType`.
-3. Erfahren Sie, wie Sie das [Delegationsmuster](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) für Sling-Modelle nutzen können, um vorhandene Logik und Funktionalität wiederzuverwenden.
+2. Grundlegendes zur Komponentenvererbung mit der Verwendung von `sling:resourceSuperType`.
+3. Erfahren Sie, wie Sie die [Delegationsmuster](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) für Sling-Modelle verwenden, um vorhandene Logik und Funktionalität wiederzuverwenden.
 
 ## Was Sie erstellen werden
 
-In diesem Kapitel wird eine neue `Card` -Komponente erstellt. Die Komponente `Card` erweitert die [Bild-Kernkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=de) und fügt zusätzliche Inhaltsfelder wie einen Titel und eine Schaltfläche &quot;Aktionsaufruf&quot;hinzu, um die Rolle eines Teasers für andere Inhalte in der SPA auszuführen.
+In diesem Kapitel wird eine neue `Card` -Komponente erstellt. Die `Card` -Komponente erweitert die [Bild-Kernkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=de) Fügen Sie zusätzliche Inhaltsfelder wie einen Titel und eine Aktionsaufruf-Schaltfläche hinzu, um die Rolle eines Teasers für andere Inhalte im SPA auszuführen.
 
 ![Abschließendes Authoring der Kartenkomponente](assets/extend-component/final-authoring-card.png)
 
 >[!NOTE]
 >
-> In einer realen Implementierung ist es möglicherweise sinnvoller, einfach die [Teaser-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html) zu verwenden und dann die [Bild-Kernkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) zu erweitern, um eine `Card`-Komponente entsprechend den Projektanforderungen zu erstellen. Es wird immer empfohlen, [Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de) nach Möglichkeit direkt zu verwenden.
+> In einer realen Implementierung ist es vielleicht sinnvoller, einfach die [Teaser-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html) als [Bild-Kernkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) , um `Card` -Komponente entsprechend den Projektanforderungen. Es wird immer empfohlen, [Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de) nach Möglichkeit.
 
 ## Voraussetzungen
 
-Überprüfen Sie die erforderlichen Tools und Anweisungen zum Einrichten einer [lokalen Entwicklungsumgebung](overview.md#local-dev-environment).
+Überprüfen Sie die erforderlichen Tools und Anweisungen zum Einrichten eines [lokale Entwicklungsumgebung](overview.md#local-dev-environment).
 
 ### Code abrufen
 
@@ -61,24 +61,24 @@ In diesem Kapitel wird eine neue `Card` -Komponente erstellt. Die Komponente `Ca
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   Wenn Sie [AEM 6.x](overview.md#compatibility) verwenden, fügen Sie das Profil `classic` hinzu:
+   Wenn Sie [AEM 6.x](overview.md#compatibility) Fügen Sie die `classic` profile:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. Installieren Sie das fertige Paket für die traditionelle Referenz-Site [WKND](https://github.com/adobe/aem-guides-wknd/releases/latest). Die von [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest) bereitgestellten Bilder werden auf der WKND-SPA wiederverwendet. Das Paket kann mit [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) installiert werden.
+3. Installieren Sie das fertige Paket für das herkömmliche [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-2.1.0). Die von [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest) wird auf der WKND-SPA wiederverwendet. Das Paket kann mit [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
 
    ![Package Manager install wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
-Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) anzeigen oder den Code lokal auschecken, indem Sie zu der Verzweigung `Angular/extend-component-solution` wechseln.
+Sie können den fertigen Code immer in [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) oder den Code lokal auschecken, indem Sie zu der Verzweigung wechseln `Angular/extend-component-solution`.
 
 ## Inspect-ErstKartenimplementierung
 
 Eine anfängliche Kartenkomponente wurde vom Code des Kapitelstarters bereitgestellt. Inspect als Ausgangspunkt für die Kartenimplementierung.
 
-1. Öffnen Sie in der IDE Ihrer Wahl das Modul `ui.apps` .
-2. Navigieren Sie zu `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/card` und zeigen Sie die Datei `.content.xml` an.
+1. Öffnen Sie in der IDE Ihrer Wahl die `ui.apps` -Modul.
+2. Navigieren Sie zu `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/card` und zeigen Sie die `.content.xml` -Datei.
 
    ![AEM der Kartenkomponente](assets/extend-component/aem-card-cmp-start-definition.png)
 
@@ -91,7 +91,7 @@ Eine anfängliche Kartenkomponente wurde vom Code des Kapitelstarters bereitgest
        componentGroup="WKND SPA Angular - Content"/>
    ```
 
-   Die Eigenschaft `sling:resourceSuperType` verweist auf `wknd-spa-angular/components/image` und gibt an, dass die `Card`-Komponente alle Funktionen von der WKND-SPA-Bildkomponente übernimmt.
+   Die Eigenschaft `sling:resourceSuperType` weist auf `wknd-spa-angular/components/image` mit dem Hinweis, dass `Card` -Komponente erbt die Funktionalität von der WKND-SPA Bildkomponente.
 
 3. Prüfen Sie die Datei `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image/.content.xml`:
 
@@ -104,19 +104,19 @@ Eine anfängliche Kartenkomponente wurde vom Code des Kapitelstarters bereitgest
        componentGroup="WKND SPA Angular - Content"/>
    ```
 
-   Beachten Sie, dass `sling:resourceSuperType` auf `core/wcm/components/image/v2/image` verweist. Dies bedeutet, dass die WKND SPA Image-Komponente alle Funktionen vom Kernkomponentenbild übernimmt.
+   Beachten Sie, dass `sling:resourceSuperType` weist auf `core/wcm/components/image/v2/image`. Dies bedeutet, dass die WKND SPA Image-Komponente die Funktionalität vom Kernkomponentenbild übernimmt.
 
-   Die Vererbung der Sling-Ressource wird auch als [Proxy-Muster](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) Sling-Ressource bezeichnet und ist ein leistungsstarkes Designmuster, mit dem untergeordnete Komponenten Funktionen übernehmen und bei Bedarf das Verhalten erweitern/überschreiben können. Die Sling-Vererbung unterstützt mehrere Vererbungsstufen, sodass letztendlich die neue Komponente `Card` die Funktionalität der Kernkomponente &quot;Bild&quot;übernimmt.
+   Wird auch als [Proxy-Muster](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) Die Vererbung von Sling-Ressourcen ist ein leistungsstarkes Designmuster, mit dem untergeordnete Komponenten Funktionen übernehmen und das Verhalten bei Bedarf erweitern/überschreiben können. Die Sling-Vererbung unterstützt mehrere Vererbungsebenen, sodass letztendlich die neue `Card` -Komponente erbt die Funktionalität des Kernkomponentenbilds.
 
    Viele Entwicklungsteams streben danach, D.R.Y. zu sein (wiederholen Sie sich nicht selbst). Die Sling-Vererbung ermöglicht dies mit AEM.
 
-4. Öffnen Sie unter dem Ordner `card` die Datei `_cq_dialog/.content.xml`.
+4. Unter dem `card` Ordner, öffnen Sie die Datei `_cq_dialog/.content.xml`.
 
-   Diese Datei ist die Definition des Komponentendialogfelds für die Komponente `Card` . Bei Verwendung der Sling-Vererbung ist es möglich, Funktionen des [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=de) zu verwenden, um Teile des Dialogfelds zu überschreiben oder zu erweitern. In diesem Beispiel wurde dem Dialogfeld eine neue Registerkarte hinzugefügt, um zusätzliche Daten von einem Autor zu erfassen und die Kartenkomponente zu füllen.
+   Diese Datei ist die Definition des Komponentendialogfelds für die `Card` -Komponente. Bei Verwendung der Sling-Vererbung ist es möglich, Funktionen der [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=de) , um Teile des Dialogfelds zu überschreiben oder zu erweitern. In diesem Beispiel wurde dem Dialogfeld eine neue Registerkarte hinzugefügt, um zusätzliche Daten von einem Autor zu erfassen und die Kartenkomponente zu füllen.
 
-   Mit Eigenschaften wie `sling:orderBefore` können Entwickler festlegen, wo neue Registerkarten oder Formularfelder eingefügt werden sollen. In diesem Fall wird die Registerkarte `Text` vor der Registerkarte `asset` eingefügt. Um den Sling Resource Merger vollständig zu nutzen, ist es wichtig, die ursprüngliche Dialogfeldknotenstruktur für das [Bild-Komponentendialogfeld](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml) zu kennen.
+   Eigenschaften wie `sling:orderBefore` können Entwickler wählen, wo neue Registerkarten oder Formularfelder eingefügt werden sollen. In diesem Fall wird die `Text` vor dem `asset` Registerkarte. Um den Sling Resource Merger vollständig zu nutzen, ist es wichtig, die ursprüngliche Dialogfeldknotenstruktur für die [Dialogfeld &quot;Bildkomponente&quot;](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml).
 
-5. Öffnen Sie unter dem Ordner `card` die Datei `_cq_editConfig.xml`. Diese Datei bestimmt das Drag-and-Drop-Verhalten in der AEM Authoring-Benutzeroberfläche. Beim Erweitern der Bildkomponente ist es wichtig, dass der Ressourcentyp mit der Komponente selbst übereinstimmt. Überprüfen Sie den Knoten `<parameters>`:
+5. Unter dem `card` Ordner, öffnen Sie die Datei `_cq_editConfig.xml`. Diese Datei bestimmt das Drag-and-Drop-Verhalten in der AEM Authoring-Benutzeroberfläche. Beim Erweitern der Bildkomponente ist es wichtig, dass der Ressourcentyp mit der Komponente selbst übereinstimmt. Überprüfen Sie die `<parameters>` node:
 
    ```xml
    <parameters
@@ -127,21 +127,21 @@ Eine anfängliche Kartenkomponente wurde vom Code des Kapitelstarters bereitgest
        imageRotate=""/>
    ```
 
-   Die meisten Komponenten erfordern keinen `cq:editConfig`. Die Bild- und untergeordneten untergeordneten Elemente der Bildkomponente sind Ausnahmen.
+   Die meisten Komponenten erfordern keine `cq:editConfig`, das Bild und untergeordnete untergeordnete Elemente der Bildkomponente sind Ausnahmen.
 
-6. Wechseln Sie in der IDE zum Modul `ui.frontend` und navigieren Sie zu `ui.frontend/src/app/components/card`:
+6. Wechseln Sie in der IDE zum `ui.frontend` -Modul, navigieren Sie zu `ui.frontend/src/app/components/card`:
 
    ![Start der angular-Komponente](assets/extend-component/angular-card-component-start.png)
 
 7. Prüfen Sie die Datei `card.component.ts`.
 
-   Die Komponente wurde bereits mit der Standardfunktion `MapTo` herausgestochen, um sie der AEM `Card`-Komponente zuzuordnen.
+   Die Komponente wurde bereits ausgelagert, um sie dem AEM zuzuordnen. `Card` Komponente mit dem Standard `MapTo` -Funktion.
 
    ```js
    MapTo('wknd-spa-angular/components/card')(CardComponent, CardEditConfig);
    ```
 
-   Überprüfen Sie die drei Parameter `@Input` in der Klasse für `src`, `alt` und `title`. Dies sind erwartete JSON-Werte aus der AEM Komponente, die der Angular-Komponente zugeordnet wird.
+   Überprüfen Sie die drei `@Input` Parameter in der Klasse für `src`, `alt`und `title`. Dies sind erwartete JSON-Werte aus der AEM Komponente, die der Angular-Komponente zugeordnet sind.
 
 8. Öffnen Sie die Datei `card.component.html`:
 
@@ -151,11 +151,11 @@ Eine anfängliche Kartenkomponente wurde vom Code des Kapitelstarters bereitgest
    </div>
    ```
 
-   In diesem Beispiel haben wir beschlossen, die vorhandene Angular-Bildkomponente `app-image` wiederzuverwenden, indem einfach die `@Input` -Parameter von `card.component.ts` übergeben werden. Später im Tutorial werden weitere Eigenschaften hinzugefügt und angezeigt.
+   In diesem Beispiel haben wir die vorhandene Angular-Image-Komponente wiederverwendet `app-image` durch einfache Übergabe der `@Input` Parameter aus `card.component.ts`. Später im Tutorial werden zusätzliche Eigenschaften hinzugefügt und angezeigt.
 
 ## Vorlagenrichtlinie aktualisieren
 
-Mit dieser ersten `Card`-Implementierung überprüfen Sie die Funktionalität im AEM SPA Editor. Um die ursprüngliche Komponente `Card` anzuzeigen, ist ein Update der Vorlagenrichtlinie erforderlich.
+Mit dieser ersten `Card` Implementierung überprüft die Funktionalität im AEM SPA Editor. So zeigen Sie die ersten `Card` -Komponente ein Update der Vorlagenrichtlinie erforderlich ist.
 
 1. Stellen Sie den Starter-Code auf einer lokalen Instanz von AEM bereit, falls Sie dies noch nicht getan haben:
 
@@ -165,62 +165,62 @@ Mit dieser ersten `Card`-Implementierung überprüfen Sie die Funktionalität im
    ```
 
 2. Navigieren Sie zur SPA Seitenvorlage unter [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html).
-3. Aktualisieren Sie die Richtlinie des Layout-Containers, um die neue Komponente `Card` als zulässige Komponente hinzuzufügen:
+3. Aktualisieren Sie die Richtlinie des Layout-Containers, um die neue `Card` -Komponente als zulässige Komponente:
 
    ![Aktualisieren der Layout-Container-Richtlinie](assets/extend-component/card-component-allowed.png)
 
-   Speichern Sie die Änderungen an der Richtlinie und beachten Sie die Komponente `Card` als zulässige Komponente:
+   Speichern Sie die Änderungen an der Richtlinie und beachten Sie die `Card` -Komponente als zulässige Komponente:
 
    ![Kartenkomponente als zulässige Komponente](assets/extend-component/card-component-allowed-layout-container.png)
 
 ## Autorenkartenkomponente
 
-Als Nächstes erstellen Sie die Komponente `Card` mit dem AEM SPA Editor.
+Als Nächstes erstellen Sie die `Card` -Komponente mit dem AEM-SPA-Editor.
 
 1. Navigieren Sie zu [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html).
-2. Fügen Sie im Modus `Edit` die Komponente `Card` zur Komponente `Layout Container` hinzu:
+2. In `Edit` -Modus, fügen Sie die `Card` -Komponente `Layout Container`:
 
    ![Neue Komponente einfügen](assets/extend-component/insert-custom-component.png)
 
-3. Ziehen Sie ein Bild aus der Asset-Suche auf die Komponente `Card`:
+3. Ziehen Sie ein Bild aus der Asset-Suche in den `Card` component:
 
    ![Bild hinzufügen](assets/extend-component/card-add-image.png)
 
-4. Öffnen Sie das Komponentendialogfeld `Card` und beachten Sie das Hinzufügen einer Registerkarte **Text** .
-5. Geben Sie die folgenden Werte auf der Registerkarte **Text** ein:
+4. Öffnen Sie die `Card` Komponenten-Dialogfeld anzeigen und das Hinzufügen eines **Text** Registerkarte.
+5. Geben Sie die folgenden Werte auf der **Text** tab:
 
    ![Registerkarte &quot;Textkomponente&quot;](assets/extend-component/card-component-text.png)
 
-   **Kartenpfad** : Wählen Sie eine Seite unter der SPA Homepage aus.
+   **Kartenpfad** - Wählen Sie eine Seite unter der SPA Homepage aus.
 
-   **CTA-Text**  - &quot;mehr dazu&quot;
+   **CTA-Text** - &quot;mehr dazu&quot;
 
-   **Kartentitel**  - leer lassen
+   **Kartentitel** - leer lassen
 
-   **Titel von verknüpfter Seite abrufen**  - Aktivieren Sie das Kontrollkästchen, um &quot;true&quot;anzugeben.
+   **Titel von verknüpfter Seite abrufen** - aktivieren Sie das Kontrollkästchen, um &quot;true&quot;anzugeben.
 
-6. Aktualisieren Sie die Registerkarte **Asset-Metadaten**, um Werte für **Alternativtext** und **Beschriftung** hinzuzufügen.
+6. Aktualisieren Sie die **Asset-Metadaten** Registerkarte zum Hinzufügen von Werten für **Alternativtext** und **Beschriftung**.
 
-   Derzeit werden nach der Aktualisierung des Dialogfelds keine weiteren Änderungen angezeigt. Um die neuen Felder der Angular-Komponente verfügbar zu machen, müssen wir das Sling-Modell für die Komponente `Card` aktualisieren.
+   Derzeit werden nach der Aktualisierung des Dialogfelds keine weiteren Änderungen angezeigt. Um die neuen Felder der Angular-Komponente verfügbar zu machen, müssen wir das Sling-Modell für die `Card` -Komponente.
 
-7. Öffnen Sie eine neue Registerkarte und navigieren Sie zu [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd-spa-angular/us/en/home/jcr%3Acontent/root/responsivegrid/card). Inspect Sie die Inhaltsknoten unter `/content/wknd-spa-angular/us/en/home/jcr:content/root/responsivegrid` , um den `Card`-Komponenteninhalt zu finden.
+7. Öffnen Sie eine neue Registerkarte und navigieren Sie zu [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd-spa-angular/us/en/home/jcr%3Acontent/root/responsivegrid/card). Inspect der Inhaltsknoten unter `/content/wknd-spa-angular/us/en/home/jcr:content/root/responsivegrid` , um `Card` Komponenteninhalt.
 
    ![Komponenteneigenschaften von CRXDE-Lite](assets/extend-component/crxde-lite-properties.png)
 
-   Beachten Sie, dass die Eigenschaften `cardPath`, `ctaText`, `titleFromPage` vom Dialogfeld beibehalten werden.
+   Beachten Sie, dass Eigenschaften `cardPath`, `ctaText`, `titleFromPage` werden vom Dialogfeld beibehalten.
 
 ## Aktualisieren des Karten-Sling-Modells
 
-Um die Werte aus dem Komponentendialogfeld letztendlich für die Angular-Komponente verfügbar zu machen, müssen wir das Sling-Modell aktualisieren, das die JSON für die Komponente `Card` füllt. Wir haben auch die Möglichkeit, zwei Elemente der Geschäftslogik zu implementieren:
+Um die Werte aus dem Komponentendialogfeld letztendlich für die Angular-Komponente verfügbar zu machen, müssen wir das Sling-Modell aktualisieren, das die JSON für die `Card` -Komponente. Wir haben auch die Möglichkeit, zwei Elemente der Geschäftslogik zu implementieren:
 
-* Wenn `titleFromPage` auf **true** gesetzt ist, geben Sie den Seitentitel zurück, der von `cardPath` angegeben wird. Andernfalls wird der Wert von `cardTitle` im Textfeld zurückgegeben.
-* Gibt das Datum der letzten Änderung der Seite zurück, die von `cardPath` angegeben wurde.
+* Wenn `titleFromPage` nach **true**, geben Sie den Titel der Seite zurück, der durch `cardPath` sonst den Wert von `cardTitle` Textfeld.
+* Gibt das Datum der letzten Änderung der Seite zurück, die durch `cardPath`.
 
-Kehren Sie zur IDE Ihrer Wahl zurück und öffnen Sie das Modul `core` .
+Kehren Sie zur IDE Ihrer Wahl zurück und öffnen Sie die `core` -Modul.
 
 1. Öffnen Sie die Datei `Card.java` unter `core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/Card.java`.
 
-   Beachten Sie, dass die `Card`-Schnittstelle derzeit `com.adobe.cq.wcm.core.components.models.Image` erweitert und daher alle Methoden der `Image`-Schnittstelle übernimmt. Die `Image`-Schnittstelle erweitert bereits die `ComponentExporter`-Schnittstelle, über die das Sling-Modell als JSON exportiert und vom SPA Editor zugeordnet werden kann. Daher müssen wir die `ComponentExporter`-Schnittstelle nicht explizit erweitern, wie dies im [Kapitel der benutzerdefinierten Komponente](custom-component.md) der Fall war.
+   Beachten Sie, dass die `Card` -Schnittstelle erweitert `com.adobe.cq.wcm.core.components.models.Image` und erbt daher die Methoden der `Image` -Schnittstelle. Die `Image` -Benutzeroberfläche erweitert bereits die `ComponentExporter` -Schnittstelle, über die das Sling-Modell als JSON exportiert und vom SPA-Editor zugeordnet werden kann. Daher müssen wir die `ComponentExporter` Benutzeroberfläche, wie wir es in [Kapitel &quot;Benutzerdefinierte Komponente&quot;](custom-component.md).
 
 2. Fügen Sie der -Oberfläche die folgenden Methoden hinzu:
 
@@ -260,11 +260,11 @@ Kehren Sie zur IDE Ihrer Wahl zurück und öffnen Sie das Modul `core` .
    }
    ```
 
-   Diese Methoden werden über die JSON-Modell-API verfügbar gemacht und an die Angular-Komponente übergeben.
+   Diese Methoden werden über die JSON-Modell-API bereitgestellt und an die Angular-Komponente übergeben.
 
-3. Öffnen Sie `CardImpl.java`. Dies ist die Implementierung der `Card.java`-Schnittstelle. Diese Implementierung wurde bereits teilweise gestoppt, um das Tutorial zu beschleunigen.  Beachten Sie die Verwendung der Anmerkungen `@Model` und `@Exporter` , um sicherzustellen, dass das Sling-Modell über den Sling Model Exporter als JSON serialisiert werden kann.
+3. Öffnen Sie `CardImpl.java`. Dies ist die Implementierung von `Card.java` -Schnittstelle. Diese Implementierung wurde teilweise gestoppt, um das Tutorial zu beschleunigen.  Beachten Sie die Verwendung der `@Model` und `@Exporter` Anmerkungen, um sicherzustellen, dass das Sling-Modell über den Sling Model Exporter als JSON serialisiert werden kann.
 
-   `CardImpl.java` verwendet außerdem das  [Delegationsmuster für Sling-](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) Modelle, um zu vermeiden, dass die gesamte Logik aus der Image-Kernkomponente umgeschrieben wird.
+   `CardImpl.java` verwendet auch die [Delegationsmuster für Sling-Modelle](https://github.com/adobe/aem-core-wcm-components/wiki/Delegation-Pattern-for-Sling-Models) , um zu vermeiden, dass die Logik aus der Bild-Kernkomponente umgeschrieben wird.
 
 4. Beachten Sie die folgenden Zeilen:
 
@@ -274,7 +274,7 @@ Kehren Sie zur IDE Ihrer Wahl zurück und öffnen Sie das Modul `core` .
    private Image image;
    ```
 
-   Die obige Anmerkung instanziiert ein Bildobjekt mit dem Namen `image` basierend auf der `sling:resourceSuperType`-Vererbung der `Card`-Komponente.
+   Die obige Anmerkung instanziiert ein Bildobjekt mit dem Namen `image` basierend auf der `sling:resourceSuperType` Vererbung der `Card` -Komponente.
 
    ```java
    @Override
@@ -283,9 +283,9 @@ Kehren Sie zur IDE Ihrer Wahl zurück und öffnen Sie das Modul `core` .
    }
    ```
 
-   Dann ist es möglich, einfach das `image`-Objekt zu verwenden, um Methoden zu implementieren, die von der `Image`-Schnittstelle definiert werden, ohne die Logik selbst schreiben zu müssen. Diese Technik wird für `getSrc()`, `getAlt()` und `getTitle()` verwendet.
+   Dann ist es möglich, einfach die `image` -Objekt, um Methoden zu implementieren, die von der `Image` -Schnittstelle, ohne die Logik selbst schreiben zu müssen. Diese Technik wird für `getSrc()`, `getAlt()`und `getTitle()`.
 
-5. Implementieren Sie anschließend die `initModel()`-Methode, um eine private Variable `cardPage` basierend auf dem Wert von `cardPath` zu initiieren.
+5. Implementieren Sie anschließend die `initModel()` Methode zum Initiieren einer privaten Variablen `cardPage` basierend auf dem Wert von `cardPath`
 
    ```java
    @PostConstruct
@@ -296,11 +296,11 @@ Kehren Sie zur IDE Ihrer Wahl zurück und öffnen Sie das Modul `core` .
    }
    ```
 
-   Das `@PostConstruct initModel()` wird immer aufgerufen, wenn das Sling-Modell initialisiert wird. Daher ist es eine gute Gelegenheit, Objekte zu initialisieren, die von anderen Methoden im Modell verwendet werden können. Das `pageManager` ist eines von mehreren [Java-unterstützten globalen Objekten](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/global-objects.html#java-backed-objects), die Sling-Modellen über die Anmerkung `@ScriptVariable` zur Verfügung gestellt werden. Die [getPage](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html#getPage-java.lang.String-)-Methode nimmt einen Pfad an und gibt ein AEM [Page](https://www.adobe.io/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html)-Objekt oder null zurück, wenn der Pfad nicht auf eine gültige Seite verweist.
+   Die `@PostConstruct initModel()` wird aufgerufen, wenn das Sling-Modell initialisiert wird. Daher ist es eine gute Gelegenheit, Objekte zu initialisieren, die von anderen Methoden im Modell verwendet werden können. Die `pageManager` ist einer von mehreren [Java™-unterstützte globale Objekte](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html) für Sling-Modelle über die `@ScriptVariable` -Anmerkung. Die [getPage](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) -Methode akzeptiert einen Pfad und gibt eine AEM zurück. [Seite](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html) -Objekt oder null , wenn der Pfad nicht auf eine gültige Seite verweist.
 
-   Dadurch wird die Variable `cardPage` initialisiert, die von den anderen neuen Methoden verwendet wird, um Daten über die zugrunde liegende verknüpfte Seite zurückzugeben.
+   Dadurch wird die `cardPage` -Variable, die von den anderen neuen Methoden verwendet wird, um Daten zur zugrunde liegenden verknüpften Seite zurückzugeben.
 
-6. Überprüfen Sie die globalen Variablen, die den JCR-Eigenschaften bereits zugeordnet sind, und speichern Sie das Autorendialogfeld. Die Anmerkung `@ValueMapValue` wird verwendet, um automatisch die Zuordnung durchzuführen.
+6. Überprüfen Sie die globalen Variablen, die den JCR-Eigenschaften bereits zugeordnet sind, und speichern Sie das Autorendialogfeld. Die `@ValueMapValue` -Anmerkung wird verwendet, um automatisch die Zuordnung durchzuführen.
 
    ```java
    @ValueMapValue
@@ -316,9 +316,9 @@ Kehren Sie zur IDE Ihrer Wahl zurück und öffnen Sie das Modul `core` .
    private String cardTitle;
    ```
 
-   Diese Variablen werden verwendet, um die zusätzlichen Methoden für die `Card.java`-Schnittstelle zu implementieren.
+   Diese Variablen werden verwendet, um die zusätzlichen Methoden für die `Card.java` -Schnittstelle.
 
-7. Implementieren Sie die in der `Card.java`-Schnittstelle definierten zusätzlichen Methoden:
+7. Implementieren Sie die in der Variablen `Card.java` -Schnittstelle:
 
    ```java
    @Override
@@ -353,16 +353,16 @@ Kehren Sie zur IDE Ihrer Wahl zurück und öffnen Sie das Modul `core` .
 
    >[!NOTE]
    >
-   > Sie können die [fertige CardImpl.java hier](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/extend-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CardImpl.java) anzeigen.
+   > Sie können die [fertige CardImpl.java hier](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/extend-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CardImpl.java).
 
-8. Öffnen Sie ein Terminal-Fenster und stellen Sie mithilfe des Maven-Profils `autoInstallBundle` aus dem Verzeichnis `core` nur die Updates für das Modul `core` bereit.
+8. Öffnen Sie ein Terminal-Fenster und stellen Sie nur die Updates für `core` -Modul mithilfe des Maven-Moduls `autoInstallBundle` Profil aus `core` Verzeichnis.
 
    ```shell
    $ cd core/
    $ mvn clean install -PautoInstallBundle
    ```
 
-   Wenn Sie [AEM 6.x](overview.md#compatibility) verwenden, fügen Sie das Profil `classic` hinzu.
+   Wenn Sie [AEM 6.x](overview.md#compatibility) Fügen Sie die `classic` Profil.
 
 9. Zeigen Sie die JSON-Modellantwort unter: [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) und suchen Sie nach `wknd-spa-angular/components/card`:
 
@@ -379,13 +379,13 @@ Kehren Sie zur IDE Ihrer Wahl zurück und öffnen Sie das Modul `core` .
    }
    ```
 
-   Beachten Sie, dass das JSON-Modell mit zusätzlichen Schlüssel/Wert-Paaren aktualisiert wird, nachdem die Methoden im Sling-Modell `CardImpl` aktualisiert wurden.
+   Beachten Sie, dass das JSON-Modell mit zusätzlichen Schlüssel/Wert-Paaren aktualisiert wird, nachdem die Methoden in der `CardImpl` Sling-Modell.
 
 ## Angular-Komponente aktualisieren
 
-Nachdem das JSON-Modell mit neuen Eigenschaften für `ctaLinkURL`, `ctaText`, `cardTitle` und `cardLastModified` gefüllt ist, können wir die Angular-Komponente aktualisieren, um diese anzuzeigen.
+Jetzt, da das JSON-Modell mit neuen Eigenschaften für `ctaLinkURL`, `ctaText`, `cardTitle`und `cardLastModified` können wir die Angular-Komponente aktualisieren, um sie anzuzeigen.
 
-1. Kehren Sie zur IDE zurück und öffnen Sie das Modul `ui.frontend` . Optional können Sie den Webpack Development Server über ein neues Terminal-Fenster starten, um die Änderungen in Echtzeit anzuzeigen:
+1. Kehren Sie zur IDE zurück und öffnen Sie die `ui.frontend` -Modul. Optional können Sie den Webpack Development Server über ein neues Terminal-Fenster starten, um die Änderungen in Echtzeit anzuzeigen:
 
    ```shell
    $ cd ui.frontend
@@ -393,7 +393,7 @@ Nachdem das JSON-Modell mit neuen Eigenschaften für `ctaLinkURL`, `ctaText`, `c
    $ npm start
    ```
 
-2. Öffnen Sie `card.component.ts` unter `ui.frontend/src/app/components/card/card.component.ts`. Fügen Sie die zusätzlichen `@Input` -Anmerkungen hinzu, um das neue Modell zu erfassen:
+2. Öffnen `card.component.ts` at `ui.frontend/src/app/components/card/card.component.ts`. Hinzufügen des zusätzlichen `@Input` Anmerkungen zum Erfassen des neuen Modells:
 
    ```diff
    export class CardComponent implements OnInit {
@@ -407,7 +407,7 @@ Nachdem das JSON-Modell mit neuen Eigenschaften für `ctaLinkURL`, `ctaText`, `c
    +    @Input() ctaText: string;
    ```
 
-3. Fügen Sie Methoden hinzu, um zu überprüfen, ob der Aktionsaufruf bereit ist, und um anhand der `cardLastModified` -Eingabe eine Datums-/Uhrzeit-Zeichenfolge zurückzugeben:
+3. Fügen Sie Methoden hinzu, um zu überprüfen, ob der Aktionsaufruf bereit ist, und um eine Datums-/Uhrzeitzeichenfolge basierend auf der Variablen `cardLastModified` input:
 
    ```js
    export class CardComponent implements OnInit {
@@ -428,7 +428,7 @@ Nachdem das JSON-Modell mit neuen Eigenschaften für `ctaLinkURL`, `ctaText`, `c
    }
    ```
 
-4. Öffnen Sie `card.component.html` und fügen Sie das folgende Markup hinzu, um den Titel, den Aktionsaufruf und das Datum der letzten Änderung anzuzeigen:
+4. Öffnen `card.component.html` und fügen Sie das folgende Markup hinzu, um den Titel, den Aktionsaufruf und das Datum der letzten Änderung anzuzeigen:
 
    ```html
    <div class="card"  *ngIf="hasContent">
@@ -447,11 +447,11 @@ Nachdem das JSON-Modell mit neuen Eigenschaften für `ctaLinkURL`, `ctaText`, `c
    </div>
    ```
 
-   Unter `card.component.scss` wurden bereits Segmentregeln hinzugefügt, um den Titel, den Aktionsaufruf und das Datum der letzten Änderung zu gestalten.
+   Sass-Regeln wurden bereits hinzugefügt unter `card.component.scss` um den Titel, den Aktionsaufruf und das Datum der letzten Änderung zu formatieren.
 
    >[!NOTE]
    >
-   > Sie können den fertigen [Angular-Kartenkomponentencode hier](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card) anzeigen.
+   > Sie können die fertigen [Angular-Karten-Komponentencode hier](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card).
 
 5. Stellen Sie mithilfe von Maven die vollständigen Änderungen an AEM aus dem Stammverzeichnis des Projekts bereit:
 
@@ -460,7 +460,7 @@ Nachdem das JSON-Modell mit neuen Eigenschaften für `ctaLinkURL`, `ctaText`, `c
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-6. Navigieren Sie zu [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html) , um die aktualisierte Komponente anzuzeigen:
+6. Navigieren Sie zu [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html) um die aktualisierte Komponente anzuzeigen:
 
    ![Aktualisierte Kartenkomponente in AEM](assets/extend-component/updated-card-in-aem.png)
 
@@ -470,6 +470,6 @@ Nachdem das JSON-Modell mit neuen Eigenschaften für `ctaLinkURL`, `ctaText`, `c
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
-Herzlichen Glückwunsch! Sie haben gelernt, wie eine AEM-Komponente mithilfe der erweitert wird und wie Sling-Modelle und -Dialogfelder mit dem JSON-Modell funktionieren.
+Herzlichen Glückwunsch! Sie haben gelernt, wie Sie eine AEM-Komponente erweitern und wie Sling-Modelle und -Dialogfelder mit dem JSON-Modell funktionieren.
 
-Sie können den fertigen Code immer auf [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) anzeigen oder den Code lokal auschecken, indem Sie zu der Verzweigung `Angular/extend-component-solution` wechseln.
+Sie können den fertigen Code immer in [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) oder den Code lokal auschecken, indem Sie zu der Verzweigung wechseln `Angular/extend-component-solution`.

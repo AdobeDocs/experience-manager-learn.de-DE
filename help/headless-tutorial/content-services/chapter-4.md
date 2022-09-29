@@ -1,19 +1,17 @@
 ---
 title: Kapitel 4 - Definieren von Content Services-Vorlagen - Content Services
-seo-title: Erste Schritte mit AEM Headless - Kapitel 4 - Definieren von Content Services-Vorlagen
-description: Kapitel 4 des Tutorials AEM Headless behandelt die Rolle AEM bearbeitbaren Vorlagen im Kontext von AEM Content Services. Bearbeitbare Vorlagen werden verwendet, um die JSON-Inhaltsstruktur zu definieren, die Content Services letztendlich bereitstellen wird.
-seo-description: Kapitel 4 des Tutorials AEM Headless behandelt die Rolle AEM bearbeitbaren Vorlagen im Kontext von AEM Content Services. Bearbeitbare Vorlagen werden verwendet, um die JSON-Inhaltsstruktur zu definieren, die Content Services letztendlich bereitstellen wird.
-feature: Inhaltsfragmente, APIs
+description: Kapitel 4 des Tutorials AEM Headless behandelt die Rolle AEM bearbeitbaren Vorlagen im Kontext von AEM Content Services. Bearbeitbare Vorlagen werden verwendet, um die JSON-Inhaltsstruktur zu definieren, AEM Content Services letztendlich verfügbar macht.
+feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: ece0bf0d-c4af-4962-9c00-f2849c2d8f6f
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 1%
+source-wordcount: '785'
+ht-degree: 2%
 
 ---
-
 
 # Kapitel 4 - Definieren von Content Services-Vorlagen
 
@@ -23,51 +21,51 @@ Kapitel 4 des Tutorials AEM Headless behandelt die Rolle AEM bearbeitbaren Vorla
 
 AEM bearbeitbare Vorlagen werden verwendet, um die HTTP-Endpunkte zu definieren, auf die zugegriffen wird, um den Ereignisinhalt als JSON verfügbar zu machen.
 
-Traditionell AEM bearbeitbare Vorlagen werden zur Definition von Webseiten verwendet, doch diese Verwendung ist einfach eine Konvention. Bearbeitbare Vorlagen können verwendet werden, um **beliebige** Inhaltssätze zu erstellen. wie auf diesen Inhalt zugegriffen wird: als HTML in einem Browser, da JSON von JavaScript (AEM-SPA-Editor) oder einer Mobile App genutzt wird, eine Funktion der Art und Weise ist, wie diese Seite angefordert wird.
+Traditionell AEM bearbeitbare Vorlagen werden zur Definition von Webseiten verwendet, doch diese Verwendung ist einfach eine Konvention. Bearbeitbare Vorlagen können zum Erstellen verwendet werden **any** Inhaltsmenge; wie auf diesen Inhalt zugegriffen wird: als HTML in einem Browser, da JSON von JavaScript (AEM-SPA-Editor) oder einer Mobile App genutzt wird, eine Funktion der Art und Weise ist, wie diese Seite angefordert wird.
 
 In AEM Content Services werden bearbeitbare Vorlagen verwendet, um festzulegen, wie die JSON-Daten bereitgestellt werden.
 
-Für die [!DNL WKND Mobile]-App erstellen wir eine einzelne bearbeitbare Vorlage, die zur Steuerung eines einzelnen API-Endpunkts verwendet wird. Dieses Beispiel ist zwar einfach, die Konzepte von Headless zu veranschaulichen, doch können Sie mehrere Seiten (oder Endpunkte) erstellen, die jeweils verschiedene Inhaltssätze enthalten, um eine komplexere und besser organisierte API zu erstellen.
+Für [!DNL WKND Mobile] App erstellen wir eine einzelne bearbeitbare Vorlage, die zur Steuerung eines einzelnen API-Endpunkts verwendet wird. Dieses Beispiel ist zwar einfach, die Konzepte von Headless zu veranschaulichen, doch können Sie mehrere Seiten (oder Endpunkte) erstellen, die jeweils verschiedene Inhaltssätze enthalten, um eine komplexere und besser organisierte API zu erstellen.
 
 ## Grundlegendes zum API-Endpunkt
 
-Um zu verstehen, wie Sie unseren API-Endpunkt erstellen und welche Inhalte für unsere [!DNL WKND Mobile]-App verfügbar gemacht werden sollen, sollten wir das Design erneut aufrufen.
+So erstellen Sie unseren API-Endpunkt und verstehen, welche Inhalte für unsere [!DNL WKND Mobile] App, lassen Sie uns das Design erneut besuchen.
 
 ![API-Seitenerkennung für Ereignisse](./assets/chapter-4/design-to-component-mapping.png)
 
 Wie wir sehen können, müssen wir drei logische Inhaltssätze für die mobile App bereitstellen.
 
-1. **Logo**
-2. **Tag Line**
-3. Die Liste der **Ereignisse**
+1. Die **Logo**
+2. Die **Tag Line**
+3. Die Liste der **Veranstaltungen**
 
 Dazu können wir diese Anforderungen AEM Komponenten zuordnen (und in unserem Fall AEM WCM-Kernkomponenten), um den erforderlichen Inhalt als JSON verfügbar zu machen.
 
-1. Das **Logo** wird über eine **Bildkomponente** angezeigt.
-2. Die **Tag-Zeile** wird über eine **Text-Komponente** angezeigt.
-3. Die Liste der **Ereignisse** wird über eine **Inhaltsfragmentlisten-Komponente** angezeigt, die wiederum auf eine Reihe von Ereignis-Inhaltsfragmenten verweist.
+1. Die **Logo** über eine **Bildkomponente**
+2. Die **Tag Line** über eine **Textkomponente**
+3. Die Liste der **Veranstaltungen** über eine **Inhaltsfragmentlisten-Komponente** die wiederum einen Satz von Event-Inhaltsfragmenten referenziert.
 
 >[!NOTE]
 >
->Um den JSON-Export von Seiten und Komponenten AEM Content Service zu unterstützen, müssen die Seiten und Komponenten **von AEM WCM-Kernkomponenten** abgeleitet werden.
+>Um den JSON-Export von Seiten und Komponenten durch AEM Content Service zu unterstützen, müssen die Seiten und Komponenten **Ableiten von AEM WCM-Kernkomponenten**.
 >
->[AEM WCM-](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components) Kernkomponenten verfügen über integrierte Funktionen zur Unterstützung eines normalisierten JSON-Schemas exportierter Seiten und Komponenten. Alle in diesem Tutorial verwendeten WKND Mobile-Komponenten (Seite, Bild, Text und Inhaltsfragmentliste) werden von AEM WCM-Kernkomponenten abgeleitet.
+>[AEM WCM-Kernkomponenten](https://github.com/Adobe-Marketing-Cloud/aem-core-wcm-components) verfügt über integrierte Funktionen zur Unterstützung eines normalisierten JSON-Schemas exportierter Seiten und Komponenten. Alle in diesem Tutorial verwendeten WKND Mobile-Komponenten (Seite, Bild, Text und Inhaltsfragmentliste) werden von AEM WCM-Kernkomponenten abgeleitet.
 
 ## Definieren der Ereignis-API-Vorlage
 
 1. Öffnen Sie **[!UICONTROL Tools] > [!UICONTROL Allgemein] > [!UICONTROL Vorlagen] >[!DNL WKND Mobile]**.
 
-1. Erstellen Sie die Vorlage **[!DNL Events API]** :
+1. Erstellen Sie die **[!DNL Events API]** template:
 
-   1. Tippen Sie in der oberen Aktionsleiste auf **[!UICONTROL Erstellen]** .
-   1. Wählen Sie die Vorlage **[!DNL WKND Mobile - Empty Page]** aus.
-   1. Tippen Sie in der oberen Aktionsleiste auf **[!UICONTROL Weiter]** .
-   1. Geben Sie **[!DNL Events API]** in das Feld [!UICONTROL Vorlagentitel] ein.
-   1. Tippen Sie in der oberen Aktionsleiste auf **[!UICONTROL Erstellen]** .
-   1. Tippen Sie auf **[!UICONTROL Öffnen]** Öffnen Sie die neue Vorlage zum Bearbeiten
+   1. Tippen **[!UICONTROL Erstellen]** in der oberen Aktionsleiste
+   1. Wählen Sie die **[!DNL WKND Mobile - Empty Page]** template
+   1. Tippen **[!UICONTROL Nächste]** in der oberen Aktionsleiste
+   1. Eingabe **[!DNL Events API]** im [!UICONTROL Vorlagentitel] field
+   1. Tippen **[!UICONTROL Erstellen]** in der oberen Aktionsleiste
+   1. Tippen **[!UICONTROL Öffnen]** Öffnen Sie die neue Vorlage zur Bearbeitung
 
-1. Zuerst lassen wir die drei identifizierten AEM Komponenten zu, die wir zum Modellieren des Inhalts benötigen, indem wir die [!UICONTROL Richtlinie] des Stammordners [!UICONTROL Layout-Container] bearbeiten. Stellen Sie sicher, dass der Modus **[!UICONTROL Struktur]** aktiv ist, wählen Sie **[!DNL Layout Container \[Root\]]** und tippen Sie auf die Schaltfläche **[!UICONTROL Richtlinie]**.
-1. Suchen Sie unter **[!UICONTROL Properties] > [!UICONTROL Allowed Components]** nach **[!DNL WKND Mobile]**. Lassen Sie die folgenden Komponenten aus der Komponentengruppe [!DNL WKND Mobile] zu, damit sie auf der API-Seite [!DNL Events] verwendet werden können.
+1. Zunächst erlauben wir es den drei identifizierten AEM Komponenten, die wir benötigen, den Inhalt zu modellieren, indem wir die [!UICONTROL Politik] des Stamms [!UICONTROL Layout-Container]. Stellen Sie sicher, dass **[!UICONTROL Struktur]** Modus aktiv ist, wählen Sie die **[!DNL Layout Container \[Root\]]** und tippen Sie auf **[!UICONTROL Politik]** Schaltfläche.
+1. under **[!UICONTROL Eigenschaften] > [!UICONTROL Zugelassene Komponenten]** Suchen nach **[!DNL WKND Mobile]**. Zulassen der folgenden Komponenten aus der [!DNL WKND Mobile] Komponentengruppe, damit sie für die [!DNL Events] API-Seite.
 
    * **[!DNL WKND Mobile > Image]**
 
@@ -81,15 +79,15 @@ Dazu können wir diese Anforderungen AEM Komponenten zuordnen (und in unserem Fa
 
 
 
-1. Tippen Sie auf das Häkchen **[!UICONTROL Fertig]** in der oberen rechten Ecke, wenn Sie fertig sind.
-1. **** Aktualisieren Sie das Browser-Fenster, um in der linken Leiste die Liste der neu  [!UICONTROL zulässigen ] Komponenten anzuzeigen.
+1. Tippen Sie auf **[!UICONTROL Fertig]** Häkchen in der oberen rechten Ecke nach Abschluss.
+1. **Aktualisieren** das Browserfenster, um neu zu sehen [!UICONTROL Zugelassene Komponenten] in der linken Leiste.
 1. Ziehen Sie aus der Komponentensuche in der linken Leiste die folgenden AEM Komponenten:
    1. **[!DNL Image]** für das Logo
    2. **[!DNL Text]** für die Tag-Zeile
    3. **[!DNL Content Fragment List]** für die Ereignisse
-1. **Wählen Sie für jede der oben genannten Komponenten** diese aus und drücken Sie die  **** Entsperrungstaste.
-1. Stellen Sie jedoch sicher, dass der **Layout-Container** **locked** ist, um zu verhindern, dass andere Komponenten hinzugefügt oder diese drei Komponenten entfernt werden.
-1. Tippen Sie auf **[!UICONTROL Seiteninformationen] > [!UICONTROL In Admin anzeigen]** , um zur Vorlagenliste [!DNL WKND Mobile] zurückzukehren. Wählen Sie die neu erstellte Vorlage **[!DNL Events API]** aus und tippen Sie in der oberen Aktionsleiste auf **[!UICONTROL Aktivieren]** .
+1. **Für jede der oben genannten Komponenten**, wählen Sie sie aus und drücken Sie die **unlock** Schaltfläche.
+1. Stellen Sie jedoch sicher, dass die **Layout-Container** is **locked** um zu verhindern, dass andere Komponenten hinzugefügt oder diese drei Komponenten entfernt werden.
+1. Tippen **[!UICONTROL Seiteninformationen] > [!UICONTROL In Admin anzeigen]** , um zur [!DNL WKND Mobile] Vorlagenliste. Wählen Sie die neu erstellte **[!DNL Events API]** Vorlage und tippen Sie auf **[!UICONTROL Aktivieren]** in der oberen Aktionsleiste.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28342/?quality=12&learn=on)
 
@@ -99,6 +97,6 @@ Dazu können wir diese Anforderungen AEM Komponenten zuordnen (und in unserem Fa
 
 ## Nächste Schritte
 
-Optional können Sie das Inhaltspaket [com.adobe.aem.guides.wknd-mobile.content.chapter-4.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) in der AEM-Autoreninstanz über [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp) installieren. Dieses Paket enthält die Konfigurationen und Inhalte, die in diesem und den vorherigen Kapiteln des Tutorials beschrieben werden.
+Installieren Sie optional die [com.adobe.aem.guides.wknd-mobile.content.chapter-4.zip](https://github.com/adobe/aem-guides-wknd-mobile/releases/latest) Inhaltspaket in der AEM-Autoreninstanz über [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp). Dieses Paket enthält die Konfigurationen und Inhalte, die in diesem und den vorherigen Kapiteln des Tutorials beschrieben werden.
 
 * [Kapitel 5 - Inhaltserstellung für Seiten in Content Services](./chapter-5.md)

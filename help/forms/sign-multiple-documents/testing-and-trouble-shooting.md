@@ -1,33 +1,33 @@
 ---
 title: Fehlerbehebung beim Signieren mehrerer Dokumente
 description: Testen und Ersetzen von Problemen
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6960
 thumbnail: 6960.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 99cba29e-4ae3-4160-a4c7-a5b6579618c0
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '388'
 ht-degree: 1%
 
 ---
-
 
 # Testen und Fehlerbehebung
 
 
 ## Vorschau des Refinanzierungsformulars
 
-Der Anwendungsfall wird ausgelöst, wenn der Kundendienstmitarbeiter [Refinance-Formular](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled) ausfüllt und sendet.
+Der Anwendungsfall wird ausgelöst, wenn der Kundendienstmitarbeiter Folgendes ausfüllt und sendet [Refinanzierungsformular](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled).
 
 Der Workflow &quot;Mehrere Forms signieren&quot;erhält Trigger bei der Übermittlung des Formulars und erhält eine E-Mail-Benachrichtigung mit einem Link, um den Prozess zum Ausfüllen und Signieren des Formulars zu starten.
 
 ## Formulare im Paket ausfüllen
 
-Der Kunde wird aufgefordert, das erste Formular im Paket auszufüllen und zu unterschreiben. Nach erfolgreicher Unterzeichnung des Formulars kann der Kunde zum nächsten Formular im Paket navigieren. Sobald alle Formulare ausgefüllt und unterzeichnet sind, wird dem Kunden das Formular &quot;**AllDone**&quot;angezeigt.
+Der Kunde wird aufgefordert, das erste Formular im Paket auszufüllen und zu unterschreiben. Nach erfolgreicher Unterzeichnung des Formulars kann der Kunde zum nächsten Formular im Paket navigieren. Sobald alle Formulare ausgefüllt und unterzeichnet sind, wird dem Kunden der Text &quot;**AllDone**&quot;.
 
 ## Fehlerbehebung
 
@@ -49,15 +49,4 @@ Bei erfolgreicher Unterzeichnung eines Formulars im Paket wird der Workflow Sign
 
 ### Das AllDone-Formular wird nicht angezeigt
 
-Wenn das Paket keine weiteren Formulare enthält, wird dem Benutzer das Formular AllDone angezeigt. Wenn das Formular AllDone nicht angezeigt wird, überprüfen Sie die URL, die in Zeile 33 der Datei GetNextFormToSign.js verwendet wird, die Teil der Client-Bibliothek **getnextform** ist.
-
-
-
-
-
-
-
-
-
-
-
+Wenn das Paket keine weiteren Formulare enthält, wird dem Benutzer das AllDone-Formular angezeigt. Wenn das AllDone-Formular nicht angezeigt wird, überprüfen Sie die in Zeile 33 der Datei GetNextFormToSign.js verwendete URL der Datei GetNextFormToSign.js , die Teil des **getnextform** Client-Bibliothek.

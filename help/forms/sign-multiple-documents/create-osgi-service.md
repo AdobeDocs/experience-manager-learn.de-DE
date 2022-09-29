@@ -5,16 +5,16 @@ feature: Workflow
 version: 6.4,6.5
 thumbnail: 6886.jpg
 kt: 6886
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 49e7bd65-33fb-44d4-aaa2-50832dffffb0
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '354'
-ht-degree: 1%
+source-wordcount: '350'
+ht-degree: 0%
 
 ---
-
 
 # Erstellen des OSGi-Dienstes
 
@@ -164,7 +164,7 @@ public void updateSignatureStatus(String formData, String guid) {
 
 ## Nächstes Formular zum Signieren abrufen
 
-Der folgende Code wurde verwendet, um das nächste Formular zum Signieren für eine bestimmte customerID mit dem Status 0 abzurufen. Wenn die SQL-Abfrage keine Zeilen zurückgibt, geben wir die Zeichenfolge **&quot;AllDone&quot;** zurück, die angibt, dass es keine weiteren Formulare zum Signieren für die angegebene Kunden-ID gibt.
+Der folgende Code wurde verwendet, um das nächste Formular zum Signieren für eine bestimmte customerID mit dem Status 0 abzurufen. Wenn die SQL-Abfrage keine Zeilen zurückgibt, geben wir die Zeichenfolge zurück **&quot;AllDone&quot;** gibt an, dass es keine weiteren Formulare zum Signieren für die angegebene Kunden-ID gibt.
 
 ```java
 @Override
@@ -204,4 +204,4 @@ public String getNextFormToSign(int customerID) {
 
 ## Assets
 
-Das OSGi-Bundle mit den oben genannten Diensten kann [von hier heruntergeladen werden](assets/sign-multiple-forms.jar)
+Das OSGi-Bundle mit den oben genannten Diensten kann [heruntergeladen von hier](assets/sign-multiple-forms.jar)

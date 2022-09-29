@@ -1,22 +1,23 @@
 ---
 title: Exportieren gesendeter Formulardaten im CSV-Format
 description: Exportieren gesendeter adaptiver Formulardaten in das CSV-Format
-feature: Adaptive Formulare
+feature: Adaptive Forms
 topics: development
 audience: developer
 doc-type: article
 activity: implement
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 6cd892e4-82c5-4201-8b6a-40c2ae71afa9
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '386'
 ht-degree: 1%
 
 ---
 
-# Einführung
+# Einführung   
 
 Kunden möchten normalerweise die gesendeten Formulardaten im CSV-Format exportieren. In diesem Artikel werden die Schritte erläutert, die zum Exportieren der Formulardaten im CSV-Format erforderlich sind. In diesem Artikel wird davon ausgegangen, dass die Formularübermittlungen in der RDBMS-Tabelle gespeichert sind. Der folgende Screenshot zeigt die minimale Tabellenstruktur, die zum Speichern der Formularübermittlungen erforderlich ist.
 
@@ -24,8 +25,8 @@ Kunden möchten normalerweise die gesendeten Formulardaten im CSV-Format exporti
 >
 >Dieses Beispiel funktioniert nur mit adaptiver Forms, die nicht auf Schema- oder Formulardatenmodell basiert
 
-![Tabellenstruktur ](assets/tablestructure.PNG)
-Wie Sie sehen können, lautet der Name des Schemas aemformstutorial. Innerhalb dieses Schemas befinden sich die Tabellenformularübermittlungen mit den folgenden definierten Spalten
+![Tabellenstruktur](assets/tablestructure.PNG)
+Wie Sie sehen können, lautet der Name des Schemas aemformstutorial. Innerhalb dieses Schemas sind die Tabellenformularübermittlungen mit den folgenden Spalten definiert
 
 * formdata: Diese Spalte enthält die gesendeten Formulardaten
 * formname: Diese Spalte enthält den Namen des gesendeten Formulars
@@ -34,7 +35,9 @@ Wie Sie sehen können, lautet der Name des Schemas aemformstutorial. Innerhalb d
 Der Tabellenname und die zwei Spaltennamen werden als OSGi-Konfigurationseigenschaften angezeigt, wie im Screenshot unten dargestellt:
 ![osgi-configuration](assets/configuration.PNG)
 Der Code liest diese Werte und erstellt die entsprechende SQL-Abfrage, die ausgeführt werden soll. Beispielsweise wird die folgende Abfrage basierend auf den oben genannten Werten ausgeführt
-**SELECT formdata FROM aemformstutorial.formsubmissions, wobei formname=timeoffrequestform**
+
+`SELECT formdata FROM aemformstutorial.formsubmissions where formname=timeoffrequestform`
+
 In der obigen Abfrage wird der Name des Formulars (timeoffrequestform) als Anforderungsparameter an das Servlet übergeben.
 
 ## **Erstellen eines OSGi-Dienstes**
@@ -43,7 +46,7 @@ Der folgende OSGi-Dienst wurde erstellt, um die gesendeten Daten im CSV-Format z
 
 * Zeile 37: Wir greifen auf Apache Sling Connection Pooled DataSource zu.
 
-* Zeile 89: Dies ist der Einstiegspunkt zum Dienst. Die Methode `getCSVFile(..)` übernimmt formName als Eingabeparameter und ruft die gesendeten Daten ab, die zum angegebenen Formularnamen gehören.
+* Zeile 89: Dies ist der Einstiegspunkt zum Dienst.Die Methode `getCSVFile(..)` nimmt formName als Eingabeparameter an und ruft die gesendeten Daten zum angegebenen Formularnamen ab.
 
 >[!NOTE]
 >
@@ -263,7 +266,7 @@ public @interface StoreAndExportConfiguration {
 
 ## Servlet
 
-Im Folgenden finden Sie den Servlet-Code, der die Methode `getCSVFile(..)` des Dienstes aufruft. Der Dienst gibt das StringBuffer-Objekt zurück, das dann zurück an die aufrufende Anwendung gestreamt wird
+Im Folgenden finden Sie den Servlet-Code, der die `getCSVFile(..)` -Methode des Dienstes. Der Dienst gibt das StringBuffer-Objekt zurück, das dann zurück an die aufrufende Anwendung gestreamt wird
 
 ```java
 package com.aemforms.storeandexport.core.servlets;
@@ -305,6 +308,6 @@ public class StreamCSVFile extends SlingAllMethodsServlet {
 
 ### Auf Ihrem Server bereitstellen
 
-* Importieren Sie die [SQL-Datei](assets/formsubmissions.sql) mithilfe von MySQL Workbench in den MySQL-Server. Dadurch wird ein Schema mit dem Namen **aemformstutorial** und die Tabelle mit dem Namen **formsubmissions** mit einigen Beispieldaten erstellt.
-* Stellen Sie das [OSGi-Bundle](assets/store-export.jar) mithilfe der Felix-Webkonsole bereit.
+* Importieren Sie die [SQL-Datei](assets/formsubmissions.sql) auf den MySQL-Server mithilfe von MySQL Workbench. Dadurch wird ein Schema namens **aemformstutorial** und der Tabelle **formsubmissions** mit einigen Beispieldaten.
+* Bereitstellen [OSGi-Bundle](assets/store-export.jar) über die Felix-Webkonsole
 * [Abrufen von TimeOffRequest-Übermittlungen](http://localhost:4502/bin/streamformdata?formName=timeoffrequestform). Sie sollten die CSV-Datei wieder an Sie streamen lassen.

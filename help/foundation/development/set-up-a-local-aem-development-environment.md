@@ -1,6 +1,6 @@
 ---
 title: Einrichten einer lokalen AEM-Entwicklungsumgebung
-description: 'Erfahren Sie, wie Sie eine lokale Entwicklungsumgebung für Experience Manager einrichten. Machen Sie sich mit der lokalen Installation, Apache Maven, integrierten Entwicklungsumgebungen sowie dem Debugging und der Fehlerbehebung vertraut. Verwenden Sie Eclipse IDE, CRXDE-Lite, Visual Studio Code und IntelliJ. '
+description: Erfahren Sie, wie Sie eine lokale Entwicklungsumgebung für Experience Manager einrichten. Machen Sie sich mit der lokalen Installation, Apache Maven, integrierten Entwicklungsumgebungen sowie dem Debugging und der Fehlerbehebung vertraut. Verwenden Sie Eclipse IDE, CRXDE-Lite, Visual Studio Code und IntelliJ.
 version: 6.4, 6.5
 feature: Developer Tools
 topics: development
@@ -10,10 +10,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2579'
-ht-degree: 2%
+source-wordcount: '2576'
+ht-degree: 3%
 
 ---
 
@@ -34,7 +34,7 @@ Die Einrichtung einer lokalen Entwicklungsumgebung ist der erste Schritt bei der
 
 Wenn es um eine lokale AEM geht, handelt es sich um eine Kopie von Adobe Experience Manager, die auf dem persönlichen Computer eines Entwicklers ausgeführt wird. ***Alle*** AEM Entwicklung sollte beginnen, indem Code für eine lokale AEM-Instanz geschrieben und ausgeführt wird.
 
-Wenn Sie neu AEM sind, können zwei grundlegende Ausführungsmodi installiert werden: ***Autor*** und ***Veröffentlichen***. Die ***Autor*** [runmode](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/configure-runmodes.html)  ist die Umgebung, die digitale Marketingexperten zum Erstellen und Verwalten von Inhalten verwenden werden. In der Entwicklung **most** der Zeit, zu der Sie Code in einer Autoreninstanz bereitstellen. Auf diese Weise können Sie neue Seiten erstellen sowie Komponenten hinzufügen und konfigurieren. AEM Sites ist ein WYSIWYG-Authoring-CMS und daher können die meisten CSS- und JavaScript-Dateien mit einer Authoring-Instanz getestet werden.
+Wenn Sie neu AEM sind, können zwei grundlegende Ausführungsmodi installiert werden: ***Autor*** und ***Veröffentlichen***. Die ***Autor*** [runmode](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/configure-runmodes.html)  ist die Umgebung, die digitale Marketingexperten zum Erstellen und Verwalten von Inhalten verwenden werden. In der Entwicklung **most** der Zeit, zu der Sie Code für eine Autoreninstanz bereitstellen. Auf diese Weise können Sie neue Seiten erstellen sowie Komponenten hinzufügen und konfigurieren. AEM Sites ist ein WYSIWYG-Authoring-CMS und daher können die meisten CSS- und JavaScript-Dateien mit einer Authoring-Instanz getestet werden.
 
 Es ist auch *kritisch* Testcode gegen eine lokale ***Veröffentlichen*** -Instanz. Die ***Veröffentlichen*** -Instanz ist die AEM Umgebung, mit der Besucher Ihrer Website interagieren. Während ***Veröffentlichen*** instance ist derselbe Technologiestapel wie ***Autor*** Beispielsweise gibt es einige wesentliche Unterschiede bei Konfigurationen und Berechtigungen. Code sollte *always* gegen eine lokale ***Veröffentlichen*** -Instanz, bevor sie in Umgebungen mit höherer Ebene weitergeleitet wird.
 
@@ -127,12 +127,12 @@ Wenn Sie eine IDE verwenden, überprüfen Sie `classic` auf der Registerkarte &q
 
 ### [!DNL Eclipse] IDE
 
-Die **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** ist eine der beliebtesten IDEs für die Java-Entwicklung, da es sich größtenteils um Open Source handelt und ***kostenlos***! Adobe bietet ein Plug-in, **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html)**, für [!DNL Eclipse] um eine einfachere Entwicklung mit einer netten grafischen Benutzeroberfläche zu ermöglichen, um Code mit einer lokalen AEM-Instanz zu synchronisieren. Die [!DNL Eclipse] IDE wird für Entwickler empfohlen, die zum großen Teil neu AEM, da die GUI-Unterstützung von [!DNL AEM Developer Tools].
+Die **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** ist eine der beliebtesten IDEs für die Java-Entwicklung, da es sich größtenteils um Open Source handelt und ***kostenlos***! Adobe bietet ein Plug-in, **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=de)**, für [!DNL Eclipse] um eine einfachere Entwicklung mit einer netten grafischen Benutzeroberfläche zu ermöglichen, um Code mit einer lokalen AEM-Instanz zu synchronisieren. Die [!DNL Eclipse] IDE wird für Entwickler empfohlen, die zum großen Teil neu AEM, da die GUI-Unterstützung von [!DNL AEM Developer Tools].
 
 #### Installation und Einrichtung
 
 1. Laden Sie die [!DNL Eclipse] IDE für [!DNL Java EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
-1. Befolgen Sie die Anweisungen zum Installieren der [!DNL AEM Developer Tools] Plug-in: [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
+1. Befolgen Sie die Anweisungen zum Installieren der [!DNL AEM Developer Tools] Plug-in: [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=de)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
@@ -191,7 +191,7 @@ Die **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** ist eine leistungsstark
 
 ## Fehlerbehebung
 
-***Hilfe!*** Mein Code funktioniert nicht! Wie bei jeder Entwicklung wird es Zeiten (wahrscheinlich viele) geben, in denen Ihr Code einfach nicht wie erwartet funktioniert. AEM ist eine mächtige Plattform, aber mit großer Macht.. ist eine große Komplexität. Im Folgenden finden Sie einige allgemeine Ausgangspunkte zur Fehlerbehebung und zur Problemverfolgung (bei weitem nicht aus einer vollständigen Liste mit möglichen Problemen):
+***Hilfe!*** Mein Code funktioniert nicht! Wie bei jeder Entwicklung gibt es Zeiten (wahrscheinlich viele), in denen Ihr Code einfach nicht wie erwartet funktioniert. AEM ist eine mächtige Plattform, aber mit großer Macht.. ist eine große Komplexität. Im Folgenden finden Sie einige allgemeine Ausgangspunkte zur Fehlerbehebung und zur Problemverfolgung (bei weitem nicht aus einer vollständigen Liste mit möglichen Problemen):
 
 ### Codebereitstellung überprüfen
 

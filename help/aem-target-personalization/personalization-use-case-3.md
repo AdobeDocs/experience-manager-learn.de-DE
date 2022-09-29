@@ -7,28 +7,28 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: 1550e6a7-04b5-4a40-9d7b-88074283402f
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '583'
+source-wordcount: '582'
 ht-degree: 2%
 
 ---
 
-
 # Personalisierung mit Visual Experience Composer
 
-In diesem Kapitel werden wir das Erstellen von Erlebnissen mit **Visual Experience Composer** untersuchen, indem wir das Layout und den Inhalt einer Web-Seite in Target per Drag-and-Drop austauschen und ändern.
+In diesem Kapitel wird die Erstellung von Erlebnissen mithilfe von **Visual Experience Composer** durch Ziehen und Ablegen, Austauschen und Ändern des Layouts und Inhalts einer Webseite aus Target heraus.
 
 ## Szenario - Überblick
 
-Auf der WKND-Website-Startseite werden lokale Aktivitäten oder das beste, um eine Stadt herum in Form von Kartenlayouts zu erledigen. Marketingexperten haben die Aufgabe erhalten, die Startseite zu ändern, indem sie die Kartenlayouts neu anordnen, um zu sehen, wie sie sich auf die Benutzerinteraktion auswirkt und die Konversion vorantreibt.
+Auf der WKND-Website-Startseite werden lokale Aktivitäten oder das beste, um eine Stadt herum in Form von Kartenlayouts zu erledigen, angezeigt. Marketingexperten haben die Aufgabe erhalten, die Startseite zu ändern, indem sie die Kartenlayouts neu anordnen, um zu sehen, wie sie sich auf die Benutzerinteraktion auswirkt und die Konversion vorantreibt.
 
 ### Betroffene Benutzer
 
 Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufgaben ausführen, für die Sie möglicherweise Administratorzugriff benötigen.
 
-* **Content Producer/Content Editor**  (Adobe Experience Manager)
-* **Marketer**  (Adobe Target/Optimierungsteam)
+* **Content Producer/Content Editor** (Adobe Experience Manager)
+* **Marketer** (Adobe Target/Optimierungsteam)
 
 ### WKND-Site-Homepage
 
@@ -37,31 +37,31 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 ### Voraussetzungen
 
 * **AEM**
-   * [AEM ](./implementation.md#getting-aem) Veröffentlichungsinstanz auf 4503
+   * [AEM Veröffentlichungsinstanz](./implementation.md#getting-aem) läuft auf 4503
    * [AEM mit Adobe Target mit Adobe Experience Platform Launch integriert](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
-   * Zugriff auf Ihre Organisationen Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
-   * Experience Cloud, das mit [Adobe Target](https://experiencecloud.adobe.com) bereitgestellt wurde
+   * Zugriff auf Ihre Unternehmen Adobe Experience Cloud - `https://<yourcompany>.experiencecloud.adobe.com`
+   * Experience Cloud, das mit [Adobe Target](https://experiencecloud.adobe.com)
 
 ## Marketingaktivitäten
 
 1. Der Marketer erstellt eine A/B-Zielaktivität in Adobe Target.
-   1. Navigieren Sie im Adobe Target-Fenster zur Registerkarte **Aktivitäten** .
-   2. Klicken Sie auf die Schaltfläche **Aktivität erstellen** und wählen Sie den Aktivitätstyp als **A/B-Test** aus.
+   1. Navigieren Sie im Adobe Target-Fenster zu **Tätigkeiten** Registerkarte.
+   2. Klicken **Aktivität erstellen** und wählen Sie den Aktivitätstyp als **A/B-Test**
 
       ![Adobe Target - Aktivität erstellen](assets/personalization-use-case-2/create-ab-activity.png)
-   3. Wählen Sie den Kanal **Web** und dann **Visual Experience Composer** aus.
-   4. Geben Sie die **Aktivitäts-URL** ein und klicken Sie auf **Weiter**, um den Visual Experience Composer zu öffnen.
+   3. Wählen Sie die **Web** Kanal und wählen Sie die **Visual Experience Composer**.
+   4. Geben Sie die **Aktivitäts-URL** und klicken **Nächste** , um den Visual Experience Composer zu öffnen.
       ![Adobe Target - Aktivität erstellen](assets/personalization-use-case-2/create-activity-ab-name.png)
-   5. Damit **Visual Experience Composer** geladen werden kann, aktivieren Sie **Allow Unsafe scripts** in Ihrem Browser und laden Sie Ihre Seite neu.
+   5. Für **Visual Experience Composer** zum Laden aktivieren **Unsichere Skripte laden zulassen** in Ihrem Browser und laden Sie Ihre Seite neu.
       ![Erlebnis-Targeting-Aktivität](assets/personalization-use-case-1/load-unsafe-scripts.png)
    6. Beachten Sie, dass die WKND Site-Startseite im Visual Experience Composer-Editor geöffnet ist.
       ![VEC](assets/personalization-use-case-2/vec.png)
-   7. **Erlebnis** bietet die standardmäßige WKND-Startseite und lassen Sie uns das Inhaltslayout für  **Erlebnis B** bearbeiten.
+   7. **Erlebnis A** stellt die standardmäßige WKND-Homepage bereit und lassen Sie uns das Inhaltslayout für **Erlebnis B**.
       ![Erlebnis B](assets/personalization-use-case-3/use-case3-experience-b.png)
-   8. Klicken Sie auf einen der Kartenlayout-Container (*Beste Röster*) und wählen Sie die Option **Neu anordnen** aus.
+   8. Klicken Sie auf einen der Kartenlayout-Container (*Beste Röster*) und wählen Sie **Neu anordnen** -Option.
       ![Container-Auswahl](assets/personalization-use-case-3/container-selection.png)
-   9. Klicken Sie auf den Container, den Sie neu anordnen möchten, und ziehen Sie ihn an die gewünschte Position. Ordnen wir den Behälter *Beste Röster* von der ersten Zeile der ersten Spalte in die dritte Zeile der ersten Zeile um. Der *Beste Röster*-Container befindet sich nun neben dem *Fotografikausstellungen* -Container.
+   9. Klicken Sie auf den Container, den Sie neu anordnen möchten, und ziehen Sie ihn an die gewünschte Position. Ordnen wir die *Beste Röster* Container aus der ersten Zeile Spalte der ersten Zeile in die dritte Spalte der ersten Zeile. Jetzt *Beste Röster* Container befindet sich neben *Fotografierausstellungen* Container.
       ![Container-Swap](assets/personalization-use-case-3/container-swap.png)
 
       **Nach dem Tauschen**
@@ -69,7 +69,7 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
    10. Ordnen Sie die Positionen für die anderen Kartencontainer auf die gleiche Weise neu an.
       ![Container ersetzt](assets/personalization-use-case-3/after-swap-all.png)
    11. Fügen wir auch einen Kopfzeilentext unter der Karussellkomponente und über dem Kartenlayout hinzu.
-   12. Klicken Sie auf den Karussellbehälter und wählen Sie die Option **Einfügen nach > HTML** aus, um HTML hinzuzufügen.
+   12. Klicken Sie auf den Karussellbehälter und wählen Sie den **Einfügen nach > HTML** -Option zum Hinzufügen von HTML.
       ![Text hinzufügen](assets/personalization-use-case-3/add-text.png)
 
       ```html
@@ -77,14 +77,14 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
       ```
 
       ![Text hinzufügen](assets/personalization-use-case-3/after-changes.png)
-   13. Klicken Sie auf **Weiter** , um mit Ihrer Aktivität fortzufahren.
-   14. Wählen Sie die **Traffic-Zuordnungsmethode** als manuell aus und weisen Sie **Erlebnis B** 100 % Traffic zu.
+   13. Klicken **Nächste** , um mit Ihrer Aktivität fortzufahren.
+   14. Wählen Sie die **Traffic-Zuordnungsmethode** als manuellen und 100 %-igen Traffic auf **Erlebnis B**.
       ![Erlebnis B-Traffic](assets/personalization-use-case-2/traffic.png)
    15. Klicken Sie auf **Weiter**.
-   16. Geben Sie **Zielmetriken** für Ihre Aktivität an und speichern und schließen Sie Ihren A/B-Test.
+   16. Bereitstellung **Zielmetriken** für Ihre Aktivität und Speichern und schließen Sie Ihren A/B-Test.
       ![Metrik für A/B-Test-Ziel](assets/personalization-use-case-2/goal-metric.png)
-   17. Geben Sie einen Namen (**WKND-Startseitenaktualisierung**) für Ihre Aktivität an und speichern Sie Ihre Änderungen.
-   18. Stellen Sie im Bildschirm &quot;Aktivitätsdetails&quot;sicher, dass Sie **Aktivieren** Ihre Aktivität auswählen.
+   17. Geben Sie einen Namen (**WKND-Homepage-Aktualisierung**) für Ihre Aktivität und speichern Sie Ihre Änderungen.
+   18. Stellen Sie im Bildschirm &quot;Aktivitätsdetails&quot;sicher, dass Sie **Aktivieren** Ihre Aktivität.
       ![Aktivität aktivieren](assets/personalization-use-case-3/save-activity.png)
    19. Navigieren Sie zur WKND-Startseite (http://localhost:4503/content/wknd/en.html) und Sie sehen die Änderungen, die wir zur Aktivität WKND-Startseite aktualisieren A/B-Test hinzugefügt haben.
       ![WKND-Homepage aktualisiert](assets/personalization-use-case-3/activity-result.png)

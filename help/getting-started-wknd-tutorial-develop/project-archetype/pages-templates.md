@@ -9,10 +9,10 @@ mini-toc-levels: 1
 kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
-source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '3081'
-ht-degree: 2%
+source-wordcount: '3066'
+ht-degree: 1%
 
 ---
 
@@ -63,7 +63,7 @@ Sie können den fertigen Code immer in [GitHub](https://github.com/adobe/aem-gui
 
 ## Was Sie erstellen werden {#what-you-will-build}
 
-In diesem Teil des Tutorials erstellen Sie eine neue Artikelseitenvorlage, die verwendet werden kann, um neue Artikelseiten zu erstellen und an einer gemeinsamen Struktur auszurichten. Die Artikelseitenvorlage basiert auf Designs und einem in Adobe XD erstellten UI-Kit. Dieses Kapitel konzentriert sich ausschließlich auf die Erstellung der Struktur oder des Skeletts der Vorlage. Es werden keine Stile implementiert, aber die Vorlage und die Seiten funktionieren.
+In diesem Teil des Tutorials erstellen Sie eine neue Artikelseitenvorlage, die verwendet werden kann, um neue Artikelseiten zu erstellen und an einer gemeinsamen Struktur auszurichten. Die Artikelseitenvorlage basiert auf Designs und einem UI-Kit, das in Adobe XD erstellt wurde. Dieses Kapitel konzentriert sich ausschließlich auf die Erstellung der Struktur oder des Skeletts der Vorlage. Es werden keine Stile implementiert, aber die Vorlage und die Seiten sind funktionsfähig.
 
 ![Artikelseitendesign und nicht formatierte Version](assets/pages-templates/what-you-will-build.png)
 
@@ -81,12 +81,12 @@ In den meisten Fällen beginnt die Planung für eine neue Website mit Stichprobe
 
 ## Erstellen der Artikelseitenvorlage
 
-Wenn Sie eine Seite erstellen, müssen Sie eine Vorlage auswählen. Diese wird als Grundlage für die Erstellung der neuen Seite verwendet. Die Vorlage definiert die Struktur der resultierenden Seite, den anfänglichen Inhalt und die zulässigen Komponenten.
+Beim Erstellen einer Seite müssen Sie eine Vorlage auswählen, die als Grundlage für die Erstellung der neuen Seite verwendet wird. Die Vorlage definiert die Struktur der resultierenden Seite, den anfänglichen Inhalt und die zulässigen Komponenten.
 
 Es gibt 3 Hauptbereiche von [Bearbeitbare Vorlagen](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=de):
 
 1. **Struktur** - definiert Komponenten, die Teil der Vorlage sind. Diese können von Inhaltsautoren nicht bearbeitet werden.
-1. **Anfänglicher Inhalt** - definiert Komponenten, mit denen die Vorlage beginnen soll. Diese können von Inhaltsautoren bearbeitet und/oder gelöscht werden.
+1. **Anfänglicher Inhalt** - definiert Komponenten, mit denen die Vorlage beginnt. Diese können von Inhaltsautoren bearbeitet und/oder gelöscht werden.
 1. **Richtlinien** - definiert Konfigurationen dazu, wie sich Komponenten verhalten und welche Optionen Autoren zur Verfügung stehen.
 
 Erstellen Sie anschließend eine neue Vorlage in AEM, die der Struktur der Sicherungen entspricht. Dies geschieht in einer lokalen Instanz von AEM. Führen Sie die folgenden Schritte aus:
@@ -101,12 +101,12 @@ Allgemeine Schritte für das obige Video:
 1. Alles in **Struktur** -Modus.
 1. Hinzufügen einer **Experience Fragment** -Komponente, die als **Kopfzeile** oben in der Vorlage.
    * Konfigurieren der Komponente, auf die verwiesen werden soll `/content/experience-fragments/wknd/us/en/site/header/master`.
-   * Legen Sie die Richtlinie auf **Seitenkopf** und stellen sicher, dass **Standardelement** auf `header`. Die `header`-Element wird im nächsten Kapitel mit CSS angesprochen.
+   * Legen Sie die Richtlinie auf **Seitenkopf** und stellen sicher, dass **Standardelement** auf `header`. Die `header`-Element im nächsten Kapitel mit CSS angesprochen wird.
 1. Hinzufügen einer **Experience Fragment** -Komponente, die als **Fußzeile** unten in der Vorlage.
    * Konfigurieren der Komponente, auf die verwiesen werden soll `/content/experience-fragments/wknd/us/en/site/footer/master`.
-   * Legen Sie die Richtlinie auf **Fußzeile der Seite** und stellen sicher, dass **Standardelement** auf `footer`. Die `footer` -Element wird im nächsten Kapitel mit CSS angesprochen.
+   * Legen Sie die Richtlinie auf **Fußzeile der Seite** und stellen sicher, dass **Standardelement** auf `footer`. Die `footer` -Element im nächsten Kapitel mit CSS angesprochen wird.
 1. Sperren Sie die **main** Container, der bei der anfänglichen Erstellung der Vorlage enthalten war.
-   * Legen Sie die Richtlinie auf **Page Main** und stellen sicher, dass **Standardelement** auf `main`. Die `main` -Element wird im nächsten Kapitel mit CSS angesprochen.
+   * Legen Sie die Richtlinie auf **Page Main** und stellen sicher, dass **Standardelement** auf `main`. Die `main` -Element im nächsten Kapitel mit CSS angesprochen wird.
 1. Hinzufügen einer **Bild** -Komponente **main** Container.
    * Entsperren Sie die **Bild** -Komponente.
 1. Hinzufügen einer **Breadcrumb** Komponente unter **Bild** -Komponente im Hauptbehälter.
@@ -130,9 +130,9 @@ Allgemeine Schritte für das obige Video:
 ### Erstmalige Inhaltskonfigurationen
 
 1. Wechseln zu **Anfänglicher Inhalt** -Modus.
-1. Hinzufügen einer **Titel** -Komponente **Inhaltscontainer**. Dies dient als Titel des Artikels. Wenn er leer gelassen wird, wird automatisch der Titel der aktuellen Seite angezeigt.
+1. Hinzufügen einer **Titel** -Komponente **Inhaltscontainer**. Dies dient als Artikeltitel. Wenn er leer gelassen wird, wird automatisch der Titel der aktuellen Seite angezeigt.
 1. Sekunde hinzufügen **Titel** -Komponente unter der ersten Titelkomponente.
-   * Konfigurieren Sie die Komponente mit dem Text: &quot;Nach Autor&quot;. Dies wird ein Textplatzhalter sein.
+   * Konfigurieren Sie die Komponente mit dem Text: &quot;Nach Autor&quot;. Dies ist ein Textplatzhalter.
    * Festlegen des Typs `H4`.
 1. Hinzufügen einer **Text** Komponente unter **Nach Autor** Titelkomponente.
 1. Hinzufügen einer **Titel** -Komponente **Seitenleisten-Container**.

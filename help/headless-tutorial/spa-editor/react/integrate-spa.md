@@ -10,9 +10,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
-source-git-commit: 415ad1266925525a6b0954b4515bae3d152bb6ec
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '1835'
 ht-degree: 3%
 
 ---
@@ -44,7 +44,7 @@ Dieses Kapitel fügt ein einfaches `Header` -Komponente in die SPA. Im Zuge der 
 
 Im Rahmen des AEM wurden zwei Module erstellt: `ui.apps` und `ui.frontend`.
 
-Die `ui.frontend` -Modul [Webpack](https://webpack.js.org/) -Projekt, das den gesamten SPA Quellcode enthält. Ein Großteil der SPA Entwicklung und Tests wird im webpack-Projekt durchgeführt. Wenn ein Produktions-Build ausgelöst wird, wird der SPA mithilfe des Webpack erstellt und kompiliert. Die kompilierten Artefakte (CSS und JavaScript) werden in die `ui.apps` -Modul, das dann zur AEM Laufzeit bereitgestellt wird.
+Die `ui.frontend` -Modul [Webpack](https://webpack.js.org/) -Projekt, das den gesamten SPA Quellcode enthält. Ein Großteil der SPA Entwicklung und Tests erfolgt im webpack-Projekt. Wenn ein Produktions-Build ausgelöst wird, wird der SPA mithilfe des Webpack erstellt und kompiliert. Die kompilierten Artefakte (CSS und JavaScript) werden in die `ui.apps` -Modul, das dann zur AEM Laufzeit bereitgestellt wird.
 
 ![ui.frontend-Architektur auf hoher Ebene](assets/integrate-spa/ui-frontend-architecture.png)
 
@@ -132,7 +132,7 @@ Weitere Informationen zum Front-End-Build finden Sie unter [hier finden](https:/
 
 ## Hinzufügen einer statischen SPA-Komponente {#static-spa-component}
 
-Fügen Sie anschließend eine neue Komponente zum SPA hinzu und stellen Sie die Änderungen auf einer lokalen AEM-Instanz bereit. Dies wird eine einfache Änderung sein, um nur zu veranschaulichen, wie die SPA aktualisiert wird.
+Fügen Sie anschließend eine neue Komponente zum SPA hinzu und stellen Sie die Änderungen auf einer lokalen AEM-Instanz bereit. Dies ist eine einfache Änderung, um nur zu veranschaulichen, wie die SPA aktualisiert wird.
 
 1. Im `ui.frontend` -Modul, darunter `ui.frontend/src/components` Erstellen Sie einen neuen Ordner mit dem Namen `Header`.
 1. Erstellen Sie eine Datei mit dem Namen `Header.js` unterhalb der `Header` Ordner.
@@ -227,7 +227,7 @@ Fügen Sie anschließend eine neue Komponente zum SPA hinzu und stellen Sie die 
 
 Wie in den vorherigen Übungen gezeigt, dauert es einige Minuten, einen Build durchzuführen und die Client-Bibliothek mit einer lokalen Instanz von AEM zu synchronisieren. Dies ist für Endtests akzeptabel, aber nicht ideal für den Großteil der SPA.
 
-A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kann zur schnellen Entwicklung des SPA verwendet werden. Die SPA wird von einem JSON-Modell gesteuert, das von AEM generiert wurde. In dieser Übung wird der JSON-Inhalt aus einer laufenden Instanz von AEM **proxid** in den Entwicklungsserver.
+A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kann zur schnellen Entwicklung des SPA verwendet werden. Die SPA wird von einem JSON-Modell gesteuert, das von AEM generiert wurde. In dieser Übung lautet der JSON-Inhalt einer laufenden Instanz von AEM **proxid** in den Entwicklungsserver.
 
 1. Kehren Sie zur IDE zurück und öffnen Sie die Datei . `ui.frontend/package.json`.
 
@@ -237,7 +237,7 @@ A [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kann zu
    "proxy": "http://localhost:4502",
    ```
 
-   Die [React-App erstellen](https://create-react-app.dev/docs/proxying-api-requests-in-development) bietet einen einfachen Mechanismus zum Proxy von API-Anfragen. Alle unbekannten Anfragen werden durch Proxy weitergeleitet. `localhost:4502`, der lokale AEM Schnellstart.
+   Die [React-App erstellen](https://create-react-app.dev/docs/proxying-api-requests-in-development) bietet einen einfachen Mechanismus zum Proxy von API-Anfragen. Alle unbekannten Anfragen werden durch Proxy gesteuert `localhost:4502`, der lokale AEM Schnellstart.
 
 1. Öffnen Sie ein Terminal-Fenster und navigieren Sie zum `ui.frontend` Ordner. Führen Sie den Befehl `npm start` aus:
 

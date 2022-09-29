@@ -7,7 +7,7 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: ce1793d1-f727-4bc4-9994-f495b469d1e3
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '425'
 ht-degree: 2%
@@ -83,7 +83,7 @@ Um dieses Anwendungsbeispiel zu erstellen, müssen wir die folgenden Schritte au
 
 Der folgende Screenshot zeigt die angezeigten Konfigurationseigenschaften. Die meisten allgemeinen Verwendungsrechte werden durch diese Konfiguration offen gelegt.
 
-![](assets/configurationproperties.gif)
+![Konfigurationseigenschaften](assets/configurationproperties.gif)
 
 Der folgende Code zeigt den Code, der zum Erstellen der OSGi-Konfigurationseinstellungen verwendet wird
 

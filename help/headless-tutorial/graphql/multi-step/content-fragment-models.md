@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
-source-git-commit: 410eb23534e083940bf716194576e099d22ca205
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1134'
+source-wordcount: '1132'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 4%
 
 In diesem Kapitel erfahren Sie, wie Sie Inhalte modellieren und ein Schema mit **Inhaltsfragmentmodelle**. Sie erfahren mehr über die verschiedenen Datentypen, mit denen ein Schema als Teil des Modells definiert werden kann.
 
-In diesem Kapitel werden zwei einfache Modelle erstellt, **Team** und **Person**. Die **Team** Das Datenmodell verfügt über den Namen, den Kurznamen und die Beschreibung und referenziert die **Person** Datenmodell mit Vollname-, Biodetails-, Profilbild- und Berufsliste.
+In diesem Kapitel werden zwei einfache Modelle erstellt. **Team** und **Person**. Die **Team** Das Datenmodell verfügt über den Namen, den Kurznamen und die Beschreibung und referenziert die **Person** Datenmodell mit Vollname-, Biodetails-, Profilbild- und Berufsliste.
 
 Sie können auch Ihr eigenes Modell gemäß den grundlegenden Schritten erstellen und die entsprechenden Schritte wie GraphQL-Abfragen und React-App-Code anpassen oder einfach die in diesen Kapiteln beschriebenen Schritte ausführen.
 

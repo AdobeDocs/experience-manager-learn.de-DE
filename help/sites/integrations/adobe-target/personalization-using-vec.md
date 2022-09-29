@@ -12,9 +12,9 @@ topic: Integrations
 role: Developer
 level: Intermediate
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '518'
+source-wordcount: '517'
 ht-degree: 2%
 
 ---
@@ -36,36 +36,36 @@ Auf der WKND-Website-Startseite werden lokale Aktivitäten oder das beste, um ei
 
 ## Schritte zum Erstellen eines A/B-Tests mit Visual Experience Composer (VEC)
 
-1. Melden Sie sich bei [Adobe Experience Cloud](https://experience.adobe.com/) an, tippen Sie auf __Target__ und navigieren Sie zur Registerkarte __Aktivitäten__ .
+1. Anmelden bei [Adobe Experience Cloud](https://experience.adobe.com/), tippen Sie auf __Target__, navigieren Sie zum __Tätigkeiten__ tab
 
-   + Wenn __Target__ nicht im Experience Cloud-Dashboard angezeigt wird, stellen Sie sicher, dass im Organisationswechsel oben rechts die richtige Organisationsstruktur ausgewählt ist und dass Ihnen in [Adobe Admin Console](https://adminconsole.adobe.com/) Zugriff auf Target gewährt wurde.
+   + Wenn Sie __Target__ Vergewissern Sie sich im Experience Cloud-Dashboard, dass im Organisationswechsel oben rechts die richtige Organisation für Adoben ausgewählt ist und dass Ihnen der Zugriff auf Target in [Adobe Admin Console](https://adminconsole.adobe.com/).
 
-1. Klicken Sie auf die Schaltfläche **Aktivität erstellen** und wählen Sie dann **A/B-Test** -Aktivität
+1. Klicken **Aktivität erstellen** und wählen Sie **A/B-Test** activity
 
    ![A/B-Aktivität](assets/ab-target-activity.png)
 
-1. Wählen Sie die Option **Visual Experience Composer**, geben Sie die Aktivitäts-URL ein und klicken Sie dann auf **Weiter**
+1. Wählen Sie die **Visual Experience Composer** Geben Sie die Aktivitäts-URL ein und klicken Sie auf **Nächste**
 
    ![Aktivitäts-URL](assets/ab-test-url.png)
 
-1. Der Visual Experience Composer zeigt nach der Erstellung einer neuen Aktivität auf der linken Seite zwei Registerkarten an: *Erlebnis A* und *Erlebnis B*. Wählen Sie ein Erlebnis aus der Liste aus. Mithilfe der Schaltfläche **Erlebnis hinzufügen** können Sie der Liste neue Erlebnisse hinzufügen.
+1. Der Visual Experience Composer zeigt nach der Erstellung einer neuen Aktivität auf der linken Seite zwei Registerkarten an: *Erlebnis A* und *Erlebnis B*. Wählen Sie ein Erlebnis aus der Liste aus. Sie können der Liste neue Erlebnisse hinzufügen, indem Sie die **Erlebnis hinzufügen** Schaltfläche.
 
    ![Erlebnis A](assets/experience.png)
 
-1. Wählen Sie ein Bild oder Text auf Ihrer Seite aus, um Änderungen vorzunehmen, oder verwenden Sie den Code-Editor, um HTML-Elemente auszuwählen und zu verwenden.
+1. Wählen Sie ein Bild oder Text auf Ihrer Seite aus, um Änderungen vorzunehmen, oder verwenden Sie den Code-Editor, um Elemente auszuwählen und HTML.
 
    ![Element](assets/select-element.png)
 
-1. Ändern Sie den Text von *Camping in Westaustralien* in *Abenteuer in Australien*. Eine Liste der Änderungen, die einem Erlebnis hinzugefügt wurden, wird unter Änderungen angezeigt. Sie können auf das geänderte Element klicken und es bearbeiten, um dessen CSS-Selektor und den neuen Inhalt anzuzeigen, der ihm hinzugefügt wurde.
+1. Text ändern von *Campen in Westaustralien* nach *Abenteuer in Australien*. Eine Liste der Änderungen, die einem Erlebnis hinzugefügt wurden, wird unter Änderungen angezeigt. Sie können auf das geänderte Element klicken und es bearbeiten, um dessen CSS-Selektor und den neuen Inhalt anzuzeigen, der ihm hinzugefügt wurde.
 
    ![Abenteuer](assets/adventures.png)
 
-1. Benennen Sie *Erlebnis A* in *Abenteuer* um.
-1. Aktualisieren Sie auf ähnliche Weise den Text von *Erlebnis B* von *Campen in Westaustralien* auf *Erkunden Sie die australische Wildnis*.
+1. Umbenennen *Erlebnis A* nach *Abenteuer*
+1. Aktualisieren Sie auf ähnliche Weise den Text auf *Erlebnis B* von *Campen in Westaustralien* nach *Die australische Wildnis*.
 
    ![Erkunden](assets/explore.png)
 
-1. Klicken Sie auf **Weiter** , um zum Targeting zu wechseln. Behalten wir eine manuelle Traffic-Zuordnung von 50-50 zwischen den beiden Erlebnissen bei.
+1. Klicken **Nächste** , um zu Targeting zu wechseln, und lassen Sie uns eine manuelle Traffic-Zuordnung von 50 bis 50 zwischen den beiden Erlebnissen beibehalten.
 
    ![Targeting](assets/targeting.png)
 

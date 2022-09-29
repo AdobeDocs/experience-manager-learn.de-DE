@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: a8d8118d-f4a1-483f-83b4-77190f6a42a4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '442'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 # Abfrage gesendeter Daten
 
 
-Der nächste Schritt besteht darin, die gesendeten Daten abzufragen und die Ergebnisse tabellarisch anzuzeigen. Dazu werden wir die folgende Software verwenden
+Der nächste Schritt besteht darin, die gesendeten Daten abzufragen und die Ergebnisse tabellarisch anzuzeigen. Dazu verwenden wir die folgende Software:
 
 [QueryBuilder](https://querybuilder.js.org/) - UI-Komponente zum Erstellen von Abfragen
 
@@ -64,7 +64,7 @@ public JSONArray getData(String formName) throws SQLException, IOException {
  }
 ```
 
-Wenn auf die Schaltfläche &quot;GetResult&quot;geklickt wird, wird Get aufgerufen an **&quot;/bin/querydata&quot;**. Die von der QueryBuilder-Benutzeroberfläche erstellte Abfrage wird über den Abfrageparameter an das Servlet übergeben. Das Servlet massiert diese Abfrage in eine SQL-Abfrage, die zum Abfragen der Datenbank verwendet werden kann. Wenn Sie beispielsweise alle Produkte mit dem Namen &quot;Maus&quot;abrufen möchten, lautet die Abfragezeichenfolge von Query Builder $.productName = &#39;Maus&#39;. Diese Abfrage wird dann in die folgende
+Wenn auf die Schaltfläche &quot;GetResult&quot;geklickt wird, wird Get aufgerufen an **&quot;/bin/querydata&quot;**. Die von der QueryBuilder-Benutzeroberfläche erstellte Abfrage wird über den Abfrageparameter an das Servlet übergeben. Das Servlet massiert diese Abfrage in eine SQL-Abfrage, die zum Abfragen der Datenbank verwendet werden kann. Wenn Sie beispielsweise alle Produkte mit dem Namen &quot;Maus&quot;abrufen möchten, lautet die Abfragezeichenfolge von Query Builder . `$.productname = 'Mouse'`. Diese Abfrage wird dann in die folgende
 
 SELECT &#42; von aemformswithjson .  formsubmissions, wobei JSON_EXTRACT( formsubmissions .formdata,&quot;$.productName &quot;)= &#39;Maus&#39;
 

@@ -12,9 +12,9 @@ mini-toc-levels: 1
 kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1145'
 ht-degree: 4%
 
 ---
@@ -282,7 +282,7 @@ Als Nächstes werden wir einige Aktualisierungen am `HelloWorldModel` Sling-Mode
 
 Client-seitige Bibliotheken, kurz clientlibs , bieten einen Mechanismus zum Organisieren und Verwalten von CSS- und JavaScript-Dateien, die für eine AEM Sites-Implementierung erforderlich sind. Clientseitige Bibliotheken sind die Standardmethode zum Einschließen von CSS und JavaScript in eine Seite in AEM.
 
-Die [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=de) -Modul ist ein entkoppeltes [Webpack](https://webpack.js.org/) -Projekt, das in den Build-Prozess integriert ist. Dies ermöglicht die Verwendung beliebter Front-End-Bibliotheken wie Sass, LESS und TypeScript. Die `ui.frontend` -Modul wird im Abschnitt [Kapitel zu Client-seitigen Bibliotheken](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
+Die [ui.frontend](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=de) -Modul ist ein entkoppeltes [Webpack](https://webpack.js.org/) -Projekt, das in den Build-Prozess integriert ist. Dies ermöglicht die Verwendung beliebter Front-End-Bibliotheken wie Sass, LESS und TypeScript. Die `ui.frontend` -Modul genauer untersucht werden, siehe [Kapitel zu Client-seitigen Bibliotheken](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
 
 Aktualisieren Sie anschließend die CSS-Stile für die `HelloWorld` -Komponente.
 

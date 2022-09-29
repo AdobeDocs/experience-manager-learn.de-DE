@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: bc79fcbf-b8b3-4d3a-9cd6-0bcd9321c7d5
-source-git-commit: 8d83d01fca3bfc9e6f674f7d73298b42f98a5d46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '269'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,7 @@ Um die Demo-Assets zu installieren, führen Sie die folgenden Schritte aus
 1. [Navigieren Sie zu post.jsp .](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) in Ihrem CRX
 1. Speicherort gemäß Ihrer Voreinstellung ändern (Zeile 9)
 1. Speichern Sie Ihre Änderungen.
-1. Öffnen Sie die [  HTML-Seite](http://localhost:4502/content/DocumentServices/CreatePDFG.html) zum Ziehen und Ablegen von Dateien zur Konvertierung.
+1. Öffnen Sie die [HTML-Seite](http://localhost:4502/content/DocumentServices/CreatePDFG.html) zum Ziehen und Ablegen von Dateien zur Konvertierung.
 1. Legen Sie eine Wortdatei oder JPG in der Dropzone ab.
 1. Das Eingabedokument wird in PDF konvertiert und an dem unter Nummer 4 angegebenen Speicherort gespeichert.
 

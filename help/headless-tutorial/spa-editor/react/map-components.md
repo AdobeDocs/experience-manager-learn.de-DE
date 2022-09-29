@@ -13,9 +13,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2263'
+source-wordcount: '2256'
 ht-degree: 2%
 
 ---
@@ -67,7 +67,7 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
    `:type` ist eine reservierte Eigenschaft, die die `sling:resourceType` (oder Pfad) der AEM Komponente. Der Wert von `:type` wird verwendet, um die AEM Komponente der SPA zuzuordnen.
 
-   `text` und `richText` sind zusätzliche Eigenschaften, die der SPA-Komponente angezeigt werden.
+   `text` und `richText` sind zusätzliche Eigenschaften, die für die SPA-Komponente verfügbar gemacht werden.
 
 1. Anzeigen der JSON-Ausgabe unter [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). Sie sollten einen Eintrag finden können, der in etwa wie folgt aussieht:
 
@@ -298,11 +298,11 @@ Bevor Sie in den SPA-Code springen, überprüfen Sie das von AEM bereitgestellte
 
    ![JSON der Bild-Kernkomponente](./assets/map-components/image-json.png)
 
-   Eigenschaften von `src`, `alt`und `title` wird verwendet, um die SPA `Image` -Komponente.
+   Eigenschaften von `src`, `alt`und `title` werden zum Ausfüllen der SPA verwendet `Image` -Komponente.
 
    >[!NOTE]
    >
-   > Es werden andere Bildeigenschaften bereitgestellt (`lazyEnabled`, `widths`), die es einem Entwickler ermöglichen, eine adaptive und verzögerte Ladekomponente zu erstellen. Die in diesem Tutorial erstellte Komponente ist einfach und wird **not** Verwenden Sie diese erweiterten Eigenschaften.
+   > Es werden andere Bildeigenschaften bereitgestellt (`lazyEnabled`, `widths`), die es einem Entwickler ermöglichen, eine adaptive und verzögerte Ladekomponente zu erstellen. Die in diesem Tutorial erstellte Komponente ist einfach und erfüllt folgende Aufgaben: **not** Verwenden Sie diese erweiterten Eigenschaften.
 
 ### Implementieren der Bildkomponente
 

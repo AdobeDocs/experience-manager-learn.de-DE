@@ -5,9 +5,9 @@ sub-product: sites, cloud-manager, assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: 197f7e18f0d229698048cb06c2a49c019d420217
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '503'
+source-wordcount: '502'
 ht-degree: 1%
 
 ---
@@ -127,11 +127,11 @@ Jede Jahreszeit variiert in ihrer Länge und wird nach einem festen Zeitplan ver
       </p>
      </td>   
      <td>
-            <a href="season-2/cloud5-MoCM-experience-audit.md">
+            <a href="season-2/cloud5-mocm-experience-audit.md">
                <img alt="Geheimnisse von Cloud Manager ... Erlebnisprüfung" src="./imgs/s2/007-thumb.png"/>
                </a>
       <div>
-            <a href="season-2/cloud5-MoCM-experience-audit.md"><strong>Geheimnisse von Cloud Manager ... Erlebnisprüfung</strong></a>
+            <a href="season-2/cloud5-mocm-experience-audit.md"><strong>Geheimnisse von Cloud Manager ... Erlebnisprüfung</strong></a>
          <br/><em>mit Darin Kuntze, Senior Cloud Architect</em>
       </div>
       <p>
@@ -140,11 +140,11 @@ Jede Jahreszeit variiert in ihrer Länge und wird nach einem festen Zeitplan ver
       </p>
    </td>
      <td>
-            <a href="season-2/cloud5-MoCM-unit-tests.md">
+            <a href="season-2/cloud5-mocm-unit-tests.md">
                <img alt="Geheimnisse von Cloud Manager ... Unit-Tests" src="./imgs/s2/008-thumb.png"/>
             </a>
       <div>
-            <a href="season-2/cloud5-MoCM-unit-tests.md"><strong>Geheimnisse von Cloud Manager ... Unit-Tests</strong></a>
+            <a href="season-2/cloud5-mocm-unit-tests.md"><strong>Geheimnisse von Cloud Manager ... Unit-Tests</strong></a>
          <br/><em>mit Darin Kuntze &amp; Bryan Stopp, leitende Cloud-Architekten</em>
       </div>
       <p>
@@ -155,11 +155,11 @@ Jede Jahreszeit variiert in ihrer Länge und wird nach einem festen Zeitplan ver
   </tr>
     <tr>
         <td>
-               <a href="season-2/cloud5-MoCM-functional-tests.md">
+               <a href="season-2/cloud5-mocm-functional-tests.md">
                    <img alt="Geheimnisse von Cloud Manager ... Funktionstests" src="./imgs/s2/009-thumb.png"/>
                </a>
             <div>
-                <a href="season-2/cloud5-MoCM-functional-tests.md"><strong>Geheimnisse von Cloud Manager ... Funktionstests</strong><br/></a>        
+                <a href="season-2/cloud5-mocm-functional-tests.md"><strong>Geheimnisse von Cloud Manager ... Funktionstests</strong><br/></a>        
                 <em>mit Darin Kuntze &amp; Bryan Stopp, leitende Cloud-Architekten</em>
             </div>
             <p><br/>

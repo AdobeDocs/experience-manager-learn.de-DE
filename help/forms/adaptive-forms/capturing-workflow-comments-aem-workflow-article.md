@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 5c250bbb-bac6-427d-8aca-1fbb1229e02c
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -45,8 +45,8 @@ Um diese Funktion auf Ihrem System zu testen, führen Sie die folgenden Schritte
 
 * Öffnen Sie die Aufgabe aus dem Posteingang und senden Sie das Formular. Geben Sie bei Aufforderung einige Kommentare ein.
 
-Die Kommentare werden in der Metadateneigenschaft managerComments in crx gespeichert. Um nach den Kommentaren zu suchen, melden Sie sich bei crx als Administrator an. Die Workflow-Instanzen werden im folgenden Pfad gespeichert
+Die Kommentare werden in der Metadateneigenschaft mit dem Namen `managerComments` in AEM Repository. Um nach den Kommentaren zu suchen, melden Sie sich bei crx als Administrator an. Die Workflow-Instanzen werden im folgenden Pfad gespeichert:
 
-/var/workflow/instances/server0
+`/var/workflow/instances/server0`
 
 Wählen Sie die entsprechende Workflow-Instanz aus und suchen Sie im Metadatenknoten nach der Eigenschaft managerComments .

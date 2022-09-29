@@ -4,7 +4,7 @@ user-guide-description: Eine Sammlung von Tutorials für Adobe Experience Manage
 breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: cloud-service
 team: TM
-source-git-commit: bc222867c937b7d498e7b56bebc0aac18289ad03
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 28%
@@ -214,7 +214,7 @@ ht-degree: 28%
    + Integration mit Microsoft Power Automate{#forms-cs-and-power-automate}
       + [Integration konfigurieren](./forms/forms-cs-and-power-automate/integrate-formscs-power-automate.md)
       + [Analysieren gesendeter Formulardaten](./forms/forms-cs-and-power-automate/send-email-notification.md)
-      + [DoR als E-Mail-Anhang senden](./forms/forms-cs-and-power-automate/send-DoR-email-attachment.md)
+      + [DoR als E-Mail-Anhang senden](./forms/forms-cs-and-power-automate/send-dor-email-attachment.md)
       + [Extrahieren von Formularanlagen aus gesendeten Daten](./forms/forms-cs-and-power-automate/send-af-attachments-in-email.md)
    + Integration mit Microsoft Dynamics{#formscs-dynamics-crm}
       + [Erstellen von Dynamics-Anwendungen](./forms/formscs-dynamics-crm/create-dynamics-account.md)
@@ -272,9 +272,9 @@ ht-degree: 28%
       + [Sling-Auftragsplanung](./cloud-5/season-2/cloud5-sling-job-scheduler.md)
       + [Cache reparieren](./cloud-5/season-2/cloud5-fix-your-cache.md)
       + [Neuschreibungen korrigieren](./cloud-5/season-2/cloud5-fix-your-rewrites.md)
-      + [Cloud Manager - Experience Audit](./cloud-5/season-2/cloud5-MoCM-experience-audit.md)
-      + [Cloud Manager - Unit-Tests](./cloud-5/season-2/cloud5-MoCM-unit-tests.md)
-      + [Cloud Manager - Funktionstests](./cloud-5/season-2/cloud5-MoCM-functional-tests.md)
+      + [Cloud Manager - Experience Audit](./cloud-5/season-2/cloud5-mocm-experience-audit.md)
+      + [Cloud Manager - Unit-Tests](./cloud-5/season-2/cloud5-mocm-unit-tests.md)
+      + [Cloud Manager - Funktionstests](./cloud-5/season-2/cloud5-mocm-functional-tests.md)
 + [AEM Expertenreihe](./aem-experts-series.md)
 + Mehrstufige Tutorials{#multi-step-tutorials}
    + [AEM Sites-Entwicklung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de)

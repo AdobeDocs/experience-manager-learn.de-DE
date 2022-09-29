@@ -13,10 +13,10 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '623'
-ht-degree: 2%
+source-wordcount: '621'
+ht-degree: 3%
 
 ---
 
@@ -55,7 +55,7 @@ Um Zugriff auf App Builder zu erhalten, melden Sie sich für die Vorschau an.
 
 1. [Für App Builder-Testversion anmelden](https://developer.adobe.com/app-builder/trial/).
 1. Warten Sie ungefähr 2 bis 10 Tage, bis Sie per E-Mail über die Bereitstellung informiert werden, bevor Sie mit dem Tutorial fortfahren.
-   + Wenn Sie sich nicht sicher sind, ob Sie bereitgestellt wurden, fahren Sie mit den nächsten Schritten fort und können keine __App Builder__ Projekt in [Adobe Developer Console](https://developer.adobe.com/console/) Sie wurden noch nicht bereitgestellt.
+   + Wenn Sie sich nicht sicher sind, ob Sie bereitgestellt wurden, fahren Sie mit den nächsten Schritten fort und können keine __App Builder__ Projekt in [Adobe Developer-Konsole](https://developer.adobe.com/console/) Sie wurden noch nicht bereitgestellt.
 
 ## Cloud-Speicher
 
@@ -78,7 +78,7 @@ _Clickthrough der Bereitstellung des Azure Blob Storage (kein Audio)_
 1. Tippen __+ Hinzufügen__ , um ein neues Blob Storage-Konto zu erstellen
 1. Erstellen Sie eine neue __Ressourcengruppe__ nach Bedarf, z. B.: `aem-as-a-cloud-service`
 1. Bereitstellung einer __Name des Speicherkontos__, zum Beispiel: `aemguideswkndassetcomput`
-   + Die __Name des Speicherkontos__ wird für [Konfigurieren des Cloud-Speichers](../develop/environment-variables.md) für das lokale Asset compute-Entwicklungstool
+   + Die __Name des Speicherkontos__  verwendet für [Konfigurieren des Cloud-Speichers](../develop/environment-variables.md) im lokalen Asset compute Development Tool
    + Die __Zugriffsschlüssel__ mit dem Speicherkonto verknüpft sind, ist auch erforderlich, wenn [Konfigurieren des Cloud-Speichers](../develop/environment-variables.md).
 1. Belassen Sie alles andere als Standard und tippen Sie auf __Überprüfen und erstellen__ button
    + Wählen Sie optional die __location__ in Ihrer Nähe.

@@ -7,10 +7,11 @@ kt: 9724
 topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 15b57ec6792bc47d0041946014863b13867adf22
+exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '607'
-ht-degree: 0%
+source-wordcount: '606'
+ht-degree: 1%
 
 ---
 
@@ -58,7 +59,7 @@ Sie müssen zwei Datenquellen erstellen (eine zum Abrufen aller Länder und eine
 
 ## Erstellen von Formulardatenmodellen
 
-Die AEM Forms-Datenintegration bietet eine intuitive Benutzeroberfläche zum Erstellen und Verwenden von [Formulardatenmodelle](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html). Stützen Sie das Formulardatenmodell auf die Datenquellen, die im vorherigen Schritt erstellt wurden. Formulardatenmodell mit 2 Datenquellen
+Die AEM Forms-Datenintegration bietet eine intuitive Benutzeroberfläche zum Erstellen und Verwenden von [Formulardatenmodelle](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=de). Stützen Sie das Formulardatenmodell auf die Datenquellen, die im vorherigen Schritt erstellt wurden. Formulardatenmodell mit 2 Datenquellen
 
 ![fdm](assets/geonames-fdm.png)
 
@@ -82,8 +83,3 @@ Die Dropdown-Liste Bundesland muss auf der Grundlage des ausgewählten Landes au
 
 Fügen Sie im Formular 2 Dropdownlisten mit dem Namen &quot;Counties and Cities&quot;hinzu, um je nach ausgewähltem Land und Bundesland die Bezirke und Städte aufzulisten.
 ![Übung](assets/cascading-drop-down-exercise.png)
-
-
-
-
-

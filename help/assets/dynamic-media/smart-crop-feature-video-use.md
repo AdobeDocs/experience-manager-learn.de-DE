@@ -2,18 +2,18 @@
 title: Verwenden von smartem Zuschneiden mit AEM Assets Dynamic Media
 description: Smartes Zuschneiden nutzt Adobe Sensei, um die zeitaufwendigen und kostspieligen Aufgaben beim Zuschneiden von Inhalten für responsives Design zu eliminieren.
 sub-product: dynamic-media
-feature: Smartes Zuschneiden, Bildprofile
+feature: Smart Crop, Image Profiles
 version: 6.4, 6.5
-topic: Content Management
+topic: Content Management
 role: User
 level: Beginner
-source-git-commit: b0bca57676813bd353213b4808f99c463272de85
+exl-id: 295bbfb6-241f-41c0-972d-d9688863cea1
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 18%
+source-wordcount: '245'
+ht-degree: 17%
 
 ---
-
 
 # Verwenden von smartem Zuschneiden mit AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
 
@@ -35,4 +35,4 @@ Smartes Zuschneiden nutzt Adobe Sensei, um die zeitaufwendigen und kostspieligen
 
 >[!NOTE]
 >
->Die Koordinaten für das smarte Zuschneiden hängen vom Seitenverhältnis ab. Das heißt, dass für die verschiedenen Einstellungen für das smarte Zuschneiden in einem Bildprofil dasselbe Seitenverhältnis an Dynamic Media gesendet wird, wenn das Seitenverhältnis für die hinzugefügten Abmessungen im Bildprofil dasselbe ist. Aus diesem Grund wird im Editor für Smartes Zuschneiden derselbe Zuschnittbereich vorgeschlagen. Beispielsweise würde eine Zuschnitteinstellung von 100x100 und 200x200 dazu führen, dass vom System derselbe smarte Zuschnitt generiert wird.
+>Die Koordinaten für das smarte Zuschneiden hängen vom Seitenverhältnis ab. Das heißt, dass für die verschiedenen Einstellungen für das smarte Zuschneiden in einem Bildprofil dasselbe Seitenverhältnis an Dynamic Media gesendet wird, wenn das Seitenverhältnis für die hinzugefügten Abmessungen im Bildprofil dasselbe ist. Daher wird im Editor für Smartes Zuschneiden derselbe Zuschnittbereich vorgeschlagen. Beispielsweise würde eine Zuschnitteinstellung von 100x100 und 200x200 dazu führen, dass vom System derselbe smarte Zuschnitt generiert wird.

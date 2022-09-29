@@ -12,9 +12,9 @@ kt: 4089
 mini-toc-levels: 1
 thumbnail: 30207.jpg
 exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '3020'
+source-wordcount: '3014'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Sie können den fertigen Code immer in [GitHub](https://github.com/adobe/aem-gui
 
 In diesem Tutorial erfahren wir, wie Sie [Unit-Tests](https://en.wikipedia.org/wiki/Unit_testing) für die [Sling-Modell](https://sling.apache.org/documentation/bundles/models.html) (erstellt in der [Erstellen einer benutzerdefinierten AEM-Komponente](custom-component.md)). Unit-Tests sind in Java geschriebene Build-Time-Tests, die das erwartete Verhalten von Java-Code überprüfen. Jeder Komponententest ist in der Regel klein und validiert die Ausgabe einer Methode (oder von Einheiten) anhand der erwarteten Ergebnisse.
 
-Wir werden AEM Best Practices verwenden und Folgendes verwenden:
+Wir setzen AEM Best Practices ein und setzen Folgendes ein:
 
 * [JUnit 5](https://junit.org/junit5/)
 * [Mockito Testing Framework](https://site.mockito.org/)
@@ -447,7 +447,7 @@ Denken Sie daran, dass diese Methode eine alphabetisch sortierte Liste der Beruf
 
 1. Denken Sie daran, genau wie **`getName()`** über **BylineImplTest.json** definiert keine Berufe, sodass dieser Test fehlschlägt, wenn wir ihn durchführen, da `byline.getOccupations()` gibt eine leere Liste zurück.
 
-   Aktualisieren **BylineImplTest.json** um eine Liste der Berufe aufzunehmen, und sie werden in nicht alphabetischer Reihenfolge festgelegt, um sicherzustellen, dass unsere Tests bestätigen, dass die Berufe alphabetisch nach **`getOccupations()`**.
+   Aktualisieren **BylineImplTest.json** um eine Liste der Berufe aufzunehmen, und sie sind in nicht alphabetischer Reihenfolge festgelegt, um sicherzustellen, dass unsere Tests bestätigen, dass die Berufe alphabetisch nach **`getOccupations()`**.
 
    ```json
    {

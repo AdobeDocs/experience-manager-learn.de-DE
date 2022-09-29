@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 8cae155c-c393-4ac3-a412-bf14fc411aac
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -26,22 +26,15 @@ Ab AEM Forms 6.5.1 haben wir jetzt die Möglichkeit, Fehlermeldungen zu erfassen
 * Wichtige Informationen zu Fehlern, die aufgrund von Validierungsausnahmen auftreten, werden gespeichert. Drei Variablenselektoren vom Typ Autocomplete wurden hinzugefügt, um relevante Variablen zum Speichern von ErrorCode(String), ErrorMessage(String) und ErrorDetails(JSON) auszuwählen. Die ErrorDetails werden jedoch auf null gesetzt, falls die Ausnahme keine DermisValidationException ist.
    ![Erfassen von Fehlermeldungen](assets/fdm-error-details.PNG)
 
-Mit diesen Änderungen stellt der Schritt Formulardatenmodelldienst aufrufen sicher, dass die Eingabewerte den in der Swagger-Datei angegebenen Datenbeschränkungen entsprechen. Beispielsweise wird die folgende Fehlermeldung ausgegeben, wenn die Werte accountId und balance nicht mit den in der Swagger-Datei angegebenen Datenbeschränkungen konform sind.
+Mit diesen Änderungen stellt der Schritt Formulardatenmodelldienst aufrufen sicher, dass die Eingabewerte den in der Swagger-Datei angegebenen Datenbeschränkungen entsprechen. Beispielsweise wird die folgende Fehlermeldung ausgegeben, wenn die Werte accountId und balance nicht den in der Swagger-Datei angegebenen Datenbeschränkungen entsprechen.
 
 ```json
 {
-
-"errorCode": "AEM-FDM-001-049"
-
-"errorMessage": "Input validations failed during operation execution"
-
-"violations": {
-
-"/accountId": ["numeric instance is greater than the required maximum (maximum: 20, found: 97)"],
-
-"/newAccount/balance": ["instance type (string) does not match any allowed primitive type (allowed: [\"integer\",\"number\"])"]
-
-}
-
+    "errorCode": "AEM-FDM-001-049"
+    "errorMessage": "Input validations failed during operation execution"
+    "violations": {
+        "/accountId": ["numeric instance is greater than the required maximum (maximum: 20, found: 97)"],
+        "/newAccount/balance": ["instance type (string) does not match any allowed primitive type (allowed: [\"integer\",\"number\"])"]
+    }   
 }
 ```

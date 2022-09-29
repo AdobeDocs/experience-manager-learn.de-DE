@@ -7,14 +7,14 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '358'
 ht-degree: 0%
 
 ---
 
-# Barcode Service With Adaptive Forms{#barcode-service-with-adaptive-forms}
+# Barcode-Dienst mit adaptivem Forms{#barcode-service-with-adaptive-forms}
 
 In diesem Artikel wird die Verwendung des Barcode-Dienstes zum Ausfüllen des adaptiven Formulars veranschaulicht. Der Anwendungsfall sieht folgendermaßen aus:
 
@@ -89,15 +89,13 @@ public class DecodeBarCode extends SlingSafeMethodsServlet {
    // TODO Auto-generated catch block
    e1.printStackTrace();
   }
-
  }
-
 }
 ```
 
-Der folgende Code ist Teil der Client-Bibliothek, auf die vom adaptiven Formular verwiesen wird. Wenn ein Benutzer die Anlage zum adaptiven Formular hinzufügt, wird dieser Code ausgelöst. Der Code führt einen GET-Aufruf an das Servlet durch, wobei der Pfad der Anlage im Anforderungsparameter übergeben wird. The data received from the servlet call is then used to populate the adaptive form.
+Der folgende Code ist Teil der Client-Bibliothek, auf die vom adaptiven Formular verwiesen wird. Wenn ein Benutzer die Anlage zum adaptiven Formular hinzufügt, wird dieser Code ausgelöst. Der Code führt einen GET-Aufruf an das Servlet durch, wobei der Pfad der Anlage im Anforderungsparameter übergeben wird. Die vom Servlet-Aufruf empfangenen Daten werden dann zum Ausfüllen des adaptiven Formulars verwendet.
 
-```
+```javascript
 $(document).ready(function()
    {
        guideBridge.on("elementValueChanged",function(event,data){
@@ -138,12 +136,12 @@ Zeile 12 - Benutzerspezifischer Code zum Abrufen des Service-Resolvers. Dieses B
 
 Zeile 23 - Rufen Sie die Methode &quot;DocumentServices extractBarCode&quot;auf, um das JSON-Objekt mit dekodierten Daten auszufüllen.
 
-Führen Sie die folgenden Schritte aus, um dies auf Ihrem System auszuführen
+Führen Sie die folgenden Schritte aus, um dies auf Ihrem System auszuführen:
 
 1. [Herunterladen von BarcodeService.zip](assets/barcodeservice.zip) und importieren Sie mit dem Package Manager in AEM
 1. [Herunterladen und Installieren des Custom Document Services Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [Herunterladen und Installieren des DevelopingWithServiceUser-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 1. [Herunterladen des PDF-Beispielformulars](assets/barcode.pdf)
-1. Point your browser to the [sample adaptive form](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
+1. Verweisen Sie den Browser auf [Beispiel für ein adaptives Formular](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
 1. Laden Sie die Beispieldatei-PDF hoch
 1. Sie sollten die Formulare sehen, die mit den Daten gefüllt sind

@@ -11,9 +11,9 @@ level: Beginner
 kt: 7496
 thumbnail: KT-7496.jpg
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '912'
 ht-degree: 4%
 
 ---
@@ -63,7 +63,7 @@ Der Großteil des Tutorials wird mithilfe des **Autorendienst**.
    >
    >Es wird empfohlen, eine **Entwicklung** Umgebung für dieses Tutorial.
 
-1. Der AEM wird eine neue Registerkarte hinzugefügt **Autorendienst**. Klicken **Mit Adobe anmelden** und Sie sollten automatisch mit denselben Experience Cloud-Anmeldedaten angemeldet sein.
+1. Die AEM erhält eine neue Registerkarte **Autorendienst**. Klicken **Mit Adobe anmelden** und Sie sollten automatisch mit denselben Experience Cloud-Anmeldedaten angemeldet sein.
 
 1. Nach der Umleitung und Authentifizierung sollte nun der AEM Startbildschirm angezeigt werden.
 

@@ -3,7 +3,7 @@ title: Beschleunigen der Inhaltsgeschwindigkeit mit AEM Stilsystemen
 description: Erfahren Sie, wie Sie mit AEM Stilsystemen Designer, Inhaltsautoren und Entwickler in Ihrem Unternehmen in die Lage versetzen können, Erlebnisse mit der Geschwindigkeit und Skalierung zu erstellen und bereitzustellen, die Ihre Kunden erwarten.
 solution: Experience Manager
 exl-id: 449cd133-6ab6-456e-a0ad-30e3dea9b75b
-source-git-commit: 471f0fe940abb8241428beb14896d83e140136b3
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '830'
 ht-degree: 0%
@@ -92,4 +92,4 @@ Schließlich ist der Einsatz von Stilsystemen mehr Kunst als Wissenschaft. Wie b
 
 Weitere Informationen finden Sie in unserer [Kundenerfolgs-Webinar](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/) mit Will Brisbane und Joseph Van Buskirk.
 
-Erfahren Sie mehr über Strategie und Gedankenführung auf der [Kundenerfolg](https://experienceleague.corp.adobe.com/docs/customer-success/customer-success/overview.html) Hub.
+Erfahren Sie mehr über Strategie und Gedankenführung auf der [Kundenerfolg](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html) Hub.

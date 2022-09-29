@@ -14,9 +14,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
-source-git-commit: 25a1a40f42d37443db9edc0e09b1691b1c19e848
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2191'
+source-wordcount: '2187'
 ht-degree: 3%
 
 ---
@@ -71,7 +71,7 @@ Sie können den fertigen Code immer in [GitHub](https://github.com/adobe/aem-gui
 
 Im Rahmen des AEM wurden zwei Module erstellt: `ui.apps` und `ui.frontend`.
 
-Die `ui.frontend` -Modul [Webpack](https://webpack.js.org/) -Projekt, das den gesamten SPA Quellcode enthält. Ein Großteil der SPA Entwicklung und Tests wird im webpack-Projekt durchgeführt. Wenn ein Produktions-Build ausgelöst wird, wird der SPA mithilfe des Webpack erstellt und kompiliert. Die kompilierten Artefakte (CSS und JavaScript) werden in die `ui.apps` -Modul, das dann zur AEM Laufzeit bereitgestellt wird.
+Die `ui.frontend` -Modul [Webpack](https://webpack.js.org/) -Projekt, das den gesamten SPA Quellcode enthält. Ein Großteil der SPA Entwicklung und Tests erfolgt im webpack-Projekt. Wenn ein Produktions-Build ausgelöst wird, wird der SPA mithilfe des Webpack erstellt und kompiliert. Die kompilierten Artefakte (CSS und JavaScript) werden in die `ui.apps` -Modul, das dann zur AEM Laufzeit bereitgestellt wird.
 
 ![ui.frontend-Architektur auf hoher Ebene](assets/integrate-spa/ui-frontend-architecture.png)
 
@@ -269,7 +269,7 @@ Fügen Sie anschließend eine neue Komponente zum SPA hinzu und stellen Sie die 
 
 Wie in den vorherigen Übungen gezeigt, dauert es einige Minuten, einen Build durchzuführen und die Client-Bibliothek mit einer lokalen Instanz von AEM zu synchronisieren. Dies ist für Endtests akzeptabel, aber nicht ideal für den Großteil der SPA.
 
-A [webpack-Dev-Server](https://webpack.js.org/configuration/dev-server/) kann zur schnellen Entwicklung des SPA verwendet werden. Die SPA wird von einem JSON-Modell gesteuert, das von AEM generiert wurde. In dieser Übung wird der JSON-Inhalt aus einer laufenden Instanz von AEM **proxid** in den vom Entwicklungs-Server konfigurierten Entwicklungsserver [Angular-Projekt](https://angular.io/guide/build).
+A [webpack-Dev-Server](https://webpack.js.org/configuration/dev-server/) kann zur schnellen Entwicklung des SPA verwendet werden. Die SPA wird von einem JSON-Modell gesteuert, das von AEM generiert wurde. In dieser Übung lautet der JSON-Inhalt einer laufenden Instanz von AEM **proxid** in den vom Entwicklungs-Server konfigurierten Entwicklungsserver [Angular-Projekt](https://angular.io/guide/build).
 
 1. Kehren Sie zur IDE zurück und öffnen Sie die Datei . **proxy.conf.json** at `ui.frontend/proxy.conf.json`.
 
@@ -458,7 +458,7 @@ Die anfängliche Einrichtung der JSON-nachgeahmten Datei **eine lokale AEM-Insta
 
 ## Stile mit Sass hinzufügen
 
-Als Nächstes wird dem Projekt ein Stil hinzugefügt, der aktualisiert wird. Dieses Projekt wird [Sass](https://sass-lang.com/) Unterstützung für einige nützliche Funktionen wie Variablen.
+Als Nächstes werden dem Projekt einige Stile hinzugefügt, die aktualisiert wurden. Dieses Projekt wird [Sass](https://sass-lang.com/) Unterstützung für einige nützliche Funktionen wie Variablen.
 
 1. Öffnen Sie ein Terminal-Fenster und stoppen Sie die **webpack-Dev-Server** wenn gestartet. Von innen `ui.frontend` Ordner geben Sie den folgenden Befehl ein, um die Angular-App zur Verarbeitung zu aktualisieren **.scss** Dateien.
 

@@ -9,10 +9,10 @@ level: Intermediate
 kt: 6409
 thumbnail: KT-6296.jpg
 exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2179'
-ht-degree: 0%
+source-wordcount: '2177'
+ht-degree: 1%
 
 ---
 
@@ -30,28 +30,28 @@ Nachfolgend finden Sie die Analytics-Variablen, die derzeit verfolgt werden:
 
 * `eVar5` -  `Page template`
 * `eVar6` - `Page Id`
-* `eVar7` -  `Page last modified date`
-* `eVar8` -  `CTA Button Id`
-* `eVar9` -  `Page Name`
-* `event8` -  `CTA Button Click event`
-* `prop8` -  `CTA Button Id`
+* `eVar7` - `Page last modified date`
+* `eVar8` - `CTA Button Id`
+* `eVar9` - `Page Name`
+* `event8` - `CTA Button Click event`
+* `prop8` - `CTA Button Id`
 
 ![CTA Click Adobe Analytics](assets/create-analytics-workspace/page-analytics.png)
 
 ### Ziele {#objective}
 
 1. Erstellen Sie eine neue Report Suite oder verwenden Sie eine vorhandene.
-1. Konfigurieren Sie [Konversionsvariablen (eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) und [Erfolgsereignisse (Ereignisse)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/success-events/success-event.html) in der Report Suite.
-1. Erstellen Sie ein [Analysis Workspace-Projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html), um Daten mithilfe von Tools zu analysieren, mit denen Sie schnell Einblicke erstellen, analysieren und teilen können.
+1. Konfigurieren [Konversionsvariablen (eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) und [Erfolgsereignisse (Ereignisse)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/success-events/success-event.html) in der Report Suite.
+1. Erstellen Sie eine [Analysis Workspace-Projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html) um Daten mithilfe von Tools zu analysieren, mit denen Sie schnell Einblicke erstellen, analysieren und teilen können.
 1. Geben Sie das Analysis Workspace-Projekt für andere Teammitglieder frei.
 
 ## Voraussetzungen
 
-In diesem Tutorial wird die Komponente [Klicks mit Adobe Analytics](./track-clicked-component.md) verfolgen fortgesetzt. Dabei wird davon ausgegangen, dass Sie über Folgendes verfügen:
+Dieses Tutorial ist eine Fortsetzung der [Verfolgen geklickter Komponenten mit Adobe Analytics](./track-clicked-component.md) und geht davon aus, dass Sie über Folgendes verfügen:
 
-* Eine **Launch-Eigenschaft** mit der aktivierten [Adobe Analytics-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html)
-* **Report Suite-ID und Tracking-Server für Adobe** Analytics-Tests/Entwicklung. Weitere Informationen finden Sie in der folgenden Dokumentation für [Erstellen einer neuen Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html).
-* [Experience Platform ](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) DebuggerBrowser-Erweiterung, die mit Ihrer Launch-Eigenschaft konfiguriert wurde, die auf  [https://wknd.site/us/en.](https://wknd.site/us/en.html) html oder einer AEM Site geladen wurde, auf der die Adobe-Datenschicht aktiviert ist.
+* A **Launch-Eigenschaft** mit dem [Adobe Analytics-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=de) enabled
+* **Adobe Analytics** Report Suite-ID und Tracking-Server testen/entwickeln. Weitere Informationen finden Sie in der folgenden Dokumentation für [Erstellen einer neuen Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html).
+* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html) Browsererweiterung , die mit Ihrer Launch-Eigenschaft konfiguriert ist, die in geladen wird [https://wknd.site/us/en.html](https://wknd.site/us/en.html) oder einer AEM Site mit aktivierter Adobe-Datenschicht.
 
 ## Konversionsvariablen (eVars) und Erfolgsereignisse (Ereignis)
 
@@ -73,25 +73,25 @@ Erfolgsereignisse sind Aktionen, die verfolgt werden können. Sie bestimmen, was
 
    ![Analytics AEP](assets/create-analytics-workspace/analytics-aep.png)
 
-1. Klicken Sie in der Analytics-Symbolleiste auf **Admin** > **Report Suites** und suchen Sie Ihre Report Suite.
+1. Klicken Sie in der Analytics-Symbolleiste auf **Admin** > **Report Suites** und finden Sie Ihre Report Suite.
 
    ![Analytics Report Suite](assets/create-analytics-workspace/select-report-suite.png)
 
-1. Wählen Sie die Report Suite > **Einstellungen bearbeiten** > **Konversion** > **Konversionsvariablen**
+1. Wählen Sie die Report Suite aus > **Einstellungen bearbeiten** > **Konversion** > **Konversionsvariablen**
 
    ![Analytics-Konversionsvariablen](assets/create-analytics-workspace/conversion-variables.png)
 
-1. Erstellen wir mit der Option **Neue**-Konversionsvariablen, um das Schema wie folgt zuzuordnen:
+1. Verwenden der **Neu hinzufügen** erstellen, erstellen wir Konversionsvariablen, um das Schema wie folgt zuzuordnen:
 
-   * `eVar5` -   `Page Template`
-   * `eVar6` -  `Page ID`
-   * `eVar7` -  `Last Modified Date`
-   * `eVar8` -  `Button Id`
-   * `eVar9` -  `Page Name`
+   * `eVar5` -  `Page Template`
+   * `eVar6` - `Page ID`
+   * `eVar7` - `Last Modified Date`
+   * `eVar8` - `Button Id`
+   * `eVar9` - `Page Name`
 
    ![Neue eVars hinzufügen](assets/create-analytics-workspace/add-new-evars.png)
 
-1. Geben Sie einen geeigneten Namen und eine Beschreibung für jede eVars ein und **Speichern** Ihre Änderungen. Wir werden diese eVars verwenden, um im nächsten Abschnitt ein Analysis Workspace-Projekt zu erstellen. Ein benutzerfreundlicher Name macht die Variablen einfach zu finden.
+1. Geben Sie einen geeigneten Namen und eine Beschreibung für jede eVar ein und **Speichern** Ihre Änderungen. Wir verwenden diese eVars, um im nächsten Abschnitt ein Analysis Workspace-Projekt zu erstellen. Ein benutzerfreundlicher Name macht die Variablen einfach zu finden.
 
    ![eVars](assets/create-analytics-workspace/evars.png)
 
@@ -99,9 +99,9 @@ Erfolgsereignisse sind Aktionen, die verfolgt werden können. Sie bestimmen, was
 
 Als Nächstes erstellen wir ein Ereignis, um das Klicken auf die CTA-Schaltfläche zu verfolgen.
 
-1. Wählen Sie im Fenster **Report Suite Manager** die **Report Suite-ID** aus und klicken Sie auf **Einstellungen bearbeiten**.
-1. Klicken Sie auf **Konversion** > **Erfolgsereignisse**
-1. Erstellen Sie mit der Option **Neu hinzufügen** ein neues benutzerspezifisches Erfolgsereignis, um die CTA-Schaltflächenklick-Funktion zu verfolgen und dann **Speichern** Ihre Änderungen.
+1. Aus dem **Report Suite Manager** auswählen, wählen Sie die **Report Suite-ID** und klicken Sie auf **Einstellungen bearbeiten**.
+1. Klicken **Konversion** > **Erfolgsereignisse**
+1. Verwenden der **Neu hinzufügen** erstellen Sie ein neues benutzerspezifisches Erfolgsereignis, um die CTA-Schaltfläche zu verfolgen, auf die Sie klicken, und dann **Speichern** Ihre Änderungen.
    * `Event`: `event8`
    * `Name`:`CTA Click`
    * `Type`:`Counter`
@@ -112,39 +112,39 @@ Als Nächstes erstellen wir ein Ereignis, um das Klicken auf die CTA-Schaltfläc
 
 Analysis Workspace ist ein flexibles Browser-Tool, mit dem Sie schnell Analysen erstellen und Erkenntnisse austauschen können. Mithilfe der Drag &amp; Drop-Benutzeroberfläche können Sie Ihre Analyse gestalten, Visualisierungen hinzufügen, um Daten zum Leben zu erwecken, einen Datensatz zu kuratieren, Projekte für andere in Ihrer Organisation freizugeben und zu planen.
 
-Erstellen Sie anschließend ein neues [Projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace), um ein Dashboard zu erstellen, das die Leistung der CTA-Schaltflächen auf der gesamten Site analysiert.
+Erstellen Sie als Nächstes eine neue [Projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace) , um ein Dashboard zu erstellen, um die Leistung der CTA-Schaltflächen auf der gesamten Site zu analysieren.
 
-1. Wählen Sie in der Analytics-Symbolleiste **Workspace** aus und klicken Sie auf **Neues Projekt erstellen**.
+1. Wählen Sie in der Analytics-Symbolleiste die Option **Arbeitsbereich** und klicken Sie auf **Neues Projekt erstellen**.
 
    ![Workspace](assets/create-analytics-workspace/create-workspace.png)
 
-1. Wählen Sie ein **leeres Projekt** oder wählen Sie eine der vordefinierten Vorlagen aus, die entweder von der Adobe oder von Ihrem Unternehmen erstellten benutzerdefinierten Vorlagen bereitgestellt werden. Je nach Analyse oder Anwendungsfall stehen verschiedene Vorlagen zur Verfügung. [Erfahren Sie ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) mehr über die verschiedenen verfügbaren Vorlagenoptionen.
+1. Wählen Sie als Ausgangspunkt eine **leeres Projekt** oder wählen Sie eine der vordefinierten Vorlagen aus, die entweder von der Adobe bereitgestellt werden oder von Ihrem Unternehmen erstellte benutzerdefinierte Vorlagen. Je nach Analyse oder Anwendungsfall stehen verschiedene Vorlagen zur Verfügung. [Weitere Infos](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) über die verschiedenen verfügbaren Vorlagenoptionen.
 
    In Ihrem Workspace-Projekt können Sie über die linke Leiste auf Bedienfelder, Tabellen, Visualisierungen und Komponenten zugreifen. Dies sind Ihre Projektbausteine.
 
-   * **[Komponenten](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)** : Komponenten sind Dimensionen, Metriken, Segmente oder Datumsbereiche, die alle in einer Freiformtabelle kombiniert werden können, um Ihre Geschäftsfrage zu beantworten. Machen Sie sich mit jedem Komponententyp vertraut, bevor Sie sich mit Ihrer Analyse befassen. Sobald Sie die Terminologie der Komponenten kennen, können Sie mit dem Ziehen und Ablegen beginnen, um Ihre Analyse in einer Freiformtabelle zu erstellen.
-   * **[Visualisierungen](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)**  - Visualisierungen wie Balken- oder Liniendiagramme werden dann über den Daten hinzugefügt, um sie visuell zu realisieren. Wählen Sie in der linken Leiste das mittlere Symbol Visualisierungen aus, um die vollständige Liste der verfügbaren Visualisierungen anzuzeigen.
-   * **[Bedienfelder](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/panels.html)**  - Ein Bedienfeld ist eine Sammlung von Tabellen und Visualisierungen. Sie können auf Bedienfelder über das Symbol oben links in Workspace zugreifen. Bedienfelder sind hilfreich, wenn Sie Ihre Projekte nach Zeiträumen, Report Suites oder Anwendungsfällen für Analysen organisieren möchten. Die folgenden Bedienfeldtypen sind in Analysis Workspace verfügbar:
+   * **[Komponenten](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)** - Komponenten sind Dimensionen, Metriken, Segmente oder Datumsbereiche, die alle in einer Freiformtabelle kombiniert werden können, um Ihre Geschäftsfrage zu beantworten. Machen Sie sich mit jedem Komponententyp vertraut, bevor Sie sich mit Ihrer Analyse befassen. Sobald Sie die Terminologie der Komponenten kennen, können Sie mit dem Ziehen und Ablegen beginnen, um Ihre Analyse in einer Freiformtabelle zu erstellen.
+   * **[Visualisierungen](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)** - Visualisierungen wie Balken- oder Liniendiagramme werden dann über den Daten hinzugefügt, damit sie visuell zum Tragen kommen. Wählen Sie in der linken Leiste das mittlere Symbol Visualisierungen aus, um die vollständige Liste der verfügbaren Visualisierungen anzuzeigen.
+   * **[Bedienfelder](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/panels.html)** - Ein Bedienfeld ist eine Sammlung von Tabellen und Visualisierungen. Sie können auf Bedienfelder über das Symbol oben links in Workspace zugreifen. Bedienfelder sind hilfreich, wenn Sie Ihre Projekte nach Zeiträumen, Report Suites oder Anwendungsfällen für Analysen organisieren möchten. Die folgenden Bedienfeldtypen sind in Analysis Workspace verfügbar:
 
    ![Vorlagenauswahl](assets/create-analytics-workspace/workspace-tools.png)
 
 ### Datenvisualisierung mit Analysis Workspace hinzufügen
 
-Erstellen Sie anschließend eine Tabelle, um eine visuelle Darstellung der Interaktion der Benutzer mit den Aktionsaufruf-Schaltflächen (CTA) auf der WKND Site-Startseite zu erstellen. Um eine solche Darstellung zu erstellen, verwenden wir die Daten, die in der Komponente [Klicks mit Adobe Analytics](./track-clicked-component.md) verfolgen erfasst wurden. Nachfolgend finden Sie eine kurze Zusammenfassung der für Benutzerinteraktionen mit den Aktionsaufrufen -Schaltflächen für die WKND-Site verfolgten Daten.
+Erstellen Sie anschließend eine Tabelle, um eine visuelle Darstellung der Interaktion der Benutzer mit den Aktionsaufruf-Schaltflächen (CTA) auf der WKND Site-Startseite zu erstellen. Um eine solche Darstellung zu erstellen, verwenden wir die in der [Verfolgen geklickter Komponenten mit Adobe Analytics](./track-clicked-component.md). Nachfolgend finden Sie eine kurze Zusammenfassung der für Benutzerinteraktionen mit den Aktionsaufrufen -Schaltflächen für die WKND-Site verfolgten Daten.
 
-* `eVar5` -   `Page template`
-* `eVar6` -  `Page Id`
-* `eVar7` -  `Page last modified date`
-* `eVar8` -  `CTA Button Id`
-* `eVar9` -  `Page Name`
-* `event8` -  `CTA Button Click event`
-* `prop8` -  `CTA Button Id`
+* `eVar5` -  `Page template`
+* `eVar6` - `Page Id`
+* `eVar7` - `Page last modified date`
+* `eVar8` - `CTA Button Id`
+* `eVar9` - `Page Name`
+* `event8` - `CTA Button Click event`
+* `prop8` - `CTA Button Id`
 
-1. Ziehen Sie die Dimension **Seite** in die Freiformtabelle. Sie sollten jetzt in der Lage sein, eine Visualisierung anzuzeigen, die den Seitennamen (eVar 9) und die entsprechenden Seitenansichten (Vorfälle) anzeigt, die in der Tabelle angezeigt werden.
+1. Ziehen Sie die **Seite** Dimension in die Freiformtabelle. Sie sollten jetzt in der Lage sein, eine Visualisierung anzuzeigen, die den Seitennamen (eVar 9) und die entsprechenden Seitenansichten (Vorfälle) anzeigt, die in der Tabelle angezeigt werden.
 
    ![Dimension der Seite](assets/create-analytics-workspace/evar9-dimension.png)
 
-1. Ziehen Sie die Metrik **CTA Click** (event8) in die Metrik &quot;Vorfälle&quot;und ersetzen Sie sie. Sie können jetzt eine Visualisierung anzeigen, in der der Seitenname (eVar 9) und die zugehörige Anzahl der CTA-Klickereignisse auf einer Seite angezeigt werden.
+1. Ziehen Sie die **CTA-Klick** (event8) auf die Metrik &quot;Vorkommen&quot;gesetzt und ersetzt sie. Sie können jetzt eine Visualisierung anzeigen, die den Seitennamen (eVar9) und die zugehörige Anzahl der CTA-Klickereignisse auf einer Seite anzeigt.
 
    ![Seitenmetrik - CTA-Klick](assets/create-analytics-workspace/evar8-cta-click.png)
 
@@ -166,7 +166,7 @@ Erstellen Sie anschließend eine Tabelle, um eine visuelle Darstellung der Inter
 
    ![eVar8](assets/create-analytics-workspace/evar8-metric.png)
 
-1. Sie können den Wert der Schaltfläche-ID mit einem benutzerfreundlicheren Namen mithilfe der Adobe Analytics Classifications ersetzen. Weitere Informationen zum Erstellen einer Klassifizierung für eine bestimmte Metrik [finden Sie hier](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html). In diesem Fall haben wir eine Classification-Metrik `Button Section (Button ID)` eingerichtet für `eVar8` , die die Schaltflächen-ID einem benutzerfreundlichen Namen zuordnet.
+1. Sie können den Wert der Schaltfläche-ID mit einem benutzerfreundlicheren Namen mithilfe der Adobe Analytics Classifications ersetzen. Weitere Informationen zum Erstellen einer Classification für eine bestimmte Metrik finden Sie unter [here](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html). In diesem Fall haben wir eine Classification-Metrik `Button Section (Button ID)` für `eVar8` , der die Schaltflächen-ID einem benutzerfreundlichen Namen zuordnet.
 
    ![Schaltflächenabschnitt](assets/create-analytics-workspace/button-section.png)
 
@@ -178,17 +178,17 @@ Analytics Classification ist eine Möglichkeit, Analytics-Variablendaten zu kate
 
 Als Nächstes erstellen wir eine Classification für Analytics-Variable.
 
-1. Wählen Sie im Symbolleistenmenü **Admin** **Report Suites** aus.
-1. Wählen Sie **Report Suite-ID** aus dem Fenster **Report Suite Manager** und klicken Sie auf **Einstellungen bearbeiten** > **Konversion** > **Konversionsklassifizierungen**
+1. Aus dem **Admin** Symbolleistenmenü auswählen **Report Suites**
+1. Wählen Sie die **Report Suite-ID** von **Report Suite Manager** Fenster und klicken Sie auf **Einstellungen bearbeiten** > **Konversion** > **Konversionsklassifizierungen**
 
    ![Konversionsklassifizierung](assets/create-analytics-workspace/conversion-classification.png)
 
-1. Wählen Sie in der Dropdownliste **Einen Klassifizierungstyp** auswählen die Variable (eVar8-Button-ID) aus, um eine Klassifizierung hinzuzufügen.
+1. Aus dem **Einen Klassifizierungstyp auswählen** in der Dropdownliste die Variable (eVar8-Schaltfläche-ID) auswählen, um eine Classification hinzuzufügen.
 1. Klicken Sie auf den Pfeil rechts neben der Variablen Klassifizierung , die im Abschnitt Klassifizierungen aufgeführt ist, um eine neue Klassifizierung hinzuzufügen.
 
    ![Konversionsklassifizierungstyp](assets/create-analytics-workspace/select-classification-variable.png)
 
-1. Geben Sie im Dialogfeld **Klassifizierung bearbeiten** einen geeigneten Namen für die Textklassifizierung ein. Eine Dimensionskomponente mit dem Namen Textklassifizierung wird erstellt.
+1. Im **Bearbeiten einer Klassifizierung** Geben Sie einen geeigneten Namen für die Textklassifizierung ein. Eine Dimensionskomponente mit dem Namen Textklassifizierung wird erstellt.
 
    ![Konversionsklassifizierungstyp](assets/create-analytics-workspace/new-classification.png)
 
@@ -205,26 +205,26 @@ Bevor Sie Klassifizierungen in Marketingberichte importieren, können Sie eine V
 Als Nächstes laden wir die Classification-Vorlage für die Variable Button-ID (eVar 8) herunter
 
 1. Navigieren Sie zu **Admin** > **Classification Importer**
-1. Laden wir eine Classification-Vorlage für die Konversionsvariable von der Registerkarte **Vorlage herunterladen** herunter.
+1. Laden wir eine Classification-Vorlage für die Konversionsvariable aus der **Vorlage herunterladen** Registerkarte.
    ![Konversionsklassifizierungstyp](assets/create-analytics-workspace/classification-importer.png)
 
 1. Geben Sie auf der Registerkarte Vorlage herunterladen die Konfiguration der Datenvorlage an.
    * **Report Suite auswählen** : Wählen Sie die Report Suite aus, die in der Vorlage verwendet werden soll. Die Report Suite und der Datensatz müssen übereinstimmen.
-   * **Zu klassifizierender**  Datensatz: Wählen Sie den Datentyp für die Datendatei aus. Das Menü enthält alle Berichte in Ihren Report Suites, die für Klassifizierungen konfiguriert sind.
+   * **Zu klassifizierender Datensatz** : Wählen Sie den Datentyp für die Datendatei aus. Das Menü enthält alle Berichte in Ihren Report Suites, die für Klassifizierungen konfiguriert sind.
    * **Kodierung** : Wählen Sie die Zeichenkodierung für die Datendatei aus. Das Standard-Kodierungsformat ist UTF-8.
 
-1. Klicken Sie auf **Download** und speichern Sie die Vorlagendatei auf Ihrem lokalen System. Die Vorlagendatei ist eine tabulatorgetrennte Datendatei (Dateierweiterung .tab ), die von den meisten Tabellenkalkulationsprogrammen unterstützt wird.
+1. Klicken **Download** und speichern Sie die Vorlagendatei auf Ihrem lokalen System. Die Vorlagendatei ist eine tabulatorgetrennte Datendatei (Dateierweiterung .tab ), die von den meisten Tabellenkalkulationsprogrammen unterstützt wird.
 1. Öffnen Sie die tabulatorgetrennte Datendatei mit einem Editor Ihrer Wahl.
 1. Fügen Sie die Schaltflächen-ID (eVar9) und einen entsprechenden Schaltflächennamen zur tabulatorgetrennten Datei für jeden eVar9-Wert aus Schritt 9 im Abschnitt hinzu.
 
    ![Schlüsselwert](assets/create-analytics-workspace/key-value.png)
 
-1. **** Speichern Sie die tabulatorgetrennte Datei.
-1. Navigieren Sie zur Registerkarte **Datei importieren** .
+1. **Speichern** die tabulatorgetrennte Datei.
+1. Navigieren Sie zum **Importdatei** Registerkarte.
 1. Konfigurieren Sie das Ziel für den Dateiimport.
    * **Report Suite auswählen** : WKND Site AEM (Report Suite)
-   * **Zu klassifizierender**  Datensatz: Schaltflächen-ID (Konversionsvariable eVar 8)
-1. Klicken Sie auf die Option **Datei** auswählen , um die tabulatorgetrennte Datei von Ihrem System hochzuladen, und klicken Sie dann auf **Datei importieren**
+   * **Zu klassifizierender Datensatz** : Schaltflächen-ID (Konversionsvariable eVar 8)
+1. Klicken Sie auf **Datei auswählen** Option zum Hochladen der tabulatorgetrennten Datei von Ihrem System aus, und klicken Sie dann auf **Importdatei**
 
    ![Datei-Importtool](assets/create-analytics-workspace/file-importer.png)
 
@@ -234,13 +234,13 @@ Als Nächstes laden wir die Classification-Vorlage für die Variable Button-ID (
 
 #### Konversionsvariable durch Klassifizierungsvariable ersetzen
 
-1. Wählen Sie in der Analytics-Symbolleiste **Workspace** aus und öffnen Sie den Arbeitsbereich, den wir unter [Neues Projekt in Analysis Workspace](#workspace-project) erstellt haben.
+1. Wählen Sie in der Analytics-Symbolleiste die Option **Arbeitsbereich** und öffnen Sie den Arbeitsbereich, den wir in erstellt haben. [Neues Projekt in Analysis Workspace erstellen](#workspace-project) Abschnitt dieses Tutorials.
 
    ![Workspace-Schaltflächen-ID](assets/create-analytics-workspace/workspace-report-button-id.png)
 
-1. Ersetzen Sie als Nächstes die Metrik **Button-ID** in Ihrem Arbeitsbereich, die die ID der Schaltfläche &quot;Aktionsaufruf (CTA)&quot;anzeigt, durch den Classification-Namen, der im vorherigen Schritt erstellt wurde.
+1. Ersetzen Sie als Nächstes das **Schaltflächen-ID** Metrik in Ihrem Arbeitsbereich, die die ID der Schaltfläche Aktionsaufruf (CTA) mit dem Classification-Namen anzeigt, der im vorherigen Schritt erstellt wurde.
 
-1. Suchen Sie im Komponenten-Finder nach **WKND CTA-Schaltflächen** und ziehen Sie die Dimension **WKND CTA-Schaltflächen (Schaltflächen-ID)** in die Metrik Schaltflächen-ID und ersetzen Sie sie.
+1. Suchen Sie in der Komponentensuche nach **WKND-CTA-Schaltflächen** und ziehen Sie die **WKND-CTA-Schaltflächen (Schaltflächen-ID)** Dimension auf die Schaltfläche-ID-Metrik ein und ersetzen Sie sie.
 
    * **Vorher**
 
@@ -250,7 +250,7 @@ Als Nächstes laden wir die Classification-Vorlage für die Variable Button-ID (
       ![Workspace-Schaltfläche nach](assets/create-analytics-workspace/wknd-button-after.png)
 
 1. Die Metrik &quot;Schaltflächen-ID&quot;, die die Schaltflächen-ID einer Aktionsaufruf-Schaltfläche (CTA) enthielt, wurde jetzt durch einen entsprechenden Namen ersetzt, der in der Klassifizierungsvorlage angegeben ist.
-1. Vergleichen wir nun die Analytics Workspace-Tabelle mit der WKND-Startseite und betrachten die Anzahl der CTA-Schaltflächen-Klicks und deren Analyse. Basierend auf den Daten der Freiformtabelle des Arbeitsbereichs ist klar, dass Benutzer 22 Mal auf die Schaltfläche **SKI NOW** und viermal auf die Schaltfläche WKND Home Page Camping in Westaustralien geklickt haben **Mehr lesen**.
+1. Vergleichen wir nun die Analytics Workspace-Tabelle mit der WKND-Startseite und betrachten die Anzahl der CTA-Schaltflächen-Klicks und deren Analyse. Basierend auf den Daten der Freiformtabelle im Arbeitsbereich ist klar, dass 22 Mal Benutzer auf die **SKI JETZT** Schaltfläche und viermal für den WKND Home Page Camping in Westaustralien **Mehr dazu** Schaltfläche.
 
    ![CTA-Bericht](assets/create-analytics-workspace/workspace-report-buttons-wknd.png)
 

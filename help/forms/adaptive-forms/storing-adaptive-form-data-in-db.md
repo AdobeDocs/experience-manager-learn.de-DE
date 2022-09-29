@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 3dd552da-fc7c-4fc7-97ec-f20b6cc33df0
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '414'
 ht-degree: 3%
 
 ---
@@ -27,7 +27,7 @@ Der Anwendungsfall besteht darin, einen AEM Workflow für die Übermittlung eine
 
    * Suchen Sie nach &quot;JDBC Connection Pool&quot;. Erstellen Sie einen neuen Day Commons JDBC Connection Pool. Geben Sie die spezifischen Einstellungen für Ihre Datenbank an.
 
-   * ![JDBC-Verbindungspool](assets/aemformstutorial-jdbc.png)
+   * ![OSGi-Konfiguration des JDBC-Verbindungspools](assets/aemformstutorial-jdbc.png)
 
 ## Angeben von Datenbankdetails
 
@@ -38,7 +38,7 @@ Der Anwendungsfall besteht darin, einen AEM Workflow für die Übermittlung eine
    * FormName - Spaltenname für den Namen des Formulars
    * ColumnName - Spaltenname für die AF-Daten
 
-![insertdata](assets/specify-database-details.png)
+   ![Angeben der Datenbankdetails für die OSGi-Konfiguration](assets/specify-database-details.png)
 
 
 

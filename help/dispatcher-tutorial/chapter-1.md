@@ -1,14 +1,14 @@
 ---
-title: '"Kapitel 1 - Dispatcher-Konzepte, -Muster und -Muster"'
+title: "Kapitel 1 - Dispatcher-Konzepte, -Muster und -Muster"
 description: In diesem Kapitel erhalten Sie eine kurze Einführung in den Verlauf und die Mechanik des Dispatchers. Außerdem wird erläutert, wie sich dies auf die Gestaltung AEM Komponenten durch einen Entwickler auswirkt.
 feature: Dispatcher
 topic: Architecture
 role: Architect
 level: Beginner
 exl-id: 3bdb6e36-4174-44b5-ba05-efbc870c3520
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '17468'
+source-wordcount: '17460'
 ht-degree: 0%
 
 ---
@@ -198,13 +198,13 @@ und
 
 `http://domain.com/home.html/suffix.html`
 
-Sie sind in AEM absolut gültig. Auf Ihrem lokalen Entwicklungscomputer würden Sie kein Problem sehen (ohne Dispatcher). Wahrscheinlich stoßen Sie auch bei UAT- oder Belastungstests nicht auf Probleme. Das Problem, vor dem wir stehen, ist so subtil, dass es die meisten Tests durchläuft.  Sie werden hart getroffen, wenn Sie sich zu Spitzenzeiten befinden, und Sie sind auf die Zeit beschränkt, um dieses Problem zu beheben. Wahrscheinlich haben Sie keinen Serverzugriff und keine Ressourcen, um es zu beheben. Wir waren dort...
+Sie sind in AEM absolut gültig. Auf Ihrem lokalen Entwicklungscomputer würden Sie kein Problem sehen (ohne Dispatcher). Wahrscheinlich stoßen Sie auch bei UAT- oder Belastungstests nicht auf Probleme. Das Problem, vor dem wir stehen, ist so subtil, dass es die meisten Tests durchläuft.  Es wird Sie hart treffen, wenn Sie sich zu Spitzenzeiten befinden und nur begrenzt Zeit haben, um dieses Problem zu beheben. Wahrscheinlich verfügen Sie nicht über Serverzugriff und keine Ressourcen, um es zu beheben. Wir waren dort...
 
 Also... was ist das Problem?
 
 `home.html` in einem Dateisystem kann entweder eine Datei oder ein Ordner sein. Nicht beides gleichzeitig mit AEM.
 
-Bei Anforderung `home.html` Zunächst wird es als Datei erstellt.
+Bei Anforderung `home.html` Zunächst wird sie als Datei erstellt.
 
 Nachfolgende Anforderungen an `home.html/suffix.html` Gültige Ergebnisse zurückgeben, jedoch als Datei `home.html` &quot;blockiert&quot;die Position im Dateisystem,  `home.html` kann nicht ein zweites Mal als Ordner erstellt werden und `home.html/suffix.html` wird nicht zwischengespeichert.
 
@@ -582,7 +582,7 @@ Siehst du? Das &quot;M&quot;in DAM steht für &quot;Management&quot;- wie in Dig
 
 Aus der Sicht eines AEM Entwicklers sah das Muster überaus elegant aus. Wenn der Dispatcher jedoch in die Gleichung aufgenommen wird, können Sie damit einverstanden sein, dass der naive Ansatz möglicherweise nicht ausreicht.
 
-Wir überlassen es Ihnen, zu entscheiden, ob es sich um ein Muster oder ein Gegenmuster handelt. Und vielleicht haben Sie bereits einige gute Ideen im Sinn, wie die oben erläuterten Probleme zu beheben? Gut. Dann werden Sie begierig sehen, wie andere Projekte diese Probleme gelöst haben.
+Wir überlassen es Ihnen, zu entscheiden, ob es sich um ein Muster oder ein Gegenmuster handelt. Und vielleicht haben Sie bereits einige gute Ideen im Sinn, wie die oben erläuterten Probleme zu beheben? Gut. Dann sollten Sie begierig sein, wie andere Projekte diese Probleme gelöst haben.
 
 ### Beheben häufiger Dispatcher-Probleme
 
@@ -756,7 +756,7 @@ Hier könnten Sie jedoch mit einem weiteren Nachteil konfrontiert sein, wenn URL
 
 Wow - Das ist eine ganze Menge Details, die man beachten muss, oder? Und es weigert sich, einfach zu verstehen, zu testen und zu debuggen. Und alles für eine scheinbar elegante Lösung. Zugegeben, es ist elegant - aber nur aus einer AEM-Perspektive. Zusammen mit dem Dispatcher wird es unangenehm.
 
-Und trotzdem - es löst keinen grundlegenden Vorbehalt, wenn ein Bild mehrmals auf verschiedenen Seiten verwendet wird, wird es unter diesen Seiten zwischengespeichert. Es gibt dort nicht viel Caching-Synergie.
+Und trotzdem - es löst keinen grundlegenden Vorbehalt, wenn ein Bild mehrmals auf verschiedenen Seiten verwendet wird, werden sie unter diesen Seiten zwischengespeichert. Es gibt dort nicht viel Caching-Synergie.
 
 Im Allgemeinen ist URL-Fingerabdrücke ein gutes Tool, um in Ihrem Toolkit zu haben, aber Sie müssen es mit Vorsicht anwenden, da es neue Probleme verursachen kann, während nur einige wenige vorhandene gelöst werden.
 
@@ -1068,7 +1068,7 @@ Wow.. die Diskussion über den Spooler wurde länger und komplizierter als erwar
 
 ### Grundlagen
 
-#### Einführung
+#### Einführung   
 
 Wir haben die _statfile_ vor. Sie bezieht sich auf die automatische Invalidierung:
 

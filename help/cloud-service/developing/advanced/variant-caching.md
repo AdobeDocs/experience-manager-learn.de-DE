@@ -4,9 +4,10 @@ description: Erfahren Sie, wie Sie AEM als Cloud-Service einrichten und verwende
 role: Architect, Developer
 topic: Development
 feature: CDN Cache, Dispatcher
-source-git-commit: fa85f0270e21cc9857f95c541a06e87cf26d5798
+exl-id: fdf62074-1a16-437b-b5dc-5fb4e11f1355
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '559'
 ht-degree: 1%
 
 ---
@@ -17,7 +18,7 @@ Erfahren Sie, wie Sie AEM als Cloud-Service einrichten und verwenden, um die Zwi
 
 ## Anwendungsbeispiele
 
-+ Jeder Dienstleister, der basierend auf dem geografischen Standort des Benutzers und dem Cache von Seiten mit dynamischen Inhalten unterschiedliche Service-Angebote und entsprechende Preisoptionen anbietet, sollte im CDN und Dispatcher verwaltet werden.
++ Jeder Dienstleister, der basierend auf dem geografischen Standort des Benutzers und dem Cache von Seiten mit dynamischen Inhalten unterschiedliche Service-Angebote und entsprechende Preisoptionen anbietet, sollte in CDN und Dispatcher verwaltet werden.
 
 + Ein Einzelhandelskunde verfügt über Geschäfte im ganzen Land und jeder Store hat je nach Standort unterschiedliche Angebote und der Cache von Seiten mit dynamischen Inhalten sollte im CDN und Dispatcher verwaltet werden.
 
@@ -27,7 +28,7 @@ Erfahren Sie, wie Sie AEM als Cloud-Service einrichten und verwenden, um die Zwi
 
 + AEM Code muss das Cookie setzen __&quot;x-aem-variant&quot;__ zum bevorzugten Status des Besuchers (z. B. `Set-Cookie: x-aem-variant=NY`) in der entsprechenden HTTP-Antwort der ursprünglichen HTTP-Anfrage.
 
-+ Nachfolgende Anforderungen des Besuchers senden dieses Cookie (z. B. `“Cookie: x-aem-variant=NY”`) und das Cookie wird auf CDN-Ebene in einen vordefinierten Header umgewandelt (d. h. `x-aem-variant:NY`), der an den Dispatcher übergeben wird.
++ Nachfolgende Anforderungen des Besuchers senden dieses Cookie (z. B. `"Cookie: x-aem-variant=NY"`) und das Cookie auf CDN-Ebene in einen vordefinierten Header umgewandelt wird (d. h. `x-aem-variant:NY`), der an den Dispatcher übergeben wird.
 
 + Eine Apache-Neuschreibungsregel ändert den Anfragepfad, um den Kopfzeilenwert als Apache Sling-Selektor in die Seiten-URL aufzunehmen (z. B. `/page.variant=NY.html`). Dadurch kann AEM Publish verschiedene Inhalte basierend auf dem Selektor bereitstellen und der Dispatcher eine Seite pro Variante zwischenspeichern.
 

@@ -1,20 +1,19 @@
 ---
 title: Generieren des Druckkanaldokuments durch Zusammenführen von Daten
-seo-title: Generieren des Druckkanaldokuments durch Zusammenführen von Daten
 description: Erfahren Sie, wie Sie ein Dokument für den Druckkanal generieren, indem Sie die im Eingabestream enthaltenen Daten zusammenführen.
-seo-description: Erfahren Sie, wie Sie ein Dokument für den Druckkanal generieren, indem Sie die im Eingabestream enthaltenen Daten zusammenführen.
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 3bfbb4ef-0c51-445a-8d7b-43543a5fa191
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '479'
 ht-degree: 2%
 
 ---
@@ -67,7 +66,7 @@ public PrefillData getPrefillData(DataOptions options) throws FormsException {
 
 ### Erstellen der WorkflowProcess-Implementierung
 
-Das Code-Snippet zur WorkflowProcess-Implementierung wird unten gezeigt. Dieser Code wird ausgeführt, wenn der Prozessschritt im AEM Workflow mit dieser Implementierung verknüpft ist. Diese Implementierung erwartet drei Prozessargumente, die unten beschrieben werden:
+Das Code-Snippet zur WorkflowProcess-Implementierung wird unten gezeigt. Dieser Code wird ausgeführt, wenn der Prozessschritt im AEM Workflow mit dieser Implementierung verknüpft ist. Diese Implementierung erwartet 3 Prozessargumente, die unten beschrieben werden:
 
 * Name des DataFile-Pfads, der beim Konfigurieren des adaptiven Formulars angegeben wird
 * Name der Druckkanalvorlage

@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: deef09d9-82ec-4e61-b7ee-e72d1cd4e9e0
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '358'
 ht-degree: 0%
 
 ---
@@ -267,4 +267,4 @@ Sobald wir den Dienst und die benutzerdefinierte Übermittlungsaktion definiert 
 * [Importieren Sie das adaptive Formular und den benutzerdefinierten Übermittlungs-Handler mit Package Manager.](assets/create-acs-profile-on-af-submission.zip).Dieses Paket enthält das adaptive Formular, das für die Übermittlung an eine benutzerdefinierte Übermittlungsaktion konfiguriert ist.
 * Vorschau der [Formular](http://localhost:4502/content/dam/formsanddocuments/createcampaignprofile/jcr:content?wcmmode=disabled)
 * Füllen Sie alle Felder aus und senden Sie
-* Ein neues Profil wird in Ihrer ACS-Instanz erstellt.
+* Ein neues Profil wird in Ihrer ACS-Instanz erstellt

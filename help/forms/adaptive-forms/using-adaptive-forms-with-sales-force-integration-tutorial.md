@@ -8,9 +8,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 7a4fd109-514a-41a8-a3fe-53c1de32cb6d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '900'
+source-wordcount: '892'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## Voraussetzungen {#prerequisites}
 
-In diesem Artikel werden wir den Prozess der Erstellung einer Datenquelle mit Salesforce durchlaufen
+In diesem Artikel gehen wir durch den Prozess der Erstellung einer Datenquelle mit Salesforce
 
 Voraussetzungen für dieses Tutorial:
 
@@ -34,13 +34,13 @@ Voraussetzungen für dieses Tutorial:
 * Bereitstellung geeigneter OAuth-Bereiche für die App (ich habe alle verfügbaren OAuth-Bereiche zum Testen ausgewählt)
 * Geben Sie die Callback-URL an. Die Callback-URL in meinem Fall war
 
-   * Wenn Sie **AEM Forms 6.3** lautet die Callback-URL https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html. In dieser URL-Erstellung ist der Name meines Formulardatenmodells.
+   * Wenn Sie **AEM Forms 6.3**, lautet die Callback-URL https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html. In dieser URL-Erstellung ist der Name meines Formulardatenmodells.
 
-   * Wenn Sie** AEM Forms 6.4** verwenden, lautet die Callback-URL https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
+   * Wenn Sie &quot;AEM Forms 6.4**&quot;verwenden, lautet die Callback-URL https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
 
 In diesem Beispiel ist gbedekar -w7-1:6443 der Name meines Servers und der Port, auf dem AEM ausgeführt wird.
 
-Nachdem Sie die Connected App erstellt haben, notieren Sie den Hinweis **Consumer Key und Secret Key**. Diese werden beim Erstellen der Datenquelle in AEM Forms benötigt.
+Nachdem Sie die Connected App erstellt haben, notieren Sie den Hinweis **Consumer Key und Secret Key**. Sie benötigen diese beim Erstellen der Datenquelle in AEM Forms.
 
 Nachdem Sie Ihre verbundene App erstellt haben, müssen Sie eine Swagger-Datei für die Vorgänge erstellen, die Sie in Salesforce ausführen müssen. Eine Beispiel-Swagger-Datei ist als Teil der herunterladbaren Assets enthalten. Mit dieser Swagger-Datei können Sie das &quot;Lead&quot;-Objekt bei der Übermittlung des adaptiven Formulars erstellen. Bitte schauen Sie sich diese Swagger-Datei an.
 

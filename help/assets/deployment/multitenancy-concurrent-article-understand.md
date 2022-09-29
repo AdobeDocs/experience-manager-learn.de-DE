@@ -3,20 +3,20 @@ title: Grundlegendes zu Multitenancy und gleichzeitiger Entwicklung
 description: Erfahren Sie mehr über die Vorteile, Herausforderungen und Techniken zur Verwaltung einer Implementierung mit mehreren Mandanten mit Adobe Experience Manager Assets.
 feature: Connected Assets
 version: 6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: c9ee29d4-a8a5-4e61-bc99-498674887da5
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2022'
-ht-degree: 1%
+source-wordcount: '2017'
+ht-degree: 0%
 
 ---
 
-
 # Grundlegendes zu Multitenancy und gleichzeitiger Entwicklung {#understanding-multitenancy-and-concurrent-development}
 
-## Einführung {#introduction}
+## Einführung    {#introduction}
 
 Wenn mehrere Teams ihren Code in denselben AEM bereitstellen, sollten sie bestimmte Vorgehensweisen befolgen, um sicherzustellen, dass Teams so unabhängig wie möglich arbeiten können, ohne auf die Zehen anderer Teams zu springen. Obwohl sie nie vollständig eliminiert werden können, minimieren diese Techniken die Abhängigkeiten zwischen verschiedenen Teams. Damit ein gleichzeitiges Entwicklungsmodell erfolgreich sein kann, ist eine gute Kommunikation zwischen den Entwicklungsteams von entscheidender Bedeutung.
 
@@ -53,7 +53,7 @@ Bei der Verwaltung von Maven-Projektabhängigkeiten ist es wichtig, dass alle Te
 
 Projekt A hängt von Version 1.0 der Bibliothek ab, foo; foo Version 1.0 ist in ihre Bereitstellung auf dem Server eingebettet. Projekt B hängt von Version 1.1 der Bibliothek ab, foo; foo Version 1.1 ist in ihre Implementierung eingebettet.
 
-Außerdem nehmen wir an, dass sich in dieser Bibliothek eine API zwischen Version 1.0 und Version 1.1 geändert hat. Zu diesem Zeitpunkt funktioniert eines dieser beiden Projekte nicht mehr ordnungsgemäß.
+Nehmen wir außerdem an, dass sich in dieser Bibliothek eine API zwischen Version 1.0 und Version 1.1 geändert hat. Zu diesem Zeitpunkt funktioniert eines dieser beiden Projekte nicht mehr ordnungsgemäß.
 
 Um diese Bedenken auszuräumen, empfehlen wir, alle Maven-Projekte zu untergeordneten Elementen eines übergeordneten Reaktorprojekts zu machen. Dieses Reaktorprojekt dient zwei Zwecken: Sie ermöglicht die Erstellung und Bereitstellung aller Projekte, falls gewünscht, und enthält die Abhängigkeitsdeklarationen für alle untergeordneten Projekte. Das übergeordnete Projekt definiert die Abhängigkeiten und ihre Versionen, während die untergeordneten Projekte nur die Abhängigkeiten deklarieren, die sie benötigen, und die Version vom übergeordneten Projekt übernehmen.
 
@@ -90,7 +90,7 @@ Dadurch entfällt nicht die Notwendigkeit, dass mehrere Teams von demselben Code
 
 Um sicherzustellen, dass die Änderungen an diesem Kernpaket die Funktionalität des Systems nicht beeinträchtigen, empfehlen wir, dass ein leitender Entwickler oder Entwicklerteam die Aufsicht behält. Eine Option besteht darin, ein einzelnes Team zu haben, das alle Änderungen an diesem Paket verwaltet. Eine andere Möglichkeit besteht darin, Teams Pull-Anforderungen senden zu lassen, die von diesen Ressourcen geprüft und zusammengeführt werden. Es ist wichtig, dass ein Governance-Modell von den Teams entwickelt und akzeptiert wird und dass die Entwickler diesem folgen.
 
-## Verwalten des Bereitstellungsumfangs&amp;nbsp {#managing-deployment-scope}
+## Verwalten des Bereitstellungsumfangs  {#managing-deployment-scope}
 
 Da verschiedene Teams ihren Code in demselben Repository bereitstellen, ist es wichtig, dass sie die Änderungen der anderen nicht überschreiben. AEM verfügt über einen Mechanismus, um dies bei der Bereitstellung von Inhaltspaketen, dem Filter, zu steuern. XML-Datei. Es ist wichtig, dass es keine Überschneidungen zwischen Filtern gibt.  XML-Dateien, da andernfalls die Bereitstellung eines Teams die vorherige Bereitstellung eines anderen Teams löschen könnte. Um diesen Punkt zu veranschaulichen, sehen Sie sich die folgenden Beispiele für gut erstellte und problematische Filterdateien an:
 
@@ -108,13 +108,13 @@ Da es sich um einen globalen Systempfad handelt und nicht nur für eine Site spe
 
 ### Überlagerungen {#overlays}
 
-Überlagerungen werden häufig verwendet, um vordefinierte AEM zu erweitern oder zu ersetzen. Die Verwendung einer Überlagerung wirkt sich jedoch auf die gesamte AEM Anwendung aus (d. h. alle Funktionsänderungen sind für alle Mandanten verfügbar). Dies wäre noch komplizierter, wenn die Mandanten unterschiedliche Anforderungen an die Überlagerung hätten. Idealerweise sollten Unternehmensgruppen zusammenarbeiten, um sich auf die Funktionalität und das Erscheinungsbild der AEM Verwaltungskonsolen zu einigen.
+Überlagerungen werden häufig verwendet, um vordefinierte AEM zu erweitern oder zu ersetzen. Die Verwendung einer Überlagerung wirkt sich jedoch auf die gesamte AEM Anwendung aus (d. h., alle überlagerten Funktionsänderungen werden für alle Mandanten verfügbar gemacht). Dies wäre noch komplizierter, wenn die Mandanten unterschiedliche Anforderungen an die Überlagerung hätten. Idealerweise sollten Unternehmensgruppen zusammenarbeiten, um sich auf die Funktionalität und das Erscheinungsbild AEM Verwaltungskonsolen zu einigen.
 
 Wenn zwischen den verschiedenen Geschäftsbereichen kein Konsens erzielt werden kann, könnte eine mögliche Lösung darin bestehen, einfach keine Überlagerungen zu verwenden. Erstellen Sie stattdessen eine benutzerdefinierte Kopie der Funktion und stellen Sie sie über einen anderen Pfad für jeden Mandanten bereit. Dadurch kann jeder Mandant über ein völlig anderes Benutzererlebnis verfügen. Dieser Ansatz erhöht jedoch auch die Implementierungskosten und die nachfolgenden Aktualisierungsbemühungen.
 
 ### Workflow-Starter {#workflow-launchers}
 
-AEM verwendet Workflow-Starter, um die Ausführung des Triggers-Workflows automatisch durchzuführen, wenn bestimmte Änderungen im Repository vorgenommen werden. AEM bietet mehrere vorkonfigurierte Starter, um beispielsweise die Generierung von Ausgabedarstellungen und die Metadatenextraktion für neue und aktualisierte Assets auszuführen. Es ist zwar möglich, diese Starter unverändert zu lassen, doch in einer Umgebung mit mehreren Mandanten müssen einzelne Starter wahrscheinlich für jeden Mandanten erstellt und gepflegt werden, wenn Mandanten unterschiedliche Anforderungen an Starter und/oder Workflow-Modelle haben. Diese Starter müssen so konfiguriert werden, dass sie auf den Aktualisierungen ihres Mandanten ausgeführt werden, während Inhalte anderer Mandanten unverändert bleiben. Dies lässt sich einfach erreichen, indem Launcher auf bestimmte Repository-Pfade angewendet werden, die mandantenspezifisch sind.
+AEM verwendet Workflow-Starter, um die Ausführung des Triggers-Workflows automatisch durchzuführen, wenn bestimmte Änderungen im Repository vorgenommen werden. AEM bietet mehrere vorkonfigurierte Starter, um beispielsweise die Generierung von Ausgabedarstellungen und die Metadatenextraktion für neue und aktualisierte Assets auszuführen. Es ist zwar möglich, diese Starter unverändert zu lassen, doch in einer Umgebung mit mehreren Mandanten müssen, wenn Mandanten unterschiedliche Anforderungen an Starter und/oder Workflow-Modelle haben, wahrscheinlich einzelne Starter für jeden Mandanten erstellt und gepflegt werden. Diese Starter müssen so konfiguriert sein, dass sie auf den Aktualisierungen ihres Mandanten ausgeführt werden, während Inhalte anderer Mandanten unverändert bleiben. Dies lässt sich einfach erreichen, indem Launcher auf bestimmte Repository-Pfade angewendet werden, die mandantenspezifisch sind.
 
 ### Vanity-URLs {#vanity-urls}
 
@@ -124,15 +124,15 @@ AEM bietet Vanity-URL-Funktionen, die pro Seite festgelegt werden können. Das P
 
 Bei der Entwicklung von Komponenten und Vorlagen für mehrere Authoring-Gruppen ist es wichtig, die Eigenschaften componentGroup und allowedPaths effektiv zu nutzen. Indem wir diese effektiv mit Site-Designs nutzen, können wir sicherstellen, dass Autoren von Marke A nur Komponenten und Vorlagen sehen, die für ihre Site erstellt wurden, während Autoren von Marke B nur ihre sehen.
 
-### Tests {#testing}
+### Testen {#testing}
 
 Eine gute Architektur und offene Kommunikationskanäle können zwar dazu beitragen, das Eintreten von Fehlern in unerwartete Bereiche der Site zu verhindern, doch sind diese Ansätze nicht stichhaltig. Aus diesem Grund ist es wichtig, die Bereitstellung auf der Plattform vollständig zu testen, bevor etwas in die Produktion eingeführt wird. Dies erfordert die Koordinierung zwischen Teams bei ihren Release-Zyklen und macht eine Suite automatisierter Tests erforderlich, die so viele Funktionen wie möglich abdecken. Da ein System von mehreren Teams gemeinsam genutzt wird, werden Leistung, Sicherheit und Belastungstests wichtiger denn je.
 
 ## Operative Aspekte {#operational-considerations}
 
-### Gemeinsame Ressourcen {#shared-resources}
+### Freigegebene Ressourcen {#shared-resources}
 
-AEM läuft innerhalb einer einzelnen JVM; Alle bereitgestellten AEM teilen sich von Natur aus Ressourcen miteinander, zusätzlich zu den Ressourcen, die bereits für die normale AEM verbraucht wurden. Innerhalb des JVM-Speichers selbst gibt es keine logische Trennung von Threads. Außerdem werden die endlichen Ressourcen, die AEM zur Verfügung stehen, wie Speicher, CPU und Datenträger-i/o ebenfalls freigegeben. Jeder Mandant, der Ressourcen verbraucht, wirkt sich unweigerlich auf andere Systemmandanten aus.
+AEM läuft innerhalb einer einzelnen JVM; Alle bereitgestellten AEM teilen sich von Natur aus Ressourcen miteinander, zusätzlich zu den Ressourcen, die bereits für die normale AEM verbraucht wurden. Innerhalb des JVM-Speichers selbst gibt es keine logische Trennung von Threads und die endlichen Ressourcen, die AEM zur Verfügung stehen, wie Speicher, CPU und Datenträger-E/A werden ebenfalls freigegeben. Jeder Mandant, der Ressourcen verbraucht, wirkt sich unweigerlich auf andere Systemmandanten aus.
 
 ### Leistung {#performance}
 

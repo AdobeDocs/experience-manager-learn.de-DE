@@ -1,18 +1,18 @@
 ---
 title: Festlegen des JSON-Datenelements im AEM Forms-Workflow
 description: Da ein adaptives Formular in AEM Workflow an verschiedene Benutzer weitergeleitet wird, müssen bestimmte Felder oder Bereiche je nach Benutzer, die das Formular überprüfen, ausgeblendet oder deaktiviert werden. Um diese Anwendungsfälle zu erfüllen, legen wir normalerweise den Wert eines ausgeblendeten Felds fest. Basierend auf den Werten dieses ausgeblendeten Felds können Geschäftsregeln erstellt werden, um entsprechende Bereiche oder Felder auszublenden/zu deaktivieren.
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.4
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: fbe6d341-7941-46f5-bcd8-58b99396d351
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '685'
 ht-degree: 2%
 
 ---
-
 
 # Festlegen des Werts des JSON-Datenelements im AEM Forms-Workflow {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
@@ -20,7 +20,7 @@ Da ein adaptives Formular in AEM Workflow an verschiedene Benutzer weitergeleite
 
 ![Festlegen des Werts eines Elements in den JSON-Daten](assets/capture-3.gif)
 
-In AEM Forms OSGi müssen wir ein benutzerdefiniertes OSGi-Bundle schreiben, um den Wert des JSON-Datenelements festzulegen. Das Bundle wird im Rahmen dieses Tutorials bereitgestellt.
+In AEM Forms OSGi müssen wir ein benutzerdefiniertes OSGi-Bundle erstellen, um den Wert des JSON-Datenelements festzulegen. Das Bundle wird im Rahmen dieses Tutorials bereitgestellt.
 
 Wir verwenden Prozessschritt in AEM Workflow. Wir verknüpfen dieses Prozessschritt mit dem OSGi-Bundle &quot;Set Value of Element in Json&quot;.
 
@@ -40,27 +40,27 @@ So stellen Sie die Assets auf Ihrem lokalen System bereit:
 
 * [Herunterladen und Bereitstellen von DevelopingWitheServiceUserBundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [Laden Sie das SetValue-Bundle herunter und stellen Sie es bereit](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGi-Bundle, mit dem Sie die Werte eines Elements in den gesendeten JSON-Daten festlegen können.
+* [Herunterladen und Bereitstellen des setvalue-Bundles](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGi-Bundle, mit dem Sie die Werte eines Elements in den gesendeten JSON-Daten festlegen können.
 
 * [Herunterladen und Extrahieren des Inhalts der ZIP-Datei](assets/set-value-jsondata.zip)
-   * Verweisen Sie Ihren Browser auf [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
+   * Zeigen Sie Ihren Browser auf [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
       * Importieren und installieren Sie die Datei SetValueOfElementInJSONDataWorkflow.zip. Dieses Paket enthält das Beispiel-Workflow-Modell und das Formulardatenmodell, das mit dem Formular verknüpft ist.
 
-* Verweisen Sie Ihren Browser auf [Forms und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Zeigen Sie Ihren Browser auf [Forms und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicken Sie auf Erstellen | Datei-Upload
 * Datei &quot;Upload TimeOffRequestForm.zip&quot;
    **Dieses Formular wurde mit AEM Forms 6.4 erstellt. Bitte stellen Sie sicher, dass Sie AEM Forms 6.4 oder höher verwenden.**
-* Öffnen Sie [form](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
+* Öffnen Sie die [Formular](http://localhost:4502/content/dam/formsanddocuments/timeoffrequest/jcr:content?wcmmode=disabled)
 * Füllen Sie die Start- und Enddaten aus und senden Sie das Formular.
-* Gehen Sie zu [&quot;Inbox&quot;](http://localhost:4502/aem/inbox)
+* Navigieren Sie zu [&quot;Posteingang&quot;](http://localhost:4502/aem/inbox)
 * Öffnen Sie das mit der Aufgabe verknüpfte Formular.
 * Beachten Sie, dass die Felder im ersten Bedienfeld deaktiviert sind.
 * Beachten Sie, dass der Bereich zum Genehmigen oder Ablehnen der Anfrage jetzt angezeigt wird.
 
 >[!NOTE]
 >
->Da wir das adaptive Formular mithilfe des Benutzerprofils vorab ausfüllen, stellen Sie sicher, dass die Administrator-[Benutzerprofilinformationen ](http://localhost:4502/security/users.html) vorhanden sind. Stellen Sie mindestens sicher, dass Sie die Feldwerte FirstName, LastName und Email festgelegt haben.
->Sie können die Debug-Protokollierung aktivieren, indem Sie die Protokollfunktion für com.aemforms.setvalue.core.SetValueInJson [von hier](http://localhost:4502/system/console/slinglog) aktivieren.
+>Da wir das adaptive Formular mit dem Benutzerprofil vorab ausfüllen, stellen Sie sicher, dass der Administrator [Benutzerprofilinformationen ](http://localhost:4502/security/users.html). Stellen Sie mindestens sicher, dass Sie die Feldwerte FirstName, LastName und Email festgelegt haben.
+>Sie können die Debug-Protokollierung aktivieren, indem Sie die Protokollfunktion für com.aemforms.setvalue.core.SetValueInJson aktivieren [von hier](http://localhost:4502/system/console/slinglog)
 
 >[!NOTE]
 >

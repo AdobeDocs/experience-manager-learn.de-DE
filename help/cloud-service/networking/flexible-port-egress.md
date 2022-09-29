@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1080'
-ht-degree: 1%
+source-wordcount: '1076'
+ht-degree: 5%
 
 ---
 
@@ -52,7 +52,7 @@ Dieses Tutorial verwendet `curl` , um die Cloud Manager-API-Konfigurationen vorz
 
 Aktivieren Sie zunächst die flexible Port-Ausfahrt auf AEM as a Cloud Service.
 
-1. Bestimmen Sie zunächst mithilfe der Cloud Manager-API die Region, in der das erweiterte Netzwerk eingerichtet wird. [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) Vorgang. Die `region name` ist erforderlich, um nachfolgende Cloud Manager-API-Aufrufe durchzuführen. In der Regel wird der Bereich verwendet, in dem sich die Produktionsumgebung befindet.
+1. Bestimmen Sie zunächst mithilfe der Cloud Manager-API, in welcher Region die erweiterte Vernetzung eingerichtet ist. [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) Vorgang. Die `region name` ist erforderlich, um nachfolgende Cloud Manager-API-Aufrufe durchzuführen. In der Regel wird der Bereich verwendet, in dem sich die Produktionsumgebung befindet.
 
    __listRegions-HTTP-Anfrage__
 
@@ -180,7 +180,7 @@ Bei HTTP/HTTPS-Aufrufen an externe Dienste an nicht standardmäßigen Ports gibt
 >
 > Siehe AEM Dokumentation zu flexiblen Port-Ausgängen von as a Cloud Service für [den vollständigen Satz von Routing-Regeln](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#flexible-port-egress-traffic-routing).
 
-#### Codebeispiele
+#### Code-Beispiele
 
 <table>
 <tr>
@@ -209,7 +209,7 @@ Verbindungen zu externen Diensten werden dann über die `AEM_PROXY_HOST` und des
 |---------------------------------|----------|----------------|------------------|----------|
 | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-#### Codebeispiele
+#### Code-Beispiele
 
 <table><tr>
    <td>

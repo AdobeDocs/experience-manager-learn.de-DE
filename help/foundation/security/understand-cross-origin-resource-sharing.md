@@ -11,9 +11,9 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 41be8c934bba16857d503398b5c7e327acd8d20b
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '910'
 ht-degree: 1%
 
 ---
@@ -41,7 +41,7 @@ Eine Richtlinie wird durch Vergleich der
 
 Es wird die erste Richtlinie verwendet, die diesen Werten entspricht. Wenn keine gefunden wird, wird jede [!DNL CORS] Anfrage wird abgelehnt.
 
-Wenn keine Richtlinie konfiguriert ist, [!DNL CORS] -Anfragen werden auch nicht beantwortet, da der -Handler deaktiviert und daher effektiv verweigert wird - solange kein anderes Modul des Servers auf [!DNL CORS].
+Wenn keine Richtlinie konfiguriert ist, [!DNL CORS] -Anfragen werden auch nicht beantwortet, da der -Handler deaktiviert ist und daher effektiv verweigert wird - solange kein anderes Modul des Servers auf [!DNL CORS].
 
 ### Eigenschaften für „Policy“
 
@@ -155,7 +155,7 @@ Um das Zwischenspeichern von CORS-Headern zu ermöglichen, fügen Sie allen unte
 
 Denken Sie daran, **Starten Sie die Webserver-Anwendung neu** , nachdem Sie Änderungen an der `dispatcher.any` -Datei.
 
-Wahrscheinlich muss der Cache vollständig geleert werden, um sicherzustellen, dass die Header bei der nächsten Anforderung nach einer `/cache/headers` Konfigurationsaktualisierung.
+Es ist wahrscheinlich erforderlich, den Cache vollständig zu löschen, um sicherzustellen, dass die Kopfzeilen bei der nächsten Anforderung nach einer `/cache/headers` Konfigurationsaktualisierung.
 
 ## Fehlerbehebung für CORS
 

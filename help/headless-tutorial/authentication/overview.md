@@ -1,6 +1,6 @@
 ---
-title: Authentifizierung bei AEM als Cloud Service über eine externe Anwendung
-description: Erfahren Sie, wie eine externe Anwendung mithilfe von Zugriffstoken für lokale Entwicklung und Dienstanmeldeinformationen programmatisch authentifiziert und mit AEM als Cloud Service über HTTP interagieren kann.
+title: Authentifizierung bei AEM von einer externen Anwendung as a Cloud Service
+description: Erfahren Sie, wie eine externe Anwendung mithilfe von Zugriffstoken für lokale Entwicklung und Dienstanmeldeinformationen programmatisch authentifiziert und mit AEM über HTTP interagieren kann.
 version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
@@ -13,18 +13,18 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '643'
 ht-degree: 2%
 
 ---
 
-# Token-basierte Authentifizierung für AEM als Cloud Service
+# Token-basierte Authentifizierung für AEM as a Cloud Service
 
 AEM stellt eine Vielzahl von HTTP-Endpunkten bereit, mit denen per Headless interagiert werden kann, von GraphQL über Content Services bis hin zur Assets-HTTP-API. Häufig müssen sich diese Headless-Konsumenten bei AEM authentifizieren, um auf geschützte Inhalte oder Aktionen zugreifen zu können. Um dies zu erleichtern, unterstützt AEM die Token-basierte Authentifizierung von HTTP-Anforderungen von externen Anwendungen, Diensten oder Systemen.
 
-In diesem Tutorial erfahren Sie, wie sich eine externe Anwendung programmgesteuert authentifizieren und mit AEM als Cloud Service über HTTP über Zugriffstoken interagieren kann.
+In diesem Tutorial erfahren Sie, wie eine externe Anwendung programmgesteuert authentifiziert und mit interagiert werden kann, um über HTTP über Zugriffstoken as a Cloud Service AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330460/?quality=12&learn=on)
 
@@ -32,14 +32,14 @@ In diesem Tutorial erfahren Sie, wie sich eine externe Anwendung programmgesteue
 
 Stellen Sie sicher, dass Folgendes vorhanden ist, bevor Sie mit diesem Tutorial fortfahren:
 
-1. Zugriff auf AEM als Cloud Service-Umgebung (vorzugsweise eine Entwicklungsumgebung oder ein Sandbox-Programm)
-1. Mitgliedschaft in der AEM als Cloud Service-Umgebung - Autorendienste AEM Administrator-Produktprofil
-1. Mitgliedschaft in oder Zugriff auf Ihren Adobe IMS-Organisationsadministrator (dieser muss die [Dienstanmeldeinformationen](./service-credentials.md) einmal initialisieren)
-1. Die neueste [WKND-Site](https://github.com/adobe/aem-guides-wknd), die in Ihrer Cloud Service-Umgebung bereitgestellt wurde
+1. Zugriff auf AEM as a Cloud Service Umgebung (vorzugsweise eine Entwicklungsumgebung oder ein Sandbox-Programm)
+1. Mitgliedschaft in den Autorendiensten der AEM as a Cloud Service Umgebung AEM Administrator-Produktprofil
+1. Mitgliedschaft in oder Zugriff auf Ihren Adobe IMS-Organisationsadministrator (dieser muss eine einmalige Initialisierung der [Dienstberechtigungen](./service-credentials.md))
+1. Die neuesten [WKND-Site](https://github.com/adobe/aem-guides-wknd) in Ihrer Cloud Service-Umgebung bereitgestellt werden
 
 ## Übersicht über externe Anwendungen
 
-In diesem Tutorial wird eine [einfache Node.js-Anwendung](./assets/aem-guides_token-authentication-external-application.zip) verwendet, die über die Befehlszeile ausgeführt wird, um Asset-Metadaten in AEM als Cloud Service mithilfe der [Assets-HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=de) zu aktualisieren.
+In diesem Tutorial wird eine [Einfache Node.js-Anwendung](./assets/aem-guides_token-authentication-external-application.zip) Führen Sie über die Befehlszeile aus, um Asset-Metadaten auf AEM as a Cloud Service mithilfe von zu aktualisieren. [Assets-HTTP-API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=de).
 
 Die Node.js-Anwendung wird wie folgt ausgeführt:
 
@@ -47,27 +47,27 @@ Die Node.js-Anwendung wird wie folgt ausgeführt:
 
 1. Die Node.js-Anwendung wird über die Befehlszeile aufgerufen
 1. Befehlszeilenparameter definieren:
-   + Der AEM als Cloud Service-Autorendiensthost, mit dem eine Verbindung hergestellt werden soll (`aem`)
-   + Der AEM Asset-Ordner, dessen Assets aktualisiert werden (`folder`)
-   + Die Metadateneigenschaft und der zu aktualisierende Wert (`propertyName` und `propertyValue`)
-   + Der lokale Pfad zur Datei mit den Anmeldeinformationen, die für den Zugriff auf AEM als Cloud Service erforderlich sind (`file`).
-1. Das Zugriffstoken, das für die Authentifizierung bei AEM verwendet wird, wird von der JSON-Datei abgeleitet, die über den Befehlszeilenparameter `file` bereitgestellt wird.
+   + Der Host des AEM as a Cloud Service Autorendiensts, mit dem eine Verbindung hergestellt werden soll (`aem`)
+   + Der AEM Asset-Ordner, dessen Assets aktualisiert wurden (`folder`)
+   + Die zu aktualisierende Metadateneigenschaft und der zu aktualisierende Wert (`propertyName` und `propertyValue`)
+   + Der lokale Pfad zur Datei mit den Anmeldeinformationen, die für den Zugriff auf AEM as a Cloud Service (`file`)
+1. Das Zugriffstoken, das für die Authentifizierung bei AEM verwendet wird, wird von der JSON-Datei abgeleitet, die über den Befehlszeilenparameter bereitgestellt wird `file`
 
-   a. Wenn für die nicht lokale Entwicklung verwendete Service-Anmeldeinformationen in der JSON-Datei (`file`) angegeben sind, wird das Zugriffstoken von den Adobe IMS-APIs abgerufen.
-1. Das Programm verwendet das Zugriffstoken, um auf AEM zuzugreifen und alle Assets im Ordner aufzulisten, der im Befehlszeilenparameter `folder` angegeben ist.
-1. Für jedes Asset im Ordner aktualisiert das Programm seine Metadaten anhand des Eigenschaftsnamens und -werts, der in den Befehlszeilenparametern `propertyName` und `propertyValue` angegeben ist.
+   a. Wenn für die nicht lokale Entwicklung verwendete Service-Anmeldeinformationen in der JSON-Datei (`file`), wird das Zugriffstoken von den Adobe IMS-APIs abgerufen.
+1. Das Programm verwendet das Zugriffstoken, um auf AEM zuzugreifen und alle Assets im Ordner aufzulisten, der im Befehlszeilenparameter angegeben ist. `folder`
+1. Für jedes Asset im Ordner aktualisiert das Programm seine Metadaten anhand des Eigenschaftsnamens und -werts, der in den Befehlszeilenparametern angegeben ist. `propertyName` und `propertyValue`
 
 Während diese Beispielanwendung Node.js ist, können diese Interaktionen mit verschiedenen Programmiersprachen entwickelt und von anderen externen Systemen ausgeführt werden.
 
 ## Lokales Entwicklungs-Zugriffstoken
 
-Lokale Entwicklungs-Zugriffstoken werden für eine bestimmte AEM als Cloud Service-Umgebung generiert und bieten Zugriff auf Autoren- und Veröffentlichungsdienste.  Diese Zugriffstoken sind temporär und dürfen nur bei der Entwicklung externer Anwendungen oder Systeme verwendet werden, die mit AEM über HTTP interagieren. Anstatt dass Entwickler Anmeldeinformationen für Dienste abrufen und verwalten müssen, können sie schnell und einfach ein temporäres Zugriffstoken erstellen, das ihnen die Entwicklung ihrer Integration ermöglicht.
+Lokale Entwicklungs-Zugriffstoken werden für eine bestimmte AEM as a Cloud Service Umgebung generiert und bieten Zugriff auf Autoren- und Veröffentlichungsdienste.  Diese Zugriffstoken sind temporär und dürfen nur bei der Entwicklung externer Anwendungen oder Systeme verwendet werden, die mit AEM über HTTP interagieren. Anstatt dass Entwickler Anmeldeinformationen für Dienste abrufen und verwalten müssen, können sie schnell und einfach ein temporäres Zugriffstoken erstellen, das ihnen die Entwicklung ihrer Integration ermöglicht.
 
 + [Verwenden des Zugriffstokens auf die lokale Entwicklung](./local-development-access-token.md)
 
 ## Dienstberechtigungen
 
-Service Credentials sind die Anmeldeinformationen, die in allen Nicht-Entwicklungs-Szenarien verwendet werden - am offensichtlichsten in der Produktion -, die es einer externen Anwendung oder dem System ermöglichen, sich über HTTP AEM als Cloud Service zu authentifizieren und mit ihnen zu interagieren. Service-Anmeldeinformationen werden nicht zur Authentifizierung an AEM gesendet. Stattdessen verwendet die externe Anwendung diese zum Generieren eines JWT-Codes, der mit den APIs von Adobe IMS _für_ ausgetauscht wird und dann zum Authentifizieren von HTTP-Anfragen an AEM als Cloud Service verwendet werden kann.
+Service Credentials sind die Anmeldeinformationen, die in allen Nicht-Entwicklungs-Szenarien verwendet werden - am offensichtlichsten bei der Produktion -, die es einer externen Anwendung oder dem System ermöglichen, sich bei über HTTP as a Cloud Service AEM zu authentifizieren und mit ihnen zu interagieren. Service-Anmeldedaten werden nicht zur Authentifizierung an AEM gesendet. Stattdessen verwendet die externe Anwendung diese, um ein JWT zu generieren, das mit den APIs von Adobe IMS ausgetauscht wird. _für_ ein Zugriffstoken, das dann zur Authentifizierung von HTTP-Anfragen an AEM as a Cloud Service verwendet werden kann.
 
 + [Verwendung von Dienstanmeldeinformationen](./service-credentials.md)
 

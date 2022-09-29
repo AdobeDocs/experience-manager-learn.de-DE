@@ -3,16 +3,16 @@ title: Verwenden des Formulardatenmodells zum Posten binärer Daten
 description: Veröffentlichen binärer Daten in AEM DAM mithilfe des Formulardatenmodells
 feature: Workflow
 version: 6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 9c62a7d6-8846-424c-97b8-2e6e3c1501ec
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '493'
-ht-degree: 1%
+source-wordcount: '489'
+ht-degree: 0%
 
 ---
-
 
 # Verwenden des Formulardatenmodells zum Posten binärer Daten{#using-form-data-model-to-post-binary-data}
 
@@ -40,24 +40,24 @@ Service Input
 
 >[!NOTE]
 >
->Tipps zur Fehlerbehebung - Wenn DOR.pdf aus irgendeinem Grund nicht in DAM erstellt wird, setzen Sie die Authentifizierungseinstellungen der Datenquelle zurück, indem Sie auf [hier](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam) klicken. Dies sind die AEM Authentifizierungseinstellungen, die standardmäßig &quot;admin/admin&quot;lauten.
+>Tipps zur Fehlerbehebung - Wenn DOR.pdf aus irgendeinem Grund nicht in DAM erstellt wird, setzen Sie die Authentifizierungseinstellungen der Datenquelle zurück, indem Sie auf [here](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam). Dies sind die AEM Authentifizierungseinstellungen, die standardmäßig &quot;admin/admin&quot;lauten.
 
 Um diese Funktion auf Ihrem Server zu testen, führen Sie die folgenden Schritte aus:
 
-1.[Stellen Sie das Developing With ServiceUser Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar) bereit.
+1.[Bereitstellen des Entwicklungs-mit-Service-Benutzer-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-1. [Laden Sie das SetValue-Bundle herunter und stellen Sie es bereit](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dieses benutzerdefinierte OSGI-Bundle wird verwendet, um Metadateneigenschaften zu erstellen und den Wert aus den gesendeten Formulardaten festzulegen.
+1. [Herunterladen und Bereitstellen des setvalue-Bundles](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar).Dieses benutzerdefinierte OSGi-Bundle wird verwendet, um Metadateneigenschaften zu erstellen und den Wert aus den gesendeten Formulardaten festzulegen.
 
-1. [Importieren Sie die mit diesem Artikel verknüpften ](assets/postdortodam.zip) Assets mit dem Package Manager in AEM. Sie erhalten Folgendes
+1. [Importieren der Assets](assets/postdortodam.zip) mit diesem Artikel in AEM mithilfe des Paketmanagers verknüpft sind. Sie erhalten Folgendes
 
    1. Workflow-Modell
    1. Adaptives Formular für die Übermittlung an den AEM Workflow konfiguriert
    1. Datenquelle, die für die Verwendung der Datei PostToDam.JSON konfiguriert ist
    1. Formulardatenmodell, das die Datenquelle verwendet
 
-1. Zeigen Sie auf Ihren [Browser, um das adaptive Formular](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled) zu öffnen.
+1. Verweisen Sie auf [Browser zum Öffnen des adaptiven Formulars](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled)
 1. Füllen Sie das Formular aus und senden Sie es.
 1. Überprüfen Sie die Anwendung Assets , ob das Datensatzdokument erstellt und gespeichert wurde.
 
 
-[Die Swagger-](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) Datei, die beim Erstellen der Datenquelle verwendet wird, steht für Ihre Referenz zur Verfügung
+[Swagger-Datei](http://localhost:4502/conf/global/settings/cloudconfigs/fdm/postdortodam/jcr:content/swaggerFile) zum Erstellen der Datenquelle verwendet wird, ist für Ihre Referenz verfügbar

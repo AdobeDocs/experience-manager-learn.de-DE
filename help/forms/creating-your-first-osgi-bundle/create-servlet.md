@@ -7,7 +7,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 72728ed7-80a2-48b5-ae7f-d744db8a524d
-source-git-commit: f4e86059d29acf402de5242f033a25f913febf36
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 3%
@@ -39,33 +39,33 @@ import com.adobe.fd.forms.api.FormsService;
 @Component(service={Servlet.class}, property={"sling.servlet.methods=post", "sling.servlet.paths=/bin/mergedataWithAcroform"})
 public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 {
-	
-	private static final long serialVersionUID = 1L;
-	@Reference
-	FormsService formsService;
-	 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response)
-	  { 
-		 String file_path = request.getParameter("save_location");
-		 
-		 java.io.InputStream pdf_document_is = null;
-		 java.io.InputStream xml_is = null;
-		 javax.servlet.http.Part pdf_document_part = null;
-		 javax.servlet.http.Part xml_data_part = null;
-		 	 try
-		 	 {
-		 		pdf_document_part = request.getPart("pdf_file");
-				 xml_data_part = request.getPart("xml_data_file");
-				 pdf_document_is = pdf_document_part.getInputStream();
-				 xml_is = xml_data_part.getInputStream();
-				 Document data_merged_document = formsService.importData(new Document(pdf_document_is), new Document(xml_is));
-				 data_merged_document.copyToFile(new File(file_path));
-				 
-		 	 }
-		 	 catch(Exception e)
-		 	 {
-		 		 response.sendError(400,e.getMessage());
-		 	 }
-	  }
+    
+    private static final long serialVersionUID = 1L;
+    @Reference
+    FormsService formsService;
+     protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response)
+      { 
+         String file_path = request.getParameter("save_location");
+         
+         java.io.InputStream pdf_document_is = null;
+         java.io.InputStream xml_is = null;
+         javax.servlet.http.Part pdf_document_part = null;
+         javax.servlet.http.Part xml_data_part = null;
+              try
+              {
+                 pdf_document_part = request.getPart("pdf_file");
+                 xml_data_part = request.getPart("xml_data_file");
+                 pdf_document_is = pdf_document_part.getInputStream();
+                 xml_is = xml_data_part.getInputStream();
+                 Document data_merged_document = formsService.importData(new Document(pdf_document_is), new Document(xml_is));
+                 data_merged_document.copyToFile(new File(file_path));
+                 
+              }
+              catch(Exception e)
+              {
+                  response.sendError(400,e.getMessage());
+              }
+      }
 }
 ```
 
@@ -76,16 +76,16 @@ Gehen Sie wie folgt vor, um Ihr Projekt zu erstellen:
 * Öffnen **Eingabeaufforderungsfenster**
 * Navigieren Sie zu `c:\aemformsbundles\mysite\core`
 * Ausführen des Befehls `mvn clean install -PautoInstallBundle`
-* Mit dem obigen Befehl wird das Bundle automatisch erstellt und für Ihre AEM-Instanz bereitgestellt, die auf localhost:4502 ausgeführt wird.
+* Der obige Befehl erstellt das Bundle automatisch und stellt es in Ihrer AEM-Instanz bereit, die auf localhost:4502 ausgeführt wird.
 
 Das Bundle ist auch am folgenden Speicherort verfügbar: `C:\AEMFormsBundles\mysite\core\target`. Das Bundle kann auch in AEM mit der [Felix Web-Konsole.](http://localhost:4502/system/console/bundles)
 
 
 ## Servlet-Resolver testen
 
-Verweisen Sie den Browser auf [Servlet-Resolver-URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). Dadurch erhalten Sie Informationen zum Servlet, das für einen bestimmten Pfad aufgerufen wird, wie im Screenshot unten dargestellt
+Verweisen Sie den Browser auf [Servlet-Resolver-URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). Dies teilt Ihnen das Servlet mit, das für einen bestimmten Pfad aufgerufen wird, wie im Screenshot unten dargestellt
 ![servlet-resolver](assets/servlet-resolver.JPG)
 
 ## Testen des Servlets mit Postman
 
-![test-servlet-postman](assets/test-servlet-postman.JPG)
+![Testen des Servlets mit Postman](assets/test-servlet-postman.JPG)

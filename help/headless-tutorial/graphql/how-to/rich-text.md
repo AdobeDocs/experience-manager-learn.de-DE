@@ -8,9 +8,9 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1463'
+source-wordcount: '1464'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ Die **Standardtyp** beeinflusst direkt das Bearbeitungserlebnis und bestimmt, ob
 
 Sie können auch [Inline-Verweise aktivieren](#insert-fragment-references) zu anderen Inhaltsfragmenten hinzugefügt werden, indem Sie die **Fragmentverweis zulassen** und konfigurieren Sie die **Zulässige Inhaltsfragmentmodelle**.
 
-Überprüfen Sie die **Übersetzbar** , wenn der Inhalt lokalisiert wird. Nur Rich Text und Nur Text können lokalisiert werden. Siehe [Arbeiten mit lokalisierten Inhalten für weitere Informationen](./localized-content.md).
+Überprüfen Sie die **Übersetzbar** , wenn der Inhalt lokalisiert werden soll. Nur Rich Text und Nur Text können lokalisiert werden. Siehe [Arbeiten mit lokalisierten Inhalten für weitere Informationen](./localized-content.md).
 
 ## Rich-Text-Antwort mit GraphQL-API
 

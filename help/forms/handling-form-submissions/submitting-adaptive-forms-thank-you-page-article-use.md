@@ -15,9 +15,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 85e1b450-39c0-4bb8-be5d-d7f50b102f3d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '260'
 ht-degree: 6%
 
 ---
@@ -28,16 +28,15 @@ Die Option An REST-Endpunkt übermitteln übergibt die im Formular ausgefüllten
 
 \{fieldName\} = \{parameterName\}. Beispielsweise ist &quot;submitName&quot;der Name eines adaptiven Formularfelds und &quot;submit&quot;der Name des Parameters. Auf der Dankeseite können Sie mithilfe von request.getParameter(&quot;submitter&quot;) auf den Parameter &quot;submitter&quot;zugreifen, um den Wert des Felds für den Namen des Absenders zu erhalten.
 
-submitterName=submitter
+`submitterName=submitter`
 
 Im folgenden Screenshot senden wir das adaptive Formular an die Dankeseite unter /content/thankyou. An diese Dankeseite senden wir 3 Anforderungsattribute, die die Formularfeldwerte enthalten.
 
-![Danke](assets/thankyoupage.gif)
+![Dankeseite](assets/thankyoupage.gif)
 
-Sie können auch per POST an den externen Endpunkt senden. Um dies zu erreichen, müssen Sie einfach das Kontrollkästchen &quot;POST-Anfrage aktivieren&quot;aktivieren und die URL für den externen Endpunkt angeben. Wenn Sie das Formular senden, erhalten Sie die Dankeseite und der Endpunkt POST wird gleichzeitig aufgerufen.
+Sie können auch per POST an den externen Endpunkt senden. Um dies zu erreichen, müssen Sie einfach das Kontrollkästchen &quot;POST-Anfrage aktivieren&quot;aktivieren und die URL für den externen Endpunkt angeben. Wenn Sie das Formular senden, erhalten Sie eine Dankeseite und der Endpunkt &quot;POST&quot;wird gleichzeitig aufgerufen.
 
-![erfassen](assets/capture.gif)
-
+![Capture-Konfiguration](assets/capture.gif)
 
 Um diese Funktion auf Ihrem Server zu testen, folgen Sie den unten stehenden Anweisungen:
 

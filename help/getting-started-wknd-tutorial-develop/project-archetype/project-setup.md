@@ -12,9 +12,9 @@ mini-toc-levels: 1
 kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
-source-git-commit: d49dbfae3292f93b7f63f424731966934dc6a5ba
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1847'
+source-wordcount: '1838'
 ht-degree: 6%
 
 ---
@@ -37,7 +37,7 @@ In diesem Tutorial wird die Erstellung eines Maven-Multi-Module-Projekts beschri
 
 >[!VIDEO](https://video.tv.adobe.com/v/30152/?quality=12&learn=on)
 
-In diesem Kapitel erstellen Sie ein neues Adobe Experience Manager-Projekt mit dem [AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype). Ihr AEM-Projekt enthält den gesamten Code, den Inhalt und die Konfigurationen, die für eine Sites-Implementierung verwendet werden. Das in diesem Kapitel erstellte Projekt wird als Grundlage für die Implementierung der WKND-Site dienen und in künftigen Kapiteln aufbauen.
+In diesem Kapitel erstellen Sie ein neues Adobe Experience Manager-Projekt mit der [AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype). Ihr AEM-Projekt enthält den gesamten Code, den Inhalt und die Konfigurationen, die für eine Sites-Implementierung verwendet werden. Das in diesem Kapitel erstellte Projekt dient als Grundlage für die Implementierung der WKND-Site und wird in künftigen Kapiteln verwendet.
 
 **Was ist ein Maven-Projekt?** - [Apache Maven](https://maven.apache.org/) ist ein Software-Management-Tool zum Erstellen von Projekten. *Alle Adobe Experience Manager* -Implementierungen verwenden Maven-Projekte zum Erstellen, Verwalten und Bereitstellen von benutzerdefiniertem Code zusätzlich zu AEM.
 
@@ -90,7 +90,7 @@ Die nächsten Schritte werden mit einem UNIX-basierten Befehlszeilenterminal dur
 
    Eine vollständige Liste der verfügbaren Eigenschaften zum Konfigurieren eines Projekts [finden Sie hier .](https://github.com/adobe/aem-project-archetype#available-properties).
 
-1. Die folgende Ordner- und Dateistruktur wird vom Maven-Archetyp auf Ihrem lokalen Dateisystem generiert:
+1. Die folgende Ordner- und Dateistruktur wird vom Maven-Archetyp in Ihrem lokalen Dateisystem generiert:
 
    ```plain
     ~/code/
@@ -159,7 +159,7 @@ Erstellen Sie den Projektcode und stellen Sie ihn auf einer lokalen Instanz von 
 
 1. Navigieren Sie in Ihrer lokalen AEM-Instanz zu Package Manager : [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). Sie sollten Pakete für `aem-guides-wknd.ui.apps`, `aem-guides-wknd.ui.config`, `aem-guides-wknd.ui.content`und `aem-guides-wknd.all`.
 
-1. Navigieren Sie zur Sites-Konsole: [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content). Die WKND-Site wird eine der Sites sein. Es wird eine Site-Struktur mit einer US- und Sprach-Master-Hierarchie enthalten. Diese Site-Hierarchie basiert auf den Werten für `language_country` und `isSingleCountryWebsite` beim Generieren des Projekts mithilfe des Archetyps.
+1. Navigieren Sie zur Sites-Konsole: [http://localhost:4502/sites.html/content](http://localhost:4502/sites.html/content). Die WKND-Site ist eine der Sites. Es wird eine Site-Struktur mit einer US- und Sprach-Master-Hierarchie enthalten. Diese Site-Hierarchie basiert auf den Werten für `language_country` und `isSingleCountryWebsite` beim Generieren des Projekts mithilfe des Archetyps.
 
 1. Öffnen Sie die **USA** `>` **englisch** Seite durch Auswahl der Seite und Klicken auf **Bearbeiten** in der Menüleiste:
 
@@ -325,7 +325,7 @@ So erstellen Sie nur dieses Modul:
 
    Auch hier wird ein Build-Fehler erwartet, wenn keine AEM Instanz auf dem Port ausgeführt wird **4504** ist verfügbar. Der Parameter `aem.port` wird in der POM-Datei unter `aem-guides-wknd/pom.xml`.
 
-Die **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** -Modul auf die gleiche Weise strukturiert wie das **ui.apps** -Modul. Der einzige Unterschied besteht darin, dass die **ui.content** enthält das so genannte **veränderlich** Inhalt. **Veränderlich** Inhalt bezieht sich im Wesentlichen auf Nicht-Code-Konfigurationen wie Vorlagen, Richtlinien oder Ordnerstrukturen, die in der Quell-Code-Verwaltung gespeichert sind **but** kann direkt in einer AEM-Instanz geändert werden. Dies wird im Kapitel über Seiten und Vorlagen ausführlicher untersucht.
+Die **[ui.content](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uicontent.html)** -Modul auf die gleiche Weise strukturiert wie das **ui.apps** -Modul. Der einzige Unterschied besteht darin, dass die **ui.content** enthält das so genannte **veränderlich** Inhalt. **Veränderlich** Inhalt bezieht sich im Wesentlichen auf Nicht-Code-Konfigurationen wie Vorlagen, Richtlinien oder Ordnerstrukturen, die in der Quell-Code-Verwaltung gespeichert sind **but** kann direkt in einer AEM-Instanz geändert werden. Dies wird im Kapitel zu Seiten und Vorlagen ausführlicher untersucht.
 
 Dieselben Maven-Befehle, die zum Erstellen der **ui.apps** -Modul zum Erstellen der **ui.content** -Modul. Sie können die oben genannten Schritte innerhalb der **ui.content** Ordner.
 

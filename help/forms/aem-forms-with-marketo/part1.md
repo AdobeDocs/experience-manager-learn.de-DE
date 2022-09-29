@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 45047852-4fdb-4702-8a99-faaad7213b61
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '369'
 ht-degree: 2%
 
 ---
@@ -43,7 +43,7 @@ Der erste Schritt bei der Integration von Marketo mit AEM Forms besteht darin, d
 1. client_id
 1. client_secret
 1. identity_endpoint
-1. Authentifizierungs-URL.
+1. Authentifizierungs-URL
 
 [Folgen Sie der offiziellen Marketo-Dokumentation, um die oben genannten Eigenschaften zu erhalten.](https://developers.marketo.com/rest-api/) Alternativ können Sie sich auch an den Administrator Ihrer Marketo-Instanz wenden.
 

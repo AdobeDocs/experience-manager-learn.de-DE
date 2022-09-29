@@ -1,5 +1,5 @@
 ---
-title: Testen der Lösung
+title: Testen der Forms Assembler-Lösung
 description: Führen Sie ExecuteAssemblerService.java aus, um die Lösung zu testen
 type: Documentation
 role: Developer
@@ -8,10 +8,10 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 exl-id: 5139aa84-58d5-40e3-936a-0505bd407ee8
-source-git-commit: 0a52ea9f5a475814740bb0701a09f1a6735c6b72
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '268'
-ht-degree: 0%
+source-wordcount: '270'
+ht-degree: 3%
 
 ---
 
@@ -45,6 +45,6 @@ ht-degree: 0%
 
 
 >[!NOTE]
-> Beim ersten Ausführen des Java-Programms wird der HTTP 403-Fehler angezeigt. Um dies zu überwinden, stellen Sie sicher, dass Sie [geeignete Berechtigungen für den technischen Kontobenutzer in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
+> Beim ersten Ausführen des Java-Programms wird der HTTP 403-Fehler angezeigt. Um dies zu überwinden, stellen Sie sicher, dass Sie [geeignete Berechtigungen für den technischen Kontobenutzer in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=de#zugriff-in-aem-konfigurieren).
 
 **AEM Forms-Benutzer** ist die Rolle, die ich für diesen Kurs genutzt habe.

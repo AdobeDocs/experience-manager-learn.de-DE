@@ -8,9 +8,9 @@ level: Beginner
 kt: 7636
 thumbnail: kt-7636.jpeg
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
-source-git-commit: fe056006ab59a3955e5f16a23e96e9e208408cf5
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '916'
 ht-degree: 1%
 
 ---
@@ -176,8 +176,3 @@ Herzlichen Glückwunsch! Sie haben die Authoring-Fähigkeit zu dynamischen Route
 + Verfasst Inhalt auf der dynamischen Bali Surf Camp Route!
 
 Sie haben nun die ersten Schritte zur Verwendung AEM SPA Editors zum Hinzufügen bestimmter bearbeitbarer Bereiche zu einer Remote-SPA abgeschlossen!
-
-
->[!NOTE]
->
->Bleib dran! Dieses Tutorial wird erweitert und umfasst die Best Practices und Empfehlungen der Adobe zur Bereitstellung der SPA-Editor-Lösung in AEM as a Cloud Service Umgebungen und Produktionsumgebungen.

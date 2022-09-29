@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: 410eb23534e083940bf716194576e099d22ca205
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1529'
 ht-degree: 7%
 
 ---
@@ -281,7 +281,7 @@ Es ist auch möglich, ein einzelnes Inhaltsfragment direkt abzufragen. Der Inhal
 
 Sobald ein Entwickler mit der zurückgegebenen Abfrage und Daten zufrieden ist, besteht der nächste Schritt darin, die Abfrage zu speichern oder zu AEM. [Beständige Abfragen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html) ist der bevorzugte Mechanismus zur Bereitstellung der GraphQL-API für Client-Anwendungen. Nachdem eine Abfrage persistiert wurde, kann sie mithilfe einer GET-Anfrage angefordert und in den Dispatcher- und CDN-Ebenen zwischengespeichert werden. Die Leistung persistenter Abfragen ist viel besser. Zusätzlich zu den Leistungsvorteilen stellen persistente Abfragen sicher, dass zusätzliche Daten nicht versehentlich Client-Anwendungen zur Verfügung gestellt werden. Weitere Informationen [Persistierte Abfragen finden Sie hier .](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html).
 
-Speichern Sie anschließend zwei einfache Abfragen, die im nächsten Kapitel verwendet werden.
+Beibehalten von zwei einfachen Abfragen, die im nächsten Kapitel verwendet werden.
 
 1. Geben Sie in die GraphiQL IDE die folgende Abfrage ein:
 

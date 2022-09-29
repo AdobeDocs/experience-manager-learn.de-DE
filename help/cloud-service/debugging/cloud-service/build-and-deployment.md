@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: b4985c30-3e5e-470e-b68d-0f6c5cbf4690
-source-git-commit: 7a4585146b52d14f32645c6889c9c015e9991809
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2523'
 ht-degree: 1%
 
 ---
@@ -92,8 +92,8 @@ Wenn mehrere OSGi-Konfigurationen über den Ausführungsmodus für die Ziel-AEM-
 
 ```
 [ERROR] Unable to convert content-package [/tmp/packages/enduser.all-1.0-SNAPSHOT.zip]: 
-Configuration ‘com.example.ExampleComponent’ already defined in Feature Model ‘com.example.groupId:example.all:slingosgifeature:xxxxx:X.X’, 
-set the ‘mergeConfigurations’ flag to ‘true’ if you want to merge multiple configurations with same PID
+Configuration 'com.example.ExampleComponent' already defined in Feature Model 'com.example.groupId:example.all:slingosgifeature:xxxxx:X.X', 
+set the 'mergeConfigurations' flag to 'true' if you want to merge multiple configurations with same PID
 ```
 
 #### Ursache 1
@@ -110,7 +110,7 @@ set the ‘mergeConfigurations’ flag to ‘true’ if you want to merge multip
 
 Repoinit-Skripte definieren Grundlinien-Inhalte, Benutzer, ACLs usw. In AEM as a Cloud Service werden Repoinit-Skripte während des Build-Image angewendet. Auf AEM lokalen Schnellstart des SDK werden sie jedoch angewendet, wenn die OSGi-Repoinit-Werkskonfiguration aktiviert wird. Aus diesem Grund schlagen Repoinit-Skripte im lokalen Schnellstart des SDK möglicherweise leise fehl (mit Protokollierung), führen aber dazu, dass der Schritt Bild erstellen fehlschlägt und die Bereitstellung angehalten wird.
 
-+ __Ursache:__ Ein Repoinit-Skript ist fehlerhaft. Beachten Sie, dass Ihr Repository dadurch möglicherweise unvollständig bleibt, da alle Repoinit-Skripte nach Ausführung des fehlerhaften Skripts für das Repository ausgeführt werden.
++ __Ursache:__ Ein Repoinit-Skript ist fehlerhaft. Dadurch kann Ihr Repository unvollständig bleiben, da alle Repoinit-Skripte nach Ausführung des fehlerhaften Skripts nicht für das Repository ausgeführt werden.
 + __Auflösung:__ Überprüfen Sie den lokalen Schnellstart des AEM SDK, wenn die OSGi-Konfiguration des Repoinit-Skripts bereitgestellt wird, um festzustellen, ob und was die Fehler sind.
 
 ### Unzufriedene repoinit-Inhaltsabhängigkeit

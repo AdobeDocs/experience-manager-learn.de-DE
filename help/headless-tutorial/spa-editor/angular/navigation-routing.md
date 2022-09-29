@@ -14,9 +14,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2713'
+source-wordcount: '2712'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ Dieses Kapitel fügt einem vorhandenen `Header` -Komponente. Das Navigationsmen�
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. Installieren Sie das fertige Paket für das herkömmliche [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest). Die von [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest) wird auf der WKND-SPA wiederverwendet. Das Paket kann mit [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
+3. Installieren Sie das fertige Paket für das herkömmliche [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest). Die von [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest) werden auf der WKND-SPA wiederverwendet. Das Paket kann mit [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
 
    ![Package Manager install wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
@@ -71,7 +71,7 @@ Sie können den fertigen Code immer in [GitHub](https://github.com/adobe/aem-gui
 
 ## Aktualisierungen der Inspect HeaderComponent {#inspect-header}
 
-In vorherigen Kapiteln wird die `HeaderComponent` wurde als reine Angular-Komponente hinzugefügt, die über `app.component.html`. In diesem Kapitel `HeaderComponent` -Komponente aus der App entfernt und über die [Vorlagen-Editor](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=de). Dadurch können Benutzer das Navigationsmenü der `HeaderComponent` von innerhalb AEM.
+In vorherigen Kapiteln wird die `HeaderComponent` wurde als reine Angular-Komponente hinzugefügt, die über `app.component.html`. In diesem Kapitel `HeaderComponent` -Komponente aus der App entfernt und über das [Vorlagen-Editor](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=de). Dadurch können Benutzer das Navigationsmenü der `HeaderComponent` von innerhalb AEM.
 
 >[!NOTE]
 >
@@ -213,7 +213,7 @@ Als Nächstes erstellen Sie zusätzliche Seiten in AEM , die als verschiedene An
    }
    ```
 
-   under `:children` sollte für jede der erstellten Seiten ein Eintrag angezeigt werden. Der Inhalt für alle Seiten befindet sich in dieser ersten JSON-Anfrage. Sobald das Navigations-Routing implementiert wurde, werden nachfolgende Ansichten des SPA schnell geladen, da der Inhalt bereits clientseitig verfügbar ist.
+   under `:children` sollte für jede der erstellten Seiten ein Eintrag angezeigt werden. Der Inhalt für alle Seiten befindet sich in dieser ersten JSON-Anfrage. Sobald das Navigations-Routing implementiert ist, werden nachfolgende Ansichten des SPA schnell geladen, da der Inhalt bereits clientseitig verfügbar ist.
 
    Es ist nicht ratsam, **ALL** des Inhalts einer SPA in der ersten JSON-Anfrage, da dies das anfängliche Laden der Seite verlangsamen würde. Als Nächstes sehen wir, wie die Hierarchietiefe der Seiten erfasst wird.
 
@@ -637,7 +637,7 @@ Nachdem die Navigation implementiert wurde, überprüfen Sie das Routing in AEM.
 
    `AemPageMatcher` ist ein benutzerdefinierter Angular-Router [UrlMatcher](https://angular.io/api/router/UrlMatcher), die mit allen Elementen übereinstimmt, die einer Seite in AEM, die Teil dieser Angular-Anwendung ist, &quot;aussehen&quot;.
 
-   `PageComponent` ist die Angular-Komponente, die eine Seite in AEM darstellt und die übereinstimmenden Routen aufrufen. Die `PageComponent` werden weiter untersucht.
+   `PageComponent` ist die Angular-Komponente, die eine Seite in AEM darstellt und zum Rendern der übereinstimmenden Routen verwendet wird. Die `PageComponent` wird später im Tutorial überprüft.
 
    `AemPageDataResolver`, bereitgestellt vom AEM SPA Editor JS SDK, ist ein benutzerdefinierter [Angular Router-Resolver](https://angular.io/api/router/Resolve) wird verwendet, um die Route-URL (den Pfad in AEM einschließlich der Erweiterung .html) in den Ressourcenpfad in AEM umzuwandeln, was dem Seitenpfad abzüglich der Erweiterung entspricht.
 

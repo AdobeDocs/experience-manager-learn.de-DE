@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9165
 thumbnail: 337960.jpeg
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: 7cfc150989453eec776eb34eac9b4598c46b0d7c
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '223'
 ht-degree: 6%
 
 ---
@@ -34,7 +34,7 @@ Erfahren Sie, wie Sie Ihr SEO durch die Erstellung von Sitemaps für AEM Sites v
 
 ### OSGi-Konfiguration des Sitemap Scheduler
 
-Definiert die [OSGi-Werkskonfiguration](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) für die Häufigkeit (mithilfe von [Cron-Ausdrücke](http://www.cronmaker.com)) werden Sitemaps neu/generiert und in AEM zwischengespeichert.
+Definiert die [OSGi-Werkskonfiguration](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) für die Häufigkeit (mithilfe von [Cron-Ausdrücke](http://www.cronmaker.com)) Sitemaps werden in AEM neu erstellt und zwischengespeichert.
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 
@@ -52,7 +52,7 @@ AEM Sitemap unterstützt absolute URLs durch Verwendung von [Sling-Zuordnung](ht
 
 Eine Beispieldefinition für einen Sling-Zuordnungsknoten für `https://wknd.com` kann definiert werden unter `/etc/map/https` wie folgt:
 
-| Pfad  | Eigenschaftsname | Eigenschaftstyp | Eigenschaftswert |
+| Pfad   | Eigenschaftsname | Eigenschaftstyp | Eigenschaftswert |
 |------|----------|---------------|-------|
 | `/etc/map/https/wknd-site` | `jcr:primaryType` | Zeichenfolge | `nt:unstructured` |
 | `/etc/map/https/wknd-site` | `sling:internalRedirect` | Zeichenfolge | `/content/wknd/(.*)` |

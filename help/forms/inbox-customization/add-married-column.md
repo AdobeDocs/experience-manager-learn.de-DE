@@ -12,9 +12,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '306'
 ht-degree: 8%
 
 ---
@@ -27,7 +27,7 @@ Um Workflow-Daten im Posteingang anzuzeigen, müssen wir Variablen im Workflow d
 * [Importieren des Überprüfungs-Workflows](assets/review-workflow.zip)
 * [Workflow überprüfen](http://localhost:4502/editor.html/conf/global/settings/workflow/models/reviewworkflow.html)
 
-Für diesen Workflow sind zwei Variablen definiert (isVerheiratet und Einkommen). Die Werte werden mithilfe der Komponente set variable festgelegt. Diese Variablen werden als Spalten zur Verfügung gestellt, die AEM Posteingang hinzugefügt werden können
+Für diesen Workflow sind zwei Variablen definiert (isVerheiratet und Einkommen). Die Werte werden mithilfe der Komponente set variable festgelegt. Diese Variablen werden als Spalten bereitgestellt, die AEM Posteingang hinzugefügt werden können
 
 ## Dienst erstellen
 

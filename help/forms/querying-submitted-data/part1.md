@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: c588bdca-b8a8-4de2-97e0-ba08b195699f
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '266'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Die Möglichkeit, adaptive Forms auf der Grundlage eines JSON-Schemas zu erstell
 
 Nachdem Sie ein auf einem JSON-Schema basierendes adaptives Formular erstellt haben, besteht der nächste Schritt darin, die gesendeten Daten in der Datenbank zu speichern. Zu diesem Zweck verwenden wir den neuen JSON-Datentyp, der von verschiedenen Datenbankanbietern eingeführt wurde. Für die Zwecke dieses Artikels werden wir die MySql 8 Datenbank verwenden, um die übermittelten Daten zu speichern.
 
-MySql 8 Datenbank wurde für diesen Artikel verwendet. MySQL hat einen neuen Datentyp namens [JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html). Dies erleichtert die Speicherung und Abfrage von JSON-Objekten. Die übermittelten Daten werden in einer Spalte vom Typ JSON in unserer Datenbank gespeichert.
+MySql 8 Datenbank wurde für diesen Artikel verwendet. MySQL hat einen neuen Datentyp namens [JSON](https://dev.mysql.com/doc/refman/8.0/en/json.html). Dies erleichtert die Speicherung und Abfrage von JSON-Objekten. Wir speichern die gesendeten Daten in einer Spalte vom Typ JSON in unserer Datenbank.
 
 Der folgende Screenshot zeigt die gesendeten Formulardaten, die im JSON-Datentyp gespeichert sind. Die Spalte &quot;formdata&quot;weist den Typ JSON auf. Wir haben auch den Namen des mit den Daten verknüpften Formulars im Spaltenformnamen gespeichert.
 

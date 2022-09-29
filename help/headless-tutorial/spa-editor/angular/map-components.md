@@ -14,9 +14,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 19a8917c-a1e7-4293-9ce1-9f4c1a565861
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '2380'
+source-wordcount: '2372'
 ht-degree: 1%
 
 ---
@@ -92,7 +92,7 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
    `:type` ist eine reservierte Eigenschaft, die die `sling:resourceType` (oder Pfad) der AEM Komponente. Der Wert von `:type` wird verwendet, um die AEM Komponente der SPA zuzuordnen.
 
-   `text` und `richText` sind zusätzliche Eigenschaften, die der SPA-Komponente angezeigt werden.
+   `text` und `richText` sind zusätzliche Eigenschaften, die für die SPA-Komponente verfügbar gemacht werden.
 
 ### Inspect der Textkomponente
 
@@ -178,7 +178,7 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
 8. Inspect **text.component.html** at `ui.frontend/src/app/components/text/text.component.html`.
 
-   Diese Datei ist leer, da der gesamte Inhalt der Komponente von der `innerHTML` -Eigenschaft.
+   Diese Datei ist leer, da der gesamte Inhalt der Komponente durch die Variable `innerHTML` -Eigenschaft.
 
 9. Inspect **app.module.ts** at `ui.frontend/src/app/app.module.ts`.
 
@@ -211,11 +211,11 @@ Bevor Sie in den SPA-Code springen, überprüfen Sie das von AEM bereitgestellte
 
    ![JSON der Bild-Kernkomponente](./assets/map-components/image-json.png)
 
-   Eigenschaften von `src`, `alt`und `title` wird verwendet, um die SPA `Image` -Komponente.
+   Eigenschaften von `src`, `alt`und `title` werden zum Ausfüllen der SPA verwendet `Image` -Komponente.
 
    >[!NOTE]
    >
-   > Es werden andere Bildeigenschaften bereitgestellt (`lazyEnabled`, `widths`), die es einem Entwickler ermöglichen, eine adaptive und verzögerte Ladekomponente zu erstellen. Die in diesem Tutorial erstellte Komponente ist einfach und wird **not** Verwenden Sie diese erweiterten Eigenschaften.
+   > Es werden andere Bildeigenschaften bereitgestellt (`lazyEnabled`, `widths`), die es einem Entwickler ermöglichen, eine adaptive und verzögerte Ladekomponente zu erstellen. Die in diesem Tutorial erstellte Komponente ist einfach und erfüllt folgende Aufgaben: **not** Verwenden Sie diese erweiterten Eigenschaften.
 
 2. Kehren Sie zu Ihrer IDE zurück und öffnen Sie die `en.model.json` at `ui.frontend/src/mocks/json/en.model.json`. Da dies eine netto-neue Komponente für unser Projekt ist, müssen wir die Bild-JSON &quot;nachahmen&quot;.
 

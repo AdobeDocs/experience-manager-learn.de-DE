@@ -7,21 +7,21 @@ topic: Development
 role: Developer
 level: Intermediate
 kt: 8507
-source-git-commit: e01d93591d1c00b2abec3430fdfa695b32165e54
+exl-id: 9ad69407-2413-416f-9cec-43f88989b31d
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '340'
 ht-degree: 0%
 
 ---
 
-
 # Kommagetrennte Zeichenfolge in Zeichenfolgen-Array konvertieren {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-Wenn Ihr Formular auf einem Formulardatenmodell basiert, das ein Zeichenfolgen-Array als Eingabeparameter enthält, müssen Sie die gesendeten adaptiven Formulardaten bearbeiten, um ein Zeichenfolgen-Array einzufügen. Wenn Sie beispielsweise ein Kontrollkästchen-Feld an ein Formulardatenmodellelement vom Typ String-Array gebunden haben, werden die Daten aus dem Kontrollkästchen in einem kommagetrennten Zeichenfolgenformat dargestellt. Der unten aufgeführte Beispielcode zeigt, wie Sie die kommagetrennte Zeichenfolge durch ein Zeichenfolgen-Array ersetzen.
+Wenn Ihr Formular auf einem Formulardatenmodell basiert, das ein Zeichenfolgen-Array als Eingabeparameter aufweist, müssen Sie die gesendeten adaptiven Formulardaten bearbeiten, um ein Zeichenfolgen-Array einzufügen. Wenn Sie beispielsweise ein Kontrollkästchen-Feld an ein Formulardatenmodellelement des Typs String-Array gebunden haben, werden die Daten aus dem Kontrollkästchen in einem kommagetrennten Zeichenfolgenformat dargestellt. Der unten aufgeführte Beispielcode zeigt, wie Sie die kommagetrennte Zeichenfolge durch ein Zeichenfolgen-Array ersetzen.
 
 ## Erstellen eines Prozessschritts
 
-Ein Prozessschritt wird in einem AEM Workflow verwendet, wenn unser Workflow eine bestimmte Logik ausführen soll. Der Prozessschritt kann mit einem ECMA-Skript oder einem OSGi-Dienst verknüpft werden. Unser benutzerdefinierter Prozessschritt führt den OSGi-Dienst aus
+Ein Prozessschritt wird in einem AEM Workflow verwendet, wenn unser Workflow eine bestimmte Logik ausführen soll. Der Prozessschritt kann mit einem ECMA-Skript oder einem OSGi-Dienst verknüpft werden. Unser benutzerdefinierter Prozessschritt führt den OSGi-Dienst aus.
 
 Die übermittelten Daten haben das folgende Format. Der Wert des Elements &quot;businessUnits&quot;ist eine kommagetrennte Zeichenfolge, die in ein Zeichenfolgen-Array konvertiert werden muss.
 
@@ -140,4 +140,4 @@ public class CreateStringArray implements WorkflowProcess {
 }
 ```
 
-Das Beispielpaket kann [von hier heruntergeladen werden](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)
+Das Beispielpaket kann [heruntergeladen von hier](assets/CreateStringArray.CreateStringArray.core-1.0-SNAPSHOT.jar)

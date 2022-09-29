@@ -11,9 +11,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
 workflow-type: tm+mt
-source-wordcount: '4582'
+source-wordcount: '4571'
 ht-degree: 1%
 
 ---
@@ -63,7 +63,7 @@ Die vollständige Knotenstruktur:
 
 ### Projektvorlagenstamm
 
-Der Stammknoten der Projektvorlage weist den Typ **cq:Template**. Auf diesem Knoten können Sie Eigenschaften konfigurieren **jcr:title** und **jcr:description** wird im Assistenten zum Erstellen von Projekten angezeigt. Es gibt auch eine Eigenschaft namens **Assistent** , das auf ein Formular verweist, das die Eigenschaften des Projekts ausfüllt. Der Standardwert von: **/libs/cq/core/content/projects/wizard/steps/defaultproject.html** sollte in den meisten Fällen problemlos funktionieren, da der Benutzer die grundlegenden Projekteigenschaften ausfüllen und Gruppenmitglieder hinzufügen kann.
+Der Stammknoten der Projektvorlage ist vom Typ **cq:Template**. Auf diesem Knoten können Sie Eigenschaften konfigurieren **jcr:title** und **jcr:description** wird im Assistenten zum Erstellen von Projekten angezeigt. Es gibt auch eine Eigenschaft namens **Assistent** , das auf ein Formular verweist, das die Eigenschaften des Projekts ausfüllt. Der Standardwert von: **/libs/cq/core/content/projects/wizard/steps/defaultproject.html** sollte in den meisten Fällen problemlos funktionieren, da der Benutzer die grundlegenden Projekteigenschaften ausfüllen und Gruppenmitglieder hinzufügen kann.
 
 *&#42;Beachten Sie, dass der Assistent zum Erstellen von Projekten nicht das Sling-POST-Servlet verwendet. Stattdessen werden Werte an ein benutzerdefiniertes Servlet gesendet:**com.adobe.cq.projects.impl.servlet.ProjectServlet**. Dies sollte beim Hinzufügen benutzerdefinierter Felder berücksichtigt werden.*
 
@@ -92,7 +92,7 @@ Einer der verlockendsten Gründe für die Erstellung einer benutzerdefinierten P
 
 ## Erstellen einer Projektvorlage {#creating-project-template}
 
-Da wir in erster Linie Knoten kopieren/konfigurieren werden, wird CRXDE Lite verwendet. Öffnen Sie in Ihrer lokalen AEM-Instanz [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
+Da wir hauptsächlich Knoten kopieren/konfigurieren, wird CRXDE Lite verwendet. Öffnen Sie in Ihrer lokalen AEM-Instanz [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
 
 1. Erstellen Sie zunächst einen neuen Ordner unter `/apps/&lt;your-app-folder&gt;` benannt `projects`. Erstellen Sie einen weiteren Ordner unter dem Namen `templates`.
 
@@ -345,7 +345,7 @@ Speicherort des Workflow-Modells in 6.4+
 
    Die Workflow-Fortschrittsleiste, die im AEM Posteingang angezeigt wird.
 
-   Optional können Sie eine **Bild** in die Seiteneigenschaften ein, die als Workflow-Miniaturansicht verwendet werden, wenn Benutzer sie auswählen. Die Bildabmessungen sollten 319 x 319 Pixel betragen. Hinzufügen einer **Beschreibung** in den Seiteneigenschaften wird auch angezeigt, wenn ein Benutzer den Workflow auswählt.
+   Optional können Sie eine **Bild** in die Seiteneigenschaften, die als Workflow-Miniaturansicht verwendet werden, wenn Benutzer sie auswählen. Die Bildabmessungen sollten 319 x 319 Pixel betragen. Hinzufügen einer **Beschreibung** in den Seiteneigenschaften wird auch angezeigt, wenn ein Benutzer den Workflow auswählt.
 
 1. Der Workflow-Prozess &quot;Projektaufgabe erstellen&quot;dient der Erstellung einer Aufgabe als Schritt im Workflow. Erst nach Abschluss der Aufgabe wird der Workflow fortgesetzt. Ein wichtiger Aspekt des Schritts &quot;Aufgabe erstellen&quot;besteht darin, dass er Workflow-Metadatenwerte lesen und diese zum dynamischen Erstellen der Aufgabe verwenden kann.
 
@@ -418,7 +418,7 @@ Speicherort des Workflow-Modells in 6.4+
    task.setProperty("taskPriority", taskPriority);
    ```
 
-1. Navigieren Sie zurück zum Arbeitsablauf für die Inhaltsvalidierung . Ziehen und ablegen **ODER-Teilung** -Komponente (im Sidekick unter der Kategorie &quot;Workflow&quot;zu finden) unter der **Aufgabe starten** Schritt. Wählen Sie im Dialogfeld Allgemein das Optionsfeld für 3 Verzweigungen aus. Die ODER-Teilung liest den Metadatenwert des Workflows **&quot;lastTaskAction&quot;** um die Route des Workflows zu bestimmen. Die **&quot;lastTaskAction&quot;** -Eigenschaft auf einen der Werte aus der Registerkarte &quot;Routing&quot;festgelegt, die in Schritt 4 konfiguriert wurde. Füllen Sie für jede der Registerkarten Verzweigung die **Skript** Textbereich mit den folgenden Werten:
+1. Navigieren Sie zurück zum Arbeitsablauf für die Inhaltsvalidierung . Ziehen und ablegen **ODER-Teilung** -Komponente (im Sidekick unter der Kategorie &quot;Workflow&quot;zu finden) unter der **Aufgabe starten** Schritt. Wählen Sie im Dialogfeld Allgemein das Optionsfeld für 3 Verzweigungen aus. Die ODER-Teilung liest den Metadatenwert des Workflows **&quot;lastTaskAction&quot;** um die Route des Workflows zu bestimmen. Die **&quot;lastTaskAction&quot;** -Eigenschaft auf einen der Werte aus der Registerkarte &quot;Routing&quot;festgelegt ist, die in Schritt 4 konfiguriert wurde. Füllen Sie für jede der Registerkarten Verzweigung die **Skript** Textbereich mit den folgenden Werten:
 
    ```
    function check() {
