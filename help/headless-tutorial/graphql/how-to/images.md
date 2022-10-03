@@ -9,14 +9,14 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 68970493802c7194bcb3ac3ac9ee10dbfb0fc55d
+source-git-commit: 332ad831b6c49e8599aa2181caf978d5626c1aba
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1171'
 ht-degree: 3%
 
 ---
 
-# Bilder mit AEM Headless
+# Bilder mit AEM Headless {#images-with-aem-headless}
 
 Bilder sind ein wichtiger Aspekt von [Entwickeln umfassender, überzeugender AEM Headless-Erlebnisse](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=de). AEM Headless unterstützt die Verwaltung von Bild-Assets und deren optimierte Bereitstellung.
 
@@ -39,6 +39,11 @@ Die Verwendung der Felder erfolgt am besten nach folgenden Kriterien:
 | `_publishUrl` | ✘ | ✘ | ms |
 
 Verwendung von `_authorUrl` und `_publishUrl` sollte an dem GraphQL-Endpunkt ausgerichtet sein, der für die Quelle der GraphQL-Antwort verwendet wird.
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_learn_headless_graphql_images"
+>title="Bilder verwenden"
+>abstract="Erfahren Sie, wie AEM Headless die Verwaltung von Bild-Assets und deren optimierte Bereitstellung unterstützt."
 
 ## Inhaltsfragmentmodell
 

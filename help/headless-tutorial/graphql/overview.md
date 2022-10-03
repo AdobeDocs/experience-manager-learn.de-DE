@@ -6,14 +6,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
-source-git-commit: fb4a39a7b057ca39bc4cd4a7bce02216c3eb634c
+source-git-commit: 332ad831b6c49e8599aa2181caf978d5626c1aba
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 3%
+source-wordcount: '267'
+ht-degree: 5%
 
 ---
 
-# Erste Schritte mit AEM Headless – GraphQL
+# Erste Schritte mit AEM Headless – GraphQL {#getting-started-with-aem-headless}
 
 AEM GraphQL-APIs für Inhaltsfragmente unterstützen Headless-CMS-Szenarien, in denen externe Client-Anwendungen Erlebnisse mit in AEM verwalteten Inhalten rendern.
 
@@ -27,6 +27,12 @@ Um diese Herausforderungen zu bewältigen, stellt GraphQL eine abfragebasierte A
 >[!VIDEO](https://video.tv.adobe.com/v/328618/?quality=12&learn=on)
 
 In diesem Video erhalten Sie einen Überblick über die in AEM implementierte GraphQL-API. Die GraphQL-API in AEM ist in erster Linie dazu bestimmt, im Rahmen einer Headless-Implementierung AEM Inhaltsfragmente an nachgelagerte Anwendungen zu senden.
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_learn_headless_graphql_overview"
+>title="Erste Schritte mit AEM Headless"
+>abstract="Erfahren Sie, wie Sie Inhaltsfragmente mit GraphQL bereitstellen."
+>additional-url="https://video.tv.adobe.com/v/328618?captions=ger" text="Überblick über GraphQL in AEM"
 
 ## AEM Headless-GraphQL-Videoserie
 
@@ -44,7 +50,7 @@ Erkunden Sie AEM GraphQL-Funktionen, indem Sie eine React-App erstellen, die Inh
 
 |  | AEM GraphQL-APIs | AEM Content Services |
 |--------------------------------|:-----------------|:---------------------|
-| Schemadefinition | Strukturierte Inhaltsfragmentmodelle | AEM von Komponenten |
-| Inhalt | Inhaltsfragmente | AEM von Komponenten |
+| Schemadefinition | Strukturierte Inhaltsfragmentmodelle | AEM-Komponenten |
+| Inhalt | Inhaltsfragmente | AEM-Komponenten |
 | Inhaltssuche | Nach GraphQL-Abfrage | Nach AEM Seite |
 | Versandformat | GraphQL JSON | AEM ComponentExporter JSON |
