@@ -1,24 +1,12 @@
 ---
-title: Tipps zu Site-Hierarchie, Taxonomie und Tagging
-seo-title: Overview of Authoring in AEM Sites
-description: Das folgende Video bietet einen Überblick über die grundlegenden Konzepte des Authoring in einer AEM Autorenumgebung. Als Grundlage wird die Sites-Konsole verwendet.
-seo-description: The following video provides an overview of basic concepts of authoring in an AEM author environment. It uses the Sites console as a basis.
-feature: Page Editor, Editable Templates
-topics: authoring, publishing
+title: Site-Hierarchie, Taxonomie und Tagging-Anleitung
+seo-title: AEM Sites Site Hierarchy, Taxonomy, and Tagging Guide
+description: Eine vollständige Übersicht über AEM Sites-Metadaten, Tagging, Taxonomie und Hierarchie. Verwenden Sie dieses Handbuch, um sicherzustellen, dass Ihre Inhaltsstrategie konsistent ist, und befolgen Sie die Best Practices
+seo-description: A full overview of AEM Sites metadata, tagging, taxonomy, and hierarchy. Use this guide to ensure your content strategy is consistent and following best practices
 audience: author, marketer
-doc-type: feature video
-activity: use
-version: 6.4, 6.5, Cloud Service
-kt: 4242
-thumbnail: 33594.jpg
-topic: Content Management
-role: User
-level: Beginner
-hide: true
-hidefromtoc: true
-source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
+source-git-commit: d545e7bb5e937959e2ede2b3c1ecfc312df5a044
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2034'
 ht-degree: 0%
 
 ---

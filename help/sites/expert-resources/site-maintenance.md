@@ -1,11 +1,12 @@
 ---
-title: Tipps und Tricks zur Site-Wartung
-description: Tipps und Tricks zur Site-Wartung
-hide: true
-hidefromtoc: true
-source-git-commit: 3eb429039589ae26a81bc6d24f020a77517133e8
+title: Ihr routinemäßiger Site-Wartungshandbuch
+seo-title: Your Routine Site Maintenance Guide
+description: Ob Sie Administrator, Autor oder Entwickler sind, die Site-Wartung wirkt sich auf alle Aspekte Ihrer AEM Sites-Instanz aus. Verwenden Sie dieses Handbuch, um sicherzustellen, dass Ihre Strategie für Erfolg eingerichtet ist.
+seo-description: Whether you're an admin, author, or developer, site maintenance touches every aspect of your AEM Sites instance. Use this guide to ensure your strategy is set up for success.
+audience: author, marketer, developer
+source-git-commit: d545e7bb5e937959e2ede2b3c1ecfc312df5a044
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1094'
 ht-degree: 8%
 
 ---
