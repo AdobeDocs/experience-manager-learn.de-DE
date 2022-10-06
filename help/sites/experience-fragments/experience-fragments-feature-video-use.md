@@ -10,8 +10,9 @@ doc-type: feature video
 version: Cloud Service
 kt: 194
 thumbnail: 331785.jpg
+last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 84d2b240-5ecc-4230-97a0-6c2faead8d1a
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: db76980966ece967af23c1e6423c5773c851f469
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 2%
@@ -24,7 +25,7 @@ Mit Experience Fragments können Inhaltsautoren Inhalte kanalübergreifend wiede
 
 >[!VIDEO](https://video.tv.adobe.com/v/331785/?quality=12&learn=on)
 
-Ein Experience Fragment ist ein gruppierter Satz von Komponenten, die bei Kombination ein Erlebnis erstellen. Beispielsweise können ein *Titel*, *Bild*, *Beschreibung* und *Aktionsaufruf-Schaltfläche* kombiniert werden, um ein Teaser-Erlebnis zu bilden.
+Ein Experience Fragment ist ein gruppierter Satz von Komponenten, die bei Kombination ein Erlebnis erstellen. Beispiel: eine *Titel*, *Bild*, *Beschreibung* und *Aktionsschaltfläche aufrufen* kann kombiniert werden, um ein Teaser-Erlebnis zu bilden.
 
 Mit Experience Fragments können Marketingexperten:
 
