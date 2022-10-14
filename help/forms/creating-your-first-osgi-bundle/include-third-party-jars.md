@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Beginner
 kt: kt-11245
-source-git-commit: 061077fb6cd8ac7b760aa30b884ced6d4d3c3b20
+source-git-commit: 8944a4feaefbc4cf0db52011a0d49b22341780c0
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '268'
 ht-degree: 4%
 
 ---
@@ -59,6 +59,6 @@ mvn clean install -pAutoInstallSinglePackage
 
 Wenn alles gut geht, wird das Paket zusammen mit dem Drittanbieter-Bundle in Ihre AEM-Instanz installiert. Sie können mithilfe von [Felix-Webkonsole](http://localhost:4502/system/console/bundles). Das Drittanbieter-Bundle ist im Ordner /apps der `crx` Repository wie unten dargestellt
 ![Drittanbieter](assets/custom-bundle1.png)
-![Drittanbieter](assets/custom-bundle1.png)
+
 
 
