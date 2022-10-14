@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 25c289b093297e870c52028a759d05628d77f634
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '292'
 ht-degree: 8%
 
 ---
@@ -25,9 +25,9 @@ In diesem Tutorial wird untersucht, wie AEM GraphQL-APIs und Headless-Funktionen
 
 In diesem Tutorial werden die folgenden Themen behandelt:
 
-* Erstellen einer neuen Projektkonfiguration
-* Erstellen neuer Inhaltsfragmentmodelle zum Modellieren von Daten
-* Erstellen Sie neue Inhaltsfragmente basierend auf den zuvor erstellten Modellen.
+* Erstellen einer Projektkonfiguration
+* Erstellen von Inhaltsfragmentmodellen zum Modellieren von Daten
+* Erstellen Sie Inhaltsfragmente anhand der zuvor erstellten Modelle.
 * Erfahren Sie, wie Inhaltsfragmente in AEM mithilfe des integrierten GraphiQL-Entwicklungstools abgefragt werden können.
 * So speichern oder speichern Sie die GraphQL-Abfragen in AEM
 * Beibehaltene GraphQL-Abfragen aus einer React-Beispielanwendung nutzen
@@ -39,14 +39,14 @@ Für dieses Tutorial sind folgende Schritte erforderlich:
 
 * Grundlegende HTML- und JavaScript-Kenntnisse
 * Die folgenden Tools müssen lokal installiert sein:
-   * [Node.js v10+](https://nodejs.org/en/)
+   * [Node.js v14+](https://nodejs.org/en/)
    * [npm 6+](https://www.npmjs.com/)
    * [Git](https://git-scm.com/)
    * Eine IDE (z. B. [Microsoft® Visual Studio Code](https://code.visualstudio.com/))
 
 ### AEM-Umgebung
 
-Um dieses Tutorial abzuschließen, wird AEM Administratorzugriff auf eine AEM as a Cloud Service Umgebung empfohlen.  Wenn Sie keinen Zugriff auf AEM as a Cloud Service Umgebung haben, können Sie die [Lokales AEM as a Cloud Service Schnellstart-SDK](/help/cloud-service/local-development-environment/aem-runtime.md). Beachten Sie jedoch, dass einige Bildschirme der Produktoberfläche, wie z. B. die Navigation zu Inhaltsfragmenten, unterschiedlich sind.
+Um dieses Tutorial abzuschließen, wird AEM Administratorzugriff auf eine AEM as a Cloud Service Umgebung empfohlen. Wenn Sie keinen Zugriff auf AEM as a Cloud Service Umgebung haben, können Sie die [Lokales AEM as a Cloud Service Schnellstart-SDK](/help/cloud-service/local-development-environment/aem-runtime.md). Beachten Sie jedoch, dass einige Bildschirme der Produktoberfläche, wie z. B. die Navigation zu Inhaltsfragmenten, unterschiedlich sind.
 
 ## Fangen wir an!
 

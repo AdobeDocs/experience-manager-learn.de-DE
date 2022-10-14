@@ -10,16 +10,16 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 25c289b093297e870c52028a759d05628d77f634
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '810'
 ht-degree: 3%
 
 ---
 
 # Erstellen von Inhaltsfragmenten {#authoring-content-fragments}
 
-In diesem Kapitel erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf dem [neu definiertes Inhaltsfragmentmodell](./content-fragment-models.md). Außerdem erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
+In diesem Kapitel erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf der [neu definiertes Inhaltsfragmentmodell](./content-fragment-models.md). Außerdem erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -38,7 +38,7 @@ Inhaltsfragmente werden in Ordnern in AEM Assets gespeichert. Um Inhaltsfragment
 
    ![Navigieren zu Asset-Dateien](assets/author-content-fragments/navigate-assets-files.png)
 
-1. Tippen **Erstellen** in der Ecke tippen Sie auf **Ordner**. Geben Sie im daraufhin angezeigten Dialogfeld Folgendes ein:
+1. Tippen **Erstellen** in der oberen rechten Ecke und tippen Sie auf **Ordner**. Geben Sie im daraufhin angezeigten Dialogfeld Folgendes ein:
 
    * Titel*: **Mein Projekt**
    * Name: **my-project**
@@ -49,17 +49,17 @@ Inhaltsfragmente werden in Ordnern in AEM Assets gespeichert. Um Inhaltsfragment
 
    ![Ordnereigenschaften öffnen](assets/author-content-fragments/open-folder-properties.png)
 
-1. Tippen Sie auf **Cloud Services** Registerkarte. under **Cloud-Konfiguration** Verwenden Sie die Pfadsuche, um die **Mein Projekt** Konfiguration. Der Wert sollte `/conf/my-project`.
+1. Tippen Sie auf **Cloud Services** Registerkarte. Wählen Sie auf der Registerkarte Cloud-Konfiguration mit der Pfadsuche die **Mein Projekt** Konfiguration. Der Wert sollte `/conf/my-project`.
 
    ![Cloud-Konfiguration festlegen](assets/author-content-fragments/set-cloud-config-my-project.png)
 
    Durch Festlegen dieser Eigenschaft können Inhaltsfragmente mithilfe der im vorherigen Kapitel erstellten Modelle erstellt werden.
 
-1. Tippen Sie auf **Richtlinien** Registerkarte. under **Zulässige Inhaltsfragmentmodelle** Verwenden Sie die Pfadsuche, um die **Person** und **Team** -Modell, das zuvor erstellt wurde.
+1. Tippen Sie auf **Richtlinien** Registerkarte unter **Zulässige Inhaltsfragmentmodelle** -Feld verwenden Sie die Pfadsuche, um die **Person** und **Team** -Modell, das zuvor erstellt wurde.
 
    ![Zulässige Inhaltsfragmentmodelle](assets/author-content-fragments/allowed-content-fragment-models.png)
 
-   Diese Richtlinien werden automatisch von allen Unterordnern übernommen und können überschrieben werden. Beachten Sie, dass Sie auch Modelle nach Tags zulassen oder Modelle aus anderen Projektkonfigurationen aktivieren können. Dieser Mechanismus bietet eine leistungsstarke Möglichkeit, Ihre Inhaltshierarchie zu verwalten.
+   Diese Richtlinien werden automatisch von allen Unterordnern übernommen und können überschrieben werden. Sie können auch Modelle nach Tags zulassen oder Modelle aus anderen Projektkonfigurationen aktivieren. Dieser Mechanismus bietet eine leistungsstarke Möglichkeit, Ihre Inhaltshierarchie zu verwalten.
 
 1. Tippen **Speichern und schließen** , um die Änderungen an den Ordnereigenschaften zu speichern.
 
@@ -91,25 +91,25 @@ Als Nächstes werden mehrere Inhaltsfragmente basierend auf dem **Team** und **P
 
    ![Neues Inhaltsfragment](assets/author-content-fragments/new-content-fragment-john-doe.png)
 1. Tippen Sie auf **Erstellen**.
-1. Wiederholen Sie die obigen Schritte, um ein neues Fragment zu erstellen, das **Alison Smith**:
+1. Wiederholen Sie die obigen Schritte, um ein Fragment zu erstellen, das **Alison Smith**:
 
    * Speicherort: `/content/dam/my-project/en`
    * Inhaltsfragmentmodell: **Person**
    * Titel: **Alison Smith**
    * Name: `alison-smith`
 
-   Tippen **Erstellen** , um das neue Personen-Fragment zu erstellen.
+   Tippen **Erstellen** , um das Fragment &quot;Person&quot;zu erstellen.
 
-1. Wiederholen Sie als Nächstes die Schritte zum Erstellen eines neuen **Team** Fragmentdarstellung **Team Alpha**:
+1. Wiederholen Sie als Nächstes die Schritte zum Erstellen einer **Team** Fragmentdarstellung **Team Alpha**:
 
    * Speicherort: `/content/dam/my-project/en`
    * Inhaltsfragmentmodell: **Team**
    * Titel: **Team Alpha**
    * Name: `team-alpha`
 
-   Tippen **Erstellen** , um das neue Team-Fragment zu erstellen.
+   Tippen **Erstellen** , um das Team-Fragment zu erstellen.
 
-1. Es sollten jetzt drei Inhaltsfragmente unter **Mein Projekt** > **englisch**:
+1. Es sollten drei Inhaltsfragmente darunter sein **Mein Projekt** > **englisch**:
 
    ![Neue Inhaltsfragmente](assets/author-content-fragments/new-content-fragments.png)
 
@@ -139,7 +139,7 @@ Füllen Sie anschließend die neu erstellten Fragmente mit Daten.
 
    >[!NOTE]
    >
-   >Sie können auch neue Inhaltsfragmente inline erstellen, indem Sie die **Neues Inhaltsfragment** Schaltfläche.
+   >Sie können Inhaltsfragmente auch inline erstellen, indem Sie die **Neues Inhaltsfragment** Schaltfläche.
 
 1. Tippen **Speichern und schließen** , um die Änderungen am Team Alpha-Fragment zu speichern.
 
@@ -151,13 +151,12 @@ Veröffentlichen Sie nach Überprüfung und Überprüfung die erstellten `Conten
 
 1. Erweitern Sie in der linken Leiste **Mein Projekt** und tippen **englisch**.
 
-1. Tippen Sie auf das Kontrollkästchen neben den Inhaltsfragmenten und tippen Sie auf **Veröffentlichen**
-
+1. Tippen Sie auf das Kontrollkästchen neben den Inhaltsfragmenten und tippen Sie auf **Veröffentlichen**.
    ![Inhaltsfragment veröffentlichen](assets/author-content-fragments/publish-content-fragment.png)
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
-Herzlichen Glückwunsch! Sie haben gerade mehrere Inhaltsfragmente erstellt und eine Variante erstellt.
+Herzlichen Glückwunsch! Sie haben mehrere Inhaltsfragmente erstellt und eine Variante erstellt.
 
 ## Nächste Schritte {#next-steps}
 

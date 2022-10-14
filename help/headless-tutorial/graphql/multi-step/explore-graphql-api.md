@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 25c289b093297e870c52028a759d05628d77f634
 workflow-type: tm+mt
-source-wordcount: '1529'
-ht-degree: 7%
+source-wordcount: '1535'
+ht-degree: 4%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 7%
 
 Die GraphQL-API von AEM bietet eine leistungsstarke Abfragesprache, um Daten von Inhaltsfragmenten für nachgelagerte Anwendungen verfügbar zu machen. Inhaltsfragmentmodelle definieren das Datenschema, das von Inhaltsfragmenten verwendet wird. Jedes Mal, wenn ein Inhaltsfragmentmodell erstellt oder aktualisiert wird, wird das Schema übersetzt und zum &quot;Diagramm&quot;hinzugefügt, aus dem die GraphQL-API besteht.
 
-In diesem Kapitel werden wir einige gängige GraphQL-Abfragen untersuchen, um Inhalte mithilfe einer IDE namens [GraphiQL](https://github.com/graphql/graphiql). Mit der GraphiQL IDE können Sie die zurückgegebenen Abfragen und Daten schnell testen und verfeinern. GraphiQL bietet auch einen einfachen Zugang zur Dokumentation, sodass man leicht lernen und verstehen kann, welche Methoden verfügbar sind.
+In diesem Kapitel werden einige gängige GraphQL-Abfragen untersucht, um Inhalte mithilfe einer IDE namens zu erfassen. [GraphiQL](https://github.com/graphql/graphiql). Mit der GraphiQL IDE können Sie die zurückgegebenen Abfragen und Daten schnell testen und verfeinern. Darüber hinaus erhalten Sie einen einfachen Zugriff auf die Dokumentation, sodass Sie leicht wissen können, welche Methoden verfügbar sind.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -37,13 +37,13 @@ Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die im [
 
 ## Aktivieren eines GraphQL-Endpunkts {#enable-graphql-endpoint}
 
-Es muss ein GraphQL-Endpunkt konfiguriert werden, um GraphQL-API-Abfragen für Inhaltsfragmente zu aktivieren.
+Ein GraphQL-Endpunkt muss konfiguriert werden, um GraphQL-API-Abfragen für Inhaltsfragmente zu aktivieren.
 
 1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Allgemein** > **GraphQL**.
 
    ![Navigieren zum GraphQL-Endpunkt](assets/explore-graphql-api/navigate-to-graphql-endpoint.png)
 
-1. Tippen **Erstellen** in der oberen rechten Ecke. Geben Sie im Dialogfeld die folgenden Werte ein:
+1. Tippen **Erstellen** Geben Sie in der oberen rechten Ecke des angezeigten Dialogfelds die folgenden Werte ein:
 
    * Name*: **Mein Projektendpunkt**.
    * GraphQL-Schema verwenden, das von ... * bereitgestellt wird: **Mein Projekt**
@@ -52,7 +52,7 @@ Es muss ein GraphQL-Endpunkt konfiguriert werden, um GraphQL-API-Abfragen für I
 
    Tippen **Erstellen** , um den Endpunkt zu speichern.
 
-   GraphQL-Endpunkte, die basierend auf einer Projektkonfiguration erstellt wurden, ermöglichen nur Abfragen für Modelle, die zu diesem Projekt gehören. In diesem Fall stellt nur die **Person** und **Team** -Modelle verwendet werden.
+   Die GraphQL-Endpunkte, die basierend auf einer Projektkonfiguration erstellt wurden, ermöglichen nur Abfragen für Modelle, die zu diesem Projekt gehören. In diesem Fall fragt die einzige Instanz die **Person** und **Team** -Modelle verwendet werden.
 
    >[!NOTE]
    >
@@ -64,7 +64,7 @@ Es muss ein GraphQL-Endpunkt konfiguriert werden, um GraphQL-API-Abfragen für I
 
 ## Verwenden der GraphiQL-IDE
 
-Die [GraphiQL-Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) ermöglicht es Entwicklern, Abfragen für Inhalte in der aktuellen AEM-Umgebung zu erstellen und zu testen. Mit dem GraphQL-Tool können Benutzer auch **persist** oder speichern Sie Abfragen, die von Clientanwendungen in einer Produktionseinstellung verwendet werden sollen.
+Die [GraphiQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) ermöglicht es Entwicklern, Abfragen für Inhalte in der aktuellen AEM-Umgebung zu erstellen und zu testen. Mit dem GraphQL-Tool können Benutzer auch **beibehalten oder speichern** -Abfragen, die von Clientanwendungen in einer Produktionseinstellung verwendet werden sollen.
 
 Erkunden Sie als Nächstes die Leistungsfähigkeit AEM GraphQL-API mit der integrierten GraphiQL-IDE.
 
@@ -74,9 +74,9 @@ Erkunden Sie als Nächstes die Leistungsfähigkeit AEM GraphQL-API mit der integ
 
    >[!NOTE]
    >
-   > Bei älteren Versionen von AEM ist die GraphiQL IDE möglicherweise nicht integriert. Sie kann manuell installiert werden, indem Sie den folgenden Schritten folgen: [instructions](#install-graphiql).
+   > In sind die älteren Versionen AEM GraphiQL IDE möglicherweise nicht integriert. Sie kann manuell installiert werden, indem Sie den folgenden Schritten folgen: [instructions](#install-graphiql).
 
-1. Stellen Sie in der oberen rechten Ecke sicher, dass die **Endpunkt** auf **Mein Projektendpunkt**.
+1. Stellen Sie oben rechts sicher, dass der Endpunkt auf **Mein Projektendpunkt**.
 
    ![GraphQL-Endpunkt festlegen](assets/explore-graphql-api/set-my-project-endpoint.png)
 
@@ -111,7 +111,7 @@ Eine gängige Anforderung besteht darin, mehrere Inhaltsfragmente abzufragen.
 
    ![Kurznamen- und Beschreibungsergebnisse](assets/explore-graphql-api/updated-query-shortname-description.png)
 
-   Die `shortname` ist eine einfache Eigenschaft und `description` ist ein mehrzeiliges Textfeld, und die GraphQL-API ermöglicht es uns, eine Vielzahl von Formaten für die Ergebnisse auszuwählen, z. B. `html`, `markdown`, `json` oder `plaintext`.
+   Die `shortname` ist eine einfache Eigenschaft und `description` ist ein mehrzeiliges Textfeld und die GraphQL-API ermöglicht es uns, verschiedene Formate für die Ergebnisse auszuwählen, wie `html`, `markdown`, `json`oder `plaintext`.
 
 ### Abfrage für verschachtelte Fragmente
 
@@ -174,7 +174,7 @@ Als Nächstes experimentieren Sie mit der Abfrage, indem Sie verschachtelte Frag
    }
    ```
 
-   Die Möglichkeit, mit verschachtelten Fragmenten abzufragen, ist eine leistungsstarke AEM GraphQL-API. In diesem einfachen Beispiel ist die Verschachtelung nur zwei Ebenen tief. Es ist jedoch möglich, Fragmente noch weiter zu verschachteln. Wenn beispielsweise **Adresse** mit einem **Person** Es wäre möglich, Daten aus allen drei Modellen in einer einzigen Abfrage zurückzugeben.
+   Die Möglichkeit, mit verschachtelten Fragmenten abzufragen, ist eine leistungsstarke Funktion der AEM GraphQL-API. In diesem einfachen Beispiel ist die Verschachtelung nur zwei Ebenen tief. Es ist jedoch möglich, Fragmente noch weiter zu verschachteln. Wenn beispielsweise eine **Adresse** mit einem **Person** Es wäre möglich, Daten aus allen drei Modellen in einer einzigen Abfrage zurückzugeben.
 
 ### Filtern einer Liste von Inhaltsfragmenten {#filter-list-cf}
 
@@ -211,11 +211,11 @@ Als Nächstes sehen wir uns an, wie es möglich ist, die Ergebnisse basierend au
    {"name": "John Doe"}
    ```
 
-1. Führen Sie die Abfrage aus. Es wird erwartet, dass nur **Personen** wird mit dem Wert &quot;John Doe&quot;zurückgegeben.
+1. Führen Sie die Abfrage aus. Es wird erwartet, dass nur **Personen** Inhaltsfragment wird mit dem Wert `John Doe`.
 
    ![Verwenden von Abfragevariablen zum Filtern](assets/explore-graphql-api/using-query-variables-filter.png)
 
-   Es gibt viele weitere Optionen zum Filtern und Erstellen komplexer Abfragen, siehe [Verwendung von GraphQL mit AEM - Beispielinhalt und Abfragen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html?lang=de).
+   Es gibt viele weitere Optionen zum Filtern und Erstellen komplexer Abfragen, siehe [Verwendung von GraphQL mit AEM - Beispielinhalt und Abfragen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
 
 1. Erweiterung der obigen Abfrage zum Abrufen des Profilbilds
 
@@ -279,11 +279,11 @@ Es ist auch möglich, ein einzelnes Inhaltsfragment direkt abzufragen. Der Inhal
 
 ## Dauerhafte Abfragen {#persist-queries}
 
-Sobald ein Entwickler mit der zurückgegebenen Abfrage und Daten zufrieden ist, besteht der nächste Schritt darin, die Abfrage zu speichern oder zu AEM. [Beständige Abfragen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html) ist der bevorzugte Mechanismus zur Bereitstellung der GraphQL-API für Client-Anwendungen. Nachdem eine Abfrage persistiert wurde, kann sie mithilfe einer GET-Anfrage angefordert und in den Dispatcher- und CDN-Ebenen zwischengespeichert werden. Die Leistung persistenter Abfragen ist viel besser. Zusätzlich zu den Leistungsvorteilen stellen persistente Abfragen sicher, dass zusätzliche Daten nicht versehentlich Client-Anwendungen zur Verfügung gestellt werden. Weitere Informationen [Persistierte Abfragen finden Sie hier .](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html).
+Sobald ein Entwickler mit der von der Abfrage zurückgegebenen Abfrage und Ergebnisdaten zufrieden ist, besteht der nächste Schritt darin, die Abfrage zu speichern oder zu AEM. Die [Beständige Abfragen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html) sind der bevorzugte Mechanismus zum Freigeben der GraphQL-API für Clientanwendungen. Nachdem eine Abfrage persistiert wurde, kann sie mithilfe einer GET-Anfrage angefordert und in den Dispatcher- und CDN-Ebenen zwischengespeichert werden. Die Leistung der persistenten Abfragen ist viel besser. Zusätzlich zu den Leistungsvorteilen stellen persistente Abfragen sicher, dass zusätzliche Daten nicht versehentlich Client-Anwendungen zur Verfügung gestellt werden. Weitere Informationen [Persistente Abfragen finden Sie hier .](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html).
 
 Beibehalten von zwei einfachen Abfragen, die im nächsten Kapitel verwendet werden.
 
-1. Geben Sie in die GraphiQL IDE die folgende Abfrage ein:
+1. Geben Sie die folgende Abfrage in die GraphiQL IDE ein:
 
    ```graphql
    query allTeams {
@@ -308,10 +308,10 @@ Beibehalten von zwei einfachen Abfragen, die im nächsten Kapitel verwendet werd
 
 1. Nächstes Tippen **Speichern unter** und eingeben `all-teams` als **Abfragename**.
 
-   Die Abfrage sollte jetzt unter **Beständige Abfragen** in der linken Leiste.
+   Die Abfrage sollte unter **Beständige Abfragen** in der linken Leiste.
 
    ![Alle Teams - beständige Abfrage](assets/explore-graphql-api/all-teams-persisted-query.png)
-1. Tippen Sie anschließend auf die Sendungen **...** neben der persistenten Abfrage und tippen Sie auf **URL kopieren** , um den Pfad in die Zwischenablage zu kopieren.
+1. Tippen Sie als Nächstes auf die Auslassungspunkte **...** neben der persistenten Abfrage und tippen Sie auf **URL kopieren** , um den Pfad in die Zwischenablage zu kopieren.
 
    ![Persistente Abfrage-URL kopieren](assets/explore-graphql-api/copy-persistent-query-url.png)
 
@@ -321,17 +321,17 @@ Beibehalten von zwei einfachen Abfragen, die im nächsten Kapitel verwendet werd
    https://$YOUR-AEMasCS-INSTANCEID$.adobeaemcloud.com/graphql/execute.json/my-project/all-teams
    ```
 
-   Sie sollte dem obigen Pfad ähnlich aussehen. Sie sollten die JSON-Ergebnisse der zurückgegebenen Abfrage sehen.
+   Sie sollte dem obigen Pfad ähnlich aussehen. Sie sollten sehen, dass die JSON-Ergebnisse der zurückgegebenen Abfrage vorliegen.
 
-   Aufschlüsseln der URL:
+   Aufschlüsseln der oben genannten URL:
 
    | Name | Beschreibung |
    | ---------|---------- |
    | `/graphql/execute.json` | Persistenter Abfrageendpunkt |
    | `/my-project` | Projektkonfiguration für `/conf/my-project` |
-   | `/all-teams` | Name der persistenten Abfrage |
+   | `/all-teams` | Name der gespeicherten Abfrage |
 
-1. Kehren Sie zur GraphiQL-IDE zurück und verwenden Sie die Plusschaltfläche . **+** um die NEU-Abfrage zu beibehalten
+1. Kehren Sie zur GraphiQL-IDE zurück und verwenden Sie die Plusschaltfläche . **+** , um die NEU-Abfrage beizubehalten
 
    ```graphql
    query personByName($name: String!) {
@@ -365,8 +365,8 @@ Beibehalten von zwei einfachen Abfragen, die im nächsten Kapitel verwendet werd
    }
    ```
 
-1. Speichern Sie die Abfrage als: **person-by-name**.
-1. Sie sollten zwei persistente Abfragen speichern:
+1. Speichern Sie die Abfrage als: `person-by-name`.
+1. Zwei persistente Abfragen sollten gespeichert werden:
 
    ![Abgeschlossene persistente Abfragen](assets/explore-graphql-api/final-persisted-queries.png)
 
@@ -383,7 +383,7 @@ Nach Überprüfung und Überprüfung veröffentlichen Sie die `GraphQL Endpoint`
 
 1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Allgemein** > **GraphQL-Abfrage-Editor**
 
-1. Tippen Sie auf *All-Teams* Tippen Sie im Bedienfeld &quot;Persistente Abfragen&quot;auf **Veröffentlichen**
+1. Tippen Sie auf **All-Teams** Abfrage im Bedienfeld &quot;Persistente Abfragen&quot;und tippen Sie auf **Veröffentlichen**
 
    ![Persistente Abfragen veröffentlichen](assets/explore-graphql-api/publish-persisted-query.png)
 
@@ -395,19 +395,19 @@ Laden Sie den Inhalt, die Modelle und die persistenten Abfragen herunter, die in
 
 ## Zusätzliche Ressourcen
 
-Weitere Beispiele für GraphQL-Abfragen finden Sie unter: [Verwendung von GraphQL mit AEM - Beispielinhalt und Abfragen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/content-fragments-graphql-samples.html).
+Weitere Informationen zu GraphQL-Abfragen finden Sie unter [Verwendung von GraphQL mit AEM - Beispielinhalt und Abfragen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
-Herzlichen Glückwunsch! Sie haben gerade mehrere GraphQL-Abfragen erstellt und ausgeführt!
+Herzlichen Glückwunsch! Sie haben mehrere GraphQL-Abfragen erstellt und ausgeführt!
 
 ## Nächste Schritte {#next-steps}
 
-Im nächsten Kapitel [React-App erstellen](./graphql-and-react-app.md)werden Sie untersuchen, wie eine externe Anwendung GraphQL-Endpunkte abfragen AEM und diese beiden beibehaltenen Abfragen nutzen kann. Außerdem werden Sie mit der grundlegenden Fehlerbehandlung vertraut gemacht.
+Im nächsten Kapitel [React-App erstellen](./graphql-and-react-app.md)Erfahren Sie, wie eine externe Anwendung GraphQL-Endpunkte abfragen AEM und diese beiden beibehaltenen Abfragen verwenden kann. Außerdem wurden Sie mit der grundlegenden Fehlerbehandlung während der GraphQL-Abfrageausführung vertraut gemacht.
 
 ## Installieren des GraphiQL-Tools (optional) {#install-graphiql}
 
-Für einige Versionen von AEM muss das GraphiQL IDE Tool manuell installiert werden. Befolgen Sie die folgenden Anweisungen, um manuell zu installieren:
+Verwenden Sie in einigen Versionen von AEM (6.X.X) das GraphiQL IDE-Tool manuell installiert werden muss die folgenden Anweisungen:
 
 1. Gehen Sie zum **[Software-Verteilungsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)** > **AEM as a Cloud Service**.
 1. Suchen Sie nach „GraphiQL“ (stellen Sie sicher, dass Sie das **i** in **GraphiQL** einschließen.
@@ -417,7 +417,7 @@ Für einige Versionen von AEM muss das GraphiQL IDE Tool manuell installiert wer
 
    Die ZIP-Datei ist ein AEM Paket, das direkt installiert werden kann.
 
-1. Gehen Sie im **AEM-Startmenü** zu **Tools** > **Implementierung** > **Pakete**.
+1. Navigieren Sie im AEM Startmenü zu **Instrumente** > **Implementierung** > **Pakete**.
 1. Klicken Sie auf **Paket hochladen** und wählen Sie das im vorherigen Schritt heruntergeladene Paket aus. Klicken Sie auf **Installieren**, um das Paket zu installieren.
 
    ![Installieren des GraphiQL-Pakets](assets/explore-graphql-api/install-graphiql-package.png)

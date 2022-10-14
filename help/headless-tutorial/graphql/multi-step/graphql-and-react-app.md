@@ -10,17 +10,17 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: a073316f5541e392b5f5bd74c86ea146b1f80b9c
+source-git-commit: 25c289b093297e870c52028a759d05628d77f634
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 2%
+source-wordcount: '1174'
+ht-degree: 3%
 
 ---
 
 
-# Erstellen einer React-App, die AEM GraphQL-APIs nutzt
+# Erstellen einer React-App, die AEM GraphQL-APIs verwendet
 
-In diesem Kapitel wird untersucht, wie AEM GraphQL-APIs das Erlebnis in einer externen Anwendung fördern können.
+In diesem Kapitel erfahren Sie, wie AEM GraphQL-APIs das Erlebnis in einer externen Anwendung fördern können.
 
 Eine einfache React-App wird zum Abfragen und Anzeigen verwendet **Team** und **Person** Inhalte, die von AEM GraphQL-APIs bereitgestellt werden. Die Verwendung von React ist größtenteils unwichtig, und die verbrauchende externe Anwendung könnte in jedem Rahmen für jede Plattform geschrieben werden.
 
@@ -32,7 +32,7 @@ _IDE-Screenshots in diesem Kapitel stammen von [Visual Studio-Code](https://code
 
 Die folgende Software muss installiert sein:
 
-- [Node.js v12+](https://nodejs.org/en/)
+- [Node.js v14+](https://nodejs.org/en/)
 - [npm 6.4+](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 - [Visual Studio-Code](https://code.visualstudio.com/)
 
@@ -49,9 +49,7 @@ Erfahren Sie mehr über:
 
 In diesem Kapitel wird eine ausgeschaltete React-Beispielanwendung implementiert, die den Code enthält, der für die Interaktion mit AEM GraphQL-API erforderlich ist, und Teams- und Personendaten anzeigt, die von ihnen erhalten wurden.
 
-Der Beispiel-Quell-Code der React-App ist auf Github.com unter folgender Adresse verfügbar:
-
-- https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial
+Der Beispiel-Quell-Code der React-App ist auf Github.com unter <https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial>
 
 So rufen Sie die React-App ab:
 
@@ -59,7 +57,7 @@ So rufen Sie die React-App ab:
 
    ```shell
    $ cd ~/Code
-   $ git clone --branch git@github.com:adobe/aem-guides-wknd-graphql.git
+   $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
 1. Navigieren Sie zu `basic-tutorial` und öffnen Sie sie in Ihrer IDE.
@@ -76,10 +74,13 @@ So rufen Sie die React-App ab:
    - Satz `REACT_APP_HOST_URI`Der Wert von ist die Veröffentlichungs-URL Ihres AEM as a Cloud Service (z. B. `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`) und `REACT_APP_AUTH_METHOD`Wert von `none`
    >[!NOTE]
    >
-   > Vergewissern Sie sich, dass Sie die Projektkonfiguration, Inhaltsfragmentmodelle, erstellten Inhaltsfragmente, GraphQL-Endpunkte und persistente Abfragen aus vorherigen Schritten veröffentlicht haben. Wenn Sie die oben genannten Schritte für das lokale AEM SDK ausgeführt haben, können Sie auf `http://localhost:4502` und `REACT_APP_AUTH_METHOD`Wert von `basic`.
+   > Vergewissern Sie sich, dass Sie die Projektkonfiguration, Inhaltsfragmentmodelle, erstellten Inhaltsfragmente, GraphQL-Endpunkte und persistente Abfragen aus vorherigen Schritten veröffentlicht haben.
+   >
+   > Wenn Sie die oben genannten Schritte für das lokale AEM Author-SDK ausgeführt haben, können Sie auf `http://localhost:4502` und `REACT_APP_AUTH_METHOD`Wert von `basic`.
 
 
 1. Wechseln Sie in der Befehlszeile zum `aem-guides-wknd-graphql/basic-tutorial` Ordner
+
 1. React-App starten
 
    ```shell
@@ -88,45 +89,68 @@ So rufen Sie die React-App ab:
    $ npm start
    ```
 
-1. Die React-App startet im Entwicklungsmodus auf [http://localhost:3000/](http://localhost:3000/). Änderungen, die während des Tutorials an der React-App vorgenommen wurden, werden automatisch übernommen.
+1. Die React-App startet im Entwicklungsmodus auf [http://localhost:3000/](http://localhost:3000/). Änderungen, die während des Tutorials an der React-App vorgenommen wurden, werden sofort übernommen.
+
+![Teilweise implementierte React-App](./assets/graphql-and-external-app/partially-implemented-react-app.png)
+
+>[!IMPORTANT]
+>
+>   Dies ist eine teilweise implementierte React-App, die nach den Schritten abgeschlossen ist. Für die JavaScript-Dateien, für die Implementierungsarbeiten erforderlich sind, gibt es den folgenden Kommentar: Stellen Sie sicher, dass Sie den Code in diesen Dateien mit dem in diesem Tutorial angegebenen Code hinzufügen/aktualisieren.
+>
+>
+> //*******************************************
+>
+>  // TODO : Implementieren Sie dies, indem Sie die Schritte aus AEM Headless-Tutorial befolgen.
+>
+>  //*******************************************
+
+
 
 ## Anatomie der React-App
 
 Die React-Beispielanwendung besteht aus drei Hauptteilen:
 
-1. `src/api` enthält Dateien, die zum Erstellen von GraphQL-Abfragen zu AEM verwendet werden.
+1. Die `src/api` enthält Dateien, die zum Erstellen von GraphQL-Abfragen für AEM verwendet werden.
    - `src/api/aemHeadlessClient.js` initialisiert und exportiert den AEM Headless-Client, der zur Kommunikation mit AEM verwendet wird
    - `src/api/usePersistedQueries.js` implementiert [benutzerdefinierte React-Hooks](https://reactjs.org/docs/hooks-custom.html) Daten aus AEM GraphQL an die `Teams.js` und `Person.js` Komponenten anzeigen.
 
-1. `src/components/Teams.js` zeigt mithilfe einer Listenabfrage eine Liste der Teams und ihrer Mitglieder an.
-1. `src/components/Person.js` zeigt die Details einer einzelnen Person mithilfe einer parametrisierten Abfrage mit einem Ergebnis an.
+1. Die `src/components/Teams.js` zeigt mithilfe einer Listenabfrage eine Liste der Teams und ihrer Mitglieder an.
+1. Die `src/components/Person.js` zeigt die Details einer einzelnen Person mithilfe einer parametrisierten Abfrage mit einem Ergebnis an.
 
-## Erstellen des AEMHeadless-Clients
+## Überprüfen des AEMHeadless-Objekts
 
-Überprüfen `aemHeadlessClient.js` für die Initialisierung des AEM Headless-Clients, der zur Kommunikation mit AEM verwendet wird.
+Überprüfen Sie die `aemHeadlessClient.js` -Datei für die Erstellung der `AEMHeadless` -Objekt, das zur Kommunikation mit AEM verwendet wird.
 
 1. Öffnen Sie `src/api/aemHeadlessClient.js`.
-1. Zeilen 1-40, importieren `AEMHeadless` aus dem SDK, Konfigurationsautorisierung basierend auf Variablen, die in `.env.development`und richten Sie die `serviceUrl` für die enthalten [Entwicklungs-Proxy](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app#proxy-api-requests) Konfiguration.
-1. Die Zeilen 42-49 sind am wichtigsten, da sie den AEMHeadless-Client instanziieren und zur Verwendung in der React-App exportieren.
 
-   ```javascript
-   // Initialize the AEM Headless Client and export it for other files to use
-   const aemHeadlessClient = new AEMHeadless({
-     serviceURL: serviceURL,
-     endpoint: REACT_APP_GRAPHQL_ENDPOINT,
-     auth: setAuthorization(),
-   });
-   
-   export default aemHeadlessClient;
-   ```
+1. Überprüfen Sie die Zeilen 1-40:
 
-## Mit AEM GraphQL-Endpunkten verbinden
+   - Der Import `AEMHeadless` Erklärung [AEM Headless-Client für JavaScript](https://github.com/adobe/aem-headless-client-js), Zeile 11.
 
-Öffnen `usePersistedQueries.js` um die generische `fetchPersistedQuery(..)` -Funktion, um eine Verbindung zu AEM GraphQL-Endpunkten herzustellen. `fetchPersistedQuery(..)` ruft die `aemHeadlessClient` aus `aemHeadlessClient.js`.
+   - Die Konfiguration der Autorisierung basierend auf Variablen, die in `.env.development`, Zeile 14-22 und dem Ausdruck für die Pfeilfunktion `setAuthorization`, Zeile 31-40.
 
-Später rufen benutzerdefinierte React-useEffect-Hooks diese Funktion auf, um bestimmte Daten aus AEM abzurufen.
+   - Die `serviceUrl` -Setup für die enthaltene [Entwicklungs-Proxy](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app#proxy-api-requests) Konfiguration, Zeile 27.
 
-1. In `src/api/usePersistedQueries.js` update `fetchPersistedQuery(..)` mit dem unten stehenden Code.
+1. Die Zeilen 42-49 sind am wichtigsten, da sie die `AEMHeadless` und exportieren Sie es zur Verwendung in der gesamten React-App.
+
+```javascript
+// Initialize the AEM Headless Client and export it for other files to use
+const aemHeadlessClient = new AEMHeadless({
+  serviceURL: serviceURL,
+  endpoint: REACT_APP_GRAPHQL_ENDPOINT,
+  auth: setAuthorization(),
+});
+
+export default aemHeadlessClient;
+```
+
+## Implementieren, um AEM von GraphQL persistente Abfragen auszuführen
+
+Öffnen Sie die `usePersistedQueries.js` -Datei, um die generische `fetchPersistedQuery(..)` -Funktion zum Ausführen der AEM von GraphQL-gespeicherten Abfragen. Die `fetchPersistedQuery(..)` -Funktion verwendet die `aemHeadlessClient` -Objekt `runPersistedQuery()` -Funktion, um Abfragen asynchron und versprechen-basiertes Verhalten auszuführen.
+
+Später, benutzerdefinierte React `useEffect` hook ruft diese Funktion auf, um bestimmte Daten aus AEM abzurufen.
+
+1. In `src/api/usePersistedQueries.js` **update** `fetchPersistedQuery(..)`, Zeile 35 mit dem folgenden Code.
 
 ```javascript
 /**
@@ -167,7 +191,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 Erstellen Sie als Nächstes die Funktion zum Anzeigen der Teams und ihrer Mitglieder in der Hauptansicht der React-App. Diese Funktion erfordert:
 
 - Eine neue [Benutzerdefinierter React-useEffect-Erweiterungspunkt](https://reactjs.org/docs/hooks-custom.html) in `src/api/usePersistedQueries.js` , das die `my-project/all-teams` persistente Abfrage, die eine Liste von Team-Inhaltsfragmenten in AEM zurückgibt.
-- Eine React-Komponente unter `src/components/Teams.js` , der den neuen benutzerdefinierten React-useEffect-Erweiterungspunkt aufruft und die Team-Daten rendert.
+- Eine React-Komponente unter `src/components/Teams.js` , das den neuen benutzerdefinierten React aufruft `useEffect` Erweitern und rendert die Team-Daten.
 
 Nach Abschluss des Vorgangs werden in der Hauptansicht der App die Teamdaten aus AEM angezeigt.
 
@@ -176,7 +200,9 @@ Nach Abschluss des Vorgangs werden in der Hauptansicht der App die Teamdaten aus
 ### Schritte
 
 1. Öffnen Sie `src/api/usePersistedQueries.js`.
+
 1. Suchen Sie die Funktion `useAllTeams()`
+
 1. So erstellen Sie eine `useEffect` Erweiterungspunkt, der die persistente Abfrage aufruft `my-project/all-teams` via `fetchPersistedQuery(..)`, fügen Sie den folgenden Code hinzu. Der Erweiterungspunkt gibt auch nur die relevanten Daten aus der AEM GraphQL-Antwort zurück unter `data?.teamList?.items`, sodass die React-Ansicht-Komponenten unabhängig von den übergeordneten JSON-Strukturen sein können.
 
    ```javascript
@@ -211,6 +237,7 @@ Nach Abschluss des Vorgangs werden in der Hauptansicht der App die Teamdaten aus
    ```
 
 1. Öffnen Sie `src/components/Teams.js`
+
 1. Im `Teams` React-Komponente: Rufen Sie die Liste der Teams aus AEM mithilfe der `useAllTeams()` Haken.
 
    ```javascript
@@ -223,7 +250,9 @@ Nach Abschluss des Vorgangs werden in der Hauptansicht der App die Teamdaten aus
    }
    ```
 
-1. Führen Sie eine ansichtsbasierte Datenvalidierung durch, zeigen Sie eine Fehlermeldung an oder laden Sie einen Indikator basierend auf den zurückgegebenen Daten.
+
+
+1. Führen Sie die ansichtsbasierte Datenvalidierung durch, zeigen Sie eine Fehlermeldung an oder laden Sie die Anzeige basierend auf den zurückgegebenen Daten.
 
    ```javascript
    function Teams() {
@@ -313,14 +342,16 @@ Diese Funktion erfordert:
 
 - Eine neue [Benutzerdefinierter React-useEffect-Erweiterungspunkt](https://reactjs.org/docs/hooks-custom.html) in `src/api/usePersistedQueries.js` , der die parametrisierte `my-project/person-by-name` persistente Abfrage und gibt einen Datensatz für eine einzelne Person zurück.
 
-- Eine React-Komponente unter `src/components/Person.js` , der den vollständigen Namen einer Person als Abfrageparameter verwendet, den neuen benutzerdefinierten React-useEffect-Erweiterungspunkt aufruft und die Personendaten rendert.
+- Eine React-Komponente unter `src/components/Person.js` , der den vollständigen Namen einer Person als Abfrageparameter verwendet, ruft die neue benutzerdefinierte React auf `useEffect` Erweitern und rendert die Personendaten.
 
 Wenn Sie nach Abschluss des Vorgangs den Namen einer Person in der Ansicht &quot;Teams&quot;auswählen, wird die Personenansicht angezeigt.
 
 ![Person](./assets/graphql-and-external-app/react-app__person-view.png)
 
 1. Öffnen Sie `src/api/usePersistedQueries.js`.
+
 1. Suchen Sie die Funktion `usePersonByName(fullName)`
+
 1. So erstellen Sie eine `useEffect` Erweiterungspunkt, der die persistente Abfrage aufruft `my-project/all-teams` via `fetchPersistedQuery(..)`, fügen Sie den folgenden Code hinzu. Der Erweiterungspunkt gibt auch nur die relevanten Daten aus der AEM GraphQL-Antwort zurück unter `data?.teamList?.items`, sodass die React-Ansicht-Komponenten unabhängig von den übergeordneten JSON-Strukturen sein können.
 
    ```javascript
@@ -458,11 +489,11 @@ Wenn Sie nach Abschluss des Vorgangs den Namen einer Person in der Ansicht &quot
 
 ## Testen der App
 
-Überprüfen der App [http://localhost:3000/](http://localhost:3000/) und klicken Sie auf _Mitglieder_ Links. Zusätzlich können Sie weitere Teams und/oder Mitglieder zum Team Alpha hinzufügen.
+Überprüfen der App [http://localhost:3000/](http://localhost:3000/) und klicken Sie auf _Mitglieder_ Links. Außerdem können Sie dem Team-Alpha weitere Teams und/oder Mitglieder hinzufügen, indem Sie Inhaltsfragmente in AEM hinzufügen.
 
 ## Unterhalb des
 
-Wenn Sie die **Entwicklertools** > **Netzwerk** und *Filter* für `all-teams` -Anfrage, werden Sie feststellen, dass die GraphQL-API-Anfrage `/graphql/execute.json/my-project/all-teams` gegen `http://localhost:3000` und **NOT** gegen den Wert von `REACT_APP_HOST_URI`(z. B. https://publish-p123-e456.adobeaemcloud.com), liegt dies daran, dass [Proxy-Einrichtung](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) using `http-proxy-middleware` -Modul.
+Öffnen Sie die **Entwicklertools** > **Netzwerk** und _Filter_ für `all-teams` -Anfrage, beachten Sie die GraphQL-API-Anfrage `/graphql/execute.json/my-project/all-teams` gegen `http://localhost:3000` und **NOT** gegen den Wert von `REACT_APP_HOST_URI`(z. B. <https://publish-p123-e456.adobeaemcloud.com>), da dies [Proxy-Einrichtung](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) using `http-proxy-middleware` -Modul.
 
 
 ![GraphQL-API-Anfrage über Proxy](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)
