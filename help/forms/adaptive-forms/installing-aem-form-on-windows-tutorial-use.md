@@ -8,10 +8,10 @@ topic: Development
 role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
-source-git-commit: 5c53919dd038c0992e1fe5dd85053f26c03c5111
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 7%
+source-wordcount: '578'
+ht-degree: 9%
 
 ---
 
@@ -53,7 +53,8 @@ Es wird empfohlen, [amtliche Dokumentation](https://helpx.adobe.com/de/experienc
 * Suchen Sie die Datei AEMQuickStart.Jar und verschieben Sie sie in den Ordner AEMForms .
 * Kopieren Sie die Datei license.properties in diesen Ordner von AEMForms
 * Erstellen Sie eine Batch-Datei mit dem Namen &quot;StartAEMForms.bat&quot;mit folgendem Inhalt:
-   * java -d64 -Xmx2048M -jar AEM_6.5_Quickstart.jar -gui. Hier AEM_6.5_Quickstart.jar ist der Name meiner AEM Schnellstart-JAR.
+   * `java -d64 -Xmx2048M -jar AEM_6.5_Quickstart.jar -gui`
+      * Hier AEM_6.5_Quickstart.jar ist der Name meiner AEM Schnellstart-JAR.
    * Sie können Ihre JAR-Datei in einen beliebigen Namen umbenennen. Stellen Sie jedoch sicher, dass dieser Name in der Batch-Datei angezeigt wird. Speichern Sie die Batch-Datei im Ordner &quot;AEMForms&quot;.
 
 * Öffnen Sie eine neue Eingabeaufforderung und navigieren Sie zu _c:\aemforms_.
@@ -68,7 +69,7 @@ Es wird empfohlen, [amtliche Dokumentation](https://helpx.adobe.com/de/experienc
    * **sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.&#42;** **sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.&#42;**
 * Diese beiden Eigenschaften sind erforderlich, damit Document Services funktioniert
 * Speichern Sie die Datei sling.properties .
-* [Herunterladen des entsprechenden Forms Add-On-Pakets](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=en)
+* [Herunterladen des entsprechenden Forms Add-On-Pakets](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/forms-updates/aem-forms-releases.html?lang=de)
 * Installieren Sie die Formulare, die dem Paket hinzugefügt werden, mit [Package Manager.](http://localhost:4502/crx/packmgr/index.jsp)
 * Nachdem Sie das Paket installiert haben, müssen Sie die folgenden Schritte ausführen
 

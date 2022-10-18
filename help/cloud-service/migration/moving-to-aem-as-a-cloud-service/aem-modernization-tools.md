@@ -8,9 +8,9 @@ level: Experienced
 kt: 8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '446'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,21 @@ ht-degree: 6%
 
 Erfahren Sie, wie AEM Modernisierungs-Tools verwendet werden, um einen vorhandenen AEM Sites-Inhalt zu aktualisieren, damit er AEM as a Cloud Service kompatibel ist und mit Best Practices übereinstimmt.
 
->[!VIDEO](https://video.tv.adobe.com/v/336965/?quality=12&learn=on)
+## All-in-One-Konverter
+
+>[!VIDEO](https://video.tv.adobe.com/v/338802/?quality=12&learn=on)
+
+## Seitenkonvertierung
+
+>[!VIDEO](https://video.tv.adobe.com/v/338799/?quality=12&learn=on)
+
+## Komponentenkonvertierung
+
+>[!VIDEO](https://video.tv.adobe.com/v/338788/?quality=12&learn=on)
+
+## Richtlinienimport
+
+>[!VIDEO](https://video.tv.adobe.com/v/338797/?quality=12&learn=on)
 
 ## Verwenden AEM Modernisierungs-Tools
 
@@ -88,7 +102,6 @@ Stellen Sie außerdem sicher, dass Sie die vorherige praktische Übung abgeschlo
 + [Herunterladen AEM Modernisierungs-Tools](https://github.com/adobe/aem-modernize-tools/releases/latest)
 + [Dokumentation zu AEM Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/)
 + [AEM Gems - Einführung in die AEM-Modernisierungs-Suite](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
-
 
 1. Stellen Sie die neu modernisierte wknd-legacy-Site im lokalen AEM SDK bereit. AEM ASK kann hier heruntergeladen werden:
    + [Software Distribution-Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).

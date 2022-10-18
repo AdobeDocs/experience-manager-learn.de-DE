@@ -13,7 +13,7 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 575b12f9-b57f-41f7-bd39-56d242de4747
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
 source-wordcount: '1020'
 ht-degree: 3%
@@ -36,7 +36,7 @@ Dieses Tutorial führt Sie durch die Erstellung eines einfachen Asset compute-Se
 
 1. Bereitstellung und Einrichtung der erforderlichen Konten und Dienste zum Erstellen und Bereitstellen eines Asset compute Worker
 1. Erstellen und Konfigurieren eines Asset compute-Projekts
-1. Entwickeln eines Asset compute Sekundärs, der eine benutzerdefinierte Ausgabedarstellung generiert
+1. Entwickeln eines Asset compute Sekundärs, der eine benutzerdefinierte Ausgabe generiert
 1. Schreiben von Tests für und Erfahren Sie, wie Sie den benutzerdefinierten Asset compute Worker debuggen
 1. Stellen Sie den Asset compute Worker bereit und integrieren Sie ihn AEM as a Cloud Service Autorendienst über Verarbeitungsprofile
 
@@ -58,7 +58,7 @@ Die lokale Entwicklung von Asset compute-Projekten erfordert ein spezifisches En
 
 ### App Builder
 
-asset compute-Projekte sind speziell definierte App Builder-Projekte und erfordern daher Zugriff auf App Builder in der Adobe Developer Console, um sie einzurichten und bereitzustellen.
+asset compute-Projekte sind speziell definierte App Builder-Projekte und erfordern daher Zugriff auf App Builder in der Adobe Developer-Konsole, um sie einzurichten und bereitzustellen.
 
 + [App Builder einrichten](./set-up/app-builder.md)
 

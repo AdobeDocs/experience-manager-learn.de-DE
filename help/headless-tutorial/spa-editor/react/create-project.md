@@ -10,7 +10,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 3%
@@ -42,7 +42,7 @@ In diesem Kapitel wird ein neues AEM-Projekt basierend auf der Variablen [AEM Pr
 
 >[!NOTE]
 >
->Dieses Tutorial verwendet Version **27** des Archetyps. Es empfiehlt sich immer, die **latest** Version des Archetyps, um ein neues Projekt zu generieren.
+>Dieses Tutorial verwendet Version **39** des Archetyps. Es empfiehlt sich immer, die **latest** Version des Archetyps, um ein neues Projekt zu generieren.
 
 1. Öffnen Sie ein Befehlszeilen-Terminal und geben Sie den folgenden Maven-Befehl ein:
 
@@ -50,7 +50,7 @@ In diesem Kapitel wird ein neues AEM-Projekt basierend auf der Variablen [AEM Pr
    mvn -B archetype:generate \
     -D archetypeGroupId=com.adobe.aem \
     -D archetypeArtifactId=aem-project-archetype \
-    -D archetypeVersion=27 \
+    -D archetypeVersion=39 \
     -D appTitle="WKND SPA React" \
     -D appId="wknd-spa-react" \
     -D artifactId="aem-guides-wknd-spa.react" \
@@ -71,18 +71,20 @@ In diesem Kapitel wird ein neues AEM-Projekt basierend auf der Variablen [AEM Pr
 
    ```plain
    |--- aem-guides-wknd-spa.react/
+       |--- LICENSE
+       |--- README.md
        |--- all/
+       |--- archetype.properties
        |--- core/
+       |--- dispatcher/
+       |--- it.tests/
+       |--- pom.xml
        |--- ui.apps/
        |--- ui.apps.structure/
        |--- ui.config/
        |--- ui.content/
        |--- ui.frontend/
        |--- ui.tests /
-       |--- it.tests/
-       |--- dispatcher/
-       |--- pom.xml
-       |--- README.md
        |--- .gitignore
    ```
 

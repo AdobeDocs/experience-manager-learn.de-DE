@@ -13,9 +13,9 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 497ce6d7-cd39-4fb3-b5e0-6c60845f7648
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
 workflow-type: tm+mt
-source-wordcount: '2256'
+source-wordcount: '2257'
 ht-degree: 2%
 
 ---
@@ -112,7 +112,7 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
    Um einen potenziellen XSS-Angriff zu vermeiden, wird der Rich-Text über `DOMPurify` vor der Verwendung von [dangerousSetInnerHTML](https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml) , um den Inhalt zu rendern. Erinnern Sie sich an `richText` und `text` -Eigenschaften aus dem JSON-Modell, das zu einem früheren Zeitpunkt in der Übung verwendet wurde.
 
-1. Sehen Sie sich als Nächstes die `TextEditConfig` bei ~line 29:
+1. Als Nächstes öffnen `ui.frontend/src/components/import-components.js` Sehen Sie sich die `TextEditConfig` bei ~line 86:
 
    ```js
    const TextEditConfig = {
@@ -126,10 +126,10 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
    Der obige Code ist für die Bestimmung verantwortlich, wann der Platzhalter in der AEM Autorenumgebung wiedergegeben werden soll. Wenn die Variable `isEmpty` Methodenzurückgaben **true** dann wird der Platzhalter gerendert.
 
-1. Sehen Sie sich abschließend die `MapTo` Aufruf bei ~line 62:
+1. Sehen Sie sich abschließend die `MapTo` Aufruf bei ~line 94:
 
    ```js
-   export default MapTo('wknd-spa-react/components/text')(Text, TextEditConfig);
+   export default MapTo('wknd-spa-react/components/text')(LazyTextComponent, TextEditConfig);
    ```
 
    `MapTo` wird vom AEM SPA Editor JS SDK (`@adobe/aem-react-editable-components`). Der Pfad `wknd-spa-react/components/text` steht für `sling:resourceType` der AEM Komponente. Dieser Pfad entspricht dem `:type` durch das zuvor beobachtete JSON-Modell verfügbar gemacht werden. `MapTo` Analysiert die JSON-Modellantwort und übergibt die richtigen Werte als `props` zur SPA Komponente.
