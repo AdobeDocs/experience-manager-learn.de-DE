@@ -8,7 +8,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 30c882da3a89820b5e11bc2902bb92dd0629efe9
 workflow-type: tm+mt
 source-wordcount: '962'
 ht-degree: 11%
@@ -78,7 +78,7 @@ Wenn Inhaltsfragmentmodelle **not** für eine Konfiguration aktiviert ist, wird 
 
 ## Grundlagen zum Erstellen des Inhaltsfragmentmodells
 
-Bevor wir das Inhaltsfragmentmodell definieren, sollten wir uns das Erlebnis ansehen, das wir durchführen werden, um sicherzustellen, dass wir alle erforderlichen Datenpunkte erfassen. Dazu werden wir das Design von Mobile Apps überprüfen und die Design-Elemente der Erfassung von Inhalten zuordnen.
+Bevor wir unser Inhaltsfragmentmodell definieren, sollten wir uns das Erlebnis ansehen, das wir durchführen werden, um sicherzustellen, dass wir alle erforderlichen Datenpunkte erfassen. Dazu werden wir das Design von Mobile Apps überprüfen und die Design-Elemente der Erfassung von Inhalten zuordnen.
 
 Wir können die Datenpunkte, die ein Ereignis definieren, wie folgt aufschlüsseln:
 
