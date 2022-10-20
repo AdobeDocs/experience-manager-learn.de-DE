@@ -1,22 +1,24 @@
 ---
-title: Tutorials und Videos zu AEM Forms
+title: AEM Forms-Tutorials und -Videos
 description: Sehen Sie sich unsere Videos und Tutorials für AEM Forms an, mit Ressourcen und Dokumentation zur Beantwortung Ihrer Fragen.
 sub-product: forms
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
+source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
 workflow-type: tm+mt
 source-wordcount: '306'
-ht-degree: 28%
+ht-degree: 33%
 
 ---
 
-# Tutorials und Videos zu AEM Forms {#overview}
+# AEM Forms-Tutorials und -Videos {#overview}
 
 Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie komplexe digitale Formulare erstellen, verwalten, veröffentlichen und aktualisieren und dabei in Back-End-Prozesse, Geschäftsregeln und Daten integrieren können. Dieses Benutzerhandbuch enthält Videos und Tutorials zu den zahlreichen Funktionen und Features von AEM Forms
 
-## Neue Funktionen
+<div id="whats-new-section">
+
+## Neuerungen
 
 * **[Umgang mit Fehlermeldungen im Schritt &quot;Formulardatenmodelldienst aufrufen&quot;](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
 
@@ -29,6 +31,17 @@ Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie
 * **[Wiederverwendbare Workflow-Modelle erstellen](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
 
    *Erstellen von Workflow-Modellen, die nicht an ein bestimmtes Formular gebunden sind*
+
+</div>
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
+<div id="staff-picks-section">
 
 ## Mitarbeiterauswahl
 
@@ -57,7 +70,7 @@ Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie
     </a>
     </div>
     <p>
-    <em>Interaktive Kommunikation zentralisiert und verwaltet die Erstellung, Zusammenstellung und Bereitstellung sicherer, personalisierter und interaktiver Schriftstücke, wie z. B. Geschäftskorrespondenz, Dokumente, Kontoauszüge, Hinweise zu Vorteilen, Marketing-E-Mails, Rechnungen und Willkommenskits. </em>
+    <em>Interaktive Kommunikation zentralisiert und verwaltet die Erstellung, Anordnung und Bereitstellung von sicheren, personalisierten und interaktiven Korrespondenzen wie Geschäftskorrespondenz, Dokumente, Kontoauszüge, Mitteilungen über finanzielle Leistungen, Marketing-Mails, Rechnungen und Begrüßungssets. </em>
     <p>
   </td>
   <td>
@@ -76,6 +89,7 @@ Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie
 </tr>
 </table>
 
+</div>
 
 
 
@@ -83,11 +97,11 @@ Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie
 ## Zusätzliche Ressourcen
 
 * [Experience League - AEM](https://experienceleague.adobe.com/?lang=de#recommended/solutions/experience-manager)
-* [AEM Sites Authoring - Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [Dokumentation zur AEM Sites-Bearbeitung](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
 * [AEM Sites-Entwicklungsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
 * [Dokumentation zur Verwaltung von AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
 * [Dokumentation zur AEM Sites-Bereitstellung](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
-* [Tutorials zu AEM as a Cloud Service](/help/cloud-service/overview.md)
+* [AEM as a Cloud Service Tutorials](/help/cloud-service/overview.md)
 * [AEM Assets-Tutorials](/help/assets/overview.md)
 * [AEM Forms-Tutorials](/help/forms/overview.md)
 * [AEM Foundation-Tutorials](/help/foundation/overview.md)

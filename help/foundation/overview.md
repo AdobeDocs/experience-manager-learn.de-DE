@@ -4,10 +4,10 @@ description: Sehen Sie sich unsere Videos und Tutorials an, um Hilfe mit Adobe E
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: efa33aa8cf8288d48ae56d2e96ed9d3a6c4e9627
+source-git-commit: c6ee6681775847b3c1168bc18f0f0e973f2daa83
 workflow-type: tm+mt
 source-wordcount: '253'
-ht-degree: 15%
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,9 @@ ht-degree: 15%
 
 Adobe Experience Manager bietet eine Reihe gemeinsamer Funktionen, die Benutzern von AEM Sites, Assets und Forms zur Verfügung stehen.
 
-## Neue Funktionen
+<div id="whats-new-section">
+
+## Neuerungen
 
 * **[Workflow-AEM verwenden (Video)](./workflow/use-workflow.md)**
 
@@ -29,6 +31,17 @@ Adobe Experience Manager bietet eine Reihe gemeinsamer Funktionen, die Benutzern
 
 * **[Verwenden der CI/CD-Pipeline von Cloud Manager (Video)](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
    *Erfahren Sie, wie Sie die CI/CD-Pipeline von Cloud Manager verwenden, um eine sichere und konsistente Bereitstellung sicherzustellen.*
+
+</div>
+
+<div id="recs-overview-body-1"></div>
+<div id="recs-overview-body-2"></div>
+<div id="recs-overview-body-3"></div>
+<div id="recs-overview-body-4"></div>
+<div id="recs-overview-body-5"></div>
+<div id="recs-overview-body-6"></div>
+
+<div id="staff-picks-section">
 
 ## Mitarbeiterauswahl
 
@@ -76,10 +89,12 @@ Adobe Experience Manager bietet eine Reihe gemeinsamer Funktionen, die Benutzern
 </tr>
 </table>
 
+</div>
+
 ## Zusätzliche Ressourcen
 
 * [Experience League - AEM](https://experienceleague.adobe.com/?lang=de#recommended/solutions/experience-manager)
-* [Tutorials zu AEM as a Cloud Service](/help/cloud-service/overview.md)
-* [AEM Sites-Videos und -Tutorials](/help/sites/overview.md)
-* [AEM Assets-Videos und -Tutorials](/help/assets/overview.md)
-* [AEM Forms-Videos und -Tutorials](/help/forms/overview.md)
+* [AEM as a Cloud Service Tutorials](/help/cloud-service/overview.md)
+* [Videos und Tutorials zu AEM Sites](/help/sites/overview.md)
+* [Videos und Tutorials zu AEM Assets](/help/assets/overview.md)
+* [Videos und Tutorials zu AEM Forms](/help/forms/overview.md)
