@@ -7,12 +7,13 @@ topic: Development, Integrations, Security
 role: Architect, Developer
 level: Intermediate
 kt: 9354
-thumbnail: KT-9354.jpeg
+thumbnail: KT-9354.png
+last-substantial-update: 2022-10-13T00:00:00Z
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
-source-git-commit: a18bea7986062ff9cb731d794187760ff6e0339f
+source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
 workflow-type: tm+mt
 source-wordcount: '468'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -67,7 +68,7 @@ Sobald die am besten geeignete erweiterte Netzwerkoption, die auf den Anforderun
   </tr>
 </table>
 
-## Codebeispiele
+## Code-Beispiele
 
 Diese Sammlung enthält Beispiele für die Konfiguration und den Code, die zur Nutzung erweiterter Netzwerkfunktionen für bestimmte Anwendungsfälle erforderlich sind.
 
