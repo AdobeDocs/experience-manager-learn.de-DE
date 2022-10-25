@@ -7,13 +7,14 @@ role: Admin, User
 level: Beginner
 kt: 9124
 thumbnail: 337575.jpeg
-source-git-commit: cd54cfbbded4e44f4850f9dac8ab17d179e7d498
+last-substantial-update: 2022-09-02T00:00:00Z
+exl-id: fe9d1305-7add-4434-a4a9-16e0fb805574
+source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
 workflow-type: tm+mt
 source-wordcount: '53'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
-
 
 # Grundlagen zum Workfront-Connector
 
@@ -23,6 +24,6 @@ Erfahren Sie mehr über die Grundlagen des Adobe Workfront- und Experience Manag
 + Definieren von Metadatenzuordnungen
 + Senden von Assets an AEM
 + Versionselemente
-+ Automatische Veröffentlichung von Assets
++ Automatisches Veröffentlichen von Assets
 
 >[!VIDEO](https://video.tv.adobe.com/v/337575/?quality=12&learn=on)
