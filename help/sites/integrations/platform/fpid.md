@@ -9,7 +9,7 @@ level: Beginner
 last-substantial-update: 2022-10-20T00:00:00Z
 kt: 11336
 thumbnail: kt-11336.jpeg
-source-git-commit: d1e105a4083b34e7a3f220a59d4608ef39d39032
+source-git-commit: aeeed85ec05de9538b78edee67db4d632cffaaab
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Im folgenden Diagramm wird beschrieben, wie der AEM Publish-Dienst FPIDs verwalt
 1. Wenn die Webseite nicht über CDN oder AEM Dispatcher-Caches bedient werden kann, erreicht die Anforderung den AEM-Veröffentlichungsdienst, der die angeforderte Webseite generiert.
 1. Die Webseite wird dann an den Webbrowser zurückgegeben und die Caches gefüllt, die die Anforderung nicht bedienen konnten. Bei AEM erwarten Sie, dass die Cache-Trefferraten von CDN und AEM Dispatcher über 90 % liegen.
 1. Die Webseite enthält JavaScript, das eine nicht speicherbare asynchrone XHR-Anfrage (AJAX) an ein benutzerdefiniertes FPID-Servlet im AEM Publish-Dienst sendet. Da es sich um eine nicht speicherbare Anforderung handelt (aufgrund des zufälligen Abfrageparameters und der Cache-Control-Header), wird sie nie vom CDN oder AEM Dispatcher zwischengespeichert und erreicht immer den AEM-Veröffentlichungsdienst, um die Antwort zu generieren.
-1. Das benutzerdefinierte FPID-Servlet im AEM Publish-Dienst verarbeitet die Anforderung und generiert eine neue FPID, wenn kein vorhandenes FPID-Cookie gefunden wird, oder erweitert die Live-Schaltung eines vorhandenen FPID-Cookies. Das Servlet gibt auch die FPID im Antworttext für die Verwendung durch clientseitiges JavaScript zurück. Glücklicherweise ist die benutzerdefinierte FPID-Servlet-Logik einfach und verhindert, dass diese Anfrage die Leistung des AEM-Veröffentlichungsdienstes beeinträchtigt.
+1. Das benutzerdefinierte FPID-Servlet im AEM Publish-Dienst verarbeitet die Anforderung und generiert eine neue FPID, wenn kein vorhandenes FPID-Cookie gefunden wird, oder verlängert die Lebensdauer eines vorhandenen FPID-Cookies. Das Servlet gibt auch die FPID im Antworttext für die Verwendung durch clientseitiges JavaScript zurück. Glücklicherweise ist die benutzerdefinierte FPID-Servlet-Logik einfach und verhindert, dass diese Anfrage die Leistung des AEM-Veröffentlichungsdienstes beeinträchtigt.
 1. Die Antwort für die XHR-Anfrage wird mit dem FPID-Cookie und der FPID als JSON im Antworttext zur Verwendung durch das Platform Web SDK an den Browser zurückgegeben.
 
 ## Code-Beispiel
@@ -62,7 +62,9 @@ Wenn eine HTTP-Anforderung das Servlet erreicht, prüft das Servlet, ob in der A
 + Wenn kein FPID-Cookie vorhanden ist, generieren Sie ein neues FPID-Cookie und speichern Sie den Wert, der in die Antwort geschrieben werden soll.
 
 Das Servlet schreibt dann die FPID als JSON-Objekt in die Antwort im Formular: `{ fpid: "<FPID VALUE>" }`.
+
 Es ist wichtig, die FPID dem Client im Hauptteil bereitzustellen, da das FPID-Cookie markiert ist `HttpOnly`, was bedeutet, dass nur der Server seinen Wert lesen kann und clientseitiges JavaScript dies nicht kann.
+
 Der FPID-Wert aus dem Antworttext wird verwendet, um Aufrufe mithilfe des Platform Web SDK zu parametrisieren.
 
 Nachstehend finden Sie einen Beispielcode für einen Servlet-Endpunkt AEM (verfügbar über `HTTP GET /bin/aep/fpid`), das ein FPID-Cookie generiert oder aktualisiert und die FPID als JSON zurückgibt.
