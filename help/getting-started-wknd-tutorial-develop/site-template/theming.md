@@ -1,7 +1,6 @@
 ---
 title: Designarbeitsablauf | AEM SchnellSite-Erstellung
 description: Erfahren Sie, wie Sie die Themenquellen einer Adobe Experience Manager-Site aktualisieren, um markenspezifische Stile anzuwenden. Erfahren Sie, wie Sie mit einem Proxy-Server eine Live-Vorschau von CSS- und JavaScript-Aktualisierungen anzeigen können. In diesem Tutorial wird auch beschrieben, wie Sie Designaktualisierungen mithilfe der Frontend-Pipeline von Adobe Cloud Manager auf einer AEM Site bereitstellen.
-sub-product: sites
 version: Cloud Service
 type: Tutorial
 feature: Core Components
@@ -11,7 +10,7 @@ level: Beginner
 kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 1%

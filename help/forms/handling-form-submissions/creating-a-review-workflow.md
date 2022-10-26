@@ -1,7 +1,6 @@
 ---
 title: Erstellen eines Workflows zum Überprüfen der gesendeten Daten
 description: Erstellen AEM Workflow-Modells mit AEM Forms-Workflow-Komponenten zum Überprüfen gesendeter Daten.
-sub-product: forms
 feature: Workflow
 topics: integrations
 audience: developer
@@ -10,16 +9,16 @@ activity: setup
 version: 6.4,6.5
 kt: 4271
 thumbnail: 40242.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 7200601c1b59bef5b1546a100589c757f25bf365
+exl-id: 0aafd97a-2e72-4257-ad4d-e0993263b11f
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 6%
+source-wordcount: '138'
+ht-degree: 4%
 
 ---
-
 
 # Erstellen eines Workflows zum Überprüfen der gesendeten Daten
 
@@ -27,13 +26,10 @@ Workflows werden normalerweise verwendet, um gesendete Daten zur Überprüfung u
 
 ## Voraussetzung
 
-Stellen Sie sicher, dass Sie über eine funktionierende Instanz von AEM Forms verfügen. Folgen Sie dem [Installationshandbuch](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html), um AEM Forms zu installieren und zu konfigurieren.
+Stellen Sie sicher, dass Sie über eine funktionierende Instanz von AEM Forms verfügen. Bitte folgen Sie dem [Installationshandbuch](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) Installieren und Konfigurieren von AEM Forms
 
 Im folgenden Video wird die Erstellung des Arbeitsablaufs für Überprüfung und Genehmigung mithilfe von AEM Forms-Komponenten erläutert
 >[!VIDEO](https://video.tv.adobe.com/v/40242/?quality=9&learn=on)
 
 
-Wenn Sie aus irgendeinem Grund den Workflow nicht erstellen können, können Sie den abgeschlossenen Workflow von [hier](assets/review-submitted-data-workflow.zip) herunterladen und denselben mit [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) in Ihre AEM-Instanz importieren.
-
-
-
+Wenn Sie aus irgendeinem Grund den Workflow nicht erstellen können, können Sie den abgeschlossenen Workflow von herunterladen. [here](assets/review-submitted-data-workflow.zip) und importieren Sie dasselbe mithilfe von [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) in Ihrer AEM Instanz.

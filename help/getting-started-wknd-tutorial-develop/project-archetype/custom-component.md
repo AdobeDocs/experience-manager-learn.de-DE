@@ -1,7 +1,6 @@
 ---
 title: Benutzerdefinierte Komponente
 description: Behandelt die End-to-End-Erstellung einer benutzerdefinierten Byline-Komponente, die erstellten Inhalt anzeigt. Dazu gehört die Entwicklung eines Sling-Modells zum Einkapseln der Geschäftslogik zum Ausfüllen der byline-Komponente und der entsprechenden HTL zum Rendern der Komponente.
-sub-product: sites
 version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, APIs
@@ -12,7 +11,7 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '4131'
 ht-degree: 1%

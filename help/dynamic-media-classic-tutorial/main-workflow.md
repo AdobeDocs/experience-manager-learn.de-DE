@@ -1,7 +1,6 @@
 ---
 title: Dynamic Media Classic - Hauptarbeitsablauf und Asset-Vorschau
 description: 'Erfahren Sie mehr über den Hauptarbeitsablauf in Dynamic Media Classic, der die drei Schritte umfasst: Erstellen (und Hochladen), Verfassen (und Veröffentlichen) und Bereitstellen. Erfahren Sie dann, wie Sie eine Vorschau von Assets in Dynamic Media Classic anzeigen.'
-sub-product: dynamic-media
 feature: Dynamic Media Classic
 doc-type: tutorial
 topics: development, authoring, configuring, architecture, publishing
@@ -11,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 04aacd81-bbb2-4742-9306-f0eabc665a41
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '2703'
 ht-degree: 7%

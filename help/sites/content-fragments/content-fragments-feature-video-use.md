@@ -1,7 +1,6 @@
 ---
 title: Erstellen von Inhaltsfragmenten in AEM
 description: Inhaltsfragmente sind eine Inhaltsabstraktion in AEM, mit der textbasierte Inhalte unabhängig von den unterstützten Kanälen erstellt und verwaltet werden können.
-sub-product: content-services
 feature: Content Fragments
 topics: authoring, content-architecture
 audience: all
@@ -12,7 +11,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
-source-git-commit: 9aae58c3301a7067baca374d6499f1afc3c95b06
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 12%

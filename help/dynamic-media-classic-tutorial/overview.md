@@ -1,7 +1,6 @@
 ---
 title: Tutorial zu Best Practices für Dynamic Media Classic
 description: Dynamic Media Classic ist der zentrale Ort, an dem Kunden Rich-Media-Inhalte erstellen, erstellen und bereitstellen. Dieses Tutorial mit Best Practices wurde erstellt, um aktuellen und neuen Benutzern von Dynamic Media Classic zu helfen, besser zu verstehen, was sie mit dieser leistungsstarken Rich-Media-Lösung aus Adobe tun können. In diesem Teil des Tutorials erfahren Sie, was Dynamic Media Classic ist, und erhalten einen kurzen Überblick über seine Kernfunktionen und Benutzeroberfläche.
-sub-product: dynamic-media
 doc-type: tutorial
 topics: best-practices, development, authoring, configuring
 audience: all
@@ -11,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 975b85af-ca6a-419e-ab2a-6e1781bfee4a
-source-git-commit: eb669d1e2493d9b4a973314ab1323764920ba220
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '885'
 ht-degree: 1%
@@ -51,7 +50,7 @@ Weitere Informationen zu den zusätzlichen Funktionen der Lösung finden Sie unt
 
 Die Hauptbenutzeroberfläche von Dynamic Media Classic besteht aus drei Hauptbereichen: die globale Navigationsleiste, die Asset-Bibliothek und das Durchsuchenbedienfeld/Build-Bedienfeld.
 
-![Bild](assets/overview/overview-dmc-ui-ew.png)
+![image](assets/overview/overview-dmc-ui-ew.png)
 
 _Dynamic Media Classic-Benutzeroberfläche_
 
@@ -69,7 +68,7 @@ _Dynamic Media Classic-Benutzeroberfläche_
 >
 >Neben jeder Asset-ID ist die **Zur Veröffentlichung markieren** umschalten. Wenn der Umschalter aktiviert ist (grün), zeigt dies an, dass das Asset zur Veröffentlichung markiert ist.
 
-![Bild](assets/overview/overview-mark-for-publish.png)
+![image](assets/overview/overview-mark-for-publish.png)
 
 >[!TIP]
 >

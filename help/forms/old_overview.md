@@ -1,14 +1,13 @@
 ---
 title: Tutorials und Videos zu AEM Forms
 description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwickler
-sub-product: forms
 topic: Development
 role: Developer
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
-source-git-commit: 9529b1f6d1a863fc570822c8ecd6c4be01b36729
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '516'
-ht-degree: 20%
+ht-degree: 26%
 
 ---
 
@@ -57,7 +56,7 @@ Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie
     </a>
     </div>
     <p>
-    <em>Interaktive Kommunikation zentralisiert und verwaltet die Erstellung, Zusammenstellung und Bereitstellung sicherer, personalisierter und interaktiver Schriftstücke, wie z. B. Geschäftskorrespondenz, Dokumente, Kontoauszüge, Hinweise zu Vorteilen, Marketing-E-Mails, Rechnungen und Willkommenskits. </em>
+    <em>Interaktive Kommunikation zentralisiert und verwaltet die Erstellung, Anordnung und Bereitstellung von sicheren, personalisierten und interaktiven Korrespondenzen wie Geschäftskorrespondenz, Dokumente, Kontoauszüge, Mitteilungen über finanzielle Leistungen, Marketing-Mails, Rechnungen und Begrüßungssets. </em>
     <p>
   </td>
   <td>

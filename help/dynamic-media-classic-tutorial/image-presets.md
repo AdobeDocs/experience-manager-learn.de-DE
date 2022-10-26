@@ -1,7 +1,6 @@
 ---
 title: Bildvorgaben
 description: Bildvorgaben in Dynamic Media Classic alle Einstellungen enthalten, die zum Erstellen eines Bildes in einer bestimmten Größe, einem bestimmten Format, einer bestimmten Qualität und einer bestimmten Scharfzeichnung erforderlich sind. Bildvorgaben sind eine Schlüsselkomponente der dynamischen Größe. Wenn Sie sich eine URL in Dynamic Media Classic ansehen, können Sie leicht erkennen, ob eine Bildvorgabe verwendet wird. Erfahren Sie mehr über Bildvorgaben, warum sie so nützlich sind und wie man sie erstellt.
-sub-product: dynamic-media
 feature: Dynamic Media Classic, Image Presets
 doc-type: tutorial
 topics: development, authoring, configuring
@@ -10,13 +9,13 @@ activity: use
 topic: Content Management
 role: User
 level: Beginner
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
+exl-id: e472db7c-ac3f-4f66-85af-5a4c68ba609e
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 1%
 
 ---
-
 
 # Bildvorgaben {#image-presets}
 
@@ -26,7 +25,7 @@ Wenn Sie sich die URLs von nahezu jedem Dynamic Media Classic-Kunden ansehen, wi
 
 Bildvorgaben verkürzen die URL. Anstatt also mehrere Image Serving-Anweisungen pro Anfrage zu schreiben, können Sie eine einzelne Bildvorgabe schreiben. Diese beiden URLs generieren beispielsweise dasselbe 300 x 300 JPEG-Bild mit Scharfzeichnung, die zweite verwendet jedoch eine Bildvorgabe:
 
-![Bild](assets/image-presets/image-preset-2.png)
+![image](assets/image-presets/image-preset-2.png)
 
 Der wahre Wert von Bildvorgaben besteht darin, dass jeder Unternehmensadministrator die Definition dieser Bildvorgabe aktualisieren und jedes Bild mit diesem Format beeinflussen kann, ohne dass ein Webcode geändert wird. Sie sehen die Ergebnisse jeder Änderung an einer Bildvorgabe, nachdem der Cache für die URL gelöscht wurde.
 
@@ -40,8 +39,8 @@ Eine Bildvorgabe weist auf beiden Seiten ihres Namens ein Dollarzeichen ($) auf 
 >
 >Erstellen Sie eine Bildvorgabe pro eindeutiger Bildgröße auf Ihrer Site. Wenn Sie z. B. ein Bild mit dem Format 350 x 350 für die Produktdetailseite, ein Bild mit dem Format 120 x 120 für die Durchsuchen-/Suchseiten und ein Bild mit dem Format 90 x 90 für ein Querverkauf-/Funktionselement benötigen, benötigen Sie drei Bildvorgaben, unabhängig davon, ob Sie 500 oder 500.0000000.
 
-- Erfahren Sie mehr über [Bildvorgaben](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
-- Erfahren Sie, wie Sie [eine Bildvorgabe erstellen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
+- Weitere Informationen [Bildvorgaben](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
+- Erfahren Sie, wie Sie [Erstellen einer Bildvorgabe](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
 
 ## Bildvorgaben und Scharfzeichnen
 
@@ -59,14 +58,14 @@ Wie viel Scharfzeichnung hinzugefügt werden soll, ist völlig subjektiv. Manche
 
 Die folgende Grafik zeigt drei Stufen der Scharfzeichnung. Von rechts nach links haben Sie keine Scharfzeichnung, nur den richtigen Betrag und zu viel.
 
-![Bild](assets/image-presets/image-presets-1.jpg)
+![image](assets/image-presets/image-presets-1.jpg)
 
 Dynamic Media Classic ermöglicht drei Arten der Scharfzeichnung: Einfaches Scharfzeichnen, Neuberechnen und Unschärfemaske.
 
-Erfahren Sie mehr über [Dynamic Media Classic-Scharfzeichnungsoptionen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
+Weitere Informationen [Dynamic Media Classic-Scharfzeichnungsoptionen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
 
 ## Zusätzliche Ressourcen
 
-[Anleitung zur Bildvorgabe](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf). Einstellungen, die zur Optimierung der Bildqualität und Ladegeschwindigkeit verwendet werden.
+[Anleitung für Bildvorgaben](https://www.adobe.com/content/dam/www/us/en/experience-manager/pdfs/dynamic-media-image-preset-guide.pdf). Einstellungen, die zur Optimierung der Bildqualität und Ladegeschwindigkeit verwendet werden.
 
 [Bild ist alles Teil 2: Es ist nie nur ein Weichzeichner - Qualität gegen Geschwindigkeit](https://theblog.adobe.com/image-is-everything-part-2-its-never-just-a-blur-quality-versus-speed/). In einem Blog-Beitrag wird die Verwendung von Bildvorgaben für die Bereitstellung hochwertiger, schnell ladender Bilder besprochen.

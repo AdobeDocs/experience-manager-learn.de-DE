@@ -1,7 +1,6 @@
 ---
 title: Verwenden von Adobe Cloud Manager - CI/CD-Produktions-Pipeline
 description: Die CI/CD-Produktions-Pipeline wird verwendet, um Code über die Staging-Umgebung zu erstellen und bereitzustellen, wodurch die Zeit bis zum Wert reduziert wird. Die Konfiguration der CI/CD-Produktions-Pipeline definiert den Auslöser, der die Pipeline initiiert, sowie Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
-sub-product: cloud-manager
 topics: Administration
 audience: administrator
 doc-type: feature video
@@ -13,7 +12,7 @@ topic: Architecture
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
-source-git-commit: bca51ece7a9b249727b8746cc9654503059116fb
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 39%
@@ -27,7 +26,7 @@ ht-degree: 39%
 >title="CI/CD-Produktions-Pipeline"
 >abstract="Die Konfiguration der CI/CD-Produktions-Pipeline definiert den Auslöser, der die Pipeline initiiert, sowie Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-process" text="Bereitstellen Ihres Codes"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-production-phase" text="Implementierung in der Produktionsphase"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-production-phase" text="Bereitstellung in der Produktionsphase"
 
 ## Konfiguration
 

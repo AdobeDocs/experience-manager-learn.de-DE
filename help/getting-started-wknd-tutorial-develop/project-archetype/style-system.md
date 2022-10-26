@@ -2,7 +2,6 @@
 title: Entwickeln mit dem Stilsystem
 seo-title: Developing with the Style System
 description: Erfahren Sie, wie Sie einzelne Stile implementieren und Kernkomponenten mithilfe des Stilsystems von Experience Manager wiederverwenden. In diesem Tutorial wird die Entwicklung für das Stilsystem beschrieben, um Kernkomponenten mit markenspezifischem CSS und erweiterten Richtlinienkonfigurationen des Vorlagen-Editors zu erweitern.
-sub-product: sites
 version: 6.5, Cloud Service
 type: Tutorial
 feature: Core Components, Style System
@@ -13,7 +12,7 @@ kt: 4128
 mini-toc-levels: 1
 thumbnail: 30386.jpg
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
-source-git-commit: df9ff5e6811d35118d1beee6baaffa51081cb3c3
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1681'
 ht-degree: 3%
@@ -103,7 +102,7 @@ Fügen Sie eine neue Richtlinie für Titel -Komponenten hinzu, damit Inhaltsauto
 
 1. Erstellen Sie eine neue Richtlinie für die Komponente Titel mit den folgenden Werten:
 
-   *Richtlinienname **: **WKND-Titel**
+   *Richtlinienname&#42;*: **WKND-Titel**
 
    *Eigenschaften* > *Registerkarte &quot;Stile&quot;* > *Neuen Stil hinzufügen*
 
@@ -213,7 +212,7 @@ Als Nächstes fügen Sie eine neue Richtlinie für die Textkomponenten hinzu.
 
 1. Aktualisieren Sie die Textkomponentenrichtlinie mit den folgenden Werten:
 
-   *Richtlinienname **: **Inhaltstext**
+   *Richtlinienname&#42;*: **Inhaltstext**
 
    *Plugins* > *Absatzformate* > *Absatzstile aktivieren*
 

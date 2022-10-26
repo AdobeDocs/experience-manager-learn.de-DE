@@ -1,7 +1,6 @@
 ---
 title: Erstellen einer benutzerdefinierten Wetterkomponente | Erste Schritte mit dem AEM SPA Editor und React
 description: Erfahren Sie, wie Sie eine benutzerdefinierte Wetterkomponente erstellen, die mit dem AEM SPA Editor verwendet werden kann. Erfahren Sie, wie Sie Bearbeitungsdialogfelder und Sling-Modelle entwickeln, um das JSON-Modell zu erweitern und eine benutzerdefinierte Komponente zu füllen. Die Komponenten "Open Weather API"und "React Open Weather"werden verwendet.
-sub-product: sites
 feature: SPA Editor
 doc-type: tutorial
 topics: development
@@ -12,7 +11,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 82466e0e-b573-440d-b806-920f3585b638
-source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1216'
 ht-degree: 4%

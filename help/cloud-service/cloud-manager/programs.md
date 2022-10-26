@@ -1,7 +1,6 @@
 ---
 title: Verwenden von Adobe Cloud Manager - Programme
-description: Cloud Manager-Programme stellen eine Reihe von AEM-Umgebungen dar, die logische Gruppen von Geschäftsinitiativen unterstützen. Diese entsprechen normalerweise einem erworbenen Service Level Agreement (SLA). Beispielsweise kann ein Programm die AEM Ressourcen zur Unterstützung der globalen öffentlichen Websites darstellen, während ein anderes Programm einen internen zentralen DAM darstellt.
-sub-product: cloud-manager
+description: Cloud Manager-Programme stellen eine Reihe von AEM-Umgebungen dar, die logische Gruppen von Geschäftsinitiativen unterstützen. Diese entsprechen normalerweise einem erworbenen Service Level Agreement (SLA). Beispielsweise kann ein Programm die AEM-Ressourcen zur Unterstützung der globalen öffentlichen Websites darstellen, während ein anderes Programm ein internes zentrales DAM darstellt.
 topics: Administration
 audience: administrator
 doc-type: feature video
@@ -13,15 +12,15 @@ topic: Architecture
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: 1dcbd6b5-3261-4cb1-ab20-d8812c0d070a
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '104'
-ht-degree: 0%
+ht-degree: 46%
 
 ---
 
 # Verwenden von Adobe Cloud Manager - Programme
 
-Cloud Manager **Programme** stellen AEM Umgebungen dar, die logische Gruppen von Geschäftsinitiativen unterstützen. Normalerweise entspricht dies einem erworbenen Service Level Agreement (SLA). Beispielsweise kann ein Programm die AEM Ressourcen zur Unterstützung der globalen öffentlichen Websites darstellen, während ein anderes Programm einen internen zentralen DAM darstellt.
+Cloud Manager **Programme** stellt eine Reihe von AEM Umgebungen dar, die logische Gruppen von Geschäftsinitiativen unterstützen, die normalerweise einem erworbenen Service Level Agreement (SLA) entsprechen. Beispielsweise kann ein Programm die AEM-Ressourcen zur Unterstützung der globalen öffentlichen Websites darstellen, während ein anderes Programm ein internes zentrales DAM darstellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313/?quality=12&learn=on&hidetitle=true)

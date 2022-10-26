@@ -1,14 +1,13 @@
 ---
 title: Verwenden des Panorama- und Vertikalbild-Viewers mit AEM Assets Dynamic Media
 description: Dynamic Media Viewer-Verbesserungen in AEM 6.4 umfassen das Hinzufügen von Viewer für Panoramabilder, Bild-Viewer für Panoramabilder mit virtueller Realität und Viewer für vertikale Bilder. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein ansprechendes, interaktives Erlebnis des Zimmers, der Eigenschaft, des Standorts oder der Landschaft ohne benutzerdefinierte Entwicklung bereitzustellen.
-sub-product: dynamic-media
 feature: Video Profiles, Video Profiles, 360 VR Video
 version: 6.4, 6.5
 topic: Content Management
 role: User
 level: Beginner
 exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 3%

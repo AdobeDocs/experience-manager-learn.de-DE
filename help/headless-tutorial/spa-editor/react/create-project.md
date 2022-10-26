@@ -1,7 +1,6 @@
 ---
 title: Projekt erstellen | Erste Schritte mit dem AEM SPA Editor und React
 description: Erfahren Sie, wie Sie ein Adobe Experience Manager-Maven-Projekt (AEM) als Ausgangspunkt für eine mit dem AEM SPA Editor integrierte React-Anwendung erstellen.
-sub-product: sites
 feature: SPA Editor, AEM Project Archetype
 version: Cloud Service
 kt: 413
@@ -10,7 +9,7 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
-source-git-commit: 09f6c4b0bec10edd306270a7416fcaff8a584e76
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1082'
 ht-degree: 3%

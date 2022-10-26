@@ -1,7 +1,6 @@
 ---
 title: Einführung in das Authoring und Publishing | AEM SchnellSite-Erstellung
 description: Verwenden Sie AEM den Seiteneditor in Adobe Experience Manager, um den Inhalt der Website zu aktualisieren. Erfahren Sie, wie Komponenten zur Erleichterung der Bearbeitung verwendet werden. Machen Sie sich mit dem Unterschied zwischen einer AEM-Autoren- und Veröffentlichungsumgebung vertraut und erfahren Sie, wie Sie Änderungen an der Live-Site veröffentlichen.
-sub-product: sites
 version: Cloud Service
 type: Tutorial
 topic: Content Management
@@ -11,7 +10,7 @@ level: Beginner
 kt: 7497
 thumbnail: KT-7497.jpg
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '1330'
 ht-degree: 4%

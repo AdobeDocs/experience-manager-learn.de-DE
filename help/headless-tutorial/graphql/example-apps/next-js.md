@@ -12,8 +12,8 @@ thumbnail: KT-10721.jpg
 last-substantial-update: 2022-10-03T00:00:00Z
 source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '836'
+ht-degree: 2%
 
 ---
 
