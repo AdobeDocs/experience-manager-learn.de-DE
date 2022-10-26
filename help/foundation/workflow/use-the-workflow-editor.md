@@ -7,9 +7,10 @@ topic: Content Management
 level: Intermediate
 role: Admin, Developer
 kt: 657
-thumbnail: 22201.jpg
 exl-id: 8ec12629-3acd-4958-b25c-0ae0b97ce244
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+last-substantial-update: 2022-08-10T00:00:00Z
+thumbnail: KT-657.jpg
+source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 0%
@@ -18,6 +19,6 @@ ht-degree: 0%
 
 # Workflow-Editor verwenden
 
-Der Workflow ermöglicht das Business Process Management in Experience Manager und wird für die automatische Verarbeitung von Inhalten sowie zur Erleichterung von Governance und Prozessen verwendet, die eine menschliche Entscheidungsfindung erfordern. Workflow wird über Workflow-Modelle definiert, die aus einer Reihe von Schritten bestehen und im [!UICONTROL Workflow-Modell-Editor] erstellt und verwaltet werden.
+Der Workflow ermöglicht das Business Process Management in Experience Manager und wird für die automatische Verarbeitung von Inhalten sowie zur Erleichterung von Governance und Prozessen verwendet, die eine menschliche Entscheidungsfindung erfordern. Workflow wird über Workflow-Modelle definiert, die aus einer Reihe von Schritten bestehen und im [!UICONTROL Workflow-Modell-Editor].
 
 >[!VIDEO](https://video.tv.adobe.com/v/22201/?quality=12&learn=on)

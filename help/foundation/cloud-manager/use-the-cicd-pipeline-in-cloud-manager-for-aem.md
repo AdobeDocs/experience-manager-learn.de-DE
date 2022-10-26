@@ -6,22 +6,24 @@ topics: cicd, performance, best-practices, development, governance
 doc-type: feature video
 activity: understand
 audience: all
-topic: Architektur
+topic: Architecture
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: d5d59ef5-9343-4ac2-9053-a010decdb9b6
+last-substantial-update: 2022-08-15T00:00:00Z
+thumbnail: cm-pipeline.jpg
+source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '312'
 ht-degree: 0%
 
 ---
-
 
 # Verwenden der CI/CD-Pipeline in Adobe Cloud Manager
 
 Adobe Cloud Manager bietet eine einfache, aber flexible CI/CD-Pipeline, die es AEM Projektteams ermöglicht, schnell, sicher und konsistent Code für alle in AMS gehosteten AEM Umgebungen bereitzustellen. In dieser Videoreihe wird das Einrichten und Ausführen der CI/CD-Pipeline von Cloud Manager sowohl in Fehler- als auch in Erfolgsszenarios untersucht.
 
-## Einführung
+## Einführung   
 
 Eine Einführung in Cloud Manager- und Cloud Manager-Programme.
 
@@ -39,21 +41,21 @@ In diesem Video wird das Einrichten der Pipeline für das Programm in Cloud Mana
 
 ## Fehlerhafte Pipelineausführung
 
-In diesem Video wird die Ausführung der CI/CD-Pipeline mithilfe des Codes untersucht, der die erforderlichen Qualitätsprüfungen von Cloud Manager fehlschlägt, indem die Repository-Verzweigung **[!DNL yellow]** verwendet wird.
+In diesem Video wird die Ausführung der CI/CD-Pipeline mithilfe von Code untersucht, der die erforderlichen Qualitätsprüfungen von Cloud Manager fehlschlägt, indem die Variable **[!DNL yellow]** Repository-Verzweigung.
 
 >[!VIDEO](https://video.tv.adobe.com/v/23084/?quality=12&learn=on)
 
 ## Erfolgreiche Pipelineausführung
 
-In diesem Video wird die erfolgreiche Ausführung der CI/CD-Pipeline mithilfe des Codes untersucht, der die erforderlichen Qualitätsprüfungen von Cloud Manager mithilfe der Repository-Verzweigung **[!DNL master]** durchläuft.
+In diesem Video wird die erfolgreiche Ausführung der CI/CD-Pipeline mithilfe des Codes untersucht, der die erforderlichen Qualitätsprüfungen von Cloud Manager mithilfe der Variablen **[!DNL master]** Repository-Verzweigung.
 
-Dieses Video berührt auch die Konsole [!UICONTROL Aktivität] in Cloud Manager, die den erneuten Eintritt in aktive Ausführungen oder die Überprüfung abgeschlossener oder fehlgeschlagener Ausführungen ermöglicht.
+Dieses Video berührt auch die [!UICONTROL Aktivität] -Konsole in Cloud Manager, die den erneuten Eintritt in aktive Ausführungen oder die Überprüfung abgeschlossener oder fehlgeschlagener Ausführungen ermöglicht.
 
 >[!VIDEO](https://video.tv.adobe.com/v/23085/?quality=12&learn=on)
 
 ## Unterstützende Materialien
 
-* [Cloud Manager-Benutzerhandbuch](https://helpx.adobe.com/experience-manager/cloud-manager/user-guide.html)
-* [Herunterladen von Code- [!DNL SonarQube] Scanningregeln](https://helpx.adobe.com/experience-manager/cloud-manager/using/understand-your-test-results.html#CodeQualityTesting)
+* [Cloud Manager-Benutzerhandbuch](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
+* [Codeüberprüfung herunterladen [!DNL SonarQube] Regeln](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)
    * *XLSX verfügbar am unteren Rand des verknüpften Abschnitts*
-* [[!DNL SonarQube] Java-Regelindex](https://rules.sonarsource.com/java/)
+* [[!DNL SonarQube] Java™-Regelindex](https://rules.sonarsource.com/java/)

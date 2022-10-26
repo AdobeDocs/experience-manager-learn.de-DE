@@ -10,16 +10,18 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+last-substantial-update: 2022-07-20T00:00:00Z
+thumbnail: aem-local-dev-env.jpg
+source-git-commit: a156877ff4439ad21fb79f231d273b8983924199
 workflow-type: tm+mt
-source-wordcount: '2576'
+source-wordcount: '2538'
 ht-degree: 3%
 
 ---
 
 # Lokale AEM-Entwicklungsumgebung einrichten
 
-Anleitung zum Einrichten einer lokalen Entwicklung für Adobe Experience Manager, AEM. Behandelt wichtige Themen wie lokale Installation, Apache Maven, integrierte Entwicklungsumgebungen und Debugging/Fehlerbehebung. Entwicklung mit **[!DNL Eclipse IDE], [!DNL CRXDE Lite], [!DNL Visual Studio Code] und[!DNL IntelliJ]** werden diskutiert.
+Anleitung zum Einrichten einer lokalen Entwicklung für Adobe Experience Manager, AEM. Behandelt wichtige Themen wie lokale Installation, Apache Maven, integrierte Entwicklungsumgebungen und Debugging/Fehlerbehebung. Entwicklung mit **Eclipse IDE, CRXDE Lite, Visual Studio Code und IntelliJ** werden diskutiert.
 
 ## Übersicht
 
@@ -34,16 +36,16 @@ Die Einrichtung einer lokalen Entwicklungsumgebung ist der erste Schritt bei der
 
 Wenn es um eine lokale AEM geht, handelt es sich um eine Kopie von Adobe Experience Manager, die auf dem persönlichen Computer eines Entwicklers ausgeführt wird. ***Alle*** AEM Entwicklung sollte beginnen, indem Code für eine lokale AEM-Instanz geschrieben und ausgeführt wird.
 
-Wenn Sie neu AEM sind, können zwei grundlegende Ausführungsmodi installiert werden: ***Autor*** und ***Veröffentlichen***. Die ***Autor*** [runmode](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/configure-runmodes.html)  ist die Umgebung, die digitale Marketingexperten zum Erstellen und Verwalten von Inhalten verwenden werden. In der Entwicklung **most** der Zeit, zu der Sie Code für eine Autoreninstanz bereitstellen. Auf diese Weise können Sie neue Seiten erstellen sowie Komponenten hinzufügen und konfigurieren. AEM Sites ist ein WYSIWYG-Authoring-CMS und daher können die meisten CSS- und JavaScript-Dateien mit einer Authoring-Instanz getestet werden.
+Wenn Sie neu AEM sind, können zwei grundlegende Ausführungsmodi installiert werden: ***Autor*** und ***Veröffentlichen***. Die ***Autor*** [runmode](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=en)  ist die Umgebung, die digitale Marketingexperten zum Erstellen und Verwalten von Inhalten verwenden. Wenn Sie die meiste Zeit entwickeln, stellen Sie Code in einer Autoreninstanz bereit. Auf diese Weise können Sie Seiten erstellen sowie Komponenten hinzufügen und konfigurieren. AEM Sites ist ein WYSIWYG-Authoring-CMS und daher können die meisten CSS- und JavaScript-Dateien mit einer Authoring-Instanz getestet werden.
 
-Es ist auch *kritisch* Testcode gegen eine lokale ***Veröffentlichen*** -Instanz. Die ***Veröffentlichen*** -Instanz ist die AEM Umgebung, mit der Besucher Ihrer Website interagieren. Während ***Veröffentlichen*** instance ist derselbe Technologiestapel wie ***Autor*** Beispielsweise gibt es einige wesentliche Unterschiede bei Konfigurationen und Berechtigungen. Code sollte *always* gegen eine lokale ***Veröffentlichen*** -Instanz, bevor sie in Umgebungen mit höherer Ebene weitergeleitet wird.
+Es ist auch *kritisch* Testcode gegen eine lokale ***Veröffentlichen*** -Instanz. Die ***Veröffentlichen*** -Instanz ist die AEM Umgebung, mit der Besucher Ihrer Website interagieren. Während ***Veröffentlichen*** instance ist derselbe Technologiestapel wie ***Autor*** Beispielsweise gibt es einige wesentliche Unterschiede bei Konfigurationen und Berechtigungen. Der Code muss mit einem lokalen ***Veröffentlichen*** -Instanz, bevor sie in Umgebungen auf höherer Ebene weitergeleitet wird.
 
 ### Schritte
 
-1. Sichern [Java](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html) installiert ist.
-   * Voreinstellen [Java JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout list&amp;p.offset=0&amp;p.limit=14) für AEM 6.5+
-   * [Java JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/index.html#JDK8) für AEM Versionen vor AEM 6.5
-2. Eine Kopie der [AEM QuickStart Jar und eine [!DNL license.properties]](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingtheSoftware).
+1. Stellen Sie sicher, dass Java™ installiert ist.
+   * Voreinstellen [Java™ JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout list&amp;p.offset=0&amp;p.limit=14) für AEM 6.5+
+   * [Java™ JDK 8](https://www.oracle.com/java/technologies/downloads/) für AEM Versionen vor AEM 6.5
+2. Eine Kopie der [AEM QuickStart Jar und eine [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=de).
 3. Erstellen Sie eine Ordnerstruktur auf Ihrem Computer wie folgt:
 
    ```plain
@@ -73,13 +75,13 @@ Es ist auch *kritisch* Testcode gegen eine lokale ***Veröffentlichen*** -Instan
    >
    >Je nach Hardware Ihres Entwicklungsgeräts kann es schwierig sein, beide **Autoren- und Veröffentlichungsinstanz** -Instanz, die gleichzeitig ausgeführt wird. In seltenen Fällen müssen Sie beide gleichzeitig auf einem lokalen Setup ausführen.
 
-   Weitere Informationen finden Sie unter [Bereitstellen und Verwalten einer AEM-Instanz](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html).
+   Weitere Informationen finden Sie unter [Bereitstellen und Verwalten einer AEM-Instanz](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html).
 
 ## Installieren von Apache Maven
 
 ***[!DNL Apache Maven]*** ist ein Tool zum Verwalten des Build- und Bereitstellungsverfahrens für Java-basierte Projekte. AEM ist eine Java-basierte Plattform und [!DNL Maven] ist die Standardmethode zum Verwalten von Code für ein AEM Projekt. Wenn ***AEM Maven-Projekt*** oder einfach ***AEM***, verweisen wir auf ein Maven-Projekt, das alle *custom* Code für Ihre Site.
 
-Alle AEM sollten auf der neuesten Version der **[!DNL AEM Project Archetype]**: [https://github.com/adobe/aem-project-archetype](https://github.com/adobe/aem-project-archetype). Die [!DNL AEM Project Archetype] erstellt einen Bootstrap eines AEM Projekts mit Beispielcode und -inhalt. Die [!DNL AEM Project Archetype] auch **[!DNL AEM WCM Core Components]** für die Verwendung in Ihrem Projekt konfiguriert wurde.
+Alle AEM sollten auf der neuesten Version der **[!DNL AEM Project Archetype]**: [https://github.com/adobe/aem-project-archetype](https://github.com/adobe/aem-project-archetype). Die [!DNL AEM Project Archetype] stellt einen Bootstrap eines AEM Projekts mit Beispielcode und -inhalt bereit. Die [!DNL AEM Project Archetype] auch **[!DNL AEM WCM Core Components]** für die Verwendung in Ihrem Projekt konfiguriert wurde.
 
 >[!CAUTION]
 >
@@ -90,7 +92,7 @@ Alle AEM sollten auf der neuesten Version der **[!DNL AEM Project Archetype]**: 
 1. Download [Apache Maven](https://maven.apache.org/download.cgi)
 2. Installieren [Apache Maven](https://maven.apache.org/install.html) und stellen Sie sicher, dass die Installation Ihrer Befehlszeile hinzugefügt wurde. `PATH`.
    * [!DNL macOS] Benutzer können Maven mithilfe von [Homebrew](https://brew.sh/)
-3. Stellen Sie sicher, dass **[!DNL Maven]** wird installiert, indem ein neues Befehlszeilenterminal geöffnet und Folgendes ausgeführt wird:
+3. Stellen Sie sicher, dass **[!DNL Maven]** wird installiert, indem ein neues Befehlszeilen-Terminal geöffnet und Folgendes ausgeführt wird:
 
    ```shell
    $ mvn --version
@@ -103,11 +105,11 @@ Alle AEM sollten auf der neuesten Version der **[!DNL AEM Project Archetype]**: 
 
    >[!NOTE]
    >
-   > In der Vergangenheit wurden `adobe-public` Maven-Profil war erforderlich, um einen Punkt zu erreichen `nexus.adobe.com` , um AEM Artefakte herunterzuladen. Alle AEM Artefakte sind jetzt über Maven Central und die `adobe-public` Profil nicht benötigt.
+   > In der letzten `adobe-public` Maven-Profil war erforderlich, um einen Punkt zu erreichen `nexus.adobe.com` , um AEM Artefakte herunterzuladen. Alle AEM Artefakte sind jetzt über Maven Central und die `adobe-public` Profil nicht benötigt.
 
 ## Einrichten einer integrierten Entwicklungsumgebung
 
-Eine integrierte Entwicklungsumgebung oder IDE ist eine Anwendung, die einen Texteditor, Syntaxunterstützung und Build-Tools kombiniert. Je nach der Art der Entwicklung, die Sie durchführen, ist möglicherweise eine IDE besser als eine andere. Unabhängig von der IDE ist es wichtig, regelmäßig ***push*** -Code in eine lokale AEM-Instanz zu verweisen, um sie zu testen. Außerdem wird es wichtig sein, gelegentlich ***abrufen*** Konfigurationen von einer lokalen AEM-Instanz in Ihr AEM-Projekt, um zu einem Quellcodeverwaltungssystem wie Git beizubehalten.
+Eine integrierte Entwicklungsumgebung oder IDE ist eine Anwendung, die einen Texteditor, Syntaxunterstützung und Build-Tools kombiniert. Je nach der Art der Entwicklung, die Sie durchführen, ist möglicherweise eine IDE besser als eine andere. Unabhängig von der IDE ist es wichtig, regelmäßig ***push*** -Code in eine lokale AEM-Instanz zu verweisen, um sie zu testen. Gelegentlich ist es wichtig, ***abrufen*** Konfigurationen von einer lokalen AEM-Instanz in Ihr AEM-Projekt, um zu einem Quellcodeverwaltungssystem wie Git beizubehalten.
 
 Im Folgenden finden Sie einige der beliebtesten IDEs, die mit AEM Entwicklung mit entsprechenden Videos verwendet werden, die die Integration mit einer lokalen AEM-Instanz zeigen.
 
@@ -127,11 +129,11 @@ Wenn Sie eine IDE verwenden, überprüfen Sie `classic` auf der Registerkarte &q
 
 ### [!DNL Eclipse] IDE
 
-Die **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** ist eine der beliebtesten IDEs für die Java-Entwicklung, da es sich größtenteils um Open Source handelt und ***kostenlos***! Adobe bietet ein Plug-in, **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=de)**, für [!DNL Eclipse] um eine einfachere Entwicklung mit einer netten grafischen Benutzeroberfläche zu ermöglichen, um Code mit einer lokalen AEM-Instanz zu synchronisieren. Die [!DNL Eclipse] IDE wird für Entwickler empfohlen, die zum großen Teil neu AEM, da die GUI-Unterstützung von [!DNL AEM Developer Tools].
+Die **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** ist eine der beliebtesten IDEs für die Java™-Entwicklung, da es sich größtenteils um Open Source handelt und ***kostenlos***! Adobe bietet ein Plug-in, **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=de)**, für [!DNL Eclipse] um eine einfachere Entwicklung mit einer netten grafischen Benutzeroberfläche zu ermöglichen, um Code mit einer lokalen AEM-Instanz zu synchronisieren. Die [!DNL Eclipse] IDE wird für Entwickler empfohlen, die zum großen Teil neu AEM, da die GUI-Unterstützung von [!DNL AEM Developer Tools].
 
 #### Installation und Einrichtung
 
-1. Laden Sie die [!DNL Eclipse] IDE für [!DNL Java EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
+1. Laden Sie die [!DNL Eclipse] IDE für [!DNL Java™™™™™™™™ EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
 1. Befolgen Sie die Anweisungen zum Installieren der [!DNL AEM Developer Tools] Plug-in: [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=de)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
@@ -144,7 +146,7 @@ Die **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** ist eine der beliebte
 
 ### IntelliJ IDEA
 
-Die **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** ist eine leistungsstarke IDE für die professionelle Java-Entwicklung. [!DNL IntelliJ IDEA] in zwei Geschmacksrichtungen verwendet wird, ***kostenlos*** [!DNL Community] Edition und einer kommerziellen (gebührenpflichtigen) [!DNL Ultimate] -Version. Die kostenlose [!DNL Community] Version von [!DNL IntellIJ IDEA] für eine AEM Entwicklung ausreicht, jedoch ist die [!DNL Ultimate] [Erweitert seinen Funktionssatz](https://www.jetbrains.com/idea/download).
+Die **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** ist eine leistungsstarke IDE für professionelle Java™-Entwicklung. [!DNL IntelliJ IDEA] in zwei Geschmacksrichtungen verwendet wird, ***kostenlos*** [!DNL Community] Edition und einer kommerziellen (gebührenpflichtigen) [!DNL Ultimate] -Version. Die kostenlose [!DNL Community] Version von [!DNL IntellIJ IDEA] für eine AEM Entwicklung ausreicht, jedoch ist die [!DNL Ultimate] [Erweitert seinen Funktionssatz](https://www.jetbrains.com/idea/download).
 
 #### [!DNL Installation and Setup]
 
@@ -163,7 +165,7 @@ Die **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** ist eine leistungsstark
 
 **[Visual Studio-Code](https://code.visualstudio.com/)** hat sich schnell zu einem bevorzugten Tool für ***Frontend-Entwickler*** mit verbesserter JavaScript-Unterstützung, [!DNL Intellisense], und Browserdebugging-Unterstützung. **[!DNL Visual Studio Code]** ist Open Source, kostenlos, mit vielen leistungsstarken Erweiterungen. [!DNL Visual Studio Code] kann mithilfe eines Adobe-Tools für die Integration mit AEM eingerichtet werden; **[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code).** Es gibt auch mehrere von der Community unterstützte Erweiterungen, die installiert werden können, um sie in AEM zu integrieren.
 
-[!DNL Visual Studio Code] ist eine hervorragende Wahl für Frontend-Entwickler, die hauptsächlich CSS/LESS- und JavaScript-Code schreiben, um AEM Client-Bibliotheken zu erstellen. Dieses Tool ist möglicherweise nicht die beste Wahl für neue AEM-Entwickler, da Knotendefinitionen (Dialogfelder, Komponenten) alle im rohen XML bearbeitet werden müssen. Es sind mehrere Java-Erweiterungen verfügbar für [!DNL Visual Studio Code], jedoch in erster Linie mit Java-Entwicklung [!DNL Eclipse IDE] oder [!DNL IntelliJ] vorgezogen werden.
+[!DNL Visual Studio Code] ist eine hervorragende Wahl für Frontend-Entwickler, die hauptsächlich CSS/LESS- und JavaScript-Code schreiben, um AEM Client-Bibliotheken zu erstellen. Dieses Tool ist möglicherweise nicht die beste Wahl für neue AEM-Entwickler, da Knotendefinitionen (Dialogfelder, Komponenten) in rohen XML-Dateien bearbeitet werden müssen. Es gibt mehrere Java™-Erweiterungen für [!DNL Visual Studio Code], jedoch in erster Linie durch Java™-Entwicklung [!DNL Eclipse IDE] oder [!DNL IntelliJ] vorgezogen werden.
 
 #### Wichtige Links
 
@@ -176,22 +178,22 @@ Die **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** ist eine leistungsstark
 
 * 00:30 - Importieren eines Maven-Projekts
 * 00:53 - Erstellen und Bereitstellen von Quellcode mit Maven
-* 04:03 - Push-Code-Änderungen mit dem Repo-Befehlszeilen-Tool
+* 04:03 - Push-Code-Änderungen mit Repo-Befehlszeilen-Tool
 * 08:29 - Pull-Code-Änderungen mit dem Repo-Befehlszeilen-Tool
 * 10:40 - Push-Code-Änderungen mit einem emfed Tool
 * 14:24 - Fehlerbehebung, Neuerstellung von Client-Bibliotheken
 
 ### [!DNL CRXDE Lite]
 
-[CRXDE Lite](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/developing-with-crxde-lite.html) ist eine browserbasierte Ansicht des AEM-Repositorys. [!DNL CRXDE Lite] ist in AEM eingebettet und ermöglicht Entwicklern die Durchführung standardmäßiger Entwicklungsaufgaben wie das Bearbeiten von Dateien, das Definieren von Komponenten, Dialogfeldern und Vorlagen. [!DNL CRXDE Lite] is ***not*** soll eine vollständige Entwicklungsumgebung sein, ist aber als Debugging-Tool sehr effektiv. [!DNL CRXDE Lite] ist nützlich, wenn Sie Produktcode außerhalb Ihrer Codebasis erweitern oder einfach verstehen. [!DNL CRXDE Lite] bietet eine leistungsstarke Ansicht des Repositorys und eine Möglichkeit, Berechtigungen effektiv zu testen und zu verwalten.
+[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html) ist eine browserbasierte Ansicht des AEM-Repositorys. [!DNL CRXDE Lite] ist in AEM eingebettet und ermöglicht Entwicklern die Durchführung standardmäßiger Entwicklungsaufgaben wie das Bearbeiten von Dateien, das Definieren von Komponenten, Dialogfeldern und Vorlagen. [!DNL CRXDE Lite] is ***not*** soll eine vollständige Entwicklungsumgebung sein, ist aber als Debugging-Tool effektiv. [!DNL CRXDE Lite] ist nützlich, wenn Sie Produktcode außerhalb Ihrer Codebasis erweitern oder einfach verstehen. [!DNL CRXDE Lite] bietet eine leistungsstarke Ansicht des Repositorys und eine Möglichkeit, Berechtigungen effektiv zu testen und zu verwalten.
 
-[!DNL CRXDE Lite] sollte immer in Verbindung mit anderen IDEs zum Testen und Debuggen von Code verwendet werden, jedoch nie als primäres Entwicklungstool. Es bietet eingeschränkte Syntaxunterstützung, keine automatische Vervollständigungsfunktionen und eine eingeschränkte Integration mit Quellcodeverwaltungssystemen.
+[!DNL CRXDE Lite] sollte mit anderen IDEs zum Testen und Debuggen von Code verwendet werden, jedoch nie als primäres Entwicklungstool. Es bietet eingeschränkte Syntaxunterstützung, keine automatische Vervollständigungsfunktionen und eine eingeschränkte Integration in Quellcodeverwaltungssysteme.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25917?quality=12&learn=on)
 
 ## Fehlerbehebung
 
-***Hilfe!*** Mein Code funktioniert nicht! Wie bei jeder Entwicklung gibt es Zeiten (wahrscheinlich viele), in denen Ihr Code einfach nicht wie erwartet funktioniert. AEM ist eine mächtige Plattform, aber mit großer Macht.. ist eine große Komplexität. Im Folgenden finden Sie einige allgemeine Ausgangspunkte zur Fehlerbehebung und zur Problemverfolgung (bei weitem nicht aus einer vollständigen Liste mit möglichen Problemen):
+***Hilfe!*** Mein Code funktioniert nicht! Wie bei allen Entwicklungsaktivitäten gibt es auch hier Zeiten (wahrscheinlich viele), in denen Ihr Code nicht wie erwartet funktioniert. AEM ist eine mächtige Plattform, aber mit großer Macht.. ist eine große Komplexität. Im Folgenden finden Sie einige allgemeine Ausgangspunkte zur Fehlerbehebung und zum Nachverfolgen von Problemen (bei weitem nicht aus einer vollständigen Liste von Dingen, die schiefgehen können):
 
 ### Codebereitstellung überprüfen
 
@@ -199,13 +201,13 @@ Ein guter erster Schritt bei Auftreten eines Problems besteht darin, zu überpr�
 
 1. **Überprüfen [!UICONTROL Package Manager]** um sicherzustellen, dass das Code-Paket hochgeladen und installiert wurde: [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp). Überprüfen Sie den Zeitstempel, um sicherzustellen, dass das Paket kürzlich installiert wurde.
 1. Wenn Sie inkrementelle Dateiaktualisierungen mit einem Tool wie [!DNL Repo] oder [!DNL AEM Developer Tools], **check[!DNL CRXDE Lite]** dass die Datei an die lokale AEM-Instanz gesendet wurde und der Dateiinhalt aktualisiert wird: [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
-1. **Überprüfen, ob das Bundle hochgeladen wurde** wenn Probleme im Zusammenhang mit Java-Code in einem OSGi-Bundle angezeigt werden. Öffnen Sie die [!UICONTROL Adobe Experience Manager Web Console]: [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles) und suchen Sie nach Ihrem Bundle. Stellen Sie sicher, dass das Bundle über eine **[!UICONTROL Aktiv]** Status. Weitere Informationen zur Fehlerbehebung bei einem Bundle in einem **[!UICONTROL Installiert]** state.
+1. **Überprüfen, ob das Bundle hochgeladen wurde** wenn Probleme im Zusammenhang mit Java™-Code in einem OSGi-Bundle angezeigt werden. Öffnen Sie die [!UICONTROL Adobe Experience Manager Web Console]: [http://localhost:4502/system/console/bundles](http://localhost:4502/system/console/bundles) und suchen Sie nach Ihrem Bundle. Stellen Sie sicher, dass das Bundle über eine **[!UICONTROL Aktiv]** Status. Weitere Informationen zur Fehlerbehebung bei einem Bundle in einem **[!UICONTROL Installiert]** state.
 
 #### Überprüfen Sie die Protokolle
 
-AEM ist eine Chatty-Plattform und protokolliert viele nützliche Informationen in der **error.log**. Die **error.log** kann dort gefunden werden, wo AEM installiert wurde: &lt; `aem-installation-folder>/crx-quickstart/logs/error.log`.
+AEM ist eine Chatplattform und protokolliert nützliche Informationen in der **error.log**. Die **error.log** kann dort gefunden werden, wo AEM installiert wurde: &lt; `aem-installation-folder>/crx-quickstart/logs/error.log`.
 
-Eine nützliche Methode zum Verfolgen von Problemen besteht darin, Protokolleinträge in Ihren Java-Code einzufügen:
+Eine nützliche Methode zum Verfolgen von Problemen besteht darin, Protokolleinträge in Ihren Java™-Code einzufügen:
 
 ```java
 import org.slf4j.Logger;
@@ -225,27 +227,27 @@ public class MyClass {
 }
 ```
 
-Standardmäßig wird die **error.log** ist für die Protokollierung konfiguriert *[!DNL INFO]* -Anweisungen. Wenn Sie die Protokollebene ändern möchten, können Sie dies tun, indem Sie [!UICONTROL Protokollunterstützung]: [http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog). Sie können auch feststellen, dass die Variable **error.log** ist zu chatty. Sie können die [!UICONTROL Protokollunterstützung] um Protokollanweisungen für nur ein bestimmtes Java-Paket zu konfigurieren. Dies ist eine Best Practice für Projekte, um benutzerdefinierte Code-Probleme einfach von OOTB AEM Plattformproblemen zu trennen.
+Standardmäßig wird die **error.log** ist für die Protokollierung konfiguriert *[!DNL INFO]* -Anweisungen. Wenn Sie die Protokollebene ändern möchten, gehen Sie zu [!UICONTROL Protokollunterstützung]: [http://localhost:4502/system/console/slinglog](http://localhost:4502/system/console/slinglog). Sie können auch feststellen, dass die Variable **error.log** ist zu chatty. Sie können die [!UICONTROL Protokollunterstützung] um Protokolleinträge nur für ein bestimmtes Java™-Paket zu konfigurieren. Dies ist eine Best Practice für Projekte, um benutzerdefinierte Code-Probleme einfach von OOTB AEM Plattformproblemen zu trennen.
 
 ![Protokollierungskonfiguration in AEM](./assets/set-up-a-local-aem-development-environment/logging.png)
 
 #### Bundle befindet sich im Status &quot;Installiert&quot; {#bundle-active}
 
-Alle Pakete (außer Fragmente) sollten sich in einer **[!UICONTROL Aktiv]** state. Wenn Ihr Code-Bundle in einem [!UICONTROL Installiert] zuweisen, muss ein Problem behoben werden. Meistens handelt es sich um ein Abhängigkeitsproblem:
+Alle Pakete (außer Fragmente) sollten sich in einer **[!UICONTROL Aktiv]** state. Wenn Ihr Code-Bundle in einem [!UICONTROL Installiert] angegeben ist, muss ein Problem behoben werden. Meistens handelt es sich um ein Abhängigkeitsproblem:
 
 ![Bundle-Fehler in AEM](assets/set-up-a-local-aem-development-environment/bundle-error.png)
 
 Im obigen Screenshot wird die [!DNL WKND Core bundle] ist [!UICONTROL Installiert] state. Dies liegt daran, dass das Bundle eine andere Version von erwartet. `com.adobe.cq.wcm.core.components.models` als in der AEM-Instanz verfügbar ist.
 
-Ein nützliches Tool, das verwendet werden kann, ist die [!UICONTROL Abhängigkeitssuche]: [http://localhost:4502/system/console/depfinder](http://localhost:4502/system/console/depfinder). Fügen Sie den Namen des Java-Pakets hinzu, um zu überprüfen, welche Version in der AEM-Instanz verfügbar ist:
+Ein nützliches Tool, das verwendet werden kann, ist die [!UICONTROL Abhängigkeitssuche]: [http://localhost:4502/system/console/depfinder](http://localhost:4502/system/console/depfinder). Fügen Sie den Namen des Java™-Pakets hinzu, um zu überprüfen, welche Version in der AEM-Instanz verfügbar ist:
 
 ![Kernkomponenten](assets/set-up-a-local-aem-development-environment/core-components.png)
 
-Im weiteren Verlauf des obigen Beispiels können wir sehen, dass die auf der AEM-Instanz installierte Version **Artikel 12 Absatz 2** vs **Artikel 12 Absatz 6** dass das Bundle erwartet hat. Dort können Sie rückwärts arbeiten und sehen, ob die [!DNL Maven] Abhängigkeiten von AEM entsprechen der [!DNL Maven] Abhängigkeiten im AEM Projekt. Im obigen Beispiel [!DNL Core Components] **v2.2.0** wird auf der AEM-Instanz installiert, aber das Code-Bundle wurde mit einer Abhängigkeit von **v2.2.2** und somit der Grund für das Abhängigkeitsproblem.
+Im weiteren Verlauf des obigen Beispiels können wir sehen, dass die auf der AEM-Instanz installierte Version **Artikel 12 Absatz 2** vs **Artikel 12 Absatz 6** dass das Bundle erwartet hat. Von dort aus können Sie rückwärts arbeiten und sehen, ob die [!DNL Maven] Abhängigkeiten von AEM entsprechen der [!DNL Maven] Abhängigkeiten im AEM Projekt. Im obigen Beispiel [!DNL Core Components] **v2.2.0** wird auf der AEM-Instanz installiert, aber das Code-Bundle wurde mit einer Abhängigkeit von **v2.2.2** und somit der Grund für das Abhängigkeitsproblem.
 
 #### Überprüfung der Registrierung von Sling-Modellen {#osgi-component-sling-models}
 
-AEM Komponenten sollten immer durch eine [!DNL Sling Model] , um eine beliebige Geschäftslogik einzuschließen und sicherzustellen, dass das HTL-Rendering-Skript sauber bleibt. Wenn Probleme auftreten, bei denen das Sling-Modell nicht gefunden werden kann, ist es möglicherweise hilfreich, die [!DNL Sling Models] aus der Konsole: [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels). Auf diese Weise erfahren Sie, ob Ihr Sling-Modell registriert wurde und mit welchem Ressourcentyp (dem Komponentenpfad) es verknüpft ist.
+AEM Komponenten müssen durch eine [!DNL Sling Model] , um eine beliebige Geschäftslogik einzuschließen und sicherzustellen, dass das HTL-Rendering-Skript sauber bleibt. Wenn Probleme auftreten, bei denen das Sling-Modell nicht gefunden werden kann, kann es hilfreich sein, die [!DNL Sling Models] aus der Konsole: [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels). Dies teilt Ihnen mit, ob Ihr Sling-Modell registriert wurde und mit welchem Ressourcentyp (dem Komponentenpfad) es verknüpft ist.
 
 ![Status des Sling-Modells](assets/set-up-a-local-aem-development-environment/sling-model-status.png)
 
@@ -257,21 +259,21 @@ Bei den meisten CSS- und JavaScript-Problemen ist die Verwendung der Entwicklung
 
 ![CSS- oder JS-Probleme](assets/set-up-a-local-aem-development-environment/css-and-js-issues.png)
 
-Öffnen Sie die [!UICONTROL Seiteneigenschaften] Menü und klicken Sie auf [!UICONTROL Als veröffentlicht anzeigen]. Dadurch wird die Seite ohne den AEM-Editor und mit einem Abfrageparameter geöffnet, der auf **wcmmode=disabled**. Dadurch wird die AEM-Authoring-Benutzeroberfläche effektiv deaktiviert und die Fehlerbehebung/das Debugging von Frontend-Problemen deutlich vereinfacht.
+Öffnen Sie die [!UICONTROL Seiteneigenschaften] Menü und klicken Sie auf [!UICONTROL Als veröffentlicht anzeigen]. Dadurch wird die Seite ohne den AEM Editor und mit einem Abfrageparameter geöffnet, der auf **wcmmode=disabled**. Dadurch wird die AEM Authoring-Benutzeroberfläche deaktiviert und die Fehlerbehebung/das Debugging von Frontend-Problemen wird deutlich vereinfacht.
 
 Ein weiteres häufig auftretendes Problem bei der Entwicklung von Frontend-Code ist veraltetes oder veraltetes CSS/JS. Als ersten Schritt müssen Sie sicherstellen, dass der Browser-Verlauf gelöscht wurde und bei Bedarf einen Inkognito-Browser oder eine neue Sitzung starten.
 
 #### Debugging von Client-Bibliotheken
 
-Bei verschiedenen Methoden von Kategorien und Einbettungen zum Einschließen mehrerer Client-Bibliotheken kann es umständlich sein, eine Fehlerbehebung durchzuführen. AEM stellt mehrere Hilfsmittel zur Verfügung. Eines der wichtigsten Instrumente ist [!UICONTROL Client-Bibliotheken neu erstellen] was AEM zwingt, alle LESS-Dateien neu zu kompilieren und das CSS zu generieren.
+Mit den verschiedenen Methoden von Kategorien und Einbettungen, um mehrere Client-Bibliotheken einzuschließen, kann die Fehlerbehebung schwerfällig sein. AEM stellt mehrere Hilfsmittel zur Verfügung. Eines der wichtigsten Instrumente ist [!UICONTROL Client-Bibliotheken neu erstellen] die AEM zwingen, alle LESS-Dateien neu zu kompilieren und das CSS zu generieren.
 
 * [Sprunglippen](http://localhost:4502/libs/granite/ui/content/dumplibs.html) - Listet alle in der AEM-Instanz registrierten Client-Bibliotheken auf. &lt;host>/libs/granite/ui/content/dumplibs.html
 * [Testausgabe](http://localhost:4502/libs/granite/ui/content/dumplibs.test.html) - ermöglicht es einem Benutzer, die erwartete HTML-Ausgabe von clientlib-Includes basierend auf der Kategorie anzuzeigen. &lt;host>/libs/granite/ui/content/dumplibs.test.html
 * [Überprüfung von Bibliotheksabhängigkeiten](http://localhost:4502/libs/granite/ui/content/dumplibs.validate.html) - markiert alle Abhängigkeiten oder eingebetteten Kategorien, die nicht gefunden werden können. &lt;host>/libs/granite/ui/content/dumplibs.validate.html
-* [Client-Bibliotheken neu erstellen](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) - ermöglicht es einem Benutzer, AEM zu erzwingen, alle Client-Bibliotheken neu zu erstellen oder den Cache von Client-Bibliotheken ungültig zu machen. Dieses Tool ist besonders effektiv bei der Entwicklung mit LESS, da dies AEM zwingen kann, die generierte CSS neu zu kompilieren. Im Allgemeinen ist es effektiver, Caches zu invalidieren und dann eine Seitenaktualisierung vorzunehmen, anstatt alle Bibliotheken neu zu erstellen. &lt;host>/libs/granite/ui/content/dumplibs.rebuild.html
+* [Client-Bibliotheken neu erstellen](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) - ermöglicht es einem Benutzer, AEM zu erzwingen, alle Client-Bibliotheken neu zu erstellen oder den Cache von Client-Bibliotheken ungültig zu machen. Dieses Tool ist bei der Entwicklung mit LESS effektiv, da dies AEM zwingen kann, die generierte CSS neu zu kompilieren. Im Allgemeinen ist es effektiver, Caches zu invalidieren und dann eine Seitenaktualisierung vorzunehmen, anstatt alle Bibliotheken neu zu erstellen. &lt;host>/libs/granite/ui/content/dumplibs.rebuild.html
 
 ![Debuggen von Clientlibs](assets/set-up-a-local-aem-development-environment/debugging-clientlibs.png)
 
 >[!NOTE]
 >
->Wenn Sie den Cache ständig mit dem [!UICONTROL Client-Bibliotheken neu erstellen] -Tool es sich möglicherweise lohnt, eine einmalige Neuerstellung aller Client-Bibliotheken durchzuführen. Dies kann etwa 15 Minuten dauern, in der Regel werden jedoch alle zukünftigen Caching-Probleme behoben.
+>Wenn Sie den Cache ständig mit dem [!UICONTROL Client-Bibliotheken neu erstellen] -Tool verwenden, kann es sich lohnen, eine einmalige Neuerstellung aller Client-Bibliotheken durchzuführen. Dies kann etwa 15 Minuten dauern, in der Regel werden jedoch alle zukünftigen Caching-Probleme behoben.
