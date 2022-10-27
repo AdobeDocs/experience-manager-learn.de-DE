@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 129dedd4cd6973d5d576bed5f714ce62152923de
+source-git-commit: 3a7c04dfe465c1eff29ba6b4e4b7e24f047e5b42
 workflow-type: tm+mt
-source-wordcount: '1173'
+source-wordcount: '1182'
 ht-degree: 3%
 
 ---
@@ -116,31 +116,31 @@ AEM Assets-Administratoren definieren die benutzerdefinierten Ausgabedarstellung
 
 #### Verarbeitungsprofile
 
-Asset-Ausgabedarstellungsspezifikationen werden in definiert. [Verarbeitungsprofile](../../../assets/configuring//processing-profiles.md) von AEM Assets-Administratoren.
+Asset-Ausgabedarstellungsspezifikationen werden in definiert. [Verarbeitungsprofile](../../../assets/configuring/processing-profiles.md) von AEM Assets-Administratoren.
 
 Erstellen oder aktualisieren Sie ein Verarbeitungsprofil und fügen Sie Ausgabedefinitionen für die Bildgrößen hinzu, die für die Headless-Anwendung erforderlich sind. Ausgabedarstellungen können beliebig benannt werden, sollten jedoch semantisch benannt werden.
 
-![AEM Headless-optimierte Ausgabeformate](./assets/images/processing-profiles.jpg)
+![AEM Headless-optimierte Ausgabeformate](./assets/images/processing-profiles.png)
 
 In diesem Beispiel werden drei Ausgabedarstellungen erstellt:
 
 | Name des Ausgabeformats | Erweiterung | Max. Breite |
-|----------------|:---------:|----------:|
-| groß | jpeg | 1200px |
-| medium | jpeg | 900px |
-| klein | jpeg | 600px |
+|-----------------------|:---------:|----------:|
+| web-optimized-large | webp | 1200px |
+| web-optimized-medium | webp | 900px |
+| web-optimized-small | webp | 600px |
 
 Die in der obigen Tabelle aufgeführten Attribute sind wichtig:
 
 + __Name des Ausgabeformats__ wird verwendet, um die Ausgabedarstellung anzufordern.
-+ __Erweiterung__ ist die Erweiterung, die zum Anfordern der __Name der Ausgabedarstellung__.
++ __Erweiterung__ ist die Erweiterung, die zum Anfordern der __Name der Ausgabedarstellung__. Voreinstellen `webp` Ausgabeformate, da diese für die Webbereitstellung optimiert sind.
 + __Max. Breite__ wird verwendet, um den Entwickler darüber zu informieren, welche Ausgabedarstellung basierend auf ihrer Verwendung in der Headless-Anwendung verwendet werden soll.
 
 Ausgabedarstellungsdefinitionen hängen von den Anforderungen Ihrer Headless-Anwendung ab. Stellen Sie daher sicher, dass Sie den optimalen Ausgabedarstellungssatz für Ihren Anwendungsfall definieren und hinsichtlich der Verwendung semantisch benannt werden.
 
 #### Assets erneut verarbeiten{#reprocess-assets}
 
-Nachdem das Verarbeitungsprofil erstellt (oder aktualisiert) wurde, verarbeiten Sie die Assets erneut, um die neuen, im Verarbeitungsprofil definierten Ausgabedarstellungen zu generieren. Neue Ausgabedarstellungen sind erst dann vorhanden, wenn Assets mit dem Verarbeitungsprofil verarbeitet werden.
+Nachdem das Verarbeitungsprofil erstellt (oder aktualisiert) wurde, verarbeiten Sie die Assets erneut, um die neuen, im Verarbeitungsprofil definierten Ausgabedarstellungen zu generieren. Neue Ausgabedarstellungen sind nicht vorhanden, bis Assets mit dem Verarbeitungsprofil verarbeitet werden.
 
 + nach Möglichkeit [das Verarbeitungsprofil einem Ordner zugewiesen hat](../../../assets/configuring//processing-profiles.md) sodass alle neuen Assets, die in diesen Ordner hochgeladen wurden, automatisch die Ausgabedarstellungen generieren. Bestehende Assets müssen mithilfe des unten stehenden Ad-hoc-Ansatzes erneut verarbeitet werden.
 
@@ -152,7 +152,7 @@ Nachdem das Verarbeitungsprofil erstellt (oder aktualisiert) wurde, verarbeiten 
 
 Ausgabedarstellungen können durch [Öffnen der Ausgabeformatansicht eines Assets](../../../assets/authoring/renditions.md)und wählen Sie die neuen Ausgabedarstellungen für die Vorschau in der Ausgabedarstellungsleiste aus. Wenn die Ausgabeformate fehlen, [Sicherstellen, dass die Assets mithilfe des Verarbeitungsprofils verarbeitet werden](#reprocess-assets).
 
-![Überprüfen von Ausgabeformaten](./assets/images/review-renditions.jpg)
+![Überprüfen von Ausgabeformaten](./assets/images/review-renditions.png)
 
 #### Veröffentlichen von Assets
 
@@ -164,9 +164,9 @@ Auf Ausgabedarstellungen können Sie direkt zugreifen, indem Sie die __Ausgabeda
 
 | Asset-URL | Unterpfad für Ausgabedarstellungen | Name des Ausgabeformats | Ausgabedarstellungserweiterung |  | Ausgabedarstellungs-URL |
 |-----------|:------------------:|:--------------:|--------------------:|:--:|---|
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | groß | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/large.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | medium | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/medium.jpeg |
-| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | klein | .jpeg | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/small.jpeg |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web-optimized-large | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-large.webp |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web-optimized-medium | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-medium.webp |
+| https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg | /_jcr_content/renditions/ | web-optimized-small | .webp | → | https://publish-p123-e789.adobeaemcloud.com/content/dam/example.jpeg/_jcr_content/renditions/web-optimized-small.webp |
 
 {style=&quot;table-layout:auto&quot;}
 
@@ -176,7 +176,7 @@ AEM GraphQL benötigt eine zusätzliche Syntax, um Bildausgabeformate anzuforder
 
 ### React-Beispiel
 
-Erstellen wir eine einfache React-Anwendung, die drei Ausgabeformate (klein, mittel und groß) eines einzelnen Bild-Assets anzeigt.
+Erstellen wir eine einfache React-Anwendung, die drei Ausgabeformate eines einzelnen Bild-Assets anzeigt: Web-optimierte kleine, Web-optimierte, mittlere und Web-optimierte große.
 
 ![Bild-Asset-Ausgabeformate React-Beispiel](./assets/images/react-example-renditions.jpg)
 
@@ -216,7 +216,7 @@ export default function Image({ assetUrl, renditionName, renditionExtension, alt
 
 #### Definieren Sie die `App.js`{#app-js}
 
-Diese einfache `App.js` -Abfragen nach einem Abenteuer-Bild AEM und zeigen dann die drei Ausgabeformate dieses Bildes an: klein, mittel und groß.
+Diese einfache `App.js` -Abfragen nach einem Abenteuer-Bild AEM und zeigen dann die drei Ausgabeformate dieses Bildes an: web-optimized-small, web-optimized-medium und web-optimized-large.
 
 Die Abfrage gegen AEM wird im benutzerdefinierten React-Haken durchgeführt [useAdventureByPath , der das AEM Headless SDK verwendet](./aem-headless-sdk.md#graphql-persisted-queries).
 
@@ -242,33 +242,33 @@ function App() {
     <div className="app">
       
       <h2>Small rendition</h2>
-      {/* Render the small rendition for the Adventure Primary Image */}
+      {/* Render the web-optimized-small rendition for the Adventure Primary Image */}
       <Image
         assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="small"
-        renditionExtension="jpeg"
+        renditionName="web-optimized-small"
+        renditionExtension="webp"
         alt={data.adventureByPath.item.title}
       />
 
       <hr />
 
       <h2>Medium rendition</h2>
-      {/* Render the medium rendition for the Adventure Primary Image */}
+      {/* Render the web-optimized-medium rendition for the Adventure Primary Image */}
       <Image
         assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="medium"
-        renditionExtension="jpeg"
+        renditionName="web-optimized-medium"
+        renditionExtension="webp"
         alt={data.adventureByPath.item.title}
       />
 
       <hr />
 
       <h2>Large rendition</h2>
-      {/* Render the large rendition for the Adventure Primary Image */}
+      {/* Render the web-optimized-large rendition for the Adventure Primary Image */}
       <Image
         assetUrl={data.adventureByPath.item.primaryImage._publishUrl}
-        renditionName="large"
-        renditionExtension="jpeg"
+        renditionName="web-optimized-large"
+        renditionExtension="webp"
         alt={data.adventureByPath.item.title}
       />
     </div>
