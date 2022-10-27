@@ -6,10 +6,11 @@ feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Beginner
-kt: kt-11245
-source-git-commit: 8944a4feaefbc4cf0db52011a0d49b22341780c0
+kt: 11245
+last-substantial-update: 2022-10-15T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '284'
 ht-degree: 4%
 
 ---
@@ -30,7 +31,7 @@ In diesem Artikel werden wir die Schritte durchgehen, die erforderlich sind, um 
 </dependency>
 ```
 
-Wenn sich Ihr OSGi-Bundle auf Ihrem Dateisystem befindet, sieht die Abhängigkeit etwa so aus
+Wenn sich Ihr OSGi-Bundle auf Ihrem Dateisystem befindet, erstellen Sie einen Ordner mit dem Namen **localjar** im Basisverzeichnis Ihres Projekts (C:\aemformsbundles\AEMFormsProcessStep\localjar) sieht die Abhängigkeit etwa so aus:
 
 ```java
 <dependency>

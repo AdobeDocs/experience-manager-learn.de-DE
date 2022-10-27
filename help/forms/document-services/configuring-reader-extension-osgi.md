@@ -8,13 +8,14 @@ version: 6.4,6.5
 topic: Administration
 role: Admin
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 1f16acfd-e8fd-4b0d-85c4-ed860def6d02
+last-substantial-update: 2020-08-01T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 10%
+source-wordcount: '209'
+ht-degree: 34%
 
 ---
-
 
 # Berechtigung für Reader Extensions hinzufügen{#configuring-reader-extension-osgi}
 
@@ -26,11 +27,11 @@ Die Berechtigung für Reader Extensions ist mit dem Benutzer fd-service verknüp
 
 * Melden Sie sich bei Ihrer AEM-Autoreninstanz als Administrator an
 * Navigieren Sie zu Tools-Security-Users .
-* Scrollen Sie in der Liste der Benutzer nach unten, bis Sie das fd-service-Benutzerkonto finden.
+* Scrollen Sie in der Liste der Benutzer nach unten, bis Sie das fd-Dienst-Benutzerkonto finden
 * Klicken Sie auf den fd-service-Benutzer
 * Klicken Sie auf die Registerkarte Keystore .
 * Klicken Sie auf KeyStore erstellen .
-* Legen Sie das KeyStore Access Password fest und speichern Sie Ihre Einstellungen, um das KeyStore-Kennwort zu erstellen.
+* Legen Sie das KeyStore Zugriff-Password fest und speichern Sie Ihre Einstellungen, um das KeyStore-Kennwort zu erstellen
 
 ### Berechtigung zum fd-service-Benutzerkeystore hinzufügen
 
@@ -41,19 +42,6 @@ Bitte folgen Sie dem Video, um die Anmeldeinformationen zum fd-service-Benutzer 
 
 Der Befehl zum Auflisten der Details der pfx-Datei lautet. Der folgende Befehl setzt voraus, dass Sie sich im selben Ordner wie die pfx-Datei befinden.
 
-**keytool -v -list -storetype pkcs12 -keystore  &lt;name of=&quot;&quot; your=&quot;&quot;>**
+**keytool -v -list -storetype pkcs12 -keystore &lt;name of=&quot;&quot; your=&quot;&quot; pfx=&quot;&quot; file=&quot;&quot;>**
 
-Beispiel: keytool -v -list -storetype pkcs12 -keystore 1005566.pfx , wobei 1005566.pfx der Name meiner pfx-Datei ist
-
-
-
-
-
-
-
-
-
-
-
-
-
+Beispiel: keytool -v -list -storetype pkcs12 -keystore 1005566.pfx, wobei 1005566.pfx der Name meiner pfx-Datei ist

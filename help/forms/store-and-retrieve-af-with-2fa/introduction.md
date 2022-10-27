@@ -1,21 +1,22 @@
 ---
 title: Speichern und Abrufen von Formulardaten mit Anhängen aus der MySQL-Datenbank
 description: Mehrteilige Anleitung, um Sie durch die Schritte zu führen, die zum Speichern und Abrufen von Formulardaten mit Anhängen erforderlich sind
-feature: Adaptive Formulare
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6593
 thumbnail: 327122.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: b278652f-6c09-4abc-b92e-20bfaf2e791a
+last-substantial-update: 2020-11-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 4%
+source-wordcount: '207'
+ht-degree: 2%
 
 ---
-
 
 # Speichern und Abrufen von adaptiven Formulardaten mit 2FA
 
@@ -25,7 +26,7 @@ In diesem Tutorial werden Sie durch die Schritte geführt, die zum Speichern und
 
 * Führen Sie einen POST-Aufruf an ein Servlet durch. Dieses Servlet speichert die Daten in der Datenbank und die Formularanlagen im CRX-Repository. Die in der Datenbank gespeicherten Daten sind einer GUID zugeordnet.
 
-* Wenn Sie das adaptive Formular mit den gespeicherten Daten füllen möchten, rufen Sie die mit der GUID verknüpften Daten ab und füllen das adaptive Formular mit der Methode **request.setAttribute** aus.
+* Wenn Sie das adaptive Formular mit den gespeicherten Daten füllen möchten, rufen Sie die mit der GUID verknüpften Daten ab und füllen das adaptive Formular mit der **request.setAttribute** -Methode.
 
 ## Nachweis des Anwendungsfalls
 

@@ -4,16 +4,17 @@ description: Ab AEM Forms 6.4 haben wir jetzt die Möglichkeit, das Formulardate
 feature: Workflow
 type: Tutorial
 version: 6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 0c77a853-fa71-46ac-8626-99bc69d6222d
+last-substantial-update: 2020-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 1%
+source-wordcount: '279'
+ht-degree: 0%
 
 ---
-
 
 # Verwenden des Formulardatenmodelldienstes als Schritt im Workflow {#using-form-data-model-service-as-step-in-workflow}
 
@@ -23,17 +24,17 @@ Ab AEM Forms 6.4 haben wir jetzt die Möglichkeit, das Formulardatenmodell als T
 >[!VIDEO](https://video.tv.adobe.com/v/21719/?quality=9&learn=on)
 
 Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisungen
-* [Laden Sie das SetValue-Bundle herunter und stellen Sie es bereit](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGI-Bundle, das Metadateneigenschaften festlegt.
->!![NOTE]In AEM Forms 6.5 und höher ist diese Funktion standardmäßig verfügbar, wie hier  [beschrieben.](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
+* [Herunterladen und Bereitstellen des setvalue-Bundles](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGI-Bundle, das Metadateneigenschaften festlegt.
+>!![NOTE]In AEM Forms 6.5 und höher ist diese Funktion standardmäßig als [hier beschreiben](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
-* Richten Sie tomcat mit der Datei SampleRest.war ein, wie [hier](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html) beschrieben. Die in Tomcat bereitgestellte WAR-Datei hat den Code, um die Kreditwürdigkeit des Antragstellers zurückzugeben. Die Bonität ist eine Zufallszahl zwischen 200 und 800
+* Einrichten von Tomcat mit der Datei SampleRest.war wie beschrieben [here](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html).Die in Tomcat bereitgestellte WAR-Datei hat den Code, um die Kreditwürdigkeit des Antragstellers zurückzugeben. Die Bonität ist eine Zufallszahl zwischen 200 und 800
 
-* [Importieren Sie die Assets mit Package Manager](assets/invoke-fdm-as-service-step.zip) in AEM. Das Paket enthält Folgendes:
+* [Importieren von Assets in AEM mit Package Manager](assets/invoke-fdm-as-service-step.zip).Das Paket enthält Folgendes:
 
    * Workflow-Modell, das den FDM-Schritt verwendet.
    * Formulardatenmodell, das im FDM-Schritt verwendet wird.
    * Adaptives Formular, um den Workflow bei der Übermittlung Trigger.
-* Öffnen Sie [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Füllen Sie die Details aus und senden Sie sie. Bei der Formularübermittlung wird der [loanapplication-Workflow](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) ausgelöst.
+* Öffnen Sie die [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Füllen Sie die Details aus und senden Sie sie. Bei der Übermittlung des Formulars [loanapplication workflow](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) ausgelöst wird.
 
 ![ Workflow ](assets/fdm-as-service-step-workflow.PNG).
 Der Workflow nutzt die Komponente ODER-Teilung , um die Anwendung an den Administrator weiterzuleiten, wenn die Gewichtung über 500 liegt. Wenn der Bonitätswert unter 500 liegt, wird der Antrag zur Aufnahme weitergeleitet.

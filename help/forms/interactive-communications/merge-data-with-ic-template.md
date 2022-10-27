@@ -11,7 +11,8 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: 3bfbb4ef-0c51-445a-8d7b-43543a5fa191
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+last-substantial-update: 2019-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 2%
@@ -66,7 +67,7 @@ public PrefillData getPrefillData(DataOptions options) throws FormsException {
 
 ### Erstellen der WorkflowProcess-Implementierung
 
-Das Code-Snippet zur WorkflowProcess-Implementierung wird unten gezeigt. Dieser Code wird ausgeführt, wenn der Prozessschritt im AEM Workflow mit dieser Implementierung verknüpft ist. Diese Implementierung erwartet 3 Prozessargumente, die unten beschrieben werden:
+Das Code-Snippet zur WorkflowProcess-Implementierung wird unten gezeigt. Dieser Code wird ausgeführt, wenn der Prozessschritt im AEM Workflow mit dieser Implementierung verknüpft ist. Diese Implementierung erwartet drei Prozessargumente, die unten beschrieben werden:
 
 * Name des DataFile-Pfads, der beim Konfigurieren des adaptiven Formulars angegeben wird
 * Name der Druckkanalvorlage
@@ -178,7 +179,7 @@ Führen Sie die folgenden Schritte aus, um dies auf Ihrem Server zu testen:
 
 * [Open ChangeOfBeneficiaryForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled)
 * Stellen Sie sicher, dass das adaptive Formular für die Übermittlung an AEM Workflow wie unten gezeigt konfiguriert ist.
-   ![image](assets/generateic.PNG)
+   ![Grafik](assets/generateic.PNG)
 * [Konfigurieren Sie das Workflow-Modell.](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ChangesToBeneficiary.html)Stellen Sie sicher, dass die Prozessschritte und E-Mail-Komponenten gemäß Ihrer Umgebung konfiguriert sind.
 * [Vorschau des ChangeOfBeneficiaryForm](http://localhost:4502/content/dam/formsanddocuments/changebeneficiary/jcr:content?wcmmode=disabled) Füllen Sie einige Details aus und senden Sie
 * Der Workflow sollte aufgerufen werden und das IC-Druckkanaldokument sollte an den Empfänger gesendet werden, der in der Komponente E-Mail senden als Anlage angegeben ist.

@@ -1,24 +1,25 @@
 ---
 title: Vorbefüllungsdienst in Adaptive Forms
 description: Vorausfüllen adaptiver Formulare durch Abrufen von Daten aus Back-End-Datenquellen.
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: f2c324a3-cbfa-4942-b3bd-dc47d8a3f7b5
+last-substantial-update: 2019-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '462'
 ht-degree: 7%
 
 ---
-
 
 # Verwenden des Vorbefüllungs-Dienstes in Adaptive Forms
 
 Sie können die Felder eines adaptiven Formulars mit vorhandenen Daten vorbefüllen. Wenn ein Benutzer ein Formular öffnet, werden die Werte für diese Felder vorbefüllt. Es gibt mehrere Möglichkeiten, adaptive Formularfelder vorab auszufüllen. In diesem Artikel werden wir uns das Vorausfüllen adaptiver Formulare mithilfe des AEM Forms-Vorbefüllungs-Dienstes ansehen.
 
-Weitere Informationen zu verschiedenen Methoden zum Vorausfüllen adaptiver Formulare finden Sie in [dieser Dokumentation](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
+Weitere Informationen zu verschiedenen Methoden zum Vorausfüllen adaptiver Formulare erhalten Sie unter [folgen Sie dieser Dokumentation](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
 
 Um das adaptive Formular mit dem Vorbefüllungs-Dienst vorab auszufüllen, müssen Sie eine Klasse erstellen, die die DataProvider-Schnittstelle implementiert. Die Methode getPrefillData verfügt über die Logik zum Erstellen und Zurückgeben von Daten, die das adaptive Formular zum Vorausfüllen der Felder benötigt. Bei dieser Methode können Sie die Daten aus einer beliebigen Quelle abrufen und den Eingabestream des Datendokuments zurückgeben. Der folgende Beispielcode ruft die Benutzerprofilinformationen des angemeldeten Benutzers ab und erstellt ein XML-Dokument, dessen Eingabestream zurückgegeben wird, um von den adaptiven Formularen genutzt zu werden.
 
@@ -81,8 +82,8 @@ public class PrefillAdaptiveForm implements DataProvider {
 Um diese Funktion auf Ihrem Server zu testen, führen Sie die folgenden Schritte aus
 
 * [Laden Sie den Inhalt der ZIP-Datei herunter und extrahieren Sie ihn auf Ihren Computer](assets/prefillservice.zip)
-* Vergewissern Sie sich, dass die angemeldeten [Benutzerprofile](http://localhost:4502/libs/granite/security/content/useradmin) vollständig ausgefüllt sind. Dies ist erforderlich, damit das Beispiel funktioniert. Für das Beispiel gibt es keine Fehlerprüfung auf fehlende Benutzerprofileigenschaften.
-* Stellen Sie das Bundle mithilfe der [AEM Web-Konsole](http://localhost:4502/system/console/bundles) bereit.
+* Stellen Sie sicher, dass Sie angemeldet sind. [Benutzerprofil](http://localhost:4502/libs/granite/security/content/useradmin) Informationen werden vollständig ausgefüllt. Dies ist erforderlich, damit das Beispiel funktioniert. Für das Beispiel gibt es keine Fehlerprüfung auf fehlende Benutzerprofileigenschaften.
+* Stellen Sie das Bundle mithilfe des [AEM Web-Konsole](http://localhost:4502/system/console/bundles)
 * Erstellen eines adaptiven Formulars mit der XSD
 * Verknüpfen Sie &quot;Custom AEM Form Pre Fill Service&quot;als Vorbefüllungs-Dienst für Ihr adaptives Formular
 * Ziehen Sie Schemaelemente per Drag-and-Drop in das Formular
@@ -92,5 +93,4 @@ Um diese Funktion auf Ihrem Server zu testen, führen Sie die folgenden Schritte
 >
 >Wenn das adaptive Formular auf XSD basiert, stellen Sie sicher, dass das vom Vorbefüllungs-Dienst zurückgegebene XML-Dokument mit der XSD übereinstimmt, auf der Ihr adaptives Formular basiert.
 >
->Wenn das adaptive Formular nicht auf XSD basiert, müssen Sie die Felder manuell binden. Um beispielsweise ein Feld im adaptiven Formular an ein Fname-Element in den XML-Daten zu binden, verwenden Sie `/data/fname` in der Bindungsverweis des Felds für das adaptive Formular.
-
+>Wenn das adaptive Formular nicht auf XSD basiert, müssen Sie die Felder manuell binden. Um beispielsweise ein Feld im adaptiven Formular an ein Element in den XML-Daten zu binden, verwenden Sie `/data/fname`  im Feld Bindungsverweis des adaptiven Formulars.

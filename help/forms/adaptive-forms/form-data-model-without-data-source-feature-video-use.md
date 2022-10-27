@@ -1,22 +1,23 @@
 ---
 title: Formulardatenmodell ohne Datenquelle erstellen
-description: Ab AEM Forms 6.4 können wir jetzt Formulardatenmodell (FDM) definieren, ohne es mit einer Datenquelle zu verknüpfen. Das folgende Video führt Sie durch die Schritte zum Erstellen von FDM ohne Datenquelle.
+description: Ab AEM Forms 6.4 können wir jetzt das Formulardatenmodell (FDM) definieren, ohne es mit einer Datenquelle zu verknüpfen. Im folgenden Video werden die Schritte zum Erstellen von FDM ohne Datenquelle erläutert.
 feature: Workflow
 version: 6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: b43568e7-99f0-425d-9601-c671ecdaff69
+last-substantial-update: 2020-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 1%
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
 
-
 # Formulardatenmodell ohne Datenquelle erstellen {#creating-form-data-model-without-data-source}
 
-Ab AEM Forms 6.4 können wir jetzt Formulardatenmodell (FDM) definieren, ohne es mit einer Datenquelle zu verknüpfen. Das folgende Video führt Sie durch die Schritte zum Erstellen von FDM ohne Datenquelle.
+Ab AEM Forms 6.4 können wir jetzt das Formulardatenmodell (FDM) definieren, ohne es mit einer Datenquelle zu verknüpfen. Im folgenden Video werden die Schritte zum Erstellen von FDM ohne Datenquelle erläutert.
 
 >[!VIDEO](https://video.tv.adobe.com/v/21414/?quality=9&learn=on)
 
@@ -26,4 +27,3 @@ Dies bietet die folgenden Vorteile:
 * Die Entwicklung von Dokumenten zur interaktiven Kommunikation/Forms kann parallel zur Datenquellenentwicklung erfolgen.
 * Sobald die Datenquelle entwickelt wurde, können Sie die Bindungen mit dem Visual Editor durchführen.
 * Die Funktion für die automatische Bindung ordnet ähnliche Elemente zu.
-

@@ -1,27 +1,28 @@
 ---
 title: Senden von E-Mails beim Übermitteln adaptiver Formulare
-seo-title: Senden von E-Mails beim Übermitteln adaptiver Formulare
+seo-title: Sending Email on Adaptive Form Submission
 description: Bestätigungs-E-Mail bei Übermittlung des adaptiven Formulars mit der Komponente E-Mail senden senden senden senden
-seo-description: Bestätigungs-E-Mail bei Übermittlung des adaptiven Formulars mit der Komponente E-Mail senden senden senden senden
+seo-description: Send confirmation email on adaptive form submission using the send email component
 uuid: 6c9549ba-cb56-4d69-902c-45272a8fd17e
-feature: Adaptive Formulare
+feature: Adaptive Forms
 topics: authoring, integrations
 audience: developer
 doc-type: article
 activity: use
 discoiquuid: 1187357f-2f36-4a04-b708-44bb9c174fb5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 19c5aeec-2893-4ada-b6df-b80c4be2468a
+last-substantial-update: 2020-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '214'
 ht-degree: 3%
 
 ---
 
-
-# Senden von E-Mails zur Übermittlung adaptiver Formulare {#sending-email-on-adaptive-form-submission}
+# Senden von E-Mails beim Übermitteln adaptiver Formulare {#sending-email-on-adaptive-form-submission}
 
 Eine der häufigsten Aktionen besteht darin, eine Bestätigungs-E-Mail an den Absender zu senden, wenn das adaptive Formular erfolgreich übermittelt wurde. Dazu wählen wir die Übermittlungsaktion &quot;E-Mail senden&quot;.
 
@@ -35,7 +36,7 @@ Wenn das adaptive Formular gesendet wird, erhält der Empfänger eine E-Mail.
 
 ## Erforderliche Konfigurationen {#configurations-needed}
 
-Sie müssen den Day CQ Mail-Dienst konfigurieren. Dies kann konfiguriert werden, indem Sie Ihren Browser auf [Felix Configuration Manager](http://localhost:4502/system/console/configMgr) verweisen.
+Sie müssen den Day CQ Mail-Dienst konfigurieren. Dies kann konfiguriert werden, indem Sie Ihren Browser auf [Felix Configuration Manager](http://localhost:4502/system/console/configMgr)
 
 Der Screenshot zeigt die Konfigurationseigenschaften für den Adobe-E-Mail-Server.
 
@@ -43,10 +44,10 @@ Der Screenshot zeigt die Konfigurationseigenschaften für den Adobe-E-Mail-Serve
 
 Gehen Sie wie folgt vor, um dies auf Ihrem Server auszuführen:
 
-* [Importieren Sie die mit diesem Artikel verknüpften ](assets/timeoffrequest.zip) Assets in AEM mit dem Package Manager.
+* [Importieren der Assets](assets/timeoffrequest.zip) mit diesem Artikel in AEM mithilfe des Paketmanagers verknüpft ist.
 
-* Öffnen Sie [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled).
+* Öffnen Sie die [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled).
 
 * Füllen Sie die Details aus. Stellen Sie sicher, dass Sie im E-Mail-Feld eine gültige E-Mail-Adresse angeben.
 
-* Senden Sie das Formular.
+* Formular senden.

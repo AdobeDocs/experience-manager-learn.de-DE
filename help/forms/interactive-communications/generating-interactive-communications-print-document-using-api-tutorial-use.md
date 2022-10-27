@@ -1,24 +1,25 @@
 ---
 title: Generieren des interaktiven Kommunikationsdokuments für den Druckkanal mithilfe des Mechanismus für überwachte Ordner
-seo-title: Generieren des interaktiven Kommunikationsdokuments für den Druckkanal mithilfe des Mechanismus für überwachte Ordner
+seo-title: Generating Interactive Communications Document for print channel using watch folder mechanism
 description: Verwenden des überwachten Ordners zum Generieren von Druckkanaldokumenten
-seo-description: Verwenden des überwachten Ordners zum Generieren von Druckkanaldokumenten
-feature: Interaktive Kommunikation
+seo-description: Use watched folder to generate print channel documents
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: article
 activity: implement
 version: 6.4,6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: f5ab4801-cde5-426d-bfe4-ce0a985e25e8
+last-substantial-update: 2019-07-07T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
-
 
 # Generieren des interaktiven Kommunikationsdokuments für den Druckkanal mithilfe des Mechanismus für überwachte Ordner
 
@@ -110,11 +111,11 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 ```
 
 
-**Um dies auf Ihrem lokalen System zu testen, folgen Sie den folgenden Anweisungen:**
+**Um dies auf Ihrem lokalen System zu testen, befolgen Sie die folgenden Anweisungen:**
 
-* Richten Sie Tomcat wie in diesem [Artikel beschrieben ein.](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat verfügt über die War-Datei, die die Beispieldaten generiert.
-* Richten Sie den Dienst als Systembenutzer ein, wie in diesem [Artikel](/help/forms/adaptive-forms/service-user-tutorial-develop.md) beschrieben.
-Stellen Sie sicher, dass dieser Systembenutzer über Leseberechtigungen für den folgenden Knoten verfügt. Um die Berechtigungen anzugeben, melden Sie sich bei [user admin](https://localhost:4502/useradmin) an und suchen Sie nach den &quot;Daten&quot;des Systembenutzers und geben Sie die Leseberechtigungen für den folgenden Knoten durch Navigieren zur Registerkarte &quot;Berechtigungen&quot;an
+* Einrichten von Tomcat wie in diesem Beispiel beschrieben [Artikel.](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat verfügt über die War-Datei, die die Beispieldaten generiert.
+* Richten Sie den Dienst als Systembenutzer ein, wie in diesem [Artikel](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
+Stellen Sie sicher, dass dieser Systembenutzer über Leseberechtigungen für den folgenden Knoten verfügt. So melden Sie sich an: [Benutzeradministrator](https://localhost:4502/useradmin) und suchen Sie nach den &quot;Daten&quot;des Systembenutzers und erteilen Sie die Leseberechtigungen für den folgenden Knoten, indem Sie die Registerkarte Berechtigungen aufrufen.
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
@@ -152,4 +153,3 @@ Stellen Sie sicher, dass dieser Systembenutzer über Leseberechtigungen für den
 >Wenn Sie dies auf einem Nicht-Windows-Betriebssystem verwenden möchten, navigieren Sie zu
 >
 >/etc/fd/watchfolder/config/PrintChannelDocument und ändern Sie den OrdnerPath gemäß Ihren Einstellungen
-

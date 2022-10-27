@@ -7,7 +7,8 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 879518db-3f05-4447-86e8-5802537584e5
-source-git-commit: 631fef25620c84e04c012c8337c9b76613e3ad46
+last-substantial-update: 2021-06-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
 source-wordcount: '813'
 ht-degree: 3%
@@ -76,53 +77,53 @@ import com.day.cq.search.result.Hit;
 import com.day.cq.search.result.SearchResult;
 
 @Component(property = {
-	Constants.SERVICE_DESCRIPTION + "=Write Adaptive Form Attachments to File System",
-	Constants.SERVICE_VENDOR + "=Adobe Systems",
-	"process.label" + "=Save Adaptive Form Attachments to File System"
+    Constants.SERVICE_DESCRIPTION + "=Write Adaptive Form Attachments to File System",
+    Constants.SERVICE_VENDOR + "=Adobe Systems",
+    "process.label" + "=Save Adaptive Form Attachments to File System"
 })
 public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 
-	private static final Logger log = LoggerFactory.getLogger(WriteFormAttachmentsToFileSystem.class);
-	@Reference
-	QueryBuilder queryBuilder;
+    private static final Logger log = LoggerFactory.getLogger(WriteFormAttachmentsToFileSystem.class);
+    @Reference
+    QueryBuilder queryBuilder;
 
-	@Override
-	public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
-	throws WorkflowException {
-		// TODO Auto-generated method stub
-		log.debug("The string I got was ..." + processArguments.get("PROCESS_ARGS", "string").toString());
-		String[] params = processArguments.get("PROCESS_ARGS", "string").toString().split(",");
-		String attachmentsPath = params[0];
-		String saveToLocation = params[1];
-		log.debug("The seperator is" + File.separator);
-		String payloadPath = workItem.getWorkflowData().getPayload().toString();
-		Map<String, String> map = new HashMap<String, String> ();
-		map.put("path", payloadPath + "/" + attachmentsPath);
-		File saveLocationFolder = new File(saveToLocation);
-		if (!saveLocationFolder.exists()) {
-			saveLocationFolder.mkdirs();
-		}
+    @Override
+    public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)
+    throws WorkflowException {
+        // TODO Auto-generated method stub
+        log.debug("The string I got was ..." + processArguments.get("PROCESS_ARGS", "string").toString());
+        String[] params = processArguments.get("PROCESS_ARGS", "string").toString().split(",");
+        String attachmentsPath = params[0];
+        String saveToLocation = params[1];
+        log.debug("The seperator is" + File.separator);
+        String payloadPath = workItem.getWorkflowData().getPayload().toString();
+        Map<String, String> map = new HashMap<String, String> ();
+        map.put("path", payloadPath + "/" + attachmentsPath);
+        File saveLocationFolder = new File(saveToLocation);
+        if (!saveLocationFolder.exists()) {
+            saveLocationFolder.mkdirs();
+        }
 
-		map.put("type", "nt:file");
-		Query query = queryBuilder.createQuery(PredicateGroup.create(map), workflowSession.adaptTo(Session.class));
-		query.setStart(0);
-		query.setHitsPerPage(20);
+        map.put("type", "nt:file");
+        Query query = queryBuilder.createQuery(PredicateGroup.create(map), workflowSession.adaptTo(Session.class));
+        query.setStart(0);
+        query.setHitsPerPage(20);
 
-		SearchResult result = query.getResult();
-		log.debug("Got  " + result.getHits().size() + " attachments ");
-		Node attachmentNode = null;
-		for (Hit hit: result.getHits()) {
-			try {
-				String path = hit.getPath();
-				log.debug("The attachment title is  " + hit.getTitle() + " and the attachment path is  " + path);
-				attachmentNode = workflowSession.adaptTo(Session.class).getNode(path + "/jcr:content");
-				InputStream documentStream = attachmentNode.getProperty("jcr:data").getBinary().getStream();
-				Document attachmentDoc = new Document(documentStream);
-				attachmentDoc.copyToFile(new File(saveLocationFolder + File.separator + hit.getTitle()));
-				attachmentDoc.close();
-			} catch (Exception e) {
-				log.debug("Error saving file " + e.getMessage());
-			}
+        SearchResult result = query.getResult();
+        log.debug("Got  " + result.getHits().size() + " attachments ");
+        Node attachmentNode = null;
+        for (Hit hit: result.getHits()) {
+            try {
+                String path = hit.getPath();
+                log.debug("The attachment title is  " + hit.getTitle() + " and the attachment path is  " + path);
+                attachmentNode = workflowSession.adaptTo(Session.class).getNode(path + "/jcr:content");
+                InputStream documentStream = attachmentNode.getProperty("jcr:data").getBinary().getStream();
+                Document attachmentDoc = new Document(documentStream);
+                attachmentDoc.copyToFile(new File(saveLocationFolder + File.separator + hit.getTitle()));
+                attachmentDoc.close();
+            } catch (Exception e) {
+                log.debug("Error saving file " + e.getMessage());
+            }
 ```
 
 Zeile 1 - definiert die Eigenschaften für unsere Komponente. Die Eigenschaft &quot;process.label&quot;wird angezeigt, wenn Sie die OSGi-Komponente mit dem Prozessschritt verknüpfen, wie in einem der folgenden Screenshots dargestellt.
@@ -149,7 +150,7 @@ Der QueryBuilder-Dienst wird zum Abfragen von Knoten des Typs nt:file im Ordner 
 [Erstellen Sie das Bundle wie hier beschrieben.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
 [Stellen Sie sicher, dass das Bundle bereitgestellt ist und sich im aktiven Status befindet.](http://localhost:4502/system/console/bundles)
 
-Erstellen eines Workflow-Modells. Ziehen Sie den Prozessschritt in das Workflow-Modell. Verknüpfen Sie den Prozessschritt mit &quot;Speichern von adaptiven Formularanlagen im Dateisystem&quot;.
+Erstellen Sie ein Workflow-Modell. Ziehen Sie den Prozessschritt in das Workflow-Modell. Verknüpfen Sie den Prozessschritt mit &quot;Speichern von adaptiven Formularanlagen im Dateisystem&quot;.
 
 Geben Sie die erforderlichen Prozessargumente getrennt durch Kommas an. Beispiel: Anlagen, c:\\scrappp\\. Das erste Argument ist der Ordner, in dem Ihre adaptiven Formularanlagen relativ zur Workflow-Nutzlast gespeichert werden. Dieser Wert muss mit dem Wert übereinstimmen, den Sie beim Konfigurieren der Sendeaktion des adaptiven Formulars angegeben haben. Das zweite Argument ist der Speicherort, an dem die Anlagen gespeichert werden sollen.
 

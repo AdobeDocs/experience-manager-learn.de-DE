@@ -2,17 +2,18 @@
 title: Variablen in AEM Workflow
 description: Verwenden von Variablen des Typs xml,json,arraylist,document im AEM-Workflow
 version: 6.5
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: e84b70a0-c51b-4fe3-80e8-f3156931297a
+last-substantial-update: 2020-01-26T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 10%
+source-wordcount: '109'
+ht-degree: 8%
 
 ---
-
 
 # Variablen in AEM Workflow
 

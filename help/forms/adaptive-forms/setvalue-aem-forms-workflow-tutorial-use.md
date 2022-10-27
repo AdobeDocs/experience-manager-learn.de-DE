@@ -1,17 +1,18 @@
 ---
 title: Verwenden von setValue im AEM Forms-Workflow
 description: Wert des Elements in von Adaptive Forms übermittelten Daten in AEM Forms OSGI festlegen
-feature: Adaptive Formulare
-topic: Entwicklung
+feature: Adaptive Forms
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 3919efee-6998-48e8-85d7-91b6943d23f9
+last-substantial-update: 2020-01-09T00:00:00Z
+source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
 workflow-type: tm+mt
-source-wordcount: '531'
-ht-degree: 3%
+source-wordcount: '528'
+ht-degree: 2%
 
 ---
-
 
 # Verwenden von setValue im AEM Forms-Workflow
 
@@ -38,18 +39,18 @@ Gehen Sie wie folgt vor, um die Assets auf Ihrem lokalen System bereitzustellen:
 
 * [Bereitstellen des Entwicklungs-mit-Service-Benutzer-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [Stellen Sie das Beispielpaket bereit](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGi-Bundle, mit dem Sie die Werte eines Elements in den gesendeten XML-Daten festlegen können.
+* [Bereitstellen des Beispielpakets](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGi-Bundle, mit dem Sie die Werte eines Elements in den gesendeten XML-Daten festlegen können.
 
 * [Herunterladen und Extrahieren des Inhalts der ZIP-Datei](assets/setvalueassets.zip)
-* Verweisen Sie Ihren Browser auf [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
+* Zeigen Sie Ihren Browser auf [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
 * Importieren und installieren Sie setValueWorkflow.zip. Dies weist das Beispiel-Workflow-Modell auf.
-* Verweisen Sie Ihren Browser auf [Forms und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Zeigen Sie Ihren Browser auf [Forms und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicken Sie auf Erstellen | Datei-Upload
 * TimeOfRequestForm.zip hochladen
-* Öffnen Sie [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled).
+* Öffnen Sie die [TimeOffRequestform](http://localhost:4502/content/dam/formsanddocuments/timeoffapplication/jcr:content?wcmmode=disabled)
 * Füllen Sie die drei erforderlichen Felder aus und senden Sie
 * Melden Sie sich als &quot;Admin&quot;bei AEM an (falls noch nicht geschehen).
-* Gehen Sie zu [&quot;AEM Posteingang&quot;](http://localhost:4502/aem/inbox)
+* Navigieren Sie zu [&quot;AEM Posteingang&quot;](http://localhost:4502/aem/inbox)
 * Öffnen Sie das Formular &quot;Überprüfungszeit von Anforderung&quot;
 * Beachten Sie, dass die Felder im ersten Bedienfeld deaktiviert sind. Dies liegt daran, dass das Formular von einem Validierer geöffnet wird. Beachten Sie außerdem, dass der Bereich für die Genehmigung oder Ablehnung der Anfrage jetzt sichtbar ist.
 
