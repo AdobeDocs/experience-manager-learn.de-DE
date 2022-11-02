@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
+source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1725'
 ht-degree: 3%
 
 ---
@@ -110,6 +110,7 @@ ht-degree: 3%
    + [Schaltflächen in der Symbolleiste](ui-tips-tricks/toolbar-buttons.md)
    + [Navigieren in Registerkarten mit verschachtelten Bereichen](ui-tips-tricks/nested-panels.md)
    + [Hinzufügen von Symbolen zu Navigationsregisterkarten](ui-tips-tricks/active-complete.md)
+   + [Felder für automatische Vervollständigung](ui-tips-tricks/auto-complete.md)
 + Posteingang anpassen{#inbox-customization}
    + [Einführung](inbox-customization/introduction.md)
    + [Benutzerdefinierte Spalte hinzufügen](inbox-customization/add-married-column.md)
