@@ -8,7 +8,7 @@ audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 3%
@@ -29,13 +29,13 @@ Acroforms sind Formulare, die mit Acrobat erstellt werden. Sie können ein neues
 
 >[!NOTE]
 >
->Wenn Sie das ausfüllbare Acrobat zum Signieren mit Adobe Sign senden möchten, benennen Sie die Felder entsprechend. Sie können beispielsweise ein Feld benennen **Sig_es_:signer1:signature**. Dies ist die Syntax, die Adobe Sign versteht.
+>Wenn Sie das ausfüllbare Acrobat zum Signieren mit Acrobat Sign senden möchten, benennen Sie die Felder entsprechend. Sie können beispielsweise ein Feld benennen **Sig_es_:signer1:signature**. Dies ist die Syntax, die Acrobat Sign versteht.
 
 >[!NOTE]
 >
->Wenn Sie ein XFA-basiertes Dokument senden, müssen Sie das Dokument reduzieren und die Adobe Sign-Signatur-Tags müssen als statischer Text im Dokument vorhanden sein.
+>Wenn Sie ein XFA-basiertes Dokument senden, müssen Sie das Dokument reduzieren und die Acrobat Sign-Signatur-Tags müssen als statischer Text im Dokument vorhanden sein.
 
-[Adobe Sign Text Tags-Dokument](https://helpx.adobe.com/de/sign/using/text-tag.html)
+[Acrobat Sign Text Tags-Dokument](https://helpx.adobe.com/de/sign/using/text-tag.html)
 
 >[!NOTE]
 >

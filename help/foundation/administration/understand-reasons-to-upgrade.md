@@ -6,7 +6,7 @@ topic: Upgrade
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
-source-git-commit: 34fbb22916cf8a8df0e3240835c71e0979fd11bd
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '3460'
 ht-degree: 6%
@@ -19,7 +19,7 @@ Eine allgemeine Aufschlüsselung der wichtigsten Funktionen für Kunden, die ein
 
 ## Wichtige Funktionen für die Aktualisierung auf AEM 6.5
 
-+ [Adobe Experience Manager 6.5 - Versionshinweise](https://helpx.adobe.com/de/experience-manager/6-5/release-notes.html)
++ [Versionshinweise zu Adobe Experience Manager 6.5](https://helpx.adobe.com/de/experience-manager/6-5/release-notes.html)
 
 ### Foundation-Verbesserungen
 
@@ -488,7 +488,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sites-Funktionen, die von AEM
             <td>ms<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/spa-overview.html" target="_blank">SPA Editor</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/spa-overview.html" target="_blank">SPA Editor</a>:</strong>
             Erstellen Sie mit React erstellten Einzelseiten-App-Frameworks (SPA) Authoring-Web-Erlebnisse.</td>
             <td> </td>
             <td> </td>
@@ -521,7 +521,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sites-Funktionen, die von AEM
             <td>ms</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/translation.html" target="_blank">Inhaltsübersetzung</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/translation.html" target="_blank">Inhaltsübersetzung</a>:</strong>
             Das Plug-and-Play-Framework ist mit branchenführenden Übersetzungsdiensten von Drittanbietern integriert.</td>
             <td></td>
             <td></td>
@@ -835,7 +835,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Funktionen von AEM Assets. Ei
             <td>ms</td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/using.html?lang=de" target="_blank">AEM Desktop App</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/desktop-app/aem-desktop-app.html" target="_blank">AEM Desktop App</a>:</strong>
             Synchronisieren Sie Assets mit dem lokalen Desktop, um sie mit Creative Suite-Produkten zu bearbeiten.
             </td>
             <td> </td>
@@ -1051,8 +1051,8 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Forms Add-on-Funktionen, 
             <td>ms</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#EnhancedintegrationwithAdobeSign" target="_blank">Adobe Sign-Integration</a>:</strong>
-            Bereitstellung integrierter Adobe Sign-Formulare auf Basis von Signaturszenarien zulassen.</td>
+            <td><strong><a href="https://helpx.adobe.com/aem-forms/6-5/whats-new.html#EnhancedintegrationwithAdobeSign" target="_blank">Acrobat Sign-Integration</a>:</strong>
+            Bereitstellung integrierter Acrobat Sign-Formulare auf Basis von Signaturszenarien zulassen.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -1567,7 +1567,7 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Communities Add-on-Funkti
             <td>ms</td>
         </tr>
         <tr>
-            <td rowspan="5">Plattform</td>
+            <td rowspan="5">Platform</td>
             <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/communities/using/working-with-srp.html" target="_blank">MSRP (Mongo-Speicher)</a>:</strong>
             Benutzergenerierte Inhalte (UGC) werden direkt in einer lokalen MongoDB-Instanz beibehalten</td>
             <td> </td>

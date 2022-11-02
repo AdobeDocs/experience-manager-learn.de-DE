@@ -1,24 +1,24 @@
 ---
 title: Konvertierte adaptive Formulare konfigurieren
 description: Konvertierte adaptive Formulare konfigurieren
-feature: Adaptive Formulare
+feature: Adaptive Forms
 thumbnail: 39574.jpg
 kt: 6126
-topic: Entwicklung
+topic: Development
 role: User
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: fba18118-0431-4edd-a5a6-0281e8c12979
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
-source-wordcount: '77'
-ht-degree: 3%
+source-wordcount: '74'
+ht-degree: 0%
 
 ---
 
 # Konvertierte adaptive Formulare konfigurieren
 
-Nachdem Sie ein PDF-Formular in ein adaptives Formular konvertiert haben, müssen Sie normalerweise einige aussagekräftige Titel angeben. Möglicherweise müssen Sie auch einige Felder neu anordnen. Das Formular muss auch für die Verwendung der Adobe Sign-Integration konfiguriert werden, damit das Signieren vor Ort möglich ist.
+Nachdem Sie das PDF-Formular in ein adaptives Formular konvertiert haben, müssen Sie normalerweise einige aussagekräftige Titel angeben. Möglicherweise müssen Sie auch einige Felder neu anordnen. Das Formular muss auch für die Verwendung der Acrobat Sign-Integration konfiguriert werden, damit das Signieren vor Ort möglich ist.
 
 Im folgenden Video werden die Schritte erläutert, die zum Konfigurieren des Formulars für das Signieren am Ort erforderlich sind
 
 >[!VIDEO](https://video.tv.adobe.com/v/39574/?quality=9&learn=on)
-

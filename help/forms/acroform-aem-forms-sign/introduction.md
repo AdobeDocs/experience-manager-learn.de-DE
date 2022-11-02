@@ -1,13 +1,13 @@
 ---
 title: Acroforms mit AEM Forms
-description: Ein Tutorial, das durch das Erstellen eines adaptiven Formulars mit Acroform und das Zusammenführen der Daten führt, um eine PDF zu erhalten. Die PDF mit den zusammengeführten Daten kann dann zum Signieren mit Adobe Sign gesendet werden.
+description: Ein Tutorial, das durch das Erstellen eines adaptiven Formulars mit Acroform und das Zusammenführen der Daten führt, um eine PDF zu erhalten. Die PDF mit den zusammengeführten Daten kann dann zum Signieren mit Acrobat Sign gesendet werden.
 feature: adaptive-forms
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 4%
@@ -17,7 +17,7 @@ ht-degree: 4%
 
 # Erstellen adaptiver Forms aus Acroforms
 
-Organisationen haben eine große Auswahl an Formularen. Einige dieser Formulare werden in Microsoft Word erstellt und in PDF konvertiert. Diese Formulare können standardmäßig nicht mit Adobe Reader oder Acrobat ausgefüllt werden. Damit diese Formulare mit Acrobat oder Reader ausgefüllt werden können, müssen diese Formulare in Acroform konvertiert werden. Acroforms sind Formulare, die mit Acrobat erstellt werden. Dieser Artikel erläutert die Erstellung eines adaptiven Formulars aus Acroform und die Zusammenführung der Daten in Acroform, um die PDF zu erhalten. Die PDF mit den zusammengeführten Daten kann auch zum Signieren mit Adobe Sign gesendet werden.
+Organisationen haben eine große Auswahl an Formularen. Einige dieser Formulare werden in Microsoft Word erstellt und in PDF konvertiert. Diese Formulare können standardmäßig nicht mit Adobe Reader oder Acrobat ausgefüllt werden. Damit diese Formulare mit Acrobat oder Reader ausgefüllt werden können, müssen diese Formulare in Acroform konvertiert werden. Acroforms sind Formulare, die mit Acrobat erstellt werden. Dieser Artikel erläutert die Erstellung eines adaptiven Formulars aus Acroform und die Zusammenführung der Daten in Acroform, um die PDF zu erhalten. Die PDF mit den zusammengeführten Daten kann auch zum Signieren mit Acrobat Sign gesendet werden.
 
 >[!NOTE]
 >

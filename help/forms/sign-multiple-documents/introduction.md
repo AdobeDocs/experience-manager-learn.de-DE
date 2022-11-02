@@ -9,16 +9,16 @@ role: Developer
 level: Experienced
 exl-id: 0260d4b6-8615-4d78-a920-b36766a0f8e9
 last-substantial-update: 2021-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 2%
 
 ---
 
-# Einführung   
+# Einführung
 
-Unabhängig davon, ob Sie eine Hypothek beantragen oder ein neues Bankkonto eröffnen, müssen Sie mehrere Formulare ausfüllen und unterschreiben. Die Integration zwischen AEM Forms und Adobe Sign erleichtert das Ausfüllen und Signieren mehrerer Formulare.
+Unabhängig davon, ob Sie eine Hypothek beantragen oder ein neues Bankkonto eröffnen, müssen Sie mehrere Formulare ausfüllen und unterschreiben. Die Integration zwischen AEM Forms und Acrobat Sign erleichtert das Ausfüllen und Signieren mehrerer Formulare.
 Das folgende Video führt Sie durch den Anwendungsfall des Signierens mehrerer Formulare.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330165?quality=9&learn=on)
@@ -28,7 +28,7 @@ Das folgende Video führt Sie durch den Anwendungsfall des Signierens mehrerer F
 Dieser Kurs setzt Folgendes voraus:
 
 * Sie haben Zugriff auf AEM 6.4- oder 6.5-Server mit Forms Add on Package installiert und konfiguriert
-* AEM mit Adobe Sign konfiguriert
+* AEM mit Acrobat Sign konfiguriert
 * Zugriff auf den SMTP-Server
 * Einige Erlebnisse mit AEM/AEM Forms
 

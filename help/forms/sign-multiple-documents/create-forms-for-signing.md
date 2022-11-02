@@ -9,7 +9,7 @@ topic: Development
 role: User
 level: Beginner
 exl-id: 565d81a4-2918-44ea-a3e9-ed79f246f08a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Der nächste Schritt besteht darin, die adaptiven Formulare zu erstellen, die in
 
 * Stellen Sie sicher, dass die Formulare auf dem **SignMultipleForms** Vorlage. Dadurch wird sichergestellt, dass die Formulare vorab mit den aus der Datenbank abgerufenen Daten gefüllt werden.
 
-* Die Formulare müssen für die Verwendung von Adobe Sign konfiguriert werden und das signer1 -Feld muss mit dem Feld Customer Email verknüpft werden
+* Die Formulare müssen für die Verwendung von Acrobat Sign konfiguriert werden und das signer1 -Feld muss mit dem Feld Customer Email verknüpft werden
 * Die Formulare müssen auch mit clientLib verknüpft werden, der **getnextform**
 * Die Formulare müssen die Signaturschritt-Komponente verwenden.
 * Das Formular muss auch die benutzerdefinierte **Mehrere Formulare unterschreiben** -Komponente. Mit dieser Komponente können Sie zum nächsten Formular navigieren, das Sie im Paket signieren können.

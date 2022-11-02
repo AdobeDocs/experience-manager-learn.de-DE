@@ -11,10 +11,10 @@ thumbnail: KT-10718.png
 last-substantial-update: 2022-10-02T00:00:00Z
 mini-toc-levels: 1
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 81b96f59450448a3d5b17a61aa025acd60d0cce1
 workflow-type: tm+mt
 source-wordcount: '958'
-ht-degree: 15%
+ht-degree: 18%
 
 ---
 
@@ -45,7 +45,7 @@ Klicken Sie auf das Experience Cloud-Produkt, um eine Dokumentation zur Konfigur
 
 ## Adobe Acrobat Sign
 
-Adobe Acrobat Sign (ehemals Adobe Sign) ermöglicht Workflows für die elektronische Signatur von adaptiven Formularen in AEM Forms, indem Workflows verbessert werden, um Dokumente für Rechts-, Verkaufs-, Gehaltsabrechnungs-, HR- und andere Bereiche zu verarbeiten.
+Adobe Acrobat Sign (ehemals Acrobat Sign) ermöglicht Workflows für die elektronische Signatur von adaptiven Formularen in AEM Forms, indem Workflows verbessert werden, um Dokumente für Rechts-, Verkaufs-, Gehaltsabrechnungs-, HR- und andere Bereiche zu verarbeiten.
 
 ### AEM Forms
 
@@ -71,7 +71,7 @@ Durch die Integration von Adobe Analytics mit AEM as a Cloud Service können Sie
 
 + [Assets Insights - Übersicht](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/assets-insights.html)
 + [Konfigurieren von Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/assets-insights.html#configure-asset-insights)
-+ [Tutorial zu Assets Insights](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)
++ [Tutorial zu Assets Insights](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html?lang=de)
 
 ### AEM Forms
 
@@ -103,7 +103,7 @@ Adobe Experience Platform-Tags (früher Adobe Launch, DTM) lassen sich nahtlos m
 ### AEM Sites
 
 + [Benutzerhandbuch zu Experience Platform-Tags](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
-+ [Tutorial zu Experience Platform-Tags](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
++ [Tutorial zu Experience Platform-Tags](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-platform-launch/overview.html?lang=de)
 
 ### AEM Forms
 
@@ -136,7 +136,7 @@ Adobe Sensei bietet KI- und maschinelles Lernen, um den Prozess des Content Mana
 
 ### AEM Assets
 
-+ [Smart-Tags für Bilder](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
++ [Smart-Tags für Bilder](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=de)
 + [Benutzerdefinierte Smart-Tags für Bilder](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/custom-smart-tags.html)
 + [Smart-Tags für Videos](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/video-smart-tags.html)
 + [Smartes Zuschneiden](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/smart-crop-feature-video-use.html)
