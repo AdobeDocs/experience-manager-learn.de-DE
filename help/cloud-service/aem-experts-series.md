@@ -1,14 +1,14 @@
 ---
 title: Adobe Experience Manager as a Cloud Service Expert-Serie
 description: Erfahren Sie mehr über Adobe Experience Manager (AEM) as a Cloud Service von den erfahrenen Ingenieuren der Adobe, die sie erstellen, und über die professionellen Dienstleistungen, die sie anbieten.
-sub-product: sites, cloud-manager, assets
-source-git-commit: d42fd02b06429be1b847958f23f273cf842d3e1b
+sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
+exl-id: ae1cdbe3-0863-41de-bb27-2e88c4640866
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 2%
 
 ---
-
 
 # Adobe Experience Manager as a Cloud Service Expert-Serie
 
@@ -54,7 +54,7 @@ Lernen Sie die Grundlagen von AEM als Cloud Services kennen und erfahren Sie, wi
    </td>   
      <td>
       <a href="./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md">
-      <img alt="Cloud Manager " src="./assets/experts-series/cloud-manager.png"/>
+      <img alt="Cloud Manager" src="./assets/experts-series/cloud-manager.png"/>
       </a>
       <div>
          <a href="./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md"><strong>Cloud Manager für AEM as a Cloud Service</strong></a>
@@ -153,7 +153,7 @@ Planen Sie den Übergang von AEM 6 zu AEM as a Cloud Service? Erfahren Sie mehr 
       </div>
       <p>
         <br/>
-         Erfahren Sie, wie Sie mit dem Content Transfer Tool Inhalte von AEM 6.3 oder höher auf AEM as a Cloud Service migrieren können.
+         Erfahren Sie, wie Sie mit dem Content Transfer Tool Inhalte von AEM 6.3+ auf AEM as a Cloud Service migrieren können.
       </p>
    </td> 
   </tr>  

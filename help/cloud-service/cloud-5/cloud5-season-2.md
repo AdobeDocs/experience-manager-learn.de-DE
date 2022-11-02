@@ -1,11 +1,11 @@
 ---
 title: Cloud 5 - Staffel 2
 description: In der zweiten Staffel lernen Sie Adobe Experience Manager (AEM) kennen, die von den Fachingenieuren der Adobe as a Cloud Service ist, die das Projekt erstellen, und von den Fachkräften, die es anbieten.
-sub-product: sites, cloud-manager, assets
+sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: e2fabf7c-7fda-4391-ae77-709aa9f7dc0a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 ![AEM Expertenreihe](./imgs/masthead-s2.png)
 >[!VIDEO](https://video.tv.adobe.com/v/346567)
 
-## Einführung   
+## Einführung
 
 Willkommen in der zweiten Cloud 5-Serie von AEM Engineering. Eines der Hauptprobleme in der Implementierungsphase eines Produkts besteht darin, genügend Codebeispiele und/oder Live-Demonstrationen dieser Beispiele, Tools oder APIs zu haben. Ziel dieser Serie ist es, nützliche Informationen über AEM as a Cloud Service innerhalb von 5 Minuten oder weniger bereitzustellen.
 
