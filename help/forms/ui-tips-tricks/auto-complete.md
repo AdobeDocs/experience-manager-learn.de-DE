@@ -9,9 +9,9 @@ role: Developer
 level: Beginner
 kt: 11374
 last-substantial-update: 2022-11-01T00:00:00Z
-source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
+source-git-commit: 4af14b7d72ebdbea04e68a9a64afa1a96d1c1aeb
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '177'
 ht-degree: 0%
 
 ---
@@ -23,14 +23,11 @@ Das in diesem Artikel enthaltene Beispiel verwendet eine Vielzahl von Datenquell
 
 Der Code, der zum Ausführen der Funktion für die automatische Vervollständigung verwendet wird, ist mit dem initialize-Ereignis des Felds verknüpft.
 
-
-## Vorschläge für den Ländernamen angeben
-
-![country-recommendations](assets/auto-complete1.png)
-
 ## Vorschlag für Adresse
 
 ![country-recommendations](assets/auto-complete2.png)
+
+
 
 Im Folgenden finden Sie den Code, mit dem Straßenadressenvorschläge bereitgestellt werden
 
@@ -60,6 +57,10 @@ $(".streetAddress input").autocomplete({
 
 });
 ```
+
+
+
+
 
 ## Vorschläge mit Emoji&#39;s
 
