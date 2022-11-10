@@ -6,9 +6,10 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
-source-git-commit: 83e16ea87847182139982ea2378d8ff9f079c968
+exl-id: 998d3678-7aef-4872-bd62-0e6ea3ff7999
+source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
 workflow-type: tm+mt
-source-wordcount: '3015'
+source-wordcount: '2911'
 ht-degree: 1%
 
 ---
@@ -19,7 +20,7 @@ Im [vorheriges Kapitel](/help/headless-tutorial/graphql/advanced-graphql/create-
 
 ## Voraussetzungen {#prerequisites}
 
-Dieses Dokument ist Teil eines mehrteiligen Tutorials. Bevor Sie mit diesem Kapitel fortfahren, vergewissern Sie sich bitte, dass die vorherigen Kapitel abgeschlossen sind.
+Dieses Dokument ist Teil eines mehrteiligen Tutorials. Stellen Sie sicher, dass [vorheriges Kapitel](create-content-fragment-models.md) vor der Fortsetzung dieses Kapitels abgeschlossen wurde.
 
 ## Ziele {#objectives}
 
@@ -36,7 +37,7 @@ In diesem Kapitel erfahren Sie, wie Sie:
 
 Installieren Sie ein AEM-Paket, das mehrere Ordner und Beispielbilder enthält, die zur Beschleunigung des Tutorials verwendet werden.
 
-1. Download [Advanced-GraphQL-Tutorial-Starter-Package-1.0.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.0.zip)
+1. Download [Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip)
 1. Navigieren Sie AEM zu **Instrumente** > **Implementierung** > **Pakete** für den Zugriff **Package Manager**.
 1. Laden Sie das im vorherigen Schritt heruntergeladene Paket (ZIP-Datei) hoch und installieren Sie es.
 
@@ -44,7 +45,7 @@ Installieren Sie ein AEM-Paket, das mehrere Ordner und Beispielbilder enthält, 
 
 ## Erstellen von Ordnern und Festlegen von Beschränkungen mithilfe von Ordnerrichtlinien
 
-Wählen Sie auf der AEM-Startseite die Option **Assets** > **Dateien** > **WKND-Site** > **englisch**. Hier sehen Sie die verschiedenen Inhaltsfragmentkategorien, einschließlich Abenteuer und Mitwirkende, die in der vorherigen [mehrstufiges GraphQL-Tutorial](../multi-step/overview.md).
+Wählen Sie auf der AEM-Startseite die Option **Assets** > **Dateien** > **WKND Shared** > **englisch**. Hier sehen Sie die verschiedenen Inhaltsfragmentkategorien, einschließlich Abenteuer und Mitwirkende.
 
 ### Erstellen von Ordnern {#create-folders}
 
@@ -56,7 +57,7 @@ Erstellen Sie einen Ordner für Inhaltsfragmente von Instruktoren, die auf dem P
 
    ![Ordner erstellen](assets/author-content-fragments/create-folder.png)
 
-1. Geben Sie im angezeigten Modal Ordner erstellen in der **Titel** -Feld. Beachten Sie die &quot;s&quot;am Ende. Die Titel der Ordner, die viele Fragmente enthalten, müssen Plural sein. Wählen Sie **Erstellen**.
+1. Geben Sie im angezeigten Modal Ordner erstellen in der **Titel** -Feld. Beachten Sie die &quot;s&quot;am Ende. Die Titel der Ordner, die viele Fragmente enthalten, müssen Plural sein. Wählen Sie **Erstellen** aus.
 
    ![Ordner-Modal erstellen](assets/author-content-fragments/create-folder-modal.png)
 
@@ -70,11 +71,11 @@ Mit AEM können Sie Berechtigungen und Richtlinien für Inhaltsfragmentordner de
 
    ![Eigenschaften](assets/author-content-fragments/properties.png)
 
-1. Wählen Sie die **Richtlinien** Registerkarte und dann Auswahl aufheben **Vererbt von /content/dam/wknd**. Im **Zulässige Inhaltsfragmentmodelle nach Pfad** das Ordnersymbol.
+1. Wählen Sie die **Richtlinien** Registerkarte und dann Auswahl aufheben **Vererbt von /content/dam/wknd-shared**. Im **Zulässige Inhaltsfragmentmodelle nach Pfad** das Ordnersymbol.
 
    ![Ordnersymbol](assets/author-content-fragments/folder-icon.png)
 
-1. Folgen Sie im sich öffnenden Dialogfeld Pfad auswählen dem Pfad **conf** > **WKND-Site**. Das im vorherigen Kapitel erstellte Modell für Personen-Inhaltsfragmente enthält einen Verweis auf das Inhaltsfragmentmodell &quot;Kontaktinformationen&quot;. Die Modelle Person und Kontaktinfo müssen im Ordner Instructors erlaubt sein, um ein Instructor Content Fragment zu erstellen. Auswählen **Person** und **Kontaktangaben** und drücken Sie dann **Auswählen** , um das Dialogfeld zu schließen.
+1. Folgen Sie im sich öffnenden Dialogfeld Pfad auswählen dem Pfad **conf** > **WKND Shared**. Das im vorherigen Kapitel erstellte Modell für Personen-Inhaltsfragmente enthält einen Verweis auf das Inhaltsfragmentmodell &quot;Kontaktinformationen&quot;. Die Modelle Person und Kontaktinfo müssen im Ordner Instructors erlaubt sein, um ein Instructor Content Fragment zu erstellen. Auswählen **Person** und **Kontaktangaben** und drücken Sie dann **Auswählen** , um das Dialogfeld zu schließen.
 
    ![Pfad auswählen](assets/author-content-fragments/select-path.png)
 
@@ -88,13 +89,13 @@ Mit AEM können Sie Berechtigungen und Richtlinien für Inhaltsfragmentordner de
 
 Navigieren Sie zur **Instructor** Ordner. Erstellen wir von hier aus einen verschachtelten Ordner, in dem die Kontaktinformationen der Instruktoren gespeichert werden.
 
-Führen Sie die im Abschnitt [Erstellen von Ordnern](#create-folders) um einen Ordner mit dem Titel &quot;Kontaktinfo&quot;zu erstellen. Beachten Sie, dass der verschachtelte Ordner die Ordnerrichtlinien des übergeordneten Ordners übernimmt. Sie können spezifischere Richtlinien konfigurieren, sodass der neu erstellte Ordner nur die Verwendung des Modells Kontaktinformationen erlaubt.
+Führen Sie die im Abschnitt [Erstellen von Ordnern](#create-folders) um einen Ordner mit dem Titel &quot;Kontaktinfo&quot;zu erstellen. Der verschachtelte Ordner übernimmt die Ordnerrichtlinien des übergeordneten Ordners. Sie können spezifischere Richtlinien konfigurieren, sodass der neu erstellte Ordner nur die Verwendung des Modells Kontaktinformationen erlaubt.
 
 ### Erstellen eines Instructor-Inhaltsfragments
 
-Erstellen wir vier Personen, die einem Team von Adventure Instructors hinzugefügt werden können. Verwenden Sie die Bilder und Namen der in den vorherigen Versionen erstellten Inhaltsfragmente der Mitwirkenden erneut. [mehrstufiges GraphQL-Tutorial](../multi-step/author-content-fragments.md). Während im vorherigen Tutorial beschrieben wurde, wie grundlegende Inhaltsfragmente erstellt werden, konzentriert sich dieses Tutorial auf erweiterte Funktionen.
+Erstellen wir vier Personen, die einem Team von Adventure Instructors hinzugefügt werden können.
 
-1. Erstellen Sie im Ordner &quot;Instructors&quot;ein neues Inhaltsfragment, das auf dem Personen-Inhaltsfragmentmodell basiert, und geben Sie ihm den Titel &quot;Jacob Wester&quot;ein.
+1. Erstellen Sie im Ordner &quot;Instructors&quot;ein Inhaltsfragment, das auf dem Personen-Inhaltsfragmentmodell basiert, und geben Sie ihm den Titel &quot;Jacob Wester&quot;ein.
 
    Das neu erstellte Inhaltsfragment sieht wie folgt aus:
 
@@ -103,14 +104,14 @@ Erstellen wir vier Personen, die einem Team von Adventure Instructors hinzugefü
 1. Geben Sie den folgenden Inhalt in die Felder ein:
 
    * **Vollständiger Name**: Jacob Wester
-   * **Biografie**: Jacob Wester ist seit zehn Jahren Wanderlehrer und hat jede Minute davon geliebt! Er ist Abenteuersuchender mit Talent zum Klettern und Backpacken von Felsen. Jacob ist der Gewinner von Kletterwettbewerben, einschließlich der Schlacht der Bucht Boulding Wettbewerb. Er lebt derzeit in Kalifornien.
+   * **Biografie**: Jacob Wester ist seit zehn Jahren Wanderlehrer und hat jede Minute davon geliebt! Jacob ist ein Abenteuersucher mit Talent für Klettern und Backpacken. Jacob ist der Gewinner von Kletterwettbewerben, einschließlich der Schlacht der Bucht Boulding Wettbewerb. Jacob lebt derzeit in Kalifornien.
    * **Assistentenerfahrungsstufe**: Expert
    * **Qualifikationen**: Rock Climbing, Surfen, Backpacken
-   * **Administratordetails**: Jacob Wester koordiniert seit 3 Jahren Backpackabenteuer.
+   * **Administratordetails**: Jacob Wester koordiniert seit drei Jahren Backpackerabenteuer.
 
-1. Im **Profilbild** -Feld einen Inhaltsverweis zu einem Bild hinzufügen. Navigieren Sie zu **WKND-Site** > **englisch** > **Mitwirkende** > **jacob_wester.jpg** , um einen Pfad zum Bild zu erstellen.
+1. Im **Profilbild** -Feld einen Inhaltsverweis zu einem Bild hinzufügen. Navigieren Sie zu **WKND Shared** > **englisch** > **Mitwirkende** > **jacob_wester.jpg** , um einen Pfad zum Bild zu erstellen.
 
-### Erstellen Sie einen neuen Fragmentverweis aus dem Inhaltsfragment-Editor {#fragment-reference-from-editor}
+### Fragmentverweis aus dem Inhaltsfragment-Editor erstellen {#fragment-reference-from-editor}
 
 AEM ermöglicht die direkte Erstellung eines Fragmentverweises über den Inhaltsfragment-Editor. Erstellen wir einen Verweis auf Jacobs Kontaktinformationen.
 
@@ -135,7 +136,7 @@ AEM ermöglicht die direkte Erstellung eines Fragmentverweises über den Inhalts
    * **Telefon**: 209-888-0000
    * **Email**: jwester@wknd.com
 
-   Wenn Sie fertig sind, wählen Sie **Speichern**. Sie haben jetzt ein neues Inhaltsfragment für Kontaktinformationen erstellt.
+   Wenn Sie fertig sind, wählen Sie **Speichern**. Sie haben jetzt ein Inhaltsfragment für Kontaktinformationen erstellt.
 
 1. Um zurück zum Inhaltsfragment &quot;Instructor&quot;zu navigieren, wählen Sie **Jacob Wester** in der linken oberen Ecke des Editors.
 
@@ -157,9 +158,9 @@ Führen Sie denselben Prozess durch, wie im Abschnitt [vorheriger Abschnitt](#fr
 | --- | --- |
 | Inhaltsfragmenttitel | Stacey Roswells |
 | Vollständiger Name | Stacey Roswells |
-| Informationen zu Kontaktperson | /content/dam/wknd/en/adventures/Instructors/contact-info/stacey-roswells-contact-info |
-| Profilbild | /content/dam/wknd/en/contributors/stacey-roswells.jpg |
-| Biografie | Stacey Roswells ist ein erfahrener Bergsteiger und Abenteurer. Stacey, geboren in Baltimore, Maryland, ist das jüngste von sechs Kindern. Ihr Vater war Oberstleutnant der US-Marine und ihre Mutter war eine moderne Tanzlehrerin. Ihre Familie bewegte sich häufig mit den Aufgaben ihres Vaters, und sie machte ihre ersten Bilder, als er in Thailand stationiert war. Hier lernte Stacey auch Bergsteigen. |
+| Informationen zu Kontaktperson | /content/dam/wknd-shared/en/adventures/Instructors/contact-info/stacey-roswells-contact-info |
+| Profilbild | /content/dam/wknd-shared/en/contributors/stacey-roswells.jpg |
+| Biografie | Stacey Roswells ist ein erfahrener Bergsteiger und Abenteurer. Stacey, geboren in Baltimore, Maryland, ist das jüngste von sechs Kindern. Staceys Vater war ein Offizierskolonel der US-Marine und Mutter war ein moderner Tanzlehrer. Staceys Familie bewegte sich häufig mit den Dienstaufträgen des Vaters und machte die ersten Bilder, als der Vater in Thailand stationiert war. Hier lernte Stacey auch Bergsteigen. |
 | Assistentenerfahrungsstufe | Erweitert |
 | Kompetenzen | Felsenklettern | Skifahren | Backpackung |
 
@@ -169,8 +170,8 @@ Führen Sie denselben Prozess durch, wie im Abschnitt [vorheriger Abschnitt](#fr
 | --- | --- |
 | Inhaltsfragmenttitel | Kumar Selvaraj |
 | Vollständiger Name | Kumar Selvaraj |
-| Informationen zu Kontaktperson | /content/dam/wknd/en/adventures/Instructors/contact-info/kumar-selvaraj-contact-info |
-| Profilbild | /content/dam/wknd/en/contributors/Kumar_Selvaraj.JPG |
+| Informationen zu Kontaktperson | /content/dam/wknd-shared/en/adventures/Instructors/contact-info/kumar-selvaraj-contact-info |
+| Profilbild | /content/dam/wknd-shared/en/contributors/kumar-selvaraj.jpg |
 | Biografie | Kumar Selvaraj ist ein erfahrener AMGA zertifizierter Profi-Lehrer, dessen Hauptziel es ist, Studenten beim Klettern und Wandern zu unterstützen. |
 | Assistentenerfahrungsstufe | Erweitert |
 | Kompetenzen | Felsenklettern | Backpackung |
@@ -181,9 +182,9 @@ Führen Sie denselben Prozess durch, wie im Abschnitt [vorheriger Abschnitt](#fr
 | --- | --- |
 | Inhaltsfragmenttitel | Ayo Ogunadende |
 | Vollständiger Name | Ayo Ogunadende |
-| Informationen zu Kontaktperson | /content/dam/wknd/en/adventures/Instructors/contact-info/ayo-ogunadende-contact-info |
-| Profilbild | /content/dam/wknd/en/contributors/ayo-ogunseinde-237739.jpg |
-| Biografie | Ayo Ogunadende ist professioneller Kletterer und Backpacker, der in Fresno, Zentralkalifornien, lebt. Ihr Ziel ist es, Wanderer auf ihren epischen Nationalpark-Abenteuern zu führen. |
+| Informationen zu Kontaktperson | /content/dam/wknd-shared/en/adventures/Instructors/contact-info/ayo-ogunadende-contact-info |
+| Profilbild | /content/dam/wknd-shared/en/contributors/ayo-ogunseinde-237739.jpg |
+| Biografie | Ayo Ogunadende ist professioneller Kletterer und Backpacker, der in Fresno, Zentralkalifornien, lebt. Ayos Ziel ist es, Wanderer auf ihren episch-nationalen Parkabenteuern zu führen. |
 | Assistentenerfahrungsstufe | Erweitert |
 | Kompetenzen | Felsenklettern | Radfahren | Backpackung |
 
@@ -205,9 +206,9 @@ Navigieren Sie zur **Standorte** Ordner. Hier sehen Sie zwei verschachtelte Ordn
 
 ![Ordner &quot;Standorte&quot;](assets/author-content-fragments/locations-folder.png)
 
-Ignorieren Sie jetzt den Ordner Yosemite Valley Lodge . Wir werden später in diesem Abschnitt darauf zurückkommen, wenn wir einen neuen Standort erstellen, der als Startseite für unser Lehrerteam fungiert.
+Ignorieren Sie jetzt den Ordner Yosemite Valley Lodge . Wir kehren später in diesem Abschnitt dazu zurück, wenn wir einen Ort erstellen, der als Startseite für unser Lehrerteam fungiert.
 
-Navigieren Sie zur **Yosemite-Nationalpark** Ordner. Derzeit enthält es nur ein Bild des Yosemite-Nationalparks. Erstellen wir ein neues Inhaltsfragment mit dem Standort-Inhaltsfragmentmodell und nennen es &quot;Yosemite National Park&quot;.
+Navigieren Sie zur **Yosemite-Nationalpark** Ordner. Derzeit enthält es nur ein Bild des Yosemite-Nationalparks. Erstellen wir ein Inhaltsfragment mithilfe des Inhaltsfragmentmodells &quot;Position&quot;und nennen es &quot;Yosemite-Nationalpark&quot;.
 
 ### Registerkartenplatzhalter
 
@@ -247,22 +248,22 @@ Fügen wir den Rest des Inhalts zum Location Content Fragment hinzu, um die Info
 1. Im **Standortdetails** die folgenden Informationen in die Felder ein:
 
    * **Name**: Yosemite-Nationalpark
-   * **Beschreibung**: Der Yosemite Nationalpark liegt in den Bergen der Sierra Nevada in Kalifornien. Es ist berühmt für seine herrlichen Wasserfälle, riesigen Sequoia-Bäumen und den ikonischen Blick auf die Felsen El Capitan und Half Dome. Wandern und Campen sind die besten Möglichkeiten, Yosemite zu erleben. Zahlreiche Wege bieten unendliche Möglichkeiten für Abenteuer und Erkundung.
+   * **Beschreibung**: Der Yosemite Nationalpark liegt in den Bergen der Sierra Nevada in Kalifornien. Es ist berühmt für seine herrlichen Wasserfälle, riesigen Sequoia-Bäumen und die ikonische Aussicht auf die Felsen El Capitan und Half Dome. Wandern und Campen sind die besten Möglichkeiten, Yosemite zu erleben. Zahlreiche Wege bieten unendliche Möglichkeiten für Abenteuer und Erkundung.
 
-1. Aus dem **Kontaktangaben** erstellen Sie ein neues Inhaltsfragment, das auf dem Modell &quot;Kontaktinformationen&quot;basiert, und nennen Sie es &quot;Kontaktinformationen zu Yosemite National Park&quot;. Gehen Sie wie im vorherigen Abschnitt beschrieben vor [Erstellen eines neuen Fragmentverweises aus dem Editor](#fragment-reference-from-editor) und geben Sie die folgenden Daten in die Felder ein:
+1. Aus dem **Kontaktangaben** erstellen Sie ein Inhaltsfragment, das auf dem Modell &quot;Kontaktinformationen&quot;basiert, und nennen Sie es &quot;Yosemite National Park Contact Info&quot;. Gehen Sie wie im vorherigen Abschnitt beschrieben vor [Erstellen eines Fragmentverweises aus dem Editor](#fragment-reference-from-editor) und geben Sie die folgenden Daten in die Felder ein:
 
    * **Telefon**: 209-999-0000
    * **Email**: yosemite@wknd.com
 
 1. Aus dem **Standortbild** -Feld, navigieren Sie zu **Abenteuer** > **Standorte** > **Yosemite-Nationalpark** > **yosemite-national-park.jpeg** , um einen Pfad zum Bild zu erstellen.
 
-   Denken Sie daran, dass Sie im vorherigen Kapitel die Bildvalidierung konfiguriert haben. Daher müssen die Abmessungen des Standortbilds weniger als 2560 x 1800 betragen und die Dateigröße muss weniger als 3 MB betragen.
+   Denken Sie daran, im vorherigen Kapitel, das Sie die Bildvalidierung konfiguriert haben, daran, dass die Abmessungen des Standortbilds weniger als 2560 x 1800 betragen und die Dateigröße weniger als 3 MB betragen muss.
 
 1. Mit allen hinzugefügten Informationen wird die **Standortdetails** Die Registerkarte sieht nun wie folgt aus:
 
    ![Tab &quot;Standortdetails&quot;abgeschlossen](assets/author-content-fragments/location-details-tab-completed.png)
 
-1. Navigieren Sie zur **Standort-Adresse** Registerkarte. Aus dem **Adresse** erstellen Sie ein neues Inhaltsfragment mit dem Titel &quot;Yosemite National Park Address&quot;mithilfe des Fragment-Modells für Adressinhalte, das Sie im vorherigen Kapitel erstellt haben. Führen Sie denselben Prozess aus, wie im Abschnitt [Erstellen eines neuen Fragmentverweises aus dem Editor](#fragment-reference-from-editor) und geben Sie die folgenden Daten in die Felder ein:
+1. Navigieren Sie zur **Standort-Adresse** Registerkarte. Aus dem **Adresse** erstellen Sie ein Inhaltsfragment mit dem Titel &quot;Yosemite National Park Address&quot;mithilfe des Fragment-Modells für Adressinhalte, das Sie im vorherigen Kapitel erstellt haben. Führen Sie denselben Prozess aus, wie im Abschnitt [Erstellen eines Fragmentverweises aus dem Editor](#fragment-reference-from-editor) und geben Sie die folgenden Daten in die Felder ein:
 
    * **Straße**: 9010 Curry Village Drive
    * **Ort**: Yosemite Valley
@@ -276,23 +277,23 @@ Fügen wir den Rest des Inhalts zum Location Content Fragment hinzu, um die Info
 
 1. Klicken Sie auf **Speichern und schließen**.
 
-### Erstellen eines zusätzlichen Fragments
+### Erstellen eines weiteren Fragments
 
-1. Navigieren Sie zur **Yosemite Valley Lodge** Ordner. Erstellen Sie ein neues Inhaltsfragment mithilfe des Location Content Fragment-Modells und nennen Sie es &quot;Yosemite Valley Lodge&quot;.
+1. Navigieren Sie zur **Yosemite Valley Lodge** Ordner. Erstellen Sie ein Inhaltsfragment mit dem Location Content Fragment-Modell und nennen Sie es &quot;Yosemite Valley Lodge&quot;.
 
 1. Im **Standortdetails** die folgenden Informationen in die Felder ein:
 
    * **Name**: Yosemite Valley Lodge
    * **Beschreibung**: Yosemite Valley Lodge ist ein Zentrum für Gruppenversammlungen und Aktivitäten wie Einkaufen, Essen, Angeln, Wandern und vieles mehr.
 
-1. Aus dem **Kontaktangaben** erstellen Sie ein neues Inhaltsfragment, das auf dem Modell &quot;Kontaktinformationen&quot;basiert, und geben Sie ihm den Titel &quot;Yosemite Valley Lodge Contact Info&quot;. Führen Sie denselben Prozess aus, wie im Abschnitt [Erstellen eines neuen Fragmentverweises aus dem Editor](#fragment-reference-from-editor) und geben Sie die folgenden Daten in die Felder des neuen Inhaltsfragments ein:
+1. Aus dem **Kontaktangaben** erstellen Sie ein Inhaltsfragment, das auf dem Modell &quot;Kontaktinformationen&quot;basiert, und geben Sie ihm den Titel &quot;Yosemite Valley Lodge Contact Info&quot;. Führen Sie denselben Prozess aus, wie im Abschnitt [Erstellen eines Fragmentverweises aus dem Editor](#fragment-reference-from-editor) und geben Sie die folgenden Daten in die Felder des neuen Inhaltsfragments ein:
 
    * **Telefon**: 209-992-0000
    * **Email**: yosemitelodge@wknd.com
 
    Speichern Sie das neu erstellte Inhaltsfragment.
 
-1. Navigieren Sie zurück zu **Yosemite Valley Lodge** und gehen Sie zu **Standort-Adresse** Registerkarte. Aus dem **Adresse** erstellen Sie ein neues Inhaltsfragment mit dem Titel &quot;Yosemite Valley-Lodge-Adresse&quot;mithilfe des Fragment-Modells für Adressinhalte, das Sie im vorherigen Kapitel erstellt haben. Führen Sie denselben Prozess aus, wie im Abschnitt [Erstellen eines neuen Fragmentverweises aus dem Editor](#fragment-reference-from-editor) und geben Sie die folgenden Daten in die Felder ein:
+1. Navigieren Sie zurück zu **Yosemite Valley Lodge** und gehen Sie zu **Standort-Adresse** Registerkarte. Aus dem **Adresse** erstellen Sie ein Inhaltsfragment mit dem Titel &quot;Yosemite Valley-Lodge-Adresse&quot;mithilfe des Fragment-Modells für Adressinhalte, das Sie im vorherigen Kapitel erstellt haben. Führen Sie denselben Prozess aus, wie im Abschnitt [Erstellen eines Fragmentverweises aus dem Editor](#fragment-reference-from-editor) und geben Sie die folgenden Daten in die Felder ein:
 
    * **Straße**: 9006 Yosemite Lodge Drive
    * **Ort**: Yosemite-Nationalpark
@@ -312,7 +313,7 @@ Durchsuchen von Ordnern nach **Teams** > **Yosemite-Team**. Sie können sehen, d
 
 ![Yosemite-Team-Ordner](assets/author-content-fragments/yosemite-team-folder.png)
 
-Erstellen wir ein neues Inhaltsfragment mit dem Team Content Fragment-Modell und nennen es &quot;Yosemite Team&quot;.
+Erstellen wir ein Inhaltsfragment mit dem Team Content Fragment-Modell und nennen es &quot;Yosemite Team&quot;.
 
 ### Inhalts- und Fragmentverweise im mehrzeiligen Texteditor
 
@@ -330,13 +331,13 @@ AEM ermöglicht es Ihnen, Inhalte und Fragmentverweise direkt zum mehrzeiligen T
 
    Die Inhaltsreferenz wird jetzt der **Beschreibung** -Feld.
 
-Beachten Sie, dass Sie im vorherigen Kapitel zugelassen haben, dass Fragmentverweise zum **Beschreibung** -Feld. Fügen wir hier einen hinzu.
+Denken Sie daran, dass im vorherigen Kapitel Fragmentverweise zum **Beschreibung** -Feld. Fügen wir hier einen hinzu.
 
 1. Wählen Sie die **Inhaltsfragment einfügen** in der Symbolleiste des mehrzeiligen Texteditors angezeigt.
 
    ![Symbol &quot;Inhaltsfragment einfügen&quot;](assets/author-content-fragments/insert-content-fragment-icon.png)
 
-1. Navigieren Sie zu **WKND-Site** > **englisch** > **Abenteuer** > **Standorte** > **Yosemite Valley Lodge** > **Yosemite Valley Lodge**. Presse **Auswählen** , um das Inhaltsfragment einzufügen.
+1. Navigieren Sie zu **WKND Shared** > **englisch** > **Abenteuer** > **Standorte** > **Yosemite Valley Lodge** > **Yosemite Valley Lodge**. Presse **Auswählen** , um das Inhaltsfragment einzufügen.
 
    ![Inhaltsfragment-Modal einfügen](assets/author-content-fragments/insert-content-fragment-modal.png)
 
@@ -362,7 +363,7 @@ Fügen wir dem Fragmentverweis für Team-Mitglieder &quot;Instructors&quot;hinzu
 
    ![Schaltfläche „Hinzufügen“](assets/author-content-fragments/add-button.png)
 
-1. Wählen Sie im neuen Feld, das angezeigt wird, das Ordnersymbol aus, um das Modal Pfad auswählen zu öffnen. Durchsuchen Sie Ordner nach **WKND-Site** > **englisch** > **Abenteuer** > **Instructor** und aktivieren Sie dann das Kontrollkästchen neben **jacob-wester**. Presse **Auswählen** , um den Pfad zu speichern.
+1. Wählen Sie im neuen Feld, das angezeigt wird, das Ordnersymbol aus, um das Modal Pfad auswählen zu öffnen. Durchsuchen Sie Ordner nach **WKND Shared** > **englisch** > **Abenteuer** > **Instructor** und aktivieren Sie dann das Kontrollkästchen neben **jacob-wester**. Presse **Auswählen** , um den Pfad zu speichern.
 
    ![Fragmentverweispfad](assets/author-content-fragments/fragment-reference-path.png)
 
@@ -378,11 +379,11 @@ Abschließend fügen wir unsere neu erstellten Inhaltsfragmente einem Abenteuer 
 
 1. Navigieren Sie zu **Abenteuer** > **Yosemite Backpacken** und öffnen Sie das Inhaltsfragment &quot;Yosemite Backpacken&quot;. Unten im Formular sehen Sie die drei Felder, die Sie im vorherigen Kapitel erstellt haben: **Standort**, **Instructor Team** und **Administrator**.
 
-1. Fügen Sie den Fragmentverweis im **Standort** -Feld. Der Standortpfad sollte auf das Inhaltsfragment des Yosemite-Nationalparks verweisen, das Sie erstellt haben: `/content/dam/wknd/en/adventures/locations/yosemite-national-park/yosemite-national-park`.
+1. Fügen Sie den Fragmentverweis im **Standort** -Feld. Der Standortpfad sollte auf das Inhaltsfragment des Yosemite-Nationalparks verweisen, das Sie erstellt haben: `/content/dam/wknd-shared/en/adventures/locations/yosemite-national-park/yosemite-national-park`.
 
-1. Fügen Sie den Fragmentverweis im **Instructor Team** -Feld. Der Team-Pfad sollte auf das von Ihnen erstellte Inhaltsfragment des Yosemite-Teams verweisen: `/content/dam/wknd/en/adventures/teams/yosemite-team/yosemite-team`. Dies ist ein verschachtelter Fragmentverweis. Das Team Content Fragment enthält einen Verweis auf das Personen-Modell, das auf die Modelle Kontaktinfo und Adresse verweist. Daher haben Sie verschachtelte Inhaltsfragmente auf drei Ebenen nach unten.
+1. Fügen Sie den Fragmentverweis im **Instructor Team** -Feld. Der Team-Pfad sollte auf das von Ihnen erstellte Inhaltsfragment des Yosemite-Teams verweisen: `/content/dam/wknd-shared/en/adventures/teams/yosemite-team/yosemite-team`. Dies ist ein verschachtelter Fragmentverweis. Das Team Content Fragment enthält einen Verweis auf das Personen-Modell, das auf die Modelle Kontaktinfo und Adresse verweist. Daher haben Sie verschachtelte Inhaltsfragmente auf drei Ebenen nach unten.
 
-1. Fügen Sie den Fragmentverweis im **Administrator** -Feld. Nehmen wir an, Jacob Wester ist Administrator für das Yosemite Backpackaging Adventure. Der Pfad sollte zum Jacob Wester-Inhaltsfragment führen und wie folgt aussehen: `/content/dam/wknd/en/adventures/instructors/jacob-wester`.
+1. Fügen Sie den Fragmentverweis im **Administrator** -Feld. Nehmen wir an, Jacob Wester ist Administrator für das Yosemite Backpackaging Adventure. Der Pfad sollte zum Jacob Wester-Inhaltsfragment führen und wie folgt aussehen: `/content/dam/wknd-shared/en/adventures/instructors/jacob-wester`.
 
 1. Sie haben nun drei Fragmentverweise zu einem Adventure-Inhaltsfragment hinzugefügt. Die Felder sehen wie folgt aus:
 
@@ -397,5 +398,3 @@ Herzlichen Glückwunsch! Sie haben jetzt Inhaltsfragmente basierend auf den erwe
 ## Nächste Schritte
 
 Im [Nächstes Kapitel](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md), erfahren Sie mehr über das Senden erweiterter GraphQL-Abfragen mithilfe der integrierten Entwicklungsumgebung (IDE) für GraphiQL. Mit diesen Abfragen können wir die in diesem Kapitel erstellten Daten anzeigen und diese Abfragen schließlich zur WKND-App hinzufügen.
-
-Obwohl dies für dieses Tutorial optional ist, stellen Sie sicher, dass Sie alle Inhalte in realen Produktionssituationen veröffentlichen. Weitere Informationen zu den Autoren- und Veröffentlichungsumgebungen finden Sie im [Headless-Videoserie](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md)

@@ -7,9 +7,9 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 2122ab13-f9df-4f36-9c7e-8980033c3b10
-source-git-commit: 7631432881de3deabbe831b2aec40d924b393442
+source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1989'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ In diesem Kapitel wird auch beschrieben, wie Sie die Validierungsregeln für Inh
 
 ## Voraussetzungen {#prerequisites}
 
-Dies ist ein erweitertes Tutorial. Bevor Sie mit diesem Kapitel fortfahren, vergewissern Sie sich bitte, dass Sie die [Schnelleinstellungen](../quick-setup/cloud-service.md). Stellen Sie sicher, dass Sie auch das vorherige Übersichtskapitel durchgelesen haben, um weitere Informationen zur Einrichtung des erweiterten Tutorials zu erhalten.
+Dies ist ein erweitertes Tutorial. Bevor Sie mit diesem Kapitel fortfahren, vergewissern Sie sich bitte, dass Sie die [Schnelleinstellungen](../quick-setup/cloud-service.md). Stellen Sie sicher, dass Sie auch die vorherigen [Übersicht](../overview.md) Kapitel für weitere Informationen zur Einrichtung des erweiterten Tutorials.
 
 ## Ziele {#objectives}
 
@@ -48,11 +48,11 @@ Das folgende Video bietet eine kurze Einführung in Inhaltsfragmentmodelle und d
 
 Erstellen wir einige Inhaltsfragmentmodelle für die WKND-App. Wenn Sie eine grundlegende Einführung in das Erstellen von Inhaltsfragmentmodellen benötigen, lesen Sie bitte das entsprechende Kapitel in der [Grundlegendes Tutorial](../multi-step/content-fragment-models.md).
 
-1. Navigieren Sie zu **Instrumente** > **Assets** > **Inhaltsfragmentmodelle**.
+1. Navigieren Sie zu **Instrumente** > **Allgemein** > **Inhaltsfragmentmodelle**.
 
    ![Pfad für Inhaltsfragmentmodelle](assets/define-content-fragment-models/content-fragment-models-path.png)
 
-1. Auswählen **WKND-Site** , um die Liste der vorhandenen Inhaltsfragmentmodelle für die Site anzuzeigen.
+1. Auswählen **WKND Shared** , um die Liste der vorhandenen Inhaltsfragmentmodelle für die Site anzuzeigen.
 
 ### Kontaktdatenmodell {#contact-info-model}
 
@@ -78,11 +78,9 @@ Wählen Sie anschließend **Speichern** , um Ihre Änderungen zu bestätigen und
 
 Erstellen Sie anschließend ein Modell für eine Adresse.
 
-1. Aus dem **WKND-Site** auswählen **Erstellen** oben rechts.
+1. Aus dem **WKND Shared** auswählen **Erstellen** oben rechts.
 
-1. Geben Sie den Titel &quot;Adresse&quot;ein und wählen Sie dann **Erstellen**.
-
-   i. Wählen Sie im angezeigten Erfolgsmodell die Option **Öffnen** , um das neu erstellte Modell zu bearbeiten.
+1. Geben Sie den Titel &quot;Adresse&quot;ein und wählen Sie dann **Erstellen**. Wählen Sie im angezeigten Erfolgsmodell die Option **Öffnen** , um das neu erstellte Modell zu bearbeiten.
 
 1. Ziehen und Ablegen eines **Einzelzeilentext** auf das Modell ein und geben Sie ihm ein **Feldbezeichnung** von &quot;Street Address&quot;. Der Eigenschaftsname wird dann als `streetAddress`. Wählen Sie die **Erforderlich** aktivieren.
 
@@ -114,7 +112,7 @@ Erstellen Sie anschließend ein Modell, das Informationen zu einer Person enthä
 
 1. Im **Eigenschaften** Registerkarte unter **Zulässige Inhaltsfragmentmodelle** ein, wählen Sie das Ordnersymbol aus und wählen Sie dann die **Kontaktangaben** Fragmentmodell, das zuvor erstellt wurde.
 
-1. Hinzufügen einer **Inhaltsreferenz** und geben Sie ihm ein **Feldbezeichnung** des Profilbilds. Wählen Sie das Ordnersymbol unter **Stammverzeichnis** , um das Pfadauswahlmodul zu öffnen. Wählen Sie einen Stammpfad aus, indem Sie **content** > **Assets** und aktivieren Sie dann das Kontrollkästchen für **WKND-Site**. Verwenden Sie die **Auswählen** oben rechts, um den Pfad zu speichern. Der endgültige Texspfad sollte gelesen werden `/content/dam/wknd`.
+1. Hinzufügen einer **Inhaltsreferenz** und geben Sie ihm ein **Feldbezeichnung** des Profilbilds. Wählen Sie das Ordnersymbol unter **Stammverzeichnis** , um das Pfadauswahlmodul zu öffnen. Wählen Sie einen Stammpfad aus, indem Sie **content** > **Assets** und aktivieren Sie dann das Kontrollkästchen für **WKND Shared**. Verwenden Sie die **Auswählen** rechts oben, um den Pfad zu speichern. Der endgültige Texspfad sollte gelesen werden `/content/dam/wknd-shared`.
 
    ![Stammverzeichnis des Inhalts](assets/define-content-fragment-models/content-reference-root-path.png)
 
@@ -129,18 +127,19 @@ Erstellen Sie anschließend ein Modell, das Informationen zu einer Person enthä
 
 1. Für **Max**, geben Sie &quot;5&quot;ein und für **Einheit auswählen**, wählen Sie &quot;Megabyte (MB)&quot;. Bei dieser Validierung können nur Bilder der angegebenen Größe ausgewählt werden.
 
-1. under **Nur angegebene Bildbreite akzeptieren**, wählen Sie &quot;Maximale Breite&quot;. Im **Maximal (Pixel)** eingeben. Wählen Sie dieselben Optionen für **Nur eine angegebene Bildhöhe akzeptieren**.
+1. under **Nur angegebene Bildbreite akzeptieren**, wählen Sie &quot;Maximale Breite&quot;. Im **Maximal (Pixel)** das Feld &quot;10000&quot;eingeben. Wählen Sie dieselben Optionen für **Nur eine angegebene Bildhöhe akzeptieren**.
 
    Diese Überprüfungen stellen sicher, dass hinzugefügte Bilder die angegebenen Werte nicht überschreiten. Die Validierungsregeln sollten jetzt wie folgt aussehen:
+
    ![Validierungsregeln für Inhaltsreferenzen](assets/define-content-fragment-models/content-reference-validation.png)
 
 1. Hinzufügen einer **Mehrzeiliger Text** und geben Sie ihm ein **Feldbezeichnung** der &quot;Biografie&quot;. Lassen Sie die **Standardtyp** als Standardoption &quot;Rich Text&quot;.
 
    ![Biografie-Optionen](assets/define-content-fragment-models/biography.png)
 
-1. Navigieren Sie zum **Datentypen** Registerkarte und ziehen Sie dann eine **Auflistung** Feld unter &quot;Profilbild&quot;. Anstelle der Standardeinstellung **Rendern als** auswählen **Dropdown**. Geben Sie eine Auswahl an Optionen für die Ausbilder-Erlebnisebene ein, z. B. &quot;Expert&quot;, &quot;Erweitert&quot;, &quot;Intermediate&quot;.
+1. Navigieren Sie zum **Datentypen** Registerkarte und ziehen Sie dann eine **Auflistung** Feld unter &quot;Biografie&quot;. Anstelle der Standardeinstellung **Rendern als** auswählen **Dropdown** und geben Sie ihr **Feldbezeichnung** des &quot;Instructor Experience Level&quot;. Geben Sie eine Auswahl von Optionen auf der Erlebnisebene für Ausbilder ein, z. B. _Expert, Fortgeschritten, Intermediate_.
 
-1. Ziehen Sie als Nächstes einen weiteren **Auflistung** unter &quot;Instructor Experience Level&quot; und wählen Sie &quot;checkboxes&quot;unter der **Rendern als** -Option. Geben Sie verschiedene Fähigkeiten ein, wie Rock Climbing, Surfen, Radfahren, Skifahren und Backpacken. Die Beschriftung der Option und der Optionswert sollten wie folgt übereinstimmen:
+1. Ziehen Sie als Nächstes einen weiteren **Auflistung** unter &quot;Instructor Experience Level&quot; und wählen Sie &quot;checkboxes&quot;unter der **Rendern als** -Option. Geben Sie einen **Feldbezeichnung** &quot;Fähigkeiten&quot;. Geben Sie verschiedene Fähigkeiten ein, wie Rock Climbing, Surfen, Radfahren, Skifahren und Backpacken. Die Beschriftung der Option und der Optionswert sollten wie folgt übereinstimmen:
 
    ![Kompetenzauflistung](assets/define-content-fragment-models/skills-enum.png)
 
@@ -160,7 +159,7 @@ Das nächste Inhaltsfragmentmodell beschreibt einen physischen Speicherort. Dies
 
 1. Fügen Sie als Nächstes eine **Fragmentverweis** und beschriften Sie es mit &quot;Kontaktinformationen&quot;. Auf der Registerkarte &quot;Eigenschaften&quot;unter **Zulässige Inhaltsfragmentmodelle**, wählen Sie die **Ordnersymbol** und wählen Sie das zuvor erstellte Fragmentmodell &quot;Kontaktinfo&quot;.
 
-1. Hinzufügen einer **Inhaltsreferenz** unter &quot;Kontaktinfo&quot;. Beschriften Sie sie mit &quot;Standortbild&quot;. Die **Stammverzeichnis** sollte `/content/dam/wknd.` under **Nur angegebene Inhaltstypen akzeptieren**, wählen Sie &quot;Bild&quot;aus.
+1. Hinzufügen einer **Inhaltsreferenz** unter &quot;Kontaktinfo&quot;. Beschriften Sie sie mit &quot;Standortbild&quot;. Die **Stammverzeichnis** sollte `/content/dam/wknd-shared.` under **Nur angegebene Inhaltstypen akzeptieren**, wählen Sie &quot;Bild&quot;aus.
 
 1. Fügen wir auch eine **JSON-Objekt** unter dem Feld &quot;Standortbild&quot;. Da dieser Datentyp flexibel ist, kann er zur Anzeige beliebiger Daten verwendet werden, die Sie in Ihren Inhalt aufnehmen möchten. In diesem Fall wird das JSON-Objekt verwendet, um Informationen über das Wetter anzuzeigen. Beschriften Sie das JSON-Objekt &quot;Wetter nach Jahreszeit&quot;. Im **Eigenschaften** Registerkarte, fügen Sie eine **Beschreibung** So ist es für den Benutzer klar, welche Daten hier eingegeben werden sollen: &quot;JSON-Daten zum Veranstaltungsort-Wetter nach Saison (Frühling, Sommer, Herbst, Winter).&quot;
 
@@ -168,7 +167,7 @@ Das nächste Inhaltsfragmentmodell beschreibt einen physischen Speicherort. Dies
 
 1. Fügen Sie zum Erstellen der Registerkarte Standort-Adresse einen **Registerkartenplatzhalter** zum Modell hinzu und beschriften es mit &quot;Standort-Adresse&quot;.
 
-1. Ziehen und Ablegen eines **Fragmentverweis** und auf der Registerkarte &quot;Eigenschaften&quot;unter **Zulässige Inhaltsfragmentmodelle**, wählen Sie die **Adresse** -Modell.
+1. Ziehen und Ablegen eines **Fragmentverweis** und auf der Registerkarte &quot;Eigenschaften&quot;den Titel als &quot;Adresse&quot;und unter **Zulässige Inhaltsfragmentmodelle**, wählen Sie die **Adresse** -Modell.
 
 1. Auswählen **Speichern** , um Ihre Änderungen zu bestätigen und den Inhaltsfragmentmodell-Editor zu schließen. Das fertige Standortmodell sollte wie folgt angezeigt werden:
 
@@ -178,7 +177,7 @@ Das nächste Inhaltsfragmentmodell beschreibt einen physischen Speicherort. Dies
 
 Erstellen Sie abschließend ein Modell, das ein Team von Personen beschreibt.
 
-1. Aus dem **WKND-Site** Seite, wählen Sie **Erstellen** , um ein anderes Inhaltsfragmentmodell zu erstellen. Geben Sie für den Modelltitel &quot;Team&quot;ein. Wählen Sie wie zuvor **Erstellen** gefolgt von **Öffnen** im Erfolgsmodal, das angezeigt wird.
+1. Aus dem **WKND Shared** Seite, wählen Sie **Erstellen** , um ein anderes Inhaltsfragmentmodell zu erstellen. Geben Sie für den Modelltitel &quot;Team&quot;ein. Wählen Sie wie zuvor **Erstellen** gefolgt von **Öffnen** im Erfolgsmodal, das angezeigt wird.
 
 1. Hinzufügen einer **Mehrzeiliger Text** in das Formular ein. under **Feldbezeichnung**, geben Sie &quot;Beschreibung&quot;ein.
 
@@ -186,7 +185,7 @@ Erstellen Sie abschließend ein Modell, das ein Team von Personen beschreibt.
 
    ![Datums- und Uhrzeitoptionen](assets/define-content-fragment-models/date-and-time.png)
 
-1. Navigieren Sie zum **Datentypen** Registerkarte. Fügen Sie unter dem &quot;Team-Gründungsdatum&quot;einen **Fragmentverweis**. Im **Rendern als** wählen Sie &quot;multifield&quot;. Für **Feldbezeichnung**, geben Sie &quot;Team Members&quot; ein. Dieses Feld ist mit dem zuvor erstellten Personenmodell verknüpft. Da es sich bei dem Datentyp um ein Mehrfachfeld handelt, können mehrere Personenfragmente hinzugefügt werden, sodass ein Personenteam erstellt werden kann.
+1. Navigieren Sie zum **Datentypen** Registerkarte. Fügen Sie unter dem &quot;Team-Gründungsdatum&quot;einen **Fragmentverweis**. Im **Rendern als** wählen Sie &quot;multifield&quot;. Für **Feldbezeichnung**, geben Sie &quot;Team Members&quot; ein. Dieses Feld verknüpft mit dem _Person_ -Modell, das zuvor erstellt wurde. Da es sich bei dem Datentyp um ein Mehrfachfeld handelt, können mehrere Personenfragmente hinzugefügt werden, sodass ein Personenteam erstellt werden kann.
 
    ![Fragmentverweisoptionen](assets/define-content-fragment-models/fragment-reference.png)
 
@@ -200,7 +199,7 @@ Erstellen Sie abschließend ein Modell, das ein Team von Personen beschreibt.
 
 Ähnlich wie das Team-Modell einen Fragmentverweis auf das Personen-Modell hat, müssen die Team- und Standort-Modelle vom Adventure-Modell referenziert werden, um diese neuen Modelle in der WKND-App anzuzeigen.
 
-1. Aus dem **WKND-Site** Seite, wählen Sie die **Abenteuer** Modell, wählen Sie **Bearbeiten** aus der oberen Navigation.
+1. Aus dem **WKND Shared** Seite, wählen Sie die **Abenteuer** Modell, wählen Sie **Bearbeiten** aus der oberen Navigation.
 
    ![Adventure-Bearbeitungspfad](assets/define-content-fragment-models/adventure-edit-path.png)
 
