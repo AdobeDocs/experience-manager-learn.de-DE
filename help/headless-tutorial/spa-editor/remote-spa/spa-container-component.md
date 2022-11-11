@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen bearbeitbarer Container-Komponenten zu Remote-SPA
+title: Hinzufügen bearbeitbarer React-Container-Komponenten zu Remote-SPA
 description: Erfahren Sie, wie Sie bearbeitbare Container-Komponenten zu einer Remote-SPA hinzufügen, die es AEM Autoren ermöglichen, Komponenten per Drag-and-Drop in sie zu ziehen.
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
@@ -7,10 +7,12 @@ role: Developer, Architect
 level: Beginner
 kt: 7635
 thumbnail: kt-7635.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
+recommendations: noDisplay, noCatalog
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '1167'
+source-wordcount: '1109'
 ht-degree: 2%
 
 ---
@@ -21,97 +23,49 @@ ht-degree: 2%
 
 ![Bearbeitbare Container-Komponenten](./assets/spa-container-component/intro.png)
 
-In diesem Kapitel fügen wir einen bearbeitbaren Container zur Startansicht hinzu, der es Autoren ermöglicht, Rich-Content-Erlebnisse mit AEM React-Kernkomponenten direkt in der SPA zu erstellen und anzuordnen.
+In diesem Kapitel fügen wir der Startansicht einen bearbeitbaren Container hinzu, der es Autoren ermöglicht, Rich-Content-Erlebnisse mit bearbeitbaren React-Komponenten direkt in der SPA zu erstellen und anzuordnen.
 
 ## WKND-App aktualisieren
 
 Hinzufügen einer Container-Komponente zur Startansicht:
 
-+ Importieren der Komponente &quot;ResponsiveGrid&quot;der AEM React Editable-Komponente
-+ Importieren und registrieren Sie AEM React-Kernkomponenten (Text und Bild) zur Verwendung in der Container-Komponente
++ Importieren Sie die Komponente AEM React Editable `ResponsiveGrid` component
++ Importieren und registrieren Sie benutzerdefinierte bearbeitbare React-Komponenten (Text und Bild) zur Verwendung in der Komponente &quot;ResponsiveGrid&quot;
 
-### Importieren in die Komponente des responsivenGrid-Containers
+### ResponsiveGrid-Komponente verwenden
 
-Um einen bearbeitbaren Bereich in der Startansicht zu platzieren, müssen wir:
+So fügen Sie der Ansicht &quot;Home&quot;einen bearbeitbaren Bereich hinzu:
 
-1. Importieren Sie die Komponente &quot;ResponsiveGrid&quot;aus `@adobe/aem-react-editable-components`
-1. Registrieren Sie sie mithilfe von `withMappable` , damit Entwickler sie in die SPA platzieren können
-1. Registrieren Sie sich auch bei `MapTo` sodass sie in anderen Container-Komponenten wiederverwendet werden kann, wodurch Container effektiv verschachtelt werden.
-
-Gehen Sie hierfür wie folgt vor:
-
-1. Öffnen Sie das SPA in Ihrer IDE.
-1. Erstellen einer React-Komponente unter `src/components/aem/AEMResponsiveGrid.js`
-1. Fügen Sie den folgenden Code zu `AEMResponsiveGrid.js`
-
-   ```
-   // Import the withMappable API provided bu the AEM SPA Editor JS SDK
-   import { withMappable, MapTo } from '@adobe/aem-react-editable-components';
-   
-   // Import the base ResponsiveGrid component
-   import { ResponsiveGrid } from "@adobe/aem-react-editable-components";
-   
-   // The sling:resourceType for which this Core Component is registered with in AEM
-   const RESOURCE_TYPE = "wcm/foundation/components/responsivegrid";
-   
-   // Create an EditConfig to allow the AEM SPA Editor to properly render the component in the Editor's context
-   const EditConfig = {
-       emptyLabel: "Layout Container",  // The component placeholder in AEM SPA Editor
-       isEmpty: function(props) { 
-           return props.cqItemsOrder == null || props.cqItemsOrder.length === 0;
-       },                              // The function to determine if this component has been authored
-       resourceType: RESOURCE_TYPE     // The sling:resourceType this SPA component is mapped to
-   };
-   
-   // MapTo allows the AEM SPA Editor JS SDK to dynamically render components added to SPA Editor Containers
-   MapTo(RESOURCE_TYPE)(ResponsiveGrid, EditConfig);
-   
-   // withMappable allows the component to be hardcoded into the SPA; <AEMResponsiveGrid .../>
-   const AEMResponsiveGrid = withMappable(ResponsiveGrid, EditConfig);
-   
-   export default AEMResponsiveGrid;
-   ```
-
-Der Code ist ähnlich `AEMTitle.js` dass [Importierte die Komponente Titel der AEM ReichweitenKernkomponenten](./spa-fixed-component.md).
-
-
-Die `AEMResponsiveGrid.js` sollte wie folgt aussehen:
-
-![AEMResponsiveGrid.js](./assets/spa-container-component/aem-responsive-grid-js.png)
-
-### Verwenden der SPA-Komponente AEMResponsiveGrid
-
-Nachdem AEM Komponente ResponsiveGrid in registriert ist und für die Verwendung in der SPA verfügbar ist, können wir sie in der Startansicht platzieren.
-
-1. Öffnen und Bearbeiten `react-app/src/Home.js`
-1. Importieren Sie die `AEMResponsiveGrid` -Komponente und platzieren Sie sie über dem `<AEMTitle ...>` -Komponente.
-1. Legen Sie die folgenden Attribute für die `<AEMResponsiveGrid...>` component
+1. Öffnen und Bearbeiten `react-app/src/components/Home.js`
+1. Importieren Sie die `ResponsiveGrid` Komponente aus `@adobe/aem-react-editable-components` und fügen Sie sie zum `Home` -Komponente.
+1. Legen Sie die folgenden Attribute für die `<ResponsiveGrid...>` component
    + `pagePath = '/content/wknd-app/us/en/home'`
    + `itemPath = 'root/responsivegrid'`
 
-   Dies weist die `AEMResponsiveGrid` -Komponente, um ihren Inhalt aus der AEM-Ressource abzurufen:
+   Dies weist die `ResponsiveGrid` -Komponente, um ihren Inhalt aus der AEM-Ressource abzurufen:
 
    + `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
 
    Die `itemPath` der `responsivegrid` Knoten, der im `Remote SPA Page` AEM Vorlage und wird automatisch auf neuen AEM erstellt, die aus dem `Remote SPA Page` AEM Vorlage.
 
-   Aktualisieren `Home.js` , um `<AEMResponsiveGrid...>` -Komponente.
+   Aktualisieren `Home.js` , um `<ResponsiveGrid...>` -Komponente.
 
-   ```
+   ```javascript
    ...
-   import AEMResponsiveGrid from './aem/AEMResponsiveGrid';
+   import { ResponsiveGrid } from '@adobe/aem-react-editable-components';
    ...
    
    function Home() {
        return (
            <div className="Home">
-               <AEMResponsiveGrid
+               <ResponsiveGrid
                    pagePath='/content/wknd-app/us/en/home' 
                    itemPath='root/responsivegrid'/>
    
-               <AEMTitle
+               <EditableTitle
                    pagePath='/content/wknd-app/us/en/home' 
                    itemPath='title'/>
+   
                <Adventures />
            </div>
        );
@@ -124,66 +78,164 @@ Die `Home.js` sollte wie folgt aussehen:
 
 ## Erstellen bearbeitbarer Komponenten
 
-Um die volle Wirkung der flexiblen Authoring-Erlebnis-Container im SPA Editor zu erzielen. Wir haben bereits eine bearbeitbare Titelkomponente erstellt, aber lassen Sie uns noch ein paar weitere Aspekte anstellen, die es Autoren ermöglichen, Text und Bild AEM WCM-Kernkomponenten in der neu hinzugefügten Container-Komponente zu verwenden.
+Um die volle Wirkung der flexiblen Authoring-Erlebnis-Container im SPA Editor zu erzielen. Wir haben bereits eine bearbeitbare Titelkomponente erstellt, aber lassen Sie uns noch ein paar weitere Komponenten erstellen, die es Autoren ermöglichen, bearbeitbare Text- und Bildkomponenten in der neu hinzugefügten Komponente &quot;ResponsiveGrid&quot;zu verwenden.
 
-### Textkomponente
+Die neuen bearbeitbaren Text- und Bildreaktionskomponenten werden mit dem in [bearbeitbare feste Komponenten](./spa-fixed-component.md).
+
+### Bearbeitbare Textkomponente
 
 1. Öffnen Sie das SPA in Ihrer IDE.
-1. Erstellen einer React-Komponente unter `src/components/aem/AEMText.js`
-1. Fügen Sie den folgenden Code zu `AEMText.js`
+1. Erstellen einer React-Komponente unter `src/components/editable/core/Text.js`
+1. Fügen Sie den folgenden Code zu `Text.js`
 
+   ```javascript
+   import React from 'react'
+   
+   const TextPlain = (props) => <div className={props.baseCssClass}><p className="cmp-text__paragraph">{props.text}</p></div>;
+   const TextRich = (props) => {
+   const text = props.text;
+   const id = (props.id) ? props.id : (props.cqPath ? props.cqPath.substr(props.cqPath.lastIndexOf('/') + 1) : "");
+       return <div className={props.baseCssClass} id={id} data-rte-editelement dangerouslySetInnerHTML={{ __html: text }} />
+   };
+   
+   export const Text = (props) => {
+       if (!props.baseCssClass) {
+           props.baseCssClass = 'cmp-text'
+       }
+   
+       const { richText = false } = props
+   
+       return richText ? <TextRich {...props} /> : <TextPlain {...props} />
+       }
+   
+       export function textIsEmpty(props) {
+       return props.text == null || props.text.length === 0;
+   }
    ```
-   import { withMappable, MapTo } from '@adobe/aem-react-editable-components';
-   import { TextV2, TextV2IsEmptyFn } from "@adobe/aem-core-components-react-base";
+
+1. Erstellen einer bearbeitbaren React-Komponente unter `src/components/editable/EditableText.js`
+1. Fügen Sie den folgenden Code zu `EditableText.js`
+
+   ```javascript
+   import React from 'react'
+   import { EditableComponent, MapTo } from '@adobe/aem-react-editable-components';
+   import { Text, textIsEmpty } from "./core/Text";
+   import { withConditionalPlaceHolder } from "./core/util/withConditionalPlaceholder";
+   import { withStandardBaseCssClass } from "./core/util/withStandardBaseCssClass";
    
    const RESOURCE_TYPE = "wknd-app/components/text";
    
-   const EditConfig = {    
+   const EditConfig = {
        emptyLabel: "Text",
-       isEmpty: TextV2IsEmptyFn,
+       isEmpty: textIsEmpty,
        resourceType: RESOURCE_TYPE
    };
    
-   MapTo(RESOURCE_TYPE)(TextV2, EditConfig);
+   export const WrappedText = (props) => {
+       const Wrapped = withConditionalPlaceHolder(withStandardBaseCssClass(Text, "cmp-text"), textIsEmpty, "Text V2")
+       return <Wrapped {...props} />
+   };
    
-   const AEMText = withMappable(TextV2, EditConfig);
+   const EditableText = (props) => <EditableComponent config={EditConfig} {...props}><WrappedText /></EditableComponent>
    
-   export default AEMText;
+   MapTo(RESOURCE_TYPE)(EditableText);
+   
+   export default EditableText;
    ```
 
-Die `AEMText.js` sollte wie folgt aussehen:
+Die Implementierung der bearbeitbaren Textkomponente sollte wie folgt aussehen:
 
-![AEMText.js](./assets/spa-container-component/aem-text-js.png)
+![Bearbeitbare Textkomponente](./assets/spa-container-component/text-js.png)
 
 ### Bildkomponente
 
 1. Öffnen Sie das SPA in Ihrer IDE.
-1. Erstellen einer React-Komponente unter `src/components/aem/AEMImage.js`
-1. Fügen Sie den folgenden Code zu `AEMImage.js`
+1. Erstellen einer React-Komponente unter `src/components/editable/core/Image.js`
+1. Fügen Sie den folgenden Code zu `Image.js`
 
-   ```
-   import { withMappable, MapTo } from '@adobe/aem-react-editable-components';
-   import { ImageV2, ImageV2IsEmptyFn } from "@adobe/aem-core-components-react-base";
+   ```javascript
+   import React from 'react'
+   import { RoutedLink } from "./RoutedLink";
    
-   const RESOURCE_TYPE = "wknd-app/components/image";
+   export const imageIsEmpty = (props) => (!props.src) || props.src.trim().length === 0
    
-   const EditConfig = {    
-       emptyLabel: "Image",
-       isEmpty: ImageV2IsEmptyFn,
-       resourceType: RESOURCE_TYPE
+   const ImageInnerContents = (props) => {
+   return (<>
+       <img src={props.src}
+           className={props.baseCssClass + '__image'}
+           alt={props.alt} />
+       {
+           !!(props.title) && <span className={props.baseCssClass + '__title'} itemProp="caption">{props.title}</span>
+       }
+       {
+           props.displayPopupTitle && (!!props.title) && <meta itemProp="caption" content={props.title} />
+       }
+       </>);
    };
    
-   MapTo(RESOURCE_TYPE)(ImageV2, EditConfig);
+   const ImageContents = (props) => {
+       if (props.link && props.link.trim().length > 0) {
+           return (
+           <RoutedLink className={props.baseCssClass + '__link'} isRouted={props.routed} to={props.link}>
+               <ImageInnerContents {...props} />
+           </RoutedLink>
+           )
+       }
+       return <ImageInnerContents {...props} />
+   };
    
-   const AEMImage = withMappable(ImageV2, EditConfig);
+   export const Image = (props) => {
+       if (!props.baseCssClass) {
+           props.baseCssClass = 'cmp-image'
+       }
    
-   export default AEMImage;
+       const { isInEditor = false } = props;
+       const cssClassName = (isInEditor) ? props.baseCssClass + ' cq-dd-image' : props.baseCssClass;
+   
+       return (
+           <div className={cssClassName}>
+               <ImageContents {...props} />
+           </div>
+       )
+   };
    ```
 
-1. Erstellen einer SCSS-Datei `src/components/aem/AEMImage.scss` , das benutzerdefinierte Stile für die `AEMImage.scss`. Diese Stile zielen auf die CSS-Klassen der AEM React-Kernkomponente mit BEM-Notation ab.
-1. Fügen Sie die folgende SCSS zu `AEMImage.scss`
+1. Erstellen einer bearbeitbaren React-Komponente unter `src/components/editable/EditableImage.js`
+1. Fügen Sie den folgenden Code zu `EditableImage.js`
 
-   ```
+```javascript
+import { EditableComponent, MapTo } from '@adobe/aem-react-editable-components';
+import { Image, imageIsEmpty } from "./core/Image";
+import React from 'react'
+
+import { withConditionalPlaceHolder } from "./core/util/withConditionalPlaceholder";
+import { withStandardBaseCssClass } from "./core/util/withStandardBaseCssClass";
+
+const RESOURCE_TYPE = "wknd-app/components/image";
+
+const EditConfig = {
+    emptyLabel: "Image",
+    isEmpty: imageIsEmpty,
+    resourceType: RESOURCE_TYPE
+};
+
+const WrappedImage = (props) => {
+    const Wrapped = withConditionalPlaceHolder(withStandardBaseCssClass(Image, "cmp-image"), imageIsEmpty, "Image V2");
+    return <Wrapped {...props}/>
+}
+
+const EditableImage = (props) => <EditableComponent config={EditConfig} {...props}><WrappedImage /></EditableComponent>
+
+MapTo(RESOURCE_TYPE)(EditableImage);
+
+export default EditableImage;
+```
+
+
+1. Erstellen einer SCSS-Datei `src/components/editable/EditableImage.scss` , das benutzerdefinierte Stile für die `EditableImage.scss`. Diese Stile zielen auf die CSS-Klassen der bearbeitbaren React-Komponente ab.
+1. Fügen Sie die folgende SCSS zu `EditableImage.scss`
+
+   ```css
    .cmp-image__image {
        margin: 1rem 0;
        width: 100%;
@@ -191,47 +243,48 @@ Die `AEMText.js` sollte wie folgt aussehen:
     }
    ```
 
-1. Import `AEMImage.scss` in `AEMImage.js`
+1. Import `EditableImage.scss` in `EditableImage.js`
 
-   ```
+   ```javascript
    ...
-   import './AEMImage.scss';
+   import './EditableImage.scss';
    ...
    ```
 
-Die `AEMImage.js` und `AEMImage.scss` sollte wie folgt aussehen:
+Die Implementierung der bearbeitbaren Bildkomponente sollte wie folgt aussehen:
 
-![AEMImage.js und AEMImage.scss](./assets/spa-container-component/aem-image-js-scss.png)
+![Bearbeitbare Bildkomponente](./assets/spa-container-component/image-js.png)
+
 
 ### Importieren der bearbeitbaren Komponenten
 
-Die neu erstellte `AEMText` und `AEMImage` SPA Komponenten werden in der SPA referenziert und basierend auf der von AEM zurückgegebenen JSON dynamisch instanziiert. Um sicherzustellen, dass diese Komponenten für die SPA verfügbar sind, erstellen Sie Importanweisungen für sie in `Home.js`
+Die neu erstellte `EditableText` und `EditableImage` React-Komponenten werden im SPA referenziert und basierend auf der von AEM zurückgegebenen JSON dynamisch instanziiert. Um sicherzustellen, dass diese Komponenten für die SPA verfügbar sind, erstellen Sie Importanweisungen für sie in `Home.js`
 
 1. Öffnen Sie das SPA in Ihrer IDE.
 1. Öffnen Sie die Datei `src/Home.js`
 1. Hinzufügen von Importanweisungen für `AEMText` und `AEMImage`
 
-   ```
+   ```javascript
    ...
-   import AEMText from './components/aem/AEMText';
-   import AEMImage from './components/aem/AEMImage';
+   // The following need to be imported, so that MapTo is run for the components
+   import EditableText from './editable/EditableText';
+   import EditableImage from './editable/EditableImage';
    ...
    ```
-
 
 Das Ergebnis sollte wie folgt aussehen:
 
 ![Home.js](./assets/spa-container-component/home-js-imports.png)
 
-Wenn diese Einfuhren _not_ hinzugefügt, `AEMText` und `AEMImage` -Code von SPA nicht aufgerufen wird und daher werden die Komponenten nicht für die bereitgestellten Ressourcentypen registriert.
+Wenn diese Einfuhren _not_ hinzugefügt, `EditableText` und `EditableImage` -Code von SPA nicht aufgerufen wird und daher werden die Komponenten nicht den bereitgestellten Ressourcentypen zugeordnet.
 
 ## Container in AEM konfigurieren
 
-AEM Container-Komponenten verwenden Richtlinien, um ihre zulässigen Komponenten anzugeben. Dies ist eine kritische Konfiguration bei der Verwendung des SPA-Editors, da nur AEM WCM-Kernkomponenten, die SPA Komponenten-Entsprechungen zugeordnet haben, vom SPA gerenderbar sind. Stellen Sie sicher, dass nur die Komponenten zulässig sind, für die wir SPA Implementierungen bereitgestellt haben:
+AEM Container-Komponenten verwenden Richtlinien, um ihre zulässigen Komponenten anzugeben. Dies ist eine kritische Konfiguration bei der Verwendung des SPA-Editors, da nur AEM Komponenten, die SPA Komponenten zugeordnet haben, vom SPA gerenderbar sind. Stellen Sie sicher, dass nur die Komponenten zulässig sind, für die wir SPA Implementierungen bereitgestellt haben:
 
-+ `AEMTitle` zugeordnet zu `wknd-app/components/title`
-+ `AEMText` zugeordnet zu `wknd-app/components/text`
-+ `AEMImage` zugeordnet zu `wknd-app/components/image`
++ `EditableTitle` zugeordnet zu `wknd-app/components/title`
++ `EditableText` zugeordnet zu `wknd-app/components/text`
++ `EditableImage` zugeordnet zu `wknd-app/components/image`
 
 So konfigurieren Sie den Reponsivegrid-Container der Vorlage Remote-SPA:
 
@@ -259,7 +312,7 @@ So konfigurieren Sie den Reponsivegrid-Container der Vorlage Remote-SPA:
 
 ## Container in AEM erstellen
 
-Nach der Aktualisierung des SPA zum Einbetten des `<AEMResponsiveGrid...>`, Wrapper für drei AEM React-Kernkomponenten (`AEMTitle`, `AEMText`und `AEMImage`) und AEM mit einer übereinstimmenden Vorlagenrichtlinie aktualisiert wird, können wir damit beginnen, Inhalte in der Container-Komponente zu erstellen.
+Nach der Aktualisierung des SPA zum Einbetten des `<ResponsiveGrid...>`, Wrapper für drei bearbeitbare React-Komponenten (`EditableTitle`, `EditableText`und `EditableImage`) und AEM mit einer übereinstimmenden Vorlagenrichtlinie aktualisiert wird, können wir damit beginnen, Inhalte in der Container-Komponente zu erstellen.
 
 1. Bei der AEM-Autoreninstanz anmelden
 1. Navigieren Sie zu __Sites > WKND-App__
@@ -296,7 +349,7 @@ Nach der Aktualisierung des SPA zum Einbetten des `<AEMResponsiveGrid...>`, Wrap
 
    ![Erstellte Komponenten](./assets/spa-container-component/authored-components.png)
 
-   Verwenden Sie AEM Layout-Modus , um die Größe und das Layout der Komponenten anzupassen.
+Verwenden Sie AEM Layout-Modus , um die Größe und das Layout der Komponenten anzupassen.
 
 1. Wechseln zu __Layout-Modus__ Verwenden der Modusauswahl oben rechts
 1. __Größe ändern__ die Bild- und Text-Komponenten, sodass sie nebeneinander angeordnet sind
@@ -315,9 +368,9 @@ Nach der Aktualisierung des SPA zum Einbetten des `<AEMResponsiveGrid...>`, Wrap
 
 Sie haben eine Container-Komponente hinzugefügt, mit der Autoren bearbeitbare Komponenten zur WKND-App hinzufügen können! Sie wissen jetzt, wie:
 
-+ Verwenden Sie die Komponente &quot;ResponsiveGrid&quot;der AEM React Editable-Komponente im SPA
-+ Registrieren AEM React-Kernkomponenten (Text und Bild) zur Verwendung in der SPA über die Container-Komponente
-+ Konfigurieren Sie die Vorlage für die Remote-SPA, um die SPA aktivierten Kernkomponenten zuzulassen.
++ Verwenden der Komponente &quot;AEM React-Bearbeitbar&quot; `ResponsiveGrid` -Komponente im SPA
++ Erstellen und registrieren Sie bearbeitbare React-Komponenten (Text und Bild) zur Verwendung in der SPA über die Container-Komponente
++ Konfigurieren Sie die Vorlage Remote SPA Page , um die SPA aktivierten Komponenten zuzulassen.
 + Hinzufügen bearbeitbarer Komponenten zur Container-Komponente
 + Autoren- und Layoutkomponenten im SPA Editor
 

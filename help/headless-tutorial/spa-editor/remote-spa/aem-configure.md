@@ -7,11 +7,13 @@ role: Developer, Architect
 level: Beginner
 kt: 7631
 thumbnail: kt-7631.jpeg
+last-substantial-update: 2022-11-11T00:00:00Z
+recommendations: noDisplay, noCatalog
 exl-id: 0bdb93c9-5070-483c-a34c-f2b348bfe5ae
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 2%
+source-wordcount: '1246'
+ht-degree: 3%
 
 ---
 
@@ -26,26 +28,34 @@ Während die SPA Codebase außerhalb von AEM verwaltet wird, ist ein AEM Projekt
 + Unterprojekt zur Definition von SPA zu AEM URL-Zuordnungen
 + OSGi-Konfigurationsordner
 
+## Laden Sie das Basisprojekt von GitHub herunter
+
+Laden Sie die `aem-guides-wknd-graphql` Projekt von Github.com. Dies enthält einige Grundlinien-Dateien, die in diesem Projekt verwendet werden.
+
+```
+$ mkdir -p ~/Code
+$ git clone https://github.com/adobe/aem-guides-wknd-graphql.git
+$ cd remote-spa-tutorial
+```
+
 ## Erstellen eines AEM Projekts
 
-Erstellen Sie ein AEM Projekt, in dem Konfigurationen und Grundlinien-Inhalte verwaltet werden.
+Erstellen Sie ein AEM Projekt, in dem Konfigurationen und Grundlinien-Inhalte verwaltet werden. Dieses Projekt wird innerhalb des geklonten Projekts generiert `aem-guides-wknd-graphql` des Projekts `remote-spa-tutorial` Ordner.
 
 _Verwenden Sie immer die neueste Version des [AEM Archetyp](https://github.com/adobe/aem-project-archetype)._
 
-
 ```
-$ mkdir -p ~/Code/wknd-app
-$ cd ~/Code/wknd-app
+$ cd ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial
 $ mvn -B archetype:generate \
  -D archetypeGroupId=com.adobe.aem \
  -D archetypeArtifactId=aem-project-archetype \
- -D archetypeVersion=27 \
+ -D archetypeVersion=39 \
  -D aemVersion=cloud \
  -D appTitle="WKND App" \
  -D appId="wknd-app" \
  -D groupId="com.adobe.aem.guides.wkndapp" \
  -D frontendModule="react"
-$ mv ~/Code/wknd-app/wknd-app ~/Code/wknd-app/com.adobe.aem.guides.wknd-app
+$ mv ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/wknd-app ~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app
 ```
 
 _Der letzte Befehl benennt einfach den AEM Projektordner um, sodass klar ist, dass es sich um das AEM Projekt handelt, und nicht zu verwechseln mit Remote SPA__
@@ -67,7 +77,7 @@ Da das AEM Projekt generiert wird, stellen einige Anpassungen SPA Editor-Kompati
 
 Da die SPA eine Remote-SPA ist, gehen Sie davon aus, dass sie außerhalb des AEM-Projekts entwickelt und verwaltet wird. Um Konflikte zu vermeiden, entfernen Sie die `ui.frontend` Projekt aus der Bereitstellung. Wenn die Variable `ui.frontend` Das Projekt wird nicht entfernt, zwei SPA, die standardmäßige SPA, die im `ui.frontend` -Projekt und die Remote-SPA werden gleichzeitig im AEM SPA Editor geladen.
 
-1. Öffnen Sie das AEM (`~/Code/wknd-app/com.adobe.aem.guides.wknd-app`) in Ihrer IDE
+1. Öffnen Sie das AEM (`~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/com.adobe.aem.guides.wknd-app`) in Ihrer IDE
 1. Öffnen Sie den Stamm. `pom.xml`
 1. Kommentieren Sie die `<module>ui.frontend</module` aus `<modules>` Liste
 
@@ -199,7 +209,7 @@ Die Sling-Zuordnungseffekte AEM ausgeführt auf `http` und `localhost`unterstüt
 
 ## Sicherheitsrichtlinien für Cross-Origin Resource Sharing
 
-Konfigurieren Sie AEM als Nächstes, um den Inhalt zu schützen, sodass nur diese SPA auf den AEM zugreifen können. Konfigurieren [Cross-Origin Resource Sharing in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html).
+Konfigurieren Sie AEM als Nächstes, um den Inhalt zu schützen, sodass nur diese SPA auf den AEM zugreifen können. Konfigurieren [Cross-Origin Resource Sharing in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html?lang=de).
 
 1. Öffnen Sie in Ihrer IDE die `ui.config` Maven-Unterprojekt
 1. Navigieren `src/main/content/jcr_root/apps/wknd-app/osgiconfig/config`

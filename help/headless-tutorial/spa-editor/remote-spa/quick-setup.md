@@ -7,8 +7,10 @@ role: Developer, Architect
 level: Beginner
 kt: 7629
 thumbnail: 333181.jpg
+last-substantial-update: 2022-11-11T00:00:00Z
+recommendations: noDisplay, noCatalog
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
-source-git-commit: fe056006ab59a3955e5f16a23e96e9e208408cf5
+source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
 workflow-type: tm+mt
 source-wordcount: '797'
 ht-degree: 6%
@@ -66,7 +68,7 @@ Laden Sie den AEM SDK-Schnellstart auf Port 4502 herunter und installieren Sie i
 AEM SDK startet und startet automatisch am [http://localhost:4502](http://localhost:4502). Melden Sie sich mit den folgenden Anmeldedaten an:
 
 + Benutzername: `admin`
-+ Passwort: `admin`
++ Kennwort: `admin`
 
 ## Herunterladen und Installieren des WKND Site-Pakets
 
