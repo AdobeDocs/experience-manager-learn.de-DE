@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9351
 thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b74dc2693071313a80ccaaea839b8e2087c9edaa
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1161'
 ht-degree: 5%
 
 ---
@@ -79,7 +79,7 @@ Aktivieren und konfigurieren Sie zunächst die dedizierte Ausgangs-IP-Adresse au
 
    Warten Sie 15 Minuten, bis das Cloud Manager-Programm die Netzwerkinfrastruktur bereitstellt.
 
-1. Überprüfen, ob die Umgebung abgeschlossen ist __dedizierte Ausgangs-IP-Adresse__ Konfiguration mithilfe der Cloud Manager-API [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) -Vorgang mithilfe der `id` von der HTTP-Anforderung createNetworkInfrastructure im vorherigen Schritt zurückgegeben.
+1. Prüfen Sie, ob das Programm abgeschlossen ist. __dedizierte Ausgangs-IP-Adresse__ Konfiguration mithilfe der Cloud Manager-API [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) -Vorgang mithilfe der `id` von der HTTP-Anforderung createNetworkInfrastructure im vorherigen Schritt zurückgegeben.
 
    __HTTP-Anforderung &quot;getNetworkInfrastructure&quot;__
 
@@ -95,7 +95,7 @@ Aktivieren und konfigurieren Sie zunächst die dedizierte Ausgangs-IP-Adresse au
 
 ## Konfigurieren dedizierter IP-Adressen-Adressen-Proxys für Ausgangs-Umgebungen
 
-1. Aktivieren und Konfigurieren der __dedizierte Ausgangs-IP-Adresse__ Konfiguration in jeder AEM as a Cloud Service Umgebung mithilfe der Cloud Manager-API [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) Vorgang.
+1. Konfigurieren Sie die __dedizierte Ausgangs-IP-Adresse__ Konfiguration in jeder AEM as a Cloud Service Umgebung mithilfe der Cloud Manager-API [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) Vorgang.
 
    __enableEnvironmentAdvancedNetworkingConfiguration HTTP-Anfrage__
 
@@ -164,6 +164,8 @@ Aktivieren und konfigurieren Sie zunächst die dedizierte Ausgangs-IP-Adresse au
    ```
 
    Der Hostname darf nicht `pinged`, da es sich um ein Egress handelt und _not_ und Eingang.
+
+   Beachten Sie die __dedizierte Ausgangs-IP-Adresse__ wird von allen AEM as a Cloud Service Umgebungen des Programms gemeinsam genutzt.
 
 1. Jetzt können Sie die dedizierte Ausgangs-IP-Adresse in Ihrem benutzerdefinierten AEM-Code und Ihrer Konfiguration verwenden. Häufig werden bei Verwendung der dedizierten Ausgangs-IP-Adresse die externen Dienste AEM as a Cloud Service Verbindungen mit so konfiguriert, dass nur Traffic von dieser dedizierten IP-Adresse aus zugelassen wird.
 
