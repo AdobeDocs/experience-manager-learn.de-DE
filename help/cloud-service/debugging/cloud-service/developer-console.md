@@ -13,9 +13,9 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 0499ff9f-d452-459f-b1a2-2853a228efd1
-source-git-commit: 751aed9b8659d6a600429efb2bf60825b6d39144
+source-git-commit: e8e5c67f6e9f057fd7472b76ee09d7f87b133c89
 workflow-type: tm+mt
-source-wordcount: '1396'
+source-wordcount: '1414'
 ht-degree: 2%
 
 ---
@@ -31,9 +31,9 @@ Jede AEM as a Cloud Service Umgebung verfügt über eine eigene Entwicklerkonsol
 Um auf die Developer Console zuzugreifen und sie zu verwenden, müssen die folgenden Berechtigungen der Adobe ID des Entwicklers über [Admin Console der Adobe](https://adminconsole.adobe.com).
 
 1. Stellen Sie sicher, dass die Adobe-Organisation, die Cloud Manager ausgeführt hat und AEM as a Cloud Service Produkte, im Adobe Org-Umschalter aktiv ist.
-1. Der Entwickler muss Mitglied des Cloud Manager-Produkts sein. __Entwickler - Cloud Service__ Produktprofil.
+1. Der Entwickler muss Mitglied der [Cloud Manager-Produkt __Entwickler - Cloud Service__ Produktprofil](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer).
    + Wenn diese Mitgliedschaft nicht vorhanden ist, kann sich der Entwickler nicht bei der Developer Console anmelden.
-1. Der Entwickler muss Mitglied der __AEM__ oder __AEM Administratoren__ Produktprofil für AEM Author und/oder Publish
+1. Der Entwickler muss Mitglied der [__AEM__ oder __AEM Administratoren__ Produktprofil in AEM Author and/or Publish](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles).
    + Wenn diese Mitgliedschaft nicht vorhanden ist, wird die [status](#status) Bei Dumps wird eine Zeitüberschreitung mit einem Fehler &quot;401 Unauthorized&quot;angezeigt.
 
 ### Fehlerbehebung für den Zugriff auf die Developer Console
