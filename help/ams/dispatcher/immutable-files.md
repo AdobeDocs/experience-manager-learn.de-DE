@@ -7,9 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: d6b7d63ba02ca73d6c1674d90db53c6eebab3bd2
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '826'
 ht-degree: 1%
 
 ---
@@ -311,3 +311,5 @@ Jetzt laden wir einfach den Webserver-Dienst neu und nutzen unsere neue Domain!
 
 Beachten Sie, dass wir nur die Teile geändert haben, die wir ändern mussten, um die vorhandenen Includes und den Code zu nutzen, die mit den Basiskonfigurationsdateien geliefert wurden.  Wir müssen nur auf das Element eingehen, das wir ändern müssen.  Erleichtert die Arbeit und ermöglicht es uns, weniger Code zu verwalten
 </div>
+
+[Weiter -> Dispatcher-Konsistenzprüfung](./health-check.md)
