@@ -7,9 +7,9 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: d6b7d63ba02ca73d6c1674d90db53c6eebab3bd2
+source-git-commit: df3afc60f765c18915eca3bb2d3556379383fafc
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1139'
 ht-degree: 1%
 
 ---
@@ -209,3 +209,5 @@ Dieses Skript überprüft und protokolliert alle Instanzen, bei denen es frontie
 Dieses Skript überprüft und protokolliert alle Instanzen, bei denen es frontiert ist, gibt jedoch nur gesund zurück, unabhängig davon, ob AEM einen Fehler zurückgibt oder nicht.
 
 > `Note:` Dieses Skript wird verwendet, wenn die Konsistenzprüfung nicht wie gewünscht funktioniert und eine Überschreibung ermöglicht, um AEM Instanzen im Lastenausgleich zu belassen.
+
+[Weiter -> GIT-Symlinks](./git-symlinks.md)
