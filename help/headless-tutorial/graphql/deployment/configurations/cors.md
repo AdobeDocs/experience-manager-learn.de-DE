@@ -8,9 +8,9 @@ role: Developer, Architect
 level: Intermediate
 kt: 10830
 thumbnail: KT-10830.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 6f1000db880c3126a01fa0b74abdb39ffc38a227
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: '572'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 # Cross-Origin Resource Sharing (CORS)
 
-Die Cross-Origin Resource Sharing (CORS) von Adobe Experience Manager as a Cloud Service erleichtert nicht AEM Webeigenschaften das Ausführen browserbasierter clientseitiger Aufrufe an AEM GraphQL-APIs.
+Die Cross-Origin Resource Sharing (CORS) von Adobe Experience Manager as a Cloud Service erleichtert nicht AEM Webeigenschaften die Durchführung browserbasierter clientseitiger Aufrufe an AEM GraphQL-APIs.
 
 >[!TIP]
 >
@@ -46,13 +46,14 @@ Im folgenden Beispiel wird eine OSGi-Konfiguration für AEM Publish (`../config.
 Die wichtigsten Konfigurationseigenschaften sind:
 
 + `alloworigin` und/oder `alloworiginregexp` gibt die Ursprünge an, mit denen der Client eine Verbindung AEM Web-Ausführung herstellt.
-+ `allowedpaths` gibt die URL-Pfadmuster an, die von den angegebenen Quellen aus zulässig sind. Verwenden Sie das folgende Muster, um AEM von GraphQL beibehaltene Abfragen zu unterstützen: `"/graphql/execute.json.*"`
-+ `supportedmethods` gibt die zulässigen HTTP-Methoden für die CORS-Anforderungen an. Hinzufügen `GET`, um AEM von GraphQL gespeicherten Abfragen zu unterstützen.
++ `allowedpaths` gibt die URL-Pfadmuster an, die von den angegebenen Quellen aus zulässig sind.
+   + Um AEM von GraphQL gespeicherten Abfragen zu unterstützen, fügen Sie das folgende Muster hinzu: `/graphql/execute.json.*`
+   + Fügen Sie das folgende Muster hinzu, um Experience Fragments zu unterstützen: `/content/experience-fragments/.*`
++ `supportedmethods` gibt die zulässigen HTTP-Methoden für die CORS-Anforderungen an. Hinzufügen `GET`, um AEM von GraphQL gespeicherten Abfragen (und Experience Fragments) zu unterstützen.
 
 [Erfahren Sie mehr über die CORS OSGi-Konfiguration.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=de)
 
-
-Diese Beispielkonfiguration unterstützt die Verwendung AEM von GraphQL-gespeicherten Abfragen. Um clientdefinierte GraphQL-Abfragen zu verwenden, fügen Sie eine GraphQL-Endpunkt-URL hinzu in `allowedpaths` und `POST` nach `supportedmethods`.
+Diese Beispielkonfiguration unterstützt die Verwendung AEM von GraphQL gespeicherten Abfragen. Um clientdefinierte GraphQL-Abfragen zu verwenden, fügen Sie eine GraphQL-Endpunkt-URL hinzu in `allowedpaths` und `POST` nach `supportedmethods`.
 
 + `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config.publish/com.adobe.granite.cors.impl.CORSPolicyImpl~graphql.cfg.json`
 
@@ -65,7 +66,8 @@ Diese Beispielkonfiguration unterstützt die Verwendung AEM von GraphQL-gespeich
     "http://localhost:.*"
   ],
   "allowedpaths": [
-    "/graphql/execute.json.*"
+    "/graphql/execute.json.*",
+    "/content/experience-fragments/.*"
   ],
   "supportedheaders": [
     "Origin",
@@ -77,7 +79,8 @@ Diese Beispielkonfiguration unterstützt die Verwendung AEM von GraphQL-gespeich
   ],
   "supportedmethods":[
     "GET",
-    "HEAD"
+    "HEAD",
+    "OPTIONS"
   ],
   "maxage:Integer": 1800,
   "supportscredentials": false,
@@ -85,14 +88,14 @@ Diese Beispielkonfiguration unterstützt die Verwendung AEM von GraphQL-gespeich
 }
 ```
 
-### Autorisierte AEM GraphQL-API-Anfragen
+### Autorisierte AEM GraphQL API-Anfragen
 
-Stellen Sie beim Zugriff auf AEM GraphQL-APIs, die eine Autorisierung erfordern (normalerweise AEM-Autor oder geschützter Inhalt auf AEM Publish) sicher, dass die CORS OSGi-Konfiguration über die folgenden zusätzlichen Werte verfügt:
+Stellen Sie beim Zugriff auf AEM GraphQL-APIs, die eine Autorisierung erfordern (normalerweise AEM-Autor oder geschützter Inhalt bei AEM Publish) sicher, dass die CORS-OSGi-Konfiguration über die zusätzlichen Werte verfügt:
 
 + `supportedheaders` auch Listen `"Authorization"`
 + `supportscredentials` auf `true`
 
-Zulässige Anfragen an GraphQL-APIs, die eine CORS-Konfiguration erfordern, sind ungewöhnlich, da sie normalerweise im Kontext von [Server-zu-Server-Apps](../server-to-server.md) und daher keine CORS-Konfiguration erfordern. Browser-basierte Apps, für die CORS-Konfigurationen erforderlich sind, z. B. [Einzelseiten-Apps](../spa.md) oder [Webkomponenten](../web-component.md)verwenden Sie in der Regel die Autorisierung, da es schwierig ist, die Anmeldeinformationen zu sichern.
+Zulässige Anfragen an AEM GraphQL-APIs, die eine CORS-Konfiguration erfordern, sind ungewöhnlich, da sie normalerweise im Kontext von [Server-zu-Server-Apps](../server-to-server.md) und daher keine CORS-Konfiguration erfordern. Browser-basierte Apps, für die CORS-Konfigurationen erforderlich sind, z. B. [Einzelseiten-Apps](../spa.md) oder [Webkomponenten](../web-component.md)verwenden Sie in der Regel die Autorisierung, da es schwierig ist, die Anmeldeinformationen zu sichern.
 
 Diese beiden Einstellungen werden beispielsweise wie folgt in einer `CORSPolicyImpl` OSGi-Werkskonfiguration:
 
@@ -152,7 +155,7 @@ $include "./default_clientheaders.any"
 
 ### Bereitstellen von HTTP-Antwort-Headern für CORS
 
-Konfigurieren der Dispatcher-Farm zum Zwischenspeichern **CORS HTTP-Antwortheader** , um sicherzustellen, dass sie enthalten sind, wenn AEM von GraphQL persistente Abfragen aus dem Dispatcher-Cache bereitgestellt werden, indem die `Access-Control-...` Header zur Cache-Header-Liste.
+Konfigurieren der Dispatcher-Farm zum Zwischenspeichern **CORS HTTP-Antwortheader** , um sicherzustellen, dass sie enthalten sind, wenn AEM von GraphQL persistente Abfragen aus dem Dispatcher-Cache bereitgestellt werden, indem Sie die `Access-Control-...` Header zur Cache-Header-Liste.
 
 + `dispatcher/src/conf.dispatcher.d/available_farms/wknd.farm`
 
