@@ -8,9 +8,9 @@ role: Developer, Architect
 level: Intermediate
 kt: 10829
 thumbnail: kt-10829.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 442020d854d8f42c5d8a1340afd907548875866e
 workflow-type: tm+mt
-source-wordcount: '196'
+source-wordcount: '211'
 ht-degree: 2%
 
 ---
@@ -39,11 +39,16 @@ Die AEM Publish Dispatcher-Filterkonfiguration definiert die URL-Muster, die err
 Hinzufügen einer `allow` Regel mit dem URL-Muster `/graphql/execute.json/*`und stellen Sie die Datei-ID (z. B. `/0600`, ist in der Beispiel-Farm-Datei eindeutig).
 Dadurch kann die HTTP-GET an den persistenten Abfrageendpunkt gesendet werden, z. B. `HTTP GET /graphql/execute.json/wknd-shared/adventures-all` bis zur AEM-Veröffentlichung.
 
+Wenn Sie Experience Fragments in Ihrem AEM Headless-Erlebnis verwenden, führen Sie für diese Pfade dasselbe aus.
+
 + `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 
 ```
 ...
-/0600 { /type "allow" /url "/graphql/execute.json/*" }
+# Allow headless requests for Persisted Query endpoints
+/0600 { /type "allow" /method '(POST|OPTIONS)' /url "/graphql/execute.json/*" }
+# Allow headless requests for Experience Fragments
+/0601 { /type "allow" /method '(GET|OPTIONS)' /url "/content/experience-fragments/*" }
 ...
 ```
 
