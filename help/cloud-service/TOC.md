@@ -5,9 +5,9 @@ breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: d5645e975aa290392348cc69d078b24921a7d13a
+source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '866'
 ht-degree: 27%
 
 ---
@@ -53,6 +53,18 @@ ht-degree: 27%
    + [Lokale AEM Runtime](./local-development-environment/aem-runtime.md)
    + [Lokale Dispatcher-Tools](./local-development-environment/dispatcher-tools.md)
 + Entwickeln{#developing}
+   + Erweiterbarkeit{#extensibility}
+      + Inhaltsfragmentkonsole{#content-fragments}
+         + [Übersicht](./developing/extensibility/content-fragments/overview.md)
+         + [Erweiterungsregistrierung](./developing/extensibility/content-fragments/extension-registration.md)
+         + [Menü &quot;Kopfzeile&quot;](./developing/extensibility/content-fragments/header-menu.md)
+         + [Symbolleiste](./developing/extensibility/content-fragments/action-bar.md)
+         + [Modal](./developing/extensibility/content-fragments/modal.md)
+         + [Adobe I/O Runtime-Aktion](./developing/extensibility/content-fragments/runtime-action.md)
+         + [Testen](./developing/extensibility/content-fragments/test.md)
+         + [Implementieren](./developing/extensibility/content-fragments/deploy.md)
+         + Beispielerweiterungen{#example-extensions}
+            + [Aktualisierung der Masseneigenschaft](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
    + Entwicklungsgrundlagen{#basics}
       + [AEM SDK](./developing/basics/aem-sdk.md)
       + [Lokale Entwicklungsumgebung](./developing/basics/local-development-environment.md)
