@@ -1,6 +1,6 @@
 ---
 title: React-App - AEM Headless-Beispiel
-description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese React-Anwendung zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen können.
+description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese React-Anwendung zeigt, wie Sie mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen Inhalte abfragen können.
 version: Cloud Service
 mini-toc-levels: 1
 kt: 10715
@@ -11,27 +11,22 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-11-09T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
-source-git-commit: c5f94b12a9af50bc4e7db693d6560d120ab8bf3b
+source-git-commit: 758fa40240b12f5bfa83ac5c0300b71f41e2326d
 workflow-type: tm+mt
-source-wordcount: '948'
-ht-degree: 6%
+source-wordcount: '919'
+ht-degree: 7%
 
 ---
 
 # React App{#react-app}
 
-Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese React-Anwendung zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen können. Der AEM Headless-Client für JavaScript wird verwendet, um die von GraphQL gespeicherten Abfragen auszuführen, die die App unterstützen.
+Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese React-Anwendung zeigt, wie Sie mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen Inhalte abfragen können. Der AEM Headless-Client für JavaScript wird verwendet, um die von GraphQL gespeicherten Abfragen auszuführen, die die App unterstützen.
 
 ![React-App mit AEM Headless](./assets/react-app/react-app.png)
 
 Anzeigen der [Quellcode auf GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
 A [Umfassendes Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=de) , die beschreiben, wie diese React-App erstellt wurde, verfügbar ist.
-
->[!CONTEXTUALHELP]
->id="aemcloud_sites_trial_admin_content_fragments_react_app"
->title="Inhalt in einer React-Beispielanwendung anpassen"
->abstract="Wir haben eine moderne React-App eingerichtet, mit der Sie erfahren können, wie Sie Inhalte mithilfe des Headless-Funktionssatzes anpassen können."
 
 ## Voraussetzungen {#prerequisites}
 
@@ -96,7 +91,7 @@ Die React-Anwendung ist für die Verbindung mit einer __AEM-Veröffentlichung__ 
 
 ## Der Code
 
-Nachstehend finden Sie eine Zusammenfassung dazu, wie die React-Anwendung erstellt wurde, wie sie eine Verbindung zu AEM Headless herstellt, um Inhalte mithilfe von GraphQL-gespeicherten Abfragen abzurufen, und wie diese Daten dargestellt werden. Den vollständigen Code finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
+Nachstehend finden Sie eine Zusammenfassung dazu, wie die React-Anwendung erstellt wurde, wie sie eine Verbindung zu AEM Headless herstellt, um mithilfe von durch GraphQL gespeicherten Abfragen Inhalte abzurufen, und wie diese Daten dargestellt werden. Den vollständigen Code finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app).
 
 
 ### Beständige Abfragen
@@ -184,13 +179,13 @@ query($slug: String!) {
 }
 ```
 
-### GraphQL-persistente Abfrage ausführen
+### Durchführen einer von GraphQL beibehaltenen Abfrage
 
-AEM persistente Abfragen werden über HTTP-GET ausgeführt und daher die [AEM Headless-Client für JavaScript](https://github.com/adobe/aem-headless-client-js) wird verwendet, um [die beibehaltenen GraphQL-Abfragen ausführen](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) AEM und laden Sie den Abenteuerinhalt in die App.
+AEM persistente Abfragen werden über HTTP-GET ausgeführt und daher die [AEM Headless-Client für JavaScript](https://github.com/adobe/aem-headless-client-js) wird verwendet, um [die gespeicherten GraphQL-Abfragen ausführen](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) AEM und laden Sie den Abenteuerinhalt in die App.
 
 Jede persistente Abfrage weist eine entsprechende React-Antwort auf [useEffect](https://reactjs.org/docs/hooks-effect.html) Hook `src/api/usePersistedQueries.js`, der asynchron den AEM HTTP-GET persistenten Abfrageendpunkt aufruft und die Abenteuerdaten zurückgibt.
 
-Jede Funktion ruft wiederum die `aemHeadlessClient.runPersistedQuery(...)`, um die beibehaltene GraphQL-Abfrage auszuführen.
+Jede Funktion ruft wiederum die `aemHeadlessClient.runPersistedQuery(...)`, um die persistente GraphQL-Abfrage auszuführen.
 
 ```js
 // src/api/usePersistedQueries.js
