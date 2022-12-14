@@ -9,9 +9,9 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '804'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,7 @@ Stellen Sie die Erweiterung im Produktionsarbeitsbereich bereit. Erweiterungen, 
 1. Auswählen __Zur Genehmigung einreichen__
 1. Füllen Sie das Formular aus und senden Sie es ab und aktualisieren Sie die Felder nach Bedarf.
 
-+ Ein Symbol ist erforderlich. Wenn Sie kein Symbol haben, können Sie [dieses Symbol](./assets/deploy/icon.png).
+Bitte beachten Sie, dass ein Symbol erforderlich ist. Wenn Sie kein Symbol haben, können Sie [dieses Symbol](./assets/deploy/icon.png).
 
 ### Genehmigen der Bereitstellungsanforderung
 

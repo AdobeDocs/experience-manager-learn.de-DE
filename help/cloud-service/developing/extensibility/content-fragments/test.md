@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
@@ -78,7 +78,10 @@ Notieren Sie sich die URL der lokalen Anwendung, wie oben gezeigt: `-> https://l
 
 1. Die AEM Inhaltsfragmentkonsole wird geladen, wobei die lokale Version der Erweiterung zum Testen eingefügt wird, und es werden Hot-Neuladungen vorgenommen, solange die lokale App Builder-App ausgeführt wird.
 
-Beachten Sie bei Verwendung dieses Ansatzes, dass sich die in der Entwicklung befindliche Erweiterung nur auf Ihr Erlebnis auswirkt und alle anderen Benutzer der AEM Inhaltsfragment-Konsole darauf ohne die injizierte Erweiterung zugreifen.
+>[!IMPORTANT]
+>
+>Beachten Sie bei Verwendung dieses Ansatzes, dass sich die in der Entwicklung befindliche Erweiterung nur auf Ihr Erlebnis auswirkt und alle anderen Benutzer der AEM Inhaltsfragment-Konsole darauf ohne die injizierte Erweiterung zugreifen.
+
 
 ## Testphase-Builds
 

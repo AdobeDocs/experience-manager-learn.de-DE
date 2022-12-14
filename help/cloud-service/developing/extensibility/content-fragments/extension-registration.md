@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
@@ -55,15 +55,15 @@ function App(props) {
 `ExtensionRegistration.js` muss sofort über die Indexroute der Erweiterung geladen werden und fungiert als Registrierungspunkt der Erweiterung und definiert Folgendes:
 
 1. den Erweiterungstyp; a [Kopfzeilenmenü](./header-menu.md) oder [Aktionsleiste](./action-bar.md) Schaltfläche.
-   + [Menü &quot;Kopfzeile&quot;](./header-menu.md) Erweiterungen werden durch die `headerMenu` Eigenschaft unter `methods`.
-   + [Symbolleiste](./action-bar.md) Erweiterungen werden durch die `actionBar` Eigenschaft unter `methods`.
+   + [Menü &quot;Kopfzeile&quot;](./header-menu.md#extension-registration) Erweiterungen werden durch die `headerMenu` Eigenschaft unter `methods`.
+   + [Symbolleiste](./action-bar.md#extension-registration) Erweiterungen werden durch die `actionBar` Eigenschaft unter `methods`.
 1. Die Definition der Erweiterungsschaltfläche in `getButton()` -Funktion. Diese Funktion gibt ein Objekt mit Feldern zurück:
    + `id` ist eine eindeutige ID für die Schaltfläche
    + `label` ist die Beschriftung der Erweiterungsschaltfläche in der AEM Inhaltsfragment-Konsole
    + `icon` ist das Symbol der Erweiterungsschaltfläche in der AEM Inhaltsfragment-Konsole. Das Symbol ist eine [Reaktionsspektrum](https://spectrum.adobe.com/page/icons/) Symbolname, wobei Leerzeichen entfernt werden.
 1. Der Klick-Handler für die Schaltfläche, definiert in einer `onClick()` -Funktion.
-   + [Kopfzeilenmenü](./header-menu.md) -Erweiterungen übergeben keine Parameter an den Klick-Handler.
-   + [Aktionsleiste](./action-bar.md) Erweiterungen bieten eine Liste der ausgewählten Inhaltsfragmentpfade im `selections` Parameter.
+   + [Kopfzeilenmenü](./header-menu.md#extension-registration) -Erweiterungen übergeben keine Parameter an den Klick-Handler.
+   + [Aktionsleiste](./action-bar.md#extension-registration) Erweiterungen bieten eine Liste der ausgewählten Inhaltsfragmentpfade im `selections` Parameter.
 
 ### Header Menu-Erweiterung
 

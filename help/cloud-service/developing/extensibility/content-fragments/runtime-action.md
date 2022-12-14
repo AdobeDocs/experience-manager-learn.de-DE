@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 3%
@@ -49,7 +49,7 @@ Adobe I/O Runtime-Aktionen werden in erster Linie von zwei Stellen in einer AEM 
 
 ### Aus der Erweiterungsregistrierung
 
-Adobe I/O Runtime-Aktionen können direkt über den Registrierungs-Code der Erweiterung aufgerufen werden. Der häufigste Anwendungsfall = besteht darin, eine Aktion an eine [Kopfzeilenmenü](./header-menu.md#no-modal)Schaltfläche &quot;s&quot;, die nicht verwendet [Modale](./modal.md).
+Adobe I/O Runtime-Aktionen können direkt über den Registrierungs-Code der Erweiterung aufgerufen werden. Der häufigste Anwendungsfall besteht darin, eine Aktion an eine [Kopfzeilenmenü](./header-menu.md#no-modal)Schaltfläche &quot;s&quot;, die nicht verwendet [Modale](./modal.md).
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
