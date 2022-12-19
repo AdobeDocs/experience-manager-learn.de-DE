@@ -9,9 +9,9 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: f19cdc7d551f20b35550e7d25bd168a2eaa43b6a
+source-git-commit: 56e2cbadaceb9961de28454bfbed56a98df34c44
 workflow-type: tm+mt
-source-wordcount: '514'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -66,10 +66,12 @@ Notieren Sie sich die URL der lokalen Anwendung, wie oben gezeigt: `-> https://l
    + `&devMode=true`
    + `&ext=<LOCAL APPLICATION URL>`, normalerweise `&ext=https://localhost:9080`.
 
+   Fügen Sie die beiden oben genannten Abfrageparameter hinzu (`devMode` und `ext`) als __first__ Abfrageparameter in der URL, da die Inhaltsfragmentkonsole eine Hash-Route (`#/@wknd/aem/...`), sodass die Parameter nach der `#` funktioniert nicht.
+
    Die Test-URL sollte wie folgt aussehen:
 
    ```
-   https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin&devMode=true&ext=https://localhost:9080
+   https://experience.adobe.com/?devMode=true&ext=https://localhost:9080&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
 1. Kopieren Sie die Test-URL und fügen Sie sie in Ihren Browser ein.
@@ -112,10 +114,12 @@ Notieren Sie sich die URL der lokalen Anwendung, wie oben gezeigt: `-> https://l
    + `&devMode=true`
    + `&ext=<DEPLOYED APPLICATION URL>`
 
+   Fügen Sie die beiden oben genannten Abfrageparameter hinzu (`devMode` und `ext`) als __first__ Abfrageparameter in der URL, da die Inhaltsfragmentkonsole eine Hash-Route (`#/@wknd/aem/...`), sodass die Parameter nach der `#` funktioniert nicht.
+
    Die Test-URL sollte wie folgt aussehen:
 
    ```
-   https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin&devMode=true&ext=https://98765-123aquarat.adobeio-static.net/index.html
+   https://experience.adobe.com/?devMode=true&ext=https://98765-123aquarat.adobeio-static.net/index.html&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
 1. Kopieren Sie die Test-URL und fügen Sie sie in Ihren Browser ein.
