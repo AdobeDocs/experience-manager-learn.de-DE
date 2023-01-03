@@ -9,7 +9,7 @@ level: Intermediate
 kt: 9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
-source-git-commit: d6eddceb3f414e67b5b6e3fba071cd95597dc41c
+source-git-commit: c34c27955dbc084620ac4dd811ba4051ea83f447
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 5%
@@ -42,7 +42,7 @@ Stellen Sie die [geeignete](../advanced-networking.md#advanced-networking) Vor d
 
 | Kein erweitertes Netzwerk | [Flexibles Port-Egress](../flexible-port-egress.md) | [Dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) | [Virtuelles privates Netzwerk](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
-| ✘ | ms | ms | ms |
+| ✘ | ✔ | ✔ | ✔ |
 
 ## OSGi-Konfiguration
 
@@ -60,7 +60,7 @@ In diesem OSGi-Konfigurationsbeispiel wird AEM Mail OSGi-Dienst für die Verwend
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/config/com.day.cq.mailer.DefaultMailService.cfg.json`
 
-AEM konfigurieren [DefaultMailService](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email) wie von Ihrem E-Mail-Anbieter benötigt (z. B. `smtp.ssl`usw.).
+AEM konfigurieren [DefaultMailService](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html?lang=de#sending-email) wie von Ihrem E-Mail-Anbieter benötigt (z. B. `smtp.ssl`usw.).
 
 ```json
 {
@@ -79,7 +79,7 @@ AEM konfigurieren [DefaultMailService](https://experienceleague.adobe.com/docs/e
 
 Die `EMAIL_USERNAME` und `EMAIL_PASSWORD` OSGi-Variable und -Geheimnis können pro Umgebung festgelegt werden, indem Sie eine der folgenden Optionen verwenden:
 
-+ [Konfiguration der Cloud Manager-Umgebung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html)
++ [Cloud Manager-Umgebungskonfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html)
 + oder mithilfe der `aio CLI` command
 
    ```shell
