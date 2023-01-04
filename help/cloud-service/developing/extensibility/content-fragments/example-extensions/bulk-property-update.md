@@ -9,10 +9,10 @@ level: Beginner
 kt: 11604
 thumbnail: KT-11604.png
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: a7b32982b547eb292384d2ebde80ba745091702a
+source-git-commit: 8b683fdcea05859151b929389f7673075c359141
 workflow-type: tm+mt
 source-wordcount: '782'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -32,7 +32,7 @@ Die Beispielerweiterung weist folgende Funktionen auf:
 1. Beim Übermitteln des Formulars werden die Liste der ausgewählten Inhaltsfragmente und der AEM Host an die [Benutzerdefinierte Adobe I/O Runtime-Aktion](#adobe-io-runtime-action).
 1. Die [Adobe I/O Runtime-Aktion](#adobe-io-runtime-action) validiert die Eingaben und sendet HTTP-PUT-Anfragen an AEM, um die ausgewählten Inhaltsfragmente zu aktualisieren.
 1. Eine Reihe von HTTP-PUT für jedes Inhaltsfragment, um die angegebene Eigenschaft zu aktualisieren.
-1. AEM as a Cloud Service behält die Eigenschaft für Aktualisierungen des Inhaltsfragments bei und gibt erfolgreiche Fehlerantworten für die Adobe I/O Runtime-Aktion zurück.
+1. AEM as a Cloud Service behält die Eigenschaft für Aktualisierungen des Inhaltsfragments bei und gibt Erfolgs- oder Fehlerantworten für die Adobe I/O Runtime-Aktion zurück.
 1. Das Modal erhielt die Antwort von der Adobe I/O Runtime-Aktion und zeigt eine Liste erfolgreicher Massenaktualisierungen an.
 
 In diesem Video werden die Beispiel-Massen-Property-Update-Erweiterung, ihre Funktionsweise und ihre Entwicklung beschrieben.
@@ -147,7 +147,7 @@ In dieser Beispielanwendung gibt es eine modale React-Komponente (`BulkPropertyU
 Wichtig: Jede Interaktion mit AEM aus der Erweiterung sollte an eine [AppBuilder Adobe I/O Runtime-Aktion](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), bei dem es sich um einen separaten Server-losen Prozess handelt, der in ausgeführt wird. [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
 Adobe I/O Runtime-Aktionen zur Kommunikation mit AEM dienen dazu, Verbindungsprobleme zwischen Cross-Origin Resource Sharing (CORS) zu vermeiden.
 
-Wenn das Formular für die Aktualisierung der Masseneigenschaft gesendet wird, wird ein benutzerdefinierter `onSubmitHandler()` ruft die Adobe I/O Runtime-Aktion auf und übergibt den aktuellen AEM-Host (Domäne) und das AEM Zugriffstoken des Benutzers, wodurch wiederum die [AEM Inhaltsfragment-API](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/content-fragments-api.html) , um die Inhaltsfragmente zu aktualisieren.
+Wenn das Formular für die Aktualisierung der Masseneigenschaft gesendet wird, wird ein benutzerdefinierter `onSubmitHandler()` ruft die Adobe I/O Runtime-Aktion auf und übergibt den aktuellen AEM-Host (Domäne) und das AEM Zugriffstoken des Benutzers, wodurch wiederum die [AEM Inhaltsfragment-API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=de) , um die Inhaltsfragmente zu aktualisieren.
 
 Wenn die Antwort von der Adobe I/O Runtime-Aktion empfangen wird, wird das Modal aktualisiert, um die Ergebnisse des Massen-Eigenschaftsaktualisierungsvorgangs anzuzeigen.
 
@@ -408,7 +408,7 @@ export default function BulkPropertyUpdateModal() {
 
 ## Adobe I/O Runtime-Aktion
 
-Eine App Builder-App AEM Erweiterung kann 0 oder viele Adobe I/O Runtime-Aktionen definieren oder verwenden.
+Eine AEM App Builder-App kann 0 oder viele Adobe I/O Runtime-Aktionen definieren oder verwenden.
 Adobe Runtime-Aktionen sollten verantwortungsvolle Arbeit sein, die die Interaktion mit AEM oder anderen Adobe-Webdiensten erfordert.
 
 In dieser Beispielanwendung wird die Adobe I/O Runtime-Aktion ausgeführt, die den Standardnamen verwendet `generic` - verantwortlich ist für:
