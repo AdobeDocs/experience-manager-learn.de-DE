@@ -5,9 +5,9 @@ breadcrumb-title: AEM Sites-Tutorials
 feature-set: Experience Manager Sites, Experience Manager
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: c82965636ddeef7dc165e0bea079c99f1a16e0ca
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '438'
 ht-degree: 33%
 
 ---
@@ -42,7 +42,7 @@ ht-degree: 33%
    + [Web-optimierte Bildbereitstellung](components/web-optimized-image-delivery.md)
    + [Komponentenkonsole](components/components-console-feature-video-use.md)
 + Inhaltsfragmente {#content-fragments}
-   + [Konsole &quot;Inhaltsfragmente&quot;](content-fragments/content-fragments-console.md)
+   + [Inhaltsfragmentkonsole](content-fragments/content-fragments-console.md)
    + [Authoring mit Inhaltsfragmenten](content-fragments/content-fragments-feature-video-use.md)
    + [Bereitstellen von Inhaltsfragmenten](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [Übersetzen von Inhaltsfragmenten](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -58,13 +58,14 @@ ht-degree: 33%
    + [Erste Schritte mit AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=de)
    + [Erste Schritte mit AEM SPA Editor und React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
    + [Erweitern der Seiteneigenschaften](developing/page-properties-technical-video-develop.md)
+   + [Responsive Breakpoints](developing/responsive-breakpoints.md)
    + [Entwickeln mit dem Stilsystem](developing/style-system-technical-video-understand.md)
    + [Best Practices für Stilsysteme](developing/style-organization-style-system-understand-article.md)
    + [Entwickeln für Seitenunterschiede](developing/page-diff-technical-video-develop.md)
    + [Implementieren der einfachen Suche](developing/search-tutorial-develop.md)
    + [Freigabe in Social Media](developing/social-media-sharing-technical-video-use.md)
    + [Anpassen von Komponentensymbolen](developing/component-icons-technical-video-develop.md)
-+ Personalisierung    {#personalization}
++ Personalisierung {#personalization}
    + [Integration mit Adobe Target](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html)
    + [Einrichten von Experience Fragments und Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [Verwenden von Experience Fragments mit Adobe Target](personalization/experience-fragment-target-offer-feature-video-use.md)
