@@ -6,10 +6,10 @@ sub-product: Experience Manager Assets
 version: Cloud Service
 feature-set: Experience Manager Assets
 team: TM
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: d020ad061ab39a4871a2bc851f883d880e7df6ee
 workflow-type: tm+mt
-source-wordcount: '73'
-ht-degree: 30%
+source-wordcount: '72'
+ht-degree: 33%
 
 ---
 
@@ -18,7 +18,6 @@ ht-degree: 30%
 
 + [Übersicht](overview.md)
 
-+ [Bereitstellung](./provisioning.md)
 + [Erste Schritte](./getting-started.md)
 
 + Grundlagen{#basics}
@@ -42,4 +41,4 @@ ht-degree: 30%
 
 + [Adobe Journey Optimizer-Integration](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=de)
 
-+ [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html).
++ [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html)
