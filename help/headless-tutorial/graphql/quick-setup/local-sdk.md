@@ -1,6 +1,6 @@
 ---
 title: AEM Headless-Schnelleinrichtung mit dem lokalen SDK
-description: Erste Schritte mit Adobe Experience Manager (AEM) und GraphQL. Installieren Sie das AEM SDK, fügen Sie Beispielinhalte hinzu und stellen Sie eine Anwendung bereit, die mithilfe ihrer GraphQL-APIs Inhalte aus AEM verbraucht. Erfahren Sie, wie AEM kanalübergreifende Erlebnisse ermöglicht.
+description: Erste Schritte mit Adobe Experience Manager (AEM) und GraphQL. Installieren Sie das AEM SDK, fügen Sie Beispielinhalte hinzu und stellen Sie eine Anwendung bereit, die mithilfe ihrer GraphQL-APIs Inhalte von AEM verbraucht. Erfahren Sie, wie AEM kanalübergreifende Erlebnisse ermöglicht.
 version: Cloud Service
 mini-toc-levels: 1
 kt: 6386
@@ -10,24 +10,23 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 64086f3f7b340b143bd281e2f6f802af07554ecf
+source-git-commit: f63ed212a5a8a6689b25bd0bc9438c605a129729
 workflow-type: tm+mt
-source-wordcount: '1258'
-ht-degree: 3%
+source-wordcount: '1256'
+ht-degree: 2%
 
 ---
 
 # AEM Headless-Schnelleinrichtung mit dem lokalen SDK {#setup}
 
-Mit der AEM Headless-Schnelleinrichtung erhalten Sie praktische Informationen zu AEM Headless mithilfe von Inhalten aus dem WKND Site-Beispielprojekt und einer React App (einem SPA), die den Inhalt über AEM Headless GraphQL-APIs nutzt. In diesem Handbuch werden die [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html).
+Mit der AEM Headless-Schnelleinrichtung erhalten Sie praktische Informationen zu AEM Headless mithilfe von Inhalten aus dem WKND Site-Beispielprojekt und einer React-App (einem SPA), die den Inhalt über AEM Headless-GraphQL-APIs nutzt. In diesem Handbuch werden die [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html).
 
 ## Voraussetzungen {#prerequisites}
 
 Die folgenden Tools sollten lokal installiert werden:
 
 * [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-* [Node.js v10+](https://nodejs.org/en/)
-* [npm 6+](https://www.npmjs.com/)
+* [Node.js v14.x](https://nodejs.org/en/)
 * [Git](https://git-scm.com/)
 
 ## 1. Installieren des AEM SDK {#aem-sdk}
@@ -102,7 +101,7 @@ Die WKND-Site enthält Konfigurationen, die erforderlich sind, um eine [GraphQL-
 
 ## 3. Herunterladen und Ausführen der WKND React-App {#sample-app}
 
-Eines der Ziele dieses Tutorials besteht darin, zu zeigen, wie AEM Inhalte von einer externen Anwendung mit den GraphQL-APIs genutzt werden können. In diesem Tutorial wird eine React-App-Beispielanwendung verwendet. Die React-App ist absichtlich einfach, um sich auf die Integration mit AEM GraphQL-APIs zu konzentrieren.
+Eines der Ziele dieses Tutorials besteht darin, zu zeigen, wie AEM Inhalte von einer externen Anwendung mithilfe der GraphQL-APIs genutzt werden können. In diesem Tutorial wird eine React-App-Beispielanwendung verwendet. Die React-App ist absichtlich einfach, um sich auf die Integration mit AEM GraphQL-APIs zu konzentrieren.
 
 1. Öffnen Sie eine neue Eingabeaufforderung und klonen Sie die React-Beispielanwendung von GitHub:
 
@@ -171,12 +170,12 @@ Wenn die React-App ausgeführt wird, aktualisieren Sie den Inhalt in AEM und ste
 
 ## 5. GraphiQL durchsuchen {#graphiql}
 
-1. Öffnen [GraphiQL](http://localhost:4502/aem/graphiql.html) durch Navigation zu **Instrumente** > **Allgemein** > **GraphQL-Abfrageeditor**
+1. Öffnen [GraphiQL](http://localhost:4502/aem/graphiql.html) durch Navigation zu **Instrumente** > **Allgemein** > **GraphQL Query Editor**
 1. Wählen Sie auf der linken Seite vorhandene persistente Abfragen aus und führen Sie sie aus, um die Ergebnisse anzuzeigen.
 
    >[!NOTE]
    >
-   > Das GraphQL-Tool und die GraphQL-API lautet [detaillierter im Tutorial](../multi-step/explore-graphql-api.md).
+   > Das GraphiQL-Tool und die GraphQL-API lautet [detaillierter im Tutorial](../multi-step/explore-graphql-api.md).
 
 ## Herzlichen Glückwunsch!{#congratulations}
 
