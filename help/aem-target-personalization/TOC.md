@@ -21,6 +21,6 @@ ht-degree: 46%
 + [Personalisierung mit Visual Experience Composer](./personalization-use-case-3.md)
 + [Personalisierung vollständiger Webseiten-Erlebnisse](./personalization-use-case-2.md)
 + Implementierung {#aem-target-implementation}
-   + [Einführung   ](./implementation.md)
+   + [Einführung](./implementation.md)
    + [AEM und Adobe Target mithilfe von Launch und Adobe I/O](./using-launch-adobe-io.md)
    + [AEM und Adobe Target mit veralteten Cloud Services](./using-aem-cloud-services.md)

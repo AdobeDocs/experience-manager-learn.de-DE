@@ -31,18 +31,18 @@ ht-degree: 23%
       + [4 - Inhaltsfragmentvarianten](./graphql/video-series/content-fragment-variations.md)
       + [5 - GraphQL-Endpunkte](./graphql/video-series/graphql-endpoints.md)
       + [6 - Architektur der Autoren- und Veröffentlichungsinstanz](./graphql/video-series/author-publish-architecture.md)
-      + [7 - GraphQL - Persistente Abfragen](./graphql/video-series/graphql-persisted-queries.md)
+      + [7 - Persistente GraphQL-Abfragen](./graphql/video-series/graphql-persisted-queries.md)
    + Grundlegendes Tutorial{#multi-step}
       + [Übersicht](./graphql/multi-step/overview.md)
       + [1 - Definieren von Inhaltsfragmentmodellen](./graphql/multi-step/content-fragment-models.md)
       + [2 - Erstellen von Inhaltsfragmenten](./graphql/multi-step/author-content-fragments.md)
-      + [3 - GraphQL-APIs erkunden](./graphql/multi-step/explore-graphql-api.md)
+      + [3 - GraphQL-APIs](./graphql/multi-step/explore-graphql-api.md)
       + [4 - Erstellen einer React-App](./graphql/multi-step/graphql-and-react-app.md)
    + Erweitertes Tutorial{#advanced-tutorial}
       + [Übersicht](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
       + [1 - Erstellen von Inhaltsfragmentmodellen](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)
       + [2 - Inhaltsfragmente erstellen](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)
-      + [3 - Erkunden der AEM GraphQL-API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
+      + [3 - Erkunden Sie die AEM GraphQL API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
       + [4 - Beständige GraphQL-Abfragen](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5 - Client-Anwendungs-Integration](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
 + Bereitstellungen{#deployments}

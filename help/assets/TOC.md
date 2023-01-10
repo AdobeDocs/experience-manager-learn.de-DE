@@ -22,7 +22,7 @@ ht-degree: 33%
    + [Grundlegende Ordner](configuring/baseline-folders.md)
    + [Grundlegende Berechtigungen](configuring/baseline-permissions.md)
    + [Tagging](configuring/tagging.md)
-   + [Metadatenschemas](configuring/metadata-schemas.md)
+   + [Metadatenschemata](configuring/metadata-schemas.md)
    + [Metadatenprofile](configuring/metadata-profiles.md)
    + [Metadatenordnerschemata](configuring/metadata-folder-schemas.md)
    + [Asset-Admin-Suchleiste](configuring/assets-admin-search-rail.md)
