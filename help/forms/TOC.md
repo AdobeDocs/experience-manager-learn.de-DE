@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 8f17e98c56c78824e8850402e3b79b3d47901c0b
+source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
 workflow-type: tm+mt
-source-wordcount: '1759'
+source-wordcount: '1776'
 ht-degree: 3%
 
 ---
@@ -100,6 +100,11 @@ ht-degree: 3%
    + [Vorfüllen von HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Formulardatenmodell mit Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Dynamisches Hinzufügen von Elementen zur Auswahlkomponente](adaptive-forms/choice-group-items-adding-dynamically-article.md)
++ DAM-Ordnerinhalt auswählen und assemblieren{#select-dam-folder-content}
+   + [Einführung](display-and-assemble-dam-folder-contents/introduction.md)
+   + [Auswahlgruppe ausfüllen](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
+   + [Zusammenführen ausgewählter Assets](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
+   + [Lokale Bereitstellung der Assets](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
 + Vorausfüllen des adaptiven Formulars mithilfe des Formulardatenmodells{#prefill-fdm-db}
    + [Einführung](prefill-fdm-db/introduction.md)
    + [Datenbanktabellen erstellen](prefill-fdm-db/create-database-tables.md)
