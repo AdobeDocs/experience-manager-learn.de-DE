@@ -9,15 +9,15 @@ level: Beginner
 kt: 11649
 thumbnail: KT-11649.png
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: 8b683fdcea05859151b929389f7673075c359141
+source-git-commit: d902eb9a8d497a43c8d4ca63767f81a35eadf139
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1314'
 ht-degree: 1%
 
 ---
 
 
-# Generieren digitaler Bilder, Hochladen in AEM Beispielerweiterung
+# OpenAI-basierte digitale Bildgenerierung, Hochladen in AEM Beispielerweiterung
 
 ![Generieren digitaler Bilder](./assets/digital-image-generation/screenshot.png){align="center"}
 
@@ -43,6 +43,10 @@ Die Beispielerweiterung weist folgende Funktionen auf:
 1. Anschließend wird der Bild-Upload aus der App Builder-Laufzeit unter einem vordefinierten Pfad in DAM AEM.
 1. Der AEM as a Cloud Service speichert das Bild im DAM und gibt Erfolgs- oder Fehlerantworten für die Adobe I/O Runtime-Aktion zurück. Die erfolgreiche Upload-Antwort aktualisiert den Bildeigenschaftswert des ausgewählten Inhaltsfragments mithilfe einer anderen HTTP-Anforderung, die über die Adobe I/O Runtime-Aktion AEM werden soll.
 1. Das Modal empfängt die Antwort von der Adobe I/O Runtime-Aktion und stellt AEM Asset-Detaillink des neu generierten, hochgeladenen Bildes bereit.
+
+In diesem Video wird die beispielhafte Bildgenerierung mit der Erweiterung OpenAI oder DALL.E 2, deren Funktionsweise und Entwicklung beschrieben. Das Video enthält Kapitelmarkierungen wie __Funktionale Demo, Einrichtung und technischer Code__ um das entsprechende Stück schnell zu sehen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3413093/?quality=12&learn=on)
 
 
 ## App Builder-Erweiterungsanwendung
