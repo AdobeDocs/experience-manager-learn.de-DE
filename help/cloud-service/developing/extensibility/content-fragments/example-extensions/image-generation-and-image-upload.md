@@ -1,5 +1,5 @@
 ---
-title: OpenAI-basierte Bildgenerierung über die Erweiterung der Inhaltsfragmentkonsole
+title: OpenAI-Bildgenerierung über eine benutzerdefinierte Erweiterung der Inhaltsfragment-Konsole
 description: Beispiel AEM Erweiterung der Inhaltsfragmente-Konsole , die mithilfe von OpenAI oder DALL-E 2 digitale Bilder aus natürlichen Sprachbeschreibungen generiert und generierte Bilder in AEM hochlädt und mit dem Inhaltsfragment verknüpft.
 feature: Developer Tools
 version: Cloud Service
@@ -9,15 +9,15 @@ level: Beginner
 kt: 11649
 thumbnail: KT-11649.png
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: d902eb9a8d497a43c8d4ca63767f81a35eadf139
+source-git-commit: 06c09affd427a4818f5a916a84490f9ed09d372c
 workflow-type: tm+mt
-source-wordcount: '1314'
+source-wordcount: '1313'
 ht-degree: 1%
 
 ---
 
 
-# OpenAI-basierte digitale Bildgenerierung, Hochladen in AEM Beispielerweiterung
+# Generieren von Bild-Assets mit OpenAI AEM
 
 ![Generieren digitaler Bilder](./assets/digital-image-generation/screenshot.png){align="center"}
 
