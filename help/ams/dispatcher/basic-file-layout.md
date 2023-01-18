@@ -7,10 +7,10 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
 workflow-type: tm+mt
-source-wordcount: '1163'
-ht-degree: 2%
+source-wordcount: '1161'
+ht-degree: 1%
 
 ---
 
@@ -146,7 +146,7 @@ Dieses Verzeichnis enthält alle `_cache.any`, `_invalidate.any` -Dateien, die S
 
 #### Verzeichnis der Client-Header
 
-Dieser Ordner kann alle `_clientheaders.any` -Dateien erstellen, die Listen von Client-Headern enthalten, die an AEM weitergegeben werden sollen, wenn eine Anforderung eingeht.  Weitere Informationen zu diesem Abschnitt finden Sie hier . [here](https://docs.adobe.com/content/help/de-DE/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-http-headers-to-pass-through-clientheaders)
+Dieser Ordner kann alle `_clientheaders.any` -Dateien erstellen, die Listen von Client-Headern enthalten, die an AEM weitergegeben werden sollen, wenn eine Anforderung eingeht.  Weitere Informationen zu diesem Abschnitt finden Sie unter [here](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de)
 
 - `/etc/httpd/conf.dispatcher.d/clientheaders/`
 

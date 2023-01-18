@@ -1,5 +1,5 @@
 ---
-title: DAM-Ordnerinhalte auswählen und herunterladen
+title: Lokale Bereitstellung der Assets
 description: Bereitstellen der Tutorial-Assets in Ihrer lokalen AEM-Instanz
 feature: Adaptive Forms
 version: 6.5
@@ -7,9 +7,9 @@ topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
+source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '150'
 ht-degree: 0%
 
 ---

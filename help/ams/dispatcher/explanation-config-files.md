@@ -7,7 +7,7 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
+source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
 workflow-type: tm+mt
 source-wordcount: '1705'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Der Apache-Webserver kümmert sich bei der Zielgruppenbestimmung mit einer Datei
 
 ## In &quot;conf.modules.d/&quot;enthaltene Dateien
 
-| Datei | Dateiziel | Beschreibung |
+| File | Dateiziel | Beschreibung |
 | --- | --- | --- |
 | DATEINAME`.any` | `/etc/httpd/conf.dispatcher.d/` | Das AEM Dispatcher-Apache-Modul stellt die Einstellungen aus `*.any` Dateien. Die standardmäßige übergeordnete Include-Datei lautet `conf.dispatcher.d/dispatcher.any` |
 | DATEINAME`_farm.any` | Staging: `/etc/httpd/conf.dispatcher.d/available_farms/`<br>Aktiv: `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b> Diese Farm-Dateien sollen nicht in die `enabled_farms` Ordner, aber verwenden Sie `symlinks` zu einem relativen Pfad zum `available_farms/*_farm.any` file </div> <br/>`*_farm.any` -Dateien in `conf.dispatcher.d/dispatcher.any` -Datei. Diese übergeordneten Farm-Dateien dienen zur Steuerung des Modulverhaltens für jeden Renderer oder Website-Typ. Die Dateien werden im `available_farms` Verzeichnis und aktiviert mit einer `symlink` in `enabled_farms` Verzeichnis.  <br/>Sie werden automatisch anhand des Namens aus dem `dispatcher.any` -Datei.<br/><b>Grundlinie</b> Farm-Dateien beginnen mit `000_` , um sicherzustellen, dass sie zuerst geladen werden.<br><b>Benutzerdefiniert</b> Farm-Dateien sollten nach geladen werden, indem sie ihr Zahlenschema unter `100_` , um das richtige Einschlussverhalten sicherzustellen. |
@@ -251,7 +251,7 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 Wenn beliebige DATEINAME_farm.any-Dateien aus `/etc/httpd/conf.dispatcher.d/available_farms/` -Verzeichnis verknüpfen mit `/etc/httpd/conf.dispatcher.d/enabled_farms/` -Verzeichnis, das in der laufenden Konfiguration verwendet wird.
 
-Die Farm-Dateien enthalten Untereinschlüsse, die auf [Abschnitte der obersten Ebene der Farm](https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#defining-farms-farms) wie Cache, Clientheaders, Filter, Renderer und Hosts.
+Die Farm-Dateien enthalten Untereinschlüsse, die auf [Abschnitte der obersten Ebene der Farm](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#defining-farms-farms) wie Cache, Clientheaders, Filter, Renderer und Hosts.
 
 Die `FILENAME_farm.any` -Dateien enthalten -Anweisungen für jede Datei, je nachdem, wo sie in die Farm-Datei aufgenommen werden müssen.  Im Folgenden finden Sie eine Beispielsyntax eines `FILENAME_farm.any` als Referenz:
 
