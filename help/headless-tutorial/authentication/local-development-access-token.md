@@ -12,10 +12,11 @@ thumbnail: 330477.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
+last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: ef11609fe6ab266102bdf767a149284b9b912f98
+source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1067'
 ht-degree: 0%
 
 ---
@@ -40,6 +41,7 @@ Das Zugriffstoken für lokale Entwicklung bietet Zugriff auf die Autoren- und Ve
 1. Öffnen Sie das Programm mit der AEM as a Cloud Service Umgebung, in die integriert werden soll.
 1. Tippen Sie auf __Ellipse__ neben der Umgebung in __Umgebungen__ und wählen Sie __Entwicklerkonsole__
 1. Tippen Sie im __Integrationen__ tab
+1. Tippen Sie auf __Lokales Token__ tab
 1. Tippen __Abrufen des lokalen Entwicklungstokens__ button
 1. Tippen Sie auf die __Download-Schaltfläche__ in der linken oberen Ecke zum Herunterladen der JSON-Datei mit `accessToken` und speichern Sie die JSON-Datei an einem sicheren Speicherort auf Ihrem Entwicklungscomputer.
    + Dies ist Ihr 24-Stunden-Entwickler-Zugriffstoken für die AEM as a Cloud Service Umgebung.
