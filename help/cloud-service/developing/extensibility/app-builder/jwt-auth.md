@@ -8,9 +8,9 @@ role: Developer
 level: Intermediate
 kt: 11743
 last-substantial-update: 2023-01-17T00:00:00Z
-source-git-commit: 0990fc230e2a36841380b5b0c6cd94dca24614fa
+source-git-commit: de2788d8f3971a47fca53e35ee84cbbaa0137140
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '436'
 ht-degree: 2%
 
 ---
@@ -70,8 +70,7 @@ Die `JWT_PRIVATE_KEY` muss besonders formatiert sein, da es sich um einen native
 
 1. Öffnen Sie `Terminal`
 1. `$ base64 -i /path/to/private.key | pbcopy`
-
-Die base64-Ausgabe wird automatisch in die Zwischenablage kopiert
+1. Die base64-Ausgabe wird automatisch in die Zwischenablage kopiert
 
 >[!TAB Windows]
 
@@ -79,7 +78,8 @@ Die base64-Ausgabe wird automatisch in die Zwischenablage kopiert
 
 1. Öffnen Sie `Command Prompt`
 1. `$ certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key`
-1. Kopieren Sie den Inhalt von `encoded-private.key` in die Zwischenablage
+1. `$ findstr /v CERTIFICATE C:\path\to\encoded-private.key`
+1. Die base64-Ausgabe in die Zwischenablage kopieren
 
 >[!TAB Linux®]
 
@@ -89,14 +89,14 @@ Die base64-Ausgabe wird automatisch in die Zwischenablage kopiert
 
 >[!ENDTABS]
 
-Beispielsweise könnte der folgende Wert zum `JWT_PRIVATE_KEY` Schlüssel in der `.env`:
+Beispielsweise kann der folgende base64-kodierte private Schlüssel zum `JWT_PRIVATE_KEY` Schlüssel in der `.env`:
 
 ```
 ...
 JWT_PRIVATE_KEY=LS0tLS1C..kQgUFJJVkFURSBLRVktLS0tLQ==
 ```
 
-## Erweiterungskonfiguration
+## Inputzuordnung
 
 Mit dem JWT-Berechtigungswert, der im `.env` -Datei, müssen sie den AppBuilder-Aktionseingaben zugeordnet werden, damit sie in der Aktion selbst gelesen werden können. Fügen Sie dazu Einträge für jede Variable im `ext.config.yaml` action `inputs` im Format: `INPUT_NAME=$ENV_KEY`.
 
@@ -132,7 +132,7 @@ runtimeManifest:
 Die unter `inputs` finden Sie im `params` -Objekt, das für die App Builder-Aktion bereitgestellt wird.
 
 
-## Konvertieren von JWT-Berechtigungen in Zugriffstoken
+## JWT-Anmeldeinformationen für den Zugriff auf Token
 
 In der App Builder-Aktion sind die JWT-Anmeldeinformationen im `params` -Objekt und verwenden Sie [`@adobe/jwt-auth`](https://www.npmjs.com/package/@adobe/jwt-auth) , um ein Zugriffstoken zu generieren, das wiederum auf andere Adobe-APIs und -Dienste zugreifen kann.
 
