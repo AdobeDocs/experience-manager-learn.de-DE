@@ -1,5 +1,5 @@
 ---
-title: Erkunden Sie die AEM GraphQL-API - Erweiterte Konzepte von AEM Headless - GraphQL
+title: Erkunden Sie die AEM GraphQL API - Erweiterte Konzepte von AEM Headless - GraphQL
 description: Senden Sie GraphQL-Abfragen mit der GraphiQL-IDE. Erfahren Sie mehr über erweiterte Abfragen mit Filtern, Variablen und Anweisungen. Abfrage nach Fragmenten und Inhaltsverweisen, einschließlich Verweisen aus mehrzeiligen Textfeldern.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
@@ -7,16 +7,16 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: bd7916be-8caa-4321-add0-4c9031306d60
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
 
 ---
 
-# GraphQL-API AEM
+# Erkunden Sie die AEM GraphQL API
 
-Mit der GraphQL-API in AEM können Sie Inhaltsfragmentdaten für nachgelagerte Anwendungen verfügbar machen. Im grundlegenden Tutorial [mehrstufiges GraphQL-Tutorial](../multi-step/explore-graphql-api.md)verwendet haben, haben Sie den GraphQL-Explorer zum Testen und Verfeinern der GraphQL-Abfragen verwendet.
+Mit der GraphQL-API in AEM können Sie Inhaltsfragmentdaten für nachgelagerte Anwendungen verfügbar machen. Im grundlegenden Tutorial [Mehrstufiges GraphQL-Tutorial](../multi-step/explore-graphql-api.md)verwendet haben, haben Sie den GraphiQL Explorer zum Testen und Verfeinern der GraphQL-Abfragen verwendet.
 
 In diesem Kapitel verwenden Sie den GraphiQL Explorer, um erweiterte Abfragen zu definieren, um Daten der Inhaltsfragmente zu erfassen, die Sie in der [vorheriges Kapitel](../advanced-graphql/author-content-fragments.md).
 
@@ -47,7 +47,7 @@ Erkunden Sie als Nächstes die Leistungsfähigkeit AEM GraphQL-API mit dem integ
 
 >[!IMPORTANT]
 >
->In einigen Versionen von AEM (6.X.X) muss das Tool GraphiQL Explorer (auch GraphiQL IDE genannt) manuell installiert werden. Befolgen Sie [Anweisung von hier](../multi-step/explore-graphql-api.md#install-the-graphiql-tool-optional).
+>In einigen Versionen von AEM (6.X.X) muss das Tool GraphiQL Explorer (auch GraphiQL IDE genannt) manuell installiert werden. Befolgen Sie [Anweisung von hier](../how-to/install-graphiql-aem-6-5.md).
 
 1. Stellen Sie oben rechts sicher, dass der Endpunkt auf **WKND Shared Endpoint**. Ändern der _Endpunkt_ Dropdown-Wert Hier zeigt den vorhandenen _Beständige Abfragen_ in der oberen linken Ecke.
 
@@ -58,9 +58,9 @@ Dadurch werden alle Abfragen auf Modelle angewendet, die in der **WKND Shared** 
 
 ## Filtern einer Liste von Inhaltsfragmenten mithilfe von Abfragevariablen
 
-Im vorherigen [mehrstufiges GraphQL-Tutorial](../multi-step/explore-graphql-api.md), haben Sie grundlegende persistente Abfragen definiert und verwendet, um Inhaltsfragmentdaten abzurufen. Hier erweitern Sie dieses Wissen und filtern Inhaltsfragmentdaten, indem Sie Variablen an die persistenten Abfragen übergeben.
+Im vorherigen [Mehrstufiges GraphQL-Tutorial](../multi-step/explore-graphql-api.md), haben Sie grundlegende persistente Abfragen definiert und verwendet, um Inhaltsfragmentdaten abzurufen. Hier erweitern Sie dieses Wissen und filtern Inhaltsfragmentdaten, indem Sie Variablen an die persistenten Abfragen übergeben.
 
-Bei der Entwicklung von Clientanwendungen müssen Sie normalerweise Inhaltsfragmente basierend auf dynamischen Argumenten filtern. Mit der AEM GraphQL-API können Sie diese Argumente als Variablen in einer Abfrage übergeben, um Zeichenfolgenkonstruktionen auf Client-Seite zur Laufzeit zu vermeiden. Weitere Informationen zu GraphQL-Variablen finden Sie unter [GraphQL-Dokumentation](https://graphql.org/learn/queries/#variables).
+Bei der Entwicklung von Clientanwendungen müssen Sie normalerweise Inhaltsfragmente basierend auf dynamischen Argumenten filtern. Mit der AEM GraphQL-API können Sie diese Argumente als Variablen in einer Abfrage übergeben, um die Erstellung von Zeichenfolgen zur Laufzeit auf Client-Seite zu vermeiden. Weitere Informationen zu GraphQL-Variablen finden Sie in der [GraphQL-Dokumentation](https://graphql.org/learn/queries/#variables).
 
 In diesem Beispiel werden alle Instruktoren abgefragt, die eine bestimmte Fähigkeit besitzen.
 
@@ -229,7 +229,7 @@ Mit der AEM GraphQL-API können Sie verschachtelte Inhaltsfragmente abfragen. Im
 
 ## Abfragen von Inline-Verweisen aus einem mehrzeiligen Textfeld {#query-rte-reference}
 
-Mit der AEM GraphQL-API können Sie in mehrzeiligen Textfeldern nach Inhalten und Fragmentverweisen abfragen. Im vorherigen Kapitel haben Sie beide Referenztypen zum **Beschreibung** -Feld des Yosemite-Team-Inhaltsfragments. Nun rufen wir diese Verweise ab.
+Mit der AEM GraphQL API können Sie in mehrzeiligen Textfeldern nach Inhalten und Fragmentverweisen abfragen. Im vorherigen Kapitel haben Sie beide Referenztypen zum **Beschreibung** -Feld des Yosemite-Team-Inhaltsfragments. Nun rufen wir diese Verweise ab.
 
 1. Fügen Sie in die GraphiQL-IDE die folgende Abfrage in den linken Bereich ein:
 
@@ -348,7 +348,7 @@ Mit der AEM GraphQL-API können Sie in mehrzeiligen Textfeldern nach Inhalten un
 
 ## Abfrage mithilfe von Anweisungen
 
-Manchmal müssen Sie bei der Entwicklung von Clientanwendungen die Struktur Ihrer Abfragen bedingt ändern. In diesem Fall können Sie mit der AEM GraphQL-API GraphQL-Anweisungen verwenden, um das Verhalten Ihrer Abfragen basierend auf den bereitgestellten Kriterien zu ändern. Weitere Informationen zu GraphQL-Direktiven finden Sie unter [GraphQL-Dokumentation](https://graphql.org/learn/queries/#directives).
+Manchmal müssen Sie bei der Entwicklung von Clientanwendungen die Struktur Ihrer Abfragen bedingt ändern. In diesem Fall können Sie mit der AEM GraphQL API GraphQL-Anweisungen verwenden, um das Verhalten Ihrer Abfragen anhand der bereitgestellten Kriterien zu ändern. Weitere Informationen zu GraphQL-Direktiven finden Sie im [GraphQL-Dokumentation](https://graphql.org/learn/queries/#directives).
 
 Im [vorheriger Abschnitt](#query-rte-reference), haben Sie gelernt, wie Sie in mehrzeiligen Textfeldern nach Inline-Verweisen abfragen können. Der Inhalt wurde aus dem `description` im `plaintext` Format. Als Nächstes erweitern wir diese Abfrage und verwenden eine Anweisung, um bedingt abzurufen. `description` im `json` -Format.
 
