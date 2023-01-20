@@ -11,9 +11,9 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: 7c2115945e2d62f52c777bba4d736ecd3262eecc
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '913'
 ht-degree: 1%
 
 ---
@@ -89,38 +89,84 @@ Wenn keine Richtlinie konfiguriert ist, [!DNL CORS] -Anfragen werden auch nicht 
 
 Site 1 ist ein einfaches, anonym zugängliches schreibgeschütztes Szenario, in dem Inhalte über verwendet werden. [!DNL GET] Anforderungen:
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:primaryType="sling:OsgiConfig"
-    alloworigin="[https://site1.com]"
-    alloworiginregexp="[]"
-    allowedpaths="[/content/site1/.*]"
-    exposedheaders="[]"
-    maxage="{Long}1800"
-    supportedheaders="[Origin,Accept,X-Requested-With,Content-Type,
-Access-Control-Request-Method,Access-Control-Request-Headers]"
-    supportedmethods="[GET]"
-    supportscredentials="{Boolean}false"
-/>
+```json
+{
+  "supportscredentials":false,
+  "exposedheaders":[
+    ""
+  ],
+  "supportedmethods":[
+    "GET",
+    "HEAD",
+    "OPTIONS"
+  ],
+  "alloworigin":[
+    "http://127.0.0.1:3000",
+    "https://site1.com"
+    
+  ],
+  "maxage:Integer": 1800,
+  "alloworiginregexp":[
+    "http://localhost:.*"
+    "https://.*\.site1\.com"
+  ],
+  "allowedpaths":[
+    "/content/_cq_graphql/site1/endpoint.json",
+    "/graphql/execute.json.*",
+    "/content/site1/.*"
+  ],
+  "supportedheaders":[
+    "Origin",
+    "Accept",
+    "X-Requested-With",
+    "Content-Type",
+    "Access-Control-Request-Method",
+    "Access-Control-Request-Headers",
+  ]
+}
 ```
 
-Site 2 ist komplexer und erfordert autorisierte und unsichere Anfragen:
+Site 2 ist komplexer und erfordert autorisierte und mutierbare Anfragen (POST, PUT, DELETE):
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    jcr:primaryType="sling:OsgiConfig"
-    alloworigin="[https://site2.com]"
-    alloworiginregexp="[]"
-    allowedpaths="[/content/site2/.*,/libs/granite/csrf/token.json]"
-    exposedheaders="[]"
-    maxage="{Long}1800"
-    supportedheaders="[Origin,Accept,X-Requested-With,Content-Type,
-Access-Control-Request-Method,Access-Control-Request-Headers,Authorization,CSRF-Token]"
-    supportedmethods="[GET,HEAD,POST,DELETE,OPTIONS,PUT]"
-    supportscredentials="{Boolean}true"
-/>
+```json
+{
+  "supportscredentials":true,
+  "exposedheaders":[
+    ""
+  ],
+  "supportedmethods":[
+    "GET",
+    "HEAD"
+    "POST",
+    "DELETE",
+    "OPTIONS",
+    "PUT"
+  ],
+  "alloworigin":[
+    "http://127.0.0.1:3000",
+    "https://site2.com"
+    
+  ],
+  "maxage:Integer": 1800,
+  "alloworiginregexp":[
+    "http://localhost:.*"
+    "https://.*\.site2\.com"
+  ],
+  "allowedpaths":[
+    "/content/site2/.*",
+    "/libs/granite/csrf/token.json",
+  ],
+  "supportedheaders":[
+    "Origin",
+    "Accept",
+    "X-Requested-With",
+    "Content-Type",
+    "Access-Control-Request-Method",
+    "Access-Control-Request-Headers",
+    "Authorization",
+    "CSRF-Token"
+  ]
+}
 ```
 
 ## Caching-Bedenken und -Konfiguration des Dispatchers {#dispatcher-caching-concerns-and-configuration}
@@ -132,8 +178,8 @@ Im Allgemeinen können dieselben Überlegungen zum Zwischenspeichern von Inhalte
 | zwischenspeicherbar | Umgebung | Authentifizierungsstatus | Erklärung |
 |-----------|-------------|-----------------------|-------------|
 | Nein | AEM Publish | Authentifiziert | Die Dispatcher-Zwischenspeicherung in der AEM-Autoreninstanz ist auf statische, nicht erstellte Assets beschränkt. Dadurch wird es schwierig und unmöglich, die meisten Ressourcen in der AEM-Autoreninstanz zwischenzuspeichern, einschließlich HTTP-Antwortheadern. |
-| Nein | AEM-Veröffentlichung | Authentifiziert | Vermeiden Sie das Zwischenspeichern von CORS-Headern bei authentifizierten Anforderungen. Dies steht im Einklang mit der allgemeinen Anleitung, authentifizierte Anforderungen nicht zwischenspeichern zu lassen, da es schwierig ist zu bestimmen, wie sich der Authentifizierungs-/Autorisierungsstatus des anfragenden Benutzers auf die bereitgestellte Ressource auswirkt. |
-| Ja | AEM-Veröffentlichung | Anonym | Anonyme Anfragen, die im Dispatcher zwischengespeichert werden können, können auch ihre Antwortheader zwischenspeichern, sodass zukünftige CORS-Anfragen auf den zwischengespeicherten Inhalt zugreifen können. Jede Änderung der CORS-Konfiguration bei der AEM-Veröffentlichung **must** gefolgt von einer Invalidierung der betroffenen zwischengespeicherten Ressourcen. Best Practices erfordern die Bereinigung des Dispatcher-Caches durch Code- oder Konfigurationsbereitstellungen, da es schwierig ist zu bestimmen, welche zwischengespeicherten Inhalte möglicherweise ausgeführt werden. |
+| Nein | AEM Publish | Authentifiziert | Vermeiden Sie das Zwischenspeichern von CORS-Headern bei authentifizierten Anforderungen. Dies steht im Einklang mit der allgemeinen Anleitung, authentifizierte Anforderungen nicht zwischenspeichern zu lassen, da es schwierig ist zu bestimmen, wie sich der Authentifizierungs-/Autorisierungsstatus des anfragenden Benutzers auf die bereitgestellte Ressource auswirkt. |
+| Ja | AEM Publish | Anonym | Anonyme Anfragen, die im Dispatcher zwischengespeichert werden können, können auch ihre Antwortheader zwischenspeichern, sodass zukünftige CORS-Anfragen auf den zwischengespeicherten Inhalt zugreifen können. Jede Änderung der CORS-Konfiguration bei der AEM-Veröffentlichung **must** gefolgt von einer Invalidierung der betroffenen zwischengespeicherten Ressourcen. Best Practices erfordern die Bereinigung des Dispatcher-Caches durch Code- oder Konfigurationsbereitstellungen, da es schwierig ist zu bestimmen, welche zwischengespeicherten Inhalte möglicherweise ausgeführt werden. |
 
 Um das Zwischenspeichern von CORS-Headern zu ermöglichen, fügen Sie allen unterstützenden AEM Publish dispatcher.any-Dateien die folgende Konfiguration hinzu.
 
