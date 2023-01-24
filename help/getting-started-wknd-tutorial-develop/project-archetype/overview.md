@@ -11,25 +11,25 @@ mini-toc-levels: 1
 index: y
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
 workflow-type: tm+mt
-source-wordcount: '475'
-ht-degree: 29%
+source-wordcount: '476'
+ht-degree: 32%
 
 ---
 
 # Erste Schritte mit AEM Sites - Projektarchetyp {#project-archetype}
 
-Willkommen bei einem mehrteiligen Tutorial, das für Entwickler konzipiert ist, die neu in Adobe Experience Manager (AEM) sind. Dieses Tutorial führt Sie durch die Implementierung einer AEM Website für eine fiktive Lifestyle-Marke, die WKND.
+Willkommen bei einem mehrteiligen Tutorial, das für Entwickler konzipiert ist, die neu in Adobe Experience Manager (AEM) sind. Dieses mehrteilige Tutorial führt durch die Implementierung einer AEM-Site für eine fiktive Lifestyle-Marke namens WKND.
 
 Dieses Tutorial beginnt mit der Verwendung des [AEM Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de) , um ein neues Projekt zu erstellen.
 
-Das Tutorial wurde für die Verwendung mit **AEM as a Cloud Service** und ist abwärtskompatibel mit **AEM 6.5.10+**. Die Site wird mit folgenden Elementen implementiert:
+Das Tutorial wurde für die Verwendung mit **AEM as a Cloud Service** und ist abwärtskompatibel mit **AEM 6.5.14+**. Die Site wird mit folgenden Elementen implementiert:
 
-* [Maven-AEM-Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+* [Maven-AEM-Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de)
 * [Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de)
-* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/getting-started/getting-started.html?lang=de)
-* Sling-Modelle
+* [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)
+* [Sling-Modelle](https://sling.apache.org/documentation/bundles/models.html)
 * [Bearbeitbare Vorlagen](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=de)
 * [Stilsystem](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html?lang=de)
 
@@ -37,14 +37,14 @@ Das Tutorial wurde für die Verwendung mit **AEM as a Cloud Service** und ist ab
 
 ## Lokale Entwicklungsumgebung {#local-dev-environment}
 
-Zum Abschluss dieses Tutorials ist eine lokale Entwicklungsumgebung erforderlich. Screenshots und Videos werden mit dem AEM as a Cloud Service SDK erfasst, das in einer Mac OS-Umgebung mit [Visual Studio-Code](https://code.visualstudio.com/) als IDE. Befehle und Code sollten unabhängig vom lokalen Betriebssystem sein, sofern nicht anders angegeben.
+Zum Abschluss dieses Tutorials ist eine lokale Entwicklungsumgebung erforderlich. Screenshots und Videos werden mit dem AEM as a Cloud Service SDK erfasst, das in einer macOS-Umgebung mit [Visual Studio-Code](https://code.visualstudio.com/) als IDE. Befehle und Code sollten unabhängig vom lokalen Betriebssystem sein, sofern nicht anders angegeben.
 
 ### Erforderliche Software
 
 Folgendes sollte lokal installiert werden:
 
-* [Lokale AEM **Autor** instance](https://experience.adobe.com/#/downloads) (Cloud Service SDK, 6.5.10+)
-* [Java 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
+* [Lokale AEM **Autor** instance](https://experience.adobe.com/#/downloads) (Cloud Service SDK oder 6.5.14+)
+* [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) (3.3.9 oder höher)
 * [Node.js](https://nodejs.org/en/) (LTS - Langfristige Unterstützung)
 * [npm 6+](https://www.npmjs.com/)
@@ -60,7 +60,7 @@ Folgendes sollte lokal installiert werden:
 
 ## GitHub {#github}
 
-Den gesamten Code für das Projekt finden Sie auf Github im AEM Guide Repo:
+Der Code aus diesem Tutorial finden Sie auf GitHub im AEM Guide-Repository:
 
 **[GitHub: WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd)**
 
@@ -68,4 +68,4 @@ Darüber hinaus hat jeder Teil des Tutorials eine eigene Verzweigung in GitHub. 
 
 ## Nächste Schritte {#next-steps}
 
-Worauf wartest du?! Starten Sie das Tutorial, indem Sie zur [Projekteinrichtung](project-setup.md) Kapitel und erfahren Sie, wie Sie ein neues Adobe Experience Manager-Projekt mithilfe des AEM Projektarchetyps erstellen.
+Worauf wartest du? Starten Sie das Tutorial, indem Sie zur [Projekteinrichtung](project-setup.md) Kapitel und erfahren Sie, wie Sie ein neues Adobe Experience Manager-Projekt mithilfe des AEM Projektarchetyps erstellen.
