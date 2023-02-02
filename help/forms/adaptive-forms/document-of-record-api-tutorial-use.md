@@ -7,11 +7,11 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 9a3b2128-a383-46ea-bcdc-6015105c70cc
-last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+last-substantial-update: 2023-01-26T00:00:00Z
+source-git-commit: ddef90067d3ae4a3c6a705b5e109e474bab34f6d
 workflow-type: tm+mt
-source-wordcount: '254'
-ht-degree: 5%
+source-wordcount: '261'
+ht-degree: 6%
 
 ---
 
@@ -26,15 +26,40 @@ Dieser Artikel veranschaulicht die Verwendung der `com.adobe.aemds.guide.addon.d
 1. Rufen Sie die Render-Methode des DoRService auf und übergeben Sie das DoROptions-Objekt an die Render-Methode
 
 ```java
+String dataXml = request.getParameter("data");
+System.out.println("Got " + dataXml);
+Session session;
 com.adobe.aemds.guide.addon.dor.DoRService dorService = sling.getService(com.adobe.aemds.guide.addon.dor.DoRService.class);
-com.adobe.aemds.guide.addon.dor.DoROptions dorOptions =  new com.adobe.aemds.guide.addon.dor.DoROptions();
- dorOptions.setData(dataXml);
- dorOptions.setFormResource(resource);
- java.util.Locale locale = new java.util.Locale("en");
- dorOptions.setLocale(locale);
- com.adobe.aemds.guide.addon.dor.DoRResult dorResult = dorService.render(dorOptions);
- byte[] fileBytes = dorResult.getContent();
- com.adobe.aemfd.docmanager.Document dorDocument = new com.adobe.aemfd.docmanager.Document(fileBytes);
+System.out.println("Got ... DOR Service");
+com.mergeandfuse.getserviceuserresolver.GetResolver aemDemoListings = sling.getService(com.mergeandfuse.getserviceuserresolver.GetResolver.class);
+System.out.println("Got aem DemoListings");
+resourceResolver = aemDemoListings.getFormsServiceResolver();
+session = resourceResolver.adaptTo(Session.class);
+resource = resourceResolver.getResource("/content/forms/af/sandbox/1201-borrower-payments");
+com.adobe.aemds.guide.addon.dor.DoROptions dorOptions = new com.adobe.aemds.guide.addon.dor.DoROptions();
+dorOptions.setData(dataXml);
+dorOptions.setFormResource(resource);
+java.util.Locale locale = new java.util.Locale("en");
+dorOptions.setLocale(locale);
+com.adobe.aemds.guide.addon.dor.DoRResult dorResult = dorService.render(dorOptions);
+byte[] fileBytes = dorResult.getContent();
+com.adobe.aemfd.docmanager.Document dorDocument = new com.adobe.aemfd.docmanager.Document(fileBytes);
+resource = resourceResolver.getResource("/content/usergenerated/content/aemformsenablement");
+Node paydotgov = resource.adaptTo(Node.class);
+java.util.Random r = new java.util.Random();
+String nodeName = Long.toString(Math.abs(r.nextLong()), 36);
+Node fileNode = paydotgov.addNode(nodeName + ".pdf", "nt:file");
+
+System.out.println("Created file Node...." + fileNode.getPath());
+Node contentNode = fileNode.addNode("jcr:content", "nt:resource");
+Binary binary = session.getValueFactory().createBinary(dorDocument.getInputStream());
+contentNode.setProperty("jcr:data", binary);
+JSONWriter writer = new JSONWriter(response.getWriter());
+writer.object();
+writer.key("filePath");
+writer.value(fileNode.getPath());
+writer.endObject();
+session.save();
 ```
 
 Gehen Sie wie folgt vor, um dies auf Ihrem lokalen System zu testen:
@@ -54,6 +79,6 @@ Gehen Sie wie folgt vor, um dies auf Ihrem lokalen System zu testen:
 PDF wird in der neuen Browser-Registerkarte nicht angezeigt:
 
 1. Vergewissern Sie sich, dass Sie keine Popups in Ihrem Browser blockieren
-1. Befolgen Sie die in diesem Abschnitt beschriebenen Schritte. [Artikel](service-user-tutorial-develop.md)
+1. Stellen Sie sicher, dass Sie AEM Server als Administrator starten (zumindest unter Windows)
 1. Stellen Sie sicher, dass das Bundle &quot;DevelopingWithServiceUser&quot;in *aktiver Status*
-1. Stellen Sie sicher, dass die Daten des Systembenutzers über Lese-, Änderungs- und Erstellungsberechtigungen für den folgenden Knoten verfügen `/content/usergenerated/content/aemformsenablement`
+1. [Stellen Sie sicher, dass der Systembenutzer](http://localhost:4502/useradmin) &quot;fd-service&quot;verfügt über Lese-, Änderungs- und Erstellungsberechtigungen für den folgenden Knoten `/content/usergenerated/content/aemformsenablement`
