@@ -9,9 +9,9 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 6ae98ce749f8a485bdaa4c6c6232e52d8d6246b3
 workflow-type: tm+mt
-source-wordcount: '1261'
+source-wordcount: '1318'
 ht-degree: 5%
 
 ---
@@ -58,6 +58,8 @@ Dieses Tutorial verwendet `curl` , um die Cloud Manager-API-Konfigurationen vorz
 Aktivieren Sie zunächst das virtuelle private Netzwerk auf AEM as a Cloud Service.
 
 1. Bestimmen Sie zunächst mithilfe der Cloud Manager-API die Region, in der die erweiterte Vernetzung erforderlich ist. [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) Vorgang. Die `region name` ist erforderlich, um nachfolgende Cloud Manager-API-Aufrufe durchzuführen. In der Regel wird der Bereich verwendet, in dem sich die Produktionsumgebung befindet.
+
+   Suchen Sie die Region Ihrer AEM as a Cloud Service Umgebung in [Cloud Manager](https://my.cloudmanager.adobe.com) unter [Umgebungsdetails](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Der in Cloud Manager angezeigte regionale Name kann [Dem Regions-Code zugeordnet](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) wird in der Cloud Manager-API verwendet.
 
    __listRegions-HTTP-Anfrage__
 
