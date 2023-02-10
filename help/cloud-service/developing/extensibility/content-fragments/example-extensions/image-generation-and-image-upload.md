@@ -1,6 +1,6 @@
 ---
 title: OpenAI-Bildgenerierung über eine benutzerdefinierte Erweiterung der Inhaltsfragment-Konsole
-description: Beispiel AEM Erweiterung der Inhaltsfragmente-Konsole , die mithilfe von OpenAI oder DALL-E 2 digitale Bilder aus natürlichen Sprachbeschreibungen generiert und generierte Bilder in AEM hochlädt und mit dem Inhaltsfragment verknüpft.
+description: Erfahren Sie, wie Sie mit OpenAI oder DALL-E 2 digitale Bilder aus einer Beschreibung in natürlicher Sprache generieren und generiertes Bild mit einer benutzerdefinierten Erweiterung der Inhaltsfragmentkonsole in AEM hochladen.
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -10,19 +10,21 @@ kt: 11649
 thumbnail: KT-11649.png
 doc-type: article
 last-substantial-update: 2023-01-04T00:00:00Z
-source-git-commit: a298dbd27dfda00c80d2098199eb418200af0233
+source-git-commit: 5f0464d7bb8ffde9a9b3bd7fd67dc0e341970a6f
 workflow-type: tm+mt
-source-wordcount: '1313'
-ht-degree: 1%
+source-wordcount: '1399'
+ht-degree: 2%
 
 ---
 
 
 # Generieren von Bild-Assets mit OpenAI AEM
 
-![Generieren digitaler Bilder](./assets/digital-image-generation/screenshot.png){align="center"}
+Erfahren Sie, wie Sie mit OpenAI oder DALL.E 2 ein Bild generieren und es für Content Velocity in AEM DAM hochladen.
 
-Dieses Beispiel AEM die Erweiterung der Inhaltsfragmentkonsole ist eine [Aktionsleiste](../action-bar.md) Erweiterung, die digitale Bilder aus einer Eingabe in natürlicher Sprache generiert, mithilfe von [OpenAI-API](https://openai.com/api/) oder [DALL.E 2](https://openai.com/dall-e-2/). Das generierte Bild wird in das AEM DAM hochgeladen und die Bildeigenschaft des ausgewählten Inhaltsfragments wird aktualisiert, um auf dieses neu generierte, hochgeladene Bild aus DAM zu verweisen.
+![Generieren digitaler Bilder](./assets/digital-image-generation/screenshot.png){width="500" zoomable="yes"}
+
+Dieses Beispiel AEM die Erweiterung der Inhaltsfragmentkonsole ist eine [Aktionsleiste](../action-bar.md) Erweiterung, die ein digitales Bild aus der Eingabe natürlicher Sprachen generiert, mithilfe von [OpenAI-API](https://openai.com/api/) oder [DALL.E 2](https://openai.com/dall-e-2/). Das generierte Bild wird in das AEM DAM hochgeladen und die Bildeigenschaft des ausgewählten Inhaltsfragments wird aktualisiert, um auf dieses neu generierte, hochgeladene Bild aus DAM zu verweisen.
 
 In diesem Beispiel erfahren Sie Folgendes:
 
@@ -108,6 +110,12 @@ Die generierte App Builder-Erweiterung wird wie unten beschrieben aktualisiert.
 1. Installieren unter Node.js-Bibliotheken
    1. [Die OpenAI Node.js-Bibliothek](https://github.com/openai/openai-node#installation) - um die OpenAI-API einfach aufzurufen
    1. [AEM-Upload](https://github.com/adobe/aem-upload#install) - um Bilder in AEM-CS-Instanzen hochzuladen.
+
+
+>[!TIP]
+>
+>In den folgenden Abschnitten erfahren Sie mehr über die wichtigsten JavaScript-Dateien für React- und Adobe I/O Runtime-Aktionsaktionen. Für Ihre Referenz verwenden Sie die Schlüsseldateien aus `web-src` und  `actions` Ordner des AppBuilder-Projekts bereitgestellt werden, siehe [adobe-appbuilder-cfc-ext-image-generation-code.zip](./assets/digital-image-generation/adobe-appbuilder-cfc-ext-image-generation-code.zip).
+
 
 ## App-Routen{#app-routes}
 
@@ -198,7 +206,7 @@ In dieser Beispielanwendung gibt es eine modale React-Komponente (`GenerateImage
 1. Die Antwort des Bildgenerierungsvorgangs, die den Link AEM Asset-Details des neu generierten, hochgeladenen Bildes bereitstellt.
 
 Wichtig: Jede Interaktion mit AEM aus der Erweiterung sollte an eine [AppBuilder Adobe I/O Runtime-Aktion](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), bei dem es sich um einen separaten Server-losen Prozess handelt, der in ausgeführt wird. [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
-Adobe I/O Runtime-Aktionen zur Kommunikation mit AEM dienen dazu, Verbindungsprobleme zwischen Cross-Origin Resource Sharing (CORS) zu vermeiden.
+Die Verwendung von Adobe I/O Runtime-Aktionen zur Kommunikation mit AEM und die Vermeidung von CORS-Verbindungsproblemen (Cross Origin Resource Sharing).
 
 Wenn die _Bild generieren_ Formular gesendet wird, eine benutzerdefinierte `onSubmitHandler()` Ruft die Adobe I/O Runtime-Aktion auf und übergibt die Bildbeschreibung, den aktuellen AEM-Host (Domäne) und das AEM Zugriffstoken des Benutzers. Die Aktion ruft dann die [Bildgenerierung](https://beta.openai.com/docs/guides/images/image-generation-beta) API zum Generieren eines Bildes mithilfe der gesendeten Bildbeschreibung. Nächste Verwendung [AEM-Upload](https://github.com/adobe/aem-upload) Knotenmodul `DirectBinaryUpload` -Klasse das generierte Bild in AEM hochgeladen und verwendet schließlich [AEM Inhaltsfragment-API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=de) , um die Inhaltsfragmente zu aktualisieren.
 
@@ -458,6 +466,11 @@ export default function GenerateImageModal() {
   }
 }
 ```
+
+>[!NOTE]
+>
+>Im `buildAssetDetailsURL()` -Funktion `aemAssetdetailsURL` Variablenwert geht davon aus, dass [Unified Shell](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html#overview) aktiviert ist. Wenn Sie die Unified Shell deaktiviert haben, müssen Sie die `/ui#/aem` aus dem Variablenwert.
+
 
 ## Adobe I/O Runtime-Aktion
 
