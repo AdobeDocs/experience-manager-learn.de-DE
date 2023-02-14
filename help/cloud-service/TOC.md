@@ -5,10 +5,10 @@ breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 0990fc230e2a36841380b5b0c6cd94dca24614fa
+source-git-commit: 1a7b4c9c4575407467856d795ad3b6dde8e10532
 workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 26%
+source-wordcount: '897'
+ht-degree: 27%
 
 ---
 
@@ -92,6 +92,11 @@ ht-degree: 26%
       + [Service-Benutzer](./developing/advanced/service-users.md)
       + [Benutzerdefinierte Namespaces](./developing/advanced/custom-namespaces.md)
       + [Zwischenspeichern von Seitenvarianten](./developing/advanced/variant-caching.md)
+   + Schnelle Entwicklungsumgebung{#rde}
+      + [Übersicht](./developing/rde/overview.md)
+      + [Einrichtung](./developing/rde/how-to-setup.md)
+      + [Informationen zur Verwendung](./developing/rde/how-to-use.md)
+      + [Entwicklungslebenszyklus](./developing/rde/development-life-cycle.md)
    + [AEM SDK-API-JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html)
 + Debugging-AEM{#debugging}
    + Debugging des AEM SDK{#debugging-aem-sdk}
