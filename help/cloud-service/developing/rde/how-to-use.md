@@ -9,9 +9,9 @@ level: Beginner
 jira: KT-11862
 thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 674407637c475ea9b70ecbc81f9e9bfece0fe9df
+source-git-commit: 9123771fed25cf2c5c3443c92dcc0e6704476bb0
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '186'
 ht-degree: 5%
 
 ---
@@ -33,9 +33,12 @@ Verwenden [AEM WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd#aem-
 
 ## Zusätzliche Ressourcen
 
-
 [Dokumentation zu RDE-Befehlen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#rde-cli-commands)
 
 [Adobe I/O Runtime CLI-Plug-in für Interaktionen mit AEM Rapid Development Environments](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
 [AEM Projekteinrichtung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=de)
+
+## Nächster Schritt
+
+Erfahren Sie mehr über die [Lebenszyklus der Entwicklung/Bereitstellung mithilfe von RDE](./development-life-cycle.md) , um Funktionen schnell bereitzustellen.
