@@ -9,9 +9,9 @@ level: Beginner
 jira: KT-11861
 thumbnail: KT-11861.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 81e1e2bf0382f6a577c1037dcd0d58ebc73366cd
+source-git-commit: 65d54f0137786c7e8ac9ac962c424dd20bf5f3dd
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '492'
 ht-degree: 4%
 
 ---
@@ -45,19 +45,19 @@ So stellen Sie die [WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd
 
 Installieren Sie die erweiterbare Adobe I/O Runtime-CLI (auch als `aio CLI` durch Ausführen des folgenden Befehls über die Befehlszeile.
 
-    &quot;shell
-    $ npm install -g @adobe/aio-cli
-    &quot;
+```shell
+$ npm install -g @adobe/aio-cli
+```
 
 ### AEM Plug-ins
 
 Installieren Sie Cloud Manager und AEM RDE-Plug-ins mithilfe des `aio cli`s `plugins:install` Befehl.
 
-    &quot;shell
-    $ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
-    
-    $ aio plugins:install @adobe/aio-cli-plugin-aem-rde
-    &quot;
+```shell
+$ aio plugins:install @adobe/aio-cli-plugin-cloudmanager
+
+$ aio plugins:install @adobe/aio-cli-plugin-aem-rde
+```
 
 Mit dem Cloud Manager-Plug-in können Entwickler über die Befehlszeile mit Cloud Manager interagieren.
 
@@ -91,23 +91,23 @@ Die AEM Plug-ins müssen für die Interaktion mit Ihrem RDE konfiguriert werden.
 
 Sie können die aktuellen Konfigurationswerte überprüfen, indem Sie den folgenden Befehl ausführen.
 
-    &quot;shell
-    $ aio config:list
-    &quot;
+```shell
+$ aio config:list
+```
 
 Außerdem können Sie den folgenden Befehl verwenden, um zu erfahren, bei welchem Unternehmen Sie derzeit angemeldet sind.
 
-    &quot;shell
-    $ aio where
-    &quot;
+```shell
+$ aio where
+```
 
 ## RDE-Zugriff überprüfen
 
 Überprüfen Sie die Installation und Konfiguration des AEM RDE-Plug-ins, indem Sie den folgenden Befehl ausführen.
 
-    &quot;shell
-    $ aio aem:rde:status
-    &quot;
+```shell
+$ aio aem:rde:status
+```
 
 Die RDE-Statusinformationen werden wie der Umgebungsstatus, die Liste der _Ihr AEM Projekt_ Bundles und Konfigurationen im Autoren- und Veröffentlichungsdienst.
 
