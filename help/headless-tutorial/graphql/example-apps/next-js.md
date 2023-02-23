@@ -1,6 +1,6 @@
 ---
 title: Next.js - AEM Headless-Beispiel
-description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Next.js-Anwendung zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen können.
+description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Next.js-Anwendung zeigt, wie Sie mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen Inhalte abfragen können.
 version: Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments, GraphQL API
@@ -10,16 +10,16 @@ level: Beginner
 kt: 10721
 thumbnail: KT-10721.jpg
 last-substantial-update: 2022-10-03T00:00:00Z
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '806'
 ht-degree: 2%
 
 ---
 
 # Next.js-App
 
-Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Next.js-Anwendung zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen können. Der AEM Headless-Client für JavaScript wird verwendet, um die von GraphQL gespeicherten Abfragen auszuführen, die die App unterstützen.
+Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Next.js-Anwendung zeigt, wie Sie mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen Inhalte abfragen können. Der AEM Headless-Client für JavaScript wird verwendet, um die von GraphQL gespeicherten Abfragen auszuführen, die die App unterstützen.
 
 ![Next.js-App mit AEM Headless](./assets/next-js/next-js.png)
 
@@ -35,7 +35,7 @@ Die folgenden Tools sollten lokal installiert werden:
 
 ## AEM
 
-Das Programm Next.js funktioniert mit den folgenden AEM Bereitstellungsoptionen. Alle Implementierungen erfordern [WKND Shared v2.1.0+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest), [WKND Site v2.1.0+](https://github.com/adobe/aem-guides-wknd/releases/latest)oder [Referenz-Demo-Add-on](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/overview.html) in der AEM as a Cloud Service Umgebung installiert werden.
+Das Programm Next.js funktioniert mit den folgenden AEM Bereitstellungsoptionen. Alle Implementierungen erfordern [WKND Shared v2.1.0+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) oder [WKND Site v2.1.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) in der AEM as a Cloud Service Umgebung installiert werden.
 
 Diese Beispielanwendung &quot;Next.js&quot;dient dazu, eine Verbindung zu __AEM-Veröffentlichung__ Dienst.
 
@@ -90,14 +90,6 @@ Next.js ist für die Verbindung mit __AEM-Veröffentlichung__ und auf nicht gesc
    ...
    ```
 
-   Bei Verwendung von [Referenz-Demo-Add-on](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/overview.html), verwenden Sie die `aem-demo-assets` GraphQL-API-Endpunkt.
-
-   ```plain
-   ...
-   NEXT_PUBLIC_AEM_GRAPHQL_ENDPOINT=aem-demo-assets
-   ...
-   ```
-
 1. Öffnen Sie eine Eingabeaufforderung und starten Sie die App Next.js mit den folgenden Befehlen:
 
    ```shell
@@ -111,11 +103,11 @@ Next.js ist für die Verbindung mit __AEM-Veröffentlichung__ und auf nicht gesc
 
 ## Der Code
 
-Nachstehend finden Sie eine Zusammenfassung dazu, wie die Next.js-App erstellt wurde, wie sie eine Verbindung zu AEM Headless herstellt, um Inhalte mithilfe von GraphQL-gespeicherten Abfragen abzurufen, und wie diese Daten dargestellt werden. Den vollständigen Code finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/next-js).
+Nachstehend finden Sie eine Zusammenfassung dazu, wie die Next.js-App erstellt wurde, wie sie eine Verbindung zu AEM Headless herstellt, um mithilfe von durch GraphQL gespeicherten Abfragen Inhalte abzurufen, und wie diese Daten dargestellt werden. Den vollständigen Code finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/next-js).
 
 ### Beständige Abfragen
 
-Gemäß AEM Best Practices für Headless verwendet die Next.js-App AEM von GraphQL gespeicherten Abfragen, um Abenteuerdaten abzufragen. Das Programm verwendet zwei persistente Abfragen:
+Gemäß AEM Best Practices für Headless verwendet die Next.js-App AEM von GraphQL beibehaltene Abfragen, um Abenteuerdaten abzufragen. Das Programm verwendet zwei persistente Abfragen:
 
 + `wknd/adventures-all` persistente Abfrage, die alle Abenteuer in AEM mit einer gekürzten Reihe von Eigenschaften zurückgibt. Diese beibehaltene Abfrage treibt die Erlebnisliste der ersten Ansicht an.
 
@@ -198,13 +190,13 @@ query($slug: String!) {
 }
 ```
 
-### GraphQL-persistente Abfrage ausführen
+### Durchführen einer von GraphQL beibehaltenen Abfrage
 
-AEM persistente Abfragen werden über HTTP-GET ausgeführt und daher die [AEM Headless-Client für JavaScript](https://github.com/adobe/aem-headless-client-js) wird verwendet, um [die beibehaltenen GraphQL-Abfragen ausführen](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) AEM und laden Sie den Abenteuerinhalt in die App.
+AEM persistente Abfragen werden über HTTP-GET ausgeführt und daher die [AEM Headless-Client für JavaScript](https://github.com/adobe/aem-headless-client-js) wird verwendet, um [die gespeicherten GraphQL-Abfragen ausführen](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md#aemheadlessrunpersistedquerypath-variables-options--promiseany) AEM und laden Sie den Abenteuerinhalt in die App.
 
 Jede persistente Abfrage verfügt über eine entsprechende Funktion in `src/lib//aem-headless-client.js`, der den AEM GraphQL-Endpunkt aufruft und die Abenteuerdaten zurückgibt.
 
-Jede Funktion ruft wiederum die `aemHeadlessClient.runPersistedQuery(...)`, um die beibehaltene GraphQL-Abfrage auszuführen.
+Jede Funktion ruft wiederum die `aemHeadlessClient.runPersistedQuery(...)`, um die persistente GraphQL-Abfrage auszuführen.
 
 ```js
 // src/lib/aem-headless-client.js
@@ -247,7 +239,7 @@ Die Anwendung Next.js verwendet zwei Seiten, um die Abenteuerdaten darzustellen.
 
    A [Dynamische Route von Next.js](https://nextjs.org/docs/routing/dynamic-routes) , das die Details eines einzelnen Abenteuers anzeigt. Diese dynamische Route ruft die Daten jedes Abenteuers mithilfe von [getStaticProps() von Next.js](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) über einen Aufruf an `getAdventureBySlug(..)` mithilfe der `slug` über die Abenteuerauswahl auf der `adventures/index.js` Seite.
 
-   Die dynamische Route kann die Details für alle Abenteuer vorab abrufen, indem sie [getStaticPaths() von Next.js](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) und das Füllen aller möglichen Routenberechtigungen basierend auf der vollständigen Liste der von der GraphQL-Abfrage zurückgegebenen Abenteuer  `getAdventurePaths()`
+   Die dynamische Route kann die Details für alle Abenteuer vorab abrufen, indem sie [getStaticPaths() von Next.js](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) und das Ausfüllen aller möglichen Routenberechtigungen auf der Grundlage der vollständigen Liste der von der GraphQL-Abfrage zurückgegebenen Abenteuer  `getAdventurePaths()`
 
    Die Verwendung von `getStaticPaths()` und `getStaticProps(..)` die statische Site-Erstellung dieser &quot;Next.js&quot;-Seiten zugelassen.
 

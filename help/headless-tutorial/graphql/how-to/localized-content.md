@@ -1,6 +1,6 @@
 ---
 title: Verwenden lokalisierter Inhalte mit AEM Headless
-description: Erfahren Sie, wie Sie mit GraphQL AEM lokalisierten Inhalt abfragen können.
+description: Erfahren Sie, wie Sie mit GraphQL AEM nach lokalisierten Inhalten abfragen können.
 version: Cloud Service
 feature: GraphQL API
 topic: Headless
@@ -8,10 +8,10 @@ role: Developer
 level: Intermediate
 kt: 10254
 thumbnail: KT-10254.jpeg
-source-git-commit: 4fa84b0461cbdf2e25336259c4128be5585b8787
+source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 2%
+source-wordcount: '508'
+ht-degree: 3%
 
 ---
 
@@ -36,9 +36,9 @@ Der Gebietsschema-Code ist auch der Wert, der zum Filtern der von der GraphQL-Ab
 | en | /content/dam/.../**en**/.. | englischer Inhalt |
 | es | /content/dam/.../**es**/.. | Spanischer Inhalt |
 
-## GraphQL-persistente Abfrage
+## Persistente GraphQL-Abfrage
 
-AEM bietet eine `_locale` GraphQL-Filter, der Inhalte automatisch nach Gebietsschema-Code filtert. Beispielsweise können Sie alle englischen Abenteuer im [WKND-Referenz-Demoprojekt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) kann mit einer neuen persistenten Abfrage durchgeführt werden `wknd-shared/adventures-by-locale` definiert als:
+AEM bietet eine `_locale` GraphQL filtert Inhalte automatisch nach Gebietsschema-Code . Beispielsweise können Sie alle englischen Abenteuer im [WKND-Site-Projekt](https://github.com/adobe/aem-guides-wknd) kann mit einer neuen persistenten Abfrage durchgeführt werden `wknd-shared/adventures-by-locale` definiert als:
 
 ```graphql
 query($locale: String!) {
@@ -84,7 +84,7 @@ export default LocaleContext;
 
 Als Nächstes erstellen Sie eine React-Komponente mit dem Gebietsschema-Umschalter, die als [LocaleContext&#39;s](#locale-context) -Wert zur Auswahl des Benutzers hinzufügen.
 
-Dieser Gebietsschemawert wird verwendet, um die GraphQL-Abfragen zu leiten und sicherzustellen, dass nur Inhalte zurückgegeben werden, die dem ausgewählten Gebietsschema entsprechen.
+Dieser Gebietsschemawert wird verwendet, um die GraphQL-Abfragen zu unterstützen und sicherzustellen, dass nur Inhalte zurückgegeben werden, die dem ausgewählten Gebietsschema entsprechen.
 
 ```javascript
 // src/LocaleSwitcher.js
@@ -112,7 +112,7 @@ Die Komponente Abenteuer fragt AEM alle Abenteuer nach Gebietsschema ab und list
 
 Dieser Ansatz kann auf andere Abfragen in Ihrer Anwendung erweitert werden, um sicherzustellen, dass alle Abfragen nur Inhalte enthalten, die durch die Gebietsschema-Auswahl eines Benutzers angegeben wurden.
 
-Die Abfrage nach AEM wird im benutzerdefinierten React-Haken ausgeführt [getAdventuresByLocale, ausführlicher beschrieben in der Dokumentation AEM GraphQL-Abfrage](./aem-headless-sdk.md).
+Die Abfrage nach AEM wird im benutzerdefinierten React-Haken ausgeführt [getAdventuresByLocale, ausführlicher beschrieben in der Dokumentation AEM GraphQL](./aem-headless-sdk.md).
 
 ```javascript
 // src/Adventures.js

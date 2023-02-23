@@ -9,9 +9,9 @@ level: Intermediate
 kt: 10253
 thumbnail: KT-10253.jpeg
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 3a7c04dfe465c1eff29ba6b4e4b7e24f047e5b42
+source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1177'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 Bilder sind ein wichtiger Aspekt von [Entwickeln umfassender, überzeugender AEM Headless-Erlebnisse](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=de). AEM Headless unterstützt die Verwaltung von Bild-Assets und deren optimierte Bereitstellung.
 
-Inhaltsfragmente, die bei AEM Headless-Inhaltsmodellierung verwendet werden, verweisen häufig auf Bild-Assets, die für die Anzeige im Headless-Erlebnis vorgesehen sind. AEM GraphQL-Abfragen können geschrieben werden, um URLs für Bilder bereitzustellen, die darauf basieren, von wo aus das Bild referenziert wird.
+Inhaltsfragmente, die bei AEM Headless-Inhaltsmodellierung verwendet werden, verweisen häufig auf Bild-Assets, die für die Anzeige im Headless-Erlebnis vorgesehen sind. AEM GraphQL-Abfragen können geschrieben werden, um URLs zu Bildern bereitzustellen, die darauf basieren, von wo aus das Bild referenziert wird.
 
 Die `ImageRef` Der Typ verfügt über drei URL-Optionen für Inhaltsverweise:
 
@@ -35,10 +35,10 @@ Die Verwendung der Felder erfolgt am besten nach folgenden Kriterien:
 | ImageRef-Felder | Von AEM bereitgestellte Client-Webanwendung | Client-App-Abfragen AEM Author | Client-App-Abfragen AEM Publish |
 |--------------------|:------------------------------:|:-----------------------------:|:------------------------------:|
 | `_path` | ms | (App muss Host in URL angeben) | (App muss Host in URL angeben) |
-| `_authorUrl` | ✘ | ms | ✘ |
-| `_publishUrl` | ✘ | ✘ | ms |
+| `_authorUrl` | ✘ | ✔ | ✘ |
+| `_publishUrl` | ✘ | ✘ | ✔ |
 
-Verwendung von `_authorUrl` und `_publishUrl` sollte an dem GraphQL-Endpunkt ausgerichtet sein, der für die Quelle der GraphQL-Antwort verwendet wird.
+Verwendung von `_authorUrl` und `_publishUrl` sollte an dem AEM GraphQL-Endpunkt ausgerichtet sein, der für die Quelle der GraphQL-Antwort verwendet wird.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_images"
@@ -53,9 +53,9 @@ Feldtypen werden im Abschnitt [Inhaltsfragmentmodell](https://experienceleague.a
 
 ![Inhaltsfragmentmodell mit Inhaltsverweis auf ein Bild](./assets/images/content-fragment-model.jpeg)
 
-## GraphQL-persistente Abfrage
+## Persistente GraphQL-Abfrage
 
-Geben Sie in der GraphQL-Abfrage das Feld als `ImageRef` Typ eingeben und die entsprechenden Felder anfordern `_path`, `_authorUrl`oder `_publishUrl` erforderlich sind. Beispielsweise können Sie ein Abenteuer im [WKND-Referenz-Demoprojekt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/demo-add-on/create-site.html) , einschließlich der Bild-URL für Bild-Asset-Verweise in `primaryImage` -Feld kann mit einer neuen persistenten Abfrage durchgeführt werden `wknd-shared/adventure-image-by-path` definiert als:
+Geben Sie in der GraphQL-Abfrage das Feld als `ImageRef` Typ eingeben und die entsprechenden Felder anfordern `_path`, `_authorUrl`oder `_publishUrl` erforderlich sind. Beispielsweise können Sie ein Abenteuer im [WKND-Site-Projekt](https://github.com/adobe/aem-guides-wknd) , einschließlich der Bild-URL für Bild-Asset-Verweise in `primaryImage` -Feld kann mit einer neuen persistenten Abfrage durchgeführt werden `wknd-shared/adventure-image-by-path` definiert als:
 
 ```graphql
 query ($path: String!) {
@@ -106,7 +106,7 @@ In React sieht die Anzeige des Bildes aus AEM Publish wie folgt aus:
 <img src={ data.adventureByPath.item.primaryImage._publishUrl } />
 ```
 
-## Bildausgabeformate
+## Bildausgabedarstellungen
 
 Bild-Assets unterstützen anpassbare [Ausgabeformate](../../../assets/authoring/renditions.md), die alternative Darstellungen des ursprünglichen Assets sind. Benutzerdefinierte Ausgabeformate können bei der Optimierung eines Headless-Erlebnisses helfen. Anstatt das ursprüngliche Bild-Asset anzufordern, bei dem es sich häufig um eine große, hochauflösende Datei handelt, können optimierte Ausgabedarstellungen von der Headless-Anwendung angefordert werden.
 
@@ -184,7 +184,7 @@ Erstellen wir eine einfache React-Anwendung, die drei Ausgabeformate eines einze
 
 Erstellen Sie eine React-Komponente, die die Bilder rendert. Diese Komponente akzeptiert vier Eigenschaften:
 
-+ `assetUrl`: Die Bild-Asset-URL, die über die Antwort der GraphQL-Abfrage bereitgestellt wird.
++ `assetUrl`: Die Bild-Asset-URL, wie in der Antwort der GraphQL-Abfrage angegeben.
 + `renditionName`: Der Name der zu ladenden Ausgabedarstellung.
 + `renditionExtension`: Die Erweiterung der zu ladenden Ausgabedarstellung.
 + `alt`: Der Alt-Text für das Bild; Zugänglichkeit ist wichtig!
