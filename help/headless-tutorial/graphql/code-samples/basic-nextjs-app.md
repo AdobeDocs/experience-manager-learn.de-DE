@@ -12,7 +12,7 @@ thumbnail: KT-11368.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: e3fb145e7a9f33dd010f6c40e42573d41e54b302
+source-git-commit: 772acab316ba2ff463fa5cacff02013bea920579
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # Grundlegende Next.js-App
 
-Diese [Next.js](https://nextjs.org/) App zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen können. Diese Anwendung ermöglicht die Filterung von WKND-Abenteuern und zeigt bei der Auswahl eines Abenteuers die Abenteuer mit allen Details an.
+Diese [Next.js](https://nextjs.org/) Das Programm zeigt, wie Sie mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen Inhalte abfragen können. Diese Anwendung ermöglicht die Filterung von WKND-Abenteuern und zeigt bei der Auswahl eines Abenteuers die Abenteuer mit allen Details an.
 
 Dieser Code:
 
@@ -33,4 +33,4 @@ Eine genauere Übersicht über die Erstellung dieser Next.js-App erhalten Sie im
 
 >[!IMPORTANT]
 >
-> Codesandbox.io unterstützt die Bearbeitung der Next.js-Anwendung in der eingebetteten IDE nicht. So bearbeiten Sie dieses Codebeispiel: [Öffnen Sie die App &quot;Next.js&quot;direkt auf &quot;codesandbox.io&quot;.](https://codesandbox.io/s/wknd-next-js-app-3n6zdv).
+> Codesandbox.io unterstützt die Bearbeitung der Next.js-Anwendung in der eingebetteten IDE nicht. So bearbeiten Sie dieses Codebeispiel: [Öffnen Sie die App &quot;Next.js&quot;direkt auf &quot;codesandbox.io&quot;.](https://codesandbox.io/s/wknd-next-js-app-u8x5f8).
