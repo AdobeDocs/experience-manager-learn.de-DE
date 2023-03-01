@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: fbc8c11841f5b5e04a99ba74fac6f01dc3e3a2da
+source-git-commit: 1a4ee470a650aacc5412fbd27062ca14ccdb1967
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -95,7 +95,9 @@ Notieren Sie sich die URL der lokalen Anwendung, wie oben gezeigt: `-> https://l
    ```shell
    $ aio app use -w Stage
    ```
+
    Zusammenführen aller Änderungen zu `.env` und `.aio`.
+
 1. Stellen Sie die aktualisierte App Builder-App der Erweiterung bereit. Wenn nicht angemeldet, führen Sie `aio login` zuerst.
 
    ```shell
