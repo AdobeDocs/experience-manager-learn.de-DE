@@ -3,7 +3,7 @@ title: Governance- und Personalmodelle und Archetypen
 description: Erfahren Sie, wie Sie Ihre Adobe Experience Manager-Plattform (AEM) operationalisieren und den größtmöglichen Nutzen aus Ihren Bemühungen ziehen können.
 solution: Experience Manager
 exl-id: 808ab7a6-5ec5-4bbd-9a6e-cfc0b447430d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: dcd69c7444eae0f8c86464c1963bff35e6f11238
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 0%
@@ -90,7 +90,7 @@ Im Folgenden finden Sie Rollenbeispiele für ein leichtes (Sportbekleidungsunter
 
    * CSS-Entwicklung - Erlebnisartefakte werden durch die Neuverwendung von Komponenten mit neuen Stilen erstellt.
    * Back-End-Entwicklung - erstellt neue Komponenten oder kann eine Kernkomponente erweitern. Wenn diese Rolle korrekt ausgeführt wird, sollte sie nicht mehr als eine Person haben, es sei denn, es sind große Animationsaufgaben erforderlich.
-   * Versionsverwaltung - überwacht die Codebereitstellung und dient als aktueller Customer Success Engineer.
+   * Versionsverwaltung - überwacht die Codebereitstellung und dient als aktuelles Adobe-Account-Team.
    * Produkteigentümer: Zusammenarbeit mit BU bei der Vermittlung technischer und strategischer Visionen; erstellt Wartungsaufgaben und Verbesserungen und dient als Business Owner der Lösung.
    * Admin Authors - aktualisiert die CSS-Skin und bietet Autoren, die Inhalte aktualisieren und anwenden, Anleitungen. Diese Rolle arbeitet an Workflow-Konfigurationen und erstellt Anleitungen, die von den Inhaltsautoren angewendet werden können. HINWEIS: In Version 6.5 empfiehlt Adobe die Verwendung bearbeitbarer Vorlagen.
    * Autoren von Inhalten - wendet Inhalte an, führt mehrstufige Eigentümerschaft ein und liefert Kommunikationsprobleme und -belange, sobald sie mit CSM auftreten.
