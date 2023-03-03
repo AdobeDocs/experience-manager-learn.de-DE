@@ -3,9 +3,9 @@ title: Beschleunigung von Inhalten mit Adobe Experience Manager
 description: Informieren Sie sich über die Geschwindigkeit und den Wert von Inhalten in Unternehmen. Informieren Sie sich über vier Grundsätze der effektiven Umsetzung und über die Fallstricke, nach denen Sie unterwegs suchen sollten.
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: de31d6e97b84781aa05ca441fc6e9fc4bc59ccc3
 workflow-type: tm+mt
-source-wordcount: '2815'
+source-wordcount: '2814'
 ht-degree: 0%
 
 ---
@@ -160,7 +160,7 @@ AEM Sites: Grundlegende Ausführung und Betrieb
 | --- | --- | --- | --- |
 | CSS-Entwickler | <ul><li>Webentwicklung (CSS oder Front-End)</li>Wiederverwenden von Komponenten<li>Erstellen von Erlebnisartefakten durch Neuverwendung oder neue</li></ul> | <ul><li>Geschäftsinhaber der Lösung</li><li>Erstellt Wartungsaufgaben und Verbesserungen</li><li>Zusammenarbeit mit BU bei der Vermittlung technischer und strategischer Visionen</li></ul> | Produkteigentümer |
 | Back-End-Entwickler | <ul><li>Tief greifende Erlebnisse, die nicht über einfache Front-End-CSS durchgeführt werden</li>Architekturaufsicht<li>Dynamische Integrationen/Abstimmung mit dem Produkteigentümer zu strategischen Zielen</li></ul> | <ul><li>Inhaltsautoren unterstützen</li><li>Governance-Rolle</li><li>Koordiniert Launches, verwaltet Makrobearbeitungen</li></ul> | Admin Author |
-| Release Manager | <ul><li>Versionsverwaltung</li><li>Code wird bereitgestellt</li></li>Aktueller Customer Success Engineer</ul> | <ul><li>Wendet Inhalte an (einschließlich vorab erstellter Stile)</li>Tiered Ownership<li>Ermöglicht die Bereitstellung und Kommunikation von Problemen und Bedenken im Zusammenhang mit CSM</li></ul> | Inhaltsautor |
+| Release Manager | <ul><li>Versionsverwaltung</li><li>Code wird bereitgestellt</li></li>Adobe Account Team</ul> | <ul><li>Wendet Inhalte an (einschließlich vorab erstellter Stile)</li>Tiered Ownership<li>Ermöglicht die Bereitstellung und Kommunikation von Problemen und Bedenken im Zusammenhang mit CSM</li></ul> | Inhaltsautor |
 
 ## Potenzielle Fallstricke
 
