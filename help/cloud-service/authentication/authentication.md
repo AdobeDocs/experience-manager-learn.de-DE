@@ -10,9 +10,9 @@ kt: 10436
 thumbnail: KT-10436.png
 last-substantial-update: 2022-10-14T00:00:00Z
 exl-id: 4dba6c09-2949-4153-a9bc-d660a740f8f7
-source-git-commit: ad9aa172d37741207dabcbc705efaa851fd17e7c
+source-git-commit: 171daf292355203b903a6c29bebad9216dfd95b7
 workflow-type: tm+mt
-source-wordcount: '127'
+source-wordcount: '151'
 ht-degree: 3%
 
 ---
@@ -24,9 +24,11 @@ AEM as a Cloud Service unterstützt mehrere Authentifizierungsoptionen und varii
 |  | AEM Author | AEM Publish |
 |-----------------------|:----------:|:-----------:|
 | [Adobe IMS](../accessing/overview.md) | ms | ✘ |
-| ・ [SAML 2.0 über Adobe IMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up) | ms | ✘ |
-| [SAML 2.0](./saml-2-0.md) | ✘ | ms |
-| [Token-Authentifizierung](../../headless-tutorial/authentication/overview.md) | ms | ms |
+| ・ [SAML 2.0 über Adobe IMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up) | ✔ | ✘ |
+| [SAML 2.0](./saml-2-0.md) | ✘ | ✔ |
+| [Single Sign-On (SSO)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
+| [OAuth](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
+| [Token-Authentifizierung](../../headless-tutorial/authentication/overview.md) | ✔ | ✔ |
 
 ## Authentifizierungsoptionen
 
