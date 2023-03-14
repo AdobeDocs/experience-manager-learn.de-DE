@@ -5,9 +5,9 @@ breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 1a7b4c9c4575407467856d795ad3b6dde8e10532
+source-git-commit: 4100061624bd8955bee392f1eced20f388f2902c
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '910'
 ht-degree: 27%
 
 ---
@@ -196,6 +196,11 @@ ht-degree: 27%
       + [Asset-Bedienfeld konfigurieren](./forms/create-first-af/configure-assets-panel.md)
       + [Konfigurieren des Startbereichs](./forms/create-first-af/configure-start-panel.md)
       + [Symbolleiste hinzufügen und konfigurieren](./forms/create-first-af/add-configure-toolbar.md)
+      + AEM Forms und Analytics{#forms-and-analytics}
+         + [Einführung](./forms/form-data-analytics/introduction.md)
+         + [Datenelemente erstellen](./forms/form-data-analytics/data-elements.md)
+         + [Regeln erstellen](./forms/form-data-analytics/rules.md)
+         + [Testen der Lösung](./forms/form-data-analytics/test.md)
    + Dokumenterstellung in AEM Forms CS{#doc-gen-formscs}
       + [Einführung](./forms/doc-gen-forms-cs/introduction.md)
       + [Dienstberechtigungen erstellen](./forms/doc-gen-forms-cs/service-credentials.md)
