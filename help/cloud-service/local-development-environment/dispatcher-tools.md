@@ -8,11 +8,11 @@ role: Developer
 level: Beginner
 kt: 4679
 thumbnail: 30603.jpg
-last-substantial-update: 2022-09-01T00:00:00Z
+last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: 370e15fdd96f1c33bc50ee72066381bec40d82c3
+source-git-commit: eb31c5fb79e01e1c363fc153355e8d92d1a54021
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1612'
 ht-degree: 3%
 
 ---
@@ -81,7 +81,7 @@ Bei allen unten angegebenen Befehlen wird davon ausgegangen, dass der aktuelle A
 
 >[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12&learn=on)
 
-*In diesem Video wird macOS zu Veranschaulichungszwecken verwendet. Die entsprechenden Windows/Linux-Befehle können verwendet werden, um ähnliche Ergebnisse zu erzielen*
+*In diesem Video wird macOS zu Veranschaulichungszwecken verwendet. Die entsprechenden Windows/Linux-Befehle können verwendet werden, um ähnliche Ergebnisse zu erzielen.*
 
 ## Grundlegendes zu den Dispatcher-Konfigurationsdateien
 
@@ -187,6 +187,11 @@ Die empfohlene Dispatcher Tools-Version ist diejenige, die im Lieferumfang des A
 ## So aktualisieren Sie den Grundliniensatz der Apache- und Dispatcher-Konfigurationen
 
 Der Grundsatz der Apache- und Dispatcher-Konfiguration wird regelmäßig verbessert und mit der AEM as a Cloud Service SDK-Version veröffentlicht. Es empfiehlt sich, die grundlegenden Konfigurationsverbesserungen in Ihr AEM-Projekt zu integrieren und zu vermeiden. [lokale Validierung](#validate-configurations) und Cloud Manager-Pipeline-Fehler. Aktualisieren Sie sie mithilfe des `update_maven.sh` Skript aus `.../dispatcher-sdk-x.x.x/bin` Ordner.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3416744/?quality=12&learn=on)
+
+*In diesem Video wird macOS zu Veranschaulichungszwecken verwendet. Die entsprechenden Windows/Linux-Befehle können verwendet werden, um ähnliche Ergebnisse zu erzielen.*
+
 
 Angenommen, Sie haben ein AEM Projekt in der Vergangenheit mit [AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype), waren die grundlegenden Apache- und Dispatcher-Konfigurationen aktuell. Mithilfe dieser Grundlinienkonfigurationen wurden Ihre projektspezifischen Konfigurationen durch Wiederverwendung erstellt und die Dateien wie `*.vhost`, `*.conf`, `*.farm` und `*.any` von `dispatcher/src/conf.d` und `dispatcher/src/conf.dispatcher.d` Ordner. Ihre lokalen Dispatcher-Validierungs- und Cloud Manager-Pipelines funktionierten einwandfrei.
 
