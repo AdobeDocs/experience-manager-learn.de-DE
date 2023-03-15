@@ -9,14 +9,14 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 4100061624bd8955bee392f1eced20f388f2902c
+source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 0%
 
 ---
 
-# Berichte zu Formulardatenfeldwerten und Formularfeldvalidierungsfehlern mithilfe von Adobe Analytics
+# Berichte zu Formulardatenfeldwerten und Formularfeldvalidierungsfehlern mit Adobe Analytics
 
 Erfahren Sie, wie Sie mit Tags und Adobe Analytics Analysen in adaptive Formulare implementieren. Dieses Beispiel führt Sie durch die Konfigurations- und Implementierungsschritte, um aufschlussreiche Berichte über die Interaktion der Besucher mit Ihren Formularen zu erstellen.
 

@@ -9,7 +9,7 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 12557
-source-git-commit: 439167be96959baea54f50a221c6d26f8fab78b2
+source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -18,14 +18,18 @@ ht-degree: 0%
 
 # Regel definieren
 
-In der Eigenschaft &quot;Tags&quot;wurden zwei neue erstellt [Regeln](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html)(**Fehler bei Feldvalidierung und FormularSubmit**).
+In der Eigenschaft &quot;Tags&quot;wurden zwei neue erstellt [Regeln](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html) (**Fehler bei Feldvalidierung und FormularSubmit**).
+
 ![adaptives Formular](assets/rules.png)
 
 
 ## Feldvalidierungsfehler
 
 Die **Feldvalidierungsfehler** -Regel wird jedes Mal ausgelöst, wenn im Feld des adaptiven Formulars ein Validierungsfehler auftritt. Wenn beispielsweise in unserem Formular die Telefonnummer oder die E-Mail nicht das erwartete Format aufweist, wird eine Validierungsfehlermeldung angezeigt.
+
 Die Regel &quot;Feldvalidierungsfehler&quot;wird konfiguriert, indem das Ereignis auf _**Adobe Experience Manager Forms-Error**_ wie im Screenshot gezeigt
+
+
 
 ![applicant-state-Residence](assets/field_validation_error_rule.png)
 
@@ -36,6 +40,7 @@ Adobe Analytics - Variablen festlegen ist wie folgt konfiguriert
 ## Formular-Senderegel
 
 Die Regel &quot;Formular senden&quot;wird jedes Mal ausgelöst, wenn ein adaptives Formular erfolgreich gesendet wurde.
+
 Die Regel zum Senden von Formularen wird mithilfe der _**Adobe Experience Manager Forms - Submit**_ event
 
 ![form-submit-rule](assets/form-submit-rule.png)
