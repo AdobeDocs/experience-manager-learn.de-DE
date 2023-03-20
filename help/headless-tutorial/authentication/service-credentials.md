@@ -14,9 +14,9 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: 8b6d8d99c806e782a1ddce2b300211f8d4c9da56
+source-git-commit: 1401710c19ae6ee6a2822ae06286bef4f92cda45
 workflow-type: tm+mt
-source-wordcount: '1931'
+source-wordcount: '1937'
 ht-degree: 0%
 
 ---
@@ -124,7 +124,7 @@ Um mit den Dienstanmeldeinformationen auf AEM as a Cloud Service zugreifen zu k�
 
 + Wenn Dienstanmeldeinformationen vorhanden sind, verwendet die externe Anwendung dieses Zugriffstoken anstelle des Zugriffstokens für die lokale Entwicklung, wenn auf AEM as a Cloud Service zugegriffen wird
 
-In diesem Tutorial erläutert die Adobe `@adobe/jwt-auth` Das npm-Modul wird verwendet, um (1) das JWT aus den Service-Anmeldedaten zu generieren und (2) es in einem einzelnen Funktionsaufruf gegen ein Zugriffstoken zu tauschen. Wenn Ihre Anwendung nicht auf JavaScript basiert, lesen Sie bitte das [Beispielcode in anderen Sprachen](https://developer.adobe.com/developer-console/docs/guides/) , wie Sie ein JWT aus den Service-Anmeldedaten erstellen und es durch ein Zugriffstoken mit Adobe IMS ersetzen.
+In diesem Tutorial erläutert die Adobe `@adobe/jwt-auth` Das npm-Modul wird verwendet, um (1) das JWT aus den Service-Anmeldedaten zu generieren und (2) es in einem einzelnen Funktionsaufruf gegen ein Zugriffstoken zu tauschen. Wenn Ihre Anwendung nicht auf JavaScript basiert, lesen Sie bitte das [Beispielcode in anderen Sprachen](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) , wie Sie ein JWT aus den Service-Anmeldedaten erstellen und es durch ein Zugriffstoken mit Adobe IMS ersetzen.
 
 ## Dienstanmeldeinformationen lesen
 
@@ -149,7 +149,7 @@ function getCommandLineParams() {
 
 Sobald die Service-Anmeldedaten gelesen wurden, werden sie zum Generieren eines JWT verwendet, der dann mit Adobe IMS-APIs für ein Zugriffstoken ausgetauscht wird. Mit diesem Zugriffstoken können Sie dann auf AEM as a Cloud Service zugreifen.
 
-Diese Beispielanwendung ist Node.js-basiert, daher empfiehlt es sich, [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm-Modul zur Erleichterung der (1) JWT-Generierung und (20-mal-Austausch mit Adobe IMS. Wenn Ihre Anwendung in einer anderen Sprache entwickelt wird, lesen Sie bitte [die entsprechenden Codebeispiele](https://developer.adobe.com/developer-console/docs/guides/) Informationen zum Erstellen der HTTP-Anforderung an Adobe IMS mithilfe anderer Programmiersprachen.
+Diese Beispielanwendung ist Node.js-basiert, daher empfiehlt es sich, [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm-Modul zur Erleichterung der (1) JWT-Generierung und (20-mal-Austausch mit Adobe IMS. Wenn Ihre Anwendung in einer anderen Sprache entwickelt wird, lesen Sie bitte [die entsprechenden Codebeispiele](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) Informationen zum Erstellen der HTTP-Anforderung an Adobe IMS mithilfe anderer Programmiersprachen.
 
 1. Aktualisieren Sie die `getAccessToken(..)` um den Inhalt der JSON-Datei zu überprüfen und festzustellen, ob es ein lokales Entwicklungs-Zugriffstoken oder Dienstanmeldeinformationen darstellt. Dies lässt sich leicht erreichen, indem geprüft wird, ob die `.accessToken` -Eigenschaft, die nur für die JSON-Datei &quot;Local Development Access Token&quot;vorhanden ist.
 
