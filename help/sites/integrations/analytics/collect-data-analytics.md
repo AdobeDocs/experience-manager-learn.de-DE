@@ -9,7 +9,7 @@ level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
 workflow-type: tm+mt
 source-wordcount: '2371'
 ht-degree: 4%
@@ -43,7 +43,7 @@ Folgendes ist erforderlich:
 
 >[!NOTE]
 >
-> Benötigen Sie Hilfe bei der Integration von Launch und Ihrer AEM Site? [Siehe diese Videoreihe](../experience-platform-launch/overview.md).
+> Benötigen Sie Hilfe bei der Integration von Launch und Ihrer AEM Site? [Siehe diese Videoreihe](../experience-platform/data-collection/tags/overview.md).
 
 ## Wechseln von Launch-Umgebungen für WKND-Site
 
@@ -52,7 +52,7 @@ Folgendes ist erforderlich:
 Anstatt eine AEM Umgebung einzurichten und die WKND-Codebasis zu installieren, können Sie den Experience Platform-Debugger verwenden, um **switch** live [https://wknd.site/](https://wknd.site/) nach *Ihre* Launch-Eigenschaft. Natürlich können Sie Ihre eigene AEM-Website verwenden, wenn sie bereits über [Adobe Client-Datenschicht aktiviert](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation)
 
 1. Melden Sie sich beim Experience Platform Launch an und [Erstellen einer Launch-Eigenschaft](https://experienceleague.adobe.com/docs/launch-learn/implementing-in-websites-with-launch/configure-launch/launch.html) (falls noch nicht geschehen).
-1. Stellen Sie sicher, dass ein erster Launch [Bibliothek wurde erstellt](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) und zu einem Launch weitergeleitet werden [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html).
+1. Stellen Sie sicher, dass ein erster Launch [Bibliothek wurde erstellt](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) und zu einem Launch weitergeleitet werden [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de).
 1. Kopieren Sie den Launch-Einbettungscode aus der Umgebung, in der Ihre Bibliothek veröffentlicht wurde.
 
    ![Kopieren des eingebetteten Launch-Codes](assets/collect-data-analytics/launch-environment-copy.png)
@@ -172,7 +172,7 @@ Die Adobe Client-Datenschicht ist eine **event** gesteuerte Datenschicht. Wenn d
 
    Die `event` -Objekt wird von der `trigger()` -Methode, die im benutzerspezifischen Ereignis aufgerufen wird. `component` ist die aktuelle von der Datenschicht abgeleitete Seite `getState` im benutzerspezifischen Ereignis. Erinnern Sie sich an frühere [Seitenschema](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page) durch die Datenschicht verfügbar gemacht werden, um die verschiedenen standardmäßig angezeigten Schlüssel zu sehen.
 
-1. Speichern Sie die Änderungen und führen Sie eine [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) in Launch , um den Code für die [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) verwendet auf Ihrer AEM Site.
+1. Speichern Sie die Änderungen und führen Sie eine [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) in Launch , um den Code für die [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de) verwendet auf Ihrer AEM Site.
 
    >[!NOTE]
    >
