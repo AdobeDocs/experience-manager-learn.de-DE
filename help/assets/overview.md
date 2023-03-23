@@ -7,7 +7,7 @@ exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
 source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '185'
-ht-degree: 9%
+ht-degree: 7%
 
 ---
 
@@ -45,7 +45,7 @@ Erfahren Sie, was AEM Assets ist und wie es zur Erreichung der Geschäftsziele I
    </a>
    <div>
       <a href="./creative-workflows/aem-desktop-app.md">
-      <strong>Verwenden von AEM Desktop App</strong>
+      <strong>Verwenden AEM Desktop App</strong>
       </a>
    </div>
    <p>

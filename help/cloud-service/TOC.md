@@ -8,7 +8,7 @@ team: TM
 source-git-commit: 672941b4047bb0cfe8c602e3b1ab75866c10216a
 workflow-type: tm+mt
 source-wordcount: '910'
-ht-degree: 27%
+ht-degree: 26%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 27%
       + [Beschleunigen der Inhaltsgeschwindigkeit mit AEM Stilsystemen](./introduction/accelerate-content-velocity-aem.md)
 + [Experience Cloud-Integrationen](./experience-cloud/integrations.md)
 + Basistechnologie {#underlying-technology}
-   + [AEM-Architektur](./underlying-technology/introduction-architecture.md)
+   + [AEM Architektur](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
    + [Java Content Repository](./underlying-technology/introduction-jcr.md)
    + [Sling](./underlying-technology/introduction-sling.md)

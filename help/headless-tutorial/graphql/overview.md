@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte mit AEM Headless - GraphQL
-description: Erfahren Sie mehr über die Experience Manager-GraphQL-APIs und ihre Funktionen.
+description: Erfahren Sie mehr über die Experience Manager GraphQL-APIs und ihre Funktionen.
 feature: Content Fragments, GraphQL API, APIs
 topic: Headless, Content Management
 role: Developer
@@ -36,17 +36,17 @@ In diesem Video erhalten Sie einen Überblick über die in AEM implementierte Gr
 >abstract="Erfahren Sie, wie Sie Inhaltsfragmente mit GraphQL bereitstellen."
 >additional-url="https://video.tv.adobe.com/v/328618?captions=ger" text="Überblick über GraphQL in AEM"
 
-## AEM Headless-GraphQL-Videoserie
+## GraphQL-Videoserie mit Headless-AEM
 
 Erfahren Sie mehr über AEM GraphQL-Funktionen durch die ausführliche Anleitung von Inhaltsfragmenten und AEM GraphQL-APIs und Entwicklungstools.
 
-* [AEM Headless-GraphQL-Videoserie](./video-series/modeling-basics.md)
+* [GraphQL-Videoserie mit Headless-AEM](./video-series/modeling-basics.md)
 
-## AEM Headless GraphQL Hands-On-Tutorial
+## Tutorial AEM Headless GraphQL Hands-On
 
-Erkunden Sie AEM GraphQL-Funktionen, indem Sie eine React-App erstellen, die Inhaltsfragmente über AEM GraphQL-APIs nutzt.
+Erfahren Sie mehr über AEM GraphQL-Funktionen, indem Sie eine React-App erstellen, die Inhaltsfragmente über AEM GraphQL-APIs nutzt.
 
-* [AEM Headless GraphQL Hands-On-Tutorial](./multi-step/overview.md)
+* [Tutorial AEM Headless GraphQL Hands-On](./multi-step/overview.md)
 
 ## AEM GraphQL vs. AEM Content Services
 
