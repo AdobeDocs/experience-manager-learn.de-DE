@@ -5,7 +5,7 @@ breadcrumb-title: AEM Sites-Tutorials
 feature-set: Experience Manager Sites, Experience Manager
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: ef1fe712921bd5516cb389862cacf226a71aa193
+source-git-commit: 2b37ba961e194b47e034963ceff63a0b8e8458ae
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 30%
@@ -101,7 +101,7 @@ ht-degree: 30%
    + Datenerfassungs-Tags der Experience Platform (Launch) {#experience-platform-data-collection-tags}
       + [Übersicht](integrations/experience-platform/data-collection/tags/overview.md)
       + [Erstellen einer Tag-Eigenschaft](integrations/experience-platform/data-collection/tags/create-tag-property.md)
-      + [AEM über die Developer Console mit Tags verbinden](integrations/experience-platform/data-collection/tags/connect-aem-tags-using-developer-console.md)
+      + [AEM- und Tag-Eigenschaft über IMS verbinden](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
       + [AEM Launch-Cloud Service erstellen](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
       + [Debuggen einer Implementierung von Tags (Launch)](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe Client-Datenschicht {#adobe-client-data-layer}
