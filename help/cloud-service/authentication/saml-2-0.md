@@ -10,9 +10,9 @@ kt: 9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: d0b13fd37f1ed42042431246f755a913b56625ec
+source-git-commit: 5522a22cc3ac12ce54297ee9f30570c29cfd5ce7
 workflow-type: tm+mt
-source-wordcount: '2815'
+source-wordcount: '2961'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Die Integration von SAML 2.0 mit AEM Publish (oder der Vorschau) ermöglicht es 
 
 |  | AEM Author | AEM Publish |
 |-----------------------|:----------:|:-----------:|
-| Unterstützung für SAML 2.0 | ✘ | ms |
+| Unterstützung für SAML 2.0 | ✘ | ✔ |
 
 +++ Erläuterung des SAML 2.0-Flusses mit AEM
 
@@ -110,13 +110,13 @@ Das öffentliche Zertifikat des IDP wird AEM Global Trust Store hinzugefügt und
 1. Klicken Sie auf __Übermitteln__.
 1. Das neu hinzugefügte Zertifikat wird über dem __Zertifikat aus CRT-Datei hinzufügen__ Abschnitt.
 1. Beachten Sie die __alias__, da dieser Wert in der Variablen [OSGi-Konfiguration des SAML 2.0 Authentication Handler](#saml-2-0-authentication-handler-osgi-configuration).
-1. Wählen Sie __Speichern und schließen__ aus.
+1. Auswählen __Speichern und schließen__.
 
 Der globale Trust Store ist mit dem öffentlichen Zertifikat des IDP in der AEM-Autoreninstanz konfiguriert. Da SAML jedoch nur in der AEM-Veröffentlichung verwendet wird, muss der globale Trust Store in die AEM-Veröffentlichungsinstanz repliziert werden, damit auf das öffentliche IDP-Zertifikat zugegriffen werden kann.
 
 ![Replizieren des globalen Trust Store in AEM Publish](./assets/saml-2-0/global-trust-store-replicate.png)
 
-1. Navigieren Sie zu __Tools > Bereitstellung > Pakete__.
+1. Navigieren Sie zu __Tools > Implementierung > Pakete__.
 1. Package erstellen
    + Paketname: `Global Trust Store`
    + Version: `1.0.0`
@@ -126,6 +126,21 @@ Der globale Trust Store ist mit dem öffentlichen Zertifikat des IDP in der AEM-
 1. Auswählen __Fertig__ und dann __Speichern__.
 1. Wählen Sie die __Build__ -Schaltfläche für __Globaler Trust Store__ Paket.
 1. Wählen Sie nach der Erstellung __Mehr__ > __Replizieren__ zum Aktivieren des Knotens &quot;Global Trust Store&quot;(`/etc/truststore`) in AEM Publish.
+
+## Authentifizierungsdienst-Keystore erstellen{#authentication-service-keystore}
+
+_Das Erstellen eines Keystore für den Authentifizierungsdienst ist erforderlich, wenn der [OSGi-Konfigurationseigenschaft des SAML 2.0-Authentifizierungs-Handlers `handleLogout` auf `true`](#saml-20-authenticationsaml-2-0-authentication) oder wenn [AuthnRequest signing/SAML assertion-Verschlüsselung](#install-aem-public-private-key-pair) ist erforderlich_
+
+1. Melden Sie sich bei der AEM-Autoreninstanz als AEM Administrator an, um den privaten Schlüssel hochzuladen.
+1. Navigieren Sie zu __Tools > Sicherheit > Trust Store__ und wählen Sie __authentication-service__ und wählen Sie __Eigenschaften__ in der oberen Aktionsleiste aus.
+1. Navigieren Sie zu __Tools > Sicherheit > Benutzer__ und wählen Sie __authentication-service__ und wählen Sie __Eigenschaften__ in der oberen Aktionsleiste aus.
+1. Wählen Sie die __Keystore__ Registerkarte.
+1. Erstellen oder öffnen Sie den Keystore. Halten Sie beim Erstellen eines Keystore das Kennwort sicher.
+   + A [Der öffentliche/private Keystore wird in diesem Keystore installiert](#install-aem-public-private-key-pair) nur, wenn eine AuthnRequest-Signatur/SAML-Assertionsverschlüsselung erforderlich ist.
+   + Wenn diese SAML-Integration die Abmeldung unterstützt, aber keine AuthnRequest -Signatur/SAML-Assertion, dann ist ein leerer Keystore ausreichend.
+1. Auswählen __Speichern und schließen__.
+1. Auswählen __authentication-service__ und wählen Sie __Aktivieren__ in der oberen Aktionsleiste aus.
+
 
 ## AEM Paar aus öffentlichem und privatem Schlüssel installieren{#install-aem-public-private-key-pair}
 
@@ -197,7 +212,7 @@ Die Signierung von AuthnRequest und die Verschlüsselung der SAML-Assertion sind
    + Klicken Sie auf __Übermitteln__
 1. Das neu hinzugefügte Zertifikat wird über dem __Zertifikat aus CRT-Datei hinzufügen__ Abschnitt.
    + Beachten Sie die __alias__ da dies in der Variablen [OSGi-Konfiguration des SAML 2.0-Authentifizierungs-Handlers](#saml-20-authentication-handler-osgi-configuration)
-1. Wählen Sie __Speichern und schließen__ aus.
+1. Auswählen __Speichern und schließen__.
 1. Auswählen __authentication-service__ und wählen Sie __Aktivieren__ in der oberen Aktionsleiste aus.
 
 ## SAML 2.0-Authentifizierungs-Handler konfigurieren{#configure-saml-2-0-authentication-handler}
@@ -211,13 +226,13 @@ Die Konfiguration ist eine OSGi-Werkskonfiguration, d. h. ein AEM as a Cloud Ser
 
 |  | OSGi-Eigenschaft | Erforderlich | Wertformat | Standardwert | Beschreibung |
 |-----------------------------------|-------------------------------|:--------:|:---------------------:|---------------------------|-------------|
-| Pfade | `path` | ms | Zeichenfolgen-Array | `/` | AEM Pfade, für die dieser Authentifizierungs-Handler verwendet wird. |
-| IDP-URL | `idpUrl` | ms | Zeichenfolge |  | IDP-URL, an die die SAML-Authentifizierungsanforderung gesendet wird. |
-| IDP-Zertifikatalias | `idpCertAlias` | ms | Zeichenfolge |  | Der Alias des IDP-Zertifikats im AEM Global Trust Store |
+| Pfade | `path` | ✔ | Zeichenfolgen-Array | `/` | AEM Pfade, für die dieser Authentifizierungs-Handler verwendet wird. |
+| IDP-URL | `idpUrl` | ✔ | Zeichenfolge |  | IDP-URL, an die die SAML-Authentifizierungsanforderung gesendet wird. |
+| IDP-Zertifikatalias | `idpCertAlias` | ✔ | Zeichenfolge |  | Der Alias des IDP-Zertifikats im AEM Global Trust Store |
 | IDP HTTP-Umleitung | `idpHttpRedirect` | ✘ | Boolesch | `false` | Gibt an, ob eine HTTP-Weiterleitung zur IDP-URL erfolgt, anstatt eine AuthnRequest zu senden. Legen Sie fest auf `true` für IDP-initiierte Authentifizierung. |
 | IDP-Kennung | `idpIdentifier` | ✘ | Zeichenfolge |  | Eindeutige IDP-ID, um AEM Eindeutigkeit von Benutzern und Gruppen sicherzustellen. Wenn leer, wird die `serviceProviderEntityId` stattdessen verwendet. |
 | Assertion Consumer Service URL | `assertionConsumerServiceURL` | ✘ | Zeichenfolge |  | Die `AssertionConsumerServiceURL` URL-Attribut in der AuthnRequest , das angibt, wo das `<Response>` muss an AEM gesendet werden. |
-| SP entity Id | `serviceProviderEntityId` | ms | Zeichenfolge |  | eindeutige Identifizierung der AEM zum IDP; normalerweise den AEM Hostnamen. |
+| SP entity Id | `serviceProviderEntityId` | ✔ | Zeichenfolge |  | eindeutige Identifizierung der AEM zum IDP; normalerweise den AEM Hostnamen. |
 | SP-Verschlüsselung | `useEncryption` | ✘ | Boolesch | `true` | Gibt an, ob der IDP SAML-Assertionen verschlüsselt. Erfordert `spPrivateKeyAlias` und `keyStorePassword` festgelegt werden. |
 | Private Key Alias für SP | `spPrivateKeyAlias` | ✘ | Zeichenfolge |  | Der Alias des privaten Schlüssels im `authentication-service` Schlüsselspeicher des Benutzers. Erforderlich, wenn `useEncryption` auf `true`. |
 | SP key store password | `keyStorePassword` | ✘ | Zeichenfolge |  | Das Kennwort des Schlüsselspeichers des Benutzers &#39;authentication-service&#39;. Erforderlich, wenn `useEncryption` auf `true`. |
