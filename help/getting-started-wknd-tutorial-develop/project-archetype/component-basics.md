@@ -12,14 +12,14 @@ kt: 4081
 thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
-source-git-commit: bbdb045edf5f2c68eec5094e55c1688e725378dc
+source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1152'
 ht-degree: 3%
 
 ---
 
-# Komponenten – Grundlagen {#component-basics}
+# Komponentengrundlagen {#component-basics}
 
 In diesem Kapitel untersuchen wir die zugrunde liegende Technologie einer Adobe Experience Manager (AEM)-Sites-Komponente durch eine einfache `HelloWorld` Beispiel. Es werden kleine Änderungen an einer vorhandenen Komponente vorgenommen, die Themen wie Authoring, HTL, Sling-Modelle, Client-seitige Bibliotheken abdecken.
 
