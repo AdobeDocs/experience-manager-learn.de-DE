@@ -1,6 +1,6 @@
 ---
 title: Verwenden der Adobe Client-Datenschicht in Verbindung mit AEM Kernkomponenten
-description: Die Adobe Client-Datenschicht führt eine Standardmethode ein, um Daten über ein Besuchererlebnis auf einer Webseite zu erfassen und zu speichern und so den Zugriff auf diese Daten zu erleichtern. Die Adobe Client-Datenschicht ist plattformunabhängig, aber für die Verwendung mit AEM vollständig in die Kernkomponenten integriert.
+description: Die Adobe Client-Datenschicht führt eine Standardmethode ein, um Daten über das Erlebnis eines Besuchers auf einer Webseite zu erfassen und zu speichern und den Zugriff auf diese Daten zu vereinfachen. Die Adobe Client-Datenschicht ist plattformunabhängig, aber für die Verwendung mit AEM vollständig in die Kernkomponenten integriert.
 topic: Integrations
 feature: Adobe Client Data Layer, Core Components
 role: Developer
@@ -9,16 +9,16 @@ kt: 6261
 thumbnail: 41195.jpg
 last-substantial-update: 2021-01-11T00:00:00Z
 exl-id: 066693b7-2b87-45e8-93ec-8bd09a7c263e
-source-git-commit: 835657082c0c6bf7b2822b53ef2b99039d77f249
+source-git-commit: 99b3ecf7823ff9a116c47c88abc901f8878bbd7a
 workflow-type: tm+mt
-source-wordcount: '780'
+source-wordcount: '783'
 ht-degree: 8%
 
 ---
 
 # Verwenden der Adobe Client-Datenschicht in Verbindung mit AEM Kernkomponenten {#overview}
 
-Die Adobe Client-Datenschicht führt eine Standardmethode ein, um Daten über ein Besuchererlebnis auf einer Webseite zu erfassen und zu speichern und so den Zugriff auf diese Daten zu erleichtern. Die Adobe Client-Datenschicht ist plattformunabhängig, aber für die Verwendung mit AEM vollständig in die Kernkomponenten integriert.
+Die Adobe Client-Datenschicht führt eine Standardmethode ein, um Daten über das Erlebnis eines Besuchers auf einer Webseite zu erfassen und zu speichern und den Zugriff auf diese Daten zu vereinfachen. Die Adobe Client-Datenschicht ist plattformunabhängig, aber für die Verwendung mit AEM vollständig in die Kernkomponenten integriert.
 
 >[!VIDEO](https://video.tv.adobe.com/v/41195?quality=12&learn=on)
 
@@ -28,20 +28,20 @@ Die Adobe Client-Datenschicht führt eine Standardmethode ein, um Daten über ei
 
 ## Datenschicht durchsuchen
 
-Die integrierte Funktionalität der Client-Datenschicht von Adobe lässt sich einfach mithilfe der Entwicklertools Ihres Browsers und der Live-Umgebung ermitteln. [WKND-Referenz-Site](https://wknd.site/).
+Die integrierte Funktionalität der Client-Datenschicht von Adobe lässt sich einfach mithilfe der Entwicklertools Ihres Browsers und der Live-Umgebung ermitteln. [WKND-Referenz-Site](https://wknd.site/us/en.html).
 
 >[!NOTE]
 >
 > Die folgenden Screenshots stammen aus dem Chrome-Browser.
 
-1. Navigieren Sie zu [https://wknd.site](https://wknd.site)
+1. Navigieren Sie zu [https://wknd.site/us/en.html](https://wknd.site/us/en.html)
 1. Öffnen Sie Ihre Entwickler-Tools und geben Sie den folgenden Befehl in das **Konsole**:
 
    ```js
    window.adobeDataLayer.getState();
    ```
 
-   Inspect die Antwort, um den aktuellen Status der Datenschicht auf einer AEM Site anzuzeigen. Sie sollten Informationen über die Seite und einzelne Komponenten sehen.
+   Um den aktuellen Status der Datenschicht auf einer AEM Site anzuzeigen, überprüfen Sie die Antwort. Sie sollten Informationen über die Seite und einzelne Komponenten sehen.
 
    ![Adobe Data Layer Response](assets/data-layer-state-response.png)
 
@@ -90,7 +90,7 @@ Es empfiehlt sich, benutzerspezifischen Code basierend auf einem Ereignis aus de
    }
    ```
 
-   Der obige Code prüft die `event` -Objekt und verwenden Sie die `adobeDataLayer.getState` -Methode, um den aktuellen Status des Objekts abzurufen, das das Ereignis ausgelöst hat. Die Hilfsmethode prüft dann die `filter` Kriterien und nur, wenn die aktuelle `dataObject` erfüllt den Filter wird zurückgegeben.
+   Der obige Code prüft die `event` -Objekt und verwendet die `adobeDataLayer.getState` -Methode, um den aktuellen Status des Objekts abzurufen, das das Ereignis ausgelöst hat. Anschließend überprüft die Hilfsmethode die `filter` und nur, wenn die aktuelle `dataObject` erfüllt die Filterkriterien, die zurückgegeben werden.
 
    >[!CAUTION]
    >
@@ -108,7 +108,7 @@ Es empfiehlt sich, benutzerspezifischen Code basierend auf einem Ereignis aus de
    }
    ```
 
-   Die `teaserShownHandler` ruft die `getDataObjectHelper` -Methode verwenden und einen Filter von `wknd/components/teaser` als `@type` , um Ereignisse herauszufiltern, die von anderen Komponenten ausgelöst wurden.
+   Die `teaserShownHandler` -Funktion die `getDataObjectHelper` -Funktion und übergibt einen Filter von `wknd/components/teaser` als `@type` , um Ereignisse herauszufiltern, die von anderen Komponenten ausgelöst wurden.
 
 1. Senden Sie als Nächstes einen Ereignis-Listener auf die Datenschicht, um auf die `cmp:show` -Ereignis.
 
@@ -120,11 +120,11 @@ Es empfiehlt sich, benutzerspezifischen Code basierend auf einem Ereignis aus de
 
    Die `cmp:show` -Ereignis wird von vielen verschiedenen Komponenten ausgelöst, z. B. wenn eine neue Folie im **Karussell** oder wenn eine neue Registerkarte im **Registerkarte** -Komponente.
 
-1. Auf der Seite können Sie die Karussellfolien umschalten und die Konsolenanweisungen beachten:
+1. Schalten Sie auf der Seite die Karussellfolien um und beachten Sie die Konsolenanweisungen:
 
    ![Karussell umschalten und Ereignis-Listener anzeigen](assets/teaser-console-slides.png)
 
-1. Entfernen Sie den Ereignis-Listener aus der Datenschicht, um das Listening auf die `cmp:show` event:
+1. So hören Sie nicht mehr auf `cmp:show` -Ereignis, entfernen Sie den Ereignis-Listener aus der Datenschicht
 
    ```js
    window.adobeDataLayer = window.adobeDataLayer || [];
@@ -164,19 +164,17 @@ Es empfiehlt sich, benutzerspezifischen Code basierend auf einem Ereignis aus de
 
    Die `cmp:show` -Ereignis für die Seite wird bei jedem Laden der Seite am Anfang der Seite ausgelöst. Sie fragen sich vielleicht, warum der Ereignishandler ausgelöst wurde, wenn die Seite eindeutig bereits geladen wurde.
 
-   Dies ist eine der einzigartigen Funktionen der Adobe Client-Datenschicht, mit der Sie Ereignis-Listener registrieren können **before** oder **after** die Datenschicht initialisiert wurde. Dies ist ein wichtiges Merkmal, um Wettlaufsituationen zu vermeiden.
+   Eine der einzigartigen Funktionen der Adobe Client-Datenschicht besteht darin, Ereignislistener zu registrieren **before** oder **after** Wenn die Datenschicht initialisiert wurde, hilft dies, die Wettlaufsituationen zu vermeiden.
 
-   Die Datenschicht verwaltet ein Warteschlangenarray aller Ereignisse, die nacheinander aufgetreten sind. Auf der Datenschicht werden standardmäßig Ereignisrückrufe für Trigger von Ereignissen durchgeführt, die in der Variablen **vergangene** sowie Ereignissen in **Future**. Es ist möglich, die Ereignisse nach Vergangenheit oder Zukunft zu filtern. [Weitere Informationen finden Sie in der Dokumentation .](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
+   Die Datenschicht verwaltet ein Warteschlangenarray aller Ereignisse, die nacheinander aufgetreten sind. Auf der Datenschicht werden standardmäßig Ereignisrückrufe für Trigger durchgeführt, die in **vergangene** und -Ereignissen in **Future**. Es ist möglich, die Ereignisse aus der Vergangenheit oder der Zukunft zu filtern. [Weitere Informationen finden Sie in der Dokumentation .](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
 
 
 ## Nächste Schritte
 
-Sehen Sie sich das folgende Tutorial an, um zu erfahren, wie Sie mit der ereignisgesteuerten Adobe Client Data-Schicht [Seitendaten erfassen und an Adobe Analytics senden](../analytics/collect-data-analytics.md).
-
-Oder lernen Sie [Anpassen der Adobe Client-Datenschicht mit AEM Komponenten](./data-layer-customize.md)
+Es gibt zwei Möglichkeiten, das Lernen fortzusetzen. Zunächst sehen Sie sich die [Seitendaten erfassen und an Adobe Analytics senden](../analytics/collect-data-analytics.md) Tutorial, das die Verwendung der Adobe Client-Datenschicht veranschaulicht. Die zweite Möglichkeit ist, zu erfahren, wie man [Anpassen der Adobe Client-Datenschicht mit AEM Komponenten](./data-layer-customize.md)
 
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [Dokumentation zur Adobe Client-Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [Verwenden der Dokumentation zur Adobe Client-Datenschicht und zu Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Verwenden der Dokumentation zur Adobe Client-Datenschicht und zu Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de)

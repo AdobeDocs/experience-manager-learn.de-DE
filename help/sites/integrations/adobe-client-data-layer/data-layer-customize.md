@@ -10,9 +10,9 @@ kt: 6265
 thumbnail: KT-6265.jpg
 last-substantial-update: 2022-09-20T00:00:00Z
 exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+source-git-commit: 99b3ecf7823ff9a116c47c88abc901f8878bbd7a
 workflow-type: tm+mt
-source-wordcount: '2016'
+source-wordcount: '2008'
 ht-degree: 4%
 
 ---
@@ -25,7 +25,7 @@ Erfahren Sie, wie Sie die Adobe Client-Datenschicht mit Inhalten aus benutzerdef
 
 ![Byte-Datenschicht](assets/adobe-client-data-layer/byline-data-layer-html.png)
 
-In diesem Tutorial werden Sie verschiedene Optionen zum Erweitern der Adobe Client-Datenschicht durch Aktualisieren des WKND untersuchen [Byte-Komponente](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/custom-component.html). Dies ist eine benutzerdefinierte Komponente. Die in diesem Tutorial gelernten Lektionen können auf andere benutzerdefinierte Komponenten angewendet werden.
+In diesem Tutorial werden verschiedene Optionen zur Erweiterung der Adobe Client-Datenschicht durch Aktualisierung des WKND untersucht. [Byte-Komponente](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html). Die _Byte_ Komponente ist **benutzerdefinierte Komponente** und in diesem Tutorial gelernte Lektionen können auf andere benutzerdefinierte Komponenten angewendet werden.
 
 ### Ziele {#objective}
 
@@ -61,7 +61,7 @@ In diesem Tutorial wird die Byline-Komponente auf der WKND-Referenz-Site erweite
 
    >[!NOTE]
    >
-   > Wenn Sie AEM 6.5 und das neueste Service Pack verwenden, fügen Sie die `classic` Profil zum Maven-Befehl:
+   > Fügen Sie für AEM 6.5 und das neueste Service Pack die `classic` Profil zum Maven-Befehl:
    >
    > `mvn clean install -PautoInstallSinglePackage -Pclassic`
 
@@ -76,7 +76,7 @@ In diesem Tutorial wird die Byline-Komponente auf der WKND-Referenz-Site erweite
    window.adobeDataLayer.getState();
    ```
 
-   Inspect die Antwort, um den aktuellen Status der Datenschicht auf einer AEM Site anzuzeigen. Sie sollten Informationen über die Seite und einzelne Komponenten sehen.
+   Um den aktuellen Status der Datenschicht auf einer AEM Site anzuzeigen, überprüfen Sie die Antwort. Sie sollten Informationen über die Seite und einzelne Komponenten sehen.
 
    ![Adobe Data Layer Response](assets/data-layer-state-response.png)
 
@@ -84,14 +84,14 @@ In diesem Tutorial wird die Byline-Komponente auf der WKND-Referenz-Site erweite
 
 ## Aktualisieren des Byline Sling-Modells {#sling-model}
 
-Um Daten über die Komponente in die Datenschicht einzufügen, müssen wir zunächst das Sling-Modell der Komponente aktualisieren. Aktualisieren Sie als Nächstes die Java-Schnittstelle von Byline und die Sling-Modell-Implementierung, um eine neue Methode hinzuzufügen. `getData()`. Diese Methode enthält die Eigenschaften, die wir in die Datenschicht einfügen möchten.
+Um Daten über die Komponente in die Datenschicht einzufügen, aktualisieren wir zunächst das Sling-Modell der Komponente. Aktualisieren Sie als Nächstes die Java™-Schnittstelle und die Sling-Modell-Implementierung von Byline, um eine neue Methode zu erhalten. `getData()`. Diese Methode enthält die Eigenschaften, die in die Datenschicht eingefügt werden sollen.
 
-1. Öffnen Sie in der IDE Ihrer Wahl die `aem-guides-wknd` Projekt. Navigieren Sie zum `core` -Modul.
+1. Öffnen Sie die `aem-guides-wknd` -Projekt in der IDE Ihrer Wahl. Navigieren Sie zum `core` -Modul.
 1. Öffnen Sie die Datei `Byline.java` unter `core/src/main/java/com/adobe/aem/guides/wknd/core/models/Byline.java`.
 
    ![Byte Java-Schnittstelle](assets/adobe-client-data-layer/byline-java-interface.png)
 
-1. Fügen Sie der -Oberfläche eine neue Methode hinzu:
+1. Fügen Sie folgende Methode zur -Schnittstelle hinzu:
 
    ```java
    public interface Byline {
@@ -104,9 +104,7 @@ Um Daten über die Komponente in die Datenschicht einzufügen, müssen wir zunä
    }
    ```
 
-1. Öffnen Sie die Datei `BylineImpl.java` unter `core/src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`.
-
-   Dies ist die Implementierung der `Byline` und wird als Sling-Modell implementiert.
+1. Öffnen Sie die Datei `BylineImpl.java` unter `core/src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`. Es ist die Umsetzung der `Byline` und wird als Sling-Modell implementiert.
 
 1. Fügen Sie am Anfang der Datei die folgenden Importanweisungen hinzu:
 
@@ -119,7 +117,7 @@ Um Daten über die Komponente in die Datenschicht einzufügen, müssen wir zunä
    import com.adobe.cq.wcm.core.components.util.ComponentUtils;
    ```
 
-   Die `fasterxml.jackson` APIs werden verwendet, um die Daten zu serialisieren, die wir als JSON verfügbar machen möchten. Die `ComponentUtils` AEM Kernkomponenten werden verwendet, um zu überprüfen, ob die Datenschicht aktiviert ist.
+   Die `fasterxml.jackson` APIs werden verwendet, um die Daten zu serialisieren, die als JSON bereitgestellt werden sollen. Die `ComponentUtils` AEM Kernkomponenten werden verwendet, um zu überprüfen, ob die Datenschicht aktiviert ist.
 
 1. Die nicht implementierte Methode hinzufügen `getData()` nach `BylineImple.java`:
 
@@ -160,7 +158,7 @@ Um Daten über die Komponente in die Datenschicht einzufügen, müssen wir zunä
    }
    ```
 
-   In der obigen Methode wird ein neuer `HashMap` wird verwendet, um die Eigenschaften zu erfassen, die wir als JSON verfügbar machen möchten. Beachten Sie, dass vorhandene Methoden wie `getName()` und `getOccupations()` verwendet werden. `@type` den eindeutigen Ressourcentyp der Komponente darstellt, sodass ein Client Ereignisse und/oder Trigger anhand des Komponententyps leicht identifizieren kann.
+   In der obigen Methode wird eine neue `HashMap` wird verwendet, um die Eigenschaften zu erfassen, die als JSON verfügbar gemacht werden sollen. Beachten Sie, dass vorhandene Methoden wie `getName()` und `getOccupations()` verwendet werden. Die `@type` den eindeutigen Ressourcentyp der Komponente darstellt, ermöglicht es einem Client, Ereignisse und/oder Trigger anhand des Komponententyps einfach zu identifizieren.
 
    Die `ObjectMapper` wird verwendet, um die Eigenschaften zu serialisieren und eine JSON-Zeichenfolge zurückzugeben. Diese JSON-Zeichenfolge kann dann in die Datenschicht eingefügt werden.
 
@@ -173,11 +171,11 @@ Um Daten über die Komponente in die Datenschicht einzufügen, müssen wir zunä
 
 ## Aktualisieren der Byline-HTL {#htl}
 
-Aktualisieren Sie anschließend die `Byline` [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/htl/block-statements.html?lang=en#htl). HTL (HTML-Vorlagensprache) ist die Vorlage zum Rendern der HTML der Komponente.
+Aktualisieren Sie anschließend die `Byline` [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=en). HTL (HTML-Vorlagensprache) ist die Vorlage zum Rendern der HTML der Komponente.
 
-Ein spezielles Datenattribut `data-cmp-data-layer` auf jeder AEM Komponente verwendet wird, um ihre Datenschicht anzuzeigen.  JavaScript, das von AEM Kernkomponenten bereitgestellt wird, sucht nach diesem Datenattribut, dessen Wert mit der JSON-Zeichenfolge gefüllt wird, die von der `getData()` und fügt die Werte in die Adobe Client Data-Ebene ein.
+Ein spezielles Datenattribut `data-cmp-data-layer` auf jeder AEM Komponente verwendet wird, um ihre Datenschicht anzuzeigen. Von AEM Kernkomponenten bereitgestelltes JavaScript sucht nach diesem Datenattribut. Der Wert dieses Datenattributs wird mit der JSON-Zeichenfolge gefüllt, die von der `getData()` Methode und in die Adobe Client Data-Ebene eingefügt.
 
-1. Öffnen Sie in der IDE die `aem-guides-wknd` Projekt. Navigieren Sie zum `ui.apps` -Modul.
+1. Öffnen Sie die `aem-guides-wknd` -Projekt in die IDE. Navigieren Sie zum `ui.apps` -Modul.
 1. Öffnen Sie die Datei `byline.html` unter `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/byline.html`.
 
    ![Byline HTML](assets/adobe-client-data-layer/byline-html-template.png)
@@ -193,7 +191,7 @@ Ein spezielles Datenattribut `data-cmp-data-layer` auf jeder AEM Komponente verw
        ...
    ```
 
-   Der Wert von `data-cmp-data-layer` wurde auf `"${byline.data}"` where `byline` ist das Sling-Modell, das zuvor aktualisiert wurde. `.data` ist die Standardnotation zum Aufrufen einer Java Getter-Methode in HTL von `getData()` in der vorangegangenen Übung umgesetzt.
+   Der Wert von `data-cmp-data-layer` wurde auf `"${byline.data}"` where `byline` ist das Sling-Modell, das zuvor aktualisiert wurde. `.data` ist die Standardnotation zum Aufrufen einer Java™ Getter-Methode in HTL von `getData()` in der vorangegangenen Übung umgesetzt.
 
 1. Öffnen Sie ein Terminal-Fenster. Erstellen und Bereitstellen von nur `ui.apps` Modul unter Verwendung Ihrer Maven-Fähigkeiten:
 
@@ -237,7 +235,7 @@ Ein spezielles Datenattribut `data-cmp-data-layer` auf jeder AEM Komponente verw
 
 Die Adobe Client-Datenschicht ist ereignisgesteuert und eines der häufigsten Ereignisse für den Trigger einer Aktion ist die `cmp:click` -Ereignis. Die AEM Kernkomponenten vereinfachen die Registrierung Ihrer Komponente mithilfe des Datenelements: `data-cmp-clickable`.
 
-Klickbare Elemente sind normalerweise eine CTA-Schaltfläche oder ein Navigations-Link. Leider hat die Komponente &quot;Byline&quot;keine dieser Funktionen, aber wir werden sie trotzdem registrieren, da dies für andere benutzerdefinierte Komponenten üblich sein könnte.
+Klickbare Elemente sind normalerweise eine CTA-Schaltfläche oder ein Navigations-Link. Leider hat die Komponente &quot;Byline&quot;keine davon, aber wir registrieren sie auf jeden Fall, da dies für andere benutzerdefinierte Komponenten üblich sein könnte.
 
 1. Öffnen Sie die `ui.apps` -Modul in Ihrer IDE
 1. Öffnen Sie die Datei `byline.html` unter `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/byline.html`.
@@ -296,13 +294,13 @@ Klickbare Elemente sind normalerweise eine CTA-Schaltfläche oder ein Navigation
 
    Die Konsolenmeldung sollte angezeigt werden. `Byline Clicked!` und den Namen der Byline.
 
-   Die `cmp:click` -Ereignis ist am einfachsten einzubinden. Für komplexere Komponenten und zur Verfolgung anderer Verhaltensweisen ist es möglich, benutzerdefiniertes JavaScript hinzuzufügen, um neue Ereignisse hinzuzufügen und zu registrieren. Ein großartiges Beispiel ist die Karussellkomponente , die einen Trigger `cmp:show` -Ereignis immer dann, wenn eine Folie umgeschaltet wird. Siehe [Quellcode für weitere Details](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js#L219).
+   Die `cmp:click` -Ereignis ist am einfachsten einzubinden. Für komplexere Komponenten und zur Verfolgung anderer Verhaltensweisen ist es möglich, benutzerdefiniertes JavaScript hinzuzufügen, um neue Ereignisse hinzuzufügen und zu registrieren. Ein großartiges Beispiel ist die Karussellkomponente , die einen Trigger `cmp:show` -Ereignis immer dann, wenn eine Folie umgeschaltet wird. Siehe [Quellcode für weitere Details](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/carousel/v1/carousel/clientlibs/site/js/carousel.js).
 
 ## Verwenden des DataLayerBuilder-Dienstprogramms {#data-layer-builder}
 
 Zeitpunkt, zu dem das Sling-Modell [aktualisiert](#sling-model) Anfang des Kapitels haben wir uns dafür entschieden, die JSON-Zeichenfolge mithilfe einer `HashMap` und legen Sie jede Eigenschaft manuell fest. Diese Methode funktioniert in Bezug auf kleine einmalige Komponenten einwandfrei. Bei Komponenten, die die AEM Kernkomponenten erweitern, kann dies jedoch zu viel zusätzlichem Code führen.
 
-eine Dienstprogrammklasse, `DataLayerBuilder`, besteht für den größten Teil der schweren Anhebung. Dadurch können Implementierungen nur die Eigenschaften erweitern, die sie benötigen. Aktualisieren wir das Sling-Modell, um den `DataLayerBuilder`.
+eine Dienstprogrammklasse, `DataLayerBuilder`, besteht für den größten Teil der schweren Anhebung. Dadurch können Implementierungen nur die Eigenschaften erweitern, die sie benötigen. Aktualisieren wir das Sling-Modell, um die `DataLayerBuilder`.
 
 1. Kehren Sie zur IDE zurück und navigieren Sie zur `core` -Modul.
 1. Öffnen Sie die Datei `Byline.java` unter `core/src/main/java/com/adobe/aem/guides/wknd/core/models/Byline.java`.
@@ -351,7 +349,7 @@ eine Dienstprogrammklasse, `DataLayerBuilder`, besteht für den größten Teil d
    }
    ```
 
-   Die Byline-Komponente verwendet Teile der Bild-Kernkomponente erneut, um ein Bild anzuzeigen, das den Autor darstellt. Im obigen Snippet wird die [DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html) wird verwendet, um die Datenschicht der `Image` -Komponente. Dadurch wird das JSON-Objekt mit allen Daten zum verwendeten Bild vorausgefüllt. Es erfüllt auch einige der Routinefunktionen wie das Festlegen der `@type` und die eindeutige Kennung der Komponente. Beachten Sie, dass die Methode wirklich klein ist!
+   Die Byline-Komponente verwendet Teile der Bild-Kernkomponente erneut, um ein Bild anzuzeigen, das den Autor darstellt. Im obigen Snippet wird die [DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html) wird verwendet, um die Datenschicht der `Image` -Komponente. Dadurch wird das JSON-Objekt mit allen Daten zum verwendeten Bild vorausgefüllt. Es erfüllt auch einige der Routinefunktionen wie das Festlegen der `@type` und die eindeutige Kennung der Komponente. Beachten Sie, dass die Methode klein ist!
 
    Die einzige Eigenschaft erweiterte die `withTitle` wird durch den Wert von `getName()`.
 
@@ -409,7 +407,7 @@ eine Dienstprogrammklasse, `DataLayerBuilder`, besteht für den größten Teil d
        repo:modifyDate: "2019-10-18T20:17:24Z"
    ```
 
-   Beachten Sie, dass jetzt eine `image` -Objekt innerhalb der `byline` Komponenteneintrag. Dies enthält viel mehr Informationen über das Asset im DAM. Beachten Sie auch, dass `@type` und die eindeutige ID (in diesem Fall `byline-136073cfcb`) sowie die `repo:modifyDate` gibt an, wann die Komponente geändert wurde.
+   Beachten Sie, dass jetzt eine `image` -Objekt innerhalb der `byline` Komponenteneintrag. Dies enthält viel mehr Informationen über das Asset im DAM. Beachten Sie auch, dass `@type` und die eindeutige ID (in diesem Fall `byline-136073cfcb`) automatisch ausgefüllt wurden und die `repo:modifyDate` , der angibt, wann die Komponente geändert wurde.
 
 ## Zusätzliche Beispiele {#additional-examples}
 
@@ -424,7 +422,7 @@ eine Dienstprogrammklasse, `DataLayerBuilder`, besteht für den größten Teil d
 
    >[!NOTE]
    >
-   > Beim Erstellen einer erweiterten Datenschicht für Objekte, die in einer Implementierung wiederverwendet werden, wird empfohlen, die Datenschichtelemente in eigene Datenschichtspezifische Java-Objekte zu extrahieren. Beispielsweise haben die Commerce-Kernkomponenten Schnittstellen für `ProductData` und `CategoryData` da diese für viele Komponenten innerhalb einer Commerce-Implementierung verwendet werden können. Überprüfen [den Code im aem-cif-core-components-repo](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer) für weitere Details.
+   > Beim Erstellen einer erweiterten Datenschicht für Objekte, die in einer Implementierung wiederverwendet werden, wird empfohlen, die Datenschichtelemente in ihre eigenen Java™-Objekte zu extrahieren, die für die Datenschicht spezifisch sind. Beispielsweise haben die Commerce-Kernkomponenten Schnittstellen für `ProductData` und `CategoryData` da diese für viele Komponenten innerhalb einer Commerce-Implementierung verwendet werden können. Überprüfen [den Code im aem-cif-core-components-repo](https://github.com/adobe/aem-core-cif-components/tree/master/bundles/core/src/main/java/com/adobe/cq/commerce/core/components/datalayer) für weitere Details.
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
@@ -433,5 +431,5 @@ Sie haben gerade einige Möglichkeiten untersucht, um die Adobe Client-Datenschi
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [Dokumentation zur Adobe Client-Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [Datenschichtintegration mit den Kernkomponenten](https://github.com/adobe/aem-core-wcm-components/blob/master/DATA_LAYER_INTEGRATION.md)
-* [Verwenden der Dokumentation zur Adobe Client-Datenschicht und zu Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Datenschichtintegration mit den Kernkomponenten](https://github.com/adobe/aem-core-wcm-components/blob/main/DATA_LAYER_INTEGRATION.md)
+* [Verwenden der Dokumentation zur Adobe Client-Datenschicht und zu Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de)
