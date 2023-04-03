@@ -1,19 +1,19 @@
 ---
 title: Erstellen von adaptiven Formularen
 description: In Teil 1 erstellen wir das adaptive Formular, fügen die Symbolleiste mit entsprechenden Schaltflächen hinzu und konfigurieren sie.
-feature: Adaptive Formulare
+feature: Adaptive Forms
 kt: 4208
 thumbnail: 22173.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: de3a0444-64ae-45a1-8329-aafa6f5add49
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '50'
-ht-degree: 18%
+source-wordcount: '47'
+ht-degree: 12%
 
 ---
-
 
 # Erstellen von adaptiven Formularen {#creating-adaptive-form}
 
@@ -21,4 +21,4 @@ In Teil 1 erstellen wir adaptive Formulare basierend auf der in der vorherigen L
 
 **Erstellen Ihres ersten adaptiven Formulars**
 
->[!VIDEO](https://video.tv.adobe.com/v/22173/quality=9)
+>[!VIDEO](https://video.tv.adobe.com/v/22173?quality=12&learn=on)

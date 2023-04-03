@@ -10,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: b89ea04b-56dd-494f-a454-644166660a2a
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '103'
 ht-degree: 0%
@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Mit Adobe Asset können Sie AEM Assets direkt aus der Kreativ-App auschecken, an der Sie gerade arbeiten, und sofort mit der Bearbeitung beginnen. Sie können Assets einfach wieder in AEM Assets einchecken, nachdem Sie die Bearbeitung in Ihrer Creative Cloud App abgeschlossen haben und die Versionierung und Kommentare ordnungsgemäß durchgeführt haben.
 
->[!VIDEO](https://video.tv.adobe.com/v/33886/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/33886?quality=12&learn=on)

@@ -7,7 +7,7 @@ role: Developer
 level: Beginner
 kt: 5859
 thumbnail: 37324.jpg
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 3%
@@ -21,7 +21,7 @@ Jedes adaptive Formular basiert auf einer adaptiven Formularvorlage. Die Vorlage
 Die hier erstellte Vorlage ist die Grundlage für unser adaptives Formular für die Zukunft.
 Das folgende Video zeigt Ihnen den grundlegenden Prozess der Erstellung einer adaptiven Formularvorlage
 
->[!VIDEO](https://video.tv.adobe.com/v/37324/quality=9)
+>[!VIDEO](https://video.tv.adobe.com/v/37324?quality=12&learn=on)
 
 Siehe [Dokumentation zu adaptiven Formularvorlagen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html) für weitere Details
 

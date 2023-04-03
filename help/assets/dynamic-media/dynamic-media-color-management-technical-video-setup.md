@@ -7,10 +7,10 @@ topic: Content Management
 role: Developer
 level: Intermediate
 exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '319'
-ht-degree: 26%
+ht-degree: 58%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 26%
 
 In diesem Video erfahren Sie, wie das Dynamic Media-Farbmanagement genutzt werden kann, um Farbkorrektur-Vorschaufunktionen in für AEM Assets bereitzustellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/16792/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16792?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -91,36 +91,36 @@ Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten Farbmanage
 | AdobeRGB | RGB | Adobe RGB (1998) |
 | AppleRGB | RGB | Apple RGB |
 | CIERGB | RGB | CIE-RGB |
-| CoatedFogra27 | CMYK | Überzogene FOGRA27 (ISO 12647-2:2004) |
-| CoatedFogra39 | CMYK | Überzogene FOGRA39 (ISO 12647-2:2004) |
+| CoatedFogra27 | CMYK | Coated FOGRA27 (ISO 12647-2:2004) |
+| CoatedFogra39 | CMYK | Coated FOGRA39 (ISO 12647-2:2004) |
 | CoatedGraCol | CMYK | Coated GRACoL 2006 (ISO 12647-2:2004) |
 | ColorMatchRGB | RGB | ColorMatch-RGB |
 | EuropeISOCoated | CMYK | Europe ISO Coated FOGRA27 |
 | EuroscaleCoated | CMYK | Euroscale Coated v2 |
-| EuroscaleUngestrichen | CMYK | Euroscale Unbeschichtv2 |
+| EuroscaleUncoated | CMYK | Euroscale Unbeschichtv2 |
 | JapanColorCoated | CMYK | Japan Color 2001 Coated |
 | JapanColorNewspaper | CMYK | Japan Color 2002 Newspaper |
-| JapanColorUnxed | CMYK | Japan Color 2001 Ungestrichen |
+| JapanColorUncoated | CMYK | Japan Color 2001 Uncoated |
 | JapanColorWebCoated | CMYK | Japan Color 2003 Web Coated |
 | JapanWebCoated | CMYK | Japan Web Coated (Ad) |
 | NewsprintSNAP2007 | CMYK | US Newsprint (SNAP 2007) |
 | NTSC | RGB | NTSC (1953) |
 | PAL | RGB | PAL/SECAM |
-| ProFoto | RGB | ProFoto-RGB |
-| PS4Default | CMYK | Photoshop 4-Standard-CMYK |
-| PS5Default | CMYK | Photoshop 5-Standard-CMYK |
+| ProPhoto | RGB | ProPhoto RGB |
+| PS4Default | CMYK | Photoshop 4 Standard CMYK |
+| PS5Default | CMYK | Photoshop 5 Standard CMYK |
 | SheetfedCoated | CMYK | U.S. Sheetfed Coated v2 |
-| BlattmatteUngestrichen | CMYK | U.S. Sheetfed Unbeschichtete Version 2 |
+| SheetfedUncoated | CMYK | U.S. Sheetfed Uncoated v2 |
 | SMPTE | RGB | SMPTE-C |
 | sRGB | RGB sRGB | IEC 61966-2.1 |
-| UngestrichenFogra29 | CMYK | Unbeschichtetes FOGRA29 (ISO 12647-2:2004) |
+| UncoatedFogra29 | CMYK | Uncoated FOGRA29 (ISO 12647-2:2004) |
 | WebCoated | CMYK | U.S. Web Coated (SWOP) v2 |
 | WebCoatedFogra28 | CMYK | Web Coated FOGRA28 (ISO 12647-2:2004) |
-| WebCoatedGrade3 | CMYK | Webbeschichteter SWOP 2006 Grad 3 Papier |
-| WebCoatedGrade5 | CMYK | Webbeschichtetes SWOP 2006 Grade 5 Papier |
-| WebUngestrichen | CMYK | U.S. Web Unxed v2 |
-| WideGamutRGB | RGB | Wide Gamut-RGB |
+| WebCoatedGrade3 | CMYK | Web Coated SWOP 2006 Grade 3 Paper |
+| WebCoatedGrade5 | CMYK | Web Coated SWOP 2006 Grade 5 Paper |
+| WebUncoated | CMYK | U.S. Web Uncoated v2 |
+| WideGamutRGB | RGB | Wide Gamut RGB |
 
 ## Zusätzliche Ressourcen{#additional-resources}
 
-* [Konfigurieren des Farbmanagements für dynamische Medien](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
+* [Konfigurieren des Farb-Managements für Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)

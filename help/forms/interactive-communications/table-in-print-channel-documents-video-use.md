@@ -13,7 +13,7 @@ role: Developer
 level: Intermediate
 exl-id: 54afd047-c6e6-4557-9336-39420f30df88
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Das folgende Video führt Sie durch die Schritte, die zur Verwendung der Tabellenkomponente in der interaktiven Kommunikation für Druckkanaldokumente erforderlich sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/27769?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27769?quality=12&learn=on)
 
 Tabellen werden verwendet, um Daten tabellarisch anzuzeigen. Die Zeilen in der Tabelle müssen abhängig von den von der Datenquelle zurückgegebenen Daten vergrößert oder verkleinert werden. Um eine Tabelle im Druckkanaldokument zu verwenden, müssen wir eine Layout-Datei (XDP-Datei) mit AEM Forms Designer erstellen. In dieser Layout-Datei fügen wir die Tabelle mit der erforderlichen Anzahl von Spalten hinzu. Stellen Sie sicher, dass der Objekttyp für das Spaltenfeld je nach Ihren Anforderungen entweder TextField oder Numeric Field ist. Bei Feldern in den einzelnen Spalten stellen Sie sicher, dass die Datenbindung auf &quot;Name verwenden&quot;eingestellt ist.
 

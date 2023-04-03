@@ -10,7 +10,7 @@ level: Beginner
 kt: 8390
 exl-id: 068e38df-9c71-4f55-b6d6-e1486c29d0a9
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 27%
@@ -19,11 +19,11 @@ ht-degree: 27%
 
 # Einbetten des adaptiven Formulars oder HTML5-Formulars in eine Webseite
 
-Das eingebettete adaptive Formular ist voll funktionsfähig und Benutzer können es ausfüllen und senden, ohne die Seite zu verlassen. Es hilft Benutzern, im Kontext anderer Elemente auf der Webseite zu bleiben und gleichzeitig mit dem Formular zu interagieren.
+Das eingebettete adaptive Formular ist voll funktionsfähig, und Benutzende können es ausfüllen und senden, ohne die Seite zu verlassen. Es hilft Benutzenden, im Kontext anderer Elemente auf der Web-Seite zu bleiben und gleichzeitig mit dem Formular zu interagieren.
 
 Im folgenden Video werden die Schritte erläutert, die zum Einbetten eines adaptiven oder HTML5-Formulars in eine Webseite erforderlich sind.
 Weitere Informationen finden Sie unter [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-64/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html?lang=en) für Best Practices, Best Practices usw.
->[!VIDEO](https://video.tv.adobe.com/v/335893?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335893?quality=12&learn=on)
 
 Sie können die im Video verwendeten Beispieldateien herunterladen [von hier](assets/embedding-af-web-page.zip)
 

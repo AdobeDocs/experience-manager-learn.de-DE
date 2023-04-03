@@ -1,10 +1,10 @@
 ---
 title: Hinzufügen von Text- und Bildinhalten zum Druckkanaldokument
-seo-title: Hinzufügen von Text- und Bildinhalten zum Druckkanaldokument
-description: 'Dies ist Teil 7 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil fügen wir den im Layout (xdp) definierten Zielbereichen Bilder und Textinhalte hinzu. '
-seo-description: 'Dies ist Teil 7 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil fügen wir den im Layout (xdp) definierten Zielbereichen Bilder und Textinhalte hinzu. '
+seo-title: Adding text and image content to print channel document
+description: Dies ist Teil 7 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil fügen wir den im Layout (xdp) definierten Zielbereichen Bilder und Textinhalte hinzu.
+seo-description: This is part 7 of a multi-step tutorial for creating your first interactive communications document. In this part, we will add images and text content to the target areas defined in the layout(xdp).
 uuid: f20d6974-6faf-4b90-a7ff-8aa8a620fcaa
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,16 +13,16 @@ version: 6.4,6.5
 discoiquuid: a79bf219-2423-4819-89fc-dcfe976e08b7
 kt: 5992
 thumbnail: 22379.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 49080c16-617f-4840-8bb4-7b080fa291c4
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '199'
-ht-degree: 1%
+source-wordcount: '154'
+ht-degree: 0%
 
 ---
-
 
 # Hinzufügen von Text- und Bildinhalten zum Druckkanaldokument
 
@@ -36,5 +36,4 @@ Um dem Dokument zum Druckkanal Inhalt hinzuzufügen, folgen Sie dem folgenden Vi
 
 Das Video führt Sie durch die Schritte, die zum Hinzufügen von Inhalten zu den entsprechenden Zielbereichen im Druckkanaldokument erforderlich sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/22379t2/?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/22379?quality=12&learn=on)

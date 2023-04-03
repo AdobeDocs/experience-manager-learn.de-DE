@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 2122ab13-f9df-4f36-9c7e-8980033c3b10
-source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1989'
 ht-degree: 1%
@@ -42,7 +42,7 @@ Dies ist ein erweitertes Tutorial. Bevor Sie mit diesem Kapitel fortfahren, verg
 
 Das folgende Video bietet eine kurze Einführung in Inhaltsfragmentmodelle und deren Verwendung in diesem Tutorial.
 
->[!VIDEO](https://video.tv.adobe.com/v/340037/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340037?quality=12&learn=on)
 
 ## Erstellen von Inhaltsfragmentmodellen {#create-models}
 
@@ -236,4 +236,4 @@ Herzlichen Glückwunsch! Sie haben jetzt Registerkarten hinzugefügt, die Datums
 Das nächste Kapitel dieser Reihe wird Folgendes umfassen: [Erstellen von Inhaltsfragmenten](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md) aus den Modellen, die Sie in diesem Kapitel erstellt haben. Erfahren Sie, wie Sie die in diesem Kapitel eingeführten Datentypen verwenden und Ordnerrichtlinien erstellen, um zu begrenzen, welche Inhaltsfragmentmodelle in einem Asset-Ordner erstellt werden können.
 
 Obwohl dies für dieses Tutorial optional ist, stellen Sie sicher, dass Sie alle Inhalte in realen Produktionssituationen veröffentlichen. Eine Übersicht der Autoren- und Veröffentlichungsumgebungen in AEM finden Sie im Abschnitt
-[AEM Headless- und GraphQL-Videoreihen](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md).
+[AEM Headless- und GraphQL-Videoserien](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md).

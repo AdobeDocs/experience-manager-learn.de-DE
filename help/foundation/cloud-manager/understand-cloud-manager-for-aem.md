@@ -12,10 +12,10 @@ level: Beginner
 exl-id: 53279cbb-70c8-4319-b5bb-9a7d350a7f72
 last-substantial-update: 2022-05-10T00:00:00Z
 thumbnail: understand-cloud-manager.jpg
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '512'
-ht-degree: 16%
+ht-degree: 18%
 
 ---
 
@@ -34,25 +34,25 @@ In dieser Videoreihe werden die wichtigsten Funktionen von Cloud Manager für AE
 * [CI/CD Nicht-Produktions-Pipelines](#cicd-non-production-pipeline)
 * [Aktivität](#activity)
 
-Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html).
+Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=de).
 
 ## Programme {#programs}
 
 [Cloud Manager-Programme](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/program-setup.html) stellt eine Reihe von AEM Umgebungen dar, die logische Gruppen von Geschäftsinitiativen unterstützen, die normalerweise einem erworbenen Service Level Agreement (SLA) entsprechen. Beispielsweise kann ein Programm die AEM-Ressourcen zur Unterstützung der globalen öffentlichen Websites darstellen, während ein anderes Programm ein internes zentrales DAM darstellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/26313/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26313?quality=12&learn=on)
 
 ## Umgebungen {#environments}
 
 [Cloud Manager-Umgebungen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/managing-environments.html) bestehen aus AEM-Autoren-, AEM-Veröffentlichungs- und Dispatcher-Instanzen. Verschiedene Umgebungen unterstützen Rollen und können mit verschiedenen CI/CD-Pipelines interagiert werden (siehe unten). Cloud Manager-Umgebungen verfügen in der Regel über eine Produktions- und eine Staging-Umgebung.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)
 
 ## Berichte {#reports}
 
-[Cloud Manager-Berichte](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html) bieten einen Überblick über die Umgebungen und AEM Instanzen des Programms in Diagrammen, die verschiedene Metriken für jede AEM melden und verfolgen.
+[Cloud Manager-Berichte](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html?lang=de) bieten einen Überblick über die Umgebungen und AEM Instanzen des Programms in Diagrammen, die verschiedene Metriken für jede AEM melden und verfolgen.
 
->[!VIDEO](https://video.tv.adobe.com/v/26315/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26315?quality=12&learn=on)
 
 ## CI/CD-Produktions-Pipeline {#cicd-production-pipeline}
 
@@ -66,19 +66,19 @@ Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](htt
 
 Die [CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html) -Konfiguration definiert den Trigger, der die Pipeline initiiert, sowie die Parameter, die die Produktionsbereitstellung und Leistungstestparameter steuern.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
 ### Pipeline-Ausführung
 
 Die [CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html) wird zum Erstellen und Bereitstellen von Code über die Staging-Umgebung in der Produktionsumgebung verwendet, wodurch die Zeit bis zum Wert reduziert wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/26317/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)
 
 ## CI/CD Nicht-Produktions-Pipelines {#cicd-non-production-pipeline}
 
 [CI/CD-Produktionsfremde Pipelines sind in zwei Kategorien unterteilt: Codequalitätspipelines und Bereitstellungs-Pipelines. ](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html) Codequalitätspipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll. Bereitstellungs-Pipelines unterstützen die automatisierte Bereitstellung von Code aus dem Git-Repository in einer Nicht-Produktionsumgebung, d. h. in jeder bereitgestellten AEM Umgebung, die nicht in der Staging- oder Produktionsumgebung enthalten ist.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26316?quality=12&learn=on)
 
 ## Aktivität {#activity}
 
@@ -86,4 +86,4 @@ Cloud Manager bietet eine konsolidierte Ansicht der Programmaktivität, in der a
 
 Cloud Manager lässt sich auch auf Benutzerebene in [Adobe Experience Cloud-Benachrichtigungen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/notifications.html), die einen allgegenwärtigen Überblick über Ereignisse und Aktionen von Interesse bietet.
 
->[!VIDEO](https://video.tv.adobe.com/v/26319/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26319?quality=12&learn=on)

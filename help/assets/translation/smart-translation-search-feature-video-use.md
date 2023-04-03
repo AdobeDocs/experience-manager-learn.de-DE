@@ -9,7 +9,7 @@ level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 thumbnail: 21297.jpg
 exl-id: 4f35e3f7-ae29-4f93-bba9-48c60b800238
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Die intelligente Suche nach Übersetzungen ermöglicht die automatische Suche und Erkennung von Fremdsprachen über AEM Inhalte hinweg, sowohl Assets als auch Seiten, wodurch mehr als 50 Sprachen unterstützt und die manuelle Übersetzung von Inhalten verringert wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/21297/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21297?quality=12&learn=on)
 
 AEM intelligente Übersetzungssuche ermöglicht es Benutzern, mithilfe von nicht englischen Begriffen nach Inhalten in AEM zu suchen, um sie mit den Assets in AEM abzugleichen, die entsprechende englische Begriffe enthalten.
 

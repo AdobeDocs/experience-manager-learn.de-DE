@@ -2,13 +2,14 @@
 title: Variablen in AEM Workflow[Teil 3]
 description: Verwenden von Variablen des Typs XML, JSON, ArrayList, Document in einem AEM Workflow
 version: 6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 849bfe6c-6b7f-44d0-85bc-5df0287a9bca
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '83'
-ht-degree: 1%
+source-wordcount: '82'
+ht-degree: 0%
 
 ---
 
@@ -19,4 +20,4 @@ Variablen des Typs &quot;Dokument&quot;werden zum Speichern von Datensatzdokumen
 
 In diesem Video wird die Verwendung der Dokumenttyp-Variablen zum Speichern des generierten Datensatzdokuments und dann die document-Variable im E-Mail-Sendeschritt eines AEM Workflows verwendet.
 
->[!VIDEO](https://video.tv.adobe.com/v/26452)
+>[!VIDEO](https://video.tv.adobe.com/v/26452?quality=12&learn=on)

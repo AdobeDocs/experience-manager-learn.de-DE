@@ -8,7 +8,7 @@ level: Experienced
 kt: 8919
 thumbnail: 336970.jpeg
 exl-id: c51ce8e3-e83c-4f8b-a835-70335ed3a5b9
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 Erfahren Sie, wie Sie mit dem Content Transfer Tool Inhalte von AEM 6.3+ auf AEM as a Cloud Service migrieren können.
 
->[!VIDEO](https://video.tv.adobe.com/v/336970/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336970?quality=12&learn=on)
 
 ## Verwenden des Content Transfer Tool
 
@@ -46,7 +46,7 @@ Wenden Sie Ihr Wissen an, indem Sie ausprobieren, was Sie mit dieser praktischen
 Bevor Sie die praktische Übung testen, müssen Sie sich das Video und die folgenden Materialien angesehen und verstanden haben:
 
 + [AEM-Modernisierungs-Tools](../aem-modernization-tools.md)
-+ [Einstieg ](../onboarding.md)
++ [Onboarding](../onboarding.md)
 + [Cloud Manager](../cloud-manager.md)
 
 Stellen Sie außerdem sicher, dass Sie die vorherige praktische Übung abgeschlossen haben:

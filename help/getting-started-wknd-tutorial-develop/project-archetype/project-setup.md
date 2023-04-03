@@ -12,7 +12,7 @@ kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
 recommendations: noDisplay, noCatalog
-source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 6%
@@ -35,7 +35,7 @@ In diesem Tutorial wird die Erstellung eines Maven-Multi-Module-Projekts beschri
 
 ## Was Sie erstellen werden {#what-build}
 
->[!VIDEO](https://video.tv.adobe.com/v/30152/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30152?quality=12&learn=on)
 
 In diesem Kapitel erstellen Sie ein neues Adobe Experience Manager-Projekt mit der [AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype). Ihr AEM-Projekt enthält vollständigen Code, Inhalt und Konfigurationen, die für eine Sites-Implementierung verwendet werden. Das in diesem Kapitel erstellte Projekt dient als Grundlage für die Implementierung der WKND-Site und wird in künftigen Kapiteln verwendet.
 

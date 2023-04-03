@@ -9,7 +9,7 @@ role: Developer
 level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '606'
 ht-degree: 1%
@@ -22,7 +22,7 @@ Eine Dropdown-Liste für die Kaskadierung ist eine Reihe von abhängigen DropDow
 
 ## Nachweis des Anwendungsfalls
 
->[!VIDEO](https://video.tv.adobe.com/v/340344?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
 
 Im Rahmen dieses Tutorials habe ich [Geonames REST API](http://api.geonames.org/) , um diese Funktion zu demonstrieren.
 Es gibt eine Reihe von Organisationen, die diese Art von Dienst bereitstellen. Solange sie über gut dokumentierte REST-APIs verfügen, können Sie mit der Datenintegrationsfunktion einfach in AEM Forms integrieren

@@ -1,17 +1,17 @@
 ---
 title: Erste Schritte mit AEM Headless - Content Services
 description: Ein Tutorial, in dem von Anfang bis Ende erläutert wird, wie Inhalte mithilfe von AEM Headless aufgebaut und bereitgestellt werden können.
-feature: Inhaltsfragmente, APIs
+feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
 level: Beginner
-source-git-commit: 22829f532f7791af14919af24650b4593fe89ae8
+exl-id: 5aa32791-861a-48e3-913c-36028373b788
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 4%
+source-wordcount: '334'
+ht-degree: 8%
 
 ---
-
 
 # Erste Schritte mit AEM Headless - Content Services
 
@@ -23,7 +23,7 @@ AEM Content Services ermöglicht die Verwendung der gleichen Inhaltsabstraktione
 
 Ein durchgängiges Tutorial, in dem erläutert wird, wie Inhalte mithilfe von AEM erstellt und bereitgestellt werden, die von einer nativen mobilen App in einem Headless-CMS-Szenario genutzt werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/28315/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28315?quality=12&learn=on)
 
 In diesem Tutorial wird untersucht, wie AEM Content Services genutzt werden kann, um das Erlebnis einer Mobile App zu optimieren, die Ereignisinformationen (Musik, Leistung, Kunst usw.) anzeigt. wird vom WKND-Team kuratiert.
 
@@ -37,15 +37,15 @@ In diesem Tutorial werden die folgenden Themen behandelt:
 
 ## GitHub-Projekt
 
-Der Quellcode und die Inhaltspakete sind in den [AEM Handbüchern - WKND Mobile GitHub Project](https://github.com/adobe/aem-guides-wknd-mobile) verfügbar.
+Der Quell-Code und die Inhaltspakete sind im [AEM Handbücher - WKND Mobile GitHub-Projekt](https://github.com/adobe/aem-guides-wknd-mobile).
 
-Wenn Sie ein Problem mit dem Tutorial oder dem Code finden, hinterlassen Sie bitte ein [GitHub-Problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
+Wenn Sie ein Problem mit dem Tutorial oder dem Code finden, hinterlassen Sie bitte eine [GitHub-Problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
 
 ## AEM GraphQL vs. AEM Content Services
 
 |  | AEM GraphQL-APIs | AEM Content Services |
 |--------------------------------|:-----------------|:---------------------|
-| Schemadefinition | Strukturierte Inhaltsfragmentmodelle | AEM von Komponenten |
-| Inhalt | Inhaltsfragmente | AEM von Komponenten |
+| Schemadefinition | Strukturierte Inhaltsfragmentmodelle | AEM-Komponenten |
+| Inhalt | Inhaltsfragmente | AEM-Komponenten |
 | Inhaltssuche | Nach GraphQL-Abfrage | Nach AEM Seite |
 | Versandformat | GraphQL JSON | AEM ComponentExporter JSON |

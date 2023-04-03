@@ -13,10 +13,10 @@ topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
-source-git-commit: 8fc36698f06fea0eaaf818867c7e713453e0452d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '641'
+ht-degree: 2%
 
 ---
 
@@ -26,7 +26,7 @@ AEM stellt eine Vielzahl von HTTP-Endpunkten bereit, mit denen per Headless-Impl
 
 In diesem Tutorial erfahren Sie, wie eine externe Anwendung programmgesteuert authentifiziert und mit interagiert werden kann, um über HTTP über Zugriffstoken as a Cloud Service AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/330460/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330460?quality=12&learn=on)
 
 ## Voraussetzungen
 

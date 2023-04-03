@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-03-17T00:00:00Z
 jira: KT-10841
 thumbnail: 3416906.jpeg
-source-git-commit: 024b2faac2e5a1a8d4bac64d1f70f292aac75dd0
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 AEM Headless-Anwendungen unterstützen eine integrierte Authoring-Vorschau. Das Vorschauerlebnis verknüpft den Inhaltsfragment-Editor der AEM-Autoreninstanz mit Ihrer benutzerdefinierten App (über HTTP adressierbar), sodass ein Deep Link in die App eingefügt werden kann, mit der das in der Vorschau angezeigte Inhaltsfragment gerendert wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/3416906/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416906?quality=12&learn=on)
 
 Zur Verwendung der Inhaltsfragmentvorschau müssen mehrere Bedingungen erfüllt sein:
 

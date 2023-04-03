@@ -10,7 +10,7 @@ topic: Development
 kt: 8192
 thumbnail: 330519.jpg
 exl-id: 74cb8c30-4c41-426c-a1b5-fc595a3167c8
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
@@ -21,6 +21,6 @@ ht-degree: 0%
 
 Integrationen mit AEM as a Cloud Service müssen sich sicher bei AEM authentifizieren können. AEM Developer Console generiert Service-Anmeldeinformationen, die von externen Anwendungen, Systemen und Diensten verwendet werden, um programmgesteuert mit AEM Author- oder Publish-Diensten über HTTP zu interagieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/330519/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
 Die heruntergeladene Datei mit den Dienstanmeldeinformationen wird in der bereitgestellten Eclipse als Ressourcendatei mit dem Namen service_token.json gespeichert. Die Werte in der Datei service_token werden verwendet, um das JWT zu generieren und das JWT gegen ein Zugriffstoken auszutauschen. Die Dienstprogrammklasse GetServiceCredentials wird verwendet, um die Eigenschaftswerte aus der Ressourcendatei service_token.json abzurufen.

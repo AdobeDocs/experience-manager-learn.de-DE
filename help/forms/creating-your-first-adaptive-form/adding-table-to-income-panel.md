@@ -1,20 +1,20 @@
 ---
 title: Hinzufügen von Komponenten zum Bereich "Einkommen"
 description: Wir fügen eine Tabelle zum Bereich Einkommen hinzu. Konfigurieren Sie die Tabellenzeilen und verwenden Sie den Regeleditor zur Berechnung der Gesamtsumme.
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 22198.jpg
 kt: 4211
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: e7674c46-259f-4dbd-96db-c40369534911
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '186'
-ht-degree: 1%
+source-wordcount: '183'
+ht-degree: 0%
 
 ---
-
 
 # Hinzufügen von Komponenten zum Bereich &quot;Einkommen&quot; {#adding-components-to-income-panel}
 
@@ -22,13 +22,13 @@ Wir fügen eine Tabelle zum Bereich Einkommen hinzu. Konfigurieren Sie die Tabel
 
 **Hinzufügen und Konfigurieren der Tabellenkomponente**
 
->[!VIDEO](https://video.tv.adobe.com/v/22198?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22198?quality=12&learn=on)
 
 
 
 ## Gestalten der Einnahmentabelle dynamisch {#make-the-income-table-dynamic}
 
-**Stellen Sie sicher, dass Sie sich im Bearbeitungsmodus befinden. Die Bearbeitungsschaltfläche befindet sich oben rechts im Browser.**
+**Stellen Sie sicher, dass Sie sich im Bearbeitungsmodus befinden. Die Schaltfläche &quot;Bearbeiten&quot;befindet sich oben rechts im Browser.**
 
 * Wenn Sie eine Tabelle in ein adaptives Formular einfügen, ist die Tabelle standardmäßig nicht dynamisch. Dies bedeutet, dass Sie der Tabelle zur Laufzeit keine neuen Zeilen hinzufügen können.
 
@@ -43,6 +43,4 @@ Wir fügen eine Tabelle zum Bereich Einkommen hinzu. Konfigurieren Sie die Tabel
 ## Regel zur Berechnung der Gesamtsumme erstellen {#create-rule-to-calculate-grand-total}
 
 
->[!VIDEO](https://video.tv.adobe.com/v/22197?quality=9&learn=on)
-
-
+>[!VIDEO](https://video.tv.adobe.com/v/22197?quality=12&learn=on)

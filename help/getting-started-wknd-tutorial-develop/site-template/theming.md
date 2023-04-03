@@ -11,7 +11,7 @@ kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die im [
 
 Nehmen Sie als Nächstes Änderungen an den Themenquellen vor, damit die Site dem Erscheinungsbild der WKND-Marke entspricht.
 
->[!VIDEO](https://video.tv.adobe.com/v/332918/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332918?quality=12&learn=on)
 
 Allgemeine Schritte für das Video:
 
@@ -55,7 +55,7 @@ Herunterladen der fertigen Stile für die [WKND-Beispieldesign](assets/theming/W
 
 Stellen Sie mithilfe der Frontend-Pipeline von Cloud Manager Updates für ein Design in einer AEM Umgebung bereit.
 
->[!VIDEO](https://video.tv.adobe.com/v/338722/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338722?quality=12&learn=on)
 
 Allgemeine Schritte für das Video:
 

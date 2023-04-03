@@ -9,7 +9,7 @@ level: Beginner
 kt: 7620
 thumbnail: 332859.jpg
 exl-id: 7f17d829-544e-4cf2-bd75-b179ffb89bf5
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 0%
@@ -26,6 +26,6 @@ In diesem Video werden Sie:
 + Erfahren Sie, wie Sie einen Deep Link zu anderen Inhaltsfragmenten in einem Rich-Text-Feld erstellen
 + Erstellen von GraphQL-Abfragen, die Daten aus referenzierten Inhaltsfragmenten zurückgeben
 
->[!VIDEO](https://video.tv.adobe.com/v/332859/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332859?quality=12&learn=on)
 
-_Laden Sie die  [Postman-](./assets/aem-headless-video-series.postman_collection.json) Sammlung herunter, die in der AEM Headless-Videoserie verwendet wird._
+_Laden Sie die [Postman-Sammlung](./assets/aem-headless-video-series.postman_collection.json) wird in der AEM Headless-Videoserie verwendet._

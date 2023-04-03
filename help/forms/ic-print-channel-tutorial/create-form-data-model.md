@@ -16,7 +16,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 4e64aa99-0b1c-49e9-95a7-d254017b80f4
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
@@ -29,7 +29,7 @@ In diesem Teil erstellen wir ein Formulardatenmodell. Mit dem Formulardatenmodel
 
 **Erstellen des Formulardatenmodells in AEM Forms**
 
->[!VIDEO](https://video.tv.adobe.com/v/27763/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27763?quality=12&learn=on)
 
 Das Formulardatenmodell ist von einer korrekt konfigurierten Datenquelle abhängig. Wir verwenden die im vorherigen Schritt konfigurierte Datenquelle als Grundlage für dieses Formulardatenmodell.
 

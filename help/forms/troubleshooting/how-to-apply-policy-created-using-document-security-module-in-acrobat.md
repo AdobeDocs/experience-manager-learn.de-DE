@@ -1,23 +1,23 @@
 ---
 title: Anwenden von Richtlinien, die mit dem Document Security-Modul in Acrobat erstellt wurden
-description: 'Konfigurieren von Acrobat zum Anwenden von Richtlinien auf Dokumente mithilfe von Document Security '
+description: Konfigurieren von Acrobat zum Anwenden von Richtlinien auf Dokumente mithilfe von Document Security
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
-feature: 'Document Security '
-topic: 'Entwicklung '
+feature: Document Security
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 086afdf4-c9a4-4bb9-b242-e6337281ef9b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 5%
+source-wordcount: '49'
+ht-degree: 0%
 
 ---
-
 
 # Anwenden von Richtlinien, die mit dem Document Security-Modul in Acrobat erstellt wurden
 
 *In diesem Video wird die Anwendung von Richtlinien erläutert, die mithilfe des Document Security-Moduls in Acrobat erstellt wurden.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335486?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335486?quality=12&learn=on)

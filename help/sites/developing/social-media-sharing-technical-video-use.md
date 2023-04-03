@@ -11,7 +11,7 @@ topic: Content Management
 role: Developer
 level: Intermediate
 exl-id: 569069e8-7964-49f1-96ed-7dfa4f8ed96c
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 10%
@@ -22,7 +22,7 @@ ht-degree: 10%
 
 Erfahren Sie mehr über die Einrichtung und Verwendung der Social Media-Sharing-Komponente.
 
->[!VIDEO](https://video.tv.adobe.com/v/18897/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/18897?quality=12&learn=on)
 
 In diesem Video werden die folgenden Funktionen der Social Media-Sharing-Komponente (Teil von [AEM Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de)) mithilfe der [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) Beispiel-Website.
 

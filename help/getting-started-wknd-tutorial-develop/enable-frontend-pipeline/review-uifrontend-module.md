@@ -11,7 +11,7 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 2%
@@ -36,7 +36,7 @@ In diesem Kapitel überprüfen wir die Entwicklung, Bereitstellung und Bereitste
 >
 >In diesem Video wird der Front-End-Fluss für beide **Vollständig stapeln und schnelle Site-Erstellung** Projekte, um den geringfügigen Unterschied beim Erstellen, Bereitstellen und Bereitstellen von Frontend-Ressourcen-Modell zu beschreiben.
 
->[!VIDEO](https://video.tv.adobe.com/v/3409344/)
+>[!VIDEO](https://video.tv.adobe.com/v/3409344?quality=12&learn=on)
 
 ## Voraussetzungen {#prerequisites}
 

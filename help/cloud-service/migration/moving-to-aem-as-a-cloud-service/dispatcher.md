@@ -9,10 +9,10 @@ level: Experienced
 kt: 8633
 thumbnail: 336962.jpeg
 exl-id: 81397b21-b4f3-4024-a6da-a9b681453eff
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '277'
-ht-degree: 3%
+ht-degree: 6%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 3%
 
 Erfahren Sie mehr über AEM Dispatcher für AEM as a Cloud Service, wobei Sie sich auf wichtige Änderungen vom Dispatcher für AEM 6, das Dispatcher-Konvertierungstool und die Verwendung des Dispatcher Tools SDK konzentrieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/336962/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336962?quality=12&learn=on)
 
 ## Dispatcher Converter
 
@@ -33,7 +33,7 @@ Verwenden Sie als Teil der Refaktorierung Ihrer Codebasis die [AEM Dispatcher Co
 
 + Verwenden Sie die [Adobe I/O Dispatcher Converter-Tool](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#aio-aem-migrationdispatcher-converter) , um eine vorhandene Dispatcher-Konfiguration zu migrieren.
 + Referenzieren Sie das Dispatcher-Modul aus dem [AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.cloud) als Best Practice.
-+ [Einrichten lokaler Dispatcher Tools](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) , um den Dispatcher zu validieren, bevor er in einer Cloud Service-Umgebung getestet wird.
++ [Einrichten lokaler Dispatcher Tools](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=de) , um den Dispatcher zu validieren, bevor er in einer Cloud Service-Umgebung getestet wird.
 
 ## Übungen
 
@@ -42,7 +42,7 @@ Wenden Sie Ihr Wissen an, indem Sie ausprobieren, was Sie mit dieser praktischen
 Bevor Sie die praktische Übung testen, müssen Sie sich das Video und die folgenden Materialien angesehen und verstanden haben:
 
 + [AEM-Modernisierungs-Tools](./aem-modernization-tools.md)
-+ [Einstieg ](./onboarding.md)
++ [Onboarding](./onboarding.md)
 + [Cloud Manager](./cloud-manager.md)
 
 Stellen Sie außerdem sicher, dass Sie die vorherige praktische Übung abgeschlossen haben:

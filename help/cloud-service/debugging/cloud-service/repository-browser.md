@@ -12,19 +12,19 @@ thumbnail: 341464.jpg
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
+exl-id: 88af40fc-deff-4b92-84b1-88df2dbdd90b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
 
 ---
 
-
 # Debugging von mit dem Repository-Browser as a Cloud Service AEM
 
 Der Repository-Browser ist ein leistungsstarkes Tool, das AEM zugrunde liegenden Datenspeicher sichtbar macht und das einfache Debugging AEM as a Cloud Service Umgebung ermöglicht. Der Repository-Browser unterstützt eine schreibgeschützte Ansicht der Ressourcen und Eigenschaften von AEM für Produktions-, Staging- und Entwicklungsdienste sowie Autoren-, Veröffentlichungs- und Vorschaudienste.
 
->[!VIDEO](https://video.tv.adobe.com/v/341464/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341464?quality=12&learn=on)
 
 Repository-Browser ist __NUR__ verfügbar in AEM as a Cloud Service Umgebungen (verwenden [CRXDE Lite](../aem-sdk-local-quickstart/other-tools.md#crxde-lite) Debugging des lokalen AEM SDK).
 
@@ -48,4 +48,3 @@ Der Repository-Browser wird für die ausgewählte Dienstebene (Autor, Veröffent
 ## Zugriff veröffentlichen und Vorschau anzeigen
 
 Standardmäßig ist der Zugriff auf Veröffentlichen oder Vorschau eingeschränkt, wodurch die verfügbaren Ressourcen im Repository-Browser reduziert werden. [Um alle Ressourcen in der Veröffentlichungs- (oder Vorschau-)Ansicht anzuzeigen, fügen Sie Benutzer einer Administrator-Rolle vom Typ Veröffentlichen (oder Vorschau) hinzu.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#navigate-the-hierarchy)
-

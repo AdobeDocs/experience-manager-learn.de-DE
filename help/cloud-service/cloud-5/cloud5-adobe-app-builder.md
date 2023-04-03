@@ -9,10 +9,10 @@ thumbnail: 342375.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 799539ba-00aa-40c0-89de-cab38b0066a3
-source-git-commit: 3854deb12c2d5a5c91c3416939f3e4534cb0094f
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '94'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Amol Anand meldet sich an, um die Integration mit dem Adobe App Builder und darüber, wo und wann er verwendet werden soll, zu reduzieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/342375)
+>[!VIDEO](https://video.tv.adobe.com/v/342375?quality=12&learn=on)
 
 ## Inhalt in diesem Video
 

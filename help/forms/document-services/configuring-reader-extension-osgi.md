@@ -10,10 +10,10 @@ role: Admin
 level: Beginner
 exl-id: 1f16acfd-e8fd-4b0d-85c4-ed860def6d02
 last-substantial-update: 2020-08-01T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 34%
+ht-degree: 30%
 
 ---
 
@@ -37,7 +37,7 @@ Die Berechtigung für Reader Extensions ist mit dem Benutzer fd-service verknüp
 
 Bitte folgen Sie dem Video, um die Anmeldeinformationen zum fd-service-Benutzer hinzuzufügen.
 
->[!VIDEO](https://video.tv.adobe.com/v/335849?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335849?quality=12&learn=on)
 
 
 Der Befehl zum Auflisten der Details der pfx-Datei lautet. Der folgende Befehl setzt voraus, dass Sie sich im selben Ordner wie die pfx-Datei befinden.

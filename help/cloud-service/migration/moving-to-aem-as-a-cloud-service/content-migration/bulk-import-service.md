@@ -8,7 +8,7 @@ level: Experienced
 kt: 8918
 thumbnail: 336969.jpeg
 exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 1%
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 Erfahren Sie, wie AEM as a Cloud Services Bulk Import Service zum Importieren von Assets aus Nicht-AEM-Quellen verwendet werden kann.
 
->[!VIDEO](https://video.tv.adobe.com/v/336969/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336969?quality=12&learn=on)
 
 ## Verwenden des Bulk Import-Dienstes
 
@@ -35,5 +35,5 @@ Der Bulk Import Service wird verwendet, um im Azure Blob Storage- oder Amazon S3
 
 ## Sonstige -Ressourcen
 
-+ [Adobe-Entwickler-Live-Sitzung zur Asset-Erfassung](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html?lang=en)
++ [Adobe Developers Live-Sitzung zur Asset-Erfassung](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html?lang=en)
 

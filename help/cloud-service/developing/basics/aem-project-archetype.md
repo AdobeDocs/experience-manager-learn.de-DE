@@ -4,20 +4,20 @@ description: Erfahren Sie, wie Sie mit dem Archetyp AEM Maven-Projekt ein neues 
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Entwicklung
-feature: AEM-Projektarchetyp
+topic: Development
+feature: AEM Project Archetype
 kt: 6929
 thumbnail: 330551.jpg
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+exl-id: 28914c67-a1d3-4f85-987e-c84ff348f560
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 5%
+source-wordcount: '74'
+ht-degree: 0%
 
 ---
-
 
 # Erstellen AEM Projekts mit dem Projektarchetyp AEM
 
 Erfahren Sie, wie Sie mit dem Archetyp AEM Maven-Projekt ein neues AEM-Anwendungsprojekt erstellen, um die Best Practices abzugleichen und den Beginn der AEM zu beschleunigen.
 
->[!VIDEO](https://video.tv.adobe.com/v/330551/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330551?quality=12&learn=on)

@@ -9,7 +9,7 @@ level: Beginner
 kt: 9401
 thumbnail: 338824.jpg
 exl-id: a62e936f-c231-474d-9671-58815b2cb652
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -24,17 +24,17 @@ Schaffen Sie einen schnellen Einfluss auf Ihre Organisation, indem Sie es Kreati
 
 Erfahren Sie, wie Sie Adobe Asset Link für AEM as a Cloud Service einrichten, Benutzerberechtigungen konfigurieren und AEM as a Cloud Service, und wie Sie Adobe Asset Link installieren und verwenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/338824/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338824?quality=12&learn=on)
 
 ## Asset-Link-Einrichtung für Managed Services und On-Premise
 
 Erfahren Sie, wie Sie Adobe Asset Link für AEM 6 einrichten, der in Adobe Managed Services oder On-Premise ausgeführt wird, Benutzerberechtigungen konfigurieren und as a Cloud Service AEM, und wie Sie Adobe Asset Link installieren und verwenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/338823/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338823?quality=12&learn=on)
 
 
 ## Einrichtung von Asset-Links für Domain Trust
 
 Erfahren Sie, was &quot;Domain Trust&quot;ist, was es für die Verwendung von Adobe Asset Link mit Experience Manager Assets bedeutet und wie Sie &quot;Domain Trust&quot;einrichten.
 
->[!VIDEO](https://video.tv.adobe.com/v/338825/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338825?quality=12&learn=on)

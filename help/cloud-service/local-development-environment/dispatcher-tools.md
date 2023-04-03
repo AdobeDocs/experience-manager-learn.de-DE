@@ -10,7 +10,7 @@ kt: 4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: eb31c5fb79e01e1c363fc153355e8d92d1a54021
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1612'
 ht-degree: 9%
@@ -79,7 +79,7 @@ Die Version der Dispatcher Tools unterscheidet sich von der des AEM SDK. Stellen
 
 Bei allen unten angegebenen Befehlen wird davon ausgegangen, dass der aktuelle Arbeitsordner die erweiterten Inhalte der Dispatcher Tools enthält.
 
->[!VIDEO](https://video.tv.adobe.com/v/30601/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30601?quality=12&learn=on)
 
 *In diesem Video wird macOS zu Veranschaulichungszwecken verwendet. Die entsprechenden Windows/Linux-Befehle können verwendet werden, um ähnliche Ergebnisse zu erzielen.*
 
@@ -188,7 +188,7 @@ Die empfohlene Dispatcher Tools-Version ist diejenige, die im Lieferumfang des A
 
 Der Grundsatz der Apache- und Dispatcher-Konfiguration wird regelmäßig verbessert und mit der AEM as a Cloud Service SDK-Version veröffentlicht. Es empfiehlt sich, die grundlegenden Konfigurationsverbesserungen in Ihr AEM-Projekt zu integrieren und zu vermeiden. [lokale Validierung](#validate-configurations) und Cloud Manager-Pipeline-Fehler. Aktualisieren Sie sie mithilfe des `update_maven.sh` Skript aus `.../dispatcher-sdk-x.x.x/bin` Ordner.
 
->[!VIDEO](https://video.tv.adobe.com/v/3416744/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3416744?quality=12&learn=on)
 
 *In diesem Video wird macOS zu Veranschaulichungszwecken verwendet. Die entsprechenden Windows/Linux-Befehle können verwendet werden, um ähnliche Ergebnisse zu erzielen.*
 

@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 4ee0b68f-3897-4104-8615-9de8dbb8f327
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 4%
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 Dynamic Media Viewer-Verbesserungen in AEM 6.5 umfassen die Unterstützung von 360-Grad-Video-Rendering, 360-Grad-Media-Viewern (video360Social und video360VR) und die Möglichkeit, benutzerdefinierte Videominiaturen auszuwählen.
 
->[!VIDEO](https://video.tv.adobe.com/v/26391?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26391?quality=12&learn=on)
 
 >[!NOTE]
 >

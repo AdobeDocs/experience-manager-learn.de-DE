@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 thumbnail: 28988.jpg
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '990'
 ht-degree: 2%
@@ -50,7 +50,7 @@ Adobe Asset Link-Erweiterung für Adobe Creative Cloud for enterprise erweitert 
 
 Adobe Asset Link bietet InDesign-Direktverknüpfungsunterstützung zwischen Adobe Asset Link und AEM. Mit InDesign-Direktverknüpfungsunterstützung können Sie (__Platzieren von Links__ oder __Platzieren von Kopien__) oder per Drag &amp; Drop digitale Assets aus AEM über das Bedienfeld Adobe-Asset-Link in das InDesign ziehen. Außerdem wird die Ausgabedarstellung *Für Platzierung nur+ (FPO) eingeführt.
 
->[!VIDEO](https://video.tv.adobe.com/v/28988/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28988?quality=12&learn=on)
 
 >[!NOTE]
 >

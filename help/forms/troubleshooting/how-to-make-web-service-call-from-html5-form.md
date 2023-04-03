@@ -1,22 +1,23 @@
 ---
-title: Webdienst-Aufruf aus HTML5-Formular durchführen
+title: Webdienstaufruf über das HTML5-Formular durchführen
 description: Schritte zum Konfigurieren des Webdienstes über das HTML5-Formular
 type: Troubleshooting
 role: Developer
 level: Intermediate
 version: 6.5
 feature: Mobile Forms
-topic: 'Entwicklung  '
+topic: Development
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 28fa5597-bab5-4fb9-8d30-e9fd41820749
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 6%
+source-wordcount: '41'
+ht-degree: 0%
 
 ---
 
-# Webdienst-Aufruf aus HTML5-Formular durchführen
+# Webdienstaufruf über das HTML5-Formular durchführen
 
-*Dieses Video führt durch den Prozess, um einen Webdienst-Aufruf aus HTML5-Formularen durchzuführen.*
+*Dieses Video führt Sie durch den Prozess, um einen Webdienst-Aufruf über das HTML5-Formular durchzuführen.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335505?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335505?quality=12&learn=on)

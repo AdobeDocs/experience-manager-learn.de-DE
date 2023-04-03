@@ -1,6 +1,6 @@
 ---
 title: App Builder für Asset compute-Erweiterbarkeit einrichten
-description: asset compute-Projekte sind speziell definierte App Builder-Projekte und erfordern daher Zugriff auf App Builder in der Adobe Developer Console, um sie einzurichten und bereitzustellen.
+description: asset compute-Projekte sind speziell definierte App Builder-Projekte und erfordern daher Zugriff auf App Builder in der Adobe Developer-Konsole, um sie einzurichten und bereitzustellen.
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -13,7 +13,7 @@ topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 2b1d8786-592e-41f2-80cc-bc0b1c7e1b49
-source-git-commit: eb6a7ef343a43000855f8d5cc69bde0fae81d3e6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '539'
 ht-degree: 0%
@@ -22,15 +22,15 @@ ht-degree: 0%
 
 # App Builder einrichten
 
-asset compute-Projekte sind speziell definierte App Builder-Projekte und erfordern daher Zugriff auf App Builder in der Adobe Developer Console, um sie einzurichten und bereitzustellen.
+asset compute-Projekte sind speziell definierte App Builder-Projekte und erfordern daher Zugriff auf App Builder in der Adobe Developer-Konsole, um sie einzurichten und bereitzustellen.
 
 ## App Builder in der Adobe Developer Console erstellen und einrichten{#set-up}
 
->[!VIDEO](https://video.tv.adobe.com/v/40183/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40183?quality=12&learn=on)
 
 _Clickthrough der Einrichtung von App Builder (kein Audio)_
 
-1. Anmelden bei [Adobe Developer Console](https://console.adobe.io) mithilfe der Adobe ID, die mit dem bereitgestellten verknüpft ist [Konten und Dienstleistungen](./accounts-and-services.md). Stellen Sie sicher, dass __Systemadministrator__ oder in __Entwicklerrolle__ für die richtige Adobe Org.
+1. Anmelden bei [Adobe Developer-Konsole](https://console.adobe.io) mithilfe der Adobe ID, die mit dem bereitgestellten verknüpft ist [Konten und Dienstleistungen](./accounts-and-services.md). Stellen Sie sicher, dass __Systemadministrator__ oder in __Entwicklerrolle__ für die richtige Adobe Org.
 1. Erstellen eines App Builder-Projekts durch Tippen auf __Neues Projekt erstellen > Projekt aus Vorlage > App Builder__
 
    _Wenn__ Neues Projekt erstellen __oder__ App Builder __Der Typ ist nicht verfügbar. Das bedeutet, dass Ihre Adobe-Org nicht verfügbar ist. [mit App Builder bereitgestellt wurde](#request-adobe-project-app-builder)._

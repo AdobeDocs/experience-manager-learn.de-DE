@@ -15,7 +15,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 525cd30c-05bf-4f17-b61b-90609ce757ea
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 6%
@@ -36,7 +36,7 @@ Diese Videoreihe behandelt die Bereitstellungsoptionen für die Verwendung von I
 
 ## Verwenden von Inhaltsfragmenten in Webseiten {#using-content-fragments-in-web-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/22449/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22449?quality=12&learn=on)
 
 Inhaltsfragmente können auf AEM Sites-Seiten oder auf ähnliche Weise Experience Fragments verwendet werden, die die AEM WCM-Kernkomponenten verwenden. [Inhaltsfragment-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=de).
 
@@ -44,18 +44,18 @@ Inhaltsfragmentkomponenten können mit AEM Stilsystem formatiert werden, um den 
 
 ## Anzeigen von Inhaltsfragmenten als JSON {#exposing-content-fragments-as-json}
 
->[!VIDEO](https://video.tv.adobe.com/v/22448/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22448?quality=12&learn=on)
 
 AEM Content Services ermöglicht die Erstellung von AEM seitenbasierten HTTP-Endpunkten, die Inhalte in ein normalisiertes JSON-Format ausgeben.
 
-Das obige Video verwendet die [Inhaltsfragment-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) , um einzelne Inhaltsfragmente anzuzeigen. Die [Inhaltsfragmentlisten-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html) ist eine neue Komponente, die es einem Autor ermöglicht, eine Abfrage zu definieren, die die Seite dynamisch mit einer Liste von Inhaltsfragmenten füllt. Die Inhaltsfragmentlisten-Komponente wird bevorzugt, wenn mehrere Inhaltsfragmente verfügbar gemacht werden müssen.
+Das obige Video verwendet die [Inhaltsfragment-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=de) , um einzelne Inhaltsfragmente anzuzeigen. Die [Inhaltsfragmentlisten-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html) ist eine neue Komponente, die es einem Autor ermöglicht, eine Abfrage zu definieren, die die Seite dynamisch mit einer Liste von Inhaltsfragmenten füllt. Die Inhaltsfragmentlisten-Komponente wird bevorzugt, wenn mehrere Inhaltsfragmente verfügbar gemacht werden müssen.
 
 *Beispiel einer JSON-Payload des Content Services-Endpunkts:*\
 **[athletes.json](assets/athletes.json)**
 
 ## Verwenden der Assets-HTTP-API
 
->[!VIDEO](https://video.tv.adobe.com/v/26390/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26390?quality=12&learn=on)
 
 Erste Einführung in AEM 6.5 ist die verbesserte Unterstützung für Inhaltsfragmente mit der Assets-HTTP-API. Dadurch können Entwickler auf einfache Weise CRUD-Vorgänge (Create, Read, Update, Delete, Erstellen, Lesen und Löschen) für Inhaltsfragmente durchführen.
 
@@ -80,7 +80,7 @@ Es gibt zwei Möglichkeiten, Inhaltsfragment als JSON verfügbar zu machen, um e
 
 * [Authoring mit Inhaltsfragmenten](content-fragments-feature-video-use.md)
 * [AEM WCM-Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de)
-* [AEM WCM-Kerninhaltsfragment-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
+* [AEM WCM-Kerninhaltsfragment-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=de)
 
 So laden Sie das unten stehende Paket in einer AEM 6.4+ -Instanz für den finalen Status aus der Videoreihe herunter und installieren es:\
 **[aem_demo_fluid-experiencescontent-fragments-100.zip](assets/aem_demo_fluid-experiencescontent-fragments-100.zip)**

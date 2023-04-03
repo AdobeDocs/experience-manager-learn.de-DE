@@ -9,7 +9,7 @@ level: Intermediate, Experienced
 kt: 8632
 thumbnail: 336961.jpeg
 exl-id: 9c641a90-be62-49c1-b8c0-d45d26055b94
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 Erfahren Sie mehr über Cloud Manager für AEM as a Cloud Service und die Unterschiede zu Cloud Manager für AEM in Adobe Manager Services (AMS).
 
->[!VIDEO](https://video.tv.adobe.com/v/336961/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336961?quality=12&learn=on)
 
 ## Übungen
 
@@ -29,7 +29,7 @@ Wenden Sie Ihr Wissen an, indem Sie ausprobieren, was Sie mit dieser praktischen
 Bevor Sie die praktische Übung testen, müssen Sie sich das Video und die folgenden Materialien angesehen und verstanden haben:
 
 + [Über AEM as a Cloud Service anders nachdenken](./introduction.md)
-+ [Einstieg ](./onboarding.md)
++ [Onboarding](./onboarding.md)
 
 Stellen Sie außerdem sicher, dass Sie die vorherige praktische Übung abgeschlossen haben:
 

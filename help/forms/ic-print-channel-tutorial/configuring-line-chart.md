@@ -1,10 +1,10 @@
 ---
 title: Liniendiagramm für Ihr erstes interaktives Kommunikationsdokument konfigurieren
-seo-title: Liniendiagramm für Ihr erstes interaktives Kommunikationsdokument konfigurieren
+seo-title: Configuring line chart for your first interactive communication document
 description: Dies ist Teil 8 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments für den Druckkanal. In diesem Teil fügen wir ein Liniendiagramm hinzu, um den Kontostand anzuzeigen.
-seo-description: Dies ist Teil 8 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments für den Druckkanal. In diesem Teil fügen wir ein Liniendiagramm hinzu, um den Kontostand anzuzeigen.
+seo-description: This is part 8 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will add a Line chart to display the account balance.
 uuid: a4394874-a080-4b6a-a3eb-ffc71504919d
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -13,16 +13,16 @@ version: 6.4,6.5
 discoiquuid: 9110e5c6-50ee-4c3e-a779-b680ff49ef23
 kt: 5993
 thumbnail: 22386.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 86a955e2-2463-4973-8d3c-4c694db8c787
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 1%
+source-wordcount: '130'
+ht-degree: 0%
 
 ---
-
 
 # Liniendiagramm für Ihr erstes interaktives Kommunikationsdokument konfigurieren {#configuring-line-chart-for-your-first-interactive-communication-document}
 
@@ -38,5 +38,4 @@ Ab AEM Forms 6.4 ist es sehr einfach, Daten mit verschiedenen Diagrammtypen anzu
 
 Das folgende Video führt Sie durch die Schritte zum Hinzufügen und Konfigurieren der Diagrammkomponente
 
->[!VIDEO](https://video.tv.adobe.com/v/22386/?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/22386?quality=12&learn=on)

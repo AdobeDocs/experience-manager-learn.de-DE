@@ -8,10 +8,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 8b05fc02-c0c5-48ad-a53e-d73b805ee91f
-source-git-commit: 30c882da3a89820b5e11bc2902bb92dd0629efe9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '962'
-ht-degree: 11%
+ht-degree: 12%
 
 ---
 
@@ -40,7 +40,7 @@ Wenn Inhaltsfragmentmodelle **not** für eine Konfiguration aktiviert ist, wird 
 >
 >Wenn die `global` -Konfiguration verwendet wird, gilt die Konfiguration für alle Inhalte und `cq:conf` nicht festgelegt werden.
 >
->Weitere Informationen finden Sie in der Dokumentation zum [[!UICONTROL Konfigurationsbrowser].](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)
+>Weitere Informationen finden Sie in der Dokumentation zum [[!UICONTROL Konfigurationsbrowser].](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=de)
 
 1. Melden Sie sich bei der AEM-Autoreninstanz als Benutzer mit entsprechenden Berechtigungen an, um die entsprechende Konfiguration zu ändern.
    * In diesem Tutorial wird die **admin** -Benutzer verwendet werden.
@@ -56,7 +56,7 @@ Wenn Inhaltsfragmentmodelle **not** für eine Konfiguration aktiviert ist, wird 
    >    
    >    1. Öffnen Sie [CRXDE Lite](http://localhost:4502/crx/de)
    >    1. Navigieren Sie zu `/conf/wknd-mobile/settings/dam/cfm`
-   >    1. Löschen Sie die `models` Knoten
+   >    1. Löschen Sie den `models`-Knoten
 
    >    
    >Alle vorhandenen Inhaltsfragmentmodelle, die mit dieser Konfiguration erstellt wurden, werden gelöscht und ihre Definitionen werden unter `/conf/wknd-mobile/settings/dam/cfm/models`.
@@ -70,7 +70,7 @@ Wenn Inhaltsfragmentmodelle **not** für eine Konfiguration aktiviert ist, wird 
    1. Überprüfen Sie die **[!UICONTROL Cloud-Konfiguration]** -Feld auf **/conf/wknd-mobile**
    1. Tippen **[!UICONTROL Speichern und schließen]** oben rechts, um Änderungen beizubehalten
 
->[!VIDEO](https://video.tv.adobe.com/v/28336/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28336?quality=12&learn=on)
 
 >[!WARNING]
 >
@@ -93,7 +93,7 @@ Mit der Zuordnung bewaffnet können wir Inhaltsfragment definieren, das zur Erfa
 1. Tippen **[!UICONTROL Erstellen]** , um den Assistenten zur Erstellung von Inhaltsfragmentmodellen zu öffnen.
 1. Eingabe **[!DNL Event]** als **[!UICONTROL Modelltitel]** *(Beschreibung ist optional)* und tippen **[!UICONTROL Erstellen]** speichern.
 
->[!VIDEO](https://video.tv.adobe.com/v/28337/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28337?quality=12&learn=on)
 
 ## Definieren der Struktur des Inhaltsfragmentmodells
 
@@ -169,7 +169,7 @@ Wiederholen Sie diese Schritte mit den unten definierten Eingabedefinitionen, um
 * [!UICONTROL Eigenschaftsname] : `venueCity`
 * [!UICONTROL Optionen] : `Basel,London,Los Angeles,Paris,New York,Tokyo`
 
->[!VIDEO](https://video.tv.adobe.com/v/28335/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28335?quality=12&learn=on)
 
 >[!NOTE]
 >

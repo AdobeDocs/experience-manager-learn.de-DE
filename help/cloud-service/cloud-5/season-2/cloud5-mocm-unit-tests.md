@@ -7,7 +7,7 @@ level: Intermediate
 thumbnail: 343623.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 4%
@@ -18,7 +18,7 @@ ht-degree: 4%
 
 Ein häufig übersehener Schritt bei der Entwicklung von Software, sind Komponententests eine enorm wichtige Aktivität, die jeder Entwickler abschließen sollte. AEM bietet viele standardmäßige Qualitätsprüfungen nativ, sie können jedoch nicht alles testen, was Sie angepasst oder geändert haben.
 
->[!VIDEO](https://video.tv.adobe.com/v/343623)
+>[!VIDEO](https://video.tv.adobe.com/v/343623?quality=12&learn=on)
 
 ## Inhalt in diesem Video
 

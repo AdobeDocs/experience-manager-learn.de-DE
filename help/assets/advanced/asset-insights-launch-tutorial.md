@@ -8,7 +8,7 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-06-04T00:00:00Z
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 1%
@@ -23,7 +23,7 @@ In dieser 5-teiligen Videoreihe werden wir durch die Einrichtung und Konfigurati
 
 Asset Insights - Überblick. Installieren Sie Kernkomponenten, Beispielbildkomponente und andere Inhaltspakete, um Ihre Umgebung fertig zu machen.
 
->[!VIDEO](https://video.tv.adobe.com/v/25943/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25943?quality=12&learn=on)
 
 ### Architekturdiagramm {#architecture-diagram}
 
@@ -42,7 +42,7 @@ Das Video verwendet Kernkomponenten v2.2.2, die nicht mehr die neueste Version s
 
 Verbesserungen an Kernkomponenten und Verwendung der Proxy-Komponente (Beispielbildkomponente) für Asset Insights. Bearbeiten der Vorlagenrichtlinien für die Inhaltsseite, um die Beispielbildkomponente für die Referenz-Site zu aktivieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/25944/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25944?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ Kernbildkomponenten verwenden ***data-asset-id*** -Attribut innerhalb des überg
 
 Für die Asset-Verfolgung wird eine Report Suite mit Echtzeit-Datenerfassung erstellt. Die AEM Assets Insights-Konfiguration wird mit Adobe Analytics-Anmeldeinformationen eingerichtet.
 
->[!VIDEO](https://video.tv.adobe.com/v/25945/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25945?quality=12&learn=on)
 
 >[!NOTE]
 Die Echtzeit-Datenerfassung und AEM Asset-Berichterstellung müssen für Ihre Adobe Analytics Report Suite aktiviert sein. Durch Aktivierung AEM Asset Reporting werden Analysevariablen zur Verfolgung von Asset-Einblicken reserviert.
@@ -80,7 +80,7 @@ Für die AEM Assets Insights-Konfiguration benötigen Sie die folgenden Anmelded
 
 Hinzufügen der Adobe Analytics-Erweiterung, Erstellen von Seitenladeregeln und Integrieren von AEM in Launch mit dem technischen Adobe IMS-Konto.
 
->[!VIDEO](https://video.tv.adobe.com/v/25946/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
 >[!NOTE]
 Stellen Sie sicher, dass Sie alle Ihre Änderungen von der Autoreninstanz zur Veröffentlichungsinstanz replizieren.
@@ -193,4 +193,4 @@ Mit der folgenden Chrome-Erweiterung ist es auch möglich, DTM in den Debug-Modu
 
 Konfigurieren AEM Asset Reporting Sync Job Scheduler und Assets Insights Report
 
->[!VIDEO](https://video.tv.adobe.com/v/25947/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25947?quality=12&learn=on)

@@ -4,7 +4,7 @@ description: Eine Sammlung von Tutorials für Adobe Experience Manager (AEM) as 
 sub-product: Experience Manager as a Cloud Service
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: 757749305a017d682322b2c2e024c2fbb3604fc2
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 13%
@@ -15,7 +15,7 @@ ht-degree: 13%
 
 Adobe Experience Manager (AEM) ist nun as a Cloud Service verfügbar. AEM as a Cloud Service führt die nächste Generation der Experience Manager-Produktlinie ein, baut auf früheren Investitionen und Innovationen auf und bewahrt und erweitert alle Anwendungsfälle und Funktionen.
 
->[!VIDEO](https://video.tv.adobe.com/v/31085/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
 
 <div id="whats-new-section">
 

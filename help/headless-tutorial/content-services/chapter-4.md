@@ -6,7 +6,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: ece0bf0d-c4af-4962-9c00-f2849c2d8f6f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 2%
@@ -89,7 +89,7 @@ Dazu können wir diese Anforderungen AEM Komponenten zuordnen (und in unserem Fa
 1. Stellen Sie jedoch sicher, dass die **Layout-Container** is **locked** um zu verhindern, dass andere Komponenten hinzugefügt oder diese drei Komponenten entfernt werden.
 1. Tippen **[!UICONTROL Seiteninformationen] > [!UICONTROL In Admin anzeigen]** , um zur [!DNL WKND Mobile] Vorlagenliste. Wählen Sie die neu erstellte **[!DNL Events API]** Vorlage und tippen Sie auf **[!UICONTROL Aktivieren]** in der oberen Aktionsleiste.
 
->[!VIDEO](https://video.tv.adobe.com/v/28342/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28342?quality=12&learn=on)
 
 >[!NOTE]
 >

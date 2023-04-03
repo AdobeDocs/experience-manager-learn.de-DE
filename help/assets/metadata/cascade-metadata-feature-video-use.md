@@ -10,7 +10,7 @@ kt: 616
 thumbnail: 20702.jpg
 last-substantial-update: 2022-06-08T00:00:00Z
 exl-id: 73e793e0-a20e-4954-ba1a-471b2cd85120
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Mit der erweiterten Metadatenverwaltung können Benutzer kaskadierende Feldregeln erstellen, um in AEM Assets kontextbezogene Beziehungen zwischen Metadaten zu erstellen. Das folgende Video zeigt neue dynamische Regeln für Feldanforderungen, Sichtbarkeit und kontextbezogene Optionen. Im Video werden auch die Schritte beschrieben, die ein Administrator durchführen muss, um diese Regeln auf ein benutzerdefiniertes Metadatenschema anzuwenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/20702/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/20702?quality=12&learn=on)
 
 Es gibt drei dynamische Regelsätze, die für ein bestimmtes Metadatenfeld aktiviert werden können:
 

@@ -7,7 +7,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 3%
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 Dynamic Media Viewer-Verbesserungen in AEM 6.4 umfassen das Hinzufügen von Viewer für Panoramabilder, Bild-Viewer für Panoramabilder mit virtueller Realität und Viewer für vertikale Bilder. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein ansprechendes, interaktives Erlebnis des Zimmers, der Eigenschaft, des Standorts oder der Landschaft ohne benutzerdefinierte Entwicklung bereitzustellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/24156/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/24156?quality=12&learn=on)
 
 >[!NOTE]
 >

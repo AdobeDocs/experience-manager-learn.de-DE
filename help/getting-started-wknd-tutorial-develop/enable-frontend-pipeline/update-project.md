@@ -1,6 +1,6 @@
 ---
 title: Aktualisieren des Full-Stack-AEM-Projekts zur Verwendung der Front-End-Pipeline
-description: Erfahren Sie, wie Sie das Full-Stack-AEM-Projekt aktualisieren, um es für die Front-End-Pipeline zu aktivieren, sodass es nur die Frontend-Artefakte erstellt und bereitstellt.
+description: Erfahren Sie, wie Sie das Full-Stack-AEM-Projekt aktualisieren, um es für die Front-End-Pipeline zu aktivieren, sodass es nur die Front-End-Artefakte erstellt und bereitstellt.
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -11,7 +11,7 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: 7c246c4f1af9dfe599485f68508c66fe29d2f0b6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '653'
 ht-degree: 0%
@@ -29,7 +29,7 @@ In diesem Kapitel nehmen wir Konfigurationsänderungen am __WKND Sites-Projekt__
 
 ## Überblick über die Konfigurationsänderungen im AEM-Projekt
 
->[!VIDEO](https://video.tv.adobe.com/v/3409419/)
+>[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
 
 ## Voraussetzungen {#prerequisites}
 

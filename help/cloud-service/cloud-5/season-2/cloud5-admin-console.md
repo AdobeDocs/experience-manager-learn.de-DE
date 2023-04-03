@@ -7,7 +7,8 @@ level: Intermediate
 thumbnail: 342866.jpeg
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
-source-git-commit: 726cf83f3cabe46c12abb79288368407ebf4d525
+exl-id: eec1764e-1234-4b4c-993f-6584717e3c9e
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 10%
@@ -18,7 +19,7 @@ ht-degree: 10%
 
 Wisst ihr, warum jedes Element im Kontext der AEM in der Admin Console funktioniert? Das Team versucht, einige häufige Dinge zu erklären, die Menschen über die Bereitstellung und den Zugriff wissen sollten.
 
->[!VIDEO](https://video.tv.adobe.com/v/342866)
+>[!VIDEO](https://video.tv.adobe.com/v/342866?quality=12&learn=on)
 
 ## Inhalt in diesem Video
 

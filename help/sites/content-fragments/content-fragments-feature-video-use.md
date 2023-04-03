@@ -11,7 +11,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '383'
 ht-degree: 12%
@@ -38,13 +38,13 @@ Diese Videoreihe behandelt den Lebenszyklus von Inhaltsfragmenten für die Bearb
 
 ## Definieren von Inhaltsfragmentmodellen {#defining-content-fragment-models}
 
->[!VIDEO](https://video.tv.adobe.com/v/22452/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22452?quality=12&learn=on)
 
 AEM Inhaltsfragmentmodelle, die Datenschemata von Inhaltsfragmenten, müssen über AEM aktiviert werden [[!UICONTROL Konfigurationsbrowser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=de), wodurch Inhaltsfragmentmodelle für jede Konfiguration definiert werden können.
 
 ## Erstellen von Inhaltsfragmenten {#creating-content-fragments}
 
->[!VIDEO](https://video.tv.adobe.com/v/22451/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22451?quality=12&learn=on)
 
 AEM Konfigurationen werden auf AEM Assets-Ordnerhierarchien angewendet, damit ihre Inhaltsfragmentmodelle als Inhaltsfragmente erstellt werden können. Inhaltsfragmente unterstützen ein umfangreiches formularbasiertes Authoring-Erlebnis, mit dem Inhalte als Sammlung von Elementen modelliert werden können.
 
@@ -55,7 +55,7 @@ Inhaltsfragmente können mehrere Varianten aufweisen, wobei jede Variante einen 
 
 ## Herunterladen von Inhaltsfragmenten {#downloading-content-fragments}
 
->[!VIDEO](https://video.tv.adobe.com/v/22450/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22450?quality=12&learn=on)
 
 AEM Inhaltsfragmente können von der AEM-Autoreninstanz als ZIP-Datei mit Varianten, Elementen und Metadaten heruntergeladen werden.
 
@@ -64,7 +64,7 @@ AEM Inhaltsfragmente können von der AEM-Autoreninstanz als ZIP-Datei mit Varian
 
 ## Funktionen für Inhaltsfragmente {#editorial-capabilities}
 
->[!VIDEO](https://video.tv.adobe.com/v/25891/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/25891?quality=12&learn=on)
 
 >[!NOTE]
 >

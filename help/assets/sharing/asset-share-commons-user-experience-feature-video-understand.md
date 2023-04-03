@@ -7,7 +7,7 @@ role: User
 level: Intermediate
 last-substantial-update: 2022-06-20T00:00:00Z
 exl-id: 500a9b10-462a-4f41-9b07-67138955cc3d
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '128'
 ht-degree: 1%
@@ -20,13 +20,13 @@ Eine kurze Einführung in die Benutzer- und Autorenerlebnisse von Asset Share Co
 
 ## Anwendererlebnis
 
->[!VIDEO](https://video.tv.adobe.com/v/20497/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/20497?quality=12&learn=on)
 
 Das Video bietet eine kurze Anleitung zum Benutzererlebnis für Asset Share Commons. Die Überprüfung betrifft die Funktionen der Suchseite, die Asset-Detailseite sowie verschiedene Aktionen wie Herunterladen, Freigeben und Zum Warenkorb hinzufügen.
 
 ## Authoring-Erlebnis
 
->[!VIDEO](https://video.tv.adobe.com/v/20498/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/20498?quality=12&learn=on)
 
 In diesem Video erhalten Sie einen kurzen Überblick über die grundlegenden Funktionen zum Erstellen von Komponenten in Asset Share Commons, um ein Gefühl für die Authoring-Fähigkeit zu erhalten.
 

@@ -9,10 +9,10 @@ kt: 7630
 thumbnail: 333272.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '618'
-ht-degree: 9%
+ht-degree: 8%
 
 ---
 
@@ -20,11 +20,11 @@ ht-degree: 9%
 
 Willkommen beim mehrteiligen Tutorial für Entwickler, die eine vorhandene React-basierte (oder Next.js) Remote-SPA mit bearbeitbaren AEM-Inhalten mit AEM SPA Editor erweitern möchten.
 
-Dieses Tutorial baut auf dem [WKND GraphQL-App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de), eine React-App, die AEM Inhaltsfragmentinhalt über AEM GraphQL-APIs nutzt, jedoch keine kontextbezogene Bearbeitung von SPA Inhalt bereitstellt.
+Dieses Tutorial baut auf dem [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de), eine React-App, die AEM Inhaltsfragmentinhalte über AEM GraphQL-APIs nutzt, jedoch keine kontextbezogene Bearbeitung von SPA Inhalt bereitstellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/333272/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
-## Über die Schulung
+## Über das Tutorial
 
 Das Tutorial soll veranschaulichen, wie eine Remote-SPA oder eine SPA, die außerhalb des AEM ausgeführt wird, aktualisiert werden kann, um in AEM erstellte Inhalte zu nutzen und bereitzustellen.
 

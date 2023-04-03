@@ -12,7 +12,7 @@ topic: Architecture
 role: Architect, Developer, Admin
 level: Beginner
 exl-id: 1dcbd6b5-3261-4cb1-ab20-d8812c0d070a
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 46%
@@ -23,4 +23,4 @@ ht-degree: 46%
 
 Cloud Manager **Programme** stellt eine Reihe von AEM Umgebungen dar, die logische Gruppen von Geschäftsinitiativen unterstützen, die normalerweise einem erworbenen Service Level Agreement (SLA) entsprechen. Beispielsweise kann ein Programm die AEM-Ressourcen zur Unterstützung der globalen öffentlichen Websites darstellen, während ein anderes Programm ein internes zentrales DAM darstellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/26313/?quality=12&learn=on&hidetitle=true)
+>[!VIDEO](https://video.tv.adobe.com/v/26313?quality=12&learn=on)

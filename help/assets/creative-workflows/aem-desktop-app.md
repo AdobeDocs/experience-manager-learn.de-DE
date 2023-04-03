@@ -10,10 +10,10 @@ kt: 2551
 thumbnail: 28868.jpeg
 last-substantial-update: 2022-06-24T00:00:00Z
 exl-id: 6765758f-0719-4ed9-83be-8ed192a75b41
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 11%
+ht-degree: 8%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 11%
 
 Verwenden Sie AEM Desktop App, um den Zugriff auf alle auf dem Desktop verwalteten Assets für Anwendungen und Dateiformate zu vereinfachen.
 
->[!VIDEO](https://video.tv.adobe.com/v/28868/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28868?quality=12&learn=on)
 
 + Entdecken Sie Assets in AEM über ein dediziertes Desktop-Programm, um sie zu durchsuchen und zu suchen.
 + Optimiertes Bandbreitenmanagement ermöglicht das Hochladen und Herunterladen vieler großer Assets

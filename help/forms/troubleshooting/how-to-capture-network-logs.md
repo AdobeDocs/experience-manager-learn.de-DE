@@ -7,16 +7,16 @@ level: Intermediate
 version: 6.5
 topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: bf2652fc-a52f-4941-80b9-64f0fae3baab
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '43'
-ht-degree: 2%
+source-wordcount: '42'
+ht-degree: 0%
 
 ---
-
 
 # Erfassen von Netzwerkprotokollen/zu verwendende Tools
 
 *In diesem Video werden die Schritte zum Erfassen der zu verwendenden Netzwerkprotokolle/Tools erläutert.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335491?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335491?quality=12&learn=on)

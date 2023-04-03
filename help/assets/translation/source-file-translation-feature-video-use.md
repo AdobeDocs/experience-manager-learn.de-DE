@@ -8,7 +8,7 @@ level: Intermediate
 last-substantial-update: 2022-09-02T00:00:00Z
 thumbnail: 18331.jpg
 exl-id: 19155d51-18a7-42ca-9a73-1b5fa1355d58
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 0%
@@ -21,7 +21,7 @@ Mit Adobe Experience Manager (AEM) Assets können Sie Assets identifizieren, die
 
 ## Multisite Asset Source File Management {#multisite-asset-source-file-management}
 
->[!VIDEO](https://video.tv.adobe.com/v/18331/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/18331?quality=12&learn=on)
 
 Mit verwandten Assets können Benutzer bessere Assets verwalten, die Assets mit freigegebenen Eigenschaften und Eigenschaften verknüpfen und Workflows optimieren:
 

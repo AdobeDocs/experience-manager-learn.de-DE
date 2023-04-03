@@ -6,7 +6,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 45daa8e3-ce3b-43de-b3d6-276107215dd4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '220'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 AEM Erweiterung des Katalogs 6.4 bietet die Möglichkeit, Katalogseiten mit AEM Asset-Vorlagen und InDesign Server zu erstellen.  Ein Benutzer kann eine Katalogseite mithilfe der InDesign-Vorlage erstellen und Produkteigenschaften bearbeitbaren Feldern zuordnen, die später zum Erstellen ähnlicher-Seiten für verschiedene Produkte verwendet werden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/22540/)
+>[!VIDEO](https://video.tv.adobe.com/v/22540?quality=12&learn=on)
 
 >[!NOTE]
 >

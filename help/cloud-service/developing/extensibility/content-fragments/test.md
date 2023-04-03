@@ -9,7 +9,7 @@ level: Beginner
 recommendations: noDisplay, noCatalog
 kt: 11603
 last-substantial-update: 2022-12-01T00:00:00Z
-source-git-commit: 1a4ee470a650aacc5412fbd27062ca14ccdb1967
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -23,7 +23,7 @@ AEM Inhaltsfragment-Konsolenerweiterungen können mit jeder AEM as a Cloud Servi
 
 Das Testen einer Erweiterung erfolgt über eine speziell erstellte URL, die die AEM Inhaltsfragment-Konsole anweist, die Erweiterung zu laden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3412877/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412877?quality=12&learn=on)
 
 ## URL der Inhaltsfragmentkonsole AEM
 

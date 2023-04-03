@@ -13,7 +13,7 @@ topic: Security
 role: Developer
 level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
-source-git-commit: 41be8c934bba16857d503398b5c7e327acd8d20b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '211'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Adobe Experience Managers SSL-Setup-Assistent erleichtert die Einrichtung einer AEM-Instanz, die über HTTPS ausgeführt werden kann.
 
->[!VIDEO](https://video.tv.adobe.com/v/17993/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)
 
 Öffnen Sie die __SSL-Konfigurationsassistent__ kann direkt geöffnet werden, indem Sie zu __AEM-Autor > Tools > Sicherheit > SSL-Konfiguration__.
 

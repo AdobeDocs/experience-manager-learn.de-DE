@@ -1,41 +1,41 @@
 ---
 title: Verwenden von Funktionen und Code-Editor
 description: Verwenden von Funktionen und Code-Editor zum Erstellen von Geschäftsregeln
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 4270
 thumbnail: 22282.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 7b2a4075-bfdf-49f3-b507-34d86193bf64
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 2%
+source-wordcount: '136'
+ht-degree: 0%
 
 ---
-
 
 # Verwenden benutzerdefinierter Funktionen und des Code-Editors {#using-functions-and-code-editor}
 
 In diesem Teil verwenden wir benutzerdefinierte Funktionen und den Code-Editor, um Geschäftsregeln zu erstellen.
 
-haben Sie die [ClientLib mit der benutzerdefinierten Funktion](assets/client-libs-and-logo.zip) bereits zuvor in diesem Tutorial installiert.
+Sie haben bereits installiert. [ClientLib mit benutzerdefinierter Funktion](assets/client-libs-and-logo.zip) früher in diesem Tutorial.
 
 Normalerweise besteht eine Client-Bibliothek aus CSS- und JavaScript-Dateien. Diese Client-Bibliothek enthält eine JavaScript-Datei, die eine Funktion zum Ausfüllen von Dropdown-Listenwerten verfügbar macht.
 
 
 ## Funktion zum Ausfüllen von Dropdown-Listen {#function-to-populate-drop-down-list}
 
->[!VIDEO](https://video.tv.adobe.com/v/22282?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/22282?quality=12&learn=on)
 
 ### Zusammenfassungstitel des Bedienfelds festlegen {#set-the-summary-title-of-panels}
 
->[!VIDEO](https://video.tv.adobe.com/v/28387?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28387?quality=12&learn=on)
 
 #### Bedienfeld überprüfen {#validate-panels-using-rule-editor}
 
->[!VIDEO](https://video.tv.adobe.com/v/28409?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28409?quality=12&learn=on)
 
 Im Folgenden finden Sie den Code, der zum Überprüfen von Bereichsfeldern verwendet wird
 

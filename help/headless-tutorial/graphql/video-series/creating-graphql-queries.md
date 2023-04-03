@@ -9,7 +9,7 @@ level: Beginner
 kt: 7621
 thumbnail: 332860.jpg
 exl-id: c4f2e8f5-6acf-4efb-bdec-84d264568856
-source-git-commit: a627de5a2edfeb4416f1166a44bbd1d51be55c91
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '157'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Erfahren Sie, wie Sie GraphQL-Abfragen erstellen, um Inhalte aus Adobe Experienc
 
 In diesem Video werden Sie:
 
-+ Machen Sie sich mit der Macht der GraphQL-Sprache vertraut.
++ Die Macht hinter der GraphQL-Sprache verstehen
 + Erfahren Sie, wie Sie eine Liste von Inhaltsfragmenten und ein einzelnes Inhaltsfragment abfragen
 + Erfahren Sie, wie Sie bestimmte Datenattribute filtern und anfordern.
 + Erfahren Sie, wie Sie das GraphiQL-Tool installieren und verwenden
@@ -32,6 +32,6 @@ In diesem Video werden Sie:
 >Die **GraphiQL-Installation** -Kapitel ab 1:06 ist in den neueren Versionen von AEM als Cloud Service nicht erforderlich. Integrierte **GraphiQL Explorer** bereitgestellt wird, siehe [Verwenden der GraphiQL-IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) für weitere Informationen.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/332860/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332860?quality=12&learn=on)
 
 _Laden Sie die [Postman-Sammlung](./assets/aem-headless-video-series.postman_collection.json) wird in der AEM Headless-Videoserie verwendet._

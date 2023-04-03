@@ -9,10 +9,10 @@ level: Beginner
 jira: KT-11860
 thumbnail: KT-11860.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 4ff15fb482d31b984775ca691b53d117a2eba23c
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '109'
-ht-degree: 14%
+ht-degree: 20%
 
 ---
 
@@ -26,7 +26,7 @@ In diesem Video wird beschrieben:
 - Was sind RDEs?
 - Wie können sie zu schnelleren Entwicklungszyklen bis hin zu Implementierungszyklen beitragen?
 
->[!VIDEO](https://video.tv.adobe.com/v/3414128/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3414128?quality=12&learn=on)
 
 ## Nächster Schritt
 

@@ -9,7 +9,7 @@ level: Intermediate
 kt: 9350
 thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
-source-git-commit: 6ae98ce749f8a485bdaa4c6c6232e52d8d6246b3
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 5%
@@ -44,7 +44,7 @@ Beim Einrichten eines flexiblen Port-Ausgangs ist Folgendes erforderlich:
 
 Weitere Informationen finden Sie in der folgenden exemplarischen Vorgehensweise, wie Sie Anmeldeinformationen der Cloud Manager-API einrichten, konfigurieren und abrufen und wie Sie sie zum Ausführen eines Cloud Manager-API-Aufrufs verwenden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/342235/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
 
 Dieses Tutorial verwendet `curl` , um die Cloud Manager-API-Konfigurationen vorzunehmen. Die `curl` -Befehle setzen eine Linux/macOS-Syntax voraus. Ersetzen Sie bei Verwendung der Windows-Eingabeaufforderung den `\` Zeilenumbruch-Zeichen mit `^`.
 

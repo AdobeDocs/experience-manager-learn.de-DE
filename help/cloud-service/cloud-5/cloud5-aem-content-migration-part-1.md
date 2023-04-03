@@ -9,7 +9,7 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342133.jpeg
 exl-id: 817ea20d-d902-4497-83d3-5800ed6aaa8f
-source-git-commit: 62a1deda2a4fda56edb0c3d0f34a5e804f78887b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 5%
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 Darin und James besprechen den Dispatcher in der AEM Cloud, einschließlich einiger Best Practices und Unterschiede zu AMS/On-Premise. Sie berühren auch die Migration in die Cloud. Spezialgast und Cloud-Experte, [Dr. Applesmith](https://twitter.com/DrApplesmith) ein Erscheinungsbild.
 
->[!VIDEO](https://video.tv.adobe.com/v/342133/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342133?quality=12&learn=on)
 
 ## Inhalt in diesem Video
 

@@ -9,7 +9,7 @@ level: Experienced
 kt: 8635
 thumbnail: 336990.jpeg
 exl-id: 327e8663-086b-4b31-b159-a0cf30480b45
-source-git-commit: 1dcb66bc3535231c89f3e7fc127688fcf96f2b61
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 5%
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 Erfahren Sie, wie Sie mit den asset compute-Microservices von AEM Assets as a Cloud Service automatisch und effizient jede Ausgabedarstellung für Ihre Assets generieren können. Dadurch wird diese Rolle des herkömmlichen AEM-Workflows ersetzt.
 
->[!VIDEO](https://video.tv.adobe.com/v/336990/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336990?quality=12&learn=on)
 
 ## Workflow-Migrations-Tool
 
@@ -42,7 +42,7 @@ Wenden Sie Ihr Wissen an, indem Sie ausprobieren, was Sie mit dieser praktischen
 Bevor Sie die praktische Übung testen, müssen Sie sich das Video und die folgenden Materialien angesehen und verstanden haben:
 
 + [Über AEM as a Cloud Service anders nachdenken](./introduction.md)
-+ [Einstieg ](./onboarding.md)
++ [Onboarding](./onboarding.md)
 
 Stellen Sie außerdem sicher, dass Sie die vorherige praktische Übung abgeschlossen haben:
 

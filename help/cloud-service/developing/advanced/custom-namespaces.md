@@ -9,7 +9,7 @@ level: Intermediate
 kt: 11618
 thumbnail: 3412319.jpg
 last-substantial-update: 2022-12-14T00:00:00Z
-source-git-commit: 1a4ee470a650aacc5412fbd27062ca14ccdb1967
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 6%
@@ -33,7 +33,7 @@ Namespaces können verwendet werden, um den Umfang und den Zweck einer Eigenscha
 
 Benutzerdefinierte Namespaces werden in [Initialisierung des Sling-Repositorys (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html) Skripten und stellt für AEM bereit, die als OSGi-Konfigurationen as a Cloud Service sind - und zu Ihren [AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de) `ui.config` Projekt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3412319/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412319?quality=12&learn=on)
 
 ## Ressourcen
 

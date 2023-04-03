@@ -14,10 +14,10 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 2213d1f2-37ed-4897-a68d-04ef423395a3
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '218'
-ht-degree: 8%
+ht-degree: 4%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 8%
 
 Bearbeitbare Vorlagen ermöglichen es spezialisierten Autoren, Seitenvorlagen zu erstellen und zu aktualisieren und erweiterte Richtlinienkonfigurationen mit Adobe Experience Manager (AEM) Sites zu verwalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/326784/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326784?quality=12&learn=on)
 
 Bearbeitbare Vorlagen sind die Empfehlung zum Erstellen neuer AEM Sites.
 

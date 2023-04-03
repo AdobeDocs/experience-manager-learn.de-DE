@@ -1,20 +1,21 @@
 ---
-title: automated forms conversion-Dienst
-description: automated forms conversion Service. In diesem Artikel wird beschrieben, wie ein AEM-Administrator den Automated forms conversion-Dienst konfigurieren kann, um die Konvertierung ihrer PDF forms in adaptive Formulare zu automatisieren. Diese Hilfe richtet sich an IT- und AEM-Administratoren in Ihrem Unternehmen.
-feature: Adaptive Formulare
+title: Service zur automatischen Formularkonvertierung
+description: Service zur automatischen Formularkonvertierung. In diesem Artikel wird beschrieben, wie ein AEM-Administrator den Automated forms conversion-Dienst konfigurieren kann, um die Konvertierung ihrer PDF forms in adaptive Formulare zu automatisieren. Diese Hilfe richtet sich an IT- und AEM-Administratoren in Ihrem Unternehmen.
+feature: Adaptive Forms
 thumbnail: 39493.jpg
 kt: 6114
-topic: Entwicklung
+topic: Development
 role: Admin
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 0715a2cc-c042-4ddc-85a1-7720f420351b
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '256'
-ht-degree: 55%
+source-wordcount: '253'
+ht-degree: 59%
 
 ---
 
-# automated forms conversion-Dienst
+# Service zur automatischen Formularkonvertierung
 
 In diesem Artikel wird beschrieben, wie ein AEM-Administrator den Automated forms conversion-Dienst konfigurieren kann, um die Konvertierung ihrer PDF forms in adaptive Formulare zu automatisieren. Diese Hilfe richtet sich an IT- und AEM-Administratoren in Ihrem Unternehmen. Benutzer dieser Hilfe sollten mit den folgenden Technologien vertraut sein:
 
@@ -36,5 +37,4 @@ Für die Verwendung des Service für die automatisierte Formularkonvertierung is
 
 * In diesem Video werden die Schritte erläutert, die zum Verbinden Ihrer lokalen AEM Forms-Instanz mit dem Automated forms conversion-Dienst in der Adobe Cloud erforderlich sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/39493/?quality=9&learn=on)
-
+>[!VIDEO](https://video.tv.adobe.com/v/39493?quality=12&learn=on)

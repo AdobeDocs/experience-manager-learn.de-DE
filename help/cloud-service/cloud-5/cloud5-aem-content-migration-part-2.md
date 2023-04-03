@@ -8,19 +8,19 @@ kt: 10258
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 thumbnail: 342268.jpeg
-source-git-commit: a2874d2e00680137d1de305edfa6a447bf1576dd
+exl-id: 8b31c415-bf12-420f-a81a-6065c56ccbed
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 5%
 
 ---
 
-
 # Migration zur Cloud - Teil 2
 
 Im zweiten Video über die Inhaltsmigration besprechen James und Darin die Verwendung des Content Transfer Tool (CTT) zur Unterstützung der Migration zu AEM as a Cloud Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/342268/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342268?quality=12&learn=on)
 
 ## Inhalt in diesem Video
 

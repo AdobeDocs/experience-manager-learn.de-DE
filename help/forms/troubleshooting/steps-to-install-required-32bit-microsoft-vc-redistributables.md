@@ -5,23 +5,18 @@ type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
-topic: 'Administration '
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 896d75ab-de97-445f-bbe1-6be6cade9ee4
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 1%
+source-wordcount: '51'
+ht-degree: 0%
 
 ---
-
 
 # Schritte zum Überprüfen und Installieren der erforderlichen 32-Bit-Microsoft Visual C++-Redistributables
 
 *In diesem Video werden die erforderlichen 32-Bit-Microsoft Visual C++-Redistributables überprüft und installiert.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335520?quality=9&learn=on)
-
-
-
-
-
+>[!VIDEO](https://video.tv.adobe.com/v/335520?quality=12&learn=on)

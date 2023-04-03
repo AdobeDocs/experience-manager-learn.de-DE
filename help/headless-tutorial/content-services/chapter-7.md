@@ -6,7 +6,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d6b6d425-842a-43a9-9041-edf78e51d962
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1391'
 ht-degree: 1%
@@ -37,13 +37,13 @@ Android wird für das Tutorial verwendet, da ein Android-Emulator unter Windows,
 
 ## Demonstration mobiler Apps
 
->[!VIDEO](https://video.tv.adobe.com/v/28345/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28345?quality=12&learn=on)
 
 ### Konfigurieren der mobilen App für die Verwendung ohne localhost
 
 Wenn die AEM-Veröffentlichung nicht ausgeführt wird auf **http://localhost:4503** Der Host und Port können im [!DNL Settings] , um auf die Eigenschaft AEM Publish-Host/-Port zu verweisen.
 
->[!VIDEO](https://video.tv.adobe.com/v/28344/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28344?quality=12&learn=on)
 
 ## Lokales Ausführen der App
 
@@ -75,7 +75,7 @@ Wenn die AEM-Veröffentlichung nicht ausgeführt wird auf **http://localhost:450
    * Um innerhalb des virtuellen Geräts zu scrollen, klicken und halten Sie die Maustaste gedrückt und ziehen Sie.
    * Um den Inhalt von AEM zu aktualisieren, ziehen Sie ihn von oben nach unten, bis das Aktualisierungssymbol angezeigt wird, und veröffentlichen Sie ihn.
 
->[!VIDEO](https://video.tv.adobe.com/v/28341/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28341?quality=12&learn=on)
 
 ## Der Mobile App-Code
 

@@ -10,10 +10,10 @@ hidefromtoc: true
 kt: 9797
 thumbnail: 340760.jpeg
 exl-id: 8b608b05-48ee-434f-8d5a-6c5ff1969dcf
-source-git-commit: a8e6e863a4d236babdb1e2ae978240cd51631981
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '87'
-ht-degree: 0%
+ht-degree: 9%
 
 ---
 
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 Dies ist ein tiefer Einblick in das CDN, das als Teil AEM as a Cloud Service bereitgestellt wird, einschließlich dessen, wozu es fähig ist und ob es Ihr eigenes CDN mitbringen soll. Dies ist Teil 1 von 2.
 
->[!VIDEO](https://video.tv.adobe.com/v/340760/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340760?quality=12&learn=on)
 
 ## Inhalt, der in Teil 1 dieser Reihe behandelt wird
 
-+ AEM CDN [Übersicht](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html)
++ AEM CDN [Übersicht](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=de)
 + Funktionen der Web Application Firewall (WAF)
 + IP-Einschränkungen
 + DDOS-Schutz

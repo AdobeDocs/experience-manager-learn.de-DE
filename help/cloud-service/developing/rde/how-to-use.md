@@ -9,7 +9,7 @@ level: Beginner
 jira: KT-11862
 thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: 65d54f0137786c7e8ac9ac962c424dd20bf5f3dd
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '703'
 ht-degree: 1%
@@ -29,7 +29,7 @@ Verwenden [AEM WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd#aem-
 - Einzelne Dateien wie HTL, `.content.xml` Bereitstellung (Dialog XML)
 - Überprüfen Sie andere RDE-Befehle wie `status, reset and delete`
 
->[!VIDEO](https://video.tv.adobe.com/v/3415491/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3415491?quality=12&learn=on)
 
 ## Voraussetzung
 

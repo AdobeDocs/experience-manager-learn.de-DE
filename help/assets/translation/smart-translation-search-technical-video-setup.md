@@ -7,7 +7,7 @@ topic: Content Management
 role: Developer
 level: Beginner
 exl-id: 7be8c3d5-b944-4421-97b3-bd5766c1b1b5
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 Die intelligente Übersetzungssuche ermöglicht die Verwendung von nicht englischen Suchbegriffen, um zu englischen Inhalten aufzulösen. Um AEM für die intelligente Übersetzungssuche einzurichten, müssen das OSGi-Bundle für die maschinelle Übersetzung von Apache Oak sowie die relevanten kostenlosen und Open-Source-Apache Joshua-Sprachpakete installiert und konfiguriert werden, die die Übersetzungsregeln enthalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/21291/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21291?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ Die intelligente Übersetzungssuche ermöglicht die Verwendung von nicht englisc
       ```
 
 3. AEM mit aktualisierter Heap-Speicherzuordnung neu starten
-   * Stoppen Sie AEM.
+   * AEM beenden
    * Bestimmen der neuen erforderlichen Heap-Größe für AEM
 
       * AEM Heap-Größe vor Sprachmangel + die Größe des Modellverzeichnisses, aufgerundet auf 2 GB

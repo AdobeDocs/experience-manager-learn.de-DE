@@ -8,10 +8,10 @@ role: User
 level: Beginner
 last-substantial-update: 2022-06-15T00:00:00Z
 exl-id: 42f13a19-52bf-413d-a141-63f1f0910dce
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1764'
-ht-degree: 48%
+ht-degree: 32%
 
 ---
 
@@ -27,7 +27,7 @@ Im September 2019 führt Brand Portal vor allem die Asset-Beschaffung ein, die d
 
 Die Asset-Beschaffung von Brand Portal wird verwendet, um Assets von Agenturen und Teams von Drittanbietern zu erfassen und sie nahtlos zur Überprüfung und Verwendung mit der Experience Manager-Autoreninstanz zu synchronisieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/29365/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29365?quality=12&learn=on)
 
 *Für die Verwendung der Asset-Beschaffung ist Experience Manager Author 6.5 SP2 (6.5.2) oder höher erforderlich*
 
@@ -35,7 +35,7 @@ Die Asset-Beschaffung von Brand Portal wird verwendet, um Assets von Agenturen u
 
 ## Brand Portal - Funktionen und Verbesserungen im Februar 2019{#brand-portal-features-and-enhancements-644}
 
->[!VIDEO](https://video.tv.adobe.com/v/26354/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
 
 Brand Portal-Version vom Februar 2019 konzentriert sich auf Verbesserungen bei der Textsuche und den wichtigsten Kundenanfragen.
 
@@ -47,9 +47,9 @@ Lesen Sie weiter, um mehr über die Suche nach Textteilen und Suche mit Platzhal
 
 #### Suche nach Satzteilen
 
-Sie können nach Assets suchen, indem Sie nur einen Teil – d. h. ein oder zwei Wörter – des gesuchten Satzes in den Filterbereich eingeben.
+Sie können jetzt nach Assets suchen, indem Sie im Filterbereich nur einen Teil des gesuchten Satzes - d. h. ein oder zwei Wörter - angeben.
 
-**Anwendungsfall** : Die Suche nach Satzteilen ist hilfreich, wenn Sie sich nicht sicher sind, wie die genaue Wortfolge im gesuchten Satz lautet.
+**Anwendungsfall** : Die Suche nach Satzteilen ist hilfreich, wenn Sie sich nicht sicher sind, welche genaue Wortkombination im gesuchten Satz vorkommt.
 
 Beispiel: Wenn Ihr Suchformular in Brand Portal das Eigenschaftsprädikat für Teilsuche nach einem Asset-Titel anwendet, werden nach Angabe des Begriffs Lager alle Assets mit dem Wort Lager im Titelsatz zurückgegeben.
 
@@ -71,12 +71,12 @@ Auch gilt Folgendes:
 Administratoren können jetzt konfigurieren, wie Ordner für Benutzer ohne Administratorrechte (Bearbeiter, Betrachter und Gastbenutzer) bei der Anmeldung angezeigt werden.
 Die Konfiguration [Ordnerhierarchie aktivieren](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) wird in den Allgemeinen Einstellungen im Admin-Tools-Bereich hinzugefügt. Wenn die Konfiguration:
 
-* Aktiviert: Die Ordnerstruktur, die vom Stammordner beginnt, ist für Benutzer ohne Administratorrechte sichtbar. Sie können also genauso wie Administratoren navigieren.
+* Aktiviert: Die Ordnerstruktur, die vom Stammordner beginnt, ist für Benutzer ohne Administratorrechte sichtbar. Dadurch erhalten sie ein Navigationserlebnis, das Administratoren ähnelt.
 * Deaktiviert, werden nur die freigegebenen Ordner auf der Landingpage angezeigt.
 
 [Ordnerhierarchie aktivieren](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) -Funktion (sofern aktiviert) hilft Ihnen, die Ordner mit denselben Namen von verschiedenen Hierarchien zu unterscheiden. Bei der Anmeldung sehen Nicht-Administratoren nun die virtuellen übergeordneten (und untergeordneten) Ordner der freigegebenen Ordner.
 
-Die freigegebenen Ordner werden innerhalb der jeweiligen Verzeichnisse in virtuellen Ordnern angeordnet. Sie können diese virtuellen Ordner an einem Schlosssymbol erkennen.
+Die freigegebenen Ordner sind in den jeweiligen Ordnern in virtuellen Ordnern organisiert. Sie können diese virtuellen Ordner mit einem Sperrsymbol erkennen.
 
 Beachten Sie, dass das Standardminiaturbild der virtuellen Ordner das Miniaturbild des ersten freigegebenen Ordners ist.
 
@@ -86,16 +86,16 @@ Benutzer, deren AEM-Autoreninstanz sich im Dynamic Media-Hybridmodus befindet, k
 
 Um Dynamic Media Ausgabedarstellungen als Vorschau für bestimmte Mandantenkonten anzeigen (oder herunterladen) zu können, müssen Administratoren die Dynamic Media-Konfiguration (Videodienst-URL (DM-Gateway-URL) und Registrierungs-ID zum Abrufen des dynamischen Videos) in der Konfiguration Video im Admin Tools-Bereich angeben.
 
-Vorschau der Dynamic Media-Videos ist möglich auf/in:
+Dynamic Media-Videos können in der Vorschau angezeigt werden:
 
 * Asset-Detailseite
-* Asset-Kartenansicht
-* Linkfreigabe-Vorschauseite
+* Kartenansicht des Assets
+* Vorschauseite zur Linkfreigabe
 
-Dynamic Media-Videokodierungen können heruntergeladen werden über:
+Dynamic Media-Videokodierungen können heruntergeladen werden von:
 
 * Brand Portal
-* Freigegebenen Link
+* Freigegebener Link
 
 ### Geplante Veröffentlichung in Brand Portal
 
@@ -105,7 +105,7 @@ Entsprechend können veröffentlichte Assets zu einem späteren Zeitpunkt aus de
 
 ### Konfigurierbarer Mandantenalias in URL
 
-Unternehmen können ihre Portal-URL mit einem alternativen Präfix in der URL anpassen. Um einen Alias für einen Mandantenamen in der vorhandenen Portal-URL zu erhalten, müssen Unternehmen sich mit dem Adobe-Support in Verbindung setzen.
+Unternehmen können ihre Portal-URL anpassen, indem sie ein alternatives Präfix in der URL haben. Um einen Alias für den Mandantennamen in der vorhandenen Portal-URL zu erhalten, müssen sich Unternehmen an den Support von Adobe wenden.
 
 Beachten Sie, dass nur das Präfix der Brand Portal-URL angepasst werden kann und nicht die gesamte URL.
 Für eine Organisation mit der vorhandenen Domain `wknd.brand-portal.adobe.com` kann beispielsweise auf Anfrage die Domain `wkndinc.brand-portal.adobe.com` erstellt werden.
@@ -116,22 +116,22 @@ Eine AEM-Autoreninstanz kann jedoch nur mit der Mandanten-ID-URL [konfiguriert](
 
 ## Brand Portal - Funktionen und Verbesserungen vom Dezember 2018{#brand-portal-features-and-enhancements-642}
 
->[!VIDEO](https://video.tv.adobe.com/v/23707/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/23707?quality=12&learn=on)
 
 ### Gastzugang
 
-AEM Brand Portal gestattet den Gastzugang für das Portal. Ein Gastbenutzer benötigt keine Anmeldeinformationen, um das Portal aufzurufen, und kann auf sämtliche öffentliche Ordner und Sammlungen zugreifen und diese herunterladen. Gastbenutzer können Assets zu ihrer Light-Box (private Sammlung) hinzufügen und diese herunterladen. Sie können Smart-Tag-basierte Suchen und Sucheigenschaften, die von Administratoren festgelegt wurden, anzeigen. Die Gastsitzung gestattet es Benutzern jedoch nicht, Sammlungen und gespeicherte Suchen zu erstellen oder weiter freizugeben, auf die Einstellungen für Ordner und Sammlungen zuzugreifen und Assets als Links freizugeben.
+AEM Brand Portal gestattet den Gastzugang für das Portal. Ein Gastbenutzer benötigt keine Anmeldeinformationen, um das Portal aufzurufen, und kann auf sämtliche öffentliche Ordner und Sammlungen zugreifen und diese herunterladen. Gastbenutzer können Assets zu ihrer Light-Box (private Sammlung) hinzufügen und diese herunterladen. Sie können auch die von Administratoren festgelegten Smart-Tag-Such- und Sucheigenschaften anzeigen. In der Gastsitzung können Benutzer keine Sammlungen und gespeicherten Suchen erstellen oder diese weiter freigeben, nicht auf Einstellungen für Ordner und Sammlungen zugreifen und Assets als Links freigeben.
 
 ### Accelerated Download
 
-Brand Portal-Benutzer können mit der Aspera-basierten Downloadbeschleunigung – unabhängig von ihrem globalen Standort – bis zu 25-mal höhere Geschwindigkeiten und eine unterbrechungsfreie Download-Performance erzielen. Um die Assets schneller von Brand Portal oder über einen freigegebenen -Link verwenden, müssen Benutzer die Option Downloadbeschleunigung aktivieren im Dialogfeld &quot;Herunterladen&quot;auswählen, sofern die Downloadbeschleunigung in ihrer Organisation aktiviert ist.
+Brand Portal-Benutzer können Aspera-basierte schnelle Downloads nutzen, um eine bis zu 25-fache Geschwindigkeit zu erzielen und ein nahtloses Download-Erlebnis unabhängig von ihrem Standort auf der ganzen Welt zu genießen. Um die Assets schneller von Brand Portal oder über einen freigegebenen Link herunterzuladen, müssen Benutzer die Option Downloadbeschleunigung aktivieren im Dialogfeld &quot;Herunterladen&quot;auswählen, sofern die Downloadbeschleunigung in ihrem Unternehmen aktiviert ist.
 
 * [Anleitung zur Beschleunigung von Downloads von Brand Portal](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [Aspera Connect-Testserver](https://test-connect.asperasoft.com/)
 
 ### Bericht zur Benutzeranmeldung
 
-Es wurde ein neuer Bericht zum Nachverfolgen von Benutzeranmeldungen eingeführt. Der Bericht Benutzeranmeldungen bietet Organisationen die Möglichkeit, die delegierten Administratoren und andere Benutzer von Brand Portal zu überwachen und zu kontrollieren.
+Es wurde ein neuer Bericht zur Verfolgung von Benutzeranmeldungen eingeführt. Der Bericht Benutzeranmeldungen bietet Organisationen die Möglichkeit, die delegierten Administratoren und andere Benutzer von Brand Portal zu überwachen und zu kontrollieren.
 
 Der Bericht protokolliert die Anzeigenamen, E-Mail-IDs, Rollen (Admin, Betrachter, Bearbeiter, Gast), Gruppen, Angaben zur letzten Anmeldung, den Aktivitätsstatus und die Anzahl der Anmeldungen eines jeden Benutzers.
 
@@ -141,13 +141,13 @@ Administratoren können den Benutzerzugriff auf Original-Bilddateien einschränk
 
 ### Neue Konfigurationen
 
-Es wurden sechs neue Konfigurationen hinzugefügt, damit Administratoren folgende Funktionen für bestimmte Mandanten aktivieren bzw. deaktivieren können:
+Für Administratoren werden sechs neue Konfigurationen hinzugefügt, um folgende Funktionen für bestimmte Mandanten zu aktivieren/deaktivieren:
 
 * Zulassen des Gastzugangs
-* Zugriffsanfrage für Brand Portal durch Benutzer erlauben
-* Löschen von Assets von Brand Portal durch Administratoren zulassen
-* Erstellung öffentlicher Sammlungen zulassen
-* Erstellung öffentlicher Smart-Sammlungen zulassen
+* Erlauben, dass Benutzer Zugriff auf Brand Portal anfordern
+* Löschen von Assets aus Brand Portal durch Administratoren zulassen
+* Zulassen der Erstellung öffentlicher Sammlungen
+* Zulassen der Erstellung öffentlicher Smart-Sammlungen
 * Downloadbeschleunigung aktivieren
 
 ### Weitere Verbesserungen
@@ -163,13 +163,13 @@ Brand Portal verwendet Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://
 
 Neue Funktionen, die auf die Ausrichtung von Brand Portal an AEM ausgerichtet sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/26354/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
 
 ### Navigationsverbesserungen
 
 * Die aktualisierte Benutzeroberfläche, die mit der AEM übereinstimmt und die Coral3-Benutzeroberfläche verwendet.
 * Schneller und einfacher Zugriff auf Admin Tools über das neue Adobe-Logo.
-* Produktnavigation mithilfe einer Überlagerung
+* Produktnavigation durch eine Überlagerung
 * Schnellnavigation zu übergeordneten Ordnern aus einem untergeordneten Ordner
 * Omnisearch-Option, um zu den Admin Tools und Inhalten zu navigieren.
 * Die Karten-, Listen- und Spaltenansicht erleichtert das Durchsuchen verschachtelter Ordner.
@@ -194,7 +194,7 @@ Neue Funktionen, die auf die Ausrichtung von Brand Portal an AEM ausgerichtet si
 ### Berichterstellungs- und Verwaltungsfunktionen
 
 * Das Metadatenschema aus AEM Assets kann jetzt von AEM in Brand Portal veröffentlicht werden.
-* Administratoren können drei Berichtstypen erstellen und verwalten – zu heruntergeladenen, abgelaufenen und veröffentlichten Assets
+* Administratoren können drei Berichtstypen erstellen und verwalten: heruntergeladene, abgelaufene und veröffentlichte Assets
 * Möglichkeit zur Konfiguration der Spalte, die in den Bericht aufgenommen werden soll.
 * Erstellen Sie Bildvorgaben für Assets in Brand Portal.
 * Möglichkeit zur Änderung des Admin-Suchschiene-Formulars oder der Forms-Suche, um zusätzliche Filteroptionen einzuschließen.
@@ -203,8 +203,8 @@ Neue Funktionen, die auf die Ausrichtung von Brand Portal an AEM ausgerichtet si
 
 ## Zusätzliche Ressourcen{#additional-resources}
 
-* [Neue Funktionen in Brand Portal](https://helpx.adobe.com/experience-manager/brand-portal/using/whats-new.html)
-* [AEM-Agenten für die Autorenreplikation](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
+* [Neue Funktionen in Brand Portal](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/introduction/whats-new.html?lang=de#introduction)
+* [AEM-Agenten für die Autorenreplikation](https://helpx.adobe.com/de/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [Anleitung zum beschleunigten Download](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [Dokumente zur Adobe von AEM Assets Brand Portal](https://helpx.adobe.com/de/experience-manager/brand-portal/using/brand-portal.html)
 * [Dokumente zur Adobe von AEM Assets Dynamic Media](https://experienceleague.adobe.com/docs/?lang=de)

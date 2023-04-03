@@ -1,23 +1,23 @@
 ---
 title: Was ist das Repository-Strukturpaket in einem AEM Projekt?
-description: 'Erkunden Sie das Repository-Strukturpaket einer AEM Anwendung, dessen Bedeutung und die richtige Definition. '
+description: Erkunden Sie das Repository-Strukturpaket einer AEM Anwendung, dessen Bedeutung und die richtige Definition.
 role: Developer
 level: Beginner
 type: Tutorial
-topic: Entwicklung
-feature: AEM-Projektarchetyp
+topic: Development
+feature: AEM Project Archetype
 kt: 6928
 thumbnail: 330550.jpg
-source-git-commit: 5ac82928d4b0bf75b348a414793c24c3aca92f36
+exl-id: af0da906-87ea-4b52-9c9c-343fb29d3fcc
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '54'
-ht-degree: 20%
+source-wordcount: '50'
+ht-degree: 14%
 
 ---
 
-
 # Repository-Strukturpaket
 
-Erkunden Sie das [Repository-Strukturpaket](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/repository-structure-package.html?lang=de) einer AEM Anwendung, deren Bedeutung und wie es optimal definiert wird.
+AEM-Anwendung [Repository-Strukturpaket](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/repository-structure-package.html?lang=de), ihre Bedeutung und wie sie optimal definiert werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/330550/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330550?quality=12&learn=on)

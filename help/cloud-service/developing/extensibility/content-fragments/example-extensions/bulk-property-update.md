@@ -10,7 +10,7 @@ kt: 11604
 thumbnail: KT-11604.png
 doc-type: article
 last-substantial-update: 2022-12-09T00:00:00Z
-source-git-commit: a298dbd27dfda00c80d2098199eb418200af0233
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '782'
 ht-degree: 1%
@@ -38,7 +38,7 @@ Die Beispielerweiterung weist folgende Funktionen auf:
 
 In diesem Video werden die Beispiel-Massen-Property-Update-Erweiterung, ihre Funktionsweise und ihre Entwicklung beschrieben.
 
->[!VIDEO](https://video.tv.adobe.com/v/3412296/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
 
 ## App Builder-Erweiterungsanwendung
 

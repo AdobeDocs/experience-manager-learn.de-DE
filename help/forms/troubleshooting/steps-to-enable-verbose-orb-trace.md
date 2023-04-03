@@ -1,23 +1,23 @@
 ---
 title: Schritte zum Aktivieren der ausführlichen ORB-Verfolgung
-description: 'Konfigurieren ausführlicher ORB-Protokolle zur Fehlerbehebung bei PDF Generator-Problemen '
+description: Konfigurieren Sie ausführliche ORB-Protokolle zur Fehlerbehebung bei Problemen mit PDF Generator
 type: Troubleshooting
 role: Admin
 level: Intermediate
 version: 6.5
 feature: PDF Generator
-topic: 'Administration   '
+topic: Administration
 index: y
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 2ac84ee3-48ca-4c01-9dfe-add77c666ba9
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
-source-wordcount: '35'
-ht-degree: 8%
+source-wordcount: '32'
+ht-degree: 0%
 
 ---
-
 
 # Schritte zum Aktivieren der ausführlichen ORB-Verfolgung
 
 *In diesem Video werden die Schritte zum Aktivieren der ausführlichen ORB-Verfolgung erläutert.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335526?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/335526?quality=12&learn=on)

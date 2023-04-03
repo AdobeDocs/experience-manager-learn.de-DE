@@ -9,7 +9,8 @@ feature: Output Service
 topic: Development
 kt: 7432
 thumbnail: 334859.jpg
-source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
+exl-id: 08dd141d-9d25-4dd5-a810-70e3835deae4
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 1%
@@ -25,4 +26,4 @@ In diesem Kurs werden wir die Dokumenterstellungsmikrodienste verwenden, um ein 
 1. Zugriff für das technische Konto konfigurieren in AEM
 1. HTTP-Aufrufe mithilfe des Zugriffstokens durchführen
 
->[!VIDEO](https://video.tv.adobe.com/v/334859/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/334859?quality=12&learn=on)

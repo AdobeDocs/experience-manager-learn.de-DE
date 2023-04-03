@@ -15,10 +15,10 @@ topic: Content Management
 role: User
 level: Intermediate
 exl-id: 12490c29-91f4-4bb7-b7b6-7ed7cd3fb76d
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '196'
-ht-degree: 5%
+ht-degree: 8%
 
 ---
 
@@ -26,14 +26,14 @@ ht-degree: 5%
 
 Das Stilsystem von Adobe Experience Manager ermöglicht visuelle Varianten von Komponenten ohne Back-End-Entwicklung, was eine bessere Wiederverwendung AEM Komponenten und eine vielseitigere und effizientere Inhaltserstellung ermöglicht. Das Stilsystem bietet bei Verwendung in Verbindung mit AEM Kernkomponenten, dem Vorlageneditor und dem responsiven Layout leistungsstarke Funktionen zum schnellen Zusammenstellen umfangreicher Erlebnisse.
 
->[!VIDEO](https://video.tv.adobe.com/v/21750/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21750?quality=12&learn=on)
 
 In diesem Video wird gezeigt, wie das Stilsystem genutzt werden kann, um deutlich unterschiedliche visuelle Erscheinungsformen für eine einzelne Komponente zu erstellen, wobei nur CSS verwendet wird.
 
-Die angezeigten Stile werden von der [WKND-Anwendung](https://github.com/adobe/aem-guides-wknd) bereitgestellt. Diese Stile sind als CSS definiert und erfordern keine Änderungen an der Backend-Logik der Komponente, am HTL-Skript oder am Sling-Modell.
+Die angezeigten Stile werden von der [WKND-Anwendung](https://github.com/adobe/aem-guides-wknd). Diese Stile sind als CSS definiert und erfordern keine Änderungen an der Backend-Logik der Komponente, am HTL-Skript oder am Sling-Modell.
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
 Möchten Sie erfahren, wie Sie mit dem Stilsystem entwickeln? Sehen Sie sich die folgenden Tutorials an:
 
-* [Entwickeln mit dem Stilsystem](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html)
+* [Entwickeln mit dem Stilsystem](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html?lang=de)

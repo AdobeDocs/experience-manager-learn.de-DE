@@ -7,10 +7,10 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '251'
-ht-degree: 29%
+ht-degree: 25%
 
 ---
 
@@ -19,11 +19,11 @@ ht-degree: 29%
 
 AEM Dynamic Media-Videoplayer, der bisher zur Unterstützung des adaptiven Video-Streaming auf Desktop-Clients und Browsern auf Flash-Laufzeitumgebung angewiesen war, wurde beim Flash-basierten Content-Streaming aggressiver. Mit der Einführung von HLS (Apples HTTP Live Streaming Video-Versandprotokoll) können Inhalte jetzt gestreamt werden, ohne auf Flash angewiesen zu sein.
 
->[!VIDEO](https://video.tv.adobe.com/v/16791/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16791?quality=12&learn=on)
 
 ## Schnellzugriff auf den Flash-Videoplayer {#quick-look-into-non-flash-video-player}
 
->[!VIDEO](https://video.tv.adobe.com/v/17429/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17429?quality=12&learn=on)
 
 Die HLS-Browserunterstützung sieht wie folgt aus: Für nicht unterstützte Browser wechseln wir zurück zur progressiven Videobereitstellung
 
@@ -74,13 +74,13 @@ Die HLS-Browserunterstützung sieht wie folgt aus: Für nicht unterstützte Brow
   </tr>
   <tr> 
    <td> <p>Mobilgerät</p> </td>
-   <td> <p>Chrome (Android 6 oder früher)</p> </td>
+   <td> <p>Chrome (Android 6 oder früher)</p> </td>
    <td> <p>Progressiver Download</p> </td>
   </tr>
   <tr> 
    <td> <p>Mobilgerät</p> </td>
-   <td> <p>Chrome (Android 7 oder neuer)</p> </td>
-   <td> <p>HLS Video-Streaming</p> </td>
+   <td> <p>Chrome (Android 7 oder höher)</p> </td>
+   <td> <p>HLS-Video-Streaming</p> </td>
   </tr>
   <tr> 
    <td> <p>Mobilgerät</p> </td>
@@ -100,7 +100,7 @@ Die HLS-Browserunterstützung sieht wie folgt aus: Für nicht unterstützte Brow
   <tr> 
    <td> <p>Mobilgerät</p> </td>
    <td> <p>Blackberry</p> </td>
-   <td> <p>HLS Video-Streaming</p> </td>
+   <td> <p>HLS-Video-Streaming</p> </td>
   </tr>
  </tbody>
 </table>

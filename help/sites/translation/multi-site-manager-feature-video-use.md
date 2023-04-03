@@ -15,7 +15,7 @@ topic: Localization
 role: User
 level: Beginner
 exl-id: 00746678-da23-4d0a-b775-e1de4ed87c56
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 14%
@@ -28,13 +28,13 @@ ht-degree: 14%
 
 ## Live Copy-Übersicht {#live-copy-overview}
 
->[!VIDEO](https://video.tv.adobe.com/v/17054/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17054?quality=12&learn=on)
 
 *Die Live Copy-Übersicht ist eine Touch-Benutzeroberfläche, die zum Verwalten von Live Copies und den entsprechenden Blueprints verwendet wird. Diese in AEM 6.3 eingeführte Funktion ersetzt das Blueprint Control Center für die klassische Benutzeroberfläche.*
 
 ## Blueprint Configuration Manager - Touch-Benutzeroberfläche {#blueprint-config-mgr}
 
->[!VIDEO](https://video.tv.adobe.com/v/17056/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/17056?quality=12&learn=on)
 
 *AEM 6.3 bietet eine Touch-Benutzeroberfläche zur Verwaltung von Blueprint-Konfigurationen für die Verwendung in Multi-Site-Manager.*
 

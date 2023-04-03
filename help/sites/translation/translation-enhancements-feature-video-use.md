@@ -7,7 +7,7 @@ feature: Multi Site Manager, Language Copy
 role: User
 level: Beginner
 exl-id: 21633308-ffe4-4023-affe-59269504da69
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 5%
@@ -20,7 +20,7 @@ AEM leistungsfähiges Übersetzungs-Framework ermöglicht die nahtlose Übersetz
 
 ## Übersetzungsverbesserungen in AEM 6.5
 
->[!VIDEO](https://video.tv.adobe.com/v/27405?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27405?quality=12&learn=on)
 
 AEM 6.5-Übersetzungsverbesserungen umfassen:
 
@@ -34,7 +34,7 @@ AEM 6.5-Übersetzungsverbesserungen umfassen:
 
 ## Übersetzungsverbesserungen in AEM 6.4
 
->[!VIDEO](https://video.tv.adobe.com/v/21309?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/21309?quality=12&learn=on)
 
 Autoren können jetzt schnell und einfach mehrsprachige Übersetzungsprojekte direkt vom Sites-Administrator oder vom Projekt-Administrator erstellen, diese Projekte so einrichten, dass sie automatisch Launches bewerben, und sogar Zeitpläne für die Automatisierung festlegen.
 

@@ -12,7 +12,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: cc659581-031d-4f2a-90c1-cf721e481689
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Die Seitenversionierung hilft Inhaltsautoren dabei, mit einer Seite verknüpfte Änderungen zu verfolgen, indem sie eine Seitenversion erstellt und bietet eine Option zur Vorschau einer Version, zur Wiederherstellung einer Version und zum Vergleich einer Version mit der aktuellen Version einer Seite.
 
->[!VIDEO](https://video.tv.adobe.com/v/32151?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32151?quality=12&learn=on)
 
 Durch die Versionierung wird eine Momentaufnahme einer Seite zu einem bestimmten Zeitpunkt erstellt. Bei der Versionierung können Sie die folgenden Aktionen durchführen:
 * Erstellen einer neuen Version für eine Seite

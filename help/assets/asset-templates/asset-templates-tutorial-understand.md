@@ -6,10 +6,10 @@ topic: Content Management
 role: User
 level: Intermediate
 exl-id: c418e94a-b18e-429a-b41c-2bf32e158598
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '507'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -19,7 +19,7 @@ In diesem Video-Tutorial erfahren Sie, wie Sie eine InDesign-Datei definieren un
 
 ## Erstellen der InDesign-Vorlagendatei {#constructing-the-indesign-template-file}
 
->[!VIDEO](https://video.tv.adobe.com/v/19293/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/19293?quality=12&learn=on)
 
 1. Herunterladen und Öffnen Sie die [**InDesign-Dateivorlage**](assets/asset-templates-tutorial-video--supporting-files.zip)
 2. **Öffnen Sie das Bedienfeld Tags ,** Überprüfen Sie die Tag-Benennungskonvention und beachten Sie, dass die in der InDesign-Datei vorhandenen Autorenelemente bereits mit Tags versehen sind. Beachten Sie, dass in AEM nur getaggte Elemente bearbeitbar sind.
@@ -51,7 +51,7 @@ In diesem Video-Tutorial erfahren Sie, wie Sie eine InDesign-Datei definieren un
 
 ## Erstellen und Bearbeiten einer Asset-Vorlage in AEM Assets {#creating-and-authoring-an-asset-template-in-aem-assets}
 
->[!VIDEO](https://video.tv.adobe.com/v/19294/?quality=9&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/19294?quality=12&learn=on)
 
 1. **InDesign Server starten** auf Port 8080.
 2. Stellen Sie sicher, dass **Die AEM-Autoreninstanz ist für die Interaktion mit Ihrer InDesign Server konfiguriert**(und umgekehrt).
@@ -73,4 +73,4 @@ InDesign der Vorlagendatei und unterstützende Bilder
 Download [InDesign der Vorlagendatei und unterstützende Bilder](assets/asset-templates-tutorial-video--supporting-files-1.zip)
 
 * [InDesign CC-Testdownload](https://creative.adobe.com/products/download/indesign)
-* InDesign Server-Testversion kann von heruntergeladen werden [Website zur Vorabversion der Adobe](https://www.adobeprerelease.com/) oder [CC Enterprise-Kunden können sich an ihren Kundenbetreuer wenden, um eine InDesign Server-Testlizenz anzufordern](https://www.adobe.com/products/indesignserver/faq.html)
+* InDesign Server-Testversion kann von heruntergeladen werden [Website zur Vorabversion der Adobe](https://www.adobeprerelease.com/) oder [CC Enterprise-Kunden können sich an ihren Kundenbetreuer wenden, um eine InDesign Server-Testlizenz anzufordern](https://www.adobe.com/de/products/indesignserver/faq.html)

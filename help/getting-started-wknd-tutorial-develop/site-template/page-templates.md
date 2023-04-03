@@ -11,7 +11,7 @@ kt: 7498
 thumbnail: KT-7498.jpg
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 2%
@@ -48,7 +48,7 @@ Es gibt 3 Hauptbereiche von [Seitenvorlagen](https://experienceleague.adobe.com/
 
 Erstellen Sie anschließend eine neue Vorlage in AEM, die der Struktur der Sicherungen entspricht. Dies geschieht in einer lokalen Instanz von AEM. Führen Sie die folgenden Schritte aus:
 
->[!VIDEO](https://video.tv.adobe.com/v/332915/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332915?quality=12&learn=on)
 
 Sie können die folgende Miniaturansicht verwenden, um Ihre Vorlage zu identifizieren (oder Ihre eigene hochladen!)
 
@@ -65,7 +65,7 @@ Eine gängige Praxis bei der Erstellung globaler Inhalte, wie Kopf- oder Fußzei
 
 Die Site-Vorlage erzeugte eine Kopf- und Fußzeile. Aktualisieren Sie anschließend die Experience Fragments, um sie an die Modelle anzupassen. Führen Sie die folgenden Schritte aus:
 
->[!VIDEO](https://video.tv.adobe.com/v/332916/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332916?quality=12&learn=on)
 
 Allgemeine Schritte für das folgende Video:
 
@@ -77,7 +77,7 @@ Allgemeine Schritte für das folgende Video:
 
 Erstellen Sie anschließend eine neue Seite mithilfe der Vorlage &quot;Zeitschriftenartikelseite&quot;. Verfassen Sie den Inhalt der Seite so, dass er mit den Site-Stichproben übereinstimmt. Führen Sie die folgenden Schritte aus:
 
->[!VIDEO](https://video.tv.adobe.com/v/332917/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332917?quality=12&learn=on)
 
 Verwenden Sie die [bereitgestellter Text](./assets/page-templates/la-skateparks-copy.txt) , um den Artikeltext zu füllen.
 

@@ -8,7 +8,7 @@ feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1464'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 Das mehrzeilige Textfeld ist ein Datentyp von Inhaltsfragmenten, mit dem Autoren Rich-Text-Inhalte erstellen können. Verweise auf andere Inhalte wie Bilder oder andere Inhaltsfragmente können dynamisch in Zeilen innerhalb des Textflusses eingefügt werden. Das einzeilige Textfeld ist ein weiterer Datentyp von Inhaltsfragmenten, der für einfache Textelemente verwendet werden sollte.
 
-AEM GraphQL-API bietet eine robuste Möglichkeit, Rich-Text als HTML, Nur-Text oder reinen JSON zurückzugeben. Die JSON-Darstellung ist leistungsstark, da sie der Clientanwendung die volle Kontrolle darüber gibt, wie der Inhalt gerendert werden kann.
+AEM GraphQL-API bietet eine robuste Funktion zum Zurückgeben von Rich-Text als HTML, Nur-Text oder als reines JSON. Die JSON-Darstellung ist leistungsstark, da sie der Clientanwendung die volle Kontrolle darüber gibt, wie der Inhalt gerendert werden kann.
 
 ## Mehrzeiliger Editor
 
->[!VIDEO](https://video.tv.adobe.com/v/342104/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342104?quality=12&learn=on)
 
-Im Inhaltsfragment-Editor bietet die Menüleiste des mehrzeiligen Textfelds Autoren standardmäßige Rich-Text-Formatierungsfunktionen wie **fett**, *kursiv* und unterstreichen. Das Öffnen des mehrzeiligen Felds im Vollbildmodus aktiviert [zusätzliche Formatierungswerkzeuge wie Absatztyp, Suchen und Ersetzen, Rechtschreibprüfung und mehr](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
+Im Inhaltsfragment-Editor bietet die Menüleiste des mehrzeiligen Textfelds Autoren standardmäßige Rich-Text-Formatierungsfunktionen wie **fett**, *kursiv* und unterstreichen. Das Öffnen des mehrzeiligen Felds im Vollbildmodus aktiviert [zusätzliche Formatierungswerkzeuge wie Absatztyp, Suchen und Ersetzen, Rechtschreibprüfung und mehr](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html?lang=de).
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ Beim Erstellen einer GraphQL-Abfrage können Entwickler verschiedene Antworttype
 
 Entwickler können die [JSON-Vorschau](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html) im Inhaltsfragment-Editor, um alle Werte des aktuellen Inhaltsfragments anzuzeigen, die mit der GraphQL-API zurückgegeben werden können.
 
-## GraphQL-persistente Abfrage
+## Persistente GraphQL-Abfrage
 
 Auswählen der `json` Das Antwortformat für das mehrzeilige Feld bietet die größte Flexibilität beim Arbeiten mit Rich-Text-Inhalten. Der Rich-Text-Inhalt wird als Array von JSON-Knotentypen bereitgestellt, die basierend auf der Client-Plattform eindeutig verarbeitet werden können.
 
@@ -131,7 +131,7 @@ Nachfolgend finden Sie einige Beispiele für Antworttypen eines mehrzeiligen Fel
 
 Beispiel +++HTML
 
-**GraphQL-persistente Abfrage:**
+**Persistente GraphQL-Abfrage:**
 
 ```graphql
 query ($path: String!) {
@@ -168,7 +168,7 @@ query ($path: String!) {
 
 Beispiel +++Markdown
 
-**GraphQL-persistente Abfrage:**
+**Persistente GraphQL-Abfrage:**
 
 ```graphql
 query ($path: String!) {
@@ -205,7 +205,7 @@ query ($path: String!) {
 
 +++Plaintext-Beispiel
 
-**GraphQL-persistente Abfrage:**
+**Persistente GraphQL-Abfrage:**
 
 ```graphql
 query ($path: String!) {
@@ -363,7 +363,7 @@ Sie können beispielsweise:
 
 Verwenden Sie die `json` Rückgabetyp und schließen Sie die `_references` -Objekt beim Erstellen einer GraphQL-Abfrage:
 
-**GraphQL-persistente Abfrage:**
+**Persistente GraphQL-Abfrage:**
 
 ```graphql
 query ($path: String!) {
@@ -536,7 +536,7 @@ Ein vollständiges Beispiel für das Schreiben eines benutzerdefinierten Referen
 
 ## End-to-End-Beispiel
 
->[!VIDEO](https://video.tv.adobe.com/v/342105/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342105?quality=12&learn=on)
 
 Das vorherige Video zeigt ein Beispiel von Ende zu Ende:
 

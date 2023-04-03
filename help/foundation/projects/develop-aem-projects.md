@@ -11,7 +11,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '4571'
 ht-degree: 1%
@@ -22,11 +22,11 @@ ht-degree: 1%
 
 Dies ist ein Entwicklungs-Tutorial, in dem gezeigt wird, wie [!DNL AEM Projects].  In diesem Tutorial erstellen wir eine benutzerdefinierte Projektvorlage, die zum Erstellen neuer Projekte in AEM für die Verwaltung von Workflows und Aufgaben zur Inhaltserstellung verwendet werden kann.
 
->[!VIDEO](https://video.tv.adobe.com/v/16904/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/16904?quality=12&learn=on)
 
 *In diesem Video erhalten Sie eine kurze Demo des fertigen Workflows, der im unten stehenden Tutorial erstellt wird.*
 
-## Einführung    {#introduction}
+## Einführung {#introduction}
 
 [[!DNL AEM Projects]](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/projects.html) ist eine Funktion von AEM, die die Verwaltung und Gruppierung aller Workflows und Aufgaben im Zusammenhang mit der Inhaltserstellung im Rahmen einer AEM Sites- oder Assets-Implementierung erleichtert.
 
@@ -637,7 +637,7 @@ Die Erstellung eines benutzerdefinierten Assistenten kann sehr leistungsstark se
 
 1. Wir fügen dem Assistenten ein zusätzliches Feld hinzu, mit dem der Verantwortliche der ersten Aufgabe im Workflow festgelegt wird (siehe [Erstellen des Workflow-Modells](#create-workflow-model): Schritt 5).
 
-   darunter `../content-approval-start/jcr:content/items/column2/items` Erstellen Sie einen neuen Knoten des Typs `nt:unstructured` benannt **&quot;assign&quot;**. Wir verwenden die Komponente &quot;User Picker für Projekte&quot;(basierend auf der [Granite-Benutzerauswahlkomponente](https://experienceleague.adobe.com/docs/)). Dieses Formularfeld ermöglicht es, die Benutzer- und Gruppenauswahl auf diejenigen zu beschränken, die zum aktuellen Projekt gehören.
+   darunter `../content-approval-start/jcr:content/items/column2/items` Erstellen Sie einen neuen Knoten des Typs `nt:unstructured` benannt **&quot;assign&quot;**. Wir verwenden die Komponente &quot;User Picker für Projekte&quot;(basierend auf der [Granite-Benutzerauswahlkomponente](https://experienceleague.adobe.com/docs/?lang=de)). Dieses Formularfeld ermöglicht es, die Benutzer- und Gruppenauswahl auf diejenigen zu beschränken, die zum aktuellen Projekt gehören.
 
    Nachfolgend finden Sie die XML-Darstellung der **zuweisen** node:
 
@@ -693,7 +693,7 @@ Die Erstellung eines benutzerdefinierten Assistenten kann sehr leistungsstark se
    </priority>
    ```
 
-1. Wir erlauben es dem Workflow-Initiator, das Fälligkeitsdatum der ersten Aufgabe festzulegen. Wir werden die [Granite UI DatePicker](https://experienceleague.adobe.com/docs/) Formularfeld, um diese Eingabe zu erfassen. Wir fügen auch ein ausgeblendetes Feld mit einem [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) , um sicherzustellen, dass die Eingabe als Eigenschaft vom Typ Datum im JCR gespeichert wird.
+1. Wir erlauben es dem Workflow-Initiator, das Fälligkeitsdatum der ersten Aufgabe festzulegen. Wir werden die [Granite UI DatePicker](https://experienceleague.adobe.com/docs/?lang=de) Formularfeld, um diese Eingabe zu erfassen. Wir fügen auch ein ausgeblendetes Feld mit einem [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) , um sicherzustellen, dass die Eingabe als Eigenschaft vom Typ Datum im JCR gespeichert wird.
 
    Zwei hinzufügen **nt:unstructured** -Knoten mit den folgenden Eigenschaften, die unten in XML dargestellt werden:
 

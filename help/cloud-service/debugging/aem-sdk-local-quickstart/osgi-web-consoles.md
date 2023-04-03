@@ -12,7 +12,7 @@ topic: Development
 role: Developer
 level: Beginner, Intermediate
 exl-id: 0929bc1a-376c-4e16-a540-a276fd5af164
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '393'
 ht-degree: 4%
@@ -27,7 +27,7 @@ AEM bietet viele OSGi-Konsolen, die jeweils wichtige Einblicke in verschiedene A
 
 ## Bundles
 
->[!VIDEO](https://video.tv.adobe.com/v/34335/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34335?quality=12&learn=on)
 
 Die Bundles-Konsole ist ein Katalog der OSGi-Bundles und deren Details, die in AEM bereitgestellt werden, zusammen mit der Ad-hoc-Fähigkeit, sie zu starten und zu stoppen.
 
@@ -44,7 +44,7 @@ Durch Klicken auf jedes Bundle erhalten Sie Details, die beim Debugging Ihrer An
 
 ## Komponenten
 
->[!VIDEO](https://video.tv.adobe.com/v/34336/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34336?quality=12&learn=on)
 
 Die Komponentenkonsole ist ein Katalog aller OSGi-Komponenten, die auf AEM bereitgestellt werden, und enthält alle Informationen zu ihnen, vom definierten Lebenszyklus der OSGi-Komponenten bis hin zu den OSGi-Diensten, auf die sie verweisen können.
 
@@ -63,7 +63,7 @@ Wichtige Aspekte, die bei Debugging-Aktivitäten helfen:
 
 ## Sling-Modelle
 
->[!VIDEO](https://video.tv.adobe.com/v/34337/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34337?quality=12&learn=on)
 
 Die Konsole &quot;Sling-Modelle&quot;befindet sich unter:
 

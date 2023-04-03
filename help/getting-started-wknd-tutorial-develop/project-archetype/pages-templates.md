@@ -10,7 +10,7 @@ kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
 recommendations: noDisplay, noCatalog
-source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
+source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '3040'
 ht-degree: 1%
@@ -72,7 +72,7 @@ In diesem Teil des Tutorials erstellen Sie eine neue Artikelseitenvorlage, die v
 
 Normalerweise beginnt die Planung für eine neue Website mit Modellrechnungen und statischen Designs. [Adobe XD](https://helpx.adobe.com/support/xd.html) ist ein Design-Tool zum Erstellen von Benutzererlebnissen. Als Nächstes überprüfen wir ein UI-Kit und Modelle, um die Struktur der Artikelseitenvorlage zu planen.
 
->[!VIDEO](https://video.tv.adobe.com/v/30214/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30214?quality=12&learn=on)
 
 **Laden Sie die [WKND Article Design File](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd)**.
 
@@ -92,7 +92,7 @@ Es gibt drei Hauptbereiche von [Bearbeitbare Vorlagen](https://experienceleague.
 
 Erstellen Sie anschließend eine Vorlage in AEM, die der Struktur der Sicherungen entspricht. Dies geschieht in einer lokalen Instanz von AEM. Führen Sie die folgenden Schritte aus:
 
->[!VIDEO](https://video.tv.adobe.com/v/330991/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330991?quality=12&learn=on)
 
 Allgemeine Schritte für das obige Video:
 
@@ -160,7 +160,7 @@ Eine gängige Praxis bei der Erstellung globaler Inhalte, wie Kopf- oder Fußzei
 
 Der AEM Projektarchetyp generiert eine Kopf- und Fußzeile. Aktualisieren Sie anschließend die Experience Fragments, um sie an die Modelle anzupassen. Führen Sie die folgenden Schritte aus:
 
->[!VIDEO](https://video.tv.adobe.com/v/330992/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330992?quality=12&learn=on)
 
 Allgemeine Schritte für das obige Video:
 
@@ -206,7 +206,7 @@ Allgemeine Schritte für das obige Video:
 
 Erstellen Sie anschließend eine Seite mithilfe der Vorlage &quot;Artikelseite&quot;. Verfassen Sie den Inhalt der Seite so, dass er mit den Site-Stichproben übereinstimmt. Führen Sie die folgenden Schritte aus:
 
->[!VIDEO](https://video.tv.adobe.com/v/330993/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330993?quality=12&learn=on)
 
 Allgemeine Schritte für das obige Video:
 
