@@ -4,9 +4,9 @@ description: Sehen Sie sich unsere Videos und Tutorials an, um Hilfe mit Adobe E
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: d712fb988dc554b4f95ab2298ffc0f54df48f6f3
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '215'
 ht-degree: 1%
 
 ---
@@ -25,9 +25,6 @@ Adobe Experience Manager bietet eine Reihe gemeinsamer Funktionen, die Benutzern
 
 * **[Erläuterung von Cloud Manager für AEM (Video)](./cloud-manager/understand-cloud-manager-for-aem.md)**\
    *Cloud Manager für AEM ermöglicht eine einfache Verwaltung, Überprüfung und Self-Service von AEM Umgebungen.*
-
-* **[Einrichten von öffentlichen und privaten Schlüsseln für die Verwendung mit Adobe I/O (Tutorial)](./authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)**\
-   *Erfahren Sie, wie Schlüssel und Keystores mit [!DNL openssl] die mit AEM und Adobe I/O funktionieren.*
 
 * **[Verwenden der CI/CD-Pipeline von Cloud Manager (Video)](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
    *Erfahren Sie, wie Sie die CI/CD-Pipeline von Cloud Manager verwenden, um eine sichere und konsistente Bereitstellung sicherzustellen.*

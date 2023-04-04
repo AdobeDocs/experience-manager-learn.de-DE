@@ -4,10 +4,10 @@ breadcrumb-title: AEM Foundation-Tutorials
 user-guide-description: Eine Sammlung von Videos und Tutorials für die Adobe Experience Manager Foundation.
 sub-product: Experience Manager
 index: y
-source-git-commit: de9377236016066cc62819f1c307aac82331a0b6
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 16%
+source-wordcount: '214'
+ht-degree: 17%
 
 ---
 
@@ -24,7 +24,6 @@ ht-degree: 16%
 + Authentifizierung {#authentication}
    + [OKTA und AEM](authentication/okta-saml-integration.md)
    + [OAuth-Bereiche](authentication/oauth-code-sample-develop.md)
-   + [Öffentliche/private Schlüssel zur Verwendung mit Adobe I/O einrichten](authentication/set-up-public-private-keys-for-use-with-aem-and-adobe-io.md)
    + [Grundlagen zur Authentifizierung](authentication/authentication-support-article-understand.md)
    + [IMS-Authentifizierung in AMS](authentication/adobe-ims-authentication-technical-video-understand.md)
 + Adobe Cloud Manager{#cloud-manager}

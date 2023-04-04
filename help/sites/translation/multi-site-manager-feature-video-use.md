@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Multi-Site-Manager mit AEM Sites
+title: Verwenden von Multi Site Manager mit AEM Sites
 seo-title: Using Multi Site Manager Touch UI Interfaces with Adobe Experience Manager
 description: Live Copy-Übersicht und Blueprint Configuration Manager sind Touch-optimierte Benutzeroberflächen für die Arbeit mit Multi Site Manager.
 seo-description: Live Copy Overview and Blueprint Configuration Manager are Touch UI Enabled interfaces for working with Multi Site Manager with Adobe Experience Manager.
@@ -15,16 +15,16 @@ topic: Localization
 role: User
 level: Beginner
 exl-id: 00746678-da23-4d0a-b775-e1de4ed87c56
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 14%
+source-wordcount: '148'
+ht-degree: 17%
 
 ---
 
 # Verwenden von Multi Site Manager {#using-multi-site-manager-with-aem-sites}
 
-[!UICONTROL Live Copy-Übersicht] und [!UICONTROL Blueprint Configuration Manager] sind AEM-Autorenoberflächen für die Arbeit mit der Multi-Site-Manager-Funktion von Adobe Experience Manager Sites.
+Live Copy-Übersicht und Blueprint Configuration Manager sind AEM-Autorenoberflächen zum Arbeiten mit [Multi-Site-Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html?lang=de) in Adobe Experience Manager Sites.
 
 ## Live Copy-Übersicht {#live-copy-overview}
 

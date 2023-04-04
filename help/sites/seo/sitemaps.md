@@ -10,10 +10,10 @@ kt: 9165
 thumbnail: 337960.jpeg
 last-substantial-update: 2022-10-03T00:00:00Z
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 6%
+source-wordcount: '263'
+ht-degree: 5%
 
 ---
 
@@ -21,33 +21,15 @@ ht-degree: 6%
 
 Erfahren Sie, wie Sie Ihr SEO durch die Erstellung von Sitemaps für AEM Sites verbessern können.
 
+>[!WARNING]
+>
+>In diesem Video wird die Verwendung von relativen URLs in der Sitemap veranschaulicht. Sitemaps [sollte absolute URLs verwenden](https://sitemaps.org/protocol.html). Siehe [Konfigurationen](#absolute-sitemap-urls) für die Aktivierung absoluter URLs, da dies im Video unten nicht behandelt wird.
+
 >[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
-
-## Ressourcen
-
-+ [AEM Sitemap-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=en#building-an-xml-sitemap-on-aem)
-+ [Apache Sling Sitemap-Dokumentation](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
-+ [Sitemap.org Sitemap-Dokumentation](https://www.sitemaps.org/protocol.html)
-+ [Dokumentation zur Sitemap-Indexdatei &quot;Sitemap&quot;](https://www.sitemaps.org/protocol.html#index)
-+ [Hersteller](http://www.cronmaker.com/)
 
 ## Konfigurationen
 
-### OSGi-Konfiguration des Sitemap Scheduler
-
-Definiert die [OSGi-Werkskonfiguration](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) für die Häufigkeit (mithilfe von [Cron-Ausdrücke](http://www.cronmaker.com)) Sitemaps werden in AEM neu erstellt und zwischengespeichert.
-
-`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
-
-```json
-{
-  "scheduler.name": "WKND Sitemaps",
-  "scheduler.expression": "0 0 2 1/1 * ? *",
-  "searchPath": "/content/wknd"
-}
-```
-
-### Absolute Sitemap-URLs
+### Absolute Sitemap-URLs{#absolute-sitemap-urls}
 
 AEM Sitemap unterstützt absolute URLs durch Verwendung von [Sling-Zuordnung](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). Dies geschieht durch Erstellen von Zuordnungsknoten für die AEM Dienste, die Sitemaps generieren (normalerweise der AEM-Veröffentlichungsdienst).
 
@@ -63,6 +45,20 @@ Der folgende Screenshot zeigt eine ähnliche Konfiguration, aber für `http://wk
 
 ![Konfiguration absoluter Sitemap-URLs](../assets/sitemaps/sitemaps-absolute-urls.jpg)
 
+
+### OSGi-Konfiguration des Sitemap Scheduler
+
+Definiert die [OSGi-Werkskonfiguration](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) für die Häufigkeit (mithilfe von [Cron-Ausdrücke](http://www.cronmaker.com)) Sitemaps werden in AEM neu erstellt und zwischengespeichert.
+
+`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
+
+```json
+{
+  "scheduler.name": "WKND Sitemaps",
+  "scheduler.expression": "0 0 2 1/1 * ? *",
+  "searchPath": "/content/wknd"
+}
+```
 
 ### Dispatcher-Zulassungsfilterregel
 
@@ -88,3 +84,11 @@ Sichern `.xml` sitemap-HTTP-Anfragen werden an die richtige zugrunde liegende AE
 RewriteCond %{REQUEST_URI} (.html|.jpe?g|.png|.svg|.xml)$
 RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 ```
+
+## Ressourcen
+
++ [AEM Sitemap-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=en#building-an-xml-sitemap-on-aem)
++ [Apache Sling Sitemap-Dokumentation](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
++ [Sitemap.org Sitemap-Dokumentation](https://www.sitemaps.org/protocol.html)
++ [Dokumentation zur Sitemap-Indexdatei &quot;Sitemap&quot;](https://www.sitemaps.org/protocol.html#index)
++ [Hersteller](http://www.cronmaker.com/)

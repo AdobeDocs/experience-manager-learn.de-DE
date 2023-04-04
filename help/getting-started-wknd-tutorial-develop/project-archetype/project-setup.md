@@ -12,9 +12,9 @@ kt: 3418
 thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '1839'
 ht-degree: 6%
 
 ---
@@ -87,6 +87,8 @@ Die nächsten Schritte werden mit einem UNIX®-basierten Befehlszeilenterminal d
    >[!NOTE]
    >
    > Ersetzen Sie AEM 6.5.14 oder höher `aemVersion="cloud"` mit `aemVersion="6.5.14"`.
+   >
+   > Verwenden Sie außerdem immer die neueste `archetypeVersion` durch Verweis auf [AEM Projektarchetyp > Nutzung](https://github.com/adobe/aem-project-archetype#usage)
 
    Eine vollständige Liste der verfügbaren Eigenschaften zum Konfigurieren eines Projekts [finden Sie hier .](https://github.com/adobe/aem-project-archetype#available-properties).
 
