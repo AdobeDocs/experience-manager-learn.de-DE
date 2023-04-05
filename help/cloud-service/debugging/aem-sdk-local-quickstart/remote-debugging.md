@@ -8,9 +8,9 @@ role: Developer
 level: Beginner, Intermediate
 thumbnail: 34338.jpeg
 exl-id: beac60c6-11ae-4d0c-a055-cd3d05aeb126
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 45e7c58efd1d89537752fe7f890c0e80f7be7d67
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,13 @@ Der lokale Schnellstart des AEM SDK ermöglicht das Remote-Java-Debugging von Ih
 Um einen Remote-Debugger mit AEM zu verbinden, muss der lokale Schnellstart des AEM SDK mit bestimmten Parametern (`-agentlib:...`), sodass die IDE eine Verbindung herstellen kann.
 
 ```
-$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005 -jar aem-author-p4502.jar   
+$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -jar aem-author-p4502.jar   
 ```
 
++ AEM SDK unterstützt nur Java 11
 + `address` Gibt den Anschluss an, der auf Remote-Debugging-Verbindungen AEM und auf einen beliebigen verfügbaren Port auf dem lokalen Entwicklungscomputer geändert werden kann.
 + Der letzte Parameter (z. B. `aem-author-p4502.jar`) ist die AEM SKD-Schnellstart-JAR. Dies kann entweder der AEM-Autorendienst sein (`aem-author-p4502.jar`) oder dem AEM-Veröffentlichungsdienst (`aem-publish-p4503.jar`).
+
 
 ## Anweisungen zur IDE-Einrichtung
 
