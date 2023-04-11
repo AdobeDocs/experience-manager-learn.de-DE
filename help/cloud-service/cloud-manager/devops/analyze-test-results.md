@@ -12,16 +12,16 @@ exl-id: 2ddd241a-0e8a-4397-8006-6f807be4fb12
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '81'
-ht-degree: 17%
+ht-degree: 51%
 
 ---
 
-# Testergebnisse analysieren {#analyze-test-results}
+# Analysieren der Testergebnisse {#analyze-test-results}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_devops_testresult"
->title="Testergebnisse analysieren"
->abstract="Erfahren Sie mehr über Kompilierungsfehler in Ihrem Code und ob dieser Code Best Practices für AEM as a Cloud Service anwendet."
+>title="Analysieren der Testergebnisse"
+>abstract="Erkennen Sie etwaige Kompilierungsfehler in Ihrem Code und finden Sie heraus, ob dieser Code den Best Practices für AEM as a Cloud Service entspricht."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=de#how-to-use" text="Wissenswertes zu Testergebnissen"
 
 Untersuchen Sie alle Kompilierungsfehler in Ihrem Code und ob dieser Code Best Practices für AEM as a Cloud Service anwendet.

@@ -12,18 +12,18 @@ exl-id: 05e3f987-e9bf-4b61-93b4-62b43619969e
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '71'
-ht-degree: 7%
+ht-degree: 77%
 
 ---
 
-# Pipelines konfigurieren {#configure-pipelines}
+# Konfigurieren von Pipelines {#configure-pipelines}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_devops_configurepipeline"
->title="Pipelines konfigurieren"
->abstract="Untersuchen Sie die verschiedenen Pipelinetypen in Cloud Manager und wie Sie sie für ein erfolgreiches Projekt konfigurieren."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#config-pipeline-video" text="Konfigurieren von Pipelines in Cloud Manager"
+>title="Konfigurieren von Pipelines"
+>abstract="Entdecken Sie die verschiedenen Pipeline-Arten in Cloud Manager und finden Sie heraus, wie Sie sie für ein erfolgreiches Projekt konfigurieren."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=de#config-pipeline-video" text="Konfigurieren von Pipelines in Cloud Manager"
 
-Untersuchen Sie die verschiedenen Pipelinetypen in Cloud Manager und wie Sie sie für ein erfolgreiches Projekt konfigurieren.
+Entdecken Sie die verschiedenen Pipeline-Arten in Cloud Manager und finden Sie heraus, wie Sie sie für ein erfolgreiches Projekt konfigurieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330539?quality=12&learn=on)

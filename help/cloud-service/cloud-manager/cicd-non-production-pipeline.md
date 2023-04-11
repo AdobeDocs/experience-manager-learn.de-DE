@@ -1,6 +1,6 @@
 ---
 title: Verwenden von Adobe Cloud Manager - CI/CD-produktionsfremde Pipeline
-description: 'CI/CD-Produktionsfremde Pipelines sind in zwei Kategorien unterteilt: Codequalitätspipelines und Bereitstellungs-Pipelines. Codequalitätspipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll. Bereitstellungs-Pipelines unterstützen die automatisierte Bereitstellung von Code aus dem Git-Repository in einer Nicht-Produktionsumgebung, d. h. in jeder bereitgestellten AEM Umgebung, die nicht in der Staging- oder Produktionsumgebung enthalten ist.'
+description: 'CI/CD-Produktionsfremde Pipelines sind in zwei Kategorien unterteilt: Codequalitätspipelines und Bereitstellungs-Pipelines. Codequalitätspipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll. Bereitstellungs-Pipelines unterstützen die automatisierte Bereitstellung von Code aus dem Git-Repository in einer Nicht-Produktionsumgebung, d. h. in einer AEM-Umgebung, die weder Staging- noch Produktionsumgebung ist.'
 topics: Administration
 audience: administrator
 doc-type: feature video
@@ -15,7 +15,7 @@ exl-id: b28805d3-bb2d-4f66-8daa-9a8eb7ecf0a1
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '233'
-ht-degree: 47%
+ht-degree: 93%
 
 ---
 
@@ -23,10 +23,10 @@ ht-degree: 47%
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_devops_nonprodpipeline"
->title="CI/CD-produktionsfremde Pipeline"
->abstract="CI/CD-Produktionsfremde Pipelines sind in zwei Kategorien unterteilt: Codequalitätspipelines und Bereitstellungs-Pipelines. Codequalitätspipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll. Bereitstellungs-Pipelines unterstützen die automatisierte Bereitstellung von Code aus dem Git-Repository in einer Nicht-Produktionsumgebung, d. h. in jeder bereitgestellten AEM Umgebung, die nicht in der Staging- oder Produktionsumgebung enthalten ist."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#non-production-%26-code-quality-only-pipelines" text="Produktionsfremde Pipelines und Pipelines für Tests der Code-Qualität"
+>title="CI/CD-Nicht-Produktions-Pipeline"
+>abstract="CI/CD-Produktionsfremde Pipelines sind in zwei Kategorien unterteilt: Codequalitätspipelines und Bereitstellungs-Pipelines. Codequalitätspipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll. Bereitstellungs-Pipelines unterstützen die automatisierte Bereitstellung von Code aus dem Git-Repository in einer Nicht-Produktionsumgebung, d. h. in einer AEM-Umgebung, die weder Staging- noch Produktionsumgebung ist."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=de#non-production-%26-code-quality-only-pipelines" text="Produktionsfremde Pipelines und Pipelines für Tests der Code-Qualität"
 
-[CI/CD-Produktionsfremde Pipelines sind in zwei Kategorien unterteilt: Codequalitätspipelines und Bereitstellungs-Pipelines. ](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#non-production-%26-code-quality-only-pipelines) Codequalitätspipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll. Bereitstellungs-Pipelines unterstützen die automatisierte Bereitstellung von Code aus dem Git-Repository in einer Nicht-Produktionsumgebung, d. h. in jeder bereitgestellten AEM Umgebung, die nicht in der Staging- oder Produktionsumgebung enthalten ist.
+[CI/CD-Produktionsfremde Pipelines sind in zwei Kategorien unterteilt: Codequalitätspipelines und Bereitstellungs-Pipelines. ](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=de#non-production-%26-code-quality-only-pipelines) Codequalitätspipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll. Bereitstellungs-Pipelines unterstützen die automatisierte Bereitstellung von Code aus dem Git-Repository in einer Nicht-Produktionsumgebung, d. h. in einer AEM-Umgebung, die weder Staging- noch Produktionsumgebung ist.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316?quality=12&learn=on)

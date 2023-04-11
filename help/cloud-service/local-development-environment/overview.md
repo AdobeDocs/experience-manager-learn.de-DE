@@ -14,7 +14,7 @@ exl-id: 8b12f34c-be98-4f47-853c-411bb601990c
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '546'
-ht-degree: 6%
+ht-degree: 16%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 6%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_overview"
 >title="Übersicht"
->abstract="Das Einrichten einer lokalen Entwicklungsumgebung für AEM as a Cloud Service umfasst Entwicklungs-Tools, die zum Entwickeln, Erstellen und Kompilieren von AEM-Projekten erforderlich sind, sowie lokale Laufzeitumgebungen, mit denen Entwickler schnell neue Funktionen lokal validieren können, bevor sie über Adobe Cloud Manager für die Bereitstellung auf as a Cloud Service Geräten bereitgestellt AEM."
+>abstract="Das Einrichten einer lokalen Entwicklungsumgebung für AEM as a Cloud Service umfasst Entwicklungs-Tools, die zum Entwickeln, Erstellen und Kompilieren von AEM-Projekten erforderlich sind, sowie lokale Laufzeitumgebungen, mit denen Entwickelnde schnell neue Funktionen lokal validieren können, bevor sie über Adobe Cloud Manager für AEM as a Cloud Service bereitgestellt werden."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=de" text="Entwicklungsrichtlinien"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=de" text="Entwicklungsgrundlagen"
 
@@ -66,7 +66,7 @@ In diesem Abschnitt des Tutorials erfahren Sie, wie Sie:
 
 [Einrichten von Entwicklungstools für AEM Projekte](./development-tools.md)
 
-## Lokale AEM Runtime
+## Lokale AEM-Laufzeit
 
 Das AEM as a Cloud Service SDK bietet eine [!DNL QuickStart Jar] , die eine lokale Version von AEM ausführt. Die [!DNL QuickStart Jar] kann verwendet werden, um entweder den AEM-Autorendienst oder den AEM-Veröffentlichungsdienst lokal auszuführen. Beachten Sie, dass während der [!DNL QuickStart Jar] bietet ein lokales Entwicklungs-Erlebnis, nicht alle in AEM as a Cloud Service verfügbaren Funktionen sind in der [!DNL QuickStart Jar].
 

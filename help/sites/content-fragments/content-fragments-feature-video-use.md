@@ -14,7 +14,7 @@ exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '383'
-ht-degree: 12%
+ht-degree: 16%
 
 ---
 
@@ -33,7 +33,7 @@ Diese Videoreihe behandelt den Lebenszyklus von Inhaltsfragmenten für die Bearb
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_sites_admin_content_fragments"
->title="Fragmente verwalten"
+>title="Verwalten von Fragmenten"
 >abstract="Erfahren Sie, wie Sie mit Inhaltsfragmenten seitenunabhängige Inhalte entwerfen, erstellen, kuratieren und verwenden können."
 
 ## Definieren von Inhaltsfragmentmodellen {#defining-content-fragment-models}

@@ -16,7 +16,7 @@ exl-id: 097216b7-b345-4fcb-bab3-e660d74252a6
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '143'
-ht-degree: 11%
+ht-degree: 42%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="intro_core_components"
 >title="Einführung in Kernkomponenten in AEM as a Cloud Service"
->abstract="Auf dieser Registerkarte können Sie Inhalte anzeigen, die Ihnen beim Erstellen moderner Sites helfen, die mit AEM as a Cloud Service kompatibel sind. Der Schlüssel dazu ist die Verwendung von Kernkomponenten"
+>abstract="Auf dieser Registerkarte können Sie Inhalte anzeigen, mit denen Sie moderne, mit AEM as a Cloud Service kompatible Websites erstellen können. Der Schlüssel dazu ist die Verwendung von Kernkomponenten."
 >additional-url="https://video.tv.adobe.com/v/18926?captions=ger" text="Übersicht über Kernkomponenten"
 
 AEM Kernkomponenten sind Standardkomponenten, die mit Adobe Experience Manager verwendet werden. Basierend auf Best Practices und Standards von Adobe bieten Kernkomponenten einen grundlegenden Funktionssatz für jede Sites-Implementierung.

@@ -15,7 +15,7 @@ exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '177'
-ht-degree: 39%
+ht-degree: 53%
 
 ---
 
@@ -25,8 +25,8 @@ ht-degree: 39%
 >id="aemcloud_devops_prodpipeline"
 >title="CI/CD-Produktions-Pipeline"
 >abstract="Die Konfiguration der CI/CD-Produktions-Pipeline definiert den Auslöser, der die Pipeline initiiert, sowie Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-process" text="Bereitstellen Ihres Codes"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=en#deployment-production-phase" text="Bereitstellung in der Produktionsphase"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=de#deployment-process" text="Bereitstellen Ihres Codes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=de#deployment-production-phase" text="Bereitstellung in der Produktionsphase"
 
 ## Konfiguration
 

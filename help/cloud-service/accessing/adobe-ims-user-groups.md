@@ -1,6 +1,6 @@
 ---
 title: Adobe IMS-Benutzergruppen und -AEM
-description: Adobe IMS-Benutzergruppen erstellen logische Benutzergruppen, die AEM ausgesetzt sind, wo sie genutzt werden können, um Feinabstimmungsberechtigungen für AEM Benutzer zu definieren.
+description: Adobe IMS-Benutzergruppen teilen Benutzende, die AEM verwenden, in logische Gruppen ein. Über diese Gruppen können diesen AEM-Benutzenden präzise Zugriffsberechtigungen erteilt werden.
 version: Cloud Service
 topic: Administration, Security
 feature: User and Groups
@@ -12,7 +12,7 @@ exl-id: 40ba2368-edb7-4348-9aff-91194200092e
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '92'
-ht-degree: 0%
+ht-degree: 89%
 
 ---
 
@@ -21,8 +21,8 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="aemcloud_adobeims_usergroups"
 >title="Adobe IMS-Benutzergruppen"
->abstract="Adobe IMS-Benutzergruppen erstellen logische Benutzergruppen, die AEM ausgesetzt sind, wo sie genutzt werden können, um Feinabstimmungsberechtigungen für AEM Benutzer zu definieren."
+>abstract="Adobe IMS-Benutzergruppen teilen Benutzende, die AEM verwenden, in logische Gruppen ein. Über diese Gruppen können diesen AEM-Benutzenden präzise Zugriffsberechtigungen erteilt werden."
 
- Adobe IMS-Benutzergruppen erstellen logische Benutzergruppen, die AEM ausgesetzt sind, wo sie genutzt werden können, um Feinabstimmungsberechtigungen für AEM Benutzer zu definieren.
+ Adobe IMS-Benutzergruppen teilen Benutzende, die AEM verwenden, in logische Gruppen ein. Über diese Gruppen können diesen AEM-Benutzenden präzise Zugriffsberechtigungen erteilt werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/39150?quality=12&learn=on)

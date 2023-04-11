@@ -22,11 +22,11 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_devtools"
 >title="Einrichten von Entwicklungs-Tools"
->abstract="Für die Entwicklung mit Adobe Experience Manager (AEM) ist ein minimaler Satz von Entwicklungs-Tools erforderlich, die auf dem Entwickler-Computer installiert und eingerichtet werden. Zu diesen Tools gehören Java, Maven, Adobe I/O CLI, Development IDE und mehr."
+>abstract="Für Entwicklungsaufgaben in Adobe Experience Manager (AEM) müssen nur wenige Entwicklungs-Tools auf dem Computer des Entwicklers bzw. der Entwicklerin installiert und eingerichtet werden. Zu diesen Tools gehören u. a. Java, Maven, Adobe I/O CLI und eine Entwicklungsumgebung (IDE)."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=de" text="Entwicklungsrichtlinien"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=de" text="Entwicklungsgrundlagen"
 
-Für die Entwicklung mit Adobe Experience Manager (AEM) ist ein minimaler Satz von Entwicklungs-Tools erforderlich, die auf dem Entwickler-Computer installiert und eingerichtet werden. Diese Instrumente unterstützen die Entwicklung und den Aufbau von AEM.
+Für Entwicklungsaufgaben in Adobe Experience Manager (AEM) müssen nur wenige Entwicklungs-Tools auf dem Computer des Entwicklers bzw. der Entwicklerin installiert und eingerichtet werden. Diese Instrumente unterstützen die Entwicklung und den Aufbau von AEM.
 
 Beachten Sie Folgendes: `~` wird als Kurzbezeichnung für das Benutzerverzeichnis verwendet. Unter Windows entspricht dies dem `%HOMEPATH%`.
 
