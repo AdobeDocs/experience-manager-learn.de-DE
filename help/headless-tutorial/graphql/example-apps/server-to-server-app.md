@@ -8,16 +8,16 @@ role: Developer
 level: Beginner
 kt: 10798
 thumbnail: KT-10798.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '475'
+source-wordcount: '472'
 ht-degree: 6%
 
 ---
 
 # Node.js-App &quot;Server-zu-Server&quot;
 
-Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Server-zu-Server-Anwendung zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen und auf dem Terminal drucken können.
+Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Server-zu-Server-Anwendung zeigt, wie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abgerufen und auf dem Terminal gedruckt werden.
 
 ![Node.js-App von Server zu Server mit AEM Headless](./assets/server-to-server-app/server-to-server-app.png)
 
@@ -27,8 +27,7 @@ Anzeigen der [Quellcode auf GitHub](https://github.com/adobe/aem-guides-wknd-gra
 
 Die folgenden Tools sollten lokal installiert werden:
 
-+ [Node.js v10+](https://nodejs.org/en/)
-+ [npm 6+](https://www.npmjs.com/)
++ [Node.js v18](https://nodejs.org/en/)
 + [Git](https://git-scm.com/)
 
 ## AEM
@@ -77,7 +76,7 @@ Diese Node.js-Anwendung kann basierend auf den Befehlszeilenparametern eine Verb
 
 ## Der Code
 
-Nachstehend finden Sie eine Zusammenfassung dazu, wie die Node.js-Anwendung von Server zu Server erstellt wurde, wie eine Verbindung zu AEM Headless hergestellt wird, um Inhalte mithilfe von persistenten GraphQL-Abfragen abzurufen, und wie diese Daten dargestellt werden. Den vollständigen Code finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app).
+Nachstehend finden Sie eine Zusammenfassung dazu, wie die Node.js-Anwendung &quot;Server-zu-Server&quot;erstellt wurde, wie eine Verbindung mit AEM Headless hergestellt wird, um Inhalte mithilfe von durch GraphQL gespeicherten Abfragen abzurufen, und wie diese Daten dargestellt werden. Den vollständigen Code finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app).
 
 Der gängige Anwendungsfall für Server-zu-Server-AEM Headless-Apps besteht darin, Inhaltsfragmentdaten von AEM in andere Systeme zu synchronisieren. Diese Anwendung ist jedoch absichtlich einfach und druckt die JSON-Ergebnisse aus der persistenten Abfrage.
 
@@ -141,11 +140,11 @@ async function run() {
 ```
 
 
-### GraphQL-persistente Abfrage ausführen
+### Durchführen einer von GraphQL beibehaltenen Abfrage
 
-AEM persistente Abfragen werden über HTTP-GET ausgeführt und daher die [AEM Headless-Client für Node.js](https://github.com/adobe/aem-headless-client-nodejs) wird verwendet, um [die beibehaltenen GraphQL-Abfragen ausführen](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait) AEM und ruft den Inhalt des Abenteuers ab.
+AEM persistente Abfragen werden über HTTP-GET ausgeführt und daher die [AEM Headless-Client für Node.js](https://github.com/adobe/aem-headless-client-nodejs) wird verwendet, um [die gespeicherten GraphQL-Abfragen ausführen](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait) AEM und ruft den Inhalt des Abenteuers ab.
 
-Die beibehaltene Abfrage wird durch Aufruf von `aemHeadlessClient.runPersistedQuery(...)`und übergeben Sie den beibehaltenen GraphQL-Abfragenamen. Sobald GraphQL die Daten zurückgibt, übergeben Sie sie an die vereinfachte `doSomethingWithDataFromAEM(..)` -Funktion, die die Ergebnisse druckt, aber normalerweise die Daten an ein anderes System sendet oder basierend auf den abgerufenen Daten eine Ausgabe generiert.
+Die beibehaltene Abfrage wird durch Aufruf von `aemHeadlessClient.runPersistedQuery(...)`und übergeben Sie den Namen der gespeicherten GraphQL-Abfrage. Sobald die GraphQL die Daten zurückgibt, übergeben Sie sie an die vereinfachte `doSomethingWithDataFromAEM(..)` -Funktion, die die Ergebnisse druckt, aber normalerweise die Daten an ein anderes System sendet oder basierend auf den abgerufenen Daten eine Ausgabe generiert.
 
 ```js
 // index.js

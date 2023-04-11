@@ -11,10 +11,10 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 41e15a2c-758b-4e7d-9d23-ef671c1dc155
-source-git-commit: 1ecd3c761ea7c79036b263ff8528a6cd01af0e76
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 8%
+source-wordcount: '287'
+ht-degree: 7%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 8%
 
 Ein durchgehendes Tutorial, in dem erläutert wird, wie Inhalte mithilfe AEM GraphQL-APIs erstellt und bereitgestellt werden, die von einer externen App in einem Headless-CMS-Szenario genutzt werden.
 
-In diesem Tutorial wird untersucht, wie AEM GraphQL-APIs und Headless-Funktionen verwendet werden können, um die in einer externen App angezeigten Erlebnisse zu optimieren.
+In diesem Tutorial wird untersucht, wie AEM GraphQL-APIs und Headless-Funktionen verwendet werden können, um Erlebnisse zu optimieren, die in einer externen App angezeigt werden.
 
 In diesem Tutorial werden die folgenden Themen behandelt:
 
@@ -31,8 +31,7 @@ In diesem Tutorial werden die folgenden Themen behandelt:
 * Erstellen Sie Inhaltsfragmente anhand der zuvor erstellten Modelle.
 * Erfahren Sie, wie Inhaltsfragmente in AEM mithilfe des integrierten GraphiQL-Entwicklungstools abgefragt werden können.
 * So speichern oder speichern Sie die GraphQL-Abfragen in AEM
-* Beibehaltene GraphQL-Abfragen aus einer React-Beispielanwendung nutzen
-
+* Verwenden persistenter GraphQL-Abfragen aus einer React-Beispielanwendung
 
 ## Voraussetzungen {#prerequisites}
 
@@ -40,8 +39,7 @@ Für dieses Tutorial sind folgende Schritte erforderlich:
 
 * Grundlegende HTML- und JavaScript-Kenntnisse
 * Die folgenden Tools müssen lokal installiert sein:
-   * [Node.js v14+](https://nodejs.org/en/)
-   * [npm 6+](https://www.npmjs.com/)
+   * [Node.js v18](https://nodejs.org/)
    * [Git](https://git-scm.com/)
    * Eine IDE (z. B. [Microsoft® Visual Studio Code](https://code.visualstudio.com/))
 
@@ -55,6 +53,6 @@ Starten Sie das Tutorial mit [Definieren von Inhaltsfragmentmodellen](content-fr
 
 ## GitHub-Projekt
 
-Der Quell-Code und die Inhaltspakete sind im [AEM-Handbücher - WKND GraphQL GitHub-Projekt](https://github.com/adobe/aem-guides-wknd-graphql).
+Der Quell-Code und die Inhaltspakete sind im [AEM Handbücher - WKND GraphQL GitHub-Projekt](https://github.com/adobe/aem-guides-wknd-graphql).
 
-Wenn Sie ein Problem mit dem Tutorial oder dem Code finden, hinterlassen Sie bitte eine [GitHub-Problem](https://github.com/adobe/aem-guides-wknd-graphql/issues).
+Wenn Sie ein Problem mit dem Tutorial oder dem Code finden, hinterlassen Sie eine [GitHub-Problem](https://github.com/adobe/aem-guides-wknd-graphql/issues).

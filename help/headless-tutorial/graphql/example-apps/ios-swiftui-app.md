@@ -1,6 +1,6 @@
 ---
 title: iOS App - Beispiel AEM Headless
-description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese iOS-Anwendung zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen können.
+description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese iOS-Anwendung zeigt, wie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abgefragt werden.
 version: Cloud Service
 mini-toc-levels: 2
 kt: 10587
@@ -10,16 +10,16 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
 source-wordcount: '981'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
 # iOS-App
 
-Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese iOS-Anwendung zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen können.
+Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese iOS-Anwendung zeigt, wie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abgefragt werden.
 
 ![iOS SwiftUI-App mit AEM Headless](./assets/ios-swiftui-app/ios-app.png)
 
@@ -29,7 +29,7 @@ Anzeigen der [Quellcode auf GitHub](https://github.com/adobe/aem-guides-wknd-gra
 
 Die folgenden Tools sollten lokal installiert werden:
 
-+ [Xcode 9.3+](https://developer.apple.com/xcode/) (macOS erforderlich)
++ [Xcode](https://developer.apple.com/xcode/) (macOS erforderlich)
 + [Git](https://git-scm.com/)
 
 ## AEM
@@ -64,7 +64,7 @@ Die iOS-Anwendung ist für die Verbindung mit einem __AEM-Veröffentlichung__ -U
 
    __Grundlegende Authentifizierung__
 
-   Die `AEM_USERNAME` und `AEM_PASSWORD` authentifizieren Sie einen lokalen AEM-Benutzer mit Zugriff auf WKND-GraphQL-Inhalte.
+   Die `AEM_USERNAME` und `AEM_PASSWORD` authentifizieren Sie einen lokalen AEM-Benutzer mit Zugriff auf WKND GraphQL-Inhalte.
 
    ```plain
    AEM_AUTH_TYPE = basic
@@ -74,7 +74,7 @@ Die iOS-Anwendung ist für die Verbindung mit einem __AEM-Veröffentlichung__ -U
 
    __Token-Authentifizierung__
 
-   Die `AEM_TOKEN` ist [Zugriffstoken](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html) , der sich für einen AEM Benutzer mit Zugriff auf WKND-GraphQL-Inhalte authentifiziert.
+   Die `AEM_TOKEN` ist [Zugriffstoken](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html) , der sich für einen AEM Benutzer mit Zugriff auf WKND GraphQL-Inhalte authentifiziert.
 
    ```plain
    AEM_AUTH_TYPE = token
@@ -173,9 +173,9 @@ query($slug: String!) {
 }
 ```
 
-### GraphQL-persistente Abfrage ausführen
+### Durchführen einer von GraphQL beibehaltenen Abfrage
 
-AEM persistente Abfragen werden über HTTP-GET ausgeführt und daher können keine gängigen GraphQL-Bibliotheken verwendet werden, die HTTP-POST wie Apollo verwenden. Erstellen Sie stattdessen eine benutzerdefinierte Klasse, die die persistenten HTTP-GET-Anfragen für die Abfrage an AEM ausführt.
+AEM persistente Abfragen über HTTP-GET ausgeführt werden und daher können keine gängigen GraphQL-Bibliotheken verwendet werden, die HTTP-POST wie Apollo verwenden. Erstellen Sie stattdessen eine benutzerdefinierte Klasse, die die persistenten HTTP-GET-Anfragen für die Abfrage an AEM ausführt.
 
 `AEM/Aem.swift` instanziiert die `Aem` -Klasse, die für alle Interaktionen mit AEM Headless verwendet wird. Das Muster lautet:
 

@@ -1,6 +1,6 @@
 ---
 title: Webkomponente/JS - AEM Headless-Beispiel
-description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Webkomponente/JS-Anwendung zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen können.
+description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Webkomponente/JS-Anwendung zeigt, wie Sie mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen Inhalte abfragen können.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -8,17 +8,17 @@ role: Developer
 level: Beginner
 kt: 10797
 thumbnail: kt-10797.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
-source-wordcount: '569'
-ht-degree: 8%
+source-wordcount: '566'
+ht-degree: 7%
 
 ---
 
 
 # Webkomponente
 
-Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Webkomponentenanwendung zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen und einen Teil der Benutzeroberfläche rendern können, was mit reinem JavaScript-Code erreicht wird.
+Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Webkomponentenanwendung zeigt, wie Sie mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen Inhalte abfragen und einen Teil der Benutzeroberfläche rendern können, was mit reinem JavaScript-Code erreicht wird.
 
 ![Webkomponente mit AEM Headless](./assets/web-component/web-component.png)
 
@@ -29,8 +29,7 @@ Anzeigen der [Quellcode auf GitHub](https://github.com/adobe/aem-guides-wknd-gra
 Die folgenden Tools sollten lokal installiert werden:
 
 + [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) (bei Verbindung mit dem lokalen AEM 6.5 oder AEM SDK)
-+ [Node.js v10+](https://nodejs.org/en/)
-+ [npm 6+](https://www.npmjs.com/)
++ [Node.js v18](https://nodejs.org/en/)
 + [Git](https://git-scm.com/)
 
 ## AEM
@@ -97,7 +96,7 @@ Bei allen Implementierungen ist die `tutorial-solution-content.zip` von [Lösung
 
 ## Der Code
 
-Nachstehend finden Sie eine Zusammenfassung dazu, wie die Webkomponente erstellt wurde, wie sie eine Verbindung zu AEM Headless herstellt, um Inhalte mithilfe von GraphQL-gespeicherten Abfragen abzurufen, und wie diese Daten dargestellt werden. Der vollständige Code finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component).
+Nachstehend finden Sie eine Zusammenfassung dazu, wie die Webkomponente erstellt wurde, wie sie eine Verbindung zu AEM Headless herstellt, um mithilfe von durch GraphQL gespeicherten Abfragen Inhalte abzurufen, und wie diese Daten dargestellt werden. Der vollständige Code finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component).
 
 ### HTML-Tag der Webkomponente
 
@@ -116,7 +115,7 @@ Die `person.js` definiert die Webkomponentenfunktion und darunter sind die wicht
 
 #### Element-Implementierung von PersonInfo
 
-Die `<person-info>` Das Klassenobjekt des benutzerdefinierten Elements definiert die Funktionalität mithilfe der `connectedCallback()` Lebenszyklusmethoden, Anhängen eines Shadow-Stamms, Abrufen einer von GraphQL beibehaltenen Abfrage und DOM-Manipulation, um die interne Shadow-DOM-Struktur des benutzerdefinierten Elements zu erstellen.
+Die `<person-info>` Das Klassenobjekt des benutzerdefinierten Elements definiert die Funktionalität mithilfe der `connectedCallback()` Lebenszyklusmethoden, Anhängen eines Shadow-Stammverzeichnisses, Abrufen einer von GraphQL beibehaltenen Abfrage und DOM-Manipulation, um die interne Shadow-DOM-Struktur des benutzerdefinierten Elements zu erstellen.
 
 ```javascript
 // Create a Class for our Custom Element (person-info)
