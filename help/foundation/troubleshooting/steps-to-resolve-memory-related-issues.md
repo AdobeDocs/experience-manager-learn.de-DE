@@ -12,12 +12,12 @@ exl-id: 6477e9df-f33f-46b1-aa9b-535063da65dd
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '38'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Schritte zum Beheben speicherbezogener Probleme in AEM
+# Schritte zum Beheben von speicherbezogenen Problemen in AEM
 
-*In diesem Video werden die Schritte zum Beheben von Problemen mit dem Arbeitsspeicher in AEM erläutert.*
+*In diesem Video werden die Schritte zum Beheben von Problemen mit dem Speicher in AEM erläutert.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335473?quality=12&learn=on)

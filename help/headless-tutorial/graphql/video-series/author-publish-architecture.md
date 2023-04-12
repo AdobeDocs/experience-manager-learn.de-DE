@@ -12,15 +12,15 @@ exl-id: 7d5f5edb-10e7-43ec-a4e7-4cee8ddba685
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '96'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Architektur der Autoren- und Veröffentlichungsinstanz
+# Architektur von Author and Publish
 
 Erfahren Sie, wie und wann Sie AEM-Autoren- und Veröffentlichungsumgebungen bei der Verwendung AEM GraphQL-APIs nutzen können.
 
-In diesem Video werden Sie:
+In diesem Video erfahren Sie Folgendes:
 
 + Grundlegendes zur Architektur von AEM Author and Publish und zur Veröffentlichung von Inhalten
 + Best Practices für die Headless-Bereitstellung mit einer AEM-Veröffentlichungsumgebung
@@ -28,4 +28,4 @@ In diesem Video werden Sie:
 
 >[!VIDEO](https://video.tv.adobe.com/v/333296?quality=12&learn=on)
 
-_Laden Sie die [Postman-Sammlung](./assets/aem-headless-video-series.postman_collection.json) wird in der AEM Headless-Videoserie verwendet._
+_Laden Sie die [Postman-Sammlung](./assets/aem-headless-video-series.postman_collection.json) herunter, die in der AEM Headless-Videoserie verwendet wird._

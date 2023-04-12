@@ -12,7 +12,7 @@ exl-id: c4f2e8f5-6acf-4efb-bdec-84d264568856
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '157'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Erfahren Sie, wie Sie GraphQL-Abfragen erstellen, um Inhalte aus Adobe Experience Manager (AEM) zurückzugeben, und wie Sie mit dem GraphiQL-Tool Abfragen schnell testen, verfeinern und debuggen können.
 
-In diesem Video werden Sie:
+In diesem Video erfahren Sie Folgendes:
 
 + Die Macht hinter der GraphQL-Sprache verstehen
 + Erfahren Sie, wie Sie eine Liste von Inhaltsfragmenten und ein einzelnes Inhaltsfragment abfragen
@@ -29,9 +29,9 @@ In diesem Video werden Sie:
 
 >[!CAUTION]
 >
->Die **GraphiQL-Installation** -Kapitel ab 1:06 ist in den neueren Versionen von AEM als Cloud Service nicht erforderlich. Integrierte **GraphiQL Explorer** bereitgestellt wird, siehe [Verwenden der GraphiQL-IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) für weitere Informationen.
+>Das Kapitel **GraphiQL-Installation** ab 1:06 ist in den neueren Versionen von AEM as a Cloud Service nicht erforderlich. Ein eingebauter **GraphiQL-Explorer** ist vorhanden, siehe [Benutzen der GraphiQL-IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html?lang=de) für weitere Informationen.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/332860?quality=12&learn=on)
 
-_Laden Sie die [Postman-Sammlung](./assets/aem-headless-video-series.postman_collection.json) wird in der AEM Headless-Videoserie verwendet._
+_Laden Sie die [Postman-Sammlung](./assets/aem-headless-video-series.postman_collection.json) herunter, die in der AEM Headless-Videoserie verwendet wird._

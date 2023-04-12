@@ -1,6 +1,6 @@
 ---
-title: Entwickeln für Cross-Origin Resource Sharing (CORS) mit AEM
-description: Ein kurzes Beispiel für die Nutzung von CORS für den Zugriff auf AEM Inhalt von einer externen Webanwendung über clientseitiges JavaScript.
+title: Entwickeln für CORS (Cross-Origin Resource Sharing) mit AEM
+description: Ein kurzes Beispiel für die Nutzung von CORS zum Zugriff auf AEM-Inhalte von einer externen Web-Anwendung über Client-seitiges JavaScript.
 version: 6.4, 6.5
 topic: Security, Development
 role: Developer
@@ -10,34 +10,34 @@ exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
 source-wordcount: '279'
-ht-degree: 0%
+ht-degree: 98%
 
 ---
 
-# Für Cross-Origin Resource Sharing (CORS) entwickeln
+# Entwickeln für CORS (Cross-Origin Resource Sharing)
 
-Ein kurzes Beispiel für die Nutzung von [!DNL CORS] , um über clientseitiges JavaScript auf AEM Inhalt einer externen Webanwendung zuzugreifen.
+Ein kurzes Beispiel für die Nutzung von [!DNL CORS] zum Zugriff auf AEM-Inhalte von einer externen Web-Anwendung über Client-seitiges JavaScript.
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
 
 In diesem Video:
 
-* **www.example.com** Zuordnung zu localhost über `/etc/hosts`
-* **aem-publish.local** Zuordnung zu localhost über `/etc/hosts`
-* SimpleHTTPServer (ein Wrapper für [[!DNL Python]&#39;s SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html)) bedient die HTML-Seite über Port 8000.
-   * _In Mac App Store nicht mehr verfügbar. Verwenden Sie ähnliche Beispiele wie [Jeeves](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)._
-* [!DNL AEM Dispatcher] läuft auf [!DNL Apache HTTP Web Server] 2.4 und umgekehrte Weiterleitungsanfrage an `aem-publish.local` nach `localhost:4503`.
+* **www.example.com** ist localhost über `/etc/hosts` zugeordnet.
+* **aem-publish.local** ist localhost über `/etc/hosts` zugeordnet.
+* SimpleHTTPServer (eine Umschließung für SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) in [[!DNL Python]) bedient die HTML-Seite über Port 8000.
+   * _Im Mac App Store nicht mehr verfügbar. Verwenden Sie vergleichbare Alternativen wie [Jeeves](https://apps.apple.com/de/app/jeeves-local-http-server/id980824182?mt=12)._.
+* [!DNL AEM Dispatcher] wird unter [!DNL Apache HTTP Web Server] 2.4 ausgeführt und führt einen Reverse-Proxy-Vorgang von `aem-publish.local` nach `localhost:4503` aus.
 
-Weitere Informationen finden Sie unter [Verstehen der Cross-Origin Resource Sharing (CORS) in AEM](./understand-cross-origin-resource-sharing.md).
+Weitere Informationen finden Sie unter [Grundlegendes zu CORS (Cross-Origin Resource Sharing) in AEM](./understand-cross-origin-resource-sharing.md).
 
-## www.example.com HTML und JavaScript
+## www.example.com – HTML und JavaScript
 
-Diese Webseite weist eine Logik auf, dass
+Diese Web-Seite hat folgende Logik:
 
-1. Nach Klicken auf die Schaltfläche
-1. Macht einen [!DNL AJAX GET] Anfrage an `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json`
-1. Ruft die `jcr:title` aus der JSON-Antwort
-1. Fügt die `jcr:title` in das DOM
+1. Es wird auf die Schaltfläche geklickt.
+1. Dadurch wird eine [!DNL AJAX GET]-Anfrage an `http://aem-publish.local/content/we-retail/.../experience/_jcr_content.1.json` gestellt.
+1. Daraufhin wird `jcr:title` aus der JSON-Antwort abgerufen.
+1. Schließlich wird `jcr:title` in das DOM eingefügt.
 
 ```xml
 <html>
@@ -70,9 +70,9 @@ Diese Webseite weist eine Logik auf, dass
 </html>
 ```
 
-## OSGi-Werkskonfiguration
+## OSGi-Factory-Konfiguration
 
-Die OSGi-Konfigurationsfactory für [!DNL Cross-Origin Resource Sharing] ist verfügbar über:
+Die OSGi-Konfigurations-Factory für [!DNL Cross-Origin Resource Sharing] ist verfügbar über:
 
 * `http://<host>:<port>/system/console/configMgr > [!UICONTROL Adobe Granite Cross-Origin Resource Sharing Policy]`
 
@@ -92,9 +92,9 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 />
 ```
 
-## Dispatcherkonfiguration {#dispatcher-configuration}
+## Konfiguration des Dispatchers {#dispatcher-configuration}
 
-Um das Zwischenspeichern und Bereitstellen von CORS-Headern für zwischengespeicherten Inhalt zu ermöglichen, fügen Sie Folgendes hinzu [/clientheaders configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) für alle unterstützenden AEM-Veröffentlichungen `dispatcher.any` Dateien.
+Um das Zwischenspeichern und Bereitstellen von CORS-Headern für zwischengespeicherte Inhalte zu ermöglichen, fügen Sie die folgende [/clientheaders-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#specifying-the-http-headers-to-pass-through-clientheaders) zu allen unterstützenden `dispatcher.any`-Dateien von AEM Publish hinzu.
 
 ```
 /myfarm { 
@@ -111,15 +111,15 @@ Um das Zwischenspeichern und Bereitstellen von CORS-Headern für zwischengespeic
 }
 ```
 
-**Webserver-Anwendung neu starten** , nachdem Sie Änderungen an der `dispatcher.any` -Datei.
+**Starten Sie die Webserver-Anwendung neu**, nachdem Sie Änderungen an der Datei `dispatcher.any` vorgenommen haben.
 
-Es ist wahrscheinlich erforderlich, den Cache vollständig zu löschen, um sicherzustellen, dass Kopfzeilen bei der nächsten Anforderung nach einer `/clientheaders` Konfigurationsaktualisierung.
+Es ist wahrscheinlich erforderlich, den Cache vollständig zu löschen, um sicherzustellen, dass Header bei der nächsten Anfrage nach einer `/clientheaders`-Konfigurationsaktualisierung ordnungsgemäß zwischengespeichert werden.
 
-## Unterstützende Materialien {#supporting-materials}
+## Hilfsmaterialien {#supporting-materials}
 
-* [Jeeves für macOS](https://apps.apple.com/us/app/jeeves-local-http-server/id980824182?mt=12)
-* [Python SimpleHTTPServer](https://docs.python.o:qrg/2/library/simplehttpserver.html) (Kompatibel mit Windows/macOS/Linux)
+* [Jeeves für macOS](https://apps.apple.com/de/app/jeeves-local-http-server/id980824182?mt=12)
+* [Python SimpleHTTPServer](https://docs.python.o:qrg/2/library/simplehttpserver.html) (kompatibel mit Windows/macOS/Linux)
 
-* [Verstehen der Cross-Origin Resource Sharing (CORS) in AEM](./understand-cross-origin-resource-sharing.md)
+* [Grundlegendes zu CORS (Cross-Origin Resource Sharing) in AEM](./understand-cross-origin-resource-sharing.md)
 * [Cross-Origin Resource Sharing (W3C)](https://www.w3.org/TR/cors/)
-* [HTTP-Zugriffssteuerung (Mozilla MDN)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+* [HTTP-Zugriffssteuerung (Mozilla MDN)](https://developer.mozilla.org/de/docs/Web/HTTP/Access_control_CORS)

@@ -9,14 +9,14 @@ team: TM
 source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '36'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
 
-# AEM Dispatcher Cache-Tutorial{#dispatcher-tutorial}
+# AEM Dispatcher-Cache-Tutorial{#dispatcher-tutorial}
 
 + [Übersicht](overview.md)
-+ [1 - Konzepte, Muster und Muster](chapter-1.md)
-+ [2 - Infrastrukturmuster](chapter-2.md)
-+ [3 - Fortgeschrittene Zwischenspeicherungsthemen](chapter-3.md)
++ [1. Konzepte, Muster und Antimuster](chapter-1.md)
++ [2. Infrastrukturmuster](chapter-2.md)
++ [3. Fortgeschrittene Zwischenspeicherungsthemen](chapter-3.md)

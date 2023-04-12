@@ -1,6 +1,6 @@
 ---
-title: Weiterentwicklung von AEM as a Cloud Service
-description: Erfahren Sie mehr über AEM und die Unterschiede zwischen On-Premise-AEM, Adobe Managed Services-AEM und AEM as a Cloud Service.
+title: Die Geschichte von AEM as a Cloud Service
+description: Erfahren Sie mehr über AEM und die Unterschiede zwischen On-Premise AEM, Adobe Managed Services AEM und AEM as a Cloud Service.
 role: Architect, Developer
 level: Beginner
 type: Tutorial
@@ -12,12 +12,12 @@ exl-id: 32390a8d-8257-44b7-9009-bfa5e518a1e0
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '58'
-ht-degree: 24%
+ht-degree: 100%
 
 ---
 
-# Weiterentwicklung von AEM as a Cloud Service
+# Die Geschichte von AEM as a Cloud Service
 
-Erfahren Sie mehr über AEM und die Unterschiede zwischen On-Premise-AEM, Adobe Managed Services-AEM und AEM as a Cloud Service.
+Erfahren Sie mehr über AEM und die Unterschiede zwischen On-Premise AEM, Adobe Managed Services AEM und AEM as a Cloud Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330543?quality=12&learn=on)

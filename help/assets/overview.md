@@ -1,29 +1,29 @@
 ---
 title: Videos und Tutorials zu AEM Assets
-description: Sehen Sie sich unsere Videos an, um AEM Asset-Unterstützung und -Hilfe zu erhalten.
+description: Sehen Sie sich unsere Videos an, um Unterstützung und Hilfe für AEM Assets zu erhalten.
 sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '185'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
 # Videos und Tutorials zu AEM Assets {#overview}
 
-Adobe Experience Manager (AEM) Assets ist ein digitales Asset-Management-Tool auf AEM Plattform, mit dem Benutzer ihre digitalen Assets (Bilder, Videos, Dokumente und Audioclips) in einem webbasierten Repository erstellen, verwalten und freigeben können. Dieses Benutzerhandbuch enthält Videos und Tutorials zu den zahlreichen Funktionen und Features von AEM Assets.
+Adobe Experience Manager (AEM) Assets ist ein Digital Asset Management-Tool auf der AEM-Plattform, mit dem Benutzende ihre digitalen Assets (Bilder, Videos, Dokumente und Audio-Clips) in einem Web-basierten Repository erstellen, verwalten und freigeben können. Dieser Leitfaden enthält Videos und Tutorials zu den zahlreichen Funktionen und Einsatzmöglichkeiten von AEM Assets.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_assets_overview"
 >title="AEM Assets"
->abstract="Erfahren Sie, wie Sie die benötigten Assets schnell finden und bearbeiten."
+>abstract="Erfahren Sie, wie Sie die benötigten Assets schnell finden und bearbeiten können."
 >additional-url="https://video.tv.adobe.com/v/336196?captions=ger" text="Anleitung zu AEM Assets"
 
 ## Anleitung zu AEM Assets
 
-Erfahren Sie, was AEM Assets ist und wie es zur Erreichung der Geschäftsziele Ihres Unternehmens verwendet werden kann.
+Erfahren Sie, was AEM Assets ist und wie Sie damit die Geschäftsziele Ihres Unternehmens erreichen können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336196?quality=12&learn=on)
 
@@ -36,7 +36,7 @@ Erfahren Sie, was AEM Assets ist und wie es zur Erreichung der Geschäftsziele I
 
 <div id="staff-picks-section">
 
-## Mitarbeiterauswahl
+## Empfohlene Artikel
 
 <table>
 <td>
@@ -45,7 +45,7 @@ Erfahren Sie, was AEM Assets ist und wie es zur Erreichung der Geschäftsziele I
    </a>
    <div>
       <a href="./creative-workflows/aem-desktop-app.md">
-      <strong>Verwenden AEM Desktop App</strong>
+      <strong>Verwenden der AEM-Desktop-App</strong>
       </a>
    </div>
    <p>
@@ -58,11 +58,11 @@ Erfahren Sie, was AEM Assets ist und wie es zur Erreichung der Geschäftsziele I
    </a>
    <div>
       <a href="./advanced/asset-insights-launch-tutorial.md">
-      <strong>Verwenden AEM Asset Insights mit Launch</strong>
+      <strong>Verwenden von AEM Asset Insights mit Launch</strong>
       </a>
    </div>
    <p>
-      <em>Gewinnen Sie Einblicke in die Verwendung von Assets</em>
+      <em>Gewinnen Sie Einsichten zur Verwendung von Assets.</em>
    <p>
 </td>
 <td>
@@ -75,7 +75,7 @@ Erfahren Sie, was AEM Assets ist und wie es zur Erreichung der Geschäftsziele I
       </a>
    </div>
    <p>
-      <em>Medieninhalte mit Dynamic Media verwalten und aufrufen</em>
+      <em>Verwalten und Nutzen von Medieninhalten mit Dynamic Media</em>
    <p>
 </td>
 </table>
@@ -84,8 +84,8 @@ Erfahren Sie, was AEM Assets ist und wie es zur Erreichung der Geschäftsziele I
 
 ## Zusätzliche Ressourcen
 
-* [Dokumentation zu AEM Assets ](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
-* [AEM as a Cloud Service Tutorials](/help/cloud-service/overview.md)
-* [AEM Sites-Tutorials](/help/sites/overview.md)
-* [AEM Forms-Tutorials](/help/forms/overview.md)
-* [AEM Foundation-Tutorials](/help/foundation/overview.md)
+* [Dokumentation zu AEM Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=de)
+* [Tutorials zu AEM as a Cloud Service](/help/cloud-service/overview.md)
+* [Tutorials zu AEM Sites](/help/sites/overview.md)
+* [Tutorials zu AEM Forms](/help/forms/overview.md)
+* [Grundlegende Tutorials zu AEM](/help/foundation/overview.md)

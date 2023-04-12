@@ -1,6 +1,6 @@
 ---
 title: Bereitstellen mithilfe der Frontend-Pipeline
-description: Erfahren Sie, wie Sie eine Front-End-Pipeline erstellen und ausführen, die Frontend-Ressourcen erstellt und in AEM as a Cloud Service für das integrierte CDN bereitgestellt wird.
+description: Erfahren Sie, wie Sie eine Frontend-Pipeline erstellen und ausführen, die Frontend-Ressourcen erstellt und sie in AEM as a Cloud Service für das integrierte CDN bereitstellt.
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -14,79 +14,79 @@ recommendations: noDisplay, noCatalog
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '701'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
 # Bereitstellen mithilfe der Frontend-Pipeline
 
-In diesem Kapitel erstellen und führen wir eine Front-End-Pipeline in Adobe Cloud Manager aus. Es werden nur die Dateien aus `ui.frontend` und stellt sie in AEM as a Cloud Service im integrierten CDN bereit. So weg von der  `/etc.clientlibs` Bereitstellung von Frontend-Ressourcen.
+In diesem Kapitel erstellen wir eine Frontend-Pipeline in Adobe Cloud Manager und führen sie aus. Es werden nur die Dateien aus dem `ui.frontend`-Modul erstellt und dann in AEM as a Cloud Service im integrierten CDN bereitgestellt. Dies ist ein Schritt weg von der `/etc.clientlibs`-basierten Bereitstellung von Frontend-Ressourcen.
 
 
 ## Ziele {#objectives}
 
-* Erstellen Sie eine Front-End-Pipeline und führen Sie sie aus.
-* Sicherstellen, dass Frontend-Ressourcen NICHT von bereitgestellt werden `/etc.clientlibs` aber von einem neuen Hostnamen, der mit `https://static-`
+* Erstellen Sie eine Frontend-Pipeline und führen Sie sie aus.
+* Stellen Sie sicher, dass Frontend-Ressourcen NICHT von `/etc.clientlibs`, sondern von einem neuen Host-Namen bereitgestellt werden, der mit `https://static-` beginnt.
 
-## Verwenden der Front-End-Pipeline
+## Verwenden der Frontend-Pipeline
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409420?quality=12&learn=on)
 
 ## Voraussetzungen {#prerequisites}
 
-Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die im [Standardprojekt AEM aktualisieren](./update-project.md) wurden abgeschlossen.
+Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass Sie die Schritte, die in [Aktualisieren des Standard-AEM-Projekts](./update-project.md) beschrieben werden, abgeschlossen haben.
 
-Stellen Sie sicher, dass [Berechtigungen zum Erstellen und Bereitstellen von Pipelines in Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=en#role-definitions) und [Zugriff auf eine AEM as a Cloud Service Umgebung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html).
+Stellen Sie sicher, dass Sie die [Berechtigungen zum Erstellen und Bereitstellen von Pipelines in Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=de#role-definitions) und [Zugriff auf eine AEM as a Cloud Service-Umgebung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=de) haben.
 
-## Vorhandene Pipeline umbenennen
+## Umbenennen einer vorhandenen Pipeline
 
-Umbenennen der vorhandenen Pipeline aus __Bereitstellen in der Entwicklung__ nach  __FullStack WKND-Bereitstellung für Dev__ durch __Konfiguration__ Registerkarte __Name der produktionsfremden Pipeline__ -Feld. Dadurch soll explizit festgelegt werden, ob eine Pipeline vollständig oder Frontend ist, indem nur ihr Name geprüft wird.
+Benennen Sie die vorhandene Pipeline von __Bereitstellen für Entwicklung__ in __Full-Stack-WKND-Bereitstellung für Entwicklung__ um, indem Sie auf der Registerkarte __Konfiguration__ zum Feld __Name der produktionsfremden Pipeline__ gehen. Dadurch soll direkt am Namen erkennbar sein, ob eine Pipeline Full-Stack oder Frontend ist.
 
 ![Pipeline umbenennen](assets/fullstack-wknd-deploy-dev-pipeline.png)
 
 
-Auch in __Quellcode__ überprüfen Sie, ob die Feldwerte für Repository und Git-Verzweigung korrekt sind und sich Ihr Frontend-Pipeline-Vertrag in der Verzweigung ändert.
+Überprüfen Sie auch auf der Registerkarte __Quell-Code__, ob die Feldwerte für Repository und Git-Verzweigung korrekt sind und die Verzweigung über die Änderungen an Ihrem Frontend-Pipeline-Vertrag verfügt.
 
-![Source Code Configuration Pipeline](assets/fullstack-wknd-source-code-config.png)
+![Quell-Code-Konfigurations-Pipeline](assets/fullstack-wknd-source-code-config.png)
 
 
-## Erstellen einer Front-End-Pipeline
+## Erstellen einer Frontend-Pipeline
 
-nach __NUR__ Erstellen und Bereitstellen der Frontend-Ressourcen aus dem `ui.frontend` -Modul, führen Sie die folgenden Schritte aus:
+Um __NUR__ die Frontend-Ressourcen aus dem `ui.frontend`-Modul zu erstellen und bereitzustellen, führen Sie die folgenden Schritte aus:
 
-1. In der Cloud Manager-Benutzeroberfläche können Sie über die __Pipelines__ Abschnitt, klicken Sie auf __Hinzufügen__ Schaltfläche und wählen Sie __Hinzufügen einer produktionsfremden Pipeline__ (oder __Produktions-Pipeline hinzufügen__), basierend auf der AEM as a Cloud Service Umgebung, für die Sie bereitstellen möchten.
+1. Klicken Sie in der Cloud Manager-Benutzeroberfläche im Abschnitt __Pipelines__ auf __Hinzufügen__ und wählen Sie __Produktionsfremde Pipeline hinzufügen__ (bzw. __Produktions-Pipeline hinzufügen__) aus, je nach der AEM as a Cloud Service-Umgebung, für die Sie bereitstellen möchten.
 
-1. Im __Hinzufügen einer produktionsfremden Pipeline__ als Teil des __Konfiguration__ die __Bereitstellungs-Pipeline__ Option, nennen Sie sie __FrontEnd-WKND-Bereitstellung für Dev__ und klicken Sie auf __Weiter__
+1. Wählen Sie im Dialog __Produktionsfremde Pipeline hinzufügen__ als Teil der Schritte zur __Konfiguration__ die Option __Implementierungs-Pipeline__ aus, nennen Sie sie __Frontend-WKND-Bereitstellung für Entwicklung__ und klicken Sie auf __Weiter__.
 
-![Erstellen von Front-End-Pipeline-Konfigurationen](assets/create-frontend-pipeline-configs.png)
+![Erstellen von Frontend-Pipeline-Konfigurationen](assets/create-frontend-pipeline-configs.png)
 
-1. Als Teil der __Quellcode__ die __Frontend-Code__ und wählen Sie die Umgebung aus __Förderfähige Bereitstellungsumgebungen__. Im __Quellcode__ stellen sicher, dass die Feldwerte für Repository und Git-Verzweigung korrekt sind und der Zweig Ihre Frontend-Pipeline-Verträge ändert.
-und __am wichtigsten__ für __Code-Speicherort__ Feld, dessen Wert lautet `/ui.frontend` und klicken Sie schließlich auf __Speichern__.
+1. Wählen Sie als Teil der __Quell-Code__-Schritte die Option __Frontend-Code__ aus und wählen Sie die Umgebung aus __Mögliche Implementierungsumgebungen__ aus. Stellen Sie im Abschnitt __Quell-Code__ sicher, dass die Feldwerte für Repository und Git-Verzweigung korrekt sind und der Zweig über die Änderungen an Ihrem Frontend-Pipeline-Vertrag verfügt.
+Und __am wichtigsten__ ist, dass für das Feld __Code-Speicherort__ der Wert `/ui.frontend` ist. Klicken Sie schließlich auf __Speichern__.
 
-![Erstellen des Quell-Codes für die Front-End-Pipeline](assets/create-frontend-pipeline-source-code.png)
+![Erstellen des Quell-Codes für die Frontend-Pipeline](assets/create-frontend-pipeline-source-code.png)
 
 
 ## Implementierungssequenz
 
-* Führen Sie zuerst die neu umbenannte __FullStack WKND-Bereitstellung für Dev__ Pipeline zum Entfernen der WKND-clientlib-Dateien aus dem AEM-Repository. Und vor allem sollten Sie die AEM für den Front-End-Pipeline-Vertrag vorbereiten, indem Sie __Sling-Konfiguration__ Dateien (`SiteConfig`, `HtmlPageItemsConfig`).
+* Führen Sie zuerst die neu benannte Pipeline __Full-Stack-WKND-Bereitstellung für Entwicklung__ aus, um die WKND-ClientLib-Dateien aus dem AEM-Repository zu entfernen. Und vor allem sollten Sie AEM für den Frontend-Pipeline-Vertrag vorbereiten, indem Sie __Sling__-Konfigurationsdateien (`SiteConfig`, `HtmlPageItemsConfig`) hinzufügen.
 
 ![Unformatierte WKND-Site](assets/unstyled-wknd-site.png)
 
 >[!WARNING]
 >
->Nach dem __FullStack WKND-Bereitstellung für Dev__ Pipeline-Fertigstellung: __unformatiert__ WKND-Site, die beschädigt erscheinen kann. Planen Sie einen Ausfall oder eine Bereitstellung in ungeraden Stunden. Dies ist eine einmalige Unterbrechung, die Sie während des ersten Wechsels von der Verwendung einer einzelnen Vollstapel-Pipeline zur Frontend-Pipeline planen müssen.
+>Nach der Fertigstellung der Pipeline __Full-Stack-WKND-Bereitstellung für Entwicklung__ haben Sie eine __unformatierte__ WKND-Site, die defekt erscheinen kann. Bitte planen Sie einen Ausfall ein oder führen Sie die Bereitstellung in Nicht-Spitzenzeiten durch. Dies ist eine einmalige Unterbrechung, die Sie während des erstmaligen Wechsels von der Verwendung einer einzelnen Full-Stack-Pipeline zur Frontend-Pipeline einplanen müssen.
 
 
-* Führen Sie abschließend die __FrontEnd-WKND-Bereitstellung für Dev__ nur Pipeline erstellen `ui.frontend` und stellen die Frontend-Ressourcen direkt im CDN bereit.
+* Führen Sie abschließend die Pipeline __Frontend-WKND-Bereitstellung für Entwicklung__ aus, um nur das `ui.frontend`-Modul zu erstellen und die Frontend-Ressourcen direkt im CDN bereitzustellen.
 
 >[!IMPORTANT]
 >
->Sie merken, dass die __unformatiert__ Die WKND-Site ist wieder normal und diesmal __FrontEnd__ Die Pipelineausführung war viel schneller als die Vollstapelpipeline.
+>Sie werden feststellen, dass die __unformatierte__ WKND-Site wieder normal ist und die Ausführung der __Frontend__-Pipeline diesmal viel schneller ging als die der Full-Stack-Pipeline.
 
-## Überprüfen von Stiländerungen und neuen Versandparametern
+## Überprüfen von Stiländerungen und neuem Bereistellungsparadigma
 
-* Öffnen Sie die beliebige Seite der WKND-Site, und Sie können die Textfarbe sehen, die wir verwenden. __Adobe Rot__ und die Frontend-Ressourcen (CSS, JS)-Dateien werden vom CDN bereitgestellt. Der Hostname der Ressourcenanforderung beginnt mit `https://static-pXX-eYY.p123-e456.adobeaemcloud.com/$HASH_VALUE$/theme/site.css` und ebenso die Datei &quot;site.js&quot;oder alle anderen statischen Ressourcen, auf die Sie in der `HtmlPageItemsConfig` -Datei.
+* Öffnen Sie eine Seite der WKND-Site, und Sie können die Textfarbe sehen, die wir verwenden, das __Adobe-Rot__. Die Frontend-Ressourcen-Dateien (CSS, JS) werden vom CDN bereitgestellt. Der Host-Name der Ressourcenanforderung beginnt mit `https://static-pXX-eYY.p123-e456.adobeaemcloud.com/$HASH_VALUE$/theme/site.css`, ebenso wie site.js oder alle anderen statischen Ressourcen, auf die Sie in der `HtmlPageItemsConfig`-Datei verwiesen haben.
 
 
 ![Neu formatierte WKND-Site](assets/newly-styled-wknd-site.png)
@@ -95,7 +95,7 @@ und __am wichtigsten__ für __Code-Speicherort__ Feld, dessen Wert lautet `/ui.f
 
 >[!TIP]
 >
->Die `$HASH_VALUE$` Hier sehen Sie dasselbe wie in __FrontEnd-WKND-Bereitstellung für Dev__  Pipeline __INHALTSHASH__ -Feld. AEM über die CDN-URL der Frontend-Ressource informiert wird, wird der Wert unter `/conf/wknd/sling:configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/jcr:content` under __prefixPath__ -Eigenschaft.
+>Der `$HASH_VALUE$` hier ist der gleiche wie der, den Sie im Feld __INHALTSHASH__ der Pipeline __Frontend-WKND-Bereitstellung für Entwicklung__ sehen. AEM wird über die CND-URL der Frontend-Ressource benachrichtigt und der Wert in `/conf/wknd/sling:configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/jcr:content` unter der Eigenschaft __prefixPath__ gespeichert.
 
 
 ![Hash-Wert-Korrelation](assets/hash-value-correlartion.png)
@@ -104,8 +104,8 @@ und __am wichtigsten__ für __Code-Speicherort__ Feld, dessen Wert lautet `/ui.f
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
-Herzlichen Glückwunsch! Sie haben die Front-End-Pipeline erstellt, ausgeführt und überprüft, die nur das Modul &quot;ui.frontend&quot;des WKND Sites-Projekts erstellt und bereitstellt. Jetzt kann Ihr Frontend-Team schnell das Design und das Frontend-Verhalten der Site durchlaufen, außerhalb des gesamten Lebenszyklus AEM Projekts.
+Herzlichen Glückwunsch! Sie haben die Frontend-Pipeline erstellt, ausgeführt und überprüft, die nur das Modul „ui.frontend“ des WKND-Sites-Projekts erstellt und bereitstellt. Jetzt kann Ihr Frontend-Team schnell das Design und das Frontend-Verhalten der Site durchlaufen, außerhalb des Lebenszyklus des gesamten AEM-Projekts.
 
 ## Nächste Schritte {#next-steps}
 
-Im nächsten Kapitel [Überlegungen](considerations.md), werden Sie die Auswirkungen auf den Front-End- und Back-End-Entwicklungsprozess überprüfen.
+Im nächsten Kapitel [Überlegungen](considerations.md) werden die Auswirkungen auf den Frontend- und den Backend-Entwicklungsprozess behandelt.

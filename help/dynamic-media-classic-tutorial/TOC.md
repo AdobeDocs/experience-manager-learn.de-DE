@@ -8,7 +8,7 @@ index: y
 source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
 workflow-type: tm+mt
 source-wordcount: '75'
-ht-degree: 49%
+ht-degree: 100%
 
 ---
 
@@ -17,11 +17,11 @@ ht-degree: 49%
 
 + [Überblick über Dynamic Media Classic](./overview.md)
 + [Asset-Workflow und -Vorschau](./main-workflow.md)
-+ [Bestimmen der Ordnerstruktur und der Dateinamenkonvention](./folder-structure-filenaming.md)
++ [Bestimmen Ihrer Ordnerstruktur und Dateinamenskonvention](./folder-structure-filenaming.md)
 + [Bildvorgaben](./image-presets.md)
-+ [Bild-, Farb-, Rotations- und Sets für gemischte Medien](./media-sets.md)
-+ [Zuschneiden, angepasste Bilder und Zoomziele](./crop-adjusted-zoom-targets.md)
++ [Bild-, Farbfeld-, Rotation- und gemischte Medien-Sets](./media-sets.md)
++ [Zuschneiden, angepasste Bilder und Zoom-Ziele](./crop-adjusted-zoom-targets.md)
 + [Einführung in grundlegende Vorlagen](./basic-templates.md)
 + [Videoüberblick](./video-overview.md)
 + [Intelligente Bildbearbeitung](./smart-imaging.md)
-+ [Wertvolle Berichte für Administratoren](./valuable-reports.md)
++ [Wertvolle Berichte für Administrierende](./valuable-reports.md)

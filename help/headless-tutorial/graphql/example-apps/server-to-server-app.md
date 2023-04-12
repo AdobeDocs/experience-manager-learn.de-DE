@@ -1,6 +1,6 @@
 ---
-title: Node.js-App von Server zu Server - AEM Headless-Beispiel
-description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese serverseitige Node.js-Anwendung zeigt, wie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abgefragt werden können.
+title: Node.js-Server-zu-Server-App – AEM Headless-Beispiel
+description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Server-seitige Node.js-Anwendung zeigt, wie Inhalte mithilfe von AEM GraphQL-APIs unter Verwendung persistierter Abfragen abgerufen werden können.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -11,43 +11,43 @@ thumbnail: KT-10798.jpg
 source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Node.js-App &quot;Server-zu-Server&quot;
+# Node.js-Server-zu-Server-App
 
-Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Server-zu-Server-Anwendung zeigt, wie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abgerufen und auf dem Terminal gedruckt werden.
+Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Server-zu-Server-Anwendung zeigt, wie Inhalte mithilfe von AEM GraphQL-APIs unter Verwendung persistierter Abfragen abgerufen und auf einem Terminal gedruckt werden können.
 
-![Node.js-App von Server zu Server mit AEM Headless](./assets/server-to-server-app/server-to-server-app.png)
+![Node.js-Server-zu-Server-App mit AEM Headless](./assets/server-to-server-app/server-to-server-app.png)
 
-Anzeigen der [Quellcode auf GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app)
+Sie finden den [Quell-Code auf GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app).
 
 ## Voraussetzungen {#prerequisites}
 
-Die folgenden Tools sollten lokal installiert werden:
+Folgende Tools sollten lokal installiert werden:
 
-+ [Node.js v18](https://nodejs.org/en/)
++ [Node.js v18](https://nodejs.org/de/)
 + [Git](https://git-scm.com/)
 
-## AEM
+## AEM-Anforderungen
 
-Die Node.js-Anwendung funktioniert mit den folgenden AEM Bereitstellungsoptionen. Für alle Implementierungen ist die [WKND Site v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installiert werden.
+Die Node.js-Anwendung funktioniert mit den folgenden AEM-Implementierungsoptionen. Für alle Implementierungen muss [WKND Site v2.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installiert werden.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=de)
-+ Optional, [Service-Anmeldeinformationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html) wenn Anforderungen autorisiert werden (z. B. Verbindung zum AEM-Autorendienst).
++ Optional [Service-Anmeldeinformationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=de) bei Autorisierung von Anfragen (z. B. Verbindung mit dem AEM-Autoren-Service)
 
-Diese Node.js-Anwendung kann basierend auf den Befehlszeilenparametern eine Verbindung zur AEM-Autoren- oder AEM-Veröffentlichungsinstanz herstellen.
+Diese Node.js-Anwendung kann basierend auf den Befehlszeilenparametern eine Verbindung zu AEM Author oder AEM Publish herstellen.
 
 ## Informationen zur Verwendung
 
-1. Klonen Sie die `adobe/aem-guides-wknd-graphql` repository:
+1. Klonen des Repositorys `adobe/aem-guides-wknd-graphql`:
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Öffnen Sie ein Terminal und führen Sie die Befehle aus:
+1. Öffnen Sie ein Terminal und führen Sie die folgenden Befehle aus:
 
    ```shell
    $ cd aem-guides-wknd-graphql/server-to-server-app
@@ -66,25 +66,25 @@ Diese Node.js-Anwendung kann basierend auf den Befehlszeilenparametern eine Verb
    $ node index.js https://publish-p123-e789.adobeaemcloud.com
    ```
 
-   So führen Sie die App mit der Autorisierung für AEM Author aus:
+   So führen Sie die App für AEM Author mit Autorisierung aus:
 
    ```shell
    $ node index.js https://author-p123-e456.adobeaemcloud.com ./service-config.json
    ```
 
-1. Eine JSON-Liste mit Abenteuern von der WKND-Referenz-Website sollte im Terminal gedruckt werden.
+1. Eine JSON-Liste mit Adventures von der WKND-Referenz-Website sollte auf dem Terminal gedruckt werden.
 
 ## Der Code
 
-Nachstehend finden Sie eine Zusammenfassung dazu, wie die Node.js-Anwendung &quot;Server-zu-Server&quot;erstellt wurde, wie eine Verbindung mit AEM Headless hergestellt wird, um Inhalte mithilfe von durch GraphQL gespeicherten Abfragen abzurufen, und wie diese Daten dargestellt werden. Den vollständigen Code finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app).
+Nachstehend finden Sie eine Zusammenfassung dazu, wie die Node.js-Server-zu-Server-Anwendung erstellt wird, wie eine Verbindung mit AEM Headless hergestellt wird, um Inhalte mithilfe persistierter GraphQL-Abfragen abzurufen, und wie diese Daten dargestellt werden. Den vollständigen Code finden Sie auf [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/server-to-server-app).
 
-Der gängige Anwendungsfall für Server-zu-Server-AEM Headless-Apps besteht darin, Inhaltsfragmentdaten von AEM in andere Systeme zu synchronisieren. Diese Anwendung ist jedoch absichtlich einfach und druckt die JSON-Ergebnisse aus der persistenten Abfrage.
+Der gängige Anwendungsfall für AEM Headless-Server-zu-Server-Apps besteht darin, Inhaltsfragmentdaten von AEM mit anderen Systemen zu synchronisieren. Diese Anwendung ist jedoch absichtlich einfach gehalten und druckt die JSON-Ergebnisse aus der persistenten Abfrage.
 
-### Beständige Abfragen
+### Persistierte Abfragen
 
-Gemäß AEM Best Practices für Headless verwendet die Anwendung AEM von GraphQL gespeicherten Abfragen, um Abenteuerdaten abzufragen. Die Anwendung verwendet zwei persistente Abfragen:
+Gemäß den Best Practices für AEM Headless verwendet die Anwendung AEM GraphQL-persistierte Abfragen, um Adventure-Daten abzufragen. Die Anwendung verwendet zwei persistierte Abfragen:
 
-+ `wknd/adventures-all` persistente Abfrage, die alle Abenteuer in AEM mit einer gekürzten Reihe von Eigenschaften zurückgibt. Diese beibehaltene Abfrage treibt die Erlebnisliste der ersten Ansicht an.
++ Die persistierte Abfrage `wknd/adventures-all` gibt alle Adventures in AEM mit einer gekürzten Reihe von Eigenschaften zurück. Diese persistierte Abfrage bestimmt die Erlebnisliste der ersten Ansicht.
 
 ```
 # Retrieves a list of all adventures
@@ -109,7 +109,7 @@ Gemäß AEM Best Practices für Headless verwendet die Anwendung AEM von GraphQL
 }
 ```
 
-### Erstellen AEM Headless-Clients
+### Erstellen eines AEM Headless-Clients
 
 ```javascript
 const { AEMHeadless, getToken } = require('@adobe/aem-headless-client-nodejs');
@@ -140,11 +140,11 @@ async function run() {
 ```
 
 
-### Durchführen einer von GraphQL beibehaltenen Abfrage
+### Durchführen einer GraphQL-persistierten Abfrage
 
-AEM persistente Abfragen werden über HTTP-GET ausgeführt und daher die [AEM Headless-Client für Node.js](https://github.com/adobe/aem-headless-client-nodejs) wird verwendet, um [die gespeicherten GraphQL-Abfragen ausführen](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait) AEM und ruft den Inhalt des Abenteuers ab.
+Persistierte AEM-Abfragen werden über HTTP-GET ausgeführt. Daher wird der [AEM Headless-Client für Node.js](https://github.com/adobe/aem-headless-client-nodejs) verwendet, um [persistierte GraphQL-Abfragen für AEM auszuführen](https://github.com/adobe/aem-headless-client-nodejs#within-asyncawait) und so Adventure-inhalte abzurufen.
 
-Die beibehaltene Abfrage wird durch Aufruf von `aemHeadlessClient.runPersistedQuery(...)`und übergeben Sie den Namen der gespeicherten GraphQL-Abfrage. Sobald die GraphQL die Daten zurückgibt, übergeben Sie sie an die vereinfachte `doSomethingWithDataFromAEM(..)` -Funktion, die die Ergebnisse druckt, aber normalerweise die Daten an ein anderes System sendet oder basierend auf den abgerufenen Daten eine Ausgabe generiert.
+Die persistierte Abfrage wird durch Aufruf von `aemHeadlessClient.runPersistedQuery(...)` und Übergabe des Namens der persistenten GraphQL-Abfrage aufgerufen. Sobald GraphQL die Daten zurückgibt, übergeben Sie diese an die vereinfachte Funktion `doSomethingWithDataFromAEM(..)`, die die Ergebnisse druckt. Normalerweise würden die Daten jedoch an ein anderes System gesendet oder basierend auf den abgerufenen Daten würde eine Ausgabe generiert werden.
 
 ```js
 // index.js

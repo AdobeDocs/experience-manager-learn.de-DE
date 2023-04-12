@@ -1,6 +1,6 @@
 ---
-title: Benutzeroberflächenplanung mit Adobe XD | AEM SchnellSite-Erstellung
-description: Erfahren Sie, wie Sie mit Adobe XD UI Kits Ihre Adobe Experience Manager Sites-Implementierung entwerfen und beschleunigen können.
+title: Benutzeroberflächenplanung mit Adobe XD | Schnelle Site-Erstellung mit AEM
+description: Erfahren Sie, wie Sie mit Adobe XD Benutzeroberflächen-Kits Ihre Adobe Experience Manager Sites-Implementierung entwerfen und schneller durchführen können.
 version: Cloud Service
 type: Tutorial
 topic: Content Management
@@ -14,57 +14,57 @@ recommendations: noDisplay, noCatalog
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '405'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 # Benutzeroberflächenplanung mit Adobe XD {#ui-planning-adobe-xd}
 
-In den meisten Fällen beginnt die Planung für eine neue Website mit Stichproben und statischen Designs. [Adobe XD](https://www.adobe.com/products/xd.html) ist ein erstklassiges Design-Tool zum Erstellen von Benutzererlebnissen. Adobe empfiehlt die Planung Ihrer Sites-Implementierung mithilfe der UI-Modelle mit Adobe XD oder einem anderen Tool.
+In den meisten Fällen beginnt die Planung einer neuen Website mit Mockups und statischen Designs. [Adobe XD](https://www.adobe.com/products/xd.html?lang=de) ist ein erstklassiges Design-Tool zum Erstellen von Benutzererlebnissen. Adobe empfiehlt, die Implementierung Ihrer Sites mithilfe von UI-Mockups durch den Einsatz von Adobe XD oder anderen Tools.
 
 ## Voraussetzungen {#prerequisites}
 
-Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die im vorherigen Kapitel beschriebenen Schritte abgeschlossen wurden. Dieses Kapitel ist lediglich ein Teil &quot;watch &amp; learn&quot;. Es ist keine Aktion erforderlich, um mit nachfolgenden Kapiteln fortfahren zu können.
+Dies ist ein mehrteiliges Tutorial. Sie sollten dazu die im vorherigen Kapitel beschriebenen Schritte abgeschlossen haben. Dieses Kapitel bietet Ihnen die Möglichkeit, einfach zuzuschauen und zu lernen. Es ist keine Aktion erforderlich, um mit nachfolgenden Kapiteln fortfahren zu können.
 
-Um den Videos zu folgen, benötigen Sie [Adobe XD](https://www.adobe.com/products/xd/pricing/free-trial.html) installiert, [Kostenlose Testversion ist verfügbar](https://www.adobe.com/products/xd/pricing/free-trial.html).
+Um den Videos folgen zu können, muss [Adobe XD](https://www.adobe.com/products/xd/pricing/free-trial.html?lang=de) installiert sein. Eine [kostenlose Testversion ist verfügbar](https://www.adobe.com/products/xd/pricing/free-trial.html?lang=de).
 
 ## Ziel
 
-1. Überprüfen Sie das vom [Standardsite-Vorlage](https://github.com/adobe/aem-site-template-standard) und durch das WKND-Designteam.
-1. Erfahren Sie, wie Sie mit UI-Kits eine AEM Sites-Implementierung zuordnen und planen können.
-1. Erfahren Sie, wie Sie in Adobe XD erstellte Benutzeroberflächen-Designs zur Implementierung an Frontend-Entwickler übergeben.
+1. Betrachten Sie das von der [Standard-Site-Vorlage](https://github.com/adobe/aem-site-template-standard) und vom WKND-Designteam bereitgestellte Benutzeroberflächen-Kit.
+1. Erfahren Sie, wie Sie mit Benutzeroberflächen-Kits eine AEM Sites-Implementierung zuordnen und planen können.
+1. Erfahren Sie, wie Sie in Adobe XD erstellte Benutzeroberflächen-Designs zur Implementierung an Frontend-Entwickler bzw. -Entwicklerinnen übergeben.
 
 ## Was Sie erstellen werden {#what-you-will-build}
 
-In diesem Kapitel werden zwei Adobe XD-Dateien überprüft, eine für die [Standardsite-Vorlage](https://github.com/adobe/aem-site-template-standard) und eine weitere für die vorgeschlagene WKND-Site. Die
+In diesem Kapitel werden zwei Adobe XD-Dateien betrachtet, eine für die [Standard-Site-Vorlage](https://github.com/adobe/aem-site-template-standard) und eine weitere für die vorgeschlagene WKND-Site.  
 
-## Benutzeroberflächen-Kit für Standardsite-Vorlagen {#standard-site-template-uikit}
+## Benutzeroberflächen-Kit für die Standard-Site-Vorlage {#standard-site-template-uikit}
 
 >[!VIDEO](https://video.tv.adobe.com/v/338680?quality=12&learn=on)
 
 Allgemeine Schritte:
 
-1. Laden Sie die [XD der Standardsite-Vorlage](https://github.com/adobe/aem-site-template-standard/raw/main/files/wireframe.xd).
-1. Inspect das UI-Kit in Adobe XD.
-1. Simulieren Sie die Übergabe der Designs an einen Frontend-Entwickler.
+1. Laden Sie die [XD-Datei der Standard-Site-Vorlage](https://github.com/adobe/aem-site-template-standard/raw/main/files/wireframe.xd) herunter.
+1. Sehen Sie sich das Benutzeroberflächen-Kit in Adobe XD an.
+1. Simulieren Sie die Übergabe der Designs an Frontend-Entwicklerinnen und -Entwickler.
 
-## WKND UI Kit {#wknd-ui-kit}
+## Benutzeroberflächen-Kit von WKND {#wknd-ui-kit}
 
 >[!VIDEO](https://video.tv.adobe.com/v/30214?quality=12&learn=on)
 
 Allgemeine Schritte:
 
-1. Laden Sie die [WKND-XD-Datei](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd).
-1. Inspect die Designs für die WKND-Artikelvorlage.
+1. Laden Sie die [XD-Datei zum WKND-Artikel](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd) herunter.
+1. Prüfen Sie die Designs für die WKND-Artikelvorlage.
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
-Herzlichen Glückwunsch! Sie haben gelernt, wie Adobe XD-UI-Kits zur Zuordnung und Planung einer AEM Sites-Implementierung verwendet werden können.
+Herzlichen Glückwunsch! Sie haben gelernt, wie Benutzeroberflächen-Kits von Adobe XD zur Zuordnung und Planung einer AEM Sites-Implementierung verwendet werden können.
 
-Zusätzliche [UI-Kits sind verfügbar](https://www.adobe.com/products/xd/features/ui-kits.html) zum Überprüfen und Herunterladen.
+Diese [zusätzlichen UI-Kits](https://www.adobe.com/products/xd/features/ui-kits.html?lang=de) stehen zur Verfügung und können heruntergeladen und angesehen werden.
 
 ### Nächste Schritte {#next-steps}
 
-Im nächsten Kapitel wird eine neue Seitenvorlage erstellt, die auf dem WKND-Artikeldesign basiert.
+Im nächsten Kapitel wird eine neue Seitenvorlage erstellt, die auf dem WKND-Artikel-Design basiert.
 
-Erfahren Sie, wie Sie [Seitenvorlagen](./page-templates.md). Machen Sie sich mit der Beziehung zwischen einer Seitenvorlage und einer Seite vertraut. Erfahren Sie, wie Sie Richtlinien einer Seitenvorlage konfigurieren, um granulare Governance und Markenkonsistenz für Inhalte bereitzustellen.  Eine gut strukturierte Zeitschriftenartikelvorlage wird basierend auf einem Mockup aus Adobe XD erstellt.
+Erfahren Sie, wie Sie [Seitenvorlagen](./page-templates.md) erstellen und ändern. Lernen Sie den Zusammenhang zwishen Seitenvorlage und Seite kennen. Erfahren Sie, wie Sie die Richtlinien einer Seitenvorlage konfigurieren, um für Inhalte granulare Governance und Markenkonsistenz zu gewährleisten.  Basierend auf einem Mockup wird in Adobe XD eine gut strukturierte Zeitschriftenartikelvorlage erstellt.

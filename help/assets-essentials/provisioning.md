@@ -1,6 +1,6 @@
 ---
-title: Bereitstellung von Assets Essentials
-description: Erfahren Sie, wie Sie Assets Essentials mithilfe von Cloud Manager bereitstellen und Benutzerzugriff bereitstellen.
+title: Bereitstellen von Assets Essentials
+description: Erfahren Sie, wie Sie Assets Essentials mit Cloud Manager bereitstellen und den Benutzerzugriff einrichten.
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -12,12 +12,12 @@ exl-id: ca994bdb-8f59-4504-b623-68d74e559fbb
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '32'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Bereitstellung von Assets Essentials
+# Bereitstellen von Assets Essentials
 
-Erfahren Sie, wie Sie Assets Essentials mithilfe von Cloud Manager bereitstellen und Benutzerzugriff bereitstellen.
+Erfahren Sie, wie Sie Assets Essentials mit Cloud Manager bereitstellen und den Benutzerzugriff einrichten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335952?quality=12&learn=on)

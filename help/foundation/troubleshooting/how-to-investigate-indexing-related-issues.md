@@ -1,6 +1,6 @@
 ---
-title: Wie Sie indizierungsbezogene Probleme in AEM untersuchen
-description: Schritte zur Untersuchung von Problemen im Zusammenhang mit der Indizierung
+title: Untersuchen von Indizierungsproblemen in AEM
+description: Schritte zur Untersuchung von Indizierungsproblemen
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -12,11 +12,11 @@ exl-id: 042a216d-980d-4912-a77b-e2ee04a27cfb
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '36'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Wie Sie indizierungsbezogene Probleme in AEM untersuchen
+# Untersuchen von Indizierungsproblemen in AEM
 
 *In diesem Video werden die Schritte zur Untersuchung von Indizierungsproblemen in AEM erläutert.*
 

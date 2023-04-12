@@ -1,6 +1,6 @@
 ---
-title: Dienstberechtigungen
-description: Erfahren Sie, wie Sie mit Service-Anmeldedaten, die zur Erleichterung der programmgesteuerten Interaktion externer Anwendungen, Systeme und Dienste mit Autoren- oder Veröffentlichungsdiensten über HTTP verwendet werden, arbeiten können.
+title: Service-Anmeldeinformationen
+description: Lernen Sie, wie Sie Service-Anmeldeinformationen verwenden, die es externen Anwendungen, Systemen und Services ermöglichen, über HTTP programmatisch mit Autoren- oder Veröffentlichungs-Services zu interagieren.
 version: Cloud Service
 doc-type: tutorial
 topics: Development, Security
@@ -17,118 +17,118 @@ exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '1937'
-ht-degree: 0%
+ht-degree: 99%
 
 ---
 
-# Dienstberechtigungen
+# Service-Anmeldeinformationen
 
-Integrationen mit Adobe Experience Manager (AEM) as a Cloud Service müssen sicher für AEM Dienst authentifiziert werden können. AEM Developer Console gewährt Zugriff auf Service-Anmeldedaten, die dazu dienen, externe Anwendungen, Systeme und Dienste für die programmgesteuerte Interaktion mit AEM Author- oder Publish-Diensten über HTTP zu erleichtern.
+Integrationen mit Adobe Experience Manager (AEM) as a Cloud Service müssen in der Lage sein, sich sicher beim AEM-Service zu authentifizieren. Die Developer Console von AEM gewährt Zugriff auf Service-Anmeldeinformationen, die es externen Anwendungen, Systemen und Services ermöglichen, programmatisch mit AEM-Autoren- oder -Veröffentlichungs-Services über HTTP zu interagieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
-Dienstberechtigungen können ähnlich aussehen [Lokale Entwicklungs-Zugriffstoken](./local-development-access-token.md) aber unterscheiden sich auf einige wesentliche Arten:
+Service-Anmeldeinformationen sehen zwar ähnlich aus wie [Zugriffstoken für die lokale Entwicklung](./local-development-access-token.md), unterscheiden sich aber in einigen wichtigen Punkten:
 
-+ Service-Anmeldedaten sind mit technischen Konten verknüpft. Für ein technisches Konto können mehrere Dienstanmeldeinformationen aktiv sein.
-+ Service-Anmeldedaten sind _not_ Zugriffstoken, sondern Zugangsdaten, die für _retrieve_ Zugriffstoken.
-+ Service-Anmeldedaten sind permanenter (das Zertifikat läuft alle 365 Tage ab) und ändern sich nur, wenn es widerrufen wird, während die lokalen Entwicklungs-Zugriffstoken täglich ablaufen.
-+ Dienstanmeldeinformationen für eine AEM as a Cloud Service Umgebung werden einem einzelnen Benutzer AEM technischen Kontos zugeordnet, während lokale Zugriffstoken für die Entwicklung als AEM Benutzer authentifiziert werden, der das Zugriffstoken generiert hat.
-+ Eine AEM as a Cloud Service Umgebung kann über bis zu zehn technische Konten verfügen, von denen jede über eigene Service-Anmeldedaten verfügt und die jeweils dem diskreten technischen Konto AEM Benutzer zugeordnet sind.
++ Service-Anmeldeinformationen sind mit technischen Konten verbunden. Für ein technisches Konto können mehrere Service-Anmeldeinformationen aktiv sein.
++ Service-Anmeldeinformationen sind _keine_ Zugangstoken, sondern Anmeldeinformationen, die verwendet werden, um Zugangstoken zu _erhalten_.
++ Service-Anmeldeinformationen sind dauerhafter (ihre Zertifikate laufen nur alle 365 Tage ab) und ändern sich nicht, es sei denn, sie werden widerrufen, während die Zugriffstoken für die lokale Entwicklung täglich ablaufen.
++ Service-Anmeldeinformationen für eine AEM as a Cloud Service-Umgebung werden einer oder einem einzelnen technischen AEM-Konto-Benutzenden zugeordnet, während ein Zugriffstoken für die lokale Entwicklung sich als die Person authentifiziert, die AEM benutzt und das Zugriffstoken erstellt hat.
++ Eine AEM as a Cloud Service-Umgebung kann bis zu zehn technische Konten haben, jedes mit seinen eigenen Service-Anmeldeinformationen, die jeweils einer oder einem separaten technischen Konto AEM-Benutzer zugeordnet sind.
 
-Sowohl die Dienstanmeldeinformationen als auch die Zugriffstoken, die sie generieren, und die Zugriffstoken für die lokale Entwicklung sollten geheim gehalten werden. Wie alle drei können verwendet werden, um Zugriff auf ihre jeweilige AEM as a Cloud Service Umgebung zu erhalten.
+Sowohl Service-Anmeldeinformationen und die von ihnen erzeugten Zugriffstoken als auch Zugriffstoken für die lokale Entwicklung sollten geheim gehalten werden. Alle drei können nämlich verwendet werden, um Zugang zu ihrer jeweiligen AEM as a Cloud Service-Umgebung zu erhalten.
 
-## Dienstanmeldeinformationen generieren
+## Generieren von Service-Anmeldeinformationen
 
-Die Generierung von Dienstanmeldeinformationen ist in zwei Schritte unterteilt:
+Die Generierung von Service-Anmeldeinformationen ist in zwei Schritte unterteilt:
 
-1. Einmalige Erstellung eines technischen Kontos durch einen Adobe IMS-Org-Administrator
-1. Herunterladen und Verwenden der JSON-Datei mit den Dienstanmeldeinformationen des technischen Kontos
+1. Einmalige Erstellung eines technischen Kontos durch Adobe IMS Org-Administrierende
+1. Herunterladen und Verwenden der JSON mit den Service-Anmeldeinformationen des technischen Kontos
 
-### Technische Konten erstellen
+### Erstellen eines technischen Kontos
 
-Dienstanmeldeinformationen erfordern im Gegensatz zu Zugriffstoken für die lokale Entwicklung, dass ein technisches Konto von einem IMS-Administrator der Adobe Org erstellt wird, bevor sie heruntergeladen werden können. Für jeden Client, der programmgesteuerten Zugriff auf AEM erfordert, sollten separate technische Konten erstellt werden.
+Anders als Zugriffstoken für die lokale Entwicklung erfordern Service-Anmeldeinformationen die Erstellung eines technischen Kontos durch Adobe Org IMS-Administrierende, bevor sie heruntergeladen werden können. Für jeden Client, der programmtechnischen Zugriff auf AEM benötigt, sollten separate technische Konten eingerichtet werden.
 
-![Technische Konten erstellen](assets/service-credentials/initialize-service-credentials.png)
+![Erstellen eines technischen Kontos](assets/service-credentials/initialize-service-credentials.png)
 
-Technische Konten werden einmal erstellt, die privaten Schlüssel verwenden jedoch zum Verwalten von Dienstanmeldeinformationen, die mit dem technischen Konto verknüpft sind, können im Laufe der Zeit verwaltet werden. Beispielsweise müssen vor Ablauf des aktuellen privaten Schlüssels neue private Schlüssel/Service-Anmeldedaten generiert werden, damit ein Benutzer der Dienstberechtigungen unterbrechungsfrei darauf zugreifen kann.
+Technische Konten werden einmal erstellt, die privaten Schlüssel, die zur Verwaltung der mit dem technischen Konto verbundenen Service-Anmeldeinformationen verwendet werden, können über einen längeren Zeitraum verwaltet werden. So müssen zum Beispiel neue private Schlüssel/Service-Anmeldeinformationen generiert werden, bevor der aktuelle private Schlüssel abläuft, damit Benutzende der Service-Anmeldeinformationen ununterbrochenen Zugriff haben.
 
-1. Stellen Sie sicher, dass Sie als angemeldet sind:
-   + __Administrator der Adobe IMS-Organisation__
-   + Mitglied der __AEM Administratoren__ IMS-Produktprofil auf __AEM-Autor__
-1. Anmelden bei [Adobe Cloud Manager](https://my.cloudmanager.adobe.com)
-1. Öffnen Sie das Programm, das die AEM as a Cloud Service Umgebung enthält, um die Einrichtung der Dienstanmeldeinformationen für
-1. Tippen Sie auf die Auslassungspunkte neben der Umgebung im __Umgebungen__ und wählen Sie __Entwicklerkonsole__
-1. Tippen Sie im __Integrationen__ tab
-1. Tippen Sie auf __Technische Konten__ tab
-1. Tippen __Neues technisches Konto erstellen__ button
-1. Die Service-Anmeldedaten des technischen Kontos werden initialisiert und als JSON angezeigt
+1. Stellen Sie sicher, dass Sie wie folgt angemeldet sind:
+   + __Administrierende der Adobe IMS-Organisation__
+   + Mitglied beim IMS-Produktprofil der __AEM-Administrierenden__ auf __AEM Author__
+1. Melden Sie sich bei [Adobe Cloud Manager](https://my.cloudmanager.adobe.com) an
+1. Öffnen Sie das Programm, das die AEM as a Cloud Service-Umgebung enthält, um die Einrichtung der Service-Anmeldeinformationen dafür zu integrieren.
+1. Tippen Sie auf die Auslassungspunkte neben der Umgebung im Abschnitt __Umgebungen__ und wählen Sie __Developer Console__.
+1. Tippen Sie auf die Registerkarte __Integrationen__.
+1. Tippen Sie auf die Registerkarte __Technische Konten__.
+1. Tippen Sie auf __Neues technisches Konto erstellen__.
+1. Die Service-Anmeldeinformationen des technischen Kontos werden initialisiert und als JSON angezeigt
 
-![AEM Developer Console - Integrationen - Get Service Credentials](./assets/service-credentials/developer-console.png)
+![AEM Developer Console – Integrationen – Erhalten von Service-Anmeldeinformationen](./assets/service-credentials/developer-console.png)
 
-Sobald die Dienstanmeldeinformationen der AEM als Cloud Service-Umgebung initialisiert wurden, können andere AEM Entwickler in Ihrer Adobe IMS-Org sie herunterladen.
+Sobald die Service-Anmeldeinformationen der AEM as a Cloud Service-Umgebung initialisiert wurden, können andere AEM-Entwicklerinnen und -Entwickler in Ihrer Adobe IMS-Organisation sie herunterladen.
 
-### Dienstberechtigungen herunterladen
+### Herunterladen von Service-Anmeldeinformationen
 
-![Dienstberechtigungen herunterladen](assets/service-credentials/download-service-credentials.png)
+![Herunterladen von Service-Anmeldeinformationen](assets/service-credentials/download-service-credentials.png)
 
-Beim Herunterladen der Dienstanmeldeinformationen werden ähnliche Schritte wie bei der Initialisierung ausgeführt.
+Das Herunterladen der Service-Anmeldeinformationen erfolgt in ähnlichen Schritten wie die Initialisierung.
 
-1. Stellen Sie sicher, dass Sie als angemeldet sind:
-   + __Administrator der Adobe IMS-Organisation__
-   + Mitglied der __AEM Administratoren__ IMS-Produktprofil auf __AEM-Autor__
-1. Anmelden bei [Adobe Cloud Manager](https://my.cloudmanager.adobe.com)
-1. Öffnen Sie das Programm mit der AEM as a Cloud Service Umgebung, in die integriert werden soll.
-1. Tippen Sie auf die Auslassungspunkte neben der Umgebung im __Umgebungen__ und wählen Sie __Entwicklerkonsole__
-1. Tippen Sie im __Integrationen__ tab
-1. Tippen Sie auf __Technische Konten__ tab
-1. Erweitern Sie die __Technisches Konto__ zu verwenden
-1. Erweitern Sie die __Privater Schlüssel__ deren Dienstanmeldeinformationen heruntergeladen werden, und überprüfen Sie, ob der Status __Aktiv__
-1. Tippen Sie auf die __...__ > __Ansicht__ mit __Privater Schlüssel__, wodurch die JSON-Datei &quot;Service Credentials&quot;angezeigt wird
-1. Tippen Sie oben links auf die Schaltfläche &quot;Herunterladen&quot;, um die JSON-Datei mit dem Wert &quot;Service Credentials&quot;herunterzuladen und die Datei an einem sicheren Speicherort zu speichern.
+1. Stellen Sie sicher, dass Sie wie folgt angemeldet sind:
+   + __Administrierende der Adobe IMS-Organisation__
+   + Mitglied beim IMS-Produktprofil der __AEM-Administrierenden__ auf __AEM Author__
+1. Melden Sie sich bei [Adobe Cloud Manager](https://my.cloudmanager.adobe.com) an.
+1. Öffnen Sie das Programm mit der AEM as a Cloud Service Umgebung, mit der integriert werden soll
+1. Tippen Sie auf die Auslassungspunkte neben der Umgebung im Abschnitt __Umgebungen__ und wählen Sie __Developer Console__ aus
+1. Tippen Sie auf die Registerkarte __Integrationen__.
+1. Tippen Sie auf die Registerkarte __Technische Konten__
+1. Erweitern Sie das zu verwendende __Technische Konto__
+1. Erweitern Sie den __privaten Schlüssel__, dessen Service-Anmeldeinformationen heruntergeladen werden, und überprüfen Sie, ob der Status __Aktiv__ ist
+1. Tippen Sie auf die Auslassungspunkte __...__ > __Ansicht__ des __privaten Schlüssels__, um die JSON-Dienstanmeldeinformationen anzuzeigen.
+1. Tippen Sie auf die Herunterladen-Schaltfläche in der linken oberen Ecke, um die JSON-Datei herunterzulagen, die die Dienstanmeldeinformationen enthält, und speichern Sie die Datei an einem sicheren Speicherort.
 
-## Dienstanmeldeinformationen installieren
+## Installieren der Dienstanmeldeinformationen
 
-Die Dienstanmeldeinformationen geben die Details an, die zum Generieren eines JWT erforderlich sind, das gegen ein Zugriffstoken ausgetauscht wird, das zur Authentifizierung mit AEM as a Cloud Service verwendet wird. Die Dienstanmeldeinformationen müssen an einem sicheren Speicherort gespeichert werden, auf den die externen Anwendungen, Systeme oder Dienste zugreifen können, die sie für den Zugriff auf AEM verwenden. Wie und wo die Service-Anmeldedaten verwaltet werden, sind pro Kunde eindeutig.
+Die Dienstanmeldeinformationen enthalten die Details, die erforderlich sind, um ein JWT zu generieren. Dieses wird durch ein Zugriffs-Token ersetzt, das zur Authentifizierung bei AEM as a Cloud Service verwendet wird. Die Dienstanmeldeinformationen müssen an einem sicheren Speicherort gespeichert werden, auf den die externen Anwendungen, Systeme oder Services zugreifen können, die sie für den Zugriff auf AEM verwenden. Wie und wo die Dienstanmeldeinformationen verwaltet werden, variiert von Kunde zu Kunde.
 
-Aus Gründen der Einfachheit übergibt dieses Tutorial die Service-Anmeldedaten über die Befehlszeile in . Arbeiten Sie jedoch mit Ihrem IT Security-Team zusammen, um zu verstehen, wie Sie diese Anmeldeinformationen gemäß den Sicherheitsrichtlinien Ihres Unternehmens speichern und aufrufen können.
+Der Einfachheit halber werden die Dienstanmeldeinformationen in diesem Tutorial über die Befehlszeile übergeben. Bestimmen Sie gemeinsam mit Ihrem IT-Sicherheits-Team, wie Sie diese Anmeldeinformationen gemäß den Sicherheitsrichtlinien Ihres Unternehmens speichern und aufrufen können.
 
-1. Kopieren Sie die [hat die JSON-Datei &quot;Service Credentials&quot;heruntergeladen](#download-service-credentials) in eine Datei mit dem Namen `service_token.json` im Stammverzeichnis des Projekts
-   + Denken Sie daran, nie zu begehen _beliebige Anmeldeinformationen_ nach Git!
+1. Kopieren Sie die [JSON mit den heruntergeladenen Dienstanmeldeinformationen](#download-service-credentials) in eine Datei mit dem Namen `service_token.json` im Stammverzeichnis des Projekts.
+   + Denken Sie daran, _Anmeldeinformationen_ niemals an Git zu übertragen!
 
-## Dienstberechtigungen verwenden
+## Verwenden von Dienstanmeldeinformationen
 
-Die Service Credentials, ein vollständig geformtes JSON-Objekt, sind nicht mit dem JWT- oder Zugriffstoken identisch. Stattdessen werden die Dienstanmeldeinformationen (die einen privaten Schlüssel enthalten) zum Generieren eines JWT verwendet, der mit Adobe IMS-APIs für ein Zugriffstoken ausgetauscht wird.
+Die Dienstanmeldeinformationen, ein vollständig geformtes JSON-Objekt, sind weder mit dem JWT noch mit dem Zugriffs-Token identisch. Stattdessen werden die Dienstanmeldeinformationen (die einen privaten Schlüssel enthalten) verwendet, um ein JWT zu generieren, das in Adobe IMS-APIs gegen ein Zugriffs-Token ausgetauscht wird.
 
-![Service Credentials - External Application](assets/service-credentials/service-credentials-external-application.png)
+![Dienstanmeldeinformationen – Externe Anwendung](assets/service-credentials/service-credentials-external-application.png)
 
-1. Laden Sie die Dienstanmeldeinformationen von AEM Developer Console an einen sicheren Speicherort herunter.
-1. Die externe Anwendung muss programmgesteuert mit AEM as a Cloud Service Umgebung interagieren
-1. Die externe Anwendung liest die Dienstanmeldeinformationen von einem sicheren Speicherort aus.
-1. Die externe Anwendung verwendet Informationen aus den Dienstanmeldeinformationen, um ein JWT-Token zu erstellen.
-1. Das JWT-Token wird an Adobe IMS gesendet, um einen Zugriffstoken auszutauschen.
-1. Adobe IMS gibt ein Zugriffstoken zurück, das für den Zugriff auf AEM as a Cloud Service verwendet werden kann
-   + Für Zugriffstoken kann ein Ablauf angefordert werden. Es ist am besten, die Lebensdauer des Zugriffstokens kurz zu halten und bei Bedarf zu aktualisieren.
-1. Die externe Anwendung sendet HTTP-Anfragen an AEM as a Cloud Service, indem das Zugriffstoken als Trägertoken zum Autorisierungs-Header der HTTP-Anforderungen hinzugefügt wird
-1. AEM as a Cloud Service empfängt die HTTP-Anforderung, authentifiziert die Anforderung, führt die von der HTTP-Anforderung angeforderten Arbeiten aus und gibt eine HTTP-Antwort zurück an die externe Anwendung
+1. Laden Sie die Dienstanmeldeinformationen von der AEM Developer Console an einen sicheren Speicherort herunter.
+1. Die externe Anwendung muss programmgesteuert mit der AEM as a Cloud Service-Umgebung interagieren.
+1. Die externe Anwendung liest die Dienstanmeldeinformationen über einen sicheren Speicherort ein.
+1. Die externe Anwendung verwendet die Dienstanmeldeinformationen, um ein JWT-Token zu erstellen.
+1. Das JWT-Token wird an Adobe IMS gesendet, wo es gegen ein Zugriffs-Token eingetauscht wird.
+1. Adobe IMS gibt ein Zugriffs-Token zurück, das für den Zugriff auf AEM as a Cloud Service verwendet werden kann.
+   + Für Zugriffs-Token kann eine Gültigkeit angefordert werden. Es wird empfohlen, die Lebensdauer des Zugriffs-Tokens kurz zu halten und bei Bedarf zu aktualisieren.
+1. Die externe Anwendung sendet HTTP-Anfragen an AEM als ein Cloud Service. Dabei wird das Zugriffs-Token zur Autorisierungs-Kopfzeile der HTTP-Anfragen als Bearer-Token hinzugefügt.
+1. AEM as a Cloud Service empfängt die HTTP-Anfrage, authentifiziert sie, führt die von ihr angeforderte Aufgabe aus und gibt eine HTTP-Antwort an die externe Anwendung zurück.
 
 ### Aktualisierungen der externen Anwendung
 
-Um mit den Dienstanmeldeinformationen auf AEM as a Cloud Service zugreifen zu können, muss die externe Anwendung auf drei Arten aktualisiert werden:
+Damit Sie auf AEM as a Cloud Service unter Verwendung der Dienstanmeldeinformationen zugreifen können, muss die externe Anwendung auf drei Arten aktualisiert werden:
 
-1. Lesen Sie in den Dienstanmeldeinformationen
+1. Einlesen der Dienstanmeldeinformationen
 
-+ Aus Gründen der Einfachheit werden die Service-Anmeldedaten aus der heruntergeladenen JSON-Datei gelesen. In realen Anwendungsszenarien müssen Service-Anmeldedaten jedoch gemäß den Sicherheitsrichtlinien Ihres Unternehmens sicher gespeichert werden.
++ Der Einfachheit halber werden die Dienstanmeldeinformationen hier aus der heruntergeladenen JSON-Datei gelesen. In realen Anwendungsszenarien müssen Dienstanmeldeinformationen jedoch gemäß den Sicherheitsrichtlinien Ihres Unternehmens sicher gespeichert werden.
 
-1. Generieren eines JWT aus den Dienstanmeldeinformationen
-1. JWT gegen Zugriffstoken austauschen
+1. JWT aus den Dienstanmeldeinformationen generieren
+1. JWT durch ein Zugriffs-Token ersetzen
 
-+ Wenn Dienstanmeldeinformationen vorhanden sind, verwendet die externe Anwendung dieses Zugriffstoken anstelle des Zugriffstokens für die lokale Entwicklung, wenn auf AEM as a Cloud Service zugegriffen wird
++ Wenn Dienstanmeldeinformationen vorhanden sind, verwendet die externe Anwendung beim Zugriff auf AEM as a Cloud Service dieses Zugriffs-Token anstelle des Zugriffs-Tokens für die lokale Entwicklung.
 
-In diesem Tutorial erläutert die Adobe `@adobe/jwt-auth` Das npm-Modul wird verwendet, um (1) das JWT aus den Service-Anmeldedaten zu generieren und (2) es in einem einzelnen Funktionsaufruf gegen ein Zugriffstoken zu tauschen. Wenn Ihre Anwendung nicht auf JavaScript basiert, lesen Sie bitte das [Beispielcode in anderen Sprachen](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) , wie Sie ein JWT aus den Service-Anmeldedaten erstellen und es durch ein Zugriffstoken mit Adobe IMS ersetzen.
+In diesem Tutorial wird das npm-Modul von Adobe `@adobe/jwt-auth` verwendet, um in einem einzigen Funktionsaufruf (1) das JWT auf Basis der Dienst-Anmeldeinformationen zu generieren und (2) es gegen ein Zugriffs-Token einzutauschen. Wenn Ihre Anwendung nicht auf JavaScript basiert, prüfen Sie bitte den [Muster-Code in anderen Sprachen](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/), um zu sehen, wie ein JWT aus den Dienstanmeldeinformationen erstellt und gegen ein Zugriffs-Token für Adobe IMS eingetauscht werden kann.
 
-## Dienstanmeldeinformationen lesen
+## Lesen der Dienstanmeldeinformationen
 
-Überprüfen Sie die `getCommandLineParams()` also sehen Sie, wie die JSON-Datei &quot;Service Credentials&quot;mit demselben Code gelesen wird, der auch für das Lesen in der JSON-Datei &quot;Local Development Access Token&quot;verwendet wurde.
+Sehen Sie sich `getCommandLineParams()` an, um herauszufinden, wie derselbe Code zum Lesen der Dienstanmeldeinformations-JSON-Datei und zum Einlesen des JSON-Zugriffs-Tokens für die lokale Entwicklung verwendet wird.
 
 ```javascript
 function getCommandLineParams() {
@@ -145,15 +145,15 @@ function getCommandLineParams() {
 }
 ```
 
-## Erstellen eines JWT und Austauschen eines Zugriffstokens
+## Erstellen eines JWT und Austausch gegen ein Zugriffs-Token
 
-Sobald die Service-Anmeldedaten gelesen wurden, werden sie zum Generieren eines JWT verwendet, der dann mit Adobe IMS-APIs für ein Zugriffstoken ausgetauscht wird. Mit diesem Zugriffstoken können Sie dann auf AEM as a Cloud Service zugreifen.
+Wenn die Dienstanmeldeinformationen gelesen sind, werden sie zum Generieren eines JWT verwendet, das dann über Adobe IMS-APIs gegen ein Zugriffs-Token ausgetauscht wird. Mit diesem Zugriffs-Token können Sie dann auf AEM as a Cloud Service zugreifen.
 
-Diese Beispielanwendung ist Node.js-basiert, daher empfiehlt es sich, [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm-Modul zur Erleichterung der (1) JWT-Generierung und (20-mal-Austausch mit Adobe IMS. Wenn Ihre Anwendung in einer anderen Sprache entwickelt wird, lesen Sie bitte [die entsprechenden Codebeispiele](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) Informationen zum Erstellen der HTTP-Anforderung an Adobe IMS mithilfe anderer Programmiersprachen.
+Diese Beispielanwendung basiert auf Node.js. Daher empfiehlt es sich, das npm-Modul [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) zu verwenden, um (1) die JWT-Generierung und (2) den Austausch mit Adobe IMS zu vereinfachen. Wenn Ihre Anwendung in einer anderen Sprache entwickelt wurde, sehen Sie sich in [den entsprechenden Code-Beispielen](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) an, wie die HTTP-Anfrage an Adobe IMS mithilfe anderer Programmiersprachen erstellt wird.
 
-1. Aktualisieren Sie die `getAccessToken(..)` um den Inhalt der JSON-Datei zu überprüfen und festzustellen, ob es ein lokales Entwicklungs-Zugriffstoken oder Dienstanmeldeinformationen darstellt. Dies lässt sich leicht erreichen, indem geprüft wird, ob die `.accessToken` -Eigenschaft, die nur für die JSON-Datei &quot;Local Development Access Token&quot;vorhanden ist.
+1. Aktualisieren Sie `getAccessToken(..)`, um den Inhalt der JSON-Datei zu überprüfen und festzustellen, ob es sich um ein lokales Entwicklungs-Zugriffs-Token oder um Dienstanmeldeinformationen handelt. Dies können Sie leicht feststellen, indem Sie prüfen, ob die Eigenschaft `.accessToken` vorhanden ist, was nur bei JSON-Zugriffs-Token für die lokale Entwicklung der Fall ist.
 
-   Wenn Service Credentials angegeben sind, generiert das Programm ein JWT und tauscht es mit Adobe IMS gegen ein Zugriffstoken aus. Verwenden Sie die [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth)s `auth(...)` -Funktion, die ein JWT generiert und in einem einzelnen Funktionsaufruf gegen ein Zugriffstoken tauscht. Die Parameter für `auth(..)` -Methode [JSON-Objekt, das aus bestimmten Informationen besteht](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) verfügbar über die JSON-Datei &quot;Service Credentials&quot;, wie unten im Code beschrieben.
+   Wenn Dienstanmeldeinformationen bereitgestellt werden, generiert die Anwendung ein JWT und tauscht es über Adobe IMS gegen ein Zugriffstoken aus. Verwenden Sie die `auth(...)`-Funktion von [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth), die ein JWT generiert und in einem einzigen Funktionsaufruf gegen ein Zugriffs-Token eintauscht. Bei den Parametern für die `auth(..)`-Methode handelt es sich um ein [JSON-Objekt, das aus bestimmten Informationen besteht](https://www.npmjs.com/package/@adobe/jwt-auth#config-object), die in den JSON-Datei Dienstanmeldeinformationen verfügbar sind (siehe folgenden Code).
 
 ```javascript
  async function getAccessToken(developerConsoleCredentials) {
@@ -182,11 +182,11 @@ Diese Beispielanwendung ist Node.js-basiert, daher empfiehlt es sich, [@adobe/jw
  }
 ```
 
-    Je nachdem, welche JSON-Datei - entweder die JSON-Datei für den lokalen Entwicklungszugriff - oder die JSON-Datei für Dienstberechtigungen - über diesen Befehlszeilenparameter &quot;file&quot;übergeben wird, leitet die Anwendung jetzt ein Zugriffstoken ab.
+    Je nachdem, welche JSON-Datei über den Befehlszeilenparameter „file“ übergeben wird – entweder das Zugriffs-Token-JSON für die lokale Entwicklung oder das Dienstanmeldeinformationen-JSON –, leitet die Anwendung jetzt ein Zugriffs-Token ab.
     
-    Beachten Sie, dass die Service-Anmeldedaten zwar alle 365 Tage ablaufen, JWT und das entsprechende Zugriffstoken jedoch häufig ablaufen und vor ihrem Ablauf aktualisiert werden müssen. Dies kann mit einem &quot;refresh_token&quot;[bereitgestellt von Adobe IMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens) erfolgen.
+    Beachten Sie, dass die Dienstanmeldeinformationen zwar nur alle 365 Tage ablaufen, das JWT und das entsprechende Zugriffs-Token jedoch häufiger ablaufen und vor ihrem Ablauf aktualisiert werden müssen. Dies kann mit einem „refresh_token“ [bereitgestellt von Adobe IMS](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens) erfolgen.
 
-1. Mit diesen Änderungen wurde die JSON-Datei für Dienstberechtigungen von der AEM Developer Console heruntergeladen und zur Einfachheit gespeichert als `service_token.json` im selben Ordner wie dieses `index.js`. Nun führen wir die Anwendung aus, die den Befehlszeilenparameter ersetzt `file` mit `service_token.json`und die Aktualisierung der `propertyValue` auf einen neuen Wert zu setzen, damit die Auswirkungen in AEM sichtbar sind.
+1. Mit diesen Änderungen wurde die JSON-Datei für Dienstanmeldeinformationen von der AEM Developer Console heruntergeladen und der Einfachheit halter im selben Ordner wie `index.js` als `service_token.json` gespeichert. Lassen Sie uns nun die Anwendung ausführen, indem wir den Befehlszeilenparameter `file` durch `service_token.json` ersetzen und `propertyValue` in einen neuen Wert ändern, damit die Auswirkungen in AEM sichtbar werden.
 
    ```shell
    $ node index.js \
@@ -207,24 +207,24 @@ Diese Beispielanwendung ist Node.js-basiert, daher empfiehlt es sich, [@adobe/jw
    403 - Forbidden @ https://author-p1234-e5678.adobeaemcloud.com/api/assets/wknd-shared/en/adventures/napa-wine-tasting/AdobeStock_286664352.jpg.json
    ```
 
-   Die __403 - Verboten__ -Zeilen, zeigen Fehler in den HTTP-API-Aufrufen an, um as a Cloud Service zu AEM. Diese 403 Verbotenen Fehler treten auf, wenn versucht wird, die Metadaten der Assets zu aktualisieren.
+   Die Zeilen __403 – Verboten__ zeigen Fehler in den HTTP-API-Aufrufen an AEM as a Cloud Service an. Diese „403 Forbidden“-Fehler treten auf, wenn versucht wird, die Metadaten der Assets zu aktualisieren.
 
-   Der Grund dafür ist das Service Credentials-abgeleitete Zugriffstoken, das die Anfrage an AEM mithilfe eines automatisch erstellten technischen Kontos AEM Benutzer authentifiziert, das standardmäßig nur Lesezugriff hat. Um der Anwendung Schreibzugriff auf AEM zu gewähren, muss das technische Konto AEM Benutzer, das mit dem Zugriffstoken verknüpft ist, in AEM die Berechtigung erhalten.
+   Der Grund dafür ist das von den Service-Anmeldeinformationen abgeleitete Zugriffstoken, das die Anfrage an AEM mithilfe eines automatisch erstellten technischen Kontos AEM-Benutzer authentifiziert, der standardmäßig nur Lesezugriff hat. Um der Anwendung Schreibzugriff auf AEM zu gewähren, muss das technische Konto AEM-Benutzer, das mit dem Zugriffstoken verknüpft ist, in AEM die Berechtigung erhalten.
 
-## Zugriff in AEM konfigurieren
+## Konfigurieren des Zugriffs in AEM
 
-Das aus Dienstberechtigungen abgeleitete Zugriffstoken verwendet ein technisches Konto AEM Benutzer mit Mitgliedschaft in der __Mitwirkende__ AEM Benutzergruppe.
+Das aus Service-Anmeldeinformationen abgeleitete Zugriffstoken verwendet ein technisches Konto AEM-Benutzer mit Mitgliedschaft in der AEM-Benutzergruppe __Mitwirkende__.
 
-![Service Credentials - Technical Account AEM User](./assets/service-credentials/technical-account-user.png)
+![Service-Anmeldeinformationen – Technisches Konto AEM-Benutzer](./assets/service-credentials/technical-account-user.png)
 
-Sobald das technische Konto AEM Benutzer in AEM vorhanden ist (nach der ersten HTTP-Anfrage mit dem Zugriffstoken), können die Berechtigungen dieses AEM Benutzers wie andere AEM Benutzer verwaltet werden.
+Sobald das technische Konto AEM-Benutzer in AEM vorhanden ist (nach der ersten HTTP-Anfrage mit dem Zugriffstoken), können die Berechtigungen dieses AEM-Benutzers wie für andere AEM-Benutzer verwaltet werden.
 
-1. Suchen Sie zunächst den AEM Anmeldenamen des technischen Kontos, indem Sie die von AEM Developer Console heruntergeladene JSON für Dienstanmeldungen öffnen und suchen Sie nach der `integration.email` -Wert, der in etwa wie folgt aussehen sollte: `12345678-abcd-9000-efgh-0987654321c@techacct.adobe.com`.
-1. Melden Sie sich beim Autorendienst der entsprechenden AEM als AEM Administrator an
+1. Suchen Sie zunächst den AEM-Anmeldenamen des technischen Kontos, indem Sie die von AEM Developer Console heruntergeladene JSON für Service-Anmeldeinformationen öffnen und nach dem Wert von `integration.email` suchen, der in etwa wie folgt aussehen sollte: `12345678-abcd-9000-efgh-0987654321c@techacct.adobe.com`.
+1. Melden Sie sich beim Autoren-Service der entsprechenden AEM-Umgebung als AEM-Administrator an
 1. Navigieren Sie zu __Tools__ > __Sicherheit__ > __Benutzer__
-1. Suchen Sie den AEM Benutzer mit dem __Anmeldename__ in Schritt 1 identifiziert werden, und öffnen Sie die __Eigenschaften__
-1. Navigieren Sie zum __Gruppen__ und fügen Sie die __DAM-Benutzer__ Gruppe (die Schreibzugriff auf Assets hat)
-1. Tippen __Speichern und schließen__
+1. Suchen Sie den AEM-Benutzer mit dem __Anmeldenamen__, der in Schritt 1 identifiziert wurde, und öffnen Sie dessen __Eigenschaften__
+1. Navigieren Sie zu __Gruppen__ und fügen Sie die Gruppe der __DAM-Benutzer__ (die Schreibzugriff auf Assets hat) hinzu
+1. Klicken Sie auf __Speichern und schließen__
 
 Führen Sie mit dem technischen Konto, das in AEM über Schreibberechtigungen für Assets verfügt, die Anwendung erneut aus:
 
@@ -249,14 +249,14 @@ Die Ausgabe an das Terminal sieht wie folgt aus:
 
 ## Überprüfen der Änderungen
 
-1. Melden Sie sich bei der AEM as a Cloud Service Umgebung an, die aktualisiert wurde (mit demselben Hostnamen, der in der Datei `aem` Befehlszeilenparameter)
-1. Navigieren Sie zum __Assets__ > __Dateien__
-1. Navigieren Sie dazu zum Asset-Ordner, der durch die `folder` Befehlszeilenparameter, z. B. __WKND__ > __englisch__ > __Abenteuer__ > __Napa Weinverkostung__
+1. Melden Sie sich bei der AEM as a Cloud Service-Umgebung an, die aktualisiert wurde (unter Verwendung desselben Host-Namens, der im `aem`-Befehlszeilenparameter angegeben wurde)
+1. Navigieren Sie zu __Assets__ > __Dateien__
+1. Navigieren Sie dazu zum Asset-Ordner, der durch die `folder`-Befehlszeilenparameter, z. B. __WKND__ > __English__ > __Adventure__ > __Napa Wine Tasting__ festgelegt wurde
 1. Öffnen Sie die __Eigenschaften__ für alle Assets im Ordner
-1. Navigieren Sie zum __Erweitert__ tab
-1. Überprüfen Sie den Wert der aktualisierten Eigenschaft, z. B. __Copyright__ , die der aktualisierten `metadata/dc:rights` JCR-Eigenschaft, die jetzt den Wert widerspiegelt, der im `propertyValue` -Parameter, z. B. __WKND - Eingeschränkte Verwendung__
+1. Wechseln Sie zur Registerkarte __Erweitert__
+1. Überprüfen Sie den Wert der aktualisierten Eigenschaft, z. B. __Copyright__, die der aktualisierten JCR-Eigenschaft `metadata/dc:rights` zugeordnet ist, welche jetzt den im Parameter `propertyValue` enthaltenen Wert widerspiegelt, z. B. __WKND – Eingeschränkte Verwendung__
 
-![WKND - Aktualisierung von Metadaten mit eingeschränkter Verwendung](./assets/service-credentials/asset-metadata.png)
+![WKND – Aktualisierung von Metadaten mit eingeschränkter Verwendung](./assets/service-credentials/asset-metadata.png)
 
 ## Herzlichen Glückwunsch!
 

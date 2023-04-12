@@ -1,6 +1,6 @@
 ---
 title: Entwicklungsaspekte
-description: Berücksichtigen Sie die Auswirkungen auf den Front-End- und Back-End-Entwicklungsprozess, sobald Sie die Front-End-Pipeline aktivieren.
+description: Berücksichtigen Sie die Auswirkungen auf den Frontend- und Backend-Entwicklungsprozess, sobald Sie die Frontend-Pipeline aktivieren.
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -14,19 +14,19 @@ recommendations: noDisplay, noCatalog
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '201'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
 # Entwicklungsaspekte
 
-Nachdem Sie die Frontend-Pipeline so aktiviert haben, dass sie nur die Frontend-Ressourcen in AEM as a Cloud Service Umgebung bereitstellt, wirkt sich dies auf die lokale AEM-Entwicklung aus und Sie müssen das Git-Verzweigungsmodell anpassen.
+Nachdem Sie die Frontend-Pipeline so aktiviert haben, dass sie nur die Frontend-Ressourcen in der AEM as a Cloud Service-Umgebung bereitstellt, wirkt sich dies auf die lokale AEM-Entwicklung aus, und Sie müssen das Git-Verzweigungsmodell anpassen.
 
 ## Ziel
 
-* Einen reibungslosen Front-End- und Back-End-Entwicklungsablauf
-* Überprüfen Sie die Abhängigkeiten zwischen der Vollstapel- und der Frontend-Pipeline.
+* Wie Sie einen reibungslosen Frontend- und Backend-Entwicklungsablauf erhalten
+* Überprüfen Sie die Abhängigkeiten zwischen der Full-Stack- und der Frontend-Pipeline.
 
 
 ## Überlegungen zur lokalen Entwicklung
@@ -36,12 +36,12 @@ Nachdem Sie die Frontend-Pipeline so aktiviert haben, dass sie nur die Frontend-
 
 ## Angepasster Entwicklungsansatz
 
-* Für die lokale Entwicklung mit AEM SDK benötigt das Back-End-Entwicklungsteam weiterhin die clientlib-Generierung über `ui.frontend` -Modul, müssen Sie es jedoch während der Cloud Manager-Bereitstellung in AEM as a Cloud Service Umgebung überspringen. Dies stellt eine Herausforderung dar, wie die in der [Projekt aktualisieren](update-project.md) Kapitel.
+* Für die lokale Entwicklung mit dem AEM SDK benötigt das Backend-Entwicklungs-Team weiterhin die Clientlib-Generierung über das `ui.frontend`-Modul, Sie müssen dies jedoch während der Bereitstellung von Cloud Manager in einer AEM as a Cloud Service-Umgebung überspringen. Dies wirft die Frage auf, wie die im Kapitel [Aktualisieren des Projekts](update-project.md) beschriebenen Änderungen der Projektkonfiguration isoliert werden können.
 
-A __Lösung__ kann sein, Ihr Git-Verzweigungsmodell anzupassen und sicherzustellen, dass die Konfigurationsänderungen des AEM nie wieder in die __lokale Entwicklung__ Verzweigung der AEM Back-End-Entwickler.
+Eine __Lösung__ könnte darin bestehen, Ihr Git-Verzweigungsmodell anzupassen und sicherzustellen, dass die Änderungen an der AEM-Projektkonfiguration niemals in den __lokalen Entwicklungszweig__ zurückfließen, den die AEM-Backend-Entwicklerinnen und -Entwickler verwenden.
 
 
-* Wenn Sie im Rahmen einer kontinuierlichen Verbesserung Ihres AEM-Projekts neue Komponenten einführen oder eine vorhandene Komponente aktualisieren, die Änderungen an beiden aufweist `ui.app` und `ui.frontend` -Modul, müssen Sie sowohl Vollstapel- als auch Front-End-Pipelines ausführen.
+* Wenn Sie im Rahmen einer fortlaufenden Verbesserung Ihres AEM-Projekts neue Komponenten einführen oder eine vorhandene Komponente aktualisieren, die sowohl im `ui.app`- als auch im `ui.frontend`-Modul Änderungen aufweist, müssen Sie sowohl die Full-Stack- als auch die Frontend-Pipelines ausführen.
 
 
 

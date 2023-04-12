@@ -1,6 +1,6 @@
 ---
 title: Erstellen von Inhalten mit Assets Essentials
-description: Erfahren Sie, wie Sie Assets hochladen, Versionen erstellen und Assets sogar mit Adobe Photoshop Express bearbeiten können.
+description: Erfahren Sie, wie Sie Assets hochladen, Versionen erstellen und Assets mit Adobe Photoshop Express bearbeiten können.
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -13,12 +13,12 @@ exl-id: 18e600b6-bc4f-4045-a932-ed72d4ed3ef3
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '40'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Erstellen von Inhalten mit Assets Essentials
 
-Erfahren Sie, wie Sie Assets hochladen, Versionen erstellen und Assets sogar mit Adobe Photoshop Express bearbeiten können.
+Erfahren Sie, wie Sie Assets hochladen, Versionen erstellen und Assets mit Adobe Photoshop Express bearbeiten können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335746?quality=12&learn=on)

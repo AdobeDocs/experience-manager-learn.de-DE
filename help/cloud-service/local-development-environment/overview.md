@@ -14,79 +14,79 @@ exl-id: 8b12f34c-be98-4f47-853c-411bb601990c
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '546'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
-# Lokale Entwicklungsumgebung einrichten {#local-development-environment-set-up}
+# Einrichten einer lokalen Entwicklungsumgebung {#local-development-environment-set-up}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_overview"
 >title="Übersicht"
->abstract="Das Einrichten einer lokalen Entwicklungsumgebung für AEM as a Cloud Service umfasst Entwicklungs-Tools, die zum Entwickeln, Erstellen und Kompilieren von AEM-Projekten erforderlich sind, sowie lokale Laufzeitumgebungen, mit denen Entwickelnde schnell neue Funktionen lokal validieren können, bevor sie über Adobe Cloud Manager für AEM as a Cloud Service bereitgestellt werden."
+>abstract="Das Einrichten einer lokalen Entwicklungsumgebung für AEM as a Cloud Service umfasst Entwicklungs-Tools, die zum Entwickeln, Erstellen und Kompilieren von AEM-Projekten erforderlich sind, sowie lokale Laufzeiten, die Entwicklerinnen und Entwicklern ermöglichen, neue Funktionen schnell vor der Bereitstellung in AEM as a Cloud Service über Adobe Cloud Manager lokal zu validieren."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=de" text="Entwicklungsrichtlinien"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=de" text="Entwicklungsgrundlagen"
 
-Dieses Tutorial führt Sie durch das Einrichten einer lokalen Entwicklungsumgebung für Adobe Experience Manager (AEM) mithilfe des AEM as a Cloud Service SDK. Dazu gehören das Entwicklungs-Tool, das zum Entwickeln, Erstellen und Kompilieren von AEM-Projekten erforderlich ist, sowie die lokalen Laufzeitumgebungen, mit denen Entwickler neue Funktionen schnell lokal validieren können, bevor sie über Adobe Cloud Manager auf AEM as a Cloud Service bereitgestellt werden.
+In diesem Tutorial wird erläutert, wie Sie mit dem AEM as a Cloud Service SDK eine lokale Entwicklungsumgebung für Adobe Experience Manager (AEM) einrichten. Dazu gehören die Entwicklungs-Tools, die zum Entwickeln, Erstellen und Kompilieren von AEM-Projekten erforderlich sind, sowie lokale Laufzeiten, die Entwicklerinnen und Entwicklern ermöglichen, neue Funktionen schnell vor der Bereitstellung in AEM as a Cloud Service über Adobe Cloud Manager lokal zu validieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32565?quality=12&learn=on)
 
-![AEM as a Cloud Service Technologiestapel für lokale Entwicklungsumgebungen](./assets/overview/aem-sdk-technology-stack.png)
+![AEM as a Cloud Service – Technologieplattform für lokale Entwicklungsumgebungen](./assets/overview/aem-sdk-technology-stack.png)
 
 Die lokale Entwicklungsumgebung für AEM kann in drei logische Gruppen unterteilt werden:
 
-+ Die __AEM__ enthält den benutzerdefinierten Code, die Konfiguration und den Inhalt, der das benutzerdefinierte AEM-Programm ist.
-+ Die __Lokale AEM Runtime__ , die eine lokale Version der AEM-Autoren- und Veröffentlichungsdienste lokal ausführt.
-+ Die __Local Dispatcher Runtime__ , die eine lokale Version von Apache HTTP Web Server und Dispatcher ausführt.
++ Das __AEM-Projekt__ enthält den benutzerdefinierten Code, die Konfiguration und den Inhalt, also die benutzerdefinierte AEM-Anwendung.
++ Die __lokale AEM-Laufzeit__ führt eine lokale Version der AEM-Autoren- und -Veröffentlichungs-Services lokal aus.
++ Die __lokale Dispatcher-Laufzeit__ führt eine lokale Version von Apache HTTP Web Server und Dispatcher aus.
 
-In diesem Tutorial wird erläutert, wie die im obigen Diagramm hervorgehobenen Elemente installiert und eingerichtet werden und wie eine stabile lokale Entwicklungsumgebung für AEM Entwicklung bereitgestellt wird.
+In diesem Tutorial wird erläutert, wie die in der obigen Abbildung hervorgehobenen Elemente installiert und eingerichtet werden und wie eine stabile lokale Entwicklungsumgebung zur AEM-Entwicklung bereitgestellt wird.
 
 ## Dateisystemorganisation
 
-In diesem Tutorial wurde der Speicherort der AEM as a Cloud Service SDK-Artefakte und AEM Projektcode wie folgt festgelegt:
+Für dieses Tutorial gelten die folgenden Speicherorte für AEM as a Cloud Service SDK-Artefakte und den AEM Projekt-Code:
 
-+ `~/aem-sdk` ist ein Organisationsordner mit den verschiedenen Tools, die vom AEM as a Cloud Service SDK bereitgestellt werden.
-+ `~/aem-sdk/author` enthält den AEM-Autorendienst
-+ `~/aem-sdk/publish` enthält den AEM-Veröffentlichungsdienst
-+ `~/aem-sdk/dispatcher` enthält die Dispatcher Tools
-+ `~/code/<project name>` enthält den benutzerdefinierten AEM-Quellcode des Projekts
++ `~/aem-sdk` ist ein organisationsbezogener Ordner mit den verschiedenen Tools, die vom AEM as a Cloud Service SDK bereitgestellt werden.
++ `~/aem-sdk/author` enthält den AEM-Autoren-Service
++ `~/aem-sdk/publish` enthält den AEM-Veröffentlichungs-Service
++ `~/aem-sdk/dispatcher` enthält die Dispatcher-Tools
++ `~/code/<project name>` enthält den benutzerdefinierten Quell-Code des AEM-Projekts
 
-Beachten Sie Folgendes: `~` steht für das Benutzerverzeichnis. Unter Windows entspricht dies dem `%HOMEPATH%`;
+Hinweis: `~` steht für das Benutzerverzeichnis. Unter Windows entspricht dies `%HOMEPATH%`.
 
-## Entwicklungstools für AEM Projekte
+## Entwicklungs-Tools für AEM-Projekte
 
-Das AEM-Projekt ist die benutzerdefinierte Codebasis, die den Code, die Konfiguration und den Inhalt enthält, der über Cloud Manager für AEM as a Cloud Service Bereitstellung bereitgestellt wird. Die Grundlinien-Projektstruktur wird über die [AEM Projektarchetyp Maven](https://github.com/adobe/aem-project-archetype).
+Das AEM-Projekt ist die benutzerdefinierte Code-Basis mit dem Code, der Konfiguration und dem Inhalt, der über Cloud Manager für AEM as a Cloud Service bereitgestellt wird. Die grundlegende Projektstruktur wird über den [AEM-Projekt-Maven-Archetyp](https://github.com/adobe/aem-project-archetype) generiert.
 
-In diesem Abschnitt des Tutorials erfahren Sie, wie Sie:
+In diesem Abschnitt des Tutorials werden folgende Vorgänge beschrieben:
 
-+ Installieren des [!DNL Java]
-+ Installieren [!DNL Node.js] (und npm)
-+ Installieren des [!DNL Maven]
-+ Installieren des [!DNL Git]
++ Installieren von [!DNL Java]
++ Installieren von [!DNL Node.js] (und npm)
++ Installieren von [!DNL Maven]
++ Installieren von [!DNL Git]
 
-[Einrichten von Entwicklungstools für AEM Projekte](./development-tools.md)
+[Einrichten von Entwicklungs-Tools für AEM-Projekte](./development-tools.md)
 
-## Lokale AEM-Laufzeit
+## Lokale AEM-Runtime
 
-Das AEM as a Cloud Service SDK bietet eine [!DNL QuickStart Jar] , die eine lokale Version von AEM ausführt. Die [!DNL QuickStart Jar] kann verwendet werden, um entweder den AEM-Autorendienst oder den AEM-Veröffentlichungsdienst lokal auszuführen. Beachten Sie, dass während der [!DNL QuickStart Jar] bietet ein lokales Entwicklungs-Erlebnis, nicht alle in AEM as a Cloud Service verfügbaren Funktionen sind in der [!DNL QuickStart Jar].
+Das AEM as a Cloud Service SDK bietet eine [!DNL QuickStart Jar]-Datei, die eine lokale Version von AEM ausführt. Die Datei [!DNL QuickStart Jar] kann verwendet werden, um entweder den AEM-Autoren-Service oder den AEM-Veröffentlichungs-Service lokal auszuführen. Beachten Sie, dass die Datei [!DNL QuickStart Jar] zwar ein lokales Entwicklungserlebnis bietet, aber nicht alle in AEM as a Cloud Service verfügbaren Funktionen in [!DNL QuickStart Jar] enthalten sind.
 
-In diesem Abschnitt des Tutorials erfahren Sie, wie Sie:
+In diesem Abschnitt des Tutorials werden folgende Vorgänge beschrieben:
 
-+ Installieren des [!DNL Java]
-+ AEM SDK herunterladen
-+ Führen Sie die [!DNL AEM Author Service]
-+ Führen Sie die [!DNL AEM Publish Service]
++ Installieren von [!DNL Java]
++ Herunterladen des AEM-SDKs
++ Ausführen des [!DNL AEM Author Service]
++ Ausführen des [!DNL AEM Publish Service]
 
 [Einrichten der lokalen AEM-Laufzeit](./aem-runtime.md)
 
-## Lokal [!DNL Dispatcher] Laufzeit
+## Lokale [!DNL Dispatcher]-Laufzeit
 
-AEM Dispatcher Tools des as a Cloud Service SDK bietet alles, was zum Einrichten der lokalen [!DNL Dispatcher] Laufzeit. [!DNL Dispatcher] Instrumente sind [!DNL Docker]-basiert und bietet Befehlszeilenwerkzeuge zum Übersetzen [!DNL Apache HTTP] Webserver und [!DNL Dispatcher] Konfigurationsdateien in kompatiblen Formaten und stellen Sie sie für [!DNL Dispatcher] im [!DNL Docker] Container.
+Die Dispatcher-Tools des AEM Cloud Service SDK bieten alles, was zum Einrichten der lokalen [!DNL Dispatcher]-Laufzeit erforderlich ist. [!DNL Dispatcher]-Tools sind [!DNL Docker]-basiert und bieten Befehlszeilen-Tools, um [!DNL Apache HTTP]-Webserver- und [!DNL Dispatcher]-Konfigurationsdateien in kompatible Formate zu transpilieren und für den im [!DNL Docker]-Container ausgeführten [!DNL Dispatcher] bereitzustellen.
 
-In diesem Abschnitt des Tutorials erfahren Sie, wie Sie:
+In diesem Abschnitt des Tutorials werden folgende Vorgänge beschrieben:
 
-+ AEM SDK herunterladen
-+ Installieren [!DNL Dispatcher] Instrumente
-+ Lokale Ausführung [!DNL Dispatcher] runtime
++ Herunterladen des AEM-SDKs
++ Installieren von [!DNL Dispatcher]-Tools
++ Ausführen der lokalen [!DNL Dispatcher]-Runtime
 
-[Lokale Einrichtung [!DNL Dispatcher] Laufzeit](./dispatcher-tools.md)
+[Einrichten der lokalen [!DNL Dispatcher] -Runtime](./dispatcher-tools.md)

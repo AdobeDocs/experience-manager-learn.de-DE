@@ -1,6 +1,6 @@
 ---
-title: Webkomponente/JS - AEM Headless-Beispiel
-description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Webkomponente/JS-Anwendung zeigt, wie Sie mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen Inhalte abfragen können.
+title: Web-Komponente/JS – AEM Headless-Beispiel
+description: Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Web-Komponente/JS-Anwendung zeigt, wie Sie Inhalte mithilfe der GraphQL-APIs von AEM über persistierte Abfragen abfragen können.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -11,59 +11,59 @@ thumbnail: kt-10797.jpg
 source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
 workflow-type: tm+mt
 source-wordcount: '566'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
 
-# Webkomponente
+# Web-Komponente
 
-Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Webkomponentenanwendung zeigt, wie Sie mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen Inhalte abfragen und einen Teil der Benutzeroberfläche rendern können, was mit reinem JavaScript-Code erreicht wird.
+Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese Web-Komponenten-Anwendung zeigt, wie Sie mithilfe der GraphQL-APIs von AEM Inhalte mit persistierten Abfragen abfragen und einen Teil der Benutzeroberfläche mit reinem JavaScript-Code rendern können.
 
-![Webkomponente mit AEM Headless](./assets/web-component/web-component.png)
+![Web-Komponente mit AEM Headless](./assets/web-component/web-component.png)
 
-Anzeigen der [Quellcode auf GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component)
+Sie finden den [Quell-Code auf GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component).
 
 ## Voraussetzungen {#prerequisites}
 
-Die folgenden Tools sollten lokal installiert werden:
+Folgende Tools sollten lokal installiert werden:
 
-+ [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) (bei Verbindung mit dem lokalen AEM 6.5 oder AEM SDK)
-+ [Node.js v18](https://nodejs.org/en/)
++ [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) (bei Verbindung mit dem lokalen AEM 6.5 oder AEM SDK)
++ [Node.js v18](https://nodejs.org/de/)
 + [Git](https://git-scm.com/)
 
-## AEM
+## AEM-Anforderungen
 
-Die Webkomponente funktioniert mit den folgenden AEM Bereitstellungsoptionen.
+Die Web-Komponente funktioniert mit den folgenden AEM Implementierungsoptionen.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=de)
-+ Lokales Setup mit [das AEM Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de)
++ Lokales Setup mit dem [AEM Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de)
 + [AEM 6.5 SP13+ QuickStart](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=de?lang=de#install-local-aem-instances)
 
-Bei allen Implementierungen ist die `tutorial-solution-content.zip` von [Lösungsdateien](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/explore-graphql-api.html#solution-files) installiert und erforderlich [Bereitstellungskonfigurationen](../deployment/web-component.md) ausgeführt werden.
+Bei allen Implementierungen müssen die `tutorial-solution-content.zip` von [Lösungsdateien](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/explore-graphql-api.html?lang=de#solution-files.html) installiert und die notwendigen [Implementierungskonfigurationen](../deployment/web-component.md) ausgeführt werden.
 
 
 >[!IMPORTANT]
 >
->Die Webkomponente ist für die Verbindung mit einer __AEM-Veröffentlichung__ -Umgebung kann jedoch Inhalte von der AEM-Autoreninstanz beziehen, wenn die Authentifizierung in der Webkomponente [`person.js`](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/web-component/src/person.js#L11) -Datei.
+>Die Web-Komponente ist für die Verbindung mit einer __AEM Publish__-Umgebung konzipiert. Sie kann jedoch Inhalte von AEM Author beziehen, wenn die Authentifizierung in der Datei [`person.js`](https://github.com/adobe/aem-guides-wknd-graphql/blob/main/web-component/src/person.js#L11) der Web-Komponente angegeben ist.
 
 ## Informationen zur Verwendung
 
-1. Klonen Sie die `adobe/aem-guides-wknd-graphql` repository:
+1. Klonen Sie das Repository `adobe/aem-guides-wknd-graphql`:
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Navigieren Sie zu `web-component` Unterverzeichnis.
+1. Navigieren Sie zum Unterverzeichnis `web-component`.
 
    ```shell
    $ cd aem-guides-wknd-graphql/web-component
    ```
 
-1. Bearbeiten Sie die `.../src/person.js` -Datei, die die AEM Verbindungsdetails enthält:
+1. Bearbeiten Sie die Datei `.../src/person.js` so, dass sie die AEM-Verbindungsdetails enthält:
 
-   Im `aemHeadlessService` -Objekt, aktualisieren Sie die `aemHost` , um auf Ihren AEM-Veröffentlichungsdienst zu verweisen.
+   Aktualisieren Sie im `aemHeadlessService`-Objekt den `aemHost`, sodass er auf Ihren AEM-Veröffentlichungs-Service verweist.
 
    ```plain
    # AEM Server namespace
@@ -76,7 +76,7 @@ Bei allen Implementierungen ist die `tutorial-solution-content.zip` von [Lösung
    queryParamName=name
    ```
 
-   Wenn Sie eine Verbindung zu einem AEM-Autorendienst herstellen, finden Sie im `aemCredentials` -Objekt, geben Sie die Anmeldeinformationen der lokalen AEM an.
+   Wenn Sie eine Verbindung zu einem Service von AEM Author herstellen, geben Sie im `aemCredentials`-Objekt lokale AEM-Benutzeranmeldeinformationen an.
 
    ```plain
    # For Basic auth, use AEM ['user','pass'] pair (for example, when connecting to local AEM Author instance)
@@ -84,23 +84,23 @@ Bei allen Implementierungen ist die `tutorial-solution-content.zip` von [Lösung
    password=admin
    ```
 
-1. Öffnen Sie ein Terminal und führen Sie die Befehle aus `aem-guides-wknd-graphql/web-component`:
+1. Öffnen Sie ein Terminal und führen Sie die Befehle aus `aem-guides-wknd-graphql/web-component` aus:
 
    ```shell
    $ npm install
    $ npm start
    ```
 
-1. Ein neues Browserfenster öffnet die statische HTML-Seite, die die Webkomponente unter [http://localhost:8080](http://localhost:8080).
-1. Die _Personeninformationen_ Die Webkomponente wird auf der Webseite angezeigt.
+1. In einem neuen Browserfenster wird die statische HTML-Seite geöffnet, in die die Web-Komponente unter [http://localhost:8080](http://localhost:8080) eingebettet ist.
+1. Die Web-Komponente _Personeninformationen_ wird auf der Webseite angezeigt.
 
 ## Der Code
 
-Nachstehend finden Sie eine Zusammenfassung dazu, wie die Webkomponente erstellt wurde, wie sie eine Verbindung zu AEM Headless herstellt, um mithilfe von durch GraphQL gespeicherten Abfragen Inhalte abzurufen, und wie diese Daten dargestellt werden. Der vollständige Code finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component).
+Im Folgenden finden Sie eine Zusammenfassung, wie die Web-Komponente aufgebaut ist, wie sie mit AEM Headless verbunden wird, um Inhalte mithilfe von persistierten GraphQL-Abfragen abzurufen, und wie diese Daten präsentiert werden. Den vollständigen Code finden Sie unter [GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/web-component).
 
-### HTML-Tag der Webkomponente
+### HTML-Tag der Web-Komponente
 
-Eine wiederverwendbare Webkomponente (auch als benutzerdefiniertes Element bezeichnet) `<person-info>` wird zum `../src/assets/aem-headless.html` HTML. Es unterstützt `host` und `query-param-value` -Attribute, um das Verhalten der Komponente zu fördern. Die `host` -Wertüberschreibungen des -Attributs `aemHost` Wert aus `aemHeadlessService` -Objekt in `person.js`und `query-param-value` wird verwendet, um die Person auszuwählen, die gerendert werden soll.
+Eine wiederverwendbare Web-Komponente (auch als benutzerdefiniertes Element bezeichnet) `<person-info>` wird der HTML-Seite `../src/assets/aem-headless.html` hinzugefügt. Es unterstützt `host` und `query-param-value`-Attribute, um das Verhalten der Komponente zu fördern. Der Wert des `host`-Attributs überschreibt den `aemHost`-Wert des `aemHeadlessService`-Objekts in `person.js`, und `query-param-value` wird zur Auswahl der darzustellenden Person verwendet.
 
 ```html
     <person-info 
@@ -109,13 +109,13 @@ Eine wiederverwendbare Webkomponente (auch als benutzerdefiniertes Element bezei
     </person-info>
 ```
 
-### Implementierung von Webkomponenten
+### Implementierung von Web-Komponenten
 
-Die `person.js` definiert die Webkomponentenfunktion und darunter sind die wichtigsten Highlights.
+Die `person.js` definiert die Funktionalität der Web-Komponente und im Folgenden sind die wichtigsten Highlights aufgeführt.
 
-#### Element-Implementierung von PersonInfo
+#### PersonInfo-Element-Implementierung
 
-Die `<person-info>` Das Klassenobjekt des benutzerdefinierten Elements definiert die Funktionalität mithilfe der `connectedCallback()` Lebenszyklusmethoden, Anhängen eines Shadow-Stammverzeichnisses, Abrufen einer von GraphQL beibehaltenen Abfrage und DOM-Manipulation, um die interne Shadow-DOM-Struktur des benutzerdefinierten Elements zu erstellen.
+Das Klassenobjekt des benutzerdefinierten Elements `<person-info>` definiert die Funktionalität durch die Verwendung der `connectedCallback()`-Lebenszyklusmethoden, das Anhängen eines Schatten-Stammverzeichnisses, das Abrufen einer persistierten GraphQL-Abfrage und die DOM-Manipulation zur Erstellung der internen Schatten-DOM-Struktur des benutzerdefinierten Elements.
 
 ```javascript
 // Create a Class for our Custom Element (person-info)
@@ -174,7 +174,7 @@ class PersonInfo extends HTMLElement {
 }
 ```
 
-#### Registrieren Sie die `<person-info>` element
+#### Registrieren Sie das `<person-info>`-Element
 
 ```javascript
     // Define the person-info element
@@ -183,8 +183,8 @@ class PersonInfo extends HTMLElement {
 
 ### Cross-Origin Resource Sharing (CORS)
 
-Diese Webkomponente beruht auf einer AEM-basierten CORS-Konfiguration, die in der Ziel-AEM-Umgebung ausgeführt wird, und geht davon aus, dass die Hostseite auf `http://localhost:8080` im Entwicklungsmodus und darunter finden Sie eine Beispielkonfiguration für CORS OSGi für den lokalen AEM-Autorendienst.
+Diese Web-Komponente beruht auf einer AEM-basierten CORS-Konfiguration, die in der AEM-Zielumgebung ausgeführt wird, und geht davon aus, dass die Host-Seite auf `http://localhost:8080` im Entwicklungsmodus ausgeführt wird. Darunter finden Sie eine Beispielkonfiguration für CORS OSGi für den lokalen Service von AEM Author.
 
-Bitte überprüfen Sie [Bereitstellungskonfigurationen](../deployment/web-component.md) für den jeweiligen AEM.
+Bitte überprüfen Sie die [Implementierungskonfigurationen](../deployment/web-component.md) für den jeweiligen AEM-Service.
 
 ![CORS-Konfiguration](assets/react-app/cross-origin-resource-sharing-configuration.png)

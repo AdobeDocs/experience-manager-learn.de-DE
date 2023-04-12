@@ -1,6 +1,6 @@
 ---
-title: Assets Essentials My Workspace
-description: Erfahren Sie, wie Sie mit den benutzerkonfigurierbaren Widgets von My Workspace effizienter arbeiten können.
+title: Assets Essentials – Mein Arbeitsbereich
+description: Erfahren Sie, wie Sie mit den benutzerkonfigurierbaren Widgets von „Mein Arbeitsbereich“ effizienter arbeiten können.
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -13,13 +13,13 @@ thumbnail: 3413809.jpeg
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '31'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Arbeitsbereich in Assets Essentials
+# Mein Arbeitsbereich in Assets Essentials
 
-Erfahren Sie, wie Sie mit den benutzerkonfigurierbaren Widgets von My Workspace effizienter arbeiten können.
+Erfahren Sie, wie Sie mit den benutzerkonfigurierbaren Widgets von „Mein Arbeitsbereich“ effizienter arbeiten können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3413809?quality=12&learn=on)

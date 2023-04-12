@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte mit Assets Essentials
-description: Erfahren Sie, wie Sie auf Assets Essentials zugreifen und die Hauptfacetten der Benutzeroberfläche untersuchen.
+description: Erfahren Sie, wie Sie auf Assets Essentials zugreifen, und lernen Sie die Hauptfacetten der Benutzeroberfläche kennen.
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -13,12 +13,12 @@ exl-id: a0accb94-ceef-4ecf-b1f6-f47751114242
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '40'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Erste Schritte mit Assets Essentials
 
-Erfahren Sie, wie Sie auf Assets Essentials zugreifen und die Hauptfunktionen der Benutzeroberfläche kennenlernen.
+Erfahren Sie, wie Sie auf Assets Essentials zugreifen, und lernen Sie die Hauptfacetten der Benutzeroberfläche kennen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336005?quality=12&learn=on)

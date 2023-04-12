@@ -7,7 +7,7 @@ index: y
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
 source-wordcount: '214'
-ht-degree: 17%
+ht-degree: 97%
 
 ---
 
@@ -16,45 +16,45 @@ ht-degree: 17%
 
 + [Übersicht](./overview.md)
 + Administration {#administration}
-   + [Gründe für die Aktualisierung AEM](./administration/understand-reasons-to-upgrade.md)
+   + [Gründe für die Aktualisierung von AEM](./administration/understand-reasons-to-upgrade.md)
    + [Verwenden Sie oak-run.jar zum Verwalten von Indizes](./administration/use-oak-run-jar-to-manage-indexes.md)
    + [Verwenden der Online-Revisionsbereinigung](./administration/use-online-revision-clean-up.md)
-   + [Verwenden des Dashboards &quot;Systemübersicht&quot;](./administration/use-the-system-overview-dashboard.md)
+   + [Verwenden des Systemübersicht-Dashboards](./administration/use-the-system-overview-dashboard.md)
    + [URL-Umleitungen](./administration/url-redirection.md)
 + Authentifizierung {#authentication}
    + [OKTA und AEM](authentication/okta-saml-integration.md)
    + [OAuth-Bereiche](authentication/oauth-code-sample-develop.md)
-   + [Grundlagen zur Authentifizierung](authentication/authentication-support-article-understand.md)
-   + [IMS-Authentifizierung in AMS](authentication/adobe-ims-authentication-technical-video-understand.md)
+   + [Grundlegendes zur Authentifizierung](authentication/authentication-support-article-understand.md)
+   + [Überblick darüber, was IMS-Authentifizierung in AMS ist](authentication/adobe-ims-authentication-technical-video-understand.md)
 + Adobe Cloud Manager{#cloud-manager}
-   + [Grundlegendes zu Adobe Cloud Manager](./cloud-manager/understand-cloud-manager-for-aem.md)
+   + [Überblick darüber, was Adobe Cloud Manager ist](./cloud-manager/understand-cloud-manager-for-aem.md)
    + [Verwenden der CI/CD-Pipeline in Adobe Cloud Manager](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
 + Entwicklung {#development}
-   + [Sling Model Exporter entwickeln](./development/develop-sling-model-exporter.md)
-   + [Lokale AEM-Entwicklungsumgebung einrichten](./development/set-up-a-local-aem-development-environment.md)
+   + [Entwickeln von Sling-Modell-Exportern](./development/develop-sling-model-exporter.md)
+   + [Einrichten einer lokalen AEM-Entwicklungsumgebung](./development/set-up-a-local-aem-development-environment.md)
    + [Einrichten von Sling Dynamic Include](./development/set-up-sling-dynamic-include.md)
-   + [Best Practices für Java-APIs](./development/understand-java-api-best-practices.md)
-   + [Sling Model Exporter](./development/understand-sling-model-exporter.md)
+   + [Verstehen der Best Practices zur Java-API](./development/understand-java-api-best-practices.md)
+   + [Verstehen des Sling-Modell-Exporters](./development/understand-sling-model-exporter.md)
 + Projekte {#projects}
-   + [AEM entwickeln](./projects/develop-aem-projects.md)
-   + [Verwenden von Projekt-Mastern](./projects/use-project-masters.md)
+   + [Entwickeln von AEM-Projekten](./projects/develop-aem-projects.md)
+   + [Verwenden von Primärprojekten](./projects/use-project-masters.md)
 + Sicherheit {#security}
-   + [AEM Sicherheitsbenachrichtigung (November 2018)](./security/aem-security-notification-2018-11.md)
-   + [Für Cross-Origin Resource Sharing (CORS) entwickeln](./security/develop-for-cross-origin-resource-sharing.md)
+   + [AEM-Sicherheitsbenachrichtigung (November 2018)](./security/aem-security-notification-2018-11.md)
+   + [Entwickeln für CORS (Cross-Origin Resource Sharing)](./security/develop-for-cross-origin-resource-sharing.md)
    + [Verstehen von Cross-Origin Resource Sharing (CORS)](./security/understand-cross-origin-resource-sharing.md)
    + [Verwenden des SSL-Assistenten](./security/use-the-ssl-wizard.md)
 + Workflow {#workflow}
-   + [Workflow-Editor verwenden](./workflow/use-the-workflow-editor.md)
-   + [Workflow verwenden](./workflow/use-workflow.md)
+   + [Verwenden des Workflow-Editors](./workflow/use-the-workflow-editor.md)
+   + [Verwenden des Workflows](./workflow/use-workflow.md)
    + [Verwenden des Posteingangs](./workflow/use-the-inbox.md)
 + Fehlerbehebung {#troubleshooting}
    + [Aktivieren des Berichts zum Asset-Download](./troubleshooting/how-to-enable-asset-download-report.md)
-   + [Erzwingen der Neukompilierung in AEM6.4](./troubleshooting/how-to-force-recompilation.md)
-   + [Wie Sie indizierungsbezogene Probleme in AEM untersuchen](./troubleshooting/how-to-investigate-indexing-related-issues.md)
-   + [Wie werden SAML-bezogene Probleme in AEM untersucht?](./troubleshooting/how-to-investigate-saml-related-issues.md)
+   + [So erzwingen Sie die Neukompilierung in AEM 6.4](./troubleshooting/how-to-force-recompilation.md)
+   + [Untersuchen von Indizierungsproblemen in AEM](./troubleshooting/how-to-investigate-indexing-related-issues.md)
+   + [Wie Sie SAML-bezogene Probleme in AEM untersuchen](./troubleshooting/how-to-investigate-saml-related-issues.md)
    + [So untersuchen Sie suchbezogene Probleme in AEM](./troubleshooting/how-to-investigate-search-related-issues.md)
-   + [Festlegen des Sitzungsablaufs des Oak-Anmeldetokens](./troubleshooting/how-to-set-the-oak-login-token-session-expiration.md)
-   + [Fehlerbehebung bei Problemen mit der Jetty-Konfiguration](./troubleshooting/how-to-troubleshoot-issues-related-to-jetty-configuration.md)
-   + [Fehlerbehebung bei leistungsbezogenen Problemen](./troubleshooting/how-to-troubleshoot-performance-related-issues.md)
-   + [Schritte zum Beheben speicherbezogener Probleme in AEM](./troubleshooting/steps-to-resolve-memory-related-issues.md)
+   + [So legen Sie die Gültigkeit des Anmelde-Tokens für eine Oak-Sitzung fest](./troubleshooting/how-to-set-the-oak-login-token-session-expiration.md)
+   + [So beheben Sie Probleme mit der Jetty-Konfiguration](./troubleshooting/how-to-troubleshoot-issues-related-to-jetty-configuration.md)
+   + [So beheben Sie leistungsbezogene Probleme](./troubleshooting/how-to-troubleshoot-performance-related-issues.md)
+   + [Schritte zum Beheben von speicherbezogenen Problemen in AEM](./troubleshooting/steps-to-resolve-memory-related-issues.md)
    + [Schritte zum Beheben von Replikationsproblemen in AEM](./troubleshooting/steps-to-resolve-replication-issues.md)

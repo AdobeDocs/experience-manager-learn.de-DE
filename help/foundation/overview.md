@@ -1,33 +1,33 @@
 ---
-title: AEM Foundation-Videos und -Tutorials
-description: Sehen Sie sich unsere Videos und Tutorials an, um Hilfe mit Adobe Experience Manager Foundation zu erhalten.
+title: Videos und Tutorials zu AEM Foundation
+description: Sehen Sie sich unsere Videos und Tutorials an, um Hilfe zu Adobe Experience Manager Foundation zu erhalten.
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
 workflow-type: tm+mt
 source-wordcount: '215'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# AEM Foundation-Videos und -Tutorials {#overview}
+# Videos und Tutorials zu AEM Foundation {#overview}
 
-Adobe Experience Manager bietet eine Reihe gemeinsamer Funktionen, die Benutzern von AEM Sites, Assets und Forms zur Verfügung stehen.
+Adobe Experience Manager bietet eine Reihe von Funktionen, die Benutzenden von AEM Sites, Assets und Forms gleichermaßen zur Verfügung stehen.
 
 <div id="whats-new-section">
 
-## Neuerungen
+## Neue Funktionen
 
-* **[Workflow-AEM verwenden (Video)](./workflow/use-workflow.md)**
+* **[Verwenden von Workflow-AEM (Video)](./workflow/use-workflow.md)**
 
-   *AEM Workflow bietet eine Möglichkeit, Inhalte in AEM zusammenzuarbeiten, zu verwalten und zu verarbeiten.*
+   *AEM Workflow ermöglicht, Inhalte in AEM gemeinsam zu bearbeiten, zu verwalten und zu verarbeiten.*
 
-* **[Erläuterung von Cloud Manager für AEM (Video)](./cloud-manager/understand-cloud-manager-for-aem.md)**\
-   *Cloud Manager für AEM ermöglicht eine einfache Verwaltung, Überprüfung und Self-Service von AEM Umgebungen.*
+* **[Grundlegendes zu Cloud Manager für AEM (Video)](./cloud-manager/understand-cloud-manager-for-aem.md)**\
+   *Cloud Manager für AEM ermöglicht die einfache Durchführung von Verwaltungs-, Prüf- und Self-Service-Aufgaben in AEM-Umgebungen.*
 
 * **[Verwenden der CI/CD-Pipeline von Cloud Manager (Video)](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)**\
-   *Erfahren Sie, wie Sie die CI/CD-Pipeline von Cloud Manager verwenden, um eine sichere und konsistente Bereitstellung sicherzustellen.*
+   *Erfahren Sie, wie Sie mit der CI/CD-Pipeline von Cloud Manager sichere und konsistente Implementierungen ermöglichen.*
 
 </div>
 
@@ -40,7 +40,7 @@ Adobe Experience Manager bietet eine Reihe gemeinsamer Funktionen, die Benutzern
 
 <div id="staff-picks-section">
 
-## Mitarbeiterauswahl
+## Empfohlene Artikel
 
 <table>
 <tr>
@@ -54,7 +54,7 @@ Adobe Experience Manager bietet eine Reihe gemeinsamer Funktionen, die Benutzern
     </a>
     </div>
     <p>
-    <em>Cloud Manager für AEM bietet eine einfache, aber robuste Lösung, die eine einfache Verwaltung, Inspektion und Self-Service von AEM Umgebungen ermöglicht.</em>
+    <em>Cloud Manager für AEM bietet eine unkomplizierte, robuste Lösung, die einfache Verwaltungs-, Prüf- und Self-Service-Aufgaben in AEM-Umgebungen ermöglicht.</em>
     <p>
   </td>
    <td>
@@ -72,15 +72,15 @@ Adobe Experience Manager bietet eine Reihe gemeinsamer Funktionen, die Benutzern
   </td>
   <td>
     <a href="./administration/understand-reasons-to-upgrade.md">
-    <img alt="Gründe für die Aktualisierung AEM" src="./administration/assets/understand-reasons-to-upgrade/thumbnail.png" />
+    <img alt="Gründe zum Aktualisieren von AEM" src="./administration/assets/understand-reasons-to-upgrade/thumbnail.png" />
     </a>
     <div>
     <a href="./administration/understand-reasons-to-upgrade.md">
-    <strong>Gründe für die Aktualisierung AEM</strong>
+    <strong>Gründe zum Aktualisieren von AEM</strong>
     </a>
     </div>
     <p>
-    <em>Eine allgemeine Aufschlüsselung der wichtigsten Funktionen, die Sie verstehen sollten, wenn Sie ein Upgrade auf die neueste Version von AEM in Erwägung ziehen.</em>
+    <em>Ein Überblick über die wichtigsten Funktionen, die zu berücksichtigen sind, wenn Sie eine Akualisierung auf die neueste Version von AEM in Erwägung ziehen.</em>
     </p>
   </td>
 </tr>
@@ -90,7 +90,7 @@ Adobe Experience Manager bietet eine Reihe gemeinsamer Funktionen, die Benutzern
 
 ## Zusätzliche Ressourcen
 
-* [AEM as a Cloud Service Tutorials](/help/cloud-service/overview.md)
+* [Tutorials zu AEM as a Cloud Service](/help/cloud-service/overview.md)
 * [Videos und Tutorials zu AEM Sites](/help/sites/overview.md)
 * [Videos und Tutorials zu AEM Assets](/help/assets/overview.md)
 * [Videos und Tutorials zu AEM Forms](/help/forms/overview.md)

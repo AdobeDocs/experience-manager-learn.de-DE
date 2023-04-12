@@ -1,5 +1,5 @@
 ---
-title: So erzwingen Sie eine Neukompilierung aller Sling-Skripte jsps, java und sehens
+title: Erzwingen einer Neukompilierung aller Sling-Skripte (JSPs, Java und Sightly)
 description: Schritte zum Erzwingen der Neukompilierung von JSPs
 type: Troubleshooting
 role: Admin
@@ -12,12 +12,12 @@ exl-id: ab32fa37-065f-4c89-929c-eeb9526e1139
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '51'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# So erzwingen Sie eine Neukompilierung aller Sling-Skripte jsps, java und sehens
+# Erzwingen einer Neukompilierung aller Sling-Skripte (JSPs, Java und Sightly)
 
-*Dieses Video führt Sie durch die Schritte, die erforderlich sind, um eine Neukompilierung aller Sling-Skripte jsps, java und visuell zu erzwingen.*
+*Dieses Video führt Sie durch die erforderlichen Schritte, um eine Neukompilierung aller Sling-Skripte zu erzwingen (JSPs, Java und Sightly).*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335464?quality=12&learn=on)

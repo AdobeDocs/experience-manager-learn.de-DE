@@ -1,6 +1,6 @@
 ---
-title: Verwenden Sie den SSL-Assistenten in AEM
-description: Adobe Experience Managers SSL-Setup-Assistent erleichtert die Einrichtung einer AEM-Instanz, die über HTTPS ausgeführt werden kann.
+title: Verwenden des SSL-Assistenten in AEM
+description: Der SSL-Setup-Assistent von Adobe Experience Manager erleichtert die Einrichtung einer AEM-Instanz, die über HTTPS ausgeführt werden kann.
 seo-description: Adobe Experience Manager's SSL setup wizard to make it easier to set up an AEM instance to run over HTTPS.
 version: 6.4, 6.5
 topics: security, operations
@@ -16,17 +16,17 @@ exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '211'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Verwenden Sie den SSL-Assistenten in AEM
+# Verwenden des SSL-Assistenten in AEM
 
-Adobe Experience Managers SSL-Setup-Assistent erleichtert die Einrichtung einer AEM-Instanz, die über HTTPS ausgeführt werden kann.
+Der SSL-Setup-Assistent von Adobe Experience Manager erleichtert die Einrichtung einer AEM-Instanz, die über HTTPS ausgeführt werden kann.
 
 >[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)
 
-Öffnen Sie die __SSL-Konfigurationsassistent__ kann direkt geöffnet werden, indem Sie zu __AEM-Autor > Tools > Sicherheit > SSL-Konfiguration__.
+Der __SSL-Konfigurationsassistent__ kann direkt geöffnet werden, indem Sie zu __AEM Author > Tools > Sicherheit > SSL-Konfiguration__ navigieren.
 
 >[!NOTE]
 >
@@ -34,21 +34,21 @@ Adobe Experience Managers SSL-Setup-Assistent erleichtert die Einrichtung einer 
 >
 >Selbstsignierte Zertifikate dürfen nur zu Entwicklungszwecken verwendet werden.
 
-## Privater Schlüssel und selbstsignierter Zertifikatdownload
+## Download von privaten Schlüsseln und selbstsignierten Zertifikaten
 
-Die folgende ZIP-Datei enthält [!DNL DER] und [!DNL CRT] Dateien, die für die Einrichtung AEM SSL auf localhost erforderlich und nur für lokale Entwicklungszwecke vorgesehen sind.
+Die folgende ZIP-Datei enthält [!DNL DER]- und [!DNL CRT]-Dateien, die für die Einrichtung von AEM SSL auf localhost erforderlich und nur für lokale Entwicklungszwecke vorgesehen sind.
 
-Die [!DNL DER] und [!DNL CERT] -Dateien werden aus praktischen Gründen bereitgestellt und mithilfe der Schritte generiert, die im Abschnitt Generieren eines privaten Schlüssels und eines selbst signierten Zertifikats unten beschrieben werden.
+Die [!DNL DER]- und [!DNL CERT]-Dateien werden aus praktischen Gründen bereitgestellt und mithilfe der Schritte generiert, die im Abschnitt „Generieren eines privaten Schlüssels und eines selbstsignierten Zertifikats“ unten beschrieben werden.
 
-Bei Bedarf lautet der Satz für die Zertifikatübergabe . **admin**.
+Bei Bedarf lautet die Passphrase für die Zertifikatübergabe **admin**.
 
-localhost - privater Schlüssel und selbstsigniertes certificate.zip (gültig bis Juli 2028)
+localhost: privater Schlüssel und selbstsigniertes certificate.zip (gültig bis Juli 2028)
 
-[Zertifikatdatei herunterladen](assets/use-the-ssl-wizard/certificate.zip)
+[Herunterladen der Zertifikatdatei](assets/use-the-ssl-wizard/certificate.zip)
 
 ## Generieren von privaten Schlüsseln und selbstsignierten Zertifikaten
 
-Das obige Video zeigt die Einrichtung und Konfiguration von SSL auf einer AEM Autoreninstanz mithilfe selbstsignierter Zertifikate. Die folgenden Befehle verwenden [[!DNL OpenSSL]](https://www.openssl.org/) kann einen privaten Schlüssel und ein Zertifikat generieren, die in Schritt 2 des Assistenten verwendet werden sollen.
+Das obige Video zeigt die Einrichtung und Konfiguration von SSL auf einer AEM-Autoreninstanz mithilfe selbstsignierter Zertifikate. Die folgenden Befehle verwenden [[!DNL OpenSSL]](https://www.openssl.org/), um einen privaten Schlüssel und ein Zertifikat zu generieren, die in Schritt 2 des Assistenten verwendet werden sollen.
 
 ```shell
 ### Create Private Key

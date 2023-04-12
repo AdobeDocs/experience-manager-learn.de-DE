@@ -1,6 +1,6 @@
 ---
 title: Verwenden lokalisierter Inhalte mit AEM Headless
-description: Erfahren Sie, wie Sie mit GraphQL AEM nach lokalisierten Inhalten abfragen können.
+description: Erfahren Sie, wie Sie lokalisierte Inhalte in AEM mit GraphQL abfragen können.
 version: Cloud Service
 feature: GraphQL API
 topic: Headless
@@ -11,34 +11,34 @@ thumbnail: KT-10254.jpeg
 source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
 workflow-type: tm+mt
 source-wordcount: '508'
-ht-degree: 3%
+ht-degree: 95%
 
 ---
 
 
 # Lokalisierte Inhalte mit AEM Headless
 
-AEM bietet eine [Framework für die Übersetzungsintegration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) für Headless-Inhalte, sodass Inhaltsfragmente und unterstützende Assets einfach übersetzt werden können, damit sie in verschiedenen Gebietsschemata verwendet werden können. Hierbei handelt es sich um dasselbe Framework, mit dem andere AEM Inhalte wie Seiten, Experience Fragments, Assets und Forms übersetzt werden. Einmal [Headless-Inhalt wurde übersetzt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html?lang=de)und veröffentlicht wurde, ist es für den Verbrauch durch Headless-Anwendungen bereit.
+AEM bietet ein [Framework für die Übersetzungsintegration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html?lang=de) für Headless-Inhalte. Damit können Inhaltsfragmente und unterstützende Assets einfach übersetzt werden, damit sie in verschiedenen Gebietsschemata verwendet werden können. Hierbei handelt es sich um dasselbe Framework, mit dem andere AEM-Inhalte wie Seiten, Experience Fragments, Assets und Formulare übersetzt werden. Sobald [Headless-Inhalte übersetzt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html?lang=de) und veröffentlicht wurden, sind sie für die Verwendung durch Headless-Anwendungen bereit.
 
 ## Asset-Ordnerstruktur{#assets-folder-structure}
 
-Stellen Sie sicher, dass die lokalisierten Inhaltsfragmente in AEM dem [empfohlene Lokalisierungsstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/getting-started.html#recommended-structure).
+Stellen Sie sicher, dass die lokalisierten Inhaltsfragmente in AEM der [empfohlenen Lokalisierungsstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/getting-started.html?lang=de#recommended-structure) entsprechen.
 
-![Lokalisierte Ordner AEM Assets](./assets/localized-content/asset-folders.jpg)
+![Ordner für lokalisierte AEM-Assets](./assets/localized-content/asset-folders.jpg)
 
-Die Gebietsschemaordner müssen gleichrangige Ordner sein, und der Ordnername muss ein gültiger Ordnername und nicht der Titel sein. [ISO 639-1-Code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) das Gebietsschema des im Ordner enthaltenen Inhalts darstellt.
+Die Ordner für die Gebietsschemata müssen gleichrangige Ordner sein, und der Ordnername muss anstelle des Titels ein gültiger [ISO-639-1-Code](https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes) sein, der das Gebietsschema des im Ordner enthaltenen Inhalts angibt.
 
 Der Gebietsschema-Code ist auch der Wert, der zum Filtern der von der GraphQL-Abfrage zurückgegebenen Inhaltsfragmente verwendet wird.
 
-| Gebietsschema-Code | AEM | Gebietsschema für Inhalte |
+| Gebietsschema-Code | AEM-Pfad | Gebietsschema für Inhalte |
 |--------------------------------|----------|----------|
-| de | /content/dam/.../**de**/.. | Deutscher Inhalt |
-| en | /content/dam/.../**en**/.. | englischer Inhalt |
-| es | /content/dam/.../**es**/.. | Spanischer Inhalt |
+| de | /content/dam/.../**de**/... | Deutscher Inhalt |
+| en | /content/dam/.../**en**/... | Englischer Inhalt |
+| es | /content/dam/.../**es**/... | Spanischer Inhalt |
 
-## Persistente GraphQL-Abfrage
+## GraphQL-persistierte Abfrage
 
-AEM bietet eine `_locale` GraphQL filtert Inhalte automatisch nach Gebietsschema-Code . Beispielsweise können Sie alle englischen Abenteuer im [WKND-Site-Projekt](https://github.com/adobe/aem-guides-wknd) kann mit einer neuen persistenten Abfrage durchgeführt werden `wknd-shared/adventures-by-locale` definiert als:
+AEM bietet einen `_locale`-GraphQL-Filter, der Inhalte automatisch nach Gebietsschema-Code filtert. Beispielsweise können Sie alle englischen Abenteuer im [WKND-Site-Projekt](https://github.com/adobe/aem-guides-wknd) kann mit einer neuen persistenten Abfrage durchgeführt werden `wknd-shared/adventures-by-locale` definiert als:
 
 ```graphql
 query($locale: String!) {
@@ -51,19 +51,19 @@ query($locale: String!) {
 }
 ```
 
-Die `$locale` in der Variablen `_locale` -Filter erfordert den Gebietsschema-Code (z. B. `en`, `en_us`oder `de`) wie in angegeben [Lokalisierungskonvention für Asset-Ordner AEM](#assets-folder-structure).
+Die Variable `$locale`, die im `_locale`-Filter verwendet wird, erfordert den Gebietsschema-Code (z. B. `en`, `en_us` oder `de`), wie in der [Basis-Lokalisierungskonvention für AEMs Asset-Ordner](#assets-folder-structure) angegeben.
 
 ## React-Beispiel
 
-Erstellen wir eine einfache React-Anwendung, die steuert, welche Abenteuer-Inhalte von AEM basierend auf einem Gebietsschema-Selektor mithilfe der `_locale` Filter.
+Erstellen wir eine einfache React-App, die steuert, welche Adventure-Inhalte von AEM basierend auf einem Gebietsschema-Selektor mithilfe des `_locale`-Filters abgefragt werden.
 
-Wann __englisch__ wird in der Gebietsschema-Auswahl ausgewählt, dann unter &quot;Englisch Adventure Content Fragments&quot; `/content/dam/wknd/en` zurückgegeben werden, wenn __spanisch__ ausgewählt ist, wird Spanische Inhaltsfragmente unter `/content/dam/wknd/es`usw. usw.
+Wenn __Englisch__ im Gebietsschema-Selektor ausgewählt wird, werden englische Adventure-Inhaltsfragmente unter `/content/dam/wknd/en` zurückgegeben. Wenn __Spanisch__ ausgewählt wird, werden spanische Inhaltsfragmente unter `/content/dam/wknd/es` zurückgegeben, und so weiter.
 
 ![Lokalisierte React-Beispiel-App](./assets/localized-content/react-example.png)
 
-### Erstellen Sie eine `LocaleContext`{#locale-context}
+### Erstellen eines `LocaleContext`{#locale-context}
 
-Erstellen Sie zunächst eine [React-Kontext](https://reactjs.org/docs/context.html) , damit das Gebietsschema über die Komponenten der React-Anwendung hinweg verwendet werden kann.
+Erstellen Sie zunächst einen [React-Kontext](https://reactjs.org/docs/context.html), damit das Gebietsschema über die Komponenten der React-App hinweg verwendet werden kann.
 
 ```javascript
 // src/LocaleContext.js
@@ -80,11 +80,11 @@ const LocaleContext = React.createContext({
 export default LocaleContext;
 ```
 
-### Erstellen Sie eine `LocaleSwitcher` React-Komponente{#locale-switcher}
+### Erstellen der React-Komponente `LocaleSwitcher`{#locale-switcher}
 
-Als Nächstes erstellen Sie eine React-Komponente mit dem Gebietsschema-Umschalter, die als [LocaleContext&#39;s](#locale-context) -Wert zur Auswahl des Benutzers hinzufügen.
+Als Nächstes erstellen Sie eine React-Komponente mit einem Gebietsschema-Umschalter, der den Wert von [LocaleContext](#locale-context) auf die Auswahl der Person festlegt.
 
-Dieser Gebietsschemawert wird verwendet, um die GraphQL-Abfragen zu unterstützen und sicherzustellen, dass nur Inhalte zurückgegeben werden, die dem ausgewählten Gebietsschema entsprechen.
+Dieser Gebietsschemawert wird verwendet, um die GraphQL-Abfragen auszuführen und um sicherzustellen, dass nur Inhalte zurückgegeben werden, die dem ausgewählten Gebietsschema entsprechen.
 
 ```javascript
 // src/LocaleSwitcher.js
@@ -106,13 +106,13 @@ export default function LocaleSwitcher() {
 }
 ```
 
-### Abfrageinhalt mit `_locale` filter{#adventures}
+### Abfragen von Inhalt mit dem `_locale`-Filter{#adventures}
 
-Die Komponente Abenteuer fragt AEM alle Abenteuer nach Gebietsschema ab und listet deren Titel auf. Dies wird erreicht, indem der im React-Kontext gespeicherte Gebietsschemawert mithilfe der `_locale` Filter.
+Die Adventure-Komponente führt in AEM eine Abfrage für alle Adventures nach Gebietsschema aus und listet deren Titel auf. Dies wird erreicht, indem der im React-Kontext gespeicherte Gebietsschemawert mithilfe des `_locale`-Filters an die Abfrage übergeben wird.
 
-Dieser Ansatz kann auf andere Abfragen in Ihrer Anwendung erweitert werden, um sicherzustellen, dass alle Abfragen nur Inhalte enthalten, die durch die Gebietsschema-Auswahl eines Benutzers angegeben wurden.
+Dieser Ansatz kann auf andere Abfragen in Ihrer Anwendung erweitert werden, um sicherzustellen, dass alle Abfragen nur Inhalte enthalten, die durch die Gebietsschema-Auswahl einer Person vorgegeben werden.
 
-Die Abfrage nach AEM wird im benutzerdefinierten React-Haken ausgeführt [getAdventuresByLocale, ausführlicher beschrieben in der Dokumentation AEM GraphQL](./aem-headless-sdk.md).
+Die Abfrage in AEM wird im benutzerdefinierten React-Hook [getAdventuresByLocale ausgeführt, der in der Dokumentation zu Abfragen von AEM GraphQL](./aem-headless-sdk.md) näher beschrieben wird.
 
 ```javascript
 // src/Adventures.js
@@ -138,9 +138,9 @@ export default function Adventures() {
 }
 ```
 
-### Definieren Sie die `App.js`{#app-js}
+### Definieren der `App.js`{#app-js}
 
-Verbinden Sie alles, indem Sie die React-Anwendung in die `LanguageContext.Provider` und legen Sie den Gebietsschemawert fest. Dies ermöglicht die anderen React-Komponenten, [LocaleSwitcher](#locale-switcher)und [Abenteuer](#adventures) , um den Status der Gebietsschema-Auswahl freizugeben.
+Zum Schluss fügen Sie alles zusammen, indem Sie die React-App in `LanguageContext.Provider` einschließen und den Wert für das Gebietsschema festlegen. Dies ermöglicht den anderen React-Komponenten, [LocaleSwitcher](#locale-switcher) und [Adventures](#adventures), den Status der Gebietsschema-Auswahl zu teilen.
 
 ```javascript
 // src/App.js

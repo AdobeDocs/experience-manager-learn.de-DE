@@ -1,6 +1,6 @@
 ---
-title: Aktualisieren des Full-Stack-AEM-Projekts zur Verwendung der Front-End-Pipeline
-description: Erfahren Sie, wie Sie das Full-Stack-AEM-Projekt aktualisieren, um es für die Front-End-Pipeline zu aktivieren, sodass es nur die Front-End-Artefakte erstellt und bereitstellt.
+title: Aktualisieren des Full-Stack-AEM-Projekts zur Verwendung der Frontend-Pipeline
+description: Erfahren Sie, wie Sie das Full-Stack-AEM-Projekt aktualisieren, um es für die Frontend-Pipeline zu aktivieren, sodass es nur die Frontend-Artefakte erstellt und bereitstellt.
 version: Cloud Service
 type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
@@ -14,35 +14,35 @@ recommendations: noDisplay, noCatalog
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '653'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Aktualisieren des Full-Stack-AEM-Projekts zur Verwendung der Front-End-Pipeline {#update-project-enable-frontend-pipeline}
+# Aktualisieren des Full-Stack-AEM-Projekts zur Verwendung der Frontend-Pipeline {#update-project-enable-frontend-pipeline}
 
-In diesem Kapitel nehmen wir Konfigurationsänderungen am __WKND Sites-Projekt__ , um die Frontend-Pipeline zur Bereitstellung von JavaScript und CSS zu verwenden, anstatt eine vollständige Pipelineausführung erforderlich zu machen. Dies entkoppelt den Entwicklungs- und Implementierungslebenszyklus von Front-End- und Back-End-Artefakten und ermöglicht so insgesamt einen schnelleren, iterativen Entwicklungsprozess.
+In diesem Kapitel nehmen wir Konfigurationsänderungen am __WKND Sites-Projekt__ vor, um die Frontend-Pipeline zur Bereitstellung von JavaScript und CSS zu verwenden, anstatt eine vollständige Pipelineausführung erforderlich zu machen. Dies entkoppelt den Entwicklungs- und Implementierungslebenszyklus von Frontend- und Backend-Artefakten und ermöglicht so insgesamt einen schnelleren, iterativen Entwicklungsprozess.
 
 ## Ziele {#objectives}
 
-* Aktualisieren des Vollstapelprojekts zur Verwendung der Frontend-Pipeline
+* Aktualisieren des Full-Stack-Projekts zur Verwendung der Frontend-Pipeline
 
-## Überblick über die Konfigurationsänderungen im AEM-Projekt
+## Überblick über die Konfigurationsänderungen im Full-Stack-AEM-Projekt
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
 
 ## Voraussetzungen {#prerequisites}
 
-Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass Sie die [Modul &quot;ui.frontend&quot;](./review-uifrontend-module.md).
+Dies ist ein mehrteiliges Tutorial und es wird vorausgesetzt, dass Sie das [„ui.frontend“-Modul](./review-uifrontend-module.md) gelesen haben.
 
 
-## Änderungen am AEM-Projekt
+## Änderungen am Full-Stack-AEM-Projekt
 
 Es gibt drei projektbezogene Konfigurationsänderungen und eine Stiländerung, die für einen Testlauf bereitgestellt werden sollen. Daher ergeben sich insgesamt vier spezifische Änderungen im WKND-Projekt, um sie für den Frontend-Pipeline-Vertrag zu aktivieren.
 
-1. Entfernen Sie die `ui.frontend` -Modul aus dem vollständigen Build-Zyklus
+1. Entfernen Sie das Modul `ui.frontend` aus dem vollständigen Build-Zyklus
 
-   * In der Wurzel des WKND Sites-Projekts `pom.xml` kommentieren `<module>ui.frontend</module>` Untermoduleintrag.
+   * Im Stammverzeichnis `pom.xml` des WKND-Sites-Projekts kommentieren Sie den Eintrag `<module>ui.frontend</module>` des Submoduls.
 
    ```xml
        ...
@@ -56,7 +56,7 @@ Es gibt drei projektbezogene Konfigurationsänderungen und eine Stiländerung, d
        ...
    ```
 
-   * Und kommentierungsbezogene Abhängigkeit von der `ui.apps/pom.xml`
+   * Und kommentarbezogene Abhängigkeit von `ui.apps/pom.xml`
 
    ```xml
        ...
@@ -75,9 +75,9 @@ Es gibt drei projektbezogene Konfigurationsänderungen und eine Stiländerung, d
        ...
    ```
 
-1. Bereiten Sie die `ui.frontend` -Modul für den Front-End-Pipeline-Vertrag hinzugefügt, indem zwei neue WebPack-Konfigurationsdateien hinzugefügt werden.
+1. Bereiten Sie das Modul `ui.frontend` für den Frontend-Pipeline-Vertrag vor, indem Sie zwei neue Webpack-Konfigurationsdateien hinzufügen.
 
-   * Vorhandenen kopieren `webpack.common.js` as `webpack.theme.common.js`und ändern `output` -Eigenschaft und `MiniCssExtractPlugin`, `CopyWebpackPlugin` Plug-in-Konfigurationsparameter wie folgt:
+   * Kopieren Sie die bestehende `webpack.common.js` als `webpack.theme.common.js`, und ändern Sie die Eigenschaft `output` und die Plugin-Konfigurationsparameter `MiniCssExtractPlugin` und `CopyWebpackPlugin` wie folgt:
 
    ```javascript
    ...
@@ -99,7 +99,7 @@ Es gibt drei projektbezogene Konfigurationsänderungen und eine Stiländerung, d
    ...
    ```
 
-   * Vorhandenen kopieren `webpack.prod.js` as `webpack.theme.prod.js`und ändern Sie die `common` Speicherort der Variablen in der obigen Datei als
+   * Kopieren Sie die vorhandene `webpack.prod.js` als `webpack.theme.prod.js`, und ändern Sie den Speicherort der Variablen `common` in der oben genannten Datei als
 
    ```javascript
    ...
@@ -109,14 +109,14 @@ Es gibt drei projektbezogene Konfigurationsänderungen und eine Stiländerung, d
 
    >[!NOTE]
    >
-   >Die obigen beiden Konfigurationsänderungen des &#39;webpack&#39; sollen unterschiedliche Ausgabedateien und Ordnernamen haben, sodass wir einfach zwischen clientlib (Full-Stack) und den von Designs generierten (Front-End) Pipeline-Frontend-Artefakten unterscheiden können.
+   >Die obigen beiden Konfigurationsänderungen des „webpack“ sollen unterschiedliche Ausgabedateien und Ordnernamen haben, sodass wir einfach zwischen Clientlib (Full-Stack) und den von Designs generierten (Frontend) Pipeline-Frontend-Artefakten unterscheiden können.
    >
    >Wie Sie vermuten, können die oben genannten Änderungen übersprungen werden, um auch vorhandene Webpack-Konfigurationen zu verwenden. Die folgenden Änderungen sind jedoch erforderlich.
    >
-   >Es liegt an dir, wie du sie benennen oder organisieren willst.
+   >Es liegt an Ihnen, wie Sie sie benennen oder organisieren wollen.
 
 
-   * Im `package.json` -Datei, stellen Sie sicher, dass die  `name` Der Eigenschaftswert entspricht dem Site-Namen aus dem `/conf` Knoten. Und unter dem `scripts` -Eigenschaft, eine `build` Skript, das angibt, wie die Front-End-Dateien aus diesem Modul erstellt werden.
+   * Vergewissern Sie sich, dass in der Datei `package.json` der Wert der Eigenschaft `name` mit dem Standortnamen aus dem Knoten `/conf` übereinstimmt und dass sie unter der Eigenschaft über `scripts` ein `build`-Skript verfügt, das anweist, wie die Frontend-Dateien aus diesem Modul zu erstellen sind.
 
    ```javascript
        {
@@ -132,9 +132,9 @@ Es gibt drei projektbezogene Konfigurationsänderungen und eine Stiländerung, d
        }
    ```
 
-1. Bereiten Sie die `ui.content` -Modul für die Front-End-Pipeline durch Hinzufügen von zwei Sling-Konfigurationen.
+1. Bereiten Sie das Modul `ui.content` für die Frontend-Pipeline vor, indem Sie zwei Sling-Konfigurationen hinzufügen.
 
-   * Erstellen Sie eine Datei unter `com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig` - dies umfasst alle Frontend-Dateien, die die `ui.frontend` -Modul generiert unter dem `dist` Ordner mithilfe des webpack-Buildprozesses.
+   * Erstellen Sie eine Datei unter `com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig` – diese enthält alle Frontend-Dateien, die das Modul `ui.frontend` unter dem Ordner `dist` mithilfe des Webpack-Build-Prozesses erzeugt.
 
    ```xml
    ...
@@ -157,10 +157,10 @@ Es gibt drei projektbezogene Konfigurationsänderungen und eine Stiländerung, d
 
    >[!TIP]
    >
-   >    Siehe Abschluss [HtmlPageItemsConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/.content.xml) im __AEM WKND Sites-Projekt__.
+   >    Siehe die vollständige [HtmlPageItemsConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/.content.xml) im __AEM WKND-Sites-Projekt__.
 
 
-   * Second the `com.adobe.aem.wcm.site.manager.config.SiteConfig` mit dem `themePackageName` -Wert identisch mit dem `package.json` und `name` Eigenschaftswert und `siteTemplatePath` auf einen `/libs/wcm/core/site-templates/aem-site-template-stub-2.0.0` Stub-Pfadwert.
+   * Zweitens `com.adobe.aem.wcm.site.manager.config.SiteConfig`, wobei der Wert `themePackageName` dem Wert der Eigenschaft `package.json` und `name` entspricht, und `siteTemplatePath` auf den Stubpfad `/libs/wcm/core/site-templates/aem-site-template-stub-2.0.0` verweist.
 
    ```xml
    ...
@@ -175,9 +175,9 @@ Es gibt drei projektbezogene Konfigurationsänderungen und eine Stiländerung, d
 
    >[!TIP]
    >
-   >    Siehe, das vollständige [SiteConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.aem.wcm.site.manager.config.SiteConfig/.content.xml) im __AEM WKND Sites-Projekt__.
+   >    Siehe die vollständige [SiteConfig](https://github.com/adobe/aem-guides-wknd/blob/feature/frontend-pipeline/ui.content/src/main/content/jcr_root/conf/wknd/_sling_configs/com.adobe.aem.wcm.site.manager.config.SiteConfig/.content.xml) im __AEM WKND-Sites-Projekt__.
 
-1. Ein Design oder eine Stile, die über die Frontend-Pipeline für einen Testlauf bereitgestellt werden sollen, werden geändert `text-color` auf Adobe Rot (oder Sie können Ihre eigene wählen, indem Sie die `ui.frontend/src/main/webpack/base/sass/_variables.scss`.
+1. Um eine Themen- oder Stiländerung über die Frontend-Pipeline für einen Testlauf bereitzustellen, ändern wir `text-color` auf Adobe-Rot (oder eine andere Farbe Ihrer Wahl), indem wir `ui.frontend/src/main/webpack/base/sass/_variables.scss` aktualisieren.
 
    ```css
        $black:     #a40606;
@@ -189,21 +189,21 @@ Senden Sie schließlich diese Änderungen an das Adobe-Git-Repository Ihres Prog
 
 >[!AVAILABILITY]
 >
-> Diese Änderungen sind auf GitHub im [__Front-End-Pipeline__](https://github.com/adobe/aem-guides-wknd/tree/feature/frontend-pipeline) Zweig der __AEM WKND Sites-Projekt__.
+> Diese Änderungen sind auf GitHub im [__Frontend-Pipeline__](https://github.com/adobe/aem-guides-wknd/tree/feature/frontend-pipeline)-Zweig des __AEM WKND Sites-Projekts__ verfügbar.
 
 
-## Vorsicht - _Front-End-Pipeline aktivieren_ button
+## Vorsicht – Schaltfläche _Frontend-Pipeline aktivieren_
 
-Die [Schienenauswahl](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) s [Site](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) -Option zeigt die **Front-End-Pipeline aktivieren** bei Auswahl des Site-Stamms oder der Site-Seite. Klicken **Front-End-Pipeline aktivieren** -Schaltfläche überschreibt die obigen **Sling-Konfigurationen**, stellen Sie sicher, dass **Sie klicken nicht auf** diese Schaltfläche nach der Bereitstellung der oben genannten Änderungen über die Ausführung der Cloud Manager-Pipeline.
+Die Option [Site](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=de) der [Schienenauswahl](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=de) zeigt die Schaltfläche **Frontend-Pipeline aktivieren** bei Auswahl des Site-Stamms oder der Site-Seite. Wenn Sie auf die Schaltfläche **Frontend-Pipeline aktivieren** klicken, werden die obigen **Sling-Konfigurationen** außer Kraft gesetzt. Stellen Sie sicher, dass Sie **nicht auf diese Schaltfläche klicken**, nachdem Sie die obigen Änderungen über die Cloud Manager-Pipeline ausgeführt haben.
 
-![Schaltfläche &quot;Front-End-Pipeline aktivieren&quot;](assets/enable-front-end-Pipeline-button.png)
+![Schaltfläche „Frontend-Pipeline aktivieren“](assets/enable-front-end-Pipeline-button.png)
 
-Wenn versehentlich darauf geklickt wird, müssen Sie die Pipelines erneut ausführen, um sicherzustellen, dass der Front-End-Pipeline-Vertrag und die Änderungen wiederhergestellt werden.
+Wenn versehentlich darauf geklickt wird, müssen Sie die Pipelines erneut ausführen, um sicherzustellen, dass der Frontend-Pipeline-Vertrag und die Änderungen wiederhergestellt werden.
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
-Herzlichen Glückwunsch! Sie haben das WKND Sites-Projekt aktualisiert, um es für den Front-End-Pipeline-Vertrag zu aktivieren.
+Herzlichen Glückwunsch! Sie haben das WKND Sites-Projekt aktualisiert, um es für den Frontend-Pipeline-Vertrag zu aktivieren.
 
 ## Nächste Schritte {#next-steps}
 
-Im nächsten Kapitel [Bereitstellen mithilfe der Frontend-Pipeline](create-frontend-pipeline.md), erstellen und führen Sie eine Front-End-Pipeline aus und überprüfen Sie, wie wir __weg__ aus der Bereitstellung von Frontend-Ressourcen auf Basis von &quot;/etc.clientlibs&quot;.
+Im nächsten Kapitel, [Bereitstellen mithilfe der Frontend-Pipeline](create-frontend-pipeline.md), erstellen und führen Sie eine Frontend-Pipeline aus und überprüfen, wie wir von der „/etc.clientlibs“-basierten Bereitstellung von Frontend-Ressourcen __weggekommen__ sind.

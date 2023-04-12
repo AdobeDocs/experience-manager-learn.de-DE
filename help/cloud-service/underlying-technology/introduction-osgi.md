@@ -15,12 +15,12 @@ exl-id: 386b7d1f-d6aa-4c9f-95ae-d553aaeb9bf3
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
 workflow-type: tm+mt
 source-wordcount: '41'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 # Einführung in [!DNL OSGi] {#introduction-osgi}
 
-Eine Einführung in [!DNL OSGi], eine dynamische modulare Architektur für [!DNL Java] Anwendungen, die die Grundlage für Adobe Experience Manager bilden.
+Eine Einführung in [!DNL OSGi], eine dynamische modulare Architektur für [!DNL Java]-Anwendungen, die die Grundlage für Adobe Experience Manager bildet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32031?quality=12&learn=on)
