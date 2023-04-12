@@ -1,6 +1,6 @@
 ---
-title: AEM Headless-Mobile-Implementierungen
-description: Erfahren Sie mehr über Bereitstellungsaspekte bei mobilen AEM Headless-Implementierungen.
+title: Mobile-Implementierungen mit AEM Headless
+description: Erfahren Sie mehr über Bereitstellungsaspekte bei AEM Headless-Implementierungen für Mobile.
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -9,30 +9,30 @@ level: Intermediate
 kt: 10796
 thumbnail: KT-10796.jpg
 source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '152'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
-# AEM Headless-Mobile-Implementierungen
+# Mobile-Implementierungen mit AEM Headless
 
-AEM Headless-Mobile-Implementierungen sind native mobile Apps für iOS, Android™ usw. die Inhalte in AEM Headless verbrauchen und damit interagieren.
+Mobile-Implementierungen mit AEM Headless sind native Mobile Apps für iOS, Android™ usw., die Inhalte in AEM Headless verwenden und damit interagieren.
 
-Für mobile Bereitstellungen ist eine minimale Konfiguration erforderlich, da HTTP-Verbindungen zu AEM Headless-APIs nicht im Kontext eines Browsers initiiert werden.
+Für Mobile-Bereitstellungen ist eine minimale Konfiguration erforderlich, da HTTP-Verbindungen zu AEM Headless-APIs nicht im Kontext eines Browsers initiiert werden.
 
-## Bereitstellungskonfigurationen
+## Implementierungskonfigurationen
 
-Die folgende Bereitstellungskonfiguration muss für Mobile-App-Implementierungen vorhanden sein.
+Die folgende Bereitstellungskonfiguration muss für Mobile App-Implementierungen vorhanden sein.
 
-| Mobile App stellt eine Verbindung zu | AEM Author | AEM Publish | AEM |
+| App stellt eine Verbindung her zu | AEM-Autoreninstanz | AEM Publish | AEM-Vorschau |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
-| [Dispatcher-Filter](./configurations/dispatcher-filters.md) | ✘ | ms | ms |
+| [Dispatcher-Filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | Cross-Origin Resource Sharing (CORS) | ✘ | ✘ | ✘ |
-| [AEM Hosts](./configurations/aem-hosts.md) | ms | ms | ms |
+| [AEM-Hosts](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
 
-## Beispiel für mobile Apps
+## Beispiel für Mobile Apps
 
 Adobe bietet Beispiele für iOS- und Android™-Apps.
 
@@ -50,10 +50,10 @@ Adobe bietet Beispiele für iOS- und Android™-Apps.
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/ios-swiftui-app.md" title="iOS-App">iOS-App</a></p>
-                   <p class="is-size-6">Ein Beispiel für eine iOS-App, die in die SwiftUI geschrieben wurde und Inhalte von AEM Headless GraphQL-APIs verbraucht.</p>
+                   <p class="is-size-6">Ein Beispiel für eine iOS-App, die in SwiftUI geschrieben wurde und Inhalte von AEM Headless-GraphQL-APIs verwendet.</p>
                    <a href="../example-apps/ios-swiftui-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Beispiel anzeigen</span>
-                   </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Beispiel anzeigen</span>
+ </a>
                </div>
            </div>
        </div>
@@ -71,10 +71,10 @@ Adobe bietet Beispiele für iOS- und Android™-Apps.
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/android-app.md" title="Android™-App">Android™-App</a></p>
-                   <p class="is-size-6">Eine Beispiel-Java™ Android™-App, die Inhalte von AEM Headless-GraphQL-APIs verbraucht.</p>
+                   <p class="is-size-6">Eine Beispiel-Java™-Android™-App, die Inhalte von AEM Headless-GraphQL-APIs verwendet.</p>
                    <a href="../example-apps/android-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Beispiel anzeigen</span>
-                   </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Beispiel anzeigen</span>
+ </a>
                </div>
            </div>
        </div>
