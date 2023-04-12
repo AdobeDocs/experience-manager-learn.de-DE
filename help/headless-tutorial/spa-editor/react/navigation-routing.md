@@ -1,6 +1,6 @@
 ---
-title: Hinzufügen von Navigation und Routing | Erste Schritte mit dem AEM SPA Editor und React
-description: Erfahren Sie, wie mehrere Ansichten im SPA unterstützt werden können, indem Sie sie mit dem SPA Editor SDK AEM Seiten zuordnen. Die dynamische Navigation wird mit React-Router und React-Kernkomponenten implementiert.
+title: Hinzufügen von Navigation und Routing | Erste Schritte mit dem AEM-SPA-Editor und React
+description: Erfahren Sie, wie mehrere Ansichten in der SPA unterstützt werden können, indem sie mit dem SPA Editor SDK AEM-Seiten zugeordnet werden. Die dynamische Navigation wird mit React Router und React-Kernkomponenten implementiert.
 feature: SPA Editor
 topics: development
 version: Cloud Service
@@ -13,118 +13,118 @@ role: Developer
 level: Beginner
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
 source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1617'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Hinzufügen von Navigation und Routing {#navigation-routing}
 
-Erfahren Sie, wie mehrere Ansichten im SPA unterstützt werden können, indem Sie sie mit dem SPA Editor SDK AEM Seiten zuordnen. Die dynamische Navigation wird mit React-Router und React-Kernkomponenten implementiert.
+Erfahren Sie, wie mehrere Ansichten in der SPA unterstützt werden können, indem sie mit dem SPA Editor SDK AEM-Seiten zugeordnet werden. Die dynamische Navigation wird mit React Router und React-Kernkomponenten implementiert.
 
 ## Ziel
 
-1. Machen Sie sich mit den SPA Routing-Optionen vertraut, die bei Verwendung des SPA-Editors verfügbar sind.
-1. Verwendung [React-Router](https://reacttraining.com/react-router/) um zwischen verschiedenen Ansichten des SPA zu navigieren.
-1. Verwenden Sie AEM React-Kernkomponenten, um eine dynamische Navigation zu implementieren, die von der AEM Seitenhierarchie gesteuert wird.
+1. Machen Sie sich mit den SPA-Modell-Routing-Optionen vertraut, die bei Verwendung des SPA-Editors verfügbar sind.
+1. Lernen Sie die Verwendung von [React Router](https://reacttraining.com/react-router/), um zwischen verschiedenen Ansichten der SPA zu navigieren.
+1. Verwenden Sie AEM React-Kernkomponenten, um eine dynamische Navigation zu implementieren, die von der AEM-Seitenhierarchie gesteuert wird.
 
 ## Was Sie erstellen werden
 
-Dieses Kapitel fügt einem SPA in AEM Navigation hinzu. Das Navigationsmenü wird von der AEM Seitenhierarchie gesteuert und nutzt das JSON-Modell, das von der [Navigations-Kernkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html).
+Dieses Kapitel fügt Navigation zu einer SPA in AEM hinzu. Das Navigationsmenü wird von der AEM-Seitenhierarchie gesteuert und nutzt das JSON-Modell, das von der [Navigations-Kernkomponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/embed.html?lang=de) bereitgestellt wird.
 
 ![Navigation hinzugefügt](assets/navigation-routing/navigation-added.png)
 
 ## Voraussetzungen
 
-Überprüfen Sie die erforderlichen Tools und Anweisungen zum Einrichten eines [lokale Entwicklungsumgebung](overview.md#local-dev-environment). Dieses Kapitel ist eine Fortsetzung der [Zuordnungskomponenten](map-components.md) -Kapitel zu folgen, ist jedoch ein SPA-aktiviertes AEM-Projekt, das in einer lokalen AEM-Instanz bereitgestellt wird.
+Vergegenwärtigen Sie sich die erforderlichen Tools und Anweisungen zum Einrichten einer [lokalen Entwicklungsumgebung](overview.md#local-dev-environment). Dieses Kapitel ist eine Fortsetzung des Kapitels [Komponenten zuordnen](map-components.md). Um dem Kapitel folgen zu können, brauchen Sie jedoch nur ein SPA-aktiviertes AEM-Projekt, das in einer lokalen AEM-Instanz bereitgestellt wird.
 
 ## Hinzufügen der Navigation zur Vorlage {#add-navigation-template}
 
-1. Öffnen Sie einen Browser und melden Sie sich bei AEM an. [http://localhost:4502/](http://localhost:4502/). Die Basis für den Startcode sollte bereits bereitgestellt werden.
-1. Navigieren Sie zum **SPA Seitenvorlage**: [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
-1. Auswählen des äußersten **Root Layout Container** und klicken Sie auf **Politik** Symbol. Pass auf **not** zur Auswahl der **Layout-Container** nicht gesperrt für die Bearbeitung.
+1. Öffnen Sie einen Browser und melden Sie sich bei AEM an, [http://localhost:4502/](http://localhost:4502/). Die Code-Basis für den Start sollte bereits bereitgestellt sein.
+1. Navigieren Sie zur **SPA-Seitenvorlage**: [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-page-template/structure.html).
+1. Wählen Sie den äußersten **Stamm-Layout-Container** aus und klicken Sie auf das Symbol **Richtlinie**. Achten Sie darauf, dass Sie **nicht** den **Layout-Container** auswählen, der für das Authoring entsperrt ist.
 
-   ![Wählen Sie das Symbol für die Root Layout Container-Richtlinie aus](assets/navigation-routing/root-layout-container-policy.png)
+   ![Wählen Sie das Symbol für die Stamm-Layout-Container-Richtlinie aus](assets/navigation-routing/root-layout-container-policy.png)
 
-1. Erstellen Sie eine neue Richtlinie mit dem Namen **SPA**:
+1. Erstellen Sie eine neue Richtlinie mit dem Namen **SPA-Struktur**:
 
-   ![SPA](assets/navigation-routing/spa-policy-update.png)
+   ![SPA-Struktur-Richtlinie](assets/navigation-routing/spa-policy-update.png)
 
-   under **Zugelassene Komponenten** > **Allgemein** > wählen Sie die **Layout-Container** -Komponente.
+   Wählen Sie unter **Zugelassene Komponenten** > **Allgemein** > die **Layout-Container**-Komponente aus.
 
-   under **Zugelassene Komponenten** > **WKND SPA REACT - STRUKTUR** > wählen Sie die **Navigation** component:
+   Wählen Sie unter **Zugelassene Komponenten** > **WKND SPA REACT – STRUKTUR** > die **Navigationskomponente** aus:
 
    ![Navigationskomponente auswählen](assets/navigation-routing/select-navigation-component.png)
 
-   under **Zugelassene Komponenten** > **WKND SPA REACT - Content** > wählen Sie die **Bild** und **Text** Komponenten. Es sollten vier Komponenten ausgewählt sein.
+   Wählen Sie unter **Zugelassene Komponenten** > **WKND SPA REACT – Inhalt** > die **Bild**- und **Text**-Komponenten aus. Es sollten insgesamt vier Komponenten ausgewählt sein.
 
-   Klicken **Fertig** , um die Änderungen zu speichern.
+   Klicken Sie auf **Fertig**, um die Änderungen zu speichern.
 
-1. Aktualisieren Sie die Seite und fügen Sie die **Navigation** Komponente über der nicht gesperrten **Layout-Container**:
+1. Aktualisieren Sie die Seite und fügen Sie die **Navigationskomponente** über dem entsperrten **Layout-Container** hinzu:
 
    ![Navigationskomponente zur Vorlage hinzufügen](assets/navigation-routing/add-navigation-component.png)
 
-1. Wählen Sie die **Navigation** Komponente und klicken Sie auf ihre **Politik** zum Bearbeiten der Richtlinie.
-1. Erstellen Sie eine neue Richtlinie mit einer **Richtlinienname** von **SPA**.
+1. Wählen Sie die **Navigationskomponente** aus und klicken Sie auf ihr **Richtliniensymbol**, um die Richtlinie zu bearbeiten.
+1. Erstellen Sie eine neue Richtlinie mit dem **Richtliniennamen** **SPA-Navigation**.
 
-   Unter dem **Eigenschaften**:
+   Unter den **Eigenschaften**:
 
-   * Legen Sie die **Navigationsstamm** nach `/content/wknd-spa-react/us/en`.
-   * Legen Sie die **Ausschließen von Stammebenen** nach **1**.
-   * Deaktivieren **Sammlung aller untergeordneten Seiten**.
-   * Legen Sie die **Navigationsstrukturtiefe** nach **3**.
+   * Legen Sie den **Navigationsstamm** auf `/content/wknd-spa-react/us/en` fest.
+   * Legen Sie für **Stammebenen ausschließen** den Wert **1** fest.
+   * Deaktivieren Sie **Alle untergeordneten Seiten erfassen**.
+   * Legen Sie die **Navigationsstrukturtiefe** auf den Wert **3** fest.
 
-   ![Navigationsrichtlinie konfigurieren](assets/navigation-routing/navigation-policy.png)
+   ![Konfigurieren der Navigationsrichtlinie](assets/navigation-routing/navigation-policy.png)
 
-   Dadurch werden die Navigations-2-Ebenen unten erfasst `/content/wknd-spa-react/us/en`.
+   Dadurch wird die Navigation 2 Ebenen unterhalb von `/content/wknd-spa-react/us/en` erfasst.
 
-1. Nach dem Speichern der Änderungen sollte die `Navigation` als Teil der Vorlage:
+1. Nach dem Speichern der Änderungen sollten Sie die befüllte `Navigation` als Teil der Vorlage sehen:
 
-   ![Füllte Navigationskomponente](assets/navigation-routing/populated-navigation.png)
+   ![Befüllte Navigationskomponente](assets/navigation-routing/populated-navigation.png)
 
-## Untergeordnete Seiten erstellen
+## Erstellen untergeordneter Seiten
 
-Als Nächstes erstellen Sie zusätzliche Seiten in AEM , die als verschiedene Ansichten in der SPA dienen. Wir werden auch die hierarchische Struktur des von AEM bereitgestellten JSON-Modells untersuchen.
+Als Nächstes erstellen wir zusätzliche Seiten in AEM, die als verschiedene Ansichten in der SPA dienen. Wir werden auch die hierarchische Struktur des von AEM bereitgestellten JSON-Modells untersuchen.
 
-1. Navigieren Sie zum **Sites** console: [http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home). Wählen Sie die **WKND SPA React-Homepage** und klicken Sie auf **Erstellen** > **Seite**:
+1. Navigieren Sie zur **Sites**-Konsole: [http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home](http://localhost:4502/sites.html/content/wknd-spa-react/us/en/home). Aktivieren Sie das Kontrollkästchen **WKND SPA React Home Page** und klicken Sie auf **Erstellen** > **Seite**:
 
    ![Neue Seite erstellen](assets/navigation-routing/create-new-page.png)
 
-1. under **Vorlage** select **SPA**. under **Eigenschaften** enter **Seite 1** für **Titel** und **page-1** als Namen.
+1. Wählen Sie unter **Vorlage** die Option **SPA-Seite** aus. Geben Sie unter **Eigenschaften** den Text **Page 1** als **Titel** und **page-1** als Namen für die erste Seite ein.
 
-   ![anfängliche Seiteneigenschaften eingeben](assets/navigation-routing/initial-page-properties.png)
+   ![Eingeben der anfänglichen Seiteneigenschaften](assets/navigation-routing/initial-page-properties.png)
 
-   Klicken **Erstellen** und klicken Sie im Popup-Dialogfeld auf **Öffnen** , um die Seite im AEM SPA Editor zu öffnen.
+   Klicken Sie auf **Erstellen** und dann im Dialogfeld-Popup auf **Öffnen**, um die Seite im AEM-SPA-Editor zu öffnen.
 
-1. Hinzufügen neuer **Text** -Komponente in die Hauptkomponente **Layout-Container**. Bearbeiten Sie die Komponente und geben Sie den Text ein: **Seite 1** mithilfe des RTE und der **H2** -Element.
+1. Fügen Sie eine neue **Text**-Komponente zum **Haupt-Layout-Container** hinzu. Bearbeiten Sie die Komponente und geben Sie den Text **Page 1** mithilfe des RTE und **H2**-Elements ein.
 
-   ![Beispielinhaltsseite 1](assets/navigation-routing/page-1-sample-content.png)
+   ![Beispiel für Inhalt Seite 1](assets/navigation-routing/page-1-sample-content.png)
 
-   Sie können zusätzliche Inhalte hinzufügen, wie z. B. ein Bild.
+   Sie können gerne zusätzliche Inhalte hinzufügen, z. B. ein Bild.
 
-1. Kehren Sie zur AEM Sites-Konsole zurück und wiederholen Sie die oben beschriebenen Schritte. Erstellen Sie dann eine zweite Seite mit dem Namen **Seite 2** als Geschwister **Seite 1**.
-1. Erstellen Sie abschließend eine dritte Seite. **Seite 3** aber als **child** von **Seite 2**. Nach Abschluss der Site-Hierarchie sollte wie folgt aussehen:
+1. Kehren Sie zur AEM Sites-Konsole zurück und wiederholen Sie die oben beschriebenen Schritte. Erstellen Sie dann eine zweite Seite mit dem Namen **Page 2** als gleichgeordnetes Element von **Page 1**.
+1. Erstellen Sie abschließend eine dritte Seite, **Page 3**, diese allerdings als **untergeordnetes Element** von **Page 2**. Danach sollte die Website-Hierarchie wie folgt aussehen:
 
-   ![Beispiel-Site-Hierarchie](assets/navigation-routing/wknd-spa-sample-site-hierarchy.png)
+   ![Beispiel für Website-Hierarchie](assets/navigation-routing/wknd-spa-sample-site-hierarchy.png)
 
-1. Die Navigationskomponente kann jetzt verwendet werden, um zu verschiedenen Bereichen des SPA zu navigieren.
+1. Die Navigationskomponente kann jetzt verwendet werden, um zu verschiedenen Bereichen der SPA zu navigieren.
 
    ![Navigation und Routing](assets/navigation-routing/navigation-working.gif)
 
-1. Öffnen Sie die Seite außerhalb des AEM-Editors: [http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html). Verwenden Sie die **Navigation** -Komponente, um zu verschiedenen Ansichten der App zu navigieren.
+1. Öffnen Sie die Seite außerhalb des AEM-Editors: [http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html). Verwenden Sie die **Navigationskomponente**, um zu verschiedenen Ansichten der App zu navigieren.
 
-1. Verwenden Sie beim Navigieren die Entwicklertools Ihres Browsers, um die Netzwerkanforderungen zu überprüfen. Die folgenden Screenshots werden aus dem Chrome-Browser von Google erfasst.
+1. Verwenden Sie beim Navigieren die Entwickler-Tools Ihres Browsers, um die Netzwerkanforderungen zu überprüfen. Die folgenden Screenshots stammen vom Google Chrome-Browser.
 
-   ![Überwachung von Netzwerkanfragen](assets/navigation-routing/inspect-network-requests.png)
+   ![Überwachen von Netzwerkanfragen](assets/navigation-routing/inspect-network-requests.png)
 
-   Beachten Sie, dass die nachfolgende Navigation nach dem ersten Laden der Seite nicht zu einer vollständigen Seitenaktualisierung führt und dass der Netzwerk-Traffic bei der Rückkehr zu zuvor besuchten Seiten minimiert wird.
+   Beachten Sie, dass die nachfolgende Navigation nach dem ersten Laden der Seite nicht zu einer vollständigen Seitenaktualisierung führt und dass der Netzwerk-Traffic bei der Rückkehr zu einer zuvor besuchten Seiten minimiert ist.
 
-## JSON-Modell für Hierarchieseite {#hierarchy-page-json-model}
+## JSON-Modell für die Hierarchieseite {#hierarchy-page-json-model}
 
-Überprüfen Sie anschließend das JSON-Modell, das das mehrdimensionale Erlebnis des SPA steuert.
+Überprüfen Sie als Nächstes das JSON-Modell, das die Bereitstellung der unterschiedlichen Ansichten der SPA steuert.
 
-1. Öffnen Sie in einer neuen Registerkarte die von AEM bereitgestellte JSON-Modell-API: [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). Es kann hilfreich sein, eine Browsererweiterung zu verwenden, um [JSON formatieren](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa).
+1. Öffnen Sie in einer neuen Registerkarte die von AEM bereitgestellte JSON-Modell-API: [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json). Es kann hilfreich sein, eine Browser-Erweiterung zu verwenden, um [JSON zu formatieren](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa).
 
    Dieser JSON-Inhalt wird angefordert, wenn die SPA zum ersten Mal geladen wird. Die äußere Struktur sieht wie folgt aus:
 
@@ -149,25 +149,25 @@ Als Nächstes erstellen Sie zusätzliche Seiten in AEM , die als verschiedene An
    }
    ```
 
-   under `:children` sollte für jede der erstellten Seiten ein Eintrag angezeigt werden. Der Inhalt für alle Seiten befindet sich in dieser ersten JSON-Anfrage. Beim Navigations-Routing werden nachfolgende Ansichten des SPA schnell geladen, da der Inhalt bereits clientseitig verfügbar ist.
+   Unter `:children` sollte für jede der erstellten Seiten ein Eintrag angezeigt werden. Der Inhalt für alle Seiten ist in dieser ersten JSON-Anfrage enthalten. Beim Navigations-Routing werden nachfolgende Ansichten der SPA schnell geladen, da der Inhalt bereits Client-seitig verfügbar ist.
 
-   Es ist nicht ratsam, **ALL** des Inhalts einer SPA in der ersten JSON-Anfrage, da dies das anfängliche Laden der Seite verlangsamen würde. Als Nächstes wird untersucht, wie die Hierarchietiefe von Seiten erfasst wird.
+   Es ist nicht ratsam, den **GESAMTEN** Inhalt einer SPA in der ersten JSON-Anfrage zu laden, da dies das erste Laden der Seite verlangsamen würde. Sehen wir uns als Nächstes an, wie die Hierarchietiefe von Seiten erfasst wird.
 
-1. Navigieren Sie zum **SPA** Vorlage unter: [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html).
+1. Navigieren Sie zur **SPA-Stammvorlage** unter [http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-react/settings/wcm/templates/spa-app-template/structure.html).
 
-   Klicken Sie auf **Menü &quot;Seiteneigenschaften&quot;** > **Seitenrichtlinie**:
+   Klicken Sie auf **Seiteneigenschaften** > **Seitenrichtlinie**:
 
-   ![Öffnen Sie die Seitenrichtlinie für SPA Stamm.](assets/navigation-routing/open-page-policy.png)
+   ![Öffnen der Seitenrichtlinie für den SPA-Stamm](assets/navigation-routing/open-page-policy.png)
 
-1. Die **SPA** -Vorlage weist eine zusätzliche **Hierarchische Struktur** -Tab, um den erfassten JSON-Inhalt zu steuern. Die **Strukturtiefe** bestimmt, wie tief in der Site-Hierarchie untergeordnete Seiten unterhalb der **root**. Sie können auch die **Strukturmuster** -Feld zum Filtern zusätzlicher Seiten basierend auf einem regulären Ausdruck.
+1. Die **SPA-Stammvorlage** weist die zusätzliche Registerkarte **Hierarchische Struktur** für den erfassten JSON-Inhalt auf. Die **Strukturtiefe** bestimmt, wie tief in der Website-Hierarchie untergeordnete Seiten unterhalb des **Stamms** erfasst werden. Sie können auch das Feld **Strukturmuster** verwenden, um zusätzliche Seiten basierend auf einem regulären Ausdruck herauszufiltern.
 
-   Aktualisieren Sie die **Strukturtiefe** nach **2**:
+   Ändern Sie die **Strukturtiefe** in **2**:
 
-   ![Aktualisierung der Strukturtiefe](assets/navigation-routing/update-structure-depth.png)
+   ![Aktualisieren der Strukturtiefe](assets/navigation-routing/update-structure-depth.png)
 
-   Klicken **Fertig** , um die Änderungen an der Richtlinie zu speichern.
+   Klicken Sie auf **Fertig**, um die Änderungen an der Richtlinie zu speichern.
 
-1. Erneutes Öffnen des JSON-Modells [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json).
+1. Öffnen Sie erneut das JSON-Modell [http://localhost:4502/content/wknd-spa-react/us/en.model.json](http://localhost:4502/content/wknd-spa-react/us/en.model.json).
 
    ```json
    {
@@ -189,31 +189,31 @@ Als Nächstes erstellen Sie zusätzliche Seiten in AEM , die als verschiedene An
    }
    ```
 
-   Beachten Sie, dass **Seite 3** path wurde entfernt: `/content/wknd-spa-react/us/en/home/page-2/page-3` vom ersten JSON-Modell aus. Dies liegt daran, dass **Seite 3** befindet sich auf einer Ebene 3 in der Hierarchie und wir haben die Richtlinie aktualisiert, sodass sie nur Inhalte mit einer maximalen Tiefe von Stufe 2 enthält.
+   Beachten Sie, dass der Pfad von **Seite 3** aus dem ursprünglichen JSON-Modell entfernt wurde: `/content/wknd-spa-react/us/en/home/page-2/page-3`. Dies liegt daran, dass sich **Seite 3** auf Ebene 3 in der Hierarchie befindet und wir die Richtlinie so aktualisiert haben, dass nur Inhalte mit einer maximalen Tiefe von Ebene 2 berücksichtigt werden.
 
-1. Öffnen Sie die SPA Homepage erneut: [http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html) und öffnen Sie die Entwicklertools Ihres Browsers.
+1. Öffnen Sie die SPA-Homepage [http://localhost:4502/content/wknd-spa-react/us/en/home.html](http://localhost:4502/content/wknd-spa-react/us/en/home.html) erneut und öffnen Sie danach die Entwickler-Tools Ihres Browsers.
 
-   Aktualisieren Sie die Seite und Sie sollten die XHR-Anfrage an `/content/wknd-spa-react/us/en.model.json`, der SPA Stamm. Beachten Sie, dass nur drei untergeordnete Seiten enthalten sind, basierend auf der Hierarchietiefenkonfiguration der SPA-Stammvorlage, die zuvor im Tutorial vorgenommen wurde. Dies umfasst nicht **Seite 3**.
+   Aktualisieren Sie die Seite. Danach sollten Sie die XHR-Anfrage an `/content/wknd-spa-react/us/en.model.json` sehen. Dies ist der SPA-Stamm. Beachten Sie, dass nur drei untergeordnete Seiten enthalten sind. Dies basiert auf der Hierarchietiefenkonfiguration der SPA-Stammvorlage, die zuvor im Tutorial vorgenommen wurde. Dies umfasst nicht **Seite 3**.
 
-   ![Anfängliche JSON-Anfrage - SPA Stamm](assets/navigation-routing/initial-json-request.png)
+   ![Ursprüngliche JSON-Anfrage – SPA-Stamm](assets/navigation-routing/initial-json-request.png)
 
-1. Wenn die Entwicklertools geöffnet sind, verwenden Sie die `Navigation` Komponente zur direkten Navigation zu **Seite 3**:
+1. Verwenden Sie bei geöffneten Entwickler-Tools die `Navigation`-Komponente, um direkt zur **Seite 3** zu gehen:
 
-   Beachten Sie, dass eine neue XHR-Anfrage an Folgendes gesendet wird: `/content/wknd-spa-react/us/en/home/page-2/page-3.model.json`
+   Beachten Sie, dass eine neue XHR-Anfrage gesendet wird an: `/content/wknd-spa-react/us/en/home/page-2/page-3.model.json`
 
-   ![Seite drei XHR-Anfrage](assets/navigation-routing/page-3-xhr-request.png)
+   ![XHR-Anfrage für Seite 3](assets/navigation-routing/page-3-xhr-request.png)
 
-   Der AEM Model Manager versteht, dass die **Seite 3** JSON-Inhalt ist nicht verfügbar und Trigger automatisch die zusätzliche XHR-Anforderung.
+   AEM Model Manager weiß, dass der JSON-Inhalt der **Seite 3** nicht verfügbar ist, und löst automatisch die zusätzliche XHR-Anfrage aus.
 
-1. Experimentieren Sie mit Deep-Links, indem Sie direkt zu folgenden Elementen navigieren: [http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html). Beachten Sie außerdem, dass die Zurück-Schaltfläche des Browsers weiterhin funktioniert.
+1. Experimentieren Sie mit Deep-Links, indem Sie direkt zu [http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-2.html) navigieren. Beachten Sie außerdem, dass die Zurück-Schaltfläche des Browsers weiterhin funktioniert.
 
-## Inspect React Routing  {#react-routing}
+## Prüfen von React-Routing  {#react-routing}
 
-Die Navigation und das Routing werden mit [React-Router](https://reactrouter.com/). React Router sind eine Sammlung von Navigationskomponenten für React-Anwendungen. [AEM React-Kernkomponenten](https://github.com/adobe/aem-react-core-wcm-components-base) verwendet Funktionen des React-Routers, um die **Navigation** -Komponente, die in den vorherigen Schritten verwendet wurde.
+Die Navigation und das Routing werden mit [React Router](https://reactrouter.com/) implementiert. React Router ist eine Sammlung von Navigationskomponenten für React-Apps. Die [AEM React-Kernkomponenten](https://github.com/adobe/aem-react-core-wcm-components-base) verwenden React-Router-Funktionen, um die in den vorherigen Schritten verwendete Komponente **Navigation** zu implementieren.
 
-Überprüfen Sie als Nächstes, wie der React-Router mit dem SPA integriert ist, und experimentieren Sie mit dem React-Router. [Link](https://reactrouter.com/web/api/Link) -Komponente.
+Überprüfen Sie als Nächstes, wie React Router mit der SPA integriert ist, und experimentieren Sie mit der [Link](https://reactrouter.com/web/api/Link)-Komponente von React Router.
 
-1. Öffnen Sie die -Datei in der IDE. `index.js` at `ui.frontend/src/index.js`.
+1. Öffnen Sie in der IDE die Datei `index.js` unter `ui.frontend/src/index.js`.
 
    ```js
    /* index.js */
@@ -238,7 +238,7 @@ Die Navigation und das Routing werden mit [React-Router](https://reactrouter.com
    });
    ```
 
-   Beachten Sie, dass `App` in der `Router` Komponente aus [React-Router](https://reacttraining.com/react-router/). Die `ModelManager`, bereitgestellt vom AEM SPA Editor JS SDK, fügt die dynamischen Routen zu AEM Seiten hinzu, basierend auf der JSON-Modell-API.
+   Beachten Sie, dass `App` in der `Router`-Komponente von [React Router](https://reacttraining.com/react-router/) umschlossen ist. Der vom AEM SPA Editor JS SDK bereitgestellte `ModelManager` fügt basierend auf der JSON-Modell-API die dynamischen Routen zu AEM-Seiten hinzu.
 
 1. Öffnen Sie die Datei `Page.js` unter `ui.frontend/src/components/Page/Page.js`
 
@@ -257,10 +257,10 @@ Die Navigation und das Routing werden mit [React-Router](https://reactrouter.com
    );
    ```
 
-   Die `Page` SPA Komponente verwendet `MapTo` Funktion zum Zuordnen **Seiten** in eine entsprechende SPA Komponente AEM. Die `withRoute` -Dienstprogramm hilft beim dynamischen Routing des SPA zur entsprechenden untergeordneten Seite AEM basierend auf der `cqPath` -Eigenschaft.
+   Die `Page`-SPA-Komponente verwendet die `MapTo`-Funktion, um **Seiten** in AEM einer entsprechenden SPA-Komponente zuzuordnen. Das `withRoute`-Dienstprogramm hilft basierend auf der `cqPath`-Eigenschaft beim dynamischen Routing der SPA zur entsprechenden untergeordneten AEM-Seite.
 
-1. Öffnen Sie die `Header.js` Komponente bei `ui.frontend/src/components/Header/Header.js`.
-1. Aktualisieren Sie die `Header` um die `<h1>` Tag in einem [Link](https://reactrouter.com/web/api/Link) auf der Homepage:
+1. Öffnen Sie die `Header.js`-Komponente unter `ui.frontend/src/components/Header/Header.js`.
+1. Aktualisieren Sie die `Header`, um den `<h1>`-Tag in einem [Link](https://reactrouter.com/web/api/Link) zur Homepage zu umschließen:
 
    ```diff
      //Header.js
@@ -283,9 +283,9 @@ Die Navigation und das Routing werden mit [React-Router](https://reactrouter.com
        }
    ```
 
-   Statt eine Standardeinstellung zu verwenden `<a>` Anker-Tag verwenden `<Link>` bereitgestellt vom React-Router. Solange die Variable `to=` auf eine gültige Route verweist, wechselt der SPA zu dieser Route und **not** Führen Sie eine vollständige Seitenaktualisierung durch. Hier wird der Link zur Startseite einfach hartcodiert, um die Verwendung von `Link`.
+   Statt des standardmäßigen Anker-Tags `<a>` verwenden wir `<Link>`, bereitgestellt von React Router. Solange die Variable `to=` auf eine gültige Route verweist, wechselt die SPA zu dieser Route und führt **keine** vollständige Seitenaktualisierung durch. Hier haben wir den Link zur Startseite einfach hartcodiert, um die Verwendung von `Link` zu illustrieren.
 
-1. Aktualisieren Sie den Test bei `App.test.js` at `ui.frontend/src/App.test.js`.
+1. Aktualisieren Sie den Test bei `App.test.js` unter `ui.frontend/src/App.test.js`.
 
    ```diff
    + import { BrowserRouter as Router } from 'react-router-dom';
@@ -298,9 +298,9 @@ Die Navigation und das Routing werden mit [React-Router](https://reactrouter.com
      });
    ```
 
-   Da wir Funktionen des React-Routers innerhalb einer statischen Komponente verwenden, auf die in `App.js` müssen wir den Komponententest aktualisieren, um dies zu berücksichtigen.
+   Da wir Funktionen von React Router innerhalb einer statischen Komponente verwenden, auf die in `App.js` verwiesen wird, müssen wir den Modultest aktualisieren, um dies zu berücksichtigen.
 
-1. Öffnen Sie ein Terminal, navigieren Sie zum Stammverzeichnis des Projekts und stellen Sie das Projekt mithilfe Ihrer Maven-Kenntnisse AEM bereit:
+1. Öffnen Sie ein Terminal, navigieren Sie zum Stammverzeichnis des Projekts und stellen Sie das Projekt mithilfe von Maven in AEM bereit:
 
    ```shell
    $ cd aem-guides-wknd-spa.react
@@ -309,13 +309,13 @@ Die Navigation und das Routing werden mit [React-Router](https://reactrouter.com
 
 1. Navigieren Sie zu einer der Seiten im SPA in AEM: [http://localhost:4502/content/wknd-spa-react/us/en/home/page-1.html](http://localhost:4502/content/wknd-spa-react/us/en/home/page-1.html)
 
-   Statt die `Navigation` -Komponente, um zu navigieren, verwenden Sie den Link im `Header`.
+   Statt die `Navigation`-Komponente zur Navigation zu verwenden, verwenden Sie den Link in der `Header`.
 
-   ![Kopfzeilenlink](assets/navigation-routing/header-link.png)
+   ![Kopfzeilen-Link](assets/navigation-routing/header-link.png)
 
-   Beachten Sie, dass eine vollständige Seitenaktualisierung **not** ausgelöst wurde und das SPA Routing funktioniert.
+   Beachten Sie, dass **keine** vollständige Seitenaktualisierung ausgelöst wurde und das SPA-Routing funktioniert.
 
-1. Experimentieren Sie optional mit der `Header.js` Datei mit einer Standarddatei `<a>` Anker-Tag:
+1. Sie können optional mit der `Header.js`-Datei unter Verwendung eines standardmäßigen `<a>`-Anker-Tags experimentieren:
 
    ```js
    <a href="/content/wknd-spa-react/us/en/home.html">
@@ -323,8 +323,8 @@ Die Navigation und das Routing werden mit [React-Router](https://reactrouter.com
    </a>
    ```
 
-   Dies kann den Unterschied zwischen SPA Routing und regulären Web-Seiten-Links veranschaulichen.
+   Dies kann den Unterschied zwischen SPA-Routing und regulären Web-Seiten-Links veranschaulichen.
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
-Herzlichen Glückwunsch! Sie haben erfahren, wie mehrere Ansichten im SPA durch die Zuordnung zu AEM Seiten mit dem SPA Editor SDK unterstützt werden können. Die dynamische Navigation wurde mit dem React-Router implementiert und zum `Header` -Komponente.
+Herzlichen Glückwunsch! Sie wissen jetzt, wie mehrere Ansichten in der SPA durch die Zuordnung zu AEM-Seiten mit dem SPA Editor SDK unterstützt werden können. Die dynamische Navigation wurde mit React Router implementiert und zur `Header`-Komponente hinzugefügt.
