@@ -1,6 +1,6 @@
 ---
-title: AEM Inhaltsfragment-Konsolenerweiterungen
-description: Erfahren Sie, wie Sie AEM as a Cloud Service Inhaltsfragment-Konsolenerweiterungen erstellen und bereitstellen
+title: Erweiterungen der AEM-Inhaltsfragmentkonsole
+description: Lernen Sie, Erweiterungen der Inhaltsfragmentkonsole von AEM as a Cloud Service zu erstellen und zu implementieren
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -11,47 +11,47 @@ kt: 11603
 thumbnail: KT-11603.png
 last-substantial-update: 2022-12-09T00:00:00Z
 source-git-commit: d902eb9a8d497a43c8d4ca63767f81a35eadf139
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '745'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 
-# AEM Content Fragments Console-Erweiterung
+# Erweiterung der AEM-Inhaltsfragmentkonsole
 
-[AEM Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=de) Erweiterungen können über zwei Erweiterungspunkte hinzugefügt werden: eine Schaltfläche im [Die Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=de) Kopfzeilenmenü oder Aktionsleiste. Die Erweiterungen werden in JavaScript geschrieben, das als App Builder-Apps ausgeführt wird. Sie können eine benutzerdefinierte Web-Benutzeroberfläche und Server-lose Adobe I/O Runtime-Aktionen implementieren, um intensivere und langwierige Arbeiten durchzuführen.
+Erweiterungen der [AEM-Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=de) können über zwei Erweiterungspunkte hinzugefügt werden: eine Schaltfläche im Kopfzeilenmenü der [Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=de) oder in der Aktionsleiste. Die Erweiterungen werden in JavaScript geschrieben und als App-Builder-Apps ausgeführt. Sie können eine benutzerdefinierte Web-Benutzeroberfläche und Server-lose Adobe I/O Runtime-Aktionen implementieren, um intensivere und länger andauernde Aufgaben auszuführen.
 
-![AEM Content Fragments Console-Erweiterung](./assets/overview/example.png){align="center"}
+![Erweiterung der AEM-Inhaltsfragmentkonsole](./assets/overview/example.png){align="center"}
 
 | Erweiterungstyp | Beschreibung | Parameter |
 | :--- | :--- | :--- |
-| Menü &quot;Kopfzeile&quot; | Fügt eine Schaltfläche zur Kopfzeile hinzu, die angezeigt wird, wenn __zero__ Inhaltsfragmente sind ausgewählt. | Ohne. |
-| Symbolleiste | Fügt der Aktionsleiste eine Schaltfläche hinzu, die angezeigt wird, wenn __eine oder mehrere__ Inhaltsfragmente sind ausgewählt. | Ein Array der Pfade der ausgewählten Inhaltsfragmente. |
+| Kopfzeilenmenü | Fügt eine Schaltfläche zur Kopfzeile hinzu, die angezeigt wird, wenn __null__ Inhaltsfragmente ausgewählt sind. | Keine |
+| Aktionsleiste | Fügt eine Schaltfläche zur Aktionsleiste hinzu, die angezeigt wird, wenn __eine oder mehrere__ Inhaltsfragmente ausgewählt sind. | Ein Array der Pfade der ausgewählten Inhaltsfragmente. |
 
-Eine einzelne AEM Inhaltsfragmente-Konsolenerweiterung kann null oder ein Kopfzeilenmenü sowie null oder einen Erweiterungstyp für die Aktionsleiste enthalten. Wenn mehrere Erweiterungstypen desselben Typs erforderlich sind, müssen mehrere AEM Content Fragments Console-Erweiterungen erstellt werden.
+Eine einzelne Erweiterung der AEM-Inhaltsfragmentkonsole kann null oder ein Kopfzeilenmenü sowie null oder einen Erweiterungstyp für die Aktionsleiste enthalten. Wenn mehrere Erweiterungstypen desselben Typs erforderlich sind, müssen mehrere Erweiterungen der AEM-Inhaltsfragmentkonsole erstellt werden.
 
-AEM der Content Fragments Console-Erweiterungen benötigen Sie eine [Adobe Developer Console-Projekt](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console) und [App Builder-App](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) mithilfe der `@adobe/aem-cf-admin-ui-ext-tpl` Vorlage, die mit dem Adobe Developer Console-Projekt verknüpft ist.
+Erweiterungen der AEM-Inhaltsfragmentkonsole benötigen ein [Adobe Entwicklerkonsolen-Projekt](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#create-a-project-in-adobe-developer-console?lang=de) und eine [App-Builder-App](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation?lang=de) unter Verwendung der mit dem Adobe Entwicklerkonsolen-Projekt verknüpften `@adobe/aem-cf-admin-ui-ext-tpl`-Vorlage.
 
-Wählen Sie beim Generieren der App Builder-App basierend auf der Funktion der Erweiterung eine der folgenden Funktionen aus. Alle Kombinationen von Optionen können in einer Erweiterung verwendet werden.
+Wählen Sie beim Generieren der App Builder-App basierend auf der Funktion der Erweiterung eine der folgenden Funktionen aus. In einer Erweiterung können alle beliebigen Kombinationen von Optionen verwendet werden.
 
-|  | Schaltfläche hinzufügen zu [Menü &quot;Kopfzeile&quot;](./header-menu.md) | Schaltfläche hinzufügen zu [Aktionsleiste](./action-bar.md) | Anzeigen [Modal](./modal.md) | Hinzufügen [serverseitiger Handler](./runtime-action.md) |
+|  | Schaltfläche zu [Kopfzeilenmenü](./header-menu.md) hinzufügen | Schaltfläche zu [Aktionsleiste](./action-bar.md) hinzufügen | [Modale Fenster](./modal.md) anzeigen | [Server-seitigen Handler](./runtime-action.md) hinzufügen |
 | ------------------------------------------ | :-----------------------: | :----------------------: | :--------: | :--------------------:  |
-| Verfügbar, wenn Inhaltsfragmente nicht ausgewählt sind | ms |  |  |  |
-| Verfügbar, wenn mindestens ein Inhaltsfragment ausgewählt ist |  | ✔ |  |  |
-| Erfasst benutzerdefinierte Eingaben vom Benutzer |  |  | ✔️ |  |
-| Zeigt benutzerdefiniertes Feedback an den Benutzer an |  |  | ✔️ |  |
+| Verfügbar, wenn Inhaltsfragmente nicht ausgewählt sind | ✔ |  |  |  |
+| Verfügbar, wenn ein oder mehrere Inhaltsfragmente ausgewählt sind |  | ✔ |  |  |
+| Erfasst benutzerdefinierte Eingaben des Benutzers bzw. der Benutzerin |  |  | ✔️ |  |
+| Zeigt den Benutzenden benutzerdefiniertes Feedback an |  |  | ✔️ |  |
 | Ruft HTTP-Anfragen an AEM auf |  |  |  | ✔ |
-| Ruft HTTP-Anforderungen an Adobe-/Drittanbieterdienste auf |  |  |  | ✔ |
+| Ruft HTTP-Anforderungen an Adobe/Drittanbieterdienste auf |  |  |  | ✔ |
 
 
 ## Adobe Developer-Dokumentation
 
-Adobe Developer enthält Entwicklerdetails zu AEM Inhaltsfragment-Konsolenerweiterungen. Lesen Sie die [Adobe Developer-Inhalte für weitere technische Details](https://developer.adobe.com/uix/docs/).
+Adobe Developer enthält Entwicklerdetails zu Erweiterungen für die AEM-Inhaltsfragmentkonsole. Lesen Sie die [Adobe Developer-Inhalte für weitere technische Details](https://developer.adobe.com/uix/docs/).
 
 ## Entwickeln einer Erweiterung
 
-Gehen Sie wie folgt vor, um zu erfahren, wie Sie eine AEM Inhaltsfragment-Konsolenerweiterung für AEM as a Cloud Service erstellen, entwickeln und bereitstellen.
+Folgen Sie den unten stehenden Schritten, um zu erfahren, wie Sie eine Erweiterung der AEM-Inhaltsfragmentkonsole für AEM as a Cloud Service erstellen, entwickeln und bereitstellen.
 
 <div class="columns is-multiline">
     <!-- Create Adobe Developer Project -->
@@ -67,7 +67,7 @@ Gehen Sie wie folgt vor, um zu erfahren, wie Sie eine AEM Inhaltsfragment-Konsol
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">1. Projekt erstellen</p>
-                    <p class="is-size-6">Erstellen Sie ein Adobe Developer Console-Projekt, das den Zugriff auf andere Adobe-Dienste definiert und dessen Implementierungen verwaltet.</p>
+                    <p class="is-size-6">Erstellen Sie ein Adobe Entwicklerkonsolen-Projekt, in dem sein Zugriff auf andere Adobe-Dienste definiert wird und seine Implementierungen verwaltet werden.</p>
                     <a href="./adobe-developer-console-project.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Erstellen eines Adobe Developer-Projekts</span>
                     </a>
@@ -80,7 +80,7 @@ Gehen Sie wie folgt vor, um zu erfahren, wie Sie eine AEM Inhaltsfragment-Konsol
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./app-initialization.md" title="Generieren einer Erweiterungs-App" tabindex="-1">
+                    <a href="./app-initialization.md" title="Erstellen einer Erweiterungs-App" tabindex="-1">
                         <img class="is-bordered-r-small" src="./assets/initialize-app/card.png" alt="Initialisieren einer Erweiterungs-App">
                     </a>
                 </figure>
@@ -88,10 +88,10 @@ Gehen Sie wie folgt vor, um zu erfahren, wie Sie eine AEM Inhaltsfragment-Konsol
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">2. Initialisieren einer Erweiterungs-App</p>
-                    <p class="is-size-6">Initialisieren Sie eine AEM App Builder-App der Inhaltsfragmentkonsole-Erweiterung, die definiert, wo die Erweiterung angezeigt wird und wie sie funktioniert.</p>
+                    <p class="is-size-6">Initialisieren Sie eine App-Builder-App für die Erweiterung der AEM-Inhaltsfragmentkonsole, die definiert, wo die Erweiterung angezeigt wird und welche Aufgabe sie leistet.</p>
                     <a href="./app-initialization.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Initialisieren einer Erweiterungs-App</span>
-                    </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Initialisieren einer Erweiterungs-App</span>
+ </a>
                 </div>
             </div>
         </div>
@@ -101,18 +101,18 @@ Gehen Sie wie folgt vor, um zu erfahren, wie Sie eine AEM Inhaltsfragment-Konsol
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./extension-registration.md" title="Erweiterungsregistrierung" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./assets/extension-registration/card.png" alt="Erweiterungsregistrierung">
+                    <a href="./extension-registration.md" title="Registrierung der Erweiterung" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./assets/extension-registration/card.png" alt="Registrierung der Erweiterung">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">3. Registrierung der Erweiterung</p>
-                    <p class="is-size-6">Registrieren Sie die Erweiterung in der AEM Inhaltsfragment-Konsole als Kopfzeilenmenü oder Aktionssymbaltonerweiterungstyp.</p>
+                    <p class="is-size-6">Registrieren Sie die Erweiterung in der AEM-Inhaltsfragmentkonsole als Kopfzeilenmenü- oder Aktionsleistenerweiterungs-Typ.</p>
                     <a href="./extension-registration.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Registrieren der Erweiterung</span>
-                    </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Registrieren der Erweiterung</span>
+ </a>
                 </div>
             </div>
         </div>
@@ -122,18 +122,18 @@ Gehen Sie wie folgt vor, um zu erfahren, wie Sie eine AEM Inhaltsfragment-Konsol
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./header-menu.md" title="Menü "Kopfzeile"" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./assets/header-menu/card.png" alt="Menü "Kopfzeile"">
+                    <a href="./header-menu.md" title="Kopfzeilenmenü" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./assets/header-menu/card.png" alt="Kopfzeilenmenü">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">4a. Kopfzeilenmenü</p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie eine AEM Header-Menüerweiterung der Inhaltsfragmentkonsole erstellen.</p>
+                    <p class="is-size-6">Lernen Sie, eine Kopfzeilenmenüerweiterung der AEM-Inhaltsfragmentkonsole zu erstellen.</p>
                     <a href="./header-menu.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Erweitern des Kopfzeilenmenüs</span>
-                    </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Erweitern des Kopfzeilenmenüs</span>
+ </a>
                 </div>
             </div>
         </div>
@@ -151,10 +151,10 @@ Gehen Sie wie folgt vor, um zu erfahren, wie Sie eine AEM Inhaltsfragment-Konsol
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">4b. Aktionsleiste</p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie eine Aktionsleistenerweiterung der AEM Inhaltsfragment-Konsole erstellen.</p>
+                    <p class="is-size-6">Lernen Sie, eine Aktionsleistenerweiterung der AEM-Inhaltsfragmentkonsole zu erstellen.</p>
                     <a href="./action-bar.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Aktionsleiste erweitern</span>
-                    </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Erweitern der Aktionsleiste</span>
+ </a>
                 </div>
             </div>
         </div>
@@ -172,10 +172,10 @@ Gehen Sie wie folgt vor, um zu erfahren, wie Sie eine AEM Inhaltsfragment-Konsol
             <div class="card-content is-padded-small">
                 <div class="content">
                     <p class="headline is-size-5 has-text-weight-bold">5. Modal</p>
-                    <p class="is-size-6">Fügen Sie der Erweiterung ein benutzerdefiniertes Modal hinzu, mit dem Sie benutzerspezifische Erlebnisse erstellen können. Modale erfassen häufig Benutzereingaben und zeigen die Ergebnisse eines Vorgangs an.</p>
+                    <p class="is-size-6">Fügen Sie der Erweiterung ein benutzerdefiniertes modales Fenster hinzu, mit dem Sie benutzerspezifische Erlebnisse erstellen können. Modale Fenster erfassen normalerweise Benutzereingaben und zeigen die Ergebnisse eines Vorgangs an.</p>
                     <a href="./modal.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Modal hinzufügen</span>
-                    </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Hinzufügen eines modalen Fensters</span>
+ </a>
                 </div>
             </div>
         </div>
@@ -192,11 +192,11 @@ Gehen Sie wie folgt vor, um zu erfahren, wie Sie eine AEM Inhaltsfragment-Konsol
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">6. Adobe I/O Runtime-Maßnahmen</p>
-                    <p class="is-size-6">Fügen Sie eine Server-lose Adobe I/O Runtime-Aktion hinzu, die die Erweiterung aufrufen kann, um mit Inhaltsfragmenten zu interagieren und AEM benutzerdefinierte Geschäftsvorgänge auszuführen.</p>
+                    <p class="headline is-size-5 has-text-weight-bold">6. Adobe I/O Runtime-Aktion</p>
+                    <p class="is-size-6">Fügen Sie eine Server-lose Adobe I/O Runtime-Aktion hinzu, die die Erweiterung aufrufen kann, um mit Inhaltsfragmenten und AEM zu interagieren und benutzerdefinierte Geschäftsvorgänge auszuführen.</p>
                     <a href="./runtime-action.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Hinzufügen einer Adobe I/O Runtime-Aktion</span>
-                    </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Hinzufügen einer Adobe I/O Runtime-Aktion</span>
+ </a>
                 </div>
             </div>
         </div>
@@ -213,11 +213,11 @@ Gehen Sie wie folgt vor, um zu erfahren, wie Sie eine AEM Inhaltsfragment-Konsol
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">7. Test</p>
-                    <p class="is-size-6">Testen Sie die Erweiterungen während der Entwicklung und die Freigabe abgeschlossener Erweiterungen für QA- oder UAT-Tester mithilfe einer speziellen URL.</p>
+                    <p class="headline is-size-5 has-text-weight-bold">7. Testen</p>
+                    <p class="is-size-6">Testen Sie die Erweiterungen während der Entwicklung und geben Sie fertiggestellte Erweiterungen für QA- oder UAT-Tester mithilfe einer speziellen URL frei.</p>
                     <a href="./test.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Testen der Erweiterung</span>
-                    </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Testen der Erweiterung</span>
+ </a>
                 </div>
             </div>
         </div>
@@ -227,18 +227,18 @@ Gehen Sie wie folgt vor, um zu erfahren, wie Sie eine AEM Inhaltsfragment-Konsol
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./deploy.md" title="Erweiterungsbereitstellung" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./assets/deploy/card.png" alt="Erweiterungsbereitstellung">
+                    <a href="./deploy.md" title="Implementierung der Erweiterung" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./assets/deploy/card.png" alt="Implementierung der Erweiterung">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">8. Produktionsbereitstellung</p>
-                    <p class="is-size-6">Stellen Sie die Erweiterung für Adobe I/O bereit, damit sie für AEM Benutzer verfügbar ist. Erweiterungen können aktualisiert und auch entfernt werden.</p>
+                    <p class="headline is-size-5 has-text-weight-bold">8. Implementieren in der Produktionsumgebung</p>
+                    <p class="is-size-6">Implementieren Sie die Erweiterung für Adobe I/O, damit sie für AEM-Benutzende verfügbar ist. Erweiterungen können aktualisiert und auch entfernt werden.</p>
                     <a href="./deploy.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Bereitstellung für Produktion</span>
-                    </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Implementierung in der Produktion</span>
+ </a>
                 </div>
             </div>
         </div>
@@ -247,7 +247,7 @@ Gehen Sie wie folgt vor, um zu erfahren, wie Sie eine AEM Inhaltsfragment-Konsol
 
 ## Beispielerweiterungen
 
-Beispiel AEM Inhaltsfragment-Konsolenerweiterungen.
+Beispielerweiterungen der AEM-Inhaltsfragmentkonsole.
 
 <div class="columns is-multiline">
     <!-- Bulk property update extension -->
@@ -255,18 +255,18 @@ Beispiel AEM Inhaltsfragment-Konsolenerweiterungen.
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./example-extensions/bulk-property-update.md" title="Aktualisierung der Masseneigenschaft" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./example-extensions/assets/bulk-property-update/card.png" alt="Aktualisierung der Masseneigenschaft">
+                    <a href="./example-extensions/bulk-property-update.md" title="Stapelweise Aktualisierung einer Eigenschaft durch eine Erweiterung" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./example-extensions/assets/bulk-property-update/card.png" alt="Stapelweise Aktualisierung einer Eigenschaft durch eine Erweiterung">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">Aktualisierung der Masseneigenschaft</p>
-                    <p class="is-size-6">Erkunden Sie eine Beispiel-Aktionsleistenerweiterung, die eine Eigenschaft in ausgewählten Inhaltsfragmenten stapelweise aktualisiert.</p>
+                    <p class="headline is-size-5 has-text-weight-bold">Stapelweise Aktualisierung einer Eigenschaft durch eine Erweiterung</p>
+                    <p class="is-size-6">Erkunden Sie das Beispiel einer Aktionsleistenerweiterung, von der eine Eigenschaft in ausgewählten Inhaltsfragmenten stapelweise aktualisiert wird.</p>
                     <a href="./example-extensions/bulk-property-update.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Beispielerweiterung durchsuchen</span>
-                    </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Erkunden eines Beispiels einer Erweiterung</span>
+ </a>
                 </div>
             </div>
         </div>
@@ -276,18 +276,18 @@ Beispiel AEM Inhaltsfragment-Konsolenerweiterungen.
         <div class="card">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./example-extensions/image-generation-and-image-upload.md" title="OpenAI-basierte Bildgenerierung und Upload in AEM Erweiterung" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./example-extensions/assets/digital-image-generation/screenshot.png" alt="OpenAI-basierte Bildgenerierung und Upload in AEM Erweiterung">
+                    <a href="./example-extensions/image-generation-and-image-upload.md" title="Erweiterung für die OpenAI-basierte Bilderstellung und den Upload in AEM" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./example-extensions/assets/digital-image-generation/screenshot.png" alt="Erweiterung für die OpenAI-basierte Bilderstellung und den Upload in AEM">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-5 has-text-weight-bold">OpenAI-basierte Bildgenerierung und Upload in AEM Erweiterung</p>
-                    <p class="is-size-6">Erkunden Sie eine Beispiel-Aktionsleistenerweiterung, die ein Bild mit OpenAI generiert, es in AEM hochlädt und die Bildeigenschaft für das ausgewählte Inhaltsfragment aktualisiert.</p>
+                    <p class="headline is-size-5 has-text-weight-bold">Erweiterung für die OpenAI-basierte Bilderstellung und den Upload in AEM</p>
+                    <p class="is-size-6">Erkunden Sie das Beispiel einer Aktionsleistenerweiterung, die ein Bild mit OpenAI generiert, es in AEM hochlädt und die Bildeigenschaft für das ausgewählte Inhaltsfragment aktualisiert.</p>
                     <a href="./example-extensions/image-generation-and-image-upload.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Beispielerweiterung durchsuchen</span>
-                    </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Erkunden einer Beispielerweiterung</span>
+ </a>
                 </div>
             </div>
         </div>
