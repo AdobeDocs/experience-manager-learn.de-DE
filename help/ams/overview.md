@@ -3,13 +3,13 @@ title: Adobe Experience Manager Managed Services-Tutorials
 description: Eine Sammlung von Tutorials für Adobe Experience Manager (AEM) Managed Services
 sub-product: Adobe Managed Services
 source-git-commit: 3bc3a0f38d97c9dbe4428686a46d281d7567f627
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '38'
-ht-degree: 23%
+ht-degree: 100%
 
 ---
 
-# Managed Services-Tutorials AEM {#overview}
+# AEM Managed Services-Tutorials {#overview}
 
 AEM Managed Services ist ...
 
