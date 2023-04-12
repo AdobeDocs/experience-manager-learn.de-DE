@@ -1,5 +1,5 @@
 ---
-title: Definieren von Inhaltsfragmentmodellen - Erste Schritte mit AEM Headless - GraphQL
+title: Definieren von Inhaltsfragmentmodellen – Erste Schritte mit AEM Headless – GraphQL
 description: Erste Schritte mit Adobe Experience Manager (AEM) und GraphQL. Erfahren Sie in AEM, wie Sie Inhalte modellieren und ein Schema mit Inhaltsfragmentmodellen erstellen. Überprüfen Sie vorhandene Modelle und erstellen Sie ein Modell. Erfahren Sie mehr über die verschiedenen Datentypen, mit denen ein Schema definiert werden kann.
 version: Cloud Service
 mini-toc-levels: 1
@@ -11,150 +11,150 @@ role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
 source-git-commit: 25c289b093297e870c52028a759d05628d77f634
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1115'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 # Definieren von Inhaltsfragmentmodellen {#content-fragment-models}
 
-In diesem Kapitel erfahren Sie, wie Sie Inhalte modellieren und ein Schema mit **Inhaltsfragmentmodelle**. Sie erfahren mehr über die verschiedenen Datentypen, mit denen ein Schema als Teil des Modells definiert werden kann.
+In diesem Kapitel erfahren Sie, wie Sie Inhalte modellieren und ein Schema mit **Inhaltsfragmentmodellen** erstellen. Sie erfahren mehr über die verschiedenen Datentypen, mit denen ein Schema als Teil des Modells definiert werden kann.
 
-Wir erstellen zwei einfache Modelle, **Team** und **Person**. Die **Team** Das Datenmodell verfügt über Namen, Kurznamen und Beschreibungen und referenziert die **Person** Datenmodell mit vollständigem Namen, Biodetails, Profilbild und Berufungsliste.
+Wir erstellen zwei einfache Modelle, **Team** und **Person**. Das Datenmodell **Team** hat einen Namen, einen Kurznamen und eine Beschreibung und verweist auf das Datenmodell **Person**, das den vollständigen Namen, Biodetails, ein Profilbild und eine Liste der Berufe enthält.
 
-Sie können auch Ihr eigenes Modell gemäß den grundlegenden Schritten erstellen und die entsprechenden Schritte wie GraphQL-Abfragen und React-App-Code anpassen oder einfach die in diesen Kapiteln beschriebenen Schritte ausführen.
+Sie können auch ein eigenes Modell erstellen, das den grundlegenden Schritten folgt und die entsprechenden Schritte wie GraphQL-Abfragen und React-App-Code anpassen oder einfach die in diesen Kapiteln beschriebenen Schritte ausführen.
 
 ## Voraussetzungen {#prerequisites}
 
-Dies ist ein mehrteiliges Tutorial, bei dem davon ausgegangen wird, dass ein [AEM Autorenumgebung ist verfügbar](./overview.md#prerequisites).
+Dies ist ein mehrteiliges Tutorial, bei dem davon ausgegangen wird, dass eine [AEM Author-Umgebung verfügbar ist](./overview.md#prerequisites).
 
 ## Ziele {#objectives}
 
-* Erstellen Sie ein Inhaltsfragmentmodell.
+* Erstellen eines Inhaltsfragmentmodells.
 * Identifizieren Sie verfügbare Datentypen und Validierungsoptionen zum Erstellen von Modellen.
-* So definiert das Inhaltsfragmentmodell **both** das Datenschema und die Authoring-Vorlage für ein Inhaltsfragment.
+* Verstehen, wie das Inhaltsfragmentmodell **beide** das Datenschema und die Autorenvorlage für ein Inhaltsfragment definiert.
 
 ## Erstellen einer Projektkonfiguration
 
-Eine Projektkonfiguration enthält alle Inhaltsfragmentmodelle, die mit einem bestimmten Projekt verknüpft sind, und bietet eine Möglichkeit, Modelle zu organisieren. Es muss mindestens ein Projekt erstellt werden **before** Erstellen des Inhaltsfragmentmodells.
+Eine Projektkonfiguration enthält alle Inhaltsfragmentmodelle, die einem bestimmten Projekt zugehören, und bietet die Möglichkeit, Modelle zu organisieren. Es muss mindestens ein Projekt **vor** dem Erstellen des Inhaltsfragmentmodells erstellt werden.
 
-1. Melden Sie sich beim AEM an **Autor** Umwelt (z. B. `https://author-pYYYY-eXXXX.adobeaemcloud.com/`)
-1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Allgemein** > **Konfigurationsbrowser**.
+1. Melden Sie sich bei der AEM **Author-** Umgebung an (z. B. `https://author-pYYYY-eXXXX.adobeaemcloud.com/`)
+1. Navigieren Sie im AEM-Startbildschirm zu **Tools** > **Allgemein** > **Konfigurations-Browser**.
 
-   ![Navigieren Sie zum Konfigurationsbrowser .](assets/content-fragment-models/navigate-config-browser.png)
-1. Klicken **Erstellen** in der oberen rechten Ecke
+   ![Navigieren Sie zum Konfigurations-Browser](assets/content-fragment-models/navigate-config-browser.png)
+1. Klicken Sie auf **Erstellen** in der oberen rechten Ecke
 1. Geben Sie im daraufhin angezeigten Dialogfeld Folgendes ein:
 
    * Titel*: **Mein Projekt**
-   * Name*: **my-project** (verwenden Sie vorzugsweise Kleinbuchstaben mit Bindestrichen, um Wörter zu trennen. Diese Zeichenfolge beeinflusst den eindeutigen GraphQL-Endpunkt, für den Clientanwendungen Anfragen ausführen.)
-   * Überprüfen **Inhaltsfragmentmodelle**
-   * Überprüfen **GraphQL - Persistente Abfragen**
+   * Name*: **mein-projekt** (verwenden Sie vorzugsweise nur Kleinbuchstaben mit Bindestrichen, um Wörter zu trennen. Diese Zeichenfolge beeinflusst den eindeutigen GraphQL-Endpunkt, an den Client-Anwendungen Anforderungen ausführen.)
+   * Kreuzen Sie **Inhaltsfragmentmodelle** an
+   * Kreuzen Sie **GraphQL – Persistente Abfragen** an
 
    ![Meine Projektkonfiguration](assets/content-fragment-models/my-project-configuration.png)
 
 ## Erstellen von Inhaltsfragmentmodellen
 
-Erstellen Sie als Nächstes zwei Modelle für eine **Team** und **Person**.
+Erstellen Sie als Nächstes zwei Modelle für ein **Team** und eine **Person**.
 
 ### Erstellen des Personenmodells
 
-Erstellen Sie ein Modell für eine **Person**: das Datenmodell, das eine Person darstellt, die Teil eines Teams ist.
+Erstellen Sie ein Modell für eine **Person** als Datenmodell, das eine Person darstellt, die Teil eines Teams ist.
 
-1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Allgemein** > **Inhaltsfragmentmodelle**.
+1. Navigieren Sie im AEM-Startbildschirm zu **Tools** > **Allgemein** > **Inhaltsfragmentmodelle**.
 
    ![Navigieren zu Inhaltsfragmentmodellen](assets/content-fragment-models/navigate-cf-models.png)
 
-1. Navigieren Sie zur **Mein Projekt** Ordner.
-1. Tippen **Erstellen** in der oberen rechten Ecke, um die **Modell erstellen** Assistent.
-1. In **Modelltitel** Feld, eingeben **Person** und tippen **Erstellen**. Tippen Sie im daraufhin angezeigten Dialogfeld auf **Öffnen**, um das Modell zu erstellen.
+1. Navigieren Sie zum Ordner **Mein Projekt**.
+1. Tippen Sie auf **Erstellen** in der oberen rechten Ecke, um den **Modellerstellungs**-Assistenten aufzurufen.
+1. Geben Sie **Person** im Feld **Modelltitel** ein und tippen Sie auf **Erstellen**. Tippen Sie im daraufhin angezeigten Dialogfeld auf **Öffnen**, um das Modell zu erstellen.
 
-1. Ziehen und Ablegen eines **Einzelzeilentext** -Element in das Hauptbedienfeld ein. Geben Sie die folgenden Eigenschaften in die **Eigenschaften** tab:
+1. Ziehen Sie ein **Einzelzeilentext**-Element in das Hauptbedienfeld. Geben Sie die folgenden Eigenschaften in der Registerkarte **Eigenschaften** ein:
 
    * **Feldbezeichnung**: **Vollständiger Name**
    * **Eigenschaftsname**: `fullName`
-   * Überprüfen **Erforderlich**
+   * Auswahl **Erforderlich**
 
-   ![Eigenschaftsfeld &quot;Vollständiger Name&quot;](assets/content-fragment-models/full-name-property-field.png)
+   ![Eigenschaftsfeld vom vollständigen Namen](assets/content-fragment-models/full-name-property-field.png)
 
-   Die **Eigenschaftsname** definiert den Namen der Eigenschaft, die in AEM beibehalten wird. Die **Eigenschaftsname** definiert auch **key** Name für diese Eigenschaft als Teil des Datenschemas. Diese **key** wird verwendet, wenn die Inhaltsfragmentdaten über GraphQL-APIs verfügbar gemacht werden.
+   Der **Eigenschaftsname** definiert den Namen der Eigenschaft, die in AEM persistiert wird. Der **Eigenschaftsname** definiert auch den Namen des **Schlüssels** für diese Eigenschaft als Teil des Datenschemas. Dieser **Schlüssel** wird verwendet, wenn die Inhaltsfragmentdaten über GraphQL-APIs verfügbar gemacht werden.
 
-1. Tippen Sie auf **Datentypen** Registerkarte und per Drag &amp; Drop **Mehrzeiliger Text** Feld unter **Vollständiger Name** -Feld. Geben Sie die folgenden Eigenschaften ein:
+1. Tippen Sie auf die Registerkarte **Datentypen** und ziehen per Drag &amp; Drop ein **mehrzeiliger Textfeld** unter das Feld **Vollständiger Name**. Tragen Sie die folgenden Eigenschaften ein:
 
    * **Feldbezeichnung**: **Biografie**
    * **Eigenschaftsname**: `biographyText`
    * **Standardtyp**: **Rich-Text**
 
-1. Klicken Sie auf **Datentypen** Registerkarte und per Drag &amp; Drop **Inhaltsreferenz** -Feld. Geben Sie die folgenden Eigenschaften ein:
+1. Klicken Sie auf die Registerkarte **Datentypen** und ziehen per Drag &amp; Drop das **Inhaltsreferenz**-Feld hinein. Tragen Sie die folgenden Eigenschaften ein:
 
    * **Feldbezeichnung**: **Profilbild**
    * **Eigenschaftsname**: `profilePicture`
    * **Stammverzeichnis**: `/content/dam`
 
-   Bei der Konfiguration der **Stammverzeichnis** können Sie auf die **Ordner** -Symbol, um ein Modal aufzurufen und den Pfad auszuwählen. Dadurch wird eingeschränkt, welche Ordnerautoren den Pfad ausfüllen können. `/content/dam` ist der Stamm, in dem alle AEM Assets (Bilder, Videos, andere Inhaltsfragmente) gespeichert werden.
+   Bei der Konfiguration des **Stammverzeichnisses** können Sie auf das **Ordner**-Symbol klicken, um ein modales Fenster aufzurufen und den Pfad auszuwählen. Dadurch wird eingeschränkt, welche Ordner Autorinnen und Autoren nutzen können, um den Pfad auszufüllen. `/content/dam` ist der Stamm, in dem alle AEM Assets (Bilder, Videos, andere Inhaltsfragmente) gespeichert werden.
 
-1. Hinzufügen einer Validierung zum **Picture Reference** sodass nur Content-Typen **Bilder** kann zum Ausfüllen des Felds verwendet werden.
+1. Fügen Sie eine Validierung zur **Bildreferenz** hinzu, sodass nur Content-Typen von **Bildern** zum Ausfüllen des Felds verwendet werden können.
 
    ![Auf Bilder beschränken](assets/content-fragment-models/picture-reference-content-types.png)
 
-1. Klicken Sie auf **Datentypen** Registerkarte und per Drag &amp; Drop **Auflistung**  Datentyp unter **Picture Reference** -Feld. Geben Sie die folgenden Eigenschaften ein:
+1. Klicken Sie auf die Registerkarte **Datentypen** und ziehen Sie per Drag &amp; Drop einen **Auflistungs**-Datentyp unter das Feld **Bildreferenz**. Tragen Sie die folgenden Eigenschaften ein:
 
    * **Rendern als**: **Kontrollkästchen**
    * **Feldbezeichnung**: **Beruf**
    * **Eigenschaftsname**: `occupation`
 
-1. Mehrere hinzufügen **Optionen** mithilfe der **Option hinzufügen** Schaltfläche. Verwenden Sie denselben Wert für **Optionsbeschriftung** und **Optionswert**:
+1. Fügen Sie mehrere **Optionen** mithilfe der Schaltfläche **Option hinzufügen** hinzu. Verwenden Sie denselben Wert für **Optionsbeschriftung** und **Optionswert**:
 
-   **Künstler**, **Einflussnehmer**, **Fotograf**, **Reisende**, **Writer**, **YouTuber**
+   **Künstler oder Künstlerin**, **Influencer oder Influencerin**, **Fotograf oder Fotografin**, **Reisender oder Reisende**, **Verfasser oder Verfasserin**, **YouTuber oder YouTuberin**
 
-1. Das endgültige **Person** -Modell sollte wie folgt aussehen:
+1. Das endgültige **Personen** modell sollte wie folgt aussehen:
 
-   ![Endbenutzer-Modell](assets/content-fragment-models/final-author-model.png)
+   ![Endgültiges Personenmodell](assets/content-fragment-models/final-author-model.png)
 
 1. Klicken Sie auf **Speichern**, um die Änderungen zu speichern.
 
-### Teammodell erstellen
+### Erstellen des Teammodells
 
-Erstellen Sie ein Modell für eine **Team**, das Datenmodell für ein Personenteam. Das Team-Modell verweist auf das Personen-Modell, um die Mitglieder des Teams zu repräsentieren.
+Erstellen Sie ein Modell für ein **Team** als Datenmodell für ein Personenteam. Das Teammodell verweist auf das Personenmodell, um die Mitglieder des Teams zu repräsentieren.
 
-1. Im **Mein Projekt** Ordner, tippen Sie auf **Erstellen** in der oberen rechten Ecke, um die **Modell erstellen** Assistent.
-1. In **Modelltitel** Feld, eingeben **Team** und tippen **Erstellen**.
+1. Tippen Sie im Ordner **Mein Projekt** auf **Erstellen** in der oberen rechten Ecke, um den Assistenten zum **Erstellen eines Modells** aufzurufen.
+1. Geben Sie im Feld **Modelltitel** **Team** ein und tippen Sie auf **Erstellen**.
 
-   Tippen **Öffnen** im Dialogfeld, um das neu erstellte Modell zu öffnen.
+   Tippen Sie auf **Öffnen** im erscheinenden Dialogfeld, um das neu erstellte Modell zu öffnen.
 
-1. Ziehen und Ablegen eines **Einzelzeilentext** -Element in das Hauptbedienfeld ein. Geben Sie die folgenden Eigenschaften in die **Eigenschaften** tab:
+1. Ziehen Sie per Drag-and-Drop ein **Einzelzeilentext**-Element ins Hauptbedienfeld. Geben Sie die folgenden Eigenschaften in der Registerkarte **Eigenschaften** ein:
 
    * **Feldbezeichnung**: **Titel**
    * **Eigenschaftsname**: `title`
-   * Überprüfen **Erforderlich**
+   * Kreuzen Sie **Erforderlich** an
 
-1. Tippen Sie auf **Datentypen** Registerkarte erstellen und eine **Einzelzeilentext** -Element in das Hauptbedienfeld ein. Geben Sie die folgenden Eigenschaften in die **Eigenschaften** tab:
+1. Tippen Sie auf die Registerkarte **Datentypen** und ziehen Sie per Drag-and-Drop ein **Einzelzeilentext**-Element ins Hauptbedienfeld. Geben Sie die folgenden Eigenschaften in der Registerkarte **Eigenschaften** ein:
 
    * **Feldbezeichnung**: **Kurzname**
    * **Eigenschaftsname**: `shortName`
-   * Überprüfen **Erforderlich**
-   * Überprüfen **Eindeutig**
-   * Unter **Validierungstyp** > Auswählen **Benutzerdefiniert**
-   * Unter **Benutzerdefinierte Validierungsregex** > enter `^[a-z0-9\-_]{5,40}$` - Dadurch wird sichergestellt, dass nur alphanumerische Kleinbuchstaben und Gedankenstriche zwischen 5 und 40 Zeichen eingegeben werden können.
+   * Kreuzen Sie **Erforderlich** an
+   * Kreuzen Sie **Eindeutig** an
+   * Wählen Sie unter **Validierungstyp** > **Benutzerdefiniert**
+   * Geben Sie unter **Benutzerdefinierter Validierungs-Regex** > `^[a-z0-9\-_]{5,40}$` ein – dadurch wird sichergestellt, dass nur alphanumerische Kleinbuchstaben und Gedankenstriche zwischen 5 und 40 Zeichen eingegeben werden können.
 
-   Die `shortName` -Eigenschaft bietet uns eine Möglichkeit, ein einzelnes Team anhand eines verkürzten Pfads abzufragen. Die **Eindeutig** -Einstellung stellt sicher, dass der Wert pro Inhaltsfragment dieses Modells immer eindeutig ist.
+   Die Eigenschaft `shortName` bietet uns eine Möglichkeit, ein einzelnes Team anhand eines verkürzten Pfads abzufragen. Die Einstellung **Eindeutig** stellt sicher, dass der Wert pro Inhaltsfragment dieses Modells immer eindeutig ist.
 
-1. Tippen Sie auf **Datentypen** Registerkarte und per Drag &amp; Drop **Mehrzeiliger Text** Feld unter **Kurzname** -Feld. Geben Sie die folgenden Eigenschaften ein:
+1. Tippen Sie auf die Registerkarte **Datentypen** und ziehen Sie per Drag-and-Drop ein **mehrzeiliges Text** feld unter das Feld **Kurzname**. Tragen Sie die folgenden Eigenschaften ein:
 
    * **Feldbezeichnung**: **Beschreibung**
    * **Eigenschaftsname**: `description`
    * **Standardtyp**: **Rich-Text**
 
-1. Klicken Sie auf **Datentypen** Registerkarte und per Drag &amp; Drop **Fragmentverweis** -Feld. Geben Sie die folgenden Eigenschaften ein:
+1. Klicken Sie auf die Registerkarte **Datentypen** und legen Sie per Drag-and-Drop ein **Fragmentverweis**-Feld darin ab. Tragen Sie die folgenden Eigenschaften ein:
 
    * **Rendern als**: **Mehrere Felder**
    * **Feldbezeichnung**: **Team-Mitglieder**
    * **Eigenschaftsname**: `teamMembers`
-   * **Zulässige Inhaltsfragmentmodelle**: Wählen Sie über das Ordnersymbol die **Person** -Modell.
+   * **Zulässige Inhaltsfragmentmodelle**: Wählen Sie über das Ordnersymbol das **Personen** modell aus.
 
-1. Das endgültige **Team** -Modell sollte wie folgt aussehen:
+1. Das endgültige **Team** modell sollte wie folgt aussehen:
 
-   ![Abschließendes Teammodell](assets/content-fragment-models/final-team-model.png)
+   ![Endgültiges Teammodell](assets/content-fragment-models/final-team-model.png)
 
 1. Klicken Sie auf **Speichern**, um die Änderungen zu speichern.
 
@@ -164,19 +164,19 @@ Erstellen Sie ein Modell für eine **Team**, das Datenmodell für ein Personente
 
 ## Veröffentlichen von Projektkonfiguration und Inhaltsfragmentmodellen
 
-Nach Überprüfung und Überprüfung veröffentlichen Sie die `Project Configuration` &amp; `Content Fragment Model`
+Nach Überprüfung veröffentlichen Sie die `Project Configuration` und `Content Fragment Model`
 
-1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Allgemein** > **Konfigurationsbrowser**.
+1. Vom AEM-Startbildschirm, navigieren Sie zu **Tools** > **Allgemein** > **Konfigurations-Browser**.
 
-1. Tippen Sie auf das Kontrollkästchen neben **Mein Projekt** und tippen **Veröffentlichen**
+1. Tippen Sie auf das Kontrollkästchen neben **Mein Projekt** und dann auf **Veröffentlichen**
 
-   ![Veröffentlichungsprojektkonfiguration](assets/content-fragment-models/publish-project-config.png)
+   ![Projektkonfiguration veröffentlichen](assets/content-fragment-models/publish-project-config.png)
 
-1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Allgemein** > **Inhaltsfragmentmodelle**.
+1. Navigieren Sie auf dem AEM-Startbildschirm zu **Tools** > **Allgemein** > **Inhaltsfragmentmodelle**.
 
-1. Navigieren Sie zur **Mein Projekt** Ordner.
+1. Navigieren Sie zum Ordner **Mein Projekt**.
 
-1. Tippen **Person** und **Team** Modelle und tippen **Veröffentlichen**
+1. Tippen Sie auf die Modelle **Person** und **Team** und dann auf **Veröffentlichen**.
 
    ![Inhaltsfragmentmodelle veröffentlichen](assets/content-fragment-models/publish-content-fragment-model.png)
 
@@ -186,9 +186,9 @@ Herzlichen Glückwunsch, Sie haben gerade Ihre ersten Inhaltsfragmentmodelle ers
 
 ## Nächste Schritte {#next-steps}
 
-Im nächsten Kapitel [Erstellen von Inhaltsfragmentmodellen](author-content-fragments.md), erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf einem Inhaltsfragmentmodell basiert. Außerdem erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
+Im nächsten Kapitel, [Erstellen von Inhaltsfragmentmodellen](author-content-fragments.md), erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf einem Inhaltsfragmentmodell basiert. Außerdem erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
 
 ## Verwandte Dokumentation
 
-* [Inhaltsfragmentmodelle](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html)
+* [Inhaltsfragmentmodelle](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html?lang=de)
 
