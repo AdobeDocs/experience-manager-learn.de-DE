@@ -1,6 +1,6 @@
 ---
-title: Grundlegende React-App
-description: Eine einfache React-App, die eine Liste der WKND-Abenteuer und deren Details anzeigt
+title: Einfache React-App
+description: Eine einfache React-App, die eine Liste der WKND-Adventures und deren Details anzeigt
 version: Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments, GraphQL API
@@ -13,20 +13,20 @@ index: false
 hide: true
 hidefromtoc: true
 source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '92'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
-# Grundlegende React-App
+# Einfache React-App
 
-Diese [React](https://reactjs.org/) App zeigt, wie Sie Inhalte mithilfe AEM GraphQL-APIs mithilfe persistenter Abfragen abfragen können. Diese Anwendung ermöglicht die Filterung von WKND-Abenteuern und zeigt bei der Auswahl eines Abenteuers die Abenteuer mit allen Details an.
+Diese [React](https://reactjs.org/)-App zeigt, wie Sie mithilfe von AEM GraphQL-APIs unter Verwendung von persistierten Abfragen Inhalte abfragen können. Diese App ermöglicht die Filterung von WKND-Adventures und zeigt bei der Auswahl eines Adventures alle Details dieses Adventures an.
 
 Dieser Code:
 
-+ Ist mit einem AEM-Veröffentlichungsdienst verbunden und erfordert keine Authentifizierung
-+ Verwendet die persistenten Abfragen des WKND: `wknd-shared/adventures-all` und `wknd-shared/adventures-by-slug`
++ ist mit einem AEM-Veröffentlichungs-Service verbunden und erfordert keine Authentifizierung,
++ Verwendet die persistierten Abfragen von WKND: `wknd-shared/adventures-all` und `wknd-shared/adventures-by-slug`
 
-Eine genauere Übersicht über die Erstellung dieser Next.js-App erhalten Sie im Abschnitt [Beispieldokumentation zur React-App](../example-apps/react-app.md).
+Eine genauere Übersicht über den Aufbau dieser Next.js-App finden Sie im Abschnitt [Dokumentation für eine Beispiel-React-App](../example-apps/react-app.md).
