@@ -1,6 +1,6 @@
 ---
-title: Erkunden Sie die AEM GraphQL API - Erweiterte Konzepte von AEM Headless - GraphQL
-description: Senden Sie GraphQL-Abfragen mit der GraphiQL-IDE. Erfahren Sie mehr über erweiterte Abfragen mit Filtern, Variablen und Anweisungen. Abfrage nach Fragmenten und Inhaltsverweisen, einschließlich Verweisen aus mehrzeiligen Textfeldern.
+title: Erkunden der AEM-GraphQL-API – Erweiterte Konzepte von AEM Headless – GraphQL
+description: Senden Sie GraphQL-Abfragen mit der GraphiQL-IDE. Erfahren Sie mehr über erweiterte Abfragen mithilfe von Filtern, Variablen und Anweisungen. Erstellen Sie Abfragen von Fragmenten und Inhaltsverweisen, einschließlich der Verweise aus mehrzeiligen Textfeldern.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -8,63 +8,63 @@ role: Developer
 level: Intermediate
 exl-id: bd7916be-8caa-4321-add0-4c9031306d60
 source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1322'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Erkunden Sie die AEM GraphQL API
+# Erkunden der AEM-GraphQL-API
 
-Mit der GraphQL-API in AEM können Sie Inhaltsfragmentdaten für nachgelagerte Anwendungen verfügbar machen. Im grundlegenden Tutorial [Mehrstufiges GraphQL-Tutorial](../multi-step/explore-graphql-api.md)verwendet haben, haben Sie den GraphiQL Explorer zum Testen und Verfeinern der GraphQL-Abfragen verwendet.
+Mit der GraphQL-API in AEM können Sie Inhaltsfragmentdaten für nachgelagerte Anwendungen bereitstellen. Im [mehrstufigen GraphQL-Einführungs-Tutorial](../multi-step/explore-graphql-api.md) haben Sie den GraphiQL-Explorer zum Testen und Verfeinern von GraphQL-Abfragen verwendet.
 
-In diesem Kapitel verwenden Sie den GraphiQL Explorer, um erweiterte Abfragen zu definieren, um Daten der Inhaltsfragmente zu erfassen, die Sie in der [vorheriges Kapitel](../advanced-graphql/author-content-fragments.md).
+In diesem Kapitel verwenden Sie den GraphiQL-Explorer, um erweiterte Abfragen zum Erfassen von Daten der im [vorherigen Kapitel](../advanced-graphql/author-content-fragments.md) erstellten Inhaltsfragmente zu definieren.
 
 ## Voraussetzungen {#prerequisites}
 
-Dieses Dokument ist Teil eines mehrteiligen Tutorials. Bevor Sie mit diesem Kapitel fortfahren, vergewissern Sie sich bitte, dass die vorherigen Kapitel abgeschlossen sind.
+Dieses Dokument ist Teil eines mehrteiligen Tutorials. Bevor Sie mit diesem Kapitel fortfahren, sollten Sie die vorherigen Kapitel abgeschlossen haben.
 
 ## Ziele {#objectives}
 
-In diesem Kapitel erfahren Sie, wie Sie:
+In diesem Kapitel lernen Sie Folgendes:
 
 * Filtern einer Liste von Inhaltsfragmenten mit Verweisen mithilfe von Abfragevariablen
 * Filtern von Inhalten in einem Fragmentverweis
-* Abfragen von Inline-Inhalten und Fragmentverweisen aus einem mehrzeiligen Textfeld
-* Abfrage mithilfe von Anweisungen
-* Abfrage nach dem Content-Typ JSON-Objekt
+* Abfragen von Inline-Inhalten und Fragmentverweisen über ein mehrzeiliges Textfeld
+* Abfragen mithilfe von Anweisungen
+* Abfragen nach dem Content-Typ des JSON-Objekts
 
-## Verwenden des GraphiQL Explorer
+## Verwenden des GraphiQL-Explorers
 
 
-Die [GraphiQL Explorer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) ermöglicht es Entwicklern, Abfragen für Inhalte in der aktuellen AEM-Umgebung zu erstellen und zu testen. Mit dem GraphQL-Tool können Benutzer auch **beibehalten oder speichern** -Abfragen, die von Clientanwendungen in einer Produktionseinstellung verwendet werden sollen.
+Der [GraphiQL-Explorer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html?lang=de) ermöglicht es Entwickelnden, Abfragen für Inhalte in der aktuellen AEM-Umgebung zu erstellen und zu testen. Mit dem GraphiQL-Tool können Benutzende auch Abfragen **beibehalten oder speichern**, die von Client-Anwendungen in einem Produktionsszenario verwendet werden sollen.
 
-Erkunden Sie als Nächstes die Leistungsfähigkeit AEM GraphQL-API mit dem integrierten GraphiQL Explorer.
+Erkunden Sie als Nächstes die Leistungsfähigkeit der AEM-GraphQL-API mit dem integrierten GraphiQL-Explorer.
 
-1. Navigieren Sie im Bildschirm AEM Start zu **Instrumente** > **Allgemein** > **GraphQL-Abfrage-Editor**.
+1. Navigieren Sie im AEM-Startbildschirm zu **Tools** > **Allgemein** > **GraphQL-Abfrage-Editor**.
 
-   ![Navigieren Sie zur GraphiQL-IDE.](assets/explore-graphql-api/navigate-graphql-query-editor.png)
+   ![Navigieren zur GraphiQL-IDE](assets/explore-graphql-api/navigate-graphql-query-editor.png)
 
 >[!IMPORTANT]
 >
->In einigen Versionen von AEM (6.X.X) muss das Tool GraphiQL Explorer (auch GraphiQL IDE genannt) manuell installiert werden. Befolgen Sie [Anweisung von hier](../how-to/install-graphiql-aem-6-5.md).
+>In einigen Versionen von AEM (6.X.X) muss das Tool GraphiQL-Explorer (auch GraphiQL-IDE genannt) manuell installiert werden. Befolgen Sie hierzu [diese Anweisung](../how-to/install-graphiql-aem-6-5.md).
 
-1. Stellen Sie oben rechts sicher, dass der Endpunkt auf **WKND Shared Endpoint**. Ändern der _Endpunkt_ Dropdown-Wert Hier zeigt den vorhandenen _Beständige Abfragen_ in der oberen linken Ecke.
+1. Stellen Sie sicher, dass oben rechts der Endpunkt auf **Freigegebener WKND-Endpunkt** eingestellt ist. Wenn Sie hier den Dropdown-Wert für den _Endpunkt_ ändern, werden oben links die vorhandenen _persistierten Abfragen_ angezeigt.
 
-   ![GraphQL-Endpunkt festlegen](assets/explore-graphql-api/set-wknd-shared-endpoint.png)
+   ![Festlegen des GraphQL-Endpunkts](assets/explore-graphql-api/set-wknd-shared-endpoint.png)
 
-Dadurch werden alle Abfragen auf Modelle angewendet, die in der **WKND Shared** Projekt.
+Dadurch werden alle Abfragen auf Modelle angewendet, die im **freigegebenen WKND-Projekt** erstellt wurden.
 
 
 ## Filtern einer Liste von Inhaltsfragmenten mithilfe von Abfragevariablen
 
-Im vorherigen [Mehrstufiges GraphQL-Tutorial](../multi-step/explore-graphql-api.md), haben Sie grundlegende persistente Abfragen definiert und verwendet, um Inhaltsfragmentdaten abzurufen. Hier erweitern Sie dieses Wissen und filtern Inhaltsfragmentdaten, indem Sie Variablen an die persistenten Abfragen übergeben.
+Im vorherigen [mehrstufigen GraphQL-Tutorial](../multi-step/explore-graphql-api.md) haben Sie grundlegende persistierte Abfragen definiert und verwendet, um Inhaltsfragmentdaten abzurufen. Hier erweitern Sie dieses Wissen und filtern Inhaltsfragmentdaten, indem Sie Variablen an die persistierten Abfragen übergeben.
 
-Bei der Entwicklung von Clientanwendungen müssen Sie normalerweise Inhaltsfragmente basierend auf dynamischen Argumenten filtern. Mit der AEM GraphQL-API können Sie diese Argumente als Variablen in einer Abfrage übergeben, um die Erstellung von Zeichenfolgen zur Laufzeit auf Client-Seite zu vermeiden. Weitere Informationen zu GraphQL-Variablen finden Sie in der [GraphQL-Dokumentation](https://graphql.org/learn/queries/#variables).
+Bei der Entwicklung von Client-Anwendungen müssen Sie normalerweise Inhaltsfragmente basierend auf dynamischen Argumenten filtern. Mit der AEM-GraphQL-API können Sie diese Argumente als Variablen in einer Abfrage übergeben, um die Erstellung von Zeichenfolgen zur Laufzeit auf Client-Seite zu vermeiden. Weitere Informationen zu GraphQL-Variablen finden Sie in der [GraphQL-Dokumentation](https://graphql.org/learn/queries/#variables).
 
-In diesem Beispiel werden alle Instruktoren abgefragt, die eine bestimmte Fähigkeit besitzen.
+In diesem Beispiel wird sämtliches Lehrpersonal abgefragt, das eine bestimmte Fähigkeit besitzt.
 
-1. Fügen Sie in die GraphiQL-IDE die folgende Abfrage in den linken Bereich ein:
+1. Fügen Sie in die GraphiQL-IDE die folgende Abfrage in das linke Panel ein:
 
    ```graphql
    query listPersonBySkill ($skillFilter: String!){
@@ -93,9 +93,9 @@ In diesem Beispiel werden alle Instruktoren abgefragt, die eine bestimmte Fähig
    }
    ```
 
-   Die `listPersonBySkill` -Abfrage akzeptiert eine Variable (`skillFilter`), die erforderlich ist `String`. Diese Abfrage führt eine Suche für alle Personen-Inhaltsfragmente durch und filtert sie basierend auf der `skills` und die übergebene Zeichenfolge `skillFilter`.
+   Die oben stehende Abfrage `listPersonBySkill` akzeptiert 1 Variable (`skillFilter`), bei der es sich um einen erforderlichen `String` handelt. Diese Abfrage führt eine Suche für alle personenbezogenen Inhaltsfragmente durch und filtert sie basierend auf dem Feld `skills` und der in `skillFilter` übergebenen Zeichenfolge.
 
-   Die `listPersonBySkill` enthält `contactInfo` -Eigenschaft, die einen Fragmentverweis auf das in den vorherigen Kapiteln definierte Modell &quot;Kontaktinfo&quot;darstellt. Das Modell Kontaktinformationen enthält `phone` und `email` -Felder. Mindestens eines dieser Felder in der Abfrage muss vorhanden sein, damit es ordnungsgemäß ausgeführt werden kann.
+   `listPersonBySkill` umfasst die Eigenschaft `contactInfo`, die einen Fragmentverweis auf das in den vorherigen Kapiteln definierte contactInfo-Modell darstellt. Das contactInfo-Modell enthält die Felder `phone` und `email`. Mindestens eines dieser Felder muss in der Abfrage vorhanden sein, damit diese ordnungsgemäß ausgeführt werden kann.
 
    ```graphql
    contactInfo {
@@ -104,7 +104,7 @@ In diesem Beispiel werden alle Instruktoren abgefragt, die eine bestimmte Fähig
          }
    ```
 
-1. Als Nächstes definieren wir `skillFilter` und alle Instruktoren, die im Skifahren befähigt sind. Fügen Sie die folgende JSON-Zeichenfolge in den Bereich &quot;Query Variables&quot;in die GraphiQL-IDE ein:
+1. Als Nächstes definieren wir `skillFilter` und rufen sämtliches Lehrpersonal ab, das Skifahren kann. Fügen Sie die folgende JSON-Zeichenfolge in das Panel „Abfragevariablen“ der GraphiQL-IDE ein:
 
    ```json
    {
@@ -112,7 +112,7 @@ In diesem Beispiel werden alle Instruktoren abgefragt, die eine bestimmte Fähig
    }
    ```
 
-1. Führen Sie die Abfrage aus. Das Ergebnis sollte in etwa wie folgt aussehen:
+1. Führen Sie die Abfrage aus. Das Ergebnis sollte etwa wie folgt aussehen:
 
    ```json
    {
@@ -144,19 +144,19 @@ In diesem Beispiel werden alle Instruktoren abgefragt, die eine bestimmte Fähig
    }
    ```
 
-Drücken Sie die **Play** im oberen Menü, um die Abfrage auszuführen. Sie sollten die Ergebnisse der Inhaltsfragmente aus dem vorherigen Kapitel sehen:
+Wählen Sie im oberen Menü die Schaltfläche für die **Wiedergabe** aus, um die Abfrage auszuführen. Sie sollten die Ergebnisse der Inhaltsfragmente aus dem vorherigen Kapitel sehen:
 
 ![Person nach Qualifikationsergebnissen](assets/explore-graphql-api/person-by-skill.png)
 
 ## Filtern von Inhalten in einem Fragmentverweis
 
-Mit der AEM GraphQL-API können Sie verschachtelte Inhaltsfragmente abfragen. Im vorherigen Kapitel haben Sie drei neue Fragmentverweise zu einem Abenteuer-Inhaltsfragment hinzugefügt: `location`, `instructorTeam`und `administrator`. Filtern wir nun alle Adventures nach jedem Administrator, der einen bestimmten Namen hat.
+Mit der AEM GraphQL-API können Sie verschachtelte Inhaltsfragmente abfragen. Im vorherigen Kapitel haben Sie drei neue Fragmentverweise zu einem Adventure-Inhaltsfragment hinzugefügt: `location`, `instructorTeam` und `administrator`. Filtern wir nun alle Adventures nach Administrierenden mit einem bestimmten Namen.
 
 >[!CAUTION]
 >
->Nur ein Modell darf als Referenz verwendet werden, damit diese Abfrage ordnungsgemäß ausgeführt werden kann.
+>Nur ein Modell darf als Verweis verwendet werden, damit diese Abfrage ordnungsgemäß ausgeführt werden kann.
 
-1. Fügen Sie in die GraphiQL-IDE die folgende Abfrage in den linken Bereich ein:
+1. Fügen Sie in die GraphiQL-IDE die folgende Abfrage in das linke Panel ein:
 
    ```graphql
    query getAdventureAdministratorDetailsByAdministratorName ($name: String!){
@@ -181,7 +181,7 @@ Mit der AEM GraphQL-API können Sie verschachtelte Inhaltsfragmente abfragen. Im
    }
    ```
 
-1. Fügen Sie anschließend die folgende JSON-Zeichenfolge in das Bedienfeld &quot;Abfragevariablen&quot;ein:
+1. Fügen Sie anschließend die folgende JSON-Zeichenfolge in das Panel „Abfragevariablen“ ein:
 
    ```json
    {
@@ -189,9 +189,9 @@ Mit der AEM GraphQL-API können Sie verschachtelte Inhaltsfragmente abfragen. Im
    }
    ```
 
-   Die `getAdventureAdministratorDetailsByAdministratorName` Abfrage filtert alle Abenteuer für beliebige `administrator` von `fullName` &quot;Jacob Wester&quot;zurück, der Informationen aus zwei verschachtelten Inhaltsfragmenten zurückgibt: Adventure und Instructor.
+   Die Abfrage `getAdventureAdministratorDetailsByAdministratorName` filtert alle Adventures für beliebige `administrator` mit `fullName` „Jacob Wester“ und gibt Informationen aus zwei verschachtelten Inhaltsfragmenten zurück: Adventure und Instructor.
 
-1. Führen Sie die Abfrage aus. Das Ergebnis sollte in etwa wie folgt aussehen:
+1. Führen Sie die Abfrage aus. Das Ergebnis sollte etwa wie folgt aussehen:
 
    ```json
    {
@@ -227,11 +227,11 @@ Mit der AEM GraphQL-API können Sie verschachtelte Inhaltsfragmente abfragen. Im
    }
    ```
 
-## Abfragen von Inline-Verweisen aus einem mehrzeiligen Textfeld {#query-rte-reference}
+## Abfrage für Inline-Referenzen aus einem mehrzeiligen Textfeld {#query-rte-reference}
 
-Mit der AEM GraphQL API können Sie in mehrzeiligen Textfeldern nach Inhalten und Fragmentverweisen abfragen. Im vorherigen Kapitel haben Sie beide Referenztypen zum **Beschreibung** -Feld des Yosemite-Team-Inhaltsfragments. Nun rufen wir diese Verweise ab.
+Mit der AEM GraphQL-API können Sie Inhalte und Fragmentreferenzen in mehrzeiligen Textfeldern abfragen. Im vorherigen Kapitel haben Sie beide Referenztypen zum Feld **Beschreibung** des Inhaltsfrgments „Yosemite Team“ hinzugefügt. Nun rufen wir diese Referenzen ab.
 
-1. Fügen Sie in die GraphiQL-IDE die folgende Abfrage in den linken Bereich ein:
+1. Fügen Sie in die GraphiQL-IDE die folgende Abfrage in das linke Panel ein:
 
    ```graphql
    query getTeamByAdventurePath ($fragmentPath: String!){
@@ -275,15 +275,15 @@ Mit der AEM GraphQL API können Sie in mehrzeiligen Textfeldern nach Inhalten un
    }
    ```
 
-   Die `getTeamByAdventurePath` Abfrage filtert alle Abenteuer nach Pfad und gibt Daten für die `instructorTeam` Fragmentverweis eines bestimmten Abenteuers.
+   Die Abfrage `getTeamByAdventurePath` filtert alle Adventures nach Pfad und gibt Daten für die `instructorTeam`-Fragmentreferenz eines bestimmten Adventures zurück.
 
-   `_references` ist ein systemgeneriertes Feld, das verwendet wird, um Verweise anzuzeigen, einschließlich derjenigen, die in mehrzeilige Textfelder eingefügt werden.
+   `_references` ist ein systemgeneriertes Feld, das für die Anzeige von Referenzen verwendet wird, einschließlich derjenigen, die in mehrzeilige Textfelder eingefügt werden.
 
-   Die `getTeamByAdventurePath` Abfrage ruft mehrere Verweise ab. Zunächst wird die integrierte `ImageRef` -Objekt zum Abrufen der `_path` und `__typename` von Bildern, die als Inhaltsreferenzen in das mehrzeilige Textfeld eingefügt wurden. Als Nächstes verwendet er `LocationModel` , um die Daten des im selben Feld eingefügten Location Content Fragment abzurufen.
+   Die Abfrage `getTeamByAdventurePath` ruft mehrere Referenzen ab. Zunächst wird das integrierte Objekt `ImageRef` zum Abrufen von `_path` und `__typename` von Bildern verwendet, die als Inhaltsreferenzen in das mehrzeilige Textfeld eingefügt wurden. Als Nächstes verwendet sie `LocationModel`, um die Daten des im selben Feld eingefügten Inhaltsfragments „Standort“ abzurufen.
 
-   Die Abfrage enthält auch die `_metadata` -Feld. Auf diese Weise können Sie den Namen des Team Content Fragments abrufen und später in der WKND-App anzeigen.
+   Die Abfrage enthält auch das Feld `_metadata`. Auf diese Weise können Sie den Namen des Inhaltsfragments „Team“ abrufen und später in der WKND-App anzeigen.
 
-1. Fügen Sie als Nächstes die folgende JSON-Zeichenfolge in das Bedienfeld &quot;Abfragevariablen&quot;ein, um das Yosemite-Backpackerabenteuer zu erhalten:
+1. Fügen Sie als Nächstes die folgende JSON-Zeichenfolge in das Panel „Abfragevariablen“ ein, um das Yosemite-Backpacker-Adventure zu erhalten:
 
    ```json
    {
@@ -291,7 +291,7 @@ Mit der AEM GraphQL API können Sie in mehrzeiligen Textfeldern nach Inhalten un
    }
    ```
 
-1. Führen Sie die Abfrage aus. Das Ergebnis sollte in etwa wie folgt aussehen:
+1. Führen Sie die Abfrage aus. Das Ergebnis sollte etwa wie folgt aussehen:
 
    ```json
    {
@@ -343,16 +343,16 @@ Mit der AEM GraphQL API können Sie in mehrzeiligen Textfeldern nach Inhalten un
    }
    ```
 
-   Die `_references` zeigt sowohl das Logo-Bild als auch das Yosemite Valley Lodge Content Fragment an, das in das **Beschreibung** -Feld.
+   Das Feld `_references` zeigt sowohl das Logo-Bild als auch das Inhaltsfragment „Yosemite Valley Lodge“ an, das in das Feld **Beschreibung** eingefügt wurde.
 
 
-## Abfrage mithilfe von Anweisungen
+## Abfragen mithilfe von Anweisungen
 
-Manchmal müssen Sie bei der Entwicklung von Clientanwendungen die Struktur Ihrer Abfragen bedingt ändern. In diesem Fall können Sie mit der AEM GraphQL API GraphQL-Anweisungen verwenden, um das Verhalten Ihrer Abfragen anhand der bereitgestellten Kriterien zu ändern. Weitere Informationen zu GraphQL-Direktiven finden Sie im [GraphQL-Dokumentation](https://graphql.org/learn/queries/#directives).
+Manchmal müssen Sie bei der Entwicklung von Client-Anwendungen die Struktur Ihrer Abfragen beim Vorliegen bestimmter Bedingungen ändern. In diesem Fall können Sie mit der AEM GraphQL-API GraphQL-Anweisungen verwenden, um das Verhalten Ihrer Abfragen anhand der vorliegenden Kriterien zu ändern. Weitere Informationen zu GraphQL-Anweisungen finden Sie in der [Dokumentation zu GraphQL](https://graphql.org/learn/queries/#directives).
 
-Im [vorheriger Abschnitt](#query-rte-reference), haben Sie gelernt, wie Sie in mehrzeiligen Textfeldern nach Inline-Verweisen abfragen können. Der Inhalt wurde aus dem `description` im `plaintext` Format. Als Nächstes erweitern wir diese Abfrage und verwenden eine Anweisung, um bedingt abzurufen. `description` im `json` -Format.
+Im [vorherigen Abschnitt](#query-rte-reference) haben Sie gelernt, wie Sie Inline-Verweise in mehrzeiligen Textfeldern abfragen können. Der Inhalt wurde aus der `description` im `plaintext`-Format abgerufen. Als Nächstes erweitern wir diese Abfrage und verwenden eine Anweisung, um die `description` mit Bedingungen auch im `json`-Format abzurufen.
 
-1. Fügen Sie in die GraphiQL-IDE die folgende Abfrage in den linken Bereich ein:
+1. Fügen Sie in die GraphiQL-IDE die folgende Abfrage in das linke Panel ein:
 
    ```graphql
    query getTeamByAdventurePath ($fragmentPath: String!, $includeJson: Boolean!){
@@ -397,9 +397,9 @@ Im [vorheriger Abschnitt](#query-rte-reference), haben Sie gelernt, wie Sie in m
    }
    ```
 
-   Die oben stehende Abfrage akzeptiert eine weitere Variable (`includeJson`), die erforderlich ist `Boolean`, auch als Abfragerichtlinie bezeichnet. Eine Direktive kann verwendet werden, um Daten aus dem `description` im Feld `json` Format basierend auf dem booleschen Wert, der übergeben wird `includeJson`.
+   Die oben stehende Abfrage akzeptiert eine weitere Variable (`includeJson`), die vom Typ `Boolean` sein muss und auch als Abfrageanweisung bezeichnet wird. Basierend auf dem in `includeJson` übergebenen booleschen Wert kann eine Anweisung verwendet werden, um Daten aus dem Feld `description` im `json`-Format einzuschließen.
 
-1. Fügen Sie anschließend die folgende JSON-Zeichenfolge in das Bedienfeld &quot;Abfragevariablen&quot;ein:
+1. Fügen Sie anschließend die folgende JSON-Zeichenfolge in das Panel „Abfragevariablen“ ein:
 
    ```json
    {
@@ -408,9 +408,9 @@ Im [vorheriger Abschnitt](#query-rte-reference), haben Sie gelernt, wie Sie in m
    }
    ```
 
-1. Führen Sie die Abfrage aus. Sie sollten dasselbe Ergebnis erhalten wie im vorherigen Abschnitt auf [Anleitung zum Abfragen von Inline-Verweisen in mehrzeiligen Textfeldern](#query-rte-reference).
+1. Führen Sie die Abfrage aus. Sie sollten dasselbe Ergebnis erhalten wie im vorherigen Abschnitt mit der [Anleitung zum Abfragen von Inline-Referenzen in mehrzeiligen Textfeldern](#query-rte-reference).
 
-1. Aktualisieren Sie die `includeJson` Richtlinie `true` und führen Sie die Abfrage erneut aus. Das Ergebnis sollte in etwa wie folgt aussehen:
+1. Aktualisieren Sie die `includeJson`-Anweisung auf `true` und führen Sie die Abfrage erneut aus. Das Ergebnis sollte etwa wie folgt aussehen:
 
    ```json
    {
@@ -498,11 +498,11 @@ Im [vorheriger Abschnitt](#query-rte-reference), haben Sie gelernt, wie Sie in m
    }
    ```
 
-## Abfrage nach dem Content-Typ JSON-Objekt
+## Abfragen nach dem Content-Typ des JSON-Objekts
 
-Denken Sie daran, dass Sie im vorherigen Kapitel über die Bearbeitung von Inhaltsfragmenten ein JSON-Objekt zum **Wetter nach Saison** -Feld. Rufen wir diese Daten jetzt im Standortinhaltsfragment ab.
+Im vorherigen Kapitel zur Bearbeitung von Inhaltsfragmenten haben Sie ein JSON-Objekt zum Feld **Wetter nach Saison** hinzugefügt. Rufen wir diese Daten jetzt im Inhaltsfragment „Standort“ ab.
 
-1. Fügen Sie in die GraphiQL-IDE die folgende Abfrage in den linken Bereich ein:
+1. Fügen Sie in die GraphiQL-IDE die folgende Abfrage in das linke Panel ein:
 
    ```graphql
    query getLocationDetailsByLocationPath ($fragmentPath: String!) {
@@ -534,7 +534,7 @@ Denken Sie daran, dass Sie im vorherigen Kapitel über die Bearbeitung von Inhal
    }
    ```
 
-1. Fügen Sie anschließend die folgende JSON-Zeichenfolge in das Bedienfeld &quot;Abfragevariablen&quot;ein:
+1. Fügen Sie anschließend die folgende JSON-Zeichenfolge in das Panel „Abfragevariablen“ ein:
 
    ```json
    {
@@ -542,7 +542,7 @@ Denken Sie daran, dass Sie im vorherigen Kapitel über die Bearbeitung von Inhal
    }
    ```
 
-1. Führen Sie die Abfrage aus. Das Ergebnis sollte in etwa wie folgt aussehen:
+1. Führen Sie die Abfrage aus. Das Ergebnis sollte etwa wie folgt aussehen:
 
    ```json
    {
@@ -598,13 +598,13 @@ Denken Sie daran, dass Sie im vorherigen Kapitel über die Bearbeitung von Inhal
    }
    ```
 
-   Die `weatherBySeason` enthält das JSON-Objekt, das im vorherigen Kapitel hinzugefügt wurde.
+   Das Feld `weatherBySeason` enthält das JSON-Objekt, das im vorherigen Kapitel hinzugefügt wurde.
 
 ## Alle Inhalte gleichzeitig abfragen
 
 Bisher wurden mehrere Abfragen ausgeführt, um die Funktionen der AEM GraphQL-API zu veranschaulichen.
 
-Dieselben Daten können nur mit einer einzigen Abfrage abgerufen werden. Diese Abfrage wird später in der Clientanwendung verwendet, um zusätzliche Informationen wie Ort, Teamname und Teammitglieder eines Abenteuers abzurufen:
+Dieselben Daten können mit einer einzigen Abfrage abgerufen werden. Diese Abfrage wird später in der Client-Anwendung verwendet, um zusätzliche Informationen wie Ort, Team-Name und Team-Mitglieder eines Abenteuers abzurufen:
 
 ```graphql
 query getAdventureDetailsBySlug($slug: String!) {
@@ -721,8 +721,8 @@ query getAdventureDetailsBySlug($slug: String!) {
 
 ## Herzlichen Glückwunsch!
 
-Herzlichen Glückwunsch! Sie haben jetzt erweiterte Abfragen getestet, um Daten zu den Inhaltsfragmenten zu erfassen, die Sie im vorherigen Kapitel erstellt haben.
+Herzlichen Glückwunsch! Sie haben jetzt erweiterte Abfragen zum Erfassen von Daten zu den Inhaltsfragmenten getestet, die Sie im vorherigen Kapitel erstellt haben.
 
 ## Nächste Schritte
 
-Im [Nächstes Kapitel](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md), erfahren Sie, wie Sie GraphQL-Abfragen beibehalten und warum es Best Practice ist, persistente Abfragen in Ihren Anwendungen zu verwenden.
+Im [nächsten Kapitel](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md) erfahren Sie, wie Sie GraphQL-Abfragen persistieren und warum es als Best Practice gilt, persistierte Abfragen in Ihren Anwendungen zu verwenden.
