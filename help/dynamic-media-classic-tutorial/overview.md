@@ -1,6 +1,6 @@
 ---
 title: Tutorial zu Best Practices für Dynamic Media Classic
-description: Dynamic Media Classic ist der zentrale Ort, an dem Kunden Rich-Media-Inhalte erstellen, erstellen und bereitstellen. Dieses Tutorial mit Best Practices wurde erstellt, um aktuellen und neuen Benutzern von Dynamic Media Classic zu helfen, besser zu verstehen, was sie mit dieser leistungsstarken Rich-Media-Lösung aus Adobe tun können. In diesem Teil des Tutorials erfahren Sie, was Dynamic Media Classic ist, und erhalten einen kurzen Überblick über seine Kernfunktionen und Benutzeroberfläche.
+description: Dynamic Media Classic ist ein zentraler Ort, an dem Kundinnen und Kunden Rich-Media-Inhalte erstellen, verfassen und bereitstellen können. Dieses Tutorial mit Best Practices soll bestehenden und neuen Benutzenden von Dynamic Media Classic vor Augen führen, wie sie diese leistungsstarke Rich-Media-Lösung von Adobe nutzen können. In diesem Teil des Tutorials erfahren Sie, was Dynamic Media Classic ist, und erhalten einen kurzen Überblick über Kernfunktionen und die Benutzeroberfläche.
 doc-type: tutorial
 audience: all
 activity: develop, use
@@ -10,67 +10,67 @@ role: User
 level: Beginner
 exl-id: 975b85af-ca6a-419e-ab2a-6e1781bfee4a
 source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '885'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # Tutorial zu Best Practices für Dynamic Media Classic
 
-Dieses Handbuch soll aktuellen und neuen Anwendern von Dynamic Media Classic dabei helfen, besser zu verstehen, was sie mit ihrer leistungsstarken Rich-Media-Lösung aus Adobe tun können. Wir tun dies durch:
+Dieses Handbuch soll bestehenden und neuen Benutzenden von Dynamic Media Classic vor Augen führen, wie sie diese leistungsstarke Rich-Media-Lösung von Adobe nutzen können. Was Sie erwartet:
 
-- Einführung in Dynamic Media Classic, Beschreibung dessen, was es ist, und Überblick über seine Kernfunktionen und Benutzeroberfläche.
-- Erläuterung des allgemeinen Workflows Erstellen, Verfassen und Bereitstellen , den Sie beim Arbeiten mit Assets in der Lösung befolgen werden.
-- Erörterung wichtiger Elemente, die vor dem Einstieg und der Verwendung der Lösung eingerichtet werden müssen.
-- Machen Sie sich mit der Verwendung verschiedener Kernfunktionen der Lösung vertraut.
+- Einführung in Dynamic Media Classic mit einer Beschreibung der Lösung und einem Überblick über die Kernfunktionen und die Benutzeroberfläche
+- Erläuterung des allgemeinen Workflows zum Erstellen, Verfassen und Bereitstellen von Assets in der Lösung
+- Erläuterung der Elemente, die vor der Verwendung der Lösung eingerichtet werden müssen
+- Umfassende Erläuterung der Verwendung verschiedener Kernfunktionen der Lösung
 
-Im gesamten Handbuch werden wir Beispiele, Tipps und Best Practices bereitstellen. Wir werden auch wichtige Begriffe und Konzepte erläutern, mit denen Sie bei der Arbeit mit Dynamic Media Classic vertraut sein sollten. Wenn Sie für ein bestimmtes Thema verfügbar sind, werden wir Sie auf relevante Webinare, Blog-Beiträge und Online-Dokumentation verweisen.
+Im gesamten Handbuch wird auf Beispiele, Tipps und Best Practices verwiesen. Wir erläutern auch wichtige Begriffe und Konzepte, mit denen Sie bei der Arbeit mit Dynamic Media Classic vertraut sein sollten. Sofern für ein bestimmtes Thema verfügbar, machen wir Sie auf relevante Webinare, Blogposts und Online-Dokumentation aufmerksam.
 
-Wir hoffen, dass Ihnen dieser Leitfaden die Informationen zur Verfügung stellt, die Sie benötigen, um Ihre Dynamic Media Classic-Lösung von großem Nutzen zu nutzen. Um die Navigation in den Kapiteln dieses Handbuchs zu vereinfachen, klicken Sie auf das Lesezeichen-Symbol auf der linken Seite des Handbuchs, um dessen Inhalt anzuzeigen.
+Wir hoffen, dass Ihnen dieses Handbuch die Informationen zur Verfügung stellt, die Sie benötigen, um den enormen Wert Ihrer Dynamic Media Classic-Lösung für sich zu nutzen. Für eine einfachere Navigation in den Kapiteln dieses Handbuchs klicken Sie auf das Lesezeichen-Symbol auf der linken Seite des Handbuchs, um den zugehörigen Inhalt anzuzeigen.
 
 ## Überblick über Dynamic Media Classic
 
-Dynamic Media Classic ist der zentrale Ort, an dem Kunden Rich-Media-Inhalte erstellen, erstellen und bereitstellen. Dynamic Media Classic ist eine integrierte Rich-Media-Management-, Publishing- und Serving-Umgebung. Rich-Media können für alle Marketing- und Verkaufskanäle bereitgestellt werden, einschließlich Web, Druckmaterial, E-Mail-Kampagnen, Webanwendungen, Desktops und Geräten.
+Dynamic Media Classic ist ein zentraler Ort, an dem Kundinnen und Kunden Rich-Media-Inhalte erstellen, verfassen und bereitstellen können. Dynamic Media Classic ist eine integrierte Umgebung zum Verwalten, Veröffentlichen und Bereitstellen von Rich-Media-Inhalten. Rich Media können für alle Marketing- und Verkaufskanäle bereitgestellt werden, einschließlich Web, Druckmaterialien, E-Mail-Kampagnen, Web-Anwendungen, Desktops und Geräten.
 
-Die Bildbereitstellung ist möglicherweise die am häufigsten verwendete Funktion von Dynamic Media Classic. Tatsächlich verwenden die meisten Kunden Dynamic Media Classic, um alle Bilder auf ihren Websites bereitzustellen, darunter auch Bilder für Zoom oder Rich Media. Es kann jedoch auch für viele andere Zwecke verwendet werden, einschließlich der Bereitstellung von Videos und der Verwendung von AI zur Optimierung der bereitgestellten Bilder.
+Die Bildbereitstellung ist wahrscheinlich die am häufigsten verwendete Funktion von Dynamic Media Classic. Tatsächlich verwenden die meisten Kundinnen und Kunden Dynamic Media Classic, um Bilder auf ihren Websites bereitzustellen, darunter auch Bilder für Zoom oder Rich Media. Die Lösung kann jedoch auch für viele andere Zwecke verwendet werden, einschließlich der Bereitstellung von Videos und der Verwendung von KI zur Optimierung der bereitgestellten Bilder.
 
-## Hauptfunktionen von Dynamic Media Classic
+## Kernfunktionen von Dynamic Media Classic
 
-In diesem Handbuch werden wir die folgenden Kernfunktionen von Dynamic Media Classic besprechen.
+In diesem Handbuch werden die folgenden Kernfunktionen von Dynamic Media Classic behandelt.
 
-- **Dynamic Imaging.** Der Dachbegriff für Echtzeitbearbeitung, Formatierung und Größenanpassung sowie interaktives Zoomen und Schwenken; Farb- und Texturbeobachtung; 360-Grad-Rotation; Bildvorlagen; und Multimedia-Viewern.
-- **Video.** Laden Sie endgültige Videos hoch, veröffentlichen Sie sie und laden Sie sie schrittweise in konfigurierbare Video-Viewer herunter.
-- **Intelligente Bildbearbeitung.** Technologie, die die AI-Funktionen von Adobe Sensei nutzt und mit vorhandenen &quot;Bildvorgaben&quot;zusammenarbeitet, um die Leistung bei der Bildbereitstellung zu verbessern, indem Bildformat, -größe und -qualität basierend auf den Funktionen des Client-Browsers automatisch optimiert werden.
+- **Dynamic Imaging.** Der Überbegriff für die Bearbeitung, Formatierung und Größenanpassung in Echtzeit sowie interaktives Zoomen und Schwenken, Farb- und Texturmuster, 360-Grad-Rotation, Bildvorlagen und Multimedia-Viewer.
+- **Video.** Laden Sie fertige Videos hoch, veröffentlichen Sie sie und laden Sie sie progressiv in konfigurierbare Video-Viewer herunter.
+- **Intelligente Bildbearbeitung.** Diese Technologie nutzt die KI-Funktionen von Adobe Sensei und vorhandene „Bildvorgaben“, um die Bereitstellung von Bildern zu verbessern, indem Bildformat, Größe und Qualität basierend auf den Funktionen des Client-Browsers automatisch optimiert werden.
 
-Weitere Informationen zu den zusätzlichen Funktionen der Lösung finden Sie unter [Dokumentation für Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html).
+Weitere Informationen zu den zusätzlichen Funktionen der Lösung finden Sie in der [Dokumentation für Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html?lang=de).
 
 ## Die Dynamic Media Classic-Benutzeroberfläche
 
-Die Hauptbenutzeroberfläche von Dynamic Media Classic besteht aus drei Hauptbereichen: die globale Navigationsleiste, die Asset-Bibliothek und das Durchsuchenbedienfeld/Build-Bedienfeld.
+Die Hauptbenutzeroberfläche von Dynamic Media Classic besteht aus drei Bereichen: der globalen Navigationsleiste, der Asset-Bibliothek und dem Durchsuchen-/Erstellen-Panel.
 
-![image](assets/overview/overview-dmc-ui-ew.png)
+![Bild](assets/overview/overview-dmc-ui-ew.png)
 
 _Dynamic Media Classic-Benutzeroberfläche_
 
-**Globale Navigationsleiste.** Am oberen Bildschirmrand können Sie über die Schaltflächen auf dieser Leiste auf die wichtigsten Bereiche und Funktionen der Lösung zugreifen. Sie können damit beispielsweise auf Upload-Funktionen zugreifen, verschiedene Asset-Baubereiche (Bildset, Rotationsset usw.) öffnen, wichtige Aufgaben wie das Einrichten von Bildvorgaben und Viewer-Vorgaben durchführen und Assets veröffentlichen. Von hier aus können Sie auch Ihre Aufträge überwachen, aktuelle Aktivitäten anzeigen und aus verschiedenen Hilfeoptionen auswählen.
+**Globale Navigationsleiste.** Diese Leiste befindet sich am oberen Bildschirmrand. Über ihre Schaltflächen können Sie auf die wichtigsten Bereiche und Funktionen der Lösung zugreifen. Sie können damit beispielsweise auf Upload-Funktionen zugreifen, verschiedene Bereich für die Asset-Erstellung öffnen (Bild-Set, Rotations-Set usw.) und wichtige Aufgaben durchführen wie das Einrichten von Bild- und Viewer-Voreinstellungen und das Veröffentlichen von Assets. Von hier aus können Sie auch Vorgänge überwachen, kürzlich durchgeführte Aktivitäten anzeigen und aus verschiedenen Hilfeoptionen auswählen.
 
-**Asset-Bibliothek.** Auf der linken Seite des Bildschirms befindet sich die Asset-Bibliothek, ein Bedienfeld, mit dem Sie Ihre Assets in von Ihnen erstellten Ordnern und Unterordnern organisieren. Am oberen Rand des Bedienfelds finden Sie Such- und Filter, die Ihnen beim Suchen nach Assets helfen. Mit der erweiterten Suche können Sie suchen, indem Sie mehrere Optionen als Kriterien für Ihre Suche angeben, einschließlich ausgeblendeter Metadatenfelder, die an dieses Asset angehängt sind. Unten im Bedienfeld können Sie gelöschte Elemente sehen, indem Sie auf das Papierkorbsymbol klicken. Zunächst beginnen Sie nicht mit Ordnern, mit Ausnahme des Ordners der obersten Ebene, der denselben Namen wie Ihr Kontoname hat.
+**Asset-Bibliothek.** Auf der linken Seite des Bildschirms befindet sich die Asset-Bibliothek. In diesem Panel können Sie Ihre Assets in von Ihnen erstellten Ordnern und Unterordnern organisieren. Am oberen Rand des Panels gibt es die Suchfunktion und Filter, die Ihnen bei der Suche nach Assets helfen. Die erweiterte Suche können Sie verwenden, indem Sie mehrere Optionen als Kriterien für Ihre Suche angeben, einschließlich ausgeblendeter Metadatenfelder, die mit diesem Asset verknüpft sind. Unten im Panel können Sie gelöschte Elemente sehen, indem Sie auf das Papierkorbsymbol klicken. Zunächst verwenden Sie keine Ordner – mit Ausnahme des Ordners der obersten Ebene, der denselben Namen wie Ihr Konto trägt.
 
 >[!NOTE]
 >
->Assets im Papierkorb werden sieben Tage nach dem Einfügen automatisch dauerhaft gelöscht, es sei denn, Sie stellen sie wieder her.
+>Assets im Papierkorb werden sieben Tage nach dem Verschieben dorthin automatisch dauerhaft gelöscht, es sei denn, Sie entfernen sie wieder aus dem Papierkorb.
 
-**Bedienfeld &quot;Durchsuchen/Erstellen&quot;.** Dies ist der Mittelpunkt der Benutzeroberfläche, in der Sie entweder Assets im Durchsuchen-Modus durchsuchen oder im Build-Modus als Arbeitsfläche zum Erstellen von Assets im Rahmen eines Workflows verwenden. Wenn Sie sich zum ersten Mal anmelden, wird das Bedienfeld &quot;Durchsuchen&quot;angezeigt. In der Mitte des Bildschirms befinden sich Miniaturansichten Ihrer Bilder in einer Rasteransicht. Sie können zu einer Listenansicht wechseln oder ein Asset auswählen und mithilfe der Detailansicht Details dazu anzeigen.
+**Durchsuchen-/Erstellen-Panel.** Dieses Panel befindet sich in der Mitte der Benutzeroberfläche. Dort können Sie entweder Assets im Durchsuchen-Modus suchen oder im Erstellen-Modus für einen Workflow erstellen. Wenn Sie sich zum ersten Mal anmelden, wird das Durchsuchen-Panel angezeigt. In der Mitte des Bildschirms befinden sich Miniaturansichten Ihrer Bilder in einer Rasteransicht. Sie können zu einer Listenansicht wechseln oder ein Asset auswählen und mithilfe der Detailansicht Details dazu anzeigen.
 
 >[!IMPORTANT]
 >
->Neben jeder Asset-ID ist die **Zur Veröffentlichung markieren** umschalten. Wenn der Umschalter aktiviert ist (grün), zeigt dies an, dass das Asset zur Veröffentlichung markiert ist.
+>Neben jeder Asset-ID befindet sich der Umschalter **Zur Veröffentlichung markieren**. Wenn der Umschalter aktiviert (grün) ist, zeigt dies an, dass das Asset zur Veröffentlichung markiert ist.
 
-![image](assets/overview/overview-mark-for-publish.png)
+![Bild](assets/overview/overview-mark-for-publish.png)
 
 >[!TIP]
 >
->Wählen Sie die **Nach dem Hochladen veröffentlichen** im Dialogfeld &quot;Hochladen&quot;das Kontrollkästchen zum automatischen Veröffentlichen von Assets beim Hochladen.
+>Wählen Sie im Hochladedialogfeld das Kontrollkästchen **Nach dem Hochladen veröffentlichen**, um Assets beim Hochladen automatisch zu veröffentlichen.
 
-Weitere Informationen [Navigieren in der Benutzeroberfläche von Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html).
+Hier finden Sie weitere Informationen zum [Navigieren in der Benutzeroberfläche von Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html?lang=de).
