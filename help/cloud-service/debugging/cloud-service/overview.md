@@ -1,6 +1,6 @@
 ---
-title: Debugging AEM as a Cloud Service
-description: auf der Self-Service-, skalierbaren, Cloud-Infrastruktur, die es AEM Entwicklern erforderlich macht, zu verstehen, wie sie verschiedene Facetten von AEM as a Cloud Service verstehen und debuggen können, von der Erstellung und Bereitstellung bis hin zum Abrufen von Details laufender AEM.
+title: Debugging von AEM as a Cloud Service
+description: auf einer selbstbedienungsfähigen und skalierbaren Cloud-Infrastruktur. Dies setzt voraus, dass AEM-Entwicklerinnen und -Entwickler wissen, wie sie die verschiedenen Facetten von AEM as a Cloud Service verstehen und debuggen können, von der Erstellung und Bereitstellung bis hin zum Erhalten von Details der laufenden AEM-Anwendungen.
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -13,36 +13,36 @@ role: Developer
 level: Beginner, Intermediate
 exl-id: 8092fbb4-234f-472e-a405-8a45734b7c65
 source-git-commit: 467b0c343a28eb573498a013b5490877e4497fe0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '314'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Debugging AEM as a Cloud Service
+# Debugging von AEM as a Cloud Service
 
-AEM as a Cloud Service ist die Cloud-native Methode zur Nutzung der AEM. AEM as a Cloud Service läuft auf einer Self-Service-, skalierbaren, Cloud-Infrastruktur. Dazu müssen AEM Entwickler verstehen, wie sie verschiedene Facetten AEM as a Cloud Service verstehen und debuggen können, von der Erstellung und Bereitstellung bis hin zum Abrufen von Details AEM laufenden Anwendungen.
+AEM as a Cloud Service ist die Cloud-native Methode zur Nutzung der AEM-Anwendungen. AEM as a Cloud Service wird auf einer selbstbedienungsfähigen und skalierbaren Cloud-Infrastruktur ausgeführt. Dies setzt voraus, dass AEM-Entwicklerinnen und Entwickler wissen, wie sie die verschiedenen Facetten von AEM as a Cloud Service verstehen und debuggen können, von der Erstellung und Bereitstellung bis hin zum Erhalten von Details der laufenden AEM-Anwendungen.
 
 ## Protokolle
 
-Protokolle enthalten Details zur Funktionsweise Ihrer Anwendung in AEM as a Cloud Service Funktionen sowie Einblicke in Probleme mit Bereitstellungen.
+Die Protokolle geben Details dazu, wie Ihre Anwendung in AEM als Cloud Service funktioniert, und geben Aufschluss über Probleme bei der Bereitstellung.
 
-[Debugging AEM as a Cloud Service mithilfe von Protokollen](./logs.md)
+[Debugging von AEM as a Cloud Service mithilfe von Protokollen](./logs.md)
 
-## Erstellen und Bereitstellen
+## Erstellung und Implementierung
 
-Adobe Cloud Manager-Pipelines stellen AEM Anwendung in einer Reihe von Schritten bereit, um die Code-Qualität und -Lebensfähigkeit bei AEM as a Cloud Service Bereitstellung zu ermitteln. Jeder der Schritte kann zu Fehlern führen. Daher ist es wichtig, zu verstehen, wie Builds debuggt werden, um die eigentliche Ursache für Fehler zu ermitteln und wie etwaige Fehler zu beheben sind.
+Die Adobe Cloud Manager-Pipelines stellen die AEM-Anwendung in einer Reihe von Schritten bereit, um die Code-Qualität und die Lebensfähigkeit bei der Bereitstellung in AEM as a Cloud Service zu bestimmen. Jeder dieser Schritte kann zu Fehlern führen. Daher ist es wichtig zu wissen, wie man Builds debuggt, um die Ursache von Fehlern zu ermitteln und diese zu beheben.
 
-[Debugging AEM as a Cloud Service Build und Bereitstellung](./build-and-deployment.md)
+[Debugging bei der Erstellung und Implementierung von AEM as a Cloud Service](./build-and-deployment.md)
 
-## Entwicklerkonsole
+## Developer Console
 
-Die Entwicklerkonsole bietet eine Vielzahl von Informationen und Einleitungen in AEM as a Cloud Service Umgebungen, die nützlich sind, um zu verstehen, wie Ihre Anwendung von erkannt wird und AEM as a Cloud Service funktioniert.
+Die Developer Console bietet eine Vielzahl von Informationen und Einblicken in AEM as a Cloud Service-Umgebungen, die nützlich sind, um zu verstehen, wie Ihre Anwendung von AEM as a Cloud Service erkannt wird und darin funktioniert.
 
 [Debugging von AEM as a Cloud Service mit der Developer Console](./developer-console.md)
 
 ## Repository-Browser
 
-Der Repository-Browser ist ein leistungsstarkes Tool, das AEM zugrunde liegenden Datenspeicher sichtbar macht und das einfache Debugging AEM as a Cloud Service Umgebung ermöglicht. Der Repository-Browser unterstützt eine schreibgeschützte Ansicht der Ressourcen und Eigenschaften von AEM für Produktions-, Staging- und Entwicklungsdienste sowie Autoren-, Veröffentlichungs- und Vorschaudienste.
+Der Repository-Browser ist ein leistungsfähiges Tool, das Einblick in den zugrunde liegenden Datenspeicher von AEM bietet und die Fehlersuche in einer AEM as a Cloud Service-Umgebung erleichtert. Der Repository-Browser unterstützt eine schreibgeschützte Ansicht der Ressourcen und Eigenschaften von AEM in den Bereichen Produktion, Staging und Entwicklung sowie Autoren-, Veröffentlichungs- und Vorschau-Service.
 
-[Debugging von mit dem Repository-Browser as a Cloud Service AEM](./repository-browser.md)
+[Debugging von AEM as a Cloud Service mit dem Repository-Browser](./repository-browser.md)
