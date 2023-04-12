@@ -1,6 +1,6 @@
 ---
-title: AEM Headless-Server-zu-Server-Implementierungen
-description: Erfahren Sie mehr über Bereitstellungsaspekte bei Server-zu-Server-AEM Headless-Bereitstellungen.
+title: Bereitstellungen von AEM Headless von Server zu Server
+description: Erfahren Sie mehr über Bereitstellungsüberlegungen für AEM Headless-Bereitstellungen von Server zu Server.
 version: Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
@@ -9,38 +9,38 @@ level: Intermediate
 kt: 10798
 thumbnail: kt-10798.jpg
 source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '248'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# AEM Headless-Server-zu-Server-Implementierungen
+# Bereitstellungen von AEM Headless von Server zu Server
 
 AEM Headless-Server-zu-Server-Bereitstellungen umfassen Server-seitige Anwendungen oder Prozesse, die Inhalte in AEM Headless nutzen und mit ihnen interagieren.
 
-Server-zu-Server-Implementierungen erfordern eine minimale Konfiguration, da HTTP-Verbindungen zu AEM Headless-APIs nicht im Kontext eines Browsers initiiert werden.
+Server-zu-Server-Bereitstellungen erfordern eine minimale Konfiguration, da HTTP-Verbindungen zu AEM Headless-APIs nicht im Kontext eines Browsers initiiert werden.
 
-## Bereitstellungskonfigurationen
+## Implementierungskonfigurationen
 
 Die folgende Bereitstellungskonfiguration muss für Server-zu-Server-App-Bereitstellungen vorhanden sein.
 
-| Die Server-zu-Server-App stellt eine Verbindung zu | AEM Author | AEM Publish | AEM |
+| Die Server-zu-Server-App stellt eine Verbindung zu | AEM Author | AEM Publish | AEM-Vorschau |
 |---------------------------------------------------------------:|:----------:|:-----------:|:-----------:|
-| [Dispatcher-Filter](./configurations/dispatcher-filters.md) | ✘ | ms | ms |
+| [Dispatcher-Filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | Cross-Origin Resource Sharing (CORS) | ✘ | ✘ | ✘ |
-| [AEM Hosts](./configurations/aem-hosts.md) | ms | ms | ms |
+| [AEM-Hosts](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
 
 ## Zulassungsanforderungen
 
-Autorisierte Anforderungen an GraphQL-APIs, die normalerweise im Kontext von Server-zu-Server-Apps auftreten, AEM, da andere App-Typen, z. B. [Einzelseiten-Apps](./spa.md), [mobile](./mobile.md)oder [Webkomponenten](./web-component.md)verwenden Sie in der Regel die Autorisierung, da es schwierig ist, die Anmeldeinformationen zu sichern.
+Autorisierte Anfragen an AEM GraphQL-APIs treten typischerweise im Kontext von Server-zu-Server-Anwendungen auf, da andere Anwendungstypen wie [Einzelseiten-Apps](./spa.md), [Mobile](./mobile.md) oder [Web-Komponenten](./web-component.md) typischerweise eine Autorisierung verwenden, da es schwierig ist, die Anmeldeinformationen zu sichern.
 
-Verwenden Sie beim Zulassen von Anforderungen an AEM as a Cloud Service [Authentifizierung von Service-Anmeldeinformationen-basierten Token](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html). Weitere Informationen zum Authentifizieren von Anforderungen an AEM as a Cloud Service finden Sie in der [Token-basiertes Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). In diesem Tutorial wird die Token-basierte Authentifizierung mithilfe von [AEM Assets HTTP-APIs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html) Es gelten jedoch dieselben Konzepte und Ansätze für Apps, die mit AEM Headless GraphQL-APIs interagieren.
+Verwenden Sie beim Zulassen von Anforderungen an AEM as a Cloud Service [Authentifizierung von Service-Anmeldeinformationen-basierten Token](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=de). Weitere Informationen zum Authentifizieren von Anforderungen an AEM as a Cloud Service finden Sie in dem [Token-basierten Authentifizierungs-Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=de). In diesem Tutorial wird die Token-basierte Authentifizierung mithilfe von [AEM Assets HTTP-APIs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html?lang=de) untersucht. Für Apps, die mit AEM Headless-GraphQL-APIs interagieren, gelten jedoch dieselben Konzepte und Ansätze.
 
 ## Beispiel einer Server-zu-Server-App
 
-Adobe bietet eine Beispielanwendung vom Server zum Server, die in Node.js codiert ist.
+Adobe stellt ein Beispiel für eine in Node.js codierte Server-zu-Server-App bereit.
 
 <div class="columns is-multiline">
     <!-- Server-to-server app -->
@@ -56,10 +56,10 @@ Adobe bietet eine Beispielanwendung vom Server zum Server, die in Node.js codier
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/server-to-server-app.md" title="Server-zu-Server-App">Server-zu-Server-App</a></p>
-                   <p class="is-size-6">Eine Beispielanwendung vom Server zum Server, geschrieben in Node.js, die Inhalte von AEM Headless GraphQL-APIs verbraucht.</p>
+                   <p class="is-size-6">Ein Beispiel für eine in Node.js geschriebene Server-zu-Server-App, die Inhalte von AEM Headless-GraphQL-APIs konsumiert.</p>
                    <a href="../example-apps/server-to-server-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                       <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Beispiel anzeigen</span>
-                   </a>
+ <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Beispiel anzeigen</span>
+ </a>
                </div>
            </div>
        </div>
