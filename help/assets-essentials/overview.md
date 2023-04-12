@@ -1,14 +1,14 @@
 ---
-title: Videos zu AEM Assets Essentials
+title: AEM Assets Essentials-Videos
 description: Eine Videosammlung für Adobe Experience Manager Assets Essentials
 recommendations: disable
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: aem-assets-essentials-videos.jpg
 exl-id: 6a8534fa-bc99-438b-9107-2a428e06619c
 source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '131'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 14%
 
 Experience Manager Assets Essentials bietet eine optimierte Benutzeroberfläche für einfache Asset-Verwaltung und Zusammenarbeit.
 
-Sehen Sie sich diese Videos an, wie Sie mit Assets Essentials Assets verwalten und wie Sie diese mit Adobe Journey einrichten können!
+Sehen Sie sich diese Videos an und erfahren Sie, wie Sie Ihre Assets mit Assets Essentials verwalten und letzteres mit Adobe Journey Orchestrator integrieren können!
 
-## Weitere Informationen zu Assets Essentials
+## Erfahren Sie mehr zu Assets Essentials
 
 <table>
 <td>
@@ -29,21 +29,21 @@ Sehen Sie sich diese Videos an, wie Sie mit Assets Essentials Assets verwalten u
    </a>
    <div>
       <a href="./basics/managing.md">
-      <strong>Erste Schritte mit Assets Essentials</strong>
-      </a>
+ <strong>Erste Schritte mit Assets Essentials</strong>
+ </a>
    </div>
    <p>
       <em>Lernen Sie die Grundlagen von Assets Essentials kennen!</em>
    </p>
 </td>
 <td>
-   <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
+   <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=de">
    <img alt="" src="./assets/overview/assets-essentials-docs.png"/>
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
-      <strong>Assets Essentials-Dokumentation</strong>
-      </a>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=de">
+ <strong>Assets Essentials-Dokumentation</strong>
+ </a>
    </div>
    <p>
       <em>Sehen Sie sich die Assets Essentials-Produktdokumentation an!</em>
@@ -54,9 +54,9 @@ Sehen Sie sich diese Videos an, wie Sie mit Assets Essentials Assets verwalten u
    <img alt="Adobe Journey Optimizer" src="./assets/overview/adobe-journey-optimizer.png" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
-      <strong>Adobe Journey Optimizer-Integration</strong>
-      </a>
+      <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=de">
+ <strong>Adobe Journey Optimizer-Integration</strong>
+ </a>
    </div>
    <p>
       <em>Erfahren Sie, wie Assets Essentials mit Adobe Journey Optimizer integriert wird.</em>
