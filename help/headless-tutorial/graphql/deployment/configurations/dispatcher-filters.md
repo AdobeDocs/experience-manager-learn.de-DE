@@ -9,37 +9,37 @@ level: Intermediate
 kt: 10829
 thumbnail: kt-10829.jpg
 source-git-commit: 442020d854d8f42c5d8a1340afd907548875866e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '211'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
 # Dispatcher-Filter
 
-Adobe Experience Manager as a Cloud Service verwendet AEM Publish Dispatcher-Filter, um sicherzustellen, dass nur Anforderungen, die AEM erreichen sollten, AEM erreichen. Standardmäßig werden alle Anfragen verweigert und Muster für zulässige URLs müssen explizit hinzugefügt werden.
+Adobe Experience Manager as a Cloud Service verwendet AEM Publish Dispatcher-Filter, um sicherzustellen, dass AEM nur von Anfragen erreicht wird, die es auch erreichen sollen. Standardmäßig werden alle Anfragen abgelehnt, und Muster für erlaubte URLs müssen explizit hinzugefügt werden.
 
-| Client-Typ | [Einzelseitenanwendung (SPA)](../spa.md) | [Webkomponente/JS](../web-component.md) | [Mobilgerät](../mobile.md) | [Server-zu-Server](../server-to-server.md) |
+| Client-Typ | [Single Page App (SPA)](../spa.md) | [Web-Komponente/JS](../web-component.md) | [Mobilgerät](../mobile.md) | [Server-zu-Server](../server-to-server.md) |
 |------------------------------------------:|:---------------------:|:----------------:|:---------:|:----------------:|
-| Erfordert die Konfiguration von Dispatcher-Filtern | ms | ms | ms | ms |
+| Erfordert die Konfiguration von Dispatcher-Filtern | ✔ | ✔ | ✔ | ✔ |
 
 >[!TIP]
 >
-> Die folgenden Konfigurationen sind Beispiele. Stellen Sie sicher, dass Sie sie an die Anforderungen Ihres Projekts anpassen.
+> Im Folgenden finden Sie Beispiele für Konfigurationen. Passen Sie diese an die Anforderungen Ihres Projekts an.
 
-## Dispatcher-Filterkonfiguration
+## Konfiguration von Dispatcher-Filtern
 
-Die AEM Publish Dispatcher-Filterkonfiguration definiert die URL-Muster, die erreicht AEM werden dürfen, und muss das URL-Präfix für den AEM persistenten Abfrageendpunkt enthalten.
+Die Konfiguration von AEM Publish Dispatcher-Filtern definiert die URL-Muster, die AEM erreichen dürfen. Es muss das URL-Präfix für den AEM-Endpunkt für persistierte Abfragen enthalten sein.
 
-| Client stellt Verbindungen her | AEM Author | AEM Publish | AEM |
+| Client-Verbindung zu | AEM Author | AEM Publish | AEM-Vorschau |
 |------------------------------------------:|:----------:|:-------------:|:-------------:|
-| Erfordert die Konfiguration von Dispatcher-Filtern | ✘ | ms | ms |
+| Erfordert die Konfiguration von Dispatcher-Filtern | ✘ | ✔ | ✔ |
 
-Hinzufügen einer `allow` Regel mit dem URL-Muster `/graphql/execute.json/*`und stellen Sie die Datei-ID (z. B. `/0600`, ist in der Beispiel-Farm-Datei eindeutig).
-Dadurch kann die HTTP-GET an den persistenten Abfrageendpunkt gesendet werden, z. B. `HTTP GET /graphql/execute.json/wknd-shared/adventures-all` bis zur AEM-Veröffentlichung.
+Fügen Sie eine `allow`-Regel mit dem URL-Muster `/graphql/execute.json/*` hinzu und stellen Sie sicher, dass die Datei-ID (z. B. `/0600` in der Beispiels-Farmdatei) eindeutig ist.
+Dies ermöglicht eine HTTP-GET-Anfrage an den Endpunkt der persistierten Abfrage, z. B. `HTTP GET /graphql/execute.json/wknd-shared/adventures-all`, bis zu AEM Publish.
 
-Wenn Sie Experience Fragments in Ihrem AEM Headless-Erlebnis verwenden, führen Sie für diese Pfade dasselbe aus.
+Wenn Sie in Ihrem AEM Headless-Erlebnis Experience Fragments verwenden, tun Sie dasselbe für diese Pfade.
 
 + `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 
@@ -52,6 +52,6 @@ Wenn Sie Experience Fragments in Ihrem AEM Headless-Erlebnis verwenden, führen 
 ...
 ```
 
-### Konfiguration von Beispielfiltern
+### Beispiel für die Konfiguration von Filtern
 
 + [Ein Beispiel für den Dispatcher-Filter finden Sie im WKND-Projekt.](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.dispatcher.d/filters/filters.any#L28)
