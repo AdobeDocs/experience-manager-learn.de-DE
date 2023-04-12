@@ -1,6 +1,6 @@
 ---
-title: Client-Anwendungsintegration - Erweiterte Konzepte von AEM Headless - GraphQL
-description: Implementieren Sie persistente Abfragen und integrieren Sie sie in die WKND-App.
+title: Client-Anwendungsintegration – Erweiterte AEM Headless-Konzepte – GraphQL
+description: Implementieren Sie persistierte Abfragen und integrieren Sie sie in die WKND-App.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -8,54 +8,54 @@ role: Developer
 level: Intermediate
 exl-id: d0576962-a86a-4742-8635-02be1ec3243f
 source-git-commit: a500c88091d87e34c12d4092c71241983b166af8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '962'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # Client-Anwendungsintegration
 
-Im vorherigen Kapitel haben Sie mit dem GraphiQL Explorer persistente Abfragen erstellt und aktualisiert.
+Im vorherigen Kapitel haben Sie mit dem GraphiQL-Explorer persistierte Abfragen erstellt und aktualisiert.
 
-Dieses Kapitel führt Sie durch die Schritte, die zur Integration der persistenten Abfragen in die WKND-Client-Anwendung (auch WKND App genannt) mithilfe von HTTP-GET in bestehende Anwendungen erforderlich sind. **React-Komponenten**. Es bietet außerdem eine optionale Herausforderung, Ihre AEM Headless-Lernprozesse anzuwenden und das Know-how zu programmieren, um die WKND-Client-Anwendung zu verbessern.
+Dieses Kapitel führt Sie durch die Schritte, die zur Integration der persistierten Abfragen in die WKND-Client-Anwendung (auch als WKND-App bezeichnet) mithilfe von HTTP-GET-Anfragen innerhalb vorhandener **React-Komponenten** erforderlich sind. Es umfasst außerdem eine optionale Herausforderung: Ihr erworbenes AEM Headless-Wissen und Programmier-Know-how zur Erweiterung der WKND-Client-Anwendung anzuwenden.
 
 ## Voraussetzungen {#prerequisites}
 
-Dieses Dokument ist Teil eines mehrteiligen Tutorials. Bevor Sie mit diesem Kapitel fortfahren, vergewissern Sie sich bitte, dass die vorherigen Kapitel abgeschlossen sind. Die WKND-Clientanwendung stellt eine Verbindung zu AEM Veröffentlichungsdienst her. Daher ist es wichtig, dass Sie **hat Folgendes in den AEM Veröffentlichungsdienst veröffentlicht**.
+Dieses Dokument ist Teil eines mehrteiligen Tutorials. Bevor Sie mit diesem Kapitel fortfahren, vergewissern Sie sich, dass Sie die vorherigen Kapitel abgeschlossen haben. Die WKND-Client-Anwendung stellt eine Verbindung zum AEM-Veröffentlichungs-Service her. Daher ist es wichtig, dass Sie **Folgendes im AEM-Veröffentlichungs-Service veröffentlicht haben**.
 
 * Projektkonfigurationen
 * GraphQL-Endpunkte
 * Inhaltsfragmentmodelle
 * Erstellte Inhaltsfragmente
-* GraphQL-persistente Abfragen
+* GraphQL – Persistierte Abfragen
 
-Die _IDE-Screenshots in diesem Kapitel stammen von [Visual Studio-Code](https://code.visualstudio.com/)_
+Die _IDE-Screenshots in diesem Kapitel stammen von [Visual Studio Code](https://code.visualstudio.com/)_.
 
-### Kapitel 1-4 Lösungspaket (optional) {#solution-package}
+### Kapitel 1–4 Lösungspaket (optional) {#solution-package}
 
-Es ist ein Lösungspaket verfügbar, das installiert wird, das die Schritte in der AEM Benutzeroberfläche für die Kapitel 1-4 abschließt. Dieses Paket ist **nicht erforderlich** wenn die vorherigen Kapitel abgeschlossen sind.
+Es ist ein Lösungspaket zur Installation verfügbar, das die Schritte in der AEM-Benutzeroberfläche für die Kapitel 1–4 abschließt. Dieses Paket ist **nicht erforderlich**, wenn die vorherigen Kapitel abgeschlossen wurden.
 
-1. Download [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip).
-1. Navigieren Sie AEM zu **Instrumente** > **Implementierung** > **Pakete** für den Zugriff **Package Manager**.
-1. Laden Sie das im vorherigen Schritt heruntergeladene Paket (ZIP-Datei) hoch und installieren Sie es.
-1. Replizieren Sie das Paket auf den AEM Publish-Dienst
+1. Laden Sie die Datei [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) herunter.
+1. Navigieren Sie in AEM zu **Tools** > **Implementierung** > **Pakete**, um auf **Package Manager** zuzugreifen.
+1. Laden Sie das im vorherigen Schritt heruntergeladene Paket (die ZIP-Datei) hoch und installieren Sie es.
+1. Replizieren Sie das Paket für den AEM-Veröffentlichungs-Service.
 
 ## Ziele {#objectives}
 
-In diesem Tutorial erfahren Sie, wie Sie die Anforderungen für persistente Abfragen mithilfe der [AEM Headless-Client für JavaScript](https://github.com/adobe/aem-headless-client-js).
+In diesem Tutorial erfahren Sie, wie Sie Anfragen für persistierte Abfragen mit dem [AEM Headless-Client für JavaScript](https://github.com/adobe/aem-headless-client-js) in die beispielhafte WKND GraphQL React-App integrieren.
 
-## Klonen und Ausführen der Beispiel-Client-Anwendung {#clone-client-app}
+## Klonen und Ausführen der beispielhaften Client-Anwendung {#clone-client-app}
 
-Um das Tutorial zu beschleunigen, wird eine Starter-React-JS-App bereitgestellt.
+Um während des Tutorials Zeit zu sparen, wird eine React-JS-App als Start bereitgestellt.
 
-1. Klonen Sie die [adobe/aem-guides-wknd-graphql](https://github.com/adobe/aem-guides-wknd-graphql) repository:
+1. Klonen Sie das Repository [adobe/aem-guides-wknd-graphql](https://github.com/adobe/aem-guides-wknd-graphql):
 
    ```shell
    $ git clone git@github.com:adobe/aem-guides-wknd-graphql.git
    ```
 
-1. Bearbeiten Sie die `aem-guides-wknd-graphql/advanced-tutorial/.env.development` Datei und Set `REACT_APP_HOST_URI` , um auf Ihren Ziel-AEM-Veröffentlichungsdienst zu verweisen.
+1. Bearbeiten Sie die Datei `aem-guides-wknd-graphql/advanced-tutorial/.env.development` und legen Sie `REACT_APP_HOST_URI` so fest, dass auf den AEM Publish-Ziel-Service verwiesen wird.
 
    Aktualisieren Sie die Authentifizierungsmethode, wenn Sie eine Verbindung zu einer Autoreninstanz herstellen.
 
@@ -78,17 +78,17 @@ Um das Tutorial zu beschleunigen, wird eine Starter-React-JS-App bereitgestellt.
    REACT_APP_BASIC_AUTH_PASS=
    ```
 
-   ![Entwicklungsumgebung für React Apps](assets/client-application-integration/react-app-dev-env-settings.png)
+   ![React-App-Entwicklungsumgebung](assets/client-application-integration/react-app-dev-env-settings.png)
 
 
    >[!NOTE]
    > 
-   > Die obigen Anweisungen sind, die React-App mit der **AEM-Veröffentlichungsdienst**, jedoch um eine Verbindung mit der **AEM-Autorendienst** ein lokales Entwicklungstoken für Ihre Ziel-AEM as a Cloud Service Umgebung abrufen.
+   > Die obigen Anweisungen sehen vor, die React-App mit dem **AEM-Veröffentlichungs-Service** zu verbinden. Um allerdings eine Verbindung zum **AEM-Autoren-Service** herzustellen, ist ein lokales Entwicklungs-Token für Ihre AEM as a Cloud Service-Zielumgebung erforderlich.
    >
-   > Es ist auch möglich, die App mit einem [lokale Autoreninstanz mit dem AEMaaCS-SDK](/help/headless-tutorial/graphql/quick-setup/local-sdk.md) einfache Authentifizierung verwenden.
+   > Es ist ebenfalls möglich, die App mit einer [lokalen Autoreninstanz über das AEMaaCS-SDK](/help/headless-tutorial/graphql/quick-setup/local-sdk.md) mittels einfacher Authentifizierung zu verbinden.
 
 
-1. Öffnen Sie ein Terminal und führen Sie die Befehle aus:
+1. Öffnen Sie ein Terminal und führen Sie die folgenden Befehle aus:
 
    ```shell
    $ cd aem-guides-wknd-graphql/advanced-tutorial
@@ -96,66 +96,66 @@ Um das Tutorial zu beschleunigen, wird eine Starter-React-JS-App bereitgestellt.
    $ npm start
    ```
 
-1. Ein neues Browser-Fenster sollte in [http://localhost:3000](http://localhost:3000)
+1. Ein neues Browser-Fenster sollte unter [http://localhost:3000](http://localhost:3000) geladen werden.
 
 
-1. Tippen **Campingplatz** > **Yosemite Backpacken** , um die Yosemite Backpacking Abenteuerdetails zu sehen.
+1. Tippen Sie auf **Camping** > **Yosemite Backpacking**, um Details zum Yosemite Backpacking-Adventure anzuzeigen.
 
-   ![Yosemite-Backpacker-Bildschirm](assets/client-application-integration/yosemite-backpacking-adventure.png)
+   ![Yosemite Backpacking-Bildschirm](assets/client-application-integration/yosemite-backpacking-adventure.png)
 
-1. Öffnen Sie die Entwicklertools des Browsers und überprüfen Sie die `XHR` Anfrage
+1. Öffnen Sie die Entwickler-Tools des Browsers und überprüfen Sie die `XHR`-Anfrage
 
    ![POST GraphQL](assets/client-application-integration/graphql-persisted-query.png)
 
-   Sie sollten `GET` Anforderungen an den GraphQL-Endpunkt mit dem Projektnamen config (`wknd-shared`), persistenter Abfragename (`adventure-by-slug`), Variablenname (`slug`), Wert (`yosemite-backpacking`) und Sonderzeichen-Kodierungen.
+   Es sollten `GET`-Anfragen an den GraphQL-Endpunkt mit dem Konfigurationsnamen des Projekts (`wknd-shared`), dem Namen der persistierten Abfrage (`adventure-by-slug`), dem Variablennamen (`slug`), dem Wert (`yosemite-backpacking`) und den Sonderzeichen-Codierungen zu sehen sein.
 
 >[!IMPORTANT]
 >
->    Wenn Sie sich fragen, warum die GraphQL-API-Anfrage gegen die `http://localhost:3000` und NICHT in Bezug auf die AEM Publish Service-Domäne, überprüfen Sie [Unterhalb des](../multi-step/graphql-and-react-app.md#under-the-hood) aus dem Grundlegenden Tutorial.
+>    Wenn Sie sich fragen, warum die GraphQL-API-Anfrage an `http://localhost:3000` und NICHT an die Domain des AEM-Veröffentlichungs-Service gerichtet ist, finden Sie im grundlegenden Tutorial unter [Unter der Haube](../multi-step/graphql-and-react-app.md#under-the-hood) weitere Informationen dazu.
 
 
 ## Überprüfen des Codes
 
-Im [Grundlegendes Tutorial - Erstellen einer React-App, die AEM GraphQL-APIs verwendet](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object) Schritt hatten wir einige Schlüsseldateien überprüft und erweitert, um praktische Kenntnisse zu erhalten. Bevor Sie die WKND-App verbessern, überprüfen Sie die Schlüsseldateien.
+Im [Schritt zum Erstellen einer React-App mit Nutzung von AEM GraphQL-APIs des grundlegenden Tutorials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html?lang=de#review-the-aemheadless-object) hatten wir einige Schlüsseldateien überprüft und erweitert, um praktische Kenntnisse zu vermitteln. Bevor Sie die WKND-App verbessern, sehen Sie sich diese Schlüsseldateien an.
 
-* [Überprüfen des AEMHeadless-Objekts](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)
+* [Überprüfen des AEMHeadless-Objekts](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html?lang=de#review-the-aemheadless-object)
 
-* [Implementieren, um AEM von GraphQL persistente Abfragen auszuführen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#implement-to-run-aem-graphql-persisted-queries)
+* [Implementieren zum Ausführen von AEM GraphQL-persistierten Abfragen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html?lang=de#implement-to-run-aem-graphql-persisted-queries)
 
-### Überprüfen `Adventures` React-Komponente
+### Überprüfen der React-Komponente `Adventures`
 
-Die Hauptansicht der WKND React-App ist die Liste aller Abenteuer und Sie können diese Abenteuer nach Aktivitätstyp filtern, z. B. _Camping, Radfahren_. Diese Ansicht wird von der `Adventures` -Komponente. Im Folgenden finden Sie die wichtigsten Implementierungsdetails:
+Die Hauptansicht der WKND React-App entspricht der Liste aller Adventures. Sie können diese Adventures nach Aktivitätstyp filtern, z. B. _Camping, Cycling_. Diese Ansicht wird von der `Adventures`-Komponente gerendert. Im Folgenden finden Sie die wichtigsten Implementierungsdetails:
 
-* Die `src/components/Adventures.js` Aufrufe `useAllAdventures(adventureActivity)` Hook und hier `adventureActivity` -Argument ist der Aktivitätstyp.
+* `src/components/Adventures.js` ruft den Hook `useAllAdventures(adventureActivity)` auf, wobei hier das Argument `adventureActivity` für den Aktivitätstyp steht.
 
-* Die `useAllAdventures(adventureActivity)` Der Erweiterungspunkt wird im Abschnitt `src/api/usePersistedQueries.js` -Datei. Basierend auf `adventureActivity` -Wert bestimmt, welche persistente Abfrage aufgerufen werden soll. Wenn kein Nullwert angegeben wird, wird `wknd-shared/adventures-by-activity`, sonst erhalten alle verfügbaren Abenteuer `wknd-shared/adventures-all`.
+* Der Hook `useAllAdventures(adventureActivity)` ist in der Datei `src/api/usePersistedQueries.js` definiert. Basierend auf dem Wert von `adventureActivity`wird bestimmt, welche persistierte Abfrage aufgerufen werden soll. Sofern der Wert nicht null ist, wird `wknd-shared/adventures-by-activity` aufgerufen, andernfalls alle verfügbaren Adventures (`wknd-shared/adventures-all`).
 
-* Der Haken verwendet das Haupt `fetchPersistedQuery(..)` -Funktion, die die Ausführung der Abfrage an `AEMHeadless` via `aemHeadlessClient.js`.
+* Der Hook verwendet als Hauptfunktion `fetchPersistedQuery(..)`, die die Ausführung der Abfrage über `aemHeadlessClient.js` an `AEMHeadless` delegiert.
 
-* Der Erweiterungspunkt gibt auch nur die relevanten Daten aus der AEM GraphQL-Antwort zurück unter `response.data?.adventureList?.items`, wodurch die `Adventures` React-View-Komponenten müssen unabhängig von den übergeordneten JSON-Strukturen sein.
+* Der Hook gibt auch nur die relevanten Daten aus der AEM GraphQL-Antwort unter `response.data?.adventureList?.items` zurück, sodass die React-Ansichtskomponente `Adventures` unabhängig von den übergeordneten JSON-Strukturen sein kann.
 
-* Bei erfolgreicher Ausführung der Abfrage wird die `AdventureListItem(..)` Render-Funktion von `Adventures.js` fügt HTML-Element hinzu, um die _Bild, Reisedauer, Preis und Titel_ Informationen.
+* Bei erfolgreicher Ausführung der Abfrage fügt die Render-Funktion `AdventureListItem(..)` von `Adventures.js` ein HTML-Element hinzu, um _Bild-, Reisedauer-, Preis- und Titelinformationen_ anzuzeigen.
 
-### Überprüfen `AdventureDetail` React-Komponente
+### Überprüfen der React-Komponente `AdventureDetail`
 
-Die `AdventureDetail` Die React-Komponente rendert die Details des Abenteuers. Im Folgenden finden Sie die wichtigsten Implementierungsdetails:
+Die React-Komponente `AdventureDetail` rendert die Details des Adventures. Im Folgenden finden Sie die wichtigsten Implementierungsdetails:
 
-* Die `src/components/AdventureDetail.js` Aufrufe `useAdventureBySlug(slug)` Hook und hier `slug` -Argument ist Abfrageparameter.
+* `src/components/AdventureDetail.js` ruft den Hook `useAdventureBySlug(slug)` auf, wobei hier das Argument `slug` für den Abfrageparameter steht.
 
-* Wie oben, wird die `useAdventureBySlug(slug)` Der Erweiterungspunkt wird im Abschnitt `src/api/usePersistedQueries.js` -Datei. Sie ruft `wknd-shared/adventure-by-slug` persistente Abfrage durch Delegieren an `AEMHeadless` via `aemHeadlessClient.js`.
+* Wie oben ist der Hook `useAdventureBySlug(slug)` in der Datei `src/api/usePersistedQueries.js` definiert. Die persistierte Abfrage `wknd-shared/adventure-by-slug` wird durch Delegieren über `aemHeadlessClient.js` an `AEMHeadless` aufgerufen.
 
-* Bei erfolgreicher Ausführung der Abfrage wird die `AdventureDetailRender(..)` Render-Funktion von `AdventureDetail.js` fügt ein HTML-Element hinzu, um die Details des Abenteuers anzuzeigen.
+* Bei erfolgreicher Ausführung der Abfrage fügt die Render-Funktion `AdventureDetailRender(..)` von `AdventureDetail.js` ein HTML-Element hinzu, um Details zum Adventure anzuzeigen.
 
 
-## Verbessern des Codes
+## Erweitern des Codes
 
-### Verwendung `adventure-details-by-slug` persistente Abfrage
+### Verwenden der persistierten Abfrage `adventure-details-by-slug`
 
-Im vorherigen Kapitel haben wir die `adventure-details-by-slug` persistente Abfrage enthält, werden zusätzliche Abenteuerinformationen bereitgestellt, z. B. _location, lehrerteam und administrator_. Lasst uns ersetzen `adventure-by-slug` mit `adventure-details-by-slug` persistente Abfrage zum Rendern dieser zusätzlichen Informationen.
+Im vorherigen Kapitel haben wir die persistierte Abfrage `adventure-details-by-slug` erstellt. Diese liefert zusätzliche Informationen zum Adventure, z. B. zum _Ort, Lehrpersonal und Administrator-Team_. Ersetzen Sie `adventure-by-slug` durch die persistierte Abfrage `adventure-details-by-slug`, um diese zusätzlichen Informationen zu rendern.
 
 1. Öffnen Sie `src/api/usePersistedQueries.js`.
 
-1. Suchen Sie die Funktion `useAdventureBySlug()` und aktualisieren Sie die Abfrage als
+1. Suchen Sie die Funktion `useAdventureBySlug()` und aktualisieren Sie die Abfrage wie folgt:
 
 ```javascript
  ...
@@ -169,11 +169,11 @@ Im vorherigen Kapitel haben wir die `adventure-details-by-slug` persistente Abfr
  ...
 ```
 
-### Zusätzliche Informationen anzeigen
+### Anzeigen zusätzlicher Informationen
 
-1. Um weitere Abenteuerinformationen anzuzeigen, öffnen Sie `src/components/AdventureDetail.js`
+1. Um weitere Adventure-Informationen anzuzeigen, öffnen Sie `src/components/AdventureDetail.js`.
 
-1. Suchen Sie die Funktion `AdventureDetailRender(..)` und aktualisieren Sie die Rückgabefunktion als
+1. Suchen Sie die Funktion `AdventureDetailRender(..)` und aktualisieren Sie die Rückgabefunktion wie folgt:
 
    ```javascript
    ...
@@ -198,7 +198,7 @@ Im vorherigen Kapitel haben wir die `adventure-details-by-slug` persistente Abfr
    ...
    ```
 
-1. Definieren Sie auch die entsprechenden Renderfunktionen:
+1. Definieren Sie auch die entsprechenden Render-Funktionen:
 
    **LocationInfo**
 
@@ -282,9 +282,9 @@ Im vorherigen Kapitel haben wir die `adventure-details-by-slug` persistente Abfr
    }
    ```
 
-### Neue Stile definieren
+### Definieren neuer Stile
 
-1. Öffnen `src/components/AdventureDetail.scss` und fügen Sie die folgenden Klassendefinitionen hinzu
+1. Öffnen Sie `src/components/AdventureDetail.scss` und fügen Sie die folgenden Klassendefinitionen hinzu:
 
    ```CSS
    .adventure-detail-administrator,
@@ -303,22 +303,22 @@ Im vorherigen Kapitel haben wir die `adventure-details-by-slug` persistente Abfr
 
 >[!TIP]
 >
->Die aktualisierten Dateien finden Sie unter **AEM Guides WKND - GraphQL** Projekt, siehe [Erweitertes Tutorial](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/advanced-tutorial) Abschnitt.
+>Die aktualisierten Dateien finden Sie unter dem Projekt **AEM Guides WKND – GraphQL** (siehe Abschnitt [Erweitertes Tutorial](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/advanced-tutorial)).
 
 
-Nach Abschluss der oben genannten Verbesserungen sieht die WKND-App wie folgt aus und die Entwicklertools des Browsers zeigen `adventure-details-by-slug` persistenter Abfrageaufruf.
+Nach Abschluss der oben genannten Verbesserungen sieht die WKND-App wie folgt aus und die Entwickler-Tools des Browsers zeigen den Aufruf der persisenten Abfrage `adventure-details-by-slug` an.
 
-![Verbessertes WKND-APP](assets/client-application-integration/Enhanced-WKND-APP.gif)
+![Erweiterte WKND-App](assets/client-application-integration/Enhanced-WKND-APP.gif)
 
-## Verbesserungsproblem (optional)
+## Erweiterungsproblem (optional)
 
-Die Hauptansicht der WKND React-App ermöglicht es Ihnen, diese Abenteuer nach Aktivitätstyp wie _Camping, Radfahren_. Das WKND-Geschäftsteam möchte jedoch eine zusätzliche _Standort_ Filterfunktion. Die Anforderungen sind
+Die Hauptansicht der WKND React-App ermöglicht es Ihnen, diese Adventures nach Aktivitätstyp wie _Camping, Cycling_ zu filtern. Das WKND-Business-Team wünscht sich jedoch eine zusätzliche _standortbasierte_ Filterfunktion. Die Anforderungen lauten:
 
-* Fügen Sie in der Hauptansicht der WKND-App oben links oder rechts hinzu _Standort_ Filtersymbol.
-* Klicken _Standort_ über das Filtersymbol sollte die Liste der Standorte angezeigt werden.
-* Wenn Sie in der Liste auf eine gewünschte Positionsoption klicken, sollte nur die passenden Abenteuer angezeigt werden.
-* Wenn nur ein Abenteuer übereinstimmt, wird die Ansicht Abenteuer Details angezeigt.
+* In der Hauptansicht der WKND-App ist oben links oder rechts ein Filterssymbol für _Standort_ hinzuzufügen.
+* Durch Klicken auf das Filtersymbol für _Standorte_ sollte die Liste der Standorte angezeigt werden.
+* Durch Klicken auf eine gewünschte Standortoption in der Liste sollten nur die dazu passenden Adventures angezeigt werden.
+* Wenn nur ein Adventure passend ist, wird die Ansicht mit den Adventure-Details angezeigt.
 
 ## Herzlichen Glückwunsch
 
-Herzlichen Glückwunsch! Sie haben die Integration abgeschlossen und die persistenten Abfragen in die WKND-Beispielanwendung implementiert.
+Herzlichen Glückwunsch! Sie haben nun die Integration abgeschlossen und die persistierten Abfragen in die WKND-Beispielanwendung implementiert.
