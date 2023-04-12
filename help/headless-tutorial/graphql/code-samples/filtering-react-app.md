@@ -1,6 +1,6 @@
 ---
-title: Filtern der React-App
-description: Eine einfache React-App, die WKND-Abenteuer filtert, die mit Inhaltsfragmenten modelliert wurden.
+title: Filternde React-App
+description: Eine einfache React-App, die WKND-Adventures filtert, die mit Inhaltsfragmenten modelliert wurden.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -12,20 +12,20 @@ index: false
 hide: true
 hidefromtoc: true
 source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '137'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# Filtern der React-App
+# Filternde React-App
 
-Erkunden AEM Headless GraphQL-APIs, mit denen Daten mithilfe einer [React](https://reactjs.org/) App. Diese React-App erstellt eine Liste von WKND-Abenteuern, die nach Aktivitätstyp gefiltert werden können.
+Erkunden Sie die Fähigkeit von AEM Headless-GraphQL-APIs, Daten mit einer [React](https://reactjs.org/)-App zu filtern. Diese React-App erstellt eine Liste von WKND-Adventures, die nach Aktivitätstyp gefiltert werden können.
 
-Dieser Code veranschaulicht die Verwendung von Adobe [AEM Headless-Client für JavaScript](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md) , um persistente GraphQL-Abfragen von React aufzurufen. Diese App verwendet die `wknd-shared/adventures-all` persistente Abfrage zur Sammlung aller Abenteuer und Ableitung einer Liste der verfügbaren Aktivitätstypen. Wenn ein Benutzer einen Aktivitätstyp auswählt, wird der ausgewählte Typ an die `wknd-shared/adventures-by-activity` persistente Abfrage und ruft nur die Abenteuerdetails für die Abenteuer des angegebenen Aktivitätstyps ab.
+Dieser Code veranschaulicht die Verwendung des Adobe [AEM Headless-Clients für JavaScript](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md), um persistierte GraphQL-Abfragen aus React aufzurufen. Diese App verwendet die persistierte Abfrage von `wknd-shared/adventures-all`, um alle Adventures zu sammeln und daraus eine Liste der verfügbaren Aktivitätstypen abzuleiten. Bei Auswahl eines Aktivitätstyps durch Benutzende wird der ausgewählte Typ an die persistierte Abfrage `wknd-shared/adventures-by-activity` übergeben und es werden nur die Adventure-Details für die Adventures des angegebenen Aktivitätstyps abgerufen.
 
 Dieser Code:
 
-+ Ist mit einem AEM-Veröffentlichungsdienst verbunden und erfordert keine Authentifizierung
-+ Verwendet die persistenten Abfragen des WKND: `wknd-shared/adventures-all` und `wknd-shared/adventures-by-activity`
++ ist mit einem AEM-Veröffentlichungs-Service verbunden und erfordert keine Authentifizierung,
++ Verwendet die persistierten Abfragen von WKND: `wknd-shared/adventures-all` und `wknd-shared/adventures-by-activity`
