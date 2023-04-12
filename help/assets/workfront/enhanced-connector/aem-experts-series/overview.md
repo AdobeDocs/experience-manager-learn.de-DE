@@ -1,5 +1,5 @@
 ---
-title: Workfront für Experience Manager - erweiterte Connector-Sitzungen
+title: Sitzungen für den erweiterten Connector von Workfront für Experience Manager
 description: Erfahren Sie mehr über die Grundlagen des erweiterten Connectors für Adobe Workfront und Experience Manager Assets.
 version: Cloud Service
 topic: Content Management, Integrations
@@ -10,24 +10,24 @@ thumbnail: kt-9754.jpeg
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
 source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '256'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Workfront für Experience Manager - Expertenserie für Connectoren
+# Workfront für Experience Manager – Expertenserie zu erweiterten Connectoren
 
-![AEM Expertenreihe](./assets/banner.png)
+![AEM-Expertenserie](./assets/banner.png)
 
-Nehmen Sie an dieser vierteiligen Videoserie teil, in der Adobe-Experten für Workfront und Experience Manager Assets präsentieren und erläutern Sie, wie der Workfront-Connector für Experience Manager-Verbesserungen funktioniert.
+In dieser vierteiligen Videoserie demonstrieren und diskutieren Adobe-Fachleute für Workfront und Experience Manager Assets die Vorzüge des erweiterten Connectors von Workfront für Experience Manager.
 
-Diese vierteilige Expertenserie folgt auf eine Expertengruppe, die sich aus Produktmanagern, Beratern und Adoben zusammensetzt und folgende Themen erörtert:
+In dieser vierteiligen Expertenreihe diskutieren verschiedene Adobe-Fachleute aus unterschiedlichen Bereichen wie Produkt-Management, Beratung und Partnerunternehmen folgende Themen:
 
-1. [Erstmalige Setup-Konfigurationen in Workfront und AEM durchführen](./setup.md)
+1. [Durchführen der erstmaligen Setup-Konfigurationen in Workfront und AEM](./setup.md)
 2. [Konfigurieren der Metadatensynchronisierung zwischen benutzerdefinierten Workfront-Formularen und AEM](./custom-forms.md)
-3. [Verwenden von AEM-Tags, projektverknüpften Ordnern, Adobe Asset Link- und Ordner-Metadatenschemata zum Maximieren des Werts](./aem-tags-project-linked-folders-and-folder-metadata.md)
-4. [Verwenden des erweiterten AEM-Workflows zur Optimierung von Geschäftsprozessen in AEM und Workfront sowie anderen erweiterten Einstellungen](./advanced-settings-and-workflows.md)
+3. [Verwenden von AEM-Tags, projektverknüpften Ordnern, Adobe Asset Link und Ordner-Metadatenschemata zur Wertmaximierung](./aem-tags-project-linked-folders-and-folder-metadata.md)
+4. [Verwenden des erweiterten AEM-Workflows zur Optimierung von Geschäftsprozessen in AEM und Workfront und andere erweiterte Einstellungen](./advanced-settings-and-workflows.md)
 
 <table>
   <td>
@@ -36,12 +36,12 @@ Diese vierteilige Expertenserie folgt auf eine Expertengruppe, die sich aus Prod
              src="./assets/setup.png">
       </a>
       <div>
-         <a href="./setup.md"><strong>Einrichten und anfängliche Konfiguration</strong></a>
-         <br/><em>Teil 1/4</em>
+         <a href="./setup.md"><strong>Einrichtung und Erstkonfiguration</strong></a>
+ <br/><em>Teil 1/4</em>
       </div>
       <p>
         <br/>
-         Erfahren Sie, wie Sie die Erstkonfiguration des Workfront for Experience Manager Enhanced Connector einrichten und durchführen.
+ Erfahren Sie, wie Sie den erweiterten Connector von Workfront für Experience Manager einrichten und die Erstkonfiguration durchführen.
       </p>
    </td>
    <!-- Workfront custom forms and metadata mapping -->
@@ -52,26 +52,26 @@ Diese vierteilige Expertenserie folgt auf eine Expertengruppe, die sich aus Prod
       </a>
       <div>
          <a href="./custom-forms.md"><strong>Benutzerdefinierte Formulare und Metadatenzuordnung in Workfront</strong></a>
-         <br/><em>Teil 2/4</em>
+ <br/><em>Teil 2/4</em>
       </div>
       <p>
         <br/>
-         Erfahren Sie mehr über benutzerdefinierte Workfront-Formulare und wie sie Experience Manager Assets-Metadatenschemata zum Synchronisieren von Daten zugeordnet werden.
+ Erfahren Sie mehr über benutzerdefinierte Workfront-Formulare und darüber, wie sie den Metadatenschemata von Experience Manager Assets zugeordnet werden, um Daten zu synchronisieren.
       </p>
     </td>
     <!-- AEM Tags, project linked folders, and folder metadata -->
     <td>
       <a href="./aem-tags-project-linked-folders-and-folder-metadata.md">
-        <img alt="AEM Tags, projektverknüpfte Ordner und Ordnermetadaten" 
+        <img alt="AEM-Tags, projektverknüpfte Ordner und Ordnermetadaten" 
              src="./assets/aem-tags.png">
       </a>
       <div>
          <a href="./aem-tags-project-linked-folders-and-folder-metadata.md"><strong>AEM Tags, projektverknüpfte Ordner und Ordnermetadaten</strong></a>
-         <br/><em>Teil 3/4</em> 
+ <br/><em>Teil 3/4</em> 
       </div>
       <p>
         <br/>
-            Erfahren Sie, wie Sie AEM Taxonomie von Workfront aus fördern, projektverknüpfte Ordner und Daten verwenden, um Metadaten für Asset-Ordner AEM.
+ Erfahren Sie, wie Sie die AEM-Taxonomie von Workfront aus steuern, projektverknüpfte Ordner verwenden und Daten zu AEM-Asset-Ordner-Metadaten hinzufügen.
       </p>
    </td>   
    <!-- Advanced workflows -->
@@ -82,11 +82,11 @@ Diese vierteilige Expertenserie folgt auf eine Expertengruppe, die sich aus Prod
       </a>
       <div>
          <a href="./advanced-settings-and-workflows.md"><strong>Erweiterte Einstellungen und Workflows</strong></a>
-         <br/><em>Teil 4/4</em>
+ <br/><em>Teil 4/4</em>
       </div>
       <p>
         <br/>
-            Erfahren Sie mehr über die erweiterten Einstellungen für Workfront für AEM erweiterten Connector und verwalten Sie die Datensynchronisation mithilfe erweiterter Workflows.
+ Erfahren Sie, wie Sie erweiterte Einstellungen für den erweiterten Connector von Workfront für AEM vornehmen und die Datensynchronisierung mithilfe erweiterter Workflows verwalten.
       </p>
    </td>
   </tr>  
