@@ -1,5 +1,5 @@
 ---
-title: Authoring von Inhaltsfragmenten - Erste Schritte mit AEM Headless - GraphQL
+title: Authoring von Inhaltsfragmenten – Erste Schritte mit AEM Headless – GraphQL
 description: Erste Schritte mit Adobe Experience Manager (AEM) und GraphQL. Erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf einem Inhaltsfragmentmodell basiert. Erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
 version: Cloud Service
 mini-toc-levels: 1
@@ -11,105 +11,105 @@ role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
 source-git-commit: 25c289b093297e870c52028a759d05628d77f634
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '810'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # Erstellen von Inhaltsfragmenten {#authoring-content-fragments}
 
-In diesem Kapitel erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf der [neu definiertes Inhaltsfragmentmodell](./content-fragment-models.md). Außerdem erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
+In diesem Kapitel erstellen und bearbeiten Sie ein neues Inhaltsfragment, das auf dem [neu definierten Inhaltsfragmentmodell](./content-fragment-models.md) basiert. Außerdem erfahren Sie, wie Sie Varianten von Inhaltsfragmenten erstellen.
 
 ## Voraussetzungen {#prerequisites}
 
-Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die im [Definieren von Inhaltsfragmentmodellen](./content-fragment-models.md) wurden abgeschlossen.
+Dies ist ein mehrteiliges Tutorial und es wird davon ausgegangen, dass Sie die Schritte, die in [Definieren von Inhaltsfragmentmodellen](./content-fragment-models.md) beschrieben sind, abgeschlossen haben.
 
 ## Ziele {#objectives}
 
-* Inhaltsfragment basierend auf einem Inhaltsfragmentmodell erstellen
+* Erstellen eines Inhaltsfragments basierend auf einem Inhaltsfragmentmodell
 * Erstellen einer Inhaltsfragmentvariante
 
 ## Erstellen eines Asset-Ordners
 
-Inhaltsfragmente werden in Ordnern in AEM Assets gespeichert. Um Inhaltsfragmente aus den im vorherigen Kapitel erstellten Modellen zu erstellen, muss ein Ordner erstellt werden, in dem sie gespeichert werden. Für den Ordner ist eine Konfiguration erforderlich, um die Erstellung von Fragmenten aus bestimmten Modellen zu ermöglichen.
+Inhaltsfragmente werden in AEM Assets in Ordnern gespeichert. Um Inhaltsfragmente aus den im vorherigen Kapitel erstellten Modellen zu erstellen, muss ein Ordner erstellt werden, in dem sie gespeichert werden. Eine Konfiguration des Ordners ist erforderlich, um die Erstellung von Fragmenten aus bestimmten Modellen zu ermöglichen.
 
-1. Navigieren Sie im Bildschirm AEM Start zu **Assets** > **Dateien**.
+1. Navigieren Sie im AEM-Start-Bildschirm zu **Assets** > **Dateien**.
 
    ![Navigieren zu Asset-Dateien](assets/author-content-fragments/navigate-assets-files.png)
 
-1. Tippen **Erstellen** in der oberen rechten Ecke und tippen Sie auf **Ordner**. Geben Sie im daraufhin angezeigten Dialogfeld Folgendes ein:
+1. Tippen Sie auf **Erstellen** in der oberen rechten Ecke und dann auf **Ordner**. Geben Sie im daraufhin angezeigten Dialogfeld Folgendes ein:
 
    * Titel*: **Mein Projekt**
    * Name: **my-project**
 
    ![Dialogfeld „Ordner erstellen“](assets/author-content-fragments/create-folder-dialog.png)
 
-1. Wählen Sie die **Eigener Ordner** Ordner und tippen Sie auf **Eigenschaften**.
+1. Wählen Sie den Ordner **Mein Ordner** und tippen Sie auf **Eigenschaften**.
 
-   ![Ordnereigenschaften öffnen](assets/author-content-fragments/open-folder-properties.png)
+   ![Öffnen der Ordnereigenschaften](assets/author-content-fragments/open-folder-properties.png)
 
-1. Tippen Sie auf **Cloud Services** Registerkarte. Wählen Sie auf der Registerkarte Cloud-Konfiguration mit der Pfadsuche die **Mein Projekt** Konfiguration. Der Wert sollte `/conf/my-project`.
+1. Tippen Sie auf die Registerkarte **Cloud Services**. Wählen Sie auf der Registerkarte „Cloud-Konfiguration“ mit dem Pfadsucher die Konfiguration **Mein Projekt** aus. Der Wert sollte `/conf/my-project` sein.
 
-   ![Cloud-Konfiguration festlegen](assets/author-content-fragments/set-cloud-config-my-project.png)
+   ![Festlegen der Cloud-Konfiguration](assets/author-content-fragments/set-cloud-config-my-project.png)
 
    Durch Festlegen dieser Eigenschaft können Inhaltsfragmente mithilfe der im vorherigen Kapitel erstellten Modelle erstellt werden.
 
-1. Tippen Sie auf **Richtlinien** Registerkarte unter **Zulässige Inhaltsfragmentmodelle** -Feld verwenden Sie die Pfadsuche, um die **Person** und **Team** -Modell, das zuvor erstellt wurde.
+1. Tippen Sie auf die Registerkarte **Richtlinien** und wählen Sie unter dem Feld **Zulässige Inhaltsfragmentmodelle** mit dem Pfadsucher das zuvor erstellte Modell **Person** und **Team** aus.
 
    ![Zulässige Inhaltsfragmentmodelle](assets/author-content-fragments/allowed-content-fragment-models.png)
 
    Diese Richtlinien werden automatisch von allen Unterordnern übernommen und können überschrieben werden. Sie können auch Modelle nach Tags zulassen oder Modelle aus anderen Projektkonfigurationen aktivieren. Dieser Mechanismus bietet eine leistungsstarke Möglichkeit, Ihre Inhaltshierarchie zu verwalten.
 
-1. Tippen **Speichern und schließen** , um die Änderungen an den Ordnereigenschaften zu speichern.
+1. Tippen Sie auf **Speichern und schließen**, um die Änderungen an den Ordnereigenschaften zu speichern.
 
-1. Navigieren Sie in der **Mein Projekt** Ordner.
+1. Navigieren Sie in den Ordner **Mein Projekt**.
 
 1. Erstellen Sie einen weiteren Ordner mit den folgenden Werten:
 
-   * Titel*: **englisch**
+   * Titel*: **Englisch**
    * Name: **en**
 
-   Es empfiehlt sich, Projekte für mehrsprachige Unterstützung einzurichten. Siehe [Weitere Informationen finden Sie auf der folgenden Dokumentationsseite .](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
+   Es empfiehlt sich, Projekte für mehrsprachige Unterstützung einzurichten. Weitere Informationen finden Sie auf [der folgenden Dokumentseite](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html?lang=de).
 
 
-## Erstellen eines Inhaltsfragments {#create-content-fragment}
+## Erstellen eines Inhaltsmodells {#create-content-fragment}
 
-Als Nächstes werden mehrere Inhaltsfragmente basierend auf dem **Team** und **Person** Modelle.
+Anschließend werden mehrere Inhaltsfragmente auf der Grundlage der Modelle **Team** und **Person** erstellt.
 
-1. Tippen Sie auf dem AEM Startbildschirm auf **Inhaltsfragmente** , um die Benutzeroberfläche für Inhaltsfragmente zu öffnen.
+1. Tippen Sie auf dem AEM-Startbildschirm auf **Inhaltsfragmente**, um die Benutzeroberfläche für Inhaltsfragmente zu öffnen.
 
    ![Inhaltsfragment-Benutzeroberfläche](assets/author-content-fragments/cf-fragment-ui.png)
 
-1. Erweitern Sie in der linken Leiste **Mein Projekt** und tippen **englisch**.
-1. Tippen **Erstellen** um **Neues Inhaltsfragment** und geben Sie die folgenden Werte ein:
+1. Erweitern Sie in der linken Leiste **Mein Projekt** und tippen Sie auf **Englisch**.
+1. Tippen Sie auf **Erstellen**, um das Dialogfeld **Neues Inhaltsfragment** aufzurufen, und geben Sie die folgenden Werte ein:
 
    * Speicherort: `/content/dam/my-project/en`
    * Inhaltsfragmentmodell: **Person**
-   * Titel: **John Doe**
+   * Titel: **Martin Müller**
    * Name: `john-doe`
 
    ![Neues Inhaltsfragment](assets/author-content-fragments/new-content-fragment-john-doe.png)
 1. Tippen Sie auf **Erstellen**.
-1. Wiederholen Sie die obigen Schritte, um ein Fragment zu erstellen, das **Alison Smith**:
+1. Wiederholen Sie die obigen Schritte, um ein Fragment zu erstellen, das **Alina Schmidt** darstellt:
 
    * Speicherort: `/content/dam/my-project/en`
    * Inhaltsfragmentmodell: **Person**
-   * Titel: **Alison Smith**
+   * Titel: **Alina Schmidt**
    * Name: `alison-smith`
 
-   Tippen **Erstellen** , um das Fragment &quot;Person&quot;zu erstellen.
+   Tippen Sie auf **Erstellen**, um das Fragment „Person“ zu erstellen.
 
-1. Wiederholen Sie als Nächstes die Schritte zum Erstellen einer **Team** Fragmentdarstellung **Team Alpha**:
+1. Als Nächstes wiederholen Sie die Schritte, um ein **Team**-Fragment zu erstellen, das **Team Alpha** darstellt:
 
    * Speicherort: `/content/dam/my-project/en`
    * Inhaltsfragmentmodell: **Team**
    * Titel: **Team Alpha**
    * Name: `team-alpha`
 
-   Tippen **Erstellen** , um das Team-Fragment zu erstellen.
+   Tippen Sie auf **Erstellen**, um das Fragment „Team“ zu erstellen.
 
-1. Es sollten drei Inhaltsfragmente darunter sein **Mein Projekt** > **englisch**:
+1. Unter **Mein Projekt** > **Englisch** sollten sich jetzt drei Inhaltsfragmente befinden:
 
    ![Neue Inhaltsfragmente](assets/author-content-fragments/new-content-fragments.png)
 
@@ -117,52 +117,52 @@ Als Nächstes werden mehrere Inhaltsfragmente basierend auf dem **Team** und **P
 
 Füllen Sie anschließend die neu erstellten Fragmente mit Daten.
 
-1. Tippen Sie auf das Kontrollkästchen neben **John Doe** und tippen **Öffnen**.
+1. Tippen Sie auf das Kontrollkästchen neben **Martin Müller** und dann auf **Öffnen**.
 
-   ![Inhaltsfragment öffnen](assets/author-content-fragments/open-fragment-for-editing.png)
+   ![Öffnen des Inhaltsfragments](assets/author-content-fragments/open-fragment-for-editing.png)
 
-1. Der Inhaltsfragment-Editor enthält ein Formular, das auf dem Inhaltsfragmentmodell basiert. Füllen Sie die verschiedenen Felder aus, um dem **John Doe** Fragment. Laden Sie für den Profilbild Ihr eigenes Bild in AEM Assets hoch.
+1. Der Inhaltsfragment-Editor enthält ein Formular, das auf dem Inhaltsfragmentmodell basiert. Füllen Sie die verschiedenen Felder aus, um dem Fragment **Martin Müller** Inhalte hinzuzufügen. Laden Sie für das Profilbild Ihr eigenes Bild in AEM Assets hoch.
 
    ![Inhaltsfragmente-Editor](assets/author-content-fragments/content-fragment-editor-jd.png)
 
-1. Tippen **Speichern und schließen** , um die Änderungen am Fragment &quot;Max Mustermann&quot;zu speichern.
-1. Kehren Sie zur Benutzeroberfläche &quot;Inhaltsfragment&quot;zurück und öffnen Sie die **Alison Smith** Datei zur Bearbeitung.
-1. Wiederholen Sie die obigen Schritte, um die **Alison Smith** Fragment mit Inhalt.
+1. Tippen Sie auf **Speichern und schließen**, um die Änderungen am Fragment „Martin Müller“ zu speichern.
+1. Kehren Sie zur Benutzeroberfläche „Inhaltsfragment“ zurück und öffnen Sie die Datei **Alina Schmidt** zur Bearbeitung.
+1. Wiederholen Sie die obigen Schritte, um das Fragment **Alina Schmidt** mit Inhalten zu füllen.
 
-## Bearbeiten von Team-Inhaltsfragmenten {#edit-team-content-fragment}
+## Bearbeiten des Team-Inhaltsfragments {#edit-team-content-fragment}
 
-1. Öffnen Sie die **Team Alpha** Inhaltsfragment mithilfe der Benutzeroberfläche für Inhaltsfragmente.
-1. Füllen Sie die Felder für **Titel**, **Kurzname** und **Beschreibung**.
-1. Wählen Sie die **John Doe** und **Alison Smith** Inhaltsfragmente zum Ausfüllen der **Team-Mitglieder** -Feld:
+1. Öffnen Sie das Inhaltsfragment **Team Alpha** mithilfe der Benutzeroberfläche für Inhaltsfragmente.
+1. Füllen Sie die Felder für **Titel**, **Kurzname** und **Beschreibung** aus.
+1. Wählen Sie die Inhaltsfragmente **Martin Müller** und **Alina Schmidt** aus, um das Feld **Team-Mitglieder** zu füllen:
 
-   ![Team-Mitglieder festlegen](assets/author-content-fragments/select-team-members.png)
+   ![Festlegen der Team-Mitglieder](assets/author-content-fragments/select-team-members.png)
 
    >[!NOTE]
    >
-   >Sie können Inhaltsfragmente auch inline erstellen, indem Sie die **Neues Inhaltsfragment** Schaltfläche.
+   >Sie können Inhaltsfragmente auch inline erstellen, indem Sie die Schaltfläche **Neues Inhaltsfragment** verwenden.
 
-1. Tippen **Speichern und schließen** , um die Änderungen am Team Alpha-Fragment zu speichern.
+1. Tippen Sie auf **Speichern und schließen**, um die Änderungen am Team Alpha-Fragment zu speichern.
 
-## Inhaltsfragmente veröffentlichen
+## Veröffentlichen von Inhaltsfragmenten
 
-Veröffentlichen Sie nach Überprüfung und Überprüfung die erstellten `Content Fragments`
+Nach Überprüfung und Verifizierung veröffentlichen Sie die verfassten `Content Fragments`
 
-1. Tippen Sie auf dem AEM Startbildschirm auf **Inhaltsfragmente** , um die Benutzeroberfläche für Inhaltsfragmente zu öffnen.
+1. Tippen Sie auf dem AEM-Startbildschirm auf **Inhaltsfragmente**, um die Benutzeroberfläche für Inhaltsfragmente zu öffnen.
 
-1. Erweitern Sie in der linken Leiste **Mein Projekt** und tippen **englisch**.
+1. Erweitern Sie in der linken Leiste **Mein Projekt** und tippen Sie auf **Englisch**.
 
-1. Tippen Sie auf das Kontrollkästchen neben den Inhaltsfragmenten und tippen Sie auf **Veröffentlichen**.
-   ![Inhaltsfragment veröffentlichen](assets/author-content-fragments/publish-content-fragment.png)
+1. Tippen Sie auf das Kontrollkästchen neben den Inhaltsfragmenten und dann auf **Veröffentlichen**.
+   ![Veröffentlichen des Inhaltsfragments](assets/author-content-fragments/publish-content-fragment.png)
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
-Herzlichen Glückwunsch! Sie haben mehrere Inhaltsfragmente erstellt und eine Variante erstellt.
+Herzlichen Glückwunsch! Sie haben mehrere Inhaltsfragmente und eine Variation erstellt.
 
 ## Nächste Schritte {#next-steps}
 
-Im nächsten Kapitel [GraphQL-APIs](explore-graphql-api.md), werden Sie AEM GraphQL-APIs mithilfe des integrierten GrapiQL-Tools untersuchen. Erfahren Sie, wie AEM basierend auf einem Inhaltsfragmentmodell automatisch ein GraphQL-Schema generiert. Sie experimentieren mit der Erstellung grundlegender Abfragen unter Verwendung der GraphQL-Syntax.
+Im nächsten Kapitel [GraphQL-APIs](explore-graphql-api.md) werden Sie AEM GraphQL-APIs mithilfe des integrierten GraphQL-Tools erkunden. Erfahren Sie, wie AEM automatisch ein GraphQL-Schema auf der Grundlage eines Inhaltsfragmentmodells generiert. Sie werden mit der Erstellung grundlegender Abfragen unter Verwendung der GraphQL-Syntax experimentieren.
 
 ## Verwandte Dokumentation
 
-* [Verwalten von Inhaltsfragmenten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html)
-* [Varianten – Erstellen von Fragmentinhalten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html)
+* [Verwalten von Inhaltsfragmenten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=de)
+* [Varianten – Erstellen von Fragmentinhalten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html?lang=de)
