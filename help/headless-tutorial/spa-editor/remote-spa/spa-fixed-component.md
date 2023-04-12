@@ -1,6 +1,6 @@
 ---
-title: Hinzufügen bearbeitbarer fester Komponenten zu Remote-SPA
-description: Erfahren Sie, wie Sie bearbeitbare feste Komponenten zu einer Remote-SPA hinzufügen.
+title: Hinzufügen bearbeitbarer fester Komponenten zu einer Remote SPA
+description: Erfahren Sie, wie Sie bearbeitbare feste Komponenten zu einer Remote SPA hinzufügen.
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
 role: Developer, Architect
@@ -11,40 +11,40 @@ last-substantial-update: 2022-11-11T00:00:00Z
 recommendations: noDisplay, noCatalog
 exl-id: edd18f2f-6f24-4299-a31a-54ccc4f6d86e
 source-git-commit: ece15ba61124972bed0667738ccb37575d43de13
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '536'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # Bearbeitbare feste Komponenten
 
-Bearbeitbare React-Komponenten können &quot;fest&quot;oder in den SPA-Ansichten hartcodiert sein. Auf diese Weise können Entwickler SPA Editor-kompatible Komponenten in die SPA-Ansichten platzieren und es Benutzern ermöglichen, den Inhalt der Komponenten im AEM Editor SPA zu erstellen.
+Bearbeitbare React-Komponenten können in den SPA-Ansichten „befestigt“ oder hartcodiert werden. Auf diese Weise können Entwicklerinnen und Entwickler SPA-Editor-kompatible Komponenten in den SPA-Ansichten platzieren und Benutzenden ermöglichen, den Inhalt der Komponenten im AEM-SPA-Editor zu erstellen.
 
 ![Feste Komponenten](./assets/spa-fixed-component/intro.png)
 
-In diesem Kapitel ersetzen wir den Titel der Home-Ansicht &quot;Current Adventures&quot;, der hartcodierten Text in `Home.js` mit einer festen, aber bearbeitbaren Titelkomponente. Feste Komponenten garantieren die Platzierung des Titels, ermöglichen aber auch die Erstellung des Titeltextes und die Änderung außerhalb des Entwicklungszyklus.
+In diesem Kapitel ersetzen wir den Titel der Startansicht „Aktuelle Adventures“, der in `Home.js` hartcodiert ist, durch eine feste, aber bearbeitbare Titelkomponente. Feste Komponenten garantieren die Platzierung des Titels, ermöglichen aber auch die Erstellung des Titeltextes und dessen Veränderung außerhalb des Entwicklungszyklus.
 
-## WKND-App aktualisieren
+## Aktualisieren der WKND-App
 
-So fügen Sie eine __Fest__ -Komponente in der Startansicht:
+So fügen Sie eine __feste__ Komponente zur Startansicht hinzu:
 
-+ Erstellen Sie eine benutzerdefinierte bearbeitbare Titelkomponente und registrieren Sie sie im Ressourcentyp des Projekts Titel .
-+ Platzieren Sie die bearbeitbare Titelkomponente in der SPA-Startansicht
++ Erstellen Sie eine benutzerdefinierte bearbeitbare Titelkomponente und registrieren Sie sie im Ressourcentyp des Projekttitels.
++ Platzieren Sie die bearbeitbare Titelkomponente in der SPA-Startansicht.
 
-### Erstellen einer bearbeitbaren React Title-Komponente
+### Erstellen einer bearbeitbaren React-Titelkomponente
 
-Ersetzen Sie in der SPA-Startansicht den hartcodierten Text. `<h2>Current Adventures</h2>` mit einer benutzerdefinierten bearbeitbaren Titelkomponente. Bevor die Titelkomponente verwendet werden kann, müssen wir Folgendes tun:
+Ersetzen Sie in der SPA-Startansicht den hartcodierten Text `<h2>Current Adventures</h2>` durch eine benutzerdefinierte bearbeitbare Titelkomponente. Bevor die Titelkomponente verwendet werden kann, müssen wir Folgendes tun:
 
-1. Erstellen einer benutzerdefinierten Komponente &quot;Title React&quot;
-1. Dekorieren Sie die benutzerdefinierte Titelkomponente mit Methoden aus `@adobe/aem-react-editable-components` , damit es bearbeitbar wird.
-1. Registrieren Sie die bearbeitbare Titelkomponente bei `MapTo` damit sie in [Container-Komponente später](./spa-container-component.md).
+1. Eine benutzerdefinierte React-Titelkomponente erstellen
+1. Die benutzerdefinierte Titelkomponente mit Methoden aus `@adobe/aem-react-editable-components` dekorieren, damit sie bearbeitbar wird
+1. Die bearbeitbare Titelkomponente bei `MapTo` registrieren, damit sie später in der [Container-Komponente](./spa-container-component.md) verwendet werden kann
 
 Gehen Sie hierfür wie folgt vor:
 
 1. Öffnen Sie das Remote SPA-Projekt unter `~/Code/aem-guides-wknd-graphql/remote-spa-tutorial/react-app` in Ihrer IDE
-1. Erstellen einer React-Komponente unter `react-app/src/components/editable/core/Title.js`
-1. Fügen Sie den folgenden Code zu `Title.js`.
+1. Erstellen Sie eine React-Komponente unter `react-app/src/components/editable/core/Title.js`.
+1. Fügen Sie den folgenden Code zu `Title.js` hinzu.
 
    ```javascript
    import React from 'react'
@@ -89,12 +89,12 @@ Gehen Sie hierfür wie folgt vor:
    export const titleIsEmpty = (props) => props.text == null || props.text.trim().length === 0
    ```
 
-   Beachten Sie, dass diese React-Komponente mit AEM SPA Editor noch nicht bearbeitet werden kann. Diese Basiskomponente wird im nächsten Schritt bearbeitbar gemacht.
+   Beachten Sie, dass diese React-Komponente noch nicht mit dem AEM-SPA-Editor bearbeitet werden kann. Diese Basiskomponente wird im nächsten Schritt bearbeitbar gemacht.
 
-   Lesen Sie die Kommentare des Codes für die Implementierungsdetails.
+   Sehen Sie sich die Implementierungsdetails in den Kommentaren des Codes an.
 
-1. Erstellen einer React-Komponente unter `react-app/src/components/editable/EditableTitle.js`
-1. Fügen Sie den folgenden Code zu `EditableTitle.js`.
+1. Erstellen Sie eine React-Komponente unter `react-app/src/components/editable/EditableTitle.js`.
+1. Fügen Sie den folgenden Code zu `EditableTitle.js` hinzu.
 
    ```javascript
    // Import the withMappable API provided bu the AEM SPA Editor JS SDK
@@ -130,14 +130,14 @@ Gehen Sie hierfür wie folgt vor:
    export default EditableTitle;
    ```
 
-   Diese `EditableTitle` React-Komponente umschließt die `Title` React-Komponente, Umbrechen und Dekorieren, um sie im AEM SPA Editor bearbeitbar zu sein.
+   Diese `EditableTitle`-React-Komponente umschließt die `Title`-React-Komponente. Durch das Umschließen und Dekorieren wird sie im AEM-SPA-Editor bearbeitbar.
 
-### Verwenden der React EditableTitle-Komponente
+### Verwenden der EditableTitle-React-Komponente
 
-Nachdem die Komponente &quot;EditableTitle React&quot;in der React-App registriert und für die Verwendung in der React-App verfügbar ist, ersetzen Sie den hartcodierten Titeltext in der Startansicht.
+Nachdem die EditableTitle-React-Komponente nun in der React-App registriert und für die Verwendung darin verfügbar ist, ersetzen Sie den hartcodierten Titeltext in der Startansicht.
 
-1. Bearbeiten `react-app/src/components/Home.js`
-1. Im `Home()` unten, importieren `EditableTitle` und ersetzen Sie den hartcodierten Titel durch den neuen `AEMTitle` component:
+1. Bearbeiten von `react-app/src/components/Home.js`
+1. Importieren Sie unten in `Home()` `EditableTitle` und ersetzen Sie den hartcodierten Titel durch die neue Komponente `AEMTitle`:
 
    ```javascript
    ...
@@ -157,41 +157,41 @@ Nachdem die Komponente &quot;EditableTitle React&quot;in der React-App registrie
    }
    ```
 
-Die `Home.js` sollte wie folgt aussehen:
+Die Datei `Home.js` sollte wie folgt aussehen:
 
 ![Home.js](./assets/spa-fixed-component/home-js-update.png)
 
-## Erstellen Sie die Titelkomponente in AEM
+## Erstellen der Titelkomponente in AEM
 
-1. Bei der AEM-Autoreninstanz anmelden
-1. Navigieren Sie zu __Sites > WKND-App__
-1. Tippen __Startseite__ und wählen Sie __Bearbeiten__ in der oberen Aktionsleiste
-1. Auswählen __Bearbeiten__ über die Auswahl des Bearbeitungsmodus oben rechts im Seiteneditor
-1. Bewegen Sie den Mauszeiger über den Standardtiteltext unter dem WKND-Logo und über der Abenteuerliste, bis der blaue Bearbeitungsentwurf angezeigt wird.
-1. Tippen Sie auf , um die Aktionsleiste der Komponente anzuzeigen, und tippen Sie dann auf __Schraubenschlüssel__  bearbeiten
+1. Melden Sie sich bei AEM Author an
+1. Navigieren Sie zu __Sites > WKND App__
+1. Tippen Sie auf __Startseite__ und wählen Sie __Bearbeiten__ in der oberen Aktionsleiste.
+1. Wählen Sie __Bearbeiten__ in der Auswahl des Bearbeitungsmodus oben rechts im Seiteneditor.
+1. Bewegen Sie den Mauszeiger über den Standardtiteltext unter dem WKND-Logo und über der Adventure-Liste, bis die blaue Bearbeitungskontur angezeigt wird.
+1. Tippen Sie darauf, um die Aktionsleiste der Komponente anzuzeigen, und tippen Sie dann zum Bearbeiten auf den __Schraubenschlüssel__.
 
-   ![Aktionsleiste der Komponente &quot;Titel&quot;](./assets/spa-fixed-component/title-action-bar.png)
+   ![Aktionsleiste der Titelkomponente](./assets/spa-fixed-component/title-action-bar.png)
 
 1. Erstellen Sie die Titelkomponente:
-   + Titel: __WKND Adventures__
+   + Titel: __WKND-Adventures__
    + Typ/Größe: __H2__
 
-      ![Dialogfeld &quot;Titelkomponente&quot;](./assets/spa-fixed-component/title-dialog.png)
+      ![Dialogfeld der Titelkomponente](./assets/spa-fixed-component/title-dialog.png)
 
-1. Tippen __Fertig__ speichern
-1. Vorschau der Änderungen in AEM SPA Editor
-1. Aktualisieren Sie die WKND-App, die lokal ausgeführt wird auf [http://localhost:3000](http://localhost:3000) und sehen Sie, wie sich der erstellte Titel sofort ändert.
+1. Tippen Sie auf __Fertig__, um zu speichern.
+1. Sehen Sie sich Ihre Änderungen in der Vorschau im AEM-SPA-Editor an.
+1. Aktualisieren Sie die WKND-App, die lokal auf [http://localhost:3000](http://localhost:3000) ausgeführt wird, und die Änderungen am Titel werden sofort angezeigt.
 
    ![Titelkomponente in SPA](./assets/spa-fixed-component/title-final.png)
 
 ## Herzlichen Glückwunsch!
 
-Sie haben der WKND-App eine feste, bearbeitbare Komponente hinzugefügt! Sie wissen jetzt, wie:
+Sie haben der WKND-App eine feste, bearbeitbare Komponente hinzugefügt! Sie wissen jetzt, wie man Folgendes tut:
 
-+ Erstellen einer festen, aber bearbeitbaren Komponente für die SPA
-+ Erstellen Sie die feste Komponente in AEM
-+ Anzeigen der erstellten Inhalte in der Remote-SPA
++ Eine feste, aber bearbeitbare Komponente für die SPA erstellen;
++ die feste Komponente in AEM erstellen;
++ die erstellten Inhalte in der Remote-SPA anzeigen.
 
 ## Nächste Schritte
 
-Die nächsten Schritte sind [Fügen Sie eine AEM ResponsiveGrid-Container-Komponente hinzu](./spa-container-component.md) auf die SPA, die es dem Autor ermöglicht, der SPA Komponenten hinzuzufügen und sie zu bearbeiten!
+In den nächsten Schritten geht es darum, [der SPA eine AEM ResponsiveGrid-Container-Komponente hinzufügen](./spa-container-component.md), die es der Autorin oder dem Autor ermöglicht, zur SPA Komponenten hinzuzufügen und sie zu bearbeiten.
