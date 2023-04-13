@@ -58,7 +58,6 @@ Wenn Inhaltsfragmentmodelle **nicht** für eine Konfiguration aktiviert sind, wi
    >    1. Navigieren Sie zu `/conf/wknd-mobile/settings/dam/cfm`
    >    1. Löschen Sie den `models`-Knoten
 
-   >    
    >Alle mit dieser Konfiguration erstellten vorhandenen Inhaltsfragmentmodelle werden gelöscht und ihre Definitionen werden unter `/conf/wknd-mobile/settings/dam/cfm/models` gespeichert.
 
 1. Wenden Sie die **[!DNL WKND Mobile]**-Konfiguration auf den **[!DNL WKND Mobile]-Asset-Ordner** an, damit Inhaltsfragmente aus Inhaltsfragmentmodellen in dieser Assets-Ordnerhierarchie erstellt werden können:
