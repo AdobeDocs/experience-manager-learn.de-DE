@@ -441,10 +441,10 @@ Erstellen Sie eine öffentliche Java™-Schnittstelle für die Autorenzeile. Die
 
        ```
        @Version(&quot;2.1.0&quot;)
-     package com.adobe.aem.guides.wknd.core.models;
+       package com.adobe.aem.guides.wknd.core.models;
        
-     import von org.osgi.annotation.versioning.Version;
-     ```
+       import von org.osgi.annotation.versioning.Version;
+       ```
 
    Wenn Änderungen an den Dateien in diesem Paket vorgenommen werden, muss die [Paketversion semantisch angepasst werden](https://semver.org/). Ansonsten erkennt das [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) des Maven-Projekts eine ungültige Paketversion und bricht den Build ab. Glücklicherweise meldet das Maven-Plug-in bei einem Fehler die ungültige Java™-Paketversion und die erforderliche Version. Aktualisieren Sie die Deklaration `@Version("...")` im `package-info.java` des verletzenden Java™-Pakets zur vom Plug-in empfohlenen Version, um den Fehler zu beheben.
 
