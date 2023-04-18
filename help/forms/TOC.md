@@ -7,10 +7,10 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: d3531e76d3341e0964e5ed878fc72037024a11fd
+source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
 workflow-type: tm+mt
-source-wordcount: '1784'
-ht-degree: 100%
+source-wordcount: '1806'
+ht-degree: 98%
 
 ---
 
@@ -230,7 +230,12 @@ ht-degree: 100%
    + [Erstellen einer Workflow-Komponente](welcome-kit/create-workflow-component.md)
    + [Testen der Lösung](welcome-kit/testing-the-solution.md)
 
-
++ React-App mit Forms und Acrobat Sign {#react-ic-sign}
+   + [Einführung](react-ic-sign/introduction.md)
+   + [IC-Dokument generieren](react-ic-sign/create-ic-document.md)
+   + [Acrobat Sign API Wrapper](react-ic-sign/wrapper-sign-api.md)
+   + [Sign-Widget generieren](react-ic-sign/create-servlet-to-expose-endpoint.md)
+   + [Bereitstellen der Beispiel-Assets](react-ic-sign/deploy-assets-on-your-server.md)
 + Dokument-Services {#document-services}
    + [Arten von PDF-Formularen](document-services/pdf-forms-and-documents.md)
    + [Einbetten von PDFs in adaptive Formulare](document-services/embed-pdf-inline.md)
