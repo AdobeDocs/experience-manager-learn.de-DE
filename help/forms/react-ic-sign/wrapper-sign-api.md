@@ -8,9 +8,9 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
+source-git-commit: 1011c700a33b932c3c0a766727fc1d90bf2940f4
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '260'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,8 @@ Ein benutzerdefiniertes AEM-Bundle wurde entwickelt, um das Webformular zu erste
 ## Acrobat Sign OSGi-Konfiguration erstellen
 
 Acrobat Sign REST API erfordert den Integrationsschlüssel und die E-Mail, die mit dem Integrationsschlüssel verknüpft sind. Diese beiden Werte werden als OSGi-Konfigurationseigenschaften bereitgestellt, wie unten dargestellt
-![sign-configuration](assets/sign-configuration.jpg)
+
+![sign-configuration](assets/sign-configuration.png)
 
 ```java
 package com.acrobatsign.core.configuration;

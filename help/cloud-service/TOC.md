@@ -5,10 +5,10 @@ breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 9917b16248ef1f0a9c86f03a024c634636b2304e
+source-git-commit: 1011c700a33b932c3c0a766727fc1d90bf2940f4
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 98%
+source-wordcount: '932'
+ht-degree: 95%
 
 ---
 
@@ -114,7 +114,7 @@ ht-degree: 98%
       + [Developer Console](./debugging/cloud-service/developer-console.md)
       + [Repository-Browser](./debugging/cloud-service/repository-browser.md)
       + Risiken{#risks}
-         + [Durchlauf-Warnungen](./debugging/cloud-service/risks/traversals.md)
+         + [Traffic-Warnhinweise](./debugging/cloud-service/risks/traversals.md)
 + Inhaltsbereitstellung{#content-delivery}
    + [URL-Umleitungen](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=de)
 + Zugriff auf AEM{#accessing}
@@ -259,6 +259,9 @@ ht-degree: 98%
       + [Erstellen eines Formulardatenmodells](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [Testformularübermittlung](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [Testklick-Ereignis](./forms/integrate-with-salesforce/create-lead-click-event.md)
+   + Formularübermittlungen auf einem Laufwerk und in einem Sharepoint speichern{#one-drive}
+      + [Formulardaten auf einem Laufwerk speichern](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
+      + [Speichern von Formulardaten in Sharepoint](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
 + Asset Compute-Erweiterbarkeit{#asset-compute}
    + [Übersicht](./asset-compute/overview.md)
    + Setup{#set-up}
