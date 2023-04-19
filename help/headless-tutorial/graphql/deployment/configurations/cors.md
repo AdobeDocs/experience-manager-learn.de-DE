@@ -8,10 +8,10 @@ role: Developer, Architect
 level: Intermediate
 kt: 10830
 thumbnail: KT-10830.jpg
-source-git-commit: 6f1000db880c3126a01fa0b74abdb39ffc38a227
-workflow-type: ht
-source-wordcount: '572'
-ht-degree: 100%
+source-git-commit: cc78e59fe70686e909928e407899fcf629a651b9
+workflow-type: tm+mt
+source-wordcount: '619'
+ht-degree: 92%
 
 ---
 
@@ -19,6 +19,8 @@ ht-degree: 100%
 # Cross-Origin Resource Sharing (CORS)
 
 Cross-Origin Resource Sharing (CORS) von Adobe Experience Manager as a Cloud Service ermöglicht AEM-fremden Web-Eigenschaften, Browser-basierte Client-seitige Aufrufe an AEM GraphQL-APIs durchzuführen.
+
+Im folgenden Artikel wird beschrieben, wie Sie _Einziger Ursprung_ Zugriff auf einen bestimmten Satz von AEM Headless-Endpunkten über CORS. Einziger Ursprung bedeutet, dass nur ein AEM Zugriff auf eine Domäne hat, z. B. https://app.example.com, die eine Verbindung zu https://www.example.com herstellt. Aufgrund von Caching-Problemen funktioniert der Zugriff auf mehrere Quellen möglicherweise nicht mit diesem Ansatz.
 
 >[!TIP]
 >
@@ -63,7 +65,6 @@ Diese Beispielkonfiguration unterstützt die Verwendung AEM GraphQL-persistierte
     "https://spa.external.com/"
   ],
   "alloworiginregexp":[
-    "http://localhost:.*"
   ],
   "allowedpaths": [
     "/graphql/execute.json.*",
