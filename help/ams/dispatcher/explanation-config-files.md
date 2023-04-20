@@ -7,7 +7,7 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
+source-git-commit: cc085af90b9b8ea0e650546c251fbf14cc222989
 workflow-type: tm+mt
 source-wordcount: '1705'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Der Apache-Webserver kümmert sich bei der Zielgruppenbestimmung mit einer Datei
 | DATEINAME`_rewrite.rules` | `/etc/httpd/conf.d/rewrites/` | `*_rewrite.rules` Dateispeicher `mod_rewrite` Regeln, die explizit von einer `vhost` file |
 | DATEINAME`_whitelist.rules` | `/etc/httpd/conf.d/whitelists/` | `*_ipwhitelist.rules` -Dateien aus der `*.vhost` Dateien. Es enthält IP-Regex oder erlaubt Ablehnungsregeln, IP-Whitelisting zuzulassen. Wenn Sie die Anzeige eines virtuellen Hosts auf der Basis von IP-Adressen einschränken möchten, generieren Sie eine dieser Dateien und schließen sie aus Ihrem `*.vhost` file |
 
-## In &quot;conf.modules.d/&quot;enthaltene Dateien
+## In &quot;conf.dispatcher.d/&quot;enthaltene Dateien
 
 | File | Dateiziel | Beschreibung |
 | --- | --- | --- |
