@@ -10,10 +10,10 @@ doc-type: Article
 last-substantial-update: 2023-04-14T00:00:00Z
 jira: KT-13102
 thumbnail: 3418381.jpeg
-source-git-commit: 31948793786a2c430533d433ae2b9df149ec5fc0
+source-git-commit: 9eb706e49f12a3ebd5222e733f540db4cf2c8748
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 1%
+source-wordcount: '841'
+ht-degree: 2%
 
 ---
 
@@ -34,9 +34,11 @@ Paginierung und Sortierung können für jedes Inhaltsfragmentmodell verwendet we
 
 Beim Arbeiten mit großen Datensätzen können sowohl die Offset- als auch die Limit- und die Cursor-basierte Paginierung verwendet werden, um eine bestimmte Teilmenge der Daten abzurufen. Es gibt jedoch einige Unterschiede zwischen den beiden Techniken, die in bestimmten Situationen eine geeignetere als die andere machen können.
 
-### Listenabfrage
+### Versatz/Limit
 
 Auflisten von Abfragen mithilfe von `limit` und `offset` einen einfachen Ansatz zur Festlegung des Ausgangspunkts (`offset`) und die Anzahl der abzurufenden Datensätze (`limit`). Dieser Ansatz ermöglicht die Auswahl einer Untergruppe von Ergebnissen an einer beliebigen Stelle innerhalb des vollständigen Ergebnissatzes, z. B. beim Springen zu einer bestimmten Ergebnisseite. Es ist zwar einfach zu implementieren, kann aber bei umfangreichen Ergebnissen langsam und ineffizient sein, da das Abrufen vieler Datensätze das Durchsuchen aller vorherigen Datensätze erfordert. Dieser Ansatz kann auch zu Leistungsproblemen führen, wenn der Offset-Wert hoch ist, da u. U. das Abrufen und Verwerfen vieler Ergebnisse erforderlich ist.
+
+#### GraphQL-Abfrage
 
 ```graphql
 # Retrieves a list of Adventures sorted price descending, and title ascending if there is the prices are the same.
@@ -51,7 +53,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
   }
 ```
 
-#### Abfragevariablen
+##### Abfragevariablen
 
 ```json
 {
@@ -60,7 +62,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 }
 ```
 
-### Listenantwort
+#### GraphQL-Antwort
 
 Die resultierende JSON-Antwort enthält die 2., 3., 4. und 5. teuersten Abenteuer. Die ersten beiden Abenteuer in den Ergebnissen haben den gleichen Preis (`4500` so die [Listenabfrage](#list-queries) gibt an, dass Abenteuer mit demselben Preis nach Titel in aufsteigender Reihenfolge sortiert werden.)
 
@@ -99,10 +101,11 @@ Die resultierende JSON-Antwort enthält die 2., 3., 4. und 5. teuersten Abenteue
 
 Die Cursor-basierte Paginierung, die in Paginierten Abfragen verfügbar ist, beinhaltet die Verwendung eines Cursors (ein Verweis auf einen bestimmten Datensatz), um den nächsten Ergebnissatz abzurufen. Dieser Ansatz ist effizienter, da es nicht notwendig ist, alle vorherigen Datensätze zu durchsuchen, um die erforderliche Teilmenge von Daten abzurufen. Paginierte Abfragen eignen sich hervorragend für die Iteration großer Ergebnismengen von Anfang bis Mitte oder bis zum Ende. Auflisten von Abfragen mithilfe von `limit` und `offset` einen einfachen Ansatz zur Festlegung des Ausgangspunkts (`offset`) und die Anzahl der abzurufenden Datensätze (`limit`). Dieser Ansatz ermöglicht die Auswahl einer Untergruppe von Ergebnissen an einer beliebigen Stelle innerhalb des vollständigen Ergebnissatzes, z. B. beim Springen zu einer bestimmten Ergebnisseite. Es ist zwar einfach zu implementieren, kann aber bei umfangreichen Ergebnissen langsam und ineffizient sein, da das Abrufen vieler Datensätze das Durchsuchen aller vorherigen Datensätze erfordert. Dieser Ansatz kann auch zu Leistungsproblemen führen, wenn der Offset-Wert hoch ist, da u. U. das Abrufen und Verwerfen vieler Ergebnisse erforderlich ist.
 
+#### GraphQL-Abfrage
 
 ```graphql
 # Retrieves the most expensive Adventures (sorted by title ascending if there is the prices are the same)
-query adventuresByPaginated($first:Int!, $after:String) {
+query adventuresByPaginated($first:Int, $after:String) {
  adventurePaginated(first: $first, after: $after, sort: "price DESC, title ASC") {
        edges {
           cursor
@@ -120,7 +123,7 @@ query adventuresByPaginated($first:Int!, $after:String) {
   }
 ```
 
-#### Abfragevariablen
+##### Abfragevariablen
 
 ```json
 {
@@ -128,7 +131,7 @@ query adventuresByPaginated($first:Int!, $after:String) {
 }
 ```
 
-### Paginierte Antwort
+#### GraphQL-Antwort
 
 Die resultierende JSON-Antwort enthält die 2., 3., 4. und 5. teuersten Abenteuer. Die ersten beiden Abenteuer in den Ergebnissen haben den gleichen Preis (`4500` so die [Listenabfrage](#list-queries) gibt an, dass Abenteuer mit demselben Preis nach Titel in aufsteigender Reihenfolge sortiert werden.)
 
@@ -171,11 +174,11 @@ Die resultierende JSON-Antwort enthält die 2., 3., 4. und 5. teuersten Abenteue
 }
 ```
 
-### Nächster Satz paginierter Ergebnisse
+#### Nächster Satz paginierter Ergebnisse
 
 Der nächste Ergebnissatz kann mit der `after` und `endCursor` -Wert aus der vorherigen Abfrage. Wenn keine weiteren Ergebnisse abgerufen werden müssen, `hasNextPage` is `false`.
 
-#### Abfragevariablen
+##### Abfragevariablen
 
 ```json
 {
