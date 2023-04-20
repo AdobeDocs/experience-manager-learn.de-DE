@@ -7,9 +7,9 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 155e6e42d4251b731d00e2b456004016152f81fe
+source-git-commit: edba74f5ff5611687c05812de184243997ee7a35
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1809'
 ht-degree: 98%
 
 ---
@@ -284,6 +284,7 @@ ht-degree: 98%
    + [Zwei-Spalten-Layout in Druckkanaldokumenten](interactive-communications/two-column-layout-aem-forms-article-use.md)
    + [Verwenden der Tabellenkomponente in einem Druckkanaldokument von AEM Forms](interactive-communications/table-in-print-channel-documents-video-use.md)
    + [Generieren eines interaktiven Kommunikationsdokuments für den Druckkanal unter Verwendung von überwachten Ordnern](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+   + [Anpassen des Texteditors](interactive-communications/customize-text-editor.md)
 
 + Interaktive Kommunikation für Webkanal {#ic-web-channel-tutorial}
    + [Einführung](ic-web-channel-tutorial/introduction.md)
