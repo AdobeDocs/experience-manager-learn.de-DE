@@ -10,9 +10,9 @@ kt: 10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: 2096c207ce14985b550b055ea0f51451544c085c
+source-git-commit: 71b2dc0e8ebec1157694ae55118f2426558566e3
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '935'
 ht-degree: 31%
 
 ---
@@ -35,6 +35,11 @@ Die `ImageRef` Der Typ verfügt über vier URL-Optionen für Inhaltsverweise:
 
 Die `_dynamicUrl` ist die bevorzugte URL für Bild-Assets und sollte die Verwendung von `_path`, `_authorUrl`und `_publishUrl` wann immer möglich.
 
+|  | AEM as a Cloud Service | AEM as a Cloud Service RDE | AEM SDK | AEM 6.5 |
+| ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
+| Unterstützt weboptimierte Bilder? | ✔ | ✔ | ✘ | ✘ |
+
+
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_images"
 >title="Bilder mit AEM Headless"
@@ -52,7 +57,7 @@ Sie können die Feldtypen im [Inhaltsfragmentmodell](https://experienceleague.ad
 
 Geben Sie in der GraphQL-Abfrage das Feld als `ImageRef` Typ eingeben und die `_dynamicUrl` -Feld. Beispielsweise können Sie ein Abenteuer im [WKND-Site-Projekt](https://github.com/adobe/aem-guides-wknd) , einschließlich der Bild-URL für Bild-Asset-Verweise in `primaryImage` -Feld kann mit einer neuen persistenten Abfrage durchgeführt werden `wknd-shared/adventure-image-by-path` definiert als:
 
-```graphql
+```graphql {highlight="11"}
 query($path: String!, $assetTransform: AssetTransform!) {
   adventureByPath(
     _path: $path
@@ -100,7 +105,7 @@ Die `_assetTransform` definiert, wie die `_dynamicUrl` wird erstellt, um die Dar
 
 Die resultierende JSON-Antwort enthält die angeforderten Felder, die die Web-optimierte URL zu den Bild-Assets enthalten.
 
-```json
+```json {highlight="8"}
 {
   "data": {
     "adventureByPath": {
@@ -197,12 +202,12 @@ function App() {
 
   /**
    * Update the dynamic URL with client-specific query parameters
-   * @param {*} dynamicUrl the base dynamic URL for the web-optimized image
+   * @param {*} imageUrl the image URL
    * @param {*} params the AEM web-optimized image query parameters
    * @returns the dynamic URL with the query parameters
    */
-  function setParams(dynamicUrl, params) {
-    let url = new URL(dynamicUrl);
+  function setOptimizedImageUrlParams(imageUrl, params) {
+    let url = new URL(imageUrl);
     Object.keys(params).forEach(key => {
       url.searchParams.set(key, params[key]);
     });
@@ -220,6 +225,9 @@ function App() {
   // Wait for AEM Headless APIs to provide data
   if (!data) { return <></> }
 
+  const alt = data.adventureByPath.item.title;
+  const imageUrl =  AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
+
   return (
     <div className="app">
       
@@ -230,11 +238,11 @@ function App() {
 
       <img
         alt={alt}
-        src={setParams(dynamicUrl, { width: 1000 })}
+        src={setOptimizedImageUrlParams(imageUrl, { width: 1000 })}
         srcSet={
-            `${setParams(dynamicUrl, { width: 1000 })} 1000w,
-             ${setParams(dynamicUrl, { width: 1600 })} 1600w,
-             ${setParams(dynamicUrl, { width: 2000 })} 2000w`
+            `${setOptimizedImageUrlParams(imageUrl, { width: 1000 })} 1000w,
+             ${setOptimizedImageUrlParams(imageUrl, { width: 1600 })} 1600w,
+             ${setOptimizedImageUrlParams(imageUrl, { width: 2000 })} 2000w`
         }
         sizes="calc(100vw - 10rem)"/>
 
@@ -243,11 +251,11 @@ function App() {
 
         <picture>
           {/* When viewport width is greater than 2001px */}
-          <source srcSet={setParams(dynamicUrl, { width : 2600 })} media="(min-width: 2001px)"/>        
+          <source srcSet={setOptimizedImageUrlParams(imageUrl, { width : 2600 })} media="(min-width: 2001px)"/>        
           {/* When viewport width is between 1000px and 2000px */}
-          <source srcSet={setParams(dynamicUrl, { width : 2000})} media="(min-width: 1000px)"/>
+          <source srcSet={setOptimizedImageUrlParams(imageUrl, { width : 2000})} media="(min-width: 1000px)"/>
           {/* When viewport width is less than 799px */}
-          <img src={setParams(dynamicUrl, { width : 400, crop: "550,300,400,400" })} alt={alt}/>
+          <img src={setOptimizedImageUrlParams(imageUrl, { width : 400, crop: "550,300,400,400" })} alt={alt}/>
         </picture>
     </div>
   );
