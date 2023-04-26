@@ -9,7 +9,7 @@ level: Intermediate
 kt: 10831
 thumbnail: KT-10831.jpg
 exl-id: a932147c-2245-4488-ba1a-99c58045ee2b
-source-git-commit: 117b67bd185ce5af9c83bd0c343010fab6cd0982
+source-git-commit: ec2609ed256ebe6cdd7935f3e8d476c1ff53b500
 workflow-type: tm+mt
 source-wordcount: '1669'
 ht-degree: 95%
@@ -311,7 +311,7 @@ Diese GraphQL-Abfrage gibt den `_dynamicUrl` einer Bildreferenz zurück. Wie in 
 
 ```graphql
 query ($path: String!) {
-  adventureByPath(_path: $path) {
+  adventureByPath(_path: $path, _assetTransform: { format: JPG, preferWebp: true }) {
     item {
       title,
       primaryImage {
@@ -334,7 +334,7 @@ Diese GraphQL-Antwort gibt den `_dynamicUrl` der Bildreferenz zurück, der einen
     "adventureByPath": {
       "item": {
         "adventurePrimaryImage": {
-          "_dynamicUrl": "/adobe/dynamicmedia/deliver/dm-aid--de43411-88ec-4c4d-b5ef-e3dc4bc0cb42/adobestock-175749320.jpg",
+          "_dynamicUrl": "/adobe/dynamicmedia/deliver/dm-aid--de43411-88ec-4c4d-b5ef-e3dc4bc0cb42/adobestock-175749320.jpg?preferwebp=true",
         }
       }
     }
