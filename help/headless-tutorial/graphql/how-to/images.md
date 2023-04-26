@@ -10,10 +10,10 @@ kt: 10253
 thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
-source-git-commit: ec2609ed256ebe6cdd7935f3e8d476c1ff53b500
+source-git-commit: 09f9530cab0ec651b7c37c8c078631c79e8cfe4a
 workflow-type: tm+mt
-source-wordcount: '932'
-ht-degree: 31%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -97,7 +97,7 @@ Die `_assetTransform` definiert, wie die `_dynamicUrl` wird erstellt, um die Dar
 
 | GraphQL-Parameter | URL-Parameter | Beschreibung | Erforderlich | GraphQL-Variablenwerte | URL-Parameterwerte | Beispiel-URL-Parameter |
 |:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
-| `format` | `format` | Das Format des Bild-Assets. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | Nicht zutreffend | Nicht zutreffend |
+| `format` | Nicht zutreffend | Das Format des Bild-Assets. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | Nicht zutreffend | Nicht zutreffend |
 | `seoName` | Nicht zutreffend | Name des Dateisegments in URL. Wenn kein Bild-Asset-Name angegeben wurde, wird verwendet. | ✘ | alphanumerisch, `-`oder `_` | Nicht zutreffend | Nicht zutreffend |
 | `crop` | `crop` | Aus dem Bild entnommener Zuschnittrahmen muss innerhalb der Bildgröße liegen | ✘ | Positive Ganzzahlen, die einen Zuschnittbereich innerhalb der Grenzen der ursprünglichen Bildabmessungen definieren | Kommagetrennte Zeichenfolge numerischer Koordinaten `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
 | `size` | `size` | Größe des Ausgabebilds (sowohl Höhe als auch Breite) in Pixel. | ✘ | Positive Ganzzahlen | Kommagetrennte positive Ganzzahlen in der Reihenfolge `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
