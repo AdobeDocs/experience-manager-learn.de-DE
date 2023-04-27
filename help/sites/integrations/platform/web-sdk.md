@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
-source-git-commit: 3f129fb4fc53e55d118802d3a0e566a9a9bcb9a2
+source-git-commit: 1597fd87e11a27292b2b8897cf58c1670488b632
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1150'
 ht-degree: 5%
 
 ---
@@ -59,9 +59,9 @@ Erfahren Sie mehr über das XDM-Schema und verwandte Konzepte wie Feldgruppen, T
 
 Die [XDM-System - Übersicht](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) ist eine großartige Ressource, um mehr über das XDM-Schema und verwandte Konzepte wie Feldgruppen, Typen, Klassen und Datentypen zu erfahren. Es bietet ein umfassendes Verständnis des XDM-Datenmodells und wie XDM-Schemas erstellt und verwaltet werden, um Daten im gesamten Unternehmen zu standardisieren. Erfahren Sie mehr darüber, wie Sie das XDM-Schema besser verstehen und wie es Ihre Datenerfassungs- und -verwaltungsprozesse nutzen kann.
 
-## Erstellen von DataStream - Experience Platform
+## Erstellen von Datenspeichern - Experience Platform
 
-Ein DataStream weist das Platform Edge Network an, wo die erfassten Daten gesendet werden sollen. Sie kann beispielsweise an Experience Platform, Analytics oder Adobe Target gesendet werden.
+Ein Datastream weist das Platform Edge Network an, wo die erfassten Daten gesendet werden sollen. Sie kann beispielsweise an Experience Platform, Analytics oder Adobe Target gesendet werden.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418895?quality=12&learn=on)
@@ -196,7 +196,7 @@ Nach der Einrichtung des Web SDK mit AEM, insbesondere auf der WKND-Site, ist es
 
 ## Zusammenfassung
 
-Gute gemacht! Sie haben die Einrichtung von AEM mit dem Adobe Experience Platform (Experience Platform) Web SDK abgeschlossen, um Daten von einer Website zu erfassen und zu erfassen. Auf dieser Grundlage können Sie nun weitere Möglichkeiten zur Verbesserung und Integration von Produkten wie Analytics, Target, Customer Journey Analytics (CJA) und vielen anderen erkunden, um umfangreiche, personalisierte Erlebnisse für Ihre Kunden zu erstellen. Lernen Sie weiter und lernen Sie, um das gesamte Potenzial von Adobe Experience Cloud auszuschöpfen.
+Gute gemacht! Sie haben die Einrichtung von AEM mit dem Experience Platform Web SDK abgeschlossen, um Daten von einer Website zu erfassen und zu erfassen. Auf dieser Grundlage können Sie nun weitere Möglichkeiten zur Verbesserung und Integration von Produkten wie Analytics, Target, Customer Journey Analytics (CJA) und vielen anderen erkunden, um umfangreiche, personalisierte Erlebnisse für Ihre Kunden zu erstellen. Lernen Sie weiter und lernen Sie, um das gesamte Potenzial von Adobe Experience Cloud auszuschöpfen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418900?quality=12&learn=on)
 
