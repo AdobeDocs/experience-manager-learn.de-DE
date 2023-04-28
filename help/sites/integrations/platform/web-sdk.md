@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
-source-git-commit: 1597fd87e11a27292b2b8897cf58c1670488b632
+exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
+source-git-commit: 63afa03de70d6f8f695d552018344d53a5cec6f5
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1315'
 ht-degree: 5%
 
 ---
-
 
 # Experience Platform Web SDK integrieren
 
@@ -24,7 +24,7 @@ Erfahren Sie, wie Sie AEM as a Cloud Service mit Experience Platform integrieren
 
 Außerdem erfahren Sie, wie Sie [WKND - Adobe Experience Manager-Beispielprojekt](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) Seitenansichtsdaten im [Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=de).
 
-Nach Abschluss dieser Einrichtung können Sie die Implementierung von Experience Platform und verwandten Anwendungen wie [Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html), [Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html) und [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=de). Förderung einer besseren Kundeninteraktion durch Standardisierung der Web- und Kundendaten.
+Nach Abschluss dieser Einrichtung haben Sie eine solide Grundlage implementiert. Außerdem können Sie die Implementierung der Experience Platform mit Anwendungen wie [Real-time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html), [Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)und [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=de). Die erweiterte Implementierung trägt durch Standardisierung der Web- und Kundendaten zu einer besseren Kundeninteraktion bei.
 
 ## Voraussetzungen
 
@@ -52,6 +52,8 @@ Falls Sie nicht über die erforderlichen Berechtigungen verfügen, verwenden Sie
 
 Mit dem Experience-Datenmodell (XDM)-Schema können Sie die Kundenerlebnisdaten standardisieren. So sammeln Sie die **WKND-Seitenansicht** Daten, erstellen Sie ein XDM-Schema und verwenden Sie die von der Adobe bereitgestellten Feldergruppen. `AEP Web SDK ExperienceEvent` für die Webdatenerfassung.
 
+Es gibt generische und branchenspezifische Beispiele für Einzelhandel, Finanzdienstleistungen, Gesundheitswesen und mehr, eine Reihe von Referenzdatenmodellen, siehe [Übersicht über die Datenmodelle der Branche](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/industries/overview.html) für weitere Informationen.
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418894?quality=12&learn=on)
 
@@ -76,8 +78,14 @@ Erfahren Sie, wie Sie in Experience Platform eine Tag-Eigenschaft (ehemals Launc
 + Datenelemente: Die Datenelemente des benutzerdefinierten Codetyps, die den Seitennamen, den Site-Abschnitt und den Hostnamen mithilfe der Adobe Client Data Layer der WKND-Site extrahieren. Außerdem das Datenelement vom Typ XDM-Objekt , das dem zuvor neu erstellten WKND-XDM-Schema-Build-in entspricht [Erstellen eines XDM-Schemas](#create-xdm-schema---experience-platform) Schritt.
 + Regel: Senden von Daten an das Platform Edge Network bei jedem Besuch einer WKND-Webseite mithilfe der Adobe Client Data Layer ausgelöst `cmp:show` -Ereignis.
 
+Beim Erstellen und Veröffentlichen der Tag-Bibliothek mithilfe des **Veröffentlichungsfluss**, können Sie die **Alle geänderten Ressourcen hinzufügen** Schaltfläche. So wählen Sie alle Ressourcen wie Datenelemente, Regeln und Tag-Erweiterungen aus, anstatt eine einzelne Ressource zu identifizieren und auszuwählen. Während der Entwicklungsphase können Sie die Bibliothek auch nur in der _Entwicklung_ Umgebung, dann überprüfen und an die _Staging_ oder _Produktion_ Umgebung.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418896?quality=12&learn=on)
+
+
+>[!TIP]
+>
+>Das Datenelement und der im Video angezeigte Regel-Ereignis-Code stehen Ihnen als Referenz zur Verfügung. **Erweitern des unten stehenden Accordion-Elements**. Wenn Sie jedoch NICHT die Adobe Client-Datenschicht verwenden, müssen Sie den unten stehenden Code ändern. Es gilt jedoch weiterhin das Konzept der Definition der Datenelemente und ihrer Verwendung in der Regeldefinition.
 
 
 +++ Datenelement und Regelereigniscode
@@ -207,4 +215,3 @@ Gute gemacht! Sie haben die Einrichtung von AEM mit dem Experience Platform Web 
 + [Übersicht über das Adobe Experience Platform Web SDK und Edge Network](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
 + [Tutorials zur Datenerfassung](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
 + [Übersicht über Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
-
