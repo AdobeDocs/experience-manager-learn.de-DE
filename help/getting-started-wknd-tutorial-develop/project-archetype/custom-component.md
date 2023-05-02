@@ -11,9 +11,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
+source-git-commit: 434f56e143bc0f969723de48abd26d49a308af9b
 workflow-type: tm+mt
-source-wordcount: '4066'
+source-wordcount: '4061'
 ht-degree: 99%
 
 ---
@@ -439,14 +439,14 @@ Erstellen Sie eine öffentliche Java™-Schnittstelle für die Autorenzeile. Die
 
    Da das Java™-Paket `com.adobe.aem.guides.wknd.core.models` der WKND-Quelle eine Version von `1.0.0` deklariert und eine öffentliche Schnittstelle und Methoden ohne Unterbrechung hinzugefügt werden, muss die Version auf `1.1.0` erhöht werden. Öffnen Sie die Datei unter `core/src/main/java/com/adobe/aem/guides/wknd/core/models/package-info.java` und aktualisieren Sie `@Version("1.0.0")` auf `@Version("2.1.0")`.
 
-       ```
-       @Version(&quot;2.1.0&quot;)
-       package com.adobe.aem.guides.wknd.core.models;
-       
-       import von org.osgi.annotation.versioning.Version;
-       ```
+   ```
+   @Version("2.1.0")
+   package com.adobe.aem.guides.wknd.core.models;
+   
+   import org.osgi.annotation.versioning.Version;
+   ```
 
-   Wenn Änderungen an den Dateien in diesem Paket vorgenommen werden, muss die [Paketversion semantisch angepasst werden](https://semver.org/). Ansonsten erkennt das [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) des Maven-Projekts eine ungültige Paketversion und bricht den Build ab. Glücklicherweise meldet das Maven-Plug-in bei einem Fehler die ungültige Java™-Paketversion und die erforderliche Version. Aktualisieren Sie die Deklaration `@Version("...")` im `package-info.java` des verletzenden Java™-Pakets zur vom Plug-in empfohlenen Version, um den Fehler zu beheben.
+Wenn Änderungen an den Dateien in diesem Paket vorgenommen werden, muss die [Paketversion semantisch angepasst werden](https://semver.org/). Ansonsten erkennt das [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) des Maven-Projekts eine ungültige Paketversion und bricht den Build ab. Glücklicherweise meldet das Maven-Plug-in bei einem Fehler die ungültige Java™-Paketversion und die erforderliche Version. Aktualisieren Sie die Deklaration `@Version("...")` im `package-info.java` des verletzenden Java™-Pakets zur vom Plug-in empfohlenen Version, um den Fehler zu beheben.
 
 ### Implementierung der Autorenzeile {#byline-implementation}
 
