@@ -7,10 +7,10 @@ role: Developer
 level: Beginner
 kt: 5859
 thumbnail: 37324.jpg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '129'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -28,5 +28,8 @@ Siehe [Dokumentation zu adaptiven Formularvorlagen](https://experienceleague.ado
 Bei Bedarf können Sie die [adaptive Formularvorlage](assets/peak-application-template.zip) und importieren Sie mithilfe von in AEM [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
 
 
+## Nächste Schritte
+
+[Adaptives Formularfragment erstellen](./create-form-fragment.md)
 
 

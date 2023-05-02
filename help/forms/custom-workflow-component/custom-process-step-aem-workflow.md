@@ -8,7 +8,7 @@ role: Developer
 level: Experienced
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 149d2c8c-bf44-4318-bba8-bec7e25da01b
-source-git-commit: 00257efe045eb85fb192bbb47f8e178cf909eb86
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -143,3 +143,8 @@ Der QueryBuilder-Dienst wird zum Abfragen von Knoten des Typs nt:file im Ordner 
 
 [Erstellen Sie das Bundle wie hier beschrieben.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
 [Stellen Sie sicher, dass das Bundle bereitgestellt ist und sich im aktiven Status befindet.](http://localhost:4502/system/console/bundles)
+
+## Nächste Schritte
+
+Erstellen Sie Ihre [benutzerdefinierte Workflow-Komponente](./custom-workflow-component.md)
+

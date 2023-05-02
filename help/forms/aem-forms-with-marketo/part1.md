@@ -8,10 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 45047852-4fdb-4702-8a99-faaad7213b61
 last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '369'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -48,10 +48,14 @@ Der erste Schritt bei der Integration von Marketo mit AEM Forms besteht darin, d
 
 [Folgen Sie der offiziellen Marketo-Dokumentation, um die oben genannten Eigenschaften zu erhalten.](https://developers.marketo.com/rest-api/) Alternativ können Sie sich auch an den Administrator Ihrer Marketo-Instanz wenden.
 
-**Voraussetzungen**
+**Bevor Sie beginnen**
 
 [Laden Sie die mit diesem Artikel verknüpften Assets herunter und entpacken Sie sie.](assets/aemformsandmarketo.zip) Die ZIP-Datei enthält Folgendes:
 
 1. BlankTemplatePackage.zip - Dies ist die Vorlage für adaptive Formulare. Importieren Sie dies mit dem Package Manager.
 1. marketo.json - Dies ist die Swagger-Datei, die zum Konfigurieren der Datenquelle verwendet wird.
 1. MarketoAndForms.MarketoAndForms.core-1.0-SNAPSHOT.jar - Dies ist das Bundle, das die benutzerdefinierte Authentifizierung durchführt. Sie können dies gerne verwenden, wenn Sie das Tutorial nicht abschließen können oder Ihr Bundle nicht wie erwartet funktioniert.
+
+## Nächste Schritte
+
+[Benutzerdefinierte Authentifizierung erstellen](./part2.md)

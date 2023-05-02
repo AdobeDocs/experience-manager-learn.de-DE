@@ -7,14 +7,14 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 14%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Datenquelle konfigurieren
+# Konfigurieren einer Datenquelle
 
 Mit der AEM Forms-Datenintegration können Sie unterschiedliche Datenquellen konfigurieren und Verbindungen zu ihnen herzustellen. Die folgenden Datenquellen werden standardmäßig unterstützt. Mit einer kleinen Anpassung können Sie jedoch auch mit anderen Datenquellen integrieren.
 
@@ -49,3 +49,8 @@ Verweisen Sie den Browser auf [Datenintegrationsseite.](http://localhost:4502/ae
 1. Wählen Sie den einzigen aufgelisteten Dienst aus und klicken Sie auf Test Service .
 1. Geben Sie eine gültige leadId ein und klicken Sie auf Test . Wenn alles gut läuft, sollten Sie die Lead-Details zurückerhalten, wie im Screenshot unten dargestellt
    ![Testergebnisse](assets/testresults.jfif)
+
+## Nächste Schritte
+
+[Alles zusammenbringen für Tests](./part4.md)
+

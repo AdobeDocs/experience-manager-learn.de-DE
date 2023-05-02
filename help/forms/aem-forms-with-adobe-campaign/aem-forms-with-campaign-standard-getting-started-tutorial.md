@@ -8,10 +8,10 @@ role: Developer
 level: Experienced
 exl-id: e028837b-13d8-4058-ac25-ed095f49524c
 last-substantial-update: 2020-03-20T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -38,3 +38,7 @@ Befolgen Sie zum Einstieg die folgenden Anweisungen:
 * [Erstellen Sie einen Dienstbenutzer wie in diesem Artikel beschrieben.](/help/forms/adaptive-forms/service-user-tutorial-develop.md). Stellen Sie sicher, dass Sie das mit dem Artikel verknüpfte OSGi-Bundle bereitstellen.
 * Speichern Sie den privaten ACS-Schlüssel in etc/key/campaign/private.key. Sie müssen einen Ordner mit dem Namen campaign unter etc/key erstellen.
 * [Stellen Sie dem Dienstbenutzer &quot;data&quot; Lesezugriff auf den Kampagnenordner bereit.](http://localhost:4502/useradmin)
+
+## Nächste Schritte
+
+[JWT und Zugriffstoken generieren](partone.md)

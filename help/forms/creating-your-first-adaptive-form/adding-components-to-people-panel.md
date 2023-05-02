@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen von Komponenten zum Bedienfeld "Personen"
+title: Hinzufügen von Komponenten zum Personen-Panel
 description: Konfigurieren Sie den Bereich Personen , indem Sie das Fragment mit den Ehedetails hinzufügen. Es wird eine Regel erstellt, die das Fragment zum Ehegatten anzeigt, wenn der Familienstand der Kläger verheiratet ist.
 feature: Adaptive Forms
 version: 6.4,6.5
@@ -9,14 +9,14 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 16170f0d-6933-47f2-aefa-951599d163c0
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-# Hinzufügen von Komponenten zum Bedienfeld &quot;Personen&quot; {#adding-components-to-people-panel}
+# Hinzufügen von Komponenten zum Personen-Panel {#adding-components-to-people-panel}
 
 Konfigurieren Sie den Bereich Personen , indem Sie das Fragment mit den Ehedetails hinzufügen. Es wird eine Regel erstellt, die das Fragment zum Ehegatten anzeigt, wenn der Familienstand der Kläger verheiratet ist.
 
@@ -31,3 +31,7 @@ Konfigurieren Sie den Bereich Personen , indem Sie das Fragment mit den Ehedetai
 **Regeln für Details des Partners**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22195?quality=12&learn=on)
+
+## Nächste Schritte
+
+[Tabelle und andere Komponenten zum Einkommensbereich hinzufügen](./adding-table-to-income-panel.md)

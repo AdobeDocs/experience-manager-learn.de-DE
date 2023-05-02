@@ -8,10 +8,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 86a67f43-882f-4e97-b528-17492689fcfc
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 30%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -27,3 +27,7 @@ Ein Fragment ist ein wiederverwendbarer Teil eines Formulars. Beispielsweise kan
 Siehe [Dokumentation zu adaptiven Formularvorlagen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html) für weitere Details
 
 Bei Bedarf können Sie die [Spouse-details-fragment ](assets/spouse-details-fragment.zip) und importieren Sie mithilfe von in AEM [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
+
+## Nächste Schritte
+
+[Erstellen eines adaptiven Formulars](./create-adaptive-form.md)
