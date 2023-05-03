@@ -10,7 +10,7 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 678671c3-af25-4da1-bc14-cbc4cc19be8d
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 6%
@@ -23,19 +23,19 @@ Einer der wichtigsten Aspekte des Kundenerlebnisses auf Ihrer Website, Ihrer mob
 
 Die intelligente Bildbearbeitung profitiert auch von der zusätzlichen Leistungssteigerung durch die vollständige Integration mit dem erstklassigen Premium-Service von Adobe. Dieser Dienst ermittelt die optimale Internet-Route zwischen Servern, Netzwerken und Austauschpunkten mit niedrigster Latenz und/oder Paketverlustrate im Vergleich zur Standardroute im Internet.
 
-Weitere Informationen [Intelligente Bildbearbeitung](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html).
+Weitere Informationen [Intelligente Bildbearbeitung](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html).
 
 ## Vorteile der intelligenten Bildbearbeitung
 
 Da Bilder den Großteil der Ladezeit einer Seite ausmachen, kann die Leistungsverbesserung durch die intelligente Bildbearbeitung grundlegende Auswirkungen auf geschäftliche KPIs haben, z. B. höhere Konversionsraten, Besuchszeiten pro Site und niedrigere Absprungraten pro Site.
 
-![image](assets/smart-imaging/smart-imaging-1.png)
+![Bild](assets/smart-imaging/smart-imaging-1.png)
 
 ## Funktionsweise der intelligenten Bildbearbeitung
 
 Wie bereits erwähnt, nutzt die intelligente Bildbearbeitung die AI-Funktionen von Adobe Sensei und arbeitet mit vorhandenen Bildvorgaben zusammen, um Bilder automatisch in optimale Bildformate der nächsten Generation wie WebP zu konvertieren und dabei die visuelle Wiedergabetreue zu wahren.
 
-Weitere Informationen [Funktionsweise der intelligenten Bildbearbeitung](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work), einschließlich Details wie unterstützte Bildformate (und was passiert, wenn Sie diese Formate nicht verwenden) und deren Auswirkungen auf vorhandene verwendete Bildvorgaben.
+Weitere Informationen [Funktionsweise der intelligenten Bildbearbeitung](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work), einschließlich Details wie unterstützte Bildformate (und was passiert, wenn Sie diese Formate nicht verwenden) und deren Auswirkungen auf vorhandene verwendete Bildvorgaben.
 
 ## Auswirkungen der intelligenten Bildbearbeitung
 
@@ -53,7 +53,7 @@ Die Aktivierung der intelligenten Bildbearbeitung beginnt mit dem Versand einer 
 
 Nachdem Sie die intelligente Bildbearbeitung aktiviert haben, möchten Sie überprüfen, ob sie erwartungsgemäß funktioniert.
 
-Sie haben wahrscheinlich zusätzliche Fragen zur intelligenten Bildbearbeitung. Wir haben eine Liste häufig gestellter Fragen mit Antworten zusammengestellt. Lesen Sie die [FAQs](https://experienceleague.adobe.com/docs/experience-manager-64/assets/dynamic/imaging-faq.html).
+Sie haben wahrscheinlich zusätzliche Fragen zur intelligenten Bildbearbeitung. Wir haben eine Liste häufig gestellter Fragen mit Antworten zusammengestellt. Lesen Sie die [FAQs](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html).
 
 ## Zusätzliche Ressourcen
 

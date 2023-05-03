@@ -8,10 +8,10 @@ version: Cloud Service
 kt: 243
 thumbnail: 25173.jpg
 exl-id: 500f4e07-2686-42a2-8e44-d96dde02a112
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '250'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -27,6 +27,6 @@ Das obige Video zeigt, wie die Seiteneigenschaften für die [WKND-Referenz-Site]
 
 Sie können die bereitgestellte [Beispiel-WKND-Seiteneigenschaftenpaket](./assets/WKND-PageProperties-Example-Dialog-1.0.zip) contain **WKND** und **Allgemein** Registerkartenanpassungen, die im obigen Video gezeigt werden. Die **SocialMedia** Registerkartenanpassung wird nicht bereitgestellt, da [WKND-Seitenkomponente](https://github.com/adobe/aem-guides-wknd/blob/main/ui.apps/src/main/content/jcr_root/apps/wknd/components/page/.content.xml#L5) verwendet jetzt die V3-Version der WCM-Kernkomponenten und in der V3-Version die [Social Sharing ist veraltet](https://github.com/adobe/aem-core-wcm-components/pull/1930).
 
-Zu Lernzwecken können Sie die WKND-Seitenkomponente jedoch mithilfe der `sling:resourceSuperType` Eigenschaftswert und Überlagerung der [Social Media](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95) Registerkarte. Weitere Informationen finden Sie unter [Konfigurieren der Seiteneigenschaften](https://experienceleague.adobe.com/docs/experience-manager-64/developing/extending-aem/page-properties-views.html#configuring-your-page-properties)
+Zu Lernzwecken können Sie die WKND-Seitenkomponente jedoch mithilfe der `sling:resourceSuperType` Eigenschaftswert und Überlagerung der [Social Media](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95) Registerkarte. Weitere Informationen finden Sie unter [Konfigurieren der Seiteneigenschaften](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/page-properties-views.html#configuring-your-page-properties)
 
 Dieses Beispielpaket sollte zu Lernzwecken auf der lokalen AEM SDK- oder AEM 6.X.X-Instanz installiert werden.

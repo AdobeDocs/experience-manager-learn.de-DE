@@ -10,10 +10,10 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 8%
+source-wordcount: '1498'
+ht-degree: 13%
 
 ---
 
@@ -34,7 +34,7 @@ Beachten Sie Folgendes: `~` wird als Kurzbezeichnung für das Benutzerverzeichni
 
 Experience Manager ist eine Java-Anwendung und erfordert daher das Java-SDK, um die Entwicklung und das AEM as a Cloud Service SDK zu unterstützen.
 
-1. [Herunterladen und Installieren des neuesten Java 11-SDK-Releases](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
+1. [Herunterladen und Installieren des neuesten Java 11-SDK-Releases](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
 1. Stellen Sie sicher, dass das Java 11 SDK installiert ist, indem Sie den Befehl ausführen:
    + Windows: `java -version`
    + macOS/Linux: `java --version`
@@ -86,7 +86,7 @@ Wenn Sie Homebrew verwenden, folgen Sie dem __Installation mit Homebrew__ Anweis
    1. Stellen Sie mithilfe des Befehls sicher, dass Node.js installiert ist: `node -v`
    1. Stellen Sie mithilfe des Befehls sicher, dass npm installiert ist: `npm -v`
 + Oder laden Sie Node.js (macOS, Linux oder Windows) herunter und installieren Sie es.
-   1. [Node.js herunterladen und installieren](https://nodejs.org/en/download/)
+   1. [Node.js herunterladen und installieren](https://nodejs.org/de/download/)
    1. Öffnen Sie Ihr Terminal/Ihre Eingabeaufforderung.
    1. Stellen Sie mithilfe des Befehls sicher, dass Node.js installiert ist: `node -v`
    1. Stellen Sie mithilfe des Befehls sicher, dass npm installiert ist: `npm -v`
@@ -121,7 +121,7 @@ Die [Adobe I/O CLI](https://github.com/adobe/aio-cli)oder `aio`bietet Befehlszei
 
 + Trackinglogs von AEM as a Cloud Services services
 + Verwalten von Cloud Manager-Pipelines über die CLI
-+ Bereitstellen in [AEM Schnellentwicklungsumgebungen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
++ Bereitstellen in [AEM Schnellentwicklungsumgebungen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=de)
 
 ### Installieren der Adobe I/O-CLI
 
@@ -156,7 +156,7 @@ Starten [Ausführen von Befehlen](https://github.com/adobe/aio-cli-plugin-cloudm
 
 ### Einrichten des Plug-ins AEM Rapid Development Environment{#rde}
 
-Mit dem Plug-in AEM Rapid Development Environment kann die AI-CLI mit AEM as a Cloud Service interagieren [Schnelle Entwicklungsumgebungen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html) über die `aio aem:rde` Befehl.
+Mit dem Plug-in AEM Rapid Development Environment kann die AI-CLI mit AEM as a Cloud Service interagieren [Schnelle Entwicklungsumgebungen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=de) über die `aio aem:rde` Befehl.
 
 1. Ausführen `aio plugins:install @adobe/aio-cli-plugin-aem-rde` , um [AEM Plug-in für schnelle Entwicklungsumgebungen](https://github.com/adobe/aio-cli-plugin-aem-rde).
 
@@ -195,9 +195,9 @@ Visual Studio Code ist die ideale Wahl für Frontend-Entwickler, die in erster L
 
 ### Eclipse
 
-__[Eclipse IDE](https://www.eclipse.org/ide/)__ ist eine beliebte IDE für die Java-Entwicklung und unterstützt die  __[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)__ von Adobe bereitgestelltes -Plug-in, das eine In-IDE-Anleitung für das Authoring und die Synchronisierung von JCR-Inhalten mit einer lokalen AEM-Instanz bereitstellt.
+__[Eclipse IDE](https://www.eclipse.org/ide/)__ ist eine beliebte IDE für die Java-Entwicklung und unterstützt die  __[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=de)__ von Adobe bereitgestelltes -Plug-in, das eine In-IDE-Anleitung für das Authoring und die Synchronisierung von JCR-Inhalten mit einer lokalen AEM-Instanz bereitstellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
 + [Eclipse herunterladen](https://www.eclipse.org/ide/)
-+ [Herunterladen der Eclipse Dev Tools](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=en)
++ [Herunterladen der Eclipse Dev Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=de)

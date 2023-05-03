@@ -1,7 +1,7 @@
 ---
 title: Einrichten einer lokalen AEM-Entwicklungsumgebung
 description: Erfahren Sie, wie Sie eine lokale Entwicklungsumgebung für Experience Manager einrichten. Machen Sie sich mit der lokalen Installation, Apache Maven, integrierten Entwicklungsumgebungen sowie dem Debugging und der Fehlerbehebung vertraut. Verwenden Sie Eclipse IDE, CRXDE-Lite, Visual Studio Code und IntelliJ.
-version: 6.4, 6.5
+version: 6.5
 feature: Developer Tools
 topics: development
 activity: develop
@@ -12,10 +12,10 @@ level: Beginner
 exl-id: 58851624-71c9-4745-aaaf-305acf6ccb14
 last-substantial-update: 2022-07-20T00:00:00Z
 thumbnail: aem-local-dev-env.jpg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '2603'
-ht-degree: 3%
+ht-degree: 7%
 
 ---
 
@@ -124,7 +124,7 @@ Im Folgenden finden Sie einige der beliebtesten IDEs, die mit AEM Entwicklung mi
 
 >[!NOTE]
 >
-> Das WKND-Projekt wurde so aktualisiert, dass es standardmäßig auf AEM as a Cloud Service funktioniert. Es wurde aktualisiert, um [Abwärtskompatibel mit 6.5/6.4](https://github.com/adobe/aem-guides-wknd#building-for-aem-6xx). Wenn Sie AEM 6.5 oder 6.4 verwenden, hängen Sie die `classic` Profile zu beliebigen Maven-Befehlen hinzufügen.
+> Das WKND-Projekt wurde so aktualisiert, dass es standardmäßig auf AEM as a Cloud Service funktioniert. Es wurde aktualisiert, um [Abwärtskompatibel mit 6.5/6.4](https://github.com/adobe/aem-guides-wknd#building-for-aem-6xx). Wenn Sie AEM 6.5 oder 6.4 verwenden, fügen Sie das `classic`-Profil an beliebige Maven-Befehle an.
 
 ```shell
 $ mvn clean install -PautoInstallSinglePackage -Pclassic
@@ -138,7 +138,7 @@ Wenn Sie eine IDE verwenden, überprüfen Sie `classic` auf der Registerkarte &q
 
 ### [!DNL Eclipse] IDE
 
-Die **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** ist eine der beliebtesten IDEs für die Java™-Entwicklung, da es sich größtenteils um Open Source handelt und ***kostenlos***! Adobe bietet ein Plug-in, **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/aem-eclipse.html?lang=de)**, für [!DNL Eclipse] um eine einfachere Entwicklung mit einer netten grafischen Benutzeroberfläche zu ermöglichen, um Code mit einer lokalen AEM-Instanz zu synchronisieren. Die [!DNL Eclipse] IDE wird für Entwickler empfohlen, die zum großen Teil neu AEM, da die GUI-Unterstützung von [!DNL AEM Developer Tools].
+Die **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** ist eine der beliebtesten IDEs für die Java™-Entwicklung, da es sich größtenteils um Open Source handelt und ***kostenlos***! Adobe bietet ein Plug-in, **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=de)**, für [!DNL Eclipse] um eine einfachere Entwicklung mit einer netten grafischen Benutzeroberfläche zu ermöglichen, um Code mit einer lokalen AEM-Instanz zu synchronisieren. Die [!DNL Eclipse] IDE wird für Entwickler empfohlen, die zum großen Teil neu AEM, da die GUI-Unterstützung von [!DNL AEM Developer Tools].
 
 #### Installation und Einrichtung
 
@@ -194,7 +194,7 @@ Die **[IntelliJ IDEA](https://www.jetbrains.com/idea/)** ist eine leistungsstark
 
 ### [!DNL CRXDE Lite]
 
-[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-64/developing/devtools/developing-with-crxde-lite.html) ist eine browserbasierte Ansicht des AEM-Repositorys. [!DNL CRXDE Lite] ist in AEM eingebettet und ermöglicht Entwicklern die Durchführung standardmäßiger Entwicklungsaufgaben wie das Bearbeiten von Dateien, das Definieren von Komponenten, Dialogfeldern und Vorlagen. [!DNL CRXDE Lite] is ***not*** soll eine vollständige Entwicklungsumgebung sein, ist aber als Debugging-Tool effektiv. [!DNL CRXDE Lite] ist nützlich, wenn Sie Produktcode außerhalb Ihrer Codebasis erweitern oder einfach verstehen. [!DNL CRXDE Lite] bietet eine leistungsstarke Ansicht des Repositorys und eine Möglichkeit, Berechtigungen effektiv zu testen und zu verwalten.
+[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/developing-with-crxde-lite.html) ist eine browserbasierte Ansicht des AEM-Repositorys. [!DNL CRXDE Lite] ist in AEM eingebettet und ermöglicht Entwicklern die Durchführung standardmäßiger Entwicklungsaufgaben wie das Bearbeiten von Dateien, das Definieren von Komponenten, Dialogfeldern und Vorlagen. [!DNL CRXDE Lite] is ***not*** soll eine vollständige Entwicklungsumgebung sein, ist aber als Debugging-Tool effektiv. [!DNL CRXDE Lite] ist nützlich, wenn Sie Produktcode außerhalb Ihrer Codebasis erweitern oder einfach verstehen. [!DNL CRXDE Lite] bietet eine leistungsstarke Ansicht des Repositorys und eine Möglichkeit, Berechtigungen effektiv zu testen und zu verwalten.
 
 [!DNL CRXDE Lite] sollte mit anderen IDEs zum Testen und Debuggen von Code verwendet werden, jedoch nie als primäres Entwicklungstool. Es bietet eingeschränkte Syntaxunterstützung, keine automatische Vervollständigungsfunktionen und eine eingeschränkte Integration in Quellcodeverwaltungssysteme.
 
@@ -274,12 +274,12 @@ Ein weiteres häufig auftretendes Problem bei der Entwicklung von Frontend-Code 
 
 #### Debugging von Client-Bibliotheken
 
-Mit den verschiedenen Methoden von Kategorien und Einbettungen, um mehrere Client-Bibliotheken einzuschließen, kann die Fehlerbehebung schwerfällig sein. AEM stellt mehrere Hilfsmittel zur Verfügung. Eines der wichtigsten Instrumente ist [!UICONTROL Client-Bibliotheken neu erstellen] die AEM zwingen, alle LESS-Dateien neu zu kompilieren und das CSS zu generieren.
+Mit den verschiedenen Methoden von Kategorien und Einbettungen, um mehrere Client-Bibliotheken einzuschließen, kann die Fehlerbehebung schwerfällig sein. AEM stellt mehrere Tools als Hilfe zur Verfügung. Eines der wichtigsten Instrumente ist [!UICONTROL Client-Bibliotheken neu erstellen] die AEM zwingen, alle LESS-Dateien neu zu kompilieren und das CSS zu generieren.
 
 * [Sprunglippen](http://localhost:4502/libs/granite/ui/content/dumplibs.html) - Listet alle in der AEM-Instanz registrierten Client-Bibliotheken auf. &lt;host>/libs/granite/ui/content/dumplibs.html
-* [Testausgabe](http://localhost:4502/libs/granite/ui/content/dumplibs.test.html) - ermöglicht es einem Benutzer, die erwartete HTML-Ausgabe von clientlib-Includes basierend auf der Kategorie anzuzeigen. &lt;host>/libs/granite/ui/content/dumplibs.test.html
-* [Überprüfung von Bibliotheksabhängigkeiten](http://localhost:4502/libs/granite/ui/content/dumplibs.validate.html) - markiert alle Abhängigkeiten oder eingebetteten Kategorien, die nicht gefunden werden können. &lt;host>/libs/granite/ui/content/dumplibs.validate.html
-* [Client-Bibliotheken neu erstellen](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) - ermöglicht es einem Benutzer, AEM zu erzwingen, alle Client-Bibliotheken neu zu erstellen oder den Cache von Client-Bibliotheken ungültig zu machen. Dieses Tool ist bei der Entwicklung mit LESS effektiv, da dies AEM zwingen kann, die generierte CSS neu zu kompilieren. Im Allgemeinen ist es effektiver, Caches zu invalidieren und dann eine Seitenaktualisierung vorzunehmen, anstatt alle Bibliotheken neu zu erstellen. &lt;host>/libs/granite/ui/content/dumplibs.rebuild.html
+* [Testausgabe](http://localhost:4502/libs/granite/ui/content/dumplibs.test.html) – ermöglicht es einem Benutzenden, die erwartete HTML-Ausgabe von clientlib-Einfügungen basierend auf der Kategorie anzuzeigen. &lt;host>/libs/granite/ui/content/dumplibs.test.html
+* [Gültigkeitsprüfung von Bibliotheksabhängigkeiten](http://localhost:4502/libs/granite/ui/content/dumplibs.validate.html) – markiert alle Abhängigkeiten oder eingebetteten Kategorien, die nicht gefunden werden können. &lt;host>/libs/granite/ui/content/dumplibs.validate.html
+* [Client-Bibliotheken neu erstellen](http://localhost:4502/libs/granite/ui/content/dumplibs.rebuild.html) - ermöglicht es einem Benutzer, AEM zu erzwingen, alle Client-Bibliotheken neu zu erstellen oder den Cache von Client-Bibliotheken ungültig zu machen. Dieses Tool ist bei der Entwicklung mit LESS nützlich, da dies AEM zwingen kann, das generierte CSS neu zu kompilieren. Im Allgemeinen ist es effektiver, Caches zu invalidieren und dann eine Seitenaktualisierung vorzunehmen, anstatt alle Bibliotheken neu zu erstellen. &lt;host>/libs/granite/ui/content/dumplibs.rebuild.html
 
 ![Debuggen von Clientlibs](assets/set-up-a-local-aem-development-environment/debugging-clientlibs.png)
 

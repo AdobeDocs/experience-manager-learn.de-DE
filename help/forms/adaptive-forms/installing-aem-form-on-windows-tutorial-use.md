@@ -3,16 +3,16 @@ title: Vereinfachte Schritte für die Installation von AEM Forms unter Windows
 description: Schnelle und einfache Schritte zur Installation von AEM Forms unter Windows
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: 6.5
 topic: Development
 role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
 last-substantial-update: 2020-06-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
-source-wordcount: '578'
-ht-degree: 9%
+source-wordcount: '574'
+ht-degree: 12%
 
 ---
 
@@ -28,12 +28,12 @@ ht-degree: 9%
 
 >[!NOTE]
 >
->Wenn Sie AEM Forms 6.5 installieren, stellen Sie sicher, dass Sie die folgenden 32-Bit-Redistributables für Microsoft Visual C++ installiert haben.
+>Wenn Sie AEM Forms 6.5 installieren, stellen Sie bitte sicher, dass Sie die folgenden verteilbaren 32-Bit-Dateien von Microsoft Visual C++ installiert haben.
 >
 >* Microsoft Visual C++ 2008 Redistributable
->* Microsoft Visual C++ 2010-Redistributable
->* Microsoft Visual C++ 2012-Redistributable
->* Microsoft Visual C++ 2013 Redistributable (ab 6.5)
+>* Microsoft Visual C++ 2010 Redistributable
+>* Microsoft Visual C++ 2012 Redistributable
+>* Microsoft Visual C++ 2013 Redistributable (für 6.5)
 
 
 Es wird empfohlen, [amtliche Dokumentation](https://helpx.adobe.com/de/experience-manager/6-3/forms/using/installing-configuring-aem-forms-osgi.html) für die Installation von AEM Forms. Führen Sie die folgenden Schritte aus, um AEM Forms in der Windows-Umgebung zu installieren und zu konfigurieren:
@@ -46,7 +46,7 @@ Es wird empfohlen, [amtliche Dokumentation](https://helpx.adobe.com/de/experienc
 * [Offizielle JDK-Anforderungen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=en) sind hier aufgeführt
 * Stellen Sie sicher, dass JAVA_HOME so eingestellt ist, dass es auf das installierte JDK verweist.
    * Gehen Sie wie folgt vor, um die Variable JAVA_HOME in Windows zu erstellen:
-      * Klicken Sie mit der rechten Maustaste auf „Arbeitsplatz“ und wählen Sie „Eigenschaften“.
+      * Klicken Sie mit der rechten Maustaste auf Arbeitsplatz und wählen Sie Eigenschaften aus.
       * Wählen Sie auf der Registerkarte Erweitert die Option Umgebungsvariablen aus und erstellen Sie eine neue Systemvariable mit dem Namen JAVA_HOME.
       * Legen Sie den Variablenwert so fest, dass er auf das auf Ihrem System installierte JDK verweist. Beispiel: c:\program files\java\jdk1.8.0_25
 
@@ -87,4 +87,4 @@ Es wird empfohlen, [amtliche Dokumentation](https://helpx.adobe.com/de/experienc
 4. Speichern Sie die Änderungen.
 
 Herzlichen Glückwunsch!!! Sie haben AEM Forms jetzt auf Ihrem System installiert und konfiguriert.
-Je nach Bedarf können Sie  [Reader-Erweiterungen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=en) oder [ PDFG](https://experienceleague.adobe.com/docs/experience-manager-64/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=de) auf dem Server
+Je nach Bedarf können Sie  [Reader-Erweiterungen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) oder [ PDFG](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html) auf dem Server

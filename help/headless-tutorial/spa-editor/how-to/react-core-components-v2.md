@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 kt: 10900
 thumbnail: kt-10900.jpeg
-source-git-commit: f02d5e01388ee61228254951b05c37c336423348
-workflow-type: ht
+exl-id: e055b356-dd26-4366-8608-5a0ccf5b4c49
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
+workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 100%
 
 ---
-
 
 # Verwenden von AEM React Editable Components v2
 
@@ -33,7 +33,7 @@ Weitere Informationen und Code-Beispiele für AEM React Editable Components v2 f
 
 ## AEM-Seiten
 
-AEM React Editable Components funktionieren für React-Apps sowohl mit dem SPA-Editor als auch mit einer Remote-SPA. Inhalte, die die bearbeitbaren React-Komponenten befüllen, müssen über AEM-Seiten verfügbar gemacht werden, die die [SPA-Seitenkomponente](https://experienceleague.adobe.com/docs/experience-manager-64/developing/headless/spas/spa-page-component.html?lang=de) erweitern. AEM-Komponenten, die bearbeitbaren React-Komponenten zugeordnet sind, müssen das [Component Exporter Framework](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html?lang=de) von AEM implementieren – wie etwa [AEM Core WCM Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de).
+AEM React Editable Components funktionieren für React-Apps sowohl mit dem SPA-Editor als auch mit einer Remote-SPA. Inhalte, die die bearbeitbaren React-Komponenten befüllen, müssen über AEM-Seiten verfügbar gemacht werden, die die [SPA-Seitenkomponente](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html?lang=de) erweitern. AEM-Komponenten, die bearbeitbaren React-Komponenten zugeordnet sind, müssen das [Component Exporter Framework](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html?lang=de) von AEM implementieren – wie etwa [AEM Core WCM Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de).
 
 
 ## Abhängigkeiten
@@ -231,6 +231,3 @@ const EditableEmbedding = (props) => {
 // Export as default the mapped EditableEmbedding
 export default MapTo("wknd-examples/components/embedding")(EditableEmbedding);
 ```
-
-
-

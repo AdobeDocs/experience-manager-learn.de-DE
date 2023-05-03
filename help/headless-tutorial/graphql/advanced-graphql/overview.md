@@ -7,7 +7,7 @@ topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '1076'
 ht-degree: 100%
@@ -78,7 +78,7 @@ Beachten Sie, dass `WKND Shared Endpoint` bereits erstellt wurde. Um einen Endpu
 
 >[!NOTE]
 >
-> Nach dem Speichern des Endpunkts wird ein Modal zum Besuch der Sicherheitskonsole angezeigt, mit dem Sie die Sicherheitseinstellungen anpassen können, wenn Sie den Zugriff auf den Endpunkt konfigurieren möchten. Sicherheitsberechtigungen selbst fallen jedoch nicht in den Rahmen dieses Tutorials. Weitere Informationen finden Sie in der [AEM-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security.html?lang=de).
+> Nach dem Speichern des Endpunkts wird ein Modal zum Besuch der Sicherheitskonsole angezeigt, mit dem Sie die Sicherheitseinstellungen anpassen können, wenn Sie den Zugriff auf den Endpunkt konfigurieren möchten. Sicherheitsberechtigungen selbst fallen jedoch nicht in den Rahmen dieses Tutorials. Weitere Informationen finden Sie in der [AEM-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=de).
 
 ### Überprüfen der WKND-Inhaltsstruktur und des Sprachstamms
 

@@ -6,7 +6,7 @@ topics: development
 audience: developer
 doc-type: article
 activity: implement
-version: 6.4,6.5
+version: 6.5
 kt: 4419
 thumbnail: kt-4419.jpg
 topic: Development
@@ -14,16 +14,16 @@ role: User
 level: Beginner
 exl-id: 67a01c41-d284-4518-adb5-21702e22ccfa
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
 workflow-type: tm+mt
 source-wordcount: '481'
-ht-degree: 12%
+ht-degree: 2%
 
 ---
 
 # Erstellen von HTML5-Formularen
 
-HTML5 forms ist eine neue Funktion in Adobe Experience Manager, die die Wiedergabe von XFA-Formularvorlagen (xdp) im HTML5-Format ermöglicht. Diese Funktion ermöglicht das Anzeigen von Formularen auf mobilen Geräten und Desktop-Browsern, auf denen XFA-basierte PDF nicht unterstützt werden. „HTML5-Formulare“ Forms unterstützt nicht nur vorhandene Funktionen XFA-basierter Formularvorlagen, sondern bietet auch neue Funktionen für mobile Geräte wie die Scribble-Signatur.
+HTML5 forms ist eine neue Funktion in Adobe Experience Manager, die die Wiedergabe von XFA-Formularvorlagen (xdp) im HTML5-Format ermöglicht. Diese Funktion ermöglicht die Wiedergabe von Formularen auf Mobilgeräten und Desktopbrowsern, auf denen XFA-basierte PDF nicht unterstützt werden. HTML5 forms unterstützt nicht nur die vorhandenen Funktionen von XFA-Formularvorlagen, sondern bietet auch neue Funktionen wie die Freihandsignatur für Mobilgeräte.
 
 ## Voraussetzung
 
@@ -59,6 +59,6 @@ Die erweiterten Eigenschaften der xdp-Vorlage ermöglichen es Ihnen, Veröffentl
 
 **Sende-URL** - Dies ist die URL, die die Übermittlung Ihres HTML5-Formulars verarbeitet. Wir werden dies in der nächsten Lektion behandeln. Wenn hier keine Sende-URL angegeben ist, wird der standardmäßige Sende-Handler aufgerufen, der die Formulardaten an den Browser zurückgibt.
 
-**HTML Render Profile** - HTML5-Formulare haben den Begriff &quot;Profile&quot;, die als REST-Endpunkte verfügbar gemacht werden, um die mobile Wiedergabe von Formularvorlagen zu ermöglichen. Die Mehrzahl der Fälle, in denen das standardmäßige Renderprofil ausreichend sein sollte, um das Formular wiederzugeben. Wenn das standardmäßige Renderprofil Ihre Anforderungen nicht erfüllt, wird ein [Benutzerdefiniertes Profil](https://experienceleague.adobe.com/docs/experience-manager-64/forms/html5-forms/custom-profile.html) kann erstellt und mit dem Formular verknüpft werden.
+**HTML Render Profile** - HTML5-Formulare haben den Begriff &quot;Profile&quot;, die als REST-Endpunkte verfügbar gemacht werden, um die mobile Wiedergabe von Formularvorlagen zu ermöglichen. Die Mehrzahl der Fälle, in denen das standardmäßige Renderprofil ausreichend sein sollte, um das Formular wiederzugeben. Wenn das standardmäßige Renderprofil Ihre Anforderungen nicht erfüllt, wird ein [Benutzerdefiniertes Profil](https://experienceleague.adobe.com/docs/experience-manager-65/forms/html5-forms/custom-profile.html) kann erstellt und mit dem Formular verknüpft werden.
 
 **Vorbefüllungs-Dienst** - Der Vorbefüllungs-Dienst wird normalerweise verwendet, um Ihr Formular mit Daten zu füllen, die aus einer Backend-Datenquelle abgerufen werden.
