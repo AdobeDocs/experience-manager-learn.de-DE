@@ -7,10 +7,10 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1804'
+ht-degree: 92%
 
 ---
 
@@ -45,10 +45,10 @@ ht-degree: 0%
    + [Kaskadierende Dropdown-Listen](some-useful-integrations/geonames-org.md)
    + [Integration mit ServiceNow](some-useful-integrations/service-now.md)
 + Erstellen eines OSGi-Bundles {#creating-your-first-osgi-bundle}
-   + [Einrichten der Umgebung](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
-   + [Erstellen eines OSGi-Dienstes](creating-your-first-osgi-bundle/create-osgi-service.md)
-   + [Erstellen von Sling-Servlet](creating-your-first-osgi-bundle/create-servlet.md)
-   + [Einschließen von Drittanbieter-Bundles](creating-your-first-osgi-bundle/include-third-party-jars.md)
+   + [1 - Einrichten der Umgebung](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
+   + [2 - Erstellen eines OSGi-Dienstes](creating-your-first-osgi-bundle/create-osgi-service.md)
+   + [3 - Sling-Servlet erstellen](creating-your-first-osgi-bundle/create-servlet.md)
+   + [4 - Einschließen von Drittanbieter-Bundles](creating-your-first-osgi-bundle/include-third-party-jars.md)
 + Adaptive Formulare {#adaptive-forms}
    + [Installieren von AEM Forms unter Windows](adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
    + [Installieren von 32-Bit-Paketen unter Linux](adaptive-forms/installing-aem-form-on-linux.md)
@@ -101,16 +101,16 @@ ht-degree: 0%
    + [Formulardatenmodell mit Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Dynamisches Hinzufügen von Elementen zur Auswahlkomponente](adaptive-forms/choice-group-items-adding-dynamically-article.md)
 + DAM-Ordnerinhalt auswählen und zusammenführen {#select-dam-folder-content}
-   + [Einführung](display-and-assemble-dam-folder-contents/introduction.md)
-   + [Auswahlgruppe befüllen](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
-   + [Zusammenführen ausgewählter Assets](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
-   + [Lokale Bereitstellung der Assets](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
+   + [1 - Einführung](display-and-assemble-dam-folder-contents/introduction.md)
+   + [2 - Auswahlgruppe ausfüllen](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
+   + [3 - Zusammenführen ausgewählter Assets](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
+   + [4 - Assets lokal bereitstellen](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
 + Vorausfüllen des adaptiven Formulars mithilfe des Formulardatenmodells{#prefill-fdm-db}
-   + [Einführung](prefill-fdm-db/introduction.md)
-   + [Erstellen von Datenbanktabellen](prefill-fdm-db/create-database-tables.md)
-   + [Konfigurieren eines Formulardatenmodells](prefill-fdm-db/configuring-form-data-model.md)
-   + [GET-Anfrage-Parameter](prefill-fdm-db/get-request-parameter.md)
-   + [Erstellen von adaptiven Formularen](prefill-fdm-db/create-adaptive-form.md)
+   + [1 - Einleitung](prefill-fdm-db/introduction.md)
+   + [2 - Erstellen von Datenbanktabellen](prefill-fdm-db/create-database-tables.md)
+   + [3 - Konfigurieren des Formulardatenmodells](prefill-fdm-db/configuring-form-data-model.md)
+   + [4 - Anforderungsparameter abrufen](prefill-fdm-db/get-request-parameter.md)
+   + [5 - Erstellen eines adaptiven Formulars](prefill-fdm-db/create-adaptive-form.md)
 + Tipps und Tricks zur Benutzeroberfläche{#ui-tips-and-tricks}
    + [Kennwortfeldtext umschalten](ui-tips-tricks/toggle-password.md)
    + [Schaltflächen in der Symbolleiste](ui-tips-tricks/toolbar-buttons.md)
@@ -118,14 +118,14 @@ ht-degree: 0%
    + [Hinzufügen von Symbolen zu Navigationsregisterkarten](ui-tips-tricks/active-complete.md)
    + [Automatisch vervollständigte Felder](ui-tips-tricks/auto-complete.md)
 + Anpassen des Posteingangs{#inbox-customization}
-   + [Einführung](inbox-customization/introduction.md)
-   + [Hinzufügen einer benutzerdefinierten Spalte](inbox-customization/add-married-column.md)
-   + [Verwenden einer Sightly-Vorlage](inbox-customization/use-sightly-template.md)
+   + [1 - Einleitung](inbox-customization/introduction.md)
+   + [2 - Benutzerdefinierte Spalte hinzufügen](inbox-customization/add-married-column.md)
+   + [3 - Verwenden einer visuellen Vorlage](inbox-customization/use-sightly-template.md)
 + E-Mail-Formularanhänge{#zipping-form-attachments}
-   + [Einführung](zipping-form-attachments/introduction.md)
-   + [ZIP-Formularanhänge](zipping-form-attachments/custom-process-step.md)
-   + [E-Mail-Formularanhänge](zipping-form-attachments/populating-list-of-documents.md)
-   + [Testen der Lösung](zipping-form-attachments/test.md)
+   + [1 - Einleitung](zipping-form-attachments/introduction.md)
+   + [2 - ZIP-Formularanhänge](zipping-form-attachments/custom-process-step.md)
+   + [3 - E-Mail-Formularanhänge](zipping-form-attachments/populating-list-of-documents.md)
+   + [4 - Testen der Lösung](zipping-form-attachments/test.md)
 + Speichern und Abrufen adaptiver Formulare{#store-and-retrieve-af-with-2fa}
    + [Einführung](store-and-retrieve-af-with-2fa/introduction.md)
    + [Konfigurieren einer Datenquelle](store-and-retrieve-af-with-2fa/configure-data-source.md)

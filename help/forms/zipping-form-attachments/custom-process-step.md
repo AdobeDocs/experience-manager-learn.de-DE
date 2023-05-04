@@ -1,24 +1,24 @@
 ---
 title: Benutzerdefinierter Prozessschritt zum ZIP von Dateianlagen
 description: Benutzerdefinierter Prozessschritt zum Hinzufügen der Anlagen des adaptiven Formulars zu einer ZIP-Datei und zum Speichern der ZIP-Datei in einer Workflow-Variablen
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.5
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
 kt: kt-8049
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 1131dca8-882d-4904-8691-95468fb708b7
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '159'
 ht-degree: 1%
 
 ---
 
-
 # Benutzerdefinierter Prozessschritt
 
 
-Ein benutzerdefinierter Prozessschritt wurde implementiert, um die ZIP-Datei mit den Formularanlagen zu erstellen. Wenn Sie nicht mit dem Erstellen eines OSGi-Bundles vertraut sind, befolgen Sie diese Anweisungen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)[
+Ein benutzerdefinierter Prozessschritt wurde implementiert, um die ZIP-Datei mit den Formularanlagen zu erstellen. Wenn Sie nicht mit dem Erstellen eines OSGi-Bundles vertraut sind, wenden Sie sich an [Befolgen Sie diese Anweisungen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
 
 Der Code im benutzerdefinierten Prozessschritt führt Folgendes aus:
 
@@ -70,7 +70,7 @@ import com.day.cq.search.result.SearchResult;
 
 public class ZipFormAttachments implements WorkflowProcess {
 
-	 private static final Logger log = LoggerFactory.getLogger(ZipFormAttachments.class);
+     private static final Logger log = LoggerFactory.getLogger(ZipFormAttachments.class);
      @Reference
      QueryBuilder queryBuilder;
 
@@ -127,18 +127,18 @@ public class ZipFormAttachments implements WorkflowProcess {
                     Node payloadNode = session.getNode(payloadPath);
                     Node zippedFileNode =  payloadNode.addNode("zipped_attachments.zip", "nt:file");
                     javax.jcr.Node resNode = zippedFileNode.addNode("jcr:content", "nt:resource");
-        		
-        			ValueFactory valueFactory = session.getValueFactory();
-        			Document zippedDocument = new Document(baos.toByteArray());
+                
+                    ValueFactory valueFactory = session.getValueFactory();
+                    Document zippedDocument = new Document(baos.toByteArray());
 
-        			Binary contentValue = valueFactory.createBinary(zippedDocument.getInputStream());
-        			metaDataMap.put("no_of_attachments", no_of_attachments);
+                    Binary contentValue = valueFactory.createBinary(zippedDocument.getInputStream());
+                    metaDataMap.put("no_of_attachments", no_of_attachments);
 
                     workflowSession.updateWorkflowData(workItem.getWorkflow(), workItem.getWorkflow().getWorkflowData());
                     log.debug("Updated workflow");
-        			resNode.setProperty("jcr:data", contentValue);
-        			session.save();
-        			zippedDocument.close();
+                    resNode.setProperty("jcr:data", contentValue);
+                    session.save();
+                    zippedDocument.close();
 
 
 
@@ -159,5 +159,8 @@ public class ZipFormAttachments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> Stellen Sie sicher, dass in Ihrem Workflow eine Variable namens *no_of_attachments* vom Typ Double vorhanden ist, damit dieser Code funktioniert.
+> Stellen Sie sicher, dass Sie über eine Variable mit dem Namen  *no_of_attachments* des Typs &quot;Double&quot;in Ihren Workflow ein, damit dieser Code funktioniert.
 
+## Nächste Schritte
+
+[Füllen von ArrayList-Workflow-Variablen mit Anlagen und Anlagennamen](./custom-process-step.md)

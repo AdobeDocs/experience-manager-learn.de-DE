@@ -13,18 +13,18 @@ role: Developer
 level: Experienced
 exl-id: 3e1d86ab-e0c4-45d4-b998-75a44a7e4a3f
 last-substantial-update: 2020-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 29%
+source-wordcount: '206'
+ht-degree: 5%
 
 ---
 
 # AEM-Posteingang
 
-AEM Posteingang konsolidiert Benachrichtigungen und Aufgaben aus verschiedenen AEM Komponenten, einschließlich Forms-Workflows. Wenn ein Forms-Workflow ausgelöst wird, der einen Schritt zur Zuweisung einer Aufgabe enthält, wird die dazugehörige Anwendung als Aufgabe im Posteingang der zugewiesenen Person angezeigt.
+AEM Posteingang konsolidiert Benachrichtigungen und Aufgaben aus verschiedenen AEM Komponenten, einschließlich Forms-Workflows. Wenn ein Arbeitsablauf für Formulare ausgelöst wird, der einen Schritt &quot;Aufgabe zuweisen&quot;enthält, wird die zugehörige Anwendung als Aufgabe im Posteingang des Empfängers aufgeführt.
 
-In der Benutzeroberfläche des Posteingangs können die Aufgaben in einer Listen- oder einer Kalenderansicht angezeigt werden. Sie können außerdem die Einstellungen für die Anzeige konfigurieren. Sie können die Aufgaben nach verschiedenen Parametern filtern.
+Die Benutzeroberfläche des Posteingangs bietet Listen- und Kalenderansichten zum Anzeigen von Aufgaben. Sie können auch die Anzeigeeinstellungen konfigurieren. Sie können Aufgaben anhand verschiedener Parameter filtern.
 
 Sie können den Experience Manager-Posteingang anpassen, um den Standardtitel einer Spalte zu ändern, die Spaltenposition neu anzuordnen und zusätzliche Spalten basierend auf den Daten eines Workflows anzuzeigen.
 
@@ -37,7 +37,7 @@ Sie können den Experience Manager-Posteingang anpassen, um den Standardtitel ei
 [AEM Posteingang starten](http://localhost:4502/aem/inbox)
 Öffnen Sie die Admin Control, indem Sie auf die _Listenansicht_ Symbol und wählen Sie dann _Admin Control_ wie im Screenshot unten gezeigt
 
-![admin-control](assets/open-customization.png)
+![Admin-Kontrolle](assets/open-customization.png)
 
 In der Benutzeroberfläche zur Spaltenanpassung können Sie die folgenden Vorgänge ausführen
 
@@ -55,3 +55,7 @@ Bei der Branding-Anpassung haben Sie folgende Möglichkeiten:
 * Navigationsoptionen ausblenden
 
 ![Inbox-Branding](assets/branding-customization.PNG)
+
+## Nächste Schritte
+
+[Spalte &quot;Verheiratet hinzufügen&quot;](./add-married-column.md)

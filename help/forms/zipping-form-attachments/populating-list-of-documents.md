@@ -2,31 +2,31 @@
 title: Benutzerdefinierter Prozessschritt zum Ausfüllen von Listenvariablen
 description: Benutzerdefinierter Prozessschritt zum Ausfüllen von Listenvariablen des Typs "Dokument"und "Zeichenfolge"
 feature: Workflow
-topic: Entwicklung
+topic: Development
 version: 6.5
 role: Developer
 level: Beginner
 kt: kt-8063
-source-git-commit: 540e11c0861eacc795122328b2359c7db6378aec
+exl-id: 09d9eabf-4815-4159-b6c7-cf2ebc8a2df5
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '167'
 ht-degree: 1%
 
 ---
 
-
 # Benutzerdefinierter Prozessschritt
 
 
-Ein benutzerdefinierter Prozessschritt wurde implementiert, um die Workflow-Variablen &quot;Array List&quot;zu füllen. Wenn Sie nicht mit dem Erstellen eines OSGi-Bundles vertraut sind, befolgen Sie diese Anweisungen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)[
+Ein benutzerdefinierter Prozessschritt wurde implementiert, um Workflow-Variablen des Typs Array List mit den Anlagen und Anlagennamen zu füllen. Diese Variable wird dann in der Workflow-Komponente E-Mail senden verwendet. Wenn Sie nicht mit dem Erstellen eines OSGi-Bundles vertraut sind, wenden Sie sich an [Befolgen Sie diese Anweisungen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
 
 Der Code im benutzerdefinierten Prozessschritt führt Folgendes aus:
 
 * Abfragen aller Anlagen des adaptiven Formulars im Payload-Ordner. Der Ordnername wird als Prozessargument an den Prozessschritt übergeben.
 
-* Füllen der Workflow-Variablen `listOfDocuments`
-* Füllen der Workflow-Variablen `attachmentNames`
-* Wert der Workflow-Variablen festlegen (`no_of_attachments`)
+* Auffüllen `listOfDocuments` Workflow-Variable
+* Auffüllen `attachmentNames` Workflow-Variable
+* Legen Sie den Wert der Workflow-Variablen fest (`no_of_attachments`)
 
 ```java
  package com.aemforms.formattachments.core;
@@ -115,3 +115,7 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 > *listOfDocuments* - Variable des Typs ArrayList of Documents
 > *attachmentNames* - Variable des Typs ArrayList of String
 > *no_of_attachments* - Variable des Typs &quot;Double&quot;
+
+## Nächste Schritte
+
+[Testen Sie die Lösung auf Ihrem lokalen System.](./test.md)

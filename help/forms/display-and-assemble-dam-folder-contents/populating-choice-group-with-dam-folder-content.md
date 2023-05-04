@@ -7,10 +7,11 @@ topic: Development
 role: User
 level: Beginner
 last-substantial-update: 2023-01-01T00:00:00Z
-source-git-commit: a2bbb26751c9182056b4fe6d36eeeec964001df8
+exl-id: 29f56d13-c2e2-4bc2-bfdc-664c848dd851
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 0%
+source-wordcount: '228'
+ht-degree: 3%
 
 ---
 
@@ -107,9 +108,13 @@ function getDAMFolderAssets(damFolder) {
 }
 ```
 
-## Adaptives Formular erstellen
+## Erstellen eines adaptiven Formulars
 
 Erstellen eines adaptiven Formulars und Verknüpfen des Formulars mit der Client-Bibliothek **listfolderAssets**. Fügen Sie Ihrem Formular eine Kontrollkästchenkomponente hinzu. Verwenden Sie den Regeleditor, um die Optionen des Kontrollkästchens, wie im Screenshot gezeigt, auszufüllen.
 ![set-options](assets/set-options-newsletter.png)
 
 Wir rufen die JavaScript-Funktion namens auf. **getDAMFolderAssets** und den Pfad der Assets des DAM-Ordners übergeben, die im Formular aufgelistet werden sollen.
+
+## Nächste Schritte
+
+[Zusammenführen ausgewählter Assets](./assemble-selected-newsletters.md)

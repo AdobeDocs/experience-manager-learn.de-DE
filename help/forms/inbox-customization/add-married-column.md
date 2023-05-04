@@ -12,9 +12,9 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '311'
 ht-degree: 8%
 
 ---
@@ -88,10 +88,14 @@ return isMarried(inboxItem);
 * Spalte &quot;Verheiratet&quot;zum Posteingang hinzufügen und Ihre Änderungen speichern
 * [Navigieren Sie zur Benutzeroberfläche &quot;FormsAndDocuments&quot;](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * [Importieren des Beispielformulars](assets/snap-form.zip) durch Auswahl _Datei-Upload_ von _Erstellen_ Menü
-* [Nutzen Sie die Funktion zur Formularvorschau.](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
+* [Formularvorschau](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
 * Wählen Sie die _Familienstand_ und senden Sie das Formular
    [Posteingang anzeigen](http://localhost:4502/aem/inbox)
 
 Durch das Senden des Formulars wird der Workflow Trigger und eine Aufgabe wird &quot;admin&quot;-Benutzern zugewiesen. In diesem Screenshot sollte unter der Spalte Verheiratet ein Wert angezeigt werden
 
 ![verheiratete Spalte](assets/married-column.PNG)
+
+## Nächste Schritte
+
+[Spalte &quot;Verheiratet anzeigen&quot;](./use-sightly-template.md)

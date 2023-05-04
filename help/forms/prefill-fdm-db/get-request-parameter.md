@@ -1,35 +1,36 @@
 ---
-title: Anforderungsparameter abrufen
+title: GET-Anfrage-Parameter
 description: Zugriff auf den Anforderungsparameter des Vorbefüllungs-Diensts eines Formulardatenmodells
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 5815
 thumbnail: kt-5815.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: a640539d-c67f-4224-ad81-dd0b62e18c79
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '182'
-ht-degree: 6%
+source-wordcount: '190'
+ht-degree: 8%
 
 ---
 
-# Anforderungsparameter abrufen
+# GET-Anfrage-Parameter
 
 ## empID-Parameter abrufen
 
-Der nächste Schritt besteht darin, über die URL auf den Parameter empID zuzugreifen. Der Wert des Anforderungsparameters empID wird dann an den Dienstvorgang **_get_** des Formulardatenmodells übergeben.
+Der nächste Schritt besteht darin, über die URL auf den Parameter empID zuzugreifen. Der Wert des empID-Anforderungsparameters wird dann an die **_get_** Dienstvorgang des Formulardatenmodells.
 Im Rahmen dieses Kurses haben wir die folgenden Informationen erstellt und bereitgestellt:
 
 * Adaptive Formularvorlage mit dem Namen **_FDMDemo_**
-* Seitenkomponente mit dem Namen **_fdmdemo_**
+* Seitenkomponente namens **_fdmdemo_**
 * Benutzerdefinierte JSP mit der Seitenkomponente eingeschlossen
 * Verknüpfen der adaptiven Formularvorlage mit der Seitenkomponente
 
 Dadurch wird unser Code in der benutzerdefinierten JSP nur ausgeführt, wenn das adaptive Formular, das auf dieser benutzerdefinierten Vorlage basiert, wiedergegeben wird
 
-* [Importieren Sie das ](assets/template-page-component.zip) Paket mit  [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
+* [Package importieren](assets/template-page-component.zip) using [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
 * [Öffnen Sie fdmrequest.jsp](http://localhost:4502/crx/de/index.jsp#/apps/fdmdemo/component/page/fdmdemo/fdmrequest.jsp)
 * Heben Sie die Auskommentierung der kommentierten Zeilen auf.
 * Speichern Sie Ihre Änderungen
@@ -49,3 +50,7 @@ Der Wert von empID ist mit dem Schlüssel empID in paraMap verknüpft. Diese Zuo
 >[!NOTE]
 >
 >Die Schlüssel-empID muss mit dem Bindungswert des neuen get-Dienstes für Entitäten übereinstimmen
+
+## Nächste Schritte
+
+[Erstellen eines adaptiven Formulars basierend auf dem Formulardatenmodell](./create-adaptive-form.md)

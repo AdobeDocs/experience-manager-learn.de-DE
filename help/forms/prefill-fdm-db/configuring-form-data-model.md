@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren des Formulardatenmodells
+title: Konfigurieren eines Formulardatenmodells
 description: Formulardatenmodell basierend auf RDBMS-Datenquelle erstellen
 feature: Adaptive Forms
 version: 6.4,6.5
@@ -9,14 +9,14 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 5fa4638f-9faa-40e0-a20d-fdde3dbb528a
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 3%
+source-wordcount: '498'
+ht-degree: 4%
 
 ---
 
-# Konfigurieren des Formulardatenmodells
+# Konfigurieren eines Formulardatenmodells
 
 ## Apache Sling Connection Pooled DataSource
 
@@ -85,3 +85,7 @@ Unser Formulardatenmodell verfügt jetzt über **_get_** -Dienst, der empID akze
 * Geben Sie eine gültige empID an und klicken Sie auf _Test_
 * Sie sollten die Ergebnisse wie im Screenshot unten dargestellt erhalten
 * ![test-fdm](assets/test-form-data-model.png)
+
+## Nächste Schritte
+
+[Abrufen der empID von der URL](./get-request-parameter.md)
