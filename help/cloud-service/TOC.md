@@ -5,10 +5,10 @@ breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: e9422231b8237abe7e2e3703764b2fdc253f33d3
+source-git-commit: b3cc9c4fbd36cdf5be46e4546a174fea0c8da05c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '938'
+ht-degree: 95%
 
 ---
 
@@ -27,7 +27,9 @@ ht-degree: 0%
       + [Experience Manager – Governance- und Personalmodelle und -archetypen](./introduction/experience-manager-governance-and-staffing-models.md)
       + [Wie Sie mit Adobe Experience Manager die Geschwindigkeit von Inhalten erhöhen](./introduction/drive-content-velocity-for-sites.md)
       + [Beschleunigen der Geschwindigkeit von Inhalten bei AEM-Stilsystemen](./introduction/accelerate-content-velocity-aem.md)
-+ [Experience Cloud-Integrationen](./experience-cloud/integrations.md)
++ Experience Cloud-Integrationen{#integrations}
+   + [Integrationen](./integrations/experience-cloud.md)
+   + [Adobe Target](./integrations/target.md)
 + Zugrunde liegende Technologie {#underlying-technology}
    + [AEM-Architektur](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
