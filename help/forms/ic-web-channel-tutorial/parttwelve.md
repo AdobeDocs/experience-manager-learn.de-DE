@@ -1,28 +1,28 @@
 ---
 title: Bereitstellung des Webkanaldokuments einrichten
-seo-title: Bereitstellung des Webkanaldokuments einrichten
+seo-title: Setting up the delivery of web channel document
 description: Dies ist der letzte Teil eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil sehen wir uns den Versand des Webkanaldokuments per E-Mail an.
-seo-description: Dies ist der letzte Teil eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil sehen wir uns den Versand des Webkanaldokuments per E-Mail an.
+seo-description: This is the final part of a multistep tutorial for creating your first interactive communications document. In this part, we look at the delivery of web channel document via email.
 uuid: c1066600-1abd-4401-b04f-b93c28603cc7
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 1a7cf095-c5d8-4d92-a018-883cda76fe70
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 510d1782-59b9-41a6-a071-a16170f2cd06
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 2%
+source-wordcount: '357'
+ht-degree: 1%
 
 ---
 
-
-# Webkanaldokument für die Bereitstellung einrichten {#setting-up-the-delivery-of-web-channel-document}
+# Bereitstellung des Webkanaldokuments einrichten {#setting-up-the-delivery-of-web-channel-document}
 
 
 In diesem Teil sehen wir uns den Versand des Webkanaldokuments per E-Mail an.
@@ -73,4 +73,8 @@ Melden Sie sich bei AEM Forms an.
 
 >[!NOTE]
 >
->Sehen Sie sich die **/apps/AEMForms/fetchad/GET.jsp**-Datei in crx an. Vergewissern Sie sich, dass die String-Variable webChannelDocument auf einen gültigen Pfad für Kommunikationsdokumente verweist.
+>Bitte schauen Sie sich die **/apps/AEMForms/fetchad/GET.jsp** Datei in crx. Vergewissern Sie sich, dass die String-Variable webChannelDocument auf einen gültigen Pfad für Kommunikationsdokumente verweist.
+
+## Nächste Schritte
+
+[E-Mail-Versand einrichten](../interactive-communications/delivery-of-web-channel-document-tutorial-use.md)

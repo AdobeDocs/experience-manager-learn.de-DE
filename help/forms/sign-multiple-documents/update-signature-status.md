@@ -1,20 +1,20 @@
 ---
 title: Aktualisieren des Signaturstatus des Formulars in der Datenbank
 description: Signaturstatus des signierten Formulars in der Datenbank mithilfe des AEM-Workflows aktualisieren
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6888
 thumbnail: 6888.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 75852a4b-7008-4c65-bab1-cc5dbf525e20
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '107'
-ht-degree: 3%
+source-wordcount: '116'
+ht-degree: 2%
 
 ---
-
 
 # Aktualisierung des Signaturstatus
 
@@ -70,5 +70,8 @@ public class UpdateSignatureStatusWorkflowStep implements WorkflowProcess {
 
 ## Assets
 
-Der Workflow zum Aktualisieren des Signaturstatus kann [von hier heruntergeladen werden](assets/update-signature-status-workflow.zip)
+Der Workflow zum Aktualisieren des Signaturstatus kann [heruntergeladen von hier](assets/update-signature-status-workflow.zip)
 
+## Nächste Schritte
+
+[Übersichtsschritt anpassen, um das nächste Formular zum Signieren anzuzeigen](./customize-summary-component.md)

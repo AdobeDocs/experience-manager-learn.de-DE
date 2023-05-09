@@ -17,10 +17,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: b5a6c1c9-2be1-4622-b85b-a1996fb86a2f
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '104'
-ht-degree: 0%
+source-wordcount: '114'
+ht-degree: 1%
 
 ---
 
@@ -37,4 +37,8 @@ Melden Sie sich bei AEM Forms an und navigieren Sie zu Adobe Experience Manager 
 
 Das folgende Video führt durch die Schritte, die zum Konfigurieren einer Tabelle im Dokument für den Druckkanal erforderlich sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/22387?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27769?quality=12&learn=on)
+
+## Nächste Schritte
+
+[Verwenden des überwachten Ordners zum Generieren des Druckkanaldokuments](./using-watched-folder-to-generate-document.md)

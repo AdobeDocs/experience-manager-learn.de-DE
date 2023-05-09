@@ -1,24 +1,25 @@
 ---
 title: Erstellen von Client-Bibliotheken
 description: Erstellen Sie eine Client-Bibliothek, um das Klickereignis der Schaltfläche "Speichern und Beenden"zu verarbeiten.
-feature: Adaptive Formulare
+feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
 kt: 6597
 thumbnail: 6597.pg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Intermediate
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: c90eea73-bd44-40af-aa98-d766aa572415
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 2%
+source-wordcount: '146'
+ht-degree: 8%
 
 ---
 
-# Client-Bibliothek erstellen
+# Erstellen einer Client-Bibliothek
 
-Erstellen Sie [client lib](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) , die den Code zum Aufrufen der Methode `doAjaxSubmitWithFileAttachment` der `guideBridge`-API beim Klickereignis der Schaltfläche enthält, das von der CSS-Klasse **savebutton** identifiziert wird.  Wir übergeben die adaptiven Formulardaten `fileMap` und die `mobileNumber` an den Endpunkt, der unter `**/bin/storeafdatawithattachments` überwacht.
+Erstellen [Client-Bibliothek](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=de) , der den Code zum Aufrufen der Methode enthält `doAjaxSubmitWithFileAttachment` des `guideBridge` API für das Klickereignis der Schaltfläche, die von der CSS-Klasse identifiziert wird **savebutton**.  Wir übergeben die Daten des adaptiven Formulars, `fileMap`und die `mobileNumber` zum Endpunkt, der beim `**/bin/storeafdatawithattachments`
 
 Nachdem die Formulardaten gespeichert wurden, wird eine eindeutige Anwendungs-ID generiert und dem Benutzer in einem Dialogfeld angezeigt. Wenn das Dialogfeld geschlossen wird, wird der Benutzer zum Formular geleitet, über das er das gespeicherte adaptive Formular mit der eindeutigen Anwendungs-ID abrufen kann.
 
@@ -66,6 +67,10 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> Wir haben [Bootbox-JavaScript-Bibliothek](http://bootboxjs.com/examples.html) verwendet, um das Dialogfeld anzuzeigen
+> Wir haben [Bootbox-JavaScript-Bibliothek](http://bootboxjs.com/examples.html) zum Anzeigen des Dialogfelds
 
-Die in diesem Beispiel verwendeten Client-Bibliotheken können [von hier heruntergeladen](assets/client-libraries.zip) werden.
+Die in diesem Beispiel verwendeten Client-Bibliotheken können [heruntergeladen von hier](assets/client-libraries.zip)
+
+## Nächste Schritte
+
+[Benutzer mit OTP-Dienst überprüfen](./verify-users-with-otp.md)

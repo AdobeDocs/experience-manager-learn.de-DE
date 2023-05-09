@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Dokumentfragmenten
+title: Erstellen eines Dokumentfragments
 description: Dies ist Teil 5 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil erstellen wir ein Dokumentfragment, das den Namen und die Adresse des Empfängers enthält.
 seo-description: This is part 5 of a multi-step tutorial for creating your first interactive communications document. In this part, we will create document fragment to hold the recipient name and address.
 uuid: 7fd8a0f2-a921-4e70-91c9-908dae9aeab2
@@ -16,14 +16,14 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 2fe3f950-bc2a-4e91-8d91-00438691727a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 0%
+source-wordcount: '229'
+ht-degree: 3%
 
 ---
 
-# Erstellen von Dokumentfragmenten
+# Erstellen eines Dokumentfragments
 
 In diesem Teil erstellen wir ein Dokumentfragment, das den Namen und die Adresse des Empfängers enthält.
 
@@ -38,3 +38,7 @@ Der Dokumentfragment-Editor kann auch Inline-Bedingungen in Ihren Text einfügen
 >[!NOTE]
 >
 >Stellen Sie sicher, dass die Formulardatenmodellelemente, die Sie in Dokumentfragmente einfügen, untergeordnete Elemente des Stammelements sind. Stellen Sie beispielsweise in diesem Anwendungsfall sicher, dass die von Ihnen ausgewählten Elemente des User-Objekts das untergeordnete Element des Balanceobjekts sind.
+
+## Nächste Schritte
+
+[Dokument zum Druckkanal erstellen](./create-print-channel-document.md)

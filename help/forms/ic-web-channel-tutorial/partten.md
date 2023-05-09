@@ -14,13 +14,13 @@ discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 0049c9fd864bd4dd4f8c33b1e40e94aad3ffc5b9
+exl-id: 0dd8a430-9a4e-4dc7-ad75-6ad2490430f2
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '344'
-ht-degree: 0%
+source-wordcount: '349'
+ht-degree: 1%
 
 ---
-
 
 # Konfigurieren des Outlook-Bedienfelds &quot;Retirement&quot;{#configuring-retirement-outlook-panel}
 
@@ -42,7 +42,7 @@ ht-degree: 0%
 
 * Wählen Sie das Symbol &quot;Stift&quot;, um den Standardtext zu bearbeiten.
 
-* Ersetzen Sie den Standardtext durch &quot;**Your Retirement Income Outlook&quot;**
+* Ersetzen Sie den Standardtext durch &quot;**Ihr Rentenergebnis-Outlook&quot;**
 
 **RightsPanel-Zielbereich konfigurieren**
 
@@ -54,13 +54,13 @@ ht-degree: 0%
 
 * Wählen Sie das Symbol &quot;Stift&quot;, um den Standardtext zu bearbeiten.
 
-* Ersetzen Sie den Standardtext durch &quot;**Geschätztes monatliches Renteneinkommen&quot;**
+* Ersetzen Sie den Standardtext durch &quot;**Geschätzte monatliche Renteneinkommen&quot;**
 
 ## Hinzufügen des Einkommens aus Outlook-Dokumentfragments für die Bereitstellung {#add-retirement-income-outlook-document-fragment}
 
 * Klicken Sie auf das Symbol Assets und wenden Sie den Filter an, um Assets vom Typ &quot;Dokumentfragmente&quot;anzuzeigen. Ziehen Sie das Dokumentfragment RetirementIncomeOutlook in den Zielbereich des linken Bedienfelds.
 
-* Sie können [auf diese Seite](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html) beim Hinzufügen von Dokumentfragmenten zu Inhaltsbereichen verweisen.
+* Weitere Informationen finden Sie unter [auf dieser Seite](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html) zum Hinzufügen von Dokumentfragmenten zu Inhaltsbereichen.
 
 ## Geschätzte monatliche Einkommensdiagramme hinzufügen {#adding-estimated-monthly-income-chart}
 
@@ -74,6 +74,6 @@ ht-degree: 0%
 
 ![forms65](assets/estimatedmonthlyincomechart65.PNG)
 
+## Nächste Schritte
 
-
-
+[Tortendiagramm konfigurieren](./parteleven.md)

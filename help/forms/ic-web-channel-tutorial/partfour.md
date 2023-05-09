@@ -15,10 +15,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: d742d77b-a064-46e8-862a-2d3e1cc56f63
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '118'
-ht-degree: 0%
+source-wordcount: '123'
+ht-degree: 1%
 
 ---
 
@@ -34,3 +34,7 @@ Erstellen einer Webkanal-Dokumentvorlage in AEM Forms 6.5
 Die Vorlage enthält Zielbereiche/Platzhalter, die verschiedene Arten von Dokumentfragmenten enthalten. Beispielsweise kann eine Vorlage Zielbereiche für Logos und einen anderen Zielbereich für Textinhalte haben.
 
 Nachdem die Webkanal-Dokumentvorlage erstellt wurde, können Sie Dokumente für die interaktive Kommunikation basierend auf der Vorlage erstellen.
+
+## Nächste Schritte
+
+[Dokumentfragment erstellen](./partfive.md)

@@ -14,10 +14,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: f0f19838-1ade-4eda-b736-a9703a3916c2
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '236'
-ht-degree: 0%
+source-wordcount: '242'
+ht-degree: 1%
 
 ---
 
@@ -41,3 +41,7 @@ Um Tomcat einzurichten, befolgen Sie die folgenden Anweisungen:
 12. Sie sollten Beispieldaten als Ergebnis dieses Aufrufs erhalten.
 
 Herzlichen Glückwunsch !!!. Sie haben für Tomcat eingerichtet und die Datei SampleRest.war bereitgestellt.
+
+## Nächste Schritte
+
+[RESTful-Datenquelle konfigurieren](./parttwo.md)

@@ -1,10 +1,10 @@
 ---
 title: Generieren von Druckkanaldokumenten mit einem überwachten Ordner
-seo-title: Generieren von Druckkanaldokumenten mit einem überwachten Ordner
+seo-title: Generating Print Channel Documents Using Watched Folder
 description: Dies ist Teil 10 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments für den Druckkanal. In diesem Teil generieren wir Druckkanaldokumente mithilfe des Mechanismus für überwachte Ordner.
-seo-description: Dies ist Teil 10 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments für den Druckkanal. In diesem Teil generieren wir Druckkanaldokumente mithilfe des Mechanismus für überwachte Ordner.
+seo-description: This is part 10 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will generate print channel documents using the watched folder mechanism.
 uuid: 9e39f4e3-1053-4839-9338-09961ac54f81
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
@@ -12,16 +12,16 @@ activity: implement
 version: 6.4,6.5
 contentOwner: gbedekar
 discoiquuid: 23fbada3-d776-4b77-b381-22d3ec716ae9
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 9bb05c94-2a7b-4149-b567-186eb08b1c66
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '381'
-ht-degree: 1%
+source-wordcount: '348'
+ht-degree: 0%
 
 ---
-
 
 # Generieren von Druckkanaldokumenten mit einem überwachten Ordner
 
@@ -31,11 +31,11 @@ Nach dem Erstellen und Testen Ihres Druckkanaldokuments benötigen wir einen Mec
 
 Wenn Sie einen überwachten Ordner in AEM konfigurieren, verknüpfen Sie ein ECMA-Skript oder einen Java-Code, der ausgeführt wird, wenn eine Datei im überwachten Ordner abgelegt wird. In diesem Artikel werden wir uns auf das ECMA-Skript konzentrieren, das Druckkanaldokumente generiert und im Dateisystem speichert.
 
-Die Konfiguration des überwachten Ordners und das ECMA-Skript sind Teil der Assets, die Sie am [Anfang dieses Tutorials](introduction.md) importiert haben
+Die Konfiguration des überwachten Ordners und das ECMA-Skript sind Teil der Assets, die Sie in den Ordner [Beginn dieses Tutorials](introduction.md)
 
 Die Eingabedatei, die im überwachten Ordner abgelegt wird, weist die folgende Struktur auf. Das ECMA-Skript liest die Kontonummern und generiert ein Druckkanaldokument für jedes dieser Konten.
 
-Weitere Informationen zum ECMA-Skript zum Generieren von Dokumenten finden Sie in [diesem Artikel](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
+Weitere Informationen zum ECMA-Skript zum Generieren von Dokumenten finden Sie unter [in diesem Artikel](/help/forms/interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
 
 ```xml
 <accountnumbers>
@@ -59,7 +59,7 @@ Gehen Sie wie folgt vor, um Druckkanaldokumente mithilfe des Mechanismus für ü
 * Stellen Sie sicher, dass der Pfad zu InteractiveCommunicationsDocument auf das richtige Dokument verweist, das Sie drucken möchten.( Zeile 1)
 * Notieren Sie sich die saveLocation (Zeile 2). Sie können sie nach Bedarf ändern.
 * Stellen Sie sicher, dass der Eingabeparameter für das Formulardatenmodell an das Anforderungsattribut gebunden ist und der Bindungswert auf &quot;Anschlussnummer&quot;eingestellt ist. Siehe Screenshot unten.
-   ![request](assets/requestattributeprintchannel.gif)
+   ![Anfrage](assets/requestattributeprintchannel.gif)
 
 * Erstellen Sie die Datei &quot;accountnumbers.xml&quot;mit folgendem Inhalt
 
@@ -78,6 +78,6 @@ Gehen Sie wie folgt vor, um Druckkanaldokumente mithilfe des Mechanismus für ü
 
 * Überprüfen Sie die PDF-Dateien am Speicherort, wie im ECMA-Skript angegeben.
 
+## Nächste Schritte
 
-
-
+[Öffnen der Agenten-Benutzeroberfläche bei Formularübermittlung](./opening-agent-ui-on-form-submission.md)

@@ -1,26 +1,26 @@
 ---
 title: Konfigurieren des Investment Mix-Bedienfelds
-seo-title: Konfigurieren des Investment Mix-Bedienfelds
+seo-title: Configuring Investment Mix Panel
 description: Dies ist Teil 11 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil werden wir Kreisdiagramme hinzufügen, um den aktuellen und modalen Investitionsmix anzuzeigen.
-seo-description: Dies ist Teil 11 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil werden wir Kreisdiagramme hinzufügen, um den aktuellen und modalen Investitionsmix anzuzeigen.
+seo-description: This is part 11 of multistep tutorial for creating your first interactive communications document.In this part, we will add pie charts to display the current and model investment mix.
 uuid: b0132912-cb6e-4dec-8309-5125d29ad291
-feature: Interaktive Kommunikation
+feature: Interactive Communication
 topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
 version: 6.4,6.5
 discoiquuid: 77de4e76-53ee-467c-a71c-d1d3ea15283b
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Beginner
-source-git-commit: d9714b9a291ec3ee5f3dba9723de72bb120d2149
+exl-id: 774d7a6e-2b8f-4a70-98c5-e7712478ff75
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '361'
+source-wordcount: '334'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurieren des Investment Mix-Bedienfelds
 
@@ -58,3 +58,6 @@ In diesem Teil werden wir Kreisdiagramme hinzufügen, um den aktuellen und Model
 
 * ![assettype](assets/modelassettypechart.png)
 
+## Nächste Schritte
+
+[Bereitstellung des Webkanaldokuments vorbereiten](./parttwelve.md)

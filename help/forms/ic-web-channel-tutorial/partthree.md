@@ -7,9 +7,9 @@ version: 6.4,6.5
 role: Developer
 level: Beginner
 exl-id: 798012e5-5099-4fd0-82ad-a21f64a97aca
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '252'
 ht-degree: 0%
 
 ---
@@ -33,3 +33,9 @@ Das Formulardatenmodell ist die Grundlage für all Ihre interaktiven Kommunikati
 Weitere Informationen finden Sie unter [Konfigurieren von Data Sources](parttwo.md).
 
 Nachdem Sie das Formulardatenmodell erstellt haben, können Sie es als Grundlage für die Erstellung von Dokumentfragmenten und Dokumenten zur interaktiven Kommunikation verwenden.
+
+## Nächste Schritte
+
+[Webkanal-Dokumentvorlage erstellen](./partfour.md)
+
+

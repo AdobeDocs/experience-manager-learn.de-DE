@@ -1,20 +1,20 @@
 ---
 title: Anpassen der Zusammenfassungskomponente
 description: Erweitern Sie die Komponente Zusammenfassungsschritt , um die Funktion zum Navigieren zum nächsten Formular im Paket einzuschließen.
-feature: Adaptive Formulare
+feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6894
 thumbnail: 6894.jpg
-topic: Entwicklung
+topic: Development
 role: Developer
 level: Experienced
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: fb68579d-241c-414d-92f4-13194f4d1923
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 2%
+source-wordcount: '185'
+ht-degree: 1%
 
 ---
-
 
 # Übersichtsschritt anpassen
 
@@ -33,7 +33,7 @@ Die neue Komponente basiert auf der vordefinierten Übersichtskomponente .
 Wir haben eine Schaltfläche hinzugefügt, über die Sie zum nächsten Formular zum Signieren navigieren können
 ![template-code](assets/template-code.PNG)
 
-Die summary.jsp hat den folgenden Code. Sie enthält einen Verweis auf die Client-Bibliothek, die durch die Kategorie-ID **getnextform** identifiziert wird.
+Die summary.jsp hat den folgenden Code. Sie verweist auf die Client-Bibliothek, die durch die Kategorie-ID identifiziert wird. **getnextform**
 
 ```java
 <%--
@@ -46,6 +46,8 @@ Die summary.jsp hat den folgenden Code. Sie enthält einen Verweis auf die Clien
 
 ## Assets
 
-Die benutzerdefinierte Zusammenfassungskomponente kann [von hier heruntergeladen werden](assets/custom-summary-step.zip)
+Die benutzerdefinierte Zusammenfassungskomponente kann [heruntergeladen von hier](assets/custom-summary-step.zip)
 
+## Nächste Schritte
 
+[Nächstes Formular zum Signieren abrufen](./create-client-lib.md)

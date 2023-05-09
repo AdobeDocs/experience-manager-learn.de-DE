@@ -14,10 +14,10 @@ role: Developer
 level: Beginner
 exl-id: 65b1af30-9e22-4df0-ab91-479d5406df61
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 3%
+source-wordcount: '158'
+ht-degree: 6%
 
 ---
 
@@ -33,8 +33,12 @@ Interaktive Kommunikation ist neu in AEM Forms 6.4. Dieses Dokument führt Sie d
 
 Nach Abschluss dieses Tutorials haben Sie Folgendes gelernt:
 
-* Datenquelle erstellen
+* Erstellen einer Datenquelle
 * Erstellen von Formulardatenmodellen
 * Erstellen von Dokumentfragmenten
 * Tabellen und Diagramme konfigurieren
 * Webkanaldokumente bereitstellen
+
+## Nächste Schritte
+
+[Installieren von Tomcat](./partone.md)

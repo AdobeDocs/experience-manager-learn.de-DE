@@ -10,10 +10,10 @@ topic: Development
 role: Developer
 level: Experienced
 exl-id: d486d5de-efd9-4dd3-9d9c-1bef510c6073
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
 workflow-type: tm+mt
-source-wordcount: '420'
-ht-degree: 2%
+source-wordcount: '424'
+ht-degree: 3%
 
 ---
 
@@ -45,7 +45,7 @@ Um Ihre erste Swagger/OpenAPI-Datei zu erstellen, folgen Sie dem [OpenAPI-Dokume
 
 Verwenden Sie die [Swagger-Editor](https://editor.swagger.io/) , um Ihre Swagger-Datei zu erstellen, um die Vorgänge zu beschreiben, die mit SMS gesendeten OTP-Code senden und überprüfen. Die Swagger-Datei kann im JSON- oder YAML-Format erstellt werden. Die fertige Swagger-Datei kann von heruntergeladen werden. [here](assets/two-factore-authentication-swagger.zip)
 
-## Datenquelle erstellen
+## Erstellen einer Datenquelle
 
 Um AEM/AEM Forms mit Drittanbieteranwendungen zu integrieren, müssen wir [REST-basierte Datenquelle mit der Swagger-Datei](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) in der Cloud-Services-Konfiguration. Die abgeschlossene Datenquelle wird Ihnen als Teil dieses Kurs-Assets bereitgestellt.
 
@@ -55,3 +55,5 @@ Die AEM Forms-Datenintegration bietet eine intuitive Benutzeroberfläche zum Ers
 Das ausgefüllte Formulardatenmodell kann [heruntergeladen von hier](assets/sms-2fa-fdm.zip)
 
 ![fdm](assets/2FA-fdm.PNG)
+
+[Hauptformular erstellen](./create-the-main-adaptive-form.md)
