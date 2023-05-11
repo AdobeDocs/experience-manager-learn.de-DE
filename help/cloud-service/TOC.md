@@ -5,10 +5,10 @@ breadcrumb-title: Tutorials zu AEM as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: b3cc9c4fbd36cdf5be46e4546a174fea0c8da05c
+source-git-commit: 31d6b75f481bbc1a716974b2188a0f4f460c1df6
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 95%
+source-wordcount: '953'
+ht-degree: 94%
 
 ---
 
@@ -70,7 +70,7 @@ ht-degree: 95%
          + [Modal](./developing/extensibility/content-fragments/modal.md)
          + [Adobe I/O Runtime-Aktion](./developing/extensibility/content-fragments/runtime-action.md)
          + [Testen](./developing/extensibility/content-fragments/test.md)
-         + [Implementieren](./developing/extensibility/content-fragments/deploy.md)
+         + [Bereitstellen](./developing/extensibility/content-fragments/deploy.md)
          + Beispielerweiterungen{#example-extensions}
             + [Massenaktualisierung der Eigenschaften](./developing/extensibility/content-fragments/example-extensions/bulk-property-update.md)
             + [Generieren von AEM-Bild-Assets mit OpenAI](./developing/extensibility/content-fragments/example-extensions/image-generation-and-image-upload.md)
@@ -114,7 +114,7 @@ ht-degree: 95%
    + Debugging von AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [Übersicht](./debugging/cloud-service/overview.md)
       + [Protokolle](./debugging/cloud-service/logs.md)
-      + [Erstellung und Implementierung](./debugging/cloud-service/build-and-deployment.md)
+      + [Erstellung und Bereitstellung](./debugging/cloud-service/build-and-deployment.md)
       + [Developer Console](./debugging/cloud-service/developer-console.md)
       + [Repository-Browser](./debugging/cloud-service/repository-browser.md)
       + Risiken{#risks}
@@ -281,7 +281,7 @@ ht-degree: 95%
    + Testen und Debugging{#test-debug}
       + [Testen eines Sekundärs](./asset-compute/test-debug/test.md)
       + [Debugging eines Sekundärs](./asset-compute/test-debug/debug.md)
-   + Implementieren{#deploy}
+   + Bereitstellen{#deploy}
       + [Bereitstellen für Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
       + [Integrieren mit AEM](./asset-compute/deploy/processing-profiles.md)
    + Erweitert{#advanced}
@@ -319,3 +319,8 @@ ht-degree: 95%
    + [SPA-Editor (React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html?lang=de)
    + [AEM Sites und Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=de)
    + [Token-basierte Authentifizierung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=de)
++ Expertenressourcen {#expert-resources}
+   + AEM Champions {#aem-champions}
+      + [Onboarding-Playbook für Cloud Manager](./expert-resources/onboarding-playbook.md)
+      + [Cloud Manager-Umgebungstypen](./expert-resources/environment-types.md)
+      + [Cloud Manager-Benutzeroberfläche](./expert-resources/cloud-manager-ui.md)
