@@ -11,9 +11,9 @@ hide: true
 index: false
 thumbnail: kt-10427.jpg
 exl-id: 8fcc9364-b84c-4458-82e2-66b47429cd4b
-source-git-commit: 48943df64d9793066f8f19497ef42f8aa80e5795
+source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
 workflow-type: tm+mt
-source-wordcount: '838'
+source-wordcount: '826'
 ht-degree: 10%
 
 ---
@@ -87,8 +87,8 @@ Die Reduzierung von Traversal-Warnungen kann mithilfe von drei einfachen Schritt
    <div class="x-card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="#verify" title="Verify (Überprüfen)" tabindex="-1">
-                   <img class="is-bordered-r-small" src="./assets/traversals/3-verify.png" alt="Verify (Überprüfen)">
+               <a href="#verify" title="Überprüfen Sie" tabindex="-1">
+                   <img class="is-bordered-r-small" src="./assets/traversals/3-verify.png" alt="Überprüfen Sie">
                </a>
            </figure>
        </div>
@@ -97,7 +97,7 @@ Die Reduzierung von Traversal-Warnungen kann mithilfe von drei einfachen Schritt
                 <p class="headline is-size-5 has-text-weight-bold">Überprüfen der vorgenommenen Anpassungen</p>                       
                <p class="is-size-6">Überprüfen Sie, ob Änderungen an Abfragen und Indizes Traversionen entfernen.</p>
                <a href="#verify" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Überprüfen</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Überprüfen Sie</span>
                </a>
            </div>
        </div>
@@ -108,7 +108,7 @@ Die Reduzierung von Traversal-Warnungen kann mithilfe von drei einfachen Schritt
 
 ## 1. Analyse{#analyze}
 
-Ermitteln Sie zunächst, welche AEM Publish-Dienste seitenübergreifende Warnungen aufweisen. Gehen Sie dazu in Cloud Manager wie folgt vor: [Herunterladen der Veröffentlichungsdienste `aemerror` logs](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target=&quot;_blank&quot;} aus allen Umgebungen (Entwicklung, Staging und Produktion) für die Vergangenheit __drei Tage__.
+Ermitteln Sie zunächst, welche AEM Publish-Dienste seitenübergreifende Warnungen aufweisen. Gehen Sie dazu in Cloud Manager wie folgt vor: [Herunterladen der Veröffentlichungsdienste `aemerror` logs](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"} aus allen Umgebungen (Entwicklung, Staging und Produktion) für die Vergangenheit __drei Tage__.
 
 ![AEM as a Cloud Service Protokolle herunterladen](./assets/traversals/download-logs.jpg)
 
@@ -159,14 +159,14 @@ Sobald die fehlerhaften Abfragen und ihr aufrufender Code erkannt wurden, müsse
 
 __Abfrage ändern__ , um neue Abfrageeinschränkungen hinzuzufügen, die zu bestehenden Indexbeschränkungen aufgelöst werden. Wenn möglich, sollten Sie die Abfrage ändern und stattdessen Indizes ändern.
 
-+ [Erfahren Sie, wie Sie die Abfrageleistung anpassen.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target=&quot;_blank&quot;}
++ [Erfahren Sie, wie Sie die Abfrageleistung anpassen.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
 
 ### Index anpassen
 
 __Ändern (oder Erstellen) eines AEM Index__ sodass bestehende Abfrageeinschränkungen für die Indexaktualisierungen aufgelöst werden können.
 
-+ [Erfahren Sie, wie Sie vorhandene Indizes anpassen können.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target=&quot;_blank&quot;}
-+ [Erfahren Sie, wie Sie Indizes erstellen](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index){target=&quot;_blank&quot;}
++ [Erfahren Sie, wie Sie vorhandene Indizes anpassen können.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
++ [Erfahren Sie, wie Sie Indizes erstellen](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index){target="_blank"}
 
 ## 3. Überprüfen{#verify}
 
@@ -174,9 +174,9 @@ Anpassungen, die entweder an den Abfragen, Indizes oder beidem vorgenommen werde
 
 ![Abfrage erläutern](./assets/traversals/verify.gif)
 
-Wenn nur [Abfrageanpassung](#adjust-the-query) durchgeführt werden, kann die Abfrage direkt auf AEM as a Cloud Service über die Developer Console getestet werden. [Abfrage erläutern](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target=&quot;_blank&quot;}. Erläutern Sie, wie die Abfrage mit dem AEM-Autorendienst ausgeführt wird. Da die Indexdefinitionen jedoch in den Autoren- und Veröffentlichungsdiensten identisch sind, reicht es aus, Abfragen mit dem AEM-Autorendienst zu validieren.
+Wenn nur [Abfrageanpassung](#adjust-the-query) durchgeführt werden, kann die Abfrage direkt auf AEM as a Cloud Service über die Developer Console getestet werden. [Abfrage erläutern](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=de#queries){target="_blank"}. Erläutern Sie, wie die Abfrage mit dem AEM-Autorendienst ausgeführt wird. Da die Indexdefinitionen jedoch in den Autoren- und Veröffentlichungsdiensten identisch sind, reicht es aus, Abfragen mit dem AEM-Autorendienst zu validieren.
 
-Wenn [Indexanpassungen](#adjust-the-index) festgelegt sind, muss der Index AEM as a Cloud Service bereitgestellt werden. Wenn die Indexanpassungen bereitgestellt sind, wird die [Abfrage erläutern](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target=&quot;_blank&quot;} kann verwendet werden, um die Abfrage weiter zu optimieren.
+Wenn [Indexanpassungen](#adjust-the-index) festgelegt sind, muss der Index AEM as a Cloud Service bereitgestellt werden. Wenn die Indexanpassungen bereitgestellt sind, wird die [Abfrage erläutern](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=de#queries){target="_blank"} kann verwendet werden, um die Abfrage weiter zu optimieren.
 
 Letztlich werden alle Änderungen (Abfrage und Code) an Git übertragen und mithilfe von Cloud Manager AEM as a Cloud Service bereitgestellt. Nach der Bereitstellung werden die mit den ursprünglichen Traversal-Warnungen verknüpften Codepfade erneut getestet und es wird sichergestellt, dass die Traversal-Warnungen nicht mehr im `aemerror` log.
 
@@ -191,7 +191,7 @@ Sehen Sie sich diese anderen nützlichen Ressourcen an, um AEM Indizes, Suchvorg
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 - Suche und Indizierung" tabindex="-1"><img class="is-bordered-r-small" src="../../../cloud-5/imgs/009-thumb.png" alt="Cloud 5 - Suche und Indizierung"></a>
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 - Suche und Indizierung" tabindex="-1"><img class="is-bordered-r-small" src="../../../expert-resources/cloud-5/imgs/009-thumb.png" alt="Cloud 5 - Suche und Indizierung"></a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
@@ -199,7 +199,7 @@ Sehen Sie sich diese anderen nützlichen Ressourcen an, um AEM Indizes, Suchvorg
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 - Suche und Indizierung">Cloud 5 - Suche und Indizierung</a></p>
                <p class="is-size-6">Das Cloud 5-Team zeigt die Ein- und Ausgänge der Suche und Indizierung auf AEM as a Cloud Service.</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-5/cloud5-aem-search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Weitere Informationen</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr Info</span>
                </a>
            </div>
        </div>
@@ -219,10 +219,10 @@ Sehen Sie sich diese anderen nützlichen Ressourcen an, um AEM Indizes, Suchvorg
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="Inhaltssuche und -indizierung">Dokumentation zur Inhaltssuche und -indizierung</a></p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=de" title="Inhaltssuche und -indizierung">Dokumentation zur Inhaltssuche und -indizierung</a></p>
                <p class="is-size-6">Erfahren Sie, wie Sie in AEM as a Cloud Service Indizes erstellen und verwalten.</p>
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Weitere Informationen</span>
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=de" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr Info</span>
                </a>
            </div>
        </div>
@@ -244,7 +244,7 @@ Sehen Sie sich diese anderen nützlichen Ressourcen an, um AEM Indizes, Suchvorg
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="Modernisieren Ihrer Oak-Indizes">Modernisieren Ihrer Oak-Indizes</a></p>
                <p class="is-size-6">Erfahren Sie, wie Sie AEM 6 Oak-Indexdefinitionen konvertieren, um as a Cloud Service kompatibel zu sein, und die Indizes in Zukunft verwalten.</p>
                <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Weitere Informationen</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr Info</span>
                </a>
            </div>
        </div>
@@ -266,7 +266,7 @@ Sehen Sie sich diese anderen nützlichen Ressourcen an, um AEM Indizes, Suchvorg
                <p class="headline is-size-6 has-text-weight-bold"><a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" title="Dokumentation zur Indexdefinition">Lucene-Indexdokumentation</a></p>
                <p class="has-ellipsis is-size-6">Der Apache Oak Jackrabbit Lucene-Indexverweis, der alle unterstützten Lucene-Indexkonfigurationen dokumentiert.</p>
                <a href="https://jackrabbit.apache.org/oak/docs/query/lucene.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Weitere Informationen</span>
+                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr Info</span>
                </a>
            </div>
        </div>
