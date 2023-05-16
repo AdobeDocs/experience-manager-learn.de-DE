@@ -6,10 +6,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 8bb7771effc95c70a9ddeffb1c54a1c2282e06dd
+source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
 workflow-type: tm+mt
-source-wordcount: '383'
-ht-degree: 98%
+source-wordcount: '395'
+ht-degree: 96%
 
 ---
 
@@ -104,21 +104,26 @@ ht-degree: 98%
 
 + Dynamic Media{#dynamic-media}
    + [Übersicht über Dynamic Media](dynamic-media/dynamic-media-overview-feature-video-use.md)
-   + [Smartes Zuschneiden](dynamic-media/smart-crop-feature-video-use.md)
-   + [Experience Fragments ](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
-   + [Interaktives Video](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
-   + [Videoplayer](dynamic-media/dynamic-media-video-player-feature-video-use.md)
-   + [360-Grad-Video](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
-   + [Benutzerdefinierte Videominiaturen](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
-   + [Scharfzeichnen von Bildern](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
-   + [Farbmanagement](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
-   + [Viewer](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
-   + [Panorama- und Vertikalbild-Viewer](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
-   + [Viewer mit Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
+   + [Bild-Modifikatoren und intelligente Bildbearbeitung](dynamic-media/dynamic-media-snapshot.md)
+   + Bilder {#images}
+      + [Smartes Zuschneiden](dynamic-media/smart-crop-feature-video-use.md)
+      + [Scharfzeichnen von Bildern](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
+      + [Farbmanagement](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
+   + Verwendung mit AEM Sites {#dm-with-aem-sites}
+      + [Experience Fragments ](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
+      + [Dynamic Media-Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
+   + Video {#video}
+      + [Interaktives Video](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
+      + [Videoplayer](dynamic-media/dynamic-media-video-player-feature-video-use.md)
+      + [360-Grad-Video](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
+      + [Benutzerdefinierte Videominiaturen](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
+      + [Dynamic Media Smart Crop Video](dynamic-media/dynamic-media-smart-crop-video.md)
+   + Viewer {#viewers}
+      + [Viewer](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
+      + [Panorama- und Vertikalbild-Viewer](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
+      + [Viewer mit Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
    + [Dynamic Media Classic Desktop-Anwendung](dynamic-media/dynamic-media-classic-desktop-application.md)
    + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + [Dynamic Media Smart Crop Video](dynamic-media/dynamic-media-smart-crop-video.md)
-   + [Dynamic Media-Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
 
    + Tutorials {#tutorials}
       + [Erstellen von Karussellsets](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
@@ -158,7 +163,7 @@ ht-degree: 98%
    + [Einrichten von Asset-Vorlagen](asset-templates/asset-templates-technical-video-setup.md)
    + [Verwenden von Asset-Katalogen](asset-templates/asset-catalog-template-feature-video-use.md)
 
-+ Implementierung{#deployment}
++ Bereitstellung{#deployment}
    + [Multi-Tenancy und gleichzeitige Entwicklung](deployment/multitenancy-concurrent-article-understand.md)
 
 + [Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=de)

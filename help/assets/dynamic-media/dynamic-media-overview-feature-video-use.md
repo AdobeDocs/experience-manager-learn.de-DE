@@ -7,9 +7,9 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '842'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ In diesem Video wird beschrieben, wie Medieninhalte mit Adobe Experience Manager
 * Kopieren von URLs in Bilder und responsive Viewer
 * Variationen von smartem Zuschneiden auf URLs
 
-## Dynamic Media mit AEM Sites und jedem anderen CMS
+## Verwendung mit AEM Sites
 
 >[!VIDEO](https://video.tv.adobe.com/v/27145?quality=12&learn=on)
 
@@ -48,7 +48,7 @@ In diesem Video wird beschrieben, wie Medieninhalte in Adobe Experience Manager 
 * Lokales Herunterladen mit Bildvorgaben
 * Erstellen und Veröffentlichen eines interaktiven Banners
 
-## Dynamic Media zum Erstellen einer gemischten Mediensammlung und eines benutzerdefinierten Viewers
+## Erstellen einer gemischten Mediensammlung
 
 >[!VIDEO](https://video.tv.adobe.com/v/27146?quality=12&learn=on)
 
@@ -63,7 +63,7 @@ In diesem Video wird der einfache Erstellungsprozess für eine Viewer-Sammlung m
 * Erstellen von gemischten Mediensets aus Rotationsset, Video und Fotos
 * Bearbeiten und Verwenden des benutzerdefinierten Viewers für gemischte Medien
 
-## Dynamic Media-Bildvorgaben
+## Bildvorgaben
 
 >[!VIDEO](https://video.tv.adobe.com/v/27320?quality=12&learn=on)
 
@@ -74,7 +74,7 @@ In diesem Video wird beschrieben, wie Bildvorgaben erstellt werden und was eine 
 * Scharfzeichnen immer verwenden
 * Feld &quot;URL-Modifikator&quot;, um zusätzliche Befehle zum Ändern der Größe der Bildvorgabe hinzuzufügen
 
-## Erweiterte URL-Modifikatoren für Dynamic Media
+## Erweiterte URL-Modifikatoren
 
 >[!VIDEO](https://video.tv.adobe.com/v/27319?quality=12&learn=on)
 
@@ -86,7 +86,7 @@ In diesem Video wird beschrieben, wie Sie über die Größenanpassung von Bilder
 * Zuschneiden auf einen Bildpfad
 * Erstellen einer Textvorlage aus einer Photoshop-Datei
 
-## Dynamic Media zur Steuerung der JPEG-Dateigröße in Kilobytes
+## JPEG-Dateigrößenverwaltung
 
 >[!VIDEO](https://video.tv.adobe.com/v/27404?quality=12&learn=on)
 
@@ -97,13 +97,13 @@ In diesem Video wird beschrieben, wie Sie über die Größenanpassung von Bilder
 
 Stellen Sie die JPEG-Bildqualität mit der resultierenden Dateigröße (in Kilobyte) in Einklang, um die Seitenladegeschwindigkeit zu erhöhen. Verwenden Sie dazu 2 Befehle zum Anpassen der JPEG-Komprimierungseinstellungen. QLT definiert die Bildqualität durch Anpassung der Qualitätseinstellungen der JPEG-Komprimierung. Mit dem Befehl JPEG Size können Sie angeben, welche Dateigröße mithilfe der Komprimierung erreicht werden soll.
 
-## Hinzufügen von verdeckten Untertiteln zu Dynamic Media-Videos
+## Verdeckter Untertitel
 
 >[!VIDEO](https://video.tv.adobe.com/v/28074?quality=12&learn=on)
 
 Fügen Sie einfach verdeckte Untertitel zu Dynamic Media-Videos hinzu, indem Sie die Kopier-URL an ein zusätzliches Dokument mit verdeckten Untertiteln anhängen, eine Web.VTT-Sidecar-Datei, die die CC-Informationen für alle Videos enthält.
 
-## Verwenden des Scharfzeichnens von Bildern mit AEM Dynamic Media
+## Scharfzeichnen von Bildern
 
 In diesem Video wird erläutert, warum das Scharfzeichnen eines Bildes für die Aufrechterhaltung der Bildtreue von entscheidender Bedeutung ist und wie erweiterte Einstellungen verwendet werden, um das perfekte Bild zu erstellen.
 
