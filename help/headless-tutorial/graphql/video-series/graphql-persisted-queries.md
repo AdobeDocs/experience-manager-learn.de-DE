@@ -8,11 +8,12 @@ role: Developer
 level: Beginner
 kt: 7872
 thumbnail: 333429.jpeg
+last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: 06ba38c4-95fe-4ff5-b4d9-237ef9dec944
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 83c4d82a3cce44ae9f99389fdfd7d485d42d13e2
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 100%
+source-wordcount: '60'
+ht-degree: 85%
 
 ---
 
@@ -24,13 +25,6 @@ In diesem Video erfahren Sie Folgendes:
 
 + Erfahren Sie, wie Sie persistierte GraphQL-Abfragen aktivieren
 + Erfahren Sie, wie Sie GraphQL-Abfragen erstellen, aktualisieren und ausführen.
-+ Verstehen der Vor- und Nachteile Server-seitiger bzw. Client-seitiger Abfragen
-
->[!CAUTION]
->
->Das Kapitel **Erstellen, Aktualisieren und Ausführen von persistierten Abfragen** ab 2:05 verwendet [Postman](https://www.postman.com/) zur Durchführung dieser Aufgabe. In den neueren Versionen von AEM as a Cloud Service wird jedoch ein eingebauter **GraphiQL-Explorer** bereitgestellt. Siehe [Verwenden der GraphiQL-IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html?lang=de) für weitere Informationen.
-
++ Machen Sie sich mit den Vorteilen persistenter Abfragen gegenüber clientseitigen Abfragen vertraut.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333429?quality=12&learn=on)
-
-_Laden Sie die [Postman-Sammlung](./assets/aem-headless-video-series.postman_collection.json) herunter, die in der AEM Headless-Videoserie verwendet wird._
