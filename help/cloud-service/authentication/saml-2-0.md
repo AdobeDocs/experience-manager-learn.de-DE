@@ -10,9 +10,9 @@ kt: 9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: d049eb78e2302aa97de0d228b65fba842ad38b74
 workflow-type: tm+mt
-source-wordcount: '2961'
+source-wordcount: '2943'
 ht-degree: 2%
 
 ---
@@ -116,7 +116,7 @@ Der globale Trust Store ist mit dem öffentlichen Zertifikat des IDP in der AEM-
 
 ![Replizieren des globalen Trust Store in AEM Publish](./assets/saml-2-0/global-trust-store-replicate.png)
 
-1. Navigieren Sie zu __Tools > Implementierung > Pakete__.
+1. Navigieren Sie zu __Tools > Bereitstellung > Pakete__.
 1. Package erstellen
    + Paketname: `Global Trust Store`
    + Version: `1.0.0`
@@ -132,7 +132,6 @@ Der globale Trust Store ist mit dem öffentlichen Zertifikat des IDP in der AEM-
 _Das Erstellen eines Keystore für den Authentifizierungsdienst ist erforderlich, wenn der [OSGi-Konfigurationseigenschaft des SAML 2.0-Authentifizierungs-Handlers `handleLogout` auf `true`](#saml-20-authenticationsaml-2-0-authentication) oder wenn [AuthnRequest signing/SAML assertion-Verschlüsselung](#install-aem-public-private-key-pair) ist erforderlich_
 
 1. Melden Sie sich bei der AEM-Autoreninstanz als AEM Administrator an, um den privaten Schlüssel hochzuladen.
-1. Navigieren Sie zu __Tools > Sicherheit > Trust Store__ und wählen Sie __authentication-service__ und wählen Sie __Eigenschaften__ in der oberen Aktionsleiste aus.
 1. Navigieren Sie zu __Tools > Sicherheit > Benutzer__ und wählen Sie __authentication-service__ und wählen Sie __Eigenschaften__ in der oberen Aktionsleiste aus.
 1. Wählen Sie die __Keystore__ Registerkarte.
 1. Erstellen oder öffnen Sie den Keystore. Halten Sie beim Erstellen eines Keystore das Kennwort sicher.
