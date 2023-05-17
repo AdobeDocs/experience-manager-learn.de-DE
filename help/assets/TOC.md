@@ -6,9 +6,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: c2e105123302ae37dc7cfca9533110a655e83858
+source-git-commit: a864f4f19135f7d6fb345a76f1d5c7dc3ee9a9dc
 workflow-type: tm+mt
-source-wordcount: '395'
+source-wordcount: '394'
 ht-degree: 96%
 
 ---
@@ -104,14 +104,12 @@ ht-degree: 96%
 
 + Dynamic Media{#dynamic-media}
    + [Übersicht über Dynamic Media](dynamic-media/dynamic-media-overview-feature-video-use.md)
-   + [Bild-Modifikatoren und intelligente Bildbearbeitung](dynamic-media/dynamic-media-snapshot.md)
+   + [Dynamic Media Classic Desktop-Anwendung](dynamic-media/dynamic-media-classic-desktop-application.md)
    + Bilder {#images}
+      + [Dynamic Media-Schnappschuss](dynamic-media/dynamic-media-snapshot.md)
       + [Smartes Zuschneiden](dynamic-media/smart-crop-feature-video-use.md)
       + [Scharfzeichnen von Bildern](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [Farbmanagement](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
-   + Verwendung mit AEM Sites {#dm-with-aem-sites}
-      + [Experience Fragments ](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
-      + [Dynamic Media-Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
    + Video {#video}
       + [Interaktives Video](dynamic-media/dynamic-media-interactive-video-feature-video-use.md)
       + [Videoplayer](dynamic-media/dynamic-media-video-player-feature-video-use.md)
@@ -122,9 +120,11 @@ ht-degree: 96%
       + [Viewer](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
       + [Panorama- und Vertikalbild-Viewer](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
       + [Viewer mit Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
-   + [Dynamic Media Classic Desktop-Anwendung](dynamic-media/dynamic-media-classic-desktop-application.md)
-   + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-
+   + 3D {#3d}
+      + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
+   + Verwendung mit AEM Sites {#dm-with-aem-sites}
+      + [Experience Fragments ](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
+      + [Dynamic Media-Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
    + Tutorials {#tutorials}
       + [Erstellen von Karussellsets](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [Erstellen von Bildsets](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
@@ -140,6 +140,7 @@ ht-degree: 96%
       + [Löschen der Dynamic Media-Konfiguration](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
       + [Herunterladen von Assets in der Dynamic Media Classic-App](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS-APIs](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
+
 
 + Workfront-Integration{#workfront}
    + Verbesserter Connector{#enhanced-connector}
