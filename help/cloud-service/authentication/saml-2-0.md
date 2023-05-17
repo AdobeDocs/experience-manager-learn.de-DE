@@ -10,9 +10,9 @@ kt: 9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
-source-git-commit: d049eb78e2302aa97de0d228b65fba842ad38b74
+source-git-commit: f6a9e7b32d876a8cd5ce7bf6a2e13aeb5faaf35b
 workflow-type: tm+mt
-source-wordcount: '2943'
+source-wordcount: '3123'
 ht-degree: 2%
 
 ---
@@ -138,8 +138,21 @@ _Das Erstellen eines Keystore für den Authentifizierungsdienst ist erforderlich
    + A [Der öffentliche/private Keystore wird in diesem Keystore installiert](#install-aem-public-private-key-pair) nur, wenn eine AuthnRequest-Signatur/SAML-Assertionsverschlüsselung erforderlich ist.
    + Wenn diese SAML-Integration die Abmeldung unterstützt, aber keine AuthnRequest -Signatur/SAML-Assertion, dann ist ein leerer Keystore ausreichend.
 1. Auswählen __Speichern und schließen__.
-1. Auswählen __authentication-service__ und wählen Sie __Aktivieren__ in der oberen Aktionsleiste aus.
+1. Erstellen Sie ein Paket mit der aktualisierten __authentication-service__ Benutzer.
 
+   _Verwenden Sie die folgende temporäre Problemumgehung mithilfe von Paketen:_
+
+   1. Navigieren Sie zu __Tools > Bereitstellung > Pakete__.
+   1. Package erstellen
+      + Paketname: `Authentication Service`
+      + Version: `1.0.0`
+      + Gruppe: `com.your.company`
+   1. Neu bearbeiten __Schlüsselspeicher des Authentifizierungsdienstes__ Paket.
+   1. Wählen Sie die __Filter__ und fügen Sie einen Filter für den Stammpfad hinzu. `/home/users/system/cq:services/internal/security/<AUTHENTICATION SERVICE UUID>/keystore`.
+      + Die `<AUTHENTICATION SERVICE UUID>` gefunden werden, indem Sie zu __Tools > Sicherheit > Benutzer__ und wählen Sie __authentication-service__ Benutzer. Die UUID ist der letzte Teil der URL.
+   1. Auswählen __Fertig__ und dann __Speichern__.
+   1. Wählen Sie die __Build__ -Schaltfläche für __Schlüsselspeicher des Authentifizierungsdienstes__ Paket.
+   1. Wählen Sie nach der Erstellung __Mehr__ > __Replizieren__ , um den Schlüsselspeicher Authentifizierungsdienst für AEM Publish zu aktivieren.
 
 ## AEM Paar aus öffentlichem und privatem Schlüssel installieren{#install-aem-public-private-key-pair}
 
@@ -212,7 +225,21 @@ Die Signierung von AuthnRequest und die Verschlüsselung der SAML-Assertion sind
 1. Das neu hinzugefügte Zertifikat wird über dem __Zertifikat aus CRT-Datei hinzufügen__ Abschnitt.
    + Beachten Sie die __alias__ da dies in der Variablen [OSGi-Konfiguration des SAML 2.0-Authentifizierungs-Handlers](#saml-20-authentication-handler-osgi-configuration)
 1. Auswählen __Speichern und schließen__.
-1. Auswählen __authentication-service__ und wählen Sie __Aktivieren__ in der oberen Aktionsleiste aus.
+1. Erstellen Sie ein Paket mit der aktualisierten __authentication-service__ Benutzer.
+
+   _Verwenden Sie die folgende temporäre Problemumgehung mithilfe von Paketen:_
+
+   1. Navigieren Sie zu __Tools > Bereitstellung > Pakete__.
+   1. Package erstellen
+      + Paketname: `Authentication Service`
+      + Version: `1.0.0`
+      + Gruppe: `com.your.company`
+   1. Neu bearbeiten __Schlüsselspeicher des Authentifizierungsdienstes__ Paket.
+   1. Wählen Sie die __Filter__ und fügen Sie einen Filter für den Stammpfad hinzu. `/home/users/system/cq:services/internal/security/<AUTHENTICATION SERVICE UUID>/keystore`.
+      + Die `<AUTHENTICATION SERVICE UUID>` gefunden werden, indem Sie zu __Tools > Sicherheit > Benutzer__ und wählen Sie __authentication-service__ Benutzer. Die UUID ist der letzte Teil der URL.
+   1. Auswählen __Fertig__ und dann __Speichern__.
+   1. Wählen Sie die __Build__ -Schaltfläche für __Schlüsselspeicher des Authentifizierungsdienstes__ Paket.
+   1. Wählen Sie nach der Erstellung __Mehr__ > __Replizieren__ , um den Schlüsselspeicher Authentifizierungsdienst für AEM Publish zu aktivieren.
 
 ## SAML 2.0-Authentifizierungs-Handler konfigurieren{#configure-saml-2-0-authentication-handler}
 
