@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 kt: 7873
 thumbnail: 333296.jpg
+last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: 7d5f5edb-10e7-43ec-a4e7-4cee8ddba685
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: de3724281bc34ebf0c24b2bb5e76b71bcc4ad5a0
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '71'
 ht-degree: 100%
 
 ---
@@ -24,8 +25,5 @@ In diesem Video erfahren Sie Folgendes:
 
 + Grundlegendes zur Architektur von AEM Author and Publish und zur Veröffentlichung von Inhalten
 + Best Practices für die Headless-Bereitstellung mit einer AEM-Veröffentlichungsumgebung
-+ Erfahren Sie, wie die Autorenumgebung als Vorschau für eine Anwendung verwendet werden kann.
-
++ 
 >[!VIDEO](https://video.tv.adobe.com/v/333296?quality=12&learn=on)
-
-_Laden Sie die [Postman-Sammlung](./assets/aem-headless-video-series.postman_collection.json) herunter, die in der AEM Headless-Videoserie verwendet wird._
