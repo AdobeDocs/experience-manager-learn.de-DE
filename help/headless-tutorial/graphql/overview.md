@@ -8,7 +8,7 @@ level: Beginner
 exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
 thumbnail: 328618.jpg
 last-substantial-update: 2022-07-20T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 4c0770eafbbbb90bfc00ab49be02e84c41d63057
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 100%
@@ -16,6 +16,8 @@ ht-degree: 100%
 ---
 
 # Erste Schritte mit AEM Headless – GraphQL {#getting-started-with-aem-headless}
+
+{{aem-headless-trials-promo}}
 
 AEM GraphQL-APIs für Inhaltsfragmente 
 unterstützen Headless-CMS-Szenarien, in denen externe Client-Anwendungen Erlebnisse mithilfe von in AEM verwalteten Inhalten rendern.
@@ -29,7 +31,7 @@ Um diese Herausforderungen zu bewältigen, stellt GraphQL eine abfragebasierte A
 
 >[!VIDEO](https://video.tv.adobe.com/v/328618?quality=12&learn=on)
 
-In diesem Video erhalten Sie einen Überblick über die in AEM implementierte GraphQL-API. Die GraphQL-API in AEM ist in erster Linie dazu bestimmt, im Rahmen einer Headless-Implementierung Inhaltsfragmente von AEM an nachgelagerte Anwendungen zu senden.
+In diesem Video erhalten Sie einen Überblick über die in AEM implementierte GraphQL-API. Die GraphQL-API in AEM ist in erster Linie dazu bestimmt, im Rahmen einer Headless-Bereitstellung Inhaltsfragmente von AEM an nachgelagerte Anwendungen zu senden.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_headless_graphql_overview"
