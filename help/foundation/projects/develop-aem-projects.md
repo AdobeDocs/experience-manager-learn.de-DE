@@ -11,7 +11,7 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 481b8877e252b885da307fcf4d96f8a50f026fa6
 workflow-type: tm+mt
 source-wordcount: '4571'
 ht-degree: 1%
@@ -154,7 +154,7 @@ Da wir hauptsächlich Knoten kopieren/konfigurieren, wird CRXDE Lite verwendet. 
    1. Weitere hinzufügen **nt:unstructured** -Knoten, der Genehmiger als untergeordnetes Element des Benutzerknotens bezeichnet.
    1. Hinzufügen von String-Eigenschaften **jcr:title** = &quot;**Genehmiger**&quot;, **roleclass** =&quot;**owner**&quot;, **roleid**=&quot;**Genehmiger**&quot;.
       1. Der Name des Genehmigungsknotens sowie jcr:title und roleid können beliebige Zeichenfolgenwerte sein (solange roleid eindeutig ist).
-      1. **roleclass** legt die für diese Rolle beantragten Berechtigungen anhand der Variablen [3 OOTB-Rollen](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User Rollen in einem Projekt): **owner**, **editor** und **observer**.
+      1. **roleclass** legt die für diese Rolle beantragten Berechtigungen anhand der Variablen [3 OOTB-Rollen](https://docs.adobe.com/docs/en/aem/6-3/author/projects.html#User%20Roles%20in%20a%20Project): **owner**, **editor** und **observer**.
       1. Wenn die benutzerdefinierte Rolle mehr eine Führungsrolle ist, kann die Rollout **Eigentümer;** Wenn es sich um eine spezifischere Authoring-Rolle wie Fotograf oder Designer handelt, wird **editor** roleclass sollte ausreichen. Der große Unterschied zwischen **owner** und **editor** ist, dass Projekteigenschaften von Projekteigenschaften aktualisiert und dem Projekt neue Benutzer hinzugefügt werden können.
 
    ```shell
@@ -752,7 +752,7 @@ Die Workflow-Konfiguration ist ein Bereich einer Projektvorlage, der die verfüg
 
 1. Nachdem der Workflow Inhaltsvalidierung der Projektvorlage hinzugefügt wurde, sollte er in der Kachel Workflow des Projekts verfügbar sein. Starten Sie und spielen Sie mit den verschiedenen Routings, die wir erstellt haben.
 
-## Unterstützende Materialien
+## Hilfsmaterialien
 
 * [Herunterladen des abgeschlossenen Tutorial-Pakets](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Vollständiges Code-Repository auf GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
