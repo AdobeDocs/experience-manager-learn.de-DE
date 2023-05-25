@@ -7,9 +7,9 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
+source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: '135'
 ht-degree: 2%
 
 ---
@@ -17,8 +17,11 @@ ht-degree: 2%
 
 # Einbetten eines Headless-adaptiven Formulars
 
-In diesem Artikel werden die Grundlagen zum Einbetten eines Headless-adaptiven Formulars in Ihre Spa-Website behandelt. In diesem Artikel wird davon ausgegangen, dass Sie über eine vorhandene Single-Page-App verfügen und ein in AEM Forms 6.5.16 erstelltes adaptives Formular mit Kernkomponenten einbetten möchten.
-Durch das Einschließen eines Formulars in eine Einzelseiten-App können Benutzer Daten nahtlos eingeben und senden, ohne dass eine Seitenaktualisierung erforderlich ist. Dies verbessert die Interaktivität und Effizienz der Anwendung.
+Diese [In diesem Tutorial werden die verschiedenen Headless-APIs behandelt](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction) , mit denen Sie das Formular auflisten, anzeigen und senden können.
+
+In diesem Artikel werden die verschiedenen Headless-APIs behandelt, mit denen Sie adaptive Formulare Headless auflisten, anzeigen und senden können.
+
+In diesem Artikel wird davon ausgegangen, dass Sie über eine vorhandene Single-Page-App verfügen und die Headless-adaptiven Formulare auf Ihrer Spa-Website auflisten und anzeigen möchten.
 
 Der folgende Screenshot zeigt ein Kontaktformular in SPA
 

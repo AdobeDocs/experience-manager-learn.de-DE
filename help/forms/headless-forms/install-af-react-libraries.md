@@ -7,10 +7,10 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: c6e83a627743c40355559d9cdbca2b70db7f23ed
+source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 1%
+source-wordcount: '209'
+ht-degree: 0%
 
 ---
 
@@ -28,6 +28,10 @@ Aktualisieren Sie package.json, um die folgenden Abhängigkeiten einzuschließen
 "@aemforms/af-react-components": "^0.22.41",
 "@aemforms/af-react-renderer": "^0.22.41",
 ```
+
+>[!NOTE]
+>
+>Die Dropdown-Liste und das Kartenlayout in diesem Tutorial wurden mithilfe von [Material UI Library](https://mui.com/). Sie müssen die entsprechenden Material UI-Pakete herunterladen, damit der Code auf Ihrem System funktioniert.
 
 ## Proxy einrichten
 
