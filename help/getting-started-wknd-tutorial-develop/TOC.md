@@ -2,12 +2,13 @@
 user-guide-title: Erste Schritte mit AEM Sites – WKND-Tutorial
 user-guide-description: Ein mehrteiliges Tutorial für Entwickler, die neu bei AEM sind. Implementieren Sie eine AEM-Website für eine fiktive Lifestyle-Marke namens WKND. Aktivieren Sie die Frontend-Pipeline, um Ihre Bereitstellung auf den Bereitstellungszyklus hin zu beschleunigen.
 breadcrumb-title: AEM Sites WKND-Tutorials
+solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Cloud Service
 activity: develop
 audience: developer
 index: y
-source-git-commit: 2f02a4e202390434de831ce1547001b2cef01562
+source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
 workflow-type: tm+mt
 source-wordcount: '108'
 ht-degree: 100%
