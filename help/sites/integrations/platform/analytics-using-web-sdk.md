@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
-source-git-commit: 19c31819f3df7c6c43753d6ec4de8f6ecf4e55dd
+source-git-commit: 3831c6ed1467018c9f5bf15aa9f6b8ee78034c02
 workflow-type: tm+mt
-source-wordcount: '1542'
+source-wordcount: '1646'
 ht-degree: 3%
 
 ---
@@ -73,7 +73,7 @@ Das SDR-Dokument bietet einen umfassenden Überblick über den Implementierungsp
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
 
-Weitere Informationen zu Konzepten und verschiedenen Elementen, die in das SDR-Dokument aufgenommen werden sollen, finden Sie unter [Erstellen und Verwalten eines SDR-Dokuments (Solution Design Reference)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). Sie können auch eine Excel-Beispielvorlage herunterladen. Es steht jedoch auch eine WKND-spezifische Version zur Verfügung [here](./assets/Analytics-SDR-Template.xlsx).
+Weitere Informationen zu Konzepten und verschiedenen Elementen, die in das SDR-Dokument aufgenommen werden sollen, finden Sie unter [Erstellen und Verwalten eines SDR-Dokuments (Solution Design Reference)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). Sie können auch eine Excel-Beispielvorlage herunterladen. Es steht jedoch auch eine WKND-spezifische Version zur Verfügung [here](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
 
 ## Einrichten von Analytics - Report Suite, Analysis Workspace
 
@@ -83,7 +83,7 @@ In diesem Tutorial  `eVar5, eVar6, and eVar7` track  _WKND-Seitenname, WKND-CTA-
 
 Um diese Einblicke aus den erfassten Daten zu analysieren, zu sammeln und mit anderen zu teilen, wird ein Projekt in Analysis Workspace erstellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419875?quality=12&learn=on)
 
 Um mehr über die Einrichtung und Konzepte von Analytics zu erfahren, werden die folgenden Ressourcen dringend empfohlen:
 
@@ -121,6 +121,10 @@ Im [vorheriges Tutorial](./web-sdk.md), wird eine Tag-Eigenschaft erstellt, sie 
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419882?quality=12&learn=on)
+
+>[!TIP]
+>
+>Das Datenelement und der im Video angezeigte Regel-Ereignis-Code stehen Ihnen als Referenz zur Verfügung. **Erweitern des unten stehenden Accordion-Elements**. Wenn Sie jedoch NICHT die Adobe Client-Datenschicht verwenden, müssen Sie den unten stehenden Code ändern. Es gilt jedoch weiterhin das Konzept der Definition der Datenelemente und ihrer Verwendung in der Regeldefinition.
 
 +++ Datenelement und Regelereigniscode
 
@@ -209,6 +213,13 @@ Im [vorheriges Tutorial](./web-sdk.md), wird eine Tag-Eigenschaft erstellt, sie 
 
 Weitere Informationen zur Integration AEM Kernkomponenten in die Adobe Client-Datenschicht finden Sie im Abschnitt [Verwenden der Adobe Client-Datenschicht mit AEM Leitfaden zu Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=de).
 
+
+>[!INFO]
+>
+>Für ein umfassendes Verständnis der **Variablenzuordnung** Registerkarteneigenschaftsdetails im Dokument Solution Design Reference (SDR) aufrufen, um die abgeschlossene WKND-spezifische Version zum Herunterladen zu öffnen. [here](./assets/Final-WKND-WebSDK-BRD-SDR.xlsx).
+
+
+
 ## Überprüfen der aktualisierten Tag-Eigenschaft auf WKND
 
 Um sicherzustellen, dass die aktualisierte Tag-Eigenschaft auf den WKND-Site-Seiten erstellt, veröffentlicht und ordnungsgemäß funktioniert. Verwenden des Google Chrome-Webbrowsers [Adobe Experience Platform Debugger-Erweiterung](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob):
@@ -235,7 +246,7 @@ Der Datensatz ist ein Speicher- und Verwaltungskonstrukt für eine Sammlung von 
 
 Analysis Workspace ist ein leistungsstarkes Tool in Adobe Analytics, mit dem Daten flexibel und interaktiv analysiert und visualisiert werden können. Es bietet eine Drag &amp; Drop-Benutzeroberfläche, über die Sie benutzerdefinierte Berichte erstellen, erweiterte Segmentierungen durchführen und verschiedene Datenvisualisierungen anwenden können.
 
-Lassen Sie uns das in der [Einrichten von Analytics](#setup-analytics---report-suite-analysis-workspace) Schritt. Im **Top-Seiten** Untersuchen Sie verschiedene Metriken wie Besuche, Unique Visitors, Einstiege, Absprungrate und mehr. Um die Leistung von WKND-Seiten und Startseiten-CTAs zu bewerten, ziehen Sie die WKND-spezifischen Dimensionen (WKND-Seitenname, WKND-CTA-Name) und Metriken (WKND CTA-Klick-Ereignis) per Drag &amp; Drop in den Arbeitsbereich. Diese Einblicke sind für Marketingexperten nützlich, um zu verstehen, welche CTAs effektiver sind, und datengesteuerte Entscheidungen zu treffen, die an ihren Geschäftszielen ausgerichtet sind.
+Lassen Sie uns das in der [Einrichten von Analytics](#setup-analytics---report-suite-analysis-workspace) Schritt. Im **Top-Seiten** Untersuchen Sie verschiedene Metriken wie Besuche, Unique Visitors, Einstiege, Absprungrate und mehr. Um die Leistung von WKND-Seiten und Startseiten-CTAs zu bewerten, ziehen Sie die WKND-spezifischen Dimensionen (WKND-Seitenname, WKND-CTA-Name) und Metriken (WKND CTA-Klick-Ereignis) per Drag &amp; Drop in den Arbeitsbereich. Diese Einblicke sind für Marketingexperten nützlich, um zu verstehen, welche CTAs effektiver sind, und datengesteuerte Entscheidungen zu treffen, die auf ihre Geschäftsziele abgestimmt sind.
 
 Verwenden Sie die Flussvisualisierung, beginnend mit dem **WKND-Seitenname** und sich in verschiedene Pfade ausdehnen.
 
@@ -250,6 +261,12 @@ Die Implementierung von Adobe Analytics ist von entscheidender Bedeutung, damit 
 Durch die Implementierung der empfohlenen Schritte und die Verwendung der bereitgestellten Ressourcen, z. B. des Dokuments Solution Design Reference (SDR) und das Verständnis der wichtigsten Analytics-Konzepte, können Marketingexperten Daten effektiv erfassen und analysieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419888?quality=12&learn=on)
+
+
+>[!AVAILABILITY]
+>
+>Wenn Sie **End-to-End-Video** , der den gesamten Integrationsprozess anstelle der einzelnen Einrichtungsschritte-Videos abdeckt, können Sie auf [here](https://video.tv.adobe.com/v/3419889/) , um darauf zuzugreifen.
+
 
 ## Zusätzliche Ressourcen
 
