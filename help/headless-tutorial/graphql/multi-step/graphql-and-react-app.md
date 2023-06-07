@@ -10,9 +10,9 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1188'
 ht-degree: 90%
 
 ---
@@ -32,7 +32,7 @@ _IDE-Screenshots in diesem Kapitel stammen von [Visual Studio Code](https://code
 
 Die folgende Software muss installiert sein:
 
-- [Node.js v18](https://nodejs.org/)
+- [Node.js v18](https://nodejs.org/de)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Ziele
@@ -109,7 +109,7 @@ Die React-App im Beispiel besteht aus drei Hauptteilen:
 
 1. Der Ordner `src/api` enthält Dateien, die zur Erstellung von GraphQL-Abfragen an AEM verwendet werden.
    - `src/api/aemHeadlessClient.js` initialisiert und exportiert den AEM Headless-Client, der zur Kommunikation mit AEM verwendet wird
-   - `src/api/usePersistedQueries.js` implementiert [angepasste React-Hooks](https://react.dev/docs/hooks-custom.html), die Daten von AEM GraphQL an die Ansichtskomponenten `Teams.js` und `Person.js` zurückgeben.
+   - `src/api/usePersistedQueries.js` implementiert [angepasste React-Hooks](https://react.dev/learn/reusing-logic-with-custom-hooks#custom-hooks-sharing-logic-between-components), die Daten von AEM GraphQL an die Ansichtskomponenten `Teams.js` und `Person.js` zurückgeben.
 
 1. `src/components/Teams.js` zeigt mithilfe einer Listenabfrage eine Liste der Teams und ihrer Mitglieder an.
 1. Die Datei `src/components/Person.js` zeigt die Details einer einzelnen Person mithilfe einer parametrisierten Abfrage mit einem Ergebnis an.
@@ -187,7 +187,7 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 Erstellen Sie als Nächstes die Funktionalität zum Anzeigen der Teams und ihrer Mitglieder in der Hauptansicht der React-App. Diese Funktionalität erfordert Folgendes:
 
-- einen neuen [benutzerdefinierten useEffect-React-Hook](https://react.dev/docs/hooks-custom.html) in `src/api/usePersistedQueries.js`, der die `my-project/all-teams`-persistierte Abfrage aufruft und eine Liste von Team-Inhaltsfragmenten in AEM zurückgibt,
+- einen neuen [benutzerdefinierten useEffect-React-Hook](https://react.dev/reference/react/useEffect#useeffect) in `src/api/usePersistedQueries.js`, der die `my-project/all-teams`-persistierte Abfrage aufruft und eine Liste von Team-Inhaltsfragmenten in AEM zurückgibt,
 - eine React-Komponente unter `src/components/Teams.js`, die den neuen benutzerdefinierten `useEffect`-React-Hook aufruft und die Team-Daten rendert.
 
 Nach Abschluss des Vorgangs werden in der Hauptansicht der App die Team-Daten aus AEM angezeigt.
@@ -337,7 +337,7 @@ Lassen Sie uns nun, nach Fertigstellung der [Team-Funktionalität](#implement-te
 
 Diese Funktionalität erfordert Folgendes:
 
-- einen neuen [benutzerdefiniertern useEffect-React-Hook](https://react.dev/docs/hooks-custom.html) in `src/api/usePersistedQueries.js`, der die parametrisierte `my-project/person-by-name`-persistierte Abfrage aufruft und den Datensatz für eine einzelne Person zurückgibt,
+- einen neuen [benutzerdefiniertern useEffect-React-Hook](https://react.dev/reference/react/useEffect#useeffect) in `src/api/usePersistedQueries.js`, der die parametrisierte `my-project/person-by-name`-persistierte Abfrage aufruft und den Datensatz für eine einzelne Person zurückgibt,
 
 - eine React-Komponente unter `src/components/Person.js`, die den vollständigen Namen einer Person als Abfrageparameter verwendet, den neuen benutzerdefinierten `useEffect`-React-Hook aufruft und die Personendaten rendert.
 

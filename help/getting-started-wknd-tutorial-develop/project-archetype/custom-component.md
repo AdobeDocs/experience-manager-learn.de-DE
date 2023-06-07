@@ -11,9 +11,9 @@ kt: 4072
 mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
-source-git-commit: 434f56e143bc0f969723de48abd26d49a308af9b
+source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
 workflow-type: tm+mt
-source-wordcount: '4061'
+source-wordcount: '4057'
 ht-degree: 99%
 
 ---
@@ -279,7 +279,7 @@ Erstellen Sie nach demselben Ansatz wie bei der Dialogfelderstellung ein Richtli
 
    Wie bei der Dialogfeldkonfiguration wird [Sling Resource Merger](https://sling.apache.org/documentation/bundles/resource-merger.html) verwendet, um irrelevante Felder auszublenden, die ansonsten vom `sling:resourceSuperType` übernommen werden, wie die Knotendefinitionen mit der Eigenschaft `sling:hideResource="{Boolean}true"` zeigen.
 
-### Implementieren des Codes {#deploy-the-code}
+### Bereitstellen des Codes {#deploy-the-code}
 
 1. Synchronisieren Sie die Änderungen in `ui.apps` mit Ihrer IDE oder Ihren Maven-Fähigkeiten.
 
@@ -446,7 +446,7 @@ Erstellen Sie eine öffentliche Java™-Schnittstelle für die Autorenzeile. Die
    import org.osgi.annotation.versioning.Version;
    ```
 
-Wenn Änderungen an den Dateien in diesem Paket vorgenommen werden, muss die [Paketversion semantisch angepasst werden](https://semver.org/). Ansonsten erkennt das [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd/tree/master/maven/bnd-baseline-maven-plugin) des Maven-Projekts eine ungültige Paketversion und bricht den Build ab. Glücklicherweise meldet das Maven-Plug-in bei einem Fehler die ungültige Java™-Paketversion und die erforderliche Version. Aktualisieren Sie die Deklaration `@Version("...")` im `package-info.java` des verletzenden Java™-Pakets zur vom Plug-in empfohlenen Version, um den Fehler zu beheben.
+Wenn Änderungen an den Dateien in diesem Paket vorgenommen werden, muss die [Paketversion semantisch angepasst werden](https://semver.org/). Ansonsten erkennt das [bnd-baseline-maven-plugin](https://github.com/bndtools/bnd) des Maven-Projekts eine ungültige Paketversion und bricht den Build ab. Glücklicherweise meldet das Maven-Plug-in bei einem Fehler die ungültige Java™-Paketversion und die erforderliche Version. Aktualisieren Sie die Deklaration `@Version("...")` im `package-info.java` des verletzenden Java™-Pakets zur vom Plug-in empfohlenen Version, um den Fehler zu beheben.
 
 ### Implementierung der Autorenzeile {#byline-implementation}
 
@@ -507,7 +507,7 @@ Die `BylineImpl.java` ist die Implementierung des Sling-Modells, das die `Byline
 
    Sehen wir uns diese Anmerkung und ihre Parameter an:
 
-   * Die Anmerkung `@Model` registriert BylineImpl als Sling-Modell, wenn es in AEM implementiert wird.
+   * Die Anmerkung `@Model` registriert BylineImpl als Sling-Modell, wenn es in AEM bereitgestellt wird.
    * Der Parameter `adaptables` gibt an, dass dieses Modell durch die Anfrage angepasst werden kann.
    * Der Parameter `adapters` ermöglicht die Registrierung der Implementierungsklasse unter der Autorenzeilen-Schnittstelle. Dadurch kann das HTL-Skript das Sling-Modell über die Schnittstelle aufrufen (anstelle direkt über die Implementierung). [Weitere Informationen über Adapter finden Sie hier](https://sling.apache.org/documentation/bundles/models.html#specifying-an-alternate-adapter-class-since-110).
    * Der `resourceType` verweist auf den (zuvor erstellten) Autorenzeilenkomponenten-Ressourcentyp und hilft beim Auflösen des richtigen Modells, wenn mehrere Implementierungen vorliegen. [Weitere Informationen zum Verknüpfen einer Modellklasse mit einem Ressourcentyp finden Sie hier.](https://sling.apache.org/documentation/bundles/models.html#associating-a-model-class-with-a-resource-type-since-130)
@@ -983,7 +983,7 @@ Dazu schließen wir die aktuelle Autorenzeilen-Ressource ein, erzwingen jedoch d
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
    ```
 
-3. Implementieren Sie die Code-Basis in einer lokalen AEM-Instanz. Da Änderungen an `core` und `ui.apps` vorgenommen wurden, müssen beide Module implementiert werden.
+3. Stellen Sie die Code-Basis in einer lokalen AEM-Instanz bereit. Da Änderungen an `core` und `ui.apps` vorgenommen wurden, müssen beide Module bereitgestellt werden.
 
    ```shell
    $ cd aem-guides-wknd/ui.apps
@@ -1008,7 +1008,7 @@ Dazu schließen wir die aktuelle Autorenzeilen-Ressource ein, erzwingen jedoch d
 
 ### Überprüfen der nicht formatierten Autorenzeilenkomponente {#reviewing-the-unstyled-byline-component}
 
-1. Navigieren Sie nach der Implementierung der Aktualisierung zur Seite [Ultimate Guide to LA Skateparks ](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html) bzw. dorthin, wo Sie die Autorenzeilenkomponente zuvor im Kapitel hinzugefügt haben.
+1. Navigieren Sie nach der Bereitstellung der Aktualisierung zur Seite [Ultimate Guide to LA Skateparks ](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html) bzw. dorthin, wo Sie die Autorenzeilenkomponente zuvor im Kapitel hinzugefügt haben.
 
 1. Das **Bild**, der **Name** und die **Berufe** werden nun angezeigt, und es liegt eine unformatierte, aber funktionierende Autorenzeilenkomponente vor.
 
