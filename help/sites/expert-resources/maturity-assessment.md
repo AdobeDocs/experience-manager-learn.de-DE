@@ -4,13 +4,14 @@ seo-title: AEM Sites Maturity Assessment
 description: Diese Checkliste bietet einen Überblick über wichtige Fragen, die Sie und Ihr Team bei der Beurteilung der Reife Ihrer AEM Sites-Instanz beantworten sollten.
 seo-description: This checklist provides an overview of key questions you and your team should be answering when evaluating the maturity of your AEM Sites instance
 audience: author, marketer, developer
-source-git-commit: 3335069883db38a2748af114ab7505cc34dec270
+feature: Learn From Your Peers
+exl-id: 22164a0e-7239-43f4-8356-c12f68133255
+source-git-commit: 2a137f71cbd876db0164e84ab437e8eda982270e
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 2%
 
 ---
-
 
 # Ihre AEM Sites-Checkliste zur Bewertung der Reife
 
@@ -24,7 +25,7 @@ Laufzeitbewertungen ermöglichen die Bewertung und Einhaltung AEM Standards und 
 
 Best Practices zur Verwaltung, Entwicklung oder Bearbeitung finden Sie in den folgenden Ressourcen:
 
-* [Best Practices für die Verwaltung](https://experienceleague.adobe.com/docs/experience-manager-65/administering/bestpractices/administer-best-practices.html?lang=en)
+* [Best Practices für die Verwaltung ](https://experienceleague.adobe.com/docs/experience-manager-65/administering/bestpractices/administer-best-practices.html?lang=en)
 * [Best Practices für die Entwicklung](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html?lang=en)
 * [Best Practices für die Inhaltserstellung](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/best-practices.html?lang=en)
 
@@ -35,4 +36,3 @@ In den meisten Fällen wird die AEM-Laufzeitbewertung dazu beitragen, eine diagn
 Empfohlene AEM Schwerpunktbereiche für die Laufzeitbewertung: Design und Architektur, Produktmanagement und -strategie, Digital Asset Management und Bereitstellung, Analytics, Tests und Sicherheit.
 
 Große Schrei an AEM Champion Greg Dimeris für die Zusammenstellung dieser Informationen aus mehreren Experience League-Artikeln sowie seiner eigenen Best Practices!
-
