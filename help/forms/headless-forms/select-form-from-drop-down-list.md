@@ -7,13 +7,13 @@ kt: 13346
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+exl-id: 31008bb3-316b-4035-89ea-e830b429b927
+source-git-commit: 529e98269a08431152686202a8a2890712b9c835
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '286'
 ht-degree: 1%
 
 ---
-
 
 # Wählen Sie ein auszufüllendes Formular aus einer Dropdown-Liste aus
 
@@ -49,22 +49,24 @@ export default function SelectFormFromDropDownList()
         'form': Form
     };
 
-const[formPath, setFormPath] = useState('');
+const[formID, setFormID] = useState('');
 const[afForms,SetOptions] = useState([]);
 const [selectedForm, setForm] = useState('');
 const HandleChange = (event) =>
      {
-        console.log("The path is "+event.target.value) 
+        console.log("The form id is "+event.target.value) 
     
-        setFormPath(event.target.value)
-        console.log("The formPath"+ formPath);
+        setFormID(event.target.value)
+        
      };
 const getForm = async () =>
      {
-        const resp = await fetch(`${formPath}/jcr:content/guideContainer.model.json`);
+        
+        console.log("The formID in getForm"+ formID);
+        const resp = await fetch(`/adobe/forms/af/${formID}`);
         let formJSON = await resp.json();
-        console.log(formJSON);
-        setForm(formJSON);
+        console.log(formJSON.afModelDefinition);
+        setForm(formJSON.afModelDefinition);
      }
 const getAFForms =async()=>
      {
@@ -88,7 +90,7 @@ const getAFForms =async()=>
         getForm()
         
 
-    },[formPath]);
+    },[formID]);
 
   return (
     <Box sx={{ minWidth: 120 }}>
@@ -97,7 +99,7 @@ const getAFForms =async()=>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={formPath}
+          value={formID}
           label="Please select a form"
           onChange={HandleChange}
           
@@ -105,7 +107,7 @@ const getAFForms =async()=>
        {afForms.map((afForm,index) => (
     
         
-          <MenuItem  key={index} value={afForm.path}>{afForm.title}</MenuItem>
+          <MenuItem  key={index} value={afForm.id}>{afForm.title}</MenuItem>
         ))}
         
        
@@ -126,10 +128,13 @@ Die beiden folgenden API-Aufrufe wurden bei der Erstellung dieser Benutzeroberfl
 * [ListForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms). Der Aufruf zum Abrufen der Formulare erfolgt nur einmal, wenn die Komponente wiedergegeben wird. Die Ergebnisse des API-Aufrufs werden in der Variablen afForms gespeichert.
 Im obigen Code durchlaufen wir afForms mithilfe der Zuordnungsfunktion. Für jedes Element im afForms-Array wird eine MenuItem-Komponente erstellt und der Select-Komponente hinzugefügt.
 
-* Formular abrufen - Ein get -Aufruf wird an den folgenden Endpunkt gesendet, wobei formPath der Pfad zum ausgewählten adaptiven Formular ist, den der Benutzer in der Dropdown-Liste verwendet. Das Ergebnis dieses GET-Aufrufs wird in selectedForm gespeichert.
+* Formular abrufen - Ein get -Aufruf an die [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition), wobei die ID die ID des ausgewählten adaptiven Formulars ist, das der Benutzer in der Dropdownliste eingegeben hat. Das Ergebnis dieses GET-Aufrufs wird in selectedForm gespeichert.
 
 ```
-${formPath}/jcr:content/guideContainer.model.json`
+const resp = await fetch(`/adobe/forms/af/${formID}`);
+let formJSON = await resp.json();
+console.log(formJSON.afModelDefinition);
+setForm(formJSON.afModelDefinition);
 ```
 
 * Anzeigen des ausgewählten Formulars Der folgende Code wurde zur Anzeige des ausgewählten Formulars verwendet. Das AdaptiveForm-Element wird im npm-Paket aemforms/af-response-renderer bereitgestellt und erwartet die Zuordnungen und die formJson als Eigenschaften
@@ -141,6 +146,3 @@ ${formPath}/jcr:content/guideContainer.model.json`
 ## Nächste Schritte
 
 [Formulare im Kartenlayout anzeigen](./display-forms-card-view.md)
-
-
-
