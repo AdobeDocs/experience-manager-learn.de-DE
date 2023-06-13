@@ -10,10 +10,10 @@ recommendations: noDisplay
 kt: 11603
 thumbnail: KT-11603.png
 last-substantial-update: 2023-06-02T00:00:00Z
-source-git-commit: 82df468bc9a5f83133adbd7aa7332bb5c21a695c
+source-git-commit: e59c9d1f17c6ade169e834a21b9d5f50ac3a569e
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 14%
+source-wordcount: '894'
+ht-degree: 13%
 
 ---
 
@@ -278,7 +278,7 @@ Willkommen bei einer Sammlung von Codebeispielen für AEM Benutzeroberflächener
       <div class="card-image">
         <figure class="image is-16by9">
           <a href="./examples/editor-rte-toolbar.md" title="Schaltfläche der Rich-Text-Editor-Symbolleiste" tabindex="-1">
-            <img class="is-bordered-r-small" src="./examples/assets/rte-toolbar/card.png" alt="Schaltfläche der Rich-Text-Editor-Symbolleiste">
+            <img class="is-bordered-r-small" src="./examples/assets/rte/rte-toolbar-card.png" alt="Schaltfläche der Rich-Text-Editor-Symbolleiste">
           </a>
         </figure>
       </div>
@@ -293,4 +293,25 @@ Willkommen bei einer Sammlung von Codebeispielen für AEM Benutzeroberflächener
       </div>
     </div>
   </div>   
+  <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Rich Text Editor Widget">
+    <div class="card" style="height: 100%">
+      <div class="card-image">
+        <figure class="image is-16by9">
+          <a href="./examples/editor-rte-widget.md" title="Rich-Text-Editor-Widget" tabindex="-1">
+            <img class="is-bordered-r-small" src="./examples/assets/rte/rte-widget-card.png" alt="Rich-Text-Editor-Widget">
+          </a>
+        </figure>
+      </div>
+      <div class="card-content is-padded-small">
+        <div class="content">
+          <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-rte-toolbar.md" title="Rich-Text-Editor-Widget">Rich-Text-Editor-Widget</a></p>
+          <p class="is-size-6">Fügen Sie dem Rich-Text-Editor im Inhaltsfragment-Editor Widgets hinzu.</p>
+          <a href="./examples/editor-rte-widget.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+            <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Beispiel anzeigen</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
