@@ -10,20 +10,15 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-09T00:00:00Z
 jira: KT-12433
 thumbnail: KT-12433.jpeg
-source-git-commit: b3cc9c4fbd36cdf5be46e4546a174fea0c8da05c
+exl-id: 60a3e18a-090f-4b0e-8ba0-d4afd30577dd
+source-git-commit: d81c66e041abbd56e7115f37732550cf10e59359
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1671'
 ht-degree: 2%
 
 ---
 
 # Personalisieren AEM Headless-Erlebnisse mit Inhaltsfragmenten
-
->[!IMPORTANT]
->
-> Der Export von Adobe Experience Manager-Inhaltsfragmenten nach Adobe Target ist in der AEM as a Cloud Service verfügbar. [Vorabversionskanal](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=de#new-features).
-
-
 
 In diesem Tutorial wird untersucht, wie AEM Inhaltsfragmente nach Adobe Target exportiert und dann zum Personalisieren von Headless-Erlebnissen mit dem Adobe Web SDK verwendet werden. Die [React WKND App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html) wird verwendet, um zu untersuchen, wie eine personalisierte Target-Aktivität mit Inhaltsfragmentangeboten zum Erlebnis hinzugefügt werden kann, um ein WKND-Abenteuer zu fördern.
 
