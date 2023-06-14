@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 kt: 9006
 exl-id: 77c00a35-43bf-485f-ac12-0fffb307dc16
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -46,3 +46,7 @@ Fügen Sie den entsprechenden Eintrag in die Datei &quot;filter.xml&quot;des ui.
 >[!NOTE]
 >
 >Wenn Sie jetzt Ihr Projekt mit Cloud Manager erstellen und bereitstellen, müssen Sie Ihren Azure-Zugriffsschlüssel in die Cloud-Services-Konfiguration erneut eingeben. Um zu vermeiden, dass der Zugriffsschlüssel erneut eingegeben wird, wird empfohlen, eine kontextbezogene Konfiguration mithilfe der Umgebungsvariablen zu erstellen, wie im Abschnitt [nächster Artikel](./context-aware-fdm.md)
+
+## Nächste Schritte
+
+[Kontextabhängige Konfiguration erstellen](./context-aware-fdm.md)

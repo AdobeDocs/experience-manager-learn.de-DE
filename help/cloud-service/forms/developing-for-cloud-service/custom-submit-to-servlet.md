@@ -8,10 +8,10 @@ level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
 kt: 8852
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 0%
+source-wordcount: '210'
+ht-degree: 2%
 
 ---
 
@@ -40,18 +40,28 @@ public class HandleFormSubmissison extends SlingAllMethodsServlet {
 }
 ```
 
-## Benutzerdefinierte Übermittlung erstellen
+## Benutzerdefinierten Sende-Handler erstellen
 
-Erstellen Sie Ihr benutzerdefiniertes Senden im Ordner &quot;app/bankingapplication&quot;auf die gleiche Weise wie im [frühere Versionen von AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en)
+Erstellen Sie Ihre benutzerdefinierte Sendeaktion im `apps/bankingapplication` -Ordner auf die gleiche Weise wie im [frühere Versionen von AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en). Für diese Anleitung erstelle ich einen Ordner mit dem Namen SubmitToAEMServlet unter der `apps/bankingapplication` -Knoten im CRX-Repository.
+
 Der folgende Code in post.POST.jsp leitet die Anfrage einfach an das Servlet weiter, das auf /bin/formstutorial bereitgestellt wurde. Dies ist dasselbe Servlet, das im vorherigen Schritt erstellt wurde
 
 ```java
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/formstutorial",null,null);
 ```
 
+Klicken Sie in Ihrem AEM Projekt in IntelliJ mit der rechten Maustaste auf das `apps/bankingapplication` Ordner und wählen Sie Neu aus | Paket und geben Sie in SubmitToAEMServlet nach der Anwendung apps.bankingim neuen Paketdialogfeld ein. Klicken Sie mit der rechten Maustaste auf den Knoten SubmitToAEMServlet und wählen Sie repo aus. | Befehl abrufen, um das AEM Projekt mit dem AEM Server-Repository zu synchronisieren.
+
+
 ## Adaptives Formular konfigurieren
 
-Sie können Ihr adaptives Formular jetzt so konfigurieren, dass es an diesen benutzerdefinierten Submit-Handler mit dem Namen **Senden an AEM Servlet**
+Sie können jetzt jedes adaptive Formular so konfigurieren, dass es an diesen benutzerdefinierten Submit-Handler mit dem Namen **Senden an AEM Servlet**
+
+## Nächste Schritte
+
+[Aktivieren von Komponenten des Formularportals](./forms-portal-components.md)
+
+
 
 
 

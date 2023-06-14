@@ -9,10 +9,10 @@ version: Cloud Service
 topic: Development
 kt: 8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 3%
+source-wordcount: '515'
+ht-degree: 5%
 
 ---
 
@@ -26,7 +26,7 @@ Installieren [Cygwin](https://www.cygwin.com/). Ich habe unter C:\cygwin64 folde
 
 Erstellen Sie einen Ordner mit dem Namen adoberepo unter c:\cloudmanager.
 
-[Installieren des Repo-Tools].(https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo).Installing Das Repo-Tool ist nichts anderes als das Kopieren der Repo-Datei und das Platzieren in Ihrer c:\cloudmanger\adoberepo folder.
+[Installieren des Repo-Tools](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo) Die Installation des Repo-Tools ist nichts anderes als das Kopieren der Repo-Datei und dessen Platzierung in c:\cloudmanger\adoberepo folder.
 
 Fügen Sie der Umgebungsvariablen &quot;Path&quot;Folgendes hinzu: C:\cygwin64\bin;C:\CloudManager\adoberepo;
 
@@ -35,7 +35,7 @@ Fügen Sie der Umgebungsvariablen &quot;Path&quot;Folgendes hinzu: C:\cygwin64\b
 * Starten von IntelliJ
 * Drücken Sie Strg+Alt+S Tasten, um das Einstellungsfenster zu starten.
 * Wählen Sie Tools > Externe Tools aus, klicken Sie auf das Pluszeichen (+) und geben Sie wie im Screenshot gezeigt Folgendes ein.
-   ![rep](assets/repo.png)
+  ![rep](assets/repo.png)
 * Stellen Sie sicher, dass Sie eine Gruppe mit dem Namen Repo erstellen, indem Sie im Dropdown-Feld Gruppe &quot;repo&quot;eingeben und alle von Ihnen erstellten Befehle zum **repo** Gruppe
 
 
@@ -73,7 +73,7 @@ Wählen Sie ein Projekt in Ihrem aem-banking-application-Projekt aus, z. B. ui.c
 Die folgenden Schritte können ausgeführt werden, um eine Cloud-fähige Instanz auf Ihrem lokalen System schnell einzurichten.
 * [Laden Sie das neueste AEM SDK herunter](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
 
-* [Herunterladen des neuesten AEM Forms-Add-ons](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
+* [Herunterladen des neuesten AEM Forms-Add-ons](https://experience.adobe.com/#/downloads/content/software-distribution/de/aemcloud.html)
 
 * Erstellen Sie die folgende Ordnerstruktur c:\aemformscs\aem-sdk\author
 
@@ -85,3 +85,7 @@ Die folgenden Schritte können ausgeführt werden, um eine Cloud-fähige Instanz
 * Erstellen Sie die folgende Ordnerstruktur.C:\aemformscs\aem-sdk\author\crx-quickstart\install
 * Kopieren Sie aem-forms-addon-xxxxxx.far in den Ordner &quot;install&quot;
 * Öffnen Sie die Eingabeaufforderung und navigieren Sie zu c:\aemformscs\aem-sdk\author enter the following command java -jar aem-author-p4502.jar -gui. Dadurch werden die Formulare bereitgestellt, die im Paket in Ihrer AEM hinzugefügt werden.
+
+## Nächste Schritte
+
+[AEM Formulare und Vorlagen mit AEM Projekt synchronisieren](./deploy-your-first-form.md)
