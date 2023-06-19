@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 7b98f583f8b54fb9c9c706521c310282dcc17ea3
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '396'
 ht-degree: 96%
 
 ---
@@ -50,6 +50,7 @@ ht-degree: 96%
    + [Suchoptimierung](./search-and-discovery/search-boost.md)
 
 + Erweiterte Funktionen{#advanced}
+   + [3D-Assets](./advanced/3d-assets.md)
    + [PDF-Ausgabe von Anmerkungen](./advanced/customizing-annotations-pdf-output.md)
    + [Asset Insights](./advanced/asset-insights-launch-tutorial.md)
    + [Asset-Berichte](./advanced/asset-reports.md)
@@ -72,13 +73,13 @@ ht-degree: 96%
       + [Konfigurieren des AEM Brand Portals](brand-portal/configure.md)
       + [Konfigurieren der Asset-Beschaffung](brand-portal/configure-asset-sourcing.md)
       + [Aktivieren der Ausgabedarstellungs-Downloads](brand-portal/enable-renditions-download.md)
+
    + Asset-Freigabe{#assets-share}
       + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [Asset-Freigabe-Commons auf lokalem AEM einrichten](./sharing/asset-share-commons-technical-video-setup.md)
       + [Themenerstellung mit Asset-Freigabe-Commons](./sharing/asset-share-commons-feature-video-theming.md)
       + [Asset Share Commons Asset-Kits](./sharing/asset-share/asset-share-commons-asset-kits.md)
    + [Connected Assets](./sharing/connected-assets.md)
-
 
 + Integration mit kreativen Workflows{#creative-workflows}
    + [AEM Desktop App](./creative-workflows/aem-desktop-app.md)
@@ -126,6 +127,7 @@ ht-degree: 96%
    + Verwendung mit AEM Sites {#dm-with-aem-sites}
       + [Experience Fragments ](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media-Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
+
    + Tutorials {#tutorials}
       + [Erstellen von Karussellsets](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [Erstellen von Bildsets](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
@@ -141,7 +143,6 @@ ht-degree: 96%
       + [Löschen der Dynamic Media-Konfiguration](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
       + [Herunterladen von Assets in der Dynamic Media Classic-App](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS-APIs](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
-
 
 + Workfront-Integration{#workfront}
    + Verbesserter Connector{#enhanced-connector}
