@@ -10,17 +10,17 @@ jira: KT-13465
 thumbnail: KT-13465.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: e59c9d1f17c6ade169e834a21b9d5f50ac3a569e
+exl-id: be4c0a6a-5c1f-4408-9ac6-56b8f0653d42
+source-git-commit: 9c8c03df7c510ab697d5222f9dffd5111519b712
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
 
-
 # Widgets zum Rich-Text-Editor (RTE) hinzufügen
 
-![Beispiel für Widgets zum Inhaltsfragment-Editor](./assets/rte/rte-widget-hero.png){align="center"}
+>[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
 
 Um den dynamischen Inhalt im Rich-Text-Editor (RTE) hinzuzufügen, muss die **Widgets** verwendet werden. Die Widgets helfen bei der Integration der einfachen oder komplexen Benutzeroberfläche in den RTE und die Benutzeroberfläche, die mit dem JS-Framework Ihrer Wahl erstellt werden können. Sie können als Dialogfelder betrachtet werden, die durch Drücken von `{` spezieller Schlüssel im RTE.
 
@@ -230,4 +230,3 @@ const DiscountCodes = () => {
 
 export default DiscountCodes;
 ```
-
