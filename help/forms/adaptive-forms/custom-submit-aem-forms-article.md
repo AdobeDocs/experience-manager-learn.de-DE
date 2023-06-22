@@ -8,10 +8,10 @@ role: Developer
 level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
+source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 2%
+source-wordcount: '207'
+ht-degree: 5%
 
 ---
 
@@ -24,11 +24,15 @@ Dieser Artikel führt Sie durch die Schritte, die zum Erstellen einer benutzerde
 * Bei crx anmelden
 * Erstellen Sie einen Knoten des Typs &quot;sling:folder &quot;unter Apps. Rufen wir diesen Knoten CustomSubmitHelpx auf.
 * Speichern Sie den neu erstellten Knoten.
-* Fügen Sie die folgenden beiden Eigenschaften zum neu erstellten Knoten hinzu
-* PropertyName | Eigenschaftswert
-* guideComponentType | fd/af/components/guidesubmittype
-* guideDataModel | xfa,xsd,basic
-* jcr:description | CustomSubmitHelpx
+* Fügen Sie die folgenden drei Eigenschaften zum neu erstellten Knoten hinzu
+
+| Eigenschaftsname | Eigenschaftswert |
+|----------------    | ---------------------------------|
+| guideComponentType | fd/af/components/guidesubmittype |
+| guideDataModel | xfa,xsd,basic |
+| jcr:description | CustomSubmitHelpx |
+
+
 * Speichern Sie die Änderungen
 * Erstellen Sie eine neue Datei namens post.POST.jsp unter dem Knoten CustomSubmitHelpx . Wenn ein adaptives Formular gesendet wird, wird diese JSP aufgerufen. Sie können den JSP-Code gemäß Ihren Anforderungen in diese Datei schreiben. Der folgende Code leitet die Anfrage an das Servlet weiter.
 

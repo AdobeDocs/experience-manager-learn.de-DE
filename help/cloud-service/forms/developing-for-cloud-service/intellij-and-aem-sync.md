@@ -9,7 +9,7 @@ version: Cloud Service
 topic: Development
 kt: 8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 5%
@@ -68,7 +68,7 @@ Extrahieren Sie die .repo-Datei aus [repo.zip](assets/repo.zip) und platzieren S
 
 Wählen Sie ein Projekt in Ihrem aem-banking-application-Projekt aus, z. B. ui.content und Rechtsklick. Sie sollten die Repo-Option sehen und unter der Repo-Option werden die 4 Befehle angezeigt, die wir zuvor hinzugefügt haben.
 
-## Einrichten der AEM-Autoreninstanz
+## Einrichten der AEM-Autoreninstanz{#set-up-aem-author-instance}
 
 Die folgenden Schritte können ausgeführt werden, um eine Cloud-fähige Instanz auf Ihrem lokalen System schnell einzurichten.
 * [Laden Sie das neueste AEM SDK herunter](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
