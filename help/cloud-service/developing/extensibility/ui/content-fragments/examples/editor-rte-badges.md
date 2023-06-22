@@ -10,9 +10,9 @@ jira: KT-13466
 thumbnail: KT-13466.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: 8e99c660fed409d44d34cf4edf6bf1b59fa29e34
+source-git-commit: c965d5ff3f49f4859779e657674dab8602fb831b
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Hinzufügen von Abzeichen zum Rich-Text-Editor (RTE)
 
-![Beispiel für Inhaltsfragment-Editor-Abzeichen](./assets/rte/rte-badge-home.png){align="center"}
+>[!VIDEO](https://video.tv.adobe.com/v/3420831?quality=12&learn=on)
 
 [Rich-Text-Editor-Badge](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/)  sind Erweiterungen, die Text im Rich-Text-Editor (RTE) nicht bearbeitbar machen. Das bedeutet, dass ein als solches deklariertes Zeichen nur vollständig entfernt und nicht teilweise bearbeitet werden kann. Diese Abzeichen unterstützen auch eine spezielle Färbung im RTE, die den Inhaltsautoren deutlich zeigt, dass der Text ein Abzeichen ist und daher nicht bearbeitbar ist. Darüber hinaus bieten sie visuelle Hinweise zur Bedeutung des Badge-Textes.
 
