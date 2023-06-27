@@ -4,6 +4,7 @@ description: Die Ressourcenfreigabe zwischen verschiedenen Ursprüngen (Cross-Or
 version: 6.4, 6.5
 sub-product: Experience Manager, Experience Manager Sites
 topics: security, development, content-delivery
+feature: Security, APIs
 activity: understand
 audience: architect, developer
 doc-type: article
@@ -11,7 +12,7 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 2bd1b66dc28a6e591afda746e9d276cae7a29948
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '913'
 ht-degree: 100%
@@ -179,7 +180,7 @@ Im Allgemeinen gelten dieselben Überlegungen beim Zwischenspeichern von Inhalte
 |-----------|-------------|-----------------------|-------------|
 | Nein | AEM Publish | Authentifiziert | Die Dispatcher-Zwischenspeicherung in AEM Author ist auf statische Assets ohne Authoring beschränkt. Dadurch wird die Zwischenspeicherung der meisten Ressourcen in AEM Author, einschließlich HTTP-Antwort-Headern, schwierig und unpraktisch. |
 | Nein | AEM Publish | Authentifiziert | Vermeiden Sie das Zwischenspeichern von CORS-Headern bei authentifizierten Anfragen. Dies entspricht der allgemeinen Empfehlung, authentifizierte Anfragen nicht zwischenzuspeichern, da nicht mit Sicherheit bestimmt werden kann, wie sich der Authentifizierungs-/Autorisierungsstatus der oder des anfragenden Benutzenden auf die bereitgestellte Ressource auswirkt. |
-| Ja | AEM Publish | Anonym | Bei anonymen Anfragen, die im Dispatcher zwischengespeichert werden können, können auch ihre Antwort-Header zwischengespeichert werden, sodass zukünftige CORS-Anfragen auf den zwischengespeicherten Inhalt zugreifen können. Jeder Änderung der CORS-Konfiguration in AEM Publish **muss** eine Invalidierung der betroffenen zwischengespeicherten Ressourcen folgen. Best Practices verlangen bei Code- oder Konfigurationsimplementierungen, dass der Dispatcher-Cache geleert wird, da es schwierig ist zu bestimmen, welche zwischengespeicherten Inhalte möglicherweise betroffen sind. |
+| Ja | AEM Publish | Anonym | Bei anonymen Anfragen, die im Dispatcher zwischengespeichert werden können, können auch ihre Antwort-Header zwischengespeichert werden, sodass zukünftige CORS-Anfragen auf den zwischengespeicherten Inhalt zugreifen können. Jeder Änderung der CORS-Konfiguration in AEM Publish **muss** eine Invalidierung der betroffenen zwischengespeicherten Ressourcen folgen. Best Practices verlangen bei Code- oder Konfigurationsbereitstellungen, dass der Dispatcher-Cache geleert wird, da es schwierig ist zu bestimmen, welche zwischengespeicherten Inhalte möglicherweise betroffen sind. |
 
 Um das Zwischenspeichern von CORS-Headern zu ermöglichen, fügen Sie allen unterstützenden dispatcher.any-Dateien von AEM Publish die folgende Konfiguration hinzu.
 

@@ -2,16 +2,17 @@
 title: Variablen in AEM Workflow[Teil 4]
 description: Verwenden von Variablen des Typs XML, JSON, ArrayList, Document in einem AEM Workflow
 version: 6.5
-topic: Entwicklung
+topic: Development
+feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
-source-git-commit: 462417d384c4aa5d99110f1b8dadd165ea9b2a49
+exl-id: 269e43f7-24cf-4786-9439-f51bfe91d39c
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
-
 
 # ArrayList-Variable in AEM Workflow
 
@@ -71,7 +72,7 @@ Sobald die Variable CustomRoutes ArrayList mit den Werten aus den gesendeten Dat
 Gehen Sie wie folgt vor, um diesen Workflow auf Ihrem System zu testen:
 
 * Laden Sie die Datei ArrayListVariable.zip herunter und speichern Sie sie in Ihrem Dateisystem.
-* [Importieren Sie die ZIP-Datei ](assets/arraylistvariable.zip) mit dem AEM Package Manager.
+* [Importieren der ZIP-Datei](assets/arraylistvariable.zip) mit dem AEM Package Manager
 * [Öffnen Sie das Formular TravelExpenseReport .](http://localhost:4502/content/dam/formsanddocuments/helpx/travelexpensereport/jcr:content?wcmmode=disabled)
 * Geben Sie einige Ausgaben und die Namen der beiden Manager ein.
 * Senden-Schaltfläche aufrufen
@@ -79,4 +80,4 @@ Gehen Sie wie folgt vor, um diesen Workflow auf Ihrem System zu testen:
 * Es sollte eine neue Aufgabe mit dem Titel &quot;Spesenadministrator zuweisen&quot;angezeigt werden.
 * Öffnen Sie das Formular, das der Aufgabe zugeordnet ist
 * Es sollten zwei benutzerdefinierte Routen mit den Namen der Manager angezeigt werden.
-   [Durchsuchen Sie den Workflow ReviewExpenseReportWorkflow.](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) Dieser Workflow verwendet die Variable ArrayList, die Variable JSON-Typ, den Regeleditor in der Komponente Or-Split
+  [Durchsuchen Sie den Workflow ReviewExpenseReportWorkflow.](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) Dieser Workflow verwendet die Variable ArrayList, die Variable JSON-Typ, den Regeleditor in der Komponente Or-Split

@@ -2,6 +2,7 @@
 title: Verwenden der Online-Revisionsbereinigung
 description: Eine kurze Einführung in die Online-Revisionsbereinigung. Durch die Online-Revisionsbereinigung entfällt die Notwendigkeit einer häufigen Offline-Revisionsbereinigung.
 version: 6.4, 6.5
+feature: JCR
 topics: operations, authoring, performance
 activity: use
 audience: administrator, architect, implementer
@@ -10,10 +11,10 @@ topic: Administration
 role: Admin
 level: Intermediate
 exl-id: 62a36ab1-3245-43ac-b943-e28ff95661bf
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '74'
-ht-degree: 0%
+ht-degree: 13%
 
 ---
 
@@ -23,7 +24,7 @@ Eine kurze Einführung in die Online-Revisionsbereinigung, die die Notwendigkeit
 
 >[!VIDEO](https://video.tv.adobe.com/v/17004?quality=12&learn=on)
 
-## Unterstützende Materialien
+## Hilfsmaterialien
 
 * [AEM [!DNL JMX MBean - SegmentRevisionGarbageCollection]](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3DSegment+node+store+revision+garbage+collection%2Ctype%3DSegmentRevisionGarbageCollection)
 

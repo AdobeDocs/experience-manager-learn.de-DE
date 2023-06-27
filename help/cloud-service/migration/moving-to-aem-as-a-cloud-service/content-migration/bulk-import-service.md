@@ -3,15 +3,16 @@ title: Inhaltsmigration mithilfe des Massen-Importdienstes
 description: Erfahren Sie, wie AEM as a Cloud Services Bulk Import Service zum Importieren von Assets aus Nicht-AEM-Quellen verwendet werden kann.
 version: Cloud Service
 topic: Migration, Upgrade
+feature: Migration
 role: Developer
 level: Experienced
 kt: 8918
 thumbnail: 336969.jpeg
 exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '157'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
 
@@ -33,7 +34,7 @@ Der Bulk Import Service wird verwendet, um im Azure Blob Storage- oder Amazon S3
 + Konfigurieren Sie den Bulk Import Service von AEM as a Cloud Service Author-Dienst und führen Sie ihn aus.
 + Führen Sie den Bulk Service Importer als einmaligen Import aus oder planen Sie einen regelmäßigen Import.
 
-## Sonstige -Ressourcen
+## Sonstige Ressourcen
 
 + [Konfigurationsoptionen für den Massenimport-Dienst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#configure-bulk-ingestor-tool)
 + [Adobe Developers Live-Sitzung zur Asset-Erfassung](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html)

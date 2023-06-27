@@ -2,8 +2,10 @@
 title: Adobe Experience Manager as a Cloud Service Expert-Serie
 description: Erfahren Sie mehr über Adobe Experience Manager (AEM) as a Cloud Service von den erfahrenen Ingenieuren der Adobe, die sie erstellen, und über die professionellen Dienstleistungen, die sie anbieten.
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
+topic: Administration, Development
+feature: Developer Tools
 exl-id: ae1cdbe3-0863-41de-bb27-2e88c4640866
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 2%

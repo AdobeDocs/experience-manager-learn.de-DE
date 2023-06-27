@@ -9,13 +9,14 @@ version: Cloud Service
 kt: 6352
 thumbnail: 6352-personalization-using-vec.jpg
 topic: Integrations
+feature: Integrations
 role: Developer
 level: Intermediate
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '517'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -27,8 +28,8 @@ Erfahren Sie, wie Sie mit Visual Experience Composer (VEC) eine A/B-Test-Target-
 
 Um VEC auf einer AEM Website verwenden zu können, muss die folgende Einrichtung abgeschlossen sein:
 
-1. [Hinzufügen von Adobe Target zu Ihrer AEM Website](./add-target-launch-extension.md)
-1. [Trigger eines Adobe Target-Aufrufs von Launch](./load-and-fire-target.md)
+1. [Hinzufügen von Adobe Target zu Ihrer AEM-Website](./add-target-launch-extension.md)
+1. [Auslösen eines Adobe Target-Aufrufs von Launch](./load-and-fire-target.md)
 
 ## Szenario - Überblick
 

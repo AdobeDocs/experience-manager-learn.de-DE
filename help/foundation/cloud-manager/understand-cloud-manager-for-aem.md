@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu Adobe Cloud Manager
+title: Überblick darüber, was Adobe Cloud Manager ist
 description: Adobe Cloud Manager bietet eine einfache, aber robuste Lösung, die eine einfache Verwaltung, Einführung und Self-Service von AEM Umgebungen ermöglicht.
 sub-product: Experience Manager Cloud Manager, Experience Manager
 topics: best-practices, cicd, development, operations, governance
@@ -7,19 +7,20 @@ doc-type: feature video
 activity: understand
 audience: developer, implementer, administrator, architect
 topic: Architecture
+feature: Cloud Manager
 role: Architect
 level: Beginner
 exl-id: 53279cbb-70c8-4319-b5bb-9a7d350a7f72
 last-substantial-update: 2022-05-10T00:00:00Z
 thumbnail: understand-cloud-manager.jpg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '512'
-ht-degree: 18%
+ht-degree: 27%
 
 ---
 
-# Grundlegendes zu Adobe Cloud Manager
+# Überblick darüber, was Adobe Cloud Manager ist
 
 Adobe Cloud Manager bietet eine einfache, aber robuste Lösung, die eine einfache Verwaltung, Einführung und Self-Service von AEM Umgebungen ermöglicht.
 
@@ -30,7 +31,7 @@ In dieser Videoreihe werden die wichtigsten Funktionen von Cloud Manager für AE
 * [Programme](#programs)
 * [Umgebungen](#environments)
 * [Berichte](#reports)
-* [CI/CD-Produktions-Pipeline](#cicd-production-pipeline)
+* [CI/CD Produktions-Pipeline](#cicd-production-pipeline)
 * [CI/CD Nicht-Produktions-Pipelines](#cicd-non-production-pipeline)
 * [Aktivität](#activity)
 
@@ -54,7 +55,7 @@ Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](htt
 
 >[!VIDEO](https://video.tv.adobe.com/v/26315?quality=12&learn=on)
 
-## CI/CD-Produktions-Pipeline {#cicd-production-pipeline}
+## CI/CD Produktions-Pipeline {#cicd-production-pipeline}
 
 *[Verwenden der CI/CD-Pipeline in Adobe Cloud Manager](./use-the-cicd-pipeline-in-cloud-manager-for-aem.md) Videoreihen bieten einen tiefen Einblick in die Ausführung der Produktions-Pipeline, einschließlich der Untersuchung fehlgeschlagener und erfolgreicher Bereitstellungen.*
 
@@ -76,7 +77,7 @@ Die [CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experie
 
 ## CI/CD Nicht-Produktions-Pipelines {#cicd-non-production-pipeline}
 
-[CI/CD-Produktionsfremde Pipelines sind in zwei Kategorien unterteilt: Codequalitätspipelines und Bereitstellungs-Pipelines. ](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html) Codequalitätspipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll. Bereitstellungs-Pipelines unterstützen die automatisierte Bereitstellung von Code aus dem Git-Repository in einer Nicht-Produktionsumgebung, d. h. in jeder bereitgestellten AEM Umgebung, die nicht in der Staging- oder Produktionsumgebung enthalten ist.
+[CI/CD-Produktionsfremde Pipelines sind in zwei Kategorien unterteilt: Codequalitätspipelines und Bereitstellungs-Pipelines. ](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html) Codequalitätspipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll. Bereitstellungs-Pipelines unterstützen die automatisierte Bereitstellung von Code aus dem Git-Repository in einer Nicht-Produktionsumgebung, d. h. in einer AEM-Umgebung, die weder Staging- noch Produktionsumgebung ist.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316?quality=12&learn=on)
 

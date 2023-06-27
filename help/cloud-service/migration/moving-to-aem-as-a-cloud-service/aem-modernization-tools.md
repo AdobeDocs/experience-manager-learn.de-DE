@@ -3,15 +3,16 @@ title: Verwenden AEM Modernisierungs-Tools für den Umstieg auf AEM as a Cloud S
 description: Erfahren Sie, wie AEM Modernisierungs-Tools verwendet werden, um ein vorhandenes AEM Projekt und einen vorhandenen Inhalt zu aktualisieren und so AEM as a Cloud Service kompatibel zu sein.
 version: Cloud Service
 topic: Migration, Upgrade
+feature: Migration
 role: Developer
 level: Experienced
 kt: 8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '446'
-ht-degree: 6%
+ht-degree: 7%
 
 ---
 

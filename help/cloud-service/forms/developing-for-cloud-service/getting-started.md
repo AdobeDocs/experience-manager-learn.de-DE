@@ -9,7 +9,7 @@ version: Cloud Service
 topic: Development
 kt: 8842
 exl-id: 274018b9-91fe-45ad-80f2-e7826fddb37e
-source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 2%
@@ -19,6 +19,7 @@ ht-degree: 2%
 # Installieren der erforderlichen Software
 
 Dieses Tutorial führt Sie durch die Schritte, die zum Erstellen eines AEM Forms-Projekts und zum Synchronisieren des AEM Forms-Projekts mit Ihrer lokalen AEM mithilfe des IntelliJ- und Repo-Tools erforderlich sind. Außerdem erfahren Sie, wie Sie Ihr Projekt zum lokalen Git-Repository hinzufügen und das lokale Git-Repository in das Cloud Manager-Repository übertragen.
+
 
 
 

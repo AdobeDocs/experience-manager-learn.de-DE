@@ -7,15 +7,16 @@ doc-type: feature video
 activity: understand
 audience: all
 topic: Architecture
+feature: Cloud Manager
 role: Developer
 level: Beginner
 exl-id: d5d59ef5-9343-4ac2-9053-a010decdb9b6
 last-substantial-update: 2022-08-15T00:00:00Z
 thumbnail: cm-pipeline.jpg
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '312'
-ht-degree: 2%
+ht-degree: 10%
 
 ---
 
@@ -53,9 +54,9 @@ Dieses Video berührt auch die [!UICONTROL Aktivität] -Konsole in Cloud Manager
 
 >[!VIDEO](https://video.tv.adobe.com/v/23085?quality=12&learn=on)
 
-## Unterstützende Materialien
+## Hilfsmaterialien
 
 * [Cloud Manager-Benutzerhandbuch](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=de)
-* [Codeüberprüfung herunterladen [!DNL SonarQube] Regeln](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)
+* [Codeüberprüfung herunterladen [!DNL SonarQube] Regeln](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html?lang=de)
    * *XLSX verfügbar am unteren Rand des verknüpften Abschnitts*
 * [[!DNL SonarQube] Java™-Regelindex](https://rules.sonarsource.com/java/)

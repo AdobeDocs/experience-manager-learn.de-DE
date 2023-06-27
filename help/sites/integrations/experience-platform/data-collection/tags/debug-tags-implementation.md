@@ -9,10 +9,11 @@ activity: setup
 kt: 6047
 thumbnail: 38567.jpg
 topic: Integrations
+feature: Integrations
 role: Developer
 level: Intermediate
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
-source-git-commit: 1d2daf53cd28fcd35cb2ea5c50e29b447790917a
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '282'
 ht-degree: 0%
@@ -49,7 +50,7 @@ Adobe bietet Adobe Experience Platform Debugger [Chrome-Erweiterung](https://chr
 
 1. Im **Adobe Experience Platform Debugger > Zusammenfassung > Adobe Experience Platform-Tags** überprüfen Sie die Details Ihrer Tag-Eigenschaft wie Name, Version, Build-Datum, Umgebung und Erweiterungen.
 
-   ![Adobe Experience Platform Debugger und Tag-Eigenschaftendetails](assets/tag-property-details.png)
+   ![Adobe Experience Platform Debugger- und Tag-Eigenschaftendetails](assets/tag-property-details.png)
 
 ## Zusätzliche Ressourcen {#additional-resources}
 

@@ -7,9 +7,10 @@ role: Developer
 level: Beginner, Intermediate
 version: Cloud Service
 topic: Development
+feature: AEM Project Archetype
 kt: 9534
 exl-id: c2cd9c52-6f00-4cfe-a972-665093990e5d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 1%
@@ -39,16 +40,15 @@ Nachdem Ihr Projekt erfolgreich erstellt wurde, können Sie mit dem Kopieren von
 
 * Kopieren Sie das HandleFormSubmission-Servlet aus ```C:\CloudManager\aem-banking-application\core\src\main\java\com\aem\bankingapplication\core\servlets```
 nach
-
-   ```C:\CloudManager\aem-banking-application1\core\src\main\java\com\aem\bankingapplication\core\servlets```
+  ```C:\CloudManager\aem-banking-application1\core\src\main\java\com\aem\bankingapplication\core\servlets```
 
 * Kopieren Sie CustomSubmit aus
-   ```C:\CloudManager\aem-banking-application\ui.apps\src\main\content\jcr_root\apps\bankingapplication\SubmitToAEMServlet``` von aem-banking-application zum aem-banking-application1-Projekt
+  ```C:\CloudManager\aem-banking-application\ui.apps\src\main\content\jcr_root\apps\bankingapplication\SubmitToAEMServlet``` von aem-banking-application zum aem-banking-application1-Projekt
 
 * Importieren des neuen Projekts in IntelliJ
 
 * Aktualisieren Sie die Datei &quot;filter.xml&quot;im Modul ui.apps des Projekts aem-banking-application1, um die folgende Zeile einzuschließen
-   ```<filter root="/apps/bankingapplication/SubmitToAEMServlet"/>```
+  ```<filter root="/apps/bankingapplication/SubmitToAEMServlet"/>```
 
 Nachdem Sie den gesamten Code in Ihr neues Projekt kopiert haben, können Sie dieses Projekt an Cloud Manager senden.
 
