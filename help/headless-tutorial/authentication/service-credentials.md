@@ -14,9 +14,9 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 96d576ae24305c1f41073921fbb904e07c1206f6
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '1924'
 ht-degree: 99%
 
 ---
@@ -107,7 +107,7 @@ Die Dienstanmeldeinformationen, ein vollständig geformtes JSON-Objekt, sind wed
 1. Die externe Anwendung verwendet die Dienstanmeldeinformationen, um ein JWT-Token zu erstellen.
 1. Das JWT-Token wird an Adobe IMS gesendet, wo es gegen ein Zugriffs-Token eingetauscht wird.
 1. Adobe IMS gibt ein Zugriffs-Token zurück, das für den Zugriff auf AEM as a Cloud Service verwendet werden kann.
-   + Für Zugriffs-Token kann eine Gültigkeit angefordert werden. Es wird empfohlen, die Lebensdauer des Zugriffs-Tokens kurz zu halten und bei Bedarf zu aktualisieren.
+   + Zugriffstoken können die Ablaufzeit nicht ändern.
 1. Die externe Anwendung sendet HTTP-Anfragen an AEM als ein Cloud Service. Dabei wird das Zugriffs-Token zur Autorisierungs-Kopfzeile der HTTP-Anfragen als Bearer-Token hinzugefügt.
 1. AEM as a Cloud Service empfängt die HTTP-Anfrage, authentifiziert sie, führt die von ihr angeforderte Aufgabe aus und gibt eine HTTP-Antwort an die externe Anwendung zurück.
 
