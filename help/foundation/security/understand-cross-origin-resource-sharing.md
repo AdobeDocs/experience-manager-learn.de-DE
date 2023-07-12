@@ -12,10 +12,10 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: 73bb813c961cf988355984b0385998a493ee3716
+source-git-commit: d2a9596ddadd897793a0fce8421aa8b246b45b12
 workflow-type: tm+mt
-source-wordcount: '913'
-ht-degree: 98%
+source-wordcount: '1007'
+ht-degree: 88%
 
 ---
 
@@ -64,7 +64,7 @@ Wenn keine Richtlinie konfiguriert ist, werden [!DNL CORS]-Anfragen ebenfalls ni
 #### [!UICONTROL Verfügbare Header]
 
 * `"exposedheaders" <header>`
-* Liste der Kopfzeilenparameter, die den Zugriff auf Antwortheader durch Browser angeben.
+* Liste der Kopfzeilenparameter, die den Zugriff auf Antwortheader durch Browser angeben. Bei CORS-Anforderungen (nicht vor dem Flug) werden diese Werte, falls nicht leer, in die `Access-Control-Expose-Headers` Antwortheader. Die Werte in der Liste (Kopfzeilennamen) werden dann dem Browser zugänglich gemacht. ohne sie sind diese Kopfzeilen vom Browser nicht lesbar.
 
 #### [!UICONTROL Maximales Alter]
 
@@ -74,7 +74,7 @@ Wenn keine Richtlinie konfiguriert ist, werden [!DNL CORS]-Anfragen ebenfalls ni
 #### [!UICONTROL Unterstützte Header]
 
 * `"supportedheaders" <header>`
-* Liste der `header`-Parameter, die angeben, welche HTTP-Header bei der eigentlichen Anfrage verwendet werden können.
+* Liste der `header` Parameter, die angeben, welche HTTP-Anforderungsheader bei der eigentlichen Anfrage verwendet werden können.
 
 #### [!UICONTROL Zulässige Methoden]
 
@@ -98,8 +98,7 @@ Bei „Site 1“ handelt es sich um ein einfaches, anonym zugängliches, schreib
   ],
   "supportedmethods":[
     "GET",
-    "HEAD",
-    "OPTIONS"
+    "HEAD"
   ],
   "alloworigin":[
     "http://127.0.0.1:3000",
@@ -140,7 +139,6 @@ Bei „Site 1“ handelt es sich um ein einfaches, anonym zugängliches, schreib
     "HEAD"
     "POST",
     "DELETE",
-    "OPTIONS",
     "PUT"
   ],
   "alloworigin":[
@@ -182,7 +180,22 @@ Im Allgemeinen gelten dieselben Überlegungen beim Zwischenspeichern von Inhalte
 | Nein | AEM Publish | Authentifiziert | Vermeiden Sie das Zwischenspeichern von CORS-Headern bei authentifizierten Anfragen. Dies entspricht der allgemeinen Empfehlung, authentifizierte Anfragen nicht zwischenzuspeichern, da nicht mit Sicherheit bestimmt werden kann, wie sich der Authentifizierungs-/Autorisierungsstatus der oder des anfragenden Benutzenden auf die bereitgestellte Ressource auswirkt. |
 | Ja | AEM Publish | Anonym | Bei anonymen Anfragen, die im Dispatcher zwischengespeichert werden können, können auch ihre Antwort-Header zwischengespeichert werden, sodass zukünftige CORS-Anfragen auf den zwischengespeicherten Inhalt zugreifen können. Jeder Änderung der CORS-Konfiguration in AEM Publish **muss** eine Invalidierung der betroffenen zwischengespeicherten Ressourcen folgen. Best Practices verlangen bei Code- oder Konfigurationsbereitstellungen, dass der Dispatcher-Cache geleert wird, da es schwierig ist zu bestimmen, welche zwischengespeicherten Inhalte möglicherweise betroffen sind. |
 
-Um das Zwischenspeichern von CORS-Headern zu ermöglichen, fügen Sie allen unterstützenden dispatcher.any-Dateien von AEM Publish die folgende Konfiguration hinzu.
+### Zulassen von CORS-Anforderungsheadern
+
+So lassen Sie die erforderlichen [HTTP-Anforderungs-Header zur Weiterleitung an AEM zur Verarbeitung](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#specifying-the-http-headers-to-pass-through-clientheaders), müssen sie in der Dispatcher-Funktion `/clientheaders` Konfiguration.
+
+```
+/clientheaders {
+   ...
+   "Origin"
+   "Access-Control-Request-Method"
+   "Access-Control-Request-Headers"
+}
+```
+
+### Zwischenspeichern von CORS-Antwortheadern
+
+Um das Zwischenspeichern und Bereitstellen von CORS-Headern für zwischengespeicherten Inhalt zu ermöglichen, fügen Sie Folgendes hinzu [/cache /headers configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#caching-http-response-headers) zur AEM-Veröffentlichung `dispatcher.any` -Datei.
 
 ```
 /publishfarm {
