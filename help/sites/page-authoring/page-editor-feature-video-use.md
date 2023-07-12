@@ -15,10 +15,10 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: b120fb79-729e-4155-ba10-e5f7bb07eefa
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: d0027647ce3157173d2592728757150199db930d
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 8%
+source-wordcount: '127'
+ht-degree: 18%
 
 ---
 
@@ -26,35 +26,15 @@ ht-degree: 8%
 
 AEM Seiteneditor ist ein leistungsstarkes Tool zum Erstellen und Bearbeiten von Webinhalten. Auf die Tools und Funktionen des Seiteneditors kann über die Symbolleiste des Seiteneditors zugegriffen werden.
 
-Im folgenden Video werden die wichtigsten Funktionen des Seiteneditors vorgestellt.
+Im folgenden Video werden einige der wichtigsten Funktionen des Seiteneditors vorgestellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32011?quality=12&learn=on)
 
-Zu den Funktionen des Seiteneditors gehören:
 
-* Komponenten und Assets ziehen und ablegen
-* Bereich &quot;Inhaltsstruktur&quot;, der einen Index aller Komponenten auf der Seite bereitstellt
-* Im Bereich &quot;Seiteninformationen&quot;haben Sie Zugriff auf zusätzliche Informationen und Schnellaktionen für einen Inhaltsautor.
-   * Eigenschaften öffnen
-   * Rollout-Seite
-   * Workflow starten
-   * Seite sperren/Seite entsperren
-   * Veröffentlichen/Veröffentlichung einer Seite rückgängig machen
-   * Vorlage bearbeiten
-   * Als veröffentlicht anzeigen
-   * In Admin anzeigen
-   * Hilfe
-* Hinzufügen von Komponentensymbolen und -beschreibungen zum Komponentenbereich
-* Direkter Link zum Bearbeiten von Assets im DAM
-* Emulator für die Bearbeitung von Inline-Inhalten und schnellere Verwaltung von Komponenten im responsiven Raster
-* Seitenbearbeitungsmodi
-   * Bearbeitungsmodus
-   * Layout-Modus
-   * Entwicklermodus
-* Automatische Vervollständigung und Keyword-Suche für das Pfadfinder-Formularfeld
-* Workflow-Statusleiste für die aktuelle Seite
+Siehe [AEM Dokumentation für einen vollständigen Überblick über die Funktionen des Seiteneditors](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html?lang=de).
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Bearbeiten der Dokumentation zum Seiteninhalt](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [Sites-Authoring-Benutzerhandbuch](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
+* [AEM Seiteneditor-Dokumentation[(https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html)
+* [Bearbeiten der Dokumentation zum Seiteninhalt](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html?lang=de)
+* [Benutzerhandbuch zur Sites-Bearbeitung](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=de)
