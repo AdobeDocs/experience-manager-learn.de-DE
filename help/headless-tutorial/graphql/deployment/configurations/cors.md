@@ -8,13 +8,13 @@ role: Developer, Architect
 level: Intermediate
 kt: 10830
 thumbnail: KT-10830.jpg
-source-git-commit: cc78e59fe70686e909928e407899fcf629a651b9
+exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
+source-git-commit: 36b4217a899b462296d4389bc96a644da97d5da4
 workflow-type: tm+mt
 source-wordcount: '619'
 ht-degree: 92%
 
 ---
-
 
 # Cross-Origin Resource Sharing (CORS)
 
@@ -81,7 +81,6 @@ Diese Beispielkonfiguration unterstützt die Verwendung AEM GraphQL-persistierte
   "supportedmethods":[
     "GET",
     "HEAD",
-    "OPTIONS"
   ],
   "maxage:Integer": 1800,
   "supportscredentials": false,
