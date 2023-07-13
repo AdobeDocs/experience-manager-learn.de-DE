@@ -14,9 +14,9 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
-source-git-commit: 96d576ae24305c1f41073921fbb904e07c1206f6
+source-git-commit: f8ed9fddb5f244860ba229b46a80638a7269d95e
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1925'
 ht-degree: 99%
 
 ---
@@ -53,7 +53,7 @@ Anders als Zugriffstoken für die lokale Entwicklung erfordern Service-Anmeldein
 Technische Konten werden einmal erstellt, die privaten Schlüssel, die zur Verwaltung der mit dem technischen Konto verbundenen Service-Anmeldeinformationen verwendet werden, können über einen längeren Zeitraum verwaltet werden. So müssen zum Beispiel neue private Schlüssel/Service-Anmeldeinformationen generiert werden, bevor der aktuelle private Schlüssel abläuft, damit Benutzende der Service-Anmeldeinformationen ununterbrochenen Zugriff haben.
 
 1. Stellen Sie sicher, dass Sie wie folgt angemeldet sind:
-   + __Administrierende der Adobe IMS-Organisation__
+   + __Systemadministrator der Adobe IMS-Organisation__
    + Mitglied beim IMS-Produktprofil der __AEM-Administrierenden__ auf __AEM Author__
 1. Melden Sie sich bei [Adobe Cloud Manager](https://my.cloudmanager.adobe.com) an
 1. Öffnen Sie das Programm, das die AEM as a Cloud Service-Umgebung enthält, um die Einrichtung der Service-Anmeldeinformationen dafür zu integrieren.
