@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 5feeed5c0725c7985a8fe85794315c272e5cde4b
+source-git-commit: 695cccfdd03618505b2d3419b1ad82d8dbd0a122
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '987'
 ht-degree: 85%
 
 ---
@@ -99,10 +99,11 @@ ht-degree: 85%
       + [Grundlagen zu OSGi-Konfigurationen](./developing/osgi-services/configurations.md)
       + [OSGi-Konfigurationen unter Verwendung von OCD](./developing/osgi-services/configurations-ocd.md)
    + Erweitert{#advanced}
-      + [Web-optimierte Bild-APIs](./developing/advanced/web-optimized-image-delivery-java-apis.md)
-      + [Service-Benutzende](./developing/advanced/service-users.md)
-      + [Benutzerdefinierte Namespaces](./developing/advanced/custom-namespaces.md)
       + [Caching von Seitenvarianten](./developing/advanced/variant-caching.md)
+      + [CSRF-Schutz](./developing/advanced/csrf-protection.md)
+      + [Benutzerdefinierte Namespaces](./developing/advanced/custom-namespaces.md)
+      + [Service-Benutzende](./developing/advanced/service-users.md)
+      + [Web-optimierte Bild-APIs](./developing/advanced/web-optimized-image-delivery-java-apis.md)
    + Schnelle Entwicklungsumgebung{#rde}
       + [Übersicht](./developing/rde/overview.md)
       + [Einrichtung](./developing/rde/how-to-setup.md)
