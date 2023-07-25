@@ -7,11 +7,13 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 1550e6a7-04b5-4a40-9d7b-88074283402f
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 2%
+source-wordcount: '585'
+ht-degree: 3%
 
 ---
 
@@ -48,7 +50,6 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 1. Der Marketer erstellt eine A/B-Zielaktivität in Adobe Target.
    1. Navigieren Sie im Adobe Target-Fenster zu **Tätigkeiten** Registerkarte.
    2. Klicken **Aktivität erstellen** und wählen Sie den Aktivitätstyp als **A/B-Test**
-
       ![Adobe Target - Aktivität erstellen](assets/personalization-use-case-2/create-ab-activity.png)
    3. Wählen Sie die **Web** Kanal und wählen Sie die **Visual Experience Composer**.
    4. Geben Sie die **Aktivitäts-URL** und klicken **Nächste** , um den Visual Experience Composer zu öffnen.
@@ -63,7 +64,6 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
       ![Container-Auswahl](assets/personalization-use-case-3/container-selection.png)
    9. Klicken Sie auf den Container, den Sie neu anordnen möchten, und ziehen Sie ihn an die gewünschte Position. Ordnen wir die *Beste Röster* Container aus der ersten Zeile Spalte der ersten Zeile in die dritte Spalte der ersten Zeile. Jetzt *Beste Röster* Container befindet sich neben *Fotografierausstellungen* Container.
       ![Container-Swap](assets/personalization-use-case-3/container-swap.png)
-
       **Nach dem Tauschen**
       ![Container ersetzt](assets/personalization-use-case-3/after-swap-1-3.png)
    10. Ordnen Sie die Positionen für die anderen Kartencontainer auf die gleiche Weise neu an.

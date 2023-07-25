@@ -1,21 +1,23 @@
 ---
-title: Service zur automatischen Formularkonvertierung
-description: Service zur automatischen Formularkonvertierung. In diesem Artikel wird beschrieben, wie ein AEM-Administrator den Automated forms conversion-Dienst konfigurieren kann, um die Konvertierung ihrer PDF forms in adaptive Formulare zu automatisieren. Diese Hilfe richtet sich an IT- und AEM-Administratoren in Ihrem Unternehmen.
+title: Automatisierter Formularkonversionsdienst
+description: Automatisierter Formularkonversionsdienst. In diesem Artikel wird beschrieben, wie ein AEM-Administrator den Automated forms conversion-Dienst konfigurieren kann, um die Konvertierung ihrer PDF forms in adaptive Formulare zu automatisieren. Diese Hilfe richtet sich an IT- und AEM-Administratoren in Ihrem Unternehmen.
 feature: Adaptive Forms
 thumbnail: 39493.jpg
 kt: 6114
 topic: Development
 role: Admin
 level: Beginner
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 0715a2cc-c042-4ddc-85a1-7720f420351b
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 59%
+source-wordcount: '264'
+ht-degree: 60%
 
 ---
 
-# Service zur automatischen Formularkonvertierung
+# Automatisierter Formularkonversionsdienst
 
 In diesem Artikel wird beschrieben, wie ein AEM-Administrator den Automated forms conversion-Dienst konfigurieren kann, um die Konvertierung ihrer PDF forms in adaptive Formulare zu automatisieren. Diese Hilfe richtet sich an IT- und AEM-Administratoren in Ihrem Unternehmen. Benutzer dieser Hilfe sollten mit den folgenden Technologien vertraut sein:
 
@@ -38,3 +40,7 @@ Für die Verwendung des Service für die automatisierte Formularkonvertierung is
 * In diesem Video werden die Schritte erläutert, die zum Verbinden Ihrer lokalen AEM Forms-Instanz mit dem Automated forms conversion-Dienst in der Adobe Cloud erforderlich sind.
 
 >[!VIDEO](https://video.tv.adobe.com/v/39493?quality=12&learn=on)
+
+## Nächste Schritte
+
+[Konvertieren eines PDF-Formulars in ein adaptives Formular](./convert-pdf-form-into-adaptive-form.md)

@@ -7,11 +7,13 @@ topics: development
 audience: developer
 doc-type: tutorial
 activity: implement
-version: 6.4
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+version: 6.5
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 1%
+source-wordcount: '233'
+ht-degree: 3%
 
 ---
 
@@ -29,7 +31,7 @@ Dieses Paket enthält den Beispiel-Workflow und die HTML-Seite, mit der Sie das 
 4. Stellen Sie sicher, dass die Argumente, die Sie übergeben, ein gültiger Ordner auf Ihrem Server sind.
 5. Speichern Sie die Änderungen.
 
-## Adaptives Formular erstellen
+## Erstellen eines adaptiven Formulars
 
 1. Erstellen Sie ein adaptives Formular mit dem Schema, das Sie im vorherigen Schritt erstellt haben.
 2. Ziehen Sie einige Schemaelemente in das adaptive Formular.

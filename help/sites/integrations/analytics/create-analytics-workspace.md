@@ -9,10 +9,11 @@ level: Intermediate
 kt: 6409
 thumbnail: KT-6296.jpg
 exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
+badgeIntegration: label="Integration" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
-source-git-commit: 5a8d3983a22df4e273034c8d8441b31e6bc764ba
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '2161'
+source-wordcount: '2162'
 ht-degree: 1%
 
 ---
@@ -152,12 +153,10 @@ Erstellen Sie anschließend eine Tabelle, um eine visuelle Darstellung der Inter
 1. Teilen wir die Seite nach Vorlagentyp auf. Wählen Sie aus den Komponenten die Metrik Seitenvorlage aus und ziehen Sie die Metrik Seitenvorlage auf die Dimension Seitenname . Jetzt können Sie den Seitennamen, aufgeschlüsselt nach Vorlagentyp, anzeigen.
 
    * **Vorher**
-
-      ![eVar5](assets/create-analytics-workspace/evar5.png)
+     ![eVar5](assets/create-analytics-workspace/evar5.png)
 
    * **Nachher**
-
-      ![eVar5-Metriken](assets/create-analytics-workspace/evar5-metrics.png)
+     ![eVar5-Metriken](assets/create-analytics-workspace/evar5-metrics.png)
 
 1. Um zu verstehen, wie Benutzer mit CTA-Schaltflächen interagieren, wenn sie sich auf den WKND Site-Seiten befinden, ist eine weitere Aufschlüsselung erforderlich, indem die Metrik Button-ID (eVar8) hinzugefügt wird.
 
@@ -244,11 +243,9 @@ Als Nächstes laden wir die Classification-Vorlage für die Variable Button-ID (
 1. Suchen Sie in der Komponentensuche nach **WKND-CTA-Schaltflächen** und ziehen Sie die **WKND-CTA-Schaltflächen (Schaltflächen-ID)** Dimension auf die Schaltfläche-ID-Metrik ein und ersetzen Sie sie.
 
    * **Vorher**
-
-      ![Workspace-Schaltfläche vor](assets/create-analytics-workspace/wknd-button-before.png)
+     ![Workspace-Schaltfläche vor](assets/create-analytics-workspace/wknd-button-before.png)
    * **Nachher**
-
-      ![Workspace-Schaltfläche nach](assets/create-analytics-workspace/wknd-button-after.png)
+     ![Workspace-Schaltfläche nach](assets/create-analytics-workspace/wknd-button-after.png)
 
 1. Die Metrik &quot;Schaltflächen-ID&quot;, die die Schaltflächen-ID einer Aktionsaufruf-Schaltfläche (CTA) enthielt, wurde jetzt durch einen entsprechenden Namen ersetzt, der in der Klassifizierungsvorlage angegeben ist.
 1. Vergleichen wir nun die Analytics Workspace-Tabelle mit der WKND-Startseite und betrachten die Anzahl der CTA-Schaltflächen-Klicks und deren Analyse. Basierend auf den Daten der Freiformtabelle im Arbeitsbereich ist klar, dass 22 Mal Benutzer auf die **SKI JETZT** Schaltfläche und viermal für den WKND Home Page Camping in Westaustralien **Mehr dazu** Schaltfläche.

@@ -7,11 +7,13 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 47446e2a-73d1-44ba-b233-fa1b7f16bc76
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1691'
-ht-degree: 1%
+source-wordcount: '1694'
+ht-degree: 3%
 
 ---
 
@@ -64,7 +66,7 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
       * Text
       * **HTML**
          * *HTML-Angebote werden für die Aktivität dieses Szenarios verwendet*
-      * Verknüpfung
+      * Link
       * Schaltfläche
 
 ## Content Editor-Aktivitäten
@@ -173,7 +175,7 @@ An dieser Stelle haben wir erfolgreich Zielgruppen für alle WKND Site-Besucher 
    ![Aktivität aktivieren](assets/personalization-use-case-1/activate-activity.png)
 
 1. Ihre WKND SkateFest-Kampagne ist jetzt für alle WKND Site-Besucher live.
-1. Navigieren Sie zum [WKND-Site-Homepage](http://localhost:4503/content/wknd/en.html)und Sie sollten das WKND SkateFest-Angebot basierend auf Ihrem geografischen Standort (*state: Kalifornien*).
+1. Navigieren Sie zum [WKND-Site-Homepage](http://localhost:4503/content/acme/en.html)und Sie sollten das WKND SkateFest-Angebot basierend auf Ihrem geografischen Standort (*state: Kalifornien*).
 
    ![Aktivitäts-QA](assets/personalization-use-case-1/wknd-california.png)
 
@@ -183,7 +185,7 @@ An dieser Stelle haben wir erfolgreich Zielgruppen für alle WKND Site-Besucher 
 
    ![Aktivitäts-QA](assets/personalization-use-case-1/activity-qa.png)
 
-1. Navigieren Sie zum [WKND-Site-Homepage](http://localhost:4503/content/wknd/en.html)und Sie sollten das WKND SkateFest-Angebot basierend auf Ihrem geografischen Standort (Status) sehen können.
+1. Navigieren Sie zum [WKND-Site-Homepage](http://localhost:4503/content/acme/en.html)und Sie sollten das WKND SkateFest-Angebot basierend auf Ihrem geografischen Standort (Status) sehen können.
 1. Sehen Sie sich das folgende Video an, um zu verstehen, wie ein Angebot an Ihre Seite gesendet wird, wie Sie Antwort-Token anpassen und eine Qualitätsprüfung durchführen können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28658?quality=12&learn=on)

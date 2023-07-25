@@ -8,9 +8,9 @@ version: Cloud Service
 feature-set: Experience Manager Assets
 feature: Assets Essentials
 team: TM
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '76'
+source-wordcount: '77'
 ht-degree: 97%
 
 ---
@@ -38,6 +38,7 @@ ht-degree: 97%
 + [Creative Cloud-Integration](integrations/creative-cloud.md)
 
 + Adobe Workfront-Integration{#workfront}
+   + [Übersicht](./integrations/workfront/overview.md)
    + [Konfiguration](./integrations/workfront/configure.md)
    + [Zuordnen von Metadaten](./integrations/workfront/map-metadata.md)
    + [Senden von Dokumenten und Verknüpfen von Assets](./integrations/workfront/link-send.md)

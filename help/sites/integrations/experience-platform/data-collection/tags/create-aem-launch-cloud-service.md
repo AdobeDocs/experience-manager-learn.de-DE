@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Launch-Cloud Service-Konfiguration in AEM
+title: Erstellen einer Launch-Cloud Service-Konfiguration in AEM Sites
 description: Erfahren Sie, wie Sie in AEM eine Launch-Cloud Service-Konfiguration erstellen. Die Launch-Cloud Service-Konfiguration kann dann auf eine bestehende Site angewendet werden und das Laden der Tag-Bibliotheken kann sowohl in der Autoren- als auch in der Veröffentlichungsumgebung beobachtet werden.
 topics: integrations
 audience: administrator
@@ -12,10 +12,12 @@ topic: Integrations
 feature: Integrations
 role: Developer
 level: Intermediate
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---

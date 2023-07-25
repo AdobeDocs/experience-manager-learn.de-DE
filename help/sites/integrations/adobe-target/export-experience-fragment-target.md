@@ -5,17 +5,18 @@ feature: Experience Fragments
 topics: integrations, authoring
 audience: all
 doc-type: feature video
-activity: use
 version: Cloud Service
 kt: 6350
 thumbnail: 41245.jpg
 topic: Integrations
 role: User
 level: Intermediate
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '201'
 ht-degree: 6%
 
 ---
@@ -40,16 +41,16 @@ Der Export von Experience Fragment in Adobe Target ohne die richtigen Berechtigu
 
     ![Target API UI Error](assets/error-target-offer.png)
 
-... und die folgenden Protokollmeldungen im Protokoll `aemerror`:
+... und die folgenden Protokollmeldungen im `aemerror` log:
 
     ![Target API Console Error](assets/target-console-error.png)
 
 #### Auflösung
 
-1. Melden Sie sich bei [Admin Console](https://adminconsole.adobe.com/) mit Administratorrechten für das verwendete Adobe Target-Produktprofil an, aber die AEM.
-2. Wählen Sie __Produkte > Adobe Target > Produktprofil__
-3. Wählen Sie auf der Registerkarte __Integrationen__ die Integration für Ihre AEM als Cloud Service-Umgebung aus (gleicher Name wie das Adobe I/O-Projekt).
-4. Zuweisen der Rolle __Bearbeiter__ oder __Genehmiger__
+1. Anmelden bei [Admin Console](https://adminconsole.adobe.com/) mit Administratorrechten für das verwendete Adobe Target-Produktprofil, aber AEM Integration
+2. Auswählen __Produkte > Adobe Target > Produktprofil__
+3. under __Integrationen__ auf, wählen Sie die Integration für Ihre AEM as a Cloud Service Umgebung aus (gleicher Name wie das Adobe I/O-Projekt).
+4. Zuweisen __Editor__ oder __Genehmiger__ Rolle
 
    ![Target-API-Fehler](assets/target-permissions.png)
 

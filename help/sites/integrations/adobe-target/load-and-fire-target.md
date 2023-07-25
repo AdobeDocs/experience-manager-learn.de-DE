@@ -5,18 +5,19 @@ feature: Core Components, Adobe Client Data Layer
 topics: integrations, administration, development
 audience: administrator, developer
 doc-type: technical video
-activity: setup
 version: Cloud Service
 kt: 6133
 thumbnail: 41243.jpg
 topic: Integrations
 role: Developer
 level: Intermediate
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
-source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 4%
+source-wordcount: '617'
+ht-degree: 8%
 
 ---
 
@@ -28,19 +29,19 @@ Erfahren Sie, wie Sie mit einer Launch-Regel laden, Parameter an Seitenanfragen 
 
 ## Seitenladeregel
 
-Die Adobe Client-Datenschicht ist eine ereignisgesteuerte Datenschicht. Wenn die AEM-Datenschicht geladen wird, wird ein -Ereignis `cmp:show` Trigger. Im Video wird die Regel `Launch Library Loaded` mithilfe eines benutzerdefinierten Ereignisses aufgerufen. Unten finden Sie die Code-Snippets, die im Video für das benutzerspezifische Ereignis sowie für die Datenelemente verwendet werden.
+Die Adobe Client-Datenschicht ist eine ereignisgesteuerte Datenschicht. Wenn die AEM-Datenschicht geladen wird, wird ein -Ereignis Trigger `cmp:show` . Im Video wird die `Launch Library Loaded` -Regel wird mit einem benutzerdefinierten Ereignis aufgerufen. Unten finden Sie die Code-Snippets, die im Video für das benutzerspezifische Ereignis sowie für die Datenelemente verwendet werden.
 
 ### Benutzerdefiniertes Seitenereignis{#page-event}
 
 ![Auf der Seite angezeigte Ereigniskonfiguration und benutzerdefinierter Code](assets/load-and-fire-target-call.png)
 
-Fügen Sie in der Launch-Eigenschaft der **Regel** ein neues **Ereignis** hinzu.
+Fügen Sie in der Launch-Eigenschaft eine neue **Ereignis** der **Regel**
 
 + __Erweiterung:__ Core
 + __Ereignistyp:__ Benutzerspezifischer Code
 + __Name:__ Page Show Event Handler (oder eine Beschreibung)
 
-Tippen Sie auf die Schaltfläche __Editor__ öffnen und fügen Sie das folgende Codefragment ein. Dieser Code __muss__ zur __Ereigniskonfiguration__ und einer nachfolgenden __Aktion__ hinzugefügt werden.
+Tippen Sie auf __Editor öffnen__ und fügen Sie das folgende Codefragment ein. Dieser Code __must__ werden __Ereigniskonfiguration__ und __Aktion__.
 
 ```javascript
 // Define the event handler function
@@ -80,20 +81,20 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-Eine benutzerdefinierte Funktion definiert das `pageShownEventHandler`-Objekt und überwacht die von AEM Kernkomponenten ausgegebenen Ereignisse, leitet die relevanten Informationen von der Kernkomponente ab, packt sie in ein Ereignisobjekt und Trigger das Launch-Ereignis mit den abgeleiteten Ereignisinformationen bei dessen Nutzlast.
+Eine benutzerdefinierte Funktion definiert die `pageShownEventHandler`und überwacht die von AEM Kernkomponenten ausgegebenen Ereignisse, leitet die relevanten Informationen von der Kernkomponente ab, packt sie in ein Ereignisobjekt und Trigger das Launch-Ereignis mit den abgeleiteten Ereignisinformationen bei dessen Nutzlast.
 
-Die Launch-Regel wird mit der Funktion `trigger(...)` von Launch ausgelöst, die __nur__ ist, die in der Codeausschnitt-Definition eines Regel-Ereignisses mit benutzerspezifischem Code verfügbar ist.
+Die Launch-Regel wird mithilfe der Launch-Funktion `trigger(...)` Funktion, die __only__ in der Codeausschnitt-Definition eines Ereignisses mit benutzerspezifischem Code einer Regel verfügbar.
 
-Die Funktion `trigger(...)` akzeptiert ein Ereignisobjekt als Parameter, der wiederum in Launch-Datenelementen durch einen anderen reservierten Namen in Launch namens `event` verfügbar gemacht wird. Datenelemente in Launch können jetzt auf Daten aus diesem Ereignisobjekt aus dem `event` -Objekt verweisen, indem eine Syntax wie `event.component['someKey']` verwendet wird.
+Die `trigger(...)` -Funktion nimmt ein Ereignisobjekt als Parameter an, der wiederum in Launch-Datenelementen durch einen anderen reservierten Namen in Launch mit dem Namen verfügbar gemacht wird. `event`. Datenelemente in Launch können jetzt auf Daten aus diesem Ereignisobjekt aus dem `event` -Objekt mit Syntax wie `event.component['someKey']`.
 
-Wenn `trigger(...)` außerhalb des Kontexts des Ereignistyps &quot;Benutzerspezifischer Code&quot;eines Ereignisses verwendet wird (z. B. in einer Aktion), wird der JavaScript-Fehler `trigger is undefined` auf der mit der Launch-Eigenschaft integrierten Website ausgelöst.
+Wenn `trigger(...)` außerhalb des Kontexts des Ereignistyps &quot;Benutzerspezifischer Code&quot;eines Ereignisses verwendet wird (z. B. in einer Aktion), wird der JavaScript-Fehler `trigger is undefined` wird auf der Website ausgelöst, die mit der Launch-Eigenschaft integriert ist.
 
 
 ### Datenelemente
 
 ![Datenelemente](assets/data-elements.png)
 
-Adobe Launch-Datenelemente ordnen die Daten aus dem Ereignisobjekt [, das im benutzerspezifischen Seitenanzeigeereignis](#page-event) ausgelöst wird, den in Adobe Target verfügbaren Variablen über den Datenelementtyp &quot;Benutzerspezifischer Code&quot;der Haupterweiterung zu.
+Adobe Launch-Datenelemente ordnen die Daten aus dem Ereignisobjekt zu [ausgelöst im benutzerspezifischen Ereignis &quot;Seite angezeigt&quot;](#page-event) auf Variablen, die in Adobe Target über den Datenelementtyp &quot;Benutzerspezifischer Code&quot;der Haupterweiterung verfügbar sind.
 
 #### Seiten-ID-Datenelement
 
@@ -146,7 +147,7 @@ Dieser Code gibt den Titel der AEM-Seite zurück.
 #### Lösung
 
 Target-Kunden verwenden mitunter Cloud-basierte Instanzen mit Target zum Testen oder für einfache Machbarkeitsprüfungen. Diese Domänen und viele andere sind Teil der öffentlichen Suffix-Liste .
-Modere Browser speichern keine Cookies, wenn Sie diese Domänen verwenden, es sei denn, Sie passen die Einstellung `cookieDomain` mit `targetGlobalSettings()` an.
+Modere Browser speichern keine Cookies, wenn Sie diese Domänen verwenden, es sei denn, Sie passen die `cookieDomain` -Einstellung verwenden `targetGlobalSettings()`.
 
 ```
 window.targetGlobalSettings = {  
@@ -160,7 +161,7 @@ window.targetGlobalSettings = {
 
 ## Unterstützende Links
 
-+ [Dokumentation zur Adobe Client-Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki)
++ [Adobe Client-Datenschicht-Dokumentation](https://github.com/adobe/adobe-client-data-layer/wiki)
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
 + [Verwenden der Dokumentation zur Adobe Client-Datenschicht und zu Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de)

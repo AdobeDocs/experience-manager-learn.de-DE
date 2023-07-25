@@ -7,11 +7,13 @@ kt: 6035
 topic: Development
 role: Developer
 level: Intermediate
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 20093733-2d19-4405-b453-1a8c2722adeb
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 0%
+source-wordcount: '100'
+ht-degree: 8%
 
 ---
 
@@ -21,3 +23,7 @@ Erstellen Sie einen AEM Workflow mit der Komponente Dokument signieren . Verwend
 In diesem Video werden die verschiedenen Schritte erläutert, die zum Erstellen eines effektiven Workflows zum Senden von Dokumenten zur Signatur erforderlich sind.
 
 >[!VIDEO](https://video.tv.adobe.com/v/38182?quality=12&learn=on)
+
+## Nächste Schritte
+
+[Erstellen und Konfigurieren von adaptiven Formularen](./create-and-configure-adaptive-form.md)

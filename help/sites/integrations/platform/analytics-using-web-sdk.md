@@ -1,6 +1,6 @@
 ---
-title: Integrieren von Adobe Analytics mithilfe des Platform Web SDK
-description: Erfahren Sie mehr über den modernen Ansatz zur Integration von Adobe Experience Manager (AEM) und Adobe Analytics mithilfe des Platform Web SDK. Dieses Tutorial führt Sie durch die Erfassung von Seitenansichts- und CTA-Klickdaten, um Dateneinblicke in Adobe Analytics Workspace zu erhalten.
+title: Integrieren von AEM Sites und Adobe Analytics mit dem Platform Web SDK
+description: Integrieren Sie AEM Sites und Adobe Analytics mithilfe des modernen Platform Web SDK-Ansatzes.
 version: Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
@@ -10,15 +10,17 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
 jira: KT-13328
 thumbnail: KT-13328.jpeg
-source-git-commit: 542313c0da6f5eab5befe0da1b80ab38948156ac
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
+exl-id: 9f54995f-4ce7-45f2-9021-6fdfe42ff89a
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1637'
 ht-degree: 3%
 
 ---
 
-
-# Integrieren von Adobe Analytics mithilfe des Platform Web SDK
+# Integrieren von AEM Sites und Adobe Analytics mit dem Platform Web SDK
 
 Lernen Sie die **moderner Ansatz** Informationen zur Integration von Adobe Experience Manager (AEM) und Adobe Analytics mithilfe des Platform Web SDK. Dieses umfassende Tutorial führt Sie durch den Prozess der nahtlosen Erfassung [WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) Seitenansicht und CTA-Klickdaten. Erhalten Sie wertvolle Einblicke, indem Sie die erfassten Daten in Adobe Analysis Workspace visualisieren, wo Sie verschiedene Metriken und Dimensionen untersuchen können. Erkunden Sie außerdem den Platform-Datensatz, um die Daten zu überprüfen und zu analysieren. Nehmen Sie an dieser Journey teil, um die Macht von AEM und Adobe Analytics für datengestützte Entscheidungen zu nutzen.
 
@@ -87,7 +89,7 @@ Um diese Einblicke aus den erfassten Daten zu analysieren, zu sammeln und mit an
 
 Um mehr über die Einrichtung und Konzepte von Analytics zu erfahren, werden die folgenden Ressourcen dringend empfohlen:
 
-+ [Berichtssuite](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html?lang=de)
++ [Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html?lang=de)
 + [Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)
 + [Erfolgsereignisse](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html)
 + [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)
@@ -272,7 +274,7 @@ Durch die Implementierung der empfohlenen Schritte und die Verwendung der bereit
 
 + [Experience Platform Web SDK integrieren](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html)
 + [Verwenden der Adobe Client-Datenschicht in Verbindung mit den Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=de)
-+ [Integrieren von Experience Platform-Datenerfassungs-Tags und -AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
++ [Integrieren von Experience Platform-Datenerfassungs-Tags und -AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=de)
 + [Übersicht über das Adobe Experience Platform Web SDK und Edge Network](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
 + [Tutorials zur Datenerfassung](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
 + [Übersicht über Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

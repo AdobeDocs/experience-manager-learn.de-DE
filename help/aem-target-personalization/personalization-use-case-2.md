@@ -7,10 +7,12 @@ feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 53cafd06-3a0a-4995-947d-179146b89234
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '589'
 ht-degree: 2%
 
 ---
@@ -57,7 +59,6 @@ Für diese Übung müssen die folgenden Benutzer beteiligt sein und einige Aufga
 1. Marketer erstellt eine A/B-Zielaktivität mit dem Umleitungsangebot als Erlebnis und 100 % Website-Traffic auf die neue Startseite, wobei Erfolgsziel und Metriken hinzugefügt werden.
    1. Navigieren Sie im Adobe Target-Fenster zu **Tätigkeiten** Registerkarte.
    2. Klicken **Aktivität erstellen** und wählen Sie den Aktivitätstyp als **A/B-Test**
-
       ![Adobe Target - Aktivität erstellen](assets/personalization-use-case-2/create-ab-activity.png)
    3. Wählen Sie die **Web** Kanal und wählen Sie die **Visual Experience Composer**.
    4. Geben Sie die **Aktivitäts-URL** und klicken **Nächste** , um den Visual Experience Composer zu öffnen.

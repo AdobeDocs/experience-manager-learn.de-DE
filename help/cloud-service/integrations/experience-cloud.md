@@ -10,11 +10,13 @@ kt: 10718
 thumbnail: KT-10718.png
 last-substantial-update: 2022-11-17T00:00:00Z
 mini-toc-levels: 1
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
-source-git-commit: b3cc9c4fbd36cdf5be46e4546a174fea0c8da05c
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '922'
-ht-degree: 21%
+source-wordcount: '928'
+ht-degree: 22%
 
 ---
 
@@ -23,24 +25,24 @@ ht-degree: 21%
 Erfahren Sie mehr über AEM von as a Cloud Service unterstützten Integrationen mit anderen Adobe Experience Cloud-Produkten.
 Klicken Sie auf das Experience Cloud-Produkt, um eine Dokumentation zur Konfiguration und Verwendung der Integrationen zu erhalten.
 
-|  | AEM Sites | AEM Assets | AEM Forms |
+|                                                                   | AEM Sites | AEM Assets | AEM Forms |
 |-------------------------------------------------------------------|:---------:|:----------:|:---------:|
-| [Acrobat Sign](#adobe-acrobat-sign) |  |  | ✔ |
-| Werbung |  |  |  |
+| [Acrobat Sign](#adobe-acrobat-sign) |           |            | ✔ |
+| Werbung |           |            |          |
 | [Analytics](#adobe-analytics) | ✔ | ✔ | ✔ |
-| Zielgruppen-Manager |  |  |  |
-| Campaign Classic |  |  |  |
-| Campaign Standard |  |  |  |
-| [Commerce](#adobe-commerce) | ✔ | ✔ |  |
-| Customer Journey Analytics |  |  |  |
-| [Experience Platform-Tags](#adobe-experience-platform-tags) | ✔ |  | ✔ |
-| [Journey Optimizer](#adobe-journey-optimizer) |  | ✔ |  |
-| [Learning Manager](#adobe-learning-manager) | ✔ |  |  |
-| Marketo Engage |  |  |  |
-| Echtzeit-Kundendatenplattform |  |  |  |
+| Zielgruppen-Manager |           |            |          |
+| Campaign Classic |           |            |          |
+| Campaign Standard |           |            |          |
+| [Commerce](#adobe-commerce) | ✔ | ✔ |          |
+| Customer Journey Analytics |           |            |          |
+| [Experience Platform-Tags](#adobe-experience-platform-tags) | ✔ |            | ✔ |
+| [Journey Optimizer](#adobe-journey-optimizer) |           | ✔ |          |
+| [Learning Manager](#adobe-learning-manager) | ✔ |            |          |
+| Marketo Engage |           |            |          |
+| Echtzeit-Kundendatenplattform |           |            |          |
 | [Sensei](#adobe-sensei) | ✔ | ✔ | ✔ |
-| [Ziel](#adobe-target) | ✔ |  |  |
-| [Workfront](#adobe-workfront) |  | ✔ |  |
+| [Ziel](#adobe-target) | ✔ |            |          |
+| [Workfront](#adobe-workfront) |           | ✔ |          |
 
 
 ## Adobe Acrobat Sign
@@ -135,7 +137,7 @@ Adobe Sensei bietet KI- und maschinelles Lernen, um den Prozess des Content Mana
 + [Smart-Tags für Bilder](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=de)
 + [Benutzerdefinierte Smart-Tags für Bilder](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/custom-smart-tags.html)
 + [Smart-Tags für Videos](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/video-smart-tags.html)
-+ [Smartes Zuschneiden](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/smart-crop-feature-video-use.html)
++ [Smartes Zuschneiden](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/smart-crop-feature-video-use.html?lang=de)
 + [Visuelle Suche](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search.html)
 
 ### AEM Forms

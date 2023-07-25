@@ -1,6 +1,6 @@
 ---
-title: Generieren von Adobe Experience Platform-FPIDs mit AEM
-description: Erfahren Sie, wie Sie Adobe Experience Platform FPID-Cookies mithilfe von AEM generieren oder aktualisieren.
+title: Generieren von Adobe Experience Platform-FPIDs mit AEM Sites
+description: Erfahren Sie, wie Sie Adobe Experience Platform FPID-Cookies mit AEM Sites generieren oder aktualisieren.
 version: Cloud Service
 feature: Integrations, APIs, Dispatcher
 topic: Integrations, Personalization, Development
@@ -9,16 +9,19 @@ level: Beginner
 last-substantial-update: 2022-10-20T00:00:00Z
 kt: 11336
 thumbnail: kt-11336.jpeg
-source-git-commit: aeeed85ec05de9538b78edee67db4d632cffaaab
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
+exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1040'
 ht-degree: 0%
 
 ---
 
-# Generieren von Experience Platform-FPIDs mit AEM
+# Generieren von Experience Platform-FPIDs mit AEM Sites
 
-Für die Integration von Adobe Experience Manager (AEM) in Adobe Experience Platform (AEP) ist es erforderlich, dass AEM ein eindeutiges Erstanbieter-Geräte-ID-Cookie (FPID) generieren und verwalten, um die Benutzeraktivität eindeutig zu verfolgen.
+Für die Integration von Adobe Experience Manager (AEM) Sites in Adobe Experience Platform (AEP) ist es erforderlich, dass AEM ein eindeutiges Erstanbieter-Geräte-ID-Cookie (FPID) generieren und verwalten, um die Benutzeraktivität eindeutig zu verfolgen.
 
 Lesen Sie die entsprechende Dokumentation unter [Erfahren Sie mehr über die Zusammenarbeit von Erstanbieter-Geräte-IDs und Experience Cloud-IDs](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=en).
 
@@ -150,7 +153,7 @@ Ein benutzerdefiniertes clientseitiges JavaScript muss zur Seite hinzugefügt we
 
 Dieses JavaScript-Skript wird der Seite mit einer der folgenden Methoden hinzugefügt:
 
-+ [Tags in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
++ [Tags in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de)
 + [AEM Client Library](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/clientlibs.html?lang=en)
 
 Der XHR-Aufruf an das benutzerdefinierte AEM-FPID-Servlet ist schnell, wenn auch asynchron, sodass ein Benutzer eine von AEM bereitgestellte Webseite besuchen und wegnavigieren kann, bevor die Anfrage abgeschlossen werden kann.
@@ -203,5 +206,3 @@ Lesen Sie die folgende Experience Platform-Dokumentation für Erstanbieter-Gerä
 + [Erstanbieter-Geräte-IDs generieren](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html)
 + [Erstanbieter-Geräte-IDs im Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html)
 + [Identitätsdaten im Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html)
-
-

@@ -1,6 +1,6 @@
 ---
-title: AEM Headless- und Target-Personalisierung
-description: In diesem Tutorial wird untersucht, wie AEM Inhaltsfragmente nach Adobe Target exportiert und dann zum Personalisieren von Headless-Erlebnissen mit dem Adobe Web SDK verwendet werden.
+title: Integrieren AEM Headless und Target
+description: Erfahren Sie, wie Sie AEM Headless und Adobe Target integrieren, um Headless-Erlebnisse mithilfe des Experience Platform Web SDK zu personalisieren.
 version: Cloud Service
 feature: Content Fragments, Integrations
 topic: Personalization, Headless
@@ -10,30 +10,32 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-09T00:00:00Z
 jira: KT-12433
 thumbnail: KT-12433.jpeg
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 60a3e18a-090f-4b0e-8ba0-d4afd30577dd
-source-git-commit: d81c66e041abbd56e7115f37732550cf10e59359
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1671'
+source-wordcount: '1679'
 ht-degree: 2%
 
 ---
 
-# Personalisieren AEM Headless-Erlebnisse mit Inhaltsfragmenten
+# Integrieren AEM Headless und Target
 
-In diesem Tutorial wird untersucht, wie AEM Inhaltsfragmente nach Adobe Target exportiert und dann zum Personalisieren von Headless-Erlebnissen mit dem Adobe Web SDK verwendet werden. Die [React WKND App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html) wird verwendet, um zu untersuchen, wie eine personalisierte Target-Aktivität mit Inhaltsfragmentangeboten zum Erlebnis hinzugefügt werden kann, um ein WKND-Abenteuer zu fördern.
+Erfahren Sie, wie Sie AEM Headless mit Adobe Target integrieren können, indem Sie AEM Inhaltsfragmente in Adobe Target exportieren und sie verwenden, um Headless-Erlebnisse mithilfe der Datei &quot;legate.js&quot;des Adobe Experience Platform Web SDK zu personalisieren. Die [React WKND App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html) wird verwendet, um zu untersuchen, wie eine personalisierte Target-Aktivität mit Inhaltsfragmentangeboten zum Erlebnis hinzugefügt werden kann, um ein WKND-Abenteuer zu fördern.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416585/?quality=12&learn=on)
 
 In diesem Tutorial werden die Schritte zum Einrichten von AEM und Adobe Target beschrieben:
 
 1. [Erstellen der Adobe IMS-Konfiguration für Adobe Target](#adobe-ims-configuration) in der AEM-Autoreninstanz
-1. [Adobe Target-Cloud Service erstellen](#adobe-target-cloud-service) in der AEM-Autoreninstanz
-1. [Anwenden von Adobe Target Cloud Service auf AEM Assets-Ordner](#configure-asset-folders) in der AEM-Autoreninstanz
-1. [Berechtigung für den Adobe Target-Cloud Service](#permission) in Adobe Admin Console
-1. [Exportieren von Inhaltsfragmenten](#export-content-fragments) von der AEM-Autoreninstanz zu Target
-1. [Erstellen einer Aktivität mit Inhaltsfragmentangeboten](#activity) in Adobe Target
-1. [Erstellen eines Experience Platform-Datenspeichers](#datastream-id) in Experience Platform
-1. [Integrieren der Personalisierung in eine React-basierte AEM Headless-App](#code) unter Verwendung des Adobe Web SDK.
+2. [Adobe Target-Cloud Service erstellen](#adobe-target-cloud-service) in der AEM-Autoreninstanz
+3. [Anwenden von Adobe Target Cloud Service auf AEM Assets-Ordner](#configure-asset-folders) in der AEM-Autoreninstanz
+4. [Berechtigung für den Adobe Target-Cloud Service](#permission) in Adobe Admin Console
+5. [Exportieren von Inhaltsfragmenten](#export-content-fragments) von der AEM-Autoreninstanz zu Target
+6. [Erstellen einer Aktivität mit Inhaltsfragmentangeboten](#activity) in Adobe Target
+7. [Erstellen eines Experience Platform-Datenspeichers](#datastream-id) in Experience Platform
+8. [Integrieren der Personalisierung in eine React-basierte AEM Headless-App](#code) unter Verwendung des Adobe Web SDK.
 
 ## Adobe IMS-Konfiguration{#adobe-ims-configuration}
 

@@ -1,29 +1,30 @@
 ---
-title: Integrieren von Adobe Experience Manager mit Adobe Target
-seo-title: An article covering different ways to integrate Adobe Experience Manager(AEM) with Adobe Target for delivering personalized content.
+title: Integrieren von AEM Sites mit Adobe Target
+seo-title: An article covering different ways to integrate Adobe Experience Manager (AEM) Sites with Adobe Target for delivering personalized content.
 description: Ein Artikel, der die Einrichtung von Adobe Experience Manager mit Adobe Target für verschiedene Szenarien behandelt.
 seo-description: An article covering how to set up Adobe Experience Manager with Adobe Target for different scenarios.
 feature: Experience Fragments
 topic: Personalization
 role: Developer
 level: Intermediate
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Sites 6.5" before-title="false"
 exl-id: 54a30cd9-d94a-4de5-82a1-69ab2263980d
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '661'
 ht-degree: 5%
 
 ---
 
-# Integrieren von Adobe Experience Manager mit Adobe Target
+# Integrieren von AEM Sites mit Adobe Target
 
-In diesem Abschnitt besprechen wir, wie Adobe Experience Manager mit Adobe Target für verschiedene Szenarien eingerichtet wird. Basierend auf Ihrem Szenario und Ihren organisatorischen Anforderungen.
+In diesem Abschnitt besprechen wir, wie Adobe Experience Manager Sites mit Adobe Target für verschiedene Szenarien eingerichtet wird. Basierend auf Ihrem Szenario und Ihren organisatorischen Anforderungen.
 
 * **Adobe Target-JavaScript-Bibliothek hinzufügen (für alle Szenarien erforderlich)**
-Für auf AEM gehostete Sites können Sie Target-Bibliotheken zu Ihrer Site hinzufügen, indem Sie Folgendes verwenden: [Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html). Launch bietet eine einfache Möglichkeit, alle Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse erforderlich sind.
+Für auf AEM gehostete Sites können Sie Target-Bibliotheken zu Ihrer Site hinzufügen, indem Sie Folgendes verwenden: [Launch](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de). Launch bietet eine einfache Möglichkeit, alle Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse erforderlich sind.
 * **Fügen Sie die Adobe Target-Cloud Services hinzu (erforderlich für das Experience Fragments-Szenario)**
-Für AEM Kunden, die Experience Fragment-Angebote zur Erstellung einer Aktivität in Adobe Target verwenden möchten, müssen Sie Adobe Target mithilfe der veralteten Cloud Services in AEM integrieren. Diese Integration ist erforderlich, um Erlebnisfragmente als HTML/JSON-Angebote von AEM an Target zu übertragen und die Angebote mit AEM zu synchronisieren. 
-*Diese Integration ist für die Implementierung von Szenario 1 erforderlich.*
+Für AEM Kunden, die Experience Fragment-Angebote zur Erstellung einer Aktivität in Adobe Target verwenden möchten, müssen Sie Adobe Target mithilfe der veralteten Cloud Services in AEM integrieren. Diese Integration ist erforderlich, um Erlebnisfragmente als HTML/JSON-Angebote von AEM an Target zu übertragen und die Angebote mit AEM zu synchronisieren. *Diese Integration ist für die Implementierung von Szenario 1 erforderlich.*
 
 ## Voraussetzungen
 

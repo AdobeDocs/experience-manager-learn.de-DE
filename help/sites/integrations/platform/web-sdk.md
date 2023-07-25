@@ -1,6 +1,6 @@
 ---
-title: Experience Platform Web SDK integrieren
-description: Erfahren Sie, wie Sie AEM as a Cloud Service mit dem Experience Platform Web SDK integrieren. Dieser grundlegende Schritt ist für die Integration von Adobe Experience Cloud-Produkten wie Adobe Analytics, Target oder neueren innovativen Produkten wie Real-time Customer Data Platform, Customer Journey Analytics und Journey Optimizer von entscheidender Bedeutung.
+title: Integrieren von AEM Sites und Experience Platform Web SDK
+description: Erfahren Sie, wie Sie AEM Sites as a Cloud Service mit dem Experience Platform Web SDK integrieren. Dieser grundlegende Schritt ist für die Integration von Adobe Experience Cloud-Produkten wie Adobe Analytics, Target oder neueren innovativen Produkten wie Real-time Customer Data Platform, Customer Journey Analytics und Journey Optimizer von entscheidender Bedeutung.
 version: Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
@@ -10,15 +10,17 @@ doc-type: Tutorial
 last-substantial-update: 2023-04-26T00:00:00Z
 jira: KT-13156
 thumbnail: KT-13156.jpeg
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: b5182d35-ec38-4ffd-ae5a-ade2dd3f856d
-source-git-commit: 32472c8591aeb47a7c6a7253afd7ad9ab0e45171
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '1340'
-ht-degree: 5%
+source-wordcount: '1354'
+ht-degree: 6%
 
 ---
 
-# Experience Platform Web SDK integrieren
+# Integrieren von AEM Sites und Experience Platform Web SDK
 
 Erfahren Sie, wie Sie AEM as a Cloud Service mit Experience Platform integrieren. [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html). Dieser grundlegende Schritt ist für die Integration von Adobe Experience Cloud-Produkten wie Adobe Analytics, Target oder neueren innovativen Produkten wie Real-time Customer Data Platform, Customer Journey Analytics und Journey Optimizer von entscheidender Bedeutung.
 
@@ -92,75 +94,75 @@ Beim Erstellen und Veröffentlichen der Tag-Bibliothek mithilfe des **Veröffent
 
 + Die `Page Name` Datenelementcode.
 
-   ```javascript
-   if(event && event.component && event.component.hasOwnProperty('dc:title')) {
-       // return value of 'dc:title' from the data layer Page object, which is propogated via 'cmp:show` event
-       return event.component['dc:title'];
-   }
-   ```
+  ```javascript
+  if(event && event.component && event.component.hasOwnProperty('dc:title')) {
+      // return value of 'dc:title' from the data layer Page object, which is propogated via 'cmp:show` event
+      return event.component['dc:title'];
+  }
+  ```
 
 + Die `Site Section` Datenelementcode.
 
-   ```javascript
-   if(event && event.component && event.component.hasOwnProperty('repo:path')) {
-   let pagePath = event.component['repo:path'];
-   
-   let siteSection = '';
-   
-   //Check of html String in URL.
-   if (pagePath.indexOf('.html') > -1) { 
-    siteSection = pagePath.substring(0, pagePath.lastIndexOf('.html'));
-   
-    //replace slash with colon
-    siteSection = siteSection.replaceAll('/', ':');
-   
-    //remove `:content`
-    siteSection = siteSection.replaceAll(':content:','');
-   }
-   
-       return siteSection 
-   }
-   ```
+  ```javascript
+  if(event && event.component && event.component.hasOwnProperty('repo:path')) {
+  let pagePath = event.component['repo:path'];
+  
+  let siteSection = '';
+  
+  //Check of html String in URL.
+  if (pagePath.indexOf('.html') > -1) { 
+   siteSection = pagePath.substring(0, pagePath.lastIndexOf('.html'));
+  
+   //replace slash with colon
+   siteSection = siteSection.replaceAll('/', ':');
+  
+   //remove `:content`
+   siteSection = siteSection.replaceAll(':content:','');
+  }
+  
+      return siteSection 
+  }
+  ```
 
 + Die `Host Name` Datenelementcode.
 
-   ```javascript
-   if(window && window.location && window.location.hostname) {
-       return window.location.hostname;
-   }
-   ```
+  ```javascript
+  if(window && window.location && window.location.hostname) {
+      return window.location.hostname;
+  }
+  ```
 
 + Die `all pages - on load` Regel-Ereignis-Code
 
-   ```javascript
-   var pageShownEventHandler = function(evt) {
-   // defensive coding to avoid a null pointer exception
-   if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-       //trigger Launch Rule and pass event
-       console.debug("cmp:show event: " + evt.eventInfo.path);
-       var event = {
-           //include the path of the component that triggered the event
-           path: evt.eventInfo.path,
-           //get the state of the component that triggered the event
-           component: window.adobeDataLayer.getState(evt.eventInfo.path)
-       };
-   
-       //Trigger the Launch Rule, passing in the new 'event' object
-       // the 'event' obj can now be referenced by the reserved name 'event' by other Launch data elements
-       // i.e 'event.component['someKey']'
-       trigger(event);
-       }
-   }
-   
-   //set the namespace to avoid a potential race condition
-   window.adobeDataLayer = window.adobeDataLayer || [];
-   
-   //push the event listener for cmp:show into the data layer
-   window.adobeDataLayer.push(function (dl) {
-       //add event listener for 'cmp:show' and callback to the 'pageShownEventHandler' function
-       dl.addEventListener("cmp:show", pageShownEventHandler);
-   });
-   ```
+  ```javascript
+  var pageShownEventHandler = function(evt) {
+  // defensive coding to avoid a null pointer exception
+  if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
+      //trigger Launch Rule and pass event
+      console.debug("cmp:show event: " + evt.eventInfo.path);
+      var event = {
+          //include the path of the component that triggered the event
+          path: evt.eventInfo.path,
+          //get the state of the component that triggered the event
+          component: window.adobeDataLayer.getState(evt.eventInfo.path)
+      };
+  
+      //Trigger the Launch Rule, passing in the new 'event' object
+      // the 'event' obj can now be referenced by the reserved name 'event' by other Launch data elements
+      // i.e 'event.component['someKey']'
+      trigger(event);
+      }
+  }
+  
+  //set the namespace to avoid a potential race condition
+  window.adobeDataLayer = window.adobeDataLayer || [];
+  
+  //push the event listener for cmp:show into the data layer
+  window.adobeDataLayer.push(function (dl) {
+      //add event listener for 'cmp:show' and callback to the 'pageShownEventHandler' function
+      dl.addEventListener("cmp:show", pageShownEventHandler);
+  });
+  ```
 
 +++
 
@@ -216,7 +218,7 @@ Gute gemacht! Sie haben die Einrichtung von AEM mit dem Experience Platform Web 
 ## Zusätzliche Ressourcen
 
 + [Verwenden der Adobe Client-Datenschicht in Verbindung mit den Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=de)
-+ [Integrieren von Experience Platform-Datenerfassungs-Tags und -AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
++ [Integrieren von Experience Platform-Datenerfassungs-Tags und -AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=de)
 + [Übersicht über das Adobe Experience Platform Web SDK und Edge Network](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
 + [Tutorials zur Datenerfassung](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
 + [Übersicht über Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

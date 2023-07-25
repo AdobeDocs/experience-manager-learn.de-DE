@@ -1,6 +1,6 @@
 ---
-title: Sammeln von Seitendaten mit Adobe Analytics
-description: Verwenden Sie die ereignisbasierte Adobe Client Data-Ebene, um Daten zur Benutzeraktivität auf einer mit Adobe Experience Manager erstellten Website zu erfassen. Erfahren Sie, wie Sie mithilfe von Tag-Regeln auf diese Ereignisse warten und Daten an eine Adobe Analytics Report Suite senden können.
+title: Integrieren von AEM Sites mit Adobe Analytics mit der Adobe Analytics-Tag-Erweiterung
+description: Integrieren Sie AEM Sites mit Adobe Analytics mithilfe der ereignisgesteuerten Adobe Client Data-Schicht, um Daten zur Benutzeraktivität auf einer mit Adobe Experience Manager erstellten Website zu erfassen. Erfahren Sie, wie Sie mithilfe von Tag-Regeln auf diese Ereignisse warten und Daten an eine Adobe Analytics Report Suite senden können.
 version: Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
@@ -8,22 +8,23 @@ role: Developer
 level: Intermediate
 kt: 5332
 thumbnail: 5332-collect-data-analytics.jpg
+badgeIntegration: label="Integration" type="positive"
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
-source-git-commit: 6a5e62a2a897adc421585e79c5f36f6aa759feaa
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '2447'
-ht-degree: 6%
+source-wordcount: '2470'
+ht-degree: 5%
 
 ---
 
-# Sammeln von Seitendaten mit Adobe Analytics
+# Integrieren von AEM Sites und Adobe Analytics
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Siehe Folgendes [Dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) für eine konsolidierte Übersicht über die terminologischen Änderungen.
 
 
-Erfahren Sie, wie Sie die integrierten Funktionen der [Adobe der Client-Datenschicht mit AEM Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de) , um Daten zu einer Seite in Adobe Experience Manager Sites zu erfassen. [Tags in Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de) und [Adobe Analytics-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=de) werden zum Erstellen von Regeln verwendet, um Seitendaten an Adobe Analytics zu senden.
+Erfahren Sie, wie Sie AEM Sites und Adobe Analytics mit der Adobe Analytics-Tag-Erweiterung integrieren, indem Sie die integrierten Funktionen der [Adobe der Client-Datenschicht mit AEM Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de) , um Daten zu einer Seite in Adobe Experience Manager Sites zu erfassen. [Tags in Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de) und [Adobe Analytics-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=de) werden zum Erstellen von Regeln verwendet, um Seitendaten an Adobe Analytics zu senden.
 
 ## Was Sie erstellen werden {#what-build}
 

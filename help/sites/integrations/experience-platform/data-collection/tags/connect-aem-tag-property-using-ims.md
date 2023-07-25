@@ -1,6 +1,6 @@
 ---
-title: AEM mit Tag-Eigenschaft über IMS verbinden
-description: Erfahren Sie, wie Sie AEM mit der Tag-Eigenschaft über die IMS-Konfiguration in AEM verbinden. Dieses Setup authentifiziert AEM mit der Launch-API und ermöglicht AEM die Kommunikation über die Launch-APIs, um auf Tag-Eigenschaften zuzugreifen.
+title: Verbinden von AEM Sites mit der Tag-Eigenschaft mithilfe von IMS
+description: Erfahren Sie, wie Sie AEM Sites mit der Tag-Eigenschaft über die IMS-Konfiguration in AEM verbinden. Dieses Setup authentifiziert AEM mit der Launch-API und ermöglicht AEM die Kommunikation über die Launch-APIs, um auf Tag-Eigenschaften zuzugreifen.
 topics: integrations
 audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
@@ -12,15 +12,17 @@ topic: Integrations
 feature: Integrations
 role: Developer
 level: Intermediate
+badgeIntegration: label="Integration" type="positive"
+badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 92dbd185-bad4-4a4d-b979-0d8f5d47c54b
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '313'
 ht-degree: 2%
 
 ---
 
-# AEM mit Tag-Eigenschaft über IMS verbinden{#connect-aem-and-tag-property-using-ims}
+# Verbinden von AEM Sites mit der Tag-Eigenschaft mithilfe von IMS{#connect-aem-and-tag-property-using-ims}
 
 >[!NOTE]
 >
