@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 695cccfdd03618505b2d3419b1ad82d8dbd0a122
+source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 85%
+source-wordcount: '1015'
+ht-degree: 82%
 
 ---
 
@@ -248,6 +248,15 @@ ht-degree: 85%
       + [Speichern von Formulardaten im Azure-Speicher](./forms/forms-cs-azure-portal/create-af.md)
       + [Vorfüllen eines Formulars](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [Abfragesendungen](./forms/forms-cs-azure-portal/query-submitted-data.md)
+   + Speichern und Ausfüllen des Formulars fortsetzen{#prefill-azure-storage}
+      + [1 - Einführung](./forms/prefill-azure-storage/introduction.md)
+      + [2 - Seitenkomponente erstellen](./forms/prefill-azure-storage/page-component.md)
+      + [3 - Erstellen einer Vorlage für ein adaptives Formular](./forms/prefill-azure-storage/associate-page-component.md)
+      + [4 - Erstellen der Azure Storage-Integration](./forms/prefill-azure-storage/create-fdm.md)
+      + [5 - Erstellen der SendGrid-Integration](./forms/prefill-azure-storage/send-grid-fdm.md)
+      + [6 - Erstellen des adaptiven Formulars](./forms/prefill-azure-storage/create-af.md)
+      + [7 - Bereitstellen der Beispiel-Assets](./forms/prefill-azure-storage/deploy-sample-assets.md)
+
    + Erstellen eines Workflows für die Überprüfung{#create-aem-workflow}
       + [Externalisieren des Workflow-Speichers](./forms/create-aem-workflow/externalize-workflow.md)
       + [Erstellen eines Workflow-Modells](./forms/create-aem-workflow/create-workflow.md)
