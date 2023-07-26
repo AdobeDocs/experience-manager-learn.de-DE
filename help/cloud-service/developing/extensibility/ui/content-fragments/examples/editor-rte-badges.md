@@ -10,9 +10,9 @@ jira: KT-13466
 thumbnail: KT-13466.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-source-git-commit: c965d5ff3f49f4859779e657674dab8602fb831b
+source-git-commit: 6a82bbb2bbfc95e3292735ac8490eecd5e7ddb84
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '781'
 ht-degree: 0%
 
 ---
@@ -20,19 +20,21 @@ ht-degree: 0%
 
 # Hinzufügen von Abzeichen zum Rich-Text-Editor (RTE)
 
+Erfahren Sie, wie Sie im Inhaltsfragment-Editor Abzeichen zum Rich-Text-Editor (RTE) hinzufügen AEM.
+
 >[!VIDEO](https://video.tv.adobe.com/v/3420831?quality=12&learn=on)
 
 [Rich-Text-Editor-Badge](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/)  sind Erweiterungen, die Text im Rich-Text-Editor (RTE) nicht bearbeitbar machen. Das bedeutet, dass ein als solches deklariertes Zeichen nur vollständig entfernt und nicht teilweise bearbeitet werden kann. Diese Abzeichen unterstützen auch eine spezielle Färbung im RTE, die den Inhaltsautoren deutlich zeigt, dass der Text ein Abzeichen ist und daher nicht bearbeitbar ist. Darüber hinaus bieten sie visuelle Hinweise zur Bedeutung des Badge-Textes.
 
 Der häufigste Anwendungsfall für RTE-Abzeichen besteht darin, diese zusammen mit [RTE-Widgets](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/). Dadurch können Inhalte, die vom RTE-Widget in den RTE eingefügt werden, nicht bearbeitet werden.
 
-In der Regel werden die Abzeichen in Verbindung mit den Widgets verwendet, um den dynamischen Inhalt hinzuzufügen, der eine externe Systemabhängigkeit aufweist, aber _Inhaltsautoren können nicht ändern_ den hinzugefügten dynamischen Inhalt, um die Integrität zu wahren. Sie können nur als ganzes Element entfernt werden.
+In der Regel werden die Abzeichen in Verbindung mit den Widgets verwendet, um den dynamischen Inhalt hinzuzufügen, der eine externe Systemabhängigkeit aufweist, aber _Inhaltsautoren können nicht ändern_ den hinzugefügten dynamischen Inhalt zur Wahrung der Integrität. Sie können nur als ganzes Element entfernt werden.
 
 Die **Badges** werden der **RTE** im Inhaltsfragment-Editor mit der `rte` Erweiterungspunkt. Verwenden `rte` des Erweiterungspunkts `getBadges()` -Methode werden ein oder mehrere Abzeichen hinzugefügt.
 
-Dieses Beispiel zeigt, wie Sie ein Widget mit dem Namen _Großgruppenbuchungs-Kundendienst_ , um die WKND-abenteuerspezifischen Kundendienstdetails wie **Name des Vertreters** und **Telefonnummer** in einem RTE-Inhalt. Verwenden der Badges-Funktion **Telefonnummer** hergestellt **nicht bearbeitbar** WKND-Inhaltsautoren können jedoch den repräsentativen Namen bearbeiten.
+Dieses Beispiel zeigt, wie Sie ein Widget mit dem Namen _Große Gruppenbuchungen - Kundendienst_ , um die WKND-abenteuerspezifischen Kundendienstdetails wie **Name des Vertreters** und **Telefonnummer** in einem RTE-Inhalt. Verwenden der Badges-Funktion **Telefonnummer** hergestellt wird **nicht bearbeitbar** WKND-Inhaltsautoren können jedoch den repräsentativen Namen bearbeiten.
 
-Außerdem wird die **Telefonnummer** anders formatiert (blau), was ein zusätzliches Anwendungsbeispiel für die Badges-Funktion ist.
+Außerdem wird die **Telefonnummer** anders formatiert (blau), was ein zusätzliches Nutzungsszenario für die Badges-Funktion ist.
 
 Um die Dinge einfach zu halten, verwendet dieses Beispiel den [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) Framework zum Entwickeln der Widget- oder Dialogbenutzeroberfläche und der hartcodierten WKND-Kundendienst-Telefonnummern. Um die Nichtbearbeitung und den anderen Stil-Aspekt des Inhalts zu steuern, muss die `#` wird in der `prefix` und `suffix` -Attribut der Badges-Definition.
 
@@ -46,7 +48,7 @@ Dieses Beispiel erstreckt sich auf den Erweiterungspunkt `rte` , um dem RTE im I
 
 ## Beispielerweiterung
 
-Im folgenden Beispiel wird eine _Großgruppenbuchungs-Kundendienst_ Widget. Durch Drücken der `{` -Taste im RTE-Kontextmenü geöffnet. Durch Auswahl der _Großgruppenbuchungs-Kundendienst_ im Kontextmenü das benutzerdefinierte Modal geöffnet.
+Im folgenden Beispiel wird eine _Große Gruppenbuchungen - Kundendienst_ Widget. Durch Drücken der `{` -Taste im RTE-Kontextmenü geöffnet. Durch Auswahl der _Große Gruppenbuchungen - Kundendienst_ im Kontextmenü das benutzerdefinierte Modal geöffnet.
 
 Sobald die gewünschte Kundendienstnummer aus dem Modal hinzugefügt wurde, machen die Abzeichen die _Telefonnummer nicht bearbeitbar_ und formatiert es in blauer Farbe.
 
@@ -134,7 +136,7 @@ In der Haupt-React-Komponente `App.js`, fügen Sie die `largeBookingsCustomerSer
 
 Die Benutzeroberfläche des Widgets oder Dialogfelds wird mit der [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) Framework.
 
-Der React-Komponenten-Code beim Hinzufügen der Kundendienstdetails umschließen die Telefonnummernvariable mit der `#` registriertes Zeichen, um es in Badges zu konvertieren, z. B. `#${phoneNumber}#`, sodass es nicht bearbeitbar ist.
+Der React-Komponenten-Code beim Hinzufügen der Kundendienstdetails umschließen die Telefonnummernvariable mit der `#` registrierte Zeichen verwenden, um sie in Abzeichen wie `#${phoneNumber}#`, sodass es nicht bearbeitbar ist.
 
 Hier sind die wichtigsten Highlights von `LargeBookingsCustomerService` code:
 
@@ -143,7 +145,7 @@ Hier sind die wichtigsten Highlights von `LargeBookingsCustomerService` code:
 + Die `guestConnection` wird mithilfe der `useEffect` [React-Hook](https://react.dev/reference/react/useEffect) und als Komponentenstatus verwaltet werden. Sie wird zur Kommunikation mit dem AEM-Host verwendet.
 + Die `handleCustomerServiceChange` -Funktion ruft den repräsentativen Namen und die Telefonnummer ab und aktualisiert die Komponentenstatusvariablen.
 + Die `addCustomerServiceDetails` Funktion verwenden `guestConnection` -Objekt stellt die auszuführende RTE-Anweisung bereit. In diesem Fall `insertContent` -Anweisung und HTML-Code-Snippet.
-+ Um **Telefonnummer nicht bearbeitbar** mit Badges, die `#` Sonderzeichen vor und nach dem `phoneNumber` beispielsweise `...<div><p>Phone Number: #${phoneNumber}#</strong></p></div>`.
++ Um **Telefonnummer nicht bearbeitbar** mit Badges, die `#` Sonderzeichen vor und nach dem `phoneNumber` -Variable, z. B. `...<div><p>Phone Number: #${phoneNumber}#</strong></p></div>`.
 
 `src/aem-cf-editor-1/web-src/src/components/LargeBookingsCustomerService.js`
 

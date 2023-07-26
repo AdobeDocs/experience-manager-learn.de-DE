@@ -11,14 +11,16 @@ thumbnail: KT-13464.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 2b72c282-bce8-4f2a-bce6-f2f31e96ec88
-source-git-commit: 6f537a0c7605b96f6c6b43ff8c5bf634369171cc
+source-git-commit: 6a82bbb2bbfc95e3292735ac8490eecd5e7ddb84
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '418'
 ht-degree: 1%
 
 ---
 
 # Hinzufügen benutzerdefinierter Schaltflächen zur Rich-Text-Editor (RTE)-Symbolleiste
+
+Erfahren Sie, wie Sie eine benutzerdefinierte Schaltfläche zur Rich-Text-Editor (RTE)-Symbolleiste im AEM Inhaltsfragment-Editor hinzufügen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420768?quality=12&learn=on)
 
@@ -49,7 +51,7 @@ Der Code zeigt, wie Sie die benutzerdefinierte Schaltfläche mit einem Symbol hi
 + Die Definition der RTE-Symbolleiste in `getCustomButtons()` Funktion mit `id, tooltip and icon` -Attribute.
 + Der Klick-Handler für die Schaltfläche im `onClick()` -Funktion.
 + Die Click-Handler-Funktion erhält die `state` -Objekt als Argument verwenden, um den RTE-Inhalt im HTML- oder Textformat abzurufen. In diesem Beispiel wird sie jedoch nicht verwendet.
-+ Die Click-Handler-Funktion gibt ein Anweisungen-Array zurück. Dieses Array hat ein Objekt mit `type` und `value` -Attribute. Um den Inhalt einzufügen, muss die `value` -Attribut-HTML-Codefragment, die `type` -Attribut verwendet `insertContent`. Wenn es einen Anwendungsfall gibt, um den Inhalt zu ersetzen, verwenden Sie den `replaceContent` Anweisungstyp.
++ Die Click-Handler-Funktion gibt ein Anweisungen-Array zurück. Dieses Array hat ein Objekt mit `type` und `value` -Attribute. Um den Inhalt einzufügen, muss die `value` -Attribut-HTML-Codeausschnitt, die `type` -Attribut verwendet die `insertContent`. Wenn es einen Anwendungsfall gibt, um den Inhalt zu ersetzen, verwenden Sie den `replaceContent` Anweisungstyp.
 
 Die `insertContent` -Wert eine HTML-Zeichenfolge ist, `<div class=\"cmp-contentfragment__element-tip\"><div>TIP</div><div>Add your tip text here...</div></div>`. Die CSS-Klassen `cmp-contentfragment__element-tip` verwendet, um den Wert anzuzeigen, werden nicht im Widget definiert, sondern im Web-Erlebnis implementiert, in dem dieses Inhaltsfragment-Feld angezeigt wird.
 
