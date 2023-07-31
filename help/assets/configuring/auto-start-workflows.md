@@ -10,7 +10,7 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2023-05-14T00:00:00Z
 exl-id: 5e423f2c-90d2-474f-8bdc-fa15ae976f18
-source-git-commit: 861b171b8ebbcf9565bdc94fb84a043ecb99c00a
+source-git-commit: 929fd045b81652463034b54c557de04df3d4e64a
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 2%
@@ -19,10 +19,13 @@ ht-degree: 2%
 
 # Automatisch startende Workflows
 
-Automatisch startende Workflows erweitern die Asset-Verarbeitung in AEM as a Cloud Service durch das automatische Aufrufen eines benutzerdefinierten Workflows beim Hochladen oder erneuten Verarbeiten nach Abschluss der Asset-Verarbeitung.
+Automatisch startende Workflows erweitern die Asset-Verarbeitung in AEM as a Cloud Service, indem beim Hochladen oder erneuten Verarbeiten automatisch ein benutzerdefinierter Workflow aufgerufen wird, sobald die Asset-Verarbeitung abgeschlossen ist.
 
 >[!VIDEO](https://video.tv.adobe.com/v/37323?quality=12&learn=on)
-> `Notice`: Verwenden Sie Workflows zum automatischen Starten, um die Nachbearbeitung von Assets anzupassen, anstatt Workflow-Starter zu verwenden. Automatisch startende Workflows sind _only_ Wird aufgerufen, sobald die Verarbeitung eines Assets abgeschlossen ist, anstatt von Startern, die während der Asset-Verarbeitung mehrmals aufgerufen werden können.
+
+>[!NOTE]
+>
+>Verwenden Sie Workflows zum automatischen Starten, um die Nachbearbeitung von Assets anzupassen, anstatt Workflow-Starter zu verwenden. Automatisch startende Workflows sind _only_ Wird aufgerufen, sobald die Verarbeitung eines Assets abgeschlossen ist, anstatt von Startern, die während der Asset-Verarbeitung mehrmals aufgerufen werden können.
 
 ## Anpassen des Nachbearbeitungs-Workflows
 
@@ -37,7 +40,11 @@ Um den Nachbearbeitungs-Workflow anzupassen, kopieren Sie die standardmäßige A
    ![Ändern des Namens](assets/auto-start-workflow-change-name.png)
 6. Fügen Sie die Schritte hinzu, um Ihre Geschäftsanforderungen zu erfüllen. Fügen Sie in diesem Fall eine Aufgabe hinzu, wenn die Verarbeitung der Assets abgeschlossen ist. Stellen Sie sicher, dass der letzte Schritt des Workflows immer der _Workflow abgeschlossen_ Schritt<br/>
    ![Hinzufügen von Workflow-Schritten](assets/auto-start-workflow-customize-steps.png)
-   > `Note`: Automatisch startende Workflows werden bei jedem Hochladen oder erneuten Verarbeiten von Assets ausgeführt. Überlegen Sie daher sorgfältig die Auswirkungen der Skalierung von Workflow-Schritten, insbesondere bei Massenvorgängen wie [Massenimporte](../../cloud-service/migration/bulk-import.md) oder Migrationen.
+
+   >[!NOTE]
+   >
+   >Automatisch startende Workflows werden bei jedem Hochladen oder erneuten Verarbeiten von Assets ausgeführt. Überlegen Sie daher sorgfältig die Auswirkungen der Skalierung von Workflow-Schritten, insbesondere bei Massenvorgängen wie [Massenimporte](../../cloud-service/migration/bulk-import.md) oder Migrationen.
+
 7. Wählen Sie die _Synchronisieren_ Schaltfläche zum Speichern Ihrer Änderungen und Synchronisieren des Workflow-Modells
 
 ## Verwenden eines benutzerdefinierten Nachbearbeitungs-Workflows
