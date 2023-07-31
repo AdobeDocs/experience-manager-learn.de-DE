@@ -9,11 +9,12 @@ role: Developer
 level: Beginner
 kt: 10721
 thumbnail: KT-10721.jpg
-last-substantial-update: 2022-10-03T00:00:00Z
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+last-substantial-update: 2023-05-10T00:00:00Z
+exl-id: 4f67bb37-416a-49d9-9d7b-06c3573909ca
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
 workflow-type: tm+mt
-source-wordcount: '802'
-ht-degree: 97%
+source-wordcount: '811'
+ht-degree: 93%
 
 ---
 
@@ -34,7 +35,7 @@ Folgende Tools sollten lokal installiert werden:
 
 ## AEM-Anforderungen
 
-Die Next.js-App funktioniert mit den folgenden AEM-Implementierungsoptionen. Alle Implementierungen erfordern [WKND Shared v2.1.0+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) oder [WKND Site v2.1.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) in der AEM as a Cloud Service Umgebung installiert werden.
+Die Next.js-App funktioniert mit den folgenden AEM-Bereitstellungsoptionen. Alle Implementierungen erfordern [WKND Shared v3.0.0+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) oder [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) in der AEM as a Cloud Service Umgebung installiert werden.
 
 Diese Next.js-Beispiel-App ist für die Verbindung mit dem __AEM Publish__-Service konzipiert.
 
@@ -111,43 +112,73 @@ Gemäß den Best Practices von AEM Headless verwendet die Next.js-App AEM GraphQ
 + `wknd/adventures-all` persistierte Abfrage, die alle Adventures in AEM mit einer gekürzten Reihe von Eigenschaften zurückgibt. Diese persistierte Abfrage bestimmt die Erlebnisliste der ersten Ansicht.
 
 ```
-# Retrieves a list of all adventures
-{
-    adventureList {
-        items {
-            _path
-            slug
-            title
-            price
-            tripLength
-            primaryImage {
-                ... on ImageRef {
-                _path
-                mimeType
-                width
-                height
-                }
-            }
+# Retrieves a list of all Adventures
+#
+# Optional query variables:
+# - { "offset": 10 }
+# - { "limit": 5 }
+# - { 
+#    "imageFormat": "JPG",
+#    "imageWidth": 1600,
+#    "imageQuality": 90 
+#   }
+query ($offset: Int, $limit: Int, $sort: String, $imageFormat: AssetTransformFormat=JPG, $imageWidth: Int=1200, $imageQuality: Int=80) {
+  adventureList(
+    offset: $offset
+    limit: $limit
+    sort: $sort
+    _assetTransform: {
+      format: $imageFormat
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+  }) {
+    items {
+      _path
+      slug
+      title
+      activity
+      price
+      tripLength
+      primaryImage {
+        ... on ImageRef {
+          _path
+          _dynamicUrl
         }
+      }
     }
+  }
 }
 ```
 
 + Die persistierte Abfrage `wknd/adventure-by-slug` gibt ein einzelnes Adventure durch `slug` (eine benutzerdefinierte Eigenschaft, die ein Adventure eindeutig identifiziert) mit einer vollständigen Reihe von Eigenschaften zurück. Diese persistierte Abfrage ermöglicht Detailansichten des Adventures.
 
 ```
-# Retrieves an adventure Content Fragment based on it's slug
-# Example query variables: 
-# {"slug": "bali-surf-camp"} 
-# Technically returns an adventure list but since the the slug 
-# property is set to be unique in the CF Model, only a single CF is expected
+# Retrieves an Adventure Fragment based on it's unique slug.
+#
+# Required query variables:
+# - {"slug": "bali-surf-camp"}
+#
+# Optional query variables:
+# - { 
+#     "imageFormat": "JPG",
+#     "imageSeoName": "my-adventure",
+#     "imageWidth": 1600,
+#     "imageQuality": 90 
+#   }
+#  
+# This query returns an adventure list but since the the slug property is set to be unique in the Content Fragment Model, only a single Content Fragment is expected.
 
-query($slug: String!) {
-  adventureList(filter: {
-        slug: {
-          _expressions: [ { value: $slug } ]
-        }
-      }) {
+query ($slug: String!, $imageFormat:AssetTransformFormat=JPG, $imageSeoName: String, $imageWidth: Int=1200, $imageQuality: Int=80) {
+  adventureList(
+    filter: {slug: {_expressions: [{value: $slug}]}}
+    _assetTransform: {
+      format: $imageFormat
+      seoName: $imageSeoName
+      width: $imageWidth
+      quality: $imageQuality
+      preferWebp: true
+  }) {
     items {
       _path
       title
@@ -162,22 +193,22 @@ query($slug: String!) {
       primaryImage {
         ... on ImageRef {
           _path
-          mimeType
-          width
-          height
+          _dynamicUrl
         }
       }
       description {
         json
         plaintext
+        html
       }
       itinerary {
         json
         plaintext
+        html
       }
     }
     _references {
-      ...on AdventureModel {
+      ... on AdventureModel {
         _path
         slug
         title
@@ -218,9 +249,9 @@ async getAllAdventures() {
 
 // And so on, and so forth ... 
 
-async getAdventureSlugs() { ... }
+async getAdventureSlugs(queryVariables) { ... }
 
-async getAdventuresBySlug(slug) { ... }
+async getAdventuresBySlug(slug, queryVariables) { ... }
 ...
 ```
 
@@ -230,21 +261,20 @@ Die Next.js-App verwendet zwei Seiten, um die Adventure-Daten darzustellen.
 
 + `src/pages/index.js`
 
-   Verwendet [getServerSideProps() von Next.js](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props), um `getAllAdventures()` aufzurufen und zeigt jedes Adventure als Karte an.
+  Verwendet [getServerSideProps() von Next.js](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props), um `getAllAdventures()` aufzurufen und zeigt jedes Adventure als Karte an.
 
-   Die Verwendung von `getServerSiteProps()` ermöglicht das serverseitige Rendering dieser Next.js-Seite.
+  Die Verwendung von `getServerSiteProps()` ermöglicht das serverseitige Rendering dieser Next.js-Seite.
 
 + `src/pages/adventures/[...slug].js`
 
-   Eine [Dynamische Route von Next.js](https://nextjs.org/docs/routing/dynamic-routes), die die Details eines einzelnen Adventures anzeigt. Diese dynamische Route ruft die Daten jedes Adventures mit [Next.js&#39;s getStaticProps()](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) über einen Aufruf an `getAdventureBySlug(..)` unter Verwendung des `slug`-Parameters ab, der über die Adventure-Auswahl auf der `adventures/index.js`-Seite übergeben wurde.
+  Eine [Dynamische Route von Next.js](https://nextjs.org/docs/routing/dynamic-routes), die die Details eines einzelnen Adventures anzeigt. Diese dynamische Route ruft die Daten jedes Abenteuers mithilfe von [getStaticProps() von Next.js](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) über einen Aufruf an `getAdventureBySlug(slug, queryVariables)` mithilfe der `slug` Param, der über die Abenteuerauswahl auf der `adventures/index.js` und `queryVariables` um das Bildformat, die Breite und die Qualität zu steuern.
 
-   Die dynamische Route ist in der Lage, die Details für alle Adventures im Voraus abzurufen, indem sie [getStaticPaths() von Next.js](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) verwendet und alle möglichen Routen-Permutationen auf der Grundlage der vollständigen Liste der Adventures, die von der GraphQL-Abfrage `getAdventurePaths()` zurückgegeben werden, auffüllt.
+  Die dynamische Route ist in der Lage, die Details für alle Adventures im Voraus abzurufen, indem sie [getStaticPaths() von Next.js](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) verwendet und alle möglichen Routen-Permutationen auf der Grundlage der vollständigen Liste der Adventures, die von der GraphQL-Abfrage `getAdventurePaths()` zurückgegeben werden, auffüllt.
 
-   Die Verwendung von `getStaticPaths()` und `getStaticProps(..)` ermöglichte die statische Site-Generierung dieser Next.js-Seiten.
+  Die Verwendung von `getStaticPaths()` und `getStaticProps(..)` ermöglichte die statische Site-Generierung dieser Next.js-Seiten.
 
-## Implementierungskonfiguration
+## Bereitstellungskonfiguration
 
 Next.js-Apps, insbesondere im Zusammenhang mit Server-seitigem Rendering (SSR) und Server-seitiger Generierung (SSG), erfordern keine erweiterten Sicherheitskonfigurationen wie Cross-Origin Resource Sharing (CORS).
 
-Wenn jedoch Next.js im Client-Kontext HTTP-Anfragen an AEM sendet, sind möglicherweise Sicherheitskonfigurationen in AEM erforderlich. Überprüfen Sie das [Tutorial zur Implementierung von AEM Headless-Einzelseiten-App](../deployment/spa.md) für weitere Details.
-
+Wenn jedoch Next.js im Client-Kontext HTTP-Anfragen an AEM sendet, sind möglicherweise Sicherheitskonfigurationen in AEM erforderlich. Überprüfen Sie das [Tutorial zur Bereitstellung von AEM Headless-Einzelseiten-App](../deployment/spa.md) für weitere Details.

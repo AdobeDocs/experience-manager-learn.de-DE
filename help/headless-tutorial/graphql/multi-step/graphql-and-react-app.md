@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
 workflow-type: tm+mt
 source-wordcount: '1188'
-ht-degree: 90%
+ht-degree: 87%
 
 ---
 
@@ -26,7 +26,7 @@ Eine einfache React-App wird zum Abfragen und Anzeigen von **Team**- und **Perso
 
 ## Voraussetzungen
 
-Es wird davon ausgegangen, dass die in den vorherigen Teilen dieses mehrteiligen Tutorials beschriebenen Schritte abgeschlossen wurden oder [tutorial-solution-content.zip](assets/explore-graphql-api/tutorial-solution-content.zip) auf Ihrem Autoren- und Veröffentlichungs-Service in AEM as a Cloud Service installiert ist.
+Es wird davon ausgegangen, dass die in den vorherigen Teilen dieses mehrteiligen Tutorials beschriebenen Schritte abgeschlossen wurden, oder [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip) wird auf Ihrem AEM as a Cloud Service Autoren- und Veröffentlichungsdienst installiert.
 
 _IDE-Screenshots in diesem Kapitel stammen von [Visual Studio Code](https://code.visualstudio.com/)_
 
@@ -71,6 +71,7 @@ So rufen Sie die React-App ab:
 1. Aktualisieren Sie `.env.development`, um eine Verbindung zum Veröffentlichungs-Service von AEM as a Cloud Service herzustellen.
 
    - Legen Sie den Wert von `REACT_APP_HOST_URI` auf die Veröffentlichungs-URL Ihres AEM as a Cloud Service fest (z. B. `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`) und den Wert von `REACT_APP_AUTH_METHOD` auf `none`
+
    >[!NOTE]
    >
    > Vergewissern Sie sich, dass Sie die Projektkonfiguration, Inhaltsfragmentmodelle, erstellten Inhaltsfragmente, GraphQL-Endpunkte und persistierten Abfragen aus den vorherigen Schritten veröffentlicht haben.
@@ -102,6 +103,7 @@ So rufen Sie die React-App ab:
 >  // TODO :: Implementieren Sie dies, indem Sie die Schritte aus AEM Headless-Tutorial befolgen
 >
 >  //*********************************
+>
 
 ## Anatomie der React-App
 
@@ -490,7 +492,7 @@ Sehen Sie sich die App unter [http://localhost:3000/](http://localhost:3000/) an
 
 ## Unter der Haube
 
-Öffnen Sie die **Entwicklertools** > **Netzwerk** und _Filter_ für `all-teams` -Anfrage. Beachten Sie die GraphQL-API-Anfrage. `/graphql/execute.json/my-project/all-teams` gegen `http://localhost:3000` und **NOT** gegen den Wert von `REACT_APP_HOST_URI` (z. B. <https://publish-p123-e456.adobeaemcloud.com>). Die Anfragen werden für die Domäne der React-App gestellt, weil [Proxy-Einrichtung](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) aktiviert wird, wenn `http-proxy-middleware` -Modul.
+Öffnen Sie die **Entwicklertools** > **Netzwerk** und _Filter_ für `all-teams` -Anfrage. Beachten Sie die GraphQL-API-Anfrage `/graphql/execute.json/my-project/all-teams` gegen `http://localhost:3000` und **NOT** gegen den Wert von `REACT_APP_HOST_URI` (zum Beispiel: <https://publish-p123-e456.adobeaemcloud.com>). Die Anfragen werden für die Domäne der React-App gestellt, weil [Proxy-Einrichtung](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) aktiviert wird, wenn `http-proxy-middleware` -Modul.
 
 
 ![GraphQL-API-Anfrage über Proxy](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)

@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 508b0211-fa21-4a73-b8b4-c6c34e3ba696
-source-git-commit: ae27cbc50fc5c4c2e8215d7946887b99d480d668
-workflow-type: ht
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
+workflow-type: tm+mt
 source-wordcount: '1454'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -391,7 +391,7 @@ Nach Überprüfung und Verifizierung veröffentlichen Sie `GraphQL Endpoint` und
 
 ## Lösungsdateien {#solution-files}
 
-Laden Sie den Inhalt, die Modelle und die persistierten Abfragen herunter, die in den letzten drei Kapiteln erstellt wurden: [tutorial-solution-content.zip](assets/explore-graphql-api/tutorial-solution-content.zip)
+Laden Sie die in den letzten drei Kapiteln erstellten Inhalte, Modelle und gespeicherten Abfragen herunter: [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip)
 
 ## Zusätzliche Ressourcen
 

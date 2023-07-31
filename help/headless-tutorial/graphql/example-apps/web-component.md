@@ -8,13 +8,14 @@ role: Developer
 level: Beginner
 kt: 10797
 thumbnail: kt-10797.jpg
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
+last-substantial-update: 2023-05-10T00:00:00Z
+exl-id: 4f090809-753e-465c-9970-48cf0d1e4790
+source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
 workflow-type: tm+mt
-source-wordcount: '566'
-ht-degree: 100%
+source-wordcount: '543'
+ht-degree: 95%
 
 ---
-
 
 # Web-Komponente
 
@@ -28,19 +29,18 @@ Sie finden den [Quell-Code auf GitHub](https://github.com/adobe/aem-guides-wknd-
 
 Folgende Tools sollten lokal installiert werden:
 
-+ [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) (bei Verbindung mit dem lokalen AEM 6.5 oder AEM SDK)
 + [Node.js v18](https://nodejs.org/de/)
 + [Git](https://git-scm.com/)
 
 ## AEM-Anforderungen
 
-Die Web-Komponente funktioniert mit den folgenden AEM Implementierungsoptionen.
+Die Web-Komponente funktioniert mit den folgenden AEM Bereitstellungsoptionen.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=de)
 + Lokales Setup mit dem [AEM Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de)
-+ [AEM 6.5 SP13+ QuickStart](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=de?lang=de#install-local-aem-instances)
+   + Erfordert [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) (bei Verbindung mit dem lokalen AEM 6.5 oder AEM SDK)
 
-Bei allen Implementierungen müssen die `tutorial-solution-content.zip` von [Lösungsdateien](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/explore-graphql-api.html?lang=de#solution-files.html) installiert und die notwendigen [Implementierungskonfigurationen](../deployment/web-component.md) ausgeführt werden.
+Diese Beispielanwendung basiert auf [basic-tutorial-solution.content.zip](../multi-step/assets/explore-graphql-api/basic-tutorial-solution.content.zip) installiert und die erforderlichen [Bereitstellungskonfigurationen](../deployment/web-component.md) vorhanden sind.
 
 
 >[!IMPORTANT]
@@ -67,7 +67,7 @@ Bei allen Implementierungen müssen die `tutorial-solution-content.zip` von [Lö
 
    ```plain
    # AEM Server namespace
-   aemHost=https://publish-p65804-e666805.adobeaemcloud.com
+   aemHost=https://publish-p123-e456.adobeaemcloud.com
    
    # AEM GraphQL API and Persisted Query Details
    graphqlAPIEndpoint=graphql/execute.json
@@ -104,7 +104,7 @@ Eine wiederverwendbare Web-Komponente (auch als benutzerdefiniertes Element beze
 
 ```html
     <person-info 
-        host="https://publish-p65804-e666805.adobeaemcloud.com"
+        host="https://publish-p123-e456.adobeaemcloud.com"
         query-param-value="John Doe">
     </person-info>
 ```
@@ -166,7 +166,8 @@ class PersonInfo extends HTMLElement {
         const personTemplateElement = document.getElementById('person-template');
         const templateContent = personTemplateElement.content;
         const personImgElement = templateContent.querySelector('.person_image');
-        personImgElement.setAttribute('src', host + person.profilePicture._path);
+        personImgElement.setAttribute('src',
+            host + (person.profilePicture._dynamicUrl || person.profilePicture._path));
         personImgElement.setAttribute('alt', person.fullName);
         ...
         this.shadowRoot.appendChild(templateContent.cloneNode(true));
@@ -185,6 +186,4 @@ class PersonInfo extends HTMLElement {
 
 Diese Web-Komponente beruht auf einer AEM-basierten CORS-Konfiguration, die in der AEM-Zielumgebung ausgeführt wird, und geht davon aus, dass die Host-Seite auf `http://localhost:8080` im Entwicklungsmodus ausgeführt wird. Darunter finden Sie eine Beispielkonfiguration für CORS OSGi für den lokalen Service von AEM Author.
 
-Bitte überprüfen Sie die [Implementierungskonfigurationen](../deployment/web-component.md) für den jeweiligen AEM-Service.
-
-![CORS-Konfiguration](assets/react-app/cross-origin-resource-sharing-configuration.png)
+Bitte überprüfen Sie die [Bereitstellungskonfigurationen](../deployment/web-component.md) für den jeweiligen AEM-Service.
