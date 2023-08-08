@@ -10,10 +10,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: a87ff428-15f7-43c9-ad03-707eab6216a9
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
 workflow-type: tm+mt
-source-wordcount: '303'
-ht-degree: 5%
+source-wordcount: '320'
+ht-degree: 8%
 
 ---
 
@@ -23,20 +23,24 @@ Es gibt viele Möglichkeiten, AEM die Integration in eine externe Datenbank zu e
 Der erste Schritt besteht darin, die entsprechende [MySQL-Treiber](https://mvnrepository.com/artifact/mysql/mysql-connector-java) AEM.
 Legen Sie dann die DataSource-Eigenschaften der Sling Connection Pooled für Ihre Datenbank fest. Der folgende Screenshot zeigt die für dieses Tutorial verwendeten Einstellungen. Das Datenbankschema wird Ihnen im Rahmen dieses Tutorials bereitgestellt.
 
+>[!NOTE]
+>Vergewissern Sie sich, dass Sie Ihre Datenquelle benennen `StoreAndRetrieveAfData` da dies der Name ist, der im OSGi-Dienst verwendet wird.
+
+
 ![data-source](assets/data-source.JPG)
 
-
-* JDBC-Treiberklasse: `com.mysql.cj.jdbc.Driver`
-* JDBC Connection URI: `jdbc:mysql://localhost:3306/aemformstutorial`
-
->[!NOTE]
->Benennen Sie Ihre Datenquelle. `StoreAndRetrieveAfData` da dies der Name ist, der im OSGi-Dienst verwendet wird.
+| Eigenschaftsname | Eigenschaftswert |   |
+|---------------------|------------------------------------------------------------------------------------|---|
+| Datenquellenname | StoreAndRetrieveAfData |   |
+| JDBC-Laufwerkklasse | jdbc:mysql://localhost:3306/aemformstutorial |   |
+| JDBC-Verbindungs-URI | jdbc:mysql://localhost:3306/aemformstutorial?serverTimezone=UTC&amp;autoReconnect=true |   |
+|                     |                                                                                    |   |
 
 
 ## Datenbank erstellen
 
 
-Die folgende Datenbank wurde für die Zwecke dieses Anwendungsbeispiels verwendet. Die Datenbank verfügt über eine Tabelle mit dem Namen `formdatawithattachments` mit den 4 Spalten, wie im Screenshot unten dargestellt.
+Die folgende Datenbank wurde für diese Zwecke verwendet. Die Datenbank verfügt über eine Tabelle mit dem Namen `formdatawithattachments` mit den 4 Spalten, wie im Screenshot unten dargestellt.
 ![data-base](assets/table-schema.JPG)
 
 * Die Spalte **afdata** enthält die Daten des adaptiven Formulars.
@@ -50,9 +54,9 @@ Verwendung von MySQL Workbench.
 
 Erstellen Sie das Formulardatenmodell und basieren Sie es auf der Datenquelle, die Sie im vorherigen Schritt erstellt haben.
 Konfigurieren Sie die **get** -Dienst dieses Formulardatenmodells verwenden, wie im Screenshot unten dargestellt.
-Stellen Sie sicher, dass Sie kein Array im **get** Dienst.
+Vergewissern Sie sich, dass Sie kein Array im **get** -Dienst.
 
-Zweck dieser **get** -Dienst ist es, die mit der Anwendungs-ID verknüpfte Telefonnummer abzurufen.
+Der Zweck dieses **get** -Dienst ist es, die mit der Anwendungs-ID verknüpfte Telefonnummer abzurufen.
 
 ![get-service](assets/get-service.JPG)
 

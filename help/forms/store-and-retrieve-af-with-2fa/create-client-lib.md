@@ -10,7 +10,7 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: c90eea73-bd44-40af-aa98-d766aa572415
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
+source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 8%
@@ -45,7 +45,7 @@ $(document).ready(function () {
             success: function (x) {
               bootbox.alert(
                 "This is your reference number.<br>" +
-                  x.data.path +
+                  x.data.applicationID +
                   " <br>You will need this to retrieve your application",
                 function () {
                   console.log(
@@ -69,7 +69,7 @@ $(document).ready(function () {
 >[!NOTE]
 > Wir haben [Bootbox-JavaScript-Bibliothek](http://bootboxjs.com/examples.html) zum Anzeigen des Dialogfelds
 
-Die in diesem Beispiel verwendeten Client-Bibliotheken können [heruntergeladen von hier](assets/client-libraries.zip)
+Die in diesem Beispiel verwendeten Client-Bibliotheken können [heruntergeladen von hier](assets/store-af-with-attachments-client-lib.zip)
 
 ## Nächste Schritte
 

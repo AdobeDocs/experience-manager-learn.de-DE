@@ -10,16 +10,16 @@ topic: Development
 role: Developer
 level: Intermediate
 exl-id: cdfae631-86d7-438f-9baf-afd621802723
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 1%
+source-wordcount: '391'
+ht-degree: 3%
 
 ---
 
 # Bereitstellen des Beispiels
 
-Um dieses Anwendungsbeispiel auf Ihrem System verwenden zu können, folgen Sie den folgenden Anweisungen:
+Um dieses Anwendungsbeispiel auf Ihrem System verwenden zu können, befolgen Sie die folgenden Anweisungen:
 
 >[!NOTE]
 >Es wird davon ausgegangen, dass Sie AEM Forms auf Port 4502 ausführen.
@@ -31,7 +31,7 @@ In diesem Beispiel wird die MySQL-Datenbank verwendet, um die Daten des adaptive
 
 ## Datenquelle erstellen
 
-Sie müssen eine Datenquelle mit dem Namen **StoreAndRetrieveAfData**. Der Code im OSGi-Bundle verwendet diesen Datenquellennamen
+Sie müssen eine Apache Sling Connection Pooled DataSource mit dem Namen **StoreAndRetrieveAfData** auf das Datenbankschema verweisen, das im vorherigen Schritt erstellt wurde. Der Code im OSGi-Bundle verwendet diesen Datenquellennamen.
 
 ## Erstellen von Formulardatenmodellen
 
@@ -41,25 +41,25 @@ Das Formulardatenmodell muss auf Grundlage dieser Datenquelle mit dem Namen **St
 
 Erstellen Sie ein Entwicklerkonto mit [Nexmo](https://dashboard.nexmo.com/) zum Senden und Überprüfen von OTP-Codes. Notieren Sie sich den API-Schlüssel und den API-Geheimschlüssel. Die Datenquelle und das Formulardatenmodell wurden für Sie bereits für diesen Dienst erstellt und sind mit den im vorherigen Schritt erwähnten Assets enthalten.
 
-## Bereitstellen der folgenden OSGi-Pakete
+## Stellen Sie die folgenden OSGi-Pakete bereit
 
-Stellen Sie das Bundle bereit, das über die [Code zum Speichern und Abrufen von Daten aus der Datenbank](assets/FetchPartiallyCompletedForm.PartiallyCompletedForm.core-1.0-SNAPSHOT.jar)
-Laden Sie die [developing with serviceuser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip).
+Stellen Sie das Bundle bereit, das die [Code zum Speichern und Abrufen von Daten aus der Datenbank](assets/SaveAndResume.core-1.0.0-SNAPSHOT.jar)
+Laden Sie die Datei herunter und entpacken Sie sie. [developing with serviceuser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip).
 Stellen Sie die Datei &quot;DevelopingWithServiceUser.jar&quot;mithilfe der Felix-Webkonsole bereit.
 
 ## Client-Bibliothek bereitstellen
 
-Das Beispiel verwendet 2 Client-Bibliotheken. Importieren Sie diese [Client-Bibliotheken](assets/client-libraries.zip) AEM.
+Das Beispiel verwendet 2 Client-Bibliotheken. Importieren Sie diese [Client-Bibliotheken](assets/store-af-with-attachments-client-lib.zip) in AEM.
 
 ## Importieren der benutzerdefinierten adaptiven Formularvorlage
 
-Die in dieser Demo verwendeten Musterformulare basieren auf einer benutzerdefinierten Vorlage. Importieren Sie die [benutzerdefinierte Vorlage in AEM](assets/custom-template-with-page-component.zip)
+Die in dieser Demo verwendeten Musterformulare basieren auf einer benutzerdefinierten Vorlage. Importieren Sie [benutzerdefinierte Vorlage in AEM](assets/custom-template-with-page-component.zip)
 
 ## Importieren der adaptiven Beispielformulare
 
 Die beiden Formulare, aus denen dieses Muster besteht, müssen in AEM importiert werden. Die Musterformulare können [heruntergeladen von hier](assets/sample-forms.zip)
 
-Öffnen Sie die [MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) im Bearbeitungsmodus. Geben Sie die Werte für API-Schlüssel und API-Geheimnis in den entsprechenden Feldern im adaptiven Formular an.
+Öffnen Sie die [MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) im Bearbeitungsmodus. Geben Sie die Werte für &quot;Vonage API Key&quot;und &quot;API Secret&quot;in den entsprechenden Feldern im adaptiven Formular an.
 
 ## Testen der Lösung
 
