@@ -10,7 +10,7 @@ doc-type: Code Sample
 last-substantial-update: 2023-07-14T00:00:00Z
 jira: KT-13651
 thumbnail: KT-13651.jpeg
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 38db146129ceab83af50bf97cd6eb2d7179adbbf
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Um diesen Ansatz zu verwenden, fügen Sie `granite.csrf.standalone` als Abhängi
 
 ## Benutzerdefinierte Formularübermittlung mit CSRF-Schutz
 
-Wenn die Verwendung von [`granite.csrf.standalone` Client-Bibliothek](#csrf-client-library) nicht für Ihren Anwendungsfall verfügbar ist, können Sie einem Formularübermittlungsformular manuell ein CSRF-Token hinzufügen. Das folgende Beispiel zeigt, wie ein CSRF-Token zu einer Formularübermittlung hinzugefügt wird.
+Wenn die [`granite.csrf.standalone` Client-Bibliothek](#csrf-client-library) nicht für Ihren Anwendungsfall verfügbar ist, können Sie einem Formularübermittlungsformular manuell ein CSRF-Token hinzufügen. Das folgende Beispiel zeigt, wie ein CSRF-Token zu einer Formularübermittlung hinzugefügt wird.
 
 Dieser Codeausschnitt veranschaulicht, wie das CSRF-Token beim Senden des Formulars von AEM abgerufen und zu einer Formulareingabe mit dem Namen hinzugefügt werden kann. `:cq_csrf_token`. Da das CSRF-Token eine kurze Lebensdauer hat, ist es am besten, das CSRF-Token unmittelbar vor dem Senden des Formulars abzurufen und festzulegen, um seine Gültigkeit zu gewährleisten.
 
@@ -61,7 +61,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
     let csrfTokenInput = form.querySelector('input[name=":cq_csrf_token"]');
     if (!csrfTokenInput?.value) {
         // If the form does not have a CSRF token input, add one.
-        form.insertAdjacentHTML('afterend', `<input type="hidden" name=":cq_csrf_token" value="${json.token}">`);
+        form.insertAdjacentHTML('beforeend', `<input type="hidden" name=":cq_csrf_token" value="${json.token}">`);
     } else {
         // If the form already has a CSRF token input, update the value.
         csrfTokenInput.value = json.token;
@@ -73,9 +73,9 @@ document.querySelector('form').addEventListener('submit', async (event) => {
 
 ## Mit CSRF-Schutz abrufen
 
-Wenn die Verwendung von [`granite.csrf.standalone` Client-Bibliothek](#csrf-client-library) nicht für Ihren Anwendungsfall verfügbar ist, können Sie einem XHR manuell ein CSRF-Token hinzufügen oder Anfragen abrufen. Das folgende Beispiel zeigt, wie ein CSRF-Token zu einem XHR hinzugefügt wird, das mit dem Abruf erstellt wurde.
+Wenn die [`granite.csrf.standalone` Client-Bibliothek](#csrf-client-library) nicht für Ihren Anwendungsfall verfügbar ist, können Sie einem XHR manuell ein CSRF-Token hinzufügen oder Anfragen abrufen. Das folgende Beispiel zeigt, wie ein CSRF-Token zu einem XHR hinzugefügt wird, das mit dem Abruf erstellt wurde.
 
-Dieses Codefragment zeigt, wie ein CSRF-Token aus AEM abgerufen und zu einer Abrufanforderung hinzugefügt wird `CSRF-Token` HTTP-Anforderungsheader. Da das CSRF-Token eine kurze Lebensdauer hat, ist es am besten, das CSRF-Token unmittelbar vor der Abruf-Anfrage abzurufen und festzulegen und dabei seine Gültigkeit zu gewährleisten.
+Dieses Codefragment zeigt, wie ein CSRF-Token aus AEM abgerufen und zu einer Abrufanforderung hinzugefügt wird. `CSRF-Token` HTTP-Anforderungsheader. Da das CSRF-Token eine kurze Lebensdauer hat, ist es am besten, das CSRF-Token unmittelbar vor der Abruf-Anfrage abzurufen und festzulegen und dabei seine Gültigkeit zu gewährleisten.
 
 ```javascript
 /**
