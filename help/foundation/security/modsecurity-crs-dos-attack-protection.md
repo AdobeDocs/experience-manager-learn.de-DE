@@ -1,5 +1,5 @@
 ---
-title: Aktivieren Sie ModSecurity, um Ihre AEM-Site vor DoS-Angriffen zu schützen.
+title: Verwenden Sie ModSecurity, um Ihre AEM Website vor DoS-Angriffen zu schützen.
 description: Erfahren Sie, wie Sie ModSecurity aktivieren, um Ihre Site mit dem OWASP ModSecurity Core Rule Set (CRS) vor einem DoS-Angriff (Denial of Service) zu schützen.
 feature: Security
 version: 6.5, Cloud Service
@@ -10,7 +10,7 @@ kt: 10385
 thumbnail: KT-10385.png
 doc-type: article
 last-substantial-update: 2023-08-15T00:00:00Z
-source-git-commit: fc183d88bf772944562d0dd825b4d590266f3ffd
+source-git-commit: 31d54b14fc6381e8b231cf85d3c808b88c7df098
 workflow-type: tm+mt
 source-wordcount: '1252'
 ht-degree: 4%
@@ -53,7 +53,7 @@ In diesem Tutorial wird gezeigt, wie die **DOS-PROTECTION** CRS-Regel zum Schutz
 
 1. Erstellen Sie die `modsec/crs` Ordner in `dispatcher/src/conf.d/` im Code Ihres AEM-Projekts. In der lokalen Kopie des [AEM WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd).
 
-   ![CRS-Ordner in AEM Projektcode - ModSecurity](assets/modsecurity-crs/crs-folder-in-aem-dispatcher-module.png)
+   ![CRS-Ordner in AEM Projektcode - ModSecurity](assets/modsecurity-crs/crs-folder-in-aem-dispatcher-module.png){width="200" zoomable="yes"}
 
 1. Kopieren Sie die `coreruleset-X.Y.Z/rules` Ordner aus dem heruntergeladenen CRS-Versionspaket in `dispatcher/src/conf.d/modsec/crs` Ordner.
 1. Kopieren Sie die `coreruleset-X.Y.Z/crs-setup.conf.example` -Datei aus dem heruntergeladenen CRS-Versionspaket in `dispatcher/src/conf.d/modsec/crs` Ordner und benennen Sie ihn in um `crs-setup.conf`.
@@ -69,7 +69,7 @@ In diesem Tutorial wird gezeigt, wie die **DOS-PROTECTION** CRS-Regel zum Schutz
 
    Siehe Umbenannte CRS-Regeln und Konfigurationsdatei im WKND-Projektcode.
 
-   ![CRS-Regeln in AEM Projektcode deaktiviert - ModSecurity ](assets/modsecurity-crs/disabled-crs-rules.png){width="100" zoomable="yes"}
+   ![CRS-Regeln in AEM Projektcode deaktiviert - ModSecurity ](assets/modsecurity-crs/disabled-crs-rules.png){width="200" zoomable="yes"}
 
 ## Aktivieren und Konfigurieren der DoS-Schutzregel (Denial of Service)
 
@@ -96,7 +96,7 @@ Gehen Sie wie folgt vor, um die DoS-Schutzregel (Denial of Service) zu aktiviere
        setvar:'tx.dos_block_timeout=600'"    
    ```
 
-In dieser Beispielregelkonfiguration gilt Folgendes: **DOS_COUNTER_THRESHOLD** ist 25, **DOS_BURST_TIME_SLICE** 60 Sekunden beträgt und **DOS_BLOCK_TIMEOUT** Zeitüberschreitung beträgt 600 Sekunden. Diese Konfiguration identifiziert innerhalb von 60 Sekunden mehr als zwei Vorfälle von 25 Anfragen, mit Ausnahme statischer Dateien, und qualifiziert sich als DoS-Angriff, sodass der anfragende Client 600 Sekunden (oder 10 Minuten) blockiert wird.
+In dieser Beispielregelkonfiguration gilt Folgendes: **DOS_COUNTER_THRESHOLD** ist 25, **DOS_BURST_TIME_SLICE** 60 Sekunden beträgt und **DOS_BLOCK_TIMEOUT** Zeitüberschreitung beträgt 600 Sekunden. Diese Konfiguration identifiziert mehr als zwei Vorkommnisse von 25 Anforderungen (mit Ausnahme statischer Dateien) innerhalb von 60 Sekunden als DoS-Angriff, sodass der anfordernde Client 600 Sekunden (oder 10 Minuten) blockiert wird.
 
 >[!WARNING]
 >
