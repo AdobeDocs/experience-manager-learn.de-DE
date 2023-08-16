@@ -5,10 +5,10 @@ recommendations: disable
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: aem-assets-essentials-videos.jpg
 exl-id: 6a8534fa-bc99-438b-9107-2a428e06619c
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: ht
-source-wordcount: '131'
-ht-degree: 100%
+source-git-commit: 137f7166a6a10ecd95a85114b27a1a3bd608b965
+workflow-type: tm+mt
+source-wordcount: '134'
+ht-degree: 79%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 100%
 
 Experience Manager Assets Essentials bietet eine optimierte Benutzeroberfläche für einfache Asset-Verwaltung und Zusammenarbeit.
 
-Sehen Sie sich diese Videos an und erfahren Sie, wie Sie Ihre Assets mit Assets Essentials verwalten und letzteres mit Adobe Journey Orchestrator integrieren können!
+Sehen Sie sich diese Videos an, wie Sie Assets Essentials zur Verwaltung Ihrer Assets verwenden und wie Sie diese mit Adobe Workfront und Adobe-Journey---Aufsatz integrieren können!
 
 ## Erfahren Sie mehr zu Assets Essentials
 
