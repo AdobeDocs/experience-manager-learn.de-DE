@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: cc24ebca488ea286e8a4605edfb39420c1c10022
+source-git-commit: 17f6148ce6f897052d9d13f23e3f1792646eb958
 workflow-type: tm+mt
-source-wordcount: '1832'
+source-wordcount: '1838'
 ht-degree: 81%
 
 ---
@@ -25,12 +25,12 @@ ht-degree: 81%
    + [1 - Einführung und Einrichtung](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [2 - Erstellen einer Vorlage für ein adaptives Formular](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [3 - Formularfragment erstellen](creating-your-first-adaptive-form/create-form-fragment.md)
-   + [4 - Erstellen eines adaptiven Formulars](creating-your-first-adaptive-form/create-adaptive-form.md)
+   + [4 - Adaptives Formular erstellen](creating-your-first-adaptive-form/create-adaptive-form.md)
    + [5 - Konfigurieren des Stammbereichs und Hinzufügen untergeordneter Bedienfelder](creating-your-first-adaptive-form/configuring-root-panel-and-adding-child-panels.md)
    + [6 - Hinzufügen von Komponenten zum Bedienfeld &quot;Personen&quot;](creating-your-first-adaptive-form/adding-components-to-people-panel.md)
    + [7 - Tabelle zum Einkommensbereich hinzufügen](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
    + [8 - Konfigurieren des Asset-Bedienfelds](creating-your-first-adaptive-form/configuring-assets-panel.md)
-   + [9 - Verwenden benutzerdefinierter Funktionen und des Code-Editors](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
+   + [9 - Verwenden von benutzerdefinierten Funktionen und Code-Editor](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
 + Handhabung von Formularübermittlungen {#handling-af-form-submissions}
    + [Erstellen eines Prüfung-Workflows](handling-form-submissions/creating-a-review-workflow.md)
    + [Konfigurieren des adaptiven Formulars zur Auslösung des Workflows](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
@@ -46,6 +46,7 @@ ht-degree: 81%
    + [Kaskadierende Dropdown-Listen](some-useful-integrations/geonames-org.md)
    + [Integration mit ServiceNow](some-useful-integrations/service-now.md)
    + [E-Mails mit SendGrid senden](some-useful-integrations/send-grid.md)
+   + [Speichern von Formulardaten im Azure-Speicher](some-useful-integrations/store-form-data-in-azure-storage.md)
 + Erstellen eines OSGi-Bundles {#creating-your-first-osgi-bundle}
    + [1 - Einrichten der Umgebung](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [2 - Erstellen eines OSGi-Dienstes](creating-your-first-osgi-bundle/create-osgi-service.md)
@@ -105,14 +106,14 @@ ht-degree: 81%
 + DAM-Ordnerinhalt auswählen und zusammenführen {#select-dam-folder-content}
    + [1 - Einführung](display-and-assemble-dam-folder-contents/introduction.md)
    + [2 - Auswahlgruppe ausfüllen](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
-   + [3 - Zusammenführen ausgewählter Assets](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
+   + [3 - Assets zusammenführen](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
    + [4 - Assets lokal bereitstellen](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
 + Vorausfüllen des adaptiven Formulars mithilfe des Formulardatenmodells{#prefill-fdm-db}
    + [1 - Einleitung](prefill-fdm-db/introduction.md)
    + [2 - Erstellen von Datenbanktabellen](prefill-fdm-db/create-database-tables.md)
    + [3 - Konfigurieren des Formulardatenmodells](prefill-fdm-db/configuring-form-data-model.md)
    + [4 - Anforderungsparameter abrufen](prefill-fdm-db/get-request-parameter.md)
-   + [5 - Erstellen eines adaptiven Formulars](prefill-fdm-db/create-adaptive-form.md)
+   + [5 - Adaptives Formular erstellen](prefill-fdm-db/create-adaptive-form.md)
 + Tipps und Tricks zur Benutzeroberfläche{#ui-tips-and-tricks}
    + [Kennwortfeldtext umschalten](ui-tips-tricks/toggle-password.md)
    + [Schaltflächen in der Symbolleiste](ui-tips-tricks/toolbar-buttons.md)
@@ -125,8 +126,8 @@ ht-degree: 81%
    + [3 - Verwenden einer visuellen Vorlage](inbox-customization/use-sightly-template.md)
 + E-Mail-Formularanhänge{#zipping-form-attachments}
    + [1 - Einleitung](zipping-form-attachments/introduction.md)
-   + [2 - ZIP-Formularanhänge](zipping-form-attachments/custom-process-step.md)
-   + [3 - E-Mail-Formularanhänge](zipping-form-attachments/populating-list-of-documents.md)
+   + [2 - ZIP-Formularanlagen](zipping-form-attachments/custom-process-step.md)
+   + [3 - E-Mail-Formularanlagen](zipping-form-attachments/populating-list-of-documents.md)
    + [4 - Testen der Lösung](zipping-form-attachments/test.md)
 + Speichern und Abrufen adaptiver Formulare{#store-and-retrieve-af-with-2fa}
    + [1 - Einleitung](store-and-retrieve-af-with-2fa/introduction.md)
@@ -224,14 +225,14 @@ ht-degree: 81%
    + [2 - Generieren von Token](aem-forms-with-adobe-campaign/partone.md)
    + [3 - Erstellen des ACS-Profils bei der Formularübermittlung](aem-forms-with-adobe-campaign/parttwo.md)
    + [4 - Vorausfüllen des Formulars mit ACS-Profilinformationen](aem-forms-with-adobe-campaign/partthree.md)
-   + [5 - Erstellen eines ACS-Profils mithilfe des Formulardatenmodells](aem-forms-with-adobe-campaign/partfour.md)
+   + [5 - ACS-Profil mithilfe des Formulardatenmodells erstellen](aem-forms-with-adobe-campaign/partfour.md)
 
 + Begrüßungs-Kit {#welcome-kit}
    + [Einführung](welcome-kit/introduction.md)
    + [Erstellen der Komponente des Begrüßungs-Kits](welcome-kit/create-welcomekit-component.md)
    + [Erstellen einer Workflow-Komponente](welcome-kit/create-workflow-component.md)
    + [Testen der Lösung](welcome-kit/testing-the-solution.md)
-+ Headless-Forms-API {#embed-form-spa}
++ Headless Forms API {#embed-form-spa}
    + [1 - Einleitung](headless-forms/introduction.md)
    + [2 - Abhängigkeiten installieren](headless-forms/install-af-react-libraries.md)
    + [3 - Formular abrufen](headless-forms/fetch-the-form.md)
