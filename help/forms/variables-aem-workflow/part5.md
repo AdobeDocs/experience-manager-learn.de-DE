@@ -7,7 +7,7 @@ feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
 exl-id: ecd43765-455c-4f8b-acf2-6ea34495c311
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: cf37afeb9bea65b540c9cfde75070d4106a01976
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
@@ -21,3 +21,5 @@ Die Komponente Oder-Split wird verwendet, um Routing in AEM Workflow durchzufüh
 Das folgende Video zeigt, wie Sie mit dem Regeleditor eine bedingte Verarbeitung in Ihrem AEM-Workflow durchführen können
 
 >[!VIDEO](https://video.tv.adobe.com/v/26362?quality=12&learn=on)
+
+

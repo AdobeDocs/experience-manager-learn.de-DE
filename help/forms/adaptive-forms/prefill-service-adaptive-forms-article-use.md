@@ -1,5 +1,5 @@
 ---
-title: Vorbefüllungsdienst in Adaptive Forms
+title: Vorbefüllungsdienst in adaptiven Formularen
 description: Vorausfüllen adaptiver Formulare durch Abrufen von Daten aus Back-End-Datenquellen.
 feature: Adaptive Forms
 version: 6.4,6.5
@@ -8,24 +8,28 @@ role: Developer
 level: Intermediate
 exl-id: f2c324a3-cbfa-4942-b3bd-dc47d8a3f7b5
 last-substantial-update: 2021-11-27T00:00:00Z
-source-git-commit: 381812397fa7d15f6ee34ef85ddf0aa0acc0af42
+source-git-commit: cf37afeb9bea65b540c9cfde75070d4106a01976
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 8%
+source-wordcount: '459'
+ht-degree: 6%
 
 ---
 
 # Verwenden des Vorbefüllungs-Dienstes in Adaptive Forms
 
-Sie können die Felder eines adaptiven Formulars mit vorhandenen Daten vorbefüllen. Wenn ein Benutzer ein Formular öffnet, werden die Werte für diese Felder vorbefüllt. Es gibt mehrere Möglichkeiten, adaptive Formularfelder vorab auszufüllen. In diesem Artikel werden wir uns das Vorausfüllen adaptiver Formulare mithilfe des AEM Forms-Vorbefüllungs-Dienstes ansehen.
+Sie können die Felder eines adaptiven Formulars mit vorhandenen Daten im Voraus ausfüllen lassen. Wenn ein Benutzer ein Formular öffnet, werden die Werte für diese Felder vorbefüllt. Es gibt mehrere Möglichkeiten, adaptive Formularfelder vorab auszufüllen. In diesem Artikel werden wir uns das Vorausfüllen adaptiver Formulare mithilfe des AEM Forms-Vorbefüllungs-Dienstes ansehen.
 
 Weitere Informationen zu verschiedenen Methoden zum Vorausfüllen adaptiver Formulare erhalten Sie unter [folgen Sie dieser Dokumentation](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice)
 
-Um ein adaptives Formular mit dem Vorbefüllungs-Dienst vorab auszufüllen, müssen Sie eine Klasse erstellen, die die `com.adobe.forms.common.service.DataXMLProvider` -Schnittstelle. Die Methode `getDataXMLForDataRef` verfügt über die Logik zum Erstellen und Zurückgeben von Daten, die das adaptive Formular zum Vorausfüllen der Felder benötigt. Bei dieser Methode können Sie die Daten aus einer beliebigen Quelle abrufen und den Eingabestream des Datendokuments zurückgeben. Der folgende Beispielcode ruft die Benutzerprofilinformationen des angemeldeten Benutzers ab und erstellt ein XML-Dokument, dessen Eingabestream zurückgegeben wird, um von den adaptiven Formularen genutzt zu werden.
+Um ein adaptives Formular mit dem Vorbefüllungs-Dienst vorab auszufüllen, müssen Sie eine Klasse erstellen, die die `com.adobe.forms.common.service.DataXMLProvider` -Schnittstelle. Die -Methode `getDataXMLForDataRef` verfügt über die Logik zum Erstellen und Zurückgeben von Daten, die das adaptive Formular zum Vorausfüllen der Felder benötigt. Bei dieser Methode können Sie die Daten aus einer beliebigen Quelle abrufen und den Eingabestream des Datendokuments zurückgeben. Der folgende Beispielcode ruft die Benutzerprofilinformationen des angemeldeten Benutzers ab und erstellt ein XML-Dokument, dessen Eingabestream zurückgegeben wird, um von den adaptiven Formularen genutzt zu werden.
 
 Im folgenden Codefragment haben wir eine Klasse, die die DataXMLProvider-Schnittstelle implementiert. Wir erhalten Zugriff auf den angemeldeten Benutzer und rufen dann die Profilinformationen des angemeldeten Benutzers ab. Anschließend erstellen wir ein XML-Dokument mit einem Stammknotenelement namens &quot;data&quot;und hängen entsprechende Elemente an diesen Datenknoten an. Nachdem das XML-Dokument erstellt wurde, wird der Eingabestream des XML-Dokuments zurückgegeben.
 
 Diese Klasse wird dann in ein OSGi-Bundle umgewandelt und in AEM bereitgestellt. Sobald das Bundle bereitgestellt ist, ist dieser Vorbefüllungs-Dienst verfügbar, der als Vorbefüllungs-Dienst für Ihr adaptives Formular verwendet werden kann.
+
+>[!NOTE]
+>
+>Sie können Formulare mit XML- oder JSON-Daten vorab ausfüllen, indem Sie den in diesem Artikel aufgeführten Ansatz verwenden.
 
 ```java
 package com.aem.prefill.core;
@@ -132,7 +136,7 @@ public class PrefillAdaptiveForm implements DataXMLProvider {
 }
 ```
 
-Um diese Funktion auf Ihrem Server zu testen, führen Sie die folgenden Schritte aus
+Um diese Funktion auf Ihrem Server zu testen, führen Sie die folgenden Schritte aus:
 
 * Stellen Sie sicher, dass Sie angemeldet sind. [Benutzerprofil](http://localhost:4502/security/users.html) ausgefüllt werden. Das Beispiel sucht nach den Eigenschaften FirstName, LastName und Email des angemeldeten Benutzers.
 * [Laden Sie den Inhalt der ZIP-Datei herunter und extrahieren Sie ihn auf Ihren Computer](assets/prefillservice.zip)

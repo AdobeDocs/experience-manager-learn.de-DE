@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 17f6148ce6f897052d9d13f23e3f1792646eb958
+source-git-commit: cf37afeb9bea65b540c9cfde75070d4106a01976
 workflow-type: tm+mt
-source-wordcount: '1838'
+source-wordcount: '1841'
 ht-degree: 81%
 
 ---
@@ -187,6 +187,7 @@ ht-degree: 81%
    + [ArrayList-Variable](variables-aem-workflow/part4.md)
    + [Formulardatenmodell-Variable](variables-aem-workflow/form-data-model.md)
    + [Regeleditor in AEM Workflow](variables-aem-workflow/part5.md)
+   + [Protokoll-Workflow-Variablen](variables-aem-workflow/part6.md)
 + Formulardaten überprüfen{#review-form-data}
    + [1 - Einleitung](review-form-data/introduction.md)
    + [2 - Komponente erstellen](review-form-data/create-component.md)
