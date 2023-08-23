@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 7938325427b6becb38ac230a3bc4b031353ca8b1
+source-git-commit: 65244bf81666c20fd5d9d804ad8ea97df8b83d9f
 workflow-type: tm+mt
-source-wordcount: '1188'
-ht-degree: 87%
+source-wordcount: '1218'
+ht-degree: 85%
 
 ---
 
@@ -489,6 +489,10 @@ Wenn Sie nach Abschluss des Vorgangs den Namen einer Person in der Team-Ansicht 
 ## Testen der App
 
 Sehen Sie sich die App unter [http://localhost:3000/](http://localhost:3000/) an und klicken Sie auf die Links _Mitglieder_. Außerdem können Sie dem Team-Alpha weitere Teams und/oder Mitglieder hinzufügen, indem Sie Inhaltsfragmente in AEM hinzufügen.
+
+>[!IMPORTANT]
+>
+>Wenn Sie Ihre Implementierungsänderungen überprüfen möchten oder die App nach den oben genannten Änderungen nicht funktionsfähig ist, lesen Sie den Abschnitt [Grundlegendes Tutorial](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial) Lösungsverzweigung.
 
 ## Unter der Haube
 
