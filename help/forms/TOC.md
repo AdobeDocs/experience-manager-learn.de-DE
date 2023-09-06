@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: cf37afeb9bea65b540c9cfde75070d4106a01976
+source-git-commit: adfb805615d2abe34458d5aea685ae47517c5548
 workflow-type: tm+mt
-source-wordcount: '1841'
+source-wordcount: '1845'
 ht-degree: 81%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 81%
    + [Erstellen eines Prüfung-Workflows](handling-form-submissions/creating-a-review-workflow.md)
    + [Konfigurieren des adaptiven Formulars zur Auslösung des Workflows](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [Dankesseite anzeigen](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
+   + [Anpassen der Dankeseite](handling-form-submissions/thank-you-page-on-fdm-submission.md)
    + [Übermittlung an externen Endpunkt](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
    + [Senden von E-Mails](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
    + [Arbeitsablauf für gebührenpflichtige Zeitüberschreitung bei Anfrage](handling-form-submissions/paid-time-off-request-workflow.md)
