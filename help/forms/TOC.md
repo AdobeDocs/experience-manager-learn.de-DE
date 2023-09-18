@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: adfb805615d2abe34458d5aea685ae47517c5548
+source-git-commit: bac637440d1cc5af0e0abb119ca2f4e93f69cf34
 workflow-type: tm+mt
-source-wordcount: '1845'
+source-wordcount: '1851'
 ht-degree: 81%
 
 ---
@@ -176,6 +176,7 @@ ht-degree: 81%
    + [Extrahieren von Knoten aus einem XML-Dokument](custom-workflow-steps/extract-xml-node.md)
    + [Speichern von Dokumenten im Dateisystem](custom-workflow-steps/write-payload-document.md)
    + [Speichern gesendeter Daten in Zeichenfolgenvariablen](custom-workflow-steps/save-submitted-data-in-string-variable.md)
+   + [Dokument aus der Dokumentenliste extrahieren](custom-workflow-steps/extract-document-from-list.md)
 + Benutzerdefinierte Workflow-Komponente{#custom-workflow-component}
    + [1-Einführung](custom-workflow-component/introduction.md)
    + [2-Schreib-Java-Code](custom-workflow-component/custom-process-step-aem-workflow.md)
