@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
-source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
+source-git-commit: 7a240374c42e2555be25e682c803f51f442fb7f7
 workflow-type: tm+mt
-source-wordcount: '1484'
+source-wordcount: '1483'
 ht-degree: 14%
 
 ---
@@ -72,11 +72,29 @@ Homebrew ist ein Open-Source-Paketmanager für macOS, Windows und Linux. Alle un
 1. Terminal öffnen
 1. Überprüfen Sie, ob Homebrew bereits installiert ist, indem Sie den Befehl ausführen: `brew --version`.
 1. Wenn Homebrew nicht installiert ist, installieren Sie Homebrew
-   + [Installieren von Homebrew auf macOS](https://brew.sh/)
-      + Für Homebrew auf macOS [Xcode](https://apps.apple.com/us/app/xcode/id497799835) oder [Befehlszeilenwerkzeuge](https://developer.apple.com/download/more/), install-able über den Befehl:
-         + `xcode-select --install`
-   + [Installieren von Homebrew unter Linux](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
-   + [Installieren von Homebrew unter Windows 10](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!BEGINTABS]
+
+>[!TAB macOS]
+
+[Homebrew auf macOS](https://brew.sh/) erfordert [Xcode](https://apps.apple.com/us/app/xcode/id497799835) oder [Befehlszeilenwerkzeuge](https://developer.apple.com/download/more/), install-able über den Befehl:
+
+```shell
+$ xcode-select --install
+```
+
+>[!TAB Windows]
+
+
+
+[Installieren von Homebrew unter Windows 10](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!TAB Linux]
+
+[Installieren von Homebrew unter Linux](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+
+>[!ENDTABS]
+
 1. Stellen Sie sicher, dass Homebrew installiert ist, indem Sie den Befehl ausführen: `brew --version`
 
 ![Homebrew](./assets/development-tools/homebrew.png)
@@ -159,11 +177,11 @@ Apache Maven ist das Open-Source-Java-Befehlszeilenwerkzeug, mit dem AEM Projekt
 
 ![Maven](./assets/development-tools/maven.png)
 
-## Einrichten der Adobe I/O-CLI{#aio-cli}
+## Einrichten von Adobe I/O CLI{#aio-cli}
 
 Die [ADOBE I/O CLI](https://github.com/adobe/aio-cli)oder `aio`bietet Befehlszeilenzugriff auf eine Vielzahl von Adobe-Diensten, darunter [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager) und [Asset compute](https://github.com/adobe/aio-cli-plugin-asset-compute). Die Adobe I/O-CLI spielt eine wesentliche Rolle bei der Entwicklung auf AEM as a Cloud Service, da sie Entwicklern Folgendes ermöglicht:
 
-+ Trackinglogs von AEM as a Cloud Services services
++ Trackinglogs von AEM as a Cloud Service services
 + Verwalten von Cloud Manager-Pipelines über die CLI
 + Bereitstellen in [AEM Schnellentwicklungsumgebungen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=de)
 
@@ -173,27 +191,27 @@ Die [ADOBE I/O CLI](https://github.com/adobe/aio-cli)oder `aio`bietet Befehlszei
    + Ausführen `node --version` zur Bestätigung
 1. Ausführen `npm install -g @adobe/aio-cli` , um `aio` npm-Modul global
 
-### Einrichten des Adobe I/O CLI Cloud Manager-Plug-ins{#aio-cloud-manager}
+### Adobe I/O CLI Cloud Manager-Plugin einrichten{#aio-cloud-manager}
 
-Das Adobe I/O Cloud Manager-Plug-in ermöglicht der API-CLI die Interaktion mit Adobe Cloud Manager über die `aio cloudmanager` Befehl.
+Das Adobe I/O Cloud Manager-Plug-in ermöglicht die Interaktion der aio-CLI mit Adobe Cloud Manager über die `aio cloudmanager` Befehl.
 
 1. Ausführen `aio plugins:install @adobe/aio-cli-plugin-cloudmanager` , um [aio Cloud Manager-Plug-in](https://github.com/adobe/aio-cli-plugin-cloudmanager).
 
 #### Einrichten der Adobe I/O CLI-Authentifizierung
 
-Damit die Adobe I/O-CLI mit Cloud Manager kommunizieren kann, muss ein [Die Cloud Manager-Integration muss in der Adobe I/O Console erstellt werden](https://github.com/adobe/aio-cli-plugin-cloudmanager), und die Anmeldeinformationen müssen für die erfolgreiche Authentifizierung erhalten werden.
+Damit die Adobe I/O-CLI mit Cloud Manager kommunizieren kann, muss ein [Die Cloud Manager-Integration muss in der Adobe I/O Console erstellt werden.](https://github.com/adobe/aio-cli-plugin-cloudmanager), und die Anmeldeinformationen müssen für die erfolgreiche Authentifizierung erhalten werden.
 
 1. Anmelden bei [console.adobe.io](https://console.adobe.io)
-1. Stellen Sie sicher, dass Ihr Unternehmen, das das Cloud Manager-Produkt enthält, mit dem eine Verbindung hergestellt werden soll, im Adobe Org-Umschalter aktiv ist.
-1. Erstellen Sie eine neue oder öffnen Sie eine vorhandene [Adobe I/O](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)
-   + Adobe I/O Console-Programme sind einfach organisatorische Zusammenstellungen von Integrationen, erstellen oder verwenden Sie ein vorhandenes Programm, je nachdem, wie Sie Ihre Integrationen verwalten möchten.
+1. Stellen Sie sicher, dass Ihre Organisation, die das Cloud Manager-Produkt enthält, zu dem eine Verbindung hergestellt werden soll, im Adobe-Org-Umschalter aktiv ist.
+1. Erstellen Sie eine neue oder öffnen Sie eine vorhandene [Adobe I/O Programm](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md)
+   + Adobe I/O Console-Programme sind einfach organisatorische Gruppierungen von Integrationen, erstellen oder verwenden ein bestehendes Programm, je nachdem, wie Sie Ihre Integrationen verwalten möchten.
    + Wenn Sie ein neues Projekt erstellen, wählen Sie bei entsprechender Aufforderung &quot;Leeres Projekt&quot;aus (vs. &quot;Aus Vorlage erstellen&quot;)
    + Adobe I/O Console-Programme unterscheiden sich von Cloud Manager-Programmen
 1. Erstellen Sie eine neue Cloud Manager-API-Integration mit dem Profil &quot;Entwickler - Cloud Service&quot;.
 1. Die Anmeldedaten für das Dienstkonto (JWT) abrufen, um die Adobe I/O-CLI zu füllen. [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication)
-1. Laden Sie die `config.json` in die Adobe I/O-CLI
+1. Laden Sie die `config.json` Datei in die Adobe I/O-CLI
    + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager PATH_TO_CONFIG_JSON_FILE --file --json`
-1. Laden Sie die `private.key` in die Adobe I/O-CLI
+1. Laden Sie die `private.key` Datei in die Adobe I/O-CLI
    + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key PATH_TO_PRIVATE_KEY_FILE --file`
 
 Starten [Befehle ausführen](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) für Cloud Manager über die Adobe I/O-CLI.
@@ -204,7 +222,7 @@ Mit dem Plug-in AEM Rapid Development Environment kann die AI-CLI mit AEM as a C
 
 1. Ausführen `aio plugins:install @adobe/aio-cli-plugin-aem-rde` , um [AEM Plug-in für schnelle Entwicklungsumgebungen](https://github.com/adobe/aio-cli-plugin-aem-rde).
 
-### Einrichten des Adobe I/O CLI Asset compute-Plug-ins{#aio-asset-compute}
+### Einrichten des Adobe I/O CLI-Asset compute-Plug-ins{#aio-asset-compute}
 
 Mit dem Adobe I/O Cloud Manager-Plug-in kann die aio-CLI Asset compute-Sekundäre über die `aio asset-compute` Befehl.
 
@@ -238,7 +256,7 @@ Visual Studio Code ist die ideale Wahl für Frontend-Entwickler, die hauptsächl
 
 ### Eclipse
 
-__[Eclipse IDE](https://www.eclipse.org/ide/)__ ist eine beliebte IDEs für die Java-Entwicklung und unterstützt die  __[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=de)__ von Adobe bereitgestelltes -Plug-in, das eine In-IDE-Anleitung für das Authoring und die Synchronisierung von JCR-Inhalten mit einer lokalen AEM bereitstellt.
+__[Eclipse IDE](https://www.eclipse.org/ide/)__ ist eine beliebte IDEs für die Java-Entwicklung und unterstützt die  __[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=de)__ -Plug-in bereitgestellt von Adobe, das eine In-IDE-Anleitung für das Authoring und die Synchronisierung von JCR-Inhalten mit einer lokalen AEM bereitstellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
