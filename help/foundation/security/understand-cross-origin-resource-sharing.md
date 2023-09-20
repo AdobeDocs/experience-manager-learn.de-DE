@@ -12,16 +12,23 @@ topic: Security
 role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
-source-git-commit: d2a9596ddadd897793a0fce8421aa8b246b45b12
+source-git-commit: f47beff14782bb3f570d32818b000fc279394f19
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 88%
+source-wordcount: '1052'
+ht-degree: 84%
 
 ---
 
 # Wissenswertes zu [!DNL CORS] (Cross-Origin Resource Sharing)
 
 Die Ressourcenfreigabe zwischen verschiedenen Ursprüngen (Cross-Origin Resource Sharing, [!DNL CORS]) von Adobe Experience Manager ermöglicht AEM-fremden Web-Eigenschaften Client-seitige (authentifzierte und nicht authentifizierte) Aufrufe an AEM, um Inhalte abzurufen oder direkt mit AEM zu interagieren.
+
+Die in diesem Dokument beschriebene OSGi-Konfiguration reicht für Folgendes aus:
+
+1. Ressourcenfreigabe mit nur einem Ursprung in AEM Veröffentlichung
+2. CORS-Zugriff auf AEM Author
+
+Wenn für die AEM Veröffentlichung CORS-Zugriff mit mehreren Herkunftsländern erforderlich ist, lesen Sie den Abschnitt [diese Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
 
 ## OSGi-Konfiguration der Adobe Granite-CORS-Richtlinie
 
@@ -64,7 +71,7 @@ Wenn keine Richtlinie konfiguriert ist, werden [!DNL CORS]-Anfragen ebenfalls ni
 #### [!UICONTROL Verfügbare Header]
 
 * `"exposedheaders" <header>`
-* Liste der Kopfzeilenparameter, die den Zugriff auf Antwortheader durch Browser angeben. Bei CORS-Anforderungen (nicht vor dem Flug) werden diese Werte, falls nicht leer, in die `Access-Control-Expose-Headers` Antwortheader. Die Werte in der Liste (Kopfzeilennamen) werden dann dem Browser zugänglich gemacht. ohne sie sind diese Kopfzeilen vom Browser nicht lesbar.
+* Liste der Kopfzeilenparameter, die den Zugriff auf Antwortheader durch Browser angeben. Bei CORS-Anforderungen (nicht vor dem Flug) werden diese Werte, falls nicht leer, in die `Access-Control-Expose-Headers` Antwortheader. Die Werte in der Liste (Kopfzeilennamen) werden dann dem Browser zugänglich gemacht. Andernfalls sind diese Kopfzeilen vom Browser nicht lesbar.
 
 #### [!UICONTROL Maximales Alter]
 
@@ -195,7 +202,7 @@ So lassen Sie die erforderlichen [HTTP-Anforderungs-Header zur Weiterleitung an 
 
 ### Zwischenspeichern von CORS-Antwortheadern
 
-Um das Zwischenspeichern und Bereitstellen von CORS-Headern für zwischengespeicherten Inhalt zu ermöglichen, fügen Sie Folgendes hinzu [/cache /headers configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#caching-http-response-headers) zur AEM-Veröffentlichung `dispatcher.any` -Datei.
+Um das Zwischenspeichern und Bereitstellen von CORS-Headern für zwischengespeicherten Inhalt zu ermöglichen, fügen Sie Folgendes hinzu [/cache /headers configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#caching-http-response-headers) zur AEM Veröffentlichung `dispatcher.any` -Datei.
 
 ```
 /publishfarm {
