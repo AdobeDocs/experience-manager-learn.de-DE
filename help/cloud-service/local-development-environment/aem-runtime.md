@@ -1,6 +1,6 @@
 ---
-title: Einrichten von Local AEM Runtime für AEM as a Cloud Service Entwicklung
-description: Richten Sie die Local AEM Runtime mithilfe des Schnellstart-JAR des AEM as a Cloud Service SDK ein.
+title: Lokales AEM SDK für AEM as a Cloud Service Entwicklung einrichten
+description: Richten Sie die lokale AEM SDK-Laufzeit mithilfe des Schnellstart-JAR des AEM as a Cloud Service SDK ein.
 feature: Developer Tools
 version: Cloud Service
 kt: 4678, 4677
@@ -10,14 +10,14 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
-source-git-commit: 9073c1d41c67ec654b232aea9177878f11793d07
+source-git-commit: 2a412126ac7a67a756d4101d56c1715f0da86453
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1793'
 ht-degree: 16%
 
 ---
 
-# Lokale AEM Runtime einrichten {#set-up-local-aem-runtime}
+# Einrichten des lokalen AEM SDK {#set-up-local-aem-sdk}
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"
@@ -65,10 +65,10 @@ $ java --version
 
 ## Herunterladen des AEM as a Cloud Service SDK
 
-Das AEM as a Cloud Service SDK bzw. AEM SDK enthält das Schnellstart-Jar, das zum lokalen Ausführen von AEM Author und Publish für die Entwicklung verwendet wird, sowie die kompatible Version der Dispatcher Tools.
+Das AEM as a Cloud Service SDK bzw. AEM SDK enthält das Schnellstart-Jar, das zum lokalen Ausführen AEM Authoring und Publish für die Entwicklung verwendet wird, sowie die kompatible Version der Dispatcher Tools.
 
 1. Anmelden bei [https://experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads) mit Adobe ID
-   + Beachten Sie, dass Ihre Adobe Organisation __must__ für AEM as a Cloud Service Download des as a Cloud Service SDK bereitgestellt werden.
+   + Beachten Sie, dass Ihre Adobe-Organisation __must__ für AEM as a Cloud Service Download des as a Cloud Service SDK bereitgestellt werden.
 1. Navigieren Sie zur Registerkarte __AEM as a Cloud Service__
 1. Sortieren nach __Veröffentlichungsdatum__ in __Absteigend__ bestellen
 1. Klicken Sie auf die neueste __AEM SDK__ Ergebniszeile
@@ -80,7 +80,7 @@ Das AEM as a Cloud Service SDK bzw. AEM SDK enthält das Schnellstart-Jar, das z
 
 ## Lokalen AEM-Autorendienst einrichten{#set-up-local-aem-author-service}
 
-Der lokale AEM-Autorendienst bietet Entwicklern ein lokales Erlebnis, das digitale Marketing-Experten/Inhaltsautoren für die Erstellung und Verwaltung von Inhalten freigeben.  Der AEM-Autorendienst ist sowohl als Authoring- als auch als Vorschau-Umgebung konzipiert, sodass die meisten Validierungen der Funktionsentwicklung dagegen durchgeführt werden können. Dadurch wird er zu einem wichtigen Element des lokalen Entwicklungsprozesses.
+Der lokale AEM-Autorendienst bietet Entwicklern ein lokales Erlebnis, das digitale Marketing-Experten/Inhaltsautoren für die Erstellung und Verwaltung von Inhalten freigeben.  AEM Author-Dienst ist sowohl als Authoring- als auch als Vorschaufunktion konzipiert, sodass die meisten Validierungen der Funktionsentwicklung dagegen durchgeführt werden können, was ihn zu einem entscheidenden Element des lokalen Entwicklungsprozesses macht.
 
 1. Erstellen Sie den Ordner `~/aem-sdk/author`
 1. Kopieren Sie die __Schnellstart-JAR__ Datei in  `~/aem-sdk/author` und benennen Sie sie in um `aem-author-p4502.jar`
@@ -125,9 +125,9 @@ $ java -jar aem-author-p4502.jar
 >[!ENDTABS]
 
 
-## Einrichten des lokalen AEM-Veröffentlichungsdienstes
+## Lokalen AEM Veröffentlichungsdienst einrichten
 
-Der lokale AEM-Veröffentlichungsdienst bietet Entwicklern das lokale Erlebnis, das Endbenutzer der AEM haben werden, z. B. das Durchsuchen der auf AEM gehosteten Website. Ein lokaler AEM-Veröffentlichungsdienst ist wichtig, da er mit AEM SDKs integriert wird. [Dispatcher-Tools](./dispatcher-tools.md) und ermöglicht es Entwicklern, das Endbenutzererlebnis zu testen und zu optimieren.
+Der lokale AEM Veröffentlichungsdienst bietet Entwicklern das lokale Erlebnis, das Endbenutzer der AEM haben werden, z. B. das Durchsuchen der auf AEM gehosteten Website. Ein lokaler AEM-Veröffentlichungsdienst ist wichtig, da er mit AEM SDKs integriert wird. [Dispatcher-Tools](./dispatcher-tools.md) und ermöglicht es Entwicklern, das Endbenutzererlebnis zu testen und zu optimieren.
 
 1. Erstellen Sie den Ordner `~/aem-sdk/publish`
 1. Kopieren Sie die __Schnellstart-JAR__ Datei in  `~/aem-sdk/publish` und benennen Sie sie in um `aem-publish-p4503.jar`
@@ -174,7 +174,7 @@ $ java -jar aem-publish-p4503.jar
 
 ## Einrichten lokaler AEM-Dienste im Vorversionsmodus
 
-Die lokale AEM-Laufzeit kann in [Vorabversion-Modus](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=de) Entwickler können mit den Funktionen der nächsten Version von AEM as a Cloud Service erstellen. Die Vorabversion wird aktiviert, indem die Variable `-r prerelease` -Argument beim ersten Start der lokalen AEM-Laufzeitumgebung. Dies kann sowohl mit lokalen AEM Author- als auch AEM Publish-Diensten verwendet werden.
+Die lokale AEM-Laufzeit kann in [Vorabversion-Modus](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=de) Entwickler können mit den Funktionen der nächsten Version von AEM as a Cloud Service erstellen. Die Vorabversion wird aktiviert, indem die Variable `-r prerelease` -Argument beim ersten Start der lokalen AEM-Laufzeitumgebung. Dies kann sowohl mit den lokalen AEM Author- als auch AEM Publish-Diensten verwendet werden.
 
 
 >[!BEGINTABS]
@@ -268,13 +268,13 @@ Folgende Permutationen sind verfügbar:
 Beachten Sie, dass die Portnummer ein beliebiger verfügbarer Port auf dem lokalen Entwicklungscomputer sein kann, jedoch gemäß folgenden Richtlinien:
 
 + Port __4502__ wird für die __lokaler AEM-Autorendienst__
-+ Port __4503__ wird für die __lokaler AEM-Veröffentlichungsdienst__
++ Port __4503__ wird für die __lokaler AEM Veröffentlichungsdienst__
 
 Eine Änderung dieser Konfigurationen erfordert möglicherweise Anpassungen an AEM SDK-Konfigurationen
 
 ## Beenden einer lokalen AEM
 
-Um eine lokale AEM-Laufzeit zu beenden, öffnen Sie entweder den AEM-Autoren- oder Veröffentlichungsdienst, das Befehlszeilenfenster, das zum Starten der AEM Runtime verwendet wurde, und tippen Sie auf `Ctrl-C`. Warten Sie, bis AEM heruntergefahren ist. Wenn der Herunterfahren-Prozess abgeschlossen ist, ist die Eingabeaufforderung für die Befehlszeile verfügbar.
+Um eine lokale AEM-Laufzeitumgebung zu beenden, öffnen Sie entweder AEM Author- oder Publish-Dienst das Befehlszeilenfenster, das zum Starten der AEM Runtime verwendet wurde, und tippen Sie auf `Ctrl-C`. Warten Sie, bis AEM heruntergefahren ist. Wenn der Herunterfahren-Prozess abgeschlossen ist, ist die Eingabeaufforderung für die Befehlszeile verfügbar.
 
 ## Optionale Aufgaben zur Einrichtung lokaler AEM zur Laufzeit
 
@@ -308,7 +308,7 @@ Wenn Sie auf die Schnellstart-JAR-Datei doppelklicken, wird ein Fehler-Modal ang
 
 Dies liegt daran, dass AEM as a Cloud Service Schnellstart-JAR das Doppelklicken der Schnellstart-JAR-Datei nicht unterstützt, um AEM lokal zu starten. Stattdessen müssen Sie die JAR-Datei über diese Befehlszeile ausführen.
 
-Starten des AEM-Autorendienstes `cd` in das Verzeichnis mit der Schnellstart-JAR-Datei und führen Sie den Befehl aus:
+Starten AEM Autorendienstes, `cd` in das Verzeichnis mit der Schnellstart-JAR-Datei und führen Sie den Befehl aus:
 
 >[!BEGINTABS]
 
@@ -334,7 +334,7 @@ $ java -jar aem-author-p4502.jar
 
 >[!ENDTABS]
 
-oder , um den AEM-Veröffentlichungsdienst zu starten, `cd` in das Verzeichnis mit der Schnellstart-JAR-Datei und führen Sie den Befehl aus:
+oder , um AEM Veröffentlichungsdienst zu starten, `cd` in das Verzeichnis mit der Schnellstart-JAR-Datei und führen Sie den Befehl aus:
 
 >[!BEGINTABS]
 
