@@ -8,7 +8,8 @@ index: y
 type: Tutorial
 solution: Experience Manager
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Cloud Manager, Experience Manager Forms, Experience Manager Screens, Experience Manager Sites
-source-git-commit: 34c31db8d48f4e3ba3a213c4c52dc08b73020526
+auto-video-transcripts: true
+source-git-commit: b6dea4176eab664c4878a9ca7de0c4af091b9a82
 workflow-type: tm+mt
 source-wordcount: '130'
 ht-degree: 96%
@@ -32,7 +33,7 @@ Die metadata.md-Datei enthält Metadaten auf Repo-Ebene, die über die TOC.md-Da
 
 In der Datei TOC.md
 
-| Metadaten | Funktion |
+| metadata | Funktion |
 |--- |--- |
 | user-guide-title | Wird in der Artikelkopfzeile als Link verwendet |
 | user-guide-url | Öffnet die helpx-Hub-Seite |
