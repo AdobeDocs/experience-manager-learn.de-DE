@@ -15,14 +15,16 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: 896d378c-c20e-4343-b592-277f4c71065e
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '334'
-ht-degree: 76%
+ht-degree: 74%
 
 ---
 
 # Benutzeroberfläche und Navigation von AEM Sites {#basic-handling-aem-sites}
+
+{{edge-delivery-services-and-page-editor}}
 
 Das folgende Video bietet einen Überblick über die grundlegende Handhabung der AEM Autorenumgebung. Als Grundlage wird die Sites-Konsole verwendet.
 
@@ -34,14 +36,14 @@ In diesem Video werden die folgenden Funktionen behandelt:
 * Das globale Navigationsfenster besteht aus:
    * Navigation – dargestellt durch einen Kompass 
 
-      | Konsole | Zweck |
-      |---|---|
-      | Assets | In diesen Konsolen können Sie digitale Assets, wie Bilder, Videos, Dokumente und Audiodateien, importieren und verwalten. Diese Assets können dann von jeder Website verwendet werden, die auf derselben AEM-Instanz ausgeführt wird | Communities | In dieser Konsole können Sie Community-Sites für die Interaktion und Aktivierung erstellen und verwalten | Commerce  | Damit können Sie Produkte, Produktkataloge und Bestellungen verwalten, die im Zusammenhang mit Ihren Commerce-Websites stehen |
-      | Experience Fragments  | Bei einem Experience Fragment handelt es sich um ein einzelnes Erlebnis, das kanalübergreifend wiederverwendet werden kann und Variationen aufweist. So erübrigt sich das wiederholte Kopieren und Einfügen von Erlebnissen oder Teilen von Erlebnissen |
-      | Forms | In dieser Konsole können Sie Formulare und Dokumente erstellen, verwalten und verarbeiten |
-      | Personalisierung    | Diese Konsole bietet ein Framework aus Tools für die Bearbeitung von Inhalt für eine bestimmte Zielgruppe und die Darstellung personalisierter Erlebnisse |
-      | Projekte | Die Projektekonsole bietet Ihnen direkten Zugriff auf Ihre Projekte . Projekte sind virtuelle Dashboards. Sie können sie verwenden, um ein Team zusammenzustellen, diesem Team Zugriff auf Ressourcen, Workflows und Aufgaben zu gewähren und verschiedenen Personen so die Möglichkeit zu geben, gemeinsam an einer Aufgabe zu arbeiten |
-      | Sites | Mit der Konsole „Sites“ können Sie Websites erstellen, anzeigen und verwalten, die auf Ihrer AEM-Instanz ausgeführt werden. Mithilfe dieser Konsolen können Sie Seiten auf der Website erstellen, bearbeiten, kopieren, verschieben, löschen und veröffentlichen |
+     | Konsole | Zweck |
+     |---|---|
+     | Assets | In diesen Konsolen können Sie digitale Assets, wie Bilder, Videos, Dokumente und Audiodateien, importieren und verwalten. Diese Assets können dann von jeder Website verwendet werden, die auf derselben AEM-Instanz ausgeführt wird | Communities | In dieser Konsole können Sie Community-Sites für die Interaktion und die Aktivierung erstellen und verwalten | Commerce  | Damit können Sie Produkte, Produktkataloge und Bestellungen verwalten, die zu Ihren Commerce-Sites gehören |
+     | Experience Fragments | Bei einem Experience Fragment handelt es sich um ein einzelnes Erlebnis, das kanalübergreifend wiederverwendet werden kann und Varianten aufweist. So erübrigt sich das wiederholte Kopieren und Einfügen von Erlebnissen oder Teilen von Erlebnissen |
+     | Formulare | In dieser Konsole können Sie Ihre Formulare und Dokumente erstellen und verwalten |
+     | Personalisierung    | Diese Konsole bietet ein Framework aus Tools für die Bearbeitung von Inhalten für eine bestimmte Zielgruppe und die Darstellung personalisierter Erlebnisse |
+     | Projekte | Die Projektekonsole bietet Ihnen direkten Zugriff auf Ihre Projekte . Projekte sind virtuelle Dashboards. Sie können sie verwenden, um ein Team zusammenzustellen, diesem Team Zugriff auf Ressourcen, Workflows und Aufgaben zu erteilen und Personen so die Möglichkeit zu geben, gemeinsam an einem Ziel zu arbeiten |
+     | Sites | Mit der Konsole „Sites“ können Sie Websites erstellen, anzeigen und verwalten, die auf Ihrer AEM-Instanz ausgeführt werden. In diesen Konsolen können Sie Website-Seiten erstellen, bearbeiten, kopieren, verschieben und löschen, Workflows starten und Seiten veröffentlichen. |
 
    * Tools – dargestellt durch einen Hammer
 * Omni Search
@@ -62,5 +64,5 @@ In diesem Video werden die folgenden Funktionen behandelt:
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Bearbeiten der Dokumentation zum Seiteninhalt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html?lang=de)
-* [Schnellstartanleitung zum Verfassen von Seiten (Authoring)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+* [Dokumentation zum Bearbeiten des Seiteninhalts](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html?lang=de)
+* [Schnellstartanleitung zum Verfassen von Seiten (Authoring)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=de)

@@ -15,14 +15,16 @@ topic: Content Management
 role: User
 level: Beginner
 exl-id: a14c511f-504a-48ce-864b-b1a30cbaea9a
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '132'
-ht-degree: 21%
+ht-degree: 31%
 
 ---
 
 # Verfassen einer Seite {#authoring-page-aem-sites}
+
+{{edge-delivery-services-and-page-editor}}
 
 Erfahren Sie, wie Sie eine Seite in Adobe Experience Manager Sites mithilfe der Benutzeroberfläche des Site-Editors erstellen.
 
@@ -31,7 +33,7 @@ Erfahren Sie, wie Sie eine Seite in Adobe Experience Manager Sites mithilfe der 
 In diesem Video werden die folgenden Funktionen behandelt:
 
 * Erstellen einer Seite basierend auf einer Vorlage
-* Führt verschiedene Authoring-Modi für eine Seite ein
+* Führt verschiedene Bearbeitungsmodi für eine Seite ein
    * Bearbeiten
    * Layout
    * Entwickler
@@ -49,5 +51,5 @@ In diesem Video werden die folgenden Funktionen behandelt:
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Bearbeiten der Dokumentation zum Seiteninhalt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html?lang=de)
-* [Schnellstartanleitung zum Verfassen von Seiten (Authoring)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+* [Dokumentation zum Bearbeiten des Seiteninhalts](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html?lang=de)
+* [Schnellstartanleitung zum Verfassen von Seiten (Authoring)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=de)

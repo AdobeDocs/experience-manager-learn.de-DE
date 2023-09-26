@@ -3,7 +3,7 @@ title: Wie Sie mit Adobe Experience Manager die Geschwindigkeit von Inhalten erh
 description: Informieren Sie sich über die Geschwindigkeit von Inhalten und ihren Wert in Unternehmen. Informieren Sie sich über die vier Grundsätze der effektiven Umsetzung und über die Fallstricke, nach denen Sie unterwegs Ausschau halten sollten.
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-source-git-commit: de31d6e97b84781aa05ca441fc6e9fc4bc59ccc3
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '2814'
 ht-degree: 99%
@@ -11,6 +11,8 @@ ht-degree: 99%
 ---
 
 # Wie Sie mit Adobe Experience Manager die Geschwindigkeit von Inhalten erhöhen
+
+{{edge-delivery-services}}
 
 Als führendes Unternehmen in Bezug auf Kundenerlebnisse wissen wir, wie schwierig es für Sie sein kann, sicherzustellen, dass Sie über das richtige Framework und die richtigen Prinzipien verfügen, um die Inhaltsgeschwindigkeit zu steigern – Komponenten, die für die Erschließung des wahren Werts Ihrer Adobe Experience Manager-Plattform unerlässlich sind. In diesem Artikel werden wir durchgehen, was Inhaltsgeschwindigkeit ist und welchen Wert sie in Unternehmen hat. Als Nächstes informieren wir uns über die vier Grundsätze der effektiven Umsetzung und über die Fallstricke, nach denen wir unterwegs Ausschau halten sollten.
 

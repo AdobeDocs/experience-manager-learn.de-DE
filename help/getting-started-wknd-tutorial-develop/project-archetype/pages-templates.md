@@ -10,7 +10,7 @@ kt: 4082
 thumbnail: 30214.jpg
 exl-id: e9d06dc2-ac3b-48c5-ae00-fdaf5bb45b54
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '3040'
 ht-degree: 99%
@@ -18,6 +18,8 @@ ht-degree: 99%
 ---
 
 # Seiten und Vorlagen {#pages-and-template}
+
+{{edge-delivery-services-and-page-editor}}
 
 In diesem Kapitel untersuchen wir die Beziehung zwischen einer Basisseitenkomponente und bearbeitbaren Vorlagen. Erfahren Sie, wie Sie eine nicht formatierte Artikelvorlage auf der Grundlage einiger Mockups aus [Adobe XD](https://helpx.adobe.com/de/support/xd.html) erstellen. Beim Erstellen der Vorlage werden Kernkomponenten und erweiterte Richtlinienkonfigurationen der bearbeitbaren Vorlagen behandelt.
 
@@ -351,13 +353,13 @@ Die nächsten Schritte werden in der VSCode IDE mithilfe des Plug-ins [VSCode AE
    </workspaceFilter>
    ```
 
-   Die Datei `filter.xml` ist für die Identifizierung der Knotenpfade verantwortlich, die mit dem Paket installiert werden. Beachten Sie das `mode="merge"` bei jedem Filter, das anzeigt, dass der vorhandene Inhalt nicht geändert werden soll, sondern nur neue Inhalte hinzugefügt werden. Da Inhaltsautorinnen und -autoren diese Pfade möglicherweise aktualisieren, ist es wichtig, dass eine Code-Implementierung den Inhalt **nicht** überschreibt. Weitere Informationen zum Arbeiten mit Filterelementen finden Sie in der [FileVault-Dokumentation](https://jackrabbit.apache.org/filevault/filter.html).
+   Die Datei `filter.xml` ist für die Identifizierung der Knotenpfade verantwortlich, die mit dem Paket installiert werden. Beachten Sie das `mode="merge"` bei jedem Filter, das anzeigt, dass der vorhandene Inhalt nicht geändert werden soll, sondern nur neue Inhalte hinzugefügt werden. Da Inhaltsautorinnen und -autoren diese Pfade möglicherweise aktualisieren, ist es wichtig, dass eine Code-Bereitstellung den Inhalt **nicht** überschreibt. Weitere Informationen zum Arbeiten mit Filterelementen finden Sie in der [FileVault-Dokumentation](https://jackrabbit.apache.org/filevault/filter.html).
 
    Vergleichen Sie `ui.content/src/main/content/META-INF/vault/filter.xml` und `ui.apps/src/main/content/META-INF/vault/filter.xml`, um die verschiedenen Knoten zu verstehen, die von den einzelnen Modulen verwaltet werden.
 
    >[!WARNING]
    >
-   > Um konsistente Implementierungen der WKND-Referenz-Site sicherzustellen, werden einige Verzweigungen des Projekts so eingerichtet, dass `ui.content` alle Änderungen im JCR überschreibt. Dies erfolgt standardmäßig, d. h. für Lösungszweige, da Codes/Stile unter bestimmten Richtlinien geschrieben werden.
+   > Um konsistente Bereitstellungen der WKND-Referenz-Site sicherzustellen, werden einige Verzweigungen des Projekts so eingerichtet, dass `ui.content` alle Änderungen im JCR überschreibt. Dies erfolgt standardmäßig, d. h. für Lösungszweige, da Codes/Stile unter bestimmten Richtlinien geschrieben werden.
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
@@ -367,7 +369,7 @@ Herzlichen Glückwunsch, Sie haben eine Vorlage und eine Seite mit Adobe Experie
 
 An diesem Punkt ist die Artikelseite offensichtlich unformatiert. Absolvieren Sie das Tutorial [Client-seitige Bibliotheken und Frontend-Workflow](client-side-libraries.md), um die Best Practices zum Einschließen von CSS und JavaScript zur Anwendung globaler Stile auf die Site und zur Integration eines dedizierten Frontend-Builds zu erlernen.
 
-Sehen Sie sich den fertigen Code unter [GitHub](https://github.com/adobe/aem-guides-wknd) an oder prüfen und implementieren Sie den Code lokal in der Git-Verzweigung `tutorial/pages-templates-solution`.
+Sehen Sie sich den fertigen Code in [GitHub](https://github.com/adobe/aem-guides-wknd) an oder überprüfen Sie den Code lokal und stellen Sie ihn in der Git-Verzweigung bereit`tutorial/pages-templates-solution`.
 
 1. Klonen Sie das Repository [github.com/adobe/aem-wknd-guides](https://github.com/adobe/aem-guides-wknd).
 1. Checken Sie die Verzweigung `tutorial/pages-templates-solution` aus.

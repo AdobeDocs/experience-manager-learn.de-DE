@@ -1,7 +1,7 @@
 ---
 title: Verwenden von Seitenunterschieden mit AEM Sites
 seo-title: Using Page Difference with AEM Sites
-description: Die Seitendifferenz-Funktionen von AEM Sites bieten eine schnelle, farbcodierte Ansicht des Inhalts, der sich auf einer Seite geändert hat (Version, Live Copy, Launches, Sprachkopie).
+description: Die AEM Sites-Funktionen für Seitenunterschiede bieten eine schnelle, farbcodierte Ansicht darüber, welche Inhalte auf einer Seite geändert wurden (Version, Live Copy, Launches, Sprachkopie).
 seo-description: AEM Sites' page difference capabilities show provides a quick, color-coded view of what content has changed in a page (version, live copy, launches, language copy).
 topics: authoring
 audience: author, marketer
@@ -16,7 +16,7 @@ feature: Authoring
 role: User
 level: Beginner
 exl-id: 4d365957-9a5a-44f8-a117-95c1c0dd757d
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 1%
@@ -25,13 +25,15 @@ ht-degree: 1%
 
 # Verwenden der Funktion &quot;Seitendifferenz&quot; {#using-page-difference-with-aem-sites}
 
-Die Seitendifferenz-Funktionen von AEM Sites bieten eine schnelle, farbcodierte Ansicht des Inhalts, der sich auf einer Seite geändert hat (Version, Live Copy, Launches, Sprachkopie).
+{{edge-delivery-services-and-page-editor}}
+
+Die AEM Sites-Funktionen für Seitenunterschiede bieten eine schnelle, farbcodierte Ansicht darüber, welche Inhalte auf einer Seite geändert wurden (Version, Live Copy, Launches, Sprachkopie).
 
 ## Vergleich von Seitenversionen {#comparing-page-versions}
 
 >[!VIDEO](https://video.tv.adobe.com/v/32152?quality=12&learn=on)
 
-**HTML-Änderungen**
+**HTML Änderungen**
 
 * **Grün**: Neuer Inhalt
 * **Rot**: Entfernter Inhalt
@@ -40,7 +42,7 @@ Die Seitendifferenz-Funktionen von AEM Sites bieten eine schnelle, farbcodierte 
 
 * **Grün**: Neue Komponente
 * **Rot**: Entfernte Komponente
-* **Blau**: Geänderte Komponente
+* **Blau**: Modifizierte Komponente
 
 ## Vergleichen von Launch-Seiten {#comparing-launch-pages}
 

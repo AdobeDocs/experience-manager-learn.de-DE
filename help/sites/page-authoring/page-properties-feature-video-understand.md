@@ -9,14 +9,16 @@ level: Beginner
 kt: 4321
 thumbnail: 32192.jpg
 exl-id: 41b40982-9796-418e-9bfc-af6fc720e9b8
-source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 42%
+ht-degree: 55%
 
 ---
 
-# Grundlegendes zu Seiteneigenschaften {#understanding-page-properties-aem-sites}
+# Seiteneigenschaften {#understanding-page-properties-aem-sites}
+
+{{edge-delivery-services-and-page-editor}}
 
 Im folgenden Video werden die Seiteneigenschaften vorgestellt, die einer Seite in Adobe Experience Manager zugeordnet sind.
 
@@ -57,5 +59,5 @@ In diesem Video werden die folgenden Seiteneigenschaftselemente behandelt:
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [Bearbeiten der Dokumentation zu den Seiteneigenschaften](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
-* [Bearbeiten der Dokumentation zum Seiteninhalt](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [Schnellstartanleitung zum Verfassen von Seiten (Authoring)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+* [Dokumentation zum Bearbeiten des Seiteninhalts](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html?lang=de)
+* [Schnellstartanleitung zum Verfassen von Seiten (Authoring)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=de)

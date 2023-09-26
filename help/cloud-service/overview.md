@@ -4,7 +4,7 @@ description: Eine Sammlung von Tutorials für Adobe Experience Manager (AEM) as 
 sub-product: Experience Manager as a Cloud Service
 kt: 3289
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 100%
@@ -12,6 +12,8 @@ ht-degree: 100%
 ---
 
 # AEM as a Cloud Service – Videos und Tutorials {#overview}
+
+{{edge-delivery-services}}
 
 Adobe Experience Manager (AEM) ist nun als Cloud-Service verfügbar. AEM as a Cloud Service führt die nächste Generation der Experience Manager-Produktlinie ein, die auf früheren Investitionen und Innovationen aufbaut, wobei alle Anwendungsfälle und Funktionen beibehalten und erweitert werden.
 
@@ -22,24 +24,19 @@ Adobe Experience Manager (AEM) ist nun als Cloud-Service verfügbar. AEM as a Cl
 ## Neuerungen
 
 * **[Token-basierte Authentifizierung (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=de)**
-
-   *Erfahren Sie, wie Sie durch Token-basierte Authentifizierung über HTTP mit AEM as a Cloud Service interagieren können*
+  *Erfahren Sie, wie Sie durch Token-basierte Authentifizierung über HTTP mit AEM as a Cloud Service interagieren können*
 
 * **[Headless GraphQL (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de)**
-
-   *Erfahren Sie, wie Sie mit AEM GraphQL-APIs Erlebnisse in einer externen Anwendung nutzen können.*
+  *Erfahren Sie, wie Sie mit AEM GraphQL-APIs Erlebnisse in einer externen Anwendung nutzen können.*
 
 * **[Massenimport (Video)](./migration/bulk-import.md)**
-
-   *Erfahren Sie, wie Sie Assets aus Azure Blob-Speicher oder Amazon S3 stapelweise in AEM importieren*
+  *Erfahren Sie, wie Sie Assets aus Azure Blob-Speicher oder Amazon S3 stapelweise in AEM importieren*
 
 * **[Asset Compute-Metadaten-Sekundär (Tutorial)](./asset-compute/advanced/metadata.md)**
-
-   *Erfahren Sie, wie Sie Asset-Metadaten von einem Asset Compute-Sekundär zurück in AEM schreiben*
+  *Erfahren Sie, wie Sie Asset-Metadaten von einem Asset Compute-Sekundär zurück in AEM schreiben*
 
 * **[Erweiterbarkeit von Asset Compute-Microservices (Tutorial)](./asset-compute/overview.md)**
-
-   *Erfahren Sie, wie Sie Asset Compute-Sekundäre entwickeln, um benutzerdefinierte Asset-Ausgabedarstellungen zu generieren*
+  *Erfahren Sie, wie Sie Asset Compute-Sekundäre entwickeln, um benutzerdefinierte Asset-Ausgabedarstellungen zu generieren*
 
 </div>
 

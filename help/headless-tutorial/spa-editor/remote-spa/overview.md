@@ -9,7 +9,7 @@ kt: 7630
 thumbnail: 333272.jpeg
 last-substantial-update: 2022-11-11T00:00:00Z
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
-source-git-commit: 0fff8b53e3dffb835e070444b55a72f0b0cc3d14
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 98%
@@ -17,6 +17,8 @@ ht-degree: 98%
 ---
 
 # Übersicht
+
+{{edge-delivery-services}}
 
 Willkommen beim mehrteiligen Tutorial für Entwickler, die eine vorhandene React-basierte (oder Next.js-) Remote-SPA mit bearbeitbaren AEM-Inhalten mithilfe des AEM-SPA-Editors erweitern möchten.
 

@@ -13,14 +13,16 @@ topic: SPA
 role: Developer
 level: Beginner
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: ht
+source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+workflow-type: tm+mt
 source-wordcount: '645'
 ht-degree: 100%
 
 ---
 
 # Erstellen Ihres ersten Angular-SPA-Projekts in AEM {#introduction}
+
+{{edge-delivery-services}}
 
 Willkommen zu diesem mehrteiligen Tutorial. Es richtet sich an Entwicklerinnen und Entwickler, die die Funktion **SPA-Editor** von Adobe Experience Manager (AEM) noch nicht verwendet haben. Dieses Tutorial führt durch die Implementierung einer Angular-Anwendung für eine fiktive Lifestyle-Marke namens WKND. Die Angular-App wurde für die Bereitstellung mit dem SPA-Editor von AEM entwickelt, der Angular-Komponenten mit AEM-Komponenten verknüpft. Die fertiggestellte SPA wird in AEM bereitgestellt und kann mit herkömmlichen Inline-Bearbeitungswerkzeugen von AEM dynamisch bearbeitet werden.
 
@@ -43,9 +45,9 @@ Das Tutorial wurde für die Verwendung mit **AEM as a Cloud Service** erstellt u
 
 ## Neuester Code
 
-Den gesamten Code des Tutorials finden Sie auf [GitHub](https://github.com/adobe/aem-guides-wknd-spa).
+Den gesamten Tutorial-Code finden Sie auf [GitHub](https://github.com/adobe/aem-guides-wknd-spa).
 
-Die [aktuelle Code-Basis](https://github.com/adobe/aem-guides-wknd-spa/releases) ist in herunterladbaren AEM-Paketen verfügbar.
+Die [aktuelle Code-Basis](https://github.com/adobe/aem-guides-wknd-spa/releases) ist in Form von herunterladbaren AEM-Paketen verfügbar.
 
 ## Voraussetzungen
 
@@ -62,13 +64,13 @@ Bevor Sie mit diesem Tutorial beginnen, benötigen Sie Folgendes:
 
 ## Lokale Entwicklungsumgebung {#local-dev-environment}
 
-Für die Durchführung dieses Tutorials ist eine lokale Entwicklungsumgebung erforderlich. Screenshots und Videos werden mit dem AEM as a Cloud Service SDK erfasst, das in einer macOS-Umgebung mit [Visual Studio Code](https://code.visualstudio.com/) als IDE ausgeführt wird. Befehle und Code sollten unabhängig vom lokalen Betriebssystem sein, sofern nicht anders angegeben.
+Für die Durchführung dieses Tutorials ist eine lokale Entwicklungsumgebung erforderlich. Screenshots und Videos werden mit dem AEM as a Cloud Service-SDK erfasst, das in einer macOS-Umgebung mit [Visual Studio Code](https://code.visualstudio.com/) als IDE ausgeführt wird. Befehle und Code sollten unabhängig vom lokalen Betriebssystem sein, sofern nicht anders angegeben.
 
 >[!NOTE]
 >
-> **Neu bei AEM as a Cloud Service?** Lesen Sie die [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit dem AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de).
+> **Neu bei AEM as a Cloud Service?** Sehen Sie sich eine [detaillierte Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit dem AEM as a Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de) an.
 >
-> **Neu bei AEM 6.5?** Lesen Sie die [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=de).
+> **Neu bei AEM 6.5?** Sehen Sie sich die [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung an](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=de).
 
 ## Nächste Schritte {#next-steps}
 
