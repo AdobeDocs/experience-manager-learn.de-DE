@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 7b98f583f8b54fb9c9c706521c310282dcc17ea3
+source-git-commit: 90d0d4876869b05c2ce00fd8cf18c474a6a00e27
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 96%
+source-wordcount: '401'
+ht-degree: 95%
 
 ---
 
@@ -63,6 +63,9 @@ ht-degree: 96%
    + [Benutzerdefinierte Smart Tags für Bilder](metadata/custom-smart-tags.md)
    + [Smart-Tags für Videos](metadata/video-smart-tags.md)
    + [Importieren und Exportieren von Metadaten](metadata/metadata-import-export.md)
+
++ Edge-Bereitstellungsdienste{#edge-delivery-services}
+   + [Sidekick-Plugin](./edge-delivery-services/sidekick-plugin.md)
 
 + Freigabe und Verteilung{#sharing}
    + [Herunterladen von Assets](./sharing/download.md)
@@ -125,7 +128,7 @@ ht-degree: 96%
    + 3D {#3d}
       + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
    + Verwendung mit AEM Sites {#dm-with-aem-sites}
-      + [Experience Fragments ](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
+      + [Experience Fragments](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media-Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
 
    + Tutorials {#tutorials}
