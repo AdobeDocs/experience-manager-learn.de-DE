@@ -1,7 +1,7 @@
 ---
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
+source-git-commit: 7f7bffa24539d0bba0dc9ac8cc94d0c8d1f2e871
 workflow-type: tm+mt
-source-wordcount: '126'
+source-wordcount: '129'
 ht-degree: 0%
 
 ---
@@ -13,12 +13,12 @@ ht-degree: 0%
 
 ## Edge-Bereitstellungsdienste{#edge-delivery-services}
 
-[!BADGE Klicken Sie hier, um von AEM auf Edge Delivery Services zu veröffentlichen.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Veröffentlichen von AEM in Edge Delivery Services"}
+[!BADGE Klicken Sie hier, um mit Edge Delivery Services Veröffentlichungen aus AEM Sites zu erstellen.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Veröffentlichen von AEM in Edge Delivery Services"}
 
 ## Edge Delivery Services und Seiten-Editor{#edge-delivery-services-and-page-editor}
 
-[!BADGE Klicken Sie hier, um von AEM auf Edge Delivery Services zu veröffentlichen.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Veröffentlichen von AEM in Edge Delivery Services"}
+[!BADGE Klicken Sie hier, um mit Edge Delivery Services Veröffentlichungen aus AEM Sites zu erstellen.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Veröffentlichen von AEM in Edge Delivery Services"}
 
 ## Edge Delivery Services und universeller Visual Editor{#edge-delivery-services-and-universal-visual-editor}
 
-[!BADGE Klicken Sie hier, um von AEM auf Edge Delivery Services zu veröffentlichen.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Veröffentlichen von AEM in Edge Delivery Services"}
+[!BADGE Klicken Sie hier, um mit Edge Delivery Services Veröffentlichungen aus AEM Sites zu erstellen.]{type=Positive url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html" tooltip="Veröffentlichen von AEM in Edge Delivery Services"}
