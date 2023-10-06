@@ -4,9 +4,9 @@ breadcrumb-title: AEM Foundation-Tutorials
 user-guide-description: Eine Sammlung von Videos und Tutorials für die Adobe Experience Manager Foundation.
 sub-product: Experience Manager
 index: y
-source-git-commit: 2f0490263eaf5e3458e2d71113411a4fdd0aa94c
+source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '232'
 ht-degree: 90%
 
 ---
@@ -45,7 +45,7 @@ ht-degree: 90%
    + [Verwenden des SSL-Assistenten](./security/use-the-ssl-wizard.md)
    + [ModSecurity CRS DoS-Angriffsschutz](./security/modsecurity-crs-dos-attack-protection.md)
    + [HTTPS-Verbindungen zu APIs mit privaten Zertifikaten](./security/call-internal-apis-having-private-certificate.md)
-   + [Gegenseitige TLS-Authentifizierung (mTLS)](./security/mutual-tls-authentication.md)
+   + [Gegenseitige TLS-Authentifizierung (mTLS) von AEM](./security/mutual-tls-authentication.md)
 + Workflow {#workflow}
    + [Verwenden des Workflow-Editors](./workflow/use-the-workflow-editor.md)
    + [Verwenden des Workflows](./workflow/use-workflow.md)

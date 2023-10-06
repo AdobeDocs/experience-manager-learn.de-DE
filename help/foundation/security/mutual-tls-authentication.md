@@ -1,5 +1,5 @@
 ---
-title: Authentifizierung mit gegenseitiger Transport Layer Security (mTLS)
+title: Gegenseitige Transport Layer Security (mTLS)-Authentifizierung von AEM
 description: Erfahren Sie, wie Sie HTTPS-Aufrufe von AEM zu Web-APIs durchführen, für die eine mTLS-Authentifizierung (Mutual Transport Layer Security) erforderlich ist.
 feature: Security
 version: 6.5, Cloud Service
@@ -10,15 +10,15 @@ kt: 13881
 thumbnail: KT-13881.png
 doc-type: article
 last-substantial-update: 2023-10-10T00:00:00Z
-source-git-commit: 2f0490263eaf5e3458e2d71113411a4fdd0aa94c
+source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
 
 
-# Authentifizierung mit gegenseitiger Transport Layer Security (mTLS)
+# Gegenseitige Transport Layer Security (mTLS)-Authentifizierung von AEM
 
 Erfahren Sie, wie Sie HTTPS-Aufrufe von AEM zu Web-APIs durchführen, für die eine mTLS-Authentifizierung (Mutual Transport Layer Security) erforderlich ist.
 
@@ -81,7 +81,7 @@ Generieren Sie zu Demozwecken die zertifikatbezogenen Details wie Schlüssel, Ce
 
 ### Zertifikataustausch
 
-Wenn Sie wie oben eine selbstsignierte Zertifizierungsstelle für das AEM Zertifikat verwenden, tauschen Sie das Zertifikat oder das Zertifikat der internen Zertifizierungsstelle (CA) mit dem API-Provider aus.
+Wenn Sie wie oben eine selbstsignierte Zertifizierungsstelle für das AEM Zertifikat verwenden, senden Sie das Zertifikat oder das Zertifikat der internen Zertifizierungsstelle (CA) an den API-Provider.
 
 Wenn der API-Provider ein selbstsigniertes CA-Zertifikat verwendet, erhalten Sie das Zertifikat oder das Zertifikat der internen Zertifizierungsstelle (Certification Authority, CA) vom API-Provider.
 
