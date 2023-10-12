@@ -8,7 +8,7 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 kt: 2963
 index: y
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '298'
 ht-degree: 94%
@@ -20,7 +20,7 @@ ht-degree: 94%
 
 + [AEM Headless – Übersicht](./overview.md)
 + GraphQL {#graphql}
-   + [AEM Headless-Entwicklerportal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=de)
+   + [AEM Headless-Entwicklerportal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=de){target=_blank}
    + [Übersicht](./graphql/overview.md)
    + Schnell-Setup {#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)

@@ -8,10 +8,10 @@ version: Cloud Service
 feature-set: Experience Manager Assets
 feature: Assets Essentials
 team: TM
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '77'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -44,6 +44,6 @@ ht-degree: 97%
    + [Senden von Dokumenten und Verknüpfen von Assets](./integrations/workfront/link-send.md)
    + [Versionsverlauf](./integrations/workfront/versions.md)
 
-+ [Adobe Journey Optimizer-Integration](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=de)
++ [Adobe Journey Optimizer-Integration](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=de){target=_blank}
 
-+ [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=de)
++ [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=de){target=_blank}

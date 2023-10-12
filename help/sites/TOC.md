@@ -6,7 +6,7 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: e7e5a07ecada8e5760cd1496bdb44b3d035373dd
+source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '459'
 ht-degree: 89%
@@ -43,7 +43,7 @@ ht-degree: 89%
    + [Web-optimierte Bildbereitstellung](components/web-optimized-image-delivery.md)
    + [Komponentenkonsole](components/components-console-feature-video-use.md)
 + Inhaltsfragmente {#content-fragments}
-   + [Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html)
+   + [Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
    + [Bearbeiten von Inhaltsfragmenten](content-fragments/content-fragments-feature-video-use.md)
    + [Bereitstellen von Inhaltsfragmenten](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [Übersetzen von Inhaltsfragmenten](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -51,13 +51,13 @@ ht-degree: 89%
 + Experience Fragments {#experience-fragments}
    + [Verwenden von Experience Fragments](experience-fragments/experience-fragments-feature-video-use.md)
    + [Bausteine](experience-fragments/building-blocks.md)
-   + [Inhaltsfragmente im Vergleich zu Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=de)
+   + [Inhaltsfragmente im Vergleich zu Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=de){target=_blank}
 
 + Entwickeln {#developing}
    + [AEM-Projektarchetyp](developing/aem-project-archetype.md)
-   + [Erste Schritte mit AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de)
-   + [Erste Schritte mit AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=de)
-   + [Erste Schritte mit dem AEM-SPA-Editor und React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=de)
+   + [Erste Schritte mit AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de){target=_blank}
+   + [Erste Schritte mit AEM Headless ](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=de){target=_blank}
+   + [Erste Schritte mit dem AEM-SPA-Editor und React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=de){target=_blank}
    + [Erweitern der Seiteneigenschaften](developing/page-properties-technical-video-develop.md)
    + [Responsive Breakpoints](developing/responsive-breakpoints.md)
    + [Entwickeln mit dem Stilsystem](developing/style-system-technical-video-understand.md)
@@ -67,7 +67,7 @@ ht-degree: 89%
    + [Freigabe in Social Media](developing/social-media-sharing-technical-video-use.md)
    + [Anpassen von Komponentensymbolen](developing/component-icons-technical-video-develop.md)
 + Personalisierung {#personalization}
-   + [Integration mit Adobe Target](https://helpx.adobe.com/de/marketing-cloud/how-to/aem-target.html)
+   + [Integration mit Adobe Target](https://helpx.adobe.com/de/marketing-cloud/how-to/aem-target.html){target=_blank}
    + [Einrichten von Experience Fragments und Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [Verwenden von Experience Fragments mit Adobe Target](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [Einrichten von ContextHub](personalization/context-hub-technical-video-setup.md)
@@ -75,7 +75,7 @@ ht-degree: 89%
    + [Sitemaps](./seo/sitemaps.md)
 + Single Page Applications {#spa-editor}
    + [Verwenden des SPA-Editors](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [Erste Schritte mit dem AEM-SPA-Editor und React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=de)
+   + [Erste Schritte mit dem AEM-SPA-Editor und React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=de){target=_blank}
 + Multi-Site-Management {#multi-site-management}
    + [Einführung in die Sprachkopie](./multi-site-management/language-copy-overview.md)
    + [Live Copy und Blueprint](./multi-site-management/live-copy-and-blueprint.md)
@@ -101,7 +101,7 @@ ht-degree: 89%
       + [Generieren von FPIDs](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [Analytics mit dem Platform Web SDK](integrations/platform/analytics-using-web-sdk.md)
-   + Datenerfassungs-Tags der Experience Platform (Launch) {#experience-platform-data-collection-tags}
+   + Experience Platform von Datenerfassungs-Tags (Launch) {#experience-platform-data-collection-tags}
       + [Übersicht](integrations/experience-platform/data-collection/tags/overview.md)
       + [Erstellen einer Tag-Eigenschaft](integrations/experience-platform/data-collection/tags/create-tag-property.md)
       + [AEM- und Tag-Eigenschaft über IMS verbinden](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
