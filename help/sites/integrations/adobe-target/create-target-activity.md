@@ -14,10 +14,10 @@ level: Intermediate
 badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: f581a4fb-1182-44bb-8c46-4250cf37b55f
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 24%
+source-wordcount: '124'
+ht-degree: 25%
 
 ---
 
@@ -29,7 +29,7 @@ Erfahren Sie, wie Sie eine Adobe Target-Aktivität mit AEM Experience Fragment-A
 
 ## Voraussetzungen
 
-Um Adobe Target-Aktivitäten mithilfe von Experience Fragment-Angeboten zu erstellen, muss die folgende Einrichtung abgeschlossen sein:
+Um Adobe Target-Aktivitäten mit Experience Fragment-Angeboten zu erstellen, muss die folgende Einrichtung abgeschlossen sein:
 
 1. [Hinzufügen von Adobe Target zu Ihrer AEM-Website](./add-target-launch-extension.md)
 1. [Auslösen eines Adobe Target-Aufrufs von Launch](./load-and-fire-target.md)
@@ -38,5 +38,5 @@ Um Adobe Target-Aktivitäten mithilfe von Experience Fragment-Angeboten zu erste
 
 ## Unterstützende Links
 
-* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
+* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 * [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

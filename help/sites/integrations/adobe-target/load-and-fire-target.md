@@ -1,6 +1,6 @@
 ---
 title: Laden und Auslösen eines Target-Aufrufs
-description: Erfahren Sie, wie Sie mit einer Launch-Regel laden, Parameter an Seitenanfragen übergeben und einen Target-Aufruf von Ihrer Site-Seite aus auslösen können. Seiteninformationen werden mithilfe der Adobe Client-Datenschicht abgerufen und als Parameter übergeben, mit der Sie Daten zum Besuchererlebnis auf einer Webseite erfassen und speichern und anschließend den Zugriff auf diese Daten erleichtern können.
+description: Erfahren Sie, wie Sie mit einer Launch-Regel laden, Parameter an Seitenanfragen übergeben und einen Target-Aufruf von Ihrer Site-Seite aus auslösen können. Seiteninformationen werden mithilfe der Adobe Client-Datenschicht abgerufen und als Parameter übergeben, über die Sie Daten über Besuchererlebnisse auf einer Webseite erfassen und speichern und so den Zugriff auf diese Daten erleichtern können.
 feature: Core Components, Adobe Client Data Layer
 topics: integrations, administration, development
 audience: administrator, developer
@@ -14,22 +14,22 @@ level: Intermediate
 badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '613'
 ht-degree: 8%
 
 ---
 
 # Laden und Auslösen eines Target-Aufrufs {#load-fire-target}
 
-Erfahren Sie, wie Sie mit einer Launch-Regel laden, Parameter an Seitenanfragen übergeben und einen Target-Aufruf von Ihrer Site-Seite aus auslösen können. Informationen zu Webseiten werden mithilfe der Adobe Client-Datenschicht abgerufen und als Parameter übergeben, über die Sie Daten zum Besuchererlebnis auf einer Webseite erfassen und speichern und so den Zugriff auf diese Daten erleichtern können.
+Erfahren Sie, wie Sie mit einer Launch-Regel laden, Parameter an Seitenanfragen übergeben und einen Target-Aufruf von Ihrer Site-Seite aus auslösen können. Die Informationen der Webseite werden mithilfe der Adobe Client-Datenschicht abgerufen und als Parameter übergeben, über die Sie Daten über das Besuchererlebnis auf einer Webseite erfassen und speichern und so den Zugriff auf diese Daten erleichtern können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
 ## Seitenladeregel
 
-Die Adobe Client-Datenschicht ist eine ereignisgesteuerte Datenschicht. Wenn die AEM-Datenschicht geladen wird, wird ein -Ereignis Trigger `cmp:show` . Im Video wird die `Launch Library Loaded` -Regel wird mit einem benutzerdefinierten Ereignis aufgerufen. Unten finden Sie die Code-Snippets, die im Video für das benutzerspezifische Ereignis sowie für die Datenelemente verwendet werden.
+Die Adobe Client-Datenschicht ist eine ereignisgesteuerte Datenschicht. Beim Laden der AEM Seite wird ein -Ereignis Trigger `cmp:show` . Im Video wird die `Launch Library Loaded` -Regel wird mit einem benutzerspezifischen Ereignis aufgerufen. Unten finden Sie die Code-Snippets, die im Video für das benutzerspezifische Ereignis und für die Datenelemente verwendet werden.
 
 ### Benutzerdefiniertes Seitenereignis{#page-event}
 
@@ -41,7 +41,7 @@ Fügen Sie in der Launch-Eigenschaft eine neue **Ereignis** der **Regel**
 + __Ereignistyp:__ Benutzerspezifischer Code
 + __Name:__ Page Show Event Handler (oder eine Beschreibung)
 
-Tippen Sie auf __Editor öffnen__ und fügen Sie das folgende Codefragment ein. Dieser Code __must__ werden __Ereigniskonfiguration__ und __Aktion__.
+Tippen Sie auf __Editor öffnen__ und fügen Sie im folgenden Code-Snippet ein. Dieser Code __must__ werden __Ereigniskonfiguration__ und __Aktion__.
 
 ```javascript
 // Define the event handler function
@@ -162,7 +162,7 @@ window.targetGlobalSettings = {
 ## Unterstützende Links
 
 + [Adobe Client-Datenschicht-Dokumentation](https://github.com/adobe/adobe-client-data-layer/wiki)
-+ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
 + [Verwenden der Dokumentation zur Adobe Client-Datenschicht und zu Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de)
-+ [Einführung in den Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html)
++ [Einführung in den Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

@@ -14,10 +14,10 @@ level: Intermediate
 badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 6%
+source-wordcount: '200'
+ht-degree: 7%
 
 ---
 
@@ -47,10 +47,10 @@ Der Export von Experience Fragment in Adobe Target ohne die richtigen Berechtigu
 
 #### Auflösung
 
-1. Anmelden bei [Admin Console](https://adminconsole.adobe.com/) mit Administratorrechten für das verwendete Adobe Target-Produktprofil, aber AEM Integration
+1. Anmelden bei [Admin Console](https://adminconsole.adobe.com/) mit Administratorrechten für das verwendete Adobe Target-Produktprofil, aber der AEM Integration
 2. Auswählen __Produkte > Adobe Target > Produktprofil__
-3. under __Integrationen__ auf, wählen Sie die Integration für Ihre AEM as a Cloud Service Umgebung aus (gleicher Name wie das Adobe I/O-Projekt).
-4. Zuweisen __Editor__ oder __Genehmiger__ Rolle
+3. under __Integrationen__ auf, wählen Sie die Integration für Ihre AEM as a Cloud Service Umgebung aus (gleicher Name wie das Adobe Developer-Projekt).
+4. Zuweisen __Bearbeiter__ oder __Genehmiger__ Rolle
 
    ![Target-API-Fehler](assets/target-permissions.png)
 
@@ -58,5 +58,5 @@ Durch Hinzufügen der richtigen Berechtigung zur Adobe Target-Integration sollte
 
 ## Unterstützende Links
 
-+ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
++ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 + [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

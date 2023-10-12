@@ -10,10 +10,10 @@ kt: 9165
 thumbnail: 337960.jpeg
 last-substantial-update: 2022-10-03T00:00:00Z
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
-source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
 source-wordcount: '263'
-ht-degree: 5%
+ht-degree: 6%
 
 ---
 
@@ -31,7 +31,7 @@ Erfahren Sie, wie Sie Ihr SEO durch die Erstellung von Sitemaps für AEM Sites v
 
 ### Absolute Sitemap-URLs{#absolute-sitemap-urls}
 
-AEM Sitemap unterstützt absolute URLs durch Verwendung von [Sling-Zuordnung](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). Dies geschieht durch Erstellen von Zuordnungsknoten für die AEM Dienste, die Sitemaps generieren (normalerweise der AEM-Veröffentlichungsdienst).
+AEM Sitemap unterstützt absolute URLs durch Verwendung von [Sling-Zuordnung](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). Dies geschieht durch Erstellen von Zuordnungsknoten für die AEM Dienste, die Sitemaps generieren (in der Regel der AEM Veröffentlichungsdienst).
 
 Eine Beispieldefinition für einen Sling-Zuordnungsknoten für `https://wknd.com` kann definiert werden unter `/etc/map/https` wie folgt:
 
@@ -48,7 +48,7 @@ Der folgende Screenshot zeigt eine ähnliche Konfiguration, aber für `http://wk
 
 ### OSGi-Konfiguration des Sitemap Scheduler
 
-Definiert die [OSGi-Werkskonfiguration](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) für die Häufigkeit (mithilfe von [Cron-Ausdrücke](http://www.cronmaker.com)) Sitemaps werden in AEM neu erstellt und zwischengespeichert.
+Definiert die [OSGi-Werkskonfiguration](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) für die Häufigkeit (mithilfe von [Cron-Ausdrücke](http://www.cronmaker.com/)) Sitemaps werden in AEM neu erstellt und zwischengespeichert.
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 
@@ -87,8 +87,8 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 
 ## Ressourcen
 
-+ [AEM Sitemap-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/overview/seo-and-url-management.html?lang=en#building-an-xml-sitemap-on-aem)
++ [AEM Sitemap-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=en)
 + [Apache Sling Sitemap-Dokumentation](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
 + [Sitemap.org Sitemap-Dokumentation](https://www.sitemaps.org/protocol.html)
-+ [Dokumentation zur Sitemap-Indexdatei &quot;Sitemap&quot;](https://www.sitemaps.org/protocol.html#index)
-+ [Hersteller](http://www.cronmaker.com/)
++ [Sitemap.org Dokumentation zur Sitemap-Indexdatei](https://www.sitemaps.org/protocol.html#index)
++ [Kronzeuger](http://www.cronmaker.com/)

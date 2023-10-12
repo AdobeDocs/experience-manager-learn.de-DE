@@ -1,5 +1,5 @@
 ---
-title: Personalisierung des gesamten Web-Seiten-Erlebnisses
+title: Personalisierung der vollständigen Webseite - Erlebnis
 description: Erfahren Sie, wie Sie eine Target-Aktivität erstellen, um Ihre AEM Webseiten mithilfe von Adobe Target auf neue Seiten umzuleiten.
 topics: integrations, authoring, personalization, activity, offers
 audience: all
@@ -14,14 +14,14 @@ level: Intermediate
 badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 2d201b48-c0fb-4bb4-a7d8-da9f4702e9ff
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '466'
 ht-degree: 5%
 
 ---
 
-# Personalisierung des gesamten Web-Seiten-Erlebnisses {#personalization-fpe}
+# Personalisierung der vollständigen Webseite - Erlebnis {#personalization-fpe}
 
 Erfahren Sie, wie Sie eine Aktivität erstellen, um die auf AEM gehosteten Seiten Ihrer Site mit Adobe Target auf eine neue Seite umzuleiten.
 
@@ -39,15 +39,15 @@ Die WKND-Site hat ihre Homepage neu gestaltet und möchte die aktuellen Besucher
 ## Schritte zum Erstellen eines A/B-Tests mit Visual Experience Composer (VEC)
 
 1. Melden Sie sich bei Adobe Target an und navigieren Sie zur Registerkarte Aktivitäten .
-1. Klicken **Aktivität erstellen** und wählen Sie **A/B-Test** activity
+1. Klicks **Aktivität erstellen** und wählen Sie **A/B-Test** activity
 
    ![A/B-Aktivität](assets/ab-target-activity.png)
 
 1. Wählen Sie die **Visual Experience Composer** Geben Sie die Aktivitäts-URL ein und klicken Sie auf **Nächste**
 
-   ![Aktivitäts-URL](assets/ab-test-url.png)
+   ![Aktivitäts URL](assets/ab-test-url.png)
 
-1. Der Visual Experience Composer zeigt nach der Erstellung einer neuen Aktivität auf der linken Seite zwei Registerkarten an: *Erlebnis A* und *Erlebnis B*. Wählen Sie ein Erlebnis aus der Liste aus. Sie können der Liste neue Erlebnisse hinzufügen, indem Sie die **Erlebnis hinzufügen** Schaltfläche.
+1. Der Visual Experience Composer zeigt nach dem Erstellen einer Aktivität auf der linken Seite zwei Registerkarten an: *Erlebnis A* und *Erlebnis B*. Wählen Sie ein Erlebnis aus der Liste aus. Sie können der Liste neue Erlebnisse hinzufügen, indem Sie die **Erlebnis hinzufügen** Schaltfläche.
 
    ![Erlebnisoptionen](assets/experience-options.png)
 
@@ -59,7 +59,7 @@ Die WKND-Site hat ihre Homepage neu gestaltet und möchte die aktuellen Besucher
 
    ![Abenteuer](assets/new-experiences.png)
 
-1. Klicken **Nächste** , um zum Targeting zu wechseln und eine manuelle Traffic-Zuordnung von 50 bis 50 zwischen den beiden Erlebnissen beizubehalten.
+1. Klicks **Nächste** , um zum Targeting zu wechseln und eine manuelle Traffic-Zuordnung von 50 bis 50 zwischen den beiden Erlebnissen beizubehalten.
 
    ![Targeting](assets/targeting.png)
 
@@ -82,5 +82,5 @@ Als Marketer konnten Sie eine Aktivität erstellen, um Ihre auf AEM gehosteten S
 
 ## Unterstützende Links
 
-* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj)
+* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 * [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
