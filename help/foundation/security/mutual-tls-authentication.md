@@ -10,17 +10,19 @@ kt: 13881
 thumbnail: KT-13881.png
 doc-type: article
 last-substantial-update: 2023-10-10T00:00:00Z
-source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
+exl-id: 7238f091-4101-40b5-81d9-87b4d57ccdb2
+source-git-commit: 549b444d0a195fb9b5b8fd7ff48cf133746e5fd2
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
 
-
 # Gegenseitige Transport Layer Security (mTLS)-Authentifizierung von AEM
 
 Erfahren Sie, wie Sie HTTPS-Aufrufe von AEM zu Web-APIs durchführen, für die eine mTLS-Authentifizierung (Mutual Transport Layer Security) erforderlich ist.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
 
 Die mTLS- oder bidirektionale TLS-Authentifizierung verbessert die Sicherheit des TLS-Protokolls, da **Client und Server für die gegenseitige Authentifizierung**. Diese Authentifizierung erfolgt mithilfe digitaler Zertifikate. Sie wird häufig in Szenarien verwendet, in denen eine starke Sicherheits- und Identitätsüberprüfung von entscheidender Bedeutung ist.
 
@@ -221,3 +223,9 @@ private KeyStore getAEMTrustStore(KeyStoreService keyStoreService, ResourceResol
 Ein herkömmlicher Ansatz zum effektiven Aufrufen von mTLS-APIs mit privaten Zertifikaten beinhaltet die Änderung des JVM-Keystore. Dies wird durch den Import der privaten Zertifikate mithilfe des Java™ erreicht [keytool](https://docs.oracle.com/en/java/javase/11/tools/keytool.html#GUID-5990A2E4-78E3-47B7-AE75-6D1826259549) Befehl.
 
 Diese Methode ist jedoch nicht mit Best Practices für die Sicherheit abgestimmt und bietet AEM eine bessere Option durch die Verwendung der **Benutzerspezifische KeyStores und globaler TrustStore** und [KeyStoreService](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/granite/keystore/KeyStoreService.html).
+
+## Lösungspaket
+
+Das im Video vorgestellte Node.js-Beispielprojekt kann heruntergeladen werden von [here](assets/internal-api-call/REST-APIs.zip).
+
+Der AEM Servlet-Code ist im WKND Sites-Projekt verfügbar `tutorial/web-api-invocation` Verzweigung, [see](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).
