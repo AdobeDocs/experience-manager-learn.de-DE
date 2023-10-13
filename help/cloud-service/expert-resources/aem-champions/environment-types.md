@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Value Video
 last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13229
-source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
+exl-id: 66159aac-a5ca-47fb-b374-f0fe5f8e1198
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 9%
 
 ---
-
 
 # AEM Tipps und Tricks - Cloud Manager-Umgebungstypen
 
@@ -25,5 +25,5 @@ Sehen Sie sich diese Tipps von Ihrem technischen Leiter Rakesh Pasupuleti an. Ra
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Verwalten von Umgebungen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=de) - Dokumentation zum Umweltmanagement in AEM as a Cloud Service
-* [Schnelle Entwicklungsumgebungen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html) - Dokumentation zu RDEs in AEM as a Cloud Service
+* [Umgebungen verwalten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=de) - Dokumentation zum Umweltmanagement in AEM as a Cloud Service
+* [Schnelle Entwicklungsumgebungen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html) - Dokumentation zu RDE in AEM as a Cloud Service

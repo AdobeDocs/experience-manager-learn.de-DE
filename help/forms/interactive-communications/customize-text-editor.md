@@ -12,7 +12,8 @@ level: Beginner
 feature: Interactive Communication
 last-substantial-update: 2023-04-19T00:00:00Z
 kt: 13126
-source-git-commit: edba74f5ff5611687c05812de184243997ee7a35
+exl-id: e551ac8d-0bfc-4c94-b773-02ff9bba202e
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 60%
@@ -164,7 +165,7 @@ Anpassen von Schriften durch Bearbeiten der Datei  tbxeditor-config.xml führen 
 
    1. Nehmen Sie die erforderlichen Änderungen in der Datei vor, um Folgendes in den Einstellungen für die Schriftart zu ändern:
 
-      * Schriftfamilie und -größe hinzufügen oder entfernen
+      * Schriftfamilie hinzufügen oder entfernen
       * Eigenschaften wie Höhe und Zeichenabstand
       * Standardwerte für Schriftfamilie und -größe, Höhe, Zeichenabstand und Datumsformat
       * Einzüge für Aufzählungszeichen
@@ -174,7 +175,6 @@ Anpassen von Schriften durch Bearbeiten der Datei  tbxeditor-config.xml führen 
       Sie können auch die Standardeinstellungen für verschiedene Aspekte des Textes ändern und die Schriftarten aus dem Texteditor entfernen, indem Sie die Einträge entfernen.
 
    1. Klicken Sie auf **Alle speichern**.
-
 
 ## Fügen Sie dem Client-Computer benutzerdefinierte Schriftarten hinzu {#addcustomfonts}
 

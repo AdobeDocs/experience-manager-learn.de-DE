@@ -12,8 +12,8 @@ jira: KT-13328
 thumbnail: KT-13328.jpeg
 badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
-exl-id: 9f54995f-4ce7-45f2-9021-6fdfe42ff89a
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 3%
@@ -22,7 +22,7 @@ ht-degree: 3%
 
 # Integrieren von AEM Sites und Adobe Analytics mit dem Platform Web SDK
 
-Lernen Sie die **moderner Ansatz** Informationen zur Integration von Adobe Experience Manager (AEM) und Adobe Analytics mithilfe des Platform Web SDK. Dieses umfassende Tutorial führt Sie durch den Prozess der nahtlosen Erfassung [WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) Seitenansicht und CTA-Klickdaten. Erhalten Sie wertvolle Einblicke, indem Sie die erfassten Daten in Adobe Analysis Workspace visualisieren, wo Sie verschiedene Metriken und Dimensionen untersuchen können. Erkunden Sie außerdem den Platform-Datensatz, um die Daten zu überprüfen und zu analysieren. Nehmen Sie an dieser Journey teil, um die Macht von AEM und Adobe Analytics für datengestützte Entscheidungen zu nutzen.
+Lernen Sie die **moderner Ansatz** Informationen zur Integration von Adobe Experience Manager (AEM) und Adobe Analytics mithilfe des Platform Web SDK. Dieses umfassende Tutorial führt Sie durch den Prozess der nahtlosen Erfassung [WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) Seitenansicht und CTA-Klickdaten. Erhalten Sie wertvolle Einblicke, indem Sie die erfassten Daten in Adobe Analysis Workspace visualisieren, wo Sie verschiedene Metriken und Dimensionen untersuchen können. Erkunden Sie außerdem den Platform-Datensatz, um die Daten zu überprüfen und zu analysieren. Nehmen Sie an dieser Journey teil, um die Macht von AEM und Adobe Analytics für datengestützte Entscheidungsfindung zu nutzen.
 
 ## Übersicht
 
@@ -60,7 +60,7 @@ In **Experience Platform**:
 
 Falls Sie nicht über die erforderlichen Berechtigungen verfügen, verwenden Sie Ihr Systemadministrator [Adobe Admin Console](https://adminconsole.adobe.com/) kann die erforderlichen Berechtigungen erteilen.
 
-Bevor wir uns mit dem Integrationsprozess von AEM und Analytics mithilfe des Platform Web SDK befassen, _Zusammenfassen der wesentlichen Komponenten und Schlüsselelemente_ die in [Experience Platform Web SDK integrieren](./web-sdk.md) Tutorial. Es bietet eine solide Grundlage für die Integration.
+Bevor wir uns mit dem Integrationsprozess von AEM und Analytics mithilfe des Platform Web SDK befassen, _Zusammenfassen der wesentlichen Komponenten und Schlüsselelemente_ die in der [Experience Platform Web SDK integrieren](./web-sdk.md) Tutorial. Es bietet eine solide Grundlage für die Integration.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419873?quality=12&learn=on)
 
@@ -75,13 +75,13 @@ Das SDR-Dokument bietet einen umfassenden Überblick über den Implementierungsp
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
 
-Weitere Informationen zu Konzepten und verschiedenen Elementen, die in das SDR-Dokument aufgenommen werden sollen, finden Sie unter [Erstellen und Verwalten eines SDR-Dokuments (Solution Design Reference)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). Sie können auch eine Excel-Beispielvorlage herunterladen. Es steht jedoch auch eine WKND-spezifische Version zur Verfügung [here](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
+Weitere Informationen zu Konzepten und verschiedenen Elementen, die in das SDR-Dokument aufgenommen werden sollen, finden Sie unter [Erstellen und Verwalten eines SDR-Dokuments (Solution Design Reference)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). Sie können auch eine Excel-Beispielvorlage herunterladen. WKND-spezifische Version ist jedoch ebenfalls verfügbar [here](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
 
 ## Einrichten von Analytics - Report Suite, Analysis Workspace
 
 Der erste Schritt besteht darin, Adobe Analytics einzurichten, insbesondere die Report Suite mit Konversionsvariablen (oder eVar) und Erfolgsereignissen. Die Konversionsvariablen dienen zur Messung von Ursache und Wirkung. Die Erfolgsereignisse werden zur Verfolgung von Aktionen verwendet.
 
-In diesem Tutorial  `eVar5, eVar6, and eVar7` track  _WKND-Seitenname, WKND-CTA-ID und WKND-CTA-Name_ bzw. `event7` wird verwendet, um  _WKND CTA-Klick-Ereignis_.
+In diesem Tutorial  `eVar5, eVar6, and eVar7` track  _WKND-Seitenname, WKND-CTA-ID und WKND-CTA-Name_ und `event7` wird verwendet, um  _WKND CTA-Klick-Ereignis_.
 
 Um diese Einblicke aus den erfassten Daten zu analysieren, zu sammeln und mit anderen zu teilen, wird ein Projekt in Analysis Workspace erstellt.
 
@@ -115,7 +115,7 @@ Das neu erstellte XDM-Schema hat `AEP Web SDK ExperienceEvent` und `Adobe Analyt
 
 Im [vorheriges Tutorial](./web-sdk.md), wird eine Tag-Eigenschaft erstellt, sie enthält Datenelemente und eine Regel, um die Seitenansichtsdaten zu erfassen, zuzuordnen und zu senden. Sie muss folgendermaßen verbessert werden:
 
-+ Zuordnen des Seitennamen zu `eVar5`
++ Ordnen Sie den Seitennamen zu `eVar5`
 + Auslösen der **Seitenansicht** Analytics-Aufruf ( oder Signal senden )
 + Erfassen von CTA-Daten mithilfe der Adobe Client-Datenschicht
 + Zuordnen der CTA-ID und des Namens zu `eVar6` und `eVar7` bzw. Außerdem wird die CTA-Klickanzahl auf `event7`
@@ -240,7 +240,7 @@ Um zu Testzwecken einen aussagekräftigen Traffic zu generieren, wird ein Seleni
 
 ## Datensatzüberprüfung - WKND-Seitenansicht, CTA-Daten
 
-Der Datensatz ist ein Speicher- und Verwaltungskonstrukt für eine Sammlung von Daten wie eine Datenbanktabelle, die einem Schema folgt. Der in der Variablen [vorheriges Tutorial](./web-sdk.md) wird wiederverwendet, um zu überprüfen, ob die Daten für die Seitenansicht und CTA-Klicks in den Experience Platform-Datensatz aufgenommen werden. In der Benutzeroberfläche &quot;Datensatz&quot;werden verschiedene Details wie Datensätze insgesamt, Größe und erfasste Batches zusammen mit einem visuell ansprechenden Balkendiagramm angezeigt.
+Der Datensatz ist ein Speicher- und Verwaltungskonstrukt für eine Sammlung von Daten wie eine Datenbanktabelle, die einem Schema folgt. Der in der [vorheriges Tutorial](./web-sdk.md) wird wiederverwendet, um zu überprüfen, ob die Daten für die Seitenansicht und CTA-Klicks in den Experience Platform-Datensatz aufgenommen werden. In der Datensatzbenutzeroberfläche werden verschiedene Details wie die Gesamtdatensätze, die Größe und die erfassten Batches zusammen mit einem visuell ansprechenden Balkendiagramm angezeigt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419885?quality=12&learn=on)
 

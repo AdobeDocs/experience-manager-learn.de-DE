@@ -9,13 +9,13 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 13520
-source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
+exl-id: 78fe677c-d5ab-40f6-a381-800f24e227ae
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 2%
 
 ---
-
 
 # Antwort basierend auf gesendeten Daten anpassen
 
@@ -23,7 +23,7 @@ Nachdem das Formular übermittelt wurde, ist es wichtig, dem Benutzer Feedback z
 
 ## Voraussetzungen
 
-Um diese Funktion erfolgreich zu implementieren, sollten Sie mit Folgendem vertraut sein
+Um diese Funktion erfolgreich zu implementieren, sollten Sie mit Folgendem vertraut sein:
 
 * Erlebnis mit Git
 * Erlebnis mit AEM Cloud Manager

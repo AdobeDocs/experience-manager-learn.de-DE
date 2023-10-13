@@ -8,7 +8,8 @@ topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2023-07-14T00:00:00Z
-source-git-commit: cc24ebca488ea286e8a4605edfb39420c1c10022
+exl-id: 62b73f4b-69d8-4ede-9d57-3d6472d25d5a
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 1%
@@ -29,9 +30,9 @@ Befolgen Sie die schrittweisen Anweisungen in diesem Dokument, um die Leistungsf
 
 Bevor Sie mit dem Versand von E-Mails mit dynamischen SendGrid-Vorlagen aus AEM Forms fortfahren, stellen Sie sicher, dass folgende Voraussetzungen erfüllt sind:
 
-1. **SendGrid-Konto**: Registrieren Sie sich unter für ein SendGrid-Konto. [https://sendgrid.com](https://sendgrid.com) , um auf ihre E-Mail-Versanddienste zuzugreifen. Sie benötigen die Kontoanmeldeinformationen, um SendGrid mit AEM Forms zu integrieren.
-1. **Kenntnis der Erstellung von Data Sources**: Sie verfügen über Kenntnisse zum Erstellen von Datenquellen in AEM Forms. Lesen Sie bei Bedarf das Handbuch unter [Erstellen von Datenquellen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) für detaillierte Anweisungen.
-1. **Vertrautheit mit dem Formulardatenmodell**: Machen Sie sich mit dem Konzept des Formulardatenmodells in AEM Forms vertraut. Lesen Sie bei Bedarf die Dokumentation zu [Erstellen von Formulardatenmodellen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=de) um sicherzustellen, dass Sie über das erforderliche Verständnis verfügen.
+1. **SendGrid-Konto**: Registrieren Sie sich für ein SendGrid-Konto unter [https://sendgrid.com](https://sendgrid.com) , um auf ihre E-Mail-Versanddienste zuzugreifen. Sie benötigen die Kontoanmeldeinformationen, um SendGrid mit AEM Forms zu integrieren.
+1. **Kenntnis der Erstellung von Data Sources**: Verfügen über Kenntnisse zum Erstellen von Datenquellen in AEM Forms. Lesen Sie bei Bedarf das Handbuch unter [Erstellen von Datenquellen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) für detaillierte Anweisungen.
+1. **Vertrautheit mit dem Formulardatenmodell**: Verstehen Sie das Konzept des Formulardatenmodells in AEM Forms. Lesen Sie bei Bedarf die Dokumentation zu [Erstellen von Formulardatenmodellen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=de) um sicherzustellen, dass Sie über das erforderliche Verständnis verfügen.
 
 Wenn Sie diese Voraussetzungen erfüllen, verfügen Sie über die nötigen Kenntnisse und Ressourcen, um E-Mails mit dynamischen SendGrid-Vorlagen aus AEM Forms effektiv zu versenden.
 
@@ -73,7 +74,6 @@ Die Beispiel-Payload für den Dienst lautet wie folgt. Ersetzen Sie die Platzhal
 }
 ```
 
-Stellen Sie sicher, dass `template_id` entspricht der Kennung Ihrer dynamischen E-Mail-Vorlage SendGrid und die E-Mail-Adressen sind gültig und von SendGrid überprüft. Die Werte in `personalizations` können Sie die E-Mail mithilfe der vom Benutzer eingegebenen Daten aus dem adaptiven Formular personalisieren.
+Stellen Sie sicher, dass `template_id` entspricht der Kennung Ihrer dynamischen E-Mail-Vorlage SendGrid und die E-Mail-Adressen sind gültig und von SendGrid überprüft. Die Werte in der `personalizations` können Sie die E-Mail mithilfe der vom Benutzer eingegebenen Daten aus dem adaptiven Formular personalisieren.
 
 Indem Sie diese Schritte ausführen und die bereitgestellte Payload anpassen, können Sie die Integration dynamischer SendGrid-Vorlagen mit AEM Forms effektiv testen.
-

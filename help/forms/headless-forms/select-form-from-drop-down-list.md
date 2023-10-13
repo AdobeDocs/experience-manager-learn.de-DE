@@ -1,17 +1,17 @@
 ---
 title: Wählen Sie ein Formular aus einer Liste verfügbarer Formulare aus
-description: Verwenden der listforms-API zum Ausfüllen der Dropdown-Liste
+description: Verwenden der listforms-API zum Ausfüllen der Dropdownliste
 feature: Adaptive Forms
 version: 6.5
 kt: 13346
 topic: Development
 role: User
 level: Intermediate
-exl-id: 31008bb3-316b-4035-89ea-e830b429b927
-source-git-commit: 529e98269a08431152686202a8a2890712b9c835
+exl-id: 49b6a172-8c96-4fc6-8d31-c2109f65faac
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '286'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -137,7 +137,7 @@ console.log(formJSON.afModelDefinition);
 setForm(formJSON.afModelDefinition);
 ```
 
-* Anzeigen des ausgewählten Formulars Der folgende Code wurde zur Anzeige des ausgewählten Formulars verwendet. Das AdaptiveForm-Element wird im npm-Paket aemforms/af-response-renderer bereitgestellt und erwartet die Zuordnungen und die formJson als Eigenschaften
+* Anzeigen des ausgewählten Formulars Der folgende Code wurde verwendet, um das ausgewählte Formular anzuzeigen. Das AdaptiveForm-Element wird im npm-Paket aemforms/af-response-renderer bereitgestellt und erwartet die Zuordnungen und die formJson als Eigenschaften
 
 ```
 <div><AdaptiveForm mappings={extendMappings} formJson={selectedForm}/></div>

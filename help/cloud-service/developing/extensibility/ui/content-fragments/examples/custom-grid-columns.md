@@ -10,19 +10,19 @@ jira: KT-13453
 thumbnail: KT-13453.jpeg
 doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 2%
 
 ---
 
-
 # Benutzerdefinierte Rasterspalten
 
 ![Benutzerdefinierte Rasterspalte der Inhaltsfragmentkonsole](./assets/custom-grid-columns/hero.png){align="center"}
 
-Benutzerdefinierte Rasterspalten können der Inhaltsfragmentkonsole mithilfe der  `contentFragmentGrid` Erweiterungspunkt. In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte Spalte hinzugefügt wird, die die Seite &quot;Inhaltsfragmente&quot;basierend auf dem Datum der letzten Änderung in einem für Menschen lesbaren Format anzeigt.
+Benutzerdefinierte Rasterspalten können der Inhaltsfragmentkonsole mithilfe der  `contentFragmentGrid` Erweiterungspunkt. In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte Spalte hinzugefügt wird, die die Seite &quot;Inhaltsfragmente&quot;basierend auf dem Datum der letzten Änderung im lesbaren Format anzeigt.
 
 ## Erweiterungspunkt
 
@@ -46,7 +46,7 @@ In diesem Beispiel wird die [Luxon](https://moment.github.io/luxon/) Bibliothek 
 
 + Der Speicherort der Erweiterung injiziert sich selbst (`contentFragmentGrid`) im AEM Authoring-Erlebnis
 + Die Definition der benutzerdefinierten Spalte im `getColumns()` function
-+ Die Werte für jede benutzerdefinierte Spalte, aufgeschlüsselt nach Zeilen
++ Die Werte für die einzelnen benutzerdefinierten Spalten nach Zeile
 
 ```javascript
 import { generatePath } from "react-router";
@@ -202,13 +202,13 @@ Beispiel für ein Inhaltsfragment-JSON, das als Element der `fragments` -Paramet
 }
 ```
 
-Wenn zum Ausfüllen der benutzerdefinierten Spalte andere Daten erforderlich sind, können HTTP-Anfragen an die AEM-Autoreninstanz gesendet werden, um die Daten abzurufen.
+Wenn zum Ausfüllen der benutzerdefinierten Spalte andere Daten erforderlich sind, können HTTP-Anfragen an AEM Autor gesendet werden, um die Daten abzurufen.
 
 >[!IMPORTANT]
 >
 > Stellen Sie sicher, dass die AEM-Autoreninstanz so konfiguriert ist, dass [Cross-Origin-Anforderungen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) aus den Quellen, in denen die AppBuilder-App ausgeführt wird. Zulässige Ursprünge umfassen `https://localhost:9080`, der AppBuilder-Staging-Herkunft und der AppBuilder-Produktionsursprung.
 >
-> Alternativ kann die Erweiterung eine benutzerdefinierte [AppBuilder-Aktion](../../runtime-action.md) , der die Anfrage an die AEM-Autoreninstanz im Namen der Erweiterung sendet.
+> Alternativ kann die Erweiterung eine benutzerdefinierte [AppBuilder-Aktion](../../runtime-action.md) , das die Anfrage an AEM -Autor im Namen der Erweiterung sendet.
 
 
 ```javascript

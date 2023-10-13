@@ -10,8 +10,8 @@ recommendations: noDisplay
 kt: 11603
 thumbnail: KT-11603.png
 last-substantial-update: 2023-06-02T00:00:00Z
-exl-id: 4e3bb09c-8437-4f1d-bc88-a882a38e246c
-source-git-commit: 8e99c660fed409d44d34cf4edf6bf1b59fa29e34
+exl-id: 9164423b-a609-4bc5-9777-112d229ae748
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 13%
@@ -28,7 +28,7 @@ Die Inhaltsfragmentkonsole in AEM (Adobe Experience Manager) ist eine Benutzerob
 
 ![Inhaltsfragmentkonsole](./assets/overview/cfc.png)
 
-[AEM Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=de) ist die erweiterbare Benutzeroberfläche zum Auflisten und Verwalten von Inhaltsfragmenten. [AEM Erweiterungen der Inhaltsfragmentkonsole erstellt werden](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation?lang=de) mithilfe der `@adobe/aem-cf-admin-ui-ext-tpl` App Builder-Vorlage.
+[AEM Content Fragments-Konsole](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=de) ist die erweiterbare Benutzeroberfläche zum Auflisten und Verwalten von Inhaltsfragmenten. [AEM Erweiterungen der Inhaltsfragmentkonsole erstellt werden](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation?lang=de) mithilfe der `@adobe/aem-cf-admin-ui-ext-tpl` App Builder-Vorlage.
 
 Die folgenden Erweiterungspunkte der Inhaltsfragmente-Konsole sind verfügbar:
 
@@ -278,14 +278,14 @@ Willkommen bei einer Sammlung von Codebeispielen für AEM Benutzeroberflächener
     <div class="card" style="height: 100%">
       <div class="card-image">
         <figure class="image is-16by9">
-          <a href="./examples/editor-rte-toolbar.md" title="Schaltfläche der Rich-Text-Editor-Symbolleiste" tabindex="-1">
-            <img class="is-bordered-r-small" src="./examples/assets/rte/rte-toolbar-card.png" alt="Schaltfläche der Rich-Text-Editor-Symbolleiste">
+          <a href="./examples/editor-rte-toolbar.md" title="Schaltfläche in der Rich-Text-Editor-Symbolleiste" tabindex="-1">
+            <img class="is-bordered-r-small" src="./examples/assets/rte/rte-toolbar-card.png" alt="Schaltfläche in der Rich-Text-Editor-Symbolleiste">
           </a>
         </figure>
       </div>
       <div class="card-content is-padded-small">
         <div class="content">
-          <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-rte-toolbar.md" title="Schaltfläche der Rich-Text-Editor-Symbolleiste">Schaltfläche der Rich-Text-Editor-Symbolleiste</a></p>
+          <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/editor-rte-toolbar.md" title="Schaltfläche in der Rich-Text-Editor-Symbolleiste">Schaltfläche in der Rich-Text-Editor-Symbolleiste</a></p>
           <p class="is-size-6">Fügen Sie benutzerdefinierte Symbolleistenschaltflächen zu RTE-Feldern im Inhaltsfragment-Editor hinzu.</p>
           <a href="./examples/editor-rte-toolbar.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
             <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Beispiel anzeigen</span>

@@ -1,5 +1,5 @@
 ---
-title: Installieren Sie die erforderlichen React-Bibliotheken des adaptiven Formulars
+title: Installieren Sie die erforderlichen React-Bibliotheken für das adaptive Formular
 description: Hinzufügen der erforderlichen Abhängigkeiten zu Ihrem React-Projekt
 feature: Adaptive Forms
 version: 6.5
@@ -7,20 +7,20 @@ kt: 13285
 topic: Development
 role: User
 level: Intermediate
-source-git-commit: 6aa3dff44a7e6f1f8ac896e30319958d84ecf57f
+exl-id: 0ed44016-d52a-4980-a0b1-06da149c3cb1
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
-
 
 # Installieren der erforderlichen Abhängigkeiten
 
 Installieren Sie die folgenden Abhängigkeiten in Ihrem React-Projekt, um Headless-adaptive Formulare in Ihrem React-Projekt zu verwenden
 
-* @aemforms/af-response-components
-* @aemforms/af-response-renderer
+* @aemforms/af-react-components
+* @aemforms/af-react-renderer
 
 Aktualisieren Sie package.json, um die folgenden Abhängigkeiten einzuschließen. Zum Zeitpunkt des Schreibens war 0.22.41 die aktuelle Version
 

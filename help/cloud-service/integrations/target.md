@@ -12,8 +12,8 @@ jira: KT-12433
 thumbnail: KT-12433.jpeg
 badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
-exl-id: 60a3e18a-090f-4b0e-8ba0-d4afd30577dd
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+exl-id: be886c64-9b8e-498d-983c-75f32c34be4b
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '1679'
 ht-degree: 2%
@@ -28,11 +28,11 @@ Erfahren Sie, wie Sie AEM Headless mit Adobe Target integrieren können, indem S
 
 In diesem Tutorial werden die Schritte zum Einrichten von AEM und Adobe Target beschrieben:
 
-1. [Erstellen der Adobe IMS-Konfiguration für Adobe Target](#adobe-ims-configuration) in der AEM-Autoreninstanz
-2. [Adobe Target-Cloud Service erstellen](#adobe-target-cloud-service) in der AEM-Autoreninstanz
-3. [Anwenden von Adobe Target Cloud Service auf AEM Assets-Ordner](#configure-asset-folders) in der AEM-Autoreninstanz
+1. [Erstellen der Adobe IMS-Konfiguration für Adobe Target](#adobe-ims-configuration) in AEM Author
+2. [Adobe Target-Cloud Service erstellen](#adobe-target-cloud-service) in AEM Author
+3. [Anwenden von Adobe Target Cloud Service auf AEM Assets-Ordner](#configure-asset-folders) in AEM Author
 4. [Berechtigung für den Adobe Target-Cloud Service](#permission) in Adobe Admin Console
-5. [Exportieren von Inhaltsfragmenten](#export-content-fragments) von der AEM-Autoreninstanz zu Target
+5. [Exportieren von Inhaltsfragmenten](#export-content-fragments) von AEM-Autor zu Target
 6. [Erstellen einer Aktivität mit Inhaltsfragmentangeboten](#activity) in Adobe Target
 7. [Erstellen eines Experience Platform-Datenspeichers](#datastream-id) in Experience Platform
 8. [Integrieren der Personalisierung in eine React-basierte AEM Headless-App](#code) unter Verwendung des Adobe Web SDK.
@@ -54,18 +54,18 @@ In AEM wird ein Adobe Target-Cloud Service erstellt, um den Export von Inhaltsfr
 >[!VIDEO](https://video.tv.adobe.com/v/3416499/?quality=12&learn=on)
 
 
-## Konfigurieren von Asset-Ordnern{#configure-asset-folders}
+## Asset-Ordner konfigurieren{#configure-asset-folders}
 
 Der in einer kontextsensitiven Konfiguration konfigurierte Adobe Target-Cloud Service muss auf die AEM Assets-Ordnerhierarchie mit den Inhaltsfragmenten angewendet werden, die nach Adobe Target exportiert werden sollen.
 
-+++Erweitern für schrittweise Anweisungen
++++Erweitern für Schritt-für-Schritt-Anweisungen
 
 1. Anmelden bei __AEM-Autorendienst__ als DAM-Administrator
 1. Navigieren Sie zu __Assets > Dateien__, suchen Sie den Asset-Ordner mit dem `/conf` angewendet auf
 1. Wählen Sie den Asset-Ordner aus und wählen Sie __Eigenschaften__ in der oberen Aktionsleiste
 1. Wählen Sie die Registerkarte __Cloud-Services__ aus
-1. Stellen Sie sicher, dass die Cloud-Konfiguration auf die kontextabhängige Konfiguration (`/conf`), die die Adobe Target Cloud Services-Konfiguration enthält.
-1. Auswählen __Adobe Target__ von __Cloud Service-Konfigurationen__ Dropdown-Liste.
+1. Stellen Sie sicher, dass die Cloud-Konfiguration auf die kontextabhängige Konfiguration (`/conf`), die die Adobe Target Cloud Service-Konfiguration enthält.
+1. Auswählen __Adobe Target__ aus dem __Cloud Service-Konfigurationen__ Dropdown.
 1. Auswählen __Speichern und schließen__ oben rechts
 
 +++
@@ -76,16 +76,16 @@ Der in einer kontextsensitiven Konfiguration konfigurierte Adobe Target-Cloud Se
 
 ## Berechtigung für die AEM Target-Integration{#permission}
 
-Die Adobe Target-Integration, die sich als Entwickler.adobe.com -Projekt manifestiert, muss mit dem __Editor__ Produktrolle in Adobe Admin Console verwenden, um Inhaltsfragmente in Adobe Target zu exportieren.
+Die Adobe Target-Integration, die sich als developer.adobe.com -Projekt äußert, muss mit dem __Bearbeiter__ Produktrolle in Adobe Admin Console verwenden, um Inhaltsfragmente in Adobe Target zu exportieren.
 
-+++Erweitern für schrittweise Anweisungen
++++Erweitern für Schritt-für-Schritt-Anweisungen
 
 1. Melden Sie sich bei Experience Cloud als Benutzer an, der das Adobe Target-Produkt in Adobe Admin Console verwalten kann
 1. Öffnen Sie die [Adobe Admin Console](https://adminconsole.adobe.com)
 1. Auswählen __Produkte__ und dann öffnen __Adobe Target__
-1. Im __Produktprofile__ Registerkarte, wählen Sie __*DefaultWorkspace*__
+1. Im __Produktprofile__ Registerkarte auswählen __*DefaultWorkspace*__
 1. Wählen Sie die __API-Anmeldeinformationen__ tab
-1. Suchen Sie die App developer.adobe.com in dieser Liste und legen Sie ihre __Produktrolle__ nach __Editor__
+1. Suchen Sie Ihre developer.adobe.com -App in dieser Liste und legen Sie ihre __Produktrolle__ nach __Bearbeiter__
 
 +++
 
@@ -97,9 +97,9 @@ Die Adobe Target-Integration, die sich als Entwickler.adobe.com -Projekt manifes
 
 Inhaltsfragmente, die unter dem [konfigurierte AEM Assets-Ordnerhierarchie](#apply-adobe-target-cloud-service-to-aem-assets-folders) kann als Inhaltsfragmentangebote in Adobe Target exportiert werden. Diese Inhaltsfragmentangebote, eine spezielle Form von JSON-Angeboten in Target, können in Target-Aktivitäten verwendet werden, um personalisierte Erlebnisse in Headless-Apps bereitzustellen.
 
-+++Erweitern für schrittweise Anweisungen
++++Erweitern für Schritt-für-Schritt-Anweisungen
 
-1. Anmelden bei __AEM-Autor__ als DAM-Benutzer
+1. Anmelden bei __AEM__ als DAM-Benutzer
 1. Navigieren Sie zu __Assets > Dateien__ und suchen Sie nach Inhaltsfragmenten, die als JSON in Target exportiert werden sollen, im Ordner &quot;Adobe Target aktiviert&quot;.
 1. Wählen Sie die Inhaltsfragmente aus, die nach Adobe Target exportiert werden sollen
 1. Auswählen __Exportieren in Adobe Target-Angebote__ in der oberen Aktionsleiste
@@ -113,10 +113,10 @@ Inhaltsfragmente, die unter dem [konfigurierte AEM Assets-Ordnerhierarchie](#app
 1. Aus dem [Experience Cloud](https://experience.adobe.com)auswählen __Target__ über den Produktschalter oben rechts, um Adobe Target zu öffnen.
 1. Stellen Sie sicher, dass der Standardarbeitsbereich im __Workspace-Umschalter__ oben rechts.
 1. Wählen Sie die __Angebote__ Registerkarte in der oberen Navigation
-1. Wählen Sie die __Typ__ Dropdown-Liste und __Inhaltsfragmente__
+1. Wählen Sie die __Typ__ Dropdown und __Inhaltsfragmente__
 1. Überprüfen Sie, ob das aus AEM exportierte Inhaltsfragment in der Liste angezeigt wird.
    + Bewegen Sie den Mauszeiger über das Angebot und wählen Sie die __Ansicht__ button
-   + Überprüfen Sie die __Angebotsinformationen__ und sehen Sie die __AEM Deep-Link__ , das das Inhaltsfragment direkt im AEM-Autorendienst öffnet
+   + Überprüfen Sie die __Angebotsinformationen__ und sehen Sie die __AEM Deep-Link__ , das das Inhaltsfragment direkt im AEM Authoring-Dienst öffnet
 
 +++
 
@@ -130,7 +130,7 @@ In Adobe Target kann eine Aktivität erstellt werden, die die JSON-Ausgabe des I
 
 In diesem Beispiel verwenden wir eine einfache A/B-Aktivität, jedoch kann jede Target-Aktivität verwendet werden.
 
-+++Erweitern für schrittweise Anweisungen
++++Erweitern für Schritt-für-Schritt-Anweisungen
 
 1. Wählen Sie die __Tätigkeiten__ Registerkarte in der oberen Navigation
 1. Auswählen __+ Aktivität erstellen__ und wählen Sie dann den zu erstellenden Aktivitätstyp aus.
@@ -140,19 +140,19 @@ In diesem Beispiel verwenden wir eine einfache A/B-Aktivität, jedoch kann jede 
    + In __Experience Composer auswählen__ auswählen __Formular__
    + In __Arbeitsbereich auswählen__ auswählen __Standardarbeitsbereich__
    + In __Eigenschaft auswählen__, wählen Sie die Eigenschaft aus, in der die Aktivität verfügbar ist, oder wählen Sie __Keine Eigenschaftenbeschränkungen__ , damit sie in allen Eigenschaften verwendet werden kann.
-   + Auswählen __Nächste__ , um die Aktivität zu erstellen
+   + Auswählen __Nächste__ zur Erstellung der Aktivität
 1. Benennen Sie die Aktivität um, indem Sie __umbenennen__ oben links
    + Geben Sie der Aktivität einen aussagekräftigen Namen
 1. Legen Sie im ersten Erlebnis __Position 1__ Zielgruppe der Aktivität
    + In diesem Beispiel wird ein benutzerdefinierter Ort mit dem Namen `wknd-adventure-promo`
 1. under __Inhalt__ Wählen Sie den Standardinhalt aus und wählen Sie __Inhaltsfragment ändern__
 1. Wählen Sie das exportierte Inhaltsfragment aus, das für dieses Erlebnis bereitgestellt werden soll, und wählen Sie __Fertig__
-1. Überprüfen Sie die JSON-Datei für Inhaltsfragmentangebote im Textbereich &quot;Inhalt&quot;. Dies ist dieselbe JSON, die im AEM-Autorendienst über die Vorschauaktion des Inhaltsfragments verfügbar ist.
+1. Überprüfen Sie die JSON-Datei für Inhaltsfragmentangebote im Textbereich &quot;Inhalt&quot;. Dies ist die gleiche JSON, die im Autorendienst über die Vorschauaktion des Inhaltsfragments verfügbar ist.
 1. Fügen Sie in der linken Leiste ein Erlebnis hinzu und wählen Sie ein anderes Inhaltsfragmentangebot aus, das bereitgestellt werden soll
 1. Auswählen __Nächste__ und konfigurieren Sie die Targeting-Regeln nach Bedarf für die Aktivität.
    + Lassen Sie in diesem Beispiel die A/B-Tests als manuelle 50/50-Aufteilung.
 1. Auswählen __Nächste__ und die Aktivitätseinstellungen abschließen
-1. Auswählen __Speichern und schließen__ und geben Sie ihm einen aussagekräftigen Namen
+1. Auswählen __Speichern und schließen__ und einen aussagekräftigen Namen geben
 1. Wählen Sie aus der Aktivität in Adobe Target die Option __Aktivieren__ oben rechts aus dem Dropdown-Menü Inaktiv/Aktivieren/Archivieren .
 
 Die Adobe Target-Aktivität, die auf die `wknd-adventure-promo` Der Standort kann jetzt in eine AEM Headless-App integriert und verfügbar gemacht werden.
@@ -163,29 +163,29 @@ Die Adobe Target-Aktivität, die auf die `wknd-adventure-promo` Der Standort kan
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416507/?quality=12&learn=on)
 
-## Experience Platform-Datenspeicher-ID{#datastream-id}
+## Experience Platform Datastream-ID{#datastream-id}
 
 Ein [Adobe Experience Platform-Datenspeicher](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html) Die ID ist erforderlich, damit AEM Headless-Apps mit Adobe Target mithilfe der [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html).
 
-+++Erweitern für schrittweise Anweisungen
++++Erweitern für Schritt-für-Schritt-Anweisungen
 
 1. Navigieren Sie zu [Adobe Experience Cloud](https://experience.adobe.com/)
 1. Öffnen __Experience Platform__
-1. Auswählen __Datenerfassung > Datenspeicher__ und wählen Sie __Neuer Datenspeicher__
+1. Auswählen __Datenerfassung > Datenspeicher__ und wählen __Neuer Datenspeicher__
 1. Geben Sie im Assistenten für neue Datensätze Folgendes ein:
    + Name: `AEM Target integration`
    + Beschreibung: `Datastream used by the Adobe Web SDK to serve personalized Content Fragments Offers.`
    + Ereignisschema: `Leave blank`
 1. Wählen Sie __Speichern__ aus
 1. Wählen Sie __Service hinzufügen__ aus
-1. In __Diensleistung__ select __Adobe Target__
+1. In __Dienst__ select __Adobe Target__
    + Aktiviert: __Ja__
    + Eigenschafts-Token: __Leer lassen__
    + Ziel-Umgebungs-ID: __Leer lassen__
       + Die Zielumgebung kann in Adobe Target unter __Administration > Hosts__.
    + Target-Drittanbieter-ID-Namespace: __Leer lassen__
 1. Wählen Sie __Speichern__ aus
-1. Kopieren Sie auf der rechten Seite die __Datenspeicher-ID__ zur Verwendung in [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html) Konfigurationsaufruf.
+1. Kopieren Sie rechts die __Datenspeicher-ID__ zur Verwendung in [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html) Konfigurationsaufruf.
 
 +++
 
@@ -197,7 +197,7 @@ Ein [Adobe Experience Platform-Datenspeicher](https://experienceleague.adobe.com
 
 In diesem Tutorial wird die Personalisierung einer einfachen React-App mithilfe von Inhaltsfragmentangeboten in Adobe Target über [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html). Dieser Ansatz kann verwendet werden, um jedes JavaScript-basierte Web-Erlebnis zu personalisieren.
 
-Die mobilen Erlebnisse von Android™ und iOS können mithilfe des [Mobile SDK der Adobe](https://developer.adobe.com/client-sdks/documentation/).
+Die mobilen Erlebnisse von Android™ und iOS können mithilfe des [Adobe Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ### Voraussetzungen
 
@@ -457,7 +457,7 @@ Die mobilen Erlebnisse von Android™ und iOS können mithilfe des [Mobile SDK d
 
 1. Wenn die React-App nicht ausgeführt wird, verwenden Sie erneut `npm run start`.
 
-   Öffnen Sie die React-App in zwei verschiedenen Browsern, damit der A/B-Test die verschiedenen Erlebnisse für jeden Browser bereitstellen kann. Wenn in beiden Browsern dasselbe Abenteuerangebot angezeigt wird, versuchen Sie, einen der Browser zu schließen/erneut zu öffnen, bis das andere Erlebnis angezeigt wird.
+   Öffnen Sie die React-App in zwei verschiedenen Browsern, damit der A/B-Test die verschiedenen Erlebnisse für jeden Browser bereitstellen kann. Wenn in beiden Browsern dasselbe Angebot angezeigt wird, versuchen Sie, einen der Browser zu schließen/erneut zu öffnen, bis das andere Erlebnis angezeigt wird.
 
    Die folgende Abbildung zeigt die beiden unterschiedlichen Inhaltsfragmentangebote, die für die `wknd-adventure-promo` Aktivität, basierend auf der Logik von Adobe Target.
 

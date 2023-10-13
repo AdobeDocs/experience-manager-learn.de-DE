@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
-source-git-commit: 12b3888552d5a131628dabf380840f0586798ea5
+exl-id: 6e5e3cb4-9a47-42af-86af-da33fd80cb47
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 9%
 
 ---
-
 
 # Inhaltsmodellierung
 
@@ -40,7 +40,7 @@ Während des Tutorials werden wir Erklärungen, Codebeispiele und praktische Tip
 
    ![Ordner erstellen](./assets/1/create-configuration.png)
 
-   Bereitstellung einer __title__ und __name__ und aktivieren Sie __Persistente GraphQL-Abfragen__ und __Inhaltsfragmentmodelle__.
+   Stellen Sie eine __title__ und __name__ und aktivieren Sie __Persistente GraphQL-Abfragen__ und __Inhaltsfragmentmodelle__.
 
 
 ## Inhaltsfragmentmodelle
@@ -49,7 +49,7 @@ Während des Tutorials werden wir Erklärungen, Codebeispiele und praktische Tip
 
    ![Modellordner](./assets/1/model-folder.png)
 
-1. Wählen Sie im Ordner die Option __Erstellen__ und benennen Sie das Modell __Teaser__. Fügen Sie die folgenden Datentypen zum __Teaser__ -Modell.
+1. Wählen Sie im Ordner die Option __Erstellen__ und benennen Sie das Modell. __Teaser__. Fügen Sie die folgenden Datentypen zum __Teaser__ -Modell.
 
    | Datentyp | Name | Erforderlich | Optionen |
    |----------|------|----------|---------|
@@ -86,11 +86,11 @@ Während des Tutorials werden wir Erklärungen, Codebeispiele und praktische Tip
    ![Ordner hinzufügen](./assets/1/create-folder.png)
 
 1. Nachdem der Ordner erstellt wurde, wählen Sie den Ordner aus und öffnen Sie seinen __Eigenschaften__.
-1. Im Ordner __Cloud-Konfigurationen__ Registerkarte, wählen Sie die Konfiguration aus [früher erstellt](#enable-content-fragments-and-graphql).
+1. Im Ordner __Cloud-Konfigurationen__ Registerkarte die Konfiguration auswählen [früher erstellt](#enable-content-fragments-and-graphql).
 
    ![Asset-Ordner AEM Headless-Cloud-Konfiguration](./assets/1/cloud-config.png)
 
-   Klicken Sie in den neuen Ordner und erstellen Sie einen Teaser. Klicken __Erstellen__ und __Inhaltsfragment__ und wählen Sie die __Teaser__ -Modell. Benennen Sie das Modell. __Hero__ und klicken Sie auf __Erstellen__.
+   Klicken Sie in den neuen Ordner und erstellen Sie einen Teaser. Klicks __Erstellen__ und __Inhaltsfragment__ und wählen Sie die __Teaser__ -Modell. Benennen Sie das Modell __Hero__ und klicken __Erstellen__.
 
    | Name | Anmerkungen |
    |----------|------|
@@ -108,7 +108,7 @@ Während des Tutorials werden wir Erklärungen, Codebeispiele und praktische Tip
 
    ![AEM GraphiQL](./assets/1/endpoint-nav.png)
 
-1. Klicken __Erstellen__ und benennen Sie den neuen Endpunkt und wählen Sie die neu erstellte Konfiguration aus.
+1. Klicks __Erstellen__ und benennen Sie den neuen Endpunkt und wählen Sie die neu erstellte Konfiguration aus.
 
    ![AEM Headless-GraphQL-Endpunkt](./assets/1/endpoint.png)
 
@@ -188,7 +188,7 @@ Während des Tutorials werden wir Erklärungen, Codebeispiele und praktische Tip
 
    Führen Sie die Abfrage aus, um die Ergebnisse des zuvor erstellten Inhaltsfragments zu erhalten.
 
-1. Klicken __Speichern__  , um die Abfrage zu speichern und die Abfrage zu benennen __Teaser__. Dadurch können wir die Abfrage anhand des Namens in der Anwendung referenzieren.
+1. Klicks __Speichern__  , um die Abfrage zu speichern und die Abfrage zu benennen __Teaser__. Dadurch können wir die Abfrage anhand des Namens in der Anwendung referenzieren.
 
 ## Nächste Schritte
 

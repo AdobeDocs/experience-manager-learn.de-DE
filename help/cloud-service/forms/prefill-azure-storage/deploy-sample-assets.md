@@ -8,7 +8,8 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 kt: 13717
-source-git-commit: 52c8d96a03b4d6e4f2a0a3c92f4307203e236417
+exl-id: ae8104fa-7af2-49c2-9e6b-704152d49149
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%
@@ -21,7 +22,7 @@ Damit dieses Anwendungsbeispiel auf Ihrem System funktioniert, stellen Sie die f
 
 * Stellen Sie sicher, dass Sie alle erforderlichen Konfigurationen/Konten erstellt haben, die im[Einführungsdokument](./introduction.md)
 
-* [Installieren Sie die benutzerdefinierte Vorlage für das adaptive Formular und die zugehörige Seitenkomponente](./assets/azure-portal-template-page-component.zip)
+* [Installieren Sie die benutzerdefinierte adaptive Formularvorlage und die zugehörige Seitenkomponente](./assets/azure-portal-template-page-component.zip)
 
 * [Installieren des SendGrid-Formulardatenmodells](./assets/send-grid-form-data-model.zip). Sie müssen Ihren API-Schlüssel angeben und SendGrid von der Adresse aus überprüft haben, damit dieses Formulardatenmodell funktioniert. Testen des Formulardatenmodells im Formulardatenmodell-Editor
 
@@ -30,5 +31,3 @@ Damit dieses Anwendungsbeispiel auf Ihrem System funktioniert, stellen Sie die f
 * [Importieren des adaptiven Beispielformulars](./assets/credit-applications-af.zip)
 * [Client-Bibliothek importieren](./assets/client-lib.zip)
 * [Formularvorschau](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/creditapplications/jcr:content?wcmmode=disabled). Geben Sie eine gültige E-Mail ein und klicken Sie auf die Schaltfläche Speichern . Die Formulardaten sollten im Azure-Speicher gespeichert werden und eine E-Mail mit einem Link zum gespeicherten Formular wird an die angegebene E-Mail-Adresse gesendet.
-
-

@@ -10,17 +10,17 @@ jira: KT-13309
 thumbnail: KT-13309.jpg
 doc-type: article
 last-substantial-update: 2023-06-02T00:00:00Z
-source-git-commit: c54d078c6282f8ace936dd4a9ee0d5cc39490230
+exl-id: 70adb2c1-9e08-4a4b-b8f1-16bddd84c23d
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 2%
 
 ---
 
-
 # Inhaltsfragment in XML exportieren
 
-![Beispiel für eine Erweiterung des Menüs für den Inhaltsfragment-Editor](./assets/export-to-xml/hero.png){align="center"}
+![Beispiel für eine Erweiterung des Header-Menüs des Inhaltsfragment-Editors](./assets/export-to-xml/hero.png){align="center"}
 
 Benutzerdefinierte Schaltflächen können dem Kopfzeilenmenü des Inhaltsfragment-Editors mithilfe der `headerMenu` Erweiterungspunkt. In diesem Beispiel wird gezeigt, wie eine Schaltfläche zum Kopfzeilenmenü hinzugefügt wird und wie das Klickereignis verarbeitet wird, um das aktive Inhaltsfragment als XML oder CSV zu exportieren.
 

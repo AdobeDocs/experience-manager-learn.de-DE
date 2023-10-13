@@ -10,13 +10,13 @@ doc-type: Article
 last-substantial-update: 2023-04-14T00:00:00Z
 jira: KT-13102
 thumbnail: 3418381.jpeg
-source-git-commit: 9eb706e49f12a3ebd5222e733f540db4cf2c8748
+exl-id: 304b4d80-27bd-4336-b2ff-4b613a30f712
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '841'
 ht-degree: 2%
 
 ---
-
 
 # Große Ergebnismengen AEM Headless
 
@@ -176,7 +176,7 @@ Die resultierende JSON-Antwort enthält die 2., 3., 4. und 5. teuersten Abenteue
 
 #### Nächster Satz paginierter Ergebnisse
 
-Der nächste Ergebnissatz kann mit der `after` und `endCursor` -Wert aus der vorherigen Abfrage. Wenn keine weiteren Ergebnisse abgerufen werden müssen, `hasNextPage` is `false`.
+Der nächste Ergebnissatz kann mit der `after` und dem `endCursor` -Wert aus der vorherigen Abfrage. Wenn keine weiteren Ergebnisse abgerufen werden müssen, `hasNextPage` is `false`.
 
 ##### Abfragevariablen
 

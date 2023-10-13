@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-05-16T00:00:00Z
 jira: KT-13270
 thumbnail: KT-13270.jpeg
-source-git-commit: 12b3888552d5a131628dabf380840f0586798ea5
+exl-id: 2b726473-5a32-4046-bce8-6da3c57a1b60
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '869'
 ht-degree: 1%
 
 ---
-
 
 # AEM Headless-APIs und React
 
@@ -24,7 +24,7 @@ Willkommen in diesem Tutorial-Kapitel, in dem wir die Konfiguration einer React-
 
 AEM Headless-APIs ermöglichen den Zugriff auf AEM Inhalt von jeder Client-App aus. Wir führen Sie durch die Konfiguration Ihrer React-App für die Verbindung mit AEM Headless-APIs mithilfe des AEM Headless-SDK. Durch dieses Setup wird ein wiederverwendbarer Kommunikationskanal zwischen Ihrer React-App und AEM eingerichtet.
 
-Als Nächstes verwenden wir das AEM Headless-SDK, um Inhaltsfragmentdaten aus AEM GraphQL-APIs abzurufen. Inhaltsfragmente in AEM bieten strukturiertes Content Management. Mithilfe des AEM Headless SDK können Sie Inhaltsfragmentdaten mit GraphQL einfach abfragen und abrufen.
+Als Nächstes verwenden wir das AEM Headless-SDK, um Inhaltsfragmentdaten aus AEM GraphQL-APIs abzurufen. Inhaltsfragmente in AEM bieten strukturiertes Content Management. Mithilfe des AEM Headless SDK können Sie Inhaltsfragmentdaten mithilfe von GraphQL einfach abfragen und abrufen.
 
 Sobald wir über die Inhaltsfragmentdaten verfügen, werden wir sie in Ihre React-App integrieren. Sie werden lernen, die Daten in ansprechender Weise zu formatieren und anzuzeigen. Wir werden Best Practices für die Handhabung und Darstellung von Inhaltsfragmentdaten in React-Komponenten behandeln und so eine nahtlose Integration mit der Benutzeroberfläche Ihrer App sicherstellen.
 
@@ -57,19 +57,19 @@ Während des Tutorials werden wir Erklärungen, Codebeispiele und praktische Tip
    REACT_APP_TOKEN=<developer token>
    ```
 
-1. Sie können ein Entwicklungstoken in Cloud Manager abrufen. Anmelden bei [Adobe Cloud Manager](https://experience.adobe.com/). Klicken __Experience Manager > Cloud Manager__. Wählen Sie das entsprechende Programm aus und klicken Sie dann auf die Auslassungspunkte neben der Umgebung.
+1. Sie können ein Entwicklungstoken in Cloud Manager abrufen. Anmelden bei [Adobe Cloud Manager](https://experience.adobe.com/). Klicks __Experience Manager > Cloud Manager__. Wählen Sie das entsprechende Programm aus und klicken Sie dann auf die Auslassungspunkte neben der Umgebung.
 
    ![AEM Developer Console](./assets/2/developer-console.png)
 
-   1. Klicken Sie in __Integrationen__ tab
-   1. Klicken __Registerkarte &quot;Lokales Token&quot;und &quot;Lokales Entwicklungstoken abrufen&quot;__ button
+   1. Klicken Sie in der __Integrationen__ tab
+   1. Klicks __Registerkarte &quot;Lokales Token&quot;und lokales Entwicklungstoken abrufen__ button
    1. Kopieren Sie das Zugriffstoken, das nach dem offenen Anführungszeichen beginnt, bis vor dem schließenden Anführungszeichen.
    1. Fügen Sie das kopierte Token als Wert für `REACT_APP_TOKEN` im `.env` -Datei.
    1. Erstellen wir nun die App, indem wir `npm ci` in der Befehlszeile.
    1. Starten Sie jetzt die React-App und führen Sie `npm run start` in der Befehlszeile.
-   1. In [./src/utils](https://github.com/lamontacrook/headless-first/tree/main/src/utils) eine Datei namens `context.js`  enthält den Code zum Festlegen der Werte in der `.env` -Datei in den Kontext der App.
+   1. In [./src/utils](https://github.com/lamontacrook/headless-first/tree/main/src/utils) eine Datei mit dem Namen `context.js`  enthält den Code zum Festlegen der Werte in der `.env` -Datei in den Kontext der App.
 
-## React-App ausführen
+## Ausführen der React-App
 
 1. Starten Sie die React-App, indem Sie `npm run start` in der Befehlszeile.
 
@@ -81,13 +81,13 @@ Während des Tutorials werden wir Erklärungen, Codebeispiele und praktische Tip
 
 ## Verbindung zu AEM Headless-APIs
 
-1. Um die React-App mit AEM as a Cloud Service zu verbinden, fügen wir ein paar Dinge hinzu zu zu `App.js`. Im `React` importieren, hinzufügen `useContext`.
+1. Um die React-App mit AEM as a Cloud Service zu verbinden, fügen wir ein paar Dinge hinzu `App.js`. Im `React` importieren, hinzufügen `useContext`.
 
    ```javascript
    import React, {useContext} from 'react';
    ```
 
-   Import `AppContext` von `context.js` -Datei.
+   Import `AppContext` aus dem `context.js` -Datei.
 
    ```javascript
    import { AppContext } from './utils/context';
@@ -137,7 +137,7 @@ Während des Tutorials werden wir Erklärungen, Codebeispiele und praktische Tip
    export default App;
    ```
 
-1. Importieren Sie die `AEMHeadless` SDK. Dieses SDK ist eine Hilfsbibliothek, die von der App zur Interaktion mit AEM Headless-APIs verwendet wird.
+1. Importieren Sie `AEMHeadless` SDK. Dieses SDK ist eine Hilfsbibliothek, die von der App zur Interaktion mit AEM Headless-APIs verwendet wird.
 
    Fügen Sie diese Importanweisung zum `home.js`.
 
@@ -151,13 +151,13 @@ Während des Tutorials werden wir Erklärungen, Codebeispiele und praktische Tip
    import React, { useContext, useEffect, useState } from 'react';
    ```
 
-   Importieren Sie die `AppContext`.
+   Importieren Sie `AppContext`.
 
    ```javascript
    import { AppContext } from '../../utils/context';
    ```
 
-   Innerhalb des `Home` -Komponente, rufen Sie die `context` aus der Variablen `AppContext`.
+   Innerhalb des `Home` -Komponente, rufen Sie die `context` aus der `AppContext`.
 
    ```javascript
    const Home = () => {
@@ -225,7 +225,7 @@ Während des Tutorials werden wir Erklärungen, Codebeispiele und praktische Tip
 
 ## Inhaltsfragmentinhalt rendern
 
-1. Zeigen Sie die Inhaltsfragmente in der App an. Rückgabe einer `<div>` mit dem Titel des Teasers.
+1. Anzeigen der Inhaltsfragmente in der App. Rückgabe einer `<div>` mit dem Titel des Teasers.
 
    ```javascript
    return (

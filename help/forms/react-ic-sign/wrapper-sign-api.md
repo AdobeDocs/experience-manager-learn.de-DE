@@ -8,8 +8,8 @@ role: Developer
 level: Beginner
 kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
-exl-id: b7ddc0bd-db93-44e0-83cc-bccde604bd91
-source-git-commit: 4709035983a5c6705c4e807d877ee71145f48987
+exl-id: 15364571-070c-4497-a256-f0483d6f9585
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '267'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 Ein benutzerdefiniertes AEM-Bundle wurde entwickelt, um das Webformular zu erstellen und an den Endbenutzer zurückzugeben
 
 * [Übergangsdokument erstellen](https://secure.na1.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument). Das durch diesen Aufruf hochgeladene Dokument wird als vorübergehend bezeichnet, da es nur 7 Tage nach dem Hochladen verfügbar ist. Die zurückgegebene vorübergehende Dokument-ID kann in den API-Aufrufen verwendet werden, in denen die hochgeladene Datei referenziert werden muss. Die vorübergehende Dokumentanforderung ist eine mehrteilige Anforderung, die aus drei Teilen besteht: Dateiname, MIME-Typ und Dateistream. In dieser Anfrage können Sie jeweils nur eine Datei hochladen.
-* [Webformular erstellen](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget).Dies ist ein primärer Endpunkt, der zum Erstellen eines neuen Webformulars verwendet wird. Das Webformular wurde in einem AKTIVEN Status erstellt, um das Webformular sofort zu hosten.
+* [Webformular erstellen](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget).Dies ist ein primärer Endpunkt, mit dem ein neues Webformular erstellt wird. Das Webformular wurde in einem AKTIVEN Status erstellt, um das Webformular sofort zu hosten.
 * [Abrufen des Webformulars](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/getWidgets).Rufen Sie das Webformular des Benutzers ab. Dieses Webformular wird dann der aufrufenden Anwendung zum Signieren des Dokuments angezeigt.
 
 ## Acrobat Sign OSGi-Konfiguration erstellen

@@ -11,7 +11,8 @@ thumbnail: null
 badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Assets Essentials" before-title="false"
 last-substantial-update: 2022-10-13T00:00:00Z
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
+exl-id: b8d9b213-867e-457d-932d-1fedc4e1b1d7
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 5%
@@ -20,7 +21,7 @@ ht-degree: 5%
 
 # Integration von Adobe Workfront und AEM Assets Essentials
 
-Erfahren Sie, wie Sie Workfront und AEM Assets Essentials integrieren, um die Verwaltung von kreativen Workflows zu optimieren.
+Erfahren Sie, wie Sie Workfront und AEM Assets Essentials integrieren können, um die Verwaltung von kreativen Workflows zu optimieren.
 
 Gehen Sie wie folgt vor, um Workfront in AEM Assets Essentials zu integrieren:
 

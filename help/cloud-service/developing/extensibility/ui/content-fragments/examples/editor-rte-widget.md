@@ -10,8 +10,8 @@ jira: KT-13465
 thumbnail: KT-13465.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
-exl-id: be4c0a6a-5c1f-4408-9ac6-56b8f0653d42
-source-git-commit: 6a82bbb2bbfc95e3292735ac8490eecd5e7ddb84
+exl-id: 167a4b11-1202-4c7a-b022-f3f996348a4e
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '584'
 ht-degree: 0%
@@ -116,7 +116,7 @@ In der Haupt-React-Komponente `App.js`, fügen Sie die `discountCodes` -Route, u
 Die Benutzeroberfläche des Widgets oder Dialogfelds wird mit der [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) Framework. Die `DiscountCodes` Komponentencode lautet wie folgt: Hier sind die wichtigsten Highlights:
 
 + Die Benutzeroberfläche wird mithilfe von React Spectrum-Komponenten gerendert, z. B. [ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html), [ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html), [Schaltfläche](https://react-spectrum.adobe.com/react-spectrum/Button.html)
-+ Die `adventureDiscountCodes` -Array hat eine fest codierte Zuordnung von Abenteuername und Discount-Code. In einem realen Szenario können diese Daten von der Adobe AppBuilder-Aktion oder von externen Systemen wie PIM, OMS oder dem eigenständigen oder Cloud-Provider-basierten API-Gateway abgerufen werden.
++ Die `adventureDiscountCodes` -Array hat eine fest codierte Zuordnung von Abenteuername und Discount-Code. In einem realen Szenario können diese Daten von der Adobe AppBuilder-Aktion oder von externen Systemen wie PIM, OMS oder dem eigenen oder Cloud-Provider-basierten API-Gateway abgerufen werden.
 + Die `guestConnection` wird mithilfe der `useEffect` [React-Hook](https://react.dev/reference/react/useEffect) und als Komponentenstatus verwaltet werden. Sie wird zur Kommunikation mit dem AEM-Host verwendet.
 + Die `handleDiscountCodeChange` -Funktion den Discount-Code für den ausgewählten Abenteuernamen abruft und die Statusvariable aktualisiert.
 + Die `addDiscountCode` Funktion verwenden `guestConnection` -Objekt stellt die auszuführende RTE-Anweisung bereit. In diesem Fall `insertContent` Anweisung und HTML-Codeausschnitt des tatsächlichen Discount-Codes, der in den RTE eingefügt werden soll.

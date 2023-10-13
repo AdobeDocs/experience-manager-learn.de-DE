@@ -9,19 +9,19 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 13520
-source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
+exl-id: c23275d7-daf7-4a42-83b6-4d04b297c470
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 1%
 
 ---
 
-
 # Benutzerdefinierte Übermittlung erstellen
 
 AEM Forms bietet eine Reihe vordefinierter Sendeoptionen, die die meisten Anwendungsfälle erfüllen. Zusätzlich zu diesen vordefinierten Sendeaktionen können Sie mit AEM Forms Ihren eigenen benutzerdefinierten Submit-Handler schreiben, um die Formularübermittlung gemäß Ihren Anforderungen zu verarbeiten.
 
-Um einen benutzerdefinierten Submit-Dienst zu schreiben, wurden die folgenden Schritte ausgeführt
+Zum Schreiben eines benutzerdefinierten Submit-Dienstes wurden die folgenden Schritte ausgeführt
 
 ## AEM Projekt erstellen
 
@@ -29,7 +29,7 @@ Wenn Sie bereits über ein AEM Forms Cloud Service-Projekt verfügen, können Si
 
 * Erstellen Sie auf Ihrem c-Laufwerk einen Ordner namens cloudmanager .
 * Navigieren Sie zu diesem neu erstellten Ordner
-* Kopieren und Einfügen der Inhalte von [diese Textdatei](./assets/creating-maven-project.txt) in Ihrem Eingabeaufforderungsfenster. Sie müssen die DarchetypeVersion=41 möglicherweise je nach [neueste Version](https://github.com/adobe/aem-project-archetype/releases). Die neueste Version war 41 zum Zeitpunkt der Erstellung dieses Artikels.
+* Kopieren und Einfügen des Inhalts von [diese Textdatei](./assets/creating-maven-project.txt) in Ihrem Eingabeaufforderungsfenster. Sie müssen die DarchetypeVersion=41 möglicherweise je nach [neueste Version](https://github.com/adobe/aem-project-archetype/releases). Die neueste Version war 41 zum Zeitpunkt der Erstellung dieses Artikels.
 * Führen Sie den Befehl aus, indem Sie die Eingabetaste drücken. Wenn alles ordnungsgemäß funktioniert, sollte die Build-Erfolgsmeldung angezeigt werden.
 
 ## Schreiben Sie den benutzerdefinierten Sendedienst{#Write-the-custom-submit-service}
@@ -37,7 +37,7 @@ Wenn Sie bereits über ein AEM Forms Cloud Service-Projekt verfügen, können Si
 Starten Sie IntelliJ und öffnen Sie AEM Projekt. Erstellen Sie eine neue Java-Klasse mit dem Namen **HandleRegistrationFormSubmission** wie im Screenshot unten gezeigt
 ![custom-submit-service](./assets/custom-submit-service.png)
 
-Der folgende Code wurde geschrieben, um den Dienst zu implementieren
+Der folgende Code wurde zur Implementierung des Dienstes geschrieben
 
 ```java
 package com.aem.bankingapplication.core;
@@ -125,15 +125,3 @@ Nachdem die Pipeline erfolgreich ausgeführt wurde, sollten Sie die Sendeaktion 
 ## Nächste Schritte
 
 [Anzeigen der benutzerdefinierten Antwort in Ihrer React-App](./handle-response-react-app.md)
-
-
-
-
-
-
-
-
-
-
-
-

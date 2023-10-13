@@ -9,17 +9,17 @@ level: Beginner
 recommendations: noDisplay
 thumbnail: null
 last-substantial-update: 2023-06-02T00:00:00Z
-source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
+exl-id: 73f5d90d-e007-41a0-9bb3-b8f36a9b1547
+source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 6%
 
 ---
 
-
 # AEM UI-Erweiterung
 
-Adobe Experience Manager (AEM) bietet eine leistungsstarke Benutzeroberfläche zum Erstellen digitaler Erlebnisse. Um die Benutzeroberfläche anzupassen und zu erweitern, führte Adobe den App Builder ein. Mit diesem Tool können Entwickler das Benutzererlebnis ohne komplexe Kodierung mit JavaScript und React verbessern.
+Adobe Experience Manager (AEM) bietet eine leistungsstarke Benutzeroberfläche zum Erstellen digitaler Erlebnisse. Um die Benutzeroberfläche anzupassen und zu erweitern, hat Adobe App Builder eingeführt. Mit diesem Tool können Entwickler das Benutzererlebnis ohne komplexe Kodierung mit JavaScript und React verbessern.
 
 App Builder bietet eine Implementierungsebene zum Erstellen von Erweiterungen, die dazu bestimmt sind, Erweiterungspunkte in AEM gut zu definieren. App Builder lässt sich nahtlos in AEM integrieren, sodass eine Echtzeitvorschau und Tests möglich sind. Die Bereitstellung von Änderungen in AEM erfolgt schnell und rationalisiert. Durch die Verwendung von App Builder sparen Entwickler Zeit und Mühe und ermöglichen so eine schnelle Prototypisierung und Zusammenarbeit mit Interessenträgern.
 
