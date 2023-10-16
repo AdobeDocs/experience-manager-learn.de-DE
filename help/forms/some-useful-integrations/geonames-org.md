@@ -9,10 +9,10 @@ role: Developer
 level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
+source-git-commit: 5fc4a11b7f7f26a62f49cc8614e6bf699cc1697a
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 1%
+source-wordcount: '636'
+ht-degree: 2%
 
 ---
 
@@ -27,7 +27,7 @@ Eine Dropdown-Liste für die Kaskadierung ist eine Reihe von abhängigen DropDow
 Im Rahmen dieses Tutorials habe ich [Geonames REST API](http://api.geonames.org/) , um diese Funktion zu demonstrieren.
 Es gibt eine Reihe von Organisationen, die diese Art von Dienst bereitstellen. Solange sie über gut dokumentierte REST-APIs verfügen, können Sie mit der Datenintegrationsfunktion einfach in AEM Forms integrieren
 
-Die folgenden Schritte wurden ausgeführt, um kaskadierende Dropdown-Listen in AEM Forms zu implementieren
+Die folgenden Schritte wurden zur Implementierung kaskadierender Dropdown-Listen in AEM Forms ausgeführt
 
 ## Entwicklerkonto erstellen
 
@@ -40,21 +40,18 @@ Die OpenAPI-Spezifikation (früher Swagger Specification) ist ein API-Beschreibu
 * Verfügbare Endpunkte (/users) und Vorgänge für jeden Endpunkt (GET /users, POST /users)
 * Aktionsparameter Eingabe und Ausgabe für jede Vorgangsauthentifizierungsmethode
 * Kontaktinformationen, Lizenz, Nutzungsbedingungen und sonstige Informationen.
-* API-Spezifikationen können in YAML oder JSON geschrieben werden. Das Format ist für Menschen und Maschinen leicht zu erlernen und lesbar.
+* API-Spezifikationen können in YAML oder JSON geschrieben werden. Das Format ist sowohl für Menschen als auch für Maschinen leicht zu erlernen und lesbar.
 
 Um Ihre erste Swagger/OpenAPI-Datei zu erstellen, folgen Sie dem [OpenAPI-Dokumentation](https://swagger.io/docs/specification/2-0/basic-structure/)
 
 >[!NOTE]
 > AEM Forms unterstützt OpenAPI Specification Version 2.0 (FKA Swagger).
 
-Verwenden Sie die [Swagger-Editor](https://editor.swagger.io/) um Ihre Swagger-Datei zu erstellen, um die Vorgänge zu beschreiben, die alle Länder und untergeordneten Elemente des Landes oder Staates abrufen. Die Swagger-Datei kann im JSON- oder YAML-Format erstellt werden. Die fertige Swagger-Datei kann von heruntergeladen werden. [here](assets/swagger-files.zip)
-Die Swagger-Dateien beschreiben die folgende REST-API
-* [Alle Länder abrufen](http://api.geonames.org/countryInfoJSON?username=yourusername)
-* [Abrufen von untergeordneten Elementen des Geoname-Objekts](http://api.geonames.org/childrenJSON?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
+Verwenden Sie die [Swagger-Editor](https://editor.swagger.io/) um Ihre Swagger-Datei zu erstellen, um die Vorgänge zu beschreiben, die alle Länder und untergeordneten Elemente des Landes oder Staates abrufen. Die Swagger-Datei kann im JSON- oder YAML-Format erstellt werden.
 
 ## Data Sources erstellen
 
-Um AEM/AEM Forms mit Drittanbieteranwendungen zu integrieren, müssen wir [Datenquelle erstellen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) in der Cloud-Services-Konfiguration. Bitte verwenden Sie [Swagger-Dateien](assets/swagger-files.zip) , um Ihre Datenquellen zu erstellen.
+Um AEM/AEM Forms mit Drittanbieteranwendungen zu integrieren, müssen wir [Datenquelle erstellen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) in der Cloud-Services-Konfiguration. Bitte verwenden Sie [Swagger-Dateien](assets/geonames-swagger-files.zip) , um Ihre Datenquellen zu erstellen.
 Sie müssen zwei Datenquellen erstellen (eine zum Abrufen aller Länder und eine andere zum Abrufen untergeordneter Elemente).
 
 
@@ -65,7 +62,7 @@ Die AEM Forms-Datenintegration bietet eine intuitive Benutzeroberfläche zum Ers
 ![fdm](assets/geonames-fdm.png)
 
 
-## Adaptives Formular erstellen
+## Erstellen eines adaptiven Formulars
 
 Integrieren Sie die GET Aufrufe des Formulardatenmodells in Ihr adaptives Formular, um die Dropdown-Listen zu füllen.
 Erstellen Sie ein adaptives Formular mit 2 Dropdownlisten. Eins zur Auflistung der Länder und eins zur Auflistung der Bundesländer/-provinzen je nach Land.
@@ -77,10 +74,20 @@ Die Länderliste wird ausgefüllt, wenn das Formular zum ersten Mal initialisier
 
 #### Füllen der Dropdownliste Bundesland/Provinz
 
-Die Dropdown-Liste Bundesland muss auf der Grundlage des ausgewählten Landes ausgefüllt werden. Der folgende Screenshot zeigt die Konfiguration des Regeleditors
+Die Dropdownliste Bundesland/-staat muss auf der Grundlage des ausgewählten Landes ausgefüllt werden. Der folgende Screenshot zeigt die Konfiguration des Regeleditors
 ![state-provinze-options](assets/state-province-options.png)
 
 ### Übung
 
 Fügen Sie im Formular 2 Dropdownlisten mit dem Namen &quot;Counties and Cities&quot;hinzu, um je nach ausgewähltem Land und Bundesland die Bezirke und Städte aufzulisten.
 ![Übung](assets/cascading-drop-down-exercise.png)
+
+
+### Beispiel-Assets
+
+Sie können die folgenden Assets herunterladen, um einen Vorsprung beim Erstellen des Beispiels für die kaskadierende Dropdown-Liste zu erhalten. Die fertigen Swagger-Dateien können von heruntergeladen werden [here](assets/geonames-swagger-files.zip)
+Die Swagger-Dateien beschreiben die folgende REST-API
+* [Alle Länder abrufen](http://api.geonames.org/countryInfoJSON?username=yourusername)
+* [Abrufen von untergeordneten Elementen des Geoname-Objekts](http://api.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
+
+Die [Das Formulardatenmodell kann hier heruntergeladen werden.](assets/geonames-api-form-data-model.zip)
