@@ -1,6 +1,6 @@
 ---
 title: Grundlagen zur Entwicklung von OSGi-Diensten
-description: Erfahren Sie mehr über die Grundlagen der Entwicklung eines OSGi-Dienstes
+description: Erfahren Sie mehr über die Grundlagen zur Entwicklung eines OSGi-Dienstes.
 role: Developer
 level: Beginner
 topic: Development
@@ -10,15 +10,15 @@ thumbnail: 335476.jpeg
 last-substantial-update: 2022-09-16T00:00:00Z
 exl-id: a3a9bf59-e9a2-4322-ac93-9c12c70b9a75
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '88'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # OSGi-Dienste
 
-Lernen Sie die Grundlagen der Entwicklung von OSGi-Diensten kennen, darunter:
+Lernen Sie die Grundlagen zur Entwicklung von OSGi-Diensten kennen, darunter:
 
 + Konvertieren eines Java POJO in einen OSGi-Dienst
 + Binden eines OSGi-Dienstes an eine Java-Oberfläche
