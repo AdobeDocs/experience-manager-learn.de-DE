@@ -1,58 +1,58 @@
 ---
-title: Was ist der Dispatcher?
-description: Verstehen Sie, was ein Dispatcher tatsächlich ist.
+title: Was genau ist der „Dispatcher“?
+description: Verstehen Sie, was ein Dispatcher eigentlich ist.
 version: 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 829ad9733b4326c79b9b574b13b1d4c691abf877
-workflow-type: tm+mt
+exl-id: 96c8dd09-e0a7-4abc-b04b-a805aaa67502
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '256'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
+# Was genau ist der „Dispatcher“?
 
-# Was ist der Dispatcher?
+[Inhaltsverzeichnis](./overview.md)
 
-[Inhalt](./overview.md)
-
-Beginnen Sie mit der grundlegenden Beschreibung, was einen AEM Dispatcher umfasst.
+Beginnen wir mit einer grundlegenden Beschreibung, was zu einem AEM-Dispatcher gehört.
 
 ## Apache-Webserver
 
-Beginnen Sie mit einer grundlegenden Apache-Webserverinstallation auf einem Linux-Server.
+Ausgangspunkt ist eine grundlegende Apache-Webserver-Installation auf einem Linux-Server.
 
-Grundlegende Erklärung, was ein Apache-Server tut:
+Grundlegende Erklärung der Funktion eines Apache-Servers:
 
-- Befolgt einfache Regeln, um Dateien über die HTTP(s)-Protokolle aus dem statischen Dokumentenverzeichnis (`DocumentRoot`)
-- Dateien, die an einem Standardspeicherort gespeichert sind (`/var/www/html`) werden bei Anfragen abgeglichen und im Browser des anfragenden Clients wiedergegeben.
-
-
+- Er befolgt einfache Regeln, um Dateien über die HTTP(s)-Protokolle aus dem statischen Dokumentenverzeichnis (`DocumentRoot`) bereitzustellen.
+- Dateien, die an einem Standardspeicherort gespeichert sind (`/var/www/html`), werden bei Anfragen abgeglichen und im Browser des anfragenden Clients gerendert.
 
 
-## AEM spezifische Moduldatei (`mod_dispatcher.so`)
 
-Fügen Sie dann ein Plug-in zum Apache-Webserver hinzu, das als Dispatcher-Modul bezeichnet wird
+
+## AEM-spezifische Moduldatei (`mod_dispatcher.so`)
+
+Als Nächstes wird dem Apache-Webserver ein Plug-in hinzugefügt, das als Dispatcher-Modul bezeichnet wird.
 
 Grundlegende Erläuterung der Funktion des Adobe AEM Dispatcher-Moduls:
 
-- Erweitert den Standard-Datei-Handler
-- Filtert ungültige Anforderungen heraus / Schützt AEM Soft Bly/Endpunkte
-- Lastenausgleich, wenn mehr als ein Renderer vorhanden ist
-- Ermöglicht das Leeren eines Cache-Verzeichnisses/Unterstützt das Leeren stagnierender Dateien
-- Es ist die Haustür für alle AMS-Installationen und stellt Websites und Assets für den Browser des Kunden bereit
-- Dadurch werden Anforderungen zwischengespeichert, die viel schneller wiederbereitgestellt werden, als ein AEM-Server allein erreichen kann
-- Mehr ...
+- Es erweitert den standardmäßigen Datei-Handler.
+- Es filtert ungültige Anfragen heraus und schützt Schwach- bzw. Endpunkte von AEM.
+- Es führt einen Lastenausgleich durch, wenn mehrere Renderer vorhanden sind.
+- Es ermöglicht ein „lebendiges“ Cache-Verzeichnis und unterstützt das Löschen stagnierender Dateien.
+- Es fungiert als Frontdoor für alle AMS-Installationen und stellt Websites und Assets für den Client-Browser bereit.
+- Es speichert Anfragen zwischen, die viel schneller wieder bereitgestellt werden, als dies durch einen AEM-Server alleine möglich ist.
+- Und es bietet noch vieles mehr…
 
 ## Webtraffic-Workflow
 
-Wenn Sie wissen, welche Teile zusammen installiert werden, um einen einfachen Dispatcher-Server zu erstellen, sollten Sie den grundlegenden Web-Traffic-Workflow für eine Adobe Manager-Dienstkonfiguration verstehen.
-Auf diese Weise können Sie besser nachvollziehen, welche Rolle sie in der Kette von Systemen spielt, die Inhalte für Besucher Ihrer AEM bereitstellen.
+Zu wissen, welche Teile für einen einfachen Dispatcher-Server zusammen installiert werden, ist eine Sache. Sie sollten aber auch den grundlegenden Webtraffic-Workflow für eine Adobe Manager-Services-Konfiguration verstehen.
+So können Sie besser nachvollziehen, welche Rolle der Dispatcher in der Kette von Systemen spielt, die Inhalte für Besucherinnen und Besucher Ihrer AEM-Inhalte bereitstellen.
 
-<b>Bereits zwischengespeicherten Inhalt bereitstellen</b>
+<b>Bereitstellen von bereits zwischengespeicherten Inhalten</b>
 
 ```
 End User's Browser request 
@@ -76,7 +76,7 @@ End User's Browser request
                             → End User
 ```
 
-<b>Inhaltsveröffentlichung/Änderungen</b>
+<b>Veröffentlichen/Ändern von Inhalten</b>
 
 ```
 AEM Author User activates content 
@@ -86,4 +86,4 @@ AEM Author User activates content
             * Next request for that content will request fresh copy from publisher *
 ```
 
-[Weiter -> Grundlegendes Dateilayout](./basic-file-layout.md)
+[Weiter ->Allgemeiner Dateiaufbau](./basic-file-layout.md)
