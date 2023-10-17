@@ -9,19 +9,19 @@ level: Beginner
 exl-id: 72728ed7-80a2-48b5-ae7f-d744db8a524d
 last-substantial-update: 2021-04-23T00:00:00Z
 source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '213'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Sling Servlet
+# Sling-Servlet
 
-Ein Servlet ist eine Klasse, die verwendet wird, um die Funktionen von Servern zu erweitern, die Anwendungen hosten, auf die über ein Programmiermodell für Anforderungsantworten zugegriffen wird. Für solche Anwendungen definiert die Servlet-Technologie HTTP-spezifische Servlet-Klassen.
+Ein Servlet ist eine Klasse, die verwendet wird, um die Funktionen von Servern zu erweitern, die Anwendungen hosten, auf die über ein Anfrage-Antwort-Programmiermodell zugegriffen wird. Für solche Anwendungen definiert die Servlet-Technologie HTTP-spezifische Servlet-Klassen.
 Alle Servlets müssen die Servlet-Schnittstelle implementieren, die Lebenszyklusmethoden definiert.
 
 
-Ein Servlet in AEM kann als OSGi-Dienst registriert werden: Sie können SlingSafeMethodsServlet für schreibgeschützte Implementierung oder SlingAllMethodsServlet erweitern, um alle RESTful-Vorgänge zu implementieren.
+Ein Servlet in AEM kann als OSGi-Dienst registriert werden: Sie können das SlingSafeMethodsServlet für schreibgeschützte Implementierung oder das SlingAllMethodsServlet erweitern, um alle RESTful-Vorgänge zu implementieren.
 
 ## Servlet-Code
 
@@ -74,17 +74,17 @@ public class MyFirstAEMFormsServlet extends SlingAllMethodsServlet
 
 Gehen Sie wie folgt vor, um Ihr Projekt zu erstellen:
 
-* Öffnen **Eingabeaufforderungsfenster**
-* Navigieren Sie zu `c:\aemformsbundles\mysite\core`
-* Ausführen des Befehls `mvn clean install -PautoInstallBundle`
-* Der obige Befehl erstellt das Bundle automatisch und stellt es in Ihrer AEM-Instanz bereit, die auf localhost:4502 ausgeführt wird.
+* Öffnen Sie ein **Eingabeaufforderungsfenster**.
+* Navigieren Sie zu `c:\aemformsbundles\mysite\core`.
+* Führen Sie den Befehl `mvn clean install -PautoInstallBundle` aus.
+* Der obige Befehl erstellt das Bundle automatisch und stellt es in Ihrer AEM-Instanz auf localhost:4502 bereit.
 
-Das Bundle ist auch am folgenden Speicherort verfügbar: `C:\AEMFormsBundles\mysite\core\target`. Das Bundle kann auch in AEM mit der [Felix Web-Konsole.](http://localhost:4502/system/console/bundles)
+Das Bundle ist auch am folgenden Speicherort verfügbar: `C:\AEMFormsBundles\mysite\core\target`. Das Bundle kann auch mithilfe der [Felix-Web-Konsole](http://localhost:4502/system/console/bundles) in AEM bereitgestellt werden.
 
 
-## Servlet-Resolver testen
+## Testen des Servlet-Resolvers
 
-Verweisen Sie den Browser auf [Servlet-Resolver-URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). Dies teilt Ihnen das Servlet mit, das für einen bestimmten Pfad aufgerufen wird, wie im Screenshot unten dargestellt
+Verweisen Sie den Browser auf die [Servlet-Resolver-URL](http://localhost:4502/system/console/servletresolver?url=%2Fbin%2FmergedataWithAcroform&amp;method=POST). Dies teilt Ihnen das Servlet mit, das für einen bestimmten Pfad aufgerufen wird, wie im Screenshot unten dargestellt
 ![servlet-resolver](assets/servlet-resolver.JPG)
 
 ## Testen des Servlets mit Postman
@@ -93,5 +93,5 @@ Verweisen Sie den Browser auf [Servlet-Resolver-URL](http://localhost:4502/syste
 
 ## Nächste Schritte
 
-[JAR-Dateien von Drittanbietern einschließen](./include-third-party-jars.md)
+[Einschließen von JAR-Dateien von Drittanbietern](./include-third-party-jars.md)
 
