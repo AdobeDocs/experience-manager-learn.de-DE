@@ -1,6 +1,6 @@
 ---
-title: Inline-Anzeige von DAM-Bildern in Adaptive Forms
-description: Anzeigen von DAM-Bildern inline in Adaptive Forms
+title: Anzeige von DAM-Bilder-Inline in adaptiven Formularen
+description: Anzeigen von DAM-Bilder-Inline in adaptiven Formularen
 feature: Adaptive Forms
 topics: development
 version: 6.4,6.5
@@ -10,20 +10,21 @@ level: Experienced
 last-substantial-update: 2022-10-20T00:00:00Z
 thumbnail: inline-dam.jpg
 kt: kt-11307
-source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
-workflow-type: tm+mt
+exl-id: 339eb16e-8ad8-4b98-939c-b4b5fd04d67e
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '210'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# DAM-Bild in Adaptive Forms anzeigen
+# Anzeigen von DAM-Bildern in adaptiven Formularen
 
-Ein gängiger Anwendungsfall besteht darin, die Bilder im CRX-Repository inline in einem adaptiven Formular anzuzeigen.
+Ein gängiger Anwendungsfall besteht darin, die Bilder im CRX-Repository-Inline in einem adaptiven Formular anzuzeigen.
 
-## Platzhalterbild hinzufügen
+## Hinzufügen eines Platzhalterbildes
 
-Der erste Schritt besteht darin, der Bedienfeldkomponente ein Platzhalter-div vorzuhängen. Im Code unter wird die Bedienfeldkomponente durch den CSS-Klassennamen des Foto-Uploads identifiziert. Die JavaScript-Funktion ist Teil der Client-Bibliothek, die mit den adaptiven Formularen verknüpft ist. Diese Funktion wird im initialize-Ereignis der Dateianlagenkomponente aufgerufen.
+Der erste Schritt besteht darin, der Bedienfeldkomponente ein Platzhalter-Div vorzuhängen. Im folgenden Code wird die Bedienfeldkomponente durch ihren CSS-Klassennamen „photo-upload“ identifiziert. Die JavaScript-Funktion ist Teil der Client-Bibliothek, die mit den adaptiven Formularen verknüpft ist. Diese Funktion wird im Ereignis „initialize“ der Dateianlagenkomponente aufgerufen.
 
 ```javascript
 /**
@@ -35,9 +36,9 @@ function addPlaceholderDiv(){
 }
 ```
 
-### Inline-Bild anzeigen
+### Anzeigen eines Inline-Bildes
 
-Nachdem der Benutzer das Bild ausgewählt hat, wird das ausgeblendete Feld ImageName mit dem ausgewählten Bildnamen ausgefüllt. Dieser Bildname wird dann an die Funktion damURLToFile übergeben, die die Funktion createFile aufruft, um eine URL in einen Blob für FileReader.readAsDataURL() zu konvertieren.
+Nachdem die Benutzerin bzw. der Benutzer das Bild ausgewählt hat, wird das ausgeblendete Feld „ImageName“ mit dem ausgewählten Bildnamen ausgefüllt. Dieser Bildname wird dann an die Funktion „damURLToFile“ übergeben, die die Funktion „createFile“ aufruft, um eine URL in einen Blob für „FileReader.readAsDataURL()“ zu konvertieren.
 
 ```javascript
 /**
@@ -80,10 +81,10 @@ async function createFile(imageName){
   }
 ```
 
-### Auf Ihrem Server bereitstellen
+### Bereitstellen auf Ihrem Server
 
-* Laden Sie die [Client-Bibliothek und Beispielbilder](assets/InlineDAMImage.zip) auf Ihrer AEM-Instanz mit AEM Package Manager.
-* Laden Sie die [Beispielformular](assets/FieldInspectionForm.zip) auf Ihrer AEM Instanz mithilfe AEM Package Manager.
-* Zeigen Sie Ihren Browser auf [FileInspectionForm](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled)
-* Wählen Sie eine der Einstellungen aus
+* Laden Sie die [Client-Bibliothek und die Beispielbilder](assets/InlineDAMImage.zip) herunter und installieren Sie sie mit dem AEM Package Manager auf Ihrer AEM-Instanz.
+* Laden Sie das [Beispielformular](assets/FieldInspectionForm.zip) herunter und installieren Sie es mit dem AEM Package Manager in Ihrer AEM-Instanz.
+* Richten Sie Ihren Browser auf [FielInspectionForm](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled)
+* Wählen Sie eine der Vorrichtungen
 * Das Bild sollte im Formular angezeigt werden
