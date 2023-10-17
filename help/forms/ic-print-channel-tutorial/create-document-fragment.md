@@ -1,6 +1,6 @@
 ---
 title: Erstellen eines Dokumentfragments
-description: Dies ist Teil 5 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil erstellen wir ein Dokumentfragment, das den Namen und die Adresse des Empfängers enthält.
+description: Dies ist Teil 5 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil erstellen wir ein Dokumentfragment, das den Namen und die Adresse der Empfängerin bzw. des Empfängers enthält.
 seo-description: This is part 5 of a multi-step tutorial for creating your first interactive communications document. In this part, we will create document fragment to hold the recipient name and address.
 uuid: 7fd8a0f2-a921-4e70-91c9-908dae9aeab2
 feature: Interactive Communication
@@ -17,28 +17,28 @@ role: Developer
 level: Beginner
 exl-id: 2fe3f950-bc2a-4e91-8d91-00438691727a
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '229'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # Erstellen eines Dokumentfragments
 
-In diesem Teil erstellen wir ein Dokumentfragment, das den Namen und die Adresse des Empfängers enthält.
+In diesem Teil erstellen wir ein Dokumentfragment, das den Namen und die Adresse der Empfängerin bzw. des Empfängers enthält.
 
 >[!VIDEO](https://video.tv.adobe.com/v/22350?quality=12&learn=on)
 
-Dokumentfragmente enthalten den Textinhalt interaktiver Kommunikationsdokumente. Dieser Textinhalt kann statischer Text sein oder aus den zugrunde liegenden Datenmodell-Elementwerten eingefügt werden. Beispiel **Lieber _{name}_**, wobei &quot;Dear&quot;statischer Text und &quot;name&quot;der Elementname des Formulardatenmodells ist. Zur Laufzeit wird dies auf **Sehr geehrter Herr Gloria Rios**oder **Sehr geehrter John Jacobs**abhängig vom Wert des name -Elements.
+Dokumentfragmente enthalten den Textinhalt interaktiver Kommunikationsdokumente. Dieser Textinhalt kann statischer Text sein oder aus den zugrunde liegenden Datenmodell-Elementwerten eingefügt werden. Zum Beispiel: **Liebe/Lieber _{name}_**, wobei „Liebe/Lieber“ statischer Text und „name“ der Name des Formulardaten-Elements ist. Zur Laufzeit wird dies je nach dem Wert des name-Elements in **Liebe Beate Bauer**oder **Lieber Stefan Müller**aufgelöst.
 
-Der Rich-Text-Editor ist intuitiv genug, damit ein Geschäftsbenutzer Text erstellen und Formulardaten-Elemente einfügen kann. Der Dokumentfragment-Editor bietet die Möglichkeit, Text zu formatieren, Schriftarten und -stile anzugeben, Sonderzeichen einzufügen und Hyperlinks zu erstellen.
+Der Rich-Text-Editor ist intuitiv genug, damit Business-Anwenderinnen und -Anwender Text erstellen und Formulardaten-Elemente einfügen können. Der Dokumentfragmenteditor bietet die Möglichkeit, Text zu formatieren, Schriftarten und -stile anzugeben, Sonderzeichen einzufügen und Hyperlinks zu erstellen.
 
-Der Dokumentfragment-Editor kann auch Inline-Bedingungen in Ihren Text einfügen, wie in diesem Beispiel gezeigt [Video](https://helpx.adobe.com/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html)
+Der Dokumentfragmenteditor kann auch Inline-Bedingungen in Ihren Text einfügen, wie in diesem [Video](https://helpx.adobe.com/de/experience-manager/kt/forms/using/editing-improvements-correspondence-mgmt-feature-video-use.html) zu sehen.
 
 >[!NOTE]
 >
->Stellen Sie sicher, dass die Formulardatenmodellelemente, die Sie in Dokumentfragmente einfügen, untergeordnete Elemente des Stammelements sind. Stellen Sie beispielsweise in diesem Anwendungsfall sicher, dass die von Ihnen ausgewählten Elemente des User-Objekts das untergeordnete Element des Balanceobjekts sind.
+>Stellen Sie sicher, dass die Formulardatenmodellelemente, die Sie in Dokumentfragmente einfügen, untergeordnete Elemente des Stammelements sind. Stellen Sie beispielsweise in diesem Anwendungsfall sicher, dass die von Ihnen ausgewählten Elemente des Benutzerobjekts das untergeordnete Element des Balances-Objekts sind.
 
 ## Nächste Schritte
 
-[Dokument zum Druckkanal erstellen](./create-print-channel-document.md)
+[Erstellen eines Druckkanaldokuments](./create-print-channel-document.md)
