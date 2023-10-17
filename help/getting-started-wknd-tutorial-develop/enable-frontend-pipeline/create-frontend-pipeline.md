@@ -11,13 +11,13 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: d6da05e4-bd65-4625-b9a4-cad8eae3c9d7
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '701'
 ht-degree: 100%
 
 ---
-
 
 # Bereitstellen mithilfe der Frontend-Pipeline
 
@@ -61,13 +61,13 @@ Um __NUR__ die Frontend-Ressourcen aus dem `ui.frontend`-Modul zu erstellen und 
 
 ![Erstellen von Frontend-Pipeline-Konfigurationen](assets/create-frontend-pipeline-configs.png)
 
-1. Wählen Sie als Teil der __Quell-Code__-Schritte die Option __Frontend-Code__ aus und wählen Sie die Umgebung aus __Mögliche Implementierungsumgebungen__ aus. Stellen Sie im Abschnitt __Quell-Code__ sicher, dass die Feldwerte für Repository und Git-Verzweigung korrekt sind und der Zweig über die Änderungen an Ihrem Frontend-Pipeline-Vertrag verfügt.
+1. Wählen Sie als Teil der __Quell-Code__-Schritte die Option __Frontend-Code__ aus und wählen Sie die Umgebung aus __Mögliche Bereitstellungsumgebungen__ aus. Stellen Sie im Abschnitt __Quell-Code__ sicher, dass die Feldwerte für Repository und Git-Verzweigung korrekt sind und der Zweig über die Änderungen an Ihrem Frontend-Pipeline-Vertrag verfügt.
 Und __am wichtigsten__ ist, dass für das Feld __Code-Speicherort__ der Wert `/ui.frontend` ist. Klicken Sie schließlich auf __Speichern__.
 
 ![Erstellen des Quell-Codes für die Frontend-Pipeline](assets/create-frontend-pipeline-source-code.png)
 
 
-## Implementierungssequenz
+## Bereitstellungssequenz
 
 * Führen Sie zuerst die neu benannte Pipeline __Full-Stack-WKND-Bereitstellung für Entwicklung__ aus, um die WKND-ClientLib-Dateien aus dem AEM-Repository zu entfernen. Und vor allem sollten Sie AEM für den Frontend-Pipeline-Vertrag vorbereiten, indem Sie __Sling__-Konfigurationsdateien (`SiteConfig`, `HtmlPageItemsConfig`) hinzufügen.
 
