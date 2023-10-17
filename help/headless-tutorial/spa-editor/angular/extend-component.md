@@ -60,7 +60,7 @@ Vergegenwärtigen Sie sich die erforderlichen Tools und Anweisungen zum Einricht
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   Fügen Sie bei Verwendung von [AEM 6.x](overview.md#compatibility) das Profil `classic` hinzu:
+   Wenn Sie [AEM 6.x](overview.md#compatibility) verwenden, fügen Sie das Profil `classic` hinzu:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
