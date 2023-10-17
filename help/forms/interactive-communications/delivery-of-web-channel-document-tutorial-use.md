@@ -1,6 +1,6 @@
 ---
-title: Bereitstellung des Dokuments zur interaktiven Kommunikation - Webkanal-AEM Forms
-description: Versand des Webkanaldokuments über einen Link in der E-Mail
+title: Bereitstellung des Dokuments zur interaktiven Kommunikation – Web-Kanal – AEM Forms
+description: Versand des Web-Kanaldokuments über einen Link in der E-Mail
 feature: Interactive Communication
 audience: developer
 activity: implement
@@ -11,21 +11,21 @@ level: Beginner
 exl-id: 50858100-3d0c-42bd-87b8-f626212669e2
 last-substantial-update: 2019-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '277'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# E-Mail-Versand des Webkanaldokuments
+# E-Mail-Versand des Web-Kanaldokuments
 
-Nachdem Sie Ihr Dokument zur interaktiven Kommunikation mit Webkanälen definiert und getestet haben, benötigen Sie einen Bereitstellungsmechanismus, um das Webkanaldokument an den Empfänger zu senden.
+Nachdem Sie Ihr Web-Kanaldokument zur interaktiven Kommunikation definiert und getestet haben, benötigen Sie einen Versandmechanismus, um das Web-Kanaldokument an die Empfängerin oder den Empfänger zu senden.
 
-In diesem Artikel betrachten wir E-Mail als Bereitstellungsmechanismus für Webkanaldokumente. Der Empfänger erhält per E-Mail einen Link zum Webkanaldokument. Beim Klicken auf den Link wird der Benutzer aufgefordert, sich zu authentifizieren, und das Webkanaldokument wird mit den für den angemeldeten Benutzer spezifischen Daten gefüllt.
+In diesem Artikel betrachten wir E-Mail als Bereitstellungsmechanismus für Web-Kanaldokumente. Die Empfängerin oder der Empfänger erhält per E-Mail einen Link zum Web-Kanaldokument. Beim Klicken auf den Link wird die Person aufgefordert, sich zu authentifizieren, und das Web-Kanaldokument wird mit den für die angemeldete Person spezifischen Daten gefüllt.
 
-Sehen wir uns das folgende Codefragment an. Dieser Code ist Teil von GET.jsp , das ausgelöst wird, wenn der Benutzer auf den Link in der E-Mail klickt, um das Webkanaldokument anzuzeigen. Wir erhalten den angemeldeten Benutzer mit dem Jackrabbit UserManager. Sobald wir den angemeldeten Benutzer erhalten haben, erhalten wir den Wert der Eigenschaft accountNumber , die mit dem Profil des Benutzers verknüpft ist.
+Sehen wir uns das folgende Code-Fragment an. Dieser Code ist Teil von GET.jsp, das ausgelöst wird, wenn die Person auf den Link in der E-Mail klickt, um das Web-Kanaldokument anzuzeigen. Wir erhalten die angemeldete Person mithilfe von Jackrabbit UserManager. Sobald wir die angemeldete Person erhalten haben, erhalten wir den Wert der Eigenschaft accountNumber, die mit ihrem Profil verknüpft ist.
 
-Dann verknüpfen wir den Wert accountNumber mit einem Schlüssel namens accountNumber in der Karte. Der Schlüssel **Kontonummer** wird im Formulardatenmodell als Anforderungsattribut definiert. Der Wert dieses Attributs wird als Eingabeparameter an die Methode des Lesedienstes für Formulardatenmodelle übergeben.
+Dann verknüpfen wir den Wert accountNumber mit einem Schlüssel namens accountnumber in der Karte. Der Schlüssel **accountnumber** wird im Formulardatenmodell als Anfrageattribut definiert. Der Wert dieses Attributs wird als Eingabeparameter an die Methode des Lesedienstes für Formulardatenmodelle übergeben.
 
 Zeile 7: Wir senden die empfangene Anfrage an ein anderes Servlet, basierend auf dem Ressourcentyp, der von der URL des interaktiven Kommunikationsdokuments identifiziert wird. Die von diesem zweiten Servlet zurückgegebene Antwort ist in der Antwort des ersten Servlets enthalten.
 
@@ -43,8 +43,8 @@ wrapperRequest.getRequestDispatcher("/content/forms/af/401kstatement/irastatemen
 
 Visuelle Darstellung des Codes für Zeile 7
 
-![Konfiguration von Anforderungsparametern](assets/requestparameter.png)
+![Konfiguration von Anfrageparametern](assets/requestparameter.png)
 
-Anforderungsattribut definiert für den Lesedienst des Formulardaten-Modals
+Anfrageattribut definiert für den Lesedienst des Formulardatenmodells
 
-[AEM](assets/webchanneldelivery.zip).
+[Beispiel-AEM-Paket](assets/webchanneldelivery.zip).
