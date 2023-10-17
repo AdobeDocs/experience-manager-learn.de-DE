@@ -1,6 +1,6 @@
 ---
 title: SMS-Zwei-Faktor-Authentifizierung
-description: Fügen Sie eine zusätzliche Sicherheitsebene hinzu, um die Identität eines Benutzers zu bestätigen, wenn er bestimmte Aktivitäten durchführen möchte
+description: Hinzufügen einer zusätzlichen Sicherheitsebene, um die Identität einer Benutzerin oder eines Benutzers beim Durchführen bestimmter Aktivitäten zu bestätigen
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6317
@@ -10,64 +10,65 @@ level: Experienced
 exl-id: c2c55406-6da6-42be-bcc0-f34426b3291a
 last-substantial-update: 2021-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '598'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Benutzer anhand ihrer Mobiltelefonnummern überprüfen
+# Überprüfen von Benutzenden anhand ihrer Mobiltelefonnummern
 
-SMS Two Factor Authentication (Dual Factor Authentication) ist ein Verfahren zur Überprüfung der Sicherheit, das durch die Anmeldung eines Benutzers auf einer Website, Software oder Anwendung ausgelöst wird. Beim Anmeldungsprozess erhält der Benutzer automatisch eine SMS mit einem eindeutigen numerischen Code an seine Mobiltelefonnummer.
+Die SMS-Zwei-Faktor-Authentifizierung (SMS 2FA) ist ein Sicherheitsprüfverfahren, das durch die Anmeldung einer Benutzerin oder eines Benutzers bei einer Website, Software oder Anwendung ausgelöst wird. Beim Anmeldevorgang erhält die Benutzerin bzw. der Benutzer über die angegebene Mobiltelefonnummer automatisch eine SMS mit einem eindeutigen numerischen Code.
 
-Es gibt eine Reihe von Organisationen, die diesen Dienst bereitstellen. Solange sie über gut dokumentierte REST-APIs verfügen, können Sie AEM Forms mithilfe der Datenintegrationsfunktionen von AEM Forms einfach integrieren. Im Rahmen dieses Tutorials habe ich [Nexmo](https://developer.nexmo.com/verify/overview) um den Anwendungsfall für SMS 2FA zu demonstrieren.
+Es gibt eine Reihe von Unternehmen und Organisationen, die diesen Dienst bereitstellen. Sofern diese über gut dokumentierte REST-APIs verfügen, können Sie AEM Forms mithilfe der Datenintegrationsfunktionen problemlos integrieren. Im Rahmen dieses Tutorials wird [Nexmo](https://developer.nexmo.com/verify/overview) verwendet, um den SMS 2FA-Anwendungsfall zu demonstrieren.
 
-Die folgenden Schritte wurden ausgeführt, um den SMS 2FA mit AEM Forms mithilfe des Nexmo Verify-Dienstes zu implementieren.
+Die folgenden Schritte wurden ausgeführt, um das SMS 2FA-Verfahren mit AEM Forms über den Nexmo Verify-Dienst zu implementieren.
 
-## Entwicklerkonto erstellen
+## Erstellen eines Entwicklerkontos
 
-Erstellen Sie ein Entwicklerkonto mit [Nexmo](https://dashboard.nexmo.com/sign-in). Notieren Sie sich den API-Schlüssel und den API-Geheimschlüssel. Diese Schlüssel sind erforderlich, um REST-APIs des Nexmo-Dienstes aufzurufen.
+Erstellen Sie ein Entwicklerkonto mit [Nexmo](https://dashboard.nexmo.com/sign-in). Notieren Sie sich den API-Schlüssel und den geheimen API-Schlüssel. Diese Schlüssel sind erforderlich, um REST-APIs des Nexmo-Dienstes aufzurufen.
 
-## Erstellen der Swagger/OpenAPI-Datei
+## Erstellen einer Swagger/OpenAPI-Datei
 
-Die OpenAPI-Spezifikation (früher Swagger Specification) ist ein API-Beschreibungsformat für REST-APIs. Mit einer OpenAPI-Datei können Sie Ihre gesamte API beschreiben, einschließlich:
+Die OpenAPI-Spezifikation (früher Swagger-Spezifikation) ist ein API-Beschreibungsformat für REST-APIs. Mit einer OpenAPI-Datei können Sie Ihre gesamte API beschreiben, einschließlich:
 
-* Verfügbare Endpunkte (/users) und Vorgänge für jeden Endpunkt (GET /users, POST /users)
-* Aktionsparameter Eingabe und Ausgabe für jede Vorgangsauthentifizierungsmethode
-* Kontaktinformationen, Lizenz, Nutzungsbedingungen und sonstige Informationen.
-* API-Spezifikationen können in YAML oder JSON geschrieben werden. Das Format ist für Menschen und Maschinen leicht zu erlernen und lesbar.
+* verfügbarer Endpunkte (/users) und der Vorgänge für jeden Endpunkt (GET /users, POST /users)
+* Aktionsparameter-Eingabe und -Ausgabe für jeden Vorgang 
+Authentifizierungsmethoden
+* Kontaktinformationen, Lizenz, Nutzungsbedingungen und sonstiger Informationen
+* API-Spezifikationen können in YAML oder JSON geschrieben werden. Das Format ist sowohl für Menschen als auch für Maschinen leicht zu erlernen und lesbar.
 
-Um Ihre erste Swagger/OpenAPI-Datei zu erstellen, folgen Sie dem [OpenAPI-Dokumentation](https://swagger.io/docs/specification/2-0/basic-structure/)
+Um Ihre erste Swagger/OpenAPI-Datei zu erstellen, befolgen Sie die [OpenAPI-Dokumentation](https://swagger.io/docs/specification/2-0/basic-structure/).
 
 >[!NOTE]
-> AEM Forms unterstützt OpenAPI Specification Version 2.0 (fka Swagger).
+> AEM Forms unterstützt die OpenAPI-Spezifikationsversion 2.0 (früher Swagger).
 
-Verwenden Sie die [Swagger-Editor](https://editor.swagger.io/) , um Ihre Swagger-Datei zu erstellen, um die Vorgänge zu beschreiben, die mit SMS gesendeten OTP-Code senden und überprüfen. Die Swagger-Datei kann im JSON- oder YAML-Format erstellt werden. Die fertige Swagger-Datei kann von heruntergeladen werden. [here](assets/two-factore-authentication-swagger.zip)
+Verwenden Sie den [Swagger-Editor](https://editor.swagger.io/), um Ihre Swagger-Datei zu erstellen und die Vorgänge zu beschreiben, bei denen per SMS ein OTP-Code gesendet und überprüft wird. Die Swagger-Datei kann im JSON- oder YAML-Format erstellt werden. Die fertige Swagger-Datei kann [hier](assets/two-factore-authentication-swagger.zip) heruntergeladen werden.
 
-## Datenquelle erstellen
+## Erstellen einer Datenquelle
 
-Um AEM/AEM Forms mit Drittanbieteranwendungen zu integrieren, müssen wir [Datenquelle erstellen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) in der Cloud-Services-Konfiguration.
+Um AEM/AEM Forms in Drittanbieteranwendungen zu integrieren, ist die [Erstellung einer Datenquelle](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=de) in der Cloud-Service-Konfiguration erforderlich. 
 
 ## Erstellen von Formulardatenmodellen
 
-Die AEM Forms-Datenintegration bietet eine intuitive Benutzeroberfläche zum Erstellen und Verwenden von [Formulardatenmodelle](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=de). Ein Formulardatenmodell nutzt Datenquellen für den Datenaustausch.
-Das ausgefüllte Formulardatenmodell kann [heruntergeladen von hier](assets/sms-2fa-fdm.zip)
+Die AEM Forms-Datenintegration bietet eine intuitive Benutzeroberfläche zum Erstellen von und Arbeiten mit [Formulardatenmodellen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=de). Ein Formulardatenmodell benötigt Datenquellen für den Datenaustausch.
+Das fertige Formulardatenmodell kann [hier](assets/sms-2fa-fdm.zip) heruntergeladen werden.
 
-![fdm](assets/2FA-fdm.PNG)
+![FDM](assets/2FA-fdm.PNG)
 
-## Adaptives Formular erstellen
+## Erstellen eines adaptiven Formulars
 
-Integrieren Sie die POST-Aufrufe des Formulardatenmodells in Ihr adaptives Formular, um die vom Benutzer im Formular eingegebene Mobiltelefonnummer zu überprüfen. Sie können Ihr eigenes adaptives Formular erstellen und den Aufruf des Formulardatenmodells verwenden, um OTP-POST gemäß Ihren Anforderungen zu senden und zu überprüfen.
+Integrieren Sie die POST-Aufrufe des Formulardatenmodells in Ihr adaptives Formular, um die von Benutzenden in das Formular eingegebenen Mobiltelefonnummern zu überprüfen. Sie können Ihr eigenes adaptives Formular erstellen und den POST-Aufruf des Formulardatenmodells verwenden, um den OTP-Code gemäß Ihren Anforderungen zu senden und zu überprüfen.
 
-Wenn Sie die Beispiel-Assets mit Ihren API-Schlüsseln verwenden möchten, führen Sie die folgenden Schritte aus:
+Wenn Sie die Beispiel-Assets mit Ihren API-Schlüsseln verwenden möchten, gehen Sie wie folgt vor:
 
-* [Herunterladen des Formulardatenmodells](assets/sms-2fa-fdm.zip) und importieren Sie in AEM mithilfe von [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
-* Das adaptive Beispielformular herunterladen kann [heruntergeladen von hier](assets/sms-2fa-verification-af.zip). Dieses Beispielformular verwendet die Dienstaufrufe des Formulardatenmodells, die als Teil dieses Artikels bereitgestellt werden.
-* Importieren Sie das Formular in AEM aus dem [Benutzeroberfläche von Forms und Document](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [Laden Sie das Formulardatenmodell herunter](assets/sms-2fa-fdm.zip) und importieren Sie es mit [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) in AEM.
+* Laden Sie das adaptive Beispielformular [hier](assets/sms-2fa-verification-af.zip) herunter. Dieses Beispielformular nutzt die Dienstaufrufe des Formulardatenmodells, das im Rahmen dieses Artikels bereitgestellt wird.
+* Importieren Sie das Formular über die Benutzeroberfläche [Formulare und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) in AEM.
 * Öffnen Sie das Formular im Bearbeitungsmodus. Öffnen Sie den Regeleditor für das folgende Feld.
 
-![sms-send](assets/check-sms.PNG)
+![SMS-Versand](assets/check-sms.PNG)
 
-* Bearbeiten Sie die mit dem Feld verknüpfte Regel. Bereitstellen der entsprechenden API-Schlüssel
+* Bearbeiten Sie die mit dem Feld verknüpfte Regel. Stellen Sie die entsprechenden API-Schlüssel bereit.
 * Speichern Sie das Formular
-* [Formularvorschau](http://localhost:4502/content/dam/formsanddocuments/sms-2fa-verification/jcr:content?wcmmode=disabled) und testen Sie die Funktionalität
+* [Zeigen Sie das Formular in einer Vorschau an](http://localhost:4502/content/dam/formsanddocuments/sms-2fa-verification/jcr:content?wcmmode=disabled) und testen Sie die Funktionalität.
