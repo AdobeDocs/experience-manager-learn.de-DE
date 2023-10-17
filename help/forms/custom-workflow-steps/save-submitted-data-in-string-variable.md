@@ -1,5 +1,5 @@
 ---
-title: Gesendete Daten in Zeichenfolgenvariable speichern
+title: Speichern gesendeter Daten in Zeichenfolgenvariablen
 description: Benutzerdefinierter Prozessschritt zum Extrahieren gebundener Daten und Speichern in einer Workflow-Variablen vom Typ Zeichenfolge
 feature: Adaptive Forms
 version: 6.5
@@ -9,27 +9,28 @@ level: Beginner
 kt: 11199
 last-substantial-update: 2022-10-02T00:00:00Z
 thumbnail: string-variable.jpg
-source-git-commit: e1c16ff347f5f398c7bc47233049427eeffa2aab
-workflow-type: tm+mt
+exl-id: 65dcbfbb-7eb5-4fa3-aeb3-587c59ee2fe9
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '158'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Gebundene Daten extrahieren und in einer Zeichenfolgenvariablen speichern
+# Extrahieren und Speichern von gebundenen Daten in einer Zeichenfolgenvariablen
 
-Mit dieser Funktion können Sie die gesendeten Daten in den Nachrichtentext Ihrer E-Mail einschließen. Der benutzerdefinierte Prozessschritt extrahiert die **gebundene Daten** aus der Übermittlung des adaptiven Formulars und füllt eine Variable des Typs Zeichenfolge mit den Daten. Anschließend können Sie diese Zeichenfolgenvariable verwenden, um die Daten in Ihre E-Mail-Vorlage einzufügen.
-Der folgende Screenshot zeigt die Argumente, die Sie an den benutzerdefinierten Prozessschritt übergeben müssen
-![Prozessschritt](assets/save-submitted-data-string.png)
+Diese Funktion ermöglicht es Ihnen, die gesendeten Daten in den Nachrichtentext Ihrer E-Mail einzuschließen. Der benutzerdefinierte Prozessschritt extrahiert die **gebundenen Daten** aus der Übermittlung des adaptiven Formulars und füllt eine Variable vom Typ Zeichenfolge mit den Daten. Anschließend können Sie diese Zeichenfolgenvariable verwenden, um die Daten in Ihre E-Mail-Vorlage einzufügen.
+Der folgende Screenshot zeigt die Argumente, die Sie an den benutzerdefinierten Prozessschritt übergeben müssen.
+![process-step](assets/save-submitted-data-string.png)
 
-Im Folgenden finden Sie die Parameter .
+Im Folgenden finden Sie die Parameter:
 
-* `data.xml` - Die Datei mit den gesendeten Daten. Wenn das Format in json angegeben ist, kann der Name der Datei data.json sein.
+* `data.xml`: Die Datei mit den gesendeten Daten. Wenn das Format in JSON angegeben ist, kann der Name der Datei „data.json“ sein.
 
-Der benutzerdefinierte Prozessschritt extrahiert dann die gebundenen Daten und speichert sie in der im Workflow definierten Variablen &quot;submitDataString&quot;
+Der benutzerdefinierte Prozessschritt extrahiert dann die gebundenen Daten und speichert sie in der im Workflow definierten Variablen „submittedDataString“
 
 
-[Benutzerdefiniertes Bundle kann von hier heruntergeladen werden](assets/AEMFormsProcessStep.core-1.0.0-SNAPSHOT.jar)
+[Das benutzerdefinierte Bundle kann von hier aus heruntergeladen werden:](assets/AEMFormsProcessStep.core-1.0.0-SNAPSHOT.jar)
 
 ```java
 package AEMFormsProcessStep.core;
