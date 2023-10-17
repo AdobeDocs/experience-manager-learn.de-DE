@@ -11,16 +11,16 @@ level: Beginner
 last-substantial-update: 2022-06-14T00:00:00Z
 exl-id: b69508c9-4be3-43c9-9d54-84ac0a2b4b6b
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '50'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Veröffentlichen 
+# Veröffentlichen
 
 Erfahren Sie, wie Sie Assets und deren Ausgabeformate aus der AEM-Autoreninstanz in der AEM-Veröffentlichungsinstanz veröffentlichen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330932?quality=12&learn=on)
 
-_Stellen Sie sicher, dass die AEM Assets-Bereitstellung über einen lizenzierten AEM-Veröffentlichungsdienst verfügt, bevor Sie Assets veröffentlichen._
+_Stellen Sie sicher, dass die AEM Assets-Bereitstellung über einen lizenzierten AEM Publish-Service verfügt, bevor Sie Assets veröffentlichen._
