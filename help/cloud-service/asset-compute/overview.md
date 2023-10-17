@@ -113,7 +113,7 @@ Asset Compute-Sekundäre stellen verschiedene Debugging-Ebenen bereit – von he
 
 + [Debugging eines Sekundärs](./test-debug/debug.md)
 
-## Implementieren
+## Bereitstellen
 
 Erfahren Sie, wie Sie benutzerdefinierte Asset Compute-Sekundäre mit AEM as a Cloud Service integrieren können, indem Sie sie zuerst in Adobe I/O Runtime bereitstellen und dann über die AEM Assets-Verarbeitungsprofile von der Autoreninstanz in AEM as a Cloud Service aufrufen.
 
