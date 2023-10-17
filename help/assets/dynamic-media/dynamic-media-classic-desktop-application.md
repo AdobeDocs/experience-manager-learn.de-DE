@@ -1,6 +1,6 @@
 ---
-title: Verwenden des Dynamic Media Classic Desktop-Programms
-description: Adobe führt eine Desktop-Applikation für Dynamic Media Classic-Benutzer ein, die im Browser nicht mehr auf Adobe Flash-Technologie angewiesen sind.
+title: Verwenden der Dynamic Media Classic-Desktop-Anwendung
+description: Adobe führt eine Desktop-Anwendung für Dynamic Media Classic-Benutzende ein, die im Browser nicht mehr auf Adobe Flash-Technologie angewiesen ist.
 feature: Dynamic Media Classic
 version: 6.5
 kt: 5808
@@ -10,31 +10,31 @@ role: User
 level: Beginner
 exl-id: 1600c0c0-0054-49ce-9b99-f8e6e29d6132
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '189'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Verwenden des Dynamic Media Classic Desktop-Programms{#using-dynamic-media-desktop-application}
+# Verwenden der Dynamic Media Classic-Desktop-Anwendung{#using-dynamic-media-desktop-application}
 
-Adobe führt ein Desktop-Programm für Dynamic Media Classic ein, das ein ähnliches Erlebnis wie ein Browser bietet und eine funktionell äquivalente Benutzeroberfläche bietet, die nicht vom Adobe Flash Player abhängig ist.
+Adobe führt eine Desktop-Anwendung für Dynamic Media Classic ein, die ein ähnliches Erlebnis wie ein Browser und eine funktionell äquivalente, nicht von Adobe Flash Player abhängige Benutzeroberfläche bietet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/36645?quality=12&learn=on)
 
 >[!NOTE]
 >
-> Es wird empfohlen, das neue Adobe Dynamic Media Classic-Desktop-Programm bis zum 1. Oktober 2020 zu installieren. Dadurch wird sichergestellt, dass Sie einen reibungslosen Übergang haben, bevor der Adobe-Flash Player am 31. Dezember 2020 eingestellt wird. Ab diesem Datum können Sie sich nicht mehr bei der Browserversion der Adobe Dynamic Media Classic-Benutzeroberfläche anmelden, die im Produkt als Scene7 Publishing System bezeichnet wird.
+> Es wird empfohlen, die neue Adobe Dynamic Media Classic-Desktop-Anwendung bis zum 1. Oktober 2020 zu installieren. Dadurch wird sichergestellt, dass Sie einen reibungslosen Übergang haben, bevor Adobe Flash Player am 31. Dezember 2020 eingestellt wird. Von diesem Zeitpunkt an können Sie sich nicht mehr bei der Browser-Version der Adobe Dynamic Media Classic-Benutzeroberfläche anmelden, die im Produkt als Scene7 Publishing System bezeichnet wird.
 
 ## Systemanforderungen
 
-Das Adobe Dynamic Media Classic-Desktop-Programm ist mit den folgenden Betriebssystemen kompatibel:
+Die Adobe Dynamic Media Classic-Desktop-Anwendung ist mit den folgenden Betriebssystemen kompatibel:
 
 * macOS 10.10 oder höher
 * Windows 7 oder höher
 
-## Unterstützende Materialien
+## Hilfsmaterialien
 
-* [Dokumentation zur Adobe Dynamic Media Classic Desktop-Anwendung](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=de)
-* [Häufig gestellte Fragen zu Adobe Dynamic Media](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
-* [Herunterladen des Dynamic Media Classic Desktop-Programms](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
+* [Dokumentation zur Adobe Dynamic Media Classic-Desktop-Anwendung](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=de)
+* [Häufig gestellte Fragen zu Adobe Dynamic Media](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html?lang=de)
+* [Download der Dynamic Media Classic Desktop-Anwendung](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html?lang=de)
