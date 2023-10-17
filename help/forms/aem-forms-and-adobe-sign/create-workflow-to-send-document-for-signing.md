@@ -1,6 +1,6 @@
 ---
-title: Dokumente zur Signatur mithilfe eines Workflows senden
-description: Senden von Dokumenten zur Signatur mithilfe des Workflows. Erstellen Sie einen AEM Workflow mit der Komponente Dokument signieren . Verwenden Sie das automatisch generierte DoR, um mithilfe der Signaturkomponente Unterschriften zu senden. In diesem Video werden die verschiedenen Schritte erläutert, die zum Erstellen eines effektiven Workflows zum Senden von Dokumenten zur Signatur erforderlich sind.
+title: Senden von Dokumenten zur Signatur mithilfe eines Workflows
+description: Senden von Dokumenten zur Signatur mithilfe eines Workflows. Erstellen Sie einen AEM-Workflow mit der Komponente „Dokument signieren“. Verwenden Sie das automatisch generierte DoR, um mithilfe der Signaturkomponente Unterschriften zu senden. In diesem Video werden die verschiedenen Schritte erläutert, die zum Erstellen eines effektiven Workflows zum Senden von Dokumenten zur Signatur erforderlich sind.
 feature: Adaptive Forms,Acrobat Sign
 thumbnail: 38182.jpg
 kt: 6035
@@ -11,19 +11,19 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 20093733-2d19-4405-b453-1a8c2722adeb
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '100'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
-# Dokumente zur Signatur mithilfe eines Workflows senden
+# Senden von Dokumenten zur Signatur mithilfe eines Workflows
 
-Erstellen Sie einen AEM Workflow mit der Komponente Dokument signieren . Verwenden Sie das automatisch generierte DoR, um mithilfe der Signaturkomponente Unterschriften zu senden.
+Erstellen Sie einen AEM-Workflow mit der Komponente „Dokument signieren“. Verwenden Sie das automatisch generierte DoR, um mithilfe der Signaturkomponente Unterschriften einzufügen.
 In diesem Video werden die verschiedenen Schritte erläutert, die zum Erstellen eines effektiven Workflows zum Senden von Dokumenten zur Signatur erforderlich sind.
 
 >[!VIDEO](https://video.tv.adobe.com/v/38182?quality=12&learn=on)
 
 ## Nächste Schritte
 
-[Erstellen und Konfigurieren von adaptiven Formularen](./create-and-configure-adaptive-form.md)
+[Erstellen und Konfigurieren eines adaptiven Formulars](./create-and-configure-adaptive-form.md)
