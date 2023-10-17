@@ -1,6 +1,6 @@
 ---
-title: JWT für Zugriffstoken austauschen
-description: Ersetzen Sie das JSON Web Token (JWT) durch Adobe IMS-APIs für ein AEM Zugriffstoken.
+title: Austauschen von JWT gegen Zugriffs-Token
+description: Tauschen Sie das JSON Web Token (JWT) mit Adobe IMS-APIs gegen ein AEM-Zugriffs-Token aus.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -11,18 +11,18 @@ kt: 8185
 thumbnail: KT-8185.jpg
 exl-id: ab7b8a06-3009-477d-9e98-590912e8e176
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '87'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# JWT für Zugriffstoken austauschen
+# Austauschen von JWT gegen Zugriffs-Token
 
 
-Das im vorherigen Schritt erstellte JWT wird mit Adobe IMS-APIs für ein Zugriffstoken ausgetauscht, das dann für den Zugriff auf AEM as a Cloud Service verwendet werden kann. Um ein Zugriffstoken anzufordern, senden Sie eine POST-Anfrage mit JWT, client_id und client_secret an den IMS-Authentifizierungsdienst.
+Das im vorherigen Schritt erstellte JWT wird mit Adobe IMS-APIs gegen ein Zugriffs-Token ausgetauscht, das dann für den Zugriff auf AEM as a Cloud Service verwendet werden kann. Um ein Zugriffs-Token anzufordern, senden Sie eine POST-Anfrage mit JWT, client_id und client_secret an den IMS-Authentifizierungsdienst.
 
-Der folgende Code wurde verwendet, um Austausch-JWT für Zugriffstoken zu generieren
+Der folgende Code wurde verwendet, um ein Austausch-JWT für ein Zugriffs-Token zu generieren
 
 ```java
 public String getAccessToken() {
