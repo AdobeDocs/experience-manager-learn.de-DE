@@ -9,19 +9,20 @@ level: Beginner
 kt: 11245
 last-substantial-update: 2022-10-15T00:00:00Z
 thumbnail: third-party.jpg
-source-git-commit: 4af14b7d72ebdbea04e68a9a64afa1a96d1c1aeb
-workflow-type: tm+mt
+exl-id: e8841c63-3159-4f13-89a1-d8592af514e3
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '282'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 # Einbinden von Drittanbieter-Bundles in Ihr AEM-Projekt
 
-In diesem Artikel werden wir die Schritte durchgehen, die erforderlich sind, um das OSGi-Bundle von Drittanbietern in Ihr AEM Projekt aufzunehmen. Für die Zwecke dieses Artikels werden wir die [jsch-0.1.55.jar](https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar) in unserem AEM Projekt.  Wenn das OSGi im Maven-Repository verfügbar ist, fügen Sie die Abhängigkeit des Bundles in die POM.xml-Datei des Projekts ein.
+In diesem Artikel werden wir die Schritte durchgehen, die erforderlich sind, um ein OSGi-Bundle von Drittanbietern in Ihr AEM-Projekt aufzunehmen. Für die Zwecke dieses Artikels werden wir die [jsch-0.1.55.jar](https://repo1.maven.org/maven2/com/jcraft/jsch/0.1.55/jsch-0.1.55.jar) in unser AEM-Projekt einbeziehen. Wenn das OSGi im Maven-Repository verfügbar ist, fügen Sie die Abhängigkeit des Bundles in die POM.xml-Datei des Projekts ein.
 
 >[!NOTE]
-> Es wird davon ausgegangen, dass die JAR-Datei eines Drittanbieters ein OSGi-Bundle ist
+> Es wird angenommen, dass die JAR-Datei eines Drittanbieters ein OSGi-Bundle ist
 
 ```java
 <!-- https://mvnrepository.com/artifact/com.jcraft/jsch -->
@@ -32,7 +33,7 @@ In diesem Artikel werden wir die Schritte durchgehen, die erforderlich sind, um 
 </dependency>
 ```
 
-Wenn sich Ihr OSGi-Bundle auf Ihrem Dateisystem befindet, erstellen Sie einen Ordner mit dem Namen **localjar** im Basisverzeichnis Ihres Projekts (C:\aemformsbundles\AEMFormsProcessStep\localjar) sieht die Abhängigkeit etwa so aus:
+Wenn sich Ihr OSGi-Bundle auf Ihrem Dateisystem befindet, erstellen Sie einen Ordner mit dem Namen **localjar** im Basisverzeichnis Ihres Projekts (C:\aemformsbundles\AEMFormsProcessStep\localjar). Die Abhängigkeit sieht etwa so aus:
 
 ```java
 <dependency>
@@ -44,23 +45,21 @@ Wenn sich Ihr OSGi-Bundle auf Ihrem Dateisystem befindet, erstellen Sie einen Or
 </dependency>
 ```
 
-## Ordnerstruktur erstellen
+## Erstellen der Ordnerstruktur
 
-Wir fügen dieses Bundle zu unserem AEM-Projekt hinzu. **AEMFormsProcessStep** die sich im **c:\aemformsbundles** Ordner
+Wir fügen dieses Bundle zu unserem AEM-Projekt **AEMFormsProcessStep** hinzu, das sich im Ordner **c:\aemformsbundles** befindet
 
-* Öffnen Sie die **filter.xml** von der Seite C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\META-INF\vault folder of your project Make a note of the root attribute of the filter element.
+* Öffnen Sie die Datei **filter.xml** im Ordner C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\META-INF\vault Ihres Projekts
+Notieren Sie sich das Stammattribut des Filterelements.
 
 * Erstellen Sie die folgende Ordnerstruktur C:\aemformsbundles\AEMFormsProcessStep\all\src\main\content\jcr_root\apps\AEMFormsProcessStep-vendor-packages\application\install
-* Die **apps/AEMFormsProcessStep-vendor-packages** ist der Stammattributwert in filter.xml
-* Aktualisieren Sie den Abschnitt &quot;Abhängigkeiten&quot;der POM.xml des Projekts.
-* Öffnen Sie das Befehlszeilenfenster. Navigieren Sie in meinem Fall zum Ordner Ihres Projekts (c:\aemformsbundles\AEMFormsProcessStep). Führen Sie den folgenden Befehl aus
+* Das **apps/AEMFormsProcessStep-vendor-packages** ist der Stammattributwert in der filter.xml
+* Aktualisieren Sie den Abschnitt „Abhängigkeiten“ der POM.xml des Projekts.
+* Öffnen Sie eine Eingabeaufforderung. Navigieren Sie zum Ordner Ihres Projekts (in meinem Fall C:\aemformsbundles\AEMFormsProcessStep). Führen Sie den folgenden Befehl aus
 
 ```java
 mvn clean install -PautoInstallSinglePackage
 ```
 
-Wenn alles gut geht, wird das Paket zusammen mit dem Drittanbieter-Bundle in Ihre AEM-Instanz installiert. Sie können mithilfe von [Felix-Webkonsole](http://localhost:4502/system/console/bundles). Das Drittanbieter-Bundle ist im Ordner /apps der `crx` Repository wie unten dargestellt
-![Drittanbieter](assets/custom-bundle1.png)
-
-
-
+Wenn alles gut geht, wird das Paket zusammen mit dem Drittanbieter-Bundle in Ihrer AEM-Instanz installiert. Sie können das Bundle mithilfe der [Felix-Web-Konsole](http://localhost:4502/system/console/bundles) prüfen. Das Drittanbieter-Bundle ist im Ordner /apps des `crx`-Repositorys wie unten dargestellt verfügbar
+![third-party](assets/custom-bundle1.png)
