@@ -1,6 +1,6 @@
 ---
-title: Adaptives Formular für den Benutzer zum Ausfüllen und Signieren konfigurieren
-description: In diesem Szenario sind der Formularbenutzer und der Unterzeichner identisch.
+title: Adaptives Formular für Benutzende zum Ausfüllen und Signieren konfigurieren
+description: In diesem Szenario sind die Person, die das Formular ausfüllt, und die Person, die es unterschreibt, identisch.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -13,15 +13,15 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: feab7e1d-3998-41ba-8326-bbff14564494
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '56'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
-# Konfigurieren des adaptiven Formulars für das Ausfüllen und Signieren
+# Konfigurieren eines adaptiven Formulars für das Ausfüllen und Signieren
 
 
-In diesem Video konfigurieren wir das Formular, in dem der Formularbenutzer und der Unterzeichner dieselbe Person sind
+In diesem Video konfigurieren wir das Formular, in dem die Person, die das Formular ausfüllt, und diejenige, die es unterschreibt, dieselbe Person ist
 
 >[!VIDEO](https://video.tv.adobe.com/v/332439?quality=12&learn=on)
