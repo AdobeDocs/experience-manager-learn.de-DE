@@ -1,7 +1,7 @@
 ---
-title: Öffnen der Benutzeroberfläche von Agenten beim Übermitteln von POST
+title: Öffnen der Agenten-Benutzeroberfläche bei der POST-Übermittlung
 seo-title: Opening Agent UI On POST Submission
-description: Dies ist Teil 11 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments für den Druckkanal. In diesem Teil starten wir die Benutzeroberfläche für Agenten zum Erstellen von Ad-hoc-Korrespondenz bei der Formularübermittlung.
+description: Dies ist Teil 11 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments für den Druckkanal. In diesem Teil starten wir die Agenten-Benutzeroberfläche zum Erstellen von Ad-hoc-Korrespondenz bei der Formularübermittlung.
 seo-description: This is part 11 of multistep tutorial for creating your first interactive communications document for the print channel. In this part, we will launch the agent ui interface for creating ad-hoc correspondence on form submission.
 uuid: 96f34986-a5c3-400b-b51b-775da5d2cbd7
 feature: Interactive Communication
@@ -17,19 +17,19 @@ role: Developer
 level: Intermediate
 exl-id: 509b4d0d-9f3c-46cb-8ef7-07e831775086
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '324'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Öffnen der Benutzeroberfläche von Agenten beim Übermitteln von POST
+# Öffnen der Agenten-Benutzeroberfläche bei der POST-Übermittlung
 
-In diesem Teil starten wir die Benutzeroberfläche für Agenten zum Erstellen von Ad-hoc-Korrespondenz bei der Formularübermittlung.
+In diesem Teil starten wir die Agenten-Benutzeroberfläche zum Erstellen von Ad-hoc-Korrespondenz bei der Formularübermittlung.
 
-Dieser Artikel führt Sie durch die Schritte, die zum Öffnen der Benutzeroberfläche des Agenten beim Senden eines Formulars erforderlich sind. In der Regel muss der Kundendienstmitarbeiter ein Formular mit Eingabeparametern ausfüllen und die Benutzeroberfläche für den Formularübermittlungsagenten wird mit Daten geöffnet, die vorab vom Vorfülldienst für Formulardatenmodelle ausgefüllt wurden. Die Eingabeparameter für den Vorfülldienst für Formulardatenmodelle werden aus der Formularübermittlung extrahiert.
+Dieser Artikel führt Sie durch die Schritte, die zum Öffnen der Agenten-Benutzeroberfläche beim Senden eines Formulars erforderlich sind. In der Regel müssen Kundendienstmitarbeitende ein Formular mit Eingabeparametern ausfüllen, woraufhin die Benutzeroberfläche für den Formularübermittlungsagenten mit Daten geöffnet wird, die vorab vom Vorfülldienst für Formulardatenmodelle ausgefüllt wurden. Die Eingabeparameter für den Vorfülldienst für Formulardatenmodelle werden aus der Formularübermittlung extrahiert.
 
-Das folgende Video zeigt den Anwendungsfall
+Das folgende Video zeigt den Anwendungsfall:
 
 >[!VIDEO](https://video.tv.adobe.com/v/40122?quality=12&learn=on)
 
@@ -49,27 +49,27 @@ CustomParameterRequest wrapperRequest = new CustomParameterRequest(slingRequest,
 wrapperRequest.getRequestDispatcher("/aem/forms/createcorrespondence.html").include(wrapperRequest, response);
 ```
 
-Zeile 1: Abrufen der Kontonummer vom Anforderungsparameter
+Zeile 1: Abrufen der Kontonummer aus dem Anfrageparameter.
 
-Zeile 2-8: Erstellen Sie eine Parameterzuordnung und legen Sie geeignete Schlüssel und Werte fest, die documentId,Random widerspiegeln.
+Zeile 2–8: Erstellen einer Parameterzuordnung und Festlegen geeigneter Schlüssel und Werte, um „documentId,Random“ widerzuspiegeln.
 
-Linie 9-10: Erstellen Sie ein weiteres Zuordnungsobjekt, um den im Formulardatenmodell definierten Eingabeparameter zu speichern.
+Zeile 9–10: Erstellen eines weiteren Zuordnungsobjekts, um den im Formulardatenmodell definierten Eingabeparameter zu speichern.
 
-Zeile 11: Festlegen des slingRequest-Attributs &quot;paramMap&quot;
+Zeile 11: Festlegen des slingRequest-Attributs „paramMap“.
 
-Zeile 12-13: Weiterleiten der Anfrage an das Servlet
+Zeile 12–13: Weiterleiten der Anfrage an das Servlet.
 
-So testen Sie diese Funktion auf Ihrem Server
+So testen Sie diese Funktion auf Ihrem Server:
 
-* [Importieren und installieren Sie die mit diesem Artikel verknüpften Assets mit Package Manager.](assets/launch-agent-ui.zip)
-* [Bei configMgr anmelden](http://localhost:4502/system/console/configMgr)
-* Suchen Sie nach _Adobe Granite CSRF-Filter_
-* Hinzufügen _/content/getprintchannel_ in den ausgeschlossenen Pfaden
+* [Importieren und installieren Sie die Assets, die sich auf diesen Artikel beziehen, mit Package Manager.](assets/launch-agent-ui.zip)
+* [Melden Sie sich bei configMgr an.](http://localhost:4502/system/console/configMgr)
+* Suchen Sie nach _Adobe Granite CSRF-Filter_.
+* Fügen Sie _/content/getprintchannel_ zu den ausgeschlossenen Pfaden hinzu.
 * Speichern Sie Ihre Änderungen.
-* [Öffnen Sie POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp). Stellen Sie sicher, dass die an FormFieldRequestParameter übergebene Zeichenfolge gültige documentId ist.(Zeile 19).
-* [Öffnen Sie die Webseite.](http://localhost:4502/content/OpenPrintChannel.html) und geben Sie die Kontonummer ein und senden Sie das Formular ab.
-* Die Benutzeroberfläche des Agenten sollte geöffnet werden, wobei die Daten vorausgefüllt sind, die spezifisch für die im Formular eingegebene Kontonummer sind.
+* [Öffnen Sie POST.jsp](http://localhost:4502/apps/AEMForms/openprintchannel/POST.jsp). Stellen Sie sicher, dass die an FormFieldRequestParameter übergebene Zeichenfolge eine gültige documentId ist.(Zeile 19).
+* [Öffnen Sie die Web-Seite](http://localhost:4502/content/OpenPrintChannel.html), geben Sie die Kontonummer ein und senden Sie das Formular ab.
+* Die Agenten-Benutzeroberfläche sollte sich mit vorausgefüllten Daten öffnen, die spezifisch für die im Formular eingegebene Kontonummer sind.
 
 >[!NOTE]
 >
->Stellen Sie sicher, dass der Eingabeparameter des Get-Vorgangs des Formulardatenmodells an das Anforderungsattribut mit der Bezeichnung &quot;Kundennummer&quot;gebunden ist, damit dies funktioniert. Wenn Sie den Namen des Bindungswerts in einen anderen Namen ändern, stellen Sie sicher, dass die Änderung in Zeile 25 der POST.jsp übernommen wird.
+>Stellen Sie sicher, dass der Eingabeparameter des Get-Vorgangs Ihres Formulardatenmodells an das Anfrage-Attribut „accountnumber“ gebunden ist, damit dies funktioniert. Wenn Sie den Namen des Bindungswerts in einen anderen Namen ändern, stellen Sie sicher, die Änderung in Zeile 25 der POST.jsp zu übernehmen.
