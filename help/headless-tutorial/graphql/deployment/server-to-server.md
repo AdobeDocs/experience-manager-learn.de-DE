@@ -8,13 +8,13 @@ role: Developer, Architect
 level: Intermediate
 kt: 10798
 thumbnail: kt-10798.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+exl-id: d4ae08d9-dc43-4414-ab75-26853186a301
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: ht
 source-wordcount: '248'
 ht-degree: 100%
 
 ---
-
 
 # Bereitstellungen von AEM Headless von Server zu Server
 
@@ -22,7 +22,7 @@ AEM Headless-Server-zu-Server-Bereitstellungen umfassen Server-seitige Anwendung
 
 Server-zu-Server-Bereitstellungen erfordern eine minimale Konfiguration, da HTTP-Verbindungen zu AEM Headless-APIs nicht im Kontext eines Browsers initiiert werden.
 
-## Implementierungskonfigurationen
+## Bereitstellungskonfigurationen
 
 Die folgende Bereitstellungskonfiguration muss für Server-zu-Server-App-Bereitstellungen vorhanden sein.
 
