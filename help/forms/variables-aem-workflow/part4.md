@@ -1,6 +1,6 @@
 ---
-title: Variablen in AEM Workflow[Teil 4]
-description: Verwenden von Variablen des Typs XML, JSON, ArrayList, Document in einem AEM Workflow
+title: Variablen im AEM-Workflow [Teil 4]
+description: Verwenden von Variablen des Typs „XML“, „JSON“, „ArrayList“ und „Document“ in einem AEM-Workflow
 version: 6.5
 topic: Development
 feature: Adaptive Forms, Workflow
@@ -8,21 +8,21 @@ role: Developer
 level: Beginner
 exl-id: 269e43f7-24cf-4786-9439-f51bfe91d39c
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '456'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# ArrayList-Variable in AEM Workflow
+# ArrayList-Variable im AEM-Workflow
 
-Variablen des Typs ArrayList wurden in AEM Forms 6.5 eingeführt. Ein gängiges Anwendungsbeispiel für die Verwendung der Variablen ArrayList besteht darin, benutzerdefinierte Routen zu definieren, die in AssignTask verwendet werden sollen.
+In AEM Forms 6.5 wurden Variablen des Typs „ArrayList“ eingeführt. Ein gängiger Anwendungsfall für die Verwendung der ArrayList-Variablen ist die Festlegung benutzerdefinierter Routen, die in der AssignTask-Komponente verwendet werden sollen.
 
-Um die Variable ArrayList in einem AEM Workflow zu verwenden, müssen Sie ein adaptives Formular erstellen, das sich wiederholende Elemente in den gesendeten Daten generiert. Eine gängige Praxis besteht darin, ein Schema zu definieren, das ein Array-Element enthält. Für die Zwecke dieses Artikels habe ich ein einfaches JSON-Schema erstellt, das Array-Elemente enthält. Der Anwendungsfall besteht darin, dass ein Mitarbeiter einen Ausgabenbericht ausfüllt. Im Spesenbericht erfassen wir den Vorlagennamen des Absenders und den Vorgesetzten-Namen. Die Namen des Managers werden in einem Array namens &quot;managerchain&quot;gespeichert. Der folgende Screenshot zeigt das Ausgabeberichtsformular und die Daten aus der adaptiven Forms-Übermittlung.
+Um die ArrayList-Variable in einem AEM-Workflow zu verwenden, müssen Sie ein adaptives Formular erstellen, durch das sich wiederholende Elemente in den übermittelten Daten generiert werden. Eine gängige Praxis ist dabei, ein Schema zu definieren, das ein Array-Element enthält. Für die Zwecke dieses Artikels wurde ein einfaches JSON-Schema mit Array-Elementen erstellt. Der Anwendungsfall besteht darin, dass eine Mitarbeiterin oder ein Mitarbeiter einen Ausgabenbericht ausfüllt. Im Ausgabenbericht erfassen wir, wie die oder der Vorgesetzte der Absenderin bzw. des Absenders und die Managerin oder der Manager dieser bzw. dieses Vorgesetzten heißen. Die Namen dieser Führungskräfte werden in einem Array namens „managerchain“ gespeichert. Der folgende Screenshot zeigt das Ausgabenberichtsformular und die Daten aus dem übermittelten adaptiven Formular.
 
 ![Ausgabenbericht](assets/expensereport.jpg)
 
-Im Folgenden finden Sie die Daten aus der Übermittlung des adaptiven Formulars. Das adaptive Formular basierte auf einem JSON-Schema, bei dem die an das Schema gebundenen Daten im Datenelement afBoundData gespeichert werden. Die Verwaltungskette ist ein Array und wir müssen die ArrayList mit dem name -Element des Objekts innerhalb des managerchain-Arrays füllen.
+Im Folgenden finden Sie die Daten aus dem übermittelten adaptiven Formular. Das adaptive Formular hat auf einem JSON-Schema basiert und die an das Schema gebundenen Daten sind im Datenelement von „afBoundData“ gespeichert. „managerchain“ ist ein Array, und wir müssen „ArrayList“ mit dem name-Element des Objekts innerhalb des managerchain-Arrays auffüllen.
 
 ```json
 {
@@ -63,21 +63,21 @@ Im Folgenden finden Sie die Daten aus der Übermittlung des adaptiven Formulars.
 }
 ```
 
-Um die ArrayList-Variable des Untertypstrings zu initialisieren, können Sie entweder die JSON Dot Notation oder den XPath-Zuordnungsmodus verwenden. Der folgende Screenshot zeigt Ihnen, wie Sie eine ArrayList-Variable namens CustomRoutes mit der JSON Dot Notation ausfüllen. Vergewissern Sie sich, dass Sie auf ein Element in einem Array-Objekt verweisen, wie im Screenshot unten dargestellt. Wir füllen die CustomRoutes ArrayList mit den Namen des Managerchain-Array-Objekts.
-Die CustomRoutes ArrayList wird dann zum Ausfüllen der Routen in der AssignTask-Komponente verwendet
-![customroutes](assets/arraylist.jpg)
-Sobald die Variable CustomRoutes ArrayList mit den Werten aus den gesendeten Daten initialisiert wurde, werden die Routen der Komponente AssignTask mithilfe der Variablen CustomRoutes gefüllt. Der folgende Screenshot zeigt die benutzerdefinierten Routen in einer AssignTask
-![asingtask](assets/customactions.jpg)
+Um die ArrayList-Variable der Untertyp-Zeichenfolge zu initialisieren, können Sie entweder die JSON Dot-Notation oder den XPath-Zuordnungsmodus verwenden. Der folgende Screenshot zeigt Ihnen, wie Sie eine ArrayList-Variable namens „CustomRoutes“ mit der JSON Dot-Notation auffüllen. Vergewissern Sie sich, dass Sie auf ein Element in einem Array-Objekt verweisen, wie im Screenshot unten dargestellt. Wir füllen „CustomRoutes ArrayList“ mit den Namen des Array-Objekts „managerchain“ auf.
+„CustomRoutes ArrayList“ wird dann zum Auffüllen der Routen in der AssignTask-Komponente verwendet.
+![CustomRoutes](assets/arraylist.jpg)
+Sobald die Variable „CustomRoutes ArrayList“ mit den Werten aus den übermittelten Daten initialisiert wurde, werden die Routen der AssignTask-Komponente mithilfe der Variablen „CustomRoutes“ aufgefüllt. Der folgende Screenshot zeigt die benutzerdefinierten Routen in einer AssignTask-Komponente.
+![AssignTask](assets/customactions.jpg)
 
 Gehen Sie wie folgt vor, um diesen Workflow auf Ihrem System zu testen:
 
-* Laden Sie die Datei ArrayListVariable.zip herunter und speichern Sie sie in Ihrem Dateisystem.
-* [Importieren der ZIP-Datei](assets/arraylistvariable.zip) mit dem AEM Package Manager
-* [Öffnen Sie das Formular TravelExpenseReport .](http://localhost:4502/content/dam/formsanddocuments/helpx/travelexpensereport/jcr:content?wcmmode=disabled)
-* Geben Sie einige Ausgaben und die Namen der beiden Manager ein.
-* Senden-Schaltfläche aufrufen
-* [Posteingang öffnen](http://localhost:4502/aem/inbox)
-* Es sollte eine neue Aufgabe mit dem Titel &quot;Spesenadministrator zuweisen&quot;angezeigt werden.
-* Öffnen Sie das Formular, das der Aufgabe zugeordnet ist
-* Es sollten zwei benutzerdefinierte Routen mit den Namen der Manager angezeigt werden.
-  [Durchsuchen Sie den Workflow ReviewExpenseReportWorkflow.](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) Dieser Workflow verwendet die Variable ArrayList, die Variable JSON-Typ, den Regeleditor in der Komponente Or-Split
+* Laden Sie die Datei „ArrayListVariable.zip“ herunter und speichern Sie sie in Ihrem Dateisystem.
+* [Importieren Sie die ZIP-Datei](assets/arraylistvariable.zip) mit AEM Package Manager.
+* [Öffnen Sie das Formular für die Reisekostenabrechnung.](http://localhost:4502/content/dam/formsanddocuments/helpx/travelexpensereport/jcr:content?wcmmode=disabled)
+* Geben Sie einige Ausgaben sowie den Namen der oder des Vorgesetzten und den Namen der Managerin oder des Managers der bzw. des Vorgesetzten ein.
+* Klicken Sie auf die Schaltfläche „Absenden“.
+* [Öffnen Sie Ihren Posteingang.](http://localhost:4502/aem/inbox)
+* Es sollte sich dort eine neue Aufgabe zum Zuweisen der für die Spesenabrechnung zuständigen Person befinden.
+* Öffnen Sie das der Aufgabe zugeordnete Formular.
+* Es sollten zwei benutzerdefinierte Routen mit dem Namen der oder des Vorgesetzten und dem Namen der Managerin oder des Managers der bzw. des Vorgesetzten zu sehen sein.
+  [Sehen Sie sich den Workflow „ReviewExpenseReportWorkflow“ an.](http://localhost:4502/editor.html/conf/global/settings/workflow/models/ReviewExpenseReport.html) Dieser Workflow verwendet die Variable „ArrayList“, eine Variable vom Typ „JSON“ und den Regeleditor in der Komponente „ODER-Teilung“.
