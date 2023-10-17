@@ -1,38 +1,38 @@
 ---
-title: Debugging von Dispatcher Tools
-description: Die Dispatcher Tools bieten eine containerisierte Apache-Webserver-Umgebung, die verwendet werden kann, um AEM als lokalen Dispatcher des AEM-Veröffentlichungsdienstes eines Cloud Services zu simulieren. Das Debuggen der Protokolle und Cache-Inhalte der Dispatcher Tools kann entscheidend sein, um sicherzustellen, dass die End-to-End-AEM-Anwendung und unterstützende Cache- und Sicherheitskonfigurationen korrekt sind.
+title: Debugging von Dispatcher-Tools
+description: Die Dispatcher-Tools bieten eine containerisierte Apache-Webserver-Umgebung, die verwendet werden kann, um den Dispatcher des AEM-Veröffentlichungsdienstes von AEM as a Cloud Service lokal zu simulieren. Das Debuggen der Protokolle und Cache-Inhalte des Dispatcher-Tools kann entscheidend sein, um sicherzustellen, dass die End-to-End-AEM-Anwendung und unterstützende Cache- und Sicherheitskonfigurationen korrekt sind.
 feature: Dispatcher
 kt: 5918
 topic: Development
 role: Developer
 level: Beginner, Intermediate
-source-git-commit: 0737cd2410b48dbaa9b6dfaaa27b854d44536f15
-workflow-type: tm+mt
+exl-id: f0adf7a6-c7c2-449a-9fa5-402c54b812e5
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
 source-wordcount: '230'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Debugging von Dispatcher-Tools
 
-# Debugging von Dispatcher Tools
+Die Dispatcher-Tools bieten eine containerisierte Apache-Webserver-Umgebung, die verwendet werden kann, um den Dispatcher des AEM-Veröffentlichungsdienstes von AEM as a Cloud Service lokal zu simulieren.
 
-Die Dispatcher Tools bieten eine containerisierte Apache-Webserver-Umgebung, die verwendet werden kann, um AEM als lokalen Dispatcher des AEM-Veröffentlichungsdienstes eines Cloud Services zu simulieren.
-
-Das Debuggen der Protokolle und Cache-Inhalte der Dispatcher Tools kann entscheidend sein, um sicherzustellen, dass die End-to-End-AEM-Anwendung und unterstützende Cache- und Sicherheitskonfigurationen korrekt sind.
+Das Debuggen der Protokolle und Cache-Inhalte des Dispatcher-Tools kann entscheidend sein, um sicherzustellen, dass die End-to-End-AEM-Anwendung und unterstützende Cache- und Sicherheitskonfigurationen korrekt sind.
 
 >[!NOTE]
 >
->Da die Dispatcher Tools auf Containern basieren, werden bei jedem Neustart die vorherigen Protokolle und Cache-Inhalte zerstört.
+>Da die Dispatcher-Tools auf Containern basieren, werden bei jedem Neustart die vorherigen Protokolle und Cache-Inhalte zerstört.
 
-## Dispatcher Tools-Protokolle
+## Dispatcher-Tools-Protokolle
 
-Die Dispatcher Tools-Protokolle sind über den Befehl `stdout` oder `bin/docker_run` oder mit weiteren Details im Docker-Container unter `/etc/https/logs` verfügbar.
+Die Dispatcher-Tools-Protokolle sind über den `stdout`- oder den `bin/docker_run`-Befehl oder mit weiteren Details im Docker-Container unter `/etc/https/logs` verfügbar.
 
-Anweisungen zum direkten Zugriff auf die Protokolle des Dispatcher Tools-Docker-Containers finden Sie unter [Dispatcher-Protokolle](./logs.md#dispatcher-logs) .
+Siehe [Dispatcher-Protokolle](./logs.md#dispatcher-logs) für Anweisungen zum direkten Zugriff auf die Protokolle des Docker-Containers der Dispatcher-Tools.
 
-## Dispatcher Tools-Cache
+## Dispatcher-Tools-Cache
 
-### Zugriff auf Protokolle im Docker-Container
+### Zugreifen auf Protokolle im Docker-Container
 
 Der Dispatcher-Cache kann direkt im Docker-Container unter ` /mnt/var/www/html` aufgerufen werden.
 
@@ -52,9 +52,9 @@ $ docker exec -it <CONTAINER ID> /bin/sh
 /# exit
 ```
 
-### Kopieren der Docker-Protokolle in das lokale Dateisystem
+### Kopieren der Docker-Protokolle auf das lokale Dateisystem
 
-Dispatcher-Protokolle können aus dem Docker-Container unter `/mnt/var/www/html` in das lokale Dateisystem kopiert werden, um sie mit Ihren bevorzugten Tools zu überprüfen. Beachten Sie, dass es sich hierbei um eine Point-in-Time-Kopie handelt und keine Echtzeitaktualisierungen des Caches bereitgestellt werden.
+Dispatcher-Protokolle können aus dem Docker-Container unter `/mnt/var/www/html` in das lokale Dateisystem zur Überprüfung mit Ihren bevorzugten Tools kopiert werden. Beachten Sie, dass es sich hierbei um eine temporäre Kopie handelt und keine Echtzeitaktualisierungen des Caches bereitgestellt werden.
 
 ```shell
 $ docker ps
@@ -66,4 +66,3 @@ CONTAINER ID        IMAGE                                       COMMAND         
 $ docker cp -L <CONTAINER ID>:/mnt/var/www/html cache 
 $ cd cache
 ```
-
