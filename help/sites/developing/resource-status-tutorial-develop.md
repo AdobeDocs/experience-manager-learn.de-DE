@@ -1,71 +1,71 @@
 ---
 title: Entwickeln von Ressourcenstatus in AEM Sites
-description: 'Adobe Experience Managers Resource Status-APIs ist ein Plug-in-fähiges Framework für die Anzeige von Statusnachrichten in AEM verschiedenen Editor-Web-Benutzeroberflächen. '
+description: Die Ressourcenstatus-API von Adobe Experience Manager ist ein Plug-in-Framework für die Darstellung von Statusmeldungen in den Web-Benutzeroberflächen der verschiedenen AEM-Editoren.
 topics: development
 audience: developer
 doc-type: tutorial
 activity: develop
 version: 6.4, 6.5
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '446'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 
 # Entwickeln von Ressourcenstatus {#developing-resource-statuses-in-aem-sites}
 
-Adobe Experience Managers Resource Status-APIs ist ein Plug-in-fähiges Framework für die Anzeige von Statusnachrichten in AEM verschiedenen Editor-Web-Benutzeroberflächen.
+Die Ressourcenstatus-API von Adobe Experience Manager ist ein Plug-in-Framework für die Darstellung von Statusmeldungen in den Web-Benutzeroberflächen der verschiedenen AEM-Editoren.
 
 ## Übersicht {#overview}
 
-Das Framework &quot;Resource Status for Editors&quot;bietet serverseitige und Client-seitige APIs für die standardmäßige und einheitliche Anzeige und Interaktion mit den Editorstatus.
+Das Framework „Resource Status for Editors“ bietet Server-seitige und Client-seitige APIs für die standardmäßige und einheitliche Anzeige und Interaktion mit den Editorstatus.
 
-Die Statusleisten des Editors sind nativ in den Editoren Seite, Experience Fragment und Vorlage von AEM verfügbar.
+Die Statusleisten jedes Editors sind standardmäßig im Seiten-, Experience Fragment- und Vorlageneditor von AEM verfügbar.
 
 Anwendungsbeispiele für benutzerdefinierte Ressourcenstatusanbieter sind:
 
-* Benachrichtigung für Autoren, wenn eine Seite innerhalb von 2 Stunden nach geplanter Aktivierung liegt
-* Benachrichtigung der Autoren, dass eine Seite innerhalb der letzten 15 Minuten aktiviert wurde
-* Indem Sie Autoren darüber informieren, dass eine Seite in den letzten 5 Minuten bearbeitet wurde und von wem
+* Benachrichtigung für Autorinnen und Autoren, wenn eine Seite innerhalb von 2 Stunden vor einer geplanten Aktivierung liegt
+* Benachrichtigung für Autorinnen und Autoren, dass eine Seite innerhalb der letzten 15 Minuten aktiviert wurde
+* Benachrichtigung für Autorinnen und Autoren, dass und von wem eine Seite in den letzten 5 Minuten bearbeitet wurde
 
-![Übersicht über den Ressourcenstatus AEM Editors](assets/sample-editor-resource-status-screenshot.png)
+![Übersicht über den Ressourcenstatus eines AEM-Editors](assets/sample-editor-resource-status-screenshot.png)
 
-## Framework für den Ressourcenstatus {#resource-status-provider-framework}
+## Framework des Ressourcenstatusanbieters {#resource-status-provider-framework}
 
-Bei der Entwicklung benutzerdefinierter Ressourcenstatus umfasst die Entwicklungsarbeit Folgendes:
+Bei der Entwicklung benutzerdefinierter Ressourcenstatus besteht die Entwicklungsarbeit aus folgenden Schritten:
 
-1. Die ResourceStatusProvider-Implementierung, die für die Bestimmung des Status benötigt wird, und die grundlegenden Informationen zum Status: Titel, Nachricht, Priorität, Variante, Symbol und verfügbare Aktionen.
+1. Der ResourceStatusProvider-Implementierung, die dafür verantwortlich ist, zu bestimmen, ob ein Status erforderlich ist, sowie die grundlegenden Informationen über den Status: Titel, Meldung, Priorität, Variante, Symbol und verfügbare Aktionen.
 2. Optional kann GraniteUI-JavaScript verwendet werden, das die Funktionalität aller verfügbaren Aktionen implementiert.
 
    ![Architektur des Ressourcenstatus](assets/sample-editor-resource-status-application-architecture.png)
 
-3. Die im Seiten-, Experience Fragment- und Vorlagen-Editor bereitgestellte Statusressource erhält über die Ressourcen einen Typ[!DNL statusType]&quot;.
+3. Der Status-Ressource, die als Teil des Seiten-, Experience Fragment- und Vorlageneditors bereitgestellt wird, wird über die Ressourcen-Eigenschaft „[!DNL statusType]“ ein Typ zugewiesen.
 
-   * Seiten-Editor: `editor`
+   * Seiteneditor: `editor`
    * Experience Fragment-Editor: `editor`
-   * Vorlagen-Editor: `template-editor`
+   * Vorlageneditor: `template-editor`
 
-4. Die Statusressource `statusType` wird mit registriert abgeglichen `CompositeStatusType` OSGi-Konfiguration `name` -Eigenschaft.
+4. Der `statusType` der Statusressource wird mit dem registrierten `CompositeStatusType` der OSGi-konfigurierten `name`-Eigenschaft abgeglichen.
 
-   Bei allen Treffern wird die `CompositeStatusType's` werden erfasst und zur Erfassung der `ResourceStatusProvider` Implementierungen mit diesem Typ, via `ResourceStatusProvider.getType()`.
+   Für alle Übereinstimmungen werden die `CompositeStatusType's`-Typen gesammelt und verwendet, um via `ResourceStatusProvider.getType()` die `ResourceStatusProvider`-Implementierungen zu sammeln, die diesen Typ haben.
 
-5. Die `ResourceStatusProvider` wird übergeben, `resource` im Editor und bestimmt, ob die `resource` hat den Status angezeigt werden. Wenn der Status erforderlich ist, ist diese Implementierung für das Erstellen von 0 oder vielen `ResourceStatuses` zurück, wobei jede einen anzuzeigenden Status darstellt.
+5. Der passende `ResourceStatusProvider` wird im Editor an die `resource` weitergereicht und bestimmt, ob die `resource` den Status hat, angezeigt zu werden.  Wenn ein Status benötigt wird, ist diese Implementierung für die Erstellung von 0 oder vielen `ResourceStatuses` verantwortlich, die zurückgegeben werden und jeweils einen Status darstellen, der angezeigt werden soll.
 
-   In der Regel wird ein `ResourceStatusProvider` 0 oder 1 zurückgibt `ResourceStatus` per `resource`.
+   In der Regel gibt ein `ResourceStatusProvider` 0 oder 1 `ResourceStatus` pro `resource` zurück.
 
-6. ResourceStatus ist eine Benutzeroberfläche, die vom Kunden oder der `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` kann verwendet werden, um einen Status zu erstellen. Ein Status besteht aus:
+6. ResourceStatus ist eine Schnittstelle, die auf Kundenseite implementiert werden kann, oder der hilfreiche `com.day.cq.wcm.commons.status.EditorResourceStatus.Builder` kann verwendet werden, um einen Status zu konstruieren.  Ein Status besteht aus:
 
    * Titel
-   * Nachricht
+   * Meldung
    * Symbol
    * Variante
    * Priorität
    * Aktionen
    * Daten
 
-7. Optional, wenn `Actions` für die `ResourceStatus` -Objekt, das clientlibs unterstützt, erforderlich sind, um die Funktionalität an die Aktionslinks in der Statusleiste zu binden.
+7. Optional, wenn `Actions` für das `ResourceStatus`-Objekt bereitgestellt werden, sind unterstützende Client-Bibliotheken erforderlich, um an die Aktions-Links in der Statusleiste Funktionalitäten zu binden.
 
    ```js
    (function(jQuery, document) {
@@ -81,7 +81,7 @@ Bei der Entwicklung benutzerdefinierter Ressourcenstatus umfasst die Entwicklung
 8. Alle unterstützenden JavaScript- oder CSS-Elemente zur Unterstützung der Aktionen müssen durch die jeweiligen Client-Bibliotheken der einzelnen Editoren bereitgestellt werden, um sicherzustellen, dass der Frontend-Code im Editor verfügbar ist.
 
    * Kategorie des Seiteneditors: `cq.authoring.editor.sites.page`
-   * Experience Fragment-Editor-Kategorie: `cq.authoring.editor.sites.page`
+   * Kategorie des Experience Fragment-Editors: `cq.authoring.editor.sites.page`
    * Kategorie des Vorlageneditors: `cq.authoring.editor.sites.template`
 
 ## Anzeigen des Codes {#view-the-code}
