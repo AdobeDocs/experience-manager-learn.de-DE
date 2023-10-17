@@ -1,6 +1,6 @@
 ---
-title: Benutzerdefinierter Prozessschritt zum ZIP von Dateianlagen
-description: Benutzerdefinierter Prozessschritt zum Hinzufügen der Anlagen des adaptiven Formulars zu einer ZIP-Datei und zum Speichern der ZIP-Datei in einer Workflow-Variablen
+title: Benutzerdefinierter Prozessschritt zum Komprimieren von Dateianlagen
+description: Benutzerdefinierter Prozessschritt zum Hinzufügen der adaptiven Formularanhänge zu einer Zip-Datei und Speichern der Zip-Datei in einer Workflow-Variablen
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -9,23 +9,23 @@ level: Beginner
 kt: kt-8049
 exl-id: 1131dca8-882d-4904-8691-95468fb708b7
 source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '159'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # Benutzerdefinierter Prozessschritt
 
 
-Ein benutzerdefinierter Prozessschritt wurde implementiert, um die ZIP-Datei mit den Formularanlagen zu erstellen. Wenn Sie nicht mit dem Erstellen eines OSGi-Bundles vertraut sind, wenden Sie sich an [Befolgen Sie diese Anweisungen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en)
+Ein benutzerdefinierter Prozessschritt wurde implementiert, um die ZIP-Datei mit den Formularanlagen zu erstellen. Wenn Sie mit der Erstellung von OSGi-Bundles nicht vertraut sind, folgen Sie bitte [der folgenden Anleitung](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=de)
 
 Der Code im benutzerdefinierten Prozessschritt führt Folgendes aus:
 
-* Abfragen aller Anlagen des adaptiven Formulars im Payload-Ordner. Der Ordnername wird als Prozessargument an den Prozessschritt übergeben.
+* Erstellt Abfragen aller Anlagen des adaptiven Formulars im Payload-Ordner Übergibt den Ordnernamen als Prozessargument an den Prozessschritt
 
-* Erstellen Sie eine ZIP-Datei mit den Formularanlagen und speichern Sie sie im Payload-Ordner.
-* Wert der Workflow-Variablen festlegen (no_of_attachments)
+* Erstellt eine Zip-Datei mit den Formularanhängen und speichert sie im Payload-Ordner
+* Legt den Wert der Workflow-Variablen (no_of_attachments) fest
 
 
 
@@ -159,7 +159,7 @@ public class ZipFormAttachments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> Stellen Sie sicher, dass Sie über eine Variable mit dem Namen  *no_of_attachments* des Typs &quot;Double&quot;in Ihren Workflow ein, damit dieser Code funktioniert.
+> Bitte stellen Sie sicher, dass Sie eine Variable namens *no_of_attachments* vom Typ „Double“ in Ihrem Workflow haben, damit dieser Code funktioniert.
 
 ## Nächste Schritte
 
