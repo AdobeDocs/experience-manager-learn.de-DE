@@ -121,7 +121,7 @@ In vorherigen Kapiteln wurde die `HeaderComponent`-Komponente als reine Angular-
 
 1. Öffnen Sie einen Browser und melden Sie sich bei AEM an, [http://localhost:4502/](http://localhost:4502/). Die Code-Basis für den Start sollte bereits bereitgestellt sein.
 2. Navigieren Sie zur **[!UICONTROL SPA Seitenvorlage]**: [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html).
-3. Wählen Sie den äußersten **[!UICONTROL Stamm-Layout-Container]** aus und klicken Sie auf das Symbol **[!UICONTROL Richtlinie]**. Achten Sie darauf, **nicht** den **[!UICONTROL Layout-Container]** zu wählen, der für das Authoring entsperrt ist.
+3. Wählen Sie den äußersten **[!UICONTROL Stamm-Layout-Container]** aus und klicken Sie auf das Symbol **[!UICONTROL Richtlinie]**. Achten Sie darauf, dass Sie **nicht** den **[!UICONTROL Layout-Container]** auswählen, der für das Authoring entsperrt ist.
 
    ![Symbol für das Auswählen der Stamm-Layout-Container-Richtlinie](assets/navigation-routing/root-layout-container-policy.png)
 
@@ -176,7 +176,7 @@ Als Nächstes erstellen wir zusätzliche Seiten in AEM, die als verschiedene Ans
 
    ![Eingeben der anfänglichen Seiteneigenschaften](assets/navigation-routing/initial-page-properties.png)
 
-   Klicken Sie auf **[!UICONTROL Erstellen]** und im Pop-up-Dialogfeld auf **[!UICONTROL Öffnen]**, um die Seite im AEM-SPA-Editor zu öffnen.
+   Klicken Sie auf **[!UICONTROL Erstellen]** und dann im Dialogfeld-Popup auf **[!UICONTROL Öffnen]**, um die Seite im AEM-SPA-Editor zu öffnen.
 
 3. Fügen Sie eine neue **[!UICONTROL Text]**-Komponente zum Haupt-**[!UICONTROL Layout-Container]** hinzu. Bearbeiten Sie die Komponente und geben Sie folgenden Text ein: **„Seite 1“** unter Verwendung des RTE und des Elements **H1** (Sie müssen in den Vollbildmodus wechseln, um die Absatzelemente zu ändern)
 
@@ -222,7 +222,7 @@ Als Nächstes erstellen wir zusätzliche Seiten in AEM, die als verschiedene Ans
 
    ![Öffnen der Seitenrichtlinie für den SPA-Stamm](assets/navigation-routing/open-page-policy.png)
 
-8. Die **SPA-Stamm**-Vorlage hat ein zusätzliche Registerkarte **[!UICONTROL Hierarchische Struktur]**, um den erfassten JSON-Inhalt zu kontrollieren. Die **[!UICONTROL Strukturtiefe]** bestimmt, wie tief in der Site-Hierarchie untergeordnete Seiten unterhalb der **Stamms** erfasst werden. Sie können auch das Feld **[!UICONTROL Strukturmuster]** zum Filtern zusätzlicher Seiten basierend auf einem regulären Ausdruck verwenden.
+8. Die **SPA-Stammvorlage** weist die zusätzliche Registerkarte **[!UICONTROL Hierarchische Struktur]** für den erfassten JSON-Inhalt auf. Die **[!UICONTROL Strukturtiefe]** bestimmt, wie tief in der Website-Hierarchie untergeordnete Seiten unterhalb des **Stamms** erfasst werden. Sie können auch das Feld **[!UICONTROL Strukturmuster]** zum Filtern zusätzlicher Seiten basierend auf einem regulären Ausdruck verwenden.
 
    Aktualisieren Sie die **[!UICONTROL Strukturtiefe]** auf **„2“**:
 
