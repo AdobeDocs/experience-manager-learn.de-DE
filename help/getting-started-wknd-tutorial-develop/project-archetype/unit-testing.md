@@ -37,7 +37,7 @@ _Wenn sowohl Java™ 8 als auch Java™ 11 auf dem System installiert sind, kann
 
 Checken Sie den Basis-Code aus, auf dem das Tutorial aufbaut:
 
-1. Checken Sie die Verzweigung `tutorial/unit-testing-start` aus [GitHub](https://github.com/adobe/aem-guides-wknd) aus
+1. Checken Sie die Verzweigung `tutorial/unit-testing-start` aus [GitHub](https://github.com/adobe/aem-guides-wknd) aus.
 
    ```shell
    $ cd aem-guides-wknd
@@ -52,13 +52,13 @@ Checken Sie den Basis-Code aus, auf dem das Tutorial aufbaut:
 
    >[!NOTE]
    >
-   > Wenn Sie AEM 6.5 oder 6.4 verwenden, hängen Sie das `classic`-Profil an alle Maven-Befehle an.
+   > Wenn Sie AEM 6.5 oder 6.4 verwenden, fügen Sie das `classic`-Profil an beliebige Maven-Befehle an.
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-Sie können den fertigen Code jederzeit auf [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/unit-testing-start) ansehen oder den Code lokal auschecken, indem Sie zur Verzweigung `tutorial/unit-testing-start` wechseln.
+Sie können den fertigen Code jederzeit auf [GitHub](https://github.com/adobe/aem-guides-wknd/tree/tutorial/unit-testing-start) ansehen oder den Code lokal herunterladen, indem Sie zu der Verzweigung `tutorial/unit-testing-start` wechseln.
 
 ## Ziel
 
@@ -138,8 +138,6 @@ Modultests entsprechen in der Regel eins zu eins den Java™-Klassen. In diesem 
    1. sie einfach als Testdatei _für_ `BylineImpl.java` zu identifizieren,
    1. aber auch, sie als die Testdatei _von_ der Klasse zu unterscheiden, die getestet wird, `BylineImpl.java`.
 
-
-
 ## Überprüfen von BylineImplTest.java {#reviewing-bylineimpltest-java}
 
 Zu diesem Zeitpunkt ist die JUnit-Testdatei eine leere Java™-Klasse.
@@ -184,7 +182,7 @@ Zu diesem Zeitpunkt ist die JUnit-Testdatei eine leere Java™-Klasse.
 
    Beginnen wir zunächst mit einer einzelnen Testmethode für jede öffentliche Methode für die Klasse, die wir testen, also:
 
-   | BylineImpl.java |  | BylineImplTest.java |
+   | BylineImpl.java |              | BylineImplTest.java |
    | ------------------|--------------|---------------------|
    | getName() | wird getestet von | testGetName() |
    | getOccupations() | wird getestet von | testGetOccupations() |
