@@ -1,6 +1,6 @@
 ---
-title: Schritte zum Aktivieren der Streamverfolgung (Unix-Setup)
-description: Konfigurieren von Streuprotokollen zur Fehlerbehebung bei PDF Generator-Problemen
+title: Schritte zum Aktivieren von Strace Trace (Unix-Setup)
+description: Konfigurieren von Strace-Protokollen zur Fehlerbehebung bei PDF Generatoren-Problemen
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -10,14 +10,14 @@ topic: Administration
 index: y
 exl-id: e7a3f63e-549a-493c-a8f1-cb0bca2c07e0
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '39'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Schritte zum Aktivieren der Strichverfolgung in der Unix-Einrichtung
+# Schritte zum Aktivieren von Strace Trace unter Unix
 
-*In diesem Video werden die Schritte erläutert, die zur Aktivierung der Ablaufverfolgung beim Unix-Setup für AEM Forms PDFG erforderlich sind.*
+*In diesem Video werden die Schritte erläutert, die zum Aktivieren von Strace Trace unter Unix für AEM Forms PDFG erforderlich sind.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335525?quality=12&learn=on)
