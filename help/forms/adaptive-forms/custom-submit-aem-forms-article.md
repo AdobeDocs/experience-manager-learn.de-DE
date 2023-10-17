@@ -1,6 +1,6 @@
 ---
-title: Schreiben eines benutzerdefinierten Versands in AEM Forms
-description: Schnelle und einfache Erstellung einer eigenen benutzerdefinierten Übermittlungsaktion für adaptive Formulare
+title: Erstellen einer benutzerdefinierten Übermittlungsaktion in AEM Forms
+description: Eine schnelle und einfache Möglichkeit, um benutzerdefinierte Übermittlungsaktionen für adaptive Formulare zu erstellen.
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -9,32 +9,32 @@ level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
 source-git-commit: 2dceb4dd4ee1079c100c9cbca94332d61d17ef57
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '207'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# Schreiben eines benutzerdefinierten Versands in AEM Forms {#writing-a-custom-submit-in-aem-forms}
+# Erstellen einer benutzerdefinierten Übermittlungsaktion in AEM Forms {#writing-a-custom-submit-in-aem-forms}
 
-Schnelle und einfache Erstellung einer eigenen benutzerdefinierten Übermittlungsaktion für adaptive Formulare
+Eine schnelle und einfache Möglichkeit, um benutzerdefinierte Übermittlungsaktionen für adaptive Formulare zu erstellen.
 
-Dieser Artikel führt Sie durch die Schritte, die zum Erstellen einer benutzerdefinierten Übermittlungsaktion für die Verarbeitung der adaptiven Forms-Übermittlung erforderlich sind.
+Dieser Artikel führt Sie durch die Schritte, die zum Erstellen einer benutzerdefinierten Übermittlungsaktion für adaptive Formulare erforderlich sind.
 
-* Bei crx anmelden
-* Erstellen Sie einen Knoten des Typs &quot;sling:folder &quot;unter Apps. Rufen wir diesen Knoten CustomSubmitHelpx auf.
+* Melden Sie sich bei crx an.
+* Erstellen Sie unter Apps einen Knoten vom Typ „sling:folder“. Dieser Knoten soll „CustomSubmitHelpx“ heißen.
 * Speichern Sie den neu erstellten Knoten.
-* Fügen Sie die folgenden drei Eigenschaften zum neu erstellten Knoten hinzu
+* Fügen Sie die drei folgenden Eigenschaften zum neu erstellten Knoten hinzu.
 
 | Eigenschaftsname | Eigenschaftswert |
 |----------------    | ---------------------------------|
-| guideComponentType | fd/af/components/guidesubmittype |
+| guideComponentType | fd/af/components/guidetelephone |
 | guideDataModel | xfa,xsd,basic |
 | jcr:description | CustomSubmitHelpx |
 
 
 * Speichern Sie die Änderungen
-* Erstellen Sie eine neue Datei namens post.POST.jsp unter dem Knoten CustomSubmitHelpx . Wenn ein adaptives Formular gesendet wird, wird diese JSP aufgerufen. Sie können den JSP-Code gemäß Ihren Anforderungen in diese Datei schreiben. Der folgende Code leitet die Anfrage an das Servlet weiter.
+* Erstellen Sie eine neue Datei namens „post.POST.jsp“ unter dem Knoten „CustomSubmitHelpx“. Beim Übermitteln eines adaptiven Formulars wird diese JSP-Datei aufgerufen. Sie können den JSP-Code gemäß Ihren Anforderungen in diese Datei schreiben. Mit dem folgenden Code wird die Anfrage an das Servlet weitergeleitet.
 
 ```java
 <%
@@ -51,8 +51,8 @@ Dieser Artikel führt Sie durch die Schritte, die zum Erstellen einer benutzerde
 %>
 ```
 
-* Erstellen Sie die Datei addfields.jsp unter dem Knoten CustomSubmitHelpx . Diese Datei ermöglicht Ihnen den Zugriff auf das signierte Dokument.
-* Fügen Sie dieser Datei den folgenden Code hinzu
+* Erstellen Sie die Datei „addfields.jsp“ unter dem Knoten „CustomSubmitHelpx“. Mit dieser Datei können Sie auf das signierte Dokument zugreifen.
+* Fügen Sie den folgenden Code zu dieser Datei hinzu:
 
 ```java
     <%@include file="/libs/fd/af/components/guidesglobal.jsp"%>
@@ -66,6 +66,6 @@ Dieser Artikel führt Sie durch die Schritte, die zum Erstellen einer benutzerde
 
 * Speichern Sie Ihre Änderungen
 
-Jetzt sehen Sie &quot;CustomSubmitHelpx&quot;in den Sendeaktionen Ihres adaptiven Formulars, wie in diesem Bild dargestellt.
+Nun sehen Sie „CustomSubmitHelpx“ in den Übermittlungsaktionen Ihres adaptiven Formulars, wie in diesem Bild gezeigt.
 
-![Adaptives Formular mit benutzerdefiniertem Senden](assets/capture-2.gif)
+![Adaptives Formular mit benutzerdefinierten Übermittlungsaktionen](assets/capture-2.gif)
