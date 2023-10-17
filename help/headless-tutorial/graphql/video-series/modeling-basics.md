@@ -11,9 +11,9 @@ thumbnail: 332858.jpg
 last-substantial-update: 2023-05-17T00:00:00Z
 exl-id: 0d22b06f-bf78-4a54-85be-6a932177f36f
 source-git-commit: c7848e180ab7f95b8c97aef1ea50556cb1566533
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '79'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ Erfahren Sie, wie Sie Inhaltsfragmente in Adobe Experience Manager (AEM) für di
 In diesem Video erfahren Sie Folgendes:
 
 + Erfahren Sie, wie Sie ein Inhaltsfragmentmodell erstellen und definieren
-+ Erfahren Sie mehr über die verschiedenen Datentypen, die zum Erstellen des Inhaltsfragmentmodells verwendet werden
++ Erfahren Sie mehr über die verschiedenen Datentypen, die zum Erstellen des Inhaltsfragmentmodells verwendet werden.
 + Informationen dazu, wie das Inhaltsfragmentmodell die GraphQL-API steuert
 
 >[!VIDEO](https://video.tv.adobe.com/v/332858?quality=12&learn=on)
