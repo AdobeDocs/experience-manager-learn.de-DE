@@ -1,6 +1,6 @@
 ---
-title: Zusammenführen von PDF-Dateien mithilfe des Vorgangs "invoke DDX"
-description: Stellen Sie eine POST-Anfrage, um den DDX-Endpunkt mit den erforderlichen Parametern aufzurufen.
+title: Zusammenführen von PDF-Dateien mithilfe des Vorgangs „DDX aufrufen“
+description: Ausführen einer POST-Anfrage, um den DDX-Endpunkt mit den erforderlichen Parametern aufzurufen
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -8,18 +8,19 @@ version: Cloud Service
 feature: Output Service
 topic: Development
 kt: 9980
-source-git-commit: b7ff98dccc1381abe057a80b96268742d0a0629b
-workflow-type: tm+mt
+exl-id: 693dac88-84f3-4051-8e46-3105093711a3
+source-git-commit: e925b9fa02dc8d4695b85377c5f7f43fbd45ebc8
+workflow-type: ht
 source-wordcount: '124'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
-# Aufrufen der POST
+# Durchführen eines POST-Aufrufs
 
 
-Der nächste Schritt besteht darin, einen HTTP-POST-Aufruf an den -Endpunkt mit den erforderlichen Parametern durchzuführen. Die DDX- und PDF-Dateien werden als Ressourcendateien bereitgestellt. Der Endpunkt verfügt über eine Token-basierte Authentifizierung. Das Zugriffstoken wird im Anfrageheader übergeben.
-Bei Verwendung des Assembler-Dienstes verwenden Sie zum Beschreiben der gewünschten Ausgabe eine auf XML basierende Sprache namens DDX (Document Description XML). DDX ist eine deklarative Markup-Sprache, deren Elemente Bausteine von Dokumenten darstellen. Mit dem folgenden DDX wurden die beiden PDF-Dokumente zusammengeführt, die in den PDF-Quellelementen identifiziert wurden.
+Der nächste Schritt besteht darin, einen HTTP-POST-Aufruf an den Endpunkt mit den erforderlichen Parametern durchzuführen. Die DDX- und pdf-Dateien werden als Ressourcendateien bereitgestellt.  Der Endpunkt verfügt über eine Token-basierte Authentifizierung, bei der wir das Zugriffstoken im Request Header übergeben.
+Verwenden Sie bei Verwendung des Assembler-Dienstes eine XML-basierte Sprache namens Document Description XML (DDX), um die gewünschte Ausgabe zu definieren. DDX ist eine deklarative Markup-Sprache, deren Elemente Bausteine von Dokumenten darstellen. Mit dem folgenden DDX wurden die beiden PDF-Dokumente zusammengeführt, die in den PDF-Quellelementen identifiziert wurden:
 
 ```xml
 <DDX xmlns="http://ns.adobe.com/DDX/1.0/">
@@ -30,7 +31,7 @@ Bei Verwendung des Assembler-Dienstes verwenden Sie zum Beschreiben der gewünsc
 </DDX>
 ```
 
-Der folgende Code wurde zum Kombinieren von PDF-Dateien verwendet
+Der folgende Code wurde zum Kombinieren von PDF-Dateien verwendet:
 
 ```java
 package com.aemformscs.documentservices;
