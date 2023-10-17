@@ -1,5 +1,5 @@
 ---
-title: AEM Dispatcher-Leerung
+title: AEM-Dispatcher-Leerung
 description: Erfahren Sie, wie AEM alte Cache-Dateien vom Dispatcher ungültig macht.
 version: 6.5
 topic: Administration
@@ -7,90 +7,90 @@ feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 7815b1a78949c433f2c53ff752bf39dd55f9ac94
-workflow-type: tm+mt
+exl-id: 461873a1-1edf-43a3-b4a3-14134f855d86
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '2223'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Dispatcher-Vanity-URLs
 
-# Dispatcher Vanity-URLs
+[Inhaltsverzeichnis](./overview.md)
 
-[Inhalt](./overview.md)
+[&lt;- Vorheriges Kapitel: Verwenden und Verstehen von Variablen](./variables.md)
 
-[&lt;- Zurück: Verwenden und Verstehen von Variablen](./variables.md)
-
-In diesem Dokument wird erläutert, wie das Leeren erfolgt, und der Mechanismus erläutert, der das Leeren und Invalidieren des Cache ausführt.
+In diesem Dokument wird erläutert, wie die Leerung abläuft und welcher Mechanismus die Leerung und die Invalidierung des Cache durchführt.
 
 
 ## Funktionsweise
 
 ### Reihenfolge der Vorgänge
 
-Der typische Workflow wird am besten beschrieben, wenn Inhaltsautoren eine Seite aktivieren. Wenn der Herausgeber den neuen Inhalt erhält, wird eine Leerungsanfrage an den Dispatcher Trigger, wie im folgenden Diagramm dargestellt:
-![Autor aktiviert Inhalte, die vom Trigger-Publisher an den Dispatcher gesendet werden](assets/disp-flushing/dispatcher-flushing-order-of-events.png "dispatcher-flushing-order-of-events")
-Diese Verkettung von Ereignissen macht deutlich, dass wir Elemente nur dann löschen, wenn sie neu sind oder sich geändert haben.  Dadurch wird sichergestellt, dass der Inhalt vor dem Leeren des Caches beim Herausgeber eingegangen ist, um Race-Bedingungen zu vermeiden, bei denen das Leeren auftreten könnte, bevor die Änderungen vom Herausgeber übernommen werden können.
+Der typische Workflow lässt sich am besten beschreiben, wenn Autorinnen bzw. Autoren eine Seite aktivieren. Wenn der Publisher den neuen Inhalt erhält, löst er eine Leerungsanfrage an den Dispatcher aus, wie im folgenden Diagramm dargestellt:
+![Autorin bzw. Autor aktiviert Inhalt, was den Publisher dazu veranlasst, eine Leerungsanfrage an den Dispatcher zu senden](assets/disp-flushing/dispatcher-flushing-order-of-events.png "dispatcher-flushing-order-of-events")
+Diese Verkettung von Ereignissen macht deutlich, dass wir Elemente nur dann leeren, wenn sie neu sind oder sich geändert haben.  Dadurch wird sichergestellt, dass der Inhalt vor dem Leeren des Caches beim Publisher eingegangen ist, um Überschneidungen zu vermeiden, bei denen das Leeren auftreten könnte, bevor die Änderungen vom Publisher übernommen werden können.
 
-## Replikationsagenten
+## Replikations-Agenten
 
-Beim Autor gibt es einen Replikationsagenten, der so konfiguriert ist, dass auf den Herausgeber verwiesen wird, dass der Trigger die Datei und alle Abhängigkeiten an den Herausgeber sendet, wenn etwas aktiviert wird.
+Auf Author gibt es einen Replikationsagenten, der so konfiguriert ist, dass er auf den Publisher verweist, und der, wenn etwas aktiviert wird, auslöst, dass die Datei und alle ihre Abhängigkeiten an den Publisher gesendet werden.
 
-Wenn der Herausgeber die Datei erhält, hat er einen Replikationsagenten, der so konfiguriert ist, dass er auf den Dispatcher verweist, der auf das On-Receiver-Ereignis Trigger.  Anschließend wird eine Leerungsanfrage serialisiert und an den Dispatcher gesendet.
+Wenn der Publisher die Datei empfängt, hat er einen Replikationsagenten, der so konfiguriert ist, dass er auf den Dispatcher zeigt, der beim Empfangsereignis ausgelöst wird.  Anschließend wird eine Leerungsanfrage serialisiert und an den Dispatcher gesendet.
 
 ### AUTORREPLIKATIONSAGENTEN
 
-Im Folgenden finden Sie einige Screenshots eines konfigurierten standardmäßigen Replikationsagenten
-![Screenshot des standardmäßigen Replikationsagenten von der AEM Webseite /etc/replication.html](assets/disp-flushing/author-rep-agent-example.png "author-rep-agent-example")
+Im Folgenden finden Sie einige Screenshots eines konfigurierten standardmäßigen Replikationsagenten:
+![Screenshot des standardmäßigen Replikationsagenten von der AEM-Web-Seite /etc/replication.html](assets/disp-flushing/author-rep-agent-example.png "author-rep-agent-example")
 
-Es gibt in der Regel 1 oder 2 Replikationsagenten, die auf dem Autor für jeden Herausgeber konfiguriert sind, an den sie Inhalte replizieren.
+Es gibt in der Regel ein oder zwei Replikationsagenten, die auf Author für jeden Publisher konfiguriert sind, an den sie Inhalte replizieren.
 
-Zunächst ist der standardmäßige Replikationsagent, der Inhaltsaktivierungen an sendet.
+Der erste ist der standardmäßige Replikationsagent, der Aktivierungen von Inhalten überträgt.
 
-Zweitens ist der Rückwärtsagent.  Dies ist optional und ist so eingerichtet, dass bei jedem Herausgeber-Postausgang geprüft wird, ob neuer Inhalt zum Aufrufen an den Autor als Aktivität zur Rückwärtsreplikation vorhanden ist.
+Der zweite ist der umgekehrte Agent.  Diese Option ist optional und dient dazu, den Postausgang jedes Publishers zu überprüfen, um festzustellen, ob neue Inhalte vorhanden sind, die als umgekehrte Replikationsaktivität in Author gezogen werden können.
 
-### VERÖFFENTLICHUNGS-REPLIKATIONSAGENTEN
+### PUBLISHER-REPLIKATIONSAGENTEN
 
-Im Folgenden finden Sie ein Beispiel für Screenshots eines konfigurierten standardmäßigen Flush-Replikationsagenten
-![Screenshot des standardmäßigen Flush-Replikationsagenten von der AEM Webseite /etc/replication.html](assets/disp-flushing/publish-flush-rep-agent-example.png "publish-flush-rep-agent-example")
+Im Folgenden finden Sie ein Beispiel-Screenshot eines konfigurierten standardmäßigen Replikationsagenten für das Leeren:
+![Screenshot des standardmäßigen Replikationsagenten für das Leeren der AEM-Web-Seite /etc/replication.html](assets/disp-flushing/publish-flush-rep-agent-example.png "publish-flush-rep-agent-example")
 
-### DISPATCHER-FLUSH-REPLIKATION, DIE VIRTUELLEN HOST ERHÄLT
+### DISPATCHER-REPLIKATION FÜR DAS LEEREN EMPFÄNGT VIRTUELLEN HOST
 
-Das Dispatcher-Modul sucht nach bestimmten Headern, um zu erfahren, wann eine POST-Anforderung an AEM Renderer übergeben werden soll oder ob es sich um eine serialisierte Leerungsanfrage handelt und vom Dispatcher-Handler selbst verarbeitet werden muss.
+Das Dispatcher-Modul sucht nach bestimmten Headern, um zu erfahren, wann eine POST-Anfrage an AEM-Renderer übergeben werden soll oder ob es sich um eine serialisierte Leerungsanfrage handelt und vom Dispatcher-Handler selbst verarbeitet werden muss.
 
 Im Folgenden finden Sie einen Screenshot der Konfigurationsseite mit den folgenden Werten:
-![Abbildung der Registerkarte mit den Einstellungen des Hauptkonfigurationsbildschirms mit dem Serialisierungstyp, der als Dispatcher Flush angezeigt wird](assets/disp-flushing/disp-flush-agent1.png "disp-flush-agent1")
+![Abbildung der Registerkarte mit den Einstellungen des Hauptkonfigurationsbildschirms mit dem Serialisierungstyp als Dispatcher Flush angezeigt](assets/disp-flushing/disp-flush-agent1.png "disp-flush-agent1")
 
-Auf der Seite mit den Standardeinstellungen wird die `Serialization Type` as `Dispatcher Flush` und legt die Fehlerstufe fest
+Die Seite mit den Standardeinstellungen zeigt den `Serialization Type` als `Dispatcher Flush` an und legt die Fehlerstufe fest:
 
-![Screenshot des Transport-Tabs des Replikationsagenten.  Dies zeigt den URI, an den die Leerungsanfrage gepostet werden soll.  /dispatcher/invalidate.cache](assets/disp-flushing/disp-flush-agent2.png "disp-flush-agent2")
+![Screenshot der Transport-Registerkarte des Replikationsagenten.  Dies zeigt die URI, an die die Leerungsanfrage gesendet werden soll.  /dispatcher/invalidate.cache](assets/disp-flushing/disp-flush-agent2.png "disp-flush-agent2")
 
-Im `Transport` -Registerkarte angezeigt wird, können Sie `URI` gesetzt wird, um auf die IP-Adresse des Dispatchers zu verweisen, der die Flush-Anfragen erhält.  Der Pfad `/dispatcher/invalidate.cache` ist nicht die Art, wie das Modul bestimmt, ob es sich um eine Leerung handelt. Es ist nur ein offensichtlicher Endpunkt, den Sie im Zugriffsprotokoll sehen können, um zu erfahren, dass es sich um eine Leerungsanfrage handelt.  Im `Extended` -Tab werden wir die vorhandenen Elemente durchgehen, um zu qualifizieren, dass es sich um eine Leerungsanfrage an das Dispatcher-Modul handelt.
+Auf der Registerkarte `Transport` finden Sie weitere Informationen zu `URI`, die auf die IP-Adresse des Dispatchers verweisen, der die Leerungsanfrage empfangen wird.  Der Pfad `/dispatcher/invalidate.cache` ist nicht die Art, wie das Modul bestimmt, ob es sich um eine Leerung handelt. Es ist nur ein offensichtlicher Endpunkt, den Sie im Zugriffsprotokoll sehen können, um zu erfahren, dass es sich um eine Leerungsanfrage handelt.  In der Registerkarte `Extended` werden wir die vorhandenen Elemente durchgehen, um zu identifizieren, dass es sich um eine Leerungsanfrage an das Dispatcher-Modul handelt.
 
-![Screenshot der Registerkarte &quot;Erweitert&quot;des Replikationsagenten.  Notieren Sie die Header, die mit der POST-Anfrage gesendet werden, um den Dispatcher zum Leeren aufzufordern.](assets/disp-flushing/disp-flush-agent3.png "disp-flush-agent3")
+![Screenshot der Registerkarte „Erweitert“ des Replikationsagenten.  Beachten Sie die Header, die mit der POST-Anfrage gesendet werden, um den Dispatcher zum Leeren aufzufordern.](assets/disp-flushing/disp-flush-agent3.png "disp-flush-agent3")
 
-Die `HTTP Method` für Flush-Anfragen ist nur eine `GET` Anfrage mit einigen speziellen Anfrage-Headern:
+Die `HTTP Method` für Leerungsanfragen ist einfach eine `GET`-Anfrage mit einigen speziellen Anfrage-Headern:
 - CQ-Action
-   - Hierbei wird eine AEM -Variable verwendet, die auf der Anforderung basiert. Der Wert ist normalerweise *Aktivieren oder Löschen*
+   - Hierbei wird eine AEM-Variable auf der Grundlage der Anfrage verwendet und der Wert ist normalerweise *aktivieren oder löschen*
 - CQ-Handle
-   - Hierbei wird eine AEM -Variable verwendet, die auf der Anfrage basiert. Der Wert ist normalerweise der vollständige Pfad zum geleerten Element, z. B. `/content/dam/logo.jpg`
+   - Hierbei wird eine AEM-Variable auf der Grundlage der Anfrage verwendet, und der Wert ist in der Regel der vollständige Pfad zu dem geleerten Element, zum Beispiel `/content/dam/logo.jpg`
 - CQ-Path
-   - Hierbei wird eine AEM -Variable verwendet, die auf der Anfrage basiert. Der Wert ist normalerweise der vollständige Pfad zum geleerten Element, z. B. `/content/dam`
+   - Hierbei wird eine AEM-Variable auf der Grundlage der Anfrage verwendet, und der Wert ist in der Regel der vollständige Pfad zu dem geleerten Element, zum Beispiel `/content/dam`
 - Host
-   - Hier ist die `Host` Kopfzeile wird zur Zielgruppenbestimmung für eine bestimmte `VirtualHost` , der auf dem Dispatcher-Apache-Webserver konfiguriert ist (`/etc/httpd/conf.d/enabled_vhosts/aem_flush.vhost`).  Der hartcodierte Wert entspricht einem Eintrag im `aem_flush.vhost` -Datei `ServerName` oder `ServerAlias`
+   - Hier wird der Header `Host` gespooft, um ein bestimmtes `VirtualHost` zu erreichen, das auf dem Apache-Webserver des Dispatchers konfiguriert ist (`/etc/httpd/conf.d/enabled_vhosts/aem_flush.vhost`).  Es ist ein fest kodierter Wert, der mit einem Eintrag in der Datei `aem_flush.vhost`, `ServerName` oder `ServerAlias` übereinstimmt.
 
-![Bildschirm eines standardmäßigen Replikationsagenten, der anzeigt, dass der Replikationsagent reagieren kann und Trigger, wenn neue Elemente von einem Replikationsereignis vom Autor empfangen wurden, der Inhalte veröffentlicht](assets/disp-flushing/disp-flush-agent4.png "disp-flush-agent4")
+![Bildschirm eines standardmäßigen Replikationsagenten, der zeigt, dass der Replikationsagent reagiert und auslöst, wenn neue Elemente aus einem Replikationsereignis von der Autorin bzw. vom Autor, die bzw. der Inhalte veröffentlicht, empfangen wurden](assets/disp-flushing/disp-flush-agent4.png "disp-flush-agent4")
 
-Im `Triggers` registrieren, werden wir die verwendeten umschalteten Trigger und deren
+Auf der Registerkarte `Triggers` notieren wir uns die umgeschalteten Auslöser, die wir verwenden, und was sie sind:
 
 - `Ignore default`
-   - Dies ist aktiviert, sodass der Replikationsagent bei einer Seitenaktivierung nicht ausgelöst wird.  Wenn eine Autoreninstanz eine Änderung an einer Seite vornehmen sollte, würde dies zu einer Leerung führen.  Da es sich um einen Herausgeber handelt, möchten wir keinen Trigger von dieser Art von Ereignis machen.
+   - Dies ist aktiviert, sodass der Replikationsagent bei einer Seitenaktivierung nicht ausgelöst wird.  Wenn eine Autoreninstanz eine Änderung an einer Seite vornehmen sollte, würde dies zu einer Leerung führen.  Da es sich um einen Publisher handelt, wollen wir diese Art von Ereignis nicht auslösen.
 - `On Receive`
-   - Wenn eine neue Datei empfangen wird, soll eine Leerung Trigger werden.  Wenn der Autor also eine aktualisierte Datei sendet, wird eine Leerungsanfrage an den Dispatcher Trigger und gesendet.
+   - Wenn eine neue Datei empfangen wird, soll eine Leerung getriggert werden. Wenn die Autoreninstanz also eine aktualisierte Datei sendet, wird eine Leerungsanfrage an den Dispatcher getriggert und gesendet.
 - `No Versioning`
-   - Wir überprüfen dies, um zu verhindern, dass der Herausgeber neue Versionen generiert, da eine neue Datei empfangen wurde.  Wir werden nur die Datei ersetzen, die wir haben, und uns darauf verlassen, dass der Autor die Versionen statt des Herausgebers verfolgt.
+   - Wir überprüfen dies, um zu verhindern, dass die Veröffentlichungsinstanz neue Versionen generiert, da eine neue Datei empfangen wurde. Wir ersetzen einfach die Datei, die wir haben, und verlassen uns darauf, dass die Autoreninstanz statt der Veröffentlichungsinstanz die Versionen verfolgt.
 
-Wenn wir uns nun ansehen, wie eine typische Flush-Anfrage in Form einer `curl` command
+Sehen wir uns nun an, wie eine typische Leerungsanfrage in Form eines `curl`-Befehls aussieht:
 
 ```
 $ curl \ 
@@ -103,87 +103,87 @@ $ curl \
 http://10.43.0.32:80/dispatcher/invalidate.cache
 ```
 
-Dieses Leerungsbeispiel würde die `/content/dam` Pfad durch Aktualisieren der `.stat` -Datei in diesem Verzeichnis.
+Dieses Leerungsbeispiel würde den Pfad `/content/dam` durch Aktualisieren der `.stat`-Datei in diesem Verzeichnis leeren.
 
-## Die `.stat` file
+## Die `.stat`-Datei:
 
-Der Flushing-Mechanismus ist einfach und wir möchten die Bedeutung der `.stat` -Dateien, die im Basisverzeichnis generiert werden, in dem die Cachedateien erstellt werden.
+Der Leerungsmechanismus ist einfach und wir möchten die Wichtigkeit der `.stat`-Dateien erklären, die im Dokumentenstamm generiert werden, in dem die Cache-Dateien erstellt werden.
 
-Innerhalb des `.vhost` und `_farm.any` -Dateien konfigurieren wir eine Dokument-Stamm-Direktive, um anzugeben, wo sich der Cache befindet und wo Dateien gespeichert/bereitgestellt werden sollen, wenn eine Anfrage von einem Endbenutzer eingeht.
+Innerhalb der `.vhost`- und `_farm.any`-Dateien konfigurieren wir eine Dokumentstamm-Anweisung, um anzugeben, wo sich der Cache befindet und wo Dateien gespeichert/bereitgestellt werden sollen, wenn eine Anfrage von Endbenutzenden eingeht.
 
-Wenn Sie den folgenden Befehl auf Ihrem Dispatcher-Server ausführen würden, würden Sie mit der Suche beginnen `.stat` files
+Wenn Sie den folgenden Befehl auf Ihrem Dispatcher-Server ausführen würden, würden Sie erst `.stat`-Dateien finden
 
 ```
 $ find /mnt/var/www/html/ -type f -name ".stat"
 ```
 
-Hier sehen Sie ein Diagramm, wie diese Dateistruktur aussieht, wenn Sie Elemente im Cache haben und eine Leerungsanfrage vom Dispatcher-Modul gesendet und verarbeitet wurde.
+Hier sehen Sie ein Diagramm dafür, wie diese Dateistruktur aussieht, wenn Sie Elemente im Cache haben und eine Leerungsanfrage vom Dispatcher-Modul gesendet und verarbeitet wurde.
 
-![Statfiles gemischt mit Inhalt und Daten, angezeigt mit STAT-Levels](assets/disp-flushing/dispatcher-statfiles.png "dispatcher-statfiles")
+![Stat-Dateien gemischt mit Inhalt und Daten, angezeigt mit Stat-Ebenen](assets/disp-flushing/dispatcher-statfiles.png "dispatcher-statfiles")
 
 ### STAT-DATEIEBENE
 
-Beachten Sie, dass in jedem Verzeichnis ein `.stat` vorhanden ist.  Dies ist ein Hinweis darauf, dass eine Leerung aufgetreten ist.  Im obigen Beispiel wird die `statfilelevel` festgelegt wurde auf `3` in der entsprechenden Farm-Konfigurationsdatei.
+Beachten Sie, dass in jedem Verzeichnis eine `.stat`-Datei vorhanden war. Dies ist ein Hinweis darauf, dass eine Leerung aufgetreten ist.Im obigen Beispiel war die Einstellung von `statfilelevel` auf `3` in der entsprechenden Farm-Konfigurationsdatei festgelegt.
 
-Die `statfilelevel` -Einstellung gibt an, wie viele Ordner tief das Modul durchlaufen und eine `.stat` -Datei.  Die STAT-Datei ist leer, es handelt sich lediglich um einen Dateinamen mit einem Datenstempel. Sie kann sogar manuell erstellt werden, aber den Touch-Befehl in der Befehlszeile des Dispatcher-Servers ausführen.
+Die Einstellung `statfilelevel` gibt an, wie viele Ordner tief das Modul durchläuft und eine `.stat`-Datei aktualisiert. Die STAT-Datei ist leer, es handelt sich lediglich um einen Dateinamen mit einem Datenstempel. Sie kann sogar manuell erstellt werden, indem Sie den Touch-Befehl in der Befehlszeile des Dispatcher-Servers ausführen.
 
-Wenn die Einstellung auf stat-Dateiebene zu hoch eingestellt ist, durchläuft jede Leerungsanfrage die Verzeichnisstruktur und ändert stat-Dateien.  Dies kann zu einem großen Leistungseinbruch bei großen Cache-Bäumen werden und sich auf die Gesamtleistung Ihres Dispatchers auswirken.
+Wenn die Einstellung für die Stat-Dateiebene zu hoch eingestellt ist, durchläuft jede Leerungsanfrage die Verzeichnisstruktur und ändert Stat-Dateien. Dies kann zu einem großen Leistungseinbruch bei großen Cache-Bäumen führen und sich auf die Gesamtleistung Ihres Dispatchers auswirken.
 
-Wenn Sie diese Dateiebene zu niedrig festlegen, kann eine Leerungsanfrage dazu führen, dass mehr gelöscht wird, als beabsichtigt war.  Dies würde wiederum dazu führen, dass der Cache häufiger abwandert und weniger Anforderungen aus dem Cache bereitgestellt werden, und kann Leistungsprobleme verursachen.
+Wenn Sie diese Dateiebene zu niedrig festlegen, kann eine Leerungsanfrage dazu führen, dass mehr gelöscht wird, als beabsichtigt war. Dies würde wiederum dazu führen, dass der Cache mit weniger Anfragen, die aus dem Cache bedient werden, häufiger überlastet wird, und Leistungsprobleme verursachen.
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
 
-Legen Sie die `statfilelevel` auf einer vernünftigen Ebene.  Schauen Sie sich Ihre Ordnerstruktur an und stellen Sie sicher, dass sie so eingerichtet ist, dass knappe Leeren möglich sind, ohne zu viele Verzeichnisse durchlaufen zu müssen.   Testen Sie es und stellen Sie während eines Leistungstests des Systems sicher, dass es Ihren Anforderungen entspricht.
+Legen Sie den `statfilelevel` auf ein angemessenes Niveau fest. Schauen Sie sich Ihre Ordnerstruktur an und stellen Sie sicher, dass sie so eingerichtet ist, dass knappe Leerungen möglich sind, ohne zu viele Verzeichnisse durchlaufen zu müssen. Testen Sie es und stellen Sie sicher, dass es Ihren Anforderungen während eines Leistungstests des Systems entspricht.
 
-Ein gutes Beispiel ist eine Site, die Sprachen unterstützt.  Die typische Inhaltsstruktur würde die folgenden Verzeichnisse aufweisen
+Ein gutes Beispiel ist eine Site, die Sprachen unterstützt. Der typische Inhaltsstrukturbaum würde die folgenden Verzeichnisse aufweisen
 
 `/content/brand1/en/us/`
 
-Verwenden Sie in diesem Beispiel eine stat-Dateiebene-Einstellung von 4.  Dadurch wird sichergestellt, dass Inhalte geleert werden, die unter dem <b>`us`</b> -Ordner, der nicht dazu führt, dass auch die Sprachordner geleert werden.
+Verwenden Sie in diesem Beispiel eine Stat-Dateiebeneneinstellung von 4. Dadurch wird sichergestellt, dass beim Leeren von Inhalten, die sich unter dem <b>`us`</b>-Ordner befinden, keine Sprachordner zusätzlich geleert werden.
 </div>
 
-### STAT FILE TIMESTAMP HANDSHAKE
+### STAT-DATEI-ZEITSTEMPEL-HANDSHAKE
 
-Wenn eine Inhaltsanforderung in derselben Routine erfolgt
+Wenn eine Inhaltsanfrage in derselben Routine erfolgt,
 
-1. Zeitstempel der `.stat` wird mit dem Zeitstempel der angeforderten Datei verglichen
-2. Wenn die Variable `.stat` -Datei aktueller als die angeforderte Datei ist, löscht sie den zwischengespeicherten Inhalt und ruft eine neue aus AEM ab und speichert sie zwischen.  Dann wird der Inhalt bereitgestellt
-3. Wenn die Variable `.stat` -Datei älter als die angeforderte Datei ist, weiß sie dann, dass die Datei neu ist und den Inhalt bedienen kann.
+1. wird der Zeitstempel der `.stat`-Datei mit dem Zeitstempel der angeforderten Datei verglichen
+2. Wenn die `.stat`-Datei neuer als die angeforderte Datei ist, wird der zwischengespeicherte Inhalt gelöscht und neuer aus AEM abgerufen und zwischengespeichert. Dann wird der Inhalt bereitgestellt
+3. Wenn die `.stat`-Datei älter als die angeforderte Datei ist, steht fest, dass die Datei neu ist, und Sie kann den Inhalt bereitstellen.
 
-### CACHE HANDSHAKE - BEISPIEL 1
+### CACHE-HANDSHAKE – BEISPIEL 1
 
-Im obigen Beispiel eine Anfrage für den Inhalt `/content/index.html`
+Im obigen Beispiel ist eine Anfrage für den Inhalt `/content/index.html`.
 
-Die Uhrzeit der `index.html` Datei ist 2019-11-01 @ 6:21PM
+Die Uhrzeit der `index.html`-Datei ist 2019-11-01 @ 18:21
 
-Die Uhrzeit der nächsten `.stat` Datei ist 2019-11-01 @ 12:22 PM
+Die Uhrzeit der nächsten `.stat`-Datei ist 2019-11-01 @ 12:22
 
-Wenn Sie wissen, was wir oben gelesen haben, können Sie sehen, dass die Indexdatei neuer ist als die `.stat` -Datei und die Datei wird vom Cache an den Endbenutzer geliefert, der sie angefordert hat
+Wenn Sie verstehen, was wir oben gelesen haben, können Sie sehen, dass die Indexdatei neuer ist als die `.stat`-Datei und die Datei vom Cache an die Endbenutzenden geliefert wird, die sie angefordert haben.
 
-### CACHE HANDSHAKE - BEISPIEL 2
+### CACHE-HANDSHAKE – BEISPIEL 2
 
-Im obigen Beispiel eine Anfrage für den Inhalt `/content/dam/logo.jpg`
+Im obigen Beispiel ist eine Anfrage für den Inhalt `/content/dam/logo.jpg`.
 
-Die Uhrzeit der `logo.jpg` Datei ist 2019-10-31 @ 1:13PM
+Die Uhrzeit der `logo.jpg`-Datei ist 2019-10-31 @ 13:13
 
-Die Uhrzeit der nächsten `.stat` Datei ist 2019-11-01 @ 12:22 PM
+Die Uhrzeit der nächsten `.stat`-Datei ist 2019-11-01 @ 12:22
 
-Wie in diesem Beispiel gezeigt, ist die Datei älter als die `.stat` und wird entfernt und eine neue wird aus AEM abgerufen, um sie im Cache zu ersetzen, bevor sie dem Endbenutzer bereitgestellt wird, der sie angefordert hat.
+Wie in diesem Beispiel gezeigt, ist die Datei älter als die `.stat`-Datei und wird entfernt und eine neue wird aus AEM abgerufen, um sie im Cache zu ersetzen, bevor sie den Endbenutzenden bereitgestellt wird, die sie angefordert haben.
 
 ## Farm-Dateieinstellungen
 
-Die Dokumentation enthält alle Konfigurationsoptionen: [https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-dispatcher_configuring-the-dispatcher-cache-cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de)
+Hier befindet sich die Dokumentation für alle Konfigurationsoptionen: [https://docs.adobe.com/content/help/de/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-dispatcher_configuring-the-dispatcher-cache-cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de)
 
-Wir möchten einige von ihnen hervorheben, die sich auf die Cache-Leerung beziehen
+Wir möchten einige davon hervorheben, die sich auf die Cache-Leerung beziehen
 
-### Flush-Farmen
+### Leerungs-Farmen
 
-Es gibt zwei Schlüssel `document root` -Verzeichnissen, die Dateien aus dem Autoren- und Herausgeber-Traffic zwischenspeichern.  Um diese Verzeichnisse mit neuem Inhalt auf dem neuesten Stand zu halten, müssen wir den Cache leeren.  Diese Flush-Anfragen möchten nicht an Ihre normalen Traffic-Farm-Konfigurationen angepasst werden, die die Anfrage ablehnen oder etwas Unerwünschtes tun könnten.  Stattdessen stellen wir zwei Flush-Farmen für diese Aufgabe bereit:
+Es gibt zwei wichtige `document root`-Verzeichnisse, die Dateien aus dem Autoren- und Veröffentlichungs-Traffic zwischenspeichern. Um diese Verzeichnisse bei neuem Inhalt auf dem neuesten Stand zu halten, müssen wir den Cache leeren. Diese Leerungsanfragen sollten nicht Ihren normalen Farm-Konfigurationen für Kunden-Traffic in die Quere kommen, die die Anfrage ablehnen oder etwas Unerwünschtes bewirken könnten. Stattdessen stellen wir zwei Leerungsfarmen für diese Aufgabe bereit:
 
 - `/etc/httpd.conf.d/available_farms/001_ams_author_flush_farm.any`
 - `/etc/httpd.conf.d/available_farms/001_ams_publish_flush_farm.any`
 
-Diese Farm-Dateien haben nichts anderes als die Ordner des Dokumentenstamms zu leeren.
+Diese Farm-Dateien haben keine andere Funktion, als die Dokument-Stammverzeichnisse zu leeren.
 
 ```
 /publishflushfarm {  
@@ -213,7 +213,7 @@ Diese Farm-Dateien haben nichts anderes als die Ordner des Dokumentenstamms zu l
 }
 ```
 
-### Dokumentenstamm
+### Dokumentstamm
 
 Dieser Konfigurationseintrag befindet sich im folgenden Abschnitt der Farm-Datei:
 
@@ -223,12 +223,12 @@ Dieser Konfigurationseintrag befindet sich im folgenden Abschnitt der Farm-Datei
         /docroot
 ```
 
-Sie geben das Verzeichnis an, in dem der Dispatcher als Cache-Verzeichnis gefüllt und verwaltet werden soll.
+Sie geben das Verzeichnis an, das der Dispatcher als Cache-Verzeichnis füllen und verwalten soll.
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-Dieser Ordner sollte mit der Apache Document Root-Einstellung für die Domäne übereinstimmen, für die Ihr Webserver konfiguriert ist.
+Dieses Verzeichnis sollte mit der Apache-Dokumentstamm-Einstellung für die Domain übereinstimmen, für die Ihr Webserver konfiguriert ist.
 
-Verschachtelte Basisordner pro Farm, die Unterordner des Apache-Basisverzeichnisses sind, sind aus vielen Gründen eine schreckliche Idee.
+Verschachtelte Dokument-Stammordner pro Farm, die Unterordner des Apache-Dokumentstamms sind, sind aus vielen Gründen keine gute Idee.
 </div>
 
 ### Ebene der statischen Dateien
@@ -241,31 +241,31 @@ Dieser Konfigurationseintrag befindet sich im folgenden Abschnitt der Farm-Datei
         /statfileslevel
 ```
 
-Mit dieser Einstellung wird gemessen, wie tief `.stat` -Dateien müssen generiert werden, wenn eine Leerungsanfrage eingeht.
+Diese Einstellung gibt an, wie viele `.stat`-Dateien bei einer Leerungsanfrage erzeugt werden müssen.
 
-`/statfileslevel` auf die folgende Zahl mit dem Basisverzeichnis von `/var/www/html/` würde bei der Flushing die folgenden Ergebnisse haben `/content/dam/brand1/en/us/logo.jpg`
+Wenn `/statfileslevel` auf die folgende Zahl gesetzt wird und der Dokumentstamm `/var/www/html/` ist, würde dies beim Leeren von `/content/dam/brand1/en/us/logo.jpg` zu folgenden Ergebnissen führen:
 
-- 0 - Die folgenden stat-Dateien werden erstellt
+- 0: Die folgenden stat-Dateien werden erstellt:
    - `/var/www/html/.stat`
-- 1 - Die folgenden stat-Dateien werden erstellt
+- 1: Die folgenden stat-Dateien werden erstellt:
    - `/var/www/html/.stat`
    - `/var/www/html/content/.stat`
-- 2 - Die folgenden stat-Dateien werden erstellt
+- 2:- Die folgenden stat-Dateien werden erstellt:
    - `/var/www/html/.stat`
    - `/var/www/html/content/.stat`
    - `/var/www/html/content/dam/.stat`
-- 3 - Die folgenden stat-Dateien werden erstellt
+- 3: Die folgenden stat-Dateien werden erstellt:
    - `/var/www/html/.stat`
    - `/var/www/html/content/.stat`
    - `/var/www/html/content/dam/.stat`
    - `/var/www/html/content/dam/brand1/.stat`
-- 4 - Die folgenden stat-Dateien werden erstellt
+- 4: Die folgenden stat-Dateien werden erstellt:
    - `/var/www/html/.stat`
    - `/var/www/html/content/.stat`
    - `/var/www/html/content/dam/.stat`
    - `/var/www/html/content/dam/brand1/.stat`
    - `/var/www/html/content/dam/brand1/en/.stat`
-- 5 - Die folgenden stat-Dateien werden erstellt
+- 5: Die folgenden stat-Dateien werden erstellt:
    - `/var/www/html/.stat`
    - `/var/www/html/content/.stat`
    - `/var/www/html/content/dam/.stat`
@@ -276,12 +276,12 @@ Mit dieser Einstellung wird gemessen, wie tief `.stat` -Dateien müssen generier
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
 
-Denken Sie daran, dass der Zeitstempel-Handshake nach dem nächstgelegenen `.stat` -Datei.
+Denken Sie daran, dass beim Zeitstempel-Handshake nach der nächstgelegenen `.stat`-Datei gesucht wird.
 
-mit `.stat` Dateiebene 0 und stat-Datei nur auf `/var/www/html/.stat` bedeutet, dass Inhalt, der unter `/var/www/html/content/dam/brand1/en/us/` würde nach der nächsten suchen `.stat` Datei speichern und fünf Ordner durchlaufen, um die einzige `.stat` -Datei, die auf Ebene 0 existiert und Datumswerte mit dieser vergleicht.  Das bedeutet, dass eine Leerung auf dieser hohen Ebene im Wesentlichen alle zwischengespeicherten Elemente ungültig macht.
+Eine `.stat`-Datei auf Ebene 0 und eine Statistikdatei nur auf `/var/www/html/.stat` bedeutet, dass Inhalte, die sich unter `/var/www/html/content/dam/brand1/en/us/` befinden, nach der nächstgelegenen `.stat`-Datei suchen und 5 Ordner nach oben wandern, um die einzige `.stat`-Datei auf Ebene 0 zu finden und die Daten mit dieser zu vergleichen.  Das bedeutet, dass eine Leerung auf dieser hohen Ebene im Wesentlichen alle zwischengespeicherten Elemente ungültig macht.
 </div>
 
-### Invalidierung zulässig
+### Zulässige Invalidierung
 
 Dieser Konfigurationseintrag befindet sich im folgenden Abschnitt der Farm-Datei:
 
@@ -291,7 +291,7 @@ Dieser Konfigurationseintrag befindet sich im folgenden Abschnitt der Farm-Datei
         /allowedClients {
 ```
 
-Innerhalb dieser Konfiguration legen Sie eine Liste von IP-Adressen fest, die Leerungsanfragen senden dürfen.  Wenn eine Leerungsanfrage in den Dispatcher kommt, muss sie von einer vertrauenswürdigen IP-Adresse stammen.  Wenn Sie diese Konfiguration falsch konfiguriert haben oder eine Leerungsanfrage von einer nicht vertrauenswürdigen IP-Adresse senden, wird der folgende Fehler in der Protokolldatei angezeigt:
+Innerhalb dieser Konfiguration legen Sie eine Liste von IP-Adressen fest, die Leerungsanfragen senden dürfen. Wenn eine Leerungsanfrage beim Dispatcher eintrifft, muss sie von einer vertrauenswürdigen IP-Adresse stammen. Wenn Sie diese Konfiguration falsch konfiguriert haben oder eine Leerungsanfrage von einer nicht vertrauenswürdigen IP-Adresse senden, wird der folgende Fehler in der Protokolldatei angezeigt:
 
 ```
 [Mon Nov 11 22:43:05 2019] [W] [pid 3079 (tid 139859875088128)] Flushing rejected from 10.43.0.57
@@ -309,7 +309,7 @@ Dieser Konfigurationseintrag befindet sich im folgenden Abschnitt der Farm-Datei
 
 Diese Regeln geben normalerweise an, welche Dateien bei einer Leerungsanfrage invalidiert werden dürfen.
 
-Um zu verhindern, dass wichtige Dateien bei einer Seitenaktivierung invalidiert werden, können Sie Regeln anwenden, die angeben, welche Dateien ungültig gemacht werden dürfen und welche manuell invalidiert werden müssen.  Im Folgenden finden Sie einen Beispielsatz an Konfigurationen, die nur die Invalidierung von HTML-Dateien ermöglichen:
+Um zu verhindern, dass wichtige Dateien bei einer Seitenaktivierung invalidiert werden, können Sie Regeln anwenden, die angeben, welche Dateien invalidiert werden dürfen und welche manuell invalidiert werden müssen.  Im Folgenden finden Sie einen Beispielsatz an Konfigurationen, die nur die Invalidierung von HTML-Dateien ermöglichen:
 
 ```
 /invalidate { 
@@ -322,9 +322,9 @@ Um zu verhindern, dass wichtige Dateien bei einer Seitenaktivierung invalidiert 
 
 Wenn Sie eine Seite aktivieren und grünes Licht dafür erhalten, dass die Seitenaktivierung erfolgreich war, sollten Sie erwarten, dass der aktivierte Inhalt auch aus dem Cache geleert wird.
 
-Sie aktualisieren Ihre Seite und sehen die alten Dinge! Was? Es gab ein grünes Licht?!
+Sie aktualisieren Ihre Seite und sehen die alten Dinge! Was!? Es gab ein grünes Licht?!
 
-Gehen wir ein paar manuelle Schritte durch den Flushing-Prozess durch, um uns einen Einblick zu verschaffen, was falsch sein könnte.  Führen Sie in der Publisher-Shell die folgende Leerungsanforderung mit curl aus:
+Gehen wir ein paar manuelle Schritte durch den Leerungsprozess durch, um uns einen Einblick zu verschaffen, was falsch sein könnte.  Führen Sie in der Publisher-Shell die folgende Leerungsanforderung mit cURL aus:
 
 ```
 $ curl -H "CQ-Action: Activate" \ 
@@ -335,7 +335,7 @@ $ curl -H "CQ-Action: Activate" \
 http://<DISPATCHER IP ADDRESS>/dispatcher/invalidate.cache
 ```
 
-Beispieltest für eine Leerungsanfrage
+Testbeispiel für eine Leerungsanfrage
 
 ```
 $ curl -H "CQ-Action: Activate" \ 
@@ -346,7 +346,7 @@ $ curl -H "CQ-Action: Activate" \
 http://169.254.196.222/dispatcher/invalidate.cache
 ```
 
-Nachdem Sie den Anforderungsbefehl an den Dispatcher ausgelöst haben, möchten Sie sehen, was in den Protokollen geschehen ist und was mit dem `.stat files`.  Verfolgen Sie die Protokolldatei und Sie sollten die folgenden Einträge sehen, um den Flush-Aufruf des Dispatcher-Moduls zu bestätigen.
+Nachdem Sie den Anfragebefehl an den Dispatcher gesendet haben, möchten Sie in den Protokollen sehen, was er getan hat und was er mit `.stat files` gemacht hat.  Verfolgen Sie die Protokolldatei und Sie sollten die folgenden Einträge sehen, um die Leerungsanfrage des Dispatcher-Moduls zu bestätigen.
 
 ```
 [Wed Nov 13 16:54:12 2019] [I] [pid 19173:tid 140542721578752] Activation detected: action=Activate [/content/dam/logo.jpg] 
@@ -356,13 +356,13 @@ Nachdem Sie den Anforderungsbefehl an den Dispatcher ausgelöst haben, möchten 
 [Wed Nov 13 16:54:12 2019] [I] [pid 19173:tid 140542721578752] "GET /dispatcher/invalidate.cache" 200 purge [publishfarm/-] 0ms
 ```
 
-Nachdem wir nun sehen, dass das Modul die Leerungsanfrage erfasst und bestätigt hat, müssen wir sehen, wie sie sich auf die `.stat` Dateien.  Führen Sie den folgenden Befehl aus und beobachten Sie die Aktualisierung der Zeitstempel, wenn Sie eine weitere Flush-Benachrichtigung durchführen:
+Nachdem wir nun sehen, dass das Modul die Leerungsanfrage erfasst und bestätigt hat, müssen wir sehen, wie sie sich dies auf die `.stat`-Dateien auswirkt.  Führen Sie den folgenden Befehl aus und beobachten Sie, wie die Zeitstempel aktualisiert werden, wenn Sie eine weitere Leerung durchführen:
 
 ```
 $ watch -n 3 "find /mnt/var/www/html/ -type f -name ".stat" | xargs ls -la $1"
 ```
 
-Wie Sie in der Befehlsausgabe sehen können, werden die Zeitstempel der aktuellen `.stat` files
+Wie Sie aus der Befehlsausgabe entnehmen können, finden Sie die Zeitstempel der aktuellen `.stat`-Dateien:
 
 ```
 -rw-r--r--. 1 apache apache 0 Nov 13 16:54 /mnt/var/www/html/content/dam/.stat 
@@ -370,7 +370,7 @@ Wie Sie in der Befehlsausgabe sehen können, werden die Zeitstempel der aktuelle
 -rw-r--r--. 1 apache apache 0 Nov 13 16:54 /mnt/var/www/html/.stat
 ```
 
-Wenn wir die Flush-Benachrichtigung jetzt erneut ausführen, sehen Sie sich die Zeitstempel-Aktualisierung an
+Wenn wir nun die Leerung noch einmal durchführen, werden die Zeitstempel aktualisiert:
 
 ```
 -rw-r--r--. 1 apache apache 0 Nov 13 17:17 /mnt/var/www/html/content/dam/.stat 
@@ -378,7 +378,7 @@ Wenn wir die Flush-Benachrichtigung jetzt erneut ausführen, sehen Sie sich die 
 -rw-r--r--. 1 apache apache 0 Nov 13 17:17 /mnt/var/www/html/.stat
 ```
 
-Vergleichen wir unsere Inhalts-Zeitstempel mit unseren `.stat` Dateien Zeitstempel
+Vergleichen wir die Zeitstempel unserer Inhalte mit den Zeitstempeln unserer `.stat`-Dateien:
 
 ```
 $ stat /mnt/var/www/html/content/customer/en-us/.stat 
@@ -400,8 +400,8 @@ Modify: 2019-11-11 22:41:59.642450601 +0000
 Change: 2019-11-11 22:41:59.642450601 +0000
 ```
 
-Wenn Sie sich einen der Zeitstempel ansehen, werden Sie feststellen, dass der Inhalt eine neuere Zeit hat als die `.stat` -Datei, die das -Modul anweist, die Datei aus dem Cache bereitzustellen, da sie neuer ist als die `.stat` -Datei.
+Wenn Sie sich einen der Zeitstempel ansehen, werden Sie feststellen, dass der Inhalt eine neuere Zeit hat als die `.stat`-Datei, was das Modul anweist, die Datei aus dem Cache zu laden, da sie neuer ist als die `.stat`-Datei.
 
-Setzen Sie einfach etwas aktualisiert die Zeitstempel dieser Datei, die es nicht als &quot;geleert&quot; oder ersetzt zu qualifizieren.
+Im Klartext: Die Zeitstempel dieser Datei wurden aktualisiert, sodass sie nicht mehr „geleert“ oder ersetzt werden können.
 
-[Weiter -> Vanity-URLs](./disp-vanity-url.md)
+[Weiter mit -> Vanity-URLs](./disp-vanity-url.md)
