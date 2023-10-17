@@ -200,7 +200,7 @@ Die Implementierung der bearbeitbaren Textkomponente sollte wie folgt aussehen:
    };
    ```
 
-1. Erstellen Sie eine bearbeitbaren React-Komponente unter `src/components/editable/EditableImage.js`.
+1. Erstellen Sie eine bearbeitbare React-Komponente unter `src/components/editable/EditableImage.js`.
 1. Fügen Sie den folgenden Code zu `EditableImage.js` hinzu.
 
 ```javascript
@@ -315,7 +315,7 @@ So konfigurieren Sie den responsiven Raster-Container der Remote-SPA-Seitenvorla
 Nach der Aktualisierung der SPA zum Einbetten von `<ResponsiveGrid...>`, Wrappers für drei bearbeitbare React-Komponenten (`EditableTitle`, `EditableText` und `EditableImage`) sowie nach der Aktualisierung von AEM mit einer übereinstimmenden Vorlagenrichtlinie, können wir damit beginnen, Inhalte in der Container-Komponente zu erstellen.
 
 1. Melden Sie sich bei AEM Author an
-1. Navigieren Sie zu __Sites > WKND-App__.
+1. Navigieren Sie zu __Sites > WKND App__
 1. Tippen Sie auf __Startseite__ und wählen Sie __Bearbeiten__ in der oberen Aktionsleiste.
    + Eine „Hello World“-Textkomponente wird angezeigt, da diese beim Generieren des Projekts aus dem AEM-Projektarchetyp automatisch hinzugefügt wurde.
 1. Wählen Sie __Bearbeiten__ aus der Modusauswahl oben rechts im Seiteneditor.
