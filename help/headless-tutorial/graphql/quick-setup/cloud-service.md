@@ -10,7 +10,7 @@ kt: 9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
 source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1081'
 ht-degree: 100%
 
@@ -27,7 +27,7 @@ Die folgenden Schritte sind erforderlich, um dieser Schnelleinrichtung zu folgen
 + AEM as a Cloud Service-Sandbox-Umgebung (vorzugsweise Entwicklung)
 + Zugreifen auf AEM as a Cloud Service und Cloud Manager
    + __AEM-Administratorzugriff__ auf AEM as a Cloud Service
-   + Zugriff auf Cloud Manager als __Cloud Manager – Deployment Manager__
+   + Zugriff auf Cloud Manager als __Cloud Manager – Bereitstellungs-Manager__
 + Die folgenden Tools müssen lokal installiert sein:
    + [Node.js v18](https://nodejs.org/de/)
    + [Git](https://git-scm.com/)
@@ -91,24 +91,24 @@ Beachten Sie, dass das WKND-Site-Projekt Beispielinhalte bereitstellt, die die R
 _Screencast von Schritten_
 >[!VIDEO](https://video.tv.adobe.com/v/339075?quality=12&learn=on)
 
-1. Fügen Sie eine __produktionsfremde Implementierungs-Pipeline__ an das neue Git-Repository an.
+1. Fügen Sie eine __produktionsfremde Bereitstellungs-Pipeline__ an das neue Git-Repository an.
    1. Wählen Sie __Pipelines__ im oberen Navigationsbereich aus.
    1. Wählen Sie __Pipeline hinzufügen__ in der oberen Aktionsleiste aus.
    1. Auf der Registerkarte __Konfiguration__
-      1. Wählen Sie die Option __Implementierungs-Pipeline__ aus.
+      1. Wählen Sie die Option __Bereitstellungs-Pipeline__ aus.
       1. Legen Sie den __Namen der produktionsfremden Pipeline__ auf `Dev Deployment pipeline` fest.
-      1. Wählen Sie __Implementierungsauslöser > Bei Git-Änderungen__
+      1. Wählen Sie __Bereitstellungsauslöser > Bei Git-Änderungen__
       1. Wählen Sie __Verhalten bei wichtigen Metrikfehlern > Sofort fortfahren__
       1. Klicken Sie auf __Weiter__
    1. Auf der Registerkarte __Quell-Code__
       1. Wählen Sie die Option __Vollständiger Stack-Code__
-      1. Wählen Sie die __AEM as a Cloud Service-Entwicklungsumgebung__ aus dem Auswahlfeld __Mögliche Implementierungsumgebungen__ 
+      1. Wählen Sie die __AEM as a Cloud Service-Entwicklungsumgebung__ aus dem Auswahlfeld __Mögliche Bereitstellungsumgebungen__
       1. Wählen Sie `aem-headless-quick-setup-wknd` im Auswahlfeld __Repository__
       1. Wählen Sie `main` aus dem Auswahlfeld __Git-Verzweigung__
       1. Wählen Sie __Speichern__ aus
-1. Führen Sie die __Dev-Implementierungs-Pipeline__ aus
+1. Führen Sie die __Dev-Bereitstellungs-Pipeline__ aus
    1. Wählen Sie __Übersicht__ in der oberen Navigationsleiste
-   1. Suchen Sie die neu erstellte __Dev-Implementierungs-Pipeline__ im __Pipelines__-Abschnitt
+   1. Suchen Sie die neu erstellte __Dev-Bereitstellungs-Pipeline__ im __Pipelines__-Abschnitt
    1. Wählen Sie __...__ rechts vom Pipeline-Eintrag
    1. Wählen Sie __Ausführen__ und bestätigen Sie es im modalen Fenster
    1. Wählen Sie __...__ rechts von der derzeit ausgeführten Pipeline
