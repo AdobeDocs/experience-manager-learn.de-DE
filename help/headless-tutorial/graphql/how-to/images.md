@@ -11,9 +11,9 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 source-git-commit: 97a311e043d3903070cd249d993036b5d88a21dd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '934'
-ht-degree: 31%
+ht-degree: 100%
 
 ---
 
@@ -23,21 +23,21 @@ Bilder sind ein wichtiger Aspekt in der [Entwicklung vielfältiger, überzeugend
 
 Inhaltsfragmente, die bei der Inhaltsmodellierung in AEM Headless verwendet werden, verweisen häufig auf Bild-Assets, die für die Anzeige im Headless-Erlebnis vorgesehen sind. GraphQL-Abfragen können in AEM geschrieben werden, um abhängig davon, von wo aus ein Bild referenziert wird, URLs zu Bildern bereitzustellen.
 
-Die `ImageRef` Der Typ verfügt über vier URL-Optionen für Inhaltsverweise:
+Der Typ `ImageRef` verfügt über drei URL-Optionen für Inhaltsverweise:
 
 + `_path` ist der referenzierte Pfad in AEM und enthält keinen AEM-Ursprung (Host-Namen)
 + `_dynamicUrl` ist die vollständige URL zum bevorzugten, Web-optimierten Bild-Asset.
-   + Die `_dynamicUrl` enthält keine AEM. Daher muss die Domäne (AEM Author- oder AEM Publish-Dienst) von der Clientanwendung bereitgestellt werden.
+   + `_dynamicUrl` enthält keinen AEM-Ursprung. Daher muss die Domain (AEM-Author- oder -Publish-Service) von der Client-Anwendung bereitgestellt werden.
 + `_authorUrl` ist die vollständige URL zum Bild-Asset in AEM Author
    + [AEM-Autor](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=de) kann verwendet werden, um eine Vorschau der Headless-Anwendung bereitzustellen.
 + `_publishUrl` ist die vollständige URL zum Bild-Asset in AEM Publish
    + [AEM-Veröffentlichung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=de) ist normalerweise der Ort, über den die Produktionsbereitstellung der Headless-Anwendung Bilder anzeigt.
 
-Die `_dynamicUrl` ist die bevorzugte URL für Bild-Assets und sollte die Verwendung von `_path`, `_authorUrl`und `_publishUrl` wann immer möglich.
+`_dynamicUrl` ist die bevorzugte URL für Bild-Assets und sollte, sofern möglich, immer anstelle von `_path`, `_authorUrl` und `_publishUrl` verwendet werden.
 
-|  | AEM as a Cloud Service | AEM as a Cloud Service RDE | AEM SDK | AEM 6.5 |
+|                                | AEM as a Cloud Service | AEM as a Cloud Service-RDE | AEM SDK | AEM 6.5 |
 | ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
-| Unterstützt weboptimierte Bilder? | ✔ | ✔ | ✘ | ✘ |
+| Unterstützung Web-optimierter Bilder? | ✔ | ✔ | ✘ | ✘ |
 
 
 >[!CONTEXTUALHELP]
@@ -55,7 +55,7 @@ Sie können die Feldtypen im [Inhaltsfragmentmodell](https://experienceleague.ad
 
 ## GraphQL-persistierte Abfrage
 
-Geben Sie in der GraphQL-Abfrage das Feld als `ImageRef` Typ eingeben und die `_dynamicUrl` -Feld. Beispielsweise können Sie ein Abenteuer im [WKND-Site-Projekt](https://github.com/adobe/aem-guides-wknd) , einschließlich der Bild-URL für Bild-Asset-Verweise in `primaryImage` -Feld kann mit einer neuen persistenten Abfrage durchgeführt werden `wknd-shared/adventure-image-by-path` definiert als:
+Geben Sie in der GraphQL-Abfrage das Feld als `ImageRef`-Typ zurück und fordern Sie das `_dynamicUrl`-Feld an. Die Abfrage eines Abenteuers im [WKND-Site-Projekt](https://github.com/adobe/aem-guides-wknd) und das Einfügen der Bild-URL für die Bild-Asset-Referenzen im entsprechenden Feld `primaryImage` kann beispielsweise mit der neuen, persistierten Abfrage `wknd-shared/adventure-image-by-path` erfolgen, die wie folgt definiert ist:
 
 ```graphql {highlight="11"}
 query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: String, $imageWidth: Int, $imageQuality: Int) {
@@ -93,23 +93,23 @@ query($path: String!, $imageFormat: AssetTransformFormat=JPG, $imageSeoName: Str
 
 Die Variable `$path`, die im Filter `_path` verwendet wird, erfordert den vollständigen Pfad zum Inhaltsfragment (zum Beispiel `/content/dam/wknd-shared/en/adventures/bali-surf-camp/bali-surf-camp`).
 
-Die `_assetTransform` definiert, wie die `_dynamicUrl` wird erstellt, um die Darstellung des bereitgestellten Bildes zu optimieren. Web-optimierte Bild-URLs können auch auf dem Client angepasst werden, indem die Abfrageparameter der URL geändert werden.
+`_assetTransform` definiert, wie `_dynamicUrl` erstellt wird, um die Ausgabedarstellung des bereitgestellten Bildes zu optimieren. Web-optimierte Bild-URLs können auch auf dem Client angepasst werden, indem die Abfrageparameter der URL geändert werden.
 
 | GraphQL-Parameter | URL-Parameter | Beschreibung | Erforderlich | GraphQL-Variablenwerte | URL-Parameterwerte | Beispiel-URL-Parameter |
 |:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
-| `format` | Nicht zutreffend | Das Format des Bild-Assets. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`,  `WEBP`, `WEBPLL`, `WEBPLY` | Nicht zutreffend | Nicht zutreffend |
-| `seoName` | Nicht zutreffend | Name des Dateisegments in URL. Wenn kein Bild-Asset-Name angegeben wurde, wird verwendet. | ✘ | alphanumerisch, `-`oder `_` | Nicht zutreffend | Nicht zutreffend |
-| `crop` | `crop` | Aus dem Bild entnommener Zuschnittrahmen muss innerhalb der Bildgröße liegen | ✘ | Positive Ganzzahlen, die einen Zuschnittbereich innerhalb der Grenzen der ursprünglichen Bildabmessungen definieren | Kommagetrennte Zeichenfolge numerischer Koordinaten `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
-| `size` | `size` | Größe des Ausgabebilds (sowohl Höhe als auch Breite) in Pixel. | ✘ | Positive Ganzzahlen | Kommagetrennte positive Ganzzahlen in der Reihenfolge `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
-| `rotation` | `rotate` | Drehung des Bildes in Grad. | ✘ | `R90`, `R180`, `R270` | `90`, `180`, `270` | `?rotate=90` |
-| `flip` | `flip` | Spiegeln Sie das Bild. | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` | `h`, `v`, `hv` | `?flip=h` |
-| `quality` | `quality` | Bildqualität in Prozent der Originalqualität. | ✘ | 1-100 | 1-100 | `?quality=80` |
-| `width` | `width` | Breite des Ausgabebilds in Pixel. Wann `size` bereitgestellt wird `width` wird ignoriert. | ✘ | Positive Ganzzahl | Positive Ganzzahl | `?width=1600` |
-| `preferWebP` | `preferwebp` | Wenn `true` und AEM eine WebP bereitstellen, wenn der Browser sie unterstützt, unabhängig von der `format`. | ✘ | `true`, `false` | `true`, `false` | `?preferwebp=true` |
+| `format` | Nicht zutreffend | Das Format des Bild-Assets. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`, `WEBP`, `WEBPLL`, `WEBPLY` | Nicht zutreffend | Nicht zutreffend |
+| `seoName` | Nicht zutreffend | Der Name des Dateisegments in der URL. Ohne Angabe wird der Bild-Asset-Name verwendet. | ✘ | Alphanumerisch, `-` oder `_` | Nicht zutreffend | Nicht zutreffend |
+| `crop` | `crop` | Der aus dem Bild entnommene Zuschnittrahmen muss innerhalb der Bildgröße liegen. | ✘ | Positive Ganzzahlen, die einen Zuschnittbereich innerhalb der Grenzen der ursprünglichen Bildabmessungen definieren | Kommagetrennte Zeichenfolge numerischer Koordinaten `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
+| `size` | `size` | Die Größe des Ausgabebildes (sowohl Höhe als auch Breite) in Pixel. | ✘ | Positive Ganzzahlen | Kommagetrennte positive Ganzzahlen in der Reihenfolge `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
+| `rotation` | `rotate` | Die Drehung des Bildes in Grad. | ✘ | `R90`, `R180`, `R270` | `90`, `180`, `270` | `?rotate=90` |
+| `flip` | `flip` | Spiegeln des Bildes. | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` | `h`, `v`, `hv` | `?flip=h` |
+| `quality` | `quality` | Die Bildqualität in Prozent der Originalqualität. | ✘ | 1–100 | 1–100 | `?quality=80` |
+| `width` | `width` | Die Breite des Ausgabebildes in Pixel. Wenn `size` bereitgestellt wird, wird `width` ignoriert. | ✘ | Positive Ganzzahl | Positive Ganzzahl | `?width=1600` |
+| `preferWebP` | `preferwebp` | Wenn `true` und AEM das WebP-Format bereitstellen, falls der Browser dies unterstützt, unabhängig vom `format`. | ✘ | `true`, `false` | `true`, `false` | `?preferwebp=true` |
 
 ## GraphQL-Antwort
 
-Die resultierende JSON-Antwort enthält die angeforderten Felder, die die Web-optimierte URL zu den Bild-Assets enthalten.
+Die resultierende JSON-Antwort beinhaltet die angeforderten Felder, die die Web-optimierte URL zu den Bild-Assets enthalten.
 
 ```json {highlight="8"}
 {
@@ -127,9 +127,9 @@ Die resultierende JSON-Antwort enthält die angeforderten Felder, die die Web-op
 }
 ```
 
-Verwenden Sie zum Laden des Web-optimierten Bildes des referenzierten Bildes in Ihrer Anwendung das `_dynamicUrl` des `primaryImage` als Quell-URL des Bildes.
+Verwenden Sie zum Laden des Web-optimierten Bildes des referenzierten Bildes in Ihrer Anwendung die `_dynamicUrl` von `primaryImage` als Quell-URL des Bildes.
 
-In React sieht die Anzeige eines Web-optimierten Bildes aus AEM Publish wie folgt aus:
+In React sieht die Anzeige des Web-optimierten Bildes über AEM Publish wie folgt aus:
 
 ```jsx
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
@@ -139,11 +139,11 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 <img src={dynamicUrl} alt={data.adventureByPath.item.title}/>
 ```
 
-Denken Sie daran, `_dynamicUrl` enthält nicht die AEM-Domäne. Daher müssen Sie den gewünschten Ursprung für die aufzulösende Bild-URL angeben.
+Denken Sie daran, dass `_dynamicUrl` nicht die AEM-Domain enthält. Daher müssen Sie den gewünschten Ursprung für die aufzulösende Bild-URL angeben.
 
 ## Responsive URLs
 
-Das obige Beispiel zeigt die Verwendung eines Bildes in einer Größe. In Web-Erlebnissen sind jedoch häufig responsive Bildsets erforderlich. Responsive Bilder können mithilfe von [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) oder [Bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset). Das folgende Codefragment zeigt die Verwendung der `_dynamicUrl` als Grundlage verwenden und verschiedene Breitenparameter anhängen, um unterschiedliche responsive Ansichten zu ermöglichen. Die `width` -Abfrageparameter verwendet werden, aber der Client kann weitere Abfrageparameter hinzufügen, um das Bild-Asset entsprechend seinen Anforderungen weiter zu optimieren.
+Im obigen Beispiel wird ein Bild mit einer einzigen Größe verwendet. In Web-Erlebnissen sind jedoch häufig responsive Bild-Sets erforderlich. Responsive Bilder können mithilfe von [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) oder [Bildelementen](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) implementiert werden. Das folgende Codesnippet zeigt, wie `_dynamicUrl` als Basis verwendet wird und verschiedene Breitenparameter angehängt werden, um unterschiedliche responsive Ansichten zu ermöglichen. Es kann nicht nur der Abfrageparameter `width` verwendet werden, sondern der Client kann auch andere Abfrageparameter hinzufügen, um das Bild-Asset entsprechend den Anforderungen weiter zu optimieren.
 
 ```javascript
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
@@ -173,28 +173,28 @@ document.body.innerHTML=`<picture>
 
 ## React-Beispiel
 
-Erstellen wir eine einfache React-Anwendung, die weboptimierte Bilder anzeigt, die folgende [responsiven Bildmustern](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/). Es gibt zwei Hauptmuster für responsive Bilder:
+Erstellen wir nun auf Grundlage folgender [responsiver Bildmuster](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/) eine einfache React-Anwendung, die Web-optimierte Bilder anzeigt. Es gibt zwei Hauptmuster für responsive Bilder:
 
-+ [Element mit srcset importieren](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) für höhere Leistung
-+ [Bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) für die Entwurfskontrolle
++ [img-Element mit srcset](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) für eine höhere Leistung
++ [Bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) zur Design-Kontrolle
 
-### Element mit srcset importieren
+### img-Element mit srcset
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418556/?quality=12&learn=on)
 
-[Elemente mit srcset importieren](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) werden mit dem `sizes` -Attribut verwenden, um verschiedene Bild-Assets für unterschiedliche Bildschirmgrößen bereitzustellen. Img-Sets sind nützlich, wenn Sie verschiedene Bild-Assets für unterschiedliche Bildschirmgrößen bereitstellen.
+[img-Elemente mit srcset](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) werden mit dem Attribut `sizes` verwendet, um verschiedene Bild-Assets für unterschiedliche Bildschirmgrößen bereitzustellen. „img srcsets“ sind nützlich, wenn Sie verschiedene Bild-Assets für unterschiedliche Bildschirmgrößen bereitstellen.
 
 ### Bildelement
 
-[Bildelement](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) werden mit mehreren `source` -Elemente verwenden, um verschiedene Bild-Assets für unterschiedliche Bildschirmgrößen bereitzustellen. Bildelemente sind nützlich, wenn Sie verschiedene Bilddarstellungen für unterschiedliche Bildschirmgrößen bereitstellen.
+[Bildelemente](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-picture) werden mit mehreren `source`-Elementen verwendet, um verschiedene Bild-Assets für unterschiedliche Bildschirmgrößen bereitzustellen. Bildelemente sind nützlich, wenn Sie verschiedene Bilddarstellungen für unterschiedliche Bildschirmgrößen bereitstellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418555/?quality=12&learn=on)
 
-### Beispielcode
+### Beispiel-Code
 
-Diese einfache React-App verwendet [AEM Headless-SDK](./aem-headless-sdk.md) , um AEM Headless-APIs für einen Adventure-Inhalt abzufragen, und zeigt das Web-optimierte Bild mit [img-Element mit srcset](#img-element-with-srcset) und [Musterelement](#picture-element). Die `srcset` und `sources` benutzerspezifische `setParams` Funktion zum Anhängen des Weboptimierten Abfrageparameters für die Bereitstellung an die `_dynamicUrl` des Bildes, ändern Sie also die bereitgestellte Bilddarstellung entsprechend den Anforderungen des Webclients.
+Diese einfache React-App nutzt das [AEM Headless-SDK](./aem-headless-sdk.md), um AEM Headless-APIs für Abenteuerinhalte abzufragen, und zeigt das Web-optimierte Bild über ein [img-Element mit srcset](#img-element-with-srcset) und [Bildelement](#picture-element) an. `srcset` und `sources` verwenden eine benutzerdefinierte `setParams`-Funktion zum Anhängen des Web-optimierten Abfrageparameters an `_dynamicUrl` für das Bild. Ändern Sie also die bereitgestellte Bilddarstellung entsprechend den Anforderungen des Webclients.
 
-Die Abfrage in AEM wird über den benutzerdefinierten React-Hook [useAdventureByPath, der das AEM Headless SDK verwendet](./aem-headless-sdk.md#graphql-persisted-queries), ausgeführt.
+Die Abfrage in AEM wird über den benutzerdefinierten React-Hook [useAdventureByPath, der das AEM Headless-SDK verwendet](./aem-headless-sdk.md#graphql-persisted-queries), ausgeführt.
 
 ```javascript
 // src/App.js
