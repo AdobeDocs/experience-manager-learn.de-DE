@@ -1,6 +1,6 @@
 ---
-title: Aktivieren von AEM Forms Portal-Komponenten
-description: Erstellen eines AEM Forms-Portals mithilfe von Kernkomponenten
+title: Aktivieren von Komponenten des AEM-Formularportals
+description: Erstellen eines AEM-Formularportals mithilfe von Kernkomponenten
 solution: Experience Manager
 role: Developer
 level: Beginner, Intermediate
@@ -10,38 +10,38 @@ feature: Core Components
 kt: 10373
 exl-id: ab01573a-e95f-4041-8ccf-16046d723aba
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '349'
-ht-degree: 15%
+ht-degree: 100%
 
 ---
 
-# Forms Portal-Komponenten
+# Komponenten des Formularportals
 
 AEM Forms bietet standardmäßig die folgenden Portalkomponenten:
 
-**Search &amp; Lister**: Mit dieser Komponente können Sie Formulare aus dem Formular-Repository auf Ihrer Portalseite auflisten und Konfigurationsoptionen bereitstellen, um Formulare basierend auf angegebenen Kriterien aufzulisten.
+**Suche und Auflister**: Mit der Komponente „Suche und Auflister“ können Sie Formulare aus dem Formular-Repository auf Ihrer Portalseite auflisten. Außerdem enthält sie Konfigurationsoptionen, um Formulare basierend auf angegebenen Kriterien aufzulisten.
 
-**Entwürfe und Übermittlungen**: Während die Komponente &quot;Search &amp; Lister&quot;Formulare anzeigt, die vom Forms-Autor veröffentlicht wurden, zeigt die Komponente &quot;Drafts &amp; Submissions&quot;Formulare an, die als Entwurf zum Abschließen späterer Formulare und gesendeter Formulare gespeichert wurden. Diese Komponente bietet jedem angemeldeten Benutzer ein personalisiertes Erlebnis.
+**Entwürfe und Sendungen**: Während die Komponente „Suche und Auflister“ Formulare anzeigt, die von der Autorin bzw. dem Autor des Formulars veröffentlicht wurden, zeigt die Komponente „Entwürfe und Sendungen“ die für später gespeicherten Entwürfe sowie übermittelte Formulare an. Diese Komponente bietet jeder angemeldeten Person ein personalisiertes Erlebnis.
 
-**Link**: Mit dieser Komponente können Sie einen Link zu einem Formular an einer beliebigen Stelle auf der Seite erstellen.
+**Link**: Mit der Komponente „Link“ können Sie an jeder beliebigen Stelle auf der Seite einen Link zu einem Formular erstellen.
 
 ## Aktivieren von Komponenten des Formularportals
 
-Starten Sie IntelliJ und öffnen Sie das Projekt BankingApplication , das in der [früheren Schritt.](./getting-started.md) Erweitern Sie ui.apps->src->main->content->jcr_root->apps.bankingapplication->components
+Starten Sie IntelliJ und öffnen Sie das Projekt „BankingApplication“, das im [vorherigen Schritt erstellt wurde.](./getting-started.md) Erweitern Sie ui.apps->src->main->content->jcr_root->apps.bankingapplication->components.
 
-Um eine beliebige Kernkomponente (einschließlich der vordefinierten Portalkomponenten) auf einer Adobe Experience Manager-Site (AEM) zu verwenden, müssen Sie eine Proxy-Komponente erstellen und für Ihre Site aktivieren.
-Die neu erstellte Proxy-Komponente muss auf die vordefinierte Formularkomponente verweisen, damit sie alles von ihnen erbt. Dazu ändern Sie den resourceSuperType in der content.xml der Proxy-Komponente. In der Datei content.xml geben wir auch den Titel und die Komponentengruppe an.
+Um eine beliebige Kernkomponente (einschließlich der vordefinierten Portalkomponenten) auf einer Adobe Experience Manager(AEM)-Site zu verwenden, müssen Sie eine Proxy-Komponente erstellen und für Ihre Site aktivieren.
+Die neu erstellte Proxy-Komponente muss auf die vorkonfigurierte Formularkomponente verweisen, damit sie alles von ihr übernimmt. Dies geschieht durch Ändern des „resourceSuperType“ in der Datei „content.xml“ der Proxy-Komponente. In der Datei „content.xml“ geben wir auch den Titel und die Komponentengruppe an.
 >[!NOTE]
 >
-> Sie können für jeden von [diese Komponenten von hier](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/formsportal)
+> Sie können hierüber den „resourceSuperType“ [für jede dieser Komponenten](https://github.com/adobe/aem-core-forms-components/tree/master/ui.apps/src/main/content/jcr_root/apps/core/fd/components/formsportal) erstellen.
 
 
-### Entwürfe und Sendungen
+### Entwürfe und Übermittlungen
 
-Erstellen Sie eine Kopie einer vorhandenen Komponente (z. B. `button`) und benennen Sie sie als _Verfasser(innen)_.
-![Verfasser(innen)](assets/forms-portal-components2.png)
-Ersetzen Sie den Inhalt im `.content.xml` mit der folgenden XML-Datei:
+Erstellen Sie eine Kopie einer vorhandenen Komponente (zum Beispiel `button`) und nennen Sie sie _draftsandsubmissions_ (Entwürfe und Übermittlungen).
+![draftsandsubmissions](assets/forms-portal-components2.png)
+Ersetzen Sie den Inhalt in `.content.xml` durch folgenden XML-Code:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -54,8 +54,8 @@ Ersetzen Sie den Inhalt im `.content.xml` mit der folgenden XML-Datei:
 
 ### Suche und Auflister
 
-Erstellen Sie eine Kopie der Schaltflächenkomponente und benennen Sie sie in um _searchandlister_.
-Ersetzen Sie den Inhalt im `.content.xml` mit der folgenden XML-Datei:
+Erstellen Sie eine Kopie der Schaltflächenkomponente und benennen Sie sie in _searchandlister_ (Suche und Auflister) um.
+Ersetzen Sie den Inhalt in `.content.xml` durch folgenden XML-Code:
 
 
 ```xml
@@ -67,10 +67,10 @@ Ersetzen Sie den Inhalt im `.content.xml` mit der folgenden XML-Datei:
           componentGroup="BankingApplication - Content"/>
 ```
 
-### Link-Komponente
+### Link
 
-Erstellen Sie eine Kopie der Schaltflächenkomponente und benennen Sie sie in um _link_.
-Ersetzen Sie den Inhalt im `.content.xml` mit der folgenden XML-Datei:
+Erstellen Sie eine Kopie der Schaltflächenkomponente und benennen Sie sie in _link_ um.
+Ersetzen Sie den Inhalt in `.content.xml` durch den folgenden XML-Code:
 
 
 ```xml
@@ -82,8 +82,8 @@ Ersetzen Sie den Inhalt im `.content.xml` mit der folgenden XML-Datei:
           componentGroup="BankingApplication - Content"/>
 ```
 
-Nach der Bereitstellung Ihres Projekts sollten Sie diese Komponenten auf Ihrer AEM-Seite verwenden können, um Forms-Portal zu erstellen.
+Nach der Bereitstellung Ihres Projekts sollten Sie diese Komponenten auf Ihrer AEM-Seite verwenden können, um das Formularportal zu erstellen.
 
 ## Nächste Schritte
 
-[Cloud Services-Konfiguration einschließen](./azure-storage-fdm.md)
+[Einschließen der Cloud-Service-Konfiguration](./azure-storage-fdm.md)
