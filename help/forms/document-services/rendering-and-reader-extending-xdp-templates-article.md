@@ -1,6 +1,6 @@
 ---
 title: Rendern von XDP in PDF mit Verwendungsrechten
-description: Verwendungsrechte auf PDF anwenden
+description: Anwenden von Verwendungsrechten auf PDF-Dokumente
 version: 6.4,6.5
 feature: Forms Service
 topic: Development
@@ -9,38 +9,38 @@ level: Experienced
 exl-id: ce1793d1-f727-4bc4-9994-f495b469d1e3
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '425'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # Rendern von XDP in PDF mit Verwendungsrechten{#rendering-xdp-into-pdf-with-usage-rights}
 
-Ein gängiges Anwendungsbeispiel besteht darin, xdp in PDF zu rendern und Reader Extensions auf die gerenderte PDF anzuwenden.
+Ein gängiger Anwendungsfall besteht darin, XDP in PDF zu rendern und Reader Extensions auf die gerenderte PDF-Datei anzuwenden.
 
-Wenn ein Benutzer beispielsweise im Forms Portal von AEM Forms auf XDP klickt, kann XDP gerendert werden, während PDF und Leser die PDF erweitern.
-
-
-Um dieses Anwendungsbeispiel zu erstellen, müssen wir die folgenden Schritte ausführen.
-
-* Fügen Sie dem Benutzer &quot;fd-service&quot;das Reader Extensions-Zertifikat hinzu. Die Schritte zum Hinzufügen von Reader Extensions-Berechtigungen werden aufgelistet [here](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=de)
+Wenn eine Benutzerin oder ein Benutzer beispielsweise im Formularportal von AEM Forms auf XDP klickt, kann eine XDP-Datei als PDF gerendert werden und Reader das PDF-Dokument erweitern.
 
 
-* Weitere Informationen finden Sie im Video unter [Konfigurieren von Reader Extensions-Berechtigungen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)
+Für diesen Anwendungsfall müssen wir die folgenden Schritte ausführen.
+
+* Fügen Sie der Benutzerin bzw. dem Benutzer „fd-service“ das Reader Extensions-Zertifikat hinzu. Die Schritte zum Hinzufügen von Reader Extensions-Anmeldeinformationen sind [hier](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=de) aufgelistet.
 
 
-* Erstellen Sie einen benutzerdefinierten OSGi-Dienst, der Nutzungsrechte rendert und anwendet. Der Code, um dies zu erreichen, ist unten aufgeführt
+* Weitere Informationen finden Sie außerdem im Video zum [Konfigurieren von Reader Extensions-Anmeldeinformationen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=de).
 
-## XDP rendern und Verwendungsrechte anwenden {#render-xdp-and-apply-usage-rights}
 
-* Zeile 7: Mit renderPDFForm des FormsService generieren wir PDF aus der XDP.
+* Erstellen Sie einen benutzerdefinierten OSGi-Dienst, der Verwendungsrechte rendert und anwendet. Der Code dafür ist unten aufgeführt.
 
-* Zeilen 8-14: Die entsprechenden Verwendungsrechte werden festgelegt. Diese Verwendungsrechte werden aus den OSGi-Konfigurationseinstellungen abgerufen.
+## Rendern von XDP und Anwenden von Verwendungsrechten {#render-xdp-and-apply-usage-rights}
 
-* Zeile 20: Verwenden Sie den ResourceResolver, der mit dem fd-service des Dienstbenutzers verknüpft ist.
+* Zeile 7: Mit renderPDFForm des Forms-Dienstes generieren wir eine PDF-Datei aus XDP.
 
-* Zeile 24: Die Methode secureDocument von DocumentAssuranceService wird verwendet, um die Verwendungsrechte anzuwenden
+* Zeilen 8–14: Die entsprechenden Verwendungsrechte werden festgelegt. Diese Verwendungsrechte werden aus den OSGi-Konfigurationseinstellungen abgerufen.
+
+* Zeile 20: Verwenden Sie den ResourceResolver, der mit der Dienstbenutzerin bzw. dem Dienstbenutzer „fd-service“ verknüpft ist.
+
+* Zeile 24: Über die secureDocument-Methode von „DocumentAssuranceService“ werden die Verwendungsrechte angewendet.
 
 ```java
  public Document renderAndExtendXdp(String xdpPath) {
@@ -82,11 +82,11 @@ Um dieses Anwendungsbeispiel zu erstellen, müssen wir die folgenden Schritte au
  }
 ```
 
-Der folgende Screenshot zeigt die angezeigten Konfigurationseigenschaften. Die meisten allgemeinen Verwendungsrechte werden durch diese Konfiguration offen gelegt.
+Der folgende Screenshot zeigt die bereitgestellten Konfigurationseigenschaften. Die meisten allgemeinen Verwendungsrechte werden durch diese Konfiguration bereitgestellt.
 
 ![Konfigurationseigenschaften](assets/configurationproperties.gif)
 
-Der folgende Code zeigt den Code, der zum Erstellen der OSGi-Konfigurationseinstellungen verwendet wird
+Im Folgenden finden Sie den Code, der zum Erstellen der OSGi-Konfigurationseinstellungen verwendet wird.
 
 ```java
 package com.aemformssamples.configuration;
@@ -121,15 +121,15 @@ public @interface DocSvcConfiguration {
 }
 ```
 
-## Erstellen eines Servlets zum Streamen des PDF {#create-servlet-to-stream-the-pdf}
+## Erstellen eines Servlets zum Streamen der PDF-Datei {#create-servlet-to-stream-the-pdf}
 
-Der nächste Schritt besteht darin, ein Servlet mit einer GET-Methode zu erstellen, um dem Leser das erweiterte PDF zurückzugeben. In diesem Fall wird der Benutzer aufgefordert, die PDF in seinem Dateisystem zu speichern. Dies liegt daran, dass die PDF als dynamische PDF gerendert wird und die PDF-Viewer, die mit den Browsern geliefert werden, keine dynamischen PDFs verarbeiten.
+Der nächste Schritt besteht darin, ein Servlet mit einer GET-Methode zu erstellen, um die Reader-erweiterte PDF-Datei an die Benutzerin oder den Benutzer zurückzugeben. In diesem Fall wird die Benutzerin bzw. der Benutzer aufgefordert, die PDF-Datei im eigenen Dateisystem zu speichern. Dies liegt daran, dass die PDF-Datei als dynamische PDF gerendert wird und die in den Browsern enthaltenen PDF-Viewer keine dynamischen PDFs verarbeiten.
 
-Im Folgenden finden Sie den Code für das Servlet. Wir übergeben den Pfad der XDP im CRX-Repository an dieses Servlet.
+Im Folgenden finden Sie den Code für das Servlet. Wir geben den Pfad der XDP-Datei im CRX-Repository an dieses Servlet weiter.
 
-Dann rufen wir die Methode renderAndExtendXdp von com.aemformsssamples.documentservices.core.DocumentServices auf.
+Dann rufen wir die renderAndExtendXdp-Methode von „com.aemformssamples.documentservices.core.DocumentServices“ auf.
 
-Die erweiterte PDF des Lesers wird dann an die aufrufende Anwendung gestreamt
+Die Reader-erweiterte PDF-Datei wird anschließend an die aufrufende Anwendung gestreamt.
 
 ```java
 package com.aemformssamples.documentservices.core.servlets;
@@ -195,13 +195,13 @@ public class RenderAndReaderExtend extends SlingSafeMethodsServlet {
 }
 ```
 
-Um dies auf Ihrem lokalen Server zu testen, führen Sie die folgenden Schritte aus
-1. [Herunterladen und Installieren des DevelopingWithServiceUser-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [Herunterladen und Installieren des AEMFormsDocumentServices-Bundles](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+Gehen Sie wie folgt vor, um dies auf Ihrem lokalen Server zu testen:
+1. [Laden Sie das DevelopingWithServiceUser-Bundle herunter und installieren Sie es.](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1. [Laden Sie das AEMFormsDocumentServices-Bundle herunter und installieren Sie es.](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 
-1. [Herunterladen des HTML-Codes der benutzerdefinierten Portalvorlage](assets/render-and-extend-template.zip)
-1. [Laden Sie die mit diesem Artikel verknüpften Assets mit Package Manager in AEM herunter und importieren Sie sie.](assets/renderandextendxdp.zip)
-   * Dieses Paket enthält Beispielportal und XDP-Datei
-1. Hinzufügen des Reader Extensions-Zertifikats zum Benutzer &quot;fd-service&quot;
-1. Zeigen Sie Ihren Browser auf [Portal-Webseite](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
-1. Klicken Sie auf das PDF-Symbol, um die xdp als pdf-Datei mit angewendeten Verwendungsrechten zu rendern.
+1. [Laden Sie die HTML-Seite der benutzerdefinierten Portalvorlage herunter.](assets/render-and-extend-template.zip)
+1. [Laden Sie die mit diesem Artikel verbundenen Assets herunter und importieren Sie sie mit Package Manager in AEM.](assets/renderandextendxdp.zip)
+   * Dieses Paket enthält die beispielhafte Portal- und XDP-Datei.
+1. Fügen Sie das Reader Extensions-Zertifikat zur Benutzerin bzw. zum Benutzer „fd-service“ hinzu.
+1. Verweisen Sie Ihren Browser auf die [Portal-Web-Seite](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html).
+1. Klicken Sie auf das PDF-Symbol, um die XDP als PDF-Datei mit angewendeten Verwendungsrechten zu rendern.
