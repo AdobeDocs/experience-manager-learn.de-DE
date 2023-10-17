@@ -1,6 +1,6 @@
 ---
-title: Registrierung der AEM UI-Erweiterung
-description: Erfahren Sie, wie Sie eine AEM UI-Erweiterung registrieren.
+title: Registrierung einer AEM-Benutzeroberflächen-Erweiterung
+description: Erfahren Sie, wie Sie eine AEM-Benutzeroberflächen-Erweiterung registrieren.
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -11,23 +11,23 @@ kt: 11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: ef2290d9-ba40-429b-b10d-e82d6c1c20f6
 source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '304'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # Registrierung der Erweiterung
 
-AEM Benutzeroberflächen-Erweiterungen sind spezielle App Builder-Apps, die auf React basieren, und verwenden die [Reaktionsspektrum](https://react-spectrum.adobe.com/react-spectrum/) UI-Framework.
+AEM-Benutzeroberflächen-Erweiterungen sind spezielle App-Entwicklungs-Apps, die auf React basieren und das [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/)-Benutzeroberflächen-Framework nutzen.
 
-Um festzulegen, wo und wie die AEM UI-Erweiterung angezeigt wird, sind zwei Konfigurationen in der App Builder-App der Erweiterung erforderlich: App-Routing und die Registrierung der Erweiterung.
+Um zu definieren, wo und wie die AEM-Benutzeroberflächen-Erweiterung angezeigt wird, sind zwei Konfigurationen in der App-Entwicklungs-App der Erweiterung erforderlich: App-Routing und die Registrierung der Erweiterung.
 
 ## App-Routen{#app-routes}
 
-Die Erweiterung `App.js` deklariert die [React-Router](https://reactrouter.com/en/main) , die eine Indexroute enthält, die die Erweiterung in der AEM UI registriert.
+Die Datei `App.js` der Erweiterung deklariert den [React-Router](https://reactrouter.com/de/main), der eine Indexroute enthält, die die Erweiterung in der AEM-Benutzeroberfläche registriert.
 
-Die Indexroute wird beim erstmaligen Laden der AEM-Benutzeroberfläche aufgerufen. Das Ziel dieser Route definiert, wie die Erweiterung in der Konsole verfügbar gemacht wird.
+Die Indexroute wird beim erstmaligen Laden der AEM-Benutzeroberfläche aufgerufen. Das Ziel dieser Route definiert, wie die Erweiterung in der Konsole bereitgestellt wird.
 
 + `./src/aem-ui-extension/web-src/src/components/App.js`
 
@@ -54,28 +54,28 @@ function App(props) {
 
 `ExtensionRegistration.js` muss sofort über die Indexroute der Erweiterung geladen werden und fungiert als Registrierungspunkt der Erweiterung.
 
-Basierend auf der Vorlage für die AEM UI-Erweiterung, die beim [Initialisieren der App Builder-App-Erweiterung](./app-initialization.md), werden unterschiedliche Erweiterungspunkte unterstützt.
+Abhängig von der Vorlage für die AEM-Benutzeroberflächen-Erweiterung, die beim [Initialisieren der App-Entwicklungs-Erweiterungs-App](./app-initialization.md) ausgewählt wurde, werden unterschiedliche Erweiterungspunkte unterstützt.
 
 + [Erweiterungspunkte der Inhaltsfragmente-Benutzeroberfläche](./content-fragments/overview.md#extension-points)
 
 
 ## Bedingtes Einschließen von Erweiterungen
 
-AEM UI-Erweiterungen können benutzerdefinierte Logik ausführen, um die AEM Umgebungen zu beschränken, in denen die Erweiterung angezeigt wird. Diese Prüfung wird vor der `register` im `ExtensionRegistration` und sofort zurückgibt, wenn die Erweiterung nicht angezeigt werden soll.
+AEM-Benutzeroberflächen-Erweiterungen können benutzerdefinierte Logik ausführen, um die AEM-Umgebungen zu beschränken, in denen die Erweiterung angezeigt wird. Diese Prüfung wird vor dem `register`-Aufruf in der `ExtensionRegistration`-Komponente durchgeführt. Es wird sofort zurückgekehrt, wenn die Erweiterung nicht angezeigt werden soll.
 
-Für diese Prüfung ist nur ein begrenzter Kontext verfügbar:
+Für diese Prüfung ist nur begrenzter Kontext verfügbar:
 
-+ Der AEM-Host, auf dem die Erweiterung geladen wird.
-+ Das AEM Zugriffstoken des aktuellen Benutzers.
++ der AEM-Host, auf dem die Erweiterung geladen wird
++ das AEM-Zugriffs-Token der aktuellen Benutzerin oder des aktuellen Benutzers
 
 Die häufigsten Prüfungen zum Laden einer Erweiterung sind:
 
 + Verwenden des AEM-Hosts (`new URLSearchParams(window.location.search).get('repo')`), um zu bestimmen, ob die Erweiterung geladen werden soll.
-   + Zeigen Sie die Erweiterung nur in AEM Umgebungen an, die Teil eines bestimmten Programms sind (wie im Beispiel unten gezeigt).
-   + Zeigen Sie die Erweiterung nur in einer bestimmten AEM Umgebung (AEM Host) an.
-+ Verwenden eines [Adobe I/O Runtime-Aktion](./runtime-action.md) , um einen HTTP-Aufruf an AEM zu senden, um festzustellen, ob dem aktuellen Benutzer die Erweiterung angezeigt werden soll.
+   + Die Erweiterung wird nur in AEM-Umgebungen angezeigt, die Teil eines bestimmten Programms sind (wie im Beispiel unten gezeigt).
+   + Die Erweiterung wird nur in einer bestimmten AEM-Umgebung (auf einem bestimmten AEM-Host) angezeigt.
++ Verwenden einer [Adobe I/O Runtime-Aktion](./runtime-action.md), um einen HTTP-Aufruf an AEM zu senden und festzustellen, ob die Erweiterung der aktuellen Benutzerin oder dem aktuellen Benutzer angezeigt werden soll.
 
-Das folgende Beispiel zeigt die Beschränkung der Erweiterung auf alle Umgebungen im Programm `p12345`.
+Das folgende Beispiel zeigt, wie die Erweiterung auf alle Umgebungen im Programm `p12345` beschränkt wird.
 
 + `./src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
