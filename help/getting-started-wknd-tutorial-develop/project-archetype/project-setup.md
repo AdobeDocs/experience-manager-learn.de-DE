@@ -13,9 +13,9 @@ thumbnail: 30152.jpg
 exl-id: bb0cae58-79bd-427f-9116-d46afabdca59
 recommendations: noDisplay, noCatalog
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1839'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -88,7 +88,7 @@ Die nächsten Schritte werden mit einem UNIX®-basierten Befehlszeilen-Terminal 
    >
    > Um AEM 6.5.14+ zu verwenden, ersetzen Sie `aemVersion="cloud"` durch `aemVersion="6.5.14"`.
    >
-   > Verwenden Sie außerdem immer die neueste `archetypeVersion` durch Verweis auf [AEM Projektarchetyp > Nutzung](https://github.com/adobe/aem-project-archetype#usage)
+   > Verwenden Sie außerdem immer die neueste `archetypeVersion` durch Verweis auf den [AEM-Projektarchetyp > Nutzung](https://github.com/adobe/aem-project-archetype#usage)
 
    Eine vollständige Liste der verfügbaren Eigenschaften zum Konfigurieren eines Projekts [finden Sie hier](https://github.com/adobe/aem-project-archetype#available-properties).
 
@@ -112,7 +112,7 @@ Die nächsten Schritte werden mit einem UNIX®-basierten Befehlszeilen-Terminal 
            |--- .gitignore
    ```
 
-## Erstellen und Implementieren des Projekts {#build}
+## Erstellen und Bereitstellen des Projekts {#build}
 
 Erstellen Sie den Code des Projekts und stellen Sie ihn in einer lokalen Instanz von AEM bereit.
 
