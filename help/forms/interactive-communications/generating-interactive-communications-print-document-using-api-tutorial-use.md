@@ -1,7 +1,7 @@
 ---
-title: Generieren des interaktiven Kommunikationsdokuments für den Druckkanal mithilfe des Mechanismus für überwachte Ordner
+title: Generieren eines interaktiven Kommunikationsdokuments für den Druckkanal mit dem Mechanismus für überwachte Ordner
 seo-title: Generating Interactive Communications Document for print channel using watch folder mechanism
-description: Verwenden des überwachten Ordners zum Generieren von Druckkanaldokumenten
+description: Verwenden eines überwachten Ordners zum Generieren von Druckkanaldokumenten
 seo-description: Use watched folder to generate print channel documents
 feature: Interactive Communication
 topics: development
@@ -15,21 +15,21 @@ level: Intermediate
 exl-id: f5ab4801-cde5-426d-bfe4-ce0a985e25e8
 last-substantial-update: 2019-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '463'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Generieren des interaktiven Kommunikationsdokuments für den Druckkanal mithilfe des Mechanismus für überwachte Ordner
+# Generieren eines interaktiven Kommunikationsdokuments für den Druckkanal mit dem Mechanismus für überwachte Ordner
 
-Nachdem Sie Ihr Druckkanaldokument entworfen und getestet haben, müssen Sie in der Regel das Dokument generieren, indem Sie einen REST-Aufruf durchführen oder Druckdokumente mithilfe des Mechanismus zum Überwachen des Ordners generieren.
+Nach dem Entwerfen und Testen Ihres Druckkanaldokuments müssen Sie in der Regel das Dokument über einen REST-Aufruf oder Druckdokumente mithilfe des Mechanismus für überwachte Ordner generieren.
 
 In diesem Artikel wird der Anwendungsfall zum Generieren von Druckkanaldokumenten mit dem Mechanismus für überwachte Ordner erläutert.
 
-Wenn Sie eine Datei im überwachten Ordner ablegen, wird ein Skript ausgeführt, das mit dem überwachten Ordner verknüpft ist. Dieses Skript wird im unten stehenden Artikel erläutert.
+Wenn Sie eine Datei im überwachten Ordner ablegen, wird ein mit dem überwachten Ordner verknüpftes Skript ausgeführt. Dieses Skript wird im unten stehenden Artikel erläutert.
 
-Die Datei, die im überwachten Ordner abgelegt wird, weist die folgende Struktur auf. Der Code generiert Anweisungen für alle im XML-Dokument aufgelisteten Kontonummern.
+Die im überwachten Ordner abgelegte Datei weist die folgende Struktur auf. Der Code generiert Anweisungen für alle im XML-Dokument aufgelisteten accountnumber-Attribute.
 
 &lt;accountnumbers>
 
@@ -43,25 +43,25 @@ Die Datei, die im überwachten Ordner abgelegt wird, weist die folgende Struktur
 
 &lt;/accountnumbers>
 
-Der folgende Code führt Folgendes aus:
+Der nachstehende Code bewirkt Folgendes:
 
-Zeile 1: Pfad zum InteractiveCommunicationsDocument
+Zeile 1: Gibt den Pfad zum „InteractiveCommunicationsDocument“ an.
 
-Zeilen 15-20: Abrufen der Liste der Kontonummern aus dem XML-Dokument, das im überwachten Ordner abgelegt wurde
+Zeilen 15–20: Hiermit wird die accountnumber-Liste aus dem im überwachten Ordner abgelegten XML-Dokument abgerufen.
 
-Zeilen 24-25: Rufen Sie den PrintChannelService und den Druckkanal ab, die mit dem Dokument verknüpft sind.
+Zeilen 24–25: Hiermit werden der PrintChannelService und der Druckkanal abgerufen, die mit dem Dokument verknüpft sind.
 
-Zeile 30: Übergeben Sie die Kontonummer als Schlüsselelement an das Formulardatenmodell.
+Zeile 30: Übergibt die accountnumber als Schlüsselelement an das Formulardatenmodell.
 
-Zeilen 32-36: Legen Sie die Datenoptionen für das zu erzeugende Dokument fest.
+Zeilen 32–36: Hiermit werden die Datenoptionen für das zu generierende Dokument festgelegt.
 
-Zeile 38: Rendern Sie das Dokument.
+Zeile 38: Rendert das Dokument.
 
-Zeilen 39-40 - Speichert das generierte Dokument im Dateisystem.
+Zeilen 39-40: Hiermit wird das generierte Dokument im Dateisystem gespeichert.
 
-Der REST-Endpunkt des Formulardatenmodells erwartet eine ID als Eingabeparameter. Diese ID wird einem Anforderungsattribut mit dem Namen account number zugeordnet, wie im Screenshot unten dargestellt.
+Der REST-Endpunkt des Formulardatenmodells erwartet eine ID als Eingabeparameter. Diese ID wird dem Anfrageattribut „accountnumber“ zugeordnet, wie im Screenshot unten dargestellt.
 
-![requestattribute](assets/requestattributeprintchannel.gif)
+![Anfrageattribut](assets/requestattributeprintchannel.gif)
 
 ```java
 var interactiveCommunicationsDocument = "/content/forms/af/retirementstatementprint/channels/print/";
@@ -111,26 +111,26 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
 ```
 
 
-**Um dies auf Ihrem lokalen System zu testen, befolgen Sie die folgenden Anweisungen:**
+**Um dies auf Ihrem lokalen System zu testen, befolgen Sie die nachstehenden Anweisungen:**
 
-* Einrichten von Tomcat wie in diesem Beispiel beschrieben [Artikel.](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) Tomcat verfügt über die War-Datei, die die Beispieldaten generiert.
-* Richten Sie den Dienst als Systembenutzer ein, wie in diesem [Artikel](/help/forms/adaptive-forms/service-user-tutorial-develop.md).
-Stellen Sie sicher, dass dieser Systembenutzer über Leseberechtigungen für den folgenden Knoten verfügt. So melden Sie sich an: [Benutzeradministrator](https://localhost:4502/useradmin) und suchen Sie nach den &quot;Daten&quot;des Systembenutzers und erteilen Sie die Leseberechtigungen für den folgenden Knoten, indem Sie die Registerkarte Berechtigungen aufrufen.
+* Richten Sie Tomcat ein, wie in diesem [Artikel](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md) beschrieben. Tomcat verfügt über die WAR-Datei, die die Beispieldaten generiert.
+* Richten Sie den Dienst (die Systembenutzerin oder den Systembenutzer) ein, wie in diesem [Artikel](/help/forms/adaptive-forms/service-user-tutorial-develop.md) beschrieben.
+Stellen Sie sicher, dass diese Systembenutzerin bzw. dieser Systembenutzer über Leseberechtigungen für die folgenden Knoten verfügt. Um diese Berechtigungen zu gewähren, melden Sie sich als [Benutzeradmin](https://localhost:4502/useradmin) an und suchen Sie nach den „Daten“ der Systembenutzerin bzw. des Systembenutzers und erteilen Sie die Leseberechtigungen für die folgenden Knoten, indem Sie die Registerkarte „Berechtigungen“ aufrufen:
    * /content/dam/formsanddocuments
    * /content/dam/formsanddocuments-fdm
    * /content/forms/af
-* Importieren Sie die folgenden Pakete mit dem Package Manager in AEM. Dieses Paket enthält Folgendes:
+* Importieren Sie das folgende Paket mit Package Manager in AEM. Dieses Paket enthält Folgendes:
 
 
 * [Beispieldokument zur interaktiven Kommunikation](assets/retirementstatementprint.zip)
 * [Skript für überwachte Ordner](assets/printchanneldocumentusingwatchedfolder.zip)
 * [Datenquellkonfiguration](assets/datasource.zip)
 
-* Öffnen Sie die Datei /etc/fd/watchfolder/scripts/PrintPDF.ecma . Stellen Sie sicher, dass der Pfad zum interaktiven Dokument in Zeile 1 auf das richtige Dokument verweist, das Sie drucken möchten
+* Öffnen Sie die Datei „/etc/fd/watchfolder/scripts/PrintPDF.ecma“. Stellen Sie sicher, dass der Pfad zum „interactiveCommunicationsDocument“ in Zeile 1 auf das richtige Dokument verweist, das gedruckt werden soll.
 
-* Ändern Sie die saveLocation entsprechend Ihrer Voreinstellung in Zeile 2.
+* Ändern Sie den Speicherort („saveLocation“) wie gewünscht in Zeile 2.
 
-* Erstellen Sie die Datei &quot;accountnumbers.xml&quot;mit folgendem Inhalt
+* Erstellen Sie eine Datei „accountnumbers.xml“ mit folgendem Inhalt:
 
 ```xml
 <accountnumbers>
@@ -144,12 +144,12 @@ Stellen Sie sicher, dass dieser Systembenutzer über Leseberechtigungen für den
 ```
 
 
-* Ziehen Sie die Datei &quot;account tnumbers.xml&quot;in den Ordner &quot;C:\RenderPrintChannel\input folder&quot;.
+* Legen Sie die Datei „accountnumbers.xml“ im Ordner „C:\RenderPrintChannel\input“ ab.
 
-* Die generierten PDF-Dateien werden in die saveLocation geschrieben, wie im ECMA-Skript angegeben.
+* Die generierten PDF-Dateien werden an dem im ECMA-Skript angegebenen Speicherort („saveLocation“) geschrieben.
 
 >[!NOTE]
 >
 >Wenn Sie dies auf einem Nicht-Windows-Betriebssystem verwenden möchten, navigieren Sie zu
 >
->/etc/fd/watchfolder/config/PrintChannelDocument und ändern Sie den OrdnerPath gemäß Ihren Einstellungen
+>„/etc/fd/watchfolder/config/PrintChannelDocument“ und ändern Sie „folderPath“ wie gewünscht.
