@@ -1,7 +1,7 @@
 ---
-title: AEM Forms mit JSON-Schema und -Daten[Teil 4]
+title: AEM Forms mit JSON-Schema und Daten [Teil 4]
 seo-title: AEM Forms with JSON Schema and Data[Part4]
-description: Mehrteilige Anleitung, um Sie durch die Schritte zu führen, die zum Erstellen eines adaptiven Formulars mit JSON-Schema und zum Abfragen der gesendeten Daten erforderlich sind.
+description: Mehrteiliges Tutorial, um Sie durch die Schritte zu führen, die zum Erstellen eines adaptiven Formulars mit JSON-Schema und zum Abfragen der gesendeten Daten erforderlich sind.
 seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
 feature: Adaptive Forms
 topics: development
@@ -14,24 +14,24 @@ role: Developer
 level: Experienced
 exl-id: a8d8118d-f4a1-483f-83b4-77190f6a42a4
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '442'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Abfrage gesendeter Daten
 
 
-Der nächste Schritt besteht darin, die gesendeten Daten abzufragen und die Ergebnisse tabellarisch anzuzeigen. Dazu verwenden wir die folgende Software:
+Der nächste Schritt besteht darin, die gesendeten Daten abzufragen und die Ergebnisse in Tabellenform anzuzeigen. Dazu verwenden wir die folgende Software:
 
-[QueryBuilder](https://querybuilder.js.org/) - UI-Komponente zum Erstellen von Abfragen
+[QueryBuilder](https://querybuilder.js.org/) – Benutzeroberflächen-Komponente zum Erstellen von Abfragen
 
-[Datentabellen](https://datatables.net/)- Zum Anzeigen der Abfrageergebnisse in Tabellenform.
+[Datentabellen](https://datatables.net/) – zum Anzeigen der Abfrageergebnisse in Tabellenform.
 
-Die folgende Benutzeroberfläche wurde erstellt, um die Abfrage der gesendeten Daten zu ermöglichen. Nur die im JSON-Schema als erforderlich markierten Elemente werden für die Abfrage zur Verfügung gestellt. Im folgenden Screenshot werden alle Übermittlungen abgefragt, bei denen der Versandpref SMS ist.
+Die folgende Benutzeroberfläche wurde erstellt, um die Abfrage der gesendeten Daten zu ermöglichen. Nur die im JSON-Schema als erforderlich markierten Elemente werden für die Abfrage zur Verfügung gestellt. Im untenstehenden Screenshot werden alle Übermittlungen abgefragt, bei denen die Versandpräferenz SMS ist.
 
-Die Beispielbenutzeroberfläche zur Abfrage der gesendeten Daten verwendet nicht alle in QueryBuilder verfügbaren erweiterten Funktionen. Es wird empfohlen, sie selbst auszuprobieren.
+Die Beispielbenutzeroberfläche zur Abfrage der gesendeten Daten verwendet nicht alle in QueryBuilder verfügbaren erweiterten Funktionen. Wir empfehlen Ihnen, sie selbst auszuprobieren.
 
 ![QueryBuilder](assets/querybuilderui.gif)
 
@@ -39,9 +39,9 @@ Die Beispielbenutzeroberfläche zur Abfrage der gesendeten Daten verwendet nicht
 >
 >Die aktuelle Version dieses Tutorials unterstützt nicht die Abfrage mehrerer Spalten.
 
-Wenn Sie ein Formular zur Durchführung Ihrer Abfrage auswählen, wird ein GET-Aufruf an **/bin/getdatakeysfromschema**. Dieser GET-Aufruf gibt die erforderlichen Felder zurück, die mit dem Formularschema verknüpft sind. Die erforderlichen Felder werden dann in der Dropdown-Liste von QueryBuilder ausgefüllt, damit Sie die Abfrage erstellen können.
+Wenn Sie ein Formular zur Durchführung Ihrer Abfrage auswählen, erfolgt ein GET-Aufruf an **/bin/getdatakeysfromschema**. Dieser GET-Aufruf gibt die erforderlichen Felder zurück, die mit dem Formularschema verknüpft sind. Die erforderlichen Felder werden dann in der Dropdown-Liste von Query Builder ausgefüllt, damit Sie die Abfrage erstellen können.
 
-Das folgende Codefragment führt einen Aufruf der Methode getRequiredColumnsFromSchema des JSONSchemaOperations-Dienstes durch. Wir übergeben die Eigenschaften und erforderlichen Elemente des Schemas an diesen Methodenaufruf. Das Array, das von diesem Funktionsaufruf zurückgegeben wird, wird dann zum Ausfüllen der Dropdown-Liste &quot;Query Builder&quot;verwendet
+Das folgende Code-Snippet ruft die Methode getRequiredColumnsFromSchema des JSONSchemaOperations-Dienstes auf. Wir übergeben die Eigenschaften und erforderlichen Elemente des Schemas an diesen Methodenaufruf. Das Array, das von diesem Funktionsaufruf zurückgegeben wird, wird dann zum Ausfüllen der Dropdown-Liste von QueryBuilder verwendet
 
 ```java
 public JSONArray getData(String formName) throws SQLException, IOException {
@@ -64,18 +64,18 @@ public JSONArray getData(String formName) throws SQLException, IOException {
  }
 ```
 
-Wenn auf die Schaltfläche &quot;GetResult&quot;geklickt wird, wird Get aufgerufen an **&quot;/bin/querydata&quot;**. Die von der QueryBuilder-Benutzeroberfläche erstellte Abfrage wird über den Abfrageparameter an das Servlet übergeben. Das Servlet massiert diese Abfrage in eine SQL-Abfrage, die zum Abfragen der Datenbank verwendet werden kann. Wenn Sie beispielsweise alle Produkte mit dem Namen &quot;Maus&quot;abrufen möchten, lautet die Abfragezeichenfolge von Query Builder . `$.productname = 'Mouse'`. Diese Abfrage wird dann in die folgende
+Wenn auf die Schaltfläche „GetResult“ geklickt wird, erfolgt ein Get-Aufruf an **„/bin/querydata“**. Die von der QueryBuilder-Benutzeroberfläche erstellte Abfrage wird über den Abfrageparameter an das Servlet übergeben. Das Servlet wandelt diese Abfrage dann in eine SQL-Abfrage um, die zum Abfragen der Datenbank verwendet werden kann. Wenn Sie beispielsweise alle Produkte mit dem Namen „Maus“ abrufen möchten, lautet die Zeichenfolge von Query Builder `$.productname = 'Mouse'`. Diese Abfrage wird dann wie folgt konvertiert.
 
-SELECT &#42; von aemformswithjson .  formsubmissions, wobei JSON_EXTRACT( formsubmissions .formdata,&quot;$.productName &quot;)= &#39;Maus&#39;
+SELECT &#42; from  aemformswithjson . formsubmissions  where JSON_EXTRACT(  formsubmissions .formdata,&quot;$.productName &quot;)= &#39;Maus&#39;
 
 Das Ergebnis dieser Abfrage wird dann zurückgegeben, um die Tabelle in der Benutzeroberfläche zu füllen.
 
 Führen Sie die folgenden Schritte aus, um dieses Beispiel auf Ihrem lokalen System auszuführen
 
 1. [Vergewissern Sie sich, dass Sie alle hier genannten Schritte ausgeführt haben](part2.md)
-1. [Importieren Sie die Datei &quot;Dashboards v2.zip&quot;mit AEM Package Manager.](assets/dashboardv2.zip) Dieses Paket enthält alle erforderlichen Bundles, Konfigurationseinstellungen, benutzerdefinierte Übermittlung und Beispielseite zur Abfrage von Daten.
-1. Erstellen eines adaptiven Formulars mit dem JSON-Beispielschema
-1. Konfigurieren des adaptiven Formulars für die Übermittlung an die benutzerdefinierte Sendeaktion &quot;customsubmithelpx&quot;
-1. Formular ausfüllen und senden
-1. Zeigen Sie Ihren Browser auf [dashboard.html](http://localhost:4502/content/AemForms/dashboard.html)
+1. [Importieren Sie die Datei „Dashboards v2.zip“ mit AEM Package Manager.](assets/dashboardv2.zip) Dieses Paket enthält alle erforderlichen Bundles, die Konfigurationseinstellungen, die benutzerdefinierte Übermittlung und die Beispielseite zur Abfrage von Daten.
+1. Erstellen Sie ein adaptives Formular mit dem JSON-Beispielschema.
+1. Konfigurieren Sie das adaptive Formular für die Übermittlung an die benutzerdefinierte Sendeaktion „customsubmithelpx“.
+1. Füllen Sie das Formular aus und senden Sie es ab.
+1. Verweisen Sie Ihren Browser auf [dashboard.html](http://localhost:4502/content/AemForms/dashboard.html).
 1. Wählen Sie das Formular aus und führen Sie eine einfache Abfrage durch
