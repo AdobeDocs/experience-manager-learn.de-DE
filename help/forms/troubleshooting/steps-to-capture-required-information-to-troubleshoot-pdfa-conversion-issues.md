@@ -10,14 +10,14 @@ topic: Development
 index: y
 exl-id: 2753326a-2f8c-49f8-91a4-88cc8d500f66
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '50'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Schritte zur Fehlerbehebung bei PDFA-Konversions- und Validierungsproblemen
+# Schritte zur Fehlerbehebung bei PDFA-Konvertierungs- und Validierungsproblemen
 
-*In diesem Video werden die Schritte zum Erfassen der erforderlichen Informationen zur Fehlerbehebung bei PDF/A-Konversions- und Validierungsproblemen im Forms Assembler-Dienst erläutert.*
+*In diesem Video werden die Schritte zum Erfassen der erforderlichen Informationen zur Fehlerbehebung bei PDF/A-Konvertierungs- und Validierungsproblemen im Forms-Assembler-Dienst erläutert.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335518?quality=12&learn=on)
