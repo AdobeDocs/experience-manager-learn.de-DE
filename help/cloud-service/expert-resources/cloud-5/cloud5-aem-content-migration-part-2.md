@@ -1,5 +1,5 @@
 ---
-title: Cloud 5 AEM Content Migration Teil 2
+title: Cloud 5 AEM-Inhaltsmigration Teil 2
 description: Im zweiten Video über die Inhaltsmigration besprechen James und Darin die Verwendung des Content Transfer Tool (CTT) zur Unterstützung der Migration zu AEM as a Cloud Service.
 version: Cloud Service
 role: Admin, Developer
@@ -10,23 +10,23 @@ recommendations: noDisplay, noCatalog
 thumbnail: 342268.jpeg
 exl-id: 8b31c415-bf12-420f-a81a-6065c56ccbed
 source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '115'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# Migration zur Cloud - Teil 2
+# Migration zur Cloud: Teil 2
 
 Im zweiten Video über die Inhaltsmigration besprechen James und Darin die Verwendung des Content Transfer Tool (CTT) zur Unterstützung der Migration zu AEM as a Cloud Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342268?quality=12&learn=on)
 
-## Inhalt in diesem Video
+## Inhalt dieses Videos
 
-+ Bewertung Ihrer Instanz(en), die Sie migrieren möchten
-   + BPA - Best Practices-Analyzer
-   + CAM - Cloud-Beschleunigungs-Manager
++ Bewertung der Instanz(en), die Sie migrieren möchten
+   + BPA: Best Practices Analyzer
+   + CAM: Cloud Acceleration Manager
 + [repostats](https://github.com/chetanmeh/oak-console-scripts/tree/master/src/main/groovy/repostats)
 + [AEM-Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/)
-+ [Cloud Service-Migrationstools](https://github.com/adobe/aem-cloud-service-source-migration)
++ [Cloud Service-Migrations-Tools](https://github.com/adobe/aem-cloud-service-source-migration)
