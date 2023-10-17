@@ -1,16 +1,17 @@
 ---
 title: Workflow-Prozess für das Begrüßungs-Kit erstellen
-description: Erstellen Sie eine AEM Siteseite mit Links zum Herunterladen von Assets basierend auf den gesendeten Formulardaten.
+description: Erstellen Sie eine AEM Sites-Seite mit Links zum Herunterladen von Assets basierend auf den übermittelten Formulardaten.
 feature: Adaptive Forms
 version: 6.5
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-12-14T00:00:00Z
-source-git-commit: 0e27907066c7d688549a980ccd17b3f17d74b60b
-workflow-type: tm+mt
+exl-id: ba9e80af-aecd-4558-a236-798c823e695c
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '106'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +23,7 @@ Die Workflow-Komponente erfasst Informationen zur Seite, die die Assets aufliste
 
 ## Workflow-Prozessimplementierung
 
-Der folgende Java-Code wurde mit der Workflow-Komponente verknüpft. Der Code erstellt die Begrüßungs-Kit-Seite und extrahiert Werte aus den Workflow-Variablen (submitName und documentsSelected). Diese Werte werden dann als Eigenschaften der auf der Seite verwendeten Komponenten festgelegt. Der Code legt auch den Wert der Workflow-Prozessvariablen fest **welcomekiturl**.
+Der folgende Java-Code wurde mit der Workflow-Komponente verknüpft. Der Code erstellt die Begrüßungs-Kit-Seite und extrahiert Werte aus den Workflow-Variablen (submitName und documentsSelected). Diese Werte werden dann als Eigenschaften der auf der Seite verwendeten Komponenten festgelegt. Der Code legt auch den Wert der Workflow-Prozessvariablen **welcomekiturl** fest.
 
 ```java
 package com.welcomekit.core.workflowprocess;
@@ -161,7 +162,3 @@ public class CreatePage implements WorkflowProcess {
   }
 }
 ```
-
-
-
-
