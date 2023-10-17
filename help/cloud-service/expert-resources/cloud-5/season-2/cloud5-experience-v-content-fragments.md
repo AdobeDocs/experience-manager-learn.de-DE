@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 - Experience versus Inhaltsfragmente
-description: A versus Übernahme der Unterschiede zwischen einem Experience Fragment und einem Inhaltsfragment
+title: Cloud 5 – Experience Fragments und Inhaltsfragmente
+description: Experience Fragment gegen Inhaltsfragment – eine Gegenüberstellung der Unterschiede
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -9,20 +9,20 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: bfd455c4-9a51-4537-ae6d-548d552e13e6
 source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '78'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
-# Cloud 5 - Fragmente
+# Cloud 5 – Fragmente
 
-Ein &quot;versus&quot;übernimmt die Unterschiede zwischen einem Experience Fragment und einem Inhaltsfragment
+Experience Fragment gegen Inhaltsfragment – eine Gegenüberstellung der Unterschiede:
 
 >[!VIDEO](https://video.tv.adobe.com/v/342864?quality=12&learn=on)
 
-## Inhalt in diesem Video
+## Inhalt dieses Videos
 
-+ [Arbeiten mit Inhaltsfragmenten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments.html)
++ [Arbeiten mit Inhaltsfragmenten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments.html?lang=de)
 + [Verwenden von Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=de)
-+ [Experience Fragment-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/experience-fragments.html)
++ [Dokumentation zu Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/experience-fragments.html?lang=de)
