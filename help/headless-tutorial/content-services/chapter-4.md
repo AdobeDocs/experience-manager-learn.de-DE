@@ -7,7 +7,7 @@ role: Developer
 level: Beginner
 exl-id: ece0bf0d-c4af-4962-9c00-f2849c2d8f6f
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '785'
 ht-degree: 100%
 
@@ -70,14 +70,14 @@ Zu diesem Zweck können wir diese Anforderungen auf AEM-Komponenten (und in unse
    * **[!DNL WKND Mobile > Image]**
 
       * Das Logo für die App
+
    * **[!DNL WKND Mobile > Text]**
 
       * Der Einführungstext der App
+
    * **[!DNL WKND Mobile > Content Fragment List]**
 
       * Die Liste der Ereigniskategorien, die in der App angezeigt werden können
-
-
 
 1. Tippen Sie nach Abschluss auf das Häkchen **[!UICONTROL Fertig]** in der oberen rechten Ecke.
 1. **Aktualisieren** Sie das Browser-Fenster, um die neue Liste [!UICONTROL Zugelassene Komponenten] in der linken Leiste zu sehen.
