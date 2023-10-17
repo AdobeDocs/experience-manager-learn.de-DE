@@ -1,38 +1,39 @@
 ---
-title: Fragmente im Output-Dienst verwenden
-description: PDF-Dokumente mit Fragmenten im CRX-Repository erstellen
+title: Verwenden von Fragmenten im Output-Dienst
+description: Generieren von PDF-Dokumenten mit Fragmenten im CRX-Repository
 feature: Output Service
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2022-07-09T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+exl-id: d7887e2e-c2d4-4f0c-b117-ba7c41ea539a
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '457'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# PDF-Dokumente mit Fragmenten erstellen{#developing-with-output-and-forms-services-in-aem-forms}
+# Generieren von PDF-Dokumenten mithilfe von Fragmenten{#developing-with-output-and-forms-services-in-aem-forms}
 
 
-In diesem Artikel verwenden wir den Output-Dienst, um PDF-Dateien mit XDP-Fragmenten zu generieren. Die Haupt-XDP und die Fragmente befinden sich im CRX-Repository. Es ist wichtig, die Dateisystemordnerstruktur in AEM zu imitieren. Wenn Sie beispielsweise ein Fragment im Fragmentordner in Ihrer xdp verwenden, müssen Sie einen Ordner mit dem Namen **Fragmente** unter Ihrem Basisordner in AEM. Der Basisordner enthält Ihre Basis-XDP-Vorlage. Wenn Sie beispielsweise die folgende Struktur auf Ihrem Dateisystem haben
-* c:\xdptemplates - This will contain your base xdp template
-* c:\xdptemplates\fragments - This folder will contain fragments and the main template will reference the fragment as shown below
-   ![fragment-xdp](assets/survey-fragment.png).
-* Die Ordner-xdpdocuments enthalten Ihre Basisvorlage und die Fragmente in **Fragmente** Ordner
+In diesem Artikel verwenden wir den Output-Dienst, um PDF-Dateien mit XDP-Fragmenten zu generieren. Die XDP-Hauptdatei und die Fragmente befinden sich im CRX-Repository. Es ist wichtig, die Dateisystem-Ordnerstruktur in AEM nachzuahmen. Wenn Sie beispielsweise ein Fragment im Fragmentordner in Ihrer XDP verwenden, müssen Sie einen Ordner mit dem Namen **fragments** unter Ihrem Basisordner in AEM erstellen. Der Basisordner enthält Ihre XDP-Basisvorlage. Folgendes gilt, wenn beispielsweise die folgende Struktur auf Ihrem Dateisystem vorhanden ist:
+* c:\xdptemplates: Dieser Ordner enthält Ihre XDP-Basisvorlage.
+* c:\xdptemplates\fragments: Dieser Ordner enthält Fragmente und die Hauptvorlage verweist auf das Fragment, wie unten dargestellt.
+  ![Fragment-XDP](assets/survey-fragment.png).
+* Die Ordner „xdpdocuments“ enthält Ihre Basisvorlage und die Fragmente im Ordner **fragments**.
 
-Sie können die erforderliche Struktur mithilfe der [Formulare und Dokument-Benutzeroberfläche](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+Sie können die erforderliche Struktur mithilfe der Benutzeroberfläche [Formulare und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) erstellen.
 
-Im Folgenden finden Sie die Ordnerstruktur für das Beispiel-XDP, das 2 Fragmente verwendet
-![forms&amp;document](assets/fragment-folder-structure-ui.png)
-
-
-* Output-Dienst - In der Regel wird dieser Dienst verwendet, um XML-Daten mit einer xdp-Vorlage oder PDF zusammenzuführen, um eine reduzierte PDF-Datei zu generieren. Weitere Informationen finden Sie im Abschnitt [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) für den Output-Dienst. In diesem Beispiel verwenden wir Fragmente, die sich im CRX-Repository befinden.
+Im Folgenden finden Sie die Ordnerstruktur für das XDP-Beispiel, das 2 Fragmente verwendet.
+![Formulare und Documente](assets/fragment-folder-structure-ui.png)
 
 
-Der folgende Code wurde verwendet, um Fragmente in die PDF-Datei einzuschließen
+* Output-Dienst: In der Regel wird dieser Dienst verwendet, um XML-Daten mit einer XDP-Vorlage oder PDF zusammenzuführen, um eine reduzierte PDF-Datei zu generieren. Weitere Informationen finden Sie im [Javadoc](https://helpx.adobe.com/de/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) für den Output-Dienst. In diesem Beispiel verwenden wir Fragmente, die sich im CRX-Repository befinden.
+
+
+Der folgende Code wurde verwendet, um Fragmente in die PDF-Datei einzuschließen.
 
 ```java
 System.out.println("I am in using fragments POST.jsp");
@@ -62,25 +63,28 @@ generatedDocument.copyToFile(new java.io.File(filePath));
 out.println("Document genreated and saved to " + filePath);
 ```
 
-**So testen Sie das Beispielpaket auf Ihrem System**
+**So testen Sie das Beispielpaket auf Ihrem System:**
 
-* [Herunterladen und Importieren der Beispiel-XDP-Dateien in AEM](assets/xdp-templates-fragments.zip)
-* [Laden Sie das Paket herunter und installieren Sie es mithilfe des AEM Paketmanagers.](assets/using-fragments-assets.zip)
-* [Die Beispiel-XDP und -Fragmente können hier heruntergeladen werden](assets/xdptemplates.zip)
+* [Laden Sie die XDP-Beispieldateien herunter und installieren Sie sie in AEM.](assets/xdp-templates-fragments.zip)
+* [Laden Sie das Paket herunter und installieren Sie es mit Package Manager.](assets/using-fragments-assets.zip)
+* [Die beispielhafte XDP-Datei und die entsprechenden Fragmente können hier heruntergeladen werden.](assets/xdptemplates.zip)
 
-**Nachdem Sie das Paket installiert haben, müssen Sie die folgenden URLs in Adobe Granite CSRF Filter in Zulassungsliste setzen.**
+**Nachdem Sie das Paket installiert haben, müssen Sie die folgenden URLs unter „Adobe Granite CSRF Filter“ auf die Zulassungsliste setzen.**
 
-1. Führen Sie die unten genannten Schritte aus, um die oben genannten Pfade in Zulassungslisten anzuzeigen.
-1. [Bei configMgr anmelden](http://localhost:4502/system/console/configMgr)
-1. Suchen Sie nach Adobe Granite CSRF Filter .
-1. Fügen Sie den folgenden Pfad in die ausgeschlossenen Abschnitte hinzu und speichern Sie
-1. /content/AEMFormsSamples/usingFragments
+1. Führen Sie die folgenden Schritte aus, um die oben genannten Pfade auf die Zulassungsliste zu setzen.
+1. [Melden Sie sich bei configMgr an.](http://localhost:4502/system/console/configMgr)
+1. Suchen Sie nach „Adobe Granite CSRF Filter“.
+1. Fügen Sie den folgenden Pfad in den ausgeschlossenen Abschnitten hinzu und speichern Sie
+1. /content/AemFormsSamples/usingfragments.
 
-Es gibt verschiedene Möglichkeiten, den Beispielcode zu testen. Am schnellsten und einfachsten ist die Verwendung der Postman-App. Mit Postman können Sie POST-Anfragen an Ihren Server richten. Installieren Sie das Postman-Programm auf Ihrem System.
-Starten Sie die App und geben Sie die folgende URL ein, um die Export-Daten-API zu testen.
+Es gibt verschiedene Möglichkeiten, den Beispiel-Code zu testen. Am schnellsten und einfachsten lässt sich hier die Postman-App verwenden. Mit Postman können Sie POST-Anfragen an Ihren Server richten. Installieren Sie die Postman-App auf Ihrem System.
+Starten Sie die App und geben Sie die folgende URL ein, um die API für den Datenexport zu testen.
 
-Stellen Sie sicher, dass Sie &quot;POST&quot;aus der Dropdown-Liste http://localhost:4502/content/AemFormsSamples/usingfragments.html ausgewählt haben. Stellen Sie sicher, dass Sie &quot;Autorisierung&quot;als &quot;Einfache Autorisierung&quot;angeben. Geben Sie den Benutzernamen und das Kennwort des AEM-Servers an Navigieren Sie zur Registerkarte &quot;Hauptteil&quot;und geben Sie die Anforderungsparameter an, wie in der Abbildung unten dargestellt
-![export](assets/using-fragment-postman.png)
-Klicken Sie dann auf die Schaltfläche Senden .
+Stellen Sie sicher, dass Sie „POST“ aus der Dropdown-Liste ausgewählt haben: 
+http://localhost:4502/content/AemFormsSamples/usingfragments.html
+Stellen Sie sicher, dass Sie „Autorisierung“ als Standardauthentifizierung angeben. Geben Sie den Benutzernamen und das Passwort für den AEM-Server an.
+Navigieren Sie zur Registerkarte „Hauptteil“ und geben Sie die Anfrageparameter an, wie in der Abbildung unten dargestellt.
+![Export](assets/using-fragment-postman.png)
+Klicken Sie dann auf die Schaltfläche „Senden“.
 
-[Sie können diese Postman-Sammlung importieren, um die API zu testen](assets/usingfragments.postman_collection.json)
+[Sie könnten diese Postman-Sammlung importieren, um die API zu testen.](assets/usingfragments.postman_collection.json)
