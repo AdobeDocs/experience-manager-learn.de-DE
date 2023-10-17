@@ -9,38 +9,38 @@ level: Beginner
 exl-id: 36c38cb6-6f6a-4328-abf5-7a30059b66ce
 last-substantial-update: 2019-03-20T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '367'
-ht-degree: 29%
+ht-degree: 100%
 
 ---
 
 # Verwenden von Transaktionsberichten in AEM Forms{#using-transaction-reporting-in-aem-forms}
 
-Mit AEM Forms 6.4.1 wurden Transaktionsberichte eingeführt, um die Anzahl der Formularübermittlungen, die Darstellung von Dokumenten mithilfe von Document Services und die Darstellung interaktiver Kommunikation (Web- und Druckkanäle) zu erfassen. Diese Funktion richtet sich in erster Linie an Kunden, die die Software auf der Grundlage der Anzahl der Formularübermittlungen und/oder wiedergegebenen Dokumente lizenzieren möchten. Diese Funktion ist derzeit nur für AEM Forms OSGI-Stack verfügbar.
+Mit AEM Forms 6.4.1 wurden Transaktionsberichte eingeführt, um die Anzahl der Formularübermittlungen, das Rendern von Dokumenten mithilfe von Dokumentendiensten und das Rendern interaktiver Kommunikation (Web- und Druckkanäle) zu erfassen. Diese Funktion richtet sich in erster Linie an Kundinnen und Kunden, die die Software basierend auf der Anzahl der Formularübermittlungen und/oder wiedergegebenen Dokumente lizenzieren möchten. Diese Funktion ist derzeit nur für den OSGi-Stapel von AEM Forms verfügbar.
 
-## Aktivieren der Transaktionsberichterstellung {#enabling-transaction-reporting}
+## Aktivieren von Transaktionsberichten {#enabling-transaction-reporting}
 
-Standardmäßig ist die Transaktionserfassung deaktiviert. Gehen Sie zur Aktivierung der Transaktionsaufzeichnung wie folgt vor:
+Standardmäßig ist das Aufzeichnen von Transaktionen deaktiviert. Gehen Sie wie folgt vor, um die Transaktionsaufzeichnung zu aktivieren:
 
-* [Öffnen Sie configMgr](http://localhost:4502/system/console/configMgr)
-* Suchen Sie nach &quot;Forms Transaction Reporting&quot;.
-* Aktivieren Sie das Kontrollkästchen &quot;Transaktionen aufzeichnen&quot;
-* Speichern Sie Ihre Änderungen
+* [Öffnen Sie configMgr.](http://localhost:4502/system/console/configMgr)
+* Suchen Sie nach „Forms-Transaktionsberichte“.
+* Aktivieren Sie das Kontrollkästchen „Transaktionen aufzeichnen“
+* Speichern Sie Ihre Änderungen.
 
-Sobald die Transaktionsberichterstellung aktiviert ist, können Sie adaptive Forms senden, Dokumente mithilfe von Document Services generieren oder Dokumente zur interaktiven Kommunikation rendern, um Transaktionsberichte in Aktion zu sehen.
+Sobald die Transaktionsberichterstellung aktiviert ist, können Sie adaptive Formulare senden, Dokumente mithilfe von Dokumentendiensten generieren oder Dokumente zur interaktiven Kommunikation rendern, um Transaktionsberichte in Aktion zu sehen.
 
 ## Anzeigen des Transaktionsberichts {#viewing-transaction-report}
 
-Um den Transaktionsbericht anzuzeigen, melden Sie sich bei AEM Forms als Administrator an. Nur Mitglieder der Gruppe fd-Administrator können den Transaktionsbericht anzeigen.
+Um den Transaktionsbericht anzuzeigen, melden Sie sich bei AEM Forms als Admin an. Nur Mitglieder der Gruppe fd-Administrator können Transaktionsberichte anzeigen.
 
-Tools auswählen | Forms | Anzeigen des Transaktionsberichts
+Tools auswählen | Formulare | Transaktionsbericht anzeigen
 
-oder Sie können den Transaktionsbericht anzeigen, indem Sie auf [here](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html)
+Oder Sie können den Transaktionsbericht durch einen Klick [hierauf](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html) anzeigen.
 
-![TransctionReporting](assets/transactionreporting.gif)
+![Transaktionsbericht](assets/transactionreporting.gif)
 
-Im Screenshot oben ist Document Processed die Anzahl der Dokumente, die mit Document Services generiert wurden. Die gerenderten Dokumente entsprechen der Anzahl der wiedergegebenen interaktiven Kommunikationsdokumente (Web und Druck). Forms Submitted ist die Anzahl der Übermittlungen adaptiver Formulare.
+Im Screenshot oben ist „Verarbeitete Dokumente“ die Anzahl der Dokumente, die mit Dokumentendiensten generiert wurden. „Gerenderte Dokumente“ entspricht der Anzahl der wiedergegebenen interaktiven Kommunikationsdokumente (Web und Druck). „Übermittelte Formulare“ ist die Anzahl der Übermittlungen adaptiver Formulare.
 
 Eine Transaktion verbleibt für einen bestimmten Zeitraum im Puffer (Leerlauf-Pufferzeit + Rückwärtsreplikationszeit). Standardmäßig dauert es ungefähr 90 Sekunden, bis die Anzahl der Transaktionen im Transaktionsbericht angezeigt wird.
 
@@ -48,4 +48,4 @@ Aktionen wie das Senden eines PDF-Formulars, die Verwendung der Agent-Benutzerob
 
 Wenn Sie den Transaktionsbericht auf der Autoreninstanz anzeigen, stellen Sie sicher, dass die Rückwärtsreplikation auf allen Veröffentlichungsinstanzen konfiguriert ist.
 
-Weitere Informationen zur Transaktionsberichterstellung [Bitte klicken Sie hier](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
+Für weitere Informationen zu Transaktionsberichten [klicken Sie hier](https://helpx.adobe.com/de/experience-manager/6-4/forms/using/transaction-reports-overview.html)
