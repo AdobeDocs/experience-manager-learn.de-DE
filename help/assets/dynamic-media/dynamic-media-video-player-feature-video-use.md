@@ -1,6 +1,6 @@
 ---
 title: Verwenden des Video-Players in AEM Dynamic Media
-description: AEM Dynamic Media-Videoplayer, der bisher zur Unterstützung des adaptiven Video-Streaming auf Desktop-Clients und Browsern auf Flash-Laufzeitumgebung angewiesen war, wurde beim Flash-basierten Content-Streaming aggressiver. Mit der Einführung von HLS (Apples HTTP Live Streaming Video-Versandprotokoll) können Inhalte jetzt gestreamt werden, ohne auf Flash angewiesen zu sein.
+description: Der AEM Dynamic Media-Videoplayer war früher auf die Flash-Laufzeitumgebung angewiesen, um das adaptive Video-Streaming auf Desktop-Clients zu unterstützen, und die Browser wurden beim Streaming von Flash-basierten Inhalten immer aggressiver. Mit der Einführung von HLS (Apple-Protokoll zur Bereitstellung von HTTP-Live-Streaming-Videos) können Inhalte jetzt gestreamt werden, ohne auf Flash angewiesen zu sein.
 feature: Video Profiles
 version: 6.4, 6.5
 topic: Content Management
@@ -8,28 +8,28 @@ role: User
 level: Beginner
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '251'
-ht-degree: 25%
+ht-degree: 100%
 
 ---
 
 
 # Verwenden des Video-Players in AEM Dynamic Media{#using-the-video-player-in-aem-dynamic-media}
 
-AEM Dynamic Media-Videoplayer, der bisher zur Unterstützung des adaptiven Video-Streaming auf Desktop-Clients und Browsern auf Flash-Laufzeitumgebung angewiesen war, wurde beim Flash-basierten Content-Streaming aggressiver. Mit der Einführung von HLS (Apples HTTP Live Streaming Video-Versandprotokoll) können Inhalte jetzt gestreamt werden, ohne auf Flash angewiesen zu sein.
+Der AEM Dynamic Media-Videoplayer war früher auf die Flash-Laufzeitumgebung angewiesen, um das adaptive Video-Streaming auf Desktop-Clients zu unterstützen, und die Browser wurden beim Streaming von Flash-basierten Inhalten immer aggressiver. Mit der Einführung von HLS (Apple-Protokoll zur Bereitstellung von HTTP-Live-Streaming-Videos) können Inhalte jetzt gestreamt werden, ohne auf Flash angewiesen zu sein.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791?quality=12&learn=on)
 
-## Schnellzugriff auf den Flash-Videoplayer {#quick-look-into-non-flash-video-player}
+## Kurzer Blick auf Videoplayer, die nicht Flash verwenden {#quick-look-into-non-flash-video-player}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429?quality=12&learn=on)
 
-Die HLS-Browserunterstützung sieht wie folgt aus: Für nicht unterstützte Browser wechseln wir zurück zur progressiven Videobereitstellung
+Die HLS-Browser-Unterstützung sieht wie folgt aus. Bei nicht unterstützten Browsern wird auf die progressive Videobereitstellung zurückgegriffen.
 
 >[!NOTE]
 >
-> Dynamic Media Hybrid unterstützt ab 15. März 2022 NICHT mehr Video-Streaming in Internet Explorer 11. Führen Sie ein Upgrade auf Version 6.5.12 oder höher durch, um auf die progressive Wiedergabe in IE 11 zurückzukehren.
+> Dynamic Media Hybrid unterstützt seit 15. März 2022 NICHT mehr das Video-Streaming in Internet Explorer 11. Führen Sie ein Upgrade auf Version 6.5.12 oder höher durch, um zur progressiven Wiedergabe in IE 11 zurückzukehren.
 
 <table> 
  <thead> 
@@ -48,8 +48,8 @@ Die HLS-Browserunterstützung sieht wie folgt aus: Für nicht unterstützte Brow
   <tr>
    <td> <p>Desktop</p> </td>
    <td> <p>Internet Explorer 11+</p> </td>
-   <td> <p>Dynamic Media - Scene7-Modus: HLS-Video-Streaming</p> 
-        <p>Dynamic Media - Hybridmodus: Progressiver Download</p>
+   <td> <p>Scene7-Modus von Dynamic Media: HLS-Video-Streaming</p> 
+        <p>Hybridmodus von Dynamic Media: progressiver Download</p>
    </td>
   </tr>
   <tr>
@@ -74,17 +74,17 @@ Die HLS-Browserunterstützung sieht wie folgt aus: Für nicht unterstützte Brow
   </tr>
   <tr> 
    <td> <p>Mobilgerät</p> </td>
-   <td> <p>Chrome (Android 6 oder früher)</p> </td>
+   <td> <p>Chrome (Android 6 oder früher)</p> </td>
    <td> <p>Progressiver Download</p> </td>
   </tr>
   <tr> 
    <td> <p>Mobilgerät</p> </td>
-   <td> <p>Chrome (Android 7 oder höher)</p> </td>
+   <td> <p>Chrome (Android 7 oder neuer)</p> </td>
    <td> <p>HLS-Video-Streaming</p> </td>
   </tr>
   <tr> 
-   <td> <p>Mobilgerät</p> </td>
-   <td> <p>Android (Standardbrowser)</p> </td>
+   <td> <p>Mobilgeräte</p> </td>
+   <td> <p>Android (Standard-Browser)</p> </td>
    <td> <p>Progressiver Download</p> </td>
   </tr>
   <tr> 
