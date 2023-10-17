@@ -30,7 +30,7 @@ In diesem Artikel werden einige Schwachstellen behandelt, die kürzlich in AEM g
 
 ## Aktion erforderlich
 
-* AEM-Implementierungen sollten mit der Verwendung der neuesten Dispatcher-Version beginnen.
+* AEM-Bereitstellungen sollten mit der Verwendung der neuesten Dispatcher-Version beginnen.
 * Die Dispatcher-Sicherheitsregeln müssen gemäß der empfohlenen Konfiguration angewendet werden.
 * Die [AEM-Sicherheitscheckliste](https://helpx.adobe.com/experience-manager/6-5/sites/administring/using/security-checklist.html) sollte für AEM-Bereitstellungen ausgefüllt werden.
 
@@ -52,4 +52,3 @@ In diesem Artikel werden einige Schwachstellen behandelt, die kürzlich in AEM g
 >* [AEM Dispatcher-Benutzerhandbuch](https://helpx.adobe.com/de/experience-manager/dispatcher/user-guide.html)
 >* [AEM Dispatcher-Versionshinweise](https://helpx.adobe.com/experience-manager/dispatcher/release-notes.html)
 >* [AEM-Sicherheitsbulletins](https://helpx.adobe.com/de/security.html#experience-manager)
-
