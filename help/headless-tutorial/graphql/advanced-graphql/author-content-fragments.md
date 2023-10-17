@@ -38,7 +38,7 @@ In diesem Kapitel erfahren Sie, wie Sie:
 Installieren Sie ein AEM-Paket, das mehrere Ordner und Beispielbilder enthält, die zur Beschleunigung des Tutorials verwendet werden.
 
 1. Laden Sie [Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip) herunter
-1. Navigieren Sie in AEM zu **Tools** > **Implementierung** > **Pakete**, um auf den **Package Manager** zuzugreifen.
+1. Navigieren Sie in AEM zu **Tools** > **Bereitstellung** > **Pakete**, um auf den **Package Manager** zuzugreifen.
 1. Laden Sie das im vorherigen Schritt heruntergeladene Paket (die ZIP-Datei) hoch und installieren Sie es.
 
    ![Paket über Package Manager hochgeladen](assets/author-content-fragments/install-starter-package.png)
