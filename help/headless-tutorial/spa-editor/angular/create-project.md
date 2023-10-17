@@ -93,7 +93,7 @@ Es gibt mehrere Möglichkeiten, ein Maven-Projekt mit mehreren Modulen für AEM 
 
 ## Erstellen des Projekts
 
-Kompilieren, erstellen und implementieren Sie anschließend mithilfe von Maven den Projekt-Code in einer lokalen Instanz von AEM.
+Kompilieren und erstellen Sie anschließend mithilfe von Maven den Projekt-Code in einer lokalen Instanz von AEM und stellen Sie ihn bereit.
 
 1. Stellen Sie sicher, dass eine Instanz von AEM lokal auf Port **4502** ausgeführt wird.
 2. Überprüfen Sie im Befehlszeilen-Terminal, ob Maven installiert ist:
