@@ -1,7 +1,7 @@
 ---
-title: Erstellen interaktiver Kommunikation für Druckkanal
+title: Erstellen einer interaktiven Kommunikation für den Druckkanal
 seo-title: Create Interactive Communication For Print Channel
-description: Dies ist Teil 6 des mehrteiligen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments für den Druckkanal. In diesem Teil wird das Dokument für die interaktive Kommunikation für den Druckkanal erstellt.
+description: Dies ist Teil 6 des mehrteiligen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments für den Druckkanal. In diesem Teil wird ein Dokument für die interaktive Kommunikation für den Druckkanal erstellt.
 seo-description: This is part 6 of multipart tutorial for creating your first interactive communication document for the print channel. In this part, Interactive Communication Document for Print channel is created.
 uuid: 25318a2a-be9d-47d8-806b-d99c8e1c6a74
 feature: Interactive Communication
@@ -18,15 +18,15 @@ role: Developer
 level: Beginner
 exl-id: d4355f72-aefa-4ab3-ba7e-ebd7f7b536f0
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '78'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Erstellen interaktiver Kommunikation für Druckkanal {#create-interactive-communication-for-print-channel}
+# Erstellen einer interaktiven Kommunikation für den Druckkanal {#create-interactive-communication-for-print-channel}
 
-In diesem Teil wird das Dokument für die interaktive Kommunikation für den Druckkanal erstellt.
+In diesem Teil wird ein Dokument für die interaktive Kommunikation für den Druckkanal erstellt.
 
 Nach dem Definieren und Konfigurieren der Datenquelle und des Formulardatenmodells erstellen wir jetzt unsere interaktive Kommunikation für den Druckkanal
 
@@ -34,4 +34,4 @@ Nach dem Definieren und Konfigurieren der Datenquelle und des Formulardatenmodel
 
 ## Nächste Schritte
 
-[Inhalt zu Zielbereichen hinzufügen](./add-content-to-target-areas.md)
+[Hinzufügen von Inhalten zu Zielbereichen](./add-content-to-target-areas.md)
