@@ -1,6 +1,6 @@
 ---
 title: Generieren von URLs und Einbettungscodes für AEM Dynamic Media-Assets
-description: Schritte zum Generieren einer öffentlichen URL und eines Einbettungscodes für ein Asset in Dynamic Media
+description: Schritte zum Generieren von öffentlichen URLs und Einbettungscodes für Assets in Dynamic Media
 role: Developer
 level: Intermediate
 version: Cloud Service
@@ -9,14 +9,14 @@ feature: Asset Distribution
 index: y
 exl-id: 2b526f92-17b4-4a69-9c1c-d8ca42334433
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '50'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Generieren von URLs und Einbettungscodes für AEM Dynamic Media-Assets
 
-In diesem Video werden die Schritte zum Generieren einer öffentlichen URL oder eines Einbettungscodes für ein Asset erläutert.
+In diesem Video werden die Schritte zum Generieren von öffentlichen URLs oder Einbettungscode für Assets erläutert.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335364?quality=12&learn=on)
