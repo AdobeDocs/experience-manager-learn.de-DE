@@ -1,33 +1,33 @@
 ---
-title: AEM Dispatcher - Allgemeine Protokolle
-description: Sehen Sie sich die gängigen Protokolleinträge des Dispatchers an und lernen Sie, was sie bedeuten und wie sie angegangen werden können.
+title: AEM Dispatcher – Allgemeine Protokolle
+description: Sehen Sie sich die gängigen Protokolleinträge des Dispatchers an und lernen Sie, was sie bedeuten und wie sie behandelt werden.
 version: 6.5
 topic: Administration, Performance
 feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
-workflow-type: tm+mt
+exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '812'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-
 # Allgemeine Protokolle
 
-[Inhalt](./overview.md)
+[Inhaltsverzeichnis](./overview.md)
 
 [&lt;- Zurück: Vanity-URLs](./disp-vanity-url.md)
 
 ## Übersicht
 
-In diesem Dokument werden gängige Protokolleinträge beschrieben, was sie bedeuten und wie sie behandelt werden.
+In diesem Dokument werden gängige Protokolleinträge beschrieben und es wird erläutert, was sie bedeuten und wie sie behandelt werden.
 
-## GLOB-Warnung
+## GLOB-Warnmeldung
 
-Beispielprotokolleintrag:
+Beispiel-Protokolleintrag:
 
 ```
 Fri Jul 20 03:35:09 2018 W pid 8300 (tid 139937910880384) /etc/httpd/conf/publish-filters.any:5: Allowing requests with globs is considered unsafe.
@@ -53,16 +53,16 @@ Oder noch besser, um überhaupt keine Übereinstimmung mit einem Platzhalter-Mat
 /0041 { /type "allow" /extension "css" }
 ```
 
-Wenn Sie eine der vorgeschlagenen Methoden durchführen, wird diese Fehlermeldung aus den Protokollen entfernt.
+Wenn Sie eine der vorgeschlagenen Methoden durchführen, wird die Fehlermeldung in den Protokollen nicht mehr angezeigt.
 
-## Zurückweisungen filtern
+## Filtern nach Zurückweisungen
 
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-Diese Einträge werden nicht immer angezeigt, selbst wenn Zurückweisungen auftreten, wenn die Protokollebene zu niedrig eingestellt ist. Setzen Sie sie auf Info oder debug , um sicherzustellen, dass Sie sehen, ob die Filter die Anforderungen ablehnen.
+Diese Einträge werden nicht immer angezeigt, selbst wenn Zurückweisungen auftreten, wenn die Protokollebene zu niedrig eingestellt ist. Setzen Sie sie auf „Info“ oder „debug“, um sicherzustellen, dass Sie sehen, ob die Filter die Anfragen ablehnen.
 </div>
 
-Beispielprotokolleintrag:
+Beispiel-Protokolleintrag:
 
 ```
 Fri Jul 20 17:25:48 2018 D pid 25939 (tid 139937517123328) Filter rejects: GET /libs/granite/core/content/login.html HTTP/1.1
@@ -76,81 +76,81 @@ Fri Jul 20 22:16:55 2018 I pid 128803 "GET /system/console/" ! - 8ms publishfarm
 
 <div style="color: #000;border-left: 6px solid red;background-color:#ddffff;"><b>Vorsicht:</b>
 
-Beachten Sie, dass die Dispatcher-Regeln so eingerichtet wurden, dass sie diese Anforderung herausfiltern. In diesem Fall wurde die Seite, die besucht werden wollte, absichtlich abgelehnt, und wir möchten nichts daran ändern.
+Beachten Sie, dass die Dispatcher-Regeln so eingerichtet wurden, dass sie diese Anfrage herausfiltern. In diesem Fall wurde die Seite, die besucht werden sollte, absichtlich abgelehnt, und dies sollte nicht verändert werden.
 </div>
 
-Wenn Ihr Protokoll wie folgt aussieht:
+Wenn Ihr Protokoll wie dieser Eintrag aussieht:
 
 ```
 Fri Jul 20 17:26:47 2018 D pid 20051 (tid 139937517123328) Filter rejects: 
 GET /etc/designs/exampleco/fonts/montserrat-regular/montserrat-regular-webfont.eot HTTP/1.1
 ```
 
-Das lässt uns wissen, dass unsere Designdatei `.eot` wird blockiert, und wir werden das beheben wollen.
-Daher sollten wir uns unsere Filterdatei ansehen und die folgende Zeile hinzufügen, um `.eot` Dateien über
+Dies besagt, dass die Design-Datei `.eot` blockiert ist und das behoben werden sollte.
+Daher sollte die Filterdatei angeschaut und die folgende Zeile hingefügt werden, um `.eot`-Dateien zuzulassen:
 
 ```
 /0011 { /type "allow" /method "GET" /extension 'eot' /path "/etc/designs/*" }
 ```
 
-Dadurch kann die Datei durchlaufen und die Protokollierung verhindert werden.
+So kann die Datei durchgelassen und die Protokollierung verhindert werden.
 Wenn Sie sehen möchten, was herausgefiltert wird, können Sie diesen Befehl in Ihrer Protokolldatei ausführen:
 
 ```
 $ grep "Filter rejects\|\!" /var/log/httpd/dispatcher.log | awk 'match($0, /\/.*\//, m){ print m0 }' | awk '{ print $1 }'| sort | uniq -c | sort -rn
 ```
 
-## Timeouts von Rendering
+## Zeitüberschreitungen beim Rendern
 
-Beispiel für einen Protokolleintrag für Socket-Timeout:
+Beispiel-Protokolleintrag für eine Socket-Zeitüberschreitung:
 
 ```
 Fri Jul 20 22:31:15 2018 W pid 3648 Unable to connect socket to 10.43.3.40:4502: Connection timed out 
 Fri Jul 20 22:31:15 2018 W pid 3648 Unable to connect to any backend in farm authorfarm
 ```
 
-Dies tritt auf, wenn Sie die falsche IP-Adresse im Renderer-Abschnitt Ihrer Farm konfiguriert haben. Diese oder die AEM Instanz reagierte nicht mehr oder hörte nicht zu und der Dispatcher kann sie nicht erreichen.
+Dies tritt auf, wenn Sie im Render-Abschnitt Ihrer Farm die falsche IP-Adresse konfiguriert haben. Es liegt entweder dies vor, oder die AEM-Instanz reagierte nicht mehr bzw. wartete nicht hierauf und der Dispatcher konnte sie nicht erreichen.
 
-Überprüfen Sie Ihre Firewall-Regeln und stellen Sie sicher, dass die AEM-Instanz ausgeführt und fehlerfrei ist.
+Überprüfen Sie Ihre Firewall-Regeln und stellen Sie sicher, dass die AEM-Instanz fehlerfrei ausgeführt wird.
 
-Beispiel-Protokolleinträge für Gateway-Timeout:
+Beispiel-Protokolleinträge für Gateway-Zeitüberschreitungen:
 
 ```
 Fri Jul 20 22:32:42 2018 I pid 3648 "GET /favicon.ico" 502 - 54034ms authorfarm/- 
 Fri Jul 20 22:35:45 2018 I pid 3648 "GET /favicon.ico" 503 - 54234ms authorfarm/-
 ```
 
-Das bedeutet, dass die AEM-Instanz über einen offenen Socket verfügte, den sie erreichen konnte, und mit der Antwort eine Zeitüberschreitung aufwies. Das bedeutet, dass Ihre AEM Instanz zu langsam oder nicht gesund war und der Dispatcher die konfigurierten Timeout-Einstellungen im Renderer-Abschnitt der Farm erreicht hat. Erhöhen Sie entweder die Timeout-Einstellung oder stellen Sie sicher, dass Ihre AEM ordnungsgemäß ausgeführt wird.
+Das bedeutet, dass die AEM-Instanz über einen offenen Socket verfügte, den sie erreichen konnte, es bei der Antwort aber zu einer Zeitüberschreitung kam. Das bedeutet, dass Ihre AEM-Instanz zu langsam war bzw. nicht richtig funktionierte und für den Dispatcher die konfigurierten Zeitüberschreitungseinstellungen im Render-Abschnitt der Farm zum Tragen kamen. Erhöhen Sie die Zeitüberschreitungseinstellung bzw. stellen Sie sicher, dass Ihre AEM-Instanz ordnungsgemäß ausgeführt wird.
 
 ## Caching-Ebene
 
-Beispielprotokolleintrag:
+Beispiel-Protokolleintrag:
 
 ```
 Fri Jul 20 23:00:19 2018 I pid 16004 (tid 140134145820416) Current cache hit ratio: 87.94 %
 ```
 
-Das bedeutet, dass Ihr Abruf von der Renderebene im Vergleich zum Cache gemessen wird. Sie möchten mehr als 80 % aus dem Cache erreichen und sollten die Hilfe befolgen [here](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html%3Flang%3Den):
+Das bedeutet, dass Ihre Abrufe von der Render-Ebene im Vergleich zu Abrufen vom Cache gemessen werden. Sie sollten mehr als 80 % aus dem Cache erreichen – Hilfe dazu finden Sie [hier](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html%3Flang%3Den):
 
-Um diese Zahl so hoch wie möglich zu bekommen.
+Diese Zahl sollte so hoch wie möglich sein.
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-Selbst wenn Sie Ihre Cache-Einstellungen in der Farm-Datei haben, um alles zwischenzuspeichern, das Sie möglicherweise zu häufig oder zu aggressiv löschen, kann dies zu einem geringeren Prozentsatz des Cache-Trefferverhältnisses führen
+Wenn entsprechend Ihrer Cache-Einstellungen in der Farm-Datei alles zwischengespeichert werden soll, Sie den Cache aber zu häufig oder zu umfangreich leeren, kann dies den Prozentsatz des Cache-Trefferverhältnisses verringern
 </div>
 
 ## Fehlendes Verzeichnis
 
-Beispiel für einen Protokolleintrag:
+Beispiel-Protokolleintrag:
 
 ```
 Fri Jul 20 14:02:43 2018 E pid 4728 (tid 140662586435328) Unable to create parent directory /mnt/var/www/author/libs/dam/content/asseteditors/formitems.overlay.infinity.json/application: Not a directory
 ```
 
-Dies wird normalerweise angezeigt, wenn ein Element abgerufen wird, während gleichzeitig eine Cache-Löschung erfolgt.
+Dies wird meist angezeigt, wenn ein Element abgerufen wird, während gleichzeitig eine Cache-Leerung erfolgt.
 
-Diese oder das Basisverzeichnis hat schlechte Berechtigungen dafür oder den falschen SELinux-Dateikontext für den Ordner, der Apache daran hindert, die neuen erforderlichen Unterverzeichnisse zu erstellen.
+Es liegt entweder dies vor, oder das Basisverzeichnis hat ungünstige Berechtigungen dafür, oder für den Ordner, durch den Apache die neuen erforderlichen Unterverzeichnisse nicht erstellen kann, liegt der falsche SELinux-Dateikontext vor.
 
-Bei Berechtigungsproblemen sehen Sie sich die Berechtigungen des Dokumentenstamms an und stellen Sie sicher, dass sie in etwa wie folgt aussehen:
+Sehen Sie sich bei Problemen mit den Berechtigungen die DocumentRoot-Berechtigungen an und stellen Sie sicher, dass sie in etwa wie folgt aussehen:
 
 ```
 dispatcher$ ls -Z /var/www/
@@ -159,7 +159,7 @@ drwxr-xr-x+ apache apache system_u:object_r:httpd_sys_content_t:s0 html
 
 ## Vanity-URL nicht gefunden
 
-Beispiel für einen Protokolleintrag:
+Beispiel-Protokolleintrag:
 
 ```
 Thu Sep 27 17:35:11 2018 D pid 18936 Checking vanity URLs 
@@ -167,11 +167,11 @@ Thu Sep 27 17:35:11 2018 D pid 18936 Vanity URL file (/tmp/vanity_urls) not foun
 Thu Sep 27 17:35:11 2018 W pid 18936 Unable to fetch vanity URLs from 10.43.0.42:4503/libs/granite/dispatcher/content/vanityUrls.html: remote server returned: HTTP/1.1 404 Not Found
 ```
 
-Dieser Fehler tritt auf, wenn Sie Ihren Dispatcher so konfiguriert haben, dass der dynamische automatische Filter Vanity-URLs zulässt, die Einrichtung jedoch nicht abgeschlossen haben, indem Sie das Paket auf dem AEM Renderer installieren.
+Dieser Fehler tritt auf, wenn Sie Ihren Dispatcher so konfiguriert haben, dass der dynamische automatische Filter Vanity-URLs zulässt, die Einrichtung jedoch nicht durch Installation des Pakets im AEM-Renderer abgeschlossen wurde.
 
-Um dies zu beheben, installieren Sie bitte das Feature Pack für die Vanity-URL auf der AEM-Instanz und lassen Sie zu, dass es vom anonymen Benutzer bereit ist. Details [here](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html%3Flang%3Den)
+Um dies zu beheben, installieren Sie das Feature Pack für Vanity-URLs in der AEM-Instanz und lassen Sie zu, dass es für anonyme Benutzende bereit ist. Weitere Informationen dazu finden Sie [hier](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html%3Flang%3Den).
 
-Eine funktionierende Vanity-URL-Einrichtung sieht wie folgt aus:
+Eine eingerichtete Vanity-URL, die funktioniert, sieht wie folgt aus:
 
 ```
 Thu Sep 27 17:40:29 2018 D pid 21844 Checking vanity URLs 
@@ -181,26 +181,26 @@ Thu Sep 27 17:40:29 2018 D pid 21844 Loaded 18 vanity URLs from file /tmp/vanity
 
 ## Fehlende Farm
 
-Beispiel für einen Protokolleintrag:
+Beispiel-Protokolleintrag:
 
 ```
 Wed Nov 13 17:17:26 2019 W pid 19173:tid 140542738364160 No farm matches host 'we-retail.com', selected last farm 'publishfarm'
 ```
 
-Dieser Fehler zeigt an, dass aus allen in `/etc/httpd/conf.dispatcher.d/enabled_farms/` sie konnten keinen passenden Eintrag aus dem `/virtualhost` Abschnitt.
+Dieser Fehler zeigt an, dass in keiner der unter `/etc/httpd/conf.dispatcher.d/enabled_farms/` verfügbaren Farm-Dateien ein passender Eintrag im Abschnitt `/virtualhost` gefunden wurde.
 
-Die Farm-Dateien entsprechen dem Traffic basierend auf dem Domänennamen oder Pfad, in dem die Anfrage einging. Es verwendet glob-Abgleich, und wenn es nicht übereinstimmt, haben Sie entweder Ihre Farm nicht richtig konfiguriert, tippen Sie den Eintrag in die Farm ein oder haben den Eintrag komplett fehlt. Wenn die Farm keinen Einträgen entspricht, wird standardmäßig nur die letzte Farm verwendet, die im Stapel der enthaltenen Farm-Dateien enthalten ist. In diesem Beispiel war es `999_ams_publish_farm.any` , der den allgemeinen Namen von publishfarm trägt.
+Die Farm-Dateien entsprechen dem Traffic basierend auf dem Domain-Namen oder Pfad, über den die Anfrage eingegangen ist. Es wird ein glob-Abgleich durchgeführt. Gibt es keine Übereinstimmung, haben Sie Ihre Farm nicht richtig konfiguriert, der Eintrag wurde falsch in die Farm eingegeben oder der Eintrag fehlt komplett. Wenn die Farm keinen Einträgen entspricht, wird letztendlich standardmäßig einfach die zuletzt im Stapel der enthaltenen Farm-Dateien enthaltene Farm verwendet. In diesem Beispiel ist dies `999_ams_publish_farm.any` (der generische publishfarm-Name).
 
-Im Folgenden finden Sie eine Beispiel-Farm-Datei `/etc/httpd/conf.dispatcher.d/enabled_farms/300_weretail_publish_farm.any` wurde reduziert, um die relevanten Teile hervorzuheben.
+Im Folgenden sehen Sie ein Beispiel einer Farm-Datei `/etc/httpd/conf.dispatcher.d/enabled_farms/300_weretail_publish_farm.any`, die reduziert wurde, um die relevanten Teile hervorzuheben.
 
 ## Element bereitgestellt von
 
-Beispiel für einen Protokolleintrag:
+Beispiel-Protokolleintrag:
 
 ```
 Tue Nov 26 16:41:34 2019 I pid 9208 (tid 140112092391168) "GET /content/we-retail/us/en.html" - + 24034ms publishfarm/0
 ```
 
-Die Seite wurde über die GET HTTP-Methode für den Inhalt abgerufen `/content/we-retail/us/en.html` und es dauerte 24034 Millisekunden. Der Teil, auf den wir achten wollten, ist am Ende `publishfarm/0`. Sie werden feststellen, dass die Zielgruppe mit der `publishfarm`. Die Anfrage wurde vom Renderer 0 abgerufen. Das bedeutet, dass diese Seite von AEM angefordert und dann zwischengespeichert werden musste. Jetzt fordern wir diese Seite erneut an und sehen, was mit dem Protokoll passiert.
+Die Seite wurde über die HTTP-GET-Methode für den Inhalt `/content/we-retail/us/en.html` abgerufen (Dauer des Vorgangs: 24034 Millisekunden). Der Teil, auf den wir achten wollen, findet sich ganz am Ende: `publishfarm/0`. Wie zu sehen ist, ist `publishfarm` das Ziel und es wurde ein entsprechender Abgleich durchgeführt. Die Anfrage wurde vom Renderer 0 abgerufen. Das bedeutet, dass diese Seite von AEM angefordert und dann zwischengespeichert werden musste. Als Nächstes fordern wir diese Seite erneut an und sehen, was mit dem Protokoll passiert.
 
-[Weiter -> schreibgeschützte Dateien](./immutable-files.md)
+[Weiter -> Schreibgeschützte Dateien](./immutable-files.md)
