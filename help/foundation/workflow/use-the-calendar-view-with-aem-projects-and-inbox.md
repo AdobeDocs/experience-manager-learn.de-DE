@@ -1,7 +1,7 @@
 ---
-title: Kalenderansicht mit AEM Projekten und Posteingang verwenden
+title: Verwenden der Kalenderansicht mit AEM-Projekten und dem Posteingang
 seo-title: Use Calendar View with AEM Projects and Inbox
-description: AEM Kalenderansicht verfolgt Projekte und Aufgaben in einer Kalenderansicht, um die Projektverwaltung und -planung zu erleichtern. In der Kalenderansicht hätte der Benutzer eine Gesamtübersicht über laufende, geplante, bald fällige und überfällige Projekte und Aufgaben.
+description: Die AEM-Kalenderansicht erfasst Projekte und Aufgaben in einer Kalenderansicht, um die Projektverwaltung und -planung zu erleichtern. In der Kalenderansicht haben Benutzende eine Gesamtübersicht über laufende, geplante, bald fällige und überfällige Projekte und Aufgaben.
 seo-description: AEM's Calendar View tracks projects and tasks in a calendar view for easier project management and scheduling. With Calendar view, user would have an overall visibility over projects and tasks that are currently in progress, planned, due soon and past due.
 version: 6.4, 6.5
 feature: Workflow, Projects
@@ -15,23 +15,23 @@ topic: Collaboration
 role: User
 level: Beginner
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '185'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Kalenderansicht mit AEM Projekten und Posteingang verwenden
+# Verwenden der Kalenderansicht mit AEM-Projekten und dem Posteingang
 
-AEM Kalenderansicht verfolgt Projekte und Aufgaben in einer Kalenderansicht, um die Projektverwaltung und -planung zu erleichtern. In der Kalenderansicht hätte der Benutzer eine Gesamtübersicht über laufende, geplante, bald fällige und überfällige Projekte und Aufgaben.
+Die AEM-Kalenderansicht erfasst Projekte und Aufgaben in einer Kalenderansicht, um die Projektverwaltung und -planung zu erleichtern. In der Kalenderansicht haben Benutzende eine Gesamtübersicht über laufende, geplante, bald fällige und überfällige Projekte und Aufgaben.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16804?quality=12&learn=on)
 
 Mit der Kalenderansicht können Sie Projekte und Aufgaben mit den folgenden Funktionen besser verwalten:
 
-* Der Benutzer kann die Liste der ihm zugewiesenen Projekte anzeigen und ermöglicht Ihnen, von der Kalenderansicht aus zum Projekt zu navigieren. Administratoren können alle Projekte sehen.
-* anpassbare Datumsbereichsfunktion, um den Fortschritt von Projekten in einem bestimmten Zeitraum zu überwachen.
-* Der Benutzer kann ein Projekt oder eine Aufgabe als abgeschlossen, verzögert oder pünktlich kennzeichnen.
-* Benutzer können einem Projekt in der Kalenderansicht eine Beschreibung hinzufügen.
-* Benutzer können Projekten und Aufgaben Prioritätsstufen hinzufügen.
+* Benutzende können die Liste der ihnen zugewiesenen Projekte sehen und von der Kalenderansicht aus zum Projekt navigieren. Admins können alle Projekte sehen.
+* Anpassbare Datumsbereichsfunktion, um den Fortschritt von Projekten in einem bestimmten Zeitraum zu überwachen.
+* Benutzende können ein Projekt oder eine Aufgabe als abgeschlossen, verspätet oder pünktlich kennzeichnen.
+* Benutzende können einem Projekt in der Kalenderansicht eine Beschreibung hinzufügen.
+* Benutzende können Projekten und Aufgaben Prioritätsstufen hinzufügen.
