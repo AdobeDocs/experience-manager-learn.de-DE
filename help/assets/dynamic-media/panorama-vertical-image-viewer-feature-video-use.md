@@ -1,6 +1,6 @@
 ---
 title: Verwenden des Panorama- und Vertikalbild-Viewers mit AEM Assets Dynamic Media
-description: Dynamic Media Viewer-Verbesserungen in AEM 6.4 umfassen das Hinzufügen von Viewer für Panoramabilder, Bild-Viewer für Panoramabilder mit virtueller Realität und Viewer für vertikale Bilder. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein ansprechendes, interaktives Erlebnis des Zimmers, der Eigenschaft, des Standorts oder der Landschaft ohne benutzerdefinierte Entwicklung bereitzustellen.
+description: Dynamic Media Viewer-Verbesserungen in AEM 6.4 umfassen das Hinzufügen des Viewers für Panoramabilder, für Panoramabilder mit virtueller Realität und für vertikale Bilder. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein ansprechendes, interaktives Erlebnis des Zimmers, des Grundstücks, des Standorts oder der Landschaft ohne benutzerdefinierte Entwicklung bereitzustellen.
 feature: Video Profiles, Video Profiles, 360 VR Video
 version: 6.4, 6.5
 topic: Content Management
@@ -8,62 +8,62 @@ role: User
 level: Beginner
 exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '533'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # Verwenden des Panorama- und Vertikalbild-Viewers mit AEM Assets Dynamic Media{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
 
-Dynamic Media Viewer-Verbesserungen in AEM 6.4 umfassen das Hinzufügen von Viewer für Panoramabilder, Bild-Viewer für Panoramabilder mit virtueller Realität und Viewer für vertikale Bilder. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein ansprechendes, interaktives Erlebnis des Zimmers, der Eigenschaft, des Standorts oder der Landschaft ohne benutzerdefinierte Entwicklung bereitzustellen.
+Dynamic Media Viewer-Verbesserungen in AEM 6.4 umfassen das Hinzufügen des Viewers für Panoramabilder, für Panoramabilder mit virtueller Realität und für vertikale Bilder. Der Panorama-Viewer bietet eine einfache Möglichkeit, ein ansprechendes, interaktives Erlebnis des Zimmers, des Grundstücks, des Standorts oder der Landschaft ohne benutzerdefinierte Entwicklung bereitzustellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/24156?quality=12&learn=on)
 
 >[!NOTE]
 >
->Video setzt voraus, dass Ihre AEM-Instanz im Dynamic Media S7-Modus ausgeführt wird. [Anweisungen zum Einrichten von AEM mit Dynamic Media finden Sie hier.](https://helpx.adobe.com/de/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>Video setzt voraus, dass die AEM-Instanz im S7-Modus von Dynamic Media ausgeführt wird. [Anweisungen zum Einrichten von AEM mit Dynamic Media finden sich hier.](https://helpx.adobe.com/de/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
-## VR-Viewer für Panoramabilder und Panoramabilder
+## Panorama- und Panorama-VR-Viewer
 
-Ein Bild wird aufgrund seines Seitenverhältnisses oder seiner Schlüsselwörter als panoramisch betrachtet. Standardmäßig wird ein Bild mit einem Seitenverhältnis von 2 als Panoramabild betrachtet. Viewer-Vorgaben für Panoramabilder werden für eine Bildvorschau verfügbar, wenn sie die oben genannten Kriterien erfüllen. Das Kriterium des Seitenverhältnisses für Panoramabilder kann in der DMS7-Konfiguration des Unternehmens geändert werden, indem die doppelte Eigenschaft s7PanoramicAR unter /conf/global/settings/cloudconfigs/dmscene7/jcr:content angegeben wird. Die Suchbegriffe werden in der Eigenschaft dc:keyword des Metadatenknotens des Assets gespeichert. Wenn die Suchbegriffe eine der folgenden Kombinationen enthalten:
+Ein Bild wird aufgrund seiner Seitenverhältnisse oder seiner Schlüsselwörter als Panoramabild betrachtet. Standardmäßig wird ein Bild mit einem Seitenverhältnis von 2 als Panoramabild betrachtet. Vorgaben für den Panoramabilder-Viewer sind für eine Bildvorschau verfügbar, wenn sie die oben genannten Kriterien erfüllt. Das Kriterium des Seitenverhältnisses für Panoramabilder kann in der DMS7-Konfiguration des Unternehmens geändert werden, indem die doppelte Eigenschaft s7PanoramicAR unter /conf/global/settings/cloudconfigs/dmscene7/jcr:content angegeben wird. Die Suchbegriffe werden in der Eigenschaft dc:keyword des Metadatenknotens des Assets gespeichert. Wenn die Suchbegriffe eine der folgenden Kombinationen enthalten:
 
-* Äquirechteckig,
+* rechteckig gleichseitig,
 * kugelförmig + panoramisch,
-* Kugelpanorama,
+* kugelförmig + Panorama,
 
-es wird unabhängig vom Seitenverhältnis als Panorama-Bild-Asset betrachtet.
+wird es unabhängig vom Seitenverhältnis als Panoramabild-Asset betrachtet.
 
-## Vertikaler Bild-Viewer
+## Vertikalbild-Viewer
 
-Bei horizontalen Farbfeldern sind die Farbfelder je nach Desktop-Bildschirmgröße des Benutzers manchmal erst sichtbar, wenn der Benutzer einen Bildlauf auf der Seite nach unten durchführt. Durch die Verwendung des vertikalen Bild-Viewers und die Platzierung vertikaler Farbfelder wird sichergestellt, dass die Farbfelder unabhängig von der Bildschirmgröße sichtbar sind. Außerdem wird die Größe des Hauptbilds maximiert. Bei horizontalen Farbfeldern war es erforderlich, Platz auf der Seite zu reservieren, um sicherzustellen, dass sie mit hoher Wahrscheinlichkeit sichtbar sind und die Größe des Hauptbilds verringern würden. Bei einem vertikalen Layout müssen Sie sich nicht darum kümmern, diesen Bereich zuzuweisen, und können daher die Größe des Hauptbilds maximieren.
+Bei horizontalen Farbfeldern sind die Farbfelder je nach Desktop-Bildschirmgröße der Benutzenden manchmal erst sichtbar, wenn die Seite nach unten gescrollt wird. Durch die Verwendung des Vertikalbild-Viewers und die Platzierung vertikaler Farbfelder wird sichergestellt, dass die Farbfelder unabhängig von der Bildschirmgröße sichtbar sind. Außerdem wird die Größe des Hauptbilds maximiert. Bei horizontalen Farbfeldern war es erforderlich, Platz auf der Seite zu reservieren, um sicherzustellen, dass sie mit hoher Wahrscheinlichkeit sichtbar sind, und um die Größe des Hauptbilds zu verringern. Bei einem vertikalen Layout müssen Sie sich nicht darum kümmern, diesen Bereich zuzuweisen, und können daher die Größe des Hauptbilds maximieren.
 
 <table> 
  <tbody>
   <tr>
    <td> </td>
    <td>Panorama- und VR-Viewer</td>
-   <td>Vertikaler Bild-Viewer</td>
+   <td>Vertikalbild-Viewer</td>
   </tr>
   <tr>
    <td>Dynamic Media-Ausführungsmodus</td>
-   <td>Nur Dynamic Media Scene7-Modus</td>
+   <td>Nur Scene7-Modus von Dynamic Media</td>
    <td>DMS7 und Dynamic Media</td>
   </tr>
   <tr>
    <td>Nutzungsszenario</td>
-   <td><p>Panorama-Viewer und Virtual Reality-Viewer bieten Benutzern ein ansprechenderes Erlebnis. Ein Benutzer kann ein Hotelzimmer auschecken, bevor er eine Buchung vornimmt, oder ein Mietobjekt auschecken, ohne einen Termin planen zu müssen. Ein Benutzer kann einen Standort und viele weitere Möglichkeiten auschecken. Der Hauptschwerpunkt hier besteht darin, Verbrauchern ein besseres Erlebnis beim Besuch Ihrer Website zu bieten und schließlich Ihre Konversionsrate zu erhöhen.</p> <p> </p> </td> 
-   <td><p>Mit dem vertikalen Bild-Viewer können Sie das Anzeigeerlebnis von Produktbildern maximieren, um den Verbrauchern die bestmögliche Darstellung des Produkts zu bieten, wodurch Konversionen gefördert und die Renditen minimiert werden.</p> <p> </p> </td>
+   <td><p>Der Panorama-Viewer und der Virtual-Reality-Viewer bieten Benutzenden ein ansprechenderes Erlebnis. Benutzende können sich ein Hotelzimmer ansehen, bevor sie eine Buchung vornehmen, oder sich ein Mietobjekt ansehen, ohne einen Termin planen zu müssen. Benutzende können einen Standort und viele weitere Möglichkeiten ansehen. Der Hauptschwerpunkt hier besteht darin, Verbraucherinnen und Verbrauchern ein besseres Erlebnis beim Besuch der Website zu bieten und dadurch die Konversionsrate zu erhöhen.</p> <p> </p> </td> 
+   <td><p>Mit dem Vertikalbild-Viewer lässt sich das Anzeigeerlebnis von Produktbildern maximieren, um den Verbraucherinnen und Verbrauchern die bestmögliche Darstellung des Produkts zu bieten, wodurch Konvertierungen gefördert und Rückgaben minimiert werden.</p> <p> </p> </td>
   </tr>
   <tr>
    <td>Verfügbar </td>
-   <td>OOTB</td>
-   <td>OOTB</td>
+   <td>Vorkonfiguriert</td>
+   <td>Vorkonfiguriert</td>
   </tr>
  </tbody>
 </table>
 
-[Konfigurieren von Dynamic Media im Scene7-Modus](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[Konfigurieren von Dynamic Media im Scene7-Modus](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
 
 [Konfigurieren von Dynamic Media im Hybridmodus](https://helpx.adobe.com/de/experience-manager/6-5/assets/using/config-dynamic.html)
 
