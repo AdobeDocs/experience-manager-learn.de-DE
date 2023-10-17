@@ -1,6 +1,6 @@
 ---
-title: Variablen in AEM Workflow
-description: Verwenden von Variablen des Typs xml,json,arraylist,document im AEM-Workflow
+title: Variablen im AEM-Workflow
+description: Verwenden von Variablen vom Typ „XML“, „JSON“, „ArrayList“ und „Document“ im AEM-Workflow
 version: 6.5
 feature: Adaptive Forms, Workflow
 topic: Development
@@ -9,20 +9,20 @@ level: Beginner
 exl-id: e84b70a0-c51b-4fe3-80e8-f3156931297a
 last-substantial-update: 2020-01-26T00:00:00Z
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '109'
-ht-degree: 27%
+ht-degree: 100%
 
 ---
 
-# Variablen in AEM Workflow
+# Variablen im AEM-Workflow
 
-Ab AEM 6.5 können Sie jetzt Variablen in AEM Workflow erstellen und verwenden. Zuvor erstellten Workflow-Autoren Schlüssel in der Regel mithilfe der Workflow-Metadatenzuordnung. Dies bedeutete das Schreiben von benutzerdefiniertem Code zum Erstellen und Ausfüllen dieser Schlüssel. Mit diesem neuen Funktionsarbeitsablauf können Autoren jetzt einfach Variablen erstellen und diese Variablen überall im Workflow verwenden.
+Ab AEM 6.5 können Sie nun Variablen im AEM-Workflow erstellen und verwenden. Davor haben Workflow-Autorinnen und -Autoren Schlüssel in der Regel mithilfe der Workflow-Metadatenzuordnung erstellt. Dadurch war es erforderlich, benutzerdefinierten Code zu schreiben, um diese Schlüssel zu erstellen und aufzufüllen. Mit dieser neuen Funktion des Workflows können Autorinnen und Autoren jetzt einfach Variablen erstellen und diese Variablen überall im Workflow verwenden.
 
-Die Variablen können die folgenden Typen aufweisen
+Die Variablen können die folgenden Typen aufweisen:
 
 * Long
-* Zweistellig
+* Double
 * Boolesch
 * Zeichenfolge
 * Datum
