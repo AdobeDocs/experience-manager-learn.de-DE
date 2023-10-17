@@ -1,6 +1,6 @@
 ---
-title: Verwendung von Workflows in AEM
-description: AEM Workflow bietet eine Möglichkeit, Inhalte in AEM zusammenzuarbeiten, zu verwalten und zu verarbeiten.
+title: Verwenden von Workflows in AEM
+description: AEM-Workflows ermöglichen, Inhalte in AEM gemeinsam zu bearbeiten, zu verwalten und zu verarbeiten.
 version: 6.5, Cloud Service
 feature: Workflow
 topic: Content Management
@@ -10,18 +10,18 @@ kt: 2557
 thumbnail: 27848.jpg
 exl-id: 5a6bf1f2-1dd5-40b4-8ceb-03672a36869d
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '67'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Workflow verwenden
+# Verwenden des Workflows
 
-AEM Workflow bietet eine Möglichkeit, Inhalte in AEM zusammenzuarbeiten, zu verwalten und zu verarbeiten.
+AEM-Workflows ermöglichen, Inhalte in AEM gemeinsam zu bearbeiten, zu verwalten und zu verarbeiten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27848?quality=12&learn=on)
 
 >[!NOTE]
 >
-> Video verwendet AEM Sites, um die Workflow-Status-Metadatenfunktion zu demonstrieren. Workflow-Status-Metadaten können auch auf AEM Assets angewendet werden. Um den Workflow-Status für Assets anzuzeigen, stellen Sie sicher, dass die Listenansicht aktiviert ist.
+> Im Video wird AEM Sites verwendet, um die Workflow-Statusmetadaten-Funktion vorzuführen. Workflow-Statusmetadaten können auch auf AEM Assets angewendet werden. Um den Workflow-Status für Assets anzuzeigen, stellen Sie sicher, dass die Listenansicht aktiviert ist.
