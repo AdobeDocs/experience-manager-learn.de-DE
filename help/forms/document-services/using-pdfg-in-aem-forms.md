@@ -1,6 +1,6 @@
 ---
 title: Verwenden von PDFG in AEM Forms
-description: Demonstrieren der Drag-and-Drop-Funktion zum Erstellen von PDF mithilfe von AEM Forms
+description: Demonstrieren der Drag-and-Drop-Funktionen zum Erstellen von PDFs mithilfe von AEM Forms
 feature: PDF Generator
 version: 6.4,6.5
 topic: Development
@@ -9,34 +9,34 @@ level: Intermediate
 exl-id: bc79fcbf-b8b3-4d3a-9cd6-0bcd9321c7d5
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '269'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # Verwenden von PDFG in AEM Forms{#using-pdfg-in-aem-forms}
 
-Demonstrieren der Drag-and-Drop-Funktion zum Erstellen von PDF mithilfe von AEM Forms
+Demonstrieren der Drag-and-Drop-Funktionen zum Erstellen von PDFs mithilfe von AEM Forms
 
-PDFG steht für PDF Generation. Dadurch können Sie eine Vielzahl von Dateiformaten in PDF konvertieren. Die häufigsten sind Microsoft Office-Dokumente. PDFG ist seit 6.1 Teil von AEM Forms.
+PDFG steht für PDF-Generierung. Das bedeutet, dass Sie eine Vielzahl von Dateiformaten in PDF konvertieren können. Die häufigsten sind Microsoft Office-Dokumente. PDFG ist seit 6.1 Teil von AEM Forms.
 [Die Javadoc für die PDFG-API ist hier aufgeführt.](https://www.adobe.io/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html)
 
-Die mit diesem Artikel verknüpften Assets ermöglichen es Ihnen, MS-Office-Dokumente oder JPG-Dateien in die Dropzone der HTML-Seite zu ziehen. Nachdem das Dokument abgelegt wurde, ruft es den PDFG-Dienst auf, konvertiert das Dokument in PDF und speichert es im Dateisystem AEM Servers.
+Die mit diesem Artikel verknüpften Assets ermöglichen es Ihnen, MS Office-Dokumente oder JPG-Dateien in den Ablagebereich der HTML-Seite zu ziehen. Sobald das Dokument abgelegt wird, wird der PDFG-Dienst aufgerufen, der das Dokument in eine PDF-Datei konvertiert und im Dateisystem von AEM Server speichert.
 
-Um die Demo-Assets zu installieren, führen Sie die folgenden Schritte aus
+Um die Demo-Assets zu installieren, führen Sie die folgenden Schritte aus:
 
-1. PDFG wie in diesem Dokument beschrieben konfigurieren [here](https://helpx.adobe.com/de/experience-manager/6-4/forms/using/install-configure-pdf-generator.html).
-1. Befolgen Sie die entsprechende Dokumentation zu Ihrer AEM Forms-Version.
-1. [Importieren und installieren Sie Assets, die sich auf diesen Artikel beziehen, mit dem Package Manager.](assets/createpdfgdemov2.zip)
-1. [Navigieren Sie zu post.jsp .](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) in Ihrem CRX
-1. Speicherort gemäß Ihrer Voreinstellung ändern (Zeile 9)
+1. Konfigurieren Sie PDFG wie in dem Dokument [hier](https://helpx.adobe.com/de/experience-manager/6-4/forms/using/install-configure-pdf-generator.html) beschrieben
+1. Befolgen Sie die entsprechende Dokumentation zu Ihrer AEM Forms-Version
+1. [Importieren und installieren Sie Assets, die sich auf diesen Artikel beziehen, mit Package Manager](assets/createpdfgdemov2.zip)
+1. [Navigieren Sie zu post.jsp](http://localhost:4502/apps/AemFormsSamples/components/createPDF/POST.jsp) in Ihrem CRX
+1. Ändern Sie den Speicherort nach Ihren Wünschen (Zeile 9)
 1. Speichern Sie Ihre Änderungen.
-1. Öffnen Sie die [HTML-Seite](http://localhost:4502/content/DocumentServices/CreatePDFG.html) zum Ziehen und Ablegen von Dateien zur Konvertierung.
-1. Legen Sie eine Wortdatei oder JPG in der Dropzone ab.
-1. Das Eingabedokument wird in PDF konvertiert und an dem unter Nummer 4 angegebenen Speicherort gespeichert.
+1. Öffnen Sie die [HTML-Seite](http://localhost:4502/content/DocumentServices/CreatePDFG.html) zum Ziehen und Ablegen von Dateien zur Konvertierung
+1. Legen Sie eine Word- oder JPG-Datei im Ablagebereich ab
+1. Das Eingabedokument wird in PDF konvertiert und an dem unter Nummer 4 angegebenen Speicherort gespeichert
 
-Das folgende Codefragment zeigt die Verwendung des PDFG-Dienstes zum Konvertieren von Dateien in PDF
+Das folgende Code-Fragment zeigt die Verwendung des PDFG-Dienstes zum Konvertieren von Dateien in PDF:
 
 ```java
 com.adobe.pdfg.service.api.GeneratePDFService pdfService = sling.getService(com.adobe.pdfg.service.api.GeneratePDFService.class);
