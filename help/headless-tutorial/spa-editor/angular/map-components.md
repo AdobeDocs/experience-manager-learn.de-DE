@@ -58,7 +58,7 @@ Vergegenwärtigen Sie sich die erforderlichen Tools und Anweisungen zum Einricht
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-   Wenn Sie [AEM 6.x](overview.md#compatibility) verwenden, fügen Sie das Profil `classic` hinzu:
+   Fügen Sie bei Verwendung von [AEM 6.x](overview.md#compatibility) das Profil `classic` hinzu:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
@@ -82,14 +82,14 @@ Sehen wir uns an, wie die Komponente funktioniert.
 
 ### Überprüfen des JSON-Modells
 
-1. Bevor wir zum SPA-Code kommen, müssen Sie zunächst das von AEM bereitgestellte JSON-Modell verstehen. Navigieren Sie zur [Kernkomponentenbibliothek](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/text.html) und zeigen Sie die Seite für die Textkomponente an. Die Kernkomponentenbibliothek enthält Beispiele für alle AEM-Kernkomponenten.
+1. Bevor wir zum SPA-Code kommen, müssen Sie zunächst das von AEM bereitgestellte JSON-Modell verstehen. Navigieren Sie zur [Kernkomponentenbibliothek](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/text.html) und rufen Sie die Seite für die Textkomponente auf. Die Kernkomponentenbibliothek enthält Beispiele für alle AEM-Kernkomponenten.
 2. Wählen Sie die Registerkarte **JSON** für eines der folgenden Beispiele aus:
 
-   ![Text – JSON-Modell](./assets/map-components/text-json.png)
+   ![Text-JSON-Modell](./assets/map-components/text-json.png)
 
-   Es sollten drei Eigenschaften angezeigt werden: `text`, `richText` und `:type`.
+   Es sollten drei Eigenschaften angezeigt werden: `text`, `richText`und `:type`.
 
-   `:type` ist eine reservierte Eigenschaft, die den `sling:resourceType` (oder den Pfad) der AEM-Komponente auflistet. Der Wert von `:type` wird verwendet, um die AEM-Komponente der SPA-Komponente zuzuordnen.
+   `:type` ist eine reservierte Eigenschaft, die den `sling:resourceType` (oder Pfad) der AEM-Komponente auflistet. Der Wert von `:type` wird verwendet, um die AEM-Komponente der SPA zuzuordnen.
 
    `text` und `richText` sind zusätzliche Eigenschaften, die für die SPA-Komponente bereitgestellt werden.
 
@@ -208,13 +208,13 @@ Bevor wir zum SPA-Code kommen, überprüfen Sie das von AEM bereitgestellte JSON
 
 1. Navigieren Sie zu den [Bildbeispielen in der Kernkomponentenbibliothek](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html).
 
-   ![Bild-Kernkomponente – JSON](./assets/map-components/image-json.png)
+   ![Bildkernkomponente – JSON](./assets/map-components/image-json.png)
 
-   Mit den Eigenschaften `src`, `alt` und `title` wird die `Image`-Komponente der SPA befüllt.
+   Die Eigenschaften `src`, `alt` und `title` werden zum Auffüllen der `Image`-SPA-Komponente verwendet.
 
    >[!NOTE]
    >
-   > Es werden andere Bildeigenschaften bereitgestellt (`lazyEnabled`, `widths`), die es Entwicklerinnen und Entwicklern ermöglichen, eine adaptive und Lazy-Loading-basierte Komponente zu erstellen. Die in diesem Tutorial erstellte Komponente ist einfach und verwendet **nicht** diese erweiterten Eigenschaften.
+   > Es werden andere Bildeigenschaften bereitgestellt (`lazyEnabled`, `widths`), die es Entwickelnden ermöglichen, eine adaptive und Lazy-Loading-basierte Komponente zu erstellen. Die in diesem Tutorial erstellte Komponente ist einfach und verwendet **nicht** diese erweiterten Eigenschaften.
 
 2. Kehren Sie zu Ihrer IDE zurück und öffnen Sie `en.model.json` unter `ui.frontend/src/mocks/json/en.model.json`. Da dies eine neue Komponente für unser Projekt ist, müssen wir das Bild-JSON mit Pseudoinhalten versehen.
 
@@ -355,9 +355,9 @@ Bevor wir zum SPA-Code kommen, überprüfen Sie das von AEM bereitgestellte JSON
 
 ## Aktualisieren der Richtlinien in AEM
 
-Die `ImageComponent`-Komponente ist nur im **webpack-Dev-Server** sichtbar. Implementieren Sie als Nächstes die aktualisierte SPA in AEM und aktualisieren Sie die Vorlagenrichtlinien.
+Die `ImageComponent`-Komponente ist nur im **webpack-Dev-Server** sichtbar. Stellen Sie als Nächstes die aktualisierte SPA in AEM bereit und aktualisieren Sie die Vorlagenrichtlinien.
 
-1. Halten Sie den **Webpack-Dev-Server** an und implementieren Sie im **Stammprojekt** die Änderungen für AEM mithilfe von Maven:
+1. Halten Sie den **Webpack-Dev-Server** an und stellen Sie im **Stammprojekt** die Änderungen für AEM mithilfe von Maven bereit:
 
    ```shell
    $ cd aem-guides-wknd-spa
@@ -382,7 +382,7 @@ Die `ImageComponent`-Komponente ist nur im **webpack-Dev-Server** sichtbar. Impl
 
    ![Festlegen der Standardkomponenten](assets/map-components/default-components.png)
 
-   Geben Sie `image/*` als **MIME-Typ** an.
+   Geben Sie einen **MIME-Typ** von `image/*` ein.
 
    Klicken Sie auf **Fertig**, um die Richtlinienaktualisierungen zu speichern.
 
@@ -390,11 +390,11 @@ Die `ImageComponent`-Komponente ist nur im **webpack-Dev-Server** sichtbar. Impl
 
    ![Richtliniensymbol für die Textkomponente](./assets/map-components/edit-text-policy.png)
 
-   Erstellen Sie eine neue Richtlinie mit dem Namen **WKND SPA Text**. Markieren Sie unter **Plug-ins** > **Formatierung** alle Kontrollkästchen, um zusätzliche Formatierungsoptionen zu aktivieren:
+   Erstellen Sie eine neue Richtlinie mit dem Namen **WKND SPA Text**. Unter **Plugins** > **Formatierung** > markieren Sie alle Kästchen, um zusätzliche Formatierungsoptionen zu aktivieren:
 
    ![Aktivieren der RTE-Formatierung](assets/map-components/enable-formatting-rte.png)
 
-   Aktivieren Sie unter **Plug-ins** > **Absatzformate** > das Kontrollkästchen **Absatzformate aktivieren**:
+   Kreuzen Sie unter **Plugins** > **Absatzformate** > das Kontrollkästchen **Absatzformate aktivieren** an:
 
    ![Absatzformate aktivieren](./assets/map-components/text-policy-enable-paragraphstyles.png)
 
@@ -406,17 +406,17 @@ Die `ImageComponent`-Komponente ist nur im **webpack-Dev-Server** sichtbar. Impl
 
    ![Rich-Text-Bearbeitung im Vollbildmodus](assets/map-components/full-screen-rte.png)
 
-7. Sie sollten auch in der Lage sein, ein Bild per Drag-and-Drop aus dem **Asset-Finder** zu übernehmen:
+7. Sie sollten auch dazu in der Lage sein, ein Bild per Drag-and-Drop aus dem **Asset-Finder** zu ziehen:
 
    ![Ziehen eines Bilds per Drag-and-Drop](./assets/map-components/drag-drop-image.gif)
 
-8. Fügen Sie Ihre eigenen Bilder über [AEM Assets](http://localhost:4502/assets.html/content/dam) hinzu oder installieren Sie die fertige Code-Basis für die Standard-[WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest). Die [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest) enthält viele Bilder, die auf der WKND-SPA wiederverwendet werden können. Das Paket kann mit [AEM-Package Manager](http://localhost:4502/crx/packmgr/index.jsp) installiert werden.
+8. Fügen Sie Ihre eigenen Bilder über [AEM Assets](http://localhost:4502/assets.html/content/dam) hinzu oder installieren Sie die fertige Code-Basis für die Standard-[WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest). Die [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd/releases/latest) enthält viele Bilder, die auf der WKND-SPA wiederverwendet werden können. Das Paket kann mit dem [Package Manager von AEM](http://localhost:4502/crx/packmgr/index.jsp) installiert werden.
 
-   ![Installieren von „wknd.all“ durch den Package Manager](./assets/map-components/package-manager-wknd-all.png)
+   ![Package Manager-Installation wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
 ## Überprüfen des Layout-Containers
 
-Unterstützung für den **Layout-Container** wird automatisch vom AEM SPA Editor SDK bereitgestellt. Der **Layout-Container** ist, wie der Name schon sagt, eine **Container**-Komponente. Container-Komponenten sind Komponenten, die JSON-Strukturen akzeptieren, die *andere* Komponenten repräsentieren, und diese dynamisch instanziieren.
+Unterstützung für den **Layout-Container** wird automatisch vom AEM SPA Editor SDK bereitgestellt. Der **Layout-Container** ist, wie der Name schon sagt, eine **Container**-Komponente. Container-Komponenten sind Komponenten, die JSON-Strukturen akzeptieren, die *andere* Komponenten darstellen und dynamisch instanziieren.
 
 Überprüfen wir den Layout-Container weiter.
 
@@ -434,7 +434,7 @@ Unterstützung für den **Layout-Container** wird automatisch vom AEM SPA Editor
 
    ![JSON-Modell-API – Responsives Raster](./assets/map-components/responsive-grid-modeljson.png)
 
-   Die **Layout-Container**-Komponente verfügt über eine `sling:resourceType` von `wcm/foundation/components/responsivegrid` und wird vom SPA-Editor mithilfe der `:type`-Eigenschaft erkannt, genau wie die `Text`- und die `Image`-Komponenten.
+   Die Komponente **Layout-Container** verfügt über einen `sling:resourceType` von `wcm/foundation/components/responsivegrid` und wird vom SPA-Editor mithilfe der `:type`-Eigenschaft erkannt, genau wie die Komponenten `Text` und `Image`.
 
    Die gleichen Funktionen für die Neuskalierung einer Komponente über den [Layout-Modus](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=de#defining-layouts-layout-mode) sind im SPA-Editor verfügbar.
 
@@ -446,15 +446,15 @@ Unterstützung für den **Layout-Container** wird automatisch vom AEM SPA Editor
 
    ![Spalten mit Klassennamen](./assets/map-components/responsive-grid-classnames.png)
 
-   Der Klassenname `aem-GridColumn--default--4` gibt an, dass die Komponente basierend auf einem 12-Spalten-Raster 4 Spalten breit sein sollte. Weitere Informationen zum [responsiven Raster finden Sie hier](https://adobe-marketing-cloud.github.io/aem-responsivegrid/).
+   Der Klassenname `aem-GridColumn--default--4` gibt an, dass die Komponente basierend auf einem 12-Spalten-Raster 4 Spalten breit sein sollte. Weitere Informationen zum [Responsiven Raster finden Sie hier.](https://adobe-marketing-cloud.github.io/aem-responsivegrid/)
 
-5. Kehren Sie zur IDE zurück. Im Modul `ui.apps` gibt es eine Client-seitige Bibliothek, die unter `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-grid` definiert ist. Öffnen Sie die Datei `less/grid.less`.
+5. Kehren Sie zur IDE zurück. Im `ui.apps`-Modul gibt es eine Client-seitige Bibliothek, die unter `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-grid` definiert ist. Öffnen Sie die Datei `less/grid.less`.
 
-   Diese Datei bestimmt die Haltepunkte (`default`, `tablet`und `phone`), die der **Layout-Container** verwendet. Diese Datei soll gemäß den Projektspezifikationen angepasst werden. Derzeit sind die Haltepunkte auf `1200px` und `650px` festgelegt.
+   Diese Datei bestimmt die Haltepunkte (`default`, `tablet` und `phone`), die der **Layout-Container** verwendet. Diese Datei soll gemäß den Projektspezifikationen angepasst werden. Derzeit sind die Haltepunkte auf `1200px` und `650px` festgelegt.
 
-6. Sie sollten die responsiven Funktionen und die aktualisierten Rich-Text-Richtlinien der `Text`-Komponente nutzen können, um eine Ansicht wie die folgende zu erstellen:
+6. Sie sollten in der Lage sein, die responsiven Funktionen und die aktualisierten Rich-Text-Richtlinien der `Text`-Komponente zu verwenden, um eine Ansicht wie die folgende zu erstellen:
 
-   ![Kapitel Beispiel endgültige Erstellung](assets/map-components/final-page.png)
+   ![Kapitel mit Beispiel für das endgültige Authoring](assets/map-components/final-page.png)
 
 ## Herzlichen Glückwunsch! {#congratulations}
 
@@ -470,21 +470,21 @@ Sie können den fertigen Code jederzeit auf [GitHub](https://github.com/adobe/ae
 
 In vielen Fällen, insbesondere zu Beginn eines AEM-Projekts, ist es nützlich, Konfigurationen wie Vorlagen und zugehörige Inhaltsrichtlinien beizubehalten, um die Quelle zu verwalten. Dadurch wird sichergestellt, dass alle Entwicklerinnen und Entwickler mit demselben Inhaltssatz und denselben Konfigurationen arbeiten, und zusätzliche Konsistenz zwischen Umgebungen gewährleistet. Sobald ein Projekt einen gewissen Reifegrad erreicht hat, kann die Verwaltung von Vorlagen einer speziellen Gruppe von Power-Benutzenden übertragen werden.
 
-Die nächsten Schritte werden mit der Visual Studio Code-IDE und [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) durchgeführt, jedoch können Sie jedes beliebige Tool und jede IDE verwenden, die Sie auf das **Abrufen** oder **Importieren** von Inhalt von einer lokalen Instanz von AEM konfiguriert haben.
+Die nächsten Schritte werden mit der Visual Studio Code-IDE und [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) durchgeführt, jedoch kann jedes beliebige Tool und jede IDE verwendet werden, für die Sie konfiguriert haben, dass sie Inhalt von einer lokalen Instanz von AEM **abrufen** oder **importieren**.
 
 1. Stellen Sie in der Visual Studio Code-IDE sicher, dass Sie **VSCode AEM Sync** über die Marketplace-Erweiterung installiert haben:
 
    ![VSCode AEM Sync](./assets/map-components/vscode-aem-sync.png)
 
-2. Erweitern Sie das Modul **ui.content** im Project Explorer und navigieren Sie zu `/conf/wknd-spa-angular/settings/wcm/templates`.
+2. Erweitern Sie das **ui.content**-Modul im Project Explorer und navigieren Sie zu `/conf/wknd-spa-angular/settings/wcm/templates`.
 
-3. **Klicken Sie mit der rechten Maustaste** auf den Ordner `templates` und wählen Sie **Importieren aus AEM-Server**:
+3. **Klicken Sie mit der rechten Maustaste** auf den Ordner `templates` und wählen Sie **Importieren aus AEM Server**:
 
    ![VSCode-Importvorlage](assets/map-components/import-aem-servervscode.png)
 
-4. Wiederholen Sie die Schritte zum Importieren von Inhalten, aber wählen Sie unter `/conf/wknd-spa-angular/settings/wcm/policies` den Ordner **policies** aus.
+4. Wiederholen Sie die Schritte zum Importieren von Inhalten, aber wählen Sie den Ordner **policies** unter `/conf/wknd-spa-angular/settings/wcm/policies` aus.
 
-5. Prüfen Sie die unter `ui.content/src/main/content/META-INF/vault/filter.xml` gespeicherte Datei `filter.xml`.
+5. Überprüfen Sie die Datei `filter.xml` unter `ui.content/src/main/content/META-INF/vault/filter.xml`.
 
    ```xml
    <!--ui.content filter.xml-->
@@ -497,6 +497,6 @@ Die nächsten Schritte werden mit der Visual Studio Code-IDE und [VSCode AEM Syn
     </workspaceFilter>
    ```
 
-   Die Datei `filter.xml` ist für die Identifizierung der Pfade von Knoten verantwortlich, die mit dem Paket installiert werden. Beachten Sie `mode="merge"` bei jedem Filter. Damit wird angegeben, dass vorhandener Inhalt nicht geändert wird, sondern nur neue Inhalte hinzugefügt werden. Da Inhaltsautorinnen und Inhaltsautoren diese Pfade möglicherweise aktualisieren, ist es wichtig, dass Inhalt **nicht** durch eine Code-Implementierung überschrieben wird. Weitere Informationen zum Arbeiten mit Filterelementen finden Sie in der [FileVault-Dokumentation](https://jackrabbit.apache.org/filevault/filter.html) .
+   Die Datei `filter.xml` ist für die Identifizierung der Pfade von Knoten verantwortlich, die mit dem Paket installiert werden. `mode="merge"` bei jedem Filter bedeutet, dass vorhandener Inhalt nicht geändert wird, sondern nur neue Inhalte hinzugefügt werden. Da Inhaltsautorinnen und Inhaltsautoren diese Pfade möglicherweise aktualisieren, ist es wichtig, dass Inhalte bei einer Code-Bereitstellung **nicht** überschrieben werden. Weitere Informationen zum Arbeiten mit Filterelementen finden Sie in der [FileVault-Dokumentation](https://jackrabbit.apache.org/filevault/filter.html).
 
    Vergleichen Sie `ui.content/src/main/content/META-INF/vault/filter.xml` und `ui.apps/src/main/content/META-INF/vault/filter.xml`, um sich mit den verschiedenen, von den einzelnen Modulen verwalteten Knoten vertraut zu machen.
