@@ -10,9 +10,9 @@ kt: 10269
 thumbnail: KT-10269.jpeg
 exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
 source-git-commit: 31948793786a2c430533d433ae2b9df149ec5fc0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '454'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -205,7 +205,7 @@ AEM unterstützt Client-definierte GraphQL-Abfragen. Die beste AEM-Praxis ist je
 
 ## Webpack 5+
 
-Das AEM Headless JS SDK weist Abhängigkeiten von auf `util` ist standardmäßig nicht in Webpack 5+ enthalten. Wenn Sie Webpack 5+ verwenden und den folgenden Fehler erhalten:
+Das AEM Headless JS SDK weist Abhängigkeiten mit `util` auf, was standardmäßig nicht in Webpack 5+ enthalten ist. Wenn Sie Webpack 5+ verwenden und den folgenden Fehler erhalten:
 
 ```
 Compiled with problems:
@@ -222,7 +222,7 @@ If you don't want to include a polyfill, you can use an empty module like this:
     resolve.fallback: { "util": false }
 ```
 
-Fügen Sie Folgendes hinzu: `devDependencies` auf `package.json` Datei:
+Fügen Sie folgende `devDependencies` in Ihre Datei `package.json` ein:
 
 ```json
   "devDependencies": {
@@ -236,4 +236,4 @@ Fügen Sie Folgendes hinzu: `devDependencies` auf `package.json` Datei:
   },
 ```
 
-Dann ausführen `npm install` , um die Abhängigkeiten zu installieren.
+Führen Sie dann `npm install` aus, um die Abhängigkeiten zu installieren.
