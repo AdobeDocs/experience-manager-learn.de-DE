@@ -1,6 +1,6 @@
 ---
-title: Produktionsimplementierung mit einem AEM-Veröffentlichungs-Service – Erste Schritte mit AEM Headless – GraphQL
-description: Erfahren Sie mehr über die AEM-Autoren- und Veröffentlichungs-Services und das empfohlene Implementierungsmuster für Headless-Anwendungen. In diesem Tutorial erfahren Sie, wie Sie Umgebungsvariablen verwenden können, um einen GraphQL-Endpunkt basierend auf der Zielumgebung dynamisch zu ändern. Erfahren Sie, wie Sie AEM für Cross-Origin Resource Sharing (CORS) ordnungsgemäß konfigurieren.
+title: Produktionsbereitstellung mit einem AEM-Veröffentlichungs-Service – Erste Schritte mit AEM Headless – GraphQL
+description: Erfahren Sie mehr über die AEM-Autoren- und Veröffentlichungs-Services und das empfohlene Bereitstellungsmuster für Headless-Anwendungen. In diesem Tutorial erfahren Sie, wie Sie Umgebungsvariablen verwenden können, um einen GraphQL-Endpunkt basierend auf der Zielumgebung dynamisch zu ändern. Erfahren Sie, wie Sie AEM für Cross-Origin Resource Sharing (CORS) ordnungsgemäß konfigurieren.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 ---
 
-# Produktionsimplementierung mit einem AEM-Veröffentlichungs-Service
+# Produktionsbereitstellung mit einem AEM-Veröffentlichungs-Service
 
 In diesem Tutorial richten Sie eine lokale Umgebung ein, um zu simulieren, wie Inhalte von einer Autoreninstanz an eine Veröffentlichungsinstanz verteilt werden. Sie generieren außerdem den Produktions-Build einer React-App, die für die Verwendung von Inhalten aus der AEM Publish-Umgebung mithilfe der GraphQL-APIs konfiguriert ist. Außerdem erfahren Sie, wie Sie Umgebungsvariablen effektiv verwenden und die CORS-Konfigurationen von AEM aktualisieren können.
 
@@ -33,22 +33,22 @@ Erfahren Sie mehr über Folgendes:
 * Erfahren Sie mehr über Best Practices für die Verwaltung von Umgebungsvariablen.
 * Erfahren Sie, wie Sie AEM für Cross-Origin Resource Sharing (CORS) ordnungsgemäß konfigurieren.
 
-## Implementierungsmuster von Author und Publish {#deployment-pattern}
+## Bereitstellungsmuster von Author und Publish {#deployment-pattern}
 
 Eine vollständige AEM-Umgebung besteht aus Author, Publish und Dispatcher. Der Autoren-Service ist der Ort, wo interne Benutzende Inhalte erstellen, verwalten und in der Vorschau anzeigen. Der Veröffentlichungs-Service fungiert als „Live“-Umgebung und ist in der Regel der Bereich, mit dem die Endbenutzenden interagieren. Inhalte werden nach der Bearbeitung und Genehmigung im Autoren-Service an den Veröffentlichungs-Service weitergeleitet.
 
-Das häufigste Implementierungsmuster bei AEM Headless-Programmen besteht darin, die Produktionsversion des Programms mit dem AEM-Veröffentlichungs-Service zu verbinden.
+Das häufigste Bereitstellungsmuster bei AEM Headless-Programmen besteht darin, die Produktionsversion des Programms mit dem AEM-Veröffentlichungs-Service zu verbinden.
 
-![Implementierungsmuster auf hoher Ebene](assets/publish-deployment/high-level-deployment.png)
+![Bereitstellungsmuster auf hoher Ebene](assets/publish-deployment/high-level-deployment.png)
 
-Das obige Diagramm zeigt dieses allgemeine Implementierungsmuster.
+Das obige Diagramm zeigt dieses allgemeine Bereitstellungsmuster.
 
 1. **Inhaltsautorinnen und -autoren** verwenden den AEM-Autoren-Service zum Erstellen, Bearbeiten und Verwalten von Inhalten.
 2. Der **Inhaltsautor** und andere interne Benutzende können die Inhalte direkt im Autoren-Service in der Vorschau anzeigen. Es kann eine Vorschauversion des Programms eingerichtet werden, die eine Verbindung zum Autoren-Service herstellt.
 3. Sobald der Inhalt genehmigt wurde, kann er über den AEM-Veröffentlichungs-Service **veröffentlicht** werden.
 4. **Endbenutzende** interagieren mit der Produktionsversion des Programms. Die Produktions-Anwendung stellt eine Verbindung zum Veröffentlichungs-Service her und verwendet die GraphQL-APIs, um Inhalte anzufragen und zu nutzen.
 
-Das Tutorial simuliert die oben genannte Implementierung, indem eine AEM-Veröffentlichungsinstanz zur aktuellen Einrichtung hinzugefügt wird. In früheren Kapiteln fungierte die React-App als Vorschau, indem sie eine direkte Verbindung zur Autoreninstanz herstellte. Ein Produktions-Build der React-App wird auf einem statischen Node.js-Server bereitgestellt, der eine Verbindung zur neuen Veröffentlichungsinstanz herstellt.
+Das Tutorial simuliert die oben genannte Bereitstellung, indem eine AEM-Veröffentlichungsinstanz zur aktuellen Einrichtung hinzugefügt wird. In früheren Kapiteln fungierte die React-App als Vorschau, indem sie eine direkte Verbindung zur Autoreninstanz herstellte. Ein Produktions-Build der React-App wird auf einem statischen Node.js-Server bereitgestellt, der eine Verbindung zur neuen Veröffentlichungsinstanz herstellt.
 
 Am Ende werden drei lokale Server ausgeführt:
 
@@ -126,7 +126,7 @@ Als Nächstes fügen Sie eine neue Datei `.env.production.local` hinzu, um das P
 
 ## Bereitstellen eines statischen Knoten-Servers {#static-server}
 
-Die React-App kann über den Webpack-Server gestartet werden, dies dient jedoch nur der Entwicklung. Simulieren Sie als Nächstes eine Produktionsimplementierung mithilfe von [serve](https://github.com/vercel/serve), um einen Produktionsaufbau der React-App mit Node.js zu hosten.
+Die React-App kann über den Webpack-Server gestartet werden, dies dient jedoch nur der Entwicklung. Simulieren Sie als Nächstes eine Produktionsbereitstellung mithilfe von [serve](https://github.com/vercel/serve), um einen Produktionsaufbau der React-App mit Node.js zu hosten.
 
 1. Öffnen Sie ein neues Terminal-Fenster und navigieren Sie zum Verzeichnis `aem-guides-wknd-graphql/react-app`.
 
