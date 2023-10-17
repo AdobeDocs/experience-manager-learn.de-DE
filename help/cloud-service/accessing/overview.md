@@ -11,9 +11,9 @@ thumbnail: KT-5882.jpg
 last-substantial-update: 2022-10-06T00:00:00Z
 exl-id: 4846a394-cf8e-4d52-8f8b-9e874f2f457b
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '626'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ Benutzende, die Zugriff auf den AEM-Autoren-Service benötigen, werden als [Adob
 
 >[!NOTE]
 >
->Wenn ein IMS-Benutzer aus der Admin Console gelöscht wird, wird er nicht automatisch aus AEM gelöscht, aber sobald AEM Sitzung (Token) abgelaufen ist, können sie sich NICHT bei AEM anmelden.
+>Wenn IMS-Benutzende aus der Admin Console gelöscht werden, werden sie nicht automatisch aus AEM gelöscht, aber sobald die AEM-Sitzung (d. h. deren Token) abgelaufen ist, können sie sich NICHT bei AEM anmelden.
 
 
 [Informationen zu Adobe IMS-Benutzenden](./adobe-ims-users.md)
