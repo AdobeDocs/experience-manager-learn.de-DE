@@ -1,6 +1,6 @@
 ---
-title: Was ist Search Boost in AEM Assets?
-description: Erfahren Sie, wie Sie Schlüsselwörter und Ausdrücke hinzufügen können, um die Suchrelevanz eines Assets in Adobe Experience Manager zu verbessern.
+title: Was ist Suchoptimierung in AEM Assets?
+description: Erfahren Sie, wie Sie Schlüsselwörter und Ausdrücke hinzufügen können, um die Suchrelevanz eines Assets in Adobe Experience Manager zu steigern.
 topic: Content Management
 feature: Search
 role: User
@@ -11,9 +11,9 @@ thumbnail: 16766.jpg
 last-substantial-update: 2022-06-02T00:00:00Z
 exl-id: 3020f040-4d61-4cb6-ad46-e8a188335cec
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '27'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
