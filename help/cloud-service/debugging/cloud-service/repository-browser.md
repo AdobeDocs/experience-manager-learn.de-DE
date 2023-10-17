@@ -1,6 +1,6 @@
 ---
 title: Debugging von AEM mit dem Repository-Browser
-description: Der Repository-Browser ist ein leistungsstarkes Tool, das AEM zugrunde liegenden Datenspeicher sichtbar macht und das einfache Debugging AEM as a Cloud Service Umgebung ermöglicht.
+description: Der Repository-Browser ist ein leistungsfähiges Tool, das Einblick in den zugrunde liegenden Datenspeicher von AEM bietet und die Fehlersuche in einer AEM as a Cloud Service-Umgebung erleichtert.
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -14,37 +14,37 @@ role: Developer
 level: Beginner
 exl-id: 88af40fc-deff-4b92-84b1-88df2dbdd90b
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '270'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Debugging von mit dem Repository-Browser as a Cloud Service AEM
+# Debugging von AEM as a Cloud Service mit dem Repository-Browser
 
-Der Repository-Browser ist ein leistungsstarkes Tool, das AEM zugrunde liegenden Datenspeicher sichtbar macht und das einfache Debugging AEM as a Cloud Service Umgebung ermöglicht. Der Repository-Browser unterstützt eine schreibgeschützte Ansicht der Ressourcen und Eigenschaften von AEM für Produktions-, Staging- und Entwicklungsdienste sowie Autoren-, Veröffentlichungs- und Vorschaudienste.
+Der Repository-Browser ist ein leistungsfähiges Tool, das Einblick in den zugrunde liegenden Datenspeicher von AEM bietet und die Fehlersuche in einer AEM as a Cloud Service-Umgebung erleichtert. Der Repository-Browser unterstützt eine schreibgeschützte Ansicht der Ressourcen und Eigenschaften von AEM in den Bereichen Produktion, Staging und Entwicklung sowie Autoren-, Veröffentlichungs- und Vorschau-Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/341464?quality=12&learn=on)
 
-Repository-Browser ist __NUR__ verfügbar in AEM as a Cloud Service Umgebungen (verwenden [CRXDE Lite](../aem-sdk-local-quickstart/other-tools.md#crxde-lite) Debugging des lokalen AEM SDK).
+Der Repository-Browser ist __NUR__ in AEM as a Cloud Service-Umgebungen verfügbar (um das lokale AEM SDK zu debuggen, verwenden Sie [CRXDE Lite](../aem-sdk-local-quickstart/other-tools.md#crxde-lite)).
 
-## Zugriff auf den Repository-Browser
+## Zugreifen auf den Repository-Browser
 
-So greifen Sie auf AEM as a Cloud Service Repository-Browser zu:
+So greifen Sie auf den Repository-Browser in AEM as a Cloud Service zu:
 
-1. Stellen Sie sicher, dass Ihr Benutzer [den erforderlichen Zugriff](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#access-prerequisites)
-1. Anmelden bei [Cloud Manager](https://my.cloudmanager.adobe.com)
-1. Wählen Sie das Programm aus, das die zu debuggende AEM as a Cloud Service Umgebung enthält
-1. Öffnen Sie die [Entwicklerkonsole](./developer-console.md) entspricht der zu debuggenden AEM as a Cloud Service Umgebung
-1. Wählen Sie die __Repository-Browser__ tab
-1. Wählen Sie die zu durchsuchende AEM Dienstebene aus.
-   + Alle Autoren
-   + Alle Herausgeber
+1. Stellen Sie sicher, dass Ihre Benutzerin bzw. Ihr Benutzer über den [erforderlichen Zugriff](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html?lang=de#access-prerequisites) verfügt.
+1. Melden Sie sich bei [Cloud Manager](https://my.cloudmanager.adobe.com) an.
+1. Öffnen Sie das Programm mit der zu debuggenden AEM as a Cloud Service-Umgebung.
+1. Öffnen Sie [Developer Console](./developer-console.md) entsprechend der zu debuggenden AEM as a Cloud Service-Umgebung.
+1. Wählen Sie die Registerkarte __Repository-Browser__ aus.
+1. Wählen Sie die zu durchsuchende AEM-Service-Ebene aus:
+   + Alle Autorinnen und Autoren
+   + Alle Veröffentlichenden
    + Alle Vorschauen
-1. Auswählen __Repository-Browser öffnen__
+1. Wählen Sie __Repository-Browser öffnen__ aus.
 
-Der Repository-Browser wird für die ausgewählte Dienstebene (Autor, Veröffentlichung oder Vorschau) in einem schreibgeschützten Modus geöffnet und zeigt Ressourcen und Eigenschaften an, auf die Ihr Benutzer Zugriff hat.
+Der Repository-Browser wird für die ausgewählte Service-Ebene (Autoren-, Veröffentlichungs- oder Vorschauebene) in einem schreibgeschützten Modus geöffnet und zeigt Ressourcen und Eigenschaften an, auf die Ihre Benutzerin bzw. Ihr Benutzer Zugriff hat.
 
-## Zugriff veröffentlichen und Vorschau anzeigen
+## Zugreifen auf die Veröffentlichungs- und Vorschauebene
 
-Standardmäßig ist der Zugriff auf Veröffentlichen oder Vorschau eingeschränkt, wodurch die verfügbaren Ressourcen im Repository-Browser reduziert werden. [Um alle Ressourcen in der Veröffentlichungs- (oder Vorschau-)Ansicht anzuzeigen, fügen Sie Benutzer einer Administrator-Rolle vom Typ Veröffentlichen (oder Vorschau) hinzu.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#navigate-the-hierarchy)
+Standardmäßig ist der Zugriff auf die Veröffentlichtungs- oder Vorschauebene eingeschränkt, wodurch die verfügbaren Ressourcen im Repository-Browser reduziert werden. [Um alle Ressourcen in Publish (oder in der Vorschau) anzuzeigen, fügen Sie Benutzende einer Admin-Rolle vom Typ „Veröffentlichen“ (oder „Vorschau“) hinzu.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html?lang=de#navigate-the-hierarchy)
