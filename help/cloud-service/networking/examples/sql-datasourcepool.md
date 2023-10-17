@@ -1,6 +1,6 @@
 ---
-title: SQL-Verbindungen mit JDBC DataSourcePool
-description: Erfahren Sie, wie Sie über AEM JDBC DataSourcePool und Ausgangs-Ports von AEM as a Cloud Service eine Verbindung zu SQL-Datenbanken herstellen.
+title: SQL-Verbindungen mit JDBC-DataSourcePool
+description: Herstellen einer Verbindung zu SQL-Datenbanken über AEM as a Cloud Service mit JDBC DataSourcePool und Ausgangs-Ports von AEM.
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -10,32 +10,32 @@ kt: 9355
 thumbnail: KT-9355.jpeg
 exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
 source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '341'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# SQL-Verbindungen mit JDBC DataSourcePool
+# SQL-Verbindungen mit JDBC-DataSourcePool
 
-Verbindungen zu SQL-Datenbanken (und anderen Nicht-HTTP/HTTPS-Diensten) müssen AEM bereitgestellt werden, einschließlich derjenigen, die mit dem AEM DataSourcePool-OSGi-Dienst zur Verwaltung der Verbindungen hergestellt werden.
+Verbindungen zu SQL-Datenbanken (und anderen Nicht-HTTP/HTTPS-Diensten) müssen von AEM aus bereitgestellt werden, einschließlich derjenigen, die mit dem DataSourcePool-OSGi-Dienst von AEM zur Verwaltung der Verbindungen hergestellt werden.
 
 ## Erweiterte Netzwerkunterstützung
 
-Das folgende Codebeispiel wird von den folgenden erweiterten Netzwerkoptionen unterstützt.
+Das folgende Code-Beispiel wird von den folgenden erweiterten Netzwerkoptionen unterstützt.
 
-Stellen Sie die [geeignete](../advanced-networking.md#advanced-networking) Vor diesem Tutorial wurde eine erweiterte Netzwerkkonfiguration eingerichtet.
+Stellen Sie sicher, dass die [geeignete](../advanced-networking.md#advanced-networking) erweiterte Netzwerkkonfiguration eingerichtet wurde, bevor Sie dieses Tutorial durchführen.
 
-| Kein erweitertes Netzwerk | [Flexibles Port-Egress](../flexible-port-egress.md) | [Dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) | [Virtuelles privates Netzwerk](../vpn.md) |
+| Keine erweiterten Netzwerkfunktionen | [Flexibler Port-Ausgang](../flexible-port-egress.md) | [Dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) | [Virtuelles privates Netzwerk](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
-| ✘ | ms | ms | ms |
+| ✘ | ✔ | ✔ | ✔ |
 
 ## OSGi-Konfiguration
 
-Die Verbindungszeichenfolge der OSGi-Konfiguration verwendet:
+Die Verbindungszeichenfolge der OSGi-Konfiguration verwendet Folgendes:
 
-+ `AEM_PROXY_HOST` Wert über die [OSGi-Konfigurationsumgebungsvariable](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` als Host der Verbindung
-+ `30001` , die `portOrig` Wert für die Cloud Manager-Anschlussvorschau-Zuordnung `30001` → `mysql.example.com:3306`
++ `AEM_PROXY_HOST`-Wert über die [OSGi-Konfigurationsumgebungsvariable](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=de#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` als Host der Verbindung
++ `30001` – stellt den `portOrig`-Wert für die Cloud Manager-Anschlussvorschau-Zuordnung `30001` → `mysql.example.com:3306` dar
 
 Da Geheimnisse nicht im Code gespeichert werden dürfen, sollten Benutzername und Kennwort der SQL-Verbindung am besten über OSGi-Konfigurationsvariablen bereitgestellt werden, die mithilfe von AIO CLI- oder Cloud Manager-APIs festgelegt werden.
 
@@ -51,16 +51,16 @@ Da Geheimnisse nicht im Code gespeichert werden dürfen, sollten Benutzername un
 }
 ```
 
-Folgendes `aio CLI` kann verwendet werden, um die OSGi-Geheimnisse für jede Umgebung festzulegen:
+Der folgende `aio CLI`-Befehl kann verwendet werden, um die OSGi-Geheimnisse für die einzelnen Umgebungen festzulegen:
 
 ```shell
 $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret MYSQL_USERNAME "mysql-user" --secret MYSQL_PASSWORD "password123"
 ```
 
-## Codebeispiel
+## Code-Beispiel
 
-Dieses Java™-Codebeispiel ist ein OSGi-Dienst, der über AEM DataSourcePool-OSGi-Dienst eine Verbindung zu einer externen MySQL-Datenbank herstellt.
-Die DataSourcePool-OSGi-Werkskonfiguration gibt wiederum einen Port (`30001`), die über die `portForwards` -Regel in [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) Betrieb zum externen Host und Port, `mysql.example.com:3306`.
+Dieses Java™-Code-Beispiel betrifft einen OSGi-Dienst, der über den DataSourcePool-OSGi-Dienst von AEM eine Verbindung zu einer externen MySQL-Datenbank herstellt.
+Die DataSourcePool-OSGi-Werkskonfiguration gibt wiederum einen Port (`30001`) an, der über die Regel `portForwards` im Betrieb mit der [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) zum externen Host und Port `mysql.example.com:3306` zugeordnet wird.
 
 ```json
 ...
@@ -133,11 +133,11 @@ public class JdbcExternalServiceImpl implements ExternalService {
 
 ## Abhängigkeiten von MySQL-Treibern
 
-AEM as a Cloud Service erfordert oft, dass Sie Java™-Datenbanktreiber bereitstellen, um die Verbindungen zu unterstützen. Die Bereitstellung der Treiber wird in der Regel am besten dadurch erreicht, dass die OSGi-Bundle-Artefakte, die diese Treiber enthalten, über das AEM in das Projekt eingebettet werden. `all` Paket.
+Bei AEM as a Cloud Service müssen Sie oft Java™-Datenbanktreiber zur Unterstützung der Verbindungen bereitstellen. Die Bereitstellung der Treiber wird in der Regel am besten dadurch erreicht, dass die OSGi-Bundle-Artefakte, die diese Treiber enthalten, über das `all`-Paket in das AEM-Projekt eingebettet werden.
 
 ### Reactor pom.xml
 
-Abhängigkeiten von Datenbanktreibern in den Reaktor einschließen `pom.xml` und referenzieren Sie sie dann im `all` Teilprojekte.
+Schließen Sie die Datenbanktreiber-Abhängigkeiten in den Reaktor `pom.xml` ein und referenzieren Sie sie dann in den `all`-Unterprojekten.
 
 + `pom.xml`
 
@@ -157,9 +157,9 @@ Abhängigkeiten von Datenbanktreibern in den Reaktor einschließen `pom.xml` und
 ...
 ```
 
-## Alle pom.xml
+## All pom.xml
 
-Betten Sie die Abhängigkeitsartefakte des Datenbanktreibers in `all` -Paket bereitgestellt werden und auf AEM as a Cloud Service verfügbar sind. Diese Artefakte __must__ sind OSGi-Bundles, die die Java™-Klasse des Datenbanktreibers exportieren.
+Betten Sie die Abhängigkeitsartefakte des Datenbanktreibers in das `all`-Paket ein, damit sie bereitgestellt werden und in AEM as a Cloud Service verfügbar sind. Diese Artefakte __müssen__ OSGi-Bundles sein, mit denen die Datenbanktreiber-Java™-Klasse exportiert wird.
 
 + `all/pom.xml`
 
