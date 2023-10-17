@@ -1,6 +1,6 @@
 ---
-title: Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank - Erstellen einer Client-Bibliothek
-description: Mehrteiliges Tutorial, das Sie durch die Schritte führt, die zum Speichern und Abrufen von Formulardaten erforderlich sind
+title: Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank – Erstellen einer Client-Bibliothek
+description: Mehrteiliges Tutorial, das Sie durch die Schritte zum Speichern und Abrufen von Formulardaten führt
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -9,15 +9,15 @@ role: Developer
 level: Experienced
 exl-id: eef98a55-80d0-4598-abf2-02a6c5247b64
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '147'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Client-Bibliothek erstellen
+# Erstellen einer Client-Bibliothek
 
-AEM Client Library verwaltet den gesamten clientseitigen JavaScript-Code. Für diesen Artikel habe ich ein einfaches JavaScript erstellt, um die adaptiven Formulardaten mithilfe der Guide Bridge-API abzurufen. Sobald die Daten des adaptiven Formulars abgerufen wurden, wird die POST zum Servlet aufgerufen, um die Daten des adaptiven Formulars entweder in die Datenbank einzufügen oder zu aktualisieren. Die Funktion getALLUrlParams gibt die Parameter in der URL zurück. Wenn der Parameter guid in der URL vorhanden ist, müssen wir den Aktualisierungsvorgang durchführen, wenn es sich nicht um einen Einfügevorgang handelt. Der Rest der Funktionalität wird im Code verarbeitet, der mit dem click -Ereignis der Klasse .savebutton verknüpft ist.
+Die AEM Client-Bibliothek verwaltet den gesamten Client-seitigen JavaScript-Code. Für diesen Artikel habe ich ein einfaches JavaScript erstellt, um die Daten aus adaptiven Formularen mithilfe der Guide Bridge-API abzurufen. Sobald die Daten des adaptiven Formulars abgerufen wurden, erfolgt der POST-Aufruf an das Servlet, um die Daten des adaptiven Formulars entweder in die Datenbank einzufügen oder zu aktualisieren. Die Funktion getALLUrlParams gibt die Parameter in der URL zurück. Wenn der GUID-Parameter in der URL vorhanden ist, müssen wir den Aktualisierungsvorgang durchführen, wenn es sich nicht um einen Einfügevorgang handelt. Der Rest der Funktionalität wird im Code verarbeitet, der mit dem Klick-Ereignis der .savebutton-Klasse verknüpft ist.
 
 >[!NOTE]
 >
