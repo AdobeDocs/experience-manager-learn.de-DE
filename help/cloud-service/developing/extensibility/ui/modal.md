@@ -1,6 +1,6 @@
 ---
-title: AEM UI-Erweiterungs-Modal
-description: Erfahren Sie, wie Sie ein AEM UI-Erweiterungsmodul erstellen.
+title: AEM-Benutzeroberflächen-Erweiterungsmodal
+description: Erfahren Sie, wie Sie ein AEM-Benutzeroberflächen-Erweiterungsmodul erstellen.
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -11,32 +11,32 @@ kt: 11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: e7376eaf-f7d7-48fe-9387-a0e4089806c2
 source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '313'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Modal der Erweiterung
+# Erweiterungsmodal
 
-![AEM UI-Erweiterungs-Modal](./assets/modal/modal.png){align="center"}
+![AEM-Benutzeroberflächen-Erweiterungsmodal](./assets/modal/modal.png){align="center"}
 
-AEM UI-Erweiterungs-Modal bieten eine Möglichkeit, benutzerdefinierte Benutzeroberfläche an AEM UI-Erweiterungen anzuhängen.
+AEM-Benutzteroberflächen-Erweiterungsmodale bieten eine Möglichkeit, benutzerdefinierte Benutzeroberfläche an AEM-Benutzeroberflächen-Erweiterungen anzuhängen.
 
-Modale sind React-Anwendungen, die auf [Reaktionsspektrum](https://react-spectrum.adobe.com/react-spectrum/)und kann eine beliebige benutzerdefinierte Benutzeroberfläche erstellen, die für die Erweiterung erforderlich ist, einschließlich, aber nicht beschränkt auf:
+Modale sind React-Anwendungen, die auf [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/) basieren, und eine beliebige benutzerdefinierte Benutzeroberfläche erstellen können, die für die Erweiterung erforderlich ist, einschließlich, aber nicht beschränkt auf:
 
 + Bestätigungsdialogfelder
-+ [Formulare](https://react-spectrum.adobe.com/react-spectrum/#forms)
++ [Eingabeformulare](https://react-spectrum.adobe.com/react-spectrum/#forms)
 + [Fortschrittsanzeigen](https://react-spectrum.adobe.com/react-spectrum/#status)
 + [Ergebniszusammenfassung](https://react-spectrum.adobe.com/react-spectrum/#collections)
 + Fehlermeldungen
-+ ... oder sogar eine Full-View React-Anwendung!
++ … oder sogar eine vollständige React-Anwendung mit mehreren Ansichten!
 
-## Modale Routen
+## Modalrouten
 
-Das modale Erlebnis wird durch die Erweiterung App Builder React App definiert, die unter der `web-src` Ordner. Wie bei jeder React-App wird das gesamte Erlebnis mithilfe von [React-Routen](https://reactrouter.com/en/main/components/routes) dieser Renderer [React-Komponenten](https://reactjs.org/docs/components-and-props.html).
+Das Modalerlebnis wird durch die React-Erweiterungs-App der App-Entwicklung definiert, die unter dem Ordner `web-src` angegeben ist. Wie bei jeder React-App wird das Gesamterlebnis über [React-Routen](https://reactrouter.com/de/main/components/routes) orchestriert, die die [React-Komponenten](https://reactjs.org/docs/components-and-props.html) rendern.
 
-Zum Generieren der anfänglichen modalen Ansicht ist mindestens eine Route erforderlich. Diese anfängliche Route wird im [Erweiterungsregistrierung](#extension-registration)s `onClick(..)` -Funktion, wie unten dargestellt.
+Zum Generieren der ersten Modalansicht ist mindestens eine Route erforderlich. Diese erste Route wird in der `onClick(..)`-Funktion der [Erweiterungsregistrierung](#extension-registration) aufgerufen, wie unten dargestellt.
 
 
 + `./src/aem-ui-extension/web-src/src/components/App.js`
@@ -80,12 +80,12 @@ function App(props) {
 
 ## Registrierung der Erweiterung
 
-Um ein Modal zu öffnen, rufen Sie `guestConnection.host.modal.showUrl(..)` wird aus dem `onClick(..)` -Funktion. `showUrl(..)` wird ein JavaScript-Objekt mit Schlüssel/Werten übergeben:
+Um ein Modal zu öffnen, wird über die `onClick(..)`-Funktion der Erweiterung ein Aufruf an `guestConnection.host.modal.showUrl(..)` durchgeführt. `showUrl(..)` wird ein JavaScript-Objekt mit folgenden Schlüsseln/Werten übergeben:
 
-+ `title` gibt den Namen des Titels des Modals an, das dem Benutzer angezeigt wird
-+ `url` ist die URL, die die [React route](#modal-routes) verantwortlich für die anfängliche Ansicht des Modals.
++ `title` gibt den Namen des Titels des Modals an, das Benutzenden angezeigt wird.
++ `url` ist die URL, die die für die erste Ansicht des Modals verantwortliche [React-Route](#modal-routes) aufruft.
 
-Die `url` übergeben an `guestConnection.host.modal.showUrl(..)` wird in der Erweiterung in die Route aufgelöst, sonst wird nichts im Modal angezeigt.
+Es ist unbedingt erforderlich, dass die an `guestConnection.host.modal.showUrl(..)` weitergegebene `url` zur Route der Erweiterung aufgelöst wird. Andernfalls wird nichts im Modal angezeigt.
 
 + `./src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
 
@@ -106,13 +106,13 @@ function ExtensionRegistration() {
 }...
 ```
 
-## Modal-Komponente
+## Modalkomponente
 
-Jede Route der Erweiterung, [das nicht der `index` route](./extension-registration.md#app-routes), wird einer React-Komponente zugeordnet, die im Modal der Erweiterung dargestellt werden kann.
+Jede Route der Erweiterung, [die sich nicht in der `index`-Route befindet](./extension-registration.md#app-routes), wird einer React-Komponente zugeordnet, die im Modal der Erweiterung gerendert werden kann.
 
-Ein Modal kann aus einer beliebigen Anzahl von React-Routen bestehen, von einem einfachen Ein-Route-Modal bis hin zu einem komplexen, multiroute-Modal.
+Ein Modal kann aus einer beliebigen Anzahl von React-Routen bestehen, von einem einfachen Ein-Routen-Modal bis hin zu einem komplexen Modal mit mehreren Routen.
 
-Die folgende Abbildung zeigt ein einfaches Einweg-Modal, diese modale Ansicht kann jedoch React-Links enthalten, die andere Routen oder Verhaltensweisen aufrufen.
+Im Folgenden wird ein einfaches Ein-Routen-Modal gezeigt. Diese Modalansicht kann jedoch React-Links enthalten, die andere Routen oder Verhaltensweisen aufrufen.
 
 + `./src/aem-ui-extension/web-src/src/components/MyModal.js`
 
@@ -182,11 +182,11 @@ export default function MyModal() {
 }
 ```
 
-## Modal schließen
+## Schließen des Modals
 
-![Schaltfläche zum Schließen des UI-Erweiterungsmodells AEM](./assets/modal/close.png){align="center"}
+![Schaltfläche zum Schließen des AEM-Benutzeroberflächen-Erweiterungsmodals](./assets/modal/close.png){align="center"}
 
-Modale müssen ihre eigene enge Kontrolle bieten. Dies geschieht durch Aufrufen von `guestConnection.host.modal.close()`.
+Modale müssen über eigene, enge Steuerungsmöglichkeiten verfügen. Dies geschieht durch Aufrufen von `guestConnection.host.modal.close()`.
 
 ```javascript
 <ButtonGroup align="end">
