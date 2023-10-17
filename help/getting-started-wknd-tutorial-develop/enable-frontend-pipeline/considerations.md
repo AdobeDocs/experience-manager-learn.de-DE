@@ -11,13 +11,13 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: a3b27d5b-b167-4c60-af49-8f2e8d814c86
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '201'
 ht-degree: 100%
 
 ---
-
 
 # Entwicklungsaspekte
 
@@ -42,6 +42,3 @@ Eine __Lösung__ könnte darin bestehen, Ihr Git-Verzweigungsmodell anzupassen u
 
 
 * Wenn Sie im Rahmen einer fortlaufenden Verbesserung Ihres AEM-Projekts neue Komponenten einführen oder eine vorhandene Komponente aktualisieren, die sowohl im `ui.app`- als auch im `ui.frontend`-Modul Änderungen aufweist, müssen Sie sowohl die Full-Stack- als auch die Frontend-Pipelines ausführen.
-
-
-
