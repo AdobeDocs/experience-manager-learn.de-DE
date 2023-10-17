@@ -1,6 +1,6 @@
 ---
-title: Adaptives Formular mit Single Signer
-description: Adaptives Formular mit einem einzigen Unterzeichner. In diesem Video werden die verschiedenen Schritte erläutert, die zum Konfigurieren eines adaptiven Formulars mit einem einzelnen Unterzeichner erforderlich sind.
+title: Adaptives Formular mit einer einzigen unterzeichnenden Person
+description: Adaptives Formular mit einer einzigen unterzeichnenden Person. In diesem Video werden die verschiedenen Schritte erläutert, die zum Konfigurieren eines adaptiven Formulars mit einer einzigen unterzeichnenden Person erforderlich sind.
 feature: Adaptive Forms,Acrobat Sign
 thumbnail: 39475.jpg
 kt: 6103
@@ -11,22 +11,22 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: b90c5c00-ec62-4809-9ab6-047eba2f2bb0
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '72'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
-# Adaptives Formular mit Single Signer
+# Adaptives Formular mit einer einzigen unterzeichnenden Person
 
 
-In diesem Video werden die verschiedenen Schritte erläutert, die zum Konfigurieren eines adaptiven Formulars mit einem einzelnen Unterzeichner erforderlich sind.
+In diesem Video werden die verschiedenen Schritte erläutert, die zum Konfigurieren eines adaptiven Formulars mit einer einzigen unterzeichnenden Person erforderlich sind.
 
 >[!VIDEO](https://video.tv.adobe.com/v/39475?quality=12&learn=on)
 
-Assets, die sich auf dieses Video beziehen, können über den folgenden Link heruntergeladen werden
+Assets, die sich auf dieses Video beziehen, können über den folgenden Link heruntergeladen werden.
 
-* [Formular des Zuschussempfängers](assets/change-of-beneficiary-form.zip)
+* [Ändern des Formulars für Begünstigte](assets/change-of-beneficiary-form.zip)
 
 ## Nächste Schritte
 
