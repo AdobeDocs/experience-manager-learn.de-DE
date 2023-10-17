@@ -1,5 +1,5 @@
 ---
-title: Verstehen der Beziehung zwischen einer Live Copy und ihrer Blueprint
+title: Grundlegendes der Beziehung zwischen einer Live Copy und ihrer Blueprint
 description: Im folgenden Video wird erläutert, wie eine Live Copy mit ihrer Blueprint in AEM Sites verbunden ist.
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
@@ -14,14 +14,14 @@ role: User
 level: Beginner
 exl-id: 0a640096-f5ed-467d-9919-4280c2d9c4e9
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '44'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Live Copy und Blueprint {#livecopy-blueprint}
 
-Machen Sie sich mit der Beziehung zwischen einer Live Copy und ihrer Blueprint in AEM Sites vertraut.
+Grundlegendes der Beziehung zwischen einer Live Copy und ihrer Blueprint in AEM Sites.
 
 >[!VIDEO](https://video.tv.adobe.com/v/36676?quality=12&learn=on)
