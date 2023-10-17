@@ -216,7 +216,7 @@ Um dieses Problem zu beheben, stellen Sie sicher, dass eine statische Ressource,
    REACT_APP_PUBLIC_URI=http://localhost:3000
    ```
 
-   _Bei der Implementierung in AEM as a Cloud Service müssen Sie für die entsprechenden `.env`-Dateien genauso vorgehen._
+   _Bei der Bereitstellung in AEM as a Cloud Service müssen Sie für die entsprechenden `.env`-Dateien genauso vorgehen._
 
 1. Öffnen Sie die Datei `src/App.js`
 1. Importieren des öffentlichen SPA-URI aus den SPA-Umgebungsvariablen
