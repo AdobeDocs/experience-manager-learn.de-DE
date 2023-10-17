@@ -1,6 +1,6 @@
 ---
-title: Verstehen des automatisierten Forms-Tests mit AEM Forms
-description: AEM 6.3 Forms bietet die Möglichkeit, Benutzern die Erstellung von Testfällen in AEM für adaptive Forms mithilfe des Calvin SDK zu ermöglichen, das auf dem Framework hobbes.js basiert
+title: Verstehen der automatisierten Formulartests mit AEM Forms
+description: AEM 6.3 Forms ermöglicht es Benutzenden, Testfälle in AEM für adaptive Formulare mithilfe des Calvin SDK zu erstellen, das auf dem Framework hobbes.js basiert.
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -9,21 +9,21 @@ level: Beginner
 exl-id: 6122859a-35eb-49d9-a146-3b304fa40413
 last-substantial-update: 2020-09-10T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '95'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
-# Verstehen des automatisierten Forms-Tests mit AEM Forms{#understanding-automated-forms-testing-with-aem-forms}
+# Verstehen der automatisierten Formulartests mit AEM Forms{#understanding-automated-forms-testing-with-aem-forms}
 
-AEM 6.3 Forms bietet die Möglichkeit, Benutzern zu ermöglichen, Testfälle in AEM für adaptive Forms mithilfe des Calvin SDK zu erstellen, das auf dem Framework hobbes.js basiert.
+AEM 6.3 Forms ermöglicht es Benutzenden, Testfälle in AEM für adaptive Formulare mithilfe des Calvin SDK zu erstellen, das auf dem Framework hobbes.js basiert.
 
 >[!VIDEO](https://video.tv.adobe.com/v/19700?quality=12&learn=on)
 
 >[!NOTE]
 >
->Die Funktion für automatisierte Forms-Tests ist ab AEM 6.3 verfügbar.
+>Das automatisierte Testen für adaptive Formulare ist ab AEM 6.3 verfügbar.
 
 >[!NOTE]
 >
@@ -31,4 +31,3 @@ AEM 6.3 Forms bietet die Möglichkeit, Benutzern zu ermöglichen, Testfälle in 
 >
 >* [Calvin SDK-Namespace](https://helpx.adobe.com/de/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
 >* [Dokumentation zu Hobbes.js](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=de)
-
