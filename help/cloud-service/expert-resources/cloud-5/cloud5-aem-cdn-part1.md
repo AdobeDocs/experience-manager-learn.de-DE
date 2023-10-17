@@ -1,6 +1,6 @@
 ---
 title: Cloud 5 AEM CDN Teil 1
-description: Dies ist Teil 1 eines tiefen Eintauchens in AEM CDN von as a Cloud Service.
+description: Dies ist Teil 1 eines tiefen Einblicks in CDN von AEM as a Cloud Service.
 version: Cloud Service
 feature: Developer Tools
 role: Admin, Developer
@@ -11,21 +11,21 @@ kt: 9797
 thumbnail: 340760.jpeg
 exl-id: 8b608b05-48ee-434f-8d5a-6c5ff1969dcf
 source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '87'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
 # Cloud 5 AEM CDN Teil 1
 
-Dies ist ein tiefer Einblick in das CDN, das als Teil AEM as a Cloud Service bereitgestellt wird, einschließlich dessen, wozu es fähig ist und ob es Ihr eigenes CDN mitbringen soll. Dies ist Teil 1 von 2.
+Dies ist ein tiefer Einblick in das CDN, das als Teil von AEM as a Cloud Service bereitgestellt wird, einschließlich dessen, was es kann und ob Sie ein eigenes CDN benötigen. Dies ist Teil 1 von 2.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340760?quality=12&learn=on)
 
-## Inhalt, der in Teil 1 dieser Reihe behandelt wird
+## Behandelter Inhalt in Teil 1 dieser Reihe
 
-+ AEM CDN [Übersicht](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=de)
++ [Übersicht](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=de) über AEM CDN
 + Funktionen der Web Application Firewall (WAF)
 + IP-Einschränkungen
 + DDOS-Schutz
