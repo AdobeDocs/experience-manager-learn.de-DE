@@ -1,7 +1,7 @@
 ---
-title: Bereitstellung des Webkanaldokuments einrichten
+title: Einrichten der Bereitstellung von Web-Kanaldokumenten
 seo-title: Setting up the delivery of web channel document
-description: Dies ist der letzte Teil eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil sehen wir uns den Versand des Webkanaldokuments per E-Mail an.
+description: Dies ist der letzte Teil eines mehrstufigen Tutorials zum Erstellen Ihres ersten Dokuments zur interaktiven Kommunikation. In diesem Teil beschäftigen wir uns mit dem Versand eines Web-Kanaldokuments per E-Mail.
 seo-description: This is the final part of a multistep tutorial for creating your first interactive communications document. In this part, we look at the delivery of web channel document via email.
 uuid: c1066600-1abd-4401-b04f-b93c28603cc7
 feature: Interactive Communication
@@ -16,65 +16,65 @@ role: Developer
 level: Beginner
 exl-id: 510d1782-59b9-41a6-a071-a16170f2cd06
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '357'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Bereitstellung des Webkanaldokuments einrichten {#setting-up-the-delivery-of-web-channel-document}
+# Einrichten der Bereitstellung von Web-Kanaldokumenten {#setting-up-the-delivery-of-web-channel-document}
 
 
-In diesem Teil sehen wir uns den Versand des Webkanaldokuments per E-Mail an.
+In diesem Teil beschäftigen wir uns mit dem Versand eines Web-Kanaldokuments per E-Mail.
 
-Nachdem Sie Ihr Dokument zur interaktiven Kommunikation mit Webkanälen definiert und getestet haben, benötigen Sie einen Bereitstellungsmechanismus, um das Webkanaldokument an den Empfänger zu senden.
+Nachdem Sie Ihr Web-Kanaldokument zur interaktiven Kommunikation definiert und getestet haben, benötigen Sie einen Versandmechanismus, um das Web-Kanaldokument an die Empfängerin oder den Empfänger zu senden.
 
-Um E-Mails als Bereitstellungsmechanismus für unser Webkanaldokument verwenden zu können, müssen wir eine geringfügige Änderung am Formulardatenmodell vornehmen.
+Um E-Mails als Versandmechanismus für unser Web-Kanaldokument verwenden zu können, müssen wir eine geringfügige Änderung am Formulardatenmodell vornehmen.
 
-[Weitere Informationen zum Webkanal-Versand per E-Mail](/help/forms/interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
+[Weitere Informationen zum Web-Kanalversand per E-Mail](/help/forms/interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
 
 Melden Sie sich bei AEM Forms an.
 
-* Navigieren Sie zu Forms > Datenintegrationen .
+* Navigieren Sie zu Formulare > Datenintegrationen
 
-* Öffnen Sie das Datenmodell RetirementAccountStatement im Bearbeitungsmodus.
+* Öffnen Sie das Datenmodell „RetirementAccountStatement“ im Bearbeitungsmodus.
 
-* Wählen Sie das Bildobjekt aus und klicken Sie auf die Schaltfläche &quot;Bearbeiten&quot;.
+* Wählen Sie das Saldo-Objekt aus und klicken Sie auf die Schaltfläche „Bearbeiten“.
 
 * Wählen Sie das Stiftsymbol aus, um das id-Argument im Bearbeitungsmodus zu öffnen.
 
-* Ändern Sie die Bindung in &quot;RequestAttribute&quot;.
+* Ändern Sie die Bindung zu „RequestAttribute“.
 
-* Legen Sie die Kontonummer im Bindungswert wie unten dargestellt fest.
+* Legen Sie „accountnumber“ (also die Kontonummer) unter „Bindungswert“ fest, wie unten dargestellt.
 
 * Auf diese Weise übergeben wir die Kontonummer über das Anfrageattribut an das Formulardatenmodell.
 
-* Achten Sie darauf, Ihre Änderungen zu speichern.
-   ![fdm](assets/requestattribute.gif)
+* Denken Sie daran, Ihre Änderungen zu speichern.
+  ![FDM](assets/requestattribute.gif)
 
-## Testen der E-Mail-Bereitstellung des Webkanal-Dokuments {#test-email-delivery-of-web-channel-document}
+## Testen des E-Mail-Versands des Web-Kanaldokuments {#test-email-delivery-of-web-channel-document}
 
-* [Installieren von Beispiel-Assets mit Package Manager](assets/webchanneldelivery.zip)
-* [Bei crx anmelden](http://localhost:4502/crx/de/index.jsp#)
+* [Installieren Sie die Beispiel-Assets mit Package Manager.](assets/webchanneldelivery.zip)
+* [Melden Sie sich bei crx an.](http://localhost:4502/crx/de/index.jsp#)
 
-* Navigieren Sie zu /home/users
+* Navigieren Sie zu „/home/users“.
 
-* Suchen Sie nach Admin-Benutzer unter dem Knoten des Benutzers.
+* Suchen Sie nach der Admin-Benutzerin bzw. dem Admin-Benutzer unter dem Knoten der Benutzerin bzw. des Benutzers.
 
-* Wählen Sie den Profilknoten des Admin-Benutzers aus.
+* Wählen Sie den Profilknoten der Admin-Benutzerin oder des Admin-Benutzers aus.
 
-* Erstellen Sie eine Eigenschaft mit der Bezeichnung &quot;Kundennummer&quot;. Stellen Sie sicher, dass der Eigenschaftstyp eine Zeichenfolge ist.
+* Erstellen Sie eine Eigenschaft „accountnumber“. Stellen Sie sicher, dass der Eigenschaftstyp eine Zeichenfolge ist.
 
-* Setzen Sie den Wert dieser Eigenschaft der Kundennummer auf &quot;3059827&quot;. Sie können diesen Wert beliebig auf eine zufällige Zahl einstellen.
+* Legen Sie für diese accountnumber-Eigenschaft den Wert „3059827“ fest. Sie können diesen Wert beliebig auf eine zufällige Zahl einstellen.
 
-* [Öffnen Sie getad.html](http://localhost:4502/content/getad.html)
+* [Öffnen Sie getad.html.](http://localhost:4502/content/getad.html)
 
-* Der mit dieser URL verknüpfte Code erhält die Kontonummer des angemeldeten Benutzers. Diese Kontonummer wird dann als Anforderungsattribut an den FDM übergeben. Der FDM ruft dann die mit dieser Kontonummer verknüpften Daten ab und füllt das Webkanaldokument aus.
+* Der mit dieser URL verknüpfte Code erhält die Kontonummer der angemeldeten Benutzerin bzw. des angemeldeten Benutzers. Diese Kontonummer wird dann als Anfrageattribut an das FDM weitergegeben. Das FDM ruft dann die mit dieser Kontonummer verknüpften Daten ab und füllt das Web-Kanaldokument auf.
 
 >[!NOTE]
 >
->Bitte schauen Sie sich die **/apps/AEMForms/fetchad/GET.jsp** Datei in crx. Vergewissern Sie sich, dass die String-Variable webChannelDocument auf einen gültigen Pfad für Kommunikationsdokumente verweist.
+>Sehen Sie sich die Datei **/apps/AEMForms/fetchad/GET.jsp** in crx an. Vergewissern Sie sich, dass die Zeichenfolgenvariable „webChannelDocument“ auf einen gültigen Pfad für Kommunikationsdokumente verweist.
 
 ## Nächste Schritte
 
-[E-Mail-Versand einrichten](../interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
+[Einrichten des E-Mail-Versands](../interactive-communications/delivery-of-web-channel-document-tutorial-use.md)
