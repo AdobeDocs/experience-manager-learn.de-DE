@@ -1,6 +1,6 @@
 ---
 title: Beheben von Abhängigkeitsproblemen mit C++-Bibliotheken in Designer
-description: Installieren Sie die erforderlichen C++-Bibliotheken für Designer.
+description: Installieren der erforderlichen C++-Bibliotheken für Designer
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -10,9 +10,9 @@ topic: Development
 index: y
 exl-id: 9cffce45-c853-440f-9ddf-2e179dff6745
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '42'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
