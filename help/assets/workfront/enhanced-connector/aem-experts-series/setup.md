@@ -1,6 +1,6 @@
 ---
-title: Ersteinrichtung und Konfiguration von Workfront für AEM erweiterten Connector
-description: Erfahren Sie, wie Sie den Workfront für Experience Manager Enhanced Connector einrichten und konfigurieren, um die kombinierte Leistung von AEM Assets und Workfront zu erschließen.
+title: Ersteinrichtung und Konfiguration für den erweiterten Workfront-Connector für AEM
+description: Erfahren Sie, wie Sie den erweiterten Workfront-Connector für Experience Manager einrichten und konfigurieren, um die kombinierte Leistung von AEM Assets und Workfront zu erschließen.
 version: Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
@@ -14,18 +14,18 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: f0018d16-af96-4b92-b0fc-6130d812bf8f
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '90'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Ersteinrichtung und -konfiguration
+# Ersteinrichtung und Konfiguration
 
 ![AEM-Expertenserie](./assets/banner.png)
 
-Erfahren Sie, wie Sie den Workfront für Experience Manager Enhanced Connector einrichten und konfigurieren, um die kombinierte Leistung von AEM Assets und Workfront zu erschließen.
+Erfahren Sie, wie Sie den erweiterten Workfront-Connector für Experience Manager einrichten und konfigurieren, um die kombinierte Leistung von AEM Assets und Workfront zu erschließen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340331?quality=12&learn=on)
 
-_Dies ist Teil eines von [Vierteilige Expertenreihe zu Workfront für Experience Manager Enhanced Connector](./overview.md)_
+_Dies ist der erste Teil einer [vierteiligen Expertenserie über den erweiterten Workfront-Connector für Experience Manager](./overview.md)_
