@@ -12,9 +12,9 @@ mini-toc-levels: 1
 thumbnail: 30181.jpg
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
 source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4057'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -1008,7 +1008,7 @@ Dazu schließen wir die aktuelle Autorenzeilen-Ressource ein, erzwingen jedoch d
 
 ### Überprüfen der nicht formatierten Autorenzeilenkomponente {#reviewing-the-unstyled-byline-component}
 
-1. Navigieren Sie nach der Bereitstellung der Aktualisierung zur Seite [Ultimate Guide to LA Skateparks ](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html) bzw. dorthin, wo Sie die Autorenzeilenkomponente zuvor im Kapitel hinzugefügt haben.
+1. Navigieren Sie nach der Bereitstellung der Aktualisierung zur Seite [Ultimate Guide to LA Skateparks](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html) bzw. dorthin, wo Sie die Autorenzeilenkomponente zuvor im Kapitel hinzugefügt haben.
 
 1. Das **Bild**, der **Name** und die **Berufe** werden nun angezeigt, und es liegt eine unformatierte, aber funktionierende Autorenzeilenkomponente vor.
 
