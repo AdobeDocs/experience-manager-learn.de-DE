@@ -1,6 +1,6 @@
 ---
 title: AEM Forms mit Marketo (Teil 2)
-description: Tutorial zur Integration von AEM Forms mit Marketo mithilfe des AEM Forms-Formulardatenmodells.
+description: Tutorial zur Integration von AEM Forms in Marketo mithilfe des AEM Forms-Formulardatenmodells.
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Integrations, Development
@@ -10,19 +10,19 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: f8ba3d5c-0b9f-4eb7-8609-3e540341d5c2
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '366'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # Marketo-Authentifizierungsdienst
 
-Marketos REST-APIs sind mit OAuth 2.0 mit zwei Legierungen authentifiziert. Für die Authentifizierung bei Marketo müssen benutzerdefinierte Authentifizierungen erstellt werden. Diese benutzerdefinierte Authentifizierung wird normalerweise in ein OSGi-Bundle geschrieben. Der folgende Code zeigt den benutzerdefinierten Authentifizierer, der im Rahmen dieses Tutorials verwendet wurde.
+Die REST-APIs von Marketo sind mit OAuth 2.0 mit zwei Abzweigungen authentifiziert. Zur Authentifizierung bei Marketo muss eine benutzerdefinierte Authentifizierung erstellt werden. Diese benutzerdefinierte Authentifizierung wird normalerweise in ein OSGi-Bundle geschrieben. Der folgende Code zeigt den benutzerdefinierten Authenticator, der im Rahmen dieses Tutorials verwendet wurde.
 
 ## Benutzerdefinierter Authentifizierungsdienst
 
-Der folgende Code erstellt das Objekt AuthenticationDetails , das über das für die Authentifizierung bei Marketo erforderliche access_token verfügt
+Der folgende Code erstellt das Objekt „AuthenticationDetails“, das über das für die Authentifizierung bei Marketo erforderliche access_token verfügt
 
 ```java
 package com.marketoandforms.core;
@@ -54,13 +54,13 @@ MarketoService marketoService;
 }
 ```
 
-Der MarketoAuthenticationService implementiert die IAuthentication-Schnittstelle. Diese Schnittstelle ist Teil des AEM Forms Client SDK. Der Dienst ruft das Zugriffstoken ab und fügt das Token in die HttpHeader der AuthenticationDetails ein. Sobald die HttpHeaders des AuthenticationDetails-Objekts ausgefüllt sind, wird das Objekt AuthenticationDetails an die Dermis-Ebene des Formulardatenmodells zurückgegeben.
+Der MarketoAuthenticationService implementiert die IAuthentication-Schnittstelle. Diese Schnittstelle ist Teil des AEM Forms Client SDK. Der Dienst ruft das Zugriffs-Token ab und fügt das Token in die HttpHeader der AuthenticationDetails ein. Sobald die HttpHeader des AuthenticationDetails-Objekts ausgefüllt sind, wird das AuthenticationDetails-Objekt an die Dermis-Ebene des Formulardatenmodells zurückgegeben.
 
-Beachten Sie die von der Methode getAuthenticationType zurückgegebene Zeichenfolge. Diese Zeichenfolge wird bei der Konfiguration Ihrer Datenquelle verwendet.
+Beachten Sie die von der Methode „getAuthenticationType“ zurückgegebene Zeichenfolge. Diese Zeichenfolge wird verwendet, wenn Sie Ihre Datenquelle konfigurieren.
 
-### Zugriffstoken abrufen
+### Abrufen eines Zugriffs-Tokens
 
-Eine einfache Schnittstelle wird mit einer Methode definiert, die das access_token zurückgibt. Der Code für die Klasse, die diese Schnittstelle implementiert, wird weiter unten auf der Seite aufgelistet.
+Eine einfache Schnittstelle wird mit einer Methode definiert, die access_token zurückgibt. Der Code für die Klasse, die diese Schnittstelle implementiert, wird weiter unten auf der Seite aufgeführt.
 
 ```java
 package com.marketoandforms.core;
@@ -69,7 +69,7 @@ public interface MarketoService {
 }
 ```
 
-Der folgende Code ist vom Dienst, der das access_token zurückgibt, das beim Ausführen der REST-API-Aufrufe verwendet werden soll. Der Code in diesem Dienst greift auf die Konfigurationsparameter zu, die für den GET-Aufruf erforderlich sind. Wie Sie sehen können, übergeben wir client_id,client_secret in der GET-URL, um das access_token zu generieren. Dieses access_token wird dann an die aufrufende Anwendung zurückgegeben.
+Der folgende Code stammt aus dem Dienst, der access_token zurückgibt, das beim Ausführen der REST-API-Aufrufe verwendet werden soll. Der Code in diesem Dienst greift auf die Konfigurationsparameter zu, die für den GET-Aufruf erforderlich sind. Wie Sie sehen können, übergeben wir client_id,client_secret in der GET-URL, um access_token zu generieren. access_token wird dann wie generiert an die aufrufende Anwendung zurückgegeben.
 
 ```java
 package com.marketoandforms.core.impl;
@@ -128,13 +128,13 @@ MarketoConfigurationService config;
 }
 ```
 
-Der folgende Screenshot zeigt die Konfigurationseigenschaften, die festgelegt werden müssen. Diese Konfigurationseigenschaften werden im oben aufgeführten Code gelesen, um das access_token zu erhalten.
+Der folgende Screenshot zeigt die Konfigurationseigenschaften, die festgelegt werden müssen. Diese Konfigurationseigenschaften werden im oben aufgeführten Code gelesen, um access_token zu erhalten
 
 ![config](assets/configuration-settings.png)
 
 ### Konfiguration
 
-Der folgende Code wurde zum Erstellen der Konfigurationseigenschaften verwendet. Diese Eigenschaften sind spezifisch für Ihre Marketo-Instanz.
+Der folgende Code wurde zum Erstellen der Konfigurationseigenschaften verwendet. Diese Eigenschaften sind spezifisch für Ihre Marketo-Instanz
 
 ```java
 package com.marketoandforms.core;
@@ -200,9 +200,9 @@ public class MarketoConfigurationService {
 }
 ```
 
-1. Erstellen Sie das Bundle und stellen Sie es auf Ihrem AEM bereit.
-1. [Zeigen Sie Ihren Browser auf configMgr](http://localhost:4502/system/console/configMgr) und suchen Sie nach &quot;Marketo Credentials Service Configuration&quot;
-1. Spezifizieren Sie die entsprechenden Eigenschaften für Ihre Marketo-Instanz.
+1. Erstellen Sie das Bundle und stellen Sie es auf Ihrem AEM-Server bereit.
+1. [Lassen Sie Ihren Browser auf „configMgr“ verweisen](http://localhost:4502/system/console/configMgr) und suchen Sie nach „Marketo Credentials Service Configuration“
+1. Geben Sie die entsprechenden Eigenschaften für Ihre Marketo-Instanz an
 
 ## Nächste Schritte
 
