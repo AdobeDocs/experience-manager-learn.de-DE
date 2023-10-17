@@ -1,6 +1,6 @@
 ---
-title: Automatisierter Formularkonversionsdienst
-description: Automatisierter Formularkonversionsdienst. In diesem Artikel wird beschrieben, wie ein AEM-Administrator den Automated forms conversion-Dienst konfigurieren kann, um die Konvertierung ihrer PDF forms in adaptive Formulare zu automatisieren. Diese Hilfe richtet sich an IT- und AEM-Administratoren in Ihrem Unternehmen.
+title: Service zur automatisierten Formularkonvertierung
+description: Service zur automatisierten Formularkonvertierung. Dieser Artikel beschreibt, wie AEM-Admins den Service zur automatisierten Formularkonvertierung konfigurieren können, um die Konvertierung von PDF-Formularen in adaptive Formulare zu automatisieren. Diese Hilfe richtet sich an IT- und AEM-Admins in Ihrem Unternehmen.
 feature: Adaptive Forms
 thumbnail: 39493.jpg
 kt: 6114
@@ -11,15 +11,15 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 0715a2cc-c042-4ddc-85a1-7720f420351b
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '264'
-ht-degree: 60%
+ht-degree: 100%
 
 ---
 
-# Automatisierter Formularkonversionsdienst
+# Service zur automatisierten Formularkonvertierung
 
-In diesem Artikel wird beschrieben, wie ein AEM-Administrator den Automated forms conversion-Dienst konfigurieren kann, um die Konvertierung ihrer PDF forms in adaptive Formulare zu automatisieren. Diese Hilfe richtet sich an IT- und AEM-Administratoren in Ihrem Unternehmen. Benutzer dieser Hilfe sollten mit den folgenden Technologien vertraut sein:
+Dieser Artikel beschreibt, wie AEM-Admins den Service zur automatisierten Formularkonvertierung konfigurieren können, um die Konvertierung von PDF-Formularen in adaptive Formulare zu automatisieren. Diese Hilfe richtet sich an IT- und AEM-Administratoren in Ihrem Unternehmen. Benutzer dieser Hilfe sollten mit den folgenden Technologien vertraut sein:
 
 * Installieren, Konfigurieren und Verwalten von Adobe Experience Manager- und AEM-Paketen,
 * Verwenden von Linux- und Microsoft Windows-Betriebssystemen,
@@ -32,12 +32,12 @@ Für die Verwendung des Service für die automatisierte Formularkonvertierung is
 * Der Service für die automatisierte Formularkonvertierung muss für Ihre Organisation aktiviert sein
 * Ein Adobe ID-Konto mit Administratorrechten für den Konvertierungs-Service
 * Eine betriebsbereite AEM 6.4- oder AEM 6.5-Autoreninstanz mit dem neuesten AEM Service Pack
-* Ein AEM-Benutzer (in Ihrer AEM-Instanz), der Mitglied der Gruppe „forms-user“ ist
+* Eine AEM-Benutzerin oder ein AEM-Benutzer (in Ihrer AEM-Instanz), die bzw. der Mitglied der Gruppe „forms-user“ ist
 
 >[!NOTE]
->Das folgende Video kann nach der Adobe angezeigt werden, die den Zugriff für Ihr Unternehmen ermöglicht und dem Administrator die erforderlichen Berechtigungen gewährt. Der Administrator kann sich bei Admin Console anmelden, ein Profil erstellen und dem Profil Entwickler hinzufügen. Entwickler können eine lokale Instanz von AEM Forms mit dem Service für die automatisierte Formularkonvertierung in Adobe Cloud verbinden.
+>Nachdem Adobe den Zugriff für Ihre Organisation aktiviert und den Admins die erforderlichen Berechtigungen erteilt hat, können sich die Admins bei der Admin Console anmelden, ein Profil erstellen und Entwicklerinnen bzw. Entwickler zu dem Profil hinzufügen. Entwicklungspersonen können eine lokale Instanz von AEM Forms mit dem Service für die automatisierte Formularkonvertierung in Adobe Cloud verbinden.
 
-* In diesem Video werden die Schritte erläutert, die zum Verbinden Ihrer lokalen AEM Forms-Instanz mit dem Automated forms conversion-Dienst in der Adobe Cloud erforderlich sind.
+* In diesem Video werden die Schritte erläutert, die zum Verbinden Ihrer lokalen AEM Forms-Instanz mit dem Service zur automatisierten Formularkonvertierung in Adobe Cloud erforderlich sind.
 
 >[!VIDEO](https://video.tv.adobe.com/v/39493?quality=12&learn=on)
 
