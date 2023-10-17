@@ -1,6 +1,6 @@
 ---
 title: Installieren der GraphiQL-IDE in AEM 6.5
-description: Erfahren Sie, wie Sie die GraphiQL IDE in AEM 6.5 installieren und konfigurieren
+description: Erfahren Sie, wie Sie die GraphiQL-IDE auf AEM 6.5 installieren und konfigurieren.
 version: 6.5
 topic: Headless
 feature: GraphQL API
@@ -8,27 +8,27 @@ role: Developer
 level: Intermediate
 kt: 11614
 thumbnail: KT-10253.jpeg
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
-workflow-type: tm+mt
+exl-id: 04fcc24c-7433-4443-a109-f01840ef1a89
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '210'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
-
 # Installieren der GraphiQL-IDE in AEM 6.5
 
-In AEM 6.5 muss das GraphiQL IDE Tool manuell installiert werden.
+In AEM 6.5 muss das GraphiQL-IDE-Tool manuell installiert werden.
 
 1. Gehen Sie zum **[Software-Verteilungsportal](https://experience.adobe.com/#/downloads/content/software-distribution/de/aemcloud.html)** > **AEM as a Cloud Service**.
-1. Suchen Sie nach &quot;GraphiQL&quot;(stellen Sie sicher, dass Sie die **i** in **GraphiQL**).
-1. Neueste Version herunterladen **GraphiQL Content Package v.x.x.x**.
+1. Suchen Sie nach „GraphiQL“ (achten Sie darauf, das **i** in **GraphiQL** einzuschließen).
+1. Laden Sie das aktuelle **GraphiQL Content Package v.x.x.x** herunter.
 
    ![Herunterladen des GraphiQL-Pakets](assets/graphiql/software-distribution.png)
 
    Die ZIP-Datei ist ein AEM-Paket, das direkt installiert werden kann.
 
-1. Navigieren Sie im AEM-Startmenü zu **Tools** > **Implementierung** > **Pakete**.
+1. Navigieren Sie im AEM-Startmenü zu **Tools** > **Bereitstellung** > **Pakete**.
 1. Klicken Sie auf **Paket hochladen** und wählen Sie das im vorherigen Schritt heruntergeladene Paket aus. Klicken Sie auf **Installieren**, um das Paket zu installieren.
 
    ![Installieren des GraphiQL-Pakets](assets/graphiql/install-graphiql-package.png)
@@ -48,4 +48,4 @@ In AEM 6.5 muss das GraphiQL IDE Tool manuell installiert werden.
 
 >[!TIP]
 >
->Um Ihr projektspezifisches GraphQL-Schema und die Ausführung von Abfragen zu unterstützen, müssen Sie die entsprechenden Änderungen für die `endpoint` und `Excluded Paths` -Werte in den oben genannten Schritten.
+>Um Ihr projektspezifisches GraphQL-Schema und die Ausführung von Abfragen zu unterstützen, müssen Sie die entsprechenden Änderungen für die Werte `endpoint` und `Excluded Paths` in den obigen Schritten vornehmen.
