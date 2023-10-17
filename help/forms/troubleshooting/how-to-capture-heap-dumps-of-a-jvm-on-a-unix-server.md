@@ -1,6 +1,6 @@
 ---
-title: Erfassen von Heap-Dumps einer JVM auf einem Unix-Server
-description: Erfassen der Heap-Dumps der Ausführung von Java-Prozess auf einem Unix-Server
+title: Erfassen von Heapdumps einer JVM auf einem Unix-Server
+description: Erfassen der Heapdumps laufender Java-Prozesse auf einem Unix-Server
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -9,14 +9,14 @@ topic: Administration
 index: y
 exl-id: 6bb1d501-80c5-4f4d-af09-bbfcfcf51aa6
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '53'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Erfassen von Heap-Dumps einer JVM auf einem Unix-Server
+# Erfassen von Heapdumps einer JVM auf einem Unix-Server
 
-*In diesem Video werden die Schritte zum Erfassen von Heap-Dumps einer JVM auf einem Unix-Server erläutert.*
+*In diesem Video werden die Schritte zum Erfassen von Heapdumps einer JVM auf einem Unix-Server erläutert.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335489?quality=12&learn=on)
