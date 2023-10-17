@@ -1,6 +1,6 @@
 ---
-title: JSON-Web-Token erstellen
-description: Erstellen Sie ein JSON-Web-Token (JWT), das mit Adobe IMS-APIs für ein AEM Zugriffstoken ausgetauscht werden kann.
+title: Erstellen eines JSON-Web-Tokens
+description: Erstellen Sie ein JSON-Web-Token (JWT), das mit Adobe IMS-APIs mit einem AEM-Zugriffs-Token ausgetauscht werden kann.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -11,16 +11,16 @@ kt: 8184
 thumbnail: 8184.jpg
 exl-id: 394ed621-1106-4b2a-a6b7-2efa5867f5b1
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '112'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# JSON-Web-Token erstellen
+# Erstellen eines JSON-Web-Tokens
 
-JSON Web Tokens ist eine offene, branchenübliche RFC 7519-Methode zur sicheren Darstellung von Forderungen zwischen zwei Parteien. In diesem Beispiel wurden JWT.io-Bibliotheken verwendet, um das JWT zu generieren.
-Die Dienstanmeldeinformationen, die Sie im vorherigen Schritt heruntergeladen haben, enthalten den privaten Schlüssel im PKCS#1-Format. Um den privaten Schlüssel aus dieser Zeichenfolge zu extrahieren, haben wir verwendet. [BouncyCastle](https://www.bouncycastle.org/) -Bibliotheken. Die Kryptobibliotheken, die Teil von Java sind, unterstützen das PKCS#1-Format nicht.
+JSON-Web-Token bieten eine offene, branchenübliche RFC-7519-Methode zur sicheren Darstellung von Forderungen zwischen zwei Parteien. In diesem Beispiel wurden JWT.io-Bibliotheken verwendet, um das JWT zu generieren.
+Die Dienstanmeldeinformationen, die im vorherigen Schritt heruntergeladen wurden, enthalten den privaten Schlüssel im PKCS#1-Format. Um den privaten Schlüssel aus dieser Zeichenfolge zu extrahieren, haben wir [BouncyCastle](https://www.bouncycastle.org/)-Bibliotheken verwendet. Die Kryptobibliotheken, die Teil von Java sind, unterstützen das PKCS#1-Format nicht.
 
 Der folgende Code wurde zum Generieren des JWT verwendet:
 
