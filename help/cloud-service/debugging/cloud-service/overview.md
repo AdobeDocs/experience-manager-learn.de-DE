@@ -29,11 +29,11 @@ Die Protokolle geben Details dazu, wie Ihre Anwendung in AEM als Cloud Service f
 
 [Debugging von AEM as a Cloud Service mithilfe von Protokollen](./logs.md)
 
-## Erstellung und Implementierung
+## Erstellung und Bereitstellung
 
 Die Adobe Cloud Manager-Pipelines stellen die AEM-Anwendung in einer Reihe von Schritten bereit, um die Code-Qualität und die Lebensfähigkeit bei der Bereitstellung in AEM as a Cloud Service zu bestimmen. Jeder dieser Schritte kann zu Fehlern führen. Daher ist es wichtig zu wissen, wie man Builds debuggt, um die Ursache von Fehlern zu ermitteln und diese zu beheben.
 
-[Debugging bei der Erstellung und Implementierung von AEM as a Cloud Service](./build-and-deployment.md)
+[Debugging bei der Erstellung und Bereitstellung von AEM as a Cloud Service](./build-and-deployment.md)
 
 ## Developer Console
 
