@@ -10,9 +10,9 @@ level: Experienced
 exl-id: 4a69513d-992c-435a-a520-feb9085820e7
 last-substantial-update: 2020-06-09T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '225'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 0%
 
 Ein gängiger Anwendungsfall besteht darin, das hochgeladene Bild als Inline-Bild im adaptiven Formular anzuzeigen. Standardmäßig wird das hochgeladene Bild als Link angezeigt und dieses Erlebnis kann durch die Anzeige des Bildes im adaptiven Formular verbessert werden. Dieser Artikel führt Sie durch die Schritte, die für die Anzeige von Inline-Bildern erforderlich sind.
 
-## Platzhalterbild hinzufügen
+## Hinzufügen eines Platzhalterbildes
 
-Der erste Schritt besteht darin, der Dateianlagenkomponente ein Platzhalter-div vorzuhängen. Im folgenden Code wird die Dateianlagenkomponente durch den CSS-Klassennamen des Foto-Uploads identifiziert. Die JavaScript-Funktion ist Teil der Client-Bibliothek, die mit den adaptiven Formularen verknüpft ist. Diese Funktion wird im initialize-Ereignis der Dateianlagenkomponente aufgerufen.
+Der erste Schritt besteht darin, der Dateianlagenkomponente ein Platzhalter-Div vorzuhängen. Im folgenden Code wird die Dateianlagenkomponente durch den CSS-Klassennamen des Foto-Uploads identifiziert. Die JavaScript-Funktion ist Teil der Client-Bibliothek, die mit den adaptiven Formularen verknüpft ist. Diese Funktion wird im Ereignis „initialize“ der Dateianlagenkomponente aufgerufen.
 
 ```javascript
 /**
@@ -35,9 +35,9 @@ function addTempImage(){
 }
 ```
 
-### Inline-Bild anzeigen
+### Anzeigen eines Inline-Bildes
 
-Nachdem der Benutzer das Bild hochgeladen hat, wird die unten aufgeführte Funktion im commit-Ereignis der Dateianlagenkomponente aufgerufen. Die Funktion empfängt das hochgeladene Dateiobjekt als Argument.
+Nachdem die Benutzenden das Bild hochgeladen haben, wird die unten aufgeführte Funktion im Commit-Ereignis der Dateianlagenkomponente aufgerufen. Die Funktion empfängt das hochgeladene Dateiobjekt als Argument.
 
 ```javascript
 /**
@@ -63,9 +63,9 @@ function consumeImage (file) {
 }
 ```
 
-### Auf Ihrem Server bereitstellen
+### Bereitstellen auf Ihrem Server
 
-* Laden Sie die [Client-Bibliothek](assets/inline-image-client-library.zip) auf Ihrer AEM-Instanz mithilfe AEM Package Manager.
-* Laden Sie die [Beispielformular](assets/inline-image-af.zip) auf Ihrer AEM Instanz mithilfe AEM Package Manager.
-* Zeigen Sie Ihren Browser auf [Inline-Bild hinzufügen](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
-* Klicken Sie auf die Schaltfläche &quot;Foto anhängen&quot;, um ein Bild hinzuzufügen.
+* Laden Sie die [Client-Bibliothek](assets/inline-image-client-library.zip) herunter und installieren Sie sie auf Ihrer AEM-Instanz mithilfe von AEM Package Manager.
+* Laden Sie das [Beispielformular](assets/inline-image-af.zip) herunter und installieren Sie es auf Ihrer AEM-Instanz mithilfe von AEM Package Manager.
+* Lassen Sie Ihren Browser auf [Inline-Bild hinzufügen](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled) verweisen
+* Klicken Sie auf die Schaltfläche „Foto anhängen“, um ein Bild hinzuzufügen.
