@@ -1,5 +1,5 @@
 ---
-title: Asset Share Commons Asset Kit
+title: Asset Share Commons-Asset-Kit
 description: Erfahren Sie, wie Sie mithilfe des Asset-Kits von Asset Share Common maßgeschneiderte, freigebbare Webseiten erstellen, auf denen Assets aus AEM Assets-Ordnern oder -Sammlungen aufgelistet werden.
 version: Cloud Service
 topic: Content Management
@@ -12,15 +12,15 @@ jira: KT-11868
 thumbnail: 3415467.jpeg
 exl-id: fb8adf75-02d7-44e5-a84e-e0731100dc58
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '79'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Asset Share Commons Asset Kit
+# Asset Share Commons-Asset-Kit
 
-Erfahren Sie, wie Sie Asset Share Common verwenden [Asset-Kit](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) , um maßgeschneiderte, freigebbare Webseiten zu generieren, auf denen Assets aus AEM Assets-Ordnern oder -Sammlungen aufgelistet werden.
+Erfahren Sie, wie Sie das [Asset-Kit](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) von Asset Share Common verwenden, um maßgeschneiderte, freigebbare Webseiten zu generieren, auf denen Assets aus AEM Assets-Ordnern oder -Sammlungen aufgelistet werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415467?quality=12&learn=on)
 
