@@ -1,6 +1,6 @@
 ---
-title: Erstellen des Anfangsformulars zum Trigger des Prozesses
-description: Erstellen Sie das erste Formular, um die E-Mail-Benachrichtigung Trigger und den Signiervorgang zu starten.
+title: Erstellen des anfänglichen Formulars zum Auslösen des Prozesses
+description: Erstellen Sie das anfängliche Formular, um die E-Mail-Benachrichtigung auszulösen und den Signiervorgang zu starten.
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -10,30 +10,30 @@ kt: 6892
 thumbnail: 6892.jpg
 exl-id: d7c55dc8-d886-4629-bb50-d927308d12e3
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '177'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
-# Erstellen eines anfänglichen Formulars
+# Erstellen des anfänglichen Formulars
 
-Das ursprüngliche Formular (Refinance-Formular) wird zum Signieren mehrerer Formulare verwendet, indem das **Mehrere Forms signieren** AEM. Sie können Werte Ihrer Wahl eingeben. Stellen Sie jedoch sicher, dass dem Formular die folgenden Felder hinzugefügt werden.
+Das anfängliche Formular (Refinanzierungsformular) wird zum Signieren mehrerer Formulare verwendet, indem der AEM-Workflow **Mehrere Formulare signieren** ausgelöst wird. Sie können Werte Ihrer Wahl eingeben. Stellen Sie jedoch sicher, dass dem Formular die folgenden Felder hinzugefügt werden.
 
 | Feldtyp | Name | Zweck | Ausgeblendet | Standardwert |
 | ------------------------|---------------------------------------|--------------------|--------|----------------- |
-| TextField | signed | So geben Sie den Signaturstatus an | Y | N |
-| TextField | guid | Eindeutige Identifizierung des Formulars | Y | 3889 |
-| TextField | customerName | Erfassen des Kundennamens | N |
-| TextField | customerEmail | Kunden-E-Mail zum Senden einer Benachrichtigung | N |
-| Kontrollkästchen | formsToSign | Die Elemente identifizieren die Formulare im Paket | N |
+| Textfeld | unterzeichnet | So geben Sie den Signaturstatus an | J | N |
+| Textfeld | GUID | Für die eindeutige Identifizierung des Formulars | J | 3889 |
+| Textfeld | Kundenname | Fürs Erfassen des Kundennamens | N |
+| Textfeld | Kunden-E-Mail | Kunden-E-Mail zum Senden einer Benachrichtigung | N |
+| Kontrollkästchen | Zu unterzeichnende Formulare | Die Elemente identifizieren die Formulare im Paket. | N |
 
-Das anfängliche Formular muss so konfiguriert werden, dass ein AEM Workflow mit dem Namen **signmultipleforms**
-Stellen Sie sicher, dass der Datendateipfad auf **Data.xml**. Dies ist sehr wichtig, da der Beispielcode in der Payload nach einer Datei namens Data.xml sucht, in der der Prozess der Formularübermittlung ausgeführt wird.
+Das anfängliche Formular muss so konfiguriert werden, dass ein AEM-Workflow mit dem Namen **signmultipleforms** ausgelöst wird
+Stellen Sie sicher, dass der Datendateipfad auf **Data.xml** gesetzt ist. Dies ist sehr wichtig, da der Beispiel-Code in der Payload nach einer Datei namens „Data.xml“ sucht, um die Formularübermittlung zu verarbeiten.
 
 ## Assets
 
-Das ursprüngliche Formular (Refinanzierungsformular) kann [heruntergeladen von hier](assets/refinance-form.zip)
+Das anfängliche Formular (Refinanzierungsformular) kann [hier heruntergeladen](assets/refinance-form.zip) werden
 
 ## Nächste Schritte
 
