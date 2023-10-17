@@ -1,45 +1,45 @@
 ---
-title: AMS Dispatcher - Schreibgeschützte oder unveränderliche Dateien
-description: Verstehen, warum einige Dateien schreibgeschützt oder nicht bearbeitbar sind und wie Sie die gewünschten funktionalen Änderungen vornehmen
+title: AMS Dispatcher – Schreibgeschützte bzw. unveränderliche Dateien
+description: Gründe, warum einige Dateien schreibgeschützt bzw. nicht bearbeitbar sind, und Vornehmen der gewünschten funktionalen Änderungen
 version: 6.5
 topic: Administration, Development
 feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: d6b7d63ba02ca73d6c1674d90db53c6eebab3bd2
-workflow-type: tm+mt
+exl-id: 7be6b3f9-cd53-41bc-918d-5ab9b633ffb3
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '826'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
+# Schreibgeschützte bzw. unveränderliche Dateien in AMS
 
-# Schreibgeschützte oder unveränderliche Dateien in AMS
-
-[Inhalt](./overview.md)
+[Inhaltsverzeichnis](./overview.md)
 
 [&lt;- Zurück: Allgemeine Protokolle](./common-logs.md)
 
 ## Beschreibung
 
-In diesem Dokument wird beschrieben, welche Dateien gesperrt und nicht geändert werden und wie Sie die gewünschten Konfigurationseinstellungen ordnungsgemäß vornehmen.
+In diesem Dokument wird beschrieben, welche Dateien gesperrt sind und nicht geändert werden können und wie Sie die gewünschten Konfigurationseinstellungen vornehmen können.
 
-Wenn AMS ein System bereitstellt, führen sie eine Basiskonfiguration ein, die alles funktionsfähig und sicher macht.  Dies sind Dinge, die AMS sicherstellen möchte, dass sie als Grundlage für Funktionalität und Sicherheit erhalten bleiben.  Um dies zu erreichen, werden einige Dateien als schreibgeschützt und unveränderlich markiert, um eine Änderung zu vermeiden.
+Wenn AMS ein System bereitstellt, wird eine Basiskonfiguration eingeführt, die alle Bestandteile funktionsfähig und sicher macht. AMS möchte sicherstellen, dass diese Dinge als Grundlage für Funktionalität und Sicherheit erhalten bleiben. Dazu werden einige Dateien als schreibgeschützt und unveränderlich markiert, sodass sie nicht verändert werden können.
 
-Das Layout hindert Sie nicht daran, ihr Verhalten zu verändern und erforderliche Änderungen zu überschreiben.  Anstatt diese Dateien zu ändern, überlagern Sie Ihre eigene Datei, die das Original ersetzt.
+Das Layout hindert Sie jedoch nicht daran, ihr Verhalten zu ändern und erforderliche Änderungen zu überschreiben. Anstatt diese Dateien zu ändern, überlagern Sie dann Ihre eigene Datei, die das Original ersetzt.
 
-Auf diese Weise können Sie sich auch sicher sein, dass die Dispatcher bei Patches von AMS mit den neuesten Fehlerbehebungen und Sicherheitsverbesserungen Ihre Dateien nicht verändern.  Dann können Sie weiterhin von den Verbesserungen profitieren und nur die gewünschten Änderungen übernehmen.
-![Zeigt eine Bowling-Spur mit einer Kugel, die die Spur entlang rollt.  Der Ball hat einen Pfeil, der das Wort zeigt.  Die Bumper werden aufgezogen und haben die Worte unveränderliche Dateien über ihnen.](assets/immutable-files/bowling-file-immutability.png "bowling-file-immutability")
-Wie im obigen Bild gezeigt, halten unveränderliche Dateien Sie nicht davon ab, das Spiel zu spielen.  Sie halten Sie einfach davon ab, Ihre Leistung zu beeinträchtigen und halten Sie auf der Spur.  Diese Methode ermöglicht uns die wichtigsten Funktionen:
+So können Sie auch sicher sein, dass die Dispatcher bei Patches von AMS mit den neuesten Fehlerbehebungen und Sicherheitsverbesserungen Ihre Dateien nicht verändern. Dann können Sie weiterhin von den Verbesserungen profitieren und nur die gewünschten Änderungen übernehmen.
+![Zeigt eine Bowling-Bahn mit einer Kugel, die die Bahn entlang rollt. Ein Pfeil mit dem Wort „you“ zeigt auf die Kugel. Die Stoßstangen an den Fehlwurfrinnen sind erhöht, und über ihnen stehen die Worte „immutable files“ .(unveränderliche Dateien).](assets/immutable-files/bowling-file-immutability.png "bowling-file-immutability")
+Wie im obigen Bild gezeigt, bedeuten unveränderliche Dateien nicht, dass Sie das Spiel nicht spielen können. Sie verhindern nur, dass Ihre Leistung beeinträchtigt wird, und halten Sie in der Spur. Diese Methode unterstützt die wichtigsten Funktionen:
 
 - Anpassungen werden in ihren eigenen sicheren Bereichen vorgenommen
-- Die Überlagerung benutzerdefinierter Änderungen entspricht der Überlagerungsmethoden in AEM
+- Die Überlagerung benutzerdefinierter Änderungen entspricht den Überlagerungsmethoden in AEM
 - Das Patchen von AMS-Konfigurationen kann ohne Ändern von Anpassungen durchgeführt werden
-- Das Testen der Basisinstallation und angepasster Konfigurationen kann gleichzeitig durchgeführt werden, um festzustellen, ob die Probleme durch Anpassungen verursacht werden oder etwas Anderes Welche Dateien?
+- Das Testen der Basisinstallation gegenüber angepassten Konfigurationen kann gleichzeitig durchgeführt werden, sodass sich feststellen lässt, ob die Probleme durch Anpassungen verursacht werden oder etwas Anderes. Welche Dateien?
 
 
-Im Folgenden finden Sie eine typische Liste der Dateien, die mit einem Dispatcher bereitgestellt werden:
+Es folgt eine Liste von Dateien, die meist mit einem Dispatcher bereitgestellt werden:
 
 ```
 /etc/httpd/
@@ -124,7 +124,7 @@ Im Folgenden finden Sie eine typische Liste der Dateien, die mit einem Dispatche
     └── mod_dispatcher.so
 ```
 
-Um festzustellen, welche Dateien unveränderlich sind, können Sie den folgenden Befehl auf einem Dispatcher ausführen, um ihn anzuzeigen:
+Um festzustellen, welche Dateien unveränderlich sind, können Sie den folgenden Befehl auf einem Dispatcher ausführen:
 
 ```
 $ lsattr -Rl /etc/httpd 2>/dev/null | grep Immutable
@@ -180,11 +180,11 @@ Im Folgenden finden Sie eine Beispielantwort mit unveränderlichen Dateien:
 /etc/httpd/conf.dispatcher.d/dispatcher.any Immutable
 ```
 
-## Änderungen vornehmen
+## Vornehmen von Änderungen
 
 ### Variablen
 
-Variablen ermöglichen es Ihnen, funktionale Änderungen vorzunehmen, ohne die Konfigurationsdateien selbst zu ändern.  Bestimmte Elemente der Konfiguration können mit der Anpassung der Variablenwerte angepasst werden.  Ein Beispiel, das wir aus der Datei hervorheben können `/etc/httpd/conf.d/dispatcher_vhost.conf` wird hier gezeigt:
+Variablen ermöglichen es Ihnen, funktionale Änderungen vorzunehmen, ohne die Konfigurationsdateien selbst zu ändern. Bestimmte Elemente der Konfiguration können durch Verändern der Variablenwerte angepasst werden. Hier ein Beispiel aus der Datei `/etc/httpd/conf.d/dispatcher_vhost.conf`:
 
 ```
 Include /etc/httpd/conf.d/variables/ams_default.vars
@@ -197,7 +197,7 @@ IfModule disp_apache2.c
 /IfModule
 ```
 
-Erfahren Sie, wie die DispatcherLogLevel-Direktive eine Variable von `DISP_LOG_LEVEL` anstelle des Normalwerts, den Sie dort sehen würden.  Oberhalb dieses Codeabschnitts wird auch eine Include-Anweisung für eine Variablendatei angezeigt.  Die Variablendatei `/etc/httpd/conf.d/variables/ams_default.vars` ist, wo wir als Nächstes hinsehen wollen.  Im Folgenden finden Sie den Inhalt dieser Variablendatei:
+Sie sehen die Anweisung „DispatcherLogLevel“ mit einer Variablen von `DISP_LOG_LEVEL` anstelle des normalen Werts. Oberhalb dieses Code-Abschnitts wird auch eine include-Anweisung für eine Variablendatei angezeigt. Als Nächstes schauen wir uns die Variablendatei `/etc/httpd/conf.d/variables/ams_default.vars` an. Hier der Inhalt dieser Variablendatei:
 
 ```
 Define DISP_LOG_LEVEL info
@@ -209,17 +209,17 @@ Define PUBLISH_FORCE_SSL 0
 Define LIVECYCLE_FORCE_SSL 1
 ```
 
-Sie sehen oben, dass der aktuelle Wert von `DISP_LOG_LEVEL` ist `info`.  Wir können diese Einstellung anpassen, um die Werte oder Ebenen Ihrer Wahl zu verfolgen oder zu debuggen.  Überall, wo die Protokollebene gesteuert wird, wird sie automatisch angepasst.
+Sie sehen oben, dass der aktuelle Wert der `DISP_LOG_LEVEL`-Variablen `info` ist. Dies kann angepasst werden, um den gewünschten number-Wert bzw. die gewünschte Ebene zu verfolgen oder zu debuggen. Die Steuerung der Protokollebene wird nun automatisch angepasst.
 
 ### Überlagerungsmethode
 
-Verstehen Sie die Include-Dateien der obersten Ebene, da Sie damit Ihre Anpassungen vornehmen können.  Zunächst ein einfaches Beispiel: Wir haben ein Szenario, in dem wir einen neuen Domänennamen hinzufügen möchten, auf den wir diesen Dispatcher verweisen möchten.  Das Domänenbeispiel, das wir verwenden werden, ist we-retail.adobe.com.  Kopieren Sie zunächst eine vorhandene Konfigurationsdatei in eine neue, in der wir unsere Änderungen hinzufügen können:
+Ein Verständnis der include-Dateien der obersten Ebene ist wichtig, da Sie für jegliche Anpassung bei diesen ansetzen. Zunächst ein einfaches Beispiel: Wir haben ein Szenario, in dem wir einen neuen Domain-Namen hinzufügen möchten, der auf diesen Dispatcher verweisen soll. Die Beispiel-Domain ist hierbei we-retail.adobe.com. Kopieren Sie zunächst eine vorhandene Konfigurationsdatei in eine neue, in der Änderungen hingefügt werden können:
 
 ```
 $ cp /etc/httpd/conf.d/available_vhosts/aem_publish.vhost /etc/httpd/conf.d/available_vhosts/weretail_publish.vhost
 ```
 
-Wir haben die vorhandene Datei aem_publish.vhost kopiert, da sie bereits das enthält, was wir benötigen, um Dinge zum Laufen zu bringen, und wir möchten keinen bereits starken Start neu erfinden.  Jetzt bearbeiten wir die neue Datei weretail.vhost und nehmen die erforderlichen Änderungen vor.
+Wir haben die vorhandene Datei „aem_publish.vhost“ kopiert, da sie bereits alles enthält, was wir für den Anfang brauchen. Jetzt bearbeiten wir die neue Datei „weretail.vhost“ und nehmen die erforderlichen Änderungen vor.
 
 Vorher:
 
@@ -257,25 +257,25 @@ VirtualHost *:80
 /VirtualHost
 ```
 
-Jetzt haben wir unsere `ServerName` und `ServerAlias` , um die neuen Domänennamen abzugleichen und andere Breadcrumb-Header zu aktualisieren.  Lassen Sie uns nun unsere neue Datei aktivieren, damit Apache wissen kann, wie sie unsere neue Datei verwenden kann:
+Jetzt sind `ServerName` und `ServerAlias` entsprechend der neuen Domain-Namen aktualisiert, ebenso andere Breadcrumb-Header. Lassen Sie uns nun unsere neue Datei aktivieren, sodass Apache sie entsprechend verwendet:
 
 ```
 $ cd /etc/httpd/conf.d/enabled_vhosts/; ln -s ../available_vhosts/weretail_publish.vhost .
 ```
 
-Der Apache-Webserver weiß jetzt, dass die Domäne Traffic liefern soll. Wir müssen jedoch das Dispatcher-Modul darüber informieren, dass ein neuer Domänenname vorhanden ist, der berücksichtigt werden muss.  Wir beginnen mit der Erstellung eines neuen `*_vhost.any` file `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any` und in dieser Datei werden wir den Domänennamen einfügen, den wir berücksichtigen möchten:
+Der Apache-Webserver weiß nun, dass für die Domain Traffic bereitgestellt werden soll. Allerdings müssen wir das Dispatcher-Modul darüber informieren, dass ein neuer Domain-Name vorhanden ist, der berücksichtigt werden muss. Wir beginnen mit der Erstellung einer neuen `*_vhost.any`-Datei `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any` und fügen in dieser Datei den zu berücksichtigenden Domain-Namen ein:
 
 ```
 "we-retail.adobe.com"
 ```
 
-Jetzt müssen wir eine neue Farm-Datei erstellen, die unsere neue vhost-Eintragsdatei verwendet, und wir beginnen mit dem Kopieren einer starken Start-Datei in unsere neue.
+Nun müssen wir eine neue Farm-Datei erstellen, die unsere neue vhost-Eintragsdatei verwendet. Als Erstes kopieren wir dazu eine solide Startdatei in unsere eigene neue Datei.
 
 ```
 $ cp /etc/httpd/conf.dispatcher.d/available_farms/999_ams_publish_farm.any /etc/httpd/conf.dispatcher.d/available_farms/400_weretail_publish_farm.any
 ```
 
-Zeigt die Änderungen an, die wir an dieser Farm-Datei vornehmen müssen
+Sehen wir uns jetzt die Änderungen an, die wir an dieser Farm-Datei vornehmen müssen:
 
 Vorher:
 
@@ -299,17 +299,17 @@ Nachher:
 }
 ```
 
-Jetzt haben wir den Farm-Namen aktualisiert und die darin verwendete Include-Datei im `/virtualhosts` -Abschnitt der Farm-Konfiguration.  Diese neue Farm-Datei muss aktiviert werden, damit sie in der laufenden Konfiguration verwendet werden kann:
+Nun haben wir den Farm-Namen und das darin verwendete include-Element im Abschnitt `/virtualhosts` der Farm-Konfiguration aktualisiert. Wir müssen diese neue Farm-Datei aktivieren, damit sie in der laufenden Konfiguration verwendet werden kann:
 
 ```
 $ cd /etc/httpd/conf.dispatcher.d/enabled_farms/; ln -s ../available_farms/400_weretail_publish_farm.any .
 ```
 
-Jetzt laden wir einfach den Webserver-Dienst neu und nutzen unsere neue Domain!
+Nun laden wir einfach den Webserver-Dienst neu und nutzen unsere neue Domain.
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
 
-Beachten Sie, dass wir nur die Teile geändert haben, die wir ändern mussten, um die vorhandenen Includes und den Code zu nutzen, die mit den Basiskonfigurationsdateien geliefert wurden.  Wir müssen nur auf das Element eingehen, das wir ändern müssen.  Erleichtert die Arbeit und ermöglicht es uns, weniger Code zu verwalten
+Wir haben nur die Teile geändert, für die dies erforderlich gewesen ist, und die include-Elemente sowie den Code aus den Basiskonfigurationsdateien genutzt. Wir müssen nur das Element beschreiben, das wir ändern müssen. Das macht die Arbeit deutlich einfacher und bedeutet weniger Code, der gepflegt werden muss.
 </div>
 
 [Weiter -> Dispatcher-Konsistenzprüfung](./health-check.md)
