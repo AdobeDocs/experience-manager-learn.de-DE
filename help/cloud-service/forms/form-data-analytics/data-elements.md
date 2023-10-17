@@ -1,6 +1,6 @@
 ---
-title: Berichte zu gesendeten Formulardatenfeldern mit Adobe Analytics
-description: Integrieren von AEM Forms CS mit Adobe Analytics für Berichte zu Formulardatenfeldern
+title: Reporting zu übermittelten Formulardatenfeldern mit Adobe Analytics
+description: Integrieren von AEM Forms CS mit Adobe Analytics für das Reporting zu Formulardatenfeldern
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -13,24 +13,24 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: b9dc505d-72c8-4b6a-974b-fc619ff7c256
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '138'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # Erstellen von Datenelementen
 
-In der Eigenschaft &quot;Tags&quot;wurden zwei neue Datenelemente hinzugefügt (ApplicationStateOfResidence und validationError).
+In der Tags-Eigenschaft wurden zwei neue Datenelemente hinzugefügt (ApplicationStateOfResidence und validationError).
 
-![adaptives Formular](assets/data_elements.png)
+![adaptive-form](assets/data_elements.png)
 
-## applicantStateOfResidence
+## ApplicantStateOfResidence
 
-Die **applicantStateOfResidence** Das Datenelement wurde durch Auswahl von **Core** in der Dropdown-Liste Erweiterung und **Benutzerspezifischer Code** für den Datenelementtyp, wie im Screenshot unten dargestellt
-![applicant-state-Residence](assets/applicantstateofresidence.png)
+Das Datenelement **ApplicantStateOfResidence** wurde konfiguriert, indem **Kern** in der Dropdown-Liste für die Erweiterung und **Benutzerdefinierter Code** für den Datenelementtyp ausgewählt wurde, wie in der folgenden Abbildung dargestellt:
+![applicant-state-residence](assets/applicantstateofresidence.png)
 
-Der folgende benutzerspezifische Code wurde verwendet, um den Wert aus dem **_state_** Feld für adaptives Formular.
+Der folgende benutzerdefinierte Code wurde verwendet, um den Wert aus dem Feld **_state_** des adaptiven Formulars zu erfassen.
 
 ```javascript
 // use the GuideBridge API to access adaptive form elements
@@ -42,11 +42,11 @@ return ApplicantsStateOfResidence;
 
 ## validationError
 
-Die **ValidationError** Das Datenelement wurde durch Auswahl von **Core** in der Dropdown-Liste Erweiterung und **Benutzerspezifischer Code** für den Datenelementtyp, wie im Screenshot unten dargestellt
+Das Datenelement **validationError** wurde konfiguriert, indem **Kern** in der Dropdown-Liste für die Erweiterung und **Benutzerdefinierter Code** für den Datenelementtyp ausgewählt wurde, wie in der folgenden Abbildung dargestellt:
 
 ![validation-error](assets/validation-error.png)
 
-Der folgende benutzerspezifische Code wurde geschrieben, um die `validationError` Datenelementwert.
+Der folgende benutzerdefinierte Code wurde geschrieben, um den Wert des Datenelements `validationError` festzulegen.
 
 ```javascript
 var validationError = "";
@@ -72,4 +72,4 @@ return validationError;
 
 ## Nächste Schritte
 
-[Regeln erstellen](./rules.md)
+[Erstellen von Regeln](./rules.md)
