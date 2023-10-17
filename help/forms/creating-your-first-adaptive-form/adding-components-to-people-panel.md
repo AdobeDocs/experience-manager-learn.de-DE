@@ -1,6 +1,6 @@
 ---
 title: Hinzufügen von Komponenten zum Personen-Panel
-description: Konfigurieren Sie den Bereich Personen , indem Sie das Fragment mit den Ehedetails hinzufügen. Es wird eine Regel erstellt, die das Fragment zum Ehegatten anzeigt, wenn der Familienstand der Kläger verheiratet ist.
+description: Konfigurieren Sie das Personen-Panel, indem Sie das Fragment mit den Ehepartner-Details hinzufügen. Es wird eine Regel erstellt, die das Fragment zum Ehepartner anzeigt, wenn der Familienstand der Person, die sich bewirbt, verheiratet ist.
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 4210
@@ -10,21 +10,21 @@ role: Developer
 level: Beginner
 exl-id: 16170f0d-6933-47f2-aefa-951599d163c0
 source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '91'
+ht-degree: 100%
 
 ---
 
 # Hinzufügen von Komponenten zum Personen-Panel {#adding-components-to-people-panel}
 
-Konfigurieren Sie den Bereich Personen , indem Sie das Fragment mit den Ehedetails hinzufügen. Es wird eine Regel erstellt, die das Fragment zum Ehegatten anzeigt, wenn der Familienstand der Kläger verheiratet ist.
+Konfigurieren Sie das Personen-Panel, indem Sie das Fragment mit den Ehepartner-Details hinzufügen. Es wird eine Regel erstellt, die das Fragment zum Ehepartner anzeigt, wenn der Familienstand der Person, die sich bewirbt, verheiratet ist.
 
-**Personen-Bedienfeld in AEM Forms 6.3 und 6.4 konfigurieren**
+**Konfigurieren des Personen-Panels in AEM Forms 6.3 und 6.4**
 
 >[!VIDEO](https://video.tv.adobe.com/v/22193?quality=12&learn=on)
 
-**Konfigurieren des Personen-Bedienfelds in AEM Forms 6.5 und höher**
+**Konfigurieren des Personen-Panels in AEM Forms 6.5 und höher**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28385?quality=12&learn=on)
 
@@ -34,4 +34,4 @@ Konfigurieren Sie den Bereich Personen , indem Sie das Fragment mit den Ehedetai
 
 ## Nächste Schritte
 
-[Tabelle und andere Komponenten zum Einkommensbereich hinzufügen](./adding-table-to-income-panel.md)
+[Hinzufügen von Tabellen und anderen Komponenten zum Einkommens-Panel](./adding-table-to-income-panel.md)
