@@ -1,6 +1,6 @@
 ---
 title: Speichern von adaptiven Formulardaten
-description: Speichern adaptiver Formulardaten in DataBase als Teil Ihres AEM-Workflows
+description: Speichern adaptiver Formulardaten in der Datenbank als Teil Ihres AEM-Workflows
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Development
@@ -9,37 +9,37 @@ level: Experienced
 exl-id: 3dd552da-fc7c-4fc7-97ec-f20b6cc33df0
 last-substantial-update: 2020-03-20T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '414'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# Speichern von Übermittlungen adaptiver Formulare in der Datenbank
+# Speichern übermittelter adaptiver Formulardaten in der Datenbank
 
-Es gibt mehrere Möglichkeiten, die gesendeten Formulardaten in der Datenbank Ihrer Wahl zu speichern. Eine JDBC-Datenquelle kann verwendet werden, um die Daten direkt in der Datenbank zu speichern. Ein benutzerdefiniertes OSGI-Bundle kann geschrieben werden, um die Daten in der Datenbank zu speichern. In diesem Artikel wird der benutzerdefinierte Prozessschritt in AEM Workflow zum Speichern der Daten verwendet.
-Der Anwendungsfall besteht darin, einen AEM Workflow für die Übermittlung eines adaptiven Formulars Trigger und einen Schritt im Workflow zu speichern, um die übermittelten Daten in der Datenbank zu speichern.
+Es gibt mehrere Möglichkeiten, die übermittelten Formulardaten in der Datenbank Ihrer Wahl zu speichern. Eine JDBC-Datenquelle kann verwendet werden, um die Daten direkt in der Datenbank zu speichern. Es kann ein benutzerdefiniertes OSGI-Bundle geschrieben werden, um die Daten in der Datenbank zu speichern. In diesem Artikel wird der benutzerdefinierte Prozessschritt im AEM-Workflow zum Speichern der Daten verwendet.
+Der Anwendungsfall besteht darin, einen AEM-Workflow bei der Übermittlung eines adaptiven Formulars auszulösen. Über einen Schritt im Workflow werden dann die übermittelten Daten in der Datenbank gespeichert.
 
 
 
-## JDBC-Verbindungspool
+## JDBC Connection Pool
 
-* Navigieren Sie zu [ConfigMgr](http://localhost:4502/system/console/configMgr)
+* Navigieren Sie zu [ConfigMgr](http://localhost:4502/system/console/configMgr).
 
-   * Suchen Sie nach &quot;JDBC Connection Pool&quot;. Erstellen Sie einen neuen Day Commons JDBC Connection Pool. Geben Sie die spezifischen Einstellungen für Ihre Datenbank an.
+   * Suchen Sie nach „JDBC Connection Pool“. Erstellen Sie einen neuen Day Commons JDBC Connection Pool. Geben Sie die spezifischen Einstellungen für Ihre Datenbank an.
 
-   * ![OSGi-Konfiguration des JDBC-Verbindungspools](assets/aemformstutorial-jdbc.png)
+   * ![JDBC Connection Pool – OSGi-Konfiguration](assets/aemformstutorial-jdbc.png)
 
 ## Angeben von Datenbankdetails
 
-* Suchen Sie nach &quot;**Angeben von Datenbankdetails**&quot;
+* Suchen Sie nach dem Abschnitt zum **Angeben von Datenbankdetails**.
 * Geben Sie die spezifischen Eigenschaften für Ihre Datenbank an.
-   * DataSourceName:Name der Datenquelle, die Sie zuvor konfiguriert haben.
-   * TableName - Name der Tabelle, in der Sie die AF-Daten speichern möchten
-   * FormName - Spaltenname für den Namen des Formulars
-   * ColumnName - Spaltenname für die AF-Daten
+   * DataSourceName: Name der zuvor konfigurierten Datenquelle
+   * TableName: Name der Tabelle, in der die AF-Daten gespeichert werden sollen
+   * FormName: Spaltenname für den Namen des Formulars
+   * ColumnName: Spaltenname für die AF-Daten
 
-   ![Angeben der Datenbankdetails für die OSGi-Konfiguration](assets/specify-database-details.png)
+  ![Angeben der Datenbankdetails – OSGi-Konfiguration](assets/specify-database-details.png)
 
 
 
@@ -66,7 +66,7 @@ public @interface InsertFormDataConfiguration {
 }
 ```
 
-## Konfigurationswerte lesen
+## Lesen von Konfigurationswerten
 
 ```java
 package com.aemforms.dbsamples.core.insertFormData;
@@ -208,13 +208,13 @@ public class InsertAfData implements WorkflowProcess {
 
 ## Bereitstellen der Beispiel-Assets
 
-* Stellen Sie sicher, dass Sie Ihren JDBC-Verbindungspool konfiguriert haben
+* Stellen Sie sicher, dass Sie Ihren JDBC Connection Pool konfiguriert haben.
 * Geben Sie die Datenbankdetails mithilfe von configMgr an.
 * [Laden Sie die ZIP-Datei herunter und extrahieren Sie den Inhalt auf Ihre Festplatte](assets/article-assets.zip)
 
-   * Stellen Sie die JAR-Datei mit [AEM Web-Konsole](http://localhost:4502/system/console/bundles). Diese JAR-Datei enthält den Code zum Speichern der Formulardaten in der Datenbank.
+   * Stellen Sie die JAR-Datei mit der [AEM-Web-Konsole](http://localhost:4502/system/console/bundles) bereit. Diese JAR-Datei enthält den Code zum Speichern der Formulardaten in der Datenbank.
 
-   * Importieren Sie die beiden ZIP-Dateien in [AEM mit Package Manager](http://localhost:4502/crx/packmgr/index.jsp). Dadurch erhalten Sie die [Beispiel-Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) und [Beispiel für ein adaptives Formular](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) wird der Workflow bei der Formularübermittlung Trigger. Beachten Sie die Prozessargumente im Workflow-Schritt. Diese Argumente geben den Formularnamen und den Namen der Datendatei an, die die Daten des adaptiven Formulars enthalten wird. Die Datendatei wird im Payload-Ordner im CRX-Repository gespeichert. Beachten Sie, wie die [adaptives Formular](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) ist so konfiguriert, dass der AEM Workflow bei der Übermittlung und die Datendateikonfiguration (data.xml) Trigger werden.
+   * Importieren Sie die beiden ZIP-Dateien in [AEM mit Package Manager](http://localhost:4502/crx/packmgr/index.jsp). Dadurch erhalten Sie den [Beispiel-Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) und das [adaptive Beispielformular](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html), das den Workflow bei der Formularübermittlung auslöst. Achten Sie auf die Prozessargumente im Workflow-Schritt. Diese Argumente geben den Formularnamen und den Namen der Datendatei mit den Daten des adaptiven Formulars an. Die Datendatei wird im Payload-Ordner des CRX-Repositorys gespeichert. Das [adaptive Formular](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) ist so konfiguriert, dass der AEM-Workflow bei der Übermittlung und die Datendateikonfiguration (data.xml) ausgelöst werden.
 
-   * Sehen Sie sich das Formular in der Vorschau an und füllen Sie es aus. Es sollte eine neue Zeile angezeigt werden, die in Ihrer Datenbank erstellt wurde.
+   * Sehen Sie sich das Formular in einer Vorschau an und füllen Sie es aus. Übermitteln Sie es anschließend. Es sollte eine neue, in Ihrer Datenbank erstellte Zeile angezeigt werden.
 
