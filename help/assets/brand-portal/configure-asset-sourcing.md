@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren der Asset-Beschaffung mit dem Brand Portal.
+title: Konfigurieren der Asset-Beschaffung mit Brand Portal.
 description: Schritte zum Konfigurieren der Asset-Beschaffung mit Brand Portal
 role: Developer
 level: Beginner
@@ -9,14 +9,14 @@ topic: Development
 last-substantial-update: 2022-06-17T00:00:00Z
 exl-id: 4f5c1e04-8b98-454c-b410-1b1d0e110798
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '36'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Konfigurieren der Asset-Beschaffung mit Brand Portal
 
-*In diesem Video wird die Konfiguration der Asset-Beschaffung mit der Brand Portal erläutert.*
+*In diesem Video wird die Konfiguration der Asset-Beschaffung mit Brand Portal erläutert.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335451?quality=12&learn=on)
