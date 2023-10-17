@@ -1,6 +1,6 @@
 ---
-title: Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank - Servlet zum Speichern von Formulardaten
-description: Mehrteiliges Tutorial, das Sie durch die Schritte führt, die zum Speichern und Abrufen von Formulardaten erforderlich sind
+title: Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank – Servlet zum Speichern von Formulardaten
+description: Mehrteiliges Tutorial, das Sie durch die Schritte zum Speichern und Abrufen von Formulardaten führt
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -9,15 +9,15 @@ role: Developer
 level: Experienced
 exl-id: dd82f309-dd4e-42ce-8856-e51c898024f5
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '95'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Servlet zum Speichern von Formulardaten
 
-Der nächste Schritt besteht darin, ein Servlet zu erstellen, das entweder Formulardaten einfügt oder aktualisiert. Das Servlet ruft die entsprechenden Methoden des OSGi-Dienstes auf, um die Datenbank entweder einzufügen oder zu aktualisieren. Gespeicherte Daten des adaptiven Formulars sind mit einer GUID verknüpft. Dieselbe GUID wird dann zum Aktualisieren der Formulardaten verwendet. Dieses Servlet wird aufgerufen, wenn auf die Schaltfläche &quot;SaveAndContinueLater&quot;geklickt wird.
+Der nächste Schritt besteht darin, ein Servlet zu erstellen, das Formulardaten einfügt oder aktualisiert. Das Servlet ruft die entsprechenden Methoden des OSGi-Dienstes auf, um Daten in die Datenbank einzufügen oder zu aktualisieren. Gespeicherte Daten eines adaptiven Formulars sind mit einer GUID verknüpft. Dieselbe GUID wird dann zum Aktualisieren der Formulardaten verwendet. Dieses Servlet wird aufgerufen, wenn auf die Schaltfläche „SaveAndContinueLater“ geklickt wird.
 
 ```java
 package com.aemforms.saveandcontinue.core.servlets;
