@@ -15,9 +15,9 @@ exl-id: 96c542ae-6ab6-4d8a-94df-a58b03469320
 last-substantial-update: 2022-09-10T00:00:00Z
 thumbnail: KT-406.jpg
 source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '130'
-ht-degree: 17%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 17%
 
 Ein konsolidierter Überblick über die von AEM unterstützten Authentifizierungsmechanismen (und gelegentlich Autorisierungsmechanismen).
 
-*In der folgenden Tabelle wird beschrieben, wie Benutzer sich bei AEM authentifizieren können.*
+*In der folgenden Tabelle wird beschrieben, wie Benutzende sich bei AEM authentifizieren können.*
 
 <table>
     <tbody>
@@ -48,24 +48,24 @@ Ein konsolidierter Überblick über die von AEM unterstützten Authentifizierung
             <td>✔</td>
         </tr>
         <tr>
-            <td>Forms-basiert</td>
+            <td>Formularbasiert</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td>Token-basiert (w/ <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html" target="_blank">verkapseltes Token</a>)</td>
+            <td>Token-basiert (mit <a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html?lang=de" target="_blank">verkapseltem Token</a>)</td>
             <td>✔</td>
             <td>✔</td>
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>Nicht AEM als kanonischer Identitätsanbieter</strong></td>
+            <td><strong>Nicht-AEM-System als kanonischer Identitätsanbieter</strong></td>
             <td></td>
             <td></td>
             <td></td>
             <tr>
-                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ldap-config.html" target="_blank">LDAP</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ldap-config.html?lang=de" target="_blank">LDAP</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>
