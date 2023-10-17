@@ -1,24 +1,25 @@
 ---
-title: Komponente des Begrüßungs-Kits erstellen
-description: Erstellen Sie eine AEM Siteseite mit Links zum Herunterladen von Assets basierend auf den gesendeten Formulardaten.
+title: Erstellen der Komponente des Begrüßungs-Kits
+description: Erstellen Sie eine AEM Sites-Seite mit Links zum Herunterladen von Assets basierend auf den übermittelten Formulardaten.
 feature: Adaptive Forms
 version: 6.5
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2022-12-14T00:00:00Z
-source-git-commit: 0e27907066c7d688549a980ccd17b3f17d74b60b
-workflow-type: tm+mt
+exl-id: 66496f0e-c121-4b6d-b371-084393ece3ca
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '74'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Komponente des Begrüßungs-Kits
+# Begrüßungs-Kit-Komponente
 
-Eine Seitenkomponente wurde erstellt, um die Assets auf der Seite aufzulisten, die vom Endbenutzer heruntergeladen werden können. Die Pfade zu den einzelnen Assets werden in einer Eigenschaft namens **Pfade**. Die gesendeten Formulardaten bestimmen die einzuschließenden Assets.
+Eine Seitenkomponente wurde erstellt, um die Assets auf der Seite aufzulisten, die von der Endbenutzerin bzw. dem Endbenutzer heruntergeladen werden können. Die Pfade zu den einzelnen Assets werden in einer Eigenschaft mit dem Namen **paths** gespeichert. Die übermittelten Formulardaten bestimmen die einzuschließenden Assets.
 
-Der folgende Code listet die Assets auf der Seite auf:
+Mit dem folgenden Code werden die Assets auf der Seite aufgelistet:
 
 ```html
    <p class="cmp-press-kit__press-kit-size">
@@ -40,6 +41,3 @@ Der folgende Code listet die Assets auf der Seite auf:
 </sly>
 <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!ready}"></sly>
 ```
-
-
-
