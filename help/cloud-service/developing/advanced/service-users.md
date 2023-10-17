@@ -1,6 +1,6 @@
 ---
-title: Service-Benutzer
-description: Erfahren Sie, wie Sie Dienstbenutzer in Ihrem AEM-Code erstellen und verwenden, um einen kontrollierten, programmgesteuerten Zugriff auf das AEM-Repository bereitzustellen.
+title: Service-Benutzende
+description: Erfahren Sie, wie Sie Dienstbenutzende in Ihrem AEM-Code erstellen und verwenden, um einen kontrollierten, programmgesteuerten Zugriff auf das AEM-Repository bereitzustellen.
 version: Cloud Service
 topic: Development
 feature: OSGI, Security
@@ -11,22 +11,22 @@ thumbnail: 337530.jpeg
 last-substantial-update: 2022-10-10T00:00:00Z
 exl-id: 66f627e4-863d-45d7-bc68-7ec108a1c271
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '70'
-ht-degree: 22%
+ht-degree: 100%
 
 ---
 
-# Service-Benutzer
+# Service-Benutzende
 
-Erfahren Sie, wie Sie Dienstbenutzer in Ihrem AEM-Code erstellen und verwenden, um einen kontrollierten, programmgesteuerten Zugriff auf das AEM-Repository bereitzustellen.
+Erfahren Sie, wie Sie Dienstbenutzende in Ihrem AEM-Code erstellen und verwenden, um einen kontrollierten, programmgesteuerten Zugriff auf das AEM-Repository bereitzustellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/337530?quality=12&learn=on)
 
 ## Ressourcen
 
 + [Dokumentation zur Initialisierung des Sling-Repositorys (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html)
-+ [Dokumentation zur Sling Service-Authentifizierung](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html)
++ [Dokumentation zur Sling-Dienstauthentifizierung](https://sling.apache.org/documentation/the-sling-engine/service-authentication.html)
 
 ## Code
 
