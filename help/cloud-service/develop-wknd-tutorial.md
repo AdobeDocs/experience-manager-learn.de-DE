@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte bei der Entwicklung von AEM Sites – WKND-Tutorial
-description: Steigen Sie gerade in die Entwicklung mit AEM ein? Benötigen Sie einen Auffrischungskurs zu Best Practices? Dann sind Sie hier richtig! In diesem mehrteiligen Tutorial lernen Entwickler, die gerade mit AEM beginnen, wie sie eine Website in AEM mit den neuesten Standards und Technologien implementieren.
+description: Neu bei der Entwicklung in AEM? Benötigen Sie einen Auffrischungskurs zu Best Practices? Dann sind Sie hier richtig! Ziel dieses mehrteiligen Tutorials ist es, neuen Entwicklerinnen und Entwicklern beizubringen, wie eine Website in AEM mit den neuesten Standards und Technologien implementiert wird.
 feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
 topic: Development
 role: Developer
@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Steigen Sie gerade in die Entwicklung mit Adobe Experience Manager as a Cloud Service ein? Benötigen Sie einen Auffrischungskurs zu den Best Practices? Dann sind Sie hier richtig!
 
-In diesem mehrteiligen Tutorial lernen Entwickler, die gerade mit AEM beginnen, wie sie eine Website in AEM mit den neuesten Standards und Technologien implementieren. Im Laufe dieses Tutorials lernen Sie die Grundlagen der AEM-Plattform und einige allgemeine Designmuster kennen.
+Ziel dieses mehrteiligen Tutorials ist es, neuen Entwicklerinnen und Entwicklern beizubringen, wie eine Website in AEM mit den neuesten Standards und Technologien implementiert wird. Wir hoffen, dass Sie am Ende dieses Tutorials die Grundlagen der AEM-Plattform verstehen und einige der gängigen Design-Muster kennen.
 
 ## WKND-Entwickler-Tutorial {#wknd-developer-tutorial}
 
@@ -30,9 +30,9 @@ Das Tutorial wurde für die Verwendung mit **AEM as a Cloud Service** konzipiert
 
 **[Sehen Sie sich das Tutorial hier an!](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de)**
 
-## Implementieren von WKND in AEM as a Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
+## Bereitstellen von WKND in AEM as a Cloud Service{#deploying-wknd-to-aem-as-a-cloud-service}
 
-Nach Abschluss des WKND-Tutorials finden Sie im folgenden Video einen Überblick darüber, wie Sie das WKND-Projekt in AEM as a Cloud Service implementieren.
+Nach Abschluss des WKND-Tutorials finden Sie im folgenden Video einen Überblick darüber, wie Sie das WKND-Projekt in AEM as a Cloud Service bereitstellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30191?quality=12&learn=on)
 
@@ -40,6 +40,6 @@ Das Video zeigt, wie das WKND Site-Projekt ...
 
 1. von einem Git-Repository eines Drittanbieters abgerufen werden kann, in diesem Fall von Github.com. Es kann aber ein beliebiges Git-Repository sein.
 2. an ein vorgelagertes Adobe Cloud Manager-Git-Repository gesendet werden kann, das in einem AEM as a Cloud Service-Programm registriert ist.
-3. über Cloud Manager-Pipelines in AEM as a Cloud Service-Umgebungen implementiert werden kann.
+3. über Cloud Manager-Pipelines in AEM as a Cloud Service-Umgebungen bereitgestellt werden kann.
 
-Einen vollständigen Überblick über die Implementierung von AEM-Projekten in AEM as a Cloud Service erhalten Sie in der Videoreihe zum [Integrieren von Git mit Adobe Cloud Manager](https://docs.adobe.com/content/help/de/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html?lang=de).
+Einen vollständigen Überblick über die Bereitstellung von AEM-Projekten in AEM as a Cloud Service erhalten Sie in der Videoreihe zum [Integrieren von Git mit Adobe Cloud Manager](https://docs.adobe.com/content/help/de/experience-manager-cloud-manager/using/managing-code/setup-cloud-manager-git-integration.html?lang=de).
