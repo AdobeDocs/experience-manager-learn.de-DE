@@ -406,7 +406,7 @@ Die Ersteinrichtung des JSON-Mockups **erfordert eine lokale AEM-Instanz**.
 
    ![Angular-JSON-Dev-Assets – Aktualsierungsordner](assets/integrate-spa/dev-assets-update-folder.png)
 
-   Durch Erstellung einer dedizierten **dev**-Konfiguration wird sichergestellt, dass der Ordner **mocks** nur während der Entwicklung verwendet und nie in einem Produktions-Build in AEM implementiert wird.
+   Durch Erstellung einer dedizierten **dev**-Konfiguration wird sichergestellt, dass der Ordner **mocks** nur während der Entwicklung verwendet und nie in einem Produktions-Build in AEM bereitgestellt wird.
 
 6. Aktualisieren Sie als Nächstes in der Datei **angular.json** die **browserTarget**-Konfiguration so, dass die neue **dev**-Konfiguration verwendet wird:
 
