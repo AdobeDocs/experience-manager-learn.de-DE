@@ -1,6 +1,6 @@
 ---
 title: Installieren von AEM Forms unter Linux
-description: Erfahren Sie, wie Sie 32-Bit-Bibliotheken für AEM Forms installieren, um unter Linux zu installieren.
+description: Erfahren Sie, wie Sie 32-Bit-Bibliotheken für AEM Forms zur Verwendung in Linux-Installationen installieren.
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4, 6.5
@@ -11,41 +11,42 @@ kt: 7593
 exl-id: b9809561-e9bd-4c67-bc18-5cab3e4aa138
 last-substantial-update: 2019-06-09T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '945'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Installieren der 32-Bit-Version freigegebener Bibliotheken
+# Installieren der 32-Bit-Version von gemeinsam genutzten Bibliotheken
 
-Wenn AEM FORMS OSGi oder AEM Forms j2EE unter Linux bereitgestellt wird, müssen Sie sicherstellen, dass 32-Bit-Versionen eines Satzes gemeinsamer Bibliotheken installiert und verfügbar sind.  Die Beschreibungen stammen aus den Packages selbst.
+Wenn AEM FORMS OSGi oder AEM Forms j2EE unter Linux bereitgestellt wird, müssen Sie sicherstellen, dass 32-Bit-Versionen für einen Satz gemeinsam genutzter Bibliotheken installiert und verfügbar sind. Die Beschreibungen stammen aus den Paketen selbst.
 
-* expat (Stream-orientierte XML-Parser-C-Bibliothek zum Parsen von XML, geschrieben von James Clark)
-* fontconfig (Schriftkonfigurations- und Anpassungsbibliothek, die dazu bestimmt ist, Schriftarten im System zu finden und sie gemäß den von Anwendungen festgelegten Anforderungen auszuwählen)
-* freetype (Font Rendering Engine), entwickelt, um eine erweiterte Schriftartunterstützung für eine Vielzahl von Plattformen und Umgebungen bereitzustellen. Es kann Schriftdateien öffnen und verwalten sowie einzelne Glyphen effizient laden, hinweisen und rendern. Es handelt sich weder um einen Schriftartenserver noch um eine vollständige Textwiedergabe-Bibliothek)
-* glibc (Kernbibliotheken für das GNU-System und GNU/Linux-Systeme sowie viele andere Systeme, die Linux als Kernel verwenden)
-* libcurl (Client-seitige URL-Übertragungsbibliothek)
-* libICE (Inter-Client Exchange Library)
-* libicu (Bibliothek, die robuste und umfassende Unicode- und Gebietsschema-Unterstützung bietet - Internationale Komponenten für Unicode). Die 64-Bit- und 32-Bit-Editionen dieser Bibliothek sind erforderlich.
-* libSM (X11 Session Management Library)
-* libuuid (DCE-kompatible Universally Unique Identifier-Bibliothek - zur Generierung eindeutiger Identifikatoren für Objekte, auf die außerhalb des lokalen Systems zugegriffen werden kann)
-* libX11 (Client-seitige Bibliothek X11)
-* libXau (X11 Authorization Protocol - nützlich zur Beschränkung des Client-Zugriffs auf die Anzeige)
-* libxcb (X-Protokoll C-language Binding - XCB)
-* libXext (Bibliothek für allgemeine Erweiterungen des X11-Protokolls)
-* libXinerama (X11-Erweiterung), die Unterstützung für die Erweiterung eines Desktops über mehrere Anzeigen hinweg bietet. Der Name ist ein Pun auf Cinerama, einem Widescreen-Filmformat, das mehrere Projektoren verwendet. libXinerama ist die Bibliothek, die mit der RandR-Erweiterung verknüpft ist.)
-* libXrandr (Xinerama-Erweiterung ist heutzutage weitgehend veraltet - sie wurde durch die RandR-Erweiterung ersetzt)
-* libXrender (Client-Bibliothek der X-Rendering-Erweiterung) nss-softokn-freebl (Freebl-Bibliothek für Netzwerksicherheitsdienste)
-* zlib (allgemein verfügbare, patentfreie, verlustfreie Datenkomprimierungsbibliothek)
+* expat (Stream-orientierte XML-Parser-C-Bibliothek zum Parsen von XML, die von James Clark geschrieben wurde).
+* fontconfig (Bibliothek zur Konfiguration und Anpassung von Schriftarten, die entwickelt wurde, um Schriftarten im System zu finden und sie gemäß den von Anwendungen festgelegten Anforderungen auszuwählen).
+* freetype (Render-Engine für Schriftarten, die entwickelt wurde, um eine erweiterte Schriftartunterstützung für eine Vielzahl von Plattformen und Umgebungen bereitzustellen). Sie kann Schriftartdateien öffnen und verwalten sowie einzelne Glyphen effizient laden, darauf hinweisen und diese rendern. Es handelt sich weder um einen Schriftarten-Server noch um eine vollständige Text-Rendering-Bibliothek.
+* glibc (Kernbibliotheken für das GNU-System und GNU/Linux-Systeme sowie viele andere Systeme, die Linux als Kernel verwenden).
+* libcurl (Client-seitige URL-Transferbibliothek).
+* libICE (Inter-Client Exchange Library).
+* libicu (Bibliothek, die robuste und umfassende Unicode- und Gebietsschema-Unterstützung bietet – International Components for Unicode). Es sind die 64-Bit- und die 32-Bit-Edition dieser Bibliothek erforderlich.
+* libSM (X11 Session Management-Bibliothek).
+* libuuid (DCE-kompatible Universally Unique Identifier-Bibliothek – zur Generierung eindeutiger Kennungen für Objekte, auf die außerhalb des lokalen Systems zugegriffen werden kann).
+* libX11 (Client-seitige X11-Bibliothek).
+* libXau (X11-Autorisierungsprotokoll – nützlich zur Beschränkung des Client-Zugriffs auf die Anzeige).
+* libxcb (X-Protokoll-C-Sprachenbinding – XCB).
+* libXext (Bibliothek für allgemeine Erweiterungen des X11-Protokolls).
+* libXinerama (X11-Erweiterung zur Desktop-Erweiterung über mehrere Anzeigen hinweg.) Der Name spielt auf den Begriff „Cinerama“ an, ein Widescreen-Filmformat, bei dem mehrere Projektoren eingesetzt wurden. libXinerama ist die Bibliothek, die über eine Schnittstelle mit der RandR-Erweiterung verbunden ist.
+* libXrandr (die Xinerama-Erweiterung ist heutzutage weitgehend veraltet; sie wurde durch die RandR-Erweiterung ersetzt).
+* libXrender (Client-Bibliothek der X-Rendering-Erweiterung). 
+nss-softokn-freebl (Freebl-Bibliothek für Netzwerksicherheitsdienste).
+* zlib (universelle, patentfreie, verlustfreie Datenkomprimierungsbibliothek).
 
-Ab Red Hat Enterprise Linux 6 wird die 32-Bit-Edition einer Bibliothek die Dateinamenerweiterung .686 haben, während die 64-Bit-Edition .x86_64 haben wird. Beispiel: expat.i686. Vor RHEL 6 hatten 32-Bit-Editionen die Erweiterung .i386. Stellen Sie vor der Installation der 32-Bit-Editionen sicher, dass die neuesten 64-Bit-Editionen installiert sind. Wenn die 64-Bit-Version einer Bibliothek älter als die installierte 32-Bit-Version ist, erhalten Sie einen Fehler wie den folgenden:
+Ab Red Hat Enterprise Linux 6 haben 32-Bit-Editionen einer Bibliothek die Dateinamenerweiterung „.686“, 64-Bit-Editionen hingegen „.x86_64“, z. B. „expat.i686“. Vor RHEL 6 hatten 32-Bit-Editionen die Erweiterung „.i386“. Stellen Sie vor der Installation von 32-Bit-Editionen sicher, dass die neuesten 64-Bit-Editionen installiert sind. Wenn die 64-Bit-Version einer Bibliothek älter ist als die installierte 32-Bit-Version, erhalten Sie einen Fehler wie den folgenden:
 
-0mError: Geschützte Multilib-Versionen: libsepol-2.5-10.el7.x86_64 != libsepol-2.5-6.el7.i686 [0mError: Probleme mit der Multilib-Version gefunden.]
+0mError: Protected multilib versions: libsepol-2.5-10.el7.x86_64 != libsepol-2.5-6.el7.i686 [0mError: Multilib version problems found.]
 
-## Erstmalige Installation
+## Erstinstallation
 
-Verwenden Sie unter Red Hat Enterprise Linux den YellowDog Update Modifier (YUM) zur Installation, wie unten dargestellt:
+Verwenden Sie unter Red Hat Enterprise Linux den YellowDog Update Modifier (YUM) zur Installation, wie im Folgenden angegeben:
 
 1. yum install expat.i686
 2. yum install fontconfig.i686
@@ -69,29 +70,60 @@ Verwenden Sie unter Red Hat Enterprise Linux den YellowDog Update Modifier (YUM)
 
 ## Symlinks
 
-Außerdem müssen Sie libcurl.so, libcrypto.so und libssl.so symlinks erstellen, die auf die neuesten 32-Bit-Versionen der Bibliotheken libcurl, libcrypto und libssl verweisen. Sie finden die Dateien unter /usr/lib/ln -s /usr/lib/libcurl.so.4.5.0 /usr/lib/libcurl.so ln -s /usr/lib/libcrypto.so.1.1.1c /usr/lib/libcrypto.so ln -s /usr/lib/libssl.so.1.1.1c /usr/lib/libssl.so
+Außerdem müssen Sie libcurl.so-, libcrypto.so- und libssl.so-Symlinks erstellen, die auf die neuesten 32-Bit-Versionen der libcurl-, libcrypto- und libssl-Bibliotheken verweisen. Sie finden die Dateien unter: /usr/lib/
+-s /usr/lib/libcurl.so.4.5.0 /usr/lib/libcurl.so
+-s /usr/lib/libcrypto.so.1.1.1c /usr/lib/libcrypto.so
+-s /usr/lib/libssl.so.1.1.1c /usr/lib/libssl.so
 
-## Aktualisierungen des bestehenden Systems
+## Aktualisierungen des vorhandenen Systems
 
-Es kann bei Aktualisierungen zu Konflikten zwischen der x86_64- und der i686-Architektur kommen, z. B.: Fehler: Transaktionsprüfungsfehler: Datei /lib/ld-2.28.so aus der Installation von glibc-2.28-72.el8.i686 steht im Konflikt mit der Datei aus dem Paket glibc32-2.28-42.1.el8.x86_64
+Es kann bei Aktualisierungen zu Konflikten zwischen der x86_64- und der i686-Architektur kommen, z. B.:
+Error: Transaction check error:
+file /lib/ld-2.28.so from install of glibc-2.28-72.el8.i686 conflicts with file from package glibc32-2.28-42.1.el8.x86_64
 
-Wenn Sie auf dieses Problem stoßen, deinstallieren Sie zuerst das fehlerhafte Paket, wie in diesem Fall: yum remove glibc32-2.28-42.1.el8.x86_64
+Deinstallieren Sie bei Anzeige dieses Fehlers zuerst das fehlerhafte Paket, in diesem Fall:
+yum remove glibc32-2.28-42.1.el8.x86_64
 
-Alles gesagt und fertig, Sie möchten, dass die x86_64- und i686-Versionen genau gleich sind, wie z. B. von dieser Ausgabe an den Befehl: yum info glibc
+Schließlich und endlich möchten Sie, dass die x86_64- und i686-Versionen identisch sind, z. B. wie bei der nachfolgenden Ausgabe dieses Befehls:
+yum info glibc
 
-Prüfung des letzten Metadatenablaufs: 0:41:Vor 33 Uhr am 18. Januar 2020 11:37:08 UHR EST.
-Name der installierten Pakete : glibc-Version : Version 2.28 : 72.el8 Architektur : i686 Größe : 13 M Quelle : glibc-2.28-72.el8.src.rpm Repository : @System From repo : BaseOS-Zusammenfassung : Die URL der GNU-Bibliotheken-Bibliotheken : http://www.gnu.org/software/glibc/ Lizenz : LGPLv2+ und LGPLv2+ mit Ausnahmen und GPLv2+ und GPLv2+ mit Ausnahmen sowie BSD und Inner-Net und ISC und Public Domain und GFDL Description : Das glibc-Paket enthält Standardbibliotheken, die von verwendet werden: mehrere Programme auf dem System. So sparen Sie Speicherplatz und : -Speicher sowie zur Vereinfachung der Aktualisierung lautet der allgemeine Systemcode: an einem Ort aufbewahrt und von Programmen gemeinsam genutzt werden. Dieses spezifische Paket : enthält die wichtigsten Sätze freigegebener Bibliotheken: Standard C : Bibliothek und die standardmäßige Mathematik-Bibliothek. Ohne diese beiden Bibliotheken ist eine : Das Linux-System funktioniert nicht.
+Last metadata expiration check: 0:41:33 ago on Sat 18 Jan 2020 11:37:08 AM EST.
+Installed Packages
+Name : glibc
+Version : 2.28
+Release : 72.el8
+Architecture : i686
+Size : 13 M
+Source : glibc-2.28-72.el8.src.rpm
+Repository : @System
+From repo : BaseOS
+Summary : The GNU libc libraries
+URL : http://www.gnu.org/software/glibc/
+License : LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
+Description : The glibc package contains standard libraries which are used by : multiple programs on the system. In order to save disk space and : memory, as well as to make upgrading easier, common system code is : kept in one place and shared between programs. This particular package : contains the most important sets of shared libraries: the standard C : library and the standard math library. Without these two libraries, a : Linux system will not function.
 
-Name : glibc-Version : Version 2.28 : 72.el8 Architektur : x86_64 Größe : 15 M Quelle : glibc-2.28-72.el8.src.rpm Repository : @System From repo : BaseOS-Zusammenfassung : Die URL der GNU-Bibliotheken-Bibliotheken : http://www.gnu.org/software/glibc/ Lizenz : LGPLv2+ und LGPLv2+ mit Ausnahmen und GPLv2+ und GPLv2+ mit Ausnahmen sowie BSD und Inner-Net und ISC und Public Domain und GFDL Description : Das glibc-Paket enthält Standardbibliotheken, die von verwendet werden: mehrere Programme auf dem System. So sparen Sie Speicherplatz und : -Speicher sowie zur Vereinfachung der Aktualisierung lautet der allgemeine Systemcode: an einem Ort aufbewahrt und von Programmen gemeinsam genutzt werden. Dieses spezifische Paket : enthält die wichtigsten Sätze freigegebener Bibliotheken: Standard C : Bibliothek und die standardmäßige Mathematik-Bibliothek. Ohne diese beiden Bibliotheken ist eine : Das Linux-System funktioniert nicht.
+Name : glibc
+Version : 2.28
+Release : 72.el8
+Architecture : x86_64
+Size : 15 M
+Source : glibc-2.28-72.el8.src.rpm
+Repository : @System
+From repo : BaseOS
+Summary : The GNU libc libraries
+URL : http://www.gnu.org/software/glibc/
+License : LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
+Description : The glibc package contains standard libraries which are used by : multiple programs on the system. In order to save disk space and : memory, as well as to make upgrading easier, common system code is : kept in one place and shared between programs. This particular package : contains the most important sets of shared libraries: the standard C : library and the standard math library. Without these two libraries, a : Linux system will not function.
 
-## Einige nützliche Yum-Befehle
+## Auswahl nützlicher Yum-Befehle
 
-yum list installed yum search [part_of_package_name]
-yum which [package_name]
-yum install [package_name]
-yum reinstall [package_name]
-yum info [package_name]
-yum deplist [package_name]
-yum remove [package_name]
-yum check-update [package_name]
-yum update [package_name]
+yum list installed
+yum search [Teil_des_Paketnamens]
+yum whatprovides [Paketname]
+yum install [Paketname]
+yum reinstall [Paketname]
+yum info [Paketname]
+yum deplist [Paketname]
+yum remove [Paketname]
+yum check-update [Paketname]
+yum update [Paketname]
