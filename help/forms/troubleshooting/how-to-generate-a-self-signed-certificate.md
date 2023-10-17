@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines selbstsignierten Zertifikats
+title: Generieren eines selbstsignierten Zertifikats
 description: Schritte zum Generieren eines selbstsignierten Zertifikats für die Anwendung von SSL
 type: Troubleshooting
 role: Admin
@@ -9,13 +9,13 @@ topic: Administration
 index: y
 exl-id: 10b9b5cd-752a-464b-b38b-c73fb31921fc
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '36'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Erstellen eines selbstsignierten Zertifikats
+# Generieren eines selbstsignierten Zertifikats
 
 *In diesem Video werden die Schritte zum Generieren eines selbstsignierten Zertifikats erläutert.*
 
