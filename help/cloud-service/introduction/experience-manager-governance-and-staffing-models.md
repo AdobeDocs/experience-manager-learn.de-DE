@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie Ihre Adobe Experience Manager-Plattform (AEM)
 solution: Experience Manager
 exl-id: 808ab7a6-5ec5-4bbd-9a6e-cfc0b447430d
 source-git-commit: dcd69c7444eae0f8c86464c1963bff35e6f11238
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1133'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -90,7 +90,7 @@ Im Folgenden finden Sie Rollenbeispiele für ein einfaches Szenario (Sportbeklei
 
    * CSS-Entwicklung: Erstellt Erlebnisartefakte durch die Neuverwendung von Komponenten mit neuen Stilen.
    * Backend-Entwicklung: Erstellt neue Komponenten oder kann eine Kernkomponente erweitern. Bei korrekter Umsetzung sollte diese Rolle von höchstens einer Person ausgeübt werden, es sei denn, es sind große Animationsaufgaben erforderlich.
-   * Versionsverwaltung - überwacht die Codebereitstellung und dient als aktuelles Adobe-Account-Team.
+   * Versionsverwaltung: überwacht die Code-Bereitstellung und fungiert als aktuelles Adobe-Konto-Team.
    * Produktinhaber oder -inhaberin: Arbeitet mit der Geschäftseinheit bei der Vermittlung technischer und strategischer Visionen zusammen, erstellt Wartungsaufgaben und Verbesserungen und fungiert als Business Owner der Lösung.
    * Autoren-Admin: Aktualisiert den CSS-Skin und stellt Autorinnen und Autoren, die Inhalte aktualisieren und anwenden, Leitlinien zur Verfügung. Diese Rolle arbeitet an Workflow-Konfigurationen und erstellt Anleitungen, die von den Inhaltsautorinnen und -autoren angewendet werden können. HINWEIS: In Version 6.5 empfiehlt Adobe die Verwendung bearbeitbarer Vorlagen.
    * Inhaltsautorin oder -autor: Wendet Inhalte sowie das Prinzip der mehrstufigen Eigentümerschaft an und informiert über Kommunikationsprobleme und -belange, sobald sie CSM-seitig auftreten.
