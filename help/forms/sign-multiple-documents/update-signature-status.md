@@ -1,6 +1,6 @@
 ---
 title: Aktualisieren des Signaturstatus des Formulars in der Datenbank
-description: Signaturstatus des signierten Formulars in der Datenbank mithilfe des AEM-Workflows aktualisieren
+description: Aktualisieren des Signaturstatus des signierten Formulars in der Datenbank mithilfe des AEM-Workflows
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6888
@@ -10,21 +10,21 @@ role: Developer
 level: Experienced
 exl-id: 75852a4b-7008-4c65-bab1-cc5dbf525e20
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '116'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Aktualisierung des Signaturstatus
+# Aktualisieren des Signaturstatus
 
-Der Workflow UpdateSignatureStatus wird ausgelöst, wenn der Benutzer die Signaturzeremonie abgeschlossen hat. Im Folgenden wird der Workflow beschrieben.
+Der UpdateSignatureStatus-Workflow wird ausgelöst, wenn die Benutzenden die Signaturzeremonie abgeschlossen haben. Der Workflow läuft wie folgt ab.
 
 ![main-workflow](assets/update-signature.PNG)
 
-&quot;Signaturstatus aktualisieren&quot;ist ein benutzerdefinierter Prozessschritt.
-Der Hauptgrund für die Implementierung eines benutzerdefinierten Prozessschritts besteht darin, einen AEM Workflow zu erweitern. Im Folgenden finden Sie den benutzerdefinierten Code, mit dem der Signaturstatus aktualisiert wird.
-Code in diesem benutzerdefinierten Prozessschritt verweist auf den SignMultipleForms-Dienst.
+Die Aktualisierung des Signaturstatus ist ein benutzerdefinierter Prozessschritt.
+Der Hauptgrund für die Implementierung eines benutzerdefinierten Prozessschritts ist, einen AEM-Workflow zu erweitern. Im Folgenden finden Sie den benutzerdefinierten Code, mit dem der Signaturstatus aktualisiert wird.
+Der Code in diesem benutzerdefinierten Prozessschritt verweist auf den SignMultipleForms-Dienst.
 
 
 ```java
@@ -70,8 +70,8 @@ public class UpdateSignatureStatusWorkflowStep implements WorkflowProcess {
 
 ## Assets
 
-Der Workflow zum Aktualisieren des Signaturstatus kann [heruntergeladen von hier](assets/update-signature-status-workflow.zip)
+Der Workflow zum Aktualisieren des Signaturstatus kann [hier heruntergeladen](assets/update-signature-status-workflow.zip) werden
 
 ## Nächste Schritte
 
-[Übersichtsschritt anpassen, um das nächste Formular zum Signieren anzuzeigen](./customize-summary-component.md)
+[Passen Sie den Übersichtsschritt an, um das nächste Formular zum Signieren anzuzeigen](./customize-summary-component.md)
