@@ -1,6 +1,6 @@
 ---
 title: Kommentare und Anmerkungen
-description: Erfahren Sie, wie Sie mit Kommentaren und Anmerkungen in AEM kommunizieren und mit Assets zusammenarbeiten können.
+description: Erfahren Sie, wie Sie Kommentare und Anmerkungen in AEM verwenden können, um zu kommunizieren und gemeinsam an Assets zu arbeiten.
 feature: Collaboration
 version: Cloud Service
 kt: 4541
@@ -11,14 +11,14 @@ level: Beginner
 last-substantial-update: 2021-09-29T00:00:00Z
 exl-id: c3b4366b-cbb2-48d6-b101-78effb35130d
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '36'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Kommentare und Anmerkungen
 
-Erfahren Sie, wie Sie mit Kommentaren und Anmerkungen in AEM kommunizieren und mit Assets zusammenarbeiten können.
+Erfahren Sie, wie Sie Kommentare und Anmerkungen in AEM verwenden können, um zu kommunizieren und gemeinsam an Assets zu arbeiten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32049?quality=12&learn=on)
