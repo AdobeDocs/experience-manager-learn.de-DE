@@ -1,6 +1,6 @@
 ---
 title: Schnelle Entwicklungsumgebungen
-description: Erfahren Sie mehr über AEM schnelle Entwicklungsumgebungen, was sie sind und wie sie bei schnellerer Entwicklung bis hin zu Implementierungszyklen helfen können.
+description: Erfahren Sie mehr über schnelle Entwicklungsumgebungen für AEM, was sie sind und wie sie bei der schnelleren Entwicklung zur Bereitstellung von Zyklen helfen können.
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -9,33 +9,33 @@ level: Beginner
 jira: KT-11860
 thumbnail: KT-11860.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: 8fc6d0ef-8753-480b-a504-e7943de8883c
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '109'
-ht-degree: 20%
+ht-degree: 100%
 
 ---
 
-
 # Schnelle Entwicklungsumgebungen
 
-Erfahren Sie mehr über die Rapid Development Environment (RDE) in AEM as a Cloud Service.
+Erfahren Sie mehr über die schnelle Entwicklungsumgebung (Rapid Development Environment, RDE) in AEM as a Cloud Service.
 
 In diesem Video wird beschrieben:
 
 - Was sind RDEs?
-- Wie können sie zu schnelleren Entwicklungszyklen bis hin zu Implementierungszyklen beitragen?
+- Wie können sie zur schnelleren Entwicklung zur Bereitstellung von Zyklen beitragen?
 
 >[!VIDEO](https://video.tv.adobe.com/v/3414128?quality=12&learn=on)
 
 ## Nächster Schritt
 
-Lernen [Einrichtung](./how-to-setup.md) ein RDE in AEM as a Cloud Service.
+Lernen Sie die [Einrichtung](./how-to-setup.md) einer RDE in AEM as a Cloud Service.
 
 ## Zusätzliche Ressourcen
 
-[Einführung in die RDE-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#introduction)
+[Einführungsdokumentation in die RDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=de#introduction)
 
-[CI/CD-Pipelines in Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)
+[CI/CD-Pipelines in Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=de)
 
 [Einrichten der Entwicklungs-IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=de)
