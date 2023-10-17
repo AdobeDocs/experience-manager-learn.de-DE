@@ -1,6 +1,6 @@
 ---
-title: Adaptives Formular mit Daten aus Azure Storage vorbefüllen
-description: Erfahren Sie, wie Sie mit dem Vorbefüllungs-Dienst von AEM Forms adaptive Formulare aus Azure Blob Storage ausfüllen.
+title: Vorbefüllen eines adaptiven Formulars mit Daten aus Azure Storage
+description: Erfahren Sie, wie Sie mit dem Vorbefüllungsdienst von AEM Forms adaptive Formulare über Azure Blob Storage ausfüllen.
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -11,14 +11,14 @@ thumbnail: 335714.jpg
 kt: 8240
 exl-id: 12e0e3bb-d6b2-4c33-9105-18c3637d3e07
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '48'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Adaptives Formular mit Daten aus Azure-Speicher vorbefüllen
+# Vorbefüllen eines adaptiven Formulars mit Daten aus Azure Storage
 
-Erfahren Sie, wie Sie mit dem Vorbefüllungs-Dienst von AEM Forms adaptive Formulare aus Azure Blob Storage ausfüllen.
+Erfahren Sie, wie Sie mit dem Vorbefüllungsdienst von AEM Forms adaptive Formulare über Azure Blob Storage ausfüllen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335714?quality=12&learn=on)
