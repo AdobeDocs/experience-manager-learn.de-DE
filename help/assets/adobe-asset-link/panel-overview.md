@@ -1,6 +1,6 @@
 ---
-title: Übersicht über das Bedienfeld "Adobe-Asset-Link"
-description: Adobe Asset Link bietet kreativen Benutzern die Möglichkeit, in AEM Assets gespeicherte Assets über das In-App-Bedienfeld in InDesign, Photoshop und Illustrator zu durchsuchen, zu suchen, auszuchecken und einzuchecken. Lernen Sie die Benutzeroberfläche und Funktionen des Bedienfelds "Adobe Asset Link"kennen.
+title: Übersicht des Adobe Asset Link-Bedienfelds
+description: Adobe Asset Link bietet kreativen Benutzenden die Möglichkeit, in AEM Assets gespeicherte Assets über das In-App-Bedienfeld in InDesign, Photoshop und Illustrator zu durchsuchen, auszuchecken und einzuchecken. Lernen Sie die Benutzeroberfläche und Funktionen des Adobe Asset Link-Bedienfelds kennen.
 sub-product: Experience Manager Assets
 feature: Adobe Asset Link
 version: Cloud Service
@@ -11,14 +11,14 @@ role: User
 level: Beginner
 exl-id: ba8d0cd1-b7d2-4628-a069-5ef21cc214c6
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '94'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Übersicht über das Bedienfeld &quot;Adobe-Asset-Link&quot; {#adobe-asset-link-panel-overview}
+# Übersicht des Adobe Asset Link-Bedienfelds {#adobe-asset-link-panel-overview}
 
-Adobe Asset Link bietet kreativen Benutzern die Möglichkeit, in AEM Assets gespeicherte Assets über das In-App-Bedienfeld in InDesign, Photoshop und Illustrator zu durchsuchen, zu suchen, auszuchecken und einzuchecken. Lernen Sie die Benutzeroberfläche und Funktionen des Bedienfelds &quot;Adobe Asset Link&quot;kennen.
+Adobe Asset Link bietet kreativen Benutzenden die Möglichkeit, in AEM Assets gespeicherte Assets über das In-App-Bedienfeld in InDesign, Photoshop und Illustrator zu durchsuchen, auszuchecken und einzuchecken. Lernen Sie die Benutzeroberfläche und Funktionen des Adobe Asset Link-Bedienfelds kennen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/33734?quality=12&learn=on)
