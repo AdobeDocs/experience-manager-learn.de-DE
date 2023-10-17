@@ -1,29 +1,29 @@
 ---
-title: Adobe Experience Manager as a Cloud Service Expert-Serie
-description: Erfahren Sie mehr über Adobe Experience Manager (AEM) as a Cloud Service von den erfahrenen Ingenieuren der Adobe, die sie erstellen, und über die professionellen Dienstleistungen, die sie anbieten.
+title: Expertenserie zu Adobe Experience Manager as a Cloud Service
+description: Erfahren Sie mehr über Adobe Experience Manager (AEM) as a Cloud Service von den Adobe-eigenen Fachleuten, die die Software entwickeln und den professionellen Services, die sie bereitstellen.
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 topic: Administration, Development
 feature: Developer Tools
 exl-id: ae1cdbe3-0863-41de-bb27-2e88c4640866
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '705'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Adobe Experience Manager as a Cloud Service Expert-Serie
+# Expertenserie zu Adobe Experience Manager as a Cloud Service
 
 ![AEM-Expertenserie](./assets/masthead.png)
 
-Erfahren Sie mehr über Adobe Experience Manager (AEM), as a Cloud Service von den Fachingenieuren der Adobe, die das Projekt erstellen, und vom Professional Services-Team, das es bereitstellt. Schließen Sie sich den Experten der Adobe an, um zu erkunden, was AEM as a Cloud Service ist, wie es sich von AEM 6 unterscheidet und wie der Übergang von AEM 6 zu AEM as a Cloud Service ist.
+Erfahren Sie mehr über Adobe Experience Manager (AEM) as a Cloud Service von den Adobe-Fachleuten, die die Lösung entwickeln und dem professionellen Service-Team, das sie bereitstellt. Erkunden Sie gemeinsam mit den Fachkräften von Adobe, was AEM as a Cloud Service ist, inwiefern es sich von AEM 6 unterscheidet und wie Sie von AEM 6 zu AEM as a Cloud Service wechseln können.
 
 <br/> 
 <br/>
 
 ## Erste Schritte mit AEM as a Cloud Service
 
-Lernen Sie die Grundlagen von AEM als Cloud Services kennen und erfahren Sie, wie er sich von AEM 6 von den Senior Cloud Architects von Adobe Engineering unterscheidet.
+Erfahren Sie von den Senior Cloud Architects des Entwicklungs-Teams von Adobe die Grundlagen von AEM as a Cloud Services und wie es sich von AEM 6 unterscheidet.
 
 <table>
   <tr>
@@ -32,25 +32,25 @@ Lernen Sie die Grundlagen von AEM als Cloud Services kennen und erfahren Sie, wi
       <img alt="Anders denken" src="./assets/thinking-differently.png"/>
       </a>
       <div>
-         <a href="../../migration/moving-to-aem-as-a-cloud-service/introduction.md"><strong>Anders denken</strong></a>         
-         <br/><em>mit Darin Kuntze, Senior Cloud Architect</em>
+         <a href="../../migration/moving-to-aem-as-a-cloud-service/introduction.md"><strong>Anders denken</strong></a>
+<br/><em>mit Darin Kuntze, Senior Cloud Architect</em>
       </div>
       <p>
         <br/>
-         Werfen Sie einen Blick auf AEM as a Cloud Service Architektur und wie Sie über AEM as a Cloud Service Implementierungen anders denken.
+ Sehen Sie sich die Architektur von AEM as a Cloud Service an und lernen Sie eine andere Sichtweise der Implementierungen von AEM as a Cloud Service kennen.
       </p>
      </td>   
      <td>
       <a href="../../migration/moving-to-aem-as-a-cloud-service/onboarding.md">
-      <img alt="Einstieg in AEM as a Cloud Service" src="./assets/onboarding.png"/>
+      <img alt="Onboarding in AEM as a Cloud Service" src="./assets/onboarding.png"/>
       </a>
       <div>
-         <a href="../../migration/moving-to-aem-as-a-cloud-service/onboarding.md"><strong>Einstieg in AEM as a Cloud Service</strong></a>
-         <br/><em>mit Damian Langsweirdt, Senior Cloud Architect</em>
+         <a href="../../migration/moving-to-aem-as-a-cloud-service/onboarding.md"><strong>Onboarding in AEM as a Cloud Service</strong></a>
+ <br/><em>mit Damian Langsweirdt, Senior Cloud Architect</em>
       </div>
       <p>
         <br/>
-         Erfahren Sie mehr über das Onboarding von AEM as a Cloud Service, beginnend mit der Vertragsphase zum Einrichten von Self-Service-Umgebungen mit Cloud Manager.
+ Erfahren Sie mehr über das Onboarding in AEM as a Cloud Service, beginnend mit der Vertragsphase zum Einrichten von Self-Service-Umgebungen mit Cloud Manager.
       </p>
    </td>     
    </td>   
@@ -60,46 +60,46 @@ Lernen Sie die Grundlagen von AEM als Cloud Services kennen und erfahren Sie, wi
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/cloud-manager.md"><strong>Cloud Manager für AEM as a Cloud Service</strong></a>
-         <br/><em>mit Bryan Stopp, Senior Cloud Architect</em>
+ <br/><em>mit Bryan Stopp, Senior Cloud Architect</em>
       </div>
       <p>
         <br/>
-         Erfahren Sie mehr über Cloud Manager für AEM as a Cloud Service und die Unterschiede zu Cloud Manager für AEM in Adobe Manager Services (AMS).
+ Erfahren Sie mehr über Cloud Manager für AEM as a Cloud Service und die Unterschiede zu Cloud Manager für AEM in Adobe Manager Services (AMS).
       </p>
    </td> 
   </tr>
 </table>
 
-## Wechseln zu AEM as a Cloud Service?
+## Wechseln Sie zu AEM as a Cloud Service?
 
-Planen Sie den Übergang von AEM 6 zu AEM as a Cloud Service? Erfahren Sie mehr über die Methodik der Adobe für den Übergang zu AEM as a Cloud Service sowie über die verschiedenen Tools und Funktionen, die diesen Übergang reibungslos gestalten.
+Planen Sie den Übergang von AEM 6 zu AEM as a Cloud Service? Erfahren Sie mehr über die Methodik von Adobe für die Umstellung auf AEM as a Cloud Service sowie über die verschiedenen Tools und Funktionen, die einen reibungslosen Übergang ermöglichen.
 
 <table>
   <tr>
    <td>
       <a href="../../migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md" target="_aem-experts-series-video">
-      <img alt="Die Migrationsmethode" src="./assets/bpa-and-cam.png"/>
+      <img alt="Die Migrationsmethodik" src="./assets/bpa-and-cam.png"/>
       </a>
       <div>
-         <a href="../../migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md" target="_aem-experts-series-video"><strong>Migrationsmethode</strong></a>
-         <br/><em>mit Roger Blanton, Adobe Consulting Services Technical Architect</em>
+         <a href="../../migration/moving-to-aem-as-a-cloud-service/bpa-and-cam.md" target="_aem-experts-series-video"><strong>Die Migrationsmethodik</strong></a>
+ <br/><em>mit Roger Blanton, Adobe Consulting Services Technical Architect</em>
       </div>
       <p>
         <br/>
-        Informieren Sie sich über die Best Practices für die Migration von AEM 6 zu AEM as a Cloud Service mithilfe von AEM Best Practice Analyzer (BPA) und Cloud Acceleration Manager (CAM).
+ Informieren Sie sich über die Best Practices für die Migration von AEM 6 zu AEM as a Cloud Service mithilfe von AEM Best Practice Analyzer (BPA) und Cloud Acceleration Manager (CAM).
       </p>
    </td>   
      <td>
       <a href="../../migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md" target="_aem-experts-series-video">
-      <img alt="Modernisieren Ihres Inhalts" src="./assets/aem-modernizer-tools.png"/>
+      <img alt="Modernisierung Ihrer Inhalte" src="./assets/aem-modernizer-tools.png"/>
       </a>
       <div>
-         <a href="../../migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md" target="_aem-experts-series-video"><strong>Modernisieren Ihres Inhalts</strong></a>
-         <br/><em>mit Bryan Stopp, Senior Cloud Architect</em>
+         <a href="../../migration/moving-to-aem-as-a-cloud-service/aem-modernization-tools.md" target="_aem-experts-series-video"><strong>Modernisierung Ihrer Inhalte</strong></a>
+ <br/><em>mit Bryan Stopp, Senior Cloud Architect</em>
       </div>
       <p>
         <br/>
-         Erfahren Sie, wie Sie Ihre AEM automatisch modernisieren können, um die neuesten AEM as a Cloud Service Funktionen nutzen zu können.
+ Erfahren Sie, wie Sie AEM automatisch modernisieren können, um die neuesten AEM as a Cloud Service-Funktionen nutzen zu können.
       </p>
    </td>     
    </td>   
@@ -109,39 +109,39 @@ Planen Sie den Übergang von AEM 6 zu AEM as a Cloud Service? Erfahren Sie mehr 
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/repository-modernization.md" target="_aem-experts-series-video"><strong>Modernisierung Ihres AEM Maven-Projekts</strong></a>
-         <br/><em>mit Varun Mitra, Cloud Architect</em>
+ <br/><em>mit Varun Mitra, Cloud Architect</em>
       </div>
       <p>
         <br/>
-         Erfahren Sie, wie Sie die Projektstruktur und -organisation Ihrer benutzerdefinierten AEM-Anwendung automatisch modernisieren, um sie as a Cloud Service kompatibel zu machen und an die neuesten Best Practices der Adobe anzupassen.
+ Erfahren Sie, wie Sie die Projektstruktur und -organisation Ihrer benutzerdefinierten AEM-Anwendung automatisch modernisieren, um sie mit AEM as a Cloud Service kompatibel zu machen und an die neuesten Best Practices von Adobe anzupassen.
       </p>
    </td> 
   </tr>
   <tr>
    <td>
       <a href="../../migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md" target="_aem-experts-series-video">
-      <img alt="Modernisieren Ihrer Oak-Indizes" src="./assets/indexes.png"/>
+      <img alt="Modernisierung Ihrer Oak-Indizes" src="./assets/indexes.png"/>
       </a>
       <div>
-         <a href="../../migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md" target="_aem-experts-series-video"><strong>Modernisieren Ihrer Oak-Indizes</strong></a>
-         <br/><em>mit Darin Kuntze, Senior Cloud Architect</em>
+         <a href="../../migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md" target="_aem-experts-series-video"><strong>Modernisierung Ihrer Oak-Indizes</strong></a>
+ <br/><em>mit Darin Kuntze, Senior Cloud Architect</em>
       </div>
       <p>
         <br/>
-        Erfahren Sie, wie Sie automatisch AEM 6 Oak-Indexdefinitionen konvertieren, um sie AEM as a Cloud Service kompatibel zu sein, und wie Sie Oak-Indizes für AEM as a Cloud Service Zukunft verwalten können.
+ Erfahren Sie, wie Sie automatisch AEM 6 Oak-Indexdefinitionen konvertieren, um sie mit AEM as a Cloud Service kompatibel zu machen, und wie Sie Oak-Indizes für AEM as a Cloud Service zukünftig verwalten können.
       </p>
    </td>   
      <td>
       <a href="../../migration/moving-to-aem-as-a-cloud-service/dispatcher.md" target="_aem-experts-series-video">
-      <img alt="Modernisierung der Dispatcher-Konfiguration" src="./assets/dispatcher.png"/>
+      <img alt="Modernisierung Ihrer Dispatcher-Konfiguration" src="./assets/dispatcher.png"/>
       </a>
       <div>
-         <a href="../../migration/moving-to-aem-as-a-cloud-service/dispatcher.md" target="_aem-experts-series-video"><strong>Modernisierung der Dispatcher-Konfiguration</strong></a>
-         <br/><em>mit Bryan Stopp, Senior Cloud Architect</em>
+         <a href="../../migration/moving-to-aem-as-a-cloud-service/dispatcher.md" target="_aem-experts-series-video"><strong>Modernisierung Ihrer Dispatcher-Konfiguration</strong></a>
+ <br/><em>mit Bryan Stopp, Senior Cloud Architect</em>
       </div>
       <p>
         <br/>
-         Erfahren Sie mehr über AEM Dispatcher für AEM as a Cloud Service, wobei Sie sich auf wichtige Änderungen vom Dispatcher für AEM 6, das Dispatcher-Konvertierungstool und die Verwendung des Dispatcher Tools SDK konzentrieren.
+ Erfahren Sie mehr über AEM Dispatcher für AEM as a Cloud Service, wobei wir uns auf wichtige Änderungen vom Dispatcher für AEM 6, das Dispatcher-Konvertierungs-Tool und die Verwendung des Dispatcher-Tools-SDK konzentrieren.
       </p>
    </td>     
    </td>   
@@ -151,11 +151,11 @@ Planen Sie den Übergang von AEM 6 zu AEM as a Cloud Service? Erfahren Sie mehr 
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.md" target="_aem-experts-series-video"><strong>Übertragen Ihres Inhalts auf AEM as a Cloud Service</strong></a>
-         <br/><em>mit Kiran Murugulla, Senior Cloud Architect</em>
+ <br/><em>mit Kiran Murugulla, Senior Cloud Architect</em>
       </div>
       <p>
         <br/>
-         Erfahren Sie, wie Sie mit dem Content Transfer Tool Inhalte von AEM 6.3+ auf AEM as a Cloud Service migrieren können.
+ Erfahren Sie, wie Sie mit dem Content Transfer Tool Inhalte von AEM 6.3 oder höher auf AEM as a Cloud Service migrieren können.
       </p>
    </td> 
   </tr>  
@@ -164,21 +164,21 @@ Planen Sie den Übergang von AEM 6 zu AEM as a Cloud Service? Erfahren Sie mehr 
 
 ## Funktionen von AEM as a Cloud Services
 
-Erfahren Sie mehr über AEM einzigartigen Funktionen von as a Cloud Service von Experten der Adobe.
+Erfahren Sie von den Adobe-Fachleuten mehr über die einzigartigen Funktionen von AEM as a Cloud Service.
 
 <table>
   <tr>
    <td>
       <a href="../../migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md" target="_aem-experts-series-video">
-      <img alt="asset compute-Microservices" src="./assets/asset-compute-microservices.png"/>
+      <img alt="Asset Compute-Microservices" src="./assets/asset-compute-microservices.png"/>
       </a>
       <div>
-         <a href="../../migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md" target="_aem-experts-series-video"><strong>asset compute-Microservices</strong></a>
-         <br/><em>mit Amol Anand, Principal Cloud Architect</em>
+         <a href="../../migration/moving-to-aem-as-a-cloud-service/asset-compute-microservices.md" target="_aem-experts-series-video"><strong>Asset Compute-Microservices</strong></a>
+ <br/><em>mit Amol Anand, Principal Cloud Architect</em>
       </div>
       <p>
         <br/>
-        Erfahren Sie mehr über die Asset compute-Microservices von AEM Assets, wie sie AEM 6-Asset-Verarbeitung ersetzen und wie sie erweitert werden können, um benutzerdefinierte Asset-Ausgabedarstellungen zu generieren.
+ Erfahren Sie mehr über die Asset Compute-Microservices von AEM Assets und darüber, wie sie Asset-Verarbeitung von AEM 6 ersetzen und wie sie erweitert werden können, um benutzerdefinierte Asset-Ausgabedarstellungen zu generieren.
       </p>
    </td>   
    <td>
@@ -187,35 +187,35 @@ Erfahren Sie mehr über AEM einzigartigen Funktionen von as a Cloud Service von 
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/content-migration/bulk-import-service.md" target="_aem-experts-series-video"><strong>Massenimport von Inhalten</strong></a>
-         <br/><em>mit Kiran Murugulla, Senior Cloud Architect</em>
+ <br/><em>mit Kiran Murugulla, Senior Cloud Architect</em>
       </div>
       <p>
         <br/>
-        Erfahren Sie, wie Sie mit dem Bulk Import Service und Package Manager Inhalte sicher und effizient AEM as a Cloud Service importieren können.
+ Erfahren Sie, wie Sie mit dem Massenimport-Dienst und mit Package Manager von AEM Inhalte in großen Mengen sicher und effizient in AEM als Cloud Service importieren können.
       </p>
    </td> 
     <td></td>
   </tr>
 </table>
 
-## Benötigen Sie Hilfe mit AEM als Cloud Services?
+## Benötigen Sie Hilfe mit AEM as a Cloud Service?
 
-Erfahren Sie, wie Sie AEM as a Cloud Service und das AEM SDK von den Experten debuggen und beheben können!
+Erfahren Sie von den Fachkräften, wie Sie AEM as a Cloud Service und das AEM SDK debuggen und Fehlerbehebungen durchführen können!
 
 <table>
   <tr>
    <td>
       <a href="../../migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" target="_aem-experts-series-video">
-      <img alt="Fehlerbehebung AEM as a Cloud Service" src="./assets/troubleshooting.png"/>
+      <img alt="Durchführung von Fehlerbehebungen in AEM as a Cloud Service" src="./assets/troubleshooting.png"/>
       </a>
       <div>
          <a href="../../migration/moving-to-aem-as-a-cloud-service/troubleshooting.md" 
-         target="_aem-experts-series-video"><strong>Fehlerbehebung AEM as a Cloud Service</strong></a>
-         <br/><em>mit Kunwar Saluja, Cloud Architect</em>
+         target="_aem-experts-series-video"><strong>Durchführung von Fehlerbehebungen in AEM as a Cloud Service</strong></a>
+ <br/><em>mit Kunwar Saluja, Cloud Architect</em>
       </div>
       <p>
         <br/>
-        Erfahren Sie, wie Sie verschiedene Aspekte AEM as a Cloud Service beheben können, von der Fehlerbehebung beim AEM SDK und AEM as a Cloud Service bis hin zu Build- und Bereitstellungsfehlern in Cloud Manager.
+Erfahren Sie, wie Sie verschiedene Aspekte AEM as a Cloud Service beheben können, von der Fehlerbehebung beim AEM SDK und AEM as a Cloud Service bis hin zu Erstellungs- und Bereitstellungsfehlern in Cloud Manager.
       </p>
    </td>   
     <td></td>
