@@ -1,6 +1,6 @@
 ---
-title: Verwenden von CAPTCHAs mit AEM adaptiven Forms
-description: Hinzufügen und Verwenden eines CAPTCHA mit AEM adaptiven Forms.
+title: Verwendung von CAPTCHAs mit adaptiven Formularen von AEM
+description: Hinzufügen und Verwenden eines CAPTCHA mit adaptiven Formularen von AEM.
 feature: Adaptive Forms,Workflow
 version: 6.4,6.5
 topic: Development
@@ -9,19 +9,19 @@ level: Intermediate
 exl-id: 7e5dcc6e-fe56-49af-97e3-7dfaa9c8738f
 last-substantial-update: 2019-06-09T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '204'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# Verwenden von CAPTCHAs mit AEM adaptiven Forms{#using-captchas-with-aem-adaptive-forms}
+# Verwendung von CAPTCHAs mit adaptiven Formularen von AEM{#using-captchas-with-aem-adaptive-forms}
 
-Hinzufügen und Verwenden eines CAPTCHA mit AEM adaptiven Forms.
+Hinzufügen und Verwenden eines CAPTCHA mit adaptiven Formularen von AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/18336?quality=12&learn=on)
 
-*Dieses Video führt Sie durch den Prozess, ein CAPTCHA zu einem AEM adaptiven Formular hinzuzufügen, das sowohl den integrierten CAPTCHA-Dienst AEM als auch den reCAPTCHA-Dienst von Google verwendet.*
+*Dieses Video führt Sie durch den Prozess, ein CAPTCHA zu einem adaptiven Formular von AEM hinzuzufügen, das sowohl den integrierten AEM-CAPTCHA-Dienst als auch den reCAPTCHA-Dienst von Google verwendet.*
 
 >[!NOTE]
 >
@@ -31,27 +31,29 @@ Hinzufügen und Verwenden eines CAPTCHA mit AEM adaptiven Forms.
 >
 >**Gehen Sie wie folgt vor, um reCaptcha in der Veröffentlichungsinstanz zu konfigurieren**
 >
->Konfigurieren von reCaptach in der Autoreninstanz
+>Konfigurieren von reCaptcha in der Autoreninstanz:
 >
->Felix öffnen [Webkonsole](http://localhost:4502/system/console/bundles) in der Autoreninstanz
+>Öffnen Sie die Felix-[Web-Konsole](http://localhost:4502/system/console/bundles) in der Autoreninstanz.
 >
->Suchen Sie nach com.adobe.granite.crypto.file bundle .
+>Suchen Sie nach dem Bundle „com.adobe.granite.crypto.file“.
 >
->Notieren Sie die Bundle-ID. In meiner Instanz ist es 20
+>Notieren Sie sich die Bundle-ID. In meiner Instanz ist es 20.
 >
->Navigieren Sie zur Bundle-ID im Dateisystem in Ihrer Autoreninstanz.
+>Navigieren Sie zur Bundle-ID im Dateisystem in Ihrer AuthAutoreninstanz:
 >
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
-* HMAC- und Übergeordnete Dateien kopieren
+* Kopieren Sie die HMAC- und die Primärdateien.
 >
-Öffnen Sie die [Felix-Webkonsole](http://localhost:4502/system/console/bundles) in Ihrer Veröffentlichungsinstanz. Suchen Sie nach dem com.adobe.granite.crypto.file -Bundle. Beachten Sie die Bundle-ID
-Navigieren Sie zur Bundle-ID im Dateisystem Ihrer Veröffentlichungsinstanz.
+Öffnen Sie die [Felix-Web-Konsole](http://localhost:4502/system/console/bundles) in Ihrer Veröffentlichungsinstanz Suchen Sie nach dem Bundle „com.adobe.granite.crypto.file“. Notieren Sie sich die Bundle-ID.
+>
+Navigieren Sie zur Bundle-ID im Dateisystem Ihrer Veröffentlichungsinstanz:
+>
 * &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
-* Löschen Sie die vorhandenen HMAC- und Übergeordneten Dateien.
-* Fügen Sie die HMAC- und Übergeordneten Dateien ein, die aus der Autoreninstanz kopiert wurden.
+* Löschen Sie die vorhandenen HMAC- und Primärdateien.
+* Fügen Sie die aus der Authoring-Instanz kopierten HMAC- und Primärdateien ein.
 >
-AEM Veröffentlichungsserver neu starten
+Starten Sie Ihren AEM Publish-Server neu.
 
-## Unterstützende Materialien {#supporting-materials}
+## Hilfsmaterialien {#supporting-materials}
 
 * [Google reCAPTCHA](https://www.google.com/recaptcha)
