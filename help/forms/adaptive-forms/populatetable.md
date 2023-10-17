@@ -1,6 +1,6 @@
 ---
-title: Tabelle "Adaptives Formular"ausfüllen
-description: Füllen Sie die Tabelle "Adaptives Formular"mit den Ergebnissen aus Formulardatenmodell-Dienstaufrufen
+title: Füllen einer Tabelle eines adaptiven Formulars
+description: Füllen einer Tabelle eines adaptiven Formulars mit den Ergebnissen aus Formulardatenmodell-Dienstaufrufen
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -9,25 +9,26 @@ level: Intermediate
 exl-id: 6e4b901a-6534-4c34-b315-2f2620b74247
 last-substantial-update: 2019-06-09T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '240'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Füllen der Tabelle &quot;Adaptives Formular&quot;mit den Ergebnissen des Formulardatenmodell-Dienstaufrufs
+# Füllen einer Tabelle eines adaptiven Formulars mit den Ergebnissen aus einem Formulardatenmodell-Dienstaufruf
 
 [Das Live-Formular wird hier gehostet](https://forms.enablementadobe.com/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
-In diesem Artikel sehen wir uns das Ausfüllen der Tabelle für adaptive Formulare an, indem wir Daten aus dem Aufruf des Formulardatenmodelldienstes abrufen. Wir werden einen Tilgungsplan in einer Tabelle erstellen, in der jede regelmäßige Zahlung einer Hypothek im Zeitverlauf aufgeführt wird. Die Amortisierungsergebnisse werden von unserem Formulardatenmodell zurückgegeben. Der Dienst des Formulardatenmodells wird beim Klicken auf die Schaltfläche &quot;calculate&quot;aufgerufen, wie im Screenshot gezeigt. Die Eingabe- und Ausgabeparameter des Dienstaufrufs werden entsprechend zugeordnet, wie im Screenshot gezeigt. Die Ausgabe wird den Spalten von Zeile1 zugeordnet
+In diesem Artikel sehen wir uns das Füllen der Tabelle für adaptive Formulare an, indem wir Daten aus dem Aufruf des Formulardatenmodelldienstes abrufen. Wir werden einen Tilgungsplan in einer Tabelle erstellen, in der jede regelmäßige Zahlung für eine Hypothek im Laufe der Zeit aufgelistet wird. Die Tilgungsergebnisse werden von unserem Formulardatenmodell zurückgegeben. Der Dienst des Formulardatenmodells wird beim Klicken auf die Schaltfläche „calculate“ aufgerufen, wie im Screenshot zu sehen. Die Eingabe- und Ausgabeparameter des Dienstaufrufs werden entsprechend zugeordnet, wie im Screenshot zu sehen. Die Ausgabe wird den Spalten von Row1 zugeordnet
 ![clickevent](assets/amortization.PNG)
 
-Zeile1 ist so konfiguriert, dass sie entsprechend den vom Dienstaufruf zurückgegebenen Daten wächst. Beachten Sie die hier angegebenen Wiederholungseinstellungen. Der Wert -1 zeigt eine unbegrenzte Anzahl von Zeilen in der Tabelle an
-![Zeile1](assets/rowconfiguration.PNG)
+Row1 ist so konfiguriert, dass sie entsprechend den vom Dienstaufruf zurückgegebenen Daten wächst. Beachten Sie die hier angegebenen Wiederholungseinstellungen. Der Wert „-1“ bedeutet eine unbegrenzte Anzahl von Zeilen in der Tabelle
+![Row1](assets/rowconfiguration.PNG)
 
-## Bereitstellen auf Ihrem Server
+## Stellen Sie dies auf Ihrem Server bereit
 
 [Installieren Sie Tomcat wie hier angegeben](/help/forms/ic-print-channel-tutorial/set-up-tomcat.md)
-[Stellen Sie die in dieser ZIP-Datei enthaltene Datei SampleRest.war in Ihrem Tomcat bereit.](assets/sample-rest.zip)
-[Installieren der Assets ](assets/amortizationschedule.zip) Verwenden AEM Package Manager
-[Öffnen Sie das Formular &quot;Amortisierungszeitplan&quot;](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
-Geben Sie den entsprechenden Wert ein und klicken Sie auf Automatisierungsplanung berechnen , um das Formular auszufüllen.
+[Installieren Sie die Datei SampleRest.war, die in dieser Zip-Datei enthalten ist, in Ihrem Tomcat](assets/sample-rest.zip)
+[Installieren Sie die Assets](assets/amortizationschedule.zip) mithilfe des AEM Package Managers
+[Öffnen Sie das Tilgungsplan-Formular](http://localhost:4502/content/dam/formsanddocuments/amortization/jcr:content?wcmmode=disabled)
+Geben Sie den entsprechenden Wert ein und klicken Sie auf „Berechnen“
+Der Tilgungsplan sollte in Ihrem Formular ausgefüllt werden.
