@@ -12,13 +12,13 @@ thumbnail: KT-11135.jpg
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 74510a4b075d2dba9b3f27018ba05f15dcad9562
+exl-id: 75ffd84a-62b1-480f-b05f-3664f54bb171
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: ht
 source-wordcount: '146'
 ht-degree: 100%
 
 ---
-
 
 # Filtern mit jQuery und Handlebars
 
@@ -29,4 +29,4 @@ Dieser Code veranschaulicht, wie mit dem [AEM Headless-Client für JavaScript](h
 Dieser Code:
 
 + ist mit einem AEM-Veröffentlichungs-Service verbunden und erfordert keine Authentifizierung,
-+ verwendet die persistierten Abfragen von WKND: `wknd-shared/adventures-all` und `wknd-shared/adventures-by-activity`.
++ Verwendet die persistierten Abfragen von WKND: `wknd-shared/adventures-all` und `wknd-shared/adventures-by-activity`
