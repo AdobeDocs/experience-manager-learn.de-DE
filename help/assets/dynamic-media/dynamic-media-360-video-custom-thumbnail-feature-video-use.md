@@ -1,6 +1,6 @@
 ---
-title: Verwenden von Dynamic Media 360-Videos und benutzerdefinierten Videominiaturen mit AEM Assets
-description: Dynamic Media Viewer-Verbesserungen in AEM 6.5 umfassen die Unterstützung von 360-Grad-Video-Rendering, 360-Grad-Media-Viewern (video360Social und video360VR) und die Möglichkeit, benutzerdefinierte Videominiaturen auszuwählen.
+title: Verwendung von Dynamic Media 360-Videos und benutzerdefinierten Video-Miniaturansichten mit AEM Assets
+description: Die Dynamic Media Viewer-Verbesserungen in AEM 6.5 umfassen die Unterstützung von 360-Grad-Video-Rendern, 360-Grad-Media-Viewern (video360Social und video360VR) und die Möglichkeit, benutzerdefinierte Videominiaturen auszuwählen.
 feature: Video Profiles
 version: 6.4, 6.5
 topic: Content Management
@@ -8,35 +8,35 @@ role: User
 level: Beginner
 exl-id: 4ee0b68f-3897-4104-8615-9de8dbb8f327
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '394'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Verwenden von Dynamic Media 360-Videos und benutzerdefinierten Videominiaturen mit AEM Assets
+# Verwendung von Dynamic Media 360-Videos und benutzerdefinierten Video-Miniaturansichten mit AEM Assets
 
-Dynamic Media Viewer-Verbesserungen in AEM 6.5 umfassen die Unterstützung von 360-Grad-Video-Rendering, 360-Grad-Media-Viewern (video360Social und video360VR) und die Möglichkeit, benutzerdefinierte Videominiaturen auszuwählen.
+Die Dynamic Media Viewer-Verbesserungen in AEM 6.5 umfassen die Unterstützung von 360-Grad-Video-Rendern, 360-Grad-Media-Viewern (video360Social und video360VR) und die Möglichkeit, benutzerdefinierte Videominiaturen auszuwählen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26391?quality=12&learn=on)
 
 >[!NOTE]
 >
->Video setzt voraus, dass Ihre AEM-Instanz im Dynamic Media S7-Modus ausgeführt wird.  [Anweisungen zum Einrichten von AEM mit Dynamic Media finden Sie hier .](https://helpx.adobe.com/de/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). Wenn Sie ein Video hochladen, verarbeitet Dynamic Media dieses standardmäßig als 360-Grad-Video, wenn das Seitenverhältnis 2:1 beträgt. Das Verhältnis von Breite zu Höhe ist also 2:1.
+>Video setzt voraus, dass die AEM-Instanz im S7-Modus von Dynamic Media ausgeführt wird.  [Anweisungen zum Einrichten von AEM mit Dynamic Media finden Sie hier](https://helpx.adobe.com/de/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). Wenn Sie ein Video hochladen, verarbeitet Dynamic Media dieses standardmäßig als 360-Grad-Video, wenn das Seitenverhältnis 2:1 beträgt. Das Verhältnis von Breite zu Höhe ist also 2:1.
 
 >[!NOTE]
 >
->Dynamic Media 360 Media-Komponenten unterstützen nur 360 Videos.
+>Die Media-Komponenten von Dynamic Media 360 unterstützen nur 360-Videos.
 
-## Videos zu Dynamic Media 360
+## Dynamic Media 360-Videos
 
-360-Grad-Videos, auch kugelförmige Videos genannt, sind Videoaufnahmen, bei denen eine Ansicht in jeder Richtung gleichzeitig aufgezeichnet wird, die mit einer Omnidirektionalkamera oder Kamerasammlung aufgenommen wurden. Während der Wiedergabe auf einer flachen Anzeige hat der Benutzer die Kontrolle über die Anzeigerichtung, und die Wiedergabe auf Mobilgeräten nutzt in der Regel die integrierte Gyroskop-Steuerung.  Es ermöglicht Ihnen, über die Grenzen der Einzelfotografie hinaus zu erweitern. Marketingexperten können Benutzern mithilfe von 360 Videos ein ansprechendes Erlebnis bieten.  Fangen wir an! Das Kriterium des Seitenverhältnisses für Panoramabilder kann in der DMS7-Konfiguration des Unternehmens geändert werden, indem die doppelte Eigenschaft s7PanoramicAR unter /conf/global/settings/cloudconfigs/dmscene7/jcr:content angegeben wird.
+360-Grad-Videos, auch kugelförmige Videos genannt, sind Videoaufnahmen, bei denen eine Ansicht in jeder Richtung gleichzeitig aufgezeichnet wird, die mit einer Omnidirektionalkamera oder Kamerasammlung aufgenommen wurden. Bei der Wiedergabe auf einem Flachbildschirm kann die Benutzerin bzw. der Benutzer die Blickrichtung steuern, und die Wiedergabe auf mobilen Geräten nutzt in der Regel die integrierte Gyroskopsteuerung. Damit können Sie über die Grenzen der Einzelfotografie hinausgehen. Marketing-Fachkräfte können Benutzenden mithilfe von 360-Videos ein ansprechendes Erlebnis bieten. Fangen wir an. Das Kriterium des Seitenverhältnisses für Panoramabilder kann in der DMS7-Konfiguration des Unternehmens geändert werden, indem die doppelte Eigenschaft „s7PanoramicAR“ unter „/conf/global/settings/cloudconfigs/dmscene7/jcr:content“ angegeben wird.
 
-## Videos zu Dynamic Media 360
+## Dynamic Media 360-Videos
 
-Dynamic Media-Video unterstützt jetzt die Auswahl einer benutzerdefinierten Miniaturansicht für Ihr Video. Ein Benutzer kann entweder ein vorhandenes Asset aus AEM Assets auswählen oder einen Videobild als Miniaturansicht auswählen.
+Dynamic Media-Video unterstützt jetzt die Auswahl einer benutzerdefinierten Miniaturansicht für Ihr Video. Eine Benutzerin bzw. ein Benutzer kann entweder ein vorhandenes Asset aus AEM Assets auswählen oder ein Videobild als Miniaturansicht auswählen.
 
-## Dynamic 360 Media-Viewer
+## Dynamic Media 360-Viewer
 
 <table> 
  <tbody>
@@ -47,9 +47,9 @@ Dynamic Media-Video unterstützt jetzt die Auswahl einer benutzerdefinierten Min
    </tr>
    <tr>
       <td>Dynamic Media-Ausführungsmodus</td>
-      <td>Nur Dynamic Media Scene7-Modus</td>
-      <td>Nur Dynamic Media Scene7-Modus<br>
-         <br>
+      <td>Nur Scene7-Modus von Dynamic Media</td>
+      <td>Nur Scene7-Modus von Dynamic Media<br>
+ <br>
       </td>
    </tr>
    <tr>
@@ -59,11 +59,11 @@ Dynamic Media-Video unterstützt jetzt die Auswahl einer benutzerdefinierten Min
          <p> </p>
       </td>
       <td>
-         <p>Bietet ein virtuelles Reality-Erlebnis für ein Gerät, das Gyroskop unterstützt </p>
+         <p>Bietet ein Virtual Reality-Erlebnis für ein Gerät, das Gyroskop unterstützt </p>
       </td>
    </tr>
    <tr>
-      <td>Audio - Stereo-Modus</td>
+      <td>Audio – Stereo-Modus</td>
       <td>Nein</td>
       <td>Ja</td>
    </tr>
@@ -73,16 +73,16 @@ Dynamic Media-Video unterstützt jetzt die Auswahl einer benutzerdefinierten Min
       <td>Ja</td>
    </tr>
    <tr>
-      <td>Navigation in der Ansicht</td>
+      <td>Blickwinkel-Navigation</td>
       <td>
          <ul>
-            <li>Ziehen Sie die Maus (auf Desktop-Systemen).</li>
+            <li>Bewegen der Maus (auf Desktop-Systemen)</li>
             <li>Wischen (Touch-Geräte)</li>
          </ul>
       </td>
       <td>
          <ul>
-            <li>Die Optionen für Maus und Ziehen sind deaktiviert.</li>
+            <li>Maus- und Ziehoptionen sind deaktiviert</li>
             <li>Verwendet integriertes Gyroskop</li>
          </ul>
       </td>
