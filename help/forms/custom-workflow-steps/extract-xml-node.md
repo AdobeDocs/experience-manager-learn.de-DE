@@ -1,6 +1,6 @@
 ---
-title: Knoten aus gesendeter Daten-XML extrahieren
-description: Benutzerdefinierter Prozessschritt zum Hinzufügen eines Schreibdokuments, das sich unter dem Payload-Ordner befindet, zum Dateisystem
+title: Extrahieren eines Knotens aus der übermittelten Data.xml-Datei
+description: Benutzerdefinierter Prozessschritt zum Hinzufügen eines Schreibdokuments zum Dateisystem, das sich unter dem Payload-Ordner befindet
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -10,25 +10,25 @@ kt: kt-9860
 exl-id: 5282034f-275a-479d-aacb-fc5387da793d
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '179'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Knoten aus gesendeter Daten-XML extrahieren
+# Extrahieren eines Knotens aus der übermittelten Data.xml-Datei
 
-Dieser benutzerdefinierte Prozessschritt besteht darin, ein neues XML-Dokument zu erstellen, indem Knoten aus einem anderen XML-Dokument extrahiert werden. Sie müssen dies verwenden, wenn Sie die gesendeten Daten mit der XDP-Vorlage zusammenführen möchten, um PDF zu generieren. Wenn Sie beispielsweise ein adaptives Formular senden, befinden sich die Daten, die Sie mit der xdp-Vorlage zusammenführen müssen, im Datenelement. In diesem Fall müssen Sie ein weiteres XML-Dokument erstellen, indem Sie das entsprechende Datenelement extrahieren.
+Dieser benutzerdefinierte Prozessschritt besteht darin, ein neues XML-Dokument zu erstellen, indem Knoten aus einem anderen XML-Dokument extrahiert werden. Sie müssen so vorgehen, wenn Sie die übermittelten Daten mit der XDP-Vorlage in einer PDF-Datei zusammenführen möchten. Wenn Sie beispielsweise ein adaptives Formular übermitteln, befinden sich die Daten, die mit der XDP-Vorlage zusammenzuführen sind, im Datenelement. In diesem Fall müssen Sie ein weiteres XML-Dokument erstellen, indem Sie das entsprechende Datenelement extrahieren.
 
-Der folgende Screenshot zeigt die Argumente, die Sie an den benutzerdefinierten Prozessschritt übergeben müssen
+Der folgende Screenshot zeigt die Argumente, die Sie an den benutzerdefinierten Prozessschritt weitergeben müssen.
 ![Prozessschritt](assets/create-xml-process-step.png)
-Im Folgenden finden Sie die Parameter .
-* Data.xml - Die XML-Datei, aus der Sie den Knoten extrahieren möchten
-* datatomerge.xml - Die neue XML, die mit dem extrahierten Knoten erstellt wurde
-* /afData/afUnboundData/data - Der zu extrahierende Knoten
+Die Parameter lauten wie folgt:
+* Data.xml: Die XML-Datei, aus der der Knoten extrahiert werden soll
+* datatomerge.xml: Die neue XML-Datei, die mit dem extrahierten Knoten erstellt wurde
+* /afData/afUnboundData/data: Der zu extrahierende Knoten
 
 
-Der folgende Screenshot zeigt die Datei datamerge.xml, die im Payload-Ordner erstellt wird
-![create-xml](assets/create-xml.png)
+Der folgende Screenshot zeigt die im Payload-Ordner erstellte Datei „datamerge.xml“.
+![XML-Erstellung](assets/create-xml.png)
 
-[Benutzerdefiniertes Bundle kann von hier heruntergeladen werden](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
+[Das benutzerdefinierte Bundle kann von hier aus heruntergeladen werden:](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)
