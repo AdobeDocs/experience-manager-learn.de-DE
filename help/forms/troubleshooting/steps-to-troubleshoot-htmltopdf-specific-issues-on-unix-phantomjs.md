@@ -1,6 +1,6 @@
 ---
-title: Schritte zur Fehlerbehebung bei HtmltoPDF-spezifischen Problemen bei einem Unix-Setup (PhantomJS)
-description: Beheben Sie mithilfe von PhantomJS unter UNIX Setup HtmltoPDF-Probleme.
+title: Schritte zur Fehlerbehebung bei HtmltoPDF-spezifischen Problemen unter einem Unix-Setup (PhantomJS)
+description: Beheben Sie mithilfe von PhantomJS unter einem UNIX-Setup HtmltoPDF-Probleme.
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -10,13 +10,13 @@ topic: Development
 index: y
 exl-id: a739462e-3d7a-49a2-a740-5c5c9400ea08
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Schritte zur Fehlerbehebung bei HtmltoPDF-spezifischen Problemen bei einem Unix-Setup (PhantomJS)
+# Schritte zur Fehlerbehebung bei HtmltoPDF-spezifischen Problemen unter einem Unix-Setup (PhantomJS)
 
 *In diesem Video werden die Schritte zur Fehlerbehebung bei HtmltoPDF-spezifischen Problemen bei einem Unix-Setup (PhantomJS) erläutert.*
 
