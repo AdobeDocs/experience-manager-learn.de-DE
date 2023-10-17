@@ -10,20 +10,20 @@ topic: Development
 kt: 8843
 exl-id: 34840d28-ad47-4a69-b15d-cd9593626527
 source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '226'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # Installieren von IntelliJ
 
-Installieren [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/#section=windows). Sie können die Standardeinstellungen akzeptieren, während Sie während der Installation vorgeschlagen werden.
+Installieren der [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/#section=windows). Sie können die Standardeinstellungen akzeptieren, während Sie während der Installation vorgeschlagen werden.
 
 ## Importieren des AEM-Projekts
 
-* Starten von IntelliJ
-* Importieren Sie das AEM Projekt, das Sie im vorherigen Schritt erstellt haben. Nach dem Importieren des Projekts sollte der Bildschirm ungefähr so aussehen: ![aem-banking-app](assets/aem-banking-app.png). Sie arbeiten normalerweise mit den Unterprojekten &quot;core,ui.apps&quot;, &quot;ui.config&quot;und &quot;ui.content&quot;.
+* Launch von IntelliJ
+* Importieren Sie das AEM-Projekt, das Sie im vorherigen Schritt erstellt haben. Nach dem Importieren des Projekts sollte der Bildschirm etwa so aussehen: ![aem-banking-app](assets/aem-banking-app.png). Sie arbeiten normalerweise mit den Unterprojekten &quot;core,ui.apps&quot;, &quot;ui.config&quot; und &quot;ui.content&quot;.
 * Wenn das Maven- und Terminal-Fenster nicht angezeigt wird, gehen Sie zu Ansicht->Tools-Fenster und wählen Sie Maven und Terminal aus.
 
 ## Schriftartenmodul hinzufügen
@@ -32,8 +32,8 @@ Wenn Sie benutzerdefinierte Schriftarten in Ihrer PDF-Datei verwenden möchten, 
 
 * Erstellen Sie einen Ordner mit dem Namen **Schriften** in C:\CloudManager\aem-banking-application
 * Extrahieren Sie den Inhalt von [font.zip](assets/fonts.zip) in den neu erstellten Ordner für Schriftarten
-* Im Schriftartenmodul sind einige benutzerdefinierte Schriftarten enthalten. Sie können die benutzerdefinierten Schriftarten Ihres Unternehmens zum Ordner C:\CloudManager\aem-banking-application\fonts\src\main\resources folder of the fonts module hinzufügen.
-* Öffnen Sie die Datei C:\CloudManager\aem-banking-application\pom.xml .
+* Im Schriftmodul sind einige benutzerdefinierte Schriftarten enthalten. Sie können die benutzerdefinierten Schriftarten Ihres Unternehmens zum Ordner C:\CloudManager\aem-banking-application\fonts\src\main\resources des Schriftmoduls hinzufügen.
+* Öffnen Sie die Datei C:\CloudManager\aem-banking-application\pom.xml
 * Fügen Sie die folgende Zeile hinzu:  ```<module>fonts</module>``` im Modulabschnitt der pom.xml
 * Speichern Sie Ihre pom.xml
 * Aktualisieren Sie das Projekt aem-banking-application in IntelliJ
