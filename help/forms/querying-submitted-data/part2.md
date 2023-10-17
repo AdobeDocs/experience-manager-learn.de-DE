@@ -1,7 +1,7 @@
 ---
-title: AEM Forms mit JSON-Schema und -Daten[Teil 2]
+title: AEM Forms mit JSON-Schema und -Daten [Teil 2]
 seo-title: AEM Forms with JSON Schema and Data[Part2]
-description: Mehrteilige Anleitung, um Sie durch die Schritte zu führen, die zum Erstellen eines adaptiven Formulars mit JSON-Schema und zum Abfragen der gesendeten Daten erforderlich sind.
+description: Mehrteiliges Tutorial, um Sie durch die Schritte zu führen, die zum Erstellen eines adaptiven Formulars mit JSON-Schema und zum Abfragen der gesendeten Daten erforderlich sind.
 seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
 feature: Adaptive Forms
 topics: development
@@ -14,9 +14,9 @@ role: Developer
 level: Experienced
 exl-id: 29195c70-af12-4a22-8484-3c87a1e07378
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '341'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -25,15 +25,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Es wird empfohlen, MySQL 8 als Ihre Datenbank zu verwenden, da es den JSON-Datentyp unterstützt. Außerdem müssen Sie den entsprechenden Treiber für MySQL DB installieren. Ich habe den Treiber verwendet, der hier verfügbar ist https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.12
+>Es wird empfohlen, MySQL 8 als Ihre Datenbank zu verwenden, da es den JSON-Datentyp unterstützt. Außerdem müssen Sie den entsprechenden Treiber für MySQL DB installieren. Ich habe den Treiber verwendet, der hier verfügbar ist: https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.12
 
-Um die gesendeten Daten in der Datenbank zu speichern, schreiben wir ein Servlet, um die gebundenen Daten sowie den Namen und die Speicherung des Formulars zu extrahieren. Der vollständige Code zur Verarbeitung der Formularübermittlung und zum Speichern der afBoundData in der Datenbank ist unten angegeben.
+Um die gesendeten Daten in der Datenbank zu speichern, schreiben wir ein Servlet, um die gebundenen Daten sowie den Namen und den Speicher des Formulars zu extrahieren. Der vollständige Code zur Verarbeitung der Formularübermittlung und zum Speichern der afBoundData in der Datenbank ist unten angegeben.
 
-Wir haben eine benutzerdefinierte Übermittlung erstellt, um die Formularübermittlung zu handhaben. In der Datei &quot;post.POST.jsp&quot;dieses benutzerdefinierten Sendevorgangs senden wir die Anfrage an unser Servlet weiter.
+Wir haben eine benutzerdefinierte Übermittlung erstellt, um die Formularübermittlung zu handhaben. In der post.POST.jsp dieses benutzerdefinierten Übermittlungsvorgangs senden wir die Anfrage an unser Servlet weiter.
 
-Weiterführende Informationen zu benutzerdefinierten Übermittlungsaktionen finden Sie in diesem Abschnitt [Artikel](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
+Weiterführende Informationen zu benutzerdefinierten Übermittlungsaktionen finden Sie in diesem [Artikel](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html)
 
-com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,&quot;/bin/storepsubmission&quot;,null,null);
+com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,&quot;/bin/storeafsubmission&quot;,null,null);
 
 ```java
 package com.aemforms.json.core.servlets;
@@ -141,16 +141,16 @@ public class HandleAdaptiveFormSubmission extends SlingAllMethodsServlet {
 }
 ```
 
-![connectionpool](assets/connectionpooled.gif)
+![Connection Pool](assets/connectionpooled.gif)
 
-Gehen Sie wie folgt vor, um dieses System zu verwenden
+Gehen Sie wie folgt vor, um das in Ihrem System zu verwenden
 
-* [Herunterladen und Entpacken der ZIP-Datei](assets/aemformswithjson.zip)
-* Adaptives Formular mit JSON-Schema erstellen. Sie können das JSON-Schema verwenden, das als Teil dieses Artikel-Assets bereitgestellt wird. Stellen Sie sicher, dass die Sendeaktion des Formulars entsprechend konfiguriert ist. Die Übermittlungsaktion muss für &quot;CustomSubmitHelpx&quot;konfiguriert werden.
-* Erstellen Sie ein Schema in Ihrer MySQL-Instanz, indem Sie die Datei schema.sql mit dem Tool MySQL Workbench importieren. Die Datei schema.sql wird Ihnen auch im Rahmen dieses Tutorials zur Verfügung gestellt.
-* Konfigurieren der Apache Sling Connection Pooled DataSource über die Felix-Webkonsole
-* Vergewissern Sie sich, dass Sie Ihren Datenquellennamen &quot;aemformswithjson&quot;nennen. Dies ist der Name, der vom Beispiel-OSGi-Bundle verwendet wird, das Ihnen bereitgestellt wird
+* [Laden Sie die ZIP-Datei herunter und entpacken Sie sie ](assets/aemformswithjson.zip)
+* Erstellen Sie ein adaptives Formular mit JSON-Schema. Sie können das JSON-Schema verwenden, das als Teil dieses Artikel-Assets bereitgestellt wird. Stellen Sie sicher, dass die Übermittlungsaktion des Formulars entsprechend konfiguriert ist. Die Übermittlungsaktion muss gemäß „CustomSubmitHelpx“ konfiguriert werden.
+* Erstellen Sie ein Schema in Ihrer MySQL-Instanz, indem Sie die Datei schema.sql mit dem MySQL Workbench-Tool importieren. Die schema.sql-Datei wird Ihnen auch im Rahmen dieses Tutorials-Assets zur Verfügung gestellt.
+* Konfigurieren Sie die Apache Sling Connection Pooled DataSource über die Felix-Web-Konsole
+* Vergewissern Sie sich, dass Sie Ihren Datenquellennamen „aemformswithjson“ nennen. Dies ist der Name, der vom Beispiel-OSGi-Bundle verwendet wird, das Ihnen bereitgestellt wird.
 * Eigenschaften finden Sie in der Abbildung oben. Dies setzt voraus, dass Sie MySQL als Ihre Datenbank verwenden werden.
-* Stellen Sie die OSGi-Bundles bereit, die als Teil dieser Artikel-Assets bereitgestellt werden.
-* Vorschau des Formulars und Senden
-* Die JSON-Daten werden in der Datenbank gespeichert, die beim Import der Datei &quot;schema.sql&quot;erstellt wurde.
+* Stellen Sie das oder die OSGi-Bundle/-s bereit, das oder die als Teil dieser Artikel-Assets bereitgestellt wird/werden.
+* Sehen Sie sich eine Vorschau des Formulars an und senden Sie es.
+* Die JSON-Daten werden in der Datenbank gespeichert, die beim Import der „schema.sql“-Datei erstellt wurde.
