@@ -89,9 +89,9 @@ Vergegenwärtigen Sie sich die erforderlichen Tools und Anweisungen zum Einricht
 
    Jeder Ordner stellt ein einzelnes Maven-Modul dar. In diesem Tutorial arbeiten wir hauptsächlich mit dem Modul `ui.frontend`, d. h. der React-App. Weitere Informationen zu den einzelnen Modulen finden Sie in der [Dokumentation zum AEM-Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de).
 
-## Erstellen und Implementieren des Projekts
+## Erstellen und Bereitstellen des Projekts
 
-Kompilieren, erstellen und implementieren Sie anschließend mithilfe von Maven den Projekt-Code in einer lokalen Instanz von AEM.
+Kompilieren und erstellen Sie anschließend mithilfe von Maven den Projekt-Code in einer lokalen Instanz von AEM und stellen Sie ihn bereit.
 
 1. Stellen Sie sicher, dass eine AEM-Instanz lokal über Port **4502** ausgeführt wird.
 1. Navigieren Sie in der Befehlszeile zum Projektverzeichnis `aem-guides-wknd-spa.react`.
@@ -154,11 +154,11 @@ Kompilieren, erstellen und implementieren Sie anschließend mithilfe von Maven d
 
    ![Site-Konsole](./assets/create-project/open-home-page.png)
 
-3. Eine **Text**-Komponente wurde der Seite bereits hinzugefügt. Sie können diese Komponente wie jede andere Komponente in AEM bearbeiten.
+3. Eine **Textkomponente** wurde der Seite bereits hinzugefügt. Sie können diese Komponente wie jede andere Komponente in AEM bearbeiten.
 
    ![Aktualisieren der Textkomponente](./assets/create-project/update-text-component.gif)
 
-4. Fügen Sie der Seite eine zusätzliche **Text**-Komponente hinzu.
+4. Fügen Sie der Seite eine zusätzliche **Textkomponente** hinzu.
 
    Beachten Sie, dass das Authoring-Erlebnis dem herkömmlichen AEM Sites-Seitenerlebnis ähnelt. Derzeit ist eine begrenzte Anzahl von Komponenten verfügbar, die verwendet werden können. Im Laufe des Tutorials kommen weitere hinzu.
 
