@@ -1,5 +1,5 @@
 ---
-title: Zusammenfassen ausgewählter Newsletter zu einer Datei
+title: Zusammenführen ausgewählter Newsletter zu einer Datei
 description: Zusammenführen ausgewählter Newsletter mithilfe des Assembler-Dienstes
 feature: Adaptive Forms
 version: 6.5
@@ -9,20 +9,20 @@ level: Beginner
 last-substantial-update: 2023-01-01T00:00:00Z
 exl-id: 3a64315f-f699-4538-b999-626e7a998c05
 source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '173'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Zusammenfassen ausgewählter Newsletter in einem PDF-Dokument
+# Zusammenführen ausgewählter Newsletter zu einer PDF-Datei
 
-Die Auswahlen des Benutzers werden in einem ausgeblendeten Feld gespeichert. Der Wert dieses ausgeblendeten Felds wird an das Servlet übergeben, das die Auswahlen mithilfe von [Forms Assembler-Dienst](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html).
+Die Auswahl der Benutzerin oder des Benutzers wird in einem ausgeblendeten Feld gespeichert. Der Wert dieses ausgeblendeten Felds wird an das Servlet weitergegeben, das die Auswahl mithilfe des [Forms Assembler-Dienstes](https://developer.adobe.com/de/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/assembler/service/AssemblerService.html) zusammenführt.
 
 
-## Servlet zum Zusammenführen von PDF-Dateien
+## Servlet zum Zusammenstellen von PDF-Dateien
 
-Der folgende Code führt die Zusammenstellung der ausgewählten Newsletter durch. Der Code erstellt eine Zuordnung von Dokumenten aus der Auswahl des Benutzers. Aus dieser Zuordnung wird ein DDX erstellt und dieses DDX zusammen mit der Dokumentenzuordnung an die Aufrufmethode des Assembler-Dienstes übergeben, um das kombinierte Dokument zu erhalten. Das assemblierte PDF-Dokument wird im Repository gespeichert und sein Pfad wird an die aufrufende Anwendung zurückgegeben.
+Mit dem folgenden Code wird die Zusammenstellung der ausgewählten Newsletter durchgeführt und eine Zuordnung von Dokumenten aus der Auswahl der Benutzerin oder des Benutzers erstellt. Anhand dieser Zuordnung wird ein DDX-Dokument erstellt und dieses DDX-Dokument wird zusammen mit der Dokumentzuordnung an die Aufrufmethode des Assembler-Dienstes weitergegeben, um das zusammengeführte Dokument zu erhalten. Die zusammengestellte PDF-Datei wird im Repository gespeichert und ihr Pfad wird an die aufrufende Anwendung zurückgegeben.
 
 ```java
 protected void doPost(SlingHttpServletRequest request,SlingHttpServletResponse response)
@@ -80,7 +80,7 @@ protected void doPost(SlingHttpServletRequest request,SlingHttpServletResponse r
 
 ## Dienstprogrammfunktionen
 
-Die folgenden Dienstprogrammfunktionen wurden beim Zusammenstellen der Newsletter verwendet. Diese Dienstprogrammfunktionen erstellen DDX aus der Dokumentenzuordnung und konvertieren das org.w3c.dom.Document in das AEMFD-Dokumentobjekt.
+Die folgenden Dienstprogrammfunktionen wurden beim Zusammenstellen der Newsletter verwendet. Diese Dienstprogrammfunktionen erstellen eine DDX-Datei aus der Dokumentzuordnung und konvertieren „org.w3c.dom.Document“ in das AEMFD-Dokumentobjekt.
 
 
 ```java
