@@ -1,6 +1,6 @@
 ---
-title: Migration zur Cloud - Teil 1
-description: Darin und James besprechen die Migration zur AEM Cloud und stellen einige Techniken und Best Practices vor.
+title: Migration zur Cloud – Teil 1
+description: Darin und James besprechen die Migration zur AEM-Cloud und stellen einige Techniken und Best Practices vor.
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -10,23 +10,23 @@ recommendations: noDisplay, noCatalog
 thumbnail: 342133.jpeg
 exl-id: 817ea20d-d902-4497-83d3-5800ed6aaa8f
 source-git-commit: 678ecb99b1e63b9db6c9668adee774f33b2eefab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '100'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Migration zur Cloud - Teil 1
+# Migration zur Cloud – Teil 1
 
-Darin und James besprechen den Dispatcher in der AEM Cloud, einschließlich einiger Best Practices und Unterschiede zu AMS/On-Premise. Sie berühren auch die Migration in die Cloud.
+Darin und James besprechen den Dispatcher in der AEM-Cloud, einschließlich einiger Best Practices und Unterschiede zu AMS/On-Premise. Sie erwähnen auch die Migration zur Cloud.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342133?quality=12&learn=on)
 
-## Inhalt in diesem Video
+## Inhalt dieses Videos
 
-+ Bewertung Ihrer Instanz(en), die Sie migrieren möchten
-   + BPA - Best Practices-Analyzer
-   + CAM - Cloud-Beschleunigungs-Manager
++ Bewertung der Instanz(en), die Sie migrieren möchten
+   + BPA: Best Practices Analyzer
+   + CAM: Cloud Acceleration Manager
 + [repostats](https://github.com/chetanmeh/oak-console-scripts/tree/master/src/main/groovy/repostats)
 + [AEM-Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/)
-+ [Cloud Service-Migrationstools](https://github.com/adobe/aem-cloud-service-source-migration)
++ [Cloud Service-Migrations-Tools](https://github.com/adobe/aem-cloud-service-source-migration)
