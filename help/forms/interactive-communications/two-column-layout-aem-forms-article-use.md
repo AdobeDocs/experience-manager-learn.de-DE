@@ -1,7 +1,7 @@
 ---
-title: Erstellen von zwei Spaltenlayouts für Druckkanaldokumente
+title: Erstellen von zweispaltigen Layouts für Druckkanaldokumente
 seo-title: Creating two column layouts for print channel documents
-description: Erstellen von 2 Spaltenlayouts für das Dokument "Druckkanal"
+description: Erstellen von zweispaltigen Layouts für ein Druckkanaldokument
 seo-description: Create 2 column layouts for print channel document
 feature: Interactive Communication
 topics: development
@@ -15,22 +15,22 @@ level: Intermediate
 exl-id: 416e3401-ba9f-4da3-8b07-2d39f9128571
 last-substantial-update: 2019-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '223'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Zwei Spaltenlayouts im Dokument &quot;Druckkanal&quot;
+# Zweispaltige Layouts im Druckkanaldokument
 
-In diesem kurzen Artikel werden die Schritte erläutert, die zum Erstellen eines zweispaltigen Layouts im Druckkanal erforderlich sind. Der Anwendungsfall besteht darin, zwei Seitendokumente mit Seite 1 mit 2 Spaltenlayout und Seite 2 mit dem standardmäßigen Spaltenlayout 1 zu erstellen.
+In diesem kurzen Artikel werden die Schritte erläutert, die zum Erstellen eines zweispaltigen Layouts im Druckkanal erforderlich sind. Der Anwendungsfall besteht darin, zweiseitige Dokumente zu erstellen, bei denen Seite 1 ein zweispaltiges Layout und Seite 2 das standardmäßige einspaltige Layout besitzt.
 
 Im Folgenden werden die allgemeinen Schritte zum Erstellen von zweispaltigen Layouts mit AEM Forms Designer beschrieben.
 
-* Erstellen von zwei Inhaltsbereichen auf Seite 1 Übergeordnete Seite
-* Benennen Sie die beiden Inhaltsbereiche &quot;linke Spalte&quot;und &quot;rechte Spalte&quot;.
-* Zweite Übergeordnete Seite mit einem Inhaltsbereich erstellen (dies ist die Standardeinstellung)
-* Wählen Sie die Registerkarte &quot;Paginierung&quot;(unbenanntes Teilformular) (Seite 1) und (unbenanntes Teilformular) (Seite 2) und legen Sie die Eigenschaften wie in den Screenshots unten dargestellt fest.
+* Erstellen Sie zwei Inhaltsbereiche auf Seite 1, der Musterseite
+* Benennen Sie die beiden Inhaltsbereiche „linkespalte“ und „rechtespalte“.
+* Erstellen Sie eine zweite Musterseite mit einem Inhaltsbereich (dies ist die Standardeinstellung)
+* Wählen Sie die Registerkarte „Paginierung“ (unbenanntes Teilformular) (Seite 1) und (unbenanntes Teilformular) (Seite 2) und legen Sie die Eigenschaften wie in den Screenshots unten dargestellt fest.
 
 ![page1](assets/untitledsubform_paginationproperties.gif)
 
@@ -42,5 +42,5 @@ Anschließend können wir diesen Teilformularen oder Zielbereichen Dokumentfragm
 
 Um dies auf Ihrem lokalen Server zu testen, laden Sie die Assets herunter, die mit diesem Artikel in Verbindung stehen. Scrollen Sie nach unten zum Ende dieser Seite
 
-* [Laden Sie das Beispiel-Druckkanaldokument mit Package Manager herunter und installieren Sie es.](assets/print-channel-with-two-column-layout.zip)
-* [Vorschau des Druckkanaldokuments anzeigen](http://localhost:4502/content/dam/formsanddocuments/2columnlayout/jcr:content?channel=print&amp;mode=preview&amp;dataRef=service%3A%2F%2FFnDTestData&amp;wcmmode=disabled)
+* [Herunterladen und Installieren des Beispiel-Druckkanaldokuments mithilfe von Package Manager ](assets/print-channel-with-two-column-layout.zip)
+* [Vorschauanzeige des Druckkanaldokuments](http://localhost:4502/content/dam/formsanddocuments/2columnlayout/jcr:content?channel=print&amp;mode=preview&amp;dataRef=service%3A%2F%2FFnDTestData&amp;wcmmode=disabled)
