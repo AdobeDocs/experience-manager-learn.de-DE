@@ -1,6 +1,6 @@
 ---
 title: Erhöhen des UM-Sitzungs-Timeouts
-description: Schritte zum Erhöhen des Sitzungs-Timeouts für die Benutzerverwaltung für einen Benutzer
+description: Schritte zum Erhöhen des Sitzungs-Timeouts für die Benutzerverwaltung
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -10,9 +10,9 @@ feature: Operations
 index: y
 exl-id: edb97c88-2689-4508-82a6-256b344133c0
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '34'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
