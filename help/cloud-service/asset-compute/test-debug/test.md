@@ -1,6 +1,6 @@
 ---
-title: Asset compute Worker testen
-description: Das Asset compute-Projekt definiert ein Muster für das einfache Erstellen und Ausführen von Tests von Asset compute-Workern.
+title: Testen eines Asset Compute-Sekundärs
+description: Das Asset Compute-Projekt definiert ein Muster für das einfache Erstellen und Ausführen von Tests von Asset Compute-Sekundären.
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -14,21 +14,21 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 04992caf-b715-4701-94a8-6257e9bd300c
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '629'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Asset compute Worker testen
+# Testen eines Asset Compute-Sekundärs
 
-Das Asset compute-Projekt definiert ein Muster zum einfachen Erstellen und Ausführen von [Tests von Asset compute-Sekundären](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html).
+Das Asset Compute-Projekt definiert ein Muster für das einfache Erstellen und Ausführen von [Tests von Asset Compute-Sekundären](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html?lang=de).
 
-## Anatomie eines Worker-Tests
+## Anatomie eines Sekundär-Tests
 
-asset compute-Worker-Tests sind in Test-Suites unterteilt, und in jeder Test-Suite werden ein oder mehrere Testfälle durchgeführt, in denen eine Testbedingung bestätigt wird.
+Asset Compute-Sekundär-Tests sind in Test-Suites unterteilt, und in jeder Test-Suite werden ein oder mehrere Testfälle durchgeführt, in denen eine Testbedingung angegeben wird.
 
-Die Teststruktur in einem Asset compute-Projekt sieht wie folgt aus:
+Die Teststruktur in einem Asset Compute-Projekt sieht wie folgt aus:
 
 ```
 /actions/<worker-name>/index.js
@@ -44,10 +44,10 @@ Die Teststruktur in einem Asset compute-Projekt sieht wie folgt aus:
             ...
 ```
 
-Jeder Testcast kann die folgenden Dateien enthalten:
+Jeder Testentwurf kann die folgenden Dateien enthalten:
 
 + `file.<extension>`
-   + Zu testende Quelldatei (Erweiterung kann alles außer `.link` sein)
+   + Zu testende Quelldatei (Erweiterung kann alles außer `.link`)
    + Erforderlich
 + `rendition.<extension>`
    + Erwartete Ausgabedarstellung
@@ -56,21 +56,21 @@ Jeder Testcast kann die folgenden Dateien enthalten:
    + JSON-Anweisungen für einzelne Ausgabedarstellungen
    + Optional
 + `validate`
-   + Ein Skript, das erwartete und tatsächliche Ausgabedarstellungs-Dateipfade als Argumente abruft und Exitcode 0 zurückgeben muss, wenn das Ergebnis in Ordnung ist, oder einen Exitcode ungleich null, wenn die Überprüfung oder der Vergleich fehlgeschlagen ist.
-   + Optional, standardmäßig der Befehl `diff`
-   + Verwenden Sie ein Shell-Skript, das einen Docker-Ausführungsbefehl für die Verwendung verschiedener Validierungs-Tools umbricht
+   + Ein Skript, das erwartete und tatsächliche Dateipfade von Ausgabedarstellungen als Argumente abruft und Exitcode 0 zurückgeben muss, wenn das Ergebnis in Ordnung ist, oder einen Exitcode ungleich null, wenn die Überprüfung oder der Vergleich fehlgeschlagen ist.
+   + Optional, Standardwert ist der Befehl `diff`
+   + Verwenden Sie ein Shell-Skript, das einen Docker-Ausführungsbefehl für die Verwendung verschiedener Validierungs-Tools umschließt
 + `mock-<host-name>.json`
-   + JSON-formatierte HTTP-Antworten für [das Nachahmen externer Dienstaufrufe](https://www.mock-server.com/mock_server/creating_expectations.html).
-   + Optional, nur verwendet, wenn der Worker-Code eigene HTTP-Anforderungen sendet
+   + JSON-formatierte HTTP-Antworten für [Mocking-Aufrufe externer Dienste](https://www.mock-server.com/mock_server/creating_expectations.html).
+   + Optional, nur verwendet, wenn der Sekundär-Code eigene HTTP-Anfragen sendet
 
 ## Schreiben eines Testfalls
 
-In diesem Testfall wird die parametrisierte Eingabe (`params.json`) für die Eingabedatei (`file.jpg`) bestätigt, die die erwartete PNG-Wiedergabe (`rendition.png`) generiert.
+Dieser Testfall bestätigt, dass die parametrisierte Eingabe (`params.json`) für die Eingabedatei (`file.jpg`) die erwartete PNG-Wiedergabe (`rendition.png`) erzeugt.
 
-1. Löschen Sie zunächst den automatisch generierten Testfall `simple-worker` unter `/test/asset-compute/simple-worker`, da dieser ungültig ist, da unser Worker die Quelle nicht mehr einfach in die Ausgabedarstellung kopiert.
-1. Erstellen Sie unter `/test/asset-compute/worker/success-parameterized` einen neuen Ordner für Testfälle, um eine erfolgreiche Ausführung des Sekundärs zu testen, der eine PNG-Ausgabedarstellung generiert.
-1. Fügen Sie im Ordner `success-parameterized` die Eingabedatei [test ](./assets/test/success-parameterized/file.jpg) für diesen Testfall hinzu und nennen Sie sie `file.jpg`.
-1. Fügen Sie im Ordner `success-parameterized` eine neue Datei mit dem Namen `params.json` hinzu, die die Eingabeparameter des Sekundärs definiert:
+1. Löschen Sie zunächst den automatisch generierten `simple-worker`-Testfall unter `/test/asset-compute/simple-worker`, da dieser ungültig ist, da unser Sekundär nicht mehr einfach die Quelle in die Wiedergabeversion kopiert.
+1. Erstellen Sie einen neuen Testfallordner unter `/test/asset-compute/worker/success-parameterized`, um die erfolgreiche Ausführung des Sekundärs zu testen, der eine PNG-Wiedergabe erzeugt.
+1. Fügen Sie im Ordner `success-parameterized` die Test-[Eingabedatei](./assets/test/success-parameterized/file.jpg) für diesen Testfall hinzu und nennen Sie sie `file.jpg`.
+1. Fügen Sie im Ordner `success-parameterized` eine neue Datei mit dem Namen `params.json` hinzu, die die Eingabeparameter des Sekundär definiert:
 
    ```json
    { 
@@ -80,21 +80,21 @@ In diesem Testfall wird die parametrisierte Eingabe (`params.json`) für die Ein
    }
    ```
 
-   Hierbei handelt es sich um dieselben Schlüssel/Werte, die an die Asset compute-Profildefinition des [Entwicklungs-Tools](../develop/development-tool.md) übergeben werden, abzüglich des Schlüssels `worker`.
+   Dies sind dieselben Schlüssel/Werte, die in die [Definition des Asset Compute-Profils des Entwicklungstools](../develop/development-tool.md) eingegeben werden, abzüglich des `worker`-Schlüssels.
 
-1. Fügen Sie diesem Testfall die erwartete [Ausgabedarstellungsdatei](./assets/test/success-parameterized/rendition.png) hinzu und nennen Sie sie `rendition.png`. Diese Datei stellt die erwartete Ausgabe des Sekundärs für die angegebene Eingabe dar `file.jpg`.
-1. Führen Sie in der Befehlszeile die Tests für den Projektstamm durch, indem Sie `aio app test` ausführen.
-   + Stellen Sie sicher, dass [Docker Desktop](../set-up/development-environment.md#docker) und unterstützende Docker-Bilder installiert und gestartet sind.
-   + Beenden Sie alle laufenden Entwicklungstool-Instanzen.
+1. Fügen Sie die erwartete [Ausgabedarstellungsdatei](./assets/test/success-parameterized/rendition.png) zu diesem Testfall hinzu und nennen Sie sie `rendition.png`. Diese Datei stellt die erwartete Ausgabe des Sekundärs für die gegebene Eingabe `file.jpg` dar.
+1. Führen Sie in der Befehlszeile die Tests für den Projektstamm durch, indem Sie `aio app test` ausführen
+   + Stellen Sie sicher, dass [Docker Desktop](../set-up/development-environment.md#docker) und unterstützende Docker-Bilder installiert und gestartet sind
+   + Beenden Sie alle laufenden Entwicklungs-Tool-Instanzen
 
-![Test - Erfolg  ](./assets/test/success-parameterized/result.png)
+![Test – Erfolgreich](./assets/test/success-parameterized/result.png)
 
 ## Schreiben eines Testfalls zur Fehlerprüfung
 
-In diesem Testfall wird geprüft, ob der Worker den entsprechenden Fehler ausgibt, wenn der Parameter `contrast` auf einen ungültigen Wert gesetzt ist.
+Dieser Testfall prüft, ob der Sekundär den entsprechenden Fehler auslöst, wenn der Parameter `contrast` auf einen ungültigen Wert gesetzt wird.
 
-1. Erstellen Sie einen neuen Ordner für Testfälle unter `/test/asset-compute/worker/error-contrast` , um eine fehlerhafte Ausführung des Sekundärs aufgrund eines ungültigen `contrast`-Parameterwerts zu testen.
-1. Fügen Sie im Ordner `error-contrast` die Eingabedatei [test ](./assets/test/error-contrast/file.jpg) für diesen Testfall hinzu und nennen Sie sie `file.jpg`. Der Inhalt dieser Datei ist für diesen Test nicht wesentlich. Er muss nur vorhanden sein, um die Prüfung &quot;Beschädigte Quelle&quot;zu beenden, damit die `rendition.instructions`-Validierungsprüfungen, die dieser Testfall validiert, erreicht werden können.
+1. Erstellen Sie einen neuen Testfallordner unter `/test/asset-compute/worker/error-contrast`, um eine fehlerhafte Ausführung des Sekundärs aufgrund eines ungültigen `contrast`-Parameterwertes zu testen.
+1. Fügen Sie im Ordner `error-contrast` die Test-[Eingabedatei](./assets/test/error-contrast/file.jpg) für diesen Testfall hinzu und nennen Sie sie `file.jpg`. Der Inhalt dieser Datei ist für diesen Test unerheblich, sie muss nur vorhanden sein, um die Prüfung „Korrupte Quelle“ zu überstehen, damit die `rendition.instructions`-Gültigkeitsprüfungen erreicht werden können, die in diesem Testfall überprüft werden.
 1. Fügen Sie im Ordner `error-contrast` eine neue Datei mit dem Namen `params.json` hinzu, die die Eingabeparameter des Sekundärs mit dem Inhalt definiert:
 
    ```json
@@ -104,15 +104,15 @@ In diesem Testfall wird geprüft, ob der Worker den entsprechenden Fehler ausgib
    }
    ```
 
-   + Setzen Sie die Parameter `contrast` auf `10`, einen ungültigen Wert, da der Kontrast zwischen -1 und 1 liegen muss, um einen `RenditionInstructionsError`-Wert zu erzeugen.
-   + Stellen Sie sicher, dass der entsprechende Fehler in Tests ausgegeben wird, indem Sie die `errorReason`-Taste auf den &quot;Grund&quot;setzen, der dem erwarteten Fehler zugeordnet ist. Dieser ungültige Kontrastparameter gibt den benutzerdefinierten Fehler [a1/>, `RenditionInstructionsError` aus. Setzen Sie daher `errorReason` auf den Grund dieses Fehlers, oder`rendition_instructions_error`, um zu bestätigen, dass er ausgegeben wird.](../develop/worker.md#errors)
+   + Setzen Sie den Parameter `contrast` auf `10`, einen ungültigen Wert, da der Kontrast zwischen -1 und 1 liegen muss, um einen `RenditionInstructionsError` auszulösen.
+   + Stellen Sie sicher, dass der entsprechende Fehler in Tests ausgelöst wird, indem Sie den Schlüssel `errorReason` auf den mit dem erwarteten Fehler verbundenen „Grund“ setzen. Dieser ungültige Kontrast-Parameter löst den [benutzerdefinierten Fehler](../develop/worker.md#errors), `RenditionInstructionsError`, aus, daher setzen Sie `errorReason` auf den Grund dieses Fehlers, oder `rendition_instructions_error`, um zu bestätigen, dass er ausgelöst wird.
 
-1. Da während einer fehlerhaften Ausführung keine Ausgabedarstellung generiert werden sollte, ist keine `rendition.<extension>`-Datei erforderlich.
-1. Führen Sie die Test-Suite aus dem Stammverzeichnis des Projekts aus, indem Sie den Befehl `aio app test` ausführen.
-   + Stellen Sie sicher, dass [Docker Desktop](../set-up/development-environment.md#docker) und unterstützende Docker-Bilder installiert und gestartet sind.
-   + Beenden Sie alle laufenden Entwicklungstool-Instanzen.
+1. Da bei einer fehlerhaften Ausführung keine Ausgabedarstellung generiert werden sollte, ist keine `rendition.<extension>`-Datei erforderlich.
+1. Führen Sie die Test-Suite aus dem Stammverzeichnis des Projekts aus, indem Sie den folgenden Befehl ausführen `aio app test`
+   + Stellen Sie sicher, dass [Docker Desktop](../set-up/development-environment.md#docker) und unterstützende Docker-Bilder installiert und gestartet sind
+   + Beenden Sie alle laufenden Entwicklungs-Tool-Instanzen
 
-![Test - Fehlerkontrast](./assets/test/error-contrast/result.png)
+![Test – Fehlerkontrast](./assets/test/error-contrast/result.png)
 
 ## Testfälle bei GitHub
 
