@@ -1,6 +1,6 @@
 ---
-title: Tipps und Tricks zur Benutzeroberfläche
-description: Dokument zur Veranschaulichung nützlicher Tipps zur Benutzeroberfläche
+title: Einige nützliche Tipps und Tricks zur Benutzeroberfläche
+description: Dokument zur Veranschaulichung einiger nützlicher Tipps zur Benutzeroberfläche
 feature: Adaptive Forms
 type: Tutorial
 version: 6.5
@@ -10,19 +10,19 @@ level: Beginner
 kt: 9270
 last-substantial-update: 2019-06-09T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '167'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
-# Sichtbarkeit des Kennwortfelds ein/aus
+# Kennwortfeldsichtbarkeit umschalten
 
-Ein gängiger Anwendungsfall besteht darin, den Ausfüllern des Formulars die Anzeige des im Kennwortfeld eingegebenen Texts zu ermöglichen.
-Um diesen Anwendungsfall zu erreichen, habe ich das Augensymbol von [Font Awesome Library](https://fontawesome.com/). Die erforderliche CSS und die eye.svg sind in der Client-Bibliothek enthalten, die für diese Demonstration erstellt wurde.
+Ein häufiger Anwendungsfall ist die Möglichkeit, die Sichtbarkeit des in das Kennwortfeld eingegebenen Textes umzuschalten.
+Um diesen Anwendungsfall zu erreichen, habe ich das Augensymbol aus der [Font Awesome Library](https://fontawesome.com/) verwendet. Die erforderliche CSS und die eye.svg sind in der Client-Bibliothek enthalten, die für diese Demonstration erstellt wurde.
 
 
-## Beispielcode
+## Beispiel-Code
 
 Das adaptive Formular verfügt über ein Feld vom Typ PasswordBox namens **ssnField**.
 
@@ -48,7 +48,7 @@ $(document).ready(function() {
 });
 ```
 
-Die folgende CSS wurde verwendet, um die **Auge** Symbol im Kennwortfeld
+Die folgende CSS wurde verwendet, um das **Augensymbol** im Kennwortfeld zu positionieren
 
 ```javascript
 .svg-inline--fa {
@@ -63,12 +63,12 @@ Die folgende CSS wurde verwendet, um die **Auge** Symbol im Kennwortfeld
 }
 ```
 
-## Beispiel für Umschalter-Kennwort bereitstellen
+## Beispiel für die Implementierung der Kennwortumschaltung
 
-* Laden Sie die [Client-Bibliothek](assets/simple-ui-tips.zip)
-* Laden Sie die [Beispielformular](assets/simple-ui-tricks-form.zip)
+* Laden Sie die [Client-Bibliothek](assets/simple-ui-tips.zip) herunter
+* Laden Sie das [Beispielformular](assets/simple-ui-tricks-form.zip) herunter
 * Importieren Sie die Client-Bibliothek mit der [Package Manager-Benutzeroberfläche](http://localhost:4502/crx/packmgr/index.jsp)
-* Importieren Sie das Beispielformular mit dem [Forms und Dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [Nutzen Sie die Funktion zur Formularvorschau.](http://localhost:4502/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)
+* Importieren Sie das Beispielformular mithilfe der [Formulare und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [Zeigen Sie das Formular in der Vorschau an](http://localhost:4502/content/dam/formsanddocuments/simpleuitips/jcr:content?wcmmode=disabled)
 
 
