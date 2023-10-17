@@ -1,7 +1,7 @@
 ---
 title: Senden von E-Mails beim Übermitteln adaptiver Formulare
 seo-title: Sending Email on Adaptive Form Submission
-description: Bestätigungs-E-Mail bei Übermittlung des adaptiven Formulars mit der Komponente E-Mail senden senden senden senden
+description: Bestätigungs-E-Mail bei Übermittlung des adaptiven Formulars mit der Komponente „E-Mail senden“ senden
 seo-description: Send confirmation email on adaptive form submission using the send email component
 uuid: 6c9549ba-cb56-4d69-902c-45272a8fd17e
 feature: Adaptive Forms
@@ -16,19 +16,19 @@ level: Beginner
 exl-id: 19c5aeec-2893-4ada-b6df-b80c4be2468a
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '214'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # Senden von E-Mails beim Übermitteln adaptiver Formulare {#sending-email-on-adaptive-form-submission}
 
-Eine der häufigsten Aktionen besteht darin, eine Bestätigungs-E-Mail an den Absender zu senden, wenn das adaptive Formular erfolgreich übermittelt wurde. Dazu wählen wir die Übermittlungsaktion &quot;E-Mail senden&quot;.
+Eine übliche Aktion besteht darin, eine Bestätigungs-E-Mail an den Absender zu senden, wenn das adaptive Formular erfolgreich übermittelt wurde. Dazu wählen wir die Übermittlungsaktion „E-Mail senden“.
 
-Sie können eine E-Mail-Vorlage verwenden oder einfach den Text der E-Mail eingeben, wie in diesem Screenshot unten dargestellt.
+Sie können eine E-Mail-Vorlage verwenden oder einfach den Text der E-Mail eingeben, wie im Screenshot unten dargestellt.
 
-Beachten Sie die Syntax zum Einfügen von Formularfeldwerten in die E-Mail. Wir haben auch die Möglichkeit, Formularanhänge in die E-Mail einzuschließen, indem Sie das Kontrollkästchen &quot;Anlagen einschließen&quot;in den Konfigurationseigenschaften aktivieren.
+Beachten Sie die Syntax zum Einfügen von Formularfeldwerten in die E-Mail. Wir haben auch die Möglichkeit, Formularanhänge in die E-Mail einzuschließen, indem das Kontrollkästchen „Anhänge einschließen“ in den Konfigurationseigenschaften aktiviert wird.
 
 Wenn das adaptive Formular gesendet wird, erhält der Empfänger eine E-Mail.
 
@@ -36,7 +36,7 @@ Wenn das adaptive Formular gesendet wird, erhält der Empfänger eine E-Mail.
 
 ## Erforderliche Konfigurationen {#configurations-needed}
 
-Sie müssen den Day CQ Mail-Dienst konfigurieren. Dies kann konfiguriert werden, indem Sie Ihren Browser auf [Felix Configuration Manager](http://localhost:4502/system/console/configMgr)
+Sie müssen den Day CQ Mail-Dienst konfigurieren. Dies kann über Ihren Browser mit dem [Felix Configuration Manager](http://localhost:4502/system/console/configMgr) konfiguriert werden
 
 Der Screenshot zeigt die Konfigurationseigenschaften für den Adobe-E-Mail-Server.
 
@@ -44,7 +44,7 @@ Der Screenshot zeigt die Konfigurationseigenschaften für den Adobe-E-Mail-Serve
 
 Gehen Sie wie folgt vor, um dies auf Ihrem Server auszuführen:
 
-* [Importieren der Assets](assets/timeoffrequest.zip) mit diesem Artikel in AEM mithilfe des Paketmanagers verknüpft ist.
+* [Importieren der Assets](assets/timeoffrequest.zip), die mit diesem Artikel verknüpft sind, in AEM mithilfe des Package Managers.
 
 * Öffnen Sie die [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled).
 
