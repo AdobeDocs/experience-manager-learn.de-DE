@@ -13,9 +13,9 @@ thumbnail: 30177.jpg
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
 source-git-commit: 4c91ab68f6e31f0eb549689c7ecfd0ee009801d9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1226'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -167,7 +167,7 @@ Im Folgenden finden Sie die allgemeinen, im obigen Video ausgeführten Schritte.
    </div>
    ```
 
-1. Implementieren Sie die Änderungen mithilfe des Entwickler-Plug-ins oder durch Verwendung des Maven-Tools auf einer lokalen Instanz von AEM.
+1. Stellen Sie die Änderungen mithilfe des Entwickler-Plug-ins oder durch Verwendung des Maven-Tools auf einer lokalen Instanz von AEM bereit.
 
 ## Sling-Modelle {#sling-models}
 
@@ -244,7 +244,7 @@ Nehmen wir als Nächstes einige Aktualisierungen am `HelloWorldModel`-Sling-Mode
    }
    ```
 
-1. Erstellen und implementieren Sie das Paket über das `core`-Modul:
+1. Erstellen Sie das Paket und stellen Sie es über das `core`-Modul bereit:
 
    ```shell
    $ cd core
@@ -257,11 +257,11 @@ Nehmen wir als Nächstes einige Aktualisierungen am `HelloWorldModel`-Sling-Mode
 
 1. Aktualisieren Sie die Datei `helloworld.html` unter `aem-guides-wknd.ui.apps/src/main/content/jcr_root/apps/wknd/components/content/helloworld/helloworld.html`, um die neu erstellten Methoden des `HelloWorld`-Modells zu verwenden.
 
-   Die `HelloWorld` -Modell für diese Komponenteninstanz über die HTL-Direktive instanziiert wird: `data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HelloWorldModel"`, wobei die Instanz in der -Variablen gespeichert wird `model`.
+   Das `HelloWorld`-Modell wird für diese Komponenteninstanz über die HTL-Anweisung `data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HelloWorldModel"` instanziiert, wobei die Instanz in der Variablen `model` gespeichert wird.
 
-   Die `HelloWorld` Die Modellinstanz ist jetzt in der HTL über die `model` -Variable mithilfe der `HelloWord`. Diese Methoden-Aufrufe können beispielsweise eine verkürzte Methodensyntax verwenden: `${model.getTitle()}` kann in gekürzt werden `${model.title}`.
+   Die `HelloWorld`-Modellinstanz ist nun in HTL über die Variable `model` mithilfe von `HelloWord` verfügbar. Diese Methodenaufrufe können beispielsweise eine verkürzte Methodensyntax verwenden: `${model.getTitle()}` kann zu `${model.title}` gekürzt werden.
 
-   Ebenso werden alle HTL-Skripte mit [Globale Objekte](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html?lang=de) , auf die mit derselben Syntax wie auf die Sling-Modell-Objekte zugegriffen werden kann.
+   Ebenso werden in alle HTL-Skripte [globale Objekte](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html?lang=de) eingefügt, auf die mit derselben Syntax wie bei den Sling-Modellojekten zugegriffen werden kann.
 
    ```html
    <div class="cmp-helloworld" data-cmp-is="helloworld" 
@@ -278,7 +278,7 @@ Nehmen wir als Nächstes einige Aktualisierungen am `HelloWorldModel`-Sling-Mode
    </div>
    ```
 
-1. Implementieren Sie die Änderungen mithilfe des Eclipse Developer-Plug-ins oder unter Verwendung von Maven auf einer lokalen Instanz von AEM.
+1. Stellen Sie die Änderungen mithilfe des Eclipse Developer-Plug-ins oder unter Verwendung von Maven auf einer lokalen Instanz von AEM bereit.
 
 ## Client-seitige Bibliotheken {#client-side-libraries}
 
@@ -341,4 +341,4 @@ Herzlichen Glückwunsch! Sie kennen jetzt die Grundlagen der Komponentenentwickl
 
 Machen Sie sich im nächsten Kapitel [Seiten und Vorlagen](pages-templates.md) mit den Seiten und Vorlagen von Adobe Experience Manager vertraut. Erfahren Sie, wie Kernkomponenten in das Projekt integriert werden, und lernen Sie erweiterte Richtlinienkonfigurationen für bearbeitbare Vorlagen kennen, um eine gut strukturierte Artikelseitenvorlage zu erstellen.
 
-Sehen Sie sich den fertigen Code in [GitHub](https://github.com/adobe/aem-guides-wknd) an oder überprüfen und implementieren Sie den Code lokal in der Git-Verzweigung `tutorial/component-basics-solution`.
+Sehen Sie sich den fertigen Code in [GitHub](https://github.com/adobe/aem-guides-wknd) an oder überprüfen Sie den Code lokal und stellen Sie ihn in der Git-Verzweigung bereit`tutorial/component-basics-solution`.
