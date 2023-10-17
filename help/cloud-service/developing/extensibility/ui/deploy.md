@@ -1,6 +1,6 @@
 ---
-title: Bereitstellen einer AEM UI-Erweiterung
-description: Erfahren Sie, wie Sie eine AEM UI-Erweiterung bereitstellen.
+title: Bereitstellen einer AEM-Benutzeroberflächen-Erweiterung
+description: Erfahren Sie, wie Sie eine AEM-Benutzeroberflächen-Erweiterung bereitstellen.
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -11,137 +11,137 @@ kt: 11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '777'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # Bereitstellen einer Erweiterung
 
-Für die Verwendung in AEM as a Cloud Service Umgebungen muss die App Builder-Erweiterung bereitgestellt und genehmigt werden.
+Für die Verwendung in AEM as a Cloud Service-Umgebungen muss die App-Entwicklungs-Erweiterungs-App bereitgestellt und genehmigt werden.
 
-Bei der Bereitstellung von App Builder-Apps für Erweiterungen sind einige Aspekte zu beachten:
+Bei der Bereitstellung von App-Entwicklungs-Erweiterungs-Apps sind einige Aspekte zu beachten:
 
 + Erweiterungen werden im Adobe Developer Console-Projektarbeitsbereich bereitgestellt. Die standardmäßigen Arbeitsbereiche sind:
-   + __Produktion__ Workspace enthält Erweiterungsbereitstellungen, die in allen AEM as a Cloud Service verfügbar sind.
-   + __Staging__ Workspace fungiert als Entwicklerarbeitsbereich. Erweiterungen, die im Staging-Arbeitsbereich bereitgestellt werden, sind in AEM as a Cloud Service nicht verfügbar.
-Arbeitsbereiche der Adobe Developer-Konsole weisen keine direkte Korrelation mit AEM as a Cloud Service Umgebungstypen auf.
-+ Eine im Produktionsarbeitsbereich bereitgestellte Erweiterung wird in allen AEM as a Cloud Service Umgebungen in der Adobe Org angezeigt, in denen die Erweiterung vorhanden ist.
-Eine Erweiterung kann nicht auf die Umgebungen beschränkt sein, in denen sie registriert ist, indem sie [Bedingungslogik, die den AEM as a Cloud Service Hostnamen überprüft](https://developer.adobe.com/uix/docs/guides/publication/#enabling-extension-only-on-specific-aem-environments).
-+ Auf AEM as a Cloud Service können mehrere Erweiterungen verwendet werden. Adobe empfiehlt, dass jede App Builder-Erweiterung verwendet wird, um ein einzelnes Geschäftsziel zu lösen. Eine App Builder-App mit einer Erweiterung kann jedoch mehrere Erweiterungspunkte implementieren, die ein gemeinsames Geschäftsziel unterstützen.
+   + Der Arbeitsbereich __Produktion__ enthält Erweiterungsbereitstellungen, die immer in AEM as a Cloud Service verfügbar sind.
+   + Der Arbeitsbereich __Staging__ dient als Entwicklerarbeitsbereich. Erweiterungen, die im Arbeitsbereich „Staging“ bereitgestellt werden, sind in AEM as a Cloud Service nicht verfügbar.
+Adobe Developer Console-Arbeitsbereiche weisen keine direkte Verbindung zu AEM as a Cloud Service-Umgebungstypen auf.
++ Eine im Arbeitsbereich „Produktion“ bereitgestellte Erweiterung wird in allen AEM as a Cloud Service-Umgebungen in der Adobe-Organisation angezeigt, in der die Erweiterung vorhanden ist.
+Die Beschränkung einer Erweiterung auf die Umgebungen, in denen sie registriert ist, kann aufgehoben werden, indem man eine [bedingte Logik hinzufügt, die den Host-Namen von AEM as a Cloud Service überprüft](https://developer.adobe.com/uix/docs/guides/publication/#enabling-extension-only-on-specific-aem-environments).
++ In AEM as a Cloud Service können mehrere Erweiterungen angewendet werden. Adobe empfiehlt, dass jede App-Entwicklungs-Erweiterungs-App verwendet wird, um ein einzelnes Geschäftsziel zu lösen. Eine einzige App-Entwicklungs-Erweiterungs-App kann jedoch mehrere Erweiterungspunkte implementieren, die ein gemeinsames Geschäftsziel unterstützen.
 
-## Erste Bereitstellung
+## Erstbereitstellung
 
-Damit eine Erweiterung in AEM as a Cloud Service Umgebungen verfügbar ist, muss sie in der Adobe Developer Console bereitgestellt werden.
+Damit eine Erweiterung in AEM as a Cloud Service-Umgebungen verfügbar ist, muss sie in Adobe Developer Console bereitgestellt werden.
 
-Der Implementierungsprozess gliedert sich in zwei logische Schritte:
+Der Bereitstellungsprozess gliedert sich in zwei logische Schritte:
 
-1. Bereitstellung der App Builder-Erweiterung-App für die Adobe Developer Console durch einen Entwickler.
-1. Genehmigung der Erweiterung durch einen Implementierungsmanager oder Business Owner.
+1. Bereitstellung der App-Entwicklungs-Erweiterungs-App für Adobe Developer Console durch eine Entwicklungsperson
+1. Genehmigung der Erweiterung durch Bereitstellungs-Managerin bzw. -Manager oder Geschäftsinhaberin bzw. -inhaber.
 
 ### Bereitstellen der Erweiterung
 
-Stellen Sie die Erweiterung im Produktionsarbeitsbereich bereit. Erweiterungen, die im Produktionsarbeitsbereich bereitgestellt werden, werden automatisch allen AEM as a Cloud Service Autorendiensten in der Adobe Org hinzugefügt, in der die Erweiterung bereitgestellt wird.
+Stellen Sie die Erweiterung im Arbeitsbereich „Produktion“ bereit. Erweiterungen, die im Arbeitsbereich „Produktion“ bereitgestellt werden, werden automatisch allen Author-Services von AEM as a Cloud Service in der Adobe-Organisation hinzugefügt, in der die Erweiterung bereitgestellt wird.
 
-1. Öffnen Sie eine Befehlszeile im Stammverzeichnis der aktualisierten App Builder-App der Erweiterung.
-1. Stellen Sie sicher, dass der Produktionsarbeitsbereich aktiv ist.
+1. Öffnen Sie eine Befehlszeile für das Stammverzeichnis der aktualisierten App-Entwicklungs-Erweiterungs-App.
+1. Stellen Sie sicher, dass der Arbeitsbereich „Produktion“ aktiv ist.
 
    ```shell
    $ aio app use -w Production
    ```
 
-   Zusammenführen aller Änderungen zu `.env` und `.aio`.
+   Führen Sie alle Änderungen in `.env` und `.aio` zusammen.
 
-1. Stellen Sie die aktualisierte App Builder-App der Erweiterung bereit.
+1. Stellen Sie die aktualisierte App-Entwicklungs-Erweiterungs-App bereit.
 
    ```shell
    $ aio app deploy
    ```
 
-#### Genehmigung der Bereitstellung anfordern
+#### Anfrage zum Genehmigen der Bereitstellung
 
-![Erweiterung zur Genehmigung einreichen](./assets/deploy/submit-for-approval.png){align="center"}
+![Einreichen der Erweiterung zur Genehmigung](./assets/deploy/submit-for-approval.png){align="center"}
 
-1. Anmelden bei [Adobe Developer-Konsole](https://developer.adobe.com)
-1. Auswählen __Konsole__
-1. Navigieren Sie zu __Projekte__
-1. Wählen Sie das Projekt aus, das mit der Erweiterung verknüpft ist
-1. Wählen Sie die __Produktion__ Arbeitsbereich
-1. Auswählen __Zur Genehmigung einreichen__
-1. Füllen Sie das Formular aus und senden Sie es ab und aktualisieren Sie die Felder nach Bedarf.
+1. Melden Sie sich bei [Adobe Developer Console](https://developer.adobe.com) an.
+1. Wählen Sie __Konsole__ aus.
+1. Navigieren Sie zu __Projekte__.
+1. Wählen Sie das Projekt aus, das mit der Erweiterung verknüpft ist.
+1. Wählen Sie den Arbeitsbereich __Produktion__ aus.
+1. Wählen Sie __Zur Genehmigung einreichen__ aus.
+1. Füllen Sie das Formular aus, übermitteln Sie es und aktualisieren Sie die Felder nach Bedarf.
 
-### Freigabe
+### Genehmigung der Bereitstellung
 
 ![Genehmigung der Erweiterung](./assets/deploy/adobe-exchange.png){align="center"}
 
-1. Anmelden bei [Adobe Exchange](https://exchange.adobe.com/)
-1. Navigieren Sie zu __Verwalten__ > __Apps steht noch aus Überprüfung__
-1. __Überprüfen__ die App Builder-App der Erweiterung
-1. Wenn die Erweiterungsänderungen akzeptabel sind __Accept__ die Überprüfung. Dadurch wird die Erweiterung sofort in alle AEM as a Cloud Service Autorendienste in der Adobe-Organisation eingefügt.
+1. Melden Sie sich bei [Adobe Exchange](https://exchange.adobe.com/) an.
+1. Navigieren Sie zu __Verwalten__ > __Apps mit ausstehender Überprüfung__.
+1. __Überprüfen__ Sie die App-Entwicklungs-Erweiterungs-App.
+1. Wenn die Erweiterungsänderungen akzeptabel sind, __akzeptieren__ Sie die Überprüfung. Dadurch wird die Erweiterung direkt in alle Author-Services von AEM as a Cloud Service in der Adobe-Organisation eingefügt.
 
-Sobald die Erweiterungsanforderung genehmigt wurde, wird die Erweiterung sofort in den AEM as a Cloud Service Autorendiensten aktiviert.
+Sobald die Erweiterungsanfrage genehmigt wurde, wird die Erweiterung sofort in den Author-Services von AEM as a Cloud Service aktiviert.
 
 ## Aktualisieren einer Erweiterung
 
-Das Aktualisieren und Erweitern der App Builder-App folgt demselben Prozess wie das [Erstbereitstellung](#initial-deployment)mit der Abweichung, dass die vorhandene Erweiterungsbereitstellung zuerst widerrufen werden muss.
+Die Aktualisierung einer App-Entwicklungs-Erweiterungs-App folgt dem gleichen Prozess wie die [Erstbereitstellung](#initial-deployment), außer dass die vorhandene Erweiterungsbereitstellung zuerst widerrufen werden muss.
 
-### Die Erweiterung sperren
+### Widerrufen der Erweiterung
 
-Um eine neue Version einer Erweiterung bereitzustellen, muss sie zunächst gesperrt (oder entfernt) werden. Die Erweiterung ist zwar &quot;Revoziert&quot;, aber nicht in AEM Konsolen verfügbar.
+Um eine neue Version einer Erweiterung bereitzustellen, muss sie zunächst widerrufen (oder entfernt) werden. Eine widerrufene Erweiterung steht in AEM-Konsolen nicht mehr zur Verfügung.
 
-1. Anmelden bei [Adobe Exchange](https://exchange.adobe.com/)
-1. Navigieren Sie zu __Verwalten__ > __App Builder-Apps__
-1. __Sperren__ Zu aktualisierende Erweiterung
+1. Melden Sie sich bei [Adobe Exchange](https://exchange.adobe.com/) an.
+1. Navigieren Sie zu __Verwalten__ > __App-Entwicklungs-Apps__.
+1. __Widerrufen__ Sie die zu aktualisierende Erweiterung.
 
 ### Bereitstellen der Erweiterung
 
-Stellen Sie die Erweiterung im Produktionsarbeitsbereich bereit. Erweiterungen, die im Produktionsarbeitsbereich bereitgestellt werden, werden automatisch allen AEM as a Cloud Service Autorendiensten in der Adobe Org hinzugefügt, in der die Erweiterung bereitgestellt wird.
+Stellen Sie die Erweiterung im Arbeitsbereich „Produktion“ bereit. Erweiterungen, die im Arbeitsbereich „Produktion“ bereitgestellt werden, werden automatisch allen Author-Services von AEM as a Cloud Service in der Adobe-Organisation hinzugefügt, in der die Erweiterung bereitgestellt wird.
 
-1. Öffnen Sie eine Befehlszeile im Stammverzeichnis der aktualisierten App Builder-App der Erweiterung.
-1. Stellen Sie sicher, dass der Produktionsarbeitsbereich aktiv ist.
+1. Öffnen Sie eine Befehlszeile für das Stammverzeichnis der aktualisierten App-Entwicklungs-Erweiterungs-App.
+1. Stellen Sie sicher, dass der Arbeitsbereich „Produktion“ aktiv ist.
 
    ```shell
    $ aio app use -w Production
    ```
 
-   Zusammenführen aller Änderungen zu `.env` und `.aio`.
+   Führen Sie alle Änderungen in `.env` und `.aio` zusammen.
 
-1. Stellen Sie die aktualisierte App Builder-App der Erweiterung bereit.
+1. Stellen Sie die aktualisierte App-Entwicklungs-Erweiterungs-App bereit.
 
    ```shell
    $ aio app deploy
    ```
 
-#### Genehmigung der Bereitstellung anfordern
+#### Anfrage zum Genehmigen der Bereitstellung
 
-![Erweiterung zur Genehmigung einreichen](./assets/deploy/submit-for-approval.png){align="center"}
+![Einreichen der Erweiterung zur Genehmigung](./assets/deploy/submit-for-approval.png){align="center"}
 
-1. Anmelden bei [Adobe Developer-Konsole](https://developer.adobe.com)
-1. Auswählen __Konsole__
-1. Navigieren Sie zu __Projekte__
-1. Wählen Sie das Projekt aus, das mit der Erweiterung verknüpft ist
-1. Wählen Sie die __Produktion__ Arbeitsbereich
-1. Auswählen __Zur Genehmigung einreichen__
-1. Füllen Sie das Formular aus und senden Sie es ab und aktualisieren Sie die Felder nach Bedarf.
+1. Melden Sie sich bei [Adobe Developer Console](https://developer.adobe.com) an.
+1. Wählen Sie __Konsole__ aus.
+1. Navigieren Sie zu __Projekte__.
+1. Wählen Sie das Projekt aus, das mit der Erweiterung verknüpft ist.
+1. Wählen Sie den Arbeitsbereich __Produktion__ aus.
+1. Wählen Sie __Zur Genehmigung einreichen__ aus.
+1. Füllen Sie das Formular aus, übermitteln Sie es und aktualisieren Sie die Felder nach Bedarf.
 
-#### Genehmigen der Bereitstellungsanforderung
+#### Genehmigen der Bereitstellungsanfrage
 
 ![Genehmigung der Erweiterung](./assets/deploy/adobe-exchange.png){align="center"}
 
-1. Anmelden bei [Adobe Exchange](https://exchange.adobe.com/)
-1. Navigieren Sie zu __Verwalten__ > __Apps steht noch aus Überprüfung__
-1. __Überprüfen__ die App Builder-App der Erweiterung
-1. Wenn die Erweiterungsänderungen akzeptabel sind __Accept__ die Überprüfung. Dadurch wird die Erweiterung sofort in alle AEM as a Cloud Service Autorendienste in der Adobe-Organisation eingefügt.
+1. Melden Sie sich bei [Adobe Exchange](https://exchange.adobe.com/) an.
+1. Navigieren Sie zu __Verwalten__ > __Apps mit ausstehender Überprüfung__.
+1. __Überprüfen__ Sie die App-Entwicklungs-Erweiterungs-App.
+1. Wenn die Erweiterungsänderungen akzeptabel sind, __akzeptieren__ Sie die Überprüfung. Dadurch wird die Erweiterung direkt in alle Author-Services von AEM as a Cloud Service in der Adobe-Organisation eingefügt.
 
-Sobald die Erweiterungsanforderung genehmigt wurde, wird die Erweiterung sofort in den AEM as a Cloud Service Autorendiensten aktiviert.
+Sobald die Erweiterungsanfrage genehmigt wurde, wird die Erweiterung sofort in den Author-Services von AEM as a Cloud Service aktiviert.
 
 ## Entfernen einer Erweiterung
 
 ![Entfernen einer Erweiterung](./assets/deploy/revoke.png)
 
-Um eine Erweiterung zu entfernen, sperren (oder entfernen) Sie sie aus Adobe Exchange. Wenn die Erweiterung gesperrt wird, wird sie aus allen AEM as a Cloud Service Autorendiensten entfernt.
+Um eine Erweiterung zu entfernen, müssen Sie sie für Adobe Exchange widerrufen (oder daraus entfernen). Eine widerrufene Erweiterung wird aus allen Author-Services von AEM as a Cloud Service entfernt.
 
-1. Anmelden bei [Adobe Exchange](https://exchange.adobe.com/)
-1. Navigieren Sie zu __Verwalten__ > __App Builder-Apps__
-1. __Sperren__ Die zu entfernende Erweiterung
+1. Melden Sie sich bei [Adobe Exchange](https://exchange.adobe.com/) an.
+1. Navigieren Sie zu __Verwalten__ > __App-Entwicklungs-Apps__.
+1. __Widerrufen__ Sie die zu entfernende Erweiterung.
