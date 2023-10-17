@@ -1,6 +1,6 @@
 ---
 title: Integrieren von Workfront und AEM Assets mithilfe des erweiterten Connectors
-description: Erfahren Sie mehr über die Grundlagen der erweiterten Connector-Integration von Adobe Workfront und Experience Manager Assets.
+description: Erfahren Sie mehr über die Grundlagen des erweiterten Connectors für Adobe Workfront und Experience Manager Assets.
 version: Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
@@ -13,9 +13,9 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '271'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 72%
 
 ![AEM-Expertenserie](./assets/banner.png)
 
-Nehmen Sie an dieser vierteiligen Videoserie teil, in der Workfront- und Experience Manager Assets-Experten der Adobe vorgeführt und diskutiert werden, wie gut und warum Workfront und AEM Assets mithilfe des erweiterten Connectors integriert werden können.
+In dieser vierteiligen Videoserie demonstrieren und diskutieren Adobe-Fachleute für Workfront und Experience Manager Assets die Vorzüge des erweiterten Connectors von Workfront für Experience Manager.
 
 In dieser vierteiligen Expertenreihe diskutieren verschiedene Adobe-Fachleute aus unterschiedlichen Bereichen wie Produkt-Management, Beratung und Partnerunternehmen folgende Themen:
 
