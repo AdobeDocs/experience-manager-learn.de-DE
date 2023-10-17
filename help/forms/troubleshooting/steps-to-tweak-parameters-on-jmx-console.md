@@ -1,6 +1,6 @@
 ---
-title: Schritte zum Anpassen von Parametern in der JMX-Konsole
-description: JMX-Konsolenparameter konfigurieren
+title: Schritte zum Anpassen von Parametern auf der JMX-Konsole
+description: Konfiguration von JMX-Konsolenparametern
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -10,15 +10,15 @@ topic: Development
 index: y
 exl-id: f7a815f0-2c71-452f-baf8-da967b5ed033
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '30'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Schritte zum Anpassen von Parametern in der JMX-Konsole
+# Schritte zum Anpassen von Parametern auf der JMX-Konsole
 
-*In diesem Video werden die Schritte zum Anpassen von Parametern in der JMX-Konsole erläutert.*
+*In diesem Video werden die Schritte zum Anpassen von Parametern auf der JMX-Konsole erläutert.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335554?quality=12&learn=on)
