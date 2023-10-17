@@ -1,6 +1,6 @@
 ---
-title: Konvertieren Sie PDF in PDF/A.
-description: Erstellen und validieren Sie PDF/A-Dateien in Forms CA mithilfe der HTTP-Endpunkte.
+title: Konvertieren von PDF in PDF/A
+description: Erstellen und Validieren von PDF/A-Dateien in Forms CA mithilfe der HTTP-Endpunkte
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,19 +10,19 @@ topic: Development
 kt: 10105
 exl-id: a4955104-8a87-4add-85c7-c3e3395f5f1a
 source-git-commit: db99787c48e49a9861de893e6cb7fbb7b31807b8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '102'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# Erstellen und Überprüfen von PDF/A-Dokumenten
+# Erstellen und Validieren von PDF/A-Dokumenten
 
-PDF/A ist eine ISO-standardisierte Version des Portable Document Format (PDF), das auf die Archivierung und Langzeitarchivierung elektronischer Dokumente spezialisiert ist. PDF/A unterscheidet sich vom PDF, indem es Funktionen verbietet, die nicht für die langfristige Archivierung geeignet sind, wie z. B. Schriftverknüpfung (im Gegensatz zur Schrifteinbettung) und Verschlüsselung.
+PDF/A ist eine ISO-standardisierte Version des Portable Document Format (PDF), das auf die (Langzeit-)Archivierung elektronischer Dokumente spezialisiert ist. PDF/A unterscheidet sich vom PDF, indem es Funktionen verbietet, die nicht für die langfristige Archivierung geeignet sind, wie z. B. Schriftverknüpfung (im Gegensatz zur Schrifteinbettung) und Verschlüsselung.
 
-## Zu PDF/A konvertieren
+## In PDF/A konvertieren
 
-Der folgende Code wurde verwendet, um PDF in PDF/A zu konvertieren
+Der folgende Code wurde verwendet, um PDF in PDF/A zu konvertieren:
 
 ```java
 package com.aemformscs.documentservices;
@@ -92,9 +92,9 @@ public class PDFAUtilities {
 }
 ```
 
-## PDF/A überprüfen
+## Validieren von PDF/A
 
-Der folgende Code wird verwendet, um eine bestimmte PDF für PDF/A-Beschwerdepunkte zu validieren.
+Der folgende Code wird verwendet, um eine bestimmte PDF-Datei auf PDF/A-Konformität zu überprüfen.
 
 ```java
 public void validatePDFA(String postURL) {
