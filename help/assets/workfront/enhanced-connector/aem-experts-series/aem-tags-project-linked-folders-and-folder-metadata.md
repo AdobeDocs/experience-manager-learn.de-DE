@@ -1,6 +1,6 @@
 ---
-title: AEM-Tags, projektverknüpfte Ordner und Ordnermetadaten für Workfront für AEM erweiterten Connector
-description: Erfahren Sie, wie Sie AEM Tags über Assets über Workfront-Daten einsetzen, projektverknüpfte Ordner verwenden und Workfront-Daten nutzen, um Metadatenschemata für Asset-Ordner AEM.
+title: AEM-Tags, projektverknüpfte Ordner und Ordnermetadaten für den erweiterten Workfront-Connector für AEM
+description: Erfahren Sie, wie Sie AEM-Tags über Workfront-Daten für Assets verwenden sowie projektverknüpfte Ordner und Workfront-Daten für Metadatenschemata von AEM-Asset-Ordnern nutzen.
 version: Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
@@ -14,9 +14,9 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: 520a75cd-757a-4ae9-acf6-3c1f5e1f3747
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '118'
-ht-degree: 10%
+ht-degree: 100%
 
 ---
 
@@ -24,12 +24,12 @@ ht-degree: 10%
 
 ![AEM-Expertenserie](./assets/banner.png)
 
-Erfahren Sie, wie Sie AEM Tags über Workfront-Daten für Assets verwenden, projektverknüpfte Ordner einrichten und verwenden sowie Workfront-Daten, um Metadatenschemata für Asset-Ordner AEM.
+Erfahren Sie, wie Sie AEM-Tags über Workfront-Daten für Assets verwenden sowie projektverknüpfte Ordner und Workfront-Daten für Metadatenschemata von AEM-Asset-Ordnern einrichten und nutzen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340333?quality=12&learn=on)
 
-_Teil 3 von a [Vierteilige Expertenreihe zu Workfront für Experience Manager Enhanced Connector](./overview.md)_
+_Teil 3 einer [vierteiligen Expertenreihe zum erweiterten Workfront-Connector für Experience Manager](./overview.md)_
 
 ## Korrekturen
 
-+ __@ 4:34 and 6:20__ AEM Syntax der Tags ist falsch. Videoanzeigen `we-retail:apparel/footwear`. Die richtige Syntax lautet `["we-retail:apparel/footwear"]` allgemein `["namespace:tag/childtag"]`.
++ __Bei 4:34 und 6:20__: Die Syntax der AEM-Tags ist falsch. Im Video wird `we-retail:apparel/footwear` angezeigt. Die richtige Syntax lautet `["we-retail:apparel/footwear"]` oder allgemeiner `["namespace:tag/childtag"]`.
