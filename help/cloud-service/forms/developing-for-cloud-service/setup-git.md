@@ -1,6 +1,6 @@
 ---
 title: Installieren und Einrichten von Git
-description: Lokales Git-Repository initialisieren
+description: Initialisieren Ihres lokalen Git-Repositorys
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -10,33 +10,35 @@ topic: Development
 kt: 8848
 exl-id: 31487027-d528-48ea-b626-a740b94dceb8
 source-git-commit: 10ff0d87991d7766d5ca9563062a2f7be6035e43
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '209'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Git installieren
+# Installieren von Git
 
 
-[Git installieren](https://git-scm.com/downloads). Sie können die Standardeinstellungen auswählen und den Installationsprozess abschließen.
-Wechseln Sie zur Eingabeaufforderung Navigieren Sie zu c:\cloudmanager\aem-banking-app type in git —version . Sie sollten die Version von GIT sehen, die auf Ihrem System installiert ist.
+[Installieren von Git](https://git-scm.com/downloads). Sie können die Standardeinstellungen auswählen und den Installationsprozess abschließen.
+Wechseln Sie zur Eingabeaufforderung
+Navigieren Sie zu c:\cloudmanager\aem-banking-app
+geben Sie „git -- version“ ein. Sie sollten die Version von GIT sehen, die auf Ihrem System installiert ist
 
-## Lokales Git-Repository initialisieren
+## Initialisieren des lokalen Git-Repositorys
 
-Stellen Sie sicher, dass Sie sich im Ordner c:\cloudmanager\aem-banking-app folder befinden.
+Stellen Sie sicher, dass Sie sich im Ordner c:\cloudmanager\aem-banking-app befinden.
 
 ```
 git init
 ```
 
-Der obige Befehl initialisiert das Projekt als Git-lokales Repository.
+Der obige Befehl initialisiert das Projekt als lokales Git-Repository.
 
 ```
 git add .
 ```
 
-Dadurch werden alle Projektdateien zum Git-Repository hinzugefügt, das zum Übertragen in das Git-Repository bereit ist.
+Dadurch werden alle Projektdateien zum Git-Repository hinzugefügt, die zum Übertragen in das Git-Repository bereit sind
 
 ```
 git commit -m "initial commit"
@@ -46,28 +48,28 @@ Dadurch werden die Dateien in das Git-Repository übertragen.
 
 
 
-## Registrieren des Cloud Manager-Repositorys für unser lokales Git-Repository
+## Registrieren des Cloud Manager-Repositorys in unserem lokalen Git-Repository
 
 Zugriff auf das Cloud Manager-Repository
-![Zugriff auf die Rep-Informationen](assets/cloud-manager-repo.png)
-Rufen Sie die Repo-Anmeldeinformationen des Cloud Manager ab.
+![Zugriff auf die Repository-Informationen](assets/cloud-manager-repo.png)
+Aufrufen der Repository-Anmeldeinformationen von Cloud Manager
 ![get-credentials](assets/cloud-manager-repo1.png)
 
-Speichern Sie den Benutzernamen in der Konfigurationsdatei.
+Speichern des Benutzernamen in der Konfigurationsdatei
 
 ```java
 git config --global credential.username "gbedekar-adobe-com"
 ```
 
-das Kennwort in der Konfigurationsdatei speichern
+Speichern des Kennworts in der Konfigurationsdatei
 
 ```java
 git config --global user.password "XXXX"
 ```
 
-(Das Kennwort ist Ihr Git-Repository-Kennwort für den Cloud Manager.)
+(Das Kennwort ist Ihr Git-Repository-Passwort für Cloud Manager.)
 
-Registrieren Sie das Cloud Manager-Git-Repository bei Ihrem lokalen Git-Repository. Der folgende Befehl verknüpft **bankingapp** mit dem Remote-Git-Repository des Cloud Manager. Sie könnten einen beliebigen Namen anstelle von **bankingapp**
+Registrieren Sie das Cloud Manager-Git-Repository bei Ihrem lokalen Git-Repository. Der folgende Befehl verknüpft **bankingapp** mit dem Remote-Git-Repository von Cloud Manager. Sie könnten einen beliebigen Namen anstelle von **bankingapp** nutzen.
 
 
 ```shell
@@ -76,7 +78,7 @@ git remote add bankingapp https://git.cloudmanager.adobe.com/<cloud-manager-repo
 
 (Stellen Sie sicher, dass Sie Ihre Repository-URL verwenden.)
 
-Überprüfen Sie, ob das Remote-Repository registriert ist.
+Überprüfen Sie, ob das Remote-Repository registriert ist
 
 ```java
 git remote -v
@@ -84,4 +86,4 @@ git remote -v
 
 ## Nächste Schritte
 
-[AEM mit AEM Projekt in IntelliJ synchronisieren](./intellij-and-aem-sync.md)
+[Synchronisieren von AEM mit AEM-Projekt in IntelliJ](./intellij-and-aem-sync.md)
