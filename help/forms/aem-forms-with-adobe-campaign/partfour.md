@@ -1,5 +1,5 @@
 ---
-title: Campaign-Profil mit Formulardatenmodell erstellen
+title: Erstellen eines Campaign-Profils mit dem Formulardatenmodell
 description: Schritte zum Erstellen eines Adobe Campaign Standard-Profils mit dem AEM Forms-Formulardatenmodell
 feature: Adaptive Forms
 version: 6.4,6.5
@@ -10,35 +10,35 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 59d5ba6d-91c1-48c7-8c87-8e0caf4f2d7e
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '429'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Campaign-Profil mit Formulardatenmodell erstellen {#create-campaign-profile-using-form-data-model}
+# Erstellen eines Campaign-Profils mit dem Formulardatenmodell {#create-campaign-profile-using-form-data-model}
 
 Schritte zum Erstellen eines Adobe Campaign Standard-Profils mit dem AEM Forms-Formulardatenmodell
 
-## Benutzerdefinierte Authentifizierung erstellen {#create-custom-authentication}
+## Erstellen einer benutzerdefinierten Authentifizierung {#create-custom-authentication}
 
-Beim Erstellen der Datenquelle mit der Swagger-Datei unterstützt AEM Forms die folgenden Authentifizierungstypen
+Beim Erstellen einer Datenquelle mit der Swagger-Datei unterstützt AEM Forms die folgenden Authentifizierungstypen
 
 * Ohne
 * OAuth 2.0
-* Einfache Authentifizierung
+* Standardauthentifizierung
 * API-Schlüssel
 * Benutzerdefinierte Authentifizierung
 
-![campaignFdm](assets/campaignfdm.gif)
+![campaingfdm](assets/campaignfdm.gif)
 
 Wir müssen benutzerdefinierte Authentifizierung verwenden, um REST-Aufrufe an Adobe Campaign Standard durchzuführen.
 
-Um die benutzerdefinierte Authentifizierung zu verwenden, müssen wir eine OSGi-Komponente entwickeln, die die IAuthentication-Oberfläche implementiert
+Um die benutzerdefinierte Authentifizierung zu verwenden, müssen wir eine OSGi-Komponente entwickeln, die die Authentifizierungs-Benutzeroberfläche implementiert
 
-Die Methode getAuthDetails muss implementiert werden. Diese Methode gibt das Objekt AuthenticationDetails zurück. Für dieses AuthenticationDetails-Objekt sind die erforderlichen HTTP-Header festgelegt, die zum Aufrufen der REST-API an Adobe Campaign benötigt werden.
+Die Methode getAuthDetails muss implementiert werden. Diese Methode gibt ein AuthenticationDetails-Objekt zurück. Für dieses AuthenticationDetails-Objekt sind die erforderlichen HTTP-Header festgelegt, die zum Aufrufen der REST-API an Adobe Campaign benötigt werden.
 
-Im Folgenden finden Sie den Code, der beim Erstellen der benutzerdefinierten Authentifizierung verwendet wurde. Die Methode getAuthDetails führt alle Aufgaben aus. Wir erstellen ein Objekt &quot;AuthenticationDetails&quot;. Anschließend fügen wir diesem Objekt die entsprechenden HttpHeaders hinzu und geben dieses Objekt zurück.
+Im Folgenden finden Sie den Code, der zum Erstellen der benutzerdefinierten Authentifizierung verwendet wurde. Die Methode getAuthDetails führt alle Aufgaben aus. Wir erstellen ein AuthenticationDetails-Objekt. Anschließend fügen wir diesem Objekt die entsprechenden Http-Header hinzu und geben dieses Objekt zurück.
 
 ```java
 package aemfd.campaign.core;
@@ -114,16 +114,17 @@ Die Beispiel-Swagger-Datei wird Ihnen als Teil des Assets bereitgestellt, das mi
 Gehen Sie wie folgt vor, um die Lösung zu testen:
 * [Vergewissern Sie sich, dass Sie die hier beschriebenen Schritte ausgeführt haben](aem-forms-with-campaign-standard-getting-started-tutorial.md)
 * [Laden Sie diese Datei herunter und entpacken Sie sie, um die Swagger-Datei zu erhalten.](assets/create-acs-profile-swagger-file.zip)
-* Datenquelle mithilfe der Swagger-Datei erstellen Formulardatenmodell erstellen und auf der Datenquelle basieren, die im vorherigen Schritt erstellt wurde
+* Erstellen einer Datenquelle mit der Swagger-Datei
+Erstellen Sie ein Formulardatenmodell und basieren Sie es auf der im vorherigen Schritt erstellten Datenquelle.
 * Erstellen Sie ein adaptives Formular basierend auf dem Formulardatenmodell, das Sie im vorherigen Schritt erstellt haben.
-* Ziehen Sie die folgenden Elemente aus der Registerkarte &quot;Datenquellen&quot;in das adaptive Formular
+* Ziehen Sie die folgenden Elemente aus der Registerkarte „Datenquellen“ in das adaptive Formular
 
    * E-Mail
    * Vorname
    * Nachname
    * Mobiltelefon
 
-* Konfigurieren Sie die Sendeaktion in &quot;Senden mit Formulardatenmodell&quot;.
-* Konfigurieren Sie das Datenmodell für die entsprechende Übermittlung.
-* Vorschau des Formulars Füllen Sie die Felder aus und senden Sie sie.
-* Überprüfen, ob das Profil in Adobe Campaign Standard erstellt wurde.
+* Konfigurieren Sie die Absendeaktion auf „Absenden mit Formulardatenmodell“.
+* Konfigurieren Sie das Datenmodell für das entsprechende Absenden.
+* Zeigen Sie das Formular in einer Vorschau an. Füllen Sie die Felder aus und senden Sie ab.
+* Überprüfen Sie, ob das Profil in Adobe Campaign Standard erstellt wurde.
