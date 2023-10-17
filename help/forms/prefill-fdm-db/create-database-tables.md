@@ -1,6 +1,6 @@
 ---
 title: Erstellen von Datenbanktabellen
-description: Erstellen einer Datenbank zur Verwendung durch das Formulardatenmodell
+description: Erstellen einer Datenbank für das Formulardatenmodell
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 5811
@@ -10,27 +10,27 @@ role: Developer
 level: Beginner
 exl-id: 1136244a-c3e6-45f6-8af8-eb3c100f838e
 source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '105'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Datenbanktabellen erstellen
+# Erstellen von Datenbanktabellen
 
-Das Formulardatenmodell kann auf RDBMS-, RESTfull-, SOAP- oder OData-Quellen basieren. Der Schwerpunkt dieses Kurses liegt auf der Vorab-Einreichung des adaptiven Formulars mithilfe des Formulardatenmodells, das von der RDBMS-Datenquelle unterstützt wird. Für diese Anleitung wurde die MYSQL-Datenbank verwendet. Wir haben die folgenden beiden Tabellen erstellt, um den Anwendungsfall zu demonstrieren
+Das Formulardatenmodell kann auf RDBMS-, RESTfull-, SOAP- oder OData-Quellen basieren. Der Schwerpunkt dieses Kurses liegt auf dem Vorausfüllen des adaptiven Formulars mithilfe eines Formulardatenmodells, das von einer RDBMS-Datenquelle unterstützt wird. Für dieses Tutorial wurde die MYSQL-Datenbank verwendet. Wir haben die beiden folgenden Tabellen erstellt, um den Anwendungsfall zu demonstrieren.
 
-* **newhire** table - Diese Tabelle speichert die neuen Informationen
+* Tabelle **newhire**: In dieser Tabelle werden die Informationen zu neuen Mitarbeitenden gespeichert.
 
-   ![newhire](assets/newhire-table.png)
+  ![Tabelle „newhire“](assets/newhire-table.png)
 
 
-* **Begünstigte** table - Hier werden Neubegünstigte gespeichert
+* Tabelle **beneficiaries**: Hier werden die Begünstigten der neuen Mitarbeitenden gespeichert.
 
-   ![Begünstigte](assets/beneficiaries-table.png)
+  ![Tabelle „beneficiaries“](assets/beneficiaries-table.png)
 
-Sie können die [sql-Datei](assets/db-schema.sql) Verwendung von MySQL Workbench zum Erstellen in Tabellen mit Beispieldaten.
+Sie können die [SQL-Datei](assets/db-schema.sql) mithilfe von MySQL Workbench importieren, um Tabellen mit Beispieldaten zu erstellen.
 
 ## Nächste Schritte
 
-[Formulardatenmodell konfigurieren](./configuring-form-data-model.md)
+[Konfigurieren eines Formulardatenmodells](./configuring-form-data-model.md)
