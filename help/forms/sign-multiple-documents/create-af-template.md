@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer AF-Vorlage
-description: Erstellen Sie eine AF-Vorlage und verknüpfen Sie sie mit der Seite-Rendering-Komponente
+description: Erstellen Sie eine AF-Vorlage und verknüpfen Sie sie mit der Seiten-Render-Komponente
 feature: Adaptive Forms
 topics: development
 audience: developer
@@ -14,26 +14,26 @@ role: Developer
 level: Beginner
 exl-id: c6e0fb92-28c1-4025-85ef-b99bad46f07a
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '120'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # Erstellen einer AF-Vorlage
 
-Für diese Anleitung erstellen wir eine neue Vorlage für adaptive Formulare. Außerdem wurde eine neue Seitenkomponente erstellt und mit dieser Vorlage verknüpft. Die JSP in der Seitenkomponente ruft Daten aus der MySql-Datenbank ab, die zum Vorausfüllen des adaptiven Formulars verwendet wird.
+Für dieses Tutorial erstellen wir eine neue Vorlage für adaptive Formulare. Außerdem wurde eine neue Seitenkomponente erstellt und mit dieser Vorlage verknüpft. Die JSP in der Seitenkomponente ruft Daten aus der MySQL-Datenbank ab, die zum Vorausfüllen des adaptiven Formulars verwendet werden.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27828?quality=12&learn=on)
 
-[In diesem Artikel erfahren Sie, wie Sie eine adaptive Formularvorlage und eine Seitenkomponente erstellen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en#storing-and-retrieving-form-data)
+[In diesem Artikel erfahren Sie, wie Sie eine adaptive Formularvorlage und eine Seitenkomponente erstellen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=de#storing-and-retrieving-form-data)
 
 
 ## Assets
 
-Die Vorlage und die Seitenkomponente, die in diesem Tutorial verwendet werden, können [heruntergeladen von hier](assets/sign-multiple-forms-template.zip)
+Die Vorlage und die Seitenkomponente, die in diesem Tutorial verwendet werden, können [hier heruntergeladen](assets/sign-multiple-forms-template.zip) werden
 
 ## Nächste Schritte
 
-[Wählen Sie die Formulare aus, die von der verwendeten](./create-initial-form.md)
+[Auswahl der Formulare, die von der Benutzerin oder vom Benutzer unterzeichnet werden sollen](./create-initial-form.md)
