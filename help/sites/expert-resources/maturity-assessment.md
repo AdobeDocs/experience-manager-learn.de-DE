@@ -1,6 +1,6 @@
 ---
-title: Ihre AEM Sites-Alterseinstufung
-description: Diese Checkliste bietet einen Überblick über wichtige Fragen, die Sie und Ihr Team bei der Beurteilung der Reife Ihrer AEM Sites-Instanz beantworten sollten.
+title: AEM Sites-Reifegradbewertung
+description: Diese Checkliste bietet einen Überblick über wichtige Fragen, die Sie und Ihr Team bei der Beurteilung des Reifegrads Ihrer AEM Sites-Instanz beantworten sollten.
 audience: author, marketer, developer
 role: Admin
 level: Intermediate
@@ -8,32 +8,32 @@ topic: Administration
 feature: Learn From Your Peers
 exl-id: 22164a0e-7239-43f4-8356-c12f68133255
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '332'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Ihre AEM Sites-Checkliste zur Bewertung der Reife
+# Ihre Checkliste zur AEM Sites-Reifegradbewertung
 
-Die Beurteilung des aktuellen Status Ihrer AEM Sites-Instanz kann sich als überwältigend erweisen. Im Allgemeinen besteht der beste Ausgangspunkt darin, Ihre Instanz zu überprüfen. Nun können Sie diese Checkliste für die Laufzeitbewertung verwenden, um Sie durch diesen Prozess zu führen!
+Den aktuellen Status Ihrer AEM Sites-Instanz zu bewerten, kann überwältigend wirken. Im Allgemeinen sollten Sie dazu am besten erst einmal Ihre Instanz überprüfen. Mit dieser Checkliste zur Reifegradbewertung können Sie sich nun sogar durch diesen Prozess führen lassen.
 
 [Checkliste herunterladen](assets/AEM-Sites-Maturity-Assessment.xlsx)
 
-AEM Laufzeitbewertungen zielen in erster Linie auf On-Premise- und Managed Service-Implementierungen ab. Jede AEM Implementierung ist aufgrund der Erfolgsdefinitionen und -ziele der einzelnen Kunden einzigartig, die während der Entdeckungsphase und bis zur AEM Bereitstellungsphase eingerichtet wurden. Laufzeitbewertungen spielen die Rolle von Gesundheitskontrollen nach der Live-Schaltung.
+AEM-Reifegradbewertungen zielen in erster Linie auf On-Premise- und Managed-Service-Implementierungen ab. Jede AEM-Implementierung ist aufgrund der Erfolgsdefinitionen und Ziele der einzelnen Kundinnen und Kunden einzigartig, die während der Entdeckungs- und Pre-Onboarding- bis hin zur AEM-Bereitstellungsphase festgelegt wurden. Reifegradbewertungen fungieren als Konsistenzprüfung nach der Live-Schaltung.
 
-Laufzeitbewertungen ermöglichen die Bewertung und Einhaltung AEM Standards und Best Practices.
+Reifegradbewertungen ermöglichen die Bewertung und Einhaltung von AEM-Standards und Best Practices.
 
-Best Practices zur Verwaltung, Entwicklung oder Bearbeitung finden Sie in den folgenden Ressourcen:
+Informationen zu Best Practices zur Verwaltung, Entwicklung oder Inhaltserstellung finden Sie über die folgenden Ressourcen:
 
-* [Best Practices für die Verwaltung ](https://experienceleague.adobe.com/docs/experience-manager-65/administering/bestpractices/administer-best-practices.html?lang=en)
-* [Best Practices für die Entwicklung](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html?lang=en)
-* [Best Practices für die Inhaltserstellung](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/best-practices.html?lang=en)
+* [Best Practices für die Verwaltung](https://experienceleague.adobe.com/docs/experience-manager-65/administering/bestpractices/administer-best-practices.html?lang=de)
+* [Best Practices für die Entwicklung](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html?lang=de)
+* [Best Practices für die Inhaltserstellung](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/best-practices.html?lang=de)
 
-Jeder dieser Best Practices umfasst auch weitere Best Practices bei der Erstellung, Entwicklung und Bereitstellung von AEM.
+Zu jedem dieser Best-Practice-Bereiche gehören auch weitere Best Practices zur Erstellung, Entwicklung und Bereitstellung von AEM.
 
-In den meisten Fällen wird die AEM-Laufzeitbewertung dazu beitragen, eine diagnostische Überprüfung AEM Best Practices durchzuführen, und zu einem Fahrplan für die proaktive Ermittlung, Lösung und Vermeidung potenzieller Probleme führen. Es wird empfohlen, die Bewertungen mit den Teams abzuschließen, die ebenfalls Teil der AEM Implementierungs-Erkennungsphase (vor der Migration) waren. Zu den Rollen, die einbezogen werden sollten, könnten gehören: Anwendungsinhaber, Site-Eigentümer, Entwicklungsteams, technische Leads, Sicherheits-/Infrastrukturteams, SEO-Teams und Supportteams (z. B. Inhaltsautoren, Administratoren).
+In den meisten Fällen trägt die AEM-Reifegradbewertung dazu bei, eine diagnostische Überprüfung von AEM Best Practices durchzuführen, und führt zu einem Fahrplan für die proaktive Ermittlung, Lösung und Vermeidung potenzieller Probleme. Es wird empfohlen, die Bewertungen mit den Teams vorzunehmen, die bereits an der Erkennungsphase für die AEM-Implementierung (vor der AEM-Migration) mitgewirkt haben. Anwendungseigentümerinnen und Anwendungseigentümer, Site-Eigentümerinnen und Site-Eigentümer, technische Leads sowie Entwicklungs-, Sicherheits-/Infrastruktur-, SEO- und Supportteams (z. B. Inhaltsautorinnen und Inhaltsautoren, Administratorinnen und Administratoren) sind Rollen, die ggf. einbezogen werden sollten.
 
-Empfohlene AEM Schwerpunktbereiche für die Laufzeitbewertung: Design und Architektur, Produktmanagement und -strategie, Digital Asset Management und Bereitstellung, Analytics, Tests und Sicherheit.
+Folgende Schwerpunktbereiche werden zur AEM-Reifegradbewertung empfohlen: Design und Architektur, Produkt-Management und -strategie, Digital Asset Management und Versand, Analytics, Tests und Sicherheit.
 
-Große Schrei an AEM Champion Greg Dimeris für die Zusammenstellung dieser Informationen aus mehreren Experience League-Artikeln sowie seiner eigenen Best Practices!
+Vielen Dank an AEM-Champion Greg Dimeris für die Zusammenstellung dieser Informationen aus mehreren Experience League-Artikeln sowie eigenen Best Practices!
