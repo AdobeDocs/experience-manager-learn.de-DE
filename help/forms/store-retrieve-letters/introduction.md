@@ -1,7 +1,7 @@
 ---
 title: Speichern und Fortsetzen von Briefen
 seo-title: Save and resume letters
-description: Erfahren Sie, wie Sie Entwurfsbriefe speichern und abrufen
+description: Erfahren Sie, wie Sie Briefentwürfe speichern und abrufen
 seo-description: Learn how to save and retrieve draft letters
 feature: Interactive Communication
 topics: development
@@ -16,15 +16,15 @@ kt: 10208
 exl-id: e032070b-7332-4c2f-97ee-7e887a61aa7a
 last-substantial-update: 2022-01-07T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '132'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Einführung
 
-Interaktive Kommunikation ermöglicht es den Agenten, Ad-hoc-Korrespondenzen vorzubereiten, teilweise abgeschlossene Korrespondenzen zu speichern und diese abzurufen, um die Arbeit fortzusetzen. AEM Forms stellt Ihnen Folgendes bereit: [Service Provider-Schnittstelle](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html). Von dem Kunden wird erwartet, dass er diese Schnittstelle implementiert, um die Funktion zum Speichern und Fortsetzen zu erhalten.
+Interaktive Kommunikation ermöglicht es den Agentinnen und Agenten, Ad-hoc-Korrespondenzen vorzubereiten, teilweise abgeschlossene Korrespondenzen zu speichern und diese abzurufen, um die Arbeit fortzusetzen. AEM Forms stellt Ihnen dafür die [Dienstleister-Schnittstelle](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/ccm/ccr/ccrDocumentInstance/api/services/CCRDocumentInstanceService.html) bereit. Von der Kundschaft wird erwartet, dass sie diese Schnittstelle implementiert, um die Funktion zum Speichern und Fortsetzen zu erhalten.
 
 In diesem Artikel werden die Metadaten der Briefinstanz mithilfe der MySQL-Datenbank gespeichert. Die Briefdaten werden im Dateisystem gespeichert.
 
@@ -37,5 +37,5 @@ Das folgende Video zeigt den Anwendungsfall:
 Sie benötigen Folgendes, um die Lösung entsprechend Ihren Anforderungen zu implementieren
 
 * Arbeitserfahrung mit AEM Forms
-* AEM Server 6.5 mit Forms Add on
-* Sollte beim Erstellen von OSGI-Bundles vertraut sein
+* AEM Server 6.5 mit Forms-Add-on
+* Vertraut sein mit der Erstellung von OSGI-Bundles
