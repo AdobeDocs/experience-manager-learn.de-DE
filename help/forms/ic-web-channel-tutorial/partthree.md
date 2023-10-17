@@ -1,6 +1,6 @@
 ---
-title: Erstellen des Formulardatenmodells Teil 3
-description: Dies ist Teil 3 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil erstellen wir ein Formulardatenmodell. Mit dem Formulardatenmodell können Sie unterschiedliche Datenquellen konfigurieren und eine Verbindung zu ihnen herstellen. Es bietet eine intuitive Benutzeroberfläche, um ein einheitliches Datendarstellungsschema von Geschäftsentitäten und Diensten aus verbundenen Datenquellen zu erstellen. Im folgenden Video werden die Schritte zum Erstellen eines Formulardatenmodells erläutert.
+title: Erstellen eines Formulardatenmodells – Teil 3
+description: Dies ist Teil 3 eines mehrstufigen Tutorials zum Erstellen Ihres ersten Dokuments für die interaktive Kommunikation. In diesem Teil erstellen wir ein Formulardatenmodell. Mit dem Formulardatenmodell können Sie unterschiedliche Datenquellen konfigurieren und eine Verbindung zu ihnen herstellen. Es bietet eine intuitive Benutzeroberfläche, um ein einheitliches Datendarstellungsschema für Geschäftsentitäten und Dienste aus allen verbundenen Datenquellen zu erstellen. Im folgenden Video werden die Schritte zum Erstellen eines Formulardatenmodells erläutert.
 feature: Interactive Communication
 topic: Development
 version: 6.4,6.5
@@ -8,34 +8,34 @@ role: Developer
 level: Beginner
 exl-id: 798012e5-5099-4fd0-82ad-a21f64a97aca
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '252'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Erstellen eines Formulardatenmodells
 
-In diesem Teil erstellen wir ein Formulardatenmodell. Mit dem Formulardatenmodell können Sie unterschiedliche Datenquellen konfigurieren und eine Verbindung zu ihnen herstellen. Eine intuitive Benutzeroberfläche zum Erstellen eines einheitlichen Datendarstellungsschemas für Geschäftsentitäten und Dienste über verbundene Datenquellen hinweg. Im folgenden Video werden die Schritte zum Erstellen eines Formulardatenmodells erläutert.
+In diesem Teil erstellen wir ein Formulardatenmodell. Mit dem Formulardatenmodell können Sie unterschiedliche Datenquellen konfigurieren und eine Verbindung zu ihnen herstellen. In der intuitiven Benutzeroberfläche können Sie ein einheitliches Datendarstellungsschema der Geschäftsbereiche und Dienste für sämtliche verbundenen Datenquellen erstellen. Im folgenden Video werden die Schritte zum Erstellen eines Formulardatenmodells erläutert.
 
 **Erstellen eines Formulardatenmodells in AEM Forms 6.4**
 
 >[!VIDEO](https://video.tv.adobe.com/v/27763?quality=12&learn=on)
 
-**Erstellen des Formulardatenmodells in AEM Forms 6.5 und höher**
+**Erstellen eines Formulardatenmodells in AEM Forms 6.5 und höher**
 
 >[!VIDEO](https://video.tv.adobe.com/v/27765?quality=12&learn=on)
 
-Das Formulardatenmodell ist von einer korrekt konfigurierten Datenquelle abhängig. Wir verwenden die im vorherigen Schritt konfigurierte Datenquelle als Grundlage für dieses Formulardatenmodell.
+Das Formulardatenmodell ist auf eine korrekt konfigurierte Datenquelle angewiesen. Wir verwenden die im vorherigen Schritt konfigurierte Datenquelle als Grundlage für dieses Formulardatenmodell.
 
-Das Formulardatenmodell ist die Grundlage für all Ihre interaktiven Kommunikationen. Der Vorgang &quot;Get/Read&quot;des Formulardatenmodells ruft die Daten aus Ihrer Backend-Datenquelle ab und wird zum Ausfüllen des Dokuments für interaktive Kommunikation verwendet.
+Das Formulardatenmodell ist für Sie die Basis jeder interaktiven Kommunikation. Über den Get/Read-Vorgang des Formulardatenmodells werden die Daten von Ihrer Backend-Datenquelle abgerufen. Damit wird dann das Dokument für die interaktive Kommunikation ausgefüllt.
 
-Weitere Informationen finden Sie unter [Konfigurieren von Data Sources](parttwo.md).
+Weitere Informationen finden Sie unter [Konfigurieren von Datenquellen](parttwo.md).
 
 Nachdem Sie das Formulardatenmodell erstellt haben, können Sie es als Grundlage für die Erstellung von Dokumentfragmenten und Dokumenten zur interaktiven Kommunikation verwenden.
 
 ## Nächste Schritte
 
-[Webkanal-Dokumentvorlage erstellen](./partfour.md)
+[Erstellen einer Web-Kanal-Dokumentvorlage](./partfour.md)
 
 
