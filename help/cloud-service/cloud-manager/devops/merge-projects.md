@@ -1,6 +1,6 @@
 ---
-title: Zusammenführen AEM Projekte mit GitHub Desktop
-description: Erfahren Sie, wie Sie mit GitHub Desktop mehrere Projekte zu einem Projekt zusammenführen können, damit sie mithilfe von Cloud Manager AEM as a Cloud Service bereitgestellt werden können.
+title: Zusammenführen von AEM-Projekten mit GitHub Desktop
+description: Erfahren Sie, wie Sie mit GitHub Desktop mehrere Projekte zu einem Projekt zusammenführen können, um dieses über Cloud Manager für AEM as a Cloud Service bereitzustellen.
 role: Developer
 level: Beginner
 type: Tutorial
@@ -10,14 +10,14 @@ kt: 6913
 thumbnail: 330535.jpg
 exl-id: 68dedaa6-30d8-43ce-ae74-a293f3fc7068
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '63'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Zusammenführen AEM Projekte für die Implementierung mit Cloud Manager
+# Zusammenführen von AEM-Projekten zur Bereitstellung mit Cloud Manager
 
-Erfahren Sie, wie mehrere Projekte zu einem Projekt zusammengeführt werden können, damit sie mithilfe von Cloud Manager AEM as a Cloud Service bereitgestellt werden können.
+Erfahren Sie, wie Sie mehrere Projekte zu einem Projekt zusammenführen können, um dieses über Cloud Manager für AEM as a Cloud Service bereitzustellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330535?quality=12&learn=on)
