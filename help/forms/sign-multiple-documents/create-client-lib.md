@@ -1,5 +1,5 @@
 ---
-title: Client-Bibliothek erstellen
+title: Erstellen einer Client-Bibliothek
 description: Client-Bibliotheks-Code zum Abrufen des nächsten zu signierenden Formulars
 feature: Adaptive Forms
 version: 6.4,6.5
@@ -10,17 +10,17 @@ role: Developer
 level: Intermediate
 exl-id: 3c148b30-2c7d-428d-9a3c-f3067ca3a239
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '91'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# Client-Bibliothek erstellen
+# Erstellen einer Client-Bibliothek
 
-Erstellen Sie eine benutzerdefinierte Client-Bibliothek, kurz clientlib , um die URL-Parameter zu extrahieren, die diese Parameter im GET-Aufruf übergeben. Der GET-Aufruf wird an ein Servlet gesendet, das auf /bin/getnextformtosign bereitgestellt wird. Dadurch wird die URL des nächsten Formulars zurückgegeben, das im Paket signiert werden soll.
+Erstellen Sie eine benutzerdefinierte Client-Bibliothek (oder kurz „clientlib“ nach dem englischen Begriff „Client Library“), um die URL-Parameter zu extrahieren und diese Parameter per GET-Aufruf weiterzugeben. Der GET-Aufruf geht an ein unter „/bin/getnextformtosign“ bereitgestelltes Servlet, das die URL des nächsten zu signierenden Formulars im Paket zurückgibt.
 
-Im Folgenden finden Sie den Code, der in der clientlib-JavaScript-Funktion verwendet wird
+Im Folgenden finden Sie den Code, der in der JavaScript-Funktion der Client-Bibliothek verwendet wird:
 
 
 ```java
@@ -74,8 +74,8 @@ $(document).ready(function()
 
 ## Assets
 
-[Die clientlib kann von hier heruntergeladen werden](assets/get-next-form-client-lib.zip)
+[Die Client-Bibliothek kann hier heruntergeladen werden.](assets/get-next-form-client-lib.zip)
 
 ## Nächste Schritte
 
-[Benutzerdefinierte Formularvorlage für diesen Anwendungsfall erstellen](./create-af-template.md)
+[Erstellen einer benutzerdefinierten Formularvorlage für diesen Anwendungsfall](./create-af-template.md)
