@@ -1,6 +1,6 @@
 ---
-title: Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank - Datenquelle konfigurieren
-description: Mehrteiliges Tutorial, das Sie durch die Schritte führt, die zum Speichern und Abrufen von Formulardaten erforderlich sind
+title: Speichern und Abrufen von Formulardaten aus der MySQL-Datenbank – Konfigurieren der Datenquelle
+description: Mehrteiliges Tutorial, das Sie durch die Schritte zum Speichern und Abrufen von Formulardaten führt
 version: 6.4,6.5
 feature: Adaptive Forms
 topic: Development
@@ -8,31 +8,31 @@ role: Developer
 level: Experienced
 exl-id: dccca658-3373-4de2-8589-21ccba2b7ba6
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '199'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# Datenquelle konfigurieren
+# Konfigurieren einer Datenquelle
 
-Es gibt viele Möglichkeiten, mit denen AEM die Integration in externe Datenbanken ermöglicht. Eine der gängigsten und gängigsten Methoden der Datenbankintegration ist die Verwendung der Konfigurationseigenschaften von Apache Sling Connection Pooled DataSource über die [configMgr](http://localhost:4502/system/console/configMgr).
-Der erste Schritt besteht darin, die entsprechende [MySql-Treiber](https://mvnrepository.com/artifact/mysql/mysql-connector-java) in AEM.
-Erstellen Sie Apache Sling Connection Pooled DataSource und geben Sie die Eigenschaften wie im Screenshot unten angegeben an. Das Datenbankschema wird Ihnen im Rahmen dieses Tutorials bereitgestellt.
+Es gibt verschiedene Möglichkeiten, mit denen AEM die Integration in externe Datenbanken unterstützt. Bei einer der gängigsten und geläufigsten Methoden der Datenbankintegration werden die Konfigurationseigenschaften der Apache Sling Connection Pooled DataSource über [configMgr](http://localhost:4502/system/console/configMgr) verwendet.
+Der erste Schritt besteht darin, die entsprechenden [MySql-Treiber](https://mvnrepository.com/artifact/mysql/mysql-connector-java) herunterzuladen und in AEM bereitzustellen.
+Erstellen Sie eine Apache Sling Connection Pooled DataSource und geben Sie die Eigenschaften so wie im Screenshot unten an. Das Datenbankschema wird Ihnen im Rahmen dieser Tutorial-Assets bereitgestellt.
 
 ![data-source](assets/save-continue.PNG)
 
-Datenbank hat eine Tabelle namens formdata mit den drei Spalten, wie im Screenshot unten dargestellt.
+Die Datenbank verfügt über eine Tabelle namens „formdata“ mit den drei im Screenshot unten dargestellten Spalten.
 
 ![data-base](assets/data-base-tables.PNG)
 
-Die SQL-Datei zum Erstellen des Schemas kann [heruntergeladen von hier](assets/form-data-db.sql). Sie müssen diese Datei mithilfe von MySql Workbench importieren, um das Schema und die Tabelle zu erstellen.
+Die SQL-Datei zum Erstellen des Schemas kann [hier heruntergeladen werden](assets/form-data-db.sql). Sie müssen diese Datei mithilfe von MySQL Workbench importieren, um das Schema und die Tabelle zu erstellen.
 
 >[!NOTE]
->Benennen Sie Ihre Datenquelle. **SaveAndContinue**. Der Beispielcode verwendet den Namen, um eine Verbindung zur Datenbank herzustellen.
+>Stellen Sie sicher, dass Sie Ihrer Datenquelle den Namen **SaveAndContinue** geben. Der Beispiel-Code verwendet diesen Namen, um eine Verbindung zur Datenbank herzustellen.
 
 | Eigenschaftsname | Wert |
 | ------------------------|---------------------------------------|
-| Datasource Name | SaveAndContinue |
+| Datenquellenname | SaveAndContinue |
 | JDBC-Treiberklasse | com.mysql.cj.jdbc.Driver |
 | JDBC-Verbindungs-URI | jdbc:mysql://localhost:3306/aemformstutorial |
