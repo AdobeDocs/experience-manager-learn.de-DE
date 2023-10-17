@@ -1,6 +1,6 @@
 ---
 title: Herunterladen und Hochladen
-description: Erfahren Sie, wie Sie Asset-Dateien über das Bedienfeld "Asset-Link"von und in AEM Assets herunterladen und hochladen können.
+description: Erfahren Sie, wie Sie Asset-Dateien über das Bedienfeld „Asset-Link“ von und in AEM Assets herunterladen bzw. hochladen können.
 feature: Adobe Asset Link
 version: 6.4, 6.5, Cloud Service
 kt: 4908
@@ -10,14 +10,14 @@ role: User
 level: Beginner
 exl-id: dc69a95c-ab0b-4a2c-80a3-43a6a052c545
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '42'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Herunterladen und Hochladen {#download-and-upload}
 
-Erfahren Sie, wie Sie Asset-Dateien über das Bedienfeld &quot;Asset-Link&quot;von und in AEM Assets herunterladen und hochladen können.
+Erfahren Sie, wie Sie Asset-Dateien über das Bedienfeld „Asset-Link“ von und in AEM Assets herunterladen bzw. hochladen können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/33885?quality=12&learn=on)
