@@ -8,9 +8,9 @@ level: Beginner
 kt: 5859
 thumbnail: 37324.jpg
 source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '135'
+ht-degree: 100%
 
 ---
 
@@ -23,13 +23,13 @@ Das folgende Video zeigt Ihnen den grundlegenden Prozess der Erstellung einer ad
 
 >[!VIDEO](https://video.tv.adobe.com/v/37324?quality=12&learn=on)
 
-Siehe [Dokumentation zu adaptiven Formularvorlagen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html) für weitere Details
+Siehe [Dokumentation zu adaptiven Formularvorlagen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html?lang=de) für weitere Details
 
-Bei Bedarf können Sie die [adaptive Formularvorlage](assets/peak-application-template.zip) und importieren Sie mithilfe von in AEM [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
+Bei Bedarf können Sie die [adaptive Formularvorlage](assets/peak-application-template.zip) herunterladen und mithilfe von [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) in AEM importieren
 
 
 ## Nächste Schritte
 
-[Adaptives Formularfragment erstellen](./create-form-fragment.md)
+[Erstellen eines adaptiven Formularfragments](./create-form-fragment.md)
 
 
