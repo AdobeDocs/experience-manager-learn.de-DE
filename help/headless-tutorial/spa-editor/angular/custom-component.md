@@ -236,7 +236,8 @@ Im Zusammenhang mit dem SPA-Editor stellen Sling-Modelle den Inhalt einer Kompon
    Es wird eine zusätzliche „Business-Logik“ hinzugefügt, um den Wert der Nachricht in Großbuchstaben zurückzugeben. Auf diese Weise können wir den Unterschied zwischen dem im Autorendialogfeld gespeicherten Rohwert und dem vom Sling-Modell bereitgestellten Wert sehen.
 
    >[!NOTE]
-   >Sie können die [fertige CustomComponentImpl.java hier ansehen](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java).
+   >
+   Sie können die [fertige CustomComponentImpl.java hier ansehen](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java).
 
 ## Update der Angular-Komponente
 
