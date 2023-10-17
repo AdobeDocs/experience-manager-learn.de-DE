@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren des Stammbereichs
-description: Fügen Sie dem Stammbereich untergeordnete Bedienfelder hinzu.
+title: Konfigurieren des Stamm-Panels
+description: Fügen Sie dem Stamm-Panel untergeordnete Panels hinzu.
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
@@ -12,14 +12,14 @@ kt: 7377
 thumbnail: 332238.jpg
 exl-id: e5c2c53e-bcb2-46a4-a780-fca0dd03a00b
 source-git-commit: 2f619bc6ebaae36c8b9d05d8c4ff5c1cc8c18332
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '28'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Konfigurieren des Stammbereichs
+# Konfigurieren des Stamm-Panels
 
-Fügen Sie dem Stammbereich untergeordnete Bedienfelder hinzu und konfigurieren Sie das Layout der untergeordneten Bedienfelder.
+Fügen Sie dem Stamm-Panel untergeordnete Panels hinzu und konfigurieren Sie das Layout der untergeordneten Panels.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332238?quality=12&learn=on)
