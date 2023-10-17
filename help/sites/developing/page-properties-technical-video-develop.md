@@ -1,6 +1,6 @@
 ---
 title: Erweitern der Seiteneigenschaften in AEM Sites
-description: Erfahren Sie, wie Sie die Metadatenfelder der Seiteneigenschaften in Adobe Experience Manager Sites erweitern. In diesem Video wird beschrieben, wie Sie dies am effektivsten mithilfe der Funktionen des Sling Resource Merger erreichen.
+description: Erfahren Sie, wie Sie die Metadatenfelder der Seiteneigenschaften in Adobe Experience Manager Sites erweitern. In diesem Video wird beschrieben, wie Ihnen dies am effektivsten mithilfe der Sling Resource Merger-Funktionen gelingt.
 topic: Development
 feature: Core Components
 role: Developer
@@ -10,24 +10,24 @@ kt: 243
 thumbnail: 25173.jpg
 exl-id: 500f4e07-2686-42a2-8e44-d96dde02a112
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '250'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # Erweitern der Seiteneigenschaften {#extending-page-properties-in-aem-sites}
 
-Das Anpassen der Metadatenfelder für die Seiteneigenschaften ist eine gängige Anforderung in jeder Sites-Implementierung. In diesem Video wird beschrieben, wie Sie dies am effektivsten mithilfe der Funktionen des Sling Resource Merger erreichen.
+Die Metadatenfelder für Seiteneigenschaften anzupassen, ist eine gängige Anforderung in jeder Sites-Implementierung. In diesem Video wird beschrieben, wie Ihnen dies am effektivsten mithilfe der Sling Resource Merger-Funktionen gelingt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25173?quality=12&learn=on)
 
-Das obige Video zeigt, wie die Seiteneigenschaften für die [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd).
+Das obige Video zeigt, wie Sie die Seiteneigenschaften für die [WKND-Referenz-Site](https://github.com/adobe/aem-guides-wknd) anpassen.
 
-## Beispiel für das WKND-Seiteneigenschaftenpaket
+## WKND-Seiteneigenschaften-Beispielpaket
 
-Sie können die bereitgestellte [Beispiel-WKND-Seiteneigenschaftenpaket](./assets/WKND-PageProperties-Example-Dialog-1.0.zip) contain **WKND** und **Allgemein** Registerkartenanpassungen, die im obigen Video gezeigt werden. Die **SocialMedia** Registerkartenanpassung wird nicht bereitgestellt, da [WKND-Seitenkomponente](https://github.com/adobe/aem-guides-wknd/blob/main/ui.apps/src/main/content/jcr_root/apps/wknd/components/page/.content.xml#L5) verwendet jetzt die V3-Version der WCM-Kernkomponenten und in der V3-Version die [Social Sharing ist veraltet](https://github.com/adobe/aem-core-wcm-components/pull/1930).
+Sie können das bereitgestellte [WKND-Seiteneigenschaften-Beispielpaket](./assets/WKND-PageProperties-Example-Dialog-1.0.zip) mit den im obigen Video gezeigten Anpassungen für die Registerkarten **WKND** und **Basic** verwenden. Die Anpassung für die Registerkarte **Social Media** wird nicht zur Verfügung gestellt, da die [WKND-Seitenkomponente](https://github.com/adobe/aem-guides-wknd/blob/main/ui.apps/src/main/content/jcr_root/apps/wknd/components/page/.content.xml#L5) nun die V3-Version der WCM-Kernkomponenten nutzt und in der V3-Version [Social Sharing nicht weiter unterstützt](https://github.com/adobe/aem-core-wcm-components/pull/1930) wird.
 
-Zu Lernzwecken können Sie die WKND-Seitenkomponente jedoch mithilfe der `sling:resourceSuperType` Eigenschaftswert und Überlagerung der [Social Media](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95) Registerkarte. Weitere Informationen finden Sie unter [Konfigurieren der Seiteneigenschaften](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/page-properties-views.html#configuring-your-page-properties)
+Zu Lernzwecken können Sie die WKND-Seitenkomponente jedoch mithilfe des `sling:resourceSuperType`-Eigenschaftswerts auf die V2-Version der WCM-Kernkomponenten verweisen und die Registerkarte [Social Media](https://github.com/adobe/aem-core-wcm-components/blob/main/content/src/content/jcr_root/apps/core/wcm/components/page/v2/page/_cq_dialog/.content.xml#L95) einblenden. Weitere Informationen finden Sie unter [Konfigurieren der Seiteneigenschaften](https://experienceleague.adobe.com/docs/experience-manager-65/developing/extending-aem/page-properties-views.html?lang=de#configuring-your-page-properties).
 
-Dieses Beispielpaket sollte zu Lernzwecken auf der lokalen AEM SDK- oder AEM 6.X.X-Instanz installiert werden.
+Dieses Beispielpaket sollte zu Lernzwecken in der lokalen AEM SDK- oder AEM 6.X.X-Instanz installiert werden.
