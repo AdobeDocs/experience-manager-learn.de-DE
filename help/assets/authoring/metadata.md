@@ -11,9 +11,9 @@ topic: Content Management
 last-substantial-update: 2021-09-25T00:00:00Z
 exl-id: 67898b75-6307-4933-ad93-e6db2e220fd6
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '24'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
