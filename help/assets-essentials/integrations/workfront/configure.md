@@ -13,9 +13,9 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Assets Essentials" before-title="false"
 exl-id: c3961fdf-b8aa-410d-9561-520a248ea5b0
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '36'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
