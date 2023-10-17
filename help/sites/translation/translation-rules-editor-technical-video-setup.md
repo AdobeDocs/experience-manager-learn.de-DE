@@ -1,6 +1,6 @@
 ---
 title: Einrichten von Übersetzungsregeln in AEM
-description: Über die Benutzeroberfläche für die Übersetzungskonfiguration können Benutzer Regeln für die Übersetzung von Inhalten in AEM Sites verwalten. In diesem Video wird die Erstellung einer neuen Übersetzungsregel für eine benutzerdefinierte Komponente beschrieben.
+description: Über die Benutzeroberfläche für die Übersetzungskonfiguration können Benutzende Regeln für die Übersetzung von Inhalten in AEM Sites verwalten. In diesem Video wird die Erstellung einer neuen Übersetzungsregel für eine benutzerdefinierte Komponente beschrieben.
 feature: Language Copy
 topics: localization, content-architecture
 audience: developer, administrator
@@ -12,41 +12,41 @@ role: User
 level: Beginner
 exl-id: 359da531-839c-4680-abf9-c880cc700159
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '321'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # Einrichten von Übersetzungsregeln {#set-up-translation-rules-in-aem}
 
-Über die Benutzeroberfläche für die Übersetzungskonfiguration können Benutzer Regeln für die Übersetzung von Inhalten in AEM Sites verwalten. In diesem Video wird die Erstellung einer neuen Übersetzungsregel für eine benutzerdefinierte Komponente beschrieben.
+Über die Benutzeroberfläche für die Übersetzungskonfiguration können Benutzende Regeln für die Übersetzung von Inhalten in AEM Sites verwalten. In diesem Video wird die Erstellung einer neuen Übersetzungsregel für eine benutzerdefinierte Komponente beschrieben.
 
 >[!NOTE]
 >
-> Das folgende Video wurde in AEM 6.3 aufgezeichnet. AEM 6.4+ führt eine neue Repository-Struktur zum Speichern der XML-Datei für Übersetzungsregeln ein. Bei Verwendung der Benutzeroberfläche für die Übersetzungskonfiguration in AEM 6.4 und höher werden die Regeln am Speicherort gespeichert `/conf/global/settings/translation/rules/translation_rules.xml`. Siehe [Identifizieren von zu übersetzenden Inhalten](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html) für weitere Details.
+> Das folgende Video wurde in AEM 6.3 aufgenommen. Ab AEM 6.4 wird eine neue Repository-Struktur zum Speichern der XML-Datei für Übersetzungsregeln eingeführt. Bei Verwendung der Benutzeroberfläche für die Übersetzungskonfiguration ab AEM 6.4 werden die Regeln am Speicherort `/conf/global/settings/translation/rules/translation_rules.xml` gespeichert. Weitere Details finden Sie unter [Identifizieren zu übersetzender Inhalte](https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/tc-rules.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/18135?quality=12&learn=on)
 
-Übersetzungsregeln identifizieren Inhalte in AEM, die zur Übersetzung extrahiert werden sollen. Vordefinierte Übersetzungsregeln decken gängige Anwendungsfälle ab, wie Textkomponenten und Alternativtext für Bildkomponenten. Abhängig von den Anforderungen an die Übersetzung von Projekten können zusätzliche Regeln erforderlich sein. Im Allgemeinen ermöglichen es Übersetzungsregeln Benutzern, Folgendes anzugeben:
+Übersetzungsregeln identifizieren Inhalte in AEM, die für die Übersetzung extrahiert werden sollen. Vordefinierte Übersetzungsregeln decken häufige Anwendungsfälle ab, wie Textkomponenten und Alternativtext für Bildkomponenten. Je nach den Anforderungen an die Übersetzungsprojekte können zusätzliche Regeln erforderlich sein. Im Allgemeinen ermöglichen es Übersetzungsregeln Benutzenden, Folgendes anzugeben:
 
-1. Eigenschaften, die basierend auf Pfad und/oder Ressourcentyp übersetzt werden sollen
+1. Eigenschaften, die basierend auf Pfad- und/oder Ressourcentyp übersetzt werden sollen
 2. Filter für Eigenschaften, die NICHT übersetzt werden sollen
 3. Referenzierte Inhalte, die übersetzt werden sollen (d. h. Bilder oder Inhaltsfragmente)
 
-Der Übersetzungsregel-Editor, der die XML-Übersetzungsdatei aktualisiert. Die Benutzeroberfläche für die Übersetzungskonfiguration erleichtert die Verwaltung verschiedener Übersetzungsregeln und schützt vor Typos bei der direkten Bearbeitung von XML.
+Editor für Übersetzungsregeln, der die XML-Übersetzungsdatei aktualisiert. Die Benutzeroberfläche für die Übersetzungskonfiguration erleichtert die Verwaltung verschiedener Übersetzungsregeln und schützt vor Schreibfehlern bei der direkten Bearbeitung von XML.
 
-Greifen Sie auf die Benutzeroberfläche der Übersetzungskonfiguration zu:
+Zugriff auf die Benutzeroberfläche der Übersetzungskonfiguration:
 
-* **[!UICONTROL AEM Startmenü] > [!UICONTROL Instrumente] > [!UICONTROL Allgemein] > [[!UICONTROL Übersetzungskonfiguration]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
+* **[!UICONTROL AEM Startmenü] > [!UICONTROL Tools] > [!UICONTROL Allgemein] > [[!UICONTROL Übersetzungskonfiguration]](http://localhost:4502/libs/cq/translation/translationrules/contexts.html)**
 
 ## Vor AEM 6.3 {#prior-to-aem}
 
-In früheren AEM wurden die Übersetzungsregeln der Version manuell aktualisiert, indem eine XML-Datei bearbeitet wurde, die sich im Übersetzungs-Workflow befindet: `/etc/workflow/models/translation/translation_rules.xml`.
+In früheren AEM-Versionen wurden die Übersetzungsregeln manuell aktualisiert, indem eine XML-Datei bearbeitet wurde, die sich im Übersetzungs-Workflow befindet: `/etc/workflow/models/translation/translation_rules.xml`.
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Identifizieren zu übersetzender Inhalte](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html)
+* [Identifizieren zu übersetzender Inhalte](https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/tc-rules.html)
 * [Übersetzen von Inhalten für mehrsprachige Sites](https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/translation.html)
-* [https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html)
-* [Best Practices für die Übersetzung](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-bp.html)
+* [https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/tc-manage.html)
+* [Best Practices für die Übersetzung](https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/tc-bp.html)
