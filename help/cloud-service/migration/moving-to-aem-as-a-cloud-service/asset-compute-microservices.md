@@ -1,6 +1,6 @@
 ---
-title: AEM Assets Microservices und Umstellung auf AEM as a Cloud Service
-description: Erfahren Sie, wie Sie mit den asset compute-Microservices von AEM Assets as a Cloud Service automatisch und effizient jede Ausgabedarstellung für Ihre Assets generieren können. Dadurch wird diese Rolle des herkömmlichen AEM-Workflows ersetzt.
+title: AEM Assets-Microservices und Umstellen auf AEM as a Cloud Service
+description: Erfahren Sie, wie Sie mit den Asset Compute-Microservices von AEM Assets as a Cloud Service automatisch und effizient eine beliebige Ausgabedarstellung für Ihre Assets generieren können. Dadurch wird diese Rolle des herkömmlichen AEM-Workflows ersetzt.
 version: Cloud Service
 feature: Asset Compute Microservices
 topic: Migration, Upgrade
@@ -10,15 +10,15 @@ kt: 8635
 thumbnail: 336990.jpeg
 exl-id: 327e8663-086b-4b31-b159-a0cf30480b45
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '323'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# AEM Assets Microservices - Umstellung auf AEM as a Cloud Service
+# AEM Assets-Microservices – Umstellen auf AEM as a Cloud Service
 
-Erfahren Sie, wie Sie mit den asset compute-Microservices von AEM Assets as a Cloud Service automatisch und effizient jede Ausgabedarstellung für Ihre Assets generieren können. Dadurch wird diese Rolle des herkömmlichen AEM-Workflows ersetzt.
+Erfahren Sie, wie Sie mit den Asset Compute-Microservices von AEM Assets as a Cloud Service automatisch und effizient eine beliebige Ausgabedarstellung für Ihre Assets generieren können. Dadurch wird diese Rolle des herkömmlichen AEM-Workflows ersetzt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336990?quality=12&learn=on)
 
@@ -26,46 +26,46 @@ Erfahren Sie, wie Sie mit den asset compute-Microservices von AEM Assets as a Cl
 
 ![Asset-Workflow-Migrations-Tool](./assets/asset-workflow-migration.png)
 
-Verwenden Sie als Teil der Refaktorierung Ihrer Codebasis die [Asset-Workflow-Migrations-Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html?lang=de) , um bestehende Workflows zu migrieren und die Asset compute-Microservices in AEM as a Cloud Service zu verwenden.
+Verwenden Sie als Teil der Refaktorierung Ihrer Code-Basis das [Asset-Workflow-Migrations-Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html?lang=de), um bestehende Workflows zu migrieren und die Asset Compute-Microservices in AEM as a Cloud Service zu verwenden.
 
 ## Wichtigste Aktivitäten
 
-+ Verwenden Sie die [Adobe I/O Workflow Migrator](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator) Tool zum Migrieren von Asset-Verarbeitungs-Workflows zur Verwendung der Asset compute-Microservices.
-+ Richten Sie eine [lokale Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de) und stellen Sie die aktualisierten Workflows bereit. Für komplexe Workflows kann eine manuelle Anpassung erforderlich sein.
++ Verwenden Sie das Tool [Adobe I/O Workflow Migrator](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator), um Asset-Verarbeitungs-Workflows zur Verwendung der Asset Compute-Microservices zu migrieren.
++ Richten Sie eine [lokale Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de) ein und stellen Sie die aktualisierten Workflows bereit. Für komplexe Workflows kann eine manuelle Anpassung erforderlich sein.
 + Führen Sie die Iteration in einer lokalen Entwicklungsumgebung mit dem AEM SDK fort, bis der aktualisierte Workflow mit der Funktionsparität übereinstimmt.
-+ Stellen Sie die aktualisierte Codebasis in einer AEM as a Cloud Service Entwicklungsumgebung bereit und fahren Sie mit der Validierung fort.
++ Stellen Sie die aktualisierte Code-Basis in einer AEM as a Cloud Service-Entwicklungsumgebung bereit und fahren Sie mit der Validierung fort.
 
-## Übungen
+## Praktische Übung
 
 Wenden Sie Ihr Wissen an, indem Sie ausprobieren, was Sie mit dieser praktischen Übung gelernt haben.
 
-Bevor Sie die praktische Übung testen, müssen Sie sich das Video und die folgenden Materialien angesehen und verstanden haben:
+Vergewissern Sie sich, dass Sie das obige Video und die folgenden Materialien gesehen und verstanden haben, bevor Sie die praktische Übung durchführen:
 
-+ [Über AEM as a Cloud Service anders nachdenken](./introduction.md)
++ [Anders denken über AEM as a Cloud Service](./introduction.md)
 + [Onboarding](./onboarding.md)
 
 Stellen Sie außerdem sicher, dass Sie die vorherige praktische Übung abgeschlossen haben:
 
-+ [praktische Übung zum Suchen und Indizieren](./search-and-indexing.md#hands-on-exercise)
++ [Praktische Übung zum Suchen und Indizieren](./search-and-indexing.md#hands-on-exercise)
 
 <table style="border-width:0">
     <tr>
         <td style="width:150px">
             <a  rel="noreferrer"
                 target="_blank"
-                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session8-assets#cloud-acceleration-bootcamp---session-8-assets-and-microservices"><img alt="GitHub-Repository für praktische Übungen" src="./assets/github.png"/>
+                href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session8-assets#cloud-acceleration-bootcamp---session-8-assets-and-microservices"><img alt="Praktische GitHub-Repository-Übung" src="./assets/github.png"/>
             </a>        
         </td>
         <td style="width:100%;margin-bottom:1rem;">
             <div style="font-size:1.25rem;font-weight:400;">Vorgehensweise beim Hochladen von Assets</div>
             <p style="margin:1rem 0">
-                Erfahren Sie, wie Sie AEM Assets-Verarbeitungsprofile definieren und Ordnern zuweisen und Assets mit dem CLI-Modul "aem-upload"in AEM hochladen.
+                Erfahren Sie, wie Sie AEM Assets-Verarbeitungsprofile definieren sowie Ordnern zuweisen und Assets mit dem npm-CLI-Modul „aem-upload“ in AEM hochladen.
             </p>
             <a  rel="noreferrer"
                 target="_blank"
                 href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session8-assets#cloud-acceleration-bootcamp---session-8-assets-and-microservices" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Testen der Asset-Verwaltung</span>
-            </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Asset-Management ausprobieren</span>
+</a>
         </td>
     </tr>
 </table>
