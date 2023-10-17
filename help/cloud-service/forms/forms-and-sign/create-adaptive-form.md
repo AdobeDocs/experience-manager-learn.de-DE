@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines adaptiven Formulars zur Verwendung der erstellten Acrobat Sign Cloud Services-Konfiguration
+title: Erstellen eines adaptiven Formulars zur Verwendung der erstellten Acrobat Sign-Cloud-Services-Konfiguration
 description: Erstellen eines adaptiven Formulars zur Verwendung mit Acrobat Sign
 type: Documentation
 role: Developer
@@ -13,9 +13,9 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 6bdfb841-3b7e-4c22-8907-a1b98df42ae5
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '44'
-ht-degree: 15%
+ht-degree: 100%
 
 ---
 
