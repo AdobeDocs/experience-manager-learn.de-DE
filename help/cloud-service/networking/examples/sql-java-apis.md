@@ -1,6 +1,6 @@
 ---
 title: SQL-Verbindungen mit Java™-APIs
-description: Erfahren Sie, wie Sie über Java™ SQL-APIs und Ausgangs-Ports von AEM as a Cloud Service eine Verbindung zu SQL-Datenbanken herstellen.
+description: Erfahren Sie, wie Sie von AEM as a Cloud Service mithilfe von Java™-SQL-APIs und Ausgangs-Ports eine Verbindung zu SQL-Datenbanken herstellen.
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -10,31 +10,31 @@ kt: 9356
 thumbnail: KT-9356.jpeg
 exl-id: ec9d37cb-70b6-4414-a92b-3b84b3f458ab
 source-git-commit: d00e47895d1b2b6fb629b8ee9bcf6b722c127fd3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '305'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # SQL-Verbindungen mit Java™-APIs
 
-Verbindungen zu SQL-Datenbanken (und anderen Nicht-HTTP/HTTPS-Diensten) müssen von AEM bereitgestellt werden.
+Verbindungen zu SQL-Datenbanken (und anderen Nicht-HTTP/HTTPS-Diensten) müssen aus AEM herausgeleitet werden.
 
-Die Ausnahme für diese Regel ist, wenn [dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) verwendet wird und sich der Dienst auf Adobe oder Azure befindet.
+Die Ausnahme von dieser Regel ist, wenn eine [dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) verwendet wird und sich der Dienst auf Adobe oder Azure befindet.
 
 ## Erweiterte Netzwerkunterstützung
 
-Das folgende Codebeispiel wird von den folgenden erweiterten Netzwerkoptionen unterstützt.
+Das folgende Code-Beispiel wird von den folgenden erweiterten Netzwerkoptionen unterstützt.
 
-Stellen Sie die [geeignete](../advanced-networking.md#advanced-networking) Vor diesem Tutorial wurde eine erweiterte Netzwerkkonfiguration eingerichtet.
+Stellen Sie sicher, dass die [geeignete](../advanced-networking.md#advanced-networking) erweiterte Netzwerkkonfiguration eingerichtet wurde, bevor Sie dieses Tutorial durchführen.
 
-| Kein erweitertes Netzwerk | [Flexibles Port-Egress](../flexible-port-egress.md) | [Dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) | [Virtuelles privates Netzwerk](../vpn.md) |
+| Keine erweiterten Netzwerkfunktionen | [Flexibler Port-Ausgang](../flexible-port-egress.md) | [Dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) | [Virtuelles privates Netzwerk](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
-| ✘ | ms | ms | ms |
+| ✘ | ✔ | ✔ | ✔ |
 
 ## OSGi-Konfiguration
 
-Da Geheimnisse nicht im Code gespeichert werden dürfen, sollten Benutzername und Kennwort der SQL-Verbindung am besten über [geheime OSGi-Konfigurationsvariablen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values), festgelegt mit AIO CLI oder Cloud Manager-APIs.
+Da Geheimnisse nicht im Code gespeichert werden dürfen, sollten Benutzername und Kennwort der SQL-Verbindung am besten über [geheime OSGi-Konfigurationsvariablen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=de#secret-configuration-values) bereitgestellt werden. Festgelegt werden diese mit der AIO-CLI oder Cloud Manager-APIs.
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/com.adobe.aem.wknd.examples.core.connections.impl.MySqlExternalServiceImpl.cfg.json`
 
@@ -45,15 +45,15 @@ Da Geheimnisse nicht im Code gespeichert werden dürfen, sollten Benutzername un
 }
 ```
 
-Folgendes `aio CLI` kann verwendet werden, um die OSGi-Geheimnisse für jede Umgebung festzulegen:
+Der folgende `aio CLI`-Befehl kann verwendet werden, um die OSGi-Geheimnisse für die einzelnen Umgebungen festzulegen:
 
 ```shell
 $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONMENT_ID> --secret MYSQL_USERNAME "mysql-user" --secret MYSQL_PASSWORD "password123"
 ```
 
-## Codebeispiel
+## Code-Beispiel
 
-Dieses Java™-Codebeispiel ist ein OSGi-Dienst, der über den folgenden Cloud Manager eine Verbindung zu einem externen SQL Server-Webserver herstellt `portForwards` der [enableEnvironmentAdvancedNetworkingConfiguration](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) Vorgang.
+Dieses Java™-Code-Beispiel bezieht sich auf einen OSGi-Dienst, der über die folgende Cloud Manager-`portForwards`-Regel des Vorgangs [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) eine Verbindung zu einem externen SQL Server-Webserver herstellt.
 
 ```json
 ...
@@ -150,11 +150,11 @@ public class MySqlExternalServiceImpl implements ExternalService {
 
 ## Abhängigkeiten von MySQL-Treibern
 
-AEM as a Cloud Service erfordert oft, dass Sie Java™-Datenbanktreiber bereitstellen, um die Verbindungen zu unterstützen. Die Bereitstellung der Treiber wird in der Regel am besten dadurch erreicht, dass die OSGi-Bundle-Artefakte, die diese Treiber enthalten, über das AEM in das Projekt eingebettet werden. `all` Paket.
+Bei AEM as a Cloud Service müssen Sie oft Java™-Datenbanktreiber zur Unterstützung der Verbindungen bereitstellen. Die Bereitstellung der Treiber wird in der Regel am besten dadurch erreicht, dass die OSGi-Bundle-Artefakte, die diese Treiber enthalten, über das `all`-Paket in das AEM-Projekt eingebettet werden.
 
 ### Reactor pom.xml
 
-Abhängigkeiten von Datenbanktreibern in den Reaktor einschließen `pom.xml` und referenzieren Sie sie dann im `all` Teilprojekte.
+Schließen Sie die Datenbanktreiber-Abhängigkeiten in den Reaktor `pom.xml` ein und referenzieren Sie sie dann in den `all`-Unterprojekten.
 
 + `pom.xml`
 
@@ -174,9 +174,9 @@ Abhängigkeiten von Datenbanktreibern in den Reaktor einschließen `pom.xml` und
 ...
 ```
 
-## Alle pom.xml
+## All pom.xml
 
-Betten Sie die Abhängigkeitsartefakte des Datenbanktreibers in `all` -Paket bereitgestellt werden und auf AEM as a Cloud Service verfügbar sind. Diese Artefakte __must__ sind OSGi-Bundles, die die Java™-Klasse des Datenbanktreibers exportieren.
+Betten Sie die Abhängigkeitsartefakte des Datenbanktreibers in das `all`-Paket ein, sodass sie auf AEM as a Cloud Service bereitgestellt werden und verfügbar sind. Diese Artefakte __müssen__ OSGi-Bundles sein, mit denen die Datenbanktreiber-Java™-Klasse exportiert wird.
 
 + `all/pom.xml`
 
