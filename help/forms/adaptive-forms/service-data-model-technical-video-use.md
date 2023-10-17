@@ -1,6 +1,6 @@
 ---
 title: Verwenden von Dienstdatenmodellen mit AEM Forms
-description: Der Regeleditor AEM Adaptive Forms kann die im Formulardatenmodell erstellten Dienste nutzen.
+description: Der Regeleditor für adaptive AEM-Formulare kann die im Formulardatenmodell erstellten Dienste nutzen.
 feature: Adaptive Forms, Form Data Model
 version: 6.4,6.5
 topic: Development
@@ -9,14 +9,14 @@ level: Beginner
 exl-id: eef3df8f-1a49-44af-9feb-44be62bd83e8
 last-substantial-update: 2021-06-09T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Verwenden von Dienstdatenmodellen mit AEM Forms{#using-service-data-models-with-aem-forms}
 
-Der Regeleditor AEM Adaptive Forms kann die im Formulardatenmodell erstellten Dienste nutzen.
+Der Regeleditor für adaptive AEM-Formulare kann die im Formulardatenmodell erstellten Dienste nutzen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/17739?quality=12&learn=on)
