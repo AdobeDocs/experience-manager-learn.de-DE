@@ -1,6 +1,6 @@
 ---
 title: Zusammenführen von Daten mit der XDP-Vorlage
-description: Stellen Sie mit den erforderlichen Parametern eine POST-Anfrage an den -Endpunkt.
+description: Stellen Sie mit den erforderlichen Parametern eine POST-Anfrage an den Endpunkt.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -9,19 +9,20 @@ feature: Output Service
 topic: Development
 kt: 8185
 thumbnail: 332439.jpg
-source-git-commit: f712e86600ed18aee43187a5fb105324b14b7b89
-workflow-type: tm+mt
+exl-id: d144b3f6-7c7a-46a7-bc5f-1767895749d0
+source-git-commit: 47d36e472719049de1346c5f0bba010c9af4e039
+workflow-type: ht
 source-wordcount: '138'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Aufrufen der POST
+# Durchführen eines POST-Aufrufs
 
 
-Der nächste Schritt besteht darin, einen HTTP-POST-Aufruf an den -Endpunkt mit den erforderlichen Parametern durchzuführen. Die Vorlage und die Datendateien werden als Ressourcendateien bereitgestellt. Die Eigenschaften des generierten PDF-Dokuments werden über den Parameter der Option in der Anfrage angegeben. Die Eigenschaft embedFonts wird verwendet, um benutzerdefinierte Schriftarten in das generierte PDF-Dokument einzubetten.[Befolgen Sie diese Dokumentation , um benutzerdefinierte Schriftarten für Ihre Forms-Cloud-Instanz bereitzustellen.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en) Die Eigenschaften werden in der Ressourcendatei options.json angegeben. Da der Endpunkt über eine Token-basierte Authentifizierung verfügt, übergeben wir das Zugriffstoken in der Anfragekopfzeile.
+Der nächste Schritt besteht darin, einen HTTP-POST-Aufruf an den Endpunkt mit den erforderlichen Parametern durchzuführen. Die Vorlage und die Datendateien werden als Ressourcendateien bereitgestellt. Die Eigenschaften des generierten PDF-Dokuments werden über den Parameter der Option in der Anfrage angegeben. Die Eigenschaft „embedFonts“ wird verwendet, um benutzerdefinierte Schriftarten in das generierte PDF-Dokument einzubetten.[Befolgen Sie diese Dokumentation, um benutzerdefinierte Schriftarten für Ihre Forms-Cloud-Instanz bereitzustellen.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=de) Die Eigenschaften werden in der Ressourcendatei „options.json“ angegeben. Da der Endpunkt über eine Token-basierte Authentifizierung verfügt, übergeben wir das Zugriffs-Token im Anfrage-Header.
 
-Der folgende Code wurde verwendet, um PDF durch Zusammenführen von Daten mit der Vorlage zu generieren
+Der folgende Code wurde verwendet, um eine PDF durch Zusammenführen von Daten mit der Vorlage zu generieren
 
 ```java
 public class DocumentGeneration
