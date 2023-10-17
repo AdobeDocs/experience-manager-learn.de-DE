@@ -1,6 +1,6 @@
 ---
 title: Generieren von Adobe Experience Platform-FPIDs mit AEM Sites
-description: Erfahren Sie, wie Sie Adobe Experience Platform FPID-Cookies mit AEM Sites generieren oder aktualisieren.
+description: Hier erfahren Sie mehr über das Generieren bzw. Aktualisieren von Adobe Experience Platform FPID-Cookies mit AEM Sites.
 version: Cloud Service
 feature: Integrations, APIs, Dispatcher
 topic: Integrations, Personalization, Development
@@ -13,64 +13,64 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1040'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Generieren von Experience Platform-FPIDs mit AEM Sites
 
-Für die Integration von Adobe Experience Manager (AEM) Sites in Adobe Experience Platform (AEP) ist es erforderlich, dass AEM ein eindeutiges Erstanbieter-Geräte-ID-Cookie (FPID) generieren und verwalten, um die Benutzeraktivität eindeutig zu verfolgen.
+Für die Zusammenarbeit von Adobe Experience Manager (AEM) Sites mit Adobe Experience Platform (AEP) muss AEM ein eindeutiges Erstanbieter-Geräte-ID(FPID)-Cookie generieren und verwalten, um die Benutzeraktivität eindeutig zu verfolgen.
 
-Lesen Sie die entsprechende Dokumentation unter [Erfahren Sie mehr über die Zusammenarbeit von Erstanbieter-Geräte-IDs und Experience Cloud-IDs](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=en).
+Lesen Sie die unterstützende Dokumentation: [Erfahren Sie mehr über die Zusammenarbeit von Erstanbieter-Geräte-IDs und Experience Cloud-IDs](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=de).
 
 Nachstehend finden Sie einen Überblick darüber, wie FPIDs bei der Verwendung von AEM als Webhost funktionieren.
 
-![FPID und ECIDs mit AEM](./assets/aem-platform-fpid-architecture.png)
+![FPID und ECID mit AEM](./assets/aem-platform-fpid-architecture.png)
 
-## FPID mit AEM generieren und beibehalten
+## Generieren und Beibehalten der FPID mit AEM
 
-Der AEM-Veröffentlichungsdienst optimiert die Leistung, indem Anforderungen so oft wie möglich zwischengespeichert werden, sowohl im CDN- als auch im AEM Dispatcher-Cache.
+Der AEM-Publish-Service optimiert die Leistung, indem so viele Anfragen wie möglich zwischengespeichert werden, sowohl in CDN- als auch in AEM-Dispatcher-Caches.
 
-Es ist zwingend erforderlich, dass HTTP-Anforderungen, die das Unique-per-User-FPID-Cookie generieren und den FPID-Wert zurückgeben, nie zwischengespeichert und direkt von AEM Publish bereitgestellt werden. Dadurch kann Logik implementiert werden, um Eindeutigkeit zu gewährleisten.
+Es ist zwingend erforderlich, dass HTTP-Anfragen, die das pro Benutzerin bzw. Benutzer eindeutige FPID-Cookie generieren und den FPID-Wert zurückgeben, nie zwischengespeichert und direkt von AEM Publish bereitgestellt werden. Dadurch kann Logik implementiert und so Eindeutigkeit gewährleistet werden.
 
-Vermeiden Sie das Generieren des FPID-Cookies in Anforderungen für Web-Seiten oder andere zwischenspeicherbare Ressourcen, da die Kombination aus der eindeutigen Anforderung der FPID diese Ressourcen unerreichbar machen würde.
+Vermeiden Sie das Generieren des FPID-Cookies in Anfragen für Web-Seiten oder andere zwischenspeicherbare Ressourcen, da durch die Kombination mit der Anforderung der FPID-Eindeutigkeit diese Ressourcen nicht zwischenspeicherfähig wären.
 
-Im folgenden Diagramm wird beschrieben, wie der AEM Publish-Dienst FPIDs verwaltet.
+Im folgenden Diagramm wird beschrieben, wie der AEM-Publish-Service FPIDs verwaltet.
 
-![FPID und Flussdiagramm AEM](./assets/aem-fpid-flow.png)
+![Flussdiagramm für FPID und AEM](./assets/aem-fpid-flow.png)
 
-1. Der Webbrowser stellt eine Anforderung für eine von AEM gehostete Webseite. Die Anforderung kann mithilfe einer zwischengespeicherten Kopie der Webseite aus dem CDN- oder AEM Dispatcher-Cache verarbeitet werden.
-1. Wenn die Webseite nicht über CDN oder AEM Dispatcher-Caches bedient werden kann, erreicht die Anforderung den AEM-Veröffentlichungsdienst, der die angeforderte Webseite generiert.
-1. Die Webseite wird dann an den Webbrowser zurückgegeben und die Caches gefüllt, die die Anforderung nicht bedienen konnten. Bei AEM erwarten Sie, dass die Cache-Trefferraten von CDN und AEM Dispatcher über 90 % liegen.
-1. Die Webseite enthält JavaScript, das eine nicht speicherbare asynchrone XHR-Anfrage (AJAX) an ein benutzerdefiniertes FPID-Servlet im AEM Publish-Dienst sendet. Da es sich um eine nicht speicherbare Anforderung handelt (aufgrund des zufälligen Abfrageparameters und der Cache-Control-Header), wird sie nie vom CDN oder AEM Dispatcher zwischengespeichert und erreicht immer den AEM-Veröffentlichungsdienst, um die Antwort zu generieren.
-1. Das benutzerdefinierte FPID-Servlet im AEM Publish-Dienst verarbeitet die Anforderung und generiert eine neue FPID, wenn kein vorhandenes FPID-Cookie gefunden wird, oder verlängert die Lebensdauer eines vorhandenen FPID-Cookies. Das Servlet gibt auch die FPID im Antworttext für die Verwendung durch clientseitiges JavaScript zurück. Glücklicherweise ist die benutzerdefinierte FPID-Servlet-Logik einfach und verhindert, dass diese Anfrage die Leistung des AEM-Veröffentlichungsdienstes beeinträchtigt.
+1. Der Webbrowser stellt eine Anfrage für eine von AEM gehostete Web-Seite. Die Anfrage kann mithilfe einer zwischengespeicherten Kopie der Web-Seite aus dem CDN- oder AEM-Dispatcher-Cache verarbeitet werden.
+1. Wenn eine Anfrage für die Web-Seite nicht über CDN- oder AEM Dispatcher-Caches möglich ist, geht sie an den AEM-Publish-Service, der die angeforderte Web-Seite generiert.
+1. Die Web-Seite wird dann an den Webbrowser zurückgegeben und die Caches, die die Anfrage nicht verarbeiten konnten, werden gefüllt. Bei AEM können Sie davon ausgehen, dass die Cache-Trefferraten von CDN und AEM Dispatcher über 90 % liegen.
+1. Die Web-Seite enthält JavaScript, das eine nicht zwischenspeicherbare, asynchrone XHR-Anfrage (AJAX) an ein benutzerdefiniertes FPID-Servlet im AEM-Publish-Service sendet. Da es sich um eine nicht zwischenspeicherbare Anfrage handelt (aufgrund des zufälligen Abfrageparameters und der Cache-Kontroll-Header), wird sie nie vom CDN oder AEM Dispatcher zwischengespeichert und erreicht immer den AEM-Publish-Service, um die Antwort zu generieren.
+1. Das benutzerdefinierte FPID-Servlet im AEM-Publish-Service verarbeitet die Anfrage und generiert eine neue FPID, wenn kein vorhandenes FPID-Cookie gefunden wird, oder verlängert die Lebensdauer eines vorhandenen FPID-Cookies. Das Servlet gibt die FPID außerdem im Antworttext zur Verwendung durch das Client-seitige JavaScript zurück. Glücklicherweise ist die benutzerdefinierte FPID-Servlet-Logik einfach und verhindert, dass diese Anfrage die Leistung des AEM-Publish-Service beeinträchtigt.
 1. Die Antwort für die XHR-Anfrage wird mit dem FPID-Cookie und der FPID als JSON im Antworttext zur Verwendung durch das Platform Web SDK an den Browser zurückgegeben.
 
 ## Code-Beispiel
 
-Der folgende Code und die folgende Konfiguration können im AEM Publish-Dienst bereitgestellt werden, um einen Endpunkt zu erstellen, der ein vorhandenes FPID-Cookie generiert oder verlängert und die FPID als JSON zurückgibt.
+Der folgende Code und die folgende Konfiguration können im AEM-Publish-Service bereitgestellt werden, um einen Endpunkt zu erstellen, der ein neues FPID-Cookie generiert oder die Lebensdauer eines vorhandenen FPID-Cookies verlängert und die FPID als JSON zurückgibt.
 
-### AEM FPID-Cookie-Servlet
+### AEM-FPID-Cookie-Servlet
 
-Es muss ein AEM HTTP-Endpunkt erstellt werden, um mithilfe eines [Sling-Servlet](https://sling.apache.org/documentation/the-sling-engine/servlets.html#registering-a-servlet-using-java-annotations-1).
+Es muss ein AEM-HTTP-Endpunkt erstellt werden, um ein FPID-Cookie mithilfe eines [Sling-Servlets](https://sling.apache.org/documentation/the-sling-engine/servlets.html#registering-a-servlet-using-java-annotations-1) zu generieren oder zu verlängern.
 
-+ Das Servlet ist an `/bin/aem/fpid` da für den Zugriff keine Authentifizierung erforderlich ist. Wenn eine Authentifizierung erforderlich ist, binden Sie an einen Sling-Ressourcentyp.
-+ Das Servlet akzeptiert HTTP-GET-Anfragen. Die Antwort ist mit `Cache-Control: no-store` , um die Zwischenspeicherung zu verhindern. Dieser Endpunkt sollte jedoch auch mithilfe eindeutiger Cache-Busting-Abfrageparameter angefordert werden.
++ Das Servlet ist an `/bin/aem/fpid` gebunden, da für den Zugriff keine Authentifizierung erforderlich ist. Wenn eine Authentifizierung erforderlich ist, binden Sie es an einen Sling-Ressourcentyp.
++ Das Servlet akzeptiert HTTP-GET-Anfragen. Die Antwort ist mit `Cache-Control: no-store` gekennzeichnet, um Caching zu verhindern. Dieser Endpunkt sollte jedoch auch mithilfe eindeutiger Cache-Busting-Abfrageparameter angefordert werden.
 
-Wenn eine HTTP-Anforderung das Servlet erreicht, prüft das Servlet, ob in der Anfrage ein FPID-Cookie vorhanden ist:
+Wenn eine HTTP-Anfrage das Servlet erreicht, prüft das Servlet, ob in der Anfrage ein FPID-Cookie vorhanden ist:
 
-+ Wenn ein FPID-Cookie vorhanden ist, verlängern Sie die Lebensdauer des Cookies und sammeln Sie seinen Wert, um in die Antwort zu schreiben.
-+ Wenn kein FPID-Cookie vorhanden ist, generieren Sie ein neues FPID-Cookie und speichern Sie den Wert, der in die Antwort geschrieben werden soll.
++ Wenn ein FPID-Cookie vorhanden ist, verlängern Sie die Lebensdauer des Cookies und erfassen Sie seinen Wert, um ihn in die Antwort zu schreiben.
++ Wenn kein FPID-Cookie vorhanden ist, generieren Sie ein neues FPID-Cookie und speichern Sie den Wert, um ihn in die Antwort zu schreiben.
 
-Das Servlet schreibt dann die FPID als JSON-Objekt in die Antwort im Formular: `{ fpid: "<FPID VALUE>" }`.
+Das Servlet schreibt dann die FPID als JSON-Objekt in folgender Form in die Antwort: `{ fpid: "<FPID VALUE>" }`.
 
-Es ist wichtig, die FPID dem Client im Hauptteil bereitzustellen, da das FPID-Cookie markiert ist `HttpOnly`, was bedeutet, dass nur der Server seinen Wert lesen kann und clientseitiges JavaScript dies nicht kann.
+Es ist wichtig, die FPID dem Client im Hauptteil bereitzustellen, da das FPID-Cookie mit `HttpOnly` gekennzeichnet ist. Das bedeutet, dass nur der Server seinen Wert lesen kann, also nicht das Client-seitige JavaScript.
 
 Der FPID-Wert aus dem Antworttext wird verwendet, um Aufrufe mithilfe des Platform Web SDK zu parametrisieren.
 
-Nachstehend finden Sie einen Beispielcode für einen Servlet-Endpunkt AEM (verfügbar über `HTTP GET /bin/aep/fpid`), das ein FPID-Cookie generiert oder aktualisiert und die FPID als JSON zurückgibt.
+Im Folgenden finden Sie einen Beispiel-Code für einen AEM-Servlet-Endpunkt (verfügbar über `HTTP GET /bin/aep/fpid`), der ein FPID-Cookie generiert oder aktualisiert und die FPID als JSON zurückgibt.
 
 + `core/src/main/java/com/adobe/aem/guides/wkndexamples/core/aep/impl/FpidServlet.java`
 
@@ -149,22 +149,22 @@ public class FpidServlet extends SlingAllMethodsServlet {
 
 ### HTML-Skript
 
-Ein benutzerdefiniertes clientseitiges JavaScript muss zur Seite hinzugefügt werden, um das Servlet asynchron aufzurufen, das FPID-Cookie zu generieren oder zu aktualisieren und die FPID in der Antwort zurückzugeben.
+Ein benutzerdefiniertes Client-seitiges JavaScript muss zur Seite hinzugefügt werden, um das Servlet asynchron aufzurufen, das FPID-Cookie zu generieren oder zu aktualisieren und die FPID in der Antwort zurückzugeben.
 
-Dieses JavaScript-Skript wird der Seite mit einer der folgenden Methoden hinzugefügt:
+Dieses JavaScript-Skript wird der Seite normalerweise mit einer der folgenden Methoden hinzugefügt:
 
 + [Tags in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de)
-+ [AEM Client Library](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/clientlibs.html?lang=en)
++ [AEM-Client-Bibliothek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/clientlibs.html?lang=de)
 
-Der XHR-Aufruf an das benutzerdefinierte AEM-FPID-Servlet ist schnell, wenn auch asynchron, sodass ein Benutzer eine von AEM bereitgestellte Webseite besuchen und wegnavigieren kann, bevor die Anfrage abgeschlossen werden kann.
-In diesem Fall wird der gleiche Prozess beim nächsten Laden einer Webseite von AEM erneut versucht.
+Der XHR-Aufruf an das benutzerdefinierte AEM-FPID-Servlet ist schnell, wenn auch asynchron, sodass es möglich ist, dass eine Benutzerin oder ein Benutzer eine von AEM bereitgestellte Web-Seite besucht und verlässt, bevor die Anfrage abgeschlossen werden kann.
+In diesem Fall wird beim nächsten Laden einer Web-Seite von AEM erneut versucht, denselben Prozess auszuführen.
 
-Die HTTP-GET zum AEM FPID-Servlet (`/bin/aep/fpid`) mit einem zufälligen Abfrageparameter parametrisiert wird, um sicherzustellen, dass jede Infrastruktur zwischen dem Browser und dem AEM-Veröffentlichungsdienst die Antwort der Anfrage nicht zwischenspeichert.
-Entsprechend wird die `Cache-Control: no-store` -Anfragekopfzeile wird hinzugefügt, um die Zwischenspeicherung zu vermeiden.
+Die HTTP-GET-Anfrage an das AEM-FPID-Servlet (`/bin/aep/fpid`) wird mit einem zufälligen Abfrageparameter parametrisiert, um sicherzustellen, dass keine Infrastruktur zwischen Browser und AEM-Publish-Service die Anfrageantwort zwischenspeichert.
+Entsprechend wird der Anfrage-Header `Cache-Control: no-store` hinzugefügt, um ein Caching zu vermeiden.
 
-Bei einem Aufruf des AEM FPID-Servlets wird die FPID aus der JSON-Antwort abgerufen und von der [Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=en) , um sie an Experience Platform-APIs zu senden.
+Bei einem Aufruf des AEM-FPID-Servlets wird die FPID aus der JSON-Antwort abgerufen und vom [Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=de) verwendet, um sie an Experience Platform-APIs zu senden.
 
-Weitere Informationen finden Sie in der Dokumentation zur Experience Platform . [Verwenden von FPIDs in identityMap](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html#identityMap)
+Weitere Informationen zum [Verwenden von FPIDs in identityMap](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html#identityMap?lang=de) finden Sie in der Experience Platform-Dokumentation. 
 
 ```javascript
 ...
@@ -189,9 +189,9 @@ Weitere Informationen finden Sie in der Dokumentation zur Experience Platform . 
 
 ### Dispatcher-Zulassungsfilter
 
-Schließlich müssen HTTP-GET-Anfragen an das benutzerdefinierte FPID-Servlet über AEM Dispatcher zugelassen werden. `filter.any` Konfiguration.
+Schließlich müssen HTTP-GET-Anfragen an das benutzerdefinierte FPID-Servlet über die AEM-Dispatcher-Konfiguration `filter.any` zugelassen werden.
 
-Wenn diese Dispatcher-Konfiguration nicht korrekt implementiert ist, fordert der HTTP-GET Folgendes an: `/bin/aep/fpid` ergibt 404.
+Wenn diese Dispatcher-Konfiguration nicht korrekt implementiert ist, führen HTTP-GET-Anfragen an `/bin/aep/fpid` zu einem 404-Fehler.
 
 + `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 
@@ -199,10 +199,10 @@ Wenn diese Dispatcher-Konfiguration nicht korrekt implementiert ist, fordert der
 /1099 { /type "allow" /method "GET" /url "/bin/aep/fpid" }
 ```
 
-## Experience Platformen
+## Experience Platform-Ressourcen
 
-Lesen Sie die folgende Experience Platform-Dokumentation für Erstanbieter-Geräte-IDs (FPIDs) und verwalten Sie Identitätsdaten mit dem Platform Web SDK.
+Informationen zu FPIDs (First-Party Device IDs, Erstanbieter-Geräte-IDs) und zum Verwalten von Identitätsdaten mit dem Platform Web SDK finden Sie in der folgenden Experience Platform-Dokumentation.
 
-+ [Erstanbieter-Geräte-IDs generieren](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html)
-+ [Erstanbieter-Geräte-IDs im Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html)
-+ [Identitätsdaten im Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html)
++ [Generieren von FPIDs](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=de)
++ [FPIDs im Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html?lang=de)
++ [Identitätsdaten im Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=de)
