@@ -1,6 +1,6 @@
 ---
-title: as a Cloud Service digitale Registrierung für AEM Forms
-description: Erfahren Sie, wie AEM Forms as a Cloud Service den Anwendungsfall "Digitale Registrierung"unterstützt.
+title: AEM Forms as a Cloud Service – Digitale Registrierung
+description: Erfahren Sie, wie AEM Forms as a Cloud Service den Anwendungsfall „Digitale Registrierung“ unterstützt.
 version: Cloud Service
 topic: Migration, Upgrade
 feature: Migration
@@ -10,14 +10,14 @@ kt: 8916
 thumbnail: 336966.jpeg
 exl-id: 553a0b3a-f9a9-4b05-b4e2-6d9c6c1b0156
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '39'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 # Digitale Registrierung
 
-Erfahren Sie, wie AEM Forms as a Cloud Service den Anwendungsfall &quot;Digitale Registrierung&quot;unterstützt.
+Erfahren Sie, wie AEM Forms as a Cloud Service den Anwendungsfall „Digitale Registrierung“ unterstützt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336966?quality=12&learn=on)
