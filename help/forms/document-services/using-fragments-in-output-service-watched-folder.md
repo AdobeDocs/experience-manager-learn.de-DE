@@ -1,6 +1,6 @@
 ---
 title: Verwenden von Fragmenten im Ausgabedienst mit überwachten Ordnern
-description: PDF-Dokumente mit Fragmenten im CRX-Repository erstellen
+description: Generieren von PDF-Dokumenten mit Fragmenten im CRX-Repository
 feature: Output Service
 version: 6.4,6.5
 topic: Development
@@ -8,32 +8,33 @@ role: Developer
 level: Intermediate
 last-substantial-update: 2022-09-07T00:00:00Z
 thumbnail: ecma-fragments.jpg
-source-git-commit: 9229a92a0d33c49526d10362ac4a5f14823294ed
-workflow-type: tm+mt
+exl-id: 6b0bd2f1-b8ee-4f96-9813-8c11aedd3621
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '364'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# PDF-Dokument mit Fragmenten mithilfe des ECMA-Skripts erstellen{#developing-with-output-and-forms-services-in-aem-forms}
+# Erstellen von PDF-Dokument mit Fragmenten mithilfe des ECMA-Skripts{#developing-with-output-and-forms-services-in-aem-forms}
 
 
-In diesem Artikel verwenden wir den Output-Dienst, um PDF-Dateien mit XDP-Fragmenten zu generieren. Die Haupt-XDP und die Fragmente befinden sich im CRX-Repository. Es ist wichtig, die Dateisystemordnerstruktur in AEM zu imitieren. Wenn Sie beispielsweise ein Fragment im Fragmentordner in Ihrer xdp verwenden, müssen Sie einen Ordner mit dem Namen **Fragmente** unter Ihrem Basisordner in AEM. Der Basisordner enthält Ihre Basis-XDP-Vorlage. Wenn Sie beispielsweise die folgende Struktur auf Ihrem Dateisystem haben
-* c:\xdptemplates - This will contain your base xdp template
-* c:\xdptemplates\fragments - This folder will contain fragments and the main template will reference the fragment as shown below
-   ![fragment-xdp](assets/survey-fragment.png).
-* Die Ordner-xdpdocuments enthalten Ihre Basisvorlage und die Fragmente in **Fragmente** Ordner
+In diesem Artikel verwenden wir den Output-Dienst, um PDF-Dateien mit XDP-Fragmenten zu generieren. Die XDP-Hauptdatei und die Fragmente befinden sich im CRX-Repository. Es ist wichtig, die Dateisystem-Ordnerstruktur in AEM nachzuahmen. Wenn Sie beispielsweise ein Fragment im Fragmentordner in Ihrer XDP verwenden, müssen Sie einen Ordner mit dem Namen **fragments** unter Ihrem Basisordner in AEM erstellen. Der Basisordner enthält Ihre XDP-Basisvorlage. Folgendes gilt, wenn beispielsweise die folgende Struktur auf Ihrem Dateisystem vorhanden ist:
+* c:\xdptemplates: Dieser Ordner enthält Ihre XDP-Basisvorlage.
+* c:\xdptemplates\fragments: Dieser Ordner enthält Fragmente und die Hauptvorlage verweist auf das Fragment, wie unten dargestellt.
+  ![Fragment-XDP](assets/survey-fragment.png).
+* Die Ordner „xdpdocuments“ enthält Ihre Basisvorlage und die Fragmente im Ordner **fragments**.
 
-Sie können die erforderliche Struktur mithilfe der [Formulare und Dokument-Benutzeroberfläche](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+Sie können die erforderliche Struktur mithilfe der Benutzeroberfläche [Formulare und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) erstellen.
 
-Im Folgenden finden Sie die Ordnerstruktur für das Beispiel-XDP, das 2 Fragmente verwendet
-![forms&amp;document](assets/fragment-folder-structure-ui.png)
-
-
-* Output-Dienst - In der Regel wird dieser Dienst verwendet, um XML-Daten mit einer xdp-Vorlage oder PDF zusammenzuführen, um eine reduzierte PDF-Datei zu generieren. Weitere Informationen finden Sie im Abschnitt [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) für den Output-Dienst. In diesem Beispiel verwenden wir Fragmente, die sich im CRX-Repository befinden.
+Im Folgenden finden Sie die Ordnerstruktur für das XDP-Beispiel, das 2 Fragmente verwendet.
+![Formulare und Documente](assets/fragment-folder-structure-ui.png)
 
 
-Das folgende ECMA-Skript wurde verwendet, um PDF zu generieren. Beachten Sie die Verwendung von ResourceResolver und ResourceResolverHelper im Code. Der ResourceResolver ist erforderlich, da dieser Code außerhalb jedes Benutzerkontexts ausgeführt wird.
+* Output-Dienst: In der Regel wird dieser Dienst verwendet, um XML-Daten mit einer XDP-Vorlage oder PDF zusammenzuführen, um eine reduzierte PDF-Datei zu generieren. Weitere Informationen finden Sie im [Javadoc](https://helpx.adobe.com/de/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) für den Output-Dienst. In diesem Beispiel verwenden wir Fragmente, die sich im CRX-Repository befinden.
+
+
+Das folgende ECMA-Skript wurde verwendet, um ein PDF zu generieren. Beachten Sie die Verwendung von ResourceResolver und ResourceResolverHelper im Code. Der ResourceResolver ist erforderlich, da dieser Code außerhalb jedes Benutzerkontexts ausgeführt wird.
 
 ```java
 var inputMap = processorContext.getInputMap();
@@ -63,13 +64,13 @@ resourceResolverHelper.callWith(resourceResolver, {call: function()
  });
 ```
 
-**So testen Sie das Beispielpaket auf Ihrem System**
-* [Bereitstellen des DevelopingWithServiceUSer-Bundles](assets/DevelopingWithServiceUser.jar)
-* Eintrag hinzufügen **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service** in der User Mapper-Dienständerung, wie im Screenshot unten dargestellt
-   ![Änderung des Benutzerzuordners](assets/user-mapper-service-amendment.png)
-* [Herunterladen und Importieren von Beispiel-XDP-Dateien und ECMA-Skripten](assets/watched-folder-fragments-ecma.zip).
-Dadurch wird eine überwachte Ordnerstruktur im Ordner c:/fragments/outputService erstellt.
+**So testen Sie das Beispielpaket auf Ihrem System:**
+* [Stellen Sie das Bundle „DevelopingWithServiceUser“ bereit.](assets/DevelopingWithServiceUser.jar)
+* Fügen Sie den Eintrag **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service** in die Änderung des User-Mapper-Dienstes ein, wie im folgenden Screenshot gezeigt:
+  ![Änderung des User-Mappers](assets/user-mapper-service-amendment.png)
+* [Laden Sie die XDP-Beispieldateien und ECMA-Skripte herunter und importieren Sie sie](assets/watched-folder-fragments-ecma.zip).
+Dadurch wird eine überwachte Ordnerstruktur im Ordner „c:/fragments/outputService“ erstellt.
 
-* [Beispieldatendatei extrahieren](assets/usingFragmentsSampleData.zip) und legen Sie sie im Installationsordner Ihres überwachten Ordners ab (c:\fragmentsandoutputservice\install).
+* [Extrahieren Sie die Beispieldatendatei](assets/usingFragmentsSampleData.zip) und legen Sie sie in den Installationsordner Ihres überwachten Ordners (c:\fragmentsandoutputservice\install).
 
-* Überprüfen Sie den Ergebnisordner Ihrer Konfiguration des überwachten Ordners auf die generierte PDF-Datei.
+* Überprüfen Sie den Ergebnisordner Ihrer überwachten Ordnerkonfiguration auf die generierte PDF-Datei.
