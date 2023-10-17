@@ -1,6 +1,6 @@
 ---
-title: Verwendung von Projekt-Mastern in AEM
-description: Projekt-Master vereinfacht das Benutzer- und Teammanagement mit AEM Projekten erheblich.
+title: Verwenden von Primärprojekten in AEM
+description: Primärprojekte vereinfachen das Benutzer- und Team-Management mit AEM Projekten erheblich.
 version: 6.4, 6.5, Cloud Service
 topic: Content Management, Collaboration
 feature: Projects
@@ -10,45 +10,45 @@ kt: 256
 thumbnail: 17740.jpg
 exl-id: 78ff62ad-1017-4a02-80e9-81228f9e01eb
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '368'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Verwenden von Projekt-Mastern
+# Verwenden von Primärprojekten
 
-Projekt-Master vereinfachen die Benutzer- und Teamverwaltung erheblich mit [!DNL AEM Projects].
+Primärprojekte vereinfachen das Benutzer- und Team-Management mit [!DNL AEM Projects] erheblich.
 
 >[!VIDEO](https://video.tv.adobe.com/v/17740?quality=12&learn=on)
 
-Administratoren können jetzt eine **[!DNL Master Project]** und weisen Benutzer Rollen/Berechtigungen als Teil eines Projektteams zu. Projekte können aus einem Übergeordneten Projekt erstellt werden und übernehmen automatisch die Team-Mitgliedschaft. Dies bietet mehrere Vorteile:
+Admins können jetzt ein **[!DNL Master Project]** erstellen und Benutzende zu Rollen/Berechtigungen als Teil eines Projekt-Teams zuweisen. Projekte können aus einem Primärprojekt erstellt werden und automatisch die Team-Mitgliedschaft übernehmen. Das hat mehrere Vorteile, denn es ermöglicht:
 
-* Wiederverwenden vorhandener Teams für mehrere Projekte
-* Beschleunigt die Projekterstellung, da Teams nicht von Hand neu erstellt werden müssen
-* Team-Mitglieder von einem zentralen Speicherort aus verwalten. Aktualisierungen an Teams werden automatisch von Projekten übernommen
-* verhindert die Erstellung doppelter ACLs, die Leistungsprobleme verursachen können
+* Wiederverwenden vorhandener Teams über mehrere Projekte hinweg
+* schnellere Projekterstellung, da Teams nicht manuell neu erstellt werden müssen
+* zentrale Verwaltung der Team-Mitgliedschaft und automatische Übernahme von Team-Aktualisierungen bei Projekten
+* Vermeidung doppelt erstellter ACLs, die Leistungsprobleme verursachen können
 
-[!DNL Master Projects] kann unter der [!UICONTROL Masters] Ordner unter [!UICONTROL AEM Projekte]. Nachdem ein Übergeordnetes Projekt erstellt wurde, wird es bei der Erstellung neuer Projekte neben den verfügbaren Vorlagen im Assistenten als Option angezeigt.
+[!DNL Master Projects] können im Ordner [!UICONTROL Masters] unter [!UICONTROL AEM-Projekte] erstellt werden. Sobald ein Primärprojekt erstellt wurde, wird es bei der Erstellung neuer Projekte neben den verfügbaren Vorlagen im Assistenten als Option angezeigt.
 
-[!DNL Project Masters] URL (lokale AEM-Autoreninstanz): [http://localhost:4502/projects.html/content/projects/masters](http://localhost:4502/projects.html/content/projects/masters)
+[!DNL Project Masters]-URL (lokale AEM-Autoreninstanz): [http://localhost:4502/projects.html/content/projects/masters](http://localhost:4502/projects.html/content/projects/masters)
 
-## Löschen [!DNL Project Masters]
+## Löschen von [!DNL Project Masters]
 
-Das Löschen eines Übergeordneten Projekts führt zu unbrauchbaren abgeleiteten Projekten.
+Das Löschen eines Primärprojekts führt zu unbrauchbaren abgeleiteten Projekten.
 
-Bevor Sie ein Übergeordnetes Projekt löschen, stellen Sie sicher, dass alle abgeleiteten Projekte beendet und aus AEM entfernt wurden. Achten Sie darauf, alle erforderlichen Projektdaten zu speichern, bevor Sie die abgeleiteten Projekte entfernen. Sobald alle abgeleiteten Projekte aus AEM entfernt wurden, kann das Übergeordnete Projekt sicher gelöscht werden.
+Bevor Sie ein Primärprojekt löschen, stellen Sie sicher, dass alle abgeleiteten Projekte beendet sind und aus AEM entfernt wurden. Achten Sie darauf, alle erforderlichen Projektdaten zu speichern, bevor Sie die abgeleiteten Projekte entfernen. Sobald alle abgeleiteten Projekte aus AEM entfernt wurden, kann das Primärprojekt sicher gelöscht werden.
 
-## Mark [!DNL Project Masters] als inaktiv
+## Markieren von [!DNL Project Masters] als inaktiv
 
-Indem Sie den Status des Übergeordneten Projekts in den Projekteigenschaften in inaktiv ändern, werden die inaktiven Übergeordneten Projekte aus der Liste der Übergeordneten Projekte ausgeblendet.
+Indem Sie den Status des Primärprojekts in den Projekteigenschaften zu inaktiv ändern, werden die inaktiven Primärprojekte nicht mehr in der Liste der Primärprojekte angezeigt.
 
-Um inaktive Übergeordnete Projekte anzuzeigen, schalten Sie die Schaltfläche &quot;Aktiv anzeigen&quot;in der oberen Leiste (neben dem Umschalter für die Listenanzeige) um. Um das inaktive Projekt erneut zu aktivieren, wählen Sie einfach das inaktive Übergeordnete Projekt aus, bearbeiten Sie die Projekteigenschaften und legen Sie es erneut auf &quot;aktiv&quot;fest.
+Um inaktive Primärprojekte anzuzeigen, schalten Sie die Filterschaltfläche „Aktive anzeigen“ in der oberen Leiste (neben dem Umschalter für die Listenanzeige) ein. Um das inaktive Projekt erneut zu aktivieren, wählen Sie einfach das inaktive Primärprojekt aus, bearbeiten Sie die Projekteigenschaften und legen Sie es erneut als aktiv fest.
 
-## Grundlegendes [!DNL Project Masters]
+## Grundlegendes zu [!DNL Project Masters]
 
-![Technische Ansicht der Projekt-Master](assets/use-project-masters/project-masters-architecture.png)
+![Technische Ansicht der Primärprojekte](assets/use-project-masters/project-masters-architecture.png)
 
-[!DNL Project Masters] arbeiten, indem Sie eine Reihe AEM Benutzergruppen (Eigentümer, Editor und Beobachter) definieren und es abgeleiteten Projekten ermöglichen, auf diese zentral definierten Benutzergruppen zu verweisen und sie wiederzuverwenden.
+[!DNL Project Masters] funktionieren wie folgt: Es wird eine Reihe von AEM-Benutzergruppen (Besitzende, Bearbeitende und Beobachtende) definiert und abgeleiteten Projekten ermöglicht, auf diese zentral definierten Benutzergruppen zu verweisen und sie wiederzuverwenden.
 
-Dadurch wird die Gesamtzahl der für AEM erforderlichen Benutzergruppen reduziert. Vorher [!DNL Project Masters]erstellt wurde, erstellte jedes Projekt 3 Benutzergruppen mit den zugehörigen ACEs, um die Berechtigungsprüfung zu erzwingen, sodass 100 Projekte 300 Benutzergruppen erreichten. Mit Projekt-Mastern können beliebig viele Projekte dieselben drei Gruppen wiederverwenden, vorausgesetzt, die freigegebene Mitgliedschaft entspricht den geschäftlichen Anforderungen des gesamten Projekts.
+Dadurch wird die Gesamtzahl der in AEM erforderlichen Benutzergruppen reduziert. Bevor es [!DNL Project Masters] gab, wurden für jedes Projekt drei Benutzergruppen mit den zugehörigen ACEs erstellt, um die Berechtigungsprüfung zu erzwingen, sodass bei 100 Projekten 300 Benutzergruppen vorhanden waren. Mit Primärprojekten können beliebig viele Projekte dieselben drei Gruppen wiederverwenden, sofern die freigegebene Mitgliedschaft den geschäftlichen Anforderungen des gesamten Projekts entspricht.
