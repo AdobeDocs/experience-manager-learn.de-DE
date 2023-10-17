@@ -1,6 +1,6 @@
 ---
-title: Debugging AEM SDK mithilfe der OSGi-Web-Konsole
-description: Der lokale Schnellstart des AEM SDK verfügt über eine OSGi-Web-Konsole, die verschiedene Informationen und Einleitungen in die lokale AEM-Laufzeitumgebung bietet, die nützlich sind, um zu verstehen, wie Ihre Anwendung erkannt wird und in AEM funktioniert.
+title: Debugging des AEM SDK mithilfe der OSGi-Web-Konsole
+description: Der lokale Schnellstart des AEM SDK verfügt über eine OSGi-Web-Konsole, die verschiedene Informationen und Einsichten in die lokale AEM-Laufzeitumgebung bietet. Damit können Sie verstehen, wie Ihre Anwendung erkannt wird und in AEM funktioniert.
 feature: Developer Tools
 topics: development
 version: Cloud Service
@@ -13,17 +13,17 @@ role: Developer
 level: Beginner, Intermediate
 exl-id: 0929bc1a-376c-4e16-a540-a276fd5af164
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '393'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Debugging AEM SDK mithilfe der OSGi-Web-Konsole
+# Debugging des AEM SDK mithilfe der OSGi-Web-Konsole
 
-Der lokale Schnellstart des AEM SDK verfügt über eine OSGi-Web-Konsole, die verschiedene Informationen und Einleitungen in die lokale AEM-Laufzeitumgebung bietet, die nützlich sind, um zu verstehen, wie Ihre Anwendung erkannt wird und in AEM funktioniert.
+Der lokale Schnellstart des AEM SDK verfügt über eine OSGi-Web-Konsole, die verschiedene Informationen und Einsichten in die lokale AEM-Laufzeitumgebung bietet. Damit können Sie verstehen, wie Ihre Anwendung erkannt wird und in AEM funktioniert.
 
-AEM bietet viele OSGi-Konsolen, die jeweils wichtige Einblicke in verschiedene Aspekte der AEM bieten. Im Folgenden finden Sie jedoch in der Regel die nützlichsten Informationen zum Debugging Ihrer Anwendung.
+AEM bietet viele OSGi-Konsolen, die jeweils wichtige Einblicke in verschiedene Aspekte von AEM bieten. Im Folgenden finden Sie jedoch die in der Regel nützlichsten Informationen zum Debugging Ihrer Anwendung.
 
 ## Bundles
 
@@ -38,9 +38,9 @@ Die Bundles-Konsole befindet sich unter:
 
 Durch Klicken auf jedes Bundle erhalten Sie Details, die beim Debugging Ihrer Anwendung helfen.
 
-+ Überprüfen des OSGi-Bundles ist vorhanden
++ Überprüfen, ob das OSGi-Bundle vorhanden ist
 + Überprüfen, ob ein OSGi-Bundle aktiv ist
-+ Bestimmen, ob ein OSGi-Bundle nicht zufrieden gestellte Importe aufweist, die den Start verhindern
++ Bestimmen, ob ein OSGi-Bundle nicht erfüllte Importe aufweist, die den Start verhindern
 
 ## Komponenten
 
@@ -55,23 +55,23 @@ Die Komponentenkonsole befindet sich unter:
 
 Wichtige Aspekte, die bei Debugging-Aktivitäten helfen:
 
-+ Überprüfen des OSGi-Bundles ist vorhanden
++ Überprüfen, ob das OSGi-Bundle vorhanden ist
 + Überprüfen, ob ein OSGi-Bundle aktiv ist
-+ Bestimmen, ob ein OSGi-Bundle nicht zufrieden gestellte Importe aufweist, die den Start verhindern
-+ Abrufen der PID der Komponente, um OSGi-Konfigurationen für sie in Git zu erstellen
++ Bestimmen, ob ein OSGi-Bundle nicht erfüllte Importe aufweist, die den Start verhindern
++ Abrufen der PID der Komponenten-PID, um OSGi-Konfigurationen für sie in Git zu erstellen
 + Identifizieren von OSGi-Eigenschaftswerten, die an die aktive OSGi-Konfiguration gebunden sind
 
 ## Sling-Modelle
 
 >[!VIDEO](https://video.tv.adobe.com/v/34337?quality=12&learn=on)
 
-Die Konsole &quot;Sling-Modelle&quot;befindet sich unter:
+Die Sling-Modelle-Konsole befindet sich unter:
 
 + Tools > Vorgänge > Web-Konsole > Status > Sling-Modelle
 + Oder direkt unter: [http://localhost:4502/system/console/status-slingmodels](http://localhost:4502/system/console/status-slingmodels)
 
 Wichtige Aspekte, die bei Debugging-Aktivitäten helfen:
 
-+ Die Validierung von Sling-Modellen wird beim richtigen Ressourcentyp registriert
-+ Die Validierung von Sling-Modellen kann von den richtigen Objekten angepasst werden (Resource oder SlingHttpRequestServlet).
-+ Überprüfen, ob Sling Model Exporter ordnungsgemäß registriert sind
++ Überprüfen, ob Sling-Modelle beim richtigen Ressourcentyp registriert sind
++ Überprüfen, ob Sling-Modelle von den richtigen Objekten angepasst werden können (Ressource oder SlingHttpRequestServlet).
++ Überprüfen, ob Sling-Modell-Exporter ordnungsgemäß registriert sind
