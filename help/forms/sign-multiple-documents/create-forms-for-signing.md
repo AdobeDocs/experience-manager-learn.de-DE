@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Forms für Signaturen
+title: Erstellen von zu signierenden Formularen
 description: Erstellen Sie Formulare, die in das Signaturpaket aufgenommen werden müssen.
 feature: Adaptive Forms
 version: 6.4,6.5
@@ -10,9 +10,9 @@ role: User
 level: Beginner
 exl-id: 565d81a4-2918-44ea-a3e9-ed79f246f08a
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '333'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
@@ -20,34 +20,34 @@ ht-degree: 2%
 
 Der nächste Schritt besteht darin, die adaptiven Formulare zu erstellen, die in das Paket aufgenommen werden sollen. Beachten Sie beim Erstellen von Formularen zum Signieren die folgenden Punkte:
 
-* Stellen Sie sicher, dass die Formulare auf dem **SignMultipleForms** Vorlage. Dadurch wird sichergestellt, dass die Formulare vorab mit den aus der Datenbank abgerufenen Daten gefüllt werden.
+* Stellen Sie sicher, dass die Formulare auf der Vorlage **SignMultipleForms** (Mehrere Formulare signieren) basieren. Dadurch wird sichergestellt, dass die Formulare mit den aus der Datenbank abgerufenen Daten vorausgefüllt werden.
 
-* Die Formulare müssen für die Verwendung von Acrobat Sign konfiguriert werden und das signer1 -Feld muss mit dem Feld Customer Email verknüpft werden
-* Die Formulare müssen auch mit clientLib verknüpft werden, der **getnextform**
-* Die Formulare müssen die Signaturschritt-Komponente verwenden.
-* Das Formular muss auch die benutzerdefinierte **Mehrere Formulare unterschreiben** -Komponente. Mit dieser Komponente können Sie zum nächsten Formular navigieren, das Sie im Paket signieren können.
-* Die Übermittlung des Formulars muss für den Trigger AEM Workflows konfiguriert werden **Signaturstatus aktualisieren**
-* Stellen Sie sicher, dass der Datendateipfad auf **Data.xml**. Dies ist sehr wichtig, da der Beispielcode in der Payload nach einer Datei namens Data.xml sucht, in der der Prozess der Formularübermittlung ausgeführt wird.
+* Die Formulare müssen für Acrobat Sign konfiguriert werden und das Feld „signer1“ muss mit dem Feld „customerEmail“ verknüpft werden.
+* Die Formulare müssen auch mit der Client-Bibliothek **getnextform** verknüpft werden.
+* Die Formulare müssen die Komponente für den Signaturschritt verwenden.
+* Das Formular muss auch die benutzerdefinierte Komponente **Mehrere Formulare signieren** verwenden. Mit dieser Komponente können Sie zum nächsten Formular navigieren, das im Paket signiert werden soll.
+* Die Übermittlung des Formulars muss konfiguriert werden, um den AEM-Workflow **Signaturstatus aktualisieren** auszulösen.
+* Stellen Sie sicher, dass der Datendateipfad auf **Data.xml** festgelegt ist. Dies ist sehr wichtig, da der Beispiel-Code in der Payload nach einer Datei namens „Data.xml“ sucht, um die Formularübermittlung zu verarbeiten.
 
-Nachdem Sie Ihr Formular verfasst haben, fügen Sie die **commonfields** adaptives Formularfragment im Formular. Das Fragment wird als ausgeblendet markiert. Dieses Fragment enthält die folgenden Felder.
+Nachdem Sie Ihr Formular erstellt haben, schließen Sie das adaptive Formularfragment **commonfields** im Formular ein. Das Fragment wird als verborgen markiert. Dieses Fragment enthält die folgenden Felder:
 
-* **signed** - Das Feld, in dem der Status der Signatur gespeichert werden soll
-* **guid** - Eindeutige Kennung zur Identifizierung des Formulars im Paket
-* **customerEmail** - In diesem Feld wird die E-Mail des Kunden gespeichert.
+* **signed**: In diesem Feld wird der Status der Signatur gespeichert.
+* **guid**: Dies ist die eindeutige Kennung zur Identifizierung des Formulars im Paket.
+* **customerEmail**: Dieses Feld enthält die E-Mail-Adresse der Kundin oder des Kunden.
 
 
 
 >[!NOTE]
 >Wenn Sie Daten aus einem Formular in ein anderes Formular im Paket übertragen möchten, stellen Sie sicher, dass die Formularfelder in allen Formularen identisch benannt sind.
 
-## Alle fertigen Formulare
+## Alldone-Formular
 
-Sobald alle Formulare im Paket ausgefüllt und signiert sind, muss die entsprechende Nachricht angezeigt werden. Diese Meldung wird mithilfe des Aldone-Formulars angezeigt. Das Formular Alldone ist in den Beispielformularen enthalten.
+Sobald alle Formulare im Paket ausgefüllt und signiert sind, sollte die entsprechende Nachricht angezeigt werden. Diese Meldung wird mithilfe des Alldone-Formulars angezeigt. Das Alldone-Formular ist Teil der Beispielformulare.
 
 ## Assets
 
-Die in diesem Tutorial verwendeten Musterformulare einschließlich der können [heruntergeladen von hier](assets/forms-for-signing.zip)
+Beispielformulare, darunter die in diesem Tutorial verwendeten, können [hier](assets/forms-for-signing.zip) heruntergeladen werden.
 
 ## Nächste Schritte
 
-[Testen Sie die Lösung auf Ihrem lokalen System.](./testing-and-trouble-shooting.md)
+[Testen der Lösung auf Ihrem lokalen System](./testing-and-trouble-shooting.md)
