@@ -1,6 +1,6 @@
 ---
-title: Schritte zum Aktivieren der Debug-Protokollierung für alle Klassen im WebSphere Application Server
-description: Debug-Protokollierung für die Fehlerbehebung bei Problemen mit WebSphere Application Server konfigurieren
+title: Schritte zur Aktivierung der Debug-Protokollierung für beliebige Klassen im WebSphere-Anwendungs-Server
+description: Konfigurieren der Debug-Protokollierung für die Fehlerbehebung bei Problemen mit WebSphere-Anwendungs-Servern
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -9,14 +9,14 @@ topic: Administration
 index: y
 exl-id: fd7ad4df-4c27-42f2-889f-03e170bac319
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '52'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Schritte zum Aktivieren der Debug-Protokollierung für alle Klassen im Websphere Application Server
+# Schritte zur Aktivierung der Debug-Protokollierung für beliebige Klassen im WebSphere-Anwendungs-Server
 
-*In diesem Video werden die Schritte zum Aktivieren der Debug-Protokollierung für jede Klasse im Websphere Application Server erläutert.*
+*In diesem Video werden die Schritte zur Aktivierung der Debug-Protokollierung für jede Klasse im WebSphere-Anwendungs-Server erläutert.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335523?quality=12&learn=on)
