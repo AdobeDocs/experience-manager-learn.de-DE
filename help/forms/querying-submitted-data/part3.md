@@ -1,7 +1,7 @@
 ---
-title: AEM Forms mit JSON-Schema und Daten[Teil 3]
+title: AEM Forms mit JSON-Schema und Daten [Teil 3]
 seo-title: AEM Forms with JSON Schema and Data[Part3]
-description: Mehrteilige Anleitung, um Sie durch die Schritte zu führen, die zum Erstellen eines adaptiven Formulars mit JSON-Schema und zum Abfragen der gesendeten Daten erforderlich sind.
+description: Mehrteiliges Tutorial, um Sie durch die Schritte zu führen, die zum Erstellen eines adaptiven Formulars mit JSON-Schema und zum Abfragen der gesendeten Daten erforderlich sind.
 seo-description: Multi-Part tutorial to walk you through the steps involved in creating Adaptive Form with JSON schema and querying the submitted data.
 feature: Adaptive Forms
 topics: development
@@ -14,18 +14,18 @@ role: Developer
 level: Experienced
 exl-id: 412eea77-3cf4-43bb-9d2f-ae860cd9d3be
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '252'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Speichern des JSON-Schemas in der Datenbank {#storing-json-schema-in-database}
 
 
-Um die gesendeten Daten abfragen zu können, müssen wir das mit dem gesendeten Formular verknüpfte JSON-Schema speichern. Das JSON-Schema wird im Query Builder zum Erstellen der Abfrage verwendet.
+Um die gesendeten Daten abfragen zu können, müssen wir das mit dem übermittelten Formular verknüpfte JSON-Schema speichern. Das JSON-Schema wird in Query Builder zum Erstellen der Abfrage verwendet.
 
-Wenn ein adaptives Formular gesendet wird, überprüfen wir, ob das zugehörige JSON-Schema in der Datenbank enthalten ist. Wenn das JSON-Schema nicht vorhanden ist, rufen wir das JSON-Schema ab und speichern das Schema in der entsprechenden Tabelle. Wir verknüpfen auch den Formularnamen mit dem JSON-Schema. Der folgende Screenshot zeigt die Tabelle, in der die JSON-Schemas gespeichert sind.
+Wenn ein adaptives Formular gesendet wird, überprüfen wir, ob das zugehörige JSON-Schema in der Datenbank enthalten ist. Wenn das JSON-Schema nicht vorhanden ist, rufen wir das JSON-Schema ab und speichern das Schema in der entsprechenden Tabelle. Wir verknüpfen auch den Formularnamen mit dem JSON-Schema. Der folgende Screenshot zeigt die Tabelle, in der die JSON-Schemata gespeichert sind.
 
 ![jsonschema](assets/jsonschemas.gif)
 
@@ -107,9 +107,9 @@ public String getJSONSchema(String afPath) {
 
 >[!NOTE]
 >
->Beim Erstellen eines adaptiven Formulars können Sie entweder das JSON-Schema verwenden, das sich im Repository befindet, oder ein JSON-Schema hochladen. Der obige Code funktioniert für beide Fälle.
+>Beim Erstellen eines adaptiven Formulars können Sie entweder das JSON-Schema im Repository verwenden oder ein JSON-Schema hochladen. Der obige Code funktioniert in beiden Fällen.
 
-Das abgerufene Schema wird mithilfe der standardmäßigen JDBC-Vorgänge in der Datenbank gespeichert. Der folgende Code fügt das Schema in die Datenbank ein
+Das abgerufene Schema wird mithilfe der standardmäßigen JDBC-Vorgänge in der Datenbank gespeichert. Mit dem folgenden Code wird das Schema in die Datenbank eingefügt:
 
 ```java
 public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
@@ -145,10 +145,10 @@ public void insertJsonSchema(JSONObject jsonSchema, String afForm) {
  }
 ```
 
-Zusammenfassend haben wir bisher Folgendes getan
+Zusammenfassend wurden bisher folgende Schritte durchgeführt:
 
-* Erstellen eines adaptiven Formulars basierend auf dem JSON-Schema
-* Wenn das Formular zum ersten Mal gesendet wird, speichern wir das mit dem Formular verknüpfte JSON-Schema in der Datenbank.
-* Die gebundenen Daten des adaptiven Formulars werden in der Datenbank gespeichert.
+* Erstellen eines adaptiven Formulars basierend auf einem JSON-Schema
+* Speichern des mit dem Formular verknüpften JSON-Schemas in der Datenbank bei der ersten Formularübermittlung
+* Speichern der gebundenen Daten des adaptiven Formulars in der Datenbank
 
-Die nächsten Schritte wären die Verwendung von QueryBuilder zum Anzeigen der Felder, die basierend auf dem JSON-Schema durchsucht werden sollen
+Der nächste Schritt besteht dann in der Verwendung von Query Builder zum Anzeigen der Felder, die basierend auf dem JSON-Schema durchsucht werden sollen.
