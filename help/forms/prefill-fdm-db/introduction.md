@@ -1,6 +1,6 @@
 ---
-title: Formular mit Formulardatenmodell vorab ausfüllen
-description: Vorausfüllen des adaptiven Formulars mithilfe des Anforderungsattributs des Formulardatenmodells
+title: Vorausfüllen eines Formulars mithilfe des Formulardatenmodells
+description: Vorausfüllen des adaptiven Formulars mithilfe des Anfragenattributs des Formulardatenmodells
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 4419
@@ -11,31 +11,31 @@ level: Intermediate
 exl-id: be519d58-1caa-42ea-97a9-7cd38ce8faca
 last-substantial-update: 2021-01-07T00:00:00Z
 source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '111'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Formular mit Formulardatenmodell vorab ausfüllen
+# Vorausfüllen eines Formulars mithilfe des Formulardatenmodells
 
-Sie lernen, das Anfrageattribut des Formulardatenmodells zu verwenden, um Daten abzurufen und das adaptive Formular auszufüllen.
-Nach Abschluss dieses Kurses haben Sie Folgendes gelernt.
+Sie erfahren, wie Sie mit dem Anfrageattribut des Formulardatenmodells Daten abrufen, um ein adaptives Formular auszufüllen.
+Nach Abschluss dieses Kurses haben Sie Folgendes gelernt:
 
-* RDBMS-gestütztes Formulardatenmodell erstellen
-* Verknüpfung zwischen zwei Entitäten erstellen
-* Tabelle mit Daten füllen, die von _get_ Dienst des Formulardatenmodells
-* Anforderungsattribut des Formulardatenmodells verwenden
+* Erstellen eines von RDBMS-gestützten Formulardatenmodells
+* Erstellen einer Verknüpfung zwischen zwei Entitäten
+* Auffüllen einer Tabelle mit den vom _get_-Dienst des Formulardatenmodells zurückgegebenen Daten
+* Verwenden eines Anfragenattributs des Formulardatenmodells
 
-Das folgende Video gibt Ihnen einen Überblick über den Kurs
+Das folgende Video gibt Ihnen einen Überblick über den Kurs:
 >[!VIDEO](https://video.tv.adobe.com/v/36387?quality=12&learn=on)
 
 ## Voraussetzungen
 
-* Arbeitsinstanz von AEM Forms
-* Mit der MySQL-Datenbank und MySQL Workbench vertraut
-* Einige Erfahrungen beim Erstellen von Adaptive Forms
+* Eine funktionierende AEM Forms-Instanz
+* Kenntnisse zur MySQL-Datenbank und MySQL Workbench
+* Einige Erfahrungen beim Erstellen von adaptiven Formularen
 
 ## Nächste Schritte
 
-[Datenbanktabellen erstellen](./create-database-tables.md)
+[Erstellen von Datenbanktabellen](./create-database-tables.md)
