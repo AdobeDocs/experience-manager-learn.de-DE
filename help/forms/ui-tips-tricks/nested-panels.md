@@ -1,6 +1,6 @@
 ---
-title: Navigieren in verschachtelten Bereichen
-description: Navigieren in verschachtelten Bereichen
+title: Navigieren in verschachtelten Panels
+description: Navigieren in verschachtelten Panels
 feature: Adaptive Forms
 type: Tutorial
 version: 6.5
@@ -11,53 +11,53 @@ kt: 9335
 exl-id: c60d019e-da26-4f67-8579-ef707e2348bb
 last-substantial-update: 2019-07-07T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '247'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Navigationsregisterkarten mit mehreren Bedienfeldern
+# Navigationsregisterkarten mit mehreren Panels
 
-Wenn Ihr Formular die Navigationsregisterkarten verlassen hat und eine der Registerkarten mehrere Bedienfelder aufweist, können Sie den Titel der untergeordneten Bedienfelder ausblenden und dennoch zwischen den Registerkarten und den untergeordneten Bedienfeldern dieser Registerkarte navigieren
+Wenn Ihr Formular linke Navigationsregisterkarten hat und eine der Registerkarten mehrere Panels aufweist, können Sie den Titel der untergeordneten Panels ausblenden und dennoch das Navigieren zwischen den Registerkarten und den untergeordneten Panels dieser Registerkarte ermöglichen.
 
-## Adaptives Formular erstellen
+## Erstellen eines adaptiven Formulars
 
-Erstellen Sie ein adaptives Formular mit der folgenden Struktur. Das Stammbedienfeld enthält untergeordnete Bedienfelder, die links als Registerkarten angezeigt werden. Einige dieser &quot;**Tabs**&quot; zusätzliche untergeordnete Bedienfelder haben. Die Registerkarte &quot;Familie&quot;verfügt beispielsweise über zwei untergeordnete Bedienfelder namens &quot;Ehegatte und Kinder&quot;.
+Erstellen Sie ein adaptives Formular mit der folgenden Struktur. Das Stammbedienfeld enthält untergeordnete Panels, die links als Registerkarten angezeigt werden. Einige dieser „**Registerkarten**“ haben zusätzliche untergeordnete Panels. Die Registerkarte „Familie“ verfügt beispielsweise über zwei untergeordnete Panels namens „Ehepartner/-in“ und „Kinder“.
 
-Eine Symbolleiste wird auch unter dem FormContainer mit den Schaltflächen &quot;Vorschau&quot;und &quot;Weiter&quot;hinzugefügt
+Eine Symbolleiste wird auch unter dem FormContainer mit den Schaltflächen „Vorherige“ und „Nächste“ hinzugefügt
 
 ![toolbar-spacing](assets/multiple-panels.png)
 
 
 
-Das Standardverhalten dieses Formulars besteht darin, alle Bedienfelder auf der linken Seite anzuzeigen und dann von einer Registerkarte zu einer anderen zu navigieren, wenn Sie auf die nächste Schaltfläche klicken.
+Das Standardverhalten dieses Formulars besteht darin, alle Panels auf der linken Seite anzuzeigen und dann von einer Registerkarte zu einer anderen zu navigieren, wenn auf die Schaltfläche „Weiter“ geklickt wird.
 
-Um dieses Standardverhalten zu ändern, müssen wir die folgenden Schritte ausführen
+Um dieses Standardverhalten zu ändern, müssen Sie die folgenden Schritte ausführen:
 
 >[!VIDEO](https://video.tv.adobe.com/v/338369?quality=12&learn=on)
 
 
-Fügen Sie den folgenden Code zum click -Ereignis der **Nächste** Schaltfläche mit dem Code-Editor
+Fügen Sie mit dem Code-Editor den folgenden Code zum Klick-Ereignis der Schaltfläche **Weiter** hinzu
 
 ```javascript
 window.guideBridge.setFocus(null, 'nextItemDeep', true);
 ```
 
-Fügen Sie den folgenden Code zum click -Ereignis der **Prev** Schaltfläche mit dem Code-Editor
+Fügen Sie mit dem Code-Editor den folgenden Code zum Klick-Ereignis der Schaltfläche **Zurück** hinzu
 
 ```javascript
 window.guideBridge.setFocus(null, 'prevItemDeep', true);
 ```
 
-Der obige Code hilft Ihnen bei der Navigation zwischen den Registerkarten und den untergeordneten Bedienfeldern der einzelnen Registerkarten.
+Der obige Code hilft Ihnen bei der Navigation zwischen den Registerkarten und den untergeordneten Panels jeder Registerkarte.
 
-## Überschrift der untergeordneten Bedienfelder ausblenden
+## Ausblenden der Überschrift der untergeordneten Panels
 
-Verwenden Sie den Stileditor, um den Titel der untergeordneten Registerkarten-Bedienfelder auszublenden.
+Verwenden Sie den Stil-Editor, um den Titel der untergeordneten Registerkarten-Panels auszublenden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338370?quality=12&learn=on)
 
 >[!NOTE]
 >
->Die in diesem Artikel beschriebene Funktion funktioniert auf der letzten Registerkarte nicht. Wenn beispielsweise die Registerkarte Adresse untergeordnete Bedienfelder enthält, funktioniert diese Funktion nicht.
+>Die in diesem Artikel beschriebene Funktion funktioniert auf der letzten Registerkarte nicht. Wenn beispielsweise die Registerkarte „Adresse“ untergeordnete Panels enthält, funktioniert diese Funktion nicht.
