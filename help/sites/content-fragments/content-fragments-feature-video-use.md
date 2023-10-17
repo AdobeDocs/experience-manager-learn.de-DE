@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Inhaltsfragmenten in AEM
+title: Verfassen von Inhaltsfragmenten in AEM
 description: Inhaltsfragmente sind eine Inhaltsabstraktion in AEM, mit der textbasierte Inhalte unabhängig von den unterstützten Kanälen erstellt und verwaltet werden können.
 feature: Content Fragments
 topics: authoring, content-architecture
@@ -12,22 +12,22 @@ role: User
 level: Beginner
 exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '383'
-ht-degree: 16%
+ht-degree: 100%
 
 ---
 
-# Authoring mit Inhaltsfragmenten {#authoring-content-fragments}
+# Verfassen von Inhaltsfragmenten {#authoring-content-fragments}
 
 Inhaltsfragmente sind eine Inhaltsabstraktion in AEM, mit der textbasierte Inhalte unabhängig von den unterstützten Kanälen erstellt und verwaltet werden können.
 
-AEM Inhaltsfragmente sind textbasierte redaktionelle Inhalte, die einige strukturierte Datenelemente enthalten können, die verknüpft sind, aber ohne Design- oder Layoutinformationen als reine Inhalte betrachtet werden. Inhaltsfragmente werden in der Regel als kanalagnostischer Inhalt erstellt, der kanalübergreifend verwendet und wiederverwendet werden soll. Dadurch wird der Inhalt wiederum in ein kontextspezifisches Erlebnis eingeschlossen.
+AEM-Inhaltsfragmente sind textbasierte redaktionelle Inhalte, die einige strukturierte Datenelemente enthalten können, die verknüpft sind, aber als reine Inhalte ohne Design- oder Layout-Informationen betrachtet werden. Inhaltsfragmente werden in der Regel als kanalunabhängiger Inhalt erstellt, der kanalübergreifend verwendet und wiederverwendet werden soll. Dadurch wird der Inhalt wiederum in ein kontextspezifisches Erlebnis eingeschlossen.
 
-Diese Videoreihe behandelt den Lebenszyklus von Inhaltsfragmenten für die Bearbeitung in AEM. Details zu [Bereitstellung von Inhaltsfragmenten finden Sie hier .](content-fragments-delivery-feature-video-use.md).
+Diese Videoreihe behandelt den Lebenszyklus für die Erstellung von Inhaltsfragmenten in AEM. Details zum [Bereitstellen von Inhaltsfragmenten finden Sie hier](content-fragments-delivery-feature-video-use.md).
 
 1. Aktivieren und Definieren von Inhaltsfragmentmodellen
-2. Authoring mit Inhaltsfragmenten
+2. Verfassen von Inhaltsfragmenten
 3. Herunterladen von Inhaltsfragmenten
 4. Redaktionelle Funktionen
 
@@ -40,29 +40,29 @@ Diese Videoreihe behandelt den Lebenszyklus von Inhaltsfragmenten für die Bearb
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452?quality=12&learn=on)
 
-AEM Inhaltsfragmentmodelle, die Datenschemata von Inhaltsfragmenten, müssen über AEM aktiviert werden [[!UICONTROL Konfigurationsbrowser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=de), wodurch Inhaltsfragmentmodelle für jede Konfiguration definiert werden können.
+AEM-Inhaltsfragmentmodelle, die Datenschemata von Inhaltsfragmenten, müssen über den AEM-[[!UICONTROL Konfigurations-Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=de) aktiviert werden, wodurch Inhaltsfragmentmodelle für jede Konfiguration definiert werden können.
 
 ## Erstellen von Inhaltsfragmenten {#creating-content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22451?quality=12&learn=on)
 
-AEM Konfigurationen werden auf AEM Assets-Ordnerhierarchien angewendet, damit ihre Inhaltsfragmentmodelle als Inhaltsfragmente erstellt werden können. Inhaltsfragmente unterstützen ein umfangreiches formularbasiertes Authoring-Erlebnis, mit dem Inhalte als Sammlung von Elementen modelliert werden können.
+AEM-Konfigurationen werden auf AEM Assets-Ordnerhierarchien angewendet, damit ihre Inhaltsfragmentmodelle als Inhaltsfragmente erstellt werden können. Inhaltsfragmente unterstützen ein umfangreiches formularbasiertes Verfassererlebnis, indem Inhalte als Sammlung von Elementen modelliert werden können.
 
-Inhaltsfragmente können mehrere Varianten aufweisen, wobei jede Variante einen anderen Anwendungsfall (dachte, nicht notwendigerweise einen Kanal) für den Inhalt anspricht.
+Inhaltsfragmente können mehrere Varianten aufweisen, wobei jede Variante einen anderen (gedachten) Anwendungsfall für den Inhalt, nicht notwendigerweise einen Kanal, betrifft.
 
-*Beispiel einer Sportbiografie für den Import:*\
+*Beispiel einer Athletenbiografie für den Import:*\
 **[sandra-sprient-bio.txt](assets/sandra-sprient-bio.txt)**
 
 ## Herunterladen von Inhaltsfragmenten {#downloading-content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22450?quality=12&learn=on)
 
-AEM Inhaltsfragmente können von der AEM-Autoreninstanz als ZIP-Datei mit Varianten, Elementen und Metadaten heruntergeladen werden.
+AEM-Inhaltsfragmente können von AEM Author als ZIP-Datei mit Varianten, Elementen und Metadaten heruntergeladen werden.
 
-*Beispiel für eine ZIP-Datei zum Herunterladen von Inhaltsfragmenten:*\
+*Beispiel für eine Inhaltsfragment-ZIP-Datei zum Herunterladen:*\
 **[daniel_schreder.zip](assets/daniel_schreder.zip)**
 
-## Funktionen für Inhaltsfragmente {#editorial-capabilities}
+## Redaktionelle Funktionen von Inhaltsfragmenten {#editorial-capabilities}
 
 >[!VIDEO](https://video.tv.adobe.com/v/25891?quality=12&learn=on)
 
@@ -72,7 +72,7 @@ AEM Inhaltsfragmente können von der AEM-Autoreninstanz als ZIP-Datei mit Varian
 
 ## Nächste Schritte
 
-Informationen zu [Bereitstellen von Inhaltsfragmenten](content-fragments-delivery-feature-video-use.md).
+Hier finden Sie Informationen zum [Bereitstellen von Inhaltsfragmenten](content-fragments-delivery-feature-video-use.md).
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
@@ -80,6 +80,6 @@ Informationen zu [Bereitstellen von Inhaltsfragmenten](content-fragments-deliver
 * [AEM WCM-Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de)
 * [AEM WCM-Kerninhaltsfragment-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=de)
 
-So laden Sie das unten stehende Paket in einer AEM 6.4+ -Instanz für den finalen Status aus der Videoreihe herunter und installieren es:
+Laden Sie das folgende Paket herunter und installieren es in einer AEM 6.4-Instanz oder höher, um den Endzustand aus der Videoreihe zu erreichen:
 
 **[aem_demo_fluid-experiencescontent-fragments-100.zip](assets/aem_demo_fluid-experiencescontent-fragments-100.zip)**
