@@ -1,5 +1,5 @@
 ---
-title: So ändern Sie den Wert der Entropie
+title: Ändern des Werts der Entropie
 description: Schritte zum Ändern des Werts der Entropie auf Betriebssystemebene
 type: Troubleshooting
 role: Admin
@@ -9,13 +9,13 @@ topic: Administration
 index: y
 exl-id: e36ecbaf-78fc-4acf-bacb-f19d933fb0fb
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '38'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# So ändern Sie den Wert der Entropie
+# Ändern des Werts der Entropie
 
 *In diesem Video werden die Schritte zum Ändern des Werts der Entropie erläutert.*
 
