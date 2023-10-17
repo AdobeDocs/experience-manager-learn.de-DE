@@ -1,5 +1,5 @@
 ---
-title: Mobile-Implementierungen mit AEM Headless
+title: Mobile-Bereitstellungen mit AEM Headless
 description: Erfahren Sie mehr über Bereitstellungsaspekte bei AEM Headless-Implementierungen für Mobile.
 version: Cloud Service
 feature: GraphQL API
@@ -8,21 +8,21 @@ role: Developer, Architect
 level: Intermediate
 kt: 10796
 thumbnail: KT-10796.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+exl-id: 1f536079-b3ce-4807-be88-804378e75d37
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: ht
 source-wordcount: '152'
 ht-degree: 100%
 
 ---
 
+# Mobile-Bereitstellungen mit AEM Headless
 
-# Mobile-Implementierungen mit AEM Headless
-
-Mobile-Implementierungen mit AEM Headless sind native Mobile Apps für iOS, Android™ usw., die Inhalte in AEM Headless verwenden und damit interagieren.
+Mobile-Bereitstellungen mit AEM Headless sind native Mobile Apps für iOS, Android™ usw., die Inhalte in AEM Headless verwenden und damit interagieren.
 
 Für Mobile-Bereitstellungen ist eine minimale Konfiguration erforderlich, da HTTP-Verbindungen zu AEM Headless-APIs nicht im Kontext eines Browsers initiiert werden.
 
-## Implementierungskonfigurationen
+## Bereitstellungskonfigurationen
 
 Die folgende Bereitstellungskonfiguration muss für Mobile App-Implementierungen vorhanden sein.
 
@@ -80,5 +80,3 @@ Adobe bietet Beispiele für iOS- und Android™-Apps.
        </div>
     </div>
 </div>
-
-
