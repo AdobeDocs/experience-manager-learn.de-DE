@@ -9,19 +9,19 @@ level: Beginner
 last-substantial-update: 2023-01-01T00:00:00Z
 exl-id: 29f56d13-c2e2-4bc2-bfdc-664c848dd851
 source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '228'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # Dynamisches Hinzufügen von Elementen zur Auswahlgruppen-Komponente
 
-AEM Forms 6.5 bietet die Möglichkeit, Elemente dynamisch zu einer Adaptive Forms-Auswahlgruppenkomponente hinzuzufügen, z. B. Kontrollkästchen, Optionsfelder und Bildliste. In diesem Artikel werden wir uns das Anwendungsbeispiel zum Ausfüllen einer Auswahlgruppenkomponente mit dem DAM-Ordnerinhalt ansehen. Im Screenshot befinden sich die 3 Dateien im Ordner Newsletter. Jedes Mal, wenn ein neuer Newsletter zum Ordner hinzugefügt wird, wird die Auswahlgruppen-Komponente aktualisiert, um den Inhalt automatisch aufzulisten. Der Benutzer kann einen oder mehrere Newsletter zum Herunterladen auswählen.
+AEM Forms 6.5 bietet die Möglichkeit, Elemente dynamisch zu einer Auswahlgruppen-Komponente adaptiver Formulare (z. B. Kontrollkästchen, Optionsfeld und Bildliste) hinzuzufügen. In diesem Artikel werden wir uns das Anwendungsbeispiel zum Ausfüllen einer Auswahlgruppen-Komponente mit dem DAM-Ordnerinhalt ansehen. Im Screenshot befinden sich die 3 Dateien im Ordner „Newsletter“. Jedes Mal, wenn ein neuer Newsletter zum Ordner hinzugefügt wird, wird die Auswahlgruppen-Komponente aktualisiert, um den Inhalt automatisch aufzulisten. Die Benutzerin bzw. der Benutzer kann einen oder mehrere Newsletter zum Herunterladen auswählen.
 
 ![Regeleditor](assets/newsletters-download.png)
 
-## Erstellen eines Servlets zum Zurückgeben des DAM-Ordnerinhalts
+## Erstellen eines Servlets, um den DAM-Ordnerinhalt zurückgeben
 
 Der folgende Code wurde geschrieben, um den DAM-Ordnerinhalt im JSON-Format zurückzugeben.
 
@@ -82,9 +82,9 @@ public class ListFolderContent extends SlingSafeMethodsServlet {
 }
 ```
 
-## Client-Bibliothek mit JavaScript-Funktion erstellen
+## Erstellen einer Client-Bibliothek mit JavaScript-Funktion
 
-Das Servlet wird über eine JavaScript-Funktion aufgerufen. Die Funktion gibt ein Array-Objekt zurück, das zum Ausfüllen der Auswahlgruppenkomponente verwendet wird
+Das Servlet wird über eine JavaScript-Funktion aufgerufen. Die Funktion gibt ein Array-Objekt zurück, das zum Ausfüllen der Auswahlgruppen-Komponente verwendet wird
 
 ```javascript
 /**
@@ -110,10 +110,10 @@ function getDAMFolderAssets(damFolder) {
 
 ## Erstellen eines adaptiven Formulars
 
-Erstellen eines adaptiven Formulars und Verknüpfen des Formulars mit der Client-Bibliothek **listfolderAssets**. Fügen Sie Ihrem Formular eine Kontrollkästchenkomponente hinzu. Verwenden Sie den Regeleditor, um die Optionen des Kontrollkästchens, wie im Screenshot gezeigt, auszufüllen.
+Erstellen Sie ein adaptives Formular und verknüpfen Sie es mit der Client-Bibliothek **listfolderAssets**. Fügen Sie Ihrem Formular eine Kontrollkästchen-Komponente hinzu. Verwenden Sie den Regeleditor, um die Optionen des Kontrollkästchens wie im Screenshot gezeigt auszufüllen.
 ![set-options](assets/set-options-newsletter.png)
 
-Wir rufen die JavaScript-Funktion namens auf. **getDAMFolderAssets** und den Pfad der Assets des DAM-Ordners übergeben, die im Formular aufgelistet werden sollen.
+Hier wird die Javascript-Funktion **getDAMFolderAssets** aufgerufen und der Pfad zu den Assets des DAM-Ordners übergeben, die im Formular aufgelistet werden sollen.
 
 ## Nächste Schritte
 
