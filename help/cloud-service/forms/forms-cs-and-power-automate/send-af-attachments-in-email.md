@@ -1,6 +1,6 @@
 ---
-title: Senden von Formularanlagen in einer E-Mail
-description: Extrahieren und Senden gesendeter Formularanhänge per E-Mail mithilfe eines leistungsstarken automatisierten Workflows
+title: Senden von Formularanhängen in einer E-Mail
+description: Extrahieren und versenden Sie übermittelte Formularanhänge in einer E-Mail mit dem Power Automate-Workflow
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -9,20 +9,21 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 kt: 11077
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: 1be90d9b-3669-44a0-84fb-cbdec44074d8
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '72'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Extrahieren von Formularanlagen aus gesendeten Formulardaten
+# Extrahieren von Formularanhängen aus übermittelten Formulardaten
 
 Extrahieren Sie Formularanhänge und senden Sie die Anlagen in einer E-Mail in einem leistungsstarken automatisierten Workflow.
 Im folgenden Video werden die Schritte erläutert, die zum Erstellen von Anlagen aus den gesendeten Daten erforderlich sind.
 >[!VIDEO](https://video.tv.adobe.com/v/3409017?quality=12&learn=on)
 
-Im Folgenden finden Sie das Anlagenobjektschema, das Sie im Schritt Parse JSON schema verwenden müssen
+Im Folgenden finden Sie das Schema des Anhangsobjekts, das Sie im Parse-Schritt des JSON-Schemas verwenden müssen
 
 ```json
 {
