@@ -9,7 +9,7 @@ exl-id: 0056971f-2f89-43b3-bb6f-dd16c2a50370
 thumbnail: 328618.jpg
 last-substantial-update: 2022-07-20T00:00:00Z
 source-git-commit: 4c0770eafbbbb90bfc00ab49be02e84c41d63057
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '268'
 ht-degree: 100%
 
@@ -53,7 +53,7 @@ Erfahren Sie mehr über GraphQL-Funktionen in AEM, indem Sie eine React-App erst
 
 ## AEM GraphQL und AEM Content Services im Vergleich
 
-|  | AEM-GraphQL-APIs | AEM Content Services |
+|                                | AEM-GraphQL-APIs | AEM Content Services |
 |--------------------------------|:-----------------|:---------------------|
 | Schemadefinition | Strukturierte Inhaltsfragmentmodelle | AEM-Komponenten |
 | Inhalt | Inhaltsfragmente | AEM-Komponenten |
