@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer Sprachkopie
-description: Erfahren Sie, wie Sie mit dem Assistenten Sprachkopie erstellen eine Sprachkopie für Ihre AEM Website erstellen.
+description: Erfahren Sie, wie Sie mit dem Assistenten zum Erstellen einer Sprachkopie eine Sprachkopie für Ihre AEM-Website erstellen.
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -14,14 +14,14 @@ role: User
 level: Beginner
 exl-id: d1f557bd-c48f-4534-8735-59e479ec92b5
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '42'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Erstellen einer Sprachkopie {#create-language-copy}
 
-Erfahren Sie, wie Sie mit dem Assistenten Sprachkopie erstellen eine Sprachkopie für Ihre AEM Website erstellen.
+Erfahren Sie, wie Sie mit dem Assistenten zum Erstellen einer Sprachkopie eine Sprachkopie für Ihre AEM-Website erstellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/36483?quality=12&learn=on)
