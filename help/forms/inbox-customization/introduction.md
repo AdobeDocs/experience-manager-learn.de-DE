@@ -1,6 +1,6 @@
 ---
 title: AEM-Posteingang
-description: Posteingang anpassen durch Hinzufügen neuer Spalten basierend auf Workflow-Daten
+description: Anpassen des Posteingangs durch Hinzufügen neuer Spalten auf Basis von Workflow-Daten
 feature: Adaptive Forms
 topics: development
 audience: developer
@@ -14,48 +14,48 @@ level: Experienced
 exl-id: 3e1d86ab-e0c4-45d4-b998-75a44a7e4a3f
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '206'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 # AEM-Posteingang
 
-AEM Posteingang konsolidiert Benachrichtigungen und Aufgaben aus verschiedenen AEM Komponenten, einschließlich Forms-Workflows. Wenn ein Arbeitsablauf für Formulare ausgelöst wird, der einen Schritt &quot;Aufgabe zuweisen&quot;enthält, wird die zugehörige Anwendung als Aufgabe im Posteingang des Empfängers aufgeführt.
+Der AEM-Posteingang führt Benachrichtigungen und Aufgaben aus verschiedenen AEM-Komponenten, einschließlich Forms Workflow, zusammen. Wenn ein Forms-Workflow ausgelöst wird, der einen Schritt zur Zuweisung einer Aufgabe enthält, wird die dazugehörige Anwendung als Aufgabe im Posteingang der zugewiesenen Person angezeigt.
 
-Die Benutzeroberfläche des Posteingangs bietet Listen- und Kalenderansichten zum Anzeigen von Aufgaben. Sie können auch die Anzeigeeinstellungen konfigurieren. Sie können Aufgaben anhand verschiedener Parameter filtern.
+Die Benutzeroberfläche des Posteingangs bietet Listen- und Kalenderansichten zum Anzeigen von Aufgaben. Sie können außerdem die Einstellungen für die Anzeige konfigurieren. Sie können Aufgaben nach verschiedenen Parametern filtern.
 
-Sie können den Experience Manager-Posteingang anpassen, um den Standardtitel einer Spalte zu ändern, die Spaltenposition neu anzuordnen und zusätzliche Spalten basierend auf den Daten eines Workflows anzuzeigen.
+Sie können den Experience Manager-Posteingang anpassen, indem Sie den Standardtitel einer Spalte ändern, eine Spalte neu anordnen und zusätzliche Spalten basierend auf den Daten eines Workflows anzeigen.
 
 >[!NOTE]
 >
->Sie müssen Administrator oder Workflow-Administratoren sein, um die Spalten des Posteingangs anzupassen.
+>Sie müssen Admin oder Workflow-Admin sein, um die Spalten des Posteingangs anpassen zu können.
 
 ## Spaltenanpassung
 
-[AEM Posteingang starten](http://localhost:4502/aem/inbox)
-Öffnen Sie die Admin Control, indem Sie auf die _Listenansicht_ Symbol und wählen Sie dann _Admin Control_ wie im Screenshot unten gezeigt
+[Starten des AEM-Posteingangs](http://localhost:4502/aem/inbox)
+Öffnen Sie die Admin-Steuerung, indem Sie auf das Symbol _Listenansicht_ klicken und dann _Admin-Steuerung_ auswählen, wie im Screenshot unten gezeigt.
 
 ![Admin-Kontrolle](assets/open-customization.png)
 
-In der Benutzeroberfläche zur Spaltenanpassung können Sie die folgenden Vorgänge ausführen
+In der Benutzeroberfläche zur Spaltenanpassung können Sie die folgenden Vorgänge ausführen:
 
 * Spalten löschen
-* Neuanordnen der Spalten
+* Spalten neu anordnen
 * Spalten umbenennen
 
 ## Branding-Anpassung
 
-Bei der Branding-Anpassung haben Sie folgende Möglichkeiten:
+Im Rahmen der Branding-Anpassung können Sie die folgenden Vorgänge ausführen:
 
-* Hinzufügen des Organisationslogos
+* Logo Ihrer Organisation hinzufügen
 * Kopfzeilentext anpassen
-* Hilfelink anpassen
+* Hilfe-Link anpassen
 * Navigationsoptionen ausblenden
 
-![Inbox-Branding](assets/branding-customization.PNG)
+![Branding für den Posteingang](assets/branding-customization.PNG)
 
 ## Nächste Schritte
 
-[Spalte &quot;Verheiratet hinzufügen&quot;](./add-married-column.md)
+[Hinzufügen der Spalte „Verheiratet“](./add-married-column.md)
