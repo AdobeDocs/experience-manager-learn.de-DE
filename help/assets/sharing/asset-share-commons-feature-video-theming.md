@@ -1,6 +1,6 @@
 ---
-title: Einführung in das Designing in Asset Share Commons
-description: Materialien für das funktionale und technische Verständnis von Assets Share Commons
+title: Einführung in die Erstellung von Designs in Asset Share Commons
+description: Materialien für das funktionale und das technische Verständnis von Assets Share Commons
 version: 6.4, 6.5
 topic: Content Management
 feature: Asset Distribution
@@ -9,21 +9,21 @@ level: Intermediate
 last-substantial-update: 2022-06-22T00:00:00Z
 exl-id: b7d0b6b1-145a-4987-a9dc-7263efa4d9fb
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '112'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Einführung in das Designing in Asset Share Commons {#asset-share-commons-theme}
+# Einführung in die Erstellung von Designs in Asset Share Commons {#asset-share-commons-theme}
 
-Eine kurze Einführung in das Thema in Asset Share Commons. Das Video führt durch den Prozess der Erstellung eines neuen Designs mit einem benutzerdefinierten Farbschema.
+Eine kurze Einführung in die Erstellung von Designs in Asset Share Commons. Das Video führt durch den Prozess der Erstellung eines neuen Designs mit einem benutzerdefinierten Farbschema.
 
 >[!VIDEO](https://video.tv.adobe.com/v/20572?quality=12&learn=on)
 
-In diesem Video wird ein neues Design basierend auf dem Asset Share Commons Dark-Design erstellt. Das Farbschema wird mit einem benutzerdefinierten Logo übereinstimmen, um der Site ein einheitliches Erscheinungsbild zu verleihen.
+In diesem Video wird ein neues Design basierend auf dem Asset Share Commons Dark-Design erstellt. Das Farbschema wird mit einem benutzerdefinierten Logo übereinstimmen, sodass die Site ein einheitliches Erscheinungsbild hat.
 
-## Designvariablen
+## Design-Variablen
 
 ```java
 /*******************************
@@ -74,9 +74,9 @@ In diesem Video wird ein neues Design basierend auf dem Asset Share Commons Dark
 @msgWarningBackgroundColor: @yellow;
 ```
 
-Download [Benutzerdefiniertes Client-Bibliotheksthema](assets/asc-theme-demo.zip)
+Herunterladen von [Benutzerdefiniertes Client-Bibliotheks-Design](assets/asc-theme-demo.zip)
 
 ## Zusätzliche Ressourcen{#additional-resources}
 
-* [Asset Share Commons-Veröffentlichungsdownloads](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
-* [ACS AEM Commons 3.11.0+-Versionsdownloads](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)
+* [Versionsdownloads von Asset Share Commons](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
+* [Versionsdownloads von ACS AEM Commons 3.11.0+](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)
