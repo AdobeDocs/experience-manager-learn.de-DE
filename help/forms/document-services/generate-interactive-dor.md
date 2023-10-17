@@ -1,5 +1,5 @@
 ---
-title: Interaktives Datensatzdokument mit adaptiven Formulardaten generieren
+title: Erstellen eines interaktiven DoR mit adaptiven Formulardaten
 description: Zusammenführen adaptiver Formulardaten mit der XDP-Vorlage, um herunterladbare PDF-Dateien zu generieren
 version: 6.4,6.5
 feature: Forms Service
@@ -10,29 +10,29 @@ kt: 9226
 exl-id: d9618cc8-d399-4850-8714-c38991862045
 last-substantial-update: 2020-02-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '543'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Interaktives DoR herunterladen
+# Herunterladen eines interaktiven DoR
 
-Ein gängiges Nutzungsszenario besteht darin, ein interaktives DoR mit den adaptiven Formulardaten herunterzuladen. Das heruntergeladene DoR wird dann mit Adobe Acrobat oder Adobe Reader abgeschlossen.
+Ein gängiges Nutzungsszenario besteht darin, ein interaktives DoR mit den adaptiven Formulardaten herunterzuladen. Das heruntergeladene DoR wird dann mit Adobe Acrobat oder Adobe Reader vervollständigt.
 
 ## Adaptives Formular basiert nicht auf dem XSD-Schema
 
 Wenn Ihr XDP und adaptives Formular nicht auf einem Schema basieren, führen Sie die folgenden Schritte aus, um ein interaktives Datensatzdokument zu generieren.
 
-### Adaptives Formular erstellen
+### Erstellen eines adaptiven Formulars
 
-Erstellen Sie ein adaptives Formular und stellen Sie sicher, dass die Feldnamen in dem adaptiven Formular mit den Feldnamen in Ihrer xdp-Vorlage identisch benannt sind.
-Notieren Sie sich den Stammelementnamen Ihrer xdp-Vorlage.
+Erstellen Sie ein adaptives Formular und stellen Sie sicher, dass die Feldnamen in dem adaptiven Formular mit den Feldnamen in Ihrer XDP-Vorlage identisch sind.
+Notieren Sie sich den Stammelementnamen Ihrer XDP-Vorlage.
 ![root-element](assets/xfa-root-element.png)
 
-### Client Lib
+### Client-Bibliothek
 
-Der folgende Code wird ausgelöst, wenn die Schaltfläche PDF herunterladen ausgelöst wird
+Der folgende Code wird ausgeführt, wenn die Schaltfläche „PDF herunterladen“ ausgelöst wird:
 
 ```javascript
 $(document).ready(function() {
@@ -67,21 +67,22 @@ $(document).ready(function() {
 
 Wenn Ihr XDP nicht auf XSD basiert, führen Sie die folgenden Schritte aus, um XSD(Schema) zu erstellen, auf dem Ihr adaptives Formular basiert
 
-### Beispieldaten für das XDP generieren
+### Generieren von Beispieldaten für die XDP
 
 * Öffnen Sie die XDP in AEM Forms Designer.
-* Datei auswählen | Formulareigenschaften | Vorschau
-* Klicken Sie auf Vorschaudaten generieren .
-* Klicken Sie auf Generieren
-* Geben Sie einen aussagekräftigen Dateinamen an, z. B. &quot;form-data.xml&quot;
+* Klicken Sie auf „Datei auswählen“ > „Formular-Eigenschaften“ > „Vorschau“
+* Klicken Sie auf „Vorschaudaten erstellen“
+* Klicken Sie auf „Erstellen“
+* Geben Sie einen aussagekräftigen Dateinamen wie „form-data.xml“ an.
 
-### XSD aus den XML-Daten generieren
+### Erstellen einer XSD aus den XML-Daten 
 
-Sie können jedes der kostenlosen Online-Tools verwenden, um [XSD generieren](https://www.freeformatter.com/xsd-generator.html) aus den XML-Daten, die im vorherigen Schritt generiert wurden.
+Sie können eines der kostenlosen Online-Tools verwenden, um aus den im vorherigen Schritt generierten XML-Daten eine [XSD](https://www.freeformatter.com/xsd-generator.html) zu generieren.
 
-### Adaptives Formular erstellen
+### Erstellen eines adaptiven Formulars
 
-Erstellen Sie ein adaptives Formular basierend auf der XSD aus dem vorherigen Schritt. Verknüpfen Sie das Formular mit der Client-Bibliothek &quot;irs&quot;. Diese Client-Bibliothek enthält den Code, um einen POST-Aufruf an das Servlet durchzuführen, der die PDF an die aufrufende Anwendung zurückgibt. Der folgende Code wird ausgelöst, wenn die _PDF herunterladen_ angeklickt wird
+Erstellen Sie ein adaptives Formular basierend auf der XSD aus dem vorherigen Schritt. Verknüpfen Sie das Formular mit der Client-Bibliothek „irs“. Diese Client-Bibliothek enthält den Code, um einen POST-Aufruf an das Servlet durchzuführen, der die PDF an die aufrufende Anwendung zurückgibt.
+Der folgende Code wird ausgelöst, wenn _PDF herunterladen_ angeklickt wird
 
 ```javascript
 $(document).ready(function() {
@@ -114,9 +115,9 @@ $(document).ready(function() {
 
 
 
-## Benutzerdefiniertes Servlet erstellen
+## Erstellen eines benutzerdefinierten Servlets
 
-Erstellen Sie ein benutzerdefiniertes Servlet, das die Daten mit der XDP-Vorlage zusammenführt und das PDF-Dokument zurückgibt. Der Code, um dies zu erreichen, ist unten aufgeführt. Das benutzerdefinierte Servlet ist Teil der [AEMFormsDocumentServices.core-1.0-SNAPSHOT Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)).
+Erstellen Sie ein benutzerdefiniertes Servlet, das die Daten mit der XDP-Vorlage zusammenführt und das PDF-Dokument zurückgibt. Der Code dafür ist unten aufgeführt. Das benutzerdefinierte Servlet ist Teil des [AEMFormsDocumentServices.core-1.0-SNAPSHOT-Bundles](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)).
 
 ```java
 public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
@@ -209,21 +210,22 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 }
 ```
 
-Im Beispielcode extrahieren wir den xdp-Namen und andere Parameter aus dem Anfrageobjekt. Wenn das Formular nicht auf XSD basiert, wird das XML-Dokument erstellt, das mit der xdp zusammengeführt werden soll. Wenn das Formular auf XSD basiert, extrahieren wir einfach den entsprechenden Knoten aus den gesendeten adaptiven Formulardaten, um das XML-Dokument zu generieren, das mit der xdp-Vorlage zusammengeführt werden soll.
+Im Beispiel-Code extrahieren wir den XDP-Namen und andere Parameter aus dem Anfrageobjekt. Wenn das Formular nicht auf XSD basiert, wird das XML-Dokument erstellt, das mit der XDP zusammengeführt werden soll. Wenn das Formular auf XSD basiert, extrahieren wir einfach den entsprechenden Knoten aus den gesendeten adaptiven Formulardaten, um das XML-Dokument zu generieren, das mit der XDP-Vorlage zusammengeführt werden soll.
 
 ## Bereitstellen des Beispiels auf Ihrem Server
 
 Führen Sie die folgenden Schritte aus, um dies auf Ihrem lokalen Server zu testen:
 
-1. [Herunterladen und Installieren des DevelopingWithServiceUser-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. Fügen Sie den folgenden Eintrag im Apache Sling Service User Mapper Service DevelopingWithServiceUser.core:getformsresourceresolver=fd-service hinzu.
-1. [Herunterladen und Installieren des benutzerdefinierten Document Services-Bundles](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). Dies verfügt über das Servlet, um die Daten mit der XDP-Vorlage zusammenzuführen und die PDF-Datei zurückzustreamen.
-1. [Client-Bibliothek importieren](assets/generate-interactive-dor-client-lib.zip)
+1. [Laden Sie das DevelopingWithServiceUser-Bundle herunter und installieren Sie es.](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1. Fügen Sie den folgenden Eintrag im Apache Sling Service User Mapper Service hinzu:
+DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
+1. [Laden Sie das benutzerdefinierte DocumentServices-Bundle herunter und installieren Sie es](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar).  Dies verfügt über das Servlet, um die Daten mit der XDP-Vorlage zusammenzuführen und die PDF-Datei zurückschicken.
+1. [Importieren Sie die Client-Bibliothek.](assets/generate-interactive-dor-client-lib.zip)
 1. [Importieren Sie die Artikel-Assets (adaptives Formular, XDP-Vorlagen und XSD).](assets/generate-interactive-dor-sample-assets.zip)
-1. [Vorschau des adaptiven Formulars](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
+1. [Zeigen Sie das adaptive Formular in einer Vorschau an](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled).
 1. Füllen Sie einige der Formularfelder aus.
-1. Klicken Sie auf PDF herunterladen , um die PDF zu erhalten. Möglicherweise müssen Sie einige Sekunden warten, bis die PDF heruntergeladen wird.
+1. Klicken Sie auf „PDF herunterladen“, um die PDF zu erhalten. Möglicherweise müssen Sie einige Sekunden warten, bis die PDF heruntergeladen wird.
 
 >[!NOTE]
 >
->Sie können dasselbe Anwendungsbeispiel mit [Nicht-XSD-basiertes adaptives Formular](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled). Stellen Sie sicher, dass Sie die entsprechenden Parameter an den POST-Endpunkt in &quot;streampdf.js&quot;übergeben, der sich in der irs-clientlib befindet.
+>Sie können den gleichen Anwendungsfall mit [einem nicht XSD-basierten adaptiven Formular](http://localhost:4502/content/dam/formsanddocuments/two/jcr:content?wcmmode=disabled) versuchen.  Stellen Sie sicher, dass Sie die entsprechenden Parameter an den POST-Endpunkt in „streampdf.js“ übergeben, der sich in der IRS-Client-Bibliothek befindet.
