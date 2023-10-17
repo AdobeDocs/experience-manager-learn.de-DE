@@ -1,49 +1,50 @@
 ---
 title: AMS Dispatcher-Konsistenzprüfung
-description: AMS stellt ein cgi-bin-Skript für die Konsistenzprüfung bereit, das von den Cloud-Lastenausgleichern ausgeführt wird, um zu sehen, ob AEM gesund ist, und das für den öffentlichen Datenverkehr weiterverwendet werden sollte.
+description: AMS stellt ein CGI-Bin-Skript für die Konsistenzprüfung bereit, das von den Cloud-Load-Balancern ausgeführt wird, um zu überprüfen, ob AEM fehlerfrei funktioniert und für den öffentlichen Traffic weiter betrieben werden sollte.
 version: 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: df3afc60f765c18915eca3bb2d3556379383fafc
-workflow-type: tm+mt
+exl-id: 69b4e469-52cc-441b-b6e5-2fe7ef18da90
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '1139'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # AMS Dispatcher-Konsistenzprüfung
 
-[Inhalt](./overview.md)
+[Inhaltsverzeichnis](./overview.md)
 
 [&lt;- Zurück: Schreibgeschützte Dateien](./immutable-files.md)
 
-Wenn Sie einen AMS-Grundlinien-Dispatcher installiert haben, wird dieser mit einigen Freebies geliefert.  Eine dieser Funktionen ist eine Reihe von Skripten zur Konsistenzprüfung.
-Diese Skripte ermöglichen es dem Lastenausgleich, der den AEM Stack anzeigt, zu wissen, welche Beine gesund sind, und sie in Betrieb zu halten.
+Eine AMS Dispatcher-Basisinstallation umfasst verschiedene Gratisfunktionen.  Zu diesen Funktionen gehört eine Reihe von Skripten zur Konsistenzprüfung.
+Anhand dieser Skripte erfährt der dem AEM-Stack vorgeschaltete Load-Balancer, welche Abzweigungen fehlerfrei sind und weiter betrieben werden sollten.
 
-![Animierte GIF, die den Traffic-Fluss anzeigt](assets/load-balancer-healthcheck/health-check.gif "Schritte zur Konsistenzprüfung")
+![Animierte GIF-Datei mit Traffic-Fluss](assets/load-balancer-healthcheck/health-check.gif "Schritte zur Konsistenzprüfung")
 
-## Grundlegende Prüfung der Lastenausgleichsfähigkeit
+## Grundlegende Load-Balancer-Konsistenzprüfung
 
-Wenn Kunden-Traffic über das Internet zu Ihrer AEM-Instanz gelangt, durchlaufen sie einen Lastenausgleich
+Wenn Kunden-Traffic über das Internet zu Ihrer AEM-Instanz gelangt, durchlaufen sie einen Load-Balancer.
 
-![Bild zeigt Traffic-Fluss von Internet zu AEM über einen Lastenausgleich](assets/load-balancer-healthcheck/load-balancer-traffic-flow.png "Load-Balancer-Traffic-Flow")
+![Bild mit Darstellung des Traffic-Flusses vom Internet zu AEM über einen Load-Balancer](assets/load-balancer-healthcheck/load-balancer-traffic-flow.png "Load-Balancer-Traffic-Fluss")
 
-Jede Anfrage, die über den Lastenausgleich gesendet wird, rundet den Papierkorb auf jede Instanz.  Der Lastenausgleich verfügt über einen Gesundheitsüberprüfungsmechanismus, um sicherzustellen, dass er Traffic an einen gesunden Host sendet.
+Alle Anfragen, die den Load-Balancer passieren, werden per Round-Robin-Verfahren an die jeweilige Instanz gesendet.  Der Load-Balancer verfügt über einen Konsistenzprüfmechanismus, um sicherzustellen, dass er Traffic an einen Host in einem einwandfreien Zustand sendet.
 
-Die Standardprüfung ist normalerweise eine Port-Prüfung, um festzustellen, ob die im Lastenausgleich angesprochenen Server den Port-Traffic überwachen (d. h. TCP 80 und 443).
+Standardmäßig erfolgt normalerweise eine Port-Prüfung, um festzustellen, ob die beim Lastenausgleich anvisierten Server den Port-Traffic überwachen (d. h. TCP 80 und 443).
 
-> `Note:` Während dies funktioniert, hat es keine wirkliche Anzeige, ob AEM gesund ist.  Es wird nur getestet, ob der Dispatcher (Apache-Webserver) aktiv ist.
+> `Note:` Dies funktioniert, sagt jedoch nicht wirklich etwas darüber aus, ob sich AEM in einem einwandfreien Zustand befindet.  Es wird nur getestet, ob der Dispatcher (Apache-Webserver) aktiv ist.
 
 ## AMS-Konsistenzprüfung
 
-Um zu vermeiden, dass Traffic an einen gesunden Dispatcher gesendet wird, der einer ungesunden AEM-Instanz gegenübersteht, hat AMS einige Extras erstellt, die die Gesundheit des Beins und nicht nur des Dispatchers bewerten.
+Um zu vermeiden, dass Traffic an einen fehlerfreien Dispatcher gesendet wird, der einer fehlerhaften AEM-Instanz vorgeschaltet ist, verfügt AMS über einige zusätzlich entwickelte Funktionen, die die Integrität der Abzweigung und nicht nur die des Dispatchers bewerten.
 
-![Bild zeigt die verschiedenen Teile für die funktionierende Konsistenzprüfung](assets/load-balancer-healthcheck/health-check-pieces.png "healt-check-segments")
+![Bild mit Darstellung der verschiedenen Teile für eine funktionierende Konsistenzprüfung](assets/load-balancer-healthcheck/health-check-pieces.png "Bestandteile der Konsistenzprüfung")
 
-Die Konsistenzprüfung umfasst die folgenden Bestandteile
+Die Konsistenzprüfung umfasst folgende Bestandteile:
 - 1 `Load balancer`
 - 1 `Apache web server`
 - 3 `Apache *VirtualHost* config files`
@@ -51,35 +52,35 @@ Die Konsistenzprüfung umfasst die folgenden Bestandteile
 - 1 `AEM instance`
 - 1 `AEM package`
 
-Wir werden uns mit der Frage beschäftigen, was jedes Stück tun soll und wie wichtig es ist
+Wir werden uns mit der Aufgabe und Bedeutung all dieser Bestandteile beschäftigen.
 
-### AEM Package
+### AEM-Paket
 
-Um anzugeben, ob AEM funktioniert, benötigen Sie es, um eine einfache Seitenkompilierung durchzuführen und die Seite zu bedienen.  Adobe Managed Services hat ein Grundpaket erstellt, das die Testseite enthält.  Die Seite testet, dass das Repository eingerichtet ist und dass die Ressourcen und die Seitenvorlage gerendert werden können.
+Um festzustellen, ob AEM funktioniert, ist es erforderlich, eine einfache Seitenkompilierung durchzuführen und die Seite bereitzustellen.  Adobe Managed Services hat ein Basispaket mit der Testseite erstellt.  Die Seite testet, ob das Repository eingerichtet ist und ob die Ressourcen und die Seitenvorlage gerendert werden können.
 
-![Bild zeigt das AMS-Paket im CRX-Paketmanager](assets/load-balancer-healthcheck/health-check-package.png "healt-check-package")
+![Bild mit Darstellung des AMS-Pakets in CRX Package Manager](assets/load-balancer-healthcheck/health-check-package.png "Konsistenzprüfung – Paket")
 
-Hier ist die Seite.  Sie zeigt die Repository-ID der Installation an.
+Hier ist die Seite. Sie zeigt die Repository-ID der Installation.
 
-![Bild zeigt die AMS-Regent-Seite](assets/load-balancer-healthcheck/health-check-page.png "health-check-page")
+![Bild mit Darstellung der AMS Regent-Seite](assets/load-balancer-healthcheck/health-check-page.png "Konsistenzprüfung – Seite")
 
-> `Note:` Wir stellen sicher, dass die Seite nicht zwischenspeicherbar ist.  Es würde den tatsächlichen Status nicht überprüfen, wenn jedes Mal eine zwischengespeicherte Seite zurückgegeben würde!
+> `Note:` Wir stellen sicher, dass die Seite nicht zwischengespeichert werden kann.  Sie würde den tatsächlichen Zustand nicht überprüfen, wenn jedes Mal eine zwischengespeicherte Seite zurückgegeben wird.
 
-Dies ist der leichte Gewichtsendpunkt, den wir testen können, um festzustellen, ob AEM läuft.
+Diesen einfachen Endpunkt können wir testen, um festzustellen, ob AEM ordnungsgemäß ausgeführt wird.
 
 ### Load-Balancer-Konfiguration
 
-Wir konfigurieren die Lastverteiler so, dass sie auf einen CGI-BIN-Endpunkt verweisen, anstatt eine Port-Prüfung zu verwenden.
+Wir konfigurieren die Load-Balancer so, dass sie auf einen CGI-Bin-Endpunkt verweisen, anstatt eine Port-Prüfung durchzuführen.
 
-![Bild zeigt die Konsistenzprüfungskonfiguration des AWS-Lastenausgleichs](assets/load-balancer-healthcheck/aws-settings.png "aws-lb-settings")
+![Bild mit Darstellung der Konfiguration der AWS-Load-Balancer-Konsistenzprüfung](assets/load-balancer-healthcheck/aws-settings.png "AWS-Load-Balancer-Einstellungen")
 
-![Bild zeigt die Konfiguration der Azure Load Balancer-Konsistenzprüfung](assets/load-balancer-healthcheck/azure-settings.png "azure-lb-settings")
+![Bild mit Darstellung der Konfiguration der Azure-Load-Balancer-Konsistenzprüfung](assets/load-balancer-healthcheck/azure-settings.png "Azure-Load-Balancer-Einstellungen")
 
-### Apache Health Check Virtual Hosts
+### Apache-Konsistenzprüfung virtueller Hosts
 
-#### CGI-BIN Virtueller Host `(/etc/httpd/conf.d/available_vhosts/ams_health.vhost)`
+#### CGI-Bin – Virtueller Host `(/etc/httpd/conf.d/available_vhosts/ams_health.vhost)`
 
-Dies ist die `<VirtualHost>` Apache-Konfigurationsdatei, die die Ausführung der CGI-Bin-Dateien ermöglicht.
+Dies ist die `<VirtualHost>`-Apache-Konfigurationsdatei, die die Ausführung der CGI-Bin-Dateien ermöglicht.
 
 ```
 Listen 81
@@ -90,17 +91,17 @@ Listen 81
 </VirtualHost>
 ```
 
-> `Note:` cgi-bin-Dateien sind Skripte, die ausgeführt werden können.  Dies kann ein verletzlicher Angriffsvektor sein, und diese Skripte, die AMS verwendet, sind nicht öffentlich zugänglich, nur für den Lastenausgleich zum Testen verfügbar.
+> `Note:` CGI-Bin-Dateien sind Skripte, die ausgeführt werden können.  Dies kann ein anfälliger Angriffsvektor sein, und diese von AMS verwendeten Skripte sind nicht öffentlich zugänglich, sondern nur für den Load-Balancer für Testzwecke verfügbar.
 
 
-#### Nicht gesunde virtuelle Hosts zur Wartung
+#### Wartung fehlerhafter virtueller Hosts
 
 - `/etc/httpd/conf.d/available_vhosts/000_unhealthy_author.vhost`
 - `/etc/httpd/conf.d/available_vhosts/000_unhealthy_publish.vhost`
 
-Diese Dateien werden `000_` als Präfix.  Sie ist vorsätzlich so konfiguriert, dass sie denselben Domänennamen wie die Live-Site verwendet.  Diese Datei soll aktiviert werden, wenn die Konsistenzprüfung erkennt, dass ein Problem mit einem der AEM Backends vorliegt.  Geben Sie dann eine Fehlerseite an, anstatt nur einen 503-HTTP-Antwortcode ohne Seite anzubieten.  Sie stiehlt den Traffic von der normalen `.vhost` Datei, da sie zuvor geladen wurde `.vhost` Datei beim Freigeben derselben `ServerName` oder `ServerAlias`.  Dies führt dazu, dass Seiten, die für eine bestimmte Domäne bestimmt sind, zum ungesunden Host statt zum standardmäßigen gelangen, durch den der normale Traffic fließt.
+Diese Dateien haben mit Absicht `000_` als Präfix.  Sie ist extra so konfiguriert, dass sie denselben Domain-Name wie die Livesite verwendet.  Diese Datei soll aktiviert werden, wenn die Konsistenzprüfung erkennt, dass ein Problem mit einem der AEM-Backends vorliegt.  Geben Sie dann eine Fehlerseite an, anstatt nur einen 503-HTTP-Antwort-Code ohne Seite anzubieten.  Sie stiehlt den Traffic von der normalen Datei `.vhost`, da sie vor dieser Datei `.vhost` geladen wurde, während derselbe `ServerName` oder `ServerAlias` freigegeben wurde.  Dies führt dazu, dass Seiten, die für eine bestimmte Domain bestimmt sind, zum nicht ordnungsgemäß ausgeführten statt zum standardmäßigen Host gelangen, durch den der normale Traffic fließt.
 
-Wenn die Konsistenzprüfungsskripte ausgeführt werden, melden sie ihren aktuellen Gesundheitsstatus ab.  Einmal pro Minute wird ein Cronjob auf dem Server ausgeführt, der nach nicht gesunden Einträgen im Protokoll sucht.  Wenn festgestellt wird, dass die Autoreninstanz nicht AEM ist, wird der Symlink aktiviert:
+Wenn die Konsistenzprüfungsskripte ausgeführt werden, melden sie ihren aktuellen Zustand ab.  Einmal pro Minute wird ein Cronjob auf dem Server ausgeführt, der nach nicht ordnungsgemäßen Einträgen im Protokoll sucht.  Wenn festgestellt wird, dass die AEM-Authoring-Instanz nicht ordnungsgemäß ausgeführt wird, wird der Symlink aktiviert:
 
 Protokolleintrag:
 
@@ -110,14 +111,14 @@ E, [2022-11-23T20:13:54.984379 #26794] ERROR -- : AUTHOR -- Exception caught: Co
 I, [2022-11-23T20:13:54.984403 #26794]  INFO -- : [checkpublish]-author:0-publish:1-[checkpublish]
 ```
 
-Sichern Sie den Fehler und reagieren Sie:
+Den Fehler per Cron sichern und reagieren:
 
 ```
 # grep symlink /var/log/lb/health_check_reload.log
 I, [2022-11-23T20:34:19.213179 #2275]  INFO -- : ADDING VHOST symlink /etc/httpd/conf.d/available_vhosts/000_unhealthy_author.vhost => /etc/httpd/conf.d/enabled_vhosts/000_unhealthy_author.vhost
 ```
 
-Sie können steuern, ob Autoren- oder veröffentlichte Sites diese Fehlerseite laden können, indem Sie die Neulademoduseinstellung in `/var/www/cgi-bin/health_check.conf`
+Sie können steuern, ob Authoring- oder Publishing-Sites diese Fehlerseite laden können, indem Sie die Neulademoduseinstellung in `/var/www/cgi-bin/health_check.conf` konfigurieren
 
 ```
 # grep RELOAD_MODE /var/www/cgi-bin/health_check.conf
@@ -127,15 +128,15 @@ RELOAD_MODE='author'
 Gültige Optionen:
 - author
    - Dies ist die Standardoption.
-   - Dadurch wird eine Wartungsseite für Autoren eingerichtet, wenn sie nicht gesund sind
+   - Dadurch wird bei nicht ordnungsgemäßer Ausführung eine Authoring-Wartungsseite eingerichtet
 - publish
-   - Mit dieser Option wird eine Wartungsseite für Herausgeber eingerichtet, wenn sie nicht gesund ist
+   - Mit dieser Option wird bei nicht ordnungsgemäßer Ausführung eine Publishing-Wartungsseite eingerichtet
 - alle
-   - Mit dieser Option wird eine Wartungsseite für Autor, Herausgeber oder beides eingerichtet, wenn sie nicht gesund werden
+   - Mit dieser Option wird bei nicht ordnungsgemäßer Ausführung eine Authoring- oder Publishing-Wartungsseite oder beides eingerichtet
 - keine
-   - Diese Option überspringt diese Funktion der Konsistenzprüfung
+   - Durch diese Option wird diese Funktion der Konsistenzprüfung übersprungen
 
-Wenn Sie sich die `VirtualHost` -Einstellung für diese werden Sie sehen, dass sie dasselbe Dokument als Fehlerseite für jede Anforderung laden, die bei Aktivierung kommt:
+Wenn Sie sich jeweils die `VirtualHost`-Einstellung anschauen, werden Sie sehen, dass dasselbe Dokument als Fehlerseite für jede Anfrage geladen wird, die auf die Aktivierung folgt:
 
 ```
 <VirtualHost *:80>
@@ -172,42 +173,42 @@ X-Dispatcher: dispatcher1useast1
 X-Vhost: unhealthy-author
 ```
 
-Anstelle einer leeren Seite erhalten sie stattdessen diese Seite.
+Anstelle einer leeren Seite wird diese Seite angezeigt.
 
-![Bild zeigt die standardmäßige Wartungsseite](assets/load-balancer-healthcheck/unhealthy-page.png "unhealthy-page")
+![ Das Bild zeigt die standardmäßige Wartungsseite ](assets/load-balancer-healthcheck/unhealthy-page.png "unhealthy-page") an
 
 ### CGI-Bin-Skripte
 
-Es gibt fünf verschiedene Skripte, die von Ihrem CSE in den Lastenausgleichseinstellungen konfiguriert werden können und die das Verhalten oder die Kriterien ändern, wann ein Dispatcher aus dem Lastenausgleich gezogen werden soll.
+Es gibt fünf verschiedene Skripte, die von Ihrem CSE in den Lastenausgleichseinstellungen konfiguriert werden können und die das Verhalten bzw. die Kriterien dafür ändern, wann ein Dispatcher aus dem Lastenausgleich gezogen werden soll.
 
 #### /bin/checkauthor
 
-Dieses Skript überprüft und protokolliert alle Instanzen, bei denen es frontiert ist, gibt jedoch nur einen Fehler zurück, wenn die `author` AEM Instanz ungesund
+Dieses Skript überprüft und protokolliert alle Instanzen, bei denen es frontiert ist, gibt jedoch nur einen Fehler zurück, wenn die `author`-AEM-Instanz nicht ordnungsgemäß funktioniert
 
-> `Note:` Beachten Sie, dass der Dispatcher im Dienst verbleibt, damit der Datenverkehr zur Autoreninstanz geleitet werden kann, wenn die AEM-Instanz ungesund ist.
+> `Note:` Beachten Sie, dass der Dispatcher im Dienst verbleibt, damit der Datenverkehr zur AEM-Authoring-Instanz geleitet werden kann, wenn die AEM-Publishing-Instanz nicht ordnungsgemäß funktioniert
 
 #### /bin/checkpublish (Standard)
 
-Dieses Skript überprüft und protokolliert alle Instanzen, bei denen es frontiert ist, gibt jedoch nur einen Fehler zurück, wenn die `publish` AEM Instanz ungesund
+Dieses Skript überprüft und protokolliert alle Instanzen, bei denen es frontiert ist, gibt jedoch nur einen Fehler zurück, wenn die `publish`-AEM-Instanz nicht ordnungsgemäß funktioniert
 
-> `Note:` Beachten Sie, dass der Dispatcher im Dienst verbleibt, damit der Datenverkehr zur Veröffentlichungsinstanz geleitet werden kann, wenn die AEM nicht ordnungsgemäß ausgeführt wurde.
+> `Note:` Beachten Sie, dass der Dispatcher im Dienst verbleibt, damit der Datenverkehr zur AEM-Publishing-Instanz geleitet werden kann, wenn die AEM-Authoring-Instanz nicht ordnungsgemäß ausgeführt wird
 
-#### /bin/checkentweder
+#### /bin/checkeither
 
-Dieses Skript überprüft und protokolliert alle Instanzen, bei denen es frontiert ist, gibt jedoch nur einen Fehler zurück, wenn die `author` oder `publisher` AEM Instanz ungesund
+Dieses Skript überprüft und protokolliert alle Instanzen, bei denen es frontiert ist, gibt jedoch nur einen Fehler zurück, wenn die `author`- oder `publisher`-AEM Instanz nicht ordnungsgemäß ausgeführt wird
 
-> `Note:` Beachten Sie, dass der Dispatcher den Dienst abruft, wenn entweder die Veröffentlichungsinstanz AEM oder AEM Autoreninstanz ungesund war.  Das heißt, wenn einer von ihnen gesund wäre, würde er auch keinen Traffic erhalten
+> `Note:` Beachten Sie, dass der Dispatcher den Dienst beendet, wenn entweder die AEM-Publishing- oder die AEM-Authoring-Instanz nicht ordnungsgemäß ausgeführt wird.  Das heißt, auch wenn eine von ihnen ordnungsgemäß ausgeführt wird, erhält sie keinen Verkehr
 
 #### /bin/checkboth
 
-Dieses Skript überprüft und protokolliert alle Instanzen, bei denen es frontiert ist, gibt jedoch nur einen Fehler zurück, wenn die `author` und `publisher` AEM Instanz ungesund
+Dieses Skript überprüft und protokolliert alle Instanzen, bei denen es frontiert ist, gibt jedoch nur einen Fehler zurück, wenn die AEM-`author`- und -`publisher`-Instanz nicht ordnungsgemäß ausgeführt werden
 
-> `Note:` Beachten Sie, dass der Dispatcher den Dienst nicht abruft, wenn die Veröffentlichungsinstanz AEM Autoreninstanz oder AEM nicht ordnungsgemäß war.  Wenn also einer von ihnen ungesund wäre, würde er weiterhin Traffic erhalten und den Personen Fehler machen, die Ressourcen anfordern.
+> `Note:` Beachten Sie, dass der Dispatcher den Dienst nicht beendet, wenn entweder die AEM-Publishing- oder die AEM-Authoring-Instanz nicht ordnungsgemäß ausgeführt wird.  Das heißt, wenn eine von ihnen nicht ordnungsgemäß ausgeführt wird, erhält sie weiterhin Verkehr und verursacht Fehler bei Personen, die Ressourcen anfordern.
 
-#### /bin/Gesund
+#### /bin/healthy
 
-Dieses Skript überprüft und protokolliert alle Instanzen, bei denen es frontiert ist, gibt jedoch nur gesund zurück, unabhängig davon, ob AEM einen Fehler zurückgibt oder nicht.
+Dieses Skript überprüft und protokolliert alle Instanzen, bei denen es frontiert ist, gibt jedoch alles als ordnungsgemäß ausgeführt zurück, unabhängig davon, ob AEM einen Fehler zurückgibt oder nicht.
 
-> `Note:` Dieses Skript wird verwendet, wenn die Konsistenzprüfung nicht wie gewünscht funktioniert und eine Überschreibung ermöglicht, um AEM Instanzen im Lastenausgleich zu belassen.
+> `Note:` Dieses Skript wird verwendet, wenn die Konsistenzprüfung nicht wie gewünscht funktioniert und eine Überschreibung ermöglicht wird, um AEM-Instanzen im Lastenausgleich zu belassen.
 
 [Weiter -> GIT-Symlinks](./git-symlinks.md)
