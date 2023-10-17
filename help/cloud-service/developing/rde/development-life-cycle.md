@@ -1,6 +1,6 @@
 ---
-title: Entwicklungslebenszyklus unter Verwendung der Rapid Development Environment
-description: Erfahren Sie, wie der neue Entwicklungslebenszyklus aussieht, wenn Sie die Rapid Development Environment und die wichtigsten Vorteile von RDE verwenden.
+title: Entwicklungslebenszyklus unter Verwendung einer schnellen Entwicklungsumgebung
+description: Erfahren Sie, wie der neue Entwicklungslebenszyklus mit einer schnellen Entwicklungsumgebung aussieht und welche wichtigen Vorteile diese bietet.
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -9,40 +9,39 @@ level: Beginner
 jira: KT-11863
 thumbnail: KT-11863.png
 last-substantial-update: 2023-02-15T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: 062672f6-d03c-44da-9ac5-3d1ecff1a628
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '136'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
+# Entwicklungslebenszyklus unter Verwendung einer schnellen Entwicklungsumgebung
 
-# Entwicklungslebenszyklus unter Verwendung der Rapid Development Environment
+Erfahren Sie mehr über den Entwicklungs-/Bereitstellungslebenszyklus mithilfe einer schnellen Entwicklungsumgebung (Rapid Development Environment, RDE) und darüber, wie diese Mehrwert mit Geschwindigkeit kombiniert.
 
-Erfahren Sie mehr über den Lebenszyklus der Entwicklung/Bereitstellung mithilfe von RDE und darüber, wie dieser Wert mit Geschwindigkeit generiert.
-
-Im folgenden Video wird der RDE-basierte Lebenszyklus für die Entwicklung bis zur Bereitstellung untersucht. Im Video werden die wichtigsten Unteraufgaben und der Entwicklungsfluss für die effiziente Nutzung des RDE beschrieben.
+Im folgenden Video wird der RDE-basierte Lebenszyklus von der Entwicklung bis zur Bereitstellung untersucht. Im Video werden die wichtigsten Unteraufgaben und der Entwicklungsfluss für eine effiziente RDE-Nutzung beschrieben.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415492?quality=12&learn=on)
 
 
-## Vorteile von RDE
+## RDE-Vorteile
 
-Die wichtigsten Vorteile von RDE, um die Entwicklungsdynamik zu erhalten.
+Die wichtigsten RDE-Vorteile, um die Entwicklungsdynamik zu erhalten:
 
-- Schnellerer Entwicklungszyklus
-- Geringere Ausfallzeiten
-- Bessere Tests
-- Verbesserte Zusammenarbeit
-- Erhöhte Produktivität
+- schnellerer Entwicklungszyklus
+- geringere Ausfallzeiten
+- bessere Tests
+- verbesserte Zusammenarbeit
+- erhöhte Produktivität
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415493?quality=12&learn=on)
 
 ## Zusätzliche Ressourcen
 
-[Szenario für die Zusammenarbeit mehrerer Entwickler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#multiple-developers-collaborating-on-the-same-rde)
+[Szenario für die Zusammenarbeit mehrerer Entwicklerinnen und Entwickler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=de#multiple-developers-collaborating-on-the-same-rde)
 
 [Einrichtung der lokalen Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de)
 
-[Verwenden von Adobe Cloud Manager - CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html)
-
+[Verwenden von Adobe Cloud Manager – CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html?lang=de)
