@@ -1,6 +1,6 @@
 ---
-title: HTTP/HTTPS-Verbindungen für dedizierte Ausgangs-IP-Adresse und VPN
-description: Erfahren Sie, wie Sie HTTP/HTTPS-Anfragen von AEM as a Cloud Service zu externen Webdiensten ausführen, die für dedizierte Egress-IP-Adresse und VPN ausgeführt werden.
+title: HTTP/HTTPS-Verbindungen für dedizierte Ausgangs-IP-Adressen und VPN
+description: Erfahren Sie, wie Sie HTTP/HTTPS-Anfragen von AEM as a Cloud Service zu externen Web-Diensten für dedizierte Ausgangs-IP-Adressen und VPN ausführen
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -10,36 +10,36 @@ kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
 source-git-commit: bdce84fdcc949c8f8d0690ee7110238d8e8d3e42
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '233'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# HTTP/HTTPS-Verbindungen für dedizierte Ausgangs-IP-Adresse und VPN
+# HTTP/HTTPS-Verbindungen für dedizierte Ausgangs-IP-Adressen und VPN
 
-HTTP/HTTPS-Verbindungen werden automatisch aus AEM as a Cloud Service mit dedizierter Ausgangs-IP-Adresse oder VPN bereitgestellt und benötigen keine speziellen `portForwards` Regeln.
+HTTP/HTTPS-Verbindungen werden automatisch aus AEM as a Cloud Service mit dedizierter Ausgangs-IP-Adresse oder VPN bereitgestellt und benötigen keine speziellen `portForwards`-Regeln.
 
 ## Erweiterte Netzwerkunterstützung
 
-Das folgende Codebeispiel wird von den folgenden erweiterten Netzwerkoptionen unterstützt.
+Das folgende Code-Beispiel wird von den folgenden erweiterten Netzwerkoptionen unterstützt.
 
-Stellen Sie die [dedizierte Ausgangs-IP-Adresse oder VPN](../advanced-networking.md#advanced-networking) Vor diesem Tutorial wurde eine erweiterte Netzwerkkonfiguration eingerichtet.
+Vergewissern Sie sich, dass die erweiterte Netzwerkkonfiguration ([ dedizierte Ausgangs-IP-Adresse oder VPN](../advanced-networking.md#advanced-networking)) eingerichtet wurde, bevor Sie dieses Tutorial durchführen.
 
-| Kein erweitertes Netzwerk | [Flexibles Port-Egress](../flexible-port-egress.md) | [Dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) | [Virtuelles privates Netzwerk](../vpn.md) |
+| Keine erweiterten Netzwerkfunktionen | [Flexibler Port-Ausgang](../flexible-port-egress.md) | [Dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) | [Virtuelles privates Netzwerk](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
-| ✘ | ✘ | ms | ms |
+| ✘ | ✘ | ✔ | ✔ |
 
 >[!CAUTION]
 >
-> Dieses Codebeispiel ist nur für [Dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) und [VPN](../vpn.md). Ein ähnliches, aber anderes Codebeispiel ist für verfügbar. [HTTP/HTTPS-Verbindungen auf nicht standardmäßigen Ports für flexiblen Port-Ausgang](./http-on-non-standard-ports-flexible-port-egress.md).
+> Dieses Code-Beispiel gilt nur für [dedizierte Ausgangs-IP-Adressen](../dedicated-egress-ip-address.md) und [VPN](../vpn.md). Ein ähnliches, aber anderes Code-Beispiel ist für [HTTP/HTTPS-Verbindungen auf nicht standardmäßigen Ports für flexible Port-Ausgänge](./http-on-non-standard-ports-flexible-port-egress.md) verfügbar.
 
-## Codebeispiel
+## Code-Beispiel
 
-Dieses Java™-Codebeispiel ist ein OSGi-Dienst, der as a Cloud Service ausgeführt werden kann, AEM eine HTTP-Verbindung zu einem externen Webserver unter 8080 herstellt. Die HTTPS- (oder HTTP-) Verbindungen werden von AEM as a Cloud Service automatisch bereitgestellt und erfordern keine spezielle Entwicklung.
+Dieses Java™-Code-Beispiel zeigt einen OSGi-Dienst, der in AEM as a Cloud Service ausgeführt werden kann und eine HTTP-Verbindung zu einem externen Web-Server auf 8080 herstellt. Die HTTPS- (oder HTTP-) Verbindungen werden von AEM as a Cloud Service automatisch bereitgestellt und erfordern keine spezielle Entwicklung.
 
 >[!NOTE]
-> Es wird empfohlen, die [Java™ 11 HTTP-APIs](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) werden verwendet, um HTTP-/HTTPS-Aufrufe von AEM durchzuführen.
+> Es wird empfohlen, die [Java™ 11-HTTP-APIs](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) zu verwenden, um HTTP/HTTPS-Aufrufe von AEM aus durchzuführen.
 
 + `core/src/com/adobe/aem/wknd/examples/connections/impl/HttpExternalServiceImpl.java`
 
