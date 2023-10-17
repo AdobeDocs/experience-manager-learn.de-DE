@@ -1,6 +1,6 @@
 ---
 title: Einführung
-description: Videodemonstration zum Nutzungsszenario für mehrere Formulare
+description: Videodemonstration zum Anwendungsfall des Signierens mehrerer Formulare
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 330165.jpg
@@ -10,9 +10,9 @@ level: Experienced
 exl-id: 0260d4b6-8615-4d78-a920-b36766a0f8e9
 last-substantial-update: 2021-07-07T00:00:00Z
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '125'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
@@ -27,13 +27,13 @@ Das folgende Video führt Sie durch den Anwendungsfall des Signierens mehrerer F
 
 Dieser Kurs setzt Folgendes voraus:
 
-* Sie haben Zugriff auf AEM 6.4- oder 6.5-Server mit Forms Add on Package installiert und konfiguriert
-* AEM mit Acrobat Sign konfiguriert
+* Sie haben Zugriff auf AEM 6.4- oder 6.5-Server mit Forms-Add-on-Paket installiert und konfiguriert
+* AEM mit konfiguriertem Acrobat Sign
 * Zugriff auf den SMTP-Server
-* Einige Erlebnisse mit AEM/AEM Forms
+* Ein wenig Erfahrung mit AEM/AEM Forms
 
 Durch Befolgen dieses Tutorials und Installieren der bereitgestellten Assets erhalten Sie eine funktionierende Lösung zum Signieren mehrerer Formulare.
 
 ## Nächste Schritte
 
-[Datenbankgestützte Datenquelle konfigurieren ](./configure-data-source.md)
+[Konfigurieren datenbankgestützter Datenquelle](./configure-data-source.md)
