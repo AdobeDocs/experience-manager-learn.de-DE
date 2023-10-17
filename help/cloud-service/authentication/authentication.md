@@ -11,28 +11,28 @@ thumbnail: KT-10436.png
 last-substantial-update: 2022-10-14T00:00:00Z
 exl-id: 4dba6c09-2949-4153-a9bc-d660a740f8f7
 source-git-commit: 171daf292355203b903a6c29bebad9216dfd95b7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '151'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# as a Cloud Service Authentifizierung AEM
+# AEM as a Cloud Service-Authentifizierung
 
-AEM as a Cloud Service unterstützt mehrere Authentifizierungsoptionen und variiert je nach Diensttyp.
+AEM as a Cloud Service unterstützt verschiedene Authentifizierungsoptionen und variiert je nach Diensttyp.
 
-|  | AEM Author | AEM Publish |
+|                       | AEM Author | AEM Publish |
 |-----------------------|:----------:|:-----------:|
-| [Adobe IMS](../accessing/overview.md) | ms | ✘ |
-| ・ [SAML 2.0 über Adobe IMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up) | ✔ | ✘ |
+| [Adobe IMS](../accessing/overview.md) | ✔ | ✘ |
+| ・ [SAML 2.0 über Adobe IMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=de#how-to-set-up) | ✔ | ✘ |
 | [SAML 2.0](./saml-2-0.md) | ✘ | ✔ |
-| [Single Sign-On (SSO)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
-| [OAuth](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
+| [Single Sign-On (SSO)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html?lang=de#integration-with-an-idp) | ✘ | ✔ |
+| [OAuth](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html?lang=de#integration-with-an-idp) | ✘ | ✔ |
 | [Token-Authentifizierung](../../headless-tutorial/authentication/overview.md) | ✔ | ✔ |
 
 ## Authentifizierungsoptionen
 
-Klicken Sie auf den folgenden Link, um weitere Informationen zur Einrichtung und Verwendung des Authentifizierungsansatzes zu erhalten.
+Klicken Sie auf den entsprechenden Link, um weitere Informationen zur Einrichtung und Verwendung des Authentifizierungsansatzes zu erhalten.
 
 <table>
   <tr>
@@ -40,21 +40,21 @@ Klicken Sie auf den folgenden Link, um weitere Informationen zur Einrichtung und
       <a  href="../accessing/overview.md"><img alt="Adobe IMS" src="./assets/card--adobe-ims.png"/></a>
       <div><strong><a href="../accessing/overview.md">Adobe IMS</a></strong></div>
       <p>
-          Verwalten Sie den Zugriff auf die AEM-Autoreninstanz mithilfe von Adobe IMS über die Adobe Admin Console.
+          Verwalten Sie den Zugriff auf AEM Author mithilfe von Adobe IMS über Adobe Admin Console.
       </p>
     </td>   
    <td>
       <a  href="./saml-2-0.md"><img alt="SAML 2.0" src="./assets/card--saml-2-0.png"/></a>
       <div><strong><a href="./saml-2-0.md">SAML 2.0</a></strong></div>
       <p>
-        Authentifizieren Sie den Benutzer Ihrer Website bei einem IDP mithilfe der SAML 2.0-Integration des AEM Publish-Dienstes.
+        Authentifizieren Sie die Benutzerin bzw. den Benutzer Ihrer Website bei einem IDP mithilfe der SAML 2.0-Integration des AEM Publish-Service.
       </p>
     </td>   
    <td>
       <a  href="../../headless-tutorial/authentication/overview.md"><img alt="Token" src="./assets/card--token.png"/></a>
       <div><strong><a href="../../headless-tutorial/authentication/overview.md">Token-Authentifizierung</a></strong></div>
       <p>
-        Erlauben Sie es Anwendungen und Middleware, sich mit einem API-Dienst-Token für AEM zu authentifizieren.
+        Lassen Sie zu, dass Anwendungen und Middleware sich mit einem API-Service-Token für AEM authentifizieren.
       </p>
     </td>   
   </tr>
