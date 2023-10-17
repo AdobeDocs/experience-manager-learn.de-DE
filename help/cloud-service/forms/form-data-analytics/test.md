@@ -1,6 +1,6 @@
 ---
-title: Berichte zu gesendeten Formulardatenfeldern mit Adobe Analytics
-description: Integrieren von AEM Forms CS mit Adobe Analytics für Berichte zu Formulardatenfeldern
+title: Reporting zu übermittelten Formulardatenfeldern mit Adobe Analytics
+description: Integrieren von AEM Forms CS mit Adobe Analytics für das Reporting zu Formulardatenfeldern
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -13,51 +13,51 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 43665a1e-4101-4b54-a6e0-d189e825073e
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '207'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
-# Testen der Lösung
+# Testen Ihrer Lösung
 
-Zeigen Sie eine Vorschau an und senden Sie das Formular mit mehreren Kombinationen von Formularwerten. Es dauert einige bis 30 Minuten, bis Ihre Daten in Adobe Analytics-Berichten angezeigt werden. Auf Props festgelegte Daten werden in Berichten früher angezeigt als Datensätze, die auf eVars gesetzt wurden.
+Zeigen Sie Ihr Formular in einer Vorschau an und übermitteln Sie es mit verschiedenen Kombinationen von Formularwerten. Es dauert bis zu 30 Minuten, bis Ihre Daten in Adobe Analytics-Berichten angezeigt werden. Auf Eigenschaften (Props) eingestellte Datensätze werden in Berichten früher angezeigt als auf eVars eingestellte Datensätze.
 
 ## Report Suite
 
-Die in Adobe Analytics erfassten Formulardaten werden im Ringformat angezeigt
+Die in Adobe Analytics erfassten Formulardaten werden als Ringdiagramm angezeigt.
 
-**Übermittlung nach Staat**
+**Übermittlungen nach US-Bundesstaat**
 
-![applicantsbystate](assets/donut.png)
+![Antragsstellende nach Wohnsitz](assets/donut.png)
 
 Feldvalidierungsfehler
 
-![field-validation-error](assets/donut-field-validation.png)
+![Feldvalidierungsfehler](assets/donut-field-validation.png)
 
 ## Debugging
 
-Stellen Sie sicher, dass das adaptive Formular denselben Konfigurationscontainer verwendet, der die Adobe Launch-Konfiguration enthält.
+Stellen Sie sicher, dass das adaptive Formular denselben Konfigurations-Container verwendet, in dem auch die Adobe Experience Platform Launch-Konfiguration enthalten ist.
 
 Gehen Sie wie folgt vor, um zu bestätigen, dass das Formular Daten an Adobe Analytics sendet:
 
-* Öffnen Sie die Entwicklertools in Ihrem Browser.
+* Öffnen Sie die Entwickler-Tools in Ihrem Browser.
 * Geben Sie im Konsolenbedienfeld den folgenden Text ein.
 
 ```javascript
 _satellite.setDebug(true)
 ```
 
-Interagieren Sie mit Ihrem Formular, während Sie das Konsolenfenster geöffnet halten. Sie sollten so etwas sehen
+Interagieren Sie mit Ihrem Formular, während Sie das Konsolenfenster geöffnet halten. Dies sollte ungefähr so aussehen:
 
-![console-debug](assets/debug.png)
+![Konsolen-Debugging](assets/debug.png)
 
-## Adobe Experience Platform Debugger verwenden
+## Verwenden von Adobe Experience Platform Debugger
 
-Fügen Sie die [AEP-Debugger-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=de) zum Browser (Sie müssen sich anmelden), um weitere Debugging-Informationen zu erhalten
+Fügen Sie die [AEP Debugger-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=de) zum Browser hinzu (Sie müssen sich anmelden), um weitere Debugging-Informationen zu erhalten.
 
-![platform-debugger](assets/platform-debugger.png)
+![Platform Debugger](assets/platform-debugger.png)
 
-## Herzlichen Glückwunsch
+## Herzlichen Glückwunsch!
 
-Sie haben AEM Forms as a Cloud Service mit Adobe Analytics erfolgreich integriert, um Berichte zu Formulardatenfeldern zu erstellen.
+Sie haben AEM Forms as a Cloud Service erfolgreich in Adobe Analytics integriert, um Berichte zu Formulardatenfeldern zu erstellen.
