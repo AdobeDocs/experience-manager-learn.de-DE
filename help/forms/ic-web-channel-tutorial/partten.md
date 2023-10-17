@@ -1,7 +1,7 @@
 ---
-title: Konfigurieren des Outlook-Bedienfelds "Retirement"
+title: Konfigurieren des Bedienfelds für Rentenausblicke
 seo-title: Configuring Retirement Outlook Panel
-description: Dies ist Teil 10 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil konfigurieren wir das Outlook-Bedienfeld für die Einstellung, indem wir Text- und Diagrammkomponenten hinzufügen.
+description: Dies ist Teil 10 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil konfigurieren wir das Bedienfeld für Rentenausblicke, indem wir Text- und Diagrammkomponenten hinzufügen.
 seo-description: This is part 10 of a multi-step tutorial for creating your first interactive communications document. In this part, we will configure Retirement Outlook Panel by adding text and chart components.
 uuid: 1d5119b5-e797-4bf0-9b10-995b3f051f92
 feature: Interactive Communication
@@ -16,64 +16,64 @@ role: Developer
 level: Beginner
 exl-id: 0dd8a430-9a4e-4dc7-ad75-6ad2490430f2
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '349'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Konfigurieren des Outlook-Bedienfelds &quot;Retirement&quot;{#configuring-retirement-outlook-panel}
+# Konfigurieren des Bedienfelds für Rentenausblicke{#configuring-retirement-outlook-panel}
 
-* Dies ist Teil 10 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil konfigurieren wir das Outlook-Bedienfeld für die Einstellung, indem wir Text- und Diagrammkomponenten hinzufügen.
+* Dies ist Teil 10 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil konfigurieren wir das Bedienfeld für Rentenausblicke, indem wir Text- und Diagrammkomponenten hinzufügen.
 
-* Melden Sie sich bei AEM Forms an und navigieren Sie zu Adobe Experience Manager > Forms > Forms &amp; Documents.
+* Melden Sie sich bei AEM Forms an und navigieren Sie zu „Adobe Experience Manager“ > „Formulare“ > „Formulare und Dokumente“.
 
-* Öffnen Sie den Ordner 401KStatement .
+* Öffnen Sie den Ordner „401KStatement“.
 
-* Öffnen Sie das Dokument 401KStatement im Bearbeitungsmodus.
+* Öffnen Sie das Dokument „401KStatement“ im Bearbeitungsmodus.
 
-**Konfigurieren des LeftPanel-Zielbereichs**
+**Konfigurieren des Zielbereich des linken Bedienfelds**
 
-* Tippen Sie rechts auf den Zielbereich LeftPanel und klicken Sie auf das Symbol &quot;+&quot;, um das Dialogfeld &quot;Komponente einfügen&quot;aufzurufen.
+* Klicken Sie rechts auf den Zielbereich des linken Bedienfelds und dann auf das Pluszeichen, um das Dialogfeld „Komponente einfügen“ aufzurufen.
 
-* Fügen Sie die Textkomponente ein.
+* Fügen Sie eine Textkomponente ein.
+
+* Tippen Sie behutsam auf die neu hinzugefügte Textkomponente, um die Komponentensymbolleiste aufzurufen
+
+* Wählen Sie das Stiftsymbol, um den Standardtext zu bearbeiten.
+
+* Ersetzen Sie den Standardtext durch „**Ihr Renteneinkommensausblick“**
+
+**Konfigurieren des Zielbereichs des rechten Bedienfelds**
+
+* Klicken Sie auf der rechten Seite auf den Zielbereich des rechten Bedienfelds und danach auf das Pluszeichen, um das Dialogfeld „Komponente einfügen“ aufzurufen.
+
+* Fügen Sie eine Textkomponente ein.
 
 * Tippen Sie behutsam auf die neu hinzugefügte Textkomponente, um die Komponentensymbolleiste aufzurufen.
 
-* Wählen Sie das Symbol &quot;Stift&quot;, um den Standardtext zu bearbeiten.
+* Wählen Sie das Stiftsymbol, um den Standardtext zu bearbeiten.
 
-* Ersetzen Sie den Standardtext durch &quot;**Ihr Rentenergebnis-Outlook&quot;**
+* Ersetzen Sie den Standardtext durch „**Geschätztes monatliches Renteneinkommen**“
 
-**RightsPanel-Zielbereich konfigurieren**
+## Hinzufügen des Dokumentfragments für den Renteneinkommensausblick {#add-retirement-income-outlook-document-fragment}
 
-* Tippen Sie auf der rechten Seite auf den Zielbereich RightPanel und klicken Sie auf das Symbol &quot;+&quot;, um das Dialogfeld &quot;Komponente einfügen&quot;aufzurufen.
+* Klicken Sie auf das Assets-Symbol und wenden Sie den Filter an, um Assets vom Typ „Dokumentfragmente“ anzuzeigen. Ziehen Sie das Dokumentfragment „RetirementIncomeOutlook“ in den Zielbereich des linken Bedienfelds.
 
-* Fügen Sie die Textkomponente ein.
+* Weitere Informationen zum Hinzufügen von Dokumentfragmenten zu Inhaltsbereichen finden Sie [unter dieser Seite](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html?lang=de).
 
-* Tippen Sie behutsam auf die neu hinzugefügte Textkomponente, um die Komponenten-Symbolleiste aufzurufen.
+## Hinzufügen des Diagramms des geschätzten monatlichen Einkommens {#adding-estimated-monthly-income-chart}
 
-* Wählen Sie das Symbol &quot;Stift&quot;, um den Standardtext zu bearbeiten.
+* Klicken Sie auf den Zielbereich des rechten Bedienfelds auf der rechten Seite. Klicken Sie auf das Pluszeichen, um eine Diagrammkomponente einzufügen. Wir werden ein Säulendiagramm verwenden, um das geschätzte monatliche Einkommen anzuzeigen. Tippen Sie behutsam auf die neu eingefügte Diagrammkomponente. Wählen Sie das Schraubenschlüssel-Symbol, um das Konfigurationsdatenblatt zu öffnen. Konfigurieren Sie das Diagramm mit den folgenden Eigenschaften, wie im Screenshot unten dargestellt.
 
-* Ersetzen Sie den Standardtext durch &quot;**Geschätzte monatliche Renteneinkommen&quot;**
-
-## Hinzufügen des Einkommens aus Outlook-Dokumentfragments für die Bereitstellung {#add-retirement-income-outlook-document-fragment}
-
-* Klicken Sie auf das Symbol Assets und wenden Sie den Filter an, um Assets vom Typ &quot;Dokumentfragmente&quot;anzuzeigen. Ziehen Sie das Dokumentfragment RetirementIncomeOutlook in den Zielbereich des linken Bedienfelds.
-
-* Weitere Informationen finden Sie unter [auf dieser Seite](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html) zum Hinzufügen von Dokumentfragmenten zu Inhaltsbereichen.
-
-## Geschätzte monatliche Einkommensdiagramme hinzufügen {#adding-estimated-monthly-income-chart}
-
-* Klicken Sie auf der rechten Seite auf den Zielbereich RightPanel . Klicken Sie auf das Symbol &quot;+&quot;, um die Diagrammkomponente einzufügen. Wir werden eine Spaltenübersicht verwenden, um das geschätzte monatliche Einkommen anzuzeigen. Tippen Sie behutsam auf die neu eingefügte Diagrammkomponente. Wählen Sie das Symbol &quot;Schraubenschlüssel&quot;, um das Konfigurationsdatenblatt zu öffnen. Konfigurieren Sie das Diagramm mit den folgenden Eigenschaften, wie im Screenshot unten dargestellt.
-
-**AEM Forms 6.4 - Spaltendiagramm für das geschätzte monatliche Einkommen konfigurieren**
+**AEM Forms 6.4: Konfiguration des Säulendiagramms für das geschätzte monatliche Einkommen**
 
 ![form64](assets/estimatedmonthlyincomechart.png)
 
-**AEM Forms 6.5 - Spaltendiagramm für das geschätzte monatliche Einkommen konfigurieren**
+**AEM Forms 6.5: Konfiguration des Säulendiagramms für das geschätzte monatliche Einkommen**
 
 ![forms65](assets/estimatedmonthlyincomechart65.PNG)
 
 ## Nächste Schritte
 
-[Tortendiagramm konfigurieren](./parteleven.md)
+[Konfiguration eines Tortendiagramms](./parteleven.md)
