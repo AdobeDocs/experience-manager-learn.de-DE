@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
 source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1257'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -69,7 +69,7 @@ Die WKND-Website enthält Konfigurationen, die erforderlich sind, um einen [Grap
    >
    > Laden Sie die Standardversion herunter, die mit AEM as a Cloud Service kompatibel ist, und **nicht** die `classic`-Version.
 
-1. Navigieren Sie über das **AEM-Startmenü** zu **Tools** > **Implementierung** > **Pakete**.
+1. Navigieren Sie über das **AEM-Startmenü** zu **Tools** > **Bereitstellung** > **Pakete**.
 
    ![Navigieren zu Paketen](assets/quick-setup/aem-sdk/aem-sdk__packages.png)
 
