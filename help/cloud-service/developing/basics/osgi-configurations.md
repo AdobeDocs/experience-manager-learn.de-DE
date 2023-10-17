@@ -1,6 +1,6 @@
 ---
 title: Wie werden OSGi-Konfigurationen in AEM as a Cloud Service verwendet?
-description: Erfahren Sie, wie Sie die OSGi-Konfiguration in AEM as a Cloud Service definieren und bereitstellen.
+description: Erfahren Sie, wie Sie OSGi-Konfigurationen in AEM as a Cloud Service definieren und bereitstellen.
 role: Developer
 level: Beginner
 type: Tutorial
@@ -10,14 +10,14 @@ kt: 6934
 thumbnail: 330559.jpg
 exl-id: 06793e03-72c1-4566-80d7-c126fc8e3879
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '41'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 # OSGi-Konfigurationen
 
-Erfahren Sie, wie Sie die OSGi-Konfiguration in AEM as a Cloud Service definieren und bereitstellen.
+Erfahren Sie, wie Sie OSGi-Konfigurationen in AEM as a Cloud Service definieren und bereitstellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330559?quality=12&learn=on)
