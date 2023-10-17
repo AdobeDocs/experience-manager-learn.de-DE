@@ -1,6 +1,6 @@
 ---
 title: Lebenszyklus von OSGi-Komponenten
-description: Erfahren Sie mehr über den Lebenszyklus von OSGi-Komponenten, einschließlich der Bindung eines OSGi-Dienstes an die Aktivierungs-, Modifikations- und Deaktivieren von Lebenszyklusereignissen.
+description: Erfahren Sie mehr über den Lebenszyklus von OSGi-Komponenten, z. B. wie Sie einen OSGi-Dienst an die Lebenszyklus-Ereignisse vom Typ „Aktivieren“, „Geändert“ und „Deaktivieren“ binden können.
 role: Developer
 level: Beginner
 topic: Development
@@ -9,21 +9,21 @@ kt: 8228
 thumbnail: 335475.jpeg
 exl-id: 5a65dbcd-649b-464c-9c78-d31c2b6c49c3
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '94'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 # Lebenszyklus von OSGi-Komponenten
 
-Erfahren Sie mehr über den Lebenszyklus von OSGi-Komponenten, einschließlich der Bindung eines OSGi-Dienstes an:
+Erfahren Sie mehr über den Lebenszyklus von OSGi-Komponenten, z. B. wie Sie einen OSGi-Dienst an die Lebenszyklusereignisse vom Typ …
 
 + Aktivieren
 + Geändert
-+ und deaktivieren
++ Deaktivieren
 
-...Lebenszyklusereignisse.
+… binden können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335475?quality=12&learn=on)
 
