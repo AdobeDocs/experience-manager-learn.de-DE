@@ -1,6 +1,6 @@
 ---
-title: Verwenden des Ladepfads für Elemente zum Ausfüllen der Dropdown-Liste
-description: Konfigurieren und Ausfüllen einer Dropdown-Liste zum Lesen von Werten aus einem CRX-Knoten
+title: Verwenden des Element-Ladepfads zum Füllen einer Dropdown-Liste
+description: Konfigurieren und Füllen einer Dropdown-Liste zum Lesen von Werten aus einem CRX-Knoten
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 10961
@@ -9,25 +9,26 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-09-20T00:00:00Z
 thumbnail: item-load.jpg
-source-git-commit: e1c16ff347f5f398c7bc47233049427eeffa2aab
-workflow-type: tm+mt
+exl-id: 89c486c8-95c3-4cd4-bf8e-a1b3558f17d6
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '180'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Eigenschaft &quot;Elementladevorgang&quot;in AEM Forms
+# Element-Ladeeigenschaft in AEM Forms
 
-Konfigurieren und füllen Sie die Dropdown-Liste mit der Eigenschaft &quot;item load path&quot;.
-Das Feld &quot;Element-Ladepfad&quot;ermöglicht es einem Autor, eine URL bereitzustellen, aus der die in einer Dropdown-Liste verfügbaren Optionen geladen werden.
+Konfigurieren und füllen Sie eine Dropdown-Liste mit der Eigenschaft „Element-Ladepfad“.
+Das Feld „Element-Ladepfad“ ermöglicht es einer Autorin oder einem Autor, eine URL bereitzustellen, aus der die in einer Dropdown-Liste verfügbaren Optionen geladen werden.
 Gehen Sie wie folgt vor, um einen solchen Knoten in crx zu erstellen:
-* Bei crx anmelden
-* Erstellen Sie einen Knoten mit dem Namen assets (Sie können diesen Knoten gemäß Ihren Anforderungen benennen) und geben Sie sling:folder unter content ein.
-* Speichern
-* Klicken Sie auf den neu erstellten Asset-Knoten und legen Sie seine Eigenschaften wie unten gezeigt fest.
-* Sie müssen eine Eigenschaft des Typs String mit dem Namen assettypes erstellen (Sie können sie gemäß Ihren Anforderungen benennen). Stellen Sie sicher, dass die Eigenschaft ein multivalue ist. Geben Sie die gewünschten Werte an und speichern Sie sie.
-   ![item-load-path](assets/item-load-path-crx.png)
+* Melden Sie sich bei crx an.
+* Erstellen Sie einen Knoten mit dem Namen „assets“ (Sie können diesen Knoten gemäß Ihren Anforderungen benennen) und geben Sie „sling:folder“ unter „content“ ein.
+* Speichern Sie.
+* Klicken Sie auf den neu erstellten Asset-Knoten und legen Sie seine Eigenschaften fest, wie unten dargestellt.
+* Sie müssen eine Eigenschaft vom Typ „Zeichenfolge“ mit dem Namen „assettypes“ erstellen (Sie können diesen gemäß Ihren Anforderungen wählen). Stellen Sie sicher, dass die Eigenschaft mehrwertig ist. Geben Sie die gewünschten Werte an und speichern Sie diese.
+  ![item-load-path](assets/item-load-path-crx.png)
 
-Um diese Werte in Ihre Dropdown-Liste zu laden, geben Sie den folgenden Pfad in die Eigenschaft &quot;item load path&quot;ein  **/content/assets/assettypes**
+Um diese Werte in Ihre Dropdown-Liste zu laden, geben Sie den folgenden Pfad in der Eigenschaft „Element-Ladepfad“: **/content/assets/assettypes** an.
 
-Das Beispielpaket kann [heruntergeladen von hier](assets/item-load-path-package.zip)
+Das Beispielpaket kann [hier heruntergeladen werden](assets/item-load-path-package.zip).
