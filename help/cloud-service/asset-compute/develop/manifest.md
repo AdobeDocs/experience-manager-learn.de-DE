@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren von manifest.yml eines Asset compute-Projekts
-description: In der Datei "manifest.yml"des Asset compute-Projekts werden alle bereitzustellenden Sekundäre in diesem Projekt beschrieben.
+title: Konfigurieren der manifest.yml eines Asset Compute-Projekts
+description: Die manifest.yml des Asset Compute-Projekts beschreibt alle zu verteilenden Sekundäre in diesem Projekt.
 feature: Asset Compute Microservices
 topics: renditions, development
 version: Cloud Service
@@ -14,25 +14,25 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 766bfaff-ade0-41c8-a395-e79dfb4b3d76
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '433'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # Konfigurieren von manifest.yml
 
-Das `manifest.yml` im Stammverzeichnis des Asset compute-Projekts beschreibt alle bereitzustellenden Arbeiter in diesem Projekt.
+Die Datei `manifest.yml`, die sich im Stammverzeichnis des Asset Compute-Projekts befindet, beschreibt alle Sekundäre in diesem Projekt, die eingesetzt werden sollen.
 
 ![manifest.yml](./assets/manifest/manifest.png)
 
-## Standardarbeitsdefinition
+## Standardsekundärdefinition
 
-Arbeitnehmer werden als Adobe I/O Runtime-Aktionseinträge unter `actions` definiert und bestehen aus einer Reihe von Konfigurationen.
+Sekundäre werden als Adobe I/O Runtime-Aktionseinträge unter `actions` definiert und bestehen aus einer Reihe von Konfigurationen.
 
-Arbeitnehmer, die auf andere Adobe I/O-Integrationen zugreifen, müssen die `annotations -> require-adobe-auth` -Eigenschaft auf `true` setzen, da [die Anmeldeinformationen der Worker für die Adobe I/O](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) über das `params.auth` -Objekt verfügbar macht. Dies ist normalerweise erforderlich, wenn der Worker Adobe I/O-APIs wie die Adobe Photoshop-, Lightroom- oder Sensei-APIs abruft und pro Worker umgeschaltet werden kann.
+Sekundäre, die auf andere Adobe I/O-Integrationen zugreifen, müssen die `annotations -> require-adobe-auth`-Eigenschaft auf `true` setzen, da dies [die Adobe I/O-Anmeldeinformationen](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=de#access-adobe-apis) des Sekundärs über das `params.auth`-Objekt offenlegt.  Dies ist in der Regel erforderlich, wenn der Sekundär Adobe I/O-APIs wie die Adobe Photoshop-, Lightroom- oder Sensei-APIs aufruft. Dies kann zudem für jeden Sekundär umgeschaltet werden.
 
-1. Öffnen und überprüfen Sie den automatisch generierten Worker `manifest.yml`. Projekte, die mehrere Asset compute-Sekundäre enthalten, müssen einen Eintrag für jeden Worker unter dem Array `actions` definieren.
+1. Öffnen und überprüfen Sie den automatisch generierten Sekundär `manifest.yml`. Projekte, die mehrere Asset Compute-Sekundäre enthalten, müssen für jeden Sekundär einen Eintrag unter dem Array `actions` definieren.
 
 ```yml
 packages:
@@ -49,13 +49,13 @@ packages:
           require-adobe-auth: true # set to true, to pass through Adobe I/O access token/client id via params.auth in the worker, typically required when the worker calls out to Adobe I/O APIs such as the Adobe Photoshop, Lightroom or Sensei APIs.
 ```
 
-## Definieren von Beschränkungen
+## Definieren von Limits
 
-Jeder Worker kann die [limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) für den Ausführungskontext in Adobe I/O Runtime konfigurieren. Diese Werte sollten angepasst werden, um eine optimale Skalierung für den Worker zu ermöglichen, basierend auf der Menge, Rate und Art der zu berechnenden Assets sowie der Art der von ihm durchgeführten Arbeit.
+Jeder Sekundär kann die [Limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) für seinen Ausführungskontext in Adobe I/O Runtime konfigurieren.  Diese Werte sollten angepasst werden, um eine optimale Skalierung des Sekundärs zu ermöglichen, basierend auf der Menge, Rate und Art der zu berechnenden Assets sowie der Art der von ihm durchgeführten Arbeit.
 
-Lesen Sie [Anleitung zur Dimensionierung von Adoben](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#sizing-workers) , bevor Sie Begrenzungen festlegen. asset compute-Sekundäre können bei der Verarbeitung von Assets nicht genügend Arbeitsspeicher haben, was dazu führt, dass die Adobe I/O Runtime-Ausführung beendet wird. Stellen Sie daher sicher, dass die Größe des Sekundärs für die Verarbeitung aller Kandidaten-Assets angemessen ist.
+Prüfen Sie die [Adobe-Größenrichtlinien](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=de#sizing-workers), bevor Sie Grenzen festlegen.  Asset Compute-Sekundäre können bei der Verarbeitung von Assets nicht genügend Arbeitsspeicher haben, was dazu führt, dass die Adobe I/O Runtime-Ausführung beendet wird. Stellen Sie daher sicher, dass die Größe des Sekundärs für die Verarbeitung aller Kandidaten-Assets angemessen ist.
 
-1. Fügen Sie dem neuen Aktionseintrag `wknd-asset-compute` den Abschnitt `inputs` hinzu. Dies ermöglicht die Abstimmung der Gesamtleistung und Ressourcenzuordnung des Asset compute Worker.
+1. Fügen Sie einen `inputs`-Abschnitt zu dem neuen Aktionseintrag in `wknd-asset-compute` hinzu.  Dadurch können die Gesamtleistung und die Ressourcenzuweisung des Asset Compute-Sekundärs optimiert werden.
 
 ```yml
 packages:
@@ -77,7 +77,7 @@ packages:
 
 ## Die fertige manifest.yml
 
-Das endgültige `manifest.yml` sieht wie folgt aus:
+Die endgültige `manifest.yml` sieht wie folgt aus:
 
 ```yml
 packages:
@@ -98,31 +98,31 @@ packages:
 
 ## manifest.yml auf Github
 
-Das endgültige `.manifest.yml` ist auf Github verfügbar unter:
+Die endgültige `.manifest.yml` ist auf Github verfügbar unter:
 
 + [aem-guides-wknd-asset-compute/manifest.yml](https://github.com/adobe/aem-guides-wknd-asset-compute/blob/master/manifest.yml)
 
 
-## Validieren von manifest.yml
+## Validieren der manifest.yml
 
-Nachdem die generierte Asset compute `manifest.yml` aktualisiert wurde, führen Sie das lokale Entwicklungstool aus und stellen Sie sicher, dass die aktualisierten `manifest.yml`-Einstellungen erfolgreich verwendet werden.
+Sobald die generierte `manifest.yml` für Asset Compute aktualisiert ist, führen Sie das lokale Entwicklungs-Tool aus und stellen Sie sicher, dass es erfolgreich mit den aktualisierten Einstellungen der `manifest.yml` startet.
 
-So starten Sie das Asset compute Development Tool für das Asset compute-Projekt:
+So starten Sie das Asset Compute-Entwicklungs-Tool für das Asset Compute-Projekt:
 
-1. Öffnen Sie eine Befehlszeile im Asset compute-Projektstamm (in VS Code kann dies direkt in der IDE über Terminal > Neues Terminal geöffnet werden) und führen Sie den Befehl aus:
+1. Öffnen Sie eine Befehlszeile im Asset Compute-Projektstammverzeichnis (in VS Code kann dies direkt in der IDE über „Terminal“ > „Neues Terminal“ geöffnet werden) und führen Sie den folgenden Befehl aus:
 
    ```
    $ aio app run
    ```
 
-1. Das lokale Asset compute Development Tool wird in Ihrem Standard-Webbrowser unter __http://localhost:9000__ geöffnet.
+1. Das lokale Asset Compute-Entwicklungs-Tool wird in Ihrem Standard-Webbrowser unter __http://localhost:9000__ geöffnet.
 
    ![aio app run](assets/environment-variables/aio-app-run.png)
 
-1. Sehen Sie sich die Befehlszeilenausgabe und den Webbrowser auf Fehlermeldungen an, wenn das Entwicklungstool initialisiert wird.
-1. Um das Asset compute Development Tool zu stoppen, tippen Sie im Fenster, das `aio app run` ausgeführt hat, auf `Ctrl-C` , um den Vorgang zu beenden.
+1. Beobachten Sie die Befehlszeilenausgabe und den Webbrowser auf Fehlermeldungen während der Initialisierung des Entwicklungs-Tools.
+1. Um das Asset Compute-Entwicklungs-Tool zu beenden, wählen Sie `Ctrl-C` in dem Fenster aus, in dem `aio app run` ausgeführt wurde.
 
 ## Fehlerbehebung
 
 + [Falscher YAML-Einzug](../troubleshooting.md#incorrect-yaml-indentation)
-+ [Speichergrößenlimit ist zu niedrig eingestellt](../troubleshooting.md#memorysize-limit-is-set-too-low)
++ [memorySize-Limit ist zu niedrig eingestellt](../troubleshooting.md#memorysize-limit-is-set-too-low)
