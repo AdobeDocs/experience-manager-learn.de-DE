@@ -1,6 +1,6 @@
 ---
 title: Erstellen eines benutzerdefinierten Prozessschritts
-description: Benutzerdefinierter Prozessschritt zum Konvertieren von Word- und Excel-Anlagen in PDF mit Document Cloud.
+description: Benutzerdefinierter Prozessschritt zur Konvertierung von Word- und Excel-Anhängen in PDF mit Document Cloud.
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -11,9 +11,9 @@ thumbnail: 7837.jpg
 kt: 7837
 exl-id: 24a788bb-f0dc-4774-91ab-26fde2de098f
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '77'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Im Folgenden finden Sie den vollständigen Code des benutzerdefinierten Prozessschritts, der die nativen Dateien konvertiert und durch die konvertierten PDFs ersetzt.
 Dieser benutzerdefinierte Schritt sucht nach allen Anlagen unter dem Ordnernamen, der als Prozessargument im Workflow bereitgestellt wird.
-Dieser benutzerdefinierte Prozessschritt verwendet die Methoden des benutzerdefinierten DocumentCloudSDKService, um PDFs zu erstellen.
+Dieser benutzerdefinierte Prozessschritt verwendet die Methoden des benutzerdefinierten DocumentCloudSDKService, um PDF zu erstellen.
 
 
 ```java
