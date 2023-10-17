@@ -37,7 +37,7 @@ Die _IDE-Screenshots in diesem Kapitel stammen von [Visual Studio Code](https://
 Es ist ein Lösungspaket zur Installation verfügbar, das die Schritte in der AEM-Benutzeroberfläche für die Kapitel 1–4 abschließt. Dieses Paket ist **nicht erforderlich**, wenn die vorherigen Kapitel abgeschlossen wurden.
 
 1. Laden Sie die Datei [Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Solution-Package-1.2.zip) herunter.
-1. Navigieren Sie in AEM zu **Tools** > **Implementierung** > **Pakete**, um auf **Package Manager** zuzugreifen.
+1. Navigieren Sie in AEM zu **Tools** > **Bereitstellung** > **Pakete**, um auf **Package Manager** zuzugreifen.
 1. Laden Sie das im vorherigen Schritt heruntergeladene Paket (die ZIP-Datei) hoch und installieren Sie es.
 1. Replizieren Sie das Paket für den AEM-Veröffentlichungs-Service.
 
