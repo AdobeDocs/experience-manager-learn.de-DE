@@ -10,9 +10,9 @@ level: Intermediate
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1465'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -473,7 +473,7 @@ In der obigen Abfrage wird das Feld `main` als JSON zurückgegeben. Das Objekt `
 }
 ```
 
-Die JSON-Antwort enthält Informationen dazu, wo der Verweis in Rich-Text mit `"nodeType": "reference"` eingefügt wurde. Die `_references` -Objekt enthält dann jede Referenz.
+Die JSON-Antwort enthält Informationen dazu, wo der Verweis in Rich-Text mit `"nodeType": "reference"` eingefügt wurde. Das `_references`-Objekt enthält dann jede Referenz.
 
 ## Rendern von Inline-Verweisen in Rich-Text
 
@@ -536,7 +536,7 @@ Ein vollständiges Beispiel zum Schreiben eines benutzerdefinierten Verweis-Rend
 
 >[!NOTE]
 >
-> Das obige Video verwendet `_publishUrl` , um die Bildreferenz zu rendern. Bevorzugen Sie stattdessen `_dynamicUrl` wie im Abschnitt [Web-optimierte Bilder - Anleitung](./images.md);
+> Im obigen Video wird `_publishUrl` zum Rendern der Bildreferenz verwendet.  Bevorzugen Sie stattdessen `_dynamicUrl`, wie in der Anleitung [Web-optimierte Bilder](./images.md) erklärt;
 
 
 Das vorherige Video zeigt ein End-to-End-Beispiel:
