@@ -21,16 +21,13 @@ Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie
 ## Neuerungen
 
 * **[Umgang mit Fehlermeldungen im Schritt „Formulardatenmodell-Service aufrufen“](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
-
-   *Eine Variable in einem Workflow-Modell bietet die Möglichkeit, einen Wert basierend auf seinem Datentyp zu speichern*
+  *Eine Variable in einem Workflow-Modell bietet die Möglichkeit, einen Wert basierend auf seinem Datentyp zu speichern*
 
 * **[Diagramme mit mehreren Reihen in Dokumenten zur interaktiven Kommunikation (Video)](./interactive-communications/multiseriescharts.md)**
-
-   *Stellen Sie mehrere Reihen in demselben Diagramm dar. Die Diagramme mit mehreren Reihen werden normalerweise zusammen mit dem Diagrammtyp Linie, Balken, Spalten verwendet.*
+  *Stellen Sie mehrere Reihen in demselben Diagramm dar. Die Diagramme mit mehreren Reihen werden normalerweise zusammen mit dem Diagrammtyp Linie, Balken, Spalten verwendet.*
 
 * **[Erstellen wiederverwendbarer Workflow-Modelle](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
-
-   *Erstellen von Workflow-Modellen, die nicht an ein bestimmtes Formular gebunden sind*
+  *Erstellen von Workflow-Modellen, die nicht an ein bestimmtes Formular gebunden sind*
 
 </div>
 
