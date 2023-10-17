@@ -1,6 +1,6 @@
 ---
 title: Asset-Berichte in AEM Assets
-description: AEM Assets bietet ein Reporting-Framework auf Unternehmensebene, das durch ein intuitives Benutzererlebnis für große Repositorys skaliert wird.
+description: AEM Assets bietet ein Reporting-Framework auf Unternehmensebene, das durch ein intuitives Kundenerlebnis für große Repositorys skaliert wird.
 feature: Asset Reports
 topic: Administration
 role: User
@@ -11,19 +11,19 @@ thumbnail: 22140.jpg
 last-substantial-update: 2022-06-05T00:00:00Z
 exl-id: 8ac84d4e-59c1-4dde-a06e-a94458664ba7
 source-git-commit: a5f8ef3c507274be30da8ea225d2daf7a983cf86
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '71'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # Asset-Berichte{#using-reports-in-aem-assets}
 
-AEM Assets bietet ein Reporting-Framework auf Unternehmensebene, das durch ein intuitives Benutzererlebnis für große Repositorys skaliert wird.
+AEM Assets bietet ein Reporting-Framework auf Unternehmensebene, das durch ein intuitives Kundenerlebnis für große Repositorys skaliert wird.
 
 >[!VIDEO](https://video.tv.adobe.com/v/22140?quality=12&learn=on)
 
 
 >[!IMPORTANT]
 >
->AEM 6.5 bietet die Möglichkeit, [Asset-Berichte](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html#prerequisite-for-reporting), sodass Administratoren definieren können, was verfolgt und in die Berichte aufgenommen werden soll.
+>AEM 6.5 bietet die Möglichkeit, [Asset-Berichte](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html?lang=de#prerequisite-for-reporting) zu konfigurieren, sodass Administrierende definieren können, was verfolgt und in die Berichte aufgenommen werden soll.
