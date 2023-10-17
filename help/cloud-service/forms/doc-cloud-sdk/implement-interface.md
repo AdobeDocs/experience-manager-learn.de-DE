@@ -1,6 +1,6 @@
 ---
-title: Implementieren der Methoden der Benutzeroberfläche
-description: Implementieren Sie die Schnittstellenmethoden, um PDFs mithilfe der Document Cloud-REST-API zu erstellen.
+title: Implementieren der Schnittstellen-Methoden
+description: Implementieren Sie die Schnittstellen-Methoden, um PDFs mithilfe der Document Cloud-REST-API zu erstellen.
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -11,17 +11,17 @@ thumbnail: 7826.jpg
 kt: 7826
 exl-id: c1fd02aa-577b-453f-8948-ca50e3e8f89b
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '43'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Schnittstellenimplementierung
+# Schnittstellen-Implementierung
 
 Im Folgenden finden Sie den vollständigen Code der Klasse, die die Schnittstelle implementiert.
 
-Diese Klasse verwendet zwei Dienstprogrammmethoden `getAccessToken`, `getJWTToken` und die statische Methode `getContentAnalyserRequest` der Klasse `GetContentAnalyser` .
+Diese Klasse nutzt zwei Utility-Methoden `getAccessToken`, `getJWTToken` und die statische Methode `getContentAnalyserRequest` der Klasse `GetContentAnalyser`.
 
 
 ```java
