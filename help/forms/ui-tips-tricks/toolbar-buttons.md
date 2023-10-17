@@ -1,6 +1,6 @@
 ---
-title: Die nächsten und vorherigen Schaltflächen der Symbolleiste platzieren
-description: Platzieren Sie die Schaltflächen der Symbolleiste
+title: Festlegen der Abstände zwischen den Schaltflächen „Weiter“ und „Zurück“ der Symbolleiste
+description: Festlegen der Abstände zwischen den Schaltflächen in der Symbolleiste
 feature: Adaptive Forms
 type: Tutorial
 version: 6.5
@@ -11,34 +11,34 @@ kt: 9291
 exl-id: 1b55b6d2-3bab-4907-af89-c81a3b1a44cb
 last-substantial-update: 2019-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 11%
+workflow-type: ht
+source-wordcount: '196'
+ht-degree: 100%
 
 ---
 
-# Platzieren Sie die Symbolleistenschaltfläche
+# Festlegen des Abstands der Schaltfläche in der Symbolleiste
 
-Wenn Sie der Symbolleiste in AEM Forms die Schaltflächen Weiter und Zurück hinzufügen, werden die Schaltflächen standardmäßig nebeneinander angeordnet. Sie können die Schaltfläche Weiter in der Symbolleiste ganz rechts nach links drücken, während Sie die Schaltfläche Zurück/Vorwärts links beibehalten
+Wenn Sie der Symbolleiste in AEM Forms die Schaltflächen „Weiter“ und „Zurück“ hinzufügen, werden die Schaltflächen standardmäßig direkt nebeneinander angeordnet. Sie können die Schaltfläche „Weiter“ in der Symbolleiste ganz nach rechts schieben, während Sie die Schaltfläche „Zurück“ links beibehalten
 
 ![toolbar-spacing](assets/toolbar-spacing.png)
 
 
-## Symbolleiste formatieren
+## Festlegen des Stils der Symbolleiste
 
-Der obige Anwendungsfall kann mithilfe des Stileditors einfach durchgeführt werden. Nachdem Sie die Schaltfläche &quot;Zurück/Weiter&quot;zur Symbolleiste hinzugefügt haben, stellen Sie sicher, dass Sie die Ebene &quot;Stil&quot;im Bearbeitungsmenü ausgewählt haben. Wählen Sie bei ausgewähltem Stilmodus die Symbolleiste aus, um das Styling-Eigenschaftenblatt zu öffnen. Erweitern Sie den Abschnitt Dimensionen und Position und stellen Sie sicher, dass alle Eigenschaften angezeigt werden. Legen Sie die folgenden Eigenschaften fest
-* Abmessungen und Position
-   * Breite: 100%
-   * Funktion: relative
+Der obige Anwendungsfall kann mithilfe des Stileditors einfach durchgeführt werden. Nachdem Sie die Schaltfläche „Zurück“/„Weiter“ zur Symbolleiste hinzugefügt haben, stellen Sie sicher, dass Sie die Stilebene im Bearbeitungsmenü ausgewählt haben. Wählen Sie bei ausgewähltem Stilmodus die Symbolleiste aus, um das Stileigenschaftenblatt zu öffnen. Erweitern Sie den Abschnitt „Dimensionen und Position“ und stellen Sie sicher, dass alle Eigenschaften angezeigt werden. Legen Sie die folgenden Eigenschaften fest
+* Dimensionen und Position
+   * Breite: 100 %
+   * Position: relativ
 
 Speichern Sie Ihre Änderungen
 
-## Stil der Schaltfläche &quot;Weiter&quot;
+## Festlegen des Stils der Schaltfläche „Weiter“
 
-Wählen Sie die Schaltfläche Weiter aus und stellen Sie sicher, dass Sie das Stylesheet der nächsten Schaltfläche öffnen (nicht den nächsten Schaltflächentext). Legen Sie die folgenden Eigenschaften fest
-* Abmessungen und Position
-   * position: Absoluter 1 px, rechts 1px
+Wählen Sie die Schaltfläche „Weiter“ aus und stellen Sie sicher, dass Sie das Stileigenschaftenblatt der nächsten Schaltfläche öffnen (nicht den Text der nächsten Schaltfläche). Legen Sie die folgenden Eigenschaften fest
+* Dimensionen und Position
+   * Position: absolut oben 1 px, rechts 1 px
 * Rahmen
-   * Rahmenradius: 4px(Oben, Rechts, Unten, Links)
+   * Rahmenradius: 4 px (oben, rechts, unten, links)
 
 Speichern Sie Ihre Änderungen
