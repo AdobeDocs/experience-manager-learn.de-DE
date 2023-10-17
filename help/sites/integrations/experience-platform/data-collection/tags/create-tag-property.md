@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer Tag-Eigenschaft
-description: Erfahren Sie, wie Sie eine Tag-Eigenschaft mit der Mindestkonfiguration erstellen, die in AEM integriert werden kann. Benutzer werden in die Tag-Benutzeroberfläche eingeführt und erfahren mehr über Erweiterungen, Regeln und Veröffentlichungs-Workflows.
+description: Erfahren Sie, wie Sie eine Tag-Eigenschaft mit der Mindestkonfiguration erstellen, um diese in AEM zu integrieren. Benutzende erhalten eine Einführung in die Tag-Benutzeroberfläche und lernen mehr über Erweiterungen, Regeln und Veröffentlichungs-Workflows.
 topics: integrations
 audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
@@ -16,83 +16,83 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: d5de62ef-a2aa-4283-b500-e1f7cb5dec3b
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '607'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # Erstellen einer Tag-Eigenschaft {#create-tag-property}
 
-Erfahren Sie, wie Sie eine Tag-Eigenschaft mit der Mindestkonfiguration erstellen, um sie in Adobe Experience Manager zu integrieren. Benutzer werden in die Tag-Benutzeroberfläche eingeführt und erfahren mehr über Erweiterungen, Regeln und Veröffentlichungs-Workflows.
+Erfahren Sie, wie Sie eine Tag-Eigenschaft mit der Mindestkonfiguration erstellen, um sie in Adobe Experience Manager zu integrieren. Benutzende erhalten eine Einführung in die Tag-Benutzeroberfläche und lernen mehr über Erweiterungen, Regeln und Veröffentlichungs-Workflows.
 
 >[!VIDEO](https://video.tv.adobe.com/v/38553?quality=12&learn=on)
 
 ## Erstellung von Tag-Eigenschaften
 
-Um eine Tag-Eigenschaft zu erstellen, führen Sie die folgenden Schritte aus.
+Führen Sie die folgenden Schritte aus, um eine Tag-Eigenschaft zu erstellen.
 
-1. Navigieren Sie im Browser zum [Adobe Experience Cloud - Startseite](https://experience.adobe.com/) und melden Sie sich mit Ihrem Adobe ID an.
+1. Navigieren Sie im Browser zur [Adobe Experience Cloud-Startseite](https://experience.adobe.com/) und melden Sie sich mit Ihrer Adobe ID an.
 
-1. Klicken Sie auf **Datenerfassung** der _Schnellzugriff_ auf der Adobe Experience Cloud-Startseite.
+1. Klicken Sie auf der Adobe Experience Cloud-Startseite im Abschnitt _Schnellzugriff_ auf die Anwendung **Datenerfassung**.
 
-1. Klicken Sie auf **Tags** Menüelement aus der linken Navigation und klicken Sie dann auf **Neue Eigenschaft** oben rechts.
+1. Klicken Sie in der linken Navigationsleiste auf das Menüelement **Tags** und dann oben rechts auf **Neue Eigenschaft**.
 
-1. Benennen Sie Ihre Tag-Eigenschaft mit dem **Name** erforderliches Feld. Geben Sie für das Feld Domänen Ihren Domänennamen ein oder geben Sie bei Verwendung AEM as a Cloud Service Umgebung `adobeaemcloud.com` und klicken Sie auf **Speichern**.
+1. Benennen Sie Ihre Tag-Eigenschaft mithilfe des Pflichtfeldes **Name**. Geben Sie in das Feld „Domains“ Ihren Domain-Namen ein oder geben Sie bei Verwendung der AEM as a Cloud Service-Umgebung `adobeaemcloud.com` ein und klicken Sie auf **Speichern**.
 
    ![Tag-Eigenschaften](assets/tag-properties.png)
 
-## Neue Regel erstellen
+## Erstellen einer neuen Regel
 
-Öffnen Sie die neu erstellte Tag-Eigenschaft, indem Sie auf ihren Namen im **Tag-Eigenschaften** anzeigen. Auch unter _Meine letzte Aktivität_ -Überschrift angezeigt, sollte die Haupterweiterung hinzugefügt werden. Die Core Tag-Erweiterung ist die Standarderweiterung und bietet grundlegende Ereignistypen wie Seitenladevorgang, Browser, Formular und andere Ereignistypen, siehe [Übersicht über die Haupterweiterung](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html) für weitere Informationen.
+Öffnen Sie die neu erstellte Tag-Eigenschaft, indem Sie in der Ansicht **Tag-Eigenschaften** auf ihren Namen klicken. Auch unter der Überschrift _Meine letzte Aktivität_ sollte die entsprechend hinzugefügte Core-Erweiterung zu sehen sein. Die Core-Tag-Erweiterung ist die Standarderweiterung. Sie bietet grundlegende Ereignistypen wie Seitenladevorgang, Browser, Formular und andere Ereignistypen. Weitere Informationen dazu finden Sie im [Überblick über die Core-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html?lang=de).
 
-Mit Regeln können Sie festlegen, was passieren soll, wenn der Besucher mit Ihrer AEM-Site interagiert. Um die Dinge einfach zu halten, protokollieren wir zwei Meldungen an die Browser-Konsole, um zu zeigen, wie die Datenerfassungs-Tag-Integration JavaScript-Code in Ihre AEM-Site einfügen kann, ohne AEM Projekt-Code zu aktualisieren.
+Mit Regeln können Sie festlegen, was passieren soll, wenn Besuchende mit Ihrer AEM-Site interagieren. Protokollieren Sie einfach zwei Meldungen in der Browser-Konsole, um zu sehen, wie mithilfe der Datenerfassungs-Tag-Integration JavaScript-Code in Ihre AEM-Site eingefügt werden kann, ohne AEM-Projekt-Code zu aktualisieren.
 
-Um eine Regel zu erstellen, führen Sie die folgenden Schritte aus.
+Führen Sie die folgenden Schritte aus, um eine Regel zu erstellen.
 
-1. Klicken **Regeln** von _AUTHORING_ Abschnitt der linken Navigation und klicken Sie dann auf **Neue Regel erstellen**
+1. Klicken Sie in der linken Navigationsleiste im Abschnitt _AUTHORING_ auf **Regeln** und dann auf **Neue Regel erstellen**.
 
-1. Benennen Sie Ihre Regel mithilfe des **Name** erforderliches Feld.
+1. Benennen Sie Ihre Regel mithilfe des Pflichtfeldes **Name**.
 
-1. Klicken **Hinzufügen** von _EREIGNISSE_ und anschließend im _Ereigniskonfiguration_ im **Ereignistyp** Dropdown-Auswahl _Bibliothek geladen (Seitenanfang)_ und klicken Sie auf **Änderungen beibehalten**.
+1. Klicken Sie im Abschnitt _EREIGNISSE_ auf **Hinzufügen**, wählen Sie anschließend im Formular _Ereigniskonfiguration_ aus der Dropdown-Liste **Ereignistyp** die Option _Bibliothek geladen (Seitenanfang)_ aus und klicken Sie auf **Änderungen beibehalten**.
 
-1. Klicken **Hinzufügen** von _AKTIONEN_ und anschließend im _Aktionskonfiguration_ im **Aktionstyp** Dropdown-Auswahl _Benutzerspezifischer Code_ und klicken Sie auf **Editor öffnen**.
+1. Klicken Sie im Abschnitt _AKTIONEN_ auf **Hinzufügen**, wählen Sie anschließend im Abschnitt _Aktionskonfiguration_ aus der Dropdown-Liste **Aktionstyp** die Option _Benutzerdefinierter Code_ aus und klicken Sie auf **Editor öffnen**.
 
-1. Im _Code bearbeiten_ modal, geben Sie folgendes JavaScript-Codefragment ein und klicken Sie dann auf **Speichern** und klicken Sie schließlich auf **Änderungen beibehalten**.
+1. Geben Sie im Modal _Code bearbeiten_ folgendes JavaScript-Codesnippet ein, klicken Sie auf **Speichern** und dann auf **Änderungen beibehalten**.
 
    ```javascript
    console.log('Tags Property loaded, all set for...');
    console.log('capabilities such as capturing data, conversion tracking and delivering unique and personalized experiences');
    ```
 
-1. Klicken **Speichern** , um den Regelerstellungsprozess abzuschließen.
+1. Klicken Sie auf **Speichern**, um den Regelerstellungsprozess abzuschließen.
 
    ![Neue Regel](assets/new-rule.png)
 
-## Bibliothek hinzufügen und veröffentlichen
+## Hinzufügen und Veröffentlichen einer Bibliothek
 
-Tag-Eigenschaft _Regeln_ werden mithilfe einer Bibliothek aktiviert, stellen Sie sich die Bibliothek als Paket mit JavaScript-Code vor. Aktivieren Sie die neu erstellte Regel, indem Sie die Schritte ausführen.
+Die _Regeln_ für die Tag-Eigenschaft werden über eine Bibliothek aktiviert. Stellen Sie sich diese Bibliothek als Paket mit JavaScript-Code vor. Führen Sie die folgenden Schritte aus, um die neu erstellte Regel zu aktivieren.
 
-1. Klicken **Veröffentlichungsfluss** von _VERÖFFENTLICHUNG_ Abschnitt der linken Navigation und klicken Sie auf **Bibliothek hinzufügen**
+1. Klicken Sie in der linken Navigationsleiste im Abschnitt _PUBLISHING_ auf **Veröffentlichungsfluss** und dann auf **Bibliothek hinzufügen**.
 
-1. Benennen Sie Ihre Bibliothek mit **Name** Feld und wählen Sie _Entwicklung (Entwicklung)_ -Option für **Umgebung** Dropdown-Liste.
+1. Benennen Sie Ihre Bibliothek mithilfe des Feldes **Name** und wählen Sie in der Dropdown-Liste **Umgebung** die Option _Entwicklung (Entwicklung)_ aus.
 
-1. Um alle seit der Erstellung der Tag-Eigenschaft geänderten Ressourcen auszuwählen, klicken Sie auf **+ Alle geänderten Ressourcen hinzufügen**. Durch diese Aktion werden die neu erstellte Regel und die Ressource mit der Haupterweiterung zur Bibliothek hinzugefügt. Endlich klicken **Speichern und in Entwicklung erstellen**.
+1. Um alle seit Erstellung der Tag-Eigenschaft geänderten Ressourcen auszuwählen, klicken Sie auf **+ Alle geänderten Ressourcen hinzufügen**. Durch diese Aktion werden die neu erstellte Regel und die Core-Erweiterungsressource zur Bibliothek hinzugefügt. Klicken Sie abschließend auf **Speichern und in Entwicklung erstellen**.
 
-1. Sobald die Bibliothek für die **Entwicklung** Swim-Spur mit _Ellipsen_ wählen Sie die **Zur Genehmigung einreichen**
+1. Wenn die Bibliothek für die Swimlane **Entwicklung** erstellt wurde, wählen Sie mithilfe der _Auslassungspunkte_ die Option **Zur Genehmigung einreichen** aus.
 
-1. Dann in der **Gesendet** Swimming-Spur mit _Ellipsen_ wählen Sie die **Zur Veröffentlichung genehmigen**, ebenfalls **Erstellen und in Produktion veröffentlichen** im **Genehmigt** schwimmen.
+1. Wählen Sie dann in der Swimlane **Gesendet** mithilfe der _Auslassungspunkte_ die Option **Zur Veröffentlichung genehmigen** aus. Verfahren Sie ebenso in der Swimlane **Genehmigt** mit **Erstellen und in Produktion veröffentlichen**.
 
 ![Veröffentlichte Bibliothek](assets/published-library.png)
 
 
-Der obige Schritt schließt die einfache Erstellung der Tag-Eigenschaft ab, die über eine Regel zum Protokollieren einer Nachricht in der Browser-Konsole verfügt, wenn die Seite geladen wird. Außerdem werden die Regel und die Haupterweiterung durch Erstellen einer Bibliothek veröffentlicht.
+Mit dem obigen Schritt wird die einfache Erstellung der Tag-Eigenschaft abgeschlossen, die über eine Regel zum Protokollieren einer Nachricht in der Browser-Konsole bei Seitenladevorgängen verfügt. Außerdem werden die Regel und die Core-Erweiterung durch Erstellen einer Bibliothek veröffentlicht.
 
 ## Nächste Schritte
 
-[AEM mit Tag-Eigenschaft über IMS verbinden](connect-aem-tag-property-using-ims.md)
+[Verknüpfen von AEM mit Tag-Eigenschaften über IMS](connect-aem-tag-property-using-ims.md)
 
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Erstellen einer Tag-Eigenschaft](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)
+* [Erstellen einer Tag-Eigenschaft](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=de)
