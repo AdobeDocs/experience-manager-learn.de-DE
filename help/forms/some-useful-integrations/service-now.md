@@ -1,5 +1,5 @@
 ---
-title: Integrieren mit [!DNL ServiceNow]
+title: Integrieren mit  [!DNL ServiceNow]
 description: Erstellen und zeigen Sie alle Vorfälle mithilfe des Formulardatenmodells an.
 feature: Adaptive Forms
 version: 6.4,6.5
@@ -10,50 +10,50 @@ level: Intermediate
 exl-id: 93a177b0-7852-44da-89cc-836d127be4e7
 last-substantial-update: 2022-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '288'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 # Integrieren von AEM Forms mit [!DNL ServiceNow]
 
-Vorfälle erstellen und anzeigen in [!DNL ServiceNow] Verwenden des Formulardatenmodells in AEM Forms.
+Erstellen und zeigen Sie Vorfälle in [!DNL ServiceNow] unter Verwendung des Formulardatenmodells in AEM Forms an.
 
 ## Voraussetzungen
 
-* [!DNL ServiceNow] -Konto.
-* Mit [Erstellen von Datenquellen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)
-* Mit [Formulardatenmodell](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=de)
+* [!DNL ServiceNow]-Konto.
+* Kenntnisse beim [Erstellen von Datenquellen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=de).
+* Kenntnisse zum [Formulardatenmodell](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=de).
 
 ## Beispiel-Assets
 
-Die in diesem Artikel bereitgestellten Beispiel-Assets umfassen Folgendes
+Die in diesem Artikel bereitgestellten Beispiel-Assets umfassen Folgendes:
 
-* Cloud Service-Konfiguration
+* Cloud-Service-Konfiguration
 * Swagger-Dateien zum Erstellen eines Vorfalls und Abrufen aller Vorfälle
 * Formulardatenmodell basierend auf den Swagger-Dateien
-* Adaptives Formular zum Erstellen und Auflisten [!DNL ServiceNow] Vorfälle
+* Adaptives Formular zum Erstellen und Auflisten von [!DNL ServiceNow]-Vorfällen
 
 ## Bereitstellen der Assets auf Ihrem Server
 
-* Laden Sie die [Beispiel-Assets](assets/service-now.zip)
-* Importieren Sie die Assets in AEM mit [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
-* Die für diese Integration verwendete Swagger-Datei befindet sich unter der ```/conf/9957/settings/cloudconfigs/fdm``` Ordner im CRX-Repository
-* Bearbeiten Sie die [Konfiguration des CreateIncident-Cloud-Service](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident), um mit Ihrer ServiceNow-Instanz abzugleichen.
-* Bearbeiten Sie die [Cloud Service-Konfiguration von GetAllIncidents](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents) , um mit Ihrer ServiceNow-Instanz abzugleichen. Sie müssen Host, Benutzername und Kennwort ändern, um die Anmeldedaten Ihrer ServiceNow-Instanz zu erfüllen.
+* Laden Sie die [Beispiel-Assets](assets/service-now.zip) herunter.
+* Importieren Sie die Assets mithilfe von [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) in AEM.
+* Die für diese Integration verwendete Swagger-Datei befindet sich unter dem ```/conf/9957/settings/cloudconfigs/fdm```-Ordner im CRX-Repository
+* Bearbeiten Sie die [Cloud-Service-Konfiguration zu CreateIncident](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fcreateincident), um sie mit Ihrer ServiceNow-Instanz abzugleichen.
+* Bearbeiten Sie die [Cloud-Service-Konfiguration zu GetAllIncidents](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2F9957%2Fsettings%2Fcloudconfigs%2Ffdm%2Fgetallincidents), um sie mit Ihrer ServiceNow-Instanz abzugleichen. Sie müssen Host, Benutzername und Kennwort ändern, um sie mit den Anmeldedaten Ihrer ServiceNow-Instanz abzugleichen.
 
 ## Zugriff auf die Anmeldedaten der ServiceNow-Instanz
 
-* Klicken Sie auf Ihr Benutzerprofil
-   ![auf Benutzerprofil klicken](assets/snow-1.png)
+* Klicken Sie auf Ihr Benutzerprofil.
+  ![Auf Benutzerprofil klicken](assets/snow-1.png)
 
-* Klicken Sie auf Instanzkennwort verwalten
-* Die Instanzdetails werden wie folgt angezeigt
-   ![Instanzdetails](assets/snow-3.png)
+* Klicken Sie auf „Instanzpasswort verwalten“.
+* Die Instanzdetails werden wie folgt angezeigt:
+  ![Instanzdetails](assets/snow-3.png)
 
 ## Testen der Integration
 
-* [Öffnen Sie das adaptive Formular](http://localhost:4502/content/dam/formsanddocuments/create-incident-in-service-now/jcr:content?wcmmode=disabled)
-* Geben Sie Werte in das Beschreibungsfeld und in das Kommentarfeld ein und klicken Sie auf die Schaltfläche Vorfall erstellen .
-* Die Incident-ID des neu erstellten Vorfalls sollte in das Textfeld eingetragen werden und die nachstehende Tabelle sollte alle Vorfälle auflisten.
+* [Öffnen Sie das adaptive Formular.](http://localhost:4502/content/dam/formsanddocuments/create-incident-in-service-now/jcr:content?wcmmode=disabled)
+* Geben Sie Werte in das Feld „Beschreibung und Kommentare“ ein und klicken Sie auf die Schaltfläche „Vorfall erstellen“.
+* Die Vorfall-ID des neu erstellten Vorfalls sollte sich im Textfeld befinden, und die nachstehende Tabelle sollte alle Vorfälle auflisten.
