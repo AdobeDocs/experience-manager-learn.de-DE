@@ -1,6 +1,6 @@
 ---
-title: Formularanlage in Datenbank einfügen
-description: Fügen Sie mithilfe AEM Workflows Formularanhänge in die Datenbank ein.
+title: Einfügen von Formularanlagen in eine Datenbank
+description: Fügen Sie mithilfe des AEM-Workflows eine Formularanlage in eine Datenbank ein.
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -10,22 +10,22 @@ kt: 10488
 exl-id: e8a6cab8-423b-4a8e-b2b7-9b24ebe23834
 last-substantial-update: 2020-06-09T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '351'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Formularanhang in Datenbank einfügen
+# Einfügen von Formularanlagen in eine Datenbank
 
 In diesem Artikel wird der Anwendungsfall zum Speichern von Formularanlagen in der MySQL-Datenbank erläutert.
 
-Eine gängige Anforderung von Kunden besteht darin, erfasste Formulardaten und den Formularanhang in einer Datenbanktabelle zu speichern.
-Gehen Sie wie folgt vor, um dieses Anwendungsbeispiel zu erstellen:
+Eine gängige Anforderung der Kundschaft besteht darin, erfasste Formulardaten und die Formularanlage in einer Datenbanktabelle zu speichern.
+Um diesen Anwendungsfall zu realisieren, wurden die folgenden Schritte durchgeführt:
 
-## Erstellen Sie eine Datenbanktabelle für die Formulardaten und den Anhang
+## Erstellen einer Datenbanktabelle für die Formulardaten und -anlagen
 
-Eine Tabelle mit dem Namen newhire wurde erstellt, um die Formulardaten zu speichern. Beachten Sie das Spaltennamenbild des Typs **LONGBLOB** zum Speichern des Formularanhangs
+Eine Tabelle mit dem Namen „newhire“ wurde erstellt, um die Formulardaten zu speichern. Beachten Sie den Spaltennamen Bild des Typs **LONGBLOB** zur Speicherung der Formularanlage
 ![table-schema](assets/insert-picture-table.png)
 
 ## Erstellen von Formulardatenmodellen
@@ -35,10 +35,10 @@ Es wurde ein Formulardatenmodell zur Kommunikation mit der MySQL-Datenbank erste
 * [JDBC-Datenquelle in AEM](./data-integration-technical-video-setup.md)
 * [Formulardatenmodell basierend auf der JDBC-Datenquelle](./jdbc-data-model-technical-video-use.md)
 
-## Workflow erstellen
+## Erstellen eines Workflows
 
-Wenn Sie Ihr adaptives Formular für die Übermittlung an einen AEM-Workflow konfigurieren möchten, können Sie die Formularanhänge in einer Workflow-Variablen speichern oder die Anlagen in einem angegebenen Ordner unter der Payload speichern. Für diesen Anwendungsfall müssen wir die Anlagen in einer Workflow-Variablen des Typs ArrayList of Document speichern. Aus dieser ArrayList müssen wir das erste Element extrahieren und eine document -Variable initialisieren. Die Workflow-Variablen namens **listOfDocuments** und **employeeFoto** erstellt wurden.
-Wenn das adaptive Formular an den Trigger des Workflows gesendet wird, initialisiert ein Schritt im Workflow die employeeFoto -Variable mithilfe des ECMA-Skripts. Im Folgenden finden Sie den ECMA-Skriptcode
+Wenn Sie Ihr adaptives Formular für die Übermittlung an einen AEM-Workflow konfigurieren möchten, können Sie die Formularanhänge in einer Workflow-Variablen speichern oder die Anlagen in einem angegebenen Ordner unter dem Payload speichern. Für diesen Anwendungsfall müssen wir die Anlagen in einer Workflow-Variablen des Typs „ArrayList of Document“ speichern. Aus dieser ArrayList müssen wir das erste Element extrahieren und eine Dokumentvariable initialisieren. Die Workflow-Variablen namens **listOfDocuments** und **employeePhoto** wurden erstellt.
+Wenn das adaptive Formular zur Auslösung des Workflows übermittelt wird, initialisiert ein Schritt im Workflow die Variable „employeePhoto“ mithilfe des ECMA-Skripts. Im Folgenden finden Sie den ECMA-Skript-Code:
 
 ```javascript
 log.info("executing script now...");
@@ -53,14 +53,14 @@ metaDataMap.put("employeePhoto", employeePhoto);
 log.info("Employee Photo updated");
 ```
 
-Der nächste Schritt im Workflow besteht darin, Daten und den Formularanhang mithilfe der Dienstkomponente Formulardatenmodell aufrufen in die Tabelle einzufügen.
+Der nächste Schritt im Workflow besteht darin, Daten und den Formularanhang mithilfe von „Formulardatenmodell-Dienstkomponente aufrufen“ in die Tabelle einzufügen.
 ![insert-pic](assets/fdm-insert-pic.png)
-[Der vollständige Workflow mit dem Beispielecma-Skript kann hier heruntergeladen werden](assets/add-new-employee.zip).
+[Der vollständige Workflow mit dem Beispiel-ECMA-Skript kann hier heruntergeladen werden.](assets/add-new-employee.zip).
 
 >[!NOTE]
-> Sie müssen ein neues JDBC-basiertes Formulardatenmodell erstellen und dieses Formulardatenmodell im Workflow verwenden
+> Sie müssen ein neues JDBC-basiertes Formulardatenmodell erstellen und dieses Formulardatenmodell im Workflow verwenden.
 
-## Adaptives Formular erstellen
+## Erstellen eines adaptiven Formulars
 
-Erstellen Sie Ihr adaptives Formular basierend auf dem Formulardatenmodell, das Sie im vorherigen Schritt erstellt haben. Ziehen Sie die Formulardatenmodellelemente in das Formular. Konfigurieren Sie die Formularübermittlung für den Trigger des Workflows und geben Sie die folgenden Eigenschaften an, wie im Screenshot unten dargestellt
+Erstellen Sie Ihr adaptives Formular basierend auf dem Formulardatenmodell, das Sie im vorherigen Schritt erstellt haben. Ziehen Sie die Elemente des Formulardatenmodells per Drag-and-Drop in das Formular. Konfigurieren Sie die Übermittlung des Formulars, um den Workflow auszulösen, und geben Sie die folgenden Eigenschaften an, wie im folgenden Screenshot dargestellt:
 ![form-attachments](assets/form-attachments.png)
