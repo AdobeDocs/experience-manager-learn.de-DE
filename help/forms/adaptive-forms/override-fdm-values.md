@@ -1,5 +1,5 @@
 ---
-title: Formulardatenmodelleigenschaften mithilfe der OSGi-Konfiguration überschreiben
+title: Überschreiben von Formulardatenmodelleigenschaften mithilfe der OSGi-Konfiguration
 description: AEM Forms 6.5.13 bietet die Möglichkeit, Formulardatenmodelleigenschaften zu überschreiben, um das Testen eines Formulardatenmodells mit verschiedenen Endpunkten zu vereinfachen.
 feature: Adaptive Forms
 type: Tutorial
@@ -11,9 +11,9 @@ kt: 10537
 exl-id: 570de1e6-7221-4b8d-b226-a43317bfc166
 last-substantial-update: 2019-06-09T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '149'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ Vor AEM Forms 6.5.13 mussten Sie die Cloud-Service-Konfiguration Ihres Formulard
 
 AEM Forms 6.5.13 bietet die Möglichkeit, Formulardatenmodelleigenschaften zu überschreiben, um das Testen des Formulardatenmodells anhand verschiedener Dienstendpunkte zu vereinfachen.
 
-Das folgende Video zeigt die Funktion und den Anwendungsfall
+Das folgende Video zeigt die Funktion und den Anwendungsfall:
 
 >[!NOTE]
 >Die in diesem Video demonstrierte Funktion erfordert AEM Forms 6.5.13
