@@ -1,5 +1,5 @@
 ---
-title: Formularanlagen speichern
+title: Speichern von Formularanhängen
 description: Extrahieren Sie die Formularanhänge und speichern Sie sie an einem neuen Speicherort im CRX-Repository.
 feature: Adaptive Forms
 type: Tutorial
@@ -11,18 +11,18 @@ role: Developer
 level: Experienced
 exl-id: ec50b9b1-e28c-4d84-ae90-6a21c9700688
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '192'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Formularanlagen speichern
+# Speichern von Formularanhängen
 
 Wenn Sie Anlagen zu einem adaptiven Formular hinzufügen, werden die Anlagen an einem temporären Speicherort im CRX-Repository gespeichert. Damit unser Anwendungsfall funktioniert, müssen wir die Formularanlagen an einem neuen Speicherort im CRX-Repository speichern.
 
-Der OSGi-Dienst wird erstellt, um die Formularanhänge an einem neuen Speicherort im CRX-Repository zu speichern. Eine neue Dateizuordnung wird mit dem neuen Speicherort der Anlagen im CRX erstellt und an die aufrufende Anwendung zurückgegeben.
-Im Folgenden finden Sie die FileMap, die an das Servlet gesendet wird. Der Schlüssel ist das Feld im adaptiven Formular und der Wert ist der temporäre Speicherort der Anlage. In unserem Servlet extrahieren wir den Anhang, speichern ihn an einem neuen Speicherort im AEM-Repository und aktualisieren die FileMap mit dem neuen Speicherort.
+Der OSGi-Dienst wird erstellt, um die Formularanhänge an einem neuen Speicherort im CRX-Repository zu speichern. Eine neue Dateizuordnung wird mit dem neuen Speicherort der Anlagen im CRX erstellt und an die aufrufende Applikation zurückgegeben.
+Im Folgenden finden Sie die FileMap, die an das Servlet gesendet wird. Der Schlüssel ist das Feld des adaptiven Formulars und der Wert ist der temporäre Speicherort der Anlage. In unserem Servlet extrahieren wir den Anhang, speichern ihn an einem neuen Speicherort im AEM-Repository und aktualisieren die FileMap mit dem neuen Speicherort.
 
 ```java
 {
@@ -31,7 +31,7 @@ Im Folgenden finden Sie die FileMap, die an das Servlet gesendet wird. Der Schl�
 }
 ```
 
-Im Folgenden finden Sie den Code, der die Anlagen aus der Anforderung extrahiert und unter speichert **/content/afattachments** Ordner
+Der folgende Code extrahiert die Anhänge aus der Anfrage und speichert sie im Ordner **/content/afattachments**
 
 ```java
 public String storeAFAttachments(JSONObject fileMap, SlingHttpServletRequest request) {
@@ -83,4 +83,4 @@ Dies ist die neue FileMap mit dem aktualisierten Speicherort der Formularanlagen
 
 ## Nächste Schritte
 
-[Speichern Sie die Formulardaten](./store-form-data.md)
+[Speichern der Formulardaten](./store-form-data.md)
