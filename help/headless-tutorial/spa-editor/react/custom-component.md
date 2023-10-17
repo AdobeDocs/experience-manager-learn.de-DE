@@ -66,7 +66,7 @@ Eine AEM-Komponente ist definiert als ein Knoten und Eigenschaften. Im Projekt w
 
    `jcr:primaryType="cq:Component"`: gibt an, dass dieser Knoten eine AEM-Komponente ist.
 
-   `jcr:title` ist der Wert, der den Inhaltsautorinnen und -autoren angezeigt wird, und `componentGroup` bestimmt die Gruppierung der Komponenten in der Authoring-Benutzeroberfläche.
+   `jcr:title` ist der Wert, der den Inhaltsautorinnen und -autoren angezeigt wird, und `componentGroup` bestimmt die Gruppierung von Komponenten in der Authoring-Benutzeroberfläche.
 
 4. Erstellen Sie unter dem Ordner `custom-component` einen weiteren Ordner mit dem Namen `_cq_dialog`.
 5. Erstellen Sie unter dem Ordner `_cq_dialog` eine neue Datei mit dem Namen `.content.xml` und fügen Sie Folgendes hinzu:
@@ -142,7 +142,7 @@ Eine AEM-Komponente ist definiert als ein Knoten und Eigenschaften. Im Projekt w
 
    >[!NOTE]
    >
-   > Sie können viele weitere [Beispiele für Dialoge in den Kernkomponenten-Definitionen sehen](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components). Sie können auch zusätzliche Formularfelder, wie `select`, `textarea`, `pathfield`, die unter `/libs/granite/ui/components/coral/foundation/form` in [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form) verfügbar sind, anzeigen.
+   > Sie können viele weitere [Beispiele für Dialoge in den Kernkomponenten-Definitionen sehen](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components). Sie können auch zusätzliche Formularfelder anzeigen, zum Beispiel `select`, `textarea`, `pathfield`, verfügbar unter `/libs/granite/ui/components/coral/foundation/form` in [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form).
 
    Bei einer herkömmlichen AEM-Komponente ist normalerweise ein [HTL](https://experienceleague.adobe.com/docs/experience-manager-htl/using/overview.html?lang=de)-Skript erforderlich. Da die SPA die Komponente rendert, ist kein HTL-Skript erforderlich.
 
@@ -350,7 +350,7 @@ Navigieren Sie anschließend zu AEM, um die Aktualisierungen zu überprüfen und
 
    ![Aktualisieren der Layout-Container-Richtlinie](assets/custom-component/custom-component-allowed.png)
 
-   Speichern Sie die Änderungen an der Richtlinie und beachten Sie, dass `Open Weather` eine zulässige Komponente ist:
+   Speichern Sie die Änderungen an der Richtlinie und betrachten Sie die `Open Weather` als zulässige Komponente:
 
    ![Benutzerdefinierte Komponente als zulässige Komponente](assets/custom-component/custom-component-allowed-layout-container.png)
 
