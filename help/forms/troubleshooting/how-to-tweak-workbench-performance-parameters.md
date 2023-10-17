@@ -1,6 +1,6 @@
 ---
-title: Anpassen der Leistungsparameter von Workbench
-description: Schritte zum Anpassen der Leistungsparameter von Workbench
+title: Anpassen der Workbench-Leistungsparameter
+description: Schritte zum Anpassen der Workbench-Leistungsparameter
 type: Troubleshooting
 role: Admin
 level: Intermediate
@@ -10,14 +10,14 @@ topic: Administration
 index: y
 exl-id: 6cb41242-18d3-420a-9e33-87091a648703
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '30'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Anpassen der Leistungsparameter von Workbench
+# Anpassen der Workbench-Leistungsparameter
 
-*Dieses Video führt Sie durch den Prozess zur Anpassung der Leistungsparameter von Workbench .*
+*Dieses Video führt Sie durch den Prozess zur Anpassung der Workbench-Leistungsparameter.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335511?quality=12&learn=on)
