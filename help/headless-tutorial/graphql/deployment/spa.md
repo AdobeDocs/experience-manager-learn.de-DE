@@ -9,13 +9,13 @@ level: Intermediate
 kt: 10587
 thumbnail: KT-10587.jpg
 mini-toc-levels: 2
-source-git-commit: b2bf2a8e454d7ccd09819f2a38e58f7c303cb066
+exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: ht
 source-wordcount: '637'
 ht-degree: 100%
 
 ---
-
 
 # AEM Headless-SPA-Bereitstellungen
 
@@ -25,7 +25,7 @@ Wenn Sie eine SPA bereitstellen, die mit AEM auf Headless-Weise AEM interagiert,
 
 ## Hosten der SPA
 
-Eine SPA besteht aus einer Sammlung nativer Web-Ressourcen: **HTML, CSS und JavaScript**. Diese Ressourcen werden während des _Build_-Prozesses generiert (z. B. `npm run build`) und in einem Host für die Verwendung durch Endbenutzende implementiert.
+Eine SPA besteht aus einer Sammlung nativer Web-Ressourcen: **HTML, CSS und JavaScript**. Diese Ressourcen werden während des _Build_-Prozesses generiert (z. B. `npm run build`) und in einem Host für die Verwendung durch Endbenutzende bereitgestellt.
 
 Es gibt verschiedene **Hosting**-Optionen entsprechend den Anforderungen Ihrer Organisation:
 
@@ -35,13 +35,13 @@ Es gibt verschiedene **Hosting**-Optionen entsprechend den Anforderungen Ihrer O
 
 3. **Frontend-Hosting-Plattformen** wie **AWS Amplify**, **Azure App Service**, **Netlify**, **Heroku**, **Vercel** usw.
 
-## Implementierungskonfigurationen
+## Bereitstellungskonfigurationen
 
 Beim Hosten einer SPA, die mit AEM Headless interagiert, sollten Sie vor allem berücksichtigen, ob der Zugriff auf die SPA über eine Domain (oder einen Host) von AEM oder über eine andere Domain erfolgt.  Der Grund dafür ist, dass SPA-Webanwendungen in Webbrowsern ausgeführt werden und daher Sicherheitsrichtlinien für Webbrowser unterliegen.
 
 ### Freigegebene Domain
 
-Eine SPA und AEM teilen Domains, wenn beide von Endbenutzenden von derselben Domain aufgerufen werden. Beispiel:
+Eine SPA und AEM teilen Domains, wenn beide von Endbenutzenden von derselben Domain aufgerufen werden. Zum Beispiel:
 
 + Der Zugriff auf AEM erfolgt über: `https://wknd.site/`
 + SPA ist zugänglich über `https://wknd.site/spa`
@@ -50,7 +50,7 @@ Da sowohl AEM als auch die SPA von derselben Domain aus aufgerufen werden, ermö
 
 Wie SPA und AEM-Traffic auf der geteilten Domain geleitet werden, liegt an Ihnen: CDN mit mehreren Ursprüngen, HTTP-Server mit Reverse-Proxy, Hosten der SPA direkt in AEM usw.
 
-Im Folgenden finden Sie Implementierungskonfigurationen, die für SPA-Implementierungen in Produktionsumgebungen erforderlich sind, wenn sie auf derselben Domain wie AEM gehostet wird.
+Im Folgenden finden Sie Bereitstellungskonfigurationen, die für SPA-Bereitstellungen in Produktionsumgebungen erforderlich sind, wenn sie auf derselben Domain wie AEM gehostet wird.
 
 | SPA stellt eine Verbindung her zu | AEM Author | AEM Publish | AEM-Vorschau |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
@@ -60,14 +60,14 @@ Im Folgenden finden Sie Implementierungskonfigurationen, die für SPA-Implementi
 
 ### Verschiedene Domains
 
-Eine SPA und AEM haben unterschiedliche Domains, wenn Endbenutzende von abweichenden Domains aus auf sie zugreifen. Beispiel:
+Eine SPA und AEM haben unterschiedliche Domains, wenn Endbenutzende von abweichenden Domains aus auf sie zugreifen. Zum Beispiel:
 
 + Der Zugriff auf AEM erfolgt über: `https://wknd.site/`
 + SPA ist zugänglich über `https://wknd-app.site/`
 
 Da auf AEM und die SPA von verschiedenen Domains aus zugegriffen wird, erzwingen Webbrowser Sicherheitsrichtlinien wie [Cross-Origin Resource Sharing (CORS)](./configurations/cors.md) und unterbinden die Freigabe von HTTP-Cookies (z. B. des `login-token`-Cookies von AEM).
 
-Im Folgenden finden Sie Implementierungskonfigurationen, die für SPA-Implementierungen in Produktionsumgebungen erforderlich sind, wenn sie auf einer anderen Domain gehostet werden als AEM.
+Im Folgenden finden Sie Bereitstellungskonfigurationen, die für SPA-Bereitstellungen in Produktionsumgebungen erforderlich sind, wenn sie auf einer anderen Domain gehostet werden als AEM.
 
 | SPA stellt eine Verbindung her zu | AEM Author | AEM Publish | AEM-Vorschau |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
@@ -75,9 +75,9 @@ Im Folgenden finden Sie Implementierungskonfigurationen, die für SPA-Implementi
 | [Cross-Origin Resource Sharing (CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
 | [AEM-Hosts](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
 
-#### Beispiel für eine SPA-Implementierung auf verschiedenen Domains
+#### Beispiel für eine SPA-Bereitstellung auf verschiedenen Domains
 
-In diesem Beispiel wird die SPA in eine Netlify-Domain implementiert (`https://main--sparkly-marzipan-b20bf8.netlify.app/`) und die SPA verwendet AEM GraphQL-APIs aus der AEM Publish-Domain (`https://publish-p65804-e666805.adobeaemcloud.com`). In den folgenden Screenshots wird die CORS-Anforderung hervorgehoben.
+In diesem Beispiel wird die SPA in eine Netlify-Domain bereitgestellt (`https://main--sparkly-marzipan-b20bf8.netlify.app/`) und die SPA verwendet AEM GraphQL-APIs aus der AEM Publish-Domain (`https://publish-p65804-e666805.adobeaemcloud.com`). In den folgenden Screenshots wird die CORS-Anforderung hervorgehoben.
 
 1. Die SPA wird von einer Netlify-Domain bereitgestellt, führt jedoch einen XHR-Aufruf an AEM GraphQL-APIs in einer anderen Domain durch. Diese Site-übergreifende Anforderung erfordert die Festlegung von [CORS](./configurations/cors.md) auf AEM, um die Anfrage der Netlify-Domain zu genehmigen, den Zugriff auf ihren Inhalt zu ermöglichen.
 
