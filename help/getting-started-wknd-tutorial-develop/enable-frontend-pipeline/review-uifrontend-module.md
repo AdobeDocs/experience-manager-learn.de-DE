@@ -11,13 +11,13 @@ kt: 10689
 mini-toc-levels: 1
 index: y
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: 65e8d41e-002a-4d80-a050-5366e9ebbdea
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '614'
 ht-degree: 100%
 
 ---
-
 
 # Überprüfen Sie das Modul „ui.frontend“ des Full-Stack-AEM-Projekts. {#aem-full-stack-ui-frontent}
 
@@ -42,7 +42,7 @@ In diesem Kapitel überprüfen wir die Entwicklung, Implementierung und Bereitst
 
 
 * Klonen Sie das [AEM WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd)
-* Das geklonte AEM WKND Sites-Projekt wurde für AEM as a Cloud Service erstellt und implementiert.
+* Das geklonte AEM WKND Sites-Projekt wurde für AEM as a Cloud Service erstellt und bereitgestellt.
 
 Schauen Sie sich die Datei [README.md](https://github.com/adobe/aem-guides-wknd/blob/main/README.md) des AEM WKND Site-Projekts für weitere Details an.
 
@@ -70,41 +70,41 @@ Die Frontend-Ressourcen werden den Webbrowsern über URI-Pfade bereitgestellt, d
 
    1. `webpack.common`: Dies enthält die __gemeinsame__ Konfiguration, um die WKND-Ressourcenbündelung und -optimierung anzuweisen. Die __Output__-Eigenschaft gibt an, wo die konsolidierten Dateien (auch als JavaScript-Bundles bezeichnet, aber nicht zu verwechseln mit den AEM OSGi-Bundles) ausgegeben werden sollen. Der Standardname ist auf `clientlib-site/js/[name].bundle.js` festgelegt.
 
-   ```javascript
-       ...
-       output: {
-               filename: 'clientlib-site/js/[name].bundle.js',
-               path: path.resolve(__dirname, 'dist')
-           }
-       ...    
-   ```
+  ```javascript
+      ...
+      output: {
+              filename: 'clientlib-site/js/[name].bundle.js',
+              path: path.resolve(__dirname, 'dist')
+          }
+      ...    
+  ```
 
    1. `webpack.dev.js` enthält die __Entwicklungskonfiguration__ für den webpack-dev-server und verweist auf die zu verwendende HTML-Vorlage. Sie enthält auch eine Proxy-Konfiguration für eine AEM-Instanz, die auf `localhost:4502` ausgeführt wird.
 
-   ```javascript
-       ...
-       devServer: {
-           proxy: [{
-               context: ['/content', '/etc.clientlibs', '/libs'],
-               target: 'http://localhost:4502',
-           }],
-       ...    
-   ```
+  ```javascript
+      ...
+      devServer: {
+          proxy: [{
+              context: ['/content', '/etc.clientlibs', '/libs'],
+              target: 'http://localhost:4502',
+          }],
+      ...    
+  ```
 
    1. `webpack.prod.js` enthält die __Produktionskonfiguration__ und verwendet die Plug-ins, um die Entwicklungsdateien in optimierte Bundles umzuwandeln.
 
-   ```javascript
-       ...
-       module.exports = merge(common, {
-           mode: 'production',
-           optimization: {
-               minimize: true,
-               minimizer: [
-                   new TerserPlugin(),
-                   new CssMinimizerPlugin({ ...})
-           }
-       ...    
-   ```
+  ```javascript
+      ...
+      module.exports = merge(common, {
+          mode: 'production',
+          optimization: {
+              minimize: true,
+              minimizer: [
+                  new TerserPlugin(),
+                  new CssMinimizerPlugin({ ...})
+          }
+      ...    
+  ```
 
 
 * Die gebündelten Ressourcen werden mithilfe des [AEM-Clientlib-Generator](https://www.npmjs.com/package/aem-clientlib-generator)-Plug-ins in das `ui.apps`-Modul verschoben, wobei die in der Datei `clientlib.config.js` verwaltete Konfiguration verwendet wird.
@@ -131,7 +131,7 @@ Die Frontend-Ressourcen werden den Webbrowsern über URI-Pfade bereitgestellt, d
 
 `$ mvn clean install -PautoInstallSinglePackage`
 
-### Implementierung in AEM as a Cloud Service {#deployment-frontend-aemaacs}
+### Bereitstellung in AEM as a Cloud Service {#deployment-frontend-aemaacs}
 
 Die [__Full-Stack__-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=de#full-stack-pipeline) stellt diese Änderungen in einer AEM as a Cloud Service-Umgebung bereit.
 
