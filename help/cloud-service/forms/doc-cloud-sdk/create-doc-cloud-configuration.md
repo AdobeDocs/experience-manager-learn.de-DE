@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer benutzerdefinierten OSGi-Konfiguration
-description: Benutzerdefinierte OSGi-Konfiguration zum Erfassen von Dokument-Cloud-spezifischen Details
+description: Benutzerdefinierte OSGi-Konfiguration zum Erfassen von Document Cloud-spezifischen Details
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -11,9 +11,9 @@ thumbnail: 7818.jpg
 kt: 7818
 exl-id: 1f34c356-6c0c-46ff-9cea-7baacfc4bb7f
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '63'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
