@@ -11,9 +11,9 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: faf0143a-0944-41fb-a211-0d83ae1978d4
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '70'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ Nutzung vorhandener XDP-Vorlagen mit AEM Forms- und Sign-Integration.
 
 >[!VIDEO](https://video.tv.adobe.com/v/39705?quality=12&learn=on)
 
-Assets, die sich auf dieses Video beziehen, können über die folgenden Links heruntergeladen werden
+Über die folgenden Links können Assets im Zusammenhang mit diesem Video heruntergeladen werden:
 
 * [NDA-Vorlage](assets/nda-agreement-xdp-template.zip)
 * [Adaptives Formular](assets/nda-agreement-af-with-xdp-template.zip)
