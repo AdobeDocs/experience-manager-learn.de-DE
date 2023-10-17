@@ -1,5 +1,5 @@
 ---
-title: Video Installieren und Konfigurieren von Tomcat
+title: Installieren und Konfigurieren von Tomcat-Video
 seo-title: Install and Configure Tomcat
 description: Dies ist Teil 1 des mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments.
 uuid: 835e2342-82b6-4f0c-9a6b-467bbbd8527a
@@ -16,38 +16,38 @@ role: Developer
 level: Beginner
 exl-id: faa9ca2d-6cfa-4abf-be5e-3e549202853a
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '241'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # Installieren und Konfigurieren von Tomcat {#install-and-configure-tomcat}
 
-In diesem Teil installieren wir TOMCAT und stellen die Datei sampleRest.war in TOMCAT bereit. Der von dieser WAR-Datei angezeigte REST-Endpunkt ist die Grundlage für unser Datenquellen- und Formulardatenmodell.
+In diesem Teil installieren wir TOMCAT und stellen die Datei sampleRest.war in TOMCAT bereit. Der von dieser WAR-Datei offengelegte REST-Endpunkt ist die Grundlage für unser Datenquellen- und Formulardatenmodell.
 
 >[!VIDEO](https://video.tv.adobe.com/v/37815?quality=12&learn=on)
 
 Um Tomcat einzurichten, befolgen Sie die folgenden Anweisungen:
 
 1. Laden Sie JDK1.8 herunter und installieren Sie es.
-2. Setzen Sie JAVA_HOME auf JDK1.8.
-3. Download [Tomcat](https://tomcat.apache.org/). Diese WAR-Datei wurde mit den Tomcat-Versionen 8.5.x und 9.0.x getestet.
-4. Laden Sie die Tomcat-Version Ihrer Voreinstellung herunter. Sie können die 64-Bit-Windows-Zip unter den Kernabschnitt herunterladen.
-5. Entpacken Sie den Inhalt in Ihre c:\tomcat.
-6. Sie sollten so etwas in Ihrem c-Laufwerk sehen **c:\tomcat\apache-tomcat-8.5.27** abhängig von der Version Ihres Tomcat
-7. Erstellen Sie eine Umgebungsvariable mit dem Namen &quot;CATALINA_HOME&quot;und legen Sie ihren Wert auf den Tomcat-Installationsordner fest, Beispiel c:\tomcat\apache- tomcat-8.5.27
+2. Stellen Sie ein, dass JAVA_HOME auf JDK1.8 verweist.
+3. Laden Sie [Tomcat](https://tomcat.apache.org/) herunter. Diese WAR-Datei wurde mit den Tomcat-Versionen 8.5.x und 9.0.x getestet.
+4. Laden Sie die bevorzugte Tomcat-Version herunter. Sie können die Zip-Datei für 64-Bit-Windows unter den Kernabschnitt herunterladen.
+5. Entpacken Sie den Inhalt in Ihr c:\tomcat.
+6. Sie sollten in Ihrem C-Laufwerk so etwas wie **C:\tomcat\apache-tomcat-8.5.27** sehen, abhängig von der Version Ihres Tomcat.
+7. Erstellen Sie eine Umgebungsvariable mit dem Namen „CATALINA_HOME“ und legen Sie ihren Wert auf den Tomcat-Installationsordner fest, zum Beispiel: c:\tomcat\apache-tomcat-8.5.27
 8. Kopieren Sie die Datei SampleRest.war in den Ordner webapps Ihrer Tomcat-Installation.
-9. Starten Sie ein neues Eingabeaufforderungsfenster.
-10. Navigieren Sie zu &lt;tomcat install=&quot;&quot; folder=&quot;&quot;>\bin und starten Sie startup.bat
-11. Sobald Ihr Tomcat gestartet wurde, testen Sie den Endpunkt, der von der WAR-Datei offen gelegt wird von [Hier klicken](http://localhost:8080/SampleRest/webapi/getStatement/9586)
-12. Sie sollten Beispieldaten als Ergebnis dieses Aufrufs erhalten.
+9. Öffnen Sie ein neues Eingabeaufforderungsfenster.
+10. Navigieren Sie zu &lt;tomcat install folder>\bin und starten Sie startup.bat
+11. Sobald Ihr Tomcat gestartet wurde, testen Sie den von der WAR-Datei offengelegten Endpunkt, indem Sie [hier klicken](http://localhost:8080/SampleRest/webapi/getStatement/9586)
+12. Sie sollten als Ergebnis dieses Aufrufs Beispieldaten erhalten.
 
-Herzlichen Glückwunsch !!!. Sie haben für Tomcat eingerichtet und die Datei SampleRest.war bereitgestellt.
+Herzlichen Glückwunsch! Sie haben Tomcat eingerichtet und die Datei SampleRest.war bereitgestellt.
 
-Im folgenden Video wird die Implementierung der Beispielanwendung in Tomcat erläutert.
+Im folgenden Video wird die Bereitstellung der Beispielanwendung in Tomcat erläutert
 >[!VIDEO](https://video.tv.adobe.com/v/37815?quality=12&learn=on)
 
 ## Nächste Schritte
 
-[RESTful-Datenquelle erstellen](./create-data-source.md)
+[Erstellen einer RESTful-Datenquelle](./create-data-source.md)
