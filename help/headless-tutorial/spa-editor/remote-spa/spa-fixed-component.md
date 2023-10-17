@@ -176,7 +176,7 @@ Die Datei `Home.js` sollte wie folgt aussehen:
    + Titel: __WKND-Adventures__
    + Typ/Größe: __H2__
 
-      ![Dialogfeld der Titelkomponente](./assets/spa-fixed-component/title-dialog.png)
+     ![Dialogfeld der Titelkomponente](./assets/spa-fixed-component/title-dialog.png)
 
 1. Tippen Sie auf __Fertig__, um zu speichern.
 1. Sehen Sie sich Ihre Änderungen in der Vorschau im AEM-SPA-Editor an.
