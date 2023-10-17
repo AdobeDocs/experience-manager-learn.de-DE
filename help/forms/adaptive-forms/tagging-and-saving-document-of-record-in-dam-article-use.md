@@ -1,6 +1,6 @@
 ---
-title: Tagging und Speichern von AEM Forms DoR in DAM
-description: In diesem Artikel wird das Anwendungsbeispiel zum Speichern und Taggen des von AEM Forms in AEM DAM generierten DoR erläutert. Das Tagging des Dokuments erfolgt basierend auf den gesendeten Formulardaten.
+title: Tagging und Speichern von AEM Forms-Datensatzdokumenten in DAM
+description: In diesem Artikel wird der Anwendungsfall zum Speichern und Tagging des von AEM Forms generierten Datensatzdokuments (Document of Record, DoR) in AEM DAM erläutert. Das Tagging des Dokuments erfolgt auf Basis der übermittelten Formulardaten.
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -9,27 +9,27 @@ level: Experienced
 exl-id: 832f04b4-f22f-4cf9-8136-e3c1081de7a9
 last-substantial-update: 2019-03-20T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '611'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Tagging und Speichern von AEM Forms DoR in DAM {#tagging-and-storing-aem-forms-dor-in-dam}
+# Tagging und Speichern von AEM Forms-Datensatzdokumenten in DAM {#tagging-and-storing-aem-forms-dor-in-dam}
 
-In diesem Artikel wird das Anwendungsbeispiel zum Speichern und Taggen des von AEM Forms in AEM DAM generierten DoR erläutert. Das Tagging des Dokuments erfolgt basierend auf den gesendeten Formulardaten.
+In diesem Artikel wird der Anwendungsfall zum Speichern und Tagging des von AEM Forms generierten Datensatzdokuments (Document of Record, DoR) in AEM DAM erläutert. Das Tagging des Dokuments erfolgt auf Basis der übermittelten Formulardaten.
 
-Eine häufige Kundenanfrage besteht darin, das von AEM Forms generierte Datensatzdokument (DoR) in AEM DAM zu speichern und zu taggen. Das Tagging des Dokuments muss auf den von Adaptive Forms übermittelten Daten basieren. Wenn der Beschäftigungsstatus in den gesendeten Daten beispielsweise &quot;Rentner&quot;lautet, möchten wir das Dokument mit dem Tag &quot;Rentner&quot;versehen und das Dokument in DAM speichern.
+Kundinnen und Kunden wünschen sich häufig, das von AEM Forms generierte DoR in AEM DAM speichern und mit Tags versehen zu können. Das Tagging des Dokuments muss auf den übermittelten Daten des adaptiven Formulars basieren. Wenn der Beschäftigungsstatus in den übermittelten Daten beispielsweise „Im Ruhestand“ lautet, soll das Dokument mit einem entsprechenden Tag versehen und in DAM gespeichert werden.
 
 Der Anwendungsfall sieht folgendermaßen aus:
 
-* Ein Benutzer füllt das adaptive Formular aus. Im adaptiven Formular werden der Familienstand (ex Single) und der Beschäftigungsstatus (Ex Remüde) des Benutzers erfasst.
-* Beim Senden des Formulars wird ein AEM Workflow ausgelöst. Dieser Workflow markiert das Dokument mit dem Familienstand (Single) und dem Beschäftigungsstatus (Rentner) und speichert das Dokument in DAM.
-* Sobald das Dokument in DAM gespeichert ist, sollte der Administrator das Dokument anhand dieser Tags durchsuchen können. Beispielsweise würde die Suche nach Single oder Rentner die entsprechenden DoR abrufen.
+* Eine Benutzerin oder ein Benutzer füllt das adaptive Formular aus. Im adaptiven Formular werden der Familienstand (z. B. „Ledig“) und der Beschäftigungsstatus (z. B. „Im Ruhestand“) der Benutzerin oder des Benutzers erfasst.
+* Beim Übermitteln des Formulars wird ein AEM-Workflow ausgelöst. Dieser Workflow versieht das Dokument mit Tags für den Familienstand („Ledig“) sowie den Beschäftigungsstatus („Im Ruhestand“) und speichert das Dokument in DAM.
+* Sobald das Dokument in DAM gespeichert ist, sollten Admins das Dokument anhand dieser Tags durchsuchen können. Beispielsweise würde bei einer Suche nach „Ledig“ oder „Im Ruhestand“ die entsprechenden DoRs zurückgegeben werden.
 
-Um diesen Anwendungsfall zu erfüllen, wurde ein benutzerdefinierter Prozessschritt geschrieben. In diesem Schritt rufen wir die Werte der entsprechenden Datenelemente aus den gesendeten Daten ab. Anschließend erstellen wir die Tag-Kachel mit diesem Wert. Wenn der Wert des Ehestatus-Elements beispielsweise &quot;Single&quot;lautet, wird der Tag-Titel zu &quot;Peak:EmploymentStatus/Single&quot;. **Mithilfe der TagManager-API finden wir das Tag und wenden es auf das DoR an.
+Für diesen Anwendungsfall wurde ein benutzerdefinierter Prozessschritt geschrieben. In diesem Schritt rufen wir die Werte der entsprechenden Datenelemente aus den übermittelten Daten ab. Anschließend erstellen wir die Tag-Kachel mit diesem Wert. Wenn der Wert des Familienstand-Elements beispielsweise „Ledig“ lautet, wird der Tag-Titel zu „Peak:EmploymentStatus/Single“ (also Peak:Beschäftigungsstatus/Ledig). ** Mithilfe der TagManager-API finden wir das Tag und wenden es auf das DoR an.
 
-Im Folgenden finden Sie den vollständigen Code zum Taggen und Speichern des Datensatzdokuments in AEM DAM.
+Im Folgenden finden Sie den vollständigen Code zum Tagging und Speichern des Datensatzdokuments in AEM DAM.
 
 ```java
 package com.aemforms.setvalue.core;
@@ -157,26 +157,26 @@ public class TagAndStoreDoRinDAM implements WorkflowProcess
 ```
 
 Um dieses Beispiel auf Ihrem System verwenden zu können, führen Sie die folgenden Schritte aus:
-* [Bereitstellen des Entwicklungs-mit-Service-Benutzer-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* [Stellen Sie das Bundle „DevelopingWithServiceUser“ bereit.](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-* [Herunterladen und Bereitstellen des setvalue-Bundles](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGI-Bundle, das die Tags aus den gesendeten Formulardaten festlegt.
+* [Laden Sie das setvalue-Bundle herunter und stellen Sie es bereit](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGI-Bundle, das die Tags aus den übermittelten Formulardaten festlegt.
 
-* [Herunterladen des adaptiven Beispielformulars](assets/tag-and-store-in-dam-adaptive-form.zip)
+* [Laden Sie das adaptive Beispielformular herunter.](assets/tag-and-store-in-dam-adaptive-form.zip)
 
-* [Navigieren Sie zu Forms und Dokumenten .](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [Navigieren Sie zu „Formulare und Dokumente“.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
-* Klicken Sie auf Erstellen | Datei-Upload und Upload des Tags und Store-in-dam-adaptive-form.zip
+* Klicken Sie auf „Erstellen > Datei hochladen“ und laden Sie die Datei „tag-and-store-in-dam-adaptive-form.zip“ hoch.
 
-* [Importieren von Artikel-Assets](assets/tag-and-store-in-dam-assets.zip) Verwenden AEM Package Manager
-* Öffnen Sie die [Beispielformular im Vorschaumodus](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **Füllen Sie alle Felder aus** und senden Sie das Formular.
-* [Navigieren Sie zum Ordner &quot;Peak&quot;in DAM.](http://localhost:4502/assets.html/content/dam/Peak). Sie sollten DoR im Ordner Peak sehen. Überprüfen Sie die Eigenschaften des Dokuments. Sie sollte entsprechend mit Tags versehen werden.
+* [Importieren Sie die Artikel-Assets](assets/tag-and-store-in-dam-assets.zip) mit AEM Package Manager.
+* Öffnen Sie das [adaptive Formular im Vorschaumodus](http://localhost:4502/content/dam/formsanddocuments/tagandstoreindam/jcr:content?wcmmode=disabled). **Füllen Sie alle Felder aus** und übermitteln Sie das Formular.
+* [Navigieren Sie zum Peak-Ordner in DAM](http://localhost:4502/assets.html/content/dam/Peak). Das DoR sollte im Peak-Ordner zu sehen sein. Überprüfen Sie die Eigenschaften des Dokuments. Es sollte entsprechend mit Tags versehen sein.
 Herzlichen Glückwunsch!! Sie haben das Muster erfolgreich auf Ihrem System installiert.
 
-* Erkunden wir die [Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) wird bei der Formularübermittlung ausgelöst.
-* Der erste Schritt im Workflow erstellt einen eindeutigen Dateinamen, indem der Name des Antragstellers und das Land des Wohnsitzes verkettet werden.
-* Der zweite Schritt des Workflows besteht aus der Tag-Hierarchie und den Formularfeldelementen, die mit Tags versehen werden müssen. Der Prozessschritt extrahiert den Wert aus den gesendeten Daten und erstellt den Tag-Titel, der das Dokument taggen muss.
-* Wenn Sie DoR in einem anderen Ordner im DAM speichern möchten, geben Sie den Ordnerspeicherort mithilfe der Konfigurationseigenschaften an, wie im Screenshot unten angegeben.
+* Sehen wir uns den [Workflow](http://localhost:4502/editor.html/conf/global/settings/workflow/models/TagAndStoreDoRinDAM.html) an, der bei der Formularübermittlung ausgelöst wird.
+* Im ersten Workflow-Schritt wird ein eindeutiger Dateiname erstellt, indem der Name der Antragstellerin oder des Antragstellers und der Kreis, indem sich der Wohnsitz befindet, miteinander verkettet werden.
+* Im zweiten Workflow-Schritt werden die Tag-Hierarchie und die mit Tags zu versehenen Formularfeldelemente weitergegeben. Durch den Prozessschritt wird der Wert aus den übermittelten Daten extrahiert und der Tag-Titel für das Dokument erstellt.
+* Wenn Sie das DoR in einem anderen Ordner in DAM speichern möchten, geben Sie den Ordnerspeicherort mithilfe der Konfigurationseigenschaften an, wie im Screenshot unten angegeben.
 
-Die anderen beiden Parameter sind spezifisch für DoR und Datendateipfad, wie in den Übermittlungsoptionen für adaptive Formulare angegeben. Stellen Sie sicher, dass die hier angegebenen Werte mit den Werten übereinstimmen, die Sie in den Übermittlungsoptionen für adaptive Formulare angegeben haben.
+Die anderen beiden Parameter sind spezifisch für das DoR und den Datendateipfad, wie in den Übermittlungsoptionen für adaptive Formulare angegeben. Stellen Sie sicher, dass die hier angegebenen Werte mit den Werten übereinstimmen, die Sie in den Übermittlungsoptionen für adaptive Formulare festgelegt haben.
 
-![Tag Dor](assets/tag_dor_service_configuration.gif)
+![DoR-Tagging](assets/tag_dor_service_configuration.gif)
