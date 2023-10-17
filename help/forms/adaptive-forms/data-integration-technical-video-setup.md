@@ -9,9 +9,9 @@ level: Beginner
 exl-id: ba5a250d-b2ee-4d1b-807c-e144b805c61a
 last-substantial-update: 2021-02-09T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '74'
-ht-degree: 13%
+ht-degree: 100%
 
 ---
 
@@ -23,10 +23,10 @@ Einrichten der Datenverbindung zu einer JDBC-Datenquelle
 
 >[!NOTE]
 >
->MySQL JDBC-Treiber müssen über OSGi-Bundles auf der AEM installiert werden.
+>MySQL JDBC-Treiber müssen über OSGi-Bundles auf der AEM-Instanz installiert werden.
 
-## Unterstützende Materialien {#supporting-materials}
+## Hilfsmaterialien {#supporting-materials}
 
-* [MySQL JDBC OSGi Bundle herunterladen](https://dev.mysql.com/downloads/connector/j/)
+* [Herunterladen des MySQL JDBC-OSGi-Bundles](https://dev.mysql.com/downloads/connector/j/)
 
    * Laden Sie die JAR-Datei herunter, entpacken Sie sie und installieren Sie sie über die [AEM Web-Konsole](http://localhost:4502/system/console/bundles)
