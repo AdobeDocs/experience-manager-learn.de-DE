@@ -1,6 +1,6 @@
 ---
-title: Erstellen von adaptiven Formularen
-description: In Teil 1 erstellen wir das adaptive Formular, fügen die Symbolleiste mit entsprechenden Schaltflächen hinzu und konfigurieren sie.
+title: Erstellen eines adaptiven Formulars
+description: In Teil 1 wird ein adaptives Formular erstellt und die Symbolleiste mit entsprechenden Schaltflächen hinzugefügt und konfiguriert.
 feature: Adaptive Forms
 kt: 4208
 thumbnail: 22173.jpg
@@ -9,15 +9,15 @@ role: Developer
 level: Beginner
 exl-id: de3a0444-64ae-45a1-8329-aafa6f5add49
 source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '54'
+ht-degree: 100%
 
 ---
 
-# Erstellen von adaptiven Formularen {#creating-adaptive-form}
+# Erstellen eines adaptiven Formulars {#creating-adaptive-form}
 
-Wir erstellen ein adaptives Formular auf der Basis der in der vorherigen Lektion erstellten Vorlage und konfigurieren die Symbolleiste mit den entsprechenden Schaltflächen.
+Wir erstellen ein adaptives Formular auf der Grundlage der in der vorherigen Lektion erstellten Vorlage und konfigurieren die Symbolleiste mit den entsprechenden Schaltflächen.
 
 **Erstellen Ihres ersten adaptiven Formulars**
 
@@ -25,4 +25,4 @@ Wir erstellen ein adaptives Formular auf der Basis der in der vorherigen Lektion
 
 ## Nächste Schritte
 
-[Hinzufügen untergeordneter Bedienfelder zum Stammbedienfeld](./configuring-root-panel-and-adding-child-panels.md)
+[Hinzufügen untergeordneter Panels zum Stamm-Panel](./configuring-root-panel-and-adding-child-panels.md)
