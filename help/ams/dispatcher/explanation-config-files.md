@@ -1,61 +1,61 @@
 ---
 title: Erläuterung der Dispatcher-Konfigurationsdateien
-description: Machen Sie sich mit Konfigurationsdateien, Benennungskonventionen und mehr vertraut.
+description: Machen Sie sich mit Konfigurationsdateien, Namenskonventionen usw. vertraut.
 version: 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: cc085af90b9b8ea0e650546c251fbf14cc222989
-workflow-type: tm+mt
+exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '1705'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-
 # Erläuterung der Konfigurationsdateien
 
-[Inhalt](./overview.md)
+[Inhaltsverzeichnis](./overview.md)
 
-[&lt;- Zurück: Grundlegendes Dateilayout](./basic-file-layout.md)
+[&lt;- Zurück: Grundlegendes Datei-Layout](./basic-file-layout.md)
 
-In diesem Dokument werden die einzelnen Konfigurationsdateien aufgeschlüsselt und erläutert, die auf einem standardmäßigen Dispatcher-Server bereitgestellt werden, der in Adobe Managed Services bereitgestellt wird. Verwendung, Namenskonvention usw.
+In diesem Dokument werden die einzelnen Konfigurationsdateien aufgeschlüsselt und erläutert, die auf einem standardmäßigen, in Adobe Managed Services konfigurierten Dispatcher-Server bereitgestellt werden. Sie erfahren mehr über die Verwendung, Namenskonvention usw.
 
 ## Namenskonvention
 
-Der Apache-Webserver kümmert sich bei der Zielgruppenbestimmung mit einer Datei nicht darum, was die Dateierweiterung einer Datei ist `Include` oder `IncludeOptional` -Anweisung.  Eine ordnungsgemäße Benennung mit Namen, die Konflikte und Verwirrung beseitigen, hilft einem <b>ton</b>. Die verwendeten Namen beschreiben den Umfang, in dem die Datei angewendet wird, und erleichtern das Leben. Wenn alles benannt ist `.conf` das wird wirklich verwirrend. Wir möchten schlecht benannte Dateien und Erweiterungen vermeiden.  Im Folgenden finden Sie eine Liste der verschiedenen benutzerdefinierten Dateierweiterungen und Benennungskonventionen, die in einem typischen AMS-konfigurierten Dispatcher verwendet werden.
+Für den Apache-Webserver ist die Dateierweiterung einer Datei nicht von Belang, wenn auf diese mit einer `Include`- oder `IncludeOptional`-Anweisung abgezielt wird. Eine ordnungsgemäße Benennung mit Namen, die Konflikte ausschließen und eindeutig sind, ist <b>sehr</b> hilfreich. Die verwendeten Namen beschreiben idealerweise den Umfang, in dem die Datei angewendet wird, was allen das Leben leichter macht. Wenn alles mit `.conf` benannt wird, entsteht große Verwirrung. Unzureichend benannte Dateien und Erweiterungen sollten vermieden werden. Im Folgenden finden Sie eine Liste der verschiedenen benutzerdefinierten Dateierweiterungen und Namenskonventionen, die in einem typischen AMS-konfigurierten Dispatcher verwendet werden.
 
-## Dateien in &quot;conf.d/&quot;
+## Dateien unter „conf.d/“
 
-| File | Dateiziel | Beschreibung |
+| Datei | Dateiziel | Beschreibung |
 | ---- | ---------------- | ----------- |
-| DATEINAME`.conf` | `/etc/httpd/conf.d/` | Eine standardmäßige Enterprise Linux-Installation verwendet diese Dateierweiterung und den Include-Ordner als Ort, um in httpd.conf deklarierte Einstellungen zu überschreiben und Ihnen das Hinzufügen zusätzlicher Funktionen auf globaler Ebene in Apache zu ermöglichen. |
-| DATEINAME`.vhost` | Staging: `/etc/httpd/conf.d/available_vhosts/`<br>Aktiv: `/etc/httpd/conf.d/enabled_vhosts/`<br/><br/><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b> .vhost-Dateien werden nicht in den Ordner &quot;enabled_vhosts&quot;kopiert, sondern verwenden Symlinks zu einem relativen Pfad zur Datei &quot;available_vhosts/\*.vhost&quot;.</div></u><br><br> | \*.vhost-Dateien (virtueller Host) sind `<VirtualHosts>`  -Einträge, um Hostnamen zu entsprechen und es Apache zu ermöglichen, den jeweiligen Domänen-Traffic mit verschiedenen Regeln zu behandeln. Aus dem `.vhost` Datei, andere Dateien wie `rewrites`, `whitelisting`, `etc` eingeschlossen. |
-| DATEINAME`_rewrite.rules` | `/etc/httpd/conf.d/rewrites/` | `*_rewrite.rules` Dateispeicher `mod_rewrite` Regeln, die explizit von einer `vhost` file |
-| DATEINAME`_whitelist.rules` | `/etc/httpd/conf.d/whitelists/` | `*_ipwhitelist.rules` -Dateien aus der `*.vhost` Dateien. Es enthält IP-Regex oder erlaubt Ablehnungsregeln, IP-Whitelisting zuzulassen. Wenn Sie die Anzeige eines virtuellen Hosts auf der Basis von IP-Adressen einschränken möchten, generieren Sie eine dieser Dateien und schließen sie aus Ihrem `*.vhost` file |
+| DATEINAME`.conf` | `/etc/httpd/conf.d/` | Eine standardmäßige Enterprise Linux-Installation verwendet diese Dateierweiterung und den include-Ordner, um in httpd.conf deklarierte Einstellungen außer Kraft zu setzen und Ihnen das Hinzufügen zusätzlicher Funktionen auf globaler Ebene in Apache zu ermöglichen. |
+| DATEINAME`.vhost` | Bereitgestellt: `/etc/httpd/conf.d/available_vhosts/`<br>Aktiv: `/etc/httpd/conf.d/enabled_vhosts/`<br/><br/><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b> .vhost-Dateien dürfen nicht in den Ordner „enabled_vhosts“ kopiert werden. Verwenden Sie stattdessen Symlinks zu einem relativen Pfad zur Datei „available_vhosts/\*.vhost“.</div></u><br><br> | \*.vhost-Dateien („vhost“ steht für virtueller Host) sind `<VirtualHosts>`-Einträge, um Host-Namen zu entsprechen und es Apache zu ermöglichen, den Traffic zu der jeweiligen Domain mit verschiedenen Regeln zu verarbeiten. Aus der `.vhost`-Datei werden andere Dateien wie `rewrites`, `whitelisting`, `etc` übernommen. |
+| DATEINAME`_rewrite.rules` | `/etc/httpd/conf.d/rewrites/` | `*_rewrite.rules`-Dateien speichern `mod_rewrite`-Regeln, die explizit von einer `vhost`-Datei übernommen und genutzt werden sollen. |
+| DATEINAME`_whitelist.rules` | `/etc/httpd/conf.d/whitelists/` | `*_ipwhitelist.rules`-Dateien werden aus den Dateien `*.vhost` einbezogen. Sie enthalten reguläre IP-Ausdrücke oder erlauben es Ablehnungsregeln, IP-Zulassungsauflistungen zuzulassen. Wenn Sie die Anzeige eines virtuellen Hosts auf der Basis von IP-Adressen einschränken möchten, generieren Sie eine dieser Dateien und schließen Sie sie über Ihre `*.vhost`-Datei ein. |
 
-## In &quot;conf.dispatcher.d/&quot;enthaltene Dateien
+## Dateien unter „conf.dispatcher.d/“
 
-| File | Dateiziel | Beschreibung |
+| Datei | Dateiziel | Beschreibung |
 | --- | --- | --- |
-| DATEINAME`.any` | `/etc/httpd/conf.dispatcher.d/` | Das AEM Dispatcher-Apache-Modul stellt die Einstellungen aus `*.any` Dateien. Die standardmäßige übergeordnete Include-Datei lautet `conf.dispatcher.d/dispatcher.any` |
-| DATEINAME`_farm.any` | Staging: `/etc/httpd/conf.dispatcher.d/available_farms/`<br>Aktiv: `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b> Diese Farm-Dateien sollen nicht in die `enabled_farms` Ordner, aber verwenden Sie `symlinks` zu einem relativen Pfad zum `available_farms/*_farm.any` file </div> <br/>`*_farm.any` -Dateien in `conf.dispatcher.d/dispatcher.any` -Datei. Diese übergeordneten Farm-Dateien dienen zur Steuerung des Modulverhaltens für jeden Renderer oder Website-Typ. Die Dateien werden im `available_farms` Verzeichnis und aktiviert mit einer `symlink` in `enabled_farms` Verzeichnis.  <br/>Sie werden automatisch anhand des Namens aus dem `dispatcher.any` -Datei.<br/><b>Grundlinie</b> Farm-Dateien beginnen mit `000_` , um sicherzustellen, dass sie zuerst geladen werden.<br><b>Benutzerdefiniert</b> Farm-Dateien sollten nach geladen werden, indem sie ihr Zahlenschema unter `100_` , um das richtige Einschlussverhalten sicherzustellen. |
-| DATEINAME`_filters.any` | `/etc/httpd/conf.dispatcher.d/filters/` | `*_filters.any` -Dateien aus der `conf.dispatcher.d/enabled_farms/*_farm.any` Dateien. Jede Farm verfügt über eine Reihe von Regeln, die ändern, welcher Traffic herausgefiltert werden soll, und nicht zu den Renderern. |
-| DATEINAME`_vhosts.any` | `/etc/httpd/conf.dispatcher.d/vhosts/` | `*_vhosts.any` -Dateien aus der `conf.dispatcher.d/enabled_farms/*_farm.any` Dateien. Diese Dateien sind eine Liste von Hostnamen oder URI-Pfaden, die durch eine Blob-Übereinstimmung abgeglichen werden, um zu bestimmen, welcher Renderer für die Bereitstellung dieser Anfrage verwendet werden soll |
-| DATEINAME`_cache.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_cache.any` -Dateien aus der `conf.dispatcher.d/enabled_farms/*_farm.any` Dateien. Diese Dateien geben an, welche Elemente zwischengespeichert werden und welche nicht |
-| DATEINAME`_invalidate_allowed.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_invalidate_allowed.any` -Dateien in `conf.dispatcher.d/enabled_farms/*_farm.any` Dateien. Sie geben an, welche IP-Adressen Flush- und Invalidierungsanfragen senden dürfen. |
-| DATEINAME`_clientheaders.any` | `/etc/httpd/conf.dispatcher.d/clientheaders/` | `*_clientheaders.any` -Dateien in `conf.dispatcher.d/enabled_farms/*_farm.any` Dateien. Sie geben an, welche Client-Header an jeden Renderer übergeben werden sollen. |
-| DATEINAME`_renders.any` | `/etc/httpd/conf.dispatcher.d/renders/` | `*_renders.any` -Dateien in `conf.dispatcher.d/enabled_farms/*_farm.any` Dateien. Sie geben IP-, Port- und Timeout-Einstellungen für jeden Renderer an. Ein ordnungsgemäßer Renderer kann ein LiveCycle-Server oder ein beliebiges AEM sein, von dem der Dispatcher die Anforderungen abrufen/Proxy bereitstellen kann |
+| DATEINAME`.any` | `/etc/httpd/conf.dispatcher.d/` | Das AEM Dispatcher-Apache-Modul bezieht seine Einstellungen aus `*.any`-Dateien. Die standardmäßige übergeordnete include-Datei ist `conf.dispatcher.d/dispatcher.any`. |
+| DATEINAME`_farm.any` | Bereitgestellt: `/etc/httpd/conf.dispatcher.d/available_farms/`<br>Aktiv: `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b> Diese Farm-Dateien dürfen nicht in den Ordner `enabled_farms` kopiert werden. Verwenden Sie stattdessen `symlinks` zu einem relativen Pfad zur Datei `available_farms/*_farm.any`. </div> <br/>`*_farm.any`-Dateien werden aus der Datei `conf.dispatcher.d/dispatcher.any` einbezogen. Diese übergeordneten Farm-Dateien dienen zur Steuerung des Modulverhaltens für jeden Render- oder Website-Typ. Dateien werden im Verzeichnis `available_farms` erstellt und mit einem `symlink` im Verzeichnis `enabled_farms` aktiviert. <br/>Sie werden automatisch anhand des Namens aus der Datei `dispatcher.any` einbezogen.<br/><b>Grundlegende</b> Farm-Dateien beginnen mit `000_`, um sicherzustellen, dass sie zuerst geladen werden.<br><b>Benutzerdefinierte</b> Farm-Dateien sollten danach geladen werden, indem ihr Zahlenschema bei `100_` anfängt, um das richtige Einschlussverhalten sicherzustellen. |
+| DATEINAME`_filters.any` | `/etc/httpd/conf.dispatcher.d/filters/` | `*_filters.any`-Dateien werden aus den Dateien `conf.dispatcher.d/enabled_farms/*_farm.any` einbezogen. Jede Farm enthält eine Reihe von Regeln, die ändern, welcher Traffic herausgefiltert werden und nicht zu den Renderern gelangen soll. |
+| DATEINAME`_vhosts.any` | `/etc/httpd/conf.dispatcher.d/vhosts/` | `*_vhosts.any`-Dateien werden aus den Dateien `conf.dispatcher.d/enabled_farms/*_farm.any` einbezogen. Bei diesen Dateien handelt es sich um eine Liste von Host-Namen oder URI-Pfaden, für die ein Blob-Abgleich durchgeführt wird, um zu bestimmen, welcher Renderer für diese Anfrage verwendet werden soll. |
+| DATEINAME`_cache.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_cache.any`-Dateien werden aus den Dateien `conf.dispatcher.d/enabled_farms/*_farm.any` einbezogen. Diese Dateien geben an, welche Elemente zwischengespeichert werden und welche nicht. |
+| DATEINAME`_invalidate_allowed.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_invalidate_allowed.any`-Dateien werden aus den Dateien `conf.dispatcher.d/enabled_farms/*_farm.any` einbezogen. Sie geben an, welche IP-Adressen Flush- und Invalidierungsanfragen senden dürfen. |
+| DATEINAME`_clientheaders.any` | `/etc/httpd/conf.dispatcher.d/clientheaders/` | `*_clientheaders.any`-Dateien werden aus den Dateien `conf.dispatcher.d/enabled_farms/*_farm.any` einbezogen. Sie geben an, welche Client-Header an jeden Renderer weitergegeben werden sollen. |
+| DATEINAME`_renders.any` | `/etc/httpd/conf.dispatcher.d/renders/` | `*_renders.any`-Dateien werden aus den Dateien `conf.dispatcher.d/enabled_farms/*_farm.any` einbezogen. Sie geben die IP-, Port- und Timeout-Einstellungen für jeden Renderer an. Ein ordnungsgemäßer Renderer kann ein LiveCycle-Server oder ein beliebiges AEM-System sein, von dem der Dispatcher die Anfragen abrufen/weiterleiten kann. |
 
 ## Vermeiden von Problemen
 
-Wenn Sie die Namenskonvention befolgen, können Sie einige ziemlich einfache Fehler vermeiden, die katastrophale Folgen haben können.  Wir werden einige Beispiele anführen.
+Wenn Sie sich an die Namenskonvention halten, können Sie einige ziemlich einfache Fehler vermeiden, die schwerwiegende Folgen haben können. Einige Beispiele werden wir hier anführen.
 
 ### Problembeispiel
 
-Als Site-Beispiel für ExampleCo wurden zwei Konfigurationsdateien von den Entwicklern der Dispatcher-Konfigurationen erstellt.
+Als Site-Beispiel für ExampleCo wurden zwei Konfigurationsdateien vom Entwickler-Team der Dispatcher-Konfigurationen erstellt.
 
 <b>/etc/httpd/conf.d/exampleco.conf</b>
 
@@ -81,67 +81,67 @@ RewriteRule ^/robots.txt$ /content/dam/exampleco/robots.txt [PT,L]
 
 #### `POTENTIAL DANGER - The file names are the same`
 
-Wenn die Variable `vhost` -Datei versehentlich in die `rewrites` und `rewrites file` in `vhosts` Ordner.  Sie wird anscheinend ordnungsgemäß vom Dateinamen bereitgestellt, Apache gibt jedoch eine *FEHLER* und das Problem wird nicht sofort sichtbar sein.
+Wenn die `vhost`-Datei versehentlich im `rewrites`-Ordner und `rewrites file` im `vhosts`-Ordner abgelegt wird, erfolgt die Bereitstellung anhand des Dateinamens scheinbar ordnungsgemäß. Apache gibt jedoch einen *FEHLER* aus, ohne dass das Problem sofort ersichtlich ist.
 
-<b>So wird dies normalerweise zu einem Problem</b>
+<b>Wie dies typischerweise zu einem Problem wird</b>
 
-Wenn die Variable `two files` heruntergeladen werden. `same` Standort, den sie `overwrite themselves` oder machen es ununterscheidbar, den Implementierungsprozess zu einem Albtraum zu machen.
+Wenn die `two files` an den `same` Speicherort heruntergeladen werden, können sie sich entweder `overwrite themselves` oder ununterscheidbar werden, wodurch der Bereitstellungsprozess zu einem wahren Albtraum wird.
 
-<b>Die Dateierweiterungen sind identisch und können automatisch eingefügt werden</b>
+<b>Die Dateierweiterungen sind identisch und werden im Normalfall automatisch eingeschlossen</b>
 
-Die Dateierweiterungen sind identisch und verwenden die automatisch enthaltene Erweiterung, die Apache verwendet `auto include` any `.conf` -Dateien in vielen der Standardordner enthalten.
+Die Dateierweiterungen sind identisch und verwenden eine automatisch eingeschlossene Erweiterung, durch die Apache alle `.conf`-Dateien in vielen der Standardordner `auto include` wird.
 
-<b>So wird dies normalerweise zu einem Problem</b>
+<b>Wie dies typischerweise zu einem Problem wird</b>
 
-Wenn die vhost-Datei mit der Erweiterung von `.conf` in `/etc/httpd/conf.d/` -Ordner wird versucht, ihn in den Speicher auf Apache zu laden, was normalerweise in Ordnung ist, aber wenn die Datei mit den Umschreibungsregeln mit der Erweiterung `.conf` wird in `/etc/httpd/conf.d/` -Ordner, wird er automatisch eingefügt und global angewendet, was zu verwirrenden und unerwünschten Ergebnissen führt.
+Wenn die vhost-Datei mit der Erweiterung `.conf` im Ordner `/etc/httpd/conf.d/` abgelegt wird, wird versucht, sie in den Speicher in Apache zu laden. Normalerweise ist das in Ordnung, aber wenn die Datei mit den Neuschreibungsregeln und der Erweiterung `.conf` im Ordner `/etc/httpd/conf.d/` abgelegt wird, wird sie automatisch eingeschlossen und global angewendet, was zu verwirrenden und unerwünschten Ergebnissen führt.
 
 ## Auflösung
 
-Benennen Sie die Dateien basierend auf dem, was sie tun, und verlassen Sie sie sicher aus dem Namespace für automatische Einschlussregeln.
+Benennen Sie die Dateien nach ihrem Zweck und schließen Sie sie sicher aus dem Namespace für automatische Einschlussregeln aus.
 
-Wenn es sich um einen virtuellen Host-Dateinamen handelt, wird er mit `.vhost` als Erweiterung.
+Wenn es sich um eine virtuelle Host-Datei handelt, benennen Sie sie mit `.vhost` als Erweiterung.
 
-Wenn es sich um eine Rewrite-Regeldatei handelt, benennen Sie sie mit Site`_rewrite.rules` als Suffix und Erweiterung. Diese Namenskonvention macht deutlich, für welche Site es sich handelt und dass es sich um einen Satz von Neuschreibungsregeln handelt.
+Wenn es sich um eine Datei mit Neuschreibungsregeln handelt, benennen Sie sie mit Site`_rewrite.rules` als Suffix und Erweiterung. Diese Namenskonvention macht deutlich, um welche Site es geht und dass es sich um einen Satz von Neuschreibungsregeln handelt.
 
-Wenn es sich um eine IP-Whitelist-Regeldatei handelt, geben Sie ihr eine Beschreibung`_whitelist.rules` als Suffix und Erweiterung. Diese Namenskonvention gibt eine Beschreibung dessen, wofür sie verwendet wird und dass es sich um einen Satz von IP-Übereinstimmungsregeln handelt.
+Wenn es sich um eine Datei mit IP-Zulassungslistenregeln handelt, benennen Sie sie mit Beschreibung`_whitelist.rules` als Suffix und Erweiterung. Diese Namenskonvention beschreibt, wofür die Datei verwendet wird und dass es sich um einen Satz von IP-Übereinstimmungsregeln handelt.
 
-Durch die Verwendung dieser Namenskonventionen werden Probleme vermieden, wenn eine Datei in ein Verzeichnis mit automatischem Include verschoben wird, zu dem sie nicht gehört.
+Durch Verwendung dieser Namenskonventionen werden Probleme vermieden, wenn eine Datei in ein Verzeichnis zum automatischen Einschließen verschoben wird, zu dem sie nicht gehört.
 
-Beispiel: Einfügen einer Datei mit dem Namen `.rules`, `.any`oder `.vhost` im Ordner &quot;auto-include&quot;von `/etc/httpd/conf.d/` keinen Einfluss haben.
+Beispielsweise hat das Einfügen einer mit `.rules`, `.any` oder `.vhost` benannten Datei in den Ordner unter `/etc/httpd/conf.d/` zum automatischen Einschließen keinerlei Wirkung.
 
-Wenn in einer Anfrage zur Änderung der Implementierung steht: &quot;Bitte stellen Sie exampleco_rewrite.rules auf Produktions-Dispatcher bereit&quot;, kann der Benutzer, der die Änderungen bereitstellt, bereits wissen, dass er keine neue Site hinzufügt, sondern lediglich die Neuschreibungsregeln aktualisiert, wie durch den Dateinamen angegeben.
+Wenn in einer Anfrage zur Bereitstellungsänderung angefordert wird, „exampleco_rewrite.rules“ für Produktions-Dispatcher bereitzustellen, kann die Person, die die Änderungen bereitstellt, bereits wissen, dass keine neue Site hinzufügt wird, sondern lediglich die Neuschreibungsregeln aktualisiert werden, wie durch den Dateinamen angegeben.
 
-### Reihenfolge einschließen
+### Include-Reihenfolge
 
-Bei der Erweiterung der Funktionalität und Konfigurationen in Apache Webserver auf Enterprise Linux haben Sie einige wichtige Include-Bestellungen, die Sie verstehen möchten
+Beim Erweitern der Funktionalität und Konfigurationen auf dem unter Enterprise Linux installierten Apache-Webserver gibt es eine bestimmte Include-Reihenfolge, an die Sie sich halten sollten.
 
 ### Grundlegende Apache-Includes
 
 ![](assets/explanation-config-files/Apache-Webserver-Baseline-Includes.png)
 
-Wie im Diagramm oben gezeigt, sucht die HTTPD-Binärdatei nur nach der Datei &quot;httpd.conf&quot;als Konfigurationsdatei.  Diese Datei enthält die folgenden Anweisungen:
+Wie in der Abbildung oben gezeigt, betrachtet die HTTPD-Binärdatei nur die der Datei „httpd.conf“ als Konfigurationsdatei. Diese Datei enthält die folgenden Anweisungen:
 
 ```
 Include conf.modules.d/*.conf 
 IncludeOptional conf.d/*.conf
 ```
 
-### AMS-oberste Ebene umfasst
+### AMS-Includes der obersten Ebene
 
 Als wir unseren Standard angewendet haben, haben wir einige zusätzliche Dateitypen und eigene Includes hinzugefügt.
 
-Im Folgenden finden Sie die Grundlinien-Verzeichnisse von AMS und die wichtigsten Includes
-![Die AMS-Grundlinie umfasst den Start mit einer Datei &quot;dispatcher_vhost.conf&quot;, die alle Dateien mit dem *.vhost aus dem Verzeichnis /etc/httpd/conf.d/enabled_vhosts/ enthält.  Elemente im Ordner /etc/httpd/conf.d/enabled_vhosts/ sind Symlinks zur tatsächlichen Konfigurationsdatei, die sich in /etc/httpd/conf.d/available_vhosts/ befindet.](assets/explanation-config-files/Apache-Webserver-AMS-Baseline-Includes.png "apache-webserver-AMS-baseline-include")
+Im Folgenden finden Sie die AMS-Basisverzeichnisse und Includes der obersten Ebene.
+![Die AMS-Basis umfasst den Start mit der Datei „dispatcher_vhost.conf“, die alle Dateien mit „*.vhost“ aus dem Verzeichnis „/etc/httpd/conf.d/enabled_vhosts/“ einbezieht. Elemente im Ordner „/etc/httpd/conf.d/enabled_vhosts/“ sind Symlinks zur tatsächlichen Konfigurationsdatei unter /etc/httpd/conf.d/available_vhosts./](assets/explanation-config-files/Apache-Webserver-AMS-Baseline-Includes.png "Apache-Webserver-AMS-Basis-Includes")
 
-Aufbauend auf der Apache-Grundlinie zeigen wir, wie AMS einige zusätzliche Ordner und Top-Level-Includes für `conf.d` Ordner sowie modulspezifische Verzeichnisse, die unter `/etc/httpd/conf.dispatcher.d/`
+Aufbauend auf der Apache-Basis zeigen wir, wie AMS einige zusätzliche Ordner und Includes der obersten Ebene für `conf.d`-Ordner sowie modulspezifische Verzeichnisse unter `/etc/httpd/conf.dispatcher.d/` erstellt hat.
 
-Wenn Apache geladen wird, wird das `/etc/httpd/conf.modules.d/02-dispatcher.conf` und diese Datei die Binärdatei enthält `/etc/httpd/modules/mod_dispatcher.so` in den Ausführungsstatus.
+Beim Laden von Apache wird `/etc/httpd/conf.modules.d/02-dispatcher.conf` eingebunden und diese Datei schließt die Binärdatei `/etc/httpd/modules/mod_dispatcher.so` in ihren Ausführungsstatus ein.
 
 ```
 LoadModule dispatcher_module modules /mod_dispatcher .so
 ```
 
-So verwenden Sie das Modul in `<VirtualHost />` legen wir eine Konfigurationsdatei in `/etc/httpd/conf.d/` benannt `dispatcher_vhost.conf` und in dieser Datei sehen Sie, wie Sie die grundlegenden Parameter einrichten, die für das Modul erforderlich sind, um zu funktionieren:
+Um das Modul in unserem `<VirtualHost />` zu verwenden, legen wir eine Konfigurationsdatei namens `dispatcher_vhost.conf` unter `/etc/httpd/conf.d/` ab. In dieser Datei sehen Sie, wie Sie die grundlegenden Parameter einrichten, die für das Modul erforderlich sind:
 
 ```
 <IfModule disp_apache2.c> 
@@ -150,9 +150,9 @@ So verwenden Sie das Modul in `<VirtualHost />` legen wir eine Konfigurationsd
 </IfModule>
 ```
 
-Wie Sie oben sehen können, umfasst dies die oberste Ebene `dispatcher.any` -Datei für unser Dispatcher-Modul verwenden, um die Konfigurationsdateien aus dem `/etc/httpd/conf.dispatcher.d/dispatcher.any`
+Wie oben gezeigt, umfasst dies die `dispatcher.any`-Datei der obersten Ebene, damit unser Dispatcher-Modul die zugehörigen Konfigurationsdateien aus `/etc/httpd/conf.dispatcher.d/dispatcher.any` abrufen kann.
 
-Beachten Sie den Inhalt dieser Datei:
+Achten Sie auf den Inhalt dieser Datei:
 
 ```
 /farms { 
@@ -160,15 +160,15 @@ Beachten Sie den Inhalt dieser Datei:
 }
 ```
 
-Die oberste Ebene `dispatcher.any` enthält alle aktivierten Farm-Dateien, die in `/etc/httpd/conf.dispatcher.d/enabled_farms/` mit dem Dateinamen von `FILENAME_farm.any` die unserer standardmäßigen Namenskonvention folgt.
+Die `dispatcher.any`-Datei der obersten Ebene enthält alle aktivierten Farm-Dateien unter `/etc/httpd/conf.dispatcher.d/enabled_farms/`. Der Dateiname `FILENAME_farm.any` folgt dabei unserer standardmäßigen Namenskonvention.
 
-Später im `dispatcher_vhost.conf` -Datei, die zuvor erwähnt wurde, führen wir auch eine Include-Anweisung aus, um jede aktivierte virtuelle Host-Datei zu aktivieren, die in `/etc/httpd/conf.d/enabled_vhosts/` mit dem Dateinamen von `FILENAME.vhost` die unserer standardmäßigen Namenskonvention folgt.
+An späterer Stelle der zuvor erwähnten `dispatcher_vhost.conf`-Datei führen wir auch eine include-Anweisung aus, um jede aktivierte virtuelle Host-Datei unter `/etc/httpd/conf.d/enabled_vhosts/` zu aktivieren. Der Dateiname `FILENAME.vhost` folgt dabei unserer standardmäßigen Namenskonvention.
 
 ```
 IncludeOptional /etc/httpd/conf.d/enabled_vhosts/*.vhost
 ```
 
-In jeder unserer .vhost-Dateien werden Sie feststellen, dass das Dispatcher-Modul als Standard-Datei-Handler für ein Verzeichnis initialisiert wird.  Im Folgenden finden Sie eine Beispieldatei mit der Syntax:
+In jeder unserer .vhost-Dateien werden Sie feststellen, dass das Dispatcher-Modul als Standard-Datei-Handler für ein Verzeichnis initialisiert wird.  Im Folgenden finden Sie eine .vhost-Beispieldatei, um die Syntax zu illustrieren:
 
 ```
 <VirtualHost *:80> 
@@ -185,17 +185,17 @@ In jeder unserer .vhost-Dateien werden Sie feststellen, dass das Dispatcher-Modu
 </VirtualHost>
 ```
 
-Nachdem die oberste Ebene aufgelöst wurde, verfügen sie über weitere Untereinschlüsse, die erwähnt werden sollten.  Hier finden Sie ein Diagramm auf hoher Ebene darüber, wie Farb- und Vhost-Dateien andere Unterelemente enthalten
+Nachdem Includes der obersten Ebene aufgelöst wurden, verfügen diese über weitere erwähnenswerte Sub-Includes.  Hier finden Sie eine allgemeine Darstellung dazu, wie Farmen und vhost-Dateien andere Unterelemente enthalten.
 
-### AMS Virtual Host enthält
+### AMS-vhost-Includes
 
-![Dieses Bild zeigt, wie eine Vhost-Datei Dateien aus Variablen, Whitelists und Neuschreibungen von Ordnern enthält](assets/explanation-config-files/Apache-Webserver-AMS-Vhost-Includes.png "apache-webserver-AMS-vhost-include")
+![Diese Abbildung zeigt, wie eine .vhost-Datei Dateien aus Variablen, Zulassungslisten und rewrites-Ordnern enthält.](assets/explanation-config-files/Apache-Webserver-AMS-Vhost-Includes.png "Apache-Webserver-AMS-vhost-Includes")
 
-Wenn `.vhost` Dateien aus `/etc/httpd/conf.d/availabled_vhosts/` -Verzeichnis verknüpfen mit `/etc/httpd/conf.d/enabled_vhosts/` -Verzeichnis, das in der laufenden Konfiguration verwendet wird.
+Wenn `.vhost`-Dateien aus dem Verzeichnis `/etc/httpd/conf.d/availabled_vhosts/` per Symlink mit dem Verzeichnis `/etc/httpd/conf.d/enabled_vhosts/` verknüpft werden, werden sie in der aktiven Konfiguration verwendet.
 
-Die `.vhost` -Dateien enthalten Untereinschlüsse basierend auf gemeinsamen Elementen, die wir gefunden haben.  Dinge wie Variablen, Whitelists und Neuschreibungsregeln.
+Die `.vhost`-Dateien enthalten Sub-Includes basierend auf allgemeinen von uns gefundenen Elementen,  z. B. Variablen, Zulassungslisten und Neuschreibungsregeln.
 
-Die `.vhost` enthält Include-Anweisungen für jede Datei, je nachdem, wo sie in die Datei `.vhost` -Datei.  Im Folgenden finden Sie eine Beispielsyntax eines `.vhost` als Referenz:
+Die `.vhost`-Datei enthält include-Anweisungen für jede Datei, und zwar darauf basierend, wo sie in der `.vhost`-Datei eingeschlossen werden müssen.  Im Folgenden finden Sie die Beispielsyntax für eine `.vhost`-Datei, die eine gute Referenz ist:
 
 ```
 Include /etc/httpd/conf.d/variables/weretail.vars 
@@ -218,7 +218,7 @@ Include /etc/httpd/conf.d/variables/weretail.vars
 </VirtualHost>
 ```
 
-Wie Sie im obigen Beispiel sehen können, gibt es einen Einschluss für die Variablen, die in dieser Konfigurationsdatei benötigt werden und später verwendet werden.
+Wie im obigen Beispiel zu sehen, gibt es einen Include für die Variablen, die in dieser Konfigurationsdatei benötigt und später verwendet werden.
 
 Innerhalb der Datei `/etc/httpd/conf.d/variables/weretail.vars` können wir sehen, welche Variablen definiert sind:
 
@@ -226,7 +226,7 @@ Innerhalb der Datei `/etc/httpd/conf.d/variables/weretail.vars` können wir se
 Define MAIN_DOMAIN dev.weretail.com
 ```
 
-Sie können auch eine Zeile sehen, die eine Liste von `_whitelist.rules` -Dateien, die einschränken, wer diesen Inhalt basierend auf verschiedenen Whitelist-Kriterien anzeigen kann.  Betrachten wir den Inhalt einer der Whitelist-Dateien `/etc/httpd/conf.d/whitelists/weretail_mainoffice_whitelist.rules`:
+Es gibt auch eine Zeile, die eine Liste von `_whitelist.rules`-Dateien umfasst, die einschränken, wer diesen Inhalt basierend auf verschiedenen Zulassungslisten-Kriterien anzeigen kann. Sehen wir uns den Inhalt einer der Zulassungslisten-Dateien unter `/etc/httpd/conf.d/whitelists/weretail_mainoffice_whitelist.rules` an:
 
 ```
 <RequireAny> 
@@ -234,7 +234,7 @@ Sie können auch eine Zeile sehen, die eine Liste von `_whitelist.rules` -Dateie
 </RequireAny>
 ```
 
-Sie können auch eine Zeile sehen, die einen Satz von Neuschreibungsregeln enthält.  Sehen wir uns den Inhalt der `weretail_rewrite.rules` Datei:
+Es gibt auch eine Zeile, die verschiedene Neuschreibungsregeln enthält.  Sehen wir uns den Inhalt der `weretail_rewrite.rules`-Datei an:
 
 ```
 RewriteRule ^/robots.txt$ /content/dam/weretail/robots.txt [NC,PT] 
@@ -245,15 +245,15 @@ RewriteRule ^/sitemap.xml$ /content/weretail/general/sitemap.xml [NC,PT]
 RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 ```
 
-### AMS Farm Includes
+### AMS-Farm-Includes
 
-![<FILENAME>_farms.any enthält untergeordnete .any-Dateien, um eine Farm-Konfiguration abzuschließen.  In diesem Bild können Sie sehen, dass eine Farm alle Dateien der obersten Ebene enthält, die zwischengespeichert sind, Clientheaders, Filter, Renderer und vhosts .any-Dateien](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-webserver-AMS-Farm-Includes")
+![<FILENAME>„_farms.any“ enthält untergeordnete .any-Dateien, um eine Farm-Konfiguration abzuschließen.  In diesem Bild sehen Sie, dass eine Farm alle Dateien der obersten Ebene für Cache, Client-Header, Filter, Renderer und vhost-ANY-Dateien enthält.](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Include")
 
-Wenn beliebige DATEINAME_farm.any-Dateien aus `/etc/httpd/conf.dispatcher.d/available_farms/` -Verzeichnis verknüpfen mit `/etc/httpd/conf.dispatcher.d/enabled_farms/` -Verzeichnis, das in der laufenden Konfiguration verwendet wird.
+Wenn beliebige DATEINAME_farm.any-Dateien aus dem Verzeichnis `/etc/httpd/conf.dispatcher.d/available_farms/` per Symlink mit dem Verzeichnis `/etc/httpd/conf.dispatcher.d/enabled_farms/` verknüpft werden, werden sie in der aktiven Konfiguration verwendet.
 
-Die Farm-Dateien enthalten Untereinschlüsse, die auf [Abschnitte der obersten Ebene der Farm](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#defining-farms-farms) wie Cache, Clientheaders, Filter, Renderer und Hosts.
+Die Farm-Dateien enthalten Sub-Includes, die auf [Farm-Abschnitten der obersten Ebene](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#defining-farms-farms) wie Cache, Client-Headern, Filtern, Renderern und Hosts basieren.
 
-Die `FILENAME_farm.any` -Dateien enthalten -Anweisungen für jede Datei, je nachdem, wo sie in die Farm-Datei aufgenommen werden müssen.  Im Folgenden finden Sie eine Beispielsyntax eines `FILENAME_farm.any` als Referenz:
+Die `FILENAME_farm.any`-Dateien enthalten include-Anweisungen für jede Datei, und zwar basierend darauf, wo sie in die Farm-Datei eingeschlossen werden müssen. Im Folgenden finden Sie die Beispielsyntax einer `FILENAME_farm.any`-Datei, die eine gute Referenz ist:
 
 ```
 /weretailfarm {   
@@ -290,9 +290,9 @@ Die `FILENAME_farm.any` -Dateien enthalten -Anweisungen für jede Datei, je nach
 }
 ```
 
-Wie Sie sehen können, verwenden Sie stattdessen eine Include-Anweisung, anstatt die gesamte benötigte Syntax für die Weretail-Farm zu verwenden.
+Wie zu sehen ist, verwendet jeder Abschnitt der weretail-Farm eine include-Anweisung und weist nicht die gesamte benötigte Syntax auf.
 
-Sehen wir uns die Syntax einiger dieser Includes an, um zu erfahren, wie die einzelnen Unter-Includes aussehen würden.
+Sehen wir uns die Syntax einiger dieser Includes an, um zu erfahren, wie die einzelnen Sub-Includes aussehen würden.
 
 `/etc/httpd/conf.dispatcher.d/vhosts/weretail_publish_vhosts.any`:
 
@@ -302,9 +302,9 @@ Sehen wir uns die Syntax einiger dieser Includes an, um zu erfahren, wie die ein
 "www.weretail.comf"
 ```
 
-Wie Sie sehen, ist es eine neue, durch Zeilen getrennte Liste von Domänennamen, die von dieser Farm über die anderen gerendert werden sollen.
+Zu sehen ist hier eine durch neue Zeilen getrennte Liste von Domain-Namen, die von dieser Farm über die anderen gerendert werden sollen.
 
-Als Nächstes sehen wir uns die `/etc/httpd/conf.dispatcher.d/filters/weretail_search_filters.any`:
+Als Nächstes sehen wir uns `/etc/httpd/conf.dispatcher.d/filters/weretail_search_filters.any` an:
 
 ```
 /400 { /type "allow" /method "GET" /path "/bin/weretail/lists/*" /extension "json" } 
