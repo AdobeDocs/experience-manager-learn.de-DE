@@ -1,6 +1,6 @@
 ---
 title: Hinzufügen benutzerdefinierter Spalten
-description: Fügen Sie benutzerdefinierte Spalten hinzu, um zusätzliche Daten des Workflows anzuzeigen
+description: Hinzufügen benutzerdefinierter Spalten, um zusätzliche Daten des Workflows anzuzeigen
 feature: Adaptive Forms
 topics: development
 audience: developer
@@ -13,25 +13,25 @@ role: Developer
 level: Experienced
 exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
 source-git-commit: bd41cd9d64253413e793479b5ba900c8e01c0eab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '311'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
 # Hinzufügen benutzerdefinierter Spalten
 
-Um Workflow-Daten im Posteingang anzuzeigen, müssen wir Variablen im Workflow definieren und ausfüllen. Der Wert der Variablen muss festgelegt werden, bevor eine Aufgabe einem Benutzer zugewiesen wird. Um Ihnen einen Vorsprung zu verschaffen, haben wir einen Beispiel-Workflow bereitgestellt, der für die Bereitstellung auf Ihrem AEM-Server bereit ist.
+Um Workflow-Daten im Posteingang anzuzeigen, müssen wir Variablen im Workflow definieren und befüllen. Der Wert der Variablen muss festgelegt werden, bevor eine Aufgabe einer Benutzerin oder einem Benutzer zugewiesen wird. Damit Sie sofort loslegen können, haben wir Ihnen einen Beispiel-Workflow zur Verfügung gestellt, der direkt auf Ihrem AEM-Server bereitgestellt werden kann.
 
-* [Bei AEM anmelden](http://localhost:4502/crx/de/index.jsp)
-* [Importieren des Überprüfungs-Workflows](assets/review-workflow.zip)
-* [Workflow überprüfen](http://localhost:4502/editor.html/conf/global/settings/workflow/models/reviewworkflow.html)
+* [Melden Sie sich bei AEM an.](http://localhost:4502/crx/de/index.jsp)
+* [Importieren Sie den Workflow für die Überprüfung.](assets/review-workflow.zip)
+* [Überprüfen Sie den Workflow.](http://localhost:4502/editor.html/conf/global/settings/workflow/models/reviewworkflow.html)
 
-Für diesen Workflow sind zwei Variablen definiert (isVerheiratet und Einkommen). Die Werte werden mithilfe der Komponente set variable festgelegt. Diese Variablen werden als Spalten bereitgestellt, die AEM Posteingang hinzugefügt werden können
+Für diesen Workflow sind zwei Variablen definiert („isMarried“ und „income“). Die zugehörigen Werte werden mithilfe der Komponente zum Festlegen einer Variablen angegeben. Diese Variablen werden als Spalten bereitgestellt, die dem AEM-Posteingang hinzugefügt werden können.
 
-## Dienst erstellen
+## Erstellen eines Dienstes
 
-Für jede Spalte, die wir in unserem Posteingang anzeigen müssen, müssten wir einen Dienst schreiben. Mit dem folgenden Dienst können wir eine Spalte hinzufügen, um den Wert der Variablen isMarry anzuzeigen
+Für jede Spalte, die im Posteingang angezeigt werden soll, müssen wir einen Dienst erstellen. Mit dem folgenden Dienst können wir eine Spalte hinzufügen, um den Wert der Variablen „isMarried“ anzuzeigen.
 
 ```java
 import com.adobe.cq.inbox.ui.column.Column;
@@ -75,27 +75,27 @@ return isMarried(inboxItem);
 
 >[!NOTE]
 >
->Sie müssen AEM 6.5.5 Uber.jar in Ihr Projekt einbeziehen, damit der obige Code funktioniert
+>Sie müssen „AEM 6.5.5 Uber.jar“ in Ihr Projekt einbeziehen, damit der obige Code funktioniert.
 
 ![uber-jar](assets/uber-jar.PNG)
 
 ## Testen auf Ihrem Server
 
-* [Melden Sie sich bei AEM Web Console an](http://localhost:4502/system/console/bundles)
-* [Posteingang-Anpassungs-Bundle bereitstellen und starten](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
-* [Posteingang öffnen](http://localhost:4502/aem/inbox)
-* Öffnen Sie Admin Control durch Klicken auf _Listenansicht_ Symbol neben _Erstellen_ button
-* Spalte &quot;Verheiratet&quot;zum Posteingang hinzufügen und Ihre Änderungen speichern
-* [Navigieren Sie zur Benutzeroberfläche &quot;FormsAndDocuments&quot;](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* [Importieren des Beispielformulars](assets/snap-form.zip) durch Auswahl _Datei-Upload_ von _Erstellen_ Menü
-* [Formularvorschau](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
-* Wählen Sie die _Familienstand_ und senden Sie das Formular
-   [Posteingang anzeigen](http://localhost:4502/aem/inbox)
+* [Melden Sie sich bei der AEM-Web-Konsole an.](http://localhost:4502/system/console/bundles)
+* [Stellen Sie das Anpassungspaket für den Posteingang bereit und starten Sie es.](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
+* [Öffnen Sie Ihren Posteingang](http://localhost:4502/aem/inbox)
+* Öffnen Sie die Admin-Steuerung durch Klicken auf das Symbol _Listenansicht_ neben der Schaltfläche _Erstellen_.
+* Fügen Sie die Spalte „Verheiratet“ zum Posteingang hinzu und speichern Sie Ihre Änderungen.
+* [Navigieren Sie zur Benutzeroberfläche „FormsAndDocuments“.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* [Importieren Sie das Beispielformular](assets/snap-form.zip), indem Sie im Menü _Erstellen_ die Option _Datei hochladen_ auswählen.
+* [Vorschau des Formulars](http://localhost:4502/content/dam/formsanddocuments/snapform/jcr:content?wcmmode=disabled)
+* Wählen Sie den _Familienstand_ aus und übermitteln Sie das Formular.
+  [Posteingang anzeigen](http://localhost:4502/aem/inbox)
 
-Durch das Senden des Formulars wird der Workflow Trigger und eine Aufgabe wird &quot;admin&quot;-Benutzern zugewiesen. In diesem Screenshot sollte unter der Spalte Verheiratet ein Wert angezeigt werden
+Durch Übermittlung des Formulars wird der Workflow ausgelöst und der Admin-Benutzerin bzw. dem Admin-Benutzer eine Aufgabe zugewiesen. In diesem Screenshot sollte unter der Spalte „Verheiratet“ ein Wert angezeigt werden.
 
-![verheiratete Spalte](assets/married-column.PNG)
+![Spalte „Verheiratet“](assets/married-column.PNG)
 
 ## Nächste Schritte
 
-[Spalte &quot;Verheiratet anzeigen&quot;](./use-sightly-template.md)
+[Anzeigen der Spalte „Verheiratet“](./use-sightly-template.md)
