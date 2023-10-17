@@ -1,6 +1,6 @@
 ---
 title: Nachverfolgen angeklickter Komponenten mit Adobe Analytics
-description: Verwenden Sie die ereignisbasierte Adobe Client Data-Schicht, um Klicks auf bestimmte Komponenten auf einer Adobe Experience Manager-Site zu verfolgen. Erfahren Sie, wie Sie mit Tag-Regeln diese Ereignisse überwachen und Daten mithilfe eines Verfolgungslink-Beacons an eine Adobe Analytics Report Suite senden können.
+description: Verwenden Sie die ereignisbasierte Adobe Client-Datenschicht, um Klicks auf bestimmte Komponenten einer Adobe Experience Manager-Site zu verfolgen. Erfahren Sie, wie Sie mit Tag-Regeln diese Ereignisse überwachen und Daten mithilfe eines Verfolgungs-Link-Beacons an eine Adobe Analytics Report Suite senden können.
 version: Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
@@ -11,9 +11,9 @@ thumbnail: KT-6296.jpg
 badgeIntegration: label="Integration" type="positive"
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1886'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
@@ -21,36 +21,36 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Siehe Folgendes [Dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) für eine konsolidierte Übersicht über die terminologischen Änderungen.
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation verschiedene terminologische Änderungen durchgeführt. Eine konsolidierte Übersicht über die terminologischen Änderungen finden Sie in diesem [Dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=de).
 
-Ereignisgesteuert verwenden [Adobe der Client-Datenschicht mit AEM Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de) , um Klicks auf bestimmte Komponenten auf einer Adobe Experience Manager-Site zu verfolgen. Erfahren Sie, wie Sie in der Tag-Eigenschaft Regeln verwenden, um auf Klick-Ereignisse zu überwachen, nach Komponenten zu filtern und die Daten mit einem Verfolgungslink-Beacon an eine Adobe Analytics zu senden.
+Verwenden Sie die ereignisbasierte [Adobe Client-Datenschicht mit den AEM-Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de), um Klicks auf bestimmte Komponenten auf einer Adobe Experience Manager-Site zu verfolgen. Erfahren Sie, wie Sie Regeln in der Tag-Eigenschaft verwenden, um auf Klick-Ereignisse zu warten, nach Komponenten zu filtern und die Daten mit einem Verfolgungs-Link-Beacon an Adobe Analytics zu senden.
 
 ## Was Sie erstellen werden {#what-build}
 
-Das WKND-Marketing-Team möchte wissen, welches `Call to Action (CTA)` -Schaltflächen funktionieren am besten auf der Startseite. In diesem Tutorial fügen wir eine Regel zur Tag-Eigenschaft hinzu, die auf die `cmp:click` Ereignisse aus **Teaser** und **Schaltfläche** Komponenten. Senden Sie dann die Komponenten-ID und ein neues Ereignis zusammen mit dem Verfolgungslink-Beacon an Adobe Analytics.
+Das WKND-Marketing-Team möchte wissen, welche `Call to Action (CTA)`-Schaltflächen auf der Startseite am besten funktionieren. In diesem Tutorial fügen wir der Tag-Eigenschaft eine Regel hinzu, die auf die `cmp:click`-Ereignisse der Komponenten **Teaser** und **Schaltfläche** wartet. Danach senden Sie die Komponenten-ID und ein neues Ereignis zusammen mit dem Verfolgungslink-Beacon an Adobe Analytics.
 
 ![Was Sie für Tracking-Klicks erstellen werden](assets/track-clicked-component/final-click-tracking-cta-analytics.png)
 
 ### Ziele {#objective}
 
-1. Erstellen Sie eine ereignisgesteuerte Regel in der Tag-Eigenschaft, die die `cmp:click` -Ereignis.
+1. Erstellen Sie eine ereignisgesteuerte Regel in der Tag-Eigenschaft, die das Ereignis `cmp:click` erfasst.
 1. Filtern Sie die verschiedenen Ereignisse nach Komponenten-Ressourcentyp.
 1. Legen Sie die Komponenten-ID fest und senden Sie ein Ereignis mit dem Verfolgungslink-Beacon an Adobe Analytics.
 
 ## Voraussetzungen
 
-Dieses Tutorial stellt eine Fortsetzung von [Erfassen von Seitendaten mit Adobe Analytics](./collect-data-analytics.md) und geht davon aus, dass Sie über Folgendes verfügen:
+Dieses Tutorial ist eine Fortsetzung von [Erfassen von Seitendaten mit Adobe Analytics](./collect-data-analytics.md) und setzt voraus, dass Sie über Folgendes verfügen:
 
-* A **Tag-Eigenschaft** mit dem [Adobe Analytics-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=de) enabled
-* **Adobe Analytics** Report Suite-ID und Tracking-Server testen/entwickeln. Weitere Informationen finden Sie in der folgenden Dokumentation für [Erstellen einer Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html).
-* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) Browsererweiterung , die mit Ihrer Tag-Eigenschaft konfiguriert wurde, die auf geladen wird [WKND-Site](https://wknd.site/us/en.html) oder einer AEM Site mit aktivierter Adobe-Datenschicht.
+* Eine **Tag-Eigenschaft** mit aktivierter [Adobe Analytics-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=de)
+* **Adobe Analytics** test/dev-Report Suite-ID und Tracking-Server. Weitere Informationen zum [Erstellen einer Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html?lang=de) finden Sie in der folgenden Dokumentation.
+* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=de)-Browser-Erweiterung, konfiguriert mit Ihrer Tag-Eigenschaft, die auf der [WKND-Site](https://wknd.site/us/en.html) oder einer AEM-Site mit aktivierter Adobe-Datenschicht geladen ist.
 
-## Inspect des Schaltflächen- und Teaser-Schemas
+## Überprüfen des Schaltflächen- und Teaser-Schemas
 
-Bevor Sie Regeln in der Tag-Eigenschaft erstellen, sollten Sie die [Schema für Schaltfläche und Teaser](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item) und überprüfen Sie sie in der Datenschichtimplementierung.
+Bevor Sie Regeln in der Tag-Eigenschaft erstellen, ist es sinnvoll, das [Schema für die Schaltfläche und den Teaser](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de#item) zu überprüfen und sie in der Implementierung der Datenschicht zu untersuchen.
 
-1. Navigieren Sie zu [WKND-Homepage](https://wknd.site/us/en.html)
-1. Öffnen Sie die Entwicklertools des Browsers und navigieren Sie zum **Konsole**. Führen Sie den folgenden Befehl aus:
+1. Navigieren Sie zur [WKND-Startseite](https://wknd.site/us/en.html)
+1. Öffnen Sie die Entwickler-Tools des Browsers und navigieren Sie zur **Konsole**. Führen Sie den folgenden Befehl aus:
 
    ```js
    adobeDataLayer.getState();
@@ -58,9 +58,9 @@ Bevor Sie Regeln in der Tag-Eigenschaft erstellen, sollten Sie die [Schema für 
 
    Der obige Code gibt den aktuellen Status der Adobe Client-Datenschicht zurück.
 
-   ![Status der Datenschicht über die Browser-Konsole](assets/track-clicked-component/adobe-data-layer-state-browser.png)
+   ![Datenschichtstatus über die Browser-Konsole](assets/track-clicked-component/adobe-data-layer-state-browser.png)
 
-1. Erweitern Sie die Antwort und suchen Sie Einträge mit dem Präfix `button-` und  `teaser-xyz-cta` eingeben. Es sollte ein Datenschema wie das folgende angezeigt werden:
+1. Erweitern Sie die Antwort und suchen Sie nach Einträgen mit dem Präfix `button-` und dem Eintrag `teaser-xyz-cta`. Es sollte ein Datenschema wie das folgende angezeigt werden:
 
    Schaltflächenschema:
 
@@ -83,21 +83,21 @@ Bevor Sie Regeln in der Tag-Eigenschaft erstellen, sollten Sie die [Schema für 
        xdm:linkURL: "/content/wknd/us/en/magazine/san-diego-surf.html"
    ```
 
-   Die obigen Datendetails basieren auf der Variablen [Komponenten-/Container-Element-Schema](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item). Die neue Tag-Regel verwendet dieses Schema.
+   Die obigen Datendetails basieren auf der Variablen [Komponenten-/Container-Element-Schema](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de#item). Die neue Tag-Regel verwendet dieses Schema.
 
 ## Erstellen einer auf CTA geklickten Regel
 
-Die Adobe Client-Datenschicht ist eine **event** gesteuerte Datenschicht. Wenn auf eine Kernkomponente geklickt wird, wird ein `cmp:click` -Ereignis über die Datenschicht gesendet. So lauschen Sie auf `cmp:click` -Ereignis erstellen, lassen Sie uns eine Regel erstellen.
+Die Adobe Client-Datenschicht ist eine **ereignisgesteuerte** Datenschicht. Jedes Mal, wenn eine Kernkomponente angeklickt wird, wird über die Datenschicht ein `cmp:click`-Ereignis ausgelöst. Um auf das `cmp:click`-Ereignis zu warten, erstellen wir eine Regel.
 
-1. Navigieren Sie zur Experience Platform und zur Tag-Eigenschaft, die mit der AEM Site integriert ist.
-1. Navigieren Sie zum **Regeln** in der Benutzeroberfläche &quot;Tag-Eigenschaft&quot;auf **Regel hinzufügen**.
-1. Benennen Sie die Regel. **CTA angeklickt**.
-1. Klicken **Veranstaltungen** > **Hinzufügen** , um **Ereigniskonfiguration** Assistent.
-1. Für **Ereignistyp** Feld, wählen Sie **Benutzerspezifischer Code**.
+1. Navigieren Sie zu Experience Platform und zur Tag-Eigenschaft, die mit der AEM-Site integriert ist.
+1. Navigieren Sie zum Abschnitt **Regeln** in der Benutzeroberfläche der Tag-Eigenschaften und klicken Sie dann auf **Regel hinzufügen**.
+1. Benennen Sie die Regel **CTA-Geklickt**.
+1. Klicken Sie auf **Events** > **Hinzufügen**, um den Assistenten **Event-Konfiguration** zu öffnen.
+1. Für das Feld **Ereignistyp** wählen Sie **Benutzerdefinierter Code**.
 
-   ![Benennen Sie die Regel CTA Angeklickt und fügen Sie das benutzerspezifische Code-Ereignis hinzu.](assets/track-clicked-component/custom-code-event.png)
+   ![Benennen Sie die Regel „CTA-Geklickt“ und fügen Sie das benutzerspezifische Code-Ereignis hinzu.](assets/track-clicked-component/custom-code-event.png)
 
-1. Klicken **Editor öffnen** Geben Sie im Hauptbereich das folgende Codefragment ein:
+1. Klicken Sie im Hauptbedienfeld auf **Editor öffnen** und geben Sie das folgenden Codesnippet ein:
 
    ```js
    var componentClickedHandler = function(evt) {
@@ -128,17 +128,17 @@ Die Adobe Client-Datenschicht ist eine **event** gesteuerte Datenschicht. Wenn a
    });
    ```
 
-   Das obige Codefragment fügt einen Ereignis-Listener hinzu von [Pushen einer Funktion](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function) in die Datenschicht ein. Immer `cmp:click` -Ereignis ausgelöst wird, wird die `componentClickedHandler` aufgerufen. In dieser Funktion werden einige Integritätsprüfungen hinzugefügt und eine neue `event` -Objekt wird mit der neuesten [Status der Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki#getstate) für die Komponente, die das Ereignis ausgelöst hat.
+   Das obige Codesnippet fügt einen Ereignis-Listener hinzu, indem es [eine Funktion](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function) in die Datenschicht schiebt. Jedes Mal, wenn das `cmp:click`-Ereignis ausgelöst wird, wird die Funktion `componentClickedHandler` aufgerufen. In dieser Funktion werden einige Integritätsprüfungen hinzugefügt und ein neues `event`-Objekt mit dem letzten [Zustand der Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki#getstate) für die Komponente, die das Ereignis ausgelöst hat, konstruiert.
 
-   Schließlich `trigger(event)` aufgerufen. Die `trigger()` -Funktion ist ein reservierter Name in der Tag-Eigenschaft und **Trigger** die Regel. Die `event` -Objekt wird als Parameter übergeben, der wiederum durch einen anderen reservierten Namen in der Tag-Eigenschaft verfügbar gemacht wird. Datenelemente in der Tag-Eigenschaft können jetzt mithilfe eines Code-Snippets wie `event.component['someKey']`.
+   Schließlich wird die Funktion `trigger(event)` aufgerufen. Die `trigger()`-Funktion ist ein reservierter Name in der Tag-Eigenschaft und **löst die Regel aus**. Das `event`-Objekt wird als Parameter übergeben, der wiederum durch einen anderen reservierten Namen in der Tag-Eigenschaft angezeigt wird. Datenelemente in der Tag-Eigenschaft können jetzt auf verschiedene Eigenschaften verweisen, indem sie Codesnippets wie `event.component['someKey']` verwenden.
 
 1. Speichern Sie die Änderungen.
-1. Nächste unter **Aktionen** click **Hinzufügen** , um **Aktionskonfiguration** Assistent.
-1. Für **Aktionstyp** Feld, wählen Sie **Benutzerspezifischer Code**.
+1. Klicken Sie anschließend unter **Aktionen** auf **Hinzufügen**, um den Assistenten **Aktionskonfiguration** zu öffnen.
+1. Für das Feld **Aktionstyp** wählen Sie **Benutzerdefinierter Code**.
 
-   ![Aktionstyp für benutzerspezifischen Code](assets/track-clicked-component/action-custom-code.png)
+   ![Aktionstyp für benutzerdefinierten Code](assets/track-clicked-component/action-custom-code.png)
 
-1. Klicken **Editor öffnen** Geben Sie im Hauptbereich das folgende Codefragment ein:
+1. Klicken Sie im Hauptbedienfeld auf **Editor öffnen** und geben Sie das folgende Codesnippet ein:
 
    ```js
    console.debug("Component Clicked");
@@ -147,38 +147,38 @@ Die Adobe Client-Datenschicht ist eine **event** gesteuerte Datenschicht. Wenn a
    console.debug("Component text: " + event.component['dc:title']);
    ```
 
-   Die `event` -Objekt wird von der `trigger()` -Methode, die im benutzerspezifischen Ereignis aufgerufen wird. Die `component` -Objekt ist der aktuelle Status der aus der Datenschicht abgeleiteten Komponente `getState()` -Methode und ist das Element, das den Klick ausgelöst hat.
+   Das `event`-Objekt wird von der `trigger()`-Methode übergeben, die in dem benutzerdefinierten Ereignis aufgerufen wird. Das `component`-Objekt ist der aktuelle Zustand der Komponente, die von der `getState()`-Methode der Datenschicht abgeleitet wurde, und ist das Element, das den Klick ausgelöst hat.
 
-1. Speichern Sie die Änderungen und führen Sie eine [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) in der Tag-Eigenschaft, um den Code für die [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de) verwendet auf Ihrer AEM Site.
+1. Speichern Sie die Änderungen und führen Sie ein [Build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html?lang=de) in der Tag-Eigenschaft aus, um den Code in die [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de) zu übertragen, die auf Ihrer AEM-Site verwendet wird.
 
    >[!NOTE]
    >
-   > Es kann nützlich sein, die [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) , um den Einbettungscode in einen **Entwicklung** Umgebung.
+   > Es kann nützlich sein, den [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=de) zu verwenden, um den Einbettungs-Code in eine **Entwicklungsumgebung** zu wechseln.
 
-1. Navigieren Sie zum [WKND-Site](https://wknd.site/us/en.html) und öffnen Sie die Entwickler-Tools, um die Konsole anzuzeigen. Wählen Sie außerdem die **Protokoll beibehalten** aktivieren.
+1. Navigieren Sie zur [WKND Site](https://wknd.site/us/en.html) und öffnen Sie die Entwickler-Tools, um die Konsole anzuzeigen. Aktivieren Sie zudem das Kontrollkästchen **Protokoll beibehalten**.
 
-1. Klicken Sie auf einen der **Teaser** oder **Schaltfläche** CTA-Schaltflächen zum Navigieren zu einer anderen Seite.
+1. Klicken Sie auf eine der CTA-Schaltflächen **Teaser** oder **Schaltfläche**, um zu einer anderen Seite zu navigieren.
 
    ![CTA-Schaltfläche zum Klicken](assets/track-clicked-component/cta-button-to-click.png)
 
-1. Beachten Sie in der Entwicklerkonsole, dass die **CTA angeklickt** -Regel wurde ausgelöst:
+1. Beachten Sie in der Entwicklerkonsole, dass die Regel **CTA-Geklickt** ausgelöst wurde:
 
-   ![CTA-Schaltfläche angeklickt](assets/track-clicked-component/cta-button-clicked-log.png)
+   ![Schaltfläche „CTA-Geklickt“](assets/track-clicked-component/cta-button-clicked-log.png)
 
-## Datenelemente erstellen
+## Erstellen von Datenelementen
 
-Erstellen Sie anschließend ein Datenelement , um die Komponenten-ID und den Titel zu erfassen, auf die geklickt wurde. Erinnern Sie sich in der vorherigen Übung an die Ergebnisse von `event.path` etwas Ähnliches war `component.button-b6562c963d` und der Wert von `event.component['dc:title']` war so etwas wie &quot;Ausflüge ansehen&quot;.
+Als Nächstes erstellen Sie ein Datenelement zur Erfassung der Komponenten-ID und des Titels, auf den geklickt wurde. Erinnern Sie sich daran, dass in der vorherigen Übung die Ausgabe von `event.path` etwas Ähnliches wie `component.button-b6562c963d` und der Wert von `event.component['dc:title']` etwas wie „Ausflüge ansehen“ war.
 
 ### Komponenten-ID
 
-1. Navigieren Sie zur Experience Platform und zur Tag-Eigenschaft, die mit der AEM Site integriert ist.
-1. Navigieren Sie zum **Datenelemente** und klicken Sie auf **Neues Datenelement hinzufügen**.
-1. Für **Name** Feld, eingeben **Komponenten-ID**.
-1. Für **Datenelementtyp** Feld, wählen Sie **Benutzerspezifischer Code**.
+1. Navigieren Sie zu Experience Platform und zur Tag-Eigenschaft, die mit der AEM-Site integriert ist.
+1. Navigieren Sie zum Abschnitt **Datenelemente** und klicken Sie auf **Neues Datenelement hinzufügen**.
+1. In das Feld **Name** geben Sie **Komponenten-ID** ein.
+1. Für das Feld **Datenelementtyp** wählen Sie **Benutzerdefinierter Code**.
 
-   ![Komponenten-ID-Datenelementformular](assets/track-clicked-component/component-id-data-element.png)
+   ![Komponenten-ID-Datenelement-Formular](assets/track-clicked-component/component-id-data-element.png)
 
-1. Klicken **Editor öffnen** und geben Sie Folgendes im Editor für benutzerdefinierten Code ein:
+1. Klicken Sie auf die Schaltfläche **Editor öffnen** und geben Sie den folgenden Code in den benutzerdefinierten Code-Editor ein:
 
    ```js
    if(event && event.path && event.path.includes('.')) {
@@ -191,15 +191,15 @@ Erstellen Sie anschließend ein Datenelement , um die Komponenten-ID und den Tit
 
    >[!NOTE]
    >
-   > Erinnern Sie sich daran, dass die `event` -Objekt wird basierend auf dem Ereignis, das die **Regel** in der Tag-Eigenschaft. Der Wert eines Datenelements wird erst festgelegt, wenn das Datenelement *referenziert* innerhalb einer Regel. Daher ist es sicher, dieses Datenelement innerhalb einer Regel wie der **Seite geladen** im vorherigen Schritt erstellte Regel *but* in anderen Kontexten nicht sicher verwendet werden.
+   > Beachten Sie, dass das `event`-Objekt verfügbar gemacht wird und basierend auf dem Ereignis, das die **Regel** im Tag-Eigenschaft ausgelöst hat, begrenzt ist. Der Wert eines Datenelements wird erst gesetzt, wenn das Datenelement innerhalb einer Regel *referenziert* wird. Daher ist es sicher, dieses Datenelement in einer Regel wie der im vorherigen Schritt erstellten Regel **Seite geladen** zu verwenden *, aber* wäre in anderen Zusammenhängen nicht sicher.
 
 
 ### Komponententitel
 
-1. Navigieren Sie zum **Datenelemente** und klicken Sie auf **Neues Datenelement hinzufügen**.
-1. Für **Name** Feld, eingeben **Komponententitel**.
-1. Für **Datenelementtyp** Feld, wählen Sie **Benutzerspezifischer Code**.
-1. Klicken **Editor öffnen** und geben Sie Folgendes im Editor für benutzerdefinierten Code ein:
+1. Navigieren Sie zum Abschnitt **Datenelemente** und klicken Sie auf **Neues Datenelement hinzufügen**.
+1. In das Feld **Name** geben Sie **Komponententitel** ein.
+1. Für das Feld **Datenelementtyp** wählen Sie **Benutzerdefinierter Code**.
+1. Klicken Sie auf die Schaltfläche **Editor öffnen** und geben Sie den folgenden Code in den benutzerdefinierten Code-Editor ein:
 
    ```js
    if(event && event.component && event.component.hasOwnProperty('dc:title')) {
@@ -209,17 +209,17 @@ Erstellen Sie anschließend ein Datenelement , um die Komponenten-ID und den Tit
 
 1. Speichern Sie die Änderungen.
 
-## Hinzufügen einer Bedingung zur Regel &quot;CTA angeklickt&quot;
+## Hinzufügen einer Bedingung zur Regel „CTA-Geklickt“
 
-Aktualisieren Sie anschließend die **CTA angeklickt** -Regel, um sicherzustellen, dass die Regel nur ausgelöst wird, wenn die `cmp:click` -Ereignis ausgelöst wird für eine **Teaser** oder **Schaltfläche**. Da der CTA des Teasers als separates Objekt in der Datenschicht betrachtet wird, ist es wichtig, das übergeordnete Element zu überprüfen, um sicherzustellen, dass es von einem Teaser stammt.
+Als nächstes aktualisieren Sie die Regel **CTA-Geklickt**, um sicherzustellen, dass die Regel nur ausgelöst wird, wenn das `cmp:click`-Ereignis für einen **Teaser** oder eine **Schaltfläche** ausgelöst wird. Da der CTA des Teasers als separates Objekt in der Datenschicht betrachtet wird, ist es wichtig, das übergeordnete Element zu überprüfen, um sicherzustellen, dass es von einem Teaser stammt.
 
-1. Navigieren Sie in der Benutzeroberfläche der Tag-Eigenschaft zum **CTA angeklickt** Regel, die zuvor erstellt wurde.
-1. under **Bedingungen** click **Hinzufügen** , um **Bedingungskonfiguration** Assistent.
-1. Für **Bedingungstyp** Feld, wählen Sie **Benutzerspezifischer Code**.
+1. Navigieren Sie in der Benutzeroberfläche der Tag-Eigenschaft zur **CTA-Geklickt**-Regel, die zuvor erstellt wurde.
+1. Klicken Sie unter **Bedingungen** auf **Hinzufügen**, um den Assistenten **Bedingungskonfiguration** zu öffnen.
+1. Für das Feld **Bedingungsart** wählen Sie **Benutzerdefinierter Code**.
 
-   ![CTA angeklickter benutzerdefinierter Code für Bedingung](assets/track-clicked-component/custom-code-condition.png)
+   ![„CTA-Geklickter“ benutzerdefinierter Code für Bedingung](assets/track-clicked-component/custom-code-condition.png)
 
-1. Klicken **Editor öffnen** und geben Sie Folgendes im Editor für benutzerdefinierten Code ein:
+1. Klicken Sie auf **Editor öffnen** und geben Sie Folgendes in den Editor für benutzerdefinierten Code ein:
 
    ```js
    if(event && event.component && event.component.hasOwnProperty('@type')) {
@@ -235,87 +235,87 @@ Aktualisieren Sie anschließend die **CTA angeklickt** -Regel, um sicherzustelle
    return false;
    ```
 
-   Der obige Code prüft zunächst, ob der Ressourcentyp von einer **Schaltfläche** oder wenn der Ressourcentyp aus einem CTA in einer **Teaser**.
+   Der obige Code prüft zunächst, ob der Ressourcentyp von einer **Schaltfläche** oder von einem CTA in einem **Teaser** stammt.
 
 1. Speichern Sie die Änderungen.
 
-## Festlegen von Analytics-Variablen und Trigger-Tracking-Link-Beacon
+## Festlegen von Analytics-Variablen und auslösen von Verfolgungs-Link-Beacon
 
-Derzeit ist das **CTA angeklickt** -Regel gibt einfach eine Konsolenanweisung aus. Verwenden Sie als Nächstes die Datenelemente und die Analytics-Erweiterung, um Analytics-Variablen als **action**. Legen wir außerdem eine zusätzliche Aktion fest, um den Trigger **Link verfolgen** und senden Sie die erfassten Daten an Adobe Analytics.
+Derzeit gibt die **CTA-Geklickt**-Regel lediglich eine Konsolenmeldung aus. Verwenden Sie anschließend die Datenelemente und die Analytics-Erweiterung, um Analytics-Variablen als **Aktion** festzulegen. Wir legen auch eine zusätzliche Aktion fest, um den **Verfolgungs-Link** auszulösen und die gesammelten Daten an Adobe Analytics zu senden.
 
-1. Im **CTA angeklickt** Regel, **remove** die **Core - benutzerspezifischer Code** action (die Konsolenanweisungen):
+1. In der **CTA-Geklickt**-Regel, **entfernen** Sie die Aktion **Kern – Benutzerdefinierter Code** (die Konsolenmeldungen):
 
-   ![Aktion für benutzerdefinierten Code entfernen](assets/track-clicked-component/remove-console-statements.png)
+   ![Entfernen der benutzerdefinierten Code-Aktion](assets/track-clicked-component/remove-console-statements.png)
 
-1. Klicken Sie unter &quot;Aktionen&quot;auf **Hinzufügen** , um eine Aktion zu erstellen.
-1. Legen Sie die **Erweiterung** type to **Adobe Analytics** und legen Sie die **Aktionstyp** nach  **Variablen festlegen**.
+1. Klicken Sie unter Aktionen auf **Hinzufügen**, um eine Aktion zu erstellen.
+1. Legen Sie den Typ **Erweiterung** auf **Adobe Analytics** und den **Aktionstyp** auf **Variablen festlegen** fest.
 
-1. Legen Sie die folgenden Werte für **eVars**, **Props** und **Veranstaltungen**:
+1. Legen Sie die folgenden Werte für **eVars**, **Props**, und **Ereignisse** fest:
 
    * `evar8` - `%Component ID%`
    * `prop8` - `%Component ID%`
    * `event8`
 
-   ![Festlegen von eVar-Prop- und -Ereignissen](assets/track-clicked-component/set-evar-prop-event.png)
+   ![Festlegen von eVar, Prop und Ereignissen](assets/track-clicked-component/set-evar-prop-event.png)
 
    >[!NOTE]
    >
-   > Hier `%Component ID%` wird verwendet, da sie eine eindeutige Kennung für den CTA garantiert, auf den geklickt wurde. Ein potenzieller Nachteil bei der Verwendung von `%Component ID%` ist, dass der Analytics-Bericht Werte wie `button-2e6d32893a`. Verwenden der `%Component Title%` würde einen benutzerfreundlicheren Namen geben, aber der Wert ist möglicherweise nicht eindeutig.
+   > Hier wird `%Component ID%` verwendet, da sie eine eindeutige Kennung für den angeklickten CTA sicherstellt. Ein potenzieller Nachteil bei der Verwendung von `%Component ID%` ist, dass der Analytics-Bericht Werte wie `button-2e6d32893a` enthält. Die Verwendung von `%Component Title%` würde einen benutzerfreundlicheren Namen ergeben, aber der Wert ist möglicherweise nicht eindeutig.
 
-1. Als Nächstes fügen Sie rechts neben dem **Adobe Analytics - Variablen festlegen** durch Tippen auf **plus** Symbol:
+1. Als Nächstes fügen Sie eine zusätzliche Aktion rechts neben **Adobe Analytics – Variablen festlegen** hinzu, indem Sie auf das **Plus**-Symbol tippen:
 
    ![Hinzufügen einer zusätzlichen Aktion zur Tag-Regel](assets/track-clicked-component/add-additional-launch-action.png)
 
-1. Legen Sie die **Erweiterung** type to **Adobe Analytics** und legen Sie die **Aktionstyp** nach  **Signal senden**.
-1. under **Tracking** Setzen Sie das Optionsfeld auf **`s.tl()`**.
-1. Für **Link-Typ** Feld, wählen Sie **Benutzerspezifischer Link** und **Linkname** Setzen Sie den Wert auf: **`%Component Title%: CTA Clicked`**:
+1. Legen Sie den Typ **Erweiterung** auf **Adobe Analytics** und den **Aktionstyp** auf **Beacon senden** fest.
+1. Setzen Sie unter **Tracking** das Optionsfeld auf **`s.tl()`**.
+1. Für das Feld **Link-Typ** wählen Sie **Benutzerdefinierter Link** und für **Link-Name** setzen Sie den Wert auf: **`%Component Title%: CTA Clicked`**:
 
-   ![Konfiguration für das Signal &quot;Link senden&quot;](assets/track-clicked-component/analytics-send-beacon-link-track.png)
+   ![Konfiguration für das Beacon „Link senden“](assets/track-clicked-component/analytics-send-beacon-link-track.png)
 
-   Die obige Konfiguration kombiniert die dynamische Variable aus dem Datenelement **Komponententitel** und die statische Zeichenfolge **CTA angeklickt**.
+   Die obige Konfiguration kombiniert die dynamische Variable aus dem Datenelement **Komponententitel** und die statische Zeichenfolge **CTA-Geklickt**.
 
-1. Speichern Sie die Änderungen. Die **CTA angeklickt** -Regel sollte jetzt die folgende Konfiguration aufweisen:
+1. Speichern Sie die Änderungen. Die **CTA-Geklickt**-Regel sollte jetzt die folgende Konfiguration aufweisen:
 
    ![Konfiguration der endgültigen Tag-Regel](assets/track-clicked-component/final-page-loaded-config.png)
 
-   * **1.** Suchen Sie nach `cmp:click` -Ereignis.
-   * **2.** Überprüfen Sie, ob das Ereignis durch eine **Schaltfläche** oder **Teaser**.
-   * **3.** Legen Sie Analytics-Variablen zur Verfolgung der **Komponenten-ID** als **eVar**, **prop** und ein **event**.
-   * **4.** Senden des Analytics-Beacons &quot;Link verfolgen&quot;(und führen Sie **not** behandelt es als Seitenansicht).
+   * **1.** Suchen Sie nach dem Ereignis `cmp:click`.
+   * **2.** Überprüfen Sie, ob das Ereignis durch eine **Schaltfläche** oder **Teaser** ausgelöst wurde.
+   * **3.** Legen Sie Analytics-Variablen fest, um die **Komponenten-ID** als **eVar**, **Prop** und ein **Ereignis** zu verfolgen.
+   * **4.** Senden Sie den Analytics Verfolgungs-Link-Beacon ab (und behandeln Sie ihn **nicht** wie einen Seitenaufruf).
 
 1. Speichern Sie alle Änderungen und erstellen Sie Ihre Tag-Bibliothek, indem Sie sie an die entsprechende Umgebung weiterleiten.
 
-## Validieren des Verfolgungslink-Beacon- und Analytics-Aufrufs
+## Validieren des Verfolgungs-Link-Beacon- und Analytics-Aufrufs
 
-Nun, dass **CTA angeklickt** sendet das Analytics-Beacon. Sie sollten die Analytics-Tracking-Variablen mit dem Experience Platform Debugger sehen können.
+Nun sendet die Regel **CTA angeklickt** das Analytics-Beacon. Sie sollten die Analytics-Tracking-Variablen mit dem Experience Platform Debugger sehen können.
 
 1. Öffnen Sie die [WKND-Site](https://wknd.site/us/en.html) in Ihrem Browser.
-1. Klicken Sie auf das Debugger-Symbol ![Experience Platform Debugger-Symbol](assets/track-clicked-component/experience-cloud-debugger.png) , um den Experience Platform Debugger zu öffnen.
-1. Stellen Sie sicher, dass der Debugger die Tag-Eigenschaft dem *Ihre* Entwicklungsumgebung, wie zuvor beschrieben, und die **Konsolenprotokollierung** aktiviert ist.
-1. Öffnen Sie das Analytics-Menü und überprüfen Sie, ob die Report Suite auf *Ihre* Report Suite.
+1. Klicken Sie auf das Debugger-Symbol ![Experience Platform Debugger-Symbol](assets/track-clicked-component/experience-cloud-debugger.png), um den Experience Platform Debugger zu öffnen.
+1. Stellen Sie sicher, dass der Debugger die Tag-Eigenschaft *Ihrer* Entwicklungsumgebung zuordnet, wie zuvor beschrieben, und die **Konsolenprotokollierung** aktiviert ist.
+1. Öffnen Sie das Analytics-Menü und überprüfen Sie, ob die Report Suite auf *Ihre* Report Suite festgelegt ist.
 
    ![Analytics-Tab-Debugger](assets/track-clicked-component/analytics-tab-debugger.png)
 
-1. Klicken Sie im Browser auf einen der **Teaser** oder **Schaltfläche** CTA-Schaltflächen zum Navigieren zu einer anderen Seite.
+1. Klicken Sie im Browser auf eine der **Teaser**- oder **Schaltfläche**-CTA-Schaltflächen, um zu einer anderen Seite zu navigieren.
 
    ![CTA-Schaltfläche zum Klicken](assets/track-clicked-component/cta-button-to-click.png)
 
-1. Kehren Sie zum Experience Platform Debugger zurück, scrollen Sie nach unten und erweitern Sie **Netzwerkanforderungen** > *Ihre Report Suite*. Sie sollten die **eVar**, **prop** und **event** gesetzt.
+1. Kehren Sie zum Experience Platform Debugger zurück, scrollen Sie nach unten und erweitern Sie **Netzwerkanfragen** > *Ihre Report Suite*. Sie sollten feststellen können, dass **eVar**, **prop** und **event** festgelegt sind.
 
-   ![Analytics-Ereignisse, eVar und beim Klick verfolgte Eigenschaften](assets/track-clicked-component/evar-prop-link-clicked-tracked-debugger.png)
+   ![Analytics-Ereignisse, eVar und beim Klicken verfolgte Eigenschaften](assets/track-clicked-component/evar-prop-link-clicked-tracked-debugger.png)
 
-1. Kehren Sie zum Browser zurück und öffnen Sie die Entwicklerkonsole. Navigieren Sie zur Fußzeile der Site und klicken Sie auf einen der Navigationslinks:
+1. Kehren Sie zum Browser zurück und öffnen Sie die Entwicklungskonsole. Navigieren Sie zur Fußzeile der Site und klicken Sie auf einen der Navigations-Links:
 
-   ![Klicken Sie in der Fußzeile auf den Link Navigation .](assets/track-clicked-component/click-navigation-link-footer.png)
+   ![Klicken Sie in der Fußzeile auf den Navigations-Link](assets/track-clicked-component/click-navigation-link-footer.png)
 
-1. In der Browser-Konsole die Nachricht beobachten *&quot;Benutzerspezifischer Code&quot;für Regel &quot;CTA angeklickt&quot;wurde nicht erfüllt*.
+1. Beachten Sie in der Browser-Konsole die Nachricht *„Benutzerspezifischer Code“ für Regel „CTA angeklickt“ wurde nicht erfüllt*.
 
-   Die obige Meldung liegt darin, dass die Navigationskomponente einen Trigger `cmp:click` event *but* aufgrund von [Bedingung für die Regel](#add-a-condition-to-the-cta-clicked-rule) überprüft, dass der Ressourcentyp nicht ausgeführt wird.
+   Die obige Meldung wird angezeigt, weil die Navigationskomponente ein `cmp:click`-Ereignis auslöst, *aber* wegen [Bedingung für die Regel](#add-a-condition-to-the-cta-clicked-rule), das den Ressourcentyp überprüft, wird keine Aktion ausgeführt.
 
    >[!NOTE]
    >
-   > Wenn keine Konsolenprotokolle angezeigt werden, stellen Sie sicher, dass **Konsolenprotokollierung** wird unter **Experience Platform Tags** im Experience Platform Debugger.
+   > Wenn keine Konsolenprotokolle angezeigt werden, stellen Sie sicher, dass **Konsolenprotokollierung** unter **Experience Platform Tags** im Experience Platform Debugger aktiviert ist.
 
 ## Herzlichen Glückwunsch!
 
-Sie haben soeben die ereignisbasierte Adobe Client Data Layer und Tag in Experience Platform verwendet, um die Klicks auf bestimmte Komponenten auf einer AEM Site zu verfolgen.
+Sie haben soeben das ereignisbasierte Adobe Client Data Layer und Tags in Experience Platform verwendet, um die Klicks auf bestimmte Komponenten auf einer AEM-Site zu verfolgen.
