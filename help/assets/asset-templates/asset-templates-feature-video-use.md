@@ -1,6 +1,6 @@
 ---
 title: Verwenden von Asset-Vorlagen mit AEM Assets und InDesign Server
-description: Mit der AEM Assets-Vorlage können Marketingexperten digitale Assets für digitale und gedruckte Inhalte erstellen, verwalten und bereitstellen. Das Erstellen von Markierungsbroschüren, Visitenkarten, Flyern, Anzeigen und Postkarten ist mit Asset-Vorlagen bei der Integration mit dem InDesign-Server viel einfacher.
+description: Mit der AEM Assets-Vorlage können Marketing-Fachkräfte digitale Assets für digitale und gedruckte Inhalte erstellen, verwalten und bereitstellen. Das Erstellen von Markierungsbroschüren, Visitenkarten, Flyern, Anzeigen und Postkarten ist mit Asset-Vorlagen bei der Integration mit dem InDesign-Server viel einfacher.
 version: 6.4, 6.5
 topic: Content Management
 feature: Templates
@@ -10,15 +10,15 @@ last-substantial-update: 2022-09-01T00:00:00Z
 thumbnail: 25170.jpg
 exl-id: 45e0f3d5-db56-44e7-ad68-4d60991a6d77
 source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '165'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Verwenden von Asset-Vorlagen mit AEM Assets und InDesign Server{#using-asset-templates-with-aem-assets-and-indesign-server}
 
-Mit der AEM Assets-Vorlage können Marketingexperten digitale Assets für digitale und gedruckte Inhalte erstellen, verwalten und bereitstellen. Das Erstellen von Markierungsbroschüren, Visitenkarten, Flyern, Anzeigen und Postkarten ist mit Asset-Vorlagen bei der Integration mit dem InDesign-Server viel einfacher.
+Mit der AEM Assets-Vorlage können Marketing-Fachkräfte digitale Assets für digitale und gedruckte Inhalte erstellen, verwalten und bereitstellen. Das Erstellen von Markierungsbroschüren, Visitenkarten, Flyern, Anzeigen und Postkarten ist mit Asset-Vorlagen bei der Integration mit dem InDesign-Server viel einfacher.
 
 >[!NOTE]
 >
@@ -30,8 +30,8 @@ In diesem Video werden Konzepte und Schritte zum Generieren druckfertiger Assets
 
 >[!VIDEO](https://video.tv.adobe.com/v/25170?quality=12&learn=on)
 
-## Technische Übersicht {#technical-overview}
+## Technischer Überblick {#technical-overview}
 
-Dieses Video bietet einen technischeren Überblick über die Funktionen der AEM Assets-Asset-Vorlage und wie AEM die Komposition von AEM Assets und Inhalten durch InDesign erleichtert, um ansprechende Druckerlebnisse zu schaffen.
+Dieses Video bietet einen technischen Überblick über die Funktionen der AEM Assets-Asset-Vorlage und wie AEM die Komposition von AEM Assets und Inhalten durch InDesign erleichtert, um ansprechende Druckerlebnisse zu schaffen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/17071?quality=12&learn=on)
