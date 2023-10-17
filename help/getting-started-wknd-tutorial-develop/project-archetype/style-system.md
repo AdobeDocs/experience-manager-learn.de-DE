@@ -14,9 +14,9 @@ thumbnail: 30386.jpg
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
 recommendations: noDisplay, noCatalog
 source-git-commit: 68a7f263284fdf9cfcf82572b8e1e1c0c01e4b55
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1678'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
