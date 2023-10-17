@@ -12,14 +12,14 @@ kt: 7383
 thumbnail: 332231.jpg
 exl-id: 845383f2-71e4-44fb-8637-323e956b2808
 source-git-commit: 2f619bc6ebaae36c8b9d05d8c4ff5c1cc8c18332
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '65'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
 # Erstellen von adaptiven Formularfragmenten
 
-Die Verwendung von Fragmenten vereinfacht und beschleunigt die Erstellung und Pflege großer Formularbestände. Beim Erstellen eines Formulars fügen Sie einen Verweis auf das gewünschte Fragment ein. Das Fragment wird dann im Formular angezeigt.
+Die Verwendung von Fragmenten vereinfacht und beschleunigt die Erstellung und Pflege großer Formularbestände. Beim Erstellen eines neuen Formulars fügen Sie einen Verweis auf das gewünschte Fragment ein. Das Fragment wird dann im Formular angezeigt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332231?quality=12&learn=on)
