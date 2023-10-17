@@ -1,6 +1,6 @@
 ---
-title: Bereitstellen AEM Codeprojekts für AEM as a Cloud Service
-description: Erfahren Sie, wie Sie mit Cloud Manager ein AEM-Code-Projekt auf as a Cloud Service Weise bereitstellen.
+title: Bereitstellen von AEM-Code-Projekten für AEM as a Cloud Service
+description: Erfahren Sie, wie Sie mit Cloud Manager ein AEM-Code-Projekt auf AEM as a Cloud Service bereitstellen.
 role: Developer
 level: Beginner
 type: Tutorial
@@ -10,9 +10,9 @@ kt: 6912
 thumbnail: 330534.jpg
 exl-id: 82cd6dd5-735f-4641-9848-a5f5144b8624
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '99'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
