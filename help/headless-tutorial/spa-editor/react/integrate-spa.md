@@ -33,7 +33,7 @@ In diesem Kapitel wird beschrieben, wie der SPA eine einfache `Header`-Komponent
 
 ![Neuer Header in AEM](./assets/integrate-spa/final-header-component.png)
 
-*Die SPA wird um eine statische `Header`-Komponente erweitert*
+*Die SPA wird um eine statische `Header`-Komponente erweitert.*
 
 ## Voraussetzungen
 
@@ -43,13 +43,13 @@ Vergegenwärtigen Sie sich die erforderlichen Tools und Anweisungen zum Einricht
 
 Im Rahmen des AEM-Projekts wurden zwei Module erstellt: `ui.apps` und `ui.frontend`.
 
-Das `ui.frontend`-Modul ist ein [Webpack](https://webpack.js.org/)-Projekt, das den gesamten Quellcode der SPA enthält. Ein Großteil der SPA-Entwicklung und -Tests erfolgt im webpack-Projekt. Wenn ein Produktions-Build ausgelöst wird, wird die SPA mithilfe von webpack erstellt und kompiliert. Die kompilierten Artefakte (CSS und JavaScript) werden in das Modul `ui.apps` kopiert, das dann in der AEM-Laufzeitumgebung bereitgestellt wird.
+Das Modul `ui.frontend` ist ein [webpack](https://webpack.js.org/)-Projekt, das den gesamten SPA-Quellcode enthält. Ein Großteil der SPA-Entwicklung und -Tests erfolgt im webpack-Projekt. Wenn ein Produktions-Build ausgelöst wird, wird die SPA mithilfe von webpack erstellt und kompiliert. Die kompilierten Artefakte (CSS und JavaScript) werden in das Modul `ui.apps` kopiert, das dann für die AEM-Runtime bereitgestellt wird.
 
 ![Hochrangige Architektur von ui.frontend](assets/integrate-spa/ui-frontend-architecture.png)
 
 *Eine Darstellung der SPA-Integration auf hoher Ebene.*
 
-Weitere Informationen zum Aufbauen des Frontends finden Sie [hier](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=de).
+Weitere Informationen zum Frontend-Build [finden Sie hier](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=de).
 
 ## Überprüfen der SPA-Integration {#inspect-spa-integration}
 
@@ -57,7 +57,7 @@ Weitere Informationen zum Aufbauen des Frontends finden Sie [hier](https://exper
 
 1. Öffnen Sie Ihr AEM-Projekt in der IDE Ihrer Wahl. In diesem Tutorial wird die [Visual Studio Code-IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=de#microsoft-visual-studio-code) verwendet.
 
-   ![VSCode – AEM WKND-SPA-Projekt](./assets/integrate-spa/vscode-ide-openproject.png)
+   ![VSCode – AEM-WKND-SPA-Projekt](./assets/integrate-spa/vscode-ide-openproject.png)
 
 1. Erweitern und überprüfen Sie den Ordner `ui.frontend`. Öffnen Sie die Datei `ui.frontend/package.json`
 
@@ -96,9 +96,9 @@ Weitere Informationen zum Aufbauen des Frontends finden Sie [hier](https://exper
 
    Das npm-Modul [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) wird verwendet, um dies zu erleichtern.
 
-1. Überprüfen Sie die Datei `ui.frontend/clientlib.config.js`. Diese Konfigurationsdatei wird von [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) verwendet, um zu bestimmen, wie die Client-Bibliothek generiert wird.
+1. Überprüfen Sie die Datei `ui.frontend/clientlib.config.js`. Diese Konfigurationsdatei wird von [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) verwendet, um zu bestimmen, wie die Client-Bibliothek erstellt wird.
 
-1. Überprüfen Sie die Datei `ui.frontend/pom.xml`. Diese Datei transformiert den Ordner `ui.frontend` in ein [Maven-Modul](https://maven.apache.org/guides/mini/guide-multiple-modules.html). Die Datei `pom.xml` wurde aktualisiert, um das [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) dazu zu verwenden, die SPA zu **testen** und während eines Maven-Builds zu **erstellen**.
+1. Überprüfen Sie die Datei `ui.frontend/pom.xml`. Durch diese Datei wird aus dem Ordner `ui.frontend` ein [Maven-Modul](https://maven.apache.org/guides/mini/guide-multiple-modules.html). Die Datei `pom.xml` wurde aktualisiert, um die SPA während eines Maven-Builds mithilfe von [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) zu **testen** und zu **erstellen**.
 
 1. Überprüfen Sie die Datei `index.js` unter `ui.frontend/src/index.js`:
 
@@ -196,11 +196,11 @@ Fügen Sie anschließend eine neue Komponente zum SPA hinzu und stellen Sie die 
    451 B              build/static/css/main.e57bbe8a.chunk.css
    ```
 
-1. Navigieren Sie zum Ordner `ui.apps`. Unter `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-react` sollten Sie sehen, dass die kompilierten SPA-Dateien aus dem Ordner `ui.frontend/build` kopiert worden sind.
+1. Navigieren Sie zum Ordner `ui.apps`. Unter `ui.apps/src/main/content/jcr_root/apps/wknd-spa-react/clientlibs/clientlib-react` sollten Sie sehen, dass die kompilierten SPA-Dateien aus dem Ordner`ui.frontend/build` kopiert wurden.
 
    ![In ui.apps generierte Client-Bibliothek](./assets/integrate-spa/compiled-spa-uiapps.png)
 
-1. Kehren Sie zum Terminal zurück und navigieren Sie in den Ordner `ui.apps`. Führen Sie den folgenden Maven-Befehl aus:
+1. Kehren Sie zum Terminal zurück und navigieren Sie zum Ordner `ui.apps`. Führen Sie den folgenden Maven-Befehl aus:
 
    ```shell
    $ cd ../ui.apps
