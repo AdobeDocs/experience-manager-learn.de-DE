@@ -1,46 +1,46 @@
 ---
 title: Verwenden und Verstehen von Variablen in Ihrer AEM Dispatcher-Konfiguration
-description: Erfahren Sie, wie Sie Variablen in den Konfigurationsdateien der Apache- und Dispatcher-Module verwenden können, um sie auf die nächste Ebene zu bringen.
+description: Erfahren Sie, wie Sie Variablen in den Konfigurationsdateien der Apache- und Dispatcher-Module verwenden können, um diese auf die nächste Stufe zu bringen.
 version: 6.5
 topic: Administration, Development
 feature: Dispatcher
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
-source-git-commit: 04cd4002af7028ee9e3b1e1455b6346c56446245
-workflow-type: tm+mt
+exl-id: 299b32c3-7922-4eee-aa3a-56039a654f70
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '1089'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-
 # Verwenden und Verstehen von Variablen
 
-[Inhalt](./overview.md)
+[Inhaltsverzeichnis](./overview.md)
 
-[&lt;- Zurück: Grundlagen zum Cache](./understanding-cache.md)
+[&lt;- Zurück: Grundlegendes zum Cache](./understanding-cache.md)
 
 In diesem Dokument wird erläutert, wie Sie die Leistungsfähigkeit von Variablen auf dem Apache-Webserver und in Ihren Dispatcher-Modulkonfigurationsdateien nutzen können.
 
 ## Variablen
 
-Apache unterstützt Variablen und ab Version 4.1.9 des Dispather-Moduls unterstützt es sie auch!
+Apache unterstützt Variablen. Ab Version 4.1.9 gilt dies auch für das Dispatcher-Modul.
 
-Wir können diese nutzen, um eine Menge nützlicher Dinge zu tun, wie:
+Wir können diese für eine Menge nützlicher Dinge einsetzen, z. B.:
 
-- Stellen Sie sicher, dass alles, was umgebungsspezifisch ist, nicht inline in den Konfigurationen ist, sondern extrahiert wird, um sicherzustellen, dass Konfigurationsdateien aus dev in prod mit derselben funktionalen Ausgabe funktionieren.
-- Wechsel zu Funktionen und Änderung der Protokollebenen unveränderlicher Dateien, die AMS bereitstellt, lassen eine Änderung nicht zu.
-- Ändern Sie, welche enthält, basierend auf Variablen wie `RUNMODE` und `ENV_TYPE`
-- Übereinstimmung `DocumentRoot`&quot;s und `VirtualHost` DNS-Namen zwischen Apache-Konfigurationen und Modulkonfigurationen.
+- Sicherstellen, dass alles, was umgebungsspezifisch ist, nicht inline in den Konfigurationen ist, sondern extrahiert wird, damit Konfigurationsdateien aus der Entwicklungsumgebung in der Produktionsumgebung mit derselben funktionalen Ausgabe funktionieren
+- Umschalten von Funktionen und Ändern der Protokollebenen von unveränderlichen Dateien, die von AMS bereitgestellt werden und die Sie nicht ändern dürfen.
+- Ändern, welche „includes“ basierend auf Variablen wie `RUNMODE` und `ENV_TYPE` verwendet werden sollen
+- Abgleichen der DNS-Namen von `DocumentRoot` und `VirtualHost` zwischen Apache- und Modulkonfigurationen
 
-## Grundlegende Variablen verwenden
+## Verwenden von grundlegenden Variablen
 
-Da die Grundlinien-Dateien von AMS schreibgeschützt und unveränderlich sind, können Funktionen deaktiviert und aktiviert sowie durch Bearbeiten der von ihnen verwendeten Variablen konfiguriert werden.
+Da die Basisdateien von AMS schreibgeschützt und unveränderlich sind, gibt es Funktionen, die deaktiviert/aktiviert sowie durch Bearbeiten der von ihnen verwendeten Variablen konfiguriert werden können.
 
-### Basisvariablen
+### Grundlegende Variablen
 
-AMS-Standardvariablen werden in der Datei deklariert `/etc/httpd/conf.d/variables/ootb.vars`.  Diese Datei kann nicht bearbeitet werden, ist aber vorhanden, um sicherzustellen, dass Variablen keine Nullwerte aufweisen.  Sie werden zuerst einbezogen, nachdem wir sie eingefügt haben `/etc/httpd/conf.d/variables/ams_default.vars`.  Sie können diese Datei bearbeiten, um die Werte dieser Variablen zu ändern oder sogar dieselben Variablennamen und -werte in Ihre eigene Datei aufzunehmen!
+AMS-Standardvariablen werden in der Datei `/etc/httpd/conf.d/variables/ootb.vars` deklariert. Diese Datei kann nicht bearbeitet werden, ist aber vorhanden, um sicherzustellen, dass Variablen keine Nullwerte aufweisen. Sie werden zuerst vor und dann nach dem Einschließen von `/etc/httpd/conf.d/variables/ams_default.vars` einbezogen. Sie können diese Datei bearbeiten, um die Werte dieser Variablen zu ändern, oder sogar dieselben Variablennamen und -werte in Ihre eigene Datei aufnehmen.
 
 Im Folgenden finden Sie ein Beispiel für den Inhalt der Datei `/etc/httpd/conf.d/variables/ams_default.vars`:
 
@@ -52,9 +52,9 @@ Define AUTHOR_FORCE_SSL 1
 Define PUBLISH_FORCE_SSL 0
 ```
 
-### Beispiel 1: SSL erzwingen
+### Beispiel 1 – Erzwingen von SSL
 
-Die oben aufgeführten Variablen `AUHOR_FORCE_SSL`oder `PUBLISH_FORCE_SSL` kann auf 1 gesetzt werden, um Umschreibungsregeln zu umschreiben, die Endbenutzer zwingen, beim Eintreffen auf eine HTTP-Anfrage zu HTTPS umgeleitet zu werden
+Die oben aufgeführten Variablen, `AUHOR_FORCE_SSL` bzw. `PUBLISH_FORCE_SSL`, können auf 1 gesetzt werden, um Neuschreibungsregeln anzuwenden, durch die das Umleiten von Endbenutzenden bei HTTP-Anfragen zu HTTPS erzwungen wird.
 
 Die folgende Syntax der Konfigurationsdatei ermöglicht es, diesen Umschalter zu verwenden:
 
@@ -69,11 +69,11 @@ Die folgende Syntax der Konfigurationsdatei ermöglicht es, diesen Umschalter zu
 </VirtualHost>
 ```
 
-Wie Sie sehen können, enthalten die Neuschreibungsregeln Folgendes: Der Code, um den Endbenutzer-Browser umzuleiten, aber die Variable, die auf 1 gesetzt ist, ermöglicht die Verwendung oder Nichtverwendung der Datei
+Wie zu sehen ist, enthält das include-Element der Neuschreibungsregeln den Code, um den Browser der Endbenutzenden umzuleiten, aber erst durch Festlegen der Variable auf den Wert 1 wird die Verwendung bzw. Nichtverwendung der Datei ermöglicht.
 
-### Beispiel 2: Protokollierungsstufe
+### Beispiel 2 – Protokollierungsebene
 
-Die Variablen `DISP_LOG_LEVEL` kann verwendet werden, um festzulegen, was Sie für die Protokollebene wünschen, die tatsächlich in der laufenden Konfiguration verwendet wird.
+Über die Variablen `DISP_LOG_LEVEL` können Sie die gewünschte Protokollebene für die laufende Konfiguration festlegen.
 
 Im Folgenden finden Sie ein Syntaxbeispiel, das in den grundlegenden AMS-Konfigurationsdateien vorhanden ist:
 
@@ -84,23 +84,23 @@ Im Folgenden finden Sie ein Syntaxbeispiel, das in den grundlegenden AMS-Konfigu
 </IfModule>
 ```
 
-Wenn Sie die Dispatcher-Protokollierungsstufe erhöhen müssen, aktualisieren Sie einfach die `ams_default.vars` Variable `DISP_LOG_LEVEL` auf die gewünschte Ebene.
+Wenn Sie die Dispatcher-Protokollierungsebene erhöhen müssen, aktualisieren Sie einfach in `ams_default.vars` die Variable `DISP_LOG_LEVEL` auf die gewünschte Ebene.
 
-Beispielwerte können eine Ganzzahl oder das Wort sein:
+Beispielwerte können eine Ganzzahl oder ein Wort sein:
 
 | Protokollebene | Ganzzahlwert | Wortwert |
 | --- | --- | --- |
 | Trace | 4 | trace |
-| Debug | 3 | debug |
-| Info | 2 | Informationen |
+| Debuggen | 3 | debug |
+| Informationen | 2 | info |
 | Warnung | 1 | warn |
-| Fehler | 0 | Fehler |
+| Fehler | 0 | error |
 
-### Beispiel 3: Whitelists
+### Beispiel 3 – Whitelists
 
-Die Variablen `AUTHOR_WHITELIST_ENABLED` und `PUBLISH_WHITELIST_ENABLED` kann auf 1 gesetzt werden, um Umschreibungsregeln zu aktivieren, die Regeln enthalten, die den Endbenutzer-Traffic basierend auf IP-Adressen zulassen oder verbieten.  Das Umschalten dieser Funktion auf muss auch mit dem Erstellen einer Whitelist-Regeldatei kombiniert werden, damit sie eingeschlossen wird.
+Die Variablen `AUTHOR_WHITELIST_ENABLED` und `PUBLISH_WHITELIST_ENABLED` können auf 1 gesetzt werden, um Neuschreibungsregeln zu aktivieren, die Regeln zum Zulassen oder Sperren des Endbenutzer-Traffics auf der Grundlage der IP-Adresse enthalten. Das Einschalten dieser Funktion muss auch mit dem Erstellen einer Whitelist-Regeldatei kombiniert werden, die berücksichtigt werden soll.
 
-Im Folgenden finden Sie einige Syntaxbeispiele, wie die -Variable die Includes der Whitelist-Dateien und ein Beispiel für eine Whitelist-Datei aktiviert
+Hier einige Syntaxbeispiele, wie die Variable die Einbindung der Whitelist-Dateien ermöglicht, sowie ein Beispiel für eine Whitelist-Datei
 
 `sample.vhost`:
 
@@ -122,13 +122,13 @@ Im Folgenden finden Sie einige Syntaxbeispiele, wie die -Variable die Includes d
 </RequireAny>
 ```
 
-Sie können die `sample_whitelist.rules` erzwingt die IP-Beschränkung, aber durch Umschalten der Variable kann sie in die Variable `sample.vhost`
+Wie Sie sehen können, erzwingt `sample_whitelist.rules` die IP-Beschränkung, aber wenn Sie die Variable umschalten, kann sie in `sample.vhost` aufgenommen werden.
 
 ## Platzieren der Variablen
 
 ### Argumente zum Starten von Webservern
 
-AMS setzt Server-/Topologie-spezifische Variablen in die Startargumente des Apache-Prozesses in die Datei `/etc/sysconfig/httpd`
+AMS setzt Server-/topologiespezifische Variablen in die Startargumente des Apache-Prozesses in der Datei `/etc/sysconfig/httpd`
 
 Diese Datei enthält vordefinierte Variablen, wie im Folgenden gezeigt:
 
@@ -143,18 +143,18 @@ ENV_TYPE='dev'
 RUNMODE='sites'
 ```
 
-Dies können Sie nicht ändern, sind aber gut zu nutzen in Ihren Konfigurationsdateien
+Diese können Sie zwar nicht ändern, Sie sollten sie aber in Ihren Konfigurationsdateien verwenden
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
 
-Da diese Datei nur beim Starten des Dienstes eingeschlossen wird.  Um Änderungen aufzunehmen, ist ein Neustart des Dienstes erforderlich.  Das bedeutet, dass eine Neuladung nicht ausreicht, sondern stattdessen ein Neustart erforderlich ist
+Da diese Datei nur beim Starten des Dienstes aufgenommen wird, ist ein Neustart des Dienstes erforderlich, um Änderungen zu übernehmen. Das bedeutet, dass ein Neuladen nicht ausreicht, sondern wirklich ein Neustart erforderlich ist.
 </div>
 
 ### Variablendateien (`.vars`)
 
-Benutzerdefinierte Variablen, die von Ihrem Code bereitgestellt werden, sollten in `.vars` Dateien im Verzeichnis `/etc/httpd/conf.d/variables/`
+Benutzerdefinierte Variablen, die von Ihrem Code bereitgestellt werden, sollten in `.vars`-Dateien innerhalb des Verzeichnisses `/etc/httpd/conf.d/variables/` gespeichert werden.
 
-Diese Dateien können beliebige benutzerdefinierte Variablen enthalten. Syntaxbeispiele finden Sie in den folgenden Beispieldateien
+Diese Dateien können beliebige benutzerdefinierte Variablen enthalten. Einige Syntaxbeispiele finden Sie in den folgenden Beispieldateien:
 
 `/etc/httpd/conf.d/variables/weretail_domains_dev.vars`:
 
@@ -177,42 +177,42 @@ Define WERETAIL_DOMAIN www.weretail.com
 Define WERETAIL_ALT_DOMAIN www..weretail.net
 ```
 
-Bei der Erstellung Ihrer eigenen Variablen benennen Sie sie anhand ihres Inhalts und folgen Sie den im Handbuch angegebenen Benennungsstandards. [here](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html#naming-convention).  Im obigen Beispiel können Sie sehen, dass die Variablendatei die verschiedenen DNS-Einträge als Variablen hostet, die in den Konfigurationsdateien verwendet werden sollen.
+Wenn Sie Ihre eigenen Variablendateien erstellen, benennen Sie sie entsprechend ihrem Inhalt und halten Sie sich an die im Handbuch [hier](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html?lang=de#naming-convention) angegebenen Namensstandards. Im obigen Beispiel können Sie sehen, dass die Variablendatei die verschiedenen DNS-Einträge als Variablen hostet, die in den Konfigurationsdateien verwendet werden sollen.
 
 ## Verwenden von Variablen
 
 Nachdem Sie Ihre Variablen in Ihren Variablendateien definiert haben, sollten Sie wissen, wie Sie sie in Ihren anderen Konfigurationsdateien ordnungsgemäß verwenden können.
 
-Wir verwenden das Beispiel `.vars` -Dateien aus dem obigen Abschnitt, um einen geeigneten Anwendungsfall zu veranschaulichen.
+Zur Veranschaulichung eines geeigneten Anwendungsfalls werden wir die oben genannten `.vars`-Dateien verwenden.
 
-Wir möchten alle umgebungsbasierten Variablen global einbeziehen. Wir werden die Datei erstellen `/etc/httpd/conf.d/000_load_env_vars.conf`
+Da wir alle Umgebungsvariablen global einbeziehen wollen, erstellen wir die Datei `/etc/httpd/conf.d/000_load_env_vars.conf`
 
 ```
 IncludeOptional /etc/httpd/conf.d/variables/*_${ENV_TYPE}.vars
 IncludeOptional /etc/httpd/conf.d/variables/*_${RUNMODE}.vars
 ```
 
-Wir wissen, dass der HTTPD-Dienst beim Start die von AMS festgelegten Variablen in abruft `/etc/sysconfig/httpd` und verfügt über den Variablensatz von `ENV_TYPE` und `RUNMODE`
+Wir wissen, dass der httpd-Dienst beim Starten die von AMS in `/etc/sysconfig/httpd` gesetzten Variablen einzieht und die Variablen `ENV_TYPE` und `RUNMODE` enthält.
 
-Wenn diese globale `.conf` -Datei abgerufen wird, wird sie frühzeitig abgerufen, da die Include-Reihenfolge der Dateien in `conf.d` ist alphanumerische Ladereihenfolge bedeutet 000 im Dateinamen, dass er vor den anderen Dateien im Verzeichnis geladen wird.
+Wenn diese globale Datei `.conf` eingefügt wird, wird sie frühzeitig eingefügt, da die Reihenfolge der Dateien in `conf.d` eine alphanumerische Ladereihenfolge ist, d. h. 000 im Dateinamen stellt sicher, dass sie vor den anderen Dateien im Verzeichnis geladen wird.
 
-Die Include-Anweisung verwendet auch eine Variable im Dateinamen.  Dadurch kann sich ändern, welche Datei tatsächlich geladen wird, basierend darauf, welcher Wert in der Variablen `ENV_TYPE` und `RUNMODE` Variablen.
+Die include-Anweisung verwendet ebenfalls eine Variable im Dateinamen. Dadurch kann sich ändern, welche Datei tatsächlich geladen wird, basierend darauf, welcher Wert in den Variablen `ENV_TYPE` und `RUNMODE` steht.
 
-Wenn die Variable `ENV_TYPE` Wert ist `dev` dann wird die Datei verwendet:
+Wenn der `ENV_TYPE`-Wert `dev` ist, wird die folgende Datei verwendet:
 
 `/etc/httpd/conf.d/variables/weretail_domains_dev.vars`
 
-Wenn die Variable `ENV_TYPE` Wert ist `stage` dann wird die Datei verwendet:
+Wenn der `ENV_TYPE`-Wert `stage` ist, wird die folgende Datei verwendet:
 
 `/etc/httpd/conf.d/variables/weretail_domains_stage.vars`
 
-Wenn die Variable `RUNMODE` Wert ist `preview` dann wird die Datei verwendet:
+Wenn der `RUNMODE`-Wert `preview` ist, wird die folgende Datei verwendet:
 
 `/etc/httpd/conf.d/variables/weretail_domains_preview.vars`
 
 Wenn diese Datei eingeschlossen wird, können wir die darin gespeicherten Variablennamen verwenden.
 
-In unserem `/etc/httpd/conf.d/available_vhosts/weretail.vhost` -Datei können wir die normale Syntax austauschen, die nur für dev funktioniert hat:
+In unserer `/etc/httpd/conf.d/available_vhosts/weretail.vhost`-Datei können wir die normale Syntax austauschen, die nur für die Entwicklung funktioniert:
 
 ```
 <VirtualHost *:80> 
@@ -220,7 +220,7 @@ In unserem `/etc/httpd/conf.d/available_vhosts/weretail.vhost` -Datei können 
  ServerAlias dev.weretail.net
 ```
 
-Mit einer neueren Syntax, die die Leistungsfähigkeit von Variablen nutzt, um für Entwicklung, Staging und Produktion zu funktionieren:
+Wir ersetzen sie durch eine neuere Syntax, die die Leistungsfähigkeit von Variablen nutzt, um für Entwicklung, Staging und Produktion zu funktionieren:
 
 ```
 <VirtualHost *:80> 
@@ -228,37 +228,37 @@ Mit einer neueren Syntax, die die Leistungsfähigkeit von Variablen nutzt, um f�
  ServerAlias ${WERETAIL_ALT_DOMAIN}
 ```
 
-In unserem `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any` -Datei können wir die normale Syntax austauschen, die nur für dev funktioniert hat:
+In unserer `/etc/httpd/conf.dispatcher.d/vhosts/weretail_vhosts.any`-Datei können wir die normale Syntax austauschen, die nur für die Entwicklung funktioniert:
 
 ```
 "dev.weretail.com" 
 "dev.weretail.net"
 ```
 
-Mit einer neueren Syntax, die die Leistungsfähigkeit von Variablen nutzt, um für Entwicklung, Staging und Produktion zu funktionieren:
+Wir ersetzen sie durch eine neuere Syntax, die die Leistungsfähigkeit von Variablen nutzt, um für Entwicklung, Staging und Produktion zu funktionieren:
 
 ```
 "${WERETAIL_DOMAIN}" 
 "${WERETAIL_ALT_DOMAIN}"
 ```
 
-Diese Variablen können sehr häufig wiederverwendet werden, um laufende Einstellungen zu individualisieren, ohne dass je Umgebung unterschiedliche bereitgestellte Dateien benötigt werden.  Im Grunde nehmen Sie Ihre Konfigurationsdateien mit Variablen als Vorlage vor und schließen Dateien ein, die auf Variablen basieren.
+Diese Variablen können sehr häufig wiederverwendet werden, um laufende Einstellungen zu individualisieren, ohne dass für jede Umgebung unterschiedliche Dateien bereitgestellt werden müssen. Im Wesentlichen gestalten Sie Ihre Konfigurationsdateien mithilfe von Variablen und include-Dateien auf der Grundlage von Variablen.
 
 ## Anzeigen von Variablenwerten
 
-Manchmal müssen wir bei der Verwendung von Variablen suchen, um zu sehen, welche Werte in unseren Konfigurationsdateien enthalten sein könnten.  Es gibt eine Möglichkeit, die aufgelösten Variablen anzuzeigen, indem Sie die folgenden Befehle auf dem Server ausführen:
+Bei der Verwendung von Variablen müssen wir manchmal nachsehen, welche Werte in unseren Konfigurationsdateien stehen könnten. Es gibt eine Möglichkeit, die aufgelösten Variablen anzuzeigen, indem Sie die folgenden Befehle auf dem Server ausführen:
 
 ```
 source /etc/sysconfig/httpd;/sbin/httpd -S | grep Define | grep "="
 ```
 
-Wie die Variablen in Ihrer kompilierten Apache-Konfiguration aussahen:
+So sahen die Variablen in Ihrer kompilierten Apache-Konfiguration aus:
 
 ```
 $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_CONFIG | grep -v "#"
 ```
 
-Aussehen der Variablen in Ihrer kompilierten Dispatcher-Konfiguration:
+So sahen die Variablen in Ihrer kompilierten Dispatcher-Konfiguration aus:
 
 ```
 $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_ANY
@@ -291,4 +291,4 @@ $ source /etc/sysconfig/httpd;/sbin/httpd -t -D DUMP_ANY | grep docroot
 /docroot "/mnt/var/www/html"
 ```
 
-[Nächste -> Flushing](./disp-flushing.md)
+[Weiter -> Flushing](./disp-flushing.md)
