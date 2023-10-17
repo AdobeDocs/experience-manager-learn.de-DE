@@ -1,7 +1,7 @@
 ---
 title: Übersetzungsprojekte
 seo-title: Translation Projects
-description: Erfahren Sie, wie Sie ein Übersetzungsprojekt für Ihre Sprachkopie erstellen, bearbeiten und verwalten.
+description: Erstellen, Bearbeiten und Verwalten eines Übersetzungsprojekts für eine Sprachkopie
 seo-description: Learn how to create, edit and manage a translation project for your Language Copy.
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
@@ -16,14 +16,14 @@ role: User
 level: Beginner
 exl-id: 1e406454-885d-4215-9304-13e476788c2c
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '32'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
 # Übersetzungsprojekte {#translation-projects}
 
-Erfahren Sie, wie Sie ein Übersetzungsprojekt für Ihre Sprachkopie erstellen, bearbeiten und verwalten.
+Erstellen, Bearbeiten und Verwalten eines Übersetzungsprojekts für eine Sprachkopie
 
 >[!VIDEO](https://video.tv.adobe.com/v/36486?quality=12&learn=on)
