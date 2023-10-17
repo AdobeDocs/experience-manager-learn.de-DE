@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren des adaptiven Formulars für Trigger AEM Workflow - Übersicht
-description: Konfigurieren von Payload-Optionen beim Auslösen AEM Workflows bei der Formularübermittlung
+title: Konfigurieren eines adaptiven Formulars zum Auslösen von AEM-Workflows – Übersicht
+description: Konfigurieren von Payload-Optionen beim Auslösen von AEM-Workflows bei der Formularübermittlung
 feature: Workflow
 topics: integrations
 audience: developer
@@ -15,34 +15,34 @@ level: Beginner
 exl-id: 9f1dbd02-774a-4b84-90fa-02d4e468cbac
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '165'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
-# Konfigurieren des Workflows &quot;Adaptives Formular für Trigger AEM&quot;
+# Konfigurieren adaptiver Formulare zum Auslösen eines AEM-Workflows 
 
 ## Voraussetzungen
 
-Das in diesem Workflow verwendete Beispielformular basiert auf einer benutzerdefinierten adaptiven Formularvorlage, die in Ihren AEM importiert werden muss. Das bereitgestellte Beispielformular muss nach dem Import der Vorlage importiert werden.
+Das in diesem Workflow verwendete Beispielformular basiert auf einer benutzerdefinierten adaptiven Formularvorlage, die in Ihren AEM-Server importiert werden muss. Das bereitgestellte Beispielformular muss nach dem Import der Vorlage importiert werden.
 
-### Adaptive Formularvorlagen abrufen
+### Abrufen der adaptiven Formularvorlagen
 
-* Download [Adaptive Formularvorlage](assets/af-form-template.zip)
-* [Importieren Sie die Vorlage mit Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
-* Hochladen und Installieren der adaptiven Formularvorlage
+* Laden Sie die [adaptive Formularvorlage](assets/af-form-template.zip) herunter.
+* [Importieren Sie die Vorlage mit Package Manager.](http://localhost:4502/crx/packmgr/index.jsp)
+* Laden Sie die adaptive Formularvorlage hoch und installieren Sie sie.
 
 ### Abrufen des adaptiven Beispielformulars
 
-* Download [Adaptives Formular](assets/peak-application-form.zip)
-* Navigieren Sie zu [Formular und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
-* Klicken Sie auf Erstellen > Datei-Upload .
-* Das adaptive Beispielformular wird in einem Ordner namens [Application Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms)
+* Laden Sie das [adaptive Formular](assets/peak-application-form.zip) herunter.
+* Navigieren Sie zu [Formulare und Dokumente](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
+* Klicken Sie auf „Erstellen“ > „Datei hochladen“.
+* Das adaptive Beispielformular wird in einem Ordner namens [Application Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms) hinterlegt.
 
-Im folgenden Video wird erläutert, wie Sie ein adaptives Formular so konfigurieren, dass es in einen AEM Workflow Trigger wird
+Im folgenden Video wird erläutert, wie Sie ein adaptives Formular so konfigurieren, dass es einen AEM-Workflow auslöst.
 >[!VIDEO](https://video.tv.adobe.com/v/40258?quality=12&learn=on)
 
-Das folgende Video zeigt die Workflow-Payload und andere Details im CRX-Repository
+Das folgende Video zeigt die Payload des Workflows und andere Details im CRX-Repository.
 
 >[!VIDEO](https://video.tv.adobe.com/v/40259?quality=12&learn=on)
