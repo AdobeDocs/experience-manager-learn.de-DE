@@ -1,6 +1,6 @@
 ---
-title: Schritte zur Fehlerbehebung bei OpenOffice-spezifischen Problemen bei einem Unix-Setup
-description: Fehlerbehebung bei OpenOffice-Problemen mit PDF Generator-Problemen bei der UNIX-Einrichtung.
+title: Schritte zur Fehlerbehebung bei OpenOffice-spezifischen Problemen unter Unix
+description: Beheben Sie OpenOffice-Probleme mit PDF Generator unter Unix.
 type: Troubleshooting
 role: Developer
 level: Intermediate
@@ -10,14 +10,14 @@ topic: Development
 index: y
 exl-id: bc86dda1-18a4-474b-a8ec-d4e7f15ddd10
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '49'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Schritte zur Fehlerbehebung bei OpenOffice-spezifischen Fehlern bei einem Unix-Setup
+# Schritte zur Fehlerbehebung bei OpenOffice-spezifischen Problemen unter Unix
 
-*In diesem Video wird die Fehlerbehebung für OpenOffice-spezifische Fehler bei der Unix-Einrichtung für AEM Forms PDFG erläutert.*
+*In diesem Video wird die Fehlerbehebung für OpenOffice-spezifische Probleme unter Unix für AEM Forms PDFG erläutert.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335551?quality=12&learn=on)
