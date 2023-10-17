@@ -7,7 +7,7 @@ role: Developer
 level: Beginner
 exl-id: b33d1509-531d-40c3-9b26-1d18c8d86a97
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '465'
 ht-degree: 100%
 
@@ -62,6 +62,7 @@ Da AEM Content Services aus der Konfiguration (Inhaltsfragmentmodelle, bearbeitb
 1. Stellen Sie in einem neuen Webbrowser sicher, dass Sie von der AEM Publish abgemeldet sind und fordern Sie die folgenden URLs an (`http://localhost:4503` durch irgendeinen Host:Port ersetzen, auf dem AEM Publish ausgeführt wird).
 
    * [http://localhost:4503/content/wknd-mobile/en/api/events.model.json](http://localhost:4503/content/wknd-mobile/en/api/events.model.tidy.json)
+
    Diese Anfragen sollten dieselbe JSON-Antwort zurückgeben wie bei der Überprüfung der entsprechenden AEM Author-Endpunkte. Wenn dies nicht der Fall ist, stellen Sie sicher, dass alle Veröffentlichungen erfolgreich waren (überprüfen Sie die Replikations-Warteschlangen), das [!DNL WKND Mobile] `ui.apps`-Paket auf der AEM Publish installiert ist und überprüfen Sie das `error.log` für AEM Publish.
 
 ## Nächster Schritt
