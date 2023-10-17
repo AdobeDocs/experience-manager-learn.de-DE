@@ -1,6 +1,6 @@
 ---
-title: AEM Service-Anmeldedaten
-description: Laden Sie die Anmeldedaten für den Dienst von AEM Developer Console herunter.
+title: AEM Service-Anmeldeinformationen
+description: Laden Sie die Service-Anmeldeinformationen von der AEM Developer Console herunter.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,16 +10,16 @@ topic: Development
 kt: 9980
 exl-id: 4c5173f1-d57d-43ac-83e6-399ce4ead203
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '109'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Dienstberechtigungen
+# Service-Anmeldeinformationen
 
-Integrationen mit AEM as a Cloud Service müssen sich sicher bei AEM authentifizieren können. AEM Developer Console generiert Service-Anmeldeinformationen, die von externen Anwendungen, Systemen und Diensten verwendet werden, um programmgesteuert mit AEM Author- oder Publish-Diensten über HTTP zu interagieren.
+Integrationen in AEM as a Cloud Service müssen in der Lage sein, sich sicher bei AEM zu authentifizieren. Developer Console von AEM generiert Service-Anmeldeinformationen, die von externen Anwendungen, Systemen und Services verwendet werden, um programmgesteuert mit dem AEM Author- oder Publish-Service über HTTP zu interagieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
-Die heruntergeladene Datei mit den Dienstanmeldeinformationen wird in der bereitgestellten Eclipse als Ressourcendatei mit dem Namen service_token.json gespeichert. Die Werte in der Datei service_token werden verwendet, um das JWT zu generieren und das JWT gegen ein Zugriffstoken auszutauschen. Die Dienstprogrammklasse GetServiceCredentials wird verwendet, um die Eigenschaftswerte aus der Ressourcendatei service_token.json abzurufen.
+Die heruntergeladene Datei mit den Service-Anmeldeinformationen wird in der bereitgestellten Eclipse als Ressourcendatei mit dem Namen „service_token.json“ gespeichert. Die Werte in der Datei „service_token“ werden verwendet, um das JWT zu generieren und das JWT gegen ein Zugriffs-Token auszutauschen. Die Dienstprogrammklasse „GetServiceCredentials“ wird zum Abrufen der Eigenschaftswerte aus der Ressourcendatei „service_token.json“ verwendet.
