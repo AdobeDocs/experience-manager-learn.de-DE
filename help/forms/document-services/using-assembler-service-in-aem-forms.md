@@ -1,6 +1,6 @@
 ---
 title: Verwenden des Assembler-Dienstes in AEM Forms
-description: Assembler-Dienst in AEM Forms zum Zusammenführen mehrerer PDF-Dateien verwenden
+description: Zusammenstellen mehrerer PDF-Dateien mit dem Assembler-Dienst in AEM Forms
 feature: Assembler
 version: 6.4,6.5
 topic: Development
@@ -9,15 +9,15 @@ level: Experienced
 exl-id: 18da12ea-b1ea-48e4-979e-3cb59584dfbd
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '207'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
 # Verwenden des Assembler-Dienstes in AEM Forms{#using-assembler-service-in-aem-forms}
 
-In diesem Artikel finden Sie die Assets, die zeigen, wie Sie mehrere PDF-Dateien per Drag-and-Drop in den Browser ziehen und die assemblierte PDF-Datei in Ihrem Dateisystem speichern können. Im Folgenden finden Sie den Code für das Servlet, das die mit dem Browser hochgeladenen PDF-Dateien zusammenstellt.
+In diesem Artikel finden Sie die Assets, mit denen Sie mehrere PDF-Dateien in den Browser ziehen und die zusammengestellte PDF-Datei in Ihrem Dateisystem speichern können. Im Folgenden finden Sie den Code für das Servlet, das mithilfe des Browsers die hochgeladenen PDF-Dateien zusammenstellt.
 
 ```java
 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
@@ -100,27 +100,26 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 }
 ```
 
-So können Sie diese Funktion auf Ihrem AEM-Server verwenden
+Sie können diese Funktion wie folgt auf Ihrem AEM-Server verwenden:
 
-* Laden Sie die [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) auf Ihr lokales System.
-* Laden Sie das Paket hoch und installieren Sie es mithilfe des [Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
-* Download[Custom Document Services Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* Download [Entwickeln mit Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* Stellen Sie die Bundles bereit und starten Sie sie mit dem [Felix-Webkonsole](http://localhost:4502/system/console/bundles)
-* Zeigen Sie Ihren Browser auf [AssemblePdfs.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
-* Ziehen Sie einige Dateien mit PDF-Dateien per Drag-and-Drop
+* Laden Sie die Datei [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) auf Ihr lokales System herunter.
+* Verwenden Sie [Package Manager](http://localhost:4502/crx/packmgr/index.jsp), um das Paket hochzuladen und zu installieren.
+* Laden Sie das [Bundle für benutzerdefinierte Dokumentendienste](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar) herunter.
+* Laden Sie das Bundle zur [Entwicklung mit Dienstbenutzenden](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar) herunter.
+* Stellen Sie die Bundles bereit und starten Sie sie mithilfe der [Felix-Web-Konsole](http://localhost:4502/system/console/bundles).
+* Verweisen Sie Ihren Browser auf [AssemblePdfs.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html).
+* Legen Sie einige PDF-Dateien per Drag &amp; Drop ab.
 
 >[!NOTE]
 >
->Stellen Sie sicher, dass die AEM Forms-Installation abgeschlossen ist. Alle Pakete müssen sich im aktiven Status befinden.
+>Stellen Sie sicher, dass Sie Ihre AEM Forms-Installation abgeschlossen haben. Alle Bundles müssen sich in einem aktiven Status befinden.
 >
->Stellen Sie sicher, dass Sie - Boot Delegate RSA- und BouncyCastle-Bibliotheken hinzugefügt haben, wie in diesem [Installieren von AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
+>Stellen Sie sicher, dass Sie Boot Delegate RSA und BouncyCastle-Bibliotheken hinzugefügt haben, wie unter [Installieren von AEM Forms](https://helpx.adobe.com/de/aem-forms/6-3/installing-configuring-aem-forms-osgi.html) beschrieben.
 >
 >**Einschränkungen für diese Demo**
 >
-> * Der Code verarbeitet keine XFA-basierten PDF-Dokumente
+> * Der Code verarbeitet keine XFA-basierten PDF-Dokumente.
 >
-> * Stellen Sie sicher, dass Sie nur PDF-Dateien per Drag-and-Drop verschieben
+> * Stellen Sie sicher, dass Sie nur PDF-Dateien per Drag &amp; Drop ablegen.
 >
 >
-
