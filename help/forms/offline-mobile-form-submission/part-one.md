@@ -1,7 +1,7 @@
 ---
-title: Trigger AEM Workflow beim Übermitteln von HTML5-Formularen - Erstellen eines benutzerdefinierten Profils
+title: Auslösen des AEM-Workflows beim Übermitteln von HTML5-Formularen – Erstellen eines benutzerdefinierten Profils
 seo-title: Trigger AEM Workflow on HTML5 Form Submission
-description: Fahren Sie mit dem Ausfüllen des mobilen Formulars im Offline-Modus fort und senden Sie das mobile Formular an den Trigger AEM Workflow
+description: Fahren Sie mit dem Ausfüllen des Mobile-Formulars im Offline-Modus fort und übermitteln Sie das Mobile-Formular, um den AEM-Workflow auszulösen.
 seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
 feature: Mobile Forms
 topics: development
@@ -14,23 +14,23 @@ role: Developer
 level: Experienced
 exl-id: b6e3acee-4a07-4d00-b3a1-f7aedda21e6e
 source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '323'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Benutzerdefiniertes Profil erstellen
+# Erstellen eines benutzerdefinierten Profils
 
-In diesem Teil erstellen wir eine [benutzerdefiniertes Profil.](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) Ein Profil ist für die Wiedergabe der XDP als HTML verantwortlich. Ein Standardprofil wird standardmäßig bereitgestellt, um XDPs als HTML zu rendern. Es stellt eine angepasste Version des Mobile Forms Rendition-Diensts dar. Sie können den Mobile Form Rendition-Dienst verwenden, um Erscheinungsbild, Verhalten und Interaktionen von Mobile Forms anzupassen. In unserem benutzerdefinierten Profil erfassen wir die im Mobile-Formular ausgefüllten Daten mithilfe der guidebridge-API. Diese Daten werden dann an ein benutzerdefiniertes Servlet gesendet, das dann eine interaktive PDF generiert und an die aufrufende Anwendung streamt.
+In diesem Teil erstellen wir ein [benutzerdefiniertes Profil.](https://helpx.adobe.com/de/livecycle/help/mobile-forms/creating-profile.html) Ein Profil ist für das Rendern der XDP als HTML verantwortlich. Ein vorkonfiguriertes Standardprofil wird bereitgestellt, um XDPs als HTML zu rendern. Es stellt eine angepasste Version des Ausgabedarstellungsdienstes für Mobile-Formulare dar. Sie können den Ausgabedarstellungsdienst für Mobile-Formulare verwenden, um Erscheinungsbild, Verhalten und Interaktionen von Mobile-Formularen anzupassen. In unserem benutzerdefinierten Profil erfassen wir die im Mobile-Formular ausgefüllten Daten mithilfe der GuideBridge-API. Diese Daten werden dann an ein benutzerdefiniertes Servlet gesendet, das daraufhin eine interaktive PDF generiert und diese an die aufrufende Anwendung streamt.
 
-Rufen Sie die Formulardaten mit dem `formBridge` JavaScript-API. Wir nutzen die `getDataXML()` -Methode:
+Rufen Sie die Formulardaten mit der `formBridge`-JavaScript-API ab. Wir nutzen die Methode `getDataXML()`:
 
 ```javascript
 window.formBridge.getDataXML({success:suc,error:err});
 ```
 
-In der Erfolgshandler-Methode rufen wir ein benutzerdefiniertes Servlet auf, das in AEM ausgeführt wird. Dieses Servlet gibt interaktive PDF-Dateien mit den Daten aus dem mobilen Formular wieder und gibt sie zurück
+In der Erfolgs-Handler-Methode rufen wir ein benutzerdefiniertes Servlet auf, das in AEM ausgeführt wird. Dieses Servlet rendert interaktive PDF-Dateien mit den Daten aus dem Mobile-Formular und gibt sie zurück
 
 ```javascript
 var suc = function(obj) {
@@ -61,9 +61,9 @@ var suc = function(obj) {
 }
 ```
 
-## Interaktive PDF generieren
+## Generieren einer interaktiven PDF
 
-Im Folgenden finden Sie den Servlet-Code, der für das Rendern interaktiver PDF-Dateien und die Rückgabe des PDF-Dokuments an die aufrufende Anwendung verantwortlich ist. Das Servlet ruft `mobileFormToInteractivePdf` -Methode des benutzerdefinierten DocumentServices-OSGi-Dienstes.
+Im Folgenden finden Sie den Servlet-Code, der für das Rendern interaktiver PDF-Dateien und die Rückgabe des PDF-Dokuments an die aufrufende Anwendung verantwortlich ist. Das Servlet ruft die Methode `mobileFormToInteractivePdf` des benutzerdefinierten DocumentServices-OSGi-Dienstes auf.
 
 ```java
 import java.io.File;
@@ -123,9 +123,9 @@ public class GenerateInteractivePDF extends SlingAllMethodsServlet {
 }
 ```
 
-### Interaktive PDF rendern
+### Rendern einer interaktiven PDF
 
-Der folgende Code verwendet die [Forms-Dienst-API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) um interaktive PDF mit den Daten aus dem mobilen Formular zu rendern.
+Der folgende Code verwendet die [Forms-Service-API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html), um interaktive PDFs mit den Daten aus dem Mobile-Formular zu rendern.
 
 ```java
 public Document mobileFormToInteractivePdf(Document xmlData,String path) {
@@ -148,7 +148,7 @@ public Document mobileFormToInteractivePdf(Document xmlData,String path) {
 }
 ```
 
-So zeigen Sie die Möglichkeit zum Herunterladen interaktiver PDF von teilweise ausgefülltem Mobilformular an: [Bitte klicken Sie hier](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content).
-Nach dem Herunterladen der PDF besteht der nächste Schritt darin, die PDF an Trigger und einen AEM Workflow zu senden. Dieser Workflow führt die Daten aus der gesendeten PDF zusammen und generiert eine nicht interaktive PDF zur Überprüfung.
+Um die Möglichkeit zum Herunterladen einer interaktiven PDF von teilweise ausgefüllten Mobile-Formularen anzusehen, [klicken Sie hier](https://forms.enablementadobe.com/content/dam/formsanddocuments/xdptemplates/schengenvisa.xdp/jcr:content).
+Nach dem Herunterladen der PDF besteht der nächste Schritt darin, die PDF zu übermitteln, um einen AEM-Workflow auszulösen. Dieser Workflow führt die Daten aus der gesendeten PDF zusammen und generiert eine nicht-interaktive PDF zur Überprüfung.
 
 Das für diesen Anwendungsfall erstellte benutzerdefinierte Profil ist als Teil dieses Tutorials verfügbar.
