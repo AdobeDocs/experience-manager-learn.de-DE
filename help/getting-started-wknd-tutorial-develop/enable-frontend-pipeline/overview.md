@@ -13,13 +13,13 @@ index: y
 recommendations: disable
 thumbnail: 53409343.jpg
 last-substantial-update: 2022-09-23T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: b795e7e8-f611-4fc3-9846-1d3f1a28ccbc
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '490'
 ht-degree: 100%
 
 ---
-
 
 # Aktivieren der Frontend-Pipeline für den standardmäßigen AEM-Projektarchetyp{#enable-front-end-pipeline-standard-aem-project}
 
@@ -28,7 +28,7 @@ Erfahren Sie, wie Sie das [AEM-WKND-Sites-Projekt](https://github.com/adobe/aem-
 
 In Adobe Cloud Manager wird eine neue Frontend-Pipeline erstellt, die `ui.frontend`-Artefakte nur erstellt und dem integrierten CDN bereitstellt und AEM über den entsprechenden Speicherort informiert. In AEM verweisen während der HTML-Erstellung der Web-Seite die Tags `<link>` und `<script>` auf diesen Artefaktspeicherort im Attributwert `href`.
 
-Nach der Nach der Konversion des AEM-Projekts „WKND Sites“ können die Frontend-Entwicklerinnen und -Entwickler getrennt von und parallel zu jeder Full-Stack-Backend-Entwicklung in AEM arbeiten, die über eigene Implementierungs-Pipelines verfügt.
+Nach der Nach der Konversion des AEM-Projekts „WKND Sites“ können die Frontend-Entwicklerinnen und -Entwickler getrennt von und parallel zu jeder Full-Stack-Backend-Entwicklung in AEM arbeiten, die über eigene Bereitstellungs-Pipelines verfügt.
 
 >[!IMPORTANT]
 >
@@ -44,11 +44,11 @@ Ein damit zusammenhängendes [mehrstufiges Tutorial](https://experienceleague.ad
 
 >[!NOTE]
 >
->Dies gilt nur für AEM as a Cloud Service und nicht für AMS-basierte Adobe Cloud Manager-Implementierungen.
+>Dies gilt nur für AEM as a Cloud Service und nicht für AMS-basierte Adobe Cloud Manager-Bereitstellungen.
 
 ## Voraussetzungen
 
-Der Implementierungsschritt in diesem Tutorial findet in Adobe Cloud Manager statt. Stellen Sie sicher, dass Sie über eine Rolle __Implementierungs-Manager__ verfügen (siehe die [Rollendefinitionen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=de#role-definitions) für Cloud-Manager).
+Der Bereitstellungsschritt in diesem Tutorial findet in Adobe Cloud Manager statt. Stellen Sie sicher, dass Sie über eine Rolle __Bereitstellungs-Manager__ verfügen (siehe die [Rollendefinitionen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=de#role-definitions) für Cloud-Manager).
 
 Stellen Sie sicher, dass Sie beim Abschluss dieses Tutorials das [Sandbox-Programm](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html?lang=de) und die [Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=de) verwenden.
 
@@ -57,4 +57,3 @@ Stellen Sie sicher, dass Sie beim Abschluss dieses Tutorials das [Sandbox-Progra
 Ein schrittweises Tutorial führt Sie durch die Konversion des[AEM-WKND-Sites-Projekts](https://github.com/adobe/aem-guides-wknd), um diese für die Frontend-Pipeline zu aktivieren.
 
 Worauf warten Sie noch? Starten Sie das Tutorial, indem Sie zum Kapitel [Überprüfen des Full-Stack-Projekts](review-uifrontend-module.md) navigieren und den Lebenszyklus für die Frontend-Entwicklung im Kontext des standardmäßigen AEM Sites-Projekts nochmals durchgehen.
-
