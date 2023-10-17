@@ -134,7 +134,7 @@ Als Nächstes veröffentlichen wir die Änderungen.
 
 Navigieren Sie anschließend zum Veröffentlichungs-Service, um die Änderungen anzuzeigen.
 
-1. Eine einfache Möglichkeit, die URL des Veröffentlichungs-Service abzurufen, besteht darin, die Autoren-URL zu kopieren und `author` durch das Wort `publish` zu ersetzen. Beispiel:
+1. Eine einfache Möglichkeit, die URL des Veröffentlichungs-Service abzurufen, besteht darin, die Autoren-URL zu kopieren und `author` durch das Wort `publish` zu ersetzen. Zum Beispiel:
 
    * **Autoren-URL** – `https://author-pYYYY-eXXXX.adobeaemcloud.com/`
    * **Veröffentlichungs-URL** – `https://publish-pYYYY-eXXXX.adobeaemcloud.com/`
