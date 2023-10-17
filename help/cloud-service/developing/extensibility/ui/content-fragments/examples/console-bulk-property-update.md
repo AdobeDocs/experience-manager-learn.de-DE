@@ -1,6 +1,6 @@
 ---
-title: Beispiel für die Aktualisierung einer Masseneigenschaft AEM Inhaltsfragment-Konsolenerweiterung
-description: Ein Beispiel AEM Content Fragments Console-Erweiterung, das eine Eigenschaft von Inhaltsfragmenten stapelweise aktualisiert.
+title: Beispiel für die stapelweise Aktualisierung einer Eigenschaft einer AEM-Inhaltsfragmentkonsolenerweiterung
+description: Ein Beispiel einer AEM-Inhaltsfragmentkonsolenerweiterung, in dem eine Eigenschaft von Inhaltsfragmenten stapelweise aktualisiert wird.
 feature: Developer Tools, Content Fragments
 version: Cloud Service
 topic: Development
@@ -12,72 +12,72 @@ doc-type: article
 last-substantial-update: 2022-12-09T00:00:00Z
 exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
 source-git-commit: 6b5c755bd8fe6bbf497895453b95eb236f69d5f6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '808'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# Beispielerweiterung für Masseneigenschaftsaktualisierung
+# Stapelweise Aktualisierung einer Eigenschaft – Beispiel für eine Erweiterung
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
 
-Dieses Beispiel AEM die Erweiterung der Inhaltsfragmentkonsole ist eine [Aktionsleiste](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) -Erweiterung, die eine Inhaltsfragment-Eigenschaft stapelweise in einen gemeinsamen Wert aktualisiert.
+Diese beispielhafte AEM-Inhaltsfragmentkonsolenerweiterung ist eine [Aktionsleistenerweiterung](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/), bei der eine Inhaltsfragment-Eigenschaft stapelweise zu einem gemeinsamen Wert aktualisiert wird.
 
-Die Beispielerweiterung weist folgende Funktionen auf:
+Der Funktionsfluss der Beispielerweiterung lautet wie folgt:
 
 ![Adobe I/O Runtime-Aktionsfluss](./assets/bulk-property-update/flow.png){align="center"}
 
-1. Wählen Sie Inhaltsfragmente aus und klicken Sie auf die Schaltfläche der Erweiterung im [Aktionsleiste](#extension-registration) öffnet die [modal](#modal).
-2. Die [modal](#modal) zeigt ein benutzerdefiniertes Eingabeformular an, das mit [Reaktionsspektrum](https://react-spectrum.adobe.com/react-spectrum/).
-3. Beim Übermitteln des Formulars werden die Liste der ausgewählten Inhaltsfragmente und der AEM Host an die [Benutzerdefinierte Adobe I/O Runtime-Aktion](#adobe-io-runtime-action).
+1. Wählen Sie Inhaltsfragmente aus und klicken Sie auf die Schaltfläche der Erweiterung in der [Aktionsleiste](#extension-registration), um das [Modal](#modal) zu öffnen.
+2. Das [Modal](#modal) zeigt ein benutzerdefiniertes Eingabeformular an, das mit [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/) erstellt wurde.
+3. Beim Übermitteln des Formulars werden die Liste der ausgewählten Inhaltsfragmente und der AEM-Host an die [benutzerdefinierte Adobe I/O Runtime-Aktion](#adobe-io-runtime-action) gesendet.
 4. Die [Adobe I/O Runtime-Aktion](#adobe-io-runtime-action) validiert die Eingaben und sendet HTTP-PUT-Anfragen an AEM, um die ausgewählten Inhaltsfragmente zu aktualisieren.
-5. Eine Reihe von HTTP-PUT für jedes Inhaltsfragment, um die angegebene Eigenschaft zu aktualisieren.
+5. Eine Reihe von HTTP-PUTs für jedes Inhaltsfragment zum Aktualisieren der angegebenen Eigenschaft.
 6. AEM as a Cloud Service behält die Eigenschaft für Aktualisierungen des Inhaltsfragments bei und gibt Erfolgs- oder Fehlerantworten für die Adobe I/O Runtime-Aktion zurück.
-7. Das Modal erhielt die Antwort von der Adobe I/O Runtime-Aktion und zeigt eine Liste erfolgreicher Massenaktualisierungen an.
+7. Das Modal erhält die Antwort von der Adobe I/O Runtime-Aktion und zeigt eine Liste der erfolgreichen Massenaktualisierungen an.
 
 ## Erweiterungspunkt
 
-Dieses Beispiel erstreckt sich auf den Erweiterungspunkt `actionBar` , um der Inhaltsfragmentkonsole eine benutzerdefinierte Schaltfläche hinzuzufügen.
+Dieses Beispiel erstreckt sich auf den Erweiterungspunkt `actionBar`, um der Inhaltsfragmentkonsole eine benutzerdefinierte Schaltfläche hinzuzufügen.
 
-| AEM Benutzeroberfläche erweitert | Erweiterungspunkt |
+| Erweiterte AEM-Benutzeroberfläche | Erweiterungspunkt |
 | ------------------------ | --------------------- | 
-| [Inhaltsfragment-Konsole](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/?lang=de) | [Aktionsleiste](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) |
+| [Inhaltsfragmentkonsole](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [Aktionsleiste](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) |
 
 
 ## Beispielerweiterung
 
-In diesem Beispiel wird ein vorhandenes Adobe Developer Console-Projekt verwendet und die folgenden Optionen beim Initialisieren der App Builder-App über `aio app init`.
+In diesem Beispiel werden ein vorhandenes Adobe Developer Console-Projekt und die folgenden Optionen beim Initialisieren der App-Entwicklungs-App über `aio app init` verwendet.
 
 + Nach welchen Vorlagen suchen Sie?: `All Extension Points`
-+ Wählen Sie die zu installierenden Vorlagen aus:` @adobe/aem-cf-admin-ui-ext-tpl`
++ Wählen Sie die zu installierende(n) Vorlage(n) aus:` @adobe/aem-cf-admin-ui-ext-tpl`
 + Wie soll Ihre Erweiterung benannt werden?: `Bulk property update`
-+ Bitte geben Sie eine kurze Beschreibung Ihrer Erweiterung: `An example action bar extension that bulk updates a single property one or more content fragments.`
++ Bitte geben Sie eine kurze Beschreibung Ihrer Erweiterung an: `An example action bar extension that bulk updates a single property one or more content fragments.`
 + Mit welcher Version möchten Sie beginnen?: `0.0.1`
 + Was möchten Sie als Nächstes tun?
    + `Add a custom button to Action Bar`
-      + Geben Sie den Titel für die Schaltfläche an: `Bulk property update`
+      + Geben Sie die Bezeichnung für die Schaltfläche an: `Bulk property update`
       + Müssen Sie ein Modal für die Schaltfläche anzeigen? `y`
    + `Add server-side handler`
-      + Mit Adobe I/O Runtime können Sie bei Bedarf Server-losen Code aufrufen. Wie möchten Sie diese Aktion benennen: `generic`
+      + Mit Adobe I/O Runtime können Sie bei Bedarf Server-losen Code aufrufen. Wie möchten Sie diese Aktion benennen?: `generic`
 
-Die generierte App Builder-Erweiterung wird wie unten beschrieben aktualisiert.
+Die generierte App-Entwicklungs-Erweiterungs-App wird wie unten beschrieben aktualisiert.
 
 ### App-Routen{#app-routes}
 
-Die `src/aem-cf-console-admin-1/web-src/src/components/App.js` enthält die [React-Router](https://reactrouter.com/en/main).
+Die `src/aem-cf-console-admin-1/web-src/src/components/App.js` enthält den [React-Router](https://reactrouter.com/de/main).
 
-Es gibt zwei logische Routen:
+Es gibt zwei logische Routengruppen:
 
-1. Die erste Route ordnet Anforderungen der `index.html`, die die für die [Erweiterungsregistrierung](#extension-registration).
+1. Die erste Route ordnet Anfragen der `index.html` zu, die die React-Komponente aufruft, die für die [Erweiterungsregistrierung](#extension-registration) verantwortlich ist.
 
    ```javascript
    <Route index element={<ExtensionRegistration />} />
    ```
 
-1. Der zweite Satz von Routen ordnet URLs React-Komponenten zu, die den Inhalt des Modals der Erweiterung rendern. Die `:selection` param steht für einen durch Trennzeichen getrennten Listeninhaltsfragmentpfad.
+1. Der zweite Satz von Routen ordnet URLs React-Komponenten zu, die den Inhalt des Modals der Erweiterung rendern. Der `:selection`-Parameter steht für einen durch Trennzeichen getrennten Listeninhaltsfragmentpfad.
 
-   Wenn die Erweiterung über mehrere Schaltflächen zum Aufrufen diskreter Aktionen verfügt, wird jede [Erweiterungsregistrierung](#extension-registration) zugeordnet zu einer hier definierten Route.
+   Wenn die Erweiterung über mehrere Schaltflächen zum Aufrufen diskreter Aktionen verfügt, wird jede [Erweiterungsregistrierung](#extension-registration) einer der hier definierten Routen zugeordnet.
 
    ```javascript
    <Route
@@ -88,11 +88,11 @@ Es gibt zwei logische Routen:
 
 ### Registrierung der Erweiterung
 
-`ExtensionRegistration.js`, die der `index.html` route ist der Einstiegspunkt für die AEM-Erweiterung und definiert:
+Die der `index.html`-Route zugeordnete `ExtensionRegistration.js` ist der Einstiegspunkt für die AEM-Erweiterung und definiert Folgendes:
 
-1. Der Speicherort der Erweiterungsschaltfläche wird im AEM Authoring-Erlebnis (`actionBar` oder `headerMenu`)
-1. Die Definition der Erweiterungsschaltfläche in `getButton()` function
-1. Der Klick-Handler für die Schaltfläche im `onClick()` function
+1. Den Speicherort der Erweiterungsschaltfläche, der im AEM Authoring-Erlebnis angezeigt wird (`actionBar` oder `headerMenu`)
+1. Die Definition der Erweiterungsschaltfläche in der `getButton()`-Funktion
+1. Den Klick-Handler für die Schaltfläche in der `onClick()`-Funktion
 
 + `src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -142,20 +142,20 @@ function ExtensionRegistration() {
 
 ### Modal
 
-Jede Route der Erweiterung, wie in [`App.js`](#app-routes), wird einer React-Komponente zugeordnet, die im Modal der Erweiterung gerendert wird.
+Wie in [`App.js`](#app-routes) definiert, wird jede Route der Erweiterung einer React-Komponente zugeordnet, die im Modal der Erweiterung gerendert wird.
 
 In dieser Beispielanwendung gibt es eine modale React-Komponente (`BulkPropertyUpdateModal.js`) mit drei Status:
 
-1. Laden, was angibt, dass der Benutzer warten muss
-1. Das Formular für die Aktualisierung der Masseneigenschaft , über das der Benutzer den Eigenschaftsnamen und den zu aktualisierenden Wert angeben kann
-1. Die Antwort des Massen-Eigenschaftsaktualisierungsvorgangs mit einer Liste der Inhaltsfragmente, die aktualisiert wurden, und der Inhaltsfragmente, die nicht aktualisiert werden konnten
+1. Laden, was bedeutet, dass die Benutzenden warten müssen
+1. Das Formular für die stapelweise Aktualisierung einer Eigenschaft, in dem die Benutzenden den Eigenschaftsnamen und den zu aktualisierenden Wert angeben können
+1. Die Antwort des Vorgangs zur stapelweisen Aktualisierung der Eigenschaft mit einer Liste der Inhaltsfragmente, die aktualisiert wurden, und derjenigen, die nicht aktualisiert werden konnten
 
-Wichtig: Jede Interaktion mit AEM aus der Erweiterung sollte an eine [AppBuilder Adobe I/O Runtime-Aktion](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), bei dem es sich um einen separaten Server-losen Prozess handelt, der in ausgeführt wird. [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
-Adobe I/O Runtime-Aktionen zur Kommunikation mit AEM dienen dazu, Verbindungsprobleme zwischen Cross-Origin Resource Sharing (CORS) zu vermeiden.
+Wichtig: Jede Interaktion mit AEM über die Erweiterung sollte an eine [AppBuilder Adobe I/O Runtime-Aktion](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) delegiert werden, wobei es sich um einen separaten Server-losen Prozess handelt, der in [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/) abläuft.
+Adobe I/O Runtime-Aktionen zur Kommunikation mit AEM dienen dazu, Verbindungsprobleme wegen Cross-Origin Resource Sharing (CORS) zu vermeiden.
 
-Wenn das Formular für die Aktualisierung der Masseneigenschaft gesendet wird, wird ein benutzerdefinierter `onSubmitHandler()` ruft die Adobe I/O Runtime-Aktion auf und übergibt den aktuellen AEM-Host (Domäne) und das AEM Zugriffstoken des Benutzers, wodurch wiederum die [AEM Inhaltsfragment-API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=de) , um die Inhaltsfragmente zu aktualisieren.
+Wenn das Formular für die stapelweise Aktualisierung der Eigenschaft gesendet wird, ruft ein benutzerdefinierter `onSubmitHandler()` die Adobe I/O Runtime-Aktion auf und übergibt den aktuellen AEM-Host (Domain) und das AEM-Zugriffs-Token der Benutzenden, wodurch wiederum die [AEM-Inhaltsfragment-API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=de) aufgerufen wird, um die Inhaltsfragmente zu aktualisieren.
 
-Wenn die Antwort von der Adobe I/O Runtime-Aktion empfangen wird, wird das Modal aktualisiert, um die Ergebnisse des Massen-Eigenschaftsaktualisierungsvorgangs anzuzeigen.
+Wenn die Antwort der Adobe I/O Runtime-Aktion empfangen wird, wird das Modal aktualisiert, um die Ergebnisse des Vorgangs zur stapelweisen Aktualisierung der Eigenschaft anzuzeigen.
 
 + `src/aem-cf-console-admin-1/web-src/src/components/BulkPropertyUpdateModal.js`
 
@@ -414,14 +414,14 @@ export default function BulkPropertyUpdateModal() {
 
 ### Adobe I/O Runtime-Aktion
 
-Eine AEM App Builder-App kann 0 oder viele Adobe I/O Runtime-Aktionen definieren oder verwenden.
-Adobe Runtime-Aktionen sollten verantwortungsvolle Arbeit sein, die die Interaktion mit AEM oder anderen Adobe-Webdiensten erfordert.
+Eine AEM-App-Entwicklungs-App kann 0 oder viele Adobe I/O Runtime-Aktionen definieren oder verwenden.
+Adobe Runtime-Aktionen sollten eine verantwortungsvolle Arbeit sein, die die Interaktion mit AEM oder anderen Adobe-Web-Diensten erfordert.
 
-In dieser Beispielanwendung wird die Adobe I/O Runtime-Aktion ausgeführt, die den Standardnamen verwendet `generic` - verantwortlich ist für:
+In dieser Beispielanwendung wird die Adobe I/O Runtime-Aktion ausgeführt, die den Standardnamen `generic` verwendet. Sie ist verantwortlich für:
 
-1. Durchführen einer Reihe von HTTP-Anfragen an die AEM Content Fragment-API, um die Inhaltsfragmente zu aktualisieren.
-1. Erfassen der Antworten auf diese HTTP-Anfragen, Zusammenfassen dieser nach Erfolgen und Fehlern
-1. Zurückgeben der Liste der Erfolge und Fehler bei der Anzeige durch das Modal (`BulkPropertyUpdateModal.js`)
+1. das Durchführen einer Reihe von HTTP-Anfragen an die AEM-Inhaltsfragment-API zum Aktualisieren der Inhaltsfragmente
+1. das Erfassen der Antworten auf diese HTTP-Anfragen, die nach Erfolgen und Fehlschlägen kategorisiert werden
+1. das Zurückgeben der Liste der Erfolge und Fehlschläge zur Anzeige durch das Modal (`BulkPropertyUpdateModal.js`)
 
 + `src/aem-cf-console-admin-1/actions/generic/index.js`
 
