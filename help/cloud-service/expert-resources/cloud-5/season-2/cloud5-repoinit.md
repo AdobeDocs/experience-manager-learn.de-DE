@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 - REPOINIT
-description: Initialisieren des AEM-Repositorys mithilfe von REPOINIT
+title: Cloud 5 – REPOINIT
+description: Initialisieren des AEM-Repositorys mit REPOINIT
 version: Cloud Service
 role: Admin, Developer
 level: Intermediate
@@ -9,19 +9,19 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 6428d1c2-8453-449c-9d57-bb860e2e9c1a
 source-git-commit: a439c72a7b080633d3777eefad3b47f01c92b970
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '53'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Cloud 5 - REPOINIT
+# Cloud 5 – REPOINIT
 
-Erste Schritte mit REPOINIT - oder dem Sling Repository Initializer. Lernen Sie einige Tricks kennen, um die Leistungsfähigkeit dieses Tools und einiger seiner Anwendungsfälle zu entfesseln.
+Erste Schritte mit REPOINIT – oder dem Sling-Repository-Initializer. Lernen Sie einige Tricks kennen, um die Möglichkeiten dieses Tools zu nutzen und von einigen seiner Anwendungsfälle zu profitieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/343474?quality=12&learn=on)
 
-## Inhalt in diesem Video
+## Inhalt dieses Videos
 
-+ REPOINIT-Übersicht
++ REPOINIT-Überblick
 + [REPOINIT-Syntax](https://sling.apache.org/documentation/bundles/repository-initialization.html#appendix-a-repoinit-syntax-parser-test-scenarios-1)
