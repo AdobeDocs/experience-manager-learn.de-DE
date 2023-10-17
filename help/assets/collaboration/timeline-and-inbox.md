@@ -1,6 +1,6 @@
 ---
-title: Zeitleiste und Posteingang
-description: Machen Sie sich mit den wichtigsten Webkonsolen in AEM Assets vertraut, die für die Zusammenarbeit verwendet werden.
+title: Timeline und Posteingang
+description: Machen Sie sich mit den wichtigsten Web-Konsolen in AEM Assets vertraut, die für die Zusammenarbeit verwendet werden.
 sub-product: Experience Manager Assets
 feature: Workflow
 version: Cloud Service
@@ -12,14 +12,14 @@ level: Beginner
 last-substantial-update: 2021-09-28T00:00:00Z
 exl-id: 868dc44b-23ca-4e52-a0bc-229480cfae10
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '36'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Zeitleiste und Posteingang
+# Timeline und Posteingang
 
-Machen Sie sich mit den wichtigsten Webkonsolen in AEM Assets vertraut, die für die Zusammenarbeit verwendet werden.
+Machen Sie sich mit den wichtigsten Web-Konsolen in AEM Assets vertraut, die für die Zusammenarbeit verwendet werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32051?quality=12&learn=on)
