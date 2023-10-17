@@ -1,7 +1,7 @@
 ---
-title: Hinzufügen von Text- und Bildinhalten zum Druckkanaldokument
+title: Hinzufügen von Text- und Bildinhalten zu einem Druckkanaldokument
 seo-title: Adding text and image content to print channel document
-description: Dies ist Teil 7 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil fügen wir den im Layout (xdp) definierten Zielbereichen Bilder und Textinhalte hinzu.
+description: Dies ist Teil 7 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil fügen wir den im Layout (XDP) definierten Zielbereichen Bilder und Textinhalte hinzu.
 seo-description: This is part 7 of a multi-step tutorial for creating your first interactive communications document. In this part, we will add images and text content to the target areas defined in the layout(xdp).
 uuid: f20d6974-6faf-4b90-a7ff-8aa8a620fcaa
 feature: Interactive Communication
@@ -18,21 +18,21 @@ role: Developer
 level: Beginner
 exl-id: 49080c16-617f-4840-8bb4-7b080fa291c4
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '159'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Hinzufügen von Text- und Bildinhalten zum Druckkanaldokument
+# Hinzufügen von Text- und Bildinhalten zu einem Druckkanaldokument
 
-In diesem Teil fügen wir den im Layout (xdp) definierten Zielbereichen Bilder und Textinhalte hinzu.
+In diesem Teil fügen wir den im Layout (XDP) definierten Zielbereichen Bilder und Textinhalte hinzu.
 
-Nachdem Sie Ihr erstes Dokumentfragment erstellt haben, das den Namen und die Adresse des Empfängers enthalten wird, müssen wir das Dokumentfragment zum Dokument des Druckkanals hinzufügen.
+Nachdem Sie Ihr erstes Dokumentfragment erstellt haben, das den Namen und die Adresse der Empfängerin bzw. des Empfängers enthalten wird, müssen wir das Dokumentfragment zum Druckkanaldokument hinzufügen.
 
-Sie können dem Dokument für den Druckkanal Inhalte verschiedener Typen wie Dokumentfragmente, Bilder, Layout-Fragmente usw. hinzufügen.
+Sie können dem Druckkanaldokument verschiedenartige Inhalte wie Dokumentfragmente, Bilder, Layout-Fragmente usw. hinzufügen.
 
-Um dem Dokument zum Druckkanal Inhalt hinzuzufügen, folgen Sie dem folgenden Video.
+Um dem Druckkanaldokument Inhalte hinzuzufügen, folgen Sie dem nachstehenden Video.
 
 Das Video führt Sie durch die Schritte, die zum Hinzufügen von Inhalten zu den entsprechenden Zielbereichen im Druckkanaldokument erforderlich sind.
 
@@ -40,4 +40,4 @@ Das Video führt Sie durch die Schritte, die zum Hinzufügen von Inhalten zu den
 
 ## Nächste Schritte
 
-[Liniendiagramm konfigurieren](./configuring-line-chart.md)
+[Konfigurieren eines Liniendiagramms](./configuring-line-chart.md)
