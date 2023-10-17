@@ -1,6 +1,6 @@
 ---
-title: HTTP/HTTPS-Verbindungen auf nicht standardmäßigen Ports für flexible Port-Auslösung
-description: Erfahren Sie, wie Sie HTTP-/HTTPS-Anfragen von AEM as a Cloud Service zu externen Webdiensten durchführen, die auf nicht standardmäßigen Ports ausgeführt werden, um eine flexible Port-Erweiterung zu ermöglichen.
+title: HTTP/HTTPS-Verbindungen auf Nicht-Standard-Ports für einen flexiblen Port-Ausgang
+description: Erfahren Sie, wie Sie HTTP/HTTPS-Anfragen von AEM as a Cloud Service an externe Web-Dienste stellen, die auf Nicht-Standard-Ports ausgeführt werden, um einen flexiblen Port-Ausgang zu ermöglichen.
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -10,36 +10,36 @@ kt: 9354
 thumbnail: KT-9354.jpeg
 exl-id: c8cc0385-9e94-4120-9fb1-aeccbfcc8aa4
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '239'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# HTTP/HTTPS-Verbindungen auf nicht standardmäßigen Ports für flexible Port-Auslösung
+# HTTP/HTTPS-Verbindungen auf Nicht-Standard-Ports für einen flexiblen Port-Ausgang
 
-HTTP/HTTPS-Verbindungen an nicht standardmäßigen Ports (nicht 80/443) müssen von AEM as a Cloud Service bereitgestellt werden, sie benötigen jedoch keine speziellen `portForwards` Regeln und kann AEM `AEM_PROXY_HOST` und einen reservierten Proxyanschluss `AEM_HTTP_PROXY_PORT` oder `AEM_HTTPS_PROXY_PORT` abhängig davon, ob das Ziel HTTP/HTTPS ist.
+HTTP/HTTPS-Verbindungen auf Nicht-Standard-Ports (nicht 80/443) müssen aus AEM as a Cloud Service weitergeleitet werden. Sie benötigen jedoch keine speziellen `portForwards`-Regeln und können den erweiterten Netzwerk-`AEM_PROXY_HOST` von AEM sowie einen reservierten Proxy-Port `AEM_HTTP_PROXY_PORT` oder `AEM_HTTPS_PROXY_PORT` verwenden, abhängig davon, ob das Ziel HTTP/HTTPS ist.
 
 ## Erweiterte Netzwerkunterstützung
 
-Das folgende Codebeispiel wird von den folgenden erweiterten Netzwerkoptionen unterstützt.
+Das folgende Code-Beispiel wird von den folgenden erweiterten Netzwerkoptionen unterstützt.
 
-Stellen Sie die [geeignete](../advanced-networking.md#advanced-networking) Vor diesem Tutorial wurde eine erweiterte Netzwerkkonfiguration eingerichtet.
+Stellen Sie sicher, dass die [geeignete](../advanced-networking.md#advanced-networking) erweiterte Netzwerkkonfiguration eingerichtet wurde, bevor Sie dieses Tutorial durchführen. 
 
-| Kein erweitertes Netzwerk | [Flexibles Port-Egress](../flexible-port-egress.md) | [Dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) | [Virtuelles privates Netzwerk](../vpn.md) |
+| Keine erweiterten Netzwerkfunktionen | [Flexibler Port-Ausgang](../flexible-port-egress.md) | [Dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) | [Virtuelles privates Netzwerk](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
-| ✘ | ms | ✘ | ✘ |
+| ✘ | ✔ | ✘ | ✘ |
 
 >[!CAUTION]
 >
-> Dieses Codebeispiel ist nur für [Flexibler Hafenausbau](../flexible-port-egress.md). Ein ähnliches, aber anderes Codebeispiel ist für verfügbar. [HTTP/HTTPS-Verbindungen auf nicht standardmäßigen Ports für dedizierte Egress-IP-Adresse und VPN](./http-dedicated-egress-ip-vpn.md).
+> Dieses Code-Beispiel gilt nur für einen [flexiblen Port-Ausgang](../flexible-port-egress.md). Ein ähnliches, aber anderes Code-Beispiel ist für [HTTP/HTTPS-Verbindungen auf Nicht-Standard-Ports für eine dedizierte Ausgangs-IP-Adresse und VPN](./http-dedicated-egress-ip-vpn.md) verfügbar.
 
-## Codebeispiel
+## Code-Beispiel
 
-Dieses Java™-Codebeispiel ist ein OSGi-Dienst, der as a Cloud Service ausgeführt werden kann, AEM eine HTTP-Verbindung zu einem externen Webserver unter 8080 herstellt. Verbindungen zu HTTPS-Webservern verwenden die Umgebungsvariablen `AEM_PROXY_HOST` und `AEM_HTTPS_PROXY_PORT` (Standardeinstellung ist `proxy.tunnel:3128` in AEM Versionen &lt; 6094).
+Dieses Java™-Code-Beispiel zeigt einen OSGi-Dienst, der in AEM as a Cloud Service ausgeführt werden kann und eine HTTP-Verbindung zu einem externen Web-Server auf 8080 herstellt. Verbindungen zu HTTPS-Webservern verwenden die Umgebungsvariablen `AEM_PROXY_HOST` und `AEM_HTTPS_PROXY_PORT` (Standardeinstellung `proxy.tunnel:3128` in AEM-Versionen vor 6094).
 
 >[!NOTE]
-> Es wird empfohlen, die [Java™ 11 HTTP-APIs](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) werden verwendet, um HTTP-/HTTPS-Aufrufe von AEM durchzuführen.
+> Es wird empfohlen, die [Java™ 11 HTTP-APIs](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) zu verwenden, um HTTP/HTTPS-Aufrufe von AEM durchzuführen.
 
 + `core/src/com/adobe/aem/wknd/examples/connections/impl/HttpExternalServiceImpl.java`
 
