@@ -11,23 +11,23 @@ thumbnail: 7836.jpg
 kt: 7836
 exl-id: 548a21b9-5487-4b48-9782-19b537a48f98
 source-git-commit: ad203d7a34f5eff7de4768131c9b4ebae261da93
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '58'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# Erstellen von Analyzer-Anforderungen
+# Erstellen von Analyzer-Anfragen
 
 Erstellen Sie ein JSON-Fragment, das Folgendes definiert:
 
 + Eingabe
-+ parameters
-+ output.
++ Parameter
++ Ausgabe
 
-Die Details dieses [Formularparameters finden Sie hier.](https://documentcloud.adobe.com/document-services/index.html#post-createPDF)
+Die Einzelheiten zu diesem Formularparameter [finden Sie hier](https://documentcloud.adobe.com/document-services/index.html#post-createPDF).
 
-Der unten aufgeführte Beispielcode generiert das JSON-Fragment für alle Office 365-Dokumenttypen.
+Mit dem unten aufgeführten Beispiel-Code wird das JSON-Fragment für alle Office 365-Dokumenttypen generiert.
 
 ```java
 package com.aemforms.doccloud.core.impl;
