@@ -10,9 +10,9 @@ kt: 10831
 thumbnail: KT-10831.jpg
 exl-id: a932147c-2245-4488-ba1a-99c58045ee2b
 source-git-commit: ec2609ed256ebe6cdd7935f3e8d476c1ff53b500
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1669'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ Beim Bereitstellen einer AEM Headless-Anwendung muss beachtet werden, wie AEM-UR
 + HTTP-Anfragen an __[AEM GraphQL-APIs](#aem-graphql-api-requests)__
 + __[Bild-URLs](#aem-image-urls)__ für Bild-Assets, die in Inhaltsfragmenten referenziert und von AEM bereitgestellt werden
 
-In der Regel interagiert eine AEM Headless-App mit einem einzigen AEM-Service für GraphQL-API- und Bildanforderungen. Der AEM-Dienst ändert sich je nach Implementierung der AEM Headless-App:
+In der Regel interagiert eine AEM Headless-App mit einem einzigen AEM-Service für GraphQL-API- und Bildanforderungen. Der AEM-Dienst ändert sich je nach Bereitstellung der AEM Headless-App:
 
 | Typ der AEM Headless-Bereitstellung | AEM-Umgebung | AEM-Service |
 |-------------------------------|:---------------------:|:----------------:|
@@ -289,7 +289,7 @@ Wenn Sie die Android™-App für verschiedene Verwendungszwecke erstellen, geben
 
 Die Bildanfragen der Headless-App an AEM müssen so konfiguriert sein, dass sie mit dem richtigen AEM-Service interagieren, wie in der [obigen Tabelle](#managing-aem-hosts) beschrieben.
 
-Adobe empfiehlt die Verwendung von [optimierte Bilder](../../how-to/images.md) über `_dynamicUrl` in AEM GraphQL-APIs. Die `_dynamicUrl` gibt eine URL ohne Host zurück, die mit dem zum Abfragen von GraphQL-APIs verwendeten AEM-Diensthost versehen werden kann. Für `_dynamicUrl` -Feld in der GraphQL-Antwort sieht wie folgt aus:
+Adobe empfiehlt die Verwendung [optimierter Bilder](../../how-to/images.md), die über das `_dynamicUrl`-Feld in AEM GraphQL-APIs verfügbar gemacht wurden. Das `_dynamicUrl`-Feld gibt eine URL ohne Host zurück, die mit dem zum Abfragen von AEM GraphQL-APIs verwendeten AEM-Servicehost als Präfix versehen werden kann. Für das Feld `_dynamicUrl` sieht die GraphQL-Antwort wie folgt aus:
 
 ```json
 {
@@ -303,7 +303,7 @@ Adobe empfiehlt die Verwendung von [optimierte Bilder](../../how-to/images.md) �
 
 Im Folgenden finden Sie Beispiele dafür, wie in Bild-URLs der Wert des AEM-Hosts vorangestellt werden kann, der für verschiedene Headless-App-Frameworks konfigurierbar ist. Die Beispiele gehen von der Verwendung von GraphQL-Abfragen aus, die Bildreferenzen unter Verwendung des Feldes `_dynamicUrl` zurückgeben.
 
-Beispiel:
+Zum Beispiel:
 
 #### GraphQL-persistierte Abfrage
 
@@ -421,7 +421,7 @@ AEM_HOST = publish-p123-e789.adobeaemcloud.com
 
 #### Bild-URL-Generator
 
-In `Aem.swift`, die benutzerdefinierte AEM Headless-Client-Implementierung, eine benutzerdefinierte Funktion `imageUrl(..)` nimmt den Bildpfad wie im Abschnitt `_dynamicUrl` in der GraphQL-Antwort ein und stellt AEM Host vor. Diese Funktion wird dann in den iOS-Ansichten aufgerufen, wenn ein Bild gerendert wird.
+In `Aem.swift`, der benutzerdefinierten Client-Implementierung von AEM Headless, nimmt eine benutzerdefinierte Funktion `imageUrl(..)` den Bildpfad, der im Feld `_dynamicUrl` in der GraphLQ-Antwort angegeben ist, und stellt ihm den AEM-Host voran. Diese Funktion wird dann in den iOS-Ansichten aufgerufen, wenn ein Bild gerendert wird.
 
 + `WKNDAdventures/AEM/Aem.swift`
 
