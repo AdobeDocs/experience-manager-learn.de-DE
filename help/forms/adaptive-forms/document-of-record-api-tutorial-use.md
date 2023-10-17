@@ -1,6 +1,6 @@
 ---
 title: Verwenden der API zum Generieren des Datensatzdokuments mit AEM Forms
-description: Generieren des Datensatzdokuments (DOR) programmgesteuert
+description: Programmgesteuerte Generierung des Datensatzdokuments (DOR)
 feature: Adaptive Forms
 version: 6.4,6.5
 topic: Development
@@ -9,17 +9,17 @@ level: Experienced
 exl-id: 9a3b2128-a383-46ea-bcdc-6015105c70cc
 last-substantial-update: 2023-01-26T00:00:00Z
 source-git-commit: ddef90067d3ae4a3c6a705b5e109e474bab34f6d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '261'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # Verwenden der API zum Generieren des Datensatzdokuments in AEM Forms {#using-api-to-generate-document-of-record-with-aem-forms}
 
-Generieren des Datensatzdokuments (DOR) programmgesteuert
+Programmgesteuerte Generierung des Datensatzdokuments (DOR)
 
-Dieser Artikel veranschaulicht die Verwendung der `com.adobe.aemds.guide.addon.dor.DoRService API` zu generieren **Datensatzdokument** programmgesteuert. [Datensatzdokument](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) ist eine PDF-Version der im adaptiven Formular erfassten Daten.
+Dieser Artikel veranschaulicht die Nutzung von `com.adobe.aemds.guide.addon.dor.DoRService API` zur programmatischen Generierung des **Dokumentensatzdokuments**. Das [Datensatzdokument](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=de) ist eine PDF-Version der Daten, die im adaptiven Formular erfasst werden.
 
 1. Im Folgenden finden Sie das Code-Snippet. Die erste Zeile erhält den DOR-Dienst.
 1. Legen Sie die DoROptions fest.
@@ -64,21 +64,21 @@ session.save();
 
 Gehen Sie wie folgt vor, um dies auf Ihrem lokalen System zu testen:
 
-1. [Herunterladen und Installieren von Artikel-Assets mithilfe des Paketmanagers](assets/dor-with-api.zip)
-1. Stellen Sie sicher, dass Sie das DevelopingWithServiceUser-Bundle installiert und gestartet haben, das als Teil von [Artikel zum Erstellen von Dienstbenutzern](service-user-tutorial-develop.md)
+1. [Herunterladen und Installieren von Artikel-Assets mithilfe des Package Managers](assets/dor-with-api.zip)
+1. Stellen Sie sicher, dass Sie das DevelopingWithServiceUser-Bundle installiert und gestartet haben, das als Teil des [Artikels zum Erstellen von Dienstbenutzenden](service-user-tutorial-develop.md) bereitgestellt wird.
 1. [Bei configMgr anmelden](http://localhost:4502/system/console/configMgr)
-1. Suchen Sie nach Apache Sling Service User Mapper Service .
-1. Vergewissern Sie sich, dass Sie den folgenden Eintrag erhalten: _DevelopingWithServiceUser.core:getformsresourceresolver=fd-service_ im Abschnitt &quot;Dienstzuordnungen&quot;
+1. Suchen Sie nach Apache Sling Service User Mapper Service
+1. Vergewissern Sie sich, dass Sie den folgenden Eintrag erhalten: _DevelopingWithServiceUser.core:getformsresourceresolver=fd-service_ im Abschnitt „Dienstzuordnungen“
 1. [Öffnen Sie das Formular](http://localhost:4502/content/dam/formsanddocuments/sandbox/1201-borrower-payments/jcr:content?wcmmode=disabled)
-1. Füllen Sie das Formular aus und klicken Sie auf PDF anzeigen .
+1. Füllen Sie das Formular aus und klicken Sie auf „PDF anzeigen“.
 1. Sie sollten DOR auf einer neuen Registerkarte in Ihrem Browser sehen
 
 
 **Tipps zur Fehlerbehebung**
 
-PDF wird in der neuen Browser-Registerkarte nicht angezeigt:
+PDF wird auf der neuen Browser-Registerkarte nicht angezeigt:
 
-1. Vergewissern Sie sich, dass Sie keine Popups in Ihrem Browser blockieren
-1. Stellen Sie sicher, dass Sie AEM Server als Administrator starten (zumindest unter Windows)
-1. Stellen Sie sicher, dass das Bundle &quot;DevelopingWithServiceUser&quot;in *aktiver Status*
-1. [Stellen Sie sicher, dass der Systembenutzer](http://localhost:4502/useradmin) &quot;fd-service&quot;verfügt über Lese-, Änderungs- und Erstellungsberechtigungen für den folgenden Knoten `/content/usergenerated/content/aemformsenablement`
+1. Vergewissern Sie sich, dass Sie Popups in Ihrem Browser nicht blockieren
+1. Stellen Sie sicher, dass Sie den AEM-Server als Administrator starten (zumindest unter Windows)
+1. Stellen Sie sicher, dass sich das Bundle „DevelopingWithServiceUser“ im *aktiven Zustand* befindet.
+1. [Stellen Sie sicher, dass die Systembenutzerin bzw. der Systembenutzer](http://localhost:4502/useradmin) „fd-service“ Lese-, Änderungs- und Erstellungsberechtigungen für den folgenden Knoten hat `/content/usergenerated/content/aemformsenablement`
