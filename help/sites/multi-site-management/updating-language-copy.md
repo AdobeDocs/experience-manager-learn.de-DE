@@ -1,6 +1,6 @@
 ---
 title: Aktualisieren einer Sprachkopie mit Launches
-description: Erfahren Sie, wie Sie mithilfe von Launches Änderungen in einer Sprachkopie aktualisieren, überprüfen und genehmigen.
+description: Erfahren Sie, wie Sie mithilfe von Launches Änderungen in einer Sprachkopie aktualisieren, überprüfen und genehmigen können.
 feature: Language Copy, Multi Site Manager
 topics: localization, authoring, content-architecture
 audience: all
@@ -14,14 +14,14 @@ role: User
 level: Beginner
 exl-id: c29f64a3-56cd-4594-9265-692974f4c01a
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Aktualisieren einer Sprachkopie mit Launches {#update-language-copy-launch}
 
-Erfahren Sie, wie Sie mithilfe von Launches Änderungen in einer Sprachkopie aktualisieren, überprüfen und genehmigen.
+Erfahren Sie, wie Sie mithilfe von Launches Änderungen in einer Sprachkopie aktualisieren, überprüfen und genehmigen können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/36683?quality=12&learn=on)
