@@ -9,29 +9,30 @@ level: Intermediate
 kt: 11618
 thumbnail: 3412319.jpg
 last-substantial-update: 2022-12-14T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+exl-id: e86ddc9d-ce44-407a-a20c-fb3297bb0eb2
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '230'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # Benutzerdefinierte Namespaces
 
-Erfahren Sie, wie Sie benutzerdefinierte [Namespaces](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/4.5_Namespaces.html) auf as a Cloud Service AEM.
+Erfahren Sie, wie Sie benutzerdefinierte [Namespaces](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/4.5_Namespaces.html) definieren und für AEM as a Cloud Service bereitstellen.
 
-Benutzerdefinierte Namespaces sind der optionale Teil einer JCR-Eigenschaft, der einer `:`. AEM verwendet mehrere Namespaces, z. B.:
+Benutzerdefinierte Namespaces sind der optionale Teil einer JCR-Eigenschaft vor einem Doppelpunkt (`:`). AEM verwendet verschiedene Namespaces, z. B.:
 
 + `jcr` für JCR-Systemeigenschaften
-+ `cq` für AEM (ehemals &quot;Adobe CQ&quot;)-Eigenschaften
-+ `dam` für AEM Eigenschaften, die für DAM-Assets spezifisch sind
-+ `dc` für Dublin Core Properties
++ `cq` für AEM-Eigenschaften (ehemals Adobe CQ)
++ `dam` für DAM-Assets-spezifische AEM-Eigenschaften
++ `dc` für Dublin Core-Eigenschaften
 
-... und viele andere.
+… und viele mehr
 
-Namespaces können verwendet werden, um den Umfang und den Zweck einer Eigenschaft zu kennzeichnen. Durch die Erstellung eines benutzerdefinierten Namespace, häufig Ihres Unternehmensnamens, können Knoten oder Eigenschaften, die für Ihre AEM-Implementierung spezifisch sind, eindeutig identifiziert werden und unternehmensspezifische Daten enthalten.
+Namespaces können verwendet werden, um den Umfang und den Zweck einer Eigenschaft zu kennzeichnen. Durch die Erstellung eines benutzerdefinierten Namespace, häufig Ihres Unternehmensnamens, können Knoten oder Eigenschaften, die für Ihre AEM-Implementierung spezifisch sind, eindeutig identifiziert werden und unternehmensbezogene Daten enthalten.
 
-Benutzerdefinierte Namespaces werden in [Initialisierung des Sling-Repositorys (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html) Skripten und stellt für AEM bereit, die als OSGi-Konfigurationen as a Cloud Service sind - und zu Ihren [AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de) `ui.config` Projekt.
+Benutzerdefinierte Namespaces werden in Skripten zur [Initialisierung des Sling-Repositorys (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html) verwaltet, für AEM as a Cloud Service als OSGi-Konfigurationen bereitgestellt und zu Ihrem [AEM-Projekt](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de) `ui.config` hinzugefügt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412319?quality=12&learn=on)
 
@@ -41,9 +42,9 @@ Benutzerdefinierte Namespaces werden in [Initialisierung des Sling-Repositorys (
 
 ## Code
 
-Der folgende Code wird zum Konfigurieren eines `wknd` Namespace.
+Der folgende Code wird zum Konfigurieren eines `wknd`-Namespace verwendet.
 
-### OSGi-Konfiguration von RepositoryInitializer
+### RepositoryInitializer-OSGi-Konfiguration
 
 `/ui.config/src/main/content/jcr_root/apps/wknd-examples/osgiconfig/config/org.apache.sling.jcr.repoinit.RepositoryInitializer~wknd-examples-namespaces.cfg.json`
 
@@ -56,4 +57,4 @@ Der folgende Code wird zum Konfigurieren eines `wknd` Namespace.
 }
 ```
 
-Dies ermöglicht benutzerdefinierte Eigenschaften mithilfe der `wknd` Namespace, wie als erster Parameter nach dem `register namespace` Anweisung, die in AEM verwendet werden soll. Erweiterte Skriptdefinitionen finden Sie in den Beispielen im Abschnitt [Dokumentation zur Initialisierung des Sling-Repositorys (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios).
+Dies ermöglicht, dass benutzerdefinierte Eigenschaften mit dem `wknd`-Namespace, wie als erster Parameter nach der `register namespace`-Anweisung angegeben, in AEM verwendet werden können. Erweiterte Skriptdefinitionen finden Sie in den Beispielen in der [Dokumentation zur Initialisierung des Sling-Repositorys (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios).
