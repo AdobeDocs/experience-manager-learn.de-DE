@@ -1,7 +1,7 @@
 ---
 title: Acroforms mit AEM Forms
 seo-title: Merge Adaptive Form data with Acroform
-description: Teil 1 der Integration von Acroforms mit AEM Forms. Erstellen eines adaptiven Formulars mit Acroform und Zusammenführen der Daten, um eine PDF zu erhalten.
+description: Teil 1 der Integration von Acroforms in AEM Forms. Erstellen eines adaptiven Formulars mit Acroform und Zusammenführen der Daten zum Abrufen einer PDF-Datei.
 feature: adaptive-forms
 topics: development
 audience: developer
@@ -11,40 +11,40 @@ version: 6.5
 badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '221'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 
-# Acroform erstellen
+# Erstellen von Acroforms
 
-Acroforms sind Formulare, die mit Acrobat erstellt werden. Sie können ein neues Formular mit Acrobat von Grund auf neu erstellen oder ein in Microsoft Word erstelltes vorhandenes Formular verwenden und es mithilfe von Acrobat in Acroform konvertieren. Die folgenden Schritte müssen befolgt werden, um ein in Microsoft Word erstelltes Formular in Acroform zu konvertieren.
+Acroforms sind mit Acrobat erstellte Formulare. Sie können mit Acrobat ein neues Formular von Grund auf neu erstellen oder ein vorhandenes, in Microsoft Word erstelltes Formular verwenden und es mit Acrobat in ein Acroform konvertieren. Die folgenden Schritte müssen befolgt werden, um ein in Microsoft Word erstelltes Formular in ein Acroform zu konvertieren.
 
-* Öffnen von Word-Dokumenten mit Acrobat
-* Verwenden Sie das Acrobat Prepare-Formular-Tool, um die Formularfelder im Formular zu identifizieren.
-* Speichern Sie die PDF. Stellen Sie sicher, dass der Dateiname keine Leerzeichen enthält.
+* Öffnen Sie ein Word-Dokument mit Acrobat.
+* Verwenden Sie das Acrobat-Werkzeug „Formular vorbereiten“, um die Formularfelder im Formular zu identifizieren.
+* Speichern Sie die PDF-Datei. Stellen Sie sicher, dass der Dateiname keine Leerzeichen enthält.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/22575?quality=12&learn=on)
 
 >[!NOTE]
 >
->Wenn Sie das ausfüllbare Acrobat zum Signieren mit Acrobat Sign senden möchten, benennen Sie die Felder entsprechend. Sie können beispielsweise ein Feld benennen **Sig_es_:signer1:signature**. Dies ist die Syntax, die Acrobat Sign versteht.
+>Wenn Sie das ausfüllbare Acroform zum Signieren mit Acrobat Sign senden möchten, benennen Sie die Felder entsprechend. Sie können beispielsweise ein Feld **Sig_es_:signer1:signature** nennen. Dies ist die Syntax, die Acrobat Sign versteht.
 
 >[!NOTE]
 >
->Wenn Sie ein XFA-basiertes Dokument senden, müssen Sie das Dokument reduzieren und die Acrobat Sign-Signatur-Tags müssen als statischer Text im Dokument vorhanden sein.
+>Wenn Sie ein XFA-basiertes Dokument senden, müssen Sie das Dokument reduzieren und die Signatur-Tags für Acrobat Sign müssen als statischer Text im Dokument vorhanden sein.
 
-[Acrobat Sign Text Tags-Dokument](https://helpx.adobe.com/de/sign/using/text-tag.html)
+[Text-Tag-Dokument für Acrobat Sign](https://helpx.adobe.com/de/sign/using/text-tag.html)
 
 >[!NOTE]
 >
->Achten Sie darauf, dass der Dateiname des Formulars keine Leerzeichen enthält. Der aktuelle Beispielcode behandelt keine Leerzeichen.
+>Achten Sie darauf, dass der Acroform-Dateiname keine Leerzeichen enthält. Der aktuelle Beispiel-Code verarbeitet keine Leerzeichen.
 >
 >Die Formularfeldnamen dürfen nur Folgendes enthalten:
 >
->* Einzelraum
->* einzelner Unterstrich
+>* einzelnes Leerzeichen
+>* einzelnen Unterstrich
 >* alphanumerische Zeichen
