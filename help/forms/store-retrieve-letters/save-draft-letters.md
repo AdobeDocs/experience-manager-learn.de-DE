@@ -1,6 +1,6 @@
 ---
-title: Speichern und Abrufen von Entwurfsbriefen
-description: Erfahren Sie, wie Sie Entwurfsbriefe speichern und abrufen
+title: Speichern und Abrufen von Briefentwürfen
+description: Erfahren Sie, wie Sie Briefentwürfe speichern und abrufen
 feature: Interactive Communication
 topics: development
 audience: developer
@@ -13,15 +13,15 @@ level: Intermediate
 kt: 10208
 exl-id: dc6f64a0-7059-4392-9c29-e66bdef4fd4d
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '227'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Speichern und Abrufen von Entwurfsbriefen
+# Speichern und Abrufen von Briefentwürfen
 
-Der folgende Code wird zum Speichern der Briefinstanz verwendet. Die Metadaten der Briefinstanz werden im _Abzüge_ Tabelle. Eine eindeutige Zeichenfolge (draftID) wird generiert und zurückgegeben. Diese eindeutige Zeichenfolge wird dann zum Abrufen der gespeicherten Briefinstanz verwendet.
+Der folgende Code wird zum Speichern der Briefinstanz verwendet. Die Metadaten der Briefinstanz werden in der Tabelle _icdrafts_ gespeichert. Eine eindeutige Zeichenfolge (draftID) wird generiert und zurückgegeben. Diese eindeutige Zeichenfolge wird dann zum Abrufen der gespeicherten Briefinstanz verwendet.
 
 ```java
 public String save(CCRDocumentInstance letterToSave) throws CCRDocumentException {
@@ -67,10 +67,10 @@ public String save(CCRDocumentInstance letterToSave) throws CCRDocumentException
 }
 ```
 
-## Brief abrufen
+## Abrufen eines Briefes
 
 Der folgende Code wurde geschrieben, um den gespeicherten Briefentwurf abzurufen.
-Zum Laden gespeicherter Briefinstanzen müssen Sie die draftID angeben. Basierend auf dieser draftID rufen wir die Datenbank ab, um die zusätzlichen Metadaten zum Brief zu erhalten. Dieselbe draftID wird verwendet, um die Daten des Briefs zu erstellen, indem die entsprechende XML aus dem Dateisystem gelesen wird. Anschließend wird ein CCRDocumentInstance -Objekt erstellt und zurückgegeben.
+Zum Laden gespeicherter Briefinstanzen müssen Sie die draftID angeben. Basierend auf dieser draftID rufen wir die Datenbank ab, um die zusätzlichen Metadaten des Briefes zu erhalten. Dieselbe draftID wird verwendet, um die Daten des Briefes zu erstellen, indem die entsprechende XML aus dem Dateisystem gelesen wird. Anschließend wird ein CCRDocumentInstance-Objekt erstellt und zurückgegeben.
 
 
 ```java
@@ -99,9 +99,9 @@ public CCRDocumentInstance get(String draftID) throws CCRDocumentException {
 }
 ```
 
-### Brief aktualisieren
+### Aktualisieren des Briefes
 
-Der folgende Code wurde verwendet, um die gespeicherte Briefinstanz zu aktualisieren. Die Daten des aktualisierten Briefs werden mithilfe der Brief-ID in das Dateisystem geschrieben.
+Der folgende Code wurde verwendet, um die gespeicherte Briefinstanz zu aktualisieren. Die Daten des aktualisierten Briefes werden mithilfe der Brief-ID in das Dateisystem geschrieben.
 
 ```java
 public void update(CCRDocumentInstance letterInstanceToUpdate) throws CCRDocumentException {
@@ -120,10 +120,10 @@ public void update(CCRDocumentInstance letterInstanceToUpdate) throws CCRDocumen
     }
 ```
 
-### Alle gespeicherten Briefe abrufen
+### Abrufen aller gespeicherten Briefe
 
-AEM Forms bietet keine vorkonfigurierte Benutzeroberfläche zum Auflisten der gespeicherten Briefe. Für diesen Artikel zeige ich die gespeicherten Briefinstanzen mithilfe eines adaptiven Formulars in einem tabellarischen Format auf.
-Sie können die Abfrage so anpassen, dass die gespeicherten Briefinstanzen abgerufen werden. In diesem Beispiel frage ich mich nach der gespeicherten Briefinstanz durch &quot;admin&quot;.
+AEM Forms bietet keine vorkonfigurierte Benutzeroberfläche zum Auflisten der gespeicherten Briefe. Für diesen Artikel liste ich die gespeicherten Briefinstanzen mithilfe eines adaptiven Formulars in Tabellenform auf.
+Sie können die Abfrage so anpassen, dass die gespeicherten Briefinstanzen abgerufen werden. In diesem Beispiel frage ich nach Briefinstanzen, die „admin“ gespeichert hat.
 
 ```java
     public List < CCRDocumentInstance > getAll(String arg0, Date arg1, Date arg2, Map < String, Object > arg3) throws CCRDocumentException {
@@ -170,4 +170,4 @@ Sie können die Abfrage so anpassen, dass die gespeicherten Briefinstanzen abger
 
 ### Eclipse-Projekt
 
-Das Eclipse-Projekt mit Beispielimplementierung kann [heruntergeladen von hier](assets/icdrafts-eclipse-project.zip)
+Das Eclipse-Projekt mit Beispielimplementierung kann [hier](assets/icdrafts-eclipse-project.zip) heruntergeladen werden
