@@ -1,6 +1,6 @@
 ---
-title: E-Mail-Sendeschritt des Forms Workflows verwenden
-description: Der Schritt E-Mail senden wurde in AEM Forms 6.4 eingeführt. Mit diesem Schritt können wir Geschäftsprozesse oder Workflows erstellen, mit denen Sie E-Mails mit oder ohne Anhänge senden können. Im folgenden Video werden die Schritte zum Konfigurieren der Komponente "E-Mail senden"erläutert
+title: Verwenden des Forms Workflow-Schritts „E-Mail senden“
+description: Der Schritt „E-Mail senden“ wurde in AEM Forms 6.4 eingeführt. Mithilfe dieses Schritts können wir Geschäftsprozesse oder Workflows erstellen, mit denen Sie E-Mails mit oder ohne Anhänge senden können. Im folgenden Video werden die Schritte zum Konfigurieren der Komponente „E-Mail senden“ erläutert.
 feature: Workflow
 version: 6.4,6.5
 topic: Development
@@ -9,51 +9,51 @@ level: Beginner
 exl-id: 21e58bbc-c1d6-4d41-a4d4-f522a3a5d4a7
 last-substantial-update: 2020-06-09T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '443'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# E-Mail-Sendeschritt des Forms Workflows verwenden {#using-send-email-step-of-forms-workflow}
+# Verwenden des Forms Workflows-Schritts „E-Mail senden“ {#using-send-email-step-of-forms-workflow}
 
-Der Schritt E-Mail senden wurde in AEM Forms 6.4 eingeführt. Mit diesem Schritt können wir Geschäftsprozesse oder Workflows erstellen, mit denen Sie E-Mails mit oder ohne Anhänge senden können. Im folgenden Video werden die Schritte zum Konfigurieren der Komponente &quot;E-Mail senden&quot;erläutert.
+Der Schritt „E-Mail senden“ wurde in AEM Forms 6.4 eingeführt. Mithilfe dieses Schritts können wir Geschäftsprozesse oder Workflows erstellen, mit denen Sie E-Mails mit oder ohne Anhänge senden können. Im folgenden Video werden die Schritte zum Konfigurieren der Komponente „E-Mail senden“ erläutert.
 
 >[!VIDEO](https://video.tv.adobe.com/v/21499?quality=12&learn=on)
 
-Im Rahmen dieses Artikels führen wir Sie durch das folgende Anwendungsbeispiel:
+Im Rahmen dieses Artikels führen wir Sie durch folgenden Anwendungsfall:
 
-1. Ein Benutzer füllt das Anforderungsformular für die Zeitüberschreitung aus
-1. Beim Senden des Formulars wird AEM Workflow ausgelöst
-1. Der AEM Workflow verwendet die Komponente E-Mail senden , um eine E-Mail mit dem DoR als Anlage zu senden
+1. Eine Benutzerin oder ein Benutzer füllt einen Urlaubsantrag aus.
+1. Beim Übermitteln des Formulars wird der AEM-Workflow ausgelöst.
+1. Der AEM-Workflow verwendet die Komponente „E-Mail senden“, um eine E-Mail mit dem Datensatzdokument (Document of Record, DoR) im Anhang zu senden.
 
-Bevor Sie den Schritt E-Mail senden verwenden, müssen Sie sicherstellen, dass Sie den Day CQ Mail Service über die [configMgr](http://localhost:4502/system/console/configMgr). Umgebungsspezifische Werte bereitstellen
+Bevor Sie den Schritt „E-Mail senden“ ausführen, konfigurieren Sie den Day CQ Mail Service über [configMgr](http://localhost:4502/system/console/configMgr). Geben Sie die für Ihre Umgebung zutreffenden Werte an.
 
 ![Konfigurieren des Day CQ Mail Service](assets/mailservice.png)
 
-Als Teil der mit diesem Artikel verknüpften Assets erhalten Sie Folgendes
+Im Rahmen der mit diesem Artikel verknüpften Assets erhalten Sie Folgendes:
 
-1. Adaptives Formular, das den Workflow bei der Übermittlung Trigger
-1. Beispielworkflow, der eine E-Mail mit DOR als Anhang sendet
+1. adaptives Formular, das den Workflow bei der Übermittlung auslöst
+1. Beispiel-Workflow, der eine E-Mail mit dem DoR im Anhang sendet
 1. OSGi-Bundle, das die Metadateneigenschaften erstellt
 
 Führen Sie die folgenden Schritte aus, um das Beispiel auf Ihrem System auszuführen:
 
-1. [Bereitstellen des Entwicklungs-mit-Service-Benutzer-Bundles](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+1. [Stellen Sie das Bundle „DevelopingWithServiceUser“ bereit.](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
-1. [Herunterladen und Installieren des SetValue-Bundles](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)Dieses Bundle enthält den Code zum Erstellen der Metadateneigenschaften im Rahmen des Prozessschritts des Workflows.
-1. [Konfigurieren des Day CQ Mail Service](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html)
-1. [Importieren und installieren Sie die mit diesem Artikel verknüpften Assets mithilfe des Paketmanagers in CRX](assets/emaildoraemformskt.zip)
-1. Starten Sie die [adaptives Formular](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled). Füllen Sie die erforderlichen Felder aus und senden Sie sie.
-1. Sie sollten eine E-Mail mit DocumentOfRecord als Anlage erhalten
+1. [Laden Sie das SetValue-Bundle herunter und installieren Sie es](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dieses Bundle enthält den Code zum Erstellen der Metadateneigenschaften im Rahmen des Prozessschritts des Workflows.
+1. [Konfigurieren des Day CQ Mail Service](https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/notification.html)
+1. [Importieren und installieren Sie die mit diesem Artikel verbundenen Assets mit Package Manager in CRX.](assets/emaildoraemformskt.zip)
+1. Starten Sie das [adaptive Formular](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled). Füllen Sie die erforderlichen Felder aus und übermitteln Sie das Formular.
+1. Sie sollten eine E-Mail mit dem Datensatzdokument im Anhang erhalten.
 
-Die [Workflow-Modell](http://localhost:4502/editor.html/conf/global/settings/workflow/models/emaildor.html)
+Erkunden Sie das [Workflow-Modell](http://localhost:4502/editor.html/conf/global/settings/workflow/models/emaildor.html).
 
-Sehen Sie sich den Prozessschritt des Workflows an. Der mit dem Prozessschritt verknüpfte benutzerdefinierte Code erstellt Metadaten-Eigenschaftsnamen und legt deren Werte aus den gesendeten Daten fest. Diese Werte werden dann von der Komponente E-Mail senden verwendet.
+Sehen Sie sich den Prozessschritt des Workflows an. Der mit dem Prozessschritt verknüpfte benutzerdefinierte Code erstellt Namen der Metadateneigenschaften und legt deren Werte anhand der übermittelten Daten fest. Diese Werte werden dann von der Komponente „E-Mail senden“ verwendet.
 
 >[!NOTE]
 >
->In AEM Forms 6.5 und höher benötigen Sie diesen benutzerdefinierten Code nicht, um Metadateneigenschaften zu erstellen. Bitte verwenden Sie die Variablenfunktion in AEM Workflow
+>Ab AEM Forms 6.5 benötigen Sie diesen benutzerdefinierten Code nicht, um Metadateneigenschaften zu erstellen. Verwenden Sie stattdessen die Variablenfunktion im AEM-Workflow.
 
-Stellen Sie sicher, dass die Registerkarte &quot;Anlagen&quot;der Komponente E-Mail senden gemäß dem Screenshot unten konfiguriert ist.
-![Registerkarte &quot;E-Mail-Anhang senden&quot;](assets/sendemailcomponentconfigure.jpg)Der Wert &quot;DOR.pdf&quot;muss mit dem Wert übereinstimmen, der im Datensatzdokument-Pfad angegeben ist, der in den Sendeoptionen Ihres adaptiven Formulars angegeben ist.
+Stellen Sie sicher, dass die Registerkarte „Anhänge“ der Komponente „E-Mail senden“ gemäß dem folgenden Screenshot konfiguriert ist.
+![Registerkarte „Anhänge“ der Komponente „E-Mail senden“](assets/sendemailcomponentconfigure.jpg)Der Wert „DOR.pdf“ muss mit dem Wert übereinstimmen, der in dem in den Sendeoptionen Ihres adaptiven Formulars festgelegten Datensatzdokument-Pfad angegeben ist.
