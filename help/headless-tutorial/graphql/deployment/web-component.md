@@ -8,20 +8,20 @@ role: Developer, Architect
 level: Intermediate
 kt: 10797
 thumbnail: kt-10797.jpg
-source-git-commit: b98f567e05839db78a1a0a593c106b87af931a49
+exl-id: 9d4aab4c-82af-4917-8c1b-3935f19691e6
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
 workflow-type: ht
 source-wordcount: '161'
 ht-degree: 100%
 
 ---
 
-
 # Bereitstellungen von AEM Headless-Web-Komponenten
 
 AEM Headless-[Web-Komponenten](https://developer.mozilla.org/de-DE/docs/Web/Web_Components)-/JS-Bereitstellungen sind reine JavaScript-Apps, die in einem Webbrowser ausgeführt werden und Inhalte in AEM auf Headless-Weise nutzen und damit interagieren. Web-Komponenten-/JS-Bereitstellungen unterscheiden sich von [SPA-Bereitstellungen](./spa.md) dahingehend, dass sie kein robustes SPA-Framework verwenden und normalerweise im Kontext einer Website eingebettet werden, um Inhalte von AEM zur Verfügung zu stellen.
 
 
-## Implementierungskonfigurationen
+## Bereitstellungskonfigurationen
 
 Die folgende Bereitstellungskonfiguration muss für Web-Komponenten-/JS-Bereitstellungen vorhanden sein.
 
