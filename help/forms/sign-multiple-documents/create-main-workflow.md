@@ -1,6 +1,6 @@
 ---
-title: Erstellen des Hauptarbeitsablaufs zum Trigger des Signaturprozesses
-description: Erstellen eines Workflows zum Speichern der Formulare zur Signatur in der Datenbank
+title: Erstellen des Haupt-Workflows zum Auslösen des Signaturprozesses
+description: Erstellen eines Workflows zum Speichern der Formulare zur Signierung in der Datenbank
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 6887.jpg
@@ -10,23 +10,23 @@ role: Developer
 level: Intermediate
 exl-id: 338d9522-f6da-4aa7-b5d8-b9fff39ea94b
 source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '170'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Haupt-Workflow erstellen
+# Erstellen eines Haupt-Workflows
 
-Der Haupt-Workflow wird ausgelöst, wenn der Benutzer das erste Formular sendet (**RefinanceForm**). Im Folgenden wird der Workflow beschrieben.
+Der Haupt-Workflow wird ausgelöst, wenn die Benutzerin oder der Benutzer das erste Formular sendet (**RefinanceForm**). Der Workflow läuft wie folgt ab.
 
-![main-workflow](assets/main-workflow.PNG)
+![Haupt-Workflow](assets/main-workflow.PNG)
 
-**Forms zum Signieren speichern** ist ein benutzerdefinierter Prozessschritt.
+**Formulare zum Signieren speichern** ist ein benutzerdefinierter Prozessschritt.
 
-Die Motivation für die Implementierung eines benutzerdefinierten Prozessschritts besteht darin, einen AEM Workflow zu erweitern. Der folgende Code implementiert einen benutzerdefinierten Prozessschritt. Der Code extrahiert die Namen der zu signierenden Formulare und übergibt die gesendeten Formulardaten an die `insertData` -Methode im SignMultipleForms-Dienst. Die `insertData` -Methode fügt dann die von der Datenquelle identifizierten Zeilen in die Datenbank ein **aemformstutorial**.
+Ein benutzerdefinierter Prozessschritt wird implementiert, um einen AEM-Workflow zu erweitern. Mit dem folgenden Code wird ein solcher benutzerdefinierter Prozessschritt implementiert. Der Code extrahiert die Namen der zu signierenden Formulare und gibt die gesendeten Formulardaten an die `insertData`-Methode im SignMultipleForms-Dienst weiter. Die `insertData`-Methode fügt dann die von der Datenquelle **aemformstutorial** identifizierten Zeilen in die Datenbank ein.
 
-Der Code in diesem benutzerdefinierten Prozessschritt verweist auf die `SignMultipleForms` Dienst.
+Der Code in diesem benutzerdefinierten Prozessschritt verweist auf den `SignMultipleForms`-Dienst.
 
 
 
@@ -117,11 +117,11 @@ public class StoreFormsToSignWorkflowStep implements WorkflowProcess {
 
 ## Assets
 
-Der in diesem Artikel verwendete Workflow Sign Multiple Forms kann [heruntergeladen von hier](assets/sign-multiple-forms-workflows.zip)
+Der in diesem Artikel verwendete Workflow „Mehrere Formulare signieren“ kann [hier heruntergeladen](assets/sign-multiple-forms-workflows.zip) werden.
 
 >[!NOTE]
-> Stellen Sie sicher, dass Sie den Day CQ Mail Service konfigurieren, um E-Mail-Benachrichtigungen zu versenden. Die E-Mail-Vorlage wird auch im obigen Paket bereitgestellt.
+> Stellen Sie sicher, dass Sie den Day CQ Mail Service konfigurieren, um E-Mail-Benachrichtungen zu versenden. Die E-Mail-Vorlage wird auch im obigen Paket bereitgestellt.
 
 ## Nächste Schritte
 
-[Signaturstatus beim Signieren eines Dokuments aktualisieren](./update-signature-status.md)
+[Aktualisieren des Signaturstatus beim Signieren eines Dokuments](./update-signature-status.md)
