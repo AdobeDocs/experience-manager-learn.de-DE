@@ -1,6 +1,6 @@
 ---
-title: Datensatzdokument inline anzeigen
-description: Zusammenführen von adaptiven Formulardaten mit der XDP-Vorlage und Anzeigen der PDF inline mithilfe der Document Cloud-Einbettungs-PDF-API.
+title: Inline-Anzeige des Datensatzdokuments
+description: Führen Sie adaptive Formulardaten mit der XDP-Vorlage zusammen und zeigen Sie die PDF inline mithilfe der PDF-API zur Document Cloud-Einbettung an.
 version: 6.4,6.5
 feature: Forms Service
 topic: Development
@@ -10,27 +10,27 @@ kt: 9411
 exl-id: 327ffe26-e88e-49f0-9f5a-63e2a92e1c8a
 last-substantial-update: 2021-07-07T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '548'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# DoR inline anzeigen
+# Inline-Anzeige des DoR
 
-Ein gängiger Anwendungsfall besteht darin, ein PDF-Dokument mit den vom Benutzer eingegebenen Daten anzuzeigen.
+Ein gängiger Anwendungsfall besteht darin, ein PDF-Dokument mit den von den Benutzenden eingegebenen Daten anzuzeigen.
 
-Um dieses Anwendungsbeispiel zu erstellen, haben wir die Funktion [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
+Zur Durchführung dieses Anwendungsfalls haben wir die [Adobe PDF Embed-API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) verwendet.
 
-Die folgenden Schritte wurden ausgeführt, um die Integration abzuschließen
+Die folgenden Schritte wurden ausgeführt, um die Integration abzuschließen.
 
-## Erstellen Sie eine benutzerdefinierte Komponente, um die PDF inline anzuzeigen
+## Erstellen einer benutzerdefinierten Komponente zur Inline-Anzeige der PDF
 
 Eine benutzerdefinierte Komponente (embed-pdf) wurde erstellt, um das vom POST-Aufruf zurückgegebene PDF-Dokument einzubetten.
 
 ## Client-Bibliothek
 
-Der folgende Code wird ausgeführt, wenn die Variable `viewPDF` auf das Kontrollkästchen klicken. Wir übergeben die Daten des adaptiven Formulars, den Vorlagennamen an den Endpunkt, um das PDF zu generieren. Das generierte PDF-Dokument wird dann dem Benutzer mit der JavaScript-Bibliothek &quot;pdf einbetten&quot;angezeigt.
+Der folgende Code wird ausgeführt, wenn auf das Kontrollkästchen `viewPDF` geklickt wird. Wir übergeben die Daten des adaptiven Formulars und den Vorlagennamen an den Endpunkt, um die PDF zu generieren. Die generierte PDF wird dann der Person, die das Formular ausfüllt, mithilfe von „pdf einbetten“ der JavaScript-Bibliothek angezeigt.
 
 ```javascript
 $(document).ready(function() {
@@ -82,41 +82,42 @@ $(document).ready(function() {
 });
 ```
 
-## Beispieldaten für das XDP generieren
+## Generieren von Beispieldaten für die XDP
 
 * Öffnen Sie die XDP in AEM Forms Designer.
-* Datei auswählen | Formulareigenschaften | Vorschau
-* Klicken Sie auf Vorschaudaten generieren .
-* Klicken Sie auf Generieren
-* Geben Sie einen aussagekräftigen Dateinamen an, z. B. &quot;form-data.xml&quot;
+* Klicken Sie auf „Datei auswählen“ > „Formular-Eigenschaften“ > „Vorschau“
+* Klicken Sie auf „Vorschaudaten erstellen“
+* Klicken Sie auf „Erstellen“
+* Geben Sie einen aussagekräftigen Dateinamen wie „form-data.xml“ an.
 
-## XSD aus den XML-Daten generieren
+## Erstellen einer XSD aus den XML-Daten 
 
-Sie können jedes der kostenlosen Online-Tools verwenden, um [XSD generieren](https://www.freeformatter.com/xsd-generator.html) aus den XML-Daten, die im vorherigen Schritt generiert wurden.
+Sie können eines der kostenlosen Online-Tools verwenden, um aus den im vorherigen Schritt generierten XML-Daten ein [XSD](https://www.freeformatter.com/xsd-generator.html) zu generieren.
 
-## Vorlage hochladen
+## Hochladen der Vorlage
 
-Stellen Sie sicher, dass Sie die xdp-Vorlage in [AEM Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) über die Schaltfläche &quot;Erstellen&quot;
+Stellen Sie sicher, dass Sie die xdp-Vorlage in [AEM Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments) über die Schaltfläche „Erstellen“ hochladen
 
 
-## Adaptives Formular erstellen
+## Erstellen eines adaptiven Formulars
 
 Erstellen Sie ein adaptives Formular basierend auf der XSD aus dem vorherigen Schritt.
-Fügen Sie dem adaptiven Formular eine neue Registerkarte hinzu. Fügen Sie dieser Registerkarte eine Checkbox-Komponente und eine Einbettungs-PDF-Komponente hinzu. Vergewissern Sie sich, dass Sie das Kontrollkästchen viewPDF nennen.
-Konfigurieren Sie die Komponente &quot;embed-pdf&quot;, wie im Screenshot unten dargestellt
+Fügen Sie dem adaptiven Formular eine neue Registerkarte hinzu. Fügen Sie dieser Registerkarte eine Kontrollkästchen-Komponente und eine embed-pdf-Komponente hinzu.
+Vergewissern Sie sich, dass Sie das Kontrollkästchen viewPDF nennen.
+Konfigurieren Sie die Komponente „embed-pdf“, wie im Screenshot unten dargestellt
 ![embed-pdf](assets/embed-pdf-configuration.png)
 
-**Einbetten des PDF-API-Schlüssels** - Dies ist der Schlüssel, den Sie zum Einbetten des PDF-Dokuments verwenden können. Dieser Schlüssel funktioniert nur mit localhost. Sie können [eigenen Schlüssel](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) und ordnen Sie sie einer anderen Domäne zu.
+**PDF-API-Schlüssel einbetten** – Dies ist der Schlüssel, den Sie zum Einbetten des PDF-Dokuments verwenden können. Dieser Schlüssel funktioniert nur mit „localhost“. Sie können [Ihren eigenen Schlüssel](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) erstellen und einer anderen Domain zuordnen.
 
-**Endpunkt, der pdf zurückgibt** - Dies ist das benutzerdefinierte Servlet, das die Daten mit der XDP-Vorlage zusammenführt und das PDF-Dokument zurückgibt.
+**Endpunkt, der PDF zurückgibt** – Dies ist das benutzerdefinierte Servlet, das die Daten mit der XDP-Vorlage zusammenführt und die PDF zurückgibt.
 
-**Vorlagenname** - Dies ist der Pfad zur xdp. In der Regel wird sie im Ordner &quot;formsanddocuments&quot;gespeichert.
+**Vorlagenname** – Dies ist der Pfad zur xdp. In der Regel wird sie im Ordner „formsanddocuments“ gespeichert.
 
-**PDF-Dateiname** - Dies ist die Zeichenfolge, die in der Einbettungs-PDF-Komponente angezeigt wird.
+**PDF-Dateiname** – Dies ist die Zeichenfolge, die in der embed-pdf-Komponente angezeigt wird.
 
-## Benutzerdefiniertes Servlet erstellen
+## Erstellen eines benutzerdefinierten Servlets
 
-Ein benutzerdefiniertes Servlet wurde erstellt, um die Daten mit der XDP-Vorlage zusammenzuführen und das PDF-Dokument zurückzugeben. Der Code, um dies zu erreichen, ist unten aufgeführt. Das benutzerdefinierte Servlet ist Teil der [embedpdf bundle](assets/embedpdf.core-1.0-SNAPSHOT.jar)
+Ein benutzerdefiniertes Servlet wurde erstellt, um die Daten mit der XDP-Vorlage zusammenzuführen und die PDF zurückzugeben. Der Code dafür ist unten aufgeführt. Das benutzerdefinierte Servlet ist Teil des [embedpdf-Bundles](assets/embedpdf.core-1.0-SNAPSHOT.jar)
 
 ```java
 import java.io.ByteArrayInputStream;
@@ -226,11 +227,11 @@ public class StreamPDFToEmbed extends SlingAllMethodsServlet {
 
 Führen Sie die folgenden Schritte aus, um dies auf Ihrem lokalen Server zu testen:
 
-1. [Herunterladen und Installieren des embedpdf-Bundles](assets/embedpdf.core-1.0-SNAPSHOT.jar).
-Dies verfügt über das Servlet, um die Daten mit der XDP-Vorlage zusammenzuführen und die PDF-Datei zurückzustreamen.
-1. Fügen Sie den Pfad /bin/getPDFToEmbed im Abschnitt &quot;Ausgeschlossene Pfade&quot;der Adobe Granite CSRF Filter mit dem [AEM ConfigMgr](http://localhost:4502/system/console/configMgr). In Ihrer Produktionsumgebung wird die Verwendung der [CSRF-Schutzrahmen](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
-1. [Client-Bibliothek und benutzerdefinierte Komponente importieren](assets/embed-pdf.zip)
-1. [Importieren des adaptiven Formulars und der Vorlage](assets/embed-pdf-form-and-xdp.zip)
-1. [Vorschau des adaptiven Formulars](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)
+1. [Laden Sie das embedpdf-Bundle herunter und installieren Sie es](assets/embedpdf.core-1.0-SNAPSHOT.jar).
+Dies verfügt über das Servlet, um die Daten mit der XDP-Vorlage zusammenzuführen und die PDF-Datei zurückschicken.
+1. Fügen Sie den Pfad /bin/getPDFToEmbed im Abschnitt „Ausgeschlossene Pfade“ des Adobe Granite CSRF-Filter mit [AEM ConfigMgr](http://localhost:4502/system/console/configMgr) hinzu. In Ihrer Produktionsumgebung sollten Sie das [CSRF Protection Framework](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=de) verwenden.
+1. [Importieren Sie die Client-Bibliothek und benutzerdefinierte Komponente.](assets/embed-pdf.zip)
+1. [Importieren Sie das adaptive Formular und die Vorlage.](assets/embed-pdf-form-and-xdp.zip)
+1. [Zeigen Sie das adaptive Formular in einer Vorschau an.](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)
 1. Füllen Sie einige Formularfelder aus.
-1. Registerkarte zur Registerkarte PDF anzeigen . Aktivieren Sie das Kontrollkästchen PDF-Ansicht . Im Formular sollte ein PDF-Dokument angezeigt werden, das mit den Daten des adaptiven Formulars gefüllt ist.
+1. Wechseln Sie zur Registerkarte „PDF anzeigen“. Aktivieren Sie das Kontrollkästchen „PDF anzeigen“. Im Formular sollte ein PDF-Dokument angezeigt werden, das mit den Daten des adaptiven Formulars ausgefüllt ist.
