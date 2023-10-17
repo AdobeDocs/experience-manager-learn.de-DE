@@ -1,6 +1,6 @@
 ---
-title: Entwicklung von OAuth-Bereichen in AEM
-description: Die erweiterbaren OAuth-Bereiche von Adobe Experience Manager ermöglichen die Zugriffskontrolle für Ressourcen von einer Clientanwendung, die von einem Endbenutzer autorisiert wurde. Das folgende Diagramm zeigt den Anforderungsfluss im Kontext von AEM.
+title: Entwickeln von OAuth-Bereichen in AEM
+description: Die erweiterbaren OAuth-Bereiche von Adobe Experience Manager ermöglichen die Zugriffskontrolle für Ressourcen einer Client-Anwendung, die von einer Endbenutzerin bzw. einem Endbenutzer autorisiert wurde. Das folgende Diagramm zeigt den Anfragefluss im Kontext von AEM.
 version: 6.4, 6.5
 feature: User and Groups
 topic: Development
@@ -8,26 +8,26 @@ role: Developer
 level: Experienced
 exl-id: dd37355e-cfc7-4581-ac22-d89c951c22cf
 source-git-commit: 307ed6cd25d5be1e54145406b206a78ec878d548
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '179'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Entwicklung von OAuth-Bereichen
+# Entwickeln von OAuth-Bereichen
 
-Die erweiterbaren OAuth-Bereiche von Adobe Experience Manager ermöglichen die Zugriffskontrolle für Ressourcen aus einer Clientanwendung, die von einem Endbenutzer autorisiert wurde. Das folgende Diagramm zeigt den Anforderungsfluss im Kontext von AEM.
+Die erweiterbaren OAuth-Bereiche von Adobe Experience Manager ermöglichen die Zugriffskontrolle für Ressourcen einer Client-Anwendung, die von einer Endbenutzerin bzw. einem Endbenutzer autorisiert wurde. Das folgende Diagramm zeigt den Anfragefluss im Kontext von AEM.
 
 ![OAuth-Bereichsfluss](./assets/oauth-code-sample-develop/oauth-scopes-flow.png)
 
 AEM bietet drei Bereiche:
 
 * Profil
-* Offline-Zugriff
+* Offline-Zugang
 * Replizieren
 
-AEM erweiterbare OAuth-Bereiche ermöglichen die Definition anderer benutzerdefinierter Bereiche. Beispielsweise kann ein benutzerdefinierter Bereich für AEM entwickelt und bereitgestellt werden, mit dem eine über OAuth autorisierte mobile App auf das Lesen, aber nicht Schreiben von Assets beschränkt werden kann.
+Die erweiterbaren OAuth-Bereiche von AEM ermöglichen die Definition weiterer benutzerdefinierter Bereiche. So kann beispielsweise ein benutzerdefinierter Bereich entwickelt und in AEM bereitgestellt werden, der es ermöglicht, dass eine über OAuth autorisierte App nur zum Lesen, nicht aber zum Schreiben von Assets berechtigt ist.
 
-OAuth ist die bevorzugte Methode zum Autorisieren einer Clientanwendung, da es ein Zugriffstoken verwendet, anstatt zu verlangen, dass die Anmeldeinformationen eines AEM Benutzers für diese Anwendung bereitgestellt werden.
+OAuth ist die bevorzugte Methode zum Autorisieren einer Client-Anwendung, da sie ein Zugriffs-Token verwendet, anstatt zu verlangen, dass die Anmeldeinformationen von AEM-Benutzenden für diese Anwendung bereitgestellt werden.
 
 * [Anzeigen des Codes](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/legacy/bundle/src/main/java/com/adobe/acs/samples/authentication/oauth/impl/SampleScopeWithPrivileges.java)
