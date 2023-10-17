@@ -1,6 +1,6 @@
 ---
 title: Ausgabedarstellungen
-description: Erfahren Sie mehr über Ausgabedarstellungen in AEM Assets und wie sie in der Vorschau angezeigt werden können.
+description: Erfahren Sie mehr über Ausgabedarstellungen in AEM Assets und darüber, wie sie in einer Vorschau angezeigt werden können.
 feature: Renditions
 role: User
 level: Beginner
@@ -11,14 +11,14 @@ topic: Content Management
 last-substantial-update: 2021-09-26T00:00:00Z
 exl-id: 1df0ffd7-fe22-4eef-9428-b228ed0dcf31
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '26'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
 # Ausgabedarstellungen
 
-Erfahren Sie mehr über Ausgabedarstellungen in AEM Assets und wie sie in der Vorschau angezeigt werden können.
+Erfahren Sie mehr über Ausgabedarstellungen in AEM Assets und darüber, wie sie in einer Vorschau angezeigt werden können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32047?quality=12&learn=on)
