@@ -1,6 +1,6 @@
 ---
 title: Farb-Management mit AEM Dynamic Media
-description: In diesem Video erfahren Sie, wie das Dynamic Media-Farbmanagement genutzt werden kann, um Farbkorrektur-Vorschaufunktionen in für AEM Assets bereitzustellen.
+description: In diesem Video lernen Sie das Dynamic Media-Farb-Management kennen und erfahren, wie darüber Farbkorrektur-Vorschaufunktionen in AEM Assets bereitgestellt werden können.
 feature: Image Profiles, Video Profiles
 version: 6.4, 6.5
 topic: Content Management
@@ -8,27 +8,27 @@ role: Developer
 level: Intermediate
 exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '319'
-ht-degree: 58%
+ht-degree: 100%
 
 ---
 
 # Farb-Management mit AEM Dynamic Media{#understanding-color-management-with-aem-dynamic-media}
 
-In diesem Video erfahren Sie, wie das Dynamic Media-Farbmanagement genutzt werden kann, um Farbkorrektur-Vorschaufunktionen in für AEM Assets bereitzustellen.
+In diesem Video lernen Sie das Dynamic Media-Farb-Management kennen und erfahren, wie darüber Farbkorrektur-Vorschaufunktionen in AEM Assets bereitgestellt werden können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16792?quality=12&learn=on)
 
 >[!NOTE]
 >
->[Dynamic Media aktivieren](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=de) in AEM, um diese Funktion zu verwenden.
+>[Aktivieren Sie Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=de) in AEM, um diese Funktion verwenden zu können.
 
-Diese Funktion ist für AEM 6.1- und 6.2-Versionen als Feature Pack verfügbar.
+Diese Funktion ist für AEM 6.1- und AEM 6.2-Versionen als Feature Pack verfügbar.
 
-## XML-Vorlage für den Konfigurationsknoten Farbmanagement {#xml-template-for-the-color-management-configuration-node}
+## XML-Vorlage für den Konfigurationsknoten „Farb-Management“ {#xml-template-for-the-color-management-configuration-node}
 
-Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten Farbmanagement . Diese XML-Vorlage kann in das AEM Entwicklungsprojekt kopiert und mit den projektspezifischen Konfigurationen konfiguriert werden.
+Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten „Farb-Management“. Diese XML-Vorlage kann in das AEM-Entwicklungsprojekt kopiert und mit den projektspezifischen Konfigurationen konfiguriert werden.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -84,7 +84,7 @@ Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten Farbmanage
 />
 ```
 
-### Die Standardfarbprofile der Adobe sind unten aufgeführt {#list-of-default-adobe-color-profiles-are-listed-below}
+### Liste der Standardfarbprofile von Adobe {#list-of-default-adobe-color-profiles-are-listed-below}
 
 | Name | Farbraum | Beschreibung |
 | ------------------- | ---------- | ------------------------------------- |
@@ -97,7 +97,7 @@ Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten Farbmanage
 | ColorMatchRGB | RGB | ColorMatch-RGB |
 | EuropeISOCoated | CMYK | Europe ISO Coated FOGRA27 |
 | EuroscaleCoated | CMYK | Euroscale Coated v2 |
-| EuroscaleUncoated | CMYK | Euroscale Unbeschichtv2 |
+| EuroscaleUncoated | CMYK | Euroscale Uncoated v2 |
 | JapanColorCoated | CMYK | Japan Color 2001 Coated |
 | JapanColorNewspaper | CMYK | Japan Color 2002 Newspaper |
 | JapanColorUncoated | CMYK | Japan Color 2001 Uncoated |
@@ -112,7 +112,7 @@ Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten Farbmanage
 | SheetfedCoated | CMYK | U.S. Sheetfed Coated v2 |
 | SheetfedUncoated | CMYK | U.S. Sheetfed Uncoated v2 |
 | SMPTE | RGB | SMPTE-C |
-| sRGB | RGB sRGB | IEC 61966-2.1 |
+| sRGB | RGB sRGB | IEC61966-2.1 |
 | UncoatedFogra29 | CMYK | Uncoated FOGRA29 (ISO 12647-2:2004) |
 | WebCoated | CMYK | U.S. Web Coated (SWOP) v2 |
 | WebCoatedFogra28 | CMYK | Web Coated FOGRA28 (ISO 12647-2:2004) |
@@ -123,4 +123,4 @@ Im Folgenden finden Sie die XML-Vorlage für den Konfigurationsknoten Farbmanage
 
 ## Zusätzliche Ressourcen{#additional-resources}
 
-* [Konfigurieren des Farb-Managements für Dynamic Media](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
+* [Konfigurieren des Farb-Managements für Dynamic Media](https://helpx.adobe.com/de/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
