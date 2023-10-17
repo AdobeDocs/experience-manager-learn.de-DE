@@ -1,6 +1,6 @@
 ---
 title: Fehlerbehebung beim Signieren mehrerer Dokumente
-description: Testen und Ersetzen von Problemen
+description: Testen und Fehlerbehebung der Lösung
 feature: Adaptive Forms
 version: 6.4,6.5
 kt: 6960
@@ -10,9 +10,9 @@ role: Developer
 level: Intermediate
 exl-id: 99cba29e-4ae3-4160-a4c7-a5b6579618c0
 source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '388'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
@@ -21,32 +21,32 @@ ht-degree: 1%
 
 ## Vorschau des Refinanzierungsformulars
 
-Der Anwendungsfall wird ausgelöst, wenn der Kundendienstmitarbeiter Folgendes ausfüllt und sendet [Refinanzierungsformular](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled).
+Der Anwendungsfall wird ausgelöst, wenn Kundendienstmitarbeitende das [Refinanzierungsformular](http://localhost:4502/content/dam/formsanddocuments/formsandsigndemo/refinanceform/jcr:content?wcmmode=disabled) ausfüllen und einreichen.
 
-Der Workflow &quot;Mehrere Forms signieren&quot;erhält Trigger bei der Übermittlung des Formulars und erhält eine E-Mail-Benachrichtigung mit einem Link, um den Prozess zum Ausfüllen und Signieren des Formulars zu starten.
+Der Workflow „Mehrere Formulare unterschreiben“ wird bei der Übermittlung des Formulars ausgelöst, und die Kundin bzw. der Kunde erhält eine E-Mail-Benachrichtigung mit einem Link, um zu beginnen, das Formular auszufüllen und zu unterschreiben.
 
-## Formulare im Paket ausfüllen
+## Ausfüllen der Formulare im Paket
 
-Der Kunde wird aufgefordert, das erste Formular im Paket auszufüllen und zu unterschreiben. Nach erfolgreicher Unterzeichnung des Formulars kann der Kunde zum nächsten Formular im Paket navigieren. Sobald alle Formulare ausgefüllt und unterzeichnet sind, wird dem Kunden der Text &quot;**AllDone**&quot;.
+Die Kundin bzw. der Kunde wird aufgefordert, das erste Formular im Paket auszufüllen und zu unterschreiben. Nach erfolgreicher Unterzeichnung des Formulars kann sie bzw. er zum nächsten Formular im Paket navigieren. Sobald die Person alle Formulare ausgefüllt und unterschrieben sind, wird ihr das Formular „**AllDone**“ vorgelegt.
 
 ## Fehlerbehebung
 
 ### E-Mail-Benachrichtigung wird nicht generiert
 
-Die E-Mail-Benachrichtigung wird von der Komponente E-Mail senden im Workflow Sign Multiple Form gesendet. Wenn einer der Schritte in diesem Workflow fehlschlägt, wird die E-Mail-Benachrichtigung gesendet. Stellen Sie sicher, dass im benutzerdefinierten Prozessschritt im Workflow Zeilen in Ihrer MySQL-Datenbank erstellt werden. Wenn die Zeilen erstellt werden, überprüfen Sie Ihre Konfigurationseinstellungen für Day CQ Mail Service .
+Die E-Mail-Benachrichtigung wird von der Komponente „E-Mail senden“ im Workflow „Mehrere Formulare unterschreiben“ gesendet. Wenn einer der Schritte in diesem Workflow fehlschlägt, wird die E-Mail-Benachrichtigung gesendet. Achten Sie darauf, dass der benutzerdefinierte Prozessschritt im Workflow Zeilen in Ihrer MySQL-Datenbank erstellt.  Wenn die Zeilen erstellt werden, überprüfen Sie Ihre Konfigurationseinstellungen für Day CQ Mail Service.
 
 ### Der Link in der E-Mail-Benachrichtigung funktioniert nicht
 
-Die Links in den E-Mail-Benachrichtigungen werden dynamisch generiert. Wenn Ihr AEM-Server nicht auf localhost:4502 ausgeführt wird, geben Sie in den Argumenten des Schritts &quot;Forms zum Signieren speichern&quot;des Workflows &quot;Sign Multiple Forms&quot;den richtigen Servernamen und Port an
+Die Links in den E-Mail-Benachrichtigungen werden dynamisch generiert. Wenn Ihr AEM-Server nicht auf localhost:4502 ausgeführt wird, geben Sie den richtigen Server-Namen und -Port in den Argumenten des Schritts „Zu signierende Formulare speichern“ des Workflows „Mehrere Formulare unterschreiben“ an.
 
 ### Formular kann nicht signiert werden
 
-Dies kann vorkommen, wenn das Formular nicht richtig ausgefüllt wurde, indem die Daten aus der Datenquelle abgerufen wurden. Überprüfen Sie die Stdout-Protokolle Ihres Servers. Die Datei fetchformdata.jsp schreibt einige nützliche Meldungen in das stdout.
+Dies kann passieren, wenn das Formular beim Abrufen der Daten aus der Datenquelle nicht korrekt vorausgefüllt wurde.  Überprüfen Sie die Stdout-Protokolle Ihres Servers. Die Datei „fetchformdata.jsp“ schreibt einige nützliche Meldungen in das Stdout.
 
-### Es ist nicht möglich, zum nächsten Formular im Paket zu navigieren
+### Unmöglich, zum nächsten Formular im Paket zu wechseln
 
-Bei erfolgreicher Unterzeichnung eines Formulars im Paket wird der Workflow Signaturstatus aktualisieren ausgelöst. Der erste Schritt im Workflow aktualisiert den Signaturstatus des Formulars in der Datenbank. Überprüfen Sie, ob der Status des Formulars von 0 auf 1 aktualisiert wurde.
+Bei erfolgreicher Unterzeichnung eines Formulars im Paket wird der Workflow „Signaturstatus aktualisieren“ ausgelöst. Der erste Schritt im Workflow aktualisiert den Signaturstatus des Formulars in der Datenbank. Überprüfen Sie, ob der Status des Formulars von 0 auf 1 aktualisiert wurde.
 
 ### Das AllDone-Formular wird nicht angezeigt
 
-Wenn das Paket keine weiteren Formulare enthält, wird dem Benutzer das AllDone-Formular angezeigt. Wenn das AllDone-Formular nicht angezeigt wird, überprüfen Sie die in Zeile 33 der Datei GetNextFormToSign.js verwendete URL der Datei GetNextFormToSign.js , die Teil des **getnextform** Client-Bibliothek.
+Wenn das Paket keine weiteren Formulare enthält, wird den Benutzenden das AllDone-Formular angezeigt. Wenn das AllDone-Formular nicht angezeigt wird, überprüfen Sie die URL, die in Zeile 33 der Datei „GetNextFormToSign.js“ verwendet wird, die Teil der Client-Bibliothek **getnextform** ist.
