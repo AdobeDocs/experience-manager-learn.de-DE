@@ -1,6 +1,6 @@
 ---
-title: Konfiguration der Batch-Datenkonfiguration.
-description: Konfiguration der Batch-Datenkonfiguration.
+title: Konfigurieren der Batch-Datenkonfiguration.
+description: Konfigurieren der Batch-Datenkonfiguration.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,9 +10,9 @@ topic: Development
 kt: 9667
 exl-id: 521084fc-d70b-4a89-8e17-714820341e21
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '42'
-ht-degree: 38%
+ht-degree: 100%
 
 ---
 
