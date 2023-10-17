@@ -1,5 +1,5 @@
 ---
-title: Anpassen der Speicherparameter von Workbench
+title: Anpassen von Workbench-Speicherparametern
 description: Schritte zum Anpassen von Workbench-Speicherparametern
 type: Troubleshooting
 role: Admin
@@ -10,13 +10,13 @@ topic: Administration
 index: y
 exl-id: e3e3e3ff-c914-4ae0-9d41-1fcbcf6375bf
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '29'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Anpassen der Speicherparameter von Workbench
+# Anpassen von Workbench-Speicherparametern
 
 *In diesem Video wird der Prozess zur Anpassung der Workbench-Speicherparameter erläutert.*
 
