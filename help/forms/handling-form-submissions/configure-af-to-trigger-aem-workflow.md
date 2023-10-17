@@ -1,6 +1,6 @@
 ---
-title: Konfigurieren des Workflows "Adaptives Formular für Trigger AEM"
-description: Verstehen der verschiedenen Optionen beim Konfigurieren des Workflows Adaptives Formular für Trigger AEM
+title: Konfigurieren adaptiver Formulare zum Auslösen eines AEM-Workflows
+description: Verstehen der verschiedenen Optionen beim Konfigurieren adaptiver Formulare zum Auslösen eines AEM-Workflows
 feature: Workflow
 topics: integrations
 audience: developer
@@ -13,13 +13,13 @@ level: Beginner
 exl-id: ffe4a952-a541-43f1-ac8b-9efe2bed0553
 last-substantial-update: 2020-07-07T00:00:00Z
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '26'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Konfigurieren des Workflows &quot;Adaptives Formular für Trigger AEM&quot;
+# Konfigurieren adaptiver Formulare zum Auslösen eines AEM-Workflows 
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/28316?quality=12&learn=on)
