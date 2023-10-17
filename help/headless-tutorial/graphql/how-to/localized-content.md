@@ -8,13 +8,13 @@ role: Developer
 level: Intermediate
 kt: 10254
 thumbnail: KT-10254.jpeg
-source-git-commit: ae49fb45db6f075a34ae67475f2fcc5658cb0413
-workflow-type: tm+mt
+exl-id: 5e3d115b-f3a1-4edc-86ab-3e0713a36d54
+source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
+workflow-type: ht
 source-wordcount: '508'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
-
 
 # Lokalisierte Inhalte mit AEM Headless
 
@@ -38,7 +38,7 @@ Der Gebietsschema-Code ist auch der Wert, der zum Filtern der von der GraphQL-Ab
 
 ## GraphQL-persistierte Abfrage
 
-AEM bietet einen `_locale`-GraphQL-Filter, der Inhalte automatisch nach Gebietsschema-Code filtert. Beispielsweise können Sie alle englischen Abenteuer im [WKND-Site-Projekt](https://github.com/adobe/aem-guides-wknd) kann mit einer neuen persistenten Abfrage durchgeführt werden `wknd-shared/adventures-by-locale` definiert als:
+AEM bietet einen `_locale`-GraphQL-Filter, der Inhalte automatisch nach Gebietsschema-Code filtert. Zum Beispiel kann das Abrufen aller englischen Abenteuer im [WKND-Site-Projekt](https://github.com/adobe/aem-guides-wknd) mit der neuen persistierten Abfrage `wknd-shared/adventures-by-locale` durchgeführt werden, die wie folgt definiert ist:
 
 ```graphql
 query($locale: String!) {
