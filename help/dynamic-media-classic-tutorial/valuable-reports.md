@@ -1,45 +1,45 @@
 ---
-title: Wertvolle Berichte für Administratoren
-description: Entdecken Sie zwei wertvolle Berichte, die Administratoren von Dynamic Media Classic einrichten sollten.
+title: Wertvolle Berichte für Admins
+description: Entdecken Sie zwei wertvolle Berichte, die Admins von Dynamic Media Classic eventuell einrichten sollten.
 feature: Dynamic Media Classic
 topic: Content Management
 role: Admin
 level: Intermediate
-source-git-commit: ea7d49985e69ecf9713e17e51587125b3fb400ee
-workflow-type: tm+mt
+exl-id: c3fbfb0b-3222-46ff-9248-dea70ce85a23
+source-git-commit: 4b47daf82e27f6bea4be30e3cdd132f497f4c609
+workflow-type: ht
 source-wordcount: '314'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
+# Wertvolle Berichte für Admins {#valuable-reports}
 
-# Wertvolle Berichte für Administratoren {#valuable-reports}
+In diesem letzten Kapitel möchten wir Ihnen nur zwei wertvolle Berichte vorstellen, die Sie als Admin einrichten könnten: den Bericht zu Bandbreite und Speicher und den Bericht zu Bildfehlern.
 
-In diesem letzten Kapitel möchten wir Ihnen lediglich zwei wertvolle Berichte vorstellen, die Sie als Administrator einrichten sollten: den Bericht &quot;Bandbreite und Speicher&quot;und den Bericht &quot;Bildfehler&quot;.
+## Bericht zu Bandbreite und Speicher
 
-## Bandbreitenbericht
-
-Der Bericht &quot;Bandbreite und Speicher&quot;zeigt an, wie viel Bandbreite der Image-Server pro Monat beansprucht wurde und welchen Speicher Sie in Dynamic Media Classic nutzen. Die Lagerung ist ein vertraglich vereinbarter Betrag, daher ist es wichtig zu überprüfen und sicherzustellen, dass Sie unter Ihrem Limit bleiben, um Übernachtungsgebühren zu vermeiden.
+Der Bericht zu Bandbreite und Speicher zeigt an, wie viel Bandbreite des Bild-Servers pro Monat beansprucht wurde und wie viel Speicher Sie in Dynamic Media Classic nutzen. Der Speicherplatz ist ein vertraglich vereinbarter Betrag, daher ist es wichtig zu überprüfen und sicherzustellen, dass Sie unter Ihrem Limit bleiben, um Überschussgebühren zu vermeiden.
 
 ![Bild](assets/valuable-reports/reports-1.jpg)
 
-_Der Bericht &quot;Bandbreite und Speicher&quot;zeigt dieses Konto weit über die 30-GB-Speichergrenze an._
+_Der Bericht zu Bandbreite und Speicher zeigt an, dass dieses Konto weit über die Speichergrenze von 30 GB hinausgeht._
 
-## Bericht &quot;Bildfehler&quot;
+## Bericht zu Bildfehlern
 
-Wenn eine URL ein fehlendes Bild anfordert, generiert der Image-Server einen Fehler. Sie können ein Standardbild einrichten, das in diesen Fällen angezeigt wird. Sie sollten sich jedoch der Fehler bewusst sein. Der Bericht &quot;Bildfehler&quot;enthält eine Liste der 20 häufigsten Bildfehler in den letzten 24 Stunden mit Details wie der Häufigkeit des Fehlers, dem Bild, das den Fehler enthält, und der Seite mit dem Problembild. Wenn die Antwort &quot;STANDARD&quot;lautet, bedeutet dies, dass Ihr Standardbild stattdessen bereitgestellt wurde.
+Wenn eine URL ein fehlendes Bild anfordert, generiert der Bild-Server einen Fehler. Sie können zwar ein Standardbild einrichten, das in diesen Fällen angezeigt wird, doch sollten Sie sich der Fehler bewusst sein. Der Bericht zu Bildfehlern enthält eine Liste der 20 häufigsten Bildfehler in den letzten 24 Stunden, mit Details wie der Häufigkeit des Fehlers, dem Bild, das den Fehler enthält, und der Seite mit dem Problembild. Wenn die Antwort „STANDARD“ lautet, bedeutet dies, dass stattdessen Ihr Standardbild bereitgestellt wurde.
 
 ![Bild](assets/valuable-reports/reports-2.jpg)
 
-_Bildfehlerbericht._
+_Bericht zu Bildfehlern._
 
 ## Zusammenfassung
 
-Wir hoffen, dass Sie die Inhalte in diesem Best Practices-Handbuch bei den ersten Schritten mit Ihrer leistungsstarken Rich-Media-Lösung oder deren Nutzung hilfreich gefunden haben.
+Wir hoffen, dass Sie die Inhalte in diesem Best Practices-Handbuch bei den ersten Schritten mit Ihrer leistungsstarken Rich-Media-Lösung bzw. bei deren umfangreicheren Nutzung hilfreich gefunden haben.
 
 Weitere Informationen zu Dynamic Media Classic finden Sie in den folgenden Ressourcen:
 
-- [Dynamic Media Classic auf Experience League - Vorteile](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
-- [Dynamic Media Classic auf Experience League - Mehr dazu](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
-- [Die Archive des Dynamic Media Newsletters](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
-- [Dokumentation zu Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)
+- [Dynamic Media Classic auf Experience League – Wert schaffen](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
+- [Dynamic Media Classic auf Experience League – mehr tun können](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
+- [Die Archive des Dynamic Media-Newsletters](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html?lang=de)
+- [Dokumentation zu Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html?lang=de)
