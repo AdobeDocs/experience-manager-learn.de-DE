@@ -1,6 +1,6 @@
 ---
 title: Virtuelles privates Netzwerk (VPN)
-description: Erfahren Sie, wie Sie eine as a Cloud Service Verbindung mit Ihrem VPN herstellen, um sichere Kommunikationskanäle zwischen AEM und internen Diensten zu erstellen.
+description: Erfahren Sie, wie Sie mit Ihrem VPN eine Verbindung zu AEM as a Cloud Service herstellen, um sichere Kommunikationskanäle zwischen AEM und internen Diensten zu erstellen.
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -10,58 +10,58 @@ kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1318'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 # Virtuelles privates Netzwerk (VPN)
 
-Erfahren Sie, wie Sie eine as a Cloud Service Verbindung mit Ihrem VPN herstellen, um sichere Kommunikationskanäle zwischen AEM und internen Diensten zu erstellen.
+Erfahren Sie, wie Sie mit Ihrem VPN eine Verbindung zu AEM as a Cloud Service herstellen, um sichere Kommunikationskanäle zwischen AEM und internen Diensten zu erstellen.
 
 ## Was ist ein virtuelles privates Netzwerk?
 
-Virtual Private Network (VPN) ermöglicht einem AEM as a Cloud Service Kunden die Verbindung **AEM Umgebungen** innerhalb eines Cloud Manager-Programms auf ein vorhandenes Element verweist, [unterstützt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn) VPN. Dies ermöglicht sichere und kontrollierte Verbindungen zwischen AEM as a Cloud Service Diensten und Diensten innerhalb des Kundennetzwerks.
+Ein virtuelles privates Netzwerk (VPN) ermöglicht es Kundinnen und Kunden von AEM as a Cloud Service, **die AEM-Umgebungen** innerhalb eines Cloud Manager-Programms mit einem vorhandenen, [unterstützten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html?lang=de#vpn) VPN zu verbinden. Dies ermöglicht sichere und kontrollierte Verbindungen zwischen AEM as a Cloud Service und Diensten innerhalb des Kundennetzwerks.
 
-Ein Cloud Manager-Programm kann nur über eine __single__ Netzwerkinfrastrukturtyp. Stellen Sie sicher, dass das virtuelle private Netzwerk das beste ist. [geeignete Art von Netzwerkinfrastruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#general-vpn-considerations) für Ihre AEM as a Cloud Service, bevor Sie die folgenden Befehle ausführen.
+Ein Cloud Manager-Programm kann nur einen __einzigen__ Netzwerkinfrastrukturtyp haben. Vergewissern Sie sich, dass das VPN den [geeignetsten Typ der Netzwerkinfrastruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html?lang=de#general-vpn-considerations) für Ihr AEM as a Cloud Service darstellt, bevor Sie die folgenden Befehle ausführen.
 
 >[!NOTE]
 >
->Beachten Sie, dass das Verbinden der Build-Umgebung von Cloud Manager mit einem VPN nicht unterstützt wird. Wenn Sie über ein privates Repository auf binäre Artefakte zugreifen müssen, müssen Sie ein sicheres und kennwortgeschütztes Repository mit einer URL einrichten, die im öffentlichen Internet verfügbar ist [wie hier beschrieben](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html#password-protected-maven-repositories).
+>Beachten Sie, dass das Verbinden der Build-Umgebung von Cloud Manager mit einem VPN nicht unterstützt wird. Wenn Sie auf binäre Artefakte aus einem privaten Repository zugreifen müssen, müssen Sie ein sicheres und passwortgeschütztes Repository mit einer URL einrichten, die im öffentlichen Internet verfügbar ist, [wie hier beschrieben](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project.html?lang=de#password-protected-maven-repositories).
 
 >[!MORELIKETHIS]
 >
-> Lesen des AEM as a Cloud Service [Dokumentation zur erweiterten Netzwerkkonfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn) Weitere Informationen zu Virtual Private Network.
+> Lesen Sie die [Dokumentation zur erweiterten Netzwerkkonfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html?lang=de#vpn) für AEM as a Cloud Service, um weitere Einzelheiten zum virtuellen privaten Netzwerk zu erhalten.
 
 ## Voraussetzungen
 
-Beim Einrichten eines virtuellen privaten Netzwerks sind folgende Voraussetzungen erforderlich:
+Bei der Einrichtung eines virtuellen privaten Netzwerks sind folgende Voraussetzungen erforderlich:
 
-+ Adobe-Konto mit [Berechtigungen für Business Owner in Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-+ Zugriff auf [Authentifizierungsberechtigungen der Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
-   + Organisations-ID (auch IMS-Organisations-ID genannt)
-   + Client-ID (auch API-Schlüssel genannt)
-   + Zugriffstoken (auch als Trägertoken bezeichnet)
-+ Die Cloud Manager-Programm-ID
-+ Die Cloud Manager-Umgebungs-IDs
-+ Ein virtuelles privates Netzwerk mit Zugriff auf alle erforderlichen Verbindungsparameter.
++ Adobe-Konto mit [Geschäftsinhaber-Berechtigungen in Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
++ Zugriff auf die [Authentifizierungs-Anmeldeinformationen der Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
+   + Organisations-ID (auch als IMS-Org-ID bezeichnet)
+   + Client-ID (auch als API-Schlüssel bezeichnet)
+   + Zugriffs-Token (auch als Bearer- oder Träger-Token bezeichnet)
++ Cloud Manager-Programm-ID
++ Cloud Manager-Umgebungs-IDs
++ Ein virtuelles privates Netzwerk mit Zugriff auf alle erforderlichen Verbindungsparameter
 
-Weitere Informationen finden Sie in der folgenden exemplarischen Vorgehensweise, wie Sie Anmeldeinformationen der Cloud Manager-API einrichten, konfigurieren und abrufen und wie Sie sie zum Ausführen eines Cloud Manager-API-Aufrufs verwenden können.
+Weitere Informationen dazu, wie Sie Anmeldeinformationen für die Cloud Manager-API einrichten, konfigurieren sowie abrufen und wie Sie diese zum Ausführen eines Cloud Manager-API-Aufrufs verwenden können, finden Sie in der folgenden Anleitung.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
 
-Dieses Tutorial verwendet `curl` , um die Cloud Manager-API-Konfigurationen vorzunehmen. Die `curl` -Befehle setzen eine Linux/macOS-Syntax voraus. Ersetzen Sie bei Verwendung der Windows-Eingabeaufforderung den `\` Zeilenumbruch-Zeichen mit `^`.
+In diesem Tutorial wird `curl` verwendet, um die Cloud Manager-API-Konfigurationen vorzunehmen. Die bereitgestellten `curl`-Befehle setzen eine Linux-/macOS-Syntax voraus. Ersetzen Sie bei Verwendung der Windows-Eingabeaufforderung das Zeilenumbruchszeichen `\` durch `^`.
 
-## Virtuelles privates Netzwerk pro Programm aktivieren
+## Aktivieren des virtuellen privaten Netzwerks pro Programm
 
 Aktivieren Sie zunächst das virtuelle private Netzwerk auf AEM as a Cloud Service.
 
-1. Bestimmen Sie zunächst mithilfe der Cloud Manager-API die Region, in der die erweiterte Vernetzung erforderlich ist. [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) Vorgang. Die `region name` ist erforderlich, um nachfolgende Cloud Manager-API-Aufrufe durchzuführen. In der Regel wird der Bereich verwendet, in dem sich die Produktionsumgebung befindet.
+1. Bestimmen Sie zunächst die Region, in der das erweiterte Netzwerk benötigt wird, indem Sie den Cloud Manager-API-Vorgang [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) verwenden. `region name` ist erforderlich, um nachfolgende Cloud Manager-API-Aufrufe durchzuführen. In der Regel wird die Region verwendet, in der sich die Produktionsumgebung befindet.
 
-   Suchen Sie die Region Ihrer AEM as a Cloud Service Umgebung in [Cloud Manager](https://my.cloudmanager.adobe.com) unter [Umgebungsdetails](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=en#viewing-environment). Der in Cloud Manager angezeigte regionale Name kann [Dem Regions-Code zugeordnet](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) wird in der Cloud Manager-API verwendet.
+   Suchen Sie in [Cloud Manager](https://my.cloudmanager.adobe.com) unter [Umgebungsdetails](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=de#viewing-environment) nach der Region Ihrer AEM as a Cloud Service-Umgebung. Der in Cloud Manager angezeigte Regionsname kann dem [Regions-Code zugeordnet](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) werden, der in der Cloud Manager-API verwendet wird.
 
-   __listRegions-HTTP-Anfrage__
+   __HTTP-Anfrage „listRegions“__
 
    ```shell
    $ curl -X GET https://cloudmanager.adobe.io/api/program/{programId}/regions \
@@ -71,9 +71,9 @@ Aktivieren Sie zunächst das virtuelle private Netzwerk auf AEM as a Cloud Servi
        -H 'Content-Type: application/json'
    ```
 
-1. Aktivieren des virtuellen privaten Netzwerks für ein Cloud Manager-Programm mithilfe von Cloud Manager-APIs [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) Vorgang. Verwenden Sie die entsprechende `region` Code, der von der Cloud Manager-API abgerufen wurde `listRegions` Vorgang.
+1. Aktivieren Sie ein virtuelles privates Netzwerk für ein Cloud Manager-Programm mithilfe des Cloud Manager-API-Vorgangs [createNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/). Verwenden Sie den entsprechenden Code für `region`, der über den Cloud Manager-API-Vorgang `listRegions` abgerufen wurde.
 
-   __HTTP-Anforderung createNetworkInfrastructure__
+   __HTTP-Anfrage „createNetworkInfrastructure“__
 
    ```shell
    $ curl -X POST https://cloudmanager.adobe.io/api/program/{programId}/networkInfrastructures \
@@ -84,9 +84,9 @@ Aktivieren Sie zunächst das virtuelle private Netzwerk auf AEM as a Cloud Servi
        -d @./vpn-create.json
    ```
 
-   Definieren Sie die JSON-Parameter in einer `vpn-create.json` und bereitgestellt, um zu curlen über `... -d @./vpn-create.json`.
+   Definieren Sie die JSON-Parameter in `vpn-create.json` und stellen Sie sie cURL über `... -d @./vpn-create.json` zur Verfügung.
 
-   [Laden Sie das Beispiel vpn-create.json herunter](./assets/vpn-create.json).  Diese Datei ist nur ein Beispiel. Konfigurieren Sie Ihre Datei nach Bedarf basierend auf den unter dokumentierten optionalen/erforderlichen Feldern. [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
+   [Laden Sie das Beispiel vpn-create.json herunter](./assets/vpn-create.json). Diese Datei ist nur ein Beispiel. Konfigurieren Sie Ihre Datei nach Bedarf auf der Grundlage der unter [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) dokumentierten optionalen/erforderlichen Felder.
 
    ```json
    {
@@ -135,11 +135,11 @@ Aktivieren Sie zunächst das virtuelle private Netzwerk auf AEM as a Cloud Servi
    }
    ```
 
-   Warten Sie 45-60 Minuten, bis das Cloud Manager-Programm die Netzwerkinfrastruktur bereitstellt.
+   Warten Sie 45–60 Minuten, bis das Cloud Manager-Programm die Netzwerkinfrastruktur bereitstellt.
 
-1. Überprüfen, ob die Umgebung abgeschlossen ist __Virtuelles privates Netzwerk__ Konfiguration mithilfe der Cloud Manager-API [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) -Vorgang mithilfe der `id` von der HTTP-Anforderung createNetworkInfrastructure im vorherigen Schritt zurückgegeben.
+1. Überprüfen Sie, ob die Umgebung die Konfiguration des __Virtuellen Privaten Netzwerks__ mithilfe des Cloud Manager-API-Vorgangs [getNetworkInfrastructure](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/getNetworkInfrastructure) abgeschlossen hat, indem Sie `id` aus der vorherigen createNetworkInfrastructure-HTTP-Anfrage verwenden.
 
-   __HTTP-Anforderung &quot;getNetworkInfrastructure&quot;__
+   __HTTP-Anfrage „getNetworkInfrastructure“__
 
    ```shell
    $ curl -X GET https://cloudmanager.adobe.io/api/program/{programId}/networkInfrastructure/{networkInfrastructureId} \
@@ -149,13 +149,13 @@ Aktivieren Sie zunächst das virtuelle private Netzwerk auf AEM as a Cloud Servi
        -H 'Content-Type: application/json'
    ```
 
-   Stellen Sie sicher, dass die HTTP-Antwort eine __status__ von __ready__. Falls noch nicht fertig, überprüfen Sie den Status alle paar Minuten erneut.
+   Überprüfen Sie, ob die HTTP-Antwort einen __Status__ von __ready__ enthält. Falls noch nicht „ready“, überprüfen Sie den Status alle paar Minuten.
 
-## Konfigurieren von Virtual Private Network Proxys pro Umgebung
+## Konfigurieren von VPN-Proxys pro Umgebung
 
-1. Aktivieren und Konfigurieren der __Virtuelles privates Netzwerk__ Konfiguration in jeder AEM as a Cloud Service Umgebung mithilfe der Cloud Manager-API [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) Vorgang.
+1. Aktivieren und konfigurieren Sie die Konfiguration des __virtuellen privaten Netzwerks__ auf jeder AEM as a Cloud Service-Umgebung mithilfe des Cloud Manager-API-Vorgangs [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
-   __enableEnvironmentAdvancedNetworkingConfiguration HTTP-Anfrage__
+   __HTTP-Anfrage „enableEnvironmentAdvancedNetworkingConfiguration“__
 
    ```shell
    $ curl -X PUT https://cloudmanager.adobe.io/api/program/{programId}/environment/{environmentId}/advancedNetworking \
@@ -166,7 +166,7 @@ Aktivieren Sie zunächst das virtuelle private Netzwerk auf AEM as a Cloud Servi
        -d @./vpn-configure.json
    ```
 
-   Definieren Sie die JSON-Parameter in einer `vpn-configure.json` und bereitgestellt, um zu curlen über `... -d @./vpn-configure.json`.
+   Definieren Sie die JSON-Parameter in `vpn-configure.json` und stellen Sie sie cURL über `... -d @./vpn-configure.json` zur Verfügung.
 
 [Laden Sie das Beispiel vpn-configure.json herunter](./assets/vpn-configure.json)
 
@@ -191,20 +191,20 @@ Aktivieren Sie zunächst das virtuelle private Netzwerk auf AEM as a Cloud Servi
    }
    ```
 
-   `nonProxyHosts` bezeichnet eine Gruppe von Hosts, für die Port 80 oder 443 über die standardmäßigen freigegebenen IP-Adressbereiche und nicht über die dedizierte Ausgangs-IP weitergeleitet werden soll. `nonProxyHosts` kann nützlich sein, da das Traffic-egressing über freigegebene IPs von Adobe automatisch weiter optimiert werden kann.
+   `nonProxyHosts` bezeichnet einen Satz von Hosts, für die Port 80 oder 443 über die standardmäßigen freigegebenen IP-Adressbereiche und nicht über die dedizierte Ausgangs-IP-Adresse weitergeleitet werden soll. `nonProxyHosts` kann nützlich sein, da der über gemeinsam genutzte IPs ausgehende Traffic von Adobe automatisch weiter optimiert werden kann.
 
-   Für jeden `portForwards` -Zuordnung definiert das erweiterte Netzwerk die folgende Weiterleitungsregel:
+   Für jede `portForwards`-Zuordnung definiert das erweiterte Netzwerk die folgende Weiterleitungsregel:
 
-   | Proxy-Host | Proxy-Anschluss |  | Externer Host | Externer Port |
+   | Proxy-Host | Proxy-Port |  | Externer Host | Externer Port |
    |---------------------------------|----------|----------------|------------------|----------|
    | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-   AEM __only__ erfordert HTTP/HTTPS-Verbindungen zum externen Dienst, lassen Sie die `portForwards` -Array leer, da diese Regeln nur für Nicht-HTTP-/HTTPS-Anforderungen erforderlich sind.
+   Wenn Ihre AEM-Bereitstellung __nur__ HTTP/HTTPS-Verbindungen zu externen Diensten erfordert, lassen Sie das Array `portForwards` leer, da diese Regeln nur für Nicht-HTTP/HTTPS-Anfragen erforderlich sind.
 
 
-1. Überprüfen Sie für jede Umgebung, ob die VPN-Routing-Regeln aktiv sind, indem Sie die Cloud Manager-APIs [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) Vorgang.
+1. Überprüfen Sie für jede Umgebung, ob die vpn-Routing-Regeln wirksam sind, indem Sie den Cloud Manager API-Vorgang [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) verwenden.
 
-   __HTTP-Anforderung &quot;getEnvironmentAdvancedNetworkingConfiguration&quot;__
+   __HTTP-Anfrage „getEnvironmentAdvancedNetworkingConfiguration“__
 
    ```shell
    $ curl -X GET https://cloudmanager.adobe.io/api/program/{programId}/environment/{environmentId}/advancedNetworking \
@@ -214,28 +214,28 @@ Aktivieren Sie zunächst das virtuelle private Netzwerk auf AEM as a Cloud Servi
        -H 'Content-Type: application/json'
    ```
 
-1. Proxykonfigurationen für virtuelle private Netzwerke können mithilfe der Cloud Manager-API aktualisiert werden. [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) Vorgang. Angaben `enableEnvironmentAdvancedNetworkingConfiguration` ist `PUT` -Operation, sodass alle Regeln bei jedem Aufruf dieses Vorgangs bereitgestellt werden müssen.
+1. Proxy-Konfigurationen für virtuelle private Netzwerke können mit dem Cloud Manager-API-Vorgang [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) aktualisiert werden. Denken Sie daran, dass `enableEnvironmentAdvancedNetworkingConfiguration` ein `PUT`-Vorgang ist, sodass alle Regeln bei jedem Aufruf dieses Vorgangs angegeben werden müssen.
 
 1. Jetzt können Sie die Konfiguration des Ausgangs des virtuellen privaten Netzwerks in Ihrem benutzerdefinierten AEM-Code und Ihrer Konfiguration verwenden.
 
 ## Verbindung zu externen Diensten über das virtuelle private Netzwerk
 
-Wenn das Virtual Private Network aktiviert ist, können AEM Code und Konfiguration sie verwenden, um über das VPN Aufrufe an externe Dienste zu tätigen. Es gibt zwei Varianten von externen Aufrufen, die AEM unterschiedlich behandelt:
+Wenn das virtuelle private Netzwerk aktiviert ist, können AEM-Code und Konfiguration sie verwenden, um über den VPN Aufrufe an externe Dienste zu tätigen. Es gibt zwei Varianten von externen Aufrufen, die AEM unterschiedlich behandelt:
 
 1. HTTP/HTTPS-Aufrufe an externe Dienste
-   + Umfasst HTTP-/HTTPS-Aufrufe für Dienste, die auf anderen Ports als den standardmäßigen 80- oder 443-Ports ausgeführt werden.
+   + Einschließlich HTTP/HTTPS-Aufrufe an Dienste, die auf anderen Ports als den Standard-Ports 80 oder 443 ausgeführt werden.
 1. Nicht-HTTP-/HTTPS-Aufrufe an externe Dienste
-   + Enthält alle Nicht-HTTP-Aufrufe, z. B. Verbindungen mit Mail-Servern, SQL-Datenbanken oder Services, die mit anderen Nicht-HTTP-/HTTPS-Protokollen ausgeführt werden.
+   + Enthält alle Nicht-HTTP-Aufrufe, z. B. Verbindungen mit Mail-Servern, SQL-Datenbanken oder Dienste, die mit anderen Nicht-HTTP-/HTTPS-Protokollen ausgeführt werden.
 
-HTTP/HTTPS-Anfragen von AEM über Standardanschlüsse (80/443) sind standardmäßig zulässig, sie verwenden jedoch nicht die VPN-Verbindung, wenn sie nicht wie unten beschrieben entsprechend konfiguriert sind.
+HTTP/HTTPS-Anfragen von AEM über Standard-Ports (80/443) sind standardmäßig zulässig, sie verwenden jedoch nicht die VPN-Verbindung, wenn sie nicht wie unten beschrieben entsprechend konfiguriert sind.
 
 ### HTTP/HTTPS
 
-Bei der Erstellung von HTTP/HTTPS-Verbindungen von AEM werden bei Verwendung von VPN HTTP/HTTPS-Verbindungen automatisch aus AEM abgeleitet. Zur Unterstützung von HTTP/HTTPS-Verbindungen ist kein zusätzlicher Code oder keine zusätzliche Konfiguration erforderlich.
+Beim Erstellen von HTTP/HTTPS-Verbindungen aus AEM werden HTTP/HTTPS-Verbindungen bei Verwendung eines VPN automatisch aus AEM abgeleitet. Zur Unterstützung von HTTP/HTTPS-Verbindungen ist kein zusätzlicher Code und keine zusätzliche Konfiguration erforderlich.
 
 >[!TIP]
 >
-> Weitere Informationen finden Sie in AEM Dokumentation zu Virtual Private Network von as a Cloud Service für [den vollständigen Satz von Routing-Regeln](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#vpn-traffic-routing).
+> In der Dokumentation zum virtuellen privaten Netzwerk von AEM as a Cloud Service finden Sie [den vollständigen Satz an Routing-Regeln](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html?lang=de#vpn-traffic-routing).
 
 #### Code-Beispiele
 
@@ -245,7 +245,7 @@ Bei der Erstellung von HTTP/HTTPS-Verbindungen von AEM werden bei Verwendung von
     <a  href="./examples/http-dedicated-egress-ip-vpn.md"><img alt="HTTP/HTTPS" src="./assets/code-examples__http.png"/></a>
     <div><strong><a href="./examples/http-dedicated-egress-ip-vpn.md">HTTP/HTTPS</a></strong></div>
     <p>
-        Java™-Codebeispiel, das eine HTTP/HTTPS-Verbindung mithilfe des HTTP/HTTPS-Protokolls von AEM as a Cloud Service zu einem externen Dienst herstellt.
+        Java™-Codebeispiel, das die HTTP/HTTPS-Verbindung mithilfe des HTTP/HTTPS-Protokolls von AEM as a Cloud Service zu einem externen Dienst herstellt.
     </p>
 </td>
 <td></td>
@@ -253,16 +253,18 @@ Bei der Erstellung von HTTP/HTTPS-Verbindungen von AEM werden bei Verwendung von
 </tr>
 </table>
 
-### Codebeispiele für Nicht-HTTP-/HTTPS-Verbindungen
+### Code-Beispiele für Verbindungen ohne HTTP/HTTPS
 
-Beim Erstellen von Nicht-HTTP-/HTTPS-Verbindungen (z. B. SQL, SMTP usw.) aus AEM muss die Verbindung über einen speziellen Hostnamen hergestellt werden, der von AEM bereitgestellt wird.
+Beim Erstellen von Nicht-HTTP-/HTTPS-Verbindungen (z. B. SQL, SMTP usw.) aus AEM, muss die Verbindung über einen speziellen Host-Namen hergestellt werden, der von AEM bereitgestellt wird.
 
-| Variablenname | Verwendung | Java™-Code | OSGi-Konfiguration | | - | - | - | - | | `AEM_PROXY_HOST` | Proxy-Host für Verbindungen ohne HTTP/HTTPS | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
+| Variablenname | Verwenden Sie | Java™-Code | OSGi-Konfiguration |
+| - |  - | - | - |
+| `AEM_PROXY_HOST` | Proxy-Host für Verbindungen ohne HTTP/HTTPS | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
-Verbindungen zu externen Diensten werden dann über die `AEM_PROXY_HOST` und des zugeordneten Anschlusses (`portForwards.portOrig`), die dann AEM zum zugeordneten externen Hostnamen (`portForwards.name`) und Port (`portForwards.portDest`).
+Verbindungen zu externen Diensten werden dann über `AEM_PROXY_HOST` und den zugeordneten Port (`portForwards.portOrig`) aufgerufen und anschließend von AEM zum zugeordneten externen Host-Namen (`portForwards.name`) und Port (`portForwards.portDest`) geleitet.
 
-| Proxy-Host | Proxy-Anschluss |  | Externer Host | Externer Port |
+| Proxy-Host | Proxy-Port |  | Externer Host | Externer Port |
 |---------------------------------|----------|----------------|------------------|----------|
 | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
@@ -271,47 +273,47 @@ Verbindungen zu externen Diensten werden dann über die `AEM_PROXY_HOST` und des
 
 <table><tr>
    <td>
-      <a  href="./examples/sql-datasourcepool.md"><img alt="SQL-Verbindung mit JDBC DataSourcePool" src="./assets//code-examples__sql-osgi.png"/></a>
-      <div><strong><a href="./examples/sql-datasourcepool.md">SQL-Verbindung mit JDBC DataSourcePool</a></strong></div>
+      <a  href="./examples/sql-datasourcepool.md"><img alt="SQL-Verbindung über JDBC DataSourcePool" src="./assets//code-examples__sql-osgi.png"/></a>
+      <div><strong><a href="./examples/sql-datasourcepool.md">SQL-Verbindung über JDBC DataSourcePool</a></strong></div>
       <p>
-            Java™-Codebeispiel für die Verbindung mit externen SQL-Datenbanken durch die Konfiguration AEM JDBC-Datenquellenpools.
+            Java™-Code-Beispiel für die Verbindung mit externen SQL-Datenbanken durch die Konfiguration von JDBC-Datenquellen-Pools von AEM.
       </p>
     </td>
    <td>
-      <a  href="./examples/sql-java-apis.md"><img alt="SQL-Verbindung mit Java-APIs" src="./assets/code-examples__sql-java-api.png"/></a>
-      <div><strong><a href="./examples/sql-java-apis.md">SQL-Verbindung mit Java™ APIs</a></strong></div>
+      <a  href="./examples/sql-java-apis.md"><img alt="SQL-Verbindung über Java-APIs" src="./assets/code-examples__sql-java-api.png"/></a>
+      <div><strong><a href="./examples/sql-java-apis.md">SQL-Verbindung über Java™-APIs</a></strong></div>
       <p>
-            Java™-Codebeispiel für die Verbindung mit externen SQL-Datenbanken mit den SQL-APIs von Java™.
+            Java™-Code-Beispiel für die Verbindung mit externen SQL-Datenbanken über die SQL-APIs von Java™.
       </p>
     </td>
    <td>
       <a  href="./examples/email-service.md"><img alt="Virtuelles privates Netzwerk (VPN)" src="./assets/code-examples__email.png"/></a>
       <div><strong><a href="./examples/email-service.md">E-Mail-Dienst</a></strong></div>
       <p>
-        Beispiel für eine OSGi-Konfiguration mit AEM, um eine Verbindung zu externen E-Mail-Diensten herzustellen.
+        Beispiel für eine OSGi-Konfiguration mit AEM für die Verbindung mit externen E-Mail-Diensten.
       </p>
     </td>
 </tr></table>
 
 ### Zugriff auf AEM as a Cloud Service über VPN beschränken
 
-Die Konfiguration des virtuellen privaten Netzwerks beschränkt den Zugriff auf AEM as a Cloud Service Umgebungen auf ein VPN.
+Die Konfiguration des virtuellen privaten Netzwerks beschränkt den Zugriff auf AEM as a Cloud Service-Umgebungen auf ein VPN.
 
 #### Konfigurationsbeispiele
 
 <table><tr>
    <td>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="Anwenden einer IP-Zulassungsliste" src="./assets/code_examples__vpn-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">Anwenden einer IP-Zulassungsliste</a></strong></div>
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html?lang=de"><img alt="Übernehmen einer IP-Zulassungsliste" src="./assets/code_examples__vpn-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html?lang=de">Anwenden einer IP-Zulassungsliste</a></strong></div>
       <p>
             Konfigurieren Sie eine IP-Zulassungsliste so, dass nur VPN-Traffic auf AEM zugreifen kann.
       </p>
     </td>
    <td>
-      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="Pfadbasierte VPN-Zugriffsbeschränkungen für AEM Publish" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">Pfadbasierte VPN-Zugriffsbeschränkungen für AEM Publish</a></strong></div>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections?lang=de"><img alt="Pfadbasierte VPN-Zugriffsbeschränkungen für AEM Publish" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections?lang=de">Pfadbasierte VPN-Zugriffsbeschränkungen für AEM Publish</a></strong></div>
       <p>
-            VPN-Zugriff für bestimmte Pfade in der AEM-Veröffentlichungsinstanz erforderlich.
+            VPN-Zugriff für bestimmte Pfade in AEM Publish erforderlich machen.
       </p>
     </td>
    <td></td>
