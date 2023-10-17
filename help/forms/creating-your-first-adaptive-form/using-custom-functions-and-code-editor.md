@@ -10,9 +10,9 @@ role: Developer
 level: Beginner
 exl-id: 7b2a4075-bfdf-49f3-b507-34d86193bf64
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '136'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 In diesem Teil verwenden wir benutzerdefinierte Funktionen und den Code-Editor, um Geschäftsregeln zu erstellen.
 
-Sie haben bereits installiert. [ClientLib mit benutzerdefinierter Funktion](assets/client-libs-and-logo.zip) früher in diesem Tutorial.
+Sie haben die [ClientLib mit benutzerdefinierter Funktion](assets/client-libs-and-logo.zip) bereits früher in diesem Tutorial installiert.
 
 Normalerweise besteht eine Client-Bibliothek aus CSS- und JavaScript-Dateien. Diese Client-Bibliothek enthält eine JavaScript-Datei, die eine Funktion zum Ausfüllen von Dropdown-Listenwerten verfügbar macht.
 
@@ -29,15 +29,15 @@ Normalerweise besteht eine Client-Bibliothek aus CSS- und JavaScript-Dateien. Di
 
 >[!VIDEO](https://video.tv.adobe.com/v/22282?quality=12&learn=on)
 
-### Zusammenfassungstitel des Bedienfelds festlegen {#set-the-summary-title-of-panels}
+### Festlegen des Zusammenfassungstitels des Bedienfelds {#set-the-summary-title-of-panels}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28387?quality=12&learn=on)
 
-#### Bedienfeld überprüfen {#validate-panels-using-rule-editor}
+#### Überprüfen des Bedienfelds {#validate-panels-using-rule-editor}
 
 >[!VIDEO](https://video.tv.adobe.com/v/28409?quality=12&learn=on)
 
-Im Folgenden finden Sie den Code, der zum Überprüfen von Bereichsfeldern verwendet wird
+Im Folgenden finden Sie den Code, der zum Überprüfen von Feldern im Bedienfeld verwendet wird:
 
 ```javascript
 //debugger;
@@ -60,12 +60,12 @@ else
   }
 ```
 
-Sie können die Auskommentierung von Zeile 1 aufheben, um den Code im Browserfenster zu debuggen.
+Sie können die Auskommentierung von Zeile 1 aufheben, um den Code im Browser-Fenster zu debuggen.
 
-Zeile 4 - Aktuelles Bedienfeld abrufen
+Zeile 4 – Abrufen des aktuellen Bedienfelds
 
-Zeile 5 - Überprüfen des aktuellen Bedienfelds.
+Zeile 5 – Überprüfen des aktuellen Bedienfelds
 
-Zeile 9: Wenn keine Fehler zum nächsten Bereich wechseln
+Zeile 9 – Wechseln zum nächsten Bedienfeld, wenn keine Fehler vorhanden
 
 Zeigen Sie eine Vorschau des Formulars an und testen Sie die neu aktivierte Funktion.
