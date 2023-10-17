@@ -1,6 +1,6 @@
 ---
 title: Anzeigen mehrerer PDF-Dokumente
-description: Durchlaufen mehrere PDF-Dokumente in einem adaptiven Formular.
+description: Durchlaufen Sie mehrere PDF-Dokumente in einem adaptiven Formular.
 version: 6.5
 feature: Adaptive Forms
 topic: Development
@@ -10,47 +10,50 @@ kt: 10292
 exl-id: c1d248c3-8208-476e-b0ae-cab25575cd6a
 last-substantial-update: 2021-10-12T00:00:00Z
 source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '363'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # Anzeigen mehrerer PDF-Dokumente in einem Karussell
 
-Ein gängiges Anwendungsbeispiel besteht darin, mehrere PDF-Dokumente für den Formularbenutzer anzuzeigen, die vor dem Senden des Formulars überprüft werden sollen.
+Ein gängiger Anwendungsfall besteht darin, der Person, die ein Formular ausfüllt, mehrere PDF-Dokumente zur Überprüfung anzuzeigen, bevor sie das Formular absendet.
 
-Um dieses Anwendungsbeispiel zu erstellen, haben wir die Funktion [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html).
+Zur Durchführung dieses Anwendungsfalls haben wir die [Adobe PDF Embed-API](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) verwendet.
 
-[Eine Live-Demo dieses Beispiels kann hier vorgestellt werden.](https://forms.enablementadobe.com/content/dam/formsanddocuments/wefinancecreditcard/jcr:content?wcmmode=disabled)
+[Eine Live-Demo dieses Beispiels finden Sie hier.](https://forms.enablementadobe.com/content/dam/formsanddocuments/wefinancecreditcard/jcr:content?wcmmode=disabled)
 
-Die folgenden Schritte wurden ausgeführt, um die Integration abzuschließen
+Die folgenden Schritte wurden ausgeführt, um die Integration abzuschließen.
 
-## Erstellen einer benutzerdefinierten Komponente zur Anzeige mehrerer PDF-Dokumente
+## Erstellen einer benutzerdefinierten Komponente zum Anzeigen mehrerer PDF-Dokumente
 
-Eine benutzerdefinierte Komponente (PDF-Karussell) wurde erstellt, um durch PDF-Dokumente zu blättern.
+Eine benutzerdefinierte Komponente (PDF-Karussell) wurde erstellt, um die PDF-Dokumente zu durchlaufen.
 
 ## Client-Bibliothek
 
-Eine Client-Bibliothek wurde erstellt, um die PDF mithilfe der Adobe PDF-Einbettungs-API anzuzeigen. Die anzuzeigenden PDF werden in den PDF-Karussellkomponenten angegeben.
+Eine Client-Bibliothek wurde erstellt, um die PDF-Dokumente mithilfe der Adobe PDF Embed-API anzuzeigen. Die anzuzeigenden PDF-Dokumente werden in den PDF-Karussellkomponenten angegeben.
 
-## Adaptives Formular erstellen
+## Erstellen eines adaptiven Formulars
 
-Erstellen eines adaptiven Formulars basierend auf einigen Registerkarten (dieses Beispiel enthält 3 Registerkarten) Fügen Sie einige adaptive Formularkomponenten in den ersten beiden Registerkarten hinzu Fügen Sie die PDF-Karussellkomponente auf der dritten Registerkarte hinzu Konfigurieren Sie die PDF-Karussellkomponente, wie im Screenshot unten dargestellt
-![pdf-carousel](assets/pdf-carousel-af-component.png)
+Erstellen Sie ein adaptives Formular mit mehreren Registerkarten (dieses Beispiel umfasst 3 Registerkarten).
+Fügen Sie adaptive Formularkomponenten auf den ersten beiden Registerkarten hinzu.
+Fügen Sie die PDF-Karussellkomponente auf der dritten Registerkarte hinzu.
+Konfigurieren Sie die PDF-Karussellkomponente, wie im Screenshot unten dargestellt.
+![PDF-Karussell](assets/pdf-carousel-af-component.png)
 
-**Einbetten des PDF-API-Schlüssels** - Dies ist der Schlüssel, den Sie zum Einbetten des PDF-Dokuments verwenden können. Dieser Schlüssel funktioniert nur mit localhost. Sie können [eigenen Schlüssel](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) und ordnen Sie sie einer anderen Domäne zu.
+**PDF-API-Schlüssel einbetten**: Dies ist der Schlüssel, mit dem Sie das PDF-Dokument einbetten können. Dieser Schlüssel funktioniert nur mit „localhost“. Sie können [Ihren eigenen Schlüssel](https://www.adobe.io/apis/documentcloud/dcsdk/pdf-embed.html) erstellen und einer anderen Domain zuordnen.
 
-**PDF Documents angeben** - Hier können Sie die PDF-Dokumente angeben, die im Karussell angezeigt werden sollen.
+**PDF-Dokumente angeben**: Hier können Sie die PDF-Dokumente angeben, die im Karussell angezeigt werden sollen.
 
 
 ## Bereitstellen des Beispiels auf Ihrem Server
 
 Gehen Sie wie folgt vor, um dies auf Ihrem lokalen Server zu testen:
 
-1. [Client-Bibliothek importieren](assets/pdf-carousel-client-lib.zip) in Ihre lokale AEM-Instanz [mit dem Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
-1. [Importieren der PDF-Karussellkomponente](assets/pdf-carousel-component.zip) in Ihre lokale AEM-Instanz [mit dem Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
-1. [Importieren des adaptiven Formulars ](assets/adaptive-form-pdf-carousel.zip) in Ihre lokale AEM-Instanz [mit dem Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
-1. [Importieren der anzuzeigenden Beispiel-PDFs](assets/pdf-carousel-sample-documents.zip) in Ihre lokale AEM-Instanz [über den Link zum Hochladen der Asset-Datei](http://localhost:4502/assets.html/content/dam)
-1. [Vorschau des adaptiven Formulars](http://localhost:4502/content/dam/formsanddocuments/wefinancecreditcard/jcr:content?wcmmode=disabled)
-1. Registerkarte auf der Registerkarte Zu überprüfende Dokumente . In der Karussellkomponente sollten drei PDF-Dokumente angezeigt werden.
+1. [Importieren Sie die Client-Bibliothek](assets/pdf-carousel-client-lib.zip) mit [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) in Ihre lokale AEM-Instanz.
+1. [Importieren Sie die PDF-Karussellkomponente](assets/pdf-carousel-component.zip) mit [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) in Ihre lokale AEM-Instanz.
+1. [Importieren Sie das adaptive Formular](assets/adaptive-form-pdf-carousel.zip) mit [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) in Ihre lokale AEM-Instanz.
+1. [Importieren Sie die anzuzeigenden PDF-Beispieldokumente](assets/pdf-carousel-sample-documents.zip) über den [Link zum Hochladen der Asset-Datei](http://localhost:4502/assets.html/content/dam) in Ihre lokale AEM-Instanz.
+1. [Zeigen Sie das adaptive Formular in einer Vorschau an](http://localhost:4502/content/dam/formsanddocuments/wefinancecreditcard/jcr:content?wcmmode=disabled).
+1. Wechseln Sie zur Registerkarte „Zu überprüfende Dokumente“. In der Karussellkomponente sollten drei PDF-Dokumente zu sehen sein.
