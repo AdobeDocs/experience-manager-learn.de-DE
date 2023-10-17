@@ -9,15 +9,15 @@ kt: 8268
 thumbnail: 335729.jpeg
 exl-id: 096b0a95-7039-4570-b567-ba316bfc8709
 source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '75'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # OSGi-Konfigurationseigenschaften
 
-Erfahren Sie mehr über den Ansatz auf niedriger Ebene bei der Verwendung von Schlüssel/Wert-Paaren für die OSGi-Konfiguration zur Definition und Offenlegung von OSGi-Konfigurationsdaten für OSGi-Dienste.
+Erfahren Sie mehr über den Ansatz auf niedriger Ebene, mit Schlüssel-Wert-Paaren der OSGi-Konfiguration OSGi-Konfigurationsdaten für OSGi-Dienste zu definieren und bereitzustellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335729?quality=12&learn=on)
 
