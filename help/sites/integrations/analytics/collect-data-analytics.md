@@ -1,6 +1,6 @@
 ---
 title: Integrieren von AEM Sites mit Adobe Analytics mit der Adobe Analytics-Tag-Erweiterung
-description: Integrieren Sie AEM Sites mit Adobe Analytics mithilfe der ereignisgesteuerten Adobe Client-Datenschicht, um Daten zur Benutzeraktivität auf einer mit Adobe Experience Manager erstellten Website zu erfassen. Erfahren Sie, wie Sie mithilfe von Tag-Regeln auf diese Ereignisse warten und Daten an eine Adobe Analytics Report Suite senden können.
+description: Integrieren Sie AEM Sites mit Adobe Analytics mithilfe der ereignisgesteuerten Adobe Client-Datenschicht, um Daten zur Benutzeraktivität auf einer mit Adobe Experience Manager erstellten Website zu erfassen. Erfahren Sie, wie Sie mit Tag-Regeln diese Ereignisse überwachen und Daten an eine Adobe Analytics Report Suite senden können.
 version: Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
@@ -13,7 +13,7 @@ exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
 source-wordcount: '2468'
-ht-degree: 6%
+ht-degree: 98%
 
 ---
 
@@ -21,67 +21,67 @@ ht-degree: 6%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation mehrere terminologische Änderungen eingeführt. Siehe Folgendes [Dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) für eine konsolidierte Übersicht über die terminologischen Änderungen.
+>Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation verschiedene terminologische Änderungen durchgeführt. Eine konsolidierte Übersicht über die terminologischen Änderungen finden Sie in diesem [Dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=de).
 
 
-Erfahren Sie, wie Sie AEM Sites und Adobe Analytics mit der Adobe Analytics-Tag-Erweiterung integrieren, indem Sie die integrierten Funktionen der [Adobe Client-Datenschicht mit AEM Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de) , um Daten zu einer Seite in Adobe Experience Manager Sites zu erfassen. [Tags im Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de) und [Adobe Analytics-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=de) werden zum Erstellen von Regeln verwendet, um Seitendaten an Adobe Analytics zu senden.
+Erfahren Sie, wie Sie AEM Sites und Adobe Analytics mit der Adobe Analytics-Tag-Erweiterung integrieren, indem Sie die integrierten Funktionen der [Adobe Client-Datenschicht mit AEM-Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de) verwenden, um Daten zu einer Seite in Adobe Experience Manager Sites zu erfassen. [Tags in Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de) und die [Adobe Analytics-Erweiterung](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=de) werden verwendet, um Regeln zum Senden von Seitendaten an Adobe Analytics zu erstellen.
 
 ## Was Sie erstellen werden {#what-build}
 
-![Seitendatenverfolgung](assets/collect-data-analytics/analytics-page-data-tracking.png)
+![Tracking von Seitendaten](assets/collect-data-analytics/analytics-page-data-tracking.png)
 
-In diesem Tutorial erstellen Sie eine Tag-Regel, die auf einem Ereignis aus der Adobe Client-Datenschicht basiert. Fügen Sie außerdem Bedingungen hinzu, wann die Regel ausgelöst werden soll, und senden Sie dann die **Seitenname** und **Seitenvorlage** Werte einer AEM Seite in Adobe Analytics.
+In diesem Tutorial lösen Sie eine Tag-Regel aus, die auf einem Ereignis aus der Adobe Client-Datenschicht basiert. Fügen Sie außerdem Bedingungen dafür hinzu, wann die Regel ausgelöst werden soll, und senden Sie dann die Werte für den **Seitennamen** und die **Seitenvorlage** einer AEM-Seite an Adobe Analytics.
 
 ### Ziele {#objective}
 
-1. Erstellen Sie eine ereignisgesteuerte Regel in der Tag-Eigenschaft, die Änderungen aus der Datenschicht erfasst
-1. Ordnen Sie die Seitendatenschichteigenschaften Datenelementen in der Tag-Eigenschaft zu.
-1. Erfassen und Senden von Seitendaten an Adobe Analytics mithilfe des Seitenansichts-Beacons
+1. Erstellen Sie eine ereignisgesteuerte Regel in der Tag-Eigenschaft, die Änderungen an der Datenschicht erfasst
+1. Ordnen Sie die Eigenschaften der Seitendatenschicht Datenelementen in der Tag-Eigenschaft zu.
+1. Erfassen und senden Sie Seitendaten an Adobe Analytics mithilfe des Seitenansichts-Beacons
 
 ## Voraussetzungen
 
 Folgendes ist erforderlich:
 
 * **Tag-Eigenschaft** in Experience Platform
-* **Adobe Analytics** Report Suite-ID und Tracking-Server testen/entwickeln. Die folgende Dokumentation finden Sie für [Erstellen einer Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html).
-* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) Browsererweiterung. Screenshots in diesem Tutorial, die aus dem Chrome-Browser erfasst wurden.
-* (Optional) AEM Site mit der [Adobe Client-Datenschicht aktiviert](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de#installation-activation). In diesem Tutorial wird die öffentliche Meinung verwendet [WKND](https://wknd.site/us/en.html) Website, aber Sie können gerne Ihre eigene Website verwenden.
+* **Adobe Analytics** test/dev-Report Suite-ID und Tracking-Server. Weitere Informationen zum [Erstellen einer Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html?lang=de) finden Sie in der folgenden Dokumentation.
+* [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=de)-Browser-Erweiterung. Screenshots in diesem Tutorial, die mit dem Chrome-Browser erfasst wurden.
+* (Optional) AEM Site mit [aktivierter Adobe Client-Datenschicht](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de#installation-activation). In diesem Tutorial wird die öffentlich gezeigte [WKND](https://wknd.site/us/en.html)-Website genutzt, aber Sie können gerne Ihre eigene Website verwenden.
 
 >[!NOTE]
 >
-> Benötigen Sie Hilfe bei der Integration von Tag-Eigenschaft und AEM Site? [Siehe diese Videoreihe](../experience-platform/data-collection/tags/overview.md).
+> Benötigen Sie Hilfe bei der Integration von Tag-Eigenschaft und AEM Site? [Sehen Sie sich diese Videoreihe an](../experience-platform/data-collection/tags/overview.md).
 
-## Tag-Umgebung für WKND-Site wechseln
+## Wechseln der Tag-Umgebung für WKND-Site
 
 Die [WKND](https://wknd.site/us/en.html) ist eine öffentlich zugängliche Website, die auf [ein Open-Source-Projekt](https://github.com/adobe/aem-guides-wknd) als Referenz konzipiert und [Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de) für eine AEM Implementierung.
 
-Anstatt eine AEM Umgebung einzurichten und die WKND-Codebasis zu installieren, können Sie den Experience Platform-Debugger verwenden, um **switch** live [WKND-Site](https://wknd.site/us/en.html) nach *Ihre* Tag-Eigenschaft. Sie können jedoch Ihre eigene AEM-Site verwenden, wenn sie bereits über die [Adobe Client-Datenschicht aktiviert](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de#installation-activation).
+Anstatt eine AEM-Umgebung einzurichten und die WKND-Code-Basis zu installieren, können Sie den Experience Platform Debugger verwenden, um von der Live-[WKND-Site](https://wknd.site/us/en.html) zu *Ihrer* Tag-Eigenschaft zu **wechseln**. Sie können jedoch Ihre eigene AEM-Site verwenden, wenn dort bereits die [Adobe Client-Datenschicht aktiviert](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de#installation-activation) ist.
 
-1. Melden Sie sich bei Experience Platform an und [Erstellen einer Tag-Eigenschaft](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html) (falls noch nicht geschehen).
-1. Stellen Sie sicher, dass ein anfängliches Tag-JavaScript [Bibliothek wurde erstellt](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html#create-a-library) und in das -Tag weitergeleitet werden [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de).
-1. Kopieren Sie den JavaScript-Einbettungscode aus der Tag-Umgebung, in der Ihre Bibliothek veröffentlicht wurde.
+1. Melden Sie sich bei Experience Platform an und [erstellen Sie eine Tag-Eigenschaft](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=de) (falls noch nicht geschehen).
+1. Stellen Sie sicher, dass eine anfängliche Tag-JavaScript-[Bibliothek erstellt](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html?lang=de#create-a-library) und in die Tag-[Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de) weitergeleitet wurde.
+1. Kopieren Sie den JavaScript-Einbettungs-Code aus der Tag-Umgebung, in der Ihre Bibliothek veröffentlicht wurde.
 
-   ![Einbettungscode der Tag-Eigenschaft kopieren](assets/collect-data-analytics/launch-environment-copy.png)
+   ![Kopieren des Einbettungs-Codes der Tag-Eigenschaft](assets/collect-data-analytics/launch-environment-copy.png)
 
-1. Öffnen Sie in Ihrem Browser eine neue Registerkarte und navigieren Sie zu [WKND-Site](https://wknd.site/us/en.html)
-1. Öffnen Sie die Browsererweiterung Experience Platform Debugger .
+1. Öffnen Sie in Ihrem Browser eine neue Registerkarte und navigieren Sie zur [WKND-Site](https://wknd.site/us/en.html)
+1. Öffnen Sie die Experience Platform Debugger-Browser-Erweiterung.
 
    ![Experience Platform Debugger](assets/collect-data-analytics/experience-platform-debugger-extension.png)
 
-1. Navigieren Sie zu **Experience Platform-Tags** > **Konfiguration** und **Eingebettete Einbettungscodes** Ersetzen Sie den vorhandenen Einbettungscode durch *Ihre* Einbettungscode, der aus Schritt 3 kopiert wurde.
+1. Navigieren Sie zu **Experience Platform Tags** > **Konfiguration** und ersetzen Sie unter **Eingeführte Einbettungs-Codes** den vorhandenen Einbettungs-Code durch *Ihren* Einbettungs-Code, der aus Schritt 3 kopiert wurde.
 
-   ![Eingebetteten Code ersetzen](assets/collect-data-analytics/platform-debugger-replace-embed.png)
+   ![Ersetzen des Einbettungs-Codes](assets/collect-data-analytics/platform-debugger-replace-embed.png)
 
-1. Aktivieren **Konsolenprotokollierung** und **Sperren** den Debugger auf der Registerkarte WKND .
+1. Aktivieren Sie die **Konsolenprotokollierung** und **sperren** Sie den Debugger auf der WKND-Registerkarte.
 
    ![Konsolenprotokollierung](assets/collect-data-analytics/console-logging-lock-debugger.png)
 
 ## Überprüfen der Adobe Client-Datenschicht auf der WKND-Site
 
-Die [WKND-Referenzprojekt](https://github.com/adobe/aem-guides-wknd) ist mit AEM Kernkomponenten erstellt und verfügt über die [Adobe Client-Datenschicht aktiviert](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de#installation-activation) Standardmäßig. Überprüfen Sie als Nächstes, ob die Adobe Client-Datenschicht aktiviert ist.
+Das [WKND-Referenzprojekt](https://github.com/adobe/aem-guides-wknd) wurde mit AEM-Kernkomponenten erstellt und hat standardmäßig die [Adobe Client-Datenschicht aktiviert](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de#installation-activation). Überprüfen Sie als Nächstes, ob die Adobe Client-Datenschicht aktiviert ist.
 
-1. Navigieren Sie zu [WKND-Site](https://wknd.site/us/en.html).
-1. Öffnen Sie die Entwicklertools des Browsers und navigieren Sie zum **Konsole**. Führen Sie den folgenden Befehl aus:
+1. Navigieren Sie zur [WKND-Site](https://wknd.site/us/en.html).
+1. Öffnen Sie die Entwickler-Tools des Browsers und navigieren Sie zur **Konsole**. Führen Sie den folgenden Befehl aus:
 
    ```js
    adobeDataLayer.getState();
@@ -89,9 +89,9 @@ Die [WKND-Referenzprojekt](https://github.com/adobe/aem-guides-wknd) ist mit AEM
 
    Der obige Code gibt den aktuellen Status der Adobe Client-Datenschicht zurück.
 
-   ![Status der Adobe-Datenschicht](assets/collect-data-analytics/adobe-data-layer-state.png)
+   ![Adobe Datenschicht-Status](assets/collect-data-analytics/adobe-data-layer-state.png)
 
-1. Erweitern Sie die Antwort und überprüfen Sie die `page` eingeben. Es sollte ein Datenschema wie das folgende angezeigt werden:
+1. Erweitern Sie die Antwort und überprüfen Sie den `page`-Eintrag. Es sollte ein Datenschema wie das folgende angezeigt werden:
 
    ```json
    page-2eee4f8914:
@@ -105,30 +105,30 @@ Die [WKND-Referenzprojekt](https://github.com/adobe/aem-guides-wknd) ist mit AEM
        xdm:template: "/conf/wknd/settings/wcm/templates/landing-page-template"
    ```
 
-   Verwenden Sie zum Senden von Seitendaten an Adobe Analytics die Standardeigenschaften wie `dc:title`, `xdm:language`, und `xdm:template` der Datenschicht.
+   Verwenden Sie zum Senden von Seitendaten an Adobe Analytics die Standardeigenschaften wie `dc:title`, `xdm:language` und `xdm:template` der Datenschicht.
 
-   Weitere Informationen finden Sie unter [Seitenschema](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#page) aus den Datenschemata der Kernkomponenten.
+   Weitere Informationen finden Sie unter dem [Seitenschema](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de#page) aus den Datenschemata der Kernkomponenten.
 
    >[!NOTE]
    >
-   > Wenn Sie die `adobeDataLayer` JavaScript-Objekt? Stellen Sie sicher, dass [Adobe Die Client-Datenschicht wurde aktiviert](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de#installation-activation) auf Ihrer Site.
+   > Und wenn Sie das `adobeDataLayer`-JavaScript-Objekt nicht sehen? Stellen Sie sicher, dass die [Adobe Client-Datenschicht auf Ihrer Site aktiviert wurde](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de#installation-activation).
 
-## Erstellen einer Regel &quot;Seite geladen&quot;
+## Erstellen einer Regel für „Seite geladen“
 
-Die Adobe Client-Datenschicht ist eine **ereignisgesteuert** Datenschicht. Beim Laden der AEM Seite wird eine `cmp:show` -Ereignis. Erstellen Sie eine Regel, die ausgelöst wird, wenn die `cmp:show` -Ereignis wird aus der Seitendatenschicht ausgelöst.
+Die Adobe Client-Datenschicht ist eine **ereignisgesteuert** Datenschicht. Wenn die AEM-Seite geladen ist, löst das ein `cmp:show`-Ereignis aus. Erstellen Sie eine Regel, die ausgelöst wird, wenn das `cmp:show`-Ereignis aus der Seitendatenschicht ausgelöst wird.
 
-1. Navigieren Sie zu Experience Platform und in die Tag-Eigenschaft, die mit der AEM Site integriert ist.
-1. Navigieren Sie zum **Regeln** in der Benutzeroberfläche &quot;Tag-Eigenschaft&quot;auf und klicken Sie auf **Neue Regel erstellen**.
+1. Navigieren Sie zu Experience Platform und zur Tag-Eigenschaft, die mit der AEM-Site integriert ist.
+1. Navigieren Sie zum Abschnitt **Regeln** in der Benutzeroberfläche „Tag-Eigenschaft“ auf und klicken Sie auf **Neue Regel erstellen**.
 
    ![Regel erstellen](assets/collect-data-analytics/analytics-create-rule.png)
 
-1. Benennen Sie die Regel. **Seite geladen**.
-1. Im **Veranstaltungen** Unterabschnitt klicken **Hinzufügen** , um die **Ereigniskonfiguration** Assistent.
-1. Für **Ereignistyp** Feld auswählen **Benutzerspezifischer Code**.
+1. Benennen Sie die Regel **Seite geladen**.
+1. Klicken Sie im Unterabschnitt **Veranstaltungen** auf **Hinzufügen**, um den **Ereigniskonfiguration**-Assistenten zu öffnen.
+1. Für das Feld **Ereignistyp** wählen Sie **Benutzerspezifischer Code**.
 
    ![Benennen Sie die Regel und fügen Sie das Ereignis für benutzerdefinierten Code hinzu.](assets/collect-data-analytics/custom-code-event.png)
 
-1. Klicks **Editor öffnen** Geben Sie im Hauptbereich folgendes Code-Snippet ein:
+1. Klicken Sie im Hauptbedienfeld auf **Editor öffnen** und geben Sie das folgende Codesnippet ein:
 
    ```js
    var pageShownEventHandler = function(evt) {
@@ -159,17 +159,17 @@ Die Adobe Client-Datenschicht ist eine **ereignisgesteuert** Datenschicht. Beim 
    });
    ```
 
-   Das obige Codefragment fügt einen Ereignis-Listener hinzu von [Pushen einer Funktion](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function) in die Datenschicht ein. Wann `cmp:show` -Ereignis ausgelöst wird, wird die `pageShownEventHandler` -Funktion aufgerufen. In dieser Funktion werden einige Integritätsprüfungen hinzugefügt und eine neue `event` wird mit der neuesten [Status der Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki#getstate) für die Komponente, die das Ereignis ausgelöst hat.
+   Das obige Codesnippet fügt einen Ereignis-Listener hinzu, indem es [eine Funktion](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function) in die Datenschicht schiebt. Wenn das `cmp:show`-Ereignis ausgelöst wird, wird die `pageShownEventHandler`-Funktion aufgerufen. In dieser Funktion werden einige Konsistenzprüfungen hinzugefügt und ein neues `event` wird mit dem neuesten [Status der Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki#getstate) für die Komponente erstellt, die das Ereignis ausgelöst hat.
 
-   Schließlich `trigger(event)` -Funktion aufgerufen. Die `trigger()` -Funktion ist ein reservierter Name in der Tag-Eigenschaft und **Trigger** die Regel. Die `event` -Objekt wird als Parameter übergeben, der wiederum durch einen anderen reservierten Namen in der Tag-Eigenschaft verfügbar gemacht wird. Datenelemente in der Tag-Eigenschaft können jetzt mithilfe eines Code-Snippets wie `event.component['someKey']`.
+   Schließlich wird die Funktion `trigger(event)` aufgerufen. Die Funktion `trigger()` ist ein reservierter Name in der Tag-Eigenschaft und **löst die Regel aus**. Das `event`-Objekt wird als Parameter übergeben, der wiederum durch einen anderen reservierten Namen in der Tag-Eigenschaft verfügbar gemacht wird. Datenelemente in der Tag-Eigenschaft können jetzt auf verschiedene Eigenschaften verweisen, indem sie Codesnippets wie `event.component['someKey']` verwenden.
 
 1. Speichern Sie die Änderungen.
-1. Nächste unter **Aktionen** click **Hinzufügen** , um die **Aktionskonfiguration** Assistent.
-1. Für **Aktionstyp** Feld, wählen Sie **Benutzerspezifischer Code**.
+1. Klicken Sie anschließend unter **Aktionen** auf **Hinzufügen**, um den Assistenten **Aktionskonfiguration** zu öffnen.
+1. Für das Feld **Aktionstyp** wählen Sie **Benutzerdefinierter Code**.
 
-   ![Aktionstyp für benutzerspezifischen Code](assets/collect-data-analytics/action-custom-code.png)
+   ![Aktionstyp für benutzerdefinierten Code](assets/collect-data-analytics/action-custom-code.png)
 
-1. Klicks **Editor öffnen** Geben Sie im Hauptbereich folgendes Code-Snippet ein:
+1. Klicken Sie im Hauptbedienfeld auf **Editor öffnen** und geben Sie das folgende Codesnippet ein:
 
    ```js
    console.log("Page Loaded ");
@@ -178,34 +178,34 @@ Die Adobe Client-Datenschicht ist eine **ereignisgesteuert** Datenschicht. Beim 
    console.log("Page template: " + event.component['xdm:template']);
    ```
 
-   Die `event` -Objekt wird von der `trigger()` -Methode, die im benutzerspezifischen Ereignis aufgerufen wird. Hier wird die `component` ist die aktuelle von der Datenschicht abgeleitete Seite `getState` im benutzerspezifischen Ereignis.
+   Das `event`-Objekt wird von der `trigger()`-Methode übergeben, die in dem benutzerdefinierten Ereignis aufgerufen wird. Hier wird die `component` ist die aktuelle von der Datenschicht abgeleitete Seite `getState` im benutzerspezifischen Ereignis.
 
-1. Speichern Sie die Änderungen und führen Sie eine [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) in der Tag-Eigenschaft, um den Code für die [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de) verwendet auf Ihrer AEM Site.
+1. Speichern Sie die Änderungen und führen Sie einen [Build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html?lang=de) in der Tag-Eigenschaft durch, um den Code in die [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de) zu übertragen, die auf Ihrer AEM-Site verwendet wird.
 
    >[!NOTE]
    >
-   > Es kann nützlich sein, die [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) , um den Einbettungscode in einen **Entwicklung** Umgebung.
+   > Es kann nützlich sein, den [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=de) zu verwenden, um den Einbettungs-Code in eine **Entwicklungsumgebung** zu wechseln.
 
-1. Navigieren Sie zu Ihrer AEM-Site und öffnen Sie die Entwickler-Tools, um die Konsole anzuzeigen. Aktualisieren Sie die Seite. Sie sollten sehen, dass die Konsolenmeldungen protokolliert wurden:
+1. Navigieren Sie zu Ihrer AEM Site und öffnen Sie die Entwickler-Tools, um die Konsole anzuzeigen. Aktualisieren Sie die Seite. Sie sollten sehen, dass die Konsolenmeldungen protokolliert wurden:
 
-![Seitengeladene Konsolenmeldungen](assets/collect-data-analytics/page-show-event-console.png)
+![Konsolenmeldungen für geladene Seite](assets/collect-data-analytics/page-show-event-console.png)
 
-## Datenelemente erstellen
+## Erstellen von Datenelementen
 
 Erstellen Sie anschließend mehrere Datenelemente, um andere Werte als die Adobe Client-Datenschicht zu erfassen. Wie in der vorherigen Übung gezeigt, ist es möglich, direkt über benutzerdefinierten Code auf die Eigenschaften der Datenschicht zuzugreifen. Der Vorteil der Verwendung von Datenelementen besteht darin, dass sie über Tag-Regeln hinweg wiederverwendet werden können.
 
-Datenelemente werden dem `@type`, `dc:title`, und `xdm:template` Eigenschaften.
+Datenelemente werden den Eigenschaften `@type`, `dc:title` und `xdm:template` zugeordnet.
 
 ### Komponenten-Ressourcentyp
 
-1. Navigieren Sie zu Experience Platform und in die Tag-Eigenschaft, die mit der AEM Site integriert ist.
-1. Navigieren Sie zum **Datenelemente** und klicken Sie auf **Neues Datenelement erstellen**.
-1. Für **Name** und geben Sie die **Komponenten-Ressourcentyp**.
-1. Für **Datenelementtyp** Feld auswählen **Benutzerspezifischer Code**.
+1. Navigieren Sie zu Experience Platform und zur Tag-Eigenschaft, die mit der AEM-Site integriert ist.
+1. Navigieren Sie zum Abschnitt **Datenelemente** und klicken Sie auf **Neues Datenelement erstellen**.
+1. Tragen Sie im Feld **Name** den **Komponenten-Ressourcentyp** ein.
+1. Wählen Sie im Feld **Datenelementtyp** **Benutzerspezifischer Code** aus.
 
    ![Komponenten-Ressourcentyp](assets/collect-data-analytics/component-resource-type-form.png)
 
-1. Klicks **Editor öffnen** und geben Sie Folgendes im Editor für benutzerdefinierten Code ein:
+1. Klicken Sie auf die Schaltfläche **Editor öffnen** und geben Sie den folgenden Code in den benutzerdefinierten Code-Editor ein:
 
    ```js
    if(event && event.component && event.component.hasOwnProperty('@type')) {
@@ -217,14 +217,14 @@ Datenelemente werden dem `@type`, `dc:title`, und `xdm:template` Eigenschaften.
 
    >[!NOTE]
    >
-   > Erinnern Sie sich daran, dass die `event` -Objekt wird basierend auf dem Ereignis, das die **Regel** in der Tag-Eigenschaft. Der Wert eines Datenelements wird erst festgelegt, wenn das Datenelement *referenziert* innerhalb einer Regel. Daher ist es sicher, dieses Datenelement innerhalb einer Regel wie der **Seite geladen** im vorherigen Schritt erstellte Regel *but* in anderen Kontexten nicht sicher verwendet werden.
+   > Beachten Sie, dass das `event`-Objekt verfügbar gemacht wird und basierend auf dem Ereignis, das die **Regel** in der Tag-Eigenschaft ausgelöst hat, begrenzt ist. Der Wert eines Datenelements wird erst gesetzt, wenn das Datenelement innerhalb einer Regel *referenziert* wird. Daher ist es sicher, dieses Datenelement in einer Regel wie der im vorherigen Schritt erstellten Regel **Seite geladen** zu verwenden, *aber* in anderen Kontexten kann es nicht sicher verwendet werden.
 
 ### Seitenname
 
-1. Klicks **Datenelement hinzufügen** button
-1. Für **Name** Feld, eingeben **Seitenname**.
-1. Für **Datenelementtyp** Feld auswählen **Benutzerspezifischer Code**.
-1. Klicks **Editor öffnen** und geben Sie Folgendes im Editor für benutzerdefinierten Code ein:
+1. Klicken Sie auf die Schaltfläche **Datenelement hinzufügen**
+1. Tragen Sie im Feld **Name** **Seitenname** ein.
+1. Wählen Sie im Feld **Datenelementtyp** **Benutzerspezifischer Code** aus.
+1. Klicken Sie auf die Schaltfläche **Editor öffnen** und geben Sie Folgendes im Editor für benutzerdefinierten Code ein:
 
    ```js
    if(event && event.component && event.component.hasOwnProperty('dc:title')) {
@@ -236,10 +236,10 @@ Datenelemente werden dem `@type`, `dc:title`, und `xdm:template` Eigenschaften.
 
 ### Seitenvorlage
 
-1. Klicken Sie auf **Datenelement hinzufügen** button
-1. Für **Name** Feld, eingeben **Seitenvorlage**.
-1. Für **Datenelementtyp** Feld auswählen **Benutzerspezifischer Code**.
-1. Klicks **Editor öffnen** und geben Sie Folgendes im Editor für benutzerdefinierten Code ein:
+1. Klicken Sie auf die Schaltfläche **Datenelement hinzufügen**
+1. Tragen Sie im Feld **Name** **Seitenvorlage** ein.
+1. Wählen Sie im Feld **Datenelementtyp** **Benutzerspezifischer Code** aus.
+1. Klicken Sie auf die Schaltfläche **Editor öffnen** und geben Sie Folgendes im Editor für benutzerdefinierten Code ein:
 
    ```js
    if(event && event.component && event.component.hasOwnProperty('xdm:template')) {
@@ -255,15 +255,15 @@ Datenelemente werden dem `@type`, `dc:title`, und `xdm:template` Eigenschaften.
 
 ## Hinzufügen der Analytics-Erweiterung
 
-Fügen Sie anschließend die Analytics-Erweiterung zu Ihrer Tag-Eigenschaft hinzu, um Daten in eine Report Suite zu senden.
+Fügen Sie anschließend die Analytics-Erweiterung zu Ihrer Tag-Eigenschaft hinzu, um Daten an eine Report Suite zu senden.
 
-1. Navigieren Sie zu Experience Platform und in die Tag-Eigenschaft, die mit der AEM Site integriert ist.
+1. Navigieren Sie zu Experience Platform und zur Tag-Eigenschaft, die mit der AEM-Site integriert ist.
 1. Navigieren Sie zu **Erweiterungen** > **Katalog**
-1. Suchen Sie die **Adobe Analytics** Erweiterung und Klicken **Installieren**
+1. Suchen Sie die **Adobe Analytics**-Erweiterung und klicken Sie auf **Installieren**
 
    ![Adobe Analytics-Erweiterung](assets/collect-data-analytics/analytics-catalog-install.png)
 
-1. under **Bibliotheksverwaltung** > **Report Suites** Geben Sie die Report Suite-IDs ein, die Sie für jede Tag-Umgebung verwenden möchten.
+1. Tragen Sie unter **Bibliotheksverwaltung** > **Report Suites** die Report Suite-IDs ein, die Sie für jede Tag-Umgebung verwenden möchten.
 
    ![Report Suite-IDs eingeben](assets/collect-data-analytics/analytics-config-reportSuite.png)
 
@@ -273,114 +273,114 @@ Fügen Sie anschließend die Analytics-Erweiterung zu Ihrer Tag-Eigenschaft hinz
 
    >[!TIP]
    >
-   >Es wird empfohlen, *Bibliothek für mich verwalten* als Einstellung für die Bibliotheksverwaltung, da dies die `AppMeasurement.js` -Bibliothek auf dem neuesten Stand.
+   >Es wird empfohlen, die *Option „Bibliothek für mich verwalten“* als Einstellung für die Bibliotheksverwaltung zu nutzen, da es dies sehr erleichtert, die `AppMeasurement.js`-Bibliothek auf dem neuesten Stand zu halten.
 
-1. Aktivieren Sie das Kontrollkästchen, um **Activity Map verwenden**.
+1. Aktivieren Sie das Kontrollkästchen, um die Option **Activity Map verwenden** zu aktivieren.
 
-   ![Verwenden von Activity Map aktivieren](assets/track-clicked-component/analytic-track-click.png)
+   ![„Activity Map verwenden“ aktivieren](assets/track-clicked-component/analytic-track-click.png)
 
-1. under **Allgemein** > **Tracking-Server**, geben Sie Ihren Tracking-Server ein, z. B. `tmd.sc.omtrdc.net`. Geben Sie Ihren SSL-Tracking-Server ein, wenn Ihre Site `https://`
+1. Geben Sie unter **Allgemein** > **Tracking-Server** Ihren Tracking-Server ein, z. B. `tmd.sc.omtrdc.net`. Geben Sie Ihren SSL-Tracking-Server ein, wenn Ihre Site `https://` unterstützt
 
-   ![Trackingserver eingeben](assets/collect-data-analytics/analytics-config-trackingServer.png)
+   ![Tracking-Server eingeben](assets/collect-data-analytics/analytics-config-trackingServer.png)
 
 1. Klicken Sie auf **Speichern**, um die Änderungen zu speichern.
 
-## Hinzufügen einer Bedingung zur Regel &quot;Seite geladen&quot;
+## Hinzufügen einer Bedingung zur Regel „Seite geladen“
 
-Aktualisieren Sie anschließend die **Seite geladen** -Regel verwenden, um **Komponenten-Ressourcentyp** -Datenelement, um sicherzustellen, dass die Regel nur ausgelöst wird, wenn die `cmp:show` -Ereignis für **Seite**. Andere Komponenten können die `cmp:show` -Ereignis, beispielsweise löst die Karussellkomponente diese bei einer Änderung der Folien aus. Daher ist es wichtig, eine Bedingung für diese Regel hinzuzufügen.
+Aktualisieren Sie anschließend die Regel **Seite geladen**, um das **Komponenten-Ressourcentyp**-Datenelement zu verwenden, um sicherzustellen, dass die Regel nur ausgelöst wird, wenn das `cmp:show`-Ereignis für die **Seite** stattfindet. Andere Komponenten können das `cmp:show`-Ereignis auslösen, beispielsweise löst die Karussellkomponente es bei einer Änderung der Folien aus. Daher ist es wichtig, eine Bedingung für diese Regel hinzuzufügen.
 
-1. Navigieren Sie in der Benutzeroberfläche der Tag-Eigenschaft zum **Seite geladen** Regel, die zuvor erstellt wurde.
-1. under **Bedingungen** click **Hinzufügen** , um die **Bedingungskonfiguration** Assistent.
-1. Für **Bedingungstyp** Feld auswählen **Wertvergleich** -Option.
-1. Setzen Sie den ersten Wert im Formularfeld auf `%Component Resource Type%`. Sie können das Datenelement-Symbol verwenden ![Datenelementsymbol](assets/collect-data-analytics/cylinder-icon.png) zur Auswahl der **Komponenten-Ressourcentyp** Datenelement. Belassen Sie den Vergleichssatz auf `Equals`.
+1. Navigieren Sie in der Benutzeroberfläche der Tag-Eigenschaft zur zuvor erstellten Regel **Seite geladen**.
+1. Klicken Sie unter **Bedingungen** auf **Hinzufügen**, um den Assistenten **Bedingungskonfiguration** zu öffnen.
+1. Wählen Sie im Feld **Bedingungstyp** die Option **Wertvergleich**.
+1. Setzen Sie den ersten Wert im Formularfeld auf `%Component Resource Type%`. Sie können das Datenelementsymbol ![data-element-symbol](assets/collect-data-analytics/cylinder-icon.png) zur Auswahl des **Komponenten-Ressourcentyp**-Datenelements verwenden. Belassen Sie den Vergleichsoperator auf `Equals`.
 1. Setzen Sie den zweiten Wert auf `wknd/components/page`.
 
-   ![Bedingungskonfiguration für Seitenladeregel](assets/collect-data-analytics/condition-configuration-page-loaded.png)
+   ![Bedingungskonfiguration für Regel „Seite geladen“](assets/collect-data-analytics/condition-configuration-page-loaded.png)
 
    >[!NOTE]
    >
-   > Diese Bedingung kann innerhalb der benutzerdefinierten Code-Funktion hinzugefügt werden, die auf die `cmp:show` -Ereignis, das zuvor im Tutorial erstellt wurde. Das Hinzufügen der Regel innerhalb der Benutzeroberfläche bietet zusätzlichen Benutzern mehr Sichtbarkeit, die möglicherweise Änderungen an der Regel vornehmen müssen. Außerdem können wir unser Datenelement verwenden!
+   > Diese Bedingung kann innerhalb der benutzerdefinierten Code-Funktion hinzugefügt werden, die für das Ereignis `cmp:show` aufgelistet ist, das zuvor im Tutorial erstellt wurde. Das Hinzufügen der Regel innerhalb der Benutzeroberfläche bietet zusätzlichen Benutzenden allerdings mehr Sichtbarkeit, die möglicherweise Änderungen an der Regel vornehmen müssen. Außerdem können wir unser Datenelement verwenden!
 
 1. Speichern Sie die Änderungen.
 
-## Analytics-Variablen und Trigger-Seitenansichts-Beacon festlegen
+## Festlegen der Analytics-Variablen und Auslösen des Seitenansichts-Beacons
 
-Derzeit ist das **Seite geladen** -Regel gibt einfach eine Konsolenanweisung aus. Verwenden Sie anschließend die Datenelemente und die Analytics-Erweiterung, um Analytics-Variablen als **action** im **Seite geladen** Regel. Wir haben auch eine zusätzliche Aktion zum Trigger der **Seitenansichts-Beacon** und senden Sie die erfassten Daten an Adobe Analytics.
+Derzeit gibt die Regel **Seite geladen** einfach eine Konsolenanweisung aus. Verwenden Sie anschließend die Datenelemente und die Analytics-Erweiterung, um Analytics-Variablen als **Aktion** in der Regel **Seite geladen** festzulegen. Wir haben auch eine zusätzliche Aktion zum Auslösen des **Seitenansichts-Beacons** und zum Senden der erfassten Daten an Adobe Analytics festgelegt.
 
-1. In der Regel &quot;Seite geladen&quot; **remove** die **Core - benutzerspezifischer Code** action (die Konsolenanweisungen):
+1. **Entfernen** Sie in der Regel „Seite geladen“ die Aktion **Kern – benutzerspezifischer Code** (die Konsolenanweisungen):
 
-   ![Aktion für benutzerdefinierten Code entfernen](assets/collect-data-analytics/remove-console-statements.png)
+   ![Entfernen der benutzerdefinierten Code-Aktion](assets/collect-data-analytics/remove-console-statements.png)
 
-1. Klicken Sie unter dem Unterabschnitt Aktionen auf **Hinzufügen** , um eine neue Aktion hinzuzufügen.
+1. Klicken Sie unter dem Unterabschnitt „Aktionen“ auf **Hinzufügen**, um eine neue Aktion hinzuzufügen.
 
-1. Legen Sie die **Erweiterung** type to **Adobe Analytics** und legen Sie die **Aktionstyp** nach  **Variablen festlegen**
+1. Legen Sie den **Erweiterungstyp** auf **Adobe Analytics** und die **Aktionstyp** auf **Variablen festlegen** fest
 
-   ![Aktionserweiterung auf Analytics-Variablen festlegen](assets/collect-data-analytics/analytics-set-variables-action.png)
+   ![Festlegen der Aktionserweiterung auf Analytics-Variablen](assets/collect-data-analytics/analytics-set-variables-action.png)
 
-1. Wählen Sie im Hauptbereich eine verfügbare **eVar** und als Wert des Datenelements festlegen **Seitenvorlage**. Verwenden des Symbols Datenelemente ![Symbol &quot;Datenelemente&quot;](assets/collect-data-analytics/cylinder-icon.png) zur Auswahl der **Seitenvorlage** -Element.
+1. Wählen Sie im Hauptbedienfeld eine verfügbare **eVar** und legen Sie als Wert des Datenelements **Seitenvorlage** fest. Verwenden Sie das Datenelementsymbol ![Datenelementsymbol](assets/collect-data-analytics/cylinder-icon.png) zur Auswahl des **Seitenvorlage**-Elements.
 
    ![Als eVar-Seitenvorlage festlegen](assets/collect-data-analytics/set-evar-page-template.png)
 
-1. Hinunter scrollen **Zusätzliche Einstellungen** set **Seitenname** zum Datenelement **Seitenname**:
+1. Scrollen Sie nach unten und legen Sie unter **Zusätzliche Einstellungen** den **Seitennamen** auf das Datenelement **Seitenname** fest:
 
-   ![Umgebungsvariable &quot;Seitenname&quot;](assets/collect-data-analytics/page-name-env-variable-set.png)
+   ![Umgebungsvariablensatz „Seitenname“](assets/collect-data-analytics/page-name-env-variable-set.png)
 
 1. Speichern Sie die Änderungen.
 
-1. Als Nächstes fügen Sie rechts neben dem **Adobe Analytics - Variablen festlegen** durch Tippen auf die **plus** -Symbol:
+1. Fügen Sie als Nächstes rechts neben **Adobe Analytics – Variablen festlegen** durch Tippen auf das **Plus**-Symbol eine zusätzliche Aktion hinzu:
 
    ![Hinzufügen einer zusätzlichen Tag-Regel-Aktion](assets/collect-data-analytics/add-additional-launch-action.png)
 
-1. Legen Sie die **Erweiterung** type to **Adobe Analytics** und legen Sie die **Aktionstyp** nach  **Beacon senden**. Da diese Aktion als Seitenansicht gilt, lassen Sie die standardmäßige Tracking-Einstellung auf **`s.t()`**.
+1. Legen Sie den **Erweiterungstyp** auf **Adobe Analytics** und den **Aktionstyp** auf **Beacon senden** fest. Da diese Aktion als Seitenansicht gilt, belassen Sie das standardmäßige Tracking auf **`s.t()`**.
 
-   ![Aktion &quot;Beacon Adobe Analytics senden&quot;](assets/track-clicked-component/send-page-view-beacon-config.png)
+   ![Adobe Analytics-Aktion „Beacon senden“](assets/track-clicked-component/send-page-view-beacon-config.png)
 
-1. Speichern Sie die Änderungen. Die **Seite geladen** -Regel sollte jetzt die folgende Konfiguration aufweisen:
+1. Speichern Sie die Änderungen. Die Regel **Seite geladen** sollte jetzt die folgende Konfiguration aufweisen:
 
    ![Konfiguration der endgültigen Tag-Regel](assets/collect-data-analytics/final-page-loaded-config.png)
 
-   * **1.** Suchen Sie nach `cmp:show` -Ereignis.
+   * **1.** Lauschen Sie auf das Ereignis `cmp:show`.
    * **2.** Überprüfen Sie, ob das Ereignis von einer Seite ausgelöst wurde.
-   * **3.** Analytics-Variablen für **Seitenname** und **Seitenvorlage**
-   * **4.** Senden des Analytics-Beacons für die Seitenansicht
+   * **3.** Legen Sie Analytics-Variablen für den **Seitennamen** und die **Seitenvorlage** fest.
+   * **4.** Senden Sie den Analytics-Seitenansichts-Beacon.
 
 1. Speichern Sie alle Änderungen und erstellen Sie Ihre Tag-Bibliothek, indem Sie sie an die entsprechende Umgebung weiterleiten.
 
-## Überprüfen des Seitenansichts-Beacons- und Analytics-Aufrufs
+## Validieren des Seitenansichts-Beacons und des Analytics-Aufrufs
 
-Nun, dass **Seite geladen** sendet das Analytics-Beacon. Sie sollten die Analytics-Tracking-Variablen mit dem Experience Platform Debugger sehen können.
+Da nun über die Regel **Seite geladen** der Analytics-Beacon gesendet wird, sollten Sie die Analytics-Tracking-Variablen unter Verwendung des Experience Platform-Debuggers sehen können.
 
 1. Öffnen Sie die [WKND-Site](https://wknd.site/us/en.html) in Ihrem Browser.
-1. Klicken Sie auf das Debugger-Symbol ![Experience Platform Debugger-Symbol](assets/collect-data-analytics/experience-cloud-debugger.png) , um den Experience Platform Debugger zu öffnen.
-1. Stellen Sie sicher, dass der Debugger die Tag-Eigenschaft dem *Ihre* Entwicklungsumgebung, wie zuvor beschrieben und **Konsolenprotokollierung** aktiviert ist.
-1. Öffnen Sie das Analytics-Menü und überprüfen Sie, ob die Report Suite auf *Ihre* Report Suite. Der Seitenname sollte ebenfalls angegeben werden:
+1. Klicken Sie auf das Debugger-Symbol ![Experience Platform Debugger-Symbol](assets/collect-data-analytics/experience-cloud-debugger.png), um den Experience Platform-Debugger zu öffnen.
+1. Stellen Sie sicher, dass der Debugger die Tag-Eigenschaft *Ihrer* Entwicklungsumgebung zuordnet, wie zuvor beschrieben, und dass die **Konsolenprotokollierung** aktiviert ist.
+1. Öffnen Sie das Analytics-Menü und überprüfen Sie, ob die Report Suite auf *Ihre* Report Suite festgelegt ist. Der Seitenname sollte ebenfalls angegeben sein:
 
-   ![Analytics-Tab-Debugger](assets/collect-data-analytics/analytics-tab-debugger.png)
+   ![Analytics-Registerkarte „Debugger“](assets/collect-data-analytics/analytics-tab-debugger.png)
 
-1. Hinunter scrollen und erweitern **Netzwerkanforderungen**. Sie sollten die **evar** für **Seitenvorlage**:
+1. Scrollen Sie nach unten und erweitern Sie **Netzwerkanfragen**. Unter **eVar** sollte die **Seitenvorlage** festgelegt sein:
 
-   ![eVar- und Seitenname-Satz](assets/collect-data-analytics/evar-page-name-set.png)
+   ![eVar und Seitenname festgelegt](assets/collect-data-analytics/evar-page-name-set.png)
 
-1. Kehren Sie zum Browser zurück und öffnen Sie die Entwicklerkonsole. Klicken Sie durch **Karussell** oben auf der Seite.
+1. Kehren Sie zum Browser zurück und öffnen Sie die Entwicklungskonsole. Klicken Sie oben auf der Seite durch das **Karussell**.
 
-   ![Karussellseite durchklicken](assets/collect-data-analytics/click-carousel-page.png)
+   ![Durchklicken der Karussellseite](assets/collect-data-analytics/click-carousel-page.png)
 
-1. Beobachten Sie in der Browser-Konsole die Konsolenanweisung:
+1. Sehen Sie sich in der Browser-Konsole die Konsolenanweisung an:
 
    ![Bedingung nicht erfüllt](assets/collect-data-analytics/condition-not-met.png)
 
-   Dies liegt daran, dass das Karussell einen Trigger `cmp:show` event *but* aufgrund unserer Kontrolle der **Komponenten-Ressourcentyp**, wird kein Ereignis ausgelöst.
+   Dies liegt daran, dass das Karussell ein `cmp:show`-Ereignis auslöst, *aber* weil wir den **Komponenten-Ressourcentyp** festgelegt haben, wird kein Ereignis ausgelöst.
 
    >[!NOTE]
    >
-   > Wenn keine Konsolenprotokolle angezeigt werden, stellen Sie sicher, dass **Konsolenprotokollierung** wird unter **Experience Platform-Tags** im Experience Platform Debugger.
+   > Wenn keine Konsolenprotokolle angezeigt werden, stellen Sie sicher, dass in Experience Platform Debugger unter **Experience Platform-Tags** die **Konsolenprotokollierung** aktiviert ist.
 
-1. Navigieren Sie zu einer Artikelseite wie [Westaustralien](https://wknd.site/us/en/magazine/western-australia.html). Beachten Sie, dass sich Seitenname und Vorlagentyp ändern.
+1. Navigieren Sie zu einer Artikelseite wie [West Australia](https://wknd.site/us/en/magazine/western-australia.html). Sie werden feststellen, dass sich Seitenname und Vorlagentyp ändern.
 
 ## Herzlichen Glückwunsch!
 
-Sie haben soeben die ereignisbasierte Adobe Client-Datenschicht und -Tags in Experience Platform verwendet, um Daten von einer AEM-Site zu erfassen und an Adobe Analytics zu senden.
+Sie haben soeben die ereignisbasierte Adobe Client-Datenschicht und Tags in Experience Platform verwendet, um Daten von einer AEM-Site zu erfassen und an Adobe Analytics zu senden.
 
 ### Nächste Schritte
 
-Sehen Sie sich das folgende Tutorial an, um zu erfahren, wie Sie mit der ereignisgesteuerten Adobe Client-Datenschicht [Klicks auf bestimmte Komponenten auf einer Adobe Experience Manager-Site verfolgen](track-clicked-component.md).
+Sehen Sie sich das folgende Tutorial an, um zu erfahren, wie Sie mit der ereignisgesteuerten Adobe Client-Datenschicht [Klicks bestimmter Komponenten auf einer Adobe Experience Manager-Site nachverfolgen](track-clicked-component.md) können.

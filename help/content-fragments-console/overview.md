@@ -1,6 +1,6 @@
 ---
 title: Videos zur Inhaltsfragmentkonsole
-description: Erfahren Sie mehr über AEM Content Fragments Console, die die Verwaltung und Bearbeitung von Inhaltsfragmenten erleichtert!
+description: Erfahren Sie mehr über die Inhaltsfragmentkonsole von AEM, die das Verwalten und Verfassen von Inhaltsfragmenten erleichtert!
 version: Cloud Service
 feature: Content Fragments
 topic: Content Management
@@ -13,17 +13,17 @@ exl-id: d92c36e2-fbfa-43a3-8c5f-0371cc99f352
 source-git-commit: 82926e56d01222186a4d677b29ab9230aa71458a
 workflow-type: tm+mt
 source-wordcount: '241'
-ht-degree: 13%
+ht-degree: 91%
 
 ---
 
 # Videos zur Inhaltsfragmentkonsole
 
-![AEM Inhaltsfragment-Editor](./assets/main.png)
+![AEM-Inhaltsfragmenteditor](./assets/main.png)
 
-Die Adobe Experience Manager Content Fragments Console erleichtert die Verwaltung und Bearbeitung von Inhaltsfragmenten! In diesen Videos erfahren Sie, wie Sie die Konsole &quot;Inhaltsfragmente&quot;optimal nutzen.
+Die Inhaltsfragmentkonsole von Adobe Experience Manager vereinfacht das Verwalten und Verfassen von Inhaltsfragmenten. In diesen Videos erfahren Sie, wie Sie die Inhaltsfragmentkonsole optimal nutzen.
 
-Überprüfen Sie die [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=de)  für vollständige Informationen zur Inhaltsfragmentkonsole und ihren Funktionen.
+Umfassende Informationen zur Inhaltsfragmentkonsole und ihren Funktionen finden Sie in der [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=de).
 
 ## Videos
 
@@ -50,13 +50,14 @@ Die Adobe Experience Manager Content Fragments Console erleichtert die Verwaltun
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./basics/content-fragments-console.md" title="Übersicht">Konsolenübersicht</a>
             </p>
-            <p class="is-size-6">Eine kurze Übersicht über die Konsole "Inhaltsfragmente".</p>
+            <p class="is-size-6">Ein kurzer Überblick über die Inhaltsfragmentkonsole.
+</p>
             <a href="./basics/content-fragments-console.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
+<span class="spectrum-Button-label has-no-wrap
                 has-text-weight-bold">Video ansehen</span>
-            </a>
+</a>
           </div>
         </div>
       </div>
@@ -86,9 +87,9 @@ Die Adobe Experience Manager Content Fragments Console erleichtert die Verwaltun
             <a href="./basics/content-fragment-editor.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
+<span class="spectrum-Button-label has-no-wrap
                 has-text-weight-bold">Video ansehen</span>
-            </a>
+</a>
           </div>
         </div>
       </div>
@@ -102,7 +103,8 @@ Die Adobe Experience Manager Content Fragments Console erleichtert die Verwaltun
             <a href="./search/fast-filtering.md" title="Schnelles Filtern"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419310?format=jpeg" alt="Schnelles Filtern">
+                src="https://video.tv.adobe.com/v/3419310?format=jpeg" alt="Schnelles Filtern
+">
             </a>
           </figure>
         </div>
@@ -112,14 +114,16 @@ Die Adobe Experience Manager Content Fragments Console erleichtert die Verwaltun
               class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./search/fast-filtering.md" title="Schnelles Filtern">Schnelles Filtern</a>
+
             </p>
-            <p class="is-size-6">Schnelles Auffinden von Inhaltsfragmenten mit Inline-Filterung.</p>
+            <p class="is-size-6">Schnelles Auffinden von Inhaltsfragmenten mit Inline-Filterung.
+</p>
             <a href="./search/fast-filtering.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
+<span class="spectrum-Button-label has-no-wrap
                 has-text-weight-bold">Video ansehen</span>
-            </a>
+</a>
           </div>
         </div>
       </div>
@@ -130,10 +134,11 @@ Die Adobe Experience Manager Content Fragments Console erleichtert die Verwaltun
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./editor/new-editor-toggle.md" title="Umschalter für neuen Editor"
+            <a href="./editor/new-editor-toggle.md" title="Umschalter „Neuer Editor“"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="Umschalter für neuen Editor">
+                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="Umschalter „Neuer Editor“
+">
             </a>
           </figure>
         </div>
@@ -142,15 +147,17 @@ Die Adobe Experience Manager Content Fragments Console erleichtert die Verwaltun
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/new-editor-toggle.md" title="Umschalter für neuen Editor">Umschalter für neuen Editor</a>
+              <a href="./editor/new-editor-toggle.md" title="Umschalter „Neuer Editor“">Umschalter „Neuer Editor“</a>
+
             </p>
-            <p class="is-size-6">Nahtloser Übergang vom klassischen zum neuen Editor.</p>
+            <p class="is-size-6">Nahtloser Übergang vom klassischen zum neuen Editor
+</p>
             <a href="./editor/new-editor-toggle.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
+<span class="spectrum-Button-label has-no-wrap
                 has-text-weight-bold">Video ansehen</span>
-            </a>
+</a>
           </div>
         </div>
       </div>
@@ -161,7 +168,8 @@ Die Adobe Experience Manager Content Fragments Console erleichtert die Verwaltun
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./editor/non-asset-content-references.md" title="Nicht-Asset-Inhaltsreferenzen" tabindex="-1">
+            <a href="./editor/non-asset-content-references.md" title="Nicht-Asset-Inhaltsreferenzen
+" tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3419313?format=jpeg"
                 alt="Nicht-Asset-Inhaltsreferenzen">
@@ -173,15 +181,17 @@ Die Adobe Experience Manager Content Fragments Console erleichtert die Verwaltun
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/non-asset-content-references.md" title="Nicht-Asset-Inhaltsreferenzen">Nicht-Asset-Inhaltsreferenzen</a>
+              <a href="./editor/non-asset-content-references.md" title="Nicht-Asset-Inhaltsreferenzen
+">Nicht-Asset-Inhaltsreferenzen</a>
             </p>
-            <p class="is-size-6">Integrieren Sie Experience Fragments und Seiten in Ihre Inhaltsfragmente.</p>
+            <p class="is-size-6">Integrieren von Experience Fragments und Seiten in Inhaltsfragmente
+</p>
             <a href="./editor/non-asset-content-references.md"
               class="spectrum-Button spectrum-Button--outline
               spectrum-Button--primary spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
+<span class="spectrum-Button-label has-no-wrap
                 has-text-weight-bold">Video ansehen</span>
-            </a>
+</a>
           </div>
         </div>
       </div>
@@ -192,10 +202,11 @@ Die Adobe Experience Manager Content Fragments Console erleichtert die Verwaltun
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./editor/rte-variant-compare.md" title="Vergleich der RTE-Variante"
+            <a href="./editor/rte-variant-compare.md" title="Vergleich der RTE-Varianten"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419314?format=jpeg" alt="Vergleich der RTE-Variante">
+                src="https://video.tv.adobe.com/v/3419314?format=jpeg" alt="Vergleich der RTE-Variante
+">
             </a>
           </figure>
         </div>
@@ -204,15 +215,17 @@ Die Adobe Experience Manager Content Fragments Console erleichtert die Verwaltun
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./editor/rte-variant-compare.md" title="Vergleich der RTE-Variante">Vergleich der RTE-Variante</a>
+              <a href="./editor/rte-variant-compare.md" title="Vergleich der RTE-Variante
+">Vergleich der RTE-Variante</a>
             </p>
-            <p class="is-size-6">Rich-Text-Inhalte können einfach kanalübergreifend ausgerichtet werden.</p>
+            <p class="is-size-6">Einfaches Ausrichten von Rich-Text-Inhalten über mehrere Kanäle hinweg
+</p>
             <a href="./editor/rte-variant-compare.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
+<span class="spectrum-Button-label has-no-wrap
                 has-text-weight-bold">Video ansehen</span>
-            </a>
+</a>
           </div>
         </div>
       </div>
@@ -237,14 +250,16 @@ Die Adobe Experience Manager Content Fragments Console erleichtert die Verwaltun
               class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./editor/language-copies.md" title="Sprachkopien">Sprachkopien</a>
+
             </p>
-            <p class="is-size-6">Einfaches Verwalten der Sprachkopien von Inhaltsfragmenten</p>
+            <p class="is-size-6">Einfaches Verwalten der Sprachkopien von Inhaltsfragmenten
+</p>
             <a href="./editor/language-copies.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
+<span class="spectrum-Button-label has-no-wrap
                 has-text-weight-bold">Video ansehen</span>
-            </a>
+</a>
           </div>
         </div>
       </div>
@@ -270,13 +285,13 @@ Die Adobe Experience Manager Content Fragments Console erleichtert die Verwaltun
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./search/references.md" title="Verweise">Verweise</a>
             </p>
-            <p class="is-size-6">Verstehen Sie Inhaltsfragmentverweise und -beziehungen.</p>
+            <p class="is-size-6">Grundlegendes zu Inhaltsfragmentverweisen und -beziehungen</p>
             <a href="./search/references.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap
+<span class="spectrum-Button-label has-no-wrap
                 has-text-weight-bold">Video ansehen</span>
-            </a>
+</a>
           </div>
         </div>
       </div>

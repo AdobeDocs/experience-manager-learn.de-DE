@@ -1,6 +1,6 @@
 ---
-title: Benutzerdefinierten Übermittlungs-Handler erstellen
-description: Senden des adaptiven Formulars an einen benutzerdefinierten Submit-Handler
+title: Erstellen eines benutzerdefinierten Übermittlungsaktions-Handlers
+description: Senden eines adaptiven Formulars an einen benutzerdefinierten Übermittlungs-Handler
 solution: Experience Manager
 type: Documentation
 role: Developer
@@ -13,7 +13,7 @@ exl-id: 983e0394-7142-481f-bd5e-6c9acefbfdd0
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '210'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
@@ -42,9 +42,9 @@ public class HandleFormSubmissison extends SlingAllMethodsServlet {
 }
 ```
 
-## Benutzerdefinierten Sende-Handler erstellen
+## Erstellen eines benutzerdefinierten Übermittlungs-Handlers 
 
-Erstellen Sie Ihre benutzerdefinierte Sendeaktion im `apps/bankingapplication` -Ordner auf die gleiche Weise wie im [frühere Versionen von AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en). Für diese Anleitung erstelle ich einen Ordner mit dem Namen SubmitToAEMServlet unter der `apps/bankingapplication` -Knoten im CRX-Repository.
+Erstellen Sie Ihre benutzerdefinierte Übermittlungsaktion im Ordner `apps/bankingapplication` auf die gleiche Weise wie in [früheren Versionen von AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=de). Für diese Anleitung erstelle ich einen Ordner mit dem Namen SubmitToAEMServlet unter dem Knoten `apps/bankingapplication` im CRX-Repository.
 
 Der folgende Code in post.POST.jsp leitet die Anfrage einfach an das Servlet weiter, das auf /bin/formstutorial bereitgestellt wurde. Dies ist dasselbe Servlet, das im vorherigen Schritt erstellt wurde
 
@@ -52,12 +52,12 @@ Der folgende Code in post.POST.jsp leitet die Anfrage einfach an das Servlet wei
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/formstutorial",null,null);
 ```
 
-Klicken Sie in Ihrem AEM Projekt in IntelliJ mit der rechten Maustaste auf das `apps/bankingapplication` Ordner und wählen Sie Neu aus | Paket und geben Sie in SubmitToAEMServlet nach der Anwendung apps.bankingim neuen Paketdialogfeld ein. Klicken Sie mit der rechten Maustaste auf den Knoten SubmitToAEMServlet und wählen Sie repo aus. | Befehl abrufen, um das AEM Projekt mit dem AEM Server-Repository zu synchronisieren.
+Klicken Sie in Ihrem AEM-Projekt in IntelliJ mit der rechten Maustaste auf den `apps/bankingapplication`-Ordner, wählen Sie „Neu“ > „Paket“ aus und geben Sie „SubmitToAEMServlet“ nach „apps.bankingapplication“ im neuen Paketdialogfeld ein. Klicken Sie mit der rechten Maustaste auf den SubmitToAEMServlet-Knoten und wählen Sie „Repo“ > „Befehl abrufen“ aus, um das AEM-Projekt mit dem AEM Server-Repository zu synchronisieren.
 
 
-## Adaptives Formular konfigurieren
+## Konfigurieren eines adaptiven Formulars
 
-Sie können jetzt jedes adaptive Formular so konfigurieren, dass es an diesen benutzerdefinierten Submit-Handler mit dem Namen **Senden an AEM Servlet**
+Sie können jetzt jedes adaptive Formular so konfigurieren, dass es an den benutzerdefinierten Submit-Handler mit dem Namen **Senden an AEM-Servlet** übermittelt
 
 ## Nächste Schritte
 

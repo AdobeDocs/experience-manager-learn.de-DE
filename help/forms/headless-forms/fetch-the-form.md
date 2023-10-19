@@ -1,6 +1,6 @@
 ---
-title: Rufen Sie die JSON des einzubettenden adaptiven Formulars ab.
-description: Verwenden Sie die API zum Abrufen der JSON-Datei des adaptiven Formulars
+title: Abrufen der JSON-Inhalte des einzubettenden adaptiven Formulars
+description: Verwenden der API zum Abrufen der JSON-Inhalte des adaptiven Formulars
 feature: Adaptive Forms
 version: 6.5
 kt: 13285
@@ -11,17 +11,17 @@ exl-id: ee534724-54ea-48e1-8c92-de1c56a928d4
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '149'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# JSON des Formulars abrufen
+# Abrufen der JSON-Inhalte des Formulars
 
-Melden Sie sich bei Ihrer AEM Forms-Autoreninstanz an und erstellen Sie mit der **Leer mit Kernkomponenten** Vorlage. Veröffentlichen Sie Ihr Formular in Ihrer Veröffentlichungsinstanz.
+Melden Sie sich bei Ihrer AEM Forms-Autoreninstanz an und erstellen Sie ein neues adaptives Formular mithilfe der Vorlage **Leer mit Kernkomponenten**. Veröffentlichen Sie Ihr Formular in Ihrer Veröffentlichungsinstanz.
 
-Um das Formular einzubetten, rufen wir zunächst die JSON-Datei des adaptiven Formulars ab, indem wir einen GET-Aufruf an unseren Veröffentlichungs-Server durchführen.
+Um das Formular einzubetten, rufen wir zunächst die JSON-Inhalte des adaptiven Formulars ab, indem wir einen GET-Aufruf an unseren Veröffentlichungs-Server durchführen.
 
-Das folgende Codefragment ruft die JSON-Datei des adaptiven Formulars mit dem Namen ab **contactus**
+Mit dem folgenden Codesnippet werden die JSON-Inhalte des adaptiven Formulars **contactus** abgerufen.
 
 ```javascript
 const getForm = async () => {
@@ -34,7 +34,7 @@ const getForm = async () => {
       }
 ```
 
-Der vollständige Code der Komponente Kontaktfunktion ist unten angegeben.
+Die vollständige Funktionskomponente für Kontakte ist unten angegeben.
 
 ```javascript
 import Form from './components/Form';
@@ -77,8 +77,8 @@ export default function Contact(){
 }
 ```
 
-Der obige Code verwendet native HTML-Komponenten, die den im adaptiven Formular verwendeten Komponenten zugeordnet sind. Beispielsweise ordnen wir die Texteingabe-Komponente des adaptiven Formulars der TextField-Komponente zu. Die im Artikel verwendeten nativen Komponenten [können Sie hier herunterladen](./assets/native-components.zip)
+Der obige Code verwendet native HTML-Komponenten, die den im adaptiven Formular verwendeten Komponenten zugeordnet sind. Beispielsweise ordnen wir die text-input-Komponente des adaptiven Formulars der TextField-Komponente zu. Die im Artikel verwendeten nativen Komponenten können [hier](./assets/native-components.zip) heruntergeladen werden.
 
 ## Nächste Schritte
 
-[Wählen Sie ein Formular aus der Dropdownliste aus](./select-form-from-drop-down-list.md)
+[Auswählen eines Formulars aus der Dropdown-Liste](./select-form-from-drop-down-list.md)

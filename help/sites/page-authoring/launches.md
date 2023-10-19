@@ -1,6 +1,6 @@
 ---
 title: Verwenden von Launches in AEM Sites
-description: Launches in AEM Sites bieten eine Möglichkeit, Inhalte für künftige Versionen zu erstellen, zu erstellen und zu überprüfen.
+description: Launches in AEM Sites bieten eine Möglichkeit, Inhalte für künftige Versionen zu erstellen, zu verfassen und zu überprüfen.
 topic: Content Management
 feature: Launches
 level: Intermediate, Experienced
@@ -12,7 +12,7 @@ exl-id: 7e5ba3f5-e755-452a-8e72-be7832e95a49
 source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '65'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
@@ -20,6 +20,6 @@ ht-degree: 1%
 
 {{edge-delivery-services-and-page-editor}}
 
-Launches in AEM Sites bieten eine Möglichkeit, Website-Inhalte für künftige Versionen zu erstellen, zu erstellen und zu überprüfen. Während der Erstellung des Launches kann sich die Produktions-Website weiterentwickeln und sich von Tag zu Tag ändern, wie es normalerweise der Fall ist.
+Launches in AEM Sites bieten eine Möglichkeit, Website-Inhalte für künftige Versionen zu erstellen, zu verfassen und zu überprüfen. Während der Launch-Erstellung kann sich die Produktions-Website weiterentwickeln und sich von Tag zu Tag ändern, wie es normalerweise der Fall ist.
 
 >[!VIDEO](https://video.tv.adobe.com/v/331285?quality=12&learn=on)

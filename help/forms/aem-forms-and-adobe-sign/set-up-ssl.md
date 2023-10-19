@@ -1,6 +1,6 @@
 ---
-title: SSL für AEM aktivieren
-description: Verwenden Sie den Adobe Experience Manager-Einrichtungsassistenten, um eine AEM Instanz einzurichten, die über HTTPS ausgeführt wird.
+title: Aktivieren von SSL für AEM
+description: Verwenden Sie den SSL-Setup-Assistenten von Adobe Experience Manager, um eine AEM-Instanz einzurichten, die über HTTPS ausgeführt wird.
 feature: Adaptive Forms
 version: 6.4,6.5
 thumbnail: 17993.jpg
@@ -14,18 +14,18 @@ exl-id: e94cde31-e589-4b71-b5de-bcd898393b8a
 source-git-commit: 490d2d8af8417806527a3e9288127edb9baff924
 workflow-type: tm+mt
 source-wordcount: '90'
-ht-degree: 25%
+ht-degree: 100%
 
 ---
 
-# SSL für AEM aktivieren
+# Aktivieren von SSL für AEM
 
-Eine der Voraussetzungen für die Integration von AEM Forms in Acrobat Sign besteht darin, Ihre AEM-Instanz für die Verwendung von SSL zu konfigurieren. Der SSL-Setup-Assistent von Adobe Experience Manager erleichtert die Einrichtung einer AEM-Instanz, die über HTTPS ausgeführt werden kann.
+Eine der Voraussetzungen für die Integration von AEM Forms in Acrobat Sign besteht darin, Ihre AEM-Instanz für die Verwendung von SSL zu konfigurieren. Der SSL-Setup-Assistent von Adobe Experience Manager erleichtert das Einrichten einer AEM-Instanz, die über HTTPS ausgeführt werden kann.
 Im folgenden Video werden die Schritte erläutert, die zum Konfigurieren von SSL mithilfe des Assistenten erforderlich sind
 
 >[!VIDEO](https://video.tv.adobe.com/v/17993?learn=on)
 
 ## Nächste Schritte
 
-[Acrobat Sign API-Anwendung erstellen](./create-adobe-sign-api-application.md)
+[Erstellen einer Acrobat Sign-API-Anwendung](./create-adobe-sign-api-application.md)
 

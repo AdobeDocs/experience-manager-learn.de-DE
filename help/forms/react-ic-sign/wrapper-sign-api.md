@@ -1,6 +1,6 @@
 ---
-title: Erstellen Sie ein Webformular, das dem Benutzer zum Signieren angezeigt wird.
-description: Erstellen Sie AEM Bundle, um die für den Anwendungsfall erforderlichen Acrobat-Signaturmethoden anzuzeigen.
+title: Erstellen eines Web-Formulars, um es Benutzenden zum Signieren anzuzeigen
+description: Erstellen Sie ein AEM-Bundle, um die für den Anwendungsfall erforderlichen Acrobat Sign-Methoden bereitzustellen.
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -12,23 +12,23 @@ exl-id: 15364571-070c-4497-a256-f0483d6f9585
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '267'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Wrapper für Acrobat Sign REST API erstellen
+# Erstellen eines Wrappers für die Acrobat Sign-REST-API
 
-Ein benutzerdefiniertes AEM-Bundle wurde entwickelt, um das Webformular zu erstellen und an den Endbenutzer zurückzugeben
+Es wurde ein benutzerdefiniertes AEM-Bundle entwickelt, um ein Web-Formular zu erstellen und es den Endbenutzenden zurückzugeben.
 
-* [Übergangsdokument erstellen](https://secure.na1.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument). Das durch diesen Aufruf hochgeladene Dokument wird als vorübergehend bezeichnet, da es nur 7 Tage nach dem Hochladen verfügbar ist. Die zurückgegebene vorübergehende Dokument-ID kann in den API-Aufrufen verwendet werden, in denen die hochgeladene Datei referenziert werden muss. Die vorübergehende Dokumentanforderung ist eine mehrteilige Anforderung, die aus drei Teilen besteht: Dateiname, MIME-Typ und Dateistream. In dieser Anfrage können Sie jeweils nur eine Datei hochladen.
-* [Webformular erstellen](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget).Dies ist ein primärer Endpunkt, mit dem ein neues Webformular erstellt wird. Das Webformular wurde in einem AKTIVEN Status erstellt, um das Webformular sofort zu hosten.
-* [Abrufen des Webformulars](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/getWidgets).Rufen Sie das Webformular des Benutzers ab. Dieses Webformular wird dann der aufrufenden Anwendung zum Signieren des Dokuments angezeigt.
+* [Übergangsdokument erstellen](https://secure.na1.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument). Das durch diesen Aufruf hochgeladene Dokument wird als Übergangsdokument bezeichnet, da es nach dem Hochladen nur 7 Tage lang verfügbar ist. Die zurückgegebene ID des Übergangsdokuments kann in den API-Aufrufen verwendet werden, bei denen die hochgeladene Datei referenziert werden muss. Die Anfrage nach einem Übergangsdokument ist eine mehrteilige Anfrage, die aus drei Teilen besteht: Dateiname, MIME-Typ und Datei-Stream. Bei dieser Anfrage können Sie jeweils nur eine Datei hochladen.
+* [Web-Formular erstellen](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget). Hierbei handelt es sich um einen primären Endpunkt, mit dem ein neues Web-Formular erstellt wird. Das Web-Formular wurde in einem AKTIVEN Status erstellt, um das Web-Formular sofort hosten zu können.
+* [Web-Formular abrufen](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/getWidgets). Durch diesen Aufruf wird das Web-Formular der Benutzerin oder des Benutzers abgerufen. Dieses Web-Formular wird dann der aufrufenden Anwendung zum Signieren des Dokuments angezeigt.
 
-## Acrobat Sign OSGi-Konfiguration erstellen
+## Erstellen einer Acrobat Sign-OSGi-Konfiguration
 
-Acrobat Sign REST API erfordert den Integrationsschlüssel und die E-Mail, die mit dem Integrationsschlüssel verknüpft sind. Diese beiden Werte werden als OSGi-Konfigurationseigenschaften bereitgestellt, wie unten dargestellt
+Die Acrobat Sign-REST-API benötigt den Integrationsschlüssel und die E-Mail-Adresse, die mit dem Integrationsschlüssel verknüpft sind. Diese beiden Werte werden als OSGi-Konfigurationseigenschaften bereitgestellt, wie unten dargestellt.
 
-![sign-configuration](assets/sign-configuration.png)
+![Sign-Konfiguration](assets/sign-configuration.png)
 
 ```java
 package com.acrobatsign.core.configuration;
@@ -80,9 +80,9 @@ public class AcrobatSignConfigurationService {
 }
 ```
 
-## Übergangsdokument-ID abrufen
+## Abrufen der Übergangsdokument-ID
 
-Der folgende Code wurde zum Erstellen eines Verlaufsdokuments geschrieben
+Der folgende Code wurde zum Erstellen des Übergangsdokuments geschrieben:
 
 ```java
 public String getTransientDocumentID(Document documentForSigning) throws IOException {
@@ -110,7 +110,7 @@ public String getTransientDocumentID(Document documentForSigning) throws IOExcep
 }
 ```
 
-## Widget-ID
+## Abrufen der Widget-ID
 
 ```java
 public String getWidgetID(String transientDocumentID) {
@@ -159,7 +159,7 @@ public String getWidgetID(String transientDocumentID) {
 }
 ```
 
-## Widget-URL
+## Abrufen der Widget-URL
 
 ```java
 public String getWidgetURL(String widgetId) throws ClientProtocolException, IOException {
@@ -198,4 +198,4 @@ public String getWidgetURL(String widgetId) throws ClientProtocolException, IOEx
 
 ## Nächste Schritte
 
-[Acrobat Sign Widget-URL generieren](./create-servlet-to-expose-endpoint.md)
+[Generieren einer Acrobat Sign-Widget-URL](./create-servlet-to-expose-endpoint.md)

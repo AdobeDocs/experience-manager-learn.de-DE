@@ -1,6 +1,6 @@
 ---
 title: CSRF-Schutz
-description: Erfahren Sie, wie Sie AEM CSRF-Token generieren und zu zulässigen POST-, PUT- und Löschanfragen an AEM für authentifizierte Benutzer hinzufügen können.
+description: Erfahren Sie, wie Sie AEM CSRF-Token generieren und zu zulässigen POST-, PUT- und Löschanfragen für authentifizierte Benutzende zu AEM hinzufügen können.
 version: Cloud Service
 feature: Security
 topic: Development, Security
@@ -14,39 +14,39 @@ exl-id: 747322ed-f01a-48ba-a4a0-483b81f1e904
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '443'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # CSRF-Schutz
 
-Erfahren Sie, wie Sie AEM CSRF-Token generieren und zu zulässigen POST-, PUT- und Löschanfragen an AEM für authentifizierte Benutzer hinzufügen können.
+Erfahren Sie, wie Sie AEM CSRF-Token generieren und zu zulässigen POST-, PUT- und Löschanfragen für authentifizierte Benutzende zu AEM hinzufügen können.
 
-AEM erfordert die Übermittlung eines gültigen CSRF-Tokens für __authentifiziert__ __POST__, __PUT oder __DELETE__ HTTP-Anforderungen an AEM Author- und Publish-Dienste.
+AEM erfordert die Übermittlung eines gültigen CSRF-Tokens für __authentifizierte__ __POST-__, __PUT- oder __DELETE__-HTTP-Anfragen an den AEM-Author- und Publish-Service.
 
-Das CSRF-Token ist nicht erforderlich für __GET__ Anforderungen oder __anonymous__ -Anfragen.
+Das CSRF-Token ist nicht erforderlich für __GET__-Anfragen oder __anonyme__ Anfragen.
 
-Wenn kein CSRF-Token mit einer POST-, PUT- oder DELETE-Anfrage gesendet wird, gibt AEM eine unzulässige Antwort 403 zurück und AEM protokolliert den folgenden Fehler:
+Wenn kein CSRF-Token mit einer POST-, PUT- oder DELETE-Anfrage gesendet wird, gibt AEM den „Fehler 403: Unzulässig“ zurück und AEM protokolliert den folgenden Fehler:
 
 ```log
 [INFO][POST /path/to/aem/endpoint HTTP/1.1][com.adobe.granite.csrf.impl.CSRFFilter] isValidRequest: empty CSRF token - rejecting
 [INFO][POST /path/to/aem/endpoint HTTP/1.1][com.adobe.granite.csrf.impl.CSRFFilter] doFilter: the provided CSRF token is invalid
 ```
 
-Siehe [Dokumentation für weitere Informationen zum Schutz AEM CSRF](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html).
+Siehe die [Dokumentation für weitere Informationen zum AEM CSRF-Schutz](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=de).
 
 
 ## CSRF-Client-Bibliothek
 
-AEM bietet eine Client-Bibliothek, die zum Generieren und Hinzufügen von CSRF-Token XHR- und Formular-POST-Anfragen über das Patchen von Kernprotokollfunktionen verwendet werden kann. Die Funktion wird von der `granite.csrf.standalone` Client-Bibliothekskategorie.
+AEM bietet eine Client-Bibliothek, die zum Generieren und Hinzufügen von XHR- und Formular-POST-Anfragen für CSRF-Token über das Patchen von Kernprotokollfunktionen verwendet werden kann. Die Funktion wird von der `granite.csrf.standalone`-Client-Bibliothekskategorie bereitgestellt.
 
-Um diesen Ansatz zu verwenden, fügen Sie `granite.csrf.standalone` als Abhängigkeit zur Client-Bibliothek, die auf Ihrer Seite geladen wird. Wenn Sie beispielsweise die `wknd.site` Kategorie der Client-Bibliothek hinzufügen `granite.csrf.standalone` als Abhängigkeit zur Client-Bibliothek, die auf Ihrer Seite geladen wird.
+Um diesen Ansatz zu verwenden, fügen Sie `granite.csrf.standalone` als Abhängigkeit zur Client-Bibliothek hinzu, die auf Ihrer Seite geladen wird. Wenn Sie beispielsweise die `wknd.site`-Kategorie der Client-Bibliothek verwenden, fügen Sie `granite.csrf.standalone` als Abhängigkeit zur Client-Bibliothek hinzu, die auf Ihrer Seite geladen wird.
 
 ## Benutzerdefinierte Formularübermittlung mit CSRF-Schutz
 
-Wenn die [`granite.csrf.standalone` Client-Bibliothek](#csrf-client-library) nicht für Ihren Anwendungsfall verfügbar ist, können Sie einem Formularübermittlungsformular manuell ein CSRF-Token hinzufügen. Das folgende Beispiel zeigt, wie ein CSRF-Token zu einer Formularübermittlung hinzugefügt wird.
+Wenn die Verwendung der [`granite.csrf.standalone`Client-Bibliothek](#csrf-client-library) nicht für Ihren Anwendungsfall verfügbar ist, können Sie einer Formularübermittlung manuell ein CSRF-Token hinzufügen. Das folgende Beispiel zeigt, wie ein CSRF-Token zu einer Formularübermittlung hinzugefügt werden kann.
 
-Dieser Codeausschnitt veranschaulicht, wie das CSRF-Token beim Senden des Formulars von AEM abgerufen und zu einer Formulareingabe mit dem Namen hinzugefügt werden kann. `:cq_csrf_token`. Da das CSRF-Token eine kurze Lebensdauer hat, ist es am besten, das CSRF-Token unmittelbar vor dem Senden des Formulars abzurufen und festzulegen, um seine Gültigkeit zu gewährleisten.
+Dieses Code-Snippet veranschaulicht, wie das CSRF-Token beim Senden des Formulars von AEM abgerufen und zu einer Formulareingabe mit dem Namen `:cq_csrf_token` hinzugefügt werden kann. Da das CSRF-Token eine kurze Lebensdauer hat, ist es am besten, das CSRF-Token unmittelbar vor dem Senden des Formulars abzurufen und festzulegen, um seine Gültigkeit zu gewährleisten.
 
 ```javascript
 // Attach submit handler event to form onSubmit
@@ -71,11 +71,11 @@ document.querySelector('form').addEventListener('submit', async (event) => {
 });
 ```
 
-## Mit CSRF-Schutz abrufen
+## Abrufen mit CSRF-Schutz
 
-Wenn die [`granite.csrf.standalone` Client-Bibliothek](#csrf-client-library) nicht für Ihren Anwendungsfall verfügbar ist, können Sie einem XHR manuell ein CSRF-Token hinzufügen oder Anfragen abrufen. Das folgende Beispiel zeigt, wie ein CSRF-Token zu einem XHR hinzugefügt wird, das mit dem Abruf erstellt wurde.
+Wenn die Verwendung der [`granite.csrf.standalone`Client-Bibliothek](#csrf-client-library) nicht für Ihren Anwendungsfall verfügbar ist, können Sie einem XHR manuell ein CSRF-Token hinzufügen oder Anfragen abrufen. Das folgende Beispiel zeigt, wie ein CSRF-Token zu einem XHR hinzugefügt werden kann, das mit dem Abruf erstellt wurde.
 
-Dieses Codefragment zeigt, wie ein CSRF-Token aus AEM abgerufen und zu einer Abrufanforderung hinzugefügt wird. `CSRF-Token` HTTP-Anforderungsheader. Da das CSRF-Token eine kurze Lebensdauer hat, ist es am besten, das CSRF-Token unmittelbar vor der Abruf-Anfrage abzurufen und festzulegen und dabei seine Gültigkeit zu gewährleisten.
+Dieses Code-Snippet zeigt, wie ein CSRF-Token aus AEM abgerufen und zum `CSRF-Token`-HTTP-Anfragenheader einer Abrufanforderung hinzugefügt wird. Da das CSRF-Token eine kurze Lebensdauer hat, ist es am besten, das CSRF-Token unmittelbar vor der Abrufanfrage abzurufen und festzulegen, um seine Gültigkeit zu gewährleisten.
 
 ```javascript
 /**
@@ -101,7 +101,7 @@ await fetch('/path/to/aem/endpoint', {
 
 ## Dispatcher-Konfiguration
 
-Bei Verwendung von CSRF-Token im AEM Publish-Dienst muss die Dispatcher-Konfiguration aktualisiert werden, um GET-Anfragen an den CSRF-Token-Endpunkt zu ermöglichen. Die folgende Konfiguration ermöglicht GET-Anfragen an den CSRF-Token-Endpunkt im AEM Publish-Dienst. Wenn diese Konfiguration nicht hinzugefügt wird, gibt der CSRF-Token-Endpunkt eine Antwort &quot;404 Not Found&quot;zurück.
+Bei Verwendung von CSRF-Token im AEM Publish-Service muss die Dispatcher-Konfiguration aktualisiert werden, um GET-Anfragen an den CSRF-Token-Endpunkt zu ermöglichen. Die folgende Konfiguration ermöglicht GET-Anfragen an den CSRF-Token-Endpunkt im AEM Publish-Service. Wenn diese Konfiguration nicht hinzugefügt wird, gibt der CSRF-Token-Endpunkt die Antwort „404 Nicht gefunden“ zurück.
 
 * `dispatcher/src/conf.dispatcher.d/filters/filters.any`
 

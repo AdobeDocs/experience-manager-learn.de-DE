@@ -17,11 +17,11 @@ exl-id: f581a4fb-1182-44bb-8c46-4250cf37b55f
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 25%
+ht-degree: 87%
 
 ---
 
-# Erstellen von Adobe Target-Aktivitäten mit Experience Fragment-Angeboten {#target-activity-experience-fragment}
+# Erstellen einer Adobe Target-Aktivität mit Experience Fragment-Angeboten {#target-activity-experience-fragment}
 
 Erfahren Sie, wie Sie eine Adobe Target-Aktivität mit AEM Experience Fragment-Angeboten erstellen und testen.
 
@@ -38,5 +38,5 @@ Um Adobe Target-Aktivitäten mit Experience Fragment-Angeboten zu erstellen, mus
 
 ## Unterstützende Links
 
-* [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-* [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
+* [Adobe Experience Cloud Debugger – Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+* [Adobe Experience Cloud Debugger – Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)

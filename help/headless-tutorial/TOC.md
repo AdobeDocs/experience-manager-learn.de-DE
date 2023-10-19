@@ -11,7 +11,7 @@ index: y
 source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '298'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -46,11 +46,11 @@ ht-degree: 94%
       + [3. Erkunden der AEM GraphQL-API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
       + [4. Persistierte GraphQL-Abfragen](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [5. Client-Anwendungsintegration](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
-   + Headless-Erstes Tutorial{#headless-first}
+   + Erstes Tutorial zu Headless{#headless-first}
       + [Übersicht](./graphql/headless-first-tutorial/overview.md)
-      + [1 - Inhaltsmodellierung](./graphql/headless-first-tutorial/1-content-modeling.md)
-      + [2 - AEM Headless-APIs und React](./graphql/headless-first-tutorial/2-aem-headless-apis-and-react.md)
-      + [3 - Komplexe Komponenten](./graphql/headless-first-tutorial/3-complex-components.md)
+      + [1 – Inhaltsmodellierung](./graphql/headless-first-tutorial/1-content-modeling.md)
+      + [2 – AEM Headless-APIs und React](./graphql/headless-first-tutorial/2-aem-headless-apis-and-react.md)
+      + [3 – Komplexe Komponenten](./graphql/headless-first-tutorial/3-complex-components.md)
 + Bereitstellungen{#deployments}
    + [Übersicht](./graphql/deployment/overview.md)
    + [Single-Page-App](./graphql/deployment/spa.md)

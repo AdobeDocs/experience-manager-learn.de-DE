@@ -9,7 +9,7 @@ version: 6.4, 6.5, Cloud Service
 source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '459'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 89%
    + [Stilsystem](page-authoring/style-system-feature-video-use.md)
    + [Timewarp](page-authoring/timewarp-feature-video-use.md)
    + [Launches](page-authoring/launches.md)
-   + Erfahren Sie mehr von Ihren Kollegen {#expert-advice}
+   + Lernen Sie von Ihren Kolleginnen und Kollegen {#expert-advice}
       + [Tipps zur Site-Hierarchie](page-authoring/expert-advice/site-hierarchy.md)
 + Komponenten {#components}
    + [Komponentenentwicklung](components/component-development.md)
@@ -43,7 +43,7 @@ ht-degree: 89%
    + [Web-optimierte Bildbereitstellung](components/web-optimized-image-delivery.md)
    + [Komponentenkonsole](components/components-console-feature-video-use.md)
 + Inhaltsfragmente {#content-fragments}
-   + [Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
+   + [Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=de){target=_blank}
    + [Bearbeiten von Inhaltsfragmenten](content-fragments/content-fragments-feature-video-use.md)
    + [Bereitstellen von Inhaltsfragmenten](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [Übersetzen von Inhaltsfragmenten](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -101,12 +101,12 @@ ht-degree: 89%
       + [Generieren von FPIDs](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [Analytics mit dem Platform Web SDK](integrations/platform/analytics-using-web-sdk.md)
-   + Experience Platform von Datenerfassungs-Tags (Launch) {#experience-platform-data-collection-tags}
+   + Experience Platform-Datenerfassungs-Tags (Launch) {#experience-platform-data-collection-tags}
       + [Übersicht](integrations/experience-platform/data-collection/tags/overview.md)
       + [Erstellen einer Tag-Eigenschaft](integrations/experience-platform/data-collection/tags/create-tag-property.md)
-      + [AEM- und Tag-Eigenschaft über IMS verbinden](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
-      + [AEM Launch-Cloud Service erstellen](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
-      + [Debuggen einer Implementierung von Tags (Launch)](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
+      + [Verbinden von AEM mit Tag-Eigenschaften über IMS](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
+      + [Erstellen eines AEM-Launch-Cloud-Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
+      + [Debuggen einer Tags(Launch)-Implementierung](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
    + Adobe Client-Datenschicht {#adobe-client-data-layer}
       + [Verwenden der Adobe Client-Datenschicht](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [Anpassen der Adobe Client-Datenschicht](integrations/adobe-client-data-layer/data-layer-customize.md)
@@ -123,7 +123,7 @@ ht-degree: 89%
       + [Erstellen einer Target-Aktivität mit Experience Fragment-Angeboten](integrations/adobe-target/create-target-activity.md)
       + [Personalisierung mit Visual Experience Composer](integrations/adobe-target/personalization-using-vec.md)
       + [Personalisierung des gesamten Web-Seitenerlebnisses](integrations/adobe-target/personalization-web-page.md)
-+ Erfahren Sie mehr von Ihren Kollegen {#expert-resources}
++ Lernen Sie von Ihren Kolleginnen und Kollegen {#expert-resources}
    + [Übersicht](expert-resources/learn-from-your-peers-overview.md)
    + [AEM Sites-Reifegradbewertung](expert-resources/maturity-assessment.md)
    + [Site-Wartung](expert-resources/site-maintenance.md)

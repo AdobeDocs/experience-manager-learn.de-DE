@@ -6,7 +6,7 @@ exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
 source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '2814'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -156,13 +156,13 @@ Im Allgemeinen ist es am besten, diese Faustregeln zu befolgen:
 
 Es gibt keine einfache Antwort darauf, wie die Personalmodelle einer AEM Sites-Umsetzung aussehen sollten. Es gibt jedoch Archetypen, denen Sie für einen grundlegenden Standard folgen sollten.
 
-AEM Sites: Grundlegende Ausführung und Betrieb
+AEM Sites: Grundlegende Ausführung und Bedienung
 
 | Technische Aufgabe | Technische Zuständigkeiten | Geschäftliche Zuständigkeiten | Geschäftliche Rolle |
 | --- | --- | --- | --- |
 | CSS-Entwicklerinnen und -Entwickler | <ul><li>Web-Entwicklung (CSS oder Frontend)</li>Wiederverwenden von Komponenten<li>Erstellen von Erlebnisartefakten durch Umfunktionierung oder Neugestaltung</li></ul> | <ul><li>Geschäftsinhaberin oder -inhaber der Lösung</li><li>Erstellt Wartungsaufgaben und Verbesserungen</li><li>Zusammenarbeit mit der Geschäftseinheit bei der Verknüpfung von technischen und strategischen Visionen</li></ul> | Produktinhaberin oder -inhaber |
 | Backend-Entwicklerinnen und -Entwickler | <ul><li>Tief greifende Erlebnisse, die nicht über einfache Frontend-CSS durchgeführt werden</li>Architekturaufsicht<li>Dynamische Integrationen/Abstimmung mit Produktinhaberin bzw. -inhaber zu strategischen Zielen</li></ul> | <ul><li>Unterstützen von Inhaltsautorinnen und -autoren</li><li>Governance-Rolle</li><li>Koordiniert Einführungen, verwaltet Makrobearbeitungen</li></ul> | Admin-Autorin oder -Autor |
-| Versionsverwalterin oder -verwalter | <ul><li>Versionsverwaltung</li><li>Code wird bereitgestellt</li></li>Adobe Account Team</ul> | <ul><li>Wendet Inhalte an (einschließlich vorab erstellter Stile)</li>Abgestufte Eigentümerschaft<li>Ermöglicht die Bereitstellung und Kommunikation von Problemen und Bedenken im Zusammenhang mit CSM</li></ul> | Inhaltsautorin oder -autor |
+| Versionsverwalterin oder -verwalter | <ul><li>Versionsverwaltung</li><li>Code wird bereitgestellt</li></li>Adobe-Accountteam</ul> | <ul><li>Wendet Inhalte an (einschließlich vorab erstellter Stile)</li>Abgestufte Eigentümerschaft<li>Ermöglicht die Bereitstellung und Kommunikation von Problemen und Bedenken im Zusammenhang mit CSM</li></ul> | Inhaltsautorin oder -autor |
 
 ## Potenzielle Fallstricke
 

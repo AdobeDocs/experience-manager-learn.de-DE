@@ -1,6 +1,6 @@
 ---
-title: Generieren des Dokuments für interaktive Kommunikation mit der API
-description: Generieren des Dokuments für interaktive Kommunikation durch Zusammenführen der Daten aus der React-App
+title: Generieren eines interaktiven Kommunikationsdokuments mithilfe einer API
+description: Generieren eines interaktiven Kommunikationsdokuments durch Zusammenführung der Daten aus der React-App
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -12,18 +12,18 @@ exl-id: d6fb6c80-4bfe-4b9d-b267-7caee3944cc0
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '113'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Generieren des Dokuments für interaktive Kommunikation
+# Generieren eines interaktiven Kommunikationsdokuments
 
-Um ein Dokument zur interaktiven Kommunikation mithilfe der API zu generieren, müssen wir Folgendes ausführen
+Um ein interaktives Kommunikationsdokument mithilfe der API zu generieren, müssen wir Folgendes ausführen:
 
-* Erstellen eines Vorbefüllungs-Dienstes
-* Generieren des Dokuments für interaktive Kommunikation
+* Erstellen eines Vorbefüllungsdienstes
+* Generieren eines interaktiven Kommunikationsdokuments
 
-Der Dienstname `ccm-print-test` wird verwendet, um auf diesen Dienst zuzugreifen. Sobald dieser Vorbefüllungs-Dienst definiert ist, können Sie in Ihrer Servlet- oder Workflow-Prozessschrittimplementierung auf diesen Dienst zugreifen, um das Dokument für den Druckkanal zu generieren.
+Der Dienstname `ccm-print-test` wird für den Zugriff auf diesen Dienst verwendet. Sobald dieser Vorbefüllungsdienst definiert ist, können Sie in Ihrer Servlet- oder Workflow-Prozessschrittimplementierung darauf zugreifen, um das Druckkanaldokument zu generieren.
 
 ```java
 package com.acrobatsign.core;
@@ -67,7 +67,7 @@ public class PrintChannelPrefill implements DataProvider {
 }
 ```
 
-## Dokument generieren
+## Generieren des Dokuments
 
 ```java
 package com.acrobatsign.core.impl;
@@ -199,9 +199,9 @@ public class AcrobatSignConfigurationService {
 }
 ```
 
-## Übergangsdokument-ID abrufen
+## Abrufen der Übergangsdokument-ID
 
-Der folgende Code wurde zum Erstellen eines Verlaufsdokuments geschrieben
+Der folgende Code wurde zum Erstellen des Übergangsdokuments geschrieben:
 
 ```java
 public String getTransientDocumentID(Document documentForSigning) throws IOException {
@@ -229,7 +229,7 @@ public String getTransientDocumentID(Document documentForSigning) throws IOExcep
 }
 ```
 
-## Widget-ID
+## Abrufen der Widget-ID
 
 ```java
 public String getWidgetID(String transientDocumentID) {
@@ -278,7 +278,7 @@ public String getWidgetID(String transientDocumentID) {
 }
 ```
 
-## Widget-URL
+## Abrufen der Widget-URL
 
 ```java
 public String getWidgetURL(String widgetId) throws ClientProtocolException, IOException {
@@ -317,4 +317,4 @@ public String getWidgetURL(String widgetId) throws ClientProtocolException, IOEx
 
 ## Nächste Schritte
 
-Schreiben einer [OSGi-Service-Wrapper zur Anzeige der Acrobat Sign-API](./wrapper-sign-api.md)
+Schreiben eines [OSGi-Dienst-Wrappers, um die Acrobat Sign-API](./wrapper-sign-api.md) zugänglich zu machen

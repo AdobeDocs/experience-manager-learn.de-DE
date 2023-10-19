@@ -18,7 +18,7 @@ exl-id: 2ad1554e-312a-4150-b365-7e00eab1fa43
 source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '41'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -26,6 +26,6 @@ ht-degree: 0%
 
 {{edge-delivery-services-and-page-editor}}
 
-Erfahren Sie, wie Sie Site-Seiten mit Seitenvorlagen in Adobe Experience Manager erstellen.
+Erfahren Sie, wie Sie Sites-Seiten mit Seitenvorlagen in Adobe Experience Manager erstellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/31827?quality=12&learn=on)

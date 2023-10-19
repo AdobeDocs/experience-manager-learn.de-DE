@@ -11,22 +11,22 @@ exl-id: c01ad68e-23c9-4564-8e3e-1924af34a493
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '294'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Formulare im Kartenformat abrufen und anzeigen
+# Abrufen und Anzeigen der Formulare im Kartenformat
 
-Das Kartenansichtsformat ist ein Designmuster, das Informationen oder Daten in Form von Karten darstellt. Jede Karte stellt einen diskreten Inhalt oder Dateneintrag dar und besteht normalerweise aus einem visuell getrennten Container mit spezifischen Elementen, die darin angeordnet sind.
-klickbare Karten in React sind interaktive Komponenten, die Karten oder Kacheln ähneln und vom Benutzer angeklickt oder angeklickt werden können. Wenn ein Benutzer auf eine klickbare Karte klickt oder tippt, wird eine bestimmte Aktion oder ein bestimmtes Verhalten Trigger, z. B. das Navigieren zu einer anderen Seite, das Öffnen eines Modals oder das Aktualisieren der Benutzeroberfläche.
+Das Kartenansichtsformat ist ein Design-Muster, das Informationen oder Daten in Form von Karten darstellt. Jede Karte stellt einen diskreten Inhalt oder Dateneintrag dar und besteht normalerweise aus einem visuell getrennten Container mit spezifischen Elementen, die darin angeordnet sind.
+Klickbare Karten in React sind interaktive Komponenten, die Karten oder Kacheln ähneln und von Benutzenden angeklickt oder angetippt werden können. Wenn Benutzende auf eine klickbare Karte klicken oder tippen, wird eine bestimmte Aktion oder ein bestimmtes Verhalten ausgelöst, z. B. das Navigieren zu einer anderen Seite, das Öffnen eines Modals oder das Aktualisieren der Benutzeroberfläche.
 
-In diesem Artikel verwenden wir die [listforms-API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) , um die Formulare abzurufen, die Formulare im Kartenformat anzuzeigen und das adaptive Formular beim Klicken zu öffnen.
+In diesem Artikel verwenden wir die [listforms-API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms), um die Formulare abzurufen, die Formulare im Kartenformat anzuzeigen und das adaptive Formular beim Klick-Ereignis zu öffnen.
 
 ![Kartenansicht](./assets/card-view-forms.png)
 
 ## Kartenvorlage
 
-Der folgende Code wurde zum Entwerfen der Kartenvorlage verwendet. Die Kartenvorlage zeigt den Titel und die Beschreibung des adaptiven Formulars zusammen mit dem Adobe-Logo an. [Komponenten der Benutzeroberfläche](https://mui.com/) wurden bei der Erstellung dieses Layouts verwendet.
+Der folgende Code wurde zum Entwerfen der Kartenvorlage verwendet. Die Kartenvorlage zeigt den Titel und die Beschreibung des adaptiven Formulars zusammen mit dem Adobe-Logo an. [Komponenten der Material-Benutzeroberfläche](https://mui.com/) wurden bei der Erstellung dieses Layouts verwendet.
 
 
 
@@ -82,9 +82,9 @@ Die folgende Route wurde in Main.js definiert, um zu DisplayForm.js zu navigiere
     <Route path="/displayForm/:formID" element={<DisplayForm/>} exact/>
 ```
 
-## Formulare abrufen
+## Abrufen der Formulare
 
-Die listforms-API wurde zum Abrufen der Formulare vom AEM-Server verwendet. Die API gibt ein Array von JSON-Objekten zurück, wobei jedes JSON-Objekt ein Formular darstellt.
+Die listforms-API wurde verwendet, um die Formulare vom AEM-Server abzurufen. Die API gibt ein Array von JSON-Objekten zurück, wobei jedes JSON-Objekt ein Formular darstellt.
 
 ```javascript
 import { useState,useEffect } from "react";
@@ -127,8 +127,8 @@ export default function ListForm(){
 }
 ```
 
-Im obigen Code navigieren wir mithilfe der Zuordnungsfunktion durch die abgerufenen Formulare. Für jedes Element im fetchedForms-Array wird eine FormCard-Komponente erstellt und zum Grid-Container hinzugefügt. Sie können jetzt die ListForm-Komponente in Ihrer React-App gemäß Ihren Anforderungen verwenden.
+Im obigen Code werden die abgerufenen Formulare mit der map-Funktion durchlaufen, und für jedes Element im fetchedForms-Array wird eine FormCard-Komponente erstellt und dem Grid-Container hinzugefügt. Sie können jetzt die ListForm-Komponente in Ihrer React-App gemäß Ihren Anforderungen verwenden.
 
 ## Nächste Schritte
 
-[Anzeigen des adaptiven Formulars, wenn Benutzer auf eine Karte klicken](./open-form-card-view.md)
+[Anzeigen des adaptiven Formulars, wenn Benutzende auf eine Karte klicken](./open-form-card-view.md)

@@ -1,6 +1,6 @@
 ---
 title: Arbeiten mit großen Ergebnismengen in AEM Headless
-description: Erfahren Sie, wie Sie mit großen Ergebnismengen mit AEM Headless arbeiten.
+description: Erfahren Sie, wie Sie mit großen Ergebnismengen in AEM Headless arbeiten.
 version: Cloud Service
 topic: Headless
 feature: GraphQL API
@@ -14,29 +14,29 @@ exl-id: 304b4d80-27bd-4336-b2ff-4b613a30f712
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '841'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Große Ergebnismengen AEM Headless
+# Große Ergebnismengen in AEM Headless
 
-AEM Headless-GraphQL-Abfragen können große Ergebnisse zurückgeben. In diesem Artikel wird beschrieben, wie Sie mit großen Ergebnissen in AEM Headless arbeiten, um die beste Leistung für Ihre Anwendung sicherzustellen.
+AEM Headless-GraphQL-Abfragen können umfangreiche Ergebnisse zurückgeben. In diesem Artikel wird beschrieben, wie Sie mit umfangreichen Ergebnissen in AEM Headless arbeiten, um die beste Leistung für Ihre Anwendung sicherzustellen.
 
-AEM Headless unterstützt eine [offset/limit](#list-query) und [Cursorbasierte Paginierung](#paginated-query) Abfragen für kleinere Teilmengen eines größeren Ergebnissatzes. Es können mehrere Anfragen gestellt werden, um so viele Ergebnisse wie erforderlich zu erfassen.
+AEM Headless unterstützt einen [Offset-/Limit-Ansatz](#list-query) und Abfragen mit [Cursor-basierter Paginierung](#paginated-query) für kleinere Teilmengen eines größeren Ergebnissatzes. Es können mehrere Anfragen gestellt werden, um so viele Ergebnisse wie erforderlich zu erfassen.
 
-In den folgenden Beispielen werden kleine Teilmengen von Ergebnissen (vier Datensätze pro Anforderung) verwendet, um die Techniken zu demonstrieren. In einer echten Anwendung würden Sie eine größere Anzahl von Datensätzen pro Anforderung verwenden, um die Leistung zu verbessern. 50 Datensätze pro Anforderung sind eine gute Grundlage.
+In den folgenden Beispielen werden kleine Teilmengen von Ergebnissen (vier Datensätze pro Anfrage) verwendet, um die Techniken zu zeigen. In einer echten Anwendung würden Sie eine größere Anzahl von Datensätzen pro Anfrage verwenden, um die Leistung zu verbessern. 50 Datensätze pro Anfrage sind eine gute Grundlage.
 
 ## Inhaltsfragmentmodell
 
 Paginierung und Sortierung können für jedes Inhaltsfragmentmodell verwendet werden.
 
-## GraphQL – Persistierte Abfragen
+## GraphQL-persistierte Abfragen
 
-Beim Arbeiten mit großen Datensätzen können sowohl die Offset- als auch die Limit- und die Cursor-basierte Paginierung verwendet werden, um eine bestimmte Teilmenge der Daten abzurufen. Es gibt jedoch einige Unterschiede zwischen den beiden Techniken, die in bestimmten Situationen eine geeignetere als die andere machen können.
+Beim Arbeiten mit großen Datensätzen können Offset/Limit und die Cursor-basierte Paginierung verwendet werden, um eine bestimmte Teilmenge von Daten abzurufen. Es gibt jedoch gewisse Unterschiede zwischen den beiden Techniken, weswegen in bestimmten Situationen die eine geeigneter ist als die andere.
 
-### Versatz/Limit
+### Offset/Limit
 
-Auflisten von Abfragen mithilfe von `limit` und `offset` einen einfachen Ansatz zur Festlegung des Ausgangspunkts (`offset`) und die Anzahl der abzurufenden Datensätze (`limit`). Dieser Ansatz ermöglicht die Auswahl einer Untergruppe von Ergebnissen an einer beliebigen Stelle innerhalb des vollständigen Ergebnissatzes, z. B. beim Springen zu einer bestimmten Ergebnisseite. Es ist zwar einfach zu implementieren, kann aber bei umfangreichen Ergebnissen langsam und ineffizient sein, da das Abrufen vieler Datensätze das Durchsuchen aller vorherigen Datensätze erfordert. Dieser Ansatz kann auch zu Leistungsproblemen führen, wenn der Offset-Wert hoch ist, da u. U. das Abrufen und Verwerfen vieler Ergebnisse erforderlich ist.
+Listenabfragen mithilfe von `limit` und `offset` stellen einen einfachen Ansatz zur Festlegung des Ausgangspunkts (`offset`) und der Anzahl der abzurufenden Datensätze (`limit`) dar. Dieser Ansatz ermöglicht die Auswahl einer Teilmenge von Ergebnissen an einer beliebigen Stelle innerhalb des vollständigen Ergebnissatzes, z. B. durch Springen zu einer bestimmten Ergebnisseite. Er lässt sich zwar einfach implementieren, kann aber bei umfangreichen Ergebnissen langsam und ineffizient sein, da zum Abrufen vieler Datensätze das Durchsuchen aller vorherigen Datensätze erforderlich ist. Dieser Ansatz kann auch zu Leistungsproblemen führen, wenn der Offset-Wert hoch ist, da unter Umständen viele Ergebnisse abgerufen und dann wieder verworfen werden müssen.
 
 #### GraphQL-Abfrage
 
@@ -64,7 +64,7 @@ query adventuresByOffetAndLimit($offset:Int!, $limit:Int) {
 
 #### GraphQL-Antwort
 
-Die resultierende JSON-Antwort enthält die 2., 3., 4. und 5. teuersten Abenteuer. Die ersten beiden Abenteuer in den Ergebnissen haben den gleichen Preis (`4500` so die [Listenabfrage](#list-queries) gibt an, dass Abenteuer mit demselben Preis nach Titel in aufsteigender Reihenfolge sortiert werden.)
+Die resultierende JSON-Antwort enthält das zweit-, dritt-, viert- und fünftteuerste Abenteuer. Die ersten beiden Abenteuer in den Ergebnissen haben den gleichen Preis (`4500`, sodass die [Listenabfrage](#list-queries) Abenteuer mit dem gleichen Preis nach Titel in aufsteigender Reihenfolge sortiert).
 
 ```json
 {
@@ -99,7 +99,7 @@ Die resultierende JSON-Antwort enthält die 2., 3., 4. und 5. teuersten Abenteue
 
 ### Paginierte Abfrage
 
-Die Cursor-basierte Paginierung, die in Paginierten Abfragen verfügbar ist, beinhaltet die Verwendung eines Cursors (ein Verweis auf einen bestimmten Datensatz), um den nächsten Ergebnissatz abzurufen. Dieser Ansatz ist effizienter, da es nicht notwendig ist, alle vorherigen Datensätze zu durchsuchen, um die erforderliche Teilmenge von Daten abzurufen. Paginierte Abfragen eignen sich hervorragend für die Iteration großer Ergebnismengen von Anfang bis Mitte oder bis zum Ende. Auflisten von Abfragen mithilfe von `limit` und `offset` einen einfachen Ansatz zur Festlegung des Ausgangspunkts (`offset`) und die Anzahl der abzurufenden Datensätze (`limit`). Dieser Ansatz ermöglicht die Auswahl einer Untergruppe von Ergebnissen an einer beliebigen Stelle innerhalb des vollständigen Ergebnissatzes, z. B. beim Springen zu einer bestimmten Ergebnisseite. Es ist zwar einfach zu implementieren, kann aber bei umfangreichen Ergebnissen langsam und ineffizient sein, da das Abrufen vieler Datensätze das Durchsuchen aller vorherigen Datensätze erfordert. Dieser Ansatz kann auch zu Leistungsproblemen führen, wenn der Offset-Wert hoch ist, da u. U. das Abrufen und Verwerfen vieler Ergebnisse erforderlich ist.
+Die Cursor-basierte Paginierung, die in paginierten Abfragen verfügbar ist, beinhaltet die Verwendung eines Cursors (ein Verweis auf einen bestimmten Datensatz), um den nächsten Ergebnissatz abzurufen. Dieser Ansatz ist effizienter, da es nicht notwendig ist, alle vorherigen Datensätze zu durchsuchen, um die erforderliche Teilmenge von Daten abzurufen. Paginierte Abfragen eignen sich hervorragend für die Iteration großer Ergebnismengen von Anfang bis zu einem Punkt in der Mitte oder bis zum Ende. Listenabfragen mithilfe von `limit` und `offset` stellen einen einfachen Ansatz zur Festlegung des Ausgangspunkts (`offset`) und der Anzahl der abzurufenden Datensätze (`limit`) dar. Dieser Ansatz ermöglicht die Auswahl einer Teilmenge von Ergebnissen an einer beliebigen Stelle innerhalb des vollständigen Ergebnissatzes, z. B. durch Springen zu einer bestimmten Ergebnisseite. Er lässt sich zwar einfach implementieren, kann aber bei umfangreichen Ergebnissen langsam und ineffizient sein, da zum Abrufen vieler Datensätze das Durchsuchen aller vorherigen Datensätze erforderlich ist. Dieser Ansatz kann auch zu Leistungsproblemen führen, wenn der Offset-Wert hoch ist, da unter Umständen viele Ergebnisse abgerufen und dann wieder verworfen werden müssen.
 
 #### GraphQL-Abfrage
 
@@ -133,7 +133,7 @@ query adventuresByPaginated($first:Int, $after:String) {
 
 #### GraphQL-Antwort
 
-Die resultierende JSON-Antwort enthält die 2., 3., 4. und 5. teuersten Abenteuer. Die ersten beiden Abenteuer in den Ergebnissen haben den gleichen Preis (`4500` so die [Listenabfrage](#list-queries) gibt an, dass Abenteuer mit demselben Preis nach Titel in aufsteigender Reihenfolge sortiert werden.)
+Die resultierende JSON-Antwort enthält das zweit-, dritt-, viert- und fünftteuerste Abenteuer. Die ersten beiden Abenteuer in den Ergebnissen haben den gleichen Preis (`4500`, sodass die [Listenabfrage](#list-queries) Abenteuer mit dem gleichen Preis nach Titel in aufsteigender Reihenfolge sortiert).
 
 ```json
 {
@@ -176,7 +176,7 @@ Die resultierende JSON-Antwort enthält die 2., 3., 4. und 5. teuersten Abenteue
 
 #### Nächster Satz paginierter Ergebnisse
 
-Der nächste Ergebnissatz kann mit der `after` und dem `endCursor` -Wert aus der vorherigen Abfrage. Wenn keine weiteren Ergebnisse abgerufen werden müssen, `hasNextPage` is `false`.
+Der nächste Ergebnissatz kann mit dem `after`-Parameter und dem `endCursor`-Wert aus der vorherigen Abfrage abgerufen werden. Wenn keine weiteren Ergebnisse abgerufen werden müssen, ist `hasNextPage` gleich `false`.
 
 ##### Abfragevariablen
 
@@ -189,17 +189,17 @@ Der nächste Ergebnissatz kann mit der `after` und dem `endCursor` -Wert aus der
 
 ## React-Beispiele
 
-Im Folgenden finden Sie React-Beispiele, die zeigen, wie Sie [Offset und Limit](#offset-and-limit) und [Cursorbasierte Paginierung](#cursor-based-pagination) Ansätze. In der Regel ist die Anzahl der Ergebnisse pro Anfrage größer, für die Zwecke dieser Beispiele ist jedoch die Grenze auf 5 gesetzt.
+Im Folgenden finden Sie React-Beispiele, die zeigen, wie Sie die Ansätze [Offset und Limit](#offset-and-limit) sowie [Cursor-basierte Paginierung](#cursor-based-pagination) verwenden. In der Regel ist die Anzahl der Ergebnisse pro Anfrage größer, für die Zwecke dieser Beispiele ist sie jedoch auf 5 begrenzt.
 
-### Beispiel für Versatz und Begrenzung
+### Beispiel für Offset und Limit
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418381/?quality=12&learn=on)
 
 Mithilfe von Offset und Limit können Teilmengen von Ergebnissen einfach abgerufen und angezeigt werden.
 
-#### useEffect-Haken
+#### useEffect-Hook
 
-Die `useEffect` Ein Erweiterungspunkt ruft eine persistente Abfrage (`adventures-by-offset-and-limit`), die eine Liste von Abenteuern abruft. Die Abfrage verwendet die `offset` und `limit` Parameter, um den Startpunkt und die Anzahl der abzurufenden Ergebnisse anzugeben. Die `useEffect` Der Erweiterungspunkt wird aufgerufen, wenn die `page` -Wert geändert.
+Der `useEffect`-Hook startet eine persistierte Abfrage (`adventures-by-offset-and-limit`), die eine Liste von Abenteuern abruft. Die Abfrage verwendet die Parameter `offset` und `limit`, um den Ausgangspunkt und die Anzahl der abzurufenden Ergebnisse anzugeben. Die `useEffect`-Hook wird gestartet, wenn sich der `page`-Wert ändert.
 
 
 ```javascript
@@ -242,7 +242,7 @@ export function useOffsetLimitAdventures(page, limit) {
 
 #### Komponente
 
-Die Komponente verwendet die `useOffsetLimitAdventures` Hook zum Abrufen einer Liste von Abenteuern. Die `page` -Wert inkrementiert und dekrementiert wird, um den nächsten und vorherigen Ergebnissatz abzurufen. Die `hasMore` -Wert wird verwendet, um zu bestimmen, ob die Schaltfläche &quot;Nächste Seite&quot;aktiviert werden soll.
+Die Komponente verwendet den `useOffsetLimitAdventures`-Hook zum Abrufen einer Liste von Abenteuern. Der `page`-Wert wird erhöht oder verringert, um den nächsten bzw. vorherigen Ergebnissatz abzurufen. Der `hasMore`-Wert wird verwendet, um zu bestimmen, ob die Schaltfläche „Nächste Seite“ aktiviert werden soll.
 
 ```javascript
 import { useState } from "react";
@@ -300,18 +300,18 @@ export default function OffsetLimitAdventures() {
 }
 ```
 
-### Paginiertes Beispiel
+### Beispiel für eine paginierte Abfrage
 
-![Paginiertes Beispiel](./assets/large-results/paginated-example.png)
+![Beispiel für eine paginierte Abfrage](./assets/large-results/paginated-example.png)
 
-_Jeder rote Kasten stellt eine separate paginierte HTTP GraphQL-Abfrage dar._
+_Jeder rote Rahmen kennzeichnet eine separate paginierte HTTP-GraphQL-Abfrage._
 
 Mithilfe der Cursor-basierten Paginierung können große Ergebnismengen einfach abgerufen und angezeigt werden, indem die Ergebnisse schrittweise erfasst und mit den vorhandenen Ergebnissen verkettet werden.
 
 
-#### UseEffect-Haken
+#### UseEffect-Hook
 
-Die `useEffect` Ein Erweiterungspunkt ruft eine persistente Abfrage (`adventures-by-paginated`), die eine Liste von Abenteuern abruft. Die Abfrage verwendet die `first` und `after` Parameter , um die Anzahl der Ergebnisse anzugeben, die abgerufen werden sollen, und den Cursor anzugeben, von dem aus der Cursor beginnen soll. `fetchData` durchgängig Schleifen durchlaufen und den nächsten Satz paginierter Ergebnisse sammeln, bis keine Ergebnisse mehr abgerufen werden können.
+Der `useEffect`-Hook startet eine persistierte Abfrage (`adventures-by-paginated`), die eine Liste von Abenteuern abruft. Die Abfrage verwendet die Parameter `first` und `after`, um die Anzahl der Ergebnisse, die abgerufen werden sollen, und den Startpunkt für den Cursor anzugeben. `fetchData` wird in einer Endlosschleife ausgeführt und erfasst den nächsten Satz paginierter Ergebnisse, bis keine Ergebnisse mehr abgerufen werden können.
 
 ```javascript
 import { useState, useEffect } from "react";
@@ -366,7 +366,7 @@ export function usePaginatedAdventures() {
 
 #### Komponente
 
-Die Komponente verwendet die `usePaginatedAdventures` Hook zum Abrufen einer Liste von Abenteuern. Die `queryCount` -Wert verwendet wird, um die Anzahl der HTTP-Anfragen anzuzeigen, die zum Abrufen der Liste von Abenteuern gesendet wurden.
+Die Komponente verwendet den `usePaginatedAdventures`-Hook zum Abrufen einer Liste von Abenteuern. Der `queryCount`-Wert wird verwendet, um die Anzahl der HTTP-Anfragen anzuzeigen, die zum Abrufen der Liste von Abenteuern gesendet wurden.
 
 ```javascript
 import { useState } from "react";

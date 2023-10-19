@@ -15,7 +15,7 @@ exl-id: 4f67bb37-416a-49d9-9d7b-06c3573909ca
 source-git-commit: 29b9e4a23d8f4ae0494fc43f76f7449062364843
 workflow-type: tm+mt
 source-wordcount: '817'
-ht-degree: 92%
+ht-degree: 95%
 
 ---
 
@@ -36,7 +36,7 @@ Folgende Tools sollten lokal installiert werden:
 
 ## AEM-Anforderungen
 
-Die Next.js-App funktioniert mit den folgenden AEM-Bereitstellungsoptionen. Alle Implementierungen erfordern [WKND Shared v3.0.0+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) oder [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) in der AEM as a Cloud Service Umgebung installiert werden.
+Die Next.js-App funktioniert mit den folgenden AEM-Bereitstellungsoptionen. Alle Bereitstellungen erfordern, dass [WKND Shared v3.0.0+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) oder [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) in der AEM as a Cloud Service-Umgebung installiert werden.
 
 Diese Next.js-Beispiel-App ist für die Verbindung mit dem __AEM Publish__-Service konzipiert.
 

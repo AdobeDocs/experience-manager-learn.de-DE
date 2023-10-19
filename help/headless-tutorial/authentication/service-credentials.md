@@ -17,7 +17,7 @@ exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 source-git-commit: 65d8fd58f421a186e3624918c70cc5d79ec23700
 workflow-type: tm+mt
 source-wordcount: '1967'
-ht-degree: 96%
+ht-degree: 98%
 
 ---
 
@@ -53,7 +53,7 @@ Anders als Zugriffstoken für die lokale Entwicklung erfordern Service-Anmeldein
 Technische Konten werden einmal erstellt, die privaten Schlüssel, die zur Verwaltung der mit dem technischen Konto verbundenen Service-Anmeldeinformationen verwendet werden, können über einen längeren Zeitraum verwaltet werden. So müssen zum Beispiel neue private Schlüssel/Service-Anmeldeinformationen generiert werden, bevor der aktuelle private Schlüssel abläuft, damit Benutzende der Service-Anmeldeinformationen ununterbrochenen Zugriff haben.
 
 1. Stellen Sie sicher, dass Sie wie folgt angemeldet sind:
-   + __Systemadministrator der Adobe IMS-Organisation__
+   + __Admin des Adobe IMS-Organisationssystems__
    + Mitglied beim IMS-Produktprofil der __AEM-Administrierenden__ auf __AEM Author__
 1. Melden Sie sich bei [Adobe Cloud Manager](https://my.cloudmanager.adobe.com) an
 1. Öffnen Sie das Programm, das die AEM as a Cloud Service-Umgebung enthält, um die Einrichtung der Service-Anmeldeinformationen dafür zu integrieren.
@@ -107,7 +107,7 @@ Die Dienstanmeldeinformationen, ein vollständig geformtes JSON-Objekt, sind wed
 1. Die externe Anwendung verwendet die Dienstanmeldeinformationen, um ein JWT-Token zu erstellen.
 1. Das JWT-Token wird an Adobe IMS gesendet, wo es gegen ein Zugriffs-Token eingetauscht wird.
 1. Adobe IMS gibt ein Zugriffs-Token zurück, das für den Zugriff auf AEM as a Cloud Service verwendet werden kann.
-   + Zugriffstoken können die Ablaufzeit nicht ändern.
+   + Zugriffs-Token können die Ablaufzeit nicht ändern.
 1. Die externe Anwendung sendet HTTP-Anfragen an AEM als ein Cloud Service. Dabei wird das Zugriffs-Token zur Autorisierungs-Kopfzeile der HTTP-Anfragen als Bearer-Token hinzugefügt.
 1. AEM as a Cloud Service empfängt die HTTP-Anfrage, authentifiziert sie, führt die von ihr angeforderte Aufgabe aus und gibt eine HTTP-Antwort an die externe Anwendung zurück.
 
@@ -224,7 +224,7 @@ Sobald das technische Konto AEM-Benutzer in AEM vorhanden ist (nach der ersten H
 1. Navigieren Sie zu __Tools__ > __Sicherheit__ > __Benutzer__
 1. Suchen Sie den AEM-Benutzer mit dem __Anmeldenamen__, der in Schritt 1 identifiziert wurde, und öffnen Sie dessen __Eigenschaften__
 1. Navigieren Sie zu __Gruppen__ und fügen Sie die Gruppe der __DAM-Benutzer__ (die Schreibzugriff auf Assets hat) hinzu
-   + [Anzeigen der Liste AEM bereitgestellten Benutzergruppen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html#built-in-users-and-groups) , um den Dienstbenutzer zu hinzuzufügen, um optimale Berechtigungen zu erhalten. Wenn keine AEM bereitgestellte Benutzergruppe ausreicht, erstellen Sie eine eigene und fügen Sie die entsprechenden Berechtigungen hinzu.
+   + [Anzeigen der Liste AEM bereitgestellten Benutzergruppen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=de#built-in-users-and-groups) , um den Dienstbenutzer zu hinzuzufügen, um optimale Berechtigungen zu erhalten. Wenn keine AEM bereitgestellte Benutzergruppe ausreicht, erstellen Sie eine eigene und fügen Sie die entsprechenden Berechtigungen hinzu.
 1. Klicken Sie auf __Speichern und schließen__
 
 Führen Sie mit dem technischen Konto, das in AEM über Schreibberechtigungen für Assets verfügt, die Anwendung erneut aus:

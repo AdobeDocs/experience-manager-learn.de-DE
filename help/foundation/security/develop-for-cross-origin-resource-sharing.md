@@ -10,7 +10,7 @@ exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
 source-git-commit: 1114ec01555baa1c6ffc2ccc5e77165ec9827e4d
 workflow-type: tm+mt
 source-wordcount: '376'
-ht-degree: 69%
+ht-degree: 84%
 
 ---
 
@@ -99,9 +99,9 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ## Konfiguration des Dispatchers {#dispatcher-configuration}
 
-### Zulassen von CORS-Anforderungsheadern
+### Zulassen von CORS-Anfrage-Headern
 
-So lassen Sie die erforderlichen [HTTP-Anforderungs-Header zur Weiterleitung an AEM zur Verarbeitung](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#specifying-the-http-headers-to-pass-through-clientheaders), müssen sie in der Dispatcher-Funktion `/clientheaders` Konfiguration.
+Damit die erforderlichen [HTTP-Anfrage-Header zur Verarbeitung in AEM durchgeleitet werden können](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#specifying-the-http-headers-to-pass-through-clientheaders), müssen sie in der `/clientheaders`-Konfiguration vom Dispatcher zugelassen werden.
 
 ```
 /clientheaders {
@@ -112,9 +112,9 @@ So lassen Sie die erforderlichen [HTTP-Anforderungs-Header zur Weiterleitung an 
 }
 ```
 
-### Zwischenspeichern von CORS-Antwortheadern
+### Zwischenspeichern von CORS-Anfrage-Headern
 
-Um das Zwischenspeichern und Bereitstellen von CORS-Headern für zwischengespeicherten Inhalt zu ermöglichen, fügen Sie Folgendes hinzu [/cache /headers configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#caching-http-response-headers) zur AEM Veröffentlichung `dispatcher.any` -Datei.
+Um das Zwischenspeichern und Bereitstellen von CORS-Headern für zwischengespeicherte Inhalte zu ermöglichen, fügen Sie die folgende [/cache-/headers-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#caching-http-response-headers) zur Datei `dispatcher.any` von AEM Publish hinzu.
 
 ```
 /publishfarm {
@@ -145,7 +145,7 @@ Es ist wahrscheinlich erforderlich, den Cache vollständig zu löschen, um siche
 ## Hilfsmaterialien {#supporting-materials}
 
 * [Jeeves für macOS](https://apps.apple.com/de/app/jeeves-local-http-server/id980824182?mt=12)
-* [Python SimpleHTTPServer](https://docs.python.o:qrg/2/library/simplehttpserver.html) (kompatibel mit Windows/macOS/Linux)
+* [Python SimpleHTTPServer](https://docs.python.org/2/library/simplehttpserver.html) (kompatibel mit Windows/macOS/Linux)
 
 * [Grundlegendes zu CORS (Cross-Origin Resource Sharing) in AEM](./understand-cross-origin-resource-sharing.md)
 * [Cross-Origin Resource Sharing (W3C)](https://www.w3.org/TR/cors/)

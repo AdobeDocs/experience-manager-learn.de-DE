@@ -1,6 +1,6 @@
 ---
-title: Referenzen - Inhaltsfragmente
-description: Erfahren Sie, wie AEM Inhaltsfragment-Konsole und -Editor die Verwaltung referenzierter Inhalte erleichtern.
+title: Referenzen – Inhaltsfragmente
+description: Erfahren Sie, wie Inhaltsfragmentkonsole und -editor von AEM die Verwaltung referenzierter Inhalte erleichtern.
 version: Cloud Service
 feature: Content Fragments
 topic: Content Management
@@ -14,12 +14,12 @@ exl-id: 5af2456b-5255-40b3-a6a5-b953c8d76fc9
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '36'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # Verweise
 
-Erfahren Sie, wie AEM Inhaltsfragment-Konsole und -Editor das Verstehen und Verwalten referenzierter Inhalte erleichtern.
+Erfahren Sie, wie Inhaltsfragmentkonsole und -editor von AEM das Verstehen und Verwalten referenzierter Inhalte erleichtern.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420950/?learn=on)

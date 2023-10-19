@@ -1,6 +1,6 @@
 ---
-title: Inhaltsfragment in XML exportieren
-description: Erfahren Sie, wie ein Inhaltsfragment aus dem AEM Inhaltsfragment-Editor exportiert werden kann.
+title: Exportieren eines Inhaltsfragments in XML
+description: Erfahren Sie, wie ein Inhaltsfragment aus dem AEM-Inhaltsfragmenteditor exportiert werden kann.
 feature: Developer Tools, Content Fragments
 version: Cloud Service
 topic: Development
@@ -14,39 +14,39 @@ exl-id: 70adb2c1-9e08-4a4b-b8f1-16bddd84c23d
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '307'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Inhaltsfragment in XML exportieren
+# Exportieren eines Inhaltsfragments in XML
 
-![Beispiel für eine Erweiterung des Header-Menüs des Inhaltsfragment-Editors](./assets/export-to-xml/hero.png){align="center"}
+![Beispiel für eine Erweiterung des Kopfzeilenmenüs des Inhaltsfragmenteditors](./assets/export-to-xml/hero.png){align="center"}
 
-Benutzerdefinierte Schaltflächen können dem Kopfzeilenmenü des Inhaltsfragment-Editors mithilfe der `headerMenu` Erweiterungspunkt. In diesem Beispiel wird gezeigt, wie eine Schaltfläche zum Kopfzeilenmenü hinzugefügt wird und wie das Klickereignis verarbeitet wird, um das aktive Inhaltsfragment als XML oder CSV zu exportieren.
+Benutzerdefinierte Schaltflächen können dem Kopfzeilenmenü des Inhaltsfragmenteditors mithilfe des Erweiterungspunkts `headerMenu` hinzugefügt werden. In diesem Beispiel wird gezeigt, wie eine Schaltfläche zum Kopfzeilenmenü hinzugefügt wird und wie das Klick-Ereignis verarbeitet wird, um das aktive Inhaltsfragment als XML oder CSV zu exportieren.
 
-Kopfzeilentasten können als einzelne Schaltfläche oder als Schaltfläche mit Unterelementen vorhanden sein. In diesem Beispiel wird gezeigt, wie eine Schaltfläche mit Unterelementen implementiert wird. Dazu gehört jedoch der kommentierte Code zur Implementierung einer einzelnen Schaltfläche.
+Kopfzeilen-Schaltflächen können als einzelne Schaltfläche oder als Schaltfläche mit Unterelementen vorhanden sein. In diesem Beispiel wird gezeigt, wie eine Schaltfläche mit Unterelementen implementiert wird, es enthält aber auch den (auskommentierten) Code zur Implementierung einer einzelnen Schaltfläche.
 
 ## Erweiterungspunkt
 
-Dieses Beispiel erstreckt sich auf den Erweiterungspunkt `headerBar` , um eine benutzerdefinierte Schaltfläche zum Inhaltsfragment-Editor hinzuzufügen.
+Dieses Beispiel erstreckt sich bis zum Erweiterungspunkt `headerBar`, um dem Inhaltsfragmenteditor eine benutzerdefinierte Schaltfläche hinzuzufügen.
 
-| AEM Benutzeroberfläche erweitert | Erweiterungspunkt |
+| Erweiterte AEM-Benutzeroberfläche | Erweiterungspunkt |
 | ------------------------ | --------------------- | 
-| [Inhaltsfragmente-Editor](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Kopfzeilenmenü](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/) |
+| [Inhaltsfragmenteditor](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Kopfzeilenmenü](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/) |
 
 ## Beispielerweiterung
 
-Im folgenden Beispiel wird eine Kopfzeilenmenüschaltfläche mit zwei Unterelementen erstellt: einem zum Exportieren des aktiven Inhaltsfragments als XML (implementiert) und einem zum Exportieren des aktiven Inhaltsfragments als CSV (nicht implementiert).
+Im folgenden Beispiel wird eine Kopfzeilenmenü-Schaltfläche mit zwei Unterelementen erstellt: einem zum Exportieren des aktiven Inhaltsfragments als XML (implementiert) und einem zum Exportieren des aktiven Inhaltsfragments als CSV (nicht implementiert).
 
-Der Code zeigt an, wie der Inhalt des Inhaltsfragments in der Registrierungsdatei der Erweiterung abgerufen werden kann und wie der JSON-Inhalt des Inhaltsfragments transformiert werden kann.
+Der Code zeigt an, wie der Inhalt des Inhaltsfragments in der Registrierungsdatei der Erweiterung abgerufen werden kann und wie der JSON-Inhalt des Inhaltsfragments transformiert und exportiert werden kann.
 
 ### Registrierung der Erweiterung
 
-`ExtensionRegistration.js`, der der Route index.html zugeordnet ist, ist der Einstiegspunkt für die AEM Erweiterung und definiert:
+`ExtensionRegistration.js`, die der Route „index.html“ zugeordnet ist, ist der Einstiegspunkt für die AEM-Erweiterung und definiert Folgendes:
 
-+ Der Speicherort der Erweiterungsschaltfläche wird angezeigt (`headerMenu`) im AEM Authoring-Erlebnis
-+ Definition der Erweiterungsschaltfläche in der Funktion getButton()
-+ Der Klick-Handler für die Schaltfläche, in der Funktion onClick() oder eine Liste von Unterelementen und deren Klick-Handlern.
++ Den Speicherort der Erweiterungsschaltfläche (`headerMenu`), er wird im AEM-Authoring-Erlebnis angezeigt
++ Die Definition der Erweiterungsschaltfläche in der Funktion „getButton()“
++ Den Klick-Handler für die Schaltfläche, nämlich in der Funktion „onClick()“, oder eine Liste von Unterelementen und deren Klick-Handlern.
 
 `src/aem-ui-extension/web-src/src/components/ExtensionRegistration.js`
 
@@ -145,13 +145,13 @@ export default ExtensionRegistration;
 
 #### Inhaltsfragmentdaten
 
-Das aktive Inhaltsfragment kann mithilfe der `getContentFragment()` -Methode `guestConnection.host.contentFragment` -Objekt.
+Das aktive Inhaltsfragment kann durch Anwenden der Methode `getContentFragment()` auf das Objekt `guestConnection.host.contentFragment` abgerufen werden.
 
 ```javascript
 const contentFragment = await guestConnection.host.contentFragment.getContentFragment();
 ```
 
-Die `contentFragment` -Objekt enthält alle Informationen zum Inhaltsfragment, einschließlich Pfad, Modell, Metadaten, Hauptinhalt und beliebigen Varianten.
+Das Objekt `contentFragment` enthält alle Informationen über das Inhaltsfragment, einschließlich Pfad, Modell, Metadaten, Hauptinhalt und beliebige Varianten.
 
 ```json
 {

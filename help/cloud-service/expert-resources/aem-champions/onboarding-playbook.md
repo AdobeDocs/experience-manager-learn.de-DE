@@ -1,6 +1,6 @@
 ---
-title: AEM Champion Tips and Tricks - Cloud Manager Onboarding Playbook
-description: Sehen Sie sich diese Tipps für Cloud Manager Onboarding und die Onboarding-Playbook von AEM Champion und Experte Rakesh Pasupuleti an.
+title: Tipps und Tricks von AEM-Champions – Onboarding-Playbook für Cloud Manager
+description: Sehen Sie sich diese Cloud Manager-Onboarding-Tipps und das Onboarding-Playbook vom AEM-Champion und -Experten Rakesh Pasupuleti an.
 version: Cloud Service
 feature: Cloud Manager
 topic: Administration
@@ -13,22 +13,22 @@ exl-id: d1745cea-906b-46fa-adcc-7da6e7ee95db
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '177'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# AEM Champion Tips and Tricks - Cloud Manager Onboarding Playbook
+# Tipps und Tricks von AEM-Champions – Onboarding-Playbook für Cloud Manager
 
-Die Onboarding-Playbook hilft Ihnen als neuer Administrator und Entwickler für AEM as a Cloud Service. In der herunterladbaren Tabelle führen wir Sie durch die Aktivitäten, die Sie während der ersten drei Wochen Ihrer Onboarding-Journey durchführen sollten.
+Das Onboarding-Playbook hilft Ihnen und anderen neuen Admins und Entwicklungspersonen für AEM as a Cloud Service, sich auf die vorliegenden Aufgaben vorzubereiten. In der herunterladbaren Tabelle werden Sie durch die Aktivitäten geführt, die Sie während der ersten drei Wochen Ihrer Onboarding-Tour durchführen sollten.
 
 >[!TIP]
 >
->Laden Sie die [Onboarding-Playbook hier.](./assets/Cloud-Manager-for-AEM-as-a-Cloud-Service.xlsx)
+>Laden Sie das [Onboarding-Playbook hier](./assets/Cloud-Manager-for-AEM-as-a-Cloud-Service.xlsx) herunter.
 
-Sehen Sie sich diese Tipps von Ihrem technischen Leiter Rakesh Pasupuleti an. Rakesh ist Adobe Experience Manager-Champion und teilt Ideen über die Verwendung der Onboarding-Playbook.
+Sehen Sie sich diese Tipps von Rakesh Pasupuleti an, der wie Sie als technische Führungskraft tätig ist. Rakesh ist ein Adobe Experience Manager-Champion und lässt uns an seinen Gedanken über die Verwendung des Onboarding-Playbooks teilhaben.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419299?quality=12&learn=on)
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [AEM as a Cloud Service Onboarding-Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html?lang=de) - Eine schrittweise Anleitung für einen neuen Systemadministrator, der anfangs Cloud-Ressourcen bereitstellt und Benutzer basierend auf ihrer Aufgabenverantwortung Rollen zuweist, damit sich jedes Teammitglied anmelden und auf seine neuen AEM as a Cloud Service Ressourcen zugreifen kann
+* [Onboarding-Tour für AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html?lang=de) – eine schrittweise Anleitung für neue Systemadmins, um erstmalig Cloud-Ressourcen bereitzustellen und Benutzenden basierend auf ihren Aufgaben Rollen zuzuweisen, damit sich jedes Team-Mitglied anmelden und auf seine neuen AEM as a Cloud Service-Ressourcen zugreifen kann

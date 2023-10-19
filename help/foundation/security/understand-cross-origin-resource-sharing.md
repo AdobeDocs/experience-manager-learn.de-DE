@@ -15,7 +15,7 @@ exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 source-git-commit: f47beff14782bb3f570d32818b000fc279394f19
 workflow-type: tm+mt
 source-wordcount: '1052'
-ht-degree: 84%
+ht-degree: 95%
 
 ---
 
@@ -71,7 +71,7 @@ Wenn keine Richtlinie konfiguriert ist, werden [!DNL CORS]-Anfragen ebenfalls ni
 #### [!UICONTROL Verfügbare Header]
 
 * `"exposedheaders" <header>`
-* Liste der Kopfzeilenparameter, die den Zugriff auf Antwortheader durch Browser angeben. Bei CORS-Anforderungen (nicht vor dem Flug) werden diese Werte, falls nicht leer, in die `Access-Control-Expose-Headers` Antwortheader. Die Werte in der Liste (Kopfzeilennamen) werden dann dem Browser zugänglich gemacht. Andernfalls sind diese Kopfzeilen vom Browser nicht lesbar.
+* Liste der Kopfzeilen-Parameter, die angeben, auf welche Antwort-Header Browser zugreifen dürfen. Bei CORS-Anfragen (keine Pre-Flight-Anfragen) werden diese Werte, sofern sie nicht leer sind, in den Antwort-Header `Access-Control-Expose-Headers` kopiert. Die Werte in der Liste (Kopfzeilennamen) werden dann dem Browser zugänglich gemacht. Andernfalls kann der Browser diese Kopfzeilen nicht lesen.
 
 #### [!UICONTROL Maximales Alter]
 
@@ -81,7 +81,7 @@ Wenn keine Richtlinie konfiguriert ist, werden [!DNL CORS]-Anfragen ebenfalls ni
 #### [!UICONTROL Unterstützte Header]
 
 * `"supportedheaders" <header>`
-* Liste der `header` Parameter, die angeben, welche HTTP-Anforderungsheader bei der eigentlichen Anfrage verwendet werden können.
+* Liste der `header`-Parameter, die angeben, welche HTTP-Anfrage-Header bei der eigentlichen Anfrage verwendet werden können.
 
 #### [!UICONTROL Zulässige Methoden]
 
@@ -187,9 +187,9 @@ Im Allgemeinen gelten dieselben Überlegungen beim Zwischenspeichern von Inhalte
 | Nein | AEM Publish | Authentifiziert | Vermeiden Sie das Zwischenspeichern von CORS-Headern bei authentifizierten Anfragen. Dies entspricht der allgemeinen Empfehlung, authentifizierte Anfragen nicht zwischenzuspeichern, da nicht mit Sicherheit bestimmt werden kann, wie sich der Authentifizierungs-/Autorisierungsstatus der oder des anfragenden Benutzenden auf die bereitgestellte Ressource auswirkt. |
 | Ja | AEM Publish | Anonym | Bei anonymen Anfragen, die im Dispatcher zwischengespeichert werden können, können auch ihre Antwort-Header zwischengespeichert werden, sodass zukünftige CORS-Anfragen auf den zwischengespeicherten Inhalt zugreifen können. Jeder Änderung der CORS-Konfiguration in AEM Publish **muss** eine Invalidierung der betroffenen zwischengespeicherten Ressourcen folgen. Best Practices verlangen bei Code- oder Konfigurationsbereitstellungen, dass der Dispatcher-Cache geleert wird, da es schwierig ist zu bestimmen, welche zwischengespeicherten Inhalte möglicherweise betroffen sind. |
 
-### Zulassen von CORS-Anforderungsheadern
+### Zulassen von CORS-Anfrage-Headern
 
-So lassen Sie die erforderlichen [HTTP-Anforderungs-Header zur Weiterleitung an AEM zur Verarbeitung](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#specifying-the-http-headers-to-pass-through-clientheaders), müssen sie in der Dispatcher-Funktion `/clientheaders` Konfiguration.
+Damit die erforderlichen [HTTP-Anfrage-Header zur Verarbeitung in AEM durchgeleitet werden können](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#specifying-the-http-headers-to-pass-through-clientheaders), müssen sie in der `/clientheaders`-Konfiguration vom Dispatcher zugelassen werden.
 
 ```
 /clientheaders {
@@ -200,9 +200,9 @@ So lassen Sie die erforderlichen [HTTP-Anforderungs-Header zur Weiterleitung an 
 }
 ```
 
-### Zwischenspeichern von CORS-Antwortheadern
+### Zwischenspeichern von CORS-Anfrage-Headern
 
-Um das Zwischenspeichern und Bereitstellen von CORS-Headern für zwischengespeicherten Inhalt zu ermöglichen, fügen Sie Folgendes hinzu [/cache /headers configuration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#caching-http-response-headers) zur AEM Veröffentlichung `dispatcher.any` -Datei.
+Um das Zwischenspeichern und Bereitstellen von CORS-Headern für zwischengespeicherte Inhalte zu ermöglichen, fügen Sie die folgende [/cache-/headers-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#caching-http-response-headers) zur Datei `dispatcher.any` von AEM Publish hinzu.
 
 ```
 /publishfarm {

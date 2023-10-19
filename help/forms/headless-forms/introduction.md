@@ -1,6 +1,6 @@
 ---
-title: Verwenden des Headless-adaptiven Formulars in SPA
-description: Implementieren Sie ein Headless-Contact-Formular in SPA
+title: Verwenden eines adaptiven Headless-Formulars in einer SPA
+description: Implementieren eines Headless-Kontaktformulars in einer SPA
 feature: Adaptive Forms
 version: 6.5
 kt: 13285
@@ -11,29 +11,29 @@ exl-id: 7b457ce8-f11a-4e2b-8548-6ac3910cb61e
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '135'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
-# Einbetten eines Headless-adaptiven Formulars
+# Einbetten eines adaptiven Headless-Formulars 
 
-Diese [Das Tutorial behandelt die verschiedenen Headless-APIs](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction) , mit denen Sie das Formular auflisten, anzeigen und senden können.
+Dieses [Tutorial behandelt die verschiedenen Headless-APIs](https://opensource.adobe.com/aem-forms-af-runtime/api/#section/Introduction), mit denen Sie ein Formular auflisten, anzeigen und übermitteln können.
 
-In diesem Artikel werden die verschiedenen Headless-APIs behandelt, mit denen Sie adaptive Formulare Headless auflisten, anzeigen und senden können.
+In diesem Artikel wird auf die verschiedenen Headless-APIs eingegangen, mit denen Sie adaptive Formulare auf Headless-Weise auflisten, anzeigen und übermitteln können.
 
-In diesem Artikel wird davon ausgegangen, dass Sie über eine vorhandene Single-Page-App verfügen und die Headless-adaptiven Formulare auf Ihrer Spa-Website auflisten und anzeigen möchten.
+Dieser Artikel setzt voraus, dass Sie über eine bestehende Single Page App verfügen und adaptive Headless-Formulare auf Ihrer SPA-Website auflisten und anzeigen möchten.
 
-Der folgende Screenshot zeigt ein Kontaktformular in SPA
+Der folgende Screenshot zeigt ein in eine SPA eingebettetes Kontaktformular:
 
-![contact-us-form](./assets/contact-us-form.png)
+![Kontaktformular](./assets/contact-us-form.png)
 
 ## Voraussetzungen
 
-* Reaktionsverhalten
+* React-Erlebnis
 
 * Laufende Instanz von AEM Forms 6.5.16
 
-* [Headless-Formulare in der Autoren- und Veröffentlichungsinstanz aktivieren](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=de)
+* [Aktivieren von Headless-Formularen in Ihrer Autoren- und Veröffentlichungsinstanz](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=de)
 
 ## Nächste Schritte
 

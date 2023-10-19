@@ -1,6 +1,6 @@
 ---
-title: Erstellen Sie einen benutzerdefinierten Sendedienst, um die Übermittlung des Headless-adaptiven Formulars zu verarbeiten.
-description: Benutzerdefinierte Antwort basierend auf den gesendeten Daten zurückgeben
+title: Erstellen eines benutzerdefinierten Sendedienstes zur Übermittlung adaptiver Headless-Formulare
+description: Zurückgeben einer benutzerdefinierten Antwort auf Basis übermittelter Daten
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -13,31 +13,31 @@ exl-id: c23275d7-daf7-4a42-83b6-4d04b297c470
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '474'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Benutzerdefinierte Übermittlung erstellen
+# Erstellen eines benutzerdefinierten Sendedienstes 
 
-AEM Forms bietet eine Reihe vordefinierter Sendeoptionen, die die meisten Anwendungsfälle erfüllen. Zusätzlich zu diesen vordefinierten Sendeaktionen können Sie mit AEM Forms Ihren eigenen benutzerdefinierten Submit-Handler schreiben, um die Formularübermittlung gemäß Ihren Anforderungen zu verarbeiten.
+AEM Forms bietet eine Reihe vorkonfigurierter Übermittlungsoptionen, die für die meisten Anwendungsfälle geeignet sind. Zusätzlich zu diesen vordefinierten Übermittlungsaktionen können Sie mit AEM Forms Ihren eigenen benutzerdefinierten Übermittlungs-Handler erstellen, um die Formularübermittlung gemäß Ihren Anforderungen zu verarbeiten.
 
-Zum Schreiben eines benutzerdefinierten Submit-Dienstes wurden die folgenden Schritte ausgeführt
+Zum Erstellen eines benutzerdefinierten Sendedienstes wurden die folgenden Schritte ausgeführt.
 
-## AEM Projekt erstellen
+## Erstellen eines AEM-Projekts
 
-Wenn Sie bereits über ein AEM Forms Cloud Service-Projekt verfügen, können Sie [Sprung zum Schreiben eines benutzerdefinierten Sendedienstes](#Write-the-custom-submit-service)
+Wenn Sie bereits über ein AEM Forms-Cloud-Service-Projekt verfügen, können Sie sofort mit der [Erstellung eines benutzerdefinierten Sendedienstes](#Write-the-custom-submit-service) beginnen.
 
-* Erstellen Sie auf Ihrem c-Laufwerk einen Ordner namens cloudmanager .
-* Navigieren Sie zu diesem neu erstellten Ordner
-* Kopieren und Einfügen des Inhalts von [diese Textdatei](./assets/creating-maven-project.txt) in Ihrem Eingabeaufforderungsfenster. Sie müssen die DarchetypeVersion=41 möglicherweise je nach [neueste Version](https://github.com/adobe/aem-project-archetype/releases). Die neueste Version war 41 zum Zeitpunkt der Erstellung dieses Artikels.
-* Führen Sie den Befehl aus, indem Sie die Eingabetaste drücken. Wenn alles ordnungsgemäß funktioniert, sollte die Build-Erfolgsmeldung angezeigt werden.
+* Erstellen Sie auf Laufwerk „C:“ einen Ordner namens „cloudmanager“.
+* Navigieren Sie zu diesem neu erstellten Ordner.
+* Kopieren Sie den Inhalt [dieser Textdatei](./assets/creating-maven-project.txt) und fügen Sie ihn in Ihrem Eingabeaufforderungsfenster ein. Sie müssen „DarchetypeVersion=41“ abhängig von der [neuesten Version](https://github.com/adobe/aem-project-archetype/releases) ggf. ändern. Zum Zeitpunkt der Erstellung dieses Artikels war „41“ die neueste Version.
+* Führen Sie den Befehl aus, indem Sie die Eingabetaste drücken. Wenn alles ordnungsgemäß funktioniert, sollte die „Build-Success“-Meldung angezeigt werden.
 
-## Schreiben Sie den benutzerdefinierten Sendedienst{#Write-the-custom-submit-service}
+## Schreiben des benutzerdefinierten Sendediensts{#Write-the-custom-submit-service}
 
-Starten Sie IntelliJ und öffnen Sie AEM Projekt. Erstellen Sie eine neue Java-Klasse mit dem Namen **HandleRegistrationFormSubmission** wie im Screenshot unten gezeigt
-![custom-submit-service](./assets/custom-submit-service.png)
+Starten Sie IntelliJ und öffnen Sie das AEM-Projekt. Erstellen Sie eine neue Java-Klasse mit dem Namen **HandleRegistrationFormSubmission**, wie im Screenshot unten dargestellt.
+![Benutzerdefinierter Sendedienst](./assets/custom-submit-service.png)
 
-Der folgende Code wurde zur Implementierung des Dienstes geschrieben
+Der folgende Code wurde zur Implementierung des Dienstes geschrieben:
 
 ```java
 package com.aem.bankingapplication.core;
@@ -85,11 +85,11 @@ public class HandleRegistrationFormSubmission implements FormSubmitActionService
 }
 ```
 
-## Erstellen eines CRX-Knotens unter Apps
+## Erstellen eines CRX-Knotens unter „apps“
 
-Erweitern Sie den Knoten ui.apps und erstellen Sie ein neues Paket mit dem Namen **HandleRegistrationFormSubmission** unter dem Knoten apps , wie im Screenshot unten dargestellt
-![crx-node](./assets/crx-node.png)
-Erstellen Sie eine Datei mit dem Namen .content.xml unter der **HandleRegistrationFormSubmission**. Kopieren Sie den folgenden Code und fügen Sie ihn in die Datei .content.xml ein.
+Erweitern Sie den Knoten „ui.apps“ und erstellen Sie ein neues Paket mit dem Namen **HandleRegistrationFormSubmission** unter dem Knoten „apps“, wie im Screenshot unten dargestellt.
+![CRX-Knoten](./assets/crx-node.png)
+Erstellen Sie eine Datei mit dem Namen „.content.xml“ unter **HandleRegistrationFormSubmission**. Kopieren Sie den folgenden Code und fügen Sie ihn in die Datei „.content.xml“ ein.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -101,26 +101,26 @@ Erstellen Sie eine Datei mit dem Namen .content.xml unter der **HandleRegistrati
     submitService="Core Custom AF Submit"/>
 ```
 
-Der Wert der **submitService** Element muss übereinstimmen  **serviceName = &quot;Core Custom AF Submit&quot;** in der FormSubmitActionService-Implementierung.
+Der Wert des **submitService**-Elements muss mit **serviceName = &quot;Core Custom AF Submit&quot;** in der FormSubmitActionService-Implementierung übereinstimmen.
 
 ## Bereitstellen des Codes für Ihre lokale AEM Forms-Instanz
 
-Bevor Sie die Änderungen an das Cloud Manager-Repository senden, wird empfohlen, den Code für Ihre lokale Cloud-bereite Autoreninstanz bereitzustellen, um den Code zu testen. Stellen Sie sicher, dass die Autoreninstanz ausgeführt wird.
-Um den Code auf Ihrer Cloud-fähigen Autoreninstanz bereitzustellen, navigieren Sie zum Stammordner Ihres AEM Projekts und führen Sie den folgenden Befehl aus
+Bevor Sie die Änderungen per Push an das Cloud Manager-Repository übertragen, wird empfohlen, den Code für Ihre lokale Cloud-fähige Autoreninstanz bereitzustellen, um den Code zu testen. Stellen Sie sicher, dass die Autoreninstanz ausgeführt wird.
+Um den Code in Ihrer Cloud-fähigen Autoreninstanz bereitzustellen, navigieren Sie zum Stammordner Ihres AEM-Projekts und führen Sie den folgenden Befehl aus:
 
 ```
 mvn clean install -PautoInstallSinglePackage
 ```
 
-Dadurch wird der Code als einzelnes Paket für Ihre Autoreninstanz bereitgestellt
+Dadurch wird der Code als einzelnes Paket in Ihrer Autoreninstanz bereitgestellt.
 
-## Den Code an Cloud Manager senden und Code bereitstellen
+## Übertragen des Codes an Cloud Manager und Bereitstellen des Codes
 
-Nachdem Sie den Code auf Ihrer lokalen Instanz überprüft haben, pushen Sie den Code an Ihre Cloud-Instanz.
-Übertragen Sie die Änderungen in Ihr lokales Git-Repository und dann in das Cloud Manager-Repository. Weitere Informationen finden Sie unter  [Git-Einrichtung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html), [AEM Projekt in das Cloud Manager-Repository verschieben](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html) und [Bereitstellung in der Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html) Artikel.
+Nachdem Sie den Code in Ihrer lokalen Instanz überprüft haben, übertragen Sie den Code per Push an Ihre Cloud-Instanz.
+Übertragen Sie die Änderungen per Push an Ihr lokales Git-Repository und dann an das Cloud Manager-Repository. Weitere Informationen finden Sie in den Artikeln [Git-Einrichtung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html?lang=de), [Übertragen eines AEM-Projekts an das Cloud Manager-Repository](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html?lang=de) und [Bereitstellen für die Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html?lang=de).
 
-Nachdem die Pipeline erfolgreich ausgeführt wurde, sollten Sie die Sendeaktion Ihres Formulars mit dem benutzerdefinierten Submit-Handler verknüpfen können, wie im Screenshot unten dargestellt
-![submit-action](./assets/configure-submit-action.png)
+Nachdem die Pipeline erfolgreich ausgeführt wurde, sollten Sie die Übermittlungsaktion Ihres Formulars mit dem benutzerdefinierten Übermittlungs-Handler verknüpfen können, wie im Screenshot unten dargestellt.
+![Übermittlungsaktion](./assets/configure-submit-action.png)
 
 ## Nächste Schritte
 

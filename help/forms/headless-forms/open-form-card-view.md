@@ -1,6 +1,6 @@
 ---
-title: Auf Karte klicken, um das Formular anzuzeigen
-description: Drilldown des Formulars aus der Kartenansicht
+title: Klicken auf eine Karte, um das Formular anzuzeigen
+description: Durchführen eines Formular-Drilldowns über die Kartenansicht
 feature: Adaptive Forms
 version: 6.5
 kt: 13372
@@ -11,13 +11,13 @@ exl-id: c8684cd9-b9c5-4b5b-b990-27c5700cea9f
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '61'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# Formular bei Klick auf die Karte anzeigen
+# Anzeigen des Formulars beim Klicken auf eine Karte
 
-Der folgende Code wurde verwendet, um das Formular anzuzeigen, wenn der Benutzer auf eine Karte klickt. Der Pfad des anzuzeigenden Formulars wird mithilfe der Funktion useParams aus der URL extrahiert.
+Der folgende Code wurde verwendet, damit das Formular angezeigt wird, wenn Benutzende auf eine Karte klicken. Der Pfad des anzuzeigenden Formulars wird mithilfe der Funktion „useParams“ aus der URL extrahiert.
 
 ```javascript
 import Form from './components/Form';
@@ -65,4 +65,4 @@ export default function DisplayForm()
 
 ## Nächste Schritte
 
-[Dankesmeldung bei Formularübermittlung anzeigen](./display-thank-you-message.md)
+[Anzeigen einer Dankesnachricht bei Formularübermittlung](./display-thank-you-message.md)

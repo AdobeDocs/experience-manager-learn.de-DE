@@ -14,11 +14,11 @@ exl-id: b08f662c-e2b2-4643-b92b-a957e1d359e8
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '28'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
-# -3D-Assets
+# 3D-Assets
 
 Erfahren Sie mehr über die Unterstützung von 3D-Assets in AEM Assets as a Cloud Service.
 

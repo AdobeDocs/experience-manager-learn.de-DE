@@ -1,6 +1,6 @@
 ---
 title: Laden und Auslösen eines Target-Aufrufs
-description: Erfahren Sie, wie Sie mit einer Launch-Regel laden, Parameter an Seitenanfragen übergeben und einen Target-Aufruf von Ihrer Site-Seite aus auslösen können. Seiteninformationen werden mithilfe der Adobe Client-Datenschicht abgerufen und als Parameter übergeben, über die Sie Daten über Besuchererlebnisse auf einer Webseite erfassen und speichern und so den Zugriff auf diese Daten erleichtern können.
+description: Erfahren Sie, wie Sie mit einer Launch-Regel Parameter laden, an eine Seitenanfrage übergeben und einen Target-Aufruf von Ihrer Site-Seite aus auslösen. Seiteninformationen werden mithilfe der Adobe Client-Datenschicht abgerufen und als Parameter übergeben, mit der Sie Daten zum Besuchererlebnis auf einer Web-Seite erfassen und speichern und dann den Zugriff auf diese Daten erleichtern können.
 feature: Core Components, Adobe Client Data Layer
 topics: integrations, administration, development
 audience: administrator, developer
@@ -17,31 +17,31 @@ exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
 source-wordcount: '613'
-ht-degree: 8%
+ht-degree: 84%
 
 ---
 
 # Laden und Auslösen eines Target-Aufrufs {#load-fire-target}
 
-Erfahren Sie, wie Sie mit einer Launch-Regel laden, Parameter an Seitenanfragen übergeben und einen Target-Aufruf von Ihrer Site-Seite aus auslösen können. Die Informationen der Webseite werden mithilfe der Adobe Client-Datenschicht abgerufen und als Parameter übergeben, über die Sie Daten über das Besuchererlebnis auf einer Webseite erfassen und speichern und so den Zugriff auf diese Daten erleichtern können.
+Erfahren Sie, wie Sie mit einer Launch-Regel Parameter laden, an eine Seitenanfrage übergeben und einen Target-Aufruf von Ihrer Site-Seite aus auslösen. Informationen zu Web-Seiten werden mithilfe der Adobe Client-Datenschicht abgerufen und als Parameter übergeben, über die Sie Daten zum Besuchererlebnis auf einer Web-Seite erfassen und speichern und dann den Zugriff auf diese Daten erleichtern können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
 ## Seitenladeregel
 
-Die Adobe Client-Datenschicht ist eine ereignisgesteuerte Datenschicht. Beim Laden der AEM Seite wird ein -Ereignis Trigger `cmp:show` . Im Video wird die `Launch Library Loaded` -Regel wird mit einem benutzerspezifischen Ereignis aufgerufen. Unten finden Sie die Code-Snippets, die im Video für das benutzerspezifische Ereignis und für die Datenelemente verwendet werden.
+Die Adobe Client-Datenschicht ist eine ereignisgesteuerte Datenschicht. Beim Laden der AEM Seite wird ein -Ereignis Trigger `cmp:show` . Im Video wird die `Launch Library Loaded`-Regel mit einem benutzerspezifischen Ereignis aufgerufen. Unten finden Sie die Code-Snippets, die im Video für das benutzerspezifische Ereignis und für die Datenelemente verwendet werden.
 
-### Benutzerdefiniertes Seitenereignis{#page-event}
+### Benutzerspezifisches Ereignis „Seite angezeigt“{#page-event}
 
-![Auf der Seite angezeigte Ereigniskonfiguration und benutzerdefinierter Code](assets/load-and-fire-target-call.png)
+![Konfiguration des Ereignisses „Seite angezeigt“ und benutzerdefinierter Code](assets/load-and-fire-target-call.png)
 
-Fügen Sie in der Launch-Eigenschaft eine neue **Ereignis** der **Regel**
+Fügen Sie in der Launch-Eigenschaft ein neues **Ereignis** zur **Regel** hinzu
 
 + __Erweiterung:__ Core
-+ __Ereignistyp:__ Benutzerspezifischer Code
-+ __Name:__ Page Show Event Handler (oder eine Beschreibung)
++ __Ereignistyp:__ Benutzerdefinierter Code
++ __Name:__ Seitenanzeige-Ereignis-Handler (oder eine Beschreibung)
 
-Tippen Sie auf __Editor öffnen__ und fügen Sie im folgenden Code-Snippet ein. Dieser Code __must__ werden __Ereigniskonfiguration__ und __Aktion__.
+Tippen Sie auf __Editor öffnen__ und fügen Sie im folgenden Code-Snippet ein. Dieser Code __muss__ zur __Ereigniskonfiguration__ und zu einer sich anschließenden __Aktion__ hinzugefügt werden.
 
 ```javascript
 // Define the event handler function
@@ -83,18 +83,18 @@ window.adobeDataLayer.push(function (dataLayer) {
 
 Eine benutzerdefinierte Funktion definiert die `pageShownEventHandler`und überwacht die von AEM Kernkomponenten ausgegebenen Ereignisse, leitet die relevanten Informationen von der Kernkomponente ab, packt sie in ein Ereignisobjekt und Trigger das Launch-Ereignis mit den abgeleiteten Ereignisinformationen bei dessen Nutzlast.
 
-Die Launch-Regel wird mithilfe der Launch-Funktion `trigger(...)` Funktion, die __only__ in der Codeausschnitt-Definition eines Ereignisses mit benutzerspezifischem Code einer Regel verfügbar.
+Die Launch-Regel wird mithilfe der Launch-Funktion `trigger(...)` ausgelöst, die __nur__ in der Code-Ausschnitt-Definition eines Ereignisses mit benutzerdefiniertem Code einer Regel verfügbar ist.
 
-Die `trigger(...)` -Funktion nimmt ein Ereignisobjekt als Parameter an, der wiederum in Launch-Datenelementen durch einen anderen reservierten Namen in Launch mit dem Namen verfügbar gemacht wird. `event`. Datenelemente in Launch können jetzt auf Daten aus diesem Ereignisobjekt aus dem `event` -Objekt mit Syntax wie `event.component['someKey']`.
+Die Funktion `trigger(...)` nimmt ein Ereignisobjekt als Parameter an, der wiederum in Launch-Datenelementen durch einen anderen reservierten Namen `event` in Launch verfügbar gemacht wird. Datenelemente in Launch können jetzt auf Daten aus diesem Ereignisobjekt aus dem `event`-Objekt mit einer Syntax wie `event.component['someKey']` verweisen.
 
-Wenn `trigger(...)` außerhalb des Kontexts des Ereignistyps &quot;Benutzerspezifischer Code&quot;eines Ereignisses verwendet wird (z. B. in einer Aktion), wird der JavaScript-Fehler `trigger is undefined` wird auf der Website ausgelöst, die mit der Launch-Eigenschaft integriert ist.
+Wenn `trigger(...)` außerhalb des Kontexts des Ereignistyps „Benutzerspezifischer Code“ eines Ereignisses (z. B. in einer Aktion) verwendet wird, wird der JavaScript-Fehler `trigger is undefined` auf der Website ausgelöst, die mit der Launch-Eigenschaft zusammenarbeitet.
 
 
 ### Datenelemente
 
 ![Datenelemente](assets/data-elements.png)
 
-Adobe Launch-Datenelemente ordnen die Daten aus dem Ereignisobjekt zu [ausgelöst im benutzerspezifischen Ereignis &quot;Seite angezeigt&quot;](#page-event) auf Variablen, die in Adobe Target über den Datenelementtyp &quot;Benutzerspezifischer Code&quot;der Haupterweiterung verfügbar sind.
+Adobe Launch-Datenelemente ordnen die Daten aus dem Ereignisobjekt, [ausgelöst im benutzerdefinierten Ereignis „Seite angezeigt“](#page-event), Variablen zu, die in Adobe Target über den Datenelementtyp „Benutzerdefinierter Code“ der Haupterweiterung verfügbar sind.
 
 #### Seiten-ID-Datenelement
 
@@ -108,7 +108,7 @@ Dieser Code gibt die eindeutige ID der Kernkomponente zurück.
 
 ![Seiten-ID](assets/pageid.png)
 
-### Datenelement &quot;Seitenpfad&quot;
+### Datenelement „Seitenpfad“
 
 ```
 if (event && event.component && event.component.hasOwnProperty('repo:path')) {
@@ -116,11 +116,11 @@ if (event && event.component && event.component.hasOwnProperty('repo:path')) {
 }
 ```
 
-Dieser Code gibt den Pfad der AEM zurück.
+Dieser Code gibt den Pfad der AEM-Seite zurück.
 
 ![Seitenpfad](assets/pagepath.png)
 
-### Datenelement &quot;Seitentitel&quot;
+### Datenelement „Seitentitel“
 
 ```
 if (event && event.component && event.component.hasOwnProperty('dc:title')) {
@@ -134,11 +134,11 @@ Dieser Code gibt den Titel der AEM-Seite zurück.
 
 ## Fehlerbehebung
 
-### Warum werden meine Mboxes nicht auf meinen Webseiten ausgelöst?
+### Warum werden meine Mboxes auf meinen Web-Seiten nicht ausgelöst?
 
 #### Fehlermeldung, wenn kein mboxDisable-Cookie gesetzt ist
 
-![Target-Cookie-Domänenfehler](assets/target-cookie-error.png)
+![Target-Cookie-Domain-Fehler](assets/target-cookie-error.png)
 
 ```
 > AT: [page-init] Adobe Target content delivery is disabled. Ensure that you can save cookies to your current domain, there is no "mboxDisable" cookie and there is no "mboxDisable" parameter in the query string.
@@ -146,8 +146,8 @@ Dieser Code gibt den Titel der AEM-Seite zurück.
 
 #### Lösung
 
-Target-Kunden verwenden mitunter Cloud-basierte Instanzen mit Target zum Testen oder für einfache Machbarkeitsprüfungen. Diese Domänen und viele andere sind Teil der öffentlichen Suffix-Liste .
-Modere Browser speichern keine Cookies, wenn Sie diese Domänen verwenden, es sei denn, Sie passen die `cookieDomain` -Einstellung verwenden `targetGlobalSettings()`.
+Target-Kundinnen und -Kunden verwenden mitunter Cloud-basierte Instanzen mit Target zum Testen oder für einfache Machbarkeitsprüfungen. Diese Domains sind wie viele andere Teil der öffentlichen Suffix-Liste.
+Modere Browser speichern keine Cookies, wenn Sie diese Domains verwenden, es sei denn, Sie passen die `cookieDomain`-Einstellung mit `targetGlobalSettings()` an.
 
 ```
 window.targetGlobalSettings = {  
@@ -157,12 +157,12 @@ window.targetGlobalSettings = {
 
 ## Nächste Schritte
 
-+ [Experience Fragment nach Adobe Target exportieren](./export-experience-fragment-target.md)
++ [Exportieren von Experience Fragments nach Adobe Target](./export-experience-fragment-target.md)
 
 ## Unterstützende Links
 
 + [Adobe Client-Datenschicht-Dokumentation](https://github.com/adobe/adobe-client-data-layer/wiki)
-+ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-+ [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
++ [Adobe Experience Cloud Debugger – Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
++ [Adobe Experience Cloud Debugger – Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
 + [Verwenden der Dokumentation zur Adobe Client-Datenschicht und zu Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de)
-+ [Einführung in den Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
++ [Einführung in Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=de)

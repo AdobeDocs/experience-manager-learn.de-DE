@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren einer Datenquelle
-description: Erstellen Sie DataSource mit Verweis auf die MySQL-Datenbank
+description: Erstellen einer Datenquelle mit Verweis auf die MySQL-Datenbank
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -13,18 +13,18 @@ exl-id: a87ff428-15f7-43c9-ad03-707eab6216a9
 source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
 workflow-type: tm+mt
 source-wordcount: '320'
-ht-degree: 8%
+ht-degree: 96%
 
 ---
 
 # Konfigurieren einer Datenquelle
 
-Es gibt viele Möglichkeiten, AEM die Integration in eine externe Datenbank zu ermöglichen. Eine der gängigsten und gängigsten Methoden der Datenbankintegration ist die Verwendung der Konfigurationseigenschaften von Apache Sling Connection Pooled DataSource über die [configMgr](http://localhost:4502/system/console/configMgr).
-Der erste Schritt besteht darin, die entsprechende [MySQL-Treiber](https://mvnrepository.com/artifact/mysql/mysql-connector-java) AEM.
-Legen Sie dann die DataSource-Eigenschaften der Sling Connection Pooled für Ihre Datenbank fest. Der folgende Screenshot zeigt die für dieses Tutorial verwendeten Einstellungen. Das Datenbankschema wird Ihnen im Rahmen dieses Tutorials bereitgestellt.
+Es gibt viele Möglichkeiten, wie AEM die Integration mit einer externen Datenbank ermöglicht. Bei einer der gängigsten und geläufigsten Methoden der Datenbankintegration werden die Konfigurationseigenschaften der Apache Sling Connection Pooled DataSource über [configMgr](http://localhost:4502/system/console/configMgr) verwendet.
+Der erste Schritt besteht darin, die entsprechenden [MySQL-Treiber](https://mvnrepository.com/artifact/mysql/mysql-connector-java) herunterzuladen und in AEM bereitzustellen.
+Legen Sie dann die Sling Connection Pooled DataSource-Eigenschaften speziell für Ihre Datenbank fest.  Der folgende Screenshot zeigt die für dieses Tutorial verwendeten Einstellungen. Das Datenbankschema wird Ihnen im Rahmen dieser Tutorial-Assets bereitgestellt.
 
 >[!NOTE]
->Vergewissern Sie sich, dass Sie Ihre Datenquelle benennen `StoreAndRetrieveAfData` da dies der Name ist, der im OSGi-Dienst verwendet wird.
+>Bitte stellen Sie sicher, dass Sie Ihre Datenquelle `StoreAndRetrieveAfData` benennen, da dies der Name ist, der im OSGi-Dienst verwendet wird.
 
 
 ![data-source](assets/data-source.JPG)
@@ -37,30 +37,30 @@ Legen Sie dann die DataSource-Eigenschaften der Sling Connection Pooled für Ihr
 |                     |                                                                                    |   |
 
 
-## Datenbank erstellen
+## Erstellen einer Datenbank
 
 
-Die folgende Datenbank wurde für diese Zwecke verwendet. Die Datenbank verfügt über eine Tabelle mit dem Namen `formdatawithattachments` mit den 4 Spalten, wie im Screenshot unten dargestellt.
+Die folgende Datenbank wurde für diesen Anwendungsfall verwendet. Die Datenbank verfügt über eine Tabelle mit dem Namen `formdatawithattachments` mit den 4 Spalten, wie im Screenshot unten dargestellt.
 ![data-base](assets/table-schema.JPG)
 
 * Die Spalte **afdata** enthält die Daten des adaptiven Formulars.
 * Die Spalte **attachmentsInfo** enthält die Informationen zu den Formularanlagen.
-* Die Spalten **telephoneNumber** enthält die Mobiltelefonnummer der Person, die das Formular ausfüllt.
+* Die Spalte **telephoneNumber** enthält die Mobiltelefonnummer der Person, die das Formular ausfüllt.
 
-Erstellen Sie die Datenbank durch Import der [Datenbankschema](assets/data-base-schema.sql)
-Verwendung von MySQL Workbench.
+Erstellen Sie die Datenbank durch Import des [Datenbankschemas](assets/data-base-schema.sql)
+unter Verwendung von MySQL Workbench.
 
-## Erstellen von Formulardatenmodellen
+## Erstellen eines Formulardatenmodells
 
 Erstellen Sie das Formulardatenmodell und basieren Sie es auf der Datenquelle, die Sie im vorherigen Schritt erstellt haben.
-Konfigurieren Sie die **get** -Dienst dieses Formulardatenmodells verwenden, wie im Screenshot unten dargestellt.
-Vergewissern Sie sich, dass Sie kein Array im **get** -Dienst.
+Konfigurieren Sie den **get**-Dienst dieses Formulardatenmodells wie im folgenden Screenshot gezeigt.
+Stellen Sie sicher, dass Sie im **get**-Dienst kein Array zurückgeben.
 
-Der Zweck dieses **get** -Dienst ist es, die mit der Anwendungs-ID verknüpfte Telefonnummer abzurufen.
+Der Zweck dieses **get**-Dienstes besteht darin, die mit der Anwendungs-ID verbundene Telefonnummer abzurufen.
 
 ![get-service](assets/get-service.JPG)
 
-Dieses Formulardatenmodell wird dann im **MyAccountForm** um die mit der Anwendungs-ID verknüpfte Telefonnummer abzurufen.
+Dieses Formulardatenmodell wird dann in **MyAccountForm** verwendet, um die mit der Anwendungs-ID verknüpfte Telefonnummer abzurufen.
 
 ## Nächste Schritte
 

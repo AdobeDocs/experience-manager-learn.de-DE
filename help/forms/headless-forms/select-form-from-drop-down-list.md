@@ -1,6 +1,6 @@
 ---
-title: Wählen Sie ein Formular aus einer Liste verfügbarer Formulare aus
-description: Verwenden der listforms-API zum Ausfüllen der Dropdownliste
+title: Auswählen eines Formulars aus einer Liste von verfügbaren Formularen
+description: Verwenden der listforms-API zum Ausfüllen der Dropdown-Liste
 feature: Adaptive Forms
 version: 6.5
 kt: 13346
@@ -11,19 +11,19 @@ exl-id: 49b6a172-8c96-4fc6-8d31-c2109f65faac
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '286'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Wählen Sie ein auszufüllendes Formular aus einer Dropdown-Liste aus
+# Auswählen eines Formulars zum Ausfüllen aus einer Dropdown-Liste
 
-Dropdown-Listen bieten eine kompakte und organisierte Möglichkeit, Benutzern eine Liste von Optionen anzuzeigen. Die Elemente in der Dropdown-Liste werden mit den Ergebnissen von [listforms-API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms)
+Dropdown-Listen bieten eine kompakte und organisierte Möglichkeit, Benutzenden eine Liste von Optionen anzuzeigen. Die Elemente in der Dropdown-Liste werden mit den Ergebnissen der [listforms-API](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms) befüllt
 
 ![Kartenansicht](./assets/forms-drop-down.png)
 
 ## Dropdown-Liste
 
-Der folgende Code wurde verwendet, um die Dropdown-Liste mit den Ergebnissen des listforms-API-Aufrufs zu füllen. Basierend auf der Benutzerauswahl wird das adaptive Formular angezeigt, das der Benutzer ausfüllen und senden kann. [Komponenten der Benutzeroberfläche](https://mui.com/) wurden bei der Erstellung dieser Benutzeroberfläche verwendet
+Der folgende Code wurde verwendet, um die Dropdown-Liste mit den Ergebnissen des listforms-API-Aufrufs zu füllen. Basierend auf der Auswahl der Benutzenden wird das adaptive Formular angezeigt, das die Benutzenden ausfüllen und senden können. Bei der Erstellung dieser Oberfläche wurden [Komponenten der Material-Benutzeroberfläche](https://mui.com/) verwendet
 
 ```javascript
 import * as React from 'react';
@@ -125,10 +125,10 @@ const getAFForms =async()=>
 
 Die beiden folgenden API-Aufrufe wurden bei der Erstellung dieser Benutzeroberfläche verwendet
 
-* [ListForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms). Der Aufruf zum Abrufen der Formulare erfolgt nur einmal, wenn die Komponente wiedergegeben wird. Die Ergebnisse des API-Aufrufs werden in der Variablen afForms gespeichert.
+* [ListForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms). Der Aufruf zum Abrufen der Formulare erfolgt nur einmal, wenn die Komponente gerendert wird. Die Ergebnisse des API-Aufrufs werden in der afForms-Variablen gespeichert.
 Im obigen Code durchlaufen wir afForms mithilfe der Zuordnungsfunktion. Für jedes Element im afForms-Array wird eine MenuItem-Komponente erstellt und der Select-Komponente hinzugefügt.
 
-* Formular abrufen - Ein get -Aufruf an die [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition), wobei die ID die ID des ausgewählten adaptiven Formulars ist, das der Benutzer in der Dropdownliste eingegeben hat. Das Ergebnis dieses GET-Aufrufs wird in selectedForm gespeichert.
+* Formular abrufen – Es erfolgt ein GET-Aufruf an [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition), wobei die ID die ID des von der bzw. vom Benutzenden in der Dropdown-Liste ausgewählten adaptiven Formulars ist. Das Ergebnis dieses GET-Aufrufs wird in selectedForm gespeichert.
 
 ```
 const resp = await fetch(`/adobe/forms/af/${formID}`);
@@ -137,7 +137,7 @@ console.log(formJSON.afModelDefinition);
 setForm(formJSON.afModelDefinition);
 ```
 
-* Anzeigen des ausgewählten Formulars Der folgende Code wurde verwendet, um das ausgewählte Formular anzuzeigen. Das AdaptiveForm-Element wird im npm-Paket aemforms/af-response-renderer bereitgestellt und erwartet die Zuordnungen und die formJson als Eigenschaften
+* Anzeigen des ausgewählten Formulars. Der folgende Code wurde verwendet, um das ausgewählte Formular anzuzeigen. Das AdaptiveForm-Element wird im npm-Paket „aemforms/af-response-renderer“ bereitgestellt und erwartet die Zuordnungen und „formJson“ als Eigenschaften
 
 ```
 <div><AdaptiveForm mappings={extendMappings} formJson={selectedForm}/></div>
@@ -145,4 +145,4 @@ setForm(formJSON.afModelDefinition);
 
 ## Nächste Schritte
 
-[Formulare im Kartenlayout anzeigen](./display-forms-card-view.md)
+[Anzeigen der Formulare im Karten-Layout](./display-forms-card-view.md)

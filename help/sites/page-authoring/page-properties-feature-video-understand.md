@@ -12,11 +12,11 @@ exl-id: 41b40982-9796-418e-9bfc-af6fc720e9b8
 source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '138'
-ht-degree: 55%
+ht-degree: 100%
 
 ---
 
-# Seiteneigenschaften {#understanding-page-properties-aem-sites}
+# Grundlegendes zu Seiteneigenschaften {#understanding-page-properties-aem-sites}
 
 {{edge-delivery-services-and-page-editor}}
 
@@ -49,15 +49,15 @@ In diesem Video werden die folgenden Seiteneigenschaftselemente behandelt:
    * Authentifizierungspflicht
    * Export
 * Miniaturansicht
-* Freigabe in Social Media
+* Social-Media-Freigabe
 * Cloud Services-Konfigurationen
-* Personalisierung   
+* Personalisierung
    * ContextHub-Konfigurationen
    * Konfiguration für Targeting
 * Berechtigungen
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Bearbeiten der Dokumentation zu den Seiteneigenschaften](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html)
+* [Dokumentation zum Bearbeiten der Seiteneigenschaften](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-page-properties.html?lang=de)
 * [Dokumentation zum Bearbeiten des Seiteninhalts](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html?lang=de)
 * [Schnellstartanleitung zum Verfassen von Seiten (Authoring)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=de)

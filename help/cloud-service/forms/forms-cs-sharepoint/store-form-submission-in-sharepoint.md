@@ -1,6 +1,6 @@
 ---
 title: Integrieren von AEM Forms mit Microsoft Sharepoint
-description: Erfahren Sie, wie Sie Adobe Experience Manager Forms als Übermittlungsdaten für Cloud Service in Microsoft Sharepoint speichern.
+description: Erfahren Sie, wie Sie Übermittlungsdaten von Adobe Experience Manager Forms as a Cloud Service in Microsoft Sharepoint speichern.
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -12,11 +12,11 @@ exl-id: cc5bf24c-97c5-4383-8c35-f7512e594445
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '42'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM Forms als Cloud Service mit Microsoft Sharepoint
+# AEM Forms as a Cloud Service mit Microsoft Sharepoint
 
 Erfahren Sie, wie Sie adaptive Formulardaten in Microsoft Sharepoint konfigurieren und speichern.
 

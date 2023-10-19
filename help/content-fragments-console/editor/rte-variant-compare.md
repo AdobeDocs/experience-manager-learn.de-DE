@@ -1,6 +1,6 @@
 ---
-title: RTE-Variantenvergleich - Inhaltsfragment-Editor
-description: Erfahren Sie, wie AEM Sie das RTE-Feld in Inhaltsfragmentvarianten mühelos vergleichen und synchronisieren können. Durch den Vergleich und die Synchronisierung dieser Varianten können Sie eine konsistente Messaging über alle Kanäle hinweg sicherstellen, die das Inhaltsfragment verwenden.
+title: RTE-Variantenvergleich – Inhaltsfragment-Editor
+description: Erfahren Sie, wie Sie mit AEM das RTE-Feld in Inhaltsfragmentvarianten mühelos vergleichen und synchronisieren können. Durch den Vergleich und die Synchronisierung dieser Varianten können Sie ein konsistentes Messaging über alle Kanäle hinweg sicherstellen, die das Inhaltsfragment verwenden.
 version: Cloud Service
 feature: Content Fragments
 topic: Content Management
@@ -13,12 +13,12 @@ exl-id: 271b0cb9-2fe6-40e3-9bec-06ef3e5863c1
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '79'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Vergleich der RTE-Variante
+# Vergleich der RTE-Varianten
 
-Erfahren Sie, wie AEM Sie das RTE-Feld in Inhaltsfragmentvarianten mühelos vergleichen und synchronisieren können. Durch den Vergleich und die Synchronisierung dieser Varianten können Sie eine konsistente Messaging über alle Kanäle hinweg sicherstellen, die das Inhaltsfragment verwenden.
+Erfahren Sie, wie Sie mit AEM das RTE-Feld in Inhaltsfragmentvarianten mühelos vergleichen und synchronisieren können. Durch den Vergleich und die Synchronisierung dieser Varianten können Sie ein konsistentes Messaging über alle Kanäle hinweg sicherstellen, die das Inhaltsfragment verwenden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419314/?learn=on)

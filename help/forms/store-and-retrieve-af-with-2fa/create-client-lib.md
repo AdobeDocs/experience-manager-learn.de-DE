@@ -13,15 +13,15 @@ exl-id: c90eea73-bd44-40af-aa98-d766aa572415
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
 source-wordcount: '148'
-ht-degree: 8%
+ht-degree: 62%
 
 ---
 
 # Erstellen einer Client-Bibliothek
 
-Erstellen [Client-Bibliothek](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=de) , der den Code zum Aufrufen der Methode enthält `doAjaxSubmitWithFileAttachment` des `guideBridge` API für das Klickereignis der Schaltfläche, die von der CSS-Klasse identifiziert wird **Speichern-Schaltfläche**.  Wir übergeben die Daten des adaptiven Formulars, `fileMap`und die `mobileNumber` zum Endpunkt, der beim `**/bin/storeafdatawithattachments`
+Erstellen [Client-Bibliothek](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=de) , der den Code zum Aufrufen der Methode enthält `doAjaxSubmitWithFileAttachment` des `guideBridge` API für das Klickereignis der Schaltfläche, die von der CSS-Klasse identifiziert wird **Speichern-Schaltfläche**.  Wir übergeben die adaptiven Formulardaten `fileMap` und `mobileNumber` an den Endpunkt, der auf `**/bin/storeafdatawithattachments` hört
 
-Nachdem die Formulardaten gespeichert wurden, wird eine eindeutige Anwendungs-ID generiert und dem Benutzer in einem Dialogfeld angezeigt. Wenn das Dialogfeld geschlossen wird, wird der Benutzer zum Formular geleitet, über das er das gespeicherte adaptive Formular mit der eindeutigen Anwendungs-ID abrufen kann.
+Nachdem die Formulardaten gespeichert wurden, wird eine eindeutige Anwendungs-ID generiert und den Benutzenden in einem Dialogfeld angezeigt. Wenn das Dialogfeld geschlossen wird, werden die Benutzenden zum Formular geleitet, über das sie das gespeicherte adaptive Formular mit der eindeutigen Anwendungs-ID abrufen können.
 
 ```java
 $(document).ready(function () {
@@ -69,8 +69,8 @@ $(document).ready(function () {
 >[!NOTE]
 > Wir haben [Bootbox-JavaScript-Bibliothek](https://bootboxjs.com/examples.html) zum Anzeigen des Dialogfelds
 
-Die in diesem Beispiel verwendeten Client-Bibliotheken können [heruntergeladen haben.](assets/store-af-with-attachments-client-lib.zip)
+Die in diesem Beispiel verwendeten Client-Bibliotheken können [hier heruntergeladen werden.](assets/store-af-with-attachments-client-lib.zip)
 
 ## Nächste Schritte
 
-[Benutzer mit OTP-Dienst überprüfen](./verify-users-with-otp.md)
+[Überprüfen von Benutzenden mit dem OTP-Dienst](./verify-users-with-otp.md)

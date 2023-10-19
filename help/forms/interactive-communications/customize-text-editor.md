@@ -16,7 +16,7 @@ exl-id: e551ac8d-0bfc-4c94-b773-02ff9bba202e
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '603'
-ht-degree: 60%
+ht-degree: 100%
 
 ---
 
@@ -24,16 +24,16 @@ ht-degree: 60%
 
 ## Übersicht {#overview}
 
-Sie können den Texteditor zum Erstellen von Dokumentfragmenten anpassen, um weitere Schriftarten und Schriftgrößen hinzuzufügen. Diese Schriftarten enthalten englische und nicht englische Schriftarten, wie Japanisch, Schriftarten.
+Sie können den Texteditor zum Erstellen von Dokumentfragmenten anpassen, um weitere Schriftarten und Schriftgrade hinzuzufügen. Diese Schriftarten enthalten englische und nicht-englische Schriftarten wie Japanisch.
 
-Sie können anpassen, um Folgendes in den Schrifteinstellungen zu ändern:
+In den Schrifteinstellungen können Sie folgende Änderungen vornehmen:
 
 * Schriftfamilie und -größe
 * Eigenschaften wie Höhe und Zeichenabstand
 * Standardwerte für Schriftfamilie und -größe, Höhe, Zeichenabstand und Datumsformat
 * Einzüge für Aufzählungszeichen
 
-Gehen Sie dazu folgendermaßen vor:
+Dazu müssen Sie folgende Schritte durchführen:
 
 1. [Anpassen von Schriftarten, indem Sie die Datei „tbxeditor-config.xml“ in CRX bearbeiten ](#customizefonts)
 1. [Fügen Sie dem Clientcomputer benutzerdefinierte Schriftarten hinzu](#addcustomfonts)
@@ -65,9 +65,9 @@ Anpassen von Schriften durch Bearbeiten der Datei  tbxeditor-config.xml führen 
 
    1. Klicken Sie auf **Alle speichern**.
 
-1. Erstellen Sie eine Kopie der Datei tbxeditor-config.xml im neu erstellten Konfigurationsordner, indem Sie die folgenden Schritte ausführen:
+1. Erstellen Sie eine Kopie der Datei „tbxeditor-config.xml“ im neu erstellten Konfigurationsordner, indem Sie die folgenden Schritte ausführen:
 
-   1. Klicken Sie mit der rechten Maustaste auf die Datei tbxeditor-config.xml unter libs/fd/cm/config und wählen Sie **Kopieren**.
+   1. Klicken Sie mit der rechten Maustaste auf die Datei „tbxeditor-config.xml“ unter „libs/fd/cm/config“ und wählen Sie **Kopieren**.
    1. Klicken Sie mit der rechten Maustaste auf den folgenden Ordner und wählen Sie **Einfügen:**
 
       `apps/fd/cm/config`
@@ -165,7 +165,7 @@ Anpassen von Schriften durch Bearbeiten der Datei  tbxeditor-config.xml führen 
 
    1. Nehmen Sie die erforderlichen Änderungen in der Datei vor, um Folgendes in den Einstellungen für die Schriftart zu ändern:
 
-      * Schriftfamilie hinzufügen oder entfernen
+      * Hinzufügen oder Entfernen von Schriftfamilie und -größe
       * Eigenschaften wie Höhe und Zeichenabstand
       * Standardwerte für Schriftfamilie und -größe, Höhe, Zeichenabstand und Datumsformat
       * Einzüge für Aufzählungszeichen
@@ -178,7 +178,7 @@ Anpassen von Schriften durch Bearbeiten der Datei  tbxeditor-config.xml führen 
 
 ## Fügen Sie dem Client-Computer benutzerdefinierte Schriftarten hinzu {#addcustomfonts}
 
-Wenn Sie auf eine Schriftart im Texteditor für interaktive Kommunikation zugreifen, muss sie auf dem Clientcomputer vorhanden sein, den Sie verwenden, um auf interaktive Kommunikation zugreifen zu können. Um eine benutzerdefinierte Schriftart im Texteditor verwenden zu können, müssen Sie diese zunächst auf dem Clientcomputer installieren.
+Wenn Sie auf eine Schriftart im Texteditor für Interaktive Kommunikation zugreifen, muss sie auf dem Client-Computer vorhanden sein, den Sie für den Zugriff auf Interaktive Kommunikation verwenden. Um eine benutzerdefinierte Schriftart im Texteditor verwenden zu können, müssen Sie diese zunächst auf dem Client-Computer installieren.
 
 Weitere Informationen zum Installieren von Schriftarten finden Sie hier:
 
@@ -195,4 +195,4 @@ Zum Beispiel wird die Schriftart Sazanami Mincho Medium, die in der Prozedur [An
 
 >[!NOTE]
 >
->Um Text auf Japanisch anzuzeigen, müssen Sie zunächst den Text mit japanischen Zeichen eingeben. Die Anwendung einer benutzerdefinierten japanischen Schriftart formatiert den Text nur auf eine bestimmte Weise. Die Anwendung einer benutzerdefinierten japanischen Schriftart ändert englische oder andere Zeichen nicht in japanische Zeichen.
+>Um Text auf Japanisch anzuzeigen, müssen Sie zunächst den Text mit japanischen Zeichen eingeben. Die Anwendung einer benutzerdefinierten japanischen Schriftart formatiert den Text nur auf bestimmte Weise. Die Anwendung einer benutzerdefinierten japanischen Schriftart ändert englische oder andere Zeichen nicht in japanische Zeichen.

@@ -1,6 +1,6 @@
 ---
-title: Endpunkt verfügbar machen, der aufgerufen werden kann, um die Webformular-URL zurückzugeben
-description: Erstellen Sie AEM Servlet, um die Webformular-URL zurückzugeben
+title: Bereitstellen des Endpunkts, der zum Zurückgeben der Web-Formular-URL aufgerufen werden kann
+description: Erstellen des AEM-Servlets, um die Web-Formular-URL zurückzugeben
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -12,13 +12,13 @@ exl-id: 3b7632bd-3820-4c1e-aa3f-8a6a4fc26847
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '70'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Acrobat Sign-Webformular-URL erstellen
+# Erstellen der Acrobat Sign-Web-Formular-URL
 
-Der folgende Code wurde geschrieben, um einen POST-Endpunkt anzuzeigen. Dieser Endpunkt extrahiert den icTemplateName aus den gesendeten Daten und gibt eine Acrobat Sign-Webformular-URL zurück, die der Endbenutzer signieren kann.
+Der folgende Code wurde geschrieben, um einen POST-Endpunkt bereitzustellen. Dieser Endpunkt extrahiert den icTemplateName aus den übermittelten Daten und gibt eine Acrobat Sign-Web-Formular-URL zurück, die die Endbenutzerin oder der Endbenutzer signieren kann.
 
 
 ```java

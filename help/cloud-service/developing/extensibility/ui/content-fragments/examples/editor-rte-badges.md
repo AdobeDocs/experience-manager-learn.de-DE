@@ -1,6 +1,6 @@
 ---
-title: Hinzufügen von Abzeichen zum Rich-Text-Editor (RTE)
-description: Erfahren Sie, wie Sie im AEM Inhaltsfragment-Editor Abzeichen zum Rich-Text-Editor (RTE) hinzufügen
+title: Hinzufügen von Badges zum Rich-Text-Editor (RTE)
+description: Erfahren Sie, wie Sie im AEM-Inhaltsfragment-Editor Badges zum Rich-Text-Editor (RTE) hinzufügen
 feature: Developer Tools, Content Fragments
 version: Cloud Service
 topic: Development
@@ -14,55 +14,55 @@ exl-id: 83acbddb-9168-4d8b-84b5-97577d8a1ead
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '781'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Hinzufügen von Abzeichen zum Rich-Text-Editor (RTE)
+# Hinzufügen von Badges zum Rich-Text-Editor (RTE)
 
-Erfahren Sie, wie Sie im Inhaltsfragment-Editor Abzeichen zum Rich-Text-Editor (RTE) hinzufügen AEM.
+Erfahren Sie, wie Sie im AEM-Inhaltsfragment-Editor Badges zum Rich-Text-Editor (RTE) hinzufügen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420831?quality=12&learn=on)
 
-[Rich-Text-Editor-Badge](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/)  sind Erweiterungen, die Text im Rich-Text-Editor (RTE) nicht bearbeitbar machen. Das bedeutet, dass ein als solches deklariertes Zeichen nur vollständig entfernt und nicht teilweise bearbeitet werden kann. Diese Abzeichen unterstützen auch eine spezielle Färbung im RTE, die den Inhaltsautoren deutlich zeigt, dass der Text ein Abzeichen ist und daher nicht bearbeitbar ist. Darüber hinaus bieten sie visuelle Hinweise zur Bedeutung des Badge-Textes.
+[Rich-Text-Editor-Badges](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/) sind Erweiterungen, die Text im Rich-Text-Editor (RTE) unbearbeitbar machen. Das bedeutet, dass ein als solches deklariertes Badge nur vollständig entfernt, aber nicht teilweise bearbeitet werden kann. Diese Badges unterstützen auch eine spezielle Färbung im RTE, die Inhaltsautorinnen und Inhaltsautoren deutlich zeigt, dass der Text ein Badge ist und daher nicht bearbeitbar ist. Darüber hinaus bieten sie visuelle Hinweise zur Bedeutung des Badge-Textes.
 
-Der häufigste Anwendungsfall für RTE-Abzeichen besteht darin, diese zusammen mit [RTE-Widgets](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/). Dadurch können Inhalte, die vom RTE-Widget in den RTE eingefügt werden, nicht bearbeitet werden.
+Der häufigste Anwendungsfall für RTE-Badges besteht darin, diese zusammen mit [RTE-Widgets](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) zu verwenden. Dadurch können Inhalte, die vom RTE-Widget in den RTE eingefügt werden, nicht bearbeitet werden.
 
-In der Regel werden die Abzeichen in Verbindung mit den Widgets verwendet, um den dynamischen Inhalt hinzuzufügen, der eine externe Systemabhängigkeit aufweist, aber _Inhaltsautoren können nicht ändern_ den hinzugefügten dynamischen Inhalt zur Wahrung der Integrität. Sie können nur als ganzes Element entfernt werden.
+Typischerweise werden die Badges in Verbindung mit den Widgets verwendet, um den dynamischen Inhalt hinzuzufügen, der eine externe Systemabhängigkeit hat, aber _Inhaltsautorinnen und Inhaltsautoren können den eingefügten dynamischen Inhalt nicht ändern_, damit die Integrität gewahrt wird. Sie können nur als ganzes Element entfernt werden.
 
-Die **Badges** werden der **RTE** im Inhaltsfragment-Editor mit der `rte` Erweiterungspunkt. Verwenden `rte` des Erweiterungspunkts `getBadges()` -Methode werden ein oder mehrere Abzeichen hinzugefügt.
+Die **Badges** werden dem **RTE** im Inhaltsfragmenteditor über den Erweiterungspunkt `rte` hinzugefügt. Mit der Methode `getBadges()` des Erweiterungspunkts `rte` werden ein oder mehrere Badges hinzugefügt.
 
-Dieses Beispiel zeigt, wie Sie ein Widget mit dem Namen _Große Gruppenbuchungen - Kundendienst_ , um die WKND-abenteuerspezifischen Kundendienstdetails wie **Name des Vertreters** und **Telefonnummer** in einem RTE-Inhalt. Verwenden der Badges-Funktion **Telefonnummer** hergestellt wird **nicht bearbeitbar** WKND-Inhaltsautoren können jedoch den repräsentativen Namen bearbeiten.
+Dieses Beispiel zeigt, wie man ein Widget mit dem Namen _Großgruppenbuchungen-Kundenservice_ hinzufügt, um die abenteuerspezifischen WKND-Kundenservice-Details wie **Vertretername** und **Telefonnummer** innerhalb eines RTE-Inhalts zu finden, auszuwählen und hinzuzufügen. Mithilfe der Badges-Funktion wird die **Telefonnummer** **unbearbeitbar**, aber WKND-Inhaltsautorinnen und -Inhaltsautoren können den Vertreternamen bearbeiten.
 
-Außerdem wird die **Telefonnummer** anders formatiert (blau), was ein zusätzliches Nutzungsszenario für die Badges-Funktion ist.
+Außerdem ist die **Telefonnummer** anders gestaltet (blau), was ein zusätzlicher Anwendungsfall für die Badges-Funktion ist.
 
-Um die Dinge einfach zu halten, verwendet dieses Beispiel den [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) Framework zum Entwickeln der Widget- oder Dialogbenutzeroberfläche und der hartcodierten WKND-Kundendienst-Telefonnummern. Um die Nichtbearbeitung und den anderen Stil-Aspekt des Inhalts zu steuern, muss die `#` wird in der `prefix` und `suffix` -Attribut der Badges-Definition.
+Um die Dinge einfach zu halten, verwendet dieses Beispiel das [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html?lang=de)-Framework, um die Widget- oder Dialog-UI und die fest codierten Telefonnummern des WKND-Kundendienstes zu entwickeln. Um den Aspekt der Nicht-Bearbeitung und des unterschiedlichen Stils des Inhalts zu kontrollieren, wird das Zeichen `#` in den Attributen `prefix` und `suffix` der Badges-Definition verwendet.
 
 ## Erweiterungspunkte
 
-Dieses Beispiel erstreckt sich auf den Erweiterungspunkt `rte` , um dem RTE im Inhaltsfragment-Editor ein Abzeichen hinzuzufügen.
+Dieses Beispiel erstreckt sich auf den Erweiterungspunkt `rte`, um dem RTE im Inhaltsfragmenteditor ein Badge hinzuzufügen.
 
-| AEM Benutzeroberfläche erweitert | Erweiterungspunkte |
+| Erweiterte AEM-Benutzeroberfläche | Erweiterungspunkte |
 | ------------------------ | --------------------- | 
-| [Inhaltsfragmente-Editor](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Rich-Text-Editor-Abzeichen](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/) und [Rich-Text-Editor-Widgets](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
+| [Inhaltsfragmenteditor](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Rich-Text-Editor-Badges](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/) und [Rich-Text-Editor-Widgets](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
 
 ## Beispielerweiterung
 
-Im folgenden Beispiel wird eine _Große Gruppenbuchungen - Kundendienst_ Widget. Durch Drücken der `{` -Taste im RTE-Kontextmenü geöffnet. Durch Auswahl der _Große Gruppenbuchungen - Kundendienst_ im Kontextmenü das benutzerdefinierte Modal geöffnet.
+Das folgende Beispiel erstellt ein Widget namens _Großgruppenbuchungen-Kundendienst_. Durch Drücken der Taste `{` im RTE wird das Kontextmenü der RTE-Widgets geöffnet. Durch Auswahl der Option _Großgruppenbuchungen-Kundenservice_ aus dem Kontextmenü wird das benutzerdefinierte Modal geöffnet.
 
-Sobald die gewünschte Kundendienstnummer aus dem Modal hinzugefügt wurde, machen die Abzeichen die _Telefonnummer nicht bearbeitbar_ und formatiert es in blauer Farbe.
+Sobald die gewünschte Kundendienstnummer aus dem Modal hinzugefügt wird, machen die Badges die _Telefonnummer unbearbeitbar_ und gestalten sie in blauer Farbe.
 
 ### Registrierung der Erweiterung
 
-`ExtensionRegistration.js`, die der `index.html` route ist der Einstiegspunkt für die AEM-Erweiterung und definiert:
+`ExtensionRegistration.js`, das der Route `index.html` zugeordnet ist, ist der Einstiegspunkt für die AEM-Erweiterung und definiert:
 
-+ Die Badge-Definition ist definiert in `getBadges()` mit den Konfigurationsattributen `id`, `prefix`, `suffix`, `backgroundColor` und `textColor`.
-+ In diesem Beispiel wird die `#` -Zeichen verwendet wird, um die Grenzen dieses Zeichens zu definieren - d. h. jede Zeichenfolge im RTE, die von `#` wird als eine Instanz dieses Badge behandelt.
++ Die Definition des Badges wird in `getBadges()` unter Verwendung der Konfigurationsattribute `id`, `prefix`, `suffix`, `backgroundColor` und `textColor` festgelegt.
++ In diesem Beispiel wird das Zeichen `#` verwendet, um die Grenzen dieses Badges zu definieren. Das bedeutet, dass jede Zeichenkette im RTE, die von `#` umgeben ist, als eine Instanz dieses Badges behandelt wird.
 
-Weitere Informationen finden Sie in den Schlüsseldetails des RTE-Widgets:
+Weitere Informationen sehen Sie in den Schlüsseldetails des RTE-Widgets:
 
-+ Die Widget-Definition in `getWidgets()` Funktion mit `id`, `label` und `url` -Attribute.
-+ Die `url` -Attributwert, ein relativer URL-Pfad (`/index.html#/largeBookingsCustomerService`), um das Modal zu laden.
++ Die Widget-Definition in der Funktion `getWidgets()` mit den Attributen `id`, `label` und `url`.
++ Der `url`-Attributwert, ein relativer URL-Pfad (`/index.html#/largeBookingsCustomerService`) zum Laden des Modals.
 
 
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`
@@ -110,9 +110,9 @@ function ExtensionRegistration() {
 }
 ```
 
-### Hinzufügen `largeBookingsCustomerService` Route in `App.js`{#add-widgets-route}
+### Hinzufügen einer Route `largeBookingsCustomerService` in `App.js`{#add-widgets-route}
 
-In der Haupt-React-Komponente `App.js`, fügen Sie die `largeBookingsCustomerService` -Route, um die Benutzeroberfläche für den oben genannten relativen URL-Pfad zu rendern.
+Fügen Sie in der React-Hauptkomponente `App.js` die Route `largeBookingsCustomerService` hinzu, um die Benutzeroberfläche für den oben genannten relativen URL-Pfad zu rendern.
 
 `src/aem-cf-editor-1/web-src/src/components/App.js`
 
@@ -132,20 +132,20 @@ In der Haupt-React-Komponente `App.js`, fügen Sie die `largeBookingsCustomerSer
 ...
 ```
 
-### Erstellen `LargeBookingsCustomerService` React-Komponente{#create-widget-react-component}
+### Erstellen der React-Komponente `LargeBookingsCustomerService`{#create-widget-react-component}
 
-Die Benutzeroberfläche des Widgets oder Dialogfelds wird mit der [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) Framework.
+Die Widget- oder Dialog-UI wird mit dem [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html?lang=de)-Framework erstellt.
 
-Der React-Komponenten-Code beim Hinzufügen der Kundendienstdetails umschließen die Telefonnummernvariable mit der `#` registrierte Zeichen verwenden, um sie in Abzeichen wie `#${phoneNumber}#`, sodass es nicht bearbeitbar ist.
+Der Code der React-Komponente beim Hinzufügen der Kundendienstdetails umgibt die Telefonnummer-Variable mit dem Zeichen für `#`-registrierte Badges, um sie in Badges zu konvertieren, wie `#${phoneNumber}#`, und macht sie somit unbearbeitbar.
 
-Hier sind die wichtigsten Highlights von `LargeBookingsCustomerService` code:
+Hier die wichtigsten Punkte vom `LargeBookingsCustomerService`-Code:
 
-+ Die Benutzeroberfläche wird mithilfe von React Spectrum-Komponenten gerendert, z. B. [ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html), [ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html), [Schaltfläche](https://react-spectrum.adobe.com/react-spectrum/Button.html)
-+ Die `largeGroupCustomerServiceList` -Array verfügt über eine fest codierte Zuordnung von repräsentativem Namen und Telefonnummer. In einem realen Szenario können diese Daten von der Adobe AppBuilder-Aktion oder von externen Systemen oder von eigenem oder Cloud-Provider-basiertem API-Gateway abgerufen werden.
-+ Die `guestConnection` wird mithilfe der `useEffect` [React-Hook](https://react.dev/reference/react/useEffect) und als Komponentenstatus verwaltet werden. Sie wird zur Kommunikation mit dem AEM-Host verwendet.
-+ Die `handleCustomerServiceChange` -Funktion ruft den repräsentativen Namen und die Telefonnummer ab und aktualisiert die Komponentenstatusvariablen.
-+ Die `addCustomerServiceDetails` Funktion verwenden `guestConnection` -Objekt stellt die auszuführende RTE-Anweisung bereit. In diesem Fall `insertContent` -Anweisung und HTML-Code-Snippet.
-+ Um **Telefonnummer nicht bearbeitbar** mit Badges, die `#` Sonderzeichen vor und nach dem `phoneNumber` -Variable, z. B. `...<div><p>Phone Number: #${phoneNumber}#</strong></p></div>`.
++ Die UI wird mit React Spectrum-Komponenten gerendert, z. B.[ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html?lang=de), [ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html?lang=de) und [Button](https://react-spectrum.adobe.com/react-spectrum/Button.html?lang=de)
++ Das `largeGroupCustomerServiceList`-Array verfügt über eine fest kodierte Zuordnung von Name und Telefonnummer der oder des Mitarbeitenden. In einem realen Szenario können diese Daten von der Adobe AppBuilder-Aktion oder von externen Systemen oder von einem selbst entwickelten oder auf einem Cloud-Anbieter basierenden API-Gateway abgerufen werden.
++ Die `guestConnection` wird mithilfe des `useEffect` [React-Hooks](https://react.dev/reference/react/useEffect) initialisiert und als Komponentenstatus verwaltet. Das Objekt wird zur Kommunikation mit dem AEM-Host verwendet.
++ Die Funktion `handleCustomerServiceChange` ruft den Namen und die Telefonnummer der oder des Mitarbeitenden ab und aktualisiert die Komponentenstatusvariablen.
++ Die Funktion `addCustomerServiceDetails` stellt unter Ausführung des Objekts `guestConnection` die auszuführende RTE-Anweisung bereit. In diesem Fall die Anweisung `insertContent` und ein HTML-Code-Snippet.
++ Um die **Telefonnummer mit Hilfe von Badges uneditierbar** zu machen, wird das Sonderzeichen `#` vor und nach der `phoneNumber`-Variablen hinzugefügt, wie in `...<div><p>Phone Number: #${phoneNumber}#</strong></p></div>`.
 
 `src/aem-cf-editor-1/web-src/src/components/LargeBookingsCustomerService.js`
 

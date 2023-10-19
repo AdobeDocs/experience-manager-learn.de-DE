@@ -1,6 +1,6 @@
 ---
-title: Stellen Sie die Beispiel-Assets auf Ihrem Server bereit
-description: Nutzungsszenario auf Ihrem lokalen Server
+title: Bereitstellen der Beispiel-Assets auf Ihrem Server
+description: Starten des Anwendungsfalls auf Ihrem lokalen Server
 feature: Adaptive Forms,Acrobat Sign
 version: 6.4,6.5
 topic: Development
@@ -12,24 +12,24 @@ exl-id: f12f83fa-673a-454c-aa52-6ea769a182b7
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '168'
-ht-degree: 4%
+ht-degree: 92%
 
 ---
 
 # Bereitstellen der Assets
 
-Die folgenden Assets/Konfigurationen wurden auf einem AEM Forms-Veröffentlichungsserver bereitgestellt.
+Die folgenden Assets/Konfigurationen wurden auf einem AEM Forms-Veröffentlichungs-Server bereitgestellt.
 
-* [Adobe Sign Wrapper Bundle](assets/AcrobatSign.core-1.0.0-SNAPSHOT.jar)
+* [Adobe Sign-Wrapper-Bundle](assets/AcrobatSign.core-1.0.0-SNAPSHOT.jar)
 
-* [Beispielvorlage für interaktive Kommunikation](assets/waiver-interactive-communication.zip)
-* [Bereitstellen des DevelopingWithServiceUser-Bundles](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
-* Fügen Sie den folgenden Eintrag im Apache Sling Service User Mapper Service mithilfe des OSGi configMgr hinzu.
+* [Vorlage für interaktives Kommunikationsbeispiel](assets/waiver-interactive-communication.zip)
+* [Bereitstellen des Bundles DevelopingWithServiceUser](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=de)
+* Fügen Sie den folgenden Eintrag im Apache Sling Service User Mapper Service mithilfe des OSGi-configMgr hinzu.
   **DevelopingWithServiceUser.core:getformsresourceresolver=fd-service**
 
-## Bereitstellen der Beispiel-React-App
+## Bereitstellung der Beispiel-React-App
 
-* [Beispielanwendung für Reaktionsmaßnahmen herunterladen](assets/mult-step-form1.zip)
+* [Laden Sie die Beispiel-React-App herunter](assets/mult-step-form1.zip)
 * Entpacken Sie den Inhalt der React-App in einen neuen Ordner.
 * Navigieren Sie zum Ordner und führen Sie die folgenden Befehle aus
 
@@ -56,7 +56,7 @@ npm start
  
 ```
 
-Um das Ausführen von POST-Aufrufen an den AEM-Endpunkt über Ihre REACT-App zu aktivieren, müssen Sie die entsprechenden Berechtigungen im Feld &quot;Zulässiger Ursprung&quot;in der Konfiguration der Adobe Granite-Richtlinie für Cross-Origin Resource Sharing angeben.
+Um das Ausführen von POST-Aufrufen an den AEM-Endpunkt über Ihre REACT-App zu aktivieren, müssen Sie die entsprechenden Einträge im Feld „Zulässige Ursprünge“ in der Konfiguration der Adobe Granite für Cross-Origin Resource Sharing Policy angeben.
 
 ![cors-setting](assets/cors-settings.png)
 

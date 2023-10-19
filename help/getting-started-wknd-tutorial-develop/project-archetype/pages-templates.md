@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '3040'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -310,7 +310,7 @@ Verwenden Sie das Tool CRXDE-Lite auf einer lokalen AEM-Instanz, um die zugrunde
 
    Der andere Grund für das Aufschlüsseln des HTL-Codes in mehrere Skripte besteht darin, den Proxy-Komponenten das Überschreiben einzelner Skripte zu ermöglichen, um benutzerdefinierte Geschäftslogiken zu implementieren. Die HTL-Skripte `customfooterlibs.html` und `customheaderlibs.html` werden für den expliziten Zweck erstellt, durch die Implementierung von Projekten überschrieben zu werden.
 
-   ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=de)In diesem Artikel[ erhalten Sie weitere Informationen darüber, wie die bearbeitbare Vorlage in das Rendering der Inhaltsseite einfließt.
+   [In diesem Artikel](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=de) erhalten Sie weitere Informationen darüber, wie die bearbeitbare Vorlage in das Rendering der Inhaltsseite einfließt.
 
 1. Untersuchen Sie eine andere Kernkomponente, z. B. den Breadcrumb unter `/libs/core/wcm/components/breadcrumb/v2/breadcrumb`. Sehen Sie sich das Skript `breadcrumb.html` an, um zu verstehen, wie das Markup für die Breadcrumb-Komponente letztendlich generiert wird.
 

@@ -13,7 +13,7 @@ exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
 source-wordcount: '1218'
-ht-degree: 83%
+ht-degree: 90%
 
 ---
 
@@ -145,7 +145,7 @@ export default aemHeadlessClient;
 
 ## Implementieren zum Ausführen von AEM GraphQL-persistierten Abfragen
 
-So implementieren Sie die generische `fetchPersistedQuery(..)` Funktion zum Ausführen der AEM von GraphQL gespeicherten Abfragen öffnen Sie die `usePersistedQueries.js` -Datei. Die Funktion `fetchPersistedQuery(..)` verwendet die Funktion `runPersistedQuery()` des `aemHeadlessClient`-Objekts, um Abfragen asynchron auszuführen und versprechensbasiertes Verhalten zu verwenden.
+Um die generische `fetchPersistedQuery(..)`-Funktion zum Ausführen der GraphQL-persistierten Abfragen in AEM zu implementieren, öffnen Sie die Datei `usePersistedQueries.js`. Die Funktion `fetchPersistedQuery(..)` verwendet die Funktion `runPersistedQuery()` des `aemHeadlessClient`-Objekts, um Abfragen asynchron auszuführen und versprechensbasiertes Verhalten zu verwenden.
 
 Später wird diese Funktion durch den benutzerdefinierten `useEffect`-React-Hook aufgerufen, um bestimmte Daten aus AEM abzurufen.
 
@@ -496,7 +496,7 @@ Sehen Sie sich die App unter [http://localhost:3000/](http://localhost:3000/) an
 
 ## Unter der Haube
 
-Öffnen Sie die **Entwicklertools** > **Netzwerk** und _Filter_ für `all-teams` -Anfrage. Beachten Sie die GraphQL-API-Anfrage `/graphql/execute.json/my-project/all-teams` gegen `http://localhost:3000` und **NOT** gegen den Wert von `REACT_APP_HOST_URI`, beispielsweise `<https://publish-pxxx-exxx.adobeaemcloud.com`. Die Anfragen werden für die Domäne der React-App gestellt, weil [Proxy-Einrichtung](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) aktiviert wird, wenn `http-proxy-middleware` -Modul.
+Öffnen Sie die **Entwicklertools** > **Netzwerk** und _Filter_ für `all-teams` -Anfrage. Beachten Sie die GraphQL-API-Anfrage `/graphql/execute.json/my-project/all-teams` gegen `http://localhost:3000` und **NOT** gegen den Wert von `REACT_APP_HOST_URI`, beispielsweise `<https://publish-pxxx-exxx.adobeaemcloud.com`. Die Anfragen werden für die Domain der React-App gestellt, weil die [Proxy-Einrichtung](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) aktiviert wird, wenn das `http-proxy-middleware`-Modul in Verwendung ist.
 
 
 ![GraphQL-API-Anfrage über Proxy](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)
@@ -511,7 +511,7 @@ module.exports = function(app) {
   ...
 ```
 
-Die Verwendung des lokalen Proxys ist keine geeignete Option für die Produktionsbereitstellung. Weitere Informationen finden Sie unter _Produktionsbereitstellung_ Abschnitt.
+Die Verwendung des lokalen Proxys ist jedoch keine geeignete Option für die Produktionsbereitstellung. Weitere Details dazu finden Sie im Abschnitt _Produktionsbereitstellung_.
 
 ## Herzlichen Glückwunsch!{#congratulations}
 

@@ -1,6 +1,6 @@
 ---
 title: Verwenden von Experience Fragment-Bausteinen
-description: Bausteine sind eine Unterfunktion von Experience Fragments, die die Wiederverwendung von erstellten Komponenten in verschiedenen Varianten von Experience Fragments ermöglichen.
+description: Bausteine sind eine Unterfunktion von Experience Fragments, die die Wiederverwendung von erstellten Komponenten in verschiedenen Experience Fragments-Varianten ermöglichen.
 sub-product: Experience Manager Sites
 version: Cloud Service
 feature: Experience Fragments
@@ -14,7 +14,7 @@ exl-id: cc758602-3c20-4eca-9b87-f04b6dc96bfe
 source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '98'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 0%
 
 {{edge-delivery-services-and-page-editor}}
 
-Bausteine sind eine Unterfunktion von Experience Fragments. Anhand von Bausteinen können Inhaltsautoren Komponenten in verschiedenen Varianten von Experience Fragments wiederverwenden.
+Bausteine sind eine Unterfunktion von Experience Fragments. Anhand von Bausteinen können Inhaltsautorinnen und Inhaltsautoren Komponenten in verschiedenen Experience Fragments-Varianten wiederverwenden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/331786?quality=12&learn=on)
 
 >[!NOTE]
 >
-> Die für Experience Fragments verwendete Vorlage muss Folgendes enthalten: **Bausteine** als zulässige Komponente.
+> Die für Experience Fragments verwendete Vorlage muss **Bausteine** als zulässige Komponente enthalten.
 
 * Bausteine erleichtern die Wiederverwendung von Komponenten in verschiedenen Varianten.
-* Änderungen am Hauptbaustein werden automatisch in allen Verweisen übernommen. Änderungen am Layout von Bausteinen sind davon nicht betroffen.
+* Änderungen am Hauptbaustein werden automatisch in allen Verweisen übernommen. Änderungen am Layout von Bausteinen sind hiervon ausgenommen.

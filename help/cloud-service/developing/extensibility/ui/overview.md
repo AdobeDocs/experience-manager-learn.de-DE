@@ -1,6 +1,6 @@
 ---
-title: AEM UI-Erweiterung
-description: Erfahren Sie mehr über AEM Erweiterbarkeit der Benutzeroberfläche mit App Builder zum Erstellen von Erweiterungen.
+title: Erweiterbarkeit der AEM-Benutzeroberfläche
+description: Erfahren Sie mehr über die Erweiterbarkeit der AEM-Benutzeroberfläche mit App-Entwicklung zum Erstellen von Erweiterungen.
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -13,21 +13,21 @@ exl-id: 73f5d90d-e007-41a0-9bb3-b8f36a9b1547
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '243'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# AEM UI-Erweiterung
+# Erweiterbarkeit der AEM-Benutzeroberfläche
 
-Adobe Experience Manager (AEM) bietet eine leistungsstarke Benutzeroberfläche zum Erstellen digitaler Erlebnisse. Um die Benutzeroberfläche anzupassen und zu erweitern, hat Adobe App Builder eingeführt. Mit diesem Tool können Entwickler das Benutzererlebnis ohne komplexe Kodierung mit JavaScript und React verbessern.
+Adobe Experience Manager (AEM) bietet eine leistungsstarke Benutzeroberfläche zum Erstellen digitaler Erlebnisse. Um die Benutzeroberfläche anzupassen und zu erweitern, führte Adobe die App-Entwicklung ein. Mit diesem Tool können Entwicklerinnen und Entwickler das Benutzererlebnis ohne komplexe Codierung mit JavaScript und React verbessern.
 
-App Builder bietet eine Implementierungsebene zum Erstellen von Erweiterungen, die dazu bestimmt sind, Erweiterungspunkte in AEM gut zu definieren. App Builder lässt sich nahtlos in AEM integrieren, sodass eine Echtzeitvorschau und Tests möglich sind. Die Bereitstellung von Änderungen in AEM erfolgt schnell und rationalisiert. Durch die Verwendung von App Builder sparen Entwickler Zeit und Mühe und ermöglichen so eine schnelle Prototypisierung und Zusammenarbeit mit Interessenträgern.
+App-Entwicklung bietet eine Implementierungsebene für die Erstellung von Erweiterungen, die an genau definierte Erweiterungspunkte in AEM gebunden sind.  App-Entwicklung lässt sich nahtlos in AEM integrieren, sodass eine Echtzeitvorschau und Tests möglich sind. Die Bereitstellung von Änderungen in AEM erfolgt schnell und rationalisiert. Durch die Verwendung der App-Entwicklung sparen Entwicklerinnen und Entwickler Zeit und Mühe und ermöglichen so eine schnelle Prototyperstellung und Zusammenarbeit mit Interessengruppen.
 
-## Entwickeln einer AEM UI-Erweiterung
+## Entwickeln einer AEM Benutzeroberflächen-Erweiterung
 
-AEM verschiedene Benutzeroberflächen haben unterschiedliche Erweiterungspunkte, die grundlegenden Konzepte sind jedoch identisch.
+Die verschiedenen Benutzeroberflächen von AEM haben unterschiedliche Erweiterungspunkte, die Grundkonzepte sind jedoch dieselben.
 
-In den unten bereitgestellten Videos und Durchsichten wird die Verwendung einer Inhaltsfragment-Konsolenerweiterung zur Veranschaulichung verschiedener Aktivitäten veranschaulicht. Beachten Sie jedoch, dass die behandelten Konzepte auf alle AEM UI-Erweiterungen angewendet werden können.
+Die unten verlinkten Videos und Walk-Throughs veranschaulichen die Verwendung einer Inhaltsfragment-Konsolenerweiterung zur Veranschaulichung verschiedener Aktivitäten.  Beachten Sie jedoch, dass die behandelten Konzepte auf alle AEM-Benutzeroberflächen-Erweiterungen angewendet werden können.
 
 1. [Erstellen eines Adobe Developer Console-Projekts](./adobe-developer-console-project.md)
 1. [Initialisieren einer Erweiterung](./app-initialization.md)
@@ -36,13 +36,13 @@ In den unten bereitgestellten Videos und Durchsichten wird die Verwendung einer 
 
    Erweiterungspunkte und ihre Implementierungen variieren je nach der zu erweiternden Benutzeroberfläche.
 
-   + [Entwickeln einer UI-Erweiterung für Inhaltsfragmente](./content-fragments/overview.md)
+   + [Entwickeln einer Benutzeroberflächen-Erweiterung für Inhaltsfragmente](./content-fragments/overview.md)
 
 1. [Entwickeln eines Modals](./modal.md)
-1. [Entwickeln einer Adobe I/O Runtime-Aktion](./runtime-action.md)
-1. [Erweiterung überprüfen](./verify.md)
+1. [Entwicklung einer Adobe I/O Runtime-Aktion](./runtime-action.md)
+1. [Überprüfen einer Erweiterung](./verify.md)
 1. [Bereitstellen einer Erweiterung](./deploy.md)
 
 ## Adobe Developer-Dokumentation
 
-Adobe Developer enthält Entwicklerdetails zur Erweiterbarkeit AEM Benutzeroberfläche. Lesen Sie die [Adobe Developer-Inhalte für weitere technische Details](https://developer.adobe.com/uix/docs/).
+Adobe Developer enthält Entwicklerdetails zur Erweiterbarkeit der AEM-Benutzeroberfläche. Lesen Sie die [Adobe Developer-Inhalte für weitere technische Details](https://developer.adobe.com/uix/docs/).

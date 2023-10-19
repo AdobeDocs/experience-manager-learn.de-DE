@@ -1,6 +1,6 @@
 ---
-title: Verwenden AEM Experience Fragments
-description: Mit Experience Fragments können Inhaltsautoren Inhalte kanalübergreifend wiederverwenden, einschließlich Sites-Seiten und Drittanbietersystemen.
+title: Verwenden von AEM Experience Fragments
+description: Mit Experience Fragments können Inhaltsautorinnen und -autoren Inhalte kanalübergreifend wiederverwenden, einschließlich Sites-Seiten und Drittanbietersysteme.
 sub-product: Experience Manager Sites
 feature: Experience Fragments
 topic: Content Management
@@ -15,7 +15,7 @@ exl-id: 84d2b240-5ecc-4230-97a0-6c2faead8d1a
 source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '118'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
@@ -23,15 +23,15 @@ ht-degree: 2%
 
 {{edge-delivery-services-and-page-editor}}
 
-Mit Experience Fragments können Inhaltsautoren Inhalte kanalübergreifend wiederverwenden, einschließlich Sites-Seiten und Drittanbietersystemen.
+Mit Experience Fragments können Inhaltsautorinnen und -autoren Inhalte kanalübergreifend wiederverwenden, einschließlich Sites-Seiten und Drittanbietersysteme.
 
 >[!VIDEO](https://video.tv.adobe.com/v/331785?quality=12&learn=on)
 
-Ein Experience Fragment ist ein gruppierter Satz von Komponenten, die bei Kombination ein Erlebnis erstellen. Beispiel: eine *Titel*, *Bild*, *Beschreibung*, und *Aktionsschaltfläche aufrufen* kann kombiniert werden, um ein Teaser-Erlebnis zu bilden.
+Ein Experience Fragment ist ein gruppierter Satz von Komponenten, der bei Kombination ein Erlebnis erstellt. Beispielsweise können *Titel*, *Bild*, *Beschreibung* und eine *Aktionsaufruf-Schaltfläche* kombiniert werden und so ein Teaser-Erlebnis bilden.
 
-Mit Experience Fragments können Marketingexperten:
+Experience Fragments ermöglicht Marketing-Fachkräften Folgendes:
 
-* Wiederverwenden eines Erlebnisses über verschiedene Kanäle (sowohl eigene Kanäle als auch Touchpoints von Drittanbietern)
+* Wiederverwenden eines Erlebnisses über verschiedene Kanäle hinweg (sowohl eigene Kanäle als auch Touchpoints von Drittanbietern)
 * Erstellen von Varianten eines Erlebnisses für bestimmte Anwendungsfälle
 * Synchronisieren von Varianten mit der Verwendung von Live Copy
-* Social Publish von Erlebnissen für Facebook und Pinterest vorkonfiguriert
+* Vorkonfigurierte Social Post-Erlebnisse für Facebook und Pinterest

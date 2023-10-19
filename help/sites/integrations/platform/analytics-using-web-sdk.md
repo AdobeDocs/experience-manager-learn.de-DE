@@ -16,19 +16,19 @@ exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '1637'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # Integrieren von AEM Sites und Adobe Analytics mit dem Platform Web SDK
 
-Lernen Sie die **moderner Ansatz** Informationen zur Integration von Adobe Experience Manager (AEM) und Adobe Analytics mithilfe des Platform Web SDK. Dieses umfassende Tutorial führt Sie durch den Prozess der nahtlosen Erfassung [WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) Seitenansicht und CTA-Klickdaten. Erhalten Sie wertvolle Einblicke, indem Sie die erfassten Daten in Adobe Analysis Workspace visualisieren, wo Sie verschiedene Metriken und Dimensionen untersuchen können. Erkunden Sie außerdem den Platform-Datensatz, um die Daten zu überprüfen und zu analysieren. Nehmen Sie an dieser Journey teil, um die Macht von AEM und Adobe Analytics für datengestützte Entscheidungsfindung zu nutzen.
+Erfahren Sie mehr über den **modernen Ansatz** zur Integration von Adobe Experience Manager (AEM) und Adobe Analytics mit dem Platform Web SDK. Dieses umfassende Tutorial führt Sie durch den Prozess zur nahtlosen Erfassung von [WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)-Seitenansichten und -CTA-Klickdaten. Erhalten Sie wertvolle Erkenntnisse, indem Sie die erfassten Daten in Adobe Analysis Workspace visualisieren, wo Sie verschiedene Metriken und Dimensionen untersuchen können. Lernen Sie außerdem den Platform-Datensatz kennen, um Daten zu überprüfen und zu analysieren. Begleiten Sie uns auf dieser Journey, um die Leistungskraft von AEM und Adobe Analytics für datenbasierte Entscheidungen zu nutzen.
 
 ## Übersicht
 
-Einblicke in das Benutzerverhalten zu gewinnen, ist ein wichtiges Ziel für jedes Marketing-Team. Indem sie verstehen, wie Benutzer mit ihren Inhalten interagieren, können Teams fundierte Entscheidungen treffen, Strategien optimieren und bessere Ergebnisse erzielen. Das WKND-Marketing-Team, eine fiktive Entität, hat die Implementierung von Adobe Analytics auf ihrer Website ins Auge gefasst, um dieses Ziel zu erreichen. Das Hauptziel besteht darin, Daten zu zwei Schlüsselmetriken zu erfassen: Seitenansichten und CTA-Klicks (homepage call-to-action).
+Erkenntnisse zum Benutzerverhalten zu erhalten, ist ein wichtiges Ziel für jedes Marketing-Team. Wenn sie verstehen, wie Benutzende mit ihren Inhalten interagieren, können Teams fundierte Entscheidungen treffen, Strategien optimieren und bessere Ergebnisse erzielen. Das WKND-Marketing-Team, eine fiktive Entität, hat die Implementierung von Adobe Analytics auf seiner Website ins Auge gefasst, um dieses Ziel zu erreichen. Das Hauptziel besteht darin, Daten zu zwei Schlüsselmetriken zu erfassen: Seitenansichten und Call-to-Action(CTA)-Klicks auf der Homepage.
 
-Durch das Tracking von Seitenansichten kann das Team analysieren, welche Seiten von den Benutzern am meisten Aufmerksamkeit erhalten. Außerdem bietet das Tracking von CTA-Klicks auf der Homepage wertvolle Einblicke in die Effektivität der Aktionsaufruf-Elemente des Teams. Diese Daten können Aufschluss darüber geben, welche CTAs bei Benutzern auf Resonanz stoßen, welche angepasst werden müssen, und möglicherweise neue Möglichkeiten zur Verbesserung der Benutzerinteraktion und zur Förderung von Konversionen aufdecken.
+Durch das Tracking von Seitenansichten kann das Team analysieren, welche Seiten die meiste Aufmerksamkeit von Benutzenden erhalten. Außerdem bietet das Tracking von CTA-Klicks auf der Homepage wertvolle Erkenntnisse zur Effektivität der CTA-Elemente des Teams. Diese Daten können Aufschluss darüber geben, welche CTAs bei Benutzenden ankommen und welche angepasst werden müssen. Ggf. ergeben sich daraus auch neue Möglichkeiten zur Verbesserung von Benutzerinteraktionen und zur Förderung von Konversionen.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419872?quality=12&learn=on)
@@ -37,100 +37,100 @@ Durch das Tracking von Seitenansichten kann das Team analysieren, welche Seiten 
 
 Folgendes ist bei der Integration von Adobe Analytics mit dem Platform Web SDK erforderlich.
 
-Sie haben die Einrichtungsschritte im Abschnitt **[Experience Platform Web SDK integrieren](./web-sdk.md)** Tutorial.
+Sie haben die Einrichtungsschritte im Tutorial zum **[Integrieren des Experience Platform Web SDK](./web-sdk.md)** abgeschlossen.
 
-In **AEM als Cloud Service**:
+In **AEM as a Cloud Service**:
 
-+ [AEM Administratorzugriff auf AEM as a Cloud Service Umgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=de)
-+ Zugriff von Deployment Manager auf Cloud Manager
-+ Klonen und stellen Sie die [WKND - Adobe Experience Manager-Beispielprojekt](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) in Ihre AEM as a Cloud Service Umgebung.
++ [AEM-Adminzugriff auf die AEM as a Cloud Service-Umgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=de)
++ Zugriff von Bereitstellungs-Manager auf Cloud Manager
++ Klonen und Bereitstellen des [Adobe Experience Manager-WKND-Beispielprojekts](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) in Ihrer AEM as a Cloud Service-Umgebung
 
 In **Adobe Analytics**:
 
-+ Zugriff zur Erstellung **Report Suite**
-+ Zugriff zur Erstellung **Analysis Workspace**
++ Zugriff zur **Report Suite**-Erstellung
++ Zugriff zur **Analysis Workspace**-Erstellung
 
 In **Experience Platform**:
 
-+ Zugriff auf die Standardproduktion, **Prod** Sandbox.
-+ Zugriff auf **Schemas** unter Data Management
-+ Zugriff auf **Datensätze** unter Data Management
-+ Zugriff auf **Datenspeicher** unter Datenerfassung
-+ Zugriff auf **Tags** (früher als Launch bezeichnet) unter &quot;Datenerfassung&quot;
++ Zugriff auf die Standardproduktion, **Prod**-Sandbox
++ Zugriff auf **Schemata** unter Daten-Management
++ Zugriff auf **Datensätze** unter Daten-Management
++ Zugriff auf **Datenströme** unter Datenerfassung
++ Zugriff auf **Tags** (früher als Launch bezeichnet) unter Datenerfassung
 
-Falls Sie nicht über die erforderlichen Berechtigungen verfügen, verwenden Sie Ihr Systemadministrator [Adobe Admin Console](https://adminconsole.adobe.com/) kann die erforderlichen Berechtigungen erteilen.
+Falls Sie nicht über die erforderlichen Berechtigungen verfügen, können Ihre Systemadmins über [Adobe Admin Console](https://adminconsole.adobe.com/) die erforderlichen Berechtigungen erteilen.
 
-Bevor wir uns mit dem Integrationsprozess von AEM und Analytics mithilfe des Platform Web SDK befassen, _Zusammenfassen der wesentlichen Komponenten und Schlüsselelemente_ die in der [Experience Platform Web SDK integrieren](./web-sdk.md) Tutorial. Es bietet eine solide Grundlage für die Integration.
+Bevor wir uns mit dem Integrationsprozess von AEM und Analytics mit dem Platform Web SDK befassen, _rufen wir uns die wesentlichen Komponenten und Schlüsselelemente ins Gedächtnis_, die im Tutorial zum [Integrieren des Experience Platform Web SDK](./web-sdk.md) vorgestellt wurden. Dies bietet eine solide Grundlage für die Integration.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419873?quality=12&learn=on)
 
-Nach der Zusammenführung von XDM-Schema, Datastream, Datensatz, Tag-Eigenschaft und AEM- und Tag-Eigenschaftsverbindung beginnen wir mit der Integrations-Journey.
+Nach Wiederholung der Themenbereiche XDM-Schema, Datenstrom, Datensatz, Tag-Eigenschaft und AEM- und Tag-Eigenschaftsverbindung begeben wir uns nun auf den Weg zur Integration.
 
-## Dokument zur Definition der Analytics Solution Design Reference (SDR)
+## Definieren eines Solution Design Reference(SDR)-Analytics-Dokuments
 
-Im Rahmen des Implementierungsprozesses wird empfohlen, ein Dokument mit einer Lösungs-Design-Referenz (Solution Design Reference, SDR) zu erstellen. Dieses Dokument spielt eine entscheidende Rolle als Entwurf für die Definition von Geschäftsanforderungen und die Entwicklung effektiver Datenerfassungsstrategien.
+Im Rahmen des Implementierungsprozesses wird empfohlen, ein Solution Design Reference(SDR)-Dokument, also ein Lösungs-Design-Referenzdokument, zu erstellen. Dieses Dokument spielt eine entscheidende Rolle als Blueprint für die Definition von Geschäftsanforderungen und die Konzeption effektiver Datenerfassungsstrategien.
 
-Das SDR-Dokument bietet einen umfassenden Überblick über den Implementierungsplan, der sicherstellt, dass alle Interessengruppen abgestimmt sind und die Ziele und den Umfang des Projekts verstehen.
+Das SDR-Dokument bietet einen umfassenden Überblick über den Implementierungsplan und stellt sicher, dass alle Verantwortlichen auf Linie sind und die Ziele und den Umfang des Projekts verstehen.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
 
-Weitere Informationen zu Konzepten und verschiedenen Elementen, die in das SDR-Dokument aufgenommen werden sollen, finden Sie unter [Erstellen und Verwalten eines SDR-Dokuments (Solution Design Reference)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). Sie können auch eine Excel-Beispielvorlage herunterladen. WKND-spezifische Version ist jedoch ebenfalls verfügbar [here](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
+Weitere Informationen zu Konzepten und verschiedenen Elementen, die in das SDR-Dokument aufgenommen werden sollen, finden Sie unter [Erstellen und Verwalten eines Solution Design Reference(SDR)-Dokuments](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html?lang=de). Sie können auch eine Excel-Beispielvorlage herunterladen. Eine WKND-spezifische Version ist jedoch ebenfalls [hier](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx) verfügbar.
 
-## Einrichten von Analytics - Report Suite, Analysis Workspace
+## Einrichten von Analytics – Report Suite, Analysis Workspace
 
-Der erste Schritt besteht darin, Adobe Analytics einzurichten, insbesondere die Report Suite mit Konversionsvariablen (oder eVar) und Erfolgsereignissen. Die Konversionsvariablen dienen zur Messung von Ursache und Wirkung. Die Erfolgsereignisse werden zur Verfolgung von Aktionen verwendet.
+Der erste Schritt besteht darin, Adobe Analytics einzurichten. Dazu gehört insbesondere eine Report Suite mit Konversionsvariablen (oder eVar) und Erfolgsereignissen. Die Konversionsvariablen dienen zur Messung von Ursache und Wirkung. Die Erfolgsereignisse werden zur Nachverfolgung von Aktionen verwendet.
 
-In diesem Tutorial  `eVar5, eVar6, and eVar7` track  _WKND-Seitenname, WKND-CTA-ID und WKND-CTA-Name_ und `event7` wird verwendet, um  _WKND CTA-Klick-Ereignis_.
+In diesem Tutorial werden mit `eVar5, eVar6, and eVar7` _der WKND-Seitenname, die WKND-CTA-ID bzw. der WKND-CTA-Name_ und mit `event7` das _WKND-CTA-Klickereignis_ nachverfolgt.
 
-Um diese Einblicke aus den erfassten Daten zu analysieren, zu sammeln und mit anderen zu teilen, wird ein Projekt in Analysis Workspace erstellt.
+Um eine Analyse durchzuführen, Erkenntnisse aus den erfassten Daten zu gewinnen und diese mit anderen zu teilen, wird ein Projekt in Analysis Workspace erstellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419875?quality=12&learn=on)
 
-Um mehr über die Einrichtung und Konzepte von Analytics zu erfahren, werden die folgenden Ressourcen dringend empfohlen:
+Um mehr über die Einrichtung und Konzepte von Analytics zu erfahren, werden die folgenden Ressourcen ausdrücklich empfohlen:
 
 + [Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html?lang=de)
-+ [Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)
-+ [Erfolgsereignisse](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html)
-+ [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)
++ [Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=de)
++ [Erfolgsereignisse](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-events/success-event.html?lang=de)
++ [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html?lang=de)
 
-## Aktualisierung des Datenspeichers - Hinzufügen des Analytics-Dienstes
+## Aktualisierung des Datenstroms – Hinzufügen des Analytics-Dienstes
 
-Ein Datastream weist das Platform Edge Network an, wo die erfassten Daten gesendet werden sollen. Im [vorheriges Tutorial](./web-sdk.md), wird ein Datastream konfiguriert, um die Daten an die Experience Platform zu senden. Dieser Datenspeicher wird aktualisiert, um die Daten an die Analytics Report Suite zu senden, die in der [above](#setup-analytics---report-suite-analysis-workspace) Schritt.
+Ein Datenstrom weist das Platform Edge Network an, wohin die erfassten Daten gesendet werden sollen. Im [vorherigen Tutorial](./web-sdk.md) wird ein Datenstrom konfiguriert, um die Daten an Experience Platform zu senden. Dieser Datenstrom wird aktualisiert, um die Daten an die Analytics Report Suite zu senden, die im [obigen](#setup-analytics---report-suite-analysis-workspace) Schritt konfiguriert wurde.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419876?quality=12&learn=on)
 
 ## Erstellen eines XDM-Schemas
 
-Mit dem Experience-Datenmodell (XDM)-Schema können Sie die erfassten Daten standardisieren. Im [vorheriges Tutorial](./web-sdk.md), ein XDM-Schema mit `AEP Web SDK ExperienceEvent` eine Feldergruppe erstellt wird. Außerdem wird bei Verwendung dieses XDM-Schemas ein Datensatz erstellt, um die erfassten Daten in der Experience Platform zu speichern.
+Mit dem Experience-Datenmodell(XDM)-Schema können Sie die erfassten Daten standardisieren. Im [vorherigen Tutorial](./web-sdk.md) wird ein XDM-Schema mit `AEP Web SDK ExperienceEvent` als Feldgruppe erstellt. Außerdem wird bei Verwendung dieses XDM-Schemas ein Datensatz erstellt, um die erfassten Daten in Experience Platform zu speichern.
 
-Dieses XDM-Schema verfügt jedoch nicht über Adobe Analytics-spezifische Feldergruppen, um die eVar- und Ereignisdaten zu senden. Anstatt das vorhandene Schema zu aktualisieren, wird ein neues XDM-Schema erstellt, um die Speicherung der eVar- und Ereignisdaten in der Plattform zu vermeiden.
+Dieses XDM-Schema verfügt jedoch nicht über Adobe Analytics-spezifische Feldgruppen, um eVar- und Ereignisdaten zu senden. Anstatt das vorhandene Schema zu aktualisieren, wird ein neues XDM-Schema erstellt, um eine eVar- und Ereignisdatenspeicherung in der Plattform zu vermeiden.
 
-Das neu erstellte XDM-Schema hat `AEP Web SDK ExperienceEvent` und `Adobe Analytics ExperienceEvent Full Extension` Feldergruppen.
+Das neu erstellte XDM-Schema verfügt über die Feldgruppen `AEP Web SDK ExperienceEvent` und `Adobe Analytics ExperienceEvent Full Extension`.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419877?quality=12&learn=on)
 
 
-## Tag-Eigenschaft aktualisieren
+## Aktualisieren der Tag-Eigenschaft
 
-Im [vorheriges Tutorial](./web-sdk.md), wird eine Tag-Eigenschaft erstellt, sie enthält Datenelemente und eine Regel, um die Seitenansichtsdaten zu erfassen, zuzuordnen und zu senden. Sie muss folgendermaßen verbessert werden:
+Im [vorherigen Tutorial](./web-sdk.md) wird eine Tag-Eigenschaft erstellt. Sie enthält Datenelemente und eine Regel, um Seitenansichtsdaten zu erfassen, zuzuordnen und zu senden. Sie muss für folgende Vorgänge erweitert werden:
 
-+ Ordnen Sie den Seitennamen zu `eVar5`
-+ Auslösen der **Seitenansicht** Analytics-Aufruf ( oder Signal senden )
++ Zuordnen des Seitennamens zu `eVar5`
++ Auslösen des **Seitenansichts**-Analytics-Aufruf (oder „Beacon senden“)
 + Erfassen von CTA-Daten mithilfe der Adobe Client-Datenschicht
-+ Zuordnen der CTA-ID und des Namens zu `eVar6` und `eVar7` bzw. Außerdem wird die CTA-Klickanzahl auf `event7`
-+ Auslösen der **Link-Klick** Analytics-Aufruf ( oder Signal senden )
++ Zuordnen der CTA-ID und des Namens zu `eVar6` bzw. `eVar7` und der CTA-Klickanzahl zu `event7`
++ Auslösen der **Link-Klick**- Analytics-Aufrufs (oder „Beacon senden“)
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419882?quality=12&learn=on)
 
 >[!TIP]
 >
->Das Datenelement und der im Video angezeigte Regel-Ereignis-Code stehen Ihnen als Referenz zur Verfügung. **Erweitern des unten stehenden Accordion-Elements**. Wenn Sie jedoch NICHT die Adobe Client-Datenschicht verwenden, müssen Sie den unten stehenden Code ändern. Es gilt jedoch weiterhin das Konzept der Definition der Datenelemente und ihrer Verwendung in der Regeldefinition.
+>Der im Video dargestellte Code für Datenelemente und Regelereignisse ist als Referenz verfügbar. **Erweitern Sie das unten stehende Akkordeon-Element**. Wenn Sie jedoch NICHT die Adobe Client-Datenschicht verwenden, müssen Sie den unten stehenden Code ändern. Es gilt aber weiterhin das Konzept der Definition der Datenelemente und ihrer Verwendung in der Regeldefinition. 
 
-+++ Datenelement und Regelereigniscode
++++ Code für Datenelemente und Regelereignisse
 
-+ Die `Component ID` Datenelementcode.
++ Der Code für das Datenelement `Component ID`:
 
   ```javascript
   if(event && event.path && event.path.includes('.')) {    
@@ -142,7 +142,7 @@ Im [vorheriges Tutorial](./web-sdk.md), wird eine Tag-Eigenschaft erstellt, sie 
   }
   ```
 
-+ Die `Component Name` Datenelementcode.
++ Der Code für das Datenelement `Component Name`:
 
   ```javascript
   if(event && event.component && event.component.hasOwnProperty('dc:title')) {
@@ -154,7 +154,7 @@ Im [vorheriges Tutorial](./web-sdk.md), wird eine Tag-Eigenschaft erstellt, sie 
   }    
   ```
 
-+ Die `all pages - on load` **Regelbedingung** code
++ Der Code für die `all pages - on load`**-Regelbedingung**:
 
   ```javascript
   if(event && event.component && event.component.hasOwnProperty('@type') && event.component.hasOwnProperty('xdm:template')) {
@@ -164,7 +164,7 @@ Im [vorheriges Tutorial](./web-sdk.md), wird eine Tag-Eigenschaft erstellt, sie 
   }    
   ```
 
-+ Die `home page - cta click` **Regel-Ereignis** code
++ Der Code für das `home page - cta click`**-Regelereignis**:
 
   ```javascript
   var componentClickedHandler = function(evt) {
@@ -196,7 +196,7 @@ Im [vorheriges Tutorial](./web-sdk.md), wird eine Tag-Eigenschaft erstellt, sie 
   });    
   ```
 
-+ Die `home page - cta click` **Regelbedingung** code
++ Der Code für die `home page - cta click`**-Regelbedingung**:
 
   ```javascript
   if(event && event.component && event.component.hasOwnProperty('@type')) {
@@ -213,68 +213,68 @@ Im [vorheriges Tutorial](./web-sdk.md), wird eine Tag-Eigenschaft erstellt, sie 
 
 +++
 
-Weitere Informationen zur Integration AEM Kernkomponenten in die Adobe Client-Datenschicht finden Sie im Abschnitt [Verwenden der Adobe Client-Datenschicht mit AEM Leitfaden zu Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=de).
+Weitere Informationen zur Integration von AEM-Kernkomponenten in die Adobe Client-Datenschicht finden Sie im [Handbuch zum Verwenden der Adobe Client-Datenschicht mit AEM-Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=de).
 
 
 >[!INFO]
 >
->Für ein umfassendes Verständnis der **Variablenzuordnung** Registerkarteneigenschaftsdetails im Dokument Solution Design Reference (SDR) aufrufen, um die abgeschlossene WKND-spezifische Version zum Herunterladen zu öffnen. [here](./assets/Final-WKND-WebSDK-BRD-SDR.xlsx).
+>Um sich ein umfassendes Verständnis der **Variablenzuordnung**-Registerkarteneigenschaftsdetails im Solution Design Reference(SDR)-Dokument anzueignen, können Sie die fertiggestellte WKND-spezifische Version zum Herunterladen [hier](./assets/Final-WKND-WebSDK-BRD-SDR.xlsx) öffnen.
 
 
 
 ## Überprüfen der aktualisierten Tag-Eigenschaft auf WKND
 
-Um sicherzustellen, dass die aktualisierte Tag-Eigenschaft auf den WKND-Site-Seiten erstellt, veröffentlicht und ordnungsgemäß funktioniert. Verwenden des Google Chrome-Webbrowsers [Adobe Experience Platform Debugger-Erweiterung](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob):
+Um eine ordnungsgemäße Erstellung, Veröffentlichung und Funktionsweise der aktualisierten Tag-Eigenschaft auf den WKND-Site-Seiten sicherzustellen, verwenden Sie die [Adobe Experience Platform Debugger-Erweiterung](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) des Google Chrome-Webbrowsers:
 
-+ Um sicherzustellen, dass die Tag-Eigenschaft die neueste Version ist, überprüfen Sie das Build-Datum.
++ Um sicherzustellen, dass die Tag-Eigenschaft der neuesten Version entspricht, überprüfen Sie das Build-Datum.
 
-+ Um die XDM-Ereignisdaten für PageView und HomePage CTA Click zu überprüfen, verwenden Sie die Menüoption Experience Platform Web SDK in der Erweiterung.
++ Um die XDM-Ereignisdaten für Seitenansichten und CTA-Klicks auf der Homepage zu überprüfen, verwenden Sie die Experience Platform Web SDK-Menüoption in der Erweiterung.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419883?quality=12&learn=on)
 
-## Webtraffic simulieren - Selenium-Automatisierung
+## Simulieren von Webtraffic – Selenium-Automatisierung
 
-Um zu Testzwecken einen aussagekräftigen Traffic zu generieren, wird ein Selenium-Automatisierungsskript entwickelt. Dieses benutzerdefinierte Skript simuliert Benutzerinteraktionen mit der WKND-Website, z. B. Seitenansicht und Klicken auf CTAs.
+Um zu Testzwecken genügend Traffic zu generieren, wird ein Selenium-Automatisierungsskript entwickelt. Dieses benutzerdefinierte Skript simuliert Benutzerinteraktionen mit der WKND-Website, z. B. Seitenansichten und CTA-Klicks.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419884?quality=12&learn=on)
 
-## Datensatzüberprüfung - WKND-Seitenansicht, CTA-Daten
+## Datensatzüberprüfung – Seitenansichts- und CTA-Daten der WKND-Site
 
-Der Datensatz ist ein Speicher- und Verwaltungskonstrukt für eine Sammlung von Daten wie eine Datenbanktabelle, die einem Schema folgt. Der in der [vorheriges Tutorial](./web-sdk.md) wird wiederverwendet, um zu überprüfen, ob die Daten für die Seitenansicht und CTA-Klicks in den Experience Platform-Datensatz aufgenommen werden. In der Datensatzbenutzeroberfläche werden verschiedene Details wie die Gesamtdatensätze, die Größe und die erfassten Batches zusammen mit einem visuell ansprechenden Balkendiagramm angezeigt.
+Der Datensatz ist ein Speicher- und Verwaltungskonstrukt für eine Sammlung von Daten wie eine Datenbanktabelle, die einem Schema folgt. Der im [vorherigen Tutorial](./web-sdk.md) erstellte Datensatz wird wiederverwendet, um zu überprüfen, ob die Seitenansichts- und CTA-Klickdaten in den Experience Platform-Datensatz aufgenommen werden. In der Datensatzbenutzeroberfläche werden verschiedene Details wie die Gesamtdatensätze, die Größe und die erfassten Batches zusammen mit einem visuell ansprechenden Balkendiagramm angezeigt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419885?quality=12&learn=on)
 
-## Analytics - WKND-Seitenansicht, CTA-Datenvisualisierung
+## Analytics – Visualisierung von Seitenansichts- und CTA-Daten der WKND-Site
 
 Analysis Workspace ist ein leistungsstarkes Tool in Adobe Analytics, mit dem Daten flexibel und interaktiv analysiert und visualisiert werden können. Es bietet eine Drag &amp; Drop-Benutzeroberfläche, über die Sie benutzerdefinierte Berichte erstellen, erweiterte Segmentierungen durchführen und verschiedene Datenvisualisierungen anwenden können.
 
-Lassen Sie uns das in der [Einrichten von Analytics](#setup-analytics---report-suite-analysis-workspace) Schritt. Im **Top-Seiten** Untersuchen Sie verschiedene Metriken wie Besuche, Unique Visitors, Einstiege, Absprungrate und mehr. Um die Leistung von WKND-Seiten und Startseiten-CTAs zu bewerten, ziehen Sie die WKND-spezifischen Dimensionen (WKND-Seitenname, WKND-CTA-Name) und Metriken (WKND CTA-Klick-Ereignis) per Drag &amp; Drop in den Arbeitsbereich. Diese Einblicke sind für Marketingexperten nützlich, um zu verstehen, welche CTAs effektiver sind, und datengesteuerte Entscheidungen zu treffen, die auf ihre Geschäftsziele abgestimmt sind.
+Öffnen wir das im Schritt [Analytics-Einrichtung](#setup-analytics---report-suite-analysis-workspace) erstellte Analysis Workspace-Projekt. Untersuchen Sie im Abschnitt mit den **angesagtesten Seiten** verschiedene Metriken wie Besuche, Unique Visitors, Einstiege, Absprungrate usw. Um die Leistung von WKND-Seiten und CTAs auf der Homepage zu bewerten, ziehen Sie die WKND-spezifischen Dimensionen (WKND-Seitenname, WKND-CTA-Name) und Metriken (WKND-CTA-Klickereignis) in den Arbeitsbereich. Anhand dieser Erkenntnisse können Marketing-Fachleute nachvollziehen, welche CTAs effektiver sind, und datenbasierte, auf ihre Geschäftsziele abgestimmte Entscheidungen treffen.
 
-Verwenden Sie die Flussvisualisierung, beginnend mit dem **WKND-Seitenname** und sich in verschiedene Pfade ausdehnen.
+Verwenden Sie zur Visualisierung von Benutzer-Journeys die Flussvisualisierung. Beginnen Sie mit dem **WKND-Seitennamen** und machen Sie dann mit den verschiedenen Pfaden weiter.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419886?quality=12&learn=on)
 
 ## Zusammenfassung
 
-Gute gemacht! Sie haben die Einrichtung von AEM und Adobe Analytics mithilfe des Platform Web SDK abgeschlossen, um die Seitenansicht und CTA-Klickdaten zu erfassen, zu analysieren.
+Gut gemacht! Sie haben die Einrichtung von AEM und Adobe Analytics mit dem Platform Web SDK abgeschlossen, um Seitenansichts- und CTA-Klickdaten zu erfassen und zu analysieren.
 
-Die Implementierung von Adobe Analytics ist von entscheidender Bedeutung, damit Marketingteams Einblicke in das Benutzerverhalten gewinnen, fundierte Entscheidungen treffen und ihren Inhalt optimieren und datenbasierte Entscheidungen treffen können.
+Die Implementierung von Adobe Analytics ist von entscheidender Bedeutung, damit Marketing-Teams Erkenntnisse zum Benutzerverhalten gewinnen, fundiert entscheiden und ihre Inhalte optimieren und datenbasierte Entscheidungen treffen können.
 
-Durch die Implementierung der empfohlenen Schritte und die Verwendung der bereitgestellten Ressourcen, z. B. des Dokuments Solution Design Reference (SDR) und das Verständnis der wichtigsten Analytics-Konzepte, können Marketingexperten Daten effektiv erfassen und analysieren.
+Durch Umsetzen der empfohlenen Schritte, Verwenden der bereitgestellten Ressourcen, darunter das Solution Design Reference(SDR)-Dokument, und Verstehen der wichtigsten Analytics-Konzepte können Marketing-Fachleute Daten effektiv erfassen und analysieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419888?quality=12&learn=on)
 
 
 >[!AVAILABILITY]
 >
->Wenn Sie **End-to-End-Video** , der den gesamten Integrationsprozess anstelle der einzelnen Einrichtungsschritte-Videos abdeckt, können Sie auf [here](https://video.tv.adobe.com/v/3419889/) , um darauf zuzugreifen.
+>Wenn Sie ein **End-to-End-Video** bevorzugen, das den gesamten Integrationsprozess anstelle der einzelnen Einrichtungsschritte-Videos abdeckt, können Sie [hier](https://video.tv.adobe.com/v/3419889/) klicken, um darauf zuzugreifen.
 
 
 ## Zusätzliche Ressourcen
 
-+ [Experience Platform Web SDK integrieren](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html)
++ [Integrieren des Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html?lang=de)
 + [Verwenden der Adobe Client-Datenschicht in Verbindung mit den Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=de)
-+ [Integrieren von Experience Platform-Datenerfassungs-Tags und -AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=de)
-+ [Übersicht über das Adobe Experience Platform Web SDK und Edge Network](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
-+ [Tutorials zur Datenerfassung](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
-+ [Übersicht über Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
++ [Integrieren von Experience Platform-Datenerfassungs-Tags in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=de)
++ [Überblick über Adobe Experience Platform Web SDK und Edge Network](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html?lang=de)
++ [Tutorials zur Datenerfassung](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html?lang=de)
++ [Überblick über Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=de)

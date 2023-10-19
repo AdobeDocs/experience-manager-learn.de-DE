@@ -1,6 +1,6 @@
 ---
-title: Inhaltsfragmente-Editor - Schnelles Filtern
-description: Erfahren Sie, wie AEM Benutzeroberfläche für Inhaltsfragmente die einfache Suche nach Inhaltsfragmenten mithilfe einer schnellen Filterung erleichtert. Mit dieser Funktion wird die Suche nach bestimmten Inhaltsfragmenten schnell und mühelos.
+title: Inhaltsfragment-Editor – Schnelles Filtern
+description: Erfahren Sie, wie die AEM-Benutzeroberfläche für Inhaltsfragmente die einfache Suche nach Inhaltsfragmenten durch schnelles Filtern erleichtert. Mit dieser Funktion lässt sich die Suche nach bestimmten Inhaltsfragmenten schnell und mühelos durchführen.
 version: Cloud Service
 role: User
 level: Beginner
@@ -12,12 +12,12 @@ exl-id: cf1a3f0b-1d0e-4526-a9eb-013a3c73401f
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '61'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Schnelles Filtern
 
-Erfahren Sie, wie AEM Benutzeroberfläche für Inhaltsfragmente die einfache Suche nach Inhaltsfragmenten mithilfe einer schnellen Filterung erleichtert. Mit dieser Funktion wird die Suche nach bestimmten Inhaltsfragmenten schnell und mühelos.
+Erfahren Sie, wie die AEM-Benutzeroberfläche für Inhaltsfragmente die einfache Suche nach Inhaltsfragmenten durch schnelles Filtern erleichtert. Mit dieser Funktion lässt sich die Suche nach bestimmten Inhaltsfragmenten schnell und mühelos durchführen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419310/?learn=on)

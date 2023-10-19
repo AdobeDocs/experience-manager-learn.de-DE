@@ -13,7 +13,7 @@ exl-id: 6dc66195-f438-4366-a5e2-486145e4b6d7
 source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '134'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
@@ -25,16 +25,16 @@ AEM Sites bietet verschiedene Optionen zum Veröffentlichen und Rückgängigmach
 
 >[!VIDEO](https://video.tv.adobe.com/v/32193?quality=12&learn=on)
 
-AEM Sites bietet verschiedene Methoden zum Veröffentlichen und Rückgängigmachen der Veröffentlichung von Inhalten, basierend auf dem Workflow des Autors.
+AEM Sites bietet verschiedene Methoden zum Veröffentlichen und Rückgängigmachen der Veröffentlichung von Inhalten, basierend auf dem Workflow der Autorin bzw. des Autors.
 
 * Veröffentlichen der aktuellen Seite im AEM Sites-Seiteneditor
-   * Aktuelle Seite veröffentlichen und optionale Auswahl von Verweisen zulassen
-   * Veröffentlichung der aktuellen Seite rückgängig machen
-* Quick Publish über den AEM Sites-Administrator
-   * Veröffentlichung der ausgewählten Seiten mit einem Klick und automatische Veröffentlichung aller unveröffentlichten Verweise
-* Verwalten von Veröffentlichungen über AEM Sites Admin
-   * Robuste Konsole für die detaillierte Verwaltung von Massenveröffentlichungen und das Rückgängigmachen der Veröffentlichung von Inhalten.
+   * Veröffentlichen der aktuellen Seite und optionale Auswahl von Referenzen
+   * Rückgängigmachen der Veröffentlichung der aktuellen Seite
+* Quick Publish über den AEM Sites-Admin
+   * Veröffentlichung der ausgewählten Seiten mit einem Klick und automatische Veröffentlichung aller unveröffentlichter Referenzen
+* Verwalten von Veröffentlichungen über AEM Sites-Admin
+   * Robuste Konsole für die detaillierte Verwaltung von Massenveröffentlichungen und das Rückgängigmachen der Veröffentlichung von Inhalten
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Dokumentation zur Veröffentlichung von Seiten](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/publishing-pages.html)
+* [Dokumentation zur Veröffentlichung von Seiten](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/publishing-pages.html?lang=de)

@@ -1,6 +1,6 @@
 ---
-title: Dankesmeldung bei Formularübermittlung anzeigen
-description: Verwenden Sie den Handler onSubmitSuccess , um die konfigurierte Dankesnachricht in der React-App anzuzeigen.
+title: Anzeigen einer Dankesnachricht bei Formularübermittlung
+description: Anzeigen der konfigurierten Dankesnachricht in der React-App mithilfe des onSubmitSuccess-Handlers
 feature: Adaptive Forms
 version: 6.5
 kt: 13490
@@ -11,18 +11,18 @@ exl-id: 489970a6-1b05-4616-84e8-52b8c87edcda
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '172'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Anzeige der konfigurierten Dankesnachricht
 
-Eine Dankesnachricht bei der Formularübermittlung ist eine umsichtige Möglichkeit, den Benutzer für das Ausfüllen und Übermitteln eines Formulars zu danken und ihm zu danken. Es dient als Bestätigung, dass ihre Einreichung empfangen und begrüßt wurde. Die Dankesnachricht wird über die Registerkarte &quot;Übermittlung&quot;im Guide-Container des adaptiven Formulars konfiguriert
+Eine Dankesnachricht bei der Formularübermittlung ist eine aufmerksame Möglichkeit, Benutzenden für das Ausfüllen und Übermitteln eines Formulars eine Rückmeldung zu geben und zu danken. Sie bestätigt den Empfang des übermittelten Formulars und drückt Wertschätzung dafür aus. Die Dankesnachricht wird über die Registerkarte „Übermittlung“ im Container für adaptive Formulare konfiguriert.
 
-![thank-you-message](assets/thank-you-message.png)
+![Dankesnachricht](assets/thank-you-message.png)
 
-Auf die konfigurierte Dankesmeldung kann im onSuccess-Ereignishandler der Super-Komponente AdaptiveForm zugegriffen werden.
-Der Code für die Zuordnung des onSuccess-Ereignisses und des Codes für den onSuccess-Ereignishandler ist unten aufgeführt
+Auf die konfigurierte Dankesnachricht kann im onSuccess-Ereignis-Handler der AdaptiveForm-Superkomponente zugegriffen werden.
+Der Code für die Zuordnung des onSuccess-Ereignisses und der Code für den onSuccess-Ereignis-Handler sind unten aufgeführt.
 
 ```javascript
 <AdaptiveForm mappings={extendMappings} onSubmitSuccess={onSuccess} formJson={selectedForm}/>
@@ -38,7 +38,7 @@ const onSuccess=(action) =>{
       }
 ```
 
-Der vollständige Code der Komponente Kontaktfunktion ist unten angegeben.
+Die vollständige Funktionskomponente für Kontakte ist unten angegeben.
 
 ```javascript
 import Form from './components/Form';
@@ -105,4 +105,4 @@ export default function Contact(){
 }
 ```
 
-Der obige Code verwendet native HTML-Komponenten, die den im adaptiven Formular verwendeten Komponenten zugeordnet sind. Beispielsweise ordnen wir die Texteingabe-Komponente des adaptiven Formulars der TextField-Komponente zu. Die im Artikel verwendeten nativen Komponenten [können Sie hier herunterladen](./assets/native-components.zip)
+Der obige Code verwendet native HTML-Komponenten, die den im adaptiven Formular verwendeten Komponenten zugeordnet sind. Beispielsweise ordnen wir die text-input-Komponente des adaptiven Formulars der TextField-Komponente zu. Die im Artikel verwendeten nativen Komponenten können [hier](./assets/native-components.zip) heruntergeladen werden.

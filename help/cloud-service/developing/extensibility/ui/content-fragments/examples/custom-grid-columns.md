@@ -14,39 +14,39 @@ exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '427'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # Benutzerdefinierte Rasterspalten
 
-![Benutzerdefinierte Rasterspalte der Inhaltsfragmentkonsole](./assets/custom-grid-columns/hero.png){align="center"}
+![Benutzerdefinierte Rasterspalte in der Inhaltsfragmentkonsole](./assets/custom-grid-columns/hero.png){align="center"}
 
-Benutzerdefinierte Rasterspalten können der Inhaltsfragmentkonsole mithilfe der  `contentFragmentGrid` Erweiterungspunkt. In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte Spalte hinzugefügt wird, die die Seite &quot;Inhaltsfragmente&quot;basierend auf dem Datum der letzten Änderung im lesbaren Format anzeigt.
+Benutzerdefinierte Rasterspalten können der Inhaltsfragmentkonsole mithilfe des Erweiterungspunkts `contentFragmentGrid` hinzugefügt werden. In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte Spalte hinzugefügt wird, über die das Alter der Inhaltsfragmente basierend auf dem letzten Änderungsdatum in einem lesbaren Format angegeben wird.
 
 ## Erweiterungspunkt
 
-Dieses Beispiel erstreckt sich auf den Erweiterungspunkt `contentFragmentGrid` , um der Inhaltsfragmentkonsole eine benutzerdefinierte Spalte hinzuzufügen.
+Dieses Beispiel erstreckt sich auf den Erweiterungspunkt `contentFragmentGrid`, um der Inhaltsfragmentkonsole eine benutzerdefinierte Spalte hinzuzufügen.
 
-| AEM Benutzeroberfläche erweitert | Erweiterungspunkt |
+| Erweiterte AEM-Benutzeroberfläche | Erweiterungspunkt |
 | ------------------------ | --------------------- | 
 | [Inhaltsfragment-Konsole](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/?lang=de) | [Rasterspalten](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/) |
 
 ## Beispielerweiterung
 
-Im folgenden Beispiel wird eine benutzerdefinierte Spalte erstellt. `Age` , das das Alter des Inhaltsfragments im für Menschen lesbaren Format anzeigt. Das Alter wird ab dem letzten Änderungsdatum des Inhaltsfragments berechnet.
+Im folgenden Beispiel wird die benutzerdefinierte Spalte `Age` erstellt, die das Alter des Inhaltsfragments in einem lesbaren Format anzeigt. Das Alter wird ab dem letzten Änderungsdatum des Inhaltsfragments berechnet.
 
-Der Code zeigt, wie die Metadaten des Inhaltsfragments in der Registrierungsdatei der Erweiterung abgerufen werden können und wie der JSON-Inhalt des Inhaltsfragments transformiert werden kann.
+Der Code zeigt an, wie die Metadaten des Inhaltsfragments in der Registrierungsdatei der Erweiterung abgerufen werden können und wie der JSON-Inhalt des Inhaltsfragments transformiert und exportiert werden kann.
 
-In diesem Beispiel wird die [Luxon](https://moment.github.io/luxon/) Bibliothek zur Berechnung des Alters des Inhaltsfragments, installiert über `npm i luxon`.
+In diesem Beispiel wird die [Luxon](https://moment.github.io/luxon/)-Bibliothek zur Berechnung des Inhaltsfragmentalters über `npm i luxon` installiert.
 
 ### Registrierung der Erweiterung
 
-`ExtensionRegistration.js`, der der Route index.html zugeordnet ist, ist der Einstiegspunkt für die AEM Erweiterung und definiert:
+`ExtensionRegistration.js`, die der Route „index.html“ zugeordnet ist, ist der Einstiegspunkt für die AEM-Erweiterung und definiert Folgendes:
 
-+ Der Speicherort der Erweiterung injiziert sich selbst (`contentFragmentGrid`) im AEM Authoring-Erlebnis
-+ Die Definition der benutzerdefinierten Spalte im `getColumns()` function
-+ Die Werte für die einzelnen benutzerdefinierten Spalten nach Zeile
++ Speicherort der Erweiterung, der sich selbst (`contentFragmentGrid`) in das AEM-Authoring-Erlebnis einfügt
++ Definition der benutzerdefinierten Spalte in der `getColumns()`-Funktion
++ Werte für die einzelnen benutzerdefinierten Spalten nach Zeile
 
 ```javascript
 import { generatePath } from "react-router";
@@ -147,7 +147,7 @@ export default ExtensionRegistration;
 
 #### Inhaltsfragmentdaten
 
-Die `render(..)` -Methode in `getColumns()` wird ein Array von Fragmenten übergeben. Jedes Objekt im Array stellt eine Zeile im Raster dar und enthält die folgenden Metadaten zum Inhaltsfragment. Diese Metadaten können für beliebte benutzerdefinierte Spalten im Raster verwendet werden.
+Der Methode `render(..)` in `getColumns()` wird ein Array an Fragmenten weitergegeben. Jedes Objekt im Array stellt eine Zeile im Raster dar und enthält die folgenden Metadaten zum Inhaltsfragment. Diese Metadaten können für beliebte benutzerdefinierte Spalten im Raster verwendet werden.
 
 
 ```javascript
@@ -159,7 +159,7 @@ render: async function (fragments) {
 }
 ```
 
-Beispiel für ein Inhaltsfragment-JSON, das als Element der `fragments` -Parameter in der `render(..)` -Methode.
+Beispiel für ein Inhaltsfragment-JSON, das als Element des `fragments`-Parameters in der Methode `render(..)` verfügbar ist:
 
 ```json
 {
@@ -202,13 +202,13 @@ Beispiel für ein Inhaltsfragment-JSON, das als Element der `fragments` -Paramet
 }
 ```
 
-Wenn zum Ausfüllen der benutzerdefinierten Spalte andere Daten erforderlich sind, können HTTP-Anfragen an AEM Autor gesendet werden, um die Daten abzurufen.
+Wenn zum Auffüllen der benutzerdefinierten Spalte andere Daten erforderlich sind, können HTTP-Anfragen an AEM Author gesendet werden, um die Daten abzurufen.
 
 >[!IMPORTANT]
 >
-> Stellen Sie sicher, dass die AEM-Autoreninstanz so konfiguriert ist, dass [Cross-Origin-Anforderungen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) aus den Quellen, in denen die AppBuilder-App ausgeführt wird. Zulässige Ursprünge umfassen `https://localhost:9080`, der AppBuilder-Staging-Herkunft und der AppBuilder-Produktionsursprung.
+> Stellen Sie sicher, dass die AEM-Autoreninstanz so konfiguriert ist, dass [ursprungsübergreifende Anfragen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=de) von den Ursprüngen zulässig sind, bei denen die AppBuilder-App ausgeführt wird. Zulässige Ursprünge umfassen `https://localhost:9080`, den Ursprung „AppBuilder-Staging“ und den Ursprung „AppBuilder-Produktion“.
 >
-> Alternativ kann die Erweiterung eine benutzerdefinierte [AppBuilder-Aktion](../../runtime-action.md) , das die Anfrage an AEM -Autor im Namen der Erweiterung sendet.
+> Alternativ kann die Erweiterung eine benutzerdefinierte [AppBuilder-Aktion](../../runtime-action.md) aufrufen, die die Anfrage an die AEM-Autoreninstanz im Namen der Erweiterung stellt.
 
 
 ```javascript
@@ -225,9 +225,9 @@ const response = await fetch(`${context.aemHost}${fragment.id.slice('/content/da
 
 #### Spaltendefinition
 
-Das Ergebnis der render-Methode ist ein JavaScript-Objekt, dessen Schlüssel der Pfad des Inhaltsfragments (oder der `fragment.id`) und der Wert der Wert ist, der in der Spalte angezeigt werden soll.
+Das Ergebnis der Render-Methode ist ein JavaScript-Objekt, dessen Schlüssel der Pfad des Inhaltsfragments (oder `fragment.id`) und der Wert der in der Spalte anzuzeigende Wert ist.
 
-Die Ergebnisse dieser Erweiterung beispielsweise für die `age` -Spalte sind:
+Die Ergebnisse dieser Erweiterung für die Spalte `age` sind beispielsweise:
 
 ```json
 {

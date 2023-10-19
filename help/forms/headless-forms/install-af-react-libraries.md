@@ -1,5 +1,5 @@
 ---
-title: Installieren Sie die erforderlichen React-Bibliotheken für das adaptive Formular
+title: Installieren der erforderlichen React-Bibliotheken für adaptive Formulare
 description: Hinzufügen der erforderlichen Abhängigkeiten zu Ihrem React-Projekt
 feature: Adaptive Forms
 version: 6.5
@@ -11,18 +11,18 @@ exl-id: 0ed44016-d52a-4980-a0b1-06da149c3cb1
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '209'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # Installieren der erforderlichen Abhängigkeiten
 
-Installieren Sie die folgenden Abhängigkeiten in Ihrem React-Projekt, um Headless-adaptive Formulare in Ihrem React-Projekt zu verwenden
+Installieren Sie die folgenden Abhängigkeiten in Ihrem React-Projekt, um adaptive Headless-Formulare in Ihrem React-Projekt zu verwenden
 
 * @aemforms/af-react-components
 * @aemforms/af-react-renderer
 
-Aktualisieren Sie package.json, um die folgenden Abhängigkeiten einzuschließen. Zum Zeitpunkt des Schreibens war 0.22.41 die aktuelle Version
+Aktualisieren Sie die package.json, um die folgenden Abhängigkeiten einzuschließen. Zum Zeitpunkt des Schreibens war 0.22.41 die aktuelle Version
 
 ```json
 "@aemforms/af-react-components": "^0.22.41",
@@ -31,11 +31,11 @@ Aktualisieren Sie package.json, um die folgenden Abhängigkeiten einzuschließen
 
 >[!NOTE]
 >
->Die Dropdown-Liste und das Kartenlayout in diesem Tutorial wurden mithilfe von [Material UI Library](https://mui.com/). Sie müssen die entsprechenden Material UI-Pakete herunterladen, damit der Code auf Ihrem System funktioniert.
+>Die Dropdown-Liste und das Kartenlayout in diesem Tutorial wurden mithilfe der [Material-Benutzeroberflächen-Bibliothek](https://mui.com/) erstellt. Sie müssen die entsprechenden Material-Benutzeroberfläche-Pakete herunterladen, damit der Code auf Ihrem System funktioniert.
 
-## Proxy einrichten
+## Einrichten des Proxy
 
-Cross-Origin Resource Sharing (CORS) ist ein Sicherheitsmechanismus, der Webbrowser daran hindert, Anforderungen an eine andere Domäne als die zu stellen, auf der die App gehostet wird. CORS-Fehler können auftreten, wenn Sie versuchen, Daten von einer API abzurufen, die auf einer anderen Domäne gehostet wird. Wenn Sie einen Proxy einrichten, können Sie CORS-Einschränkungen umgehen und über Ihre React-App Anfragen an die API richten. Ich habe den folgenden Code in einer Datei namens setUpProxy.js im Ordner src verwendet. **Vergewissern Sie sich, dass Sie das Ziel so ändern, dass es auf Ihre Veröffentlichungsinstanz verweist.**
+Cross-Origin Resource Sharing (CORS) ist ein Sicherheitsmechanismus, der Webbrowser daran hindert, Anfragen an eine andere Domain als die zu stellen, auf der die App gehostet wird. CORS-Fehler können auftreten, wenn Sie versuchen, Daten von einer API abzurufen, die auf einer anderen Domäne gehostet wird. Indem Sie einen Proxy einrichten, können Sie CORS-Einschränkungen umgehen und über Ihre React-App Anfragen an die API richten. Ich habe den folgenden Code in einer Datei namens setUpProxy.js im src-Ordner verwendet. **Vergewissern Sie sich, dass Sie das Ziel so ändern, dass es auf Ihre Veröffentlichungsinstanz verweist.**
 
 ```
 const { createProxyMiddleware } = require('http-proxy-middleware');
@@ -55,7 +55,7 @@ module.exports = function(app) {
 };
 ```
 
-Außerdem müssen Sie die **http-proxy-middleware** -Modul zu Ihrem Projekt hinzufügen.
+Außerdem müssen Sie das **http-proxy-middleware**-Modul installieren und zu Ihrem Projekt hinzufügen.
 
 ## Nächste Schritte
 

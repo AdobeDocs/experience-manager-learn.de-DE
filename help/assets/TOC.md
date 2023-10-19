@@ -10,7 +10,7 @@ team: TM
 source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
 workflow-type: tm+mt
 source-wordcount: '401'
-ht-degree: 95%
+ht-degree: 99%
 
 ---
 
@@ -81,7 +81,7 @@ ht-degree: 95%
       + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [Asset-Freigabe-Commons auf lokalem AEM einrichten](./sharing/asset-share-commons-technical-video-setup.md)
       + [Themenerstellung mit Asset-Freigabe-Commons](./sharing/asset-share-commons-feature-video-theming.md)
-      + [Asset Share Commons Asset-Kits](./sharing/asset-share/asset-share-commons-asset-kits.md)
+      + [Asset Share Commons-Asset-Kits](./sharing/asset-share/asset-share-commons-asset-kits.md)
    + [Connected Assets](./sharing/connected-assets.md)
 
 + Integration mit kreativen Workflows{#creative-workflows}
@@ -111,7 +111,7 @@ ht-degree: 95%
    + [Übersicht über Dynamic Media](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic Desktop-Anwendung](dynamic-media/dynamic-media-classic-desktop-application.md)
    + Bilder {#images}
-      + [Dynamic Media-Schnappschuss](dynamic-media/dynamic-media-snapshot.md)
+      + [Dynamic Media Snapshot](dynamic-media/dynamic-media-snapshot.md)
       + [Smartes Zuschneiden](dynamic-media/smart-crop-feature-video-use.md)
       + [Scharfzeichnen von Bildern](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [Farbmanagement](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
@@ -120,7 +120,7 @@ ht-degree: 95%
       + [Videoplayer](dynamic-media/dynamic-media-video-player-feature-video-use.md)
       + [360-Grad-Video](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
       + [Benutzerdefinierte Videominiaturen](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
-      + [Dynamic Media Smart Crop Video](dynamic-media/dynamic-media-smart-crop-video.md)
+      + [Video zum smarten Zuschneiden in Dynamic Media](dynamic-media/dynamic-media-smart-crop-video.md)
    + Viewer {#viewers}
       + [Viewer](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
       + [Panorama- und Vertikalbild-Viewer](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)

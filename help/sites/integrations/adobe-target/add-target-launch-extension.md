@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen der Target-Erweiterung zu einer Launch-Eigenschaft
+title: Hinzufügen der Target-Erweiterung zur Launch-Eigenschaft
 description: Erfahren Sie, wie Sie die Adobe Target-Erweiterung zu einer Adobe Experience Platform Launch-Eigenschaft hinzufügen.
 topics: integrations, administration, development
 audience: administrator, developer
@@ -18,15 +18,15 @@ exl-id: aa48ffef-1105-4d0d-b4b4-12ac5d2eea23
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
 source-wordcount: '115'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
-# Hinzufügen der Target-Erweiterung zu einer Launch-Eigenschaft {#adobe-target-extension}
+# Hinzufügen der Target-Erweiterung zur Launch-Eigenschaft {#adobe-target-extension}
 
-Um diesem Video zu folgen, müssen Sie bereits [Integrierte Experience Platform Launch mit AEM](../experience-platform/data-collection/tags/overview.md).
+Um diesem Video zu folgen, müssen Sie [Experience Platform Launch bereits in AEM integriert](../experience-platform/data-collection/tags/overview.md) haben.
 
-Erfahren Sie, wie Sie Adobe Target mithilfe von Experience Platform Launch auf Ihrer AEM Website aktivieren.
+Erfahren Sie, wie Sie Adobe Target mithilfe von Experience Platform Launch für Ihre AEM-Website aktivieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/41247?quality=12&learn=on)
 
@@ -36,6 +36,6 @@ Erfahren Sie, wie Sie Adobe Target mithilfe von Experience Platform Launch auf I
 
 ## Unterstützende Links
 
-+ [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-+ [Adobe Experience Cloud Debugger - Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
-+ [Einführung in den Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
++ [Adobe Experience Cloud Debugger – Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
++ [Adobe Experience Cloud Debugger – Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
++ [Einführung in Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=de)

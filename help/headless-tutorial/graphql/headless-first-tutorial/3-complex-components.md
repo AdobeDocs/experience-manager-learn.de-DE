@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer komplexen Bildlisten-Komponente - AEM ersten Tutorial ohne Headless
+title: Erstellen einer komplexen Bildlistenkomponente – erstes Tutorial zu AEM Headless
 description: Erfahren Sie, wie Sie mit Inhaltsfragmenten, Inhaltsverweisen und Bildern arbeiten.
 version: Cloud Service
 feature: Content Fragments, GraphQL API
@@ -14,35 +14,35 @@ exl-id: ad06b0f3-afa7-4661-aa66-0674d2e6bb43
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '590'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # Komplexe Komponente erstellen
 
-Willkommen zu diesem Tutorial-Kapitel, in dem wir die Erstellung einer komplexen Bildlisten-Komponente untersuchen, die Inhaltsfragmente, verschachtelte Inhaltsfragmentverweise und referenzierte Bild-Assets rendert. Wir werden einen Schritt weiter gehen, indem wir die React-App mit dem universellen Editor bearbeitbar machen.
+Willkommen bei diesem Tutorial-Kapitel, in dem wir die Erstellung einer komplexen Bildlistenkomponente untersuchen, die Inhaltsfragmente, verschachtelte Inhaltsfragmentverweise und referenzierte Bild-Assets rendert. Wir werden einen Schritt weiter gehen, indem wir die React-Anwendung mit dem universellen Editor bearbeitbar machen.
 
 Inhaltsfragmente in Adobe Experience Manager (AEM) bieten einen strukturierten Ansatz für die Verwaltung von Inhalten. Wir nutzen Inhaltsfragmente, um unsere Bildlisten-Komponente zu füllen, verschachtelte Verweise zu verarbeiten und referenzierte Bild-Assets anzuzeigen.
 
-In diesem Tutorial führen wir Sie durch das Erstellen der Bildlisten-Komponente, das Verarbeiten verschachtelter Verweise, das Rendern referenzierter Bild-Assets und die Integration des universellen Editors. Sie erfahren, wie Sie Abhängigkeiten einrichten, die Komponentenstruktur entwerfen, Inhaltsfragmente abrufen und analysieren und die App mit dem universellen Editor bearbeitbar machen.
+In diesem Tutorial führen wir Sie durch das Erstellen der Bildlistenkomponente, das Verarbeiten verschachtelter Verweise, das Rendern referenzierter Bild-Assets und die Integration des universellen Editors. Sie erfahren, wie Sie Abhängigkeiten einrichten, die Komponentenstruktur entwerfen, Inhaltsfragmente abrufen und analysieren und die Anwendung mit dem universellen Editor bearbeitbar machen.
 
-Am Ende dieses Tutorial-Kapitels verfügen Sie über eine voll funktionsfähige und bearbeitbare Bildlisten-Komponente. Sie werden über die Kenntnisse und Fertigkeiten verfügen, mit denen Sie dynamische Komponenten in Ihrer React-App erstellen und so die Inhaltserstellung mit dem universellen Editor verbessern können. Beginnen wir mit dem Erstellen Ihrer bearbeitbaren Bildlisten-Komponente!
+Am Ende dieses Tutorial-Kapitels verfügen Sie über eine voll funktionsfähige und bearbeitbare Bildlistenkomponente. Sie werden über die Kenntnisse und Fertigkeiten verfügen, mit denen Sie dynamische Komponenten in Ihrer React-Anwendung erstellen und so die Inhaltserstellung mit dem universellen Editor verbessern können. Beginnen wir mit dem Erstellen Ihrer bearbeitbaren Bildlisten-Komponente.
 
 ## Erstellen einer Bildliste
 
-1. Jetzt müssen wir einige Angebotsfragmente und eine Bildlistenkomponente erstellen.  Navigieren Sie zur Inhaltsfragmentkonsole.
+1. Wir werden nun einige Angebotsfragmente und eine Bildlistenkomponente erstellen. Navigieren Sie zur Inhaltsfragement-Konsole.
 
    ![create-imagelist-fragment](./assets/3/create-imagelist-fragment.png)
 
-   Wir möchten ein Fragment des Typs `imagelist` (Modell ist `imagelist`) und wir geben ihm den Titel `imagelist`.
+   Wir wollen ein Fragment vom Typ `imagelist` erstellen (Modell ist `imagelist`) und ihm den Titel `imagelist` geben.
 
-   Im Inhaltsfragment-Editor können wir ein Fragment auswählen, um es einzuschließen oder zu erstellen.  Wählen Sie Fragment erstellen aus.
+   Im Inhaltsfragmenteditor können wir ein Fragment auswählen, um es einzuschließen oder um ein Fragment zu erstellen. Wählen Sie „Fragment erstellen“ aus.
 
-   Unser Modelltyp ist Bildliste.  Geben Sie dem Fragment einen Titel und einen Namen.
+   Unser Modelltyp ist „Bildliste“. Geben Sie dem Fragment einen Titel und einen Namen.
 
-1. Da es sich bei einer Bildliste um ein Fragment vom Typ Container handelt, das einen Verweis auf andere Fragmente enthält, können neue Angebote direkt über den Editor erstellt werden.  Erstellen Sie ein Angebotsfragment sowie eine Include- und Bildbeschreibung und einen Artikel.  Sie können Text von unten ausschneiden und einfügen.  Wir verwenden den Titel des Fragments als Titel der Karte.
+1. Da es sich bei einer Bildliste um ein Fragment vom Typ „Container“ handelt, das einen Verweis auf andere Fragmente enthält, können neue Angebote direkt über den Editor erstellt werden. Erstellen Sie ein Angebotsfragment und schließen Sie eine Bildbeschreibung und einen Artikel ein. Sie können Text von unten ausschneiden und einfügen. Wir verwenden den Titel des Fragments als Titel der Karte.
 
-   __Artikel1__
+   __Artikel 1__
 
    _Titel_
 
@@ -190,7 +190,7 @@ Am Ende dieses Tutorial-Kapitels verfügen Sie über eine voll funktionsfähige 
    Eu facilisis sed odio morbi quis. Consequat semper viverra nam libero justo laoreet sit amet. Eget mi proin sed libero enim sed faucibus. Vitae tempus quam pellentesque nec nam aliquam sem. Justo donec enim diam vulputate ut pharetra sit. Risus sed vulputate odio ut enim blandit volutpat maecenas volutpat. Mauris pellentesque pulvinar pellentesque habitant morbi. Iaculis at erat pellentesque adipiscing. Libero id faucibus nisl tincidunt eget nullam non nisi est. Interdum consectetur libero id faucibus nisl tincidunt. Volutpat odio facilisis mauris sit amet massa. Tristique senectus et netus et malesuada fames ac turpis egestas. Leo vel orci porta non pulvinar neque laoreet suspendisse interdum. Sapien et ligula ullamcorper malesuada proin libero. Interdum consectetur libero id faucibus nisl tincidunt.
    ```
 
-1. Kehren wir zum Abfrageeditor zurück und rufen diese neue Komponente ab.  Beachten Sie, dass wir auf die `OfferModel` in unserer Abfrage und den Metadaten, die wir für den Titel der Karte verwenden werden.
+1. Kehren wir zum Abfrageeditor zurück und rufen diese neue Komponente ab. Beachten Sie, dass wir in unserer Abfrage und in den Metadaten, die wir für den Titel der Karte verwenden werden, auf `OfferModel` verweisen.
 
    ```graphql
    query imageList {
@@ -226,13 +226,13 @@ Am Ende dieses Tutorial-Kapitels verfügen Sie über eine voll funktionsfähige 
    }
    ```
 
-1. Verbinden Sie das jetzt mit unserer App.  In unserem `home.js`, werden wir unsere neue Abfrage referenzieren. Oben `useEffect()` werden wir `list` und `setList`.
+1. Verbinden Sie dies jetzt mit der Anwendung. In der `home.js` verweisen wir auf unsere neue Abfrage. Über `useEffect()` legen wir `list` und `setList` fest.
 
    ```javascript
    const [list, setList] = useState({});
    ```
 
-   Innerhalb `useEffect()` eine neue Anfrage für die imagelist-Abfrage.
+   Innerhalb `useEffect()` eine neue Anfrage für die Bildlistenabfrage.
 
    ```javascript
    sdk.runPersistedQuery('pure-headless/imagelist')
@@ -246,13 +246,13 @@ Am Ende dieses Tutorial-Kapitels verfügen Sie über eine voll funktionsfähige 
    });
    ```
 
-   Und nun fügen wir das zum DOM unserer App hinzu.
+   Und nun fügen wir dies zum DOM unserer Anwendung hinzu.
 
    ```javascript
    <div>{list.cards && <ImageList content={list.cards} />}</div>
    ```
 
-   Sehen wir uns unsere imagelistische Komponente an.  Innerhalb der Vorstellungsliste durchlaufen wir jedes Angebot.
+   Sehen wir uns unsere Bildlistenkomponente an. Innerhalb der Bildliste durchlaufen wir jedes Angebot in einer Schleife.
 
    ```javascript
    {content.items && content.items.map((items) => (
@@ -279,7 +279,7 @@ Am Ende dieses Tutorial-Kapitels verfügen Sie über eine voll funktionsfähige 
    };
    ```
 
-   Beachten Sie außerdem, dass wir auf eine Bildkomponente verweisen und sie an eine dynamische URL übergeben.
+   Beachten Sie außerdem, dass wir auf eine Bildkomponente verweisen und sie ihr eine dynamische URL übergeben.
 
    Innerhalb der Bildkomponente verwenden wir die dynamische URL, um einen Quellsatz mit mehreren URLs zu erstellen.
 
@@ -294,7 +294,7 @@ Am Ende dieses Tutorial-Kapitels verfügen Sie über eine voll funktionsfähige 
 
 ## Aktivieren des universellen Editors
 
-1. Hinzufügen `<meta />` in die App.  Öffnen `App.js` und fügen Sie den Import am Anfang der Datei ein.
+1. Fügen Sie `<meta />` zur App hinzu. Öffnen Sie `App.js` und fügen Sie den Import am Anfang der Datei ein.
 
    ```javascript
    import { Helmet } from 'react-helmet';
@@ -310,13 +310,13 @@ Am Ende dieses Tutorial-Kapitels verfügen Sie über eine voll funktionsfähige 
 
    >[!TIP]
    >
-   > Wir verwenden die Helmet-Bibliothek, um diese Dynamik basierend auf der `.env` -Datei, Sie können dies jedoch in der `index.html`.
+   > Wir verwenden die Helmet-Bibliothek, um das basierend auf der `.env`-Datei dynamisch zu machen, Sie können dies jedoch auch in die `index.html` hartcodieren.
 
 1. Lassen Sie uns nun die Karte aktualisieren, um das Fragment und den Datentyp für die Bearbeitung jeder Karte zu identifizieren.
 
    In `<div className='card' key={card._path}>`
 
-   add
+   fügen Sie Folgendes hinzu:
 
    ```javascript
    itemID={`urn:aemconnection:${card._path}/jcr:content/data/master`} itemfilter='cf' itemType='reference' itemScope
@@ -330,13 +330,13 @@ Am Ende dieses Tutorial-Kapitels verfügen Sie über eine voll funktionsfähige 
 
 1. Ermitteln Sie nun, was bearbeitbar ist.
 
-   In `<h3 />` hinzufügen:
+   Fügen sie zu `<h3 />` hinzu:
 
    ```javascript
    itemProp="_metadata" itemType="text"
    ```
 
-   In unserem `<div />` hinzufügen:
+   Fügen Sie zu unserer `<div />` hinzu:
 
    ```javascript
    itemProp="description" itemType="richtext"
@@ -361,7 +361,7 @@ Am Ende dieses Tutorial-Kapitels verfügen Sie über eine voll funktionsfähige 
    };
    ```
 
-Endcode für `home.js`:
+Endgültiger Code für `home.js`:
 
 ```javascript
 import React, { useContext, useEffect, useState } from 'react';
@@ -421,4 +421,4 @@ export default Home;
 
 ## Herzlichen Glückwunsch!
 
-Sie haben erfolgreich ein AEM Headless-Erlebnis erstellt, das vollständig von AEM Headless-APIs unterstützt wird und mit dem universellen Editor bearbeitet werden kann.
+Sie haben erfolgreich ein AEM Headless-Erlebnis erstellt, das vollständig auf AEM Headless-APIs basiert und mit dem universellen Editor bearbeitet werden kann.

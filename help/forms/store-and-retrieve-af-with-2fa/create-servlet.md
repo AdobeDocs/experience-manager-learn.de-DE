@@ -1,6 +1,6 @@
 ---
-title: Servlet erstellen
-description: Erstellen eines Servlets zur Verarbeitung der POST-Anforderungen zum Speichern der Formulardaten
+title: Erstellen eines Servlets
+description: Erstellen eines Servlets zur Verarbeitung der POST-Anfragen zum Speichern der Formulardaten
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -13,15 +13,15 @@ exl-id: a24ea445-3997-4324-99c4-926b17c8d2ac
 source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
 workflow-type: tm+mt
 source-wordcount: '88'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Servlet erstellen
+# Erstellen eines Servlets
 
-Der nächste Schritt besteht darin, ein Servlet zu erstellen, das die entsprechenden Methoden unseres benutzerdefinierten OSGi-Dienstes aufruft. Das Servlet hat Zugriff auf die Daten des adaptiven Formulars, Dateianlagen-Informationen. Das Servlet gibt eine eindeutige Anwendungs-ID zurück, die zum Abrufen des teilweise ausgefüllten adaptiven Formulars verwendet werden kann.
+Der nächste Schritt besteht darin, ein Servlet zu erstellen, das die entsprechenden Methoden unseres benutzerdefinierten OSGi-Dienstes aufruft. Das Servlet hat Zugriff auf die Daten des adaptiven Formulars und auf Informationen zu Dateianhängen.  Das Servlet gibt eine eindeutige Anwendungs-ID zurück, die zum Abrufen des teilweise ausgefüllten adaptiven Formulars verwendet werden kann.
 
-Dieses Servlet wird aufgerufen, wenn der Benutzer im adaptiven Formular auf die Schaltfläche Speichern und Beenden klickt
+Dieses Servlet wird aufgerufen, wenn die Benutzerin bzw. der Benutzer im adaptiven Formular auf die Schaltfläche „Speichern und Beenden“ klickt
 
 ```java
 package saveandresume.core.servlets;
@@ -81,4 +81,4 @@ public class StoreDataInDBWithAttachmentsInfo extends SlingAllMethodsServlet {
 
 ## Nächste Schritte
 
-[Formular mit gespeicherten Formulardaten wiedergeben](./retrieve-saved-form.md)
+[Rendern eines Formulars mit gespeicherten Formulardaten](./retrieve-saved-form.md)

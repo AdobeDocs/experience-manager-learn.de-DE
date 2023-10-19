@@ -15,7 +15,7 @@ exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
 source-git-commit: 3e4960bf2d243e33fb9f36fd3fbb45f57260229a
 workflow-type: tm+mt
 source-wordcount: '990'
-ht-degree: 97%
+ht-degree: 98%
 
 ---
 
@@ -31,7 +31,7 @@ Sie finden den [Quell-Code auf GitHub](https://github.com/adobe/aem-guides-wknd-
 
 Folgende Tools sollten lokal installiert werden:
 
-+ [Xcode](https://developer.apple.com/xcode/) (macOS erforderlich)
++ [Xcode](https://developer.apple.com/xcode/) (erfordert macOS)
 + [Git](https://git-scm.com/)
 
 ## AEM-Anforderungen

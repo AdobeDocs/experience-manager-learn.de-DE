@@ -1,5 +1,5 @@
 ---
-title: Erstellen eines Azure Storage-basierten Formulardatenmodells
+title: Erstellen eines auf Azure Storage basierenden Formulardatenmodells
 description: Integrieren von AEM Forms CS mit Azure Storage mithilfe des Formulardatenmodells
 feature: Adaptive Forms
 type: Documentation
@@ -12,13 +12,13 @@ exl-id: afc0df42-b4fc-4d04-a36e-63e5a9438597
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '82'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Integration mit Azure Storage erstellen
+# Erstellen der Integration mit Azure Storage
 
-Der nächste Schritt besteht darin, die Integration zwischen AEM Forms CS und Azure Storage mithilfe des Formulardatenmodells zu erstellen.
+Der nächste Schritt besteht darin, die Integration zwischen AEM Forms CS und Azure Storage mithilfe des Formulardatenmodells herzustellen.
 Das folgende Video führt Sie durch die Schritte, die zum Erstellen der Integration erforderlich sind.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335385?quality=12&learn=on)

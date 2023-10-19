@@ -1,6 +1,6 @@
 ---
-title: AEM Tipps und Tricks - Cloud Manager-Umgebungstypen
-description: Sehen Sie sich diese Tipps zu den Umgebungstypen von Cloud Manager von AEM Champion und Experte Rakesh Pasupuleti an.
+title: Tipps und Tricks von AEM-Champions – Cloud Manager-Umgebungstypen
+description: Sehen Sie sich diese Tipps zu den Cloud Manager-Umgebungstypen von AEM-Champion und -Experte Rakesh Pasupuleti an.
 version: Cloud Service
 feature: Cloud Manager
 topic: Administration
@@ -13,17 +13,17 @@ exl-id: 66159aac-a5ca-47fb-b374-f0fe5f8e1198
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '104'
-ht-degree: 9%
+ht-degree: 100%
 
 ---
 
-# AEM Tipps und Tricks - Cloud Manager-Umgebungstypen
+# Tipps und Tricks von AEM-Champions – Cloud Manager-Umgebungstypen
 
-Sehen Sie sich diese Tipps von Ihrem technischen Leiter Rakesh Pasupuleti an. Rakesh ist Adobe Experience Manager-Champion und erklärt, wie er die Umgebungstypen von Cloud Manager verstehen kann.
+Sehen Sie sich diese Tipps von Rakesh Pasupuleti an, der wie Sie als technische Führungskraft tätig ist. Rakesh ist Adobe Experience Manager-Champion und erklärt die Umgebungstypen von Cloud Manager.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419297?quality=12&learn=on)
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Umgebungen verwalten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=de) - Dokumentation zum Umweltmanagement in AEM as a Cloud Service
-* [Schnelle Entwicklungsumgebungen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html) - Dokumentation zu RDE in AEM as a Cloud Service
+* [Umgebungen verwalten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=de) – Dokumentation zur Umgebungs-Verwaltung in AEM as a Cloud Service
+* [Schnelle Entwicklungsumgebungen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=de) – Dokumentation zu RDEs in AEM as a Cloud Service

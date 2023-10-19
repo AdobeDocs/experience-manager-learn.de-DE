@@ -1,7 +1,7 @@
 ---
-title: Verwenden von Seitenunterschieden mit AEM Sites
+title: Verwenden der Funktion „Seitenunterschiede“ mit AEM Sites
 seo-title: Using Page Difference with AEM Sites
-description: Die AEM Sites-Funktionen für Seitenunterschiede bieten eine schnelle, farbcodierte Ansicht darüber, welche Inhalte auf einer Seite geändert wurden (Version, Live Copy, Launches, Sprachkopie).
+description: Die AEM Sites-Funktionen „Seitenunterschiede“ bieten eine schnelle, farbcodierte Ansicht des Inhalts, der sich auf einer Seite geändert hat (Version, Live Copy, Launches, Sprachkopie).
 seo-description: AEM Sites' page difference capabilities show provides a quick, color-coded view of what content has changed in a page (version, live copy, launches, language copy).
 topics: authoring
 audience: author, marketer
@@ -19,21 +19,21 @@ exl-id: 4d365957-9a5a-44f8-a117-95c1c0dd757d
 source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
 workflow-type: tm+mt
 source-wordcount: '118'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Verwenden der Funktion &quot;Seitendifferenz&quot; {#using-page-difference-with-aem-sites}
+# Verwenden der Funktion „Seitenunterschiede“ {#using-page-difference-with-aem-sites}
 
 {{edge-delivery-services-and-page-editor}}
 
-Die AEM Sites-Funktionen für Seitenunterschiede bieten eine schnelle, farbcodierte Ansicht darüber, welche Inhalte auf einer Seite geändert wurden (Version, Live Copy, Launches, Sprachkopie).
+Die AEM Sites-Funktionen „Seitenunterschiede“ bieten eine schnelle, farbcodierte Ansicht des Inhalts, der sich auf einer Seite geändert hat (Version, Live Copy, Launches, Sprachkopie).
 
-## Vergleich von Seitenversionen {#comparing-page-versions}
+## Vergleichen von Seitenversionen {#comparing-page-versions}
 
 >[!VIDEO](https://video.tv.adobe.com/v/32152?quality=12&learn=on)
 
-**HTML Änderungen**
+**HTML-Änderungen**
 
 * **Grün**: Neuer Inhalt
 * **Rot**: Entfernter Inhalt
@@ -42,14 +42,14 @@ Die AEM Sites-Funktionen für Seitenunterschiede bieten eine schnelle, farbcodie
 
 * **Grün**: Neue Komponente
 * **Rot**: Entfernte Komponente
-* **Blau**: Modifizierte Komponente
+* **Blau**: Geänderte Komponente
 
 ## Vergleichen von Launch-Seiten {#comparing-launch-pages}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17746?quality=12&learn=on)
 
-Die Funktion &quot;Seitendifferenz&quot;kann auch verwendet werden, um den Unterschied zwischen Blueprints und Live Copies, Blueprints und Sprachkopien zu identifizieren.
+Die Funktion „Seitenunterschiede“ kann auch verwendet werden, um den Unterschied zwischen Blueprints und Live Copys sowie Blueprints und Sprachkopien zu identifizieren.
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Dokumentation zu Seitenvergleich](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html)
+* [Dokumentation zur Funktion „Seitenunterschiede“](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html?lang=de)

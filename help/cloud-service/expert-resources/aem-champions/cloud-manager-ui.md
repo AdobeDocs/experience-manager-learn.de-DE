@@ -1,6 +1,6 @@
 ---
-title: AEM Tipps und Tricks zu Champion - Benutzeroberfläche von Cloud Manager
-description: Sehen Sie sich diese Tipps zur Verwendung der Benutzeroberfläche von Cloud Manager von AEM Champion und Experte Rakesh Pasupuleti an.
+title: Tipps und Tricks von AEM-Champions – Benutzeroberfläche von Cloud Manager
+description: Sehen Sie sich diese Tipps zur Verwendung der Cloud Manager-Benutzeroberfläche vom AEM-Champion und -Experten Rakesh Pasupuleti an.
 version: Cloud Service
 feature: Cloud Manager
 topic: Administration
@@ -13,16 +13,16 @@ exl-id: a89860ed-9ea4-494c-bce9-91ec550361fe
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '87'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# AEM Tipps und Tricks zu Champion - Benutzeroberfläche von Cloud Manager
+# Tipps und Tricks von AEM-Champions – Benutzeroberfläche von Cloud Manager
 
-Sehen Sie sich diese Tipps von Ihrem technischen Leiter Rakesh Pasupuleti an. Rakesh ist Adobe Experience Manager-Champion und erklärt, wie die Benutzeroberfläche von Cloud Manager navigiert und diese versteht.
+Sehen Sie sich diese Tipps von Rakesh Pasupuleti an, der wie Sie als technische Führungskraft tätig ist. Rakesh ist Adobe Experience Manager-Champion und erklärt, wie Sie in der Benutzeroberfläche von Cloud Manager navigieren und diese anwenden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419298?quality=12&learn=on)
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Einführung in Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html) - Dokumentation zur Verwendung von Cloud Manager in AEM as a Cloud Service
+* [Einführung in Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html?lang=de) – Dokumentation zur Verwendung von Cloud Manager in AEM as a Cloud Service

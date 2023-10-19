@@ -1,6 +1,6 @@
 ---
-title: Hinzufügen benutzerdefinierter Schaltflächen zur Rich-Text-Editor (RTE)-Symbolleiste
-description: Erfahren Sie, wie Sie eine benutzerdefinierte Schaltfläche zur Rich-Text-Editor-Symbolleiste (RTE) im AEM Inhaltsfragment-Editor hinzufügen.
+title: Hinzufügen benutzerdefinierter Schaltflächen zur Rich-Text-Editor(RTE)-Symbolleiste
+description: Erfahren Sie, wie Sie eine benutzerdefinierte Schaltfläche zur Rich-Text-Editor(RTE)-Symbolleiste im AEM-Inhaltsfragmenteditor hinzufügen.
 feature: Developer Tools, Content Fragments
 version: Cloud Service
 topic: Development
@@ -14,46 +14,46 @@ exl-id: 6fd93d3b-6d56-43c5-86e6-2e2685deecc9
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
 workflow-type: tm+mt
 source-wordcount: '418'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Hinzufügen benutzerdefinierter Schaltflächen zur Rich-Text-Editor (RTE)-Symbolleiste
+# Hinzufügen benutzerdefinierter Schaltflächen zur Rich-Text-Editor(RTE)-Symbolleiste
 
-Erfahren Sie, wie Sie eine benutzerdefinierte Schaltfläche zur Rich-Text-Editor (RTE)-Symbolleiste im AEM Inhaltsfragment-Editor hinzufügen.
+Erfahren Sie, wie Sie eine benutzerdefinierte Schaltfläche zur Rich-Text-Editor(RTE)-Symbolleiste im AEM-Inhaltsfragmenteditor hinzufügen..
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420768?quality=12&learn=on)
 
-Benutzerdefinierte Schaltflächen können der **RTE-Symbolleiste** im Inhaltsfragment-Editor mit der `rte` Erweiterungspunkt. In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte Schaltfläche namens _Tipp hinzufügen_ in der RTE-Symbolleiste und ändern Sie den Inhalt im RTE.
+Benutzerdefinierte Schaltflächen können der **RTE-Symbolleiste** im Inhaltsfragmenteditor über den Erweiterungspunkt `rte` hinzugefügt werden. In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte Schaltfläche zum _Hinzufügen eines Tipps_ in der RTE-Symbolleiste hinzugefügt und der Inhalt im RTE geändert wird.
 
-Verwenden `rte` des Erweiterungspunkts `getCustomButtons()` -Methode können eine oder mehrere benutzerdefinierte Schaltflächen zum **RTE-Symbolleiste**. Es ist auch möglich, standardmäßige RTE-Schaltflächen hinzuzufügen oder zu entfernen, wie _Kopieren, Einfügen, Fett und Kursiv_ using `getCoreButtons()` und `removeButtons)` -Methoden.
+Über die Methode `getCustomButtons()` des Erweiterungspunkts `rte` ist es möglich, eine oder mehrere benutzerdefinierte Schaltflächen zur **RTE-Symbolleiste** hinzuzufügen. Ebenfalls können standardmäßige RTE-Schaltflächen wie _„Kopieren“, „Einfügen“, „Fett“ und „Kursiv“_ mit der Methode `getCoreButtons()` bzw. `removeButtons)` hinzugefügt oder entfernt werden.
 
-Dieses Beispiel zeigt, wie Sie einen hervorgehobenen Hinweis oder eine QuickInfo mithilfe von benutzerdefinierten _Tipp hinzufügen_ Symbolleiste. Der hervorgehobene Hinweis- oder Tippinhalt hat eine spezielle Formatierung, die über HTML-Elemente und die zugehörigen CSS-Klassen angewendet wird. Der Platzhalterinhalt und der HTML-Code werden mithilfe der `onClick()` Callback-Methode der `getCustomButtons()`.
+Dieses Beispiel zeigt, wie Sie einen hervorgehobenen Hinweis oder einen Tipp mithilfe der benutzerdefinierten Symbolleisten-Schaltfläche zum _Hinzufügen eines Tipps_ einfügen können. Der Inhalt des hervorgehobenen Hinweises oder Tipps hat eine spezielle Formatierung, die über HTML-Elemente und die zugehörigen CSS-Klassen angewendet wird. Der Platzhalterinhalt und der HTML-Code werden mithilfe der `onClick()`-Callback-Methode von `getCustomButtons()` eingefügt.
 
 ## Erweiterungspunkt
 
-Dieses Beispiel erstreckt sich auf den Erweiterungspunkt `rte` , um der RTE-Symbolleiste im Inhaltsfragment-Editor eine benutzerdefinierte Schaltfläche hinzuzufügen.
+Dieses Beispiel erstreckt sich bis zum Erweiterungspunkt `rte`, um der RTE-Symbolleiste im Inhaltsfragmenteditor eine benutzerdefinierte Schaltfläche hinzuzufügen.
 
-| AEM Benutzeroberfläche erweitert | Erweiterungspunkt |
+| Erweiterte AEM-Benutzeroberfläche | Erweiterungspunkt |
 | ------------------------ | --------------------- | 
-| [Inhaltsfragmente-Editor](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Rich-Text-Editor-Symbolleiste](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/) |
+| [Inhaltsfragmenteditor](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Rich-Text-Editor-Symbolleiste](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/) |
 
 ## Beispielerweiterung
 
-Im folgenden Beispiel wird eine _Tipp hinzufügen_ benutzerdefinierte Schaltfläche in der RTE-Symbolleiste. Die Klickaktion fügt den Platzhaltertext an der aktuellen Caret-Position im RTE ein.
+Im folgenden Beispiel wird eine benutzerdefinierte Schaltfläche zum _Hinzufügen eines Tipps_ in der RTE-Symbolleiste erstellt. Die Klickaktion fügt den Platzhaltertext an der aktuellen Caret-Position im RTE ein.
 
 Der Code zeigt, wie Sie die benutzerdefinierte Schaltfläche mit einem Symbol hinzufügen und die Klick-Handler-Funktion registrieren.
 
 ### Registrierung der Erweiterung
 
-`ExtensionRegistration.js`, der der Route index.html zugeordnet ist, ist der Einstiegspunkt für die AEM Erweiterung und definiert:
+`ExtensionRegistration.js`, die der Route „index.html“ zugeordnet ist, ist der Einstiegspunkt für die AEM-Erweiterung und definiert Folgendes:
 
-+ Die Definition der RTE-Symbolleiste in `getCustomButtons()` Funktion mit `id, tooltip and icon` -Attribute.
-+ Der Klick-Handler für die Schaltfläche im `onClick()` -Funktion.
-+ Die Click-Handler-Funktion erhält die `state` -Objekt als Argument verwenden, um den RTE-Inhalt im HTML- oder Textformat abzurufen. In diesem Beispiel wird sie jedoch nicht verwendet.
-+ Die Click-Handler-Funktion gibt ein Anweisungen-Array zurück. Dieses Array hat ein Objekt mit `type` und `value` -Attribute. Um den Inhalt einzufügen, muss die `value` -Attribut-HTML-Codeausschnitt, die `type` -Attribut verwendet die `insertContent`. Wenn es einen Anwendungsfall gibt, um den Inhalt zu ersetzen, verwenden Sie den `replaceContent` Anweisungstyp.
++ Die Definition der RTE-Symbolleisten-Schaltfläche in der Funktion `getCustomButtons()` mit den Attributen `id, tooltip and icon`.
++ Den Klick-Handler für die Schaltfläche in der Funktion `onClick()`.
++ Die Klick-Handler-Funktion erhält das `state`-Objekt als Argument, um den RTE-Inhalt im HTML- oder Textformat abzurufen. In diesem Beispiel wird es jedoch nicht verwendet.
++ Die Klick-Handler-Funktion gibt ein Anweisungs-Array zurück. Dieses Array verfügt über ein Objekt mit den Attributen `type` und `value`. Um den Inhalt einzufügen, verwendet das `value`-Attribut ein HTML-Codesnippet und das `type`-Attribut den `insertContent`. Wenn es einen Anwendungsfall gibt, um den Inhalt zu ersetzen, verwenden Sie den Anweisungstyp `replaceContent`.
 
-Die `insertContent` -Wert eine HTML-Zeichenfolge ist, `<div class=\"cmp-contentfragment__element-tip\"><div>TIP</div><div>Add your tip text here...</div></div>`. Die CSS-Klassen `cmp-contentfragment__element-tip` verwendet, um den Wert anzuzeigen, werden nicht im Widget definiert, sondern im Web-Erlebnis implementiert, in dem dieses Inhaltsfragment-Feld angezeigt wird.
+Der Wert von `insertContent` ist eine HTML-Zeichenfolge: `<div class=\"cmp-contentfragment__element-tip\"><div>TIP</div><div>Add your tip text here...</div></div>`. Die zum Anzeigen des Werts verwendeten CSS-Klassen `cmp-contentfragment__element-tip` werden nicht im Widget definiert, sondern in dem Web-Erlebnis implementiert, in dem dieses Inhaltsfragmentfeld angezeigt wird.
 
 
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`

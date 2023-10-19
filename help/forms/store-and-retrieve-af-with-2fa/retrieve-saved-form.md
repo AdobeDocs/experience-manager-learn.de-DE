@@ -13,14 +13,14 @@ exl-id: d722cb9c-6c8a-44de-aaea-fc07a555b864
 source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
 workflow-type: tm+mt
 source-wordcount: '117'
-ht-degree: 1%
+ht-degree: 99%
 
 ---
 
-# Speichern Formular abrufen
+# Abrufen eines gespeicherten Formulars
 
 Der nächste Schritt besteht darin, ein Servlet zu erstellen, das das adaptive Formular mit den gespeicherten Daten und seinen Anhängen rendert.
-Der folgende Servlet-Code wird ausgeführt, nachdem der OTP-Code überprüft wurde. Die mit der eindeutigen Anwendungs-ID verknüpften adaptiven Formulardaten und ihre Dateianhänge werden aus der Datenbank abgerufen. Das Anfrageobjekt wird mit den gespeicherten adaptiven Formulardaten und der Dateianlagenzuordnung gefüllt. Die Anfrage wird dann weitergeleitet, um das Formular &quot;storepwithattachments&quot;vorab mit den Originaldaten und ihren Anlagen auszufüllen.
+Der folgende Servlet-Code wird ausgeführt, nachdem der OTP-Code überprüft wurde. Die mit der eindeutigen Anwendungs-ID verknüpften adaptiven Formulardaten und ihre Dateianhänge werden aus der Datenbank abgerufen. Das Anfrageobjekt wird mit den gespeicherten adaptiven Formulardaten und der Dateianlagenkarte gefüllt. Die Anfrage wird dann weitergeleitet, um das Formular „storeafwithattachments“ vorab mit den Originaldaten und den Anlagen auszufüllen.
 
 ```java
 import java.io.IOException;
@@ -133,4 +133,4 @@ public class SyntheticSlingHttpServletGetRequest extends SlingHttpServletRequest
 
 ## Nächste Schritte
 
-[Client-Bibliothek zum Aufrufen des Servlets zum Speichern von Formulardaten erstellen](./create-client-lib.md)
+[Erstellen einer Client-Bibliothek zum Aufrufen des Servlets zum Speichern von Formulardaten](./create-client-lib.md)
