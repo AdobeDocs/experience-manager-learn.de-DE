@@ -78,5 +78,5 @@ Herunterladen von [Benutzerdefiniertes Client-Bibliotheks-Design](assets/asc-the
 
 ## Zusätzliche Ressourcen{#additional-resources}
 
-* [Versionsdownloads von Asset Share Commons](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
-* [Versionsdownloads von ACS AEM Commons 3.11.0+](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)
+* [Downloads von Asset Share Commons-Veröffentlichungen](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
+* [Versions-Downloads von ACS AEM Commons 3.11.0+](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)
