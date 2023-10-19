@@ -35,7 +35,7 @@ Um dies auf Ihrem Server zu testen, folgen Sie den folgenden Anweisungen
    * Workflow-Modell, das den FDM-Schritt nutzt.
    * Formulardatenmodell, das im FDM-Schritt verwendet wird.
    * Adaptives Formular, um den Workflow bei der Übermittlung auszulösen.
-* Öffnen Sie [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Füllen Sie die Details aus und senden Sie es. Bei der Übermittlung des Formulars wird der [loanapplication-Workflow](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) ausgelöst.
+* Öffnen Sie [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Füllen Sie die Details aus und senden Sie es. Bei der Übermittlung des Formulars wird [loanapplication workflow](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html) ausgelöst.
 
 ![ Workflow ](assets/invokefdm651.PNG).
 Der Workflow nutzt die Komponente „ODER-Teilung“, um die Anwendung an Admins weiterzuleiten, wenn die Kreditwürdigkeit über 500 liegt. Wenn der Bonitätswert unter 500 liegt, wird der Antrag an Cavery weitergeleitet.
