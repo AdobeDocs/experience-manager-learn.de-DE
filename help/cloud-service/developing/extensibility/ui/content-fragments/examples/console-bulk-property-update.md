@@ -38,11 +38,11 @@ Der Funktionsfluss der Beispielerweiterung lautet wie folgt:
 
 ## Erweiterungspunkt
 
-Dieses Beispiel erstreckt sich auf den Erweiterungspunkt `actionBar`, um der Inhaltsfragmentkonsole eine benutzerdefinierte Schaltfläche hinzuzufügen.
+Dieses Beispiel erstreckt sich auf den Erweiterungspunkt `actionBar`, um der Inhaltsfragment-Konsole eine benutzerdefinierte Schaltfläche hinzuzufügen.
 
 | Erweiterte AEM-Benutzeroberfläche | Erweiterungspunkt |
 | ------------------------ | --------------------- | 
-| [Inhaltsfragmentkonsole](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [Aktionsleiste](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) |
+| [Inhaltsfragment-Konsole](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [Aktionsleiste](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) |
 
 
 ## Beispielerweiterung
@@ -59,25 +59,25 @@ In diesem Beispiel werden ein vorhandenes Adobe Developer Console-Projekt und di
       + Geben Sie die Bezeichnung für die Schaltfläche an: `Bulk property update`
       + Müssen Sie ein Modal für die Schaltfläche anzeigen? `y`
    + `Add server-side handler`
-      + Mit Adobe I/O Runtime können Sie bei Bedarf Server-losen Code aufrufen. Wie möchten Sie diese Aktion benennen?: `generic`
+      + Mit Adobe I/O Runtime können Sie bei Bedarf Server-losen Code aufrufen. Wie möchten Sie diese Aktion benennen? `generic`
 
 Die generierte App-Entwicklungs-Erweiterungs-App wird wie unten beschrieben aktualisiert.
 
 ### App-Routen{#app-routes}
 
-Die `src/aem-cf-console-admin-1/web-src/src/components/App.js` enthält den [React-Router](https://reactrouter.com/de/main).
+`src/aem-cf-console-admin-1/web-src/src/components/App.js` umfasst den [React-Router](https://reactrouter.com/de/main).
 
 Es gibt zwei logische Routengruppen:
 
-1. Die erste Route ordnet Anfragen der `index.html` zu, die die React-Komponente aufruft, die für die [Erweiterungsregistrierung](#extension-registration) verantwortlich ist.
+1. Die erste Route ordnet Anfragen der Datei `index.html` zu, die die für die [Erweiterungsregistrierung](#extension-registration) zuständige React-Komponente aufruft.
 
    ```javascript
    <Route index element={<ExtensionRegistration />} />
    ```
 
-1. Der zweite Satz von Routen ordnet URLs React-Komponenten zu, die den Inhalt des Modals der Erweiterung rendern. Der `:selection`-Parameter steht für einen durch Trennzeichen getrennten Listeninhaltsfragmentpfad.
+1. Die zweite Routengruppe ordnet URLs React-Komponenten zu, die den Inhalt des Modals der Erweiterung rendern. Der Parameter `:selection` steht für einen durch Trennzeichen getrennten Listen-Inhaltsfragmentpfad.
 
-   Wenn die Erweiterung über mehrere Schaltflächen zum Aufrufen diskreter Aktionen verfügt, wird jede [Erweiterungsregistrierung](#extension-registration) einer der hier definierten Routen zugeordnet.
+   Wenn die Erweiterung über mehrere Schaltflächen zum Aufrufen diskreter Aktionen verfügt, wird jede [Erweiterungsregistrierung](#extension-registration) einer hier definierten Route zugeordnet.
 
    ```javascript
    <Route
@@ -88,11 +88,11 @@ Es gibt zwei logische Routengruppen:
 
 ### Registrierung der Erweiterung
 
-Die der `index.html`-Route zugeordnete `ExtensionRegistration.js` ist der Einstiegspunkt für die AEM-Erweiterung und definiert Folgendes:
+Die Datei `ExtensionRegistration.js`, die der Route `index.html` zugeordnet ist, ist der Einstiegspunkt für die AEM-Erweiterung und definiert Folgendes:
 
-1. Den Speicherort der Erweiterungsschaltfläche, der im AEM Authoring-Erlebnis angezeigt wird (`actionBar` oder `headerMenu`)
-1. Die Definition der Erweiterungsschaltfläche in der `getButton()`-Funktion
-1. Den Klick-Handler für die Schaltfläche in der `onClick()`-Funktion
+1. Der Speicherort der Erweiterungsschaltfläche wird innerhalb des AEM-Authoring-Erlebnisses (`actionBar` oder `headerMenu`) angezeigt.
+1. Definition der Erweiterungsschaltfläche in der `getButton()`-Funktion.
+1. Klick-Handler für die Schaltfläche in der `onClick()`-Funktion.
 
 + `src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -150,7 +150,7 @@ In dieser Beispielanwendung gibt es eine modale React-Komponente (`BulkPropertyU
 1. Das Formular für die stapelweise Aktualisierung einer Eigenschaft, in dem die Benutzenden den Eigenschaftsnamen und den zu aktualisierenden Wert angeben können
 1. Die Antwort des Vorgangs zur stapelweisen Aktualisierung der Eigenschaft mit einer Liste der Inhaltsfragmente, die aktualisiert wurden, und derjenigen, die nicht aktualisiert werden konnten
 
-Wichtig: Jede Interaktion mit AEM über die Erweiterung sollte an eine [AppBuilder Adobe I/O Runtime-Aktion](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) delegiert werden, wobei es sich um einen separaten Server-losen Prozess handelt, der in [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/) abläuft.
+Wichtig: Jede Interaktion mit AEM über die Erweiterung sollte an eine [AppBuilder Adobe I/O Runtime-Aktion](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/?lang=de) delegiert werden, wobei es sich um einen separaten Server-losen Prozess handelt, der in [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/) abläuft.
 Adobe I/O Runtime-Aktionen zur Kommunikation mit AEM dienen dazu, Verbindungsprobleme wegen Cross-Origin Resource Sharing (CORS) zu vermeiden.
 
 Wenn das Formular für die stapelweise Aktualisierung der Eigenschaft gesendet wird, ruft ein benutzerdefinierter `onSubmitHandler()` die Adobe I/O Runtime-Aktion auf und übergibt den aktuellen AEM-Host (Domain) und das AEM-Zugriffs-Token der Benutzenden, wodurch wiederum die [AEM-Inhaltsfragment-API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=de) aufgerufen wird, um die Inhaltsfragmente zu aktualisieren.
