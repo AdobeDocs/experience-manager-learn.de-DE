@@ -64,8 +64,8 @@ Um in CRXDE Lite auf die Konsole „Zugriffssteuerung testen“ zuzugreifen, nav
 
 Die Ergebnisse werden unten angezeigt:
 
-+ __Pfad__ wiederholt den ausgewerteten Pfad.
-+ __Prinzipal__ wiederholt die Person oder Gruppe, für die der Pfad ausgewertet wurde.
++ __Pfad__ wiederholt den ausgewerteten Pfad
++ __Prinzipal__ wiederholt die Person oder Gruppe, für die der Pfad ausgewertet wurde
 + __Prinzipale__ listet alle Prinzipale auf, zu denen der ausgewählte Prinzipal gehört.
    + Dies ist hilfreich, um die transitiven Gruppenmitgliedschaften zu verstehen, die durch Vererbung Berechtigungen ermöglichen können.
 + __Berechtigungen am Pfad__ listet alle JCR-Berechtigungen auf, über die der ausgewählte Prinzipal am ausgewerteten Pfad verfügt.
