@@ -239,6 +239,6 @@ Um zu überprüfen, ob dieses Problem die Ursache für das fehlerhafte Verhalten
 
 Wenn die oben genannten Ansätze zur Fehlerbehebung das Problem nicht beheben, erstellen Sie bitte einen Support-Fall für Adobe über:
 
-+ [Adobe Admin Console](https://adminconsole.adobe.com) > Registerkarte „Support“ > Fall erstellen
++ [Adobe Admin Console](https://adminconsole.adobe.com) > Registerkarte „Support“> Support-Fall erstellen
 
   _Wenn Sie Mitglied mehrerer Adobe-Organisationen sind, stellen Sie sicher, dass im Umschalter „Adobe-Organisationen“ die Adobe-Organisation, die die fehlgeschlagene Pipeline hat, ausgewählt ist, bevor Sie den Fall erstellen._
