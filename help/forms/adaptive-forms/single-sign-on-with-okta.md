@@ -19,15 +19,15 @@ ht-degree: 100%
 
 Der erste Schritt besteht darin, Ihre App im OKTA-Portal zu konfigurieren. Sobald Ihre App von Ihrem OKTA-Admin-Team genehmigt wurde, haben Sie Zugriff auf das IdP-Zertifikat und die Single-Sign-on-URL. Im Folgenden finden Sie die Einstellungen, die normalerweise für die Registrierung neuer Anwendungen verwendet werden.
 
-* **Application Name (Anwendungsname):** Dies ist der Name Ihrer Anwendung. Stellen Sie sicher, dass Sie Ihrer Anwendung einen eindeutigen Namen geben.
-* **SAML Recipient (SAML-Empfänger):** Nach Authentifizierung durch OKTA ist dies die URL, die in Ihrer AEM-Instanz mit der SAML-Antwort zu finden ist. Der SAML-Authentifizierungs-Handler fängt normalerweise alle URLs mit „/ saml_login“ ab. Es empfiehlt sich jedoch, sie nach Ihrem Anwendungsstamm anzuhängen.
-* **SAML Audience (SAML-Zielgruppe)**: Dies ist die Domain-URL Ihrer Anwendung. Verwenden Sie kein Protokoll (http oder https) in der Domain-URL.
-* **SAML Name ID (SAML-Namen-ID):** Wählen Sie in der Dropdown-Liste die E-Mail-Option aus.
-* **Environment (Umgebung)**: Wählen Sie die gewünschte Umgebung.
-* **Attributes (Attribute)**: Dies sind die Attribute, die Sie über die Benutzerin oder den Benutzer in der SAML-Antwort erhalten. Legen Sie diese entsprechend Ihren Anforderungen fest.
+* **Anwendungsname:** Dies ist der Name Ihrer Anwendung. Stellen Sie sicher, dass Sie Ihrer Anwendung einen eindeutigen Namen geben.
+* **SAML-Empfänger:** Nach Authentifizierung durch OKTA ist dies die URL, die in Ihrer AEM-Instanz mit der SAML-Antwort zu finden ist. Der SAML-Authentifizierungs-Handler fängt normalerweise alle URLs mit „/ saml_login“ ab. Es empfiehlt sich jedoch, sie nach Ihrem Anwendungsstamm anzuhängen.
+* **SAML-Zielgruppe**: Dies ist die Domain-URL Ihrer Anwendung. Verwenden Sie kein Protokoll (http oder https) in der Domain-URL.
+* **SAML-Namens-ID:** Wählen Sie in der Dropdown-Liste die E-Mail-Option aus.
+* **Umgebung**: Wählen Sie die gewünschte Umgebung aus.
+* **Attribute**: Dies sind die Attribute, die Sie über die Benutzerin oder den Benutzer in der SAML-Antwort erhalten. Legen Sie diese entsprechend Ihren Anforderungen fest.
 
 
-![OKTA-Anwendung](assets/okta-app-settings-blurred.PNG)
+![okta-application](assets/okta-app-settings-blurred.PNG)
 
 
 ## Hinzufügen des OKTA-Zertifikats (IdP) zum AEM Trust Store
@@ -45,7 +45,7 @@ Merken Sie sich das Kennwort für den Trust Store. Wir benötigen dieses Kennwor
 
 Beim Hinzufügen des Zertifikats zum Trust Store sollten Sie den Zertifikatalias erhalten, wie im Screenshot unten dargestellt. Der Aliasname kann in Ihrem Fall anders sein.
 
-![Zertifikatalias](assets/cert-alias.PNG)
+![Certificate-alias](assets/cert-alias.PNG)
 
 **Notieren Sie sich den Zertifikatalias. Sie benötigen diese Information später.**
 
@@ -57,32 +57,32 @@ Legen Sie die folgenden Eigenschaften fest, wie unten angegeben.
 Die folgenden Schlüsseleigenschaften müssen angegeben werden:
 
 * **Pfad**: Dies ist der Pfad, in dem der Authentifizierungs-Handler ausgelöst wird.
-* **IdP-URL**: Dies ist Ihre von OKTA bereitgestellte IdP-URL.
-* **IDP-Zertifikatalias**: Diesen Alias haben Sie erhalten, als Sie das IdP-Zertifikat zum AEM Trust Store hinzugefügt haben.
+* **IDP-URL**: Dies ist Ihre von OKTA bereitgestellte IDP-URL.
+* **IDP-Zertifikatalias**: Diesen Alias haben Sie erhalten, als Sie das IDP-Zertifikat zum AEM Trust Store hinzugefügt haben.
 * **Entitäts-ID des Dienstanbieters**: Dies ist der Name Ihres AEM-Servers.
 * **Keystore-Kennwort**: Dies ist das von Ihnen verwendete Trust Store-Kennwort.
 * **Standardumleitung**: Dies ist die URL, zu der bei erfolgreicher Authentifizierung umgeleitet wird.
 * **UserID-Attribut**: Dies ist die UID.
-* **Verschlüsselung verwenden**: Deaktivieren Sie diese Option.
-* **CRX-Benutzende automatisch erstellen**: Aktivieren Sie diese Option.
-* **Zu Gruppen hinzufügen**: Aktivieren Sie diese Option.
-* **Standardgruppen**: oktasuers (Dies ist die Gruppe, zu der die Benutzenden hinzugefügt werden. Sie können jede bestehende Gruppe in AEM bereitstellen.)
-* **NamedIDPolicy-Format**: Hier werden Einschränkungen für die Namenskennung angegeben, die zur Darstellung des angeforderten Subjekts verwendet werden soll. Kopieren Sie die folgende hervorgehobene Zeichenfolge und fügen Sie sie ein: **urn:oasis:names:tc:SAML:2.0:nameidformat:emailAddress**
-* **Synchronisierte Attribute**: Dies sind die Attribute, die aus der SAML-Assertion im AEM-Profil gespeichert werden.
+* **Verschlüsselung verwenden**: false.
+* **CRX-Benutzende automatisch erstellen**: true
+* **Zu Gruppen hinzufügen**: true
+* **Standardgruppen**: oktausers (dies ist die Gruppe, zu der die Benutzenden hinzugefügt werden. Sie können jede bestehende Gruppe in AEM bereitstellen.)
+* **NamedIDPolicy**: Hier werden Einschränkungen für die Namenskennung angegeben, die zur Darstellung des angeforderten Betreffs verwendet werden soll. Kopieren Sie die folgende hervorgehobene Zeichenfolge und fügen Sie sie ein: **urn:oasis:names:tc:SAML:2.0:nameidformat:emailAddress**
+* **Synchronisierte Attribute**: Dies sind die Attribute, die aus der SAML-Assertion im AEM-Profil gespeichert werden
 
-![SAML-Authentifizierungs-Handler](assets/saml-authentication-settings-blurred.PNG)
+![saml-authentication-handler](assets/saml-authentication-settings-blurred.PNG)
 
 ### Konfigurieren von Apache Sling Referrer Filter
 
 Navigieren Sie zu [configMgr](http://localhost:4502/system/console/configMgr).
 Suchen und öffnen Sie „Apache Sling Referrer Filter“. Legen Sie die folgenden Eigenschaften fest, wie unten angegeben:
 
-* **Leere zulassen**: Deaktivieren Sie diese Option.
-* **Hosts zulassen**: Dies ist der IdP-Host-Name (in Ihrem Fall also anders).
-* **Regexp-Host zulassen**: Dies ist der IDP-Host-Name (in Ihrem Fall also anders).
+* **Leere zulassen**: false
+* **Hosts zulassen**: Host-Name des IDP (in Ihrem Fall anders)
+* **Regexp-Host zulassen**: Dies ist der IDP-Host-Name (in Ihrem Fall anders)
 Screenshot mit den Sling Referrer Filter-Eigenschaften
 
-![Referrer-Filter](assets/okta-referrer.png)
+![referrer-filter](assets/okta-referrer.png)
 
 #### Konfigurieren der DEBUG-Protokollierung für die OKTA-Integration
 
@@ -92,11 +92,11 @@ Denken Sie daran, diesen Logger in der Staging- und Produktionsumgebung zu entfe
 
 Beim Einrichten der OKTA-Integration in AEM kann es hilfreich sein, DEBUG-Protokolle für den AEM-SAML-Authentifizierungs-Handler zu überprüfen. Um die Protokollebene auf DEBUG festzulegen, erstellen Sie eine neue Sling Logger-Konfiguration über die AEM-OSGi-Web-Konsole.
 **Denken Sie daran, diesen Logger in der Staging- und Produktionsumgebung zu entfernen oder zu deaktivieren, um das „Protokollrauschen“ (Log Noise) zu reduzieren.**
-* Navigieren Sie zu [configMgr](http://localhost:4502/system/console/configMgr).
+* Navigieren Sie zu [configMgr](http://localhost:4502/system/console/configMgr)
 
 * Suchen und öffnen Sie „Apache Sling Logging Logger Configuration“.
 * Erstellen Sie einen Logger mit folgender Konfiguration:
-   * **Protokollebene**: Debug
+   * **Protokollebene**: Debugging
    * **Protokolldatei**: logs/saml.log
    * **Logger**: com.adobe.granite.auth.saml
 * Klicken Sie auf „Speichern“, um Ihre Einstellungen zu speichern.
