@@ -42,11 +42,11 @@ Hinzufügen und Verwenden eines CAPTCHA mit adaptiven Formularen von AEM.
 >Navigieren Sie zur Bundle-ID im Dateisystem in Ihrer AuthAutoreninstanz:
 >
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
-* Kopieren Sie die HMAC- und die Primärdateien.
+>* Kopieren Sie die HMAC- und die Primärdateien.
 >
-Öffnen Sie die [Felix-Web-Konsole](http://localhost:4502/system/console/bundles) in Ihrer Veröffentlichungsinstanz Suchen Sie nach dem Bundle „com.adobe.granite.crypto.file“. Notieren Sie sich die Bundle-ID.
+>Öffnen Sie die [Felix-Web-Konsole](http://localhost:4502/system/console/bundles) in Ihrer Veröffentlichungsinstanz Suchen Sie nach dem Bundle „com.adobe.granite.crypto.file“. Notieren Sie sich die Bundle-ID.
 >
-Navigieren Sie zur Bundle-ID im Dateisystem Ihrer Veröffentlichungsinstanz:
+>Navigieren Sie zur Bundle-ID im Dateisystem Ihrer Veröffentlichungsinstanz:
 >
 * &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
 * Löschen Sie die vorhandenen HMAC- und Primärdateien.
