@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte bei der Entwicklung von AEM Sites – WKND-Tutorial
-description: Neu bei der Entwicklung in AEM? Benötigen Sie einen Auffrischungskurs zu Best Practices? Dann sind Sie hier richtig! Ziel dieses mehrteiligen Tutorials ist es, neuen Entwicklerinnen und Entwicklern beizubringen, wie eine Website in AEM mit den neuesten Standards und Technologien implementiert wird.
+description: Sind Sie neu bei der Entwicklung mit AEM? Benötigen Sie einen Auffrischungskurs zu Best Practices? Dann sind Sie hier richtig! Ziel dieses mehrteiligen Tutorials ist es, Entwicklerinnen und Entwicklern, die gerade mit AEM beginnen, beizubringen, wie sie in AEM eine Website unter Verwendung der neuesten Standards und Technologien implementieren können.
 feature: AEM Project Archetype, Core Components, Page Editor, Editable Templates
 topic: Development
 role: Developer
@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Steigen Sie gerade in die Entwicklung mit Adobe Experience Manager as a Cloud Service ein? Benötigen Sie einen Auffrischungskurs zu den Best Practices? Dann sind Sie hier richtig!
 
-Ziel dieses mehrteiligen Tutorials ist es, neuen Entwicklerinnen und Entwicklern beizubringen, wie eine Website in AEM mit den neuesten Standards und Technologien implementiert wird. Wir hoffen, dass Sie am Ende dieses Tutorials die Grundlagen der AEM-Plattform verstehen und einige der gängigen Design-Muster kennen.
+Ziel dieses mehrteiligen Tutorials ist es, Entwicklerinnen und Entwicklern, die gerade mit AEM beginnen, beizubringen, wie sie in AEM eine Website unter Verwendung der neuesten Standards und Technologien implementieren können. Wir hoffen, dass Sie am Ende dieses Tutorials die Grundlagen der AEM-Plattform verstehen und einige der gängigen Design-Muster kennen.
 
 ## WKND-Entwickler-Tutorial {#wknd-developer-tutorial}
 
