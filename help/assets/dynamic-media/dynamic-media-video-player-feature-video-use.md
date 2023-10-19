@@ -70,10 +70,10 @@ Die HLS-Browser-Unterstützung sieht wie folgt aus. Bei nicht unterstützten Bro
   <tr> 
    <td> <p>Desktop</p> </td>
    <td> <p>Safari (Mac)</p> </td>
-   <td> <p>HLS Video-Streaming</p> </td>
+   <td> <p>HLS-Video-Streaming</p> </td>
   </tr>
   <tr> 
-   <td> <p>Mobilgerät</p> </td>
+   <td> <p>Mobilgeräte</p> </td>
    <td> <p>Chrome (Android 6 oder früher)</p> </td>
    <td> <p>Progressiver Download</p> </td>
   </tr>
@@ -90,15 +90,15 @@ Die HLS-Browser-Unterstützung sieht wie folgt aus. Bei nicht unterstützten Bro
   <tr> 
    <td> <p>Mobilgerät</p> </td>
    <td> <p>Safari (iOS)</p> </td>
-   <td> <p>HLS Video-Streaming</p> </td>
+   <td> <p>HLS-Video-Streaming</p> </td>
   </tr>
   <tr> 
-   <td> <p>Mobilgerät</p> </td>
+   <td> <p>Mobilgeräte</p> </td>
    <td> <p>Chrome (iOS)</p> </td>
-   <td> <p>HLS Video-Streaming</p> </td>
+   <td> <p>HLS-Video-Streaming</p> </td>
   </tr>
   <tr> 
-   <td> <p>Mobilgerät</p> </td>
+   <td> <p>Mobilgeräte</p> </td>
    <td> <p>Blackberry</p> </td>
    <td> <p>HLS-Video-Streaming</p> </td>
   </tr>
