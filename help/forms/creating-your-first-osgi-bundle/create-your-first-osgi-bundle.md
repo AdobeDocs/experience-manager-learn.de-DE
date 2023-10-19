@@ -45,7 +45,7 @@ Maven ist ein Tool zur Build-Automatisierung, das hauptsächlich für Java-Proje
 * Extrahieren Sie den Inhalt des ZIP-Archivs unter `c:\maven`.
 * Erstellen Sie eine Umgebungsvariable namens `M2_HOME` mit dem Wert `C:\maven\apache-maven-3.6.0`. Im Beispiel hier wird die **mvn**-Version 3.6.0 verwendet. Zum Zeitpunkt der Erstellung dieses Artikels ist die neueste Maven-Version 3.6.3
 * Fügen Sie `%M2_HOME%\bin` zu Ihrem Pfad hinzu.
-* Speichern Sie Ihre Änderungen
+* Speichern Sie Ihre Änderungen.
 * Öffnen Sie eine neue Eingabeaufforderung und geben Sie `mvn -version` ein. Die **mvn**-Version sollte so wie im Screenshot aufgelistet werden.
 
 ![data-source](assets/mvn-version.JPG)
@@ -61,7 +61,7 @@ Archetype ist ein Maven-Projektvorlagen-Toolkit. Ein Archetyp (so der deutsche B
 Gehen Sie wie folgt vor, um Ihr erstes Maven-Projekt zu erstellen:
 
 * Erstellen Sie einen neuen Ordner mit dem Namen `aemformsbundles` auf dem Laufwerk „C:“.
-* Öffnen Sie eine Eingabeaufforderung und navigieren Sie zu `c:\aemformsbundles`
+* Öffnen Sie eine Eingabeaufforderung und navigieren Sie zu `c:\aemformsbundles`.
 * Führen Sie in der Eingabeaufforderung den folgenden Befehl aus:
 
 ```java
@@ -92,7 +92,7 @@ Wählen Sie „c:\aemformsbundles\mysite“ aus, indem Sie auf die Schaltfläche
 >[!NOTE]
 >Sie können je nach Bedarf die gewünschten Module importieren. Wählen und importieren Sie nur das Kernmodul, wenn Sie ausschließlich Java-Code in Ihrem Projekt erstellen möchten.
 
-Klicken Sie auf **Fertigstellen**, um den Importvorgang zu starten.
+Klicken Sie auf **Beenden**, um den Importvorgang zu starten.
 
 Das Projekt wird in Eclipse importiert und es sind verschiedene `mysite.xxxx`-Ordner zu sehen.
 
