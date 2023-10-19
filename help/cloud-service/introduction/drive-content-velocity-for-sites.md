@@ -4,7 +4,7 @@ description: Informieren Sie sich über die Geschwindigkeit von Inhalten und ihr
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
 source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2814'
 ht-degree: 100%
 
