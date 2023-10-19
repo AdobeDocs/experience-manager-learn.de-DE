@@ -54,7 +54,7 @@ Aktivieren Sie zunächst den flexiblen Port-Ausgang für AEM as a Cloud Service.
 
 1. Bestimmen Sie als Erstes mithilfe des Cloud Manager-API-Vorgangs [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/), in welcher Region die erweiterten Netzwerkfunktionen eingerichtet sind. `region name` ist erforderlich, um nachfolgende Cloud Manager-API-Aufrufe durchzuführen. In der Regel wird die Region verwendet, in der sich die Produktionsumgebung befindet.
 
-   Suchen Sie die Region Ihrer AEM as a Cloud Service-Umgebung in [Cloud Manager](https://my.cloudmanager.adobe.com) unter den [Umgebungsdetails](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=de#viewing-environment). Der in Cloud Manager angezeigte Regionsname kann dem [Regions-Code zugeordnet](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) werden, der in der Cloud Manager-API verwendet wird.
+   Suchen Sie in [Cloud Manager](https://my.cloudmanager.adobe.com) unter [Umgebungsdetails](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=de#viewing-environment) nach der Region Ihrer AEM as a Cloud Service-Umgebung. Der in Cloud Manager angezeigte Regionsname kann dem [Regions-Code zugeordnet](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) werden, der in der Cloud Manager-API verwendet wird.
 
    __HTTP-Anfrage „listRegions“__
 
