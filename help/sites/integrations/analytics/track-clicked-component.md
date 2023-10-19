@@ -130,7 +130,7 @@ Die Adobe Client-Datenschicht ist eine **ereignisgesteuerte** Datenschicht. Jede
 
    Das obige Codesnippet fügt einen Ereignis-Listener hinzu, indem es [eine Funktion](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function) in die Datenschicht schiebt. Jedes Mal, wenn das `cmp:click`-Ereignis ausgelöst wird, wird die Funktion `componentClickedHandler` aufgerufen. In dieser Funktion werden einige Integritätsprüfungen hinzugefügt und ein neues `event`-Objekt mit dem letzten [Zustand der Datenschicht](https://github.com/adobe/adobe-client-data-layer/wiki#getstate) für die Komponente, die das Ereignis ausgelöst hat, konstruiert.
 
-   Schließlich wird die Funktion `trigger(event)` aufgerufen. Die `trigger()`-Funktion ist ein reservierter Name in der Tag-Eigenschaft und **löst die Regel aus**. Das `event`-Objekt wird als Parameter übergeben, der wiederum durch einen anderen reservierten Namen in der Tag-Eigenschaft angezeigt wird. Datenelemente in der Tag-Eigenschaft können jetzt auf verschiedene Eigenschaften verweisen, indem sie Codesnippets wie `event.component['someKey']` verwenden.
+   Schließlich wird die Funktion `trigger(event)` aufgerufen. Die Funktion `trigger()` ist ein reservierter Name in der Tag-Eigenschaft und **löst die Regel aus**. Das `event`-Objekt wird als Parameter übergeben, der wiederum durch einen anderen reservierten Namen in der Tag-Eigenschaft verfügbar gemacht wird. Datenelemente in der Tag-Eigenschaft können jetzt auf verschiedene Eigenschaften verweisen, indem sie Codesnippets wie `event.component['someKey']` verwenden.
 
 1. Speichern Sie die Änderungen.
 1. Klicken Sie anschließend unter **Aktionen** auf **Hinzufügen**, um den Assistenten **Aktionskonfiguration** zu öffnen.
@@ -191,7 +191,7 @@ Als Nächstes erstellen Sie ein Datenelement zur Erfassung der Komponenten-ID un
 
    >[!NOTE]
    >
-   > Beachten Sie, dass das `event`-Objekt verfügbar gemacht wird und basierend auf dem Ereignis, das die **Regel** im Tag-Eigenschaft ausgelöst hat, begrenzt ist. Der Wert eines Datenelements wird erst gesetzt, wenn das Datenelement innerhalb einer Regel *referenziert* wird. Daher ist es sicher, dieses Datenelement in einer Regel wie der im vorherigen Schritt erstellten Regel **Seite geladen** zu verwenden *, aber* wäre in anderen Zusammenhängen nicht sicher.
+   > Beachten Sie, dass das `event`-Objekt verfügbar gemacht wird und basierend auf dem Ereignis, das die **Regel** in der Tag-Eigenschaft ausgelöst hat, begrenzt ist. Der Wert eines Datenelements wird erst gesetzt, wenn das Datenelement innerhalb einer Regel *referenziert* wird. Daher ist es sicher, dieses Datenelement in einer Regel wie der im vorherigen Schritt erstellten Regel **Seite geladen** zu verwenden *, aber* wäre in anderen Zusammenhängen nicht sicher.
 
 
 ### Komponententitel
@@ -278,7 +278,7 @@ Derzeit gibt die **CTA-Geklickt**-Regel lediglich eine Konsolenmeldung aus. Verw
 
    ![Konfiguration der endgültigen Tag-Regel](assets/track-clicked-component/final-page-loaded-config.png)
 
-   * **1.** Suchen Sie nach dem Ereignis `cmp:click`.
+   * **1.** Lauschen Sie auf das Ereignis `cmp:click`.
    * **2.** Überprüfen Sie, ob das Ereignis durch eine **Schaltfläche** oder **Teaser** ausgelöst wurde.
    * **3.** Legen Sie Analytics-Variablen fest, um die **Komponenten-ID** als **eVar**, **Prop** und ein **Ereignis** zu verfolgen.
    * **4.** Senden Sie den Analytics Verfolgungs-Link-Beacon ab (und behandeln Sie ihn **nicht** wie einen Seitenaufruf).
