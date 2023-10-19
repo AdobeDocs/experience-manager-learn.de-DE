@@ -24,7 +24,7 @@ Verbindungen zu SQL-Datenbanken (und anderen Nicht-HTTP/HTTPS-Diensten) müssen 
 
 Das folgende Code-Beispiel wird von den folgenden erweiterten Netzwerkoptionen unterstützt.
 
-Stellen Sie sicher, dass die [geeignete](../advanced-networking.md#advanced-networking) erweiterte Netzwerkkonfiguration eingerichtet wurde, bevor Sie dieses Tutorial durchführen.
+Stellen Sie sicher, dass vor diesem Tutorial die [geeignete](../advanced-networking.md#advanced-networking) erweiterte Netzwerkkonfiguration eingerichtet wurde.
 
 | Keine erweiterten Netzwerkfunktionen | [Flexibler Port-Ausgang](../flexible-port-egress.md) | [Dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) | [Virtuelles privates Netzwerk](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
