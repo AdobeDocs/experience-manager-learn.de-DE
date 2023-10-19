@@ -26,7 +26,7 @@ Die Ausnahme von dieser Regel ist, wenn eine [dedizierte Ausgangs-IP-Adresse](..
 
 Das folgende Code-Beispiel wird von den folgenden erweiterten Netzwerkoptionen unterstützt.
 
-Stellen Sie sicher, dass die [geeignete](../advanced-networking.md#advanced-networking) erweiterte Netzwerkkonfiguration eingerichtet wurde, bevor Sie dieses Tutorial durchführen.
+Stellen Sie sicher, dass vor diesem Tutorial die [geeignete](../advanced-networking.md#advanced-networking) erweiterte Netzwerkkonfiguration eingerichtet wurde.
 
 | Keine erweiterten Netzwerkfunktionen | [Flexibler Port-Ausgang](../flexible-port-egress.md) | [Dedizierte Ausgangs-IP-Adresse](../dedicated-egress-ip-address.md) | [Virtuelles privates Netzwerk](../vpn.md) |
 |:-----:|:-----:|:------:|:---------:|
@@ -176,7 +176,7 @@ Schließen Sie die Datenbanktreiber-Abhängigkeiten in den Reaktor `pom.xml` ein
 
 ## All pom.xml
 
-Betten Sie die Abhängigkeitsartefakte des Datenbanktreibers in das `all`-Paket ein, sodass sie auf AEM as a Cloud Service bereitgestellt werden und verfügbar sind. Diese Artefakte __müssen__ OSGi-Bundles sein, mit denen die Datenbanktreiber-Java™-Klasse exportiert wird.
+Betten Sie die Abhängigkeitsartefakte des Datenbanktreibers in das `all`-Paket ein, damit sie bereitgestellt werden und in AEM as a Cloud Service verfügbar sind. Diese Artefakte __müssen__ OSGi-Bundles sein, mit denen die Datenbanktreiber-Java™-Klasse exportiert wird.
 
 + `all/pom.xml`
 
