@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 3%
@@ -131,4 +131,4 @@ Dashboard-Tools können direkt aus dem [AEMCS-CDN-Log-Analysis-ELK-Tool GitHub-R
 
 ## Nächster Schritt
 
-Erfahren Sie, wie Sie Traffic-Filter-Regeln deklarieren, einschließlich WAF-Regeln im [Beispiele und Ergebnisanalyse](./examples-and-analysis.md) -Kapitel, unter Verwendung des AEM WKND Sites-Projekts.
+Erfahren Sie, wie Sie Traffic-Filterregeln deklarieren, einschließlich WAF-Regeln im [Beispiele und Ergebnisanalyse](./examples-and-analysis.md) -Kapitel, unter Verwendung des AEM WKND Sites-Projekts.

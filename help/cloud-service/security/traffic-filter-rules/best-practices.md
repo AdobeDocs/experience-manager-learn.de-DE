@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 0%
@@ -18,9 +18,9 @@ ht-degree: 0%
 ---
 
 
-# Best Practices für Traffic-Filter-Regeln, einschließlich WAF-Regeln
+# Best Practices für Traffic-Filterregeln, einschließlich WAF-Regeln
 
-Erfahren Sie mehr über empfohlene Best Practices für Traffic-Filter-Regeln, einschließlich WAF-Regeln. Beachten Sie, dass die in diesem Artikel beschriebenen Best Practices nicht vollständig sind und nicht als Ersatz für Ihre eigenen Sicherheitsrichtlinien und -verfahren dienen sollen.
+Erfahren Sie mehr über empfohlene Best Practices für Traffic-Filterregeln, einschließlich WAF-Regeln. Beachten Sie, dass die in diesem Artikel beschriebenen Best Practices nicht vollständig sind und nicht als Ersatz für Ihre eigenen Sicherheitsrichtlinien und -verfahren dienen sollen.
 
 ## Allgemeine Best Practices
 
@@ -33,9 +33,9 @@ Erfahren Sie mehr über empfohlene Best Practices für Traffic-Filter-Regeln, ei
 - Fügen Sie zusätzliche Regeln hinzu, um schädlichen Traffic zu verhindern, den Sie möglicherweise nach der Analyse kennen. Beispielsweise bestimmte IPs, die Ihre Site angreifen.
 - Regelerstellung, -bereitstellung und -analyse sollten ein fortlaufender, iterativer Prozess sein. Es handelt sich nicht um eine einmalige Aktivität.
 
-## Best Practices für Traffic-Filter-Regeln
+## Best Practices für Traffic-Filterregeln
 
-Aktivieren Sie unter Traffic-Filter Regeln für Ihr AEM Projekt. Die gewünschten Werte für `rateLimit` und `clientCountry` -Eigenschaften müssen in Zusammenarbeit mit Ihrem Sicherheitsteam festgelegt werden.
+Aktivieren Sie unterhalb der Traffic-Filterregeln für Ihr AEM Projekt. Die gewünschten Werte für `rateLimit` und `clientCountry` -Eigenschaften müssen in Zusammenarbeit mit Ihrem Sicherheitsteam festgelegt werden.
 
 ```yaml
 kind: CDN

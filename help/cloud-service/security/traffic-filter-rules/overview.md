@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '266'
 ht-degree: 4%
 
 ---
@@ -24,20 +24,22 @@ Informationen zu **Traffic-Filterregeln**, einschließlich der Unterkategorie vo
 
 ## Übersicht
 
-Die Verringerung des Risikos von Sicherheitsverletzungen ist für jede Organisation eine der obersten Prioritäten. AEMCS bietet die Funktion für Traffic-Filter-Regeln, einschließlich WAF-Regeln, um Websites und Anwendungen zu schützen.
+Die Verringerung des Risikos von Sicherheitsverletzungen ist für jede Organisation eine der obersten Prioritäten. AEMCS bietet die Funktion für Traffic-Filterregeln, einschließlich WAF-Regeln, um Websites und Anwendungen zu schützen.
 
-Traffic-Filter-Regeln werden im [integriertes CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=de) und werden ausgewertet, bevor die Anfrage die AEM-Infrastruktur erreicht. Mit dieser Funktion können Sie die Sicherheit Ihrer Website erheblich verbessern und sicherstellen, dass nur legitime Anfragen Zugriff auf die AEM-Infrastruktur erhalten.
+Traffic-Filterregeln werden in der [integriertes CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=de) und werden ausgewertet, bevor die Anfrage die AEM-Infrastruktur erreicht. Mit dieser Funktion können Sie die Sicherheit Ihrer Website erheblich verbessern und sicherstellen, dass nur legitime Anfragen Zugriff auf die AEM-Infrastruktur erhalten.
 
-Dieses Tutorial führt Sie durch den Prozess der Erstellung, Bereitstellung, Prüfung und Analyse der Ergebnisse von Traffic-Filter-Regeln, einschließlich WAF-Regeln.
+Dieses Tutorial führt Sie durch den Prozess der Erstellung, Bereitstellung, Prüfung und Analyse der Ergebnisse von Traffic-Filterregeln, einschließlich WAF-Regeln.
+
+Weitere Informationen zu Traffic-Filterregeln finden Sie in [diesem Artikel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en)
 
 >[!IMPORTANT]
 >
-> Unterkategorie der Traffic-Filter-Regeln namens &quot;WAF-Regeln&quot;erfordert eine WAF-DDoS-Schutzlizenz
+> Eine Unterkategorie von Traffic-Filterregeln, die &quot;WAF-Regeln&quot;genannt werden, erfordert eine WAF-DDoS-Schutzlizenz
 
 
 ## Nächster Schritt
 
-Lernen [Einrichtung](./how-to-setup.md) die Funktion , damit Sie Traffic-Filter-Regeln erstellen, bereitstellen und testen können. Lesen Sie mehr über die Einrichtung der **Elasticsearch, Logstash und Kibana (ELK)** Dashboard-Tools stapeln, um die Ergebnisse Ihrer AEMCS-CDN-Protokolle zu analysieren.
+Lernen [Einrichtung](./how-to-setup.md) die Funktion , damit Sie Traffic-Filterregeln erstellen, bereitstellen und testen können. Lesen Sie mehr über die Einrichtung der **Elasticsearch, Logstash und Kibana (ELK)** Dashboard-Tools stapeln, um die Ergebnisse Ihrer AEMCS-CDN-Protokolle zu analysieren.
 
 
 

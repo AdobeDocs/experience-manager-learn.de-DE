@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-20T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: fa28ae232a5353eb34788fd2abe8402b42a62f66
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 1%
@@ -18,11 +18,11 @@ ht-degree: 1%
 ---
 
 
-# Beispiele und Ergebnisanalyse von Traffic-Filter-Regeln, einschließlich WAF-Regeln
+# Beispiele und Ergebnisanalyse von Traffic-Filterregeln, einschließlich WAF-Regeln
 
-Erfahren Sie, wie Sie verschiedene Typen von Traffic-Filterregeln deklarieren und die Ergebnisse mithilfe von Adobe Experience Manager as a Cloud Service (AEMCS)-CDN-Protokollen und Dashboard-Tools analysieren.
+Erfahren Sie, wie Sie verschiedene Arten von Traffic-Filterregeln deklarieren und die Ergebnisse mithilfe von Adobe Experience Manager as a Cloud Service (AEMCS)-CDN-Protokollen und Dashboard-Tools analysieren.
 
-In diesem Abschnitt werden praktische Beispiele für Traffic-Filter-Regeln, einschließlich WAF-Regeln, vorgestellt. Sie erfahren, wie Sie Anforderungen basierend auf URI (oder Pfad), IP-Adresse, Anzahl der Anforderungen und verschiedenen Anfallstypen protokollieren, zulassen und blockieren, indem Sie die Variable [AEM WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
+In diesem Abschnitt werden praktische Beispiele für Traffic-Filterregeln, einschließlich WAF-Regeln, vorgestellt. Sie erfahren, wie Sie Anforderungen basierend auf URI (oder Pfad), IP-Adresse, Anzahl der Anforderungen und verschiedenen Anfallstypen protokollieren, zulassen und blockieren, indem Sie die Variable [AEM WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
 Darüber hinaus erfahren Sie, wie Sie Dashboard-Tools verwenden, die AEMCS-CDN-Protokolle aufnehmen, um wichtige Metriken über die von Adobe bereitgestellten Beispiel-Dashboards zu visualisieren.
 
@@ -30,7 +30,7 @@ Um Ihre spezifischen Anforderungen zu erfüllen, können Sie benutzerdefinierte 
 
 ## Beispiele
 
-Im Folgenden werden verschiedene Beispiele für Traffic-Filter-Regeln, einschließlich WAF-Regeln, vorgestellt. Vergewissern Sie sich, dass Sie den erforderlichen Einrichtungsprozess wie zuvor beschrieben abgeschlossen haben [Einrichtung](./how-to-setup.md) und Sie haben die [AEM WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
+Im Folgenden werden verschiedene Beispiele für Traffic-Filterregeln, einschließlich WAF-Regeln, vorgestellt. Vergewissern Sie sich, dass Sie den erforderlichen Einrichtungsprozess wie zuvor beschrieben abgeschlossen haben [Einrichtung](./how-to-setup.md) und Sie haben die [AEM WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project).
 
 ### Anforderungen protokollieren
 
