@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
+source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
 workflow-type: tm+mt
-source-wordcount: '1037'
-ht-degree: 98%
+source-wordcount: '1054'
+ht-degree: 97%
 
 ---
 
@@ -155,6 +155,12 @@ ht-degree: 98%
       + [SQL-Verbindungen mit DataSourcePool](./networking/examples/sql-datasourcepool.md)
       + [SQL-Verbindungen mit Java SQL-APIs](./networking/examples/sql-java-apis.md)
       + [E-Mail-Dienst](./networking/examples/email-service.md)
++ Sicherheit {#security}
+   + Traffic-Filter-Regeln, einschließlich WAF-Regeln{#traffic-filter-and-waf-rules}
+      + [Übersicht](./security/traffic-filter-rules/overview.md)
+      + [Einrichtung](./security/traffic-filter-rules/how-to-setup.md)
+      + [Beispiele und Ergebnisanalyse](./security/traffic-filter-rules/examples-and-analysis.md)
+      + [Best Practices](./security/traffic-filter-rules/best-practices.md)
 + Migration {#migration}
    + [Content Transfer Tool](./migration/content-transfer-tool.md)
    + [Massenimport von Assets](./migration/bulk-import.md)
