@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: bac637440d1cc5af0e0abb119ca2f4e93f69cf34
+source-git-commit: 5e761ef180182b47c4fd2822b0ad98484db23aab
 workflow-type: tm+mt
-source-wordcount: '1851'
-ht-degree: 99%
+source-wordcount: '1874'
+ht-degree: 98%
 
 ---
 
@@ -48,6 +48,7 @@ ht-degree: 99%
    + [Integration mit ServiceNow](some-useful-integrations/service-now.md)
    + [Senden von E-Mails mit SendGrid](some-useful-integrations/send-grid.md)
    + [Speichern von Formulardaten im Azure-Speicher](some-useful-integrations/store-form-data-in-azure-storage.md)
+   + [Formular mit Azure Blob ausfüllen](some-useful-integrations/fetch-form-data-from-azure-storage.md)
 + Erstellen eines OSGi-Bundles {#creating-your-first-osgi-bundle}
    + [1 – Einrichten der Umgebung](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [2 – Erstellen eines OSGi-Dienstes](creating-your-first-osgi-bundle/create-osgi-service.md)
@@ -142,6 +143,12 @@ ht-degree: 99%
    + [9 – Erstellen des Hauptformulars](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
    + [10 – Erstellen des MyAccount-Formulars](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
    + [11 – Bereitstellen des Beispiels](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
++ Importieren von Daten aus einer PDF-Datei{#import-data-from-pdf-form}
+   + [1 – Einführung](import-data-from-pdf-form/introduction.md)
+   + [2 – Erstellen eines adaptiven Formulars](import-data-from-pdf-form/create-adaptive-form.md)
+   + [3 – Erstellen eines OSGi-Dienstes](import-data-from-pdf-form/create-osgi-service.md)
+   + [4 - Adaptives Formular ausfüllen](import-data-from-pdf-form/populate-adaptive-form.md)
+   + [5 - Testen der Lösung](import-data-from-pdf-form/test-the-solution.md)
 + Exportieren gesendeter Daten im CSV-Format{#export-submitted-data-csv-format}
    + [Exportieren von gesendeten Daten](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5-Formulare{#html5-forms}
