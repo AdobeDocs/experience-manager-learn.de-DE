@@ -10,10 +10,10 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
 workflow-type: tm+mt
-source-wordcount: '266'
-ht-degree: 4%
+source-wordcount: '285'
+ht-degree: 3%
 
 ---
 
@@ -30,12 +30,13 @@ Traffic-Filterregeln werden in der [integriertes CDN](https://experienceleague.a
 
 Dieses Tutorial führt Sie durch den Prozess der Erstellung, Bereitstellung, Prüfung und Analyse der Ergebnisse von Traffic-Filterregeln, einschließlich WAF-Regeln.
 
-Weitere Informationen zu Traffic-Filterregeln finden Sie in [diesem Artikel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en)
+Weitere Informationen zu Traffic-Filterregeln finden Sie in [diesem Artikel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en).
 
 >[!IMPORTANT]
 >
-> Eine Unterkategorie von Traffic-Filterregeln, die &quot;WAF-Regeln&quot;genannt werden, erfordert eine WAF-DDoS-Schutzlizenz
+> Eine Unterkategorie von Traffic-Filterregeln namens &quot;WAF-Regeln&quot;erfordert eine WAF-DDoS-Schutzlizenz oder eine Lizenz für erweiterte Sicherheit.
 
+Wir laden Sie ein, Feedback zu geben oder Fragen zu Traffic-Filterregeln per E-Mail zu stellen **aemcs-waf-adopter@adobe.com**.
 
 ## Nächster Schritt
 

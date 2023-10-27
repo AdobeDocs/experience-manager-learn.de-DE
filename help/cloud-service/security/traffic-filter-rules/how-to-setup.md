@@ -10,7 +10,7 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
+source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 3%
@@ -27,7 +27,7 @@ Lernen **Einrichtung** Traffic-Filterregeln, einschließlich WAF-Regeln. Erfahre
 Der Einrichtungsprozess umfasst Folgendes:
 
 - _Erstellen von Regeln_ mit einer entsprechenden AEM Projektstruktur und Konfigurationsdatei.
-- _Bereitstellen von Regeln_ über die Konfigurationspipeline von Adobe Cloud Manager.
+- _Bereitstellen von Regeln_ Verwendung der Konfigurationspipeline von Adobe Cloud Manager.
 - _Testregeln_ Verwendung verschiedener Tools zur Erstellung von Traffic.
 - _Ergebnisanalyse_ Verwendung von AEMCS-CDN-Protokollen und Dashboard-Tools.
 
