@@ -13,9 +13,9 @@ last-substantial-update: 2023-05-10T00:00:00Z
 exl-id: b1ab2a13-8b0e-4d7f-82b5-78b1dda248ba
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 source-git-commit: 6f874fd3da09ce808920a7f8ea3386beda726272
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '898'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +38,7 @@ Folgende Tools sollten lokal installiert werden:
 
 ## AEM-Anforderungen
 
-Die React-App funktioniert mit den folgenden AEM-Bereitstellungsoptionen. Für alle Bereitstellungen muss die [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installiert werden.
+Die React-App funktioniert mit den folgenden AEM-Bereitstellungsoptionen. Für alle Bereitstellungen muss die [WKND-Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installiert werden.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=de)
 + Lokales Setup mit dem [AEM Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de)
@@ -313,4 +313,4 @@ Wenn eine Verbindung zu einer AEM Author-Umgebung hergestellt wird, muss die ent
 
 ### Cross-Origin Resource Sharing (CORS)
 
-Diese React-App basiert auf einer AEM-basierten CORS-Konfiguration, die in der AEM-Zielumgebung ausgeführt wird, und geht davon aus, dass die React-App auf `http://localhost:3000` im Entwicklungsmodus ausgeführt wird.  Überprüfen Sie die[Dokumentation zur AEM Headless-Implementierung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa.html) für weitere Informationen zum Einrichten und Konfigurieren von CORS.
+Diese React-App basiert auf einer AEM-basierten CORS-Konfiguration, die in der AEM-Zielumgebung ausgeführt wird, und es wird davon ausgegangen, dass die React-App auf `http://localhost:3000` im Entwicklungsmodus ausgeführt wird.  Weitere Informationen zum Einrichten und Konfigurieren von CORS finden Sie in der [Dokumentation zur AEM Headless-Implementierung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa.html?lang=de).
