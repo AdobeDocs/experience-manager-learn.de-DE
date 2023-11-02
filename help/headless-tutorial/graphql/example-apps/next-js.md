@@ -13,9 +13,9 @@ last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 4f67bb37-416a-49d9-9d7b-06c3573909ca
 source-git-commit: 29b9e4a23d8f4ae0494fc43f76f7449062364843
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '817'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ Folgende Tools sollten lokal installiert werden:
 
 ## AEM-Anforderungen
 
-Die Next.js-App funktioniert mit den folgenden AEM-Bereitstellungsoptionen. Alle Bereitstellungen erfordern, dass [WKND Shared v3.0.0+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) oder [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) in der AEM as a Cloud Service-Umgebung installiert werden.
+Die Next.js-App funktioniert mit den folgenden AEM-Bereitstellungsoptionen. Alle Bereitstellungen erfordern, dass [WKND Shared v3.0.0+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) oder die [WKND-Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) in der AEM as a Cloud Service-Umgebung installiert werden.
 
 Diese Next.js-Beispiel-App ist für die Verbindung mit dem __AEM Publish__-Service konzipiert.
 
@@ -268,7 +268,7 @@ Die Next.js-App verwendet zwei Seiten, um die Adventure-Daten darzustellen.
 
 + `src/pages/adventures/[...slug].js`
 
-  Eine [Dynamische Route von Next.js](https://nextjs.org/docs/routing/dynamic-routes), die die Details eines einzelnen Adventures anzeigt. Diese dynamische Route ruft die Daten jedes Abenteuers mithilfe von [getStaticProps() von Next.js](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) über einen Aufruf an `getAdventureBySlug(slug, queryVariables)` mithilfe der `slug` Param, der über die Abenteuerauswahl auf der `adventures/index.js` und `queryVariables` um das Bildformat, die Breite und die Qualität zu steuern.
+  Eine [Dynamische Route von Next.js](https://nextjs.org/docs/routing/dynamic-routes), die die Details eines einzelnen Adventures anzeigt. Diese dynamische Route ruft die Daten jedes Abenteuers mithilfe von [getStaticProps() in Next.js](https://nextjs.org/docs/basic-features/data-fetching/get-static-props) über einen Aufruf von `getAdventureBySlug(slug, queryVariables)` mithilfe des `slug`-Parameters, der über die Abenteuerauswahl auf den Seiten `adventures/index.js` und `queryVariables` weitergegeben wurde, im Voraus ab, um Bildformat, -breite und -qualität zu regeln.
 
   Die dynamische Route ist in der Lage, die Details für alle Adventures im Voraus abzurufen, indem sie [getStaticPaths() von Next.js](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths) verwendet und alle möglichen Routen-Permutationen auf der Grundlage der vollständigen Liste der Adventures, die von der GraphQL-Abfrage `getAdventurePaths()` zurückgegeben werden, auffüllt.
 
