@@ -11,9 +11,9 @@ doc-type: Catalog
 last-substantial-update: 2023-05-12T00:00:00Z
 exl-id: d92c36e2-fbfa-43a3-8c5f-0371cc99f352
 source-git-commit: 82926e56d01222186a4d677b29ab9230aa71458a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '241'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -35,11 +35,11 @@ Umfassende Informationen zur Inhaltsfragmentkonsole und ihren Funktionen finden 
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./basics/content-fragments-console.md" title="Konsolenübersicht"
+            <a href="./basics/content-fragments-console.md" title="Übersicht über die Konsole"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3409492?format=jpeg"
-                alt="Konsolenübersicht">
+                alt="Übersicht über die Konsole">
             </a>
           </figure>
         </div>
@@ -48,7 +48,7 @@ Umfassende Informationen zur Inhaltsfragmentkonsole und ihren Funktionen finden 
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">5 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./basics/content-fragments-console.md" title="Übersicht">Konsolenübersicht</a>
+              <a href="./basics/content-fragments-console.md" title="Übersicht">Überblick über die Konsole</a>
             </p>
             <p class="is-size-6">Ein kurzer Überblick über die Inhaltsfragmentkonsole.
 </p>
@@ -68,11 +68,11 @@ Umfassende Informationen zur Inhaltsfragmentkonsole und ihren Funktionen finden 
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./basics/content-fragment-editor.md" title="Editor - Übersicht"
+            <a href="./basics/content-fragment-editor.md" title="Übersicht über den Editor"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3424373?format=jpeg"
-                alt="Editor - Übersicht">
+                alt="Übersicht über den Editor">
             </a>
           </figure>
         </div>
@@ -81,9 +81,10 @@ Umfassende Informationen zur Inhaltsfragmentkonsole und ihren Funktionen finden 
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">4 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./basics/content-fragment-editor.md" title="Übersicht">Editor - Übersicht</a>
+              <a href="./basics/content-fragment-editor.md" title="Übersicht">Überblick über den Editor</a>
             </p>
-            <p class="is-size-6">Einen kurzen Überblick über den Inhaltsfragmente-Editor.</p>
+            <p class="is-size-6">Eine kurze Übersicht über den
+Inhaltsfragmenteditor</p>
             <a href="./basics/content-fragment-editor.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
