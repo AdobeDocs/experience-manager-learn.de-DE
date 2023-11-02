@@ -1,6 +1,6 @@
 ---
 title: Erstellen von Client-Bibliotheken
-description: Erstellen Sie eine Client-Bibliothek, um das Klickereignis der Schaltfläche "Speichern und Beenden"zu verarbeiten.
+description: Erstellen einer Client-Bibliothek zur Verarbeitung des Klick-Ereignisses der Schaltfläche „Speichern und Beenden“
 feature: Adaptive Forms
 type: Tutorial
 version: 6.4,6.5
@@ -11,15 +11,15 @@ role: Developer
 level: Intermediate
 exl-id: c90eea73-bd44-40af-aa98-d766aa572415
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '148'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
 # Erstellen einer Client-Bibliothek
 
-Erstellen [Client-Bibliothek](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=de) , der den Code zum Aufrufen der Methode enthält `doAjaxSubmitWithFileAttachment` des `guideBridge` API für das Klickereignis der Schaltfläche, die von der CSS-Klasse identifiziert wird **Speichern-Schaltfläche**.  Wir übergeben die adaptiven Formulardaten `fileMap` und `mobileNumber` an den Endpunkt, der auf `**/bin/storeafdatawithattachments` hört
+Erstellen Sie eine [Client-Bibliothek](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=de) mit dem Code, der die Methode `doAjaxSubmitWithFileAttachment` der `guideBridge`-API beim Anklicken der durch die CSS-Klasse festgelegten **Speichern-Schaltfläche** aufruft. Wir übergeben die adaptiven Formulardaten `fileMap` und `mobileNumber` an den Endpunkt, der auf `**/bin/storeafdatawithattachments` hört
 
 Nachdem die Formulardaten gespeichert wurden, wird eine eindeutige Anwendungs-ID generiert und den Benutzenden in einem Dialogfeld angezeigt. Wenn das Dialogfeld geschlossen wird, werden die Benutzenden zum Formular geleitet, über das sie das gespeicherte adaptive Formular mit der eindeutigen Anwendungs-ID abrufen können.
 
@@ -67,7 +67,7 @@ $(document).ready(function () {
 ```
 
 >[!NOTE]
-> Wir haben [Bootbox-JavaScript-Bibliothek](https://bootboxjs.com/examples.html) zum Anzeigen des Dialogfelds
+> Zum Aufruf des Dialogfelds haben wir die [Bootbox-JavaScript-Bibliothek](https://bootboxjs.com/examples.html) verwendet
 
 Die in diesem Beispiel verwendeten Client-Bibliotheken können [hier heruntergeladen werden.](assets/store-af-with-attachments-client-lib.zip)
 
