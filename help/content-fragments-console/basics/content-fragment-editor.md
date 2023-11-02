@@ -1,6 +1,6 @@
 ---
-title: Inhaltsfragmente-Editor
-description: Eine kurze Einführung in AEM Inhaltsfragment-Editor.
+title: Inhaltsfragmenteditor
+description: Eine kurze Einführung zum AEM Inhaltsfragmenteditor.
 version: Cloud Service
 feature: Content Fragments
 topic: Content Management
@@ -12,14 +12,14 @@ jira: KT-13961
 thumbnail: 3424373.jpeg
 exl-id: 842622c7-4a1c-42bb-88e9-42717e3dac8e
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '22'
-ht-degree: 27%
+ht-degree: 100%
 
 ---
 
-# Inhaltsfragmente-Editor
+# Inhaltsfragmenteditor
 
-Eine kurze Einführung in AEM Inhaltsfragment-Editor.
+Eine kurze Einführung zum AEM Inhaltsfragmenteditor.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424373/?learn=on)
