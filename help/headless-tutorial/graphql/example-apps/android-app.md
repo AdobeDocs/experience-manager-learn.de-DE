@@ -13,7 +13,7 @@ last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
 source-git-commit: 679b9bf9f0948e2b24d613b530d3ae644c92057d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '687'
 ht-degree: 100%
 
@@ -37,7 +37,7 @@ Folgende Tools sollten lokal installiert werden:
 
 ## AEM-Anforderungen
 
-Die Android-App kann mit den folgenden AEM-Bereitstellungsoptionen verwendet werden. Für alle Bereitstellungen muss die [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installiert werden.
+Die Android-App kann mit den folgenden AEM-Bereitstellungsoptionen verwendet werden. Für alle Bereitstellungen muss die [WKND-Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installiert werden.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=de)
 
@@ -74,7 +74,7 @@ Die Android-App ist für die Verbindung mit einer __AEM Publish__-Umgebung konzi
 
 ### Verbinden mit AEM-Umgebungen
 
-Wenn Sie eine Verbindung zu einer AEM Author-Umgebung herstellen, ist eine [Autorisierung](https://github.com/adobe/aem-headless-client-java#using-authorization) erforderlich. [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java) bietet die Möglichkeit zur Nutzung der [Token-basierten Authentifizierung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=de). Um die Token-basierte Authentifizierung zu verwenden, aktualisieren Sie den Client-Builder in `AdventureLoader.java` und `AdventuresLoader.java`:
+Wenn Sie eine Verbindung zu einer AEM-Autorenumgebung herstellen, ist eine [Autorisierung](https://github.com/adobe/aem-headless-client-java#using-authorization) erforderlich. [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java) bietet die Möglichkeit zur Nutzung der [Token-basierten Authentifizierung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=de). Um die Token-basierte Authentifizierung zu verwenden, aktualisieren Sie den Client-Builder in `AdventureLoader.java` und `AdventuresLoader.java`:
 
 ```java
 /* Comment out basicAuth
