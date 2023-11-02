@@ -1,6 +1,6 @@
 ---
-title: Verwenden Sie ModSecurity, um Ihre AEM Website vor DoS-Angriffen zu schützen.
-description: Erfahren Sie, wie Sie ModSecurity aktivieren, um Ihre Site mit dem OWASP ModSecurity Core Rule Set (CRS) vor einem DoS-Angriff (Denial of Service) zu schützen.
+title: Schutz Ihrer AEM-Website vor DoS-Angriffen mit Mod Security
+description: Erfahren Sie, wie Sie ModSecurity aktivieren, um Ihre Site mit dem OWASP ModSecurity Core Rule Set (CRS) vor DoS-Angriffen (Denial of Service) zu schützen.
 feature: Security
 version: 6.5, Cloud Service
 topic: Security, Development
@@ -12,36 +12,36 @@ doc-type: article
 last-substantial-update: 2023-08-18T00:00:00Z
 exl-id: 9f689bd9-c846-4c3f-ae88-20454112cf9a
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1252'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Verwenden Sie ModSecurity, um Ihre AEM Website vor DoS-Angriffen zu schützen.
+# Schutz Ihrer AEM-Website vor DoS-Angriffen mit ModSecurity
 
-Erfahren Sie, wie Sie ModSecurity aktivieren können, um Ihre Site vor Denial of Service (DoS)-Angriffen zu schützen, indem Sie die **OWASP ModSecurity Core Rule Set (CRS)** auf dem Adobe Experience Manager (AEM) Dispatcher veröffentlichen.
+Erfahren Sie, wie Sie ModSecurity aktivieren können, um Ihre Site vor Denial of Service(DoS)-Angriffen zu schützen, indem Sie den  **OWASP ModSecurity Core Rule Set (CRS)** auf dem Adobe Experience Manager (AEM) Dispatcher veröffentlichen.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3422976?quality=12&learn=on)
 
 ## Übersicht
 
-Die [Öffnen Sie Web Application Security Project® (OWASP)](https://owasp.org/) foundation stellt die [**OWASP Top 10**](https://owasp.org/www-project-top-ten/) Erläuterung der zehn wichtigsten Sicherheitsbedenken für Webanwendungen.
+Die Foundation [Web Application Security Project® (OWASP) öffnen](https://owasp.org/) erläutert die [**OWASP Top 10**](https://owasp.org/www-project-top-ten/) der zehn wichtigsten Sicherheitsprobleme bei Web-Anwendungen.
 
-ModSecurity ist eine quelloffene, plattformübergreifende Lösung, die Schutz vor einer Reihe von Angriffen auf Webanwendungen bietet. Sie ermöglicht auch die HTTP-Traffic-Überwachung, -Protokollierung und Echtzeitanalyse.
+ModSecurity ist eine quelloffene plattformübergreifende Lösung zum Schutz vor diversen Angriffe auf Web-Anwendungen. Sie ermöglicht auch die Überwachung, Protokollierung und Echtzeitanalyse des HTTP-Traffics.
 
-OWSAP® stellt auch die [OWASP® ModSecurity Core Rule Set (CRS)](https://github.com/coreruleset/coreruleset). CRS ist ein Satz generischer **Angriffserkennung** Regeln zur Verwendung mit ModSecurity. Daher zielt CRS darauf ab, Webanwendungen vor einer Vielzahl von Angriffen, einschließlich der OWASP Top Ten, mit einem Minimum an falschen Warnhinweisen zu schützen.
+OWSAP® stellt auch den [OWASP® ModSecurity Core Rule Set (CRS)](https://github.com/coreruleset/coreruleset) bereit. CRS ist ein Satz generischer **Angriffserkennungsregeln** zur Verwendung mit ModSecurity. CRS zielt darauf ab, Web-Anwendungen vor einer Vielzahl von Angriffen, einschließlich der OWASP Top Ten, mit einem Minimum an falschen Warnhinweisen zu schützen.
 
-In diesem Tutorial wird gezeigt, wie die **DOS-PROTECTION** CRS-Regel zum Schutz Ihrer Site vor einem potenziellen DoS-Angriff.
+In diesem Tutorial erfahren Sie, wie Sie die CRS-Regel **DOS-SCHUTZ** zum Schutz Ihrer Site vor einem potenziellen DoS-Angriff aktivieren und konfigurieren.
 
 >[!TIP]
 >
->Es ist wichtig zu beachten, dass die AEM as a Cloud Service [verwaltetes CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=de) erfüllt die meisten Leistungs- und Sicherheitsanforderungen des Kunden. ModSecurity bietet jedoch eine zusätzliche Sicherheitsebene und ermöglicht kundenspezifische Regeln und Konfigurationen.
+>Dabei sollten Sie beachten, dass die von AEM as a Cloud Service [verwaltete CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=de) die meisten Leistungs- und Sicherheitsanforderungen von Kundenseite erfüllt. ModSecurity bietet jedoch eine zusätzliche Sicherheitsebene und ermöglicht kundenspezifische Regeln und Konfigurationen.
 
 ## Hinzufügen von CRS zum Dispatcher-Projektmodul
 
-1. Laden Sie die [aktueller OWASP ModSecurity-Core-Regelsatz](https://github.com/coreruleset/coreruleset/releases).
+1. Laden und extrahieren Sie den [aktueller OWASP ModSecurity Core Rule Set](https://github.com/coreruleset/coreruleset/releases).
 
    ```shell
    # Replace the X.Y.Z with relevent version numbers.
@@ -54,13 +54,13 @@ In diesem Tutorial wird gezeigt, wie die **DOS-PROTECTION** CRS-Regel zum Schutz
    $ tar -xvzf coreruleset-3.3.5.tar.gz
    ```
 
-1. Erstellen Sie die `modsec/crs` Ordner in `dispatcher/src/conf.d/` im Code Ihres AEM-Projekts. In der lokalen Kopie des [AEM WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd).
+1. Erstellen Sie die `modsec/crs`-Ordner in `dispatcher/src/conf.d/` im Code Ihres AEM-Projekts. Zum Beispiel in der lokalen Kopie des [AEM WKND Sites-Projekts](https://github.com/adobe/aem-guides-wknd).
 
-   ![CRS-Ordner in AEM Projektcode - ModSecurity](assets/modsecurity-crs/crs-folder-in-aem-dispatcher-module.png){width="200" zoomable="yes"}
+   ![CRS-Ordner in AEM Projekt-Code – ModSecurity](assets/modsecurity-crs/crs-folder-in-aem-dispatcher-module.png){width="200" zoomable="yes"}
 
-1. Kopieren Sie die `coreruleset-X.Y.Z/rules` Ordner aus dem heruntergeladenen CRS-Versionspaket in `dispatcher/src/conf.d/modsec/crs` Ordner.
-1. Kopieren Sie die `coreruleset-X.Y.Z/crs-setup.conf.example` -Datei aus dem heruntergeladenen CRS-Versionspaket in `dispatcher/src/conf.d/modsec/crs` Ordner und benennen Sie ihn in um `crs-setup.conf`.
-1. Deaktivieren Sie alle kopierten CRS-Regeln aus der `dispatcher/src/conf.d/modsec/crs/rules` durch Umbenennen in `XXXX-XXX-XXX.conf.disabled`. Sie können die folgenden Befehle verwenden, um alle Dateien gleichzeitig umzubenennen.
+1. Kopieren Sie die Ordner `coreruleset-X.Y.Z/rules` aus dem heruntergeladenen CRS-Versionspaket in den Ordner `dispatcher/src/conf.d/modsec/crs`.
+1. Kopieren Sie die Datei `coreruleset-X.Y.Z/crs-setup.conf.example` aus dem heruntergeladenen CRS-Versionspaket in den Ordner `dispatcher/src/conf.d/modsec/crs` und benennen Sie sie um in `crs-setup.conf`.
+1. Deaktivieren Sie alle kopierten CRS-Regeln aus `dispatcher/src/conf.d/modsec/crs/rules`, indem Sie sie in `XXXX-XXX-XXX.conf.disabled` umbenennen. Mit folgenden Befehlen können Sie alle Dateien gleichzeitig umbenennen.
 
    ```shell
    # Go inside the newly created rules directory within the dispathcher module
@@ -70,18 +70,18 @@ In diesem Tutorial wird gezeigt, wie die **DOS-PROTECTION** CRS-Regel zum Schutz
    $ for i in *.conf; do mv -- "$i" "$i.disabled"; done
    ```
 
-   Siehe Umbenannte CRS-Regeln und Konfigurationsdatei im WKND-Projektcode.
+   Siehe die umbenannten CRS-Regeln und die Konfigurationsdatei im WKND-Projekt-Code.
 
-   ![CRS-Regeln in AEM Projektcode deaktiviert - ModSecurity ](assets/modsecurity-crs/disabled-crs-rules.png){width="200" zoomable="yes"}
+   ![CRS-Regeln in AEM-Projekt-Code deaktiviert – ModSecurity ](assets/modsecurity-crs/disabled-crs-rules.png){width="200" zoomable="yes"}
 
 ## Aktivieren und Konfigurieren der DoS-Schutzregel (Denial of Service)
 
 Gehen Sie wie folgt vor, um die DoS-Schutzregel (Denial of Service) zu aktivieren und zu konfigurieren:
 
-1. Aktivieren Sie die DoS-Schutzregel, indem Sie die `REQUEST-912-DOS-PROTECTION.conf.disabled` nach `REQUEST-912-DOS-PROTECTION.conf` (oder entfernen Sie die `.disabled` aus der Erweiterung &quot;rulename&quot;) innerhalb der `dispatcher/src/conf.d/modsec/crs/rules` Ordner.
-1. Konfigurieren Sie die Regel, indem Sie die  **DOS_COUNTER_THRESHOLD, DOS_BURST_TIME_SLICE, DOS_BLOCK_TIMEOUT** Variablen.
-   1. Erstellen Sie eine `crs-setup.custom.conf` -Datei innerhalb der `dispatcher/src/conf.d/modsec/crs` Ordner.
-   1. Fügen Sie der neu erstellten Datei das folgende Regelfragment hinzu.
+1. Aktivieren Sie die DoS-Schutzregel, indem Sie `REQUEST-912-DOS-PROTECTION.conf.disabled` in `REQUEST-912-DOS-PROTECTION.conf` umbenennen (oder entfernen Sie `.disabled` aus der Regelnamen-Erweiterung) im Ordner `dispatcher/src/conf.d/modsec/crs/rules`.
+1. Konfigurieren Sie die Regel, indem Sie die Variablen **DOS_COUNTER_THRESHOLD, DOS_BURST_TIME_SLICE, DOS_BLOCK_TIMEOUT** festlegen.
+   1. Erstellen Sie eine Datei `crs-setup.custom.conf` im Ordner `dispatcher/src/conf.d/modsec/crs`.
+   1. Fügen Sie zur neu erstellten Datei folgendes Regelfragment hinzu.
 
    ```
    # The Denial of Service (DoS) protection against clients making requests too quickly.
@@ -99,20 +99,20 @@ Gehen Sie wie folgt vor, um die DoS-Schutzregel (Denial of Service) zu aktiviere
        setvar:'tx.dos_block_timeout=600'"    
    ```
 
-In dieser Beispielregelkonfiguration gilt Folgendes: **DOS_COUNTER_THRESHOLD** ist 25, **DOS_BURST_TIME_SLICE** 60 Sekunden beträgt und **DOS_BLOCK_TIMEOUT** Zeitüberschreitung beträgt 600 Sekunden. Diese Konfiguration identifiziert mehr als zwei Vorkommnisse von 25 Anforderungen (mit Ausnahme statischer Dateien) innerhalb von 60 Sekunden als DoS-Angriff, sodass der anfordernde Client 600 Sekunden (oder 10 Minuten) blockiert wird.
+In dieser Beispielregelkonfiguration gilt Folgendes: **DOS_COUNTER_THRESHOLD** beträgt 25, **DOS_BURST_TIME_SLICE** beträgt 60 Sekunden und die Zeitüberschreitung **DOS_BLOCK_TIMEOUT** beträgt 600 Sekunden. Diese Konfiguration identifiziert mehr als zwei Vorkommnisse von 25 Anforderungen (mit Ausnahme statischer Dateien) innerhalb von 60 Sekunden als DoS-Angriff, sodass der anfordernde Client 600 Sekunden (oder 10 Minuten) blockiert wird.
 
 >[!WARNING]
 >
->Um die für Ihre Anforderungen geeigneten Werte zu definieren, arbeiten Sie mit Ihrem Web Security-Team zusammen.
+>Legen Sie die für Ihre Anforderungen geeigneten Werte zusammen mit Ihrem Web Security-Team fest.
 
-## Initialisieren des CRS
+## CRS initialisieren
 
-Um das CRS zu initialisieren, entfernen Sie allgemeine false -Positiv-Werte und fügen Sie lokale Ausnahmen für Ihre Site hinzu:
+Um das CRS zu initialisieren, entfernen Sie allgemeine falsch positive Werte und fügen Sie lokale Ausnahmen für Ihre Site hinzu:
 
-1. Entfernen Sie zum Initialisieren des CRS `.disabled` aus dem **REQUEST-901-INITIALISIERUNG** -Datei. Mit anderen Worten: Benennen Sie die `REQUEST-901-INITIALIZATION.conf.disabled` Datei in `REQUEST-901-INITIALIZATION.conf`.
-1. Entfernen Sie zum Entfernen der gängigen falsch-positiven Werte wie &quot;local IP&quot;(127.0.0.1)-Ping den Befehl `.disabled` aus dem **REQUEST-905-COMMON-EXCEPTIONS** -Datei.
-1. Um lokale Ausnahmen wie die AEM-Plattform oder Ihre Site-spezifischen Pfade hinzuzufügen, benennen Sie die `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example` nach `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf`
-   1. Fügen Sie AEM plattformspezifischen Pfadausnahmen zur neu umbenannten Datei hinzu.
+1. Entfernen Sie zum Initialisieren des CRS `.disabled` aus der Datei **REQUEST-901-INITIALISIERUNG**. Mit anderen Worten: Benennen Sie die Datei `REQUEST-901-INITIALIZATION.conf.disabled` in `REQUEST-901-INITIALIZATION.conf` um.
+1. Entfernen Sie zum Löschen der allgemeinen falsch positiven Werte wie „lokale IP (127.0.0.1) Ping“ den Befehl `.disabled` aus der Datei **REQUEST-905-COMMON-EXCEPTIONS**.
+1. Um lokale Ausnahmen wie die AEM-Plattform oder Ihre Site-spezifischen Pfade hinzuzufügen, benennen Sie `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example` in `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf` um.
+   1. Fügen Sie AEM-plattformspezifische Pfadausnahmen zur neu umbenannten Datei hinzu.
 
    ```
    ########################################################
@@ -147,7 +147,7 @@ Um das CRS zu initialisieren, entfernen Sie allgemeine false -Positiv-Werte und 
    ...
    ```
 
-1. Entfernen Sie außerdem die `.disabled` von **REQUEST-910-IP-REPUTATION.conf.disabled** für die IP-Reputationsblocküberprüfung und `REQUEST-949-BLOCKING-EVALUATION.conf.disabled` für die Anomaliebewertungsüberprüfung.
+1. Entfernen Sie außerdem `.disabled` aus **REQUEST-910-IP-REPUTATION.conf.disabled** zur IP-Reputationsblockprüfung und `REQUEST-949-BLOCKING-EVALUATION.conf.disabled` zur Anomaliebewertungsprüfung.
 
 >[!TIP]
 >
@@ -155,9 +155,9 @@ Um das CRS zu initialisieren, entfernen Sie allgemeine false -Positiv-Werte und 
 
 ## Hinzufügen der ModSecurity Apache-Konfiguration
 
-So aktivieren Sie ModSecurity (auch: `mod_security` Apache-Modul), führen Sie die folgenden Schritte aus:
+Gehen Sie wie folgt vor, um ModSecurity (auch: `mod_security` Apache-Modul) zu aktivieren:
 
-1. Erstellen `modsecurity.conf` at `dispatcher/src/conf.d/modsec/modsecurity.conf` mit den folgenden Schlüsselkonfigurationen.
+1. Erstellen Sie `modsecurity.conf` in `dispatcher/src/conf.d/modsec/modsecurity.conf` mit folgenden Schlüsselkonfigurationen.
 
    ```
    # Include the baseline crs setup
@@ -207,7 +207,7 @@ So aktivieren Sie ModSecurity (auch: `mod_security` Apache-Modul), führen Sie d
    SecDataDir /tmp
    ```
 
-1. Wählen Sie die gewünschte `.vhost` aus dem Dispatcher-Modul Ihres AEM-Projekts `dispatcher/src/conf.d/available_vhosts`, beispielsweise `wknd.vhost`, fügen Sie den folgenden Eintrag außerhalb der `<VirtualHost>` blockieren.
+1. Wählen Sie den gewünschten `.vhost` aus dem Dispatcher-Modul `dispatcher/src/conf.d/available_vhosts` Ihres AEM-Projekts aus, beispielsweise `wknd.vhost`, und fügen Sie folgenden Eintrag außerhalb des `<VirtualHost>`-Blocks ein.
 
    ```
    # Enable the ModSecurity and OWASP CRS
@@ -223,11 +223,11 @@ So aktivieren Sie ModSecurity (auch: `mod_security` Apache-Modul), führen Sie d
    </VirtualHost>
    ```
 
-Alle oben genannten _ModSecurity CRS_ und _DOS-PROTECTION_ Konfigurationen sind im AEM WKND Sites-Projekt verfügbar. [tutorial/enable-modsecurity-crs-dos-protection](https://github.com/adobe/aem-guides-wknd/tree/tutorial/enable-modsecurity-crs-dos-protection) Verzweigung für Ihre Überprüfung.
+Alle oben genannten _ModSecurity CRS_- und _DOS-SCHUTZ_-Konfigurationen können in der Verzweigung [tutorial/enable-modsecurity-crs-dos-protection](https://github.com/adobe/aem-guides-wknd/tree/tutorial/enable-modsecurity-crs-dos-protection) des AEM WKND Sites-Projekts überprüft werden.
 
 ### Überprüfen der Dispatcher-Konfiguration
 
-Wenn Sie mit AEM as a Cloud Service arbeiten, bevor Sie Ihre _Dispatcher-Konfiguration_ geändert wurde, wird empfohlen, sie lokal zu validieren mithilfe von `validate` Skript der [AEM SDKs Dispatcher Tools](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=de).
+Wenn Sie mit AEM as a Cloud Service arbeiten, empfehlen wir, Ihre _Dispatcher-Konfiguration_ vor der Bereitstellung lokal mithilfe des `validate`-Skripts der [AEM SDK Dispatcher-Tools](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=de) zu überprüfen.
 
 ```
 # Go inside Dispatcher SDK 'bin' directory
@@ -239,48 +239,48 @@ $ ./validate.sh <YOUR-AEM-PROJECT-CODE-DIR>/dispatcher/src
 
 ## Bereitstellen
 
-Bereitstellen der lokal validierten Dispatcher-Konfigurationen mit Cloud Manager [Webebene](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?#web-tier-config) oder [Voller Stapel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?#full-stack-code) Pipeline. Sie können auch die [Schnelle Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=de) für schnellere Umstellungszeiten.
+Stellen Sie die lokal überprüften Dispatcher-Konfigurationen über die Cloud Manager-Pipeline [Webebene](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=de#web-tier-config) oder [Voller Stapel](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=de#full-stack-code) bereit. Für eine schnellere Bereitstellung können Sie auch die [Schnelle Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=de) nutzen.
 
-## Überprüfen Sie
+## Überprüfen
 
-Um den DoS-Schutz zu überprüfen, senden wir in diesem Beispiel innerhalb eines Zeitraums von 60 Sekunden mehr als 50 Anforderungen (25 Anforderungsschwellen sind doppelt so hoch). Diese Anfragen sollten jedoch über die AEM as a Cloud Service [integriert](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=de) oder [sonstige CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?#point-to-point-CDN) Targeting Ihrer Website.
+Um den DoS-Schutz zu überprüfen, senden wir in diesem Beispiel innerhalb eines Zeitraums von 60 Sekunden mehr als 50 Anforderungen (25 Anforderungszeitschwellen auf zwei Vorkommnisse). Diese Anfragen sollten jedoch über die in AEM as a Cloud Service [integrierte](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=de) oder [sonstige CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=de#point-to-point-CDN) auf Ihrer Website erfolgen.
 
-Eine Methode zum Erzielen des CDN-Pass-Through besteht darin, einen Abfrageparameter mit einer **neuer zufälliger Wert für jede Seitenanforderung der Site**.
+Eine Methode zum Erzielen des CDN-Durchlaufs besteht darin, einen Abfrageparameter mit einem **neuen zufälligen Wert für jede Seitenanforderung der Site** hinzuzufügen.
 
-Um eine größere Anzahl von Anforderungen (50 oder mehr) innerhalb eines kurzen Zeitraums (z. B. 60 Sekunden) Trigger, muss der Apache [JMeter](https://jmeter.apache.org/) oder [Benchmark- oder Tabulator-Tool](https://httpd.apache.org/docs/2.4/programs/ab.html) verwendet werden.
+Um eine größere Anzahl von Anforderungen (50 oder mehr) innerhalb eines kurzen Zeitraums (z. B. 60 Sekunden) auszulösen, kann der Apache [JMeter](https://jmeter.apache.org/) oder das [Benchmark- oder Tabulator-Tool](https://httpd.apache.org/docs/2.4/programs/ab.html) verwendet werden.
 
 ### Simulieren des DoS-Angriffs mithilfe des JMeter-Skripts
 
 Gehen Sie wie folgt vor, um einen DoS-Angriff mit JMeter zu simulieren:
 
-1. [Herunterladen von Apache JMeter](https://jmeter.apache.org/download_jmeter.cgi) und [install](https://jmeter.apache.org/usermanual/get-started.html#install) lokal
-1. [Ausführen](https://jmeter.apache.org/usermanual/get-started.html#running) lokal mithilfe der `jmeter` Skript aus `<JMETER-INSTALL-DIR>/bin` Verzeichnis.
-1. Beispiel öffnen [WKND-DoS-Attack-Simulation-Test](assets/modsecurity-crs/WKND-DoS-Attack-Simulation-Test.jmx) JMX-Skript mithilfe des **Öffnen** Tool-Menü.
+1. [Laden Sie Apache JMeter](https://jmeter.apache.org/download_jmeter.cgi) herunter und [installieren](https://jmeter.apache.org/usermanual/get-started.html#install) Sie es lokal.
+1. [Führen](https://jmeter.apache.org/usermanual/get-started.html#running) Sie es lokal mithilfe des `jmeter`-Skripts im `<JMETER-INSTALL-DIR>/bin`-Verzeichnis aus.
+1. Öffnen Sie das JMX-Beispielskript [WKND-DoS-Attack-Simulation-Test](assets/modsecurity-crs/WKND-DoS-Attack-Simulation-Test.jmx) in JMeter über das Werkzeugmenü **Öffnen**.
 
-   ![Öffnen Sie das Beispiel-WKND DoS Attack JMX Test Script - ModSecurity](assets/modsecurity-crs/open-wknd-dos-attack-jmx-test-script.png)
+   ![Öffnen des Beispielskripts „WKND DoS Attack JMX Test“ – ModSecurity](assets/modsecurity-crs/open-wknd-dos-attack-jmx-test-script.png)
 
-1. Aktualisieren Sie die **Servername oder IP** Feldwert in _Startseite_ und _Adventure Page_ HTTP-Anforderungs-Sampler, der Ihrer Test-AEM-Umgebungs-URL entspricht. Überprüfen Sie andere Details des JMeter-Beispielskripts.
+1. Aktualisieren Sie Feldwert **Servername oder IP** in _Startseite_ und den HTTP-Anfragen-Sampler der _Abenteuer-Seite_ entsprechend der Test-URL Ihrer AEM-Umgebung. Überprüfen Sie andere Details des JMeter-Beispielskripts.
 
-   ![AEM Server Name HTTP Request JMetere - ModSecurity](assets/modsecurity-crs/aem-server-name-http-request.png)
+   ![AEM-Servername HTTP-Anfrage JMetere – ModSecurity](assets/modsecurity-crs/aem-server-name-http-request.png)
 
-1. Führen Sie das Skript aus, indem Sie die **Starten** -Schaltfläche aus dem Tool-Menü. Das Skript sendet 50 HTTP-Anfragen (5 Benutzer und 10 Schleifenanzahl) an die WKND-Site _Startseite_ und _Adventure Page_. Somit sind insgesamt 100 Anfragen an nicht statische Dateien für den DoS-Angriff pro **DOS-PROTECTION** Benutzerdefinierte Konfiguration der CRS-Regel.
+1. Führen Sie das Skript über die Option **Starten** des Werkzeug-Menüs aus. Das Skript sendet 50 HTTP-Anfragen (5 Benutzer und 10 Schleifen) an die _Startseite_ der WKND-Site und der _Abenteuer-Seite_. Das sind insgesamt 100 Anfragen an nicht-statische Dateien zur Erkennung von DoS-Angriffen pro **DOS-SCHUTZ** CRS-Regelkonfiguration.
 
-   ![JMeter Script ausführen - ModSecurity](assets/modsecurity-crs/execute-jmeter-script.png)
+   ![JMeter Script ausführen – ModSecurity](assets/modsecurity-crs/execute-jmeter-script.png)
 
-1. Die **Ergebnisse in Tabelle anzeigen** JMeter-Listener zeigt **Fehlgeschlagen** Antwortstatus für Anforderungsnummer ~ 53 und höher.
+1. Der JMeter-Listener **Ergebnisse in Tabelle anzeigen** gibt als Antwort **Fehlgeschlagen** ab Anforderungsnummer ~ 53 aus.
 
-   ![Fehlgeschlagene Antwort in Ergebnisse anzeigen in Tabelle JMeter - ModSecurity](assets/modsecurity-crs/failed-response-jmeter.png)
+   ![Fehlgeschlagene Antwort in JMeter „Ergebnisse in Tabelle anzeigen“ – ModSecurity](assets/modsecurity-crs/failed-response-jmeter.png)
 
-1. Die **503 HTTP-Antwortcode** für die fehlgeschlagenen Anfragen zurückgegeben wird, können Sie die Details mit der **Ergebnisstruktur anzeigen** JMeter-Listener.
+1. Wenn für die fehlgeschlagene Antwort wird der **Antwortcode 503 HTTP** zurückgegeben wird, können Sie die Details mit dem JMeter-Listener **Ergebnisstruktur anzeigen** anzeigen.
 
-   ![503 Response JMeter - ModSecurity](assets/modsecurity-crs/503-response-jmeter.png)
+   ![503 Antwort JMeter – ModSecurity](assets/modsecurity-crs/503-response-jmeter.png)
 
 ### Prüfprotokolle
 
 Die Konfiguration des ModSecurity-Loggers protokolliert die Details des DoS-Angriffs. Gehen Sie wie folgt vor, um die Details anzuzeigen:
 
-1. Laden Sie die `httpderror` Protokolldatei der **Dispatcher veröffentlichen**.
-1. Suchen nach Wort `burst` in der Protokolldatei, um die **error** lines
+1. Laden Sie die `httpderror` Protokolldatei des **Veröffentlichungs-Dispatcher** herunter und öffnen Sie sie.
+1. Suchen Sie nach dem Wort `burst` in der Protokolldatei, um die **Fehlerzeilen** zu finden
 
    ```
    Tue Aug 15 15:19:40.229262 2023 [security2:error] [pid 308:tid 140200050567992] [cm-p46652-e1167810-aem-publish-85df5d9954-bzvbs] [client 192.150.10.209] ModSecurity: Warning. Operator GE matched 2 at IP:dos_burst_counter. [file "/etc/httpd/conf.d/modsec/crs/rules/REQUEST-912-DOS-PROTECTION.conf"] [line "265"] [id "912170"] [msg "Potential Denial of Service (DoS) Attack from 192.150.10.209 - # of Request Bursts: 2"] [ver "OWASP_CRS/3.3.5"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "paranoia-level/1"] [tag "attack-dos"] [tag "OWASP_CRS"] [tag "capec/1000/210/227/469"] [hostname "publish-p46652-e1167810.adobeaemcloud.com"] [uri "/content/wknd/us/en/adventures.html"] [unique_id "ZNuXi9ft_9sa85dovgTN5gAAANI"]
@@ -290,12 +290,12 @@ Die Konfiguration des ModSecurity-Loggers protokolliert die Details des DoS-Angr
    Tue Aug 15 15:19:40.515237 2023 [security2:error] [pid 309:tid 140200051428152] [cm-p46652-e1167810-aem-publish-85df5d9954-bzvbs] [client 192.150.10.209] ModSecurity: Access denied with connection close (phase 1). Operator EQ matched 0 at IP. [file "/etc/httpd/conf.d/modsec/crs/rules/REQUEST-912-DOS-PROTECTION.conf"] [line "120"] [id "912120"] [msg "Denial of Service (DoS) attack identified from 192.150.10.209 (1 hits since last alert)"] [ver "OWASP_CRS/3.3.5"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "paranoia-level/1"] [tag "attack-dos"] [tag "OWASP_CRS"] [tag "capec/1000/210/227/469"] [hostname "publish-p46652-e1167810.adobeaemcloud.com"] [uri "/us/en.html"] [unique_id "ZNuXjAN7ZtmIYHGpDEkmmwAAAQw"]
    ```
 
-1. Überprüfen Sie die Details wie _Client-IP-Adresse_, Aktion, Fehlermeldung und Anfragedetails.
+1. Überprüfen Sie Details wie _Client-IP-Adresse_, Aktion, Fehlermeldung und Anfragedetails.
 
 ## Leistungsauswirkungen von ModSecurity
 
-Die Aktivierung von ModSecurity und zugehörigen Regeln hat einige Leistungsbeeinträchtigungen. Achten Sie daher darauf, welche Regeln erforderlich, redundant und übersprungen sind. Arbeiten Sie mit Ihren Web Security-Experten zusammen, um die CRS-Regeln zu aktivieren und anzupassen.
+Die Aktivierung von ModSecurity und zugehörigen Regeln hat einige Auswirkungen auf die Leistung. Achten Sie daher darauf, welche Regeln erforderlich sind, welche redundant sind und welche übersprungen werden. Arbeiten Sie mit Ihren Fachleuten für Web-Sicherheit zusammen, um die CRS-Regeln zu aktivieren und anzupassen.
 
 ### Zusätzliche Regeln
 
-Dieses Tutorial aktiviert und passt nur die **DOS-PROTECTION** CRS-Regel für Demonstrationszwecke. Es wird empfohlen, mit Web Security-Experten zusammenzuarbeiten, um die entsprechenden Regeln zu verstehen, zu überprüfen und zu konfigurieren.
+In diesem Tutorial wird die CRS-Regel **DOS-SCHUTZ** nur zu Demonstrationszwecken aktiviert und angepasst. Es wird empfohlen, mit Fachleuten für Web-Sicherheit zusammenzuarbeiten, um die entsprechenden Regeln zu verstehen, zu überprüfen und zu konfigurieren.
