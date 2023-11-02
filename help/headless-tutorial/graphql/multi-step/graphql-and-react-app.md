@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1218'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ Eine einfache React-App wird zum Abfragen und Anzeigen von **Team**- und **Perso
 
 ## Voraussetzungen
 
-Es wird davon ausgegangen, dass die in den vorherigen Teilen dieses mehrteiligen Tutorials beschriebenen Schritte abgeschlossen wurden, oder [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip) wird auf Ihrem AEM as a Cloud Service Autoren- und Veröffentlichungsdienst installiert.
+Es wird davon ausgegangen, dass die in den vorherigen Teilen dieses mehrteiligen Tutorials beschriebenen Schritte abgeschlossen wurden oder [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip) in Ihren Author- und Publish-Services von AEM as a Cloud Service installiert ist.
 
 _IDE-Screenshots in diesem Kapitel stammen von [Visual Studio Code](https://code.visualstudio.com/)_
 
@@ -89,7 +89,7 @@ So rufen Sie die React-App ab:
    $ npm start
    ```
 
-1. Die React-App startet im Entwicklungsmodus auf [http://localhost:3000/](http://localhost:3000/). Änderungen, die während des Tutorials an der React-App vorgenommen wurden, werden sofort übernommen.
+1. Die React-App startet im Entwicklungsmodus auf [http://localhost:3000/](http://localhost:3000/). Änderungen, die im Laufe des Tutorials an der React-App vorgenommen wurden, werden sofort wiedergegeben.
 
 ![Teilweise implementierte React-App](./assets/graphql-and-external-app/partially-implemented-react-app.png)
 
@@ -100,7 +100,7 @@ So rufen Sie die React-App ab:
 >
 > //*********************************
 >
->  // TODO Implementieren Sie dies, indem Sie die Schritte aus AEM Headless-Tutorial befolgen.
+>  // TODO  Implementieren Sie dies, indem Sie die Schritte aus dem AEM Headless-Tutorial befolgen
 >
 >  //*********************************
 >
@@ -351,7 +351,7 @@ Wenn Sie nach Abschluss des Vorgangs den Namen einer Person in der Team-Ansicht 
 
 1. Suchen Sie die Funktion `usePersonByName(fullName)`.
 
-1. Um einen `useEffect`-Hook zu erstellen, der die persistierte Abfrage `my-project/all-teams` über `fetchPersistedQuery(..)` aufruft, fügen Sie den folgenden Code hinzu. Der Hook gibt außerdem nur die relevanten Daten aus der AEM GraphQL-Antwort unter `data?.teamList?.items` zurück, sodass die React-Ansichtskomponenten unabhängig von den übergeordneten JSON-Strukturen sein können.
+1. Um einen `useEffect`-Hook zu erstellen, der die persistente Abfrage `my-project/all-teams` über `fetchPersistedQuery(..)` aufruft, fügen Sie folgenden Code hinzu. Der Hook gibt außerdem nur die relevanten Daten aus der AEM GraphQL-Antwort unter `data?.teamList?.items` zurück, sodass die React-Ansichtskomponenten unabhängig von den übergeordneten JSON-Strukturen sein können.
 
    ```javascript
    /**
@@ -492,11 +492,11 @@ Sehen Sie sich die App unter [http://localhost:3000/](http://localhost:3000/) an
 
 >[!IMPORTANT]
 >
->Wenn Sie Ihre Implementierungsänderungen überprüfen möchten oder die App nach den oben genannten Änderungen nicht funktionsfähig ist, lesen Sie den Abschnitt [Grundlegendes Tutorial](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial) Lösungsverzweigung.
+>Wenn Sie Ihre Implementierungsänderungen überprüfen möchten oder die App nach den oben genannten Änderungen nicht funktionsfähig ist, beziehen Sie sich auf die Lösungsverzweigung [Grundlegendes Tutorial](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial).
 
 ## Unter der Haube
 
-Öffnen Sie die **Entwicklertools** > **Netzwerk** und _Filter_ für `all-teams` -Anfrage. Beachten Sie die GraphQL-API-Anfrage `/graphql/execute.json/my-project/all-teams` gegen `http://localhost:3000` und **NOT** gegen den Wert von `REACT_APP_HOST_URI`, beispielsweise `<https://publish-pxxx-exxx.adobeaemcloud.com`. Die Anfragen werden für die Domain der React-App gestellt, weil die [Proxy-Einrichtung](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) aktiviert wird, wenn das `http-proxy-middleware`-Modul in Verwendung ist.
+Öffnen Sie im Browser **Entwicklungs-Tools** > **Netzwerk** und _Filter_ für die `all-teams`-Anfrage. Beachten Sie, dass die GraphQL API-Anfrage `/graphql/execute.json/my-project/all-teams` für `http://localhost:3000` und **NICHT** für den Wert des `REACT_APP_HOST_URI` erfolgt, z. B. `<https://publish-pxxx-exxx.adobeaemcloud.com`. Die Anfragen werden für die Domain der React-App gestellt, weil die [Proxy-Einrichtung](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) aktiviert wird, wenn das `http-proxy-middleware`-Modul in Verwendung ist.
 
 
 ![GraphQL-API-Anfrage über Proxy](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)
