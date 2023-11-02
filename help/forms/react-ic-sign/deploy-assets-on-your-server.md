@@ -10,9 +10,9 @@ kt: 13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: f12f83fa-673a-454c-aa52-6ea769a182b7
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '168'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -60,4 +60,4 @@ Um das Ausführen von POST-Aufrufen an den AEM-Endpunkt über Ihre REACT-App zu 
 
 ![cors-setting](assets/cors-settings.png)
 
-Siehe [Verstehen von CORS mit AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=de) Weitere Informationen zu CORS-Konfigurationsoptionen.
+Weitere Informationen zu CORS-Konfigurationsoptionen finden Sie unter [Verstehen von CORS mit AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=de).
