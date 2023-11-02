@@ -10,17 +10,19 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
+exl-id: 4a7acdd2-f442-44ee-8560-f9cb64436acf
+source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
 workflow-type: tm+mt
 source-wordcount: '416'
 ht-degree: 0%
 
 ---
 
-
 # Best Practices für Traffic-Filterregeln, einschließlich WAF-Regeln
 
 Erfahren Sie mehr über empfohlene Best Practices für Traffic-Filterregeln, einschließlich WAF-Regeln. Beachten Sie, dass die in diesem Artikel beschriebenen Best Practices nicht vollständig sind und nicht als Ersatz für Ihre eigenen Sicherheitsrichtlinien und -verfahren dienen sollen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425408?quality=12&learn=on)
 
 ## Allgemeine Best Practices
 
@@ -150,3 +152,6 @@ data:
 ## Zusammenfassung
 
 Abschließend wurde dieses Tutorial mit dem Wissen und den Tools ausgestattet, die Sie zur Verbesserung der Sicherheit Ihrer Webanwendungen in Adobe Experience Manager as a Cloud Service (AEMCS) benötigen. Mit praktischen Regelbeispielen und Einblicken in die Ergebnisanalyse können Sie Ihre Website und Anwendungen effektiv schützen.
+
+
+

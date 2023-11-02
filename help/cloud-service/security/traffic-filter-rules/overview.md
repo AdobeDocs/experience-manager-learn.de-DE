@@ -10,17 +10,19 @@ doc-type: Tutorial
 last-substantial-update: 2023-10-26T00:00:00Z
 jira: KT-13148
 thumbnail: KT-13148.jpeg
-source-git-commit: 87266a250eb91a82cf39c4a87e8f0119658cf4aa
+exl-id: e6d67204-2f76-441c-a178-a34798fe266d
+source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
 workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 3%
 
 ---
 
-
 # Schutz von Websites mit Traffic-Filterregeln (einschließlich WAF-Regeln)
 
 Informationen zu **Traffic-Filterregeln**, einschließlich der Unterkategorie von **Web Application Firewall (WAF)-Regeln** in AEM as a Cloud Service (AEMCS). Erfahren Sie, wie Sie die Regeln erstellen, bereitstellen und testen können. Analysieren Sie außerdem die Ergebnisse, um Ihre AEM Sites zu schützen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3425401?quality=12&learn=on)
 
 ## Übersicht
 
@@ -41,6 +43,5 @@ Wir laden Sie ein, Feedback zu geben oder Fragen zu Traffic-Filterregeln per E-M
 ## Nächster Schritt
 
 Lernen [Einrichtung](./how-to-setup.md) die Funktion , damit Sie Traffic-Filterregeln erstellen, bereitstellen und testen können. Lesen Sie mehr über die Einrichtung der **Elasticsearch, Logstash und Kibana (ELK)** Dashboard-Tools stapeln, um die Ergebnisse Ihrer AEMCS-CDN-Protokolle zu analysieren.
-
 
 
