@@ -11,9 +11,9 @@ role: Developer
 level: Intermediate
 exl-id: cdfae631-86d7-438f-9baf-afd621802723
 source-git-commit: 51e21c11df63d33a6900fbc331a756f2a7655bcb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '391'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ In diesem Beispiel wird die MySQL-Datenbank verwendet, um die Daten des adaptive
 
 ## Erstellen einer Datenquelle
 
-Sie müssen eine Apache Sling Connection Pooled DataSource mit dem Namen **StoreAndRetrieveAfData** auf das Datenbankschema verweisen, das im vorherigen Schritt erstellt wurde. Der Code im OSGi-Bundle verwendet diesen Datenquellennamen.
+Sie müssen eine Apache Sling Connection Pooled DataSource mit dem Namen **StoreAndRetrieveAfData** mit Verweis auf das Datenbankschema erstellen, das im vorherigen Schritt erstellt wurde. Der Code im OSGi-Bundle verwendet diesen Datenquellennamen.
 
 ## Erstellen von Formulardatenmodellen
 
@@ -59,7 +59,7 @@ Die in dieser Demo verwendeten Beispielformulare basieren auf einer benutzerdefi
 
 Die beiden Formulare, aus denen dieses Muster besteht, müssen in AEM importiert werden. Die Beispielformulare können [hier heruntergeladen](assets/sample-forms.zip) werden
 
-Öffnen Sie [MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) im Bearbeitungsmodus. Geben Sie die Werte für &quot;Vonage API Key&quot;und &quot;API Secret&quot;in den entsprechenden Feldern im adaptiven Formular an.
+Öffnen Sie [MyAccountForm](http://localhost:4502/editor.html/content/forms/af/myaccountform.html) im Bearbeitungsmodus. Geben Sie die Werte für Vonage-API-Schlüssel und API-Geheimnis in den entsprechenden Feldern im adaptiven Formular an.
 
 ## Testen der Lösung
 
