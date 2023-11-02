@@ -1,6 +1,6 @@
 ---
-title: AEM as a Cloud Service Zwischenspeicherung
-description: Allgemeine Übersicht über AEM as a Cloud Service Zwischenspeicherung.
+title: Zwischenspeicherung in AEM as a Cloud Service
+description: Allgemeiner Überblick über die Zwischenspeicherung in AEM as a Cloud Service.
 version: Cloud Service
 feature: Dispatcher, Developer Tools
 topic: Performance
@@ -12,23 +12,23 @@ jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: e76ed4c5-3220-4274-a315-a75e549f8b40
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '206'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM as a Cloud Service Zwischenspeicherung
+# Zwischenspeicherung in AEM as a Cloud Service
 
-In AEM as a Cloud Service ist das Verständnis der Zwischenspeicherung von entscheidender Bedeutung. Das Caching umfasst die Speicherung und Wiederverwendung zuvor abgerufener Daten, um die Systemeffizienz zu verbessern und die Ladezeiten zu reduzieren. Dieser Mechanismus beschleunigt die Bereitstellung von Inhalten erheblich, steigert die Leistung von Websites und optimiert das Benutzererlebnis.
+In AEM as a Cloud Service ist das Verständnis der Zwischenspeicherung von entscheidender Bedeutung. Die Zwischenspeicherung umfasst die Speicherung und Wiederverwendung zuvor abgerufener Daten, um die Systemeffizienz zu verbessern und die Ladezeiten zu reduzieren. Dieser Mechanismus beschleunigt die Bereitstellung von Inhalten erheblich, steigert die Leistung von Websites und optimiert das Benutzererlebnis.
 
-AEM as a Cloud Service verfügt über mehrere Zwischenspeicherungsebenen und Strategien, die sich zwischen den Autoren- und Veröffentlichungsdiensten unterscheiden.
+AEM as a Cloud Service verfügt über mehrere Zwischenspeicherungsebenen und Strategien, die sich zwischen Author- und Publish-Service unterscheiden.
 
-![Übersicht über die as a Cloud Service Zwischenspeicherung AEM](./assets/overview/all.png){align="center"}
+![Übersicht über die Zwischenspeicherung in AEM as a Cloud Service](./assets/overview/all.png){align="center"}
 
-## AEM Zwischenspeicherung
+## AEM-Zwischenspeicherung
 
-AEM as a Cloud Service verfügt über eine robuste, konfigurierbare mehrschichtige Zwischenspeicherungsstrategie, einschließlich eines CDN, AEM Dispatcher und optional eines kundenverwalteten CDN. Das Zwischenspeichern über mehrere Ebenen kann zur Leistungsoptimierung optimiert werden, sodass AEM nur die besten Erlebnisse bereitstellt. AEM hat für die Autoren- und Veröffentlichungsdienste unterschiedliche Caching-Bedenken. Untersuchen Sie die folgenden Caching-Strategien für jeden Dienst.
+AEM as a Cloud Service verfügt über eine robuste, konfigurierbare, mehrschichtige Zwischenspeicherungsstrategie, einschließlich eines CDN, AEM Dispatcher und optional eines kundenverwalteten CDN. Die Zwischenspeicherung über mehrere Ebenen kann für eine optimale Leistung fein abgestimmt werden, sodass AEM nur die besten Erlebnisse bereitstellt. AEM hat unterschiedliche Anliegen bezüglich der Zwischenspeicherung für die Author- und Publish-Services. Erkunden Sie die Zwischenspeicherungsstrategien für jeden der nachfolgenden Services.
 
 
 <div class="columns is-multiline" style="margin-top: 2rem">
@@ -36,18 +36,18 @@ AEM as a Cloud Service verfügt über eine robuste, konfigurierbare mehrschichti
     <div class="card is-padded-small is-padded-big-mobile" style="height: 100%">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./publish.md" title="AEM Publish-Dienst" tabindex="-1">
-              <img class="is-bordered-r-small" src="./assets/overview/publish-card.png" alt="Zwischenspeicherung des AEM Veröffentlichungsdienstes">
+            <a href="./publish.md" title="AEM-Publish-Service" tabindex="-1">
+              <img class="is-bordered-r-small" src="./assets/overview/publish-card.png" alt="Zwischenspeicherung beim AEM-Publish-Service">
             </a>
           </figure>
         </div>
         <div class="card-content is-padded-small">
           <div class="content">
-            <p class="headline is-size-6 has-text-weight-bold"><a href="./publish.md" title="Zwischenspeicherung des AEM Veröffentlichungsdienstes">Zwischenspeicherung des AEM Veröffentlichungsdienstes</a></p>
-            <p class="is-size-6">AEM Veröffentlichungsdienst verwendet ein verwaltetes CDN und AEM Dispatcher, um die Weberfahrungen der Endbenutzer zu optimieren.</p>
+            <p class="headline is-size-6 has-text-weight-bold"><a href="./publish.md" title="Zwischenspeicherung beim AEM-Publish-Service">Zwischenspeicherung beim AEM-Publish-Service</a></p>
+            <p class="is-size-6">Der AEM-Publish-Service verwendet ein verwaltetes CDN und AEM Dispatcher, um die Web-Erfahrungen der Endbenutzenden zu optimieren.</p>
             <a href="./publish.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-              <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-            </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+</a>
           </div>
         </div>
       </div>
@@ -56,18 +56,18 @@ AEM as a Cloud Service verfügt über eine robuste, konfigurierbare mehrschichti
         <div class="card is-padded-small is-padded-big-mobile" style="height: 100%">
             <div class="card-image">
             <figure class="image is-16by9">
-                <a href="./author.md" title="Zwischenspeicherung des AEM-Autorendienstes" tabindex="-1">
-                <img class="is-bordered-r-small" src="./assets/overview/author-card.png" alt="Zwischenspeicherung des AEM-Autorendienstes">
+                <a href="./author.md" title="Zwischenspeicherung des AEM-Author-Service" tabindex="-1">
+                <img class="is-bordered-r-small" src="./assets/overview/author-card.png" alt="Zwischenspeicherung des AEM-Author-Service">
                 </a>
             </figure>
             </div>
             <div class="card-content is-padded-small">
             <div class="content">
-                <p class="headline is-size-6 has-text-weight-bold"><a href="./author.md" title="Zwischenspeicherung des AEM-Autorendienstes">Zwischenspeicherung des AEM-Autorendienstes</a></p>
-                <p class="is-size-6">AEM -Autorendienst verwendet ein verwaltetes CDN, um optimierte Authoring-Erlebnisse bereitzustellen.</p>
+                <p class="headline is-size-6 has-text-weight-bold"><a href="./author.md" title="Zwischenspeicherung des AEM-Author-Service">Zwischenspeicherung des AEM-Author-Service</a></p>
+                <p class="is-size-6">Der AEM-Author-Service verwendet ein verwaltetes CDN, um optimierte Autorenerlebnisse bereitzustellen.</p>
                 <a href="./author.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+</a>
             </div>
             </div>
         </div>
