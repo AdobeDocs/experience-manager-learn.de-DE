@@ -12,9 +12,9 @@ jira: KT-14070
 thumbnail: 3424615.jpeg
 exl-id: e8ed49a5-4ad2-4759-bf0f-1dae8478d996
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '64'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -22,6 +22,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-Erfahren Sie, wie Sie [AEM Assets Sidekick-Plug-in](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin) kann verwendet werden, um verwaltete Assets in durch Edge Delivery Services bereitgestellte Erlebnisse mit hoher Auswirkung zu integrieren.
+Erfahren Sie, wie Sie das [AEM Assets Sidekick-Plug-in](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin) nutzen können, um verwaltete Assets in leistungsstarke Erlebnisse zu integrieren, die von Edge Delivery Services bereitgestellt werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424615/?learn=on)
