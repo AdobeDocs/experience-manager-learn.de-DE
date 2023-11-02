@@ -13,9 +13,9 @@ role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 source-git-commit: f47beff14782bb3f570d32818b000fc279394f19
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1052'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -25,10 +25,10 @@ Die Ressourcenfreigabe zwischen verschiedenen Ursprüngen (Cross-Origin Resource
 
 Die in diesem Dokument beschriebene OSGi-Konfiguration reicht für Folgendes aus:
 
-1. Ressourcenfreigabe mit nur einem Ursprung in AEM Veröffentlichung
+1. Ressourcenfreigabe mit nur einem Ursprung in AEM Publish
 2. CORS-Zugriff auf AEM Author
 
-Wenn für die AEM Veröffentlichung CORS-Zugriff mit mehreren Herkunftsländern erforderlich ist, lesen Sie den Abschnitt [diese Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
+Wenn für AEM Publish ein CORS-Zugriff mit mehreren Usprüngen erforderlich ist, lesen Sie [diese Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=de#dispatcher-configuration).
 
 ## OSGi-Konfiguration der Adobe Granite-CORS-Richtlinie
 
