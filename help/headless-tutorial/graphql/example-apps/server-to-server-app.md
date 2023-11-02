@@ -12,7 +12,7 @@ last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 39b21a29-a75f-4a6c-ba82-377cf5cc1726
 source-git-commit: d3ee129cb228f02d5a5846465400c04ce81dfbb5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '478'
 ht-degree: 100%
 
@@ -35,7 +35,7 @@ Folgende Tools sollten lokal installiert werden:
 
 ## AEM-Anforderungen
 
-Die Node.js-Anwendung funktioniert mit den folgenden AEM-Bereitstellungsoptionen. Für alle Bereitstellungen muss die [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installiert werden.
+Die Node.js-Anwendung funktioniert mit den folgenden AEM-Bereitstellungsoptionen. Für alle Bereitstellungen muss die [WKND-Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installiert werden.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=de)
 + Optional [Service-Anmeldeinformationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=de) bei Autorisierung von Anfragen (z. B. Verbindung mit dem AEM-Autoren-Service)
