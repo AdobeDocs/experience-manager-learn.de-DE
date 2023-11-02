@@ -1,11 +1,10 @@
 ---
 source-git-commit: 750f688ed020f889e044e2ebd673c0f494b32229
-workflow-type: tm+mt
-translation-type: tm+mt
+workflow-type: ht
 source-wordcount: '10'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 # experience-manager-learn.en
 
-Gemeinsame Lernprogramme und Hilfsmaterialien für Adobe Experience Manager.
+Eine Sammlung von Tutorials und Hilfsmitteln zu Adobe Experience Manager.
