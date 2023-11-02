@@ -11,9 +11,9 @@ thumbnail: 5332-collect-data-analytics.jpg
 badgeIntegration: label="Integration" type="positive"
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2468'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Folgendes ist erforderlich:
 
 ## Wechseln der Tag-Umgebung für WKND-Site
 
-Die [WKND](https://wknd.site/us/en.html) ist eine öffentlich zugängliche Website, die auf [ein Open-Source-Projekt](https://github.com/adobe/aem-guides-wknd) als Referenz konzipiert und [Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de) für eine AEM Implementierung.
+[WKND](https://wknd.site/us/en.html) ist eine öffentlich zugängliche Website, die auf [einem Open-Source-Projekt](https://github.com/adobe/aem-guides-wknd) basiert, das als Referenz und [Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de) für eine AEM-Implementierung konzipiert wurde.
 
 Anstatt eine AEM-Umgebung einzurichten und die WKND-Code-Basis zu installieren, können Sie den Experience Platform Debugger verwenden, um von der Live-[WKND-Site](https://wknd.site/us/en.html) zu *Ihrer* Tag-Eigenschaft zu **wechseln**. Sie können jedoch Ihre eigene AEM-Site verwenden, wenn dort bereits die [Adobe Client-Datenschicht aktiviert](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de#installation-activation) ist.
 
@@ -115,7 +115,7 @@ Das [WKND-Referenzprojekt](https://github.com/adobe/aem-guides-wknd) wurde mit A
 
 ## Erstellen einer Regel für „Seite geladen“
 
-Die Adobe Client-Datenschicht ist eine **ereignisgesteuert** Datenschicht. Wenn die AEM-Seite geladen ist, löst das ein `cmp:show`-Ereignis aus. Erstellen Sie eine Regel, die ausgelöst wird, wenn das `cmp:show`-Ereignis aus der Seitendatenschicht ausgelöst wird.
+Die Adobe Client-Datenschicht ist eine **ereignisgesteuerte** Datenschicht. Wenn die AEM-Seite geladen ist, löst das ein `cmp:show`-Ereignis aus. Erstellen Sie eine Regel, die ausgelöst wird, wenn das `cmp:show`-Ereignis aus der Seitendatenschicht ausgelöst wird.
 
 1. Navigieren Sie zu Experience Platform und zur Tag-Eigenschaft, die mit der AEM-Site integriert ist.
 1. Navigieren Sie zum Abschnitt **Regeln** in der Benutzeroberfläche „Tag-Eigenschaft“ auf und klicken Sie auf **Neue Regel erstellen**.
@@ -178,7 +178,7 @@ Die Adobe Client-Datenschicht ist eine **ereignisgesteuert** Datenschicht. Wenn 
    console.log("Page template: " + event.component['xdm:template']);
    ```
 
-   Das `event`-Objekt wird von der `trigger()`-Methode übergeben, die in dem benutzerdefinierten Ereignis aufgerufen wird. Hier wird die `component` ist die aktuelle von der Datenschicht abgeleitete Seite `getState` im benutzerspezifischen Ereignis.
+   Das `event`-Objekt wird von der `trigger()`-Methode übergeben, die in dem benutzerdefinierten Ereignis aufgerufen wird. Hier ist die `component` die aktuelle von der Datenschicht `getState` abgeleitete Seite im benutzerspezifischen Ereignis.
 
 1. Speichern Sie die Änderungen und führen Sie einen [Build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html?lang=de) in der Tag-Eigenschaft durch, um den Code in die [Umgebung](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=de) zu übertragen, die auf Ihrer AEM-Site verwendet wird.
 
