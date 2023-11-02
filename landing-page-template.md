@@ -1,39 +1,35 @@
 ---
-title: guide title
+title: Titel des Handbuchs
 seo-title: seo title
-description: Hilfslinienbeschreibung
+description: Beschreibung des Handbuchs
 seo-description: seo-description
-translation-type: tm+mt
 source-git-commit: f6b1af99eb9eb5602234c89ea25f1a7d03d64cc0
-workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 4%
+workflow-type: ht
+source-wordcount: '105'
+ht-degree: 100%
 
 ---
 
 
-# Überblick {#overview}
+# Übersicht {#overview}
 
-Ein 1-2-Satz Überblick über das Produkt, auf dem dieses Benutzerhandbuch basiert. Dieses Benutzerhandbuch enthält Videos und Tutorials zu den vielen Funktionen von *xyz*.
+Eine Kurzbeschreibung des Produkts, auf das sich dieses Benutzerhandbuch konzentriert. Dieses Benutzerhandbuch enthält Videos und Tutorials zu den zahlreichen Funktionen und Einsatzmöglichkeiten von *xyz*.
 
 ## Neue Funktionen
 
-* **[Video zu neuen Funktionen](README.md)**
+* **[Video zu einer neuen Funktion (Video)](README.md)**
+  <br>
+  *Erfahren Sie mehr über diese coolen neuen Funktionen.*
 
-   <br>
-   *Erfahren Sie mehr über diese tolle neue Funktion.*
-
-* **[Video zu neuen Funktionen](README.md)**
-
-   <br>
-   *Erfahren Sie mehr über diese tolle neue Funktion.*
+* **[Video zu einer neuen Funktion (Video)](README.md)**
+  <br>
+  *Erfahren Sie mehr über diese coolen neuen Funktionen.*
 
 * **[Ein neuer Artikel (Artikel)](README.md)**
+  <br>
+  *Klicken Sie hier, um mehr über die Funktion xyz zu erfahren.*
 
-   <br>
-   *Klicken Sie hier um mehr über Funktion xyz zu erfahren!*
-
-## Personalauswahl
+## Empfohlene Artikel
 
 <table>
 <tr>
@@ -43,11 +39,11 @@ Ein 1-2-Satz Überblick über das Produkt, auf dem dieses Benutzerhandbuch basie
     </a>
     <div>
       <a href="#">
-    <strong>Aktivierungsinhalt 1</strong>
-    </a>
+<strong>Aktivierungsinhalt 1</strong>
+</a>
     </div>
     <p>
-    <em>Eine kurze Beschreibung des Inhalts der Aktivierung.</em>
+    <em>Eine kurze Beschreibung des Aktivierungsinhalts.</em>
     <p>
   </td>
    <td>
@@ -56,11 +52,11 @@ Ein 1-2-Satz Überblick über das Produkt, auf dem dieses Benutzerhandbuch basie
     </a>
     <div>
       <a href="#">
-    <strong>Aktivierungsinhalt 1</strong>
-    </a>
+<strong>Aktivierungsinhalt 1</strong>
+</a>
     </div>
     <p>
-    <em>Eine kurze Beschreibung des Inhalts der Aktivierung.</em>
+    <em>Eine kurze Beschreibung des Aktivierungsinhalts.</em>
     <p>
   </td>
   <td>
@@ -69,11 +65,11 @@ Ein 1-2-Satz Überblick über das Produkt, auf dem dieses Benutzerhandbuch basie
     </a>
     <div>
       <a href="#">
-    <strong>Aktivierungsinhalt 1</strong>
-    </a>
+<strong>Aktivierungsinhalt 1</strong>
+</a>
     </div>
     <p>
-    <em>Eine kurze Beschreibung des Inhalts der Aktivierung.</em>
+    <em>Eine kurze Beschreibung des Aktivierungsinhalts.</em>
     <p>
   </td>
 </tr>
@@ -81,6 +77,6 @@ Ein 1-2-Satz Überblick über das Produkt, auf dem dieses Benutzerhandbuch basie
 
 ## Zusätzliche Ressourcen
 
-* [Ressource 1](README.md)
-* [Ressource 2](README.md)
-* [Ressource 3](README.md)
+* [Ressource #1](README.md)
+* [Ressource #2](README.md)
+* [Ressource #3](README.md)
