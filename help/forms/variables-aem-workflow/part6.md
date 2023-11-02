@@ -1,6 +1,6 @@
 ---
-title: Protokollieren von Variablen in AEM Workflow[Teil6]
-description: Wert AEM Workflow-Variablen protokollieren
+title: Protokollierungsvariablen im AEM-Workflow [Teil 6]
+description: Protokollieren des Wertes von AEM-Workflow-Variablen
 version: 6.5
 topic: Development
 feature: Adaptive Forms, Workflow
@@ -9,15 +9,15 @@ level: Beginner
 kt: 13783
 exl-id: 6afb3a52-9879-4393-8efd-ec3e5c303063
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '126'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Variablenwert in AEM Workflow protokollieren
+# Protokollieren des Variablenwertes im AEM-Workflow
 
-Die Protokollierung des Wertes von Variablen ist eine gängige Praxis bei der Softwareentwicklung. Es hilft Entwicklern, zu verfolgen und zu verstehen, wie ein AEM Workflow ausgeführt wird, Probleme zu diagnostizieren und den Datenfluss innerhalb eines AEM-Workflows zu überwachen.
+Die Protokollierung des Variablenwerts ist eine gängige Praxis bei der Software-Entwicklung. Dies hilft Entwicklerinnen und Entwicklern, zu verfolgen und zu verstehen, wie ein AEM-Workflow ausgeführt wird, Probleme zu diagnostizieren und den Datenfluss innerhalb eines AEM-Workflows zu überwachen.
 
 
 
@@ -174,9 +174,9 @@ public class LogWorkflowVariables implements WorkflowProcess {
 
 >[!NOTE]
 >
->Die Dokumente werden im Stammordner Ihrer AEM-Serverinstallation gespeichert.
+>Die Dokumente werden im Stammordner Ihrer AEM-Server-Installation gespeichert.
 
-## Bereitstellen des Beispielpakets
+## Bereitstellen des Beispiel-Bundles
 
-[Bereitstellen des Variablen-Logger-Bundles](assets/VariableLogger.core-1.0.0-SNAPSHOT.jar) über die Felix-Webkonsole.
-Verknüpfen Sie dieses Bundle mit einem Prozessschritt in Ihrem AEM Workflow, um den Wert der Variablen &quot;String&quot;und &quot;Document&quot;zu protokollieren.
+[Bereitstellen des Variablen-Logger-Bundles](assets/VariableLogger.core-1.0.0-SNAPSHOT.jar) über die Felix-Web-Konsole.
+Verknüpfen Sie dieses Bundle mit einem Prozessschritt in Ihrem AEM-Workflow, um den Wert der Variablen „String“ und „Document“ zu protokollieren.
