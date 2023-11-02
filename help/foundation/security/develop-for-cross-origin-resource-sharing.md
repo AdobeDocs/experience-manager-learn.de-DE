@@ -8,20 +8,20 @@ level: Beginner
 feature: Security
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
 source-git-commit: 1114ec01555baa1c6ffc2ccc5e77165ec9827e4d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '376'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
 # Entwickeln für CORS (Cross-Origin Resource Sharing)
 
-Ein kurzes Beispiel für die Nutzung von [!DNL CORS] zum Zugriff auf AEM-Inhalte von einer externen Web-Anwendung über Client-seitiges JavaScript. In diesem Beispiel wird die CORS OSGi-Konfiguration verwendet, um den CORS-Zugriff auf AEM zu aktivieren. Der OSGi-Konfigurationsansatz ist möglich, wenn:
+Ein kurzes Beispiel für die Nutzung von [!DNL CORS] zum Zugriff auf AEM-Inhalte von einer externen Web-Anwendung über Client-seitiges JavaScript. In diesem Beispiel wird die CORS OSGi-Konfiguration verwendet, um den CORS-Zugriff auf AEM zu aktivieren. Die Verwendung der OSGi-Konfiguration ist möglich, wenn:
 
-* Eine Quelle greift auf AEM Inhalt veröffentlichen zu
-* CORS-Zugriff ist für AEM Author erforderlich
+* Eine einzige Quelle auf Inhalte von AEM Publish zugreift
+* Für AEM Author ein CORS-Zugriff erforderlich ist
 
-Wenn der Zugriff auf AEM Veröffentlichung mit mehreren Quellen erforderlich ist, lesen Sie den Abschnitt [diese Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
+Wenn der Zugriff auf AEM Publish von mehreren Quellen aus erforderlich ist, lesen Sie [diese Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=de#dispatcher-configuration).
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
 
