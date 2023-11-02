@@ -17,7 +17,7 @@ exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
 workflow-type: tm+mt
 source-wordcount: '522'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -27,20 +27,20 @@ Erfahren Sie, wie Sie mit Visual Experience Composer (VEC) eine A/B-Test-Target-
 
 ## Voraussetzungen
 
-Um VEC auf einer AEM Website zu verwenden, muss die folgende Einrichtung abgeschlossen sein:
+Um VEC auf einer AEM-Website verwenden zu können, muss folgende Einrichtung abgeschlossen sein:
 
 1. [Hinzufügen von Adobe Target zu Ihrer AEM-Website](./add-target-launch-extension.md)
 1. [Auslösen eines Adobe Target-Aufrufs von Launch](./load-and-fire-target.md)
 
 ## Überblick über das Szenario
 
-Auf der WKND-Website-Startseite werden lokale Aktivitäten oder die besten Dinge, die in einer Stadt zu erledigen sind, in Form von Informationskarten angezeigt. Sie als Marketing-Fachkraft haben die Aufgabe erhalten, die Homepage zu ändern, indem Sie Textänderungen am Abschnitts-Teaser für Abenteuer vornehmen und verstehen, wie dieses die Konversion verbessert.
+Auf der Homepage der WKND-Site werden lokale Aktivitäten oder die besten Aktivitäten um eine Stadt herum in Form von Informationskarten angezeigt. Sie als Marketing-Fachkraft haben die Aufgabe erhalten, die Homepage zu ändern, indem Sie Textänderungen am Abschnitts-Teaser für Abenteuer vornehmen und verstehen, wie dieses die Konversion verbessert.
 
 ## Schritte zum Erstellen eines A/B-Tests mit Visual Experience Composer (VEC)
 
 1. Melden Sie sich bei [Adobe Experience Cloud](https://experience.adobe.com/) an, tippen Sie auf __Ziel__ und navigieren Sie zur Registerkarte __Tätigkeiten__
 
-   + Wenn Sie __Target__ Stellen Sie im Experience Cloud-Dashboard sicher, dass im Organisationswechsel oben rechts die richtige Adobe-Organisation ausgewählt ist und dass dem Benutzer Zugriff auf Target in [Adobe Admin Console](https://adminconsole.adobe.com/).
+   + Wenn Sie __Ziel__ nicht auf dem Experience Cloud-Dashboard sehen, vergewissern Sie sich, dass im Organisationsumschalter oben rechts die richtige Adobe-Organisation ausgewählt ist und dass den Benutzenden der Zugriff auf „Ziel“ in der [Adobe Admin Console](https://adminconsole.adobe.com/) gewährt wurde.
 
 1. Klicken Sie auf die Schaltfläche **Aktivität erstellen** und wählen Sie die Aktivität **A/B-Test**.
 
@@ -50,7 +50,7 @@ Auf der WKND-Website-Startseite werden lokale Aktivitäten oder die besten Dinge
 
    ![Aktivitäts-URL](assets/ab-test-url.png)
 
-1. Der Visual Experience Composer zeigt nach dem Erstellen einer Aktivität auf der linken Seite zwei Registerkarten an: *Erlebnis A* und *Erlebnis B*. Wählen Sie ein Erlebnis aus der Liste aus. Sie können der Liste neue Erlebnisse hinzufügen, indem Sie die **Erlebnis hinzufügen** Schaltfläche.
+1. Visual Experience Composer zeigt nach der Erstellung einer neuen Aktivität auf der linken Seite zwei Registerkarten an: *Erlebnis A* und *Erlebnis B*. Wählen Sie ein Erlebnis aus der Liste aus. Sie können über die Schaltfläche **Erlebnis hinzufügen** neue Erlebnisse zur Liste hinzufügen.
 
    ![Erlebnis A](assets/experience.png)
 
@@ -86,7 +86,7 @@ Auf der WKND-Website-Startseite werden lokale Aktivitäten oder die besten Dinge
 
 ## Zusammenfassung
 
-In diesem Kapitel konnte ein Marketingexperte mithilfe von Visual Experience Composer ein Erlebnis erstellen, indem er das Layout und den Inhalt einer Webseite per Drag-and-Drop austauscht und verändert hat, ohne den Code zum Ausführen eines Tests zu ändern.
+In diesem Kapitel konnte eine Marketing-Fachkraft mithilfe von Visual Experience Composer durch Ziehen und Ablegen, Tauschen und Ändern des Layouts sowie Inhalts einer Web-Seite ein Erlebnis erstellen, ohne den Code zum Ausführen eines Tests zu ändern.
 
 ## Unterstützende Links
 

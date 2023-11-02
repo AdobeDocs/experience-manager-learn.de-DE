@@ -1,6 +1,6 @@
 ---
-title: Lokales AEM SDK für AEM as a Cloud Service Entwicklung einrichten
-description: Richten Sie die lokale AEM SDK-Laufzeit mithilfe des Schnellstart-JAR des AEM as a Cloud Service SDK ein.
+title: Einrichten des lokalen AEM SDK für die AEM as a Cloud Service-Entwicklung
+description: Richten Sie das lokale AEM SDK mithilfe der Schnellstart-JAR des AEM as a Cloud Service-SDK ein.
 feature: Developer Tools
 version: Cloud Service
 kt: 4678, 4677
@@ -13,7 +13,7 @@ exl-id: 19f72254-2087-450b-909d-2d90c9821486
 source-git-commit: 2a412126ac7a67a756d4101d56c1715f0da86453
 workflow-type: tm+mt
 source-wordcount: '1793'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ Beachten Sie, dass `~` als Abkürzung für das Benutzerverzeichnis verwendet wir
 Experience Manager ist eine Java-Anwendung und erfordert daher das Oracle Java SDK, um die Entwicklungs-Tools zu unterstützen.
 
 1. [Laden Sie das neueste Java SDK 11 herunter und installieren Sie es](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-1. Stellen Sie sicher, dass das Oracle Java 11 SDK installiert ist, indem Sie den Befehl ausführen:
+1. Prüfen Sie, ob das Java 11 SDK installiert ist, indem Sie den folgenden Befehl ausführen:
 
 >[!BEGINTABS]
 
@@ -365,7 +365,7 @@ Quickstart: aborting
 
 Dies liegt daran, dass AEM as a Cloud Service Java SDK 11 erfordert und Sie eine andere Version verwenden, höchstwahrscheinlich Java 8. Um dieses Problem zu beheben, laden Sie [Oracle Java SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) herunter und installieren Sie es.
 
-Überprüfen Sie nach der Installation des Oracle Java 11 SDK, ob es sich um die aktive Version handelt, indem Sie den Befehl über die Befehlszeile ausführen:
+Sobald das Java 11 SDK installiert wurde, vergewissern Sie sich, dass es sich um die aktive Version handelt, indem Sie folgenden Befehl in der Befehlszeile ausführen:
 
 >[!BEGINTABS]
 

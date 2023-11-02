@@ -20,7 +20,7 @@ ht-degree: 100%
 
 # Hinzufügen von Badges zum Rich-Text-Editor (RTE)
 
-Erfahren Sie, wie Sie im AEM-Inhaltsfragment-Editor Badges zum Rich-Text-Editor (RTE) hinzufügen.
+Erfahren Sie, wie Sie im AEM-Inhaltsfragmenteditor Badges zum Rich-Text-Editor (RTE) hinzufügen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420831?quality=12&learn=on)
 

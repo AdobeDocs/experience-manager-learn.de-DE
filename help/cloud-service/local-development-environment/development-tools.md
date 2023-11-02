@@ -13,7 +13,7 @@ exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 source-git-commit: 7a240374c42e2555be25e682c803f51f442fb7f7
 workflow-type: tm+mt
 source-wordcount: '1483'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 99%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_devtools"
 >title="Einrichten von Entwicklungs-Tools"
->abstract="Für Entwicklungsaufgaben in Adobe Experience Manager (AEM) müssen nur wenige Entwicklungs-Tools auf dem Computer des Entwicklers bzw. der Entwicklerin installiert und eingerichtet werden. Zu diesen Tools gehören u. a. Java, Maven, Adobe I/O CLI und eine Entwicklungsumgebung (IDE)."
+>abstract="Für Entwicklungsaufgaben in Adobe Experience Manager (AEM) müssen nur wenige Entwicklungs-Tools auf dem Computer der Entwicklungsperson installiert und eingerichtet werden. Zu diesen Tools gehören u. a. Java, Maven, Adobe I/O CLI und eine Entwicklungsumgebung (IDE)."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=de" text="Entwicklungsrichtlinien"
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk.html?lang=de" text="Entwicklungsgrundlagen"
 
@@ -35,7 +35,7 @@ Beachten Sie, dass `~` als Abkürzung für das Benutzerverzeichnis verwendet wir
 Experience Manager ist eine Java-Applikation und erfordert daher das Java-SDK, um die Entwicklung und das AEM as a Cloud Service-SDK zu unterstützen.
 
 1. [Laden Sie die neueste Java SDK 11-Version herunter und installieren Sie sie](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-1. Stellen Sie sicher, dass das Oracle Java 11 SDK installiert ist, indem Sie den Befehl ausführen:
+1. Prüfen Sie, ob das Java 11 SDK installiert ist, indem Sie den folgenden Befehl ausführen:
 
 >[!BEGINTABS]
 
@@ -83,11 +83,11 @@ $ xcode-select --install
 
 >[!TAB Windows]
 
-[Homebrew unter Windows 10 installieren](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+[Installieren von Homebrew unter Windows 10](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
 
 >[!TAB Linux]
 
-[Homebrew unter Linux installieren](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
+[Installieren von Homebrew unter Linux](https://docs.brew.sh/Installation#linux-or-windows-10-subsystem-for-linux)
 
 >[!ENDTABS]
 
@@ -109,7 +109,7 @@ Wenn Sie Homebrew verwenden, folgen Sie den Anweisungen __Installation mit Homeb
 1. Führen Sie den folgenden Befehl aus: `$ brew install git`
 1. Stellen Sie mithilfe des folgenden Befehls sicher, dass Git installiert ist: `$ git --version`
 
->[!TAB Git herunterladen und installieren]
+>[!TAB Herunterladen und Installieren von Git]
 
 1. [Git herunterladen und installieren](https://git-scm.com/downloads)
 1. Öffnen Sie Ihr Terminal/Ihre Eingabeaufforderung
@@ -132,7 +132,7 @@ Wenn Sie Homebrew verwenden, folgen Sie den Anweisungen __Installation mit Homeb
 1. Stellen Sie mithilfe des folgenden Befehls sicher, dass Node.js installiert ist: `$ node -v`
 1. Stellen Sie mithilfe des folgenden Befehls sicher, dass npm installiert ist: `$ npm -v`
 
->[!TAB Node.js herunterladen und installieren]
+>[!TAB Herunterladen und Installieren von Node.js]
 
 1. [Node.js herunterladen und installieren](https://nodejs.org/de/download/)
 2. Öffnen Sie Ihr Terminal/Ihre Eingabeaufforderung
@@ -162,7 +162,7 @@ Apache Maven ist das Open-Source-Java-Befehlszeilenwerkzeug, mit dem AEM-Projekt
 1. Führen Sie den folgenden Befehl aus: `$ brew install maven`
 1. Stellen Sie mithilfe des folgenden Befehls sicher, dass Maven installiert ist: `$ mvn -v`
 
->[!TAB Maven herunterladen und installieren]
+>[!TAB Herunterladen und Installieren von Maven]
 
 1. [Maven herunterladen](https://maven.apache.org/download.cgi)
 1. [Maven installieren](https://maven.apache.org/install.html)

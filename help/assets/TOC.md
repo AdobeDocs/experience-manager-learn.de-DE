@@ -64,8 +64,8 @@ ht-degree: 99%
    + [Smart-Tags für Videos](metadata/video-smart-tags.md)
    + [Importieren und Exportieren von Metadaten](metadata/metadata-import-export.md)
 
-+ Edge-Bereitstellungsdienste{#edge-delivery-services}
-   + [Sidekick-Plugin](./edge-delivery-services/sidekick-plugin.md)
++ Edge Delivery Services{#edge-delivery-services}
+   + [Sidekick-Plug-in](./edge-delivery-services/sidekick-plugin.md)
 
 + Freigabe und Verteilung{#sharing}
    + [Herunterladen von Assets](./sharing/download.md)
