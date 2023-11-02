@@ -11,9 +11,9 @@ thumbnail: 337960.jpeg
 last-substantial-update: 2022-10-03T00:00:00Z
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '263'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -75,7 +75,7 @@ Zulassen von HTTP-Anfragen für die Sitemap-Index- und Sitemap-Dateien.
 
 ### Apache-Webserver-Neuschreibungsregel
 
-Stellen Sie sicher, dass `.xml` Sitemap-HTTP-Anfragen an die richtige zugrunde liegende AEM-Seite weitergeleitet werden.  Wenn keine URL-Verkürzung verwendet wird oder Sling-Zuordnungen zum Erzielen einer URL-Verkürzung verwendet werden, ist diese Konfiguration nicht erforderlich.
+Stellen Sie sicher, dass `.xml` Sitemap-HTTP-Anfragen an die richtige zugrunde liegende AEM-Seite weitergeleitet werden. Wenn keine URL-Verkürzung verwendet wird oder Sling-Zuordnungen zum Erzielen einer URL-Verkürzung verwendet werden, ist diese Konfiguration nicht erforderlich.
 
 `dispatcher/src/conf.d/rewrites/rewrite.rules`
 
