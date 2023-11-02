@@ -13,9 +13,9 @@ last-substantial-update: 2023-05-10T00:00:00Z
 badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 6c5373db-86ec-410b-8a3b-9d4f86e06812
 source-git-commit: 3e4960bf2d243e33fb9f36fd3fbb45f57260229a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '990'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ Folgende Tools sollten lokal installiert werden:
 
 ## AEM-Anforderungen
 
-Die iOS-Anwendung kann mit den folgenden AEM-Bereitstellungsoptionen verwendet werden. Für alle Bereitstellungen muss die [WKND Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installiert werden.
+Die iOS-Anwendung kann mit den folgenden AEM-Bereitstellungsoptionen verwendet werden. Für alle Bereitstellungen muss die [WKND-Site v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) installiert werden.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=de)
 + Lokales Setup mit dem [AEM Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de)
@@ -277,7 +277,7 @@ SwiftUI wird für die verschiedenen Ansichten in der Anwendung verwendet. Apple 
 
 ### Remote-Bilder
 
-Bilder, auf die von abenteuerbezogenen Inhaltsfragmenten verwiesen wird, werden von AEM bereitgestellt. Diese iOS-App verwendet das Pfadfeld `_dynamicUrl` in der GraphQL-Antwort und stellt `AEM_SCHEME` und `AEM_HOST` als Präfixe voran, um eine vollständig qualifizierte URL zu erstellen. Bei der Entwicklung mit dem AEM-SDK `_dynamicUrl` gibt null zurück, sodass für die Entwicklungs-Fallback zum Bild `_path` -Feld.
+Bilder, auf die von abenteuerbezogenen Inhaltsfragmenten verwiesen wird, werden von AEM bereitgestellt. Diese iOS-App verwendet das Pfadfeld `_dynamicUrl` in der GraphQL-Antwort und stellt `AEM_SCHEME` und `AEM_HOST` als Präfixe voran, um eine vollständig qualifizierte URL zu erstellen. Bei Entwicklungen gegen das AEM SDK gibt `_dynamicUrl` Null zurück. Greifen Sie deshalb zur Entwicklung auf das Feld `_path` des Bilds zurück.
 
 Wenn eine Verbindung zu geschützten Ressourcen in AEM hergestellt werden soll, für die eine Autorisierung erforderlich ist, müssen zu Bildanfragen ebenfalls Anmeldeinformationen hinzugefügt werden.
 
