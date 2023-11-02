@@ -10,9 +10,9 @@ kt: 8634
 thumbnail: 336963.jpeg
 exl-id: f752df86-27d4-4dbf-a3cb-ee97b7d9a17e
 source-git-commit: 77b960315c07ba194642a412a0cc6049edcf7bd2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '332'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ Erfahren Sie mehr über Suchindizes von AEM as a Cloud Service, wie Sie AEM 6-In
 
 Verwenden Sie als Teil der Refaktorierung Ihrer Code-Basis die Variable [Index-Converter-Tool](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter), um benutzerdefinierte Oak-Indexdefinitionen in mit AEM as a Cloud Service kompatible Indexdefinitionen zu konvertieren.
 
-Überprüfen Sie die [Indexdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html?lang=de) für den vollständigen und aktuellen Satz von Index Converter-Funktionen.
+Den vollständigen und aktuellen Satz der Index Converter-Funktionen finden Sie in der [Dokumentation zum Index Converter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html?lang=de).
 
 ## Wichtigste Aktivitäten
 
