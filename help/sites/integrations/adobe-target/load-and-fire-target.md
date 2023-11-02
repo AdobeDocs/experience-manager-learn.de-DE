@@ -15,9 +15,9 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '613'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Erfahren Sie, wie Sie mit einer Launch-Regel Parameter laden, an eine Seitenanfr
 
 ## Seitenladeregel
 
-Die Adobe Client-Datenschicht ist eine ereignisgesteuerte Datenschicht. Beim Laden der AEM Seite wird ein -Ereignis Trigger `cmp:show` . Im Video wird die `Launch Library Loaded`-Regel mit einem benutzerspezifischen Ereignis aufgerufen. Unten finden Sie die Code-Snippets, die im Video für das benutzerspezifische Ereignis und für die Datenelemente verwendet werden.
+Die Adobe Client-Datenschicht ist eine ereignisgesteuerte Datenschicht. Wenn die Datenschicht der AEM-Seite geladen wird, löst das ein `cmp:show`-Ereignis aus. Im Video wird die Regel `Launch Library Loaded` mit einem benutzerspezifischen Ereignis aufgerufen. Unten finden Sie die Code-Snippets, die im Video für das benutzerspezifische Ereignis sowie für die Datenelemente verwendet werden.
 
 ### Benutzerspezifisches Ereignis „Seite angezeigt“{#page-event}
 
@@ -41,7 +41,7 @@ Fügen Sie in der Launch-Eigenschaft ein neues **Ereignis** zur **Regel** hinzu
 + __Ereignistyp:__ Benutzerdefinierter Code
 + __Name:__ Seitenanzeige-Ereignis-Handler (oder eine Beschreibung)
 
-Tippen Sie auf __Editor öffnen__ und fügen Sie im folgenden Code-Snippet ein. Dieser Code __muss__ zur __Ereigniskonfiguration__ und zu einer sich anschließenden __Aktion__ hinzugefügt werden.
+Tippen Sie auf __Editor öffnen__ und fügen Sie folgendes Code-Snippet ein. Dieser Code __muss__ zur __Ereigniskonfiguration__ und zu einer sich anschließenden __Aktion__ hinzugefügt werden.
 
 ```javascript
 // Define the event handler function
@@ -81,7 +81,7 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-Eine benutzerdefinierte Funktion definiert die `pageShownEventHandler`und überwacht die von AEM Kernkomponenten ausgegebenen Ereignisse, leitet die relevanten Informationen von der Kernkomponente ab, packt sie in ein Ereignisobjekt und Trigger das Launch-Ereignis mit den abgeleiteten Ereignisinformationen bei dessen Nutzlast.
+Eine benutzerdefinierte Funktion definiert den `pageShownEventHandler`, überwacht die von den AEM-Kernkomponenten ausgegebenen Ereignisse, leitet die relevanten Informationen von der Kernkomponente ab, packt sie in ein Ereignisobjekt und löst das Launch-Ereignis entsprechend der Payload mit den abgeleiteten Ereignisinformationen aus.
 
 Die Launch-Regel wird mithilfe der Launch-Funktion `trigger(...)` ausgelöst, die __nur__ in der Code-Ausschnitt-Definition eines Ereignisses mit benutzerdefiniertem Code einer Regel verfügbar ist.
 
