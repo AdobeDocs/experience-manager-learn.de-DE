@@ -15,9 +15,9 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
 source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '200'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -47,9 +47,9 @@ Außerdem werden die folgenden Protokollmeldungen im `aemerror`-Protokoll erstel
 
 #### Auflösung
 
-1. Anmelden bei [Admin Console](https://adminconsole.adobe.com/) mit Administratorrechten für das verwendete Adobe Target-Produktprofil, aber der AEM Integration
+1. Melden Sie sich mit Administratorrechten für das Adobe Target-Produktprofil, außer der AEM-Integration, bei [Admin Console](https://adminconsole.adobe.com/) an.
 2. Wählen Sie __Produkte > Adobe Target > Produktprofil__ aus.
-3. under __Integrationen__ auf, wählen Sie die Integration für Ihre AEM as a Cloud Service Umgebung aus (gleicher Name wie das Adobe Developer-Projekt).
+3. Wählen Sie auf der Registerkarte __Integrationen__ die Integration für Ihre AEM as a Cloud Service-Umgebung aus (gleicher Name wie das Adobe Developer-Projekt).
 4. Weisen Sie die Rolle für __Editor__ oder __Approver__ zu.
 
    ![Target-API-Fehler](assets/target-permissions.png)
