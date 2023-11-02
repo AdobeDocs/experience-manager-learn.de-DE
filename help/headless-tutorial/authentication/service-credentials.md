@@ -15,9 +15,9 @@ level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 source-git-commit: 65d8fd58f421a186e3624918c70cc5d79ec23700
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1967'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -224,7 +224,7 @@ Sobald das technische Konto AEM-Benutzer in AEM vorhanden ist (nach der ersten H
 1. Navigieren Sie zu __Tools__ > __Sicherheit__ > __Benutzer__
 1. Suchen Sie den AEM-Benutzer mit dem __Anmeldenamen__, der in Schritt 1 identifiziert wurde, und öffnen Sie dessen __Eigenschaften__
 1. Navigieren Sie zu __Gruppen__ und fügen Sie die Gruppe der __DAM-Benutzer__ (die Schreibzugriff auf Assets hat) hinzu
-   + [Anzeigen der Liste AEM bereitgestellten Benutzergruppen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=de#built-in-users-and-groups) , um den Dienstbenutzer zu hinzuzufügen, um optimale Berechtigungen zu erhalten. Wenn keine AEM bereitgestellte Benutzergruppe ausreicht, erstellen Sie eine eigene und fügen Sie die entsprechenden Berechtigungen hinzu.
+   + [Sehen Sie sich die Liste der von AEM bereitgestellten Benutzergruppen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=de#built-in-users-and-groups) an, zu denen Sie die Dienstbenutzerin bzw. den Dienstbenutzer hinzufügen müssen, um die optimalen Berechtigungen zu erhalten. Wenn keine der von AEM bereitgestellten Benutzergruppen ausreicht, erstellen Sie eine eigene und fügen Sie die entsprechenden Berechtigungen hinzu.
 1. Klicken Sie auf __Speichern und schließen__
 
 Führen Sie mit dem technischen Konto, das in AEM über Schreibberechtigungen für Assets verfügt, die Anwendung erneut aus:
