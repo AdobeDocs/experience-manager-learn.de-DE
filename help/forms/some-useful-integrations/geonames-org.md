@@ -10,9 +10,9 @@ level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
 source-git-commit: 5fc4a11b7f7f26a62f49cc8614e6bf699cc1697a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '636'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -81,14 +81,16 @@ Die Dropdown-Liste Bundesland/Provinz muss auf der Grundlage des ausgewählten L
 ### Übung
 
 Fügen Sie zwei Dropdown-Listen mit den Bezeichnungen „Landkreise und Städte“ in das Formular ein, um die Landkreise und Städte auf der Grundlage des ausgewählten Landes und Bundeslandes aufzulisten.
+
 ![Übung](assets/cascading-drop-down-exercise.png)
 
 
 ### Beispiel-Assets
 
-Sie können die folgenden Assets herunterladen, um einen Vorsprung beim Erstellen des Beispiels für die kaskadierende Dropdown-Liste zu erhalten. Die fertigen Swagger-Dateien können von heruntergeladen werden [here](assets/geonames-swagger-files.zip)
-Die Swagger-Dateien beschreiben die folgende REST-API
+Sie können folgende Assets herunterladen, um schnell ein Beispiel für die kaskadierende Dropdown-Liste zu erstellen.
+Die fertigen Swagger-Dateien können [hier](assets/geonames-swagger-files.zip) heruntergeladen werden
+Die Swagger-Dateien beschreiben folgende REST-API
 * [Abrufen aller Länder](http://api.geonames.org/countryInfoJSON?username=yourusername)
 * [Abrufen von untergeordneten Elementen des Geoname-Objekts](http://api.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
 
-Die [Das Formulardatenmodell kann hier heruntergeladen werden.](assets/geonames-api-form-data-model.zip)
+Das fertige [Formulardatenmodell kann hier heruntergeladen werden](assets/geonames-api-form-data-model.zip)
