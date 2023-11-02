@@ -11,9 +11,9 @@ topic: Content Management
 role: User
 team: TM
 source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '70'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 94%
 
 + [Übersicht](overview.md)
 + Grundlagen{#basics}
-   + [Konsolenübersicht](./basics/content-fragments-console.md)
-   + [Editor - Übersicht](./basics/content-fragment-editor.md)
+   + [Übersicht über die Konsole](./basics/content-fragments-console.md)
+   + [Übersicht über den Editor](./basics/content-fragment-editor.md)
 + Suche und Erkennung{#search}
    + [Schnelles Filtern](search/fast-filtering.md)
    + [Verweise](search/references.md)
