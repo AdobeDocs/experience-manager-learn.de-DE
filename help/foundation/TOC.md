@@ -5,9 +5,9 @@ user-guide-description: Eine Sammlung von Videos und Tutorials für die Adobe Ex
 sub-product: Experience Manager
 index: y
 source-git-commit: d4835fac83f06482c1252ae962e867de06d326e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '232'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 92%
    + [Entwickeln für CORS (Cross-Origin Resource Sharing)](./security/develop-for-cross-origin-resource-sharing.md)
    + [Verstehen von Cross-Origin Resource Sharing (CORS)](./security/understand-cross-origin-resource-sharing.md)
    + [Verwenden des SSL-Assistenten](./security/use-the-ssl-wizard.md)
-   + [ModSecurity CRS DoS-Angriffsschutz](./security/modsecurity-crs-dos-attack-protection.md)
+   + [ModSecurity CRS-Schutz vor DoS-Angriffen](./security/modsecurity-crs-dos-attack-protection.md)
    + [HTTPS-Verbindungen zu APIs mit privaten Zertifikaten](./security/call-internal-apis-having-private-certificate.md)
    + [Gegenseitige TLS-Authentifizierung (mTLS) von AEM](./security/mutual-tls-authentication.md)
 + Workflow {#workflow}
