@@ -12,15 +12,15 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 167a4b11-1202-4c7a-b022-f3f996348a4e
 source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '584'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
 # Hinzufügen von Widgets zum Rich-Text-Editor (RTE)
 
-Erfahren Sie, wie Sie Widgets im Rich-Text-Editor (RTE) im AEM Inhaltsfragment-Editor hinzufügen.
+Erfahren Sie, wie Sie im AEM-Inhaltsfragmenteditor Widgets zum Rich-Text-Editor (RTE) hinzufügen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
 
