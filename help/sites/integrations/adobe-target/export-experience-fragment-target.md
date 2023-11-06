@@ -14,10 +14,10 @@ level: Intermediate
 badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 2c01cda8-f72f-47f7-a36b-95afd241906e
-source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: ht
-source-wordcount: '200'
-ht-degree: 100%
+source-git-commit: e9c0974d35493a607969124b2906564fc97bcdea
+workflow-type: tm+mt
+source-wordcount: '196'
+ht-degree: 95%
 
 ---
 
@@ -39,11 +39,11 @@ Erfahren Sie, wie Sie AEM Experience Fragments als Adobe Target-Angebote exporti
 
 Der Export von Experience Fragments nach Adobe Target ohne die korrekten Berechtigungen in Adobe Admin Console führt beim AEM-Author-Service zu folgendem Fehler:
 
-    ![Target API UI Error](assets/error-target-offer.png)
+![Target-API-UI-Fehler](assets/error-target-offer.png)
 
 Außerdem werden die folgenden Protokollmeldungen im `aemerror`-Protokoll erstellt:
 
-    ![Target API Console Error](assets/target-console-error.png)
+![Target-API-Konsolenfehler](assets/target-console-error.png)
 
 #### Auflösung
 
