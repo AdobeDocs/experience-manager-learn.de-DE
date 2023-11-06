@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: bca52c7543b35fc20a782dfd3f2b2dc81bee4cde
+source-git-commit: ea9bf14d9a8f62382c43a50dbf65c4d2b88e6bcf
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 97%
+source-wordcount: '1053'
+ht-degree: 99%
 
 ---
 
@@ -21,7 +21,6 @@ ht-degree: 97%
    + [Bilder](./aem-trials/images.md)
 + Einführung in AEM as a Cloud Service{#introduction}
    + [Was ist AEM as a Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
-   + [Entwicklung](./introduction/evolution.md)
    + [Architektur](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
    + Strategie und Vordenkerrolle{#strategy}
@@ -38,8 +37,8 @@ ht-degree: 97%
    + [Sling](./underlying-technology/introduction-sling.md)
    + [Autoren- und Veröffentlichungs-Service](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
-+ Edge-Bereitstellungsdienste {#edge-delivery-services}
-   + [AEM Assets Sidekick-Plug-in](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
++ Edge Delivery Services {#edge-delivery-services}
+   + [AEM Assets Sidekick-Plug-in](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html?lang=de){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [Programme](./cloud-manager/programs.md)
    + [Umgebungen](./cloud-manager/environments.md)
@@ -57,7 +56,7 @@ ht-degree: 97%
 + Einrichtung der lokalen Entwicklungsumgebung {#local-development-environment-set-up}
    + [Übersicht](./local-development-environment/overview.md)
    + [Entwicklungs-Tools](./local-development-environment/development-tools.md)
-   + [Lokales AEM-SDK](./local-development-environment/aem-runtime.md)
+   + [Lokales AEM SDK](./local-development-environment/aem-runtime.md)
    + [Lokale Dispatcher-Tools](./local-development-environment/dispatcher-tools.md)
 + Entwickeln{#developing}
    + Erweiterbarkeit{#extensibility}
@@ -132,8 +131,8 @@ ht-degree: 97%
    + [URL-Umleitungen](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=de){target=_blank}
 + Caching{#caching}
    + [Übersicht](./caching/overview.md)
-   + [AEM Publish-Dienst](./caching/publish.md)
-   + [AEM-Autorendienst](./caching/author.md)
+   + [AEM-Publish-Service](./caching/publish.md)
+   + [AEM-Author-Service](./caching/author.md)
 + Zugriff auf AEM{#accessing}
    + [Übersicht](./accessing/overview.md)
    + [Adobe IMS-Benutzende](./accessing/adobe-ims-users.md)
