@@ -1,7 +1,7 @@
 ---
 feature-set: Experience Manager Forms, Experience Manager
 role: Developer
-user-guide-title: AEM Forms-Videos und -Tutorials
+user-guide-title: Videos und Tutorials zu AEM-Formularen
 user-guide-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger und erfahrene AEM Forms-Entwicklende.
 solution: Experience Manager, Experience Manager Forms
 breadcrumb-title: AEM Forms-Tutorials
@@ -9,9 +9,9 @@ sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
 source-git-commit: 5e761ef180182b47c4fd2822b0ad98484db23aab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1874'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 98%
    + [Erstellen eines Prüfung-Workflows](handling-form-submissions/creating-a-review-workflow.md)
    + [Konfigurieren des adaptiven Formulars zur Auslösung des Workflows](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [Dankesseite anzeigen](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
-   + [Anpassen der Dankeseite](handling-form-submissions/thank-you-page-on-fdm-submission.md)
+   + [Danke-Seite anpassen](handling-form-submissions/thank-you-page-on-fdm-submission.md)
    + [Übermittlung an externen Endpunkt](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
    + [Senden von E-Mails](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
    + [Arbeitsablauf für gebührenpflichtige Zeitüberschreitung bei Anfrage](handling-form-submissions/paid-time-off-request-workflow.md)
@@ -48,7 +48,7 @@ ht-degree: 98%
    + [Integration mit ServiceNow](some-useful-integrations/service-now.md)
    + [Senden von E-Mails mit SendGrid](some-useful-integrations/send-grid.md)
    + [Speichern von Formulardaten im Azure-Speicher](some-useful-integrations/store-form-data-in-azure-storage.md)
-   + [Formular mit Azure Blob ausfüllen](some-useful-integrations/fetch-form-data-from-azure-storage.md)
+   + [Ausfüllen eines Formulars mit Azure Blob](some-useful-integrations/fetch-form-data-from-azure-storage.md)
 + Erstellen eines OSGi-Bundles {#creating-your-first-osgi-bundle}
    + [1 – Einrichten der Umgebung](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [2 – Erstellen eines OSGi-Dienstes](creating-your-first-osgi-bundle/create-osgi-service.md)
@@ -143,12 +143,12 @@ ht-degree: 98%
    + [9 – Erstellen des Hauptformulars](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
    + [10 – Erstellen des MyAccount-Formulars](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
    + [11 – Bereitstellen des Beispiels](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
-+ Importieren von Daten aus einer PDF-Datei{#import-data-from-pdf-form}
++ Importieren von Daten aus der PDF-Datei{#import-data-from-pdf-form}
    + [1 – Einführung](import-data-from-pdf-form/introduction.md)
    + [2 – Erstellen eines adaptiven Formulars](import-data-from-pdf-form/create-adaptive-form.md)
    + [3 – Erstellen eines OSGi-Dienstes](import-data-from-pdf-form/create-osgi-service.md)
-   + [4 - Adaptives Formular ausfüllen](import-data-from-pdf-form/populate-adaptive-form.md)
-   + [5 - Testen der Lösung](import-data-from-pdf-form/test-the-solution.md)
+   + [4 – Ausfüllen des adaptiven Formulars](import-data-from-pdf-form/populate-adaptive-form.md)
+   + [5 – Testen der Lösung](import-data-from-pdf-form/test-the-solution.md)
 + Exportieren gesendeter Daten im CSV-Format{#export-submitted-data-csv-format}
    + [Exportieren von gesendeten Daten](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5-Formulare{#html5-forms}
@@ -183,7 +183,7 @@ ht-degree: 98%
    + [Extrahieren von Knoten aus einem XML-Dokument](custom-workflow-steps/extract-xml-node.md)
    + [Speichern von Dokumenten im Dateisystem](custom-workflow-steps/write-payload-document.md)
    + [Speichern gesendeter Daten in Zeichenfolgenvariablen](custom-workflow-steps/save-submitted-data-in-string-variable.md)
-   + [Dokument aus der Dokumentenliste extrahieren](custom-workflow-steps/extract-document-from-list.md)
+   + [Extrahieren eines Dokuments aus der Liste der Dokumente](custom-workflow-steps/extract-document-from-list.md)
 + Benutzerdefinierte Workflow-Komponente{#custom-workflow-component}
    + [1 – Einführung](custom-workflow-component/introduction.md)
    + [2 – Schreiben des Java-Codes](custom-workflow-component/custom-process-step-aem-workflow.md)
@@ -197,7 +197,7 @@ ht-degree: 98%
    + [Formulardatenmodell-Variable](variables-aem-workflow/form-data-model.md)
    + [Regeleditor in AEM Workflow](variables-aem-workflow/part5.md)
    + [Protokoll-Workflow-Variablen](variables-aem-workflow/part6.md)
-+ Formulardaten überprüfen{#review-form-data}
++ Überprüfen der Formulardaten{#review-form-data}
    + [1 – Einführung](review-form-data/introduction.md)
    + [2 – Erstellen einer Komponente](review-form-data/create-component.md)
    + [3 – Bereitstellen von Assets](review-form-data/deploy-on-your-system.md)
