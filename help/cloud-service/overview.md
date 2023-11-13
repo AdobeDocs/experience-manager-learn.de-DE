@@ -6,9 +6,9 @@ kt: 3289
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
 source-git-commit: 3752e22455020b58d23524f7e6a99414e773422d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '280'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -24,8 +24,8 @@ Adobe Experience Manager (AEM) ist nun als Cloud-Service verfügbar. AEM as a Cl
 
 ## Neuerungen
 
-* **[Schutz von Websites mit Traffic-Filterregeln, einschließlich WAF-Regeln (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html)**
-  *Erfahren Sie, wie Sie Traffic-Filterregeln einschließlich WAF-Regeln zum Schutz von Websites verwenden.*
+* **[Schutz von Websites mit Traffic-Filterregeln, einschließlich WAF-Regeln (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html?lang=de)**
+  *Erfahren Sie, wie Sie Traffic-Filterregeln, einschließlich WAF-Regeln, zum Schutz von Websites verwenden.*
 
 * **[Token-basierte Authentifizierung (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=de)**
   *Erfahren Sie, wie Sie durch Token-basierte Authentifizierung über HTTP mit AEM as a Cloud Service interagieren können*
