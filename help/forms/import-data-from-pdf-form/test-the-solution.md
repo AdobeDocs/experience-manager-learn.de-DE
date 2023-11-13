@@ -6,19 +6,20 @@ version: 6.5
 topic: Development
 role: Developer
 level: Beginner
-source-git-commit: 17ab178f385619b589a9dde6089410bfa4515ffa
-workflow-type: tm+mt
+exl-id: f21753b2-f065-4556-add4-b1983fb57031
+source-git-commit: 7a0ec4797fda0436a8c20b84d1e36a8d16af21b9
+workflow-type: ht
 source-wordcount: '117'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # Bereitstellen der Beispiel-Assets
 
-Sie können Beispiel-Assets bereitstellen, damit diese Lösung in Ihrer lokalen AEM Forms-Instanz funktioniert
+Sie können die Beispiel-Assets bereitstellen, damit diese Lösung in Ihrer lokalen AEM Forms-Instanz funktioniert
 
-* [Importieren Sie die Client-Bibliothek und die benutzerdefinierte Komponente zum Hochladen des PDF-Formulars über Package Manager.](./assets/client-libs-custom-component.zip)
-* Laden Sie das Bundle mithilfe der OSGi-Web-Konsole herunter und stellen Sie es bereit[Custom Document Services Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
-* Laden Sie das Bundle mithilfe der OSGi-Web-Konsole herunter und stellen Sie es bereit [Entwickeln mit Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-* Laden Sie das Bundle mithilfe der OSGi-Web-Konsole herunter und stellen Sie es bereit[Daten aus einer PDF-Datei importieren](./assets/onlineToOffline.core-1.0.0-SNAPSHOT.jar)
-* Eintrag hinzufügen _**DevelopingWithServiceUser.core:getresourceresolver=data**_ im _**Apache Sling Service User Mapper Service**_ OSGi-Konfigurationskonsole
+* [Importieren Sie die Client-Bibliothek und die benutzerdefinierte Komponente, um das PDF-Formular über Package Manager hochzuladen.](./assets/client-libs-custom-component.zip)
+* Laden Sie das Bundle mithilfe der OSGi-Web-Konsole herunter und stellen Sie es bereit[Custom Document Services-Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
+* Laden Sie das Bundle mithilfe der OSGi-Web-Konsole herunter und stellen Sie es bereit [Bundle zur Entwicklung mit Dienstbenutzenden](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
+* Laden Sie das Bundle mithilfe der OSGi-Web-Konsole herunter und stellen Sie es bereit[Importieren von Daten aus der PDF-Datei](./assets/onlineToOffline.core-1.0.0-SNAPSHOT.jar)
+* Fügen Sie den Eintrag _**DevelopingWithServiceUser.core:getresourceresolver=data**_ in der OSGi-Konfigurationskonsole _**Apache Sling Service User Mapper Service**_ hinzu
