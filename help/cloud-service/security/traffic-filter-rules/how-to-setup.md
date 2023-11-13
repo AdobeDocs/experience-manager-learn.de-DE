@@ -1,6 +1,6 @@
 ---
-title: Einrichten von Traffic-Filterregeln einschließlich WAF-Regeln
-description: Erfahren Sie, wie Sie die Ergebnisse von Traffic-Filterregeln einschließlich WAF-Regeln erstellen, bereitstellen, testen und analysieren.
+title: Einrichten von Traffic-Filterregeln, einschließlich WAF-Regeln
+description: Erfahren Sie, wie Sie die Ergebnisse von Traffic-Filterregeln, einschließlich WAF-Regeln, erstellen, bereitstellen, testen und analysieren.
 version: Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
@@ -12,15 +12,15 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: b67bf642-3341-48d0-8ea9-5f262febf414
 source-git-commit: ceb498f751ffc50d0022a16b63f9f52594bc507e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '564'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# Einrichten von Traffic-Filterregeln einschließlich WAF-Regeln
+# Einrichten von Traffic-Filterregeln, einschließlich WAF-Regeln
 
-Lernen **Einrichtung** Traffic-Filterregeln, einschließlich WAF-Regeln. Erfahren Sie mehr über das Erstellen, Bereitstellen, Testen und Analysieren von Ergebnissen.
+Erfahren Sie, wie Sie Traffic-Filterregeln **einrichten**, einschließlich WAF-Regeln. Erfahren Sie mehr über das Erstellen, Bereitstellen, Testen und Analysieren von Ergebnissen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425407?quality=12&learn=on)
 
@@ -28,20 +28,20 @@ Lernen **Einrichtung** Traffic-Filterregeln, einschließlich WAF-Regeln. Erfahre
 
 Der Einrichtungsprozess umfasst Folgendes:
 
-- _Erstellen von Regeln_ mit einer entsprechenden AEM Projektstruktur und Konfigurationsdatei.
-- _Bereitstellen von Regeln_ Verwendung der Konfigurationspipeline von Adobe Cloud Manager.
-- _Testregeln_ Verwendung verschiedener Tools zur Erstellung von Traffic.
-- _Ergebnisanalyse_ Verwendung von AEMCS-CDN-Protokollen und Dashboard-Tools.
+- _Erstellen von Regeln_ mit einer entsprechenden AEM-Projektstruktur und Konfigurationsdatei.
+- _Bereitstellen von Regeln_ mit der Konfigurations-Pipeline von Adobe Cloud Manager.
+- _Testen von Regeln_ mit verschiedenen Tools, um Traffic zu generieren.
+- _Ergebnisanalyse_ mit AEMCS-CDN-Protokollen und Dashboard-Tools.
 
-### Erstellen von Regeln in Ihrem AEM Projekt
+### Erstellen von Regeln in Ihrem AEM-Projekt
 
 Gehen Sie wie folgt vor, um Regeln zu erstellen:
 
 1. Erstellen Sie auf der obersten Ebene Ihres AEM-Projekts einen Ordner `config`.
 
-1. Innerhalb der `config` erstellen Sie eine neue Datei mit dem Namen `cdn.yaml`.
+1. Erstellen Sie im Ordner `config` eine neue Datei mit dem Namen `cdn.yaml`.
 
-1. Fügen Sie die folgenden Metadaten zum `cdn.yaml` Datei:
+1. Fügen Sie der Datei `cdn.yaml` die folgenden Metadaten hinzu:
 
 ```yaml
 kind: CDN
@@ -56,51 +56,51 @@ data:
     rules:
 ```
 
-Ein Beispiel für `cdn.yaml` -Datei im WKND Sites-Projekt der AEM Guides:
+Ein Beispiel für die Datei `cdn.yaml` im WKND Sites-Projekt von AEM Guides:
 
-![WKND AEM Projektregeldatei und -ordner](./assets/wknd-rules-file-and-folder.png){width="800" zoomable="yes"}
+![WKND-AEM-Projektregeln – Datei und Ordner](./assets/wknd-rules-file-and-folder.png){width="800" zoomable="yes"}
 
-### Bereitstellen von Regeln über Cloud Manager {#deploy-rules-through-cloud-manager}
+### Bereitstellen der Regeln über Cloud Manager {#deploy-rules-through-cloud-manager}
 
-Gehen Sie wie folgt vor, um Regeln bereitzustellen:
+Gehen Sie zur Bereitstellung der Regeln wie folgt vor:
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
 
-1. Navigieren Sie zum _Pipelines_ Karte aus der _Programmübersicht_ und klicken Sie auf **+Hinzufügen** und wählen Sie den gewünschten Pipeline-Typ aus.
+1. Navigieren Sie von der Seite _Programmübersicht_ zur Karte _Pipelines_, klicken Sie auf **Hinzufügen** und wählen Sie den gewünschten Pipeline-Typ aus.
 
-   ![Cloud Manager Pipelines-Karte](./assets/cloud-manager-pipelines-card.png)
+   ![Cloud Manager – Pipelines-Karte](./assets/cloud-manager-pipelines-card.png)
 
-   Im obigen Beispiel dienen Demozwecke dazu _Hinzufügen einer produktionsfremden Pipeline_ ausgewählt ist, da eine Entwicklungsumgebung verwendet wird.
+   Im obigen Beispiel wurde zu Demonstrationszwecken _Produktionsfremde Pipeline hinzufügen_ ausgewählt, da eine Entwicklungsumgebung verwendet wird.
 
-1. Im _Hinzufügen einer produktionsfremden Pipeline_ wählen Sie aus und geben Sie die folgenden Details ein:
+1. Wählen Sie im Dialogfeld _Produktionsfremde Pipeline hinzufügen_ die folgenden Details ein oder wählen Sie sie aus:
 
    1. Konfigurationsschritt:
 
-      - **Typ**: Implementierungs-Pipeline
+      - **Typ**: Bereitstellungs-Pipeline
       - **Pipeline-Name**: Dev-Config
 
-      ![Dialogfeld &quot;Cloud Manager-Konfigurations-Pipeline&quot;](./assets/cloud-manager-config-pipeline-step1-dialog.png)
+      ![Dialogfeld „Cloud Manager-Konfigurations-Pipeline“](./assets/cloud-manager-config-pipeline-step1-dialog.png)
 
-   2. Schritt Quellcode :
+   2. Quell-Code-Schritt:
 
       - **Bereitzustellender Code**: Zielgerichtete Bereitstellung
-      - **Einschließen**: Konfiguration
-      - **Bereitstellungsumgebung**: Name Ihrer Umgebung, z. B. wknd-program-dev.
-      - **Repository**: Das Git-Repository, aus dem die Pipeline den Code abrufen soll, z. B. `wknd-site`
+      - **Einschließen**: Config
+      - **Bereitstellungsumgebung**: Name Ihrer Umgebung, z. B. wknd-program-dev.
+      - **Repository**: Das Git-Repository, aus dem die Pipeline den Code abrufen soll, z. B. `wknd-site`.
       - **Git-Verzweigung**: Der Name der Git-Repository-Verzweigung.
-      - **Code-Speicherort**: `/config`, der dem Konfigurationsordner der obersten Ebene entspricht, der im vorherigen Schritt erstellt wurde.
+      - **Code-Speicherort**: `/config`, was dem Konfigurationsordner der obersten Ebene entspricht, der im vorherigen Schritt erstellt wurde.
 
-      ![Dialogfeld &quot;Cloud Manager-Konfigurations-Pipeline&quot;](./assets/cloud-manager-config-pipeline-step2-dialog.png)
+      ![Dialogfeld „Cloud Manager-Konfigurations-Pipeline“](./assets/cloud-manager-config-pipeline-step2-dialog.png)
 
 ### Testen von Regeln durch Traffic-Generierung
 
-Zum Testen von Regeln stehen verschiedene Tools von Drittanbietern zur Verfügung und Ihre Organisation kann über ein bevorzugtes Tool verfügen. Verwenden wir für Demozwecke die folgenden Tools:
+Zum Testen von Regeln stehen verschiedene Tools von Drittanbietern zur Verfügung und unter Umständen hat Ihre Organisation ein bevorzugtes Tool. Für Demonstrationszwecke verwenden wir die folgenden Tools:
 
 - [Curl](https://curl.se/) für grundlegende Tests wie das Aufrufen einer URL und das Überprüfen des Antwort-Codes.
 
-- [Vegeta](https://github.com/tsenart/vegeta) zur Durchführung von Denial of Service (DOS). Befolgen Sie die Installationsanweisungen aus dem [Vegeta GitHub](https://github.com/tsenart/vegeta#install).
+- [Vegeta](https://github.com/tsenart/vegeta) zur Durchführung von Denial of Service (DOS). Befolgen Sie die Installationsanweisungen aus dem [Vegeta-GitHub](https://github.com/tsenart/vegeta#install).
 
-- [Nikto](https://github.com/sullo/nikto/wiki) um potenzielle Probleme und Sicherheitslücken wie XSS, SQL-Injection und mehr zu finden. Befolgen Sie die Installationsanweisungen aus dem [Nikto GitHub](https://github.com/sullo/nikto).
+- [Nikto](https://github.com/sullo/nikto/wiki), um potenzielle Probleme und Sicherheitslücken wie XSS, SQL-Injektion und mehr zu finden. Befolgen Sie die Installationsanweisungen aus dem [Nikto-GitHub](https://github.com/sullo/nikto).
 
 - Stellen Sie sicher, dass die Tools in Ihrem Terminal installiert und verfügbar sind, indem Sie die folgenden Befehle ausführen:
 
@@ -116,15 +116,15 @@ Zum Testen von Regeln stehen verschiedene Tools von Drittanbietern zur Verfügun
   ./nikto.pl -Version
   ```
 
-### Ergebnisse mithilfe der Dashboard-Werkzeuge analysieren
+### Analyseren von Ergebnissen mithilfe der Dashboard-Tools
 
-Nach dem Erstellen, Bereitstellen und Testen der Regeln können Sie die Ergebnisse analysieren mithilfe von **Elasticsearch, Logstash und Kibana (ELK)** Dashboard-Tools. Es kann die AEMCS-CDN-Protokolle analysieren, sodass Sie die Ergebnisse in Form verschiedener Diagramme und Grafiken visualisieren können.
+Nach dem Erstellen, Bereitstellen und Testen der Regeln können Sie die Ergebnisse analysieren mithilfe der Dashboard-Tools **Elasticsearch, Logstash und Kibana (ELK)**. Die AEMCS-CDN-Protokolle können analysiert werden, sodass Sie die Ergebnisse in Form verschiedener Diagramme und Grafiken visualisieren können.
 
-Dashboard-Tools können direkt aus dem [AEMCS-CDN-Log-Analysis-ELK-Tool GitHub-Repository](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) und befolgen Sie die Schritte zum Installieren und Laden der **Traffic-Filterregeln (einschließlich WAF)** Dashboard.
+Dashboard-Tools können direkt aus dem [GitHub-Repository „AEMCS-CDN-Log-Analysis-ELK-Tool“](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) geklont werden. Befolgen Sie die Schritte zum Installieren und Laden des Dashboards **Traffic-Filterregeln (einschließlich WAF)**.
 
-- Nach dem Laden des Beispiel-Dashboards sollte Ihre Seite mit dem Tool für das Elastic-Dashboard wie folgt aussehen:
+- Nach dem Laden des Beispiel-Dashboards sollte Ihre Elastic-Dashboard-Tool-Seite wie folgt aussehen:
 
-  ![Dashboard &quot;ELK-Traffic-Filter-Regeln&quot;](./assets/elk-dashboard.png)
+  ![Dashboard „ELK-Traffic-Filterregeln“](./assets/elk-dashboard.png)
 
 >[!NOTE]
 >
@@ -133,4 +133,4 @@ Dashboard-Tools können direkt aus dem [AEMCS-CDN-Log-Analysis-ELK-Tool GitHub-R
 
 ## Nächster Schritt
 
-Erfahren Sie, wie Sie Traffic-Filterregeln deklarieren, einschließlich WAF-Regeln im [Beispiele und Ergebnisanalyse](./examples-and-analysis.md) -Kapitel, unter Verwendung des AEM WKND Sites-Projekts.
+Erfahren Sie im Kapitel [Beispiele und Ergebnisanalyse](./examples-and-analysis.md) unter Verwendung des AEM-WKND-Sites-Projekts, wie Sie Traffic-Filterregeln einschließlich WAF-Regeln deklarieren.
