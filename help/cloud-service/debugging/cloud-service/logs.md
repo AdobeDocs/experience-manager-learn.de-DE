@@ -13,10 +13,10 @@ topic: Development
 role: Developer
 level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
-source-git-commit: b069d958bbcc40c0079e87d342db6c5e53055bc7
-workflow-type: ht
-source-wordcount: '998'
-ht-degree: 100%
+source-git-commit: 0565cf592a437acf5080dab1d3ee2d410997f01d
+workflow-type: tm+mt
+source-wordcount: '1007'
+ht-degree: 98%
 
 ---
 
@@ -203,7 +203,7 @@ Die OSGi-Protokollierungskonfigurationen müssen aktualisiert werden, um die umg
 Dieser Ansatz hat Nachteile, die berücksichtigt werden müssen:
 
 + [Es ist nur eine begrenzte Anzahl von Umgebungsvariablen zulässig](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=de#number-of-variables), und beim Erstellen einer Variablen zur Verwaltung der Protokollebene wird eine verwendet.
-+ Umgebungsvariablen können nur programmgesteuert über die [Adobe I/O-CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) oder [Cloud Manager-HTTP-APIs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=de#cloud-manager-api-format-for-setting-properties) verwaltet werden.
++ Umgebungsvariablen können programmgesteuert über [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=de), [ADOBE I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid), und [Cloud Manager-HTTP-APIs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=de#cloud-manager-api-format-for-setting-properties).
 + Änderungen an Umgebungsvariablen müssen von einem unterstützten Tool manuell zurückgesetzt werden. Wird eine Umgebung mit hohem Traffic, z. B. die Produktionsumgebung, nicht auf eine weniger ausführliche Protokollebene zurückgesetzt, werden die Protokolle möglicherweise mit Einträgen überschwemmt und die AEM-Leistung beeinträchtigt.
 
 _Umgebungsspezifische Variablen funktionieren nicht bei Apache-Webserver- oder Dispatcher-Protokollkonfigurationen, da diese nicht über die OSGi-Konfiguration konfiguriert sind._
