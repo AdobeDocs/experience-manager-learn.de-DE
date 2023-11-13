@@ -1,22 +1,23 @@
 ---
-title: Füllen des adaptiven Formulars mit der Methode setData
-description: Senden Sie die hochgeladene PDF-Datei zur Datenextraktion und füllen Sie das adaptive Formular mit den extrahierten Daten
+title: Ausfüllen eines adaptiven Formulars mit der Methode „setData“
+description: Senden der hochgeladenen PDF-Datei zur Datenextraktion und Ausfüllen des adaptiven Formulars mit den extrahierten Daten
 feature: Adaptive Forms
 version: 6.5
 topic: Development
 role: Developer
 level: Beginner
 kt: 14196
-source-git-commit: 17ab178f385619b589a9dde6089410bfa4515ffa
-workflow-type: tm+mt
+exl-id: f380d589-6520-4955-a6ac-2d0fcd5aaf3f
+source-git-commit: 7a0ec4797fda0436a8c20b84d1e36a8d16af21b9
+workflow-type: ht
 source-wordcount: '126'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-# Ajax-Aufruf
+# Durchführen eines Ajax-Aufrufs
 
-Wenn der Benutzer die PDF-Datei hochgeladen hat, müssen wir einen POST-Aufruf an ein Servlet durchführen und das hochgeladene PDF-Dokument in der POST-Anfrage übergeben. Die POST-Anfrage gibt einen Pfad zu den exportierten Daten im CRX-Repository zurück
+Wenn die Benutzerin bzw. der Benutzer die PDF-Datei hochgeladen hat, müssen wir einen POST-Aufruf an ein Servlet durchführen und das hochgeladene PDF-Dokument in der POST-Anfrage übergeben. Die POST-Anfrage gibt einen Pfad zu den exportierten Daten im CRX-Repository zurück.
 
 ```javascript
 $("#fileElem").on('change', function (e) {
@@ -56,11 +57,9 @@ function handleFiles(formData) {
 }
 ```
 
-Das Servlet, das auf **_/bin/ExtractDataFromPDF_** extrahiert die Daten aus der PDF-Datei und gibt den Pfad des CRX-Knotens zurück, in dem die extrahierten Daten gespeichert werden.
-Die [GuideBridge setData](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html#setData__anchor) -Methode verwendet wird, um die Daten des adaptiven Formulars festzulegen.
+Das auf **_/bin/ExtractDataFromPDF_** aufgesetzte Servlet extrahiert die Daten aus der PDF-Datei und gibt den Pfad des CRX-Knotens zurück, in dem die extrahierten Daten gespeichert werden.
+Die Methode [GuideBridge setData](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javascript-api/GuideBridge.html#setData__anchor) wird dann verwendet, um die Daten des adaptiven Formulars festzulegen.
 
 ## Nächste Schritte
 
 [Bereitstellen der Beispiel-Assets](./test-the-solution.md)
-
-
