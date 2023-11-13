@@ -7,24 +7,25 @@ topic: Development
 role: Developer
 level: Beginner
 kt: 14196
-source-git-commit: 17ab178f385619b589a9dde6089410bfa4515ffa
-workflow-type: tm+mt
+exl-id: a9ad8f4d-695e-4eb3-8d35-a399d1700f90
+source-git-commit: 7a0ec4797fda0436a8c20b84d1e36a8d16af21b9
+workflow-type: ht
 source-wordcount: '96'
-ht-degree: 31%
+ht-degree: 100%
 
 ---
 
 # Einführung
 
-Ein gängiges Nutzungsszenario besteht darin, ein adaptives Formular aus einem teilweise ausgefüllten PDF-Formular auszufüllen.
+Ein gängiger Anwendungsfall besteht darin, ein adaptives Formular aus einem teilweise ausgefüllten PDF-Formular ausfüllen zu lassen.
 
-Um diesen Anwendungsfall zu demonstrieren, werden wir [IRS-Formular F23](./assets/f23.pdf)
+Um diesen Anwendungsfall zu demonstrieren, werden wir das [IRS-Formular F23](./assets/f23.pdf) verwenden
 
 ## Voraussetzungen
 
 Sie benötigen Folgendes:
 
-* Eine funktionierende Instanz von AEM mit installiertem Forms Add-on-Paket.
+* eine funktionierende AEM-Instanz mit installiertem Forms-Add-on-Paket.
 
 * [eine gemäß diesem Dokument eingerichtete Entwicklungsumgebung](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=de)
 
