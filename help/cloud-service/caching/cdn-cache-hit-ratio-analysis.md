@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-11-10T00:00:00Z
 jira: KT-13312
 thumbnail: KT-13312.jpeg
-source-git-commit: bfc4d843c53373010ee04cfa590272cedea7a686
+source-git-commit: be503ba477d63a566b687866289a81a0aa7d01f7
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1231'
 ht-degree: 2%
 
 ---
@@ -41,11 +41,11 @@ Gehen Sie wie folgt vor, um die CDN-Protokolle herunterzuladen:
 
 1. Wählen Sie für eine gewünschte AEMCS-Umgebung **Protokolle herunterladen** aus dem Menü mit den Auslassungspunkten.
 
-   ![Protokolle herunterladen - Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="200" zoomable="yes"}
+   ![Protokolle herunterladen - Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="500" zoomable="yes"}
 
 1. Im **Protokolle herunterladen** wählen Sie das **Veröffentlichen** Dienst aus dem Dropdown-Menü und klicken Sie dann auf das Download-Symbol neben dem **cdn** Zeile.
 
-   ![CDN-Protokolle - Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="200" zoomable="yes"}
+   ![CDN-Protokolle - Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="500" zoomable="yes"}
 
 
 Wenn die heruntergeladene Protokolldatei von _heute_ Die Dateierweiterung lautet `.log` Andernfalls für vergangene Protokolldateien ist die Erweiterung `.log.gz`.
@@ -71,11 +71,11 @@ Um die Schlüsseldetails zu identifizieren, verwenden wir die [AEMCS-CDN-Log-Ana
 
    1. Öffnen Sie die **CDN-Cache-Trefferverhältnis** Dashboard durch Klicken auf Hamburger Menü > Analytics > Dashboard > CDN-Cache-Trefferverhältnis.
 
-      ![CDN-Cache-Trefferverhältnis - Kibana-Dashboard](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="200" zoomable="yes"}
+      ![CDN-Cache-Trefferverhältnis - Kibana-Dashboard](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
    1. Wählen Sie oben rechts den gewünschten Zeitraum aus.
 
-      ![Zeitbereich - Kibana-Dashboard](assets/cdn-logs-analysis/time-range.png){width="200" zoomable="yes"}
+      ![Zeitbereich - Kibana-Dashboard](assets/cdn-logs-analysis/time-range.png){width="500" zoomable="yes"}
 
    1. Die **CDN-Cache-Trefferverhältnis** Das Dashboard erklärt sich von selbst.
 
@@ -83,14 +83,14 @@ Um die Schlüsseldetails zu identifizieren, verwenden wir die [AEMCS-CDN-Log-Ana
       - Cache-Verhältnisse nach Cache-Typ
       - Cache-Zählungen nach Cache-Typ
 
-      ![Analyse der Anfragen insgesamt - Kibana-Dashboard](assets/cdn-logs-analysis/total-request-analysis.png){width="200" zoomable="yes"}
+      ![Analyse der Anfragen insgesamt - Kibana-Dashboard](assets/cdn-logs-analysis/total-request-analysis.png){width="500" zoomable="yes"}
 
    1. Die _Analyse nach Anforderung oder MIME-Typen_ zeigt die folgenden Details an:
       - Cache-Verhältnisse nach Cache-Typ
       - Cache-Zählungen nach Cache-Typ
       - Top-MISS- und PASS-URLs
 
-      ![Analyse nach Anforderung oder MIME-Typen - Kibana-Dashboard](assets/cdn-logs-analysis/analysis-by-request-or-mime-types.png){width="200" zoomable="yes"}
+      ![Analyse nach Anforderung oder MIME-Typen - Kibana-Dashboard](assets/cdn-logs-analysis/analysis-by-request-or-mime-types.png){width="500" zoomable="yes"}
 
 #### Filtern nach Umgebungs- oder Programm-ID
 
@@ -98,11 +98,11 @@ Gehen Sie wie folgt vor, um die erfassten Protokolle nach Umgebungsnamen zu filt
 
 1. Klicken Sie im Dashboard &quot;CDN Cache Hit Ratio&quot;auf das **Filter hinzufügen** Symbol.
 
-   ![Filter - Kibana-Dashboard](assets/cdn-logs-analysis/filter.png){width="200" zoomable="yes"}
+   ![Filter - Kibana-Dashboard](assets/cdn-logs-analysis/filter.png){width="500" zoomable="yes"}
 
 1. Im **Filter hinzufügen** modal, wählen Sie die `aem_env_name.keyword` aus dem Dropdown-Menü ein und `is` Operator und gewünschter Umgebungsname für das nächste Feld und klicken Sie schließlich auf _Filter hinzufügen_.
 
-   ![Filter hinzufügen - Kibana-Dashboard](assets/cdn-logs-analysis/add-filter.png){width="200" zoomable="yes"}
+   ![Filter hinzufügen - Kibana-Dashboard](assets/cdn-logs-analysis/add-filter.png){width="500" zoomable="yes"}
 
 #### Filtern nach Hostnamen
 
@@ -110,11 +110,11 @@ Gehen Sie wie folgt vor, um die erfassten Protokolle nach Hostnamen zu filtern:
 
 1. Klicken Sie im Dashboard &quot;CDN Cache Hit Ratio&quot;auf das **Filter hinzufügen** Symbol.
 
-   ![Filter - Kibana-Dashboard](assets/cdn-logs-analysis/filter.png){width="200" zoomable="yes"}
+   ![Filter - Kibana-Dashboard](assets/cdn-logs-analysis/filter.png){width="500" zoomable="yes"}
 
 1. Im **Filter hinzufügen** modal, wählen Sie die `host.keyword` aus dem Dropdown-Menü ein und `is` Operator und gewünschter Hostname für das nächste Feld und klicken Sie schließlich auf _Filter hinzufügen_.
 
-   ![Host Filter - Kibana-Dashboard](assets/cdn-logs-analysis/add-host-filter.png){width="200" zoomable="yes"}
+   ![Host Filter - Kibana-Dashboard](assets/cdn-logs-analysis/add-host-filter.png){width="500" zoomable="yes"}
 
 Fügen Sie dem Dashboard entsprechend den Analyseanforderungen weitere Filter hinzu.
 
@@ -127,7 +127,7 @@ Um die Analyse der CDN-Protokolle zu beschleunigen, laden Sie die [AEM-as-a-Clou
 Die heruntergeladenen `aemcs_cdn_logs_analysis.ipynb` Die Datei &quot;Interactive Python Notebook&quot;ist selbsterklärend. Die wichtigsten Highlights jedes Abschnitts sind jedoch:
 
 - **Zusätzliche Bibliotheken installieren**: installiert die `termcolor` und `tabulate` Python-Bibliotheken.
-- **CDN-Protokolldatei laden**: lädt die CDN-Protokolldatei mit `log_file` -Variablen verwenden, müssen Sie sicherstellen, dass Sie den zugehörigen Wert aktualisieren. Außerdem wird dieses CDN-Protokoll in das [Pandas DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
+- **CDN-Protokolle laden**: lädt die CDN-Protokolldatei mit `log_file` -Variablen verwenden, müssen Sie sicherstellen, dass Sie den zugehörigen Wert aktualisieren. Außerdem wird dieses CDN-Protokoll in das [Pandas DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
 - **Analyse durchführen**: Der erste Codeblock lautet . _Analyseergebnis für Gesamt-, HTML-, JS/CSS- und Bildanforderungen anzeigen_, bietet sie Cache-Trefferverhältnisdiagramme in Prozent, Balken und Kreisdiagrammen.
 Der zweite Codeblock ist _Die 5 wichtigsten MISS- und PASS-Anforderungs-URLs für HTML, JS/CSS und Bild_, zeigt es URLs und deren Zählungen im Tabellenformat an.
 
@@ -141,33 +141,33 @@ Gehen Sie wie folgt vor, um das Jupyter-Notebook unter Experience Platform auszu
 
 1. Melden Sie sich beim [Adobe Experience Cloud](https://experience.adobe.com/)auf der Startseite > **Schnellzugriff** > klicken Sie auf **Experience Platform**
 
-   ![Experience Platform](assets/cdn-logs-analysis/experience-platform.png){width="200" zoomable="yes"}
+   ![Experience Platform](assets/cdn-logs-analysis/experience-platform.png){width="500" zoomable="yes"}
 
 1. Klicken Sie auf der Adobe Experience Platform-Startseite > Abschnitt &quot;Datenwissenschaft&quot;> auf das **Notebooks** Menüelement. Um die Jupyter Notebooks-Umgebung zu starten, klicken Sie auf die Schaltfläche **JupyterLab** Registerkarte.
 
-   ![Update der Protokolldatei](assets/cdn-logs-analysis/datascience-notebook.png){width="200" zoomable="yes"}
+   ![Update der Protokolldatei](assets/cdn-logs-analysis/datascience-notebook.png){width="500" zoomable="yes"}
 
 1. Verwenden Sie im Menü &quot;JupyterLab&quot;die **Hochladen von Dateien** Symbol, laden Sie die heruntergeladene CDN-Protokolldatei hoch und `aemcs_cdn_logs_analysis.ipynb` -Datei.
 
-   ![Dateien hochladen - JupyteLab](assets/cdn-logs-analysis/jupyterlab-upload-file.png){width="200" zoomable="yes"}
+   ![Dateien hochladen - JupyteLab](assets/cdn-logs-analysis/jupyterlab-upload-file.png){width="500" zoomable="yes"}
 
 1. Öffnen Sie die `aemcs_cdn_logs_analysis.ipynb` Datei durch Doppelklick.
 
 1. Im **CDN-Protokolldatei laden** -Abschnitt des Notebooks aktualisieren Sie die `log_file` -Wert.
 
-   ![Update der Protokolldatei](assets/cdn-logs-analysis/notebook-update-variable.png){width="200" zoomable="yes"}
+   ![Update der Protokolldatei](assets/cdn-logs-analysis/notebook-update-variable.png){width="500" zoomable="yes"}
 
 1. Um die ausgewählte Zelle auszuführen und den Vorgang fortzusetzen, klicken Sie auf das **Play** Symbol.
 
-   ![Update der Protokolldatei](assets/cdn-logs-analysis/notebook-run-cell.png){width="200" zoomable="yes"}
+   ![Update der Protokolldatei](assets/cdn-logs-analysis/notebook-run-cell.png){width="500" zoomable="yes"}
 
 1. Nach dem Ausführen der **Analyseergebnis für Gesamt-, HTML-, JS/CSS- und Bildanforderungen anzeigen** -Codezelle angezeigt, zeigt die Ausgabe die Cache-Trefferquote in Prozent, Balken und Kreisdiagrammen an.
 
-   ![Update der Protokolldatei](assets/cdn-logs-analysis/output-cache-hit-ratio.png){width="200" zoomable="yes"}
+   ![Update der Protokolldatei](assets/cdn-logs-analysis/output-cache-hit-ratio.png){width="500" zoomable="yes"}
 
 1. Nach dem Ausführen der **Die 5 wichtigsten MISS- und PASS-Anforderungs-URLs für HTML, JS/CSS und Bild** -Codezelle angezeigt, zeigt die Ausgabe die 5 wichtigsten MISS- und PASS-Anforderungs-URLs an.
 
-   ![Update der Protokolldatei](assets/cdn-logs-analysis/output-top-urls.png){width="200" zoomable="yes"}
+   ![Update der Protokolldatei](assets/cdn-logs-analysis/output-top-urls.png){width="500" zoomable="yes"}
 
 Sie können das Jupyter Notebook erweitern, um die CDN-Protokolle basierend auf Ihren Anforderungen zu analysieren.
 
