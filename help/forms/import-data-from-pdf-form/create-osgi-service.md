@@ -1,22 +1,23 @@
 ---
 title: Erstellen eines OSGi-Dienstes zum Exportieren von Daten aus einem PDF-Formular
-description: Daten aus einem PDF-Formular mithilfe der FormsService-API exportieren
+description: Exportieren von Daten aus einem PDF-Formular mithilfe der FormsService-API
 feature: Adaptive Forms
 version: 6.5
 topic: Development
 role: Developer
 level: Beginner
 kt: 14196
-source-git-commit: 17ab178f385619b589a9dde6089410bfa4515ffa
-workflow-type: tm+mt
+exl-id: c3032669-154c-4565-af6e-32d94e975e37
+source-git-commit: 7a0ec4797fda0436a8c20b84d1e36a8d16af21b9
+workflow-type: ht
 source-wordcount: '135'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # Daten exportieren
 
-Der erste Schritt zum Ausfüllen eines adaptiven Formulars aus einer PDF besteht darin, die Daten aus der angegebenen PDF-Datei zu exportieren und im AEM Repository zu speichern.
+Der erste Schritt zum Ausfüllen eines adaptiven Formulars aus einer PDF besteht darin, die Daten aus der angegebenen PDF-Datei zu exportieren und im AEM-Repository zu speichern.
 
 Der folgende Code wurde geschrieben, um die Daten aus dem hochgeladenen PDF-Dokument zu extrahieren und so das korrekte Format zu erhalten, das zum Ausfüllen des adaptiven Formulars verwendet werden kann
 
@@ -61,7 +62,7 @@ public String getFormData(Document pdfForm) {
 }
 ```
 
-Im Folgenden finden Sie die Dienstprogrammfunktion, die geschrieben wurde, um die _**topmostSubForm**_ mit den entsprechenden Namespaces
+Im Folgenden finden Sie die Dienstprogrammfunktion, die geschrieben wurde, um das _**topmostSubForm**_ mit den entsprechenden Namespaces zu extrahieren.
 
 ```java
 private static org.w3c.dom.Node getChildByTagName(org.w3c.dom.Node parent, String tagName) {
@@ -80,5 +81,4 @@ Die extrahierten Daten werden im Knoten /content/exporteddata im CRX-Repository 
 
 ## Nächste Schritte
 
-[Importieren von Daten aus einer PDF-Datei](./populate-adaptive-form.md)
-
+[Importieren von Daten aus der PDF-Datei](./populate-adaptive-form.md)
