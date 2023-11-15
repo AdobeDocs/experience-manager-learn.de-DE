@@ -9,16 +9,18 @@ level: Experienced
 kt: 8918
 thumbnail: 336969.jpeg
 exl-id: 4944d3d9-52a0-4255-9e6c-eb119160e400
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: ht
-source-wordcount: '157'
-ht-degree: 100%
+source-git-commit: 8a4f4a1370d93aa592d5d67208ad5f85034db0bf
+workflow-type: tm+mt
+source-wordcount: '201'
+ht-degree: 71%
 
 ---
 
 # Massenimportdienst
 
 Erfahren Sie, wie Sie mit dem Massenimportdienst von AEM as a Cloud Service Assets aus AEM-fremden Quellen importieren können.
+
+
 
 >[!VIDEO](https://video.tv.adobe.com/v/336969?quality=12&learn=on)
 
@@ -28,9 +30,13 @@ Erfahren Sie, wie Sie mit dem Massenimportdienst von AEM as a Cloud Service Asse
 
 Der Massenimportdienst wird verwendet, um in Azure Blob Storage oder Amazon S3 gespeicherte Dateien in AEM as a Cloud Service als Assets zu übertragen.
 
+>[!TIP]
+>
+> Die Eingabequellen in diesem Video zeigen nur Azure Blob Storage und Amazon S3, aber die verfügbaren Quellen wachsen mit der Zeit weiter. Eine vollständige Liste der unterstützten Eingabequellen finden Sie in den verfügbaren Optionen des Produkts oder [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
+
 ## Wichtigste Aktivitäten
 
-+ Laden Sie die zu importierenden Dateien in Ihren Cloud-Speicher hoch (Azure Blob Storage oder Amazon S3).
++ Laden Sie die zu importierenden Dateien in Ihren Cloud-Speicher-Provider hoch.
 + Konfigurieren Sie den Massenimportdienst des Author Service in AEM as a Cloud Service und führen Sie ihn aus.
 + Führen Sie den Massenimportdienst im Rahmen eines einmaligen Imports aus oder planen Sie regelmäßige Importe.
 
