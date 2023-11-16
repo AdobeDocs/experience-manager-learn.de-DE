@@ -10,9 +10,9 @@ doc-type: Tutorial
 last-substantial-update: 2023-11-10T00:00:00Z
 jira: KT-13312
 thumbnail: KT-13312.jpeg
-source-git-commit: be503ba477d63a566b687866289a81a0aa7d01f7
+source-git-commit: 4e93bc88b0ee5a805f2aaf1e66900f084ae01247
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1433'
 ht-degree: 2%
 
 ---
@@ -20,10 +20,12 @@ ht-degree: 2%
 
 # Analyse der CDN-Cache-Trefferquote
 
+Inhalte, die im CDN zwischengespeichert werden, reduzieren die Latenz, mit der Website-Benutzer konfrontiert sind, die nicht warten müssen, bis die Anforderung wieder zum Apache/Dispatcher oder AEM Publish gelangt. Vor diesem Hintergrund ist es sinnvoll, das CDN-Cache-Trefferverhältnis zu optimieren, um die im CDN zwischenspeicherbare Menge an Inhalten zu maximieren.
+
 Erfahren Sie, wie Sie die bereitgestellten AEM as a Cloud Service analysieren können. **CDN-Protokolle** und gewinnen Einblicke wie **Cache-Trefferverhältnis**, und **Top-URLs von _FEHLER_ und _PASS_ Cache-Typen** zu Optimierungszwecken.
 
 
-Die CDN-Protokolle sind im JSON-Format verfügbar, das verschiedene Felder enthält, darunter `url`, `cache`Weitere Informationen finden Sie unter [CDN-Protokollformat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=en#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs). Die `cache` -Feld enthält Informationen zu _Status des Caches_ und die möglichen Werte sind HIT, MISS oder PASS. Sehen wir uns die Details möglicher Werte an.
+Die CDN-Protokolle sind im JSON-Format verfügbar, das verschiedene Felder enthält, darunter `url`, `cache`. Weitere Informationen finden Sie unter [CDN-Protokollformat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=en#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs). Die `cache` -Feld enthält Informationen zu _Status des Caches_ und die möglichen Werte sind HIT, MISS oder PASS. Sehen wir uns die Details möglicher Werte an.
 
 | Cache-Status </br> Möglicher Wert | Beschreibung |
 |------------------------------------|:-----------------------------------------------------:|
@@ -31,7 +33,12 @@ Die CDN-Protokolle sind im JSON-Format verfügbar, das verschiedene Felder enth�
 | FEHLER | Die angeforderten Daten sind _nicht im CDN-Cache gefunden und muss angefordert werden_ vom AEM Server aus. |
 | PASS | Die angeforderten Daten sind _explizit auf Nicht zwischenspeichern gesetzt_ und immer vom AEM-Server abgerufen werden. |
 
-Zu diesem Zweck wird die [AEM WKND-Projekt](https://github.com/adobe/aem-guides-wknd) wird in der AEM as a Cloud Service Umgebung bereitgestellt und ein kleiner Leistungstest wird ausgelöst durch [Apache JMeter](https://jmeter.apache.org/).
+Im Rahmen dieses Tutorials wird die Variable [AEM WKND-Projekt](https://github.com/adobe/aem-guides-wknd) wird in der AEM as a Cloud Service Umgebung bereitgestellt und ein kleiner Leistungstest wird ausgelöst durch [Apache JMeter](https://jmeter.apache.org/).
+
+Dieses Tutorial ist so strukturiert, dass Sie den folgenden Prozess durchlaufen:
+1. Herunterladen von CDN-Protokollen über Cloud Manager
+1. Analysieren Sie diese CDN-Protokolle, die mit zwei Ansätzen ausgeführt werden können: einem lokal installierten Dashboard oder einem remote auf Jupityer Notebook (für diejenigen, die Adobe Experience Platform lizenzieren) zugänglichen Jupityer-Notebook.
+1. CDN-Cache-Konfiguration optimieren
 
 ## CDN-Protokolle herunterladen
 
@@ -54,10 +61,10 @@ Wenn die heruntergeladene Protokolldatei von _heute_ Die Dateierweiterung lautet
 
 Um Einblicke wie das Cache-Trefferverhältnis und die Top-URLs der Cache-Typen MISS und PASS zu erhalten, analysieren Sie die heruntergeladene CDN-Protokolldatei. Diese Einblicke helfen bei der Optimierung der [CDN-Cache-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=de) und die Site-Leistung verbessern.
 
-Zur Analyse der CDN-Protokolle verwendet dieser Artikel die **Elasticsearch, Logstash und Kibana (ELK)** [Dashboard-Tools](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) und [Jupyter Notebook](https://jupyter.org/).
+Um die CDN-Protokolle zu analysieren, bietet dieser Artikel zwei Optionen: die **Elasticsearch, Logstash und Kibana (ELK)** [Dashboard-Tools](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) und [Jupyter Notebook](https://jupyter.org/). Die ELK-Dashboard-Tools können lokal auf Ihrem Laptop installiert werden, während auf die Jupityr-Notebook-Tools remote zugegriffen werden kann [als Teil von Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=en) ohne zusätzliche Software zu installieren, für diejenigen, die Adobe Experience Platform lizenziert haben.
 
 
-### Verwenden der Dashboard-Werkzeuge
+### Option 1: Verwenden der Werkzeuge des ELK-Dashboards
 
 Die [ELK-Stapel](https://www.elastic.co/elastic-stack) ist ein Satz von Tools, die eine skalierbare Lösung für die Suche, Analyse und Visualisierung der Daten bieten. Es besteht aus Elasticsearch, Logstash und Kibana.
 
@@ -69,7 +76,7 @@ Um die Schlüsseldetails zu identifizieren, verwenden wir die [AEMCS-CDN-Log-Ana
 
    1. Kopieren Sie die heruntergeladenen CDN-Protokolldateien in den umgebungsspezifischen Ordner.
 
-   1. Öffnen Sie die **CDN-Cache-Trefferverhältnis** Dashboard durch Klicken auf Hamburger Menü > Analytics > Dashboard > CDN-Cache-Trefferverhältnis.
+   1. Öffnen Sie die **CDN-Cache-Trefferverhältnis** Dashboard durch Klicken auf das Navigationsmenü oben links im Bildschirm > Analysen > Dashboard > CDN-Cache-Trefferverhältnis.
 
       ![CDN-Cache-Trefferverhältnis - Kibana-Dashboard](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
@@ -118,26 +125,24 @@ Gehen Sie wie folgt vor, um die erfassten Protokolle nach Hostnamen zu filtern:
 
 Fügen Sie dem Dashboard entsprechend den Analyseanforderungen weitere Filter hinzu.
 
-### Verwenden des Jupyter-Notebooks
+### Option 2: Verwenden von Jupyter Notebook
 
-Die [Jupyter Notebook](https://jupyter.org/) ist eine Open-Source-Webanwendung, mit der Sie Dokumente erstellen können, die Code, Text und Visualisierung enthalten. Sie wird für die Datenumwandlung, Visualisierung und statistische Modellierung verwendet.
+Für diejenigen, die die Software lieber nicht lokal installieren möchten (d. h. die ELK-Dashboard-Tools aus dem vorherigen Abschnitt), gibt es eine andere Option, für die jedoch eine Lizenz für Adobe Experience Platform erforderlich ist.
 
-Um die Analyse der CDN-Protokolle zu beschleunigen, laden Sie die [AEM-as-a-CloudService - CDN Logs Analysis - Jupyter Notebook](./assets/cdn-logs-analysis/aemcs_cdn_logs_analysis.ipynb) -Datei.
+Die [Jupyter Notebook](https://jupyter.org/) ist eine Open-Source-Webanwendung, mit der Sie Dokumente erstellen können, die Code, Text und Visualisierung enthalten. Sie wird für die Datenumwandlung, Visualisierung und statistische Modellierung verwendet. Es kann remote aufgerufen werden [als Teil von Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=en).
 
-Die heruntergeladenen `aemcs_cdn_logs_analysis.ipynb` Die Datei &quot;Interactive Python Notebook&quot;ist selbsterklärend. Die wichtigsten Highlights jedes Abschnitts sind jedoch:
+#### Herunterladen der interaktiven Python-Notebook-Datei
+
+Laden Sie zunächst die [AEM-as-a-CloudService - CDN Logs Analysis - Jupyter Notebook](./assets/cdn-logs-analysis/aemcs_cdn_logs_analysis.ipynb) -Datei, die bei der Analyse der CDN-Protokolle hilft. Diese &quot;Interactive Python Notebook&quot;-Datei ist selbsterklärend. Die wichtigsten Highlights jedes Abschnitts sind jedoch:
 
 - **Zusätzliche Bibliotheken installieren**: installiert die `termcolor` und `tabulate` Python-Bibliotheken.
-- **CDN-Protokolle laden**: lädt die CDN-Protokolldatei mit `log_file` -Variablen verwenden, müssen Sie sicherstellen, dass Sie den zugehörigen Wert aktualisieren. Außerdem wird dieses CDN-Protokoll in das [Pandas DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
-- **Analyse durchführen**: Der erste Codeblock lautet . _Analyseergebnis für Gesamt-, HTML-, JS/CSS- und Bildanforderungen anzeigen_, bietet sie Cache-Trefferverhältnisdiagramme in Prozent, Balken und Kreisdiagrammen.
-Der zweite Codeblock ist _Die 5 wichtigsten MISS- und PASS-Anforderungs-URLs für HTML, JS/CSS und Bild_, zeigt es URLs und deren Zählungen im Tabellenformat an.
+- **CDN-Protokolle laden**: lädt die CDN-Protokolldatei mit `log_file` -Wert. Achten Sie darauf, den zugehörigen Wert zu aktualisieren. Außerdem wird dieses CDN-Protokoll in das [Pandas DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
+- **Analyse durchführen**: Der erste Codeblock lautet . _Analyseergebnis für Gesamt-, HTML-, JS/CSS- und Bildanforderungen anzeigen_; es bietet Cache-Trefferverhältnis-Prozentsatz, Balken- und Tortendiagramme.
+Der zweite Codeblock ist _Die 5 wichtigsten MISS- und PASS-Anforderungs-URLs für HTML, JS/CSS und Bild_; es zeigt URLs und deren Zählungen im Tabellenformat an.
 
-#### Führen Sie das Jupyter-Notebook unter Experience Platform aus
+#### Ausführen des Jupyter-Notebooks
 
->[!IMPORTANT]
->
->Wenn Sie die Experience Platform verwenden oder lizenzieren, können Sie das Jupyter-Notebook ausführen, ohne zusätzliche Software zu installieren.
-
-Gehen Sie wie folgt vor, um das Jupyter-Notebook unter Experience Platform auszuführen:
+Führen Sie anschließend das Jupyter-Notebook in Adobe Experience Platform aus, indem Sie die folgenden Schritte ausführen:
 
 1. Melden Sie sich beim [Adobe Experience Cloud](https://experience.adobe.com/)auf der Startseite > **Schnellzugriff** > klicken Sie auf **Experience Platform**
 
