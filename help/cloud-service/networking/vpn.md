@@ -9,10 +9,10 @@ level: Intermediate
 kt: 9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
-source-wordcount: '1318'
-ht-degree: 100%
+source-git-commit: bccaccd386d065720cddfd689cbadc220609b8a8
+workflow-type: tm+mt
+source-wordcount: '1319'
+ht-degree: 99%
 
 ---
 
@@ -45,7 +45,7 @@ Bei der Einrichtung eines virtuellen privaten Netzwerks sind folgende Voraussetz
    + Zugriffs-Token (auch als Bearer- oder Träger-Token bezeichnet)
 + Cloud Manager-Programm-ID
 + Cloud Manager-Umgebungs-IDs
-+ Ein virtuelles privates Netzwerk mit Zugriff auf alle erforderlichen Verbindungsparameter
++ A **Route-basiert** Virtuelles privates Netzwerk mit Zugriff auf alle erforderlichen Verbindungsparameter.
 
 Weitere Informationen dazu, wie Sie Anmeldeinformationen für die Cloud Manager-API einrichten, konfigurieren sowie abrufen und wie Sie diese zum Ausführen eines Cloud Manager-API-Aufrufs verwenden können, finden Sie in der folgenden Anleitung.
 
