@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: bfc4d843c53373010ee04cfa590272cedea7a686
+source-git-commit: b770fc33ee0752911135d1a94144406bad8f295b
 workflow-type: tm+mt
-source-wordcount: '1058'
-ht-degree: 98%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -156,7 +156,7 @@ ht-degree: 98%
       + [SQL-Verbindungen mit Java SQL-APIs](./networking/examples/sql-java-apis.md)
       + [E-Mail-Dienst](./networking/examples/email-service.md)
 + Sicherheit {#security}
-   + Traffic-Filter-Regeln, einschließlich WAF-Regeln{#traffic-filter-and-waf-rules}
+   + Traffic-Filterregeln, einschließlich WAF-Regeln{#traffic-filter-and-waf-rules}
       + [Übersicht](./security/traffic-filter-rules/overview.md)
       + [Einrichtung](./security/traffic-filter-rules/how-to-setup.md)
       + [Beispiele und Ergebnisanalyse](./security/traffic-filter-rules/examples-and-analysis.md)
@@ -204,12 +204,13 @@ ht-degree: 98%
       + [4 – Synchronisieren von IntelliJ mit AEM](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
       + [5 – Erstellen eines Formulars](./forms/developing-for-cloud-service/deploy-your-first-form.md)
       + [6 – Benutzerdefinierter Übermittlungs-Handler](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
-      + [7 – Aktivieren von Komponenten des Formularportals](./forms/developing-for-cloud-service/forms-portal-components.md)
-      + [8 – Einschließen von Cloud-Services und FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
-      + [9 – Kontextsensitive Cloud-Konfiguration](./forms/developing-for-cloud-service/context-aware-fdm.md)
-      + [10 – Pushen zu Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
-      + [11 – Bereitstellen für die Entwicklungsumgebung](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
-      + [12 – Aktualisieren des Maven-Archetyps](./forms/developing-for-cloud-service/updating-project-archetype.md)
+      + [7 - Registrieren von Servlets anhand des Ressourcentyps](./forms/developing-for-cloud-service/registering-servlet-using-resourcetype.md)
+      + [8 – Aktivieren von Komponenten des Formularportals](./forms/developing-for-cloud-service/forms-portal-components.md)
+      + [9 – Einschließen von Cloud-Services und FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
+      + [10 – Kontextsensitive Cloud-Konfiguration](./forms/developing-for-cloud-service/context-aware-fdm.md)
+      + [11 – Pushen zu Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
+      + [12 – Bereitstellen für die Entwicklungsumgebung](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
+      + [13 – Aktualisieren des Maven-Archetyps](./forms/developing-for-cloud-service/updating-project-archetype.md)
    + Erstellen eines adaptiven Formulars{#create-first-af}
       + [Einführung](./forms/create-first-af/introduction.md)
       + [Erstellen eines Designs](./forms/create-first-af/create-theme.md)
@@ -254,6 +255,12 @@ ht-degree: 98%
       + [PDF/A-Dienstprogramme](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [Testen der Lösung](./forms/forms-cs-assembler/test.md)
       + [Herausforderung](./forms/forms-cs-assembler/challenge.md)
+   + Speichern von Formularübermittlungen mit Blob Index-Tags{#store-submiited-data-with-metadata-tags}
+      + [Einführung](./forms/store-submiited-data-with-metadata-tags/introduction.md)
+      + [Erweiterung der Auswahlgruppenkomponente](./forms/store-submiited-data-with-metadata-tags/extend-choice-group-components.md)
+      + [OSGi-Konfiguration erstellen](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
+      + [Index-Tags erstellen](./forms/store-submiited-data-with-metadata-tags/create-blob-index-tags.md)
+      + [Benutzerdefiniertes Senden erstellen](./forms/store-submiited-data-with-metadata-tags/create-custom-submit.md)
    + Azure Portal-Speicher{#forms-cs-azure-portal}
       + [Einführung](./forms/forms-cs-azure-portal/introduction.md)
       + [Erstellen von Formulardatenmodellen](./forms/forms-cs-azure-portal/create-fdm.md)

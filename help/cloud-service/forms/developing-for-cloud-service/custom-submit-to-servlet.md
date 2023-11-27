@@ -10,10 +10,10 @@ topic: Development
 feature: Developer Tools
 kt: 8852
 exl-id: 983e0394-7142-481f-bd5e-6c9acefbfdd0
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
-workflow-type: ht
-source-wordcount: '210'
-ht-degree: 100%
+source-git-commit: b770fc33ee0752911135d1a94144406bad8f295b
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -61,4 +61,4 @@ Sie können jetzt jedes adaptive Formular so konfigurieren, dass es an den benut
 
 ## Nächste Schritte
 
-[Aktivieren von Komponenten des Formularportals](./forms-portal-components.md)
+[Servlet anhand des Ressourcentyps registrieren](./registering-servlet-using-resourcetype.md)
