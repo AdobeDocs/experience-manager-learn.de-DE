@@ -8,11 +8,10 @@ role: Developer
 level: Beginner
 last-substantial-update: 2023-10-23T00:00:00Z
 kt: 14238
-exl-id: 77f93aad-0cab-4e52-b0fd-ae5af23a13d0
-source-git-commit: 7a0ec4797fda0436a8c20b84d1e36a8d16af21b9
-workflow-type: ht
-source-wordcount: '282'
-ht-degree: 100%
+source-git-commit: 23459de98420d2a489288df4a1b992c17d42972e
+workflow-type: tm+mt
+source-wordcount: '287'
+ht-degree: 82%
 
 ---
 
@@ -47,18 +46,18 @@ public String getBlobData(String blobID) {
 
     } catch (ClientProtocolException e) {
 
-        log.error("Got Client Protocol Exception " + e.getMessage());
+        log.debug("Got Client Protocol Exception " + e.getMessage());
     } catch (IOException e) {
 
-        log.error("Got IOEXception " + e.getMessage());
+        log.debug("Got IOEXception " + e.getMessage());
     }
 
     return null;
 }
 ```
 
-Wenn ein adaptives Formular mit einem `guid`-Parameter in der URL gerendert wird, ruft die mit der Vorlage verknüpfte benutzerdefinierte Seitenkomponente das adaptive Formular ab und füllt es mit den Daten aus dem Azure-Speicher aus.
-Die Seitenkomponente, die mit der Vorlage verknüpft ist, hat den folgenden JSP-Code.
+Wenn ein adaptives Formular mit einem GUID-Parameter in der URL wiedergegeben wird, ruft die mit der Vorlage verknüpfte benutzerdefinierte Seitenkomponente das adaptive Formular ab und füllt es mit den Daten aus Azure Storage.
+Im Folgenden finden Sie den Code im JSP der Seitenkomponente, die mit der Vorlage verknüpft ist
 
 ```java
 com.aemforms.saveandfetchfromazure.StoreAndFetchDataFromAzureStorage azureStorage = sling.getService(com.aemforms.saveandfetchfromazure.StoreAndFetchDataFromAzureStorage.class);
@@ -82,8 +81,11 @@ if(guid!=null&&!guid.isEmpty())
 
 * [Importieren Sie das adaptive Beispielformular.](./assets/bank-account-sample-form.zip)
 
-* Geben Sie die entsprechenden Werte in der Azure Portal-Konfiguration mithilfe der OSGi-Konfigurationskonsole an
+* Geben Sie die entsprechenden Werte in der Azure Portal-Konfiguration mithilfe der OSGi-Konfigurationskonsole an.
+
 * [Zeigen Sie das Bankkonto-Formular in der Vorschau an und senden Sie es ab](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled).
 
 * Überprüfen Sie, ob die Daten im gewünschten Azure-Speicher-Container gespeichert sind. Kopieren Sie die Blob-ID.
+
 * [Zeigen Sie das Bankkonto-Formular in der Vorschau an](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6) und geben Sie die Blob-ID als einen GUID-Parameter in die URL ein, damit das Formular mit den Daten aus dem Azure-Speicher vorausgefüllt werden kann.
+
