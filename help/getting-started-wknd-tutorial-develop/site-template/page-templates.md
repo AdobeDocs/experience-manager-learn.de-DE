@@ -2,17 +2,17 @@
 title: Seitenvorlagen
 description: Erfahren Sie, wie Sie Seitenvorlagen erstellen und ändern. Lernen Sie den Zusammenhang zwishen Seitenvorlage und Seite kennen. Erfahren Sie, wie Sie die Richtlinien einer Seitenvorlage konfigurieren, um für Inhalte granulare Governance und Markenkonsistenz zu gewährleisten.  Basierend auf einem Mockup wird in Adobe XD eine gut strukturierte Zeitschriftenartikelvorlage erstellt.
 version: Cloud Service
-type: Tutorial
 topic: Content Management
 feature: Core Components, Editable Templates, Page Editor
 role: Developer
 level: Beginner
-kt: 7498
+jira: KT-7498
 thumbnail: KT-7498.jpg
+doc-type: Tutorial
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '652'
 ht-degree: 100%
 

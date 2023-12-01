@@ -1,12 +1,8 @@
 ---
 title: Integrieren von Experience Platform-Datenerfassungs-Tags (Launch) in AEM
 description: Experience Platform-Datenerfassungs-Tags sind die Tag-Management-Plattform der nächsten Generation von Adobe und die beste Methode zur Implementierung von Adobe Analytics, Target, Audience Manager und vielen weiteren Lösungen. Verschaffen Sie sich einen Überblick über Tags (früher Launch) und die empfohlene Integration in Adobe Experience Manager.
-topics: integrations
-audience: administrator
 solution: Experience Manager, Data Collection, Experience Platform
-doc-type: technical video
-activity: setup
-kt: 5979
+jira: KT-5979
 thumbnail: 39090.jpg
 topic: Integrations
 feature: Integrations
@@ -15,9 +11,10 @@ level: Intermediate
 last-substantial-update: 2022-07-10T00:00:00Z
 badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '345'
 ht-degree: 100%
 

@@ -2,16 +2,14 @@
 title: Bestimmen Ihrer Ordnerstruktur und Dateinamenskonvention
 description: Das Benennen der Dateien ist möglicherweise die wichtigste Entscheidung, die Sie bei der Implementierung von Dynamic Media Classic treffen werden. Die Ordnerstruktur ist ebenfalls wichtig. Erfahren Sie, warum dies so wichtig ist und welche Ansätze Sie für Ihre Ordnerstruktur und Dateinamen wählen können.
 feature: Dynamic Media Classic
-doc-type: tutorial
 activity: develop
-topics: development, authoring, configuring, architecture
-audience: all
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: 15121896-9196-4ce0-aff2-9178563326b4
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 100%
 

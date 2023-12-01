@@ -6,12 +6,13 @@ topic: Administration, Security
 feature: User and Groups
 role: Admin
 level: Intermediate
-kt: 649
+jira: KT-649
 thumbnail: 22155.jpg
 last-substantial-update: 2022-06-06T00:00:00Z
+doc-type: Feature Video
 exl-id: a2bf8a82-15ee-478c-b7c3-de8a991dfeb8
-source-git-commit: f37483f90f2a707c906e1e206795fdebb5f698e9
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '377'
 ht-degree: 100%
 

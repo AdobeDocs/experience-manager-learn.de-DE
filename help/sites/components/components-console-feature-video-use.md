@@ -1,18 +1,15 @@
 ---
 title: Verwenden der Komponentenkonsole mit AEM Sites
 description: Die Komponentenkonsole bietet Entwicklerinnern bzw. Entwicklern und Admins einen zentralen Speicherort, an dem sie alle verschiedenen Komponenten in einer Sites-Implementierung verwalten können. Im folgenden Video werden die Funktionen der Komponentenkonsole beschrieben.
-topics: components
-audience: all
-doc-type: feature video
 version: 6.4, 6.5
-activity: use
 feature: Core Components
 topic: Content Management
 role: User
 level: Intermediate
+doc-type: Feature Video
 exl-id: 6f33f121-5564-4c46-ab56-7ea382a0ab5a
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '174'
 ht-degree: 100%
 

@@ -2,20 +2,20 @@
 title: Lokales Entwicklungs-Zugriffstoken
 description: Lokale AEM-Entwicklungs-Zugriffstoken werden verwendet, um die Entwicklung von Integrationen mit AEM as a Cloud Service zu beschleunigen, die programmgesteuert über HTTP mit AEM-Autoren- oder Veröffentlichungs-Services interagieren.
 version: Cloud Service
-doc-type: tutorial
 topics: Development, Security
 feature: APIs
 activity: develop
 audience: developer
-kt: 6785
+jira: KT-6785
 thumbnail: 330477.jpg
 topic: Headless, Integrations
 role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2023-01-12T00:00:00Z
+doc-type: Tutorial
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 100%
 

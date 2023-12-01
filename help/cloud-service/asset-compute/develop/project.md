@@ -1,15 +1,15 @@
 ---
 title: Erstellen eines Asset Compute-Projekts zur Asset Compute-Erweiterung
 description: Asset Compute-Projekte sind Node.js-Projekte, die mithilfe der Adobe I/O-CLI erstellt werden und eine bestimmte Struktur aufweisen, sodass sie für Adobe I/O Runtime bereitgestellt und in AEM as a Cloud Service integriert werden können.
-kt: 6269
+jira: KT-6269
 thumbnail: 40197.jpg
 topic: Integrations, Development
 feature: Asset Compute Microservices
 role: Developer
 level: Intermediate, Experienced
 exl-id: ebb11eab-1412-4af5-bc09-e965b9116ac9
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 100%
 

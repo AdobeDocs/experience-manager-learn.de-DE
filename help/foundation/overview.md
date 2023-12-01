@@ -3,9 +3,10 @@ title: Videos und Tutorials zu AEM Foundation
 description: Sehen Sie sich unsere Videos und Tutorials an, um Hilfe zu Adobe Experience Manager Foundation zu erhalten.
 role: Leader, Architect, Developer, Admin, User
 level: Beginner
+doc-type: Catalog
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 100%
 

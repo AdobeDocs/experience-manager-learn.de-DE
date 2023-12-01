@@ -3,19 +3,16 @@ title: Grundlagen zur Adobe IMS-Authentifizierung mit AEM bei Adobe Managed Serv
 description: Adobe Experience Manager bietet Admin Console-Unterstützung für AEM Instanzen und Adobe IMS (Identity Management System)-basierte Authentifizierung für AEM in Managed Services. Diese Integration ermöglicht es AEM Managed Services-Kunden und -kundinnen, alle Experience Cloud-Benutzende in einer einzigen einheitlichen Web-Konsole zu verwalten. Benutzende und Gruppen können Produktprofilen zugewiesen werden, die mit AEM-Instanzen verknüpft sind, und erhalten so zentral verwalteten Zugriff auf die spezifischen AEM-Instanzen.
 version: 6.4, 6.5
 feature: User and Groups
-topics: authentication, security
-activity: understand
-audience: administrator, architect, developer, implementer
-doc-type: technical video
-kt: 781
+doc-type: Technical Video
+jira: KT-781
 topic: Architecture
 role: Architect
 level: Experienced
 exl-id: 52dd8a3f-6461-4acb-87ca-5dd9567d15a6
 last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: KT-781.jpg
-source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 100%
 

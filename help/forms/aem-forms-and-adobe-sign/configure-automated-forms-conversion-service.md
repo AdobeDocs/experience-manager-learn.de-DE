@@ -3,15 +3,15 @@ title: Service zur automatisierten Formularkonvertierung
 description: Service zur automatisierten Formularkonvertierung. Dieser Artikel beschreibt, wie AEM-Admins den Service zur automatisierten Formularkonvertierung konfigurieren können, um die Konvertierung von PDF-Formularen in adaptive Formulare zu automatisieren. Diese Hilfe richtet sich an IT- und AEM-Admins in Ihrem Unternehmen.
 feature: Adaptive Forms
 thumbnail: 39493.jpg
-kt: 6114
+jira: KT-6114
 topic: Development
 role: Admin
 level: Beginner
 badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 0715a2cc-c042-4ddc-85a1-7720f420351b
-source-git-commit: b044c9982fc9309fb73509dd3117f5467903bd6a
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 100%
 

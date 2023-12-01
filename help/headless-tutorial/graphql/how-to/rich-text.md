@@ -3,14 +3,14 @@ title: Verwenden von Rich-Text mit AEM Headless
 description: Erfahren Sie, wie Sie mit einem mehrzeiligen Rich-Text-Editor mit Adobe Experience Manager-Inhaltsfragmenten Inhalte erstellen und referenzierte Inhalte einbetten können und wie Rich-Text von AEM GraphQL-APIs als JSON bereitgestellt wird, um von Headless-Anwendungen genutzt zu werden.
 version: Cloud Service
 doc-type: article
-kt: 9985
+jira: KT-9985
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 level: Intermediate
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
-source-git-commit: eecc275e38390b9330464c8ac0750efa2c702c82
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1465'
 ht-degree: 100%
 

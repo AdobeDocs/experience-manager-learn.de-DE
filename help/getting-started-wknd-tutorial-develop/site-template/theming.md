@@ -2,17 +2,17 @@
 title: Arbeitsablauf beim Erstellen von Themen | Schnelle Site-Erstellung mit AEM
 description: Erfahren Sie, wie Sie die Themenquellen einer Adobe Experience Manager Site aktualisieren, um markenspezifische Stile anzuwenden. Erfahren Sie, wie Sie mit einem Proxy-Server eine Live-Vorschau von CSS- und JavaScript-Aktualisierungen anzeigen können. In diesem Tutorial wird auch beschrieben, wie Sie Aktualisierungen von Themen mithilfe der Frontend-Pipeline von Adobe Cloud Manager auf einer AEM-Site bereitstellen.
 version: Cloud Service
-type: Tutorial
 feature: Core Components
 topic: Content Management, Development
 role: Developer
 level: Beginner
-kt: 7498
+jira: KT-7498
 thumbnail: KT-7498.jpg
+doc-type: Tutorial
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
 recommendations: noDisplay, noCatalog
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '479'
 ht-degree: 100%
 

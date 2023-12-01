@@ -2,16 +2,13 @@
 title: Intelligente Bildbearbeitung
 description: Die intelligente Bildbearbeitung in Dynamic Media Classic verbessert die Leistung bei der Bildbereitstellung, indem das Bildformat und die Qualität basierend auf den Funktionen des Client-Browsers automatisch optimiert werden. Dies geschieht durch Nutzung der KI-Funktionen von Adobe Sensei und Arbeiten mit vorhandenen Bildvorgaben. Erfahren Sie mehr über die intelligente Bildbearbeitung und darüber, wie Sie damit durch schnelleres Laden von Seiten bessere Kundenerlebnisse bieten können.
 feature: Dynamic Media Classic
-doc-type: tutorial
-topics: development, authoring, configuring, renditions, images
-audience: all
-activity: use
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: 678671c3-af25-4da1-bc14-cbc4cc19be8d
-source-git-commit: 53af8fbc20ff21abf8778bbc165b5ec7fbdf8c8f
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 100%
 

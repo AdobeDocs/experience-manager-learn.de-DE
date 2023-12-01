@@ -3,15 +3,15 @@ title: AEM Headless-Schnelleinrichtung mit dem lokalen AEM SDK
 description: Erste Schritte mit Adobe Experience Manager (AEM) und GraphQL. Installieren Sie das AEM-SDK, fügen Sie Beispielinhalte hinzu und stellen Sie eine Anwendung bereit, die Inhalte von AEM mithilfe der zugehörigen GraphQL-APIs nutzt. Erfahren Sie, wie AEM Omni-Channel-Erlebnisse ermöglicht.
 version: Cloud Service
 mini-toc-levels: 1
-kt: 6386
+jira: KT-6386
 thumbnail: KT-6386.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: d2da6efa-1f77-4391-adda-e3180c42addc
-source-git-commit: 38a35fe6b02e9aa8c448724d2e83d1aefd8180e7
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1257'
 ht-degree: 100%
 

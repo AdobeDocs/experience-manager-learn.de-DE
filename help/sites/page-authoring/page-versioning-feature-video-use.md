@@ -1,20 +1,17 @@
 ---
 title: Erstellen von Seitenversionen für AEM Site-Seiten
 description: Im folgenden Video erfahren Sie, wie Sie eine Seitenversion erstellen, eine Vorschau anzeigen, eine Seitenversion wiederherstellen und die aktuelle Seitenversion mit gespeicherten Seitenversionen vergleichen können.
-topics: authoring
-audience: author, marketer
-doc-type: feature video
-activity: use
 version: 6.4, 6.5, Cloud Service
-kt: 4630
+jira: KT-4630
 thumbnail: 32151.jpg
 topic: Content Management
 feature: Authoring
 role: User
 level: Beginner
+doc-type: Feature Video
 exl-id: cc659581-031d-4f2a-90c1-cf721e481689
-source-git-commit: bca54171856f32ec5c5165f8f1663d027f9fcd5e
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 100%
 

@@ -1,18 +1,15 @@
 ---
 title: Anpassen von Komponentensymbolen in Adobe Experience Manager Sites
 description: Mithilfe von Komponentensymbolen können Autorinnen und Autoren eine Komponente anhand von Symbolen oder aussagekräftigen Abkürzungen schnell erkennen. Autorinnen und Autoren können jetzt die zum Erstellen ihrer Web-Erlebnisse erforderlichen Komponenten schneller als je zuvor finden.
-topics: components
-audience: administrator, developer
-doc-type: technical video
-activity: develop
 version: 6.4, 6.5
 feature: Core Components
 topic: Development
 role: User
 level: Intermediate
+doc-type: Technical Video
 exl-id: 37dc26aa-0773-4749-8c8b-4544bd4d5e5f
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '374'
 ht-degree: 100%
 

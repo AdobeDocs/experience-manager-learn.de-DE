@@ -2,18 +2,15 @@
 title: Zuschneiden, angepasste Bilder und Zoom-Ziele
 description: Das Primärbild von Dynamic Media Classic unterstützt das Erstellen separater Zuschnittversionen für jedes Bild, um Details anzuzeigen oder für Farbfelder, ohne dass für jedes Bild separate Zuschnittversionen erstellt werden müssen. Erfahren Sie, wie Sie Bilder in Dynamic Media Classic zuschneiden und als neue Primärdatei oder virtuelles Bild speichern, virtuelle angepasste Bilder speichern und sie anstelle von Primär-Assets verwenden und wie Sie Zoom-Ziele für Bilder erstellen, um hervorgehobene Details anzuzeigen.
 feature: Dynamic Media Classic
-doc-type: tutorial
-topics: development, authoring, configuring
-audience: all
-activity: use
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: a1d83c77-a9e4-4ed1-9b00-65fb002164c0
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '2653'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -126,7 +123,7 @@ _Angepasste Ansichten für Musterbild ASIAN_BR_MAIN_
 
 ## Zoom-Ziele
 
-Zoom-Ziele finden Sie auch im Menü **Bearbeiten** und auf der Seite **Details** eines Bildes. Sie ermöglichen es Ihnen, „Hotspots“ festzulegen, um bestimmte Merchandising-Funktionen eines Zoom-Bilds hervorzuheben. Anstatt separate Bilder durch Zuschneiden eines großen Musterbilds zu erstellen, kann der Zoom-Viewer die Details über dem Bild zusammen mit einer kurzen Beschriftung bereitstellen, die Sie erstellen.
+Zoom-Ziele finden Sie auch im Menü **Bearbeiten** und auf der Seite **Details** eines Bildes. Sie ermöglichen es Ihnen, &quot;Hotspots&quot;festzulegen, um bestimmte Merchandising-Funktionen eines Zoombilds hervorzuheben. Anstatt separate Bilder durch Zuschneiden eines großen Musterbilds zu erstellen, kann der Zoom-Viewer die Details über dem Bild zusammen mit einer kurzen Beschriftung bereitstellen, die Sie erstellen.
 
 ![image](assets/crop-adjusted-zoom-targets/arm-with-watch.jpg)
 
@@ -176,7 +173,7 @@ Wenn Sie das Zoom-Ziel-Tool laden, wird die Anzeigegröße neben dem Namen der V
 
 ![Bild](assets/crop-adjusted-zoom-targets/view-size.jpg)
 
-Sie können sehen, dass die integrierte Vorgabe eine Größe von 900 x 550 hat, was bedeutet, dass das Ziel nie kleiner werden kann als dieses eher große Format. Das ist wahrscheinlich zu groß. Wenn Sie ein 2000-Pixel-Bild haben, können Sie nur eine Funktion aufrufen, die mindestens 900 Pixel breit ist. Die Benutzenden können manuell weiter zoomen, aber Sie können sie nicht näher heranführen. Wenn Sie die Anzeigegröße auf 350 x 350 festlegen, können Ziele ziemlich nah herangezoomt oder stärker vergrößert werden. Wenn Sie jedoch ein größeres Zoom-Bild in Ihrem Viewer wünschen, müssen Sie eine neue Vorgabe erstellen, da Ihre auf 350 Pixel festgelegt ist.
+Sie können sehen, dass die integrierte Vorgabe eine Größe von 900 x 550 hat, was bedeutet, dass das Ziel nie kleiner werden kann als dieses eher große Format. Das ist wahrscheinlich zu groß. Wenn Sie ein 2000-Pixel-Bild haben, können Sie nur eine Funktion aufrufen, die mindestens 900 Pixel breit ist. Der Benutzer kann manuell weiter zoomen, aber Sie können sie nicht näher heranführen. Wenn Sie die Anzeigegröße auf 350 x 350 festlegen, können Ziele ziemlich nah herangezoomt oder stärker vergrößert werden. Wenn Sie jedoch ein größeres Zoombild in Ihrem Viewer wünschen, müssen Sie eine neue Vorgabe erstellen, da Ihre mit 350 Pixel gesperrt ist.
 
 ### Erstellen oder Bearbeiten einer Viewer-Vorgabe, die Zoom-Ziele unterstützt
 

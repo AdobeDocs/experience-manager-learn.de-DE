@@ -1,21 +1,14 @@
 ---
 title: Verwenden der Kalenderansicht mit AEM-Projekten und dem Posteingang
-seo-title: Use Calendar View with AEM Projects and Inbox
 description: Die AEM-Kalenderansicht erfasst Projekte und Aufgaben in einer Kalenderansicht, um die Projektverwaltung und -planung zu erleichtern. In der Kalenderansicht haben Benutzende eine Gesamtübersicht über laufende, geplante, bald fällige und überfällige Projekte und Aufgaben.
-seo-description: AEM's Calendar View tracks projects and tasks in a calendar view for easier project management and scheduling. With Calendar view, user would have an overall visibility over projects and tasks that are currently in progress, planned, due soon and past due.
 version: 6.4, 6.5
 feature: Workflow, Projects
-topics: governance, collaboration
-activity: use
-audience: author, analyst
-doc-type: feature video
-uuid: 3dc9999c-eddf-4e42-9aa9-87a37a47699d
-discoiquuid: 5ad21858-a4a2-486c-98dc-4f5ba46a3bc1
+doc-type: Feature Video
 topic: Collaboration
 role: User
 level: Beginner
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 100%
 

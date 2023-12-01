@@ -2,14 +2,14 @@
 title: Erstellen eines adaptiven Formulars
 description: In Teil 1 wird ein adaptives Formular erstellt und die Symbolleiste mit entsprechenden Schaltflächen hinzugefügt und konfiguriert.
 feature: Adaptive Forms
-kt: 4208
+jira: KT-4208
 thumbnail: 22173.jpg
 topic: Development
 role: Developer
 level: Beginner
 exl-id: de3a0444-64ae-45a1-8329-aafa6f5add49
-source-git-commit: 38e0332ef2ef45a73a81f318975afc25600392a8
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 100%
 

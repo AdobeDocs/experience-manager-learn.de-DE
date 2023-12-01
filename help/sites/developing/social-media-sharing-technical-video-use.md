@@ -2,17 +2,14 @@
 title: Verwenden der Social-Media-Freigabe in AEM Sites
 description: Erfahren Sie mehr über die Einrichtung und Verwendung der Komponente zur Social-Media-Freigabe.
 feature: Core Components
-topics: integrations
-audience: developer, implementer
-doc-type: technical video
-activity: setup
 version: 6.4, 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
+doc-type: Technical Video
 exl-id: 569069e8-7964-49f1-96ed-7dfa4f8ed96c
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 100%
 

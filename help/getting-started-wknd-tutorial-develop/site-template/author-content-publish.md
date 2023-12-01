@@ -2,17 +2,17 @@
 title: Einführung in das Verfassen und Veröffentlichen | Schnelle Site-Erstellung mit AEM
 description: Verwenden Sie den Seiteneditor in Adobe Experience Manager (AEM), um den Inhalt der Website zu aktualisieren. Erfahren Sie, wie Komponenten zur Erleichterung der Bearbeitung verwendet werden. Machen Sie sich mit dem Unterschied zwischen einer AEM Author- und Publish -Umgebung vertraut und erfahren Sie, wie Sie Änderungen an der Live-Site veröffentlichen.
 version: Cloud Service
-type: Tutorial
 topic: Content Management
 feature: Core Components, Page Editor
 role: Developer
 level: Beginner
-kt: 7497
+jira: KT-7497
 thumbnail: KT-7497.jpg
+doc-type: Tutorial
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
 recommendations: noDisplay, noCatalog
-source-git-commit: de2fa2e4c29ce6db31233ddb1abc66a48d2397a6
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1330'
 ht-degree: 100%
 

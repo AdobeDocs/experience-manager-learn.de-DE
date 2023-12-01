@@ -3,15 +3,15 @@ title: Erstellen einer React-App, die AEM mit GraphQL API abfragt – Erste Schr
 description: Erste Schritte mit Adobe Experience Manager (AEM) und GraphQL. Erstellen Sie eine React-App, die Inhalte/Daten aus AEM GraphQL-API abruft. Außerdem sehen Sie, wie das AEM Headless-JS-SDK verwendet wird.
 version: Cloud Service
 mini-toc-levels: 1
-kt: 6716
+jira: KT-6716
 thumbnail: KT-6716.jpg
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 100%
 
@@ -202,7 +202,7 @@ Nach Abschluss des Vorgangs werden in der Hauptansicht der App die Team-Daten au
 
 1. Suchen Sie die Funktion `useAllTeams()`.
 
-1. Um einen `useEffect`-Hook zu erstellen, der die persistierte Abfrage `my-project/all-teams` über `fetchPersistedQuery(..)` aufruft, fügen Sie den folgenden Code hinzu. Der Hook gibt außerdem nur die relevanten Daten aus der AEM GraphQL-Antwort unter `data?.teamList?.items` zurück, sodass die React-Ansichtskomponenten unabhängig von den übergeordneten JSON-Strukturen sein können.
+1. Um einen `useEffect`-Hook zu erstellen, der die persistente Abfrage `my-project/all-teams` über `fetchPersistedQuery(..)` aufruft, fügen Sie folgenden Code hinzu. Der Hook gibt außerdem nur die relevanten Daten aus der AEM GraphQL-Antwort unter `data?.teamList?.items` zurück, sodass die React-Ansichtskomponenten unabhängig von den übergeordneten JSON-Strukturen sein können.
 
    ```javascript
    /**

@@ -2,16 +2,13 @@
 title: Einführung in grundlegende Vorlagen
 description: Erfahren Sie mehr über grundlegende Vorlagen in Dynamic Media Classic – bildbasierte Vorlagen, die vom Bild-Server aufgerufen werden und aus Bildern und gerendertem Text bestehen. Eine Vorlage kann dynamisch über die URL geändert werden, nachdem die Vorlage veröffentlicht wurde. Erfahren Sie, wie Sie eine Photoshop-PSD in Dynamic Media Classic hochladen, um sie als Grundlage für eine Vorlage zu verwenden. Erstellen Sie eine grundlegende Merchandising-Vorlage, die aus Bildebenen besteht. Fügen Sie Textebenen hinzu und gestalten Sie sie mithilfe von Parametern variabel. Erstellen Sie eine Vorlagen-URL und bearbeiten Sie das Bild dynamisch über den Webbrowser.
 feature: Dynamic Media Classic
-doc-type: tutorial
-topics: development, authoring, configuring
-audience: all
-activity: use
 topic: Content Management
 role: User
 level: Beginner
+doc-type: Tutorial
 exl-id: d4e16b45-0095-44b4-8c16-89adc15e0cf9
-source-git-commit: f0c6e6cd09c1a2944de667d9f14a2d87d3e2fe1d
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '6260'
 ht-degree: 100%
 

@@ -9,9 +9,10 @@ level: Intermediate
 last-substantial-update: 2022-06-04T00:00:00Z
 badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
+doc-type: Tutorial
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
-source-git-commit: 420dbb7bab84c0f3e79be0cc6b5cff0d5867f303
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '826'
 ht-degree: 100%
 
@@ -69,7 +70,7 @@ Zum Asset-Tracking wird eine Report Suite mit Echtzeit-Datenerfassung erstellt. 
 
 >[!NOTE]
 >
->Echtzeit-Datenerfassung und AEM Asset-Reporting müssen für Ihre Adobe Analytics Report Suite aktiviert sein. Durch Aktivierung der AEM Asset Reporting-Funktion werden Analytics-Variablen zum Tracking von Asset-Erkenntnissen reserviert.
+Echtzeit-Datenerfassung und AEM Asset-Reporting müssen für Ihre Adobe Analytics Report Suite aktiviert sein. Durch Aktivierung der AEM Asset Reporting-Funktion werden Analytics-Variablen zum Tracking von Asset-Erkenntnissen reserviert.
 
 Für die AEM Assets Insights-Konfiguration sind die folgenden Anmeldeinformationen erforderlich:
 
@@ -87,7 +88,7 @@ Hinzufügen der Adobe Analytics-Erweiterung, Erstellen von Seitenladeregeln und 
 
 >[!NOTE]
 >
->Stellen Sie sicher, dass Sie alle Ihre Änderungen von der Autoreninstanz in der Veröffentlichungsinstanz replizieren.
+Stellen Sie sicher, dass Sie alle Ihre Änderungen von der Autoreninstanz in der Veröffentlichungsinstanz replizieren.
 
 ### Regel 1: Seitenverfolgung (pagetracker.js) {#rule-page-tracker-pagetracker-js}
 

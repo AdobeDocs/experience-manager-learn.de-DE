@@ -3,16 +3,13 @@ title: Entwickeln von Projekten in AEM
 description: Ein Entwicklungs-Tutorial, das zeigt, wie für AEM-Projekte entwickelt wird. In diesem Tutorial erstellen wir eine benutzerdefinierte Projektvorlage, die zum Erstellen neuer Projekte in AEM für die Verwaltung von Workflows und Aufgaben zur Inhaltserstellung verwendet werden kann.
 version: 6.4, 6.5
 feature: Projects, Workflow
-topics: collaboration, development, governance
-activity: develop
-audience: developer, implementer, administrator
-doc-type: tutorial
+doc-type: Tutorial
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
-source-git-commit: 481b8877e252b885da307fcf4d96f8a50f026fa6
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '4571'
 ht-degree: 100%
 

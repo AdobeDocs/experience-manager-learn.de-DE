@@ -2,20 +2,20 @@
 title: Aktivieren der Frontend-Pipeline für den standardmäßigen AEM-Projektarchetyp
 description: Erfahren Sie, wie Sie eine Frontend-Pipeline für standardmäßige AEM-Projekte aktivieren, um statische Ressourcen wie CSS, JavaScript, Schriftarten und Symbole schneller bereitzustellen. Ferner geht es um die Trennung der Frontend-Entwicklung von der Full-Stack-Backend-Entwicklung in AEM.
 version: Cloud Service
-type: Tutorial
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
 level: Intermediate
-kt: 10689
+jira: KT-10689
 mini-toc-levels: 1
 index: y
 recommendations: disable
 thumbnail: 53409343.jpg
 last-substantial-update: 2022-09-23T00:00:00Z
+doc-type: Tutorial
 exl-id: b795e7e8-f611-4fc3-9846-1d3f1a28ccbc
-source-git-commit: da0b536e824f68d97618ac7bce9aec5829c3b48f
-workflow-type: ht
+source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 100%
 
