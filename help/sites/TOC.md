@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 54827c36a33437a8bf090eb10cde8ed656446d0b
+source-git-commit: bd33d076cf9caa7c900ef4fe8b1a17e27a791cae
 workflow-type: tm+mt
-source-wordcount: '526'
-ht-degree: 90%
+source-wordcount: '491'
+ht-degree: 85%
 
 ---
 
@@ -18,6 +18,7 @@ ht-degree: 90%
 
 + [Übersicht](overview.md)
 + Dokumenterstellung {#document-authoring}
+   + [Übersicht](document-authoring/overview.md)
    + [Setup](document-authoring/set-up.md)
    + [Vorschau erstellen und veröffentlichen](document-authoring/preview-and-publish.md)
    + [Dokumentstruktur](document-authoring/document-structure.md)
@@ -56,7 +57,7 @@ ht-degree: 90%
    + Lernen Sie von Ihren Kolleginnen und Kollegen {#expert-advice}
       + [Tipps zur Site-Hierarchie](page-authoring/expert-advice/site-hierarchy.md)
 + Inhaltsfragmente {#content-fragments}
-   + [Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=de){target=_blank}
+   + [Konsole &quot;Inhaltsfragmente&quot;](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=de){target=_blank}
    + [Bearbeiten von Inhaltsfragmenten](content-fragments/content-fragments-feature-video-use.md)
    + [Bereitstellen von Inhaltsfragmenten](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [Übersetzen von Inhaltsfragmenten](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -66,6 +67,7 @@ ht-degree: 90%
    + [Bausteine](experience-fragments/building-blocks.md)
    + [Inhaltsfragmente im Vergleich zu Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=de){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
+   + [Übersicht](./edge-delivery-services/overview.md)
    + Entwickeln{#developing}
       + [Voraussetzungen](edge-delivery-services/developing/prerequisites.md)
       + [AEM](edge-delivery-services/developing/aem-boilerplate.md)
