@@ -2,16 +2,16 @@
 title: Konfigurieren einer Datenquelle mit Salesforce in AEM Forms 6.3 und 6.4
 description: Integrieren von AEM Forms mit Salesforce mithilfe des Formulardatenmodells
 feature: Adaptive Forms, Form Data Model
-topics: integrations
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 7a4fd109-514a-41a8-a3fe-53c1de32cb6d
 last-substantial-update: 2020-02-14T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '892'
+duration: 232
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '816'
 ht-degree: 100%
 
 ---

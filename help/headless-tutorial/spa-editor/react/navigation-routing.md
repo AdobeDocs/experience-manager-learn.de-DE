@@ -2,10 +2,7 @@
 title: Hinzufügen von Navigation und Routing | Erste Schritte mit dem AEM-SPA-Editor und React
 description: Erfahren Sie, wie mehrere Ansichten in der SPA unterstützt werden können, indem sie mit dem SPA Editor SDK AEM-Seiten zugeordnet werden. Die dynamische Navigation wird mit React Router und React-Kernkomponenten implementiert.
 feature: SPA Editor
-topics: development
 version: Cloud Service
-activity: develop
-audience: developer
 jira: KT-4988
 thumbnail: 4988-spa-react.jpg
 topic: SPA
@@ -13,9 +10,10 @@ role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 467
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1481'
 ht-degree: 100%
 
 ---
@@ -210,7 +208,7 @@ Als Nächstes erstellen wir zusätzliche Seiten in AEM, die als verschiedene Ans
 
 ## Prüfen von React-Routing  {#react-routing}
 
-Die Navigation und das Routing werden mit [React Router](https://reactrouter.com/en/main) implementiert. React Router ist eine Sammlung von Navigationskomponenten für React-Apps. Die [AEM React-Kernkomponenten](https://github.com/adobe/aem-react-core-wcm-components-base) verwenden React-Router-Funktionen, um die in den vorherigen Schritten verwendete Komponente **Navigation** zu implementieren.
+Die Navigation und das Routing werden mit [React Router](https://reactrouter.com/de/main) implementiert. React Router ist eine Sammlung von Navigationskomponenten für React-Apps. Die [AEM React-Kernkomponenten](https://github.com/adobe/aem-react-core-wcm-components-base) verwenden React-Router-Funktionen, um die in den vorherigen Schritten verwendete Komponente **Navigation** zu implementieren.
 
 Überprüfen Sie als Nächstes, wie React Router mit der SPA integriert ist, und experimentieren Sie mit der [Link](https://reactrouter.com/de/main/components/link)-Komponente von React Router.
 

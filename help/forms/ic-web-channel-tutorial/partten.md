@@ -1,23 +1,18 @@
 ---
 title: Konfigurieren des Bedienfelds für Rentenausblicke
-seo-title: Configuring Retirement Outlook Panel
 description: Dies ist Teil 10 eines mehrstufigen Tutorials zum Erstellen Ihres ersten interaktiven Kommunikationsdokuments. In diesem Teil konfigurieren wir das Bedienfeld für Rentenausblicke, indem wir Text- und Diagrammkomponenten hinzufügen.
-seo-description: This is part 10 of a multi-step tutorial for creating your first interactive communications document. In this part, we will configure Retirement Outlook Panel by adding text and chart components.
-uuid: 1d5119b5-e797-4bf0-9b10-995b3f051f92
 feature: Interactive Communication
-topics: development
-audience: developer
-doc-type: tutorial
-activity: implement
+doc-type: Tutorial
 version: 6.4,6.5
 discoiquuid: 2ee2cea2-aefa-4d21-a258-248648f73a68
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 0dd8a430-9a4e-4dc7-ad75-6ad2490430f2
-source-git-commit: 48d9ddb870c0e4cd001ae49a3f0e9c547407c1e8
-workflow-type: ht
-source-wordcount: '349'
+duration: 100
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '347'
 ht-degree: 100%
 
 ---

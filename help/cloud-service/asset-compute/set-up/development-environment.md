@@ -2,20 +2,18 @@
 title: Einrichten einer lokalen Entwicklungsumgebung für die Asset Compute-Erweiterbarkeit
 description: Die Entwicklung von Asset Compute-Sekundären, bei denen es sich um JavaScript-Anwendungen von Node.js handelt, erfordert spezifische Entwicklungs-Tools, die sich von der herkömmlichen AEM-Entwicklung unterscheiden, die von Node.js und verschiedenen npm-Modulen bis hin zu Docker Desktop und Microsoft Visual Studio Code reichen.
 feature: Asset Compute Microservices
-topics: renditions, development
 version: Cloud Service
-activity: develop
-audience: developer
-doc-type: tutorial
+doc-type: Tutorial
 jira: KT-6266
 thumbnail: KT-6266.jpg
 topic: Integrations, Development
 role: Developer
 level: Intermediate, Experienced
 exl-id: 162e10e5-fcb0-4f16-b6d1-b951826209d9
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 140
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '481'
 ht-degree: 100%
 
 ---

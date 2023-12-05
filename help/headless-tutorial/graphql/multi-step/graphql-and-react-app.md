@@ -10,10 +10,11 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 611
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1218'
-ht-degree: 100%
+source-wordcount: '1181'
+ht-degree: 97%
 
 ---
 
@@ -496,7 +497,7 @@ Sehen Sie sich die App unter [http://localhost:3000/](http://localhost:3000/) an
 
 ## Unter der Haube
 
-Öffnen Sie im Browser **Entwicklungs-Tools** > **Netzwerk** und _Filter_ für die `all-teams`-Anfrage. Beachten Sie, dass die GraphQL API-Anfrage `/graphql/execute.json/my-project/all-teams` für `http://localhost:3000` und **NICHT** für den Wert des `REACT_APP_HOST_URI` erfolgt, z. B. `<https://publish-pxxx-exxx.adobeaemcloud.com`. Die Anfragen werden für die Domain der React-App gestellt, weil die [Proxy-Einrichtung](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) aktiviert wird, wenn das `http-proxy-middleware`-Modul in Verwendung ist.
+Öffnen Sie die **Entwicklertools** > **Netzwerk** und _Filter_ für `all-teams` -Anfrage. Beachten Sie die GraphQL-API-Anfrage `/graphql/execute.json/my-project/all-teams` gegen `http://localhost:3000` und **NOT** gegen den Wert von `REACT_APP_HOST_URI`, beispielsweise `<https://publish-pxxx-exxx.adobeaemcloud.com`. Die Anfragen werden für die Domain der React-App gestellt, weil die [Proxy-Einrichtung](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) aktiviert wird, wenn das `http-proxy-middleware`-Modul in Verwendung ist.
 
 
 ![GraphQL-API-Anfrage über Proxy](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)

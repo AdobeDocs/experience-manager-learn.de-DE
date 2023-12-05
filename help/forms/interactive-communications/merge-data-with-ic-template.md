@@ -2,19 +2,17 @@
 title: Generieren des Druckkanaldokuments durch Zusammenführen von Daten
 description: Erfahren Sie, wie Sie ein Dokument für den Druckkanal generieren, indem Sie die im Eingabe-Stream enthaltenen Daten zusammenführen.
 feature: Interactive Communication
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 3bfbb4ef-0c51-445a-8d7b-43543a5fa191
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 7a2bb61ca1dea1013eef088a629b17718dbbf381
-workflow-type: ht
-source-wordcount: '479'
+duration: 223
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '445'
 ht-degree: 100%
 
 ---

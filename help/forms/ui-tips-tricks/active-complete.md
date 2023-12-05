@@ -10,9 +10,10 @@ level: Beginner
 jira: KT-9359
 exl-id: f7c1f991-0486-4355-8502-cd5b038537e3
 last-substantial-update: 2019-07-07T00:00:00Z
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 111
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '326'
+source-wordcount: '328'
 ht-degree: 100%
 
 ---
@@ -58,7 +59,7 @@ Stellen Sie sicher, dass der Status „Aktiv“ ist, und gestalten Sie die folge
 | Text | Schriftstärke | Fett |
 | Text | Farbe | #FFF |
 | Text | Zeilenhöhe | 3 |
-| Text | Text Ausrichten | Linksbündig |
+| Text | Text ausrichten | Linksbündig |
 | Hintergrund | Farbe | #056dae |
 
 Formatieren Sie das Hintergrundbild, wie im Screenshot unten dargestellt
@@ -79,7 +80,7 @@ Vergewissern Sie sich, dass Sie sich im besuchten Status befinden, und gestalten
 | Text | Schriftstärke | Fett |
 | Text | Farbe | #FFF |
 | Text | Zeilenhöhe | 3 |
-| Text | Text Ausrichten | Linksbündig |
+| Text | Text ausrichten | Linksbündig |
 | Hintergrund | Farbe | #056dae |
 
 Formatieren Sie das Hintergrundbild, wie im Screenshot unten dargestellt

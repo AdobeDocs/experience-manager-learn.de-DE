@@ -9,10 +9,11 @@ version: Cloud Service
 topic: Development
 feature: Developer Tools
 jira: KT-14581
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 136
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '378'
-ht-degree: 10%
+ht-degree: 6%
 
 ---
 
@@ -83,7 +84,7 @@ public class GetFieldChoices extends SlingAllMethodsServlet implements Serializa
 * Erstellen Sie eine Ressource mit dem Namen `fetchchoices` (Sie können diesen Knoten trotzdem nennen, wenn Sie ihn möchten) des Typs `cq:Page` unter dem Inhaltsknoten.
 * Speichern Sie Ihre Änderungen.
 * Erstellen Sie einen Knoten mit dem Namen `jcr:content` des Typs `cq:PageContent` und speichern Sie die Änderungen
-* Fügen Sie dem Knoten `jcr:content` folgende Eigenschaften hinzu
+* Fügen Sie die folgenden Eigenschaften zum `jcr:content` Knoten
 
 | Eigenschaftsname | Eigenschaftswert |
 |--------------------|--------------------|

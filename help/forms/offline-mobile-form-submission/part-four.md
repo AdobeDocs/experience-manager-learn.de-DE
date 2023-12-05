@@ -1,21 +1,17 @@
 ---
 title: Auslösen eines AEM-Workflows für die Übermittlung von HTML5-Formularen – Umsetzen des Anwendungsfalls
-seo-title: Trigger AEM Workflow on HTML5 Form Submission
 description: Fahren Sie mit dem Ausfüllen des Mobile-Formulars im Offline-Modus fort und übermitteln Sie das Mobile-Formular, um den AEM-Workflow auszulösen.
-seo-description: Continue filling mobile form in offline mode and submit mobile form to trigger AEM workflow
 feature: Mobile Forms
-topics: development
-audience: developer
 doc-type: article
-activity: implement
 version: 6.4,6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 79935ef0-bc73-4625-97dd-767d47a8b8bb
-source-git-commit: 012850e3fa80021317f59384c57adf56d67f0280
-workflow-type: ht
-source-wordcount: '452'
+duration: 122
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '435'
 ht-degree: 100%
 
 ---

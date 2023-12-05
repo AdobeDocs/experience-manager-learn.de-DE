@@ -9,10 +9,11 @@ level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 286
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1024'
-ht-degree: 46%
+source-wordcount: '988'
+ht-degree: 39%
 
 ---
 
@@ -28,7 +29,7 @@ In diesem Dokument erfahren Sie, wie AEM mit Vanity-URLs und einigen zusätzlich
 
 ## Was sind Vanity-URLs?
 
-Wenn Sie Inhalte haben, die in einer sinnvollen Ordnerstruktur gespeichert sind, sind sie nicht immer unter einer URL zu finden, die leicht zu referenzieren ist. Vanity-URLs sind wie Tastaturbefehle. Kürzere oder eindeutige URLs, die auf den tatsächlichen Inhalt verweisen.
+Wenn Sie Inhalt haben, der in einer sinnvollen Ordnerstruktur lebt, wird er nicht immer in einer URL gespeichert, die einfach zu referenzieren ist. Vanity-URLs sind wie Tastaturbefehle. Kürzere oder eindeutige URLs, die auf den tatsächlichen Inhalt verweisen.
 
 Ein Beispiel: `/aboutus` gerichtet auf `/content/we-retail/us/en/about-us.html`
 
@@ -167,7 +168,7 @@ Verwenden Sie beide Methoden, aber hier sind die Ratschläge und Kriterien dafü
 
 <div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
 
-Wenn Sie die Vanity-Funktion von AEM verwenden und Namespace vermeiden möchten, können Sie eine Namenskonvention vornehmen. Mithilfe von Vanity-Urls, die wie `/brand1/aboutus`, `brand2/aboutus`, `brand3/aboutus` verschachtelt sind.
+Wenn Sie die AEM Vanity-Funktion verwenden und Namespace vermeiden möchten, können Sie eine Namenskonvention vornehmen. Mithilfe von Vanity-Urls, die wie `/brand1/aboutus`, `brand2/aboutus`, `brand3/aboutus` verschachtelt sind.
 </div>
 
 [Nächstes Kapitel -> Allgemeine Protokollierung](./common-logs.md)

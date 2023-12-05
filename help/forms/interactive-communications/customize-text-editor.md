@@ -1,10 +1,7 @@
 ---
 title: Anpassen des Texteditors
-seo-title: Customize text editor
 description: Erfahren Sie, wie Sie den Texteditor anpassen.
-seo-description: Learn how to customize text editor.
 doc-type: article
-activity: implement
 version: 6.5
 topic: Development
 role: Developer
@@ -13,10 +10,11 @@ feature: Interactive Communication
 last-substantial-update: 2023-04-19T00:00:00Z
 jira: KT-13126
 exl-id: e551ac8d-0bfc-4c94-b773-02ff9bba202e
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 193
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '603'
-ht-degree: 100%
+source-wordcount: '596'
+ht-degree: 94%
 
 ---
 
@@ -40,7 +38,7 @@ Dazu müssen Sie folgende Schritte durchführen:
 
 ## Anpassen von Schriftarten durch Bearbeiten der Datei „tbxeditor-config.xml“ in CRX {#customizefonts}
 
-Anpassen von Schriften durch Bearbeiten der Datei  tbxeditor-config.xml führen Sie folgende Schritte durch:
+Gehen Sie wie folgt vor, um Schriftarten durch Bearbeiten der Datei tbxeditor-config.xml anzupassen:
 
 1. Wechseln Sie zu `https://'[server]:[port]'/[ContextPath]/crx/de` und melden Sie sich als Administrator an.
 1. Erstellen Sie im Programmordner einen Ordner mit dem Namen „config“ mit dem Pfad/der Struktur ähnlich dem config-Ordner, der sich unter libs/fd/cm/config befindet, indem Sie folgende Schritte durchführen:
@@ -170,7 +168,7 @@ Anpassen von Schriften durch Bearbeiten der Datei  tbxeditor-config.xml führen 
       * Standardwerte für Schriftfamilie und -größe, Höhe, Zeichenabstand und Datumsformat
       * Einzüge für Aufzählungszeichen
 
-      Um zum Beispiel eine japanische Schriftart mit dem Namen Sazanami Mincho Medium hinzuzufügen, müssen Sie Folgendes eintragen in der  XML-Datei: `<font>Sazanami Mincho Medium</font>`. Außerdem müssen Sie diese Schriftart auf dem Client-Computer installieren, der verwendet wird, um auf die Schriftartanpassung zuzugreifen und mit dieser zu arbeiten. Weitere Informationen finden Sie unter[ Hinzufügen von benutzerdefinierten Schriften zum Clientcomputer](#addcustomfonts).
+      Um beispielsweise eine japanische Schriftart mit dem Namen Sazanami Mincho Medium hinzuzufügen, müssen Sie den folgenden Eintrag in die XML-Datei einfügen: `<font>Sazanami Mincho Medium</font>`. Außerdem müssen Sie diese Schriftart auf dem Client-Computer installieren, der verwendet wird, um auf die Schriftartanpassung zuzugreifen und mit dieser zu arbeiten. Weitere Informationen finden Sie unter[ Hinzufügen von benutzerdefinierten Schriften zum Clientcomputer](#addcustomfonts).
 
       Sie können auch die Standardeinstellungen für verschiedene Aspekte des Textes ändern und die Schriftarten aus dem Texteditor entfernen, indem Sie die Einträge entfernen.
 

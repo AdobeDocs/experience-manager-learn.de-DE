@@ -2,11 +2,8 @@
 title: Erweiterbarkeit der Asset Compute-Microservices für AEM as a Cloud Service
 description: In diesem Tutorial wird erläutert, wie ein einfacher Asset Compute-Sekundär erstellt wird, der eine Asset-Ausgabedarstellung bereitstellt, indem das Original-Asset auf einen Kreis zugeschnitten und konfigurierbarer Kontrast und Helligkeit angewendet werden. Während der Sekundär selbst recht einfach ist, greift dieses Tutorial darauf zurück, um das Erstellen, Entwickeln und Bereitstellen eines benutzerdefinierten Asset Compute-Sekundärs für die Verwendung mit AEM as a Cloud Service zu untersuchen.
 feature: Asset Compute Microservices
-topics: renditions, development
 version: Cloud Service
-doc-type: tutorial
-activity: develop
-audience: developer
+doc-type: Tutorial
 jira: KT-5802
 thumbnail: KT-5802.jpg
 topic: Integrations, Development
@@ -14,9 +11,10 @@ role: Developer
 level: Intermediate, Experienced
 last-substantial-update: 2022-08-15T00:00:00Z
 exl-id: 575b12f9-b57f-41f7-bd39-56d242de4747
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 340
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '986'
 ht-degree: 100%
 
 ---

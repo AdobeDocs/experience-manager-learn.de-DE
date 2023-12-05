@@ -10,10 +10,11 @@ jira: KT-4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 765
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '1695'
-ht-degree: 95%
+source-wordcount: '1622'
+ht-degree: 93%
 
 ---
 
@@ -364,17 +365,17 @@ Gehen Sie wie folgt vor, wenn `bin/docker_run src host.docker.internal:4503 8080
 >[!TAB macOS]
 
 + Führen Sie `ifconfig` über das Terminal aus und notieren Sie sich die __inet__-Host-IP-Adresse (normalerweise das Gerät __en0__).
-+ Führen Sie dann `docker_run` unter Verwendung dieser Host-IP-Adresse aus: `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
++ Dann ausführen `docker_run` unter Verwendung der Host-IP-Adresse: `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!TAB Windows]
 
 + Führen Sie über die Eingabeaufforderung `ipconfig` aus und notieren Sie sich die __IPv4-Adresse__ des Host-Computers.
-+ Führen Sie dann `docker_run` unter Verwendung dieser IP-Adresse aus: `$ bin\docker_run src <HOST IP>:4503 8080`
++ Dann ausführen `docker_run` unter Verwendung dieser IP-Adresse: `$ bin\docker_run src <HOST IP>:4503 8080`
 
 >[!TAB Linux]
 
 + Führen Sie `ifconfig` über das Terminal aus und notieren Sie sich die __inet__-Host-IP-Adresse (normalerweise das Gerät __en0__).
-+ Führen Sie dann `docker_run` unter Verwendung dieser Host-IP-Adresse aus: `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
++ Dann ausführen `docker_run` unter Verwendung der Host-IP-Adresse: `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!ENDTABS]
 

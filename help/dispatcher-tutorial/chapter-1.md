@@ -1,5 +1,5 @@
 ---
-title: „Kapitel 1 – Konzepte, Muster und Antimuster des Dispatchers“
+title: Kapitel 1 – Konzepte, Muster und Antimuster des Dispatchers
 description: Dieses Kapitel bietet eine kurze Einführung in die Geschichte und Mechanik des Dispatchers und erläutert, wie sich dies auf die Gestaltung seiner Komponenten durch AEM-Entwicklerinnen und -Entwickler auswirkt.
 feature: Dispatcher
 topic: Architecture
@@ -7,9 +7,10 @@ role: Architect
 level: Beginner
 doc-type: Tutorial
 exl-id: 3bdb6e36-4174-44b5-ba05-efbc870c3520
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 4820
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '17460'
+source-wordcount: '17384'
 ht-degree: 100%
 
 ---

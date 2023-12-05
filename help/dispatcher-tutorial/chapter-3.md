@@ -1,5 +1,5 @@
 ---
-title: „Kapitel 3 – Fortgeschrittene Dispatcher-Caching-Themen“
+title: Kapitel 3 - Themen zum erweiterten Dispatcher-Caching
 description: Dies ist Teil 3 einer dreiteiligen Reihe zum Thema Caching in AEM. Die ersten beiden Teile konzentrierten sich dabei auf das einfache HTTP-Caching im Dispatcher und auf bestehende Einschränkungen. In diesem Teil werden einige Ideen zur Überwindung dieser Einschränkungen erläutert.
 feature: Dispatcher
 topic: Architecture
@@ -7,10 +7,11 @@ role: Architect
 level: Intermediate
 doc-type: Tutorial
 exl-id: 7c7df08d-02a7-4548-96c0-98e27bcbc49b
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 1674
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '6187'
-ht-degree: 100%
+source-wordcount: '6172'
+ht-degree: 99%
 
 ---
 

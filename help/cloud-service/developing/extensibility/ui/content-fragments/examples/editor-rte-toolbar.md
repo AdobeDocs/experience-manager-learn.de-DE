@@ -11,16 +11,17 @@ thumbnail: KT-13464.jpg
 doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 6fd93d3b-6d56-43c5-86e6-2e2685deecc9
-source-git-commit: 097ff8fd0f3a28f3e21c10e03f6dc28695cf9caf
-workflow-type: ht
-source-wordcount: '418'
-ht-degree: 100%
+duration: 397
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '406'
+ht-degree: 95%
 
 ---
 
 # Hinzufügen benutzerdefinierter Schaltflächen zur Rich-Text-Editor(RTE)-Symbolleiste
 
-Erfahren Sie, wie Sie eine benutzerdefinierte Schaltfläche zur Rich-Text-Editor(RTE)-Symbolleiste im AEM-Inhaltsfragmenteditor hinzufügen..
+Erfahren Sie, wie Sie eine benutzerdefinierte Schaltfläche zur Rich-Text-Editor (RTE)-Symbolleiste im AEM Inhaltsfragment-Editor hinzufügen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420768?quality=12&learn=on)
 

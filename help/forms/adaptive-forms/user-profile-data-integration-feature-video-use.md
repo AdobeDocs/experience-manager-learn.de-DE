@@ -8,10 +8,11 @@ role: Developer
 level: Beginner
 exl-id: 4f2b6669-d61e-400d-8657-dddb28ae35f4
 last-substantial-update: 2019-03-20T00:00:00Z
-source-git-commit: b3e9251bdb18a008be95c1fa9e5c79252a74fc98
-workflow-type: ht
-source-wordcount: '97'
-ht-degree: 100%
+duration: 368
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+workflow-type: tm+mt
+source-wordcount: '98'
+ht-degree: 85%
 
 ---
 
@@ -24,8 +25,7 @@ Relationale Datenbanken: MySQL, Microsoft SQL Server, IBM DB2 und Oracle RDBMS
 1. AEM-Benutzerprofil 
 1. RESTful-Webservices
 1. SOAP-basierte Webservices
-1. OData-Services  
-Dieser Artikel behandelt die Integration von AEM-Benutzerprofilinformationen mit adaptiven Formularen.
+1. OData-Dienste In diesem Artikel wird die Integration AEM Benutzerprofilinformationen in Adaptive Forms hervorgehoben.
 
 >[!VIDEO](https://video.tv.adobe.com/v/17432?quality=12&learn=on)
 

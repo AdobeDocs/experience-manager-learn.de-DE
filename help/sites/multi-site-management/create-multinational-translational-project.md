@@ -1,8 +1,6 @@
 ---
 title: Erstellen eines mehrsprachigen Übersetzungsprojekts
-seo-title: Create a multilingual Translation Project
 description: Erfahren Sie, wie Sie über die AEM-Projektkonsole ein mehrsprachiges Übersetzungsprojekt für Ihre Sprachkopie erstellen, bearbeiten und verwalten.
-seo-description: Learn how to create, edit and manage a multi-language translation project for your Language Copy from AEM's Project console
 feature: Language Copy, Multi Site Manager
 doc-type: Feature Video
 version: 6.4, 6.5, Cloud Service
@@ -12,7 +10,8 @@ topic: Localization
 role: User
 level: Beginner
 exl-id: eab14e1a-a3d9-420f-8b5c-5d37f30c79b1
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 354
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
 source-wordcount: '48'
 ht-degree: 100%

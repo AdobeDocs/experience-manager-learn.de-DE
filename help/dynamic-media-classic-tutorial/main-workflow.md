@@ -7,10 +7,11 @@ role: User
 level: Beginner
 doc-type: Tutorial
 exl-id: 04aacd81-bbb2-4742-9306-f0eabc665a41
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+duration: 700
+source-git-commit: af928e60410022f12207082467d3bd9b818af59d
 workflow-type: tm+mt
-source-wordcount: '2703'
-ht-degree: 100%
+source-wordcount: '2658'
+ht-degree: 98%
 
 ---
 
@@ -57,10 +58,10 @@ Diese Option stellt die strengste Ersetzungsregel dar. Das Ersatzbild muss in de
 - **Im aktuellen Ordner Assets mit identischem Basisnamen unabhängig von Erweiterungen überschreiben**.
 Erfordert das Hochladen des Ersatzbilds in denselben Ordner wie das Originalbild, die Dateinamenerweiterung kann jedoch vom Original abweichen. Beispielsweise ersetzt „chair.tif“ die Datei „chair.jpg“.
 
-- **In belieb. Ordner Assets mit ident. Namen und ident. Erweit. überschreiben**.
-Setzt voraus, dass das Ersatzbild dieselbe Dateierweiterung wie das Originalbild hat (beispielsweise muss chair.jpg die Datei „chair.jpg“ ersetzen, nicht jedoch die Datei „chair.tif“). Sie können das Ersatzbild jedoch in einen anderen Ordner hochladen als den, in dem sich das Original befindet. Das hochgeladene Bild bleibt dann im neuen Ordner; die Datei befindet sich also nicht mehr am ursprünglichen Speicherort..
+- **In belieb. Ordner Assets mit ident. Namen/Erweiterung überschreiben**.
+Setzt voraus, dass das Ersatzbild dieselbe Dateierweiterung wie das Originalbild hat (beispielsweise muss chair.jpg die Datei „chair.jpg“ ersetzen, nicht jedoch die Datei „chair.tif“). Sie können das Ersatzbild jedoch in einen anderen Ordner hochladen als den, in dem sich das Original befindet. Das aktualisierte Bild befindet sich im neuen Ordner. Die Datei befindet sich nicht mehr am ursprünglichen Speicherort.
 
-- **In belieb. Ordner Assets mit ident. Namen unabh. von Erweit. überschreiben**.
+- **In einem beliebigen Ordner Assets mit ident. Namen unabhängig von Erweiterung überschreiben**.
 Diese Option ist die am wenigsten einschränkende Ersetzungsregel. Sie können ein Ersatzbild in einen anderen Ordner hochladen als den, in dem sich das Originalbild befindet, und eine Datei mit einer anderen Dateierweiterung verwenden, um die Originaldatei zu ersetzen. Wenn sich die Originaldatei in einem anderen Ordner befindet, bleibt das Ersatzbild in dem neuen Ordner, in den es hochgeladen wurde.
 
 Hier finden Sie weitere Informationen zur [Option „Bilder überschreiben“](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=de#using-the-overwrite-images-option).
