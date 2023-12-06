@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: b770fc33ee0752911135d1a94144406bad8f295b
+source-git-commit: 43c021b051806380b3211f2d7357555622217b91
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1072'
+ht-degree: 95%
 
 ---
 
@@ -134,6 +134,9 @@ ht-degree: 0%
    + [AEM-Publish-Service](./caching/publish.md)
    + [AEM-Author-Service](./caching/author.md)
    + [Analyse der CDN-Cache-Trefferquote](./caching/cdn-cache-hit-ratio-analysis.md)
+   + Anleitung{#how-to}
+      + [Zwischenspeicherung aktivieren](./caching/how-to/enable-caching.md)
+      + [Zwischenspeicherung deaktivieren](./caching/how-to/disable-caching.md)
 + Zugriff auf AEM{#accessing}
    + [Übersicht](./accessing/overview.md)
    + [Adobe IMS-Benutzende](./accessing/adobe-ims-users.md)
