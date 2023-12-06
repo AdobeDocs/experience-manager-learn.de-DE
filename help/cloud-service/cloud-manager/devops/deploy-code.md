@@ -10,10 +10,10 @@ jira: KT-6912
 thumbnail: 330534.jpg
 exl-id: 82cd6dd5-735f-4641-9848-a5f5144b8624
 duration: 26
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 8a042c561c1a7e48152c2b067d92d709ab5fd53e
 workflow-type: tm+mt
 source-wordcount: '80'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 100%
 >title="Bereitstellen von Code"
 >abstract="Integrieren Sie das Git-Repository für Cloud Manager mit einem externen Git-Repository und stellen Sie ein Projekt für AEM as a Cloud Service bereit."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/merge-projects.html?lang=de#cloud-manager" text="Zusammenführen von Projekten"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=de#how-to-use" text="Bereitstellen von Code mit Cloud Manager"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=en" text="Bereitstellen von Code mit Cloud Manager"
 
 Integrieren Sie das Git-Repository für Cloud Manager mit einem externen Git-Repository und stellen Sie ein Projekt für AEM as a Cloud Service bereit.
 

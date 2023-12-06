@@ -11,10 +11,10 @@ role: Architect, Developer, Admin
 level: Beginner
 exl-id: c4f5667a-0da2-490b-9d55-9fbde21db595
 duration: 423
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 8a042c561c1a7e48152c2b067d92d709ab5fd53e
 workflow-type: tm+mt
 source-wordcount: '147'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -24,17 +24,17 @@ ht-degree: 100%
 >id="aemcloud_devops_prodpipeline"
 >title="CI/CD Produktions-Pipeline"
 >abstract="Die Konfiguration der CI/CD-Produktions-Pipeline definiert den Auslöser, der die Pipeline initiiert, sowie die Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=de#deployment-process" text="Bereitstellen Ihres Codes"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=de#deployment-production-phase" text="Bereitstellung in der Produktionsphase"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=en" text="Bereitstellen Ihres Codes"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=en" text="Bereitstellung in der Produktionsphase"
 
 ## Konfiguration
 
-Die Konfiguration der [CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=de) definiert den Auslöser, der die Pipeline initiiert, sowie die Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
+Die Konfiguration der [CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/pipelines/configuring-production-pipelines.html) definiert den Auslöser, der die Pipeline initiiert, sowie die Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
 
 ### Pipeline-Ausführung
 
-Die [CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/deploying-code.html?lang=de) wird zum Erstellen und Bereitstellen von Code von der Staging-bis zur Produktionsumgebung verwendet, wodurch sich die Amortisierungszeit verkürzt.
+Die [CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=de) wird zum Erstellen und Bereitstellen von Code von der Staging-bis zur Produktionsumgebung verwendet, wodurch sich die Amortisierungszeit verkürzt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)
