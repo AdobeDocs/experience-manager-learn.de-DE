@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2023-11-30T00:00:00Z
 jira: KT-14224
 thumbnail: KT-14224.jpeg
-source-git-commit: 43c021b051806380b3211f2d7357555622217b91
+exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
+source-git-commit: 783f84c821ee9f94c2867c143973bf8596ca6437
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 5%
+source-wordcount: '400'
+ht-degree: 6%
 
 ---
-
 
 # Deaktivieren der CDN-Zwischenspeicherung
 
@@ -48,16 +48,16 @@ Lassen Sie uns jede dieser Optionen überprüfen.
 
 Diese Option ist der empfohlene Ansatz zum Deaktivieren der Zwischenspeicherung. Sie ist jedoch nur für AEM Veröffentlichung verfügbar. Um die Cache-Header zu aktualisieren, verwenden Sie die `mod_headers` -Modul und `<LocationMatch>` in der vhost-Datei des Apache HTTP-Servers. Die allgemeine Syntax lautet wie folgt:
 
-    &quot;conf
-    &lt;locationmatch url=&quot;&quot; url_regex=&quot;&quot;>
-    # Entfernt die Antwortheader dieses Namens, sofern vorhanden. Wenn mehrere Header mit demselben Namen vorhanden sind, werden alle entfernt.
+```
+<LocationMatch "$URL$ || $URL_REGEX$">
+    # Removes the response header of this name, if it exists. If there are multiple headers of the same name, all will be removed.
     Header unset Cache-Control
-    Header unset Läuft ab
-    
-    # Weist das CDN an, die Antwort nicht zwischenzuspeichern.
-    Header-Set Cache-Control &quot;private&quot;
-    &lt;/locationmatch>
-    &quot;
+    Header unset Expires
+
+    # Instructs the CDN to not cache the response.
+    Header set Cache-Control "private"
+</LocationMatch>
+```
 
 #### Beispiel
 
@@ -68,16 +68,17 @@ Beachten Sie, dass zum Umgehen des vorhandenen CSS-Cache eine Änderung in der C
 1. Suchen Sie in Ihrem AEM-Projekt die gewünschte Besucherdatei aus `dispatcher/src/conf.d/available_vhosts` Verzeichnis.
 1. Aktualisieren Sie den vhost (z. B. `wknd.vhost`) wie folgt:
 
-       &quot;conf
-       &lt;locationmatch etc.clientlibs=&quot;&quot;>*\.(css)$&quot;>
-       # Entfernt die Antwortheader dieses Namens, sofern vorhanden. Wenn mehrere Header mit demselben Namen vorhanden sind, werden alle entfernt.
+   ```
+   <LocationMatch "^/etc.clientlibs/.*\.(css)$">
+       # Removes the response header of this name, if it exists. If there are multiple headers of the same name, all will be removed.
        Header unset Cache-Control
-       Header unset Läuft ab
-       
-       # Weist das CDN an, die Antwort nicht zwischenzuspeichern.
-       Header-Set Cache-Control &quot;private&quot;
-       &lt;/locationmatch>
-       &quot;
+       Header unset Expires
+   
+       # Instructs the CDN to not cache the response.
+       Header set Cache-Control "private"
+   </LocationMatch>
+   ```
+
    Die vhost-Dateien in `dispatcher/src/conf.d/enabled_vhosts` Verzeichnis **symlinks** zu den Dateien in `dispatcher/src/conf.d/available_vhosts` -Verzeichnis erstellen. Stellen Sie daher sicher, dass Sie symlinks erstellen, falls nicht vorhanden.
 1. Stellen Sie die vhost-Änderungen in der gewünschten AEM as a Cloud Service Umgebung mit dem [Cloud Manager - Web-Tier-Konfigurations-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines) oder [RDE-Befehle](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration).
 
@@ -85,6 +86,6 @@ Beachten Sie, dass zum Umgehen des vorhandenen CSS-Cache eine Änderung in der C
 
 Diese Option ist sowohl für die AEM als auch für die Autoreninstanz verfügbar. Um die Cache-Header zu aktualisieren, verwenden Sie die `SlingHttpServletResponse` -Objekt in benutzerdefiniertem Java™-Code (Sling-Servlet, Sling-Servlet-Filter). Die allgemeine Syntax lautet wie folgt:
 
-    &quot;java
-    response.setHeader(&quot;Cache-Control&quot;, &quot;private&quot;);
-    &quot;
+```java
+response.setHeader("Cache-Control", "private");
+```
