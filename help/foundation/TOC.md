@@ -4,10 +4,10 @@ breadcrumb-title: AEM Foundation-Tutorials
 user-guide-description: Eine Sammlung von Videos und Tutorials für die Adobe Experience Manager Foundation.
 sub-product: Experience Manager
 index: y
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: 338bb13f1739d822e6a4b7232ae1a2da6b24732a
 workflow-type: tm+mt
-source-wordcount: '228'
-ht-degree: 100%
+source-wordcount: '224'
+ht-degree: 99%
 
 ---
 
@@ -28,7 +28,8 @@ ht-degree: 100%
    + [Überblick darüber, was IMS-Authentifizierung in AMS ist](authentication/adobe-ims-authentication-technical-video-understand.md)
 + Adobe Cloud Manager{#cloud-manager}
    + [Überblick darüber, was Adobe Cloud Manager ist](./cloud-manager/understand-cloud-manager-for-aem.md)
-   + [Verwenden der CI/CD-Pipeline in Adobe Cloud Manager](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
+   + [CI/CD-Pipelines](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
+   + [Benutzerdefinierte Berechtigungen](./cloud-manager/cloud-permissions.md)
 + Entwicklung {#development}
    + [Entwickeln von Sling-Modell-Exportern](./development/develop-sling-model-exporter.md)
    + [Einrichten einer lokalen AEM-Entwicklungsumgebung](./development/set-up-a-local-aem-development-environment.md)
