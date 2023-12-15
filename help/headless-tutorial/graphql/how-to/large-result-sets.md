@@ -12,10 +12,10 @@ jira: KT-13102
 thumbnail: 3418381.jpeg
 exl-id: 304b4d80-27bd-4336-b2ff-4b613a30f712
 duration: 439
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: d7f3c5193cc53f050d24dd66705a3979fb710c36
 workflow-type: tm+mt
 source-wordcount: '843'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -177,7 +177,7 @@ Die resultierende JSON-Antwort enthält das zweit-, dritt-, viert- und fünftteu
 
 #### Nächster Satz paginierter Ergebnisse
 
-Der nächste Ergebnissatz kann mit dem `after`-Parameter und dem `endCursor`-Wert aus der vorherigen Abfrage abgerufen werden. Wenn keine weiteren Ergebnisse abgerufen werden müssen, ist `hasNextPage` gleich `false`.
+Der nächste Ergebnissatz kann mit der `after` und dem `endCursor` -Wert aus der vorherigen Abfrage. Wenn keine weiteren Ergebnisse abgerufen werden müssen, ist `hasNextPage` gleich `false`.
 
 ##### Abfragevariablen
 
