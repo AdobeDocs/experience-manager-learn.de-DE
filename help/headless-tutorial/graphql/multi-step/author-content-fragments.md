@@ -11,10 +11,10 @@ role: Developer
 level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
 duration: 227
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 234c163a2936ca07bdf259038f1b22c4363fae3c
 workflow-type: tm+mt
-source-wordcount: '789'
-ht-degree: 100%
+source-wordcount: '853'
+ht-degree: 92%
 
 ---
 
@@ -75,6 +75,10 @@ Inhaltsfragmente werden in AEM Assets in Ordnern gespeichert. Um Inhaltsfragment
 
 
 ## Erstellen eines Inhaltsmodells {#create-content-fragment}
+
+>[!TIP]
+>
+>Für lokale AEM SDK-Benutzer: Verwenden Sie die AEM Assets-Benutzeroberfläche zum Erstellen und Erstellen von Inhaltsfragmenten anstelle der unten beschriebenen Benutzeroberfläche für Inhaltsfragmente. Detaillierte Anweisungen finden Sie im Abschnitt [AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=de).
 
 Anschließend werden mehrere Inhaltsfragmente auf der Grundlage der Modelle **Team** und **Person** erstellt.
 
@@ -145,6 +149,10 @@ Füllen Sie anschließend die neu erstellten Fragmente mit Daten.
 1. Tippen Sie auf **Speichern und schließen**, um die Änderungen am Team Alpha-Fragment zu speichern.
 
 ## Veröffentlichen von Inhaltsfragmenten
+
+>[!TIP]
+>
+>Für lokale AEM SDK-Benutzer: Verwenden Sie die AEM Assets-Benutzeroberfläche zum Veröffentlichen von Inhaltsfragmenten anstelle der unten beschriebenen Benutzeroberfläche für Inhaltsfragmente. Detaillierte Anweisungen finden Sie im Abschnitt [AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html#publishing-and-referencing-a-fragment).
 
 Nach Überprüfung und Verifizierung veröffentlichen Sie die verfassten `Content Fragments`
 
