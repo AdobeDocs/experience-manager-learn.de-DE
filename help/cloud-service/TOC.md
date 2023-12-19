@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 43c021b051806380b3211f2d7357555622217b91
+source-git-commit: d9612adbc2ff3e601c2efe5a779c03ad24769276
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1084'
 ht-degree: 95%
 
 ---
@@ -133,7 +133,7 @@ ht-degree: 95%
    + [Übersicht](./caching/overview.md)
    + [AEM-Publish-Service](./caching/publish.md)
    + [AEM-Author-Service](./caching/author.md)
-   + [Analyse der CDN-Cache-Trefferquote](./caching/cdn-cache-hit-ratio-analysis.md)
+   + [Analyse des CDN-Cache-Trefferverhältnisses](./caching/cdn-cache-hit-ratio-analysis.md)
    + Anleitung{#how-to}
       + [Zwischenspeicherung aktivieren](./caching/how-to/enable-caching.md)
       + [Zwischenspeicherung deaktivieren](./caching/how-to/disable-caching.md)
@@ -264,6 +264,10 @@ ht-degree: 95%
       + [OSGi-Konfiguration erstellen](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
       + [Index-Tags erstellen](./forms/store-submiited-data-with-metadata-tags/create-blob-index-tags.md)
       + [Benutzerdefiniertes Senden erstellen](./forms/store-submiited-data-with-metadata-tags/create-custom-submit.md)
+   + Vorauffüllen von Kernkomponentenbasierten Formularen{#prefill-core-component-based-form}
+      + [Einführung](./forms/prefill-core-component-form/introduction.md)
+      + [Vorbefüllungs-Dienst schreiben](./forms/prefill-core-component-form/pre-fill-service.md)
+      + [Testen der Lösung](./forms/prefill-core-component-form/test-solution.md)
    + Azure Portal-Speicher{#forms-cs-azure-portal}
       + [Einführung](./forms/forms-cs-azure-portal/introduction.md)
       + [Erstellen von Formulardatenmodellen](./forms/forms-cs-azure-portal/create-fdm.md)
