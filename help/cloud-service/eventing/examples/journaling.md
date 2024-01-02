@@ -9,11 +9,11 @@ level: Beginner
 doc-type: Tutorial
 duration: 0
 last-substantial-update: 2023-12-07T00:00:00Z
-jira: KT-14649
-thumbnail: KT-14649.jpeg
-source-git-commit: 55f5cef46f7451ebb5b42b8cf17e71efeb0329c2
+jira: KT-14734
+thumbnail: KT-14734.jpeg
+source-git-commit: 839d552199fe7d10a0cde4011bdfe8cf42cc8ec9
 workflow-type: tm+mt
-source-wordcount: '555'
+source-wordcount: '600'
 ht-degree: 0%
 
 ---
@@ -81,4 +81,6 @@ Um die Dinge einfach zu halten, ruft diese gehostete Webanwendung nur den ersten
 
 ## Zusätzliche Ressourcen
 
-- [Glitch-Webhook-Quellcode](https://glitch.com/edit/#!/indigo-speckle-antler)
+- [Glitch-Webhook-Quellcode](https://glitch.com/edit/#!/indigo-speckle-antler) ist als Referenz verfügbar. Es ist eine einfache React-Anwendung, die [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html?lang=de) Komponenten zum Rendern der Benutzeroberfläche.
+
+- [Adobe I/O Events Journaling API](https://developer.adobe.com/events/docs/guides/api/journaling_api/) bietet detaillierte Informationen zur API, wie den ersten, nächsten und letzten Batch von Ereignissen, Paginierung und mehr.
