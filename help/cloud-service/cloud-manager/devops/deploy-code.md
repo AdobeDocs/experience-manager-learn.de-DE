@@ -13,7 +13,7 @@ duration: 26
 source-git-commit: 8a042c561c1a7e48152c2b067d92d709ab5fd53e
 workflow-type: tm+mt
 source-wordcount: '80'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 98%
 >title="Bereitstellen von Code"
 >abstract="Integrieren Sie das Git-Repository für Cloud Manager mit einem externen Git-Repository und stellen Sie ein Projekt für AEM as a Cloud Service bereit."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/merge-projects.html?lang=de#cloud-manager" text="Zusammenführen von Projekten"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=en" text="Bereitstellen von Code mit Cloud Manager"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=de" text="Bereitstellen von Code mit Cloud Manager"
 
 Integrieren Sie das Git-Repository für Cloud Manager mit einem externen Git-Repository und stellen Sie ein Projekt für AEM as a Cloud Service bereit.
 
