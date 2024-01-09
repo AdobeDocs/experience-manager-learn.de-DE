@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 20d0154755ea7d5d4cd73a7d5f3fecaf19f53a71
+source-git-commit: eb64367ffa110d1d28fe91a372c724a476e36f5e
 workflow-type: tm+mt
-source-wordcount: '407'
-ht-degree: 97%
+source-wordcount: '409'
+ht-degree: 96%
 
 ---
 
@@ -31,6 +31,7 @@ ht-degree: 97%
    + [Automatisch startende Workflows](configuring/auto-start-workflows.md)
 
 + Authoring{#authoring}
+   + [Ansichten wechseln](./authoring/switch-views.md)
    + [Navigation](./authoring/navigation.md)
    + [Grundlegende Vorgänge](./authoring/basic-operations.md)
    + [Metadaten](./authoring/metadata.md)
