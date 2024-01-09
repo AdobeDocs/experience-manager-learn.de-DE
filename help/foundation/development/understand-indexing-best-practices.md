@@ -12,9 +12,9 @@ duration: 0
 last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
-source-git-commit: 5fe651bc0dc73397ae9602a28d63b7dc084fcc70
+source-git-commit: 7f69fc888a7b603ffefc70d89ea470146971067e
 workflow-type: tm+mt
-source-wordcount: '1331'
+source-wordcount: '1418'
 ht-degree: 1%
 
 ---
@@ -49,7 +49,9 @@ Manchmal müssen Sie benutzerdefinierte Indizes erstellen, um Ihre Suchanforderu
 
 ### OOTB-Index anpassen
 
-- Verwenden Sie beim Anpassen des OOTB-Index **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** Namenskonvention. Beispiel: `cqPageLucene-custom-1` oder `damAssetLucene-8-custom-1`. Dies hilft beim Zusammenführen der benutzerdefinierten Indexdefinition, sobald der OOTB-Index aktualisiert wird. Siehe [Änderungen an vordefinierten Indizes](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#changes-to-out-of-the-box-indexes) für weitere Details.
+- In **AEMCS** bei der Anpassung der OOTB-Indexverwendung **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** Namenskonvention. Beispiel: `cqPageLucene-custom-1` oder `damAssetLucene-8-custom-1`. Dies hilft beim Zusammenführen der benutzerdefinierten Indexdefinition, sobald der OOTB-Index aktualisiert wird. Siehe [Änderungen an vordefinierten Indizes](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#changes-to-out-of-the-box-indexes) für weitere Details.
+
+- In **AEM 6.x**, die oben genannte Benennung _funktioniert nicht_ Aktualisieren Sie jedoch einfach den OOTB-Index mit zusätzlichen Eigenschaften im `indexRules` Knoten.
 
 - Kopieren Sie immer die neueste OOTB-Indexdefinition mithilfe des CRX DE Package Manager (/crx/packmgr/) aus der AEM-Instanz, benennen Sie sie um und fügen Sie Anpassungen innerhalb der XML-Datei hinzu.
 
@@ -57,11 +59,13 @@ Manchmal müssen Sie benutzerdefinierte Indizes erstellen, um Ihre Suchanforderu
 
 ### Vollständiger benutzerdefinierter Index
 
-- Verwenden Sie beim Erstellen eines vollständig benutzerdefinierten Index **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** Namenskonvention. Beispiel: `wknd.adventures-1-custom-1`. Auf diese Weise können Namenskonflikte vermieden werden. Hier, `wknd` ist das Präfix und `adventures` ist der benutzerdefinierte Indexname.
+Das Erstellen eines vollständig benutzerdefinierten Index muss Ihre letzte Option sein und nur, wenn die obige Option nicht funktioniert.
+
+- Verwenden Sie beim Erstellen eines vollständig benutzerdefinierten Index **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** Namenskonvention. Beispiel: `wknd.adventures-1-custom-1`. Auf diese Weise können Namenskonflikte vermieden werden. Hier, `wknd` ist das Präfix und `adventures` ist der benutzerdefinierte Indexname. Diese Konvention gilt sowohl für AEM 6.X als auch für AEMCS und hilft bei der Vorbereitung auf die zukünftige Migration zu AEMCS.
 
 - AEMCS unterstützt nur Lucene-Indizes. Verwenden Sie daher zur Vorbereitung auf die zukünftige Migration zu AEMCS immer Lucene-Indizes. Siehe [Lucene-Indizes vs. Eigenschaftenindizes](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?#lucene-or-property-indexes) für weitere Details.
 
-- Erstellen Sie keinen benutzerdefinierten Index auf der `dam:Asset` Knotentyp, aber OOTB anpassen `damAssetLucene` Index. Dies war eine häufige Ursache für Leistungs- und Funktionsprobleme.
+- Erstellen Sie keinen benutzerdefinierten Index für denselben Knotentyp wie den OOTB-Index. Passen Sie stattdessen den OOTB-Index mit zusätzlichen Eigenschaften im `indexRules` Knoten. Erstellen Sie beispielsweise keinen benutzerdefinierten Index für die `dam:Asset` Knotentyp, aber OOTB anpassen `damAssetLucene` Index. _Dies war eine häufige Ursache für Leistungs- und Funktionsprobleme_.
 
 - Vermeiden Sie auch das Hinzufügen mehrerer Knotentypen, beispielsweise `cq:Page` und `cq:Tag` unter den Indizierungsregeln (`indexRules`). Erstellen Sie stattdessen separate Indizes für jeden Knotentyp.
 
@@ -70,7 +74,7 @@ Manchmal müssen Sie benutzerdefinierte Indizes erstellen, um Ihre Suchanforderu
 - Die Richtlinien für die Indexdefinition sind:
    - Der Knotentyp (`jcr:primaryType`) sollte `oak:QueryIndexDefinition`
    - Der Indextyp (`type`) sollte `lucene`
-   - Die asynchrone Eigenschaft (`async`) sollte `async, rt`
+   - Die asynchrone Eigenschaft (`async`) sollte `async,nrt`
    - Verwendung `includedPaths` und vermeiden `excludedPaths` -Eigenschaft. Immer festlegen `queryPaths` -Wert auf denselben Wert wie `includedPaths` -Wert.
    - Um die Pfadbeschränkung durchzusetzen, verwenden Sie `evaluatePathRestrictions` -Eigenschaft und legen Sie sie auf `true`.
    - Verwendung `tags` -Eigenschaft, um den Index zu taggen, und geben Sie bei der Abfrage diesen Tag-Wert an, um den Index zu verwenden. Die allgemeine Abfragesyntax lautet: `<query> option(index tag <tagName>)`.
@@ -80,7 +84,7 @@ Manchmal müssen Sie benutzerdefinierte Indizes erstellen, um Ihre Suchanforderu
       - jcr:primaryType = "oak:QueryIndexDefinition"
       - type = "lucene"
       - compatVersion = 2
-      - async = ["async", "rt"]
+      - async = ["async", "nrt"]
       - includedPaths = ["/content/wknd"]
       - queryPaths = ["/content/wknd"]
       - evaluatePathRestrictions = true
@@ -90,7 +94,7 @@ Manchmal müssen Sie benutzerdefinierte Indizes erstellen, um Ihre Suchanforderu
 
 ### Beispiele
 
-Sehen wir uns einige Beispiele an, um die Best Practices zu verstehen.
+Um die Best Practices zu verstehen, werden einige Beispiele vorgestellt.
 
 #### Unsachgemäße Verwendung der Eigenschaft &quot;tags&quot;
 
