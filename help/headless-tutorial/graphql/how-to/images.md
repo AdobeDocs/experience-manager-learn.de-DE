@@ -11,7 +11,7 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 449
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 520bb18e464eb48cc2ba0cdfb7f5a7d2af202abf
 workflow-type: tm+mt
 source-wordcount: '901'
 ht-degree: 100%
@@ -133,6 +133,7 @@ Verwenden Sie zum Laden des Web-optimierten Bildes des referenzierten Bildes in 
 In React sieht die Anzeige des Web-optimierten Bildes über AEM Publish wie folgt aus:
 
 ```jsx
+// The AEM host is usually read from a environment variable of the SPA.
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
 ...
 let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
@@ -147,6 +148,7 @@ Denken Sie daran, dass `_dynamicUrl` nicht die AEM-Domain enthält. Daher müsse
 Im obigen Beispiel wird ein Bild mit einer einzigen Größe verwendet. In Web-Erlebnissen sind jedoch häufig responsive Bild-Sets erforderlich. Responsive Bilder können mithilfe von [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) oder [Bildelementen](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) implementiert werden. Das folgende Codesnippet zeigt, wie `_dynamicUrl` als Basis verwendet wird und verschiedene Breitenparameter angehängt werden, um unterschiedliche responsive Ansichten zu ermöglichen. Es kann nicht nur der Abfrageparameter `width` verwendet werden, sondern der Client kann auch andere Abfrageparameter hinzufügen, um das Bild-Asset entsprechend den Anforderungen weiter zu optimieren.
 
 ```javascript
+// The AEM host is usually read from a environment variable of the SPA.
 const AEM_HOST = "https://publish-p123-e456.adobeaemcloud.com";
 ...
 // Read the data from GraphQL response
