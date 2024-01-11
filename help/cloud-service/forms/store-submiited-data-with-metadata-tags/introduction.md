@@ -9,21 +9,22 @@ version: Cloud Service
 topic: Integrations
 jira: KT-14501
 duration: 40
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+exl-id: a8531e82-18cd-4b32-8148-d6fc5f6e51c6
+source-git-commit: 016b06d3bd5b62945c168588839454544b2f7d41
 workflow-type: tm+mt
-source-wordcount: '128'
-ht-degree: 46%
+source-wordcount: '130'
+ht-degree: 45%
 
 ---
 
 # Einführung
 
-In diesem Tutorial implementieren wir ein einfaches Anwendungsbeispiel zum Speichern von Formularübermittlungen in Azure Storage mit Blob-Index-Tags. Blob-Index-Tags bieten Datenmanagement- und Erkennungsfunktionen durch Verwendung von Schlüssel-Wert-Index-Tag-Attributen. Sie können Objekte in einem einzelnen Container oder über alle Container in Ihrem Speicherkonto kategorisieren und suchen.
+In diesem Tutorial erfahren Sie, wie Sie ein einfaches Anwendungsbeispiel zum Speichern von Formularübermittlungen in Azure-Speicher mit Blob-Index-Tags implementieren. Blob-Index-Tags bieten Datenmanagement- und Erkennungsfunktionen durch Verwendung von Schlüssel-Wert-Index-Tag-Attributen. Sie können Objekte in einem einzelnen Container oder über alle Container in Ihrem Speicherkonto kategorisieren und suchen.
 ![blob-index-tags](assets/blob-with-index-tags.png)
 
 ## Voraussetzungen
 
-* Erlebnis mit AEM Forms CS .
+* Erlebnis mit AEM Forms CS.
 * Erlebnis bei der Bereitstellung von Code mithilfe von Cloud Manager.
 * Zugriff auf Cloud-fähige Instanz von AEM Forms CS.
 
