@@ -9,16 +9,16 @@ level: Beginner
 exl-id: 36c38cb6-6f6a-4328-abf5-7a30059b66ce
 last-substantial-update: 2019-03-20T00:00:00Z
 duration: 96
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 4b88045a626b5e7bd1386e62ee54ac6fe2ce9282
 workflow-type: tm+mt
-source-wordcount: '353'
-ht-degree: 100%
+source-wordcount: '331'
+ht-degree: 87%
 
 ---
 
 # Verwenden von Transaktionsberichten in AEM Forms{#using-transaction-reporting-in-aem-forms}
 
-Mit AEM Forms 6.4.1 wurden Transaktionsberichte eingeführt, um die Anzahl der Formularübermittlungen, das Rendern von Dokumenten mithilfe von Dokumentendiensten und das Rendern interaktiver Kommunikation (Web- und Druckkanäle) zu erfassen. Diese Funktion richtet sich in erster Linie an Kundinnen und Kunden, die die Software basierend auf der Anzahl der Formularübermittlungen und/oder wiedergegebenen Dokumente lizenzieren möchten. Diese Funktion ist derzeit nur für den OSGi-Stapel von AEM Forms verfügbar.
+Mit AEM Forms 6.4.1 wurden Transaktionsberichte eingeführt, um die Anzahl der Formularübermittlungen, die Darstellung von Dokumenten mithilfe von Document Services und die Darstellung interaktiver Kommunikation (Web- und Druckkanäle) zu erfassen. Diese Funktion ist derzeit nur für AEM Forms OSGI-Stack verfügbar.
 
 ## Aktivieren von Transaktionsberichten {#enabling-transaction-reporting}
 
