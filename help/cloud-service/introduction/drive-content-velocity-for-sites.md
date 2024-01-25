@@ -3,11 +3,11 @@ title: Wie Sie mit Adobe Experience Manager die Geschwindigkeit von Inhalten erh
 description: Informieren Sie sich über die Geschwindigkeit von Inhalten und ihren Wert in Unternehmen. Informieren Sie sich über die vier Grundsätze der effektiven Umsetzung und über die Fallstricke, nach denen Sie unterwegs Ausschau halten sollten.
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-duration: 728
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 635
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '2742'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -148,7 +148,7 @@ Im Folgenden finden Sie vier Meilensteine, die während der Ausführungsphase er
 Im Allgemeinen ist es am besten, diese Faustregeln zu befolgen:
 
 * Ziel ist es, nicht weniger als 80 % der Erlebnisse durch [vordefinierte Komponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de) und [Stilsysteme](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=de) zu erreichen. Durch Kundenaussagen wird dadurch nicht nur eine eher skalierbare Grundlage geschaffen, die es Ihnen ermöglicht, die Produkt-Roadmap zu nutzen, sondern es wird auch die Geschwindigkeit um bis zu 50 % erhöht.
-* [Einrichten bearbeitbarer Vorlagen](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=de) und weg von statischen Vorlagen. Beim Einrichten bearbeitbarer Vorlagen (die für die Verwendung von Stilsystemen erforderlich sind) muss eine Person zum Authoring von Vorlagen zugewiesen werden, die die verschiedenen Stile kontrolliert, die für eine Seite oder einen Bereich der Website verfügbar sind. Diese Aktualisierungen der Vorlage selbst sind im Hinblick auf die alltägliche Arbeit eher minimal.
+* [Einrichtung bearbeitbarer Vorlagen](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=de) und Abkehr von statischen Vorlagen. Beim Einrichten bearbeitbarer Vorlagen (die für die Verwendung von Stilsystemen erforderlich sind) muss eine Person zum Authoring von Vorlagen zugewiesen werden, die die verschiedenen Stile kontrolliert, die für eine Seite oder einen Bereich der Website verfügbar sind. Diese Aktualisierungen der Vorlage selbst sind im Hinblick auf die alltägliche Arbeit eher minimal.
 * Verwenden Sie [Erlebnisfragmente](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=de) soweit möglich. Obwohl der allgemeine Anwendungsfall für Erlebnisfragmente die Verteilung über mehrere Kanäle ist, können diese effektiv auf der gesamten Site verwendet werden, um Inhalte in einem Bereich gleichzeitig zu füllen, anstatt Inhalte in mehreren Bereichen manuell zu aktualisieren. Dies spart überschüssige Zeit und Mühe und schafft dem Authoring-Team Freiraum für die Arbeit an spezifischeren und umfangreicheren Erlebnissen.
 * Erstellen Sie reichhaltigere Erlebnisse. Durch die Verwendung der 80/20-Regel (siehe oben) kann ein Unternehmen bestimmte CSS- und Backend-Entwicklungsfunktionen für ausgewählte Erlebnisse anstelle gängiger Wartungs-Updates nutzen.
 * Entscheiden Sie sich für eine skalierbare Grundlage und ein schnelles Rebranding. Stilsysteme, die auf der Grundlage einer modernen Umsetzung ausgeführt werden, können ein effizientes Rebranding auf allen Plattformen ermöglichen. Die Aktualisierung breiter Inhaltsbereiche durch die Änderung von CSS-Skins ermöglicht schnelle Tests und Gültigkeitsprüfungen und erhöht die Erlebnisqualität auf der Website bei direkten Auswirkungen auf den ROI.

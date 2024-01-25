@@ -3,8 +3,8 @@ title: Beschleunigen der Geschwindigkeit von Inhalten bei AEM-Stilsystemen
 description: Erfahren Sie, wie Sie mit AEM-Stilsystemen Designerinnen und Designer, Inhaltsautorinnen und Inhaltsautoren sowie Entwicklerinnen und Entwickler in Ihrem Unternehmen in die Lage versetzen können, Erlebnisse mit der Geschwindigkeit und Skalierung zu erstellen und bereitzustellen, die Ihre Kundinnen und Kunden erwarten.
 solution: Experience Manager
 exl-id: 449cd133-6ab6-456e-a0ad-30e3dea9b75b
-duration: 230
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+duration: 191
+source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
 workflow-type: tm+mt
 source-wordcount: '817'
 ht-degree: 100%
