@@ -8,19 +8,21 @@ role: Developer
 level: Beginner
 recommendations: noDisplay, noCatalog
 jira: KT-11603
-last-substantial-update: 2023-06-02T00:00:00Z
+last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 duration: 214
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 100%
+source-wordcount: '767'
+ht-degree: 96%
 
 ---
 
 # Bereitstellen einer Erweiterung
 
 Für die Verwendung in AEM as a Cloud Service-Umgebungen muss die App-Entwicklungs-Erweiterungs-App bereitgestellt und genehmigt werden.
+
+![Adobe Exchange](./assets/deploy/adobe-exchange.png){align="center"}
 
 Bei der Bereitstellung von App-Entwicklungs-Erweiterungs-Apps sind einige Aspekte zu beachten:
 
@@ -77,9 +79,9 @@ Stellen Sie die Erweiterung im Arbeitsbereich „Produktion“ bereit. Erweiteru
 ![Genehmigung der Erweiterung](./assets/deploy/adobe-exchange.png){align="center"}
 
 1. Melden Sie sich bei [Adobe Exchange](https://exchange.adobe.com/) an.
-1. Navigieren Sie zu __Verwalten__ > __Apps mit ausstehender Überprüfung__.
-1. __Überprüfen__ Sie die App-Entwicklungs-Erweiterungs-App.
-1. Wenn die Erweiterungsänderungen akzeptabel sind, __akzeptieren__ Sie die Überprüfung. Dadurch wird die Erweiterung direkt in alle Author-Services von AEM as a Cloud Service in der Adobe-Organisation eingefügt.
+2. Navigieren Sie zu __Verwalten__ > __Experience Cloud-Anwendungen__
+3. __Überprüfen__ Sie die App-Entwicklungs-Erweiterungs-App.
+4. Wenn die Erweiterungsänderungen akzeptabel sind, __akzeptieren__ Sie die Überprüfung. Dadurch wird die Erweiterung direkt in alle Author-Services von AEM as a Cloud Service in der Adobe-Organisation eingefügt.
 
 Sobald die Erweiterungsanfrage genehmigt wurde, wird die Erweiterung sofort in den Author-Services von AEM as a Cloud Service aktiviert.
 
@@ -92,7 +94,7 @@ Die Aktualisierung einer App-Entwicklungs-Erweiterungs-App folgt dem gleichen Pr
 Um eine neue Version einer Erweiterung bereitzustellen, muss sie zunächst widerrufen (oder entfernt) werden. Eine widerrufene Erweiterung steht in AEM-Konsolen nicht mehr zur Verfügung.
 
 1. Melden Sie sich bei [Adobe Exchange](https://exchange.adobe.com/) an.
-1. Navigieren Sie zu __Verwalten__ > __App-Entwicklungs-Apps__.
+1. Navigieren Sie zu __Verwalten__ > __Experience Cloud-Anwendungen__
 1. __Widerrufen__ Sie die zu aktualisierende Erweiterung.
 
 ### Bereitstellen der Erweiterung
@@ -128,10 +130,10 @@ Stellen Sie die Erweiterung im Arbeitsbereich „Produktion“ bereit. Erweiteru
 
 #### Genehmigen der Bereitstellungsanfrage
 
-![Genehmigung der Erweiterung](./assets/deploy/adobe-exchange.png){align="center"}
+![Genehmigung der Erweiterung](./assets/deploy/review.png){align="center"}
 
 1. Melden Sie sich bei [Adobe Exchange](https://exchange.adobe.com/) an.
-1. Navigieren Sie zu __Verwalten__ > __Apps mit ausstehender Überprüfung__.
+1. Navigieren Sie zu __Verwalten__ > __Experience Cloud-Anwendungen__
 1. __Überprüfen__ Sie die App-Entwicklungs-Erweiterungs-App.
 1. Wenn die Erweiterungsänderungen akzeptabel sind, __akzeptieren__ Sie die Überprüfung. Dadurch wird die Erweiterung direkt in alle Author-Services von AEM as a Cloud Service in der Adobe-Organisation eingefügt.
 
@@ -144,5 +146,5 @@ Sobald die Erweiterungsanfrage genehmigt wurde, wird die Erweiterung sofort in d
 Um eine Erweiterung zu entfernen, müssen Sie sie für Adobe Exchange widerrufen (oder daraus entfernen). Eine widerrufene Erweiterung wird aus allen Author-Services von AEM as a Cloud Service entfernt.
 
 1. Melden Sie sich bei [Adobe Exchange](https://exchange.adobe.com/) an.
-1. Navigieren Sie zu __Verwalten__ > __App-Entwicklungs-Apps__.
+1. Navigieren Sie zu __Verwalten__ > __Experience Cloud-Anwendungen__
 1. __Widerrufen__ Sie die zu entfernende Erweiterung.

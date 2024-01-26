@@ -1,6 +1,6 @@
 ---
 title: OpenAI-Bildgenerierung über eine benutzerdefinierte Erweiterung der Inhaltsfragmentkonsole
-description: Erfahren Sie, wie Sie mit OpenAI oder DALL-E 2 ein digitales Bild aus einer Beschreibung in natürlicher Sprache erstellen und das generierte Bild mit einer benutzerdefinierten Erweiterung der Inhaltsfragmentkonsole nach AEM hochladen.
+description: Erfahren Sie, wie Sie mit OpenAI oder DALL ・ E 2 digitale Bilder aus einer Beschreibung in natürlicher Sprache generieren und generiertes Bild mit einer benutzerdefinierten Erweiterung der Inhaltsfragmentkonsole in AEM hochladen.
 feature: Developer Tools, Content Fragments
 version: Cloud Service
 topic: Development
@@ -9,27 +9,27 @@ level: Beginner
 jira: KT-11649
 thumbnail: KT-11649.png
 doc-type: article
-last-substantial-update: 2023-01-04T00:00:00Z
+last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: f3047f1d-1c46-4aee-9262-7aab35e9c4cb
 duration: 1380
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
 workflow-type: tm+mt
 source-wordcount: '1289'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
 # Generieren von AEM-Bild-Assets mit OpenAI
 
-Erfahren Sie, wie Sie mit OpenAI oder DALL-E 2 ein Bild generieren und es zwecks Inhaltsgeschwindigkeit nach AEM DAM hochladen.
+Erfahren Sie, wie Sie mit OpenAI oder DALL ・ E 2 ein Bild erstellen und es zur Inhaltsgeschwindigkeit in AEM DAM hochladen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3413093?quality=12&learn=on)
 
-Bei dieser beispielhaften Erweiterung der AEM-Inhaltsfragmentkonsole handelt es sich um eine [Aktionsleisten](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/?lang=de)-Erweiterung, die mit der [OpenAI-API](https://openai.com/api/) oder [DALL-E 2](https://openai.com/dall-e-2/) ein digitales Bild aus einer Eingabe in natürlicher Sprache generiert. Das generierte Bild wird nach AEM DAM hochgeladen und die Bildeigenschaft des ausgewählten Inhaltsfragments wird aktualisiert, um auf dieses neu generierte, hochgeladene Bild aus DAM zu verweisen.
+Dieses Beispiel AEM die Erweiterung der Inhaltsfragmentkonsole ist eine [Aktionsleiste](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/?lang=de) Erweiterung, die ein digitales Bild aus einer Eingabe in natürlicher Sprache generiert, mithilfe von [OpenAI-API](https://openai.com/api/) oder [DALL ・ E 2](https://openai.com/dall-e-2/). Das generierte Bild wird nach AEM DAM hochgeladen und die Bildeigenschaft des ausgewählten Inhaltsfragments wird aktualisiert, um auf dieses neu generierte, hochgeladene Bild aus DAM zu verweisen.
 
 In diesem Beispiel lernen Sie Folgendes:
 
-1. Generieren von Bildern mit der [OpenAI-API](https://beta.openai.com/docs/guides/images/image-generation-beta) oder [DALL-E 2](https://openai.com/dall-e-2/)
+1. Generieren von Bildern mit [OpenAI-API](https://beta.openai.com/docs/guides/images/image-generation-beta) oder [DALL ・ E 2](https://openai.com/dall-e-2/)
 2. Hochladen von Bildern nach AEM
 3. Aktualisieren der Inhaltsfragment-Eigenschaft
 
@@ -149,53 +149,64 @@ Es gibt zwei logische Routengruppen:
 Die Datei `ExtensionRegistration.js`, die der Route `index.html` zugeordnet ist, ist der Einstiegspunkt für die AEM-Erweiterung und definiert Folgendes:
 
 1. Der Speicherort der Erweiterungsschaltfläche wird innerhalb des AEM-Authoring-Erlebnisses (`actionBar` oder `headerMenu`) angezeigt.
-1. Definition der Erweiterungsschaltfläche in der `getButton()`-Funktion.
+1. Definition der Erweiterungsschaltfläche in der `getButtons()`-Funktion.
 1. Klick-Handler für die Schaltfläche in der `onClick()`-Funktion.
 
 + `src/aem-cf-console-admin-1/web-src/src/components/ExtensionRegistration.js`
 
 ```javascript
+import React from "react";
+import { generatePath } from "react-router";
+import { Text } from "@adobe/react-spectrum";
+import { register } from "@adobe/uix-guest";
+import { extensionId } from "./Constants";
+
 function ExtensionRegistration() {
   const init = async () => {
     const guestConnection = await register({
-      id: extensionId,
+      id: extensionId, // Some unique ID for the extension used to facilitate communication between the extension and Content Fragment Console
       methods: {
         // Configure your Action Bar button here
         actionBar: {
-          getButton() {
-            return {
+          getButtons() {
+            return [{
               'id': 'generate-image',     // Unique ID for the button
               'label': 'Generate Image',  // Button label 
-              'icon': 'PublishCheck'      // Button icon; get name from: https://spectrum.adobe.com/page/icons/ (Remove spaces, keep uppercase)
-            }
+              'icon': 'PublishCheck',      // Button icon; get name from: https://spectrum.adobe.com/page/icons/ (Remove spaces, keep uppercase)
+              // Click handler for the extension button
+              onClick(selections) {
+                // Collect the selected content fragment paths 
+                const selectionIds = selections.map(selection => selection.id);
+
+                // Create a URL that maps to the 
+                const modalURL = "/index.html#" + generatePath(
+                  "/content-fragment/:selection/generate-image-modal",
+                  {
+                    // Set the :selection React route parameter to an encoded, delimited list of paths of the selected content fragments
+                    selection: encodeURIComponent(selectionIds.join('|')),
+                  }
+                );
+
+                // Open the route in the extension modal using the constructed URL
+                guestConnection.host.modal.showUrl({
+                  title: "Generate Image",
+                  url: modalURL
+                })
+                },
+              },
+            ];
           },
-
-          // Click handler for the extension button
-          onClick(selections) {
-            // Collect the selected content fragment paths 
-            const selectionIds = selections.map(selection => selection.id);
-
-            // Create a URL that maps to the 
-            const modalURL = "/index.html#" + generatePath(
-              "/content-fragment/:selection/generate-image-modal",
-              {
-                // Set the :selection React route parameter to an encoded, delimited list of paths of the selected content fragments
-                selection: encodeURIComponent(selectionIds.join('|')),
-              }
-            );
-
-            // Open the route in the extension modal using the constructed URL
-            guestConnection.host.modal.showUrl({
-              title: "Generate Image",
-              url: modalURL
-            })
-          }
         },
+      },
+    });
+  };
 
-      }
-    })
-  }
-  init().catch(console.error)
+  init().catch(console.error);
+
+  return <Text>IFrame for integration with Host (AEM)...</Text>;
+}
+
+export default ExtensionRegistration;          
 ```
 
 ### Modal
@@ -264,7 +275,7 @@ export default function GenerateImageModal() {
     // Display the 'Generate Image' modal and ask for image description
     return renderImgGenerationForm();
   } if (actionResponse) {
-    // If the 'Generate Image' actio has completed, display the response
+    // If the 'Generate Image' action has completed, display the response
     return renderActionResponse();
   }
 
@@ -281,7 +292,7 @@ export default function GenerateImageModal() {
             As this operation
             <strong> uses credits from Generative AI services</strong>
             {' '}
-            such as DALL.E 2 (or Stable Dufusion), we allow only one Generate Image at a time.
+            such as DALL·E 2 (or Stable Dufusion), we allow only one Generate Image at a time.
             <p />
             <strong>So please select only one Content Fragment at this moment.</strong>
           </Text>
@@ -300,7 +311,6 @@ export default function GenerateImageModal() {
   /**
    * Renders the form asking for image description in the natural language and
    * displays message this action uses credits from Generative AI services.
-   *
    *
    * @returns the image description input field and credit usage message
    */
@@ -337,7 +347,7 @@ export default function GenerateImageModal() {
 
               <Text>
                 <p />
-                Please note this will use credits from Generative AI services such as OpenAI/DALL.E 2. The AI-generated images are saved to this AEM as a Cloud Service Author service using logged user access (IMS) token.
+                Please note this will use credits from Generative AI services such as OpenAI/DALL·E 2. The AI-generated images are saved to this AEM as a Cloud Service Author service using logged user access (IMS) token.
               </Text>
 
               <ButtonGroup align="end">
@@ -349,15 +359,14 @@ export default function GenerateImageModal() {
 
         </Content>
       </Provider>
-
     );
   }
 
   function buildAssetDetailsURL(aemImgURL) {
     const urlParts = aemImgURL.split('.com');
-    const aemAssetdetailsURL = `${urlParts[0]}.com/ui#/aem/assetdetails.html${urlParts[1]}`;
+    const aemAssetDetailsURL = `${urlParts[0]}.com/ui#/aem/assetdetails.html${urlParts[1]}`;
 
-    return aemAssetdetailsURL;
+    return aemAssetDetailsURL;
   }
 
   /**
@@ -411,7 +420,7 @@ export default function GenerateImageModal() {
   /**
    * Handle the Generate Image form submission.
    * This function calls the supporting Adobe I/O Runtime actions such as
-   * - Call the Generative AI service (DALL.E) with 'image description' to generate an image
+   * - Call the Generative AI service (DALL·E) with 'image description' to generate an image
    * - Download the AI generated image to App Builder runtime
    * - Save the downloaded image to AEM DAM and update Content Fragment's image reference property to use this new image
    *
@@ -498,7 +507,7 @@ Die `index.js` orchestriert die oben genannten 1 bis 3 Aufgaben mithilfe der ent
 ```javascript
 /**
  *
- * This action orchestrates an image generation by calling the OpenAI API (DALL.E 2) and saves generated image to AEM.
+ * This action orchestrates an image generation by calling the OpenAI API (DALL·E 2) and saves generated image to AEM.
  *
  * It leverages following modules
  *  - 'generate-image-using-openai' - To generate an image using OpenAI API
@@ -543,7 +552,7 @@ async function main(params) {
     // extract the user Bearer token from the Authorization header
     const token = getBearerToken(params);
 
-    // Call OpenAI (DALL.E 2) API to generate an image using image description
+    // Call OpenAI (DALL·E 2) API to generate an image using image description
     const generatedImageURL = await generateImageUsingOpenAI(params);
     logger.info(`Generated image using OpenAI API and url is : ${generatedImageURL}`);
 
