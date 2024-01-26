@@ -3,8 +3,8 @@ title: Governance- und Personalmodelle & Archetypen
 description: Erfahren Sie, wie Sie Ihre Adobe Experience Manager-Plattform (AEM) in die Praxis umsetzen und den größtmöglichen Nutzen aus Ihren Bemühungen ziehen können.
 solution: Experience Manager
 exl-id: 808ab7a6-5ec5-4bbd-9a6e-cfc0b447430d
-duration: 283
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 320
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 100%

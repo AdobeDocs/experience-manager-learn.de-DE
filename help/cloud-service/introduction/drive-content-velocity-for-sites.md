@@ -3,8 +3,8 @@ title: Wie Sie mit Adobe Experience Manager die Geschwindigkeit von Inhalten erh
 description: Informieren Sie sich über die Geschwindigkeit von Inhalten und ihren Wert in Unternehmen. Informieren Sie sich über die vier Grundsätze der effektiven Umsetzung und über die Fallstricke, nach denen Sie unterwegs Ausschau halten sollten.
 solution: Experience Manager
 exl-id: 9d2e05c3-c8eb-4d92-bad0-931e63550438
-duration: 635
-source-git-commit: 9fef4b77a2c70c8cf525d42686f4120e481945ee
+duration: 718
+source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
 workflow-type: tm+mt
 source-wordcount: '2742'
 ht-degree: 100%
