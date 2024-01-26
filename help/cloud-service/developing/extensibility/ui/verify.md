@@ -11,7 +11,7 @@ jira: KT-11603, KT-13382
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
 duration: 637
-source-git-commit: 2a22a1bbe8474b8b7ca95f2b364fd7540b26b894
+source-git-commit: f48fb02887d909a102718dc5a0c4d1ecd2b1ef34
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 96%
@@ -39,9 +39,9 @@ Um eine URL zu erstellen, die die Nicht-Produktionserweiterung in AEM bereitstel
 Gehen Sie wie folgt vor, um beispielsweise eine Erweiterung für die Inhaltsfragmentkonsole in einer Vorschau anzuzeigen:
 
 1. Melden Sie sich bei der gewünschten AEM as a Cloud Service-Umgebung an.
-2. Wählen Sie das Symbol __Inhaltsfragmente__ aus.
-3. Warten Sie, bis die AEM-Inhaltsfragmentkonsole im Browser geladen wurde.
-4. Kopieren Sie die URL der AEM-Inhaltsfragmentkonsole aus der Adressleiste des Browsers. Sie sollte ungefähr wie folgt aussehen:
+1. Wählen Sie das Symbol __Inhaltsfragmente__ aus.
+1. Warten Sie, bis die AEM-Inhaltsfragmentkonsole im Browser geladen wurde.
+1. Kopieren Sie die URL der AEM-Inhaltsfragmentkonsole aus der Adressleiste des Browsers. Sie sollte ungefähr wie folgt aussehen:
 
    ```
    https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
@@ -80,11 +80,11 @@ Notieren Sie sich die URL der lokalen Anwendung, wie oben als `-> https://localh
    https://experience.adobe.com/?devMode=true&ext=https://localhost:9080&repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
-2. Kopieren Sie die Vorschau-URL und fügen Sie sie in Ihren Browser ein.
+1. Kopieren Sie die Vorschau-URL und fügen Sie sie in Ihren Browser ein.
 
    + Möglicherweise müssen Sie zunächst und dann regelmäßig die [HTTPS-Zertifikate für den Host der lokalen Anwendung (`https://localhost:9080`) akzeptieren](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users).
 
-3. Die AEM-Benutzeroberfläche wird mit der lokalen Version der Erweiterung geladen, die zur Überprüfung in sie eingefügt wurde.
+1. Die AEM-Benutzeroberfläche wird mit der lokalen Version der Erweiterung geladen, die zur Überprüfung in sie eingefügt wurde.
 
 >[!IMPORTANT]
 >
@@ -144,9 +144,9 @@ Um die Erstellung der oben beschriebenen Vorschau und Vorschau-URLs zu vereinfac
 Über das Bookmarklet unten werden die [lokalen Entwicklungs-Builds](#verify-local-development-builds) der Erweiterung unter `https://localhost:9080` in einer Vorschau angezeigt. Für eine Vorschau der [Staging-Builds](#verify-stage-builds) erstellen Sie ein Lesezeichen, wobei die `previewApp`-Variable auf die URL der bereitgestellten App Builder-App gesetzt wird.
 
 1. Erstellen Sie ein Lesezeichen in Ihrem Browser.
-2. Bearbeiten Sie das Lesezeichen.
-3. Geben Sie einem Lesezeichen einen aussagekräftigen Namen, z. B. `AEM UI Extension Preview (localhost:9080)`.
-4. Setzen Sie die URL des Lesezeichens auf den folgenden Code:
+1. Bearbeiten Sie das Lesezeichen.
+1. Geben Sie einem Lesezeichen einen aussagekräftigen Namen, z. B. `AEM UI Extension Preview (localhost:9080)`.
+1. Setzen Sie die URL des Lesezeichens auf den folgenden Code:
 
    ```javascript
    javascript: (() => {
@@ -161,7 +161,7 @@ Um die Erstellung der oben beschriebenen Vorschau und Vorschau-URLs zu vereinfac
    })();
    ```
 
-5. Navigieren Sie zu einer erweiterbaren AEM-Benutzeroberfläche, in der Sie die Vorschauseite laden, und klicken Sie dann auf das Lesezeichen.
+1. Navigieren Sie zu einer erweiterbaren AEM-Benutzeroberfläche, in der Sie die Vorschauseite laden, und klicken Sie dann auf das Lesezeichen.
 
 >[!TIP]
 >
