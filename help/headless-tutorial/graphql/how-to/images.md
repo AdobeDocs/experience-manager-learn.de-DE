@@ -11,10 +11,10 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 377
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 2aec84f0fbd34678a4e25200ae0cdc6396beca95
 workflow-type: tm+mt
-source-wordcount: '901'
-ht-degree: 100%
+source-wordcount: '843'
+ht-degree: 90%
 
 ---
 
@@ -27,14 +27,14 @@ Inhaltsfragmente, die bei der Inhaltsmodellierung in AEM Headless verwendet werd
 Der Typ `ImageRef` verfügt über drei URL-Optionen für Inhaltsverweise:
 
 + `_path` ist der referenzierte Pfad in AEM und enthält keinen AEM-Ursprung (Host-Namen)
-+ `_dynamicUrl` ist die vollständige URL zum bevorzugten, Web-optimierten Bild-Asset.
++ `_dynamicUrl` ist die URL zu für die weboptimierte Bereitstellung des Bild-Assets.
    + `_dynamicUrl` enthält keinen AEM-Ursprung. Daher muss die Domain (AEM-Author- oder -Publish-Service) von der Client-Anwendung bereitgestellt werden.
 + `_authorUrl` ist die vollständige URL zum Bild-Asset in AEM Author
    + [AEM-Autor](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=de) kann verwendet werden, um eine Vorschau der Headless-Anwendung bereitzustellen.
 + `_publishUrl` ist die vollständige URL zum Bild-Asset in AEM Publish
    + [AEM-Veröffentlichung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=de) ist normalerweise der Ort, über den die Produktionsbereitstellung der Headless-Anwendung Bilder anzeigt.
 
-`_dynamicUrl` ist die bevorzugte URL für Bild-Assets und sollte, sofern möglich, immer anstelle von `_path`, `_authorUrl` und `_publishUrl` verwendet werden.
+Die `_dynamicUrl` ist die empfohlene URL für die Bereitstellung von Bild-Assets und sollte die Verwendung von `_path`, `_authorUrl`, und `_publishUrl` wann immer möglich.
 
 |                                | AEM as a Cloud Service | AEM as a Cloud Service-RDE | AEM SDK | AEM 6.5 |
 | ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
@@ -96,17 +96,17 @@ Die Variable `$path`, die im Filter `_path` verwendet wird, erfordert den vollst
 
 `_assetTransform` definiert, wie `_dynamicUrl` erstellt wird, um die Ausgabedarstellung des bereitgestellten Bildes zu optimieren. Web-optimierte Bild-URLs können auch auf dem Client angepasst werden, indem die Abfrageparameter der URL geändert werden.
 
-| GraphQL-Parameter | URL-Parameter | Beschreibung | Erforderlich | GraphQL-Variablenwerte | URL-Parameterwerte | Beispiel-URL-Parameter |
-|:---------|:----------|:-------------------------------|:--:|:--------------------------|:---|:--|
-| `format` | Nicht zutreffend | Das Format des Bild-Assets. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`, `WEBP`, `WEBPLL`, `WEBPLY` | Nicht zutreffend | Nicht zutreffend |
-| `seoName` | Nicht zutreffend | Der Name des Dateisegments in der URL. Ohne Angabe wird der Bild-Asset-Name verwendet. | ✘ | Alphanumerisch, `-` oder `_` | Nicht zutreffend | Nicht zutreffend |
-| `crop` | `crop` | Der aus dem Bild entnommene Zuschnittrahmen muss innerhalb der Bildgröße liegen. | ✘ | Positive Ganzzahlen, die einen Zuschnittbereich innerhalb der Grenzen der ursprünglichen Bildabmessungen definieren | Kommagetrennte Zeichenfolge numerischer Koordinaten `<X_ORIGIN>,<Y_ORIGIN>,<CROP_WIDTH>,<CROP_HEIGHT>` | `?crop=10,20,300,400` |
-| `size` | `size` | Die Größe des Ausgabebildes (sowohl Höhe als auch Breite) in Pixel. | ✘ | Positive Ganzzahlen | Kommagetrennte positive Ganzzahlen in der Reihenfolge `<WIDTH>,<HEIGHT>` | `?size=1200,800` |
-| `rotation` | `rotate` | Die Drehung des Bildes in Grad. | ✘ | `R90`, `R180`, `R270` | `90`, `180`, `270` | `?rotate=90` |
-| `flip` | `flip` | Spiegeln des Bildes. | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` | `h`, `v`, `hv` | `?flip=h` |
-| `quality` | `quality` | Die Bildqualität in Prozent der Originalqualität. | ✘ | 1–100 | 1–100 | `?quality=80` |
-| `width` | `width` | Die Breite des Ausgabebildes in Pixel. Wenn `size` bereitgestellt wird, wird `width` ignoriert. | ✘ | Positive Ganzzahl | Positive Ganzzahl | `?width=1600` |
-| `preferWebP` | `preferwebp` | Wenn `true` und AEM das WebP-Format bereitstellen, falls der Browser dies unterstützt, unabhängig vom `format`. | ✘ | `true`, `false` | `true`, `false` | `?preferwebp=true` |
+| GraphQL-Parameter | Beschreibung | Erforderlich | GraphQL-Variablenwerte |
+|:---------|:----------|:-------------------------------|:--:|:--------------------------|
+| `format` | Das Format des Bild-Assets. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`, `WEBP`, `WEBPLL`, `WEBPLY` |
+| `seoName` | Der Name des Dateisegments in der URL. Ohne Angabe wird der Bild-Asset-Name verwendet. | ✘ | Alphanumerisch, `-` oder `_` |
+| `crop` | Der aus dem Bild entnommene Zuschnittrahmen muss innerhalb der Bildgröße liegen. | ✘ | Positive Ganzzahlen, die einen Zuschnittbereich innerhalb der Grenzen der ursprünglichen Bildabmessungen definieren |
+| `size` | Die Größe des Ausgabebildes (sowohl Höhe als auch Breite) in Pixel. | ✘ | Positive Ganzzahlen |
+| `rotation` | Die Drehung des Bildes in Grad. | ✘ | `R90`, `R180`, `R270` |
+| `flip` | Spiegeln des Bildes. | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` |
+| `quality` | Die Bildqualität in Prozent der Originalqualität. | ✘ | 1–100 |
+| `width` | Die Breite des Ausgabebildes in Pixel. Wenn `size` bereitgestellt wird, wird `width` ignoriert. | ✘ | Positive Ganzzahl |
+| `preferWebP` | Wenn `true` und AEM das WebP-Format bereitstellen, falls der Browser dies unterstützt, unabhängig vom `format`. | ✘ | `true`, `false` |
 
 ## GraphQL-Antwort
 
@@ -128,7 +128,7 @@ Die resultierende JSON-Antwort beinhaltet die angeforderten Felder, die die Web-
 }
 ```
 
-Verwenden Sie zum Laden des Web-optimierten Bildes des referenzierten Bildes in Ihrer Anwendung die `_dynamicUrl` von `primaryImage` als Quell-URL des Bildes.
+Verwenden Sie zum Laden des Web-optimierten Bildes des referenzierten Bildes in Ihrer Anwendung das `_dynamicUrl` des `primaryImage` als Quell-URL des Bildes.
 
 In React sieht die Anzeige des Web-optimierten Bildes über AEM Publish wie folgt aus:
 
@@ -145,7 +145,7 @@ Denken Sie daran, dass `_dynamicUrl` nicht die AEM-Domain enthält. Daher müsse
 
 ## Responsive URLs
 
-Im obigen Beispiel wird ein Bild mit einer einzigen Größe verwendet. In Web-Erlebnissen sind jedoch häufig responsive Bild-Sets erforderlich. Responsive Bilder können mithilfe von [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) oder [Bildelementen](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) implementiert werden. Das folgende Codesnippet zeigt, wie `_dynamicUrl` als Basis verwendet wird und verschiedene Breitenparameter angehängt werden, um unterschiedliche responsive Ansichten zu ermöglichen. Es kann nicht nur der Abfrageparameter `width` verwendet werden, sondern der Client kann auch andere Abfrageparameter hinzufügen, um das Bild-Asset entsprechend den Anforderungen weiter zu optimieren.
+Im obigen Beispiel wird ein Bild mit einer einzigen Größe verwendet. In Web-Erlebnissen sind jedoch häufig responsive Bild-Sets erforderlich. Responsive Bilder können mithilfe von [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) oder [Bildelementen](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) implementiert werden. Das folgende Codefragment zeigt die Verwendung der `_dynamicUrl` als Basis. `width` ist ein URL-Parameter, an den Sie dann anhängen können `_dynamicUrl` für unterschiedliche responsive Ansichten.
 
 ```javascript
 // The AEM host is usually read from a environment variable of the SPA.
