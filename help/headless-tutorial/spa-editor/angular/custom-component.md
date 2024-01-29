@@ -235,7 +235,7 @@ Im Zusammenhang mit dem SPA-Editor stellen Sling-Modelle den Inhalt einer Kompon
 
    >[!NOTE]
    >
-   Sie können die [fertige CustomComponentImpl.java hier ansehen](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java).
+   >Sie können die [fertige CustomComponentImpl.java hier ansehen](https://github.com/adobe/aem-guides-wknd-spa/blob/Angular/custom-component-solution/core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/impl/CustomComponentImpl.java).
 
 ## Update der Angular-Komponente
 
