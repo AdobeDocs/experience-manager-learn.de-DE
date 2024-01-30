@@ -11,7 +11,7 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 377
-source-git-commit: 2aec84f0fbd34678a4e25200ae0cdc6396beca95
+source-git-commit: d178059f6f00228586e692465f7f437129bffaae
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 90%
@@ -97,7 +97,7 @@ Die Variable `$path`, die im Filter `_path` verwendet wird, erfordert den vollst
 `_assetTransform` definiert, wie `_dynamicUrl` erstellt wird, um die Ausgabedarstellung des bereitgestellten Bildes zu optimieren. Web-optimierte Bild-URLs können auch auf dem Client angepasst werden, indem die Abfrageparameter der URL geändert werden.
 
 | GraphQL-Parameter | Beschreibung | Erforderlich | GraphQL-Variablenwerte |
-|:---------|:----------|:-------------------------------|:--:|:--------------------------|
+|-------------------|------------------------------------------------------------------------------------------------------|----------|-------------------------------------------------------------|
 | `format` | Das Format des Bild-Assets. | ✔ | `GIF`, `PNG`, `PNG8`, `JPG`, `PJPG`, `BJPG`, `WEBP`, `WEBPLL`, `WEBPLY` |
 | `seoName` | Der Name des Dateisegments in der URL. Ohne Angabe wird der Bild-Asset-Name verwendet. | ✘ | Alphanumerisch, `-` oder `_` |
 | `crop` | Der aus dem Bild entnommene Zuschnittrahmen muss innerhalb der Bildgröße liegen. | ✘ | Positive Ganzzahlen, die einen Zuschnittbereich innerhalb der Grenzen der ursprünglichen Bildabmessungen definieren |
@@ -107,6 +107,7 @@ Die Variable `$path`, die im Filter `_path` verwendet wird, erfordert den vollst
 | `quality` | Die Bildqualität in Prozent der Originalqualität. | ✘ | 1–100 |
 | `width` | Die Breite des Ausgabebildes in Pixel. Wenn `size` bereitgestellt wird, wird `width` ignoriert. | ✘ | Positive Ganzzahl |
 | `preferWebP` | Wenn `true` und AEM das WebP-Format bereitstellen, falls der Browser dies unterstützt, unabhängig vom `format`. | ✘ | `true`, `false` |
+
 
 ## GraphQL-Antwort
 
