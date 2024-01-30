@@ -11,9 +11,9 @@ duration: 573
 last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '912'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Zu den wichtigsten Unterscheidungen AEM Eventing gehören:
 AEM Eventing bietet zahlreiche Vorteile für Systemarchitektur und Betriebseffizienz. Zu den wichtigsten Gründen für die Verwendung AEM Eventing gehören:
 
 - **Erstellen ereignisorientierter Architekturen**: Erleichtert die Erstellung lose gekoppelter Systeme, die unabhängig skaliert werden können und Ausfallsicherheit aufweisen.
-- **Geringer Code und niedrigere Betriebskosten**: Vermeidet Anpassungen in AEM, was zu Systemen führt, die einfacher zu verwalten und zu erweitern sind, wodurch Betriebskosten reduziert werden.
+- **Geringer Code und niedrigere Betriebskosten**: Vermeidet Anpassungen in AEM, was zu Systemen führt, die einfacher zu pflegen und zu erweitern sind, wodurch Betriebskosten reduziert werden.
 - **Vereinfachung der Kommunikation zwischen AEM und externen Systemen**: Beseitigt Punkt-zu-Punkt-Verbindungen, indem Adobe I/O-Ereignisse Nachrichten verwalten können, z. B. durch die Bestimmung, welche AEM Ereignisse für bestimmte Systeme oder Dienste bereitgestellt werden sollen.
 - **Höhere Dauerhaltbarkeit von Ereignissen**: Adobe I/O Events ist ein hochverfügbares und skalierbares System, das große Mengen von Ereignissen handhabt und diese zuverlässig an Abonnenten sendet.
 - **Parallelverarbeitung von Ereignissen**: Ermöglicht die gleichzeitige Bereitstellung von Ereignissen an mehrere Abonnenten, wodurch die verteilte Ereignisverarbeitung über verschiedene Systeme hinweg möglich ist.
@@ -83,7 +83,7 @@ Falls bereits aktiviert, lesen Sie [Aktivieren von AEM-Ereignissen in Ihrer AEM 
 
 Um AEM Ereignisse zu abonnieren, müssen Sie keinen Code in AEM schreiben, sondern eine [Adobe Developer-Konsole](https://developer.adobe.com/) -Projekt konfiguriert ist. Die Adobe Developer-Konsole ist ein Gateway zu Adobe-APIs, SDKs, Ereignissen, Runtime und App Builder.
 
-In diesem Fall wird eine _Projekt_ in der Adobe Developer-Konsole können Sie Ereignisse abonnieren, die von AEM as a Cloud Service Umgebungen ausgegeben werden, und die Ereignisbereitstellung für externe Systeme konfigurieren.
+In diesem Fall wird eine _Projekt_ in der Adobe Developer-Konsole können Sie Ereignisse abonnieren, die aus AEM as a Cloud Service Umgebung ausgegeben werden, und die Ereignisbereitstellung für externe Systeme konfigurieren.
 
 Weitere Informationen finden Sie unter [Abonnieren von AEM-Ereignissen in der Adobe Developer Console](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console).
 
@@ -92,7 +92,7 @@ Weitere Informationen finden Sie unter [Abonnieren von AEM-Ereignissen in der Ad
 Es gibt zwei Hauptmethoden für die Nutzung AEM Ereignisse: die _push_ und _abrufen_ -Methode.
 
 - **Push-Methode**: Bei diesem Ansatz wird der Ereignisverbraucher proaktiv von Adobe I/O-Ereignissen benachrichtigt, wenn ein Ereignis verfügbar wird. Zu den Integrationsoptionen gehören Webhooks, Adobe I/O Runtime und Amazon EventBridge.
-- **Pull-Methode**: Hier fragt der Ereignisverbraucher Adobe I/O-Ereignisse aktiv ab, um nach neuen Ereignissen zu suchen. Die primäre Integrationsoption für diese Methode ist die Adobe I/O Journaling API.
+- **Pull-Methode**: Hier fragt der Ereignisverbraucher Adobe I/O-Ereignisse aktiv ab, um nach neuen Ereignissen zu suchen. Die primäre Integrationsoption für diese Methode ist die Adobe Developer Journaling API.
 
 Weitere Informationen finden Sie unter [Verarbeitung von AEM-Ereignissen über Adobe I/O-Ereignisse](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#aem-events-processing-via-adobe-io).
 
@@ -101,7 +101,7 @@ Weitere Informationen finden Sie unter [Verarbeitung von AEM-Ereignissen über A
 <table>
   <tr>
     <td>
-        <a  href="./examples/webhook.md"><img alt="AEM Ereignisse in einem Webhook empfangen" src="./assets/examples/webhook/Eventing-webhook.png"/></a>
+        <a  href="./examples/webhook.md"><img alt="AEM Ereignisse in einem Webhook empfangen" src="./assets/examples/webhook/webhook-example.png"/></a>
         <div><strong><a href="./examples/webhook.md">AEM Ereignisse in einem Webhook empfangen</a></strong></div>
         <p>
           Verwenden Sie den von Adobe bereitgestellten Webhook, um AEM Ereignisse zu empfangen und die Ereignisdetails zu überprüfen.
@@ -115,4 +115,20 @@ Weitere Informationen finden Sie unter [Verarbeitung von AEM-Ereignissen über A
         </p>
       </td>
     </tr>
+  <tr>
+    <td>
+        <a  href="./examples/runtime-action.md"><img alt="Empfangen von AEM-Ereignissen bei Adobe I/O Runtime-Aktionen" src="./assets/examples/runtime-action/eventing-runtime.png"/></a>
+        <div><strong><a href="./examples/runtime-action.md">Empfangen von AEM-Ereignissen bei Adobe I/O Runtime-Aktionen</a></strong></div>
+        <p>
+          Erhalten Sie AEM Ereignisse und überprüfen Sie die Ereignisdetails.
+        </p>
+      </td>
+      <td>
+        <a  href="./examples/event-processing-using-runtime-action.md"><img alt="Verarbeitung AEM Ereignissen mithilfe der Adobe I/O Runtime-Aktion" src="./assets/examples/event-processing-using-runtime-action/event-processing.png"/></a>
+        <div><strong><a href="./examples/event-processing-using-runtime-action.md">Verarbeitung AEM Ereignissen mithilfe der Adobe I/O Runtime-Aktion</a></strong></div>
+        <p>
+          Erfahren Sie, wie Sie mit der Adobe I/O Runtime-Aktion empfangene AEM Ereignisse verarbeiten. Die Ereignisverarbeitung umfasst AEM Rückruf, die Persistenz der Ereignisdaten und die Anzeige in der SPA.
+        </p>
+      </td>
+  </tr>    
 </table>

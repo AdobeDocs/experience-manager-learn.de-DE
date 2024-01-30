@@ -8,10 +8,10 @@ role: Architect, Developer
 level: Beginner
 doc-type: Tutorial
 duration: 163
-last-substantial-update: 2023-12-07T00:00:00Z
+last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
@@ -22,6 +22,8 @@ ht-degree: 0%
 # Journalismus und AEM
 
 Erfahren Sie, wie Sie den ersten Satz von AEM-Ereignissen aus dem Protokoll abrufen und die Details zu den einzelnen Ereignissen durchsuchen können.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427052?quality=12&learn=on)
 
 Die Journalisierung ist eine Pull-Methode, um AEM Ereignisse zu nutzen, und ein Journal ist eine geordnete Liste von Ereignissen. Mit der Adobe I/O Events Journaling API können Sie die AEM-Ereignisse aus dem Protokoll abrufen und in Ihrer Anwendung verarbeiten. Dieser Ansatz ermöglicht es Ihnen, Ereignisse auf der Grundlage einer bestimmten Kadenz zu verwalten und sie effizient stapelweise zu verarbeiten. Siehe Abschnitt [Journalismus](https://developer.adobe.com/events/docs/guides/journaling_intro/) für ausführliche Einblicke, einschließlich wichtiger Aspekte wie Aufbewahrungsfristen, Paginierung und mehr.
 
