@@ -6,13 +6,11 @@ version: 6.4,6.5
 topic: Development
 role: Developer
 level: Intermediate
-exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
-last-substantial-update: 2020-07-07T00:00:00Z
-duration: 152
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '552'
-ht-degree: 100%
+last-substantial-update: 2024-01-29T00:00:00Z
+source-git-commit: 959683f23b7b04e315a5a68c13045e1f7973cf94
+workflow-type: tm+mt
+source-wordcount: '572'
+ht-degree: 78%
 
 ---
 
@@ -22,8 +20,8 @@ Verwenden der Output- und der Forms-Service-API in AEM Forms
 
 In diesem Artikel werden wir uns Folgendes ansehen:
 
-* Output-Dienst: In der Regel wird dieser Dienst verwendet, um XML-Daten mit einer XDP-Vorlage oder PDF zusammenzuführen, um eine reduzierte PDF-Datei zu generieren. Weitere Informationen hierzu finden Sie in diesem [Javadoc](https://helpx.adobe.com/de/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) für den Output-Dienst.
-* Forms-Dienst: Dies ist ein sehr vielseitiger Dienst, mit dem Sie Daten aus einer PDF-Datei exportieren und darin importieren können. Weitere Informationen hierzu finden Sie in diesem [Javadoc](https://developer.adobe.com/de/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) für den Forms-Service.
+* [Output-Dienst](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) - In der Regel wird dieser Dienst verwendet, um XML-Daten mit einer xdp-Vorlage oder PDF zusammenzuführen, um reduzierte PDF-Dateien zu generieren.
+* [FormsService](https://developer.adobe.com/de/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) - Dies ist ein sehr vielseitiger Dienst, mit dem Sie XDP als PDF rendern und Daten aus und in die PDF-Datei exportieren/importieren können.
 
 
 Mit dem folgenden Codesnippet werden Daten aus der PDF-Datei exportiert:
@@ -47,7 +45,7 @@ Zeile 6 exportiert die XML-Daten aus der PDF-Datei.
 
 **So testen Sie das Beispielpaket auf Ihrem System:**
 
-[Laden Sie das Paket herunter und installieren Sie es mit Package Manager.](assets/outputandformsservice.zip)
+[Laden Sie das Paket herunter und installieren Sie es mit Package Manager.](assets/using-output-and-form-service-api.zip)
 
 
 
@@ -61,6 +59,7 @@ Zeile 6 exportiert die XML-Daten aus der PDF-Datei.
 1. /content/AemFormsSamples/mergedata
 1. /content/AemFormsSamples/exportdata
 1. /content/AemFormsSamples/outputservice
+1. /content/AemFormsSamples/renderxdp
 1. Suchen Sie nach „Sling Referrer filter“.
 1. Aktivieren Sie das Kontrollkästchen „Leere zulassen“. (Diese Einstellung sollte nur zu Testzwecken verwendet werden.)
 Es gibt verschiedene Möglichkeiten, den Beispiel-Code zu testen. Am schnellsten und einfachsten lässt sich hier die Postman-App verwenden. Mit Postman können Sie POST-Anfragen an Ihren Server richten. Installieren Sie die Postman-App auf Ihrem System.
@@ -73,9 +72,9 @@ Navigieren Sie zur Registerkarte „Hauptteil“ und geben Sie die Anfrageparame
 ![Export](assets/postexport.png)
 Klicken Sie dann auf die Schaltfläche „Senden“.
 
-Das Paket enthält drei Beispiele. In den folgenden Absätzen wird erläutert, wann der Output-Dienst oder der Forms-Dienst verwendet werden soll. Außerdem werden die URL des Dienstes und die Eingabeparameter angegeben, die von jedem Dienst erwartet werden.
+Die Packung enthält 4 Proben. In den folgenden Absätzen wird erläutert, wann der Output-Dienst oder der Forms-Dienst verwendet werden soll. Außerdem werden die URL des Dienstes und die Eingabeparameter angegeben, die von jedem Dienst erwartet werden.
 
-## Zusammenführen von Daten und Reduzieren der Ausgabe
+## Verwenden von OutputService zum Zusammenführen von Daten mit der xdp-Vorlage
 
 * Verwenden des Output-Dienstes zum Zusammenführen von Daten mit dem XDP- oder PDF-Dokument, um eine reduzierte PDF-Datei zu generieren
 * **POST-URL**: http://localhost:4502/content/AemFormsSamples/outputservice.html
@@ -85,22 +84,34 @@ Das Paket enthält drei Beispiele. In den folgenden Absätzen wird erläutert, w
    * **xmlfile**: XML-Datendatei, die mit „xdp_or_pdf_file“ zusammengeführt wird.
    * **saveLocation**: Speicherort für das gerenderte Dokument auf Ihrem Dateisystem. Beispiel: „c:\\documents\\sample.pdf“.
 
-### Importieren von Daten in eine PDF-Datei
+### Verwenden der FormsService-API
 
-* Verwenden des Forms-Dienstes zum Importieren von Daten in eine PDF-Datei
+#### Daten importieren
+
+* Verwenden Sie FormsService importData , um Daten in eine PDF-Datei zu importieren
 * **POST-URL**: http://localhost:4502/content/AemFormsSamples/mergedata.html
+
 * **Anfrageparameter:**
 
    * **pdfile**: PDF-Datei, mit der Sie Daten zusammenführen möchten.
    * **xmlfile**: XML-Datendatei, die mit der PDF-Datei zusammengeführt wird.
    * **saveLocation**: Speicherort für das gerenderte Dokument auf Ihrem Dateisystem. Beispiel `c:\\outputsample.pdf`.
 
-**Exportieren von Daten aus der PDF-Datei**
-* Verwenden des Forms-Dienstes zum Exportieren von Daten aus einer PDF-Datei
-* **POST URL**: http://localhost:4502/content/AemFormsSamples/exportdata.html
+#### Daten exportieren
+
+* FormsService exportData API zum Exportieren von Daten aus einer PDF-Datei verwenden
+* **POST-URL** - http://localhost:4502/content/AemFormsSamples/exportdata.html
 * **Anfrageparameter:**
 
    * **pdfile**: PDF-Datei, aus der Sie Daten exportieren möchten.
    * **saveLocation**: Speicherort für die exportierten Daten auf Ihrem Dateisystem. Beispiel: „c:\\documents\\exporting_data.xml“.
 
-[Sie könnten diese Postman-Sammlung importieren, um die API zu testen.](assets/document-services-postman-collection.json)
+#### Render XDP
+
+* XDP-Vorlage als statisches/dynamisches PDF rendern
+* Verwenden der FormsService renderPDFForm-API zum Rendern der XDP-Vorlage als PDF
+* **POST-URL** - http://localhost:4502/content/AemFormsSamples/renderxdp?xdpName=f1040.xdp
+* Anforderungsparameter:
+   * xdpName: Name der xdp-Datei, die als pdf gerendert werden soll
+
+[Sie könnten diese Postman-Sammlung importieren, um die API zu testen.](assets/UsingDocumentServicesInAEMForms.postman_collection.json)
