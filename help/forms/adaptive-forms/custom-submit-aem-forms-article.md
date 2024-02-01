@@ -9,16 +9,21 @@ level: Experienced
 exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
 duration: 59
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '205'
-ht-degree: 100%
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
+workflow-type: tm+mt
+source-wordcount: '232'
+ht-degree: 88%
 
 ---
 
 # Erstellen einer benutzerdefinierten Übermittlungsaktion in AEM Forms {#writing-a-custom-submit-in-aem-forms}
 
 Eine schnelle und einfache Möglichkeit, um benutzerdefinierte Übermittlungsaktionen für adaptive Formulare zu erstellen.
+
+>[!NOTE]
+>Der Code in diesem Artikel funktioniert nicht mit auf Kernkomponenten basierenden adaptiven Formularen.
+>[Den entsprechenden Artikel für das auf Kernkomponenten basierende adaptive Formular finden Sie hier .](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=en)
+
 
 Dieser Artikel führt Sie durch die Schritte, die zum Erstellen einer benutzerdefinierten Übermittlungsaktion für adaptive Formulare erforderlich sind.
 

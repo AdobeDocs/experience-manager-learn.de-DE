@@ -10,17 +10,20 @@ last-substantial-update: 2023-10-23T00:00:00Z
 jira: KT-14238
 duration: 81
 exl-id: 77f93aad-0cab-4e52-b0fd-ae5af23a13d0
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 75%
+source-wordcount: '286'
+ht-degree: 59%
 
 ---
 
 # Abrufen von Daten aus dem Azure-Speicher
 
 In diesem Artikel erfahren Sie, wie Sie ein adaptives Formular mit den Daten ausfüllen, die im Azure-Speicher gespeichert sind.
-Es wird davon ausgegangen, dass Sie die Daten des adaptiven Formulars im Azure-Speicher gespeichert haben und jetzt Ihr adaptives Formular mit diesen Daten vorausfüllen möchten.
+Es wird davon ausgegangen, dass Sie die adaptiven Formulardaten im Azure-Speicher gespeichert haben und jetzt Ihr adaptives Formular mit diesen Daten vorab ausfüllen möchten.
+>[!NOTE]
+>Der Code in diesem Artikel funktioniert nicht mit auf Kernkomponenten basierenden adaptiven Formularen.[Den entsprechenden Artikel für das auf Kernkomponenten basierende adaptive Formular finden Sie hier .](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
+
 
 ## Erstellen einer GET-Anfrage
 
@@ -83,7 +86,7 @@ if(guid!=null&&!guid.isEmpty())
 
 * [Importieren Sie das adaptive Beispielformular.](./assets/bank-account-sample-form.zip)
 
-* Geben Sie die entsprechenden Werte in der Azure Portal-Konfiguration mithilfe der OSGi-Konfigurationskonsole an.
+* [Geben Sie die entsprechenden Werte in der Azure Portal-Konfiguration mithilfe der OSGi-Konfigurationskonsole an.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
 
 * [Zeigen Sie das Bankkonto-Formular in der Vorschau an und senden Sie es ab](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled).
 

@@ -7,10 +7,10 @@ topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2024-01-29T00:00:00Z
-source-git-commit: 959683f23b7b04e315a5a68c13045e1f7973cf94
+source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
 workflow-type: tm+mt
-source-wordcount: '572'
-ht-degree: 78%
+source-wordcount: '559'
+ht-degree: 65%
 
 ---
 
@@ -62,15 +62,17 @@ Zeile 6 exportiert die XML-Daten aus der PDF-Datei.
 1. /content/AemFormsSamples/renderxdp
 1. Suchen Sie nach „Sling Referrer filter“.
 1. Aktivieren Sie das Kontrollkästchen „Leere zulassen“. (Diese Einstellung sollte nur zu Testzwecken verwendet werden.)
-Es gibt verschiedene Möglichkeiten, den Beispiel-Code zu testen. Am schnellsten und einfachsten lässt sich hier die Postman-App verwenden. Mit Postman können Sie POST-Anfragen an Ihren Server richten. Installieren Sie die Postman-App auf Ihrem System.
-Starten Sie die App und geben Sie die folgende URL ein, um die API für den Datenexport zu testen.
 
-Stellen Sie sicher, dass Sie „POST“ aus der Dropdown-Liste ausgewählt haben: 
-http://localhost:4502/content/AemFormsSamples/exportdata.html 
-Stellen Sie sicher, dass Sie „Autorisierung“ als Standardautorisierung angeben. Geben Sie den Benutzernamen und das Passwort für den AEM-Server an.
-Navigieren Sie zur Registerkarte „Hauptteil“ und geben Sie die Anfrageparameter an, wie in der Abbildung unten dargestellt.
-![Export](assets/postexport.png)
-Klicken Sie dann auf die Schaltfläche „Senden“.
+## Testen der Proben
+
+Es gibt verschiedene Möglichkeiten, den Beispiel-Code zu testen. Am schnellsten und einfachsten lässt sich hier die Postman-App verwenden. Mit Postman können Sie POST-Anfragen an Ihren Server richten.
+
+* Installieren Sie das Postman-Programm auf Ihrem System.
+* Starten Sie die App und geben Sie die entsprechende URL ein.
+* Vergewissern Sie sich, dass Sie in der Dropdownliste &quot;POST&quot;ausgewählt haben.
+* Stellen Sie sicher, dass Sie &quot;Authorization&quot;als &quot;Basic Auth&quot;angeben. Geben Sie den Benutzernamen und das Kennwort des AEM-Servers an
+* Angeben der Anforderungsparameter auf der Registerkarte &quot;Hauptteil&quot;
+* Klicken Sie auf die Schaltfläche Senden .
 
 Die Packung enthält 4 Proben. In den folgenden Absätzen wird erläutert, wann der Output-Dienst oder der Forms-Dienst verwendet werden soll. Außerdem werden die URL des Dienstes und die Eingabeparameter angegeben, die von jedem Dienst erwartet werden.
 
