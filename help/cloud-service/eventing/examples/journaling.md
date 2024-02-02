@@ -11,9 +11,9 @@ duration: 163
 last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
-source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
+source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -38,6 +38,10 @@ Um dieses Tutorial abzuschließen, benötigen Sie:
 - AEM as a Cloud Service Umgebung mit [AEM Eventing aktiviert](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment).
 
 - [Adobe Developer Console-Projekt für AEM Ereignisse konfiguriert](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console).
+
+>[!IMPORTANT]
+>
+>AEM as a Cloud Service Eventing ist nur für registrierte Benutzer im Vorab-Release-Modus verfügbar. Wenden Sie sich an AEM Kontakt , um Eventing in Ihrer AEM as a Cloud Service Umgebung zu aktivieren. [AEM-Eventing-Team](mailto:grp-aem-events@adobe.com).
 
 ## Zugreifen auf Webanwendungen
 
