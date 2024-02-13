@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 85e1ee33626d27f1b6c07bc631a7c1068930f827
+source-git-commit: 678bda0ea6f6c727170c596e9d3d5f0687ec830f
 workflow-type: tm+mt
-source-wordcount: '1119'
+source-wordcount: '1121'
 ht-degree: 92%
 
 ---
@@ -52,7 +52,6 @@ ht-degree: 92%
       + [Kontinuierliche Integration](./cloud-manager/devops/continuous-integration.md)
       + [Analysieren von Testergebnissen](./cloud-manager/devops/analyze-test-results.md)
       + [Dispatcher-Konfigurationen](./cloud-manager/devops/dispatcher-configurations.md)
-      + [Cloud Manager-APIs](./cloud-manager/devops/cloud-manager-apis.md)
 + Einrichtung der lokalen Entwicklungsumgebung {#local-development-environment-set-up}
    + [Übersicht](./local-development-environment/overview.md)
    + [Entwicklungs-Tools](./local-development-environment/development-tools.md)
@@ -171,6 +170,7 @@ ht-degree: 92%
       + [Journaling - Laden AEM Ereignissen](./eventing/examples/journaling.md)
       + [Adobe I/O Runtime-Aktion - AEM empfangen](./eventing/examples/runtime-action.md)
       + [Adobe I/O Runtime-Aktion - Verarbeiten AEM Ereignisse](./eventing/examples/event-processing-using-runtime-action.md)
+      + [AEM Assets Events - PIM-Integration](./eventing/examples/assets-pim-integration.md)
 + Migration {#migration}
    + [Content Transfer Tool](./migration/content-transfer-tool.md)
    + [Massenimport von Assets](./migration/bulk-import.md)
