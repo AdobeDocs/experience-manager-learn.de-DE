@@ -11,9 +11,9 @@ duration: 0
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: f679b4e5e97c9ffba2f04fceaf554e8a231ddfa6
+source-git-commit: 6ef17e61190f58942dcf9345b2ea660d972a8f7e
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1116'
 ht-degree: 1%
 
 ---
@@ -21,15 +21,19 @@ ht-degree: 1%
 
 # AEM Assets-Ereignisse für die PIM-Integration
 
-** HINWEIS: Dieses Tutorial verwendet experimentelle AEM as a Cloud Service APIs.  Um Zugriff auf diese APIs zu erhalten, müssen Sie eine Softwarevereinbarung vor der Veröffentlichung akzeptieren und diese APIs manuell durch Adobe Engineering für Ihre Umgebung aktivieren lassen.  Wenden Sie sich an den Adobe-Support, um Zugriff anzufordern. **
+>[!IMPORTANT]
+>
+>In diesem Tutorial werden experimentelle AEM as a Cloud Service APIs verwendet. Um Zugriff auf diese APIs zu erhalten, müssen Sie eine Softwarevereinbarung vor der Veröffentlichung akzeptieren und diese APIs manuell durch Adobe Engineering für Ihre Umgebung aktivieren lassen. Um Zugriff anzufordern, wenden Sie sich an den Adobe-Support.
 
-Erfahren Sie, wie Sie AEM Assets mit einem Drittanbietersystem integrieren, z. B. einem Produktinformationsmanagement (PIM) oder einem Produktinformationsmanagement (PLM), um Asset-Metadaten zu aktualisieren. **Verwenden nativer AEM I/O-Ereignisse**. Nach Erhalt eines AEM Assets-Ereignisses können die Asset-Metadaten je nach Geschäftsanforderungen in AEM, im PIM oder in beiden Systemen aktualisiert werden. In diesem Beispiel werden wir jedoch zeigen, wie die Asset-Metadaten in AEM aktualisiert werden.
+Erfahren Sie, wie Sie AEM Assets mit einem Drittanbietersystem integrieren, z. B. einem Produktinformationsmanagement (PIM) oder einem Produktinformationsmanagement (PLM), um Asset-Metadaten zu aktualisieren. **Verwenden nativer AEM I/O-Ereignisse**. Nach Erhalt eines AEM Assets-Ereignisses können die Asset-Metadaten je nach Geschäftsanforderungen in AEM, im PIM oder in beiden Systemen aktualisiert werden. Dieses Beispiel zeigt jedoch, wie die Asset-Metadaten in AEM aktualisiert werden.
 
-So führen Sie die Asset-Metadatenaktualisierung aus **Code außerhalb von AEM**, nutzen wir [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/), eine Server-lose Plattform. Der Ereignisverarbeitungsablauf sieht wie folgt aus:
+So führen Sie die Asset-Metadatenaktualisierung aus **Code außerhalb von AEM**, die [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/), wird eine Server-lose Plattform verwendet.
+
+Der Ereignisverarbeitungsablauf sieht wie folgt aus:
 
 ![AEM Assets-Ereignisse für die PIM-Integration](../assets/examples/assets-pim-integration/aem-assets-pim-integration.png)
 
-1. Die Trigger des AEM-Autorendienstes und _Asset-Verarbeitung abgeschlossen_ -Ereignis ein, wenn ein Asset-Upload abgeschlossen und alle Asset-Verarbeitungsaktivitäten abgeschlossen sind.  Warten auf Abschluss der Verarbeitung stellt sicher, dass die vordefinierte Verarbeitung, z. B. die Metadatenextraktion, abgeschlossen ist, bevor wir fortfahren.
+1. Die Trigger des AEM-Autorendienstes und _Asset-Verarbeitung abgeschlossen_ -Ereignis ein, wenn ein Asset-Upload abgeschlossen und alle Asset-Verarbeitungsaktivitäten abgeschlossen sind. Warten auf Abschluss der Verarbeitung stellt sicher, dass die vordefinierte Verarbeitung, z. B. die Metadatenextraktion, abgeschlossen ist.
 1. Das Ereignis wird an die [Adobe I/O-Ereignisse](https://developer.adobe.com/events/) -Dienst.
 1. Der Adobe I/O Events-Dienst übergibt das Ereignis an die [Adobe I/O Runtime-Aktion](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/?lang=de) zur Verarbeitung.
 1. Die Adobe I/O Runtime-Aktion ruft die API des PIM-Systems auf, um zusätzliche Metadaten wie SKU, Lieferanteninformationen oder andere Details abzurufen.
@@ -54,7 +58,7 @@ Die allgemeinen Entwicklungsschritte sind:
 1. Konfigurieren des Projekts in ADC
 1. Konfigurieren Sie den AEM Author-Dienst, um die Kommunikation mit ADC-Projekten zu aktivieren
 1. Entwickeln einer Laufzeitaktion, die das Abrufen und Aktualisieren von Metadaten orchestriert
-1. Hochladen eines Assets in den AEM-Autorendienst und Überprüfen, ob die Metadaten aktualisiert wurden
+1. Laden Sie ein Asset in den AEM-Autorendienst hoch und überprüfen Sie, ob die Metadaten aktualisiert wurden.
 
 Weitere Informationen zu den Schritten 1-2 finden Sie im Abschnitt [Adobe I/O Runtime-Aktionen und AEM](./runtime-action.md#) Beispiel und für die Schritte 3 bis 6 finden Sie in den folgenden Abschnitten.
 
@@ -106,7 +110,7 @@ Um das Abrufen und Aktualisieren der Metadaten durchzuführen, aktualisieren Sie
 
 Siehe Anhang [WKND-Assets-PIM-Integration.zip](../assets/examples/assets-pim-integration/WKND-Assets-PIM-Integration.zip) -Datei für den vollständigen Code und im folgenden Abschnitt werden die Schlüsseldateien hervorgehoben.
 
-- Die `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` -Datei spuckt den PIM-API-Aufruf, um zusätzliche Metadaten wie SKU und Anbietername abzurufen.  Diese Datei wird für Demozwecke verwendet.  Sobald der durchgängige Fluss funktioniert, ersetzen Sie diese Funktion durch einen Aufruf an Ihr echtes PIM-System, um Metadaten für das Asset abzurufen.
+- Die `src/dx-excshell-1/actions/generic/mockPIMCommunicator.js` -Datei spuckt den PIM-API-Aufruf, um zusätzliche Metadaten wie SKU und Anbietername abzurufen. Diese Datei wird für Demozwecke verwendet. Sobald der durchgängige Fluss funktioniert, ersetzen Sie diese Funktion durch einen Aufruf an Ihr echtes PIM-System, um Metadaten für das Asset abzurufen.
 
   ```javascript
   /**
@@ -277,7 +281,7 @@ $ aio app deploy
 
 Gehen Sie wie folgt vor, um die AEM Assets- und PIM-Integration zu überprüfen:
 
-- Informationen zum Anzeigen der von PIM bereitgestellten nachgeahmten Metadaten wie SKU und Lieferantenname finden Sie unter Erstellen eines Metadatenschemas in AEM Assets . [Metadatenschemata](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/metadata-schemas.html) , das die Eigenschaften der SKU und der Metadaten des Anbieters anzeigt.
+- Informationen zum Anzeigen der von PIM bereitgestellten nachgeahmten Metadaten wie SKU und Lieferantenname finden Sie unter Erstellen eines Metadatenschemas in AEM Assets . [Metadatenschema](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/configuring/metadata-schemas.html) , das die Eigenschaften der SKU und der Metadaten des Anbieters anzeigt.
 
 - Laden Sie ein Asset in AEM Autorendienst hoch und überprüfen Sie die Metadaten-Aktualisierung.
 
