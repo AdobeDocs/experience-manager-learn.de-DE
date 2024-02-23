@@ -10,9 +10,9 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7be6b3f9-cd53-41bc-918d-5ab9b633ffb3
 duration: 266
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '825'
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
+workflow-type: tm+mt
+source-wordcount: '824'
 ht-degree: 100%
 
 ---
@@ -309,9 +309,8 @@ $ cd /etc/httpd/conf.dispatcher.d/enabled_farms/; ln -s ../available_farms/400_w
 
 Nun laden wir einfach den Webserver-Dienst neu und nutzen unsere neue Domain.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-
-Wir haben nur die Teile geändert, für die dies erforderlich gewesen ist, und die include-Elemente sowie den Code aus den Basiskonfigurationsdateien genutzt. Wir müssen nur das Element beschreiben, das wir ändern müssen. Das macht die Arbeit deutlich einfacher und bedeutet weniger Code, der gepflegt werden muss.
-</div>
+>[!NOTE]
+>
+>Wir haben nur die Teile geändert, für die dies erforderlich gewesen ist, und die include-Elemente sowie den Code aus den Basiskonfigurationsdateien genutzt. Wir müssen nur das Element beschreiben, das wir ändern müssen. Das macht die Arbeit deutlich einfacher und bedeutet weniger Code, der gepflegt werden muss.
 
 [Weiter -> Dispatcher-Konsistenzprüfung](./health-check.md)

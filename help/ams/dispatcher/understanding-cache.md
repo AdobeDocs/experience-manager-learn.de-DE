@@ -9,10 +9,10 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 66ce0977-1b0d-4a63-a738-8a2021cf0bd5
 duration: 491
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '1716'
-ht-degree: 100%
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
+workflow-type: tm+mt
+source-wordcount: '1708'
+ht-degree: 98%
 
 ---
 
@@ -35,12 +35,11 @@ Wir verwenden die folgenden standardmäßigen Cache-Verzeichnisse in unseren Bas
 
 Jede Anfrage, die den Dispatcher durchläuft, folgt den konfigurierten Regeln, um eine lokal zwischengespeicherte Version beizubehalten und so auf geeignete Elemente reagieren zu können.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-
-Wir halten die veröffentlichte Workload absichtlich von der Autoren-Workload getrennt, da Apache beim Suchen nach einer Datei im DocumentRoot nicht weiß, von welcher AEM-Instanz sie stammt. Selbst wenn also der Cache in der Autoren-Farm deaktiviert ist, werden etwaige vorhandene Dateien aus dem Cache bereitgestellt, wenn der autorenseitige DocumentRoot mit dem Publisher übereinstimmt. Das bedeutet, dass Sie Autorendateien aus dem veröffentlichten Cache bereitstellen. Ihre Besucherinnen und Besucher werden dadurch leider mit einem wirklich unschönen Mix-Match-Erlebnis konfrontiert.
-
-Separate DocumentRoot-Verzeichnisse für verschiedene veröffentlichte Inhalte zu haben, ist ebenfalls keine gute Idee. Sie müssen dann mehrere erneut zwischengespeicherte Elemente erstellen, die sich zwischen Sites wie Clientlibs nicht unterscheiden, und für jeden von Ihnen eingerichteten DocumentRoot einen Replikations-Flush-Agenten konfigurieren. Mit jeder Seitenaktivierung erhöht sich so der Flush-Aufwand. Verlassen Sie sich auf den Namespace von Dateien und deren vollständig zwischengespeicherte Pfade, und vermeiden Sie mehrere DocumentRoots für veröffentlichte Sites.
-</div>
+>[!NOTE]
+>
+>Wir halten die veröffentlichte Workload absichtlich von der Autoren-Workload getrennt, da Apache beim Suchen nach einer Datei im DocumentRoot nicht weiß, von welcher AEM-Instanz sie stammt. Selbst wenn also der Cache in der Autoren-Farm deaktiviert ist, werden etwaige vorhandene Dateien aus dem Cache bereitgestellt, wenn der autorenseitige DocumentRoot mit dem Publisher übereinstimmt. Das bedeutet, dass Sie Autorendateien aus dem veröffentlichten Cache bereitstellen. Ihre Besucherinnen und Besucher werden dadurch leider mit einem wirklich unschönen Mix-Match-Erlebnis konfrontiert.
+>
+>Separate DocumentRoot-Verzeichnisse für verschiedene veröffentlichte Inhalte zu haben, ist ebenfalls keine gute Idee. Sie müssen dann mehrere erneut zwischengespeicherte Elemente erstellen, die sich zwischen Sites wie Clientlibs nicht unterscheiden, und für jeden von Ihnen eingerichteten DocumentRoot einen Replikations-Flush-Agenten konfigurieren. Mit jeder Seitenaktivierung erhöht sich so der Flush-Aufwand. Verlassen Sie sich auf den Namespace von Dateien und deren vollständig zwischengespeicherte Pfade, und vermeiden Sie mehrere DocumentRoots für veröffentlichte Sites.
 
 ## Konfigurationsdateien
 
@@ -95,10 +94,9 @@ Das ist ein Basis-Autorenabschnitt `/cache {` unserer Autoren-Farm-Datei:
 
 Wichtig ist hier, dass `/docroot` auf das autorenbezogene Cache-Verzeichnis festgelegt ist.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-
-Stellen Sie sicher, dass `DocumentRoot` in der Autorendatei `.vhost` mit dem Farm-Parameter `/docroot` übereinstimmt.
-</div>
+>[!NOTE]
+>
+>Stellen Sie sicher, dass `DocumentRoot` in der Autorendatei `.vhost` mit dem Farm-Parameter `/docroot` übereinstimmt.
 
 Die include-Anweisung der Cache-Regeln enthält die Datei `/etc/httpd/conf.dispatcher.d/cache/ams_author_cache.any` mit den folgenden Regeln:
 
@@ -136,20 +134,17 @@ Die include-Anweisung der Cache-Regeln enthält die Datei `/etc/httpd/conf.dispa
 In einem Autorenszenario ändert sich der Inhalt ständig, und dies ist gewollt. Sie sollten nur die Elemente zwischenspeichern, die sich nicht häufig ändern.
 Es gibt Regeln zum Zwischenspeichern von `/libs`, weil diese zur AEM-Basisinstallation gehören und so lange geändert werden, bis Sie ein Service Pack, ein Cumulative Fix Pack, ein Upgrade oder einen Hotfix installiert haben. Das Zwischenspeichern dieser Elemente ist also sehr sinnvoll und bietet wirklich große Vorteile für das Autorenerlebnis von Endbenutzenden, die die Site nutzen.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-
-Denken Sie daran, dass diese Regeln auch zum Zwischenspeichern von <b>`/apps`</b>, dem Speicherort von benutzerdefiniertem Anwendungs-Code, führen. Falls Sie Ihren Code in dieser Instanz entwickeln, wird sich dies als überaus verwirrend erweisen, wenn Sie Ihre Datei speichern und nicht sehen, ob der Code sich in der Benutzeroberfläche widerspiegelt, da eine zwischengespeicherte Kopie bereitgestellt wird. Die Absicht hier: Wenn Sie Ihren Code in AEM implementieren, würde auch dies nur selten geschehen, und es sollte zu Ihren Bereitstellungsschritten gehören, den Autoren-Cache zu löschen. Auch hier ist der Vorteil enorm, sodass Ihr zwischenspeicherbarer Code für die Endbenutzenden schneller ausgeführt werden kann.
-</div>
-
+>[!NOTE]
+>
+>Denken Sie daran, dass diese Regeln auch zum Zwischenspeichern von <b>`/apps`</b>, dem Speicherort von benutzerdefiniertem Anwendungs-Code, führen. Falls Sie Ihren Code in dieser Instanz entwickeln, wird sich dies als überaus verwirrend erweisen, wenn Sie Ihre Datei speichern und nicht sehen, ob der Code sich in der Benutzeroberfläche widerspiegelt, da eine zwischengespeicherte Kopie bereitgestellt wird. Die Absicht hier: Wenn Sie Ihren Code in AEM implementieren, würde auch dies nur selten geschehen, und es sollte zu Ihren Bereitstellungsschritten gehören, den Autoren-Cache zu löschen. Auch hier ist der Vorteil enorm, sodass Ihr zwischenspeicherbarer Code für die Endbenutzenden schneller ausgeführt werden kann.
 
 ## ServeOnStale (auch bekannt als Serve on Stale/SOS)
 
 Dies ist eine der herausragenden Funktionen des Dispatchers. Wenn der Publisher unter Belastung steht oder nicht mehr reagiert, wird normalerweise der HTTP-Antwort-Code 502 oder 503 ausgegeben. Kommt es dazu und ist diese Funktion aktiviert, wird der Dispatcher angewiesen, nach Kräften weiterhin alle noch zwischengespeicherten Inhalte bereitzustellen, selbst wenn es sich nicht um eine neue Kopie handelt. Es ist besser, etwas bereitzustellen, sofern vorhanden, statt nur eine Fehlermeldung ohne Funktionalität anzuzeigen.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-
-Beachten Sie, dass diese Funktion nicht ausgelöst wird, wenn der Renderer des Publishers eine Socket-Zeitüberschreitung oder eine 500-Fehlermeldung ausgibt. Wenn AEM einfach unerreichbar ist, bewirkt diese Funktion nichts.
-</div>
+>[!NOTE]
+>
+>Beachten Sie, dass diese Funktion nicht ausgelöst wird, wenn der Renderer des Publishers eine Socket-Zeitüberschreitung oder eine 500-Fehlermeldung ausgibt. Wenn AEM einfach unerreichbar ist, bewirkt diese Funktion nichts.
 
 Diese Einstellung kann in jeder Farm festgelegt werden, es ist jedoch nur sinnvoll, sie auf die Farm-Dateien im Veröffentlichungsmodus anzuwenden. Im Folgenden finden Sie ein Syntaxbeispiel der Funktion, die in einer Farm-Datei aktiviert ist:
 
@@ -160,11 +155,9 @@ Diese Einstellung kann in jeder Farm festgelegt werden, es ist jedoch nur sinnvo
 
 ## Zwischenspeichern von Seiten mit Abfrageparametern/Argumenten
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-
-Eine der normalen Verhaltensweisen des Dispatcher-Moduls besteht darin, dass bei einer Anfrage mit einem Abfrageparameter im URI (in der Regel `/content/page.html?myquery=value`) das Zwischenspeichern der Datei übersprungen und direkt zur AEM-Instanz gewechselt wird. Es betrachtet diese Anfrage als eine dynamische Seite, die nicht zwischengespeichert werden sollte. Dies kann sich negativ auf die Cache-Effizienz auswirken.
-</div>
-<br/>
+>[!NOTE]
+>
+>Eine der normalen Verhaltensweisen des Dispatcher-Moduls besteht darin, dass bei einer Anfrage mit einem Abfrageparameter im URI (in der Regel `/content/page.html?myquery=value`) das Zwischenspeichern der Datei übersprungen und direkt zur AEM-Instanz gewechselt wird. Es betrachtet diese Anfrage als eine dynamische Seite, die nicht zwischengespeichert werden sollte. Dies kann sich negativ auf die Cache-Effizienz auswirken.
 
 In diesem [Artikel](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner) wird gezeigt, wie wichtige Abfrageparameter die Leistung Ihrer Website beeinflussen können.
 
@@ -172,7 +165,7 @@ Standardmäßig sollten Sie die `ignoreUrlParams`-Regeln so einstellen, dass sie
 
 Hier ist ein Beispiel, bei dem jemand einen Deep-Link-Referenzmechanismus für soziale Medien erstellt hat, der die Argumentreferenz im URI verwendet, um zu erfahren, woher die Person stammt.
 
-<b>Ignorierbares Beispiel:</b>
+*Ignorierbares Beispiel:*
 
 - https://www.we-retail.com/home.html?reference=android
 - https://www.we-retail.com/home.html?reference=facebook
@@ -253,11 +246,9 @@ Beispiel:
 
 Seiten, die Abfrageparameter über JavaScript verwenden, funktionieren weiterhin vollständig, wobei die Parameter in dieser Einstellung ignoriert werden. Dies passiert, weil sie die HTML-Datei im Ruhezustand nicht ändern. Sie verwenden Javascript, um die Domain des Browsers in Echtzeit auf dem lokalen Browser zu aktualisieren. Wenn Sie also die Abfrageparameter mit JavaScript verwenden, ist es sehr wahrscheinlich, dass Sie diesen Parameter für die Seitenzwischenspeicherung ignorieren können. Lassen Sie diese Seite zwischenspeichern und genießen Sie die Leistungssteigerung!
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-
-Diese Seiten im Auge zu behalten, erfordert zwar einen gewissen Aufwand, doch er lohnt sich im Hinblick auf den Leistungsgewinn. Sie können Ihr CSE bitten, einen Bericht über den Traffic Ihrer Website zu erstellen, um eine Liste aller Seiten zu erhalten, die in den letzten 90 Tagen Abfrageparameter verwendet haben. So können Sie analysieren und sicherstellen, dass Sie wissen, welche Seiten Sie sich ansehen und welche Abfrageparameter Sie nicht ignorieren sollten.
-</div>
-<br/>
+>[!NOTE]
+>
+>Diese Seiten im Auge zu behalten, erfordert zwar einen gewissen Aufwand, doch er lohnt sich im Hinblick auf den Leistungsgewinn. Sie können Ihr CSE bitten, einen Bericht über den Traffic Ihrer Website zu erstellen, um eine Liste aller Seiten zu erhalten, die in den letzten 90 Tagen Abfrageparameter verwendet haben. So können Sie analysieren und sicherstellen, dass Sie wissen, welche Seiten Sie sich ansehen und welche Abfrageparameter Sie nicht ignorieren sollten.
 
 ## Zwischenspeichern von Antwort-Headern
 
@@ -289,11 +280,9 @@ Im Folgenden finden Sie ein Beispiel für eine Farm mit Angabe der Header, die z
 
 Im Beispiel wurde AEM so konfiguriert, dass Header bereitgestellt werden, nach denen das CDN sucht, um zu wissen, wann der Cache invalidiert werden muss. Das bedeutet nun, AEM kann ordnungsgemäß bestimmen, welche Dateien basierend auf Headern invalidiert werden.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-
-Denken Sie daran, dass Sie keine regulären Ausdrücke bzw. keinen glob-Abgleich verwenden können. Es ist eine Liste der zwischenzuspeichernden literal-Header. Fügen Sie nur eine Liste der literal-Header ein, die zwischengespeichert werden sollen.
-</div>
-
+>[!NOTE]
+>
+>Denken Sie daran, dass Sie keine regulären Ausdrücke bzw. keinen glob-Abgleich verwenden können. Es ist eine Liste der zwischenzuspeichernden literal-Header. Fügen Sie nur eine Liste der literal-Header ein, die zwischengespeichert werden sollen.
 
 ## Nachfrist für die automatische Invalidierung
 
@@ -325,9 +314,9 @@ Im Folgenden finden Sie ein Beispiel der Funktion, die in der Farm-Konfiguration
     /enableTTL "1"
 ```
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-Denken Sie daran, dass AEM trotzdem zum Senden von TTL-Headern konfiguriert werden muss, damit sie vom Dispatcher berücksichtigt werden. Durch Umschalten dieser Funktion weiß der Dispatcher lediglich, dass Dateien entfernt werden sollen, für die AEM Cache-Kontroll-Header gesendet hat. Wenn keine TTL-Header von AEM gesendet werden, führt der Dispatcher hier keine besonderen Aktionen durch.
-</div>
+>[!NOTE]
+>
+>Beachten Sie, dass AEM weiterhin so konfiguriert werden muss, dass TTL-Header gesendet werden, damit der Dispatcher sie berücksichtigt. Durch Umschalten dieser Funktion weiß der Dispatcher lediglich, dass Dateien entfernt werden sollen, für die AEM Cache-Kontroll-Header gesendet hat. Wenn keine TTL-Header von AEM gesendet werden, führt der Dispatcher hier keine besonderen Aktionen durch.
 
 ## Cache-Filterregeln
 

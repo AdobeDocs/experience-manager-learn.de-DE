@@ -10,10 +10,10 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
 duration: 478
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
+workflow-type: tm+mt
 source-wordcount: '1688'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -34,7 +34,7 @@ Für den Apache-Webserver ist die Dateierweiterung einer Datei nicht von Belang,
 | Datei | Dateiziel | Beschreibung |
 | ---- | ---------------- | ----------- |
 | DATEINAME`.conf` | `/etc/httpd/conf.d/` | Eine standardmäßige Enterprise Linux-Installation verwendet diese Dateierweiterung und den include-Ordner, um in httpd.conf deklarierte Einstellungen außer Kraft zu setzen und Ihnen das Hinzufügen zusätzlicher Funktionen auf globaler Ebene in Apache zu ermöglichen. |
-| DATEINAME`.vhost` | Bereitgestellt: `/etc/httpd/conf.d/available_vhosts/`<br>Aktiv: `/etc/httpd/conf.d/enabled_vhosts/`<br/><br/><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b> .vhost-Dateien dürfen nicht in den Ordner „enabled_vhosts“ kopiert werden. Verwenden Sie stattdessen Symlinks zu einem relativen Pfad zur Datei „available_vhosts/\*.vhost“.</div></u><br><br> | \*.vhost-Dateien („vhost“ steht für virtueller Host) sind `<VirtualHosts>`-Einträge, um Host-Namen zu entsprechen und es Apache zu ermöglichen, den Traffic zu der jeweiligen Domain mit verschiedenen Regeln zu verarbeiten. Aus der `.vhost`-Datei werden andere Dateien wie `rewrites`, `whitelisting`, `etc` übernommen. |
+| DATEINAME`.vhost` | Gestaffelt: `/etc/httpd/conf.d/available_vhosts/`<br>Aktiv: `/etc/httpd/conf.d/enabled_vhosts/`<br/><br/><b>Hinweis:</b> *.vhost-Dateien werden nicht in den Ordner enabled_vhosts kopiert, sondern verwenden Symlinks zu einem relativen Pfad zur Datei available_vhosts/\*.vhost</u><br><br> | \*.vhost-Dateien („vhost“ steht für virtueller Host) sind `<VirtualHosts>`-Einträge, um Host-Namen zu entsprechen und es Apache zu ermöglichen, den Traffic zu der jeweiligen Domain mit verschiedenen Regeln zu verarbeiten. Aus der `.vhost`-Datei werden andere Dateien wie `rewrites`, `whitelisting`, `etc` übernommen. |
 | DATEINAME`_rewrite.rules` | `/etc/httpd/conf.d/rewrites/` | `*_rewrite.rules`-Dateien speichern `mod_rewrite`-Regeln, die explizit von einer `vhost`-Datei übernommen und genutzt werden sollen. |
 | DATEINAME`_whitelist.rules` | `/etc/httpd/conf.d/whitelists/` | `*_ipwhitelist.rules`-Dateien werden aus den Dateien `*.vhost` einbezogen. Sie enthalten reguläre IP-Ausdrücke oder erlauben es Ablehnungsregeln, IP-Zulassungsauflistungen zuzulassen. Wenn Sie die Anzeige eines virtuellen Hosts auf der Basis von IP-Adressen einschränken möchten, generieren Sie eine dieser Dateien und schließen Sie sie über Ihre `*.vhost`-Datei ein. |
 
@@ -43,7 +43,7 @@ Für den Apache-Webserver ist die Dateierweiterung einer Datei nicht von Belang,
 | Datei | Dateiziel | Beschreibung |
 | --- | --- | --- |
 | DATEINAME`.any` | `/etc/httpd/conf.dispatcher.d/` | Das AEM Dispatcher-Apache-Modul bezieht seine Einstellungen aus `*.any`-Dateien. Die standardmäßige übergeordnete include-Datei ist `conf.dispatcher.d/dispatcher.any`. |
-| DATEINAME`_farm.any` | Bereitgestellt: `/etc/httpd/conf.dispatcher.d/available_farms/`<br>Aktiv: `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b> Diese Farm-Dateien dürfen nicht in den Ordner `enabled_farms` kopiert werden. Verwenden Sie stattdessen `symlinks` zu einem relativen Pfad zur Datei `available_farms/*_farm.any`. </div> <br/>`*_farm.any`-Dateien werden aus der Datei `conf.dispatcher.d/dispatcher.any` einbezogen. Diese übergeordneten Farm-Dateien dienen zur Steuerung des Modulverhaltens für jeden Render- oder Website-Typ. Dateien werden im Verzeichnis `available_farms` erstellt und mit einem `symlink` im Verzeichnis `enabled_farms` aktiviert. <br/>Sie werden automatisch anhand des Namens aus der Datei `dispatcher.any` einbezogen.<br/><b>Grundlegende</b> Farm-Dateien beginnen mit `000_`, um sicherzustellen, dass sie zuerst geladen werden.<br><b>Benutzerdefinierte</b> Farm-Dateien sollten danach geladen werden, indem ihr Zahlenschema bei `100_` anfängt, um das richtige Einschlussverhalten sicherzustellen. |
+| DATEINAME`_farm.any` | Gestaffelt: `/etc/httpd/conf.dispatcher.d/available_farms/`<br>Aktiv: `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>Hinweis:</b> Diese Farm-Dateien sollen nicht in die `enabled_farms` Ordner, aber verwenden Sie `symlinks` zu einem relativen Pfad zum `available_farms/*_farm.any` file <br/>`*_farm.any` -Dateien in `conf.dispatcher.d/dispatcher.any` -Datei. Diese übergeordneten Farm-Dateien dienen zur Steuerung des Modulverhaltens für jeden Render- oder Website-Typ. Dateien werden im Verzeichnis `available_farms` erstellt und mit einem `symlink` im Verzeichnis `enabled_farms` aktiviert. <br/>Sie werden automatisch anhand des Namens aus der Datei `dispatcher.any` einbezogen.<br/><b>Grundlegende</b> Farm-Dateien beginnen mit `000_`, um sicherzustellen, dass sie zuerst geladen werden.<br><b>Benutzerdefinierte</b> Farm-Dateien sollten danach geladen werden, indem ihr Zahlenschema bei `100_` anfängt, um das richtige Einschlussverhalten sicherzustellen. |
 | DATEINAME`_filters.any` | `/etc/httpd/conf.dispatcher.d/filters/` | `*_filters.any`-Dateien werden aus den Dateien `conf.dispatcher.d/enabled_farms/*_farm.any` einbezogen. Jede Farm enthält eine Reihe von Regeln, die ändern, welcher Traffic herausgefiltert werden und nicht zu den Renderern gelangen soll. |
 | DATEINAME`_vhosts.any` | `/etc/httpd/conf.dispatcher.d/vhosts/` | `*_vhosts.any`-Dateien werden aus den Dateien `conf.dispatcher.d/enabled_farms/*_farm.any` einbezogen. Bei diesen Dateien handelt es sich um eine Liste von Host-Namen oder URI-Pfaden, für die ein Blob-Abgleich durchgeführt wird, um zu bestimmen, welcher Renderer für diese Anfrage verwendet werden soll. |
 | DATEINAME`_cache.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_cache.any`-Dateien werden aus den Dateien `conf.dispatcher.d/enabled_farms/*_farm.any` einbezogen. Diese Dateien geben an, welche Elemente zwischengespeichert werden und welche nicht. |

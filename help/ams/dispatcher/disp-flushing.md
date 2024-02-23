@@ -10,10 +10,10 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 461873a1-1edf-43a3-b4a3-14134f855d86
 duration: 653
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '2227'
-ht-degree: 100%
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
+workflow-type: tm+mt
+source-wordcount: '2225'
+ht-degree: 92%
 
 ---
 
@@ -133,16 +133,17 @@ Wenn die Einstellung für die Stat-Dateiebene zu hoch eingestellt ist, durchläu
 
 Wenn Sie diese Dateiebene zu niedrig festlegen, kann eine Leerungsanfrage dazu führen, dass mehr gelöscht wird, als beabsichtigt war. Dies würde wiederum dazu führen, dass der Cache mit weniger Anfragen, die aus dem Cache bedient werden, häufiger überlastet wird, und Leistungsprobleme verursachen.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
+>[!BEGINSHADEBOX &quot;Hinweis&quot;]
 
-Legen Sie den `statfilelevel` auf ein angemessenes Niveau fest. Schauen Sie sich Ihre Ordnerstruktur an und stellen Sie sicher, dass sie so eingerichtet ist, dass knappe Leerungen möglich sind, ohne zu viele Verzeichnisse durchlaufen zu müssen. Testen Sie es und stellen Sie sicher, dass es Ihren Anforderungen während eines Leistungstests des Systems entspricht.
+Legen Sie die `statfilelevel` auf einer vernünftigen Ebene. Schauen Sie sich Ihre Ordnerstruktur an und stellen Sie sicher, dass sie so eingerichtet ist, dass knappe Leeren möglich sind, ohne zu viele Verzeichnisse durchlaufen zu müssen. Testen Sie es und stellen Sie während eines Leistungstests des Systems sicher, dass es Ihren Anforderungen entspricht.
 
-Ein gutes Beispiel ist eine Site, die Sprachen unterstützt. Der typische Inhaltsstrukturbaum würde die folgenden Verzeichnisse aufweisen
+Ein gutes Beispiel ist eine Site, die Sprachen unterstützt. Die typische Inhaltsstruktur würde die folgenden Verzeichnisse aufweisen
 
 `/content/brand1/en/us/`
 
-Verwenden Sie in diesem Beispiel eine Stat-Dateiebeneneinstellung von 4. Dadurch wird sichergestellt, dass beim Leeren von Inhalten, die sich unter dem <b>`us`</b>-Ordner befinden, keine Sprachordner zusätzlich geleert werden.
-</div>
+Verwenden Sie in diesem Beispiel eine stat-Dateiebene-Einstellung von 4. Dadurch wird sichergestellt, dass Inhalte geleert werden, die unter dem **`us`** -Ordner, der nicht dazu führt, dass auch die Sprachordner geleert werden.
+
+>[!ENDSHADEBOX]
 
 ### STAT-DATEI-ZEITSTEMPEL-HANDSHAKE
 
@@ -227,11 +228,11 @@ Dieser Konfigurationseintrag befindet sich im folgenden Abschnitt der Farm-Datei
 
 Sie geben das Verzeichnis an, das der Dispatcher als Cache-Verzeichnis füllen und verwalten soll.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-Dieses Verzeichnis sollte mit der Apache-Dokumentstamm-Einstellung für die Domain übereinstimmen, für die Ihr Webserver konfiguriert ist.
-
-Verschachtelte Dokument-Stammordner pro Farm, die Unterordner des Apache-Dokumentstamms sind, sind aus vielen Gründen keine gute Idee.
-</div>
+>[!NOTE]
+>
+>Dieser Ordner sollte mit der Apache Document Root-Einstellung für die Domäne übereinstimmen, für die Ihr Webserver konfiguriert ist.
+>
+>Verschachtelte Dokument-Stammordner pro Farm, die Unterordner des Apache-Dokumentstamms sind, sind aus vielen Gründen keine gute Idee.
 
 ### Ebene der statischen Dateien
 
@@ -275,13 +276,11 @@ Wenn `/statfileslevel` auf die folgende Zahl gesetzt wird und der Dokumentstamm 
    - `/var/www/html/content/damn/brand1/en/.stat`
    - `/var/www/html/content/damn/brand1/en/us/.stat`
 
-
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-
-Denken Sie daran, dass beim Zeitstempel-Handshake nach der nächstgelegenen `.stat`-Datei gesucht wird.
-
-Eine `.stat`-Datei auf Ebene 0 und eine Statistikdatei nur auf `/var/www/html/.stat` bedeutet, dass Inhalte, die sich unter `/var/www/html/content/dam/brand1/en/us/` befinden, nach der nächstgelegenen `.stat`-Datei suchen und 5 Ordner nach oben wandern, um die einzige `.stat`-Datei auf Ebene 0 zu finden und die Daten mit dieser zu vergleichen.  Das bedeutet, dass eine Leerung auf dieser hohen Ebene im Wesentlichen alle zwischengespeicherten Elemente ungültig macht.
-</div>
+>[!NOTE]
+>
+>Denken Sie daran, dass beim Zeitstempel-Handshake nach der nächstgelegenen `.stat`-Datei gesucht wird.
+>
+>mit `.stat` Dateiebene 0 und stat-Datei nur auf `/var/www/html/.stat` bedeutet, dass Inhalt, unter dem lebt `/var/www/html/content/dam/brand1/en/us/` würde nach der nächsten suchen `.stat` Datei speichern und fünf Ordner durchlaufen, um die einzige `.stat` -Datei, die auf Ebene 0 existiert und Datumswerte mit dieser vergleicht. Das bedeutet, dass eine Leerung auf dieser hohen Ebene im Wesentlichen alle zwischengespeicherten Elemente ungültig macht.
 
 ### Zulässige Invalidierung
 

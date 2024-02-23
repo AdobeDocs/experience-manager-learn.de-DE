@@ -10,10 +10,10 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
 duration: 252
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '799'
-ht-degree: 100%
+source-git-commit: 19beb662b63476f4745291338d944502971638a3
+workflow-type: tm+mt
+source-wordcount: '796'
+ht-degree: 93%
 
 ---
 
@@ -59,10 +59,9 @@ Wenn Sie eine der vorgeschlagenen Methoden durchführen, wird die Fehlermeldung 
 
 ## Filtern nach Zurückweisungen
 
-
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-Diese Einträge werden nicht immer angezeigt, selbst wenn Zurückweisungen auftreten, wenn die Protokollebene zu niedrig eingestellt ist. Setzen Sie sie auf „Info“ oder „debug“, um sicherzustellen, dass Sie sehen, ob die Filter die Anfragen ablehnen.
-</div>
+>[!NOTE]
+>
+>Diese Einträge werden nicht immer angezeigt, selbst wenn Zurückweisungen auftreten, wenn die Protokollebene zu niedrig eingestellt ist. Setzen Sie sie auf „Info“ oder „debug“, um sicherzustellen, dass Sie sehen, ob die Filter die Anfragen ablehnen.
 
 Beispiel-Protokolleintrag:
 
@@ -76,10 +75,9 @@ oder:
 Fri Jul 20 22:16:55 2018 I pid 128803 "GET /system/console/" ! - 8ms publishfarm/-
 ```
 
-<div style="color: #000;border-left: 6px solid red;background-color:#ddffff;"><b>Vorsicht:</b>
-
-Beachten Sie, dass die Dispatcher-Regeln so eingerichtet wurden, dass sie diese Anfrage herausfiltern. In diesem Fall wurde die Seite, die besucht werden sollte, absichtlich abgelehnt, und dies sollte nicht verändert werden.
-</div>
+>[!CAUTION]
+>
+>Beachten Sie, dass die Dispatcher-Regeln so eingerichtet wurden, dass sie diese Anfrage herausfiltern. In diesem Fall wurde die Seite, die besucht werden sollte, absichtlich abgelehnt, und dies sollte nicht verändert werden.
 
 Wenn Ihr Protokoll wie dieser Eintrag aussieht:
 
@@ -136,9 +134,9 @@ Das bedeutet, dass Ihre Abrufe von der Render-Ebene im Vergleich zu Abrufen vom 
 
 Diese Zahl sollte so hoch wie möglich sein.
 
-<div style="color: #000;border-left: 6px solid #2196F3;background-color:#ddffff;"><b>Hinweis:</b>
-Wenn entsprechend Ihrer Cache-Einstellungen in der Farm-Datei alles zwischengespeichert werden soll, Sie den Cache aber zu häufig oder zu umfangreich leeren, kann dies den Prozentsatz des Cache-Trefferverhältnisses verringern
-</div>
+>[!NOTE]
+>
+>Selbst wenn Sie Ihre Cache-Einstellungen in der Farm-Datei haben, um alles zwischenzuspeichern, das Sie möglicherweise zu häufig oder zu aggressiv löschen, kann dies zu einem geringeren Prozentsatz des Cache-Trefferverhältnisses führen
 
 ## Fehlendes Verzeichnis
 
