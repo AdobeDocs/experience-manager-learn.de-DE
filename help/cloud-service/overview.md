@@ -6,9 +6,9 @@ jira: KT-3289
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 650ba2d9-6083-4772-84c5-1cdb97b5f0e9
 duration: 490
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '256'
+source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
+workflow-type: tm+mt
+source-wordcount: '156'
 ht-degree: 100%
 
 ---
@@ -20,27 +20,6 @@ ht-degree: 100%
 Adobe Experience Manager (AEM) ist nun als Cloud-Service verfügbar. AEM as a Cloud Service führt die nächste Generation der Experience Manager-Produktlinie ein, die auf früheren Investitionen und Innovationen aufbaut, wobei alle Anwendungsfälle und Funktionen beibehalten und erweitert werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/31085?quality=12&learn=on)
-
-<div id="whats-new-section">
-
-## Neuerungen
-
-* **[Schutz von Websites mit Traffic-Filterregeln, einschließlich WAF-Regeln (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview.html?lang=de)**
-  *Erfahren Sie, wie Sie Traffic-Filterregeln, einschließlich WAF-Regeln, zum Schutz von Websites verwenden.*
-
-* **[Token-basierte Authentifizierung (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=de)**
-  *Erfahren Sie, wie Sie durch Token-basierte Authentifizierung über HTTP mit AEM as a Cloud Service interagieren können*
-
-* **[Headless GraphQL (Tutorial)](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de)**
-  *Erfahren Sie, wie Sie mit AEM GraphQL-APIs Erlebnisse in einer externen Anwendung nutzen können.*
-
-* **[Asset Compute-Metadaten-Sekundär (Tutorial)](./asset-compute/advanced/metadata.md)**
-  *Erfahren Sie, wie Sie Asset-Metadaten von einem Asset Compute-Sekundär zurück in AEM schreiben*
-
-* **[Erweiterbarkeit von Asset Compute-Microservices (Tutorial)](./asset-compute/overview.md)**
-  *Erfahren Sie, wie Sie Asset Compute-Sekundäre entwickeln, um benutzerdefinierte Asset-Ausgabedarstellungen zu generieren*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>

@@ -6,9 +6,9 @@ role: Developer
 sub-product: Experience Manager Forms
 exl-id: c1972937-56c5-47af-9232-f31bdf69dfbe
 duration: 88
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '277'
+source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
+workflow-type: tm+mt
+source-wordcount: '203'
 ht-degree: 100%
 
 ---
@@ -16,21 +16,6 @@ ht-degree: 100%
 # Tutorials und Videos zu AEM Forms {#overview}
 
 Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie komplexe digitale Formulare erstellen, verwalten, veröffentlichen und aktualisieren und dabei in Backend-Prozesse, Geschäftsregeln und Daten integrieren können. Dieses Benutzerhandbuch enthält Videos und Tutorials zu den zahlreichen Funktionen und Einsatzmöglichkeiten von Adobe (AEM) Forms.
-
-<div id="whats-new-section">
-
-## Neuerungen
-
-* **[Umgang mit Fehlermeldungen im Schritt „Formulardatenmodell-Service aufrufen“](./adaptive-forms/handling-error-messages-in-invoke-fdm-step.md)**
-  *Eine Variable in einem Workflow-Modell bietet die Möglichkeit, einen Wert basierend auf seinem Datentyp zu speichern*
-
-* **[Diagramme mit mehreren Reihen in Dokumenten zur interaktiven Kommunikation (Video)](./interactive-communications/multiseriescharts.md)**
-  *Stellen Sie mehrere Reihen in demselben Diagramm dar. Die Diagramme mit mehreren Reihen werden normalerweise zusammen mit dem Diagrammtyp Linie, Balken, Spalten verwendet.*
-
-* **[Erstellen wiederverwendbarer Workflow-Modelle](./adaptive-forms/re-usable-aem-forms-workflow-models-article.md)**
-  *Erstellen von Workflow-Modellen, die nicht an ein bestimmtes Formular gebunden sind*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -88,8 +73,6 @@ Adobe Experience Manager (AEM) ist eine benutzerfreundliche Lösung, mit der Sie
 </table>
 
 </div>
-
-
 
 
 ## Zusätzliche Ressourcen
