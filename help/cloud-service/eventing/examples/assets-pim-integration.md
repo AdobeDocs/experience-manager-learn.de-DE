@@ -11,7 +11,7 @@ duration: 0
 last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
-source-git-commit: 6ef17e61190f58942dcf9345b2ea660d972a8f7e
+source-git-commit: 6c01dc8a0e8fd3cc69b21c78da8678e872dcef0c
 workflow-type: tm+mt
 source-wordcount: '1116'
 ht-degree: 1%
@@ -26,6 +26,8 @@ ht-degree: 1%
 >In diesem Tutorial werden experimentelle AEM as a Cloud Service APIs verwendet. Um Zugriff auf diese APIs zu erhalten, müssen Sie eine Softwarevereinbarung vor der Veröffentlichung akzeptieren und diese APIs manuell durch Adobe Engineering für Ihre Umgebung aktivieren lassen. Um Zugriff anzufordern, wenden Sie sich an den Adobe-Support.
 
 Erfahren Sie, wie Sie AEM Assets mit einem Drittanbietersystem integrieren, z. B. einem Produktinformationsmanagement (PIM) oder einem Produktinformationsmanagement (PLM), um Asset-Metadaten zu aktualisieren. **Verwenden nativer AEM I/O-Ereignisse**. Nach Erhalt eines AEM Assets-Ereignisses können die Asset-Metadaten je nach Geschäftsanforderungen in AEM, im PIM oder in beiden Systemen aktualisiert werden. Dieses Beispiel zeigt jedoch, wie die Asset-Metadaten in AEM aktualisiert werden.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3427592?quality=12&learn=on)
 
 So führen Sie die Asset-Metadatenaktualisierung aus **Code außerhalb von AEM**, die [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/), wird eine Server-lose Plattform verwendet.
 
