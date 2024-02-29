@@ -1,6 +1,6 @@
 ---
-title: Generieren von Zugriffs-Token in App-Entwicklungs-Aktion
-description: Erfahren Sie, wie Sie ein Zugriffs-Token mit JWT-Anmeldeinformationen generieren, um sie in einer App-Entwicklungs-Aktion zu verwenden.
+title: JWT-Zugriffstoken in App Builder-Aktion generieren
+description: Erfahren Sie, wie Sie ein Zugriffstoken mithilfe von JWT-Anmeldeinformationen zur Verwendung in einer App Builder-Aktion generieren.
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -10,18 +10,18 @@ jira: KT-11743
 last-substantial-update: 2023-01-17T00:00:00Z
 exl-id: 9a3fed96-c99b-43d1-9dba-a4311c65e5b9
 duration: 161
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '452'
-ht-degree: 100%
+source-git-commit: c77dd9c2872e7e43863d83837cedbff50a7d3c1a
+workflow-type: tm+mt
+source-wordcount: '456'
+ht-degree: 85%
 
 ---
 
-# Generieren von Zugriffs-Token in App-Entwicklungs-Aktion
+# JWT-Zugriffstoken in App Builder-Aktion generieren
 
 App-Entwicklungs-Aktionen müssen möglicherweise mit Adobe-APIs interagieren, die mit Adobe Developer Console-Projekten verknüpft sind, in denen die App-Entwicklungs-App bereitgestellt wird.
 
-Dies kann erfordern, dass die App-Entwicklungs-Aktion ein eigenes Zugriffs-Token generiert, das mit dem gewünschten Adobe Developer Console-Projekt verknüpft ist.
+Dies erfordert möglicherweise die App Builder-Aktion, um ein eigenes JWT-Zugriffstoken zu generieren, das mit dem gewünschten Adobe Developer Console-Projekt verknüpft ist.
 
 >[!IMPORTANT]
 >
@@ -70,22 +70,22 @@ Der `JWT_PRIVATE_KEY` muss besonders formatiert sein, da es sich um einen native
 >[!TAB macOS]
 
 1. Öffnen Sie ein `Terminal`.
-1. Führen Sie den Befehl `base64 -i /path/to/private.key | pbcopy` aus.
+1. Führen Sie den Befehl aus `base64 -i /path/to/private.key | pbcopy`
 1. Die base64-Ausgabe wird automatisch in die Zwischenablage kopiert.
 1. Fügen Sie sie in `.env` als Wert des entsprechenden Schlüssels ein.
 
 >[!TAB Windows]
 
 1. Öffnen Sie `Command Prompt`.
-1. Führen Sie den Befehl `certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key` aus.
-1. Führen Sie den Befehl `findstr /v CERTIFICATE C:\path\to\encoded-private.key` aus.
+1. Führen Sie den Befehl aus `certutil -encode C:\path\to\private.key C:\path\to\encoded-private.key`
+1. Führen Sie den Befehl aus `findstr /v CERTIFICATE C:\path\to\encoded-private.key`
 1. Kopieren Sie die base64-Ausgabe in die Zwischenablage.
 1. Fügen Sie sie in `.env` als Wert des entsprechenden Schlüssels ein.
 
 >[!TAB Linux®]
 
 1. Öffnen Sie ein Terminal. 
-1. Führen Sie den Befehl `base64 private.key` aus.
+1. Führen Sie den Befehl aus `base64 private.key`
 1. Kopieren Sie die base64-Ausgabe in die Zwischenablage.
 1. Fügen Sie sie in `.env` als Wert des entsprechenden Schlüssels ein.
 
