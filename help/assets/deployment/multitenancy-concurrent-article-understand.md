@@ -9,10 +9,10 @@ level: Intermediate
 doc-type: Article
 exl-id: c9ee29d4-a8a5-4e61-bc99-498674887da5
 duration: 524
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: 3b6de935b5f1fb5ee2d0e50372188f1eba7baeaa
+workflow-type: tm+mt
 source-wordcount: '2022'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -92,7 +92,7 @@ Dadurch entfällt nicht die Notwendigkeit, dass mehrere Teams denselben Code-Sat
 
 Um sicherzustellen, dass die Änderungen an diesem Kernpaket die Funktionalität des Systems nicht beeinträchtigen, empfehlen wir, dass eine leitende Entwicklungsperson oder ein Entwicklungs-Team die Aufsicht behält. Eine Option besteht darin, dass ein einzelnes Team alle Änderungen an diesem Paket verwaltet. Eine andere wäre, Teams Pull-Anfragen übermitteln zu lassen, die von diesen Ressourcen geprüft und zusammengeführt werden. Es ist wichtig, dass ein Governance-Modell von den Teams entwickelt und akzeptiert wird und dass die Entwicklungspersonen diesem folgen.
 
-## Verwalten des Bereitstellungsumfangs  {#managing-deployment-scope}
+## Verwalten des Bereitstellungsumfangs {#managing-deployment-scope}
 
 Da verschiedene Teams ihren Code in demselben Repository bereitstellen, ist es wichtig, dass sie die Änderungen der anderen nicht überschreiben. AEM verfügt über einen Mechanismus, um dies bei der Bereitstellung von Inhaltspaketen zu steuern: der Filter. XML-Datei. Es ist wichtig, dass es keine Überschneidungen zwischen Filtern gibt.  XML-Dateien, da andernfalls die Bereitstellung eines Teams die vorherige Bereitstellung eines anderen Teams löschen könnte. Dieser Punkt wird in den folgenden Beispielen für gut erstellte vs. problematische Filterdateien verdeutlicht:
 
