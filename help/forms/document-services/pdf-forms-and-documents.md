@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes über die PDF Formular- und Dokumenten-Typen.
+title: Grundlegendes über die PDF Formular- und Dokumenten-Typen
 description: PDF ist eigentlich eine Familie von Dateiformaten. In diesem Artikel werden die PDF-Typen beschrieben, die für Entwicklerinnen und Entwickler von Formularen wichtig und relevant sind.
 type: Documentation
 role: Developer
@@ -12,9 +12,9 @@ last-substantial-update: 2020-07-07T00:00:00Z
 duration: 336
 exl-id: ffa9d243-37e5-420c-91dc-86c73a824083
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1294'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -59,13 +59,13 @@ Das Layout von statischen XFA-PDF-Formularen ändert sich zur Laufzeit nie, sie 
 Dynamische XFA-PDFs können ihr Layout zur Laufzeit ändern, weswegen die Kommentar- und Markup-Funktionen nicht unterstützt werden. Dynamische XFA-PDFs bieten jedoch die folgenden Vorteile:
 
 * Dynamische Formulare unterstützen Client-seitige Skripte, die das Layout und die Paginierung des Formulars ändern. Beispielsweise wird die Datei „Purchase Order.xdp“ erweitert und paginiert, um eine beliebige Datenmenge aufzunehmen, wenn Sie sie als dynamisches Formular speichern.
-* Dynamische Formulare unterstützen alle Eigenschaften Ihres Formulars zur Laufzeit, während statische Formulare nur eine Teilmenge unterstützen.
+* Dynamische Formulare unterstützen alle Eigenschaften Ihres Formulars zur Laufzeit, während statische Formulare nur eine Teilmenge unterstützen
 
-* [In diesem Dokument erfahren Sie mehr über die Unterschiede zwischen statischen und dynamischen PDF-Formularen.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
+* [In diesem Dokument finden Sie Informationen zu den Unterschieden zwischen statischen und dynamischen PDF-Formularen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html?lang=de#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
 
 >[!NOTE]
 >
-> Sie können dynamische PDF-Dateien mit AEM Forms Designer erstellen, indem Sie die XDP als dynamisches XML-Formular von Adobe speichern.
+> Sie können dynamische PDF-Dateien mit AEM Forms Designer erstellen, indem Sie die XDP als dynamisches XML-Formular von Adobe speichern
 
 >[!NOTE]
 >
@@ -77,7 +77,7 @@ Ein zertifiziertes Dokument bietet den Empfängerinnen und Empfängern von PDF-D
 
 Das beliebteste und verbreitetste PDF-Format ist die herkömmliche PDF-Datei. Es gibt viele Möglichkeiten, eine herkömmliche PDF-Datei zu erstellen, einschließlich der Verwendung von Acrobat und vielen Tools von Drittanbietern. Acrobat bietet alle folgenden Möglichkeiten, herkömmliche PDF-Dateien zu erstellen. Wenn Sie Acrobat nicht installiert haben, werden diese Optionen möglicherweise nicht auf Ihrem Computer angezeigt.
 
-* Durch Erfassen des Druck-Streams einer Desktop-Anwendung: Wählen Sie in einer Textverarbeitung den Befehl „Drucken“ und wählen Sie das Adobe PDF-Druckersymbol. Anstelle einer gedruckten Kopie Ihres Dokuments wird dann eine PDF-Datei Ihres Dokuments erstellt.
+* Durch Erfassen des Druck-Streams einer Desktop-Anwendung: Wählen Sie in einer Textverarbeitung den Befehl „Drucken“ und wählen Sie das Adobe PDF-Druckersymbol. Anstelle einer gedruckten Kopie Ihres Dokuments wird dann eine PDF-Datei Ihres Dokuments erstellt
 * Mithilfe des Plug-ins Acrobat PDFMaker für Microsoft Office-Anwendungen: Wenn Sie Acrobat installieren, wird den Microsoft Office-Anwendungen ein Adobe PDF-Menü und der Office-Menüleiste ein entsprechendes Symbol hinzugefügt. Sie können diese zusätzlichen Funktionen verwenden, um PDF-Dateien direkt in Microsoft Office zu erstellen
 * Durch Verwenden von Acrobat Distiller zum Konvertieren von PostScript- und Encapsulated PostScript(EPS)-Dateien in PDFs: Distiller wird in der Regel bei der Druckveröffentlichung und anderen Workflows verwendet, für die eine Konvertierung vom PostScript-Format in das PDF-Format erforderlich ist
 * Unter der Haube unterscheidet sich eine herkömmliche PDF-Datei deutlich von einer XFA-PDF-Datei. Sie weist nicht die gleiche XML-Struktur auf, und da sie durch Erfassen des Druck-Streams einer Datei erstellt wird, ist eine herkömmliche PDF eine statische und schreibgeschützte Datei.
