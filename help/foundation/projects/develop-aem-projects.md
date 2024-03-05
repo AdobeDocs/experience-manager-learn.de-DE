@@ -1,6 +1,6 @@
 ---
 title: Entwickeln von Projekten in AEM
-description: Ein Entwicklungs-Tutorial, das die Entwicklung für AEM Projekte veranschaulicht. In diesem Tutorial erstellen wir eine benutzerdefinierte Projektvorlage, die zum Erstellen neuer Projekte in AEM für die Verwaltung von Workflows und Aufgaben zur Inhaltserstellung verwendet werden kann.
+description: Ein Entwicklungs-Tutorial, das zeigt, wie für AEM-Projekte entwickelt wird. In diesem Tutorial erstellen wir eine benutzerdefinierte Projektvorlage, die zum Erstellen neuer Projekte in AEM für die Verwaltung von Workflows und Aufgaben zur Inhaltserstellung verwendet werden kann.
 version: 6.4, 6.5
 feature: Projects, Workflow
 doc-type: Tutorial
@@ -10,15 +10,15 @@ level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1603
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4441'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
 # Entwickeln von Projekten in AEM
 
-Dies ist ein Entwicklungs-Tutorial, in dem gezeigt wird, wie [!DNL AEM Projects]. In diesem Tutorial erstellen wir eine benutzerdefinierte Projektvorlage, die zum Erstellen von Projekten in AEM für die Verwaltung von Workflows und Aufgaben zur Inhaltserstellung verwendet werden kann.
+Dieses Entwicklungs-Tutorial zeigt, wie für [!DNL AEM Projects] entwickelt wird. In diesem Tutorial erstellen wir eine benutzerdefinierte Projektvorlage, die zum Erstellen von Projekten in AEM für die Verwaltung von Workflows und Aufgaben zur Inhaltserstellung verwendet werden kann.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16904?quality=12&learn=on)
 
@@ -26,9 +26,9 @@ Dies ist ein Entwicklungs-Tutorial, in dem gezeigt wird, wie [!DNL AEM Projects]
 
 ## Einführung {#introduction}
 
-[[!DNL AEM Projects]](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) ist eine Funktion von AEM, die es erleichtert, alle Workflows und Aufgaben im Zusammenhang mit der Inhaltserstellung im Rahmen einer AEM Sites- oder Assets-Implementierung zu verwalten und zu gruppieren.
+[[!DNL AEM Projects]](https://docs.adobe.com/content/help/de/experience-manager-65/authoring/projects/projects.html) ist eine Funktion von AEM, die es erleichtert, alle Workflows und Aufgaben im Zusammenhang mit der Inhaltserstellung im Rahmen einer AEM Sites- oder Assets-Implementierung zu verwalten und zu gruppieren.
 
-AEM-Projekte verfügen standardmäßig über mehrere [vorkonfigurierte Projektvorlagen](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html). Beim Erstellen eines Projekts können Autoren aus diesen verfügbaren Vorlagen auswählen. Im Falle umfangreicher AEM-Implementierungen mit besonderen Geschäftsanforderungen sollten benutzerdefinierte Projektvorlagen erstellt werden – zugeschnitten auf die entsprechenden Bedürfnisse. Durch die Erstellung einer benutzerdefinierten Projektvorlage können Entwicklerinnen und Entwickler das Projekt-Dashboard konfigurieren, sich in benutzerdefinierte Workflows sozusagen einklinken und zusätzliche Geschäftsrollen für ein Projekt erstellen. Wir werden uns die Struktur einer Projektvorlage ansehen und eine Beispielvorlage erstellen.
+AEM-Projekte verfügen standardmäßig über mehrere [vorkonfigurierte Projektvorlagen](https://docs.adobe.com/content/help/de/experience-manager-65/authoring/projects/projects.html). Beim Erstellen eines Projekts können Autorinnen und Autoren aus diesen verfügbaren Vorlagen auswählen. Im Falle umfangreicher AEM-Implementierungen mit besonderen Geschäftsanforderungen sollten benutzerdefinierte Projektvorlagen erstellt werden – zugeschnitten auf die entsprechenden Bedürfnisse. Durch die Erstellung einer benutzerdefinierten Projektvorlage können Entwicklerinnen und Entwickler das Projekt-Dashboard konfigurieren, sich in benutzerdefinierte Workflows sozusagen einklinken und zusätzliche Geschäftsrollen für ein Projekt erstellen. Wir werden uns die Struktur einer Projektvorlage ansehen und eine Beispielvorlage erstellen.
 
 ![Benutzerdefinierte Projektkarte](./assets/develop-aem-projects/custom-project-card.png)
 
@@ -39,13 +39,13 @@ In diesem Tutorial wird der Code erläutert, der zum Erstellen einer benutzerdef
 * [Fertiges Tutorial-Paket](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Vollständiges Code-Repository auf GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-Dieses Tutorial setzt grundlegende Kenntnisse zu [AEM-Entwicklungsmethoden](https://docs.adobe.com/content/help/en/experience-manager-65/developing/introduction/the-basics.html) und eine gewisse Vertrautheit mit dem [Setup von AEM-Maven-Projekten](https://docs.adobe.com/content/help/en/experience-manager-65/developing/devtools/ht-projects-maven.html) voraus. Der gesamte erwähnte Code sollte als Referenz verwendet und nur in einer [lokalen AEM-Entwicklungsinstanz](https://docs.adobe.com/content/help/en/experience-manager-65/deploying/deploying/deploy.html) bereitgestellt werden.
+Dieses Tutorial setzt grundlegende Kenntnisse zu [AEM-Entwicklungsmethoden](https://docs.adobe.com/content/help/de/experience-manager-65/developing/introduction/the-basics.html) und eine gewisse Vertrautheit mit dem [Setup von AEM-Maven-Projekten](https://docs.adobe.com/content/help/de/experience-manager-65/developing/devtools/ht-projects-maven.html) voraus. Der gesamte erwähnte Code sollte als Referenz verwendet und nur in einer [lokalen AEM-Entwicklungsinstanz](https://docs.adobe.com/content/help/de/experience-manager-65/deploying/deploying/deploy.html) bereitgestellt werden.
 
 ## Struktur einer Projektvorlage
 
-Projektvorlagen sollten unter Quell-Code-Verwaltung gestellt und unter dem Anwendungsordner „/apps“ gespeichert werden. Idealerweise sollten sie in einen Unterordner mit der Namenskonvention von **&#42;/projects/templates/**&lt;my-template>. Durch Befolgung dieser Namenskonvention stehen Autorinnen und Autoren beim Erstellen eines Projekts automatisch alle neuen benutzerdefinierten Vorlagen zur Verfügung. Die Konfiguration der verfügbaren Projektvorlagen ist unter dem Knoten **/content/projects/jcr:content** durch die Eigenschaft **cq:allowedTemplates** festgelegt. Standardmäßig ist dies ein regulärer Ausdruck: **/(apps|libs)/.&#42;/projects/templates/.&#42;**
+Projektvorlagen sollten unter Quell-Code-Verwaltung gestellt und unter dem Anwendungsordner „/apps“ gespeichert werden. Idealerweise sollten sie in einem Unterordner mit der Namenskonvention **&#42;/projects/templates/**&lt;my-template> platziert werden. Durch Befolgung dieser Namenskonvention stehen Autorinnen und Autoren beim Erstellen eines Projekts automatisch alle neuen benutzerdefinierten Vorlagen zur Verfügung. Die Konfiguration der verfügbaren Projektvorlagen ist unter dem Knoten **/content/projects/jcr:content** durch die Eigenschaft **cq:allowedTemplates** festgelegt. Standardmäßig ist dies ein regulärer Ausdruck: **/(apps|libs)/.&#42;/projects/templates/.&#42;**
 
-Der Stammknoten einer Projektvorlage hat einen **jcr:primaryType** von **cq:Template**. Unter dem Stammknoten befinden sich drei Knoten: **Gadgets**, **Rollen**, und **Workflows**. Diese Knoten sind alle **nt:unstructured**. Unter dem Stammknoten kann auch eine thumbnail.png-Datei sein, die angezeigt wird, wenn die Vorlage im Assistenten „Projekt erstellen“ ausgewählt wird.
+Der Stammknoten einer Projektvorlage hat einen **jcr:primaryType** von **cq:Template**. Unter dem Stammknoten befinden sich drei Knoten: **Gadgets**, **Rollen** und **Workflows**. Diese Knoten sind alle **nt:unstructured**. Unter dem Stammknoten kann auch eine thumbnail.png-Datei sein, die angezeigt wird, wenn die Vorlage im Assistenten „Projekt erstellen“ ausgewählt wird.
 
 Die vollständige Knotenstruktur:
 
@@ -69,15 +69,15 @@ Ein Beispiel für einen benutzerdefinierten Assistenten finden Sie für die Vorl
 
 ### Gadgets {#gadgets}
 
-Es gibt keine zusätzlichen Eigenschaften auf diesem Knoten, aber die untergeordneten Elemente des Gadget-Knotens steuern, welche Projektkacheln beim Erstellen eines neuen Projekts das Dashboard des Projekts ausfüllen. [Die Projektkacheln](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) (auch als Gadgets oder Pods bezeichnet) sind einfache Karten, die den Arbeitsplatz eines Projekts füllen. Eine vollständige Liste der vorkonfigurierten Kacheln finden Sie unter **/libs/cq/gui/components/projects/admin/pod. **Projektinhaberinnen und -inhaber können Kacheln jederzeit hinzufügen/entfernen, nachdem ein Projekt erstellt wurde.
+Es gibt keine zusätzlichen Eigenschaften auf diesem Knoten, aber die untergeordneten Elemente des Gadget-Knotens steuern, welche Projektkacheln beim Erstellen eines neuen Projekts das Dashboard des Projekts ausfüllen. [Die Projektkacheln](https://docs.adobe.com/content/help/de/experience-manager-65/authoring/projects/projects.html) (auch als Gadgets oder Pods bezeichnet) sind einfache Karten, die den Arbeitsplatz eines Projekts füllen. Eine vollständige Liste der vorkonfigurierten Kacheln finden Sie unter **/libs/cq/gui/components/projects/admin/pod. **Projektinhaberinnen und -inhaber können Kacheln jederzeit hinzufügen/entfernen, nachdem ein Projekt erstellt wurde.
 
 ### Rollen {#roles}
 
-Es gibt drei [Standardrollen](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html) für jedes Projekt: **Beobachter**, **Bearbeiter**, und **Eigentümer**. Durch Hinzufügen von untergeordneten Knoten unter dem Knoten &quot;rollen&quot;können Sie zusätzliche geschäftsspezifische Projektrollen für die Vorlage hinzufügen. Anschließend können Sie diese Rollen mit bestimmten Workflows verknüpfen, die mit dem Projekt zusammenhängen.
+Es gibt drei [Standardrollen](https://docs.adobe.com/content/help/de/experience-manager-65/authoring/projects/projects.html) für jedes Projekt: **Observers**, **Editors** und **Owners**. Wenn Sie dem Knoten für Rollen untergeordnete Knoten hinzufügen, können Sie zusätzliche geschäftsspezifische Projektrollen für die Vorlage hinzufügen. Anschließend können Sie diese Rollen mit bestimmten Workflows verknüpfen, die mit dem Projekt zusammenhängen.
 
 ### Workflows {#workflows}
 
-Einer der verlockendsten Gründe für die Erstellung einer benutzerdefinierten Projektvorlage besteht darin, dass Sie damit die verfügbaren Workflows für die Verwendung mit dem Projekt konfigurieren können. Diese können vorkonfigurierte Workflows oder benutzerdefinierte Workflows verwenden. Unter dem **Workflows**-Knoten muss ein **Modelle-** Knoten (auch `nt:unstructured`) sein, und die darunter liegenden untergeordneten Knoten geben die verfügbaren Workflow-Modelle an. Die Eigenschaft **modelId** verweist auf das Workflow-Modell unter /etc/workflow, und die Eigenschaft **Assistent** verweist auf das Dialogfeld, das beim Starten des Workflows verwendet wird. Ein wichtiger Vorteil von Projekten besteht darin, dass zu Beginn des Workflows ein benutzerdefiniertes Dialogfeld (Assistent) hinzugefügt werden kann, um geschäftsspezifische Metadaten zu erfassen, die weitere Aktionen innerhalb des Workflows ermöglichen.
+Einer der attraktivsten Gründe für die Erstellung einer benutzerdefinierten Projektvorlage besteht darin, dass Sie damit die verfügbaren Workflows für die Verwendung mit dem Projekt konfigurieren können. Diese können vorkonfigurierte Workflows oder benutzerdefinierte Workflows verwenden. Unter dem **Workflows**-Knoten muss ein **Modelle-** Knoten (auch `nt:unstructured`) sein, und die darunter liegenden untergeordneten Knoten geben die verfügbaren Workflow-Modelle an. Die Eigenschaft **modelId** verweist auf das Workflow-Modell unter /etc/workflow, und die Eigenschaft **Assistent** verweist auf das Dialogfeld, das beim Starten des Workflows verwendet wird. Ein wichtiger Vorteil von Projekten besteht darin, dass ein benutzerdefiniertes Dialogfeld (Assistent) hinzugefügt werden kann, um am Anfang des Workflows geschäftsspezifische Metadaten zu erfassen, die weitere Aktionen innerhalb des Workflows ermöglichen.
 
 ```shell
 <projects-template-root> (cq:Template)
@@ -90,9 +90,9 @@ Einer der verlockendsten Gründe für die Erstellung einer benutzerdefinierten P
 
 ## Erstellen einer Projektvorlage {#creating-project-template}
 
-Da wir hauptsächlich Knoten kopieren/konfigurieren, werden wir CRXDE Lite verwenden. Öffnen Sie in Ihrer lokalen AEM-Instanz [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
+Da wir hauptsächlich Knoten kopieren/konfigurieren, wird CRXDE Lite verwendet. Öffnen Sie in Ihrer lokalen AEM-Instanz [CRXDE Lite](http://localhost:4502/crx/de/index.jsp).
 
-1. Erstellen Sie zunächst einen Ordner unter `/apps/&lt;your-app-folder&gt;` benannt `projects`. Erstellen Sie einen weiteren Ordner darunter mit dem Namen `templates`.
+1. Erstellen Sie zunächst unter `/apps/&lt;your-app-folder&gt;` einen Ordner namens `projects`. Erstellen Sie darunter einen weiteren Ordner mit dem Namen `templates`.
 
    ```shell
    /apps/aem-guides/projects-tasks/
@@ -100,7 +100,7 @@ Da wir hauptsächlich Knoten kopieren/konfigurieren, werden wir CRXDE Lite verwe
                                 + templates (nt:folder)
    ```
 
-1. Um die Arbeit zu vereinfachen, starten wir unsere benutzerdefinierte Vorlage aus der vorhandenen einfachen Projektvorlage.
+1. Um die Arbeit zu erleichtern, starten wir unsere benutzerdefinierte Vorlage aus der vorhandenen Vorlage für ein einfaches Projekt.
 
    1. Kopieren Sie den Knoten **/libs/cq/core/content/projects/templates/default** und fügen Sie ihn unterhalb des *Vorlagenordners* ein, der in Schritt 1 erstellt wurde.
 
@@ -129,7 +129,7 @@ Da wir hauptsächlich Knoten kopieren/konfigurieren, werden wir CRXDE Lite verwe
    1. Fügen Sie einen neuen **nt:unstructured**-Knoten namens **Aufgaben** unter authoring-project/gadgets hinzu.
    1. Fügen Sie zum Aufgabenknoten die Zeichenfolge-Eigenschaften **cardWeight** = &quot;100&quot;, **jcr:title** = &quot;Aufgaben&quot; und **sling:resourceType** = &quot;cq/gui/components/projects/admin/pod/taskpod&quot; hinzu.
 
-   Jetzt wird die [Aufgabenkachel](https://experienceleague.adobe.com/docs/#Tasks?lang=de) standardmäßig angezeigt, wenn ein neues Projekt erstellt wird.
+   Jetzt wird die [Aufgabenkachel](https://experienceleague.adobe.com/docs/?lang=de#Tasks) standardmäßig angezeigt, wenn ein neues Projekt erstellt wird.
 
    ```shell
    ../projects/templates/authoring-project
@@ -148,11 +148,11 @@ Da wir hauptsächlich Knoten kopieren/konfigurieren, werden wir CRXDE Lite verwe
 
 1. Wir fügen unserer Projektvorlage eine benutzerdefinierte Genehmigerrolle („Approver“) hinzu.
 
-   1. Fügen Sie unter dem Knoten der Projektvorlage (authoring-project) einen neuen hinzu. **nt:unstructured** node-label **Rollen**.
+   1. Fügen Sie unter dem Knoten der Projektvorlage (authoring-project) einen neuen **nt:unstructured**-Knoten mit der Beschriftung **Rollen** hinzu.
    1. Fügen Sie einen weiteren **nt:unstructured**-Knoten namens „Genehmigende“ als untergeordnetes Element des Benutzerknotens hinzu.
    1. Fügen Sie die Zeichenfolge-Eigenschaften **jcr:title** = &quot;**Approvers**&quot;, **roleclass** =&quot;**owner**&quot;, **roleid**=&quot;**approvers**&quot; hinzu.
       1. Der Name des Genehmigungsknotens sowie jcr:title und roleid können beliebige Zeichenfolgenwerte sein (solange roleid eindeutig ist).
-      1. **roleclass** legt die für diese Rolle beantragten Berechtigungen anhand der Variablen [drei OOTB-Rollen](https://docs.adobe.com/content/docs/en/aem/6-3/author/projects.html): **owner**, **editor**, und **observer**.
+      1. **roleclass** legt die für diese Rolle beantragten Berechtigungen anhand der [drei vorkonfigurierten Rollen](https://docs.adobe.com/content/docs/de/aem/6-3/author/projects.html) fest: **Owner**, **Editor** und **Observer**.
       1. Wenn die benutzerdefinierte Rolle eher eine Führungsrolle ist, kann die Rollenklasse **Owner** sein; wenn es sich eher um eine spezifische Authoring-Rolle wie „Photographer“ oder „Designer“ handelt, sollte die Rollenklasse **Editor** ausreichen. Der große Unterschied zwischen **Inhaberin bzw. Inhaber** und **Bearbeitenden** ist, dass Projektinhaberinnen und -inhaber Projekteigenschaften aktualisieren und dem Projekt neue Benutzende hinzufügen können.
 
    ```shell
@@ -165,7 +165,7 @@ Da wir hauptsächlich Knoten kopieren/konfigurieren, werden wir CRXDE Lite verwe
                 - roleid = "approver"
    ```
 
-1. Durch Kopieren der Vorlage für einfache Projekte werden vier OOTB-Workflows konfiguriert. Jeder Knoten unter Workflows/Modelle verweist auf einen bestimmten Workflow und einen Assistenten für das Starten eines Dialogfelds für diesen Workflow. Später in diesem Tutorial erstellen wir einen benutzerdefinierten Workflow für dieses Projekt. Löschen Sie zunächst die Knoten unter &quot;workflow/models&quot;:
+1. Durch Kopieren der Vorlage für ein einfaches Projekt erhalten Sie vier vorkonfigurierte Workflows. Jeder Knoten unter Workflows/Modelle verweist auf einen bestimmten Workflow und einen Assistenten für das Starten eines Dialogfelds für diesen Workflow. Später in diesem Tutorial erstellen wir einen benutzerdefinierten Workflow für dieses Projekt. Für diesen Schritt löschen Sie jedoch zunächst die Knoten unter „workflow/models“:
 
    ```shell
    ../projects/templates/authoring-project
@@ -176,10 +176,10 @@ Da wir hauptsächlich Knoten kopieren/konfigurieren, werden wir CRXDE Lite verwe
                - (remove ootb models)
    ```
 
-1. Um es Inhaltsautoren zu erleichtern, die Projektvorlage zu identifizieren, können Sie eine benutzerdefinierte Miniaturansicht hinzufügen. Die empfohlene Größe beträgt 319 x 319 Pixel.
-   1. Erstellen Sie unter CRXDE Lite eine Datei als gleichrangiges Element mit Knoten für Gadgets, Rollen und Workflows mit dem Namen **thumbnail.png**.
-   1. Speichern und navigieren Sie dann zum `jcr:content` und doppelklicken Sie auf die `jcr:data` -Eigenschaft (vermeiden Sie das Klicken auf &quot;Ansicht&quot;).
-      1. Dies sollte Sie zur Bearbeitung auffordern `jcr:data` -Dateidialogfeld ein und Sie können eine benutzerdefinierte Miniaturansicht hochladen.
+1. Um Inhaltsautorinnen und Inhaltsautoren die Identifizierung der Projektvorlage zu erleichtern, können Sie eine benutzerdefinierte Miniaturansicht hinzufügen. Die empfohlene Größe beträgt 319 x 319 Pixel.
+   1. Erstellen Sie in CRXDE Lite eine neue Datei als gleichrangiges Element der Knoten für Gadgets, Rollen und Workflows mit dem Namen **thumbnail.png**.
+   1. Speichern Sie die Änderungen. Navigieren Sie dann zum Knoten `jcr:content` und doppelklicken Sie auf die Eigenschaft `jcr:data` (vermeiden Sie das Klicken auf „Ansicht“).
+      1. Daraufhin sollte ein Dialogfeld zum Bearbeiten der Datei `jcr:data` angezeigt werden, in dem Sie eine benutzerdefinierte Miniaturansicht hochladen können.
 
    ```shell
    ../projects/templates/authoring-project
@@ -253,66 +253,66 @@ Jetzt können wir unsere Projektvorlage testen, indem wir ein Projekt erstellen.
 
    ![Auswählen einer Vorlage](./assets/develop-aem-projects/choose-template.png)
 
-1. Nachdem Sie die benutzerdefinierte Vorlage ausgewählt haben, klicken Sie auf &quot;Weiter&quot;. Beachten Sie, dass Sie sie beim Ausfüllen der Projektmitglieder als Genehmigerrolle hinzufügen können.
+1. Nachdem Sie die benutzerdefinierte Vorlage ausgewählt haben, klicken Sie auf „Weiter“. Beachten Sie, dass Sie beim Ausfüllen der Projektmitglieder diese in der Rolle „Approver“ hinzufügen können.
 
    ![Genehmigen](./assets/develop-aem-projects/user-approver.png)
 
-1. Klicken Sie auf &quot;Erstellen&quot;, um die Erstellung des Projekts anhand der benutzerdefinierten Vorlage abzuschließen. Sie werden im Projekt-Dashboard feststellen, dass die Aufgabenkachel und die anderen unter Gadgets konfigurierten Kacheln automatisch angezeigt werden.
+1. Klicken Sie auf „Erstellen“, um das Projekt basierend auf der benutzerdefinierten Vorlage zu erstellen. Sie werden im Projekt-Dashboard feststellen, dass die Aufgabenkachel und die anderen unter Gadgets konfigurierten Kacheln automatisch angezeigt werden.
 
    ![Aufgabenkachel](./assets/develop-aem-projects/tasks-tile.png)
 
 
 ## Warum Workflows?
 
-Traditionell haben AEM-Workflows für einen Genehmigungsprozess die Workflow-Schritte „Teilnehmende“ verwendet. AEM Posteingang enthält Details zu Aufgaben und Workflows sowie eine verbesserte Integration in AEM Projekte. Diese Funktionen machen die Verwendung der Prozessschritte „Aufgabe erstellen“ für Projekte zu einer attraktiveren Option.
+Traditionell haben AEM-Workflows für einen Genehmigungsprozess die Workflow-Schritte „Teilnehmende“ verwendet. Der AEM-Posteingang enthält Details zu Aufgaben und Workflows sowie eine verbesserte Integration in AEM-Projekte. Diese Funktionen machen die Verwendung der Prozessschritte „Aufgabe erstellen“ für Projekte zu einer attraktiveren Option.
 
 ### Warum Aufgaben?
 
 Die Verwendung eines Schritts zur Aufgabenerstellung anstelle der herkömmlichen Schritte „Teilnehmende“ bietet einige Vorteile:
 
 * **Start- und Fälligkeitsdatum** – erleichtert es Autorinnen und Autoren, ihre Zeit zu verwalten. Die neue Kalenderfunktion nutzt diese Daten.
-* **Priorität** – integrierte Prioritäten von „Niedrig“, „Normal“ und „Hoch“ ermöglichen es Autorinnen und Autoren, die Arbeit zu priorisieren.
+* **Priorität** – integrierte Prioritäten von „Niedrig“, „Normal“ und „Hoch“ ermöglichen es Autorinnen und Autoren, die Arbeit zu priorisieren
 * **Thread-Kommentare** – Wenn Autorinnen oder Autoren an einer Aufgabe arbeiten, können sie Kommentare hinterlassen, was die Zusammenarbeit stärkt
 * **Sichtbarkeit** – Aufgabenkacheln und -ansichten mit Projekten ermöglichen es den Vorgesetzten anzuzeigen, wie die Zeit genutzt wird
-* **Projektintegration** – Aufgaben sind bereits in Projektrollen und Dashboards integriert.
+* **Projektintegration** – Aufgaben sind bereits in Projektrollen und Dashboards integriert
 
 Aufgaben können wie Teilnehmer-Schritte dynamisch zugewiesen und weitergeleitet werden. Aufgabenmetadaten wie Titel und Priorität können auch dynamisch basierend auf vorherigen Aktionen festgelegt werden, wie im folgenden Tutorial gezeigt wird.
 
-Aufgaben haben zwar einige Vorteile gegenüber Teilnehmer-Schritten, sind aber außerhalb eines Projekts nicht sehr nützlich, sondern mit zusätzlichem Mehraufwand verbunden. Darüber hinaus muss das gesamte dynamische Verhalten von Aufgaben mit Ecma-Skripten mit eigenen Einschränkungen codiert werden.
+Aufgaben haben zwar einige Vorteile gegenüber Teilnehmer-Schritten, sind aber außerhalb eines Projekts nicht sehr nützlich, sondern mit zusätzlichem Mehraufwand verbunden. Zusätzlich muss das dynamische Verhalten von Aufgaben mithilfe von Ecma-Skripten mit eigenen Einschränkungen kodiert werden.
 
 ## Anforderungen in einem Beispielanwendungsfall {#goals-tutorial}
 
 ![Workflow-Prozessdiagramm](./assets/develop-aem-projects/workflow-process-diagram.png)
 
-Im obigen Diagramm werden die allgemeinen Anforderungen für unseren Beispielvalidierungs-Workflow beschrieben.
+Im oben dargestellten Diagramm werden die allgemeinen Anforderungen für unseren Beispiel-Genehmigungs-Workflow beschrieben.
 
 Der erste Schritt besteht darin, eine Aufgabe zu erstellen, um die Bearbeitung eines Inhaltselements abzuschließen. Wir werden der Person, die den Workflow initiiert, die Wahl überlassen, wer mit dieser ersten Aufgabe betraut wird.
 
 Sobald die erste Aufgabe abgeschlossen ist, hat die Person, der die Aufgabe zugewiesen wurde, drei Optionen für die Weiterleitung des Workflows:
 
-**Normal ** – Normales Routing erstellt eine Aufgabe, die der Genehmigergruppe des Projekts zugewiesen ist, um sie zu überprüfen und zu genehmigen. Die Priorität der Aufgabe ist Normal und das Fälligkeitsdatum beträgt fünf Tage nach ihrer Erstellung.
+**Normal ** – Normales Routing erstellt eine Aufgabe, die der Genehmigergruppe des Projekts zugewiesen ist, um sie zu überprüfen und zu genehmigen. Die Priorität der Aufgabe ist normal und das Fälligkeitsdatum liegt fünf Tage nach ihrer Erstellung.
 
-**Eilig** – Das Eil-Routing erstellt ebenfalls eine Aufgabe, die der Genehmigergruppe des Projekts zugewiesen ist. Die Priorität der Aufgabe ist hoch und das Fälligkeitsdatum beträgt nur einen Tag.
+**Eilig** – Das Eil-Routing erstellt ebenfalls eine Aufgabe, die der Genehmigergruppe des Projekts zugewiesen ist. Die Priorität der Aufgabe ist hoch und das Fälligkeitsdatum ist nur einen Tag später.
 
 **Umgehen** – In diesem Beispiel-Workflowhat die Person, die als erste dran ist, die Möglichkeit, die Genehmigungsgruppe zu umgehen. (Ja, dies könnte den Zweck eines „Genehmigungs“-Workflows beeinträchtigen, ermöglicht uns jedoch, zusätzliche Routing-Funktionen zu veranschaulichen)
 
-Die Gruppe Genehmiger kann den Inhalt genehmigen oder ihn zur erneuten Bearbeitung an den ursprünglichen Bevollmächtigten zurücksenden. Wenn eine neue Aufgabe zurückgesendet wird, wird sie neu erstellt und entsprechend mit &quot;Zur erneuten Bearbeitung zurückgesendet&quot;beschriftet.
+Die Genehmigergruppe kann den Inhalt genehmigen oder ihn zur erneuten Bearbeitung an die ursprünglich bevollmächtigte Person zurücksenden. Im Falle einer erneuten Bearbeitung wird eine neue Aufgabe erstellt und entsprechend mit der Bezeichnung „Zur Bearbeitung zurückgesendet“ versehen.
 
 Der letzte Schritt des Workflows nutzt den vorkonfigurierten Prozessschritt „Seite/Asset aktivieren“ und repliziert die Payload.
 
 ## Erstellen eines Workflow-Modells
 
-1. Navigieren Sie im AEM Startmenü zu Tools > Workflow > Modelle . Klicken Sie oben rechts auf &quot;Erstellen&quot;, um ein Workflow-Modell zu erstellen.
+1. Navigieren Sie im AEM-Startmenü zu „Tools“ > „Workflow“ > „Modelle“. Klicken Sie oben rechts auf „Erstellen“, um ein Workflow-Modell zu erstellen.
 
    Geben Sie dem neuen Modell den Titel „Inhaltsgenehmigungs-Workflow“ und den URL-Namen: „content-approval-workflow“.
 
    ![Dialogfeld „Workflow erstellen“](./assets/develop-aem-projects/workflow-create-dialog.png)
 
-   [Weitere Informationen zur Erstellung von Workflows finden Sie hier .](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
+   [Weitere Informationen zum Erstellen von Workflows finden Sie hier](https://docs.adobe.com/content/help/de/experience-manager-65/developing/extending-aem/extending-workflows/workflows-models.html).
 
-1. Als Best Practice sollten benutzerdefinierte Workflows in einem eigenen Ordner unter /etc/workflow/models gruppiert werden. Erstellen Sie auf dem CRXDE Lite eine **&#39;nt:folder&#39;** unter /etc/workflow/models namens **&quot;aem-guides&quot;**. Durch Hinzufügen eines Unterordners wird sichergestellt, dass benutzerdefinierte Workflows bei Upgrades oder Service Pack-Installationen nicht versehentlich überschrieben werden.
+1. Als Best Practice sollten benutzerdefinierte Workflows in einem eigenen Ordner unter /etc/workflow/models gruppiert werden. Erstellen Sie in CRXDE Lite unter /etc/workflow/models einen **nt:folder** mit dem Namen **aem-guides**. Durch das Hinzufügen eines Unterordners wird sichergestellt, dass benutzerdefinierte Workflows bei Upgrades oder Service Pack-Installationen nicht versehentlich überschrieben werden.
 
-   &#42;Beachten Sie, dass es wichtig ist, den Ordner oder die benutzerdefinierten Workflows nie unter den obersten Unterordnern wie /etc/workflow/models/dam oder /etc/workflow/models/projects zu platzieren, da der gesamte Unterordner auch durch Upgrades oder Service Packs überschrieben werden kann.
+   &#42;Beachten Sie, dass es wichtig ist, den Ordner oder die benutzerdefinierten Workflows niemals unter vorkonfigurierten Unterordnern wie /etc/workflow/models/dam oder /etc/workflow/models/projects zu platzieren, da der gesamte Unterordner ebenfalls durch Upgrades oder Service Packs überschrieben werden könnte.
 
    ![Speicherort des Workflow-Modells in 6.3](./assets/develop-aem-projects/custom-workflow-subfolder.png)
 
@@ -320,16 +320,16 @@ Der letzte Schritt des Workflows nutzt den vorkonfigurierten Prozessschritt „S
 
    >[!NOTE]
    >
-   >Bei Verwendung von AEM 6.4+ hat sich der Speicherort des Workflows geändert. Weitere Informationen dazu finden Sie [hier](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html).
+   >Bei Verwendung von AEM 6.4+ hat sich der Speicherort des Workflows geändert. Weitere Informationen dazu finden Sie [hier](https://docs.adobe.com/content/help/de/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html).
 
-   Bei Verwendung von AEM 6.4+ wird das Workflow-Modell unter `/conf/global/settings/workflow/models` erstellt. Wiederholen Sie die obigen Schritte mit dem Ordner /conf und fügen Sie einen Unterordner mit dem Namen `aem-guides` und verschieben Sie die `content-approval-workflow` darunter.
+   Bei Verwendung von AEM 6.4+ wird das Workflow-Modell unter `/conf/global/settings/workflow/models` erstellt. Wiederholen Sie die oben aufgeführten Schritte mit dem Verzeichnis „/conf“, fügen Sie einen Unterordner mit dem Namen `aem-guides` hinzu und verschieben Sie `content-approval-workflow` darunter.
 
    ![Speicherort der modernen Workflow-Definition](./assets/develop-aem-projects/modern-workflow-definition-location.png)
 Speicherort des Workflow-Modells in 6.4+
 
 1. In AEM 6.3 wurde die Möglichkeit eingeführt, Workflow-Phasen zu einem bestimmten Workflow hinzuzufügen. Die Phasen werden den Benutzenden des Posteingangs auf der Registerkarte „Workflow-Informationen“ angezeigt. Sie zeigt ihnen die aktuelle Phase des Workflows sowie die Phasen davor und danach an.
 
-   Um die Bühnen zu konfigurieren, öffnen Sie das Dialogfeld Seiteneigenschaften auf der Sidekick. Die vierte Registerkarte heißt „Phasen“. Fügen Sie die folgenden Werte hinzu, um die drei Phasen dieses Workflows zu konfigurieren:
+   Zum Konfigurieren der Phasen öffnen Sie im Sidekick das Dialogfeld „Seiteneigenschaften“. Die vierte Registerkarte heißt „Phasen“. Fügen Sie die folgenden Werte hinzu, um die drei Phasen dieses Workflows zu konfigurieren:
 
    1. Inhalt bearbeiten
    1. Genehmigung
@@ -347,11 +347,11 @@ Speicherort des Workflow-Modells in 6.4+
 
 1. Der Workflow-Prozess „Projektaufgabe erstellen“ dient dazu, eine Aufgabe als Schritt im Workflow zu erstellen. Erst nach Abschluss der Aufgabe wird der Workflow fortgesetzt. Ein wichtiger Aspekt des Schritts „Projektaufgabe erstellen“ besteht darin, dass er Workflow-Metadatenwerte lesen und diese zum dynamischen Erstellen der Aufgabe verwenden kann.
 
-   Löschen Sie zunächst den Teilnehmer-Schritt, der standardmäßig erstellt wird. Erweitern Sie über die Sidekick im Komponentenmenü den **&quot;Projekte&quot;** Untertitel und Drag &amp; Drop **&quot;Create Project Task&quot;** auf das Modell.
+   Löschen Sie zunächst den Teilnehmer-Schritt, der standardmäßig erstellt wird. Erweitern Sie über den Sidekick im Komponentenmenü die Unterüberschrift **Projekte** und ziehen Sie **Projektaufgabe erstellen** auf das Modell.
 
    Klicken Sie zweimal auf den Schritt „Projektaufgabe erstellen“, um das Workflow-Dialogfeld zu öffnen. Konfigurieren Sie die folgenden Eigenschaften:
 
-   Diese Registerkarte ist allen Workflow-Prozessschritten gemeinsam. Wir legen hier den Titel und die Beschreibung fest (diese sind für die Endbenutzenden nicht sichtbar). Die wichtige Eigenschaft, die wir festlegen werden, ist die Workflow-Staging-Umgebung auf **&quot;Inhalt bearbeiten&quot;** aus dem Dropdown-Menü.
+   Diese Registerkarte ist allen Workflow-Prozessschritten gemeinsam. Wir legen hier den Titel und die Beschreibung fest (diese sind für die Endbenutzenden nicht sichtbar). Die wichtigste Eigenschaft, die wir festlegen werden, ist die Workflow-Phase, die wir mithilfe des Dropdown-Menüs auf **Inhalt bearbeiten** setzen.
 
    ```shell
    Common Tab
@@ -372,7 +372,7 @@ Speicherort des Workflow-Modells in 6.4+
        Due In - Days = "2"
    ```
 
-   Die Registerkarte „Routing“ ist ein optionales Dialogfeld, in dem die verfügbaren Aktionen für die Benutzenden angegeben werden können, die die Aufgabe abschließen. Diese Aktionen sind lediglich Zeichenfolgenwerte und werden in den Metadaten des Workflows gespeichert. Diese Werte können von Skripten und/oder Prozessschritten später im Workflow gelesen werden, sodass der Workflow dynamisch „weitergeleitet“ wird. Fügen Sie je nach den Workflow-Zielen drei Aktionen zu diesem Tab hinzu:
+   Die Registerkarte „Routing“ ist ein optionales Dialogfeld, in dem die verfügbaren Aktionen für die Benutzenden angegeben werden können, die die Aufgabe abschließen. Diese Aktionen sind lediglich Zeichenfolgenwerte, die in den Metadaten des Workflows gespeichert werden. Diese Werte können von Skripten und/oder Prozessschritten später im Workflow gelesen werden, sodass der Workflow dynamisch „weitergeleitet“ wird. Basierend auf den Workflow-Zielen fügen wir dieser Registerkarte drei Aktionen hinzu:
 
    ```shell
    Routing Tab
@@ -393,7 +393,7 @@ Speicherort des Workflow-Modells in 6.4+
 
 1. Im vorherigen Schritt haben wir ein solches Vorab-Skript referenziert. Wir erstellen jetzt dieses Skript, in dem wir die für die Aufgabe verantwortliche Person auf Grundlage des Werts eines Workflow-Metadatenwerts „**Verantwortliche**“ festlegen. Der Wert **„Verantwortliche“** wird festgelegt, wenn der Workflow gestartet wird. Außerdem werden die Workflow-Metadaten gelesen, sodass die Priorität der Aufgabe dynamisch ausgewählt werden kann, indem der **taskPriority**-Wert der Workflow-Metadaten sowie das **taskDueDate** gelesen wird und dynamisch festgelegt werden kann, wann die erste Aufgabe ansteht.
 
-   Zu organisatorischen Zwecken haben wir unter unserem Anwendungsordner einen Ordner erstellt, in dem alle unsere projektbezogenen Skripte gespeichert werden: **/apps/aem-guides/projects-tasks/projects/scripts**. Erstellen Sie eine Datei unter diesem Ordner mit dem Namen **&quot;start-task-config.ecma&quot;**. &#42;Achten Sie darauf, dass der Pfad zu Ihrer Datei „start-task-config.ecma“ mit dem Pfad übereinstimmt, der in Schritt 4 auf der Registerkarte „Erweiterte Einstellungen“ festgelegt wurde.
+   Zu organisatorischen Zwecken haben wir unter unserem Anwendungsordner einen Ordner erstellt, in dem alle unsere projektbezogenen Skripte gespeichert werden: **/apps/aem-guides/projects-tasks/projects/scripts**. Erstellen Sie unter diesem Ordner eine Datei mit dem Namen **start-task-config.ecma**. &#42;Achten Sie darauf, dass der Pfad zu Ihrer Datei „start-task-config.ecma“ mit dem Pfad übereinstimmt, der in Schritt 4 auf der Registerkarte „Erweiterte Einstellungen“ festgelegt wurde.
 
    Fügen Sie Folgendes als Inhalt der Datei hinzu:
 
@@ -735,10 +735,10 @@ Die Workflow-Konfiguration ist ein Bereich einer Projektvorlage, der die verfüg
 
    >[!NOTE]
    >
-   >Wenn Sie AEM 6.4 verwenden, hat sich der Speicherort des Workflows geändert. Lassen Sie die `modelId`-Eigenschaft auf den Speicherort des Runtime-Workflow-Modells unter `/var/workflow/models/aem-guides/content-approval-workflow` verweisen.
+   >Wenn Sie AEM 6.4 verwenden, hat sich der Speicherort des Workflows geändert. Lassen Sie die `modelId`-Eigenschaft auf den Speicherort des Runtime-Workflow-Modells unter `/var/workflow/models/aem-guides/content-approval-workflow` verweisen
    >
    >
-   >Weitere Informationen zur Änderung des Workflow-Speicherorts [finden Sie hier](https://docs.adobe.com/content/help/en/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html).
+   >Weitere Informationen zur Änderung des Workflow-Speicherorts [finden Sie hier](https://docs.adobe.com/content/help/de/experience-manager-65/developing/extending-aem/extending-workflows/workflows-best-practices.html).
 
    ```xml
    <contentapproval
@@ -754,4 +754,4 @@ Die Workflow-Konfiguration ist ein Bereich einer Projektvorlage, der die verfüg
 
 * [Download des fertigen Tutorial-Pakets](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Vollständiges Code-Repository auf GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
-* [Dokumentation zu AEM-Projekten](https://docs.adobe.com/content/help/en/experience-manager-65/authoring/projects/projects.html)
+* [Dokumentation zu AEM-Projekten](https://docs.adobe.com/content/help/de/experience-manager-65/authoring/projects/projects.html)
