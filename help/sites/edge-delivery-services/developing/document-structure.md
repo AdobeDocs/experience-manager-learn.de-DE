@@ -1,6 +1,6 @@
 ---
 title: Dokumentstruktur für Edge Delivery Services
-description: Erfahren Sie, wie ein Edge Delivery Services-Dokument mithilfe von Abschnitten, Standardinhalten und mehr zusammengestellt wird.
+description: Erfahren Sie, wie ein Edge Delivery Services-Dokument mithilfe von Abschnitten, Standardinhalten und anderen Elementen zusammengestellt wird.
 version: 6.5, Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,14 +13,14 @@ thumbnail: 3425716.jpeg
 duration: 196
 exl-id: f6e9822b-1803-4aff-aac4-714146568f91
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '40'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Dokumentstruktur
 
-Erfahren Sie, wie ein Edge Delivery Services-Dokument mithilfe von Abschnitten, Standardinhalten und mehr zusammengestellt wird.
+Erfahren Sie, wie ein Edge Delivery Services-Dokument mithilfe von Abschnitten, Standardinhalten und anderen Elementen zusammengestellt wird.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425716/?learn=on)
