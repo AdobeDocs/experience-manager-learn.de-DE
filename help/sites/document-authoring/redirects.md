@@ -1,6 +1,6 @@
 ---
 title: Umleitungen
-description: Ein tiefer Einblick in die Funktionsweise von Weiterleitungen beim Dokumenterstellungswesen und die einfache Einrichtung von Weiterleitungen ohne technisches Fachwissen durch Autoren.
+description: Ein umfassender Einblick in die Funktionsweise von Weiterleitungen bei der Dokumenterstellung und die einfache Einrichtung von Weiterleitungen ohne technisches Fachwissen durch Autoren und Autorinnen.
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -13,9 +13,9 @@ thumbnail: 3425704.jpeg
 duration: 100
 exl-id: efbb5a79-0427-46fd-b869-906a8ee044ee
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-Ein tiefer Einblick in die Funktionsweise von Weiterleitungen beim Dokumenterstellungswesen und die einfache Einrichtung von Weiterleitungen ohne technisches Fachwissen durch Autoren.
+Ein umfassender Einblick in die Funktionsweise von Weiterleitungen bei der Dokumenterstellung und die einfache Einrichtung von Weiterleitungen ohne technisches Fachwissen durch Autoren und Autorinnen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425704/?learn=on)
