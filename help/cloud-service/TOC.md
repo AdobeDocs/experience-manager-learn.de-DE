@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: c77dd9c2872e7e43863d83837cedbff50a7d3c1a
+source-git-commit: d8d15d8dd820797e829fe664d74867822782a4c1
 workflow-type: tm+mt
-source-wordcount: '1141'
-ht-degree: 90%
+source-wordcount: '1148'
+ht-degree: 95%
 
 ---
 
@@ -136,8 +136,8 @@ ht-degree: 90%
    + [AEM-Author-Service](./caching/author.md)
    + [Analyse des CDN-Cache-Trefferverhältnisses](./caching/cdn-cache-hit-ratio-analysis.md)
    + Anleitung{#how-to}
-      + [Zwischenspeicherung aktivieren](./caching/how-to/enable-caching.md)
-      + [Zwischenspeicherung deaktivieren](./caching/how-to/disable-caching.md)
+      + [Aktivieren des Cachings](./caching/how-to/enable-caching.md)
+      + [Deaktivieren des Cachings](./caching/how-to/disable-caching.md)
 + Zugriff auf AEM{#accessing}
    + [Übersicht](./accessing/overview.md)
    + [Adobe IMS-Benutzende](./accessing/adobe-ims-users.md)
@@ -165,11 +165,11 @@ ht-degree: 90%
       + [Einrichtung](./security/traffic-filter-rules/how-to-setup.md)
       + [Beispiele und Ergebnisanalyse](./security/traffic-filter-rules/examples-and-analysis.md)
       + [Best Practices](./security/traffic-filter-rules/best-practices.md)
-+ AEM Event{#aem-eventing}
++ AEM Eventing{#aem-eventing}
    + [Übersicht](./eventing/overview.md)
    + Beispiele{#examples}
-      + [Webhook - Empfangen von AEM Ereignissen](./eventing/examples/webhook.md)
-      + [Journaling - Laden AEM Ereignissen](./eventing/examples/journaling.md)
+      + [Webhook – Empfangen von AEM-Ereignissen](./eventing/examples/webhook.md)
+      + [Journaling – Laden von AEM-Ereignissen](./eventing/examples/journaling.md)
       + [Adobe I/O Runtime-Aktion - AEM empfangen](./eventing/examples/runtime-action.md)
       + [Adobe I/O Runtime-Aktion - Verarbeiten AEM Ereignisse](./eventing/examples/event-processing-using-runtime-action.md)
       + [AEM Assets Events - PIM-Integration](./eventing/examples/assets-pim-integration.md)
@@ -216,7 +216,7 @@ ht-degree: 90%
       + [4 – Synchronisieren von IntelliJ mit AEM](./forms/developing-for-cloud-service/intellij-and-aem-sync.md)
       + [5 – Erstellen eines Formulars](./forms/developing-for-cloud-service/deploy-your-first-form.md)
       + [6 – Benutzerdefinierter Übermittlungs-Handler](./forms/developing-for-cloud-service/custom-submit-to-servlet.md)
-      + [7 - Registrieren von Servlets anhand des Ressourcentyps](./forms/developing-for-cloud-service/registering-servlet-using-resourcetype.md)
+      + [7 – Registrieren eines Servlets mithilfe des Ressourcentyps](./forms/developing-for-cloud-service/registering-servlet-using-resourcetype.md)
       + [8 – Aktivieren von Komponenten des Formularportals](./forms/developing-for-cloud-service/forms-portal-components.md)
       + [9 – Einschließen von Cloud-Services und FDM](./forms/developing-for-cloud-service/azure-storage-fdm.md)
       + [10 – Kontextsensitive Cloud-Konfiguration](./forms/developing-for-cloud-service/context-aware-fdm.md)
@@ -267,15 +267,15 @@ ht-degree: 90%
       + [PDF/A-Dienstprogramme](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [Testen der Lösung](./forms/forms-cs-assembler/test.md)
       + [Herausforderung](./forms/forms-cs-assembler/challenge.md)
-   + Speichern von Formularübermittlungen mit Blob Index-Tags{#store-submiited-data-with-metadata-tags}
+   + Speichern von Formularübermittlungen mit Blob-Index-Tags{#store-submiited-data-with-metadata-tags}
       + [Einführung](./forms/store-submiited-data-with-metadata-tags/introduction.md)
-      + [Erweiterung der Auswahlgruppenkomponente](./forms/store-submiited-data-with-metadata-tags/extend-choice-group-components.md)
-      + [OSGi-Konfiguration erstellen](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
-      + [Index-Tags erstellen](./forms/store-submiited-data-with-metadata-tags/create-blob-index-tags.md)
-      + [Benutzerdefiniertes Senden erstellen](./forms/store-submiited-data-with-metadata-tags/create-custom-submit.md)
-   + Vorauffüllen von Kernkomponentenbasierten Formularen{#prefill-core-component-based-form}
+      + [Erweitern der Auswahlgruppen-Komponente](./forms/store-submiited-data-with-metadata-tags/extend-choice-group-components.md)
+      + [Erstellen einer OSGi-Konfiguration](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
+      + [Erstellen von Index-Tags](./forms/store-submiited-data-with-metadata-tags/create-blob-index-tags.md)
+      + [Erstellen einer benutzerdefinierten Übermittlung](./forms/store-submiited-data-with-metadata-tags/create-custom-submit.md)
+   + Vorbefüllen von auf Kernkomponenten basierenden Formularen{#prefill-core-component-based-form}
       + [Einführung](./forms/prefill-core-component-form/introduction.md)
-      + [Vorbefüllungs-Dienst schreiben](./forms/prefill-core-component-form/pre-fill-service.md)
+      + [Schreiben eines Vorbefüllungsdienstes](./forms/prefill-core-component-form/pre-fill-service.md)
       + [Testen der Lösung](./forms/prefill-core-component-form/test-solution.md)
    + Azure Portal-Speicher{#forms-cs-azure-portal}
       + [Einführung](./forms/forms-cs-azure-portal/introduction.md)
@@ -323,7 +323,7 @@ ht-degree: 90%
    + Speichern von Formularübermittlungen auf One Drive und Sharepoint{#one-drive}
       + [Speichern von Formulardaten auf One Drive](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [Speichern von Formulardaten in Sharepoint](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
-      + [Formular mit Daten aus der SharePoint-Liste vorab ausfüllen](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
+      + [Vorbefüllen von Formularen mit Daten aus der SharePoint-Liste](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
 + Asset Compute-Erweiterbarkeit{#asset-compute}
    + [Übersicht](./asset-compute/overview.md)
    + Setup{#set-up}
@@ -388,3 +388,4 @@ ht-degree: 90%
          + [Drittanbietersuche](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
          + [Real User Monitoring (RUM)](./expert-resources/cloud-5/season-3/cloud5-rum.md)
          + [Edge-Arbeitskräfte](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
+         + [Veröffentlichen von Ereignissen und Rückgängigmachen der Veröffentlichung in Edge Delivery Services](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)

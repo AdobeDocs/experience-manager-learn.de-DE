@@ -1,22 +1,22 @@
 ---
 title: 'Cloud 5: Staffel 3'
-description: In der dritten Stufe können Sie sich durch eingehende Interviews mit Experten, die an komplexen Projekten gearbeitet haben, über AEM Edge-Bereitstellungsdienst informieren.
+description: In der dritten Stufe können Sie sich durch eingehende Interviews mit Experten, die an komplexen Projekten gearbeitet haben, über AEM Edge-Bereitstellungsdienst informieren
 sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experience Manager Assets
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
-source-git-commit: d7608c552fad52492d36fb64587a5939c0cde7a2
+source-git-commit: d8d15d8dd820797e829fe664d74867822782a4c1
 workflow-type: tm+mt
-source-wordcount: '223'
-ht-degree: 32%
+source-wordcount: '267'
+ht-degree: 18%
 
 ---
 
 
-# Cloud 5 Staffel 3
+# Cloud 5: Staffel 3
 
 ## Einführung
 
-Willkommen in der dritten Cloud 5-Serie von AEM Engineering. Eines der Hauptprobleme in der Implementierungsphase eines Produkts besteht darin, genügend Code-Beispiele und/oder Live-Demonstrationen dieser Beispiele, Tools oder APIs zu haben. Ziel dieser Serie ist es, nützliche Informationen über AEM Edge-Bereitstellungsdienste in maximal 5 Minuten bereitzustellen.
+Willkommen in der dritten Cloud 5-Serie von AEM Engineering. Eines der Hauptprobleme in der Implementierungsphase eines Produkts besteht darin, genügend Codebeispiele und/oder Live-Demonstrationen dieser Beispiele, Tools oder APIs zu haben. Ziel dieser Serie ist es, nützliche Informationen über AEM Edge Delivery Services innerhalb von 5 Minuten oder weniger bereitzustellen.
 
 ## Vorschlagsfeld
 
@@ -56,7 +56,7 @@ Jede Staffel variiert in ihrer Länge und wird nach einem festen Zeitplan veröf
                 Erfahren Sie, wie die Echtzeit-Benutzerüberwachung (RUM) mit Edge Delivery Services funktioniert.
             </p>
         </td>   
- <td>
+        <td>
             <a href="./season-3/cloud5-edge-workers.md">
                 <img alt="Edge-Arbeitskräfte" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
             </a>
@@ -70,5 +70,21 @@ Jede Staffel variiert in ihrer Länge und wird nach einem festen Zeitplan veröf
                 Erkunden Sie die Bedeutung von Edge-Arbeitskräften mit Edge Delivery Services.
             </p>
         </td>   
-  </tr>  
+    </tr>
+    <tr>
+        <td>
+            <a href="./season-3/cloud5-publish-events.md">
+                <img alt="Veröffentlichen von Ereignissen und Rückgängigmachen der Veröffentlichung in Edge Delivery Services" src="https://video.tv.adobe.com/v/3427681?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-publish-events.md">
+                <strong>Veröffentlichen von Ereignissen und Rückgängigmachen der Veröffentlichung in Edge Delivery Services</strong></a>        
+                <br/><em>mit James Talbot &amp; Amol Anand, AEM Engineering</em>
+            </div>
+            <p>
+                <br/>
+                Erkunden Sie Ereignisse, die beim Veröffentlichen und Rückgängigmachen der Veröffentlichung in Edge Delivery Services ausgelöst werden, sowie Anwendungsfälle und Beispiele für die Verwendung dieser Ereignisse.
+            </p>
+        </td>   
+    </tr>  
 </table>
