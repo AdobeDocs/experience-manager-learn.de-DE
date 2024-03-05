@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
 duration: 437
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1481'
 ht-degree: 100%
 
@@ -208,9 +208,9 @@ Als Nächstes erstellen wir zusätzliche Seiten in AEM, die als verschiedene Ans
 
 ## Prüfen von React-Routing  {#react-routing}
 
-Die Navigation und das Routing werden mit [React Router](https://reactrouter.com/de/main) implementiert. React Router ist eine Sammlung von Navigationskomponenten für React-Apps. Die [AEM React-Kernkomponenten](https://github.com/adobe/aem-react-core-wcm-components-base) verwenden React-Router-Funktionen, um die in den vorherigen Schritten verwendete Komponente **Navigation** zu implementieren.
+Die Navigation und das Routing werden mit [React Router](https://reactrouter.com/en/main) implementiert. React Router ist eine Sammlung von Navigationskomponenten für React-Apps. Die [AEM React-Kernkomponenten](https://github.com/adobe/aem-react-core-wcm-components-base) verwenden React-Router-Funktionen, um die in den vorherigen Schritten verwendete Komponente **Navigation** zu implementieren.
 
-Überprüfen Sie als Nächstes, wie React Router mit der SPA integriert ist, und experimentieren Sie mit der [Link](https://reactrouter.com/de/main/components/link)-Komponente von React Router.
+Überprüfen Sie als Nächstes, wie React Router mit der SPA integriert ist, und experimentieren Sie mit der [Link](https://reactrouter.com/en/main/components/link)-Komponente von React Router.
 
 1. Öffnen Sie in der IDE die Datei `index.js` unter `ui.frontend/src/index.js`.
 
@@ -259,7 +259,7 @@ Die Navigation und das Routing werden mit [React Router](https://reactrouter.com
    Die `Page`-SPA-Komponente verwendet die `MapTo`-Funktion, um **Seiten** in AEM einer entsprechenden SPA-Komponente zuzuordnen. Das `withRoute`-Dienstprogramm hilft basierend auf der `cqPath`-Eigenschaft beim dynamischen Routing der SPA zur entsprechenden untergeordneten AEM-Seite.
 
 1. Öffnen Sie die `Header.js`-Komponente unter `ui.frontend/src/components/Header/Header.js`.
-1. Aktualisieren Sie die `Header`, um den `<h1>`-Tag in einem [Link](https://reactrouter.com/de/main/components/link) zur Homepage zu umschließen:
+1. Aktualisieren Sie die `Header`, um den `<h1>`-Tag in einem [Link](https://reactrouter.com/en/main/components/link) zur Homepage zu umschließen:
 
    ```diff
      //Header.js
