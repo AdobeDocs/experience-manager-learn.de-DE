@@ -9,9 +9,9 @@ doc-type: Tutorial
 exl-id: a1d83c77-a9e4-4ed1-9b00-65fb002164c0
 duration: 681
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2623'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -42,7 +42,7 @@ Dynamic Media Classic verfügt über mehrere Bildbearbeitungswerkzeuge, die in d
 
 Sie können auf das Zuschneidewerkzeug in Dynamic Media Classic über die Detailseite für ein Asset zugreifen oder indem Sie auf die Schaltfläche **Bearbeiten** klicken. Sie können das Tool zum Zuschneiden auf zwei Arten verwenden:
 
-- Der standardmäßige Zuschneidemodus, in den Sie die Handles des Zuschneidefensters ziehen oder Werte in das Feld „Größe“ eingeben. Erfahren Sie, wie das [manuelle Zuschneiden](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop?lang=de) funktioniert.
+- Der standardmäßige Zuschneidemodus, in den Sie die Handles des Zuschneidefensters ziehen oder Werte in das Feld „Größe“ eingeben. Erfahren Sie, wie das [manuelle Zuschneiden](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html?lang=de#select-an-area-to-crop) funktioniert.
 - Abschneiden. Verwenden Sie dies, um zusätzlichen Leerraum um das Bild zu entfernen, indem Sie die Anzahl der Pixel berechnen, die nicht mit Ihrem Bild übereinstimmen. Erfahren Sie, wie [Zuschneiden durch Trimmen](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html?lang=de#crop-to-remove-white-space-around-an-image) funktioniert.
 
 ### _Manuelles Zuschneiden_
@@ -124,7 +124,7 @@ _Angepasste Ansichten für Musterbild ASIAN_BR_MAIN_
 
 ## Zoom-Ziele
 
-Zoom-Ziele finden Sie auch im Menü **Bearbeiten** und auf der Seite **Details** eines Bildes. Sie ermöglichen es Ihnen, &quot;Hotspots&quot;festzulegen, um bestimmte Merchandising-Funktionen eines Zoombilds hervorzuheben. Anstatt separate Bilder durch Zuschneiden eines großen Musterbilds zu erstellen, kann der Zoom-Viewer die Details über dem Bild zusammen mit einer kurzen Beschriftung bereitstellen, die Sie erstellen.
+Zoom-Ziele finden Sie auch im Menü **Bearbeiten** und auf der Seite **Details** eines Bildes. Sie ermöglichen es Ihnen, „Hotspots“ festzulegen, um bestimmte Merchandising-Funktionen eines Zoom-Bilds hervorzuheben. Anstatt separate Bilder durch Zuschneiden eines großen Musterbilds zu erstellen, kann der Zoom-Viewer die Details über dem Bild zusammen mit einer kurzen Beschriftung bereitstellen, die Sie erstellen.
 
 ![image](assets/crop-adjusted-zoom-targets/arm-with-watch.jpg)
 
@@ -174,7 +174,7 @@ Wenn Sie das Zoom-Ziel-Tool laden, wird die Anzeigegröße neben dem Namen der V
 
 ![Bild](assets/crop-adjusted-zoom-targets/view-size.jpg)
 
-Sie können sehen, dass die integrierte Vorgabe eine Größe von 900 x 550 hat, was bedeutet, dass das Ziel nie kleiner werden kann als dieses eher große Format. Das ist wahrscheinlich zu groß. Wenn Sie ein 2000-Pixel-Bild haben, können Sie nur eine Funktion aufrufen, die mindestens 900 Pixel breit ist. Der Benutzer kann manuell weiter zoomen, aber Sie können sie nicht näher heranführen. Wenn Sie die Anzeigegröße auf 350 x 350 festlegen, können Ziele ziemlich nah herangezoomt oder stärker vergrößert werden. Wenn Sie jedoch ein größeres Zoombild in Ihrem Viewer wünschen, müssen Sie eine neue Vorgabe erstellen, da Ihre mit 350 Pixel gesperrt ist.
+Sie können sehen, dass die integrierte Vorgabe eine Größe von 900 x 550 hat, was bedeutet, dass das Ziel nie kleiner werden kann als dieses eher große Format. Das ist wahrscheinlich zu groß. Wenn Sie ein 2000-Pixel-Bild haben, können Sie nur eine Funktion aufrufen, die mindestens 900 Pixel breit ist. Die Benutzenden können manuell weiter zoomen, aber Sie können sie nicht näher heranführen. Wenn Sie die Anzeigegröße auf 350 x 350 festlegen, können Ziele ziemlich nah herangezoomt oder stärker vergrößert werden. Wenn Sie jedoch ein größeres Zoom-Bild in Ihrem Viewer wünschen, müssen Sie eine neue Vorgabe erstellen, da Ihre auf 350 Pixel festgelegt ist.
 
 ### Erstellen oder Bearbeiten einer Viewer-Vorgabe, die Zoom-Ziele unterstützt
 
