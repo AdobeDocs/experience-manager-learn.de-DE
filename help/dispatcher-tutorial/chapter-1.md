@@ -9,7 +9,7 @@ doc-type: Tutorial
 exl-id: 3bdb6e36-4174-44b5-ba05-efbc870c3520
 duration: 4722
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '17384'
 ht-degree: 100%
 
@@ -112,7 +112,7 @@ Um den Dispatcher detaillierter zu verstehen, schauen wir uns die Struktur einer
 
 * `domain.com` ist der Domain-Name
 
-* `path/to/resource` ist der Pfad, unter dem die Ressource in CRX und anschließend im Dateisystem des Apache-Servers gespeichert wird.
+* `path/to/resource` ist der Pfad, unter dem die Ressource in CRX und anschließend im Dateisystem des Apache-Servers gespeichert wird
 
 Hier unterscheiden sich die Dinge ein wenig zwischen dem AEM-Dateisystem und dem Apache-Dateisystem.
 
@@ -210,9 +210,9 @@ Wenn Sie `home.html` erstmalig anfordern, wird eine Datei erstellt.
 
 Bei nachfolgenden Anfragen an `home.html/suffix.html` werden zwar gültige Ergebnisse zurückgegeben, allerdings „blockiert“ die Datei `home.html` die Position im Dateisystem. `home.html` kann nicht ein zweites Mal als Ordner erstellt werden und `home.html/suffix.html` wird daher nicht zwischengespeichert.
 
-![Blockierte Dateiposition im Dateisystem verhindert das Caching von Unterressourcen.](assets/chapter-1/file-blocking-position-in-filesystem.png)
+![Blockierte Dateiposition im Dateisystem verhindert das Caching von Unterressourcen](assets/chapter-1/file-blocking-position-in-filesystem.png)
 
-*Blockierte Dateiposition im Dateisystem verhindert das Caching von Unterressourcen.*
+*Blockierte Dateiposition im Dateisystem verhindert das Caching von Unterressourcen*
 
 <br> 
 
@@ -236,7 +236,7 @@ Sie können in Konflikt stehende URLs vermeiden, bei denen ein Ordnername und ei
 
 * `http://domain.com/home.dir/suffix.html`
 
-Für beide ist eine Zwischenspeicherung problemlos möglich.
+Für beide ist eine Zwischenspeicherung problemlos möglich,
 
 ![](assets/chapter-1/cacheable.png)
 
@@ -248,8 +248,8 @@ Sehen wir uns eine kurze Zusammenfassung des letzten Kapitels sowie einige weite
 
 **Zwischenspeicherbare Anfragen**
 
-* Die Anfrage ist in der Dispatcher-Konfiguration als zwischenspeicherbar konfiguriert.
-* Die Anfrage ist eine einfache GET-Anfrage.
+* Die Anfrage ist in der Dispatcher-Konfiguration als zwischenspeicherbar konfiguriert
+* Die Anfrage ist eine einfache GET-Anfrage
 
 **Nicht zwischenspeicherbare Anfragen oder Antworten**
 
@@ -295,7 +295,7 @@ Wenn wir beides herunterladen, die Miniaturansicht und das Originalbild, erhalte
 
 im Dateisystem unseres Dispatchers.
 
-Jetzt lädt jemand eine neue Version dieser Datei hoch und aktiviert sie. Schließlich wird eine Invalidierungsanfrage von AEM an den Dispatcher gesendet.
+Jetzt lädt jemand eine neue Version dieser Datei hoch und aktiviert sie. Schließlich wird eine Invalidierungsanfrage von AEM an den Dispatcher gesendet,
 
 ```
 GET /invalidate
@@ -560,7 +560,7 @@ an den Dispatcher. Diese Anfragen sind jedoch vergebens. Die Inhalte wurden als 
 
 <br> 
 
-Bei diesem Ansatz gibt es noch einen weiteren Vorbehalt. Beachten Sie, dass Sie dieselbe flower.jpg auf mehreren Seiten verwenden. Anschließend wird dasselbe Asset unter mehreren URLs oder Dateien zwischengespeichert.
+Bei diesem Ansatz gibt es noch einen weiteren Vorbehalt. Beachten Sie, dass Sie dieselbe flower.jpg auf mehreren Seiten verwenden. Anschließend wird dasselbe Asset unter mehreren URLs oder Dateien zwischengespeichert,
 
 ```
 /content/home/products/jcr:content/par/respi.img.jpg
@@ -921,7 +921,7 @@ Wenn Sie keine Web-Applikations-Firewall haben, müssen Sie im Dispatcher oder i
 
 1. Der Filter überaus effizient implementiert wird, ohne dass der Zugriff auf CRX zu aufwändig ist und Speicher und Zeit verschwendet werden.
 
-2. Der Filter auf die Fehlermeldung „404 – Nicht gefunden“ antwortet.
+2. Der Filter auf die Fehlermeldung „404 – Nicht gefunden“ antwortet
 
 Lassen Sie uns noch einmal den letzten Punkt betonen. Die HTTP-Konversation würde wie folgt aussehen:
 
@@ -1356,7 +1356,7 @@ Ein zwischengespeichertes Dokument im Browser kann drei Stufen der Aktualität a
 
 1. _Garantiert neu_ – Der Browser kann das zwischengespeicherte Dokument verwenden.
 
-2. _Potenziell veraltet_ – Der Browser sollte zuerst den Server fragen, ob das zwischengespeicherte Dokument immer noch aktuell ist.
+2. _Potenziell veraltet_ – Der Browser sollte zuerst den Server fragen, ob das zwischengespeicherte Dokument immer noch aktuell ist,
 
 3. _Veraltet_ – Der Browser muss den Server nach einer neuen Version fragen.
 
@@ -1366,7 +1366,7 @@ Wenn das Dokument das Ablaufdatum erreicht hat, kann es weiterhin neu sein. Das 
 
 Um festzustellen, ob das Dokument im Browser-Cache weiterhin mit dem Dokument übereinstimmt, das bei einer neuen Anfrage bereitgestellt wird, kann der Browser das `Last-Modified`-Datum des Dokuments nutzen. Der Browser fragt den Server:
 
-„_Ich habe eine Version vom 10. Juni … brauche ich eine Aktualisierung?_“. Der Server antwortet entweder mit
+„_Ich habe eine Version vom 10. Juni … brauche ich eine Aktualisierung?_“ Der Server antwortet entweder mit
 
 „_304 – Deine Version ist noch auf dem neuesten Stand_“, ohne die Ressource erneut zu übertragen, oder der Server antwortet mit
 
@@ -1518,9 +1518,9 @@ Wenn Sie Invalidierungen häufig in kurzer Folge durchführen, z. B. durch Aktiv
 
 Die folgende Grafik zeigt den möglichen zeitlichen Ablauf beim Zugriff auf eine einzelne Seite.  Das Problem verschärft sich natürlich, wenn die Anzahl der verschiedenen angeforderten Seiten größer wird.
 
-![Häufige Aktivierungen führen meistens zu einem ungültigen Cache.](assets/chapter-1/frequent-activations.png)
+![Häufige Aktivierungen führen meistens zu einem ungültigen Cache](assets/chapter-1/frequent-activations.png)
 
-*Häufige Aktivierungen, die den Großteil der Zeit zu ungültigem Cache führen.*
+*Häufige Aktivierungen, die den Großteil der Zeit zu ungültigem Cache führen*
 
 <br> 
 
@@ -1544,7 +1544,7 @@ Wir beginnen mit einem kurzen Beispiel um 12:00 Uhr.
 
 12:00 Uhr: Die Statfile ist auf 12:00 Uhr eingestellt. Alle zwischengespeicherten Dateien gelten bis 12:05 Uhr als gültig.
 
-12:01 Uhr: Es kommt zu einer Invalidierung. Dadurch verlängert sich die Nachfrist auf 12:06 Uhr.
+12:01 Uhr: Es kommt zu einer Invalidierung. Dadurch verlängert sich die Nachfrist auf 12:06 Uhr
 
 12:05 Uhr: Eine andere Bearbeiterin oder ein anderer Editor veröffentlicht einen Artikel. Dadurch verlängert sich die die Nachfrist auf 12:10 Uhr.
 
@@ -1765,7 +1765,7 @@ Etwa so:
 
 Beachten Sie, dass Sie Regex- und Glob-Ausdrücke in einer Regel mischen können.
 
-Ein letztes Wort zu den „Zeilennummern“ wie `/005` vor jeder Definition.
+Ein letztes Wort zu den „Zeilennummern“ wie `/005` vor jeder Definition,
 
 Sie haben überhaupt keine Bedeutung! Sie können beliebige Nenner für Regeln auswählen. Die Verwendung von Zahlen erfordert nicht viel Aufwand, um über ein Schema nachzudenken, aber beachten Sie, dass die Reihenfolge wichtig ist.
 
