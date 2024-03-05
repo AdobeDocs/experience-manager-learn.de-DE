@@ -1,6 +1,6 @@
 ---
-title: Vorausfüllen des adaptiven Formulars mit Daten aus der Sharepoint-Liste
-description: Erfahren Sie, wie Sie das adaptive Formular mithilfe des Formulardatenmodells, das von der Freigabepunktliste unterstützt wird, vorab ausfüllen
+title: Vorbefüllen eines adaptiven Formulars mit Daten aus einer SharePoint-Liste
+description: Erfahren Sie, wie Sie das adaptive Formular mithilfe eines Formulardatenmodells, das von der SharePoint-Liste unterstützt wird, vorab ausfüllen
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -10,39 +10,39 @@ topic: Integrations
 jira: KT-14795
 duration: 60
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '234'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Vorausfüllen des adaptiven Formulars mit SharePoint-Listendaten
+# Vorausfüllen eines adaptiven Formulars mit Daten aus der SharePoint-Liste
 
-In der vorherigen Version von AEM Form (6.5) musste benutzerdefinierter Code geschrieben werden, um ein durch Formulardatenmodell unterstütztes adaptives Formular mithilfe des Anforderungsattributs im Voraus auszufüllen. In AEM Forms as Cloud Service ist das Schreiben von benutzerdefiniertem Code nicht mehr erforderlich.
+In der vorherigen Version von AEM Form (6.5) musste benutzerdefinierter Code geschrieben werden, um ein durch Formulardatenmodell unterstütztes adaptives Formular mithilfe des Anfrage-Attributs im Voraus auszufüllen. In AEM Forms as Cloud Service ist das Schreiben von benutzerdefiniertem Code nicht mehr erforderlich.
 
-In diesem Artikel werden die Schritte erläutert, die zum Vorausfüllen/Vorausfüllen des adaptiven Formulars mit Daten erforderlich sind, die aus der Sharepoint-Liste mit dem Vorbefüllungs-Dienst für Formulardatenmodelle abgerufen wurden.
+In diesem Artikel werden die Schritte erläutert, die zum Vorbefüllen/Vorausfüllen eines adaptiven Formulars mit Daten erforderlich sind, die aus der Sharepoint-Liste mit dem Vorbefüllungsdienst für Formulardatenmodelle abgerufen wurden.
 
-In diesem Artikel wird davon ausgegangen, dass [das adaptive Formular erfolgreich konfiguriert hat, um Daten an die Sharepoint-Liste zu senden.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
+In diesem Artikel wird davon ausgegangen, dass Sie [das adaptive Formular erfolgreich konfiguriert haben, um Daten an die Sharepoint-Liste zu senden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=de#connect-af-sharepoint-list).
 
-Im Folgenden finden Sie die Daten in der Sharepoint-Liste
+Im Folgenden finden Sie die Daten der Sharepoint-Liste
 ![sharepoint-list](assets/list-data.png)
 
-Um ein adaptives Formular mit den Daten auszufüllen, die mit einem bestimmten Handbuch verknüpft sind, müssen die folgenden Schritte ausgeführt werden
+Um ein adaptives Formular mit den Daten auszufüllen, die mit einem bestimmten GUID verknüpft sind, müssen die folgenden Schritte ausgeführt werden:
 
-## Konfigurieren des get-Dienstes
+## Konfigurieren des Get-Service
 
-* Erstellen Sie einen get -Dienst für das Objekt der obersten Ebene des Formulardatenmodells mithilfe des guid -Attributs.
+* Erstellen Sie einen Get-Service für das Objekt der obersten Ebene des Formulardatenmodells mithilfe des GUID-Attributs
   ![get-service](assets/mapping-request-attribute.png)
 
-In diesem Screenshot ist die Spalte &quot;guid&quot;an ein Anforderungsattribut mit dem Namen `submissionid`.
+In diesem Screenshot ist die Spalte „GUID“ über ein Anfrage-Attribut mit dem Namen `submissionid` gebunden.
 
-Der vollständig konfigurierte get-Dienst sieht wie folgt aus
+Der vollständig konfigurierte Get-Service sieht wie folgt aus:
 
 ![get-service](assets/fdm-request-attribute.png)
 
-## Konfigurieren des adaptiven Formulars für die Verwendung des Vorfülldienstes für Formulardatenmodelle
+## Konfigurieren des adaptiven Formulars, um den Vorbefüllungsdienst des Formulardatenmodells zu verwenden
 
-* Öffnen Sie ein adaptives Formular, das auf dem Datenmodell des Freigabepunkt-Listenformulars basiert. Verknüpfen des Vorbefüllungs-Dienstes für das Formulardatenmodell
+* Öffnen Sie ein adaptives Formular, das auf dem Formulardatenmodell der SharePoint-Liste basiert. Verknüpfen des Vorfüllservice für ein Formulardatenmodell
   ![form-prefill-service](assets/form-prefill-service.png)
 
 ## Testen des Formulars
