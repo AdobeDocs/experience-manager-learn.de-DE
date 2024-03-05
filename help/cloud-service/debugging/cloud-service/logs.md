@@ -12,9 +12,9 @@ level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
 duration: 277
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '948'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -53,8 +53,8 @@ Sowohl der AEM Author- als auch der AEM Publish-Service stellen AEM-Runtime-Serv
    + Entwicklung: `DEBUG`
    + Staging: `WARN`
    + Produktion: `ERROR`
-+ `aemaccess` listet HTTP-Anfragen an den AEM-Service mit Details auf.
-+ `aemrequest` listet HTTP-Anfragen an den AEM-Service und die entsprechenden HTTP-Antworten auf.
++ `aemaccess` listet HTTP-Anfragen an den AEM-Service mit Details auf
++ `aemrequest` listet HTTP-Anfragen an den AEM-Service und die entsprechenden HTTP-Antworten auf
 
 ## AEM Publish Dispatcher-Protokolle
 
@@ -176,8 +176,8 @@ Adobe empfiehlt im Allgemeinen die folgenden Protokollebenen nach AEM as a Cloud
 
 Die optimale Protokollebene für jeden Umgebungstyp wird mit AEM as a Cloud Service festgelegt. Die Protokollebenen werden dabei im Code beibehalten.
 
-+ Java-Protokollkonfigurationen werden in OSGi-Konfigurationen beibehalten.
-+ Apache-Webserver- und Dispatcher-Protokollebenen werden im Dispatcher-Projekt erfasst.
++ Java-Protokollkonfigurationen werden in OSGi-Konfigurationen beibehalten
++ Apache-Webserver- und Dispatcher-Protokollebenen werden im Dispatcher-Projekt erfasst
 
 Daher ist zur Änderung eine Bereitstellung erforderlich.
 
@@ -201,7 +201,7 @@ Die OSGi-Protokollierungskonfigurationen müssen aktualisiert werden, um die umg
 Dieser Ansatz hat Nachteile, die berücksichtigt werden müssen:
 
 + [Es ist nur eine begrenzte Anzahl von Umgebungsvariablen zulässig](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=de#number-of-variables), und beim Erstellen einer Variablen zur Verwaltung der Protokollebene wird eine verwendet.
-+ Umgebungsvariablen können programmgesteuert über [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=de), [ADOBE I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid), und [Cloud Manager-HTTP-APIs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=de#cloud-manager-api-format-for-setting-properties).
++ Umgebungsvariablen können programmgesteuert über [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=de), [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid), und [Cloud Manager-HTTP-APIs](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=de#cloud-manager-api-format-for-setting-properties) verwaltet werden.
 + Änderungen an Umgebungsvariablen müssen von einem unterstützten Tool manuell zurückgesetzt werden. Wird eine Umgebung mit hohem Traffic, z. B. die Produktionsumgebung, nicht auf eine weniger ausführliche Protokollebene zurückgesetzt, werden die Protokolle möglicherweise mit Einträgen überschwemmt und die AEM-Leistung beeinträchtigt.
 
 _Umgebungsspezifische Variablen funktionieren nicht bei Apache-Webserver- oder Dispatcher-Protokollkonfigurationen, da diese nicht über die OSGi-Konfiguration konfiguriert sind._
