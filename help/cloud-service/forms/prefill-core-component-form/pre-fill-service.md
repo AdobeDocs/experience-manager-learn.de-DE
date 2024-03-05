@@ -1,6 +1,6 @@
 ---
-title: Vorfüllen von auf Kernkomponenten basierenden adaptiven Formularen
-description: Erfahren Sie, wie Sie adaptive Formulare mit Daten vorab ausfüllen
+title: Vorbefüllen von auf Kernkomponenten basierenden adaptiven Formularen
+description: Erfahren Sie, wie Sie adaptive Formulare mit Daten vorbefüllen
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -10,16 +10,16 @@ topic: Integrations
 jira: KT-14675
 duration: 77
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '113'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
 # Implementieren der DataProvider-Schnittstelle
 
-Erstellen Sie ein AEM Projekt mit dem neuesten Archetyp und fügen Sie dem Projekt den folgenden Code hinzu.
-Normalerweise werden die Daten aus einer externen Datenquelle wie einer Datenbank, einem Azure-Speicher, einem S3-Behälter oder einer anderen Quelle abgerufen. Sie müssen den Code schreiben, um die Daten abzurufen.
+Erstellen Sie ein AEM-Projekt mit dem neuesten Archetyp und fügen Sie dem Projekt den folgenden Code hinzu.
+Normalerweise werden die Daten aus einer externen Datenquelle wie einer Datenbank, einem Azure-Speicher, einem S3-Bucket oder einer anderen Quelle abgerufen. Sie müssen den Code schreiben, um die Daten abzurufen.
 
 ```java
 package com.aemforms.prefill;
@@ -110,7 +110,7 @@ logger.info("got data  "+data);
 
 ## Data Manager
 
-Fügen Sie den folgenden Code in Ihr Projekt ein. Der oben aufgeführte Code nutzt diese DataManager-Klasse
+Nehmen Sie den folgenden Code in Ihr Projekt auf. Der oben aufgeführte Code nutzt diese DataManager-Klasse
 
 ```java
 import java.io.Serializable;
@@ -183,7 +183,7 @@ public class DataManager implements Serializable {
 
 ## Bereitstellen des Codes
 
-Sie können den Code in Ihrer lokalen Cloud-fähigen Umgebung oder mithilfe des Cloud-Managers in der Cloud-Instanz bereitstellen.
+Sie können den Code in Ihrer lokalen Cloud-fähigen Umgebung oder mithilfe von Cloud Manager in der Cloud-Instanz bereitstellen.
 
 ### Nächste Schritte
 
