@@ -1,6 +1,6 @@
 ---
-title: Tutorial zum Hinzufügen benutzerdefinierter Metadaten-Tags
-description: Erfahren Sie, wie Sie adaptive Formulardaten aus dem Azure Storage-Konto speichern und abrufen.
+title: Tutorial zum Hinzufügen der von Benutzenden angegebenen Metadaten-Tags
+description: Erfahren Sie, wie Sie adaptive Formulardaten im Azure Storage-Konto speichern und von dort abrufen.
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -11,21 +11,21 @@ jira: KT-14501
 duration: 34
 exl-id: 94454327-86d9-468e-9f08-50b8a9c530f3
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '106'
-ht-degree: 14%
+ht-degree: 100%
 
 ---
 
-# Erweitern von Auswahlgruppenkomponenten
+# Erweiterte Auswahlgruppen-Komponenten
 
-Die Kernkomponenten checkboxGroup, Dropdown und radiobutton wurden um die Registerkarte Zusätzliche Eigenschaften erweitert. Die Registerkarte &quot;Zusätzliche Eigenschaften&quot;verfügt über ein Kontrollkästchen, mit dem angegeben wird, ob das Feld als Blob-Index-Registerkarte verwendet werden soll.
-![additonal-properties](assets/drop-down-additonal-properties.png). Wenn das Kontrollkästchen aktiviert wird, wird eine Eigenschaft mit dem Namen Searchable erstellt und ihr Wert im jcr-Repository auf true gesetzt, wie im folgenden Screenshot gezeigt
-![durchsuchbar](assets/searchable-true.png).
+Die Kernkomponenten „checkboxGroup“, „dropdown“ und „radiobutton“ wurden um die Registerkarte „Zusätzliche Eigenschaften“ erweitert. Die Registerkarte „Zusätzliche Eigenschaften“ verfügt über ein Kontrollkästchen, um anzugeben, ob das Feld als Blob-Index-Tag verwendet werden soll
+![additonal-properties](assets/drop-down-additonal-properties.png). Ist das Kontrollkästchen aktiviert, wird eine Eigenschaft mit dem Namen „Searchable“ erstellt und ihr Wert im jcr-Repository auf „true“ gesetzt, wie im folgenden Screenshot gezeigt
+![searchable](assets/searchable-true.png).
 
-Die folgende .content.xml wurde im Ordner _cq_dialog erstellt.
+Die folgende Datei „.content.xml“ wurde im Ordner „_cq_dialog“ erstellt.
 
-![Dropdown-Projekt-Ansicht](assets/drop-down-project-view.png)
+![drop-down-project-view](assets/drop-down-project-view.png)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -87,4 +87,4 @@ Die folgende .content.xml wurde im Ordner _cq_dialog erstellt.
 
 ## Nächste Schritte
 
-[Erstellen der Azure Portal-Konfiguration](./create-osgi-configuration.md)
+[Erstellen der Azure-Portal-Konfiguration](./create-osgi-configuration.md)
