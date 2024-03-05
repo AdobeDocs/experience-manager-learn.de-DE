@@ -1,6 +1,6 @@
 ---
-title: Erstellen des Vorbefüllungs-Dienstes für ein auf Kernkomponenten basierendes adaptives Formular
-description: Vorbefüllungs-Dienst zum Abrufen von Daten und Anlagen.
+title: Erstellen des Vorbefüllungsdienstes für ein auf Kernkomponenten basierendes adaptives Formular
+description: Vorbefüllungsdienst zum Abrufen von Daten und Anhängen.
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -9,15 +9,15 @@ version: 6.5
 topic: Integrations
 jira: KT-14794
 source-git-commit: 236d288c8b88948c5004ab777169768065df16f2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '75'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
 # Erstellen eines Vorbefüllungsdienstes
 
-Um das Formular mit den gesendeten Daten und Anlagen vorab auszufüllen, wurde der folgende Vorbefüllungs-Dienst geschrieben
+Um das Formular mit den gesendeten Daten und Anhängen vorab auszufüllen, wurde der folgende Vorbefüllungsdienst geschrieben
 
 ```java
 package com.azuredemo.core;
@@ -121,13 +121,13 @@ public String getBlobData(String blobID) {
 }
 ```
 
-## Verknüpfen des Vorbefüllungs-Dienstes mit dem Formular
+## Verknüpfen des Vorbefüllungsdienstes mit dem Formular
 
-Verknüpfen Sie den benutzerdefinierten Vorbefüllungs-Dienst mit dem adaptiven Formular, wie unten dargestellt.
+Verknüpfen Sie den benutzerdefinierten Vorbefüllungsdienst mit dem adaptiven Formular, wie unten dargestellt
 
 ![prefill-service](assets/prefill-service.png)
 
-Zeigen Sie eine Vorschau des Formulars an, indem Sie den Parameter guid wie unten gezeigt in die URL einfügen
+Zeigen Sie eine Vorschau des Formulars an, indem Sie den Parameter „guid“ in die URL einfügen, wie unten gezeigt
 
 ```html
 http://localhost:4502/content/dam/formsanddocuments/azureportal/benefitsenrollment/jcr:content?wcmmode=disabled&guid=411b2f29-f0d0-468c-875b-4562dcc546fe
