@@ -1,6 +1,6 @@
 ---
 title: Videos zu Edge Delivery Services
-description: Erfahren Sie, wie Sie mit der Edge-Bereitstellung Websites schnell bereitstellen können.
+description: Erfahren Sie, wie Sie mit Edge Delivery schnell Websites erstellen.
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -12,17 +12,17 @@ duration: 30
 last-substantial-update: 2023-05-12T00:00:00Z
 exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
 source-git-commit: f5f80a898420445335ed34f20aac6579199cc817
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '329'
-ht-degree: 27%
+ht-degree: 100%
 
 ---
 
 # Videos zu Edge Delivery Services
 
-Erfahren Sie, wie Sie mit der Edge-Bereitstellung Websites schnell bereitstellen
+Erfahren Sie, wie Sie mit Edge Delivery schnell Websites erstellen
 
-Überprüfen Sie die [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=de) für vollständige Details zur Edge-Bereitstellung und ihren Funktionen.
+Umfassende Details zu Edge Delivery und dessen Funktionen finden Sie in der [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=de).
 
 ## Erste Schritte mit Edge Delivery Services
 
@@ -48,7 +48,7 @@ Erfahren Sie, wie Sie mit der Edge-Bereitstellung Websites schnell bereitstellen
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/prerequisites.md" title="Voraussetzungen">Entwicklervoraussetzungen</a>
             </p>
-            <p class="is-size-6">Was Sie benötigen, um sich mit Edge Delivery Services zu entwickeln.</p>
+            <p class="is-size-6">Was Sie benötigen, um mit der Entwicklung mit Edge Delivery Services zu beginnen.</p>
             <a href="./developing/prerequisites.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -65,10 +65,11 @@ Erfahren Sie, wie Sie mit der Edge-Bereitstellung Websites schnell bereitstellen
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./developing/aem-boilerplate.md" title="Vorlage &quot;Textbaustein verwenden&quot;"
+            <a href="./developing/aem-boilerplate.md" title="Verwenden der Textbausteinvorlage"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425713/?format=jpeg" alt="Boilerplate einrichten">
+                src="https://video.tv.adobe.com/v/3425713/?format=jpeg" alt="Einrichten von
+Textbausteinen">
             </a>
           </figure>
         </div>
@@ -77,9 +78,9 @@ Erfahren Sie, wie Sie mit der Edge-Bereitstellung Websites schnell bereitstellen
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/aem-boilerplate.md" title="Vorlage für Bausteinvorlage verwenden">AEM</a>
+              <a href="./developing/aem-boilerplate.md" title="Verwenden der Textbausteinvorlage">AEM-Textbausteine</a>
             </p>
-            <p class="is-size-6">Verwenden Sie die Vorlage AEM Bausteinvorlage, um das Code-Repository einzurichten.</p>
+            <p class="is-size-6">Verwenden Sie die AEM-Textbausteinvorlage, um das Code-Repository einzurichten.</p>
             <a href="./developing/aem-boilerplate.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -96,19 +97,19 @@ Erfahren Sie, wie Sie mit der Edge-Bereitstellung Websites schnell bereitstellen
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./developing/content-repository.md" title="Verknüpfen des Google-Laufwerks"
+            <a href="./developing/content-repository.md" title="Verknüpfen von Google Drive"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425711/?format=jpeg" alt="Verknüpfen des Google-Laufwerks">
+                src="https://video.tv.adobe.com/v/3425711/?format=jpeg" alt="Verknüpfen von Google Drive">
             </a>
           </figure>
         </div>
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1 Minute</p>
+              class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/content-repository.md" title="Verknüpfen des Google-Laufwerks">Verknüpfen des Google-Laufwerks</a>
+              <a href="./developing/content-repository.md" title="Verknüpfen von Google Drive">Verknüpfen von Google Drive</a>
             </p>
             <p class="is-size-6">Verwenden Sie Google Drive als Repository für alle Inhalte.</p>
             <a href="./developing/content-repository.md" class="spectrum-Button
@@ -127,19 +128,19 @@ Erfahren Sie, wie Sie mit der Edge-Bereitstellung Websites schnell bereitstellen
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./developing/content-repository.md" title="Link-Sharepoint" tabindex="-1">
+            <a href="./developing/content-repository.md" title="Verknüpfen von SharePoint" tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3425712/?format=jpeg"
-                alt="Link-Sharepoint">
+                alt="Verknüpfen von SharePoint">
             </a>
           </figure>
         </div>
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1 Minute</p>
+              class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/content-repository.md" title="Link-Sharepoint">Link SharePoint</a>
+              <a href="./developing/content-repository.md" title="Verknüpfen von SharePoint">Verknüpfen von SharePoint</a>
             </p>
             <p class="is-size-6">Verwenden Sie SharePoint als Repository für all Ihre Inhalte.</p>
             <a href="./developing/content-repository.md"
@@ -158,21 +159,21 @@ Erfahren Sie, wie Sie mit der Edge-Bereitstellung Websites schnell bereitstellen
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./developing/preview-and-publish.md" title="Vorschau erstellen und Inhalt veröffentlichen"
+            <a href="./developing/preview-and-publish.md" title="Anzeigen einer Vorschau und Veröffentlichen der Inhalte"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="Vorschau erstellen und Inhalt veröffentlichen">
+                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="Anzeigen einer Vorschau und Veröffentlichen der Inhalte">
             </a>
           </figure>
         </div>
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1 Minute</p>
+              class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/preview-and-publish.md" title="Vorschau erstellen und Inhalt veröffentlichen">Vorschau erstellen und Inhalt veröffentlichen</a>
+              <a href="./developing/preview-and-publish.md" title="Anzeigen einer Vorschau und Veröffentlichen der Inhalte">Anzeigen einer Vorschau und Veröffentlichen der Inhalte</a>
             </p>
-            <p class="is-size-6">Vorschau erstellen und Inhalt mithilfe der AEM Sidekick veröffentlichen.</p>
+            <p class="is-size-6">Zeigen Sie eine Vorschau an und veröffentlichen Sie Inhalt mithilfe von AEM Sidekick.</p>
             <a href="./developing/preview-and-publish.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -189,22 +190,22 @@ Erfahren Sie, wie Sie mit der Edge-Bereitstellung Websites schnell bereitstellen
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./developing/sidekick.md" title="Verwenden des Sidekicks"
+            <a href="./developing/sidekick.md" title="Verwenden von Sidekick"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3425715/?format=jpeg"
-                alt="Verwenden des Sidekicks">
+                alt="Verwenden von Sidekick">
             </a>
           </figure>
         </div>
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1 Minute</p>
+              class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./developing/sidekick.md" title="Verwenden des Sidekicks">AEM Sidekick verwenden</a>
+              <a href="./developing/sidekick.md" title="Verwenden von Sidekick">Verwenden von AEM Sidekick</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie die AEM Sidekick verwenden.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie den AEM Sidekick verwenden.</p>
             <a href="./developing/sidekick.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -232,11 +233,11 @@ Erfahren Sie, wie Sie mit der Edge-Bereitstellung Websites schnell bereitstellen
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1 Minute</p>
+              class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./developing/document-structure.md" title="Dokumentstruktur">Dokumentstruktur</a>
             </p>
-            <p class="is-size-6">Dokumentstruktur einschließlich Standardinhalt, Abschnitte und Blöcke durchsuchen </p>
+            <p class="is-size-6">Sehen Sie sich die Dokumentstruktur an, einschließlich Standardinhalt, Abschnitte und Blöcke </p>
             <a href="./developing/document-structure.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -313,7 +314,7 @@ Erfahren Sie, wie Sie mit der Edge-Bereitstellung Websites schnell bereitstellen
     </div>
 </div>
 
-## Videos
+## Videoanleitungen
 
 <div class="columns is-multiline">
     <!--Create RSS Feeds -->
@@ -322,11 +323,11 @@ Erfahren Sie, wie Sie mit der Edge-Bereitstellung Websites schnell bereitstellen
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/rss.md" title="RSS-Dienste erstellen"
+            <a href="./how-to/rss.md" title="Erstellen von RSS-Feeds"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3425725/?format=jpeg"
-                alt="RSS-Dienste erstellen">
+                alt="Erstellen von RSS-Feeds">
             </a>
           </figure>
         </div>
@@ -335,9 +336,9 @@ Erfahren Sie, wie Sie mit der Edge-Bereitstellung Websites schnell bereitstellen
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/rss.md" title="RSS-Dienste erstellen">RSS-Dienste erstellen</a>
+              <a href="./how-to/rss.md" title="Erstellen von RSS-Feeds">Erstellen von RSS-Feeds</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie RSS-Dienste erstellen.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie RSS-Feeds erstellen.</p>
             <a href="./how-to/rss.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -369,7 +370,7 @@ Erfahren Sie, wie Sie mit der Edge-Bereitstellung Websites schnell bereitstellen
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/social-media-sharing.md" title="Freigabe in Social Media">Freigabe in Social Media</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie Ihre Inhalte für die Freigabe in sozialen Medien optimieren können.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie Ihren Inhalt für die Freigabe in Social Media optimieren.</p>
             <a href="./how-to/social-media-sharing.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
