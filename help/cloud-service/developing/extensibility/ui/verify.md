@@ -12,9 +12,9 @@ last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
 duration: 637
 source-git-commit: f48fb02887d909a102718dc5a0c4d1ecd2b1ef34
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '739'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -52,7 +52,7 @@ Diese URL wird unten beim Erstellen der URLs für die Entwicklungs- und Staging-
 ## Überprüfen lokaler Entwicklungs-Builds
 
 1. Öffnen Sie eine Befehlszeile zum Stammverzeichnis des Erweiterungsprojekts.
-1. Führen Sie die AEM-Benutzeroberflächen-Erweiterung als lokale App-Entwicklungs-App aus.
+1. Führen Sie die AEM-Benutzeroberflächen-Erweiterung als lokale App-Entwicklungs-App aus
 
    ```shell
    $ aio app run
@@ -65,9 +65,9 @@ Diese URL wird unten beim Erstellen der URLs für die Entwicklungs- und Staging-
      -> https://experience.adobe.com/?devMode=true#/custom-apps/?localDevUrl=https://localhost:9080
    ```
 
-Notieren Sie sich die URL der lokalen Anwendung, wie oben als `-> https://localhost:9080` gezeigt.
+Notieren Sie sich die URL der lokalen Anwendung, wie oben als `-> https://localhost:9080` gezeigt
 
-1. Öffnen Sie zunächst (und sobald ein Verbindungsfehler auftritt) `https://localhost:9080` (oder wie auch immer Ihre lokale Anwendungs-URL lautet) in Ihrem Webbrowser gespeichert ist, und die manuelle Annahme [das HTTPS-Zertifikat](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users).
+1. Öffnen Sie am Anfang (und stets, wenn ein Verbindungsfehler auftritt) in Ihrem Webbrowser die URL `https://localhost:9080` (bzw. Ihre entsprechende lokale Anwendungs-URL) und akzeptieren Sie manuell das [HTTPS-Zertifikat](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users).
 1. Fügen Sie die beiden folgenden Abfrageparameter zur [URL der AEM-Benutzeroberfläche](#aem-ui-url) hinzu:
    + `&devMode=true`
    + `&ext=<LOCAL APPLICATION URL>`, normalerweise `&ext=https://localhost:9080`
