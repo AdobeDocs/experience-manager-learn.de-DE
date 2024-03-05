@@ -1,6 +1,6 @@
 ---
-title: Deaktivieren der CDN-Zwischenspeicherung
-description: Erfahren Sie, wie Sie das Zwischenspeichern von HTTP-Antworten im CDN AEM as a Cloud Service deaktivieren.
+title: Deaktivieren des CDN-Cachings
+description: Erfahren Sie, wie Sie das Caching von HTTP-Antworten im CDN von AEM as a Cloud Service deaktivieren.
 version: Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
@@ -13,41 +13,41 @@ thumbnail: KT-14224.jpeg
 exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
 duration: 116
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '400'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Deaktivieren der CDN-Zwischenspeicherung
+# Deaktivieren des CDN-Cachings
 
-Erfahren Sie, wie Sie das Zwischenspeichern von HTTP-Antworten im CDN AEM as a Cloud Service deaktivieren. Das Zwischenspeichern von Antworten wird durch `Cache-Control`, `Surrogate-Control`oder `Expires` HTTP-Antwort-Cache-Header.
+Erfahren Sie, wie Sie das Caching von HTTP-Antworten im CDN von AEM as a Cloud Service deaktivieren. Das Caching von Antworten wird durch die HTTP-Antwort-Cache-Header `Cache-Control`, `Surrogate-Control` oder `Expires` gesteuert.
 
-Diese Cache-Header werden normalerweise in AEM Dispatcher-Vhost-Konfigurationen mithilfe von `mod_headers` festgelegt, können aber auch in benutzerdefiniertem Java™-Code festgelegt werden, der in AEM Publish selbst ausgeführt wird.
+Diese Cache-Header werden normalerweise in AEM Dispatcher-vhost-Konfigurationen mithilfe von `mod_headers` festgelegt, können aber auch in benutzerdefiniertem Java™-Code festgelegt werden, der in AEM Publish selbst ausgeführt wird.
 
-## Standard-Caching-Verhalten
+## Caching-Standardverhalten
 
-Überprüfen Sie das standardmäßige Caching-Verhalten für AEM Veröffentlichung und Autor, wenn ein [AEM Projektarchetyp](./enable-caching.md#default-caching-behavior) wird AEM Projekt bereitgestellt.
+Überprüfen Sie das Caching-Standardverhalten für AEM Publish und Author, wenn ein AEM-Projekt bereitgestellt wird, das auf einem [AEM-Projektarchetypen](./enable-caching.md#default-caching-behavior) basiert.
 
-## Zwischenspeicherung deaktivieren
+## Deaktivieren des Cachings
 
-Das Deaktivieren der Zwischenspeicherung kann sich negativ auf die Leistung Ihrer AEM as a Cloud Service Instanz auswirken. Gehen Sie daher beim Deaktivieren des standardmäßigen Caching-Verhaltens vorsichtig vor.
+Das Deaktivieren des Cachings kann sich negativ auf die Leistung Ihrer AEM as a Cloud Service-Instanz auswirken. Seien Sie daher vorsichtig, wenn Sie das Caching-Standardverhalten deaktivieren.
 
-Es gibt jedoch einige Szenarien, in denen Sie die Zwischenspeicherung deaktivieren können, z. B.:
+Es gibt jedoch einige Szenarien, in denen es angebracht sein kann, das Caching zu deaktivieren, z. B.:
 
-- Entwickeln einer neuen Funktion und möchten die Änderungen sofort sehen.
-- Inhalte sind sicher (nur für authentifizierte Benutzer gedacht) oder dynamisch (Warenkorb, Bestelldetails) und sollten nicht zwischengespeichert werden.
+- Entwickeln einer neuen Funktion, wobei Sie die Änderungen sofort sehen möchten.
+- Inhalt ist sicher (nur für authentifizierte Benutzende vorgesehen) oder dynamisch (z. B. Warenkorb, Bestelldetails) und sollte nicht zwischengespeichert werden.
 
-Um die Zwischenspeicherung zu deaktivieren, können Sie die Cache-Header auf zwei Arten aktualisieren.
+Um das Caching zu deaktivieren, können Sie die Cache-Header auf zwei Arten aktualisieren.
 
-1. **Dispatcher-vhost-Konfiguration:** Nur für AEM Veröffentlichung verfügbar.
-1. **Benutzerdefinierter Java™-Code:** Verfügbar für AEM Veröffentlichung und Autor.
+1. **Dispatcher-vhost-Konfiguration:** Nur für AEM Publish verfügbar.
+1. **Benutzerdefinierter Java™-Code:** Für AEM Publish und Author verfügbar.
 
-Lassen Sie uns jede dieser Optionen überprüfen.
+Sehen wir uns diese beiden Optionen an.
 
-### Dispatcher-Vhost-Konfiguration
+### Dispatcher-vhost-Konfiguration
 
-Diese Option ist der empfohlene Ansatz zum Deaktivieren der Zwischenspeicherung. Sie ist jedoch nur für AEM Veröffentlichung verfügbar. Um die Cache-Header zu aktualisieren, verwenden Sie die `mod_headers` -Modul und `<LocationMatch>` in der vhost-Datei des Apache HTTP-Servers. Die allgemeine Syntax lautet wie folgt:
+Diese Option wird zum Aktivieren des Cachings empfohlen, allerdings ist sie nur für AEM Publish verfügbar. Um die Cache-Header zu aktualisieren, verwenden Sie das Modul `mod_headers` und die Anweisung `<LocationMatch>` in der vhost-Datei des Apache HTTP-Servers. Die allgemeine Syntax lautet folgendermaßen:
 
 ```
 <LocationMatch "$URL$ || $URL_REGEX$">
@@ -62,12 +62,12 @@ Diese Option ist der empfohlene Ansatz zum Deaktivieren der Zwischenspeicherung.
 
 #### Beispiel
 
-So deaktivieren Sie die CDN-Zwischenspeicherung des **CSS-Inhaltstypen** für einige Fehlerbehebungszwecke, führen Sie diese Schritte aus.
+Um das CDN-Caching der **CSS-Inhaltstypen** zum Beheben bestimmter Fehler zu deaktivieren, führen Sie diese Schritte aus.
 
-Beachten Sie, dass zum Umgehen des vorhandenen CSS-Cache eine Änderung in der CSS-Datei erforderlich ist, um einen neuen Cache-Schlüssel für die CSS-Datei zu generieren.
+Beachten Sie, dass zum Umgehen des vorhandenen CSS-Caches die CSS-Datei bearbeitet werden muss, um einen neuen Cache-Schlüssel für die CSS-Datei zu generieren.
 
-1. Suchen Sie in Ihrem AEM-Projekt die gewünschte Besucherdatei aus `dispatcher/src/conf.d/available_vhosts` Verzeichnis.
-1. Aktualisieren Sie den vhost (z. B. `wknd.vhost`) wie folgt:
+1. Suchen Sie in Ihrem AEM-Projekt im Verzeichnis `dispatcher/src/conf.d/available_vhosts` nach der gewünschten vhost-Datei.
+1. Aktualisieren Sie die vhost-Datei (z. B. `wknd.vhost`) folgendermaßen:
 
    ```
    <LocationMatch "^/etc.clientlibs/.*\.(css)$">
@@ -80,12 +80,12 @@ Beachten Sie, dass zum Umgehen des vorhandenen CSS-Cache eine Änderung in der C
    </LocationMatch>
    ```
 
-   Die vhost-Dateien in `dispatcher/src/conf.d/enabled_vhosts` Verzeichnis **symlinks** zu den Dateien in `dispatcher/src/conf.d/available_vhosts` -Verzeichnis erstellen. Stellen Sie daher sicher, dass Sie symlinks erstellen, falls nicht vorhanden.
-1. Stellen Sie die vhost-Änderungen in der gewünschten AEM as a Cloud Service Umgebung mit dem [Cloud Manager - Web-Tier-Konfigurations-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines) oder [RDE-Befehle](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration).
+   Die vhost-Dateien im Verzeichnis `dispatcher/src/conf.d/enabled_vhosts` sind **Symlinks** zu den Dateien im Verzeichnis `dispatcher/src/conf.d/available_vhosts`. Stellen Sie daher sicher, dass Sie Symlinks erstellen, falls diese nicht vorhanden sind.
+1. Stellen Sie die vhost-Änderungen in der gewünschten AEM as a Cloud Service-Umgebung bereit. Verwenden Sie dazu die [Web-Stufen-Konfigurations-Pipeline von Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=de#web-tier-config-pipelines) oder [RDE-Befehle](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=de#deploy-apache-or-dispatcher-configuration).
 
-### Benutzerspezifischer Java™-Code
+### Benutzerdefinierter Java™-Code
 
-Diese Option ist sowohl für die AEM als auch für die Autoreninstanz verfügbar. Um die Cache-Header zu aktualisieren, verwenden Sie die `SlingHttpServletResponse` -Objekt in benutzerdefiniertem Java™-Code (Sling-Servlet, Sling-Servlet-Filter). Die allgemeine Syntax lautet wie folgt:
+Diese Option ist für AEM Publish und Author verfügbar. Verwenden Sie zum Aktualisieren der Cache-Header das Objekt `SlingHttpServletResponse` in benutzerdefiniertem Java™-Code (Sling-Servlet, Sling-Servlet-Filter). Die allgemeine Syntax lautet folgendermaßen:
 
 ```java
 response.setHeader("Cache-Control", "private");
