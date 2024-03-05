@@ -1,6 +1,6 @@
 ---
-title: Tutorial zum Hinzufügen benutzerdefinierter Metadaten-Tags
-description: Erfahren Sie, wie Sie adaptive Formulardaten aus dem Azure Storage-Konto speichern und abrufen.
+title: Tutorial zum Hinzufügen der von Benutzenden angegebenen Metadaten-Tags
+description: Erfahren Sie, wie Sie adaptive Formulardaten im Azure Storage-Konto speichern und von dort abrufen.
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -11,19 +11,19 @@ jira: KT-14501
 duration: 35
 exl-id: 6a3af59d-f916-451f-887c-0f4580cbcb3e
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '81'
-ht-degree: 18%
+ht-degree: 100%
 
 ---
 
-# OSGi-Konfiguration erstellen
+# Erstellen einer OSGi-Konfiguration
 
-Eine benutzerdefinierte OSGi-Konfiguration namens Azure Portal-Konfiguration wurde erstellt, um den Azure Storage-URI und den SAS Token-URI anzugeben. Diese beiden Werte werden verwendet, um die REST-API für die Kommunikation mit dem Azure Storage zu erstellen
+Eine benutzerdefinierte OSGi-Konfiguration mit dem Namen „Azure Portal Configuration“ wurde erstellt, um den Azure Storage-URI und den SAS-Token-URI anzugeben. Mithilfe dieser beiden Werte wird die REST-API für die Kommunikation mit Azure Storage erstellt
 
 ![azure-portal-configuration](assets/azure-portal-configuration.png)
 
-Der vollständige Code für den Konfigurationsdienst ist unten aufgeführt
+Der vollständige Code für den Konfigurationsdienst ist nachfolgend zu finden
 
 AzurePortalConfiguration
 
@@ -103,4 +103,4 @@ public class AzurePortalStorageConfigImpl implements AzurePortalConfigurationSer
 
 ## Nächste Schritte
 
-[Blob-Indextags erstellen](./create-blob-index-tags.md)
+[Erstellen von Blob-Index-Tags](./create-blob-index-tags.md)
