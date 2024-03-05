@@ -13,9 +13,9 @@ thumbnail: 3425706.jpeg
 duration: 94
 exl-id: e01f08d6-415d-4b15-8d40-cb5b2eb7de8a
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '31'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-Erfahren Sie, wie die Dokumenterstellung mit Metadaten auf Seitenebene umgeht und wie Autoren dies ohne technische Kenntnisse aktualisieren können.
+Erfahren Sie, wie die Dokumenterstellung mit Metadaten auf Seitenebene umgeht und wie Autoren und Autorinnen dies ohne technische Kenntnisse aktualisieren können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425706/?learn=on)
