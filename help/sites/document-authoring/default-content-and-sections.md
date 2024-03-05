@@ -1,6 +1,6 @@
 ---
 title: Standardinhalt und -abschnitte
-description: Machen Sie einen tiefen Einblick in die Konzepte zur Dokumenterstellung von Standardinhalten und -abschnitten.
+description: Erhalten Sie ausführliche Informationen zu den Konzepten des Standardinhalts und der Standardabschnitte bei der Dokumenterstellung.
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -13,9 +13,9 @@ thumbnail: 3425702.jpeg
 duration: 93
 exl-id: 17c7919e-3216-4f71-a553-bc5b2e1b6014
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '45'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-Machen Sie einen tiefen Einblick in die Konzepte der Dokumenterstellung von Standardinhalten und -abschnitten und wie diese Ihnen dabei helfen, eine bessere Site zu schaffen.
+Erhalten Sie ausführliche Informationen zu den Konzepten des Standardinhalts und der Standardabschnitte bei der Dokumenterstellung und dazu, wie diese Ihnen dabei helfen, eine bessere Site zu schaffen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425702/?learn=on)
