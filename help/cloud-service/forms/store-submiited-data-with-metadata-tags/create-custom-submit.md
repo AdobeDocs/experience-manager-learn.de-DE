@@ -1,6 +1,6 @@
 ---
-title: Tutorial zum Hinzufügen benutzerdefinierter Metadaten-Tags
-description: Erstellen Sie eine benutzerdefinierte Übermittlung, um Formulardaten mit Metadaten-Tags in Azure zu speichern.
+title: Tutorial zum Hinzufügen der von Benutzenden angegebenen Metadaten-Tags
+description: Erstellen Sie eine benutzerdefinierte Übermittlung, um die Formulardaten mit Metadaten-Tags in Azure zu speichern
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -11,17 +11,17 @@ jira: KT-14501
 duration: 62
 exl-id: 5cd5e37e-9881-4fce-a0cb-402d738f83ae
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '122'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Erstellen Sie ein benutzerdefiniertes Senden, um die Formularübermittlung zu verarbeiten
+# Erstellen Sie eine benutzerdefinierte Übermittlung, um die Formularübermittlung zu handhaben
 
-AEM Forms CS bietet eine vordefinierte Übermittlungsaktion zum Speichern von Formulardaten in Azure, verfügt jedoch nicht über die Möglichkeit, Blob-Index-Tags auf dem Blob zu erstellen. Um den Anwendungsfall zu erfüllen, wurde ein benutzerdefinierter Sendedienst erstellt, um die gesendeten Daten in Azure zu speichern und Blob-Index-Daten-Tags mit den Feldern zu erstellen, die im Formular als durchsuchbar markiert sind.
+AEM Forms CS bietet eine vorkonfigurierte Übermittlungsaktion zum Speichern von Formulardaten in Azure, verfügt jedoch nicht über die Möglichkeit, Blob-Index-Tags im Blob zu erstellen. Um dem Anwendungsfall zu entsprechen, wurde ein benutzerdefinierter Übermittlungsdienst erstellt, um die übermittelten Daten in Azure zu speichern und Blob-Index-Daten-Tags mit den Feldern zu erstellen, die im Formular als durchsuchbar markiert sind.
 
-[Den benutzerdefinierten Sende-Handler für auf Kernkomponenten basierende adaptive Formulare finden Sie hier .](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). Die folgende benutzerdefinierte Übermittlung wurde geschrieben, um die Formularübermittlung zu verarbeiten
+[Den benutzerdefinierten Beispiel-Übermittlungs-Handler für ein auf Kernkomponenten basierendes adaptives Formular finden Sie hier](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). Die folgende benutzerdefinierte Übermittlung wurde geschrieben, um die Formularübermittlung zu verarbeiten
 
 ```java
 package com.aemforms.saveandfecthfromazure.prefill;
@@ -107,7 +107,7 @@ public class CustomAFSubmitService implements FormSubmitActionService {
 }
 ```
 
-## Dienstimplementierung saveFormDatainAzure
+## Dienstimplementierung „saveFormDatainAzure“
 
 ```java
     @Override
