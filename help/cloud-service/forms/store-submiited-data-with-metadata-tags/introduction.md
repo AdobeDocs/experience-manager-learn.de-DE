@@ -1,6 +1,6 @@
 ---
-title: Tutorial zum Hinzufügen benutzerdefinierter Metadaten-Tags
-description: Erfahren Sie, wie Sie adaptive Formulardaten aus dem Azure Storage-Konto speichern und abrufen.
+title: Tutorial zum Hinzufügen der von Benutzenden angegebenen Metadaten-Tags
+description: Erfahren Sie, wie Sie adaptive Formulardaten im Azure Storage-Konto speichern und von dort abrufen.
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -11,20 +11,20 @@ jira: KT-14501
 duration: 31
 exl-id: a8531e82-18cd-4b32-8148-d6fc5f6e51c6
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '130'
-ht-degree: 45%
+ht-degree: 100%
 
 ---
 
 # Einführung
 
-In diesem Tutorial erfahren Sie, wie Sie ein einfaches Anwendungsbeispiel zum Speichern von Formularübermittlungen in Azure-Speicher mit Blob-Index-Tags implementieren. Blob-Index-Tags bieten Datenmanagement- und Erkennungsfunktionen durch Verwendung von Schlüssel-Wert-Index-Tag-Attributen. Sie können Objekte in einem einzelnen Container oder über alle Container in Ihrem Speicherkonto kategorisieren und suchen.
+In diesem Tutorial erfahren Sie, wie Sie einen einfachen Anwendungsfall zum Speichern von Formularübermittlungen in Azure Storage mit Blob-Index-Tags implementieren. Blob-Index-Tags bieten Funktionen für Daten-Management und -suche durch die Verwendung von Schlüsselwert-Index-Tag-Attributen. Sie können Objekte innerhalb eines einzelnen Containers oder in allen Containern in Ihrem Speicherkonto kategorisieren und suchen.
 ![blob-index-tags](assets/blob-with-index-tags.png)
 
 ## Voraussetzungen
 
-* Erlebnis mit AEM Forms CS.
+* Erfahrung mit AEM Forms CS.
 * Erlebnis bei der Bereitstellung von Code mithilfe von Cloud Manager.
 * Zugriff auf Cloud-fähige Instanz von AEM Forms CS.
 
@@ -36,4 +36,4 @@ Zum Implementieren des oben genannten Anwendungsfalls in AEM Forms CS benötigen
 
 ### Nächste Schritte
 
-[extending-choice-group-components](./extend-choice-group-components.md)
+[extend-choice-group-components](./extend-choice-group-components.md)
