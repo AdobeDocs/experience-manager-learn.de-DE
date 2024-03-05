@@ -13,9 +13,9 @@ thumbnail: 3418381.jpeg
 exl-id: 304b4d80-27bd-4336-b2ff-4b613a30f712
 duration: 311
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '843'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -177,7 +177,7 @@ Die resultierende JSON-Antwort enthält das zweit-, dritt-, viert- und fünftteu
 
 #### Nächster Satz paginierter Ergebnisse
 
-Der nächste Ergebnissatz kann mit der `after` und dem `endCursor` -Wert aus der vorherigen Abfrage. Wenn keine weiteren Ergebnisse abgerufen werden müssen, ist `hasNextPage` gleich `false`.
+Der nächste Ergebnissatz kann mit dem `after`-Parameter und dem `endCursor`-Wert aus der vorherigen Abfrage abgerufen werden. Wenn keine weiteren Ergebnisse abgerufen werden müssen, ist `hasNextPage` gleich `false`.
 
 ##### Abfragevariablen
 
