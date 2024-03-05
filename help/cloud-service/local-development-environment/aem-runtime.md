@@ -12,9 +12,9 @@ last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
 duration: 529
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1696'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -23,20 +23,20 @@ ht-degree: 91%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_aemruntime"
 >title="Lokale AEM-Laufzeit"
->abstract="Adobe Experience Manager (AEM) kann mit dem QuickStart Jar des AEM as a Cloud Service SDK lokal ausgeführt werden. Auf diese Weise können Entwickelnde benutzerdefinierten Code, Konfigurationen und Inhalte bereitstellen und testen, bevor sie sie der Quell-Code-Kontrolle übergeben und in einer AEM as a Cloud Service-Umgebung bereitstellen."
+>abstract="Adobe Experience Manager (AEM) kann mithilfe der Schnellstart-JAR des AEM as a Cloud Service-SDKs lokal ausgeführt werden. Auf diese Weise können Entwickelnde benutzerdefinierten Code, Konfigurationen und Inhalte bereitstellen und testen, bevor sie sie der Quell-Code-Kontrolle übergeben und in einer AEM as a Cloud Service-Umgebung bereitstellen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=de" text="AEM as a Cloud Service-SDK"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/de/aemcloud.html" text="Herunterladen des AEM as a Cloud Service SDK"
 
-Adobe Experience Manager (AEM) kann mit dem QuickStart Jar des AEM as a Cloud Service SDK lokal ausgeführt werden. Auf diese Weise können Entwickelnde benutzerdefinierten Code, Konfigurationen und Inhalte bereitstellen und testen, bevor sie sie der Quell-Code-Kontrolle übergeben und in einer AEM as a Cloud Service-Umgebung bereitstellen.
+Adobe Experience Manager (AEM) kann mithilfe der Schnellstart-JAR des AEM as a Cloud Service-SDKs lokal ausgeführt werden. Auf diese Weise können Entwickelnde benutzerdefinierten Code, Konfigurationen und Inhalte bereitstellen und testen, bevor sie sie der Quell-Code-Kontrolle übergeben und in einer AEM as a Cloud Service-Umgebung bereitstellen.
 
 Beachten Sie, dass `~` als Abkürzung für das Benutzerverzeichnis verwendet wird. Unter Windows entspricht dies `%HOMEPATH%`.
 
-## Java™ installieren
+## Installieren von Java™
 
-Experience Manager ist eine Java™-Anwendung und erfordert daher das Oracle Java™ SDK, um die Entwicklungs-Tools zu unterstützen.
+Experience Manager ist eine Java™-Anwendung und erfordert daher das Oracle Java™-SDK, um die Entwicklungs-Tools zu unterstützen.
 
-1. [Herunterladen und Installieren des neuesten Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
-1. Stellen Sie sicher, dass das Oracle Java™ 11 SDK installiert ist, indem Sie den Befehl ausführen:
+1. [Laden Sie das neueste Java™ 11-SDK herunter und installieren Sie es](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
+1. Stellen Sie sicher, dass das Oracle Java™ 11-SDK installiert ist, indem Sie den folgenden Befehl ausführen:
 
 >[!BEGINTABS]
 
@@ -66,7 +66,7 @@ $ java --version
 
 Das AEM as a Cloud Service SDK bzw. AEM SDK enthält die Schnellstart-JAR, die zum lokalen Ausführen von AEM Author und Publish für die Entwicklung verwendet wird, sowie die kompatible Version der Dispatcher-Tools.
 
-1. Melden Sie sich mit Ihrer Adobe ID auf [https://experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads) an.
+1. Melden Sie sich mit Ihrer Adobe ID auf [https://experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads) an
    + Beachten Sie, dass Ihre Adobe-Organisation für AEM as a Cloud Service bereitgestellt werden __muss__, um das AEM as a Cloud Service-SDK herunterladen zu können.
 1. Navigieren Sie zur Registerkarte __AEM as a Cloud Service__
 1. Sortieren Sie nach __Veröffentlichungsdatum__ in __absteigender__ Reihenfolge
@@ -81,11 +81,11 @@ Das AEM as a Cloud Service SDK bzw. AEM SDK enthält die Schnellstart-JAR, die z
 
 Der lokale AEM-Author-Service bietet Entwicklerinnen und Entwicklern ein lokales Erlebnis, das digitale Marketing-Fachkräfte/Inhaltsautorinnen bzw. Inhaltsautoren für die Erstellung und Verwaltung von Inhalten freigeben. Der AEM-Author-Service ist sowohl als Verfassungs- als auch als Vorschau-Umgebung konzipiert, sodass die meisten Validierungen der Funktionsentwicklung damit durchgeführt werden können. Dadurch wird er zu einem wichtigen Element des lokalen Entwicklungsprozesses.
 
-1. Erstellen Sie den Ordner `~/aem-sdk/author`.
+1. Erstellen Sie den Ordner `~/aem-sdk/author`
 1. Kopieren Sie die __Schnellstart-JAR__-Datei nach `~/aem-sdk/author` und benennen Sie sie in `aem-author-p4502.jar` um
 1. Starten Sie den lokalen AEM-Author-Service, indem Sie Folgendes über die Befehlszeile ausführen:
    + `java -jar aem-author-p4502.jar`
-      + Geben Sie das Admin-Passwort als `admin` an. Jedes Administratorkennwort ist akzeptabel. Es wird jedoch empfohlen, den Standard für die lokale Entwicklung zu verwenden, um eine Neukonfiguration zu vermeiden.
+      + Geben Sie das Admin-Passwort als `admin` an. Jedes Admin-Kennwort ist akzeptabel, es wird jedoch empfohlen, für die lokale Entwicklung das Standardkennwort zu verwenden, um die Notwendigkeit einer Neukonfiguration zu verringern.
 
    Sie können die Schnellstart-JAR für AEM as a Cloud Service *nicht* [durch einen Doppelklick](#troubleshooting-double-click) starten.
 1. Greifen Sie in einem Webbrowser auf den lokalen AEM-Author-Service unter [http://localhost:4502](http://localhost:4502) zu
@@ -126,11 +126,11 @@ $ java -jar aem-author-p4502.jar
 
 Der lokale AEM-Publish-Service bietet Entwicklerinnen und Entwicklern das lokale Erlebnis, das Endbenutzende von AEM erfahren werden, z. B. das Durchsuchen der auf AEM gehosteten Website. Ein lokaler AEM-Publish-Service ist wichtig, da er in die [Dispatcher-Tools](./dispatcher-tools.md) des AEM SDK integriert ist und es den Entwicklerinnen und Entwicklern ermöglicht, die endgültige Endbenutzererfahrung zu testen und zu optimieren.
 
-1. Erstellen Sie den Ordner `~/aem-sdk/publish`.
-1. Kopieren Sie die __Schnellstart-JAR__ Datei nach `~/aem-sdk/publish` und benennen Sie sie in `aem-publish-p4503.jar` um.
+1. Erstellen Sie den Ordner `~/aem-sdk/publish`
+1. Kopieren Sie die __Schnellstart-JAR__ Datei nach `~/aem-sdk/publish` und benennen Sie sie in `aem-publish-p4503.jar` um
 1. Starten Sie den lokalen AEM-Publish-Service, indem Sie Folgendes über die Befehlszeile ausführen:
    + `java -jar aem-publish-p4503.jar`
-      + Geben Sie das Admin-Passwort als `admin` an. Jedes Administratorkennwort ist akzeptabel. Es wird jedoch empfohlen, den Standard für die lokale Entwicklung zu verwenden, um eine Neukonfiguration zu vermeiden.
+      + Geben Sie das Admin-Passwort als `admin` an. Jedes Admin-Kennwort ist akzeptabel, es wird jedoch empfohlen, für die lokale Entwicklung das Standardkennwort zu verwenden, um die Notwendigkeit einer Neukonfiguration zu verringern.
 
    Sie können die Schnellstart-JAR für AEM as a Cloud Service *nicht* [durch einen Doppelklick](#troubleshooting-double-click) starten.
 1. Greifen Sie in einem Webbrowser auf den lokalen AEM-Veröffentlichungs-Service unter [http://localhost:4503](http://localhost:4503) zu
@@ -214,7 +214,7 @@ Bei der Entwicklung kann es wünschenswert sein, die Verteilung von Inhalten mit
 
 >[!NOTE]
 >
-Replikationsagenten sind nur für die Verwendung in der lokalen Schnellstart-JAR verfügbar und bieten nur eine Simulation der Inhaltsverteilung.
+> Replikationsagenten sind nur für die Verwendung in der lokalen Schnellstart-JAR verfügbar und bieten nur eine Simulation der Inhaltsverteilung.
 
 1. Melden Sie sich beim **Authoring**-Service an und navigieren Sie zu [http://localhost:4502/etc/replication/agents.author.html](http://localhost:4502/etc/replication/agents.author.html).
 1. Klicken Sie auf **Standardagent (Publish)**, um den Standard-Replikationsagenten zu öffnen.
@@ -279,7 +279,7 @@ Aktualisieren Sie das AEM SDK mindestens einmal im Monat am oder kurz nach dem l
 
 >[!WARNING]
 >
-Die Aktualisierung der Schnellstart-JAR auf eine neue Version erfordert das Ersetzen der gesamten lokalen Entwicklungsumgebung, was zu einem Verlust des gesamten Codes, der Konfiguration und des Inhalts in den lokalen AEM-Repositorys führt. Stellen Sie deswegen sicher, dass Code, Konfigurationen oder Inhalte, die nicht zerstört werden sollen, sicher in Git übertragen oder aus der lokalen AEM-Instanz als AEM-Pakete exportiert werden.
+> Die Aktualisierung der Schnellstart-JAR auf eine neue Version erfordert das Ersetzen der gesamten lokalen Entwicklungsumgebung, was zu einem Verlust des gesamten Codes, der Konfiguration und des Inhalts in den lokalen AEM-Repositorys führt. Stellen Sie deswegen sicher, dass Code, Konfigurationen oder Inhalte, die nicht zerstört werden sollen, sicher in Git übertragen oder aus der lokalen AEM-Instanz als AEM-Pakete exportiert werden.
 
 ### Vermeiden von Inhaltsverlusten beim Aktualisieren des AEM SDK
 
@@ -364,9 +364,9 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-Dies liegt daran, dass AEM as a Cloud Service Java™ SDK 11 erfordert und Sie eine andere Version ausführen, höchstwahrscheinlich Java™ 8. Um dieses Problem zu beheben, laden Sie herunter und installieren Sie [Oracle Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
+Dies liegt daran, dass AEM as a Cloud Service Java™ SDK 11 erfordert und Sie eine andere Version verwenden, höchstwahrscheinlich Java™ 8. Um dieses Problem zu beheben, laden Sie das [Oracle Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14) herunter und installieren Sie es.
 
-Überprüfen Sie nach der Installation des Oracle Java™ 11 SDK, ob es sich um die aktive Version handelt, indem Sie den Befehl über die Befehlszeile ausführen:
+Sobald das Oracle Java™ 11 SDK installiert wurde, vergewissern Sie sich, dass es sich um die aktive Version handelt, indem Sie folgenden Befehl in der Befehlszeile ausführen:
 
 >[!BEGINTABS]
 
