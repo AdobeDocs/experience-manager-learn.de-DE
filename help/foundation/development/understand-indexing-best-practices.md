@@ -1,6 +1,6 @@
 ---
-title: Indizierung von Best Practices in AEM
-description: Erfahren Sie mehr über die Best Practices für die Indizierung in AEM.
+title: Best Practices für die Indizierung in AEM
+description: Erfahren Sie mehr über Best Practices für die Indizierung in AEM.
 version: 6.4, 6.5, Cloud Service
 sub-product: Experience Manager, Experience Manager Sites
 feature: Search
@@ -13,71 +13,71 @@ last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1418'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# Indizierung von Best Practices in AEM
+# Best Practices für die Indizierung in AEM
 
-Erfahren Sie mehr über die Best Practices für die Indizierung in Adobe Experience Manager (AEM). Apache [Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/query/query.html) ermöglicht die Inhaltssuche in AEM und die folgenden Schlüsselpunkte sind:
+Erfahren Sie mehr über Best Practices für die Indizierung in Adobe Experience Manager (AEM). Die Inhaltssuche in AEM wird durch Apache [Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/query/query.html) gestützt. Beachten Sie die folgenden wichtigen Punkte:
 
-- Standardmäßig bietet AEM verschiedene Indizes, um beispielsweise Such- und Abfragefunktionen zu unterstützen. `damAssetLucene`, `cqPageLucene` und mehr.
-- Alle Indexdefinitionen werden im Repository unter `/oak:index` Knoten.
+- Standardmäßig stellt AEM verschiedene Indizes bereit, um Such- und Abfragefunktionen zu unterstützen, z. B. `damAssetLucene` und `cqPageLucene`.
+- Alle Indexdefinitionen werden im Repository unter dem Knoten `/oak:index` gespeichert.
 - AEM as a Cloud Service unterstützt nur Oak Lucene-Indizes.
-- Die Indexkonfiguration sollte in der AEM Projekt-Codebase verwaltet und mithilfe der CI/CD-Pipelines von Cloud Manager bereitgestellt werden.
-- Wenn für eine bestimmte Abfrage mehrere Indizes verfügbar sind, wird die **Index mit den niedrigsten geschätzten Kosten verwendet wird**.
-- Wenn für eine bestimmte Abfrage kein Index verfügbar ist, wird die Inhaltsstruktur durchsucht, um den entsprechenden Inhalt zu finden. Die Standardbegrenzung ist jedoch über `org.apache.jackrabbit.oak.query.QueryEngineSettingsService` wird nur 10.000 Knoten durchlaufen.
-- Die Ergebnisse einer Abfrage sind **zuletzt gefiltert** , um sicherzustellen, dass der aktuelle Benutzer Lesezugriff hat. Das bedeutet, dass die Abfrageergebnisse kleiner sein können als die Anzahl der indizierten Knoten.
-- Die Neuindizierung des Repositorys nach Indexdefinitionsänderungen erfordert Zeit und hängt von der Größe des Repositorys ab.
+- Die Indexkonfiguration sollte in der AEM-Projekt-Code-Basis verwaltet und mithilfe von CI/CD-Pipelines in Cloud Manager bereitgestellt werden.
+- Wenn für eine bestimmte Abfrage mehrere Indizes verfügbar sind, wird der **Index mit den niedrigsten geschätzten Kosten verwendet**.
+- Wenn für eine bestimmte Abfrage kein Index verfügbar ist, wird die Inhaltsstruktur durchlaufen, um den entsprechenden Inhalt zu finden. Allerdings werden über `org.apache.jackrabbit.oak.query.QueryEngineSettingsService` standardmäßig maximal nur 10.000 Knoten durchlaufen.
+- Die Ergebnisse einer Abfrage werden **zuletzt gefiltert**, um sicherzustellen, dass der aktuelle Benutzer bzw. die aktuelle Benutzerin Lesezugriff hat. Das bedeutet, dass die Anzahl der Abfrageergebnisse möglicherweise unter der Anzahl der indizierten Knoten liegt.
+- Die Neuindizierung des Repositorys nach Änderungen der Indexdefinition erfordert Zeit und hängt von der Größe des Repositorys ab.
 
-Um über eine effiziente und korrekte Suchfunktion zu verfügen, die die Leistung der AEM-Instanz nicht beeinträchtigt, sollten Sie die Best Practices für die Indizierung kennen.
+Damit die Suchfunktion effizient und ordnungsgemäß arbeitet und sich nicht auf die Leistung der AEM-Instanz auswirkt, ist es wichtig, die Best Practices für die Indizierung zu verstehen.
 
-## Benutzerspezifischer vs. OOTB-Index
+## Benutzerdefinierte und vorkonfigurierte Indizes
 
-Manchmal müssen Sie benutzerdefinierte Indizes erstellen, um Ihre Suchanforderungen zu unterstützen. Beachten Sie jedoch die folgenden Richtlinien, bevor Sie benutzerdefinierte Indizes erstellen:
+Manchmal müssen Sie benutzerdefinierte Indizes erstellen, damit Ihre Suchanforderungen erfüllt werden. Befolgen Sie jedoch die nachstehenden Richtlinien, bevor Sie benutzerdefinierte Indizes erstellen:
 
-- Machen Sie sich mit den Suchanforderungen vertraut und prüfen Sie, ob die OOTB-Indizes die Suchanforderungen unterstützen können. Verwendung **Tool zur Abfrageleistung**, verfügbar unter [lokales SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) und AEMCS über die Developer Console oder `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`.
+- Verstehen Sie die Suchanforderungen und prüfen Sie, ob die vorkonfigurierten Indizes diese Suchanforderungen unterstützen können. Verwenden Sie das **Abfrageleistungs-Werkzeug**, das als [lokales SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) und AEMCS über die Developer Console oder unter `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` verfügbar ist.
 
-- Definieren Sie eine optimale Abfrage mithilfe der [Abfragen optimieren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices.html?#optimizing-queries) Flussdiagramm und [JCR Query Cheat Sheet](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en) als Referenz.
+- Definieren Sie eine optimale Abfrage und orientieren Sie sich dabei am Diagramm zum [Optimieren von Abfragen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices.html?lang=de#optimizing-queries) sowie an der [JCR-Abfrage-Schnellübersicht](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=de).
 
-- Wenn die OOTB-Indizes die Suchanforderungen nicht unterstützen können, haben Sie zwei Möglichkeiten. Lesen Sie jedoch die [Tipps zum Erstellen effizienter Indizes](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?#should-i-create-an-index)
-   - Passen Sie den OOTB-Index an: Bevorzugte Option an, da diese einfach zu verwalten und zu aktualisieren ist.
-   - Vollständiger benutzerdefinierter Index: Nur, wenn die obige Option nicht funktioniert.
+- Wenn die vorkonfigurierten Indizes die Suchanforderungen nicht unterstützen können, haben Sie zwei Möglichkeiten. Überprüfen Sie jedoch die [Tipps zum Erstellen effizienter Indizes](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?lang=de#should-i-create-an-index)
+   - Anpassen des vorkonfigurierten Index: Dies ist die bevorzugte Option, da Verwaltung und Aktualisierung einfach sind.
+   - Vollständig benutzerdefinierter Index: Verwenden Sie diese Möglichkeit nur, wenn die obige Option nicht funktioniert.
 
-### OOTB-Index anpassen
+### Anpassen des vorkonfigurierten Index
 
-- In **AEMCS** bei der Anpassung der OOTB-Indexverwendung **\&lt;ootbindexname>-\&lt;productversion>-custom-\&lt;customversion>** Namenskonvention. Beispiel: `cqPageLucene-custom-1` oder `damAssetLucene-8-custom-1`. Dies hilft beim Zusammenführen der benutzerdefinierten Indexdefinition, sobald der OOTB-Index aktualisiert wird. Siehe [Änderungen an vordefinierten Indizes](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#changes-to-out-of-the-box-indexes) für weitere Details.
+- Wenn Sie in **AEMCS** den vorkonfigurierten Index anpassen, verwenden Sie die Namenskonvention **\&lt;OOTBIndexName>-\&lt;productVersion>-custom-\&lt;customVersion>**. Beispiel: `cqPageLucene-custom-1` oder `damAssetLucene-8-custom-1`. Dies hilft dabei, die benutzerdefinierte Indexdefinition zusammenzuführen, wenn der vorkonfigurierte Index aktualisiert wird. Weitere Informationen finden Sie unter [Änderungen an vordefinierten Indizes](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=de#changes-to-out-of-the-box-indexes).
 
-- In **AEM 6.x**, die oben genannte Benennung _funktioniert nicht_ Aktualisieren Sie jedoch einfach den OOTB-Index mit zusätzlichen Eigenschaften im `indexRules` Knoten.
+- In **AEM 6.X** funktioniert die oben angegebene Benennung _nicht_. Aktualisieren Sie jedoch einfach den vorkonfigurierten Index mit zusätzlichen Eigenschaften im Knoten `indexRules`.
 
-- Kopieren Sie immer die neueste OOTB-Indexdefinition mithilfe des CRX DE Package Manager (/crx/packmgr/) aus der AEM-Instanz, benennen Sie sie um und fügen Sie Anpassungen innerhalb der XML-Datei hinzu.
+- Kopieren Sie immer die neueste vordefinierte Indexdefinition aus der AEM-Instanz mit CRX DE Package Manager (/crx/packmgr/), benennen Sie sie um und passen Sie die XML-Datei an.
 
-- Indexdefinition im AEM Projekt speichern unter `ui.apps/src/main/content/jcr_root/_oak_index` und stellen Sie es mithilfe von CI/CD-Pipelines von Cloud Manager bereit. Siehe [Bereitstellen von benutzerdefinierten Indexdefinitionen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#deploying-custom-index-definitions) für weitere Details.
+- Speichern Sie die Indexdefinition im AEM-Projekt unter `ui.apps/src/main/content/jcr_root/_oak_index` und stellen Sie sie mithilfe von CI/CD-Pipelines in Cloud Manager bereit. Weitere Informationen finden Sie unter [Bereitstellen benutzerdefinierter Indexdefinitionen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=de#deploying-custom-index-definitions).
 
-### Vollständiger benutzerdefinierter Index
+### Vollständig benutzerdefinierter Index
 
-Das Erstellen eines vollständig benutzerdefinierten Index muss Ihre letzte Option sein und nur, wenn die obige Option nicht funktioniert.
+Das Erstellen eines vollständig benutzerdefinierten Index sollte Ihre allerletzte Option sein. Greifen Sie nur dann darauf zurück, wenn die oben genannte Option nicht funktioniert.
 
-- Verwenden Sie beim Erstellen eines vollständig benutzerdefinierten Index **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** Namenskonvention. Beispiel: `wknd.adventures-1-custom-1`. Auf diese Weise können Namenskonflikte vermieden werden. Hier, `wknd` ist das Präfix und `adventures` ist der benutzerdefinierte Indexname. Diese Konvention gilt sowohl für AEM 6.X als auch für AEMCS und hilft bei der Vorbereitung auf die zukünftige Migration zu AEMCS.
+- Wenn Sie einen vollständig benutzerdefinierten Index erstellen, verwenden Sie die Namenskonvention **\&lt;prefix>.\&lt;customIndexName>-\&lt;version>-custom-\&lt;customVersion>**. Zum Beispiel: `wknd.adventures-1-custom-1`. Das hilft dabei, Namenskonflikte zu vermeiden. Hier ist `wknd` das Präfix und `adventures` ist der benutzerdefinierte Indexname. Diese Konvention gilt sowohl für AEM 6.X als auch für AEMCS und hilft bei der Vorbereitung auf die zukünftige Migration zu AEMCS.
 
-- AEMCS unterstützt nur Lucene-Indizes. Verwenden Sie daher zur Vorbereitung auf die zukünftige Migration zu AEMCS immer Lucene-Indizes. Siehe [Lucene-Indizes vs. Eigenschaftenindizes](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?#lucene-or-property-indexes) für weitere Details.
+- AEMCS unterstützt nur Lucene-Indizes. Verwenden Sie daher zur Vorbereitung auf eine zukünftige Migration zu AEMCS immer Lucene-Indizes. Weitere Informationen finden Sie unter [Lucene- oder Eigenschaftenindizes](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?lang=de#lucene-or-property-indexes).
 
-- Erstellen Sie keinen benutzerdefinierten Index für denselben Knotentyp wie den OOTB-Index. Passen Sie stattdessen den OOTB-Index mit zusätzlichen Eigenschaften im `indexRules` Knoten. Erstellen Sie beispielsweise keinen benutzerdefinierten Index für die `dam:Asset` Knotentyp, aber OOTB anpassen `damAssetLucene` Index. _Dies war eine häufige Ursache für Leistungs- und Funktionsprobleme_.
+- Vermeiden Sie es, einen benutzerdefinierten Index auf demselben Knotentyp wie den vorkonfigurieren Index zu erstellen. Passen Sie stattdessen den vorkonfigurierten Index mit zusätzlichen Eigenschaften im Knoten `indexRules` an. Erstellen Sie beispielsweise keinen benutzerdefinierten Index auf dem Knotentyp `dam:Asset`, sondern passen Sie den vorkonfigurierten Index `damAssetLucene` an. _Dies ist eine häufige Ursache für Leistungs- und Funktionsprobleme_.
 
-- Vermeiden Sie auch das Hinzufügen mehrerer Knotentypen, beispielsweise `cq:Page` und `cq:Tag` unter den Indizierungsregeln (`indexRules`). Erstellen Sie stattdessen separate Indizes für jeden Knotentyp.
+- Vermeiden Sie es beispielsweise auch, mehrere Knotentypen wie `cq:Page` und `cq:Tag` unter dem Knoten für Indizierungsregeln (`indexRules`) hinzuzufügen. Erstellen Sie stattdessen separate Indizes für jeden Knotentyp.
 
-- Wie im obigen Abschnitt erwähnt, speichern Sie die Indexdefinition im AEM Projekt unter `ui.apps/src/main/content/jcr_root/_oak_index` und stellen Sie es mithilfe von CI/CD-Pipelines von Cloud Manager bereit. Siehe [Bereitstellen von benutzerdefinierten Indexdefinitionen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?#deploying-custom-index-definitions) für weitere Details.
+- Wie im Abschnitt oben erwähnt, speichern Sie die Indexdefinition im AEM-Projekt unter `ui.apps/src/main/content/jcr_root/_oak_index` und stellen Sie sie mithilfe von CI/CD-Pipelines in Cloud Manager bereit. Weitere Informationen finden Sie unter [Bereitstellen benutzerdefinierter Indexdefinitionen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=de#deploying-custom-index-definitions).
 
-- Die Richtlinien für die Indexdefinition sind:
-   - Der Knotentyp (`jcr:primaryType`) sollte `oak:QueryIndexDefinition`
-   - Der Indextyp (`type`) sollte `lucene`
-   - Die asynchrone Eigenschaft (`async`) sollte `async,nrt`
-   - Verwendung `includedPaths` und vermeiden `excludedPaths` -Eigenschaft. Immer festlegen `queryPaths` -Wert auf denselben Wert wie `includedPaths` -Wert.
-   - Um die Pfadbeschränkung durchzusetzen, verwenden Sie `evaluatePathRestrictions` -Eigenschaft und legen Sie sie auf `true`.
-   - Verwendung `tags` -Eigenschaft, um den Index zu taggen, und geben Sie bei der Abfrage diesen Tag-Wert an, um den Index zu verwenden. Die allgemeine Abfragesyntax lautet: `<query> option(index tag <tagName>)`.
+- Es gelten folgende Richtlinien zur Indexdefinition:
+   - Der Knotentyp (`jcr:primaryType`) sollte `oak:QueryIndexDefinition` sein
+   - Der Indextyp (`type`) sollte `lucene` sein
+   - Die async-Eigenschaft (`async`) sollte `async,nrt` sein
+   - Verwenden Sie `includedPaths` und vermeiden Sie die Eigenschaft `excludedPaths`. Setzen Sie den Wert `queryPaths` immer auf den gleichen Wert wie `includedPaths`.
+   - Um die Pfadbeschränkung zu erzwingen, verwenden Sie die Eigenschaft `evaluatePathRestrictions` und setzen Sie sie auf `true`.
+   - Verwenden Sie die Eigenschaft `tags`, um den Index zu taggen, und geben Sie bei Abfragen den Wert dieses Tags an, um den Index zu verwenden. Die allgemeine Abfragesyntax lautet `<query> option(index tag <tagName>)`.
 
   ```xml
   /oak:index/wknd.adventures-1-custom-1
@@ -94,57 +94,57 @@ Das Erstellen eines vollständig benutzerdefinierten Index muss Ihre letzte Opti
 
 ### Beispiele
 
-Um die Best Practices zu verstehen, werden einige Beispiele vorgestellt.
+Um die Best Practices zu verstehen, sehen wir uns einige Beispiele an.
 
-#### Unsachgemäße Verwendung der Eigenschaft &quot;tags&quot;
+#### Nicht ordnungsgemäße Verwendung der Eigenschaft „tags“
 
-Die folgende Abbildung zeigt eine benutzerdefinierte und OOTB-Indexdefinition, die die `tags` -Eigenschaft verwenden, verwenden beide Indizes dieselbe `visualSimilaritySearch` -Wert.
+Die folgende Abbildung zeigt eine benutzerdefinierte und eine vorkonfigurierte Indexdefinition. Die Eigenschaft `tags` ist hervorgehoben und beide Indizes verwenden den gleichen Wert `visualSimilaritySearch`.
 
-![Unsachgemäße Verwendung der Eigenschaft &quot;tags&quot;](./assets/understand-indexing-best-practices/incorrect-tags-property.png)
-
-##### Analyse
-
-Dies ist eine unsachgemäße Verwendung der `tags` -Eigenschaft auf dem benutzerdefinierten Index. Die Oak-Abfrage-Engine wählt den benutzerdefinierten Index über der OOTB-Indexursache der niedrigsten geschätzten Kosten aus.
-
-Die richtige Methode besteht darin, den OOTB-Index anzupassen und zusätzliche Eigenschaften in der `indexRules` Knoten. Siehe [OOTB-Index anpassen](#customize-the-ootb-index) für weitere Details.
-
-#### Index auf der `dam:Asset` Knotentyp
-
-Die folgende Abbildung zeigt benutzerdefinierten Index für die `dam:Asset` Knotentyp mit dem `includedPaths` -Eigenschaft auf einen bestimmten Pfad festgelegt ist.
-
-![Index auf dem dam:Asset-Knotentyp](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)
+![Nicht ordnungsgemäße Verwendung der Eigenschaft „tags“](./assets/understand-indexing-best-practices/incorrect-tags-property.png)
 
 ##### Analyse
 
-Wenn Sie Omnisearch für Assets durchführen, werden falsche Ergebnisse zurückgegeben, da der benutzerdefinierte Index niedrigere geschätzte Kosten aufweist.
+Hier wird die Eigenschaft `tags` im benutzerdefinizerten Index nicht ordnungsgemäß verwendet. Aufgrund der niedrigeren geschätzten Kosten wählt die Oak-Abfrage-Engine den benutzerdefinierten Index anstelle des vorkonfigurierten Index aus.
 
-Erstellen Sie keinen benutzerdefinierten Index auf der `dam:Asset` Knotentyp, aber OOTB anpassen `damAssetLucene` Index mit zusätzlichen Eigenschaften in `indexRules` Knoten.
+Die richtige Vorgehensweise besteht darin, den vorkonfigurierten Index anzupassen und im Knoten `indexRules` zusätzliche Eigenschaften hinzuzufügen. Weitere Informationen finden Sie unter [Anpassen des vorkonfigurierten Index](#customize-the-ootb-index).
 
-#### Mehrere Knotentypen unter Indizierungsregeln
+#### Index auf dem Knotentyp `dam:Asset`
 
-Die folgende Abbildung zeigt einen benutzerdefinierten Index mit mehreren Knotentypen unter der `indexRules` Knoten.
+Die folgende Abbildung zeigt den benutzerdefinierten Index für den Knotentyp `dam:Asset`, wobei die Eigenschaft `includedPaths` auf einen bestimmten Pfad gesetzt ist.
+
+![Index auf dem Knotentyp „dam:Asset“](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)
+
+##### Analyse
+
+Wenn Sie eine Omnisearch auf Assets durchführen, werden falsche Ergebnisse ausgegeben, da der benutzerdefinierte Index niedrigere geschätzte Kosten aufweist.
+
+Erstellen Sie keinen benutzerdefinierten Index auf dem Knotentyp `dam:Asset`, sondern passen Sie im Knoten `indexRules` den vorkonfigurierten Index `damAssetLucene` mit zusätzlichen Eigenschaften an.
+
+#### Mehrere Knotentypen unter den Indizierungsregeln
+
+Die folgende Abbildung zeigt einen benutzerdefinierten Index mit mehreren Knotentypen unter dem Knoten `indexRules`.
 
 ![Mehrere Knotentypen unter den Indizierungsregeln](./assets/understand-indexing-best-practices/multiple-nodetypes-in-index.png)
 
 ##### Analyse
 
-Es wird nicht empfohlen, mehrere Knotentypen in einem einzigen Index hinzuzufügen. Es ist jedoch in Ordnung, Knotentypen in demselben Index zu indizieren, wenn die Knotentypen eng miteinander verbunden sind, z. B. `cq:Page` und `cq:PageContent`.
+Es wird nicht empfohlen, mehrere Knotentypen in einem einzigen Index hinzuzufügen. Knotentypen können jedoch im selben Index indiziert werden, wenn die Knotentypen eng miteinander zusammenhängen, z. B. `cq:Page` und `cq:PageContent`.
 
-Eine gültige Lösung besteht darin, die OOTB anzupassen `cqPageLucene` und `damAssetLucene` Index hinzufügen, fügen Sie zusätzliche Eigenschaften unter den vorhandenen hinzu. `indexRules` Knoten.
+Eine gültige Lösung besteht darin, die vorkonfigurierten Indizes `cqPageLucene` und `damAssetLucene` anzupassen und zusätzliche Eigenschaften unter dem vorhandenen Knoten `indexRules` hinzuzufügen.
 
-#### Fehlen von `queryPaths` property
+#### Fehlen der Eigenschaft `queryPaths`
 
-Unten stehende Abbildung zeigt benutzerdefinierten Index (nicht auch nach der Benennungskonvention) ohne `queryPaths` -Eigenschaft.
+Die folgende Abbildung zeigt einen benutzerdefinierten Index (der auch nicht der Namenskonvention folgt) ohne die Eigenschaft `queryPaths`.
 
-![Absinken der queryPaths-Eigenschaft](./assets/understand-indexing-best-practices/absense-of-queryPaths-prop.png)
+![Fehlen der Eigenschaft „queryPaths“](./assets/understand-indexing-best-practices/absense-of-queryPaths-prop.png)
 
 ##### Analyse
 
-Immer festlegen `queryPaths` -Wert auf denselben Wert wie `includedPaths` -Wert. Um die Pfadbeschränkung zu erzwingen, legen Sie außerdem `evaluatePathRestrictions` Eigenschaft auf `true`.
+Setzen Sie den Wert `queryPaths` immer auf den gleichen Wert wie `includedPaths`. Um die Pfadbeschränkung zu erzwingen, setzen Sie außerdem die Eigenschaft `evaluatePathRestrictions` auf `true`.
 
 #### Abfrage mit Index-Tag
 
-Unter der Abbildung sehen Sie einen benutzerdefinierten Index mit `tags` -Eigenschaft und deren Verwendung bei der Abfrage.
+Die folgende Abbildung zeigt einen benutzerdefinierten Index mit der Eigenschaft `tags` und die Verwendung bei Abfragen.
 
 ![Abfrage mit Index-Tag](./assets/understand-indexing-best-practices/tags-prop-usage.png)
 
@@ -154,53 +154,53 @@ Unter der Abbildung sehen Sie einen benutzerdefinierten Index mit `tags` -Eigens
 
 ##### Analyse
 
-Veranschaulicht das Festlegen und Korrigieren von nicht konfliktbehafteten Elementen `tags` -Eigenschaftswert auf dem Index und verwenden Sie ihn bei der Abfrage. Die allgemeine Abfragesyntax lautet: `<query> option(index tag <tagName>)`. Siehe auch [Index-Tag der Abfrageoption](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#query-option-index-tag)
+Zeigt, wie ein nicht im Konflikt stehender und richtiger Eigenschaftswert `tags` im Index festgelegt und bei Abfragen verwendet wird. Die allgemeine Abfragesyntax lautet `<query> option(index tag <tagName>)`. Siehe auch [Index-Tag der Abfrageoption](https://jackrabbit.apache.org/oak/docs/query/query-engine.html#query-option-index-tag)
 
-#### Benutzerspezifischer Index
+#### Benutzerdefinierter Index
 
-Unter der Abbildung sehen Sie einen benutzerdefinierten Index mit `suggestion` Knoten zum Erzielen der erweiterten Suchfunktion.
+Die folgende Abbildung zeigt einen benutzerdefinierten Index mit dem Knoten `suggestion`, um die erweiterte Suchfunktion zu erzielen.
 
-![Benutzerspezifischer Index](./assets/understand-indexing-best-practices/custom-index-with-suggestion-node.png)
+![Benutzerdefinierter Index](./assets/understand-indexing-best-practices/custom-index-with-suggestion-node.png)
 
 ##### Analyse
 
-Es handelt sich um einen gültigen Anwendungsfall, um einen benutzerdefinierten Index für die [erweiterte Suche](https://jackrabbit.apache.org/oak/docs/query/lucene.html#advanced-search-features) Funktionalität. Der Indexname sollte jedoch dem **\&lt;prefix>.\&lt;customindexname>-\&lt;version>-custom-\&lt;customversion>** Namenskonvention.
+Es ist durchaus angebracht, einen benutzerdefinierten Index für die [erweiterte Suchfunktion](https://jackrabbit.apache.org/oak/docs/query/lucene.html#advanced-search-features) zu erstellen. Der Indexname sollte jedoch der Namenskonvention **\&lt;prefix>.\&lt;customIndexName>-\&lt;version>-custom-\&lt;customVersion>** folgen.
 
 
 ## Hilfreiche Tools
 
-Im Folgenden werden einige Tools vorgestellt, mit denen Sie Indizes definieren, analysieren und optimieren können.
+Sehen wir uns einige Tools an, die Ihnen beim Definieren, Analysieren und Optimieren der Indizes helfen können.
 
-### Tool zur Indexerstellung
+### Indexerstellungs-Tool
 
-Die [Oak Index Definition Generator](https://oakutils.appspot.com/generate/index) Tool-Hilfe **, um die Indexdefinition zu generieren** basierend auf den Eingabeabfragen. Es ist ein guter Ausgangspunkt, um einen benutzerdefinierten Index zu erstellen.
+Das Tool [Oak Index Definition Generator](https://oakutils.appspot.com/generate/index) hilft beim **Generieren der Indexdefinition** basierend auf den Eingabeabfragen. Es bietet einen guten Ausgangspunkt zum Erstellen eines benutzerdefinierten Index.
 
-### Analyse-Index-Tool
+### Indexanalyse-Tool
 
-Die [Indexdefinitionsanalyse](https://oakutils.appspot.com/analyze/index) Tool-Hilfe **, um die Indexdefinition zu analysieren** und enthält Empfehlungen zur Verbesserung der Indexdefinition.
+Das Tool [Index Definition Analyzer](https://oakutils.appspot.com/analyze/index) hilft beim **Analysieren der Indexdefinition** und gibt Empfehlungen zum Verbessern der Indexdefinition.
 
-### Tool zur Abfrageleistung
+### Abfrageleistungs-Tool
 
-Die OOTB _Tool zur Abfrageleistung_ verfügbar unter [lokales SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) und AEMCS über die Developer Console oder `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` help **zur Analyse der Abfrageleistung** und [JCR Query Cheat Sheet](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en) , um die optimale Abfrage zu definieren.
+Das vorkonfigurierte _Abfrageleistungs-Tool_ ist im [lokalen SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) und AEMCS über die Developer Console oder unter `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` verfügbar und hilft beim **Analysieren der Abfrageleistung** und der [JCR-Abfrage-Schnellübersicht](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=de), um die optimale Abfrage zu definieren.
 
-### Fehlerbehebung für Tools und Tipps
+### Tools und Tipps zur Fehlerbehebung
 
-Die meisten der unten stehenden Funktionen gelten für AEM 6.X und lokale Problembehebungszwecke.
+Die meisten der folgenden Ressourcen gelten für AEM 6.X und lokale Fehlerbehebungszwecke.
 
-- Index-Manager verfügbar unter `http://host:port/libs/granite/operations/content/diagnosistools/indexManager.html` zum Abrufen von Indexinformationen wie Typ, letzte Aktualisierung, Größe.
+- Der Index-Manager ist unter `http://host:port/libs/granite/operations/content/diagnosistools/indexManager.html` verfügbar und dient zum Abrufen von Indexinformationen wie Typ, letzte Aktualisierung und Größe.
 
-- Detaillierte Protokollierung von Oak-Abfragen und indizierungsbezogenen Java™-Paketen wie `org.apache.jackrabbit.oak.plugins.index`, `org.apache.jackrabbit.oak.query`, und `com.day.cq.search` via `http://host:port/system/console/slinglog` zur Fehlerbehebung.
+- Zur Fehlerbehebung steht eine detaillierte Protokollierung von Oak-Abfrage- und indizierungsbezogenen Java™-Paketen wie `org.apache.jackrabbit.oak.plugins.index`, `org.apache.jackrabbit.oak.query` und `com.day.cq.search` über `http://host:port/system/console/slinglog` zur Verfügung.
 
-- JMX MBean von _IndexStats_ Typ verfügbar unter `http://host:port/system/console/jmx` zum Abrufen von Indexinformationen wie Status, Fortschritt oder Statistiken zur asynchronen Indizierung. Sie bietet außerdem _FailingIndexStats_ Wenn hier keine Ergebnisse vorliegen, bedeutet dies, dass keine Indizes beschädigt sind. AsyncIndexerService markiert jeden Index, der 30 Minuten lang nicht aktualisiert werden kann (konfigurierbar), als beschädigt und stoppt die Indizierung. Wenn eine Abfrage keine erwarteten Ergebnisse liefert, sollten Entwickler dies überprüfen, bevor sie mit der Neuindizierung fortfahren, da die Neuindizierung rechnerisch kostspielig und zeitaufwendig ist.
+- JMX MBean vom Typ _IndexStats_ ist unter `http://host:port/system/console/jmx` verfügbar und dient dazu, Indexinformationen wie Status, Fortschritt oder Statistiken im Zusammenhang mit der asynchronen Indizierung abzurufen. Es bietet auch _FailingIndexStats_. Wenn hier keine Ergebnisse vorliegen, bedeutet das, dass keine Indizes beschädigt sind. „AsyncIndexerService“ markiert alle Indizes, die 30 Minuten lang (konfigurierbar) nicht aktualisiert werden, als beschädigt und stoppt ihre Indizierung. Wenn eine Abfrage nicht die erwarteten Ergebnisse liefert, sollten Entwickelnde dies überprüfen, bevor sie mit einer Neuindizierung fortfahren, da eine Neuindizierung rechenintensiv und zeitaufwendig ist.
 
-- JMX MBean von _LuceneIndex_ Typ verfügbar unter `http://host:port/system/console/jmx` für Lucene-Index-Statistiken wie Größe, Anzahl der Dokumente pro Indexdefinition.
+- JMX MBean vom Typ _LuceneIndex_ ist unter `http://host:port/system/console/jmx` verfügbar und bietet Lucene-Indexstatistiken wie Größe und die Anzahl der Dokumente pro Indexdefinition.
 
-- JMX MBean von _QueryStat_ Typ verfügbar unter `http://host:port/system/console/jmx` für Oak Query Statistics, einschließlich langwieriger und beliebter Abfragen mit Details wie Abfrage, Ausführungszeit.
+- JMX MBean vom Typ _QueryStat_ ist unter `http://host:port/system/console/jmx` verfügbar und bietet Oak-Abfragestatistiken, einschließlich langsamer und beliebter Abfragen mit Details wie Abfrage- und Ausführungszeit.
 
 ## Zusätzliche Ressourcen
 
 Weitere Informationen finden Sie in der folgenden Dokumentation:
 
-- [Oak-Abfragen und Indizierung](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing.html)
-- [Best Practices für Abfragen und Indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices.html)
-- [Best Practices für Abfragen und Indizierung](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html)
+- [Oak-Abfragen und Indizierung](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing.html?lang=de)
+- [Best Practices für Abfragen und Indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices.html?lang=de)
+- [Best Practices für Abfragen und Indizierung](https://experienceleague.adobe.com/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing.html?lang=de)
