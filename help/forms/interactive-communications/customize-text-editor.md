@@ -12,9 +12,9 @@ jira: KT-13126
 exl-id: e551ac8d-0bfc-4c94-b773-02ff9bba202e
 duration: 173
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '596'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +38,7 @@ Dazu müssen Sie folgende Schritte durchführen:
 
 ## Anpassen von Schriftarten durch Bearbeiten der Datei „tbxeditor-config.xml“ in CRX {#customizefonts}
 
-Gehen Sie wie folgt vor, um Schriftarten durch Bearbeiten der Datei tbxeditor-config.xml anzupassen:
+Gehen Sie wie folgt vor, um Schriftarten durch Bearbeiten der Datei „tbxeditor-config.xml“ anzupassen:
 
 1. Wechseln Sie zu `https://'[server]:[port]'/[ContextPath]/crx/de` und melden Sie sich als Administrator an.
 1. Erstellen Sie im Programmordner einen Ordner mit dem Namen „config“ mit dem Pfad/der Struktur ähnlich dem config-Ordner, der sich unter libs/fd/cm/config befindet, indem Sie folgende Schritte durchführen:
@@ -168,7 +168,7 @@ Gehen Sie wie folgt vor, um Schriftarten durch Bearbeiten der Datei tbxeditor-co
       * Standardwerte für Schriftfamilie und -größe, Höhe, Zeichenabstand und Datumsformat
       * Einzüge für Aufzählungszeichen
 
-      Um beispielsweise eine japanische Schriftart mit dem Namen Sazanami Mincho Medium hinzuzufügen, müssen Sie den folgenden Eintrag in die XML-Datei einfügen: `<font>Sazanami Mincho Medium</font>`. Außerdem müssen Sie diese Schriftart auf dem Client-Computer installieren, der verwendet wird, um auf die Schriftartanpassung zuzugreifen und mit dieser zu arbeiten. Weitere Informationen finden Sie unter[ Hinzufügen von benutzerdefinierten Schriften zum Clientcomputer](#addcustomfonts).
+      Um zum Beispiel eine japanische Schriftart mit dem Namen Sazanami Mincho Medium hinzuzufügen, müssen Sie Folgendes in der XML-Datei eintragen: `<font>Sazanami Mincho Medium</font>`  Außerdem müssen Sie diese Schriftart auf dem Client-Computer installieren, der verwendet wird, um auf die Schriftartanpassung zuzugreifen und mit dieser zu arbeiten. Weitere Informationen finden Sie unter[ Hinzufügen von benutzerdefinierten Schriften zum Clientcomputer](#addcustomfonts).
 
       Sie können auch die Standardeinstellungen für verschiedene Aspekte des Textes ändern und die Schriftarten aus dem Texteditor entfernen, indem Sie die Einträge entfernen.
 
