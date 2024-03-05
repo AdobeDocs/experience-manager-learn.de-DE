@@ -1,6 +1,6 @@
 ---
 title: Hinzufügen benutzerdefinierter Schaltflächen zur Rich-Text-Editor(RTE)-Symbolleiste
-description: Erfahren Sie, wie Sie eine benutzerdefinierte Schaltfläche zur Rich-Text-Editor(RTE)-Symbolleiste im AEM-Inhaltsfragmenteditor hinzufügen.
+description: Erfahren Sie, wie Sie eine benutzerdefinierte Schaltfläche zur Rich-Text-Editor (RTE)-Symbolleiste im AEM-Inhaltsfragmenteditor hinzufügen
 feature: Developer Tools, Content Fragments
 version: Cloud Service
 topic: Development
@@ -13,21 +13,21 @@ last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 6fd93d3b-6d56-43c5-86e6-2e2685deecc9
 duration: 354
 source-git-commit: 6f1245e804f0311c3f833ea8b2324cbc95272f52
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '406'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
 # Hinzufügen benutzerdefinierter Schaltflächen zur Rich-Text-Editor(RTE)-Symbolleiste
 
-Erfahren Sie, wie Sie eine benutzerdefinierte Schaltfläche zur Rich-Text-Editor (RTE)-Symbolleiste im AEM Inhaltsfragment-Editor hinzufügen.
+Erfahren Sie, wie Sie im AEM-Inhaltsfragmenteditor der eine benutzerdefinierte Schaltfläche zur Rich-Text-Editor-Symbolleiste (RTE) hinzufügen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420768?quality=12&learn=on)
 
 Benutzerdefinierte Schaltflächen können der **RTE-Symbolleiste** im Inhaltsfragmenteditor über den Erweiterungspunkt `rte` hinzugefügt werden. In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte Schaltfläche zum _Hinzufügen eines Tipps_ in der RTE-Symbolleiste hinzugefügt und der Inhalt im RTE geändert wird.
 
-Über die Methode `getCustomButtons()` des Erweiterungspunkts `rte` ist es möglich, eine oder mehrere benutzerdefinierte Schaltflächen zur **RTE-Symbolleiste** hinzuzufügen. Ebenfalls können standardmäßige RTE-Schaltflächen wie _„Kopieren“, „Einfügen“, „Fett“ und „Kursiv“_ mit der Methode `getCoreButtons()` bzw. `removeButtons)` hinzugefügt oder entfernt werden.
+Über die Methode `rte` des Erweiterungspunkts `getCustomButtons()` ist es möglich, eine oder mehrere benutzerdefinierte Schaltflächen zur **RTE-Symbolleiste** hinzuzufügen. Ebenfalls können standardmäßige RTE-Schaltflächen wie _„Kopieren“, „Einfügen“, „Fett“ und „Kursiv“_ mit der Methode `getCoreButtons()` bzw. `removeButtons)` hinzugefügt oder entfernt werden.
 
 Dieses Beispiel zeigt, wie Sie einen hervorgehobenen Hinweis oder einen Tipp mithilfe der benutzerdefinierten Symbolleisten-Schaltfläche zum _Hinzufügen eines Tipps_ einfügen können. Der Inhalt des hervorgehobenen Hinweises oder Tipps hat eine spezielle Formatierung, die über HTML-Elemente und die zugehörigen CSS-Klassen angewendet wird. Der Platzhalterinhalt und der HTML-Code werden mithilfe der `onClick()`-Callback-Methode von `getCustomButtons()` eingefügt.
 
