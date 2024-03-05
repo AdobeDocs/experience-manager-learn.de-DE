@@ -5,9 +5,9 @@ user-guide-description: Eine Sammlung von Videos und Tutorials für die Adobe Ex
 sub-product: Experience Manager
 index: y
 source-git-commit: 5fe651bc0dc73397ae9602a28d63b7dc084fcc70
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '229'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 96%
    + [Einrichten von Sling Dynamic Include](./development/set-up-sling-dynamic-include.md)
    + [Verstehen der Best Practices zur Java-API](./development/understand-java-api-best-practices.md)
    + [Verstehen des Sling-Modell-Exporters](./development/understand-sling-model-exporter.md)
-   + [Best Practices zur Oak-Indizierung](./development/understand-indexing-best-practices.md)
+   + [Verstehen der Best Practices zur Oak-Indizierung](./development/understand-indexing-best-practices.md)
 + Projekte {#projects}
    + [Entwickeln von AEM-Projekten](./projects/develop-aem-projects.md)
    + [Verwenden von Primärprojekten](./projects/use-project-masters.md)
