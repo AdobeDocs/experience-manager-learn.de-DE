@@ -1,6 +1,6 @@
 ---
-title: Content-Repository für Edge Delivery Services einrichten
-description: Einrichten von SharePoint- oder Google Drive mit Edge Delivery Services
+title: Einrichten eines Content-Repositorys für Edge Delivery Services
+description: Einrichten von SharePoint oder Google Drive mit Edge Delivery Services
 version: 6.5, Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,31 +13,31 @@ thumbnail: 3425712.jpeg
 duration: 418
 exl-id: 290184ea-88cb-401e-b784-77c8322c77de
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '126'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Content-Repository
 
-Um Adobe Experience Manager (AEM) mit Edge Delivery Services zu integrieren, müssen Sie zunächst [SharePoint](#sharepoint) oder [Google Drive](#google-drive) als Inhalts-Repository. Beide Plattformen funktionieren gut mit AEM, was ein reibungsloses Content-Management und die Bereitstellung ermöglicht. Wählen Sie das aus, das Ihren Voreinstellungen entspricht, und führen Sie die Schritte aus, um es mit AEM und Edge Delivery Services einzurichten und zu nutzen.
+Um Adobe Experience Manager (AEM) mit Edge Delivery Services zu integrieren, müssen Sie zunächst [SharePoint](#sharepoint) oder [Google Drive](#google-drive) als Content-Repository einrichten. Beide Plattformen funktionieren gut mit AEM, sodass Content-Management und -Bereitstellung reibungslos ablaufen. Wählen Sie die Plattform aus, die Ihren Vorstellungen entspricht, und führen Sie die Schritte aus, um sie mit AEM und Edge Delivery Services einzurichten und zu nutzen.
 
-## Dokumenterstellungsoptionen
+## Optionen für die Dokumenterstellung
 
-Es gibt zwei unterstützte Inhalts-Repositorys für [Dokumenterstellung](../../document-authoring/set-up.md), [SharePoint](#sharepoint) und [Google Drive](#google-drive).
+Es gibt zwei unterstützte Content-Repositorys für die [Dokumenterstellung](../../document-authoring/set-up.md): [SharePoint](#sharepoint) und [Google Drive](#google-drive).
 
 >[!BEGINTABS]
 
 >[!TAB SharePoint]
 
-Richten Sie SharePoint als Inhalts-Repository für die Verwendung mit Edge Delivery Services ein.
+Richten Sie SharePoint als Content-Repository für die Verwendung mit Edge Delivery Services ein.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425712/?learn=on)
 
 >[!TAB Google Drive]
 
-Richten Sie Google Drive als Inhalts-Repository für die Verwendung mit Edge Delivery Services ein.
+Richten Sie Google Drive als Content-Repository für die Verwendung mit Edge Delivery Services ein.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425711/?learn=on)
 
