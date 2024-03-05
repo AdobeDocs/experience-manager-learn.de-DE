@@ -11,9 +11,9 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 duration: 948
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1192'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +46,7 @@ Bei der Einrichtung eines virtuellen privaten Netzwerks sind folgende Voraussetz
    + Zugriffs-Token (auch als Bearer- oder Träger-Token bezeichnet)
 + Cloud Manager-Programm-ID
 + Cloud Manager-Umgebungs-IDs
-+ A **Route-basiert** Virtuelles privates Netzwerk mit Zugriff auf alle erforderlichen Verbindungsparameter.
++ Ein **routenbasiertes** virtuelles privates Netzwerk mit Zugriff auf alle erforderlichen Verbindungsparameter.
 
 Weitere Informationen dazu, wie Sie Anmeldeinformationen für die Cloud Manager-API einrichten, konfigurieren sowie abrufen und wie Sie diese zum Ausführen eines Cloud Manager-API-Aufrufs verwenden können, finden Sie in der folgenden Anleitung.
 
@@ -311,8 +311,8 @@ Die Konfiguration des virtuellen privaten Netzwerks beschränkt den Zugriff auf 
       </p>
     </td>
    <td>
-      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections?lang=de"><img alt="Pfadbasierte VPN-Zugriffsbeschränkungen für AEM Publish" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections?lang=de">Pfadbasierte VPN-Zugriffsbeschränkungen für AEM Publish</a></strong></div>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html?lang=de#restrict-vpn-to-ingress-connections"><img alt="Pfadbasierte VPN-Zugriffsbeschränkungen für AEM Publish" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking.html?lang=de#restrict-vpn-to-ingress-connections">Pfadbasierte VPN-Zugriffsbeschränkungen für AEM Publish</a></strong></div>
       <p>
             VPN-Zugriff für bestimmte Pfade in AEM Publish erforderlich machen.
       </p>
