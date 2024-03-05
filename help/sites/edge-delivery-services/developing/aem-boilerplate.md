@@ -1,6 +1,6 @@
 ---
-title: Erstellen Sie ein Projekt aus der AEM Bausteinvorlage für Edge Delivery Services
-description: Erstellen Sie ein Projekt aus der AEM Bausteinvorlage für Edge Delivery Services
+title: Erstellen eines Projekts aus dem AEM-Textbaustein für Edge Delivery Services
+description: Erstellen eines Projekts aus dem AEM-Textbaustein für Edge Delivery Services
 version: 6.5, Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,14 +13,14 @@ thumbnail: 3425713.jpeg
 duration: 91
 exl-id: 8fa9ac34-d77a-46d1-af19-4b89c1b8d54f
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '40'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# AEM
+# AEM-Textbaustein
 
-Richten Sie das Code-Git-Repository mit dem [Vorlage für AEM](https://github.com/adobe/aem-boilerplate) für Edge Delivery Services.
+Richten Sie das Code-Git-Repository mit der [AEM-Textbausteinvorlage](https://github.com/adobe/aem-boilerplate) für Edge Delivery Services ein.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425713/?learn=on)
