@@ -1,6 +1,6 @@
 ---
-title: Vorschau erstellen und Inhalt veröffentlichen
-description: Erstellen und Veröffentlichen von Inhalten mit der Dokumenterstellung
+title: Anzeigen einer Vorschau und Veröffentlichen von Inhalten
+description: Erfahren Sie, wie Sie Inhalte mithilfe der Dokumenterstellung erstellen und veröffentlichen.
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -13,13 +13,13 @@ thumbnail: 3425700.jpeg
 duration: 139
 exl-id: f416c435-d42f-4d88-b28f-ebabff295a72
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '32'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Vorschau erstellen und Inhalt veröffentlichen
+# Anzeigen einer Vorschau und Veröffentlichen von Inhalten
 
 {{edge-delivery-services}}
 
