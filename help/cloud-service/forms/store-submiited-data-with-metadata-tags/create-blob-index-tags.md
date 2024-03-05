@@ -1,6 +1,6 @@
 ---
-title: Tutorial zum Hinzufügen benutzerdefinierter Metadaten-Tags
-description: Erstellen Sie eine benutzerdefinierte Übermittlung, um Formulardaten mit Metadaten-Tags in Azure zu speichern.
+title: Tutorial zum Hinzufügen der von Benutzenden angegebenen Metadaten-Tags
+description: Erstellen Sie eine benutzerdefinierte Übermittlung, um die Formulardaten mit Metadaten-Tags in Azure zu speichern
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -11,18 +11,18 @@ jira: KT-14501
 duration: 40
 exl-id: eb9bcd1b-c86f-4894-bcf8-9c17e74dd6ec
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '115'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Blob-Index-Tags hinzufügen
+# Hinzufügen von Blob-Index-Tags
 
-Wenn Datensätze größer werden, kann es schwierig sein, ein bestimmtes Objekt in einem Meer von Daten zu finden. Blob-Index-Tags bieten Datenmanagement- und Erkennungsfunktionen durch Verwendung von Schlüssel-Wert-Index-Tag-Attributen. Sie können Objekte in einem einzelnen Container oder über alle Container in Ihrem Speicherkonto kategorisieren und suchen. Beispiel: Blob-Index-Tag _**CustomerType=Platinum**_, wobei Platinum der Wert des Felds CustomerType ist.
+Je umfangreicher Datensätze werden, desto schwieriger kann es sein, ein bestimmtes Objekt in den vielen Daten zu finden. Blob-Index-Tags bieten Funktionen für Daten-Management und -suche durch die Verwendung von Schlüsselwert-Index-Tag-Attributen. Sie können Objekte innerhalb eines einzelnen Containers oder in allen Containern in Ihrem Speicherkonto kategorisieren und suchen. Beispiel: das Blob-Index-Tag _**CustomerType=Platinum**_, wobei „Platinum“ der Wert des Feldes „CustomerType“ ist.
 
 ![index-tags](assets/blob-with-index-tags1.png)
-Der folgende Code erstellt die Blob-Index-Daten-Tag-Zeichenfolge mit den entsprechenden Werten aus den gesendeten Daten
+Der folgende Code erstellt die Zeichenfolge der Blob-Indexdaten-Tags mit den entsprechenden Werten aus den übermittelten Daten
 
 ```java
 @Override
@@ -79,4 +79,4 @@ Der folgende Code erstellt die Blob-Index-Daten-Tag-Zeichenfolge mit den entspre
 
 ## Nächste Schritte
 
-[Benutzerdefinierten Sende-Handler erstellen](./create-custom-submit.md)
+[Erstellen eines benutzerdefinierten Übermittlungs-Handlers](./create-custom-submit.md)
