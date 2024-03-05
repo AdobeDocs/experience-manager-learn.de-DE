@@ -10,9 +10,9 @@ jira: KT-14196
 exl-id: b286c3e9-70df-46e8-b0bc-21599ab1ec06
 duration: 53
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '201'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ Verwenden Sie das Schema, um Ihr adaptives Formular zu erstellen
 ## XFA basiert nicht auf einem Schema
 
 * Öffnen Sie die XDP in AEM Forms Designer.
-* Datei auswählen | Formulareigenschaften | Vorschau.
+* Klicken Sie auf „Datei“   „Formulareigenschaften“   „Vorschau“.
 * Klicken Sie auf „Vorschaudaten erstellen“.
 * Klicken Sie auf „Erstellen“.
 * Geben Sie einen aussagekräftigen Dateinamen wie „`form-data.xml`“ an
