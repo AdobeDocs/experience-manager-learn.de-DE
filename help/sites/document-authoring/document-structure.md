@@ -1,6 +1,6 @@
 ---
 title: Dokumentstruktur für die Dokumenterstellung
-description: Erfahren Sie, wie Sie ein Dokument erstellen.
+description: Erfahren Sie, wie Sie Dokumente erstellen.
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -13,9 +13,9 @@ thumbnail: 3425701.jpeg
 duration: 105
 exl-id: 637a2d44-554d-45e4-aad2-a9e64feb511b
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '28'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-Erfahren Sie, wie die Dokumenterstellung mithilfe von Standardinhalten, Bausteinen und mehr zusammengestellt wird.
+Erfahren Sie, wie bei der Dokumenterstellung Standardinhalte, Blöcke und andere Elemente eingesetzt werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425701/?learn=on)
