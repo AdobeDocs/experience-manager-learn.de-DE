@@ -12,9 +12,9 @@ level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
 duration: 436
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1181'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -201,7 +201,7 @@ Nach Abschluss des Vorgangs werden in der Hauptansicht der App die Team-Daten au
 
 1. Öffnen Sie `src/api/usePersistedQueries.js`.
 
-1. Suchen Sie die Funktion `useAllTeams()`.
+1. Suchen Sie die Funktion `useAllTeams()`
 
 1. Um einen `useEffect`-Hook zu erstellen, der die persistente Abfrage `my-project/all-teams` über `fetchPersistedQuery(..)` aufruft, fügen Sie folgenden Code hinzu. Der Hook gibt außerdem nur die relevanten Daten aus der AEM GraphQL-Antwort unter `data?.teamList?.items` zurück, sodass die React-Ansichtskomponenten unabhängig von den übergeordneten JSON-Strukturen sein können.
 
@@ -350,7 +350,7 @@ Wenn Sie nach Abschluss des Vorgangs den Namen einer Person in der Team-Ansicht 
 
 1. Öffnen Sie `src/api/usePersistedQueries.js`.
 
-1. Suchen Sie die Funktion `usePersonByName(fullName)`.
+1. Suchen Sie die Funktion `usePersonByName(fullName)`
 
 1. Um einen `useEffect`-Hook zu erstellen, der die persistente Abfrage `my-project/all-teams` über `fetchPersistedQuery(..)` aufruft, fügen Sie folgenden Code hinzu. Der Hook gibt außerdem nur die relevanten Daten aus der AEM GraphQL-Antwort unter `data?.teamList?.items` zurück, sodass die React-Ansichtskomponenten unabhängig von den übergeordneten JSON-Strukturen sein können.
 
@@ -497,7 +497,7 @@ Sehen Sie sich die App unter [http://localhost:3000/](http://localhost:3000/) an
 
 ## Unter der Haube
 
-Öffnen Sie die **Entwicklertools** > **Netzwerk** und _Filter_ für `all-teams` -Anfrage. Beachten Sie die GraphQL-API-Anfrage `/graphql/execute.json/my-project/all-teams` gegen `http://localhost:3000` und **NOT** gegen den Wert von `REACT_APP_HOST_URI`, beispielsweise `<https://publish-pxxx-exxx.adobeaemcloud.com`. Die Anfragen werden für die Domain der React-App gestellt, weil die [Proxy-Einrichtung](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) aktiviert wird, wenn das `http-proxy-middleware`-Modul in Verwendung ist.
+Öffnen Sie im Browser **Entwickler-Tools** > **Netzwerk** und _filtern_ Sie nach der Anfrage `all-teams`. Beachten Sie, dass die GraphQL-API-Anfrage `/graphql/execute.json/my-project/all-teams` für `http://localhost:3000` und **NICHT** für den Wert von `REACT_APP_HOST_URI` ausgeführt wird, beispielsweise `<https://publish-pxxx-exxx.adobeaemcloud.com`. Die Anfragen werden für die Domain der React-App gestellt, weil die [Proxy-Einrichtung](https://create-react-app.dev/docs/proxying-api-requests-in-development/#configuring-the-proxy-manually) aktiviert wird, wenn das `http-proxy-middleware`-Modul in Verwendung ist.
 
 
 ![GraphQL-API-Anfrage über Proxy](assets/graphql-and-external-app/graphql-api-request-via-proxy.png)
