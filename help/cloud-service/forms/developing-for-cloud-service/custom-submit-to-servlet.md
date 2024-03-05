@@ -12,9 +12,9 @@ jira: KT-8852
 exl-id: 983e0394-7142-481f-bd5e-6c9acefbfdd0
 duration: 58
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '203'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Der folgende Code in post.POST.jsp leitet die Anfrage einfach an das Servlet wei
 com.adobe.aemds.guide.utils.GuideSubmitUtils.setForwardPath(slingRequest,"/bin/formstutorial",null,null);
 ```
 
-Klicken Sie in Ihrem AEM-Projekt in IntelliJ mit der rechten Maustaste auf den `apps/bankingapplication`-Ordner, wählen Sie „Neu“ > „Paket“ aus und geben Sie „SubmitToAEMServlet“ nach „apps.bankingapplication“ im neuen Paketdialogfeld ein. Klicken Sie mit der rechten Maustaste auf den SubmitToAEMServlet-Knoten und wählen Sie „Repo“ > „Befehl abrufen“ aus, um das AEM-Projekt mit dem AEM Server-Repository zu synchronisieren.
+Klicken Sie in Ihrem AEM-Projekt in IntelliJ mit der rechten Maustaste auf den `apps/bankingapplication`-Ordner, wählen Sie „Neu“   „Paket“ aus und geben Sie „SubmitToAEMServlet“ nach „apps.bankingapplication“ im neuen Paketdialogfeld ein. Klicken Sie mit der rechten Maustaste auf den SubmitToAEMServlet-Knoten und wählen Sie „Repo“   „Befehl“ abrufen aus, um das AEM-Projekt mit dem AEM Server-Repository zu synchronisieren.
 
 
 ## Konfigurieren eines adaptiven Formulars
@@ -62,4 +62,4 @@ Sie können jetzt jedes adaptive Formular so konfigurieren, dass es an den benut
 
 ## Nächste Schritte
 
-[Servlet anhand des Ressourcentyps registrieren](./registering-servlet-using-resourcetype.md)
+[Registrieren eines Servlets mithilfe des Ressourcentyps](./registering-servlet-using-resourcetype.md)
