@@ -1,6 +1,6 @@
 ---
-title: Hinzufügen von Alternativtext für Bilder mit AEM Dokumenterstellung
-description: Erfahren Sie, wie Sie bei der Dokumenterstellung Alternativtext für Bilder verwenden.
+title: Hinzufügen von Alternativtext für Bilder mit der AEM-Dokumenterstellung
+description: Erfahren Sie, wie Sie bei der Dokumenterstellung Alternativtext für Bilder hinzufügen.
 version: 6.5, Cloud Service
 feature: Authoring
 topic: Content Management
@@ -13,16 +13,16 @@ thumbnail: 3425721.jpeg
 duration: 103
 exl-id: 9577aa66-25a7-4092-984d-52eb2662c4ff
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '37'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Alternativtext für Bild
+# Alternativtext für Bilder
 
 {{edge-delivery-services}}
 
-Erfahren Sie, wie Sie Bildern auf Seiten, die mit AEM Dokumenterstellung erstellt wurden, Alternativtext hinzufügen.
+Erfahren Sie, wie Sie Bildern auf Seiten, die mit der AEM-Dokumenterstellung erstellt wurden, Alternativtext hinzufügen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425721/?learn=on)
