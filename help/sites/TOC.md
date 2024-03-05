@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
 source-git-commit: f5f80a898420445335ed34f20aac6579199cc817
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '496'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -20,21 +20,21 @@ ht-degree: 85%
 + Dokumenterstellung {#document-authoring}
    + [Übersicht](document-authoring/overview.md)
    + [Setup](document-authoring/set-up.md)
-   + [Vorschau erstellen und veröffentlichen](document-authoring/preview-and-publish.md)
+   + [Vorschau und Veröffentlichung](document-authoring/preview-and-publish.md)
    + [Dokumentstruktur](document-authoring/document-structure.md)
    + [Standardinhalt und -abschnitte](document-authoring/default-content-and-sections.md)
-   + [Blöcke und Autoblöcke](document-authoring/blocks-and-autoblocks.md)
+   + [Blöcke und automatische Blöcke](document-authoring/blocks-and-autoblocks.md)
    + [Umleitungen](document-authoring/redirects.md)
    + [Massenmetadaten](document-authoring/bulk-metadata.md)
    + [Seitenmetadaten](document-authoring/page-metadata.md)
    + Anleitung{#how-to}
-      + [Dokumentenprüfung](./document-authoring/how-to/document-audit.md)
+      + [Dokumentprüfung](./document-authoring/how-to/document-audit.md)
       + [Dokumentberechtigungen](./document-authoring/how-to/document-permissions.md)
       + [Dokumentversionen](./document-authoring/how-to/document-versions.md)
       + [Dokument-Workflows](./document-authoring/how-to/document-workflows.md)
-      + [iFrames einbetten](./document-authoring/how-to/iframes.md)
-      + [Alternativtext für Bild](./document-authoring/how-to/image-alt-text.md)
-      + [Suchmaschinen-Indizierung verhindern](./document-authoring/how-to/no-index.md)
+      + [Einbetten von iFrames](./document-authoring/how-to/iframes.md)
+      + [Alternativtext für Bilder](./document-authoring/how-to/image-alt-text.md)
+      + [Verhindern der Indizierung durch Suchmaschinen](./document-authoring/how-to/no-index.md)
       + [Responsive Navigation](document-authoring/how-to/responsive-navigation.md)
 + Bearbeiten von Seiten {#page-authoring}
    + [Authoring](page-authoring/aem-sites-authoring-overview.md)
@@ -57,7 +57,7 @@ ht-degree: 85%
    + Lernen Sie von Ihren Kolleginnen und Kollegen {#expert-advice}
       + [Tipps zur Site-Hierarchie](page-authoring/expert-advice/site-hierarchy.md)
 + Inhaltsfragmente {#content-fragments}
-   + [Konsole &quot;Inhaltsfragmente&quot;](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=de){target=_blank}
+   + [Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=de){target=_blank}
    + [Bearbeiten von Inhaltsfragmenten](content-fragments/content-fragments-feature-video-use.md)
    + [Bereitstellen von Inhaltsfragmenten](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [Übersetzen von Inhaltsfragmenten](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -70,16 +70,16 @@ ht-degree: 85%
    + [Übersicht](./edge-delivery-services/overview.md)
    + Entwickeln{#developing}
       + [Voraussetzungen](edge-delivery-services/developing/prerequisites.md)
-      + [AEM](edge-delivery-services/developing/aem-boilerplate.md)
+      + [AEM-Textbaustein](edge-delivery-services/developing/aem-boilerplate.md)
       + [Content-Repository](edge-delivery-services/developing/content-repository.md)
-      + [Vorschau erstellen und veröffentlichen](edge-delivery-services/developing/preview-and-publish.md)
+      + [Vorschau und Veröffentlichung](edge-delivery-services/developing/preview-and-publish.md)
       + [AEM Sidekick](edge-delivery-services/developing/sidekick.md)
       + [Dokumentstruktur](edge-delivery-services/developing/document-structure.md)
       + [Lokale Entwicklung](edge-delivery-services/developing/local-development.md)
       + [Git](edge-delivery-services/developing/git.md)
-   + Anleitung{#how-to}
+   + Anleitung {#how-to}
       + [RSS-Feeds](edge-delivery-services/how-to/rss.md)
-      + [Social-Media-Freigabe](edge-delivery-services/how-to/social-media-sharing.md)
+      + [Freigabe in Social Media](edge-delivery-services/how-to/social-media-sharing.md)
       + [Löschen von Seiten](edge-delivery-services/how-to/delete-page.md)
 + Entwickeln {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
