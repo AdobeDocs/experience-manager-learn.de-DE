@@ -1,6 +1,6 @@
 ---
-title: Ähnliche Bilder in AEM Assets suchen
-description: Erfahren Sie, wie AEM Assets "Ähnliches Bild suchen"es erleichtert, das beste Bild für Ihre Anforderungen zu finden.
+title: Suchen nach ähnlichen Bildern in AEM Assets
+description: Erfahren Sie, wie die AEM Assets-Funktion „Ähnliches Bild suchen“ Ihnen die Suche nach dem Bild erleichtert, das für Ihre Anforderungen am besten geeignet ist.
 version: Cloud Service
 topic: Content Management
 feature: Search
@@ -12,15 +12,15 @@ last-substantial-update: 2024-01-08T00:00:00Z
 jira: KT-14752
 thumbnail: 3426796.jpeg
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '45'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
-# Ähnliche Bilder suchen
+# Nach ähnlichen Bildern suchen
 
-Erfahren Sie, wie AEM Assets &quot;Ähnliches Bild suchen&quot;es erleichtert, das beste Bild für Ihre Anforderungen zu finden.
+Erfahren Sie, wie die AEM Assets-Funktion „Ähnliches Bild suchen“ Ihnen die Suche nach dem Bild erleichtert, das für Ihre Anforderungen am besten geeignet ist.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426796/?learn=on)
