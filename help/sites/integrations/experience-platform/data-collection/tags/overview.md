@@ -1,6 +1,6 @@
 ---
 title: Integrieren von Experience Platform-Datenerfassungs-Tags (Launch) in AEM
-description: Experience Platform-Datenerfassungs-Tags sind die Tag-Management-Plattform der nächsten Generation von Adobe und die beste Methode zur Implementierung von Adobe Analytics, Target, Audience Manager und vielen weiteren Lösungen. Verschaffen Sie sich einen Überblick über Tags (ehemals Launch) und die empfohlene Integration in Adobe Experience Manager.
+description: Experience Platform-Datenerfassungs-Tags sind die Tag-Management-Plattform der nächsten Generation von Adobe und die beste Methode zur Implementierung von Adobe Analytics, Target, Audience Manager und vielen weiteren Lösungen. Verschaffen Sie sich einen Überblick über Tags (früher Launch) und die empfohlene Integration in Adobe Experience Manager.
 solution: Experience Manager, Data Collection, Experience Platform
 jira: KT-5979
 thumbnail: 39090.jpg
@@ -15,9 +15,9 @@ doc-type: Tutorial
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
 duration: 256
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '320'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -48,7 +48,7 @@ Bei der Integration der Experience Platform-Datenerfassungs-Tag ist Folgendes er
 ## Allgemeine Schritte
 
 + Erstellen Sie in der Adobe Experience Platform-Datenerfassung eine Tag-Eigenschaft und bearbeiten Sie sie, um eine _Regel hinzuzufügen_. _Fügen Sie dann eine Bibliothek hinzu_, wählen Sie die neu hinzugefügte Regel aus, genehmigen und veröffentlichen Sie sie.
-+ Verbinden Sie AEM und Tags mit einer vorhandenen (oder neuen) IMS-Konfiguration.
++ Verbinden Sie AEM und Tags mit einer vorhandenen (oder neuen) IMS-Konfiguration
 + Erstellen Sie in AEM eine Cloud-Service-Konfiguration für Launch, wenden Sie sie dann auf eine vorhandene Site an und überprüfen Sie schließlich, ob die Tags-Eigenschaft und ihre Bibliotheken in der Veröffentlichungs- oder Autoren-Site geladen werden.
 
 ## Nächste Schritte
