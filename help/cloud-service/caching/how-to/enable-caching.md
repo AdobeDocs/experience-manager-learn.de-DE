@@ -1,6 +1,6 @@
 ---
-title: Aktivieren der CDN-Zwischenspeicherung
-description: Erfahren Sie, wie Sie das Zwischenspeichern von HTTP-Antworten im CDN AEM as a Cloud Service aktivieren.
+title: Aktivieren des CDN-Cachings
+description: Erfahren Sie, wie Sie das Caching von HTTP-Antworten im CDN von AEM as a Cloud Service aktivieren.
 version: Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
@@ -13,40 +13,40 @@ thumbnail: KT-14224.jpeg
 exl-id: 544c3230-6eb6-4f06-a63c-f56d65c0ff4b
 duration: 200
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '637'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# Aktivieren der CDN-Zwischenspeicherung
+# Aktivieren des CDN-Cachings
 
-Erfahren Sie, wie Sie das Zwischenspeichern von HTTP-Antworten im CDN AEM as a Cloud Service aktivieren. Das Zwischenspeichern von Antworten wird durch `Cache-Control`, `Surrogate-Control`oder `Expires` HTTP-Antwort-Cache-Header.
+Erfahren Sie, wie Sie das Caching von HTTP-Antworten im CDN von AEM as a Cloud Service aktivieren. Das Caching von Antworten wird durch die HTTP-Antwort-Cache-Header `Cache-Control`, `Surrogate-Control` oder `Expires` gesteuert.
 
-Diese Cache-Header werden normalerweise in AEM Dispatcher-Vhost-Konfigurationen mithilfe von `mod_headers` festgelegt, können aber auch in benutzerdefiniertem Java™-Code festgelegt werden, der in AEM Publish selbst ausgeführt wird.
+Diese Cache-Header werden normalerweise in AEM Dispatcher-vhost-Konfigurationen mithilfe von `mod_headers` festgelegt, können aber auch in benutzerdefiniertem Java™-Code festgelegt werden, der in AEM Publish selbst ausgeführt wird.
 
-## Standard-Caching-Verhalten
+## Caching-Standardverhalten
 
-Wenn benutzerdefinierte Konfigurationen NICHT vorhanden sind, werden die Standardwerte verwendet. Im folgenden Screenshot sehen Sie das standardmäßige Caching-Verhalten für AEM Veröffentlichung und Autor, wenn eine [AEM Projektarchetyp](https://github.com/adobe/aem-project-archetype) basiert `mynewsite` AEM Projekt wird bereitgestellt.
+Wenn KEINE benutzerdefinierten Konfigurationen vorhanden sind, werden die Standardwerte verwendet. Im folgenden Screenshot sehen Sie das Caching-Standardverhalten für AEM Publish und Author, wenn ein AEM-Projekt `mynewsite` bereitgestellt wird, das auf einem [AEM-Projektarchetypen](https://github.com/adobe/aem-project-archetype) basiert.
 
-![Standard-Caching-Verhalten](../assets/how-to/aem-publish-default-cache-headers.png){width="800" zoomable="yes"}
+![Caching-Standardverhalten](../assets/how-to/aem-publish-default-cache-headers.png){width="800" zoomable="yes"}
 
-Überprüfen Sie die [AEM Publish - Standard-Cache-Lebensdauer](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/publish.html#cdn-cache-life) und [AEM-Autor - Standard-Cache-Lebensdauer](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/author.html?#default-cache-life) für weitere Informationen.
+Weitere Informationen finden Sie unter [AEM Publish – Standardmäßige Cache-Lebensdauer](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/publish.html?lang=de#cdn-cache-life) und [AEM Author – Standardmäßige Cache-Lebensdauer](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/author.html?lang=de#default-cache-life).
 
-Zusammenfassend AEM as a Cloud Service speichert die meisten Inhaltstypen (HTML, JSON, JS, CSS und Assets) in AEM Veröffentlichung und einige Inhaltstypen (JS, CSS) in AEM Author zwischen.
+Kurz zusammengefasst: AEM as a Cloud Service speichert die meisten Inhaltstypen (HTML, JSON, JS, CSS und Assets) in AEM Publish und einige Inhaltstypen (JS, CSS) in AEM Author zwischen.
 
-## Zwischenspeicherung aktivieren
+## Aktivieren des Cachings
 
-Um das standardmäßige Cache-Verhalten zu ändern, können Sie die Cache-Header auf zwei Arten aktualisieren.
+Um das Caching-Standardverhalten zu ändern, können Sie die Cache-Header auf zwei Arten aktualisieren.
 
-1. **Dispatcher-vhost-Konfiguration:** Nur für AEM Veröffentlichung verfügbar.
-1. **Benutzerdefinierter Java™-Code:** Verfügbar für AEM Veröffentlichung und Autor.
+1. **Dispatcher-vhost-Konfiguration:** Nur für AEM Publish verfügbar.
+1. **Benutzerdefinierter Java™-Code:** Für AEM Publish und Author verfügbar.
 
-Lassen Sie uns jede dieser Optionen überprüfen.
+Sehen wir uns diese beiden Optionen an.
 
-### Dispatcher-Vhost-Konfiguration
+### Dispatcher-vhost-Konfiguration
 
-Diese Option ist der empfohlene Ansatz zum Aktivieren der Zwischenspeicherung. Sie ist jedoch nur für die AEM Veröffentlichung verfügbar. Um die Cache-Header zu aktualisieren, verwenden Sie die `mod_headers` -Modul und `<LocationMatch>` in der vhost-Datei des Apache HTTP-Servers. Die allgemeine Syntax lautet wie folgt:
+Diese Option wird zum Aktivieren des Cachings empfohlen, allerdings ist sie nur für AEM Publish verfügbar. Um die Cache-Header zu aktualisieren, verwenden Sie das Modul `mod_headers` und die Anweisung `<LocationMatch>` in der vhost-Datei des Apache HTTP-Servers. Die allgemeine Syntax lautet folgendermaßen:
 
 ```
 <LocationMatch "$URL$ || $URL_REGEX$">
@@ -66,27 +66,27 @@ Diese Option ist der empfohlene Ansatz zum Aktivieren der Zwischenspeicherung. S
 </LocationMatch>
 ```
 
-Im Folgenden wird der Zweck der einzelnen **header** und gegebenenfalls **attributes** für die Kopfzeile.
+Im Folgenden ist der Zweck der einzelnen **Header** und entsprechenden **Attribute** für den Header zusammengefasst.
 
 |                     | Webbrowser | CDN | Beschreibung |
 |---------------------|:-----------:|:---------:|:-----------:|
-| Cache-Control | ✔ | ✔ | Dieser Header steuert die Lebensdauer des Webbrowsers und des CDN-Cache. |
-| Surrogate-Control | ✘ | ✔ | Dieser Header steuert die Lebensdauer des CDN-Cache. |
-| Ablaufdatum | ✔ | ✔ | Dieser Header steuert die Lebensdauer des Webbrowsers und des CDN-Cache. |
+| Cache-Control | ✔ | ✔ | Dieser Header steuert die Webbrowser- und CDN-Cache-Lebensdauer. |
+| Surrogate-Control | ✘ | ✔ | Dieser Header steuert die CDN-Cache-Lebensdauer. |
+| Ablaufdatum | ✔ | ✔ | Dieser Header steuert die Webbrowser- und CDN-Cache-Lebensdauer. |
 
 
-- **max-age**: Dieses Attribut steuert die TTL (Time to Live) des Antwortinhalts in Sekunden.
-- **stale-while-revalidate**: Dieses Attribut steuert die _Status veraltet_ Behandlung des Antwortinhalts auf der CDN-Ebene, wenn die empfangene Anforderung innerhalb des festgelegten Zeitraums in Sekunden liegt. Die _Status veraltet_ ist der Zeitraum, nach dem die TTL abgelaufen ist und bevor die Antwort erneut validiert wird.
-- **stale-if-error**: Dieses Attribut steuert die _Status veraltet_ Behandlung des Antwortinhalts auf der CDN-Ebene, wenn der Herkunftsserver nicht verfügbar ist und die empfangene Anforderung innerhalb des festgelegten Zeitraums in Sekunden liegt.
+- **max-age**: Dieses Attribut steuert die Gültigkeitsdauer (Time to Live, TTL) des Antwortinhalts in Sekunden.
+- **stale-while-revalidate**: Dieses Attribut steuert, wie Antwortinhalt im _Status „Veraltet“_ auf CDN-Ebene gehandhabt wird, wenn die empfangene Anfrage innerhalb des festgelegten Zeitraums in Sekunden liegt. Der _Status „Veraltet“_ tritt in dem Zeitraum auf, nachdem die TTL abgelaufen ist, aber bevor die Antwort erneut validiert wird.
+- **stale-if-error**: Dieses Attribut steuert, wie Antwortinhalt im _Status „Veraltet“_ auf CDN-Ebene gehandhabt wird, wenn der Ursprungs-Server nicht verfügbar ist und die empfangene Anfrage innerhalb des festgelegten Zeitraums in Sekunden liegt.
 
-Überprüfen Sie die [Stillstand und erneute Validierung](https://developer.fastly.com/learning/concepts/edge-state/cache/stale/) Details für weitere Informationen.
+Weitere Informationen finden Sie unter [Veraltung und erneute Validierung](https://developer.fastly.com/learning/concepts/edge-state/cache/stale/).
 
 #### Beispiel
 
-So erhöhen Sie die Cache-Lebensdauer des Webbrowsers und des CDN-Cache **HTML-Content-Typ** nach _10 Minuten_ ohne Behandlung mit veraltetem Zustand führen Sie die folgenden Schritte aus:
+Gehen Sie wie folgt vor, um die Webbrowser- und CDN-Cache-Lebensdauer des **HTML-Content-Typs** auf _10 Minuten_ zu verlängern, ohne dass er als veraltet gilt:
 
-1. Suchen Sie in Ihrem AEM-Projekt die gewünschte Besucherdatei aus `dispatcher/src/conf.d/available_vhosts` Verzeichnis.
-1. Aktualisieren Sie den vhost (z. B. `wknd.vhost`) wie folgt:
+1. Suchen Sie in Ihrem AEM-Projekt im Verzeichnis `dispatcher/src/conf.d/available_vhosts` die gewünschte vhost-Datei.
+1. Aktualisieren Sie die vhost-Datei (z. B. `wknd.vhost`) wie folgt:
 
    ```
    <LocationMatch "^/content/.*\.(html)$">
@@ -98,18 +98,18 @@ So erhöhen Sie die Cache-Lebensdauer des Webbrowsers und des CDN-Cache **HTML-C
    </LocationMatch>
    ```
 
-   Die vhost-Dateien in `dispatcher/src/conf.d/enabled_vhosts` Verzeichnis **symlinks** zu den Dateien in `dispatcher/src/conf.d/available_vhosts` -Verzeichnis erstellen. Stellen Sie daher sicher, dass Sie symlinks erstellen, falls nicht vorhanden.
-1. Stellen Sie die vhost-Änderungen in der gewünschten AEM as a Cloud Service Umgebung mit dem [Cloud Manager - Web-Tier-Konfigurations-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines) oder [RDE-Befehle](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration).
+   Die vhost-Dateien im Verzeichnis `dispatcher/src/conf.d/enabled_vhosts` sind **Symlinks** zu den Dateien im Verzeichnis `dispatcher/src/conf.d/available_vhosts`. Stellen Sie daher sicher, dass Sie Symlinks erstellen, falls diese nicht vorhanden sind.
+1. Stellen Sie die vhost-Änderungen in der gewünschten AEM as a Cloud Service-Umgebung bereit. Verwenden Sie dazu die [Web-Stufen-Konfigurations-Pipeline von Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=de#web-tier-config-pipelines) oder [RDE-Befehle](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=de#deploy-apache-or-dispatcher-configuration).
 
-Um jedoch unterschiedliche Werte für die Lebensdauer des Webbrowsers und des CDN-Cache zu haben, können Sie die `Surrogate-Control` -Kopfzeile im obigen Beispiel. Um den Cache an einem bestimmten Datum und zu einer bestimmten Uhrzeit zu ablaufen, können Sie auch die `Expires` -Kopfzeile. Verwenden Sie außerdem die `stale-while-revalidate` und `stale-if-error` -Attributen können Sie die veraltete Statusbehandlung des Antwortinhalts steuern. Das AEM WKND-Projekt verfügt über eine [Referenzstatusbehandlung](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L150-L155) CDN-Cache-Konfiguration.
+Wenn Sie jedoch unterschiedliche Werte für die Lebensdauer des Webbrowsers und des CDN-Caches haben möchten, können Sie den Header `Surrogate-Control` im oben genannten Beispiel verwenden. Soll der Cache an einem bestimmten Datum und zu einer bestimmten Uhrzeit ablaufen, können Sie auch den Header `Expires` verwenden. Außerdem können Sie mit den Attributen `stale-while-revalidate` und `stale-if-error` steuern, wie Antwortinhalt im Status „Veraltet“ gehandhabt wird. Das AEM-WKND-Projekt nutzt eine CDN-Cache-Konfiguration mit einer [Referenz für den Status „Veraltet“](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L150-L155).
 
-Ebenso können Sie die Cache-Header auch für andere Content-Typen (JSON, JS, CSS und Assets) aktualisieren.
+Entsprechend können Sie die Cache-Header auch für andere Inhaltstypen (JSON, JS, CSS und Assets) aktualisieren.
 
-### Benutzerspezifischer Java™-Code
+### Benutzerdefinierter Java™-Code
 
-Diese Option ist sowohl für die AEM als auch für die Autoreninstanz verfügbar. Es wird jedoch nicht empfohlen, die Zwischenspeicherung in AEM Author zu aktivieren und das standardmäßige Caching-Verhalten beizubehalten.
+Diese Option ist für AEM Publish und Author verfügbar. Es wird jedoch nicht empfohlen, das Caching in AEM Author zu aktivieren und das Caching-Standardverhalten beizubehalten.
 
-Um die Cache-Header zu aktualisieren, verwenden Sie die `HttpServletResponse` -Objekt in benutzerdefiniertem Java™-Code (Sling-Servlet, Sling-Servlet-Filter). Die allgemeine Syntax lautet wie folgt:
+Verwenden Sie zum Aktualisieren der Cache-Header das Objekt `HttpServletResponse` in benutzerdefiniertem Java™-Code (Sling-Servlet, Sling-Servlet-Filter). Die allgemeine Syntax lautet folgendermaßen:
 
 ```java
 // Instructs the web browser and CDN to cache the response for 'max-age' value (XXX) seconds. The 'stale-while-revalidate' and 'stale-if-error' attributes controls the stale state treatment at CDN layer.
