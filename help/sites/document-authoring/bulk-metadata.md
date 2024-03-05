@@ -13,9 +13,9 @@ thumbnail: 3425705.jpeg
 duration: 98
 exl-id: cada8642-b677-4b61-927b-f640b3e2a1ac
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '33'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -23,6 +23,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-Erfahren Sie, wie Massenmetadaten bei der Dokumenterstellung verarbeitet werden und wie Autoren Massenmetadaten ohne technisches Fachwissen aktualisieren können.
+Erfahren Sie, wie Massenmetadaten bei der Dokumenterstellung verarbeitet werden und wie Autorinnen und Autoren Massenmetadaten ohne technisches Fachwissen aktualisieren können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425705/?learn=on)
