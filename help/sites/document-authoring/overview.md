@@ -1,5 +1,5 @@
 ---
-title: Video zur Dokumenterstellung
+title: Videos zur Dokumenterstellung
 description: Erfahren Sie, wie Sie die Dokumenterstellung in AEM einrichten und konfigurieren.
 version: Cloud Service
 feature: Authoring
@@ -10,19 +10,19 @@ jira: KT-14609
 doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
-source-git-commit: e5e1b1b9313f5c7b031c6e4233052dee67c6bd7c
-workflow-type: tm+mt
+exl-id: 172a477f-d277-43c1-8e47-68870b02203c
+source-git-commit: 6672211ef4e03a3ae4c6c5494dda6a2b5053a647
+workflow-type: ht
 source-wordcount: '419'
-ht-degree: 20%
+ht-degree: 100%
 
 ---
 
+# Videos zur Dokumenterstellung
 
-# Video zur Dokumenterstellung
+Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM-Autorinnen und -Autoren Dokumente mit Microsoft Word oder Google Docs bearbeiten und veröffentlichen können.
 
-Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Dokumente mit Microsoft Word oder Google-Dokumenten bearbeiten und veröffentlichen können.
-
-Überprüfen Sie die [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=de) für die vollständigen Details zum Einrichten der Dokumenterstellung.
+In der [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=de) finden Sie die vollständigen Details zum Einrichten der Dokumenterstellung.
 
 ## Erste Schritte mit der Dokumenterstellung
 
@@ -37,7 +37,7 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3425699/?format=jpeg"
-                alt="Dokumentbearbeitung - Übersicht">
+                alt="Überblick über die Dokumenterstellung">
             </a>
           </figure>
         </div>
@@ -46,7 +46,7 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">5 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="set-up.md" title="Einrichten der Dokumentbearbeitung">Einrichten der Dokumenterstellung</a>
+              <a href="set-up.md" title="Einrichten der Dokumenterstellung">Einrichten der Dokumenterstellung</a>
             </p>
             <p class="is-size-6">Erfahren Sie, wie Sie die Dokumenterstellung einrichten.</p>
             <a href="set-up.md" class="spectrum-Button
@@ -65,11 +65,11 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="preview-and-publish.md" title="Vorschau erstellen und Inhalt veröffentlichen"
+            <a href="preview-and-publish.md" title="Vorschau und Veröffentlichung von Inhalten"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3425700/?format=jpeg"
-                alt="Vorschau erstellen und Inhalt veröffentlichen">
+                alt="Vorschau und Veröffentlichung von Inhalten">
             </a>
           </figure>
         </div>
@@ -78,9 +78,9 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">4 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="preview-and-publish.md" title="Vorschau erstellen und Inhalt veröffentlichen">Überblick über den Editor</a>
+              <a href="preview-and-publish.md" title="Vorschau und Veröffentlichung von Inhalten">Überblick über den Editor</a>
             </p>
-            <p class="is-size-6">Eine kurze Übersicht über die Vorschau und Veröffentlichung von Inhalten mithilfe der AEM Sidekick.</p>
+            <p class="is-size-6">Ein kurzer Überblick über das Anzeigen einer Vorschau und die Veröffentlichung von Inhalten mit AEM Sidekick.</p>
             <a href="preview-and-publish.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -107,11 +107,11 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1 Minute</p>
+              class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="document-structure.md" title="Dokumentstruktur">Dokumentstruktur</a>
             </p>
-            <p class="is-size-6">Erkunden Sie die Struktur von Dokumenten.</p>
+            <p class="is-size-6">Sehen Sie sich die Struktur von Dokumenten an.</p>
             <a href="document-structure.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -128,21 +128,21 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="default-content-and-sections.md" title="Standardinhalt und Abschnitte"
+            <a href="default-content-and-sections.md" title="Standardinhalte und -abschnitte"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425702/?format=jpeg" alt="Standardinhalt und Abschnitte">
+                src="https://video.tv.adobe.com/v/3425702/?format=jpeg" alt="Standardinhalte und -abschnitte">
             </a>
           </figure>
         </div>
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1 Minute</p>
+              class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="default-content-and-sections.md" title="Standardinhalt und Abschnitte">Umschalter für neuen Editor</a>
+              <a href="default-content-and-sections.md" title="Standardinhalte und -abschnitte">Umschalter zum neuen Editor</a>
             </p>
-            <p class="is-size-6">Erfahren Sie mehr über die Konzepte der Dokumenterstellung für Standardinhalte und Abschnitte.</p>
+            <p class="is-size-6">Erfahren Sie mehr über die Konzepte des Standardinhalts und der Standardabschnitte bei der Dokumenterstellung.</p>
             <a href="default-content-and-sections.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -159,22 +159,22 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="blocks-and-autoblocks.md" title="Blöcke und Autoblock" tabindex="-1">
+            <a href="blocks-and-autoblocks.md" title="Blöcke und automatische Blöcke" tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3425703/?format=jpeg"
-                alt="Blöcke und Autoblock">
+                alt="Blöcke und automatische Blöcke">
             </a>
           </figure>
         </div>
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1 Minute</p>
+              class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="blocks-and-autoblocks.md" title="Blöcke und Autoblöcke">
-                Blöcke und Autoblöcke</a>
+              <a href="blocks-and-autoblocks.md" title="Blöcke und automatische Blöcke">
+Blöcke und automatische Blöcke</a>
             </p>
-            <p class="is-size-6">Erfahren Sie mehr über die Konzepte bei der Dokumenterstellung von Bausteinen und Bausteinen.</p>
+            <p class="is-size-6">Erfahren Sie mehr über die Konzepte der Blöcke und automatischen Blöcke bei der Dokumenterstellung.</p>
             <a href="blocks-and-autoblocks.md"
               class="spectrum-Button spectrum-Button--outline
               spectrum-Button--primary spectrum-Button--sizeM">
@@ -201,7 +201,7 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1 Minute</p>
+              class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="redirects.md" title="Umleitungen">Erstellen von Umleitungen</a>
             </p>
@@ -233,7 +233,7 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1 Minute</p>
+              class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="bulk-metadata.md" title="Massenmetadaten">Sprachkopien</a>
 
@@ -270,7 +270,7 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="page-metadata.md" title="Seitenmetadaten">Seitenmetadaten</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie die Dokumentbearbeitung Seitenmetadaten verwaltet.</p>
+            <p class="is-size-6">Erfahren Sie, wie Seitenmetadaten bei der Dokumenterstellung verwaltet werden.</p>
             <a href="page-metadata.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -283,7 +283,7 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
     </div>
 </div>
 
-## Videos
+## Videoanleitungen
 
 <div class="columns is-multiline">
     <!-- Responsive Navigation -->
@@ -307,7 +307,7 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/responsive-navigation.md" title="Responsive Navigation">Responsive Navigation</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie die Dokumentbearbeitung responsive Navigation definieren kann.</p>
+            <p class="is-size-6">Erfahren Sie, wie die Dokumenterstellung die responsive Navigation definieren kann.</p>
             <a href="page-metadata.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -324,11 +324,11 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/document-audit.md" title="Dokumentenprüfung"
+            <a href="./how-to/document-audit.md" title="Dokumentprüfung"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3425722/?format=jpeg"
-                alt="Dokumentenprüfung">
+                alt="Dokumentprüfung">
             </a>
           </figure>
         </div>
@@ -337,9 +337,9 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/document-audit.md" title="Dokumentenprüfung">Dokumentenprüfung</a>
+              <a href="./how-to/document-audit.md" title="Dokumentprüfung">Dokumentprüfung</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie die Dokumentbearbeitung mit der Dokumentenprüfung umgeht.</p>
+            <p class="is-size-6">Erfahren Sie, wie bei der Dokumenterstellung mit der Dokumentprüfung verfahren wird.</p>
             <a href="page-metadata.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -371,7 +371,7 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/document-permissions.md" title="Dokumentberechtigungen">Dokumentberechtigungen </a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie die Dokumentbearbeitung mit Dokumentberechtigungen umgeht.</p>
+            <p class="is-size-6">Erfahren Sie, wie bei der Dokumenterstellung mit Dokumentberechtigungen umgegangen wird.</p>
             <a href="./how-to/document-permissions.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -403,7 +403,7 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/document-versions.md" title="Dokumentversionen">Dokumentversionen</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie die Dokumentbearbeitung mit Dokumentversionen umgeht.</p>
+            <p class="is-size-6">Erfahren Sie, wie bei der Dokumenterstellung mit Dokumentversionen umgegangen wird.</p>
             <a href="./how-to/document-versions.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -435,7 +435,7 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/document-workflows.md" title="Dokument-Workflows">Dokument-Workflows</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie die Dokumentbearbeitung mit Dokumenten-Workflows umgeht.</p>
+            <p class="is-size-6">Erfahren Sie, wie bei der Dokumenterstellung mit Dokument-Workflows umgegangen wird.</p>
             <a href="./how-to/document-workflows.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -467,7 +467,7 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/iframes.md" title="Verwenden von iFrames">Verwenden von iFrames</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie die Dokumenterstellung mit Videos und iFrames umgeht.</p>
+            <p class="is-size-6">Erfahren Sie, wie bei der Dokumenterstellung mit Videos und iFrames umgegangen wird.</p>
             <a href="./how-to/iframes.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -484,11 +484,11 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/image-alt-text.md" title="Verwenden von Alternativtext"
+            <a href="./how-to/image-alt-text.md" title="Verwenden von Alt-Text"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3425721/?format=jpeg"
-                alt="Verwenden von Alternativtext">
+                alt="Verwenden von Alt-Text">
             </a>
           </figure>
         </div>
@@ -497,9 +497,9 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/image-alt-text.md" title="Verwenden von Alternativtext">Erstellen von Alternativtext für Bilder</a>
+              <a href="./how-to/image-alt-text.md" title="Verwenden von Alt-Text">Erstellen von Alt-Text für Bilder</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie die Dokumentbearbeitung mit Alternativtext für Bilder umgeht.</p>
+            <p class="is-size-6">Erfahren Sie, wie bei der Dokumenterstellung mit Alt-Text für Bilder umgegangen wird.</p>
             <a href="./how-to/image-alt-text.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -516,11 +516,11 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/no-index.md" title="Indizierung verhindern"
+            <a href="./how-to/no-index.md" title="Verhindern der Indizierung"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3425726/?format=jpeg"
-                alt="Indizierung verhindern">
+                alt="Verhindern der Indizierung">
             </a>
           </figure>
         </div>
@@ -529,7 +529,7 @@ Erfahren Sie, wie Sie die Dokumenterstellung konfigurieren, damit AEM Autoren Do
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/no-index.md" title="Indizierung verhindern">Suchmaschinen-Indizierung verhindern</a>
+              <a href="./how-to/no-index.md" title="Verhindern der Indizierung">Verhindern der Indizierung durch Suchmaschinen</a>
             </p>
             <p class="is-size-6">Erfahren Sie, wie Sie die Indizierung durch Suchmaschinen verhindern können.</p>
             <a href="./how-to/no-index.md" class="spectrum-Button
