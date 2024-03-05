@@ -10,9 +10,9 @@ level: Beginner, Intermediate
 exl-id: e27cf3de-ef89-44d7-819b-157f85f5a80f
 duration: 50
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '209'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -34,7 +34,7 @@ Das Remote-Debugging von Java-Code, das im lokalen Schnellstart des AEM SDK ausg
 
 ## OSGi-Web-Konsolen
 
-Der lokale Schnellstart des AEM SDK verfügt über eine OSGi-Web-Konsole, die verschiedene Informationen und Einleitungen in die lokale AEM-Laufzeitumgebung bietet, die nützlich sind, um zu verstehen, wie Ihre Anwendung erkannt wird und in AEM funktioniert.
+Der lokale Schnellstart des AEM SDK verfügt über eine OSGi-Web-Konsole, die verschiedene Informationen und Einsichten in die lokale AEM-Laufzeitumgebung bietet. Damit können Sie verstehen, wie Ihre Anwendung von AEM erkannt wird und in AEM funktioniert.
 
 [Debugging des AEM SDK mithilfe der OSGi-Web-Konsole](./osgi-web-consoles.md)
 
