@@ -12,9 +12,9 @@ level: Beginner
 exl-id: 701fae92-f740-4eb6-8133-1bc45a472d0f
 duration: 242
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '853'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -78,7 +78,7 @@ Inhaltsfragmente werden in AEM Assets in Ordnern gespeichert. Um Inhaltsfragment
 
 >[!TIP]
 >
->Für lokale AEM SDK-Benutzer: Verwenden Sie die AEM Assets-Benutzeroberfläche zum Erstellen und Erstellen von Inhaltsfragmenten anstelle der unten beschriebenen Benutzeroberfläche für Inhaltsfragmente. Detaillierte Anweisungen finden Sie im Abschnitt [AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=de).
+>Für lokale AEM SDK-Benutzende: Verwenden Sie anstelle der unten beschriebenen Benutzeroberfläche für Inhaltsfragmente die AEM Assets-Benutzeroberfläche zum Erstellen und Verfassen von Inhaltsfragmenten. Detaillierte Anweisungen finden Sie in der [AEM-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=de).
 
 Anschließend werden mehrere Inhaltsfragmente auf der Grundlage der Modelle **Team** und **Person** erstellt.
 
@@ -152,7 +152,7 @@ Füllen Sie anschließend die neu erstellten Fragmente mit Daten.
 
 >[!TIP]
 >
->Für lokale AEM SDK-Benutzer: Verwenden Sie die AEM Assets-Benutzeroberfläche zum Veröffentlichen von Inhaltsfragmenten anstelle der unten beschriebenen Benutzeroberfläche für Inhaltsfragmente. Detaillierte Anweisungen finden Sie im Abschnitt [AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html#publishing-and-referencing-a-fragment).
+>Für lokale AEM SDK-Benutzende: Verwenden Sie anstelle der unten beschriebenen Benutzeroberfläche für Inhaltsfragmente die AEM Assets-Benutzeroberfläche zum Veröffentlichen von Inhaltsfragmenten. Detaillierte Anweisungen finden Sie in der [AEM-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=de#publishing-and-referencing-a-fragment).
 
 Nach Überprüfung und Verifizierung veröffentlichen Sie die verfassten `Content Fragments`
 
