@@ -10,24 +10,24 @@ exl-id: 36c38cb6-6f6a-4328-abf5-7a30059b66ce
 last-substantial-update: 2019-03-20T00:00:00Z
 duration: 81
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '331'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
 # Verwenden von Transaktionsberichten in AEM Forms{#using-transaction-reporting-in-aem-forms}
 
-Mit AEM Forms 6.4.1 wurden Transaktionsberichte eingeführt, um die Anzahl der Formularübermittlungen, die Darstellung von Dokumenten mithilfe von Document Services und die Darstellung interaktiver Kommunikation (Web- und Druckkanäle) zu erfassen. Diese Funktion ist derzeit nur für AEM Forms OSGI-Stack verfügbar.
+Mit AEM Forms 6.4.1 wurden Transaktionsberichte eingeführt, um die Anzahl der Formularübermittlungen, das Rendern von Dokumenten mithilfe von Dokumentendiensten und das Rendern interaktiver Kommunikation (Web- und Druckkanal) zu erfassen. Diese Funktion ist derzeit nur für den OSGi-Stapel von AEM Forms verfügbar.
 
 ## Aktivieren von Transaktionsberichten {#enabling-transaction-reporting}
 
 Standardmäßig ist das Aufzeichnen von Transaktionen deaktiviert. Gehen Sie wie folgt vor, um die Transaktionsaufzeichnung zu aktivieren:
 
-* [Öffnen Sie configMgr.](http://localhost:4502/system/console/configMgr)
-* Suchen Sie nach „Forms-Transaktionsberichte“.
+* [Öffnen Sie configMgr](http://localhost:4502/system/console/configMgr)
+* Suchen Sie nach „Forms-Transaktionsberichte“
 * Aktivieren Sie das Kontrollkästchen „Transaktionen aufzeichnen“
-* Speichern Sie Ihre Änderungen.
+* Speichern Sie Ihre Änderungen
 
 Sobald die Transaktionsberichterstellung aktiviert ist, können Sie adaptive Formulare senden, Dokumente mithilfe von Dokumentendiensten generieren oder Dokumente zur interaktiven Kommunikation rendern, um Transaktionsberichte in Aktion zu sehen.
 
@@ -37,7 +37,7 @@ Um den Transaktionsbericht anzuzeigen, melden Sie sich bei AEM Forms als Admin a
 
 Tools auswählen | Formulare | Transaktionsbericht anzeigen
 
-Oder Sie können den Transaktionsbericht durch einen Klick [hierauf](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html) anzeigen.
+Oder Sie können den Transaktionsbericht durch einen Klick [hierauf](http://localhost:4502/mnt/overlay/fd/transaction/gui/content/report.html) anzeigen
 
 ![Transaktionsbericht](assets/transactionreporting.gif)
 
