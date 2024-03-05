@@ -1,6 +1,6 @@
 ---
-title: Erstellen Sie ein benutzerdefiniertes Senden, um die auf Kernkomponenten basierende Formularübermittlung zu handhaben.
-description: Erstellen Sie eine benutzerdefinierte Übermittlung, um Formulardaten mit Anlagen in Azure zu speichern.
+title: Erstellen Sie eine benutzerdefinierte Übermittlung, um die Übermittlung von auf Kernkomponenten basierenden Formularen zu verarbeiten
+description: Erstellen Sie eine benutzerdefinierte Übermittlung, um die Formulardaten mit Anhängen in Azure zu speichern
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -9,15 +9,15 @@ version: 6.5
 topic: Integrations
 jira: KT-14794
 source-git-commit: 236d288c8b88948c5004ab777169768065df16f2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '187'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Erstellen Sie ein benutzerdefiniertes Senden, um die Formularübermittlung zu verarbeiten
+# Erstellen Sie eine benutzerdefinierte Übermittlung, um die Formularübermittlung zu handhaben
 
-Um den Anwendungsfall zu erfüllen, wurde ein benutzerdefinierter Sendedienst erstellt, um die gesendeten Daten und Anlagen in Azure zu speichern. Wenn ein auf Kernkomponenten basierendes Formular gesendet wird, haben die Daten folgendes Format:
+Um dem Anwendungsfall zu entsprechen, wurde ein benutzerdefinierter Übermittlungsdienst erstellt, um die übermittelten Daten und Anhänge in Azure zu speichern. Wenn ein auf Kernkomponenten basierendes Formular übermittelt wird, haben die Daten das folgende Format
 
 ```json
 {
@@ -38,9 +38,9 @@ Um den Anwendungsfall zu erfüllen, wurde ein benutzerdefinierter Sendedienst er
 }
 ```
 
-Das Element _**trackcopy**_ stellt eine Dateianlagenkomponente dar und wird zum Erfassen von Anlagen verwendet, die mit dem Formular gesendet werden.
-Um das adaptive Formular mit den Daten und seinen Anlagen vorab ausfüllen zu können, werden die gesendeten Anlagen im Azure-Portal gespeichert und das Datenelement des Vertragkopuobjekts in den gesendeten Daten wird mit der URL des gespeicherten Anhangs aktualisiert.
-Der benutzerdefinierte Sendedienst extrahiert und speichert die Anlagen in Azure Portal.  Die aktualisierten gesendeten Daten sehen wie folgt aus:
+Das Element _**Contractcopy**_ stellt eine Dateianhangskomponente dar und wird zum Erfassen der mit dem Formular übermittelten Anhänge verwendet.
+Um das adaptive Formular mit den Daten und seinen Anhängen vorab ausfüllen zu können, werden die übermittelten Anhänge im Azure-Portal gespeichert, und das Datenelement des Contractcopy-Objekts in den übermittelten Daten wird mit der URL des gespeicherten Anhangs aktualisiert.
+Der benutzerdefinierte Übermittlungsdienst extrahiert die Anhänge und speichert sie im Azure-Portal. Die aktualisierten übermittelten Daten sehen folgendermaßen aus
 
 
 ```json
@@ -64,7 +64,7 @@ Der benutzerdefinierte Sendedienst extrahiert und speichert die Anlagen in Azure
 ```
 
 
-[Den benutzerdefinierten Sende-Handler für auf Kernkomponenten basierende adaptive Formulare finden Sie hier .](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). Die folgende benutzerdefinierte Übermittlung wurde geschrieben, um die Formularübermittlung zu verarbeiten
+[Der beispielhafte benutzerdefinierte Übermittlungs-Handler für auf Kernkomponenten basierende adaptive Formulare ist hier verfügbar](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). Die folgende benutzerdefinierte Übermittlung wurde geschrieben, um die Formularübermittlung zu verarbeiten
 
 ```java
 package com.azuredemo.core;
@@ -168,7 +168,7 @@ public class StoreFormDataWithAttachments implements FormSubmitActionService {
 }
 ```
 
-## Speichern von Formularanlagen in Azure
+## Speichern von Formularanhängen in Azure
 
 ```java
 @Override
@@ -256,4 +256,4 @@ public String saveFormAttachmentinAzure(InputStream attachmentStream, String fil
 
 ## Nächste Schritte
 
-[OSGi-Konfiguration schreiben](./create-osgi-configuration.md)
+[Schreiben der OSGi-Konfiguration](./create-osgi-configuration.md)
