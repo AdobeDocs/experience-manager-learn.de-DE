@@ -1,6 +1,6 @@
 ---
 title: Bereitschaft und Best Practice Analyzer
-description: Erfahren Sie, wie der Best Practice Analyzer bei der Vorbereitung Ihrer Anwendung helfen kann, um sie in den Experience Manager-as a Cloud Service zu verschieben.
+description: Erfahren Sie, wie der Best Practice Analyzer bei der Vorbereitung Ihrer Anwendung helfen kann, um sie in Experience Manager as a Cloud Service zu verschieben
 version: Cloud Service
 feature: Migration
 topic: Migration, Upgrade
@@ -11,9 +11,9 @@ thumbnail: 336690.jpeg
 exl-id: b8905917-c385-4a79-99df-9a0fad98dc87
 duration: 234
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '57'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
