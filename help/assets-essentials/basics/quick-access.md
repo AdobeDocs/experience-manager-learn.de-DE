@@ -1,6 +1,6 @@
 ---
 title: Schnellzugriff
-description: Erfahren Sie, wie Quick Access Ihre Produktivität steigern und Ihren Workflow optimieren kann, indem es als persönliche Linse in AEM Assets fungiert und alle für Ihre Aufgaben benötigten Assets zur Hand hält.
+description: Erfahren Sie, wie der Schnellzugriff Ihre Produktivität steigern und Ihren Workflow optimieren kann, indem er als Ihr persönliches Objektiv in AEM Assets fungiert und alle für Ihre Aufgaben benötigten Assets zur Hand hält.
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -13,9 +13,9 @@ doc-type: Feature Video
 exl-id: 0f62da34-b6d7-42ac-a6f6-08a50483fb25
 duration: 203
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '75'
-ht-degree: 54%
+ht-degree: 100%
 
 ---
 
