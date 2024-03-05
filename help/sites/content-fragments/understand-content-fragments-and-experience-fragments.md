@@ -11,9 +11,9 @@ doc-type: Article
 exl-id: ccbc68d1-a83e-4092-9a49-53c56c14483e
 duration: 231
 source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '829'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -36,7 +36,7 @@ Inhaltsfragmente und Experience Fragments von Adobe Experience Manager scheinen 
 <li>Ein wiederverwendbarer Verbund aus einer oder mehreren AEM-Komponenten, der den Inhalt und die Präsentation definiert und so ein eigenständiges, sinnvolles <strong>Erlebnis</strong> schafft</li>
 </ul>
 </td>
-</tr><tr><td><strong>Core-Tenets</strong></td>
+</tr><tr><td><strong>Kerngrundsätze</strong></td>
 <td><ul>
 <li>Inhaltsorientiert</li>
 <li>Definiert durch ein <a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments-models.html?lang=de" target="_blank">strukturiertes, formularbasiertes Datenmodell</a></li>
@@ -143,7 +143,7 @@ Inhaltsfragmente und Experience Fragments von Adobe Experience Manager scheinen 
 
 ## Architektur von Inhaltsfragmenten
 
-Das folgende Diagramm zeigt die allgemeine Architektur für AEM-Inhaltsfragmente.
+Das folgende Diagramm zeigt die allgemeine Architektur für AEM-Inhaltsfragmente
 
 ![Architektur von Inhaltsfragmenten](./assets/content-fragments-architecture.png)
 
