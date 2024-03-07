@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
+source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
 workflow-type: tm+mt
-source-wordcount: '2032'
+source-wordcount: '2034'
 ht-degree: 97%
 
 ---
@@ -131,11 +131,11 @@ ht-degree: 97%
    + [2 – ZIP-Formularanhänge](zipping-form-attachments/custom-process-step.md)
    + [3 – E-Mail-Formularanhänge](zipping-form-attachments/populating-list-of-documents.md)
    + [4 – Testen der Lösung](zipping-form-attachments/test.md)
-+ Formulare mit Daten und Anlagen vorab erstellen{#prefill-form-with-data-attachments}
++ Vorausfüllen von Formularen mit Daten und Anhängen{#prefill-form-with-data-attachments}
    + [1 – Einführung](prefill-form-with-data-attachments/introduction.md)
-   + [2 - Benutzerdefiniertes Senden erstellen](prefill-form-with-data-attachments/create-custom-submit.md)
-   + [3 - Erstellen einer OSGi-Konfiguration](prefill-form-with-data-attachments/create-osgi-configuration.md)
-   + [4 - Vorbefüllungs-Dienst erstellen](prefill-form-with-data-attachments/create-prefill-service.md)
+   + [2 – Erstellen einer benutzerdefinierten Übermittlung](prefill-form-with-data-attachments/create-custom-submit.md)
+   + [3 – Erstellen einer OSGi-Konfiguration](prefill-form-with-data-attachments/create-osgi-configuration.md)
+   + [4 – Erstellen eines Vorbefüllungsdienstes](prefill-form-with-data-attachments/create-prefill-service.md)
 + Speichern und Abrufen adaptiver Formulare{#store-and-retrieve-af-with-2fa}
    + [1 – Einführung](store-and-retrieve-af-with-2fa/introduction.md)
    + [2 – Konfigurieren einer Datenquelle](store-and-retrieve-af-with-2fa/configure-data-source.md)
@@ -210,7 +210,7 @@ ht-degree: 97%
    + [Einführung](storing-retrieving-form-data/introduction.md)
    + [Konfigurieren einer Datenquelle](storing-retrieving-form-data/part1.md)
    + [Dienst zum Speichern von Daten](storing-retrieving-form-data/part3.md)
-   + [Erstellen von Servlet](storing-retrieving-form-data/part2.md)
+   + [Erstellen eines Servlets](storing-retrieving-form-data/part2.md)
    + [Client-Bibliothek](storing-retrieving-form-data/part4.md)
    + [Adaptive Formularvorlage](storing-retrieving-form-data/part5.md)
    + [Bereitstellen von Beispiel-Assets](storing-retrieving-form-data/part6.md)
@@ -220,12 +220,13 @@ ht-degree: 97%
    + [Handhabung von PDF-Übermittlung](offline-mobile-form-submission/part-two.md)
    + [Workflow zur Überprüfung des PDFs](offline-mobile-form-submission/part-three.md)
    + [Bereitstellung auf Ihrem System](offline-mobile-form-submission/part-four.md)
-+ Abfrage gesendeter Daten{#querying-submitted-data}
-   + [Einführung](querying-submitted-data/introduction.md)
-   + [Erstellen eines Formulars basierend auf einem JSON-Schema](querying-submitted-data/part1.md)
-   + [Speichern der gesendeten Daten](querying-submitted-data/part2.md)
-   + [Speichern des JSON-Schemas](querying-submitted-data/part3.md)
-   + [Abfrage der übermittelten Daten](querying-submitted-data/part4.md)
++ Abfrage von Formularübermittlungen{#query-form-submissions}
+   + [Einführung](query-form-submissions/introduction.md)
+   + [Erstellen durchsuchbarer Felder](query-form-submissions/part1.md)
+   + [Erstellen einer benutzerdefinierten Übermittlung](query-form-submissions/part2.md)
+   + [Erstellen der Abfrageschnittstelle](query-form-submissions/part3.md)
+   + [Schreiben eines Vorbefüllungsdienstes](query-form-submissions/part4.md)
+   + [Bereitstellen des Beispiels](query-form-submissions/part5.md)
 + Auflisten benutzerdefinierter Asset-Typen im Formularportal{#listing-custom-asset-types}
    + [Teil 1: Registrieren von benutzerdefinierten Asset-Typen](listing-custom-asset-types/part1.md)
    + [Teil 2: Erstellen einer benutzerdefinierten Vorlage](listing-custom-asset-types/part2.md)
@@ -286,7 +287,9 @@ ht-degree: 97%
    + [Zusammenführen von Formularanlagen](document-services/assemble-form-attachments.md)
    + [Nützliche Dienstprogrammdienste](document-services/useful-utility-services.md)
 + Forms Designer{#forms-designer}
+   + [Designansicht](forms-designer/design-view.md)
    + [Erstellen des ersten Formulars](forms-designer/create-simple-form.md)
+   + [Erstellen einer Formularvorlage](forms-designer/creating-form-template.md)
    + [Skripten für Formulare](forms-designer/first-script-designer.md)
    + [XML-Datenbindung](forms-designer/xml-data-binding.md)
    + [Datenbankbindung](forms-designer/binding-to-mysql-db.md)
