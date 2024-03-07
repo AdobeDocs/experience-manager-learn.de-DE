@@ -7,10 +7,10 @@ version: 6.5
 badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 156
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '218'
-ht-degree: 100%
+source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
+workflow-type: tm+mt
+source-wordcount: '216'
+ht-degree: 96%
 
 ---
 
@@ -28,7 +28,7 @@ Acroforms sind mit Acrobat erstellte Formulare. Sie können mit Acrobat ein neue
 
 >[!NOTE]
 >
->Wenn Sie das ausfüllbare Acroform zum Signieren mit Acrobat Sign senden möchten, benennen Sie die Felder entsprechend. Sie können beispielsweise ein Feld **Sig_es_:signer1:signature** nennen. Dies ist die Syntax, die Acrobat Sign versteht.
+>Wenn Sie das ausfüllbare Acroform zum Signieren mit Acrobat Sign senden möchten, benennen Sie die Felder entsprechend. Sie können beispielsweise ein Feld **`Sig_es_:signer1:signature`**. Dies ist die Syntax, die Acrobat Sign versteht.
 
 >[!NOTE]
 >
