@@ -5,9 +5,9 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
-source-git-commit: 958dc50dfef808470139a2cab214c6cfeb98ff55
+source-git-commit: 2be59ef6c6e42854a614722ced9b40988d9d4881
 workflow-type: tm+mt
-source-wordcount: '298'
+source-wordcount: '306'
 ht-degree: 16%
 
 ---
@@ -88,16 +88,16 @@ Jede Staffel variiert in ihrer Länge und wird nach einem festen Zeitplan veröf
         </td>  
         <td>
             <a href="./season-3/cloud5-query-indexes.md">
-                <img alt="Abfrageindizes und Excel-Formeln" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
+                <img alt="Abfrageindizes und Excel-Formeln in Edge Delivery Services" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-query-indexes.md">
-                <strong>Abfrageindizes und Excel-Formeln</strong></a>        
+                <strong>Abfrageindizes und Excel-Formeln </strong></a>        
                 <br/><em>mit James Talbot &amp; Varun Mitra, AEM Engineering</em>
             </div>
             <p>
                 <br/>
-                Erfahren Sie mehr über Abfrageindizes und wie Sie Excel-Formeln zum Bearbeiten und Sortieren von Datensätzen schreiben.
+                Erfahren Sie mehr über Abfrageindizes und wie Sie Excel-Formeln zum Bearbeiten und Sortieren von Datensätzen in Edge Delivery Services schreiben.
             </p>
         </td>   
     </tr>  
