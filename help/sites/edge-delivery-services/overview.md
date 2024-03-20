@@ -6,23 +6,25 @@ feature: Edge Delivery Services
 topic: Development
 role: Developer
 level: Beginner
-jira: KT-14643
+jira: KT-14643, KT-15202
 doc-type: Catalog
-duration: 30
-last-substantial-update: 2023-05-12T00:00:00Z
+duration: 660
+last-substantial-update: 2024-03-20T00:00:00Z
 exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
-source-git-commit: f5f80a898420445335ed34f20aac6579199cc817
-workflow-type: ht
-source-wordcount: '329'
-ht-degree: 100%
+source-git-commit: 9f8b20842cf69439f2d46deecf61154b20881ee0
+workflow-type: tm+mt
+source-wordcount: '331'
+ht-degree: 92%
 
 ---
 
 # Videos zu Edge Delivery Services
 
-Erfahren Sie, wie Sie mit Edge Delivery schnell Websites erstellen
+Erfahren Sie, wie Sie mit Edge Delivery Services Websites schnell erstellen können.
 
-Umfassende Details zu Edge Delivery und dessen Funktionen finden Sie in der [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=de).
+>[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
+
+Überprüfen Sie die [Dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) für vollständige Informationen zu Edge Delivery Services und deren Funktionen.
 
 ## Erste Schritte mit Edge Delivery Services
 
