@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 7c80bb25b79a77c4a0bb2bbedf8a7c338177b857
+source-git-commit: 9c757ef00776c09a8892f477baad24c58401f4dc
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 94%
+source-wordcount: '1163'
+ht-degree: 98%
 
 ---
 
@@ -61,8 +61,8 @@ ht-degree: 94%
 + Entwickeln{#developing}
    + Erweiterbarkeit{#extensibility}
       + App Builder{#app-builder}
-         + [JWT-Zugriffstoken generieren](./developing/extensibility/app-builder/jwt-auth.md)
-         + [Zugriffstoken von Server zu Server generieren](./developing/extensibility/app-builder/server-to-server-auth.md)
+         + [Generieren von JWT-Zugriffs-Token](./developing/extensibility/app-builder/jwt-auth.md)
+         + [Generieren von Server-zu-Server-Zugriffs-Token](./developing/extensibility/app-builder/server-to-server-auth.md)
       + Erweiterbarkeit der Benutzeroberfläche{#ui}
          + [Übersicht](./developing/extensibility/ui/overview.md)
          + [Adobe Developer Console-Projekt](./developing/extensibility/ui/adobe-developer-console-project.md)
@@ -107,7 +107,6 @@ ht-degree: 94%
       + [Benutzerdefinierte Namespaces](./developing/advanced/custom-namespaces.md)
       + [Service-Benutzende](./developing/advanced/service-users.md)
       + [Web-optimierte Bild-APIs](./developing/advanced/web-optimized-image-delivery-java-apis.md)
-      + [Echtzeit-Benutzerüberwachung](./developing/advanced/real-user-monitoring.md)
    + Schnelle Entwicklungsumgebung{#rde}
       + [Übersicht](./developing/rde/overview.md)
       + [Einrichtung](./developing/rde/how-to-setup.md)
@@ -172,9 +171,9 @@ ht-degree: 94%
    + Beispiele{#examples}
       + [Webhook – Empfangen von AEM-Ereignissen](./eventing/examples/webhook.md)
       + [Journaling – Laden von AEM-Ereignissen](./eventing/examples/journaling.md)
-      + [Adobe I/O Runtime-Aktion - AEM empfangen](./eventing/examples/runtime-action.md)
-      + [Adobe I/O Runtime-Aktion - Verarbeiten AEM Ereignisse](./eventing/examples/event-processing-using-runtime-action.md)
-      + [AEM Assets Events - PIM-Integration](./eventing/examples/assets-pim-integration.md)
+      + [Adobe I/O Runtime-Aktion – Empfangen von AEM-Ereignissen](./eventing/examples/runtime-action.md)
+      + [Adobe I/O Runtime-Aktion – Verarbeiten von AEM-Ereignissen](./eventing/examples/event-processing-using-runtime-action.md)
+      + [AEM Assets-Ereignisse – PIM-Integration](./eventing/examples/assets-pim-integration.md)
 + Migration {#migration}
    + [Content Transfer Tool](./migration/content-transfer-tool.md)
    + [Massenimport von Assets](./migration/bulk-import.md)
@@ -388,8 +387,8 @@ ht-degree: 94%
          + [Cloud Manager – Modultests](./expert-resources/cloud-5/season-2/cloud5-mocm-unit-tests.md)
          + [Cloud Manager – Funktionstests](./expert-resources/cloud-5/season-2/cloud5-mocm-functional-tests.md)
       + Staffel 3{#season-3}
-         + [Drittanbietersuche](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
+         + [Suche von Drittanbietern](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
          + [Real User Monitoring (RUM)](./expert-resources/cloud-5/season-3/cloud5-rum.md)
-         + [Edge-Arbeitskräfte](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
+         + [Edge-Sekundäre](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
          + [Veröffentlichen von Ereignissen und Rückgängigmachen der Veröffentlichung in Edge Delivery Services](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
          + [Abfrageindizes und Excel-Formeln](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
