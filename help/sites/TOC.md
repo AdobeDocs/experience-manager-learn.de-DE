@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: f5f80a898420445335ed34f20aac6579199cc817
-workflow-type: ht
-source-wordcount: '496'
-ht-degree: 100%
+source-git-commit: 29f1cc8d891c57e9878c650fd8e02a32bfa73051
+workflow-type: tm+mt
+source-wordcount: '500'
+ht-degree: 99%
 
 ---
 
@@ -56,6 +56,8 @@ ht-degree: 100%
    + [Launches](page-authoring/launches.md)
    + Lernen Sie von Ihren Kolleginnen und Kollegen {#expert-advice}
       + [Tipps zur Site-Hierarchie](page-authoring/expert-advice/site-hierarchy.md)
++ Generative KI {#generative-ai}
+   + [Generieren von Varianten](./generative-ai/generate-variations.md)
 + Inhaltsfragmente {#content-fragments}
    + [Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=de){target=_blank}
    + [Bearbeiten von Inhaltsfragmenten](content-fragments/content-fragments-feature-video-use.md)
