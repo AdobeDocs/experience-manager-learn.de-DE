@@ -1,6 +1,6 @@
 ---
 title: Hinzufügen eines digitalen Signaturfelds zu einem Formular
-description: Kurzvideo, in dem das Hinzufügen digitaler Signaturen zu einem AEM beschrieben wird
+description: Kurzvideo über das Hinzufügen digitaler Signaturen zu einem AEM-Formular
 version: 6.5
 feature: Designer,Forms Designer
 topic: Development
@@ -11,16 +11,16 @@ duration: 112
 last-substantial-update: 2024-02-29T00:00:00Z
 jira: KT-15056
 thumbnail: 3427623.jpeg
-source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
-workflow-type: tm+mt
+exl-id: 9110589e-a325-479f-b89b-a13e6bdde91d
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '36'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# AEM Forms Shorts – Erstellen einer einfachen digitalen Signatur in einem Formular
 
-# AEM Forms Shorts Erstellen eines einfachen Formular-Digg-Sigings
-
-Kurzvideo über das Hinzufügen digitaler Signaturen zu AEM Forms
+Kurzvideo über das Hinzufügen digitaler Signaturen zu AEM-Formularen
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427623/?learn=on)

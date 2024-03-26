@@ -13,21 +13,21 @@ last-substantial-update: 2024-01-16T00:00:00Z
 exl-id: 28644af8-babc-467d-afdb-8538728dc176
 duration: 725
 source-git-commit: 0400242f6a99bc5209a8b483469d5fd88eac077e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '175'
-ht-degree: 40%
+ht-degree: 100%
 
 ---
 
 # Verwenden des Massenimports
 
-Mit dem Tool für den Massenimport in AEM as a Cloud Service können Administratoren Assets aus dem Cloud-Speicher auf sichere und effiziente Weise stapelweise importieren.
+Mit dem Tool für den Massenimport in AEM as a Cloud Service können Admins Assets sicher und effizient aus dem Cloud-Speicher importieren.
 
 >[!BEGINTABS]
 
->[!TAB Asset-Ansicht]
+>[!TAB Assets-Ansicht]
 
-Erfahren Sie, wie Sie mit dem [Asset-Ansicht](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html) [Massenimport](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html), wobei Dropbox als Beispiel-Cloud-Speicher-Provider für einen klaren und einfach zu befolgenden Integrationsprozess dient.
+Erfahren Sie, wie Sie zahlreiche Dateien in der [Asset-Ansicht](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html?lang=de) per [Massenimport](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html?lang=de) in AEM Assets importieren: Dabei dient uns Dropbox als beispielhafter Cloud-Speicheranbieter für einen klaren und leicht verständlichen Integrationsprozess.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
 
@@ -37,7 +37,7 @@ Erfahren Sie, wie Sie mit dem [Asset-Ansicht](https://experienceleague.adobe.com
 
 >[!TIP]
 >
-> Die Eingabequellen in diesem Video zeigen nur Azure Blob Storage und Amazon S3, aber die verfügbaren Quellen wachsen mit der Zeit weiter. Eine vollständige Liste der unterstützten Eingabequellen finden Sie in den verfügbaren Optionen des Produkts oder [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
+> Die Eingabequellen in diesem Video zeigen nur Azure Blob Storage und Amazon S3, aber die verfügbaren Quellen werden mit der Zeit mehr. Eine vollständige Liste der unterstützten Eingabequellen finden Sie in den verfügbaren Optionen im Produkt oder in der [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=de#bulk-upload).
 
 ## Planen eines Massenimports
 

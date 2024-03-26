@@ -1,6 +1,6 @@
 ---
-title: Designansicht von AEM Forms
-description: Kurzvideo zur Designansicht
+title: Design-Ansicht von AEM Forms
+description: Kurzvideo zur Design-Ansicht
 version: 6.5
 feature: Forms Designer,Designer
 topic: Development
@@ -11,16 +11,16 @@ duration: 53
 last-substantial-update: 2024-03-07T00:00:00Z
 jira: KT-15052
 thumbnail: 3427615.jpeg
-source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
-workflow-type: tm+mt
+exl-id: 12376f66-4f0d-419a-89d4-be59ebc51939
+source-git-commit: ff4f214758c9c5055215e75ee39d78203cf5cbaf
+workflow-type: ht
 source-wordcount: '24'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Design-Ansicht in AEM Forms Designer
 
-# Designansicht in AEM Forms Designer
-
-Kurzvideo zur Designeransicht in AEM Forms Designer
+Kurzvideo zur Designer-Ansicht in AEM Forms Designer
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427615/?learn=on)

@@ -1,6 +1,6 @@
 ---
-title: Abfrage zur Formularübermittlung
-description: Mehrteiliges Tutorial, um Sie durch die Schritte zu führen, die für die Abfrage von Formularübermittlungen im Azure Portal erforderlich sind
+title: Abfragen einer Formularübermittlung
+description: Ein mehrteiliges Tutorial, das Sie durch die Schritte führt, die beim Abfragen von im Azure-Portal gespeicherten Formularübermittlungen erforderlich sind.
 feature: Adaptive Forms
 doc-type: Tutorial
 version: 6.5
@@ -9,43 +9,40 @@ role: Developer
 level: Experienced
 jira: KT-14884
 last-substantial-update: 2024-03-03T00:00:00Z
-source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
-workflow-type: tm+mt
+exl-id: 08c97626-73a9-43d2-955c-b97fbb5f2e9a
+source-git-commit: ff4f214758c9c5055215e75ee39d78203cf5cbaf
+workflow-type: ht
 source-wordcount: '163'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 # Überblick über den Anwendungsfall
 
-Im folgenden Video wird der Anwendungsfall beschrieben
+Das folgende Video beschreibt den Anwendungsfall.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427096?learn=on)
 
 
-Um diesem Tutorial zu folgen, sollten Sie Zugriff auf Folgendes haben
+Um diesem Tutorial zu folgen, wird empfohlen, dass Sie auf Folgendes Zugriff haben:
 
-* AEM 6.5.20 oder höher mit dem entsprechenden Formular-Zusatzmodulpaket
+* AEM 6.5.20 oder höher mit dem entsprechenden Forms-Add-on-Paket
 
-* Zugriff auf den Azure Portal-Speicher
+* Zugriff auf den Azure-Portalspeicher
 
 
 
-Wenn Sie Entwickler sind und den Code und andere Details dieser Anwendungsfallimplementierung verstehen möchten, importieren Sie diese [AEM Projekt in VSCode oder IntelliJ.](assets/azuredemoproject.zip)
+Wenn Sie Entwicklerin oder Entwickler sind und den Code und andere Details dieser Anwendungsfallimplementierung verstehen möchten, importieren Sie dieses [AEM-Projekt in VSCode oder IntelliJ.](assets/azuredemoproject.zip)
 
-Wenn Sie dieses Beispiel nur auf Ihrem lokalen System verwenden möchten, führen Sie die genannten Schritte aus [Teil 5 dieses Tutorials](./part5.md)
+Wenn Sie dieses Beispiel nur auf Ihrem lokalen System verwenden möchten, führen Sie die in [Teil 5 dieses Tutorials](./part5.md) genannten Schritte aus.
 
-Die folgenden Schritte waren an der Erstellung der Lösung beteiligt
+Die folgenden Schritte waren an der Erstellung der Lösung beteiligt:
 
-* Erlauben Sie den Formularautoren, bestimmte Formularfelder als durchsuchbar zu markieren.
-* Speichern Sie Formulardaten und Anhänge im Azure-Portal.
-* Erstellen Sie ein einfaches Formular, um Formularübermittlungen abzufragen.
-* Füllen Sie das abgefragte Formular mit den gesendeten Daten und Anlagen vorab aus.
+* Zulassen, dass bestimmte Felder von den Formularautorinnen und -autoren als „durchsuchbar“ markiert werden.
+* Speichern von Daten und Anhängen im Azure-Portal.
+* Erstellen eines einfachen Formulars zum Abfragen von Formularübermittlungen.
+* Vorausfüllen des abgefragten Formulars mit den übermittelten Daten und Anhängen.
 
 ## Nächste Schritte
 
-[Felder durchsuchen](./part1.md)
-
-
-
-
+[Durchsuchbarmachen von Feldern](./part1.md)

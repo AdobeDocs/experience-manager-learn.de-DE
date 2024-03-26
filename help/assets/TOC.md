@@ -8,9 +8,9 @@ version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
 source-git-commit: 7680564ef0058a362ebf47622e50f96eec2866d7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '412'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -39,7 +39,7 @@ ht-degree: 96%
    + [Bezug herstellen und aufheben](./authoring/relate-unrelate.md)
 
 + Zusammenarbeit{#collaboration}
-   + [Beobachten](./collaboration/watch.md)
+   + [Ansehen](./collaboration/watch.md)
    + [Timeline und Posteingang](./collaboration/timeline-and-inbox.md)
    + [Kommentare und Anmerkungen](./collaboration/comments-and-annotations.md)
    + [Ein- und Auschecken](./collaboration/check-in-and-check-out.md)
@@ -50,7 +50,7 @@ ht-degree: 96%
    + [Suchen](./search-and-discovery/search.md)
    + [Sammlungen](./search-and-discovery/collections.md)
    + [Suchoptimierung](./search-and-discovery/search-boost.md)
-   + [Ähnliche Bilder suchen](./search-and-discovery/find-similar-images.md)
+   + [Nach ähnlichen Bildern suchen](./search-and-discovery/find-similar-images.md)
 
 + Erweiterte Funktionen{#advanced}
    + [3D-Assets](./advanced/3d-assets.md)
@@ -91,7 +91,7 @@ ht-degree: 96%
 
 + Kreative Workflows{#creative-workflows}
    + [Adobe Express](./creative-workflows/adobe-express.md)
-   + [Adobe Expreß AEM Assets-Add-on](./creative-workflows/adobe-express-aem-assets-add-on.md)
+   + [Adobe Express AEM Assets-Add-on](./creative-workflows/adobe-express-aem-assets-add-on.md)
    + [AEM Desktop App](./creative-workflows/aem-desktop-app.md)
    + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)

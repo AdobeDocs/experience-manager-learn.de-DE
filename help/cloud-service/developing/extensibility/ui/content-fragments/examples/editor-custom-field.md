@@ -1,6 +1,6 @@
 ---
-title: Inhaltsfragmentkonsole - Benutzerdefinierte Felder
-description: Erfahren Sie, wie Sie ein benutzerdefiniertes Feld im Inhaltsfragment-Editor AEM.
+title: Inhaltsfragmentkonsole – Benutzerdefinierte Felder
+description: Erfahren Sie, wie Sie im AEM-Inhaltsfragmenteditor ein benutzerdefiniertes Feld erstellen.
 feature: Developer Tools, Content Fragments
 version: Cloud Service
 role: Developer
@@ -10,48 +10,48 @@ duration: 0
 last-substantial-update: 2024-02-27T00:00:00Z
 jira: KT-14903
 thumbnail: KT-14903.jpeg
-source-git-commit: bb902089a709ab00853f4856d9bf42c18a5097e7
-workflow-type: tm+mt
+exl-id: 563bab0e-21e3-487c-9bf3-de15c3a81aba
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '473'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-
 # Benutzerdefinierte Felder
 
-Erfahren Sie, wie Sie benutzerdefinierte Felder im Inhaltsfragment-Editor AEM erstellen.
+Erfahren Sie, wie Sie im AEM-Inhaltsfragmenteditor benutzerdefinierte Felder erstellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
 
-AEM Erweiterungen der Benutzeroberfläche sollten mithilfe der [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html?lang=de) Framework, da dies ein konsistentes Erscheinungsbild mit dem Rest der AEM beibehält und außerdem über eine umfangreiche Bibliothek vordefinierter Funktionen verfügt, die die Entwicklungszeit verkürzen.
+AEM-Erweiterungen der Benutzeroberfläche sollten mithilfe des [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html?lang=de)-Frameworks entwickelt werden, da dies ein konsistentes Look-and-Feel mit dem Rest von AEM beibehält. Es verfügt außerdem über eine umfangreiche Bibliothek vordefinierter Funktionen, was die Entwicklungszeit verkürzt.
 
 ## Erweiterungspunkt
 
-Dieses Beispiel ersetzt ein vorhandenes Feld im Inhaltsfragment-Editor durch eine benutzerdefinierte Implementierung.
+Dieses Beispiel ersetzt ein vorhandenes Feld im Inhaltsfragmenteditor durch eine benutzerdefinierte Implementierung.
 
 | Erweiterte AEM-Benutzeroberfläche | Erweiterungspunkt |
 | ------------------------ | --------------------- | 
-| [Inhaltsfragmenteditor](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Benutzerdefiniertes Formular-Element-Rendering](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/) |
+| [Inhaltsfragmenteditor](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Rendern eines benutzerdefinierten Formularelements](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/) |
 
-## Beispielhafte Erweiterung
+## Beispiel einer Erweiterung
 
-In diesem Beispiel wird gezeigt, wie Feldwerte im Inhaltsfragment-Editor auf einen vordefinierten Satz beschränkt werden, indem das Standardfeld durch eine benutzerdefinierte Dropdown-Liste vordefinierter SKUs ersetzt wird. Autoren können aus dieser spezifischen SKU-Liste auswählen. Während SKUs in der Regel von einem PIM-System (Product Information Management) stammen, vereinfacht dieses Beispiel die statische Auflistung der SKUs.
+In diesem Beispiel wird gezeigt, wie Feldwerte im Inhaltsfragmenteditor auf einen vordefinierten Satz beschränkt werden, indem das Standardfeld durch eine benutzerdefinierte Dropdown-Liste vordefinierter SKUs ersetzt wird. Autorinnen und Autoren können aus dieser spezifischen SKU-Liste auswählen. Während SKUs in der Regel von einem PIM-System (Product Information Management) stammen, vereinfacht dieses Beispiel die statische Auflistung der SKUs.
 
-Der Quellcode für dieses Beispiel lautet [herunterladen](./assets/editor-custom-field/content-fragment-editor-custom-field-src.zip).
+Der Quell-Code für dieses Beispiel steht [zum Herunterladen zur Verfügung](./assets/editor-custom-field/content-fragment-editor-custom-field-src.zip).
 
-### Definition des Inhaltsfragmentmodells
+### Definition eines Inhaltsfragmentmodells
 
-Dieses Beispiel wird an jedes Inhaltsfragmentfeld gebunden, dessen Name `sku` (über eine [reguläre Ausdrucksübereinstimmung](#extension-registration) von `^sku$`) und ersetzt sie durch ein benutzerdefiniertes Feld. Im Beispiel wird das WKND Adventure Content Fragment-Modell verwendet, das aktualisiert wurde. Die Definition lautet wie folgt:
+Dieses Beispiel wird an jedes Inhaltsfragmentfeld gebunden, dessen Name `sku` ist (über eine [Übereinstimmung eines regulären Ausdrucks](#extension-registration) von `^sku$`) und ersetzt es durch ein benutzerdefiniertes Feld. Im Beispiel wird das WKND Adventure-Inhaltsfragmentmodell verwendet, das aktualisiert wurde. Die Definition lautet wie folgt:
 
-![Definition des Inhaltsfragmentmodells](./assets/editor-custom-field/content-fragment-editor.png)
+![Definition eines Inhaltsfragmentmodells](./assets/editor-custom-field/content-fragment-editor.png)
 
-Obwohl das benutzerdefinierte SKU-Feld als Dropdown-Liste angezeigt wird, wird das zugrunde liegende Modell als Textfeld konfiguriert. Die Implementierung benutzerdefinierter Felder muss nur mit dem entsprechenden Eigenschaftsnamen und -typ übereinstimmen, was die Ersetzung des Standardfelds durch die benutzerdefinierte Dropdown-Version erleichtert.
+Obwohl das benutzerdefinierte SKU-Feld als Dropdown-Liste angezeigt wird, wird das zugrunde liegende Modell als Textfeld konfiguriert. Die Implementierung benutzerdefinierter Felder muss nur mit dem entsprechenden Eigenschaftsnamen und -typ übereinstimmen, was das Ersetzen des Standardfelds durch die benutzerdefinierte Dropdown-Version erleichtert.
 
 
 ### App-Routen
 
-In der Haupt-React-Komponente `App.js`, schließen Sie die `/sku-field` Route zum Rendern der `SkuField` React-Komponente
+Fügen Sie in der React-Hauptkomponente `App.js` die Route `/sku-field` hinzu, um die React-Komponente `SkuField` zu rendern.
 
 `src/aem-cf-editor-1/web-src/src/components/App.js`
 
@@ -85,14 +85,14 @@ function App() {
 ...
 ```
 
-Diese benutzerdefinierte Route von `/sku-field` der `SkuField` -Komponente wird unten in der [Erweiterungsregistrierung](#extension-registration).
+Diese benutzerdefinierte Route von `/sku-field`-Zuordnungen zur Komponente `SkuField` wird unten in der [Erweiterungsregistrierung](#extension-registration) verwendet.
 
 ### Registrierung der Erweiterung
 
 `ExtensionRegistration.js`, die der Route „index.html“ zugeordnet ist, ist der Einstiegspunkt für die AEM-Erweiterung und definiert Folgendes:
 
-+ Die Widget-Definition in `getDefinitions()` Funktion mit `fieldNameExp` und `url` -Attribute. Die vollständige Liste der verfügbaren Attribute finden Sie im [API-Referenz für benutzerdefinierte Formularelement-Rendering](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/#api-reference).
-+ Die `url` -Attributwert, ein relativer URL-Pfad (`/index.html#/skuField`), um die Feld-Benutzeroberfläche zu laden.
++ Die Widget-Definition in der Funktion `getDefinitions()` mit den Attributen `fieldNameExp` und `url`. Die vollständige Liste der verfügbaren Attribute finden Sie in der [API-Referenz zum Rendern von benutzerdefinierten Formularelementen](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/#api-reference).
++ Den `url`-Attributwert, einen relativen URL-Pfad (`/index.html#/skuField`), um die Feld-Benutzeroberfläche zu laden.
 
 `src/aem-cf-editor-1/web-src/src/components/ExtensionRegistration.js`
 
@@ -132,13 +132,13 @@ export default ExtensionRegistration;
 
 ### Benutzerdefiniertes Feld
 
-Die `SkuField` Die React-Komponente aktualisiert den Inhaltsfragment-Editor mit einer benutzerdefinierten Benutzeroberfläche und verwendet für die Auswahl des Formulars Adobe React Spectrum. Zu den Highlights gehören:
+Die React-Komponente `SkuField` aktualisiert den Inhaltsfragmenteditor mit einer benutzerdefinierten Benutzeroberfläche und verwendet Adobe React Spectrum für das Auswahlformular. Hier einige der Highlights:
 
-+ Ausnutzen `useEffect` für die Initialisierung und Verbindung mit AEM Inhaltsfragment-Editor mit einem Ladestatus angezeigt, bis die Einrichtung abgeschlossen ist.
-+ Beim Rendern in einem iFrame wird die Höhe des iFrames dynamisch über die `onOpenChange` -Funktion, um die Dropdown-Liste der Adobe React Spectrum Picker aufzunehmen.
-+ Kommuniziert Feldauswahlen zurück an den Host mit `connection.host.field.onChange(value)` im `onSelectionChange` -Funktion, die sicherstellt, dass der ausgewählte Wert gemäß den Richtlinien des Inhaltsfragmentmodells validiert und automatisch gespeichert wird.
++ Verwenden von `useEffect` für die Initialisierung und Verbindung mit dem AEM Inhaltsfragmenteditor mit einem Status „Wird geladen“, der angezeigt wird, bis die Einrichtung abgeschlossen ist.
++ Beim Rendern in einem iFrame wird die Höhe des iFrames dynamisch über die Funktion `onOpenChange` angepasst, um die Dropdown-Liste der Adobe React Spectrum-Auswahl zu berücksichtigen.
++ Kommuniziert in der Funktion `onSelectionChange` Feldauswahlen mit `connection.host.field.onChange(value)` zurück an den Host, wodurch sichergestellt wird, dass der ausgewählte Wert gemäß den Richtlinien des Inhaltsfragmentmodells validiert und automatisch gespeichert wird.
 
-Benutzerdefinierte Felder werden innerhalb eines iFrame gerendert, der in den Inhaltsfragment-Editor eingefügt wird. Die Kommunikation zwischen dem benutzerdefinierten Feldcode und dem Inhaltsfragment-Editor erfolgt ausschließlich über `connection` Objekt, das von der `attach` -Funktion aus `@adobe/uix-guest` Paket.
+Benutzerdefinierte Felder werden in einem iFrame gerendert, der in den Inhaltsfragmenteditor eingefügt wird. Die Kommunikation zwischen dem Code des benutzerdefinierten Felds und dem Inhaltsfragmenteditor erfolgt ausschließlich über das `connection`-Objekt, das von der Funktion `attach` aus dem Paket `@adobe/uix-guest` erstellt wird.
 
 `src/aem-cf-editor-1/web-src/src/components/SkuField.js`
 

@@ -1,6 +1,6 @@
 ---
-title: Formular mit gesendeten Daten und Anlagen vorfüllen
-description: Mehrteiliges Tutorial, um Sie durch die Schritte zu führen, die für die Abfrage von Formularübermittlungen im Azure Portal erforderlich sind
+title: Vorausfüllen von Formularen mit übermittelten Daten und Anhängen
+description: Ein mehrteiliges Tutorial, das Sie durch die Schritte führt, die beim Abfragen von im Azure-Portal gespeicherten Formularübermittlungen erforderlich sind.
 feature: Adaptive Forms
 doc-type: Tutorial
 version: 6.5
@@ -9,20 +9,21 @@ role: Developer
 level: Experienced
 jira: kt-14884
 last-substantial-update: 2024-03-03T00:00:00Z
-source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
-workflow-type: tm+mt
+exl-id: b83ffa66-5614-4e3e-84f9-e9ba57fc0955
+source-git-commit: ff4f214758c9c5055215e75ee39d78203cf5cbaf
+workflow-type: ht
 source-wordcount: '86'
-ht-degree: 5%
+ht-degree: 100%
 
 ---
 
-# Formular mit gesendeten Daten und Anlagen vorfüllen
+# Vorausfüllen von Formularen mit übermittelten Daten und Anhängen
 
-Wenn die Variable **Administrator** klickt in der Tabelle mit den Suchergebnissen auf ViewLink. Das Formular ist mit den gesendeten Daten vorausgefüllt.
+Wenn **Admins** in der Tabelle mit den Suchergebnissen auf „ViewLink“ klicken, wird das Formular mit den übermittelten Daten vorausgefüllt.
 
-Ein Vorbefüllungs-Dienst wurde verwendet, um die mit der BlobId verknüpften Daten aus dem Azure-Portal abzurufen.
+Es wurde ein Vorbefüllungsdienst verwendet, um die mit der BlobId verknüpften Daten aus dem Azure-Portal abzurufen.
 
-[Ein separater Artikel zum Vorausfüllen von Formularen mit Daten und Anlagen finden Sie hier.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html)
+[Einen separaten Artikel zum Vorausfüllen von Formularen mit Daten und Anhängen finden Sie hier.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=de)
 
 ## Nächste Schritte
 

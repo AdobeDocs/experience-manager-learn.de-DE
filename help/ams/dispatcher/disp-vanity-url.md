@@ -11,9 +11,9 @@ doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
 duration: 267
 source-git-commit: 19beb662b63476f4745291338d944502971638a3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1159'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -99,28 +99,28 @@ Der Dispatcher hat einen Konfigurationsabschnitt in seiner Farm-Datei:
 }
 ```
 
-Die `/delay` -Parameter, gemessen in Sekunden, funktioniert nicht in einem festen Intervall, sondern in einer bedingungsbasierten Prüfung. Der Dispatcher bewertet den Änderungszeitstempel der `/file` (die die Liste der erkannten Vanity-URLs speichert), wenn eine Anforderung für eine nicht aufgeführte URL empfangen wird. Die `/file` wird nicht aktualisiert, wenn die Zeitdifferenz zwischen dem aktuellen Moment und dem `/file`Die letzte Änderung von ist kleiner als die `/delay` Dauer. Aktualisieren der `/file` tritt unter zwei Bedingungen auf:
+Die `/delay`-Parameter, gemessen in Sekunden, funktioniert nicht in einem festen Intervall, sondern vielmehr im Rahmen einer bedingungsbasierten Prüfung. Der Dispatcher bewertet den Änderungszeitstempel der `/file` (die die Liste der erkannten Vanity-URLs speichert), wenn eine Anfrage für eine nicht aufgeführte URL empfangen wird. `/file` wird nicht aktualisiert, wenn die Zeitdifferenz zwischen dem aktuellen Moment und der letzten Änderung von `/file` kleiner ist als die `/delay`-Dauer. Die `/file` wird unter zwei Bedingungen aktualisiert:
 
-1. Die eingehende Anfrage bezieht sich auf eine URL, die nicht zwischengespeichert oder im `/file`.
-1. Mindestens `/delay` Sekunden vergangen sind, seit die `/file` wurde zuletzt aktualisiert.
+1. Die eingehende Anfrage bezieht sich auf eine URL, die nicht zwischengespeichert wurde oder in der `/file` aufgeführt ist.
+1. Es sind mindestens die mit `/delay` festgelegten Sekunden vergangen, seit die `/file` zuletzt aktualisiert wurde.
 
-Dieser Mechanismus wurde zum Schutz vor DoS-Angriffen (Denial of Service) entwickelt, die den Dispatcher ansonsten durch Anfragen überwältigen und die Vanity-URLs-Funktion nutzen könnten.
+Dieser Mechanismus wurde zum Schutz vor DoS(Denial of Service)-Angriffen entwickelt, die den Dispatcher ansonsten mit Anfragen überschwemmen und die Vanity-URLs-Funktion ausnutzen könnten.
 
-Einfacher ausgedrückt: Die `/file` mit Vanity-URLs wird nur aktualisiert, wenn eine Anforderung für eine URL eingeht, die noch nicht in der `/file` und wenn die `/file`Die letzte Änderung von war länger als die `/delay` Zeitraum.
+Einfacher ausgedrückt: Die `/file` mit Vanity-URLs wird nur aktualisiert, wenn eine Anfrage für eine noch nicht in der `/file` vorhandene URL eingeht und wenn die letzte Änderung der `/file` länger her ist als der `/delay`-Zeitraum.
 
-So fügen Sie explizit eine Aktualisierung der `/file`können Sie eine nicht vorhandene URL anfordern, nachdem Sie die erforderliche `/delay` ist seit der letzten Aktualisierung vergangen. Beispiele für URLs zu diesem Zweck:
+Um eine Aktualisierung von `/file` explizit auszulösen, können Sie eine nicht vorhandene URL anfordern, nachdem Sie sichergestellt haben, dass die erforderliche `/delay`-Zeit seit der letzten Aktualisierung abgelaufen ist. Passende URL-Beispiele hierfür sind etwa:
 
 - `https://dispatcher-host-name.com/this-vanity-url-does-not-exist`
 - `https://dispatcher-host-name.com/please-hand-me-that-planet-maestro`
 - `https://dispatcher-host-name.com/random-vanity-url`
 
-Dieser Ansatz zwingt den Dispatcher dazu, die `/file`, sofern angegeben `/delay` -Intervall seit der letzten Änderung verstrichen ist.
+Dieser Ansatz zwingt den Dispatcher dazu, die `/file` zu aktualisieren, sofern das angegebene `/delay`-Intervall seit der letzten Änderung verstrichen ist.
 
-Es speichert den Cache der Antwort im Argument `/file`, in diesem Beispiel also `/tmp/vanity_urls`
+Er speichert den Cache der Antwort im Argument `/file`, in diesem Beispiel also `/tmp/vanity_urls`
 
-Wenn Sie also die AEM-Instanz unter dem URI besuchen, sehen Sie, was sie abruft:
+Wenn Sie also die AEM-Instanz unter dem URI besuchen, sehen Sie, was abgerufen wird:
 
-![Screenshot des Inhalts, gerendert von /libs/granite/dispatcher/content/vanityUrls.html](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")
+![Screenshot des aus /libs/granite/dispatcher/content/vanityUrls.html](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component gerenderten Inhalts")
 
 Es ist buchstäblich eine Liste, supereinfach.
 

@@ -9,9 +9,9 @@ sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
 source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2034'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -105,7 +105,7 @@ ht-degree: 97%
    + [Vorausfüllen von HTML5 Formularen](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Formulardatenmodell mit Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Dynamisches Hinzufügen von Elementen zur Auswahlkomponente](adaptive-forms/choice-group-items-adding-dynamically-article.md)
-+ DAM-Ordnerinhalt auswählen und zusammenführen {#select-dam-folder-content}
++ DAM-Ordnerinhalt auswählen und zusammenführen{#select-dam-folder-content}
    + [1 – Einführung](display-and-assemble-dam-folder-contents/introduction.md)
    + [2 – Befüllen der Auswahlgruppe](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
    + [3 – Zusammenführen ausgewählter Assets](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
@@ -220,11 +220,11 @@ ht-degree: 97%
    + [Handhabung von PDF-Übermittlung](offline-mobile-form-submission/part-two.md)
    + [Workflow zur Überprüfung des PDFs](offline-mobile-form-submission/part-three.md)
    + [Bereitstellung auf Ihrem System](offline-mobile-form-submission/part-four.md)
-+ Abfrage von Formularübermittlungen{#query-form-submissions}
++ Abfragen von Formularübermittlungen{#query-form-submissions}
    + [Einführung](query-form-submissions/introduction.md)
    + [Erstellen durchsuchbarer Felder](query-form-submissions/part1.md)
    + [Erstellen einer benutzerdefinierten Übermittlung](query-form-submissions/part2.md)
-   + [Erstellen der Abfrageschnittstelle](query-form-submissions/part3.md)
+   + [Erstellen einer Abfrageschnittstelle](query-form-submissions/part3.md)
    + [Schreiben eines Vorbefüllungsdienstes](query-form-submissions/part4.md)
    + [Bereitstellen des Beispiels](query-form-submissions/part5.md)
 + Auflisten benutzerdefinierter Asset-Typen im Formularportal{#listing-custom-asset-types}
@@ -277,7 +277,7 @@ ht-degree: 97%
    + [ECMA-Skript zum Generieren von PDF-Dateien mit Fragmenten](document-services/using-fragments-in-output-service-watched-folder.md)
    + [Erstellen mehrerer PDFs aus einer Datendatei](document-services/generate-multi-record-pdf.md)
    + [Generieren eines PDFs bei Übermittlung mobiler Formulare](document-services/generate-pdf-from-mobile-form-submission-article.md)
-   + [Generieren von PDF auf der Kernkomponente basierenden Formularübermittlung](document-services/generate-pdf-from-core-component-form-submission.md)
+   + [Generieren einer PDF bei auf Kernkomponente basierenden Formularübermittlungen](document-services/generate-pdf-from-core-component-form-submission.md)
    + [Generieren eines interaktiven PDFs aus mobilen Formularen](document-services/render-interactive-form-using-api.md)
    + [Generieren eines interaktiven DoR aus adaptiven Formularen](document-services/generate-interactive-dor.md)
    + [Konfigurieren von Reader Extensions-Berechtigungen](document-services/configuring-reader-extension-osgi.md)
@@ -287,16 +287,16 @@ ht-degree: 97%
    + [Zusammenführen von Formularanlagen](document-services/assemble-form-attachments.md)
    + [Nützliche Dienstprogrammdienste](document-services/useful-utility-services.md)
 + Forms Designer{#forms-designer}
-   + [Designansicht](forms-designer/design-view.md)
-   + [Erstellen des ersten Formulars](forms-designer/create-simple-form.md)
+   + [Design-Ansicht](forms-designer/design-view.md)
+   + [Erstellen Ihres ersten Formulars](forms-designer/create-simple-form.md)
    + [Erstellen einer Formularvorlage](forms-designer/creating-form-template.md)
-   + [Skripten für Formulare](forms-designer/first-script-designer.md)
+   + [Skripterstellung für Ihr Formular](forms-designer/first-script-designer.md)
    + [XML-Datenbindung](forms-designer/xml-data-binding.md)
    + [Datenbankbindung](forms-designer/binding-to-mysql-db.md)
-   + [Scribble-Signatur verwenden](forms-designer/scribble-signature-form.md)
-   + [Digitale Signatur verwenden](forms-designer/adding-dig-signature-field.md)
-   + [Reader zum Erweitern des Formulars](forms-designer/reader-extending-j2ee.md)
-+ Interaktive Kommunikation für Druckkanal
+   + [Verwenden einer Freihandsignatur](forms-designer/scribble-signature-form.md)
+   + [Verwenden einer digitalen Signatur](forms-designer/adding-dig-signature-field.md)
+   + [Reader-Erweiterung für Formulare](forms-designer/reader-extending-j2ee.md)
++ Interaktive Kommunikationen für Druckkanal
 {#ic-print-channel-tutorial}
    + [1 – Einführung](ic-print-channel-tutorial/introduction.md)
    + [2 – Einrichten von Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)

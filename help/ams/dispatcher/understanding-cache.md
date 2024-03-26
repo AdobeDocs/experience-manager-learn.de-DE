@@ -10,9 +10,9 @@ doc-type: Article
 exl-id: 66ce0977-1b0d-4a63-a738-8a2021cf0bd5
 duration: 491
 source-git-commit: 19beb662b63476f4745291338d944502971638a3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1708'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -316,7 +316,7 @@ Im Folgenden finden Sie ein Beispiel der Funktion, die in der Farm-Konfiguration
 
 >[!NOTE]
 >
->Beachten Sie, dass AEM weiterhin so konfiguriert werden muss, dass TTL-Header gesendet werden, damit der Dispatcher sie berücksichtigt. Durch Umschalten dieser Funktion weiß der Dispatcher lediglich, dass Dateien entfernt werden sollen, für die AEM Cache-Kontroll-Header gesendet hat. Wenn keine TTL-Header von AEM gesendet werden, führt der Dispatcher hier keine besonderen Aktionen durch.
+>Denken Sie daran, dass AEM trotzdem zum Senden von TTL-Headern konfiguriert werden muss, damit sie vom Dispatcher berücksichtigt werden. Durch Umschalten dieser Funktion weiß der Dispatcher lediglich, dass Dateien entfernt werden sollen, für die AEM Cache-Kontroll-Header gesendet hat. Wenn keine TTL-Header von AEM gesendet werden, führt der Dispatcher hier keine besonderen Aktionen durch.
 
 ## Cache-Filterregeln
 

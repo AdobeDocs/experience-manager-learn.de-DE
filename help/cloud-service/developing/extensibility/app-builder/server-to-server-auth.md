@@ -1,6 +1,6 @@
 ---
-title: Zugriffstoken von Server zu Server in App Builder-Aktion generieren
-description: Erfahren Sie, wie Sie ein Zugriffstoken mithilfe von OAuth Server-zu-Server-Anmeldeinformationen für die Verwendung in einer App Builder-Aktion generieren.
+title: Generieren von Server-zu-Server-Zugriffs-Token in einer App-Entwicklungs-Aktion
+description: Erfahren Sie, wie Sie ein Zugriffs-Token mit OAuth-Server-zu-Server-Anmeldedaten generieren, um sie in einer App-Entwicklungs-Aktion zu verwenden.
 feature: Developer Tools
 version: Cloud Service
 topic: Development
@@ -9,38 +9,39 @@ level: Intermediate
 jira: KT-14724
 last-substantial-update: 2024-02-29T00:00:00Z
 duration: null
-source-git-commit: 8fae7510db1eb7b9483d198592a1628cd9867e2b
-workflow-type: tm+mt
+exl-id: 919cb9de-68f8-4380-940a-17274183298f
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '400'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
-# Zugriffstoken von Server zu Server in App Builder-Aktion generieren
+# Generieren von Server-zu-Server-Zugriffs-Token in einer App-Entwicklungs-Aktion
 
-App Builder-Aktionen müssen ggf. mit Adobe-APIs interagieren, die **OAuth Server-zu-Server-Anmeldedaten** und sind mit Adobe Developer Console-Projekten verknüpft, die die App Builder-App bereitgestellt wird.
+App-Entwicklungs-Aktionen müssen möglicherweise mit Adobe-APIs interagieren, die **OAuth-Server-zu-Server-Anmeldedaten** unterstützen und mit Adobe Developer Console-Projekten verknüpft sind, in denen die App-Entwicklungs-App bereitgestellt wird.
 
-In diesem Handbuch wird erläutert, wie Sie mithilfe von _OAuth Server-zu-Server-Anmeldedaten_ zur Verwendung in einer App Builder-Aktion.
+In diesem Handbuch wird erklärt, wie Sie ein Zugriffs-Token mit _OAuth-Server-zu-Server-Anmeldedaten_ generieren, um sie in einer App-Entwicklungs-Aktion zu verwenden.
 
 >[!IMPORTANT]
 >
-> Die Anmeldedaten für Dienstkonten (JWT) werden nicht mehr für die OAuth Server-zu-Server-Anmeldedaten unterstützt. Es gibt jedoch noch einige Adobe-APIs, die nur Service Account (JWT)-Anmeldedaten unterstützen und die Migration zu OAuth Server-to-Server ist im Gange. Lesen Sie die Adobe API-Dokumentation , um zu erfahren, welche Anmeldeinformationen unterstützt werden.
+> Die Anmeldedaten für Dienstkonten (JWT) wurden zugunsten der OAuth-Server-zu-Server-Anmeldeinformationen eingestellt. Es gibt jedoch noch einige Adobe-APIs, die nur Anmeldedaten für Dienstkonten (JWT) unterstützen und wo die Migration zu OAuth-Server-zu-Server im Gange ist. Lesen Sie die Adobe API-Dokumentation, um zu erfahren, welche Anmeldedaten unterstützt werden.
 
-## Adobe Developer Console-Projektkonfigurationen
+## Konfigurationen des Adobe Developer Console-Projekts
 
-Beim Hinzufügen der gewünschten Adobe-API zum Adobe Developer Console-Projekt im _API konfigurieren_ Schritt, wählen Sie die **OAuth Server-zu-Server** Authentifizierungstyp.
+Wählen Sie beim Hinzufügen der gewünschten Adobe-API zum Adobe Developer Console-Projekt im Schritt _API konfigurieren_ den Authentifizierungstyp **OAuth-Server-zu-Server** aus.
 
-![Adobe Developer Console - OAuth Server-to-Server](./assets/s2s-auth/oauth-server-to-server.png)
+![Adobe Developer Console – OAuth-Server-to-Server](./assets/s2s-auth/oauth-server-to-server.png)
 
-Um das oben genannte automatisch erstellte Integrationsdienstkonto zuzuweisen, wählen Sie das gewünschte Produktprofil aus. Somit werden über das Produktprofil die Berechtigungen für Dienstkonten gesteuert.
+Wählen Sie das gewünschte Produktprofil aus, um das oben genannte automatisch erstellte Integrationsdienstkonto zuzuweisen.  Hierdurch werden die Berechtigungen für Dienstkonten über das Produktprofil gesteuert.
 
-![Adobe Developer Console - Produktprofil](./assets/s2s-auth/select-product-profile.png)
+![Adobe Developer Console – Produktprofil](./assets/s2s-auth/select-product-profile.png)
 
 ## .env-Datei
 
-Im App Builder-Projekt `.env` -Datei, hängen Sie benutzerdefinierte Schlüssel für die OAuth Server-zu-Server-Anmeldedaten des Adobe Developer Console-Projekts an. Die OAuth-Server-zu-Server-Anmeldewerte können vom Adobe Developer Console-Projekt abgerufen werden. __Anmeldeinformationen__ > __OAuth Server-zu-Server__ für einen bestimmten Arbeitsbereich.
+Hängen Sie in der `.env`-Datei des App-Entwicklungs-Projekts benutzerdefinierte Schlüssel für alle OAuth-Server-zu-Server-Anmeldedaten des Adobe Developer Console-Projekts an. Die Werte der OAuth-Server-zu-Server-Anmeldedaten können vom Adobe Developer Console-Projekt über __Anmeldedaten__ > __OAuth-Server-zu-Server__ für einen bestimmten Arbeitsbereich abgerufen werden.
 
-![OAuth Server-zu-Server-Anmeldedaten für die Adobe Developer Console](./assets/s2s-auth/oauth-server-to-server-credentials.png)
+![OAuth-Server-zu-Server-Anmeldedaten von der Adobe Developer Console](./assets/s2s-auth/oauth-server-to-server-credentials.png)
 
 ```
 ...
@@ -49,11 +50,11 @@ OAUTHS2S_CLIENT_SECRET=p8e-EIRF6kY6EHLBSdw2b-pLUWKodDqJqSz3
 OAUTHS2S_CECREDENTIALS_METASCOPES=AdobeID,openid,ab.manage,additional_info.projectedProductContext,read_organizations,read_profile,account_cluster.read
 ```
 
-Die Werte für `OAUTHS2S_CLIENT_ID`, `OAUTHS2S_CLIENT_SECRET`, `OAUTHS2S_CECREDENTIALS_METASCOPES` kann direkt aus dem Bildschirm &quot;OAuth Server-to-Server-Anmeldedaten&quot;des Adobe Developer Console-Projekts kopiert werden.
+Die Werte für `OAUTHS2S_CLIENT_ID`, `OAUTHS2S_CLIENT_SECRET`, `OAUTHS2S_CECREDENTIALS_METASCOPES` können direkt aus dem Bildschirm „OAuth-Server-zu-Server-Anmeldedaten“ des Adobe Developer Console-Projekts kopiert werden.
 
 ## Zuordnung der Eingaben
 
-Mit dem OAuth-Server-zu-Server-Berechtigungswert, der im `.env` -Datei, müssen sie den AppBuilder-Aktionseingaben zugeordnet werden, damit sie in der Aktion selbst gelesen werden können. Fügen Sie dazu Einträge für jede Variable in der `ext.config.yaml`-Aktion `inputs` im folgenden Format hinzu: `PARAMS_INPUT_NAME: $ENV_KEY`.
+Mit dem in der `.env`-Datei festgelegten Wert der OAuth-Server-zu-Server-Anmeldedaten müssen sie den App-Entwicklungs-Aktionseingaben zugeordnet werden, damit sie in der Aktion selbst gelesen werden können. Fügen Sie dazu Einträge für jede Variable in der `ext.config.yaml`-Aktion `inputs` im folgenden Format hinzu: `PARAMS_INPUT_NAME: $ENV_KEY`.
 
 Zum Beispiel:
 
@@ -84,11 +85,11 @@ runtimeManifest:
 
 Die unter `inputs` definierten Schlüssel sind verfügbar im `params`-Objekt, das für die App-Entwicklungs-Aktion bereitgestellt wird.
 
-## OAuth Server-zu-Server-Anmeldedaten für den Zugriff auf Token
+## OAuth-Server-zu-Server-Anmeldedaten zum Zugriffs-Token
 
-In der App Builder-Aktion sind die OAuth Server-zu-Server-Anmeldedaten im `params` -Objekt. Mithilfe dieser Anmeldeinformationen kann das Zugriffstoken mithilfe von [OAuth 2.0-Bibliotheken](https://oauth.net/code/). Sie können auch die [Knotenabruf-Bibliothek](https://www.npmjs.com/package/node-fetch) , um eine POST-Anfrage an den Adobe IMS-Token-Endpunkt zu senden und das Zugriffstoken abzurufen.
+In der App-Entwicklungs-Aktion sind die OAuth-Server-zu-Server-Anmeldedaten im `params`-Objekt verfügbar. Mithilfe dieser Anmeldedaten kann das Zugriffs-Token mithilfe von [OAuth 2.0-Bibliotheken](https://oauth.net/code/) generiert werden. Sie können auch die [Knotenabruf-Bibliothek](https://www.npmjs.com/package/node-fetch) verwenden, um eine POST-Anfrage an den Adobe IMS-Token-Endpunkt zu senden und das Zugriffs-Token abzurufen.
 
-Das folgende Beispiel zeigt die Verwendung der `node-fetch` -Bibliothek, um eine POST-Anfrage an den Adobe IMS-Token-Endpunkt zu senden, um das Zugriffstoken abzurufen.
+Das folgende Beispiel zeigt die Verwendung der `node-fetch`-Bibliothek, um eine POST-Anfrage an den Adobe IMS-Token-Endpunkt zu senden, um das Zugriffs-Token abzurufen.
 
 ```javascript
 const fetch = require("node-fetch");

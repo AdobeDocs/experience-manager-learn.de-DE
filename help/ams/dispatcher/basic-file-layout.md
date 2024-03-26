@@ -11,9 +11,9 @@ doc-type: Article
 exl-id: 8a3f2bb9-3895-45c6-8bb5-15a6d2aac50e
 duration: 354
 source-git-commit: 19beb662b63476f4745291338d944502971638a3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1130'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -59,10 +59,10 @@ Wenn Sie dem Installationsentwurf/der Installationsstruktur folgen und diese ber
 - Ermöglicht Patch-Zyklen, die vom Betriebssystem vollständig unterstützt werden, ohne dass Konflikte oder manuelle Anpassungen auftreten
 - Vermeidet SELinux-Verstöße gegen falsch gekennzeichnete Dateikontexte
 
->[!BEGINSHADEBOX &quot;Hinweis&quot;]
+>[!BEGINSHADEBOX Hinweis]
 
-Die Adobe Managed Services-Serverbilder verfügen in der Regel über kleine Root-Laufwerke des Betriebssystems.  Wir stellen unsere Daten in ein separates Volume ein, das normalerweise in `/mnt`
-Dann verwenden wir dieses Volumen anstelle der Standardwerte für die folgenden Standardverzeichnisse
+Die Bilder der Adobe Managed Services-Server verfügen in der Regel über kleine Root-Laufwerke des Betriebssystems. Wir legen unsere Daten in einem separaten Volume ab, das normalerweise in `/mnt` gemountet wird. 
+Dann verwenden wir dieses Volume anstelle der Standards für die folgenden Standardverzeichnisse.
 
 `DocumentRoot`
 - Standard:`/var/www/html`
@@ -70,7 +70,7 @@ Dann verwenden wir dieses Volumen anstelle der Standardwerte für die folgenden 
 
 `Log Directory`
 - Standard: `/var/log/httpd`
-- AMS: `/mnt/var/log/httpd`
+- AMS: `/mnt/var/log/httpd`
 
 Denken Sie daran, dass die alten und neuen Verzeichnisse dem ursprünglichen Bereitstellungspunkt zugeordnet werden, um Verwirrung zu vermeiden.
 Die Verwendung eines separaten Volumes ist nicht unbedingt erforderlich, aber erwähnenswert.
@@ -297,7 +297,7 @@ LoadModule dispatcher_module modules/mod_dispatcher.so
 
 >[!NOTE]
 >
->Es wurden keine bereits vorhandenen Dateien geändert, die von Apache bereitgestellt wurden. Stattdessen haben wir unsere zu den Verzeichnissen hinzugefügt, in die sie gehen sollten.
+>Wir haben keine bereits vorhandenen Dateien geändert, die Apache bereitgestellt hat.  Stattdessen haben wir unsere zu den Verzeichnissen hinzugefügt, für die sie bestimmt waren.
 
 Jetzt nutzen wir unser Modul in unserer Datei <b>`/etc/httpd/conf.d/dispatcher_vhost.conf`</b>, die unser Modul initialisiert und die erste modulspezifische Konfigurationsdatei lädt
 

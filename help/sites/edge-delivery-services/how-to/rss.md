@@ -1,6 +1,6 @@
 ---
-title: Anpassen der Sidekick der Edge Delivery Services
-description: Erfahren Sie, wie Sie die Sidekick der Edge Delivery Services anpassen können.
+title: Anpassen des Sidekicks der Edge Delivery Services
+description: Erfahren Sie, wie Sie den Sidekick der Edge Delivery Services anpassen können.
 version: 6.5, Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -13,14 +13,14 @@ thumbnail: 3425725.jpeg
 duration: 90
 exl-id: fe6f5262-05c3-4078-b25e-702d830350b2
 source-git-commit: 1a9c23d1021ce9fc29e914ca25e6609d3ab16732
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '28'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Sidekick anpassen
+# Anpassen des Sidekicks
 
-Erfahren Sie, wie Sie die Sidekick der Edge Delivery Services anpassen können.
+Erfahren Sie, wie Sie den Sidekick der Edge Delivery Services anpassen können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425725/?learn=on)

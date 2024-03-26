@@ -13,9 +13,9 @@ last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 9164423b-a609-4bc5-9777-112d229ae748
 duration: 388
 source-git-commit: bb902089a709ab00853f4856d9bf42c18a5097e7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '773'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Die Inhaltsfragmentkonsole in AEM (Adobe Experience Manager) ist eine Benutzerob
 
 ![Inhaltsfragmentkonsole](./assets/overview/cfc.png)
 
-Die [AEM-Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=de) ist die erweiterbare Benutzeroberfläche zum Auflisten und Verwalten von Inhaltsfragmenten. [Erweiterungen der AEM-Inhaltsfragmentkonsole werden](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation?lang=de) mit der App-Entwicklungs-Vorlage `@adobe/aem-cf-admin-ui-ext-tpl` erstellt.
+Die [AEM-Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=de) ist die erweiterbare Benutzeroberfläche zum Auflisten und Verwalten von Inhaltsfragmenten. [Erweiterungen der AEM-Inhaltsfragmentkonsole werden](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) mit der App-Entwicklungs-Vorlage `@adobe/aem-cf-admin-ui-ext-tpl` erstellt.
 
 Die folgenden Erweiterungspunkte der Inhaltsfragmentkonsole sind verfügbar:
 

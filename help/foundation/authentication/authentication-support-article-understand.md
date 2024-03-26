@@ -13,9 +13,9 @@ last-substantial-update: 2022-09-10T00:00:00Z
 thumbnail: KT-406.jpg
 duration: 38
 source-git-commit: 9ef35d4d20ea574ac2051d7d3e997ecc18c2aaaa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '116'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 

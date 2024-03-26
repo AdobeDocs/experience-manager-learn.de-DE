@@ -10,9 +10,9 @@ exl-id: 64b586a6-e9ef-4a3d-8528-55646ab03cc4
 last-substantial-update: 2021-04-09T00:00:00Z
 duration: 59
 source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '232'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ Eine schnelle und einfache Möglichkeit, um benutzerdefinierte Übermittlungsakt
 
 >[!NOTE]
 >Der Code in diesem Artikel funktioniert nicht mit auf Kernkomponenten basierenden adaptiven Formularen.
->[Den entsprechenden Artikel für das auf Kernkomponenten basierende adaptive Formular finden Sie hier .](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=en)
+>[Den äquivalenten Artikel für ein auf Kernkomponenten basierendes adaptives Formular finden Sie hier.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=de)
 
 
 Dieser Artikel führt Sie durch die Schritte, die zum Erstellen einer benutzerdefinierten Übermittlungsaktion für adaptive Formulare erforderlich sind.

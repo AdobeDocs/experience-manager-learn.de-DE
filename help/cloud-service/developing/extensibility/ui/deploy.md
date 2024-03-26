@@ -12,7 +12,7 @@ last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 duration: 214
 source-git-commit: 678bda0ea6f6c727170c596e9d3d5f0687ec830f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '765'
 ht-degree: 100%
 
@@ -46,7 +46,7 @@ Der Bereitstellungsprozess gliedert sich in zwei logische Schritte:
 Stellen Sie die Erweiterung im Arbeitsbereich „Produktion“ bereit. Erweiterungen, die im Arbeitsbereich „Produktion“ bereitgestellt werden, werden automatisch allen Author-Services von AEM as a Cloud Service in der Adobe-Organisation hinzugefügt, in der die Erweiterung bereitgestellt wird.
 
 1. Öffnen Sie eine Befehlszeile für das Stammverzeichnis der aktualisierten App-Entwicklungs-Erweiterungs-App.
-1. Stellen Sie sicher, dass der Arbeitsbereich „Produktion“ aktiv ist.
+1. Stellen Sie sicher, dass der Arbeitsbereich „Produktion“ aktiv ist
 
    ```shell
    $ aio app use -w Production
@@ -64,12 +64,12 @@ Stellen Sie die Erweiterung im Arbeitsbereich „Produktion“ bereit. Erweiteru
 
 ![Einreichen der Erweiterung zur Genehmigung](./assets/deploy/submit-for-approval.png){align="center"}
 
-1. Melden Sie sich bei [Adobe Developer Console](https://developer.adobe.com) an.
-1. Wählen Sie __Konsole__ aus.
-1. Navigieren Sie zu __Projekte__.
-1. Wählen Sie das Projekt aus, das mit der Erweiterung verknüpft ist.
-1. Wählen Sie den Arbeitsbereich __Produktion__ aus.
-1. Wählen Sie __Zur Genehmigung einreichen__ aus.
+1. Melden Sie sich bei [Adobe Developer Console](https://developer.adobe.com) an
+1. Wählen Sie __Konsole__ aus
+1. Navigieren Sie zu __Projekte__
+1. Wählen Sie das Projekt aus, das mit der Erweiterung verknüpft ist
+1. Wählen Sie den Arbeitsbereich __Produktion__ aus
+1. Wählen Sie __Zur Genehmigung einreichen__ aus
 1. Füllen Sie das Formular aus, übermitteln Sie es und aktualisieren Sie die Felder nach Bedarf.
 
 ### Genehmigung der Bereitstellung
@@ -100,7 +100,7 @@ Um eine neue Version einer Erweiterung bereitzustellen, muss sie zunächst wider
 Stellen Sie die Erweiterung im Arbeitsbereich „Produktion“ bereit. Erweiterungen, die im Arbeitsbereich „Produktion“ bereitgestellt werden, werden automatisch allen Author-Services von AEM as a Cloud Service in der Adobe-Organisation hinzugefügt, in der die Erweiterung bereitgestellt wird.
 
 1. Öffnen Sie eine Befehlszeile für das Stammverzeichnis der aktualisierten App-Entwicklungs-Erweiterungs-App.
-1. Stellen Sie sicher, dass der Arbeitsbereich „Produktion“ aktiv ist.
+1. Stellen Sie sicher, dass der Arbeitsbereich „Produktion“ aktiv ist
 
    ```shell
    $ aio app use -w Production
@@ -118,12 +118,12 @@ Stellen Sie die Erweiterung im Arbeitsbereich „Produktion“ bereit. Erweiteru
 
 ![Einreichen der Erweiterung zur Genehmigung](./assets/deploy/submit-for-approval.png){align="center"}
 
-1. Melden Sie sich bei [Adobe Developer Console](https://developer.adobe.com) an.
-1. Wählen Sie __Konsole__ aus.
-1. Navigieren Sie zu __Projekte__.
-1. Wählen Sie das Projekt aus, das mit der Erweiterung verknüpft ist.
-1. Wählen Sie den Arbeitsbereich __Produktion__ aus.
-1. Wählen Sie __Zur Genehmigung einreichen__ aus.
+1. Melden Sie sich bei [Adobe Developer Console](https://developer.adobe.com) an
+1. Wählen Sie __Konsole__ aus
+1. Navigieren Sie zu __Projekte__
+1. Wählen Sie das Projekt aus, das mit der Erweiterung verknüpft ist
+1. Wählen Sie den Arbeitsbereich __Produktion__ aus
+1. Wählen Sie __Zur Genehmigung einreichen__ aus
 1. Füllen Sie das Formular aus, übermitteln Sie es und aktualisieren Sie die Felder nach Bedarf.
 
 #### Genehmigen der Bereitstellungsanfrage

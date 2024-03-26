@@ -9,9 +9,9 @@ version: 6.4,6.5
 last-substantial-update: 2019-06-09T00:00:00Z
 duration: 691
 source-git-commit: 4f196539ea73d25b480064f7fc349f0ea29d5e0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '600'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ In diesem Artikel werden Sie durch die Schritte geführt, die zum Speichern und 
 
 Die Apache Sling Connection Pooled DataSource ist so konfiguriert, dass sie auf die Datenbank verweist, die zum Speichern der Daten aus adaptiven Formularen verwendet wird. Der folgende Screenshot zeigt die Konfiguration für meine Instanz. Die folgenden Eigenschaften können kopiert und eingefügt werden
 
-* `Datasource Name:aemformstutorial` - Dies ist der Name, der in meinem Code verwendet wird.
+* `Datasource Name:aemformstutorial` – Dies ist der Name, der in meinem Code verwendet wird.
 
 * `JDBC Driver Class:com.mysql.jdbc.Driver`
 

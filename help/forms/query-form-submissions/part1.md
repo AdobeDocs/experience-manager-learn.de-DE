@@ -1,6 +1,6 @@
 ---
-title: Bestimmte Felder durchsuchen
-description: Mehrteiliges Tutorial, um Sie durch die Schritte zu führen, die für die Abfrage von Formularübermittlungen im Azure Portal erforderlich sind
+title: Festlegen bestimmter Felder als durchsuchbar
+description: Ein mehrteiliges Tutorial, das Sie durch die Schritte führt, die beim Abfragen von im Azure-Portal gespeicherten Formularübermittlungen erforderlich sind.
 feature: Adaptive Forms
 doc-type: Tutorial
 version: 6.5
@@ -9,30 +9,31 @@ role: Developer
 level: Experienced
 jira: KT-14884
 last-substantial-update: 2024-03-03T00:00:00Z
-source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
-workflow-type: tm+mt
+exl-id: 1fb7ca83-0ba6-48a3-b3d3-079d0ef89245
+source-git-commit: ff4f214758c9c5055215e75ee39d78203cf5cbaf
+workflow-type: ht
 source-wordcount: '107'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
-# Bestimmte Felder durchsuchen
+# Festlegen bestimmter Felder als durchsuchbar
 
-Durchsuchbare Felder in einem Formular beziehen sich normalerweise auf die Felder im Formular, die als Kriterien für die Suche oder Filterung gesendeter Daten verwendet werden können.
-Im Rahmen dieses Anwendungsbeispiels wurden die folgenden Feldtypen erweitert, um sie durchsuchbar zu machen
+Durchsuchbare Felder in einem Formular beziehen sich normalerweise auf die Felder im Formular, die als Kriterien für die Suche oder Filterung übermittelter Daten verwendet werden können.
+Im Rahmen dieses Anwendungsfalls wurden die folgenden Feldtypen erweitert, um sie durchsuchbar zu machen:
 
 * checkboxgroup
-* Dropdown
-* Radiobutton
+* dropdown
+* radiobutton
 
-Die Formularautoren können diese Feldtypen wie unten gezeigt als durchsuchbar markieren
-![searchable-field](assets/searchable-fields.png)
+Die Formularautorinnen und Formularautoren können diese Feldtypen wie unten gezeigt als durchsuchbar markieren:
+![Durchsuchbares Feld](assets/searchable-fields.png)
 
-Die Felder wurden durch die folgende Struktur erweitert
+Die Felder wurden durch die folgende Struktur erweitert:
 
-![extended-fields](assets/extend-component.png)
+![Erweiterte Felder](assets/extend-component.png)
 
-Im Folgenden finden Sie den Inhalt der Datei .content.xml .
+Dies ist der Inhalt der .content.xml-Datei:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

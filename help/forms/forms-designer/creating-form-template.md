@@ -1,5 +1,5 @@
 ---
-title: AEM Forms Shorts Erstellen einer einfachen Formularvorlage PDF
+title: AEM Forms Shorts – Erstellen einer einfachen Formularvorlagen-PDF
 description: Erstellen einer Formularvorlage in Designer
 version: 6.5
 feature: Forms Designer,Designer
@@ -11,16 +11,16 @@ duration: 106
 last-substantial-update: 2024-03-07T00:00:00Z
 jira: KT-15074
 thumbnail: 3427678.jpeg
-source-git-commit: ae2a2cbde1bf21314cc77863014cb0f013b6e0bb
-workflow-type: tm+mt
+exl-id: 0e849225-83d4-491f-b30f-e067cf6910d3
+source-git-commit: ff4f214758c9c5055215e75ee39d78203cf5cbaf
+workflow-type: ht
 source-wordcount: '81'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# AEM Forms Shorts – Erstellen einer einfachen Formularvorlage
 
-# AEM Forms Shorts Erstellen einer einfachen Formularvorlage
-
-Es gibt eine Reihe von Vorlagen, die standardmäßig bereitgestellt werden und Sie im Istzustand verwenden oder nach Ihren Wünschen anpassen können. Vorlagen können auch in AEM Forms Designer erstellt und verwaltet werden. Sie können mit einer leeren Seite, Vorlage, Tabelle, PDF oder Microsoft Word-Datei beginnen. In diesem Video werden alle diese Optionen und sofort verfügbare Funktionen behandelt.
+Es gibt eine Reihe von Vorlagen, die standardmäßig bereitgestellt werden und die Sie im Istzustand verwenden oder nach Ihren Wünschen anpassen können. Vorlagen können auch in AEM Forms Designer erstellt und verwaltet werden. Sie können mit einer leeren Seite, Vorlage, Tabelle, PDF oder Microsoft Word-Datei beginnen. In diesem Video werden alle diese Optionen und sofort verfügbare Funktionen behandelt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427678/?learn=on)

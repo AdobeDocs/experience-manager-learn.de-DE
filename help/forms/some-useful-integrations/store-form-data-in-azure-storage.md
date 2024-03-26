@@ -11,9 +11,9 @@ jira: KT-13781
 exl-id: 2bec5953-2e0c-4ae6-ae98-34492d4cfbe4
 duration: 159
 source-git-commit: b1734f75bdda174788d880be28fa19f8e787af0a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '601'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ In diesem Artikel erfahren Sie, wie Sie REST-Aufrufe durchführen, um gesendete 
 Um gesendete Formulardaten in Azure Storage speichern zu können, müssen die folgenden Schritte ausgeführt werden.
 
 >[!NOTE]
->Der Code in diesem Artikel funktioniert nicht mit auf Kernkomponenten basierenden adaptiven Formularen. [Den entsprechenden Artikel für das auf Kernkomponenten basierende adaptive Formular finden Sie hier .](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
+>Der Code in diesem Artikel funktioniert nicht mit auf Kernkomponenten basierenden adaptiven Formularen. [Den äquivalenten Artikel für ein auf Kernkomponenten basierendes adaptives Formular finden Sie hier](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=de).
 
 
 ## Erstellen eines Azure Storage-Kontos
@@ -49,7 +49,7 @@ Stellen Sie sicher, dass Sie die entsprechenden Berechtigungen und das entsprech
 ## Geben Sie das Blob-SAS-Token und den Speicher-URI an.
 
 Um den Code allgemeiner zu gestalten, können die beiden Eigenschaften mit der OSGi-Konfiguration wie unten dargestellt konfiguriert werden. Dabei ist _**aemformstutorial**_ der Name des Speicherkontos, und _**formsubmissions**_ ist der Container, in dem die Daten mit einer eindeutigen BLOB-ID gespeichert werden.
-Vergewissern Sie sich, dass Sie / am Ende des Speicher-URI haben und das SAS-Token beginnt mit?
+Achten Sie darauf, dass am Ende des Speicher-URI ein Schrägstrich (/) steht und das SAS-Token mit einem Fragezeichen (?) beginnt:
 ![osgi-configuration](./assets/azure-portal-osgi-configuration.png)
 
 
@@ -98,16 +98,16 @@ Die folgende Funktion wurde geschrieben, um die gesendeten Formulardaten mithilf
 
 ## Testen der Lösung
 
-* [Stelllen Sie das benutzerdefinierte OSGi-Bundle bereit.](./assets/SaveAndFetchFromAzure.core-1.0.0-SNAPSHOT.jar)
+* [Stelllen Sie das benutzerdefinierte OSGi-Bundle bereit](./assets/SaveAndFetchFromAzure.core-1.0.0-SNAPSHOT.jar)
 
-* [Importieren Sie die benutzerdefinierte Vorlage für das adaptive Formular und die Seitenkomponente, die mit der Vorlage verknüpft ist.](./assets/store-and-fetch-from-azure.zip)
+* [Importieren Sie die benutzerdefinierte Vorlage für das adaptive Formular und die Seitenkomponente, die mit der Vorlage verknüpft ist](./assets/store-and-fetch-from-azure.zip)
 
-* [Importieren Sie das adaptive Beispielformular.](./assets/bank-account-sample-form.zip)
+* [Importieren Sie das adaptive Beispielformular](./assets/bank-account-sample-form.zip)
 
-* [Geben Sie die entsprechenden Werte in der Azure Portal-Konfiguration mithilfe der OSGi-Konfigurationskonsole an](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
+* [Geben Sie die entsprechenden Werte in der Azure-Portal-Konfiguration mithilfe der OSGi-Konfigurationskonsole an](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=de#provide-the-blob-sas-token-and-storage-uri).
 
-* [Zeigen Sie das Bankkonto-Formular in der Vorschau an und senden Sie es ab](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled).
+* [Zeigen Sie das Bankkonto-Formular in der Vorschau an und senden Sie es ab](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 
 * Überprüfen Sie, ob die Daten im gewünschten Azure-Speicher-Container gespeichert sind. Kopieren Sie die Blob-ID.
-* [Zeigen Sie das Bankkonto-Formular in der Vorschau an](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6) und geben Sie die Blob-ID als einen GUID-Parameter in die URL ein, damit das Formular mit den Daten aus dem Azure-Speicher vorausgefüllt werden kann.
+* [Zeigen Sie das Bankkonto-Formular in der Vorschau an](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled&amp;guid=dba8ac0b-8be6-41f2-9929-54f627a649f6) und geben Sie die Blob-ID als einen GUID-Parameter in die URL ein, damit das Formular mit den Daten aus dem Azure-Speicher vorausgefüllt werden kann
 

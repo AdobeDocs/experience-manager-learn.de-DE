@@ -1,6 +1,6 @@
 ---
-title: Journalismus und AEM
-description: Erfahren Sie, wie Sie den ersten Satz von AEM-Ereignissen aus dem Protokoll abrufen und die Details zu den einzelnen Ereignissen durchsuchen können.
+title: Journaling und AEM-Ereignisse
+description: Erfahren Sie, wie Sie den ersten Satz von AEM-Ereignissen aus dem Journal abrufen und sich die Details zu jedem Ereignis ansehen.
 version: Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
@@ -11,82 +11,82 @@ duration: 163
 last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
-source-git-commit: f0930e517254b6353fe50c3bbf9ae915d9ef6ca3
-workflow-type: tm+mt
+exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '630'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Journaling und AEM-Ereignisse
 
-# Journalismus und AEM
-
-Erfahren Sie, wie Sie den ersten Satz von AEM-Ereignissen aus dem Protokoll abrufen und die Details zu den einzelnen Ereignissen durchsuchen können.
+Erfahren Sie, wie Sie den ersten Satz von AEM-Ereignissen aus dem Journal abrufen und sich die Details zu jedem Ereignis ansehen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427052?quality=12&learn=on)
 
-Die Journalisierung ist eine Pull-Methode, um AEM Ereignisse zu nutzen, und ein Journal ist eine geordnete Liste von Ereignissen. Mit der Adobe I/O Events Journaling API können Sie die AEM-Ereignisse aus dem Protokoll abrufen und in Ihrer Anwendung verarbeiten. Dieser Ansatz ermöglicht es Ihnen, Ereignisse auf der Grundlage einer bestimmten Kadenz zu verwalten und sie effizient stapelweise zu verarbeiten. Siehe Abschnitt [Journalismus](https://developer.adobe.com/events/docs/guides/journaling_intro/) für ausführliche Einblicke, einschließlich wichtiger Aspekte wie Aufbewahrungsfristen, Paginierung und mehr.
+Das Journaling ist eine Abrufmethode zum Nutzen von AEM-Ereignissen und ein Journal ist eine geordnete Liste von Ereignissen. Mithilfe der Journaling-API für Adobe I/O-Ereignisse können Sie die AEM-Ereignisse aus dem Journal abrufen und in Ihrer Anwendung verarbeiten. Dieser Ansatz ermöglicht es Ihnen, Ereignisse basierend auf einem bestimmten Rhythmus zu verwalten und sie effizient massenweise zu verarbeiten. Unter [Journaling](https://developer.adobe.com/events/docs/guides/journaling_intro/) finden Sie detaillierte Einblicke, einschließlich wesentlicher Aspekte wie Aufbewahrungszeiten und Paginierung.
 
-Innerhalb des Adobe Developer Console-Projekts wird jede Ereignisregistrierung automatisch für die Aufzeichnung aktiviert, was eine nahtlose Integration ermöglicht.
+Im Adobe Developer Console-Projekt wird das Journaling automatisch für jede Ereignisregistrierung aktiviert, was eine nahtlose Integration ermöglicht.
 
-In diesem Beispiel wird eine Adobe verwendet _gehostete Webanwendung_ ermöglicht es Ihnen, den ersten Batch von AEM-Ereignissen aus dem Protokoll abzurufen, ohne dass Sie Ihre Anwendung einrichten müssen. Diese von Adobe bereitgestellte Webanwendung wird auf gehostet [Glitch](https://glitch.com/), eine Plattform, die für die Erstellung und Bereitstellung von Webanwendungen bekannt ist. Die Option zur Verwendung Ihrer eigenen Anwendung ist jedoch bei Bedarf ebenfalls verfügbar.
+In diesem Beispiel können Sie dank einer von Adobe bereitgestellten _gehosteten Web-Anwendung_ den ersten Batch von AEM-Ereignissen aus dem Journal abrufen, ohne Ihre Anwendung einrichten zu müssen. Diese von Adobe bereitgestellte Web-Anwendung wird auf [Glitch](https://glitch.com/) gehostet, einer Plattform, die eine Web-basierte Umgebung zum Erstellen und Bereitstellen von Web-Anwendungen bietet. Wenn Sie es vorziehen, können Sie jedoch auch Ihre eigene Anwendung verwenden.
 
 ## Voraussetzungen
 
-Um dieses Tutorial abzuschließen, benötigen Sie:
+Zum Durchführen dieses Tutorials benötigen Sie Folgendes:
 
-- AEM as a Cloud Service Umgebung mit [AEM Eventing aktiviert](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment).
+- AEM as a Cloud Service-Umgebung, in der [AEM Eventing aktiviert](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment) ist.
 
-- [Adobe Developer Console-Projekt für AEM Ereignisse konfiguriert](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console).
+- [Für AEM-Ereignisse konfiguriertes Adobe Developer Console-Projekt](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console).
 
 >[!IMPORTANT]
 >
->AEM as a Cloud Service Eventing ist nur für registrierte Benutzer im Vorab-Release-Modus verfügbar. Wenden Sie sich an AEM Kontakt , um Eventing in Ihrer AEM as a Cloud Service Umgebung zu aktivieren. [AEM-Eventing-Team](mailto:grp-aem-events@adobe.com).
+>AEM as a Cloud Service Eventing ist nur für registrierte Benutzende im Vorab-Release-Modus verfügbar. Um AEM Eventing in Ihrer AEM as a Cloud Service-Umgebung zu aktivieren, wenden Sie sich an das [AEM-Eventing-Team](mailto:grp-aem-events@adobe.com).
 
-## Zugreifen auf Webanwendungen
+## Zugreifen auf die Web-Anwendung
 
-Gehen Sie wie folgt vor, um auf die von Adobe bereitgestellte Webanwendung zuzugreifen:
+Gehen Sie wie folgt vor, um auf die von Adobe bereitgestellte Web-Anwendung zuzugreifen:
 
-- Stellen Sie sicher, dass Sie auf die [Glitch - gehostete Webanwendung](https://indigo-speckle-antler.glitch.me/) in einer neuen Browser-Registerkarte.
+- Stellen Sie sicher, dass Sie in einer neuen Browser-Registerkarte auf die [von Glitch gehostete Web-Anwendung](https://indigo-speckle-antler.glitch.me/) zugreifen können.
 
-  ![Glitch - gehostete Webanwendung](../assets/examples/journaling/glitch-hosted-web-application.png)
+  ![Von Glitch gehostete Web-Anwendung](../assets/examples/journaling/glitch-hosted-web-application.png)
 
 ## Erfassen von Adobe Developer Console-Projektdetails
 
-So rufen Sie die AEM-Ereignisse aus dem Protokoll ab, z. B. Anmeldedaten _Kennung der IMS-Organisation_, _Client-ID_, und _Zugriffstoken_ sind erforderlich. Gehen Sie wie folgt vor, um diese Anmeldedaten zu erfassen:
+Um die AEM-Ereignisse aus dem Journal abzurufen, sind Anmeldeinformationen wie _IMS-Organisations-ID_, _Client-ID_ und _Zugriffs-Token_ erforderlich. Gehen Sie wie folgt vor, um diese Anmeldeinformationen zu erfassen:
 
-- Im [Adobe Developer-Konsole](https://developer.adobe.com), navigieren Sie zu Ihrem Projekt und klicken Sie auf , um es zu öffnen.
+- Navigieren Sie in der [Adobe Developer Console](https://developer.adobe.com) zu Ihrem Projekt und klicken Sie darauf, um es zu öffnen.
 
-- Unter dem **Anmeldeinformationen** klicken Sie auf die **OAuth Server-zu-Server** Link zum Öffnen der **Anmeldeinformationen** Registerkarte.
+- Klicken Sie im Bereich **Credentials** (Anmeldeinformationen) auf den Link **OAuth Server-to-Server**, um die Registerkarte **Credential details** (Details zu Anmeldedaten) zu öffnen.
 
-- Klicken Sie auf **Zugriffstoken generieren** -Schaltfläche, um das Zugriffstoken zu generieren.
+- Klicken Sie auf die Schaltfläche **Generate access token** (Zugriffs-Token generieren), um das Zugriffs-Token zu generieren.
 
-  ![Adobe Developer Console-Projekt Zugriffstoken generieren](../assets/examples/journaling/adobe-developer-console-project-generate-access-token.png)
+  ![Adobe Developer Console-Projekt: Zugriffs-Token generieren](../assets/examples/journaling/adobe-developer-console-project-generate-access-token.png)
 
-- Kopieren Sie die **Generiertes Zugriffstoken**, **CLIENT-ID**, und **ORGANISATIONS-ID**. Sie benötigen sie später in diesem Tutorial.
+- Kopieren Sie die Angaben für **Generated access token** (Generiertes Zugriffs-Token), **CLIENT ID** (CLIENT-ID) und **ORGANIZATION ID** (ORGANISATIONS-ID). Sie benötigen sie später in diesem Tutorial.
 
-  ![Adobe Developer Console - Projektoptionen](../assets/examples/journaling/adobe-developer-console-project-copy-credentials.png)
+  ![Adobe Developer Console-Projekt: Anmeldeinformationen kopieren](../assets/examples/journaling/adobe-developer-console-project-copy-credentials.png)
 
-- Jede Ereignisregistrierung ist automatisch für die Aufzeichnung aktiviert. So rufen Sie die _eindeutiger Journal-API-Endpunkt_ Klicken Sie auf die Ereigniskarte, die für AEM Ereignisse angemeldet ist. Aus dem **Registrierungsdetails** Registerkarte, kopieren Sie die **JOURNALING UNIQUE API ENDPOINT**.
+- Das Journaling wird automatisch für jede Ereignisregistrierung aktiviert. Um den _eindeutigen Journaling-API-Endpunkt_ Ihrer Ereignisregistrierung zu erhalten, klicken Sie auf die Ereigniskarte, für die AEM-Ereignisse abonniert sind. Kopieren Sie auf der Registerkarte **Registration Details** (Registrierungsdetails) die Informationen zu **JOURNALING UNIQUE API ENDPOINT** (EINDEUTIGER API-ENDPUNKT FÜR DAS JOURNALING).
 
-  ![Adobe Developer Console-Projektereigniskarte](../assets/examples/journaling/adobe-developer-console-project-events-card.png)
+  ![Adobe Developer Console-Projekt: Ereigniskarte](../assets/examples/journaling/adobe-developer-console-project-events-card.png)
 
-## AEM Ereignisprotokoll laden
+## Laden des AEM-Ereignisprotokolls
 
-Um die Dinge einfach zu halten, ruft diese gehostete Webanwendung nur den ersten Batch von AEM-Ereignissen aus dem Protokoll ab. Dies sind die ältesten verfügbaren Ereignisse im Protokoll. Weitere Informationen finden Sie unter [erster Ereignisstapel](https://developer.adobe.com/events/docs/guides/api/journaling_api/#fetching-your-first-batch-of-events-from-the-journal).
+Um die Dinge einfach zu halten, ruft diese gehostete Web-Anwendung nur den ersten Batch von AEM-Ereignissen aus dem Journal ab. Dies sind die ältesten verfügbaren Ereignisse im Journal. Weitere Informationen finden Sie im Abschnitt zum [ersten Batch von Ereignissen](https://developer.adobe.com/events/docs/guides/api/journaling_api/#fetching-your-first-batch-of-events-from-the-journal).
 
-- Im [Glitch - gehostete Webanwendung](https://indigo-speckle-antler.glitch.me/), geben Sie die **Kennung der IMS-Organisation**, **Client-ID**, und **Zugriffstoken** Sie haben zuvor aus dem Adobe Developer Console-Projekt kopiert und klicken auf **Einsenden**.
+- Geben Sie in [Glitch – gehostete Webanwendung](https://indigo-speckle-antler.glitch.me/) die **IMS-Organisations-ID**, die **Kunden-ID** und das **Zugriffs-Token** ein, die bzw. das Sie zuvor aus dem Adobe Developer Console-Projekt kopiert haben und klicken auf **Senden**.
 
-- Bei Erfolg zeigt die Tabellenkomponente die AEM Ereignisjournal-Daten an.
+- Bei Erfolg zeigt die Tabellenkomponente die AEM-Ereignisjournaldaten an.
 
-  ![Ereignisjournal-Daten AEM](../assets/examples/journaling/load-journal.png)
+  ![AEM-Ereignisjournaldaten](../assets/examples/journaling/load-journal.png)
 
-- Doppelklicken Sie auf die Zeile, um die Payload des vollständigen Ereignisses anzuzeigen. Sie können sehen, dass die AEM Ereignisdetails alle erforderlichen Informationen zur Verarbeitung des Ereignisses im Webhook haben. Beispielsweise der Ereignistyp (`type`), Ereignisquelle (`source`), Ereignis-ID (`event_id`), Ereigniszeit (`time`) und Ereignisdaten (`data`).
+- Um die vollständige Ereignis-Payload anzuzeigen, doppelklicken Sie auf die Zeile. Sie können sehen, dass die AEM-Ereignisdetails alle notwendigen Informationen enthalten, um das Ereignis im Webhook zu verarbeiten. Beispiele sind Ereignistyp (`type`), Ereignisquelle (`source`), Ereignis-ID (`event_id`), Ereigniszeit (`time`) und Ereignisdaten (`data`).
 
-  ![AEM Ereignisnutzlast abschließen](../assets/examples/journaling/complete-journal-data.png)
+  ![Vollständige AEM-Ereignis-Payload](../assets/examples/journaling/complete-journal-data.png)
 
 ## Zusätzliche Ressourcen
 
-- [Glitch-Webhook-Quellcode](https://glitch.com/edit/#!/indigo-speckle-antler) ist als Referenz verfügbar. Es ist eine einfache React-Anwendung, die [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html?lang=de) Komponenten zum Rendern der Benutzeroberfläche.
+- [Quell-Code für den Glitch-Webhook](https://glitch.com/edit/#!/indigo-speckle-antler) steht als Referenz zur Verfügung. Es ist eine einfache React-Anwendung, die [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html?lang=de)-Komponenten zum Rendern der Benutzeroberfläche verwendet.
 
-- [Adobe I/O Events Journaling API](https://developer.adobe.com/events/docs/guides/api/journaling_api/) bietet detaillierte Informationen zur API, wie den ersten, nächsten und letzten Batch von Ereignissen, Paginierung und mehr.
+- Die [Adobe I/O-Ereignisjournal-API](https://developer.adobe.com/events/docs/guides/api/journaling_api/) bietet detaillierte Informationen zur API, z. B. den ersten, nächsten und letzten Ereignis-Batch, Paginierung und mehr.

@@ -1,6 +1,6 @@
 ---
-title: Generieren von PDF mit Daten aus einem auf Kernkomponenten basierenden adaptiven Formular
-description: Zusammenführen von Daten aus der Kernkomponentenbasierten Formularübermittlung mit der XDP-Vorlage im Workflow
+title: Generieren einer PDF mit Daten aus einem auf Kernkomponenten basierenden adaptiven Formular
+description: Zusammenführen von Daten aus der auf Kernkomponenten basierenden Formularübermittlung mit der XDP-Vorlage im Workflow
 version: 6.5
 feature: Forms Service
 topic: Development
@@ -8,40 +8,41 @@ role: Developer
 level: Experienced
 jira: KT-15025
 last-substantial-update: 2024-02-26T00:00:00Z
-source-git-commit: acfd982ce471c8510cb59ed4d353f1d47dcfb5dc
-workflow-type: tm+mt
+exl-id: cae160f2-21a5-409c-942d-53061451b249
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '324'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Generieren von PDF mit Daten aus der auf Kernkomponenten basierenden Formularübermittlung
+# Generieren einer PDF mit Daten aus der auf Kernkomponenten basierenden Formularübermittlung
 
-Im Folgenden finden Sie den überarbeiteten Text mit großgeschriebenen &quot;Kernkomponenten&quot;:
+Im Folgenden finden Sie den überarbeiteten Text:
 
-Ein typisches Szenario besteht darin, eine PDF aus Daten zu generieren, die über ein auf Kernkomponenten basierendes adaptives Formular übermittelt werden. Diese Daten liegen immer im JSON-Format vor. Um eine PDF mithilfe der Render PDF API zu generieren, müssen die JSON-Daten in das XML-Format konvertiert werden. Die `toString` Methode `org.json.XML` wird für diese Konvertierung verwendet. Weitere Informationen finden Sie im Abschnitt [Dokumentation `org.json.XML.toString` method](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-).
+Ein typisches Szenario besteht darin, eine PDF aus Daten zu generieren, die über ein auf Kernkomponenten basierendes adaptives Formular übermittelt werden. Diese Daten liegen immer im JSON-Format vor. Um eine PDF mithilfe der Render PDF-API zu generieren, müssen die JSON-Daten in das XML-Format konvertiert werden. Für diesen Konvertierungsvorgang wird die `toString`-Methode von `org.json.XML` verwendet. Weitere Informationen finden Sie in der [Dokumentation zur `org.json.XML.toString`-Methode](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-).
 
-## Adaptives Formular basierend auf dem JSON-Schema
+## Auf dem JSON-Schema basierendes adaptives Formular
 
-Führen Sie die folgenden Schritte aus, um ein JSON-Schema für Ihr adaptives Formular zu erstellen:
+Führen Sie die folgenden Schritte aus, um ein JSON-Schema für Ihr adaptives Formular zu erstellen.
 
 ### Generieren von Beispieldaten für die XDP
 
-Um den Prozess zu optimieren, führen Sie die folgenden verfeinerten Schritte aus:
+Gehen Sie wie folgt vor, um den Prozess zu optimieren:
 
 1. Öffnen Sie die XDP-Datei in AEM Forms Designer.
-1. Navigieren Sie zu &quot;Datei&quot;> &quot;Formulareigenschaften&quot;> &quot;Vorschau&quot;.
-1. Wählen Sie &quot;Vorschaudaten generieren&quot;.
-1. Klicken Sie auf &quot;Erzeugen&quot;.
-1. Weisen Sie einen aussagekräftigen Dateinamen zu, z. B. `form-data.xml`.
+1. Navigieren Sie zu „Datei“ > „Formulareigenschaften“ > „Vorschau“.
+1. Wählen Sie „Vorschaudaten erstellen“ aus.
+1. Wählen Sie „Erstellen“ aus.
+1. Wählen Sie einen aussagekräftigen Dateinamen aus, z. B. `form-data.xml`.
 
-### JSON-Schema aus den XML-Daten generieren
+### Generieren eines JSON-Schemas aus XML-Daten
 
-Sie können jedes kostenlose Online-Tool nutzen, um [XML in JSON konvertieren](https://jsonformatter.org/xml-to-jsonschema) unter Verwendung der im vorherigen Schritt generierten XML-Daten.
+Sie können ein beliebiges kostenloses Onlinetool nutzen, um anhand der im vorherigen Schritt generierten XML-Daten [XML in JSON zu konvertieren](https://jsonformatter.org/xml-to-jsonschema).
 
 ### Benutzerdefinierter Workflow-Prozess zum Konvertieren von JSON in XML
 
-Der bereitgestellte Code konvertiert JSON in XML und speichert die resultierende XML in einer Workflow-Prozessvariablen mit dem Namen `dataXml`.
+Mit dem bereitgestellten Code wird JSON in XML konvertiert und das XML-Ergebnis in einer Workflow-Prozessvariablen namens `dataXml` gespeichert.
 
 ```java
 import org.slf4j.LoggerFactory;
@@ -105,23 +106,22 @@ public class ConvertJSONToXML implements WorkflowProcess {
 
 ### Erstellen eines Workflows
 
-Erstellen Sie einen Workflow, der zwei Schritte umfasst, um Formularübermittlungen zu handhaben:
+Erstellen Sie einen Workflow mit zwei Schritten, um Formularübermittlungen zu verarbeiten:
 
-1. Der erste Schritt verwendet einen benutzerdefinierten Prozess, um die gesendeten JSON-Daten in XML umzuwandeln.
-1. Der folgende Schritt generiert eine PDF, indem die XML-Daten mit der XDP-Vorlage kombiniert werden.
+1. Im ersten Schritt kommt ein benutzerdefinierter Prozess zur Anwendung, um die übermittelten JSON-Daten in XML umzuwandeln.
+1. Im nachfolgenden Schritt wird eine PDF generiert, indem die XML-Daten mit der XDP-Vorlage kombiniert werden.
 
-![json-to-xml](assets/json-to-xml-process-step.png)
+![JSON-Konvertierung in XML](assets/json-to-xml-process-step.png)
 
 
-## Bereitstellen des Beispielcodes
+## Bereitstellen des Beispiel-Codes
 
-Führen Sie die folgenden rationalisierten Schritte aus, um dies auf Ihrem lokalen Server zu testen:
+Führen Sie folgende Schritte aus, um dies auf Ihrem lokalen Server zu testen:
 
-1. [Laden Sie das benutzerdefinierte Bundle über die AEM OSGi-Web-Konsole herunter und installieren Sie es.](assets/convertJsonToXML.core-1.0.0-SNAPSHOT.jar).
-1. [Importieren des Workflow-Pakets](assets/workflow_to_render_pdf.zip).
-1. [Importieren der Beispiel-Vorlage für adaptives Formular und XDP](assets/adaptive_form_and_xdp_template.zip).
-1. [Vorschau des adaptiven Formulars](http://localhost:4502/content/dam/formsanddocuments/f23/jcr:content?wcmmode=disabled).
+1. [Laden Sie das benutzerdefinierte Bundle über die AEM OSGi-Web-Konsole herunter und installieren Sie es](assets/convertJsonToXML.core-1.0.0-SNAPSHOT.jar).
+1. [Importieren Sie das Workflow-Paket](assets/workflow_to_render_pdf.zip).
+1. [Importieren Sie das beispielhafte adaptive Formular und die beispielhafte XDP-Vorlage](assets/adaptive_form_and_xdp_template.zip).
+1. [Zeigen Sie das adaptive Formular in einer Vorschau an](http://localhost:4502/content/dam/formsanddocuments/f23/jcr:content?wcmmode=disabled).
 1. Füllen Sie einige Formularfelder aus.
-1. Senden Sie das Formular, um den AEM-Workflow zu starten.
-1. Suchen Sie die gerenderte PDF im Payload-Ordner des Workflows.
-
+1. Übermitteln Sie das Formular, um den AEM-Workflow initiieren.
+1. Suchen Sie nach der gerenderten PDF im Payload-Ordner des Workflows.

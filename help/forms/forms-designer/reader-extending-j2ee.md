@@ -1,6 +1,6 @@
 ---
-title: Reader zur Erweiterung der PDF forms in AEM Forms J2EE
-description: Kurzvideo, in dem beschrieben wird, wie AEM Forms Reader Extensions verwendet werden soll, damit Endbenutzer PDF forms aus Adobe/Acrobat Reader ausfüllen und speichern können
+title: Anwenden der Reader Extensions auf PDF-Formulare in AEM Forms J2EE
+description: Kurzvideo über das Verwenden von AEM Forms Reader Extensions, damit Endbenutzende PDF-Formulare aus Adobe/Acrobat Reader ausfüllen und speichern können.
 version: 6.5
 feature: Reader Extensions
 topic: Development
@@ -11,16 +11,16 @@ duration: 113
 last-substantial-update: 2024-02-29T00:00:00Z
 jira: KT-15061
 thumbnail: 3427629.jpeg
-source-git-commit: b2062d9c67dc029c8d0e41f82f634f930e8249a6
-workflow-type: tm+mt
+exl-id: 3ba3e51a-e4a3-42c3-92e1-97818dc4ad33
+source-git-commit: 08ad6e3e6db6940f428568c749901b0b3c6ca171
+workflow-type: ht
 source-wordcount: '65'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Anwenden der Reader Extensions auf ein PDF-Formular in AEM Forms J2EE
 
-# Reader zum Erweitern des PDF-Formulars in AEM Forms J2EE
-
-Kurzvideo, in dem beschrieben wird, wie AEM Forms Reader Extensions verwendet werden soll, damit Endbenutzer PDF forms aus Adobe Acrobat Reader ausfüllen und speichern können
+Kurzvideo über das Verwenden von AEM Forms Reader Extensions, damit Endbenutzende PDF-Formulare aus Adobe Acrobat Reader ausfüllen und speichern können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427629/?learn=on)

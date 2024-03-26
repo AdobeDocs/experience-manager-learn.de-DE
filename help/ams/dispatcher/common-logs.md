@@ -11,9 +11,9 @@ doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
 duration: 252
 source-git-commit: 80c04ce1ad7d60c1fc75ecc194dd54a2ad5b82fa
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '796'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -136,7 +136,7 @@ Diese Zahl sollte so hoch wie möglich sein.
 
 >[!NOTE]
 >
->Selbst wenn Sie Ihre Cache-Einstellungen in der Farm-Datei haben, um alles zwischenzuspeichern, das Sie möglicherweise zu häufig oder zu aggressiv löschen, kann dies zu einem geringeren Prozentsatz des Cache-Trefferverhältnisses führen
+>Wenn entsprechend Ihren Cache-Einstellungen in der Farm-Datei alles zwischengespeichert werden soll, Sie den Cache aber zu häufig oder zu umfangreich leeren, kann dies den Prozentsatz die Cache-Trefferquote verringern.
 
 ## Fehlendes Verzeichnis
 
@@ -169,7 +169,7 @@ Thu Sep 27 17:35:11 2018 W pid 18936 Unable to fetch vanity URLs from 10.43.0.42
 
 Dieser Fehler tritt auf, wenn Sie Ihren Dispatcher so konfiguriert haben, dass der dynamische automatische Filter Vanity-URLs zulässt, die Einrichtung jedoch nicht durch Installation des Pakets im AEM-Renderer abgeschlossen wurde.
 
-Um dies zu beheben, installieren Sie das Feature Pack für Vanity-URLs in der AEM-Instanz und lassen Sie zu, dass es für anonyme Benutzende bereit ist. Weitere Informationen dazu finden Sie [hier](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html).
+Um dies zu beheben, installieren Sie das Feature Pack für Vanity-URLs in der AEM-Instanz und lassen Sie zu, dass es für anonyme Benutzende bereit ist. Weitere Informationen dazu finden Sie [hier](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html?lang=de).
 
 Eine eingerichtete Vanity-URL, die funktioniert, sieht wie folgt aus:
 

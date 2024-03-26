@@ -12,9 +12,9 @@ last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 377
 source-git-commit: d178059f6f00228586e692465f7f437129bffaae
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '843'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -27,14 +27,14 @@ Inhaltsfragmente, die bei der Inhaltsmodellierung in AEM Headless verwendet werd
 Der Typ `ImageRef` verfügt über drei URL-Optionen für Inhaltsverweise:
 
 + `_path` ist der referenzierte Pfad in AEM und enthält keinen AEM-Ursprung (Host-Namen)
-+ `_dynamicUrl` ist die URL zu für die weboptimierte Bereitstellung des Bild-Assets.
++ `_dynamicUrl` ist die URL für die Web-optimierte Bereitstellung des Bild-Assets.
    + `_dynamicUrl` enthält keinen AEM-Ursprung. Daher muss die Domain (AEM-Author- oder -Publish-Service) von der Client-Anwendung bereitgestellt werden.
 + `_authorUrl` ist die vollständige URL zum Bild-Asset in AEM Author
    + [AEM-Autor](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=de) kann verwendet werden, um eine Vorschau der Headless-Anwendung bereitzustellen.
 + `_publishUrl` ist die vollständige URL zum Bild-Asset in AEM Publish
    + [AEM-Veröffentlichung](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=de) ist normalerweise der Ort, über den die Produktionsbereitstellung der Headless-Anwendung Bilder anzeigt.
 
-Die `_dynamicUrl` ist die empfohlene URL für die Bereitstellung von Bild-Assets und sollte die Verwendung von `_path`, `_authorUrl`, und `_publishUrl` wann immer möglich.
+`_dynamicUrl` ist die empfohlene URL für die Bereitstellung von Bild-Assets und sollte, sofern möglich, immer anstelle von `_path`, `_authorUrl` und `_publishUrl` verwendet werden.
 
 |                                | AEM as a Cloud Service | AEM as a Cloud Service-RDE | AEM SDK | AEM 6.5 |
 | ------------------------------ |:----------------------:|:--------------------------:|:-------:|:-------:|
@@ -129,7 +129,7 @@ Die resultierende JSON-Antwort beinhaltet die angeforderten Felder, die die Web-
 }
 ```
 
-Verwenden Sie zum Laden des Web-optimierten Bildes des referenzierten Bildes in Ihrer Anwendung das `_dynamicUrl` des `primaryImage` als Quell-URL des Bildes.
+Verwenden Sie zum Laden des Web-optimierten Bildes des referenzierten Bildes in Ihrer Anwendung die `_dynamicUrl` des `primaryImage` als Quell-URL des Bildes.
 
 In React sieht die Anzeige des Web-optimierten Bildes über AEM Publish wie folgt aus:
 
@@ -146,7 +146,7 @@ Denken Sie daran, dass `_dynamicUrl` nicht die AEM-Domain enthält. Daher müsse
 
 ## Responsive URLs
 
-Im obigen Beispiel wird ein Bild mit einer einzigen Größe verwendet. In Web-Erlebnissen sind jedoch häufig responsive Bild-Sets erforderlich. Responsive Bilder können mithilfe von [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) oder [Bildelementen](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) implementiert werden. Das folgende Codefragment zeigt die Verwendung der `_dynamicUrl` als Basis. `width` ist ein URL-Parameter, an den Sie dann anhängen können `_dynamicUrl` für unterschiedliche responsive Ansichten.
+Im obigen Beispiel wird ein Bild mit einer einzigen Größe verwendet. In Web-Erlebnissen sind jedoch häufig responsive Bild-Sets erforderlich. Responsive Bilder können mithilfe von [img srcsets](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) oder [Bildelementen](https://css-tricks.com/a-guide-to-the-responsive-images-syntax-in-html/#using-srcset) implementiert werden. Der folgende Code-Ausschnitt zeigt die Verwendung der `_dynamicUrl` als Basis. `width` ist ein URL-Parameter, den Sie dann für unterschiedliche responsive Ansichten an `_dynamicUrl` anhängen können.
 
 ```javascript
 // The AEM host is usually read from a environment variable of the SPA.
