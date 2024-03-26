@@ -1,6 +1,6 @@
 ---
-title: Einfaches Formular mit Designer erstellen
-description: Kurzvideo (unter 2 Minuten), in dem das Erstellen eines einfachen Formulars beschrieben wird
+title: Erstellen eines einfachen Formulars mit Designer
+description: Kurzvideo (unter 2 Minuten) über das Erstellen eines einfachen Formulars
 version: 6.5
 feature: Forms Designer,Designer
 topic: Development
@@ -15,11 +15,11 @@ exl-id: ac482951-9941-4c14-95b2-29d274fa610e
 source-git-commit: c4181907c7b398d2ba1a8735a028695831aca90e
 workflow-type: tm+mt
 source-wordcount: '31'
-ht-degree: 3%
+ht-degree: 90%
 
 ---
 
-# Einfaches Formular mit AEM Forms Designer erstellen
+# Erstellen eines einfachen Formulars mit AEM Forms Designer
 
 Einführung
 
