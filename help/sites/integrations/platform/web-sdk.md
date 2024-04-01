@@ -14,10 +14,10 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1360
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '1235'
-ht-degree: 100%
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
+source-wordcount: '1232'
+ht-degree: 91%
 
 ---
 
@@ -45,7 +45,7 @@ In **Experience Platform**:
 + Zugriff auf **Schemata** unter Daten-Management
 + Zugriff auf **Datensätze** unter Daten-Management
 + Zugriff auf **Datenströme** unter Datenerfassung
-+ Zugriff auf **Tags** (früher als Launch bezeichnet) unter Datenerfassung
++ Zugriff auf **Tags** unter Datenerfassung
 
 Falls Sie nicht über die erforderlichen Berechtigungen verfügen, können Ihre Systemadmins über [Adobe Admin Console](https://adminconsole.adobe.com/) die erforderlichen Berechtigungen erteilen.
 
@@ -75,7 +75,7 @@ Machen Sie sich mit dem Konzept von Datenströmen und verwandten Themen wie Data
 
 ## Erstellen einer Tag-Eigenschaft – Experience Platform
 
-Erfahren Sie, wie Sie in Experience Platform eine Tag-Eigenschaft (ehemals Launch) erstellen, um die JavaScript-Bibliothek des Web SDK zur WKND-Website hinzuzufügen. Die neu definierte Tag-Eigenschaft verfügt über die folgenden Ressourcen:
+Erfahren Sie, wie Sie eine Tag-Eigenschaft in Experience Platform erstellen, um die JavaScript-Bibliothek des Web SDK zur WKND-Website hinzuzufügen. Die neu definierte Tag-Eigenschaft verfügt über die folgenden Ressourcen:
 
 + Tag-Erweiterungen: [Core](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) und [Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
 + Datenelemente: Die Datenelemente des benutzerdefinierten Code-Typs, die den Seitennamen, den Site-Abschnitt und den Hostnamen mithilfe der Datenschicht der Adobe Client-WKND-Site extrahieren. Auch das Datenelement vom XDM-Objekttyp, das mit dem neu erstellten WKND-XDM-Schema übereinstimmt, wurde in einem früheren Schritt [Erstellen eines XDM-Schemas](#create-xdm-schema---experience-platform) erstellt.
@@ -139,26 +139,26 @@ Beim Erstellen und Veröffentlichen der Tag-Bibliothek mit dem **Veröffentlichu
   var pageShownEventHandler = function(evt) {
   // defensive coding to avoid a null pointer exception
   if(evt.hasOwnProperty("eventInfo") && evt.eventInfo.hasOwnProperty("path")) {
-      //trigger Launch Rule and pass event
+      // trigger tags Rule and pass event
       console.debug("cmp:show event: " + evt.eventInfo.path);
       var event = {
-          //include the path of the component that triggered the event
+          // include the path of the component that triggered the event
           path: evt.eventInfo.path,
-          //get the state of the component that triggered the event
+          // get the state of the component that triggered the event
           component: window.adobeDataLayer.getState(evt.eventInfo.path)
       };
   
-      //Trigger the Launch Rule, passing in the new 'event' object
-      // the 'event' obj can now be referenced by the reserved name 'event' by other Launch data elements
+      // Trigger the tags Rule, passing in the new 'event' object
+      // the 'event' obj can now be referenced by the reserved name 'event' by other tags data elements
       // i.e 'event.component['someKey']'
       trigger(event);
       }
   }
   
-  //set the namespace to avoid a potential race condition
+  // set the namespace to avoid a potential race condition
   window.adobeDataLayer = window.adobeDataLayer || [];
   
-  //push the event listener for cmp:show into the data layer
+  // push the event listener for cmp:show into the data layer
   window.adobeDataLayer.push(function (dl) {
       //add event listener for 'cmp:show' and callback to the 'pageShownEventHandler' function
       dl.addEventListener("cmp:show", pageShownEventHandler);
@@ -174,9 +174,9 @@ Weitere Informationen zur Integration von AEM-Kernkomponenten in die Adobe Clien
 
 ## Verbinden der Tag-Eigenschaft mit AEM
 
-Erfahren Sie, wie Sie die kürzlich erstellte Tag-Eigenschaft über die Adobe IMS- und Adobe Launch-Konfiguration in AEM mit AEM verknüpfen. Wenn eine AEM as a Cloud Service-Umgebung eingerichtet ist, werden mehrere Konfigurationen des technischen Adobe IMS-Kontos automatisch generiert, einschließlich Adobe Launch. Für AEM Version 6.5 müssen Sie jedoch eine manuell konfigurieren.
+Erfahren Sie, wie Sie die kürzlich erstellte Tag-Eigenschaft über Adobe IMS mit AEM und Tags in der Adobe Experience Platform-Konfiguration in AEM verknüpfen. Wenn eine AEM as a Cloud Service Umgebung eingerichtet ist, werden automatisch mehrere Konfigurationen des technischen Adobe IMS-Kontos generiert, einschließlich Tags. Für AEM Version 6.5 müssen Sie jedoch eine manuell konfigurieren.
 
-Nach Verknüpfung der Tag-Eigenschaft kann die WKND-Site die JavaScript-Bibliothek der Tag-Eigenschaft mithilfe der Cloud Service-Konfiguration von Adobe Launch auf die Web-Seiten laden.
+Nach Verknüpfung der Tag-Eigenschaft kann die WKND-Site die JavaScript-Bibliothek der Tag-Eigenschaft mithilfe der Tags in der Adobe Experience Platform-Cloud-Service-Konfiguration auf die Webseiten laden.
 
 ### Überprüfen des Ladens von Tag-Eigenschaften auf WKND
 

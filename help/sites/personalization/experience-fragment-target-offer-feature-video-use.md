@@ -9,10 +9,10 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 9ee826cf-389f-4570-bfe1-0d43d3fed3e1
 duration: 588
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
 source-wordcount: '298'
-ht-degree: 100%
+ht-degree: 87%
 
 ---
 
@@ -24,7 +24,7 @@ Adobe Experience Manager stellt den Personalisierungs-Workflow zwischen AEM und 
 
 >[!NOTE]
 >
->Es wird empfohlen, die `at.js`-Client-Bibliothek zu verwenden. Die Best Practice ist die Verwendung von Tag-Management-Lösungen wie Adobe Experience Platform Launch, Adobe DTM oder einer beliebigen Tag-Management-Lösung von Drittanbietern, um Ihren Sites Zielbibliotheken hinzuzufügen.
+>Verwendung empfohlen `at.js` Client-Bibliothek verwenden. Best Practice ist die Verwendung von Tag-Management-Lösungen wie Tags in Adobe Experience Platform oder einer beliebigen Tag-Management-Lösung von Drittanbietern, um Ihren Seiten Zielbibliotheken hinzuzufügen.
 
 
 * Der benutzerfreundliche und leistungsstarke Mechanismus von Adobe Experience Manager zur Inhaltserstellung sowie die künstliche Intelligenz (AI) und das maschinelle Lernen von Adobe Target helfen Inhaltsautorinnen und Inhaltsautoren bei der Erstellung und Verwaltung von Inhalten für alle Kanäle an einem zentralen Ort. Mit der Möglichkeit, Experience Fragments als HTML-Angebote in Adobe Target zu exportieren, können Marketing-Fachleute mit diesen Angeboten jetzt flexibler ein stärker personalisiertes Erlebnis erstellen und nun jedes von ihnen erstellte Erlebnis testen und skalieren.

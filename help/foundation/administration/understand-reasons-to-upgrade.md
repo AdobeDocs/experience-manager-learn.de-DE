@@ -9,10 +9,10 @@ level: Beginner
 doc-type: Article
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
 duration: 809
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '2586'
-ht-degree: 100%
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
+source-wordcount: '2589'
+ht-degree: 99%
 
 ---
 
@@ -623,8 +623,8 @@ Beschleunigen der Site-Entwicklung. Verfügbar auf GitHub für regelmäßige Ver
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/using/aem_launch_adobeio_integration.html" target="_blank">Adobe Experience Platform Launch-Integration</a>:</strong>
- Integrieren in den Tag Management Cloud Service der nächsten Generation von Adobe.</td>
+            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/using/aem_launch_adobeio_integration.html" target="_blank">Tags in der Adobe Experience Platform-Integration</a>:</strong>
+            Integrieren Sie mit dem Tag-Management-Cloud-Dienst der nächsten Generation von Adobe.</td>
             <td> </td>
             <td> </td>
             <td> </td>

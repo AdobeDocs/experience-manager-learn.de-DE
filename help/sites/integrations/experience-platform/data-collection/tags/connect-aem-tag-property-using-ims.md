@@ -1,6 +1,6 @@
 ---
 title: Verbinden von AEM Sites mit der Tag-Eigenschaft mithilfe von IMS
-description: Erfahren Sie, wie Sie AEM Sites mithilfe der IMS-Konfiguration in AEM mit der Tag-Eigenschaft verbinden. Dieses Setup authentifiziert AEM mit der Launch-API und ermöglicht AEM die Kommunikation über die Launch-APIs, um auf Tag-Eigenschaften zuzugreifen.
+description: Erfahren Sie, wie Sie AEM Sites mit der Tag-Eigenschaft über die IMS-Konfiguration in AEM verbinden.
 solution: Experience Manager, Data Collection, Experience Platform
 jira: KT-5981
 thumbnail: 38555.jpg
@@ -13,40 +13,32 @@ badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: 92dbd185-bad4-4a4d-b979-0d8f5d47c54b
 duration: 72
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '314'
-ht-degree: 100%
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
+source-wordcount: '263'
+ht-degree: 40%
 
 ---
 
 # Verbinden von AEM Sites mit der Tag-Eigenschaft mithilfe von IMS{#connect-aem-and-tag-property-using-ims}
 
->[!NOTE]
->
->Der Prozess der Umbenennung von Adobe Experience Platform Launch in eine Reihe von Datenerfassungstechnologien wird in der AEM Produktoberfläche, in Inhalten und in der Dokumentation implementiert, sodass der Begriff „Launch“ hier noch verwendet wird.
-
-Erfahren Sie, wie Sie AEM mit der Tag-Eigenschaft über die IMS-Konfiguration (Identity Management-System) in AEM verbinden. Dieses Setup authentifiziert AEM mit der Launch-API und ermöglicht AEM die Kommunikation über die Launch-APIs, um auf Tag-Eigenschaften zuzugreifen.
+Erfahren Sie, wie Sie mit der IMS-Konfiguration (Identity Management-System) in AEM eine Verbindung AEM mit der Tag-Eigenschaft herstellen. Dieses Setup authentifiziert AEM mit der Tags-API und ermöglicht AEM die Kommunikation über die Tags-APIs, um auf Tag-Eigenschaften zuzugreifen.
 
 ## Erstellen oder Wiederverwenden der IMS-Konfiguration
 
-Die IMS-Konfiguration mit dem Adobe Developer Console-Projekt ist erforderlich, um AEM in die neu erstellte Tag-Eigenschaft zu integrieren. Diese Konfiguration ermöglicht es AEM, über Launch-APIs mit der Tags-Anwendung zu kommunizieren, und IMS übernimmt den Sicherheitsaspekt dieser Integration.
+Die IMS-Konfiguration mit dem Adobe Developer Console-Projekt ist erforderlich, um AEM in die neu erstellte Tag-Eigenschaft zu integrieren. Diese Konfiguration ermöglicht AEM Kommunikation mit Tags-Anwendungen mithilfe von Tags-APIs und IMS, die den Sicherheitsaspekt dieser Integration behandeln.
 
-Wenn eine AEM as Cloud Service-Umgebung bereitgestellt wird, werden automatisch einige IMS-Konfigurationen wie Asset Compute, Adobe Analytics und Adobe Launch erstellt.  Es kann die automatisch erstellte IMS-Konfiguration **Adobe Launch** verwendet werden, bzw. wenn Sie eine AEM 6.x-Umgebung verwenden, sollte eine neue IMS-Konfiguration erstellt werden.
+Wenn eine AEM als Cloud Service-Umgebung bereitgestellt wird, werden einige IMS-Konfigurationen wie Asset compute, Adobe Analytics und Tags automatisch erstellt. Die automatisch erstellte **Tags in Adobe Experience Platform** Die IMS-Konfiguration kann verwendet werden oder eine neue IMS-Konfiguration sollte erstellt werden, wenn Sie AEM 6.X-Umgebung verwenden.
 
-Überprüfen Sie die automatisch erstellte IMS-Konfiguration **Adobe Launch** anhand der folgenden Schritte.
+Automatisch überprüfen **Tags in Adobe Experience Platform** IMS-Konfiguration anhand der folgenden Schritte.
 
-1. Öffnen Sie in AEM das Menü **Tools**
-
+1. Öffnen Sie in AEM -Autoreninstanz die **Instrumente** Menü
 1. Wählen Sie im Abschnitt „Sicherheit“ die Option „Adobe IMS-Konfigurationen“ aus.
-
 1. Wählen Sie die Karte **Adobe Launch** und klicken Sie auf **Eigenschaften**. Überprüfen Sie die Details auf den Registerkarten **Zertifikat** und **Konto**.  Klicken Sie dann auf **Abbrechen**, um zurückzukehren, ohne die automatisch erstellten Details zu ändern.
-
 1. Wählen Sie die Karte **Adobe Launch** und klicken Sie diesmal auf **Konsistenzprüfung**. Sie sollten die Meldung **Erfolg** wie unten dargestellt sehen.
 
-   ![Konsistente IMS-Konfiguration für Adobe Launch](assets/adobe-launch-healthy-ims-config.png)
-
+   ![Gesunde IMS-Konfiguration für Tags](assets/adobe-launch-healthy-ims-config.png)
 
 ## Nächste Schritte
 
-[Erstellen einer Launch-Cloud-Service-Konfiguration in AEM](create-aem-launch-cloud-service.md)
+[Erstellen einer Tag-Cloud Service-Konfiguration in AEM](create-aem-launch-cloud-service.md)

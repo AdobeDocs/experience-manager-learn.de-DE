@@ -10,10 +10,10 @@ badgeVersions: label="AEM Sites 6.5" before-title="false"
 doc-type: Tutorial
 exl-id: b632883f-65fd-4f89-bf39-ec2bce352d2d
 duration: 219
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
 source-wordcount: '846'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -46,7 +46,7 @@ Wir verfügen jetzt über personalisierte Inhalte in Form von Angeboten aus AEM 
 
 **Um dieses Szenario zu implementieren, ist Folgendes erforderlich:**
 
-* [Integrieren von AEM und Adobe Target mithilfe von Launch und Adobe I/O](./implementation.md#integrating-aem-target-options)
+* [Integrieren von AEM und Adobe Target mithilfe von Tags und Adobe I/O](./implementation.md#integrating-aem-target-options)
 * [AEM und Adobe Target, die Legacy-Cloud-Services verwenden](./implementation.md#integrating-aem-target-options)
 
 ***Nach der Implementierung der oben genannten Integrationen sehen wir uns jetzt das [Szenario im Detail](./personalization-use-case-1.md) an.***
@@ -67,7 +67,7 @@ VEC ist eine der Hauptfunktionen von Adobe Target. Mit VEC können Marketing- un
 
 **Um dieses Szenario zu implementieren, ist Folgendes erforderlich:**
 
-* [Integrieren von AEM und Adobe Target mithilfe von Launch und Adobe I/O](./implementation.md#integrating-aem-target-options)
+* [Integrieren von AEM und Adobe Target mithilfe von Tags und Adobe I/O](./implementation.md#integrating-aem-target-options)
 
 ***Nach der Implementierung der oben genannten Integration sehen wir uns nun das [Szenario im Detail an.](./personalization-use-case-3.md)***
 
@@ -85,6 +85,6 @@ Durch die Integration von Adobe Experience Manager mit Adobe Target können Sie 
 
 **Um dieses Szenario zu implementieren, müssen Sie folgenden Vorgang durchführen:**
 
-* [Integrieren von AEM und Adobe Target mithilfe von Launch und Adobe I/O](./implementation.md#integrating-aem-target-options)
+* [Integrieren von AEM und Adobe Target mithilfe von Tags und Adobe I/O](./implementation.md#integrating-aem-target-options)
 
-***Nach Implementierung der oben genannten Integration sollten wir nun das [Szenario im Detail](./personalization-use-case-2.md)*** ansehen.
+***Nach der Implementierung der oben genannten Integration sehen wir uns nun das [Szenario im Detail an.](./personalization-use-case-2.md)***

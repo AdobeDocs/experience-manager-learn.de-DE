@@ -12,18 +12,14 @@ badgeIntegration: label="Integration" type="positive"
 doc-type: Tutorial
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
 duration: 527
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '1795'
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
+source-wordcount: '1750'
 ht-degree: 100%
 
 ---
 
 # Nachverfolgen angeklickter Komponenten mit Adobe Analytics
-
->[!NOTE]
->
->Adobe Experience Platform Launch wurde als eine Suite von Datenerfassungstechnologien in Adobe Experience Platform umbenannt. Infolgedessen wurden in der gesamten Produktdokumentation verschiedene terminologische Änderungen durchgeführt. Eine konsolidierte Übersicht über die terminologischen Änderungen finden Sie in diesem [Dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=de).
 
 Verwenden Sie die ereignisbasierte [Adobe Client-Datenschicht mit den AEM-Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=de), um Klicks auf bestimmte Komponenten auf einer Adobe Experience Manager-Site zu verfolgen. Erfahren Sie, wie Sie Regeln in der Tag-Eigenschaft verwenden, um auf Klick-Ereignisse zu warten, nach Komponenten zu filtern und die Daten mit einem Verfolgungs-Link-Beacon an Adobe Analytics zu senden.
 

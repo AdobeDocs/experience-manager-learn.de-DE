@@ -12,10 +12,10 @@ badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: 2d201b48-c0fb-4bb4-a7d8-da9f4702e9ff
 duration: 124
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
 source-wordcount: '460'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -28,7 +28,7 @@ Erfahren Sie, wie Sie eine Aktivität erstellen, um Ihre auf AEM gehosteten Site
 Um ganze Seiten einer AEM-Website zu personalisieren, muss Folgendes konfiguriert werden:
 
 1. [Hinzufügen von Adobe Target zu Ihrer AEM-Website](./add-target-launch-extension.md)
-1. [Auslösen eines Adobe Target-Aufrufs von Launch](./load-and-fire-target.md)
+1. [Trigger eines Adobe Target-Aufrufs von Tags](./load-and-fire-target.md)
 
 ## Überblick über das Szenario
 

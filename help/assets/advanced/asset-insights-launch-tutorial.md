@@ -1,6 +1,6 @@
 ---
-title: Einrichten von Asset Insights mit AEM Assets und Adobe Launch
-description: In dieser fünfteiligen Videoreihe führen wir Sie durch die Einrichtung und Konfiguration von Asset Insights für mit Launch By Adobe durchgeführte Experience Manager-Bereitstellungen.
+title: Einrichten von Asset Insights mit AEM Assets und Tags
+description: In dieser fünfteiligen Videoreihe werden die Einrichtung und Konfiguration von Asset Insights für Experience Manager, der über -Tags bereitgestellt wird, erläutert.
 feature: Asset Insights
 version: 6.4, 6.5
 topic: Integrations
@@ -12,16 +12,16 @@ badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-titl
 doc-type: Tutorial
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
 duration: 2051
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '811'
-ht-degree: 100%
+source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+workflow-type: tm+mt
+source-wordcount: '739'
+ht-degree: 87%
 
 ---
 
-# Einrichten von Asset Insights mit AEM Assets und Adobe Experience Platform Launch
+# Einrichten von Asset Insights mit AEM Assets und Tags
 
-In dieser fünfteiligen Videoreihe führen wir Sie durch die Einrichtung und Konfiguration von Asset Insights für mit Adobe Launch durchgeführte Experience Manager-Bereitstellungen.
+In dieser fünfteiligen Videoreihe werden die Einrichtung und Konfiguration von Asset Insights für Experience Manager, der über -Tags bereitgestellt wird, erläutert.
 
 ## Teil 1: Überblick über Asset Insights {#overview}
 
@@ -71,7 +71,7 @@ Zum Asset-Tracking wird eine Report Suite mit Echtzeit-Datenerfassung erstellt. 
 
 >[!NOTE]
 >
->Echtzeit-Datenerfassung und AEM Asset-Reporting müssen für Ihre Adobe Analytics Report Suite aktiviert sein. Durch Aktivierung der AEM Asset Reporting-Funktion werden Analytics-Variablen zum Tracking von Asset-Erkenntnissen reserviert.
+Echtzeit-Datenerfassung und AEM Asset-Reporting müssen für Ihre Adobe Analytics Report Suite aktiviert sein. Durch Aktivierung der AEM Asset Reporting-Funktion werden Analytics-Variablen zum Tracking von Asset-Erkenntnissen reserviert.
 
 Für die AEM Assets Insights-Konfiguration sind die folgenden Anmeldeinformationen erforderlich:
 
@@ -81,15 +81,15 @@ Für die AEM Assets Insights-Konfiguration sind die folgenden Anmeldeinformation
 * Gemeinsamer geheimer Schlüssel (abrufbar über *Adobe Analytics > Admin > Unternehmenseinstellungen > Webservice*).
 * Report Suite (die richtige, für das Asset-Reporting verwendete Report Suite auswählen!)
 
-## Teil 4: Verwenden von Adobe Experience Platform Launch zum Hinzufügen der Adobe Analytics-Erweiterung {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
+## Teil 4: Verwendung von Tags zum Hinzufügen der Adobe Analytics-Erweiterung {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
 
-Hinzufügen der Adobe Analytics-Erweiterung, Erstellen von Seitenladeregeln und Integrieren von AEM mit Adobe Experience Platform Launch in das technischen Adobe IMS-Konto.
+Hinzufügen der Adobe Analytics-Erweiterung, Erstellen von Seitenladeregeln und Integrieren von AEM mit Tags mit dem technischen Adobe IMS-Konto.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 
 >[!NOTE]
 >
->Stellen Sie sicher, dass Sie alle Ihre Änderungen von der Autoreninstanz in der Veröffentlichungsinstanz replizieren.
+Stellen Sie sicher, dass Sie alle Ihre Änderungen von der Autoreninstanz in der Veröffentlichungsinstanz replizieren.
 
 ### Regel 1: Seitenverfolgung (pagetracker.js) {#rule-page-tracker-pagetracker-js}
 
@@ -175,13 +175,13 @@ document.querySelectorAll('[data-aem-asset-id]').forEach(function(element) {
 ### Konsolen-Debug-Anweisungen {#console-debug-statements}
 
 ```javascript
-//Launch Build Info
+// Tags build info
 _satellite.buildInfo
 
 //Enables debug messages
 _satellite.setDebug(true);
 
-//Asset Insight JS Object
+//Asset Insight JavaScript Object
 assetAnalytics
 
 //List of trackable images
@@ -190,10 +190,8 @@ document.querySelectorAll(".cmp-image__image");
 
 Im Video wird auf zwei Google Chrome-Browser-Erweiterungen als Möglichkeit zum Debugging von Analytics verwiesen. Ähnliche Erweiterungen sind auch für andere Browser verfügbar.
 
-* [Chrome-Erweiterung „Launch and DTM Switch“](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=de)
-* [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+* [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
-Mit der folgenden Chrome-Erweiterung ist es auch möglich, DTM in den Debug-Modus wechseln zu lassen: [Launch and DTM Switch](https://chrome.google.com/webstore/detail/launch-and-dtm-switch/nlgdemkdapolikbjimjajpmonpbpmipk?hl=de). Dies vereinfacht die Überprüfung auf Fehler im Zusammenhang mit der DTM-Bereitstellung. Darüber hinaus können Sie DTM in einem beliebigen Browser über *Entwickler-Tools > JS-Konsole* manuell in den Debug-Modus wechseln lassen, indem Sie folgendes Snippet hinzufügen:
 
 ## Teil 5: Testen der Analytics-Verfolgung und Synchronisieren von Insights-Daten{#analytics-tracking-asset-insights}
 
