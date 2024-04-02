@@ -12,10 +12,10 @@ jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: 1a1accbe-7706-4f9b-bf63-755090d03c4c
 duration: 325
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: baf81bb43a659e49728a05f83e7be394f7fbfb35
+workflow-type: tm+mt
 source-wordcount: '1134'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -37,7 +37,7 @@ Die Konfiguration der Zwischenspeicherung von Inhalten durch das CDN ist auf das
 
 Das AEM as a Cloud Service CDN speichert nur HTTP-Antworten zwischen, und alle folgenden Kriterien müssen erfüllt sein:
 
-+ Der HTTP-Anfragestatus ist `2xx` oder `3xx`
++ HTTP-Antwortstatus: `2xx` oder `3xx`
 + Die HTTP-Anfragemethode ist `GET` oder `HEAD`
 + Mindestens einer der folgenden HTTP-Antwort-Header ist vorhanden: `Cache-Control`, `Surrogate-Control` oder `Expires`
 + Die HTTP-Antwort kann alle Inhaltstypen umfassen, einschließlich HTML-, JSON-, CSS-, JS- und Binärdateien.
