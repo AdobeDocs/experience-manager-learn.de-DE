@@ -1,6 +1,6 @@
 ---
-title: Daten mithilfe des Workflow-Schritts an die SharePoint-Liste senden
-description: Fügen Sie Daten mithilfe des FDM-Workflow-Schritts in die Sharepoint-Liste ein.
+title: Senden von Daten an die SharePoint-Liste mithilfe des Workflow-Schritts
+description: Einfügen von Daten in die Sharepoint-Liste mithilfe des Workflow-Schritts „Formulardatenmodelldienst aufrufen“
 feature: Adaptive Forms
 type: Documentation
 role: Developer
@@ -8,37 +8,38 @@ level: Beginner
 version: Cloud Service
 topic: Integrations
 jira: KT-15126
-source-git-commit: 3dc1aea74e2a7cf30da9f6fb96ecc5c7edcf6e34
-workflow-type: tm+mt
+exl-id: b369ed05-ba25-4b0e-aa3b-e7fc1621067d
+source-git-commit: c2b969829dc44e8235abafe0b53040b9c50fb91b
+workflow-type: ht
 source-wordcount: '245'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# Daten mithilfe des Workflow-Schritts &quot;FDM aufrufen&quot;in die SharePoint-Liste einfügen
+# Einfügen von Daten in die SharePoint-Liste mithilfe des Workflow-Schritts „Formulardatenmodelldienst aufrufen“
 
 
-In diesem Artikel werden die Schritte erläutert, die zum Einfügen von Daten in die SharePoint-Liste mithilfe des FDM-Aufrufschritts im Workflow-AEM erforderlich sind.
+In diesem Artikel werden die Schritte erläutert, die zum Einfügen von Daten in die SharePoint-Liste mithilfe des AEM-Workflow-Schritts „Formulardatenmodelldienst aufrufen“ erforderlich sind.
 
-In diesem Artikel wird davon ausgegangen, dass [das adaptive Formular erfolgreich konfiguriert hat, um Daten an die SharePoint-Liste zu senden.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=de#connect-af-sharepoint-list)
+In diesem Artikel wird davon ausgegangen, dass Sie [das adaptive Formular erfolgreich konfiguriert haben, um Daten an die SharePoint-Liste zu senden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=de#connect-af-sharepoint-list).
 
 
-## Formulardatenmodell basierend auf der SharePoint-Listendatenquelle erstellen
+## Erstellen eines Formulardatenmodells basierend auf der SharePoint-Listen-Datenquelle
 
-* Erstellen Sie ein neues Formulardatenmodell basierend auf der SharePoint-Listendatenquelle.
-* Fügen Sie das entsprechende Modell und den get-Dienst des Formulardatenmodells hinzu.
-* Konfigurieren Sie den insert-Dienst, um das Modellobjekt der obersten Ebene einzufügen.
-* Testen Sie den insert-Dienst.
+* Erstellen Sie ein Formulardatenmodell basierend auf der SharePoint-Listen-Datenquelle.
+* Fügen Sie das entsprechende Modell und den Dienst „get“ des Formulardatenmodells hinzu.
+* Konfigurieren Sie den Dienst „insert“, um das Modellobjekt der obersten Ebene einzufügen.
+* Testen Sie den Dienst „insert“.
 
 
 ## Erstellen eines Workflows
 
-* Erstellen Sie einen einfachen Workflow mit dem Schritt FDM aufrufen .
-* Konfigurieren Sie den Schritt &quot;FDM aufrufen&quot;, um das im vorherigen Schritt erstellte Formulardatenmodell zu verwenden.
-* ![Associate-FDM](assets/fdm-insert-1.png)
+* Erstellen Sie einen einfachen Workflow mit dem Schritt „Formulardatenmodelldienst aufrufen“.
+* Konfigurieren Sie den Schritt „Formulardatenmodelldienst aufrufen“, um das im vorherigen Schritt erstellte Formulardatenmodell zu verwenden.
+* ![Verknüpfen des Formulardatenmodells](assets/fdm-insert-1.png)
 
-* ![map-input-parameters](assets/fdm-insert-2.png)
-* Beachten Sie die Verwendung der JSON-Punktnotation. Die übermittelten Daten haben das unten stehende Format und wir extrahieren das ContactUS-Objekt aus den gesendeten Daten.
+* ![Zuordnen von Eingabeparametern](assets/fdm-insert-2.png)
+* Wie Sie sehen, wird die JSON-Punktnotation verwendet. Die übermittelten Daten haben das unten stehende Format. Daraus extrahieren wir das ContactUS-Objekt.
 
 ```json
 {
@@ -53,16 +54,15 @@ In diesem Artikel wird davon ausgegangen, dass [das adaptive Formular erfolgreic
 
 
 
-## Workflow &quot;Adaptives Formular für Trigger konfigurieren AEM&quot;
+## Konfigurieren adaptiver Formulare zum Auslösen eines AEM-Workflows
 
-* Erstellen Sie ein adaptives Formular mithilfe des Formulardatenmodells, das im vorherigen Schritt erstellt wurde.
+* Erstellen Sie ein adaptives Formular basierend auf dem im vorherigen Schritt erstellten Formulardatenmodell.
 * Ziehen Sie einige Felder aus der Datenquelle in das Formular.
-* Konfigurieren Sie die Sendeaktion des Formulars wie unten dargestellt
+* Konfigurieren Sie die Übermittlungsaktion des Formulars, wie nachfolgend dargestellt:
 * ![submit-action](assets/configure-af.png)
 
 
 
 ## Testen des Formulars
 
-Vorschau des im vorherigen Schritt erstellten Formulars Füllen Sie das Formular aus und senden Sie es. Die Daten aus dem Formular sollten in die SharePoint-Liste eingefügt werden.
-
+Zeigen Sie das im vorherigen Schritt erstellte Formular in einer Vorschau an.  Füllen Sie das Formular aus und senden Sie es ab. Die Daten aus dem Formular sollten in die SharePoint-Liste eingefügt werden.

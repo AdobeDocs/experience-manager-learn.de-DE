@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 source-git-commit: 2be59ef6c6e42854a614722ced9b40988d9d4881
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '306'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -93,11 +93,11 @@ Erkunden Sie Ereignisse, die beim Veröffentlichen und Aufheben einer Veröffent
             <div>
                 <a href="./season-3/cloud5-query-indexes.md">
                 <strong>Abfrageindizes und Excel-Formeln </strong></a>        
-                <br/><em>mit James Talbot &amp; Varun Mitra, AEM Engineering</em>
+                <br/><em>mit James Talbot und Varun Mitra, AEM Engineering</em>
             </div>
             <p>
                 <br/>
-                Erfahren Sie mehr über Abfrageindizes und wie Sie Excel-Formeln zum Bearbeiten und Sortieren von Datensätzen in Edge Delivery Services schreiben.
+                Erfahren Sie mehr über Abfrageindizes und darüber, wie Sie Excel-Formeln zum Bearbeiten und Sortieren von Datensätzen in Edge Delivery Services erstellen.
             </p>
         </td>   
     </tr>  

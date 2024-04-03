@@ -11,9 +11,9 @@ jira: KT-14795
 duration: 60
 exl-id: 9abe9f9d-8fb3-4e01-a830-1dad1c27274d
 source-git-commit: 3dc1aea74e2a7cf30da9f6fb96ecc5c7edcf6e34
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '234'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -21,12 +21,12 @@ ht-degree: 79%
 
 In der vorherigen Version von AEM Form (6.5) musste benutzerdefinierter Code geschrieben werden, um ein durch Formulardatenmodell unterstütztes adaptives Formular mithilfe des Anfrage-Attributs im Voraus auszufüllen. In AEM Forms as Cloud Service ist das Schreiben von benutzerdefiniertem Code nicht mehr erforderlich.
 
-In diesem Artikel werden die Schritte erläutert, die zum Vorausfüllen/Vorausfüllen des adaptiven Formulars mit Daten aus der SharePoint-Liste mithilfe des Vorfülldienstes für Formulardatenmodelle erforderlich sind.
+In diesem Artikel werden die Schritte erläutert, die zum Vorbefüllen/Vorausfüllen eines adaptiven Formulars mit Daten erforderlich sind, die aus der SharePoint-Liste mit dem Vorbefüllungsdienst für Formulardatenmodelle abgerufen wurden.
 
-In diesem Artikel wird davon ausgegangen, dass [das adaptive Formular erfolgreich konfiguriert hat, um Daten an die SharePoint-Liste zu senden.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=de#connect-af-sharepoint-list)
+In diesem Artikel wird davon ausgegangen, dass Sie [das adaptive Formular erfolgreich konfiguriert haben, um Daten an die SharePoint-Liste zu senden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=de#connect-af-sharepoint-list).
 
-Im Folgenden finden Sie die Daten in der SharePoint-Liste.
-![sharepoint-list](assets/list-data.png)
+Im Folgenden sehen Sie Daten der Sharepoint-Liste:
+![SharePoint-Liste](assets/list-data.png)
 
 Um ein adaptives Formular mit den Daten auszufüllen, die mit einem bestimmten GUID verknüpft sind, müssen die folgenden Schritte ausgeführt werden:
 

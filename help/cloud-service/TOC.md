@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
 source-git-commit: 9c757ef00776c09a8892f477baad24c58401f4dc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1163'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 98%
    + [CI/CD Produktions-Pipeline](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD Produktionsfremde Pipeline](./cloud-manager/cicd-non-production-pipeline.md)
    + [Aktivität](./cloud-manager/activity.md)
-   + [Benutzerdefinierte Domänennamen](./cloud-manager/custom-domain-names.md)
+   + [Benutzerdefinierte Domain-Namen](./cloud-manager/custom-domain-names.md)
    + Dev Ops{#devops}
       + [Bereitstellen von Code](./cloud-manager/devops/deploy-code.md)
       + [Zusammenführen von Projekten](./cloud-manager/devops/merge-projects.md)
@@ -325,7 +325,7 @@ ht-degree: 98%
       + [Speichern von Formulardaten auf One Drive](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [Speichern von Formulardaten in Sharepoint](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
       + [Vorbefüllen von Formularen mit Daten aus der SharePoint-Liste](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
-      + [Daten mithilfe eines Workflows in die SharePoint-Liste einfügen](./forms/forms-cs-sharepoint/submit-data-sharepoint-list-workflow.md)
+      + [Einfügen von Daten in die SharePoint-Liste mithilfe eines Workflows ](./forms/forms-cs-sharepoint/submit-data-sharepoint-list-workflow.md)
 + Asset Compute-Erweiterbarkeit{#asset-compute}
    + [Übersicht](./asset-compute/overview.md)
    + Setup{#set-up}

@@ -1,6 +1,6 @@
 ---
 title: Videos zu Edge Delivery Services
-description: Erfahren Sie, wie Sie mit Edge Delivery Services Websites schnell erstellen können.
+description: Erfahren Sie, wie Sie mit Edge Delivery Services schnelle Websites erstellen.
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -12,19 +12,19 @@ duration: 660
 last-substantial-update: 2024-03-20T00:00:00Z
 exl-id: 4f08bc07-0c9c-42fc-af42-3d51af9f37c4
 source-git-commit: df15dc0426918a0e2263efe6fb0de953f49385df
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '332'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
 # Videos zu Edge Delivery Services
 
-Erfahren Sie, wie Sie mit Edge Delivery Services Websites schnell erstellen können.
+Erfahren Sie, wie Sie mit Edge Delivery Services schnelle Websites erstellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
 
-Überprüfen Sie die [Dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) für vollständige Informationen zu Edge Delivery Services und deren Funktionen.
+Umfassende Details zu Edge Delivery Services samt Funktionen finden Sie in der zugehörigen [Dokumentation](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/edge-delivery/overview).
 
 ## Erste Schritte mit Edge Delivery Services
 
