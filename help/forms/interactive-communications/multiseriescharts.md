@@ -10,8 +10,8 @@ level: Beginner
 exl-id: f4af7cb9-cc3b-4bec-9428-ab4f1a3cf41a
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 446
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: 4f818f2ad01d9ecadcf5593aa038c7db15b4d496
+workflow-type: tm+mt
 source-wordcount: '279'
 ht-degree: 100%
 
@@ -21,11 +21,11 @@ ht-degree: 100%
 
 AEM Forms 6.5 bietet die Möglichkeit, Diagramme mit mehreren Reihen zu erstellen und zu konfigurieren. Die Diagramme mit mehreren Reihen werden normalerweise zusammen mit dem Diagrammtyp Linie, Balken, Spalten verwendet. Die folgende Abbildung ist ein gutes Beispiel für ein Diagramm mit mehreren Reihen. Es zeigt, wie sich eine Investition in Höhe von 10.000 $ in drei verschiedene Anlagefonds über einen bestimmten Zeitraum entwickelt. Um solche Diagramme in AEM Forms erstellen und verwenden zu können, müssen Sie ein entsprechendes Formulardatenmodell erstellen.
 
-![Diagramm mit mehreren Reihen](assets/seriescharts.jfif)
+![Diagramm mit mehreren Reihen](assets/series_charts.png)
 
 Um in AEM Forms Diagramme mit mehreren Reihen zu erstellen, müssen Sie ein geeignetes Formulardatenmodell mit den erforderlichen Entitäten und Zuordnungen zwischen den Entitäten erstellen. Im folgenden Screenshot werden die Entitäten und die Zuordnungen zwischen den 3 Entitäten hervorgehoben. Auf der obersten Ebene gibt es eine Organisationsentität, die eine 1:n-Zuordnung mit der Fonds-Entität unterhält. Die Fonds-Entität wiederum hat eine 1:n-Zuordnung mit der Leistungsentität.
 
-![Formulardatenmodell](assets/formdatamodel.jfif)
+![Formulardatenmodell](assets/form_data_model.png)
 
 ## Erstellen eines Formulardatenmodells für Diagramme mit mehreren Reihen
 
