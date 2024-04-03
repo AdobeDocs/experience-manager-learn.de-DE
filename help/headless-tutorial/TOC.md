@@ -8,10 +8,10 @@ sub-product: Experience Manager Sites
 version: 6.5, Cloud Service
 jira: KT-2963
 index: y
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
-workflow-type: ht
-source-wordcount: '339'
-ht-degree: 100%
+source-git-commit: c498783aceaf3bb389baaeaeefbe9d8d0125a82e
+workflow-type: tm+mt
+source-wordcount: '341'
+ht-degree: 99%
 
 ---
 
@@ -67,6 +67,7 @@ ht-degree: 100%
    + [Lokalisierte Inhalte](./graphql/how-to/localized-content.md)
    + [Große Ergebnismengen](./graphql/how-to/large-result-sets.md)
    + [Vorschau](./graphql/how-to/preview.md)
+   + [Geschützter Inhalt](./graphql/how-to/protected-content.md)
    + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
    + [Installieren von GraphiQL auf AEM 6.5](./graphql/how-to/install-graphiql-aem-6-5.md)
    + Beispiele {#example-apps}
