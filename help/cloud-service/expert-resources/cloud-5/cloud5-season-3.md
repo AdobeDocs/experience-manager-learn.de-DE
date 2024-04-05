@@ -5,10 +5,10 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
-source-git-commit: 2be59ef6c6e42854a614722ced9b40988d9d4881
-workflow-type: ht
-source-wordcount: '306'
-ht-degree: 100%
+source-git-commit: 3f30c5bc85b09e2f3bc17fa591a85cd92c811126
+workflow-type: tm+mt
+source-wordcount: '335'
+ht-degree: 91%
 
 ---
 
@@ -99,6 +99,20 @@ Erkunden Sie Ereignisse, die beim Veröffentlichen und Aufheben einer Veröffent
                 <br/>
                 Erfahren Sie mehr über Abfrageindizes und darüber, wie Sie Excel-Formeln zum Bearbeiten und Sortieren von Datensätzen in Edge Delivery Services erstellen.
             </p>
-        </td>   
+        </td>  
+        <td>
+            <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
+                <img alt="Eigenes Cloudflare-CDN einbinden" src="https://video.tv.adobe.com/v/3428100?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
+                <strong>Eigenes Cloudflare-CDN einbinden</strong></a>        
+                <br/><em>mit James Talbot &amp; Kunwar Saluja, AEM Engineering</em>
+            </div>
+            <p>
+                <br/>
+                Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfigurieren.
+            </p>
+        </td>           
     </tr>  
 </table>
