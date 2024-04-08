@@ -10,8 +10,8 @@ jira: KT-9352
 thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 duration: 948
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 100%
 
@@ -40,7 +40,7 @@ Ein Cloud Manager-Programm kann nur einen __einzigen__ Netzwerkinfrastrukturtyp 
 Bei der Einrichtung eines virtuellen privaten Netzwerks sind folgende Voraussetzungen erforderlich:
 
 + Adobe-Konto mit [Geschäftsinhaber-Berechtigungen in Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-+ Zugriff auf die [Authentifizierungs-Anmeldeinformationen der Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/authentication/)
++ Zugriff auf die [Authentifizierungs-Anmeldeinformationen der Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
    + Organisations-ID (auch als IMS-Org-ID bezeichnet)
    + Client-ID (auch als API-Schlüssel bezeichnet)
    + Zugriffs-Token (auch als Bearer- oder Träger-Token bezeichnet)

@@ -14,10 +14,10 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1360
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
-source-wordcount: '1232'
-ht-degree: 91%
+source-wordcount: '1229'
+ht-degree: 90%
 
 ---
 
@@ -180,7 +180,7 @@ Nach Verknüpfung der Tag-Eigenschaft kann die WKND-Site die JavaScript-Biblioth
 
 ### Überprüfen des Ladens von Tag-Eigenschaften auf WKND
 
-Prüfen Sie mit der Erweiterung Adobe Experience Platform Debugger in [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) oder [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/), ob die Tag-Eigenschaft auf WKND-Seiten geladen wird. Sie können Folgendes überprüfen:
+Verwenden von Adobe Experience Platform Debugger [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) -Erweiterung überprüfen, ob die Tag-Eigenschaft auf WKND-Seiten geladen wird. Sie können Folgendes überprüfen:
 
 + Tag-Eigenschaften wie Erweiterung, Version, Name und mehr.
 + Platform Web SDK-Bibliotheksversion, Datenspeicher-ID

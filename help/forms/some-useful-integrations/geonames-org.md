@@ -10,10 +10,10 @@ level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
 duration: 218
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
+workflow-type: tm+mt
 source-wordcount: '610'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -25,7 +25,7 @@ Eine Dropdown-Liste für die Kaskadierung ist eine Reihe von abhängigen DropDow
 
 >[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
 
-Für dieses Tutorial habe ich die [Geonames-REST-API](http://api.geonames.org/) verwendet, um diese Fähigkeit zu demonstrieren.
+Für dieses Tutorial habe ich die [Geonames-REST-API](https://www.geonames.org/export/web-services.html) verwendet, um diese Fähigkeit zu demonstrieren.
 Es gibt eine Reihe von Organisationen, die diese Art von Diensten anbieten, und solange sie über gut dokumentierte REST-APIs verfügen, können Sie sie mithilfe der Datenintegrationsfunktion problemlos in AEM Forms integrieren.
 
 Die folgenden Schritte wurden zur Implementierung kaskadierender Dropdown-Listen in AEM Forms ausgeführt:
@@ -91,7 +91,7 @@ Fügen Sie zwei Dropdown-Listen mit den Bezeichnungen „Landkreise und Städte�
 Sie können folgende Assets herunterladen, um schnell ein Beispiel für die kaskadierende Dropdown-Liste zu erstellen.
 Die fertigen Swagger-Dateien können [hier](assets/geonames-swagger-files.zip) heruntergeladen werden
 Die Swagger-Dateien beschreiben folgende REST-API
-* [Abrufen aller Länder](http://api.geonames.org/countryInfoJSON?username=yourusername)
-* [Abrufen von untergeordneten Elementen des Geoname-Objekts](http://api.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
+* [Abrufen aller Länder](https://secure.geonames.org/countryInfoJSON?username=yourusername)
+* [Abrufen von untergeordneten Elementen des Geoname-Objekts](https://secure.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
 
 Das fertige [Formulardatenmodell kann hier heruntergeladen werden](assets/geonames-api-form-data-model.zip)
