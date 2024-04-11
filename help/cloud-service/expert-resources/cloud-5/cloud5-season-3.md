@@ -5,10 +5,10 @@ sub-product: Experience Manager Sites, Experience Manager Cloud Manager, Experie
 solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
-source-git-commit: c0e995566aad4fceb8bf8ef12ff989f03a626d0f
+source-git-commit: d62332374e8885e077f8227bcdec6a908c782ccc
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 91%
+source-wordcount: '366'
+ht-degree: 83%
 
 ---
 
@@ -115,5 +115,21 @@ Erkunden Sie Ereignisse, die beim Veröffentlichen und Aufheben einer Veröffent
             </p>
         </td>           
     </tr>  
+    <tr>
+        <td>
+            <a href="./season-3/cloud5-integrate-assets.md">
+                <img alt="Integrieren von AEM Assets mit Edge Delivery Services Document Authoring" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-integrate-assets.md">
+                <strong>Integrieren von AEM Assets mit der Dokumenterstellung</strong></a>        
+                <br/><em>mit James Talbot &amp; Darin Kuntze, AEM Engineering</em>
+            </div>
+            <p>
+                <br/>
+                Erfahren Sie, wie Sie AEM Assets mit der Dokumenterstellung integrieren.
+            </p>
+        </td>        
+    </tr>      
 </table>
 

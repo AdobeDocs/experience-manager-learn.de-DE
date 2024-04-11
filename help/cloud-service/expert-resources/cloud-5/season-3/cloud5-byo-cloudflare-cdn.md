@@ -11,14 +11,15 @@ recommendations: noDisplay, noCatalog
 duration: 490
 last-substantial-update: 2024-04-05T00:00:00Z
 jira: KT-15271
-source-git-commit: d95d58a2631cfceb05df576f686cc9e22843f388
+exl-id: dc841125-641b-47c0-a88f-d166a088e0ec
+source-git-commit: d62332374e8885e077f8227bcdec6a908c782ccc
 workflow-type: tm+mt
-source-wordcount: '36'
+source-wordcount: '38'
 ht-degree: 0%
 
 ---
 
-# Eigenes Cloudflare-CDN mitbringen
+# Cloud 5 - Erstellen eines eigenen Cloud-Fire-CDN
 
 Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfigurieren.
 
