@@ -10,10 +10,10 @@ thumbnail: 335476.jpeg
 last-substantial-update: 2022-09-16T00:00:00Z
 exl-id: a3a9bf59-e9a2-4322-ac93-9c12c70b9a75
 duration: 492
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '57'
-ht-degree: 100%
+source-git-commit: a18bf2c8b57eaaac3686a26fa1fb39e6fc075af5
+workflow-type: tm+mt
+source-wordcount: '122'
+ht-degree: 46%
 
 ---
 
@@ -94,3 +94,5 @@ package com.adobe.aem.wknd.examples.core.adventures;
 
 import org.osgi.annotation.versioning.Version;
 ```
+
+Hinzufügen einer `package-info.java` ist erforderlich, um sicherzustellen, dass andere OSGi-Pakete in AEM die OSGi-Dienstschnittstelle (oder eine beliebige Java-Klasse) auflösen können. Wenn die Variable `package-info.java` fehlt, werden das Java-Paket und seine Java-Schnittstellen oder -Klassen nicht exportiert. Andere OSGi-Bundles, die versuchen, diese Java-Schnittstellen oder -Klassen aus diesem Java-Paket zu importieren, werden mit der Meldung fehlschlagen __Kann nicht aufgelöst werden__ in AEM OSGi Bundle Console.
