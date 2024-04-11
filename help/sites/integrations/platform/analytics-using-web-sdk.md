@@ -15,9 +15,9 @@ badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title=
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2330
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1529'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -57,7 +57,7 @@ In **Experience Platform**:
 + Zugriff auf **Schemata** unter Daten-Management
 + Zugriff auf **Datensätze** unter Daten-Management
 + Zugriff auf **Datenströme** unter Datenerfassung
-+ Zugriff auf **Tags**  unter Datenerfassung
++ Zugriff auf **Tags** unter Datenerfassung
 
 Falls Sie nicht über die erforderlichen Berechtigungen verfügen, können Ihre Systemadmins über [Adobe Admin Console](https://adminconsole.adobe.com/) die erforderlichen Berechtigungen erteilen.
 

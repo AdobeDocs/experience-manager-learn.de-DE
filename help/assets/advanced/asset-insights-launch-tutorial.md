@@ -1,6 +1,6 @@
 ---
 title: Einrichten von Asset Insights mit AEM Assets und Tags
-description: In dieser fünfteiligen Videoreihe werden die Einrichtung und Konfiguration von Asset Insights für Experience Manager, der über -Tags bereitgestellt wird, erläutert.
+description: In dieser fünfteiligen Videoreihe führen wir Sie durch die Einrichtung und Konfiguration von Asset Insights für mit Tags durchgeführte Experience Manager-Bereitstellungen.
 feature: Asset Insights
 version: 6.4, 6.5
 topic: Integrations
@@ -13,15 +13,15 @@ doc-type: Tutorial
 exl-id: 00125fe1-3bb9-4b1a-a83c-61c413403ae2
 duration: 2051
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '739'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
 # Einrichten von Asset Insights mit AEM Assets und Tags
 
-In dieser fünfteiligen Videoreihe werden die Einrichtung und Konfiguration von Asset Insights für Experience Manager, der über -Tags bereitgestellt wird, erläutert.
+In dieser fünfteiligen Videoreihe führen wir Sie durch die Einrichtung und Konfiguration von Asset Insights für mit Tags durchgeführte Experience Manager-Bereitstellungen.
 
 ## Teil 1: Überblick über Asset Insights {#overview}
 
@@ -81,9 +81,9 @@ Für die AEM Assets Insights-Konfiguration sind die folgenden Anmeldeinformation
 * Gemeinsamer geheimer Schlüssel (abrufbar über *Adobe Analytics > Admin > Unternehmenseinstellungen > Webservice*).
 * Report Suite (die richtige, für das Asset-Reporting verwendete Report Suite auswählen!)
 
-## Teil 4: Verwendung von Tags zum Hinzufügen der Adobe Analytics-Erweiterung {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
+## Teil 4: Verwenden von Tags zum Hinzufügen der Adobe Analytics-Erweiterung {#part-using-launch-by-adobe-for-adding-adobe-analytics-extension}
 
-Hinzufügen der Adobe Analytics-Erweiterung, Erstellen von Seitenladeregeln und Integrieren von AEM mit Tags mit dem technischen Adobe IMS-Konto.
+Hinzufügen der Adobe Analytics-Erweiterung, Erstellen von Seitenladeregeln und Integrieren von AEM mit Tags in das technische Adobe IMS-Konto:
 
 >[!VIDEO](https://video.tv.adobe.com/v/25946?quality=12&learn=on)
 

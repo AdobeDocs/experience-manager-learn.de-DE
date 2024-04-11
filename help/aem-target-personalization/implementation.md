@@ -11,9 +11,9 @@ doc-type: Tutorial
 exl-id: 54a30cd9-d94a-4de5-82a1-69ab2263980d
 duration: 173
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '596'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 86%
 In diesem Abschnitt geht es darum, wie Adobe Experience Manager Sites mit Adobe Target für verschiedene Szenarien eingerichtet wird. Grundlage sollen hier Ihr Szenario und die Anforderungen Ihrer Organisation sein.
 
 * **Adobe Target-JavaScript-Bibliothek hinzufügen (für alle Szenarien erforderlich)**
-Für auf AEM gehostete Sites können Sie Target-Bibliotheken zu Ihrer Site hinzufügen, indem Sie Folgendes verwenden: [Tags in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de). Tags bieten eine einfache Möglichkeit, alle Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse erforderlich sind.
+Für auf AEM gehostete Sites können Sie Target-Bibliotheken zu Ihrer Site hinzufügen, indem Sie [Tags in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de) verwenden. Tags bietet eine einfache Möglichkeit, alle Tags bereitzustellen und zu verwalten, die für relevante Kundenerlebnisse erforderlich sind.
 * **Adobe Target-Cloud-Services hinzufügen (erforderlich für das Experience Fragments-Szenario)**
 Für AEM-Kundinnen und -Kunden, die Experience Fragment-Angebote zur Erstellung einer Aktivität in Adobe Target verwenden möchten, müssen Sie Adobe Target mithilfe der Legacy Cloud Services in AEM integrieren. Diese Integration ist erforderlich, um Experience Fragments als HTML-/JSON-Angebote von AEM an Target zu übertragen und die Angebote mit AEM synchron zu halten. *Diese Integration ist für die Implementierung von Szenario 1 erforderlich.*
 
@@ -50,7 +50,7 @@ Für AEM-Kundinnen und -Kunden, die Experience Fragment-Angebote zur Erstellung 
 
 >[!NOTE]
 >
-> Der Kunde muss über die Datenerfassung und Adobe I/O von [Adobe-Unterstützung](https://helpx.adobe.com/de/contact/enterprise-support.ec.html) oder wenden Sie sich an Ihren Systemadministrator
+> Der Kundin oder dem Kunden muss die Datenerfassung und Adobe I/O vom [Adobe-Support](https://helpx.adobe.com/de/contact/enterprise-support.ec.html) bereitgestellt werden. Sie können sich aber auch an Ihre Systemadmins wenden.
 
 ### Einrichten von AEM{#set-up-aem}
 
@@ -82,4 +82,4 @@ Passwort : **admin**
 10. Wählen Sie nach der Installation der Pakete auf der AEM-Autoreninstanz jedes hochgeladene Paket in AEM Package Manager aus und wählen Sie **Mehr > Replizieren**, um sicherzustellen, dass die Pakete in AEM Publish bereitgestellt werden.
 11. An dieser Stelle haben Sie Ihre WKND-Referenz-Site und alle für dieses Tutorial erforderlichen zusätzlichen Pakete erfolgreich installiert.
 
-[NÄCHSTES KAPITEL](./using-launch-adobe-io.md): Im nächsten Kapitel werden Sie Tags in AEM integrieren.
+[NÄCHSTES KAPITEL](./using-launch-adobe-io.md): Im nächsten Kapitel integrieren Sie Tags in AEM.

@@ -1,6 +1,6 @@
 ---
-title: Erstellen einer Tag-Cloud Service-Konfiguration in AEM Sites
-description: Erfahren Sie, wie Sie in AEM eine Tags-Cloud Service-Konfiguration erstellen.
+title: Erstellen einer Tags-Cloud-Service-Konfiguration in AEM Sites
+description: Erfahren Sie, wie Sie eine Tags-Cloud-Service-Konfiguration in AEM erstellen.
 solution: Experience Manager, Data Collection, Experience Platform
 jira: KT-5982
 thumbnail: 38566.jpg
@@ -14,31 +14,31 @@ doc-type: Tutorial
 exl-id: a72ddced-37de-4b62-9e28-fa5b6c8ce5b7
 duration: 139
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '495'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
-# Erstellen einer Tag-Cloud Service-Konfiguration in AEM {#create-launch-cloud-service}
+# Erstellen einer Tags-Cloud-Service-Konfiguration in AEM {#create-launch-cloud-service}
 
-Erfahren Sie, wie Sie in Adobe Experience Manager eine Tags-Cloud Service-Konfiguration erstellen. AEM Tag-Cloud Service-Konfiguration kann dann auf eine bestehende Site angewendet werden und das Laden der Tags-Bibliotheken kann sowohl in der Autoren- als auch in der Veröffentlichungsumgebung beobachtet werden.
+Erfahren Sie, wie Sie eine Tags-Cloud-Service-Konfiguration in Adobe Experience Manager erstellen. Die Tags-Cloud-Service-Konfiguration von AEM kann dann auf eine bestehende Site angewendet werden und das Laden der Tags-Bibliotheken kann sowohl in der Autoren- als auch in der Veröffentlichungsumgebung beobachtet werden.
 
-## Tag-Cloud-Dienst erstellen
+## Erstellen eines Tags-Cloud-Service
 
-Erstellen Sie die Tag-Cloud-Service-Konfiguration mithilfe der folgenden Schritte.
+Erstellen Sie die Tags-Cloud-Service-Konfiguration mithilfe der folgenden Schritte.
 
 1. Wählen Sie aus dem **Tools**-Menü **Cloud-Services** aus und klicken Sie auf **Adobe Launch-Konfigurationen**
 1. Wählen Sie den Konfigurationsordner Ihrer Site aus oder wählen Sie **WKND-Site** (bei Verwendung des WKND-Guide-Projekts) und klicken Sie auf **Erstellen**
 1. Geben Sie auf der Registerkarte _Allgemein_ einen Namen für Ihre Konfiguration ein, indem Sie das **Titelfeld** benutzen, und wählen Sie **Adobe Launch** aus der Dropdown-Liste _Zugehörige Adobe IMS-Konfiguration_ aus. Wählen Sie dann Ihren Unternehmensnamen aus der _Firma_ Dropdown-Liste aus und wählen Sie die zuvor erstellte Eigenschaft aus der _Eigenschaften_-Dropdown-Liste.
 1. Behalten Sie in den Registerkarten _Staging_ und _Produktion_ die Standardkonfigurationen bei. Es wird jedoch empfohlen, die Konfigurationen für die reale Produktionseinrichtung zu überprüfen und zu ändern, insbesondere den Umschalter _Bibliothek asynchron laden_, je nach Leistungs- und Optimierungsanforderungen. Beachten Sie außerdem, dass der _Bibliotheks-URI_-Wert für Staging und Produktion unterschiedlich ist.
-1. Klicken Sie abschließend auf **Erstellen** , um die Tag-Cloud-Services abzuschließen.
+1. Klicken Sie abschließend auf **Erstellen**, um die Tags-Cloud-Services zu vervollständigen.
 
-   ![Tag-Cloud Service-Konfiguration](assets/launch-cloud-services-config.png)
+   ![Tags-Cloud-Service-Konfiguration](assets/launch-cloud-services-config.png)
 
-## Anwenden des Tag-Cloud-Service auf die Site
+## Anwenden des Tags-Cloud-Service auf die Site
 
-Um die Tag-Eigenschaft und ihre Bibliotheken auf die AEM Site zu laden, wird die Tag-Cloud-Service-Konfiguration auf die Site angewendet. Im vorherigen Schritt wird die Cloud-Service-Konfiguration unter dem Site-Namen-Ordner (WKND-Site) erstellt, sodass sie automatisch angewendet werden sollte. Überprüfen wir es.
+Um die Tag-Eigenschaft und ihre Bibliotheken auf die AEM-Site zu laden, wird die Tags-Cloud-Service-Konfiguration auf die Site angewendet. Im vorherigen Schritt wird die Cloud-Service-Konfiguration unter dem Site-Namen-Ordner (WKND-Site) erstellt, sodass sie automatisch angewendet werden sollte. Überprüfen wir es.
 
 1. Wählen Sie im **Navigationsmenü** das **Sites**-Symbol.
 
@@ -52,7 +52,7 @@ Jetzt ist es an der Zeit, zu überprüfen, ob die Tag-Eigenschaft und ihre Bibli
 
 1. Öffnen Sie Ihre bevorzugte Site-Seite im Modus **Als veröffentlicht anzeigen**. In der Browser-Konsole sollte die Protokollmeldung angezeigt werden. Es handelt sich um dieselbe Meldung aus dem JavaScript-Code-Snippet der Tag-Eigenschaftsregel, die ausgelöst wird, wenn das Ereignis _Bibliothek geladen (Seitenanfang)_ ausgelöst wird.
 
-1. Um dies bei der Veröffentlichung zu überprüfen, veröffentlichen Sie zunächst Ihre **Tags-Cloud-Dienst** und öffnen Sie die Site-Seite in der Veröffentlichungsinstanz.
+1. Um dies in der Veröffentlichungsinstanz zu überprüfen, veröffentlichen Sie zunächst Ihre **Tags-Cloud-Service**-Konfiguration und öffnen Sie die Site-Seite in der Veröffentlichungsinstanz.
 
    ![Tag-Eigenschaft auf Autoren- und Veröffentlichungsseiten](assets/tag-property-on-author-publish-pages.png)
 
@@ -64,4 +64,4 @@ Nutzen Sie die Erfahrungen aus der vorherigen Dokumentation [Erstellen einer Tag
 
 ## Nächste Schritte
 
-[Debugging einer Tag-Implementierung](debug-tags-implementation.md)
+[Debugging einer Tags-Implementierung](debug-tags-implementation.md)

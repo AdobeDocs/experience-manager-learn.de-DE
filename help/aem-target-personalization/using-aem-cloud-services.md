@@ -11,9 +11,9 @@ doc-type: Tutorial
 exl-id: 9b191211-2030-4b62-acad-c7eb45b807ca
 duration: 357
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '360'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ In diesem Abschnitt besprechen wir die Einrichtung von Adobe Experience Manager 
 
 >[!NOTE]
 >
-> Der AEM Legacy Cloud Service mit Adobe Target wird **nur** verwendet, um eine direkte Verbindung zwischen AEM Author und dem Adobe Target-Backend herzustellen, die die Veröffentlichung von Inhalten aus AEM in Target erleichtert. Tags in Adobe Experience Platform werden verwendet, um Adobe Target auf dem öffentlichen Website-Erlebnis verfügbar zu machen, das von AEM bereitgestellt wird.
+> Der AEM Legacy Cloud Service mit Adobe Target wird **nur** verwendet, um eine direkte Verbindung zwischen AEM Author und dem Adobe Target-Backend herzustellen, die die Veröffentlichung von Inhalten aus AEM in Target erleichtert. Tags in Adobe Experience Platform wird verwendet, um Adobe Target für das öffentliche Website-Erlebnis verfügbar zu machen, das von AEM bereitgestellt wird.
 
 Um die AEM Experience Fragment-Angebote für Ihre Personalisierungsaktivitäten nutzen zu können, fahren wir mit dem nächsten Kapitel fort und integrieren AEM mit Adobe Target unter Verwendung der bestehenden Cloud Services. Diese Integration ist erforderlich, um Erlebnisfragmente von AEM als HTML/JSON-Angebote an Target zu übertragen und die Target-Angebote mit AEM zu synchronisieren. Diese Integration ist für die Umsetzung von [Szenario 1 erforderlich, das im Abschnitt „Überblick“ beschrieben wird](./overview.md#personalization-using-aem-experience-fragment).
 
@@ -40,7 +40,7 @@ Um die AEM Experience Fragment-Angebote für Ihre Personalisierungsaktivitäten 
 
      >[!NOTE]
      >
-     > Der Kunde muss über die Datenerfassung und Adobe I/O von [Adobe-Unterstützung](https://helpx.adobe.com/de/contact/enterprise-support.ec.html) oder wenden Sie sich an Ihren Systemadministrator
+     > Der Kundin oder dem Kunden muss die Datenerfassung und Adobe I/O vom [Adobe-Support](https://helpx.adobe.com/de/contact/enterprise-support.ec.html) bereitgestellt werden. Sie können sich aber auch an Ihre Systemadmins wenden.
 
 ### Integration von AEM mit Adobe Target
 

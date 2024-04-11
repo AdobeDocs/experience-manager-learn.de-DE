@@ -11,9 +11,9 @@ doc-type: Tutorial
 exl-id: 53cafd06-3a0a-4995-947d-179146b89234
 duration: 159
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '577'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -27,14 +27,14 @@ In diesem Kapitel beschäftigen wir uns mit der Erstellung von Aktivitäten, um 
 
 Die Homepage der WKND-Site wurde neu gestaltet, und die Besucherinnen und Besucher der aktuellen Homepage sollen zur neuen Homepage umgeleitet werden. Außerdem gilt es nachzuvollziehen, wie die neu gestaltete Homepage zur Verbesserung der Benutzerinteraktion und Umsatzsteigerung beiträgt. Als Marketing-Fachkraft haben Sie die Aufgabe erhalten, eine Aktivität zu erstellen, um die Besucherinnen und Besucher auf die neue Homepage umzuleiten. Lassen Sie uns die WKND-Site-Homepage erkunden und erfahren, wie Aktivitäten mit Adobe Target erstellt werden.
 
-### Teilnehmer
+### Beteiligte Benutzerinnen und Benutzer
 
 Für diese Übung müssen die folgenden Benutzenden einbezogen werden. Bei bestimmten Aufgaben benötigen Sie außerdem unter Umständen Administratorzugriff.
 
 * **Inhaltserstellerin/-Inhaltsbearbeiterin bzw. Inhaltsersteller/-Inhaltsbearbeiter** (Adobe Experience Manager)
 * **Marketing-Fachkraft** (Adobe Target/Optimierungs-Team)
 
-### WKND-Site-Homepage
+### Homepage der WKND-Site
 
 ![AEM Target-Szenario 1](assets/personalization-use-case-2/aem-target-use-case-2.png)
 
@@ -42,19 +42,19 @@ Für diese Übung müssen die folgenden Benutzenden einbezogen werden. Bei besti
 
 * **AEM**
    * Die [AEM-Autoren- und -Veröffentlichungsinstanz](./implementation.md#getting-aem) wird auf dem localhost-Port 4502 bzw. 4503 ausgeführt.
-   * [AEM mit Adobe Target mithilfe von Tags integriert](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
+   * [AEM wurde in Adobe Target über Tags integriert.](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
    * Es besteht Zugriff auf die Adobe Experience Cloud-Bereitstellung Ihres Unternehmens: `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud ist mit folgender Lösung bereitgestellt:
       * [Adobe Target](https://experiencecloud.adobe.com)
 
-## Inhaltseditor-Aktivitäten
+## Aktivitäten der Inhaltsbearbeiterin bzw. des Inhaltsbearbeiters
 
 1. Die Marketing-Fachkraft spricht die AEM-Inhaltsbearbeiterin bzw. den -Inhaltsbearbeiter auf die Neugestaltung der WKND-Homepage an und stellt die Anforderungen im Detail dar.
    * ***Anforderung***: Neugestaltung der Homepage der WKND-Site mit einem kartenbasierten Design
 2. Basierend auf den Anforderungen erstellt die AEM-Inhaltsbearbeiterin bzw. der -Inhaltsbearbeiter dann eine neue Homepage für die WKND-Site mit einem kartenbasierten Design und veröffentlicht diese.
 
-## Marketingaktivitäten
+## Aktivitäten der Marketing-Fachkraft
 
 1. Die Marketing-Fachkraft erstellt eine A/B-Zielaktivität mit dem Redirect-Angebot als Erlebnis und einen Website-Traffic von 100 % auf die neue Homepage, wobei Erfolgsziel und Metriken hinzugefügt sind.
    1. Navigieren Sie im Adobe Target-Fenster zur Registerkarte **Aktivitäten**.

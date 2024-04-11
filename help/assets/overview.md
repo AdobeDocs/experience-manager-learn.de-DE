@@ -6,9 +6,9 @@ version: 6.4, 6.5, Cloud Service
 doc-type: Catalog
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '175'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -61,8 +61,8 @@ Erfahren Sie, was AEM Assets ist und wie Sie damit die Geschäftsziele Ihres Unt
    </a>
    <div>
       <a href="./advanced/asset-insights-launch-tutorial.md">
-      <strong>Verwenden AEM Asset Insights mit Tags</strong>
-      </a>
+<strong>Verwenden von AEM Asset Insights mit Tags</strong>
+</a>
    </div>
    <p>
       <em>Gewinnen Sie Einsichten zur Verwendung von Assets.</em>

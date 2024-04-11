@@ -12,9 +12,9 @@ exl-id: 3e1d86ab-e0c4-45d4-b998-75a44a7e4a3f
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 54
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '203'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -32,8 +32,8 @@ Sie können den Experience Manager-Posteingang anpassen, indem Sie den Standardt
 
 ## Spaltenanpassung
 
-[AEM Posteingang öffnen](http://localhost:4502/aem/inbox)
-Öffnen Sie die Admin Control, indem Sie auf die _Listenansicht_ Symbol und wählen Sie dann _Admin Control_ wie im Screenshot unten gezeigt
+[Öffnen des AEM-Posteingangs](http://localhost:4502/aem/inbox)
+Öffnen Sie die Admin-Steuerung, indem Sie auf das Symbol _Listenansicht_ klicken und dann _Admin-Steuerung_ auswählen, wie im Screenshot unten gezeigt.
 
 ![Admin-Kontrolle](assets/open-customization.png)
 

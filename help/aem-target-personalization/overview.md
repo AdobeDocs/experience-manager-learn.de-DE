@@ -11,9 +11,9 @@ doc-type: Tutorial
 exl-id: b632883f-65fd-4f89-bf39-ec2bce352d2d
 duration: 219
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '846'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -47,7 +47,7 @@ Wir verfügen jetzt über personalisierte Inhalte in Form von Angeboten aus AEM 
 **Um dieses Szenario zu implementieren, ist Folgendes erforderlich:**
 
 * [Integrieren von AEM und Adobe Target mithilfe von Tags und Adobe I/O](./implementation.md#integrating-aem-target-options)
-* [AEM und Adobe Target, die Legacy-Cloud-Services verwenden](./implementation.md#integrating-aem-target-options)
+* [AEM und Adobe Target unter Verwendung von Legacy-Cloud-Services](./implementation.md#integrating-aem-target-options)
 
 ***Nach der Implementierung der oben genannten Integrationen sehen wir uns jetzt das [Szenario im Detail](./personalization-use-case-1.md) an.***
 
@@ -87,4 +87,4 @@ Durch die Integration von Adobe Experience Manager mit Adobe Target können Sie 
 
 * [Integrieren von AEM und Adobe Target mithilfe von Tags und Adobe I/O](./implementation.md#integrating-aem-target-options)
 
-***Nach der Implementierung der oben genannten Integration sehen wir uns nun das [Szenario im Detail an.](./personalization-use-case-2.md)***
+***Nach der Implementierung der oben genannten Integration sehen wir uns nun das [Szenario im Detail](./personalization-use-case-2.md)*** an.

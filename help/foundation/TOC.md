@@ -5,9 +5,9 @@ user-guide-description: Eine Sammlung von Videos und Tutorials für die Adobe Ex
 sub-product: Experience Manager
 index: y
 source-git-commit: a504ace72b1b90c6e7c711a939595b95f24733e6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '233'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 98%
    + [Entwickeln von AEM-Projekten](./projects/develop-aem-projects.md)
    + [Verwenden von Primärprojekten](./projects/use-project-masters.md)
 + Sicherheit {#security}
-   + [Erläuterung der DoS/DDoS-Prävention](./security/understanding-dos-and-prevention-approaches.md)
+   + [Grundlegendes zur DoS/DDoS-Prävention](./security/understanding-dos-and-prevention-approaches.md)
    + [Entwickeln für CORS (Cross-Origin Resource Sharing)](./security/develop-for-cross-origin-resource-sharing.md)
    + [Verstehen von Cross-Origin Resource Sharing (CORS)](./security/understand-cross-origin-resource-sharing.md)
    + [Verwenden des SSL-Assistenten](./security/use-the-ssl-wizard.md)

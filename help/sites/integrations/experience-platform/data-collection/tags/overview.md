@@ -15,9 +15,9 @@ doc-type: Tutorial
 exl-id: bdae56d8-96e7-4b05-9b8b-3c6c2e998bd8
 duration: 256
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '270'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -43,7 +43,7 @@ Bei der Integration der Experience Platform-Datenerfassungs-Tag ist Folgendes er
 
 + Erstellen Sie in der Adobe Experience Platform-Datenerfassung eine Tag-Eigenschaft und bearbeiten Sie sie, um eine _Regel hinzuzufügen_. _Fügen Sie dann eine Bibliothek hinzu_, wählen Sie die neu hinzugefügte Regel aus, genehmigen und veröffentlichen Sie sie.
 + Verbinden Sie AEM und Tags mit einer vorhandenen (oder neuen) IMS-Konfiguration
-+ Erstellen Sie AEM eine Tag-Cloud-Service-Konfiguration, wenden Sie sie dann auf eine vorhandene Site an und überprüfen Sie schließlich, ob die Tag-Eigenschaft und ihre Bibliotheken auf der Veröffentlichungs- oder Autorensite geladen werden.
++ Erstellen Sie in AEM eine Cloud-Service-Konfiguration für Tags, wenden Sie sie dann auf eine vorhandene Site an und überprüfen Sie schließlich, ob die Tags-Eigenschaft und ihre Bibliotheken in der veröffentlichten oder autorenseitigen Site geladen werden.
 
 ## Nächste Schritte
 

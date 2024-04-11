@@ -1,6 +1,6 @@
 ---
-title: Verwenden von Dynamic Media-Viewern mit Adobe Analytics und Tags
-description: Die Dynamic Media Viewer-Erweiterung für Tags sowie die Dynamic Media Viewers-Version 5.13 ermöglichen es Kunden von Dynamic Media und Adobe Analytics, Ereignisse und Daten zu verwenden, die für die Dynamic Media-Viewer-Konfiguration spezifisch sind.
+title: Integrieren von Dynamic Media-Viewern mit Adobe Analytics und Tags
+description: Mit der Erweiterung für Dynamic Media-Viewer für Tags und der neuen Dynamic Media-Viewer-Version 5.13 können Kundinnen und Kunden von Dynamic Media, Adobe Analytics und Tags Ereignisse und Daten verwenden, die für die Dynamic Media-Viewer in ihrer Tags-Konfiguration spezifisch sind.
 sub-product: Dynamic Media
 feature: Asset Insights
 version: 6.4, 6.5
@@ -11,13 +11,13 @@ doc-type: Feature Video
 exl-id: 9d807f4c-999c-45e6-a9db-6c1776bddda1
 duration: 637
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '325'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
-# Verwenden von Dynamic Media-Viewern mit Adobe Analytics und Tags{#using-dynamic-media-viewers-adobe-analytics-tags}
+# Integrieren von Dynamic Media-Viewern mit Adobe Analytics und Tags{#using-dynamic-media-viewers-adobe-analytics-tags}
 
 Für Kundinnen und Kunden mit Dynamic Media und Adobe Analytics können Sie jetzt die Nutzung von Dynamic Media-Viewern auf Ihrer Website mithilfe der Dynamic Media Viewer-Erweiterung verfolgen.
 
@@ -25,13 +25,13 @@ Für Kundinnen und Kunden mit Dynamic Media und Adobe Analytics können Sie jetz
 
 >[!NOTE]
 >
-> Führen Sie für diese Funktionalität Adobe Experience Manager im Dynamic Media Scene7-Modus aus. Sie müssen auch [Tags in Ihre AEM-Instanz integrieren](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=de).
+> Führen Sie für diese Funktionalität Adobe Experience Manager im Dynamic Media Scene7-Modus aus. Sie müssen außerdem [Tags in Ihre AEM-Instanz integrieren](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=de).
 
 Mit der Einführung der Dynamic Media Viewer-Erweiterung bietet Adobe Experience Manager jetzt erweiterte Analyseunterstützung für Assets, die mit Dynamic Media-Viewern (5.13) bereitgestellt werden, was eine granularere Kontrolle über die Ereignisverfolgung bedeutet, wenn ein Dynamic Media-Viewer auf einer Sites-Seite verwendet wird.
 
-Wenn Sie bereits über AEM Assets und Sites verfügen, können Sie Ihre Tag-Eigenschaft in Ihre AEM-Autoreninstanz integrieren. Sobald Ihre Launch-Integration mit Ihrer Website verknüpft ist, können Sie Ihrer Seite Komponenten für dynamische Medien hinzufügen, bei denen die Ereignisverfolgung für Viewer aktiviert ist.
+Wenn Sie bereits über AEM Assets und Sites verfügen, können Sie Ihre Tags-Eigenschaft in Ihre AEM-Autoreninstanz integrieren. Sobald Ihre Launch-Integration mit Ihrer Website verknüpft ist, können Sie Ihrer Seite Komponenten für dynamische Medien hinzufügen, bei denen die Ereignisverfolgung für Viewer aktiviert ist.
 
-Für Kundinnen und Kunden, die nur AEM Assets bzw. die Dynamic Media Classic verwenden, können Benutzende Einbettungs-Code für einen Viewer abrufen und ihn zur Seite hinzufügen. Tags-Skriptbibliotheken können dann zur Verfolgung von Viewer-Ereignissen manuell zur Seite hinzugefügt werden.
+Für Kundinnen und Kunden, die nur AEM Assets bzw. die Dynamic Media Classic verwenden, können Benutzende Einbettungs-Code für einen Viewer abrufen und ihn zur Seite hinzufügen. Tags-Skriptbibliotheken können dann der Seite manuell zum Tracking von Viewer-Ereignissen hinzugefügt werden.
 
 In der folgenden Tabelle sind die Dynamic Media Viewer-Ereignisse sowie die unterstützten Argumente aufgeführt:
 
@@ -168,4 +168,4 @@ In der folgenden Tabelle sind die Dynamic Media Viewer-Ereignisse sowie die unte
 
 * [Integrieren von AEM mit Tags in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=de)
 * [Ausführen von Adobe Experience Manager im Scene7-Modus von Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=de)
-* [Integrieren von Dynamic Media-Viewern mit Adobe Analytics mithilfe von Tags](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-extension-use.html?lang=de)
+* [Integrieren von Dynamic Media-Viewern in Adobe Analytics mit Tags](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-extension-use.html?lang=de)

@@ -13,9 +13,9 @@ jira: KT-14645
 thumbnail: 3425972.jpeg
 exl-id: d73c4bdc-c1ff-498c-9584-93e6e39f5e39
 source-git-commit: e84f8375c94a2834ac3c61d3860ec92510950934
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '88'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -25,4 +25,4 @@ Erfahren Sie, wie Sie mit Adobe Express mühelos Inhalte in Adobe Experience Man
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
 
-Erfahren Sie, wie Sie die [Native AEM Assets-Integration mit Adobe Expreß](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express) um über Adobe Expreß nahtlos auf AEM Assets zuzugreifen.
+Erfahren Sie, wie Sie die [native AEM Assets-Integration mit Adobe Express](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express) einrichten, um über Adobe Express nahtlos auf AEM Assets zuzugreifen.

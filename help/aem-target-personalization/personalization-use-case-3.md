@@ -11,9 +11,9 @@ doc-type: Tutorial
 exl-id: 1550e6a7-04b5-4a40-9d7b-88074283402f
 duration: 165
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '581'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ Für diese Übung müssen die folgenden Benutzenden einbezogen werden. Bei besti
 
 * **AEM**
    * Die [AEM-Veröffentlichungsinstanz](./implementation.md#getting-aem) wird auf „localhost:4503“ ausgeführt.
-   * [AEM mit Adobe Target mithilfe von Tags integriert](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
+   * [AEM wurde in Adobe Target über Tags integriert.](./using-launch-adobe-io.md#aem-target-using-launch-by-adobe)
 * **Experience Cloud**
    * Es besteht Zugriff auf die Adobe Experience Cloud-Bereitstellung Ihres Unternehmens: `https://<yourcompany>.experiencecloud.adobe.com`
    * Experience Cloud wurde mit [Adobe Target](https://experiencecloud.adobe.com) bereitgestellt.

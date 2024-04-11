@@ -14,9 +14,9 @@ doc-type: Tutorial
 exl-id: 2bc6cd90-7b23-4dde-bb07-bca0de9fa509
 duration: 278
 source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '260'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ In diesem Video besprechen wir drei Ansätze zur Verwendung von AEM und Target u
 * __Szenario 1:__ Personalisierung mithilfe von AEM Experience Fragment-Angeboten
 
    1. [Hinzufügen von Adobe Target zu Ihrer AEM-Website](./add-target-launch-extension.md)
-   1. [Trigger eines Adobe Target-Aufrufs von Tags](./load-and-fire-target.md)
+   1. [Auslösen eines Adobe Target-Aufrufs über Tags](./load-and-fire-target.md)
    1. [Integrieren des AEM-Autoren-Service in Adobe Target](./setup-aem-target-cloud-service.md)
    1. [Exportieren von AEM Experience Fragments nach Adobe Target](./export-experience-fragment-target.md)
    1. [Personalisieren von Teilen einer Web-Seite mithilfe von Experience Fragment-Angeboten](./create-target-activity.md)
@@ -43,11 +43,11 @@ In diesem Video besprechen wir drei Ansätze zur Verwendung von AEM und Target u
 * __Szenario 2__: Personalisierung mithilfe von Visual Experience Composer (VEC)
 
    1. [Hinzufügen von Adobe Target zu Ihrer AEM-Website](./add-target-launch-extension.md)
-   1. [Trigger eines Adobe Target-Aufrufs von Tags](./load-and-fire-target.md)
+   1. [Auslösen eines Adobe Target-Aufrufs über Tags](./load-and-fire-target.md)
    1. [Personalisieren von Teilen einer Web-Seite mithilfe von Visual Experience Composer ](./personalization-using-vec.md)
 
 * __Szenario 3:__ Personalisierung vollständiger Web-Seiten-Erlebnisse
 
    1. [Hinzufügen von Adobe Target zu Ihrer AEM-Website](./add-target-launch-extension.md)
-   1. [Trigger eines Adobe Target-Aufrufs von Tags](./load-and-fire-target.md)
-   1. [Personalisieren des gesamtes Web-Seiten-Erlebnisses](./personalization-web-page.md)
+   1. [Auslösen eines Adobe Target-Aufrufs über Tags](./load-and-fire-target.md)
+   1. [Personalisieren des gesamten Web-Seiten-Erlebnisses](./personalization-web-page.md)
