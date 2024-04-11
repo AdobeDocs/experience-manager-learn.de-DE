@@ -1,6 +1,6 @@
 ---
-title: Hinzufügen der Target-Erweiterung zu einer Tag-Eigenschaft
-description: Erfahren Sie, wie Sie die Adobe Target-Erweiterung zu einer Tag-Eigenschaft hinzufügen.
+title: Hinzufügen der Target-Erweiterung zu einer Tags-Eigenschaft
+description: Erfahren Sie, wie Sie die Adobe Target-Erweiterung zu einer Tags-Eigenschaft hinzufügen.
 version: Cloud Service
 jira: KT-6131
 thumbnail: 41247.jpg
@@ -16,15 +16,15 @@ duration: 297
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '91'
-ht-degree: 37%
+ht-degree: 100%
 
 ---
 
-# Hinzufügen der Target-Erweiterung zu einer Tag-Eigenschaft {#adobe-target-extension}
+# Hinzufügen der Target-Erweiterung zu einer Tags-Eigenschaft {#adobe-target-extension}
 
-Um diesem Video zu folgen, müssen Sie bereits [integrierte Tags in Adobe Experience Platform mit AEM](../experience-platform/data-collection/tags/overview.md).
+Um diesem Video zu folgen, müssen Sie bereits [Tags in Adobe Experience Platform mit AEM integriert](../experience-platform/data-collection/tags/overview.md) haben.
 
-Erfahren Sie, wie Sie Adobe Target mithilfe von Tags für Ihre AEM Website aktivieren.
+Erfahren Sie, wie Sie Adobe Target mithilfe von Tags für Ihre AEM-Website aktivieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/41247?quality=12&learn=on)
 

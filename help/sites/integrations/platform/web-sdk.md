@@ -17,7 +17,7 @@ duration: 1360
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '1229'
-ht-degree: 90%
+ht-degree: 98%
 
 ---
 
@@ -75,7 +75,7 @@ Machen Sie sich mit dem Konzept von Datenströmen und verwandten Themen wie Data
 
 ## Erstellen einer Tag-Eigenschaft – Experience Platform
 
-Erfahren Sie, wie Sie eine Tag-Eigenschaft in Experience Platform erstellen, um die JavaScript-Bibliothek des Web SDK zur WKND-Website hinzuzufügen. Die neu definierte Tag-Eigenschaft verfügt über die folgenden Ressourcen:
+Erfahren Sie, wie Sie in Experience Platform eine Tag-Eigenschaft erstellen, um die JavaScript-Bibliothek des Web SDK zur WKND-Website hinzuzufügen. Die neu definierte Tag-Eigenschaft verfügt über die folgenden Ressourcen:
 
 + Tag-Erweiterungen: [Core](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) und [Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
 + Datenelemente: Die Datenelemente des benutzerdefinierten Code-Typs, die den Seitennamen, den Site-Abschnitt und den Hostnamen mithilfe der Datenschicht der Adobe Client-WKND-Site extrahieren. Auch das Datenelement vom XDM-Objekttyp, das mit dem neu erstellten WKND-XDM-Schema übereinstimmt, wurde in einem früheren Schritt [Erstellen eines XDM-Schemas](#create-xdm-schema---experience-platform) erstellt.
@@ -174,9 +174,9 @@ Weitere Informationen zur Integration von AEM-Kernkomponenten in die Adobe Clien
 
 ## Verbinden der Tag-Eigenschaft mit AEM
 
-Erfahren Sie, wie Sie die kürzlich erstellte Tag-Eigenschaft über Adobe IMS mit AEM und Tags in der Adobe Experience Platform-Konfiguration in AEM verknüpfen. Wenn eine AEM as a Cloud Service Umgebung eingerichtet ist, werden automatisch mehrere Konfigurationen des technischen Adobe IMS-Kontos generiert, einschließlich Tags. Für AEM Version 6.5 müssen Sie jedoch eine manuell konfigurieren.
+Erfahren Sie, wie Sie die kürzlich erstellte Tag-Eigenschaft über Adobe IMS und Tags in der Adobe Experience Platform-Konfiguration in AEM mit AEM verknüpfen. Wenn eine AEM as a Cloud Service-Umgebung eingerichtet ist, werden mehrere Konfigurationen des technischen Adobe IMS-Kontos automatisch generiert, einschließlich Tags. Für AEM Version 6.5 müssen Sie jedoch eine manuell konfigurieren.
 
-Nach Verknüpfung der Tag-Eigenschaft kann die WKND-Site die JavaScript-Bibliothek der Tag-Eigenschaft mithilfe der Tags in der Adobe Experience Platform-Cloud-Service-Konfiguration auf die Webseiten laden.
+Nach Verknüpfung der Tag-Eigenschaft kann die WKND-Site die JavaScript-Bibliothek der Tag-Eigenschaft mithilfe der Tags in der Adobe Experience Platform-Cloud-Service-Konfiguration auf die Web-Seiten laden.
 
 ### Überprüfen des Ladens von Tag-Eigenschaften auf WKND
 

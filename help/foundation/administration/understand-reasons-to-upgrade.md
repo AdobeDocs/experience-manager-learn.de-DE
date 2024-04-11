@@ -12,7 +12,7 @@ duration: 809
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '2588'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -623,8 +623,8 @@ Beschleunigen der Site-Entwicklung. Verfügbar auf GitHub für regelmäßige Ver
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/using/aem_launch_adobeio_integration.html" target="_blank">Tags in der Adobe Experience Platform-Integration</a>:</strong>
-            Integrieren Sie mit dem Tag-Management-Cloud-Dienst der nächsten Generation von Adobe.</td>
+            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/using/aem_launch_adobeio_integration.html" target="_blank">Tags in Adobe Experience Platform-Integration</a>:</strong>
+Integrieren in den Tag Management Cloud Service der nächsten Generation von Adobe.</td>
             <td> </td>
             <td> </td>
             <td> </td>

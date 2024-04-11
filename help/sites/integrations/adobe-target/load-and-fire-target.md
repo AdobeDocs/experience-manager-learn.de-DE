@@ -1,6 +1,6 @@
 ---
 title: Laden und Auslösen eines Target-Aufrufs
-description: Erfahren Sie, wie Sie laden, Parameter an Seitenanfragen übergeben und mithilfe einer Tagregel einen Target-Aufruf von Ihrer Site-Seite aus auslösen können.
+description: Erfahren Sie, wie Sie mit einer Tags-Regel Parameter laden, an eine Seitenanfrage übergeben und einen Target-Aufruf von Ihrer Site-Seite aus auslösen.
 feature: Core Components, Adobe Client Data Layer
 version: Cloud Service
 jira: KT-6133
@@ -16,13 +16,13 @@ duration: 610
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
 workflow-type: tm+mt
 source-wordcount: '544'
-ht-degree: 58%
+ht-degree: 100%
 
 ---
 
 # Laden und Auslösen eines Target-Aufrufs {#load-fire-target}
 
-Erfahren Sie, wie Sie laden, Parameter an Seitenanfragen übergeben und mithilfe einer Tagregel einen Target-Aufruf von Ihrer Site-Seite aus auslösen können. Informationen zu Web-Seiten werden mithilfe der Adobe Client-Datenschicht abgerufen und als Parameter übergeben, über die Sie Daten zum Besuchererlebnis auf einer Web-Seite erfassen und speichern und dann den Zugriff auf diese Daten erleichtern können.
+Erfahren Sie, wie Sie mit einer Tags-Regel Parameter laden, an eine Seitenanfrage übergeben und einen Target-Aufruf von Ihrer Site-Seite aus auslösen. Informationen zu Web-Seiten werden mithilfe der Adobe Client-Datenschicht abgerufen und als Parameter übergeben, über die Sie Daten zum Besuchererlebnis auf einer Web-Seite erfassen und speichern und dann den Zugriff auf diese Daten erleichtern können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
@@ -34,7 +34,7 @@ Die Adobe Client-Datenschicht ist eine ereignisgesteuerte Datenschicht. Wenn die
 
 ![Konfiguration des Ereignisses „Seite angezeigt“ und benutzerdefinierter Code](assets/load-and-fire-target-call.png)
 
-Fügen Sie in der Eigenschaft &quot;tags&quot;eine neue **Ereignis** der **Regel**
+Fügen Sie in der Tags-Eigenschaft ein neues **Ereignis** zur **Regel** hinzu
 
 + __Erweiterung:__ Core
 + __Ereignistyp:__ Benutzerdefinierter Code
@@ -80,20 +80,20 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-Eine benutzerdefinierte Funktion definiert die `pageShownEventHandler`und überwacht Ereignisse, die von AEM Kernkomponenten ausgegeben werden, leitet die relevanten Informationen von der Kernkomponente ab, packt sie in ein Ereignisobjekt und Trigger die Tags &quot;Event&quot;mit den abgeleiteten Ereignisinformationen bei der Nutzlast.
+Eine benutzerdefinierte Funktion definiert den `pageShownEventHandler`, überwacht die von den AEM-Kernkomponenten ausgegebenen Ereignisse, leitet die relevanten Informationen von der Kernkomponente ab, packt sie in ein Ereignisobjekt und löst das Tags-Ereignis entsprechend der Payload mit den abgeleiteten Ereignisinformationen aus.
 
-Die Tags-Regel wird mithilfe des Tags `trigger(...)` Funktion, die __only__ in der Codeausschnitt-Definition eines Ereignisses mit benutzerspezifischem Code einer Regel verfügbar.
+Die Tags-Regel wird mithilfe der Tags-Funktion `trigger(...)` ausgelöst, die __nur__ in der Code-Snippet-Definition eines Ereignisses mit benutzerdefiniertem Code einer Regel verfügbar ist.
 
-Die `trigger(...)` -Funktion nimmt ein Ereignisobjekt als Parameter an, der wiederum in den Tags Datenelemente durch einen anderen reservierten Namen in Tags namens verfügbar gemacht wird. `event`. Datenelemente in -Tags können jetzt auf Daten aus diesem Ereignisobjekt aus dem `event` -Objekt mit Syntax wie `event.component['someKey']`.
+Die Funktion `trigger(...)` nimmt ein Ereignisobjekt als Parameter an, der wiederum in Tags-Datenelementen durch einen anderen reservierten Namen `event` in Tags verfügbar gemacht wird. Datenelemente in Tags können nun auf Daten aus diesem Ereignisobjekt aus dem `event`-Objekt mit einer Syntax wie `event.component['someKey']` verweisen.
 
-Wenn `trigger(...)` außerhalb des Kontexts des Ereignistyps &quot;Benutzerspezifischer Code&quot;eines Ereignisses verwendet wird (z. B. in einer Aktion), wird der JavaScript-Fehler `trigger is undefined` wird auf der Website ausgelöst, die mit der Eigenschaft &quot;tags&quot;integriert ist.
+Wenn `trigger(...)` außerhalb des Kontexts des Ereignistyps „Benutzerdefinierter Code“ eines Ereignisses (z. B. in einer Aktion) verwendet wird, wird der JavaScript-Fehler `trigger is undefined` auf der Website ausgelöst, in die die Tags-Eigenschaft integriert ist.
 
 
 ### Datenelemente
 
 ![Datenelemente](assets/data-elements.png)
 
-Tags-Datenelemente ordnen die Daten aus dem Ereignisobjekt zu [ausgelöst im benutzerspezifischen Ereignis &quot;Seite angezeigt&quot;](#page-event) auf Variablen, die in Adobe Target über den Datenelementtyp &quot;Benutzerspezifischer Code&quot;der Haupterweiterung verfügbar sind.
+Tags-Datenelemente ordnen die Daten aus dem Ereignisobjekt, das [im benutzerdefinierten Ereignis „Seite angezeigt“ ausgelöst](#page-event) wurde, Variablen zu, die in Adobe Target über den Datenelementtyp „Benutzerdefinierter Code“ der Core-Erweiterung verfügbar sind.
 
 #### Seiten-ID-Datenelement
 
