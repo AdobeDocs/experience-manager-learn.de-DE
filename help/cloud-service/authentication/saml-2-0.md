@@ -11,9 +11,9 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2022-10-17T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2430
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '3137'
+source-git-commit: 1f9736acbbccd09cb1b32c247860827b13e85129
+workflow-type: tm+mt
+source-wordcount: '3060'
 ht-degree: 100%
 
 ---
@@ -441,15 +441,6 @@ Nach erfolgreicher Authentifizierung beim IDP orchestriert der IDP eine HTTP-POS
 ```
 
 Wenn das Umschreiben von URLs auf dem Apache-Webserver konfiguriert ist (`dispatcher/src/conf.d/rewrites/rewrite.rules`) stellen Sie sicher, dass Anfragen an `.../saml_login`-Endpunkte nicht versehentlich beschädigt werden.
-
-## Aktivieren von Datensynchronisierung und gekapselten Token
-
-Wenn während der SAML-Authentifizierung eine Benutzerin oder ein Benutzer in AEM Publish erstellt wird, kann der AEM-Benutzerknoten über die Service-Ebene von AEM Publish authentifiziert werden.
-Dies setzt voraus, dass die [Datensynchronisierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html?lang=de#data-synchronization) und [gekapselte Token](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html?lang=de#sticky-sessions-and-encapsulated-tokens) vom Adobe-Support für den AEM Publish-Service aktiviert werden.
-
-Stellen Sie folgende Anfrage an den Adobe-Support (über [Admin Console](https://adminconsole.adobe.com) > Support):
-
-> Aktivieren von Datensynchronisierung und gekapselten Token im AEM Publish-Service für Programm X und Umgebung Y
 
 ## Bereitstellen der SAML-Konfiguration
 
