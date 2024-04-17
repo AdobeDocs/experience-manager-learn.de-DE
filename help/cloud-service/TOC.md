@@ -318,14 +318,14 @@ ht-degree: 99%
       + [Erstellen einer verbundenen App](./forms/integrate-with-salesforce/create-connected-app.md)
       + [Erstellen einer Swagger-Datei](./forms/integrate-with-salesforce/describe-rest-api.md)
       + [Erstellen einer Datenquelle](./forms/integrate-with-salesforce/create-data-source.md)
-      + [Erstellen eines Formulardatenmodells](./forms/integrate-with-salesforce/create-form-data-model.md)
+      + [Erstellen von Formulardatenmodellen](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [Testformularübermittlung](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [Testklick-Ereignis](./forms/integrate-with-salesforce/create-lead-click-event.md)
    + Speichern von Formularübermittlungen auf One Drive und Sharepoint{#one-drive}
       + [Speichern von Formulardaten auf One Drive](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [Speichern von Formulardaten in Sharepoint](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
       + [Vorbefüllen von Formularen mit Daten aus der SharePoint-Liste](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
-      + [Einfügen von Daten in die SharePoint-Liste mithilfe eines Workflows ](./forms/forms-cs-sharepoint/submit-data-sharepoint-list-workflow.md)
+      + [Einfügen von Daten in die SharePoint-Liste mithilfe eines Workflows](./forms/forms-cs-sharepoint/submit-data-sharepoint-list-workflow.md)
 + Asset Compute-Erweiterbarkeit{#asset-compute}
    + [Übersicht](./asset-compute/overview.md)
    + Setup{#set-up}
@@ -392,5 +392,5 @@ ht-degree: 99%
          + [Edge-Sekundäre](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
          + [Veröffentlichen von Ereignissen und Rückgängigmachen der Veröffentlichung in Edge Delivery Services](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
          + [Abfrageindizes und Excel-Formeln](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
-         + [Eigenes Cloudflare-CDN einbinden](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)
+         + [Einbinden Ihres eigenen Cloudflare-CDN](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)
          + [AEM Assets integrieren](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)

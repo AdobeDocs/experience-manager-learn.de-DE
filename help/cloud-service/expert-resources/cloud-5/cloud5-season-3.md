@@ -8,7 +8,7 @@ exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 source-git-commit: a0fdc061d231fb68fa9bd11440d344be9701eca2
 workflow-type: tm+mt
 source-wordcount: '363'
-ht-degree: 84%
+ht-degree: 92%
 
 ---
 
@@ -34,8 +34,8 @@ Jede Staffel variiert in ihrer Länge und wird nach einem festen Zeitplan veröf
             </a>
             <div>
                 <a href="./season-3/cloud5-3rd-party-search.md">
-<strong>Suche von Drittanbietern</strong></a>        
-<br/><em>mit James Talbot und Varun Mitra, AEM Engineering</em>
+                <strong>Suche von Drittanbietern</strong></a>        
+                <br/><em>mit James Talbot und Varun Mitra, AEM Engineering</em>
             </div>
             <p>
                 <br/>
@@ -102,16 +102,16 @@ Erkunden Sie Ereignisse, die beim Veröffentlichen und Aufheben einer Veröffent
         </td>  
         <td>
             <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
-                <img alt="Eigenes Cloudflare-CDN einbinden" src="https://video.tv.adobe.com/v/3428100?format=jpeg"/>
+                <img alt="Einbinden Ihres eigenen Cloudflare-CDN" src="https://video.tv.adobe.com/v/3428100?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
-                <strong>Eigenes Cloudflare-CDN einbinden</strong></a>        
-                <br/><em>mit James Talbot &amp; Kunwar Saluja, AEM Engineering</em>
+<strong>Einbinden Ihres eigenen Cloudflare-CDN</strong></a>        
+<br/><em>mit James Talbot und Kunwar Saluja, AEM Engineering</em>
             </div>
             <p>
                 <br/>
-                Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfigurieren.
+Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfigurieren.
             </p>
         </td>           
     </tr>  
