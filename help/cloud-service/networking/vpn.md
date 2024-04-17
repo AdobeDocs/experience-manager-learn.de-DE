@@ -11,7 +11,7 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 duration: 948
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1192'
 ht-degree: 100%
 
@@ -87,7 +87,7 @@ Aktivieren Sie zunächst das virtuelle private Netzwerk auf AEM as a Cloud Servi
 
    Definieren Sie die JSON-Parameter in `vpn-create.json` und stellen Sie sie cURL über `... -d @./vpn-create.json` zur Verfügung.
 
-   [Laden Sie das Beispiel vpn-create.json herunter](./assets/vpn-create.json). Diese Datei ist nur ein Beispiel. Konfigurieren Sie Ihre Datei nach Bedarf auf der Grundlage der unter [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) dokumentierten optionalen/erforderlichen Felder.
+   [Laden Sie das Beispiel vpn-create.json herunter](./assets/vpn-create.json).  Diese Datei ist nur ein Beispiel. Konfigurieren Sie Ihre Datei nach Bedarf auf der Grundlage der unter [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) dokumentierten optionalen/erforderlichen Felder.
 
    ```json
    {

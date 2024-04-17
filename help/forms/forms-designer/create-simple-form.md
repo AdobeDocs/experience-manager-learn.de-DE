@@ -13,9 +13,9 @@ jira: KT-15053
 thumbnail: 3427620.jpeg
 exl-id: ac482951-9941-4c14-95b2-29d274fa610e
 source-git-commit: 73c15a195c438dd7a07142bba719c6f820bf298a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 56%
+ht-degree: 100%
 
 ---
 

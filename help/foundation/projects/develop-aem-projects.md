@@ -10,9 +10,9 @@ level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1603
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4441'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -26,20 +26,20 @@ Dieses Entwicklungs-Tutorial zeigt, wie für [!DNL AEM Projects] entwickelt wird
 
 ## Einführung {#introduction}
 
-[[!DNL AEM Projects]](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) ist eine Funktion von AEM, die es erleichtert, alle Workflows und Aufgaben im Zusammenhang mit der Inhaltserstellung im Rahmen einer AEM Sites- oder Assets-Implementierung zu verwalten und zu gruppieren.
+[[!DNL AEM Projects]](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/sites/authoring/projects/projects) ist eine Funktion von AEM, die es erleichtert, alle Workflows und Aufgaben im Zusammenhang mit der Inhaltserstellung im Rahmen einer AEM Sites- oder Assets-Implementierung zu verwalten und zu gruppieren.
 
-AEM-Projekte verfügen standardmäßig über mehrere [vorkonfigurierte Projektvorlagen](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects). Beim Erstellen eines Projekts können Autorinnen und Autoren aus diesen verfügbaren Vorlagen auswählen. Im Falle umfangreicher AEM-Implementierungen mit besonderen Geschäftsanforderungen sollten benutzerdefinierte Projektvorlagen erstellt werden – zugeschnitten auf die entsprechenden Bedürfnisse. Durch die Erstellung einer benutzerdefinierten Projektvorlage können Entwicklerinnen und Entwickler das Projekt-Dashboard konfigurieren, sich in benutzerdefinierte Workflows sozusagen einklinken und zusätzliche Geschäftsrollen für ein Projekt erstellen. Wir werden uns die Struktur einer Projektvorlage ansehen und eine Beispielvorlage erstellen.
+AEM-Projekte verfügen standardmäßig über mehrere [vorkonfigurierte Projektvorlagen](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/sites/authoring/projects/projects). Beim Erstellen eines Projekts können Autorinnen und Autoren aus diesen verfügbaren Vorlagen auswählen. Im Falle umfangreicher AEM-Implementierungen mit besonderen Geschäftsanforderungen sollten benutzerdefinierte Projektvorlagen erstellt werden – zugeschnitten auf die entsprechenden Bedürfnisse. Durch die Erstellung einer benutzerdefinierten Projektvorlage können Entwicklerinnen und Entwickler das Projekt-Dashboard konfigurieren, sich in benutzerdefinierte Workflows sozusagen einklinken und zusätzliche Geschäftsrollen für ein Projekt erstellen. Wir werden uns die Struktur einer Projektvorlage ansehen und eine Beispielvorlage erstellen.
 
 ![Benutzerdefinierte Projektkarte](./assets/develop-aem-projects/custom-project-card.png)
 
-## Setup
+## Einrichtung
 
 In diesem Tutorial wird der Code erläutert, der zum Erstellen einer benutzerdefinierten Projektvorlage erforderlich ist. Sie können das [beigefügte Paket](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip) in eine lokale Umgebung herunterladen und dort installieren, um diesem zusammen mit dem Tutorial zu folgen. Sie können auch auf das gesamte auf [GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide) gehostete Maven-Projekt zugreifen.
 
 * [Fertiges Tutorial-Paket](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Vollständiges Code-Repository auf GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-Dieses Tutorial setzt grundlegende Kenntnisse zu [AEM-Entwicklungsmethoden](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/introduction/the-basics) und eine gewisse Vertrautheit mit dem [Setup von AEM-Maven-Projekten](https://docs.adobe.com/content/help/de/experience-manager-65/developing/devtools/ht-projects-maven.html) voraus. Der gesamte erwähnte Code sollte als Referenz verwendet und nur in einer [lokalen AEM-Entwicklungsinstanz](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy) bereitgestellt werden.
+Dieses Tutorial setzt grundlegende Kenntnisse zu [AEM-Entwicklungsmethoden](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/developing/introduction/the-basics) und eine gewisse Vertrautheit mit dem [Setup von AEM-Maven-Projekten](https://docs.adobe.com/content/help/de/experience-manager-65/developing/devtools/ht-projects-maven.html) voraus. Der gesamte erwähnte Code sollte als Referenz verwendet und nur in einer [lokalen AEM-Entwicklungsinstanz](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/deploying/deploying/deploy) bereitgestellt werden.
 
 ## Struktur einer Projektvorlage
 
@@ -69,11 +69,11 @@ Ein Beispiel für einen benutzerdefinierten Assistenten finden Sie für die Vorl
 
 ### Gadgets {#gadgets}
 
-Es gibt keine zusätzlichen Eigenschaften auf diesem Knoten, aber die untergeordneten Elemente des Gadget-Knotens steuern, welche Projektkacheln beim Erstellen eines neuen Projekts das Dashboard des Projekts ausfüllen. [Die Projektkacheln](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) (auch als Gadgets oder Pods bezeichnet) sind einfache Karten, die den Arbeitsplatz eines Projekts füllen. Eine vollständige Liste der vorkonfigurierten Kacheln finden Sie unter **/libs/cq/gui/components/projects/admin/pod. **Projektinhaberinnen und -inhaber können Kacheln jederzeit hinzufügen/entfernen, nachdem ein Projekt erstellt wurde.
+Es gibt keine zusätzlichen Eigenschaften auf diesem Knoten, aber die untergeordneten Elemente des Gadget-Knotens steuern, welche Projektkacheln beim Erstellen eines neuen Projekts das Dashboard des Projekts ausfüllen. [Die Projektkacheln](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/sites/authoring/projects/projects) (auch als Gadgets oder Pods bezeichnet) sind einfache Karten, die den Arbeitsplatz eines Projekts füllen. Eine vollständige Liste der vorkonfigurierten Kacheln finden Sie unter **/libs/cq/gui/components/projects/admin/pod. **Projektinhaberinnen und -inhaber können Kacheln jederzeit hinzufügen/entfernen, nachdem ein Projekt erstellt wurde.
 
 ### Rollen {#roles}
 
-Es gibt drei [Standardrollen](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) für jedes Projekt: **Observers**, **Editors** und **Owners**. Wenn Sie dem Knoten für Rollen untergeordnete Knoten hinzufügen, können Sie zusätzliche geschäftsspezifische Projektrollen für die Vorlage hinzufügen. Anschließend können Sie diese Rollen mit bestimmten Workflows verknüpfen, die mit dem Projekt zusammenhängen.
+Es gibt drei [Standardrollen](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/sites/authoring/projects/projects) für jedes Projekt: **Observers**, **Editors** und **Owners**. Wenn Sie dem Knoten für Rollen untergeordnete Knoten hinzufügen, können Sie zusätzliche geschäftsspezifische Projektrollen für die Vorlage hinzufügen. Anschließend können Sie diese Rollen mit bestimmten Workflows verknüpfen, die mit dem Projekt zusammenhängen.
 
 ### Workflows {#workflows}
 
@@ -152,7 +152,7 @@ Da wir hauptsächlich Knoten kopieren/konfigurieren, wird CRXDE Lite verwendet. 
    1. Fügen Sie einen weiteren **nt:unstructured**-Knoten namens „Genehmigende“ als untergeordnetes Element des Benutzerknotens hinzu.
    1. Fügen Sie die Zeichenfolge-Eigenschaften **jcr:title** = &quot;**Approvers**&quot;, **roleclass** =&quot;**owner**&quot;, **roleid**=&quot;**approvers**&quot; hinzu.
       1. Der Name des Genehmigungsknotens sowie jcr:title und roleid können beliebige Zeichenfolgenwerte sein (solange roleid eindeutig ist).
-      1. **roleclass** legt die für diese Rolle beantragten Berechtigungen anhand der [drei vorkonfigurierten Rollen](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) fest: **Owner**, **Editor** und **Observer**.
+      1. **roleclass** legt die für diese Rolle beantragten Berechtigungen anhand der [drei vorkonfigurierten Rollen](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/sites/authoring/projects/projects) fest: **Owner**, **Editor** und **Observer**.
       1. Wenn die benutzerdefinierte Rolle eher eine Führungsrolle ist, kann die Rollenklasse **Owner** sein; wenn es sich eher um eine spezifische Authoring-Rolle wie „Photographer“ oder „Designer“ handelt, sollte die Rollenklasse **Editor** ausreichen. Der große Unterschied zwischen **Inhaberin bzw. Inhaber** und **Bearbeitenden** ist, dass Projektinhaberinnen und -inhaber Projekteigenschaften aktualisieren und dem Projekt neue Benutzende hinzufügen können.
 
    ```shell
@@ -308,7 +308,7 @@ Der letzte Schritt des Workflows nutzt den vorkonfigurierten Prozessschritt „S
 
    ![Dialogfeld „Workflow erstellen“](./assets/develop-aem-projects/workflow-create-dialog.png)
 
-   [Weitere Informationen zum Erstellen von Workflows finden Sie hier](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-models).
+   [Weitere Informationen zum Erstellen von Workflows finden Sie hier](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-models).
 
 1. Als Best Practice sollten benutzerdefinierte Workflows in einem eigenen Ordner unter /etc/workflow/models gruppiert werden. Erstellen Sie in CRXDE Lite unter /etc/workflow/models einen **nt:folder** mit dem Namen **aem-guides**. Durch das Hinzufügen eines Unterordners wird sichergestellt, dass benutzerdefinierte Workflows bei Upgrades oder Service Pack-Installationen nicht versehentlich überschrieben werden.
 
@@ -320,7 +320,7 @@ Der letzte Schritt des Workflows nutzt den vorkonfigurierten Prozessschritt „S
 
    >[!NOTE]
    >
-   >Bei Verwendung von AEM 6.4+ hat sich der Speicherort des Workflows geändert. Weitere Informationen dazu finden Sie [hier](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices).
+   >Bei Verwendung von AEM 6.4+ hat sich der Speicherort des Workflows geändert. Weitere Informationen dazu finden Sie [hier](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices).
 
    Bei Verwendung von AEM 6.4+ wird das Workflow-Modell unter `/conf/global/settings/workflow/models` erstellt. Wiederholen Sie die oben aufgeführten Schritte mit dem Verzeichnis „/conf“, fügen Sie einen Unterordner mit dem Namen `aem-guides` hinzu und verschieben Sie `content-approval-workflow` darunter.
 
@@ -738,7 +738,7 @@ Die Workflow-Konfiguration ist ein Bereich einer Projektvorlage, der die verfüg
    >Wenn Sie AEM 6.4 verwenden, hat sich der Speicherort des Workflows geändert. Lassen Sie die `modelId`-Eigenschaft auf den Speicherort des Runtime-Workflow-Modells unter `/var/workflow/models/aem-guides/content-approval-workflow` verweisen
    >
    >
-   >Weitere Informationen zur Änderung des Workflow-Speicherorts [finden Sie hier](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices).
+   >Weitere Informationen zur Änderung des Workflow-Speicherorts [finden Sie hier](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices).
 
    ```xml
    <contentapproval
@@ -754,4 +754,4 @@ Die Workflow-Konfiguration ist ein Bereich einer Projektvorlage, der die verfüg
 
 * [Download des fertigen Tutorial-Pakets](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Vollständiges Code-Repository auf GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
-* [Dokumentation zu AEM-Projekten](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)
+* [Dokumentation zu AEM-Projekten](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/sites/authoring/projects/projects)

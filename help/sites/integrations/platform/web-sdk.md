@@ -15,9 +15,9 @@ badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1360
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1229'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Falls Sie nicht über die erforderlichen Berechtigungen verfügen, können Ihre 
 
 ## Erstellen eines XDM-Schemas – Experience Platform
 
-Mit dem Experience-Datenmodell(XDM)-Schema können Sie die Kundenerlebnisdaten standardisieren. Um die **WKND-Seitenaufrufe** zu erfassen, erstellen Sie ein XDM-Schema und verwenden die von Adobe bereitgestellten Feldergruppen `AEP Web SDK ExperienceEvent` für die Web-Datenerfassung.
+Mit dem Experience-Datenmodell (XDM)-Schema können Sie die Kundenerlebnisdaten standardisieren. Um die **WKND-Seitenaufrufe** zu erfassen, erstellen Sie ein XDM-Schema und verwenden die von Adobe bereitgestellten Feldergruppen `AEP Web SDK ExperienceEvent` für die Web-Datenerfassung.
 
 Es gibt allgemeine und branchenspezifische Datenmodelle, z. B. für den Einzelhandel, Finanzdienstleistungen, das Gesundheitswesen usw. Weitere Informationen finden Sie in der [Übersicht über Branchendatenmodelle](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/industries/overview.html?lang=de).
 
@@ -88,7 +88,7 @@ Beim Erstellen und Veröffentlichen der Tag-Bibliothek mit dem **Veröffentlichu
 
 >[!TIP]
 >
->Der im Video dargestellte Code für Datenelemente und Regelereignisse ist als Referenz verfügbar. **Erweitern Sie das unten stehende Akkordeon-Element**. Wenn Sie jedoch NICHT die Adobe Client-Datenschicht verwenden, müssen Sie den unten stehenden Code ändern. Es gilt aber weiterhin das Konzept der Definition der Datenelemente und ihrer Verwendung in der Regeldefinition. 
+>Der im Video dargestellte Code für Datenelemente und Regelereignisse ist als Referenz verfügbar. **Erweitern Sie das unten stehende Akkordeon-Element**. Wenn Sie jedoch NICHT die Adobe Client-Datenschicht verwenden, müssen Sie den unten stehenden Code ändern. Es gilt aber weiterhin das Konzept der Definition der Datenelemente und ihrer Verwendung in der Regeldefinition.
 
 
 +++ Code für Datenelemente und Regelereignisse
@@ -180,7 +180,7 @@ Nach Verknüpfung der Tag-Eigenschaft kann die WKND-Site die JavaScript-Biblioth
 
 ### Überprüfen des Ladens von Tag-Eigenschaften auf WKND
 
-Verwenden von Adobe Experience Platform Debugger [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) -Erweiterung überprüfen, ob die Tag-Eigenschaft auf WKND-Seiten geladen wird. Sie können Folgendes überprüfen:
+Prüfen Sie mit der [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)-Erweiterung von Adobe Experience Platform Debugger, ob die Tag-Eigenschaft auf WKND-Seiten geladen wird. Sie können Folgendes überprüfen:
 
 + Tag-Eigenschaften wie Erweiterung, Version, Name und mehr.
 + Platform Web SDK-Bibliotheksversion, Datenspeicher-ID

@@ -14,9 +14,9 @@ doc-type: Tutorial
 exl-id: 647447ca-3c29-4efe-bb3a-d3f53a936a2a
 duration: 279
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '266'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -44,7 +44,7 @@ Um das Client-seitige Debugging zu aktivieren, rufen Sie die `setDebug(true)`-Me
 
 ## Debugging über Adobe Experience Platform Debugger
 
-Adobe bietet Adobe Experience Platform Debugger [Chrome-Erweiterung](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) , um die Integration zu debuggen, zu verstehen und Einblicke in sie zu erhalten.
+Adobe bietet Adobe Experience Platform Debugger als [Chrome-Erweiterung](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) an, um die Integration zu debuggen, zu verstehen und Einblicke in sie zu erhalten.
 
 1. Öffnen Sie die Adobe Experience Platform Debugger-Erweiterung und öffnen Sie die Site-Seite auf der Veröffentlichungsinstanz.
 

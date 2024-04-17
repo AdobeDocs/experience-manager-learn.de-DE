@@ -10,9 +10,9 @@ doc-type: Article
 exl-id: bf4030b0-67c4-4b00-af95-f63e6f79e995
 duration: 809
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2588'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -71,7 +71,7 @@ AEM baut seine Integrationsfähigkeit in Bezug auf andere Adobe-Services aus:
 
 ### AMS Cloud Manager
 
-[Cloud Manager](https://adobe.ly/2HODmsv), ein exklusives Tool für Adobe Managed Services(AMS)-Kundinnen und -Kunden, bietet die folgenden Funktionen:
+[Cloud Manager](https://adobe.ly/2HODmsv), ein exklusives Tool für Adobe Managed Services (AMS)-Kundinnen und -Kunden, bietet die folgenden Funktionen:
 
 + Cloud Manager hat die Unterstützung von AEM-Bereitstellungen von AEM Sites auf **AEM Assets** ausgedehnt. Dazu gehören auch **automatisierte Leistungstests für die Asset-Verarbeitung**.
 + Die **automatische Skalierung** der AEM Publish-Ebene bei vordefinierten Schwellenwerten stellt ein optimales Endbenutzererlebnis sicher.
@@ -126,7 +126,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Foundation-Funktionen von AEM
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/deploying/using/indexing-via-the-oak-run-jar.html">oak-run.jar-Indexunterstützung</a>:</strong> Verbesserte Neuindizierung, Erhebung statistischer Daten und Konsistenzprüfung von Oak-Indizes.</td>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/indexing-via-the-oak-run-jar.html?lang=de">oak-run.jar-Indexunterstützung</a>:</strong> Verbesserte Neuindizierung, Erhebung statistischer Daten und Konsistenzprüfung von Oak-Indizes.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -136,7 +136,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Foundation-Funktionen von AEM
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/deploying/using/queries-and-indexing.html" target="_blank">Benutzerdefinierte Suchindizes</a>: </strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/queries-and-indexing.html?lang=de" target="_blank">Benutzerdefinierte Suchindizes</a>: </strong>
  Möglichkeit zum Hinzufügen benutzerdefinierter Indexdefinitionen zur Optimierung der Abfrageleistung und Suchrelevanz.</td>
             <td> </td>
             <td>✔</td>
@@ -158,7 +158,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Foundation-Funktionen von AEM
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/deploying/using/storage-elements-in-aem-6.html" target="_blank">TarMK- oder MongoMK-Repository-Speicher</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/storage-elements-in-aem-6.html?&amp;lang=de" target="_blank">TarMK- oder MongoMK-Repository-Speicher</a>:</strong>
  <br> Optionen zur Verwendung eines einfachen, leistungsstarken dateibasierten TarMK-Speichers (TarPM-Version der nächsten Generation)
  <br> oder horizontalen Skalierung mit einem MongoDB-unterstützten Repository mit MongoMK.</td>
             <td> </td>
@@ -170,7 +170,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Foundation-Funktionen von AEM
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/deploying/using/aem-with-mongodb.html" target="_blank">MongoMK-Leistung und -Stabilität</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/aem-with-mongodb.html?&amp;lang=de" target="_blank">MongoMK-Leistung und -Stabilität</a>:</strong>
  MongoMK wurde seit seiner Einführung in AEM 6.0 kontinuierlich verbessert.</td>
             <td> </td>
             <td> </td>
@@ -260,7 +260,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Foundation-Funktionen von AEM
         </tr>
         <tr>
             <td><strong><a href="https://adobe.ly/2HODmsv" target="_blank">Cloud Manager</a>: </strong>
- Cloud Manager ist Adobe Managed Services(AMS)-Kundinnen und -Kunden vorbehalten und beschleunigt die Entwicklung und Bereitstellung über eine moderne CI/CD-Pipeline.</td>
+ Cloud Manager ist Adobe Managed Services (AMS)-Kundinnen und -Kunden vorbehalten und beschleunigt die Entwicklung und Bereitstellung über eine moderne CI/CD-Pipeline.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -297,7 +297,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sicherheitsfunktionen von AEM
     </thead>
     <tbody>
         <tr>
-        <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/security-service-users.html" target="_blank">Dienstbenutzende</a></strong>
+        <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html?lang=de" target="_blank">Dienstbenutzende</a></strong>
  <br> Durch die Unterteilung von Berechtigungen werden unnötige Admin-Berechtigungen vermieden.</td>
         <td></td>
         <td>✔</td>
@@ -319,7 +319,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sicherheitsfunktionen von AEM
         <td>✔</td>
     </tr>
     <tr>
-        <td><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/csrf-protection.html" target="_blank"><strong>CSRF</strong>-<strong>Schutz</strong></a>
+        <td><a href="https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=de" target="_blank"><strong>CSRF</strong>-<strong>Schutz</strong></a>
  <br> Vorkonfigurierter Schutz vor Cross-Site Request Forgery.</td>
         <td></td>
         <td></td>
@@ -354,7 +354,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sicherheitsfunktionen von AEM
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/ldap-config.html" target="_blank">LDAP als OSGi-Konfiguration</a><br>
+        <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/ldap-config.html?lang=de" target="_blank">LDAP als OSGi-Konfiguration</a><br>
  </strong>Vereinfacht die Verwaltung und Aktualisierung der LDAP-Authentifizierung.</td>
         <td></td>
         <td>✔</td>
@@ -376,7 +376,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sicherheitsfunktionen von AEM
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/user-group-ac-admin.html" target="_blank">CUG-Verbesserungen</a><br>
+        <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/user-group-ac-admin.html?lang=de" target="_blank">CUG-Verbesserungen</a><br>
  </strong>Die Implementierung von geschlossenen Benutzergruppen wurde umgestaltet, um Leistungs- und Skalierbarkeitsprobleme zu beheben.</td>
         <td></td>
         <td></td>
@@ -387,7 +387,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sicherheitsfunktionen von AEM
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/de/experience-manager/kt/platform-repository/using/ssl-wizard-technical-video-use.html" target="_blank">SSL-Assistent</a></strong>
+        <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/use-the-ssl-wizard.html?lang=de" target="_blank">SSL-Assistent</a></strong>
  <br> Benutzeroberfläche zur Vereinfachung der SSL-Einrichtung und -Verwaltung.</td>
         <td> </td>
         <td> </td>
@@ -398,7 +398,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sicherheitsfunktionen von AEM
         <td>✔</td>
     </tr>
     <tr>
-        <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/encapsulated-token.html" target="_blank">Unterstützung von Encapsulated Tokens</a></strong>
+        <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/encapsulated-token.html?lang=de" target="_blank">Unterstützung von Encapsulated Tokens</a></strong>
  <br> Bei persistenten Sitzungen ist es nicht mehr erforderlich, die horizontale Authentifizierung über Veröffentlichungsinstanzen hinweg zu unterstützen.</td>
         <td> </td>
         <td> </td>
@@ -426,7 +426,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sicherheitsfunktionen von AEM
 
 Nachfolgend finden Sie eine Matrix der wichtigsten Sites-Funktionen von AEM. Einige dieser Funktionen wurden in früheren Versionen eingeführt, mit inkrementellen Verbesserungen in jeder Version.
 
-+ [AEM Sites-Versionshinweise](https://helpx.adobe.com/de/experience-manager/6-5/release-notes/sites.html)
++ [AEM Sites-Versionshinweise](https://helpx.adobe.com/jp/experience-manager/6-5/release-notes/sites.html?lang=de)
 
 ***✔<sup>+</sup> kennzeichnet wesentliche Verbesserungen an der Funktion in dieser Version.***
 
@@ -447,7 +447,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sites-Funktionen von AEM. Ein
     </thead>
     <tbody>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/kt/sites/using/page-editor-feature-video-use.html" target="_blank">Touch-optimierte Seitenbearbeitung</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/page-editor-feature-video-use.html?lang=de" target="_blank">Touch-optimierte Seitenbearbeitung</a>:</strong>
  Ermöglicht es Editorinnen und Editoren, Tablets und Computer mit Touchscreens zu nutzen.</td>
             <td></td>
             <td>✔</td>
@@ -469,7 +469,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Sites-Funktionen von AEM. Ein
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/kt/sites/using/template-editor-feature-video-use.html" target="_blank">Bearbeitbare Vorlagen</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=de" target="_blank">Bearbeitbare Vorlagen</a>:</strong>
  Erstellen und Bearbeiten von Seitenvorlagen durch spezialisierte Autorinnen und Autoren.</td>
             <td></td>
             <td></td>
@@ -492,7 +492,7 @@ Beschleunigen der Site-Entwicklung. Verfügbar auf GitHub für regelmäßige Ver
         </tr>
         <tr>
             <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/spa-overview.html" target="_blank">SPA-Editor</a>:</strong>
- Erstellen von bearbeitbaren, fesselnden Web-Erlebnissen mithilfe von auf React basierenden Single-Page-Anwendungs(SPA)-Frameworks.</td>
+ Erstellen von bearbeitbaren, fesselnden Web-Erlebnissen mithilfe von auf React basierenden Single-Page-Anwendungs (SPA)-Frameworks.</td>
             <td> </td>
             <td> </td>
             <td> </td>
@@ -535,7 +535,7 @@ Beschleunigen der Site-Entwicklung. Verfügbar auf GitHub für regelmäßige Ver
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/contexthub.html" target="_blank">ContextHub</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/developing/personlization/contexthub.html?lang=de" target="_blank">ContextHub</a>:</strong>
  Client-Kontext-Framework der nächsten Generation zur Personalisierung von Inhalten.</td>
             <td></td>
             <td>✔</td>
@@ -546,7 +546,7 @@ Beschleunigen der Site-Entwicklung. Verfügbar auf GitHub für regelmäßige Ver
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/authoring/using/launches.html" target="_blank">Launches</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/launches/launches.html?lang=de" target="_blank">Launches</a>:</strong>
  Entwickeln von Inhalten für eine zukünftige Version, ohne die tägliche Inhaltserstellung zu unterbrechen.</td>
             <td>✔</td>
             <td>✔</td>
@@ -568,7 +568,7 @@ Beschleunigen der Site-Entwicklung. Verfügbar auf GitHub für regelmäßige Ver
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/kt/sites/using/experience-fragments-feature-video-use.html" target="_blank">Experience Fragments</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=de" target="_blank">Experience Fragments</a>:</strong>
  Erstellen wiederverwendbarer Erlebnisse und Varianten, die für Desktop-, Mobile- und Social-Media-Kanäle optimiert sind.</td>
             <td> </td>
             <td> </td>
@@ -601,7 +601,7 @@ Beschleunigen der Site-Entwicklung. Verfügbar auf GitHub für regelmäßige Ver
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/authoring/using/content-targeting-touch.html" target="_blank">Adobe Target-Integration</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/personalization/content-targeting-touch.html?lang=de" target="_blank">Adobe Target-Integration</a>:</strong>
  Schritt-für-Schritt-Assistent zum Erstellen zielgerichteter Erlebnisse und wiederverwendbarer Angebotsbibliotheken.</td>
             <td> </td>
             <td> </td>
@@ -612,7 +612,7 @@ Beschleunigen der Site-Entwicklung. Verfügbar auf GitHub für regelmäßige Ver
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/campaign.html" target="_blank">Adobe Campaign-Integration</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/administering/integration/campaign.html?lang=de" target="_blank">Adobe Campaign-Integration</a>:</strong>
  Einfache Integration in eine E-Mail-Kampagnenlösung der nächsten Generation.</td>
             <td> </td>
             <td>✔</td>
@@ -645,7 +645,7 @@ Integrieren in den Tag Management Cloud Service der nächsten Generation von Ado
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/ecommerce.html" target="_blank">eCommerce</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/commerce/classic/administering/ecommerce.html?lang-de" target="_blank">eCommerce</a>:</strong>
  Bereitstellen von markenspezifischen, personalisierten Einkaufserlebnissen über Web-, Mobile- und Social-Touchpoints hinweg.
             </td>
             <td>✔</td>
@@ -657,7 +657,7 @@ Integrieren in den Tag Management Cloud Service der nächsten Generation von Ado
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/communities/using/overview.html" target="_blank">Communitys</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/communities/introduction/overview.html?lang=de" target="_blank">Communitys</a>:</strong>
  Foren, Kommentare mit Threads, Ereigniskalender und viele andere Funktionen ermöglichen eine weitreichende Interaktion mit Besucherinnen und Besuchern einer Site.</td>
             <td>✔</td>
             <td>✔</td>
@@ -674,7 +674,7 @@ Integrieren in den Tag Management Cloud Service der nächsten Generation von Ado
 
 Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Einige dieser Funktionen wurden in früheren Versionen eingeführt, mit inkrementellen Verbesserungen in jeder Version.
 
-+ [AEM Assets-Versionshinweise](https://helpx.adobe.com/de/experience-manager/6-5/release-notes/assets.html)
++ [AEM Assets-Versionshinweise](https://helpx.adobe.com/experience-manager/6-5/release-notes/assets.html?lang=de)
 
 ***✔ bedeutet, dass die Funktion in dieser Version erheblich verbessert wurde.***
 
@@ -695,7 +695,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
     </thead>
     <tbody>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/managing-assets-touch-ui.html" target="_blank">Touch-optimierte Benutzeroberfläche</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/managing-assets-touch-ui.html" target="_blank">Touch-optimierte Benutzeroberfläche</a>:</strong>
  Verwalten von Assets auf einem Desktop-Computer oder auf Touch-fähigen Geräten.</td>
             <td> </td>
             <td>✔</td>
@@ -706,7 +706,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/metadata.html" target="_blank">Erweiterte Metadatenverwaltung</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/metadata.html?lang=de" target="_blank">Erweiterte Metadatenverwaltung</a>:</strong>
  Metadatenvorlagen, Metadatenschema-Editor und Massenbearbeitung von Metadaten.</td>
             <td> </td>
             <td>✔</td>
@@ -717,8 +717,8 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/authoring/using/task-content.html" target="_blank">Aufgabe</a> und Workflow-Management:</strong>
-            Vordefinierte Workflows und Aufgaben für die Überprüfung und Genehmigung digitaler Assets unter Nutzung AEM Projekte.</td>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/authoring/projects/task-content.html?lang=de" target="_blank">Aufgaben</a>- und Workflow-Verwaltung:</strong>
+Vorkonfigurierte Workflows und Aufgaben zur Überprüfung und Genehmigung digitaler Assets unter Verwendung von AEM-Projekten.</td>
             <td> </td>
             <td>✔</td>
             <td>✔</td>
@@ -739,7 +739,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/mac-api-assets.html" target="_blank">Assets-HTTP-API</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/mac-api-assets.html?lang=de" target="_blank">Assets-HTTP-API</a>:</strong>
  Programmgesteuerte Interaktion mit Assets über HTTP und JSON.</td>
             <td> </td>
             <td> </td>
@@ -750,7 +750,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/link-sharing.html" target="_blank">Link-Freigabe</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/link-sharing.html?lang=de" target="_blank">Link-Freigabe</a>:</strong>
  Einfache Ad-hoc-Freigabe digitaler Assets ohne Anmeldung.</td>
             <td> </td>
             <td> </td>
@@ -772,7 +772,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/use-assets-across-connected-assets-instances.html" target="_blank">Connected Assets</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/use-assets-across-connected-assets-instances.html?lang=de" target="_blank">Connected Assets</a>:</strong>
  AEM Sites-Instanzen können nahtlos auf Assets aus einer anderen AEM Assets-Instanz zugreifen und diese verwenden.</td>
             <td> </td>
             <td> </td>
@@ -783,7 +783,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/touch-ui-asset-insights.html" target="_blank">Asset Insights</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/asset-insights.html?lang=de" target="_blank">Asset Insights</a>:</strong>
  Verwenden von Adobe Analytics, um Kundeninteraktionen mit digitalen Assets zu erfassen und in AEM anzuzeigen.</td>
             <td> </td>
             <td> </td>
@@ -794,7 +794,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/multilingual-assets.html" target="_blank">Mehrsprachige Assets</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/multilingual-assets.html?lang=de" target="_blank">Mehrsprachige Assets</a>:</strong>
  Automatische Übersetzungsunterstützung von Asset-Metadaten mit Sprachstämmen.</td>
             <td> </td>
             <td> </td>
@@ -816,7 +816,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/kt/assets/using/smart-translation-search-feature-video-use.html" target="_blank">Intelligente Übersetzungssuche</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/kt/assets/using/smart-translation-search-feature-video-use.html?lang=de" target="_blank">Intelligente Übersetzungssuche</a>:</strong>
  Automatisches Übersetzen von Suchbegriffen bei der Suche nach AEM Assets.</td>
             <td> </td>
             <td> </td>
@@ -827,7 +827,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/indesign.html" target="_blank">Adobe InDesign Server-Integration</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/indesign.html?lang=de" target="_blank">Adobe InDesign Server-Integration</a>:</strong>
  Generieren von Produktkatalogen. Erstellen von Broschüren, Flyern und Druckanzeigen anhand von InDesign-Vorlagen.</td>
             <td> </td>
             <td> </td>
@@ -850,7 +850,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/imaging-transcoding-library.html" target="_blank">Adobe-Bildbibliothek</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/imaging-transcoding-library.html?lang=de" target="_blank">Adobe-Bildbibliothek</a>:</strong>
  <br> Photoshop- und Acrobat-PDF-Bibliotheken, die für die Bearbeitung hochwertiger Dateien verwendet werden.</td>
             <td> </td>
             <td> </td>
@@ -872,7 +872,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/aem-assets-adobe-stock.html" target="_blank">Adobe Stock-Integration</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html?lang=de" target="_blank">Adobe Stock-Integration</a>:</strong>
  Nahtloses Zugreifen auf und Verwenden von Adobe Stock-Bildern direkt von AEM aus.</td>
             <td> </td>
             <td> </td>
@@ -907,7 +907,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
     </thead>
     <tbody>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/managing-assets.html" target="_blank">Bildbearbeitung</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/managing-assets.html?lang=de" target="_blank">Bildbearbeitung</a>:</strong>
  Dynamisches Bereitstellen von Bildern in unterschiedlichen Größen und Formaten, einschließlich Smartem Zuschnitt.</td>
             <td> </td>
             <td></td>
@@ -929,7 +929,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/interactive-images.html" target="_blank">Interaktive Medien</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/interactive-images.html?lang=de" target="_blank">Interaktive Medien</a>:</strong>
  Erstellen von interaktiven Bannern und Videos mit klickbaren Inhalten, um wichtige Angebote zu präsentieren.
             </td>
             <td> </td>
@@ -941,7 +941,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong>Sets (<a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/image-sets.html" target="_blank">Bild</a>, <a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/spin-sets.html" target="_blank">Rotation</a>, <a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/mixed-media-sets.html" target="_blank">Gemischte Medien</a>):</strong>
+            <td><strong>Sets (<a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/image-sets.html?lang=de" target="_blank">Bild</a>, <a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/spin-sets.html?lang=de" target="_blank">Rotation</a>, <a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/mixed-media-sets.html?lang=de" target="_blank">Gemischte Medien</a>):</strong>
  Zoomen, Schwenken, Drehen und Simulieren eines 360-Grad-Anzeigeerlebnisses durch Benutzende.</td>
             <td> </td>
             <td>✔</td>
@@ -963,7 +963,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Ein
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/delivering-dynamic-media-assets.html" target="_blank">Bereitstellung</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/delivering-dynamic-media-assets.html?lang=de" target="_blank">Bereitstellung</a>:</strong>
  Flexible Optionen für die Verknüpfung oder Einbettung von Dynamic Media-Inhalten und die Bereitstellung über das HTTP/2-Protokoll.</td>
             <td> </td>
             <td>✔</td>
@@ -1054,7 +1054,7 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Forms Add-on-Funktionen, 
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/aem-forms/6-5/whats-new.html#EnhancedintegrationwithAdobeSign" target="_blank">Acrobat Sign-Integration</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/jp/aem-forms/6-5/whats-new.html?lang=de" target="_blank">Acrobat Sign-Integration</a>:</strong>
  Möglichkeit zur Bereitstellung Acrobat Sign-integrierter Formulare auf Basis von Signaturszenarien.</td>
             <td> </td>
             <td> </td>
@@ -1065,7 +1065,7 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Forms Add-on-Funktionen, 
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/forms/using/cm-overview.html" target="_blank">Correspondence Management</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/letters-correspondences/cm-overview.html?lang=de" target="_blank">Correspondence Management</a>:</strong>
  Erstellen, Verwalten und Bereitstellen personalisierter und interaktiver Kundenkorrespondenz mithilfe von AEM Forms.
             </td>
             <td> </td>
@@ -1100,7 +1100,7 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Forms Add-on-Funktionen, 
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/forms/user-guide.html?topic=/experience-manager/6-5/forms/morehelp/integrations.ug.js" target="_blank">Integration in Experience Cloud</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/forms/user-guide.html?topic=/experience-manager/6-5/forms/morehelp/integrations.ug.js" target="_blank">Integration in Marketing Cloud</a>:</strong>
  Integration in Adobe Analytics und Adobe Target zur Verbesserung und Messung von Kundenerlebnissen.</td>
             <td> </td>
             <td> </td>
@@ -1111,7 +1111,7 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Forms Add-on-Funktionen, 
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/forms/using/introduction-managing-forms.html" target="_blank">Formular-Manager</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/getting-started/introduction-managing-forms.html?lang=de" target="_blank">Formular-Manager</a>:</strong>
  Ein einziger Speicherort für die Verwaltung aller Formulare/Dokumente/Korrespondenzen, z. B. Aktivierung von Analysen, Übersetzung, A/B-Tests, Überprüfungen und Veröffentlichungen.
             </td>
             <td> </td>
@@ -1123,7 +1123,7 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Forms Add-on-Funktionen, 
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/forms/using/aem-forms-app.html" target="_blank">AEM Forms-App</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/aem-forms-app/aem-forms-app.html?lang=de" target="_blank">AEM Forms-App</a>:</strong>
  Zulassen der Online-/Offline-Formularverarbeitung in einer App unter iOS, Android oder Windows.</td>
             <td> </td>
             <td>✔</td>
@@ -1134,7 +1134,7 @@ Nachstehend finden Sie eine Matrix der wichtigsten AEM Forms Add-on-Funktionen, 
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/de/aem-forms/6-5/adaptive-document.html" target="_blank">Interaktive Kommunikation</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/de/aem-forms/6-5/introduction-forms-authoring.html" target="_blank">Interaktive Kommunikation</a>:</strong>
  Ermöglichen einer hochwertigen Kommunikation, beispielsweise durch zielgerichtete Mitteilungen mit interaktiven Elementen wie Diagrammen (vormals als adaptive Dokumente bezeichnet).</td>
             <td> </td>
             <td> </td>

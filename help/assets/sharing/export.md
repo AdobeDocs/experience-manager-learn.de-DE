@@ -1,6 +1,6 @@
 ---
 title: Exportieren von Assets
-description: Erfahren Sie, wie Sie Assets stapelweise exportieren und auf Ihren lokalen Computer herunterladen können.
+description: Erfahren Sie, wie Sie Assets in großen Mengen exportieren und auf Ihren lokalen Computer herunterladen können.
 feature: Asset Management
 version: Cloud Service
 topic: Content Management
@@ -10,29 +10,29 @@ last-substantial-update: 2024-04-08T00:00:00Z
 doc-type: Tutorial
 jira: KT-15313
 thumbnail: KT-15313.jpeg
-source-git-commit: 681263a2f4008980fc3119e88d34b73da23eb260
-workflow-type: tm+mt
+exl-id: d04c3316-6f8f-4fd1-9df1-3fe09d44f735
+source-git-commit: d574b0080d12f59d250685f62fc426dfff3adb04
+workflow-type: ht
 source-wordcount: '517'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-
 # Exportieren von Assets
 
-Erfahren Sie, wie Sie Assets mithilfe eines anpassbaren Node.js-Skripts auf Ihren lokalen Computer exportieren. Dieses Exportskript enthält ein Beispiel dafür, wie Assets mithilfe von programmgesteuert von AEM heruntergeladen werden können. [AEM Assets-HTTP-APIs](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets), mit besonderem Fokus auf die Original-Ausgabedarstellungen, um die höchste Qualität zu gewährleisten. Sie wurde entwickelt, um die Ordnerstruktur von AEM Assets auf Ihrem lokalen Laufwerk zu replizieren, sodass Assets einfach gesichert oder migriert werden können.
+Erfahren Sie, wie Sie Assets mithilfe eines benutzerdefinierten Node.js-Skripts auf Ihren lokalen Computer exportieren können. Dieses Exportskript bietet ein Beispiel für das programmgesteuerte Herunterladen von Assets von AEM mithilfe von [AEM Assets HTTP-APIs](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets), wobei der Schwerpunkt auf den Original-Ausgabedarstellungen liegt, um die höchste Qualität zu gewährleisten. Es wurde entwickelt, um die Ordnerstruktur von AEM-Assets auf Ihrem lokalen Laufwerk zu replizieren, wodurch Assets einfach gesichert oder migriert werden können.
 
-Das -Skript lädt nur die Original-Ausgabedarstellungen des Assets herunter, ohne die zugehörigen Metadaten, es sei denn, diese Metadaten wurden als XMP in das Asset eingebettet. Das bedeutet, dass alle beschreibenden Informationen, Kategorisierungen oder Tags, die in AEM gespeichert, aber nicht in die Asset-Dateien integriert sind, nicht im Download enthalten sind. Sie können auch andere Ausgabedarstellungen herunterladen, indem Sie das Skript ändern, um sie einzuschließen. Stellen Sie sicher, dass genügend Speicherplatz zum Speichern der exportierten Assets vorhanden ist.
+Das Skript lädt nur die Original-Ausgabedarstellungen des Assets ohne zugehörige Metadaten herunter, es sei denn, diese Metadaten wurden als XMP in das Asset eingebettet. Das bedeutet, dass alle beschreibenden Informationen, Kategorien oder Tags, die in AEM gespeichert, aber nicht in die Asset-Dateien integriert sind, nicht im Download enthalten sind. Andere Ausgabedarstellungen können ebenfalls heruntergeladen werden, indem das Skript so geändert wird, dass sie eingeschlossen werden. Stellen Sie sicher, dass Sie genügend Platz zum Speichern der exportierten Assets haben.
 
-Das Skript wird normalerweise für AEM Author ausgeführt, kann jedoch auch für AEM Publish ausgeführt werden, solange die AEM Assets-HTTP-API-Endpunkte und Asset-Ausgabedarstellungen über den Dispatcher zugänglich sind.
+Das Skript wird in der Regel mit AEM Author ausgeführt, kann aber auch mit AEM Publish ausgeführt werden, sofern über den Dispatcher auf die AEM Assets-HTTP-API-Endpunkte und Asset-Ausgabedarstellungen zugegriffen werden kann.
 
-Bevor Sie das Skript ausführen, müssen Sie es mit Ihrer AEM-Instanz-URL, den Benutzeranmeldeinformationen (Zugriffstoken) und dem Pfad zum zu exportierenden Ordner konfigurieren.
+Bevor Sie das Skript ausführen, müssen Sie es mit Ihrer AEM-Instanz-URL, den Benutzeranmeldeinformationen (Zugriffs-Token) und dem Pfad zum Ordner konfigurieren, den Sie exportieren möchten.
 
-## Skript exportieren
+## Exportieren eines Skripts
 
-Das als JavaScript-Modul erstellte Skript ist Teil eines Node.js-Projekts, da es eine Abhängigkeit von aufweist. `node-fetch`. Sie können [Projekt als ZIP-Datei herunterladen](./assets/export/export-aem-assets-script.zip)oder kopieren Sie das unten stehende Skript in ein leeres Node.js-Projekt vom Typ . `module`, und ausführen `npm install node-fetch` , um die Abhängigkeit zu installieren.
+Das als JavaScript-Modul geschriebene Skript ist Teil eines Node.js-Projekts, da es eine Abhängigkeit von `node-fetch` hat. Sie können [das Projekt als ZIP-Datei herunterladen](./assets/export/export-aem-assets-script.zip), oder Sie kopieren das unten stehende Skript in ein leeres Node.js-Projekt vom Typ `module` und führen `npm install node-fetch` aus, um die Abhängigkeit zu installieren.
 
-Dieses Skript führt Sie durch die Ordnerstruktur von AEM Assets und lädt Assets und Ordner in einen lokalen Ordner auf Ihrem Computer herunter. Es verwendet die [AEM Assets-HTTP-API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) um die Ordner- und Asset-Daten abzurufen und die Original-Ausgabedarstellungen der Assets herunterzuladen.
+Dieses Skript durchläuft die Ordnerstruktur von AEM Assets und lädt Assets und Ordner in einen lokalen Ordner auf Ihrem Computer herunter. Es verwendet die [AEM Assets-HTTP-API](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets), um den Ordner und die Asset-Daten abzurufen, und lädt die Original-Ausgabeformate der Assets herunter.
 
 ```javascript
 // export-assets.js
@@ -240,9 +240,9 @@ console.timeEnd('Download AEM assets');
 
 ## Konfigurieren des Exports
 
-Nachdem das Skript heruntergeladen wurde, aktualisieren Sie die Konfigurationsvariablen unten im Skript.
+Aktualisieren Sie bei heruntergeladenem Skript die Konfigurationsvariablen am unteren Rand des Skripts.
 
-Die `AEM_ACCESS_TOKEN` können mit den Schritten in der [Token-basierte Authentifizierung für AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview) Tutorial. In vielen Fällen ist das 24-Stunden-Entwickler-Token ausreichend, solange der Export weniger als 24 Stunden dauert und die Person, die das Token generiert, Lesezugriff auf die zu exportierenden Assets hat.
+Das `AEM_ACCESS_TOKEN` können Sie mithilfe der Schritte in der Anleitung [Token-basierte Authentifizierung für AEM as a Cloud Service](https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview) erhalten. Häufig ist das 24-Stunden-Entwickler-Token ausreichend, solange der Export weniger als 24 Stunden dauert und die Person, die das Token generiert, Lesezugriff auf die Assets hat, die exportiert werden sollen.
 
 ```javascript
 ...
@@ -269,15 +269,15 @@ const MAX_CONCURRENT_DOWNLOADS = 10;
 
 Führen Sie das Skript mit Node.js aus, um die Assets auf Ihren lokalen Computer zu exportieren.
 
-Abhängig von der Anzahl der Assets und ihrer Größe kann es einige Zeit dauern, bis das Skript abgeschlossen ist. Während das Skript ausgeführt wird, [Protokolliert den Fortschritt](#output) in die Konsole.
+Je nach Anzahl der Assets und ihrer Größe kann es einige Zeit dauern, bis das Skript abgeschlossen ist. Wenn das Skript ausgeführt wird, [protokolliert es den Fortschritt](#output) in der Konsole.
 
 ```shell
 $ node export-assets.js
 ```
 
-## Ausgabe exportieren
+## Exportieren der Ausgabe
 
-Das Exportskript protokolliert den Fortschritt in der Konsole und zeigt die Assets an, die heruntergeladen werden. Nach Abschluss des Skripts werden die Assets in dem in der Konfiguration angegebenen lokalen Ordner gespeichert und das Protokoll wird mit der Gesamtzeit für das Herunterladen der Assets abgeschlossen.
+Das Exportskript protokolliert den Fortschritt in der Konsole und gibt die Assets an, die heruntergeladen werden. Wenn das Skript abgeschlossen ist, werden die Assets in dem in der Konfiguration angegebenen lokalen Ordner gespeichert und das Protokoll schließt mit der Gesamtzeit, die zum Herunterladen der Assets benötigt wurde.
 
 ```plaintext
 ...
@@ -293,6 +293,6 @@ Downloaded asset: exported-assets/wknd-shared/en/magazine/western-australia/adob
 Download AEM assets: 24.770s
 ```
 
-Die exportierten Assets befinden sich in dem in der Konfiguration angegebenen lokalen Ordner `LOCAL_DOWNLOAD_FOLDER`. Die Ordnerstruktur spiegelt die AEM Assets-Ordnerstruktur wider, wobei die Assets in die entsprechenden Unterordner heruntergeladen werden. Diese Dateien können hochgeladen werden in [Unterstützte Cloud-Speicheranbieter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view), für [Massenimport](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/bulk-import) in anderen AEM-Instanzen oder zu Sicherungszwecken.
+Die exportierten Assets befinden sich in dem in der Konfiguration angegebenen lokalen Ordner `LOCAL_DOWNLOAD_FOLDER`. Die Ordnerstruktur spiegelt die AEM-Assets-Ordnerstruktur wider, wobei die Assets in die entsprechenden Unterordner heruntergeladen werden. Diese Dateien können zu [unterstützten Cloud-Speicheranbietern](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view) zum [Massenimport](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/migration/bulk-import) in andere AEM-Instanzen oder zu Sicherungszwecken hochgeladen werden.
 
 ![Exportierte Assets](./assets/export/exported-assets.png)

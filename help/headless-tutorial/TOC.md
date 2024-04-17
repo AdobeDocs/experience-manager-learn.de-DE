@@ -9,9 +9,9 @@ version: 6.5, Cloud Service
 jira: KT-2963
 index: y
 source-git-commit: c498783aceaf3bb389baaeaeefbe9d8d0125a82e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '341'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -67,7 +67,7 @@ ht-degree: 99%
    + [Lokalisierte Inhalte](./graphql/how-to/localized-content.md)
    + [Große Ergebnismengen](./graphql/how-to/large-result-sets.md)
    + [Vorschau](./graphql/how-to/preview.md)
-   + [Geschützter Inhalt](./graphql/how-to/protected-content.md)
+   + [Geschützte Inhalte](./graphql/how-to/protected-content.md)
    + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
    + [Installieren von GraphiQL auf AEM 6.5](./graphql/how-to/install-graphiql-aem-6-5.md)
    + Beispiele {#example-apps}

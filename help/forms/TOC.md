@@ -9,14 +9,14 @@ sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
 source-git-commit: 73c15a195c438dd7a07142bba719c6f820bf298a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2044'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
 
-# AEM Forms-Videos und -Tutorials {#forms}
+# Videos und Tutorials zu AEM-Formularen {#forms}
 
 + [Übersicht](overview.md)
 + [Best Practices, die zu befolgen sind](adaptive-forms/best-practices-adaptive-forms.md)
@@ -105,7 +105,7 @@ ht-degree: 99%
    + [Vorausfüllen von HTML5 Formularen](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Formulardatenmodell mit Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Dynamisches Hinzufügen von Elementen zur Auswahlkomponente](adaptive-forms/choice-group-items-adding-dynamically-article.md)
-+ Kernkomponenten-basierte Formulare{#core-component-based-forms}
++ Auf Kernkomponenten basierende Formulare{#core-component-based-forms}
    + [Zugriff auf Formulardaten mithilfe der GuideBridge-API](core-components/submit-data-using-guidebridge-api.md)
 + DAM-Ordnerinhalt auswählen und zusammenführen{#select-dam-folder-content}
    + [1 – Einführung](display-and-assemble-dam-folder-contents/introduction.md)
@@ -334,7 +334,7 @@ ht-degree: 99%
    + [5 – Erstellen einer Web-Kanal-Dokumentvorlage](ic-web-channel-tutorial/partfour.md)
    + [6 – Erstellen eines Dokumentfragments](ic-web-channel-tutorial/partfive.md)
    + [7 – Erstellen eines Dokuments zur interaktiven Kommunikation](ic-web-channel-tutorial/partsix.md)
-   + [8 – Hinzufügen von Text und Bildern ](ic-web-channel-tutorial/partseven.md)
+   + [8 – Hinzufügen von Text und Bildern](ic-web-channel-tutorial/partseven.md)
    + [9 – Konfigurieren eines Liniendiagramms](ic-web-channel-tutorial/parteight.md)
    + [10 – Konfigurieren einer Tabelle](ic-web-channel-tutorial/partnine.md)
    + [11 – Konfigurieren eines Spaltendiagramms](ic-web-channel-tutorial/partten.md)

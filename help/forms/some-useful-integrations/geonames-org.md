@@ -11,9 +11,9 @@ exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
 duration: 218
 source-git-commit: 970093bb54046fee49e2ac209f1588e70582ab67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '610'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -49,7 +49,7 @@ Um Ihre erste Swagger/OpenAPI-Datei zu erstellen, befolgen Sie die [OpenAPI-Doku
 >[!NOTE]
 > AEM Forms unterstützt die OpenAPI-Spezifikationsversion 2.0 (früher Swagger).
 
-Verwenden Sie den [Swagger-Editor](https://editor.swagger.io/), um Ihre Swagger-Datei zu erstellen und die Operationen zu beschreiben, die alle Länder und untergeordneten Elemente des Landes oder Staates abrufen.  Die Swagger-Datei kann im JSON- oder YAML-Format erstellt werden.
+Verwenden Sie den [Swagger-Editor](https://editor.swagger.io/), um Ihre Swagger-Datei zu erstellen und die Operationen zu beschreiben, die alle Länder und untergeordneten Elemente des Landes oder Staates abrufen. Die Swagger-Datei kann im JSON- oder YAML-Format erstellt werden.
 
 ## Erstellen von Datenquellen
 
@@ -82,7 +82,6 @@ Die Dropdown-Liste Bundesland/Provinz muss auf der Grundlage des ausgewählten L
 ### Übung
 
 Fügen Sie zwei Dropdown-Listen mit den Bezeichnungen „Landkreise und Städte“ in das Formular ein, um die Landkreise und Städte auf der Grundlage des ausgewählten Landes und Bundeslandes aufzulisten.
-
 ![Übung](assets/cascading-drop-down-exercise.png)
 
 

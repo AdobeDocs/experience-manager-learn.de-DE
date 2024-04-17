@@ -14,9 +14,9 @@ jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
 source-git-commit: 78e8a8472d2dd8128c6ce2f1120cb9a41527f31b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1693'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -41,21 +41,21 @@ Manchmal müssen Sie benutzerdefinierte Indizes erstellen, damit Ihre Suchanford
 
 - Verstehen Sie die Suchanforderungen und prüfen Sie, ob die vorkonfigurierten Indizes diese Suchanforderungen unterstützen können. Verwenden Sie das **Abfrageleistungs-Werkzeug**, das als [lokales SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) und AEMCS über die Developer Console oder unter `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` verfügbar ist.
 
-- Definieren Sie eine optimale Abfrage und orientieren Sie sich dabei am Diagramm zum [Optimieren von Abfragen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) sowie an der [JCR-Abfrage-Schnellübersicht](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=de).
+- Definieren Sie eine optimale Abfrage und orientieren Sie sich dabei am Diagramm zum [Optimieren von Abfragen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) sowie an der [JCR-Abfrage-Schnellübersicht](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=de).
 
-- Wenn die vorkonfigurierten Indizes die Suchanforderungen nicht unterstützen können, haben Sie zwei Möglichkeiten. Überprüfen Sie jedoch die [Tipps zum Erstellen effizienter Indizes](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
+- Wenn die vorkonfigurierten Indizes die Suchanforderungen nicht unterstützen können, haben Sie zwei Möglichkeiten. Überprüfen Sie jedoch die [Tipps zum Erstellen effizienter Indizes](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
    - Anpassen des vorkonfigurierten Index: Dies ist die bevorzugte Option, da Verwaltung und Aktualisierung einfach sind.
    - Vollständig benutzerdefinierter Index: Verwenden Sie diese Möglichkeit nur, wenn die obige Option nicht funktioniert.
 
 ### Anpassen des vorkonfigurierten Index
 
-- Wenn Sie in **AEMCS** den vorkonfigurierten Index anpassen, verwenden Sie die Namenskonvention **\&lt;OOTBIndexName>-\&lt;productVersion>-custom-\&lt;customVersion>**. Beispiel: `cqPageLucene-custom-1` oder `damAssetLucene-8-custom-1`. Dies hilft dabei, die benutzerdefinierte Indexdefinition zusammenzuführen, wenn der vorkonfigurierte Index aktualisiert wird. Weitere Informationen finden Sie unter [Änderungen an vordefinierten Indizes](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing).
+- Wenn Sie in **AEMCS** den vorkonfigurierten Index anpassen, verwenden Sie die Namenskonvention **\&lt;OOTBIndexName>-\&lt;productVersion>-custom-\&lt;customVersion>**. Beispiel: `cqPageLucene-custom-1` oder `damAssetLucene-8-custom-1`. Dies hilft dabei, die benutzerdefinierte Indexdefinition zusammenzuführen, wenn der vorkonfigurierte Index aktualisiert wird. Weitere Informationen finden Sie unter [Änderungen an vordefinierten Indizes](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/indexing).
 
-- in **AEM 6.x**, die obige Benennung _Funktioniert nicht_ Aktualisieren Sie jedoch einfach den vorkonfigurierten Index mit den erforderlichen Eigenschaften im `indexRules` Knoten.
+- In **AEM 6.x** funktioniert die oben angegebene Benennung _nicht_. Aktualisieren Sie jedoch einfach den vorkonfigurierten Index mit den erforderlichen Eigenschaften im Knoten `indexRules`.
 
 - Kopieren Sie immer die neueste vordefinierte Indexdefinition aus der AEM-Instanz mit CRX DE Package Manager (/crx/packmgr/), benennen Sie sie um und passen Sie die XML-Datei an.
 
-- Speichern Sie die Indexdefinition im AEM-Projekt unter `ui.apps/src/main/content/jcr_root/_oak_index` und stellen Sie sie mithilfe von CI/CD-Pipelines in Cloud Manager bereit. Weitere Informationen finden Sie unter [Bereitstellen benutzerdefinierter Indexdefinitionen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing).
+- Speichern Sie die Indexdefinition im AEM-Projekt unter `ui.apps/src/main/content/jcr_root/_oak_index` und stellen Sie sie mithilfe von CI/CD-Pipelines in Cloud Manager bereit. Weitere Informationen finden Sie unter [Bereitstellen benutzerdefinierter Indexdefinitionen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/indexing).
 
 ### Vollständig benutzerdefinierter Index
 
@@ -63,13 +63,13 @@ Das Erstellen eines vollständig benutzerdefinierten Index sollte Ihre allerletz
 
 - Wenn Sie einen vollständig benutzerdefinierten Index erstellen, verwenden Sie die Namenskonvention **\&lt;prefix>.\&lt;customIndexName>-\&lt;version>-custom-\&lt;customVersion>**. Zum Beispiel: `wknd.adventures-1-custom-1`. Das hilft dabei, Namenskonflikte zu vermeiden. Hier ist `wknd` das Präfix und `adventures` ist der benutzerdefinierte Indexname. Diese Konvention gilt sowohl für AEM 6.X als auch für AEMCS und hilft bei der Vorbereitung auf die zukünftige Migration zu AEMCS.
 
-- AEMCS unterstützt nur Lucene-Indizes. Verwenden Sie daher zur Vorbereitung auf eine zukünftige Migration zu AEMCS immer Lucene-Indizes. Weitere Informationen finden Sie unter [Lucene- oder Eigenschaftenindizes](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing).
+- AEMCS unterstützt nur Lucene-Indizes. Verwenden Sie daher zur Vorbereitung auf eine zukünftige Migration zu AEMCS immer Lucene-Indizes. Weitere Informationen finden Sie unter [Lucene- oder Eigenschaftenindizes](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing).
 
-- Vermeiden Sie es, einen benutzerdefinierten Index auf demselben Knotentyp wie den vorkonfigurieren Index zu erstellen. Passen Sie stattdessen den vorkonfigurierten Index mit den erforderlichen Eigenschaften in der `indexRules` Knoten. Erstellen Sie beispielsweise keinen benutzerdefinierten Index auf dem Knotentyp `dam:Asset`, sondern passen Sie den vorkonfigurierten Index `damAssetLucene` an. _Dies ist eine häufige Ursache für Leistungs- und Funktionsprobleme_.
+- Vermeiden Sie es, einen benutzerdefinierten Index auf demselben Knotentyp wie den vorkonfigurieren Index zu erstellen. Passen Sie stattdessen den vorkonfigurierten Index mit den erforderlichen Eigenschaften im Knoten `indexRules` an. Erstellen Sie beispielsweise keinen benutzerdefinierten Index auf dem Knotentyp `dam:Asset`, sondern passen Sie den vorkonfigurierten Index `damAssetLucene` an. _Dies ist eine häufige Ursache für Leistungs- und Funktionsprobleme_.
 
 - Vermeiden Sie es beispielsweise auch, mehrere Knotentypen wie `cq:Page` und `cq:Tag` unter dem Knoten für Indizierungsregeln (`indexRules`) hinzuzufügen. Erstellen Sie stattdessen separate Indizes für jeden Knotentyp.
 
-- Wie im Abschnitt oben erwähnt, speichern Sie die Indexdefinition im AEM-Projekt unter `ui.apps/src/main/content/jcr_root/_oak_index` und stellen Sie sie mithilfe von CI/CD-Pipelines in Cloud Manager bereit. Weitere Informationen finden Sie unter [Bereitstellen benutzerdefinierter Indexdefinitionen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing).
+- Wie im Abschnitt oben erwähnt, speichern Sie die Indexdefinition im AEM-Projekt unter `ui.apps/src/main/content/jcr_root/_oak_index` und stellen Sie sie mithilfe von CI/CD-Pipelines in Cloud Manager bereit. Weitere Informationen finden Sie unter [Bereitstellen benutzerdefinierter Indexdefinitionen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/indexing).
 
 - Es gelten folgende Richtlinien zur Indexdefinition:
    - Der Knotentyp (`jcr:primaryType`) sollte `oak:QueryIndexDefinition` sein
@@ -106,7 +106,7 @@ Die folgende Abbildung zeigt eine benutzerdefinierte und eine vorkonfigurierte I
 
 Hier wird die Eigenschaft `tags` im benutzerdefinizerten Index nicht ordnungsgemäß verwendet. Aufgrund der niedrigeren geschätzten Kosten wählt die Oak-Abfrage-Engine den benutzerdefinierten Index anstelle des vorkonfigurierten Index aus.
 
-Die richtige Methode besteht darin, den vorkonfigurierten Index anzupassen und die erforderlichen Eigenschaften im `indexRules` Knoten. Weitere Informationen finden Sie unter [Anpassen des vorkonfigurierten Index](#customize-the-ootb-index).
+Die richtige Vorgehensweise besteht darin, den vorkonfigurierten Index anzupassen und im Knoten `indexRules` die erforderlichen Eigenschaften hinzuzufügen. Weitere Informationen finden Sie unter [Anpassen des vorkonfigurierten Index](#customize-the-ootb-index).
 
 #### Index auf dem Knotentyp `dam:Asset`
 
@@ -118,7 +118,7 @@ Die folgende Abbildung zeigt den benutzerdefinierten Index für den Knotentyp `d
 
 Wenn Sie eine Omnisearch auf Assets durchführen, werden falsche Ergebnisse ausgegeben, da der benutzerdefinierte Index niedrigere geschätzte Kosten aufweist.
 
-Erstellen Sie keinen benutzerdefinierten Index für die `dam:Asset` Knotentyp festlegen, aber den Vorkonfigurationsmodus anpassen `damAssetLucene` Index mit den erforderlichen Eigenschaften im `indexRules` Knoten.
+Erstellen Sie keinen benutzerdefinierten Index auf dem Knotentyp `dam:Asset`, sondern passen Sie im Knoten `damAssetLucene` den vorkonfigurierten Index `indexRules` mit den erforderlichen Eigenschaften an.
 
 #### Mehrere Knotentypen unter den Indizierungsregeln
 
@@ -130,7 +130,7 @@ Die folgende Abbildung zeigt einen benutzerdefinierten Index mit mehreren Knoten
 
 Es wird nicht empfohlen, mehrere Knotentypen in einem einzigen Index hinzuzufügen. Knotentypen können jedoch im selben Index indiziert werden, wenn die Knotentypen eng miteinander zusammenhängen, z. B. `cq:Page` und `cq:PageContent`.
 
-Eine gültige Lösung besteht darin, den OOTB anzupassen `cqPageLucene` und `damAssetLucene` Index erstellen und die erforderlichen Eigenschaften unter dem vorhandenen hinzufügen `indexRules` Knoten.
+Eine gültige Lösung besteht darin, die vorkonfigurierten Indizes `cqPageLucene` und `damAssetLucene` anzupassen und zusätzliche Eigenschaften unter dem vorhandenen Knoten `indexRules` hinzuzufügen.
 
 #### Fehlen der Eigenschaft `queryPaths`
 
@@ -168,24 +168,24 @@ Es ist durchaus angebracht, einen benutzerdefinierten Index für die [erweiterte
 
 ## Indexoptimierung durch Deaktivieren von Apache Tika
 
-AEM verwendet [Apache Tika](https://tika.apache.org/) für _Extrahieren von Metadaten und Textinhalten aus einer Datei_ Typen wie PDF, Word, Excel und mehr. Der extrahierte Inhalt wird im Repository gespeichert und vom Oak Lucene-Index indiziert.
+AEM verwendet [Apache Tika](https://tika.apache.org/) für das _Extrahieren von Metadaten und Textinhalten aus Dateien_, wie z. B. PDF, Word, Excel und anderen. Die extrahierten Inhalte werden im Repository gespeichert und durch den Oak Lucene-Index indiziert.
 
-Manchmal ist es nicht erforderlich, dass Benutzer den Inhalt einer Datei/eines Assets durchsuchen können. In solchen Fällen können Sie die Indizierungsleistung verbessern, indem Sie Apache Tika deaktivieren. Die Vorteile:
+Manchmal benötigen Benutzerinnen und Benutzer nicht die Möglichkeit, innerhalb des Inhalts einer Datei oder eines Assets zu suchen. In solchen Fällen können Sie die Indizierungsleistung verbessern, indem Sie Apache Tika deaktivieren. Die Vorteile:
 
 - Schnellere Indizierung
-- Verkleinerung des Index
-- Geringere Hardware-Nutzung
+- Reduzierung der Indexgröße
+- Weniger Hardware-Nutzung
 
 >[!CAUTION]
 >
->Stellen Sie vor der Deaktivierung von Apache Tika sicher, dass bei den Suchanforderungen nicht der Inhalt eines Assets durchsucht werden muss.
+>Stellen Sie vor dem Deaktivieren von Apache Tika sicher, dass die Suchanforderungen nicht die Möglichkeit erfordern, innerhalb des Inhalts eines Assets zu suchen.
 
 
-### Nach MIME-Typ deaktivieren
+### Deaktivieren nach MIME-Typ
 
-Um Apache Tika nach MIME-Typ zu deaktivieren, führen Sie die folgenden Schritte aus:
+Um Apache Tika nach MIME-Typ zu deaktivieren, gehen Sie wie folgt vor:
 
-- Hinzufügen des `tika` Knoten von `nt:unstructured` Geben Sie unter Benutzerdefinierte oder OBOT-Indexdefinition ein. Im folgenden Beispiel ist der PDF-MIME-Typ für den vorkonfigurierten Modus deaktiviert `damAssetLucene` Index.
+- Fügen Sie den Knoten `tika` vom Typ `nt:unstructured` unter der benutzerdefinierten oder vorkonfigurierten Indexdefinition hinzu. Im folgenden Beispiel ist der PDF-MIME-Typ für den vorkonfigurierten Index `damAssetLucene` deaktiviert.
 
 ```xml
 /oak:index/damAssetLucene
@@ -197,7 +197,7 @@ Um Apache Tika nach MIME-Typ zu deaktivieren, führen Sie die folgenden Schritte
     </tika>
 ```
 
-- Hinzufügen des `config.xml` mit folgenden Details unter der `tika` Knoten.
+- Fügen Sie die Datei `config.xml` mit den folgenden Details unter den Knoten `tika` hinzu.
 
 ```xml
 <properties>
@@ -209,21 +209,21 @@ Um Apache Tika nach MIME-Typ zu deaktivieren, führen Sie die folgenden Schritte
 </properties>
 ```
 
-- Um den gespeicherten Index zu aktualisieren, legen Sie Folgendes fest: `refresh` Eigenschaft für `true` Unter dem Knoten für die Indexdefinition finden Sie weitere Informationen unter [Eigenschaften der Indexdefinition](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition:~:text=Defaults%20to%2010000-,refresh,-Optional%20boolean%20property) für weitere Details.
+- Um den gespeicherten Index zu aktualisieren, legen Sie die Eigenschaft `refresh` auf `true` unter dem Indexdefinitionsknoten fest. Weitere Informationen finden Sie unter [Eigenschaften der Indexdefinition](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition:~:text=Defaults%20to%2010000-,refresh,-Optional%20boolean%20property).
 
-Die folgende Abbildung zeigt den vorkonfigurierten Modus `damAssetLucene` Index mit der `tika` Knoten und `config.xml` Datei, die den PDF und andere MIME-Typen deaktiviert.
+Die folgende Abbildung zeigt den vorkonfigurierten Index `damAssetLucene` mit dem Knoten `tika` und der Datei `config.xml`, die PDF- und andere MIME-Typen deaktiviert.
 
-![Vorkonfigurierter damAssetLucene-Index mit tika-Knoten](./assets/understand-indexing-best-practices/ootb-index-with-tika-node.png)
+![Vorkonfigurierter Index damAssetLucene mit Tika-Knoten](./assets/understand-indexing-best-practices/ootb-index-with-tika-node.png)
 
-### Vollständig deaktivieren
+### Vollständiges Deaktivieren
 
-Gehen Sie wie folgt vor, um Apache Tika vollständig zu deaktivieren:
+Um Apache Tika vollständig zu deaktivieren, gehen Sie wie folgt vor:
 
-- Hinzufügen `includePropertyTypes` Eigenschaft in `/oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>` und setzen Sie den Wert auf `String`. Beispiel: In der Abbildung unten `includePropertyTypes` Die Eigenschaft wird hinzugefügt für `dam:Asset` Knotentyp des OBT `damAssetLucene` Index.
+- Fügen Sie die Eigenschaft `includePropertyTypes` bei `/oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>` hinzu und setzen Sie den Wert auf `String`. In der folgenden Abbildung wird beispielsweise die Eigenschaft `includePropertyTypes` für den Knotentyp `dam:Asset` des vorkonfigurierten Index `damAssetLucene` hinzugefügt.
 
-![IncludePropertyTypes-Eigenschaft](./assets/understand-indexing-best-practices/includePropertyTypes-prop.png)
+![Eigenschaft IncludePropertyTypes](./assets/understand-indexing-best-practices/includePropertyTypes-prop.png)
 
-- Hinzufügen `data` mit den folgenden Eigenschaften unter dem `properties` Knoten, stellen Sie sicher, dass es sich um den ersten Knoten über der Eigenschaftsdefinition handelt. Beispiel: siehe Bild unten:
+- Fügen Sie `data` mit den nachstehenden Eigenschaften unter dem Knoten `properties` hinzu. Stellen Sie sicher, dass es sich um den ersten Knoten oberhalb der Eigenschaftsdefinition handelt. Siehe beispielsweise folgende Abbildung:
 
 ```xml
 /oak:index/<INDEX-NAME>/indexRules/<NODE-TYPE>/properties/data
@@ -237,7 +237,7 @@ Gehen Sie wie folgt vor, um Apache Tika vollständig zu deaktivieren:
 
 ![Dateneigenschaft](./assets/understand-indexing-best-practices/data-prop.png)
 
-- Indizieren Sie die aktualisierte Indexdefinition neu, indem Sie Folgendes festlegen `reindex` Eigenschaft für `true` Unter dem Indexdefinitionsknoten.
+- Indizieren Sie die aktualisierte Indexdefinition neu, indem Sie die Eigenschaft `reindex` unter dem Indexdefinitionsknoten auf `true` setzen.
 
 ## Hilfreiche Tools
 
@@ -273,7 +273,7 @@ Die meisten der folgenden Ressourcen gelten für AEM 6.X und lokale Fehlerbeheb
 
 Weitere Informationen finden Sie in der folgenden Dokumentation:
 
-- [Oak-Abfragen und Indizierung](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing)
-- [Best Practices für Abfragen und Indizierung](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
-- [Best Practices für Abfragen und Indizierung](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
+- [Oak-Abfragen und Indizierung](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing)
+- [Best Practices für Abfragen und Indizierung](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
+- [Best Practices für Abfragen und Indizierung](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
 
