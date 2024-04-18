@@ -12,10 +12,10 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
 duration: 626
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '1449'
-ht-degree: 100%
+source-git-commit: 7f0f4d1b739cb63b96afc08eb31ab72a507c4722
+workflow-type: tm+mt
+source-wordcount: '1472'
+ht-degree: 98%
 
 ---
 
@@ -218,6 +218,8 @@ Diesmal sollten Sie viele **blockierte Anfragen** und die entsprechenden Werten 
 Außerdem zeigen die Bedienfelder zu den **Top 100 der Angriffe nach Client-IP, Land und Benutzeragent** zusätzliche Details an, die zur weiteren Optimierung der Regelkonfiguration verwendet werden können.
 
 ![ELK-Tool-Dashboard – DoS Top 100 Anfragen](./assets/elk-tool-dashboard-dos-top-100.png)
+
+Weitere Informationen zur Vermeidung von DoS- und DoS-Angriffen finden Sie in der [Blockieren von DoS- und DoS-Angriffen mithilfe von Traffic-Filterregeln](../dos/blocking-dos-attack-using-traffic-filter-rules.md) Tutorial.
 
 ### WAF-Regeln
 
