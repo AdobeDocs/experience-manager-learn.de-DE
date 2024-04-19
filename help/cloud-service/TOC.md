@@ -394,4 +394,4 @@ ht-degree: 99%
          + [Veröffentlichen von Ereignissen und Rückgängigmachen der Veröffentlichung in Edge Delivery Services](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
          + [Abfrageindizes und Excel-Formeln](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
          + [Einbinden Ihres eigenen Cloudflare-CDN](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)
-         + [AEM Assets integrieren](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
+         + [Integrieren von AEM Assets](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
