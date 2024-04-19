@@ -12,7 +12,7 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
 duration: 626
-source-git-commit: 9af60e1d45eb4569e05ba135fec43e4c744b2a0d
+source-git-commit: 2ab958f672b0d5b029bcdf7937b2f72d43ba651f
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 98%
@@ -219,7 +219,7 @@ Außerdem zeigen die Bedienfelder zu den **Top 100 der Angriffe nach Client-IP, 
 
 ![ELK-Tool-Dashboard – DoS Top 100 Anfragen](./assets/elk-tool-dashboard-dos-top-100.png)
 
-Weitere Informationen zur Vermeidung von DoS- und DoS-Angriffen finden Sie in der [Blockieren von DoS- und DoS-Angriffen mithilfe von Traffic-Filterregeln](../dos/blocking-dos-attack-using-traffic-filter-rules.md) Tutorial.
+Weitere Informationen zur Vermeidung von DoS- und DoS-Angriffen finden Sie in der [Blockieren von DoS- und DoS-Angriffen mithilfe von Traffic-Filterregeln](../blocking-dos-attack-using-traffic-filter-rules.md) Tutorial.
 
 ### WAF-Regeln
 
