@@ -13,13 +13,13 @@ last-substantial-update: 2024-04-05T00:00:00Z
 jira: KT-15271
 exl-id: dc841125-641b-47c0-a88f-d166a088e0ec
 source-git-commit: d62332374e8885e077f8227bcdec6a908c782ccc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '38'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
-# Cloud 5 - Erstellen eines eigenen Cloud-Fire-CDN
+# Cloud 5 – Einbinden Ihres eigenen Cloudflare-CDN
 
 Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfigurieren.
 

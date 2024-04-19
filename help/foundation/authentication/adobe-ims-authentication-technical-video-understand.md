@@ -13,9 +13,9 @@ last-substantial-update: 2022-10-01T00:00:00Z
 thumbnail: KT-781.jpg
 duration: 431
 source-git-commit: c692ad17a27f244764e3f7c63fc49f54ae4e97e6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '399'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ Adobe Experience Manager bietet Admin Console-Unterstützung für AEM-Instanzen 
 
 Das Anwenden von Berechtigungen und Zugriffsrechten auf Benutzerebene sollte sowohl in Admin Console als auch in Adobe Experience Manager vermieden werden.
 
-In Admin Console sollte Benutzern Zugriff über Benutzergruppen auf der Ebene des Produktkontexts gewährt werden. Benutzergruppen werden in der Regel am besten durch logische Rollen innerhalb der Organisation ausgedrückt, um die Wiederverwendbarkeit der Gruppen über Adobe Experience Cloud-Produkte hinweg zu fördern.
+In der Admin Console sollten Benutzende Zugriff über Benutzergruppen auf der Ebene des Produktkontexts erhalten. Benutzergruppen werden in der Regel am besten durch logische Rollen innerhalb der Organisation ausgedrückt, um die Wiederverwendbarkeit der Gruppen über Adobe Experience Cloud-Produkte hinweg zu fördern.
 
 ### Anwenden von Berechtigungen in Adobe Experience Manager
 

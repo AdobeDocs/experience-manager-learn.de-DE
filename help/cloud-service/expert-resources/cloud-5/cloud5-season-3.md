@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 source-git-commit: a0fdc061d231fb68fa9bd11440d344be9701eca2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '363'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -118,16 +118,16 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
     <tr>
         <td>
             <a href="./season-3/cloud5-integrate-assets.md">
-                <img alt="Integrieren von AEM Assets mit der Dokumenterstellung" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
+                <img alt="Integrieren von AEM Assets in die Dokumenterstellung" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-integrate-assets.md">
-                <strong>Integrieren von AEM Assets mit der Dokumenterstellung</strong></a>        
-                <br/><em>mit James Talbot &amp; Darin Kuntze, AEM Engineering</em>
+                <strong>Integrieren von AEM Assets in die Dokumenterstellung</strong></a>        
+                <br/><em>mit James Talbot und Darin Kuntze, AEM Engineering</em>
             </div>
             <p>
                 <br/>
-                Erfahren Sie, wie Sie AEM Assets mit der Dokumenterstellung integrieren.
+                Erfahren Sie, wie Sie AEM Assets in die Dokumenterstellung integrieren können.
             </p>
         </td>        
     </tr>      

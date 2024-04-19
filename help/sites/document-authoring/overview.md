@@ -12,9 +12,9 @@ duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
 source-git-commit: a0fdc061d231fb68fa9bd11440d344be9701eca2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '591'
-ht-degree: 76%
+ht-degree: 100%
 
 ---
 
@@ -563,7 +563,7 @@ Blöcke und automatische Blöcke</a>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/generate-variations.md" title="Generieren von Varianten">Generieren von Varianten</a>
             </p>
-            <p class="is-size-6">Einführung in das Generieren von Varianten in Edge Delivery Services und Verständnis, wie sie für Marketing-Experten nützlich sein können.</p>
+            <p class="is-size-6">Einführung in das Generieren von Varianten in Edge Delivery Services und Erläuterung des Nutzens für Marketing-Fachkräfte.</p>
             <a href="./how-to/generate-variations.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -580,22 +580,22 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations-sidekick-config.md" title="Sidekick für die Generierung von Varianten konfigurieren"
+            <a href="./how-to/generate-variations-sidekick-config.md" title="Konfigurieren des Sidekicks für das Generieren von Varianten"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428306/?format=jpeg"
-                alt="Sidekick für die Generierung von Varianten konfigurieren">
+                alt="Konfigurieren des Sidekicks für das Generieren von Varianten">
             </a>
           </figure>
         </div>
         <div class="card-content is-padded-small">
           <div class="content">
             <p style="float: right;font-style: italic; color: #363636"
-              class="is-size-6">1 Minuten</p>
+              class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations-sidekick-config.md" title="Sidekick für die Generierung von Varianten konfigurieren">Sidekick für die Generierung von Varianten konfigurieren</a>
+              <a href="./how-to/generate-variations-sidekick-config.md" title="Konfigurieren des Sidekicks für das Generieren von Varianten">Konfigurieren des Sidekicks für das Generieren von Varianten</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie den Sidekick für die Generierung von Varianten bei der Dokumenterstellung in Edge Delivery Services konfigurieren.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie den Sidekick für das Generieren von Varianten bei der Dokumenterstellung in Edge Delivery Services konfigurieren.</p>
             <a href="./how-to/generate-variations-sidekick-config.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -612,11 +612,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/prompt-templates-for-content-variations.md" title="Verwenden von GenAI-Eingabevorlagen"
+            <a href="./how-to/prompt-templates-for-content-variations.md" title="Verwenden von Prompt-Vorlagen für GenAI"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
-                alt="Verwenden von GenAI-Eingabevorlagen">
+                alt="Verwenden von Prompt-Vorlagen für GenAI">
             </a>
           </figure>
         </div>
@@ -625,9 +625,9 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/prompt-templates-for-content-variations.md" title="Verwenden von GenAI-Eingabevorlagen">GenAI-Eingabevorlagen</a>
+              <a href="./how-to/prompt-templates-for-content-variations.md" title="Verwenden von Prompt-Vorlagen für GenAI">Prompt-Vorlagen für GenAI</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie mit den generativen Vorlagen für KI-Aufforderungen Inhaltsvarianten generieren können.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie die Prompt-Vorlagen für generative KI zur Erstellung von Inhaltsvarianten verwenden können.</p>
             <a href="./how-to/prompt-templates-for-content-variations.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -644,11 +644,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/custom-prompt-templates.md" title="Benutzerdefinierte Eingabevorlagen für GenAI"
+            <a href="./how-to/custom-prompt-templates.md" title="Benutzerdefinierte Prompt-Vorlagen für GenAI"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428316/?format=jpeg"
-                alt="Benutzerdefinierte Eingabevorlagen für GenAI">
+                alt="Benutzerdefinierte Prompt-Vorlagen für GenAI">
             </a>
           </figure>
         </div>
@@ -657,9 +657,9 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/custom-prompt-templates.md" title="Benutzerdefinierte Eingabevorlagen für GenAI">Benutzerdefinierte Eingabeaufforderungsvorlagen für GenAI</a>
+              <a href="./how-to/custom-prompt-templates.md" title="Benutzerdefinierte Prompt-Vorlagen für GenAI">Benutzerdefinierte Prompt-Vorlagen für GenAI</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie die generativen benutzerdefinierten AI-Eingabeaufforderungsvorlagen für die Generierung von Inhaltsvarianten erstellen.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie Prompt-Vorlagen für generative KI erstellen können, die zur Gestaltung von Inhaltsvarianten verwendet werden können.</p>
             <a href="./how-to/custom-prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -676,11 +676,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/save-custom-prompt-template.md" title="GenAI - Eingabeaufforderungsvorlagen speichern"
+            <a href="./how-to/save-custom-prompt-template.md" title="Speichern von Prompt-Vorlagen für GenAI"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428317/?format=jpeg"
-                alt="GenAI - Eingabeaufforderungsvorlagen speichern">
+                alt="Speichern von Prompt-Vorlagen für GenAI">
             </a>
           </figure>
         </div>
@@ -689,9 +689,9 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/save-custom-prompt-template.md" title="GenAI - Eingabeaufforderungsvorlagen speichern">GenAI-Speicheraufforderungsvorlagen</a>
+              <a href="./how-to/save-custom-prompt-template.md" title="Speichern von Prompt-Vorlagen für GenAI">Speichern von Prompt-Vorlagen für GenAI</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie die generativen benutzerdefinierten AI-Eingabeaufforderungsvorlagen speichern, um Inhaltsvarianten zu generieren.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie die benutzerdefinierten Prompt-Vorlagen für generative KI zur Erstellung von Inhaltsvarianten speichern können.</p>
             <a href="./how-to/save-custom-prompt-template.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">

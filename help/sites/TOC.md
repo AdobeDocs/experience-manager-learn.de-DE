@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
 source-git-commit: d75c9913e8401bcf86440c0d256b9c3a9d780bbc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '517'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -37,10 +37,10 @@ ht-degree: 96%
       + [Verhindern der Indizierung durch Suchmaschinen](./document-authoring/how-to/no-index.md)
       + [Responsive Navigation](document-authoring/how-to/responsive-navigation.md)
       + [Generieren von Varianten](./document-authoring/how-to/generate-variations.md)
-      + [Sidekick für die Generierung von Varianten konfigurieren](./document-authoring/how-to/generate-variations-sidekick-config.md)
-      + [GenAI-Eingabevorlagen](./document-authoring/how-to/prompt-templates-for-content-variations.md)
-      + [Benutzerdefinierte Eingabeaufforderungsvorlagen für GenAI](./document-authoring/how-to/custom-prompt-templates.md)
-      + [GenAI speichert benutzerdefinierte Eingabeaufforderungsvorlagen](./document-authoring/how-to/save-custom-prompt-template.md)
+      + [Konfigurieren des Sidekicks für das Generieren von Varianten](./document-authoring/how-to/generate-variations-sidekick-config.md)
+      + [Prompt-Vorlagen für GenAI](./document-authoring/how-to/prompt-templates-for-content-variations.md)
+      + [Benutzerdefinierte Prompt-Vorlagen für GenAI](./document-authoring/how-to/custom-prompt-templates.md)
+      + [Speichern von benutzerdefinierten Prompt-Vorlagen für GenAI](./document-authoring/how-to/save-custom-prompt-template.md)
 + Bearbeiten von Seiten {#page-authoring}
    + [Authoring](page-authoring/aem-sites-authoring-overview.md)
    + [Navigation](page-authoring/basic-handling-sites-feature-video-use.md)
