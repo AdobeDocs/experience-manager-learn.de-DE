@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 3b500873ee7307df590ac66dea541a1adf14d726
+source-git-commit: f9841590ea6870d17ce8300b970ec3cb4bf89322
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '411'
 ht-degree: 99%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 99%
    + [Blockierte Tags](./advanced/blocked-tags.md)
    + [Archiv extrahieren](./advanced/extract-archive.md)
    + [Berechtigungen (CUGs)](./advanced/closed-user-groups.md)
-   + [Metadatengesteuerte Berechtigungen (CUGs)](./advanced/metadata-driven-permissions.md)
+   + [Metadatengesteuerte Berechtigungen](./advanced/metadata-driven-permissions.md)
    + [Wasserzeichen](./advanced/watermarks.md)
 
 + Erweiterte Metadatenverwaltung{#metadata}
