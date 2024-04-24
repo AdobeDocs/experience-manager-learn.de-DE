@@ -10,10 +10,10 @@ level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
 last-substantial-update: 2023-08-08T00:00:00Z
 duration: 595
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+source-git-commit: 153ce0ff2d433bdbce05ef7fba4856356c0f6d4c
+workflow-type: tm+mt
 source-wordcount: '448'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -70,7 +70,7 @@ Aktualisieren Sie den _Hostnamen_ und den _Port_ mit dem Schritt __SSL-Connector
 ### Überprüfen des SSL-Setups
 
 1. Klicken Sie zum Überprüfen des SSL-Setups auf die Schaltfläche __Zur HTTPS-URL gehen__.
-1. Bei Verwendung eines selbstsignierten Zertifikats wird der Fehler `Your connection is not private` angezeigt.
+1. Bei der Verwendung eines selbstsignierten Zertifikats wird `Your connection is not private` Fehler.
 
    ![SSL-Setup – Überprüfen von AEM über HTTPS](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
 
