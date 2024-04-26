@@ -15,7 +15,7 @@ duration: 626
 source-git-commit: 2ab958f672b0d5b029bcdf7937b2f72d43ba651f
 workflow-type: tm+mt
 source-wordcount: '1472'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -219,7 +219,7 @@ Außerdem zeigen die Bedienfelder zu den **Top 100 der Angriffe nach Client-IP, 
 
 ![ELK-Tool-Dashboard – DoS Top 100 Anfragen](./assets/elk-tool-dashboard-dos-top-100.png)
 
-Weitere Informationen zur Vermeidung von DoS- und DoS-Angriffen finden Sie in der [Blockieren von DoS- und DoS-Angriffen mithilfe von Traffic-Filterregeln](../blocking-dos-attack-using-traffic-filter-rules.md) Tutorial.
+Weitere Informationen zur Abwehr von DoS- und DDoS-Angriffen finden Sie im Tutorial [Blockieren von DoS- und DDoS-Angriffen mithilfe von Traffic-Filter-Regeln](../blocking-dos-attack-using-traffic-filter-rules.md).
 
 ### WAF-Regeln
 
