@@ -9,9 +9,10 @@ level: Intermediate
 jira: KT-13757
 thumbnail: xx.jpg
 doc-type: Tutorial
-source-git-commit: 3b500873ee7307df590ac66dea541a1adf14d726
+exl-id: 57478aa1-c9ab-467c-9de0-54807ae21fb1
+source-git-commit: 03cb7ef0cf79a21ec1b96caf6c11e6f5119f777c
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '682'
 ht-degree: 1%
 
 ---
@@ -42,15 +43,14 @@ So implementieren Sie metadatengesteuerte Berechtigungen:
    ```json
    {
      "restrictionPropertyNames":[
-       "status"
+       "status",
+       "brand"
      ],
-     "restrictionPaths":[
-       "/content/dam"
-     ]
+     "enabled":true
    }
    ```
 
-1. Ersetzen Sie die Eigenschaftsnamen und Einschränkungspfade durch die erforderlichen Werte.
+1. Ersetzen Sie die Eigenschaftsnamen durch die erforderlichen Werte.
 
 
 Bevor Sie einschränkungsbasierte Zugriffssteuerungseinträge hinzufügen, sollte ein neuer Eintrag auf oberster Ebene hinzugefügt werden, um zunächst den Lesezugriff für alle Gruppen zu verweigern, die einer Berechtigungsprüfung für Assets unterliegen (z. B. &quot;Mitarbeiter&quot;oder Ähnliches):
