@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 source-git-commit: 5f2415b45a99a92c6e2b72dfc80d47f6f899c7ad
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '393'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -137,11 +137,11 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
             <div>
                 <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">
                 <strong>Generische KI in AEM Sites</strong></a>        
-                <br/><em>mit James Talbot &amp; Karthik Muralidharan, AEM Produktmarketing</em>
+                <br/><em>mit James Talbot &amp; Karthik Muralidharan, AEM Product Marketing</em>
             </div>
             <p>
                 <br/>                
-                Erfahren Sie mehr über die neuen generativen KI-Funktionen, die beim Erstellen von AEM Sites-Dokumenten verfügbar sind.
+                Erfahren Sie mehr über die neuen generativen KI-Funktionen, die bei der Dokumenterstellung von AEM Sites verfügbar sind.
             </p>
         </td>                
     </tr>      

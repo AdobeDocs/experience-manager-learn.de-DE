@@ -9,9 +9,9 @@ sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
 source-git-commit: eb4463ae0270725c5b0bd96e9799bada25b06303
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2059'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -105,10 +105,10 @@ ht-degree: 99%
    + [Vorausfüllen von HTML5 Formularen](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Formulardatenmodell mit Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Dynamisches Hinzufügen von Elementen zur Auswahlkomponente](adaptive-forms/choice-group-items-adding-dynamically-article.md)
-+ PDF-Formular mit ChatBot ausfüllen{#chatbot-and-aem-forms}
++ Ausfüllen eines PDF-Formulars mit ChatBot{#chatbot-and-aem-forms}
    + [1 – Einführung](chatbot-and-aem-forms/introduction.md)
-   + [2 - Analysieren von ChatBot-Daten](chatbot-and-aem-forms/parse-chat-bot-data.md)
-   + [3 - PDF erstellen](chatbot-and-aem-forms/merge-data-with-template.md)
+   + [2 – Analysieren von ChatBot-Daten](chatbot-and-aem-forms/parse-chat-bot-data.md)
+   + [3 – Erstellen einer PDF-Datei](chatbot-and-aem-forms/merge-data-with-template.md)
 + Auf Kernkomponenten basierende Formulare{#core-component-based-forms}
    + [Zugriff auf Formulardaten mithilfe der GuideBridge-API](core-components/submit-data-using-guidebridge-api.md)
 + DAM-Ordnerinhalt auswählen und zusammenführen{#select-dam-folder-content}

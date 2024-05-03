@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
 source-git-commit: 5f2415b45a99a92c6e2b72dfc80d47f6f899c7ad
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1184'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
