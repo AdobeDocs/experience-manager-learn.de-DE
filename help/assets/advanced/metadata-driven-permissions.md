@@ -13,32 +13,32 @@ exl-id: 57478aa1-c9ab-467c-9de0-54807ae21fb1
 source-git-commit: 03cb7ef0cf79a21ec1b96caf6c11e6f5119f777c
 workflow-type: tm+mt
 source-wordcount: '682'
-ht-degree: 1%
+ht-degree: 98%
 
 ---
 
 # Metadatengesteuerte Berechtigungen{#metadata-driven-permissions}
 
-Metadatengesteuerte Berechtigungen sind eine Funktion, mit der Zugriffssteuerungsentscheidungen in der AEM Assets-Autoreninstanz auf der Grundlage von Asset-Metadateneigenschaften und nicht auf der Ordnerstruktur festgelegt werden können. Mit dieser Funktion können Sie Zugriffssteuerungsrichtlinien definieren, die Attribute wie den Asset-Status, den Typ oder eine von Ihnen definierte benutzerdefinierte Metadateneigenschaft auswerten.
+Metadatengesteuerte Berechtigungen sind eine Funktion, mit der Zugriffssteuerungsentscheidungen in der AEM Assets-Autoreninstanz auf der Grundlage von Asset-Metadateneigenschaften und nicht auf der Ordnerstruktur festgelegt werden können. Mit dieser Funktion können Sie Zugriffssteuerungsrichtlinien definieren, die Attribute wie den Asset-Status, den -Typ oder eine von Ihnen definierte benutzerdefinierte Metadateneigenschaft auswerten.
 
-Sehen wir uns ein Beispiel an. Kreative Benutzer laden ihre Arbeit in AEM Assets in den Ordner hoch, der mit der Kampagne in Verbindung steht. Möglicherweise handelt es sich um ein laufendes Asset, das noch nicht zur Verwendung freigegeben wurde. Wir möchten sicherstellen, dass Marketing-Experten nur genehmigte Assets für diese Kampagne sehen. Wir können die Metadateneigenschaft verwenden, um anzugeben, dass ein Asset genehmigt wurde und von Marketing-Experten verwendet werden kann.
+Sehen wir uns ein Beispiel an. Kreative laden ihre Arbeit in AEM Assets in den Ordner hoch, der mit der Kampagne in Verbindung steht. Möglicherweise handelt es sich um ein laufendes Asset, das noch nicht zur Verwendung freigegeben wurde. Wir möchten sicherstellen, dass Marketing-Fachkräfte nur genehmigte Assets für diese Kampagne sehen. Wir können die Metadateneigenschaft verwenden, um anzugeben, dass ein Asset genehmigt wurde und von Marketing-Fachkräften verwendet werden kann.
 
 ## Funktionsweise
 
-Die Aktivierung metadatengesteuerter Berechtigungen umfasst die Definition, welche Asset-Metadateneigenschaften Zugriffsbeschränkungen wie &quot;Status&quot;oder &quot;Marke&quot;aktivieren. Diese Eigenschaften können dann verwendet werden, um Zugriffssteuerungseinträge zu erstellen, die angeben, welche Benutzergruppen Zugriff auf Assets mit bestimmten Eigenschaftswerten haben.
+Die Aktivierung metadatengesteuerter Berechtigungen umfasst die Definition, welche Asset-Metadateneigenschaften Zugriffsbeschränkungen wie „Status“ oder „Marke“ darstellen. Diese Eigenschaften können dann verwendet werden, um Zugriffssteuerungseinträge zu erstellen, die angeben, welche Benutzergruppen Zugriff auf Assets mit bestimmten Eigenschaftswerten haben.
 
 ## Voraussetzungen
 
-Der Zugriff auf eine AEM as a Cloud Service Umgebung, die auf die neueste Version aktualisiert wurde, ist erforderlich, um metadatengesteuerte Berechtigungen einzurichten.
+Der Zugriff auf eine AEM as a Cloud Service-Umgebung, die auf die neueste Version aktualisiert wurde, ist erforderlich, um metadatengesteuerte Berechtigungen einzurichten.
 
 
 ## Entwicklungsschritte
 
 So implementieren Sie metadatengesteuerte Berechtigungen:
 
-1. Bestimmen Sie, welche Asset-Metadateneigenschaften für die Zugriffskontrolle verwendet werden. In unserem Fall handelt es sich um eine Eigenschaft namens `status`.
-1. Erstellen einer OSGi-Konfiguration `com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json` in Ihrem Projekt.
-1. Fügen Sie die folgende JSON in die erstellte Datei ein.
+1. Bestimmen Sie, welche Asset-Metadateneigenschaften für die Zugriffssteuerung verwendet werden. In unserem Fall handelt es sich um eine Eigenschaft namens `status`.
+1. Erstellen Sie eine OSGi-Konfiguration `com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json` in Ihrem Projekt.
+1. Fügen Sie folgenden JSON-Inhalt in die erstellte Datei ein:
 
    ```json
    {
@@ -53,39 +53,39 @@ So implementieren Sie metadatengesteuerte Berechtigungen:
 1. Ersetzen Sie die Eigenschaftsnamen durch die erforderlichen Werte.
 
 
-Bevor Sie einschränkungsbasierte Zugriffssteuerungseinträge hinzufügen, sollte ein neuer Eintrag auf oberster Ebene hinzugefügt werden, um zunächst den Lesezugriff für alle Gruppen zu verweigern, die einer Berechtigungsprüfung für Assets unterliegen (z. B. &quot;Mitarbeiter&quot;oder Ähnliches):
+Bevor Sie einschränkungsbasierte Zugriffssteuerungseinträge hinzufügen, sollte ein neuer Eintrag auf oberster Ebene hinzugefügt werden, um zunächst den Lesezugriff für alle Gruppen zu verweigern, die einer Auswertung der Berechtigungen für Assets unterliegen (z. B. „Mitwirkende“ oder Ähnliches):
 
-1. Navigieren Sie zum Bildschirm Tools > Sicherheit > Berechtigungen .
-1. Wählen Sie die Gruppe &quot;Mitwirkende&quot;(oder eine andere benutzerdefinierte Gruppe, zu der alle Benutzergruppen gehören) aus.
-1. Klicken Sie oben rechts im Bildschirm auf &quot;ACE hinzufügen&quot;.
-1. /content/dam für Pfad auswählen
-1. Geben Sie jcr:read für Berechtigungen ein
-1. Wählen Sie Ablehnen für Berechtigungstyp aus.
-1. Wählen Sie unter Einschränkungen rep:ntNames aus und geben Sie dam:Asset als Beschränkungswert ein.
+1. Navigieren Sie zum Bildschirm Tools → Sicherheit → Berechtigungen.
+1. Wählen Sie die Gruppe „Mitwirkende“ aus (oder eine andere benutzerdefinierte Gruppe, zu der alle Benutzergruppen gehören).
+1. Klicken Sie oben rechts im Bildschirm auf „ACE hinzufügen“.
+1. Wählen Sie /content/dam für den Pfad aus.
+1. Geben Sie jcr:read für Berechtigungen ein.
+1. Wählen Sie „Ablehnen“ als Berechtigungstyp aus.
+1. Wählen Sie unter Einschränkungen rep:ntNames aus und geben Sie dann dam:Asset als Beschränkungswert ein.
 1. Klicken Sie auf „Speichern“.
 
-![Zugriff verweigern](./assets/metadata-driven-permissions/deny-access.png)
+![Verweigern des Zugriffs](./assets/metadata-driven-permissions/deny-access.png)
 
-Zugriffssteuerungseinträge können jetzt hinzugefügt werden, um Benutzergruppen Lesezugriff auf der Grundlage von Asset-Metadaten-Eigenschaftswerten zu gewähren.
+Zugriffssteuerungseinträge können jetzt hinzugefügt werden, um Benutzergruppen Lesezugriff auf der Grundlage von Asset-Metadateneigenschaftswerten zu gewähren.
 
-1. Navigieren Sie zum Bildschirm Tools > Sicherheit > Berechtigungen .
-1. Auswählen der gewünschten Gruppe
-1. Klicken Sie oben rechts im Bildschirm auf &quot;ACE hinzufügen&quot;.
-1. Wählen Sie /content/dam (oder einen Unterordner) für Pfad aus.
-1. Geben Sie jcr:read für Berechtigungen ein
-1. Wählen Sie Zulassen für Berechtigungstyp aus.
-1. Wählen Sie unter Einschränkungen einen der konfigurierten Asset-Metadaten-Eigenschaftsnamen aus (die in der OSGi-Konfiguration definierten Eigenschaften sind hier enthalten).
-1. Geben Sie den erforderlichen Metadateneigenschaftswert in das Feld &quot;Restriction Value&quot;ein.
-1. Klicken Sie auf das Symbol &quot;+&quot;, um die Einschränkung zum Zugriffskontrolleintrag hinzuzufügen.
+1. Navigieren Sie zum Bildschirm Tools → Sicherheit → Berechtigungen.
+1. Wählen Sie die gewünschten Gruppen aus.
+1. Klicken Sie oben rechts im Bildschirm auf „ACE hinzufügen“.
+1. Wählen Sie /content/dam (oder einen Unterordner) als Pfad aus.
+1. Geben Sie jcr:read für Berechtigungen ein.
+1. Wählen Sie „Zulassen“ als Berechtigungstyp aus.
+1. Wählen Sie unter Einschränkungen einen der konfigurierten Asset-Metadateneigenschaftsnamen aus (die in der OSGi-Konfiguration definierten Eigenschaften sind hier enthalten).
+1. Geben Sie den erforderlichen Metadateneigenschaftswert in das Feld „Einschränkungswert“ ein.
+1. Klicken Sie auf das Symbol „+“, um die Einschränkung zum Zugriffssteuerungeintrag hinzuzufügen.
 1. Klicken Sie auf „Speichern“.
 
-![Zugriff erlauben](./assets/metadata-driven-permissions/allow-access.png)
+![Zulassen des Zugriffs](./assets/metadata-driven-permissions/allow-access.png)
 
 Beispielordner enthält einige Assets.
 
-![Administratoransicht](./assets/metadata-driven-permissions/admin-view.png)
+![Admin-Ansicht](./assets/metadata-driven-permissions/admin-view.png)
 
-Nachdem Sie Berechtigungen konfiguriert und die Asset-Metadateneigenschaften entsprechend festgelegt haben, sehen Benutzer (in unserem Fall Marketing-Benutzer) nur genehmigte Assets.
+Nachdem Sie Berechtigungen konfiguriert und die Asset-Metadateneigenschaften entsprechend festgelegt haben, sehen Benutzerinnen und Benutzer (in unserem Fall Marketing-Benutzerinnen und -Benutzer) nur genehmigte Assets.
 
 ![Marketing-Ansicht](./assets/metadata-driven-permissions/marketeer-view.png)
 
@@ -94,7 +94,7 @@ Nachdem Sie Berechtigungen konfiguriert und die Asset-Metadateneigenschaften ent
 Zu den Vorteilen von metadatengesteuerten Berechtigungen gehören:
 
 - Präzise Kontrolle über den Asset-Zugriff basierend auf bestimmten Attributen.
-- Entkopplung von Richtlinien zur Zugriffskontrolle von der Ordnerstruktur, wodurch eine flexiblere Asset-Organisation möglich ist.
+- Entkopplung von Richtlinien zur Zugriffssteuerung von der Ordnerstruktur, wodurch eine flexiblere Asset-Organisation möglich ist.
 - Möglichkeit zur Definition komplexer Zugriffssteuerungsregeln basierend auf mehreren Metadateneigenschaften.
 
 >[!NOTE]
@@ -102,9 +102,9 @@ Zu den Vorteilen von metadatengesteuerten Berechtigungen gehören:
 > Beachten Sie Folgendes:
 > 
 > - Metadateneigenschaften werden anhand der Einschränkungen mit Zeichenfolgengleichheit bewertet (andere Datentypen werden noch nicht unterstützt, z. B. Datum)
-> - Um mehrere Werte für eine Einschränkungseigenschaft zuzulassen, können dem Zugriffssteuerungseintrag zusätzliche Einschränkungen hinzugefügt werden, indem Sie dieselbe Eigenschaft aus der Dropdown-Liste &quot;Typ auswählen&quot;auswählen und einen neuen Beschränkungswert eingeben (z. B. `status=approved`, `status=wip`) und auf &quot;+&quot;klicken, um die Einschränkung zum Eintrag hinzuzufügen
-> ![Mehrere Werte zulassen](./assets/metadata-driven-permissions/allow-multiple-values.png)
-> - Mehrere Einschränkungen in einem einzelnen Zugriffssteuerungseintrag mit verschiedenen Eigenschaftsnamen (z. B. `status=approved`, `brand=Adobe`) wird als AND-Bedingung ausgewertet, d. h. die ausgewählte Benutzergruppe erhält Lesezugriff auf Assets mit `status=approved AND brand=Adobe`
-> ![Mehrere Einschränkungen zulassen](./assets/metadata-driven-permissions/allow-multiple-restrictions.png)
-> - Durch Hinzufügen eines neuen Zugriffssteuerungseintrags mit einer Metadaten-Eigenschaftsbeschränkung wird eine ODER-Bedingung für die Einträge festgelegt, z. B. ein einzelner Eintrag mit Einschränkungen `status=approved` und einem einzigen Eintrag mit `brand=Adobe` wird bewertet als `status=approved OR brand=Adobe`
-> ![Mehrere Einschränkungen zulassen](./assets/metadata-driven-permissions/allow-multiple-aces.png)
+> - Um mehrere Werte für eine Einschränkungseigenschaft zuzulassen, können dem Zugriffssteuerungseintrag zusätzliche Einschränkungen hinzugefügt werden, indem Sie dieselbe Eigenschaft aus der Dropdown-Liste „Typ auswählen“ auswählen und einen neuen Beschränkungswert eingeben (z B. `status=approved`, `status=wip`) und auf „+“ klicken, um die Einschränkung zum Eintrag hinzuzufügen
+> ![Zulassen von mehreren Werten](./assets/metadata-driven-permissions/allow-multiple-values.png)
+> - Mehrere Einschränkungen in einem einzelnen Zugriffssteuerungseintrag mit verschiedenen Eigenschaftsnamen (z. B. `status=approved`, `brand=Adobe`) wird als UND Bedingung ausgewertet, d. h. die ausgewählte Benutzergruppe erhält Lesezugriff auf Assets mit `status=approved AND brand=Adobe`
+> ![Zulassen von mehreren Einschränkungen](./assets/metadata-driven-permissions/allow-multiple-restrictions.png)
+> - Durch Hinzufügen eines neuen Zugriffssteuerungseintrags mit einer Metadaten-Eigenschaftsbeschränkung wird eine ODER Bedingung für die Einträge festgelegt, z. B. ein einzelner Eintrag mit Einschränkungen `status=approved` und ein einzelner Eintrag mit `brand=Adobe` wird bewertet als `status=approved OR brand=Adobe`
+> ![Zulassen von mehreren Einschränkungen](./assets/metadata-driven-permissions/allow-multiple-aces.png)
