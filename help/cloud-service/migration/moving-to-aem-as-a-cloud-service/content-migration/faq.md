@@ -11,10 +11,10 @@ jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 569
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '2146'
-ht-degree: 100%
+source-git-commit: 85d516d57d818d23372ab7482d25e33242ef0426
+workflow-type: tm+mt
+source-wordcount: '1884'
+ht-degree: 97%
 
 ---
 
@@ -77,22 +77,6 @@ Die Menge der Ressourcen, die der CTT-Extraktionsprozess benötigt, hängt von d
 
 Wenn Klonumgebungen für die Migration verwendet werden, hat dies keine Auswirkungen auf die Ressourcennutzung des Live-Produktions-Servers, sondern birgt eigene spezifische Nachteile bei der Synchronisierung von Inhalten zwischen Live-Produktion und Klon.
 
-### F: In meinem Quellautorensystem ist SSO für die Benutzenden zur Authentifizierung bei der Autoreninstanz konfiguriert. Muss ich in diesem Fall die CTT-Funktion „Benutzerzuordnung“ verwenden?
-
-Die kurze Antwort lautet: **ja**.
-
-Bei einer Extraktion und Aufnahme mit CTT **ohne** Benutzerzuordnung werden nur der Inhalt und die zugehörigen Prinzipien (Benutzende, Gruppen) von der AEM-Quelle nach AEMaaCS migriert. Diese Benutzenden (Identitäten) müssen jedoch in Adobe IMS vorhanden sein und Zugriff auf die AEMaaCS-Instanz (erhalten) haben, damit sie sich erfolgreich authentifizieren können. Die Aufgabe des [Benutzerzuordnungs-Tools](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html?lang=de) besteht darin, lokale AEM-Benutzende den IMS-Benutzenden zuzuordnen, damit Authentifizierung und Autorisierungen zusammenarbeiten.
-
-In diesem Fall wird der SAML-Identitätsanbieter für Adobe IMS so konfiguriert, dass die Federated/Enterprise ID verwendet wird, statt einer direkten AEM-Nutzung über den Authentifizierungs-Handler.
-
-### F: In meinem Quellautorensystem ist die grundlegende Authentifizierung konfiguriert, damit sich die Benutzenden bei der Autoreninstanz als lokale AEM-Benutzende authentifizieren können. Muss ich in diesem Fall die CTT-Funktion „Benutzerzuordnung“ verwenden?
-
-Die kurze Antwort lautet: **ja**.
-
-Bei einer Extraktion und Aufnahme mit CTT ohne Benutzerzuordnung werden die Inhalte und die zugehörigen Prinzipien (Benutzende, Gruppen) von der AEM-Quelle nach AEMaaCS migriert. Diese Benutzenden (Identitäten) müssen jedoch in Adobe IMS vorhanden sein und Zugriff auf die AEMaaCS-Instanz (erhalten) haben, damit sie sich erfolgreich authentifizieren können. Die Aufgabe des [Benutzerzuordnungs-Tools](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/legacy-user-mapping-tool/overview-user-mapping-tool-legacy.html?lang=de) besteht darin, lokale AEM-Benutzende den IMS-Benutzenden zuzuordnen, damit Authentifizierung und Autorisierungen zusammenarbeiten.
-
-In diesem Fall verwenden die Benutzenden die persönliche Adobe ID, und die Adobe ID wird von den IMS-Admins für die Bereitstellung des AEMaaCS-Zugriffs verwendet.
-
 ### F: Was bedeuten die Begriffe „bereinigen“ und „überschreiben“ im CTT-Kontext?
 
 Im Rahmen der [Extraktionsphase](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=de#extraction-setup-phase) können die Daten im Staging-Container aus vorherigen Extraktionszyklen überschrieben oder der sich unterscheidende (hinzugefügte/aktualisierte/gelöschte) Inhalt darin hinzugefügt werden. Der Staging-Container ist nichts anderes als der Blob-Speicher-Container, der mit dem Migrationssatz verknüpft ist. Jeder Migrationssatz erhält einen eigenen Staging-Container.
@@ -107,10 +91,11 @@ Ja, dies ist möglich, erfordert jedoch eine sorgfältige Planung in Bezug auf F
    + Überprüfen Sie, ob es zulässig ist, alle Assets als Teil eines Migrationssatzes zu migrieren, und migrieren Sie dann die Sites, die diese verwenden, stufenweise.
 + Im aktuellen Status ist die Autoreninstanz aufgrund des Autoren-Aufnahmevorgangs nicht für die Inhaltserstellung verfügbar, obwohl der Inhalt auf der Veröffentlichungsebene weiterhin bereitgestellt werden kann.
    + Dies bedeutet, dass die Inhaltserstellungsaktivitäten eingefroren werden, bis die Aufnahme in der Autoreninstanz abgeschlossen ist.
++ Benutzer werden nicht mehr migriert, obwohl Gruppen
 
 Lesen Sie vor der Planung der Migration die Beschreibung für die Prozesse Auffüllextraktion und Auffüllaufnahme.
 
-### F: Sind meine Websites für Endbenutzende verfügbar, auch wenn die Aufnahme in die AEMaaCS-Autoren- oder -Veröffentlichungsinstanz erfolgt?
+### F: Sind meine Websites für Endbenutzer verfügbar, obwohl die Aufnahme entweder in die AEMaaCS-Autoren- oder Veröffentlichungsinstanz erfolgt?
 
 Ja. Der Endbenutzer-Traffic wird nicht durch die Inhaltsmigration unterbrochen. Bei der Autoren-Aufnahme wird jedoch die Inhaltserstellung so lange eingefroren, bis der Aufnahmevorgang abgeschlossen ist.
 
@@ -160,7 +145,6 @@ Für den CTT-Prozess ist eine Verbindung zu den folgenden Ressourcen erforderlic
 
 + Die AEM as a Cloud Service-Zielumgebung: `author-p<program_id>-e<env_id>.adobeaemcloud.com`
 + Der Azure Blob Datenspeicherungs-Service: `casstorageprod.blob.core.windows.net`
-+ Der IO-Endpunkt der Benutzerzuordnung: `usermanagement.adobe.io`
 
 Weitere Informationen zu [Quellverbindungen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=de#source-environment-connectivity) finden Sie in der Dokumentation.
 
@@ -198,7 +182,7 @@ Wenn sich die Assets/Knoten in der Quellumgebung zahlenmäßig im unteren Bereic
 + Arbeiten Sie weiterhin an der lokalen/AMS-Produktions-Authoring-Instanz.
 + Führen Sie von nun an alle anderen Migrationsnachweiszyklen mit `wipe=true` aus.
    + Beachten Sie, dass bei diesem Vorgang der vollständige Knotenspeicher migriert wird (aber nur geänderte Blobs, nicht ganze Blobs). Die vorherigen Blobs befinden sich im Azure-Blob-Speicher der AEMaaCS-Zielinstanz.
-   + Verwenden Sie diesen Migrationsnachweis zur Bemessung der Migrationsdauer, zur Benutzerzuordnung, für Tests sowie zur Validierung aller anderen Funktionen.
+   + Verwenden Sie diesen Migrationsnachweis zur Messung der Migrationsdauer, zum Testen und zur Validierung aller anderen Funktionen.
 + Führen Sie in der Woche vor der Live-Schaltung eine Migration vom Typ „wipe=true“ durch.
    + Verbinden Sie Dynamic Media mit AEMaaCS.
    + Trennen Sie die DM-Konfiguration von der lokalen AEM-Quelle.
