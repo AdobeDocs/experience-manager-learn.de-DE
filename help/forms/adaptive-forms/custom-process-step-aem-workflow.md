@@ -9,18 +9,18 @@ level: Experienced
 exl-id: 879518db-3f05-4447-86e8-5802537584e5
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 226
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
-source-wordcount: '769'
-ht-degree: 100%
+source-git-commit: 7ebc33932153cf024e68fc5932b7972d9da262a7
+workflow-type: tm+mt
+source-wordcount: '758'
+ht-degree: 60%
 
 ---
 
 # Benutzerdefinierter Prozessschritt
 
-Dieses Tutorial richtet sich an AEM Forms-Kundinnen und -Kunden, die einen benutzerdefinierten Prozessschritt implementieren müssen. Ein Prozessschritt kann ein ECMA-Skript ausführen oder benutzerdefinierten Java-Code aufrufen, um Vorgänge auszuführen. In diesem Tutorial werden die Schritte erläutert, die zur Implementierung des vom Prozessschritt ausgeführten WorkflowProcess erforderlich sind.
+Dieses Tutorial richtet sich an AEM Forms-Kunden, die einen benutzerdefinierten Prozessschritt implementieren müssen. Ein Prozessschritt kann ein ECMA-Skript ausführen oder benutzerdefinierten Java™-Code aufrufen, um Vorgänge auszuführen. In diesem Tutorial werden die Schritte erläutert, die zur Implementierung des WorkflowProcess erforderlich sind, der vom Prozessschritt ausgeführt wird.
 
-Der Hauptgrund für die Implementierung eines benutzerdefinierten Prozessschritts besteht darin, den AEM-Workflow zu erweitern. Wenn Sie beispielsweise AEM Forms-Komponenten in Ihrem Workflow-Modell verwenden, sollten Sie die folgenden Vorgänge durchführen:
+Der Hauptgrund für die Implementierung eines benutzerdefinierten Prozessschritts besteht darin, den AEM Workflow zu erweitern. Wenn Sie beispielsweise AEM Forms-Komponenten in Ihrem Workflow-Modell verwenden, sollten Sie die folgenden Vorgänge durchführen:
 
 * Speichern der Anhänge eines adaptiven Formulars im Dateisystem
 * Ändern der übermittelten Daten
@@ -29,24 +29,28 @@ Für den oben genannten Anwendungsfall schreiben Sie normalerweise einen OSGi-Di
 
 ## Erstellen eines Maven-Projekts
 
-Der erste Schritt besteht darin, ein Maven-Projekt mit dem entsprechenden Adobe-Maven-Archetyp zu erstellen. Die detaillierten Schritte finden Sie in diesem [Artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=de). Sobald Sie Ihr Maven-Projekt in Eclipse importiert haben, können Sie mit dem Schreiben Ihrer ersten OSGi-Komponente beginnen, die in Ihrem Prozessschritt verwendet werden kann.
+Der erste Schritt besteht darin, ein Maven-Projekt mithilfe des entsprechenden Adobe Maven-Archetyps zu erstellen. Die detaillierten Schritte finden Sie in diesem [Artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=de). Sobald Sie Ihr Maven-Projekt in Eclipse importiert haben, können Sie mit dem Schreiben Ihrer ersten OSGi-Komponente beginnen, die in Ihrem Prozessschritt verwendet werden kann.
 
 
 ### Erstellen einer Klasse, die WorkflowProcess implementiert
 
-Öffnen Sie das Maven-Projekt in Ihrer Eclipse-IDE. Erweitern Sie den Ordner **Projektname** > **core**.  Erweitern Sie den Ordner „src/main/java“. Sie sollten ein Paket sehen, das mit „core“ endet. Erstellen Sie eine Java-Klasse, die WorkflowProcess in diesem Paket implementiert. Sie müssen die Ausführungsmethode überschreiben. Die Signatur der execute-Methode lautet wie folgt:
-public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments)throws WorkflowException
-Die execute-Methode gibt Zugriff auf die drei folgenden Variablen:
+Öffnen Sie das Maven-Projekt in Ihrer Eclipse IDE. Erweitern Sie den Ordner **Projektname** > **core**.  Erweitern Sie die `src/main/java` Ordner. Sie sollten ein Paket sehen, das mit `core`. Erstellen Sie eine Java™-Klasse, die WorkflowProcess in diesem Paket implementiert. Sie müssen die Ausführungsmethode überschreiben. Die Signatur der execute-Methode lautet wie folgt:
+
+```java
+public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments) throws WorkflowException 
+```
+
+Die execute -Methode bietet Zugriff auf die folgenden 3 Variablen:
 
 **WorkItem**: Die workItem-Variable gibt Zugriff auf Daten im Zusammenhang mit dem Workflow. Die Dokumentation zur öffentlichen API ist [hier](https://helpx.adobe.com/de/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html) verfügbar.
 
-**WorkflowSession**: Diese workflowSession-Variable bietet Ihnen die Möglichkeit, den Workflow zu steuern. Die Dokumentation zur öffentlichen API ist [hier](https://helpx.adobe.com/de/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html) verfügbar.
+**WorkflowSession**: Diese Variable workflowSession bietet Ihnen die Möglichkeit, den Workflow zu steuern. Die öffentliche API-Dokumentation ist verfügbar. [here](https://helpx.adobe.com/de/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html).
 
 **MetaDataMap**: Alle mit dem Workflow verknüpften Metadaten. Alle Prozessargumente, die an den Prozessschritt weitergegeben werden, sind über das MetaDataMap-Objekt verfügbar.[API-Dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
 In diesem Tutorial werden wir die Anlagen schreiben, die dem adaptiven Formular als Teil des AEM-Workflows zum Dateisystem hinzugefügt wurden.
 
-Um diesen Anwendungsfall durchzuführen, wurde die folgende Java-Klasse geschrieben:
+Um diesen Anwendungsfall zu erreichen, wurde die folgende Java™-Klasse geschrieben
 
 Sehen wir uns diesen Code an
 
@@ -129,7 +133,7 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
             }
 ```
 
-Zeile 1: Definiert die Eigenschaften für unsere Komponente. Die Eigenschaft „process.label“ wird angezeigt, wenn Sie die OSGi-Komponente mit dem Prozessschritt verknüpfen, wie in einem der folgenden Screenshots dargestellt.
+Zeile 1: Definiert die Eigenschaften für unsere Komponente. Die `process.label` -Eigenschaft ist, was Sie sehen, wenn Sie die OSGi-Komponente mit dem Prozessschritt verknüpfen, wie in einem der folgenden Screenshots dargestellt.
 
 Zeilen 13–15: Die an diese OSGi-Komponente weitergegebenen Prozessargumente werden mithilfe eines Trennzeichens (&quot;,&quot;) getrennt. Die Werte für „attachmentPath“ und „saveToLocation“ werden dann aus dem Zeichenfolgen-Array extrahiert.
 
@@ -141,12 +145,12 @@ Diese beiden Werte werden als Prozessargumente weitergeben, wie im folgenden Scr
 
 ![Prozessschritt](assets/implement-process-step.gif)
 
-Der QueryBuilder-Dienst wird zum Abfragen von Knoten des Typs „nt:file“ im Ordner „attachmentsPath“ verwendet. Der Rest des Codes durchläuft die Suchergebnisse, um das Dokumentobjekt zu erstellen und im Dateisystem zu speichern
+Der QueryBuilder-Dienst wird zum Abfragen von Knoten des Typs `nt:file` im Ordner attachmentsPath . Der Rest des Codes durchläuft die Suchergebnisse, um das Dokumentobjekt zu erstellen und es im Dateisystem zu speichern.
 
 
 >[!NOTE]
 >
->Da wir ein AEM Forms-spezifisches Dokumentobjekt verwenden, müssen Sie die Abhängigkeit „aemfd-client-sdk“ in Ihr Maven-Projekt einschließen. Die Gruppen-ID lautet „com.adobe.aemfd“ und die Artefakt-ID „aemfd-client-sdk“.
+>Da wir ein für AEM Forms spezifisches Dokumentobjekt verwenden, müssen Sie die aemfd-client-sdk-Abhängigkeit in Ihr Maven-Projekt einbeziehen. Die Gruppen-ID lautet `com.adobe.aemfd` und die Artefakt-ID lautet `aemfd-client-sdk`.
 
 #### Erstellen und Bereitstellen
 
