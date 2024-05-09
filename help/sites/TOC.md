@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: d75c9913e8401bcf86440c0d256b9c3a9d780bbc
-workflow-type: ht
-source-wordcount: '517'
-ht-degree: 100%
+source-git-commit: 43a8b1eb7e714b27972c0ea2b1327ab8db044d25
+workflow-type: tm+mt
+source-wordcount: '549'
+ht-degree: 94%
 
 ---
 
@@ -41,6 +41,14 @@ ht-degree: 100%
       + [Prompt-Vorlagen für GenAI](./document-authoring/how-to/prompt-templates-for-content-variations.md)
       + [Benutzerdefinierte Prompt-Vorlagen für GenAI](./document-authoring/how-to/custom-prompt-templates.md)
       + [Speichern von benutzerdefinierten Prompt-Vorlagen für GenAI](./document-authoring/how-to/save-custom-prompt-template.md)
+      + [Target-Zielgruppen für Variante generieren](./document-authoring/how-to/using-target-audiences-in-generate-variations.md)
+      + [CSV-Datei für Zielgruppen zur Generierung von Varianten](./document-authoring/how-to/using-audiences-csv-file-in-generate-variations.md)
+      + [Adobe Firefly für Generate Variation](./document-authoring/how-to/using-adobe-firefly-for-images-in-generate-variations.md)
+      + [Generative Variationsaktionen](./document-authoring/how-to/generate-variations-actions.md)
+      + [Anpassen von Eingabeaufforderungen mithilfe von Metadaten](./document-authoring/how-to/customizing-prompts-using-metadata.md)
+      + [GenAI - Vertrauen und Datenschutz](./document-authoring/how-to/generate-variations-trust-privacy.md)
+      + [Expertenrahmen](./document-authoring/how-to/experimentation-framework.md)
+      + [Einrichten des Experimentierungs-Frameworks](./document-authoring/how-to/setup-experimentation-framework.md)
 + Bearbeiten von Seiten {#page-authoring}
    + [Authoring](page-authoring/aem-sites-authoring-overview.md)
    + [Navigation](page-authoring/basic-handling-sites-feature-video-use.md)
