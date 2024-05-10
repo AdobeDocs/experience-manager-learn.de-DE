@@ -10,9 +10,9 @@ jira: KT-15233
 last-substantial-update: 2024-05-01T00:00:00Z
 exl-id: c4b093d4-39b8-4f0b-b759-ecfbb6e9e54f
 source-git-commit: a3d2b2343269d2cfc7cecc5817ef1e07a66a88d3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1151'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -20,11 +20,11 @@ ht-degree: 86%
 
 Die Sicherstellung der Integrität und Sicherheit Ihrer Daten bei der Bereitstellung von AEM Headless-Inhalten aus AEM Publish ist bei der Bereitstellung sensibler Inhalte von entscheidender Bedeutung. Diese Anleitung führt Sie durch das Sichern der Inhalte, die von AEM Headless GraphQL API-Endpunkten bereitgestellt werden.
 
-Die Anleitung in diesem Tutorial, in der strenge Anforderungen gelten, damit Inhalte ausschließlich für bestimmte Benutzer oder Benutzergruppen verfügbar sind. Um Verwirrung und unbeabsichtigte Ergebnisse zu vermeiden, muss zwischen personalisierten Marketing-Inhalten und privaten Inhalten wie personenbezogenen Finanzdaten unterschieden werden. Dieses Tutorial behandelt den Schutz privater Inhalte.
+Die Anleitung in diesem Tutorial folgt strengen Anforderungen, damit Inhalte ausschließlich für bestimmte Benutzende oder Benutzergruppen verfügbar sind. Um Verwirrung und unbeabsichtigte Ergebnisse zu vermeiden, muss zwischen personalisierten Marketing-Inhalten und privaten Inhalten wie personenbezogenen Daten oder persönlichen Finanzdaten unterschieden werden. In diesem Tutorial geht es um den Schutz privater Inhalte.
 
-Bei der Diskussion von Marketing-Inhalten beziehen wir uns auf Inhalte, die auf einzelne Benutzer oder Gruppen zugeschnitten sind und nicht für den allgemeinen Gebrauch bestimmt sind. Es ist jedoch wichtig zu verstehen, dass diese Inhalte zwar für bestimmte Benutzer gedacht sind, ihre Exposition außerhalb des beabsichtigten Kontexts (z. B. durch Manipulation von HTTP-Anfragen) jedoch kein Sicherheits-, Rechts- oder Reputationsrisiko darstellt.
+Mit Marketing-Inhalten beziehen wir uns auf Inhalte, die auf einzelne Benutzer oder Gruppen zugeschnitten sind und nicht für den allgemeinen Gebrauch bestimmt sind. Dabei gilt es zu verstehen, dass diese Inhalte zwar für bestimmte Benutzende gedacht sind, ihre Präsentation außerhalb des beabsichtigten Kontexts (z. B. durch Manipulation von HTTP-Anfragen) jedoch kein Sicherheits-, Rechts- oder Reputationsrisiko darstellt.
 
-Es wird betont, dass alle in diesem Artikel behandelten Inhalte als privat betrachtet werden und nur von bestimmten Benutzern oder Gruppen angesehen werden können. Marketing-Inhalte erfordern oft keinen Schutz, sondern ihre Bereitstellung an bestimmte Benutzer kann von der Anwendung verwaltet und zur Leistung zwischengespeichert werden.
+Alle in diesem Artikel behandelten Inhalte werden als privat betrachtet und können nur von bestimmten Benutzenden oder Gruppen angesehen werden. Marketing-Inhalte erfordern oft keinen Schutz, vielmehr kann ihre Bereitstellung für bestimmte Benutzende von der Anwendung verwaltet und aus Leistungsgründen zwischengespeichert werden.
 
 Diese Anleitung umfasst nicht:
 
