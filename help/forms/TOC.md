@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: eb4463ae0270725c5b0bd96e9799bada25b06303
-workflow-type: ht
-source-wordcount: '2059'
-ht-degree: 100%
+source-git-commit: 81026b569ae0dc9976f714715682448a41d9f8bc
+workflow-type: tm+mt
+source-wordcount: '2064'
+ht-degree: 99%
 
 ---
 
@@ -178,6 +178,7 @@ ht-degree: 100%
    + [Konvertieren eines PDF-Formulars in ein adaptives Formular](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [Konfigurieren eines konvertierten adaptiven Formulars](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Verwenden von XDP-Vorlagen mit Acrobat Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
+   + [Verwenden von Acrobat Sign-Hilfsmethoden](aem-forms-and-adobe-sign/send-documents-signing-using-sign-api.md)
 + Signieren mehrerer Formulare{#sign-multiple-documents}
    + [1 – Einführung](sign-multiple-documents/introduction.md)
    + [2 – Konfigurieren einer Datenquelle](sign-multiple-documents/configure-data-source.md)
