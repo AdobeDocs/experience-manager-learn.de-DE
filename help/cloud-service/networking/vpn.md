@@ -206,64 +206,64 @@ Nachdem das VPN erstellt wurde, können Sie es nun mithilfe der Cloud Manager-AP
 
 1. Aktivieren und konfigurieren Sie die Konfiguration des __virtuellen privaten Netzwerks__ auf jeder AEM as a Cloud Service-Umgebung mithilfe des Cloud Manager-API-Vorgangs [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
-   __HTTP-Anfrage „enableEnvironmentAdvancedNetworkingConfiguration“__
+    __HTTP-Anfrage „enableEnvironmentAdvancedNetworkingConfiguration“__
 
-   ```shell
-   $ curl -X PUT https://cloudmanager.adobe.io/api/program/{programId}/environment/{environmentId}/advancedNetworking \
-       -H 'x-gw-ims-org-id: <ORGANIZATION_ID>' \
-       -H 'x-api-key: <CLIENT_ID>' \
-       -H 'Authorization: Bearer <ACCESS_TOKEN>' \
-       -H 'Content-Type: application/json' \
-       -d @./vpn-configure.json
-   ```
+    ```shell
+    $ curl -X PUT https://cloudmanager.adobe.io/api/program/{programId}/environment/{environmentId}/advancedNetworking \
+        -H 'x-gw-ims-org-id: <ORGANIZATION_ID>' \
+        -H 'x-api-key: <CLIENT_ID>' \
+        -H 'Authorization: Bearer <ACCESS_TOKEN>' \
+        -H 'Content-Type: application/json' \
+        -d @./vpn-configure.json
+    ```
 
-   Definieren Sie die JSON-Parameter in `vpn-configure.json` und stellen Sie sie cURL über `... -d @./vpn-configure.json` zur Verfügung.
+    Definieren Sie die JSON-Parameter in `vpn-configure.json` und stellen Sie sie cURL über `... -d @./vpn-configure.json` zur Verfügung.
 
 [Laden Sie das Beispiel vpn-configure.json herunter](./assets/vpn-configure.json)
 
-   ```json
-   {
-       "nonProxyHosts": [
-           "example.net",
-           "*.example.org"
-       ],
-       "portForwards": [
-           {
-               "name": "mysql.example.com",
-               "portDest": 3306,
-               "portOrig": 30001
-           },
-           {
-               "name": "smtp.sendgrid.com",
-               "portDest": 465,
-               "portOrig": 30002
-           }
-       ]
-   }
-   ```
+    ```json
+    {
+        "nonProxyHosts": [
+            "example.net",
+            "*.example.org"
+        ],
+        "portForwards": [
+            {
+                "name": "mysql.example.com",
+                "portDest": 3306,
+                "portOrig": 30001
+            },
+            {
+                "name": "smtp.sendgrid.com",
+                "portDest": 465,
+                "portOrig": 30002
+            }
+        ]
+    }
+    ```
 
-   `nonProxyHosts` bezeichnet einen Satz von Hosts, für die Port 80 oder 443 über die standardmäßigen freigegebenen IP-Adressbereiche und nicht über die dedizierte Ausgangs-IP-Adresse weitergeleitet werden soll. `nonProxyHosts` kann nützlich sein, da der über gemeinsam genutzte IPs ausgehende Traffic von Adobe automatisch optimiert wird.
+    `nonProxyHosts` bezeichnet einen Satz von Hosts, für die Port 80 oder 443 über die standardmäßigen freigegebenen IP-Adressbereiche und nicht über die dedizierte Ausgangs-IP-Adresse weitergeleitet werden soll. `nonProxyHosts` kann nützlich sein, da der über gemeinsam genutzte IPs ausgehende Traffic von Adobe automatisch optimiert wird.
 
-   Für jede `portForwards`-Zuordnung definiert das erweiterte Netzwerk die folgende Weiterleitungsregel:
+    Für jede `portForwards`-Zuordnung definiert das erweiterte Netzwerk die folgende Weiterleitungsregel:
 
-   | Proxy-Host | Proxy-Port |  | Externer Host | Externer Port |
-   |---------------------------------|----------|----------------|------------------|----------|
-   | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
+    | Proxy-Host | Proxy-Port |  | Externer Host | Externer Port |
+    |---------------------------------|----------|----------------|------------------|----------|
+    | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-   Wenn Ihre AEM-Bereitstellung __nur__ HTTP/HTTPS-Verbindungen zu externen Diensten erfordert, lassen Sie das Array `portForwards` leer, da diese Regeln nur für Nicht-HTTP/HTTPS-Anfragen erforderlich sind.
+    Wenn Ihre AEM-Bereitstellung __nur__ HTTP/HTTPS-Verbindungen zu externen Diensten erfordert, lassen Sie das Array `portForwards` leer, da diese Regeln nur für Nicht-HTTP/HTTPS-Anfragen erforderlich sind.
 
 
 2. Überprüfen Sie für jede Umgebung, ob die VPN-Routing-Regeln wirksam sind, indem Sie den Cloud Manager-API-Vorgang [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) verwenden.
 
-   __HTTP-Anfrage „getEnvironmentAdvancedNetworkingConfiguration“__
+    __HTTP-Anfrage „getEnvironmentAdvancedNetworkingConfiguration“__
 
-   ```shell
-   $ curl -X GET https://cloudmanager.adobe.io/api/program/{programId}/environment/{environmentId}/advancedNetworking \
-       -H 'x-gw-ims-org-id: <ORGANIZATION_ID>' \
-       -H 'x-api-key: <CLIENT_ID>' \
-       -H 'Authorization: Bearer <ACCESS_TOKEN>' \
-       -H 'Content-Type: application/json'
-   ```
+    ```shell
+    $ curl -X GET https://cloudmanager.adobe.io/api/program/{programId}/environment/{environmentId}/advancedNetworking \
+        -H 'x-gw-ims-org-id: <ORGANIZATION_ID>' \
+        -H 'x-api-key: <CLIENT_ID>' \
+        -H 'Authorization: Bearer <ACCESS_TOKEN>' \
+        -H 'Content-Type: application/json'
+    ```
 
 3. Proxy-Konfigurationen für virtuelle private Netzwerke können mit dem Cloud Manager-API-Vorgang [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) aktualisiert werden. Denken Sie daran, dass `enableEnvironmentAdvancedNetworkingConfiguration` ein `PUT`-Vorgang ist, sodass alle Regeln bei jedem Aufruf dieses Vorgangs angegeben werden müssen.
 
