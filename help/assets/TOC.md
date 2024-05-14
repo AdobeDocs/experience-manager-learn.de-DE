@@ -10,7 +10,7 @@ team: TM
 source-git-commit: d0e1513b4e6ea536b40f3dbb69a0f512f7521164
 workflow-type: tm+mt
 source-wordcount: '417'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -49,7 +49,7 @@ ht-degree: 98%
 + Suche und Erkennung{#search-and-discovery}
    + [Suchen](./search-and-discovery/search.md)
    + [Kontextsuche](./search-and-discovery/contextual-search.md)
-   + [Adobe Firefly-Integration](./search-and-discovery/adobe-firefly.md)
+   + [Integration mit Adobe Firefly](./search-and-discovery/adobe-firefly.md)
    + [Sammlungen](./search-and-discovery/collections.md)
    + [Suchoptimierung](./search-and-discovery/search-boost.md)
    + [Nach ähnlichen Bildern suchen](./search-and-discovery/find-similar-images.md)

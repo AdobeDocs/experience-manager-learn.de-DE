@@ -1,5 +1,5 @@
 ---
-title: Übersicht über das Experimentierungs-Framework in Edge Delivery Services
+title: Überblick über das Experimentierungs-Framework in Edge Delivery Services
 description: Erfahren Sie mehr über das Experimentierungs-Framework, mit dem Marketing-Experten testen können, welche Inhaltsvarianten bei der Dokumenterstellung in Edge Delivery Services am effektivsten sind.
 version: Cloud Service
 feature: Authoring
@@ -14,11 +14,11 @@ exl-id: c2de104f-c0fb-4cf2-a1ad-3a711caeb30b
 source-git-commit: caee59e03da7905b1d57b4325e06501d46d073e6
 workflow-type: tm+mt
 source-wordcount: '58'
-ht-degree: 0%
+ht-degree: 27%
 
 ---
 
-# Übersicht über das Experimentierungs-Framework in Edge Delivery Services
+# Überblick über das Experimentierungs-Framework in Edge Delivery Services
 
 {{edge-delivery-services}}
 

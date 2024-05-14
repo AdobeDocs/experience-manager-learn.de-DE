@@ -14,7 +14,7 @@ exl-id: 172a477f-d277-43c1-8e47-68870b02203c
 source-git-commit: caee59e03da7905b1d57b4325e06501d46d073e6
 workflow-type: tm+mt
 source-wordcount: '900'
-ht-degree: 58%
+ht-degree: 65%
 
 ---
 
@@ -755,7 +755,7 @@ Blöcke und automatische Blöcke</a>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="Generieren von Varianten - Verwenden von CSV-Dateizielgruppen">Generieren von Varianten - Verwenden von CSV-Dateizielgruppen</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie mithilfe von CSV-Zielgruppen-Dateien die richtige Zielgruppe für Ihre Inhaltsvarianten auswählen können.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie mithilfe von CSV-Zielgruppendateien die richtige Zielgruppe für Ihre Inhaltsvarianten auswählen können.</p>
             <a href="./how-to/generate-variations/using-csv-file-audiences.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -868,11 +868,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/experimentation-framework.md" title="Übersicht über das Experimentierungs-Framework"
+            <a href="./how-to/experimentation-framework.md" title="Überblick über das Experimentierungs-Framework"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3429061/?format=jpeg"
-                alt="Übersicht über das Experimentierungs-Framework">
+                alt="Überblick über das Experimentierungs-Framework">
             </a>
           </figure>
         </div>
@@ -881,7 +881,7 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/experimentation-framework.md" title="Übersicht über das Experimentierungs-Framework">Übersicht über das Experimentierungs-Framework</a>
+              <a href="./how-to/experimentation-framework.md" title="Überblick über das Experimentierungs-Framework">Überblick über das Experimentierungs-Framework</a>
             </p>
             <p class="is-size-6">Erkunden Sie das Experimentierungs-Framework, mit dem Marketing-Experten testen können, welche Inhaltsvarianten am effektivsten sind.</p>
             <a href="./how-to/experimentation-framework.md" class="spectrum-Button
@@ -900,11 +900,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/setup-experimentation-framework.md" title="Einrichten des Experimentierframework"
+            <a href="./how-to/setup-experimentation-framework.md" title="Einrichten des Experimentierungs-Frameworks"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3429062/?format=jpeg"
-                alt="Einrichten des Experimentierframework">
+                alt="Einrichten des Experimentierungs-Frameworks">
             </a>
           </figure>
         </div>
@@ -913,7 +913,7 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/setup-experimentation-framework.md" title="Einrichten des Experimentierframework">Einrichten des Experimentierframework</a>
+              <a href="./how-to/setup-experimentation-framework.md" title="Einrichten des Experimentierungs-Frameworks">Einrichten des Experimentierungs-Frameworks</a>
             </p>
             <p class="is-size-6">Erfahren Sie, wie Sie das Experimentierungs-Framework in Edge Delivery Services für die Dokumenterstellung einrichten.</p>
             <a href="./how-to/setup-experimentation-framework.md" class="spectrum-Button
