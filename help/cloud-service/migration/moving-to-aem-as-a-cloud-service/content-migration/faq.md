@@ -12,9 +12,9 @@ thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 569
 source-git-commit: 85d516d57d818d23372ab7482d25e33242ef0426
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1884'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -91,11 +91,11 @@ Ja, dies ist möglich, erfordert jedoch eine sorgfältige Planung in Bezug auf F
    + Überprüfen Sie, ob es zulässig ist, alle Assets als Teil eines Migrationssatzes zu migrieren, und migrieren Sie dann die Sites, die diese verwenden, stufenweise.
 + Im aktuellen Status ist die Autoreninstanz aufgrund des Autoren-Aufnahmevorgangs nicht für die Inhaltserstellung verfügbar, obwohl der Inhalt auf der Veröffentlichungsebene weiterhin bereitgestellt werden kann.
    + Dies bedeutet, dass die Inhaltserstellungsaktivitäten eingefroren werden, bis die Aufnahme in der Autoreninstanz abgeschlossen ist.
-+ Benutzer werden nicht mehr migriert, obwohl Gruppen
++ Benutzerinnen und Benutzer werden nicht mehr migriert, Gruppen jedoch schon.
 
-Lesen Sie vor der Planung der Migration die Beschreibung für die Prozesse Auffüllextraktion und Auffüllaufnahme.
+Lesen Sie vor dem Planen der Migration die Beschreibung für die Prozesse der Auffüllextraktion und Auffüllaufnahme.
 
-### F: Sind meine Websites für Endbenutzer verfügbar, obwohl die Aufnahme entweder in die AEMaaCS-Autoren- oder Veröffentlichungsinstanz erfolgt?
+### F: Sind meine Websites für Endbenutzende verfügbar, auch wenn die Aufnahme in die AEMaaCS-Autoren- oder -Veröffentlichungsinstanz erfolgt?
 
 Ja. Der Endbenutzer-Traffic wird nicht durch die Inhaltsmigration unterbrochen. Bei der Autoren-Aufnahme wird jedoch die Inhaltserstellung so lange eingefroren, bis der Aufnahmevorgang abgeschlossen ist.
 
@@ -182,7 +182,7 @@ Wenn sich die Assets/Knoten in der Quellumgebung zahlenmäßig im unteren Bereic
 + Arbeiten Sie weiterhin an der lokalen/AMS-Produktions-Authoring-Instanz.
 + Führen Sie von nun an alle anderen Migrationsnachweiszyklen mit `wipe=true` aus.
    + Beachten Sie, dass bei diesem Vorgang der vollständige Knotenspeicher migriert wird (aber nur geänderte Blobs, nicht ganze Blobs). Die vorherigen Blobs befinden sich im Azure-Blob-Speicher der AEMaaCS-Zielinstanz.
-   + Verwenden Sie diesen Migrationsnachweis zur Messung der Migrationsdauer, zum Testen und zur Validierung aller anderen Funktionen.
+   + Verwenden Sie diesen Migrationsnachweis zur Bemessung der Migrationsdauer, für Tests sowie zur Validierung aller anderen Funktionen.
 + Führen Sie in der Woche vor der Live-Schaltung eine Migration vom Typ „wipe=true“ durch.
    + Verbinden Sie Dynamic Media mit AEMaaCS.
    + Trennen Sie die DM-Konfiguration von der lokalen AEM-Quelle.

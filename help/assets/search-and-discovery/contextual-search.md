@@ -12,9 +12,9 @@ last-substantial-update: 2024-05-08T00:00:00Z
 jira: KT-15377
 exl-id: 34e9186b-890f-4ffe-b158-171c42c563c5
 source-git-commit: bfda0fd14077af10162fe4d06cf2d839620ec971
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '85'
-ht-degree: 47%
+ht-degree: 100%
 
 ---
 
@@ -24,10 +24,10 @@ Erfahren Sie, wie Sie Assets mithilfe der Kontextsuche in Adobe Experience Manag
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428667/?learn=on)
 
-## Kontextsuche ein/aus
+## Ein-/Ausschalten der Kontextsuche
 
-Um die kontextbezogene Suche für alle Benutzer zu aktivieren bzw. zu deaktivieren, können AEM Administratoren dies tun, indem sie zur __Allgemeine Einstellungen__ und das __Kontextsuche__ wechseln Sie zur gewünschten Einstellung.
+Um die Kontextsuche für alle Benutzenden zu aktivieren bzw. zu deaktivieren, können AEM-Admins zu den __allgemeinen Einstellungen__ navigieren und den Schalter __Kontextsuche__ auf die gewünschte Einstellung schalten.
 
-Standardmäßig ist die Kontextsuche für alle Benutzer aktiviert.
+Die Kontextsuche ist standardmäßig für alle Benutzenden aktiviert.
 
-![Kontextsuche aktivieren](./assets/contextual-search/enable-contextual-search.png)
+![Aktivieren der Kontextsuche](./assets/contextual-search/enable-contextual-search.png)

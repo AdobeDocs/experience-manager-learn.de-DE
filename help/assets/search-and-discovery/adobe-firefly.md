@@ -1,6 +1,6 @@
 ---
 title: Suchen und Adobe Firefly
-description: Erfahren Sie, wie AEM Assets, integriert mit Adobe Firefly, leere Suchergebnisse in ein produktives Asset-Generierungs-Erlebnis umwandelt.
+description: Erfahren Sie, wie AEM Assets durch die Integration in Adobe Firefly leere Suchergebnisse in ein produktives Erlebnis der Asset-Generierung umwandelt.
 version: Cloud Service
 topic: Content Management
 feature: Search, Generative AI
@@ -12,19 +12,19 @@ last-substantial-update: 2024-05-09T00:00:00Z
 jira: KT-15486
 exl-id: 4da5eb7e-fd8c-4a27-a824-1fb72c95933e
 source-git-commit: fa2fc9f769da53309dd1c56a2b35804788665bb9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '85'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Suchen und Adobe Firefly
 
-Erfahren Sie, wie Adobe Experience Manager Assets, integriert mit Adobe Firefly, leere Suchergebnisse in ein produktives Asset-Generierungs-Erlebnis umwandelt, sodass Benutzer mühelos Assets finden und direkt in ihrem Workflow hochladen können.
+Erfahren Sie, wie AEM Assets durch die Integration in Adobe Firefly leere Suchergebnisse in ein produktives Erlebnis der Asset-Generierung umwandelt und es Benutzenden damit ermöglicht, Assets mühelos zu finden und direkt in ihren Workflow zu laden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429070/?learn=on)
 
 
 >[!TIP]
 >
-> Der AEM Assets-Benutzer muss der Benutzerberechtigung seiner Adobe-Organisation für Adobe Expreß zugewiesen sein, damit die Funktion &quot;Asset generieren&quot;in der AEM Assets-Suchergebnisoberfläche verfügbar ist.
+> Der Person, die AEM Assets nutzt, muss die Berechtigung ihrer Adobe-Organisation für Adobe Express zugewiesen sein, damit die Funktion „Asset generieren“ in der AEM Assets-Suchergebnisoberfläche verfügbar ist.

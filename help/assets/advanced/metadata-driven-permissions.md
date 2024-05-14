@@ -11,9 +11,9 @@ doc-type: Tutorial
 last-substantial-update: 2024-05-03T00:00:00Z
 exl-id: 57478aa1-c9ab-467c-9de0-54807ae21fb1
 source-git-commit: 98b26eb15c2fe7d1cf73fe028b2db24087c813a5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '738'
-ht-degree: 54%
+ht-degree: 100%
 
 ---
 
@@ -33,11 +33,11 @@ Der Zugriff auf eine AEM as a Cloud Service-Umgebung, die auf die neueste Versio
 
 ## OSGi-Konfiguration {#configure-permissionable-properties}
 
-Um metadatengesteuerte Berechtigungen zu implementieren, muss ein Entwickler eine OSGi-Konfiguration bereitstellen, um as a Cloud Service zu AEM, sodass bestimmte Asset-Metadateneigenschaften metadatengesteuerte Berechtigungen ermöglichen.
+Um metadatengesteuerte Berechtigungen zu implementieren, müssen Entwickelnde eine OSGi-Konfiguration für AEM as a Cloud Service bereitstellen, die zulässt, dass bestimmte Asset-Metadateneigenschaften metadatengesteuerte Berechtigungen ermöglichen.
 
-1. Bestimmen Sie, welche Asset-Metadateneigenschaften für die Zugriffssteuerung verwendet werden. Die Eigenschaftsnamen sind die JCR-Eigenschaftsnamen auf der Asset-Seite `jcr:content/metadata` Ressource. In unserem Fall handelt es sich um eine Eigenschaft namens `status`.
-1. Erstellen einer OSGi-Konfiguration `com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json` in Ihrem AEM Maven-Projekt.
-1. Fügen Sie die folgende JSON-Datei in die erstellte Datei ein:
+1. Bestimmen Sie, welche Asset-Metadateneigenschaften für die Zugriffssteuerung verwendet werden. Die Namen der Eigenschaften sind die Namen der JCR-Eigenschaften auf der Ressource `jcr:content/metadata` des Assets. In unserem Fall handelt es sich um eine Eigenschaft namens `status`.
+1. Erstellen Sie eine OSGi-Konfiguration `com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json` in Ihrem AEM Maven-Projekt.
+1. Fügen Sie folgenden JSON-Inhalt in die erstellte Datei ein:
 
    ```json
    {
@@ -53,37 +53,37 @@ Um metadatengesteuerte Berechtigungen zu implementieren, muss ein Entwickler ein
 
 ## Zurücksetzen der grundlegenden Asset-Berechtigungen
 
-Bevor Sie einschränkungsbasierte Zugriffssteuerungseinträge hinzufügen, sollte ein neuer Eintrag auf oberster Ebene hinzugefügt werden, um zunächst den Lesezugriff für alle Gruppen zu verweigern, die einer Auswertung der Berechtigungen für Assets unterliegen (z. B. „Mitwirkende“ oder Ähnliches):
+Bevor Sie einschränkungsbasierte Zugriffssteuerungseinträge hinzufügen, sollte ein neuer Eintrag auf oberster Ebene hinzugefügt werden, um zunächst den Lesezugriff für alle Gruppen zu verweigern, die einer Auswertung der Berechtigungen für Assets unterliegen (z. B. „Mitwirkende“ oder ähnlich):
 
-1. Navigieren Sie zum __Tools > Sicherheit > Berechtigungen__ Bildschirm
-1. Wählen Sie die __Mitarbeiter__ Gruppe (oder eine andere benutzerspezifische Gruppe, zu der alle Benutzergruppen gehören)
-1. Klicks __ACE hinzufügen__ in der oberen rechten Ecke des Bildschirms
-1. Auswählen `/content/dam` für __Pfad__
-1. Eingabe `jcr:read` für __Berechtigungen__
-1. Auswählen `Deny` für __Berechtigungstyp__
-1. Wählen Sie unter Einschränkungen die Option `rep:ntNames` und eingeben `dam:Asset` als __Beschränkungswert__
+1. Navigieren Sie zum Bildschirm __Tools → Sicherheit → Berechtigungen__.
+1. Wählen Sie die Gruppe __Mitwirkende__ aus (oder eine andere benutzerdefinierte Gruppe, zu der alle Benutzergruppen gehören).
+1. Klicken Sie oben rechts im Bildschirm auf __ACE hinzufügen__.
+1. Wählen Sie `/content/dam` als __Pfad__ aus.
+1. Geben Sie `jcr:read` für __Berechtigungen__ ein.
+1. Wählen Sie `Deny` als __Berechtigungstyp__ aus.
+1. Wählen Sie unter „Einschränkungen“ `rep:ntNames` aus und geben Sie dann `dam:Asset`als __Einschränkungswert__ ein.
 1. Klicken Sie auf __Speichern__.
 
 ![Verweigern des Zugriffs](./assets/metadata-driven-permissions/deny-access.png)
 
-## Zugriff auf Assets über Metadaten gewähren
+## Gewähren von Zugriff auf Assets über Metadaten
 
-Zugriffssteuerungseinträge können nun hinzugefügt werden, um den Benutzergruppen Lesezugriff zu gewähren, basierend auf der [konfigurierte Asset-Metadateneigenschaftswerte](#configure-permissionable-properties).
+Es können jetzt Zugriffssteuerungseinträge hinzugefügt werden, um Benutzergruppen Lesezugriff auf der Grundlage von [konfigurierten Asset-Metadateneigenschaftswerten](#configure-permissionable-properties) zu gewähren.
 
-1. Navigieren Sie zum __Tools > Sicherheit > Berechtigungen__ Bildschirm
-1. Wählen Sie die Benutzergruppen aus, die Zugriff auf die Assets haben sollen
-1. Klicks __ACE hinzufügen__ in der oberen rechten Ecke des Bildschirms
-1. Auswählen `/content/dam` (oder einen Unterordner) für __Pfad__
-1. Eingabe `jcr:read` für __Berechtigungen__
-1. Auswählen `Allow` für __Berechtigungstyp__
-1. under __Einschränkungen__, wählen Sie eine der [konfigurierte Asset-Metadaten-Eigenschaftsnamen in der OSGi-Konfiguration](#configure-permissionable-properties)
-1. Geben Sie den erforderlichen Metadaten-Eigenschaftswert im __Beschränkungswert__ field
-1. Klicken Sie auf __+__ -Symbol, um die Einschränkung zum Zugriffskontrolleintrag hinzuzufügen.
+1. Navigieren Sie zum Bildschirm __Tools → Sicherheit → Berechtigungen__.
+1. Wählen Sie die Benutzergruppen aus, denen Zugriff auf die Assets gewährt werden soll.
+1. Klicken Sie oben rechts im Bildschirm auf __ACE hinzufügen__.
+1. Wählen Sie `/content/dam` (oder einen Unterordner) als __Pfad__ aus.
+1. Geben Sie `jcr:read` für __Berechtigungen__ ein.
+1. Wählen Sie `Allow` als __Berechtigungstyp__ aus.
+1. Wählen Sie unter __Einschränkungen__ einen der [konfigurierten Asset-Metadateneigenschaftsnamen in der OSGi-Konfiguration](#configure-permissionable-properties) aus.
+1. Geben Sie den erforderlichen Metadateneigenschaftswert in das Feld __Einschränkungswert__ ein.
+1. Klicken Sie auf das Symbol __+__. um die Einschränkung zum Zugriffssteuerungseintrag hinzuzufügen.
 1. Klicken Sie auf __Speichern__.
 
 ![Zulassen des Zugriffs](./assets/metadata-driven-permissions/allow-access.png)
 
-## Metadatengesteuerte Berechtigungen sind in Kraft
+## Wirksame metadatengesteuerte Berechtigungen
 
 Beispielordner enthält einige Assets.
 
@@ -95,7 +95,7 @@ Nachdem Sie Berechtigungen konfiguriert und die Asset-Metadateneigenschaften ent
 
 ## Vorteile und Überlegungen
 
-Zu den Vorteilen von metadatengesteuerten Berechtigungen zählen:
+Zu den Vorteilen von metadatengesteuerten Berechtigungen gehören:
 
 - Präzise Kontrolle über den Asset-Zugriff basierend auf bestimmten Attributen.
 - Entkopplung von Richtlinien zur Zugriffssteuerung von der Ordnerstruktur, wodurch eine flexiblere Asset-Organisation möglich ist.
@@ -105,10 +105,10 @@ Zu den Vorteilen von metadatengesteuerten Berechtigungen zählen:
 >
 > Beachten Sie Folgendes:
 > 
-> - Metadateneigenschaften werden anhand der Einschränkungen mit __Zeichenfolgengleichheit__ (`=`) (andere Datentypen oder Operatoren werden noch nicht unterstützt, für größer als (`>`) oder Datumseigenschaften)
+> - Metadateneigenschaften werden anhand der Einschränkungen mit __Zeichenfolgengleichheit__ (`=`) bewertet (andere Datentypen oder Operatoren werden noch nicht unterstützt, z. B. größer als (`>`) oder Datumseigenschaften)
 > - Um mehrere Werte für eine Einschränkungseigenschaft zuzulassen, können dem Zugriffssteuerungseintrag zusätzliche Einschränkungen hinzugefügt werden, indem Sie dieselbe Eigenschaft aus der Dropdown-Liste „Typ auswählen“ auswählen und einen neuen Beschränkungswert eingeben (z B. `status=approved`, `status=wip`) und auf „+“ klicken, um die Einschränkung zum Eintrag hinzuzufügen
 > ![Zulassen von mehreren Werten](./assets/metadata-driven-permissions/allow-multiple-values.png)
-> - __UND-Beschränkungen__ werden über mehrere Einschränkungen in einem einzigen Zugriffskontrolleintrag mit unterschiedlichen Eigenschaftsnamen (z. B. `status=approved`, `brand=Adobe`) wird als AND-Bedingung ausgewertet, d. h. die ausgewählte Benutzergruppe erhält Lesezugriff auf Assets mit `status=approved AND brand=Adobe`
+> - __UND-Einschränken__ werden mittels mehrerer Einschränkungen in einem einzelnen Zugriffssteuerungseintrag mit verschiedenen Eigenschaftsnamen (z. B. `status=approved`, `brand=Adobe`) unterstützt und als UND-Bedingung ausgewertet, d. h. die ausgewählte Benutzergruppe erhält Lesezugriff auf Assets mit `status=approved AND brand=Adobe`
 > ![Zulassen von mehreren Einschränkungen](./assets/metadata-driven-permissions/allow-multiple-restrictions.png)
-> - __ODER-Beschränkungen__ werden unterstützt, indem ein neuer Zugriffskontrolleintrag mit einer Metadaten-Eigenschaftsbeschränkung hinzugefügt wird, um eine ODER-Bedingung für die Einträge zu erstellen, z. B. einen einzelnen Eintrag mit Einschränkungen `status=approved` und einem einzigen Eintrag mit `brand=Adobe` wird bewertet als `status=approved OR brand=Adobe`
+> - __ODER-Einschränkungen__ werden durch Hinzufügen eines neuen Zugriffssteuerungseintrags mit einer Metadaten-Eigenschaftsbeschränkung beschränkt, die eine ODER-Bedingung für die Einträge festgelegt, z. B. wird ein einzelner Eintrag mit Einschränkungen `status=approved` und ein einzelner Eintrag mit `brand=Adobe` als `status=approved OR brand=Adobe` bewertet
 > ![Zulassen von mehreren Einschränkungen](./assets/metadata-driven-permissions/allow-multiple-aces.png)
