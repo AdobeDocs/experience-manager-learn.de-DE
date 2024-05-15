@@ -219,7 +219,7 @@ Nachdem das VPN erstellt wurde, können Sie es nun mithilfe der Cloud Manager-AP
 
    Definieren Sie die JSON-Parameter in `vpn-configure.json` und stellen Sie sie cURL über `... -d @./vpn-configure.json` zur Verfügung.
 
-[Laden Sie das Beispiel vpn-configure.json herunter](./assets/vpn-configure.json)
+   [Laden Sie das Beispiel vpn-configure.json herunter](./assets/vpn-configure.json)
 
    ```json
    {
