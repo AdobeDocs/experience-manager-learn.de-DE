@@ -12,10 +12,10 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
 workflow-type: tm+mt
-source-wordcount: '1352'
-ht-degree: 100%
+source-wordcount: '1458'
+ht-degree: 77%
 
 ---
 
@@ -32,13 +32,14 @@ Die CDN-Protokolle sind im JSON-Format verfügbar, das verschiedene Felder enth�
 |------------------------------------|:-----------------------------------------------------:|
 | HIT | Die angeforderten Daten werden _im CDN-Cache gefunden und erfordern keine Abrufanfrage_ an den AEM-Server. |
 | MISS | Die angefragten Daten werden _nicht im CDN-Cache gefunden_ und müssen vom AEM-Server angefragt werden. |
-| PASS | Die angefragten Daten sind _explizit so eingestellt, dass sie nicht zwischengespeichert werden_ und immer vom AEM-Server abgerufen werden. |
+| PASS | Die angeforderten Daten sind _explizit festgelegt, nicht zwischengespeichert zu werden_ und immer vom AEM-Server abgerufen werden. |
 
 Für dieses Tutorial wird das [AEM WKND-Projekt](https://github.com/adobe/aem-guides-wknd) in der AEM as a Cloud Service-Umgebung bereitgestellt und ein kleiner Leistungstest mit [Apache JMeter](https://jmeter.apache.org/) ausgelöst.
 
 Dieses Tutorial ist so strukturiert, dass Sie den folgenden Prozess durchlaufen:
+
 1. Herunterladen von CDN-Protokollen über Cloud Manager
-1. Analysieren dieser CDN-Protokolle, was mit zwei Ansätzen durchgeführt werden kann: einem lokal installierten Dashboard oder einem Jupyter Notebook mit Remote-Zugriff (für diejenigen mit Adobe Experience Platform-Lizenz)
+1. Zur Analyse dieser CDN-Protokolle können zwei Methoden verwendet werden: ein lokal installiertes Dashboard oder ein remote auf Splunk oder Jupityer-Notebook zugängliches Dashboard (für diejenigen, die Adobe Experience Platform lizenzieren)
 1. Optimieren der CDN-Cache-Konfiguration
 
 ## Herunterladen von CDN-Protokollen
@@ -60,24 +61,27 @@ Wenn die heruntergeladene Protokolldatei von _heute_ ist, lautet die Dateierweit
 
 ## Analysieren von heruntergeladenen CDN-Protokollen
 
-Um Einblicke beispielsweise in das Cache-Trefferverhältnis und die Top-URLs der Cache-Typen „MISS“ und „PASS“ zu erhalten, analysieren Sie die heruntergeladene CDN-Protokolldatei. Diese Erkenntnisse helfen, die [CDN-Cache-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=de) zu optimieren und die Leistung der Site zu verbessern.
+Um Einblicke beispielsweise in das Cache-Trefferverhältnis und die Top-URLs der Cache-Typen „MISS“ und „PASS“ zu erhalten, analysieren Sie die heruntergeladene CDN-Protokolldatei. Diese Erkenntnisse helfen, die [CDN-Cache-Konfiguration](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching) zu optimieren und die Leistung der Site zu verbessern.
 
-Zum Analysieren der CDN-Protokolle stellt dieser Artikel zwei Optionen vor: die [Dashboard-Tools](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool) **Elasticsearch, Logstash und Kibana (ELK)** und [Jupyter Notebook](https://jupyter.org/). Die ELK-Dashboard-Tools können lokal auf Ihrem Laptop installiert werden. Der Zugriff auf die Jupyter Notebook-Tools ist hingegen remote mit einer Lizenz für Adobe Experience Platform [als Teil von Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=de) möglich, ohne zusätzliche Software zu installieren.
+Um die CDN-Protokolle zu analysieren, bietet dieses Tutorial drei Optionen:
 
+1. **Elasticsearch, Logstash und Kibana (ELK)**: Die [ELK-Dashboard-Tools](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) kann lokal installiert werden.
+1. **Splunk**: Die [Splunk-Dashboard-Werkzeuge](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) erfordert Zugriff auf Splunk und [AEMCS-Protokollweiterleitung aktiviert](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) , um die CDN-Protokolle aufzunehmen.
+1. [Jupyter Notebook](https://jupyter.org/): Es kann remote über [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) ohne zusätzliche Software installieren, für Kunden, die Adobe Experience Platform lizenziert haben.
 
 ### Option 1: Verwenden der ELK-Dashboard-Tools
 
 Der [ELK-Stack](https://www.elastic.co/de/elastic-stack) ist eine Reihe von Tools, die eine skalierbare Lösung für die Suche, Analyse und Visualisierung von Daten bieten. Er besteht aus Elasticsearch, Logstash und Kibana.
 
-Um die Schlüsseldetails zu identifizieren, verwenden wir das Dashboard-Tooling-Projekt [AEMCS-CDN-Log-Analysis-ELK-Tool](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool). Dieses Projekt stellt einen Docker-Container des ELK-Stacks und ein vorkonfiguriertes Kibana-Dashboard zur Analyse der CDN-Protokolle bereit.
+Um die Schlüsseldetails zu identifizieren, verwenden wir die [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) Projekt. Dieses Projekt stellt einen Docker-Container des ELK-Stacks und ein vorkonfiguriertes Kibana-Dashboard zur Analyse der CDN-Protokolle bereit.
 
-1. Folgen Sie den Schritten zum [Einrichten des ELK-Docker-Containers](https://github.com/adobe/AEMCS-CDN-Log-Analysis-ELK-Tool#how-to-set-up-the-elk-docker-container) und stellen Sie sicher, dass Sie das Kibana-Dashboard **CDN-Cache-Trefferverhältnis** importieren.
+1. Führen Sie die Schritte aus [Einrichten des ELK-Docker-Containers](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container) und importieren Sie die **CDN-Cache-Trefferverhältnis** Kibana-Dashboard.
 
 1. Gehen Sie wie folgt vor, um das CDN-Cache-Trefferverhältnis und die Top-URLs zu identifizieren:
 
-   1. Kopieren Sie die heruntergeladene(n) CDN-Protokolldatei(en) in den umgebungsspezifischen Ordner.
+   1. Kopieren Sie die heruntergeladenen CDN-Protokolldateien in den umgebungsspezifischen Protokollordner, z. B. `ELK/logs/stage`.
 
-   1. Öffnen Sie das Dashboard **CDN-Cache-Trefferverhältnis**, indem Sie oben links auf das Navigationsmenü klicken und „Analyse“ > „Dashboard“ > „CDN-Cache-Trefferverhältnis“ auswählen.
+   1. Öffnen Sie die **CDN-Cache-Trefferverhältnis** Dashboard durch Klicken auf die obere linke Ecke _Navigationsmenü > Analytics > Dashboard > CDN-Cache-Trefferverhältnis_.
 
       ![CDN-Cache-Trefferverhältnis – Kibana-Dashboard](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
@@ -124,13 +128,24 @@ Gehen Sie wie folgt vor, um die erfassten Protokolle nach Host-Namen zu filtern:
 
    ![Host-Filter – Kibana-Dashboard](assets/cdn-logs-analysis/add-host-filter.png){width="500" zoomable="yes"}
 
-Fügen Sie entsprechend den Analyseanfragen weitere Filter zum Dashboard hinzu.
+Fügen Sie entsprechend den Analyseanforderungen weitere Filter zum Dashboard hinzu.
 
-### Option 2: Verwenden von Jupyter Notebook
+### Option 2: Verwenden der Splunk-Dashboard-Werkzeuge
 
-Wenn Sie keine Software lokal installieren möchten (d. h. die ELK-Dashboard-Tools aus dem vorherigen Abschnitt), haben Sie eine andere Option, für die jedoch eine Lizenz für Adobe Experience Platform erforderlich ist.
+Die [Splunk](https://www.splunk.com/) ist ein beliebtes Tool zur Protokollanalyse, mit dem Protokolle aggregiert, analysiert und Visualisierungen für Überwachungs- und Fehlerbehebungszwecke erstellt werden können.
 
-Das [Jupyter Notebook](https://jupyter.org/) ist eine Open-Source-Web-Anwendung, mit der Sie Dokumente erstellen können, die Code, Text und Visualisierungen enthalten. Sie wird für die Datenumwandlung, Visualisierung und statistische Modellierung verwendet. Der Zugriff ist [als Teil von Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data.html?lang=de) remote möglich.
+Um die Schlüsseldetails zu identifizieren, verwenden wir die [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) Projekt. Dieses Projekt bietet ein Splunk-Dashboard zur Analyse der CDN-Protokolle.
+
+1. Führen Sie die Schritte aus [Splunk-Dashboards für AEMCS CDN-Protokollanalyse](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) und importieren Sie die **CDN-Cache-Trefferverhältnis** Splunk-Dashboard.
+1. Aktualisieren Sie bei Bedarf die _Index, Quelltyp und andere_ -Filterwerte im Splunk-Dashboard.
+
+   ![Splunk-Dashboard](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}
+
+### Option 3: Verwenden von Jupyter Notebook
+
+Für diejenigen, die die Software lieber nicht lokal installieren möchten (d. h. das ELK-Dashboard-Tool aus dem vorherigen Abschnitt), gibt es eine andere Option, für die jedoch eine Lizenz für Adobe Experience Platform erforderlich ist.
+
+Das [Jupyter Notebook](https://jupyter.org/) ist eine Open-Source-Web-Anwendung, mit der Sie Dokumente erstellen können, die Code, Text und Visualisierungen enthalten. Sie wird für die Datenumwandlung, Visualisierung und statistische Modellierung verwendet. Der Zugriff ist [als Teil von Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) remote möglich.
 
 #### Herunterladen der interaktiven Python Notebook-Datei
 
@@ -181,6 +196,6 @@ Sie können das Jupyter Notebook erweitern, um die CDN-Protokolle basierend auf 
 
 Nach der Analyse der CDN-Protokolle können Sie die CDN-Cache-Konfiguration optimieren, um die Site-Performance zu verbessern. Die Best Practice für AEM ist, ein Cache-Trefferverhältnis von 90 % oder höher zu erreichen.
 
-Weitere Informationen finden Sie unter [Optimieren der CDN-Cache-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=de#caching).
+Weitere Informationen finden Sie unter [Optimieren der CDN-Cache-Konfiguration](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching).
 
 Das AEM WKND-Projekt verfügt über eine CDN-Referenzkonfiguration. Weitere Informationen finden Sie unter [CDN-Konfiguration](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L137-L190) in der Datei `wknd.vhost`.
