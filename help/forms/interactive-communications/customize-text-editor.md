@@ -10,9 +10,9 @@ feature: Interactive Communication
 last-substantial-update: 2023-04-19T00:00:00Z
 jira: KT-13126
 exl-id: e551ac8d-0bfc-4c94-b773-02ff9bba202e
-duration: 173
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+duration: 139
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 100%
 
@@ -20,7 +20,7 @@ ht-degree: 100%
 
 # Texteditor anpassen{#customize-text-editor}
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Sie können den Texteditor zum Erstellen von Dokumentfragmenten anpassen, um weitere Schriftarten und Schriftgrade hinzuzufügen. Diese Schriftarten enthalten englische und nicht-englische Schriftarten wie Japanisch.
 

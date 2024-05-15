@@ -10,11 +10,11 @@ jira: KT-4679
 thumbnail: 30603.jpg
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 9320e07f-be5c-42dc-a4e3-aab80089c8f7
-duration: 730
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+duration: 624
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1621'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 87%
 
 Der Dispatcher von Adobe Experience Manager (AEM) ist ein Apache-HTTP-Webservermodul, das eine Sicherheits- und Leistungsschicht zwischen dem CDN und der AEM-Veröffentlichungsebene bildet. Dispatcher ist ein integraler Bestandteil der Gesamtarchitektur von Experience Manager und sollte auch in der lokalen Entwicklungsumgebung vorhanden sein.
 
-Das AEM as a Cloud Service SDK enthält die empfohlene Version der Dispatcher Tools, die die Konfiguration der Validierung und Simulation des Dispatchers lokal erleichtert. Die Dispatcher Tools bestehen aus:
+Das AEM as a Cloud Service SDK enthält die empfohlene Dispatcher-Tool-Version, die die lokale Konfiguration, Validierung und Simulation von Dispatcher vereinfacht. Die Dispatcher-Tools umfassen Folgendes:
 
 + einen Grundsatz von Apache HTTP-Webserver- und Dispatcher-Konfigurationsdateien, zu finden unter `.../dispatcher-sdk-x.x.x/src`
 + ein Konfigurations-Validator-CLI-Tool, zu finden unter `.../dispatcher-sdk-x.x.x/bin/validate`
@@ -47,7 +47,7 @@ Beachten Sie, dass `~` als Abkürzung für das Benutzerverzeichnis verwendet wir
 ## Voraussetzungen
 
 1. Windows-Benutzende müssen Windows 10 Professional (oder eine Version, die Docker unterstützt) verwenden
-1. Installieren [Schnellstart-JAR für Experience Manager-Veröffentlichung](./aem-runtime.md) auf der lokalen Entwicklungsmaschine.
+1. Installieren Sie [Experience Manager Veröffentlichungs-Schnellstart-JAR](./aem-runtime.md) auf dem lokalen Entwicklungsrechner.
 
 + Installieren Sie optional die neueste [AEM-Referenz-Website](https://github.com/adobe/aem-guides-wknd/releases) auf dem lokalen AEM-Veröffentlichungs-Service. Diese Website wird in diesem Tutorial zur Visualisierung eines funktionierenden Dispatchers verwendet.
 
@@ -59,7 +59,7 @@ Das AEM as a Cloud Service-SDK oder AEM SDK enthält die Dispatcher-Tools, die z
 
 Wenn das AEM as a Cloud Service-SDK bereits heruntergeladen wurde, um [die lokale AEM-Laufzeitumgebung einzurichten](./aem-runtime.md), muss es nicht erneut heruntergeladen werden.
 
-1. Melden Sie sich unter [experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1) mit Ihrer Adobe-ID an.
+1. Melden Sie sich unter [experience.adobe.com/#/downloads](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&amp;1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1) mit Ihrer Adobe-ID an
    + Ihre Adobe-Organisation __muss__ für AEM as a Cloud Service bereitgestellt werden, um das AEM as a Cloud Service-SDK herunterladen zu können
 1. Klicken Sie auf die neueste __AEM SDK__-Ergebniszeile zum Herunterladen
 
@@ -71,8 +71,8 @@ Wenn das AEM as a Cloud Service-SDK bereits heruntergeladen wurde, um [die lokal
 
 Die Version der Dispatcher-Tools unterscheidet sich von der des AEM SDK. Stellen Sie sicher, dass die Version der Dispatcher-Tools über die AEM SDK-Version bereitgestellt wird, die der AEM as a Cloud Service-Version entspricht.
 
-1. Entpacken Sie die heruntergeladene Datei `aem-sdk-xxx.zip`.
-1. Entpacken Sie die Dispatcher-Tools in `~/aem-sdk/dispatcher`.
+1. Entpacken Sie die heruntergeladene Datei `aem-sdk-xxx.zip`
+1. Entpacken Sie die Dispatcher-Tools in `~/aem-sdk/dispatcher`
 
 >[!BEGINTABS]
 
@@ -85,7 +85,7 @@ $ ./aem-sdk-dispatcher-tools-x.x.x-unix.sh
 
 >[!TAB Windows]
 
-Entpacken `aem-sdk-dispatcher-tools-x.x.x-windows.zip` in `C:\Users\<My User>\aem-sdk\dispatcher` (Erstellen fehlender Ordner nach Bedarf).
+Entpacken Sie `aem-sdk-dispatcher-tools-x.x.x-windows.zip` in `C:\Users\<My User>\aem-sdk\dispatcher` (erstellen Sie fehlende Ordner nach Bedarf).
 
 >[!TAB Linux®]
 
@@ -105,11 +105,11 @@ Bei allen unten angegebenen Befehlen wird davon ausgegangen, dass das aktuelle A
 ## Grundlegendes zu den Dispatcher-Konfigurationsdateien
 
 >[!TIP]
-Experience Manager-Projekte, die aus dem [AEM Projektarchetyp Maven](https://github.com/adobe/aem-project-archetype) vorausgefüllt sind, sind dieser Satz von Dispatcher-Konfigurationsdateien vorausgefüllt, sodass es nicht erforderlich ist, sie aus dem Ordner Dispatcher Tools src zu kopieren.
+> Experience Manager-Projekte, die mit dem [AEM-Projekt-Maven-Archetyp](https://github.com/adobe/aem-project-archetype) erstellt wurden, sind mit diesem Satz von Dispatcher-Konfigurationsdateien vorausgefüllt, sodass ein Kopieren aus dem Dispatcher-Tools-Quellordner nicht erforderlich ist.
 
 Die Dispatcher-Tools bieten eine Reihe von Apache-HTTP-Webserver- und Dispatcher-Konfigurationsdateien, die das Verhalten für alle Umgebungen, einschließlich der lokalen Entwicklung, definieren.
 
-Diese Dateien sollen in ein Experience Manager-Maven-Projekt in die `dispatcher/src` -Ordner, wenn sie nicht im Experience Manager-Maven-Projekt vorhanden sind.
+Diese Dateien sollten in ein Experience Manager-Maven-Projekt in den Ordner `dispatcher/src` kopiert werden, wenn sie nicht im Experience Manager-Maven-Projekt vorhanden sind.
 
 Eine vollständige Beschreibung der Konfigurationsdateien ist in den entpackten Dispatcher-Tools als `dispatcher-sdk-x.x.x/docs/Config.html` verfügbar.
 
@@ -153,7 +153,7 @@ Der AEM Dispatcher wird lokal mit Docker für die `src`-Dispatcher- und Apache-W
 $ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
 ```
 
-Die `docker_run_hot_reload` ausführbare Datei wird bevorzugt `docker_run` beim erneuten Laden von Konfigurationsdateien, während sie geändert werden, ohne dass sie manuell beendet und neu gestartet werden müssen `docker_run`. Alternativ: `docker_run` kann verwendet werden, es ist jedoch ein manuelles Beenden und Neustart erforderlich `docker_run` wenn Konfigurationsdateien geändert werden.
+Die ausführbare Datei `docker_run_hot_reload` wird gegenüber `docker_run` bevorzugt, da sie Konfigurationsdateien neu lädt, wenn sie geändert werden, ohne dass `docker_run` manuell beendet und neu gestartet werden muss. Alternativ kann `docker_run` verwendet werden, es ist jedoch ein manuelles Beenden und Neustarten von `docker_run` erforderlich, wenn Konfigurationsdateien geändert werden.
 
 >[!TAB Windows]
 
@@ -167,7 +167,7 @@ $ bin\docker_run <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-
 $ ./bin/docker_run_hot_reload.sh <src-folder> <aem-publish-host>:<aem-publish-port> <dispatcher-port>
 ```
 
-Die `docker_run_hot_reload` ausführbare Datei wird bevorzugt `docker_run` beim erneuten Laden von Konfigurationsdateien, während sie geändert werden, ohne dass sie manuell beendet und neu gestartet werden müssen `docker_run`. Alternativ: `docker_run` kann verwendet werden, es ist jedoch ein manuelles Beenden und Neustart erforderlich `docker_run` wenn Konfigurationsdateien geändert werden.
+Die ausführbare Datei `docker_run_hot_reload` wird gegenüber `docker_run` bevorzugt, da sie Konfigurationsdateien neu lädt, wenn sie geändert werden, ohne dass `docker_run` manuell beendet und neu gestartet werden muss. Alternativ kann `docker_run` verwendet werden, es ist jedoch ein manuelles Beenden und Neustarten von `docker_run` erforderlich, wenn Konfigurationsdateien geändert werden.
 
 >[!ENDTABS]
 
@@ -242,7 +242,7 @@ Nützliche Parameter zum Debuggen des Dispatchers sind:
    + Standardwert ist `dev`
 + Gültige Werte: `dev`, `stage` oder `prod`
 
-Ein oder mehrere Parameter können an `docker_run` weitergegeben werden. 
+Ein oder mehrere Parameter können an `docker_run` weitergegeben werden 
 
 >[!BEGINTABS]
 
@@ -300,7 +300,7 @@ Unterdessen wurden die Apache- und Dispatcher-Basiskonfigurationen aus verschied
 
 Wenn Sie nun Ihre projektspezifischen Dispatcher-Konfigurationen für die neueste Version der Dispatcher-Tools validieren, schlagen sie fehl. Um dies zu beheben, müssen die Basiskonfigurationen mithilfe der folgenden Schritte aktualisiert werden:
 
-+ Überprüfen Sie, ob die Validierung für die neueste Version der Dispatcher-Tools fehlschlägt.
++ Überprüfen Sie, ob die Validierung für die neueste Version der Dispatcher-Tools fehlschlägt
 
   ```shell
   $ ./bin/validate.sh ${YOUR-AEM-PROJECT}/dispatcher/src
@@ -312,7 +312,7 @@ Wenn Sie nun Ihre projektspezifischen Dispatcher-Konfigurationen für die neuest
   ** error: immutable file 'conf.d/available_vhosts/default.vhost' has been changed!
   ```
 
-+ Aktualisieren Sie die unveränderlichen Dateien mit dem Skript `update_maven.sh`.
++ Aktualisieren Sie die unveränderlichen Dateien mit dem Skript `update_maven.sh`
 
   ```shell
   $ ./bin/update_maven.sh ${YOUR-AEM-PROJECT}/dispatcher/src
@@ -331,7 +331,7 @@ Wenn Sie nun Ihre projektspezifischen Dispatcher-Konfigurationen für die neuest
 
 + Überprüfen Sie die aktualisierten unveränderlichen Dateien wie `dispatcher_vhost.conf`, `default.vhost` und `default.farm` und nehmen Sie bei Bedarf relevante Änderungen an Ihren benutzerdefinierten Dateien vor, die von diesen Dateien stammen.
 
-+ Die Konfiguration erneut validieren, sollte sie übergeben werden
++ Validieren Sie die Konfiguration erneut, Sie sollte nicht mehr fehlschlagen
 
 ```shell
 $ ./bin/validate.sh ${YOUR-AEM-PROJECT}/dispatcher/src
@@ -345,7 +345,7 @@ no immutable file has been changed - check is SUCCESSFUL
 Phase 3 finished
 ```
 
-+ Übergeben Sie nach der lokalen Überprüfung der Änderungen die aktualisierten Konfigurationsdateien.
++ Übergeben Sie nach der lokalen Überprüfung der Änderungen die aktualisierten Konfigurationsdateien
 
 ## Fehlerbehebung
 
@@ -353,7 +353,7 @@ Phase 3 finished
 
 `host.docker.internal` ist ein Host-Name für den Docker-Container, der zum Host aufgelöst wird. Per docs.docker.com ([macOS](https://docs.docker.com/desktop/networking/), [Windows](https://docs.docker.com/desktop/networking/)):
 
->Ab Docker 18.03 wird empfohlen, eine Verbindung zum speziellen DNS-Namen „host.docker.internal“ herzustellen, der zu der vom Host verwendeten internen IP-Adresse aufgelöst wird.
+> Ab Docker 18.03 wird empfohlen, eine Verbindung zum speziellen DNS-Namen „host.docker.internal“ herzustellen, der zu der vom Host verwendeten internen IP-Adresse aufgelöst wird.
 
 Gehen Sie wie folgt vor, wenn `bin/docker_run src host.docker.internal:4503 8080` zur Meldung __Warten, bis host.docker.internal verfügbar ist__ führt:
 
@@ -365,17 +365,17 @@ Gehen Sie wie folgt vor, wenn `bin/docker_run src host.docker.internal:4503 8080
 >[!TAB macOS]
 
 + Führen Sie `ifconfig` über das Terminal aus und notieren Sie sich die __inet__-Host-IP-Adresse (normalerweise das Gerät __en0__).
-+ Dann ausführen `docker_run` unter Verwendung der Host-IP-Adresse: `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
++ Führen Sie dann `docker_run` unter Verwendung dieser Host-IP-Adresse aus: `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!TAB Windows]
 
-+ Führen Sie über die Eingabeaufforderung `ipconfig` aus und notieren Sie sich die __IPv4-Adresse__ des Host-Computers.
-+ Dann ausführen `docker_run` unter Verwendung dieser IP-Adresse: `$ bin\docker_run src <HOST IP>:4503 8080`
++ Führen Sie über die Eingabeaufforderung `ipconfig` aus und speichern Sie sich die __IPv4-Adresse__ des Host-Computers ab.
++ Führen Sie dann `docker_run` unter Verwendung dieser IP-Adresse aus: `$ bin\docker_run src <HOST IP>:4503 8080`
 
 >[!TAB Linux®]
 
-+ Führen Sie `ifconfig` über das Terminal aus und notieren Sie sich die __inet__-Host-IP-Adresse (normalerweise das Gerät __en0__).
-+ Dann ausführen `docker_run` unter Verwendung der Host-IP-Adresse: `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
++ Führen Sie `ifconfig` über das Terminal aus und speichern Sie sich die __inet__-Host-IP-Adresse (normalerweise das Gerät __en0__) ab.
++ Führen Sie dann `docker_run` unter Verwendung dieser Host-IP-Adresse aus: `$ bin/docker_run_hot_reload.sh src <HOST IP>:4503 8080`
 
 >[!ENDTABS]
 

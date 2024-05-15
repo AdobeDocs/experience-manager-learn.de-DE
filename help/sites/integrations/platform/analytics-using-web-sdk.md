@@ -13,9 +13,9 @@ thumbnail: KT-13328.jpeg
 badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
-duration: 2330
-source-git-commit: adf3fe30474bcfe5fc1a1e2a8a3d49060067726d
-workflow-type: ht
+duration: 2252
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 100%
 
@@ -127,7 +127,7 @@ Im [vorherigen Tutorial](./web-sdk.md) wird eine Tag-Eigenschaft erstellt. Sie e
 
 >[!TIP]
 >
->Der im Video dargestellte Code für Datenelemente und Regelereignisse ist als Referenz verfügbar. **Erweitern Sie das unten stehende Akkordeon-Element**. Wenn Sie jedoch NICHT die Adobe Client-Datenschicht verwenden, müssen Sie den unten stehenden Code ändern. Es gilt aber weiterhin das Konzept der Definition der Datenelemente und ihrer Verwendung in der Regeldefinition. 
+>Der im Video dargestellte Code für Datenelemente und Regelereignisse ist als Referenz verfügbar. **Erweitern Sie das unten stehende Akkordeon-Element**. Wenn Sie jedoch NICHT die Adobe Client-Datenschicht verwenden, müssen Sie den unten stehenden Code ändern. Es gilt aber weiterhin das Konzept der Definition der Datenelemente und ihrer Verwendung in der Regeldefinition.
 
 +++ Code für Datenelemente und Regelereignisse
 

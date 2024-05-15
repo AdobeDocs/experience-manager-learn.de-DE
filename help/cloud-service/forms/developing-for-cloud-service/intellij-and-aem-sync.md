@@ -9,9 +9,9 @@ version: Cloud Service
 topic: Development
 jira: KT-8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
-duration: 119
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+duration: 92
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 100%
 
@@ -74,7 +74,7 @@ Wählen Sie ein beliebiges Projekt innerhalb Ihres aem-banking-application-Proje
 ## Einrichten einer AEM-Autoreninstanz{#set-up-aem-author-instance}
 
 Um eine Cloud-fähige Instanz auf Ihrem lokalen System schnell einzurichten, können die folgenden Schritte ausgeführt werden.
-* [Laden Sie das aktuelle AEM SDK herunter.](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
+* [Laden Sie das aktuelle AEM SDK herunter.](https://experience.adobe.com/#/downloads/content/software-distribution/de/aemcloud.html)
 
 * [Laden Sie die neueste AEM Forms-Erweiterung herunter](https://experience.adobe.com/#/downloads/content/software-distribution/de/aemcloud.html)
 

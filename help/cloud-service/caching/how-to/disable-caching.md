@@ -11,9 +11,9 @@ last-substantial-update: 2023-11-30T00:00:00Z
 jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
-duration: 116
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
-workflow-type: ht
+duration: 100
+source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 100%
 
@@ -67,7 +67,7 @@ Um das CDN-Caching der **CSS-Inhaltstypen** zum Beheben bestimmter Fehler zu dea
 Beachten Sie, dass zum Umgehen des vorhandenen CSS-Caches die CSS-Datei bearbeitet werden muss, um einen neuen Cache-Schlüssel für die CSS-Datei zu generieren.
 
 1. Suchen Sie in Ihrem AEM-Projekt im Verzeichnis `dispatcher/src/conf.d/available_vhosts` nach der gewünschten vhost-Datei.
-1. Aktualisieren Sie die vhost-Datei (z. B. `wknd.vhost`) folgendermaßen:
+1. Aktualisieren Sie die vhost-Datei (z. B. `wknd.vhost`) wie folgt:
 
    ```
    <LocationMatch "^/etc.clientlibs/.*\.(css)$">
