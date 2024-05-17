@@ -1,6 +1,6 @@
 ---
-title: Generieren von Varianten - Verwenden Sie Adobe Firefly, um Bilder in Edge Delivery Services zu erstellen.
-description: Erfahren Sie, wie Sie mit Adobe Firefly Bilder erstellen können, die in den Inhaltsvarianten verwendet werden, um die richtige Zielgruppe in Edge Delivery Services Document Authoring auszuwählen.
+title: Varianten generieren – Verwenden von Adobe Firefly, um Bilder in Edge Delivery Services zu erstellen
+description: Erfahren Sie, wie Sie mit Adobe Firefly Bilder erstellen, die bei der Dokumenterstellung in Edge Delivery Services in Inhaltsvarianten verwendet werden, um die richtige Zielgruppe anzusprechen.
 version: Cloud Service
 feature: Authoring
 topic: Content Management
@@ -14,14 +14,14 @@ exl-id: e6085ece-f265-4a16-98f7-2f8218dab730
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '74'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Generieren von Varianten - Verwenden Sie Adobe Firefly, um Bilder in Edge Delivery Services zu erstellen.
+# Varianten generieren – Verwenden von Adobe Firefly, um Bilder in Edge Delivery Services zu erstellen
 
 {{edge-delivery-services}}
 
-Erfahren Sie, wie Sie mit Adobe Firefly Bilder erstellen können, die in den Inhaltsvarianten verwendet werden, um die richtige Zielgruppe in Edge Delivery Services Document Authoring auszuwählen.
+Erfahren Sie, wie Sie mit Adobe Firefly Bilder erstellen, die bei der Dokumenterstellung in Edge Delivery Services in Inhaltsvarianten verwendet werden, um die richtige Zielgruppe anzusprechen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428794/?learn=on)

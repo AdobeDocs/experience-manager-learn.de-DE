@@ -1,6 +1,6 @@
 ---
-title: Generieren von Varianten - Verwenden von CSV-Dateizielgruppen in Edge Delivery Services
-description: Erfahren Sie, wie Sie die CSV-Datei-Zielgruppen verwenden können, um die richtige Zielgruppe mit den entsprechenden Inhalten in der Edge Delivery Services-Dokumenterstellung auszuwählen.
+title: Varianten generieren – Verwenden von CSV-Zielgruppendateien in Edge Delivery Services
+description: Erfahren Sie, wie Sie die CSV-Zielgruppendateien verwenden können, um bei der Dokumenterstellung in Edge Delivery Services die richtige Zielgruppe mit den entsprechenden Inhalten auszuwählen.
 version: Cloud Service
 feature: Authoring
 topic: Content Management
@@ -14,14 +14,14 @@ exl-id: 13cd9302-bee4-46b7-adb6-5716dc5d3844
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '66'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Generieren von Varianten - Verwenden von CSV-Dateizielgruppen in Edge Delivery Services
+# Varianten generieren – Verwenden von CSV-Zielgruppendateien in Edge Delivery Services
 
 {{edge-delivery-services}}
 
-Erfahren Sie, wie Sie die CSV-Datei-Zielgruppen verwenden können, um die richtige Zielgruppe mit den entsprechenden Inhalten in der Edge Delivery Services-Dokumenterstellung auszuwählen.
+Erfahren Sie, wie Sie die CSV-Zielgruppendateien verwenden können, um bei der Dokumenterstellung in Edge Delivery Services die richtige Zielgruppe mit den entsprechenden Inhalten auszuwählen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428793/?learn=on)

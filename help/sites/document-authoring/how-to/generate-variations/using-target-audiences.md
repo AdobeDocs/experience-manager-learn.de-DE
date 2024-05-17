@@ -1,6 +1,6 @@
 ---
-title: Generieren von Varianten - Verwenden von Adobe Target-Zielgruppen in Edge Delivery Services
-description: Erfahren Sie, wie Sie mit Adobe Target-Zielgruppen die richtige Zielgruppe mit den entsprechenden Inhalten in der Dokumenterstellung in Edge Delivery Services auswählen können.
+title: Varianten generieren – Verwenden von Adobe Target-Zielgruppen in Edge Delivery Services
+description: Erfahren Sie, wie Sie Adobe Target-Zielgruppen verwenden, um bei der Dokumenterstellung mit Edge Delivery Services die richtige Zielgruppe mit den entsprechenden Inhalten anzusprechen.
 version: Cloud Service
 feature: Authoring
 topic: Content Management
@@ -14,14 +14,14 @@ exl-id: 78ccb394-9341-4acf-a157-f0f7d5578205
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '64'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Generieren von Varianten - Verwenden von Adobe Target-Zielgruppen in Edge Delivery Services
+# Varianten generieren – Verwenden von Adobe Target-Zielgruppen in Edge Delivery Services
 
 {{edge-delivery-services}}
 
-Erfahren Sie, wie Sie mit Adobe Target-Zielgruppen die richtige Zielgruppe mit den entsprechenden Inhalten in der Dokumenterstellung in Edge Delivery Services auswählen können.
+Erfahren Sie, wie Sie Adobe Target-Zielgruppen verwenden, um bei der Dokumenterstellung mit Edge Delivery Services die richtige Zielgruppe mit den entsprechenden Inhalten anzusprechen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428792/?learn=on)

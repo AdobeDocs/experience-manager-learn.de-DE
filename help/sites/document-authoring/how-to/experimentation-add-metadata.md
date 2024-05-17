@@ -1,6 +1,6 @@
 ---
 title: Hinzufügen von Metadaten für Experimente in Edge Delivery Services
-description: Erfahren Sie mehr über das Hinzufügen von Metadaten zum Experimentieren in der Edge Delivery Services-Dokumenterstellung.
+description: Erfahren Sie mehr über das Hinzufügen von Metadaten zum Experimentieren bei der Dokumenterstellung in Edge Delivery Services.
 version: Cloud Service
 feature: Authoring
 topic: Content Management
@@ -14,7 +14,7 @@ exl-id: 97067829-65b3-4bee-a225-0c4ed67334f7
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '38'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -22,6 +22,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-Erfahren Sie mehr über das Hinzufügen von Metadaten zum Experimentieren in der Edge Delivery Services-Dokumenterstellung.
+Erfahren Sie mehr über das Hinzufügen von Metadaten zum Experimentieren bei der Dokumenterstellung in Edge Delivery Services.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428796/?learn=on)

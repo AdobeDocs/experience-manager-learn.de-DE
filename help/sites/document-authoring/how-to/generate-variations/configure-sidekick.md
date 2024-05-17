@@ -1,6 +1,6 @@
 ---
-title: Generieren von Varianten - Konfigurieren von Sidekick in Edge Delivery Services
-description: Erfahren Sie, wie Sie den Sidekick für das Generieren von Varianten bei der Dokumenterstellung in Edge Delivery Services konfigurieren.
+title: Varianten generieren – Konfigurieren von Sidekick in Edge Delivery Services
+description: Erfahren Sie, wie Sie Sidekick für die Funktion „Varianten generieren“ bei der Dokumenterstellung in Edge Delivery Services konfigurieren.
 version: Cloud Service
 feature: Authoring
 topic: Content Management
@@ -14,15 +14,15 @@ exl-id: b2790752-a2bc-43d1-9f5d-94d82e1224d0
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '44'
-ht-degree: 63%
+ht-degree: 100%
 
 ---
 
-# Generieren von Varianten - Konfigurieren von Sidekick in Edge Delivery Services
+# Varianten generieren – Konfigurieren von Sidekick in Edge Delivery Services
 
 {{edge-delivery-services}}
 
-Erfahren Sie, wie Sie den Sidekick für das Generieren von Varianten bei der Dokumenterstellung in Edge Delivery Services konfigurieren.
+Erfahren Sie, wie Sie Sidekick für die Funktion „Varianten generieren“ bei der Dokumenterstellung in Edge Delivery Services konfigurieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428306/?learn=on)
 

@@ -1,6 +1,6 @@
 ---
-title: Verwenden der Adobe Sign-API in AEM Forms
-description: Dokumente zum Signieren mit Adobe Sign Helper-Methoden senden
+title: Verwenden des Adobe Sign-API in AEM Forms
+description: Senden von Dokumenten zur Unterschrift mit Hilfsmethoden von Adobe Sign
 feature: Adaptive Forms
 jira: KT-15474
 topic: Development
@@ -13,54 +13,54 @@ duration: 74
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '298'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Verwenden von Adobe Sign-Hilfsmethoden
+# Verwenden von Hilfsmethoden von Adobe Sign
 
-In bestimmten Anwendungsfällen ist es u. U. erforderlich, ein Dokument zur Signatur zu senden, ohne einen AEM Workflow zu verwenden. In solchen Fällen ist es sehr praktisch, die Wrapper-Methoden zu verwenden, die vom in diesem Artikel bereitgestellten Beispielpaket verfügbar gemacht werden.
+In bestimmten Anwendungsfällen ist es möglicherweise erforderlich, ein Dokument zur Signatur zu senden, ohne einen AEM-Workflow zu verwenden. In solchen Fällen ist es sehr praktisch, die Wrapper-Methoden zu verwenden, die im in diesem Artikel bereitgestellten Beispielpaket enthalten sind.
 
-## Bereitstellen des OSGi-Beispielpakets
+## Implementieren des benutzerdefinierten OSGi-Bundles
 
-[Bereitstellen des OSGi-Bundles](assets/AdobeSignHelperMethods.core-1.0.0-SNAPSHOT.jar) über die AEM OSGi Web Console. Geben Sie den API-Integrationsschlüssel und den API-Benutzer mithilfe der OSGi-Konfiguration wie unten gezeigt über den Configuration Manager der AEM OSGi-Web-Konsole an.
+[Implementieren des OSGi-Bundles](assets/AdobeSignHelperMethods.core-1.0.0-SNAPSHOT.jar) über die AEM OSGi-Web-Konsole. Geben Sie den API-Integrationsschlüssel und den API-Benutzernamen mithilfe der OSGi-Konfiguration wie unten angezeigt über den Konfigurations-Manager der AEM OSGi-Web-Konsole an.
 
- Beachten Sie, dass die Variable `AdobeSignHelperMethods` OSGi-Bundle wird nicht als Adobe Experience Manager-Produktcode (AEM) erkannt und wird daher vom Adobe-Support nicht unterstützt.
+ Beachten Sie, dass die `AdobeSignHelperMethods` des OSGi-Bundles nicht als Produkt-Code von Adobe Experience Manager (AEM) erkannt wird und daher nicht vom Adobe-Support unterstützt wird.
 ![Sign-Konfiguration](assets/sign-configuration.png)
 
 
 ## API-Dokumentation
 
-Die folgenden sind über die `AcrobatSignHelperMethods` OSGi-Dienst, der im OSGi-Paket bereitgestellt wird.
+Die folgenden API-Dokumentationen sind über die `AcrobatSignHelperMethods` des OSGi-Dienstes verfügbar, der im OSGi-Paket bereitgestellt wird.
 
 ### getTransientDocumentID
 
 `String getTransientDocumentID(Document documentForSigning) throws IOException`
 
 
-Das Dokument, mit dem eine Vereinbarung oder ein Webformular erstellt wird. Das Dokument wird zuerst vom Absender in Acrobat Sign hochgeladen. Dies wird als _transient_ da sie nur 7 Tage nach dem Hochladen verwendet werden kann. Diese Methoden akzeptieren `com.adobe.aemfd.docmanager.Document` und gibt die vorübergehende Dokument-ID zurück.
+Das Dokument, mit dem eine Vereinbarung oder ein Web-Formular erstellt wird. Das Dokument wird zuerst von der Absenderin bzw. vom Absender in Acrobat Sign hochgeladen. Dies wird als _Übergang_ bezeichnet, da die Option nur 7 Tage nach dem Upload verfügbar ist. Bei diesen Methoden wird `com.adobe.aemfd.docmanager.Document` akzeptiert und die vorübergehende Dokument-ID wird zurückgegeben.
 
 ### getAgreementID
 
 `String getAgreementId(String transientDocumentID, String email) throws ClientProtocolException, IOException`
 
-Senden Sie das Dokument zum Signieren mit der vorübergehenden Dokument-ID zum Signieren an den durch den E-Mail-Parameter identifizierten Benutzer.
+Senden Sie das Dokumentmit der vorübergehenden Dokument-ID zur Unterschrift an die durch den E-Mail-Parameter identifizierte Benutzerin bzw. den Benutzer.
 
 ### getWidgetID
 
 `String getWidgetID(String transientDocumentID)`
 
-Ein Widget ist wie eine wiederverwendbare Vorlage, die Benutzern mehrmals präsentiert und mehrmals signiert werden kann. Verwenden Sie diese Methode, um die Widget-ID mit der vorübergehenden Dokument-ID abzurufen.
+Ein Widget ist wie eine wiederverwendbare Vorlage, die Benutzerinnen und Benutzern mehrmals präsentiert und mehrmals unterschrieben werden kann. Verwenden Sie diese Methode, um die Widget-ID mit der vorübergehenden Dokument-ID abzurufen.
 
 ### getWidgetURL
 
 `String getWidgetURL(String widgetId) throws ClientProtocolException, IOException`
 
-Widget-URL für eine bestimmte Widget-ID abrufen. Diese Widget-URL kann dann den Benutzern zum Signieren des Dokuments angezeigt werden.
+Rufen Sie eine Widget-URL für eine bestimmte Widget-ID ab. Diese Widget-URL kann dann den Benutzenden zur Unterschrift des Dokuments angezeigt werden.
 
-## API verwenden
+## Verwenden des API
 
-Die `AcrobatSignHelperMethods` ist ein OSGi-Dienst, daher muss er mit der @Reference-Anmerkung in Ihrem Java-Code kommentiert werden.
+`AcrobatSignHelperMethods` ist ein OSGi-Dienst, daher muss er mit der Anmerkung @Reference in Ihrem Java-Code kommentiert werden.
 
 ```java
 ...

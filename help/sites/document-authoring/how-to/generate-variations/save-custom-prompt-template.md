@@ -1,6 +1,6 @@
 ---
-title: Varianten generieren - Speichern Sie benutzerdefinierte Eingabeaufforderungsvorlagen in Edge Delivery Services
-description: Erfahren Sie, wie Sie die benutzerdefinierten Eingabeaufforderungsvorlagen zum Generieren von Varianten in der Edge Delivery Services-Dokumenterstellung speichern.
+title: Varianten generieren – Speichern von benutzerdefinierten Prompt-Vorlagen in Edge Delivery Services
+description: Erfahren Sie, wie Sie bei der Dokumenterstellung in Edge Delivery Services die benutzerdefinierten Prompt-Vorlagen für die Funktion „Varianten generieren“ speichern.
 version: Cloud Service
 feature: Authoring
 topic: Content Management
@@ -14,15 +14,15 @@ exl-id: d1a99714-b984-44fa-826c-125d3dc37670
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '54'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Varianten generieren - Speichern Sie benutzerdefinierte Eingabeaufforderungsvorlagen in Edge Delivery Services
+# Varianten generieren – Speichern von benutzerdefinierten Prompt-Vorlagen in Edge Delivery Services
 
 {{edge-delivery-services}}
 
-Erfahren Sie, wie Sie die benutzerdefinierten Eingabeaufforderungsvorlagen zum Generieren von Varianten in der Edge Delivery Services-Dokumenterstellung speichern.
+Erfahren Sie, wie Sie bei der Dokumenterstellung in Edge Delivery Services die benutzerdefinierten Prompt-Vorlagen für die Funktion „Varianten generieren“ speichern.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428317/?learn=on)
 

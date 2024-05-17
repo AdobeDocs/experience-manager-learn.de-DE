@@ -1,6 +1,6 @@
 ---
-title: Generieren von Varianten - Eingabeaufforderungsvorlagen in Edge Delivery Services
-description: Erfahren Sie, wie Sie Eingabeaufforderungsvorlagen für die Generierung von Varianten in der Dokumenterstellung in Edge Delivery Services verwenden.
+title: Varianten generieren – Prompt-Vorlagen in Edge Delivery Services
+description: Erfahren Sie, wie Sie bei der Dokumenterstellung in Edge Delivery Services Prompt-Vorlagen für die Funktion „Varianten generieren“ verwenden.
 version: Cloud Service
 feature: Authoring
 topic: Content Management
@@ -14,15 +14,15 @@ exl-id: b32f342f-653b-4446-983a-0539a8e1eade
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Generieren von Varianten - Eingabeaufforderungsvorlagen in Edge Delivery Services
+# Varianten generieren – Prompt-Vorlagen in Edge Delivery Services
 
 {{edge-delivery-services}}
 
-Erfahren Sie, wie Sie Eingabeaufforderungsvorlagen für die Generierung von Varianten in der Dokumenterstellung in Edge Delivery Services verwenden.
+Erfahren Sie, wie Sie bei der Dokumenterstellung in Edge Delivery Services Prompt-Vorlagen für die Funktion „Varianten generieren“ verwenden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428307/?learn=on)
 
