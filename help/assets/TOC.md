@@ -8,7 +8,7 @@ version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
 source-git-commit: d0e1513b4e6ea536b40f3dbb69a0f512f7521164
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '417'
 ht-degree: 100%
 
@@ -17,7 +17,7 @@ ht-degree: 100%
 
 # AEM Assets-Videos und -Tutorials {#assets}
 
-+ [Übersicht](overview.md)
++ [Überblick](overview.md)
 
 + Konfiguration{#configuring}
    + [Baseline-Ordner](configuring/baseline-folders.md)
@@ -112,7 +112,7 @@ ht-degree: 100%
    + [Asset-Suche](./adobe-asset-link/asset-search.md)
 
 + Content Automation{#content-automation}
-   + [Übersicht](./content-automation/overview.md)
+   + [Überblick](./content-automation/overview.md)
    + [Kreative Vorgänge](./content-automation/creative-operations.md)
    + [Photoshop-Aktionen](./content-automation/photoshop-actions.md)
 
@@ -162,7 +162,7 @@ ht-degree: 100%
       + [Erweiterte Connector-Grundlagen](./workfront/enhanced-connector/basics.md)
       + [Projektordner](./workfront/enhanced-connector/project-folders.md)
       + AEM-Expertenreihe{#aem-experts-series}
-         + [Übersicht](./workfront/enhanced-connector/aem-experts-series/overview.md)
+         + [Überblick](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [Einrichtung](./workfront/enhanced-connector/aem-experts-series/setup.md)
          + [Workfront-Formulare und AEM-Metadaten](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
          + [Tags, projektverknüpfte Ordner und Ordnermetadaten](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)

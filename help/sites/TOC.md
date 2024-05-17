@@ -7,18 +7,18 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
 source-git-commit: caee59e03da7905b1d57b4325e06501d46d073e6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '532'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
 
 # Videos und Tutorials zu AEM Sites {#sites}
 
-+ [Übersicht](overview.md)
++ [Überblick](overview.md)
 + Dokumenterstellung {#document-authoring}
-   + [Übersicht](document-authoring/overview.md)
+   + [Überblick](document-authoring/overview.md)
    + [Setup](document-authoring/set-up.md)
    + [Vorschau und Veröffentlichung](document-authoring/preview-and-publish.md)
    + [Dokumentstruktur](document-authoring/document-structure.md)
@@ -36,14 +36,14 @@ ht-degree: 94%
       + [Alternativtext für Bilder](./document-authoring/how-to/image-alt-text.md)
       + [Verhindern der Indizierung durch Suchmaschinen](./document-authoring/how-to/no-index.md)
       + [Responsive Navigation](document-authoring/how-to/responsive-navigation.md)
-      + Generieren von Varianten{#generate-variations}
+      + Varianten generieren{#generate-variations}
          + [Überblick](./document-authoring/how-to/generate-variations/overview.md)
-         + [Sidekick konfigurieren](./document-authoring/how-to/generate-variations/configure-sidekick.md)
-         + [Eingabevorlagen](./document-authoring/how-to/generate-variations/prompt-templates.md)
-         + [Benutzerdefinierte Eingabevorlagen](./document-authoring/how-to/generate-variations/custom-prompt-templates.md)
-         + [Benutzerdefinierte Eingabevorlagen speichern](./document-authoring/how-to/generate-variations/save-custom-prompt-template.md)
+         + [Konfigurieren von Sidekick](./document-authoring/how-to/generate-variations/configure-sidekick.md)
+         + [Prompt-Vorlagen](./document-authoring/how-to/generate-variations/prompt-templates.md)
+         + [Benutzerdefinierte Prompt-Vorlagen](./document-authoring/how-to/generate-variations/custom-prompt-templates.md)
+         + [Speichern von benutzerdefinierten Prompt-Vorlagen](./document-authoring/how-to/generate-variations/save-custom-prompt-template.md)
          + [Adobe Target-Zielgruppen](./document-authoring/how-to/generate-variations/using-target-audiences.md)
-         + [CSV-Dateizielgruppen](./document-authoring/how-to/generate-variations/using-csv-file-audiences.md)
+         + [CSV-Zielgruppendateien](./document-authoring/how-to/generate-variations/using-csv-file-audiences.md)
          + [Adobe Firefly](./document-authoring/how-to/generate-variations/using-adobe-firefly-for-images.md)
          + [Aktionen](./document-authoring/how-to/generate-variations/actions.md)
          + [Vertrauen und Datenschutz](./document-authoring/how-to/generate-variations/trust-privacy.md)
@@ -83,7 +83,7 @@ ht-degree: 94%
    + [Bausteine](experience-fragments/building-blocks.md)
    + [Inhaltsfragmente im Vergleich zu Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=de){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
-   + [Übersicht](./edge-delivery-services/overview.md)
+   + [Überblick](./edge-delivery-services/overview.md)
    + Entwickeln{#developing}
       + [Voraussetzungen](edge-delivery-services/developing/prerequisites.md)
       + [AEM-Textbaustein](edge-delivery-services/developing/aem-boilerplate.md)
@@ -152,7 +152,7 @@ ht-degree: 94%
       + [Web SDK](integrations/platform/web-sdk.md)
       + [Analytics mit dem Platform Web SDK](integrations/platform/analytics-using-web-sdk.md)
    + Tags in Adobe Experience Platform{#experience-platform-data-collection-tags}
-      + [Übersicht](integrations/experience-platform/data-collection/tags/overview.md)
+      + [Überblick](integrations/experience-platform/data-collection/tags/overview.md)
       + [Erstellen einer Tag-Eigenschaft](integrations/experience-platform/data-collection/tags/create-tag-property.md)
       + [Verbinden von AEM mit Tag-Eigenschaften über IMS](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
       + [Erstellen eines AEM-Tags-Cloud-Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
@@ -165,7 +165,7 @@ ht-degree: 94%
       + [Nachverfolgen angeklickter Komponenten mit Adobe Analytics](integrations/analytics/track-clicked-component.md)
       + [Analysieren von Daten mit Analysis Workspace](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
-      + [Übersicht](integrations/adobe-target/overview.md)
+      + [Überblick](integrations/adobe-target/overview.md)
       + [Hinzufügen der Target-Erweiterung zur Tags-Eigenschaft](integrations/adobe-target/add-target-launch-extension.md)
       + [Laden und Auslösen eines Target-Aufrufs](integrations/adobe-target/load-and-fire-target.md)
       + [Erstellen eines Adobe Target Cloud Service-Kontos](integrations/adobe-target/setup-aem-target-cloud-service.md)
@@ -174,7 +174,7 @@ ht-degree: 94%
       + [Personalisierung mit Visual Experience Composer](integrations/adobe-target/personalization-using-vec.md)
       + [Personalisierung des gesamten Web-Seitenerlebnisses](integrations/adobe-target/personalization-web-page.md)
 + Lernen Sie von Ihren Kolleginnen und Kollegen {#expert-resources}
-   + [Übersicht](expert-resources/learn-from-your-peers-overview.md)
+   + [Überblick](expert-resources/learn-from-your-peers-overview.md)
    + [AEM Sites-Reifegradbewertung](expert-resources/maturity-assessment.md)
    + [Site-Wartung](expert-resources/site-maintenance.md)
    + [Tipps und Tricks von AEM-Champions: Sitzung 1](expert-resources/champion-tips-1.md)

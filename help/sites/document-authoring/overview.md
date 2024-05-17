@@ -12,9 +12,9 @@ duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
 source-git-commit: caee59e03da7905b1d57b4325e06501d46d073e6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '900'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
@@ -580,11 +580,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/configure-sidekick.md" title="Generieren von Varianten - Konfigurieren von Sidekick"
+            <a href="./how-to/generate-variations/configure-sidekick.md" title="Varianten generieren – Konfigurieren von Sidekick"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428306/?format=jpeg"
-                alt="Generieren von Varianten - Konfigurieren von Sidekick">
+                alt="Varianten generieren – Konfigurieren von Sidekick">
             </a>
           </figure>
         </div>
@@ -593,9 +593,9 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/configure-sidekick.md" title="Generieren von Varianten - Konfigurieren von Sidekick">Generieren von Varianten - Konfigurieren von Sidekick</a>
+              <a href="./how-to/generate-variations/configure-sidekick.md" title="Varianten generieren – Konfigurieren von Sidekick">Varianten generieren – Konfigurieren von Sidekick</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie den Sidekick für das Generieren von Varianten bei der Dokumenterstellung in Edge Delivery Services konfigurieren.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie Sidekick für die Funktion „Varianten generieren“ bei der Dokumenterstellung in Edge Delivery Services konfigurieren.</p>
             <a href="./how-to/generate-variations/configure-sidekick.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -612,11 +612,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/prompt-templates.md" title="Generieren von Varianten - Eingabevorlagen"
+            <a href="./how-to/generate-variations/prompt-templates.md" title="Varianten generieren – Prompt-Vorlagen"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428307/?format=jpeg"
-                alt="Generieren von Varianten - Eingabevorlagen">
+                alt="Varianten generieren – Prompt-Vorlagen">
             </a>
           </figure>
         </div>
@@ -625,9 +625,9 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/prompt-templates.md" title="Generieren von Varianten - Eingabevorlagen">Generieren von Varianten - Eingabevorlagen</a>
+              <a href="./how-to/generate-variations/prompt-templates.md" title="Varianten generieren – Prompt-Vorlagen">Varianten generieren – Prompt-Vorlagen</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie Eingabeaufforderungsvorlagen für Generate Variations verwenden.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie die Prompt-Vorlagen für die Funktion „Varianten generieren“ verwenden können.</p>
             <a href="./how-to/generate-variations/prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -644,11 +644,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Varianten generieren - Benutzerdefinierte Eingabeaufforderungsvorlagen"
+            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Varianten generieren – Benutzerdefinierte Prompt-Vorlagen"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428316/?format=jpeg"
-                alt="Varianten generieren - Benutzerdefinierte Eingabeaufforderungsvorlagen">
+                alt="Varianten generieren – Benutzerdefinierte Prompt-Vorlagen">
             </a>
           </figure>
         </div>
@@ -657,9 +657,9 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Varianten generieren - Benutzerdefinierte Eingabeaufforderungsvorlagen">Varianten generieren - Benutzerdefinierte Eingabeaufforderungsvorlagen</a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Varianten generieren – Benutzerdefinierte Prompt-Vorlagen">Varianten generieren – Benutzerdefinierte Prompt-Vorlagen</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie die benutzerdefinierten Eingabeaufforderungsvorlagen für Generate Variations erstellen.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie Prompt-Vorlagen für die Funktion „Varianten generieren“ erstellen können.</p>
             <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -676,11 +676,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Varianten generieren - Speichern Sie benutzerdefinierte Eingabeaufforderungsvorlagen"
+            <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Varianten generieren – Speichern von benutzerdefinierten Prompt-Vorlagen"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428317/?format=jpeg"
-                alt="Varianten generieren - Speichern Sie benutzerdefinierte Eingabeaufforderungsvorlagen">
+                alt="Varianten generieren – Speichern von benutzerdefinierten Prompt-Vorlagen">
             </a>
           </figure>
         </div>
@@ -689,9 +689,9 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Varianten generieren - Speichern Sie benutzerdefinierte Eingabeaufforderungsvorlagen">Varianten generieren - Speichern Sie benutzerdefinierte Eingabeaufforderungsvorlagen</a>
+              <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Varianten generieren – Speichern von benutzerdefinierten Prompt-Vorlagen">Varianten generieren – Speichern von benutzerdefinierten Prompt-Vorlagen</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie die benutzerdefinierten Eingabeaufforderungsvorlagen für Generate Variations speichern.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie die benutzerdefinierten Prompt-Vorlagen für die Funktion „Varianten generieren“ speichern können.</p>
             <a href="./how-to/generate-variations/custom-prompt-templates.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -708,11 +708,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/using-target-audiences.md" title="Generieren von Varianten - Verwenden von Adobe Target-Zielgruppen"
+            <a href="./how-to/generate-variations/using-target-audiences.md" title="Varianten generieren – Verwenden von Adobe Target-Zielgruppen"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428792/?format=jpeg"
-                alt="Generieren von Varianten - Verwenden von Adobe Target-Zielgruppen">
+                alt="Varianten generieren – Verwenden von Adobe Target-Zielgruppen">
             </a>
           </figure>
         </div>
@@ -721,7 +721,7 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/using-target-audiences.md" title="Generieren von Varianten - Verwenden von Adobe Target-Zielgruppen">Generieren von Varianten - Verwenden von Adobe Target-Zielgruppen</a>
+              <a href="./how-to/generate-variations/using-target-audiences.md" title="Varianten generieren – Verwenden von Adobe Target-Zielgruppen">Varianten generieren – Verwenden von Adobe Target-Zielgruppen</a>
             </p>
             <p class="is-size-6">Erfahren Sie, wie Sie mit Adobe Target-Zielgruppen die richtige Zielgruppe für Ihre Inhaltsvarianten auswählen können.</p>
             <a href="./how-to/generate-variations/using-target-audiences.md" class="spectrum-Button
@@ -740,11 +740,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="Generieren von Varianten - Verwenden von CSV-Dateizielgruppen"
+            <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="Varianten generieren – Verwenden von CSV-Zielgruppendateien"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428793/?format=jpeg"
-                alt="Generieren von Varianten - Verwenden von CSV-Dateizielgruppen">
+                alt="Varianten generieren – Verwenden von CSV-Zielgruppendateien">
             </a>
           </figure>
         </div>
@@ -753,7 +753,7 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="Generieren von Varianten - Verwenden von CSV-Dateizielgruppen">Generieren von Varianten - Verwenden von CSV-Dateizielgruppen</a>
+              <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="Varianten generieren – Verwenden von CSV-Zielgruppendateien">Varianten generieren – Verwenden von CSV-Zielgruppendateien</a>
             </p>
             <p class="is-size-6">Erfahren Sie, wie Sie mithilfe von CSV-Zielgruppendateien die richtige Zielgruppe für Ihre Inhaltsvarianten auswählen können.</p>
             <a href="./how-to/generate-variations/using-csv-file-audiences.md" class="spectrum-Button
@@ -772,11 +772,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="Varianten generieren - Adobe Firefly verwenden"
+            <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="Varianten generieren – Verwenden von Adobe Firefly"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428794/?format=jpeg"
-                alt="Varianten generieren - Adobe Firefly verwenden">
+                alt="Varianten generieren – Verwenden von Adobe Firefly">
             </a>
           </figure>
         </div>
@@ -785,9 +785,9 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="Varianten generieren - Adobe Firefly verwenden">Varianten generieren - Adobe Firefly verwenden</a>
+              <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="Varianten generieren – Verwenden von Adobe Firefly">Varianten generieren – Verwenden von Adobe Firefly</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie mit Adobe Firefly Bilder erstellen können, die in den Inhaltsvarianten verwendet werden.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie mit Adobe Firefly Bilder für Ihre Inhaltsvarianten erstellen können.</p>
             <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -804,11 +804,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/actions.md" title="Generieren von Varianten - Aktionen für eine generierte Variante"
+            <a href="./how-to/generate-variations/actions.md" title="Varianten generieren – Aktionen für eine generierte Variante"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3428795/?format=jpeg"
-                alt="Generieren von Varianten - Aktionen für eine generierte Variante">
+                alt="Varianten generieren – Aktionen für eine generierte Variante">
             </a>
           </figure>
         </div>
@@ -817,9 +817,9 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">1 Minute</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/actions.md" title="Generieren von Varianten - Aktionen für eine generierte Variante">Generieren von Varianten - Aktionen für eine generierte Variante</a>
+              <a href="./how-to/generate-variations/actions.md" title="Varianten generieren – Aktionen für eine generierte Variante">Varianten generieren – Aktionen für eine generierte Variante</a>
             </p>
-            <p class="is-size-6">Erkunden Sie die Aktionen, die für eine generierte Inhaltsvariante verwendet werden können.</p>
+            <p class="is-size-6">Erfahren Sie, welche Aktionen für eine generierte Inhaltsvariante verwendet werden können.</p>
             <a href="./how-to/generate-variations/actions.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -836,11 +836,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/generate-variations/trust-privacy.md" title="Generieren von Varianten - Vertrauen und Datenschutz"
+            <a href="./how-to/generate-variations/trust-privacy.md" title="Varianten generieren – Vertrauen und Datenschutz"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3429060/?format=jpeg"
-                alt="Generieren von Varianten - Vertrauen und Datenschutz">
+                alt="Varianten generieren – Vertrauen und Datenschutz">
             </a>
           </figure>
         </div>
@@ -849,9 +849,9 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/generate-variations/trust-privacy.md" title="Generieren von Varianten - Vertrauen und Datenschutz">Generieren von Varianten - Vertrauen und Datenschutz</a>
+              <a href="./how-to/generate-variations/trust-privacy.md" title="Varianten generieren – Vertrauen und Datenschutz">Varianten generieren – Vertrauen und Datenschutz</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Adobe mit Vertrauen und Datenschutz für Generate Variations umgeht.</p>
+            <p class="is-size-6">Erfahren Sie, wie Adobe bei der Funktion „Varianten generieren“ für Vertrauen und Datenschutz sorgt.</p>
             <a href="./how-to/generate-variations/trust-privacy.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -883,7 +883,7 @@ Blöcke und automatische Blöcke</a>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/experimentation-framework.md" title="Überblick über das Experimentierungs-Framework">Überblick über das Experimentierungs-Framework</a>
             </p>
-            <p class="is-size-6">Erkunden Sie das Experimentierungs-Framework, mit dem Marketing-Experten testen können, welche Inhaltsvarianten am effektivsten sind.</p>
+            <p class="is-size-6">Erfahren Sie mehr über das Experimente-Framework, mit dem Marketing-Fachleute testen können, welche Inhaltsvarianten am effektivsten sind.</p>
             <a href="./how-to/experimentation-framework.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -915,7 +915,7 @@ Blöcke und automatische Blöcke</a>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/setup-experimentation-framework.md" title="Einrichten des Experimentierungs-Frameworks">Einrichten des Experimentierungs-Frameworks</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie das Experimentierungs-Framework in Edge Delivery Services für die Dokumenterstellung einrichten.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie bei der Dokumenterstellung in Edge Delivery Services das Experimente-Framework einrichten.</p>
             <a href="./how-to/setup-experimentation-framework.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -947,7 +947,7 @@ Blöcke und automatische Blöcke</a>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/experimentation-add-metadata.md" title="Hinzufügen von Metadaten für Experimente">Hinzufügen von Metadaten für Experimente</a>
             </p>
-            <p class="is-size-6">Erfahren Sie mehr über das Hinzufügen von Metadaten für Experimente</p>
+            <p class="is-size-6">Weitere Informationen zum Hinzufügen von Metadaten für Experimente</p>
             <a href="./how-to/experimentation-add-metadata.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
