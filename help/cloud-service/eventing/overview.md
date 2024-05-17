@@ -12,10 +12,10 @@ last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c0aa4049e846a0f24f8a5f5b014dbaf5bfc8eb2d
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 100%
+source-wordcount: '941'
+ht-degree: 97%
 
 ---
 
@@ -27,7 +27,7 @@ Erfahren Sie mehr über AEM Eventing, was es ist, warum und wann es verwendet wi
 
 >[!IMPORTANT]
 >
->AEM as a Cloud Service Eventing ist nur für registrierte Benutzende im Vorab-Release-Modus verfügbar. Um AEM Eventing in Ihrer AEM as a Cloud Service-Umgebung zu aktivieren, wenden Sie sich an das [AEM-Eventing-Team](mailto:grp-aem-events@adobe.com).
+>AEM as a Cloud Service Eventing ist nur für registrierte Benutzende im Vorab-Release-Modus verfügbar. Wenden Sie sich zur Aktivierung AEM Eventings in Ihrer AEM as a Cloud Service Umgebung an die <a href="mailto:grp-aem-events@adobe.com">AEM-Eventing-Team</a>.
 
 ## Worum es sich handelt
 
@@ -75,7 +75,7 @@ AEM Eventing ist zwar leistungsstark, hat jedoch einige Einschränkungen, die be
 
 ## Aktivierung
 
-AEM Eventing wird pro AEM as a Cloud Service-Umgebung aktiviert und steht Umgebungen nur im Vorab-Release-Modus zur Verfügung. Wenden Sie sich an das [AEM-Eventing-Team](mailto:grp-aem-events@adobe.com), um Ihre AEM-Umgebung mit AEM Eventing zu aktivieren.
+AEM Eventing wird pro AEM as a Cloud Service-Umgebung aktiviert und steht Umgebungen nur im Vorab-Release-Modus zur Verfügung. Wenden Sie sich an den <a href="mailto:grp-aem-events@adobe.com">AEM-Eventing-Team</a> um Ihre AEM Umgebung mit AEM Eventing zu aktivieren.
 
 Falls bereits aktiviert, lesen Sie [Aktivieren der AEM-Ereignisse in Ihrer AEM Cloud Service-Umgebung](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment) für die nächsten Schritte.
 
