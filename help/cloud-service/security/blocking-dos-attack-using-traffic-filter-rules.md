@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
+source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
 workflow-type: tm+mt
 source-wordcount: '1968'
 ht-degree: 91%
@@ -103,7 +103,7 @@ Die Dashboard-Tools **Elasticsearch, Logstash und Kibana (ELK)** von Adobe könn
 
 Kunden, die [Splunk-Protokollweiterleitung aktiviert](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) können neue Dashboards erstellen, um die Traffic-Muster zu analysieren.
 
-Gehen Sie wie folgt vor, um Dashboards in Splunk zu erstellen [Splunk-Dashboards für AEMCS CDN-Protokollanalyse](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md#splunk-dashboards-for-aemcs-cdn-log-analysis) Schritte.
+Gehen Sie wie folgt vor, um Dashboards in Splunk zu erstellen [Splunk-Dashboards für AEMCS CDN-Protokollanalyse](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis) Schritte.
 
 ### Blick auf die Daten
 

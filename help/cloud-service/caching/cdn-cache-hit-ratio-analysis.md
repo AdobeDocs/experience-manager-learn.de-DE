@@ -12,7 +12,7 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: 8051f262f978cdf5aff48cb27e5408a7ee3c0b9d
+source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 75%
@@ -66,7 +66,7 @@ Um Einblicke beispielsweise in das Cache-Trefferverhältnis und die Top-URLs der
 Um die CDN-Protokolle zu analysieren, bietet dieses Tutorial drei Optionen:
 
 1. **Elasticsearch, Logstash und Kibana (ELK)**: Die [ELK-Dashboard-Tools](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) kann lokal installiert werden.
-1. **Splunk**: Die [Splunk-Dashboard-Werkzeuge](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) erfordert Zugriff auf Splunk und [AEMCS-Protokollweiterleitung aktiviert](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) , um die CDN-Protokolle aufzunehmen.
+1. **Splunk**: Die [Splunk-Dashboard-Werkzeuge](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) erfordert Zugriff auf Splunk und [AEMCS-Protokollweiterleitung aktiviert](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) , um die CDN-Protokolle aufzunehmen.
 1. **Jupyter Notebook**: Es kann remote über [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) ohne zusätzliche Software installieren, für Kunden, die Adobe Experience Platform lizenziert haben.
 
 ### Option 1: Verwenden der ELK-Dashboard-Tools
@@ -136,7 +136,7 @@ Die [Splunk](https://www.splunk.com/) ist ein beliebtes Tool zur Protokollanalys
 
 Um die Schlüsseldetails zu identifizieren, verwenden wir die [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) Projekt. Dieses Projekt bietet ein Splunk-Dashboard zur Analyse der CDN-Protokolle.
 
-1. Führen Sie die Schritte aus [Splunk-Dashboards für AEMCS CDN-Protokollanalyse](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) und importieren Sie die **CDN-Cache-Trefferverhältnis** Splunk-Dashboard.
+1. Führen Sie die Schritte aus [Splunk-Dashboards für AEMCS CDN-Protokollanalyse](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) und importieren Sie die **CDN-Cache-Trefferverhältnis** Splunk-Dashboard.
 1. Aktualisieren Sie bei Bedarf die _Index, Quelltyp und andere_ -Filterwerte im Splunk-Dashboard.
 
    ![Splunk-Dashboard](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}
