@@ -11,13 +11,13 @@ duration: 219
 last-substantial-update: 2024-05-17T00:00:00Z
 jira: KT-15505
 thumbnail: KT-15505.jpeg
-source-git-commit: d2c39b57982478badcd12682f082517ee9531d3e
+exl-id: 830c2486-099b-454f-bc07-6bf36e81ac8d
+source-git-commit: 8051f262f978cdf5aff48cb27e5408a7ee3c0b9d
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '442'
 ht-degree: 1%
 
 ---
-
 
 # Werkzeuge zur Analyse von CDN-Protokollen
 
@@ -67,6 +67,4 @@ Erste Schritte können Sie mit dem [Splunk-Dashboards für AEMCS CDN-Protokollan
 
 Die [ELK-Stapel](https://www.elastic.co/de/elastic-stack), bestehend aus Elasticsearch, Logstash und Kibana, ist eine weitere leistungsstarke Option für die Protokollanalyse. Dies ist nützlich für Organisationen, die keinen Zugriff auf Splunk-Setup- oder Log-Weiterleitungsfunktionen haben. Das lokale Einrichten des ELK-Stapels ist unkompliziert. Das Tool stellt die Docker Compose-Datei bereit, um schnell loszulegen. Anschließend können Sie die vordefinierten Dashboards importieren und die CDN-Protokolle erfassen, die mit Adobe Cloud Manager heruntergeladen werden.
 
-Erste Schritte können Sie mit dem [ELK-Docker-Container für AEMCS-CDN-Protokollanalyse](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#elk-docker-container-for-aemcs-cdn-log-analysis)
-
-
+Erste Schritte können Sie mit dem [ELK-Docker-Container für AEMCS-CDN-Protokollanalyse](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#elk-docker-container-for-aemcs-cdn-log-analysis) Handbuch.

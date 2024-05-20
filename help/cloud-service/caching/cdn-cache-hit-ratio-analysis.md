@@ -12,10 +12,10 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
+source-git-commit: 8051f262f978cdf5aff48cb27e5408a7ee3c0b9d
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 77%
+source-wordcount: '1476'
+ht-degree: 75%
 
 ---
 
@@ -52,7 +52,7 @@ Gehen Sie wie folgt vor, um die CDN-Protokolle herunterzuladen:
 
    ![Protokolle herunterladen – Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="500" zoomable="yes"}
 
-1. Wählen Sie im Dialogfeld **Protokolle herunterladen** den **Publish-Service** aus dem Dropdown-Menü und klicken Sie dann auf das Download-Symbol neben der Zeile **CDN**.
+1. Im **Protokolle herunterladen** wählen Sie das **Veröffentlichen** Dienst aus dem Dropdown-Menü und klicken Sie dann auf das Download-Symbol neben dem **CDN** Zeile.
 
    ![CDN-Protokolle – Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="500" zoomable="yes"}
 
@@ -67,7 +67,7 @@ Um die CDN-Protokolle zu analysieren, bietet dieses Tutorial drei Optionen:
 
 1. **Elasticsearch, Logstash und Kibana (ELK)**: Die [ELK-Dashboard-Tools](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) kann lokal installiert werden.
 1. **Splunk**: Die [Splunk-Dashboard-Werkzeuge](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/READEME.md) erfordert Zugriff auf Splunk und [AEMCS-Protokollweiterleitung aktiviert](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) , um die CDN-Protokolle aufzunehmen.
-1. [Jupyter Notebook](https://jupyter.org/): Es kann remote über [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) ohne zusätzliche Software installieren, für Kunden, die Adobe Experience Platform lizenziert haben.
+1. **Jupyter Notebook**: Es kann remote über [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) ohne zusätzliche Software installieren, für Kunden, die Adobe Experience Platform lizenziert haben.
 
 ### Option 1: Verwenden der ELK-Dashboard-Tools
 
@@ -140,6 +140,10 @@ Um die Schlüsseldetails zu identifizieren, verwenden wir die [AEMCS-CDN-Log-Ana
 1. Aktualisieren Sie bei Bedarf die _Index, Quelltyp und andere_ -Filterwerte im Splunk-Dashboard.
 
    ![Splunk-Dashboard](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}
+
+>[!NOTE]
+>
+>Die Benutzeroberfläche und die Diagramme im Splunk-Dashboard unterscheiden sich vom ELK-Dashboard. Die wichtigsten Details sind jedoch ähnlich.
 
 ### Option 3: Verwenden von Jupyter Notebook
 
