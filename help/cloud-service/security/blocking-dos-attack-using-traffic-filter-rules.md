@@ -15,7 +15,7 @@ exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
 source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
 workflow-type: tm+mt
 source-wordcount: '1968'
-ht-degree: 91%
+ht-degree: 99%
 
 ---
 
@@ -34,7 +34,7 @@ Im Folgenden werden die standardmäßigen DDoS-Schutzmaßnahmen für Ihre AEM-We
 - **Blockieren:** Das Adobe-CDN blockiert den Traffic zum Ursprung, wenn er eine von Adobe definierte Rate von einer bestimmten IP-Adresse pro CDN PoP (Point of Presence) überschreitet.
 - **Warnhinweis:** Das Aktionszentrum sendet eine Benachrichtigung zu einer Traffic-Spitze, wenn der Traffic eine bestimmte Rate überschreitet. Dieser Alarm wird ausgelöst, wenn der Traffic zu einem bestimmten CDN PoP eine von _Adobe definierte_ Anfragerate pro IP-Adresse überschreitet. Weitere Informationen finden Sie unter [Warnhinweise zu Traffic-Filterregeln](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts).
 
-Diese integrierten Schutzmechanismen sollten als Grundlage für die Fähigkeit eines Unternehmens betrachtet werden, die Auswirkungen eines DDoS-Angriffs auf die Leistung zu minimieren. Da jede Website unterschiedliche Leistungsmerkmale aufweist und möglicherweise feststellt, dass die Leistung beeinträchtigt wird, bevor die Adobe-definierte Ratenbegrenzung erreicht ist, wird empfohlen, den Standardschutz um _Kundenkonfiguration_.
+Diese integrierten Schutzmechanismen sollten als Grundlage für die Fähigkeit eines Unternehmens betrachtet werden, die Auswirkungen eines DDoS-Angriffs auf die Leistung zu minimieren. Da jede Website unterschiedliche Leistungsmerkmale aufweist und es zu einer Leistungsverschlechterung kommen kann, bevor die von Adobe definierte Ratenbegrenzung erreicht wird, wird empfohlen, die Standardschutzmaßnahmen über die _Kundenkonfiguration_ zu erweitern.
 
 Sehen wir uns einige zusätzliche, empfohlene Maßnahmen an, die kundenseitig ergriffen werden können, um ihre Websites vor DDoS-Angriffen zu schützen:
 
@@ -76,19 +76,19 @@ Adobe sendet eine Traffic-Spitzen-Warnung als [Aktionszentrums-Benachrichtigung]
 
 ## Analysieren von Traffic-Mustern {#analyze-traffic}
 
-Wenn Ihre Site bereits live ist, können Sie die Traffic-Muster mithilfe von CDN-Protokollen und von Adobe bereitgestellten Dashboards analysieren.
+Wenn Ihre Site bereits live ist, können Sie die Traffic-Muster anhand der CDN-Protokolle und der von Adobe bereitgestellten Dashboards analysieren.
 
-- **CDN-Traffic-Dashboard**: bietet Einblicke in den Traffic über CDN und die Anforderungsrate Herkunft, die Fehlerraten von 4xx und 5xx sowie nicht zwischengespeicherte Anfragen. Bietet außerdem maximal CND- und Herkunftsanforderungen pro Sekunde pro Client-IP-Adresse und weitere Einblicke zur Optimierung der CDN-Konfigurationen.
+- **CDN-Traffic-Dashboard**: Bietet Einblicke in den Traffic anhand von CDN- und Ursprungsanfragen, die Fehlerraten von 4xx und 5xx sowie nicht zwischengespeicherte Anfragen. Außerdem erhalten Sie maximal viele CND- und Ursprungsanfragen pro Sekunde pro Client-IP-Adresse und weitere Informationen zur Optimierung der CDN-Konfigurationen.
 
-- **CDN-Cache-Trefferverhältnis**: bietet Einblicke in die Gesamtanzahl der Cache-Treffer und die Gesamtanzahl der Anforderungen nach HIT-, PASS- und MISS-Status. Enthält außerdem Top-URLs für HIT, PASS und MISS.
+- **CDN-Cache-Trefferverhältnis**: Bietet Einblicke in die Gesamtanzahl der Cache-Treffer und die Gesamtanzahl der Anfragen nach HIT-, PASS- und MISS-Status. Enthält außerdem die Top-URLs für HIT, PASS und MISS.
 
-Konfigurieren Sie die Dashboard-Tools mithilfe von _eine der folgenden Optionen_:
+Konfigurieren Sie die Dashboard-Tools mit _einer der folgenden Optionen_:
 
 ### ELK – Konfigurieren des Dashboard-Tools
 
 Die Dashboard-Tools **Elasticsearch, Logstash und Kibana (ELK)** von Adobe können zur Analyse der CDN-Protokolle verwendet werden. Diese Tools enthalten ein Dashboard, das die Traffic-Muster visualisiert, sodass Sie die optimalen Schwellenwerte für Ihre Ratenbegrenzungs-Traffic-Filterregeln leichter bestimmen können.
 
-- Klonen Sie die [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub-Repository.
+- Klonen Sie das GitHub-Repository [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling).
 - Richten Sie das Tool ein, indem Sie die [Schritte zur Einrichtung des ELK-Docker-Containers](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container) befolgen.
 - Importieren Sie im Rahmen der Einrichtung die `traffic-filter-rules-analysis-dashboard.ndjson`-Datei, um die Daten zu visualisieren. Das Dashboard _CDN-Traffic_ enthält Visualisierungen, die die maximale Anzahl von Anfragen pro IP/POP am CDN-Edge und am CDN-Ursprung anzeigen.
 - Laden Sie in [Cloud Manager](https://my.cloudmanager.adobe.com/) von der Karte _Umgebungen_ die CDN-Protokolle des AEMCS Publish-Services herunter.
@@ -101,9 +101,9 @@ Die Dashboard-Tools **Elasticsearch, Logstash und Kibana (ELK)** von Adobe könn
 
 ### Splunk – Konfigurieren der Dashboard-Tools
 
-Kunden, die [Splunk-Protokollweiterleitung aktiviert](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) können neue Dashboards erstellen, um die Traffic-Muster zu analysieren.
+Kundinnen und Kunden, die die [Splunk Log-Weiterleitung](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) aktiviert haben, können neue Dashboards erstellen, um Traffic-Muster zu analysieren. 
 
-Gehen Sie wie folgt vor, um Dashboards in Splunk zu erstellen [Splunk-Dashboards für AEMCS CDN-Protokollanalyse](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis) Schritte.
+Um Dashboards in Splunk zu erstellen, folgen Sie den Schritten [Splunk-Dashboards für AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis).
 
 ### Blick auf die Daten
 

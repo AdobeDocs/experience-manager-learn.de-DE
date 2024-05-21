@@ -15,7 +15,7 @@ duration: 276
 source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 75%
+ht-degree: 97%
 
 ---
 
@@ -32,14 +32,14 @@ Die CDN-Protokolle sind im JSON-Format verfügbar, das verschiedene Felder enth�
 |------------------------------------|:-----------------------------------------------------:|
 | HIT | Die angeforderten Daten werden _im CDN-Cache gefunden und erfordern keine Abrufanfrage_ an den AEM-Server. |
 | MISS | Die angefragten Daten werden _nicht im CDN-Cache gefunden_ und müssen vom AEM-Server angefragt werden. |
-| PASS | Die angeforderten Daten sind _explizit festgelegt, nicht zwischengespeichert zu werden_ und immer vom AEM-Server abgerufen werden. |
+| PASS | Für die angefragten Daten ist _explizit festgelegt, dass sie nicht zwischengespeichert werden_ und immer vom AEM-Server abgerufen werden. |
 
 Für dieses Tutorial wird das [AEM WKND-Projekt](https://github.com/adobe/aem-guides-wknd) in der AEM as a Cloud Service-Umgebung bereitgestellt und ein kleiner Leistungstest mit [Apache JMeter](https://jmeter.apache.org/) ausgelöst.
 
 Dieses Tutorial ist so strukturiert, dass Sie den folgenden Prozess durchlaufen:
 
 1. Herunterladen von CDN-Protokollen über Cloud Manager
-1. Zur Analyse dieser CDN-Protokolle können zwei Methoden verwendet werden: ein lokal installiertes Dashboard oder ein remote auf Splunk oder Jupityer-Notebook zugängliches Dashboard (für diejenigen, die Adobe Experience Platform lizenzieren)
+1. Analyse dieser CDN-Protokolle, die mit zwei Ansätzen durchgeführt werden kann: ein lokal installiertes Dashboard oder ein Splunk oder Jupyter Notebook mit Fernzugriff (für diejenigen, die eine Adobe Experience Platform-Lizenz besitzen)
 1. Optimieren der CDN-Cache-Konfiguration
 
 ## Herunterladen von CDN-Protokollen
@@ -65,23 +65,23 @@ Um Einblicke beispielsweise in das Cache-Trefferverhältnis und die Top-URLs der
 
 Um die CDN-Protokolle zu analysieren, bietet dieses Tutorial drei Optionen:
 
-1. **Elasticsearch, Logstash und Kibana (ELK)**: Die [ELK-Dashboard-Tools](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) kann lokal installiert werden.
-1. **Splunk**: Die [Splunk-Dashboard-Werkzeuge](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) erfordert Zugriff auf Splunk und [AEMCS-Protokollweiterleitung aktiviert](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) , um die CDN-Protokolle aufzunehmen.
-1. **Jupyter Notebook**: Es kann remote über [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) ohne zusätzliche Software installieren, für Kunden, die Adobe Experience Platform lizenziert haben.
+1. **Elasticsearch, Logstash und Kibana (ELK)**: Die [ELK-Dashboard-Tools](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) können lokal installiert werden.
+1. **Splunk**: Die [Splunk-Dashboard-Tools](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) benötigen Zugriff auf Splunk und [eine aktivierte AEMCS-Protokollweiterleitung](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs), um die CDN-Protokolle aufzunehmen.
+1. **Jupyter Notebook**: Für Kundinnen und Kunden, die über eine Lizenz von Adobe Experience Platform verfügen, ist der Fernzugriff als Teil von [Adobe Experience Platform](https://experienceleague.adobe.com/de/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) möglich, ohne dass zusätzliche Software installiert werden muss.
 
 ### Option 1: Verwenden der ELK-Dashboard-Tools
 
 Der [ELK-Stack](https://www.elastic.co/de/elastic-stack) ist eine Reihe von Tools, die eine skalierbare Lösung für die Suche, Analyse und Visualisierung von Daten bieten. Er besteht aus Elasticsearch, Logstash und Kibana.
 
-Um die Schlüsseldetails zu identifizieren, verwenden wir die [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) Projekt. Dieses Projekt stellt einen Docker-Container des ELK-Stacks und ein vorkonfiguriertes Kibana-Dashboard zur Analyse der CDN-Protokolle bereit.
+Um die wichtigsten Details zu ermitteln, verwenden wir das Projekt [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling). Dieses Projekt stellt einen Docker-Container des ELK-Stacks und ein vorkonfiguriertes Kibana-Dashboard zur Analyse der CDN-Protokolle bereit.
 
-1. Führen Sie die Schritte aus [Einrichten des ELK-Docker-Containers](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container) und importieren Sie die **CDN-Cache-Trefferverhältnis** Kibana-Dashboard.
+1. Folgen Sie den Schritten zum [Einrichten des ELK-Docker-Containers](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container) und stellen Sie sicher, dass Sie das Kibana-Dashboard namens **CDN Cache Hit Ratio (CDN-Cache-Trefferverhältnis)** importieren.
 
 1. Gehen Sie wie folgt vor, um das CDN-Cache-Trefferverhältnis und die Top-URLs zu identifizieren:
 
-   1. Kopieren Sie die heruntergeladenen CDN-Protokolldateien in den umgebungsspezifischen Protokollordner, z. B. `ELK/logs/stage`.
+   1. Kopieren Sie die heruntergeladenen CDN-Protokolldateien in den umgebungsspezifischen Protokollordner, z. B. `ELK/logs/stage`.
 
-   1. Öffnen Sie die **CDN-Cache-Trefferverhältnis** Dashboard durch Klicken auf die obere linke Ecke _Navigationsmenü > Analytics > Dashboard > CDN-Cache-Trefferverhältnis_.
+   1. Öffnen Sie das Dashboard **CDN-Cache-Trefferverhältnis**, indem Sie oben links auf das _Navigationsmenü klicken und „Analyse“ > „Dashboard“ > „CDN-Cache-Trefferverhältnis“_ auswählen.
 
       ![CDN-Cache-Trefferverhältnis – Kibana-Dashboard](assets/cdn-logs-analysis/cdn-cache-hit-ratio-dashboard.png){width="500" zoomable="yes"}
 
@@ -128,16 +128,16 @@ Gehen Sie wie folgt vor, um die erfassten Protokolle nach Host-Namen zu filtern:
 
    ![Host-Filter – Kibana-Dashboard](assets/cdn-logs-analysis/add-host-filter.png){width="500" zoomable="yes"}
 
-Fügen Sie entsprechend den Analyseanforderungen weitere Filter zum Dashboard hinzu.
+Fügen Sie entsprechend den Analyseanfragen weitere Filter zum Dashboard hinzu.
 
-### Option 2: Verwenden der Splunk-Dashboard-Werkzeuge
+### Option 2: Verwenden der ELK-Dashboard-Tools
 
-Die [Splunk](https://www.splunk.com/) ist ein beliebtes Tool zur Protokollanalyse, mit dem Protokolle aggregiert, analysiert und Visualisierungen für Überwachungs- und Fehlerbehebungszwecke erstellt werden können.
+[Splunk](https://www.splunk.com/de_de) ist ein beliebtes Tool zur Protokollanalyse, mit dem Sie Protokolle zusammenfassen und analysieren sowie Visualisierungen für die Überwachung und Fehlerbehebung erstellen können.
 
-Um die Schlüsseldetails zu identifizieren, verwenden wir die [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) Projekt. Dieses Projekt bietet ein Splunk-Dashboard zur Analyse der CDN-Protokolle.
+Um die wichtigsten Details zu ermitteln, verwenden wir das Projekt [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling). Dieses Projekt bietet ein Splunk-Dashboard zur Analyse der CDN-Protokolle.
 
-1. Führen Sie die Schritte aus [Splunk-Dashboards für AEMCS CDN-Protokollanalyse](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) und importieren Sie die **CDN-Cache-Trefferverhältnis** Splunk-Dashboard.
-1. Aktualisieren Sie bei Bedarf die _Index, Quelltyp und andere_ -Filterwerte im Splunk-Dashboard.
+1. Folgen Sie den Schritten aus [Splunk-Dashboards für AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) und stellen Sie sicher, dass Sie das Splunk-Dashboard **CDN-Cache-Trefferverhältnis** importieren.
+1. Aktualisieren Sie bei Bedarf den _Index, den Quellentyp und andere_ Filterwerte im Splunk-Dashboard.
 
    ![Splunk-Dashboard](assets/cdn-logs-analysis/splunk-CHR-dashboard.png){width="500" zoomable="yes"}
 
@@ -147,9 +147,9 @@ Um die Schlüsseldetails zu identifizieren, verwenden wir die [AEMCS-CDN-Log-Ana
 
 ### Option 3: Verwenden von Jupyter Notebook
 
-Für diejenigen, die die Software lieber nicht lokal installieren möchten (d. h. das ELK-Dashboard-Tool aus dem vorherigen Abschnitt), gibt es eine andere Option, für die jedoch eine Lizenz für Adobe Experience Platform erforderlich ist.
+Wenn Sie keine Software lokal installieren möchten (d. h. die ELK-Dashboard-Tools aus dem vorherigen Abschnitt), haben Sie eine andere Option, für die jedoch eine Lizenz für Adobe Experience Platform erforderlich ist.
 
-Das [Jupyter Notebook](https://jupyter.org/) ist eine Open-Source-Web-Anwendung, mit der Sie Dokumente erstellen können, die Code, Text und Visualisierungen enthalten. Sie wird für die Datenumwandlung, Visualisierung und statistische Modellierung verwendet. Der Zugriff ist [als Teil von Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) remote möglich.
+Das [Jupyter Notebook](https://jupyter.org/) ist eine Open-Source-Web-Anwendung, mit der Sie Dokumente erstellen können, die Code, Text und Visualisierungen enthalten. Sie wird für die Datenumwandlung, Visualisierung und statistische Modellierung verwendet. Der Zugriff ist [als Teil von Adobe Experience Platform](https://experienceleague.adobe.com/de/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) remote möglich.
 
 #### Herunterladen der interaktiven Python Notebook-Datei
 
