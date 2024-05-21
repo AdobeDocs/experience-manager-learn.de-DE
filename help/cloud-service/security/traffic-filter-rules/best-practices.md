@@ -13,9 +13,9 @@ thumbnail: KT-13148.jpeg
 exl-id: 4a7acdd2-f442-44ee-8560-f9cb64436acf
 duration: 170
 source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '411'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +38,7 @@ Erfahren Sie mehr über empfohlene Best Practices für Traffic-Filterregeln, ein
 
 ## Best Practices für Traffic-Filterregeln
 
-Aktivieren Sie die folgenden Traffic-Filterregeln für Ihr AEM-Projekt. Die gewünschten Werte für `rateLimit` und `clientCountry` -Eigenschaften müssen in Zusammenarbeit mit Ihrem Sicherheitsteam festgelegt werden.
+Aktivieren Sie die folgenden Traffic-Filterregeln für Ihr AEM-Projekt. Allerdings müssen die gewünschten Werte für die Eigenschaften `rateLimit` und `clientCountry` zusammen mit Ihrem Sicherheits-Team festgelegt werden.
 
 ```yaml
 kind: CDN
@@ -91,9 +91,9 @@ data:
 
 ## Best Practices für WAF-Regeln
 
-Sobald die WAF lizenziert und für Ihr Programm aktiviert ist, erscheinen WAF-Flags für Traffic-Übereinstimmungen in Diagrammen und Anfrageprotokollen, auch wenn Sie sie nicht in einer Regel deklariert haben. Sie kennen also immer potenziell neuen böswilligen Traffic und können bei Bedarf Regeln erstellen. Sehen Sie sich WAF-Flags an, die nicht in den deklarierten Regeln enthalten sind, und erwägen Sie, sie zu deklarieren.
+Sobald die WAF lizenziert und für Ihr Programm aktiviert ist, erscheinen WAF-Flags für Traffic-Übereinstimmungen in Diagrammen und Anfrageprotokollen, auch wenn Sie sie nicht in einer Regel deklariert haben. Dies bedeutet, dass Sie immer über potenziell neuen schädlichen Traffic informiert sind und bei Bedarf Regeln erstellen können. Sehen Sie sich WAF-Flags an, die nicht in den deklarierten Regeln enthalten sind, und erwägen Sie, sie zu deklarieren.
 
-Beachten Sie die folgenden WAF-Regeln für Ihr AEM-Projekt. Die gewünschten Werte für `action` und `wafFlags` -Eigenschaft muss in Zusammenarbeit mit Ihrem Sicherheitsteam festgelegt werden.
+Beachten Sie die folgenden WAF-Regeln für Ihr AEM-Projekt. Allerdings müssen die gewünschten Werte für die Eigenschaften `action` und `wafFlags` zusammen mit Ihrem Sicherheits-Team festgelegt werden.
 
 ```yaml
 kind: CDN

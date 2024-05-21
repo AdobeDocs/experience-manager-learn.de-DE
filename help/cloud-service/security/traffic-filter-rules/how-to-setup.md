@@ -13,9 +13,9 @@ thumbnail: KT-13148.jpeg
 exl-id: b67bf642-3341-48d0-8ea9-5f262febf414
 duration: 292
 source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '575'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -63,7 +63,7 @@ Ein Beispiel für die Datei `cdn.yaml` im WKND Sites-Projekt von AEM Guides:
 
 ### Bereitstellen der Regeln über Cloud Manager {#deploy-rules-through-cloud-manager}
 
-Gehen Sie wie folgt vor, um die Regeln bereitzustellen:
+Gehen Sie zur Bereitstellung der Regeln wie folgt vor:
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
 
@@ -95,11 +95,11 @@ Gehen Sie wie folgt vor, um die Regeln bereitzustellen:
 
 ### Testen von Regeln durch Traffic-Generierung
 
-Zum Testen von Regeln stehen verschiedene Tools von Drittanbietern zur Verfügung und unter Umständen hat Ihre Organisation ein bevorzugtes Tool. Verwenden wir für den Demozweck die folgenden Tools:
+Zum Testen von Regeln stehen verschiedene Tools von Drittanbietern zur Verfügung und unter Umständen hat Ihre Organisation ein bevorzugtes Tool. Zu Demonstrationszwecken verwenden wir die folgenden Tools:
 
 - [Curl](https://curl.se/) für grundlegende Tests wie das Aufrufen einer URL und das Überprüfen des Antwort-Codes.
 
-- [Vegeta](https://github.com/tsenart/vegeta) zur Durchführung von Denial of Service (DOS). Befolgen Sie die Installationsanweisungen aus dem Abschnitt [Vegeta GitHub](https://github.com/tsenart/vegeta#install).
+- [Vegeta](https://github.com/tsenart/vegeta) zur Durchführung von Denial of Service (DOS). Befolgen Sie die Installationsanweisungen aus dem [Vegeta-GitHub](https://github.com/tsenart/vegeta#install).
 
 - [Nikto](https://github.com/sullo/nikto/wiki), um potenzielle Probleme und Sicherheitslücken wie XSS, SQL-Injektion und mehr zu finden. Befolgen Sie die Installationsanweisungen aus dem [Nikto-GitHub](https://github.com/sullo/nikto).
 
@@ -119,11 +119,11 @@ Zum Testen von Regeln stehen verschiedene Tools von Drittanbietern zur Verfügun
 
 ### Analyseren von Ergebnissen mithilfe der Dashboard-Tools
 
-Nach dem Erstellen, Bereitstellen und Testen der Regeln können Sie die Ergebnisse analysieren mithilfe von **CDN** Protokolle und **AEMCS-CDN-Log-Analysis-Tooling**. Die Tools bieten eine Reihe von Dashboards, um die Ergebnisse für Splunk- und ELK-Stapel (Elasticsearch, Logstash und Kibana) zu visualisieren.
+Nach dem Erstellen, Bereitstellen und Testen der Regeln können Sie die Ergebnisse mit **CDN**-Protokollen und **AEMCS-CDN-Log-Analysis-Tooling** analysieren. Die Tools bieten eine Reihe von Dashboards, um die Ergebnisse für Splunk- und ELK-Stacks (Elasticsearch, Logstash und Kibana) zu visualisieren.
 
-Die Werkzeuge können aus der [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) GitHub-Repository. Folgen Sie dann den Anweisungen zum Installieren und Laden der **CDN-Traffic-Dashboard** und **WAF-Dashboard** Dashboards für Ihr bevorzugtes Beobachtbarkeits-Tool.
+Das Tool kann aus dem GitHub-Repository [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling) geklont werden. Folgen Sie dann den Anweisungen, um die Dashboards **CDN-Traffic-Dashboard** und **WAF-Dashboard** für Ihr bevorzugtes Beobachtungs-Tool zu installieren und zu laden.
 
-Verwenden wir in diesem Tutorial den ELK-Stapel. Befolgen Sie die [ELK-Docker-Container für AEMCS-CDN-Protokollanalyse](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) Anweisungen zum Einrichten des ELK-Stapels.
+In diesem Tutorial verwenden wir den ELK-Stack. Zur Einrichtung des ELK-Stacks folgen Sie den Anweisungen unter [ELK-Docker-Container für AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md).
 
 - Nach dem Laden des Beispiel-Dashboards sollte Ihre Elastic-Dashboard-Tool-Seite wie folgt aussehen:
 
