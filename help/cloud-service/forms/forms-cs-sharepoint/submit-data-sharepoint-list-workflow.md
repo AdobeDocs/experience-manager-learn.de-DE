@@ -11,9 +11,9 @@ jira: KT-15126
 exl-id: b369ed05-ba25-4b0e-aa3b-e7fc1621067d
 duration: 52
 source-git-commit: e8e51fadaa824d615524a8c4c41aefb656d0391d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '290'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -39,9 +39,9 @@ In diesem Artikel wird davon ausgegangen, dass Sie [das adaptive Formular erfolg
 * Konfigurieren Sie den Schritt „Formulardatenmodelldienst aufrufen“, um das im vorherigen Schritt erstellte Formulardatenmodell zu verwenden.
 * ![Verknüpfen des Formulardatenmodells](assets/fdm-insert-1.png)
 
-## Adaptives Formular basierend auf Kernkomponenten
+## Auf Kernkomponenten basierendes adaptives Formular
 
-Die übermittelten Daten haben das folgende Format. Wir müssen das ContactUS-Objekt mithilfe der Punktnotation im Workflow-Schritt Formulardatenmodelldienst aufrufen extrahieren, wie im Screenshot gezeigt
+Die übermittelten Daten haben das folgende Format. Wir müssen das Objekt „ContactUS“ mithilfe der Punktnotation im Workflow-Schritt „Formulardatenmodelldienst aufrufen“ extrahieren, wie im Screenshot gezeigt.
 
 ```json
 {
@@ -58,9 +58,9 @@ Die übermittelten Daten haben das folgende Format. Wir müssen das ContactUS-Ob
 * ![Zuordnen von Eingabeparametern](assets/fdm-insert-2.png)
 
 
-## Adaptives Formular basierend auf Foundation-Komponenten
+## Auf Foundation-Komponenten basierendes adaptives Formular
 
-Die übermittelten Daten haben das folgende Format. Extrahieren Sie das JSON-Objekt ContactUS mithilfe der Punktnotation im Workflow-Schritt Formulardatenmodelldienst aufrufen .
+Die übermittelten Daten haben das folgende Format. Extrahieren Sie das JSON-Objekt „ContactUS“ mithilfe der Punktnotation im Workflow-Schritt „Formulardatenmodelldienst aufrufen“.
 
 ```json
 {

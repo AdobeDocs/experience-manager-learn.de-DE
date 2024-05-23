@@ -13,9 +13,9 @@ thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
 source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1476'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -52,7 +52,7 @@ Gehen Sie wie folgt vor, um die CDN-Protokolle herunterzuladen:
 
    ![Protokolle herunterladen – Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="500" zoomable="yes"}
 
-1. Im **Protokolle herunterladen** wählen Sie das **Veröffentlichen** Dienst aus dem Dropdown-Menü und klicken Sie dann auf das Download-Symbol neben dem **CDN** Zeile.
+1. Wählen Sie im Dialogfeld **Protokolle herunterladen** den **Publish-Service** aus dem Dropdown-Menü aus und klicken Sie dann neben der Zeile **CDN** auf das Download-Symbol.
 
    ![CDN-Protokolle – Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="500" zoomable="yes"}
 
@@ -71,7 +71,7 @@ Um die CDN-Protokolle zu analysieren, bietet dieses Tutorial drei Optionen:
 
 ### Option 1: Verwenden der ELK-Dashboard-Tools
 
-Der [ELK-Stack](https://www.elastic.co/de/elastic-stack) ist eine Reihe von Tools, die eine skalierbare Lösung für die Suche, Analyse und Visualisierung von Daten bieten. Er besteht aus Elasticsearch, Logstash und Kibana.
+Der [ELK-Stack](https://www.elastic.co/elastic-stack) ist eine Reihe von Tools, die eine skalierbare Lösung für die Suche, Analyse und Visualisierung von Daten bieten. Er besteht aus Elasticsearch, Logstash und Kibana.
 
 Um die wichtigsten Details zu ermitteln, verwenden wir das Projekt [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling). Dieses Projekt stellt einen Docker-Container des ELK-Stacks und ein vorkonfiguriertes Kibana-Dashboard zur Analyse der CDN-Protokolle bereit.
 
