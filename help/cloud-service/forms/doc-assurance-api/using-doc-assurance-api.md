@@ -1,6 +1,6 @@
 ---
-title: Verwenden der DocAssurance-API
-description: Beispielcode zum Aufrufen der DocAssurance-API mithilfe von Apache HTTP Components in Java
+title: Verwenden des DocAssurance-API
+description: Beispiel-Code zum Aufrufen des DocAssurance-API mithilfe von Apache-HTTP-Komponenten in Java
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -9,30 +9,30 @@ feature: Document Services
 topic: Development
 jira: KT-15508
 source-git-commit: 97fbe450823c6122a25dc46c851296094894683e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '270'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Verwenden der DocAssurance-API
+# Verwenden des DocAssurance-API
 
-Die [DocAssurance-Dienst](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/docassurance/#tag/DocAssurance) bietet die Möglichkeit, verschiedene digitale Signatur- oder Verschlüsselungsvorgänge mit PDF-Dokumenten durchzuführen, z. B. Signatur, Zertifizierung, Hinzufügung von Signaturfeldern, Verschlüsselung, Entschlüsselung usw.
-Dieser Artikel enthält Java-Code-Snippets, die Ihnen die ersten Schritte mit der API erleichtern. Das Code-Snippet verwendet das Zugriffstoken. [In diesem Artikel werden die Schritte erläutert, die zum Generieren des Zugriffstokens erforderlich sind](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/doc-gen-formscs/introduction)
+Der [DocAssurance-Dienst](https://developer.adobe.com/experience-manager-forms-cloud-service-developer-reference/api/docassurance/#tag/DocAssurance) bietet die Möglichkeit, verschiedene digitale Signatur- oder Verschlüsselungsvorgänge mit PDF-Dokumenten durchzuführen, z. B. Signieren, Zertifizieren, Hinzufügen von Signaturfeldern, Verschlüsseln, Entschlüsseln usw.
+Dieser Artikel bietet Ihnen Java-Code-Ausschnitte, die Ihnen den Einstieg in die Verwendung des API erleichtern. Das Codesnippet verwendet ein Zugriffs-Token. [In diesem Artikel werden die zum Generieren eines Zugriffs-Tokens erforderlichen Schritte erläutert](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/forms/doc-gen-formscs/introduction)
 
 
-<span class="preview">Diese Funktion ist im Rahmen des Programms für frühe Anwender verfügbar. Sie können von Ihrer offiziellen E-Mail-ID aus unter aem-forms-ea@adobe.com schreiben, um dem frühen Adopter-Programm beizutreten und Zugriff auf diese Funktion anzufordern</span>
+<span class="preview">Diese Funktion ist im Rahmen des Early-Adopter-Programms verfügbar. Sie können von Ihrer offiziellen E-Mail-Adresse aus an aem-forms-ea@adobe.com schreiben, um dem Early-Adopter-Programm beizutreten und den Zugriff auf diese Funktion zu beantragen. </span>
 
 
 ## Voraussetzungen
 
-* Erlebnis mit AEM Forms Cloud Service
-* Erlebnis bei der Verwendung von [Apache HTTP-Komponenten](https://hc.apache.org/httpcomponents-client-4.5.x/)
-* Zugriff auf die Cloud Service-Umgebung von AEM Forms
+* Erfahrung mit AEM Forms Cloud Service
+* Erfahrung im Umgang mit [Apache-HTTP-Komponenten](https://hc.apache.org/httpcomponents-client-4.5.x/)
+* Zugriff auf die AEM Forms Cloud Service-Umgebung
 
-## Inspect Document
+## Inspizieren eines Dokuments
 
-Verwenden Sie die Überprüfungs-API, um den Sicherheitstyp für ein bestimmtes PDF-Dokument abzurufen. Das folgende Code-Snippet soll Ihnen bei den ersten Schritten helfen.
+Verwenden Sie die Inspizierungs-API, um den Sicherheitstyp eines bestimmten PDF-Dokuments abzurufen. Das folgende Codesnippet soll Ihnen den Einstieg erleichtern.
 
 ```java
 ...
@@ -63,9 +63,9 @@ catch (Exception e)
 ```
 
 
-## Dokument verschlüsseln
+## Verschlüsseln eines Dokuments
 
-Verwenden Sie die Verschlüsselungs-API, um PDF-Dokumente mit einem Kennwort zu verschlüsseln. Das folgende Codebeispiel verschlüsselt eine bestimmte PDF.
+Verwenden Sie das Verschlüsselungs-API, um PDF-Dokumente mit einem Kennwort zu verschlüsseln. Das folgende Beispiel-Codesnippet verschlüsselt eine bestimmte PDF-Datei.
 
 ```java
 ...
@@ -100,9 +100,9 @@ catch (Exception e)
 ...
 ```
 
-## Signaturfeld zum PDF hinzufügen
+## Hinzufügen eines Signaturfeldes zu einer PDF-Datei
 
-Verwenden Sie die Signaturfeld-API, um der bereitgestellten PDF eine Signatur hinzuzufügen. Im folgenden Codebeispiel wird ein Signaturfeld namens SignHere auf Seite 4 des Dokuments hinzugefügt
+Verwenden Sie die Signaturfeld-API, um der bereitgestellten PDF-Datei eine Signatur hinzuzufügen. Im folgenden Beispiel-Codesnippet wird ein Signaturfeld namens „SignHere“ auf Seite 4 des Dokuments hinzugefügt
 
 ```java
 ...
@@ -118,9 +118,9 @@ builder.addTextBody("rectangle", rectangle, ContentType.APPLICATION_JSON);
 ```
 
 
-## Verschlüsselung entfernen
+## Entfernen der Verschlüsselung
 
-Verwenden Sie den PUT-Vorgang auf der Verschlüsselungs-API, um die Verschlüsselung von der bereitgestellten PDF zu entfernen. Das folgende Java-Codefragment sollte Ihnen bei den ersten Schritten helfen.
+Verwenden Sie den PUT-Vorgang auf der Verschlüsselungs-API, um die Verschlüsselung von der bereitgestellten PDF zu entfernen. Das folgende Java-Codesnippet sollte Ihnen bei den ersten Schritten helfen.
 
 ```java
 ...
@@ -157,4 +157,4 @@ if (response.getStatusLine().getStatusCode() == 200) {
 
 ### Postman-Sammlung
 
-Eine Postman-Sammlung der API kann [von hier heruntergeladen zu Testzwecken](assets/DocAssuranceAPI.postman_collection.json). Sie können die API mit der Standardauthentifizierung oder dem Träger-Token-Typ der Authentifizierung aufrufen.
+Eine Postman-Sammlung des API kann [zu Testzwecken von hier heruntergeladen werden](assets/DocAssuranceAPI.postman_collection.json). Sie können das API mit der Standardauthentifizierung oder dem Bearer-Token-Typ der Authentifizierung aufrufen.
