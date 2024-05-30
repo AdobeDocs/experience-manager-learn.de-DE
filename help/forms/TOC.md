@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 81026b569ae0dc9976f714715682448a41d9f8bc
-workflow-type: ht
-source-wordcount: '2064'
-ht-degree: 100%
+source-git-commit: e20d9f80cc7e1c6f5f6c81233d9a5178551e2fa2
+workflow-type: tm+mt
+source-wordcount: '2069'
+ht-degree: 99%
 
 ---
 
@@ -59,6 +59,7 @@ ht-degree: 100%
    + [Installieren von 32-Bit-Paketen unter Linux](adaptive-forms/installing-aem-form-on-linux.md)
    + [Vorbefüllungsdienst in adaptiven Formularen](adaptive-forms/prefill-service-adaptive-forms-article-use.md)
    + [Adaptives Formular mithilfe von Abfrageparametern ausfüllen](adaptive-forms/prepopulating-adaptive-form-using-query-parameters.md)
+   + [QR-Code in AEM Forms](adaptive-forms/qr-code-aem-forms.md)
    + [Benutzerdefiniertes Senden in adaptiven Formularen](adaptive-forms/custom-submit-aem-forms-article.md)
    + [Captcha in adaptiven Formularen](adaptive-forms/forms-captcha-feature-video-use.md)
    + [Benutzerdefinierte Funktionen im Regeleditor](adaptive-forms/custom-functions-aem-forms.md)
