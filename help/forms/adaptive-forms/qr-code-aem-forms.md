@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von QR-Code im adaptiven Formular
+title: Anzeigen von QR-Code in einem adaptiven Formular
 description: Anzeigen von QR-Code in einem adaptiven Formular
 feature: Adaptive Forms
 type: Tutorial
@@ -10,26 +10,26 @@ level: Beginner
 jira: KT-15603
 last-substantial-update: 2024-05-28T00:00:00Z
 source-git-commit: e20d9f80cc7e1c6f5f6c81233d9a5178551e2fa2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '203'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
-# Beispielkomponente für QR-Code
+# Beispiel einer QR-Code-Komponente
 
-Die Einbettung eines QR-Codes in ein adaptives Formular kann die Benutzerfreundlichkeit und Effizienz beim Zugriff auf zusätzliche Informationen im Zusammenhang mit dem Formular erheblich verbessern.
+Die Einbettung von QR-Code in ein adaptives Formular kann die Benutzerfreundlichkeit und Effizienz beim Zugriff auf zusätzliche Informationen im Zusammenhang mit dem Formular erheblich verbessern.
 
 Die Beispielkomponente verwendet [QRCode.js](https://davidshimjs.github.io/qrcodejs/).
 
-QRCode.js ist eine JavaScript-Bibliothek für die Erstellung von QRCode. Es unterstützt Browser-übergreifend mit HTML5-Arbeitsfläche und Tabellen-Tag in DOM.
+QRCode.js ist eine JavaScript-Bibliothek zum Erstellen von QRCode. Sie bietet Browser-übergreifend Unterstützung mit HTML5-Arbeitsfläche und Tabellen-Tag in DOM.
 
-Die Komponente generiert den QR-Code basierend auf dem Wert, der in der Konfigurationseigenschaft der Komponente angegeben ist.
+Die Komponente generiert den QR-Code je nach dem Wert, der in der Konfigurationseigenschaft der Komponente angegeben ist.
 ![Bild](assets/qr-code-url.png)
 
-Der folgende Code wurde in der body.jsp der Komponente &quot;qr-code-generator&quot;verwendet.
+Der folgende Code wurde in „body.jsp“ der Komponente „qr-code-generator“ verwendet.
 
-&quot;url&quot;ist die URL, die in den QR-Code eingebettet werden muss. Diese URL wird in den Konfigurationseigenschaften der QR-Code-Komponente angegeben.
+Die „url“ ist die URL, die in den QR-Code eingebettet werden muss. Diese URL wird in den Konfigurationseigenschaften der QR-Code-Komponente angegeben.
 
 ```java
 <%@include file="/libs/foundation/global.jsp"%>
@@ -44,7 +44,7 @@ Der folgende Code wurde in der body.jsp der Komponente &quot;qr-code-generator&q
 
 
 
-Der folgende Code verwendet die makeCode-Methode der Bibliothek QRCode.js in der Client-Bibliothek der Komponente qr-code-generator. Der generierte QR-Code wird an das div angehängt, das durch id identifiziert wird **&quot;qrcode&quot;**.
+Der folgende Code verwendet die makeCode-Methode der Bibliothek „QRCode.js“ in der Client-Bibliothek der qr-code-generator-Komponente. Der generierte QR-Code wird an das „div“ angehängt, das durch die ID **&quot;qrcode&quot;** angegeben wird.
 
 ```javascript
 $(document).ready(function()
@@ -57,8 +57,8 @@ $(document).ready(function()
 
 ## Bereitstellen der Assets auf Ihrem lokalen Server
 
-* [Laden Sie die QR-Code-Komponente mit Package Manager herunter und installieren Sie sie.](assets/qrcode.zip)
-* [Laden Sie das adaptive Beispielformular mit Package Manager herunter und installieren Sie es.](assets/form-with-qr-code.zip)
+* [Herunterladen und Installieren der QR-Code-Komponente mithilfe von Package Manager](assets/qrcode.zip)
+* [Herunterladen und Installieren des adaptiven Beispiel-Formulars mithilfe von Package Manager](assets/form-with-qr-code.zip)
 * [Zeigen Sie das Formular in einer Vorschau an](http://localhost:4502/content/dam/formsanddocuments/qrcode/w9form/jcr:content?wcmmode=disabled). Der Hilfeabschnitt des Formulars enthält den QR-Code.
 
 
