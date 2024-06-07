@@ -8,7 +8,7 @@ version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
 source-git-commit: 6736eb9f124d43b6337b74fd9463bd56cee4e15a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '419'
 ht-degree: 100%
 
@@ -129,7 +129,7 @@ ht-degree: 100%
       + [Benutzerdefinierte Videominiaturen](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [Adaptives DASH-Streaming](dynamic-media/dynamic-media-dash.md)
       + [Video zum smarten Zuschneiden in Dynamic Media](dynamic-media/dynamic-media-smart-crop-video.md)
-      + [Videoplayer](dynamic-media/dynamic-media-video-player-feature-video-use.md)
+      + [Video-Player](dynamic-media/dynamic-media-video-player-feature-video-use.md)
    + Viewer {#viewers}
       + [Viewer](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
       + [Panorama- und Vertikalbild-Viewer](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
