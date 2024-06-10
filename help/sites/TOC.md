@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: caee59e03da7905b1d57b4325e06501d46d073e6
-workflow-type: ht
-source-wordcount: '532'
-ht-degree: 100%
+source-git-commit: 6a22f523c5cf997a59a5b8579c168b641c009b20
+workflow-type: tm+mt
+source-wordcount: '547'
+ht-degree: 97%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 100%
    + [Umleitungen](document-authoring/redirects.md)
    + [Massenmetadaten](document-authoring/bulk-metadata.md)
    + [Seitenmetadaten](document-authoring/page-metadata.md)
+   + [Autorenauthentifizierung](document-authoring/author-authentication.md)
    + Anleitung{#how-to}
       + [Dokumentprüfung](./document-authoring/how-to/document-audit.md)
       + [Dokumentberechtigungen](./document-authoring/how-to/document-permissions.md)
@@ -36,6 +37,10 @@ ht-degree: 100%
       + [Alternativtext für Bilder](./document-authoring/how-to/image-alt-text.md)
       + [Verhindern der Indizierung durch Suchmaschinen](./document-authoring/how-to/no-index.md)
       + [Responsive Navigation](document-authoring/how-to/responsive-navigation.md)
+      + [Dynamic Media](./document-authoring/how-to/using-dynamic-media.md)
+      + [Site-Migration mithilfe des Importtools](./document-authoring/how-to/migration-using-importer.md)
+      + [Anpassen des Importtools](./document-authoring/how-to/customizing-importer.md)
+      + [Massenimport mithilfe von Importtool](./document-authoring/how-to/bulk-importing-using-importer.md)
       + Varianten generieren{#generate-variations}
          + [Überblick](./document-authoring/how-to/generate-variations/overview.md)
          + [Konfigurieren von Sidekick](./document-authoring/how-to/generate-variations/configure-sidekick.md)
