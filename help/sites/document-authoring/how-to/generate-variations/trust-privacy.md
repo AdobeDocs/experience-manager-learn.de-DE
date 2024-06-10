@@ -1,6 +1,6 @@
 ---
 title: Varianten generieren – Vertrauen und Datenschutz in Edge Delivery Services
-description: Erfahren Sie, wie Adobe bei der Dokumenterstellung in Edge Delivery Services bei der Funktion „Varianten generieren“ für Vertrauen und Datenschutz sorgt.
+description: Erfahren Sie, wie Adobe Vertrauen und Datenschutz für Generate Variations in Edge Delivery Services Document Authoring handhabt.
 version: Cloud Service
 feature: Authoring
 topic: Content Management
@@ -11,15 +11,15 @@ duration: 130
 last-substantial-update: 2024-05-08T00:00:00Z
 jira: KT-15477
 exl-id: b105e133-b026-4c2b-b166-eda48e4b5b16
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+source-git-commit: 02e6ce1c5e4e2e090b51c3092228ba6f7f8b482d
+workflow-type: tm+mt
 source-wordcount: '50'
-ht-degree: 100%
+ht-degree: 36%
 
 ---
 
 # Varianten generieren – Vertrauen und Datenschutz in Edge Delivery Services
 
-Erfahren Sie, wie Adobe bei der Dokumenterstellung in Edge Delivery Services bei der Funktion „Varianten generieren“ für Vertrauen und Datenschutz sorgt.
+Erfahren Sie, wie Adobe Vertrauen und Datenschutz für Generate Variations in Edge Delivery Services Document Authoring handhabt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429060/?learn=on)
