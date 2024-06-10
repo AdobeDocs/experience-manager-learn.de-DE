@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
 duration: 557
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '2546'
-ht-degree: 100%
+source-git-commit: 58ef1c482f127981083c07e5de5a1aba2f7c3aec
+workflow-type: tm+mt
+source-wordcount: '2554'
+ht-degree: 99%
 
 ---
 
@@ -184,6 +184,16 @@ Der AEM-Projektarchetyp richtet diese Integration automatisch ein. Erfahren Sie 
    >[!NOTE]
    >
    >`npm install` muss nur einmal ausgeführt werden, z. B. nach einem neuen Klon oder Projekterstellung.
+
+1. Öffnen `ui.frontend/package.json` und im **scripts** **start** command add `--env writeToDisk=true`.
+
+   ```json
+   {
+     "scripts": { 
+       "start": "webpack-dev-server --open --config ./webpack.dev.js --env writeToDisk=true",
+     }
+   }
+   ```
 
 1. Starten Sie den webpack-Dev-Server im Modus **watch**, indem Sie den folgenden Befehl ausführen:
 
