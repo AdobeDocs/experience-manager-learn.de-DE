@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: e20d9f80cc7e1c6f5f6c81233d9a5178551e2fa2
-workflow-type: ht
-source-wordcount: '2069'
-ht-degree: 100%
+source-git-commit: 82ef2988d55012ae730e9bbc7adeea547863ba51
+workflow-type: tm+mt
+source-wordcount: '2080'
+ht-degree: 99%
 
 ---
 
@@ -304,6 +304,10 @@ ht-degree: 100%
    + [Verwenden einer Freihandsignatur](forms-designer/scribble-signature-form.md)
    + [Verwenden einer digitalen Signatur](forms-designer/adding-dig-signature-field.md)
    + [Reader-Erweiterung für Formulare](forms-designer/reader-extending-j2ee.md)
++ AEM Forms Workbench{#forms-workbench}
+   + [Einführung in Workbench](aem-forms-workbench/workbench-introduction.md)
+   + [Formularprozess erstellen](aem-forms-workbench/workbench-creating-a-process.md)
+   + [Debugging-Prozess](aem-forms-workbench/workbench-recording-and-testing-process.md)
 + Interaktive Kommunikationen für Druckkanal
 {#ic-print-channel-tutorial}
    + [1 – Einführung](ic-print-channel-tutorial/introduction.md)
