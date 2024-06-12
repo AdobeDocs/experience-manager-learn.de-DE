@@ -13,9 +13,9 @@ exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
 duration: 557
 source-git-commit: 58ef1c482f127981083c07e5de5a1aba2f7c3aec
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2554'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -185,7 +185,7 @@ Der AEM-Projektarchetyp richtet diese Integration automatisch ein. Erfahren Sie 
    >
    >`npm install` muss nur einmal ausgeführt werden, z. B. nach einem neuen Klon oder Projekterstellung.
 
-1. Öffnen `ui.frontend/package.json` und im **scripts** **start** command add `--env writeToDisk=true`.
+1. Öffnen Sie `ui.frontend/package.json` und fügen Sie unter **scripts** im **start**-Befehl `--env writeToDisk=true` hinzu.
 
    ```json
    {

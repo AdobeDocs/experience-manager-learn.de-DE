@@ -12,9 +12,9 @@ duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
 source-git-commit: 6a22f523c5cf997a59a5b8579c168b641c009b20
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1047'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -287,11 +287,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="author-authentication.md" title="Autorenauthentifizierung"
+            <a href="author-authentication.md" title="Autoren-Authentifizierung"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3429594/?format=jpeg"
-                alt="Autorenauthentifizierung">
+                alt="Autoren-Authentifizierung">
             </a>
           </figure>
         </div>
@@ -300,9 +300,9 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="author-authentication.md" title="Autorenauthentifizierung">Autorenauthentifizierung</a>
+              <a href="author-authentication.md" title="Autoren-Authentifizierung">Autoren-Authentifizierung</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie die Authentifizierung des Autors konfigurieren.</p>
+            <p class="is-size-6">Konfigurieren der Autoren-Authentifizierung.</p>
             <a href="author-authentication.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -595,7 +595,7 @@ Blöcke und automatische Blöcke</a>
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/using-dynamic-media.md" title="Dynamic Media">Dynamic Media</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie Dynamic Media für eine optimierte Bildbereitstellung verwenden.</p>
+            <p class="is-size-6">Verwenden von Dynamic Media für eine optimierte Bildbereitstellung.</p>
             <a href="./how-to/using-dynamic-media.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -612,11 +612,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/migration-using-importer.md" title="Site-Migration mithilfe des Importtools"
+            <a href="./how-to/migration-using-importer.md" title="Site-Migration mit dem Import-Tool"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3429595/?format=jpeg"
-                alt="Site-Migration mithilfe des Importtools">
+                alt="Site-Migration mit dem Import-Tool">
             </a>
           </figure>
         </div>
@@ -625,9 +625,9 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/migration-using-importer.md" title="Site-Migration mithilfe des Importtools">Site-Migration mithilfe des Importtools</a>
+              <a href="./how-to/migration-using-importer.md" title="Site-Migration mit dem Import-Tool">Site-Migration mit dem Import-Tool</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie mit dem AEM Importer-Tool Sites zu Edge Delivery Services migrieren.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie Sites mit dem AEM-Import-Tool zu Edge Delivery Services migrieren.</p>
             <a href="./how-to/migration-using-importer.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -644,11 +644,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/customizing-importer.md" title="Anpassen des Importtools"
+            <a href="./how-to/customizing-importer.md" title="Anpassen des Import-Tools"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3429596/?format=jpeg"
-                alt="Anpassen des Importtools">
+                alt="Anpassen des Import-Tools">
             </a>
           </figure>
         </div>
@@ -657,9 +657,9 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">3 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/customizing-importer.md" title="Anpassen des Importtools">Anpassen des Importtools</a>
+              <a href="./how-to/customizing-importer.md" title="Anpassen des Import-Tools">Anpassen des Import-Tools</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie das AEM Importer-Tool für die Site-Migration anpassen.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie das AEM-Import-Tool für die Site-Migration anpassen.</p>
             <a href="./how-to/customizing-importer.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -676,11 +676,11 @@ Blöcke und automatische Blöcke</a>
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/bulk-importing-using-importer.md" title="Massenimport mithilfe des Importtools"
+            <a href="./how-to/bulk-importing-using-importer.md" title="Massenimport mit dem Import-Tool"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3429597/?format=jpeg"
-                alt="Massenimport mithilfe des Importtools">
+                alt="Massenimport mit dem Import-Tool">
             </a>
           </figure>
         </div>
@@ -689,9 +689,9 @@ Blöcke und automatische Blöcke</a>
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">3 Minuten</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/bulk-importing-using-importer.md" title="Massenimport mithilfe des Importtools">Massenimport mithilfe des Importtools</a>
+              <a href="./how-to/bulk-importing-using-importer.md" title="Massenimport mit dem Import-Tool">Massenimport mit dem Import-Tool</a>
             </p>
-            <p class="is-size-6">Erfahren Sie, wie Sie während der Site-Migration mit dem AEM Importer-Tool Webseiten stapelweise importieren.</p>
+            <p class="is-size-6">Erfahren Sie, wie Sie während der Site-Migration einen Massenimport von Web-Seiten mit dem AEM-Import-Tool durchführen.</p>
             <a href="./how-to/bulk-importing-using-importer.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -704,7 +704,7 @@ Blöcke und automatische Blöcke</a>
     </div>                
   </div>
 
-### Videos zum Generieren von Varianten
+### Videos zu „Varianten generieren“
 
 <div class="columns is-multiline">
     <!-- Intro Generate Variation -->
