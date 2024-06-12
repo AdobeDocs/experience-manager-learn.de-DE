@@ -9,9 +9,9 @@ sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
 source-git-commit: 82ef2988d55012ae730e9bbc7adeea547863ba51
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2080'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -306,7 +306,7 @@ ht-degree: 99%
    + [Reader-Erweiterung für Formulare](forms-designer/reader-extending-j2ee.md)
 + AEM Forms Workbench{#forms-workbench}
    + [Einführung in Workbench](aem-forms-workbench/workbench-introduction.md)
-   + [Formularprozess erstellen](aem-forms-workbench/workbench-creating-a-process.md)
+   + [Erstellen von Formularprozessen](aem-forms-workbench/workbench-creating-a-process.md)
    + [Debugging-Prozess](aem-forms-workbench/workbench-recording-and-testing-process.md)
 + Interaktive Kommunikationen für Druckkanal
 {#ic-print-channel-tutorial}
