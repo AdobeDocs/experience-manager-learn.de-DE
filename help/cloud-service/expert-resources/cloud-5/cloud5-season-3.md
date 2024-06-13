@@ -6,10 +6,10 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '393'
-ht-degree: 100%
+source-git-commit: c67fad3da9b9eaa740c4351448108af3b1542912
+workflow-type: tm+mt
+source-wordcount: '416'
+ht-degree: 94%
 
 ---
 
@@ -145,5 +145,19 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
                 Erfahren Sie mehr über die neuen generativen KI-Funktionen, die bei der Dokumenterstellung von AEM Sites verfügbar sind.
             </p>
         </td>                
+        <td>
+            <a href="./season-3/cloud5-exploring-universal-editor.md">
+                <img alt="Universelle Editoren" src="https://video.tv.adobe.com/v/3429656?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-exploring-universal-editor.md">
+                <strong>Universelle Editoren</strong></a>        
+                <br/><em>mit James Talbot &amp; Dirk Rudolph, AEM Engineering</em>
+            </div>
+            <p>
+                <br/>                
+                 Erfahren Sie mehr über den universellen Editor und AEM mit Edge Delivery Services.
+            </p>
+        </td>                    
     </tr>      
 </table>
