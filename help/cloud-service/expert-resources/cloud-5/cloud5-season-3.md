@@ -9,7 +9,7 @@ duration: 74
 source-git-commit: 272ed4e4782b03f284886a3046440960df538286
 workflow-type: tm+mt
 source-wordcount: '445'
-ht-degree: 88%
+ht-degree: 93%
 
 ---
 
@@ -161,12 +161,12 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
         </td>                
         <td>
             <a href="./season-3/cloud5-exploring-universal-editor.md">
-                <img alt="Universelle Editoren" src="https://video.tv.adobe.com/v/3429656?format=jpeg"/>
+                <img alt="Einführung in den universellen Editor" src="https://video.tv.adobe.com/v/3429656?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-exploring-universal-editor.md">
-                <strong>Universelle Editoren</strong></a>        
-                <br/><em>mit James Talbot &amp; Dirk Rudolph, AEM Engineering</em>
+                <strong>Einführung in den universellen Editor</strong></a>        
+                <br/><em>mit James Talbot und Dirk Rudolph, AEM Engineering</em>
             </div>
             <p>
                 <br/>                

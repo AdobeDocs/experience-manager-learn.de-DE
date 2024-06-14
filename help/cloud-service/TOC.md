@@ -407,4 +407,4 @@ ht-degree: 99%
          + [Einbinden Ihres eigenen Cloudflare-CDN](./expert-resources/cloud-5/season-3/cloud5-byo-cloudflare-cdn.md)
          + [Integrieren von AEM Assets](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
          + [Generische KI für AEM Sites](./expert-resources/cloud-5/season-3/cloud5-generative-ai-for-aem-sites.md)
-         + [Universelle Editoren](./expert-resources/cloud-5/season-3/cloud5-exploring-universal-editor.md)
+         + [Einführung in den universellen Editor](./expert-resources/cloud-5/season-3/cloud5-exploring-universal-editor.md)
