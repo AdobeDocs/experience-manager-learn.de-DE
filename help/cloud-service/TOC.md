@@ -9,7 +9,7 @@ team: TM
 source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
 workflow-type: tm+mt
 source-wordcount: '1234'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -405,7 +405,7 @@ ht-degree: 98%
       + Staffel 3{#season-3}
          + [Suche von Drittanbietern](./expert-resources/cloud-5/season-3/cloud5-3rd-party-search.md)
          + [Real User Monitoring (RUM)](./expert-resources/cloud-5/season-3/cloud5-rum.md)
-         + [Explorer (Real User Monitoring, RUM)](./expert-resources/cloud-5/season-3/cloud5-rum-explorer.md)
+         + [Real User Monitoring(RUM)-Explorer](./expert-resources/cloud-5/season-3/cloud5-rum-explorer.md)
          + [Edge-Sekundäre](./expert-resources/cloud-5/season-3/cloud5-edge-workers.md)
          + [Veröffentlichen von Ereignissen und Rückgängigmachen der Veröffentlichung in Edge Delivery Services](./expert-resources/cloud-5/season-3/cloud5-publish-events.md)
          + [Abfrageindizes und Excel-Formeln](./expert-resources/cloud-5/season-3/cloud5-query-indexes.md)
