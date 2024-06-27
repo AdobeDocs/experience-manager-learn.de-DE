@@ -7,9 +7,9 @@ recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
 source-git-commit: 272ed4e4782b03f284886a3046440960df538286
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '445'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -59,16 +59,16 @@ Erfahren Sie, wie die Echtzeit-Benutzerüberwachung (Real User Monitoring, RUM) 
         </td>   
         <td>
             <a href="./season-3/cloud5-rum-explorer.md">
-                <img alt="Explorer (Real User Monitoring, RUM)" src="https://video.tv.adobe.com/v/3429772?format=jpeg"/>
+                <img alt="Real User Monitoring(RUM)-Explorer" src="https://video.tv.adobe.com/v/3429772?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-rum-explorer.md">
-                <strong>Explorer (Real User Monitoring, RUM)</strong></a>        
-                <br/><em>mit James Talbot &amp; Damian Langsweirdt, AEM Engineering</em>
+<strong>Real User Monitoring(RUM)-Explorer</strong></a>        
+<br/><em>mit James Talbot und Damian Langsweirdt, AEM Engineering</em>
             </div>
             <p>
                 <br/>
-                Erfahren Sie mehr über den Explorer für die Echtzeit-Benutzerüberwachung (RUM) und wie Sie darauf zugreifen können.
+Weitere Informationen zum Real User Monitoring(RUM)-Explorer und zum Zugriff darauf.
             </p>
         </td>   
         <td>

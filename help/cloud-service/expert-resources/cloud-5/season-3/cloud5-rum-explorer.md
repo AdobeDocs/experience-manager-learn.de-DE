@@ -1,6 +1,6 @@
 ---
-title: Cloud 5 - Explorer (Real User Monitoring - RUM)
-description: Erfahren Sie mehr über den Explorer für die Echtzeit-Benutzerüberwachung (RUM) und wie Sie darauf zugreifen können.
+title: Cloud 5 – Real User Monitoring(RUM)-Explorer
+description: Weitere Informationen zum Real User Monitoring(RUM)-Explorer und zum Zugriff darauf.
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -12,16 +12,16 @@ recommendations: noDisplay, noCatalog
 duration: 388
 last-substantial-update: 2024-06-13T00:00:00Z
 jira: KT-15734
-source-git-commit: 272ed4e4782b03f284886a3046440960df538286
-workflow-type: tm+mt
+exl-id: 6650922d-755c-466e-a882-4f6038839125
+source-git-commit: 0a197cfda02c42cf4960becbe6d65a337823a22f
+workflow-type: ht
 source-wordcount: '42'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Cloud 5 – Real User Monitoring(RUM)-Explorer
 
-# Cloud 5 - Explorer (Real User Monitoring - RUM)
-
-Erfahren Sie mehr über den Explorer für die Echtzeit-Benutzerüberwachung (RUM) und wie Sie darauf zugreifen können.
+Weitere Informationen zum Real User Monitoring(RUM)-Explorer und zum Zugriff darauf.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429772/?quality=12&learn=on)
