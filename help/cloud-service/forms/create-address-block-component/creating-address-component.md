@@ -1,6 +1,6 @@
 ---
-title: Adresskomponente erstellen
-description: Neue Adresskernkomponente in AEM Forms Cloud Service erstellen
+title: Erstellen einer Adresskomponente
+description: Erstellen einer neuen Adresskernkomponente in AEM Forms Cloud Service
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -8,65 +8,65 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-15752
-source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
-workflow-type: tm+mt
+exl-id: 280c9a30-e017-4bc0-9027-096aac82c22c
+source-git-commit: a12b1778413079646814cb25567abfc26a429340
+workflow-type: ht
 source-wordcount: '272'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
+# Erstellen einer Adresskomponente
 
-# Komponente Adresse erstellen
+Melden Sie sich bei CRXDE in Ihrer lokalen Cloud-fähigen Instanz von AEM Forms an.
 
-Melden Sie sich bei CRXDE Ihrer lokalen Cloud-fähigen Instanz von AEM Forms an.
-
-Erstellen Sie eine Kopie der ``/apps/bankingapplication/components/adaptiveForm/button`` und benennen Sie ihn in Adressblock um. Wählen Sie den Knoten addressBlock aus und legen Sie seine Eigenschaften wie unten dargestellt fest.
+Erstellen Sie eine Kopie des Knotens ``/apps/bankingapplication/components/adaptiveForm/button`` und benennen Sie ihn in „addressblock“ um. Wählen Sie den Knoten „addressblock“ aus und legen Sie seine Eigenschaften wie unten dargestellt fest.
 
 >[!NOTE]
 >
-> ``bankingapplication`` ist die appId, die beim Erstellen des Maven-Projekts bereitgestellt wurde. Diese appId kann in Ihrer Umgebung unterschiedlich sein. Sie können eine beliebige Komponente kopieren. Ich habe gerade eine Kopie der Schaltflächenkomponente erstellt
+> ``bankingapplication`` ist die appId, die beim Erstellen des Maven-Projekts bereitgestellt wurde. Diese appId kann in Ihrer Umgebung unterschiedlich sein. Sie können eine beliebige Komponente kopieren. Ich habe zufällig eine Kopie der Schaltflächenkomponente erstellt
 
 
 ![address-bloc](assets/address-properties.png)
 
-## cq-template node properties
+## Eigenschaften des Knotens cq-template
 
-Wählen Sie die ``cq-template`` Knoten unter ``addressblock`` und legen Sie die Eigenschaften wie unten dargestellt fest. Beachten Sie, dass fieldType auf panel festgelegt ist.
-![cq-template](assets/cq-template.png)
+Wählen Sie unter dem Knoten ``addressblock`` den Knoten ``cq-template`` aus und legen Sie die Eigenschaften wie unten dargestellt fest. Beachten Sie, dass fieldType auf das Panel 
+![cq-Vorlage](assets/cq-template.png) festgelegt ist
 
-## Knoten unter cq-template hinzufügen
+## Hinzufügen von Knoten unter cq-template
 
-Fügen Sie die folgenden Knoten des Typs hinzu ``nt:unstructured`` under ``cq-template``
+Fügen Sie die folgenden Knoten des Typs ``nt:unstructured`` unter ``cq-template`` hinzu
 
 * streetaddress
 * city
 * zip
 * state
 
-Diese Knoten stellen die Felder der Adressblock-Komponente dar. Die Felder &quot;streetaddress&quot;, &quot;city&quot;und &quot;zip&quot;sind ein Texteingabefeld und das Statusfeld ein Dropdown-Feld.
+Diese Knoten stellen die Felder der Adressblock-Komponente dar. Die Felder „streetaddress“, „city“ und „zip“ sind Texteingabefelder und das Feld „state“ ein Dropdown-Feld.
 
-## Festlegen der Eigenschaften des Knotens &quot;streetaddress&quot;
+## Festlegen der Eigenschaften des Knotens „streetaddress“
 
 >[!NOTE]
 >
-> Die **_Bankanwendung_** im Pfad bezieht sich auf die appId des Maven-Projekts. Dies kann in Ihrer Umgebung anders sein
+> Die **_bankingapplication_** im Pfad bezieht sich auf die appId des Maven-Projekts. Dies kann in Ihrer Umgebung anders sein
 
-Wählen Sie die ``streetaddress`` und legen Sie die Eigenschaften wie unten dargestellt fest.
-![Straße-Adresse](assets/streetaddress.png)
+Wählen Sie den Knoten ``streetaddress`` aus und legen Sie die Eigenschaften wie unten dargestellt fest.
+![street-address](assets/streetaddress.png)
 
-## Festlegen der Eigenschaften des Knotens &quot;city&quot;
+## Festlegen der Eigenschaften des Knotens „city“
 
-Wählen Sie die ``city`` und legen Sie die Eigenschaften wie unten dargestellt fest.
+Wählen Sie den Knoten ``city`` aus und legen Sie die Eigenschaften wie unten dargestellt fest.
 ![city](assets/city.png)
 
-## Legen Sie die Eigenschaften des ZIP-Knotens fest
+## Festlegen der Eigenschaften des Knotens „zip“
 
-Wählen Sie die ``zip`` und legen Sie die Eigenschaften wie unten dargestellt fest.
+Wählen Sie den Knoten ``zip`` aus und legen Sie die Eigenschaften wie unten dargestellt fest.
 ![zip](assets/zip.png)
 
-## Festlegen der Eigenschaften des Statusknotens
+## Festlegen der Eigenschaften des Knotens „state“
 
-Wählen Sie die ``state`` und legen Sie die Eigenschaften wie unten dargestellt fest. Beachten Sie den fieldType -Status - er ist auf eine Dropdown-Liste festgelegt.
+Wählen Sie den Knoten ``state`` aus und legen Sie die Eigenschaften wie unten dargestellt fest. Beachten Sie den fieldType von „state“ – es ist als Dropdown-Liste festgelegt
 ![state](assets/state.png)
 
 Die endgültige Adressblock-Komponente sieht wie folgt aus:
@@ -75,8 +75,4 @@ Die endgültige Adressblock-Komponente sieht wie folgt aus:
 
 ## Nächste Schritte
 
-[Projekt bereitstellen](./deploy-your-project.md)
-
-
-
-
+[Bereitstellen des Projekts](./deploy-your-project.md)

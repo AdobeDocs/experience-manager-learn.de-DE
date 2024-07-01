@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
 source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1234'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -249,11 +249,11 @@ ht-degree: 99%
       + [1 – Einführung](./forms/custom-submit-headless-forms/introduction.md)
       + [2 – Erstellen eines benutzerdefinierten Sendediensts](./forms/custom-submit-headless-forms/custom-submit-service.md)
       + [3 – Anzeigen der Antwort](./forms/custom-submit-headless-forms/handle-response-react-app.md)
-   + Komponente &quot;Adressblock erstellen&quot;{#create-address-block}
+   + Erstellen einer Adressblock-Komponente{#create-address-block}
       + [1 – Einführung](./forms/create-address-block-component/introduction.md)
-      + [2 - Einrichtung](./forms/create-address-block-component/set-up.md)
-      + [3 - Komponente erstellen](./forms/create-address-block-component/creating-address-component.md)
-      + [4 - Komponente bereitstellen](./forms/create-address-block-component/deploy-your-project.md)
+      + [2 – Einrichtung](./forms/create-address-block-component/set-up.md)
+      + [3 – Erstellen der Komponente](./forms/create-address-block-component/creating-address-component.md)
+      + [4 – Bereitstellen der Komponente](./forms/create-address-block-component/deploy-your-project.md)
    + AEM Forms und Analytics{#forms-and-analytics}
       + [Einführung](./forms/form-data-analytics/introduction.md)
       + [Erstellen von Datenelementen](./forms/form-data-analytics/data-elements.md)

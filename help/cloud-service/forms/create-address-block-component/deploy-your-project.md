@@ -1,6 +1,6 @@
 ---
-title: Adresskomponente erstellen
-description: Neue Adresskernkomponente in AEM Forms Cloud Service erstellen
+title: Erstellen einer Adresskomponente
+description: Erstellen einer neuen Adresskernkomponente in AEM Forms Cloud Service
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -8,40 +8,40 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-15752
-source-git-commit: a8fc8fa19ae19e27b07fa81fc931eca51cb982a1
-workflow-type: tm+mt
+exl-id: be25be52-2914-4820-9356-678a326f8edc
+source-git-commit: a12b1778413079646814cb25567abfc26a429340
+workflow-type: ht
 source-wordcount: '196'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Projekt bereitstellen
+# Bereitstellen von Projekten 
 
-Bevor Sie mit der Bereitstellung des Projekts auf Ihrem AEM Forms-Cloud Service beginnen, wird empfohlen, das Projekt auf Ihrer lokalen Cloud-fähigen Instanz von AEM Forms bereitzustellen.
+Bevor Sie mit der Bereitstellung des Projekts auf Ihrem AEM Forms-Cloud Service beginnen, wird empfohlen, das Projekt auf Ihrer lokalen, Cloud-fähigen Instanz von AEM Forms bereitzustellen.
 
 ## Synchronisieren von Änderungen mit Ihrem AEM-Projekt
 
-Starten Sie IntelliJ und navigieren Sie zum Ordner &quot;adaptiveForm&quot;unter ``ui.apps`` Ordner wie unten gezeigt
+Starten Sie IntelliJ und navigieren Sie im Ordner ``ui.apps`` zum Ordner „adaptiveForm“ wie unten gezeigt
 ![intellij](assets/intellij.png)
 
-Rechtsklick auf ``adaptiveForm`` Knoten und wählen Sie Neu aus | Paket Stellen Sie sicher, dass Sie den Namen hinzufügen **addressBlock** auf das Paket
+Klicken Sie mit der rechten Maustaste auf den Knoten ``adaptiveForm`` und wählen Sie Neu | Paket aus
+Stellen Sie sicher, dass Sie den Namen **addressblock** zum Paket hinzufügen
 
-Klicken Sie mit der rechten Maustaste auf das neu erstellte Paket ``addressblock`` und wählen ``repo | Get Command`` wie unten gezeigt
+Klicken Sie mit der rechten Maustaste auf das neu erstellte Paket ``addressblock`` und wählen Sie ``repo | Get Command`` wie unten gezeigt aus
 ![repo-sync](assets/sync-repo.png)
 
-Dadurch sollte das Projekt mit Ihrer lokalen Cloud-fähigen AEM Forms-Instanz synchronisiert werden. Sie können die .content.xml-Datei überprüfen, um die Eigenschaften zu bestätigen
+Dadurch sollte das Projekt mit Ihrer lokalen, Cloud-fähigen AEM Forms-Instanz synchronisiert werden. Sie können die Datei .content.xml überprüfen, um die Eigenschaften zu bestätigen
 ![after-sync](assets/after-sync.png)
 
-## Projekt in Ihrer lokalen Instanz bereitstellen
+## Bereitstellen von Projekten in einer lokalen Instanz
 
 Starten Sie ein neues Eingabeaufforderungsfenster, navigieren Sie zum Stammordner des Projekts und erstellen Sie das Projekt mithilfe des folgenden Befehls.
 ![deploy](assets/build-project.png)
 
-Sobald das Projekt erfolgreich bereitgestellt wurde, kann die Komponente Adresse jetzt in einem adaptiven Formular verwendet werden
+Sobald das Projekt erfolgreich bereitgestellt wurde, kann die
+Adresskomponente nun in einem adaptiven Formular verwendet werden
 
 ## Bereitstellen des Projekts in der Cloud-Umgebung
 
-Wenn in Ihrer lokalen Entwicklungsumgebung alles gut aussieht, ist der nächste Schritt die Bereitstellung im [Cloud-Instanz mit Cloud Manager.](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git)
-
-
-
+Wenn in Ihrer lokalen Entwicklungsumgebung alles gut aussieht, ist der nächste Schritt die Bereitstellung in der [Cloud-Instanz mit Cloud Manager](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git).
