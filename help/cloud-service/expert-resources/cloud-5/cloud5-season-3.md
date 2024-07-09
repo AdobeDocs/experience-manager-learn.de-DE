@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: 272ed4e4782b03f284886a3046440960df538286
+source-git-commit: cbba149b23b4d8ecad35f263dc282a3da481fc9f
 workflow-type: ht
-source-wordcount: '445'
+source-wordcount: '416'
 ht-degree: 100%
 
 ---
@@ -57,20 +57,22 @@ Erfahren Sie, wie die Suche von Drittanbietern am besten in Edge Delivery Servic
 Erfahren Sie, wie die Echtzeit-Benutzerüberwachung (Real User Monitoring, RUM) mit Edge Delivery Services funktioniert.
             </p>
         </td>   
+        <!--
         <td>
             <a href="./season-3/cloud5-rum-explorer.md">
-                <img alt="Real User Monitoring(RUM)-Explorer" src="https://video.tv.adobe.com/v/3429772?format=jpeg"/>
+                <img alt="Real User Monitoring (RUM) Explorer" src="https://video.tv.adobe.com/v/3429772?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-rum-explorer.md">
-<strong>Real User Monitoring(RUM)-Explorer</strong></a>        
-<br/><em>mit James Talbot und Damian Langsweirdt, AEM Engineering</em>
+                <strong>Real User Monitoring (RUM) Explorer</strong></a>        
+                <br/><em>with James Talbot & Damian Langsweirdt, AEM Engineering</em>
             </div>
             <p>
                 <br/>
-Weitere Informationen zum Real User Monitoring(RUM)-Explorer und zum Zugriff darauf.
+                Learn about Real User Monitoring (RUM) Explorer and how to access it.
             </p>
         </td>   
+        -->
         <td>
             <a href="./season-3/cloud5-edge-workers.md">
                 <img alt="Edge-Sekundäre" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
