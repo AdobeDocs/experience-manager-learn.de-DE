@@ -12,10 +12,10 @@ last-substantial-update: 2022-06-13T00:00:00Z
 doc-type: Feature Video
 exl-id: 0681e2c4-8661-436c-9170-9aa841a6fa27
 duration: 419
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
-source-wordcount: '249'
-ht-degree: 100%
+source-git-commit: 726715890d997ba3bb85f4833e220ac2222b3a42
+workflow-type: tm+mt
+source-wordcount: '378'
+ht-degree: 65%
 
 ---
 
@@ -26,6 +26,22 @@ Erfahren Sie, wie Sie die Funktionen zum Metadatenimport und -export von Adobe E
 ## Metadatenexport {#metadata-export}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22132?quality=12&learn=on)
+
+>[!TIP]
+>
+> Verwenden Sie beim Öffnen der Metadaten-Export-CSV-Datei in Excel den [Excel Importer](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) anstatt auf die Datei zu doppelklicken, um Probleme mit UTF-8-kodierten CSV-Dateien zu vermeiden.
+>
+> Gehen Sie wie folgt vor, um die CSV-Datei für den Metadatenexport in Excel zu öffnen:
+> 
+> 1. Öffnen von Microsoft Excel
+> 1. Auswählen __Datei > Neu__ , um eine leere Tabelle zu erstellen
+> 1. Wenn das leere Arbeitsblatt geöffnet ist, wählen Sie __Datei > Importieren__
+> 1. Auswählen __Text__ Datei und klicken Sie auf __Import__
+> 1. Wählen Sie die exportierte CSV-Datei aus dem Dateisystem aus und klicken Sie auf __Daten abrufen__
+> 1. Wählen Sie in Schritt 1 des Import-Assistenten die Option __Getrennt__ und __Dateiursprung__ nach __Unicode (UTF-8)__ und klicken Sie auf __Nächste__
+> 1. Legen Sie in Schritt 2 die __Trennzeichen__ nach __Komma__ und klicken Sie auf __Nächste__
+> 1. Lassen Sie in Schritt 3 die __Spaltendatenformat__ unverändert und klicken Sie auf __Beenden__
+> 1. Auswählen __Import__ , um die Daten der Tabelle hinzuzufügen
 
 ## Metadatenimport {#metadata-import}
 
