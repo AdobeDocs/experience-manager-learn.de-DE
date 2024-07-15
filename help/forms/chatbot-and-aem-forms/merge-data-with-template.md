@@ -22,5 +22,5 @@ Der nächste Schritt besteht darin, die XML-Daten mit der Vorlage zusammenzufüh
 
 ## Verwenden von OutputService zum Generieren der PDF
 
-Die [generatePDF](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-) -Methode des OutputService zum Generieren der PDF verwendet wurde.
+Die Methode [generatePDF](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/output/api/OutputService.html#generatePDFOutput-com.adobe.aemfd.docmanager.Document-com.adobe.aemfd.docmanager.Document-com.adobe.fd.output.api.PDFOutputOptions-) des OutputService wurde zum Generieren des PDF verwendet.
 Die generierte PDF wurde dann mithilfe der Adobe Sign REST API zur Signatur gesendet.

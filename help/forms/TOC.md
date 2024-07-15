@@ -9,7 +9,7 @@ sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
 source-git-commit: 82ef2988d55012ae730e9bbc7adeea547863ba51
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2080'
 ht-degree: 100%
 

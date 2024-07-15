@@ -70,7 +70,7 @@ Die folgende JavaScript-Funktion wurde geschrieben, um die Daten an den angegebe
 
 ## Server-seitiger Code
 
-Der folgende serverseitige Java-Code wurde geschrieben, um die Formulardaten zu verarbeiten. Im Folgenden finden Sie das Java-Servlet, das in AEM ausgeführt wird und über den XHR-Aufruf im obigen JavaScript aufgerufen wird.
+Der folgende serverseitige Java-Code wurde geschrieben, um die Formulardaten zu verarbeiten. Im Folgenden finden Sie das Java-Servlet, das in AEM ausgeführt wird und über den XHR-Aufruf in der obigen JavaScript aufgerufen wird.
 
 ```java
 package com.azuredemo.core.servlets;

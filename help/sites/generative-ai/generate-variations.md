@@ -25,4 +25,4 @@ Generate Variations in Adobe Experience Manager ist ein dynamisches Tool, das Te
 
 ## Verwenden von Generate Variations in AEM Authoring
 
-+ __Dokumenterstellung:__ Erfahren Sie, wie Sie Varianten generieren für die dynamische und personalisierte Dokumenterstellung nutzen und Ihre dokumentbasierten Websites zu ansprechenderen und ansprechenderen Erlebnissen erweitern können. [Dokumentation anzeigen](https://www.aem.live/docs/sidekick-generate-variations)
++ __Dokumenterstellung:__ Erfahren Sie, wie Sie Varianten generieren für die dynamische und personalisierte Dokumenterstellung verwenden und Ihre dokumentbasierten Websites zu ansprechenderen und ansprechenderen Erlebnissen erweitern. [Dokumentation anzeigen](https://www.aem.live/docs/sidekick-generate-variations)

@@ -10,7 +10,7 @@ exl-id: 7e5dcc6e-fe56-49af-97e3-7dfaa9c8738f
 last-substantial-update: 2019-06-09T00:00:00Z
 duration: 260
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 100%
 
@@ -43,17 +43,17 @@ Hinzufügen und Verwenden eines CAPTCHA mit adaptiven Formularen von AEM.
 >Navigieren Sie zur Bundle-ID im Dateisystem in Ihrer AuthAutoreninstanz:
 >
 >* &lt;author-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
->* Kopieren Sie die HMAC- und die Primärdateien.
+* Kopieren Sie die HMAC- und die Primärdateien.
 >
->Öffnen Sie die [Felix-Web-Konsole](http://localhost:4502/system/console/bundles) in Ihrer Veröffentlichungsinstanz Suchen Sie nach dem Bundle „com.adobe.granite.crypto.file“. Notieren Sie sich die Bundle-ID.
+Öffnen Sie die [Felix-Web-Konsole](http://localhost:4502/system/console/bundles) in Ihrer Veröffentlichungsinstanz Suchen Sie nach dem Bundle „com.adobe.granite.crypto.file“. Notieren Sie sich die Bundle-ID.
 >
->Navigieren Sie zur Bundle-ID im Dateisystem Ihrer Veröffentlichungsinstanz:
+Navigieren Sie zur Bundle-ID im Dateisystem Ihrer Veröffentlichungsinstanz:
 >
->* &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
->* Löschen Sie die vorhandenen HMAC- und Primärdateien.
->* Fügen Sie die aus der Authoring-Instanz kopierten HMAC- und Primärdateien ein.
+* &lt;publish-aem-install-dir>/crx-quickstart/launchpad/felix/bundle20/data
+* Löschen Sie die vorhandenen HMAC- und Primärdateien.
+* Fügen Sie die aus der Authoring-Instanz kopierten HMAC- und Primärdateien ein.
 >
->Starten Sie Ihren AEM Publish-Server neu.
+Starten Sie Ihren AEM Publish-Server neu.
 
 ## Hilfsmaterialien {#supporting-materials}
 

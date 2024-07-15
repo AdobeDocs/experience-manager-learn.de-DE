@@ -9,8 +9,9 @@ role: Developer
 level: Beginner
 jira: KT-15603
 last-substantial-update: 2024-05-28T00:00:00Z
-source-git-commit: e20d9f80cc7e1c6f5f6c81233d9a5178551e2fa2
-workflow-type: ht
+exl-id: 0c6079f4-601e-4a82-976c-71dbb2faa671
+source-git-commit: 1977e5103de72a0db5f446eba539d4ae5b810e74
+workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 100%
 
@@ -60,5 +61,3 @@ $(document).ready(function()
 * [Herunterladen und Installieren der QR-Code-Komponente mithilfe von Package Manager](assets/qrcode.zip)
 * [Herunterladen und Installieren des adaptiven Beispiel-Formulars mithilfe von Package Manager](assets/form-with-qr-code.zip)
 * [Zeigen Sie das Formular in einer Vorschau an](http://localhost:4502/content/dam/formsanddocuments/qrcode/w9form/jcr:content?wcmmode=disabled). Der Hilfeabschnitt des Formulars enthält den QR-Code.
-
-

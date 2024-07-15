@@ -11,7 +11,7 @@ jira: KT-9958
 thumbnail: 332439.jpg
 duration: 50
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 100%
 

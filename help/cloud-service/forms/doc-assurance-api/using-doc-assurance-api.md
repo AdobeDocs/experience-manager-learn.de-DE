@@ -8,8 +8,9 @@ version: Cloud Service
 feature: Document Services
 topic: Development
 jira: KT-15508
-source-git-commit: 97fbe450823c6122a25dc46c851296094894683e
-workflow-type: ht
+exl-id: 40617082-4d23-4c91-a016-2d947187052b
+source-git-commit: 1977e5103de72a0db5f446eba539d4ae5b810e74
+workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 100%
 

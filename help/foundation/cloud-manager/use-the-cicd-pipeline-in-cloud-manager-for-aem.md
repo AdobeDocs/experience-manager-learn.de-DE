@@ -12,7 +12,7 @@ last-substantial-update: 2022-08-15T00:00:00Z
 thumbnail: cm-pipeline.jpg
 duration: 619
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '300'
 ht-degree: 100%
 

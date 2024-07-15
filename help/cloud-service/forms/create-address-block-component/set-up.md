@@ -10,7 +10,7 @@ topic: Development
 jira: KT-15752
 exl-id: 6f2b280d-c2b5-4b75-88e4-2296329d69e7
 source-git-commit: a12b1778413079646814cb25567abfc26a429340
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 100%
 

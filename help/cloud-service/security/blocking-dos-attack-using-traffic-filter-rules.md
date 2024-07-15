@@ -13,7 +13,7 @@ jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
 source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1968'
 ht-degree: 100%
 
