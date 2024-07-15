@@ -9,14 +9,14 @@ feature-set: Experience Manager Assets
 feature: Assets Essentials
 team: TM
 source-git-commit: a5eb7cb6ba9b806a57a27ad1a0e01609af713656
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '68'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
 
-# Videos zu AEM Assets Essentials {#assets-essentials}
+# AEM Assets Essentials-Videos {#assets-essentials}
 
 + [Übersicht](overview.md)
 
@@ -34,7 +34,7 @@ ht-degree: 88%
    + [Mein Arbeitsbereich](configuring/my-workspace.md)
    + [Metadatenformulare](configuring/metadata-forms.md)
    + [Berechtigungsverwaltung](configuring/permissions-management.md)
-   + [Taxonomie-Management](configuring/taxonomy-management.md)
+   + [Taxonomie-Verwaltung](configuring/taxonomy-management.md)
 
 + [Creative Cloud-Integration](integrations/creative-cloud.md)
 
