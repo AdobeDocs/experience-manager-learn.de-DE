@@ -13,9 +13,9 @@ doc-type: Feature Video
 exl-id: 0681e2c4-8661-436c-9170-9aa841a6fa27
 duration: 419
 source-git-commit: 726715890d997ba3bb85f4833e220ac2222b3a42
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '378'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
@@ -29,19 +29,19 @@ Erfahren Sie, wie Sie die Funktionen zum Metadatenimport und -export von Adobe E
 
 >[!TIP]
 >
-> Verwenden Sie beim Öffnen einer Metadaten-Export-CSV-Datei in Excel den [Excel-Importer](https://support.microsoft.com/en-us/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6), anstatt auf die Datei zu doppelklicken, um Probleme mit UTF-8-kodierten CSV-Dateien zu vermeiden.
+> Verwenden Sie beim Öffnen einer Metadaten-Export-CSV-Datei in Excel den [Excel-Importer](https://support.microsoft.com/de-de/office/import-data-from-a-csv-html-or-text-file-b62efe49-4d5b-4429-b788-e1211b5e90f6) anstelle eines Doppelklicks auf die Datei, um Probleme mit UTF-8-codierten CSV-Dateien zu vermeiden.
 >
 > Gehen Sie wie folgt vor, um die CSV-Datei für den Metadatenexport in Excel zu öffnen:
 > 
-> 1. Öffnen von Microsoft Excel
-> 1. Wählen Sie __Datei > Neu__ aus, um eine leere Tabelle zu erstellen.
-> 1. Wählen Sie bei geöffnetem leeren Arbeitsblatt __Datei > Import__ aus.
-> 1. Wählen Sie die Datei __Text__ aus und klicken Sie auf __Import__ .
-> 1. Wählen Sie die exportierte CSV-Datei aus dem Dateisystem aus und klicken Sie auf __Daten abrufen__ .
-> 1. Wählen Sie in Schritt 1 des Importassistenten die Option __Getrennt__ und setzen Sie __Dateiursprung__ auf __Unicode (UTF-8)__ und klicken Sie auf __Weiter__
-> 1. Setzen Sie in Schritt 2 die __Trennzeichen__ auf __Komma__ und klicken Sie auf __Weiter__
-> 1. Lassen Sie in Schritt 3 das __Spaltendatenformat__ unverändert und klicken Sie auf __Fertigstellen__ .
-> 1. Wählen Sie __Import__ aus, um die Daten zur Tabelle hinzuzufügen.
+> 1. Öffnen Sie Microsoft Excel.
+> 1. Wählen Sie __Datei > Neu__, um eine leere Tabelle zu erstellen.
+> 1. Wenn die leere Tabelle geöffnet ist, wählen Sie __Datei > Importieren__.
+> 1. Wählen Sie die Datei __Text__ aus und klicken Sie auf __Importieren__.
+> 1. Wählen Sie die exportierte CSV-Datei aus dem Dateisystem aus und klicken Sie auf __Daten abrufen__.
+> 1. In Schritt 1 des Import-Assistenten wählen Sie __Getrennt__, legen Sie __Dateiherkunft__ auf __Unicode (UTF-8)__ fest und klicken Sie auf __Weiter__.
+> 1. In Schritt 2 legen Sie __Trennzeichen__ auf __Komma__ fest und klicken Sie auf __Weiter__.
+> 1. In Schritt 3 lassen Sie das __Spaltendatenformat__ unverändert und klicken Sie auf __Beenden__.
+> 1. Wählen Sie __Importieren__ aus, um die Daten zur Tabelle hinzuzufügen.
 
 ## Metadatenimport {#metadata-import}
 
