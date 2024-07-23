@@ -11,22 +11,22 @@ badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
 duration: 68
 source-git-commit: 8bde459ae9a6e261cfc3aff308babe9de6e56059
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '278'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
 # Testen der Integration
 
-Wir testen die Integration, indem wir einen einfachen Formularabruf erstellen und ein Lead-Objekt vom Markt anzeigen.
+Wir testen die Integration, indem wir einen einfachen Formularabruf erstellen und ein Lead-Objekt von Marketo anzeigen.
 >[!NOTE]
 >
->Diese Funktion wurde anhand von Formularkomponenten getestet.
+>Diese Funktion wurde an Formularen anhand von Foundation-Komponenten getestet.
 
 ## Erstellen eines adaptiven Formulars
 
-1. Erstellen Sie ein adaptives Formular auf der Grundlage der „Leeren Formularvorlage“ und verknüpfen Sie es mit dem Formulardatenmodell, das Sie im vorherigen Schritt erstellt haben.
+1. Erstellen Sie ein adaptives Formular auf der Grundlage einer „leeren Formularvorlage“ und verknüpfen Sie es mit dem Formulardatenmodell, das Sie im vorherigen Schritt erstellt haben.
 1. Öffnen Sie das Formular im Bearbeitungsmodus.
 1. Ziehen Sie eine TextField-Komponente und eine Bedienfeldkomponente per Drag-and-Drop in das adaptive Formular. Legen Sie den Titel der TextField-Komponente auf „Lead-ID eingeben“ und ihren Namen auf „LeadId“ fest
 1. Ziehen Sie zwei TextField-Komponenten per Drag-and-Drop in die Bedienfeldkomponente
