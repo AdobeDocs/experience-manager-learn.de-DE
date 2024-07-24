@@ -12,15 +12,15 @@ last-substantial-update: 2022-10-11T00:00:00Z
 doc-type: Feature Video
 exl-id: d4d80678-e2e2-4e17-8ce5-6db8651ae59e
 duration: 428
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 54509339ee8e538daf432b329ddebb55e98bb6d9
 workflow-type: tm+mt
-source-wordcount: '49'
-ht-degree: 100%
+source-wordcount: '45'
+ht-degree: 57%
 
 ---
 
-# Berechtigungsverwaltung in Assets Essentials
+# Berechtigungsverwaltung
 
-Erfahren Sie, wie Unternehmen mit der Berechtigungsverwaltung von AEM Assets Essentials den Zugriff auf Assets steuern, ihre Marke schützen und die Compliance sicherstellen können.
+Erfahren Sie, wie Unternehmen mit der Berechtigungsverwaltung von AEM Assets den Zugriff auf Assets steuern, ihre Marke schützen und die Einhaltung von Vorschriften sicherstellen können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342113?quality=12&learn=on)

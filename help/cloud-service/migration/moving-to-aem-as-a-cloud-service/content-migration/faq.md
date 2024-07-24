@@ -11,10 +11,10 @@ jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 399
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: e29eaefb20d466126d0d31ad8eb598b63a0cebcd
 workflow-type: tm+mt
 source-wordcount: '1884'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -91,7 +91,7 @@ Ja, dies ist möglich, erfordert jedoch eine sorgfältige Planung in Bezug auf F
    + Überprüfen Sie, ob es zulässig ist, alle Assets als Teil eines Migrationssatzes zu migrieren, und migrieren Sie dann die Sites, die diese verwenden, stufenweise.
 + Im aktuellen Status ist die Autoreninstanz aufgrund des Autoren-Aufnahmevorgangs nicht für die Inhaltserstellung verfügbar, obwohl der Inhalt auf der Veröffentlichungsebene weiterhin bereitgestellt werden kann.
    + Dies bedeutet, dass die Inhaltserstellungsaktivitäten eingefroren werden, bis die Aufnahme in der Autoreninstanz abgeschlossen ist.
-+ Benutzerinnen und Benutzer werden nicht mehr migriert, Gruppen jedoch schon.
++ Benutzer werden nicht mehr migriert, obwohl es Gruppen sind.
 
 Lesen Sie vor dem Planen der Migration die Beschreibung für die Prozesse der Auffüllextraktion und Auffüllaufnahme.
 
