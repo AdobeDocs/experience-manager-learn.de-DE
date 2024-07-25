@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: fe763bad61fba4230612d8ad46a6159e675e1529
-workflow-type: ht
-source-wordcount: '1229'
+source-git-commit: 4903b0742dca59e621707691f487a430b91e832b
+workflow-type: tm+mt
+source-wordcount: '1222'
 ht-degree: 100%
 
 ---
@@ -26,7 +26,6 @@ ht-degree: 100%
    + Strategie und Vordenkerrolle{#strategy}
       + [Experience Manager – Governance- und Personalmodelle und -archetypen](./introduction/experience-manager-governance-and-staffing-models.md)
       + [Wie Sie mit Adobe Experience Manager die Geschwindigkeit von Inhalten erhöhen](./introduction/drive-content-velocity-for-sites.md)
-      + [Beschleunigen der Geschwindigkeit von Inhalten bei AEM-Stilsystemen](./introduction/accelerate-content-velocity-aem.md)
 + Experience Cloud-Integrationen{#integrations}
    + [Integrationen](./integrations/experience-cloud.md)
    + [Adobe Target](./integrations/target.md)

@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
-source-git-commit: 6a22f523c5cf997a59a5b8579c168b641c009b20
+source-git-commit: 4903b0742dca59e621707691f487a430b91e832b
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '554'
 ht-degree: 100%
 
 ---
@@ -112,6 +112,7 @@ ht-degree: 100%
    + [Responsive Breakpoints](developing/responsive-breakpoints.md)
    + [Entwickeln mit dem Stilsystem](developing/style-system-technical-video-understand.md)
    + [Best Practices für Stilsysteme](developing/style-organization-style-system-understand-article.md)
+   + [Beschleunigen der Geschwindigkeit von Inhalten bei AEM-Stilsystemen](developing/accelerate-content-velocity-aem-style-system.md)
    + [Entwickeln für Seitenunterschiede](developing/page-diff-technical-video-develop.md)
    + [Implementieren der einfachen Suche](developing/search-tutorial-develop.md)
    + [Freigabe in Social Media](developing/social-media-sharing-technical-video-use.md)
