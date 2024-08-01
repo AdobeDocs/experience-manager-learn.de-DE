@@ -12,9 +12,9 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
+source-git-commit: 1b493d85303e539e07ba8b080ed55ef2af18bfcb
 workflow-type: tm+mt
-source-wordcount: '1968'
+source-wordcount: '1947'
 ht-degree: 100%
 
 ---
@@ -42,10 +42,6 @@ Sehen wir uns einige zusätzliche, empfohlene Maßnahmen an, die kundenseitig er
 - Konfigurieren von **Warnhinweisen** für Ratenbegrenzungs-Traffic-Filterregeln durch eine „Warnhinweisaktion“, sodass bei Auslösung der Regel eine Benachrichtigung an das Aktionszentrum gesendet wird.
 - Erhöhen der Cache-Abdeckung, indem Sie **Anfrageumwandlungen** so deklarieren, dass sie Abfrageparameter ignorieren.
 
->[!NOTE]
->
->Die [Warnhinweise zu Traffic-Filterregeln](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts) wurden noch nicht veröffentlicht. Um über das Early-Adopter-Programm Zugriff zu erhalten, senden Sie eine E-Mail an **<aemcs-waf-adopter@adobe.com>**.
-
 ### Varianten von Ratenbegrenzungs-Traffic-Regeln {#rate-limit-variations}
 
 Es gibt zwei Varianten von Traffic-Regeln für Ratenbegrenzungen:
@@ -72,7 +68,6 @@ Wie bereits erwähnt, blockiert das Adobe standardmäßig den Traffic beim CDN, 
 Idealerweise sollten Sie die Regeln konfigurieren, bevor Sie in die Produktion gehen. In der Praxis deklarieren viele Unternehmen erst dann reaktive Regeln, wenn sie auf eine Traffic-Spitze aufmerksam gemacht werden, die auf einen wahrscheinlichen Angriff hindeutet.
 
 Adobe sendet eine Traffic-Spitzen-Warnung als [Aktionszentrums-Benachrichtigung](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/actions-center), wenn ein Standardschwellenwert für den Traffic von einer einzelnen IP-Adresse für einen bestimmten PoP überschritten wird. Wenn Sie einen solchen Warnhinweis erhalten haben, wird empfohlen, eine Ratenbegrenzungs-Traffic-Filterregel zu konfigurieren. Dieser Standardwarnhinweis unterscheidet sich von den Warnhinweisen, die auf Kundenseite bei der Definition von Traffic-Filterregeln explizit aktiviert werden müssen. Dies wird in einem späteren Abschnitt erläutert.
-
 
 ## Analysieren von Traffic-Mustern {#analyze-traffic}
 

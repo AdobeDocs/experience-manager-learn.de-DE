@@ -9,10 +9,10 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: 280c9a30-e017-4bc0-9027-096aac82c22c
-source-git-commit: a12b1778413079646814cb25567abfc26a429340
+source-git-commit: b1de5c163607163bc702ea7b8ea4916c414f2a3a
 workflow-type: tm+mt
-source-wordcount: '272'
-ht-degree: 100%
+source-wordcount: '297'
+ht-degree: 93%
 
 ---
 
@@ -68,6 +68,16 @@ Wählen Sie den Knoten ``zip`` aus und legen Sie die Eigenschaften wie unten dar
 
 Wählen Sie den Knoten ``state`` aus und legen Sie die Eigenschaften wie unten dargestellt fest. Beachten Sie den fieldType von „state“ – es ist als Dropdown-Liste festgelegt
 ![state](assets/state.png)
+
+## Standardwerte für das Statusfeld festlegen
+
+Wählen Sie den Knoten ``state`` aus und fügen Sie die folgenden Eigenschaften hinzu.
+
+| Name | Typ | Wert |
+|----------|----------|---------------------|
+| enum | Zeichenfolge[] | CA,NY |
+| enumNames | Zeichenfolge[] | Kalifornien, New York |
+
 
 Die endgültige Adressblock-Komponente sieht wie folgt aus:
 

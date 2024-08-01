@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 4903b0742dca59e621707691f487a430b91e832b
+source-git-commit: e7a85e8d072d808683580a201dd10b3a847efaaa
 workflow-type: tm+mt
-source-wordcount: '1222'
-ht-degree: 100%
+source-wordcount: '1234'
+ht-degree: 99%
 
 ---
 
@@ -107,6 +107,7 @@ ht-degree: 100%
       + [Caching von Seitenvarianten](./developing/advanced/variant-caching.md)
       + [CSRF-Schutz](./developing/advanced/csrf-protection.md)
       + [Benutzerdefinierte Namespaces](./developing/advanced/custom-namespaces.md)
+      + [Geheimnisse](./developing/advanced/secrets.md)
       + [Service-Benutzende](./developing/advanced/service-users.md)
       + [Web-optimierte Bild-APIs](./developing/advanced/web-optimized-image-delivery-java-apis.md)
    + Schnelle Entwicklungsumgebung{#rde}
@@ -283,6 +284,10 @@ ht-degree: 100%
       + [PDF/A-Dienstprogramme](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [Testen der Lösung](./forms/forms-cs-assembler/test.md)
       + [Herausforderung](./forms/forms-cs-assembler/challenge.md)
+   + Integration mit Marketo{#froms-cs-with-marketo}
+      + [Einführung](./forms/forms-cs-with-marketo/part1.md)
+      + [Erstellen einer Datenquelle](./forms/forms-cs-with-marketo/part2.md)
+      + [Erstellen von Formulardatenmodellen](./forms/forms-cs-with-marketo/part3.md)
    + Speichern von Formularübermittlungen mit Blob-Index-Tags{#store-submiited-data-with-metadata-tags}
       + [Einführung](./forms/store-submiited-data-with-metadata-tags/introduction.md)
       + [Erweitern der Auswahlgruppen-Komponente](./forms/store-submiited-data-with-metadata-tags/extend-choice-group-components.md)

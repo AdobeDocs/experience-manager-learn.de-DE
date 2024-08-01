@@ -12,9 +12,9 @@ last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
 exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '548'
 ht-degree: 100%
 
 ---
@@ -38,10 +38,6 @@ Zum Durchführen dieses Tutorials benötigen Sie Folgendes:
 - [Adobe Developer-CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/), die auf Ihrem lokalen Computer installiert ist.
 
 - Lokal initialisiertes Projekt aus dem vorherigen Beispiel [Adobe I/O Runtime-Aktionen und AEM-Ereignisse](./runtime-action.md#initialize-project-for-local-development).
-
->[!IMPORTANT]
->
->AEM as a Cloud Service Eventing ist nur für registrierte Benutzende im Vorab-Release-Modus verfügbar. Um AEM Eventing in Ihrer AEM as a Cloud Service-Umgebung zu aktivieren, wenden Sie sich an das [AEM-Eventing-Team](mailto:grp-aem-events@adobe.com).
 
 ## AEM-Ereignisprozessor „action“
 

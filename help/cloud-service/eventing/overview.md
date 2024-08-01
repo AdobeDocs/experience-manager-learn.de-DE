@@ -12,9 +12,9 @@ last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
-source-git-commit: c0aa4049e846a0f24f8a5f5b014dbaf5bfc8eb2d
+source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '910'
 ht-degree: 100%
 
 ---
@@ -24,10 +24,6 @@ ht-degree: 100%
 Erfahren Sie mehr über AEM Eventing, was es ist, warum und wann es verwendet wird und sehen Sie sich Beispiele dafür an.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426686?quality=12&learn=on)
-
->[!IMPORTANT]
->
->AEM as a Cloud Service Eventing ist nur für registrierte Benutzende im Vorab-Release-Modus verfügbar. Um das AEM Eventing in Ihrer AEM as a Cloud Service-Umgebung zu aktivieren, wenden Sie sich an das <a href="mailto:grp-aem-events@adobe.com">AEM-Eventing-Team</a>.
 
 ## Worum es sich handelt
 
