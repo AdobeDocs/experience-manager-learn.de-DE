@@ -11,10 +11,10 @@ jira: KT-9359
 exl-id: f7c1f991-0486-4355-8502-cd5b038537e3
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 364d055b7b2e4f273f906c66328fc14f95321611
 workflow-type: tm+mt
 source-wordcount: '328'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -37,15 +37,16 @@ Vergewissern Sie sich, dass Sie sich in der Stilschicht befinden, und wählen Si
 Sie befinden sich im Standardzustand, wenn Sie den Stileditor für die Registerkarte öffnen, wie im Screenshot unten dargestellt
 ![navigation-tab](assets/navigation-tab.png)
 
-Legen Sie die CSS-Eigenschaften für den Standardstatus wie unten gezeigt fest. 
-| Kategorie | Eigenschaftsname | Eigenschaftswert | 
-|—|:—|:—| 
-| Dimensionen und Position | Breite | 50px | 
-| Text | Schriftstärke| Fett | 
-| Text | Farbe | #FFF | 
-|Text | Zeilenhöhe | 3 | 
-|Text | Textausrichtung | Links | 
-|Hintergrund| Farbe | #056dae |
+Legen Sie die CSS-Eigenschaften für den Standardstatus wie unten gezeigt fest.
+
+| Kategorie | Eigenschaftsname | Eigenschaftswert |
+|:---|:---|:---|
+| Dimensionen und Position | Breite | 50 px |
+| Text | Schriftstärke | Fett |
+| Text | Farbe | #FFF |
+| Text | Zeilenhöhe | 3 |
+| Text | Text ausrichten | Linksbündig |
+| Hintergrund | Farbe | #056dae |
 
 Speichern Sie Ihre Änderungen
 
