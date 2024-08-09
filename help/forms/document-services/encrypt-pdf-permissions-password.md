@@ -9,7 +9,7 @@ level: Intermediate
 jira: KT-15849
 last-substantial-update: 2024-07-19T00:00:00Z
 exl-id: 5df8581c-a44c-449c-bf3b-8cdf57635c4d
-source-git-commit: b823f9e294c42ba258049a942816f9a154a6e1a6
+source-git-commit: d01a56cd1fd3085b0230918b15b4635ba375e346
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 31%
@@ -18,7 +18,7 @@ ht-degree: 31%
 
 # PDF mit einem Berechtigungskennwort verschlüsseln
 
-Zum Kopieren, Bearbeiten oder Drucken eines PDF-Dokuments ist ein Berechtigungskennwort erforderlich, das auch als Inhaber oder Master-Kennwort bezeichnet wird. Erfahren Sie, wie Sie mit der API [DocAssuranceService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/docassurance/client/api/DocAssuranceService.html) ein Berechtigungskennwort programmgesteuert auf eine PDF anwenden
+Zum Kopieren, Bearbeiten oder Drucken eines PDF-Dokuments ist ein Berechtigungskennwort erforderlich, das auch als Inhaber oder Master-Kennwort bezeichnet wird. Erfahren Sie, wie Sie mit der API [DocAssuranceService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/docassurance/client/api/DocAssuranceService.html) programmgesteuert ein Berechtigungskennwort auf eine PDF anwenden können.
 
 Der folgende JSP-Code verschlüsselt eine PDF mit einem Berechtigungskennwort:
 
