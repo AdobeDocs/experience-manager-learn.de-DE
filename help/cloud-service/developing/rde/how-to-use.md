@@ -11,10 +11,10 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 60139d8531d65225fa1aa957f6897a6688033040
 workflow-type: tm+mt
-source-wordcount: '671'
-ht-degree: 100%
+source-wordcount: '687'
+ht-degree: 91%
 
 ---
 
@@ -49,17 +49,19 @@ $ mvn clean package
 
 ## Bereitstellen von AEM-Artefakten mit dem AEM-RDE-Plug-in
 
-Stellen wir nun mithilfe des Befehls `aem:rde:install` verschiedene AEM-Artefakte bereit.
+Stellen Sie zunächst sicher, dass das [neueste `aio` CLI-Modul installiert ist](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli).
+
+Verwenden Sie dann den Befehl `aio aem:rde:install` , um verschiedene AEM Artefakte bereitzustellen. Jetzt müssen Sie
 
 ### Bereitstellen von `all`- und `dispatcher`-Paketen
 
 Häufig werden hierzu zunächst die `all`- und `dispatcher`-Pakete durch Ausführen der folgenden Befehle bereitgestellt.
 
 ```shell
-# Install the 'all' package
+# Install the 'all' content package (zip file)
 $ aio aem:rde:install all/target/aem-guides-wknd.all-2.1.3-SNAPSHOT.zip
 
-# Install the 'dispatcher' zip
+# Install the 'dispatcher' deployment artifact (zip file)
 $ aio aem:rde:install dispatcher/target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip
 ```
 
@@ -94,12 +96,13 @@ Erweitern wir nun die Komponente `Hello World Component` und stellen diese in de
    ...
    ```
 
-1. Überprüfen Sie die Änderungen im lokalen AEM-SDK, indem Sie den Maven-Build ausführen oder einzelne Dateien synchronisieren.
+1. Überprüfen Sie die Änderungen am lokalen AEM SDK, indem Sie den Maven-Build durchführen oder einzelne Dateien synchronisieren.
 
-1. Stellen Sie die Änderungen in der RDE über das `ui.apps`-Paket oder durch Bereitstellung der einzelnen Dialog- und HTL-Dateien bereit.
+1. Stellen Sie die Änderungen im RDE über das Paket `ui.apps` bereit oder stellen Sie die einzelnen Dialog- und HTL-Dateien bereit:
 
    ```shell
    # Using 'ui.apps' package
+   
    $ cd ui.apps
    $ mvn clean package
    $ aio aem:rde:install target/aem-guides-wknd.ui.apps-2.1.3-SNAPSHOT.zip
