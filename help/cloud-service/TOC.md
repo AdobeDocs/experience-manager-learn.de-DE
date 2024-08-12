@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: e7a85e8d072d808683580a201dd10b3a847efaaa
+source-git-commit: 13657903c37b90c6d854dcba317dc1801d869de0
 workflow-type: tm+mt
-source-wordcount: '1234'
-ht-degree: 99%
+source-wordcount: '1254'
+ht-degree: 97%
 
 ---
 
@@ -45,7 +45,6 @@ ht-degree: 99%
    + [CI/CD Produktions-Pipeline](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD Produktionsfremde Pipeline](./cloud-manager/cicd-non-production-pipeline.md)
    + [Aktivität](./cloud-manager/activity.md)
-   + [Benutzerdefinierte Domain-Namen](./cloud-manager/custom-domain-names.md)
    + Dev Ops{#devops}
       + [Bereitstellen von Code](./cloud-manager/devops/deploy-code.md)
       + [Zusammenführen von Projekten](./cloud-manager/devops/merge-projects.md)
@@ -107,6 +106,7 @@ ht-degree: 99%
       + [Caching von Seitenvarianten](./developing/advanced/variant-caching.md)
       + [CSRF-Schutz](./developing/advanced/csrf-protection.md)
       + [Benutzerdefinierte Namespaces](./developing/advanced/custom-namespaces.md)
+      + [Sling-Modelle aus HTL parametrisieren](./developing/advanced/sling-model-parameters.md)
       + [Geheimnisse](./developing/advanced/secrets.md)
       + [Service-Benutzende](./developing/advanced/service-users.md)
       + [Web-optimierte Bild-APIs](./developing/advanced/web-optimized-image-delivery-java-apis.md)
@@ -138,6 +138,10 @@ ht-degree: 99%
       + Risiken{#risks}
          + [Durchlauf-Warnungen](./debugging/cloud-service/risks/traversals.md)
 + Inhaltsbereitstellung{#content-delivery}
+   + [Benutzerspezifischer Domänenname](./content-delivery/custom-domain-names.md)
+   + [Benutzerdefinierter Domänenname mit von Adobe verwaltetem CDN](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
+   + [Benutzerdefinierter Domänenname mit Kunden-CDN](./content-delivery/custom-domain-names-with-customer-managed-cdn.md)
+   + [Caching](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
    + [URL-Umleitungen](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=de){target=_blank}
 + Caching{#caching}
    + [Überblick](./caching/overview.md)
