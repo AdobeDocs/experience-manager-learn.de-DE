@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 07225f1ae4455e2fa69c8e488851361c725fe9e8
+source-git-commit: 7ef37a71f1daefee484478c3194907d5ce918af4
 workflow-type: tm+mt
-source-wordcount: '1258'
-ht-degree: 97%
+source-wordcount: '1275'
+ht-degree: 96%
 
 ---
 
@@ -152,6 +152,7 @@ ht-degree: 97%
    + Anleitung{#how-to}
       + [Aktivieren des Cachings](./caching/how-to/enable-caching.md)
       + [Deaktivieren des Cachings](./caching/how-to/disable-caching.md)
+      + [Cache leeren](./caching/how-to/purge-cache.md)
 + Zugriff auf AEM{#accessing}
    + [Überblick](./accessing/overview.md)
    + [Adobe IMS-Benutzende](./accessing/adobe-ims-users.md)
@@ -259,6 +260,10 @@ ht-degree: 97%
       + [2 – Einrichtung](./forms/create-address-block-component/set-up.md)
       + [3 – Erstellen der Komponente](./forms/create-address-block-component/creating-address-component.md)
       + [4 – Bereitstellen der Komponente](./forms/create-address-block-component/deploy-your-project.md)
+   + Erstellen einer klickbaren Bildkomponente{#clickable-image-component}
+      + [1 – Einführung](./forms/clickable-image-component/introduction.md)
+      + [2 – Erstellen der Komponente](./forms/clickable-image-component/create-component.md)
+      + [3 - Handle-Klickereignis](./forms/clickable-image-component/handle-click-event.md)
    + AEM Forms und Analytics{#forms-and-analytics}
       + [Einführung](./forms/form-data-analytics/introduction.md)
       + [Erstellen von Datenelementen](./forms/form-data-analytics/data-elements.md)
@@ -421,3 +426,4 @@ ht-degree: 97%
          + [Integrieren von AEM Assets](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
          + [Generische KI für AEM Sites](./expert-resources/cloud-5/season-3/cloud5-generative-ai-for-aem-sites.md)
          + [Einführung in den universellen Editor](./expert-resources/cloud-5/season-3/cloud5-exploring-universal-editor.md)
+         + [Importieren von Websites](./expert-resources/cloud-5/season-3/cloud5-import-sites-to-edge-delivery-services.md)
