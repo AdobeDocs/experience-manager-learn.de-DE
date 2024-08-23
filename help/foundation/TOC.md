@@ -4,10 +4,10 @@ breadcrumb-title: AEM Foundation-Tutorials
 user-guide-description: Eine Sammlung von Videos und Tutorials für die Adobe Experience Manager Foundation.
 sub-product: Experience Manager
 index: y
-source-git-commit: a504ace72b1b90c6e7c711a939595b95f24733e6
+source-git-commit: 1e1a33986e202ce2af9cf2d03eca7895514465df
 workflow-type: tm+mt
-source-wordcount: '233'
-ht-degree: 100%
+source-wordcount: '241'
+ht-degree: 96%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 100%
 # AEM Foundation-Videos und -Tutorials {#foundation}
 
 + [Übersicht](./overview.md)
++ [POC](./poc.md)
 + Administration {#administration}
    + [Gründe für die Aktualisierung von AEM](./administration/understand-reasons-to-upgrade.md)
    + [Verwenden Sie oak-run.jar zum Verwalten von Indizes](./administration/use-oak-run-jar-to-manage-indexes.md)
@@ -26,6 +27,7 @@ ht-degree: 100%
    + [OAuth-Bereiche](authentication/oauth-code-sample-develop.md)
    + [Grundlegendes zur Authentifizierung](authentication/authentication-support-article-understand.md)
    + [Überblick darüber, was IMS-Authentifizierung in AMS ist](authentication/adobe-ims-authentication-technical-video-understand.md)
+   + [Migration von JWT-To-OAuth-Anmeldedaten](authentication/jwt-to-oauth-migration.md)
 + Adobe Cloud Manager{#cloud-manager}
    + [Überblick darüber, was Adobe Cloud Manager ist](./cloud-manager/understand-cloud-manager-for-aem.md)
    + [CI/CD-Pipelines](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
@@ -48,6 +50,7 @@ ht-degree: 100%
    + [ModSecurity CRS-Schutz vor DoS-Angriffen](./security/modsecurity-crs-dos-attack-protection.md)
    + [HTTPS-Verbindungen zu APIs mit privaten Zertifikaten](./security/call-internal-apis-having-private-certificate.md)
    + [Gegenseitige TLS-Authentifizierung (mTLS) von AEM](./security/mutual-tls-authentication.md)
+   + [Migration der JWT-To-OAuth-Anmeldedaten](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
 + Workflow {#workflow}
    + [Verwenden des Workflow-Editors](./workflow/use-the-workflow-editor.md)
    + [Verwenden des Workflows](./workflow/use-workflow.md)
