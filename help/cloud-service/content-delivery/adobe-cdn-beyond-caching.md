@@ -1,6 +1,6 @@
 ---
 title: Adobe CDN - Erweiterte Funktionen, die über das Zwischenspeichern hinausgehen
-description: Erfahren Sie mehr über die erweiterten Funktionen von Adobe CDN, die über das Caching hinausgehen, z. B. die Konfiguration von Traffic auf dem CDN, CDN-Fehlerseiten und mehr.
+description: Erfahren Sie mehr über die erweiterten Funktionen von Adobe CDN, die über das Caching hinausgehen, wie z. B. das Konfigurieren von Traffic im CDN, Einrichten von Token und Anmeldedaten, CDN-Fehlerseiten und mehr.
 version: Cloud Service
 feature: Website Performance, CDN Cache
 topic: Architecture, Performance, Content Management
@@ -11,17 +11,17 @@ duration: 0
 last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: cc7fa9bbaa775b0216c839be079504c2b5467878
+source-git-commit: 10f9ca66a1669e1207237128469852ec7514d110
 workflow-type: tm+mt
-source-wordcount: '533'
-ht-degree: 1%
+source-wordcount: '546'
+ht-degree: 0%
 
 ---
 
 
 # Adobe CDN - Erweiterte Funktionen, die über das Zwischenspeichern hinausgehen
 
-Erfahren Sie mehr über die erweiterten Funktionen von Adobe CDN, die über das Caching hinausgehen, z. B. die Konfiguration von Traffic auf dem CDN, CDN-Fehlerseiten und mehr.
+Erfahren Sie mehr über die erweiterten Funktionen des Adobe Content Delivery Network (CDN), die über das Caching hinausgehen, z. B. Konfigurieren von Traffic im CDN, Einrichten von Token und Anmeldedaten, CDN-Fehlerseiten und mehr.
 
 Neben der Zwischenspeicherung von Inhalten bietet Adobe CDN mehrere erweiterte Funktionen, mit denen Sie die Leistung Ihrer Website optimieren können. Zu diesen Funktionen gehören:
 
@@ -50,8 +50,7 @@ Im Folgenden werden die wichtigsten Funktionen im Zusammenhang mit _Konfiguriere
 
 - **API-Token bereinigen**: Ermöglicht die Erstellung eines eigenen Bereinigungsschlüssels zum Bereinigen einer einzelnen oder Gruppe oder aller Ressourcen aus dem Cache.
 - **Grundlegende Authentifizierung**: Ein einfacher Authentifizierungsmechanismus, wenn Sie den Zugriff auf Ihre Website oder einen Teil davon beschränken möchten. Meist im Rahmen verschiedener Überprüfungsprozesse erforderlich, bevor sie live geschaltet werden.
-- **HTTP-Header-Validierung**: Wird verwendet, wenn ein kundenverwaltetes CDN Traffic an Adobe-CDN weiterleitet. Das Adobe CDN validiert die eingehende Anfrage basierend auf dem Header-Wert `X-AEM-Edge-Key` .
-Ermöglicht die Erstellung eines eigenen Werts für die Kopfzeile `X-AEM-Edge-Key` .
+- **HTTP-Header-Validierung**: Wird verwendet, wenn ein kundenverwaltetes CDN Traffic an Adobe-CDN weiterleitet. Das Adobe CDN validiert die eingehende Anfrage basierend auf dem Header-Wert `X-AEM-Edge-Key` . Ermöglicht die Erstellung eines eigenen Werts für die Kopfzeile `X-AEM-Edge-Key` .
 
 ## CDN-Fehlerseiten
 
@@ -87,7 +86,7 @@ data:
           location: /us/en/top3.html
 ```
 
-## Zusätzliche Ressourcen
+## Verwandte Tutorials
 
 [Schutz von Websites mit Traffic-Filterregeln](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
 
@@ -100,7 +99,3 @@ data:
 [Konfigurieren von CDN-Anmeldeinformationen und Authentifizierung](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 
 [Konfigurieren von CDN-Fehlerseiten](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
-
-
-
-
