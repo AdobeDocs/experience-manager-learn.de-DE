@@ -9,10 +9,10 @@ level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 129
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
 workflow-type: tm+mt
-source-wordcount: '339'
-ht-degree: 100%
+source-wordcount: '357'
+ht-degree: 88%
 
 ---
 
@@ -196,10 +196,18 @@ public class GetReaderExtendedPDF extends SlingAllMethodsServlet {
 
 Führen Sie die folgenden Schritte aus, um dies auf Ihrem lokalen Server zu testen:
 1. [Laden Sie das DevelopingWithServiceUser-Bundle herunter und installieren Sie es.](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [Laden Sie das Bundle ares.ares.core-ares herunter und installieren Sie es ](assets/ares.ares.core-ares.jar). Dies umfasst den benutzerdefinierten Dienst und das Servlet, um Verwendungsrechte anzuwenden und das PDF-Dokument zurückzustreamen.
+
+1. Fügen Sie mithilfe der configMgr-Konsole den folgenden Eintrag zum Apache Sling User Mapper Service hinzu, wie unten dargestellt.
+
+```
+       DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
+```
+
+![user-mapper](assets/user-mapper-service.PNG)
+1. [Laden Sie das Bundle ares.ares.core-ares herunter und installieren Sie es ](assets/ares.ares.core-ares.jar). Dies verfügt über den benutzerdefinierten Dienst und das Servlet, um Verwendungsrechte anzuwenden und das PDF-Dokument zurückzustreamen.
 1. [Importieren Sie die Client-Bibliotheken und die benutzerdefinierte Übermittlung](assets/applyaresdemo.zip)
 1. [Importieren Sie das adaptive Formular.](assets/applyaresform.zip)
-1. Fügen Sie der bzw. dem Benutzenden „fd-service“ das Reader Extensions-Zertifikat hinzu. Stellen Sie sicher, dass der Alias „ares“ ist.
+1. Fügen Sie der bzw. dem Benutzenden „fd-service“ das Reader Extensions-Zertifikat hinzu. Stellen Sie sicher, dass der Alias &quot;**ares**&quot; lautet.
 1. [Zeigen Sie eine Vorschau des adaptiven Formulars an.](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
 1. Wählen Sie die entsprechenden Berechtigungen aus und laden Sie die PDF-Datei hoch.
 1. Klicken Sie auf „Übermitteln“, um eine PDF mit Reader Extension zu erhalten.
