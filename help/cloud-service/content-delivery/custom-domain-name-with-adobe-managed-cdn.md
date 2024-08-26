@@ -12,10 +12,10 @@ last-substantial-update: 2024-08-12T00:00:00Z
 jira: KT-15121
 thumbnail: KT-15121.jpeg
 exl-id: 8936c3ae-2daf-4d0f-b260-28376ae28087
-source-git-commit: 07225f1ae4455e2fa69c8e488851361c725fe9e8
+source-git-commit: f92e66d6edc929bff1e8cae6adb7f408352aeb77
 workflow-type: tm+mt
-source-wordcount: '728'
-ht-degree: 60%
+source-wordcount: '726'
+ht-degree: 59%
 
 ---
 
@@ -150,7 +150,7 @@ Wenn Sie jedoch die **Stammdomäne** verwenden, müssen Sie einen APEX-Record-Ty
 
 Um zu verifizieren, ob auf die Site über den benutzerdefinierten Domain-Nnamen zugegriffen werden kann, öffnen Sie einen Webbrowser und navigieren Sie zur URL der benutzerdefinierten Domain. Stellen Sie sicher, dass die Site zugänglich ist und der Browser eine sichere Verbindung durch ein Schlosssymbol anzeigt.
 
-## Vollständiges Video
+## End-to-End-Video
 
 Sie können sich auch das vollständige Video ansehen. Dieses liefert Ihnen einen allgemeinen Überblick und beschreibt die Voraussetzungen sowie die obigen Schritte zum Hinzufügen eines benutzerdefinierten Domain-Namens zu einer AEM as a Cloud Service-gehosteten Site.
 
