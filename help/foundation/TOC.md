@@ -7,7 +7,7 @@ index: y
 source-git-commit: 231ca44f9708ab0b239e4cbf363e8cf2695eedc2
 workflow-type: tm+mt
 source-wordcount: '240'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 97%
    + [OAuth-Bereiche](authentication/oauth-code-sample-develop.md)
    + [Grundlegendes zur Authentifizierung](authentication/authentication-support-article-understand.md)
    + [Überblick darüber, was IMS-Authentifizierung in AMS ist](authentication/adobe-ims-authentication-technical-video-understand.md)
-   + [Migration von JWT-To-OAuth-Anmeldedaten](authentication/jwt-to-oauth-migration.md)
+   + [Migration der Anmeldedaten von JWT zu OAuth](authentication/jwt-to-oauth-migration.md)
 + Adobe Cloud Manager{#cloud-manager}
    + [Überblick darüber, was Adobe Cloud Manager ist](./cloud-manager/understand-cloud-manager-for-aem.md)
    + [CI/CD-Pipelines](./cloud-manager/use-the-cicd-pipeline-in-cloud-manager-for-aem.md)
@@ -49,7 +49,7 @@ ht-degree: 97%
    + [ModSecurity CRS-Schutz vor DoS-Angriffen](./security/modsecurity-crs-dos-attack-protection.md)
    + [HTTPS-Verbindungen zu APIs mit privaten Zertifikaten](./security/call-internal-apis-having-private-certificate.md)
    + [Gegenseitige TLS-Authentifizierung (mTLS) von AEM](./security/mutual-tls-authentication.md)
-   + [Migration der JWT-To-OAuth-Anmeldedaten](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
+   + [Migration der Anmeldedaten von JWT zu OAuth](https://experienceleague.adobe.com/de/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
 + Workflow {#workflow}
    + [Verwenden des Workflow-Editors](./workflow/use-the-workflow-editor.md)
    + [Verwenden des Workflows](./workflow/use-workflow.md)
