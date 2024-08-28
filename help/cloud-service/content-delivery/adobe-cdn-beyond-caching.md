@@ -11,7 +11,7 @@ duration: 0
 last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: 10f9ca66a1669e1207237128469852ec7514d110
+source-git-commit: 65e77a329226ca7c7ccb1e583d2a045074feeb3d
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%
@@ -31,12 +31,13 @@ Neben der Zwischenspeicherung von Inhalten bietet Adobe CDN mehrere erweiterte F
 
 Diese Funktionen sind **Self-Service**-Funktionen. In der Datei `cdn.yaml` Ihres AEM-Projekts konfiguriert und mithilfe der Cloud Manager-Konfigurationspipeline bereitgestellt.
 
+>[!VIDEO](https://video.tv.adobe.com/v/3433104?quality=12&learn=on)
+
 ## Konfigurieren des Traffics auf dem CDN
 
 Im Folgenden werden die wichtigsten Funktionen im Zusammenhang mit _Konfigurieren des Traffics am CDN_ beschrieben:
 
-- **DoS-Angriffsprävention:** Adobe CDN absorbiert DoS-Angriffe im Netzwerk
--Ebene, wodurch verhindert wird, dass sie Ihren Herkunftsserver erreichen.
+- **DoS-Angriffsprävention:** Adobe CDN absorbiert DoS-Angriffe auf der Netzwerkschicht und hindert sie daran, Ihren Herkunftsserver zu erreichen.
 - **Ratenbegrenzung:** Um zu verhindern, dass Ihr Herkunftsserver mit zu vielen Anforderungen überlastet wird, können Sie die Ratenbegrenzung für das CDN konfigurieren.
 - **Web-Anwendungs-Firewall (WAF):** Die WAF schützt Ihre Website vor allgemeinen Sicherheitslücken durch Webanwendungen wie SQL-Injection, Cross-Site-Scripting und mehr. Für die Verwendung dieser Funktion ist die Lizenz für Enhanced Security oder WAF-DDoS Protection erforderlich.
 - **Anforderungsumwandlung:** Ändern Sie eingehende Anforderungen wie das Festlegen oder Aufheben von Kopfzeilen, das Ändern von Abfrageparametern, Cookies und mehr.
