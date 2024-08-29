@@ -14,7 +14,7 @@ duration: 3508
 source-git-commit: e7a85e8d072d808683580a201dd10b3a847efaaa
 workflow-type: tm+mt
 source-wordcount: '1301'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 99%
 >title="Einrichten von Entwicklungs-Tools"
 >abstract="Für Entwicklungsaufgaben in Adobe Experience Manager (AEM) müssen nur wenige Entwicklungs-Tools auf dem Computer der Entwicklungsperson installiert und eingerichtet werden. Zu diesen Tools gehören u. a. Java, Maven, Adobe I/O CLI und eine Entwicklungsumgebung (IDE)."
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines" text="Entwicklungsrichtlinien"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk" text="Entwicklungsgrundlagen"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk" text="Entwicklungsgrundlagen"
 
 Für Entwicklungsaufgaben in Adobe Experience Manager (AEM) müssen nur wenige Entwicklungs-Tools auf dem Computer des Entwicklers bzw. der Entwicklerin installiert und eingerichtet werden. Diese Tools die Entwicklung und den Aufbau von AEM.
 

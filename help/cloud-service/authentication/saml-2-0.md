@@ -458,7 +458,7 @@ Um diese Umgestaltung der ACL zu vermeiden, wurde eine standardmäßige [Migrati
 ### Speicherung von Mitgliedschaften in lokalen und externen Gruppen mit dynamischer Gruppenmitgliedschaft
 
 Bei lokalen Gruppen werden die Gruppenmitglieder im Oak-Attribut gespeichert: `rep:members`. Das -Attribut enthält die Liste der UID jedes Gruppenmitglieds. Weitere Details finden Sie [hier](https://jackrabbit.apache.org/oak/docs/security/user/membership.html#member-representation-in-the-repository).
-Beispiel:
+Zum Beispiel:
 
 ```
 {
