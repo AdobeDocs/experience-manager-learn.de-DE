@@ -9,10 +9,10 @@ level: Experienced
 exl-id: 58582acd-cabb-4e28-9fd3-598d3cbac43c
 last-substantial-update: 2020-01-07T00:00:00Z
 duration: 138
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
 workflow-type: tm+mt
-source-wordcount: '486'
-ht-degree: 100%
+source-wordcount: '497'
+ht-degree: 93%
 
 ---
 
@@ -127,9 +127,18 @@ public Document generateMultiplePdfs(HashMap < String, String > templateMap, Has
 
 Um diese Funktion auf Ihrem Server zu testen, befolgen Sie die folgenden Anweisungen:
 
-* [Laden Sie den Inhalt der ZIP-Datei herunter und entpacken Sie ihn in Ihr Dateisystem](assets/mult-records-template-and-xml-file.zip). Diese ZIP-Datei enthält die Vorlage und die XML-Datendatei.
+* [Laden Sie die Beispiel-Assets herunter](assets/mult-records-template-and-xml-file.zip). Diese ZIP-Datei enthält die Vorlage und die XML-Datendatei.
+* [Importieren Sie den ]
 * [Lassen Sie Ihren Browser auf die Felix-Web-Konsole verweisen](http://localhost:4502/system/console/bundles).
 * [Stellen Sie das DevelopingWithServiceUser-Bundle bereit](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar).
+* Fügen Sie den folgenden Eintrag im Apache Sling Service User Mapper Service mithilfe von configMgr hinzu.
+
+```java
+DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
+```
+
+![user-mapper-service](assets/user-mapper-service-fd-service.png)
+
 * [Stellen Sie das benutzerdefinierte AEMFormsDocumentServices-Bundle bereit](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar). Das benutzerdefinierte Bundle generiert die PDFs mithilfe der OutputService-API.
 * [Lassen Sie Ihren Browser auf Package Manager verweisen](http://localhost:4502/crx/packmgr/index.jsp).
 * [Importieren und installieren Sie das Paket](assets/generate-multiple-pdf-from-xml.zip). Dieses Paket enthält eine HTML-Seite, auf der Sie die Vorlage und die Datendateien ablegen können.

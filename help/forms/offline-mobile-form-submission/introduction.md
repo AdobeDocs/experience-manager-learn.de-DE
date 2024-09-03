@@ -1,5 +1,5 @@
 ---
-title: Einführung in das Auslösen des AEM-Workflows für die Übermittlung von HTML5-Formularen
+title: Einführung in den Trigger AEM Workflow zur HTML 5-Formularübermittlung
 description: Fahren Sie mit dem Ausfüllen des Mobile-Formulars im Offline-Modus fort und übermitteln Sie das Mobile-Formular, um den AEM-Workflow auszulösen.
 feature: Mobile Forms
 doc-type: article
@@ -9,11 +9,13 @@ role: Developer
 level: Experienced
 exl-id: 88295af5-3022-4462-9194-46d8c979bc8b
 last-substantial-update: 2021-04-07T00:00:00Z
+jira: kt-16133
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 342
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 100%
+source-wordcount: '213'
+ht-degree: 96%
 
 ---
 
@@ -26,8 +28,12 @@ Um diesen Anwendungsfall zu erfüllen, müssen wir die folgenden Schritte ausfü
 * Verarbeiten der PDF-Übermittlung von Acrobat/Reader
 * Auslösen des Adobe Experience Manager(AEM)-Workflows zum Überprüfen der gesendeten PDF
 
-In diesem Tutorial werden die Schritte erläutert, die zum Erreichen des oben genannten Anwendungsbeispiels erforderlich sind. Beispiel-Code und -Assets im Zusammenhang mit diesem Tutorial sind [hier verfügbar.](part-four.md)
+In diesem Tutorial werden die Schritte erläutert, die zum Erreichen des oben genannten Anwendungsbeispiels erforderlich sind. Beispiel-Code und -Assets im Zusammenhang mit diesem Tutorial sind [hier verfügbar.](./deploy-assets.md)
 
 Im folgenden Video erhalten Sie einen Überblick über den Anwendungsfall
 
 >[!VIDEO](https://video.tv.adobe.com/v/29677?quality=12&learn=on)
+
+## Nächste Schritte
+
+[Erstellen eines benutzerdefinierten Profils](./custom-profile.md)

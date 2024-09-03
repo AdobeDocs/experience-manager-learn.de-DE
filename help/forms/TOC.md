@@ -8,9 +8,9 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: d440662bcfbc8fdea8c1b0e8af7f653b1f8667f9
+source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
 workflow-type: tm+mt
-source-wordcount: '2086'
+source-wordcount: '2089'
 ht-degree: 99%
 
 ---
@@ -224,10 +224,11 @@ ht-degree: 99%
    + [Bereitstellen von Beispiel-Assets](storing-retrieving-form-data/part6.md)
 + Auslösen von AEM Workflows aus der Übermittlung mobiler Formulare{#offline-mobile-form-submission}
    + [Einführung](offline-mobile-form-submission/introduction.md)
-   + [Benutzerdefiniertes Profil](offline-mobile-form-submission/part-one.md)
-   + [Handhabung von PDF-Übermittlung](offline-mobile-form-submission/part-two.md)
-   + [Workflow zur Überprüfung des PDFs](offline-mobile-form-submission/part-three.md)
-   + [Bereitstellung auf Ihrem System](offline-mobile-form-submission/part-four.md)
+   + [Benutzerdefiniertes Profil](offline-mobile-form-submission/custom-profile.md)
+   + [Formularübermittlung handhaben](offline-mobile-form-submission/handle-form-submission.md)
+   + [Gesendete Daten speichern](offline-mobile-form-submission/author-servlet.md)
+   + [Workflow zur Überprüfung des PDFs](offline-mobile-form-submission/review-workflow.md)
+   + [Bereitstellung auf Ihrem System](offline-mobile-form-submission/deploy-assets.md)
 + Abfragen von Formularübermittlungen{#query-form-submissions}
    + [Einführung](query-form-submissions/introduction.md)
    + [Erstellen durchsuchbarer Felder](query-form-submissions/part1.md)
