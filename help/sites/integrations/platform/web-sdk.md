@@ -14,20 +14,20 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1303
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: b57fb7ce9483dbfe206de7b89e6cf8dba72429a7
 workflow-type: tm+mt
-source-wordcount: '1229'
-ht-degree: 100%
+source-wordcount: '1248'
+ht-degree: 84%
 
 ---
 
 # Integrieren von AEM Sites und Experience Platform Web SDK
 
-Erfahren Sie, wie Sie AEM as a Cloud Service mit dem Experience Platform [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=de) integrieren. Dieser grundlegende Schritt ist für die Integration von Adobe Experience Cloud-Produkten wie Adobe Analytics, Target oder neueren innovativen Produkten wie Real-time Customer Data Platform, Customer Journey Analytics und Journey Optimizer von entscheidender Bedeutung.
+Erfahren Sie, wie Sie AEM as a Cloud Service mit dem Experience Platform [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/web-sdk/home.html) integrieren. Dieser grundlegende Schritt ist für die Integration von Adobe Experience Cloud-Produkten wie Adobe Analytics, Target oder neueren innovativen Produkten wie Real-time Customer Data Platform, Customer Journey Analytics und Journey Optimizer von entscheidender Bedeutung.
 
-Sie lernen auch, wie Sie Seitenaufrufdaten für das [WKND – Beispielprojekt für Adobe Experience Manager](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) in [Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=de) sammeln und senden.
+Sie lernen auch, wie Sie Seitenaufrufdaten für das [WKND – Beispielprojekt für Adobe Experience Manager](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) in [Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home) sammeln und senden.
 
-Nach Abschluss dieser Einrichtung haben Sie eine solide Grundlage implementiert. Außerdem sind Sie bereit, die Implementierung von Experience Platform mit Anwendungen wie [Real-Time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=de), [Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=de), und [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=de) voranzutreiben. Die erweiterte Implementierung trägt durch die Standardisierung der Web- und Kundendaten zu einer besseren Interaktion mit der Kundschaft bei.
+Nach Abschluss dieser Einrichtung haben Sie eine solide Grundlage implementiert. Außerdem sind Sie bereit, die Implementierung von Experience Platform mit Anwendungen wie [Real-Time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=de), [Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/en/docs/customer-journey-analytics), und [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/en/docs/journey-optimizer) voranzutreiben. Die erweiterte Implementierung trägt durch die Standardisierung der Web- und Kundendaten zu einer besseren Kundeninteraktion bei.
 
 ## Voraussetzungen
 
@@ -47,7 +47,7 @@ In **Experience Platform**:
 + Zugriff auf **Datenströme** unter Datenerfassung
 + Zugriff auf **Tags** unter Datenerfassung
 
-Falls Sie nicht über die erforderlichen Berechtigungen verfügen, können Ihre Systemadmins über [Adobe Admin Console](https://adminconsole.adobe.com/) die erforderlichen Berechtigungen erteilen.
+Falls Sie nicht über die erforderlichen Berechtigungen verfügen, kann Ihr Systemadministrator, der [Adobe Admin Console](https://adminconsole.adobe.com/) verwendet, die erforderlichen Berechtigungen erteilen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418856?quality=12&learn=on)
 
@@ -55,14 +55,14 @@ Falls Sie nicht über die erforderlichen Berechtigungen verfügen, können Ihre 
 
 Mit dem Experience-Datenmodell (XDM)-Schema können Sie die Kundenerlebnisdaten standardisieren. Um die **WKND-Seitenaufrufe** zu erfassen, erstellen Sie ein XDM-Schema und verwenden die von Adobe bereitgestellten Feldergruppen `AEP Web SDK ExperienceEvent` für die Web-Datenerfassung.
 
-Es gibt allgemeine und branchenspezifische Datenmodelle, z. B. für den Einzelhandel, Finanzdienstleistungen, das Gesundheitswesen usw. Weitere Informationen finden Sie in der [Übersicht über Branchendatenmodelle](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/industries/overview.html?lang=de).
+Es gibt allgemeine und branchenspezifische Datenmodelle, z. B. für den Einzelhandel, Finanzdienstleistungen, das Gesundheitswesen usw. Weitere Informationen finden Sie in der [Übersicht über Branchendatenmodelle](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/industries/overview).
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418894?quality=12&learn=on)
 
-Erfahren Sie mehr über das XDM-Schema und verwandte Konzepte wie Feldergruppen, Typen, Klassen und Datentypen aus der [XDM-Systemübersicht](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de).
+Erfahren Sie mehr über das XDM-Schema und verwandte Konzepte wie Feldergruppen, Typen, Klassen und Datentypen in der [XDM-Systemübersicht](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home).
 
-Die [XDM-Systemübersicht](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=de) ist eine großartige Ressource, um mehr über das XDM-Schema und verwandte Konzepte wie Feldergruppen, Typen, Klassen und Datentypen zu erfahren. Sie bietet ein umfassendes Verständnis des XDM-Datenmodells und davon, wie XDM-Schemata erstellt und verwaltet werden, um Daten im gesamten Unternehmen zu standardisieren. Lernen Sie das XDM-Schema besser kennen und erfahren Sie, wie es Ihre Datenerfassungs- und -verwaltungsprozesse unterstützen kann.
+Die [XDM-Systemübersicht](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home) ist eine großartige Ressource, um mehr über das XDM-Schema und verwandte Konzepte wie Feldergruppen, Typen, Klassen und Datentypen zu erfahren. Es bietet ein umfassendes Verständnis des XDM-Datenmodells und wie XDM-Schemas erstellt und verwaltet werden, um Daten im gesamten Unternehmen zu standardisieren. Erfahren Sie mehr darüber, wie Sie das XDM-Schema besser verstehen und wie es Ihre Datenerfassungs- und -verwaltungsprozesse nutzen kann.
 
 ## Erstellen eines Datenstroms – Experience Platform
 
@@ -71,14 +71,14 @@ Ein Datenstrom weist das Platform Edge Network an, wohin die erfassten Daten ges
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418895?quality=12&learn=on)
 
-Machen Sie sich mit dem Konzept von Datenströmen und verwandten Themen wie Data Governance und Konfiguration vertraut, indem Sie die Seite [Datenspeicher-Übersicht](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html?lang=de) besuchen.
+Machen Sie sich mit dem Konzept von Datenströmen und verwandten Themen wie Data Governance und Konfiguration vertraut, indem Sie die Seite [Datenspeicher-Übersicht](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=de) besuchen.
 
 ## Erstellen einer Tag-Eigenschaft – Experience Platform
 
 Erfahren Sie, wie Sie in Experience Platform eine Tag-Eigenschaft erstellen, um die JavaScript-Bibliothek des Web SDK zur WKND-Website hinzuzufügen. Die neu definierte Tag-Eigenschaft verfügt über die folgenden Ressourcen:
 
 + Tag-Erweiterungen: [Core](https://exchange.adobe.com/apps/ec/100223/adobe-launch-core-extension) und [Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/106387/aep-web-sdk)
-+ Datenelemente: Die Datenelemente des benutzerdefinierten Code-Typs, die den Seitennamen, den Site-Abschnitt und den Hostnamen mithilfe der Datenschicht der Adobe Client-WKND-Site extrahieren. Auch das Datenelement vom XDM-Objekttyp, das mit dem neu erstellten WKND-XDM-Schema übereinstimmt, wurde in einem früheren Schritt [Erstellen eines XDM-Schemas](#create-xdm-schema---experience-platform) erstellt.
++ Datenelemente: Die Datenelemente des benutzerdefinierten Code-Typs, die den Seitennamen, den Site-Abschnitt und den Hostnamen mithilfe der Datenschicht der Adobe Client-WKND-Site extrahieren. Außerdem ist das Datenelement vom Typ XDM-Objekt , das dem neu erstellten WKND XDM-Schema-Build-in des früheren Schritts [XDM-Schema erstellen](#create-xdm-schema---experience-platform) entspricht.
 + Regel: Senden von Daten an das Platform Edge Network bei jedem Besuch einer WKND-Web-Seite unter Verwendung des von der Adobe Client-Datenschicht ausgelösten Ereignisses `cmp:show`.
 
 Beim Erstellen und Veröffentlichen der Tag-Bibliothek mit dem **Veröffentlichungsfluss** können Sie die Schaltfläche **Alle geänderten Ressourcen hinzufügen** verwenden. So wählen Sie alle Ressourcen wie Datenelemente, Regeln und Tag-Erweiterungen aus, anstatt eine einzelne Ressource zu identifizieren und auszuwählen. Während der Entwicklungsphase können Sie die Bibliothek auch nur in der _Entwicklungsumgebung_ veröffentlichen und sie dann verifizieren und in die _Staging_- oder _Produktionsumgebung_ übertragen.
@@ -168,19 +168,23 @@ Beim Erstellen und Veröffentlichen der Tag-Bibliothek mit dem **Veröffentlichu
 +++
 
 
-Die [Tags-Übersicht](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de) bietet umfassende Kenntnisse zu wichtigen Konzepten wie Datenelementen, Regeln und Erweiterungen.
+Die [Tags-Übersicht](https://experienceleague.adobe.com/de/docs/experience-platform/tags/home) bietet umfassende Kenntnisse zu wichtigen Konzepten wie Datenelementen, Regeln und Erweiterungen.
 
-Weitere Informationen zur Integration von AEM-Kernkomponenten in die Adobe Client-Datenschicht finden Sie im [Handbuch zum Verwenden der Adobe Client-Datenschicht mit AEM-Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=de).
+Weitere Informationen zur Integration von AEM-Kernkomponenten in die Adobe Client-Datenschicht finden Sie im [Handbuch zum Verwenden der Adobe Client-Datenschicht mit AEM-Kernkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview).
 
 ## Verbinden der Tag-Eigenschaft mit AEM
 
-Erfahren Sie, wie Sie die kürzlich erstellte Tag-Eigenschaft über Adobe IMS und Tags in der Adobe Experience Platform-Konfiguration in AEM mit AEM verknüpfen. Wenn eine AEM as a Cloud Service-Umgebung eingerichtet ist, werden mehrere Konfigurationen des technischen Adobe IMS-Kontos automatisch generiert, einschließlich Tags. Für AEM Version 6.5 müssen Sie jedoch eine manuell konfigurieren.
+Erfahren Sie, wie Sie die kürzlich erstellte Tag-Eigenschaft über Adobe IMS und Tags in der Adobe Experience Platform-Konfiguration in AEM mit AEM verknüpfen. Wenn eine AEM as a Cloud Service-Umgebung eingerichtet ist, werden mehrere Konfigurationen des technischen Adobe IMS-Kontos automatisch generiert, einschließlich Tags. Eine schrittweise Anleitung finden Sie unter [Verbinden von AEM Sites mit der Tag-Eigenschaft mit IMS](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/connect-aem-tag-property-using-ims).
+
+Für AEM Version 6.5 müssen Sie jedoch eine manuell konfigurieren.
+
+
 
 Nach Verknüpfung der Tag-Eigenschaft kann die WKND-Site die JavaScript-Bibliothek der Tag-Eigenschaft mithilfe der Tags in der Adobe Experience Platform-Cloud-Service-Konfiguration auf die Web-Seiten laden.
 
 ### Überprüfen des Ladens von Tag-Eigenschaften auf WKND
 
-Prüfen Sie mit der [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)-Erweiterung von Adobe Experience Platform Debugger, ob die Tag-Eigenschaft auf WKND-Seiten geladen wird. Sie können Folgendes überprüfen:
+Überprüfen Sie mithilfe der Adobe Experience Platform Debugger-Erweiterung [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) , ob die Tag-Eigenschaft auf WKND-Seiten geladen wird. Sie können Folgendes überprüfen:
 
 + Tag-Eigenschaften wie Erweiterung, Version, Name und mehr.
 + Platform Web SDK-Bibliotheksversion, Datenspeicher-ID
@@ -195,7 +199,7 @@ Die mit dem Web SDK erfassten Seitenansichtsdaten werden im Experience Platform 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418898?quality=12&learn=on)
 
-Die [Datensatz-Übersicht](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html?lang=de) bietet weitere Informationen zu Konzepten, Konfigurationen und anderen Aufnahmefunktionen.
+Die [Datensatz-Übersicht](https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/overview) bietet weitere Informationen zu Konzepten, Konfigurationen und anderen Aufnahmefunktionen.
 
 
 ## WKND-Seitenansichtsdaten in Experience Platform
@@ -218,8 +222,8 @@ Gut gemacht! Sie haben die Einrichtung von AEM mit dem Experience Platform Web S
 
 ## Zusätzliche Ressourcen
 
-+ [Verwenden der Adobe Client-Datenschicht in Verbindung mit den Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=de)
-+ [Integrieren von Experience Platform-Datenerfassungs-Tags in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=de)
-+ [Überblick über Adobe Experience Platform Web SDK und Edge Network](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html?lang=de)
-+ [Tutorials zur Datenerfassung](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html?lang=de)
-+ [Überblick über Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=de)
++ [Verwenden der Adobe Client-Datenschicht in Verbindung mit den Kernkomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview)
++ [Integrieren von Experience Platform-Datenerfassungs-Tags in AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview)
++ [Überblick über Adobe Experience Platform Web SDK und Edge Network](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/web-sdk/overview)
++ [Tutorials zur Datenerfassung](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/overview)
++ [Überblick über Adobe Experience Platform Debugger](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/debugger/overview)
