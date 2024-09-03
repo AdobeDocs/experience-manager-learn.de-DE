@@ -11,9 +11,10 @@ duration: 0
 last-substantial-update: 2024-08-13T00:00:00Z
 jira: KT-15963
 thumbnail: KT-15963.jpeg
-source-git-commit: e03480e37463b7d35a49203e331ce661b6dc52f9
+exl-id: 5d81f6ee-a7df-470f-84b9-12374c878a1b
+source-git-commit: 0639217a3bab7799eec3bbcc40c1a69ed1b12682
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '924'
 ht-degree: 2%
 
 ---
@@ -67,6 +68,8 @@ data:
            type: authenticate # The type of the action, must be authenticate
            authenticator: purge-auth # The name of the authenticator to be used, must match the name from the above authenticators list               
 ```
+
+In der obigen Regel werden sowohl `purgeKey1` als auch `purgeKey2` von Anfang an hinzugefügt, um die Rotation von Geheimnissen ohne Unterbrechungen zu unterstützen. Sie können jedoch nur mit `purgeKey1` beginnen und `purgeKey2` später hinzufügen, wenn Sie die Geheimnisse drehen.
 
 1. Speichern, übertragen und pushen Sie die Änderungen in das Adobe-Upstream-Repository.
 
