@@ -10,10 +10,10 @@ role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 duration: 240
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 6922d885c25d0864560ab3b8e38907060ff3cc70
 workflow-type: tm+mt
 source-wordcount: '1011'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -187,7 +187,7 @@ Im Allgemeinen gelten dieselben Überlegungen beim Zwischenspeichern von Inhalte
 
 ### Zulassen von CORS-Anfrage-Headern
 
-Damit die erforderlichen [HTTP-Anfrage-Header zur Verarbeitung in AEM durchgeleitet werden können](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#specifying-the-http-headers-to-pass-through-clientheaders), müssen sie in der `/clientheaders`-Konfiguration vom Dispatcher zugelassen werden.
+Damit die erforderlichen [HTTP-Anforderungsheader zur Verarbeitung an AEM weitergeleitet werden können, müssen sie in der `/clientheaders` -Konfiguration von Dispatcher zugelassen sein.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#specifying-the-http-headers-to-pass-through-clientheaders)
 
 ```
 /clientheaders {
@@ -198,7 +198,7 @@ Damit die erforderlichen [HTTP-Anfrage-Header zur Verarbeitung in AEM durchgelei
 }
 ```
 
-### Zwischenspeichern von CORS-Anfrage-Headern
+### Zwischenspeichern von CORS-Antwortheadern
 
 Um das Zwischenspeichern und Bereitstellen von CORS-Headern für zwischengespeicherte Inhalte zu ermöglichen, fügen Sie die folgende [/cache-/headers-Konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=de#caching-http-response-headers) zur Datei `dispatcher.any` von AEM Publish hinzu.
 
