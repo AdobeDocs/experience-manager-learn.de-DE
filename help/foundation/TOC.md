@@ -5,7 +5,7 @@ user-guide-description: Eine Sammlung von Videos und Tutorials für die Adobe Ex
 sub-product: Experience Manager
 index: y
 source-git-commit: 231ca44f9708ab0b239e4cbf363e8cf2695eedc2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '240'
 ht-degree: 100%
 
