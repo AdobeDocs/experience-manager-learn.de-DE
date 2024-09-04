@@ -9,7 +9,7 @@ team: TM
 source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
 workflow-type: tm+mt
 source-wordcount: '1289'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 95%
    + [CI/CD Produktions-Pipeline](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD Produktionsfremde Pipeline](./cloud-manager/cicd-non-production-pipeline.md)
    + [Aktivität](./cloud-manager/activity.md)
-   + [Benutzerdefinierte Domänennamen](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names){target=_blank}
+   + [Benutzerdefinierte Domain-Namen](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names){target=_blank}
    + Dev Ops{#devops}
       + [Bereitstellen von Code](./cloud-manager/devops/deploy-code.md)
       + [Zusammenführen von Projekten](./cloud-manager/devops/merge-projects.md)
@@ -107,7 +107,7 @@ ht-degree: 95%
       + [Caching von Seitenvarianten](./developing/advanced/variant-caching.md)
       + [CSRF-Schutz](./developing/advanced/csrf-protection.md)
       + [Benutzerdefinierte Namespaces](./developing/advanced/custom-namespaces.md)
-      + [Sling-Modelle aus HTL parametrisieren](./developing/advanced/sling-model-parameters.md)
+      + [Parametrisieren von Sling-Modellen aus HTL](./developing/advanced/sling-model-parameters.md)
       + [Geheimnisse](./developing/advanced/secrets.md)
       + [Service-Benutzende](./developing/advanced/service-users.md)
       + [Web-optimierte Bild-APIs](./developing/advanced/web-optimized-image-delivery-java-apis.md)
@@ -139,11 +139,11 @@ ht-degree: 95%
       + Risiken{#risks}
          + [Durchlauf-Warnungen](./debugging/cloud-service/risks/traversals.md)
 + Inhaltsbereitstellung{#content-delivery}
-   + [Benutzerspezifischer Domänenname](./content-delivery/custom-domain-names.md)
-   + [Benutzerdefinierter Domänenname mit von Adobe verwaltetem CDN](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
-   + [Benutzerdefinierter Domänenname mit Kunden-CDN](./content-delivery/custom-domain-names-with-customer-managed-cdn.md)
-   + [Caching](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
-   + [Adobe CDN - jenseits des Caching](./content-delivery/adobe-cdn-beyond-caching.md)
+   + [Benutzerdefinierter Domain-Name](./content-delivery/custom-domain-names.md)
+   + [Benutzerdefinierter Domain-Name mit von Adobe verwaltetem CDN](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
+   + [Benutzerdefinierter Domain-Name mit Kunden-CDN](./content-delivery/custom-domain-names-with-customer-managed-cdn.md)
+   + [Caching](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
+   + [Adobe CDN – mehr als Caching](./content-delivery/adobe-cdn-beyond-caching.md)
    + [URL-Umleitungen](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=de){target=_blank}
 + Caching{#caching}
    + [Überblick](./caching/overview.md)
@@ -264,15 +264,15 @@ ht-degree: 95%
    + Erstellen einer klickbaren Bildkomponente{#clickable-image-component}
       + [1 – Einführung](./forms/clickable-image-component/introduction.md)
       + [2 – Erstellen der Komponente](./forms/clickable-image-component/create-component.md)
-      + [3 - Handle-Klickereignis](./forms/clickable-image-component/handle-click-event.md)
+      + [3 – Verarbeiten des Klickereignises](./forms/clickable-image-component/handle-click-event.md)
    + AEM Forms und Analytics{#forms-and-analytics}
       + [Einführung](./forms/form-data-analytics/introduction.md)
       + [Erstellen von Datenelementen](./forms/form-data-analytics/data-elements.md)
       + [Erstellen von Regeln](./forms/form-data-analytics/rules.md)
       + [Testen der Lösung](./forms/form-data-analytics/test.md)
-   + Vertikale Tabs verwenden{#using-vertical-tabs}
-      + [1. Einleitung](./forms/using-vertical-tabs/introduction.md)
-      + [2. Formular erstellen](./forms/using-vertical-tabs/create-af.md)
+   + Verwenden vertikaler Tabs{#using-vertical-tabs}
+      + [1. Einführung](./forms/using-vertical-tabs/introduction.md)
+      + [2. Erstellen des Formulars](./forms/using-vertical-tabs/create-af.md)
       + [3. Navigieren](./forms/using-vertical-tabs/navigation.md)
    + Dokumenterstellung in AEM Forms CS{#doc-gen-formscs}
       + [Einführung](./forms/doc-gen-forms-cs/introduction.md)
@@ -299,7 +299,7 @@ ht-degree: 95%
       + [PDF/A-Dienstprogramme](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [Testen der Lösung](./forms/forms-cs-assembler/test.md)
       + [Herausforderung](./forms/forms-cs-assembler/challenge.md)
-   + Integration mit Marketo{#froms-cs-with-marketo}
+   + Integrieren mit Marketo{#froms-cs-with-marketo}
       + [Einführung](./forms/forms-cs-with-marketo/part1.md)
       + [Erstellen einer Datenquelle](./forms/forms-cs-with-marketo/part2.md)
       + [Erstellen von Formulardatenmodellen](./forms/forms-cs-with-marketo/part3.md)
@@ -431,4 +431,4 @@ ht-degree: 95%
          + [Integrieren von AEM Assets](./expert-resources/cloud-5/season-3/cloud5-integrate-assets.md)
          + [Generische KI für AEM Sites](./expert-resources/cloud-5/season-3/cloud5-generative-ai-for-aem-sites.md)
          + [Einführung in den universellen Editor](./expert-resources/cloud-5/season-3/cloud5-exploring-universal-editor.md)
-         + [Importieren von Websites](./expert-resources/cloud-5/season-3/cloud5-import-sites-to-edge-delivery-services.md)
+         + [Importieren von Sites](./expert-resources/cloud-5/season-3/cloud5-import-sites-to-edge-delivery-services.md)

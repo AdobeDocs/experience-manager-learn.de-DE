@@ -12,7 +12,7 @@ duration: 129
 source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
 workflow-type: tm+mt
 source-wordcount: '357'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -204,10 +204,10 @@ Führen Sie die folgenden Schritte aus, um dies auf Ihrem lokalen Server zu test
 ```
 
 ![user-mapper](assets/user-mapper-service.PNG)
-1. [Laden Sie das Bundle ares.ares.core-ares herunter und installieren Sie es ](assets/ares.ares.core-ares.jar). Dies verfügt über den benutzerdefinierten Dienst und das Servlet, um Verwendungsrechte anzuwenden und das PDF-Dokument zurückzustreamen.
+1. [Laden Sie das Bundle ares.ares.core-ares herunter und installieren Sie es ](assets/ares.ares.core-ares.jar). Dies umfasst den benutzerdefinierten Dienst und das Servlet, um Verwendungsrechte anzuwenden und das PDF-Dokument zurückzustreamen.
 1. [Importieren Sie die Client-Bibliotheken und die benutzerdefinierte Übermittlung](assets/applyaresdemo.zip)
 1. [Importieren Sie das adaptive Formular.](assets/applyaresform.zip)
-1. Fügen Sie der bzw. dem Benutzenden „fd-service“ das Reader Extensions-Zertifikat hinzu. Stellen Sie sicher, dass der Alias &quot;**ares**&quot; lautet.
+1. Fügen Sie der bzw. dem Benutzenden „fd-service“ das Reader Extensions-Zertifikat hinzu. Stellen Sie sicher, dass der Alias „**ares**“ ist.
 1. [Zeigen Sie eine Vorschau des adaptiven Formulars an.](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
 1. Wählen Sie die entsprechenden Berechtigungen aus und laden Sie die PDF-Datei hoch.
 1. Klicken Sie auf „Übermitteln“, um eine PDF mit Reader Extension zu erhalten.
