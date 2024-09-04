@@ -6,10 +6,10 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: 7ef37a71f1daefee484478c3194907d5ce918af4
+source-git-commit: 177cddea03595b686ec75f129c8be7bb14e4c631
 workflow-type: tm+mt
-source-wordcount: '445'
-ht-degree: 93%
+source-wordcount: '482'
+ht-degree: 86%
 
 ---
 
@@ -175,6 +175,8 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
                  Erfahren Sie mehr über den universellen Editor und AEM mit Edge Delivery Services.
             </p>
         </td>
+    </tr>  
+    <tr>
         <td>
             <a href="./season-3/cloud5-import-sites-to-edge-delivery-services.md">
                 <img alt="Importieren von Sites in AEM Sites mit Edge Delivery Services" 
@@ -190,5 +192,20 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
                  Erfahren Sie mehr über den Import von Sites in AEM Sites mit Edge Delivery Services.
             </p>
         </td>
-    </tr>      
+        <td>
+            <a href="./season-3/cloud5-using-admin-api.md">
+                <img alt="Verwenden der Admin-API mit Edge Delivery Services" 
+                     src="https://video.tv.adobe.com/v/3433158?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-using-admin-api.md">
+                <strong>Verwenden der Admin-API</strong></a>        
+                <br/><em>mit James Talbot &amp; Varun Mitra, Cloud Architect</em>
+            </div>
+            <p>
+                <br/>                
+                 Erfahren Sie mehr über die Verwendung der Admin-API in Edge Delivery Services zur Verwaltung des Lebenszyklus von Inhalten und Code.
+            </p>
+        </td>    
+    </tr>    
 </table>
