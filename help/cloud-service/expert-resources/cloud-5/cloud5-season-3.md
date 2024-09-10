@@ -6,10 +6,10 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: 177cddea03595b686ec75f129c8be7bb14e4c631
+source-git-commit: af962fa9ede0781929e4e7cbbd6b5f00a9dfb0d9
 workflow-type: tm+mt
-source-wordcount: '482'
-ht-degree: 86%
+source-wordcount: '511'
+ht-degree: 81%
 
 ---
 
@@ -206,6 +206,21 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
                 <br/>                
                  Erfahren Sie mehr über die Verwendung der Admin-API in Edge Delivery Services zur Verwaltung des Lebenszyklus von Inhalten und Code.
             </p>
-        </td>    
+        </td>   
+        <td>
+            <a href="./season-3/cloud5-lighthouse-score-optimization.md">
+                <img alt="Optimierung der Lighthouse-Punktzahl" 
+                     src="https://video.tv.adobe.com/v/3433378?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-lighthouse-score-optimization.md">
+                <strong>Optimierung der Leuchtturmbewertung</strong></a>        
+                <br/><em>mit James Talbot &amp; Varun Mitra, Cloud Architect</em>
+            </div>
+            <p>
+                <br/>                
+                 Erfahren Sie, was ein Leuchtturmwert ist, und Techniken, um den bestmöglichen Leuchtturm-Wert zu erhalten.
+            </p>
+        </td>            
     </tr>    
 </table>
