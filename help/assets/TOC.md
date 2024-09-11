@@ -10,7 +10,7 @@ team: TM
 source-git-commit: e7692aceded07426a9c1afce9275e82a5af6b0fb
 workflow-type: tm+mt
 source-wordcount: '425'
-ht-degree: 95%
+ht-degree: 99%
 
 ---
 
@@ -62,7 +62,7 @@ ht-degree: 95%
    + [Archiv extrahieren](./advanced/extract-archive.md)
    + [Berechtigungen (CUGs)](./advanced/closed-user-groups.md)
    + [Metadatengesteuerte Berechtigungen](./advanced/metadata-driven-permissions.md)
-   + [Video - verdeckte Untertitel](./advanced/video-closed-captions.md)
+   + [Geschlossene Untertitel für Videos](./advanced/video-closed-captions.md)
    + [Wasserzeichen](./advanced/watermarks.md)
 
 + Erweiterte Metadatenverwaltung{#metadata}
@@ -75,10 +75,10 @@ ht-degree: 95%
 + Edge Delivery Services{#edge-delivery-services}
    + [Sidekick-Plug-in](./edge-delivery-services/sidekick-plugin.md)
 
-+ Content Hub{#content-hub}
++ Content-Hub{#content-hub}
    + [Einrichten von Content Hub](./content-hub/settingup-content-hub.md)
-   + [Hochladen des Assets- und Genehmigungsprozesses](./content-hub/uploading-assets-and-approval-process.md)
-   + [Zugreifen auf und Herunterladen von Assets](./content-hub/accessing-and-downloading-assets.md)
+   + [Hochladen von Assets und der Genehmigungsvorgang](./content-hub/uploading-assets-and-approval-process.md)
+   + [Abrufen und Herunterladen von Assets](./content-hub/accessing-and-downloading-assets.md)
 
 + Freigabe und Verteilung{#sharing}
    + [Herunterladen von Assets](./sharing/download.md)

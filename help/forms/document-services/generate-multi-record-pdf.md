@@ -14,7 +14,7 @@ badgeVersions: label="AEM Forms 6.5" before-title="false"
 source-git-commit: 8cadbe92a7a2f47c33b0ca0fcf7313dc418ae7a4
 workflow-type: tm+mt
 source-wordcount: '498'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
