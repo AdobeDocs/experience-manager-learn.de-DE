@@ -10,16 +10,17 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 last-substantial-update: 2024-07-24T00:00:00Z
 jira: KT-15876
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
-workflow-type: tm+mt
+exl-id: 43737765-b1ea-4594-853a-d78f41136b5e
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+workflow-type: ht
 source-wordcount: '235'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
 # Erstellen eines Formulardatenmodells
 
-Nach dem Konfigurieren der Datenquelle besteht der nächste Schritt darin, ein Formulardatenmodell zu erstellen, das auf der zuvor konfigurierten Datenquelle basiert. Gehen Sie wie folgt vor, um ein Formulardatenmodell zu erstellen:
+Nach dem Konfigurieren der Datenquelle besteht der nächste Schritt darin, ein Formulardatenmodell zu erstellen, das auf der in einem früheren Schritt konfigurierten Datenquelle basiert. Gehen Sie wie folgt vor, um ein Formulardatenmodell zu erstellen:
 
 Verweisen Sie den Browser auf die [Datenintegrationsseite.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) Hier werden alle in Ihrer AEM-Instanz erstellten Datenintegrationen aufgelistet.
 
@@ -36,4 +37,4 @@ Verweisen Sie den Browser auf die [Datenintegrationsseite.](http://localhost:450
 1. Geben Sie eine gültige Lead-ID ein und klicken Sie auf „Testen“. Wenn alles reibungslos funktioniert, sollten die Lead-Details zurückgegeben werden, wie im Screenshot unten dargestellt
    ![Testergebnisse](assets/testresults.png)
 
-Sie können jetzt ein auf diesem Formulardatenmodell basierendes adaptives Formular erstellen, um Marketo-Objekte einzufügen und abzurufen.
+Sie können nun ein auf diesem Formulardatenmodell basierendes adaptives Formular erstellen, um Marketo-Objekte einzufügen und abzurufen.

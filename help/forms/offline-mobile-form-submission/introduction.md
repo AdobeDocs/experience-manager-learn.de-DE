@@ -1,5 +1,5 @@
 ---
-title: Einführung in den Trigger AEM Workflow zur HTML 5-Formularübermittlung
+title: Einführung in das Auslösen eines AEM-Workflows für die Übermittlung von HTML5-Formularen
 description: Fahren Sie mit dem Ausfüllen des Mobile-Formulars im Offline-Modus fort und übermitteln Sie das Mobile-Formular, um den AEM-Workflow auszulösen.
 feature: Mobile Forms
 doc-type: article
@@ -13,9 +13,9 @@ jira: kt-16133
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 342
 source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '213'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 

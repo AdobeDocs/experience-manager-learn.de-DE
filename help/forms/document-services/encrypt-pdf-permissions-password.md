@@ -1,5 +1,5 @@
 ---
-title: PDF mit einem Berechtigungskennwort verschlüsseln
+title: Verschlüsseln eines PDF mit einem Berechtigungskennwort.
 description: Verwenden von DocAssuranceService zum Verschlüsseln eines PDF
 feature: Document Services
 version: 6.4,6.5
@@ -10,17 +10,17 @@ jira: KT-15849
 last-substantial-update: 2024-07-19T00:00:00Z
 exl-id: 5df8581c-a44c-449c-bf3b-8cdf57635c4d
 source-git-commit: d01a56cd1fd3085b0230918b15b4635ba375e346
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '186'
-ht-degree: 31%
+ht-degree: 100%
 
 ---
 
-# PDF mit einem Berechtigungskennwort verschlüsseln
+# Verschlüsseln eines PDF mit einem Berechtigungskennwort
 
-Zum Kopieren, Bearbeiten oder Drucken eines PDF-Dokuments ist ein Berechtigungskennwort erforderlich, das auch als Inhaber oder Master-Kennwort bezeichnet wird. Erfahren Sie, wie Sie mit der API [DocAssuranceService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/docassurance/client/api/DocAssuranceService.html) programmgesteuert ein Berechtigungskennwort auf eine PDF anwenden können.
+Zum Kopieren, Bearbeiten oder Drucken eines PDF-Dokuments ist ein Berechtigungskennwort erforderlich, das auch als Inhaber- oder Master-Kennwort bezeichnet wird. Erfahren Sie, wie Sie mit der API [DocAssuranceService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/docassurance/client/api/DocAssuranceService.html) programmgesteuert ein Berechtigungskennwort auf ein PDF anwenden können.
 
-Der folgende JSP-Code verschlüsselt eine PDF mit einem Berechtigungskennwort:
+Der folgende JSP-Code verschlüsselt ein PDF mit einem Berechtigungskennwort:
 
 ```java
 <%--
@@ -63,15 +63,15 @@ Der folgende JSP-Code verschlüsselt eine PDF mit einem Berechtigungskennwort:
 
 [Laden Sie das Paket herunter und installieren Sie es mit Package Manager.](assets/encryptpdf.zip)
 
-**Fügen Sie nach der Installation des Pakets die folgenden URLs der OSGi-Konfigurationsdatei des Adobe-Granite-CSRF-Filters hinzu:**
+**Nachdem Sie das Paket installiert haben,fügen Sie die folgenden URLs zur Zulassungsliste der OSGi-Konfiguration von Adobe Granite CSRF Filter hinzu.**
 
 1. [Melden Sie sich bei configMgr an.](http://localhost:4502/system/console/configMgr)
 1. Suchen Sie nach „Adobe Granite CSRF Filter“.
 1. Fügen Sie den folgenden Pfad in den ausgeschlossenen Abschnitten hinzu und speichern Sie
 1. /content/AemFormsSamples/encrypt
 
-## Probe testen
+## Testen des Beispiels
 
-Es gibt verschiedene Möglichkeiten, den Beispiel-Code zu testen. Am schnellsten und einfachsten lässt sich hier die Postman-App verwenden. Postman ermöglicht es Ihnen, POST-Anfragen an Ihren Server zu stellen. Der folgende Screenshot zeigt Ihnen die Anforderungsparameter, die erforderlich sind, damit die POST-Anfrage funktioniert. Bitte geben Sie den entsprechenden Autorisierungstyp an, bevor Sie die Anfrage senden.
+Es gibt verschiedene Möglichkeiten, den Beispiel-Code zu testen. Am schnellsten und einfachsten lässt sich hier die Postman-App verwenden. Postman ermöglicht es Ihnen, POST-Anfragen an Ihren Server zu stellen. Der folgende Screenshot zeigt Ihnen die Anfrageparameter, die erforderlich sind, damit die POST-Anfrage funktioniert. Geben Sie den entsprechenden Autorisierungstyp an, bevor Sie die Anfrage senden.
 
 ![encrypt-pdf-postman](assets/encrypt-pdf-postman.png)

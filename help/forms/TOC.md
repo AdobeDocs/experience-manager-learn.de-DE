@@ -9,9 +9,9 @@ sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
 source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2089'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -225,8 +225,8 @@ ht-degree: 99%
 + Auslösen von AEM Workflows aus der Übermittlung mobiler Formulare{#offline-mobile-form-submission}
    + [Einführung](offline-mobile-form-submission/introduction.md)
    + [Benutzerdefiniertes Profil](offline-mobile-form-submission/custom-profile.md)
-   + [Formularübermittlung handhaben](offline-mobile-form-submission/handle-form-submission.md)
-   + [Gesendete Daten speichern](offline-mobile-form-submission/author-servlet.md)
+   + [Durchführen der Formularübermittlung](offline-mobile-form-submission/handle-form-submission.md)
+   + [Speichern übermittelter Daten](offline-mobile-form-submission/author-servlet.md)
    + [Workflow zur Überprüfung des PDFs](offline-mobile-form-submission/review-workflow.md)
    + [Bereitstellung auf Ihrem System](offline-mobile-form-submission/deploy-assets.md)
 + Abfragen von Formularübermittlungen{#query-form-submissions}
@@ -241,7 +241,7 @@ ht-degree: 99%
    + [Teil 2: Erstellen einer benutzerdefinierten Vorlage](listing-custom-asset-types/part2.md)
 + AEM Forms mit Marketo{#aem-forms-with-marketo}
    + [Teil 1: Einführung](aem-forms-with-marketo/part1.md)
-   + [Teil 2: Data Source](aem-forms-with-marketo/part2.md)
+   + [Teil 2: Datenquelle](aem-forms-with-marketo/part2.md)
    + [Teil 3: Formulardatenmodell](aem-forms-with-marketo/part3.md)
    + [Teil 4: Alles zusammenfügen](aem-forms-with-marketo/part4.md)
 
@@ -281,7 +281,7 @@ ht-degree: 99%
    + [Verwenden vom überwachten Ordner in AEM Forms](document-services/watched-folders-document-services-article-use.md)
    + [Verwenden des Barcode-Dienstes in AEM Forms](document-services/barcode-service-adaptive-forms-article.md)
    + [Verwenden des PDFG-Dienstes in AEM Forms](document-services/using-pdfg-in-aem-forms.md)
-   + [PDF mit Berechtigungskennwort verschlüsseln](document-services/encrypt-pdf-permissions-password.md)
+   + [Verschlüsseln einer PDF mit einem Berechtigungskennwort](document-services/encrypt-pdf-permissions-password.md)
    + [Verwenden von Output und Forms Service in AEM Forms](document-services/output-and-forms-services-article-develop.md)
    + [Verwenden von xdp-Fragmenten im Output-Dienst](document-services/using-fragments-in-output-service.md)
    + [ECMA-Skript zum Generieren von PDF-Dateien mit Fragmenten](document-services/using-fragments-in-output-service-watched-folder.md)

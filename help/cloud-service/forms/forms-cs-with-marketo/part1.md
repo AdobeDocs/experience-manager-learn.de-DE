@@ -10,10 +10,11 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 last-substantial-update: 2024-07-24T00:00:00Z
 jira: KT-15876
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
-workflow-type: tm+mt
+exl-id: c3145149-bfa4-4dcb-acde-c359e9348f99
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+workflow-type: ht
 source-wordcount: '338'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +34,7 @@ Für den Einstieg wird dringend empfohlen, dass Sie mit den folgenden Themen im 
 
 ## Voraussetzung
 
-1. Zugriff auf die AEM Forms Cloud Service-Instanz
+1. Zugriff auf eine AEM Forms Cloud Service-Instanz
 1. Kenntnisse zum Formulardatenmodell
 1. Grundlegendes Wissen zu Swagger-Dateien
 1. Erstellen von adaptiven Formularen

@@ -1,6 +1,6 @@
 ---
-title: Trigger AEM Workflow bei HTML 5 Formularübermittlung - PDF-Übermittlung handhaben
-description: Übermitteln des HTML5/PDF-Formulars
+title: Auslösen des AEM-Workflows bei der Übermittlung von HTML5-Formularen – Durchführen der PDF-Übermittlung
+description: Durchführen der HTML5-/PDF-Formularübermittlung
 feature: Mobile Forms
 doc-type: article
 version: 6.4,6.5
@@ -10,22 +10,22 @@ jira: kt-16133
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
 source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '146'
-ht-degree: 26%
+ht-degree: 100%
 
 ---
 
-# Formularübermittlung handhaben
+# Durchführen der Formularübermittlung
 
-In diesem Teil erstellen wir ein einfaches Servlet, das auf AEM Publish ausgeführt wird, um die Übermittlung des PDF-Formulars oder HTML5-Formulars zu handhaben. Dieses Servlet sendet eine HTTP-POST-Anfrage an ein Servlet, das in einer AEM Autoreninstanz ausgeführt wird und für das Speichern der gesendeten Daten als `nt:file` -Knoten im Repository AEM Autors verantwortlich ist.
+In diesem Teil erstellen wir ein einfaches Servlet, das AEM Publish-seitig ausgeführt wird, um die Übermittlung von PDF- oder HTML5-Formularen durchzuführen. Dieses Servlet sendet eine HTTP-POST-Anfrage an ein Servlet, das in einer AEM-Autoreninstanz ausgeführt wird, die für das Speichern der übermittelten Daten als `nt:file`-Knoten im AEM Author-Repository verantwortlich ist.
 
-Im Folgenden finden Sie den Code des Servlets, das die PDF/HTML5-Formularübermittlung verarbeitet. In diesem Servlet machen wir einen POST-Aufruf an ein Servlet, das auf **/bin/startworkflow** in einer AEM-Autoreninstanz gemountet ist. Dieses Servlet speichert die Formulardaten im Repository der AEM-Authoring-Instanz.
+Im Folgenden finden Sie den Code des Servlets, das die PDF-/HTML5-Übermittlung durchführt. In diesem Servlet machen wir einen POST-Aufruf an ein Servlet, das auf **/bin/startworkflow** in einer AEM-Autoreninstanz gemountet ist. Dieses Servlet speichert die Formulardaten im Repository der AEM-Authoring-Instanz.
 
 
 ## AEM Publish-Servlet
 
-Der folgende Code verarbeitet die Übermittlung des PDF/HTML5-Formulars. Dieser Code wird auf der Veröffentlichungsinstanz ausgeführt.
+Mit dem folgenden Code wird die Übermittlung des PDF-/HTML5-Formulars durchgeführt. Dieser Code wird in der Veröffentlichungsinstanz ausgeführt.
 
 ```java
 package com.aemforms.mobileforms.core.servlets;
@@ -118,4 +118,4 @@ public class HandleFormSubmission extends SlingAllMethodsServlet implements Seri
 
 ## Nächste Schritte
 
-[Gesendete Daten in der Autoreninstanz speichern](./author-servlet.md)
+[Speichern übermittelter Daten in der Autoreninstanz](./author-servlet.md)

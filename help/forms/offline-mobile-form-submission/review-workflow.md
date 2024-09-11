@@ -1,6 +1,6 @@
 ---
-title: Trigger AEM Workflow auf HTML 5 Formularübermittlung - PDF überprüfen und genehmigen
-description: Workflow zum Überprüfen der gesendeten PDF
+title: Auslösen des AEM-Workflows bei der Übermittlung von HTML5-Formularen – Überprüfen und Genehmigen von PDF-Dateien
+description: Workflow zur Überprüfung übermittelter PDF-Dateien
 feature: Mobile Forms
 doc-type: article
 version: 6.4,6.5
@@ -11,9 +11,9 @@ jira: kt-16133
 exl-id: a767d8f8-d75e-4472-9139-c08d804ee076
 duration: 32
 source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '169'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 

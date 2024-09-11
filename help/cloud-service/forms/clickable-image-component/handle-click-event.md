@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer klickbaren Bildkomponente
-description: Erstellen einer klickbaren Bildkomponente im AEM Forms-Cloud Service
+description: Erstellen einer klickbaren Bildkomponente in AEM Forms Cloud Service
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -9,19 +9,20 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15968
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
-workflow-type: tm+mt
+exl-id: 54344a6d-51d3-4a63-b1f1-283bddbc0f8f
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+workflow-type: ht
 source-wordcount: '83'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
-# Handle-Klick-Ereignis
+# Verarbeiten des Klickereignisses
 
 Erstellen Sie eine Client-Bibliothek und verknüpfen Sie die Client-Bibliothek mit der Komponente.
 
-Fügen Sie in Ihrer JavaScript-Datei der Client-Bibliothek den folgenden Code hinzu, der zum Klick-Ereignis verarbeitet werden soll.
-Je nach ausgewähltem Status können die entsprechenden vom Endpunkt zurückgegebenen Daten angezeigt werden. Die Details des Endpunkts und die anzuzeigenden Daten hängen von Ihrem Anwendungsfall ab.
+Fügen Sie in Ihrer JavaScript-Datei der Client-Bibliothek den folgenden Code hinzu, um das Klickereignis zu verarbeiten.
+Je nach ausgewähltem Bundesstaat können die entsprechenden vom Endpunkt zurückgegebenen Daten angezeigt werden. Die Details des Endpunkts und die anzuzeigenden Daten hängen von Ihrem Anwendungsfall ab.
 
 
 

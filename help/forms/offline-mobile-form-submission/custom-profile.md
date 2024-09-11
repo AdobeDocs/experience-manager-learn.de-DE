@@ -1,6 +1,6 @@
 ---
-title: Trigger AEM Workflow bei der HTML 5 Formularübermittlung - Benutzerdefiniertes Profil erstellen
-description: Erstellen Sie ein benutzerdefiniertes Profil, um ein interaktives PDF mit den Daten aus dem teilweise ausgefüllten HTML 5-Formular herunterzuladen.
+title: Auslösen des AEM-Workflows bei der Übermittlung von HTML5-Formularen – Erstellen eines benutzerdefinierten Profils
+description: Erstellen Sie ein benutzerdefiniertes Profil, um ein interaktives PDF mit den Daten aus einem teilweise ausgefüllten HTML5-Formular herunterzuladen.
 feature: Mobile Forms
 doc-type: article
 version: 6.4, 6.5
@@ -12,9 +12,9 @@ badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: b6e3acee-4a07-4d00-b3a1-f7aedda21e6e
 duration: 102
 source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '244'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -175,4 +175,4 @@ public class GeneratePDFFromMobileFormImpl implements GeneratePDFFromMobileForm 
 
 ## Nächste Schritte
 
-[Formularübermittlung handhaben](./handle-form-submission.md)
+[Durchführen der Formularübermittlung](./handle-form-submission.md)

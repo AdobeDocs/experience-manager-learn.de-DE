@@ -1,6 +1,6 @@
 ---
-title: Migration von JWT-To-OAuth-Anmeldedaten für AEM
-description: Erfahren Sie, wie Sie andere Adobe-Lösungen zu den neuen OAuth Server-zu-Server-Anmeldedaten migrieren.
+title: Migration der Anmeldeinformationen von JWT zu OAuth für AEM
+description: Erfahren Sie, wie Sie andere Adobe-Lösungen zu den neuen OAuth-Server-zu-Server-Anmeldeinformationen migrieren.
 version: 6.5, Cloud Service
 feature: Integrations, Migration, Security
 topic: Integrations, Migration, Security
@@ -10,19 +10,19 @@ doc-type: Technical Video
 duration: 334
 last-substantial-update: 2024-08-19T00:00:00Z
 jira: KT-16019
-source-git-commit: 82cde75f1ec5b9e03f8f1c1e46298f3dd049718b
-workflow-type: tm+mt
+exl-id: d4c9a509-baec-44e7-8b0b-6b469c1b5c2b
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+workflow-type: ht
 source-wordcount: '92'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
+# Migration der Anmeldeinformationen von JWT zu OAuth für AEM
 
-# Migration von JWT-To-OAuth-Anmeldedaten für AEM
+Erfahren Sie, wie Sie andere Adobe-Lösungen von den veralteten Service-Kolnto(JWT)-Anmeldeinformationen zu den neuen OAuth-Server-zu-Server-Anmeldeinformationen migrieren.
 
-Erfahren Sie, wie Sie andere Adobe-Lösungen aus den veralteten JWT-Anmeldeinformationen (Service Account) in die neuen OAuth Server-to-Server-Anmeldeinformationen migrieren.
-
-Die Anmeldedaten für das Dienstkonto (JWT) wurden zwar als veraltet markiert, funktionieren jedoch bis zum 27. Januar 2025 weiterhin. Daher müssen Sie Ihre Anwendung oder Integration migrieren, um die neuen OAuth-Server-zu-Server-Anmeldedaten vor dem 27. Januar 2025 zu verwenden. Weitere Informationen finden Sie im [Migrationshandbuch](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
+Die Service-Konto(JWT)-Anmeldeinformationen wurden zwar als veraltet markiert, funktionieren jedoch noch bis zum 27. Januar 2025 weiter. Daher müssen Sie Ihre Anwendung oder Integration vor dem 27. Januar 2025 zur Verwendung der neuen OAuth-Server-zu-Server-Anmeldeinformationen migrieren. Weitere Informationen finden Sie im [Migrationshandbuch](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/).
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3432960/?learn=on)

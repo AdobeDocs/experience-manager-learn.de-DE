@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer klickbaren Bildkomponente
-description: Erstellen einer klickbaren Bildkomponente im AEM Forms-Cloud Service
+description: Erstellen einer klickbaren Bildkomponente in AEM Forms Cloud Service
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -8,18 +8,19 @@ version: Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-15968
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
-workflow-type: tm+mt
+exl-id: b635f171-775d-480e-bf7a-c92ab4af0aee
+source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+workflow-type: ht
 source-wordcount: '221'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
-# Komponente erstellen
+# Erstellen einer Komponente
 
 In diesem Artikel wird davon ausgegangen, dass Sie über Erfahrung in der Entwicklung für AEM Forms CS verfügen. Außerdem wird davon ausgegangen, dass Sie ein AEM Forms-Archetypprojekt erstellt haben.
 
-Öffnen Sie Ihr AEM Forms-Projekt in IntelliJ oder einer anderen IDE Ihrer Wahl. Erstellen Sie einen neuen Knoten namens svg unter .
+Öffnen Sie Ihr AEM Forms-Projekt in IntelliJ oder einer anderen IDE Ihrer Wahl. Erstellen Sie einen neuen Knoten mit der Bezeichnung „svg“ unter
 
 ```
 apps\corecomponent\components\adaptiveForm
@@ -30,9 +31,9 @@ apps\corecomponent\components\adaptiveForm
 > ``corecomponent`` ist die appId, die beim Erstellen des Maven-Projekts bereitgestellt wurde. Diese appId kann in Ihrer Umgebung unterschiedlich sein.
 
 
-## Erstellen der Datei .content.xml
+## Erstellen einer Datei „.content.xml“
 
-Erstellen Sie eine Datei mit dem Namen .content.xml unter dem Knoten svg . Fügen Sie der neu erstellten Datei den folgenden Inhalt hinzu. Sie können jcr:description,jcr:title und componentGroup gemäß Ihren Anforderungen ändern.
+Erstellen Sie eine Datei mit dem Namen „.content.xml“ unter dem svg-Knoten. Fügen Sie den folgenden Inhalt zu der neu erstellten Datei hinzu. Sie können „jcr:description“, „jcr:title“ und „componentGroup“ entsprechend Ihren Anforderungen ändern.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -46,7 +47,7 @@ Erstellen Sie eine Datei mit dem Namen .content.xml unter dem Knoten svg . Füge
 
 ## Erstellen von svg.html
 
-Erstellen Sie eine Datei mit dem Namen svg.html. Diese Datei rendert die SVG der US-Karte. Kopieren Sie den Inhalt von [svg.html](assets/svg.html) in die neu erstellte Datei. Was Sie kopiert haben, ist die SVG der US-Karte. Speichern Sie die Datei.
+Erstellen Sie eine Datei mit dem Namen „svg.html“. Diese Datei rendert die SVG der US-Karte. Kopieren Sie den Inhalt von [svg.html](assets/svg.html) in die neu erstellte Datei. Was Sie kopiert haben, ist die SVG der US-Karte. Speichern Sie die Datei.
 
 ## Bereitstellen des Projekts
 
@@ -58,6 +59,6 @@ Um das Projekt bereitzustellen, müssen Sie im Eingabeaufforderungsfenster zum S
 mvn clean install -PautoInstallSinglePackage
 ```
 
-Dadurch wird das Projekt in Ihrer lokalen AEM Forms-Instanz bereitgestellt und die Komponente kann in Ihr adaptives Formular aufgenommen werden
+Dadurch wird das Projekt in Ihrer lokalen AEM Forms-Instanz bereitgestellt und die Komponente kann in Ihr adaptives Formular aufgenommen werden.
 
-![usa-map](./assets/usa-map.png)
+![usa-karte](./assets/usa-map.png)

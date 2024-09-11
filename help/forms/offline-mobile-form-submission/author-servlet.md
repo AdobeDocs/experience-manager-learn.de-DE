@@ -1,6 +1,6 @@
 ---
-title: Trigger AEM Workflow bei der HTML 5-Formularübermittlung - Formularübermittlung handhaben
-description: Erfahren Sie, wie Sie AEM Workflow beim Senden des HTML5-Formulars Trigger und die gesendeten Daten im Repository speichern können.
+title: Auslösen des AEM-Workflows bei der Übermittlung von HTML5-Formularen – Durchführen der Formularübermittlung
+description: Erfahren Sie, wie Sie den AEM-Workflow beim Übermitteln des HTML5-Formulars auslösen und die übermittelten Daten im Repository speichern.
 feature: Mobile Forms
 doc-type: article
 version: 6.4,6.5
@@ -11,21 +11,21 @@ level: Experienced
 exl-id: eafeafe1-7a72-4023-b5bb-d83b056ba207
 duration: 116
 source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '171'
-ht-degree: 29%
+ht-degree: 100%
 
 ---
 
 
-# Gesendete Daten speichern
+# Speichern übermittelter Daten
 
-Der nächste Schritt besteht darin, die gesendeten Daten im Repository von AEM Author zu speichern. Das auf `/bin/startworkflow` bereitgestellte Servlet speichert die gesendeten Daten.
-Ein AEM Workflow-Starter wird so konfiguriert, dass er jedes Mal, wenn eine neue Ressource des Typs `nt:file` unter dem Knoten &lt;node_to_store_sent_data> erstellt wird, zum Trigger wird. Dieser Workflow erstellt eine nicht-interaktive oder statische PDF, indem die gesendeten Daten mit der xdp-Vorlage zusammengeführt werden. Die generierte PDF wird dann der Benutzerin bzw. dem Benutzer zur Überprüfung und Genehmigung zugewiesen.
+Der nächste Schritt besteht darin, die gesendeten Daten im Repository von AEM Author zu speichern. Das Servlet, das auf `/bin/startworkflow` gemountet ist, speichert die übermittelten Daten.
+Ein AEM-Workflow-Starter ist so konfiguriert, dass er jedes Mal ausgelöst wird, wenn eine neue Ressource vom Typ `nt:file` unter dem Knoten &lt;node_to_store_submitted_data> erstellt wird. Dieser Workflow erstellt eine nicht-interaktive oder statische PDF, indem die gesendeten Daten mit der xdp-Vorlage zusammengeführt werden. Die generierte PDF wird dann der Benutzerin bzw. dem Benutzer zur Überprüfung und Genehmigung zugewiesen.
 
-Um die übermittelten Daten im Knoten &lt;node_to_store_sent_data> zu speichern, verwenden wir den OSGi-Dienst `GetResolver`, der es uns ermöglicht, die übermittelten Daten mithilfe des in jeder AEM Forms-Installation verfügbaren Systembenutzers `fd-service` zu speichern.
+Um die übermittelten Daten unter dem Knoten &lt;node_to_store_submitted_data> zu speichern, verwenden wir `GetResolver`. Dieser OSGi-Dienst ermöglicht es, die übermittelten Daten mithilfe des in jeder AEM Forms-Installation verfügbaren Systembenutzerprofils `fd-service` zu speichern.
 
-Der Knoten, unter dem die gesendeten Daten gespeichert werden, kann mithilfe von ConfigMgr konfiguriert werden, wie unter [Bereitstellen von Beispiel-Assets](./deploy-assets.md) beschrieben.
+Der Knoten, unter dem die übermittelten Daten gespeichert werden, kann mit ConfigMgr konfiguriert werden, wie unter [Bereitstellen von Beispiel-Assets](./deploy-assets.md) beschrieben.
 
 ```java
 package com.aemforms.mobileforms.core.servlets;
