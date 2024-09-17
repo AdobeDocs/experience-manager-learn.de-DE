@@ -6,10 +6,10 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: af962fa9ede0781929e4e7cbbd6b5f00a9dfb0d9
+source-git-commit: 285c652460ff00301d183defc56c07b3f74d8e5c
 workflow-type: tm+mt
-source-wordcount: '511'
-ht-degree: 81%
+source-wordcount: '540'
+ht-degree: 77%
 
 ---
 
@@ -208,13 +208,13 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
             </p>
         </td>   
         <td>
-            <a href="./season-3/cloud5-lighthouse-score-optimization.md">
-                <img alt="Optimierung der Lighthouse-Punktzahl" 
+            <a href="./season-3/cloud5-lighthouse-score-optimization-part1.md">
+                <img alt="Optimierung der Leuchtturmbewertung - Teil 1" 
                      src="https://video.tv.adobe.com/v/3433378?format=jpeg"/>
             </a>
             <div>
-                <a href="./season-3/cloud5-lighthouse-score-optimization.md">
-                <strong>Optimierung der Leuchtturmbewertung</strong></a>        
+                <a href="./season-3/cloud5-lighthouse-score-optimization-part1.md">
+                <strong>Optimierung der Leuchtturmbewertung - Teil 1</strong></a>
                 <br/><em>mit James Talbot &amp; Varun Mitra, Cloud Architect</em>
             </div>
             <p>
@@ -222,5 +222,22 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
                  Erfahren Sie, was ein Leuchtturmwert ist, und Techniken, um den bestmöglichen Leuchtturm-Wert zu erhalten.
             </p>
         </td>            
-    </tr>    
+    </tr> 
+    <tr>
+        <td>
+            <a href="./season-3/cloud5-lighthouse-score-optimization-part2.md">
+                <img alt="Optimierung der Lighthouse-Punktzahl - Teil 2"
+                     src="https://video.tv.adobe.com/v/3434042?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-lighthouse-score-optimization-part2.md">
+                <strong>Optimierung der Leuchtturmbewertung - Teil 2</strong></a>
+                <br/><em>mit James Talbot &amp; Varun Mitra, Cloud Architect</em>
+            </div>
+            <p>
+                <br/>                
+                 Erfahren Sie mehr über Techniken zur Verbesserung der gesamten Blockierungszeit.
+            </p>
+        </td>            
+    </tr>        
 </table>
