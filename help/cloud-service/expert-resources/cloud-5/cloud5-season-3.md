@@ -9,7 +9,7 @@ duration: 74
 source-git-commit: 285c652460ff00301d183defc56c07b3f74d8e5c
 workflow-type: tm+mt
 source-wordcount: '540'
-ht-degree: 77%
+ht-degree: 92%
 
 ---
 
@@ -184,12 +184,12 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
             </a>
             <div>
                 <a href="./season-3/cloud5-import-sites-to-edge-delivery-services.md">
-                <strong>Websites importieren</strong></a>        
-                <br/><em>mit James Talbot &amp; Varun Mitra, Cloud Architect</em>
+<strong>Importieren von Sites</strong></a>        
+<br/><em>mit James Talbot und Varun Mitra, Cloud-Architekt</em>
             </div>
             <p>
                 <br/>                
-                 Erfahren Sie mehr über den Import von Sites in AEM Sites mit Edge Delivery Services.
+Erfahren Sie mehr über das Importieren von Sites in AEM Sites mit Edge Delivery Services.
             </p>
         </td>
         <td>
@@ -199,12 +199,12 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
             </a>
             <div>
                 <a href="./season-3/cloud5-using-admin-api.md">
-                <strong>Verwenden der Admin-API</strong></a>        
-                <br/><em>mit James Talbot &amp; Varun Mitra, Cloud Architect</em>
+<strong>Verwenden der Admin-API</strong></a>        
+<br/><em>mit James Talbot und Varun Mitra, Cloud-Architekt</em>
             </div>
             <p>
                 <br/>                
-                 Erfahren Sie mehr über die Verwendung der Admin-API in Edge Delivery Services zur Verwaltung des Lebenszyklus von Inhalten und Code.
+Erfahren Sie mehr über die Verwendung der Admin-API in Edge Delivery Services zum Verwalten des Lebenszyklus von Inhalten und Code.
             </p>
         </td>   
         <td>
@@ -219,7 +219,7 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
             </div>
             <p>
                 <br/>                
-                 Erfahren Sie, was ein Leuchtturmwert ist, und Techniken, um den bestmöglichen Leuchtturm-Wert zu erhalten.
+Erfahren Sie, was eine Lighthouse-Bewertung ist, und lernen Sie Techniken kennen, um die bestmögliche Lighthouse-Bewertung zu erhalten.
             </p>
         </td>            
     </tr> 
