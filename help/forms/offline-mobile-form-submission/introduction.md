@@ -1,5 +1,5 @@
 ---
-title: Einführung in das Auslösen eines AEM-Workflows für die Übermittlung von HTML5-Formularen
+title: Trigger AEM Workflow bei der PDF-Formularübermittlung
 description: Fahren Sie mit dem Ausfüllen des Mobile-Formulars im Offline-Modus fort und übermitteln Sie das Mobile-Formular, um den AEM-Workflow auszulösen.
 feature: Mobile Forms
 doc-type: article
@@ -12,14 +12,14 @@ last-substantial-update: 2021-04-07T00:00:00Z
 jira: kt-16133
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 342
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
-workflow-type: ht
-source-wordcount: '213'
-ht-degree: 100%
+source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+workflow-type: tm+mt
+source-wordcount: '214'
+ht-degree: 91%
 
 ---
 
-# Herunterladen teilweise ausgefüllter Mobile-Formulare und Senden an AEM-Workflow
+# Herunterladen teilweise ausgefüllter mobiler Formulare und Senden eines AEM an den Trigger
 
 Ein gängiges Nutzungsszenario besteht darin, die XDP als HTML für Datenerfassungsaktivitäten wiederzugeben. Dies funktioniert gut, wenn die Formulare einfach sind und online ausgefüllt und gesendet werden können. Wenn das Formular jedoch komplex ist, können Benutzende das Formular möglicherweise nicht online ausfüllen. Dann müssen wir denen, die es ausfüllen wollen, die Möglichkeit bieten, eine interaktive Version des Formulars herunterzuladen, die offline mit Acrobat/Reader ausgefüllt werden kann. Sobald das Formular ausgefüllt ist, können die Benutzenden online gehen, um das Formular zu senden.
 Um diesen Anwendungsfall zu erfüllen, müssen wir die folgenden Schritte ausführen:

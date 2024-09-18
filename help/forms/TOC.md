@@ -8,10 +8,10 @@ breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
 version: 6.4, 6.5
 index: y
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
-workflow-type: ht
-source-wordcount: '2089'
-ht-degree: 100%
+source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+workflow-type: tm+mt
+source-wordcount: '2101'
+ht-degree: 98%
 
 ---
 
@@ -222,13 +222,19 @@ ht-degree: 100%
    + [Client-Bibliothek](storing-retrieving-form-data/part4.md)
    + [Adaptive Formularvorlage](storing-retrieving-form-data/part5.md)
    + [Bereitstellen von Beispiel-Assets](storing-retrieving-form-data/part6.md)
-+ Auslösen von AEM Workflows aus der Übermittlung mobiler Formulare{#offline-mobile-form-submission}
-   + [Einführung](offline-mobile-form-submission/introduction.md)
-   + [Benutzerdefiniertes Profil](offline-mobile-form-submission/custom-profile.md)
-   + [Durchführen der Formularübermittlung](offline-mobile-form-submission/handle-form-submission.md)
-   + [Speichern übermittelter Daten](offline-mobile-form-submission/author-servlet.md)
-   + [Workflow zur Überprüfung des PDFs](offline-mobile-form-submission/review-workflow.md)
-   + [Bereitstellung auf Ihrem System](offline-mobile-form-submission/deploy-assets.md)
++ Auslösen AEM Workflows bei der Übermittlung des PDF-Formulars{#offline-mobile-form-submission}
+   + [Teil - 1](offline-mobile-form-submission/introduction.md)
+   + [Teil - 2](offline-mobile-form-submission/custom-profile.md)
+   + [Teil - 3](offline-mobile-form-submission/handle-form-submission.md)
+   + [Teil - 4](offline-mobile-form-submission/author-servlet.md)
+   + [Teil - 5](offline-mobile-form-submission/review-workflow.md)
+   + [Teil - 6](offline-mobile-form-submission/deploy-assets.md)
++ Trigger-AEM-Workflow bei der Übermittlung von Mobile Forms{#trigger-aem-workflow-on-mobile-form-submission}
+   + [Teil - 1](trigger-aem-workflow-on-mobile-form-submission/introduction.md)
+   + [Teil - 2](trigger-aem-workflow-on-mobile-form-submission/handle-form-submission.md)
+   + [Teil - 3](trigger-aem-workflow-on-mobile-form-submission/author-servlet.md)
+   + [Teil - 4](trigger-aem-workflow-on-mobile-form-submission/review-workflow.md)
+   + [Teil - 5](trigger-aem-workflow-on-mobile-form-submission/deploy-assets.md)
 + Abfragen von Formularübermittlungen{#query-form-submissions}
    + [Einführung](query-form-submissions/introduction.md)
    + [Erstellen durchsuchbarer Felder](query-form-submissions/part1.md)
