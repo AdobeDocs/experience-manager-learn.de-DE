@@ -10,18 +10,23 @@ recommendations: noDisplay
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 73f5d90d-e007-41a0-9bb3-b8f36a9b1547
 duration: 50
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 12d7f8f0afc1c19f289c847771cb9f4f965c650c
 workflow-type: tm+mt
-source-wordcount: '240'
-ht-degree: 100%
+source-wordcount: '275'
+ht-degree: 87%
 
 ---
 
-# Erweiterbarkeit der AEM-Benutzeroberfläche
+# Erweiterbarkeit der AEM-Benutzeroberfläche {#aem-ui-extensibility}
 
 Adobe Experience Manager (AEM) bietet eine leistungsstarke Benutzeroberfläche zum Erstellen digitaler Erlebnisse. Um die Benutzeroberfläche anzupassen und zu erweitern, führte Adobe die App-Entwicklung ein. Mit diesem Tool können Entwicklerinnen und Entwickler das Benutzererlebnis ohne komplexe Codierung mit JavaScript und React verbessern.
 
 App-Entwicklung bietet eine Implementierungsebene für die Erstellung von Erweiterungen, die an genau definierte Erweiterungspunkte in AEM gebunden sind.  App-Entwicklung lässt sich nahtlos in AEM integrieren, sodass eine Echtzeitvorschau und Tests möglich sind. Die Bereitstellung von Änderungen in AEM erfolgt schnell und rationalisiert. Durch die Verwendung der App-Entwicklung sparen Entwicklerinnen und Entwickler Zeit und Mühe und ermöglichen so eine schnelle Prototyperstellung und Zusammenarbeit mit Interessengruppen.
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_learn_extensibility_app_builder"
+>title="Erste Schritte mit Adobe Developer App Builder und AEM Headless"
+>abstract="Erfahren Sie, wie AEM App Builder es Entwicklern ermöglicht, die AEM Benutzeroberflächen schnell an JavaScript und React anzupassen und zu erweitern und so eine nahtlose Integration und schnelle Bereitstellung zu unterstützen."
 
 ## Entwickeln einer AEM Benutzeroberflächen-Erweiterung
 
