@@ -11,9 +11,9 @@ last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 73f5d90d-e007-41a0-9bb3-b8f36a9b1547
 duration: 50
 source-git-commit: 12d7f8f0afc1c19f289c847771cb9f4f965c650c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '275'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ App-Entwicklung bietet eine Implementierungsebene für die Erstellung von Erweit
 >[!CONTEXTUALHELP]
 >id="aemcloud_learn_extensibility_app_builder"
 >title="Erste Schritte mit Adobe Developer App Builder und AEM Headless"
->abstract="Erfahren Sie, wie AEM App Builder es Entwicklern ermöglicht, die AEM Benutzeroberflächen schnell an JavaScript und React anzupassen und zu erweitern und so eine nahtlose Integration und schnelle Bereitstellung zu unterstützen."
+>abstract="Erfahren Sie, wie AEM App Builder es Entwickelnden ermöglicht, die AEM Benutzeroberflächen schnell an JavaScript und React anzupassen und zu erweitern und so eine nahtlose Integration und schnelle Bereitstellung zu unterstützen."
 
 ## Entwickeln einer AEM Benutzeroberflächen-Erweiterung
 

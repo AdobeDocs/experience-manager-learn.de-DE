@@ -7,9 +7,9 @@ recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
 source-git-commit: 285c652460ff00301d183defc56c07b3f74d8e5c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '540'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -209,13 +209,13 @@ Erfahren Sie mehr über die Verwendung der Admin-API in Edge Delivery Services z
         </td>   
         <td>
             <a href="./season-3/cloud5-lighthouse-score-optimization-part1.md">
-                <img alt="Optimierung der Leuchtturmbewertung - Teil 1" 
+                <img alt="Optimierung der Lighthouse-Bewertung – Teil 1" 
                      src="https://video.tv.adobe.com/v/3433378?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-lighthouse-score-optimization-part1.md">
-                <strong>Optimierung der Leuchtturmbewertung - Teil 1</strong></a>
-                <br/><em>mit James Talbot &amp; Varun Mitra, Cloud Architect</em>
+<strong>Optimierung der Lighthouse-Bewertung – Teil 1</strong></a>
+<br/><em>mit James Talbot und Varun Mitra, Cloud-Architekt</em>
             </div>
             <p>
                 <br/>                
@@ -226,17 +226,17 @@ Erfahren Sie, was eine Lighthouse-Bewertung ist, und lernen Sie Techniken kennen
     <tr>
         <td>
             <a href="./season-3/cloud5-lighthouse-score-optimization-part2.md">
-                <img alt="Optimierung der Lighthouse-Punktzahl - Teil 2"
+                <img alt="Optimierung der Lighthouse-Bewertung – Teil 2"
                      src="https://video.tv.adobe.com/v/3434042?format=jpeg"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-lighthouse-score-optimization-part2.md">
-                <strong>Optimierung der Leuchtturmbewertung - Teil 2</strong></a>
-                <br/><em>mit James Talbot &amp; Varun Mitra, Cloud Architect</em>
+<strong>Optimierung der Lighthouse-Bewertung – Teil 2</strong></a>
+<br/><em>mit James Talbot und Varun Mitra, Cloud-Architekt</em>
             </div>
             <p>
                 <br/>                
-                 Erfahren Sie mehr über Techniken zur Verbesserung der gesamten Blockierungszeit.
+Erfahren Sie mehr über Techniken zur Verbesserung der gesamten Blockierungszeit.
             </p>
         </td>            
     </tr>        
