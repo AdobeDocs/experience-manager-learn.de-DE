@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer klickbaren Bildkomponente
-description: Erstellen einer klickbaren Bildkomponente in AEM Forms Cloud Service
+description: Erstellen Sie klickbare Bildkomponenten im AEM Forms-Cloud Service.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,14 +10,14 @@ topic: Development
 jira: KT-15968
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: c451472f-d282-4662-9852-8a3e73c5c853
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
-workflow-type: ht
-source-wordcount: '132'
-ht-degree: 100%
+source-git-commit: 1fa202910e6c9d21532c6027647c5f3909931e0e
+workflow-type: tm+mt
+source-wordcount: '136'
+ht-degree: 86%
 
 ---
 
-# Einführung
+# Einführung in klickbare Bilder
 
 Die Verwendung klickbarer Bilder in Forms kann zu einem Anwendererlebnis führen, das fesselnder, intuitiver und visuell ansprechender ist. Für diesen Artikel wird SVG als Format für die klickbaren Bilder verwendet, denn es bietet verschiedene Vorteile, insbesondere im Hinblick auf die Design-Flexibilität, Leistung und das Anwendererlebnis.
 SVG kann mit Adobe Illustrator oder einem beliebigen kostenlosen Onlinetool erstellt werden. Der Anwendungsfall wird anhand der [US-Karte](https://simplemaps.com/resources/svg-us) von simplemaps demonstriert.
