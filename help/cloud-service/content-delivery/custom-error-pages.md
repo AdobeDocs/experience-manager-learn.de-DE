@@ -11,10 +11,10 @@ duration: 0
 last-substantial-update: 2024-09-24T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: d11b07441d8c46ce9a352e4c623ddc1781b9b9be
+source-git-commit: 01e6ef917d855e653eccfe35a2d7548f12628604
 workflow-type: tm+mt
-source-wordcount: '1355'
-ht-degree: 10%
+source-wordcount: '1566'
+ht-degree: 8%
 
 ---
 
@@ -26,7 +26,7 @@ Erfahren Sie, wie Sie benutzerdefinierte Fehlerseiten für Ihre von AEM as a Clo
 In diesem Tutorial erfahren Sie:
 
 - Standardmäßige Fehlerseiten
-- Von
+- Von wo aus werden Fehlerseiten bereitgestellt?
    - AEM Service Type - author, publish, preview
    - Adobe-verwaltetes CDN
 - Optionen zum Anpassen von Fehlerseiten
@@ -50,8 +50,14 @@ Die standardmäßige Fehlerseite _wird_ vom Typ _AEM Service Type_ (author, publ
 
 | Fehlerseite von | Details |
 |---------------------|:-----------------------:|
-| AEM Service Type - author, publish, preview | Wenn die Seitenanfrage vom Typ AEM Service bereitgestellt wird, wird die Fehlerseite vom Typ AEM Service bereitgestellt. |
-| Adobe-verwaltetes CDN | Wenn das von Adobe verwaltete CDN _nicht den AEM Diensttyp_ (Ursprungsserver) erreichen kann, wird die Fehlerseite vom Adobe verwalteten CDN bereitgestellt. **Es handelt sich um ein unwahrscheinliches Ereignis, das jedoch erwähnt werden sollte.** |
+| AEM Service Type - author, publish, preview | Wenn die Seitenanfrage vom Typ AEM Service bereitgestellt wird und eines der oben genannten Fehlerszenarien eintritt, wird die Fehlerseite vom Typ AEM Service bereitgestellt. |
+| Adobe-verwaltetes CDN | Wenn das von Adobe verwaltete CDN _nicht den AEM Diensttyp_ (Ursprungsserver) erreichen kann, wird die Fehlerseite vom Adobe verwalteten CDN bereitgestellt. **Es ist ein unwahrscheinliches Ereignis, dessen Planung sich jedoch lohnt.** |
+
+
+Die standardmäßigen Fehlerseiten, die vom AEM-Diensttyp und vom Adobe-verwalteten CDN bereitgestellt werden, lauten beispielsweise wie folgt:
+
+![AEM Standardfehlerseiten](./assets/aem-default-error-pages.png)
+
 
 Sie können jedoch _sowohl AEM Diensttyp als auch die von Adobe verwalteten CDN-Fehlerseiten_ anpassen, um Ihrer Marke zu entsprechen und ein besseres Benutzererlebnis zu bieten.
 
@@ -89,7 +95,11 @@ In diesem Tutorial erfahren Sie, wie Sie Fehlerseiten mit der Anweisung _ErrorDo
 
 - Überprüfen Sie, ob die WKND-Site-Seiten korrekt dargestellt werden.
 
-## ErrorDocument Apache-Direktive zum Anpassen von Fehlerseiten{#errordocument-directive}
+## ErrorDocument Apache-Direktive zum Anpassen AEM bereitgestellten Fehlerseiten{#errordocument}
+
+Verwenden Sie zum Anpassen AEM bereitgestellten Fehlerseiten die Apache-Anweisung `ErrorDocument` .
+
+In AEM as a Cloud Service gilt die Option `ErrorDocument` Apache-Direktive nur für die Typen der Veröffentlichungs- und Vorschaudienste. Dies gilt nicht für den Autorendiensttyp, da Apache + Dispatcher nicht Teil der Bereitstellungsarchitektur ist.
 
 Sehen wir uns an, wie das Projekt [AEM WKND](https://github.com/adobe/aem-guides-wknd) die Apache-Anweisung `ErrorDocument` verwendet, um benutzerdefinierte Fehlerseiten anzuzeigen.
 
@@ -123,28 +133,61 @@ Sehen wir uns an, wie das Projekt [AEM WKND](https://github.com/adobe/aem-guides
 
 - Überprüfen Sie die benutzerdefinierten Fehlerseiten der WKND-Site, indem Sie einen falschen Seitennamen oder Pfad in Ihrer Umgebung eingeben, z. B. [https://publish-p105881-e991000.adobeaemcloud.com/us/en/foo/bar.html](https://publish-p105881-e991000.adobeaemcloud.com/us/en/foo/bar.html).
 
-## ACS AEM Commons-Error Page Handler zum Anpassen von Fehlerseiten{#acs-aem-commons-error-page-handler}
+## ACS AEM Commons-Error Page Handler zum Anpassen AEM bereitgestellten Fehlerseiten{#acs-aem-commons}
 
-Lesen Sie zum Anpassen von Fehlerseiten mit dem ACS AEM Commons Error Page Handler den Abschnitt [Verwendung von ](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html#how-to-use) .
+Um AEM bereitgestellte Fehlerseiten über _alle AEM Diensttypen_ hinweg anzupassen, können Sie die Option [ACS AEM Commons Error Page Handler](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html) verwenden.
 
-## CDN-Fehlerseiten zum Anpassen von Fehlerseiten{#cdn-error-pages}
+. Detaillierte schrittweise Anweisungen finden Sie im Abschnitt [Verwendung von ](https://adobe-consulting-services.github.io/acs-aem-commons/features/error-handler/index.html#how-to-use) .
+
+## CDN-Fehlerseiten zum Anpassen von CDN-bereitgestellten Fehlerseiten{#cdn-error-pages}
+
+Verwenden Sie die Option CDN-Fehlerseiten , um vom Adobe verwaltetes CDN bereitgestellte Fehlerseiten anzupassen.
 
 Implementieren wir CDN-Fehlerseiten, um Fehlerseiten anzupassen, wenn das von Adobe verwaltete CDN den AEM-Diensttyp (Herkunftsserver) nicht erreichen kann.
 
 >[!IMPORTANT]
 >
-> Beachten Sie, dass das von Adobe verwaltete CDN den AEM-Diensttyp (Herkunftsserver) nicht erreichen kann, ein unwahrscheinliches Ereignis ist, dessen Planung sich jedoch lohnt.
+> Das von _Adobe verwaltete CDN kann den AEM Diensttyp_ (Herkunftsserver) nicht erreichen, ist ein **unwahrscheinliches Ereignis**, dessen Planung sich jedoch lohnt.
+
+Die allgemeinen Schritte zur Implementierung von CDN-Fehlerseiten sind:
+
+- Entwickeln Sie einen benutzerdefinierten Fehlerseiteninhalt als Einzelseiten-App (SPA).
+- Hosten Sie die für die CDN-Fehlerseite erforderlichen statischen Dateien an einem öffentlich zugänglichen Speicherort.
+- Konfigurieren Sie die CDN-Regel (errorPages) und verweisen Sie auf die oben genannten statischen Dateien.
+- Stellen Sie die konfigurierte CDN-Regel mithilfe der Cloud Manager-Pipeline in der AEM as a Cloud Service-Umgebung bereit.
+- Testen Sie die CDN-Fehlerseiten.
 
 
 ### Übersicht über CDN-Fehlerseiten
 
-Die CDN-Fehlerseite wird vom Adobe-verwalteten CDN als Einzelseiten-App (SPA) implementiert.
+Die CDN-Fehlerseite wird vom Adobe-verwalteten CDN als Einzelseiten-App (SPA) implementiert. Das SPA HTML-Dokument, das vom Adobe-verwalteten CDN bereitgestellt wird, enthält das absolute Minimum an HTML-Snippet. Der benutzerdefinierte Fehlerseiteninhalt wird dynamisch mithilfe einer JavaScript-Datei generiert. Die JavaScript-Datei muss vom Kunden an einem öffentlich zugänglichen Ort entwickelt und gehostet werden.
 
-Der WKND-spezifische Markeninhalt muss mithilfe der JavaScript-Datei dynamisch generiert werden. Die JavaScript-Datei muss an einem öffentlich zugänglichen Speicherort gehostet werden. Daher müssen die folgenden statischen Dateien entwickelt und an einem öffentlich zugänglichen Speicherort gehostet werden:
+Das vom Adobe-verwalteten CDN bereitgestellte HTML-Snippet weist die folgende Struktur auf:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    ...
+
+    <title>{title}</title>
+    <link rel="icon" href="{icoUrl}">
+    <link rel="stylesheet" href="{cssUrl}">
+  </head>
+  <body>
+    <script src="{jsUrl}"></script>
+  </body>
+</html>
+```
+
+Das HTML-Snippet enthält die folgenden Platzhalter:
 
 1. **jsUrl**: Die absolute URL der JavaScript-Datei zum Rendern des Fehlerseiteninhalts durch dynamisches Erstellen von HTML-Elementen.
 1. **cssUrl**: Die absolute URL der CSS-Datei, um den Inhalt der Fehlerseite zu gestalten.
 1. **icoUrl**: Die absolute URL des Favicons.
+
+
 
 ### Entwickeln einer benutzerdefinierten Fehlerseite
 
@@ -339,9 +382,11 @@ Gehen Sie wie folgt vor, um die CDN-Fehlerseiten zu testen:
 
 ## Zusammenfassung
 
-In diesem Tutorial haben Sie erfahren, wie Sie benutzerdefinierte Fehlerseiten für Ihre von AEM as a Cloud Service gehostete Website implementieren.
+In diesem Tutorial haben Sie mehr über standardmäßige Fehlerseiten, von denen Fehlerseiten bereitgestellt werden, und Optionen zum Anpassen von Fehlerseiten erfahren. Sie haben gelernt, wie Sie benutzerdefinierte Fehlerseiten mithilfe der Apache-Direktive `ErrorDocument`, der Optionen `ACS AEM Commons Error Page Handler` und `CDN Error Pages` implementieren.
 
-Außerdem haben Sie die detaillierten Schritte für die Option CDN-Fehlerseiten zum Anpassen von Fehlerseiten kennengelernt, wenn das von Adobe verwaltete CDN den AEM-Diensttyp (Herkunftsserver) nicht erreichen kann.
+## Zusätzliche Ressourcen
 
+- [Konfigurieren von CDN-Fehlerseiten](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
 
+- [Cloud Manager - Konfigurations-Pipelines](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)
 
