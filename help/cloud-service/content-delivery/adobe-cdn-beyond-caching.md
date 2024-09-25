@@ -11,13 +11,13 @@ duration: 0
 last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
-source-git-commit: 65e77a329226ca7c7ccb1e583d2a045074feeb3d
+exl-id: 8948a900-01e9-49ed-9ce5-3a057f5077e4
+source-git-commit: 8795024a7b5e6d10cb2ff2f770dd3d080af85e68
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%
 
 ---
-
 
 # Adobe CDN - Erweiterte Funktionen, die über das Zwischenspeichern hinausgehen
 
@@ -93,10 +93,11 @@ data:
 
 [CDN-Regel zur HTTP-Header-Überprüfung konfigurieren und bereitstellen](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule)
 
-[Bereinigen des CDN-Cache](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache)
+[Bereinigen des CDN-Cache](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache)
+
+[Konfigurieren von CDN-Fehlerseiten](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages)
 
 [Konfigurieren des Traffics am CDN](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)
 
 [Konfigurieren von CDN-Anmeldeinformationen und Authentifizierung](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 
-[Konfigurieren von CDN-Fehlerseiten](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
