@@ -7,7 +7,7 @@ sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
 source-git-commit: acecb13a5b7f3c75bc6cd8eb36d398f8cebfe0a6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1303'
 ht-degree: 100%
 
@@ -144,7 +144,7 @@ ht-degree: 100%
    + [Benutzerdefinierter Domain-Name mit Kunden-CDN](./content-delivery/custom-domain-names-with-customer-managed-cdn.md)
    + [Caching](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
    + [Adobe CDN – mehr als Caching](./content-delivery/adobe-cdn-beyond-caching.md)
-   + [benutzerdefinierte Fehlerseiten](./content-delivery/custom-error-pages.md)
+   + [Benutzerdefinierte Fehlerseiten](./content-delivery/custom-error-pages.md)
    + [URL-Umleitungen](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=de){target=_blank}
 + Caching{#caching}
    + [Überblick](./caching/overview.md)
