@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: acecb13a5b7f3c75bc6cd8eb36d398f8cebfe0a6
-workflow-type: ht
-source-wordcount: '1303'
+source-git-commit: a224d375605b0abc2f521bfd6992239c77095572
+workflow-type: tm+mt
+source-wordcount: '1300'
 ht-degree: 100%
 
 ---
@@ -217,7 +217,6 @@ ht-degree: 100%
       + [Einführung](./migration/cloud-acceleration-manager/introduction.md)
       + [Bereitschaft und Best Practice Analyzer](./migration/cloud-acceleration-manager/readiness-and-best-practice-analyzer.md)
       + [Implementierungsphase](./migration/cloud-acceleration-manager/implementation-phase.md)
-      + [Content Transfer Tool](./migration/cloud-acceleration-manager/content-transfer-tool.md)
       + [Code-Refaktorierungs-Tools](./migration/cloud-acceleration-manager/code-refactoring-tools.md)
       + [Code-Repository-Modernizer](./migration/cloud-acceleration-manager/code-repository-modernizer.md)
       + [Dispatcher-Converter](./migration/cloud-acceleration-manager/dispatcher-converter.md)
