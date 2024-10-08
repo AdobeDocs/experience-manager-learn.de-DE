@@ -12,9 +12,9 @@ last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
-source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
+source-git-commit: 8d9e6bc44164ff3acfa2c7eadffc60bbc5e8306e
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '883'
 ht-degree: 100%
 
 ---
@@ -127,13 +127,4 @@ Weitere Informationen finden Sie unter [Verarbeitung von AEM-Ereignissen über A
         </p>
       </td>
   </tr>    
-  <tr>
-    <td>
-        <a  href="./examples/assets-pim-integration.md"><img alt="AEM Assets-Ereignisse für die PIM-Integration" src="./assets/examples/assets-pim-integration/PIM-integration-tile.png"/></a>
-        <div><strong><a href="./examples/assets-pim-integration.md">AEM Assets-Ereignisse für die PIM-Integration</a></strong></div>
-        <p>
-          Erfahren Sie, wie Sie AEM Assets- und PIM-Systeme (Product Information Management) für Metadatenaktualisierungen integrieren.
-        </p>
-      </td>
-  </tr>  
 </table>
