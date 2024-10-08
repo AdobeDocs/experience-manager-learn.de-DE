@@ -6,10 +6,10 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: 285c652460ff00301d183defc56c07b3f74d8e5c
-workflow-type: ht
-source-wordcount: '540'
-ht-degree: 100%
+source-git-commit: 4806312931038cc31e6bcf67f242483f62723387
+workflow-type: tm+mt
+source-wordcount: '566'
+ht-degree: 98%
 
 ---
 
@@ -237,6 +237,21 @@ Erfahren Sie, was eine Lighthouse-Bewertung ist, und lernen Sie Techniken kennen
             <p>
                 <br/>                
 Erfahren Sie mehr über Techniken zur Verbesserung der gesamten Blockierungszeit.
+            </p>
+        </td>            
+        <td>
+            <a href="./season-3/cloud5-lighthouse-score-optimization-part3.md">
+                <img alt="Optimierung der Lighthouse-Bewertung – Teil 3"
+                     src="https://video.tv.adobe.com/v/3435001?format=jpeg"/>
+            </a>
+            <div>
+                <a href="./season-3/cloud5-lighthouse-score-optimization-part3.md">
+<strong>Optimierung der Lighthouse-Bewertung – Teil 3</strong></a>
+<br/><em>mit James Talbot und Varun Mitra, Cloud-Architekt</em>
+            </div>
+            <p>
+                <br/>                
+                 Erfahren Sie mehr über die Techniken zur Verbesserung des größten inhaltsreichen Malers.
             </p>
         </td>            
     </tr>        
