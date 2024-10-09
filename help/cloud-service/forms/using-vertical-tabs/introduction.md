@@ -1,6 +1,6 @@
 ---
-title: Vertikale Registerkarten im AEM Forms-Cloud Service verwenden
-description: Erstellen Sie ein adaptives Formular mithilfe der vertikalen Registerkarten.
+title: Verwenden vertikaler Registerkarten in AEM Forms Cloud Service
+description: Erstellen Sie ein adaptives Formular mit vertikalen Registerkarten.
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -13,9 +13,9 @@ badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16023
 exl-id: 84c03212-47dc-4398-a197-e69e3f3bf77e
 source-git-commit: b4f7d9762c009e16dc65f7134356edcf7ad7a45d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '99'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
