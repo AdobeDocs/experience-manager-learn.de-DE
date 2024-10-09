@@ -10,10 +10,10 @@ jira: KT-10796
 thumbnail: KT-10796.jpg
 exl-id: 1f536079-b3ce-4807-be88-804378e75d37
 duration: 31
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 23ea95cfdf7e4c9fde4b53e9f68079b4d267ca20
 workflow-type: tm+mt
 source-wordcount: '161'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -27,7 +27,7 @@ Für Mobile-Bereitstellungen ist eine minimale Konfiguration erforderlich, da HT
 
 Die folgende Bereitstellungskonfiguration muss für Mobile App-Implementierungen vorhanden sein.
 
-| App stellt eine Verbindung her zu | AEM-Autoreninstanz | AEM Publish | AEM-Vorschau |
+| Mobile App stellt eine Verbindung zu → her | AEM Author | AEM Publish | AEM-Vorschau |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-Filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | Cross-Origin Resource Sharing (CORS) | ✘ | ✘ | ✘ |
