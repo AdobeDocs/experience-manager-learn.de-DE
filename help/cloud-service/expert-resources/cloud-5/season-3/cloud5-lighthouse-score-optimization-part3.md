@@ -1,6 +1,6 @@
 ---
 title: Optimierung der Lighthouse-Bewertung – Teil 3
-description: Erfahren Sie mehr über die Techniken zur Verbesserung des größten inhaltsreichen Malers (LCP) und zur Erzielung der höchstmöglichen Lightthouse-Werte für Ihr Edge Delivery Services-Projekt.
+description: Erfahren Sie mehr über Techniken zur Verbesserung von Largest Contentful Paint (LCP) und zur Erzielung der höchstmöglichen Lighthouse-Bewertungen für Ihr Edge Delivery Services-Projekt.
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -15,13 +15,13 @@ recommendations: noDisplay, noCatalog
 source-git-commit: 5e7ed607cae211f989ed50c10ae3be47876868cf
 workflow-type: tm+mt
 source-wordcount: '54'
-ht-degree: 18%
+ht-degree: 100%
 
 ---
 
 
 # Optimierung der Lighthouse-Bewertung – Teil 3
 
-Erfahren Sie mehr über die Techniken zur Verbesserung des größten inhaltsreichen Malers (LCP) und zur Erzielung der höchstmöglichen Lightthouse-Werte für Ihr Edge Delivery Services-Projekt.
+Erfahren Sie mehr über Techniken zur Verbesserung von Largest Contentful Paint (LCP) und zur Erzielung der höchstmöglichen Lighthouse-Bewertungen für Ihr Edge Delivery Services-Projekt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3435001/?learn=on)
