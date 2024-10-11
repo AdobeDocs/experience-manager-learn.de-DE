@@ -7,9 +7,9 @@ recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
 source-git-commit: 4806312931038cc31e6bcf67f242483f62723387
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '566'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -251,7 +251,7 @@ Erfahren Sie mehr über Techniken zur Verbesserung der gesamten Blockierungszeit
             </div>
             <p>
                 <br/>                
-                 Erfahren Sie mehr über die Techniken zur Verbesserung des größten inhaltsreichen Malers.
+                 Erfahren Sie mehr über die Techniken zur Verbesserung von Largest Contentful Paint (LCP).
             </p>
         </td>            
     </tr>        

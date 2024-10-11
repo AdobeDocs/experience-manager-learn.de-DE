@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
 source-git-commit: 8d9e6bc44164ff3acfa2c7eadffc60bbc5e8306e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1297'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -433,5 +433,5 @@ ht-degree: 99%
          + [Verwenden der Admin-API](./expert-resources/cloud-5/season-3/cloud5-using-admin-api.md)
          + [Optimierung der Lighthouse-Bewertung – Teil 1](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part1.md)
          + [Optimierung der Lighthouse-Bewertung – Teil 2](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part2.md)
-         + [Optimierung der Lighthouse-Punktzahl - Teil 3](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part3.md)
+         + [Optimierung der Lighthouse-Bewertung – Teil 3](./expert-resources/cloud-5/season-3/cloud5-lighthouse-score-optimization-part3.md)
 
