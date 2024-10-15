@@ -12,10 +12,10 @@ last-substantial-update: 2023-12-07T00:00:00Z
 jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
-source-git-commit: 8d9e6bc44164ff3acfa2c7eadffc60bbc5e8306e
-workflow-type: ht
-source-wordcount: '883'
-ht-degree: 100%
+source-git-commit: ede52c6c9feb0b35bc3729e28591cb4e7c7600f7
+workflow-type: tm+mt
+source-wordcount: '833'
+ht-degree: 96%
 
 ---
 
@@ -67,13 +67,12 @@ AEM Eventing bietet zahlreiche Vorteile für die Systemarchitektur und die Betri
 AEM Eventing ist zwar leistungsstark, hat jedoch einige Einschränkungen, die beachtet werden müssen:
 
 - **Verfügbarkeit auf AEM as a Cloud Service beschränkt**: Derzeit ist AEM Eventing ausschließlich für AEM as a Cloud Service verfügbar.
-- **Eingeschränkte Ereignisunterstützung**: Zurzeit werden nur AEM-Inhaltsfragmentereignisse unterstützt. Es wird jedoch erwartet, dass sich der Anwendungsbereich mit der Ergänzung weiterer Ereignisse in der Zukunft ausweiten wird.
+
+- **Verfügbare Ereignistypen**: Überprüfen Sie die aktuelle Liste der verfügbaren Ereignistypen [hier](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#available-event-types).
 
 ## Aktivierung
 
-AEM Eventing wird pro AEM as a Cloud Service-Umgebung aktiviert und steht Umgebungen nur im Vorab-Release-Modus zur Verfügung. Wenden Sie sich an das <a href="mailto:grp-aem-events@adobe.com">AEM-Eventing-Team</a>, um für Ihre AEM-Umgebung das AEM Eventing zu aktivieren.
-
-Falls bereits aktiviert, lesen Sie [Aktivieren der AEM-Ereignisse in Ihrer AEM Cloud Service-Umgebung](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment) für die nächsten Schritte.
+Die nächsten Schritte finden Sie unter [Aktivieren von AEM-Ereignissen in Ihrer AEM Cloud Service-Umgebung](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment) .
 
 ## Informationen zum Abonnement
 
