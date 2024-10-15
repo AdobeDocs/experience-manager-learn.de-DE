@@ -12,9 +12,9 @@ mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
 duration: 136
 source-git-commit: f1b13bba9e83ac1d25f2af23ff2673554726eb19
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '655'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Wie SPA und AEM-Traffic auf der geteilten Domain geleitet werden, liegt an Ihnen
 
 Im Folgenden finden Sie Bereitstellungskonfigurationen, die für SPA-Bereitstellungen in Produktionsumgebungen erforderlich sind, wenn sie auf derselben Domain wie AEM gehostet wird.
 
-| SPA verbindet sich mit → | AEM Author | AEM Publish | AEM-Vorschau |
+| SPA stellt eine Verbindung her zu → | AEM Author | AEM Publish | AEM-Vorschau |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-Filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | Cross-Origin Resource Sharing (CORS) | ✘ | ✘ | ✘ |
@@ -70,7 +70,7 @@ Da auf AEM und die SPA von verschiedenen Domains aus zugegriffen wird, erzwingen
 
 Im Folgenden finden Sie Bereitstellungskonfigurationen, die für SPA-Bereitstellungen in Produktionsumgebungen erforderlich sind, wenn sie auf einer anderen Domain gehostet werden als AEM.
 
-| SPA verbindet sich mit → | AEM Author | AEM Publish | AEM-Vorschau |
+| SPA stellt eine Verbindung her zu → | AEM Author | AEM Publish | AEM-Vorschau |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-Filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [Cross-Origin Resource Sharing (CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |

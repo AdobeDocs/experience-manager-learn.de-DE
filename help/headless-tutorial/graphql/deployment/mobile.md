@@ -11,9 +11,9 @@ thumbnail: KT-10796.jpg
 exl-id: 1f536079-b3ce-4807-be88-804378e75d37
 duration: 31
 source-git-commit: 23ea95cfdf7e4c9fde4b53e9f68079b4d267ca20
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '161'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ Für Mobile-Bereitstellungen ist eine minimale Konfiguration erforderlich, da HT
 
 Die folgende Bereitstellungskonfiguration muss für Mobile App-Implementierungen vorhanden sein.
 
-| Mobile App stellt eine Verbindung zu → her | AEM Author | AEM Publish | AEM-Vorschau |
+| Die Mobile App stellt eine Verbindung her zu → | AEM Author | AEM Publish | AEM-Vorschau |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-Filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | Cross-Origin Resource Sharing (CORS) | ✘ | ✘ | ✘ |

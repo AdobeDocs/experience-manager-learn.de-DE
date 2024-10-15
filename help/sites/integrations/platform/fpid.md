@@ -14,15 +14,15 @@ badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title=
 exl-id: 18a22f54-da58-4326-a7b0-3b1ac40ea0b5
 duration: 266
 source-git-commit: c638c1e012952f2f43806a325d729cde088ab9f5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1015'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
 # Generieren von Experience Platform-FPIDs mit AEM Sites
 
-Für die Integration von Adobe Experience Manager (AEM)-Sites, die über AEM Publish bereitgestellt werden, mit Adobe Experience Platform (AEP) muss AEM ein eindeutiges Erstanbieter-Geräte-ID-Cookie (FPID) generieren und verwalten, damit die Benutzeraktivität eindeutig verfolgt werden kann.
+Für die Zusammenarbeit von Adobe Experience Manager (AEM) Sites bei Bereitstellung über AEM Publish mit Adobe Experience Platform (AEP) muss AEM ein eindeutiges Cookie für die Erstanbieter-Geräte-ID (FPID) generieren und verwalten, um die Benutzeraktivität eindeutig zu verfolgen.
 
 Lesen Sie die unterstützende Dokumentation: [Erfahren Sie mehr über die Zusammenarbeit von Erstanbieter-Geräte-IDs und Experience Cloud-IDs](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html?lang=de).
 
@@ -53,9 +53,9 @@ Im folgenden Diagramm wird beschrieben, wie der AEM-Publish-Service FPIDs verwal
 
 Der folgende Code und die folgende Konfiguration können im AEM-Publish-Service bereitgestellt werden, um einen Endpunkt zu erstellen, der ein neues FPID-Cookie generiert oder die Lebensdauer eines vorhandenen FPID-Cookies verlängert und die FPID als JSON zurückgibt.
 
-### Publish-FPID-Cookie-Servlet AEM
+### AEM Publish-FPID-Cookie-Servlet
 
-Es muss ein AEM Publish-HTTP-Endpunkt erstellt werden, um ein FPID-Cookie mithilfe eines [Sling-Servlets](https://sling.apache.org/documentation/the-sling-engine/servlets.html#registering-a-servlet-using-java-annotations-1) zu generieren oder zu erweitern.
+Es muss ein AEM Publish-HTTP-Endpunkt erstellt werden, um ein FPID-Cookie mithilfe eines [Sling-Servlets](https://sling.apache.org/documentation/the-sling-engine/servlets.html#registering-a-servlet-using-java-annotations-1) zu generieren oder zu verlängern.
 
 + Das Servlet ist an `/bin/aem/fpid` gebunden, da für den Zugriff keine Authentifizierung erforderlich ist. Wenn eine Authentifizierung erforderlich ist, binden Sie es an einen Sling-Ressourcentyp.
 + Das Servlet akzeptiert HTTP-GET-Anfragen. Die Antwort ist mit `Cache-Control: no-store` gekennzeichnet, um Caching zu verhindern. Dieser Endpunkt sollte jedoch auch mithilfe eindeutiger Cache-Busting-Abfrageparameter angefordert werden.
@@ -67,7 +67,7 @@ Wenn eine HTTP-Anfrage das Servlet erreicht, prüft das Servlet, ob in der Anfra
 
 Das Servlet schreibt dann die FPID als JSON-Objekt in folgender Form in die Antwort: `{ fpid: "<FPID VALUE>" }`.
 
-Es ist wichtig, die FPID dem Client im Hauptteil bereitzustellen, da das FPID-Cookie mit &quot;`HttpOnly`&quot;markiert ist, was bedeutet, dass nur der Server den zugehörigen Wert lesen kann und clientseitige JavaScript dies nicht können. Um zu vermeiden, dass die FPID bei jedem Seitenladevorgang unnötigerweise erneut angezeigt wird, wird auch ein `FPID_CLIENT` -Cookie gesetzt, das angibt, dass die FPID generiert wurde, und den Wert der clientseitigen JavaScript zur Verwendung offenlegt.
+Es ist wichtig, die FPID dem Client im Hauptteil bereitzustellen, da das FPID-Cookie mit `HttpOnly` gekennzeichnet ist. Das bedeutet, dass nur der Server seinen Wert lesen kann, aber nicht das Client-seitige JavaScript. Um zu vermeiden, dass die FPID bei jedem Seitenladevorgang unnötigerweise erneut abgerufen wird, wird zudem ein `FPID_CLIENT`-Cookie gesetzt, das angibt, dass die FPID generiert wurde, und dem Client-seitigen JavaScript den Wert zur Verwendung offenlegt.
 
 Der FPID-Wert wird verwendet, um Aufrufe mithilfe des Platform Web SDK zu parametrisieren.
 
@@ -159,7 +159,7 @@ public class FpidServlet extends SlingAllMethodsServlet {
 
 Ein benutzerdefiniertes Client-seitiges JavaScript muss zur Seite hinzugefügt werden, um das Servlet asynchron aufzurufen, das FPID-Cookie zu generieren oder zu aktualisieren und die FPID in der Antwort zurückzugeben.
 
-Dieses JavaScript-Skript wird normalerweise mit einer der folgenden Methoden zur Seite hinzugefügt:
+Dieses JavaScript-Skript wird der Seite normalerweise mit einer der folgenden Methoden hinzugefügt:
 
 + [Tags in Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=de)
 + [AEM-Client-Bibliothek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/clientlibs.html?lang=de)
