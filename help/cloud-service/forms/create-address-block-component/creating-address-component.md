@@ -9,10 +9,10 @@ feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: 280c9a30-e017-4bc0-9027-096aac82c22c
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+source-git-commit: ed64dd303a384d48f76c9b8e8e925f5d3b8f3247
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 90%
+source-wordcount: '296'
+ht-degree: 91%
 
 ---
 
@@ -69,7 +69,7 @@ Wählen Sie den Knoten ``zip`` aus und legen Sie die Eigenschaften wie unten dar
 Wählen Sie den Knoten ``state`` aus und legen Sie die Eigenschaften wie unten dargestellt fest. Beachten Sie den fieldType von „state“ – es ist als Dropdown-Liste festgelegt
 ![state](assets/state.png)
 
-## Standardwerte für das Statusfeld festlegen
+## Festlegen von Optionen für das Statusfeld
 
 Wählen Sie den Knoten ``state`` aus und fügen Sie die folgenden Eigenschaften hinzu.
 
