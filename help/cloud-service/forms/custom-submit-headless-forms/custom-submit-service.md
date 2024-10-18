@@ -11,10 +11,10 @@ topic: Development
 jira: KT-13520
 exl-id: c23275d7-daf7-4a42-83b6-4d04b297c470
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
 workflow-type: tm+mt
-source-wordcount: '451'
-ht-degree: 100%
+source-wordcount: '453'
+ht-degree: 95%
 
 ---
 
@@ -26,7 +26,7 @@ Zum Erstellen eines benutzerdefinierten Sendedienstes wurden die folgenden Schri
 
 ## Erstellen eines AEM-Projekts
 
-Wenn Sie bereits über ein AEM Forms-Cloud-Service-Projekt verfügen, können Sie sofort mit der [Erstellung eines benutzerdefinierten Sendedienstes](#Write-the-custom-submit-service) beginnen.
+Wenn Sie bereits über ein vorhandenes AEM Forms as a Cloud Service-Projekt verfügen, können Sie [springen, um den benutzerdefinierten Submit-Dienst zu schreiben](#Write-the-custom-submit-service)
 
 * Erstellen Sie auf Laufwerk „C:“ einen Ordner namens „cloudmanager“.
 * Navigieren Sie zu diesem neu erstellten Ordner.

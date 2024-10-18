@@ -1,5 +1,5 @@
 ---
-title: Integrieren von AEM Forms Cloud Service und Marketo (Teil 3)
+title: Integrieren von AEM Forms as a Cloud Service und Marketo (Teil 3)
 description: Erfahren Sie, wie Sie AEM Forms und Marketo mithilfe des AEM Forms-Formulardatenmodells integrieren.
 feature: Form Data Model,Integration
 version: Cloud Service
@@ -11,10 +11,10 @@ badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 last-substantial-update: 2024-07-24T00:00:00Z
 jira: KT-15876
 exl-id: 43737765-b1ea-4594-853a-d78f41136b5e
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
-workflow-type: ht
-source-wordcount: '235'
-ht-degree: 100%
+source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+workflow-type: tm+mt
+source-wordcount: '237'
+ht-degree: 95%
 
 ---
 
