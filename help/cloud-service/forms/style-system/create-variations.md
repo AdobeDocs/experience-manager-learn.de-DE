@@ -1,6 +1,6 @@
 ---
 title: Verwenden des Stilsystems in AEM Forms
-description: Definieren Sie die CSS-Klassen für die Varianten
+description: Definieren der CSS-Klassen für die Varianten
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -11,21 +11,21 @@ feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
 source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '245'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
 # Erstellen von Varianten für die Schaltflächenkomponente
 
-Nachdem das Design geklont wurde, öffnen Sie das Projekt mit visuellem Studio-Code. Sie sollten eine ähnliche Ansicht sehen
-im visuellen Studio-Code
+Nachdem Sie das Design geklont haben, öffnen Sie das Projekt mit Visual Studio Code. Sie sollten im
 ![Projekt-Explorer](assets/easel-theme.png)
+in Visual Studio Code eine ähnliche Ansicht sehen
 
-Öffnen Sie die Datei src->components->button->_button.scss . Wir werden unsere benutzerdefinierten Varianten in dieser Datei definieren.
+Öffnen Sie „src->Komponenten->Schaltfläche->_button.scss-Datei“. Wir werden unsere benutzerdefinierten Varianten in dieser Datei definieren.
 
-## Variation von Unternehmen
+## Variante für Unternehmen
 
 ```css
 .cmp-adaptiveform-button-corporate {
@@ -44,19 +44,19 @@ im visuellen Studio-Code
 
 ## Erklärung
 
-* **cmp-adaptiveform-button—corporate**: Dies ist die Haupt-Wrapper- oder Container-Klasse für die Komponente &quot;cmp-adaptiveform-button—corporate&quot;.
+* **cmp-adaptiveform-button—corporate**: Dies ist die Haupt-Wrapper- oder Container-Klasse für die Komponente „cmp-adaptiveform-button—corporate“.
 Alle Stile oder Mixins innerhalb dieses Blocks gelten für Elemente innerhalb dieser Klasse.
-* **@include container**: Verwendet ein Mixin namens &quot;container&quot;, das in _mixins.scss definiert ist. Der Mixin-Container wendet normalerweise Layout-bezogene Stile wie das Einrichten von Rändern, Abständen oder andere Strukturstile an, um sicherzustellen, dass sich der Container konsistent verhält.
-* **.cmp-adaptiveform-button**: Innerhalb des Schaltflächenblocks &quot;Corporate-style-button&quot;zielen Sie auf das untergeordnete Element mit der Klasse .cmp-adaptiveform-button ab.
-* **&amp;__widget**: Das Symbol &amp; bezieht sich auf den übergeordneten Selektor, der in diesem Fall .cmp-adaptiveform-button lautet.
-Das bedeutet, dass die endgültige Zielklasse .cmp-adaptiveform-button__widget ist, eine BEM-Style-Klasse (Block Element Modifier), die eine Unterkomponente (das Element __widget ) innerhalb des Bausteins .cmp-adaptiveform-button darstellt.
-* **@include primary-button**: Dies umfasst ein Primärschaltflächen-Mixin, das in _mixin.scss definiert ist, und fügt Stile für die Schaltfläche hinzu (wie Abstand, Farben, Hover-Effekte usw.). Die Eigenschaften background,text-transform,border-radius,color, die in der primären Schaltfläche des Mixins definiert sind, werden überschrieben.
+* **@include container**: Verwendet ein Mixin namens „container“, das in „_mixins.scss“ definiert ist. Der Mixin-Container wendet normalerweise Layout-bezogene Stile wie das Einrichten von Rändern, Abständen oder andere Strukturstile an, um sicherzustellen, dass sich der Container konsistent verhält.
+* **.cmp-adaptiveform-button**: Innerhalb des Blocks „corporate-style-button“ zielen Sie auf das untergeordnete Element mit der Klasse „.cmp-adaptiveform-button“ ab.
+* **&amp;__widget**: Das Symbol „&amp;“ bezieht sich auf den übergeordneten Selektor, der in diesem Fall „.cmp-adaptiveform-button“ lautet.
+Das bedeutet, dass die Klasse, auf die endgültig abgezielt wird, „.cmp-adaptiveform-button__widget“ ist, eine Klasse im BEM-Stil (Block Element Modifier), die eine Unterkomponente (das Element „__widget “) innerhalb des Blocks „.cmp-adaptiveform-button“ darstellt.
+* **@include primary-button**: Dies umfasst ein Mixin „primary-button“, das in „_mixin.scss definiert“ ist, und fügt Stile für die Schaltfläche hinzu (wie Abstand, Farben und Hover-Effekte). Die Eigenschaften „background“, „text-transform“, „border-radius“ und „color“, die im Mixin „primary-button“ definiert sind, werden überschrieben.
 
-Die Datei _mixins.scss wird unter src->site definiert, wie im Screenshot unten dargestellt
+Die Datei „_mixins.scss“ wird unter „src->Standort“ definiert, wie im Screenshot unten dargestellt.
 
 ![mixin.scss](assets/mixins.png)
 
-## Marketing-Variante
+## Variante für Marketing
 
 ```css
 .cmp-adaptiveform-button--marketing {
@@ -92,6 +92,6 @@ Die Datei _mixins.scss wird unter src->site definiert, wie im Screenshot unten d
 
 ## Nächste Schritte
 
-[Varianten testen](./build.md)
+[Testen der Varianten](./build.md)
 
 

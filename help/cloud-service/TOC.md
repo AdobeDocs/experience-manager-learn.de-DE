@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
 source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1307'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -271,9 +271,9 @@ ht-degree: 99%
       + [Testen der Lösung](./forms/form-data-analytics/test.md)
    + Erstellen von Schaltflächenvarianten{#style-system}
       + [Einführung](./forms/style-system/introduction.md)
-      + [Richtlinie definieren](./forms/style-system/style-policy.md)
-      + [Varianten definieren](./forms/style-system/create-variations.md)
-      + [Testvarianten](./forms/style-system/build.md)
+      + [Definieren der Richtlinie](./forms/style-system/style-policy.md)
+      + [Definieren der Varianten](./forms/style-system/create-variations.md)
+      + [Testen der Varianten](./forms/style-system/build.md)
    + Verwenden vertikaler Tabs{#using-vertical-tabs}
       + [1. Einführung](./forms/using-vertical-tabs/introduction.md)
       + [2. Erstellen des Formulars](./forms/using-vertical-tabs/create-af.md)

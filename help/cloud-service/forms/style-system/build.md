@@ -1,6 +1,6 @@
 ---
 title: Verwenden des Stilsystems in AEM Forms
-description: Erstellen des Designprojekts
+description: Erstellen des Design-Projekts
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -11,37 +11,37 @@ feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
 source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '219'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
-# Änderungen testen
+# Testen der Änderungen
 
-Erstellen Sie ein adaptives Formular basierend auf der Vorlage **&quot;Leer mit Kernkomponenten&quot;** . Ziehen Sie drei Schaltflächen in das Formular und beschriften Sie sie mit &quot;Unternehmen&quot;, &quot;Marketing&quot;und &quot;Standard&quot;.
-Weisen Sie den Schaltflächen Unternehmen und Marketing die entsprechenden Stilvarianten zu, indem Sie den Pinsel auswählen, wie in der Abbildung dargestellt
+Erstelle Sie ein adaptives Formular basierend auf der Vorlage **„Leer mit Kernkomponenten“**. Ziehen Sie drei Schaltflächen per Drag-and-Drop in das Formular und beschriften Sie sie mit „Unternehmen“, „Marketing“ und „Standard“.
+Weisen Sie den Schaltflächen „Unternehmen“ und „Marketing“ die entsprechenden Stilvarianten zu, indem Sie den Pinsel wie dargestellt auswählen.
 
 ![styles](assets/marketing-variation.png)
 
-## Erstellen des Designprojekts
+## Erstellen des Design-Projekts
 
-Der nächste Schritt besteht darin, das Designprojekt zu erstellen. Navigieren Sie zum Stammordner Ihres Designprojekts und führen Sie den Befehl _**npm run build**_ aus, wie im Screenshot unten gezeigt.
+Der nächste Schritt besteht darin, das Design-Projekt zu erstellen. Navigieren Sie zum Stammordner Ihres Design-Projekts und führen Sie den Befehl _**npm run build**_ aus, wie im Screenshot unten gezeigt.
 
 ![build-theme](assets/build-theme.png)
 
-Sobald das Designprojekt erfolgreich erstellt wurde, können Sie die Änderungen testen.
+Sobald das Design-Projekt erfolgreich erstellt wurde, können Sie die Änderungen testen.
 
-## Schnelle und einfache Möglichkeit, Ihre CSS zu testen
+## Eine schnelle und einfache Möglichkeit zum Testen Ihrer CSS-Datei
 
-* Öffnen Sie die Datei &quot;theme.css&quot;im Ordner &quot;dist&quot;Ihres Designprojekts. Wählen Sie den gesamten Dateiinhalt aus und kopieren Sie ihn.
-* Vorschau des im vorherigen Schritt erstellten Formulars
-* Klicken Sie mit der rechten Maustaste auf eine der Schaltflächen und wählen Sie Inspect aus, um die Entwicklerkonsole zu öffnen.
-* Klicken Sie in der Entwicklerkonsole auf die Datei theme.css , um die Datei theme.css zu öffnen.
-* Wählen und löschen Sie den gesamten Inhalt von theme.css mithilfe von CTR-A und klicken Sie auf die Schaltfläche Löschen .
-* Kopieren Sie den Inhalt von theme.css, den Sie im vorherigen Schritt erstellt haben, und fügen Sie ihn ein.
+* Öffnen Sie die Datei „theme.css“ im Ordner „dist“ Ihres Design-Projekts. Wählen Sie den gesamten Dateiinhalt aus und kopieren Sie ihn.
+* Zeigen Sie das im vorherigen Schritt erstellte Formular in einer Vorschau an.
+* Klicken Sie mit der rechten Maustaste auf eine der Schaltflächen und wählen Sie „Inspizieren“ aus, um die Developer Console zu öffnen.
+* Klicken Sie in der Developer Console auf die Datei „theme.css“ , um die Datei „theme.css“ zu öffnen.
+* Wählen Sie den gesamten Inhalt von „theme.css“ mithilfe von Strg+A und klicken Sie auf die Schaltfläche „Löschen“, um ihn zu löschen.
+* Kopieren Sie den Inhalt von „theme.css“, den Sie im vorherigen Schritt erstellt haben, und fügen Sie ihn ein.
 * Die Schaltflächen sollten wie unten gezeigt mit den entsprechenden Stilen aktualisiert werden.
 
-![final-button](assets/final-state-buttons.png)
+![final-buttons](assets/final-state-buttons.png)
 
