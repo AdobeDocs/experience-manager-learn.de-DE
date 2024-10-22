@@ -13,9 +13,9 @@ jira: KT-14649
 thumbnail: KT-14649.jpeg
 exl-id: 142ed6ae-1659-4849-80a3-50132b2f1a86
 source-git-commit: ede52c6c9feb0b35bc3729e28591cb4e7c7600f7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '833'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -72,7 +72,7 @@ AEM Eventing ist zwar leistungsstark, hat jedoch einige Einschränkungen, die be
 
 ## Aktivierung
 
-Die nächsten Schritte finden Sie unter [Aktivieren von AEM-Ereignissen in Ihrer AEM Cloud Service-Umgebung](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment) .
+Lesen Sie [Aktivieren der AEM-Ereignisse in Ihrer AEM Cloud Service-Umgebung](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment) für die nächsten Schritte.
 
 ## Informationen zum Abonnement
 
