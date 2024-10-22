@@ -10,10 +10,10 @@ topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
-workflow-type: ht
-source-wordcount: '219'
-ht-degree: 100%
+source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
+workflow-type: tm+mt
+source-wordcount: '229'
+ht-degree: 87%
 
 ---
 
@@ -21,9 +21,11 @@ ht-degree: 100%
 # Testen der Änderungen
 
 Erstelle Sie ein adaptives Formular basierend auf der Vorlage **„Leer mit Kernkomponenten“**. Ziehen Sie drei Schaltflächen per Drag-and-Drop in das Formular und beschriften Sie sie mit „Unternehmen“, „Marketing“ und „Standard“.
-Weisen Sie den Schaltflächen „Unternehmen“ und „Marketing“ die entsprechenden Stilvarianten zu, indem Sie den Pinsel wie dargestellt auswählen.
+Weisen Sie den Schaltflächen Unternehmen und Marketing die entsprechenden Stilvarianten zu, indem Sie wie unten dargestellt den Pinsel auswählen.
 
 ![styles](assets/marketing-variation.png)
+
+Auf die dritte Schaltfläche wird der Standardstil angewendet.
 
 ## Erstellen des Design-Projekts
 
