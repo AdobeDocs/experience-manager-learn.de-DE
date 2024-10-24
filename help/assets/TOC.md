@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: d31094c11a023e711f2b49801bb03200f919e8e8
-workflow-type: ht
-source-wordcount: '431'
-ht-degree: 100%
+source-git-commit: 3e7668067f9e001b92011a3735fc8debe829e1c9
+workflow-type: tm+mt
+source-wordcount: '425'
+ht-degree: 98%
 
 ---
 
@@ -76,10 +76,12 @@ ht-degree: 100%
    + [Sidekick-Plug-in](./edge-delivery-services/sidekick-plugin.md)
 
 + Content-Hub{#content-hub}
-   + [Einrichten von Content-Hub](./content-hub/settingup-content-hub.md)
-   + [Hochladen von Assets und der Genehmigungsvorgang](./content-hub/uploading-assets-and-approval-process.md)
-   + [Abrufen und Herunterladen von Assets](./content-hub/accessing-and-downloading-assets.md)
-   + [Erstellen von Bildvarianten mit Adobe Express](./content-hub/creating-image-variants-using-adobe-express.md)
+   + [Setup](./content-hub/set-up.md)
+   + [Assets hinzufügen](./content-hub/add-assets.md)
+   + [Herunterladen von Assets](./content-hub/download-assets.md)
+   + [Bildvarianten mit Adobe Expreß](./content-hub/image-variants.md)
+   + [Sammlungen](./content-hub/collections.md)
+   + [Teilen](./content-hub/share.md)
 
 + Freigabe und Verteilung{#sharing}
    + [Herunterladen von Assets](./sharing/download.md)
