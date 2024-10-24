@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer Adresskomponente
-description: Neue Adresskernkomponente in AEM Forms as a Cloud Service erstellen
+description: Erstellen einer neuen Adress-Kernkomponente in AEM Forms as a Cloud Service
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,9 +10,9 @@ topic: Development
 jira: KT-15752
 exl-id: 280c9a30-e017-4bc0-9027-096aac82c22c
 source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '298'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -69,13 +69,13 @@ Wählen Sie den Knoten ``zip`` aus und legen Sie die Eigenschaften wie unten dar
 Wählen Sie den Knoten ``state`` aus und legen Sie die Eigenschaften wie unten dargestellt fest. Beachten Sie den fieldType von „state“ – es ist als Dropdown-Liste festgelegt
 ![state](assets/state.png)
 
-## Festlegen von Optionen für das Statusfeld
+## Festlegen von Optionen für das Feld „state“
 
 Wählen Sie den Knoten ``state`` aus und fügen Sie die folgenden Eigenschaften hinzu.
 
 | Name | Typ | Wert |
 |----------|----------|---------------------|
-| enum | Zeichenfolge[] | CA,NY |
+| Enum | Zeichenfolge[] | CA,NY |
 | enumNames | Zeichenfolge[] | Kalifornien, New York |
 
 

@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer Adresskomponente
-description: Neue Adresskernkomponente in AEM Forms as a Cloud Service erstellen
+description: Erstellen einer neuen Adress-Kernkomponente in AEM Forms as a Cloud Service
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -10,15 +10,15 @@ topic: Development
 jira: KT-15752
 exl-id: be25be52-2914-4820-9356-678a326f8edc
 source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '200'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
 # Bereitstellen von Projekten 
 
-Bevor Sie mit der Bereitstellung des Projekts auf Ihrem AEM Forms-as a Cloud Service beginnen, wird empfohlen, das Projekt auf Ihrer lokalen Cloud-fähigen Instanz von AEM Forms bereitzustellen.
+Bevor Sie mit der Bereitstellung des Projekts in AEM Forms as a Cloud Service beginnen, wird empfohlen, das Projekt auf Ihrer lokalen, Cloud-fähigen Instanz von AEM Forms bereitzustellen.
 
 ## Synchronisieren von Änderungen mit Ihrem AEM-Projekt
 

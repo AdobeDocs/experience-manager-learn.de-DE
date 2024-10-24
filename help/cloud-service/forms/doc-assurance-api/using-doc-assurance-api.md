@@ -11,9 +11,9 @@ jira: KT-15508
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 40617082-4d23-4c91-a016-2d947187052b
 source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '280'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -28,9 +28,9 @@ Dieser Artikel bietet Ihnen Java-Code-Ausschnitte, die Ihnen den Einstieg in die
 
 ## Voraussetzungen
 
-* Erlebnis mit AEM Forms as a Cloud Service
+* Erfahrung mit AEM Forms as a Cloud Service
 * Erfahrung im Umgang mit [Apache-HTTP-Komponenten](https://hc.apache.org/httpcomponents-client-4.5.x/)
-* Zugriff auf die as a Cloud Service AEM Forms-Umgebung
+* Zugriff auf die AEM Forms as a Cloud Service-Umgebung
 
 ## Inspizieren eines Dokuments
 

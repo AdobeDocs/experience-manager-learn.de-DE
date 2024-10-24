@@ -1,6 +1,6 @@
 ---
 title: Erstellen einer Adresskomponente
-description: Neue Adresskernkomponente in AEM Forms as a Cloud Service erstellen
+description: Erstellen einer neuen Adress-Kernkomponente in AEM Forms as a Cloud Service
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -11,9 +11,9 @@ jira: KT-15752
 exl-id: 21b6640e-5cfa-4902-9660-a2b1c91b285d
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '170'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ In diesem Tutorial erstellen wir eine Adressblock-Komponente. Die Adressblock-Ko
 
 ## Voraussetzungen
 
-* Zugriff auf die as a Cloud Service-Instanz von AEM Forms
+* Zugriff auf eine AEM Forms as a Cloud Service-Instanz
 * Etwas Erfahrung in der Entwicklung von Formularen mit dem AEM Forms-Modul
 * Erfahrung in der Einrichtung der Entwicklungsumgebung für AEM/AEM Forms (Git, IntelliJ usw.)
 
