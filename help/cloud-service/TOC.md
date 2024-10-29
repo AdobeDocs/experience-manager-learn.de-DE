@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
 source-git-commit: 7dca86137d476418c39af62c3c7fa612635c0583
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1322'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -111,7 +111,7 @@ ht-degree: 99%
       + [Geheimnisse](./developing/advanced/secrets.md)
       + [Service-Benutzende](./developing/advanced/service-users.md)
       + [Web-optimierte Bild-APIs](./developing/advanced/web-optimized-image-delivery-java-apis.md)
-      + [Auftrag auf der führenden Instanz in AEM Authoring ausführen](./developing/advanced/run-job-on-leader-instance-in-aem-author.md)
+      + [Ausführen eines Auftrags auf der führenden Instanz in AEM Author](./developing/advanced/run-job-on-leader-instance-in-aem-author.md)
    + Schnelle Entwicklungsumgebung{#rde}
       + [Überblick](./developing/rde/overview.md)
       + [Einrichtung](./developing/rde/how-to-setup.md)
@@ -279,8 +279,8 @@ ht-degree: 99%
       + [1. Einführung](./forms/using-vertical-tabs/introduction.md)
       + [2. Erstellen des Formulars](./forms/using-vertical-tabs/create-af.md)
       + [3. Navigieren](./forms/using-vertical-tabs/navigation.md)
-   + Verwenden von Output- und Forms-Dienst{#forms-cs-output-and-forms-service}
-      + [Generate PDF](./forms/forms-cs-output-and-forms-service/outputservice.md)
+   + Verwenden des Ausgabe- und Forms-Dienstes{#forms-cs-output-and-forms-service}
+      + [Generieren einer PDF](./forms/forms-cs-output-and-forms-service/outputservice.md)
    + Dokumenterstellung in AEM Forms CS{#doc-gen-formscs}
       + [Einführung](./forms/doc-gen-forms-cs/introduction.md)
       + [Erstellen von Service-Anmeldeinformationen](./forms/doc-gen-forms-cs/service-credentials.md)

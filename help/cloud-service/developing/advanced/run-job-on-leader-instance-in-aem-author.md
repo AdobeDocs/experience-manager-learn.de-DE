@@ -12,28 +12,28 @@ last-substantial-update: 2024-10-23T00:00:00Z
 jira: KT-16399
 thumbnail: KT-16399.jpeg
 source-git-commit: 7dca86137d476418c39af62c3c7fa612635c0583
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '557'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 
 # Ausführen eines Auftrags auf einer führenden Instanz in AEM as a Cloud Service
 
-Erfahren Sie, wie Sie einen Auftrag in der führenden Instanz im AEM-Autorendienst als Teil von AEM as a Cloud Service ausführen und wie Sie ihn so konfigurieren, dass er nur einmal ausgeführt wird.
+Erfahren Sie, wie Sie einen Auftrag auf der führenden Instanz im AEM-Autoren-Service als Teil von AEM as a Cloud Service ausführen und wie Sie ihn so konfigurieren, dass er nur einmal ausgeführt wird.
 
-Sling-Aufträge sind asynchrone Aufgaben, die im Hintergrund ausgeführt werden und für die Verarbeitung von systemausgelösten oder vom Benutzer ausgelösten Ereignissen konzipiert sind. Standardmäßig werden diese Aufträge gleichmäßig auf alle Instanzen (Pods) im Cluster verteilt.
+Sling-Aufträge sind asynchrone Aufgaben, die im Hintergrund ausgeführt werden und für die Verarbeitung von durch das System oder durch Benutzende ausgelösten Ereignissen konzipiert sind. Standardmäßig werden diese Aufträge gleichmäßig auf alle Instanzen (Pods) im Cluster verteilt.
 
-Weitere Informationen finden Sie unter [Apache Sling Eventing and Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html).
+Weitere Informationen finden Sie unter [Ereignisse und Auftragsabwicklung in Apache Sling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html).
 
 ## Erstellen und Verarbeiten von Aufträgen
 
-Zu Demozwecken erstellen wir einen einfachen _Auftrag, der den Auftragsverarbeiter anweist, eine Meldung zu protokollieren_.
+Zu Demozwecken erstellen wir einen einfachen _Auftrag, der den Auftragsprozessor anweist, eine Meldung zu protokollieren_.
 
-### Auftrag erstellen
+### Erstellen eines Auftrags
 
-Verwenden Sie den folgenden Code, um _einen Apache Sling-Auftrag zu erstellen_:
+Verwenden Sie den folgenden Code, um einen Apache Sling-Auftrag zu _erstellen_:
 
 ```java
 package com.adobe.aem.guides.wknd.core.sling.jobs.impl;
@@ -80,11 +80,11 @@ public class SimpleJobCreaterImpl {
 Die wichtigsten Punkte, die im obigen Code zu beachten sind:
 
 - Die Auftrags-Payload hat zwei Eigenschaften: `action` und `message`.
-- Mit der `addJob(...)` -Methode von [JobManager](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/apache/sling/event/jobs/JobManager.html) wird der Auftrag zum Thema `wknd/simple/job/topic` hinzugefügt.
+- Mit der Methode von [JobManager](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/apache/sling/event/jobs/JobManager.html) `addJob(...)`wird der Auftrag zum Thema `wknd/simple/job/topic` hinzugefügt.
 
-### Auftrag verarbeiten
+### Verarbeiten eines Auftrags
 
-Verwenden Sie den folgenden Code, um den obigen Apache Sling-Auftrag _zu verarbeiten_:
+Verwenden Sie den folgenden Code, um den obigen Apache Sling-Auftrag zu _verarbeiten_:
 
 ```java
 package com.adobe.aem.guides.wknd.core.sling.jobs.impl;
@@ -122,21 +122,21 @@ public class SimpleJobConsumerImpl implements JobConsumer {
 
 Die wichtigsten Punkte, die im obigen Code zu beachten sind:
 
-- Die `SimpleJobConsumerImpl`-Klasse implementiert die `JobConsumer`-Schnittstelle.
-- Es ist ein Dienst, der registriert ist, um Aufträge vom Thema `wknd/simple/job/topic` zu nutzen.
+- Die Klasse `SimpleJobConsumerImpl` implementiert die `JobConsumer`-Schnittstelle.
+- Es handelt sich um einen Dienst, der registriert ist, um Aufträge zum Thema `wknd/simple/job/topic` zu verarbeiten.
 - Die Methode `process(...)` verarbeitet den Auftrag, indem sie die Eigenschaft `message` der Auftrags-Payload protokolliert.
 
-### Standardauftragsverarbeitung
+### Standardmäßige Auftragsverarbeitung
 
-Wenn Sie den oben genannten Code in einer AEM as a Cloud Service-Umgebung bereitstellen und ihn im AEM-Autorendienst ausführen, der als Cluster mit mehreren AEM-Autoren-JVMs fungiert, wird der Auftrag einmal in jeder AEM-Autoreninstanz (Pod) ausgeführt, was bedeutet, dass die Anzahl der erstellten Aufträge mit der Anzahl der Pods übereinstimmt. Die Anzahl der Pods ist immer mehr als 1 (für Nicht-RDE-Umgebungen), variiert jedoch je nach internem Ressourcenmanagement von AEM as a Cloud Service.
+Wenn Sie den oben genannten Code in einer AEM as a Cloud Service-Umgebung bereitstellen und ihn im AEM-Autoren-Service ausführen, der als Cluster mit mehreren AEM-Autoren-JVMs fungiert, wird der Auftrag einmal in jeder AEM-Autoreninstanz (Pod) ausgeführt, was bedeutet, dass die Anzahl der erstellten Aufträge mit der Anzahl der Pods übereinstimmt. Die Anzahl der Pods ist immer größer als 1 (für Nicht-RDE-Umgebungen), variiert jedoch je nach dem internen Ressourcen-Management von AEM as a Cloud Service.
 
-Der Auftrag wird auf jeder AEM Autoreninstanz (Pod) ausgeführt, da die `wknd/simple/job/topic` mit AEM Hauptwarteschlange verknüpft ist, die Aufträge auf alle verfügbaren Instanzen verteilt.
+Der Auftrag wird auf jeder AEM Autoreninstanz (Pod) ausgeführt, da `wknd/simple/job/topic` mit der AEM-Hauptwarteschlange verknüpft ist, die Aufträge auf alle verfügbaren Instanzen verteilt.
 
-Dies ist häufig problematisch, wenn der Auftrag für eine Statusänderung verantwortlich ist, z. B. für die Erstellung oder Aktualisierung von Ressourcen oder externen Diensten.
+Dies ist häufig problematisch, wenn der Auftrag für eine Statusänderung verantwortlich ist, z. B. für die Erstellung oder Aktualisierung von Ressourcen oder externen Diensten.
 
-Wenn der Auftrag nur einmal im AEM-Autorendienst ausgeführt werden soll, fügen Sie die unten beschriebene [Auftragswarteschlangenkonfiguration](#how-to-run-a-job-on-the-leader-instance) hinzu.
+Wenn der Auftrag nur einmal im AEM-Autoren-Service ausgeführt werden soll, fügen Sie die unten beschriebene [Auftragswarteschlangenkonfiguration](#how-to-run-a-job-on-the-leader-instance) hinzu.
 
-Sie können dies überprüfen, indem Sie die Protokolle des AEM-Autorendienstes in [Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#cloud-manager) überprüfen.
+Sie können dies überprüfen, indem Sie die Protokolle des AEM-Autoren-Service in [Cloud Manager](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#cloud-manager) überprüfen.
 
 ![Von allen Instanzen verarbeiteter Auftrag](./assets/run-job-once/job-processed-by-all-instances.png)
 
@@ -151,13 +151,13 @@ Sie sollten Folgendes sehen:
 <DD.MM.YYYY HH:mm:ss.SSS> INFO [com.adobe.aem.guides.wknd.core.sling.jobs.impl.SimpleJobConsumerImpl] Processing WKND Job, and Job metadata is: Created in activate method
 ```
 
-Es gibt zwei Protokolleinträge, einen für jede AEM Autoreninstanz (`68775db964-nxxcx` und `68775db964-r4zk7`), die angeben, dass jede Instanz (Pod) den Auftrag verarbeitet hat.
+Es gibt zwei Protokolleinträge, einen für jede AEM-Autoreninstanz (`68775db964-nxxcx` und `68775db964-r4zk7`), die angeben, dass jede Instanz (Pod) den Auftrag verarbeitet hat.
 
 ## Ausführen eines Auftrags auf der führenden Instanz
 
-Um einen Auftrag _nur einmal_ im AEM-Autorendienst auszuführen, erstellen Sie eine neue Sling-Auftragswarteschlange vom Typ **Bestellt** und verknüpfen Sie Ihr Auftragsthema (`wknd/simple/job/topic`) mit dieser Warteschlange. Mit dieser Konfiguration kann nur der führende AEM Autoreninstanz (Pod) den Auftrag verarbeiten.
+Um einen Auftrag _nur einmal_ im AEM-Autoren-Service auszuführen, erstellen Sie eine neue Sling-Auftragswarteschlange vom Typ **Ordered** und verknüpfen Sie Ihr Auftragsthema (`wknd/simple/job/topic`) mit dieser Warteschlange. Mit dieser Konfiguration kann nur die führende AEM-Autoreninstanz (Pod) den Auftrag verarbeiten.
 
-Erstellen Sie im Modul &quot;`ui.config`&quot;Ihres AEM-Projekts eine OSGi-Konfigurationsdatei (`org.apache.sling.event.jobs.QueueConfiguration~wknd.cfg.json`) und speichern Sie sie im Ordner &quot;`ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author`&quot;.
+Erstellen Sie im Modul `ui.config` Ihres AEM-Projekts eine OSGi-Konfigurationsdatei (`org.apache.sling.event.jobs.QueueConfiguration~wknd.cfg.json`) und speichern Sie sie im Ordner `ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author`.
 
 ```json
 {
@@ -177,7 +177,7 @@ Die wichtigsten Punkte in der obigen Konfiguration sind:
 - Der Warteschlangentyp ist auf `ORDERED` eingestellt.
 - Die maximale Anzahl paralleler Aufträge ist auf `1` eingestellt.
 
-Nach der Bereitstellung der oben genannten Konfiguration wird der Auftrag ausschließlich von der führenden Instanz verarbeitet, sodass er nur einmal im gesamten AEM-Autorendienst ausgeführt wird.
+Nach der Bereitstellung der oben genannten Konfiguration wird der Auftrag ausschließlich von der führenden Instanz verarbeitet, sodass er nur einmal im gesamten AEM-Autoren-Service ausgeführt wird.
 
 ```
 <DD.MM.YYYY HH:mm:ss.SSS> [cm-pxxxx-exxxx-aem-author-7475cf85df-qdbq5] *INFO* [FelixLogListener] Events.Service.org.apache.sling.event Service [QueueMBean for queue WKND Queue - ORDERED,7755, [org.apache.sling.event.jobs.jmx.StatisticsMBean]] ServiceEvent REGISTERED

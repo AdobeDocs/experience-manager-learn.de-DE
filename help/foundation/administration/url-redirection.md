@@ -13,9 +13,9 @@ doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
 source-git-commit: 9e093e87c8c369ddd750be4a7dc30e2bf86495d5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '878'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -76,7 +76,7 @@ Es gibt zwei Funktionen in [ACS AEM Commons](https://adobe-consulting-services.g
 
 #### Redirect Map Manager
 
-Mit dem Umleitungs-Map-Manager ](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) können AEM Administratoren einfach [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)-Dateien verwalten und veröffentlichen, ohne direkt auf den Apache-Webserver zugreifen zu müssen oder einen Neustart des Apache-Webservers erforderlich zu machen. [ Mit dieser Funktion können Benutzende Weiterleitungsregeln über eine Konsole in AEM erstellen, aktualisieren und löschen, ohne dabei auf Hilfe durch das Entwicklungs-Team oder eine AEM-Bereitstellung angewiesen zu sein. Der Umleitungs-Manager ist sowohl mit **AEM as a Cloud Service** als auch mit **AEM 6.x** kompatibel.
+[Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) ermöglicht AEM 6.x-Admins die einfache Wartung und Veröffentlichung von [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)-Dateien, ohne direkt auf den Apache-Webserver zugreifen oder diesen neu starten zu müssen. Mit dieser Funktion können Benutzende über eine Konsole in AEM Weiterleitungsregeln erstellen, aktualisieren und löschen, ohne dabei auf Hilfe durch das Entwicklungs-Team oder eine AEM-Bereitstellung angewiesen zu sein. Redirect Manager ist mit **AEM as a Cloud Service** und **AEM 6.x** kompatibel.
 
 #### Redirect Manager
 

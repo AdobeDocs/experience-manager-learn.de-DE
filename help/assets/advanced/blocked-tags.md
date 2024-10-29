@@ -1,6 +1,6 @@
 ---
 title: Blockierte Tags
-description: Erfahren Sie, wie Sie die Asset-Verwaltung in AEM as a Cloud Service verbessern können, indem Sie blockierte Tags verwenden, um die Anwendung von kulturell sensiblen, irrelevanten oder umstrittenen Smart-Tags zu verhindern.
+description: Erfahren Sie, wie Sie das Asset-Management in AEM as a Cloud Service verbessern, indem Sie mit blockierten Tags die Anwendung von kultursensiblen, irrelevanten oder kontroversen Smart-Tags verhindern.
 version: Cloud Service
 feature: Asset Management
 topic: Content Management
@@ -13,14 +13,14 @@ jira: KT-14778
 thumbnail: 3426839.jpeg
 exl-id: 0d02faeb-6290-4f57-800c-4f7ee62f1352
 source-git-commit: 7b98bc06892c897ae76f51f62e5503e667756fda
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '60'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # Blockierte Tags
 
-Erfahren Sie, wie Sie die Asset-Verwaltung in AEM as a Cloud Service verbessern können, indem Sie blockierte Tags verwenden, um die Anwendung von kulturell sensiblen, irrelevanten oder umstrittenen Smart-Tags zu verhindern.
+Erfahren Sie, wie Sie das Asset-Management in AEM as a Cloud Service verbessern, indem Sie mit blockierten Tags die Anwendung von kultursensiblen, irrelevanten oder kontroversen Smart-Tags verhindern.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426839/?learn=on)
