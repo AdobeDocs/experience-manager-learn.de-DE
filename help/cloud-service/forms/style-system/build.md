@@ -10,10 +10,10 @@ topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
-workflow-type: ht
-source-wordcount: '229'
-ht-degree: 100%
+source-git-commit: 1ed08d7784833b6c49139da525341af5ee587345
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 81%
 
 ---
 
@@ -29,7 +29,7 @@ Auf die dritte Schaltfläche wird der Standardstil angewendet.
 
 ## Erstellen des Design-Projekts
 
-Der nächste Schritt besteht darin, das Design-Projekt zu erstellen. Navigieren Sie zum Stammordner Ihres Design-Projekts und führen Sie den Befehl _**npm run build**_ aus, wie im Screenshot unten gezeigt.
+Der nächste Schritt besteht darin, das Design-Projekt zu erstellen. Navigieren Sie zum Stammordner Ihres Designprojekts und führen Sie den Befehl _**npm run build**_ aus, wie im Screenshot unten dargestellt.
 
 ![build-theme](assets/build-theme.png)
 
@@ -46,4 +46,8 @@ Sobald das Design-Projekt erfolgreich erstellt wurde, können Sie die Änderunge
 * Die Schaltflächen sollten wie unten gezeigt mit den entsprechenden Stilen aktualisiert werden.
 
 ![final-buttons](assets/final-state-buttons.png)
+
+## Änderungen übernehmen
+
+Wenn Sie mit den Änderungen zufrieden sind, können Sie die Änderungen mithilfe der [Frontend-Pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline) an Ihre Cloud-Instanz übertragen
 
