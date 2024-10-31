@@ -9,7 +9,7 @@ level: Beginner
 doc-type: Catalog
 duration: 45
 last-substantial-update: 2024-10-31T00:00:00Z
-source-git-commit: 511823c39f0141155bc1efd7fc599b4b9b05ce69
+source-git-commit: db8e776458879018fcfdd4d30c518cafc3a2ab14
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/set-up" title="Setup">Einrichten</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie Content Hub einrichten</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie die Experience Manager Assets Content Hub mithilfe des Adobe Cloud Manager-Programms und des Assets-Add-ons einrichten. Erfahren Sie auch, wie Sie den Zugriff für Benutzer mithilfe von Produktprofilen konfigurieren.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/set-up" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Tutorial absolvieren</span>
@@ -183,6 +183,8 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
 
+
+
 ## Content Hub-Dokumentation
 
 Lesen Sie die Produktdokumentation von Content Hub, um mehr über AEM Assets Content Hub zu erfahren und die Funktionen vollständig zu nutzen. Diese Ressourcen enthalten ausführliche Anleitungen zur Verwendung der Funktionen und Funktionen, um sicherzustellen, dass Sie die Unterstützung für ein effizientes Asset-Management benötigen.
@@ -197,12 +199,12 @@ Lesen Sie die Produktdokumentation von Content Hub, um mehr über AEM Assets Con
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Content Hub Overview">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Content Hub documentation">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" title="Übersicht über Content Hub">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview./media_1ef4ad26652365b140f1a06c31df8ebc6546850df.png?width=400&format=png&optimize=medium" alt="Übersicht über Content Hub"
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" title="Content Hub-Dokumentation">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview./media_1ef4ad26652365b140f1a06c31df8ebc6546850df.png?width=400&format=png&optimize=medium" alt="Content Hub-Dokumentation"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -210,7 +212,7 @@ Lesen Sie die Produktdokumentation von Content Hub, um mehr über AEM Assets Con
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" title="Übersicht über Content Hub">Überblick über Content Hub</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" title="Content Hub-Dokumentation">Content Hub-Dokumentation</a>
                     </p>
                     <p class="is-size-6">Erfahren Sie mehr über Content Hub, seine wichtigsten Vorteile, den Zugriff darauf und das Feedback zu den in Content Hub verfügbaren Optionen.</p>
                 </div>
@@ -268,3 +270,5 @@ Lesen Sie die Produktdokumentation von Content Hub, um mehr über AEM Assets Con
     </div>
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
+
