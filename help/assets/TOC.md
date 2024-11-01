@@ -9,8 +9,8 @@ feature-set: Experience Manager Assets, Experience Manager Sites, Experience Man
 team: TM
 source-git-commit: 511823c39f0141155bc1efd7fc599b4b9b05ce69
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '426'
+ht-degree: 100%
 
 ---
 
@@ -78,9 +78,9 @@ ht-degree: 0%
 + Content-Hub{#content-hub}
    + [Überblick](./content-hub/overview.md)
    + [Setup](./content-hub/set-up.md)
-   + [Assets hinzufügen](./content-hub/add-assets.md)
+   + [Hinzufügen von Assets](./content-hub/add-assets.md)
    + [Herunterladen von Assets](./content-hub/download-assets.md)
-   + [Bildvarianten mit Adobe Expreß](./content-hub/image-variants.md)
+   + [Erstellen von Bildvarianten mit Adobe Express](./content-hub/image-variants.md)
    + [Sammlungen](./content-hub/collections.md)
    + [Teilen](./content-hub/share.md)
 
