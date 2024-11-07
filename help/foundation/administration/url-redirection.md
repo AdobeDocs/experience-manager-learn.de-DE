@@ -12,9 +12,9 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: d5dff9378f31acb0fbce0bb86e2d0022ee725f83
+source-git-commit: 50ddda35adbb3af0b66a6e24a135fd5b94a3fb3a
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '885'
 ht-degree: 97%
 
 ---
@@ -76,7 +76,7 @@ Es gibt zwei Funktionen in [ACS AEM Commons](https://adobe-consulting-services.g
 
 #### Redirect Map Manager
 
-[Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) ermöglicht AEM 6.x-Admins die einfache Wartung und Veröffentlichung von [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)-Dateien, ohne direkt auf den Apache-Webserver zugreifen oder diesen neu starten zu müssen. Mit dieser Funktion können Benutzende über eine Konsole in AEM Weiterleitungsregeln erstellen, aktualisieren und löschen, ohne dabei auf Hilfe durch das Entwicklungs-Team oder eine AEM-Bereitstellung angewiesen zu sein. Der Umleitungs-Manager ist sowohl mit der **AEM as a Cloud Service**-Strategie (siehe [Pipeline-freie URL-Umleitungen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)) als auch mit der **AEM 6.x** kompatibel.
+[Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) ermöglicht AEM 6.x-Admins die einfache Wartung und Veröffentlichung von [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)-Dateien, ohne direkt auf den Apache-Webserver zugreifen oder diesen neu starten zu müssen. Mit dieser Funktion können Benutzende über eine Konsole in AEM Weiterleitungsregeln erstellen, aktualisieren und löschen, ohne dabei auf Hilfe durch das Entwicklungs-Team oder eine AEM-Bereitstellung angewiesen zu sein. Der Umleitungs-Map-Manager ist sowohl mit **AEM as a Cloud Service** kompatibel (siehe Strategie [Pipeline-freie URL-Umleitungen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects) ) als auch mit **AEM 6.x** kompatibel.
 
 #### Redirect Manager
 
