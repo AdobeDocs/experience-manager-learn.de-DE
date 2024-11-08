@@ -1,5 +1,5 @@
 ---
-title: Verwenden vertikaler Registerkarten in AEM Forms as a Cloud Service
+title: Hinzufügen benutzerdefinierter Symbole
 description: Hinzufügen benutzerdefinierter Symbole zu vertikalen Registerkarten
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -11,10 +11,11 @@ feature: Adaptive Forms
 thumbnail: 331891.jpg
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16418
-source-git-commit: 1ed08d7784833b6c49139da525341af5ee587345
+exl-id: 20e44be0-5490-4414-9183-bb2d2a80bdf0
+source-git-commit: faa859897b6b9fbb0acff02000611de216ddda3e
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 2%
+source-wordcount: '676'
+ht-degree: 1%
 
 ---
 
@@ -24,7 +25,7 @@ Das Hinzufügen benutzerdefinierter Symbole zu Registerkarten kann das Benutzere
 
 * Verbesserte Benutzerfreundlichkeit: Symbole vermitteln den Zweck jeder Registerkarte schnell, sodass Benutzer leichter finden können, wonach sie suchen. Visuelle Hinweise wie Symbole helfen Benutzern, intuitiver zu navigieren.
 
-* Visuelle Hierarchie und Fokus: Symbole ermöglichen eine deutlichere Trennung zwischen Registerkarten, wodurch die visuelle Hierarchie verbessert wird. Dies kann dazu beitragen, dass wichtige Registerkarten hervorgehoben werden und die Aufmerksamkeit der Benutzer effektiver lenken.
+* Visuelle Hierarchie und Fokus: Symbole ermöglichen eine deutlichere Trennung zwischen Registerkarten, wodurch die visuelle Hierarchie verbessert wird. Dies kann dazu beitragen, dass wichtige Tabs hervorgehoben werden und die Aufmerksamkeit der Benutzer effektiv lenken.
 Wenn Sie diesem Artikel folgen, sollten Sie die Symbole wie unten gezeigt platzieren können
 
 ![icons](assets/icons.png)
@@ -42,9 +43,9 @@ Die rot markierten Symbole sind die neuen hinzugefügten Symbole.
 
 ## Erstellen einer Symbolzuordnung zum Speichern der Symbole
 
-Erstellen Sie die icon-map zur Datei _variable.scss . Die SCSS-Zuordnung $icon-map ist eine Sammlung von Schlüssel-Wert-Paaren, bei denen jeder Schlüssel einen Symbolnamen darstellt (z. B. Startseite, Familie usw.) und jeder Wert der Pfad zur Bilddatei ist, die mit diesem Symbol verknüpft ist.
+Erstellen Sie die icon-map in der Datei _variable.scss . Die SCSS-Zuordnung $icon-map ist eine Sammlung von Schlüssel-Wert-Paaren, bei denen jeder Schlüssel einen Symbolnamen darstellt (z. B. Startseite, Familie usw.) und jeder Wert der Pfad zur Bilddatei ist, die mit diesem Symbol verknüpft ist.
 
-![variable-scss](assets/variable.scss)
+![variable-scss](assets/variable_scss.png)
 
 ```css
 $icon-map: (
@@ -81,8 +82,7 @@ Fügen Sie den folgenden Code zu _mixin.scss hinzu
 
 Das Mixin &quot;Add-Icon zur vertikalen Registerkarte&quot;wurde entwickelt, um neben dem Text auf einer vertikalen Registerkarte ein benutzerdefiniertes Symbol hinzuzufügen. Damit können Sie ein Bild einfach als Symbol auf Registerkarten einfügen, es neben dem Text positionieren und gestalten, um Konsistenz und Ausrichtung zu gewährleisten.
 
-Aufschlüsselung des Mixins
-Die einzelnen Teile des Mixins funktionieren wie folgt:
+Aufschlüsselung des Mixins: Die einzelnen Teile des Mixins funktionieren wie folgt:
 
 Parameter:
 
