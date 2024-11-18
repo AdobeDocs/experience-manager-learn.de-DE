@@ -11,10 +11,10 @@ thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 870
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
 workflow-type: tm+mt
-source-wordcount: '1280'
-ht-degree: 100%
+source-wordcount: '1275'
+ht-degree: 98%
 
 ---
 
@@ -45,9 +45,7 @@ Beim Festlegen oder Konfigurieren eines flexiblen Port-Ausgangs mit Cloud Manage
 + Cloud Manager-Programm-ID
 + Cloud Manager-Umgebungs-IDs
 
-Weitere Informationen dazu, wie Sie Anmeldeinformationen für die Cloud Manager-API einrichten, konfigurieren sowie abrufen und wie Sie diese zum Ausführen eines Cloud Manager-API-Aufrufs verwenden können, finden Sie in der folgenden Anleitung.
-
->[!VIDEO](https://video.tv.adobe.com/v/342235?quality=12&learn=on)
+Weitere Informationen finden Sie unter [ , wie Sie Cloud Manager-API-Anmeldeinformationen einrichten, konfigurieren und abrufen](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth), um sie zum Ausführen eines Cloud Manager-API-Aufrufs zu verwenden.
 
 In diesem Tutorial wird `curl` verwendet, um die Cloud Manager-API-Konfigurationen vorzunehmen. Die bereitgestellten `curl`-Befehle setzen eine Linux-/macOS-Syntax voraus. Ersetzen Sie bei Verwendung der Windows-Eingabeaufforderung das Zeilenumbruchszeichen `\` durch `^`.
 
