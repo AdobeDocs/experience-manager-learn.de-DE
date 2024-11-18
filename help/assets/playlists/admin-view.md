@@ -1,5 +1,5 @@
 ---
-title: Playlists der AEM Assets-Admin-Ansicht
+title: AEM Assets Admin-Ansichtsvideospiellisten
 description: Erfahren Sie, wie Sie die AEM Assets as a Cloud Service Admin-Funktionen mit dieser Sammlung von Videowiedergabelisten nutzen können, um Ihre Produktkenntnisse zu verbessern.
 version: Cloud Service
 topic: Content Management
@@ -9,9 +9,9 @@ last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 924b3bab-e0ed-4b07-bded-344aab61eac5
-source-git-commit: 0905e084001dafa5445d3ea9d42b07c592af9149
+source-git-commit: bee9c6dfa7a2e3c55f6ec938cffff4622d800004
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
