@@ -9,7 +9,7 @@ last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
-source-git-commit: c939bf218211ef4f515ac8c7eea67cc5425eb3a9
+source-git-commit: 95ff2a6d99039d541092fcc45e9fc45f1a8a2b6a
 workflow-type: tm+mt
 source-wordcount: '402'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # Videowiedergabelisten für AEM Assets Assets
 
-Erkunden Sie diese Wiedergabelisten, um die as a Cloud Service Admin-Ansicht von AEM Assets zu meistern. Diese umfasst Konfiguration, Optimierung, Nutzung und nahtlose Integration in kreative Workflows. Hier erhalten Sie die Einblicke, die Sie benötigen, um mit AEM Assets as a Cloud Service erfolgreich zu sein.
+Erkunden Sie diese Wiedergabelisten, um die AEM Assets as a Cloud Service Assets-Ansicht zu meistern. Diese umfasst Konfiguration, Optimierung, Nutzung und nahtlose Integration in kreative Workflows. Hier erhalten Sie die Einblicke, die Sie benötigen, um mit AEM Assets as a Cloud Service erfolgreich zu sein.
 
 ## Assets-Ansicht konfigurieren
 
