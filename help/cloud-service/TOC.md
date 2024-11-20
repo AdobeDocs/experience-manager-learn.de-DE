@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 197f8b0d664971283cd893417a43e4e85e1b4923
+source-git-commit: 6b8a8dc5cdcddfa2d8572bfd195bc67906882f67
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1335'
 ht-degree: 99%
 
 ---
@@ -88,7 +88,7 @@ ht-degree: 99%
                + [RTE-Badges](./developing/extensibility/ui/content-fragments/examples/editor-rte-badges.md)
                + [Benutzerdefinierte Felder](./developing/extensibility/ui/content-fragments/examples/editor-custom-field.md)
    + Entwicklungsgrundlagen{#basics}
-      + [AEM SDK](./developing/basics/aem-sdk.md)
+      + [AEM-SDK](./developing/basics/aem-sdk.md)
       + [Lokale Entwicklungsumgebung](./developing/basics/local-development-environment.md)
       + [AEM-Projektarchetyp](./developing/basics/aem-project-archetype.md)
       + [Struktur von AEM-Projekten](./developing/basics/project-structure.md)
@@ -141,6 +141,9 @@ ht-degree: 99%
       + [Repository-Browser](./debugging/cloud-service/repository-browser.md)
       + Risiken{#risks}
          + [Durchlauf-Warnungen](./debugging/cloud-service/risks/traversals.md)
++ AEM APIs{#aem-apis}
+   + [Überblick](./apis/overview.md)
+   + [Aufrufen von OpenAPI-basierten AEM-APIs](./apis/invoke-openapi-based-aem-apis.md)
 + Inhaltsbereitstellung{#content-delivery}
    + [Benutzerdefinierter Domain-Name](./content-delivery/custom-domain-names.md)
    + [Benutzerdefinierter Domain-Name mit von Adobe verwaltetem CDN](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
@@ -281,7 +284,7 @@ ht-degree: 99%
       + [1. Einführung](./forms/using-vertical-tabs/introduction.md)
       + [2. Erstellen des Formulars](./forms/using-vertical-tabs/create-af.md)
       + [3. Navigieren](./forms/using-vertical-tabs/navigation.md)
-      + [4. Symbole hinzufügen](./forms/using-vertical-tabs/icons.md)
+      + [4. Hinzufügen von Symbolen](./forms/using-vertical-tabs/icons.md)
    + Verwenden des Ausgabe- und Forms-Dienstes{#forms-cs-output-and-forms-service}
       + [Generieren einer PDF](./forms/forms-cs-output-and-forms-service/outputservice.md)
    + Dokumenterstellung in AEM Forms CS{#doc-gen-formscs}
