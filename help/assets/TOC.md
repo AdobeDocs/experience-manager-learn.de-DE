@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 197f8b0d664971283cd893417a43e4e85e1b4923
+source-git-commit: abc6b4df7026f702b3cdaac34fd8ac790670aaa0
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '435'
 ht-degree: 57%
 
 ---
@@ -20,8 +20,8 @@ ht-degree: 57%
 + [Überblick](overview.md)
 
 + Video playlists{#video-playlists}
-   + [Admin-Ansicht](playlists/admin-view.md)
    + [Assets-Ansicht](playlists/assets-view.md)
+   + [Admin-Ansicht](playlists/admin-view.md)
 
 + Konfiguration{#configuring}
    + [Baseline-Ordner](configuring/baseline-folders.md)
@@ -82,11 +82,12 @@ ht-degree: 57%
 + Content-Hub{#content-hub}
    + [Überblick](./content-hub/overview.md)
    + [Setup](./content-hub/set-up.md)
-   + [Assets hinzufügen](./content-hub/add-assets.md)
+   + [Konfigurieren](./content-hub/configure.md)
+   + [Hinzufügen von Assets](./content-hub/add-assets.md)
    + [Herunterladen von Assets](./content-hub/download-assets.md)
    + [Bildvarianten mit Adobe Expreß](./content-hub/image-variants.md)
    + [Sammlungen](./content-hub/collections.md)
-   + [Teilen](./content-hub/share.md)
+   + [Freigabe](./content-hub/share.md)
 
 + Freigabe und Verteilung{#sharing}
    + [Herunterladen von Assets](./sharing/download.md)
