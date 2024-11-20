@@ -1,6 +1,6 @@
 ---
-title: AEM Assets Content Hub
-description: Erfahren Sie mehr über die Content Hub von AEN Assets as a Cloud Service.
+title: Content-Hub von AEM Assets
+description: Erfahren Sie mehr über den Content-Hub von AEM Assets as a Cloud Service.
 version: Cloud Service
 feature: Asset Management, Upload, Marketing Campaigns
 topic: Content Supply Chain, Content Management
@@ -9,29 +9,30 @@ level: Beginner
 doc-type: Catalog
 duration: 45
 last-substantial-update: 2024-10-31T00:00:00Z
-source-git-commit: 16bccf53b8f7507f64dd53a7152192630e3f8ec8
+exl-id: ea7b852e-b40d-44ef-ba63-69081e68456e
+source-git-commit: b5f8f545772a9b3f4d15e4816d53f81a513c716c
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 7%
+source-wordcount: '467'
+ht-degree: 83%
 
 ---
 
+# Content-Hub von AEM Assets
 
-# AEM Assets Content Hub
+![ Content-Hub von AEM Assets](./assets/overview/hero.png){align=center}
 
-![AEM Assets Content Hub](./assets/overview/hero.png){align=center}
-
-Erfahren Sie, wie Sie Assets hochladen, Tags anwenden und den Genehmigungs-Workflow in Adobe Experience Manager Assets as a Cloud Service Content Hub verstehen.
+Erfahren Sie, wie Sie Assets hochladen, Tags anwenden und wie der Genehmigungs-Workflow im Content-Hub von Adobe Experience Manager Assets as a Cloud Service abläuft.
 
 
-## Content Hub-Videos
+## Content-Hub-Videos
 
-Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Assets Content Hub benötigen. Jedes Video bietet klare Schritte und praktische Tipps, wie Sie Assets verwalten und mit Ihrem Team zusammenarbeiten können, um AEM Assets Content Hub in Ihrer täglichen Arbeit optimal zu nutzen.
+Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit dem Content-Hub von AEM Assets benötigen. Jedes Video bietet klare Anleitungen und praktische Tipps, wie Sie Assets verwalten und mit Ihrem Team zusammenarbeiten können, um den Content-Hub von AEM Assets in Ihrer täglichen Arbeit optimal zu nutzen.
 
 
 <!-- CARDS
 
 * https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/set-up {title = Set up}
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/configure {title = Configure}
 * https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/add-assets {title = Add assets}
 * https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/download-assets {title = Download assets}
 * https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/image-variants {title = Create image variants}
@@ -45,8 +46,8 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/set-up" title="Setup">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3433513/?format=jpeg&nocache=1730408523156" alt="Setup"
+                    <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/set-up" title="Setup" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3433513/?format=jpeg&nocache=1732113280955" alt="Setup"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -54,12 +55,35 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/set-up" title="Setup">Einrichten</a>
+                        <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/set-up" target="_blank" rel="referrer" title="Setup">Setup</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie die Experience Manager Assets Content Hub mithilfe des Adobe Cloud Manager-Programms und des Assets-Add-ons einrichten. Erfahren Sie auch, wie Sie den Zugriff für Benutzer mithilfe von Produktprofilen konfigurieren.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie den Content-Hub von Adobe Experience Manager Assets in AEM as a Cloud Service einrichten.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/set-up" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Tutorial absolvieren</span>
+                <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/set-up" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Configure">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/configure" title="Konfigurieren" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3439311/?format=jpeg&nocache=1732113280958" alt="Konfigurieren"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/configure" target="_blank" rel="referrer" title="Konfigurieren">Konfigurieren</a>
+                    </p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie auf den verfügbaren Registerkarten navigieren und die Konfigurationsoptionen an die Anforderungen Ihres Unternehmens anpassen können.</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/configure" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
                 </a>
             </div>
         </div>
@@ -68,8 +92,8 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/add-assets" title="Assets hinzufügen">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3432980/?format=jpeg&nocache=1730408523136" alt="Assets hinzufügen"
+                    <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/add-assets" title="Hinzufügen von Assets" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3432980/?format=jpeg&nocache=1732113280960" alt="Hinzufügen von Assets"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -77,12 +101,12 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/add-assets" title="Assets hinzufügen">Hinzufügen von Assets</a>
+                        <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/add-assets" target="_blank" rel="referrer" title="Hinzufügen von Assets">Hinzufügen von Assets</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie Assets hochladen, Tags anwenden und den Genehmigungs-Workflow in Adobe Experience Manager Assets Content Hub verstehen.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie im Content-Hub von Adobe Experience Manager Assets Assets hochladen sowie Tags anwenden und machen Sie sich mit dem Genehmigungs-Workflow vertraut.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/add-assets" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Tutorial absolvieren</span>
+                <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/add-assets" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
                 </a>
             </div>
         </div>
@@ -91,8 +115,8 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/download-assets" title="Herunterladen von Assets">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3433135/?format=jpeg&nocache=1730408523154" alt="Herunterladen von Assets"
+                    <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/download-assets" title="Herunterladen von Assets" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3433135/?format=jpeg&nocache=1732113280972" alt="Herunterladen von Assets"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -100,12 +124,12 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/download-assets" title="Herunterladen von Assets">Herunterladen von Assets</a>
+                        <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/download-assets" target="_blank" rel="referrer" title="Herunterladen von Assets">Herunterladen von Assets</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie in Adobe Experience Manager Assets Content Hub navigieren, nach Assets suchen, die Assets filtern und diese herunterladen können.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie im Content-Hub von Adobe Experience Manager Assets navigieren, nach Assets suchen, die Assets filtern und diese herunterladen können.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/download-assets" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Tutorial absolvieren</span>
+                <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/download-assets" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
                 </a>
             </div>
         </div>
@@ -114,8 +138,8 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/image-variants" title="Erstellen von Bildvarianten">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435003/?format=jpeg&nocache=1730408523138" alt="Erstellen von Bildvarianten"
+                    <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/image-variants" title="Erstellen von Bildvarianten" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435003/?format=jpeg&nocache=1732113280971" alt="Erstellen von Bildvarianten"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -123,12 +147,12 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/image-variants" title="Erstellen von Bildvarianten">Erstellen von Bildvarianten</a>
+                        <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/image-variants" target="_blank" rel="referrer" title="Erstellen von Bildvarianten">Erstellen von Bildvarianten</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie mit Adobe Express in der Experience Manager Assets Content Hub Bildvarianten erstellen und bearbeiten.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie mit Adobe Express im Content-Hub von Experience Manager Assets Bildvarianten erstellen und bearbeiten.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/image-variants" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Tutorial absolvieren</span>
+                <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/image-variants" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
                 </a>
             </div>
         </div>
@@ -137,8 +161,8 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/collections" title="Sammlungen">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435687/?format=jpeg&nocache=1730408523160" alt="Sammlungen"
+                    <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/collections" title="Sammlungen" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435687/?format=jpeg&nocache=1732113280972" alt="Sammlungen"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -146,12 +170,12 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/collections" title="Sammlungen">Sammlungen</a>
+                        <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/collections" target="_blank" rel="referrer" title="Sammlungen">Sammlungen</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie Sammlungen in AEM Assets Content Hub erstellen und verwenden können, um den Asset-Zugriff zu optimieren und die gemeinsame Nutzung von Ressourcen zu fördern, um effiziente und organisierte Teamarbeit in verschiedenen Projekten zu gewährleisten.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie Sammlungen im Content-Hub von AEM Assets erstellen und verwenden können, um den Asset-Zugriff zu optimieren und die gemeinsame Nutzung von Ressourcen zu fördern, damit eine effiziente und gut organisierte Team-Arbeit in verschiedenen Projekten gewährleistet wird.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/collections" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Video ansehen</span>
+                <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/collections" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
                 </a>
             </div>
         </div>
@@ -160,8 +184,8 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/share" title="Teilen">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435685/?format=jpeg&nocache=1730408523158" alt="Teilen"
+                    <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/share" title="Freigabe" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435685/?format=jpeg&nocache=1732113280986" alt="Freigabe"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -169,12 +193,12 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/share" title="Teilen">Freigabe</a>
+                        <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/share" target="_blank" rel="referrer" title="Freigabe">Freigabe</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie Assets und Sammlungen für Teammitglieder in AEM Assets Content Hub freigeben und so effektive Teamarbeit und sichere Asset-Freigabe fördern können.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie Assets und Sammlungen für Team-Mitglieder im Content-Hub von AEM Assets freigeben und so eine effektive Team-Arbeit und die sichere Asset-Freigabe fördern.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/share" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Video ansehen</span>
+                <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/share" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
                 </a>
             </div>
         </div>
@@ -182,16 +206,9 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit AEM Ass
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
+## Content-Hub-Dokumentation
 
-
-
-
-
-
-
-## Content Hub-Dokumentation
-
-Lesen Sie die Produktdokumentation von Content Hub, um mehr über AEM Assets Content Hub zu erfahren und die Funktionen vollständig zu nutzen. Diese Ressourcen enthalten ausführliche Anleitungen zur Verwendung der Funktionen und Funktionen, um sicherzustellen, dass Sie die Unterstützung für ein effizientes Asset-Management benötigen.
+Lesen Sie die Produktdokumentation zum Content-Hub, um mehr über den Content-Hub von AEM Assets zu erfahren und die Funktionen vollständig nutzen zu können. Diese Ressourcen enthalten ausführliche Anleitungen zur Verwendung der Funktionen, um sicherzustellen, dass Sie die notwendige Unterstützung für ein effizientes Asset-Management erhalten.
 
 
 <!-- CARDS
@@ -207,8 +224,8 @@ Lesen Sie die Produktdokumentation von Content Hub, um mehr über AEM Assets Con
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" title="Content Hub-Dokumentation">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview./media_1ef4ad26652365b140f1a06c31df8ebc6546850df.png?width=400&format=png&optimize=medium" alt="Content Hub-Dokumentation"
+                    <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" title="Content-Hub-Dokumentation" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview./media_1ef4ad26652365b140f1a06c31df8ebc6546850df.png?width=400&format=png&optimize=medium" alt="Content-Hub-Dokumentation"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -216,12 +233,12 @@ Lesen Sie die Produktdokumentation von Content Hub, um mehr über AEM Assets Con
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" title="Content Hub-Dokumentation">Content Hub-Dokumentation</a>
+                        <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" target="_blank" rel="referrer" title="Content-Hub-Dokumentation">Content-Hub-Dokumentation</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie mehr über Content Hub, seine wichtigsten Vorteile, den Zugriff darauf und das Feedback zu den in Content Hub verfügbaren Optionen.</p>
+                    <p class="is-size-6">Diese Dokumentation dient als Einstiegspunkt, um mehr über die wichtigsten Vorteile von Content Hub, die Zugriffsmethoden und die Feedback zu den verfügbaren Optionen zu erfahren.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lesen Sie die Dokumentation</span>
+                <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
                 </a>
             </div>
         </div>
@@ -230,8 +247,8 @@ Lesen Sie die Produktdokumentation von Content Hub, um mehr über AEM Assets Con
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub" title="Bereitstellen von Content Hub">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub./media_13f7f053438556286beebdf1266b2d2bf18469b68.png?width=400&format=png&optimize=medium" alt="Bereitstellen von Content Hub"
+                    <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub" title="Bereitstellen von Content-Hub" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub./media_13f7f053438556286beebdf1266b2d2bf18469b68.png?width=400&format=png&optimize=medium" alt="Bereitstellen von Content-Hub"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -239,12 +256,12 @@ Lesen Sie die Produktdokumentation von Content Hub, um mehr über AEM Assets Con
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub" title="Bereitstellen von Content Hub">Content Hub bereitstellen</a>
+                        <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub" target="_blank" rel="referrer" title="Bereitstellen von Content-Hub">Bereitstellen von Content-Hub</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie Content Hub bereitstellen und aktivieren und Benutzern mit unterschiedlichen Berechtigungstypen Zugriff gewähren (Assets hochladen, Adobe Expreß-Benutzer) und wie Sie Benutzern Administratorberechtigungen gewähren.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie Content Hub bereitstellen und aktivieren und Benutzern verschiedene Berechtigungen gewähren, einschließlich Asset-Uploads und Administratorzugriff.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lesen Sie die Dokumentation</span>
+                <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
                 </a>
             </div>
         </div>
@@ -253,8 +270,8 @@ Lesen Sie die Produktdokumentation von Content Hub, um mehr über AEM Assets Con
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" title="Häufig gestellte Fragen zu Content Hub">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub./media_1fbf2b11f65863898a615041cf5cc7a79b2f8942d.png?width=400&format=png&optimize=medium" alt="Häufig gestellte Fragen zu Content Hub"
+                    <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" title="Häufig gestellte Fragen zum Content-Hub" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub./media_1fbf2b11f65863898a615041cf5cc7a79b2f8942d.png?width=400&format=png&optimize=medium" alt="Häufig gestellte Fragen zum Content-Hub"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -262,12 +279,12 @@ Lesen Sie die Produktdokumentation von Content Hub, um mehr über AEM Assets Con
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" title="Häufig gestellte Fragen zu Content Hub">Häufig gestellte Fragen zu Content Hub</a>
+                        <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" target="_blank" rel="referrer" title="Häufig gestellte Fragen zum Content-Hub">Häufig gestellte Fragen zum Content-Hub</a>
                     </p>
-                    <p class="is-size-6">Hier erhalten Sie Antworten auf einige der am häufigsten gestellten Fragen (FAQs) zu Content Hub.</p>
+                    <p class="is-size-6">Hier erhalten Sie Antworten auf einige der am häufigsten gestellten Fragen (FAQs) zum Content-Hub.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lesen Sie die Dokumentation</span>
+                <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
                 </a>
             </div>
         </div>
@@ -275,8 +292,5 @@ Lesen Sie die Produktdokumentation von Content Hub, um mehr über AEM Assets Con
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-
-
-
-
-
+<br/>
+<br/>
