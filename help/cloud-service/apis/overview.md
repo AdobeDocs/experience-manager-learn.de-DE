@@ -11,13 +11,13 @@ jira: KT-16515
 thumbnail: KT-16515.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
-source-git-commit: 6b8a8dc5cdcddfa2d8572bfd195bc67906882f67
+exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
+source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
 workflow-type: tm+mt
 source-wordcount: '880'
 ht-degree: 2%
 
 ---
-
 
 # Übersicht über AEM-APIs{#aem-apis-overview}
 
@@ -71,7 +71,7 @@ Die [OpenAPI-Spezifikation](https://swagger.io/specification/) (früher Swagger 
 
 **Forms**
 
-- [Forms Acrobat Services](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/): APIs zum Arbeiten mit Formularen und Dokumenten.
+- [Forms Communications-APIs](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/): APIs zum Arbeiten mit Formularen und Dokumenten.
 
 In zukünftigen Versionen werden weitere OpenAPI-basierte AEM-APIs hinzugefügt, um zusätzliche Anwendungsfälle zu unterstützen.
 
@@ -89,7 +89,7 @@ Die OpenAPI-basierten AEM-APIs unterstützen die folgenden Authentifizierungsmet
 
 Bevor Sie auf Adobe-APIs zugreifen, müssen Sie sich mit diesen Schlüsselkonzepten vertraut machen:
 
-- **[Adobe Developer Console](https://developer.adobe.com/)**: Der Entwickler-Hub für den Zugriff auf Adobe-APIs, SDKs, Echtzeit-Ereignisse, Server-lose Funktionen und mehr. Beachten Sie, dass sich dies von der Developer Console _AEM_ unterscheidet, die zum Debugging von AEM Anwendungen verwendet wird.
+- **[Adobe Developer Console](https://developer.adobe.com/)**: Der Entwickler-Hub für den Zugriff auf Adobe-APIs, SDKs, Echtzeit-Ereignisse, Server-lose Funktionen und mehr. Beachten Sie, dass es sich von der Developer Console _AEM_ unterscheidet, die zum Debugging von AEM Anwendungen verwendet wird.
 
 - **[Adobe Developer Console-Projekt](https://developer.adobe.com/developer-console/docs/guides/projects/)**: Zentraler Ort für die Verwaltung von API-Integrationen, Ereignissen und Laufzeitfunktionen. Hier konfigurieren Sie APIs, legen die Authentifizierung fest und generieren erforderliche Anmeldeinformationen.
 

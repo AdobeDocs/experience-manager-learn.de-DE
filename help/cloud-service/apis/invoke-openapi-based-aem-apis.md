@@ -1,6 +1,6 @@
 ---
 title: Aufrufen von OpenAPI-basierten AEM-APIs
-description: Erfahren Sie, wie Sie über Ihre Anwendung OpenAPI-basierte AEM-APIs aufrufen.
+description: Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service aus benutzerdefinierten Anwendungen konfigurieren und aufrufen.
 version: Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -11,17 +11,17 @@ jira: KT-16516
 thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
-source-git-commit: 6b8a8dc5cdcddfa2d8572bfd195bc67906882f67
+exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
+source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1761'
 ht-degree: 1%
 
 ---
 
-
 # Aufrufen von OpenAPI-basierten AEM-APIs{#invoke-openapi-based-aem-apis}
 
-Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service aus benutzerdefinierten Anwendungen aufrufen.
+Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service aus benutzerdefinierten Anwendungen konfigurieren und aufrufen.
 
 >[!AVAILABILITY]
 >
@@ -501,4 +501,3 @@ Die Schlüssel-Legenden aus dem Beispiel-NodeJS-Anwendungscode sind:
 
 In diesem Tutorial haben Sie erfahren, wie Sie OpenAPI-basierte AEM-APIs aus benutzerdefinierten Anwendungen aufrufen. Sie haben den Zugriff auf AEM APIs aktiviert, ein Adobe Developer Console-Projekt (ADC) erstellt und konfiguriert.
 Im ADC-Projekt haben Sie die AEM-APIs hinzugefügt, den Authentifizierungstyp konfiguriert und das Produktprofil zugeordnet. Sie haben auch die AEM-Instanz konfiguriert, um die Kommunikation mit ADC-Projekten zu aktivieren, und eine NodeJS-Beispielanwendung entwickelt, die die Assets-Autoren-API aufruft.
-
