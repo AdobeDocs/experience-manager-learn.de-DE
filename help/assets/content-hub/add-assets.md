@@ -1,6 +1,6 @@
 ---
-title: Hochladen, Verwalten und Genehmigen von Assets in AEM Assets Content Hub
-description: Erfahren Sie, wie Sie Assets hochladen, Tags anwenden und den Genehmigungs-Workflow in Adobe Experience Manager Assets Content Hub verstehen.
+title: Hochladen, Verwalten und Genehmigen von Assets im Content-Hub von AEM Assets
+description: Erfahren Sie, wie Sie im Content-Hub von Adobe Experience Manager Assets Assets hochladen sowie Tags anwenden und machen Sie sich mit dem Genehmigungs-Workflow vertraut.
 version: Cloud Service
 feature: Asset Management, Upload, Marketing Campaigns
 topic: Content Supply Chain, Content Management
@@ -13,14 +13,14 @@ jira: KT-15992
 thumbnail: KT-15992.jpeg
 exl-id: d364547b-c738-4bdb-a8e5-2be3ff75f9ec
 source-git-commit: 3e7668067f9e001b92011a3735fc8debe829e1c9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '55'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Hinzufügen von Assets zu AEM Assets Content Hub
+# Hinzufügen von Assets zum Content-Hub von AEM Assets
 
-Erfahren Sie, wie Sie Assets hochladen, Tags anwenden und den Genehmigungs-Workflow in Adobe Experience Manager Assets Content Hub verstehen.
+Erfahren Sie, wie Sie im Content-Hub von Adobe Experience Manager Assets Assets hochladen sowie Tags anwenden und machen Sie sich mit dem Genehmigungs-Workflow vertraut.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3432980/?learn=on)

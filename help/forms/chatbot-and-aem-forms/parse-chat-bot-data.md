@@ -1,5 +1,5 @@
 ---
-title: Verwenden von AEM Forms mit Chatbot
+title: Verwenden von AEM Forms mit ChatBot
 description: Analysieren von ChatBot-Daten
 feature: Adaptive Forms
 version: 6.5
@@ -10,19 +10,19 @@ level: Intermediate
 exl-id: 3c304b0a-33f8-49ed-a576-883df4759076
 duration: 22
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '97'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 # Analysieren von ChatBot-Daten
 
-Ein [ChatBot-Webhook](https://www.chatbot.com/help/webhooks/what-are-webhooks/) wurde verwendet, um die ChatBot-Daten an ein AEM Servlet zu senden.
-Die im ChatBot erfassten Daten liegen im JSON-Format vor, wobei der Benutzer wie unten gezeigt Daten im Attributobjekt eingegeben hat
+Ein [ChatBot-Webhook](https://www.chatbot.com/help/webhooks/what-are-webhooks/) wurde verwendet, um die ChatBot-Daten an ein AEM-Servlet zu senden.
+Die im ChatBot erfassten Daten liegen im JSON-Format vor, wobei die Benutzenden wie unten gezeigt Daten im Attributobjekt eingegeben haben
 ![chatbot-data](assets/chat-bot-data.png)
 
-Um die Daten mit der XDP-Vorlage zusammenzuführen, müssen wir die folgende XML erstellen. Beachten Sie das Stammelement der XML-Datei. Dies muss mit dem Stammelement der XDP-Vorlage übereinstimmen, damit die Daten erfolgreich zusammengeführt werden.
+Um die Daten mit der XDP-Vorlage zu fusionieren, müssen Sie die folgende XML-Datei erstellen. Beachten Sie das Stammelement der XML-Datei. Dies muss mit dem Stammelement der XDP-Vorlage übereinstimmen, damit die Daten erfolgreich fusioniert werden.
 
 
 ```xml
@@ -41,4 +41,4 @@ Um die Daten mit der XDP-Vorlage zusammenzuführen, müssen wir die folgende XML
 
 ## Nächste Schritte
 
-[Zusammenführen von Daten mit XDP-Vorlage](./merge-data-with-template.md)
+[Fusionieren von Daten mit der XDP-Vorlage](./merge-data-with-template.md)

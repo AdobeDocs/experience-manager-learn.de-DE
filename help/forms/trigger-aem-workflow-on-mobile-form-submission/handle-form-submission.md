@@ -1,31 +1,31 @@
 ---
-title: Trigger AEM Workflow bei der HTML 5-Formularübermittlung
-description: Übermitteln des HTML5-Formulars
+title: Auslösen eines AEM-Workflows bei der Übermittlung eines HTML5-Formulars
+description: Durchführen der Übermittlung des HTML5-Formulars
 feature: Mobile Forms
 doc-type: article
 version: 6.4,6.5
 topic: Development
 role: Developer
 jira: kt-16215
-badgeVersions: label="AEM Forms 6.5" before-title="false"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
 source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '138'
-ht-degree: 60%
+ht-degree: 100%
 
 ---
 
 # Durchführen der Formularübermittlung
 
-In diesem Teil erstellen wir ein einfaches Servlet, das auf AEM Publish ausgeführt wird, um die HTML5-Formularübermittlung zu handhaben. Dieses Servlet sendet eine HTTP-POST-Anfrage an ein Servlet, das in einer AEM-Autoreninstanz ausgeführt wird, die für das Speichern der übermittelten Daten als `nt:file`-Knoten im AEM Author-Repository verantwortlich ist.
+In diesem Teil wird ein einfaches Servlet erstellt, das auf AEM Publish ausgeführt wird, um die Übermittlung von HTML5-Formularen durchzuführen. Dieses Servlet sendet eine HTTP-POST-Anfrage an ein Servlet, das in einer AEM-Autoreninstanz ausgeführt wird, die für das Speichern der übermittelten Daten als `nt:file`-Knoten im AEM Author-Repository verantwortlich ist.
 
-Im Folgenden finden Sie den Code des Servlets, das die Übermittlung des HTML5-Formulars verarbeitet. In diesem Servlet machen wir einen POST-Aufruf an ein Servlet, das auf **/bin/startworkflow** in einer AEM-Autoreninstanz gemountet ist. Dieses Servlet speichert die Formulardaten im Repository der AEM-Authoring-Instanz.
+Im Folgenden finden Sie den Code des Servlets, das die Übermittlung des HTML5-Formulars durchführt. In diesem Servlet machen wir einen POST-Aufruf an ein Servlet, das auf **/bin/startworkflow** in einer AEM-Autoreninstanz gemountet ist. Dieses Servlet speichert die Formulardaten im Repository der AEM-Authoring-Instanz.
 
 
 ## AEM Publish-Servlet
 
-Der folgende Code verarbeitet die Übermittlung des HTML5-Formulars. Dieser Code wird in der Veröffentlichungsinstanz ausgeführt.
+Mit dem folgenden Code wird die Übermittlung des HTML5-Formulars durchgeführt. Dieser Code wird in der Veröffentlichungsinstanz ausgeführt.
 
 ```java
 package com.aemforms.mobileforms.core.servlets;

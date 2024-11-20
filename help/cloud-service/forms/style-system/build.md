@@ -11,9 +11,9 @@ feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
 source-git-commit: 1ed08d7784833b6c49139da525341af5ee587345
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '253'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Auf die dritte Schaltfläche wird der Standardstil angewendet.
 
 ## Erstellen des Design-Projekts
 
-Der nächste Schritt besteht darin, das Design-Projekt zu erstellen. Navigieren Sie zum Stammordner Ihres Designprojekts und führen Sie den Befehl _**npm run build**_ aus, wie im Screenshot unten dargestellt.
+Der nächste Schritt besteht darin, das Design-Projekt zu erstellen. Navigieren Sie zum Stammordner Ihres Design-Projekts und führen Sie den Befehl _**npm run build**_ aus, wie im Screenshot unten gezeigt.
 
 ![build-theme](assets/build-theme.png)
 
@@ -47,7 +47,7 @@ Sobald das Design-Projekt erfolgreich erstellt wurde, können Sie die Änderunge
 
 ![final-buttons](assets/final-state-buttons.png)
 
-## Änderungen übernehmen
+## Pushen der Änderungen
 
-Wenn Sie mit den Änderungen zufrieden sind, können Sie die Änderungen mithilfe der [Frontend-Pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline) an Ihre Cloud-Instanz übertragen
+Wenn Sie mit den Änderungen zufrieden sind, können Sie sie mithilfe der [Frontend-Pipeline](https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline) an Ihre Cloud-Instanz pushen.
 

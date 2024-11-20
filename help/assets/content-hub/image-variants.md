@@ -1,6 +1,6 @@
 ---
-title: Erstellen von Bildvarianten mit Adobe Express in AEM Assets Content Hub
-description: Erfahren Sie, wie Sie mit Adobe Express in der Experience Manager Assets Content Hub Bildvarianten erstellen und bearbeiten.
+title: Erstellen von Bildvarianten mit Adobe Express im Content-Hub von AEM Assets
+description: Erfahren Sie, wie Sie mit Adobe Express im Content-Hub von Experience Manager Assets Bildvarianten erstellen und bearbeiten.
 version: Cloud Service
 feature: Asset Management
 topic: Content Supply Chain, Content Management, Artificial Intelligence
@@ -12,15 +12,15 @@ last-substantial-update: 2024-10-08T00:00:00Z
 jira: KT-15991
 thumbnail: KT-15991.jpeg
 source-git-commit: db8e776458879018fcfdd4d30c518cafc3a2ab14
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '58'
+ht-degree: 100%
 
 ---
 
 
-# Erstellen von Bildvarianten mit Adobe Express in AEM Assets Content Hub
+# Erstellen von Bildvarianten mit Adobe Express im Content-Hub von AEM Assets
 
-Erfahren Sie, wie Sie mit Adobe Express in der Experience Manager Assets Content Hub Bildvarianten erstellen und bearbeiten.
+Erfahren Sie, wie Sie mit Adobe Express im Content-Hub von Experience Manager Assets Bildvarianten erstellen und bearbeiten.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3435003/?learn=on)

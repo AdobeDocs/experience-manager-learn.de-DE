@@ -1,6 +1,6 @@
 ---
 title: Verwenden der GuideBridge-API für den Zugriff auf Formulardaten
-description: Greifen Sie mithilfe der GuideBridge-API auf Formulardaten und Anhänge für ein auf einer Kernkomponente basierendes adaptives Formular zu.
+description: Greifen Sie mithilfe der GuideBridge-API auf Formulardaten und Anhänge eines auf Kernkomponenten basierenden adaptiven Formulars zu.
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -11,16 +11,16 @@ last-substantial-update: 2024-04-05T00:00:00Z
 exl-id: 099aaeaf-2514-4459-81a7-2843baa1c981
 duration: 68
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '148'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Verwenden der GuideBridge-API zur POST von Formulardaten
+# Verwenden der GuideBridge-API zur POST-Anfrage von Formulardaten
 
-Das &quot;Speichern und Fortsetzen&quot;eines Formulars ermöglicht es Benutzern, den Fortschritt beim Ausfüllen des Formulars zu speichern und es zu einem späteren Zeitpunkt wieder aufzunehmen.
-Um dieses Anwendungsbeispiel zu erstellen, müssen wir mithilfe der GuideBridge-API auf die Formulardaten zugreifen und sie zum Speichern und Abrufen an den REST-Endpunkt senden.
+Die Funktion „Speichern und Fortsetzen“ eines Formulars ermöglicht es Benutzenden, den Fortschritt beim Ausfüllen des Formulars zu speichern und es zu einem späteren Zeitpunkt fortzusetzen.
+Um diesen Anwendungsfall zu erreichen, müssen Sie mithilfe der GuideBridge-API auf die Formulardaten zugreifen und sie zum Speichern und Abrufen an den REST-Endpunkt senden.
 
 Die Formulardaten werden mithilfe des Regeleditors beim Klicken auf eine Schaltfläche gespeichert
 ![rule-editor](assets/rule-editor.png)
@@ -70,7 +70,7 @@ Die folgende JavaScript-Funktion wurde geschrieben, um die Daten an den angegebe
 
 ## Server-seitiger Code
 
-Der folgende serverseitige Java-Code wurde geschrieben, um die Formulardaten zu verarbeiten. Im Folgenden finden Sie das Java-Servlet, das in AEM ausgeführt wird und über den XHR-Aufruf in der obigen JavaScript aufgerufen wird.
+Der folgende Server-seitige Java-Code wurde geschrieben, um die Formulardaten zu verarbeiten. Im Folgenden finden Sie das Java-Servlet, das in AEM ausgeführt wird und über den XHR-Aufruf im obigen JavaScript aufgerufen wird.
 
 ```java
 package com.azuredemo.core.servlets;

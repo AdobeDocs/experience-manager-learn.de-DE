@@ -1,6 +1,6 @@
 ---
 title: Einführung in das Auslösen eines AEM-Workflows für die Übermittlung von HTML5-Formularen
-description: Trigger und AEM Workflow bei der Übermittlung mobiler Formulare
+description: Auslösen eines AEM-Workflows bei der Übermittlung eines Formulars für Mobilgeräte
 feature: Mobile Forms
 doc-type: article
 version: 6.4,6.5
@@ -9,24 +9,24 @@ role: Developer
 level: Experienced
 last-substantial-update: 2024-09-17T00:00:00Z
 jira: kt-16215
-badgeVersions: label="AEM Forms 6.5" before-title="false"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 source-git-commit: c6ffa8f7a398b01fc12e1e2efe4382c941900496
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '195'
-ht-degree: 20%
+ht-degree: 100%
 
 ---
 
-# Trigger AEM Workflow bei der Übermittlung von Mobile Forms
+# Auslösen eines AEM-Workflows bei der Übermittlung eines Formulars für Mobilgeräte
 
-Ein gängiges Anwendungsbeispiel besteht darin, die XDP als HTML für Datenerfassungsaktivitäten zu rendern. Bei Übermittlung dieses Formulars kann es erforderlich sein, einen AEM Workflow Trigger. Im AEM-Workflow können Sie die Daten mit der XDP-Vorlage zusammenführen und die generierte PDF zur Überprüfung und Genehmigung präsentieren. Das Formular wird auf einer Veröffentlichungsinstanz wiedergegeben und der Workflow wird auf einer AEM Verarbeitungsinstanz ausgelöst.
+Ein gängiger Anwendungsfall besteht darin, die XDP als HTML für Datenerfassungsaktivitäten zu rendern. Bei Übermittlung dieses Formulars kann es erforderlich sein, einen AEM-Workflow auszulösen. Im AEM-Workflow können Sie die Daten mit der XDP-Vorlage fusionieren und die generierte PDF zur Überprüfung und Genehmigung vorlegen. Das Formular wird auf einer Veröffentlichungsinstanz gerendert und der Workflow wird auf einer AEM-Verarbeitungsinstanz ausgelöst.
 
-Die folgenden Schritte sind im Anwendungsfall erforderlich
+Die folgenden Schritte sind Teil des Anwendungsfalls
 
-* Der Benutzer füllt ein HTML5-Formular (HTML5-Ausgabe von XDP) aus und sendet es.
+* Benutzende füllen ein HTML5-Formular (HTML5-Ausgabedarstellung von XDP) aus und übermittlen es.
 * Die Übermittlung wird von einem Servlet in der Veröffentlichungsinstanz verarbeitet.
 * Das Servlet speichert die Daten in einem vordefinierten Ordner im Repository der AEM-Verarbeitungsinstanz.
-* Der Workflow-Starter ist so konfiguriert, dass jedes Mal, wenn eine neue Datei unter einem bestimmten Ordner hinzugefügt wird, ein AEM-Workflow Trigger wird.
+* Der Workflow-Starter ist so konfiguriert, dass jedes Mal ein AEM-Workflow ausgelöst wird, wenn eine neue Datei unter einem bestimmten Ordner hinzugefügt wird.
 
 In diesem Tutorial werden die Schritte erläutert, die zum Erreichen des oben genannten Anwendungsbeispiels erforderlich sind. Beispiel-Code und -Assets im Zusammenhang mit diesem Tutorial sind [hier verfügbar.](./deploy-assets.md)
 

@@ -1,6 +1,6 @@
 ---
-title: Verwenden von AEM Forms mit Chatbot
-description: Füllen Sie ein PDF-Formular mit Chatbot aus
+title: Verwenden von AEM Forms mit ChatBot
+description: Ausfüllen eines PDF-Formulars mit ChatBot
 feature: Adaptive Forms
 version: 6.5
 jira: KT-15344
@@ -10,29 +10,29 @@ level: Intermediate
 exl-id: 8c51a374-7444-4a6a-99ed-dce671dc57cb
 duration: 161
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '102'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Füllen Sie ein PDF-Formular mit ChatBot aus.
+# Ausfüllen eines PDF-Formulars mit ChatBot
 
-Willkommen in unserem Tutorial zum Verwenden eines ChatBot zum Ausfüllen eines PDF-Formulars mit Adobe Experience Manager Forms (AEM Forms) und zum Senden des Formulars zur digitalen Signatur mithilfe von Adobe Sign.
+Willkommen in unserem Tutorial zum Verwenden eines Chatbots zum Ausfüllen eines PDF-Formulars mit Adobe Experience Manager Forms (AEM Forms) und zum Senden des Formulars zur digitalen Signatur mithilfe von Adobe Sign.
 
-Der ChatBot wurde mit [chatbot](https://www.chatbot.com/) erstellt.
+Der Chatbot wurde mit [chatbot](https://www.chatbot.com/) erstellt.
 
-Im Rahmen dieses Tutorials werden wir in ChatBot erfasste Daten mit einem [W-9-Formular](assets/fw9.xdp) zusammenführen
+Im Rahmen dieses Tutorials werden die in ChatBot erfassten Daten mit einem [W-9-Formular](assets/fw9.xdp) zusammengeführt.
 
-Das folgende Video zeigt den Anwendungsfall.
+Das folgende Video zeigt den Anwendungsfall:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428432?learn=on)
 
 ## Voraussetzung
 
-* Erlebnis mit AEM Forms.
-* Grundlegendes zu AEM Forms OutputService.
-* Erlebnis mit AEM Forms Designer.
+* Erfahrung mit AEM Forms.
+* Grundlegendes Verständnis von AEM Forms OutputService.
+* Erfahrung mit AEM Forms Designer.
 
 ## Nächste Schritte
 

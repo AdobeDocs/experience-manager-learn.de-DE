@@ -8,17 +8,17 @@ topic: Development
 role: Developer
 level: Experienced
 jira: kt-16215
-badgeVersions: label="AEM Forms 6.5" before-title="false"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '172'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
 # Workflow zur Überprüfung und Genehmigung übermittelter PDF-Dateien
 
-Der letzte und letzte Schritt besteht darin, AEM Workflow zu erstellen, der eine statische oder nicht interaktive PDF zur Überprüfung und Genehmigung generiert. Der Workflow wird über einen auf dem Knoten `/content/formsubmissions` konfigurierten AEM-Starter ausgelöst.
+Der letzte und abschließende Schritt besteht darin, einen AEM-Workflow zu erstellen, bei dem eine statische (oder nicht interaktive) PDF-Datei zur Überprüfung und Genehmigung generiert wird. Der Workflow wird über einen auf dem Knoten `/content/formsubmissions` konfigurierten AEM-Starter ausgelöst.
 
 Der folgende Screenshot zeigt die für den Workflow erforderlichen Schritte.
 

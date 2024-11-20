@@ -8,11 +8,11 @@ topic: Development
 role: Developer
 level: Experienced
 jira: kt-16215
-badgeVersions: label="AEM Forms 6.5" before-title="false"
+badgeVersions: label="AEM Forms 6.5" before-title="false"
 source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '392'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -62,11 +62,11 @@ DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
 * Veröffentlichen Sie w9.xdp.
 * Melden Sie sich bei der Veröffentlichungsinstanz an.
 * [Zeigen Sie das w9-Formular in einer Vorschau an.](http://localhost:4503/content/dam/formsanddocuments/w9.xdp/jcr:content)
-* Füllen Sie einige Formularfelder aus und senden Sie das Formular.
+* Füllen Sie einige Formularfelder aus und senden Sie das Formular ab.
 * Melden Sie sich bei der AEM-Autoreninstanz als Admin an.
 * [Überprüfen Sie den AEM-Posteingang.](http://localhost:4502/aem/inbox)
 * Sie sollten über ein Arbeitselement verfügen, um die übermittelte PDF-Datei zu überprüfen.
 
 >[!NOTE]
 >
->Anstatt die PDF-Datei an das in der Veröffentlichungsinstanz ausgeführte Servlet zu übermitteln, haben einige Kundinnen und Kunden das Servlet im Servlet-Container, z. B. Tomcat, bereitgestellt. Das alles hängt von der Topologie ab, mit der der Kunde vertraut ist. Für dieses Tutorial verwenden wir das Servlet, das in der Veröffentlichungsinstanz bereitgestellt wird, um die Formularübermittlungen zu bearbeiten.
+>Anstatt die PDF-Datei an das in der Veröffentlichungsinstanz ausgeführte Servlet zu übermitteln, haben einige Kundinnen und Kunden das Servlet im Servlet-Container, z. B. Tomcat, bereitgestellt. Das alles hängt davon ab, mit welcher Topologie die Kundschaft vertraut ist. Für dieses Tutorial verwenden wir das in der Veröffentlichungsinstanz bereitgestellte Servlet, um die Formularübermittlungen zu verarbeiten.

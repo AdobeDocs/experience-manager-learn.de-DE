@@ -1,6 +1,6 @@
 ---
-title: Adobe CDN - Erweiterte Funktionen, die über das Zwischenspeichern hinausgehen
-description: Erfahren Sie mehr über die erweiterten Funktionen von Adobe CDN, die über das Caching hinausgehen, wie z. B. das Konfigurieren von Traffic im CDN, Einrichten von Token und Anmeldedaten, CDN-Fehlerseiten und mehr.
+title: Adobe CDN – Erweiterte Funktionen, die über das Caching hinausgehen
+description: Erfahren Sie mehr über die erweiterten Funktionen von Adobe CDN, die über das Caching hinausgehen, wie z. B. das Konfigurieren von Traffic im CDN, das Einrichten von Token und Anmeldedaten, CDN-Fehlerseiten und mehr.
 version: Cloud Service
 feature: Website Performance, CDN Cache
 topic: Architecture, Performance, Content Management
@@ -13,63 +13,63 @@ jira: KT-15123
 thumbnail: KT-15123.jpeg
 exl-id: 8948a900-01e9-49ed-9ce5-3a057f5077e4
 source-git-commit: 8795024a7b5e6d10cb2ff2f770dd3d080af85e68
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '546'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Adobe CDN - Erweiterte Funktionen, die über das Zwischenspeichern hinausgehen
+# Adobe CDN – Erweiterte Funktionen, die über das Caching hinausgehen
 
-Erfahren Sie mehr über die erweiterten Funktionen des Adobe Content Delivery Network (CDN), die über das Caching hinausgehen, z. B. Konfigurieren von Traffic im CDN, Einrichten von Token und Anmeldedaten, CDN-Fehlerseiten und mehr.
+Erfahren Sie mehr über die erweiterten Funktionen des Adobe Content Delivery Network (CDN), die über das Caching hinausgehen, z. B. das Konfigurieren von Traffic im CDN, das Einrichten von Token und Anmeldeinformationen, CDN-Fehlerseiten und mehr.
 
-Neben der Zwischenspeicherung von Inhalten bietet Adobe CDN mehrere erweiterte Funktionen, mit denen Sie die Leistung Ihrer Website optimieren können. Zu diesen Funktionen gehören:
+Neben dem Caching von Inhalten bietet Adobe CDN mehrere erweiterte Funktionen, mit denen Sie die Leistung Ihrer Website optimieren können. Zu diesen Funktionen gehören:
 
-- Konfigurieren des Traffics auf dem CDN
-- CDN-Anmeldeinformationen und Authentifizierung konfigurieren
+- Konfigurieren von Traffic im CDN
+- Konfigurieren von CDN-Anmeldeinformationen und einer Authentifizierung
 - CDN-Fehlerseiten
 
-Diese Funktionen sind **Self-Service**-Funktionen. In der Datei `cdn.yaml` Ihres AEM-Projekts konfiguriert und mithilfe der Cloud Manager-Konfigurationspipeline bereitgestellt.
+Diese Funktionen sind **Self-Service**-Funktionen. Sie werden in der Datei `cdn.yaml` Ihres AEM-Projekts konfiguriert und mithilfe der Cloud Manager-Konfigurations-Pipeline bereitgestellt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3433104?quality=12&learn=on)
 
-## Konfigurieren des Traffics auf dem CDN
+## Konfigurieren von Traffic im CDN
 
-Im Folgenden werden die wichtigsten Funktionen im Zusammenhang mit _Konfigurieren des Traffics am CDN_ beschrieben:
+Im Folgenden werden die wichtigsten Funktionen im Zusammenhang mit _Konfigurieren von Traffic im CDN_ beschrieben:
 
-- **DoS-Angriffsprävention:** Adobe CDN absorbiert DoS-Angriffe auf der Netzwerkschicht und hindert sie daran, Ihren Herkunftsserver zu erreichen.
-- **Ratenbegrenzung:** Um zu verhindern, dass Ihr Herkunftsserver mit zu vielen Anforderungen überlastet wird, können Sie die Ratenbegrenzung für das CDN konfigurieren.
-- **Web-Anwendungs-Firewall (WAF):** Die WAF schützt Ihre Website vor allgemeinen Sicherheitslücken durch Webanwendungen wie SQL-Injection, Cross-Site-Scripting und mehr. Für die Verwendung dieser Funktion ist die Lizenz für Enhanced Security oder WAF-DDoS Protection erforderlich.
-- **Anforderungsumwandlung:** Ändern Sie eingehende Anforderungen wie das Festlegen oder Aufheben von Kopfzeilen, das Ändern von Abfrageparametern, Cookies und mehr.
-- **Reaktionsumwandlung:** Ändern Sie ausgehende Antworten, z. B. Festlegen oder Aufheben der Einstellung von Kopfzeilen.
-- **Herkunftsauswahl:** Traffic wird basierend auf der Anforderungs-URL zu verschiedenen Herkunftsservern (Adobe und Nicht-Adobe) geleitet.
-- **URL-Umleitung:** Umleitungsanfragen (HTTP 301/302) zu einer anderen absoluten oder relativen URL.
+- **DoS-Angriffsprävention:** Das Adobe CDN fängt DoS-Angriffe auf der Netzwerkebene ab und hindert sie daran, Ihren Herkunfts-Server zu erreichen.
+- **Ratenbegrenzung:** Um zu verhindern, dass Ihr Herkunfts-Server mit zu vielen Anfragen überlastet wird, können Sie die Ratenbegrenzung für das CDN konfigurieren.
+- **Web Application Firewall (WAF):** Die WAF schützt Ihre Website vor allgemeinen Sicherheitslücken durch Web-Anwendungen wie SQL-Injection, Cross-Site-Scripting und mehr. Für die Verwendung dieser Funktion ist die Lizenz für erweiterte Sicherheit oder eine WAF-DDoS-Schutzlizenz erforderlich.
+- **Anfrageumwandlung:** Ändern eingehender Anfragen durch Festlegen oder Aufheben von Headern, Ändern von Abfrageparametern, Cookies und mehr.
+- **Reaktionsumwandlung:** Ändern ausgehender Antworten durch Festlegen oder Aufheben von Headern.
+- **Herkunftsauswahl:** Weiterleiten von Traffic je nach Anfrage-URL zu verschiedenen Herkunfts-Servern (Adobe und Nicht-Adobe).
+- **URL-Umleitung:** Umleiten von Anfragen (HTTP 301/302) zu einer anderen absoluten oder relativen URL.
 
-## CDN-Anmeldeinformationen und Authentifizierung konfigurieren
+## Konfigurieren von CDN-Anmeldeinformationen und einer Authentifizierung
 
-Im Folgenden werden die wichtigsten Funktionen im Zusammenhang mit _Konfigurieren von CDN-Anmeldeinformationen und Authentifizierung_ beschrieben:
+Im Folgenden werden die wichtigsten Funktionen im Zusammenhang mit dem _Konfigurieren von CDN-Anmeldeinformationen und der Authentifizierung_ beschrieben:
 
-- **API-Token bereinigen**: Ermöglicht die Erstellung eines eigenen Bereinigungsschlüssels zum Bereinigen einer einzelnen oder Gruppe oder aller Ressourcen aus dem Cache.
-- **Grundlegende Authentifizierung**: Ein einfacher Authentifizierungsmechanismus, wenn Sie den Zugriff auf Ihre Website oder einen Teil davon beschränken möchten. Meist im Rahmen verschiedener Überprüfungsprozesse erforderlich, bevor sie live geschaltet werden.
-- **HTTP-Header-Validierung**: Wird verwendet, wenn ein kundenverwaltetes CDN Traffic an Adobe-CDN weiterleitet. Das Adobe CDN validiert die eingehende Anfrage basierend auf dem Header-Wert `X-AEM-Edge-Key` . Ermöglicht die Erstellung eines eigenen Werts für die Kopfzeile `X-AEM-Edge-Key` .
+- **Bereinigungs-API-Token**: Ermöglicht die Erstellung eines eigenen Bereinigungsschlüssels zum Bereinigen einer einzelnen Ressource oder einer Gruppe aller Ressourcen aus dem Cache.
+- **Grundlegende Authentifizierung**: Ein einfacher Authentifizierungsmechanismus, wenn Sie den Zugriff auf Ihre Website oder einen Teil davon beschränken möchten. Meist im Rahmen verschiedener Überprüfungsprozesse erforderlich, bevor etwas live geschaltet wird.
+- **HTTP-Header-Validierung**: Wird verwendet, wenn ein kundenseitig verwaltetes CDN Traffic an das Adobe-CDN weiterleitet. Das Adobe-CDN validiert die eingehende Anfrage basierend auf dem Wert des Headers `X-AEM-Edge-Key`. Ermöglicht Ihnen die Erstellung eines eigenen Werts für den Header `X-AEM-Edge-Key`.
 
 ## CDN-Fehlerseiten
 
 Im Folgenden werden die wichtigsten Funktionen im Zusammenhang mit _CDN-Fehlerseiten_ beschrieben:
 
-- **Fehlerseiten mit Markenzeichen**: Zeigen Sie Ihren Benutzern eine Fehlerseite mit Branding im _unwahrscheinlichen Szenario_ an, wenn das Adobe-CDN nicht in der Lage ist, Ihren Herkunftsserver zu erreichen.
+- **Fehlerseiten mit Branding**: Zeigen Sie Ihren Benutzenden eine Fehlerseite mit Branding an für das _unwahrscheinliche Szenario_, dass das Adobe-CDN nicht in der Lage ist, Ihren Herkunfts-Server zu erreichen.
 
-## Implementieren
+## Vorgehensweise bei der Implementierung
 
 Die Implementierung dieser erweiterten Funktionen umfasst zwei Schritte:
 
-1. **CDN-Konfigurationsdatei aktualisieren**: Aktualisieren Sie die Datei `cdn.yaml` in Ihrem AEM-Projekt mit den erforderlichen Konfigurationen. Die Konfigurationen werden als Regeln hinzugefügt und folgen einer Regelsyntax. Die drei Hauptkomponenten der Regel: `name`, `when` und `action`.
+1. **Aktualisieren der CDN-Konfigurationsdatei**: Aktualisieren Sie die Datei `cdn.yaml` in Ihrem AEM-Projekt mit den erforderlichen Konfigurationen. Die Konfigurationen werden als Regeln hinzugefügt und folgen einer Regelsyntax. Die drei Hauptkomponenten einer Regel sind: `name`, `when` und `action`.
 
-2. **CDN-Konfigurationsdatei bereitstellen**: Stellen Sie die aktualisierte `cdn.yaml` -Datei mithilfe der Cloud Manager-Konfigurationspipeline bereit. Weitere Informationen finden Sie unter [Bereitstellen von Regeln über Cloud Manager](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager).
+2. **Bereitstellen der CDN-Konfigurationsdatei**: Stellen Sie die aktualisierte Datei `cdn.yaml` mithilfe der Cloud Manager-Konfigurations-Pipeline bereit. Weitere Informationen finden Sie unter [Bereitstellen der Regeln über Cloud Manager](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager).
 
 ### Beispiel
 
-Im folgenden Beispiel ist die WKND-Beispielsite so konfiguriert, dass die `/top3`-URL zu `/us/en/top3.html` umgeleitet wird.
+Im folgenden Beispiel ist die Beispiel-Site von WKND so konfiguriert, dass die URL `/top3` zu `/us/en/top3.html` umgeleitet wird.
 
 ```yaml
 kind: "CDN"
@@ -87,17 +87,17 @@ data:
           location: /us/en/top3.html
 ```
 
-## Verwandte Tutorials
+## Ähnliche Tutorials
 
 [Schutz von Websites mit Traffic-Filterregeln](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
 
-[CDN-Regel zur HTTP-Header-Überprüfung konfigurieren und bereitstellen](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule)
+[Konfigurieren und Bereitstellen der CDN-Regel für die HTTP-Header-Validierung](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule)
 
 [Bereinigen des CDN-Cache](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache)
 
-[Konfigurieren von CDN-Fehlerseiten](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages)
+[Konfigurieren von CDN-Fehlerseiten](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages)
 
-[Konfigurieren des Traffics am CDN](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)
+[Konfigurieren von Traffic im CDN](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)
 
-[Konfigurieren von CDN-Anmeldeinformationen und Authentifizierung](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
+[Konfigurieren von CDN-Anmeldeinformationen und der Authentifizierung](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 
