@@ -13,9 +13,9 @@ badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16418
 exl-id: 20e44be0-5490-4414-9183-bb2d2a80bdf0
 source-git-commit: faa859897b6b9fbb0acff02000611de216ddda3e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '676'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ Das Hinzufügen benutzerdefinierter Symbole zu Registerkarten kann das Anwendere
 
 * Verbesserte Benutzerfreundlichkeit: Symbole vermitteln den Zweck jeder Registerkarte schnell, sodass Benutzende leichter finden können, wonach sie suchen. Visuelle Hinweise wie Symbole helfen Benutzenden, intuitiver zu navigieren.
 
-* Visuelle Hierarchie und Fokus: Symbole ermöglichen eine deutlichere Trennung zwischen Registerkarten, wodurch die visuelle Hierarchie verbessert wird. Dies kann dazu beitragen, dass wichtige Tabs hervorgehoben werden und die Aufmerksamkeit der Benutzer effektiv lenken.
+* Visuelle Hierarchie und Fokus: Symbole ermöglichen eine deutlichere Trennung zwischen Registerkarten, wodurch die visuelle Hierarchie verbessert wird. Dies kann dazu beitragen, wichtige Registerkarten hervorzuheben und die Aufmerksamkeit der Benutzenden effektiv zu lenken.
 Indem Sie diesen Artikel befolgen, sollten Sie die Symbole wie unten gezeigt platzieren können
 
 ![Symbole](assets/icons.png)
@@ -43,7 +43,7 @@ Die rot markierten Symbole sind die neuen hinzugefügten Symbole.
 
 ## Erstellen einer Symbolzuordnung zum Speichern der Symbole
 
-Erstellen Sie die icon-map in der Datei _variable.scss . Die SCSS-Zuordnung $icon-map ist eine Sammlung von Schlüssel-Wert-Paaren, bei denen jeder Schlüssel einen Symbolnamen darstellt (z. B. Startseite, Familie usw.) und jeder Wert der Pfad zur Grafikdatei ist, die mit diesem Symbol verknüpft ist.
+Erstellen Sie die Symbolzuordnung in der Datei „_variable.scss“. Die SCSS-Zuordnung $icon-map ist eine Sammlung von Schlüssel-Wert-Paaren, bei denen jeder Schlüssel einen Symbolnamen darstellt (z. B. Startseite, Familie usw.) und jeder Wert der Pfad zur Grafikdatei ist, die mit diesem Symbol verknüpft ist.
 
 ![variable-scss](assets/variable_scss.png)
 
@@ -82,7 +82,7 @@ Fügen Sie den folgenden Code zu _mixin.scss hinzu.
 
 Das Mixin „add-icon-to-vertical-tab“ fügt ein benutzerdefiniertes Symbol neben dem Text auf einer vertikalen Registerkarte hinzu. Damit können Sie ein Bild einfach als Symbol auf Registerkarten einfügen, es neben dem Text positionieren und so gestalten, dass Konsistenz und Ausrichtung gewährleistet werden.
 
-Aufschlüsselung des Mixins: Die einzelnen Teile des Mixins funktionieren wie folgt:
+Aufschlüsselung des Mixins. Die einzelnen Teile des Mixins funktionieren wie folgt:
 
 Parameter:
 

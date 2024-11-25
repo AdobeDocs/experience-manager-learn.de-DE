@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
 source-git-commit: 6b8a8dc5cdcddfa2d8572bfd195bc67906882f67
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1335'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 99%
 + AEM-Testversionen {#aem-trials}
    + [Bilder](./aem-trials/images.md)
 + Playlists{#playlists}
-   + [AEM](./playlists/development.md)
+   + [AEM-Entwicklung](./playlists/development.md)
 + Einführung in AEM as a Cloud Service{#introduction}
    + [Was ist AEM as a Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
    + [Architektur](./introduction/architecture.md)
@@ -141,7 +141,7 @@ ht-degree: 99%
       + [Repository-Browser](./debugging/cloud-service/repository-browser.md)
       + Risiken{#risks}
          + [Durchlauf-Warnungen](./debugging/cloud-service/risks/traversals.md)
-+ AEM APIs{#aem-apis}
++ AEM-APIs{#aem-apis}
    + [Überblick](./apis/overview.md)
    + [Aufrufen von OpenAPI-basierten AEM-APIs](./apis/invoke-openapi-based-aem-apis.md)
 + Inhaltsbereitstellung{#content-delivery}

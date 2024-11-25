@@ -7,9 +7,9 @@ thumbnail: aem-assets-essentials-videos.jpg
 doc-type: Catalog
 exl-id: 6a8534fa-bc99-438b-9107-2a428e06619c
 source-git-commit: cd82b877a3b5b4d3459e3d024af9a8dd26cfc3f5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '118'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -39,7 +39,7 @@ Sehen Sie sich diese Videos an und erfahren Sie, wie Sie Ihre Assets mit Assets 
 </td>
 <td>
    <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=de">
-   <img alt="Dokumentation zu Assets Essentials" src="./assets/overview/assets-essentials-docs.png"/>
+   <img alt="Assets Essentials-Dokumentation" src="./assets/overview/assets-essentials-docs.png"/>
    </a>
    <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=de">

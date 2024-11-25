@@ -11,9 +11,9 @@ exl-id: d9618cc8-d399-4850-8714-c38991862045
 last-substantial-update: 2020-02-07T00:00:00Z
 duration: 177
 source-git-commit: 2625a9127c36ee191eb67128546864c9f6901663
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '558'
-ht-degree: 74%
+ht-degree: 100%
 
 ---
 
@@ -83,7 +83,7 @@ Sie können eines der kostenlosen Online-Tools verwenden, um aus den im vorherig
 ### Erstellen eines adaptiven Formulars
 
 Erstellen Sie ein adaptives Formular basierend auf der XSD aus dem vorherigen Schritt. Verknüpfen Sie das Formular mit der Client-Bibliothek „irs“. Diese Client-Bibliothek verfügt über den Code, um einen POST-Aufruf an das Servlet durchzuführen, der die PDF an die aufrufende Anwendung zurückgibt.
-Der folgende Code wird ausgelöst, wenn auf _PDF herunterladen_ geklickt wird
+Der folgende Code wird getriggert, wenn auf _PDF herunterladen_ geklickt wird:
 
 ```javascript
 $(document).ready(function() {
@@ -211,7 +211,7 @@ public class GenerateIInteractiveDor extends SlingAllMethodsServlet {
 }
 ```
 
-In diesem Beispielcode werden der xdp-Name und andere Parameter aus dem Anfrageobjekt extrahiert. Wenn das Formular nicht auf einer XSD basiert, wird ein neues XML-Dokument erstellt, das mit der xdp zusammengeführt werden soll. Wenn das Formular jedoch XSD-basiert ist, wird der relevante Knoten direkt aus den gesendeten Daten des adaptiven Formulars extrahiert und ein XML-Dokument wird generiert, um mit der xdp-Vorlage zusammenzuführen.
+In diesem Beispielcode werden der XDP-Name und andere Parameter aus dem Anfrageobjekt extrahiert. Wenn das Formular nicht auf einer XSD basiert, wird ein neues XML-Dokument erstellt, das mit der XDP zusammengeführt werden soll. Wenn das Formular jedoch XSD-basiert ist, wird der relevante Knoten direkt aus den gesendeten Daten des adaptiven Formulars extrahiert und ein XML-Dokument wird generiert, um mit der XDP-Vorlage zusammenzuführen.
 
 ## Bereitstellen des Beispiels auf Ihrem Server
 

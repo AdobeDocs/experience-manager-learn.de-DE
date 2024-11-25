@@ -14,9 +14,9 @@ badgeIntegration: label="Integration" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
 duration: 443
 source-git-commit: 606607b85fae012e76d57b0b35820247a6862e32
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2072'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -45,7 +45,7 @@ Nachfolgend finden Sie die Analytics-Variablen, die derzeit erfasst werden:
 ### Ziele {#objective}
 
 1. Erstellen Sie eine Report Suite oder verwenden Sie eine vorhandene.
-1. Konfigurieren Sie die [Konvertierungsvariablen (eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=de) und [Erfolgsereignisse (Ereignisse)](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event) in der Report Suite.
+1. Konfigurieren Sie die [Konvertierungsvariablen (eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=de) und [Erfolgsereignisse (Ereignisse)](https://experienceleague.adobe.com/de/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event) in der Report Suite.
 1. Erstellen Sie ein [Analysis Workspace-Projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html?lang=de), um Daten mithilfe von Tools zu analysieren, mit denen Sie schnell Einblicke erstellen, analysieren und freigeben können.
 1. Geben Sie das Analysis Workspace-Projekt für andere Team-Mitglieder frei.
 

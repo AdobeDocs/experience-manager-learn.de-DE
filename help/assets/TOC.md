@@ -8,9 +8,9 @@ version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
 source-git-commit: abc6b4df7026f702b3cdaac34fd8ac790670aaa0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '435'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 57%
 
 + [Überblick](overview.md)
 
-+ Video playlists{#video-playlists}
++ Video-Playlists{#video-playlists}
    + [Assets-Ansicht](playlists/assets-view.md)
    + [Admin-Ansicht](playlists/admin-view.md)
 
@@ -40,33 +40,33 @@ ht-degree: 57%
    + [Grundlegende Vorgänge](./authoring/basic-operations.md)
    + [Metadaten](./authoring/metadata.md)
    + [Ausgabedarstellungen](./authoring/renditions.md)
-   + [Relation und Relation aufheben](./authoring/relate-unrelate.md)
+   + [Herstellen und Aufheben von Bezug](./authoring/relate-unrelate.md)
 
 + Zusammenarbeit{#collaboration}
    + [Ansehen](./collaboration/watch.md)
-   + [Zeitleiste und Posteingang](./collaboration/timeline-and-inbox.md)
+   + [Timeline und Posteingang](./collaboration/timeline-and-inbox.md)
    + [Kommentare und Anmerkungen](./collaboration/comments-and-annotations.md)
-   + [Ein- und Auschecken](./collaboration/check-in-and-check-out.md)
+   + [Einchecken und Auschecken](./collaboration/check-in-and-check-out.md)
    + [Versionen](./collaboration/versions.md)
    + [Prüfungsaufgabe](./collaboration/review-task.md)
 
 + Suche und Erkennung{#search-and-discovery}
    + [Suchen](./search-and-discovery/search.md)
-   + [Kontextuelle Suche](./search-and-discovery/contextual-search.md)
+   + [Kontextsuche](./search-and-discovery/contextual-search.md)
    + [Integration mit Adobe Firefly](./search-and-discovery/adobe-firefly.md)
    + [Sammlungen](./search-and-discovery/collections.md)
-   + [Suchverstärkung](./search-and-discovery/search-boost.md)
+   + [Suchoptimierung](./search-and-discovery/search-boost.md)
    + [Suchen ähnlicher Bilder](./search-and-discovery/find-similar-images.md)
 
 + Erweiterte Funktionen{#advanced}
-   + [3D assets](./advanced/3d-assets.md)
-   + [Ausgabe der PDF von Anmerkungen](./advanced/customizing-annotations-pdf-output.md)
+   + [3D-Assets](./advanced/3d-assets.md)
+   + [PDF-Ausgabe von Anmerkungen](./advanced/customizing-annotations-pdf-output.md)
    + [Asset-Berichte](./advanced/asset-reports.md)
    + [Blockierte Tags](./advanced/blocked-tags.md)
-   + [Archiv extrahieren](./advanced/extract-archive.md)
+   + [Extrahieren eines Archivs](./advanced/extract-archive.md)
    + [Berechtigungen (CUGs)](./advanced/closed-user-groups.md)
    + [Metadatengesteuerte Berechtigungen](./advanced/metadata-driven-permissions.md)
-   + [Untertitel für Videos](./advanced/video-closed-captions.md)
+   + [Geschlossene Untertitel für Videos](./advanced/video-closed-captions.md)
    + [Wasserzeichen](./advanced/watermarks.md)
 
 + Erweiterte Metadatenverwaltung{#metadata}
@@ -85,7 +85,7 @@ ht-degree: 57%
    + [Konfigurieren](./content-hub/configure.md)
    + [Hinzufügen von Assets](./content-hub/add-assets.md)
    + [Herunterladen von Assets](./content-hub/download-assets.md)
-   + [Bildvarianten mit Adobe Expreß](./content-hub/image-variants.md)
+   + [Erstellen von Bildvarianten mit Adobe Express](./content-hub/image-variants.md)
    + [Sammlungen](./content-hub/collections.md)
    + [Freigabe](./content-hub/share.md)
 
@@ -97,7 +97,7 @@ ht-degree: 57%
    + Brand Portal{#brand-portal}
       + [Brand Portal](./sharing/brand-portal.md)
       + [Konfigurieren der Asset-Beschaffung](brand-portal/configure-asset-sourcing.md)
-      + [Aktivieren von Ausgabedarstellungs-Downloads](brand-portal/enable-renditions-download.md)
+      + [Aktivieren des Downloads von Ausgabedarstellungen](brand-portal/enable-renditions-download.md)
 
    + Asset-Freigabe{#assets-share}
       + [Asset Share Commons](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
@@ -105,7 +105,7 @@ ht-degree: 57%
       + [Themenerstellung mit Asset-Freigabe-Commons](./sharing/asset-share-commons-feature-video-theming.md)
       + [Asset Share Commons-Asset-Kits](./sharing/asset-share/asset-share-commons-asset-kits.md)
 
-+ Kreativ-Workflows{#creative-workflows}
++ Kreative Workflows{#creative-workflows}
    + [Integration mit Adobe Express](./creative-workflows/adobe-express.md)
    + [Adobe Express und AEM Assets](./creative-workflows/adobe-express-aem-assets.md)
    + [AEM Desktop App](./creative-workflows/aem-desktop-app.md)
@@ -118,11 +118,11 @@ ht-degree: 57%
    + [Bedienfeldübersicht](./adobe-asset-link/panel-overview.md)
    + [Dateien und Sammlungen](./adobe-asset-link/files-and-collections.md)
    + [Herunterladen und Hochladen](./adobe-asset-link/download-and-upload.md)
-   + [Checkin-Checkout](./adobe-asset-link/check-in-check-out.md)
+   + [Einchecken und Auschecken](./adobe-asset-link/check-in-check-out.md)
    + [Versionierung und Kommentare](./adobe-asset-link/file-versioning-and-comments.md)
    + [Platzieren von Kopien](./adobe-asset-link/place-copy.md)
-   + [Verknüpftes Platzieren](./adobe-asset-link/place-linked.md)
-   + [Nur für Platzierungen (FPO)](./adobe-asset-link/for-placement-only.md)
+   + [Platzieren von Links](./adobe-asset-link/place-linked.md)
+   + [Nur für Platzierungen (For placements only, FPO)](./adobe-asset-link/for-placement-only.md)
    + [Asset-Suche](./adobe-asset-link/asset-search.md)
 
 + Inhaltsautomatisierung{#content-automation}
@@ -132,17 +132,17 @@ ht-degree: 57%
 
 + Dynamic Media{#dynamic-media}
    + [Übersicht über Dynamic Media](dynamic-media/dynamic-media-overview-feature-video-use.md)
-   + [Dynamic Media Classic Desktop-Applikation](dynamic-media/dynamic-media-classic-desktop-application.md)
+   + [Dynamic Media Classic Desktop-Anwendung](dynamic-media/dynamic-media-classic-desktop-application.md)
    + Bilder {#images}
-      + [Dynamic Media-Momentaufnahme](dynamic-media/dynamic-media-snapshot.md)
+      + [Dynamic Media Snapshot](dynamic-media/dynamic-media-snapshot.md)
       + [Smartes Zuschneiden](dynamic-media/smart-crop-feature-video-use.md)
-      + [Bild-Scharfzeichnung](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
+      + [Scharfzeichnen von Bildern](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [Farbmanagement](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
    + Video {#video}
-      + [360 Video](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
+      + [360-Video](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
       + [Benutzerdefinierte Videominiaturen](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [Adaptives DASH-Streaming](dynamic-media/dynamic-media-dash.md)
-      + [Video Dynamic Media Smart Crop](dynamic-media/dynamic-media-smart-crop-video.md)
+      + [Video zum smarten Zuschneiden in Dynamic Media](dynamic-media/dynamic-media-smart-crop-video.md)
       + [Video-Player](dynamic-media/dynamic-media-video-player-feature-video-use.md)
    + Viewer {#viewers}
       + [Viewer](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
@@ -155,26 +155,26 @@ ht-degree: 57%
       + [Dynamic Media-Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
 
    + Tutorials {#tutorials}
-      + [Erstellen von Karussellsets](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
+      + [Erstellen von Karussellsets ](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [Erstellen von Bildsets](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [Erstellen von Bildvorgaben](dynamic-media/tutorials/creating-image-presets.md)
-      + [Erstellen von Bildprofilen für smartes Zuschneiden](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
+      + [Erstellen von Bildprofilen mit smartem Zuschneiden](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
       + [Erstellen von Videoprofilen](dynamic-media/tutorials/creating-video-profile-to-process-videos-in-dynamic-media.md)
       + [Verarbeitung von Assets](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
       + [Konfigurieren eines sicheren Vorschau-Servers](dynamic-media/tutorials/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
-      + [Generieren von URLs und Einbettungscodes](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
-      + [Exportauftrag auslösen](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
-      + [Ungültigmachen des CDN-Cache](dynamic-media/tutorials/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
+      + [Erstellen von URLs und Einbettungs-Codes](dynamic-media/tutorials/how-to-generate-public-url-or-embed-code-for-an-asset.md)
+      + [Auslösen eines Exportauftrags](dynamic-media/tutorials/how-to-trigger-export-job-in-dynamic-media-during-submit-job-operation-parameter.md)
+      + [Invalidierung des CDN-Cache](dynamic-media/tutorials/invalidating-the-cdn-cache-by-way-of-dynamic-media.md)
       + [Verwenden von Dynamic Media-Kernkomponenten](dynamic-media/tutorials/using-dm-components-on-site-page.md)
       + [Löschen der Dynamic Media-Konfiguration](dynamic-media/tutorials/deleting-dynamic-media-configuration.md)
       + [Herunterladen von Assets in der Dynamic Media Classic-App](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS-APIs](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
 + Workfront-Integration{#workfront}
-   + Verbesserter Connector{#enhanced-connector}
-      + [Erweiterte Grundlagen zum Connector](./workfront/enhanced-connector/basics.md)
+   + Erweiterter Connector{#enhanced-connector}
+      + [Grundlegendes zum erweiterten Connector](./workfront/enhanced-connector/basics.md)
       + [Projektordner](./workfront/enhanced-connector/project-folders.md)
-      + AEM Expertenreihe{#aem-experts-series}
+      + AEM-Expertenreihe{#aem-experts-series}
          + [Überblick](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [Setup](./workfront/enhanced-connector/aem-experts-series/setup.md)
          + [Workfront-Formulare und AEM-Metadaten](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
@@ -182,7 +182,7 @@ ht-degree: 57%
          + [Erweiterte Einstellungen und Workflows](./workfront/enhanced-connector/aem-experts-series/advanced-settings-and-workflows.md)
 
 + Übersetzung {#translation}
-   + [Source-Dateiübersetzung](translation/source-file-translation-feature-video-use.md)
+   + [Quelldateiübersetzung](translation/source-file-translation-feature-video-use.md)
 
 + Asset-Vorlagen{#asset-templates}
    + [Verständnis von Asset-Vorlagen](asset-templates/asset-templates-tutorial-understand.md)

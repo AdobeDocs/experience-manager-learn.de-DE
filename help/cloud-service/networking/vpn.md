@@ -12,9 +12,9 @@ exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
 source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1467'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -49,7 +49,7 @@ Bei der Einrichtung eines virtuellen privaten Netzwerks mit Cloud Manager-APIs i
 + Cloud Manager-Umgebungs-IDs
 + Ein **routenbasiertes** virtuelles privates Netzwerk mit Zugriff auf alle erforderlichen Verbindungsparameter.
 
-Weitere Informationen finden Sie unter [ , wie Sie Cloud Manager-API-Anmeldeinformationen einrichten, konfigurieren und abrufen](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth), um sie zum Ausführen eines Cloud Manager-API-Aufrufs zu verwenden.
+Für weitere Details [lesen Sie nach, wie Sie Cloud Manager-API-Anmeldedaten einrichten, konfigurieren und abrufen](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth), um diese für einen Cloud Manager-API-Aufruf zu verwenden.
 
 In diesem Tutorial wird `curl` verwendet, um die Cloud Manager-API-Konfigurationen vorzunehmen. Die bereitgestellten `curl`-Befehle setzen eine Linux-/macOS-Syntax voraus. Ersetzen Sie bei Verwendung der Windows-Eingabeaufforderung das Zeilenumbruchszeichen `\` durch `^`.
 

@@ -12,9 +12,9 @@ exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 891
 source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1360'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -44,7 +44,7 @@ Beim Einrichten einer dedizierten Ausgangs-IP-Adresse mit Cloud Manager-APIs ist
 + Cloud Manager-Programm-ID
 + Cloud Manager-Umgebungs-IDs
 
-Weitere Informationen finden Sie unter [ , wie Sie Cloud Manager-API-Anmeldeinformationen einrichten, konfigurieren und abrufen](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth), um sie zum Ausführen eines Cloud Manager-API-Aufrufs zu verwenden.
+Für weitere Details [lesen Sie nach, wie Sie Cloud Manager-API-Anmeldedaten einrichten, konfigurieren und abrufen](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth), um diese für einen Cloud Manager-API-Aufruf zu verwenden.
 
 In diesem Tutorial wird `curl` verwendet, um die Cloud Manager-API-Konfigurationen vorzunehmen. Die bereitgestellten `curl`-Befehle setzen eine Linux-/macOS-Syntax voraus. Ersetzen Sie bei Verwendung der Windows-Eingabeaufforderung das Zeilenumbruchszeichen `\` durch `^`.
 

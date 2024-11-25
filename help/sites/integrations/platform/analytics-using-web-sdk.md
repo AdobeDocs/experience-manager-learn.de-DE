@@ -15,9 +15,9 @@ badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title=
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2252
 source-git-commit: 774267b4f4c65c79f185fa3b33383ce9ddd136cb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1529'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 99%
 
 Erfahren Sie mehr über den **modernen Ansatz** zur Integration von Adobe Experience Manager (AEM) und Adobe Analytics mit dem Platform Web SDK. Dieses umfassende Tutorial führt Sie durch den Prozess zur nahtlosen Erfassung von [WKND](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)-Seitenansichten und -CTA-Klickdaten. Erhalten Sie wertvolle Erkenntnisse, indem Sie die erfassten Daten in Adobe Analysis Workspace visualisieren, wo Sie verschiedene Metriken und Dimensionen untersuchen können. Lernen Sie außerdem den Platform-Datensatz kennen, um Daten zu überprüfen und zu analysieren. Begleiten Sie uns auf dieser Journey, um die Leistungskraft von AEM und Adobe Analytics für datenbasierte Entscheidungen zu nutzen.
 
-## Übersicht
+## Überblick
 
 Erkenntnisse zum Benutzerverhalten zu erhalten, ist ein wichtiges Ziel für jedes Marketing-Team. Wenn sie verstehen, wie Benutzende mit ihren Inhalten interagieren, können Teams fundierte Entscheidungen treffen, Strategien optimieren und bessere Ergebnisse erzielen. Das WKND-Marketing-Team, eine fiktive Entität, hat die Implementierung von Adobe Analytics auf seiner Website ins Auge gefasst, um dieses Ziel zu erreichen. Das Hauptziel besteht darin, Daten zu zwei Schlüsselmetriken zu erfassen: Seitenansichten und Call-to-Action(CTA)-Klicks auf der Homepage.
 
@@ -92,7 +92,7 @@ Um mehr über die Einrichtung und Konzepte von Analytics zu erfahren, werden die
 
 + [Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html?lang=de)
 + [Konversionsvariablen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=de)
-+ [Erfolgsereignisse](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)
++ [Erfolgsereignisse](https://experienceleague.adobe.com/de/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)
 + [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html?lang=de)
 
 ## Aktualisierung des Datenstroms – Hinzufügen des Analytics-Dienstes
