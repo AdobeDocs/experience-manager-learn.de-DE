@@ -6,9 +6,9 @@ solution: Experience Manager as a Cloud Service, Experience Manager
 recommendations: noDisplay, noCatalog
 exl-id: 3bd7b9f5-5775-4572-8b4a-4d09619e20b9
 duration: 74
-source-git-commit: 4806312931038cc31e6bcf67f242483f62723387
-workflow-type: ht
-source-wordcount: '566'
+source-git-commit: e4a9ed215603e1a1726a5a031c1c18f93d438355
+workflow-type: tm+mt
+source-wordcount: '541'
 ht-degree: 100%
 
 ---
@@ -44,36 +44,6 @@ Erfahren Sie, wie die Suche von Drittanbietern am besten in Edge Delivery Servic
             </p>
         </td>   
         <td>
-            <a href="./season-3/cloud5-rum.md">
-                <img alt="Real User Monitoring (RUM)" src="https://video.tv.adobe.com/v/3427495?format=jpeg"/>
-            </a>
-            <div>
-                <a href="./season-3/cloud5-rum.md">
-<strong>Real User Monitoring (RUM)</strong></a>        
-<br/><em>mit James Talbot und Damian Langsweirdt, AEM Engineering</em>
-            </div>
-            <p>
-                <br/>
-Erfahren Sie, wie die Echtzeit-Benutzerüberwachung (Real User Monitoring, RUM) mit Edge Delivery Services funktioniert.
-            </p>
-        </td>   
-        <!--
-        <td>
-            <a href="./season-3/cloud5-rum-explorer.md">
-                <img alt="Real User Monitoring (RUM) Explorer" src="https://video.tv.adobe.com/v/3429772?format=jpeg"/>
-            </a>
-            <div>
-                <a href="./season-3/cloud5-rum-explorer.md">
-                <strong>Real User Monitoring (RUM) Explorer</strong></a>        
-                <br/><em>with James Talbot & Damian Langsweirdt, AEM Engineering</em>
-            </div>
-            <p>
-                <br/>
-                Learn about Real User Monitoring (RUM) Explorer and how to access it.
-            </p>
-        </td>   
-        -->
-        <td>
             <a href="./season-3/cloud5-edge-workers.md">
                 <img alt="Edge-Sekundäre" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
             </a>
@@ -87,8 +57,6 @@ Erfahren Sie, wie die Echtzeit-Benutzerüberwachung (Real User Monitoring, RUM) 
 Erkunden Sie die Bedeutung von Edge-Sekundären mit Edge Delivery Services.
             </p>
         </td>   
-    </tr>
-    <tr>
         <td>
             <a href="./season-3/cloud5-publish-events.md">
                 <img alt="Veröffentlichen von Ereignissen und Rückgängigmachen der Veröffentlichung in Edge Delivery Services" src="https://video.tv.adobe.com/v/3427681?format=jpeg"/>
@@ -103,6 +71,8 @@ Erkunden Sie die Bedeutung von Edge-Sekundären mit Edge Delivery Services.
 Erkunden Sie Ereignisse, die beim Veröffentlichen und Aufheben einer Veröffentlichung in Edge Delivery Services ausgelöst werden, sowie Anwendungsfälle und Beispiele für die Verwendung dieser Ereignisse.
             </p>
         </td>  
+    </tr>
+    <tr>
         <td>
             <a href="./season-3/cloud5-query-indexes.md">
                 <img alt="Abfrageindizes und Excel-Formeln in Edge Delivery Services" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
@@ -131,8 +101,6 @@ Erkunden Sie Ereignisse, die beim Veröffentlichen und Aufheben einer Veröffent
 Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfigurieren.
             </p>
         </td>           
-    </tr>  
-    <tr>
         <td>
             <a href="./season-3/cloud5-integrate-assets.md">
                 <img alt="Integrieren von AEM Assets in die Dokumenterstellung" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
@@ -146,7 +114,9 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
                 <br/>
                 Erfahren Sie, wie Sie AEM Assets in die Dokumenterstellung integrieren können.
             </p>
-        </td>        
+        </td>
+    </tr>
+    <tr>
         <td>
             <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">
                 <img alt="Generische KI in AEM Sites" src="https://video.tv.adobe.com/v/3428436?format=jpeg"/>
@@ -175,8 +145,6 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
                  Erfahren Sie mehr über den universellen Editor und AEM mit Edge Delivery Services.
             </p>
         </td>
-    </tr>  
-    <tr>
         <td>
             <a href="./season-3/cloud5-import-sites-to-edge-delivery-services.md">
                 <img alt="Importieren von Sites in AEM Sites mit Edge Delivery Services" 
@@ -192,6 +160,8 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
 Erfahren Sie mehr über das Importieren von Sites in AEM Sites mit Edge Delivery Services.
             </p>
         </td>
+    </tr>
+    <tr>
         <td>
             <a href="./season-3/cloud5-using-admin-api.md">
                 <img alt="Verwenden der Admin-API mit Edge Delivery Services" 
@@ -222,8 +192,6 @@ Erfahren Sie mehr über die Verwendung der Admin-API in Edge Delivery Services z
 Erfahren Sie, was eine Lighthouse-Bewertung ist, und lernen Sie Techniken kennen, um die bestmögliche Lighthouse-Bewertung zu erhalten.
             </p>
         </td>            
-    </tr> 
-    <tr>
         <td>
             <a href="./season-3/cloud5-lighthouse-score-optimization-part2.md">
                 <img alt="Optimierung der Lighthouse-Bewertung – Teil 2"
@@ -238,7 +206,9 @@ Erfahren Sie, was eine Lighthouse-Bewertung ist, und lernen Sie Techniken kennen
                 <br/>                
 Erfahren Sie mehr über Techniken zur Verbesserung der gesamten Blockierungszeit.
             </p>
-        </td>            
+        </td>   
+    </tr>
+    <tr>
         <td>
             <a href="./season-3/cloud5-lighthouse-score-optimization-part3.md">
                 <img alt="Optimierung der Lighthouse-Bewertung – Teil 3"
