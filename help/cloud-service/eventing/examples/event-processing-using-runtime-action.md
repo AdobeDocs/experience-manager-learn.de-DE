@@ -12,7 +12,7 @@ last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
 exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
-source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
+source-git-commit: 315bc1029b133f2ae857196f65e39229caaecaa1
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 100%
@@ -259,3 +259,4 @@ Die Anforderungen an die Ereignisverarbeitung unterscheiden sich von Projekt zu 
 - Die Ereignisverarbeitung kann mit der Adobe I/O Runtime-Aktion durchgeführt werden.
 - Die Runtime-Aktion kann mit Systemen wie Ihren internen Anwendungen, Lösungen von Drittanbietern und Adobe-Lösungen kommunizieren.
 - Die Runtime-Aktion dient als Einstiegspunkt für einen Geschäftsprozess, der auf eine Inhaltsänderung ausgerichtet ist.
+
