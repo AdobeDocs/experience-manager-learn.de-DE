@@ -12,16 +12,20 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 last-substantial-update: 2024-09-17T00:00:00Z
 jira: KT-16146
-source-git-commit: 285c652460ff00301d183defc56c07b3f74d8e5c
-workflow-type: ht
-source-wordcount: '52'
-ht-degree: 100%
+exl-id: 4d01f350-1bdd-49df-a99d-dce1ad378364
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+workflow-type: tm+mt
+source-wordcount: '64'
+ht-degree: 84%
 
 ---
-
 
 # Optimierung der Lighthouse-Bewertung – Teil 2
 
 Erfahren Sie mehr über Techniken zur Verbesserung der gesamten Blockierungszeit und zur Erzielung der höchstmöglichen Lighthouse-Bewertungen für Ihr Edge Delivery Services-Projekt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3434042/?learn=on)
+
+## Zusätzliche Ressourcen
+
+Sehen Sie sich verwandte Videos auf der Seite [Cloud 5 season 3](../cloud5-season-3.md) an.

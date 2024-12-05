@@ -13,10 +13,10 @@ duration: 532
 last-substantial-update: 2024-06-13T00:00:00Z
 jira: KT-15715
 exl-id: 2f029feb-7273-48e4-91a4-2ac0bf697356
-source-git-commit: ae3912140498f0c305a140305a9d191d0bc151b7
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '44'
-ht-degree: 100%
+source-wordcount: '56'
+ht-degree: 82%
 
 ---
 
@@ -25,3 +25,7 @@ ht-degree: 100%
 Dirk Rudolph von AEM Engineering wird über den universellen Editor und dessen Funktionsweise mit Edge Delivery Services und AEM befragt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429656/?learn=on)
+
+## Zusätzliche Ressourcen
+
+Sehen Sie sich verwandte Videos auf der Seite [Cloud 5 season 3](../cloud5-season-3.md) an.

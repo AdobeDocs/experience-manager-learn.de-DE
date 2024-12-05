@@ -9,10 +9,10 @@ hidefromtoc: true
 thumbnail: 341156.jpeg
 exl-id: 1d000b09-52e7-4828-a0b3-32a47131e66c
 duration: 314
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 100%
+source-wordcount: '112'
+ht-degree: 91%
 
 ---
 
@@ -30,3 +30,7 @@ Dieses Video erhält eine umfassende Erläuterung des Zugriffs auf Protokolle in
    + [Erweiterbare Adobe I/O-CLI](https://github.com/adobe/aio-cli)
    + [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
 + Tailing von Protokolldateien
+
+## Zusätzliche Ressourcen
+
+Sehen Sie sich verwandte Videos auf der Seite [Cloud 5 season 1](cloud5-season-1.md) an.

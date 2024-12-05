@@ -13,10 +13,10 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 jira: KT-15844
 exl-id: 82b607e9-8f2e-4e81-b3ee-a50a660be9a0
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
-workflow-type: ht
-source-wordcount: '68'
-ht-degree: 100%
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+workflow-type: tm+mt
+source-wordcount: '80'
+ht-degree: 87%
 
 ---
 
@@ -25,3 +25,7 @@ ht-degree: 100%
 In diesem Video werden Best Practices zum Verwenden und Anpassen des Import-Tools vorgestellt, um bestehende Sites mit Edge Delivery Services einfach in AEM Sites zu importieren. Mit Varun Mitra, Cloud Architect.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3431603/?learn=on)
+
+## Zusätzliche Ressourcen
+
+Sehen Sie sich verwandte Videos auf der Seite [Cloud 5 season 3](../cloud5-season-3.md) an.

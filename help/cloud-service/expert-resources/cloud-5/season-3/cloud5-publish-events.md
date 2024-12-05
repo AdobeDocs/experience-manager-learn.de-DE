@@ -13,10 +13,10 @@ jira: KT-15083
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 5f122412-ab70-4b54-b20b-726bc6138b2b
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
 workflow-type: tm+mt
-source-wordcount: '66'
-ht-degree: 100%
+source-wordcount: '78'
+ht-degree: 87%
 
 ---
 
@@ -25,3 +25,7 @@ ht-degree: 100%
 Erkunden Sie Ereignisse, die beim Veröffentlichen und Aufheben der Veröffentlichung in Edge Delivery Services ausgelöst werden, sowie Anwendungsfälle und Beispiele für die Verwendung dieser Ereignisse.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427681?learn=on)
+
+## Zusätzliche Ressourcen
+
+Sehen Sie sich verwandte Videos auf der Seite [Cloud 5 season 3](../cloud5-season-3.md) an.
