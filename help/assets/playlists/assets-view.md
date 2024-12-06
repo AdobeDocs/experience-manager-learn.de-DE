@@ -9,10 +9,10 @@ last-substantial-update: 2024-11-20T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
-source-git-commit: b98f5321a4545d8b9d89d8d599723acc296cf0d4
+source-git-commit: cce071c22a14669344318ad00d57a4fccc956a33
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 1%
+source-wordcount: '405'
+ht-degree: 2%
 
 ---
 
@@ -29,7 +29,7 @@ Beginnen Sie mit den grundlegenden Konfigurationen, damit AEM Assets as a Cloud 
 <!-- CARDS
 
 * https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access
-* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials
+* https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials {title=Get started with Assets view}
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -52,8 +52,8 @@ Beginnen Sie mit den grundlegenden Konfigurationen, damit AEM Assets as a Cloud 
                     <p class="is-size-6">Erfahren Sie, wie sich Benutzer mit Adobe IMS bei AEM as a Cloud Service authentifizieren und wie Adobe IMS-Benutzer, Benutzergruppen und Produktprofile verwendet werden, um den Zugriff auf AEM und die zugehörigen Funktionen zu steuern.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ansehen</span>
+</a>
             </div>
         </div>
     </div>
@@ -70,13 +70,13 @@ Beginnen Sie mit den grundlegenden Konfigurationen, damit AEM Assets as a Cloud 
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" target="_blank" rel="referrer" title="Erste Schritte mit AEM Assets Essentials">Erste Schritte mit AEM Assets Essentials</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" target="_blank" rel="referrer" title="Erste Schritte mit der Assets-Ansicht">Erste Schritte mit der Assets-Ansicht</a>
                     </p>
                     <p class="is-size-6">Erfahren Sie, wie AEM Assets Essentials die Asset-Verwaltung für Ihre Abteilung optimieren kann.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-get-started-assets-essentials" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ansehen</span>
+</a>
             </div>
         </div>
     </div>
@@ -122,8 +122,8 @@ Navigieren Sie zur Assets-Ansichtsoberfläche wie ein Profi - lernen Sie die Too
                     <p class="is-size-6">Erfahren Sie, wie AEM Assets mithilfe von Adobe Firefly und Gen AI die Inhaltsgeschwindigkeit erhöhen kann.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ansehen</span>
+</a>
             </div>
         </div>
     </div>
@@ -145,8 +145,8 @@ Navigieren Sie zur Assets-Ansichtsoberfläche wie ein Profi - lernen Sie die Too
                     <p class="is-size-6">Erfahren Sie, wie Sie mit der AEM Assets Assets-Ansichtssuche Assets schnell und einfach finden können.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-assets-view-search-use" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ansehen</span>
+</a>
             </div>
         </div>
     </div>
@@ -162,6 +162,8 @@ Ermöglichen Sie eine reibungslose Zusammenarbeit, indem Sie AEM Assets as a Clo
 <!-- CARDS
 
 * https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials
+  { title = Manage Creative Workflows Using Workfront and AEM Assets }
+  { description = Learn how Adobe Workfront and AEM Assets help your organization manage the creative workflow. }
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -179,13 +181,13 @@ Ermöglichen Sie eine reibungslose Zusammenarbeit, indem Sie AEM Assets as a Clo
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="Verwalten von kreativen Workflows mit Workfront und Assets Essentials">Verwalten von kreativen Workflows mit Workfront und Assets Essentials</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="Verwalten von kreativen Workflows mit Workfront und Assets Essentials">Verwalten von kreativen Workflows mit Workfront und AEM Assets</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Adobe Workfront und Experience Manager Assets Essentials Ihr Unternehmen bei der Verwaltung des kreativen Workflows unterstützen.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Adobe Workfront und AEM Assets Ihrem Unternehmen bei der Verwaltung des kreativen Workflows helfen.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ansehen</span>
+</a>
             </div>
         </div>
     </div>
