@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
 source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1346'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -275,11 +275,11 @@ ht-degree: 99%
       + [Erstellen von Datenelementen](./forms/form-data-analytics/data-elements.md)
       + [Erstellen von Regeln](./forms/form-data-analytics/rules.md)
       + [Testen der Lösung](./forms/form-data-analytics/test.md)
-   + Erstellen der Dropdown-Komponente &quot;Länder&quot;{#countries-drop-down}
+   + Erstellen einer Dropdown-Listen-Komponente für Länder{#countries-drop-down}
       + [Einführung](./forms/countries-drop-down/introduction.md)
       + [Erstellen einer Komponente](./forms/countries-drop-down/component.md)
-      + [Dialogfeld &quot;Erstellen&quot;](./forms/countries-drop-down/dialog.md)
-      + [Sling-Modell erstellen](./forms/countries-drop-down/slingmodel.md)
+      + [Erstellen eines Dialogfelds](./forms/countries-drop-down/dialog.md)
+      + [Erstellen eines Sling-Modells](./forms/countries-drop-down/slingmodel.md)
       + [Erstellen und Testen](./forms/countries-drop-down/build.md)
    + Erstellen von Schaltflächenvarianten{#style-system}
       + [Einführung](./forms/style-system/introduction.md)

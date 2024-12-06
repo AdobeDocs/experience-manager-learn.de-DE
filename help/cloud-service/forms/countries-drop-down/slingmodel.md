@@ -11,43 +11,43 @@ feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
 source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '384'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
 # Erstellen eines Sling-Modells für die Komponente
 
-Ein Sling-Modell in AEM ist ein Java-basiertes Framework, mit dem die Entwicklung der Back-End-Logik für Komponenten vereinfacht wird. Dadurch können Entwickler Daten aus AEM Ressourcen (JCR-Knoten) mithilfe von Anmerkungen Java-Objekten zuordnen, was eine saubere und effiziente Methode zur Verarbeitung dynamischer Daten für Komponenten bietet.
-Diese Klasse, CountriesDropDownImpl, ist eine Implementierung der LänderDropDown-Schnittstelle in einem AEM (Adobe Experience Manager) Projekt. Sie ermöglicht eine Dropdown-Komponente, in der Benutzer ein Land auf Grundlage des ausgewählten Kontinents auswählen können. Die Dropdown-Daten werden dynamisch aus einer JSON-Datei geladen, die im AEM DAM (Digital Asset Manager) gespeichert ist.
+Ein Sling-Modell in AEM ist ein Java-basiertes Framework, mit dem die Entwicklung der Backend-Logik für Komponenten vereinfacht wird. Dadurch können Entwicklerinnen und Entwickler Daten aus AEM-Ressourcen (JCR-Knoten) mithilfe von Anmerkungen Java-Objekten zuordnen, was eine saubere und effiziente Methode zur Verarbeitung dynamischer Daten für Komponenten bietet.
+Die Klasse „CountriesDropDownImpl“ ist eine Implementierung der „CountriesDropDown“-Schnittstelle in einem AEM-Projekt (Adobe Experience Manager). Sie steuert eine Dropdown-Komponente, in der Benutzende ein Land basierend auf dem ausgewählten Kontinent auswählen können. Die Dropdown-Daten werden dynamisch aus einer JSON-Datei geladen, die im AEM DAM (Digital Asset Manager) gespeichert ist.
 
 **Felder in der Klasse**
 
-* **multiSelect**: Gibt an, ob das Dropdown-Menü mehrere Auswahlen zulässt.
-Wird mit @ValueMapValue mit dem Standardwert false aus den Komponenteneigenschaften eingefügt.
-* **request**: Stellt die aktuelle HTTP-Anforderung dar. Nützlich für den Zugriff auf kontextspezifische Informationen.
-* **Kontinent**: Speichert den ausgewählten Kontinent für die Dropdown-Liste (z. B. &quot;asia&quot;, &quot;europe&quot;).
-Wird aus dem Eigenschaftsdialogfeld der Komponente eingefügt, wobei der Standardwert &quot;asia&quot;ist, wenn keiner angegeben ist.
+* **multiSelect**: Gibt an, ob im Dropdown-Menü Mehrfachauswahlen möglich sind.
+Wird mit „@ValueMapValue“ mit dem Standardwert „false“ aus den Komponenteneigenschaften eingefügt.
+* **request**: Stellt die aktuelle HTTP-Anfrage dar. Nützlich für den Zugriff auf kontextspezifische Informationen.
+* **continent**: Speichert den ausgewählten Kontinent für das Dropdown-Menü (z. B. „asia“, „europe“).
+Aus dem Eigenschaftendialog der Komponente eingefügt, mit einem Standardwert von „asia“, wenn keiner angegeben ist.
 * **resourceResolver**: Wird zum Zugreifen auf und Bearbeiten von Ressourcen im AEM-Repository verwendet.
 * **jsonData**: Ein JSONObject, das die analysierten Daten aus der JSON-Datei speichert, die dem ausgewählten Kontinent entspricht.
 
 **Methoden in der Klasse**
 
-* **getContinent()** Eine einfache Methode zur Rückgabe des Werts im Feld &quot;Kontinent&quot;.
+* **getContinent()**: Eine einfache Methode zur Rückgabe des Werts im Feld „Kontinent“.
 Protokolliert den zu Debugging-Zwecken zurückgegebenen Wert.
-* **init()** Die Lebenszyklusmethode wurde mit @PostConstruct kommentiert und ausgeführt, nachdem die Klasse erstellt wurde und Abhängigkeiten eingefügt wurden. Dynamische Erstellung des Pfads zur JSON-Datei basierend auf dem kontinentalen Wert.
+* **init()**: Eine Lebenszyklus-Methode, die mit @PostConstruct kommentiert ist und nach der Erstellung der Klasse und der Injektion von Abhängigkeiten ausgeführt wird. Sie erstellt dynamisch den Pfad zur JSON-Datei, basierend auf dem Kontinentwert.
 Ruft die JSON-Datei mithilfe von resourceResolver aus dem AEM DAM ab.
-Adaptiert die Datei an ein Asset, liest den Inhalt und analysiert sie in ein JSONO-Objekt.
+Passt die Datei an ein Asset an, liest ihren Inhalt und analysiert ihn in ein JSONObject.
 Protokolliert alle Fehler oder Warnungen während dieses Prozesses.
-* **getEnums()** Ruft alle Schlüssel (Ländercodes) aus den geparsten JSON-Daten ab.
+* **getEnums()**: Ruft alle Schlüssel (Länder-Codes) aus den geparsten JSON-Daten ab.
 Sortiert die Schlüssel alphabetisch und gibt sie als Array zurück.
-Protokolliert die Anzahl der zurückgegebenen Ländercodes.
-* **getEnumNames()** Extrahiert alle Ländernamen aus den analysierten JSON-Daten.
+Protokolliert die Anzahl der zurückgegebenen Länder-Codes.
+* **getEnumNames()**: Extrahiert alle Ländernamen aus den analysierten JSON-Daten.
 Sortiert die Namen alphabetisch und gibt sie als Array zurück.
 Protokolliert die Gesamtanzahl der Länder und jeden abgerufenen Ländernamen.
-* **isMultiSelect()** Gibt den Wert des Mehrfachauswahlfelds zurück, um anzugeben, ob die Dropdown-Liste mehrere Auswahlmöglichkeiten zulässt.
+* **isMultiSelect()**: Gibt den Wert des Feldes „multiSelect“ zurück, um anzugeben, ob das Dropdown-Menü Mehrfachauswahlen zulässt.
 
 
 

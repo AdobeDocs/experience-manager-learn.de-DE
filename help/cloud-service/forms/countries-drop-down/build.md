@@ -11,9 +11,9 @@ feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
 source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '209'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
@@ -25,18 +25,18 @@ Um alle Module zu erstellen und das Paket `all` auf einer lokalen Instanz von AE
 
 ## Testen der Komponente
 
-Gehen Sie wie folgt vor, um die Komponente Länder in Ihre AEM Forms Cloud-Ready-Instanz zu integrieren und sie zu konfigurieren:
+Gehen Sie wie folgt vor, um die Länderkomponente in Ihrer Cloud-fähigen AEM Forms-Instanz zu integrieren und sie zu konfigurieren:
 
-* Extrahieren Sie den Inhalt der ZIP-Datei [countries](assets/countries.zip) . Jede Datei sollte die Daten für einen bestimmten Kontinent enthalten.
-* Laden Sie die JSON-Dateien unter content/dam/corecomponent.This hoch. Dies ist der Speicherort, in dem der Code nach den JSON-Dateien sucht. Wenn Sie die JSON-Dateien an einem anderen Speicherort speichern möchten, müssen Sie den Java-Code in der Klasse CountriesDropDownImpl aktualisieren. Aktualisieren Sie insbesondere den Pfad in der init()-Methode, in die die JSON-Dateien geladen werden. Wenn Sie beispielsweise die JSON-Dateien in content/dam/mydata/ speichern möchten, aktualisieren Sie den Pfad wie folgt
+* Entpacken Sie den Inhalt der Zip-Datei mit den [Ländern](assets/countries.zip). Jede Datei sollte die Daten für einen bestimmten Kontinent enthalten.
+* Laden Sie die JSON-Dateien unter „content/dam/core-component“ hoch. Dies ist der Speicherort, an dem der Code nach den JSON-Dateien sucht. Wenn Sie die JSON-Dateien an einem anderen Speicherort speichern möchten, müssen Sie den Java-Code in der Klasse „CountriesDropDownImpl“ aktualisieren. Aktualisieren Sie insbesondere den Pfad in der Methode „init()“, in der die JSON-Dateien geladen werden. Wenn Sie die JSON-Dateien beispielsweise unter „content/dam/mydata/“ speichern möchten, aktualisieren Sie den Pfad wie folgt:
 
 ```java
 String jsonPath = "/content/dam/mydata/" + getContinent() + ".json"; // Update path accordingly
 ```
 
-* Bei Ihrer AEM Forms Cloud-Ready-Instanz anmelden
-* Erstellen Sie ein adaptives Formular und legen Sie die Komponente Länder im Formular ab
-* Konfigurieren Sie die Komponente Länder mithilfe des Dialogfeldeditors und legen Sie die verschiedenen Eigenschaften fest, einschließlich des Kontinents.
-  ![content](assets/select-continent.png)
-* Vorschau des Formulars anzeigen und sicherstellen, dass die Dropdown-Liste für die Länder erwartungsgemäß funktioniert
+* Melden Sie sich bei Ihrer Cloud-fähigen AEM Forms-Instanz an
+* Erstellen Sie ein adaptives Formular und legen Sie die Länderkomponente auf dem Formular ab.
+* Konfigurieren Sie die Länderkomponente mithilfe des Dialogeditors und legen Sie die verschiedenen Eigenschaften fest, einschließlich des Kontinents
+  ![Kontinent](assets/select-continent.png)
+* Zeigen Sie eine Vorschau des Formulars an und stellen Sie sicher, dass das Dropdown-Menü für die Länder wie erwartet funktioniert
 

@@ -1,6 +1,6 @@
 ---
-title: Dropdown-Listenkomponente "Länder"erstellen
-description: Erstellen Sie eine Dropdown-Listenkomponente für Länder basierend auf einer AEM Forms-Core-Dropdown-Komponente.
+title: Erstellen einer Dropdown-Listen-Komponente für Länder
+description: Erstellen Sie eine Dropdown-Listen-Komponente für Länder, basierend auf einer AEM Forms-Dropdown-Kernkomponente.
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
@@ -11,9 +11,9 @@ feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
 source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '245'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
@@ -21,27 +21,27 @@ ht-degree: 3%
 
 Das Erstellen einer neuen Kernkomponente in Adobe Experience Manager (AEM) ist ein aufregender Prozess, der mehrere Schritte umfasst, darunter das Definieren der Komponentenstruktur, das Anpassen des Dialogfelds und das Implementieren eines Sling-Modells für dynamische Funktionen.
 
-Am Ende dieses Tutorials haben Sie folgende Möglichkeiten beherrscht:
+Am Ende dieses Tutorials werden Sie Folgendes beherrschen:
 
-* Erstellen und verwenden Sie ein Sling-Modell, um Daten dynamisch abzurufen.
-* Passen Sie das cq-dialog an, indem Sie neue Felder hinzufügen und andere ausblenden.
-* Definieren Sie eine robuste Komponentenstruktur, die auf die Wiederverwendung zugeschnitten ist.
+* Erstellen und Verwenden eines Sling-Modells zum dynamischen Abrufen von Daten.
+* Anpassen des cq-dialog durch Hinzufügen neuer Felder und Ausblenden anderer.
+* Definieren einer robusten, für die Wiederverwendung geeigneten Komponentenstruktur.
 
-Die Komponente mit dem Namen &quot;Länder&quot;ermöglicht es Benutzern, einen Kontinent auszuwählen und dynamisch ein Dropdown-Menü mit Ländern auszufüllen, die dem gewählten Kontinent entsprechen. Diese wird auf der Grundlage der vordefinierten Dropdown-Listenkomponente erstellt, die für diesen speziellen Anwendungsfall erweitert wird.
+Die Komponente mit dem Namen „Länder“ ermöglicht es Benutzenden, einen Kontinent auszuwählen und ein Dropdown-Menü mit den Ländern des ausgewählten Kontinents dynamisch zu füllen. Dieses wird auf der Grundlage der vordefinierten Dropdown-Listen-Komponente erstellt, die für diesen speziellen Anwendungsfall erweitert wird.
 
 Lassen Sie uns eintauchen und diese dynamische und leistungsstarke Komponente erstellen!
 
 ## Voraussetzungen
 
-Um eine neue Kernkomponente in Adobe Experience Manager (AEM) zu erstellen, müssen mehrere Voraussetzungen erfüllt sein, damit ein reibungsloser Entwicklungsprozess gewährleistet ist. Folgendes müssen Sie vor dem Einstieg benötigen:
+Um eine neue Kernkomponente in Adobe Experience Manager (AEM) zu erstellen, müssen mehrere Voraussetzungen erfüllt sein, damit ein reibungsloser Entwicklungsprozess gewährleistet ist. Bevor Sie beginnen, benötigen Sie Folgendes:
 
-* AEM Entwicklungsumgebung: Eine funktionsfähige Cloud-fähige Installation, die lokal ausgeführt wird
+* Eine AEM-Entwicklungsumgebung: eine funktionsfähige, Cloud-fähige Installation, die lokal ausgeführt wird
 * Zugriff auf AEM Entwicklungs-Tools wie Visual Studio Code oder IntelliJ
-* MAven-Einrichtung und AEM Projekt mit neuestem Archetyp
-* Grundlegendes zu AEM Konzepten
+* Maven-Einrichtung und ein AEM-Projekt mit neuestem Archetyp
+* Grundlegende Kenntnisse der AEM-Konzepte
 * Grundlegende Tools und Einrichtung wie Git-Repository, richtige JDK-Version
 
 
 ## Nächste Schritte
 
-[Komponentenstruktur erstellen](./component.md)
+[Erstellen einer Komponentenstruktur](./component.md)

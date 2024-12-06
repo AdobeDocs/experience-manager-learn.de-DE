@@ -1,5 +1,5 @@
 ---
-title: Erstellen des Dialogfelds für die Komponente "Länder"
+title: Erstellen des Dialogfelds für die Länderkomponente
 description: Erstellen des Dialogfelds für die Komponente
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
@@ -11,24 +11,24 @@ feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
 source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '132'
-ht-degree: 6%
+ht-degree: 100%
 
 ---
 
 # Erstellen des Dialogfelds für die Länderkomponente
 
-Die Komponente &quot;Länder&quot;übernimmt die Dialogfeldstruktur der Dropdown-Komponente, führt jedoch eine neue Eigenschaft mit dem Namen &quot;Kontinent&quot;ein. Darüber hinaus wird das Dialogfeld angepasst, um bestimmte von der Dropdown-Komponente übernommene Felder auszublenden und es Autoren zu ermöglichen, den gewünschten Kontinent auszuwählen.
+Die Länderkomponente übernimmt die Dialogstruktur der Dropdown-Komponente, führt jedoch eine neue Eigenschaft namens „Kontinent“ ein. Darüber hinaus wird das Dialogfeld angepasst, um bestimmte von der Dropdown-Komponente übernommene Felder auszublenden und es gleichzeitig Autorinnen und Autoren zu ermöglichen, den gewünschten Kontinent auszuwählen.
 
 Die einfachste Möglichkeit, dieses Dialogfeld zu erstellen, ist die folgende:
 
-1. Erstellen Sie in Ihrem AEM-Projekt einen Ordner mit dem Namen _cq_dialog unter dem Komponentenordner Länder .
-2. Erstellen Sie im Ordner _cq_dialog eine Datei mit dem Namen .content.xml.
+1. Erstellen Sie in Ihrem AEM-Projekt einen Ordner mit dem Namen „_cq_dialog“ unter dem Länderkomponentenordner.
+2. Erstellen Sie im Ordner „_cq_dialog“ eine Datei mit dem Namen „.content.xml“.
 3. Fügen Sie den unten angegebenen XML-Code in diese Datei ein.
 4. Speichern Sie Ihre Änderungen und synchronisieren Sie Ihr Projekt mit AEM.
 
-Dadurch wird die Dialogfeldkonfiguration für die Komponente Länder hinzugefügt.
+Dadurch wird die Dialogfeldkonfiguration für die Länderkomponente hinzugefügt.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -216,4 +216,4 @@ Dadurch wird die Dialogfeldkonfiguration für die Komponente Länder hinzugefüg
 
 ## Nächste Schritte
 
-[Sling-Modell erstellen.](./slingmodel.md)
+[Erstellen eines Sling-Modells.](./slingmodel.md)
