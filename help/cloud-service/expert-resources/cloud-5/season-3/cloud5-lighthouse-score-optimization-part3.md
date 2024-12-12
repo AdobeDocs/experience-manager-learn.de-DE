@@ -14,9 +14,9 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 0f74a746-b16e-4b95-97f1-55e3002d7f7f
 source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '66'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -28,4 +28,4 @@ Erfahren Sie mehr über Techniken zur Verbesserung von Largest Contentful Paint 
 
 ## Zusätzliche Ressourcen
 
-Sehen Sie sich verwandte Videos auf der Seite [Cloud 5 season 3](../cloud5-season-3.md) an.
+Sehen Sie sich weitere Videos zum Thema auf der Seite [Cloud 5: Staffel 3](../cloud5-season-3.md) an.

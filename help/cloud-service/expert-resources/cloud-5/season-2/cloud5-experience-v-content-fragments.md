@@ -10,9 +10,9 @@ recommendations: noDisplay, noCatalog
 exl-id: bfd455c4-9a51-4537-ae6d-548d552e13e6
 duration: 278
 source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '71'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -30,4 +30,4 @@ Experience Fragment gegen Inhaltsfragment – eine Gegenüberstellung der Unters
 
 ## Zusätzliche Ressourcen
 
-Sehen Sie sich verwandte Videos auf der Seite [Cloud 5 season 2](../cloud5-season-2.md) an.
+Sehen Sie sich weitere Videos zum Thema auf der Seite [Cloud 5: Staffel 2](../cloud5-season-2.md) an.

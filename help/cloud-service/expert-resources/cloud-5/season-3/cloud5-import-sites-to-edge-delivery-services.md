@@ -14,9 +14,9 @@ recommendations: noDisplay, noCatalog
 jira: KT-15844
 exl-id: 82b607e9-8f2e-4e81-b3ee-a50a660be9a0
 source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '80'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -28,4 +28,4 @@ In diesem Video werden Best Practices zum Verwenden und Anpassen des Import-Tool
 
 ## Zusätzliche Ressourcen
 
-Sehen Sie sich verwandte Videos auf der Seite [Cloud 5 season 3](../cloud5-season-3.md) an.
+Sehen Sie sich weitere Videos zum Thema auf der Seite [Cloud 5: Staffel 3](../cloud5-season-3.md) an.

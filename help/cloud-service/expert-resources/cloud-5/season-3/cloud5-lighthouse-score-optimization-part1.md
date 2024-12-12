@@ -14,9 +14,9 @@ last-substantial-update: 2024-09-10T00:00:00Z
 jira: KT-16146
 exl-id: 32ffe5fd-48b6-4bc6-b79c-5b14a335ecfd
 source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '67'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -28,4 +28,4 @@ Erfahren Sie, was eine Lighthouse-Bewertung ist, und lernen Sie Techniken kennen
 
 ## Zusätzliche Ressourcen
 
-Sehen Sie sich verwandte Videos auf der Seite [Cloud 5 season 3](../cloud5-season-3.md) an.
+Sehen Sie sich weitere Videos zum Thema auf der Seite [Cloud 5: Staffel 3](../cloud5-season-3.md) an.

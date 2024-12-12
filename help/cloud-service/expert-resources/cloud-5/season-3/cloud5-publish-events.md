@@ -14,9 +14,9 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 5f122412-ab70-4b54-b20b-726bc6138b2b
 source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '78'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -28,4 +28,4 @@ Erkunden Sie Ereignisse, die beim Veröffentlichen und Aufheben der Veröffentli
 
 ## Zusätzliche Ressourcen
 
-Sehen Sie sich verwandte Videos auf der Seite [Cloud 5 season 3](../cloud5-season-3.md) an.
+Sehen Sie sich weitere Videos zum Thema auf der Seite [Cloud 5: Staffel 3](../cloud5-season-3.md) an.

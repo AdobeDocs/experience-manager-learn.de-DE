@@ -10,9 +10,9 @@ recommendations: noDisplay, noCatalog
 exl-id: 38580af1-e5ad-431a-b41d-634fb136ce64
 duration: 290
 source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '73'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -29,4 +29,4 @@ In Teil zwei der Serie, erforschen wir einige Dinge, die Sie sich ansehen könne
 
 ## Zusätzliche Ressourcen
 
-Sehen Sie sich verwandte Videos auf der Seite [Cloud 5 season 2](../cloud5-season-2.md) an.
+Sehen Sie sich weitere Videos zum Thema auf der Seite [Cloud 5: Staffel 2](../cloud5-season-2.md) an.

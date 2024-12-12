@@ -11,9 +11,9 @@ recommendations: noDisplay, noCatalog
 exl-id: 799539ba-00aa-40c0-89de-cab38b0066a3
 duration: 312
 source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '84'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -33,4 +33,4 @@ Amol Anand meldet sich mit Informationen über Integrationen mit der Adobe App-E
 
 ## Zusätzliche Ressourcen
 
-Sehen Sie sich verwandte Videos auf der Seite [Cloud 5 season 1](cloud5-season-1.md) an.
+Sehen Sie sich weitere Videos zum Thema auf der Seite [Cloud 5: Staffel 1](cloud5-season-1.md) an.

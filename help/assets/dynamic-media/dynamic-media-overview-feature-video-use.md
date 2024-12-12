@@ -10,9 +10,9 @@ doc-type: Feature Video
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
 duration: 2516
 source-git-commit: fd372c7ee387504e4316a6ca657a77fe0a0c511e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '855'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -20,13 +20,13 @@ ht-degree: 93%
 
 Diese mehrteilige Videoserie gibt Ihnen einen Überblick darüber, wie Medieninhalte mit Adobe Experience Manager Dynamic Media as a Content Serving Service verwaltet und aufgerufen werden. Mit Dynamic Media können Sie dynamische digitale Erlebnisse verwalten und veröffentlichen – eine für Experience Manager Assets einzigartige Funktion. Unser Framework und unsere Komponenten-Suite ermöglichen es Marketing-Fachkräften, interaktive Multimedia-Erlebnisse auf allen Geräten anzupassen und bereitzustellen.
 
-## Dynamic Media-Live-Demo
+## Live-Demo zu Dynamic Media
 
-[![AEM Assets Dynamic Media-Live-Demo](./assets/overview/live-demo.png)](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)
+[![Live-Demo zu AEM Assets Dynamic Media](./assets/overview/live-demo.png)](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)
 
-Erfahren Sie mehr über die Möglichkeiten von Adobe Dynamic Media mit unserer [**Live-Demo**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html), wo innovative Lösungen zum Leben erweckt werden. Erfahren Sie, wie [**Dynamische Assets**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/dynamic-assets.html) Workflows optimiert und das Content Management verbessert. Entdecken Sie außerdem [**interaktive Erlebnisse**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/interactive-experiences.html), die Zielgruppen in allen Kanälen begeistern. [Erfahren Sie, wie Dynamic Media Ihre Inhaltsstrategie transformieren kann](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)!
+Erkunden Sie die Möglichkeiten von Adobe Dynamic Media mit unserer [**Live-Demo**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html), in der innovative Lösungen zum Leben erweckt werden. Erfahren Sie, wie [**dynamische Assets**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/dynamic-assets.html) Workflows optimieren und das Content-Management verbessern. Entdecken Sie außerdem [**interaktive Erlebnisse**](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/interactive-experiences.html), die Zielgruppen auf allen Kanälen begeistern. [Erfahren Sie, wie Dynamic Media Ihre Content-Strategie transformieren kann](https://landing.adobe.com/en/na/dynamic-media/ctir-2755/live-demos.html)!
 
-## Übersicht über Dynamic Media
+## Überblick über Dynamic Media
 
 >[!VIDEO](https://video.tv.adobe.com/v/27144?quality=12&learn=on)
 
