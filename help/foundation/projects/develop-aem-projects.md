@@ -10,9 +10,9 @@ level: Beginner
 exl-id: 9bfe3142-bfc1-4886-85ea-d1c6de903484
 duration: 1417
 source-git-commit: 54a7f93637545a4467c4c587bbc3d1d0de5c64a1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '4441'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -39,7 +39,7 @@ In diesem Tutorial wird der Code erläutert, der zum Erstellen einer benutzerdef
 * [Fertiges Tutorial-Paket](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Vollständiges Code-Repository auf GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-Dieses Tutorial setzt grundlegende Kenntnisse zu [AEM-Entwicklungsmethoden](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/developing/introduction/the-basics) und eine gewisse Vertrautheit mit dem [Setup von AEM-Maven-Projekten](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html) voraus. Der gesamte erwähnte Code sollte als Referenz verwendet und nur in einer [lokalen AEM-Entwicklungsinstanz](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/deploying/deploying/deploy) bereitgestellt werden.
+Dieses Tutorial setzt grundlegende Kenntnisse zu [AEM-Entwicklungsmethoden](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/developing/introduction/the-basics) und eine gewisse Vertrautheit mit dem [Setup von AEM-Maven-Projekten](https://experienceleague.adobe.com/de/docs/experience-manager-65/developing/devtools/ht-projects-maven.html) voraus. Der gesamte erwähnte Code sollte als Referenz verwendet und nur in einer [lokalen AEM-Entwicklungsinstanz](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/deploying/deploying/deploy) bereitgestellt werden.
 
 ## Struktur einer Projektvorlage
 
