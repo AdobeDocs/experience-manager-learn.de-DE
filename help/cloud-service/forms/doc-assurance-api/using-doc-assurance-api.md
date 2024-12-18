@@ -11,7 +11,7 @@ jira: KT-15508
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 40617082-4d23-4c91-a016-2d947187052b
 source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 100%
 

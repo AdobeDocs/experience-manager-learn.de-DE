@@ -10,8 +10,9 @@ topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
-source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
-workflow-type: ht
+exl-id: ab9bd406-e25e-4e3c-9f67-ad440a8db57e
+source-git-commit: a3e29b1e02fe3664af1e5718a8a0a48b2307c7de
+workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 100%
 
@@ -39,4 +40,3 @@ String jsonPath = "/content/dam/mydata/" + getContinent() + ".json"; // Update p
 * Konfigurieren Sie die Länderkomponente mithilfe des Dialogeditors und legen Sie die verschiedenen Eigenschaften fest, einschließlich des Kontinents
   ![Kontinent](assets/select-continent.png)
 * Zeigen Sie eine Vorschau des Formulars an und stellen Sie sicher, dass das Dropdown-Menü für die Länder wie erwartet funktioniert
-

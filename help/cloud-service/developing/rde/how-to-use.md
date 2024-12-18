@@ -49,9 +49,9 @@ $ mvn clean package
 
 ## Bereitstellen von AEM-Artefakten mit dem AEM-RDE-Plug-in
 
-Stellen Sie zunächst sicher, dass das [neueste `aio` CLI-Modul installiert ist](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli).
+Stellen Sie zunächst sicher, dass Sie das [neueste `aio` CLI-Modul installiert haben](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli).
 
-Verwenden Sie dann den Befehl `aio aem:rde:install` , um verschiedene AEM Artefakte bereitzustellen. Jetzt müssen Sie
+Verwenden Sie dann den Befehl `aio aem:rde:install` , um verschiedene AEM-Artefakte bereitzustellen. Jetzt müssen Sie
 
 ### Bereitstellen von `all`- und `dispatcher`-Paketen
 
@@ -96,9 +96,9 @@ Erweitern wir nun die Komponente `Hello World Component` und stellen diese in de
    ...
    ```
 
-1. Überprüfen Sie die Änderungen am lokalen AEM SDK, indem Sie den Maven-Build durchführen oder einzelne Dateien synchronisieren.
+1. Überprüfen Sie die Änderungen auf der lokalen AEM SDK, indem Sie den Maven-Build durchführen oder einzelne Dateien synchronisieren.
 
-1. Stellen Sie die Änderungen im RDE über das Paket `ui.apps` bereit oder stellen Sie die einzelnen Dialog- und HTL-Dateien bereit:
+1. Stellen Sie die Änderungen an der RDE über `ui.apps` Paket oder durch Bereitstellen der einzelnen Dialogfeld- und HTL-Dateien bereit:
 
    ```shell
    # Using 'ui.apps' package

@@ -10,9 +10,9 @@ feature: Adaptive Forms, Integrations
 topic: Development
 jira: KT-7149
 thumbnail: 331756.jpg
-exl-id: 9dcbf06c-6dd0-4f26-bc5e-9074f4c78ac6
+exl-id: 22f3d7ef-6c55-45cb-9253-9f4645f2d820
 duration: 186
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 3061e7f134021861a721fd2c8a108fe1dab05729
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 100%

@@ -21,6 +21,6 @@ ht-degree: 59%
 
 # Erste Schritte
 
-Erfahren Sie, wie Sie auf AEM Assets zugreifen und die Hauptfunktionen der Benutzeroberfläche kennenlernen.
+Erfahren Sie, wie Sie auf AEM Assets zugreifen, und lernen Sie die Hauptfunktionen der Benutzeroberfläche kennen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336005?quality=12&learn=on)

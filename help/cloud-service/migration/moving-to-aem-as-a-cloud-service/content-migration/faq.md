@@ -91,7 +91,7 @@ Ja, dies ist möglich, erfordert jedoch eine sorgfältige Planung in Bezug auf F
    + Überprüfen Sie, ob es zulässig ist, alle Assets als Teil eines Migrationssatzes zu migrieren, und migrieren Sie dann die Sites, die diese verwenden, stufenweise.
 + Im aktuellen Status ist die Autoreninstanz aufgrund des Autoren-Aufnahmevorgangs nicht für die Inhaltserstellung verfügbar, obwohl der Inhalt auf der Veröffentlichungsebene weiterhin bereitgestellt werden kann.
    + Dies bedeutet, dass die Inhaltserstellungsaktivitäten eingefroren werden, bis die Aufnahme in der Autoreninstanz abgeschlossen ist.
-+ Benutzer werden nicht mehr migriert, obwohl es Gruppen sind.
++ Benutzende werden nicht mehr migriert, Gruppen jedoch schon.
 
 Lesen Sie vor dem Planen der Migration die Beschreibung für die Prozesse der Auffüllextraktion und Auffüllaufnahme.
 

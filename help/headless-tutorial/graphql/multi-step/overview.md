@@ -1,5 +1,5 @@
 ---
-title: Praktisches Tutorial zu den ersten Schritten mit AEM Headless – GraphQL
+title: 'Praktisches Tutorial zu den ersten Schritten mit AEM Headless – GraphQL '
 description: Ein durchgehendes Tutorial, das erläutert, wie sich Inhalte mithilfe von AEM GraphQL-APIs aufbauen und bereitstellen lassen.
 doc-type: Tutorial
 mini-toc-levels: 1

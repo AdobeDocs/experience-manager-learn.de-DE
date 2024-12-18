@@ -9,8 +9,9 @@ role: Developer
 level: Experienced
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
-workflow-type: ht
+exl-id: 9417235f-2e8d-45c7-86eb-104478a69a19
+source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 100%
 

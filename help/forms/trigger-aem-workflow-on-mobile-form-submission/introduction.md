@@ -10,8 +10,9 @@ level: Experienced
 last-substantial-update: 2024-09-17T00:00:00Z
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-source-git-commit: c6ffa8f7a398b01fc12e1e2efe4382c941900496
-workflow-type: ht
+exl-id: ce51b25f-6069-4799-9a61-98c0a672e821
+source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 100%
 

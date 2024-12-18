@@ -13,7 +13,7 @@ duration: 496
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1614'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -110,7 +110,7 @@ export const aemHeadlessClient = new AEMHeadless({
 });
 ```
 
-#### React useEffect(..) Hook
+#### React useEffect(..)-Hook
 
 Benutzerdefinierte useEffect-Hooks in React rufen den AEM Headless-Client auf, der mit dem AEM-Host im Namen der React-Komponente initialisiert wurde, die die Ansicht rendert.
 

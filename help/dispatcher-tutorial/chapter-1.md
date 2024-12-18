@@ -11,7 +11,7 @@ duration: 3855
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '17384'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -1604,7 +1604,7 @@ Mit automatischen Neuabrufen können Sie dies bis zu einem gewissen Grad umgehen
 
 Um den Neuabruf zu aktivieren, müssen Sie dem Dispatcher mitteilen, welche Ressourcen nach einer automatischen Invalidierung erneut abgerufen werden sollen. Denken Sie daran, dass jede aktivierte Seite auch automatisch alle anderen Seiten invalidiert – darunter auch Ihre beliebtesten.
 
-Neuabruf bedeutet in der Tat, dass dem Dispatcher bei jeder (!) Invalidierungsanfrage gesagt wird, dass Sie die beliebtesten Seiten erneut abrufen möchten – und was die beliebtesten Seiten sind.
+Neuabruf bedeutet, dass Sie der Dispatcher in jeder (!)-Invalidierungsanfrage mitteilen, dass Sie die beliebtesten erneut abrufen möchten - und welche die beliebtesten sind.
 
 Dies wird erreicht, indem eine Liste von Ressourcen-URLs (tatsächliche URLs – nicht nur Pfade) in den Text der Invalidierungsanfragen eingefügt wird:
 

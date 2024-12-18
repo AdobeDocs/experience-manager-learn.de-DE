@@ -1,6 +1,6 @@
 ---
 title: Personalisierung mit Adobe Target
-description: Ein Tutorial, das von Anfang bis Ende zeigt, wie mithilfe von Adobe Target personalisierte Erlebnisse erstellt und bereitgestellt werden können.
+description: 'Ein Tutorial, das von Anfang bis Ende zeigt, wie mithilfe von Adobe Target personalisierte Erlebnisse erstellt und bereitgestellt werden können. '
 feature: Experience Fragments
 topic: Personalization
 role: Developer

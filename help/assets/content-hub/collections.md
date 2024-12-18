@@ -10,13 +10,13 @@ doc-type: Feature Video
 duration: 183
 last-substantial-update: 2024-10-24T00:00:00Z
 jira: KT-15988
-source-git-commit: 3e7668067f9e001b92011a3735fc8debe829e1c9
-workflow-type: ht
+exl-id: 215f1199-5278-4a99-940c-5f395b20ae18
+source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 100%
 
 ---
-
 
 # Sammlungen im Content-Hub von AEM Assets
 

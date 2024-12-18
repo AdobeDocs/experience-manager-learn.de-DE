@@ -11,7 +11,7 @@ duration: 673
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '983'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -88,7 +88,7 @@ Funktionsweise der Adobe Asset Link-Authentifizierung im Kontext von Adobe Ident
 1. Adobe Asset Link stellt eine Verbindung zu AEM Author über HTTP(S) her, einschließlich des Bearer-Tokens, das in **Schritt 1** erhalten wurde, unter Verwendung des Schemas (HTTP/HTTPS), des Hosts und des Ports, die in den JSON-Einstellungen der Erweiterung angegeben sind.
 1. Der Bearer Authentication Handler von AEM extrahiert das Bearer-Token aus der Anfrage und validiert es mit Adobe IMS.
 1. Sobald Adobe IMS das Bearer-Token validiert hat, wird ein Benutzer in AEM erstellt (sofern noch nicht vorhanden) und die Profil- und Gruppen-/Mitgliedschaftsdaten aus Adobe IMS synchronisiert. Der AEM-Benutzer erhält ein standardmäßiges AEM-Anmelde-Token, das als Cookie in der HTTP(S)-Antwort an die Erweiterung Adobe Asset Link zurückgesendet wird.
-1. Nachfolgende Interaktionen (d. h. Durchsuchen, Suchen, Ein-/Auschecken von Assets usw.) mit der Adobe Asset Link-Erweiterung führen zu HTTP(S)-Anfragen an AEM Author, die über das AEM-Anmelde-Token mithilfe des standardmäßigen AEM Token Authentication Handlers validiert werden.
+1. Nachfolgende Interaktionen (d. h. Das Durchsuchen, Suchen, Ein-/Auschecken von Assets usw.) mit der Adobe Asset Link-Erweiterung führt zu HTTP(S)-Anfragen an die AEM-Autoreninstanz, die mithilfe des AEM-Anmelde-Tokens unter Verwendung des standardmäßigen AEM-Token-Authentifizierungs-Handlers validiert werden.
 
 >[!NOTE]
 >

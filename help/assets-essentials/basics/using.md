@@ -21,6 +21,6 @@ ht-degree: 50%
 
 # Verwenden der Assets-Ansicht
 
-Erfahren Sie, wie Sie Assets in AEM Assets filtern, suchen und herunterladen können.
+Erfahren Sie, wie Sie Assets in AEM Assets filtern, suchen und herunterladen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335861?quality=12&learn=on)

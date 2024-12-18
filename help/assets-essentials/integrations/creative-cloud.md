@@ -1,6 +1,6 @@
 ---
 title: Creative Cloud und AEM Assets
-description: Erfahren Sie, wie AEM Assets in die Adobe Creative Cloud-Bibliotheken integriert wird.
+description: Erfahren Sie, wie AEM Assets mit den Adobe Creative Cloud-Bibliotheken integriert wird.
 version: Cloud Service
 feature: Assets Essentials
 topic: Content Management
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 # Creative Cloud Libraries und AEM Assets
 
-Erfahren Sie, wie Sie AEM Assets mit Adobe Creative Cloud-Bibliotheken integrieren können, um Folgendes zu ermöglichen:
+Erfahren Sie, wie Sie AEM Assets mit Adobe Creative Cloud Libraries integrieren können, um Folgendes zu ermöglichen:
 
-+ Dateien aus AEM Assets, auf die über Creative Cloud Libraries nahtlos zugegriffen werden kann
-+ Für AEM Assets freizugebende Dateien aus Creative Cloud Libraries
++ Dateien aus AEM Assets für den nahtlosen Zugriff über Creative Cloud Libraries
++ Dateien aus Creative Cloud Libraries für AEM Assets freigeben
 
 >[!VIDEO](https://video.tv.adobe.com/v/3432401?quality=12&learn=on)

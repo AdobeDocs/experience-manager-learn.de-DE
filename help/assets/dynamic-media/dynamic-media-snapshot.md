@@ -1,6 +1,6 @@
 ---
 title: Erkunden der Dynamic Media-Bildbearbeitung mit Snapshot
-description: Dynamic Media Snapshot ist ein visuelles Demonstrationswerkzeug, das die Leistungsfähigkeit von Dynamic Media für eine optimierte und dynamische Bildbereitstellung veranschaulicht.
+description: 'Dynamic Media Snapshot ist ein visuelles Demonstrationswerkzeug, das die Leistungsfähigkeit von Dynamic Media für eine optimierte und dynamische Bildbereitstellung veranschaulicht. '
 feature: Smart Services, Image Sets, Image Profiles
 version: Cloud Service
 jira: KT-13269

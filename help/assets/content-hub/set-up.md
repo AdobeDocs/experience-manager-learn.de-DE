@@ -11,17 +11,16 @@ duration: 374
 last-substantial-update: 2024-09-10T00:00:00Z
 jira: KT-15989
 thumbnail: KT-15989.jpeg
-source-git-commit: db8e776458879018fcfdd4d30c518cafc3a2ab14
-workflow-type: ht
+exl-id: 83ca35c5-1db4-4297-afc7-67b6e7d2f085
+source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 100%
 
 ---
-
 
 # Einrichten des Content-Hubs von AEM Assets
 
 Erfahren Sie, wie Sie den Content-Hub von Experience Manager Assets mithilfe des Adobe Cloud Manager-Programms und des Assets-Add-ons einrichten. Erfahren Sie auch, wie Sie den Zugriff für Benutzende mithilfe von Produktprofilen konfigurieren.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3433513/?learn=on)
-

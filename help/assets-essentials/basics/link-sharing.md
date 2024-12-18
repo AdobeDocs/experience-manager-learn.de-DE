@@ -21,6 +21,6 @@ ht-degree: 60%
 
 # Öffentliche Link-Freigabe
 
-Erfahren Sie, wie Sie mit der Freigabe-Link von AEM Assets Assets für interne und externe Stakeholder freigeben können, während Sie gleichzeitig das Risiko minimieren, falsche Assets oder Informationen freizugeben.
+Erfahren Sie, wie Sie mit der Link-Freigabe in AEM Assets Assets für interne und externe Beteiligte freigeben können, während Sie gleichzeitig das Risiko minimieren, falsche Assets oder Informationen freizugeben.
 
 >[!VIDEO](https://video.tv.adobe.com/v/341025?quality=12&learn=on)

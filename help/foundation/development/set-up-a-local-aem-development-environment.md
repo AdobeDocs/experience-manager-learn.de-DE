@@ -12,7 +12,7 @@ doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
 duration: 4537
 source-git-commit: d731a7131b997fa272013e8d62aa2251e25c08e4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2423'
 ht-degree: 100%
 

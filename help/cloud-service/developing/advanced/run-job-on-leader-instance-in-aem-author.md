@@ -11,13 +11,13 @@ duration: 0
 last-substantial-update: 2024-10-23T00:00:00Z
 jira: KT-16399
 thumbnail: KT-16399.jpeg
-source-git-commit: 7dca86137d476418c39af62c3c7fa612635c0583
-workflow-type: ht
+exl-id: b8b88fc1-1de1-4b5e-8c65-d94fcfffc5a5
+source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 100%
 
 ---
-
 
 # Ausführen eines Auftrags auf einer führenden Instanz in AEM as a Cloud Service
 

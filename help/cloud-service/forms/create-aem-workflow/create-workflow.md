@@ -11,10 +11,10 @@ topic: Development
 jira: KT-7424
 thumbnail: 332434.pg
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-exl-id: 21139665-eef2-4582-a360-bd4b8dafaf6c
+exl-id: d4df7fd7-14e0-4729-b6fa-e99f80db5813
 duration: 641
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
-workflow-type: ht
+source-git-commit: dc5a3ed0e82e74e02fce6a472b06c6b5b6755f84
+workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 100%
 

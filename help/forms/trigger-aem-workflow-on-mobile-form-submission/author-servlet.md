@@ -9,13 +9,13 @@ role: Developer
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
 jira: kt-16215
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
-workflow-type: ht
+exl-id: e0bde892-1da0-4b72-a408-ad7b84086939
+source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 100%
 
 ---
-
 
 # Speichern übermittelter Daten
 
@@ -124,4 +124,3 @@ public class StartWorkflow extends SlingAllMethodsServlet {
 ## Nächste Schritte
 
 [Workflow-Starter und Workflow](./review-workflow.md)
-

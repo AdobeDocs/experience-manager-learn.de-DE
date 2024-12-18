@@ -37,7 +37,7 @@ Vergewissern Sie sich, dass Sie sich in der Stilschicht befinden, und wählen Si
 Sie befinden sich im Standardzustand, wenn Sie den Stileditor für die Registerkarte öffnen, wie im Screenshot unten dargestellt
 ![navigation-tab](assets/navigation-tab.png)
 
-Legen Sie die CSS-Eigenschaften für den Standardstatus wie unten gezeigt fest.
+Legen Sie die CSS-Eigenschaften für den Standardstatus wie unten gezeigt fest
 
 | Kategorie | Eigenschaftsname | Eigenschaftswert |
 |:---|:---|:---|

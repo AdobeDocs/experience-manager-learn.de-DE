@@ -10,13 +10,13 @@ topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: 1ed08d7784833b6c49139da525341af5ee587345
-workflow-type: ht
+exl-id: 4a02f494-ca0e-42d4-bbb9-6223ff8685e3
+source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+workflow-type: tm+mt
 source-wordcount: '253'
 ht-degree: 100%
 
 ---
-
 
 # Testen der Änderungen
 
@@ -50,4 +50,3 @@ Sobald das Design-Projekt erfolgreich erstellt wurde, können Sie die Änderunge
 ## Pushen der Änderungen
 
 Wenn Sie mit den Änderungen zufrieden sind, können Sie sie mithilfe der [Frontend-Pipeline](https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline) an Ihre Cloud-Instanz pushen.
-

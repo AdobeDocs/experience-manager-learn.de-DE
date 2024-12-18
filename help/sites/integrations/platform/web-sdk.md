@@ -15,7 +15,7 @@ badgeVersions: label="AEM Sites as a Cloud Service" before-title="false"
 exl-id: 47df99e6-6418-43c8-96fe-85e3c47034d6
 duration: 1303
 source-git-commit: b57fb7ce9483dbfe206de7b89e6cf8dba72429a7
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1248'
 ht-degree: 100%
 

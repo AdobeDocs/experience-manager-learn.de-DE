@@ -10,8 +10,9 @@ topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
-workflow-type: ht
+exl-id: 68030c25-1674-4a64-9f5f-c1a74a38e3ca
+source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 100%
 
@@ -93,5 +94,3 @@ Die Datei „_mixins.scss“ wird unter „src->Standort“ definiert, wie im Sc
 ## Nächste Schritte
 
 [Testen der Varianten](./build.md)
-
-
