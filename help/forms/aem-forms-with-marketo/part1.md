@@ -11,14 +11,15 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 77
-source-git-commit: 7e0d7e87d72aa1e4450649afa6a962099ceb2db4
+source-git-commit: e02c3f66787c78152700b24236c29e9796f721de
 workflow-type: tm+mt
-source-wordcount: '352'
-ht-degree: 100%
+source-wordcount: '386'
+ht-degree: 91%
 
 ---
 
 # Integrieren von AEM Forms und Marketo
+
 
 Marketo, Teil von Adobe, bietet Software für die Marketing-Automatisierung an, die sich auf kontobasiertes Marketing konzentriert, einschließlich E-Mail, mobile und soziale Medien, digitale Anzeigen, Webmanagement und Analysen.
 
@@ -27,6 +28,10 @@ Mit dem Formulardatenmodell von AEM Forms können wir jetzt AEM-Formular nahtlos
 [Weitere Informationen zum Formulardatenmodell](https://helpx.adobe.com/de/experience-manager/6-5/forms/using/data-integration.html)
 
 Marketo stellt eine REST-API bereit, die die Remote-Ausführung vieler Systemfunktionen ermöglicht. Von der Erstellung von Programmen bis hin zum Massenimport von Leads gibt es viele Optionen, die eine detaillierte Steuerung einer Marketo-Instanz ermöglichen. Mithilfe des Formulardatenmodells ist es ganz einfach, AEM Forms in Marketo zu integrieren.
+
+>[!NOTE]
+>
+>Dieses Tutorial ist speziell auf AEM Forms 6.5 zugeschnitten. Wenn Sie AEM Forms as a Cloud Service mit Adobe Marketo Engage integrieren möchten, lesen Sie bitte die [ Dokumentation zu dieser Integration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-adaptive-form-with-market-engage/integrate-form-to-marketo-engage).
 
 In diesem Tutorial werden Sie durch die Schritte geführt, die zur Integration von AEM Forms mit Marketo mithilfe des Formulardatenmodells erforderlich sind. Nach Abschluss des Tutorials verfügen Sie über ein OSGi-Bundle, das die benutzerdefinierte Authentifizierung für Marketo durchführt. Außerdem haben Sie die Datenquelle mithilfe der bereitgestellten Swagger-Datei konfiguriert.
 
