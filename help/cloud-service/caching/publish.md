@@ -1,6 +1,6 @@
 ---
 title: Zwischenspeicherung beim AEM-Publish-Service
-description: Allgemeine Übersicht über die Zwischenspeicherung beim Publish-Service von AEM as a Cloud Service
+description: 'Allgemeine Übersicht über die Zwischenspeicherung beim Publish-Service von AEM as a Cloud Service '
 version: Cloud Service
 feature: Dispatcher, Developer Tools
 topic: Performance

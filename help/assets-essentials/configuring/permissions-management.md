@@ -21,6 +21,6 @@ ht-degree: 57%
 
 # Berechtigungsverwaltung
 
-Erfahren Sie, wie Unternehmen mit der Berechtigungsverwaltung von AEM Assets den Zugriff auf Assets steuern, ihre Marke schützen und die Einhaltung von Vorschriften sicherstellen können.
+Erfahren Sie, wie Unternehmen mit der Berechtigungsverwaltung von AEM Assets den Zugriff auf Assets kontrollieren, ihre Marke schützen und die Einhaltung von Vorschriften sicherstellen können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342113?quality=12&learn=on)

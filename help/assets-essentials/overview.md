@@ -7,7 +7,7 @@ thumbnail: aem-assets-essentials-videos.jpg
 doc-type: Catalog
 exl-id: 6a8534fa-bc99-438b-9107-2a428e06619c
 source-git-commit: cd82b877a3b5b4d3459e3d024af9a8dd26cfc3f5
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 100%
 

@@ -11,13 +11,13 @@ duration: 196
 last-substantial-update: 2024-10-08T00:00:00Z
 jira: KT-15991
 thumbnail: KT-15991.jpeg
-source-git-commit: db8e776458879018fcfdd4d30c518cafc3a2ab14
-workflow-type: ht
+exl-id: 955acc4f-209f-4cbe-a9c7-9e33b5044159
+source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 100%
 
 ---
-
 
 # Erstellen von Bildvarianten mit Adobe Express im Content-Hub von AEM Assets
 

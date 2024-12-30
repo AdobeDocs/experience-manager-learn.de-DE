@@ -13,7 +13,7 @@ exl-id: ea7b852e-b40d-44ef-ba63-69081e68456e
 source-git-commit: 3a64b985bac3e13755a37064f5e55547b0eb8496
 workflow-type: tm+mt
 source-wordcount: '467'
-ht-degree: 83%
+ht-degree: 100%
 
 ---
 
@@ -60,8 +60,8 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit dem Con
                     <p class="is-size-6">Erfahren Sie, wie Sie den Content-Hub von Adobe Experience Manager Assets in AEM as a Cloud Service einrichten.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/set-up" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ansehen</span>
+</a>
             </div>
         </div>
     </div>
@@ -69,7 +69,7 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit dem Con
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/configure" title="Konfigurieren" target="_blank" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/configure" title="Konfigurieren" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3439311/?format=jpeg&nocache=1732113280958" alt="Konfigurieren"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -78,13 +78,13 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit dem Con
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/configure" target="_blank" rel="referrer" title="Konfigurieren">Konfigurieren</a>
+                        <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/configure" target="_blank" rel="referrer" title="Konfigurieren">Konfigurieren</a>
                     </p>
                     <p class="is-size-6">Erfahren Sie, wie Sie auf den verfügbaren Registerkarten navigieren und die Konfigurationsoptionen an die Anforderungen Ihres Unternehmens anpassen können.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/configure" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+                <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/configure" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ansehen</span>
+</a>
             </div>
         </div>
     </div>
@@ -106,8 +106,8 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit dem Con
                     <p class="is-size-6">Erfahren Sie, wie Sie im Content-Hub von Adobe Experience Manager Assets Assets hochladen sowie Tags anwenden und machen Sie sich mit dem Genehmigungs-Workflow vertraut.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/add-assets" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+</a>
             </div>
         </div>
     </div>
@@ -129,8 +129,8 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit dem Con
                     <p class="is-size-6">Erfahren Sie, wie Sie im Content-Hub von Adobe Experience Manager Assets navigieren, nach Assets suchen, die Assets filtern und diese herunterladen können.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/download-assets" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ansehen</span>
+</a>
             </div>
         </div>
     </div>
@@ -152,8 +152,8 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit dem Con
                     <p class="is-size-6">Erfahren Sie, wie Sie mit Adobe Express im Content-Hub von Experience Manager Assets Bildvarianten erstellen und bearbeiten.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/image-variants" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ansehen</span>
+</a>
             </div>
         </div>
     </div>
@@ -175,8 +175,8 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit dem Con
                     <p class="is-size-6">Erfahren Sie, wie Sie Sammlungen im Content-Hub von AEM Assets erstellen und verwenden können, um den Asset-Zugriff zu optimieren und die gemeinsame Nutzung von Ressourcen zu fördern, damit eine effiziente und gut organisierte Team-Arbeit in verschiedenen Projekten gewährleistet wird.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/collections" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ansehen</span>
+</a>
             </div>
         </div>
     </div>
@@ -198,8 +198,8 @@ Diese Videoreihe behandelt alles, was Sie für eine effektive Arbeit mit dem Con
                     <p class="is-size-6">Erfahren Sie, wie Sie Assets und Sammlungen für Team-Mitglieder im Content-Hub von AEM Assets freigeben und so eine effektive Team-Arbeit und die sichere Asset-Freigabe fördern.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/share" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Watch</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Ansehen</span>
+</a>
             </div>
         </div>
     </div>
@@ -235,11 +235,11 @@ Lesen Sie die Produktdokumentation zum Content-Hub, um mehr über den Content-Hu
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" target="_blank" rel="referrer" title="Content-Hub-Dokumentation">Content-Hub-Dokumentation</a>
                     </p>
-                    <p class="is-size-6">Diese Dokumentation dient als Einstiegspunkt, um mehr über die wichtigsten Vorteile von Content Hub, die Zugriffsmethoden und die Feedback zu den verfügbaren Optionen zu erfahren.</p>
+                    <p class="is-size-6">Diese Dokumentation dient als Einstiegspunkt, um mehr über die wichtigsten Vorteile von Content Hub, die Zugriffsmethoden und das Feedback zu den verfügbaren Optionen zu erfahren.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/product-overview" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+</a>
             </div>
         </div>
     </div>
@@ -258,11 +258,11 @@ Lesen Sie die Produktdokumentation zum Content-Hub, um mehr über den Content-Hu
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub" target="_blank" rel="referrer" title="Bereitstellen von Content-Hub">Bereitstellen von Content-Hub</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie Content Hub bereitstellen und aktivieren und Benutzern verschiedene Berechtigungen gewähren, einschließlich Asset-Uploads und Administratorzugriff.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie Content Hub bereitstellen und aktivieren und Benutzenden verschiedene Berechtigungen zuweisen, darunter das Hochladen von Assets und der Admin-Zugriff.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/deploy-content-hub" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+</a>
             </div>
         </div>
     </div>
@@ -284,8 +284,8 @@ Lesen Sie die Produktdokumentation zum Content-Hub, um mehr über den Content-Hu
                     <p class="is-size-6">Hier erhalten Sie Antworten auf einige der am häufigsten gestellten Fragen (FAQs) zum Content-Hub.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/frequently-asked-questions-content-hub" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+</a>
             </div>
         </div>
     </div>
