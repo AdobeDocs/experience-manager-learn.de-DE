@@ -4,8 +4,8 @@ seo-title: seo title
 description: Beschreibung des Handbuchs
 seo-description: seo-description
 source-git-commit: f6b1af99eb9eb5602234c89ea25f1a7d03d64cc0
-workflow-type: ht
-source-wordcount: '105'
+workflow-type: tm+mt
+source-wordcount: '116'
 ht-degree: 100%
 
 ---

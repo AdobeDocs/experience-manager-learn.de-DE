@@ -12,7 +12,7 @@ duration: 437
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '2035'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -208,5 +208,5 @@ Einige Richtlinien können Ihnen bei der Entscheidung helfen, wie Metadaten kate
 * Wie werden Metadaten gepflegt und aktualisiert?
 * Wer ist für welchen Teil des Prozesses verantwortlich?
 * Wie können Sie sicherstellen, dass vereinbarte Geschäftsprozesse eingehalten werden?
-* Welche Standards sollten Sie einhalten? Sollten Sie einen Branchenstandard übernehmen und ändern (Dublin Core, ISO 19115, PRISM usw.) oder sollte die Organisation eigene Standards erstellen?
+* Welche Standards sollten Sie einhalten? Sollten Sie einen Industriestandard (Dublin Core, ISO 19115, PRISM usw.) übernehmen und ändern oder sollte das Unternehmen eigene Standards erstellen?
 * Wo ist die Strategie dokumentiert? Wie können Sie sicherstellen, dass alle Stakeholder Zugriff haben? Wie können Sie sicherstellen, dass neu integrierte Mitarbeitende den vereinbarten Standard einhalten (z. B. Besuch einer Schulung, bevor sie Zugang erhalten)?

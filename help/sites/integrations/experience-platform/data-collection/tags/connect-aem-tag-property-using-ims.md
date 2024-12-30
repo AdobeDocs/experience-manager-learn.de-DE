@@ -1,6 +1,6 @@
 ---
 title: Verbinden von AEM Sites mit der Tag-Eigenschaft über IMS
-description: Erfahren Sie, wie Sie AEM Sites mit der Tag-Eigenschaft über die IMS-Konfiguration in AEM verbinden.
+description: 'Erfahren Sie, wie Sie AEM Sites mit der Tag-Eigenschaft über die IMS-Konfiguration in AEM verbinden. '
 solution: Experience Manager, Data Collection, Experience Platform
 jira: KT-5981
 thumbnail: 38555.jpg

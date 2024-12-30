@@ -10,8 +10,8 @@ solution: Experience Manager
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Cloud Manager, Experience Manager Forms, Experience Manager Screens, Experience Manager Sites
 auto-video-transcripts: true
 source-git-commit: 445e69684160350bb55171cbcecd61325dcfa643
-workflow-type: ht
-source-wordcount: '130'
+workflow-type: tm+mt
+source-wordcount: '128'
 ht-degree: 100%
 
 ---
