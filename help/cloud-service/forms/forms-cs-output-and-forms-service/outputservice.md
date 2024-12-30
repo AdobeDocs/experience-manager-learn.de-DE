@@ -9,13 +9,13 @@ feature: Output Service
 topic: Development
 jira: KT-16384
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
-workflow-type: ht
+exl-id: 8a5a4d11-12a2-462d-8684-a0c6ec0cac0e
+source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 100%
 
 ---
-
 
 # Generieren von PDF-Dokumenten mit dem Ausgabe-Service
 

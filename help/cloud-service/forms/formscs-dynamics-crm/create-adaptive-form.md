@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Anzeigen von Lead-Objekten mit einem adaptivem Formular
+title: 'Erstellen und Anzeigen von Lead-Objekten mit einem adaptivem Formular '
 description: Nutzen Sie die dynamische Integration, um Lead-Objekte in einem adaptiven Formular zu erstellen und aufzulisten.
 type: Documentation
 role: Developer

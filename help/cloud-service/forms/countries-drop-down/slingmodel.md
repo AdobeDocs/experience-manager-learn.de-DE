@@ -10,13 +10,13 @@ topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
-source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
-workflow-type: ht
+exl-id: f4a18f02-61a2-4fa3-bfbb-41bf696cd2a8
+source-git-commit: a3e29b1e02fe3664af1e5718a8a0a48b2307c7de
+workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 100%
 
 ---
-
 
 # Erstellen eines Sling-Modells für die Komponente
 

@@ -14,7 +14,7 @@ duration: 3508
 source-git-commit: e7a85e8d072d808683580a201dd10b3a847efaaa
 workflow-type: tm+mt
 source-wordcount: '1301'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -152,7 +152,7 @@ Wenn Sie Homebrew verwenden, folgen Sie den Anweisungen __Installation mit Homeb
 
 ## Installieren von Maven
 
-Apache Maven ist das Open-Source-Java-Befehlszeilenwerkzeug, mit dem AEM-Projekte erstellt werden, die aus dem AEM-Projekt-Maven-Archetyp generiert wurden. Alle gängigen IDEs ([IntelliJ IDEA](https://www.jetbrains.com/idea/), [Visual Studio Code](https://code.visualstudio.com/), [Eclipse](https://www.eclipse.org/), usw.) haben integrierte Maven-Unterstützung.
+Apache Maven ist das Open-Source-Java-Befehlszeilenwerkzeug, mit dem AEM-Projekte erstellt werden, die aus dem AEM-Projekt-Maven-Archetyp generiert wurden. Alle wichtigen IDEs ([IntelliJ IDEA](https://www.jetbrains.com/idea/), [Visual Studio Code](https://code.visualstudio.com/), [Eclipse](https://www.eclipse.org/) usw.) verfügen über integrierte Maven-Unterstützung.
 
 
 >[!BEGINTABS]

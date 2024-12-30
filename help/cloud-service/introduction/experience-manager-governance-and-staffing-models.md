@@ -7,7 +7,7 @@ duration: 257
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '1147'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 
@@ -19,9 +19,9 @@ Als führendes Unternehmen im Bereich Kundenerfahrung versteht Adobe, wie schwie
 
 Um AEM ausführen und betreiben zu können, sollten Sie die folgenden Elemente berücksichtigen:
 
-* Ausführen strategischer Meilensteine – Es wird viele strategische Meilensteine geben (Personalisierung, Integration mehrerer Kanäle usw.), die nur dann ausgeführt werden können, wenn Sie über das richtige Personalmodell verfügen.
+* Ausführen strategischer Meilensteine - Es wird viele strategische Meilensteine geben (Personalisierung, Integration mehrerer Kanäle usw.), die nur ausgeführt werden können, wenn das richtige Personalmodell vorhanden ist.
 * Erstellen einer Grundlage für die digitale Transformation – AEM wird oft als erster Schritt im Modernisierungsprozess eines Unternehmens verwendet. Durch die Schaffung einer Grundlage können Sie AEM mit voller Kapazität nutzen.
-* Benutzerinteraktion – Es muss ein Team vorhanden sein, um taktische Arbeit auszuführen (Workflows aktualisieren, Berechtigungen, CSS usw.) Je größer die Diskrepanz zwischen dem, was Benutzerinnen und Benutzer wollen, und dem, was sie bekommen, desto frustrierter können sie werden. Es ist wichtig, dass die Benutzerinnen und Benutzer am System und an der Lösung interessiert bleiben und dass Sie über das richtige Betriebsmodell verfügen.
+* Benutzerinteraktion - Es muss ein Team vorhanden sein, um taktische Arbeit auszuführen (Workflows aktualisieren, Berechtigungen, CSS usw.) Je größer die Diskrepanz zwischen dem, was Benutzer wollen, und dem, was sie bekommen, desto frustrierter können sie werden. Es ist wichtig, dass die Benutzerinnen und Benutzer am System und an der Lösung interessiert bleiben und dass Sie über das richtige Betriebsmodell verfügen.
 
 Was ist dann das richtige Modell? Was ist die richtige Matrix von Rollen, die erstellt werden sollten?
 

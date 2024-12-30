@@ -25,7 +25,7 @@ Navigieren Sie zum Knoten „/conf/AzurePortalStorage/settings/wcm/templates/sto
 |--------------------|-------------------|-------------------------------------------------------|
 | sling:resourceType | Zeichenfolge | azureportalpagecomponent/component/page/storeandfetch |
 
-Navigieren Sie zum Knoten /conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefromazure/structure/jcr:content , fügen Sie die folgende Eigenschaft hinzu und speichern Sie die Änderungen.
+Navigieren Sie zum Knoten /conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefromazure/structure/jcr:content und fügen Sie die folgende Eigenschaft hinzu und speichern Sie die Änderungen.
 
 | **Eigenschaftsname** | **Eigenschaftstyp** | **Eigenschaftswert** |
 |--------------------|-------------------|-------------------------------------------------------|

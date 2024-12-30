@@ -1,26 +1,26 @@
 ---
-title: Playlists für AEM
+title: AEM-Entwicklungs-Wiedergabelisten
 description: Eine Sammlung von Wiedergabelisten zur AEM as a Cloud Service-Entwicklung.
 role: Developer
 level: Beginner
 topic: Development
 last-substantial-update: 2024-11-01T00:00:00Z
 duration: 60
-source-git-commit: 197f8b0d664971283cd893417a43e4e85e1b4923
+exl-id: 13dcc312-ca66-4bfc-af31-516b543c61b0
+source-git-commit: cf7101b7ecef8cca4859f9a42291cf6419daa4eb
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 2%
 
 ---
 
+# AEM-Entwicklungs-Wiedergabelisten
 
-# Playlists für AEM
+Erfahren Sie mehr über wichtige Ressourcen und Anleitungen für AEM as a Cloud Service-Entwickler. Von grundlegenden Konzepten bis hin zu praktischen Anwendungsfällen bietet diese Seite die Tools und das Wissen, die Sie zur Verbesserung Ihrer AEM-Entwicklungsfähigkeiten und zur Bewältigung realer Herausforderungen benötigen.
 
-Erfahren Sie mehr über die wichtigsten Ressourcen und Handbücher für AEM as a Cloud Service-Entwickler. Von grundlegenden Konzepten bis hin zu praktischen Anwendungsfällen bietet diese Seite die Tools und das Wissen, die Sie benötigen, um Ihre AEM Entwicklungsfähigkeiten zu verbessern und echte Herausforderungen anzugehen.
+## AEM-Entwicklungsgrundlagen
 
-## AEM Entwicklungsgrundlagen
-
-Sie können die grundlegenden Fertigkeiten und Best Practices für die Entwicklung in AEM as a Cloud Service beherrschen, von der Einrichtung Ihrer Umgebung bis hin zum Verständnis der wichtigsten Frameworks und Strukturen.
+Beherrschen Sie die grundlegenden Fähigkeiten und Best Practices für die Entwicklung in AEM as a Cloud Service, vom Einrichten der Umgebung bis zum Verständnis der grundlegenden Frameworks und Strukturen.
 
 <!-- CARDS 
 
@@ -36,8 +36,8 @@ Sie können die grundlegenden Fertigkeiten und Best Practices für die Entwicklu
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-sites-understand-architects" title="AEM Sites für Architekten">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1079d7d05b9f1ad433bdec71fac7e04436e1684f1.jpeg?width=400&format=pjpg&optimize=medium" alt="AEM Sites für Architekten"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-sites-understand-architects" title="Grundlegendes zu AEM Sites für Architekten">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1079d7d05b9f1ad433bdec71fac7e04436e1684f1.jpeg?width=400&format=pjpg&optimize=medium" alt="Grundlegendes zu AEM Sites für Architekten"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -45,12 +45,12 @@ Sie können die grundlegenden Fertigkeiten und Best Practices für die Entwicklu
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-sites-understand-architects" title="AEM Sites für Architekten">AEM Sites für Architekten verstehen</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-sites-understand-architects" title="Grundlegendes zu AEM Sites für Architekten">Grundlegendes zu AEM Sites für Architekten</a>
                     </p>
                     <p class="is-size-6">Site-Leistung. Sicherheit. Governance. Skalierbarkeit. Integration.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-sites-understand-architects" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -59,8 +59,8 @@ Sie können die grundlegenden Fertigkeiten und Best Practices für die Entwicklu
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-understand-back-end-development" title="Grundlegendes zur Backend-Entwicklung">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1c88e99f3fe604dccf409b32d697b66f60431eee7.jpeg?width=400&format=pjpg&optimize=medium" alt="Grundlegendes zur Backend-Entwicklung"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-understand-back-end-development" title="Grundlagen zur Backend-Entwicklung">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1c88e99f3fe604dccf409b32d697b66f60431eee7.jpeg?width=400&format=pjpg&optimize=medium" alt="Grundlagen zur Backend-Entwicklung"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -68,12 +68,12 @@ Sie können die grundlegenden Fertigkeiten und Best Practices für die Entwicklu
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-understand-back-end-development" title="Grundlegendes zur Backend-Entwicklung">Hintergrundentwicklung verstehen</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-understand-back-end-development" title="Grundlagen zur Backend-Entwicklung">Wissenswertes zur Backend-Entwicklung</a>
                     </p>
-                    <p class="is-size-6">Einblick in die Back-End-Entwicklung mit Adobe Experience Manager. Erfahren Sie mehr über Best Practices für die Arbeit mit Java-APIs, Sling-Modellen und Unit-Tests.</p>
+                    <p class="is-size-6">Ein tiefer Einblick in die Backend-Entwicklung mit Adobe Experience Manager. Erfahren Sie mehr über Best Practices für die Arbeit mit Java-APIs, Sling-Modellen und Modultests.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-understand-back-end-development" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -82,8 +82,8 @@ Sie können die grundlegenden Fertigkeiten und Best Practices für die Entwicklu
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-setup-local-development" title="Lokale Entwicklungsumgebung einrichten">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1b3dccbab8c493251ffdc7f23e39fde9fded0f255.jpeg?width=400&format=pjpg&optimize=medium" alt="Lokale Entwicklungsumgebung einrichten"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-setup-local-development" title="Einrichten einer lokalen Entwicklungsumgebung">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1b3dccbab8c493251ffdc7f23e39fde9fded0f255.jpeg?width=400&format=pjpg&optimize=medium" alt="Einrichten einer lokalen Entwicklungsumgebung"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -91,12 +91,12 @@ Sie können die grundlegenden Fertigkeiten und Best Practices für die Entwicklu
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-setup-local-development" title="Lokale Entwicklungsumgebung einrichten">Einrichten einer lokalen Entwicklungsumgebung</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-setup-local-development" title="Einrichten einer lokalen Entwicklungsumgebung">Einrichten einer lokalen Entwicklungsumgebung</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie Ihre lokale Entwicklungsumgebung einrichten, Grundkonzepte, Tools und Best Practices für die Entwicklung mit AEM as a Cloud Service verstehen.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie Ihre lokale Entwicklungsumgebung einrichten, lernen Sie die wichtigsten Konzepte, Tools und Best Practices für die Entwicklung mit AEM as a Cloud Service kennen.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-setup-local-development" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -105,8 +105,8 @@ Sie können die grundlegenden Fertigkeiten und Best Practices für die Entwicklu
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-develop-rde" title="Rapid Development Environment (RDE)">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_102cf0aa068306e35b13599b5ccef446e89a78890.jpeg?width=400&format=pjpg&optimize=medium" alt="Rapid Development Environment (RDE)"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-develop-rde" title="Schnelle Entwicklungsumgebung (RDE)">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_102cf0aa068306e35b13599b5ccef446e89a78890.jpeg?width=400&format=pjpg&optimize=medium" alt="Schnelle Entwicklungsumgebung (RDE)"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -114,12 +114,12 @@ Sie können die grundlegenden Fertigkeiten und Best Practices für die Entwicklu
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-develop-rde" title="Rapid Development Environment (RDE)">Rapid Development Environment (RDE)</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-develop-rde" title="Schnelle Entwicklungsumgebung (RDE)">Schnelle Entwicklungsumgebung (RDE)</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie mehr über die Rapid Development Environment (RDE) für die beschleunigte Entwicklung. Erfahren Sie, wie Sie RDE einrichten und in der Cloud Service-Umgebung bereitstellen.</p>
+                    <p class="is-size-6">Erfahren Sie mehr über die schnelle Entwicklungsumgebung (RDE) für eine beschleunigte Entwicklung. Sehen Sie sich an, wie Sie eine RDE einrichten und sie in der Cloud Service-Umgebung bereitstellen.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-develop-rde" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -128,9 +128,9 @@ Sie können die grundlegenden Fertigkeiten und Best Practices für die Entwicklu
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
 
-## Bereitstellen von Code in AEM as a Cloud Service
+## Bereitstellen von Code für AEM as a Cloud Service
 
-Erfahren Sie, wie Sie mit Cloud Manager Code AEM as a Cloud Service bereitstellen.
+Erfahren Sie, wie Sie Cloud Manager verwenden, um Code-AEM as a Cloud Service bereitzustellen.
 
 <!-- CARDS 
 
@@ -153,12 +153,12 @@ Erfahren Sie, wie Sie mit Cloud Manager Code AEM as a Cloud Service bereitstelle
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-cloud-manager-understand" title="Überblick darüber, was Adobe Cloud Manager ist">Grundlegendes zu Adobe Cloud Manager</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-cloud-manager-understand" title="Überblick darüber, was Adobe Cloud Manager ist">Grundlagen zum Adobe von Cloud Manager</a>
                     </p>
-                    <p class="is-size-6">In dieser dreiteiligen Reihe, die sich auf Konzepte erstreckt, die in der ersten Reihe von Skill Builder behandelt werden, werden wir eine Reihe von Konzepten behandeln, die zusätzliche Details zur Gewährleistung eines durchgängigen Implementierungserfolgs für Ihr Unternehmen enthalten.</p>
+                    <p class="is-size-6">In dieser dreiteiligen Reihe, die sich mit den Konzepten beschäftigt, die im ersten Satz von Skill Builders behandelt werden, behandeln wir eine Vielzahl von Konzepten, die zusätzliche Details zur Sicherstellung des End-to-End-Bereitstellungserfolgs für Ihr Unternehmen beinhalten.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-cloud-manager-understand" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -178,10 +178,10 @@ Erfahren Sie, wie Sie mit Cloud Manager Code AEM as a Cloud Service bereitstelle
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-cloud-manager-deploy-ci-cd" title="Bereitstellen von Code mit CI/CD-Pipelines in Adobe Cloud Manager">Bereitstellen von Code mit CI/CD-Pipelines in Adobe Cloud Manager</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie mit Adobe Cloud Manager eine CI/CD-Pipeline einrichten und sich mit den Funktionen und Konzepten von Cloud Manager vertraut machen.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie eine CI/CD-Pipeline mithilfe von Adobe Cloud Manager einrichten und machen Sie sich außerdem mit den Funktionen und Konzepten von Cloud Manager vertraut.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-cloud-manager-deploy-ci-cd" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -190,9 +190,9 @@ Erfahren Sie, wie Sie mit Cloud Manager Code AEM as a Cloud Service bereitstelle
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
 
-## Praktische Anwendungsfälle AEM Entwicklung
+## Praktische Anwendungsfälle für die AEM-Entwicklung
 
-Machen Sie sich mit praktischen Anwendungsfällen für die Entwicklung und schrittweisen Anleitungen vertraut, die Sie bei der Bewältigung gemeinsamer Aufgaben und der Erstellung leistungsstarker benutzerdefinierter Lösungen in AEM as a Cloud Service unterstützen.
+Machen Sie sich mit praktischen Anwendungsfällen für die Entwicklung und den schrittweisen Anleitungen vertraut, die Sie bei der Bewältigung gängiger Aufgaben und der Erstellung leistungsstarker benutzerdefinierter Lösungen in AEM as a Cloud Service unterstützen.
 
 <!-- CARDS 
 
@@ -219,12 +219,12 @@ Machen Sie sich mit praktischen Anwendungsfällen für die Entwicklung und schri
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-develop-osgi-services" title="Erfahren Sie, wie Sie OSGi-Dienste entwickeln">Erfahren Sie, wie Sie OSGi-Dienste entwickeln</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-develop-osgi-services" title="Erfahren Sie, wie Sie OSGi-Dienste entwickeln">Erfahren Sie, wie Sie OSGi-Services entwickeln</a>
                     </p>
-                    <p class="is-size-6">Verstehen Sie die OSGi-Dienstentwicklung in AEM mit dieser Wiedergabeliste. Lernen Sie die Kernkonzepte kennen, richten Sie sie ein und erstellen Sie schrittweise effiziente, modulare Dienste.</p>
+                    <p class="is-size-6">Diese Wiedergabeliste hilft Ihnen, die Entwicklung des OSGi-Service in AEM zu verstehen. Lernen Sie die grundlegenden Konzepte kennen, richten Sie effiziente, modulare Services ein und erstellen Sie sie Schritt für Schritt.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-develop-osgi-services" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -233,8 +233,8 @@ Machen Sie sich mit praktischen Anwendungsfällen für die Entwicklung und schri
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-prevent-dos-and-doss-attacks" title="DoS- und DoS-Angriffe verhindern">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1df5af469c6cea05d7a157601e839fc8262fb224d.jpeg?width=400&format=pjpg&optimize=medium" alt="DoS- und DoS-Angriffe verhindern"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-prevent-dos-and-doss-attacks" title="DoS- und DDoS-Angriffe verhindern">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1df5af469c6cea05d7a157601e839fc8262fb224d.jpeg?width=400&format=pjpg&optimize=medium" alt="DoS- und DDoS-Angriffe verhindern"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -242,12 +242,12 @@ Machen Sie sich mit praktischen Anwendungsfällen für die Entwicklung und schri
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-prevent-dos-and-doss-attacks" title="DoS- und DoS-Angriffe verhindern">DoS- und DoS-Angriffe verhindern</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-prevent-dos-and-doss-attacks" title="DoS- und DDoS-Angriffe verhindern">Verhindern von DoS- und DDoS-Angriffen</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie mit Open-Source-Tools und nativen AEMCS-Funktionen DoS-/DoS-Angriffe auf Ihre AEM gehostete Website verhindern können.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie DoS/DDoS-Angriffe auf Ihre AEM-gehostete Website mithilfe von Open-Source-Tools und nativen AEMCS-Funktionen verhindern können.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-prevent-dos-and-doss-attacks" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -256,8 +256,8 @@ Machen Sie sich mit praktischen Anwendungsfällen für die Entwicklung und schri
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-invoke-protected-apis" title="Geschützte HTTP-APIs aus AEM as a Cloud Service aufrufen">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_124127b06939a25e2f759269c33a6f3d6e1e73f83.jpeg?width=400&format=pjpg&optimize=medium" alt="Geschützte HTTP-APIs aus AEM as a Cloud Service aufrufen"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-invoke-protected-apis" title="Aufrufen von geschützten HTTP-APIs von AEM as a Cloud Service">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_124127b06939a25e2f759269c33a6f3d6e1e73f83.jpeg?width=400&format=pjpg&optimize=medium" alt="Aufrufen von geschützten HTTP-APIs von AEM as a Cloud Service"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -265,12 +265,12 @@ Machen Sie sich mit praktischen Anwendungsfällen für die Entwicklung und schri
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-invoke-protected-apis" title="Geschützte HTTP-APIs aus AEM as a Cloud Service aufrufen"> Geschützte HTTP-APIs aus AEM as a Cloud Service aufrufen</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-invoke-protected-apis" title="Aufrufen von geschützten HTTP-APIs von AEM as a Cloud Service">Rufen Sie geschützte HTTP-APIs von AEM as a Cloud Service aus auf</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie HTTPS-Aufrufe von AEM zu Web-APIs durchführen, die selbstsignierte Zertifikate und gegenseitige Authentifizierung verwenden.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie HTTPS-Aufrufe von AEM an Web-APIs durchführen, die selbstsignierte Zertifikate und gegenseitige Authentifizierung verwenden.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-invoke-protected-apis" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -279,8 +279,8 @@ Machen Sie sich mit praktischen Anwendungsfällen für die Entwicklung und schri
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-authenticate-with-tokens" title="Authentifizierung bei AEM as a Cloud Service über eine externe Anwendung mithilfe von Token">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_19739c42fb856d41a44a824965e52a0e9d1d0ff93.jpeg?width=400&format=pjpg&optimize=medium" alt="Authentifizierung bei AEM as a Cloud Service über eine externe Anwendung mithilfe von Token"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-authenticate-with-tokens" title="Authentifizierung bei AEM as a Cloud Service von einer externen Anwendung mithilfe von Token">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_19739c42fb856d41a44a824965e52a0e9d1d0ff93.jpeg?width=400&format=pjpg&optimize=medium" alt="Authentifizierung bei AEM as a Cloud Service von einer externen Anwendung mithilfe von Token"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -288,12 +288,12 @@ Machen Sie sich mit praktischen Anwendungsfällen für die Entwicklung und schri
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-authenticate-with-tokens" title="Authentifizierung bei AEM as a Cloud Service über eine externe Anwendung mithilfe von Token">Authentifizieren Sie sich über Token von einer externen Anwendung in AEM as a Cloud Service</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-authenticate-with-tokens" title="Authentifizierung bei AEM as a Cloud Service von einer externen Anwendung mithilfe von Token">Authentifizierung bei AEM as a Cloud Service von einer externen Anwendung mithilfe von Token</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie eine externe Anwendung Zugriffstoken und Dienstanmeldeinformationen für die lokale Entwicklung verwenden kann, um sich über HTTP programmatisch bei AEM as a Cloud Service zu authentifizieren.</p>
+                    <p class="is-size-6">Erfahren Sie, wie eine externe Anwendung lokale Entwicklungszugriffstoken und Service-Anmeldeinformationen verwenden kann, um sich programmgesteuert über HTTP bei AEM as a Cloud Service zu authentifizieren.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-authenticate-with-tokens" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -302,8 +302,8 @@ Machen Sie sich mit praktischen Anwendungsfällen für die Entwicklung und schri
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-build-event-driven-applications" title="Erstellen ereignisorientierter Anwendungen mit AEM Eventing">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1f862db6d4010a36681241b51b791e14d0bceed88.jpeg?width=400&format=pjpg&optimize=medium" alt="Erstellen ereignisorientierter Anwendungen mit AEM Eventing"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-build-event-driven-applications" title="Erstellen ereignisgesteuerter Anwendungen mit AEM Eventing">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1f862db6d4010a36681241b51b791e14d0bceed88.jpeg?width=400&format=pjpg&optimize=medium" alt="Erstellen ereignisgesteuerter Anwendungen mit AEM Eventing"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -311,12 +311,12 @@ Machen Sie sich mit praktischen Anwendungsfällen für die Entwicklung und schri
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-build-event-driven-applications" title="Erstellen ereignisorientierter Anwendungen mit AEM Eventing">Erstellen ereignisorientierter Anwendungen mit AEM Eventing</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-build-event-driven-applications" title="Erstellen ereignisgesteuerter Anwendungen mit AEM Eventing">Erstellen ereignisgesteuerter Anwendungen mit AEM-Eventing</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie mehr über AEM Eventing und den Aufbau einer ereignisgesteuerten Architektur mit AEM Ereignissen.</p>
+                    <p class="is-size-6">Erfahren Sie mehr über AEM-Ereignisse und das Erstellen einer ereignisgesteuerten Architektur mithilfe von AEM-Ereignissen.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-build-event-driven-applications" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -336,10 +336,10 @@ Machen Sie sich mit praktischen Anwendungsfällen für die Entwicklung und schri
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-forms-create-adaptive-form" title="Erstellen eines adaptiven Formulars">Erstellen eines adaptiven Formulars</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie ein benutzerdefiniertes adaptives Formular mit einer Vorlage und verschiedenen AEM Forms-Komponenten erstellen.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie ein benutzerdefiniertes adaptives Formular mithilfe einer Vorlage und verschiedener AEM Forms-Komponenten erstellen.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-forms-create-adaptive-form" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -348,9 +348,9 @@ Machen Sie sich mit praktischen Anwendungsfällen für die Entwicklung und schri
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
 
-## AEM mit anderen Apps integrieren
+## Integrieren von AEM mit anderen Apps
 
-Erfahren Sie, wie Sie AEM as a Cloud Service mit externen Systemen, Tools und APIs integrieren können, um die Funktionalität zu erweitern und Workflows in Ihrem digitalen Ökosystem zu optimieren.
+Erfahren Sie, wie Sie AEM as a Cloud Service mit externen Systemen, Tools und APIs integrieren können, um die Funktionalität zu erweitern und Workflows in Ihrem gesamten digitalen Ökosystem zu optimieren.
 
 <!-- CARDS
 
@@ -377,10 +377,10 @@ Erfahren Sie, wie Sie AEM as a Cloud Service mit externen Systemen, Tools und AP
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-forms-integrate-adobe-sign" title="Integrieren von AEM Forms und Adobe Sign">Integrieren von AEM Forms und Adobe Sign</a>
                     </p>
-                    <p class="is-size-6">Durch die Zusammenarbeit von Adobe Sign und AEM Forms können Sie komplexe Transaktionen automatisieren und sichere, rechtliche E-Signaturen als Teil eines nahtlosen digitalen Erlebnisses einschließen.</p>
+                    <p class="is-size-6">Durch die Zusammenarbeit können Sie mit Adobe Sign und AEM Forms komplexe Transaktionen automatisieren und sichere, rechtliche E-Signaturen als Teil eines nahtlosen digitalen Erlebnisses einbinden.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-forms-integrate-adobe-sign" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -400,10 +400,10 @@ Erfahren Sie, wie Sie AEM as a Cloud Service mit externen Systemen, Tools und AP
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-forms-integrate-salesforce" title="Integrieren von AEM Forms mit Salesforce">Integrieren von AEM Forms mit Salesforce</a>
                     </p>
-                    <p class="is-size-6">Erstellen von Lead-, Konto- oder anderen Salesforce-Objekten mithilfe der Forms CS- und Salesforce-Integration</p>
+                    <p class="is-size-6">Erstellen von Lead-, Konto- oder anderen Salesforce-Objekten mithilfe der Integration von Forms CS und Salesforce</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-forms-integrate-salesforce" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -412,8 +412,8 @@ Erfahren Sie, wie Sie AEM as a Cloud Service mit externen Systemen, Tools und AP
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-forms-store-data-in-azure-storage" title="AEM Forms-Daten in Azure Storage speichern">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_15978409f33cd3858199e6fa80be80839bf9a2515.jpeg?width=400&format=pjpg&optimize=medium" alt="AEM Forms-Daten in Azure Storage speichern"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-forms-store-data-in-azure-storage" title="Speichern von AEM Forms-Daten im Azure-Speicher">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_15978409f33cd3858199e6fa80be80839bf9a2515.jpeg?width=400&format=pjpg&optimize=medium" alt="Speichern von AEM Forms-Daten im Azure-Speicher"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -421,12 +421,12 @@ Erfahren Sie, wie Sie AEM as a Cloud Service mit externen Systemen, Tools und AP
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-forms-store-data-in-azure-storage" title="AEM Forms-Daten in Azure Storage speichern">Speichern von AEM Forms-Daten in Azure Storage</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-forms-store-data-in-azure-storage" title="Speichern von AEM Forms-Daten im Azure-Speicher">Speichern von AEM Forms-Daten im Azure-Speicher</a>
                     </p>
                     <p class="is-size-6">Integrieren von Forms CS mit Azure Storage mithilfe des Formulardatenmodells</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-forms-store-data-in-azure-storage" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
@@ -435,8 +435,8 @@ Erfahren Sie, wie Sie AEM as a Cloud Service mit externen Systemen, Tools und AP
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/commerce-integrate-aem-sites" title="Hinzufügen von Commerce-Funktionen zu Ihrer AEM Site">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1da2787808c6705e2c29bbbd9799563771a8bb314.jpeg?width=400&format=pjpg&optimize=medium" alt="Hinzufügen von Commerce-Funktionen zu Ihrer AEM Site"
+                    <a href="https://experienceleague.adobe.com/en/playlists/commerce-integrate-aem-sites" title="Hinzufügen von Commerce-Funktionen zu Ihrer AEM-Site">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1da2787808c6705e2c29bbbd9799563771a8bb314.jpeg?width=400&format=pjpg&optimize=medium" alt="Hinzufügen von Commerce-Funktionen zu Ihrer AEM-Site"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -444,12 +444,12 @@ Erfahren Sie, wie Sie AEM as a Cloud Service mit externen Systemen, Tools und AP
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/commerce-integrate-aem-sites" title="Hinzufügen von Commerce-Funktionen zu Ihrer AEM Site">Hinzufügen von Commerce-Funktionen zu Ihrer AEM Site</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/commerce-integrate-aem-sites" title="Hinzufügen von Commerce-Funktionen zu Ihrer AEM-Site">Hinzufügen von Commerce-Funktionen zu Ihrer AEM-Site</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie ein Commerce-Backend mit Adobe Experience Manager Sites integrieren.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie ein Commerce-Backend in Adobe Experience Manager Sites integrieren.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/commerce-integrate-aem-sites" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkout der Wiedergabeliste</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Checkt die Wiedergabeliste aus</span>
                 </a>
             </div>
         </div>
