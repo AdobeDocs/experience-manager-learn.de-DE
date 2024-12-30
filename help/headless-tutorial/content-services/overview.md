@@ -11,7 +11,7 @@ duration: 311
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '327'
-ht-degree: 100%
+ht-degree: 89%
 
 ---
 
@@ -27,7 +27,7 @@ In diesem Tutorial wird beschrieben, wie Inhalte mithilfe von AEM erstellt und b
 
 >[!VIDEO](https://video.tv.adobe.com/v/28315?quality=12&learn=on)
 
-In diesem Tutorial wird gezeigt, wie mithilfe von AEM Content Services die Nutzung einer Mobile App optimiert werden kann, über die Veranstaltungsinformationen (Musik, Performance, Kunst usw.) vom WKND-Team bereitgestellt werden.
+In diesem Tutorial erfahren Sie, wie AEM Content Services verwendet werden kann, um das Erlebnis einer Mobile App zu verbessern, in der Ereignisinformationen (Musik, Performance, Kunst usw.) angezeigt werden, die vom WKND-Team kuratiert sind.
 
 In diesem Tutorial werden die folgenden Themen behandelt:
 

@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen bearbeitbarer Komponenten zu dynamischen Routen von Remote-SPA
+title: 'Hinzufügen bearbeitbarer Komponenten zu dynamischen Routen von Remote-SPA '
 description: Erfahren Sie, wie Sie in einem Remote-SPA bearbeitbare Komponenten zu dynamischen Routen hinzufügen.
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing

@@ -11,13 +11,13 @@ duration: 0
 last-substantial-update: 2024-09-13T00:00:00Z
 jira: KT-16207
 thumbnail: KT-16207.jpeg
-source-git-commit: 33415305f6aa183373eaef4bb4978a59325c8a32
-workflow-type: ht
+exl-id: 0cec14b3-4be5-4666-a36c-968ea2fc634f
+source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+workflow-type: tm+mt
 source-wordcount: '1569'
 ht-degree: 100%
 
 ---
-
 
 # Installieren von Drittanbieter-Artefakten – nicht im öffentlichen Maven-Repository verfügbar
 
@@ -258,7 +258,7 @@ Verwenden Sie den `MyHelloWorldService` aus der Datei `my-example-jar` im AEM-WK
   }    
   ```
 
-- Fügen Sie in der`pom.xml`-Stammdatei des AEM-WKND-Projekts die Datei `my-example-jar` als Abhängigkeit hinzu.
+- Fügen Sie in der`pom.xml`-Stammdatei des AEM-WKND-Projekts das `my-example-jar` als Abhängigkeit hinzu.
 
   ```xml
   ...

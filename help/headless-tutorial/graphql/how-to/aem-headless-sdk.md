@@ -13,7 +13,7 @@ duration: 200
 source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
 workflow-type: tm+mt
 source-wordcount: '432'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 
@@ -88,7 +88,7 @@ let { data, errors } = executePersistedQuery('wknd-shared/adventures-by-slug', {
 
 +++
 
-+++ React useEffect(..) Beispiel
++++ Beispiel für React useEffect(..)
 
 Installieren Sie [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) durch Ausführen des Befehls `npm install` aus dem Stammverzeichnis Ihres React-Projekts.
 
@@ -96,7 +96,7 @@ Installieren Sie [@adobe/aem-headless-client-js](https://github.com/adobe/aem-he
 $ npm i @adobe/aem-headless-client-js
 ```
 
-In diesem Code-Beispiel wird gezeigt, wie der Hook [React useEffect(..) ](https://reactjs.org/docs/hooks-effect.html) verwendet wird, um einen asynchronen Aufruf an AEM GraphQL auszuführen.
+Dieses Codebeispiel zeigt, wie der Hook [React useEffect(..)) verwendet wird](https://reactjs.org/docs/hooks-effect.html) um einen asynchronen Aufruf an AEM GraphQL auszuführen.
 
 Die Verwendung von `useEffect` für den asynchronen GraphQL-Aufruf in React ist aus folgenden Gründen nützlich:
 
