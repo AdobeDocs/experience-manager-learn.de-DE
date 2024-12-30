@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren adaptiver Formulare zum Auslösen eines AEM-Workflows
+title: 'Konfigurieren adaptiver Formulare zum Auslösen eines AEM-Workflows '
 description: Verstehen der verschiedenen Optionen beim Konfigurieren adaptiver Formulare zum Auslösen eines AEM-Workflows
 feature: Workflow
 doc-type: technical video
