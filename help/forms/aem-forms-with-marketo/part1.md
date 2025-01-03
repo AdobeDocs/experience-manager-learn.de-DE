@@ -12,9 +12,9 @@ badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 77
 source-git-commit: e02c3f66787c78152700b24236c29e9796f721de
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '386'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ Marketo stellt eine REST-API bereit, die die Remote-Ausführung vieler Systemfun
 
 >[!NOTE]
 >
->Dieses Tutorial ist speziell auf AEM Forms 6.5 zugeschnitten. Wenn Sie AEM Forms as a Cloud Service mit Adobe Marketo Engage integrieren möchten, lesen Sie bitte die [ Dokumentation zu dieser Integration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-adaptive-form-with-market-engage/integrate-form-to-marketo-engage).
+>Dieses Tutorial ist speziell auf AEM Forms 6.5 zugeschnitten. Wenn Sie AEM Forms as a Cloud Service mit Adobe Marketo Engage integrieren möchten, lesen Sie bitte die [entsprechende Dokumentation für diese Integration](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-adaptive-form-with-market-engage/integrate-form-to-marketo-engage).
 
 In diesem Tutorial werden Sie durch die Schritte geführt, die zur Integration von AEM Forms mit Marketo mithilfe des Formulardatenmodells erforderlich sind. Nach Abschluss des Tutorials verfügen Sie über ein OSGi-Bundle, das die benutzerdefinierte Authentifizierung für Marketo durchführt. Außerdem haben Sie die Datenquelle mithilfe der bereitgestellten Swagger-Datei konfiguriert.
 
