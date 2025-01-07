@@ -1,6 +1,6 @@
 ---
 title: Aufrufen von OpenAPI-basierten AEM-APIs
-description: Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs für AEM as a Cloud Service aus benutzerdefinierten Programmen konfigurieren und aufrufen.
+description: Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs für AEM as a Cloud Service aus benutzerdefinierten Programmen mithilfe der OAuth-Server-zu-Server-Authentifizierung konfigurieren und aufrufen.
 version: Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -12,16 +12,18 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
-source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
+source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1800'
 ht-degree: 1%
 
 ---
 
-# Aufrufen von OpenAPI-basierten AEM-APIs{#invoke-openapi-based-aem-apis}
+# Aufrufen von OpenAPI-basierten AEM-APIs für die Server-zu-Server-Authentifizierung{#invoke-openapi-based-aem-apis}
 
-Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs für AEM as a Cloud Service aus benutzerdefinierten Programmen konfigurieren und aufrufen.
+Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service aus benutzerdefinierten Programmen mithilfe der OAuth _Server-zu-Server_-Authentifizierung konfigurieren und aufrufen.
+
+Die OAuth Server-zu-Server-Authentifizierung ist ideal für Backend-Services, die API-Zugriff ohne Benutzerinteraktion benötigen. Sie verwendet den Grant-Typ OAuth _.0_ client_credentials) für die Authentifizierung des Client-Programms.
 
 >[!AVAILABILITY]
 >
@@ -30,7 +32,7 @@ Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs für AEM as a Cloud Service aus 
 In diesem Tutorial erfahren Sie, wie Sie:
 
 - Aktivieren des Zugriffs auf OpenAPI-basierte AEM-APIs für Ihre AEM as a Cloud Service-Umgebung.
-- Erstellen und konfigurieren Sie ein Adobe Developer Console (ADC)-Projekt für den Zugriff auf AEM-APIs mithilfe der OAuth-Server-zu-Server-Authentifizierung.
+- Erstellen und konfigurieren Sie ein Adobe Developer Console (ADC)-Projekt für den Zugriff auf AEM-APIs mithilfe _OAuth-Server-zu-Server-Authentifizierung_.
 - Entwickeln Sie eine NodeJS-Beispielanwendung, die die Assets-Autoren-API aufruft, um Metadaten für ein bestimmtes Asset abzurufen.
 
 Bevor Sie beginnen, lesen Sie zunächst den Abschnitt [Zugriff auf Adobe-APIs und zugehörige Konzepte](overview.md#accessing-adobe-apis-and-related-concepts).

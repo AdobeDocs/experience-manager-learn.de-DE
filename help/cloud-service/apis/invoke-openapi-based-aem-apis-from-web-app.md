@@ -1,0 +1,684 @@
+---
+title: Aufrufen von OpenAPI-basierten AEM-APIs aus einer Web-Anwendung
+description: Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service über eine benutzerdefinierte Web-App mithilfe der OAuth-Web-App-Authentifizierung aufrufen.
+version: Cloud Service
+feature: Developing
+topic: Development, Architecture, Content Management
+role: Architect, Developer, Leader
+level: Intermediate
+doc-type: Tutorial
+jira: KT-16718
+thumbnail: KT-16718.jpeg
+last-substantial-update: 2024-12-17T00:00:00Z
+duration: 0
+source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
+workflow-type: tm+mt
+source-wordcount: '2399'
+ht-degree: 1%
+
+---
+
+
+# Aufrufen von OpenAPI-basierten AEM-APIs mit Benutzerauthentifizierung aus einer Web-Anwendung{#invoke-openapi-based-aem-apis-from-web-app}
+
+Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service mithilfe der benutzerbasierten Authentifizierung von einer externen Web-Anwendung mit OAuth-Web-App-Authentifizierung aufrufen.
+
+Die OAuth-Web-App-Authentifizierung ist ideal für Web-Anwendungen mit Frontend- und _Backend_-Komponenten, die (**eines Benutzers auf AEM-APIs zugreifen)**. Sie verwendet den Gewährungstyp OAuth 2.0 _authorization_code_, um ein Zugriffs-Token für den Benutzer abzurufen, der auf die AEM-APIs zugreift. Weitere Informationen finden Sie unter [Unterschied zwischen OAuth Server-zu-Server- und OAuth Web App/Single Page App-Anmeldeinformationen](./overview.md#difference-between-oauth-server-to-server-and-oauth-web-appsingle-page-app-credentials)
+
+>[!AVAILABILITY]
+>
+>OpenAPI-basierte AEM-APIs sind als Teil eines Early-Access-Programms verfügbar. Wenn Sie daran interessiert sind, darauf zuzugreifen, empfehlen wir Ihnen, eine E-Mail an [aem-apis@adobe.com](mailto:aem-apis@adobe.com) mit einer Beschreibung Ihres Anwendungsfalls zu senden.
+
+## Beispiel-Web-App: WKND-PIM - Übersicht und funktionaler Ablauf
+
+Bevor Sie beginnen, machen wir uns mit der Beispiel-Web-App, dem WKND-Produktinformations-Management (PIM) und seinem funktionalen Ablauf vertraut.
+
+Die WKND-PIM-App ist eine Beispiel-Web-Anwendung, die zur Verwaltung von Produktattributen und deren in AEM as a Cloud Service gespeicherten Asset-Metadaten entwickelt wurde. Dieses Beispiel zeigt, wie Web-Apps nahtlos in Adobe-APIs integriert werden können, um effiziente, benutzerorientierte Workflows bereitzustellen.
+
+Das Adobe Developer Console-Projekt (ADC) ist so konfiguriert, dass es über die OAuth-Web-App-Authentifizierung auf die Assets-Autoren-API zugreift. Sie stellt der WKND-PIM _Web-App die erforderlichen_ client_id und _client_secret_ bereit, um den _authorization_code_-Gewährungsfluss zu initiieren.
+
+Die folgende Abbildung zeigt den Funktionsablauf der WKND-PIM-Web-App _Abrufen benutzerspezifischer Zugriffstoken für die Interaktion mit der Assets Author-API_.
+
+![WKND-PIM-Web-App-Fluss](./assets/web-app/wknd-pim-web-app-flow.png)
+
+1. Die Web-App initiiert den Prozess, indem sie den Benutzer zur Authentifizierung zum Adobe Identity Management System (IMS) weiterleitet.
+1. Zusammen mit der Umleitung übergibt die Web-App die erforderlichen _client_id_ und _redirect_uri_ an IMS.
+1. IMS authentifiziert den Benutzer und sendet ihn mit einem _authorization_code_ zurück an den angegebenen _redirect_uri_.
+1. Die Web-App tauscht den _authorization_code_ mit IMS gegen ein benutzerspezifisches Zugriffstoken aus und verwendet hierfür _client_id_ und _client_secret_.
+1. Nach erfolgreicher Validierung gibt IMS das benutzerspezifische (Zugriffs _Token)_.
+1. Die Web-App verwendet auf sichere Weise das _Zugriffstoken_, um mit der Assets-Autoren-API zu interagieren, sodass Benutzende Produkt-Asset-Metadaten abrufen oder aktualisieren können.
+
+Die WKND-PIM-Web-App wird mit [Node.js](https://nodejs.org/de) und [Express](https://expressjs.com/) entwickelt. Express fungiert als Server, der private Geheimnisse und benutzerspezifische Zugriffstoken sicher verwaltet.
+
+Andere Web-Stacks (Java, Python, .NET-basiert usw.) können mithilfe der in diesem Tutorial beschriebenen Ansätze zum Erstellen von Web-Apps verwendet werden, die mit den Adobe-APIs integriert werden können.
+
+## Lerninhalt{#what-you-learn}
+
+In diesem Tutorial erfahren Sie, wie Sie:
+
+- Erstellen und konfigurieren Sie ein Adobe Developer Console (ADC)-Projekt für den Zugriff auf OpenAPI-basierte AEM-APIs mithilfe der _OAuth Web App_-Authentifizierung.
+- Implementieren des OAuth-Web-App-Authentifizierungsflusses in einer benutzerdefinierten Web-App.
+   - IMS-Benutzerauthentifizierung und App-Autorisierung.
+   - Benutzerspezifischer Abruf von Zugriffstoken.
+   - Zugreifen auf OpenAPI-basierte AEM-APIs mithilfe des benutzerspezifischen Zugriffstokens.
+
+Bevor Sie beginnen, lesen Sie zunächst den Abschnitt [Zugriff auf Adobe-APIs und zugehörige Konzepte](overview.md#accessing-adobe-apis-and-related-concepts).
+
+## Verwendung dieses Tutorials{#how-to-use-this-tutorial}
+
+Sie können entweder den Abschnitt [Überprüfen von Code-Snippets für Web](#review-web-app-key-code-snippets)Apps , um den Authentifizierungsfluss der OAuth-Web-App und die in der WKND-PIM-Web-App verwendeten Code-Snippets für API-Aufrufe zu verstehen. Oder gehen Sie direkt zum Abschnitt [Einrichten und Ausführen der Web-](#setup-run-web-app)), um die WKND-PIM-Web-Anwendung auf Ihrem lokalen Computer einzurichten und auszuführen.
+
+## Überprüfen von Web-App-Schlüssel-Code-Snippets{#review-web-app-key-code-snippets}
+
+Sehen wir uns die in der WKND-PIM-Web-App verwendeten Schlüssel-Code-Snippets an, um den Authentifizierungsfluss und die API-Aufrufe der OAuth-Web-App zu verstehen.
+
+### Herunterladen des WKND-PIM-Web-App-Codes
+
+1. Laden Sie die ZIP[Datei „WKND-PIM web app](./assets/web-app/wknd-pim-demo-web-app.zip) herunter und extrahieren Sie sie.
+
+1. Navigieren Sie zum extrahierten Ordner und öffnen Sie die `.env.example` in Ihrem bevorzugten Code-Editor. Überprüfen Sie die erforderlichen Konfigurationsparameter.
+
+   ```plaintext
+   ########################################################################
+   # Adobe IMS, Adobe Developer Console (ADC), and AEM Assets Information
+   ########################################################################
+   # Adobe IMS OAuth endpoints
+   ADOBE_IMS_AUTHORIZATION_ENDPOINT=https://ims-na1.adobelogin.com/ims/authorize/v2
+   ADOBE_IMS_TOKEN_ENDPOINT=https://ims-na1.adobelogin.com/ims/token/v3
+   ADOBE_IMS_USERINFO_ENDPOINT=https://ims-na1.adobelogin.com/ims/userinfo/v2
+   
+   # Adobe Developer Console (ADC) Project's OAuth Web App credential
+   ADC_CLIENT_ID=<ADC Project OAuth Server-to-Server credential ClientID>
+   ADC_CLIENT_SECRET=<ADC Project OAuth Server-to-Server credential Client Secret>
+   ADC_SCOPES=<ADC Project OAuth Server-to-Server credential Scopes>
+   
+   # AEM Assets Information
+   AEM_ASSET_HOSTNAME=<AEM Assets Hostname, e.g., https://author-p63947-e1502138.adobeaemcloud.com/>
+   AEM_ASSET_IDS=< AEM Asset IDs Comma Seperated, e.g., urn:aaid:aem:9f20a8ce-934a-4560-8720-250e529fbb17,urn:aaid:aem:6e0123cd-8a67-4d1f-b721-1b3da987d831>
+   
+   ################################################
+   # Web App Information
+   ################################################
+   # The port number on which this server (web app) will run
+   PORT = 3000
+   
+   # The URL to which the user will be redirected after the OAuth flow is complete
+   REDIRECT_URI=https://localhost:3001/callback
+   
+   # The Express (express-session) uses this secret to encrypt and verify the authenticity of that cookie
+   EXPRESS_SESSION_SECRET=<Express Session Secret>
+   ```
+
+   Sie müssen die Platzhalter durch die tatsächlichen Werte aus dem Adobe Developer Console (ADC)-Projekt und der AEM as a Cloud Service Assets-Instanz ersetzen.
+
+### IMS-Benutzerauthentifizierung und App-Autorisierung
+
+Überprüfen wir den Code, der die IMS-Benutzerauthentifizierung und die App-Autorisierung initiiert. Um die Asset-Metadaten zu überprüfen oder zu aktualisieren, müssen sich die Benutzenden beim Adobe IMS authentifizieren und die WKND-PIM-Web-App autorisieren, in ihrem Namen auf die Assets Author-API zuzugreifen.
+
+Beim ersten Anmeldeversuch muss der Benutzer seine Zustimmung geben, damit die WKND-PIM-Web-App in seinem Namen auf die Assets Author-API zugreifen kann.
+
+![Erste Anmeldung und Einverständnis](./assets/web-app/first-login-consent.png)
+
+1. Die `routes/update-product-attributes.js`-Datei überprüft, ob die [Express-Sitzung](https://www.npmjs.com/package/express-session) des Benutzers über ein Zugriffs-Token verfügt. Andernfalls wird der Benutzer zur `/auth` weitergeleitet.
+
+   ```javascript
+   ...
+   // The update-product-attributes route, shows the product attributes form with tabs
+   router.get("/update-product-attributes", async (req, res) => {
+     // Check if the user is authenticated, if not redirect to the auth route
+     if (!req.session.accessToken) {
+         return res.redirect("/auth");
+     }
+     ...
+   });
+   ```
+
+1. In `routes/adobe-ims-auth.js` Datei initiiert die `/auth` Route den IMS-Benutzerauthentifizierungs- und App-Autorisierungsfluss. Beachten Sie die _client_id_, _redirect_uri_ und _response_type_ Parameter, die an den Adobe IMS-Autorisierungsendpunkt übergeben werden.
+
+   ```javascript
+   ...
+   // Route to initiate Adobe IMS user authentication
+   router.get("/auth", (req, res) => {
+     // Redirect user to Adobe IMS authorization endpoint
+     try {
+         // Constructing the authorization URL
+         const params = new URLSearchParams({
+         client_id: adobeADCConfig.clientId,
+         redirect_uri: redirectUri,
+         response_type: "code",
+         });
+   
+         // Append scopes if defined in configuration
+         if (adobeADCConfig?.scopes) params.append("scope", adobeADCConfig.scopes);
+   
+         // Redirect user to Adobe IMS authorization URL
+         const imsAuthorizationUrl = `${
+         adobeIMSConfig.authorizationEndpoint
+         }?${params.toString()}`;
+   
+         res.redirect(imsAuthorizationUrl);
+     } catch (error) {
+         console.error("Error initiating Adobe IMS authentication:", error);
+         res.status(500).send("Unable to initiate authentication");
+     }
+   });
+   ...
+   ```
+
+Wenn die Benutzerin bzw. der Benutzer nicht über Adobe IMS authentifiziert wird, wird die Adobe ID-Anmeldeseite angezeigt, auf der die Benutzerin bzw. der Benutzer zur Authentifizierung aufgefordert wird.
+
+Wenn der Benutzer bereits authentifiziert ist, wird er mit einem _authorization_code_ zurück zum angegebenen _redirect_uri_ der WKND-PIM-Web-App umgeleitet.
+
+### Abrufen von Zugriffstoken
+
+Die WKND-PIM-Web-App tauscht den _authorization_code_ sicher mit dem Adobe IMS gegen ein benutzerspezifisches Zugriffstoken aus, indem sie die _client_id_ und _client_secret_ der OAuth-Web-App-Anmeldeinformationen des ADC-Projekts verwendet.
+
+In der `routes/adobe-ims-auth.js`-Datei tauscht die `/callback` Route den _authorization_code_ mit dem Adobe IMS gegen ein benutzerspezifisches Zugriffstoken aus.
+
+```javascript
+...
+// Callback route to exchange authorization code for access token
+router.get("/callback", async (req, res) => {
+  // Extracting authorization code from the query parameters
+  const authorizationCode = req.query.code;
+
+  if (!authorizationCode) {
+    return res.status(400).send("Missing authorization code");
+  }
+
+  // Exchange authorization code for access token
+  try {
+    // Fetch access token from Adobe IMS token endpoint
+    const response = await fetch(adobeIMSConfig.tokenEndpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Authorization: `Basic ${Buffer.from(
+          `${adobeADCConfig.clientId}:${adobeADCConfig.clientSecret}`
+        ).toString("base64")}`,
+      },
+      body: new URLSearchParams({
+        code: authorizationCode,
+        grant_type: "authorization_code",
+      }),
+    });
+
+    if (!response.ok) {
+      console.error("Failed to fetch access token:", response.statusText);
+      return res.status(500).send("Failed to fetch access token");
+    }
+
+    const data = await response.json();
+
+    if (!data.access_token) {
+      console.error("Access token missing in the response:", data);
+      return res.status(500).send("Invalid response from token endpoint");
+    }
+
+    // For debugging purposes
+    console.log("Access token:", data.access_token);
+
+    // Store the access token in the session
+    req.session.accessToken = data.access_token;
+
+    // Redirect user to update product attributes
+    res.redirect("/update-product-attributes");
+  } catch (error) {
+    console.error("Error exchanging authorization code:", error);
+    res.status(500).send("Error during token exchange");
+  }
+});
+```
+
+Das Zugriffstoken wird in der [Express-Sitzung](https://www.npmjs.com/package/express-session) für nachfolgende Anfragen an die Assets-Autoren-API gespeichert.
+
+### Zugriff auf OpenAPI-basierte AEM-APIs mithilfe des Zugriffstokens
+
+Die WKND-PIM-Web-App verwendet auf sichere Weise das benutzerspezifische Zugriffstoken, um mit der Assets-Autoren-API zu interagieren, sodass Benutzende Produkt-Asset-Metadaten abrufen oder aktualisieren können.
+
+In der `routes/invoke-aem-apis.js`-Datei rufen die `/api/getAEMAssetMetadata`- und `/api/updateAEMAssetMetadata`-Routen die Assets Author-APIs mithilfe des Zugriffstokens auf.
+
+```javascript
+...
+// API Route: Get AEM Asset Metadata
+router.get("/api/getAEMAssetMetadata", async (req, res) => {
+  const assetId = req.query.assetId;
+  const bucketName = getBucketName(aemAssetsConfig.hostname);
+
+  if (!assetId || !bucketName) {
+    return res.status(400).json({ error: "Missing AEM Information" });
+  }
+
+  // Get the access token from the session
+  const accessToken = req.session.accessToken;
+
+  if (!accessToken) {
+    return res.status(401).json({ error: "Not Authenticated with Adobe IMS" });
+  }
+
+  try {
+    const assetMetadata = await invokeGetAssetMetadataAPI(
+      bucketName,
+      assetId,
+      accessToken
+    );
+
+    const filteredMetadata = getFilteredMetadata(JSON.parse(assetMetadata));
+    res.status(200).json(filteredMetadata);
+  } catch (error) {
+    console.error("Error getting asset metadata:", error.message);
+    res.status(500).json({ error: `Internal Server Error: ${error.message}` });
+  }
+});
+
+// Helper function to invoke the AEM API to get asset metadata
+async function invokeGetAssetMetadataAPI(bucketName, assetId, accessToken) {
+  const apiUrl = `https://${bucketName}.adobeaemcloud.com/adobe/assets/${assetId}/metadata`;
+
+
+  // For debugging purposes
+  console.log("API URL:", apiUrl);
+  console.log("Access Token:", accessToken);
+  console.log("API Key:", adobeADCConfig.clientId);
+
+  try {
+    const response = await fetch(apiUrl, {
+      method: "GET",
+      headers: {
+        "If-None-Match": "string",
+        "X-Adobe-Accept-Experimental": "1",
+        Authorization: `Bearer ${accessToken}`,
+        "X-Api-Key": adobeADCConfig.clientId,
+      },
+    });
+
+    console.log("Response Status:", response.status);
+
+    if (!response.ok) {
+      throw new Error(`AEM API Error: ${response.statusText}`);
+    }
+
+    return await response.text();
+  } catch (error) {
+    throw new Error(`Failed to fetch asset metadata: ${error.message}`);
+  }
+}
+
+// Helper function to filter the metadata properties like pim: and dc:
+function getFilteredMetadata(data) {
+  if (!data || !data.assetMetadata) {
+    throw new Error("Invalid metadata structure received from API");
+  }
+
+  const properties = data.assetMetadata;
+  return Object.keys(properties).reduce((filtered, key) => {
+    if (
+      key.startsWith("pim:") ||
+      key === "dc:title" ||
+      key === "dc:description"
+    ) {
+      filtered[key] = properties[key];
+    }
+    return filtered;
+  }, {});
+}
+
+// API Route: Update AEM Asset Metadata
+router.post("/api/updateAEMAssetMetadata", async (req, res) => {
+  const { assetId, metadata } = req.body;
+
+  if (!assetId || !metadata || typeof metadata !== "object") {
+    return res.status(400).json({ error: "Invalid or Missing Metadata" });
+  }
+
+  const bucketName = getBucketName(aemAssetsConfig.hostname);
+  if (!bucketName) {
+    return res.status(400).json({ error: "Missing AEM Information" });
+  }
+
+  const accessToken = req.session.accessToken;
+  if (!accessToken) {
+    return res.status(401).json({ error: "Not Authenticated with Adobe IMS" });
+  }
+
+  try {
+    const updatedMetadata = await invokePatchAssetMetadataAPI(
+      bucketName,
+      assetId,
+      metadata,
+      accessToken
+    );
+    res.status(200).json(updatedMetadata);
+  } catch (error) {
+    console.error("Error updating asset metadata:", error.message);
+    res.status(500).json({ error: `Internal Server Error: ${error.message}` });
+  }
+});
+
+// Helper function to invoke the AEM API to update asset metadata
+async function invokePatchAssetMetadataAPI(
+  bucketName,
+  assetId,
+  metadata,
+  accessToken
+) {
+  const apiUrl = `https://${bucketName}.adobeaemcloud.com/adobe/assets/${assetId}/metadata`;
+  const headers = {
+    "Content-Type": "application/json-patch+json",
+    "If-Match": "*",
+    "X-Adobe-Accept-Experimental": "1",
+    Authorization: `Bearer ${accessToken}`,
+    "X-Api-Key": adobeADCConfig.clientId,
+  };
+
+  try {
+    const response = await fetch(apiUrl, {
+      method: "PATCH",
+      headers,
+      body: JSON.stringify(getTransformedMetadata(metadata)),
+    });
+
+    if (!response.ok) {
+      throw new Error(`AEM API Error: ${response.statusText}`);
+    }
+
+    return await response.json();
+  } catch (error) {
+    throw new Error(`Failed to update asset metadata: ${error.message}`);
+  }
+}
+
+// Helper function to transform metadata into JSON Patch format, e.g. [{ op: "add", path: "dc:title", value: "New Title" }]
+function getTransformedMetadata(metadata) {
+  return Object.keys(metadata).map((key) => ({
+    op: "add",
+    path: `/${key}`,
+    value: metadata[key],
+  }));
+}
+```
+
+Die OpenAPI-basierten AEM-API-Aufrufe erfolgen Server-seitig (Express-Middleware) und nicht direkt Client-seitig (Browser), um sicherzustellen, dass das Zugriffstoken sicher verwaltet wird und nicht Client-seitig verfügbar gemacht wird.
+
+### Aktualisieren des Zugriffstokens
+
+Um das Zugriffstoken vor Ablauf zu aktualisieren, können Sie den Aktualisierungstokenfluss implementieren. Um das Tutorial jedoch einfach zu halten, implementiert die WKND-PIM-Web-App den Aktualisierungstoken-Fluss nicht.
+
+## Einrichten und Ausführen der Web-Anwendung
+
+Konfigurieren wir die WKND-PIM-Web-App auf Ihrem lokalen Computer und führen sie aus, um den Authentifizierungsfluss und die API-Aufrufe der OAuth-Web-App zu verstehen.
+
+### Voraussetzungen
+
+Zum Durchführen dieses Tutorials benötigen Sie Folgendes:
+
+- Modernisierte AEM as a Cloud Service-Umgebung mit folgenden Neuerungen:
+   - AEM-Version `2024.10.18459.20241031T210302Z` oder höher.
+   - Neue Stil-Produktprofile (wenn die Umgebung vor November 2024 erstellt wurde)
+
+- Das Beispielprojekt [WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project) muss darin bereitgestellt werden.
+
+- Zugriff auf die [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/).
+
+- Installieren Sie [Node.js](https://nodejs.org/de/) auf Ihrem lokalen Computer, um die NodeJS-Beispielanwendung auszuführen.
+
+- Installieren Sie einen [local-ssl-proxy](https://www.npmjs.com/package/local-ssl-proxy#local-ssl-proxy) auf Ihrem lokalen Computer, um einen lokalen SSL-HTTP-Proxy mit einem selbstsignierten Zertifikat zu erstellen.
+
+### Entwicklungsschritte
+
+Die allgemeinen Entwicklungsschritte lauten:
+
+1. Modernisierung der AEM as a Cloud Service-Umgebung.
+1. AEM-API-Zugriff aktivieren.
+1. Erstellen Sie ein Adobe Developer Console-Projekt (ADC).
+1. ADC-Projekt konfigurieren
+   1. Hinzufügen der gewünschten OpenAPI-basierten AEM-APIs
+   1. Konfigurieren von OAuth Web App-Anmeldeinformationen
+1. Konfigurieren der AEM-Instanz, um die ADC-Projektkommunikation zu aktivieren
+1. Erstellen und Anwenden eines Asset-Metadatenschemas
+1. Konfigurieren und Ausführen der WKND-PIM-Web-App
+1. Überprüfen des End-to-End-Flusses
+
+### Modernisierung der AEM as a Cloud Service-Umgebung
+
+Weitere Informationen finden Sie [ Abschnitt „Modernisierung der AEM as a Cloud Service](invoke-openapi-based-aem-apis.md#modernization-of-aem-as-a-cloud-service-environment)Umgebung im Tutorial [Aufrufen von OpenAPI-basierten AEM-](invoke-openapi-based-aem-apis.md)&quot;.
+
+### AEM-API-Zugriff aktivieren
+
+Siehe den Abschnitt [Aktivieren des Zugriffs auf AEM](invoke-openapi-based-aem-apis.md#enable-aem-apis-access)APIs im Tutorial [Aufrufen von OpenAPI-basierten AEM](invoke-openapi-based-aem-apis.md) .
+
+### Erstellen eines Adobe Developer Console-Projekts (ADC)
+
+Siehe den [Erstellen eines Adobe Developer Console-Projekts (ADC](invoke-openapi-based-aem-apis.md#create-adobe-developer-console-adc-project) im Tutorial [Aufrufen von OpenAPI-basierten AEM](invoke-openapi-based-aem-apis.md) .
+
+### ADC-Projekt konfigurieren
+
+Konfigurieren Sie anschließend das ADC-Projekt für den Zugriff auf die Assets Author-API mithilfe der OAuth-Web-App-Authentifizierung.
+
+1. Um AEM-APIs hinzuzufügen, klicken Sie auf die Schaltfläche **API hinzufügen**.
+
+   ![API hinzufügen](./assets/web-app/add-api.png)
+
+1. Filtern Sie _Dialogfeld &quot;_ hinzufügen“ nach _Experience Cloud_ und wählen Sie die Karte **AEM Assets Author API** aus und klicken Sie auf **Weiter**.
+
+   ![AEM-API hinzufügen](./assets/web-app/add-aem-api.png)
+
+1. Wählen Sie anschließend im Dialogfeld _API konfigurieren_ die Option **Benutzerauthentifizierung** und klicken Sie auf **Weiter**.
+
+   ![AEM-API konfigurieren](./assets/web-app/configure-aem-api.png)
+
+1. Wählen Sie im nächsten _API konfigurieren_ die Authentifizierungsoption **OAuth Web App** und klicken Sie auf **Weiter**.
+
+   ![Konfigurieren der OAuth-Web-App](./assets/web-app/configure-oauth-web-app.png)
+
+1. Geben Sie _Dialogfeld OAuth-Web_ App konfigurieren die folgenden Details ein und klicken Sie auf **Weiter**.
+   - Standard-Umleitungs-URI: `https://localhost:3001/callback`
+   - Umleitungs-URI-Muster: `https://localhost:3001/callback`
+
+   ![Konfigurieren der OAuth-Web-App](./assets/web-app/configure-oauth-web-app-details.png)
+
+1. Überprüfen Sie die verfügbaren Bereiche und klicken Sie auf **Konfigurierte API speichern**.
+
+   ![Konfigurierte API speichern](./assets/web-app/save-configured-api.png)
+
+1. Überprüfen Sie die AEM-API- und Authentifizierungskonfiguration.
+
+   ![AEM-API-Konfiguration](assets/web-app/aem-api-configuration.png)
+
+   ![Authentifizierungskonfiguration](assets/web-app/authentication-configuration.png)
+
+### Konfigurieren der AEM-Instanz, um die ADC-Projektkommunikation zu aktivieren
+
+Um die ClientID für die OAuth-Web-App-Anmeldeinformationen des ADC-Projekts für die Kommunikation mit der AEM-Instanz zu aktivieren, müssen Sie die AEM-Instanz konfigurieren.
+
+Definieren Sie dazu die Konfiguration in der `config.yaml` im AEM-Projekt. Stellen Sie dann die `config.yaml` mithilfe der Konfigurations-Pipeline in der Cloud Manager bereit.
+
+1. Suchen oder erstellen Sie im AEM-Projekt die `config.yaml`-Datei aus dem `config`.
+
+   ![Finden Sie die Konfiguration YAML](assets/web-app/locate-config-yaml.png)
+
+1. Fügen Sie der `config.yaml`-Datei die folgende Konfiguration hinzu.
+
+   ```yaml
+   kind: "API"
+   version: "1.0"
+   metadata: 
+       envTypes: ["dev", "stage", "prod"]
+   data:
+       allowedClientIDs:
+           author:
+           - "<ADC Project's OAuth Web App credential ClientID>"
+   ```
+
+   Ersetzen Sie `<ADC Project's OAuth Web App credential ClientID>` durch die tatsächliche Client-ID der OAuth-Web-App-Anmeldeinformationen des ADC-Projekts. Der in diesem Tutorial verwendete API-Endpunkt ist nur auf der Autorenebene verfügbar, aber für andere APIs kann die YAML-Konfiguration auch über einen Knoten _publish_ oder _preview_ verfügen.
+
+1. Übertragen Sie die Konfigurationsänderungen in das Git-Repository und übertragen Sie die Änderungen in das Remote-Repository.
+
+1. Stellen Sie die oben genannten Änderungen mithilfe der Konfigurations-Pipeline in der Cloud Manager bereit. Beachten Sie, dass die `config.yaml`-Datei auch mithilfe von Befehlszeilen-Tools in einer RDE installiert werden kann.
+
+   ![Bereitstellen von config.yaml](assets/deploy-config-yaml.png)
+
+### Erstellen und Anwenden eines Asset-Metadatenschemas
+
+Standardmäßig verfügt das WKND Sites-Projekt nicht über das erforderliche Asset-Metadatenschema zum Speichern von Produktattributen. Erstellen wir nun das Asset-Metadatenschema und wenden es auf einen Asset-Ordner in der AEM-Instanz an.
+
+1. Melden Sie sich bei der AEM as a Cloud Service Asset-Instanz an. Navigieren Sie mithilfe [Asset](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views)Ansicht zum `/content/dam/wknd-shared/en`.
+
+   ![Navigieren Sie zum Ordner](assets/web-app/navigate-to-folder.png)
+
+1. Erstellen Sie **PIM** und darin den Ordner **Camping** und laden Sie dann [Beispielbilder](./assets/web-app/camping-gear-imgs.zip) in den Ordner **Camping** hoch.
+
+   ![PIM-Ordner](assets/web-app/pim-folder.png)
+
+Als Nächstes erstellen wir das PIM-Attribut-spezifische Metadatenschema und wenden es auf den Ordner **PIM** an.
+
+1. Navigieren Sie in der **Leiste zur Option** Einstellungen **> Metadaten-Forms** und klicken Sie auf die Schaltfläche **Erstellen**.
+
+1. Geben **im Dialogfeld „Metadatenformular erstellen** die folgenden Details ein und klicken Sie auf **Erstellen**.
+   - Name: `PIM`
+   - Vorhandene Formularstruktur als Vorlage verwenden: `Check`
+   - Wählen Sie aus: `default`
+
+   ![Erstellen eines Metadatenformulars](assets/web-app/create-metadata-form.png)
+
+1. Klicken Sie auf das Symbol **+** , um eine neue Registerkarte **PIM** hinzuzufügen und Komponenten **Einzeiliger Text** hinzuzufügen. Die Namen der Metadateneigenschaften sollten mit `pim:` Präfix beginnen.
+
+   ![Registerkarte „PIM hinzufügen“](assets/web-app/add-pim-tab.png)
+
+   | Bezeichnung | Platzhalter | Metadaten-Eigenschaft |
+   | --- | --- | --- |
+   | SKU | SKU-ID eingeben | `pim:sku` |
+   | Produkttyp | z. B. Rucksack, Zelt, Jacke | `pim:productType` |
+   | Produktkategorie | z.B. Camping, Wandern, Klettern | `pim:productCategory` |
+   | Hersteller | Herstellernamen eingeben | `pim:manufacturer` |
+   | Modell | Modellnamen eingeben | `pim:model` |
+   | Markenname | Markennamen eingeben | `pim:brandName` |
+
+1. Klicken Sie auf **Speichern** und **Schließen**, um das Metadatenformular zu speichern.
+
+1. Wenden Sie abschließend das **PIM**-Metadatenschema auf den **PIM**-Ordner an.
+
+   ![Metadatenschema anwenden](assets/web-app/apply-metadata-schema.png)
+
+Mit den oben genannten Schritten können die Assets aus dem **PIM**-Ordner die Metadaten der Produktattribute speichern.
+
+### Konfigurieren und Ausführen der WKND-PIM-Web-App
+
+1. Laden Sie die ZIP[Datei „WKND-PIM web app](./assets/web-app/wknd-pim-demo-web-app.zip) herunter und extrahieren Sie sie.
+
+1. Navigieren Sie zum extrahierten Ordner und kopieren Sie die `.env.example` in `.env`.
+
+1. Aktualisieren Sie die `.env` mit den erforderlichen Konfigurationsparametern aus dem Adobe Developer Console-Projekt (ADC) und der AEM as a Cloud Service Assets-Instanz.
+
+   ```plaintext
+   ########################################################################
+   # Adobe IMS, Adobe Developer Console (ADC), and AEM Assets Information
+   ########################################################################
+   # Adobe IMS OAuth endpoints
+   ADOBE_IMS_AUTHORIZATION_ENDPOINT=https://ims-na1.adobelogin.com/ims/authorize/v2
+   ADOBE_IMS_TOKEN_ENDPOINT=https://ims-na1.adobelogin.com/ims/token/v3
+   ADOBE_IMS_USERINFO_ENDPOINT=https://ims-na1.adobelogin.com/ims/userinfo/v2
+   
+   # Adobe Developer Console (ADC) Project OAuth Web App credential
+   ADC_CLIENT_ID=e1adsfsd59384320bbe4f9298f00b7ab
+   ADC_CLIENT_SECRET=p8e-Mdfgfdsg43RHugVRTEOyWlmEU5m
+   ADC_SCOPES=AdobeID,openid,aem.folders,aem.assets.author
+   
+   # AEM Assets Information
+   AEM_ASSET_HOSTNAME=https://author-p3947-e1542138.adobeaemcloud.com/
+   AEM_ASSET_IDS=urn:aaid:aem:aa689a9f-04da-4fbb-b460-74a5b6a69090,urn:aaid:aem:e4fdb6f6-1007-4e84-9726-a9522931786a
+   
+   ################################################
+   # Web App Information
+   ################################################
+   # The port number on which this server (web app) will run
+   PORT = 3000
+   
+   # The URL to which the user will be redirected after the OAuth flow is complete
+   REDIRECT_URI=http://localhost:3000/auth/callback
+   
+   # The Express (express-session) uses this secret to encrypt and verify the authenticity of that cookie
+   # For demonstration purposes, this is a simple secret. In production, you should use a strong secret
+   EXPRESS_SESSION_SECRET=1234554321
+   ```
+
+   Die `AEM_ASSET_IDS` sind der `jcr:uuid` Eigenschaftswert der hochgeladenen Bilder im Ordner **Camping**. Weitere Informationen finden Sie [ diesem ](invoke-openapi-based-aem-apis.md#review-the-api).
+
+1. Öffnen Sie ein Terminal und navigieren Sie zum extrahierten Ordner. Installieren Sie die erforderlichen Abhängigkeiten mithilfe des folgenden Befehls.
+
+   ```bash
+   $ npm install
+   ```
+
+1. Starten Sie die WKND-PIM-Web-App mit dem folgenden Befehl.
+
+   ```bash
+   $ npm start
+   ```
+
+1. Führen Sie den lokalen SSL-HTTP-Proxy mit dem folgenden Befehl aus.
+
+   ```bash
+   $ local-ssl-proxy --source 3001 --target 3000 --cert ./ssl/server.crt --key ./ssl/server.key
+   ```
+
+   Der lokale SSL-HTTP-Proxy wird verwendet, da IMS erfordert, dass der Umleitungs-URI HTTPS ist.
+
+### Überprüfen des End-to-End-Flusses
+
+1. Öffnen Sie einen Browser und navigieren Sie zu `https://localhost:3001` , um auf die WKND-PIM-Web-App zuzugreifen. Akzeptieren Sie die Warnung zum selbstsignierten Zertifikat.
+
+   ![WKND-PIM-Web-App](./assets/web-app/wknd-pim-web-app.png)
+
+1. Klicken Sie **Jetzt versuchen**, um die Metadaten der Produktattribute zu überprüfen und zu aktualisieren. Er initiiert den IMS-Benutzerauthentifizierungs- und App-Autorisierungsfluss.
+
+1. Melden Sie sich mit Ihren Adobe ID-Anmeldeinformationen an und stimmen Sie zu, dass die WKND-PIM-Web-App in Ihrem Namen auf die Assets-Autoren-API zugreifen darf.
+
+1. Klicken Sie auf der `https://localhost:3001/update-product-attributes`/Seite auf die Registerkarte **AEM-Asset** Attribute. Wählen Sie aus **Dropdown-Liste** Asset-ID“ eine Asset-ID aus, um die Asset-Metadaten anzuzeigen.
+
+   ![Asset-Metadaten abrufen](./assets/web-app/get-asset-metadata.png)
+
+1. Aktualisieren Sie die Asset-Metadaten und klicken Sie auf **AEM-Asset-Attribute aktualisieren** um die Asset-Metadaten zu aktualisieren.
+
+   ![Aktualisieren von Asset-Metadaten](./assets/web-app/update-asset-metadata.png)
+
+>[!IMPORTANT]
+>
+>Wenn der authentifizierte Benutzer nicht über die erforderlichen Berechtigungen zum Überprüfen oder Aktualisieren von Asset-Metadaten verfügt, geben die OpenAPI-basierten AEM-APIs einen 403-Fehler (Verboten) zurück. Dadurch wird sichergestellt, dass Benutzende auch dann nicht ohne die erforderlichen Berechtigungen auf AEM-Ressourcen zugreifen können, wenn sie authentifiziert sind und über ein gültiges IMS-Zugriffstoken verfügen.
+
+
+### Überprüfen des Anwendungs-Codes
+
+Sehen wir uns die allgemeine Code-Struktur und die wichtigsten Einstiegspunkte der WKND-PIM-Web-App an. Die Anwendung wird mit Node.js + Express entwickelt.
+
+1. Der `app.js` ist der Haupteinstiegspunkt der Anwendung. Es initialisiert die Express-App, richtet die Sitzung ein und mountet die Routen.
+
+1. Der `public`-Ordner enthält die statischen Assets wie CSS, JavaScript und Bilder. Die `script.js` enthält den Client-seitigen JavaScript-Code für die Interaktion mit den Express-`/api/getAEMAssetMetadata` und `/api/updateAEMAssetMetadata`.
+
+1. Der Ordner `routes` enthält die Express-Routen:
+   1. `index.js`: Die Hauptroute, die die Startseite rendert.
+   1. `update-product-attributes.js`: Die Route, die das Produktattribut-Formular mit Registerkarten rendert, überprüft auch die Express-Sitzung für das Zugriffstoken.
+   1. `adobe-ims-auth.js`: Die Route, die den Adobe IMS-Benutzerauthentifizierungs- und App-Autorisierungsfluss initiiert.
+   1. `invoke-aem-apis.js`: Die Route, die die OpenAPI-basierten AEM-APIs mithilfe des benutzerspezifischen Zugriffstokens aufruft.
+
+1. Der `views` enthält die EJS-Vorlagen zum Rendern der HTML-Seiten.
+
+1. Der Ordner `utils` enthält die Dienstprogrammfunktionen.
+
+1. Der `ssl`-Ordner enthält das selbstsignierte Zertifikat und die Schlüsseldateien zum Ausführen des lokalen SSL-HTTP-Proxys.
+
+Sie können die vorhandene Web-App mit den Adobe-APIs entwickeln oder integrieren, indem Sie andere Server-seitige Technologien wie Java, Python oder .NET verwenden.
+
+## Zusammenfassung
+
+In diesem Tutorial haben Sie erfahren, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service über eine benutzerdefinierte Web-App mithilfe der OAuth-Web-App-Authentifizierung aufrufen. Sie haben die in der WKND-PIM-Web-App verwendeten Schlüssel-Code-Snippets gelesen, um den Authentifizierungsfluss der OAuth-Web-App zu verstehen.
+
+Sie können das Tutorial als Referenz verwenden, um die OpenAPI-basierten AEM-APIs in Ihre benutzerdefinierten Web-Anwendungen zu integrieren und so effiziente, benutzerorientierte Workflows bereitzustellen.
+
+## Zusätzliche Ressourcen
+
+- [Implementierungshandbuch für die Benutzerauthentifizierung](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/)
+- [Anfrage autorisieren](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#authorize-request)
+- [Abrufen von Zugriffstoken](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#fetching-access-tokens)
+- [Aktualisieren von Zugriffstoken](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#refreshing-access-tokens)
+- [Aufrufen von OpenAPI-basierten AEM-APIs](invoke-openapi-based-aem-apis.md)

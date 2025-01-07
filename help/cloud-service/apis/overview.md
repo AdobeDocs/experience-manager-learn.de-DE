@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: 316e08e6647d6fd731cd49ae1bc139ce57c3a7f4
+source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '1024'
 ht-degree: 2%
 
 ---
@@ -85,6 +85,16 @@ Die OpenAPI-basierten AEM-APIs unterstützen die folgenden Authentifizierungsmet
 
 - **Anmeldedaten für OAuth Single Page App**: Für die SPA-Ausführung im Browser, der ohne Backend-Server im Auftrag von Benutzenden auf APIs zugreifen muss. Sie verwendet den _authorization_code_-Gewährungstyp und verlässt sich auf Client-seitige Sicherheitsmechanismen, die PKCE (Proof Key for Code Exchange) verwenden, um den Autorisierungs-Code-Fluss zu sichern. Weitere Informationen finden Sie unter [OAuth Single Page App Credential](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential).
 
+### Unterschied zwischen OAuth Server-zu-Server- und OAuth Web App/Single Page App-Anmeldeinformationen{#difference-between-oauth-server-to-server-and-oauth-web-app-single-page-app-credentials}
+
+| | OAuth-Server-zu-Server | OAuth-Benutzerauthentifizierung (Web-App) |
+| --- | --- | --- |
+| Authentifizierungszweck | Entwickelt für Maschine-zu-Maschine-Interaktionen. | Entwickelt für benutzergesteuerte Interaktionen. |
+| Token-Verhalten | Gibt Zugriffstoken aus, die für die Client-Anwendung selbst stehen. | Gibt Zugriffstoken für einen authentifizierten Benutzer aus. |
+| Anwendungsfälle | Backend-Services, die API-Zugriff ohne Benutzerinteraktion benötigen. | Web-Anwendungen mit Frontend- und Backend-Komponenten, die im Auftrag von Benutzern auf APIs zugreifen. |
+| Sicherheitsaspekte | Sicheres Speichern sensibler Anmeldeinformationen (`client_id`, `client_secret`) in Backend-Systemen. | Die Benutzer authentifizieren sich und erhalten ihr eigenes temporäres Zugriffstoken. Sicheres Speichern sensibler Anmeldeinformationen (`client_id`, `client_secret`) in Backend-Systemen. |
+| Genehmigungstyp | _client_credentials_ | _authorization_code_ |
+
 ## Zugriff auf Adobe-APIs und zugehörige Konzepte{#accessing-adobe-apis-and-related-concepts}
 
 Bevor Sie auf Adobe-APIs zugreifen, müssen Sie diese Schlüsselkonzepte verstehen:
@@ -102,4 +112,7 @@ Bevor Sie auf Adobe-APIs zugreifen, müssen Sie diese Schlüsselkonzepte versteh
 Mit einem Verständnis der verschiedenen AEM-API-Typen, einschließlich
 OpenAPI-basierte AEM-APIs und die wichtigsten Konzepte für den Zugriff auf Adobe-APIs. Jetzt können Sie mit dem Erstellen benutzerdefinierter Anwendungen beginnen, die mit AEM interagieren.
 
-Beginnen wir mit dem Tutorial [Aufrufen von OpenAPI-basierten AEM-APIs](invoke-openapi-based-aem-apis.md).
+Beginnen wir mit:
+
+- [Tutorial zum Aufrufen von OpenAPI-basierten AEM-APIs für die Server-zu](invoke-openapi-based-aem-apis.md)Server-Authentifizierung, in dem der Zugriff auf OpenAPI-basierte AEM-APIs (_OAuth-Server-zu-Server-Anmeldeinformationen)_ wird.
+- [Tutorial zum Aufrufen von OpenAPI-basierten AEM-APIs mit Benutzerauthentifizierung über eine Web-Anwendung](invoke-openapi-based-aem-apis-from-web-app.md) in dem gezeigt wird, wie von einer Web-Anwendung aus auf OpenAPI _basierte AEM-APIs über Anmeldeinformationen für die OAuth-Web-App zugegriffen werden_.
