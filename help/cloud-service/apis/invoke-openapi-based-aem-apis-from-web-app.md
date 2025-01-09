@@ -1,5 +1,5 @@
 ---
-title: Aufrufen von OpenAPI-basierten AEM-APIs aus einer Web-Anwendung
+title: Aufrufen von OpenAPI-basierten AEM-APIs mit Benutzerauthentifizierung aus einer Web-Anwendung
 description: Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service über eine benutzerdefinierte Web-App mithilfe der OAuth-Web-App-Authentifizierung aufrufen.
 version: Cloud Service
 feature: Developing
@@ -9,15 +9,15 @@ level: Intermediate
 doc-type: Tutorial
 jira: KT-16718
 thumbnail: KT-16718.jpeg
-last-substantial-update: 2024-12-17T00:00:00Z
+last-substantial-update: 2025-01-09T00:00:00Z
 duration: 0
-source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
+exl-id: dc35256a-3873-413f-b282-90948efd5f31
+source-git-commit: 3e91387368943b1b0d62c57f8172a0306758b28f
 workflow-type: tm+mt
-source-wordcount: '2399'
+source-wordcount: '2433'
 ht-degree: 1%
 
 ---
-
 
 # Aufrufen von OpenAPI-basierten AEM-APIs mit Benutzerauthentifizierung aus einer Web-Anwendung{#invoke-openapi-based-aem-apis-from-web-app}
 
@@ -36,6 +36,8 @@ Bevor Sie beginnen, machen wir uns mit der Beispiel-Web-App, dem WKND-Produktinf
 Die WKND-PIM-App ist eine Beispiel-Web-Anwendung, die zur Verwaltung von Produktattributen und deren in AEM as a Cloud Service gespeicherten Asset-Metadaten entwickelt wurde. Dieses Beispiel zeigt, wie Web-Apps nahtlos in Adobe-APIs integriert werden können, um effiziente, benutzerorientierte Workflows bereitzustellen.
 
 Das Adobe Developer Console-Projekt (ADC) ist so konfiguriert, dass es über die OAuth-Web-App-Authentifizierung auf die Assets-Autoren-API zugreift. Sie stellt der WKND-PIM _Web-App die erforderlichen_ client_id und _client_secret_ bereit, um den _authorization_code_-Gewährungsfluss zu initiieren.
+
+>[!VIDEO](https://video.tv.adobe.com/v/34260?quality=12&learn=on)
 
 Die folgende Abbildung zeigt den Funktionsablauf der WKND-PIM-Web-App _Abrufen benutzerspezifischer Zugriffstoken für die Interaktion mit der Assets Author-API_.
 
@@ -66,7 +68,7 @@ Bevor Sie beginnen, lesen Sie zunächst den Abschnitt [Zugriff auf Adobe-APIs un
 
 ## Verwendung dieses Tutorials{#how-to-use-this-tutorial}
 
-Sie können entweder den Abschnitt [Überprüfen von Code-Snippets für Web](#review-web-app-key-code-snippets)Apps , um den Authentifizierungsfluss der OAuth-Web-App und die in der WKND-PIM-Web-App verwendeten Code-Snippets für API-Aufrufe zu verstehen. Oder gehen Sie direkt zum Abschnitt [Einrichten und Ausführen der Web-](#setup-run-web-app)), um die WKND-PIM-Web-Anwendung auf Ihrem lokalen Computer einzurichten und auszuführen.
+Sie können entweder den Abschnitt [Überprüfen von Code-Snippets für Web](#review-web-app-key-code-snippets)Apps , um den Authentifizierungsfluss der OAuth-Web-App und die in der WKND-PIM-Web-App verwendeten Code-Snippets für API-Aufrufe zu verstehen. Oder gehen Sie direkt zum Abschnitt [Einrichten und Ausführen der Web](#setup-run-web-app), um die WKND-PIM-Web-App auf Ihrem lokalen Computer einzurichten und auszuführen.
 
 ## Überprüfen von Web-App-Schlüssel-Code-Snippets{#review-web-app-key-code-snippets}
 
@@ -404,6 +406,11 @@ Die OpenAPI-basierten AEM-API-Aufrufe erfolgen Server-seitig (Express-Middleware
 
 Um das Zugriffstoken vor Ablauf zu aktualisieren, können Sie den Aktualisierungstokenfluss implementieren. Um das Tutorial jedoch einfach zu halten, implementiert die WKND-PIM-Web-App den Aktualisierungstoken-Fluss nicht.
 
+
+>[!TIP]
+>
+>Im nächsten Abschnitt können Sie die WKND-PIM-Web-App auf Ihrem lokalen Computer ausprobieren und praktische Erfahrungen mit dem OAuth-Web-App-Authentifizierungsfluss und den API-Aufrufen sammeln.
+
 ## Einrichten und Ausführen der Web-Anwendung
 
 Konfigurieren wir die WKND-PIM-Web-App auf Ihrem lokalen Computer und führen sie aus, um den Authentifizierungsfluss und die API-Aufrufe der OAuth-Web-App zu verstehen.
@@ -526,7 +533,7 @@ Standardmäßig verfügt das WKND Sites-Projekt nicht über das erforderliche As
 
    ![Navigieren Sie zum Ordner](assets/web-app/navigate-to-folder.png)
 
-1. Erstellen Sie **PIM** und darin den Ordner **Camping** und laden Sie dann [Beispielbilder](./assets/web-app/camping-gear-imgs.zip) in den Ordner **Camping** hoch.
+1. Erstellen Sie ein **PIM** und darin den Ordner **Camping** und laden Sie dann [Beispielbilder](./assets/web-app/camping-gear-imgs.zip) in den Ordner **Camping** hoch.
 
    ![PIM-Ordner](assets/web-app/pim-folder.png)
 
