@@ -11,10 +11,10 @@ thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 87dd4873152d4690abb1efcfebd43d10033afa0a
+source-git-commit: a1f7395cc5f83174259d7a993fefc9964368b4bc
 workflow-type: tm+mt
-source-wordcount: '3919'
-ht-degree: 100%
+source-wordcount: '4037'
+ht-degree: 96%
 
 ---
 
@@ -43,7 +43,7 @@ Eine SAML-Integration in AEM Publish läuft normalerweise wie folgt ab:
    + Die Benutzerin oder der Benutzer wird vom IDP zur Eingabe der Anmeldeinformationen aufgefordert.
    + Die Benutzerin oder der Benutzer ist bereits beim IDP authentifiziert und muss keine weiteren Anmeldeinformationen angeben.
 1. Der IDP generiert eine SAML-Assertion mit den Benutzerdaten und signiert sie mit dem privaten Zertifikat des IDP.
-1. Der IDP sendet die SAML-Assertion per HTTP-POST über den Webbrowser der Benutzerin bzw. des Benutzers an AEM Publish.
+1. IDP sendet die SAML-Bestätigung über die HTTP-POST über den Webbrowser des Benutzers (RESPECTIVE_PROTECTED_PATH/saml_login) an AEM Publish.
 1. AEM Publish erhält die SAML-Assertion und überprüft die Integrität und Authentizität der SAML-Assertion mithilfe des öffentlichen IDP-Zertifikats.
 1. AEM Publish verwaltet den AEM-Benutzerdatensatz basierend auf der SAML 2.0-OSGi-Konfiguration und den Inhalten der SAML-Assertion.
    + Erstellt eine Benutzerin oder einen Benutzer
@@ -440,6 +440,9 @@ Nach erfolgreicher Authentifizierung beim IDP orchestriert der IDP eine HTTP-POS
 /0190 { /type "allow" /method "POST" /url "*/saml_login" }
 ```
 
+>[!NOTE]
+>Stellen Sie beim Bereitstellen mehrerer SAML-Konfigurationen in AEM für verschiedene geschützte Pfade und unterschiedliche IDP-Endpunkte sicher, dass der IDP an den Endpunkt RESPECTIVE_PROTECTED_PATH/saml_login sendet, um die entsprechende SAML-Konfiguration auf der AEM-Seite auszuwählen. Wenn für denselben geschützten Pfad doppelte SAML-Konfigurationen vorhanden sind, erfolgt die Auswahl der SAML-Konfiguration nach dem Zufallsprinzip.
+
 Wenn das Umschreiben von URLs auf dem Apache-Webserver konfiguriert ist (`dispatcher/src/conf.d/rewrites/rewrite.rules`) stellen Sie sicher, dass Anfragen an `.../saml_login`-Endpunkte nicht versehentlich beschädigt werden.
 
 ### Aktivieren der dynamischen Gruppenmitgliedschaft für SAML-Benutzende in neuen Umgebungen
@@ -561,6 +564,12 @@ Stellen Sie die Git-Verzweigung von Cloud Manager (in diesem Beispiel `develop`)
 ## Aufrufen der SAML-Authentifizierung
 
 Der SAML-Authentifizierungsfluss kann von einer AEM Site-Web-Seite aus aufgerufen werden, indem ein speziell gestalteter Link oder eine Schaltfläche erstellt wird. Die unten beschriebenen Parameter können bei Bedarf programmgesteuert festgelegt werden. Beispielsweise kann eine Anmeldeschaltfläche den `saml_request_path`, der die Person nach erfolgreicher SAML-Authentifizierung auf verschiedene AEM-Seiten führt, je nach Kontext der Schaltfläche auf verschiedene Seiten weiterleiten.
+
+## Sicheres Caching bei Verwendung von SAML
+
+Auf der AEM-Veröffentlichungsinstanz werden die meisten Seiten normalerweise zwischengespeichert. Bei SAML-geschützten Pfaden sollte die Zwischenspeicherung jedoch entweder deaktiviert oder über die Konfiguration „auth_checker“ gesichert aktiviert werden. Weitere Informationen finden Sie in den bereitgestellten [hier](https://experienceleague.adobe.com/de/docs/experience-manager-dispatcher/using/configuring/permissions-cache)
+
+Beachten Sie, dass beim Zwischenspeichern geschützter Pfade ohne Aktivierung des Authentifizierungs-Checkers unvorhersehbares Verhalten auftreten kann.
 
 ### GET-Anfrage
 
