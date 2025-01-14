@@ -11,9 +11,9 @@ thumbnail: 39151.jpg
 exl-id: 7d7942ae-7e38-4abd-9900-5b8e3542f5e1
 duration: 315
 source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '204'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -26,11 +26,11 @@ ht-degree: 82%
 >additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=de" text="IMS-Unterstützung für Adobe Experience Manager as a Cloud Service"
 >additional-url="https://helpx.adobe.com/de/enterprise/admin-guide.html/enterprise/using/identity.html" text="Von AEM bereitgestellte Benutzergruppen und deren Berechtigungen"
 
-Adobe Experience Manager basiert auf Adobe IMS-Benutzenden, Benutzergruppen und Produktprofilen, um Benutzenden anpassbaren Zugriff auf AEM zu ermöglichen. Erfahren Sie, wie Sie AEM-Gruppen und -Berechtigungen definieren, die auf den von [AEM bereitgestellten Benutzergruppen](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/security#built-in-users-and-groups) aufbauen, und wie diese mit Adobe IMS-Abstraktionen zusammenarbeiten, um einen nahtlosen und anpassbaren Zugriff auf AEM zu ermöglichen.
+Adobe Experience Manager basiert auf Adobe IMS-Benutzenden, Benutzergruppen und Produktprofilen, um Benutzenden anpassbaren Zugriff auf AEM zu ermöglichen. Hier finden Sie Informationen dazu, wie Sie AEM-Gruppen und -Berechtigungen definieren, die auf [vorhandene AEM-Benutzergruppen](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/security/security#built-in-users-and-groups) aufbauen, und wie sie mit Adobe IMS-Abstraktionen zusammenarbeiten, um für nahtlosen und anpassbaren Zugriff auf AEM zu sorgen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/39151?quality=12&learn=on)
 
 ## Zusätzliche Ressourcen
 
 + [IMS-Unterstützung für Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=de)
-+ [Von AEM bereitgestellte Benutzergruppen und deren Berechtigungen](https://experienceleague.adobe.com/docs/experience-manager-65/content/security/security.html)
++ [Von AEM bereitgestellte Benutzergruppen und deren Berechtigungen](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/security/security)
