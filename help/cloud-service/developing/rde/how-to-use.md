@@ -11,22 +11,22 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: 60139d8531d65225fa1aa957f6897a6688033040
+source-git-commit: d199ff3b9f4d995614c193f52dc90270f2283adf
 workflow-type: tm+mt
-source-wordcount: '687'
-ht-degree: 91%
+source-wordcount: '792'
+ht-degree: 75%
 
 ---
 
 # Verwenden der schnellen Entwicklungsumgebung
 
-Erfahren Sie, wie Sie die schnelle Entwicklungsumgebung (Rapid Development Environment, RDE) in AEM as a Cloud Service **verwenden**. Stellen Sie Code und Inhalte für schnellere Entwicklungszyklen Ihres fast fertigen Codes aus Ihrer bevorzugten integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) in der RDE bereit.
+Erfahren **, wie Sie** schnelle Entwicklungsumgebung (RDE) in AEM as a Cloud Service verwenden. Stellen Sie Code und Inhalte für schnellere Entwicklungszyklen Ihres fast fertigen Codes aus Ihrer bevorzugten integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) in der RDE bereit.
 
 Mithilfe des [AEM WKND-Sites-Projekts](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) lernen Sie, wie Sie verschiedene AEM-Artefakte in der RDE bereitstellen, indem Sie den AEM-RDE-Befehl `install` aus Ihrer bevorzugten IDE ausführen.
 
 - Bereitstellen des AEM-Code- und -Inhaltspakets („all“, „ui.apps“)
 - Bereitstellen des OSGi-Bundles und der OSGi-Konfigurationsdatei
-- Bereitstellen der Apache- und Dispatcher-Konfigurationen als ZIP-Datei
+- Bereitstellung der Apache- und Dispatcher-Konfigurationen als ZIP-Datei
 - Bereitstellen einzelner Dateien wie HTL, `.content.xml` (Dialog-XML)
 - Überprüfen anderer RDE-Befehle wie `status, reset and delete`
 
@@ -191,7 +191,7 @@ Die Apache- oder Dispatcher-Konfigurationsdateien **können nicht einzeln bereit
    ...
    ```
 
-1. Überprüfen Sie die Änderungen lokal. Weitere Informationen finden unter [Lokales Ausführen des Dispatchers](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html#run-dispatcher-locally?lang=de).
+1. Überprüfen Sie die Änderungen lokal. Weitere Informationen finden unter [Lokales Ausführen des Dispatchers](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools).
 1. Stellen Sie die Änderungen in der RDE bereit, indem Sie den folgenden Befehl ausführen:
 
    ```shell
@@ -200,7 +200,49 @@ Die Apache- oder Dispatcher-Konfigurationsdateien **können nicht einzeln bereit
    $ aio aem:rde:install target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip
    ```
 
+1. Überprüfen Sie Änderungen an der RDE.
+
+### Bereitstellen von Konfigurationsdateien (YAML)
+
+Die Konfigurationsdateien für CDN, Wartungsaufgaben, Protokollweiterleitung und AEM-API-Authentifizierung können mit dem `install`-Befehl in der RDE bereitgestellt werden. Diese Konfigurationen werden als YAML-Dateien im `config` des AEM-Projekts verwaltet. Weitere Informationen finden [ unter „Unterstützte ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations)&quot;.
+
+Um zu erfahren, wie Sie die Konfigurationsdateien bereitstellen, erweitern wir die `cdn` Konfigurationsdatei und stellen sie in der RDE bereit.
+
+1. Öffnen Sie die `cdn.yaml` im Ordner `config` .
+1. Aktualisieren Sie die gewünschte Konfiguration, aktualisieren Sie beispielsweise das Ratenlimit auf 200 Anfragen pro Sekunde
+
+   ```yaml
+   kind: "CDN"
+   version: "1"
+   metadata:
+     envTypes: ["dev", "stage", "prod"]
+   data:
+     trafficFilters:
+       rules:
+       #  Block client for 5m when it exceeds an average of 100 req/sec to origin on a time window of 10sec
+       - name: limit-origin-requests-client-ip
+         when:
+           reqProperty: tier
+           equals: 'publish'
+         rateLimit:
+           limit: 200 # updated rate limit
+           window: 10
+           count: fetches
+           penalty: 300
+           groupBy:
+             - reqProperty: clientIp
+         action: log
+   ...
+   ```
+
+1. Stellen Sie die Änderungen in der RDE bereit, indem Sie den folgenden Befehl ausführen.
+
+   ```shell
+   $ aio aem:rde:install -t env-config ./config/cdn.yaml
+   ```
+
 1. Überprüfen von Änderungen in der RDE
+
 
 ## Weitere AEM-RDE-Plug-in-Befehle
 
@@ -222,7 +264,7 @@ aem rde restart  Restart the author and publish of an RDE
 aem rde status   Get a list of the bundles and configs deployed to the current rde.
 ```
 
-Mithilfe der oben genannten Befehle kann Ihre RDE von Ihrer bevorzugten IDE aus verwaltet werden, um den Entwicklungs-/Bereitstellungslebenszyklus zu beschleunigen.
+Mit den oben genannten Befehlen kann Ihre RDE von Ihrer bevorzugten IDE aus verwaltet werden, um einen schnelleren Entwicklungs-/Bereitstellungslebenszyklus zu erzielen.
 
 ## Nächster Schritt
 
@@ -231,8 +273,8 @@ Erfahren Sie mehr über den [Entwicklungs-/Bereitstellungslebenszyklus mit der R
 
 ## Zusätzliche Ressourcen
 
-[Dokumentation zu RDE-Befehlen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#rde-cli-commands?lang=de)
+[Dokumentation zu RDE-Befehlen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
 
 [Adobe I/O Runtime-CLI-Plug-in für Interaktionen mit schnellen Entwicklungsumgebungen von AEM](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
-[Einrichten von AEM-Projekten](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup.html?lang=de)
+[Einrichten von AEM-Projekten](https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)
