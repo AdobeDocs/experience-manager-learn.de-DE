@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
+source-git-commit: fcd2d7ae7a0bddb0d80aada2f206be7629b676e3
 workflow-type: tm+mt
-source-wordcount: '1566'
+source-wordcount: '1705'
 ht-degree: 0%
 
 ---
-
 
 # Neuen Block erstellen
 
@@ -136,6 +136,12 @@ Der Teaser besteht aus zwei logischen Bereichen: Bild und Text. Um den Code zu v
 - Gruppieren Sie die Textinhaltsfelder mithilfe von [Elementgruppierung](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) und [Feld reduzieren für die CTA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse).
 
 Wenn Sie nicht mit [Feldreduzierung](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse), [Elementgruppierung](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) oder [Typrückschluss“ vertraut sind, ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) Sie die verknüpfte Dokumentation, bevor Sie fortfahren, da diese für die Erstellung eines gut strukturierten Blockmodells unerlässlich sind.
+
+Im folgenden Beispiel:
+
+- [Typrückschluss](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) wird verwendet, um automatisch ein `<img>` HTML-Element aus dem `image` zu erstellen. Das Reduzieren von Feldern wird zusammen mit den `image`- und `imageAlt`-Feldern verwendet, um ein `<img>` HTML-Element zu erstellen. Das `src`-Attribut wird auf den Wert des `image`-Felds festgelegt, während das `alt`-Attribut auf den Wert des `imageAlt`-Felds festgelegt wird.
+- `textContent` ist ein Gruppenname, mit dem Felder kategorisiert werden. Er sollte semantisch sein, kann aber alles sein, was für diesen Block einzigartig ist. Dadurch wird der universelle Editor angewiesen, alle Felder mit diesem Präfix im selben `<div>` in der endgültigen HTML-Ausgabe zu rendern.
+- Das Reduzieren von Feldern wird auch innerhalb der `textContent` für den Aktionsaufruf (CTA) angewendet. Die CTA wird als `<a>` über [Typrückschluss](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) erstellt. Das Feld `cta` wird verwendet, um das `href` des `<a>` festzulegen, und das Feld `ctaText` liefert den Textinhalt für den Link innerhalb der `<a ...>` Tags.
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
