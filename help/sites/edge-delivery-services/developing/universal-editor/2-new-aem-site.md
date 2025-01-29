@@ -9,9 +9,10 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 500
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: d1ebcaf4-cea6-4820-8b05-3a0c71749d33
+source-git-commit: 567d2803c5cee274104b38f847820f7665320195
 workflow-type: tm+mt
-source-wordcount: '264'
+source-wordcount: '289'
 ht-degree: 0%
 
 ---
@@ -43,3 +44,4 @@ Nachdem Sie die Site in der AEM-Autoreninstanz erstellt haben, veröffentlichen 
 3. Wählen Sie **Vorschau** unter **Ziele** und klicken Sie auf **Weiter**.
 4. Wählen **unter „Untergeordnete** einschließen“ die Option **Untergeordnete Elemente einschließen**, heben Sie die Auswahl anderer Optionen auf und klicken Sie auf **OK**.
 5. Klicken Sie auf **Publish**, um den Inhalt der Site für die Vorschau zu veröffentlichen.
+6. Nach der Veröffentlichung zur Vorschau sind die Seiten in der Edge Delivery Services-Vorschau-Umgebung verfügbar (die Seiten werden nicht im AEM-Vorschau-Service angezeigt).
