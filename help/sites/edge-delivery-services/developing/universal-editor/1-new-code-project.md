@@ -9,13 +9,13 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
+exl-id: e1fb7a58-2bba-4952-ad53-53ecf80836db
+source-git-commit: 9b10d79190d805b86884f033e040891655c3c890
 workflow-type: tm+mt
-source-wordcount: '271'
+source-wordcount: '269'
 ht-degree: 1%
 
 ---
-
 
 # Erstellen eines Edge Delivery Services-Code-Projekts
 
@@ -32,7 +32,7 @@ Gehen Sie wie folgt vor, um ein Edge Delivery Services-Code-Projekt zu erstellen
 3. **Installieren Sie die GitHub-App &quot;AEM Code Sync** und gewähren Sie Zugriff auf das Repository. Sie finden die [App hier](https://github.com/apps/aem-code-sync).
 4. **Konfigurieren Sie die`fstab.yaml`** Ihres neuen Projekts so, dass sie auf den richtigen AEM-Autoren-Service verweist.
 
-   * Zum Experimentieren können Sie niedrigere AEM as a Cloud Service-Umgebungen (Staging, Entwicklung oder RDE) verwenden. Echte Websites-Implementierungen sollten jedoch so konfiguriert werden, dass sie einen Produktions-AEM-Autoren-Service verwenden.
+   * Zum Experimentieren können Sie niedrigere AEM as a Cloud Service-Umgebungen (Staging oder Entwicklung) verwenden. Echte Websites-Implementierungen sollten jedoch so konfiguriert werden, dass sie einen Produktions-AEM-Service verwenden.
 
 5. **Bearbeiten Sie die`paths.json`** Ihres neuen Projekts, um den AEM Author-Dienstpfad dem Stamm Ihrer Website zuzuordnen.
 
