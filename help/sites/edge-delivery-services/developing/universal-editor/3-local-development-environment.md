@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
-source-git-commit: 6f0cbdd638ed909b5897521557b65dcf74ac1012
+source-git-commit: ecf37e1f964d0cda90eeca11b224ab950727d2ad
 workflow-type: tm+mt
 source-wordcount: '967'
 ht-degree: 2%
@@ -187,8 +187,8 @@ Diese Skripte sind nicht mit der AEM Boilerplate-XWalk-Vorlage vorkonfiguriert, 
 
 | NPM-Skript | Befehl | Beschreibung |
 |------------------|------------------------------------------------|-------------------------------------------------------|
-| `lint:js:fix` | `npm run lint:js --fix` | Behebt automatisch Probleme mit JavaScript Linting. |
-| `lint:css:fix` | `stylelint blocks/**/*.css styles/*.css --fix` | Behebt automatisch CSS-Verknüpfungsprobleme. |
+| `lint:js:fix` | `npm run lint:js -- --fix` | Behebt automatisch Probleme mit JavaScript Linting. |
+| `lint:css:fix` | `stylelint blocks/**/*.css styles/*.css -- --fix` | Behebt automatisch CSS-Verknüpfungsprobleme. |
 | `lint:fix` | `npm run lint:js:fix && npm run lint:css:fix` | Führt zur schnellen Bereinigung sowohl JS- als auch CSS-Fix-Skripte aus. |
 
 >[!TAB package.json-Beispiel]
@@ -200,8 +200,8 @@ Die folgenden Skripteinträge können zum `package.json` `scripts`-Array hinzuge
   ...
   "scripts": [
     ...,
-    "lint:js:fix": "npm run lint:js --fix",
-    "lint:css:fix": "npm run lint:css --fix",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint:css:fix": "npm run lint:css -- --fix",
     "lint:fix": "npm run lint:js:fix && npm run lint:css:fix",
     ...
   ]
