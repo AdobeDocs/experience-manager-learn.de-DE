@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 500
 exl-id: d1ebcaf4-cea6-4820-8b05-3a0c71749d33
-source-git-commit: 567d2803c5cee274104b38f847820f7665320195
+source-git-commit: b40bf5afc28cb350c470336e38f8ca127fb05d79
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '302'
 ht-degree: 0%
 
 ---
@@ -25,15 +25,15 @@ Auf der AEM-Site werden die Inhalte der Website gespeichert und verfasst. Das en
 
 ![Neue AEM-Site für Edge Delivery Services und universellen Editor](./assets/2-new-aem-site/new-site.png)
 
-Gehen Sie wie folgt vor, um eine neue AEM-Site zu erstellen:
-
+Befolgen Sie die [detaillierten Schritte in der Dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site), um eine neue AEM-Site zu erstellen.  Nachfolgend finden Sie eine zusammenfassende Liste der Schritte, einschließlich der in diesem Tutorial verwendeten Werte.
 1. **Erstellen einer neuen Site** in AEM Author. In diesem Tutorial wird die folgende Site-Benennung verwendet:
    * Site-Titel: `WKND (Universal Editor)`
    * Site-Name: `aem-wknd-eds-ue`
+
+      * Der Site-Namenswert muss mit dem Site-Pfadnamen übereinstimmen [zu `paths.json`](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/path-mapping) hinzugefügt.
+
 2. **Importieren Sie die neueste Vorlage** aus den [Edge Delivery Services mit der AEM-Authoring-Site-Vorlage](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases).
 3. **Benennen Sie die Site**, um dem GitHub-Repository-Namen zu entsprechen, und legen Sie die GitHub-URL als Repository-URL fest.
-
-Detaillierte Anweisungen finden Sie im Abschnitt [Erstellen und Bearbeiten einer neuen AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site)Site“ in Erste Schritte .
 
 ## Publish : Die neue Site für die Vorschau
 
