@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: e1fb7a58-2bba-4952-ad53-53ecf80836db
-source-git-commit: 9b10d79190d805b86884f033e040891655c3c890
+source-git-commit: 48b402642738abf512edab68b6074935cb7dd444
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '285'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Denken Sie daran, dass [AEM-Websites, die von Edge Delivery Services bereitgeste
 
 ![Neues Edge Delivery Services-Projekt](./assets/1-new-project/new-project.png)
 
-Gehen Sie wie folgt vor, um ein Edge Delivery Services-Code-Projekt zu erstellen, dessen Inhalt im universellen Editor bearbeitbar ist:
+Befolgen Sie die [detaillierten Schritte in der Dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) ein Edge Delivery Services-Code-Projekt, dessen Inhalt im universellen Editor bearbeitbar ist.  Nachfolgend finden Sie eine zusammenfassende Liste der Schritte, einschließlich der in diesem Tutorial verwendeten Werte.
 
 1. **Einrichten eines GitHub-Kontos.** Wenn Sie ein Projekt für Ihre Organisation erstellen, stellen Sie sicher, dass die Organisation über ein GitHub-Konto verfügt und Sie Mitglied sind.
 2. **Erstellen Sie ein neues Code** Projekt mithilfe der Projektvorlage [AEM Boilerplate XWalk](https://github.com/adobe-rnd/aem-boilerplate-xwalk).
@@ -36,4 +36,4 @@ Gehen Sie wie folgt vor, um ein Edge Delivery Services-Code-Projekt zu erstellen
 
 5. **Bearbeiten Sie die`paths.json`** Ihres neuen Projekts, um den AEM Author-Dienstpfad dem Stamm Ihrer Website zuzuordnen.
 
-Detailliertere Anweisungen finden Sie im Abschnitt [Erstellen Ihres GitHub-Projekts](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) in Erste Schritte.
+Dieses Git-Repository wird in das Kapitel [Lokale Entwicklungsumgebung](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/edge-delivery-services/developing/universal-editor/3-local-development-environment) geklont, in dem Code entwickelt wird.
