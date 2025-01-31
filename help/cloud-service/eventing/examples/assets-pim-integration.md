@@ -16,7 +16,6 @@ source-git-commit: 99aa43460a76460175123a5bfe5138767491252b
 workflow-type: ht
 source-wordcount: '1489'
 ht-degree: 100%
-
 ---
 
 # AEM Assets-Ereignisse für die PIM-Integration
