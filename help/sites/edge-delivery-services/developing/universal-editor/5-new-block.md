@@ -10,9 +10,9 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
-source-git-commit: fcd2d7ae7a0bddb0d80aada2f206be7629b676e3
+source-git-commit: 775821f37df87905ea176b11ecf0ed4a42d00940
 workflow-type: tm+mt
-source-wordcount: '1705'
+source-wordcount: '1742'
 ht-degree: 0%
 
 ---
@@ -322,6 +322,8 @@ Die Blockdefinition registriert den Block im universellen Editor. Im Folgenden f
 | `definition.plugins.xwalk.page.resourceType` | Definiert den Sling-Ressourcentyp für das Rendern der Komponente im universellen Editor. Verwenden Sie immer einen `core/franklin/components/block/v#/block` Ressourcentyp. |
 | `definition.plugins.xwalk.page.template.name` | Der Name des Blocks. Sie sollte in Kleinbuchstaben geschrieben und mit Bindestrichen versehen werden, damit sie zum Ordnernamen des Blocks passt. Dieser Wert wird auch zur Kennzeichnung der Instanz des Blocks im universellen Editor verwendet. |
 | `definition.plugins.xwalk.page.template.model` | Verknüpft diese Definition mit ihrer `model`, die die im universellen Editor für den Block angezeigten Bearbeitungsfelder steuert. Der Wert hier muss mit einem `model.id` Wert übereinstimmen. |
+| `definition.plugins.xwalk.page.template.classes` | Optionale -Eigenschaft, deren Wert dem `class` des Block-HTML-Elements hinzugefügt wird. Dies ermöglicht Varianten desselben Blocks. Der `classes` kann durch Hinzufügen [ Klassenfelds ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options) das -Modell des [ bearbeitbar ](#block-model). |
+
 
 Im Folgenden finden Sie ein Beispiel-JSON für die Blockdefinition:
 
