@@ -12,10 +12,10 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 1b493d85303e539e07ba8b080ed55ef2af18bfcb
+source-git-commit: 0e8b76b6e870978c6db9c9e7a07a6259e931bdcc
 workflow-type: tm+mt
-source-wordcount: '1947'
-ht-degree: 100%
+source-wordcount: '1924'
+ht-degree: 98%
 
 ---
 
@@ -109,7 +109,7 @@ Die folgenden Visualisierungen sind in den ELK- und Splunk-Dashboards verfügbar
   **ELK-Dashboard**:
   ![ELK-Dashboard – Max. Anfragen pro IP/POP](./assets/elk-edge-max-per-ip-pop.png)
 
-  **Splunk-Dashboard**:\
+  **Splunk-Dashboard**:
   ![Splunk-Dashboard – Max. Anfragen pro IP/POP](./assets/splunk-edge-max-per-ip-pop.png)
 
 - **Ursprungs-RPS pro Client-IP und POP**: Diese Visualisierung zeigt die maximale Anzahl von Anfragen pro IP/POP **am Ursprung**. Der Spitzenwert in der Visualisierung gibt die maximale Anzahl der Anfragen an.
@@ -168,10 +168,10 @@ data:
           count: all # count all requests
           groupBy:
             - reqProperty: clientIp
-        action: 
+        action:
           type: log
-          experimental_alert: true
-    #  Prevent attack at origin by blocking client for 5 minutes if they make more than 100 requests per second on average            
+          alert: true
+    #  Prevent attack at origin by blocking client for 5 minutes if they make more than 100 requests per second on average
       - name: prevent-dos-attacks-origin
         when:
           reqProperty: tier
@@ -183,17 +183,12 @@ data:
           count: fetches # count only fetches
           groupBy:
             - reqProperty: clientIp
-        action: 
+        action:
           type: log
-          experimental_alert: true   
-          
+          alert: true
 ```
 
 Beachten Sie, dass sowohl Ursprungs- als auch Edge-Regeln deklariert sind und dass die Warnhinweis-Eigenschaft auf `true` festgelegt ist, sodass Sie Warnhinweise erhalten können, wenn der Schwellenwert erreicht wird, was wahrscheinlich auf einen Angriff hinweist.
-
->[!NOTE]
->
->Das Präfix _experimental_ vor experimental_alert wird entfernt, wenn die Warnhinweisfunktion veröffentlicht wird. Wenn Sie am Early-Adopter-Programm teilnehmen möchten, senden Sie eine E-Mail an **<aemcs-waf-adopter@adobe.com>**.
 
 Es wird empfohlen, den Aktionstyp auf die anfängliche Protokollierung zu setzen, damit Sie den Traffic für einige Stunden oder Tage überwachen können, um sicherzustellen, dass der zulässige Traffic diese Raten nicht überschreitet. Wechseln Sie nach einigen Tagen in den Blockierungsmodus.
 
@@ -211,13 +206,13 @@ Zusätzlich zur Ratenbegrenzungs-Traffic-Filterregel wird empfohlen, [Anfrageumw
 kind: "CDN"
 version: "1"
 metadata:
-  envTypes: 
+  envTypes:
     - dev
     - stage
-    - prod  
-data:  
-  experimental_requestTransformations:
-    rules:            
+    - prod
+data:
+  requestTransformations:
+    rules:
       - name: unset-all-query-params-except-those-needed
         when:
           reqProperty: tier
@@ -229,7 +224,7 @@ data:
 
 ## Empfang von Warnhinweisen zu Traffic-Filterregeln {#receiving-alerts}
 
-Wenn die Traffic-Filterregel *experimental_alert: true* enthält, erhalten Sie einen Warnhinweis, wenn die Regel wie oben beschrieben zutrifft.
+Wie bereits erwähnt, wird ein Warnhinweis empfangen, wenn die Traffic *Filterregel &quot;*: true“ enthält, wenn die Regel abgeglichen wird.
 
 ## Maßnahmen bei Warnhinweisen {#acting-on-alerts}
 
@@ -242,7 +237,7 @@ In diesem Abschnitt werden Methoden zur Simulation eines DoS-Angriffs beschriebe
 >[!CAUTION]
 >
 > Führen Sie diese Schritte nicht in einer Produktionsumgebung aus. Die folgenden Schritte dienen nur Simulationszwecken.
-> 
+>
 >Wenn Sie einen Warnhinweis erhalten haben, der auf einen Anstieg des Traffics hinweist, fahren Sie mit dem Abschnitt [Analysieren von Traffic-Mustern](#analyzing-traffic-patterns) fort.
 
 Um einen Angriff zu simulieren, können Tools wie [Apache Benchmark](https://httpd.apache.org/docs/2.4/programs/ab.html), [Apache JMeter](https://jmeter.apache.org/), [Vegeta](https://github.com/tsenart/vegeta) und andere verwendet werden.
