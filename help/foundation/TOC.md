@@ -4,10 +4,10 @@ breadcrumb-title: AEM Foundation-Tutorials
 user-guide-description: Eine Sammlung von Videos und Tutorials für die Adobe Experience Manager Foundation.
 sub-product: Experience Manager
 index: y
-source-git-commit: 33415305f6aa183373eaef4bb4978a59325c8a32
+source-git-commit: f3e1bef93e53de19cf917a915c0fb836f7d3c194
 workflow-type: tm+mt
-source-wordcount: '244'
-ht-degree: 100%
+source-wordcount: '249'
+ht-degree: 97%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 100%
    + [Verwenden der Online-Revisionsbereinigung](./administration/use-online-revision-clean-up.md)
    + [Verwenden des Systemübersicht-Dashboards](./administration/use-the-system-overview-dashboard.md)
    + [URL-Umleitungen](./administration/url-redirection.md)
+   + [URL-Umleitungen mithilfe von Konfigurationen ohne Pipeline](./administration/url-redirects-using-pipeline-free-configurations.md)
 + Authentifizierung {#authentication}
    + [OKTA und AEM](authentication/okta-saml-integration.md)
    + [OAuth-Bereiche](authentication/oauth-code-sample-develop.md)
