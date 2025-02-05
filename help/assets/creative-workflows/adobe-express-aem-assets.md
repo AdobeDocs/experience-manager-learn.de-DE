@@ -12,14 +12,14 @@ doc-type: Feature Video
 duration: 583
 exl-id: 951bb255-e3e7-4bd5-9d48-7ff0469860af
 source-git-commit: 04037791eb5fe7a3b390b29d5c25f3260e5d41c9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '61'
-ht-degree: 59%
+ht-degree: 100%
 
 ---
 
 # Adobe Express-Integration mit AEM Assets
 
-Erfahren Sie, wie Sie die [Adobe Express](https://www.adobe.com/de/express/)-Integration mit AEM Assets verwenden können, um die Inhaltslieferketten zu optimieren und die Produktivität und Zugänglichkeit für alle Team-Mitglieder zu verbessern.
+Erfahren Sie, wie Sie mit der Integration von AEM Assets in [Adobe Express](https://www.adobe.com/de/express/) Content-Lieferketten optimieren und die Produktivität und Barrierefreiheit für alle Team-Mitglieder verbessern.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425193/?learn=on)

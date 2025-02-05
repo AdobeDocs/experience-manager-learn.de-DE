@@ -12,21 +12,21 @@ last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
 source-git-commit: d199ff3b9f4d995614c193f52dc90270f2283adf
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '792'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
 # Verwenden der schnellen Entwicklungsumgebung
 
-Erfahren **, wie Sie** schnelle Entwicklungsumgebung (RDE) in AEM as a Cloud Service verwenden. Stellen Sie Code und Inhalte für schnellere Entwicklungszyklen Ihres fast fertigen Codes aus Ihrer bevorzugten integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) in der RDE bereit.
+Erfahren Sie, wie Sie die schnelle Entwicklungsumgebung (Rapid Development Environment, RDE) in AEM as a Cloud Service **verwenden**. Stellen Sie Code und Inhalte für schnellere Entwicklungszyklen Ihres fast fertigen Codes aus Ihrer bevorzugten integrierten Entwicklungsumgebung (Integrated Development Environment, IDE) in der RDE bereit.
 
 Mithilfe des [AEM WKND-Sites-Projekts](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) lernen Sie, wie Sie verschiedene AEM-Artefakte in der RDE bereitstellen, indem Sie den AEM-RDE-Befehl `install` aus Ihrer bevorzugten IDE ausführen.
 
 - Bereitstellen des AEM-Code- und -Inhaltspakets („all“, „ui.apps“)
 - Bereitstellen des OSGi-Bundles und der OSGi-Konfigurationsdatei
-- Bereitstellung der Apache- und Dispatcher-Konfigurationen als ZIP-Datei
+- Bereitstellen der Apache- und Dispatcher-Konfigurationen als ZIP-Datei
 - Bereitstellen einzelner Dateien wie HTL, `.content.xml` (Dialog-XML)
 - Überprüfen anderer RDE-Befehle wie `status, reset and delete`
 
@@ -49,9 +49,9 @@ $ mvn clean package
 
 ## Bereitstellen von AEM-Artefakten mit dem AEM-RDE-Plug-in
 
-Stellen Sie zunächst sicher, dass Sie das [neueste `aio` CLI-Modul installiert haben](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli).
+Stellen Sie zunächst sicher, dass das [neueste `aio` CLI-Modul installiert ist](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli).
 
-Verwenden Sie dann den Befehl `aio aem:rde:install` , um verschiedene AEM-Artefakte bereitzustellen. Jetzt müssen Sie
+Verwenden Sie dann den Befehl `aio aem:rde:install`, um verschiedene AEM-Artefakte bereitzustellen. Nun geht es um das
 
 ### Bereitstellen von `all`- und `dispatcher`-Paketen
 
@@ -96,9 +96,9 @@ Erweitern wir nun die Komponente `Hello World Component` und stellen diese in de
    ...
    ```
 
-1. Überprüfen Sie die Änderungen auf der lokalen AEM SDK, indem Sie den Maven-Build durchführen oder einzelne Dateien synchronisieren.
+1. Überprüfen Sie die Änderungen im lokalen AEM-SDK, indem Sie den Maven-Build ausführen oder einzelne Dateien synchronisieren.
 
-1. Stellen Sie die Änderungen an der RDE über `ui.apps` Paket oder durch Bereitstellen der einzelnen Dialogfeld- und HTL-Dateien bereit:
+1. Stellen Sie die Änderungen in der RDE über das Paket `ui.apps` oder durch Bereitstellung der einzelnen Dialog- und HTL-Dateien bereit:
 
    ```shell
    # Using 'ui.apps' package
@@ -145,7 +145,7 @@ Um zu erfahren, wie Sie das OSGi-Bundle bereitstellen, erweitern wir die `HelloW
    ```
 
 1. Überprüfen Sie die Änderungen im lokalen AEM-SDK, indem Sie das `core`-Bundle per Maven-Befehl bereitstellen.
-1. Stellen Sie die Änderungen in der RDE bereit, indem Sie den folgenden Befehl ausführen.
+1. Stellen Sie die Änderungen in der RDE bereit, indem Sie den folgenden Befehl ausführen
 
    ```shell
    $ cd core
@@ -200,16 +200,16 @@ Die Apache- oder Dispatcher-Konfigurationsdateien **können nicht einzeln bereit
    $ aio aem:rde:install target/aem-guides-wknd.dispatcher.cloud-2.1.3-SNAPSHOT.zip
    ```
 
-1. Überprüfen Sie Änderungen an der RDE.
+1. Überprüfen Sie die Änderungen in der RDE.
 
 ### Bereitstellen von Konfigurationsdateien (YAML)
 
-Die Konfigurationsdateien für CDN, Wartungsaufgaben, Protokollweiterleitung und AEM-API-Authentifizierung können mit dem `install`-Befehl in der RDE bereitgestellt werden. Diese Konfigurationen werden als YAML-Dateien im `config` des AEM-Projekts verwaltet. Weitere Informationen finden [ unter „Unterstützte ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations)&quot;.
+Die Konfigurationsdateien für CDN, Wartungsaufgaben, Protokollweiterleitung und AEM-API-Authentifizierung können mit dem Befehl `install` in der RDE bereitgestellt werden. Diese Konfigurationen werden als YAML-Dateien im `config`-Ordner des AEM-Projekts verwaltet. Weitere Informationen finden Sie unter [Unterstützte Konfigurationen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations).
 
-Um zu erfahren, wie Sie die Konfigurationsdateien bereitstellen, erweitern wir die `cdn` Konfigurationsdatei und stellen sie in der RDE bereit.
+Um zu erfahren, wie Sie die Konfigurationsdateien bereitstellen, erweitern wir die `cdn`-Konfigurationsdatei und stellen sie in der RDE bereit.
 
-1. Öffnen Sie die `cdn.yaml` im Ordner `config` .
-1. Aktualisieren Sie die gewünschte Konfiguration, aktualisieren Sie beispielsweise das Ratenlimit auf 200 Anfragen pro Sekunde
+1. Öffnen Sie die Datei `cdn.yaml` im Ordner `config`.
+1. Aktualisieren Sie die gewünschte Konfiguration. Aktualisieren Sie beispielsweise die Ratenbegrenzung auf 200 Anfragen pro Sekunde.
 
    ```yaml
    kind: "CDN"
@@ -235,7 +235,7 @@ Um zu erfahren, wie Sie die Konfigurationsdateien bereitstellen, erweitern wir d
    ...
    ```
 
-1. Stellen Sie die Änderungen in der RDE bereit, indem Sie den folgenden Befehl ausführen.
+1. Stellen Sie die Änderungen in der RDE bereit, indem Sie den folgenden Befehl ausführen
 
    ```shell
    $ aio aem:rde:install -t env-config ./config/cdn.yaml
@@ -264,7 +264,7 @@ aem rde restart  Restart the author and publish of an RDE
 aem rde status   Get a list of the bundles and configs deployed to the current rde.
 ```
 
-Mit den oben genannten Befehlen kann Ihre RDE von Ihrer bevorzugten IDE aus verwaltet werden, um einen schnelleren Entwicklungs-/Bereitstellungslebenszyklus zu erzielen.
+Mithilfe der oben genannten Befehle kann Ihre RDE von Ihrer bevorzugten IDE aus verwaltet werden, um den Lebenszyklus der Entwicklung/Bereitstellung zu beschleunigen.
 
 ## Nächster Schritt
 
@@ -273,7 +273,7 @@ Erfahren Sie mehr über den [Entwicklungs-/Bereitstellungslebenszyklus mit der R
 
 ## Zusätzliche Ressourcen
 
-[Dokumentation zu RDE-Befehlen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
+[Dokumentation zu RDE-Befehlen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
 
 [Adobe I/O Runtime-CLI-Plug-in für Interaktionen mit schnellen Entwicklungsumgebungen von AEM](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 

@@ -1,6 +1,6 @@
 ---
-title: Website-Branding hinzufügen
-description: Definieren von globalem CSS, CSS-Variablen und Web Fonts für eine Edge Delivery Services-Site.
+title: Hinzufügen von Website-Branding
+description: Definieren Sie globales CSS, CSS-Variablen und Web-Schriften für eine Edge Delivery Services-Site.
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,32 +11,32 @@ jira: KT-15832
 duration: 900
 exl-id: a5cd9906-7e7a-43dd-a6b2-e80f67d37992
 source-git-commit: ceb82c48af10191cece72fe5f53dd79287f805d0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1308'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# Website-Branding hinzufügen
+# Hinzufügen von Website-Branding
 
-Richten Sie zunächst das gesamte Branding ein, indem Sie globale Stile aktualisieren, CSS-Variablen definieren und Web-Schriftarten hinzufügen. Diese grundlegenden Elemente stellen sicher, dass die Website konsistent und wartbar bleibt und auf der gesamten Website konsistent angewendet werden sollte.
+Richten Sie zunächst das gesamte Branding ein, indem Sie globale Stile aktualisieren, CSS-Variablen definieren und Web-Schriften hinzufügen. Diese grundlegenden Elemente stellen sicher, dass die Website einheitlich und wartbar bleibt. Sie sollten auf der gesamten Website konsistent angewendet werden.
 
-## GitHub-Problem erstellen
+## Erstellen eines GitHub-Problems
 
-Um alles zu organisieren, verwenden Sie GitHub, um die Arbeit zu verfolgen. Erstellen Sie zunächst ein GitHub-Problem für diesen Textkörper:
+Verwenden Sie GitHub, um alles zu organisieren und Arbeiten nachzuverfolgen. Erstellen Sie zunächst ein GitHub-Problem für diesen Arbeitsbereich:
 
-1. Navigieren Sie zum GitHub-Repository (weitere Informationen finden Sie [ Kapitel ](./1-new-code-project.md)Erstellen eines Code-Projekts„).
-2. Klicken Sie auf die Registerkarte **Probleme** und dann auf **Neues Problem**.
-3. Schreiben Sie **Titel** und **Beschreibung** für die zu erledigende Arbeit.
-4. Klicken Sie **Neue Anfrage senden**.
+1. Navigieren Sie zum GitHub-Repository (weitere Informationen im Kapitel [Erstellen eines Code-Projekts](./1-new-code-project.md)).
+2. Klicken Sie auf die Registerkarte **Issues** (Probleme) und dann auf **New issue** (Neues Problem).
+3. Geben Sie einen **Titel** und eine **Beschreibung** für die zu erledigende Aufgabe ein.
+4. Klicken Sie **Submit new issue** (Neues Problem senden).
 
-Das GitHub-Problem wird später beim [Erstellen einer Pull-Anfrage“ ](#merge-code-changes).
+Das GitHub-Problem wird später beim [Erstellen einer Pull-Anfrage](#merge-code-changes) verwendet.
 
-![GitHub - neue Anfrage erstellen](./assets/4-website-branding/github-issues.png)
+![GitHub – Erstellen eines neuen Problems](./assets/4-website-branding/github-issues.png)
 
 ## Erstellen einer Arbeitsverzweigung
 
-Um die Organisation beizubehalten und die Code-Qualität sicherzustellen, erstellen Sie für jeden Arbeitskörper eine neue Verzweigung. Dadurch wird verhindert, dass neuer Code die Leistung beeinträchtigt, und sichergestellt, dass Änderungen nicht live sind, bevor sie abgeschlossen sind.
+Um die Organisation beizubehalten und die Code-Qualität sicherzustellen, erstellen Sie eine neue Verzweigung für jeden Arbeitsbereich. Dadurch wird zum einen verhindert, dass neuer Code die Leistung beeinträchtigt, und zum anderen sichergestellt, dass Änderungen erst live geschaltet werden, wenn sie abgeschlossen sind.
 
 Erstellen Sie für dieses Kapitel, das sich auf die grundlegenden Stile der Website konzentriert, eine Verzweigung mit dem Namen `wknd-styles`.
 
@@ -48,23 +48,23 @@ $ git checkout -b wknd-styles
 
 ## Globales CSS
 
-Edge Delivery Services verwendet eine globale CSS-Datei unter `styles/styles.css`, um die allgemeinen Stile für die gesamte Website einzurichten. Der `styles.css` steuert Aspekte wie Farben, Schriftarten und Abstände und stellt sicher, dass alles auf der Site konsistent aussieht.
+Edge Delivery Services verwendet eine globale CSS-Datei unter `styles/styles.css`, um die allgemeinen Stile für die gesamte Website einzurichten. Die Datei `styles.css` steuert Aspekte wie Farben, Schriften und Abstände und stellt sicher, dass alles auf der Site konsistent aussieht.
 
-Globale CSS sollte unabhängig von Konstrukten auf niedrigerer Ebene, z. B. Blöcken, sein Augenmerk auf das allgemeine Erscheinungsbild der Site sowie gemeinsame visuelle Behandlungen richten.
+Globale CSS sollte unabhängig von Konstrukten auf niedrigerer Ebene, z. B. Blöcken, sein und auf das Look-and-Feel der Site sowie gemeinsame visuelle Abwandlungen ausgerichtet sein.
 
 Beachten Sie, dass globale CSS-Stile bei Bedarf überschrieben werden können.
 
 ### CSS-Variablen
 
-[CSS-Variablen](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) eignen sich hervorragend, um Design-Einstellungen wie Farben, Schriftarten und Größen zu speichern. Durch die Verwendung von Variablen können Sie diese Elemente an einem Ort ändern und auf der gesamten Site aktualisieren.
+[CSS-Variablen](https://developer.mozilla.org/de-de/docs/Web/CSS/Using_CSS_custom_properties) eignen sich hervorragend, um Design-Einstellungen wie Farben, Schriften und Größen zu speichern. Durch Verwendung von Variablen können Sie diese Elemente zentral ändern und für die gesamte Site aktualisieren.
 
 Gehen Sie wie folgt vor, um mit der Anpassung der CSS-Variablen zu beginnen:
 
-1. Öffnen Sie die `styles/styles.css` im Code-Editor.
-2. Suchen Sie die `:root` Deklaration, in der globale CSS-Variablen gespeichert werden.
+1. Öffnen Sie die Datei `styles/styles.css` in einem Code-Editor.
+2. Suchen Sie die `:root`-Deklaration, in der globale CSS-Variablen gespeichert werden.
 3. Ändern Sie die Farb- und Schriftvariablen, um sie an die WKND-Marke anzupassen.
 
-Hier ein Beispiel:
+Dies ist ein Beispiel:
 
 
 ```css
@@ -90,15 +90,15 @@ Hier ein Beispiel:
 
 Erkunden Sie die anderen Variablen im Abschnitt `:root` und überprüfen Sie die Standardeinstellungen.
 
-Wenn Sie eine Website entwickeln und dieselben CSS-Werte wiederholen, sollten Sie ggf. neue Variablen erstellen, um die Stile einfacher zu verwalten. Beispiele für andere CSS-Eigenschaften, die von CSS-Variablen profitieren können, sind: `border-radius`, `padding`, `margin` und `box-shadow`.
+Wenn Sie eine Website entwickeln und dieselben CSS-Werte wiederholt verwenden, sollten Sie ggf. neue Variablen erstellen, um die Stilverwaltung zu vereinfachen. Beispiele für andere CSS-Eigenschaften, die von CSS-Variablen profitieren können, sind: `border-radius`, `padding`, `margin` und `box-shadow`.
 
-### Nackte Elemente
+### Einfache Elemente
 
-Bare Elemente werden direkt über ihren Elementnamen formatiert, anstatt eine CSS-Klasse zu verwenden. Anstatt beispielsweise eine `.page-heading` CSS-Klasse zu gestalten, werden Stile mithilfe von `h1 { ... }` auf das `h1` angewendet.
+Einfache Elemente werden direkt über ihren Elementnamen formatiert und nicht über eine CSS-Klasse. Statt beispielsweise die CSS-Klasse `.page-heading` zu formatieren, werden Stile mithilfe von `h1 { ... }` auf das `h1`-Element angewendet.
 
-In der `styles/styles.css`-Datei wird eine Reihe von Basisstilen auf bloße HTML-Elemente angewendet. Edge Delivery Services-Websites haben bei der Verwendung bloßer Elemente Priorität, da sie mit der nativen semantischen HTML von Edge Delivery Service übereinstimmen.
+In der Datei `styles/styles.css` wird eine Reihe von Basisstilen auf einfache HTML-Elemente angewendet. Edge Delivery Services-Websites priorisieren die Verwendung einfacher Elemente, da sie dem nativ semantischen HTML von Edge Delivery Service entsprechen.
 
-Zur Anpassung an das WKND-Branding gestalten wir einige einfache Elemente in `styles.css`:
+Formatieren wir nun einige einfache Elemente in `styles.css`, um mit dem WKND-Branding übereinzustimmen:
 
 ```css
 /* styles/styles.css */
@@ -119,15 +119,15 @@ h2::after {
 ...
 ```
 
-Diese Stile stellen sicher, dass `h2` Elemente, sofern sie nicht überschrieben werden, mit dem WKND-Branding konsistent formatiert sind, wodurch eine klare visuelle Hierarchie erstellt werden kann. Die teilweise gelbe Unterstreichung unter jedem `h2` verleiht den Überschriften eine unverwechselbare Note.
+Diese Stile stellen sicher, dass `h2`-Elemente, sofern sie nicht überschrieben werden, entsprechend dem WKND-Branding formatiert sind, wodurch eine klare visuelle Hierarchie entsteht. Die teilweise gelbe Unterstreichung unter jedem `h2`-Element bewirkt eine deutliche Hervorhebung der Überschriften.
 
 ### Abgeleitete Elemente
 
-In Edge Delivery Services verbessern die `scripts.js` und der `aem.js` des Projekts automatisch bestimmte bloße HTML-Elemente basierend auf ihrem Kontext innerhalb der HTML.
+In Edge Delivery Services verbessern die Dateien `scripts.js` und `aem.js` des Projekts automatisch bestimmte einfache HTML-Elemente basierend auf ihrem Kontext innerhalb der HTML.
 
-Anker(`<a>`)-Elemente beispielsweise, die in ihrer eigenen Zeile erstellt wurden - und nicht inline mit dem umgebenden Text - werden als Schaltflächen auf Grundlage dieses Kontexts abgeleitet. Diese Anker werden automatisch mit einem Container umschlossen, der mit der CSS-Klasse `button-container` `div` ist, und dem Ankerelement wird eine `button` CSS-Klasse hinzugefügt.
+Zum Beispiel wird für Anker-Elemente (`<a>`), die in ihrer eigenen Zeile definiert wurden (anstatt inline mit dem umgebenden Text), auf Grundlage dieses Kontexts abgeleitet, dass es sich um Schaltflächen handelt. Diese Anker werden automatisch mit einem Container `div` mit der CSS-Klasse `button-container` umschlossen, und dem Ankerelement wird die CSS-Klasse `button` hinzugefügt.
 
-Wenn beispielsweise ein Link in einer eigenen Zeile erstellt wird, aktualisiert Edge Delivery Services JavaScript sein DOM wie folgt:
+Wenn beispielsweise ein Link in einer eigenen Zeile erstellt wird, aktualisiert das JavaScript von Edge Delivery Services sein DOM wie folgt:
 
 ```html
 <p class="button-container">
@@ -135,9 +135,9 @@ Wenn beispielsweise ein Link in einer eigenen Zeile erstellt wird, aktualisiert 
 </p>
 ```
 
-Diese Schaltflächen können an die WKND-Marke angepasst werden. Dadurch werden Schaltflächen als gelbe Rechtecke mit schwarzem Text angezeigt.
+Diese Schaltflächen können an die WKND-Marke angepasst werden. Bei ihr sollen Schaltflächen als gelbe Rechtecke mit schwarzem Text angezeigt werden.
 
-Im Folgenden finden Sie ein Beispiel für die Gestaltung der „abgeleiteten Schaltflächen“ in `styles.css`:
+Im Folgenden finden Sie ein Beispiel für die Formatierung der „abgeleiteten Schaltflächen“ in `styles.css`:
 
 ```css
 /* styles/styles.css */
@@ -170,18 +170,18 @@ button {
 }
 ```
 
-Dieses CSS definiert die grundlegenden Schaltflächenstile und enthält WKND-spezifische Behandlungen wie Großbuchstaben, gelben Hintergrund und schwarzen Text. Die `background-color`- und `color` verwenden CSS-Variablen, damit der Schaltflächenstil an den Farben der Marke ausgerichtet bleibt. Dadurch wird sichergestellt, dass Schaltflächen auf der gesamten Site konsistent formatiert werden und gleichzeitig flexibel bleiben.
+Dieses CSS definiert die grundlegenden Schaltflächenstile und enthält WKND-spezifische Behandlungen wie Text in Großbuchstaben, gelben Hintergrund und schwarzen Text. Die Eigenschaften `background-color` und `color` verwenden CSS-Variablen, damit der Schaltflächenstil an den Farben der Marke ausgerichtet bleibt. Dieser Ansatz stellt sicher, dass Schaltflächen auf der gesamten Site konsistent formatiert werden und gleichzeitig flexibel bleiben.
 
-## Web Fonts
+## Web-Schriften
 
-Edge Delivery Services-Projekte optimieren die Verwendung von Web-Schriftarten, um eine hohe Leistung zu erzielen und die Auswirkungen auf Lighthouse-Bewertungen zu minimieren. Diese Methode stellt ein schnelles Rendering sicher, ohne die visuelle Identität der Site zu beeinträchtigen. So implementieren Sie Webfonts effizient für eine optimale Leistung.
+Edge Delivery Services-Projekte optimieren die Verwendung von Web-Schriften, um eine hohe Leistung sicherzustellen und die Auswirkungen auf Lighthouse-Bewertungen zu minimieren. Diese Methode ermöglicht schnelles Rendern, ohne die visuelle Identität der Site zu beeinträchtigen. Nachstehend erfahren Sie, wie Sie Web-Schriften effizient implementieren, um eine optimale Leistung zu erzielen.
 
-### Schriftflächen
+### Schriftarten
 
-Fügen Sie benutzerdefinierte Web-Schriftarten mithilfe von CSS-`@font-face` in der `styles/fonts.css` hinzu. Durch Hinzufügen des `@font-faces` zu `fonts.css` wird sichergestellt, dass Web-Schriftarten zum optimalen Zeitpunkt geladen werden, wodurch Lighthouse-Werte beibehalten werden können.
+Fügen Sie benutzerdefinierte Web-Schriften mithilfe von CSS-Deklarationen mit `@font-face` in der Datei `styles/fonts.css` hinzu. Durch Hinzufügen der `@font-faces` zu `fonts.css` wird sichergestellt, dass Web-Schriften zum optimalen Zeitpunkt geladen werden, wodurch Lighthouse-Bewertungen beibehalten werden können.
 
 1. Öffnen Sie `styles/fonts.css`.
-2. Fügen Sie die folgenden `@font-face` hinzu, um die Markenschriftarten WKND einzuschließen: `Asar` und `Source Sans Pro`.
+2. Fügen Sie die folgenden Deklarationen von `@font-face` hinzu, um die WKND-Markenschriftarten einzuschließen: `Asar` und `Source Sans Pro`.
 
 ```css
 /* styles/fonts.css */
@@ -250,13 +250,13 @@ Fügen Sie benutzerdefinierte Web-Schriftarten mithilfe von CSS-`@font-face` in 
 }
 ```
 
-Die in diesem Tutorial verwendeten Schriftarten werden von Google Fonts bezogen, Webschriftarten können jedoch von jedem Schriftartenanbieter bezogen werden, einschließlich [Adobe Fonts](https://fonts.adobe.com/).
+Die in diesem Tutorial verwendeten Schriftarten werden von Google Fonts bezogen, Web-Schriften können jedoch von jedem Schriftartenanbieter bezogen werden, einschließlich [Adobe Fonts](https://fonts.adobe.com/).
 
-+++Verwenden lokaler Web-Schriftartdateien
++++Verwenden lokaler Web-Schriftdateien
 
-Alternativ können Web Fonts-Dateien in das Projekt im `/fonts` kopiert und in den `@font-face`-Deklarationen referenziert werden.
+Alternativ können Web-Schriftdateien in das Projekt im Ordner `/fonts` kopiert und in den `@font-face`-Deklarationen referenziert werden.
 
-In diesem Tutorial werden die Remote-Webfonts verwendet, die gehostet werden, damit sie leichter befolgt werden können.
+In diesem Tutorial werden die gehosteten Remote-Web-Schriften verwendet, damit Sie dem Tutorial leichter folgen können.
 
 ```css
 /* styles/fonts.css */
@@ -271,7 +271,7 @@ In diesem Tutorial werden die Remote-Webfonts verwendet, die gehostet werden, da
 
 +++
 
-Aktualisieren Sie abschließend die `styles/styles.css` CSS-Variablen, um die neuen Schriftarten zu verwenden:
+Aktualisieren Sie abschließend die CSS-Variablen in `styles/styles.css` so, dass sie die neuen Schriftarten verwenden:
 
 ```css
 /* styles/styles.css */
@@ -285,15 +285,15 @@ Aktualisieren Sie abschließend die `styles/styles.css` CSS-Variablen, um die ne
 }
 ```
 
-`roboto-fallback` und `roboto-condensed-fallback` sind Fallback-Schriftarten, die im Abschnitt [Fallback-](#fallback-fonts)&quot; aktualisiert werden, um sie zur Unterstützung der benutzerdefinierten `Asar` und `Source Sans Pro` Web-Schriftarten auszurichten.
+`roboto-fallback` und `roboto-condensed-fallback` sind Fallback-Schriftarten, die im Abschnitt [Fallback-Schriftarten](#fallback-fonts) aktualisiert werden, um sie zur Unterstützung der benutzerdefinierten Web-Schriften `Asar` und `Source Sans Pro` auszurichten.
 
-### Ersatzschriftarten
+### Ersatzschriften
 
-Web-Schriftarten beeinträchtigen oft die Leistung aufgrund ihrer Größe, erhöhen möglicherweise die Werte für Cumulative Layout Shift (CLS) und verringern die Gesamtwerte für Lighthouse. Um die sofortige Textanzeige beim Laden von Web-Schriftarten sicherzustellen, verwenden Edge Delivery Services-Projekte browsernative Fallback-Schriftarten. Dieser Ansatz hilft, ein reibungsloses Benutzererlebnis aufrechtzuerhalten, während die gewünschte Schriftart angewendet wird.
+Web-Schriften beeinträchtigen aufgrund ihrer Größe oft die Leistung, erhöhen möglicherweise die Werte für die kumulative Layout-Verschiebung (Cumulative Layout Shift, CLS) und verringern die Lighthouse-Gesamtbewertung. Um die sofortige Textanzeige beim Laden von Web-Schriften sicherzustellen, verwenden Edge Delivery Services-Projekte Browser-native Schriftarten als Fallback. Dieser Ansatz hilft, ein reibungsloses Benutzererlebnis aufrechtzuerhalten, während die gewünschte Schriftart angewendet wird.
 
-Um die beste Fallback-Schriftart auszuwählen, verwenden Sie Adobe [Helix Font Fallback Chrome Extension](https://www.aem.live/developer/font-fallback), die eine eng übereinstimmende Schriftart für Browser bestimmt, bevor die benutzerdefinierte Schriftart geladen wird. Die resultierenden Fallback-Schriftartdeklarationen sollten der `styles/styles.css`-Datei hinzugefügt werden, um die Leistung zu verbessern und ein nahtloses Erlebnis für Benutzende sicherzustellen.
+Um die beste Fallback-Schriftart auszuwählen, verwenden Sie die [Chrome-Erweiterung „Helix Font Fallback“](https://www.aem.live/developer/font-fallback) von Adobe, die eine stark übereinstimmende Schriftart für Browser festlegt, bevor die benutzerdefinierte Schriftart geladen wird. Die resultierenden Deklarationen der Fallback-Schriften sollten der Datei `styles/styles.css` hinzugefügt werden, um die Leistung zu verbessern und ein nahtloses Benutzererlebnis sicherzustellen.
 
-Um die [Helix Font Fallback Chrome-Erweiterung](https://www.aem.live/developer/font-fallback) zu verwenden, stellen Sie sicher, dass auf die Web-Seite Web Fonts in den gleichen Varianten angewendet werden wie auf der Edge Delivery Services-Website. Dieses Tutorial zeigt die Erweiterung auf [wknd.site](http://wknd.site/us/en.html). Wenden Sie beim Entwickeln einer Website die Erweiterung auf die Site an, an der gearbeitet wird, und nicht auf [wknd.site](http://wknd.site/us/en.html).
+Um die [Chrome-Erweiterung „Helix Font Fallback“](https://www.aem.live/developer/font-fallback) zu verwenden, stellen Sie sicher, dass Web-Schriften auf die Web-Seite in den gleichen Varianten angewendet werden wie auf der Edge Delivery Services-Website. Dieses Tutorial zeigt die Erweiterung für [wknd.site](http://wknd.site/us/en.html). Wenden Sie beim Entwickeln einer Website die Erweiterung auf die Site an, an der gearbeitet wird, und nicht auf [wknd.site](http://wknd.site/us/en.html).
 
 ```css
 /* styles/styles.css */
@@ -318,7 +318,7 @@ Um die [Helix Font Fallback Chrome-Erweiterung](https://www.aem.live/developer/f
 ...
 ```
 
-Fügen Sie die Ersatzschriftfamilie-Namen den CSS-Variablen für Schriftarten in `styles/styles.css` nach den „echten“ Schriftfamiliennamen hinzu.
+Fügen Sie die Namen der Fallback-Schriftfamilien den CSS-Variablen für Schriftarten in `styles/styles.css` hinter den „echten“ Schriftfamiliennamen hinzu.
 
 ```css
 /* styles/styles.css */
@@ -332,11 +332,11 @@ Fügen Sie die Ersatzschriftfamilie-Namen den CSS-Variablen für Schriftarten in
 }
 ```
 
-## Vorschau der Entwicklung
+## Entwicklungsvorschau
 
-Beim Hinzufügen von CSS lädt die lokale Entwicklungsumgebung der AEM-CLI die Änderungen automatisch neu, sodass schnell und einfach zu sehen ist, wie sich die CSS auf den Block auswirkt.
+Beim Hinzufügen von CSS lädt die lokale Entwicklungsumgebung der AEM-CLI die Änderungen automatisch neu, sodass schnell und einfach zu sehen ist, wie sich das CSS auf den Block auswirkt.
 
-![Entwicklungsvorschau der WKND-Marken-CSS](./assets/4-website-branding/preview.png)
+![Entwicklungsvorschau des CSS für die WKND-Marke](./assets/4-website-branding/preview.png)
 
 
 ## Herunterladen der endgültigen CSS-Dateien
@@ -346,17 +346,17 @@ Sie können die aktualisierten CSS-Dateien über die folgenden Links herunterlad
 * [`styles.css`](https://raw.githubusercontent.com/davidjgonzalez/aem-wknd-eds-ue/refs/heads/main/styles/styles.css)
 * [`fonts.css`](https://raw.githubusercontent.com/davidjgonzalez/aem-wknd-eds-ue/refs/heads/main/styles/fonts.css)
 
-## Verknüpfen der CSS-Dateien
+## Linten der CSS-Datei
 
-Achten Sie darauf[ dass Ihr Code häufig ](./3-local-development-environment.md#linting) wird, um sicherzustellen, dass er sauber und konsistent ist. Regelmäßiges Linting hilft, Probleme frühzeitig zu erkennen und reduziert die Entwicklungszeit. Denken Sie daran, dass Sie Ihre Arbeit erst dann mit dem Hauptzweig zusammenführen können, wenn alle Verknüpfungsprobleme behoben sind!
+Achten Sie auf [regelmäßiges Linten](./3-local-development-environment.md#linting) Ihrer Code-Änderungen, um Sauberkeit und Konsistenz sicherzustellen. Regelmäßiges Linten hilft, Probleme frühzeitig zu erkennen, und reduziert die allgemeine Entwicklungszeit. Denken Sie daran, dass Sie Ihre Arbeit erst dann mit der Hauptverzweigung zusammenführen können, wenn alle Linging-Probleme behoben sind.
 
 ```bash
 $ npm run lint:css
 ```
 
-## Code-Änderungen zusammenführen
+## Zusammenführen von Code-Änderungen
 
-Führen Sie die Änderungen in der `main` auf GitHub zusammen, um zukünftige Arbeiten an diesen Aktualisierungen zu erstellen.
+Führen Sie die Änderungen in der Verzweigung `main` auf GitHub zusammen, damit zukünftige Arbeiten auf diesen Aktualisierungen aufbauen.
 
 ```bash
 $ git add .
@@ -364,13 +364,13 @@ $ git commit -m "Add global CSS, CSS variables, and web fonts"
 $ git push origin wknd-styles
 ```
 
-Sobald die Änderungen an die `wknd-styles` Verzweigung gepusht wurden, erstellen Sie eine Pull-Anfrage auf GitHub, um sie in der `main` Verzweigung zusammenzuführen.
+Sobald die Änderungen an die Verzweigung `wknd-styles` übertragen wurden, erstellen Sie eine Pull-Anfrage auf GitHub, um sie mit der Verzweigung `main` zusammenzuführen.
 
-1. Navigieren Sie im Kapitel [Neues Projekt erstellen](./1-new-code-project.md) zum GitHub-Repository.
-2. Klicken Sie auf die **Pull-**&quot; und wählen Sie **Neue Pull-Anfrage** aus.
+1. Navigieren Sie zum GitHub-Repository aus dem Kapitel [Erstellen eines neuen Projekts](./1-new-code-project.md).
+2. Klicken Sie auf die Registerkarte **Pull requests** (Pull-Anfragen) und wählen Sie **New pull request** (Neue Pull-Anfrage) aus.
 3. Legen Sie `wknd-styles` als Quellverzweigung und `main` als Zielverzweigung fest.
 4. Überprüfen Sie die Änderungen und klicken Sie auf **Pull-Anfrage erstellen**.
-5. Fügen Sie in den Details zur Pull **Anfrage Folgendes hinzu**:
+5. Fügen Sie in den Details zur Pull-Anfrage **Folgendes hinzu**:
 
    ```
    Add basic global CSS, CSS variables, and web fonts (including fallback fonts) to support the WKND brand.
@@ -382,11 +382,11 @@ Sobald die Änderungen an die `wknd-styles` Verzweigung gepusht wurden, erstelle
    - After: https://wknd-styles--wknd-aem-eds-ue--davidjgonzalez.aem.live/
    ```
 
-   * Die `Fix #1` verweist auf das zuvor erstellte GitHub-Problem.
-   * Die Test-URLs teilen AEM Code Sync mit, welche Verzweigungen für die Validierung und den Vergleich verwendet werden sollen. Die Nachher-URL verwendet die Arbeitszweig-`wknd-styles`, um zu überprüfen, wie sich der Code-Wechsel auf die Website-Leistung auswirkt.
+   * `Fix #1` verweist auf das zuvor erstellte GitHub-Problem.
+   * Die Test-URLs teilen AEM Code Sync mit, welche Verzweigungen für die Validierung und den Vergleich verwendet werden sollen. Die „Nachher“-URL verwendet die Arbeitsverzweigung `wknd-styles`, um zu überprüfen, wie sich die Code-Änderungen auf die Leistung der Website auswirken.
 
-6. Klicken Sie **Pull-Anfrage erstellen**.
-7. Warten Sie, bis die GitHub-App für die [AEM](./1-new-code-project.md)Code-Synchronisierung **Qualitätsprüfungen abgeschlossen**. Wenn sie fehlschlagen, beheben Sie die Fehler und führen Sie die Prüfungen erneut aus.
-8. Sobald die Prüfungen bestanden sind, **fusionieren Sie die Pull-** mit `main`.
+6. Klicken Sie auf **Create pull request** (Pull-Anfrage erstellen).
+7. Warten Sie, bis die GitHub-Anwendung [AEM Code Sync](./1-new-code-project.md) die **Qualitätsprüfungen abgeschlossen hat**. Falls diese fehlschlagen, beheben Sie die Fehler und führen Sie die Prüfungen erneut aus.
+8. Sobald die Prüfungen bestanden sind, **führen Sie die Pull-Anfrage in `main` zusammen**.
 
 Nachdem die Änderungen in `main` zusammengeführt wurden, werden sie jetzt als in der Produktion bereitgestellt betrachtet, und die neue Entwicklung kann auf Grundlage dieser Aktualisierungen fortgesetzt werden.

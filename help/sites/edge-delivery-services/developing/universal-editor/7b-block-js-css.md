@@ -1,6 +1,6 @@
 ---
-title: Entwickeln eines Bausteins mit CSS und JS
-description: Entwickeln eines Bausteins mit CSS und JavaScript für Edge Delivery Services, der mit dem universellen Editor bearbeitet werden kann.
+title: Entwickeln eines Blocks mit CSS und JS
+description: Entwickeln Sie einen Block mit CSS und JavaScript für Edge Delivery Services, der mit dem universellen Editor bearbeitet werden kann.
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -9,41 +9,41 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
-workflow-type: tm+mt
+exl-id: 41c4cfcf-0813-46b7-bca0-7c13de31a20e
+source-git-commit: f8eb7b72ba58f03284947bc32d12cc001df9250c
+workflow-type: ht
 source-wordcount: '768'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Entwickeln eines Blocks mit CSS und JavaScript
 
-# Entwickeln eines Bausteins mit CSS und JavaScript
+Im [vorherigen Kapitel](./7b-block-js-css.md) wurde die Blockformatierung allein mit CSS behandelt. Nun soll es um die Entwicklung eines Blocks mit JavaScript und CSS gehen.
 
-Im [ Kapitel ](./7b-block-js-css.md) wurde die Formatierung eines Blocks ausschließlich mit CSS behandelt. Jetzt verlagert sich der Fokus auf die Entwicklung eines Bausteins mit JavaScript und CSS.
-
-In diesem Beispiel werden drei Möglichkeiten zur Erweiterung eines Blocks veranschaulicht:
+In diesem Beispiel werden drei Möglichkeiten zur Erweiterung eines Blocks gezeigt:
 
 1. Hinzufügen benutzerdefinierter CSS-Klassen.
-1. Verwenden von Ereignis-Listenern zum Hinzufügen von Bewegungen.
-1. Geschäftsbedingungen, die optional in den Text des Teasers aufgenommen werden können.
+1. Verwenden von Ereignis-Listenern zum Hinzufügen von Bewegung.
+1. Verarbeiten von Nutzungsbedingungen, die optional in den Teaser-Text aufgenommen werden können.
 
 ## Häufige Anwendungsfälle
 
 Dieser Ansatz ist besonders in folgenden Szenarien nützlich:
 
 - **Externe CSS-Verwaltung:** Wenn das CSS des Blocks außerhalb von Edge Delivery Services verwaltet wird und nicht mit seiner HTML-Struktur übereinstimmt.
-- **Zusätzliche Attribute:** Wenn zusätzliche Attribute wie [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) für Barrierefreiheit oder [Microdata](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata) erforderlich sind.
+- **Zusätzliche Attribute:** Wenn zusätzliche Attribute wie [ARIA](https://developer.mozilla.org/de-de/docs/Web/Accessibility/ARIA) zwecks Barrierefreiheit oder [Microdata](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata) erforderlich sind.
 - **JavaScript-Verbesserungen:** Wenn interaktive Funktionen wie Ereignis-Listener erforderlich sind.
 
-Diese Methode beruht auf der browsernativen Manipulation von JavaScript-DOMs, erfordert jedoch Vorsicht bei der Änderung des DOM, insbesondere beim Verschieben von Elementen. Solche Änderungen können das Authoring-Erlebnis des universellen Editors beeinträchtigen. Idealerweise sollte das -Inhaltsmodell [ Blocks sorgfältig ](./5-new-block.md#block-model) werden, um die Notwendigkeit umfangreicher DOM-Änderungen zu minimieren.
+Diese Methode beruht auf der Browser-nativen Manipulation von JavaScript-DOMs, erfordert jedoch Vorsicht bei der Änderung des DOM, insbesondere beim Verschieben von Elementen. Solche Änderungen können das Authoring-Erlebnis mit dem universellen Editor beeinträchtigen. Idealerweise sollte das [Inhaltsmodell](./5-new-block.md#block-model) des Blocks sorgfältig gestaltet werden, um die Notwendigkeit umfangreicher DOM-Änderungen zu minimieren.
 
-## HTML blockieren
+## Block – HTML
 
-Um sich der Blockentwicklung anzunähern, überprüfen Sie zunächst das von Edge Delivery Services angezeigte DOM. Die Struktur wird mit JavaScript verbessert und mit CSS formatiert.
+Überprüfen Sie zur Blockentwicklung zunächst das von Edge Delivery Services angezeigte DOM. Die Struktur wird mit JavaScript erweitert und mit CSS formatiert.
 
 >[!BEGINTABS]
 
->[!TAB DOM zum Dekorieren]
+>[!TAB Zu dekorierendes DOM]
 
 Im Folgenden finden Sie das DOM des Teaser-Blocks, das mithilfe von JavaScript und CSS dekoriert werden soll.
 
@@ -81,18 +81,18 @@ Im Folgenden finden Sie das DOM des Teaser-Blocks, das mithilfe von JavaScript u
 ...
 ```
 
->[!TAB So finden Sie das DOM]
+>[!TAB Finden des DOM]
 
 Um das zu dekorierende DOM zu finden, öffnen Sie die Seite mit dem nicht dekorierten Block in Ihrer lokalen Entwicklungsumgebung, wählen Sie den Block aus und überprüfen Sie das DOM.
 
-![Inspect-Block-DOM](./assets/7a-block-css/inspect-block-dom.png)
+![Überprüfen des Block-DOM](./assets/7a-block-css/inspect-block-dom.png)
 
 >[!ENDTABS]
 
 
-## JavaScript blockieren
+## Block – JavaScript
 
-Um einem Baustein JavaScript-Funktionen hinzuzufügen, erstellen Sie eine JavaScript-Datei im Verzeichnis des Bausteins mit demselben Namen wie der Baustein, z. B. `/blocks/teaser/teaser.js`.
+Um einem Block JavaScript-Funktionen hinzuzufügen, erstellen Sie eine JavaScript-Datei im Verzeichnis des Blocks mit demselben Namen wie der Block, z. B. `/blocks/teaser/teaser.js`.
 
 Die JavaScript-Datei sollte eine Standardfunktion exportieren:
 
@@ -100,13 +100,13 @@ Die JavaScript-Datei sollte eine Standardfunktion exportieren:
 export default function decorate(block) { ... }
 ```
 
-Die Standardfunktion akzeptiert das DOM-Element bzw. die Baumstruktur, die den Block auf der Edge Delivery Services-HTML darstellt, und enthält die benutzerdefinierte JavaScript, die ausgeführt wird, wenn der Block gerendert wird.
+Die Standardfunktion nutzt das DOM-Element bzw. die Struktur, die dem Block im Edge Delivery Services-HTML-Code entspricht, und umfasst das benutzerdefinierte JavaScript, der beim Rendern des Blocks ausgeführt wird.
 
-In diesem Beispiel führt JavaScript drei Hauptaktionen durch:
+In diesem Beispiel führt das JavaScript drei Hauptaktionen durch:
 
-1. Fügt der CTA-Schaltfläche einen Ereignis-Listener hinzu, wodurch das Bild beim Bewegen des Mauszeigers vergrößert wird.
-1. Fügt semantische CSS-Klassen zu den -Elementen des Blocks hinzu, die bei der Integration vorhandener CSS-Design-Systeme nützlich sind.
-1. Fügt eine spezielle CSS-Klasse zu Absätzen hinzu, die mit `Terms and conditions:` beginnen.
+1. Hinzufügen eines Ereignis-Listeners zur CTA-Schaltfläche, wodurch das Bild, wenn sich der Mauszeiger darüber bewegt, gezoomt wird.
+1. Hinzufügen semantischer CSS-Klassen zu den Elementen des Blocks, die bei der Integration vorhandener CSS-Design-Systeme nützlich sind.
+1. Hinzufügen einer speziellen CSS-Klasse zu Absätzen hinzu, die mit `Terms and conditions:` beginnen.
 
 [!BADGE /blocks/teaser/teaser.js]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -171,15 +171,15 @@ export default function decorate(block) {
 }
 ```
 
-## CSS blockieren
+## Block – CSS
 
-Wenn Sie ein `teaser.css` im [ Kapitel erstellt haben, ](./7a-block-css.md) Sie es oder benennen Sie es in `teaser.css.bak` um, da dieses Kapitel anderes CSS für den Teaser-Block implementiert.
+Wenn Sie im [vorherigen Kapitel](./7a-block-css.md) die Datei `teaser.css` erstellt haben, löschen Sie sie oder benennen Sie sie in `teaser.css.bak` um. Denn in diesem Kapitel geht es darum, ein anderes CSS für den Teaser-Block zu implementieren.
 
-Erstellen Sie eine `teaser.css` Datei im Ordner des Blocks. Diese Datei enthält den CSS-Code, der den Block formatiert. Dieser CSS-Code zielt auf die -Elemente des Blocks und die spezifischen CSS-Semantikklassen ab, die vom JavaScript in `teaser.js` hinzugefügt wurden.
+Erstellen Sie die Datei `teaser.css` im Ordner des Blocks. Diese Datei enthält den CSS-Code, der den Block formatiert. Dieser CSS-Code zielt auf die Blockelemente und die spezifischen semantischen CSS-Klassen ab, die vom JavaScript in `teaser.js` hinzugefügt wurden.
 
-Bare Elemente können weiterhin direkt oder mit den benutzerdefinierten CSS-Klassen formatiert werden. Bei komplexeren Blöcken kann die Anwendung semantischer CSS-Klassen dazu beitragen, das CSS verständlicher und verwaltbarer zu machen, insbesondere wenn Sie mit größeren Teams über längere Zeiträume hinweg arbeiten.
+Einfache Elemente können weiterhin direkt oder mit den benutzerdefinierten CSS-Klassen formatiert werden. Bei komplexeren Blöcken kann die Anwendung semantischer CSS-Klassen zu verständlicherem und besser wartbarem CSS beitragen. Dies gilt insbesondere dann, wenn mit größeren Teams über längere Zeiträume hinweg gearbeitet wird.
 
-[Wie zuvor ](./7a-block-css.md#develop-a-block-with-css) Sie CSS auf `.block.teaser` ein, um Konflikte mit anderen Blöcken zu vermeiden.
+Beziehen Sie [wie zuvor ](./7a-block-css.md#develop-a-block-with-css) das CSS auf `.block.teaser`, um Konflikte mit anderen Blöcken zu vermeiden.
 
 [!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -292,11 +292,11 @@ Bare Elemente können weiterhin direkt oder mit den benutzerdefinierten CSS-Klas
 }
 ```
 
-## Geschäftsbedingungen hinzufügen
+## Hinzufügen von Nutzungsbedingungen
 
-Die obige Implementierung unterstützt jetzt speziell formatierte Absätze, die mit dem `Terms and conditions:` beginnen. Um diese Funktion im universellen Editor zu überprüfen, aktualisieren Sie den Textinhalt des Teaser-Blocks, sodass er Geschäftsbedingungen enthält.
+Durch die obige Implementierung werden speziell formatierte Absätze unterstützt, die mit dem Text `Terms and conditions:` (Nutzungsbedingungen) beginnen. Um diese Funktion im universellen Editor zu überprüfen, aktualisieren Sie den Textinhalt des Teaser-Blocks so, dass er die Nutzungsbedingungen umfasst.
 
-Führen Sie die Schritte im Abschnitt [Erstellen eines Blocks](./6-author-block.md) aus und bearbeiten Sie den Text, um am Ende einen **Geschäftsbedingungen**-Absatz einzufügen:
+Führen Sie die Schritte im Abschnitt [Erstellen eines Blocks](./6-author-block.md) aus und bearbeiten Sie den Text, um am Ende den Absatz **Nutzungsbedingungen** einzufügen:
 
 ```
 WKND Adventures
@@ -306,17 +306,17 @@ Join us on one of our next adventures. Browse our list of curated experiences an
 Terms and conditions: By signing up, you agree to the rules for participation and booking.
 ```
 
-Stellen Sie sicher, dass der Absatz in der lokalen Entwicklungsumgebung mit dem Stil Geschäftsbedingungen gerendert wird. Denken Sie daran, dass diese Code-Änderungen im universellen Editor erst dann widergespiegelt werden, wenn sie [in eine Verzweigung auf GitHub verschoben) ](#preview-in-universal-editor), für die der universelle Editor konfiguriert wurde.
+Stellen Sie sicher, dass der Absatz in der lokalen Entwicklungsumgebung mit dem Stil „Nutzungsbedingungen“ gerendert wird. Denken Sie daran, dass diese Code-Änderungen erst dann im universellen Editor widergespiegelt werden, wenn sie [in eine Verzweigung auf GitHub übertragen](#preview-in-universal-editor) werden, für deren Verwendung der universelle Editor konfiguriert wurde.
 
-## Vorschau der Entwicklung
+## Entwicklungsvorschau
 
-Beim Hinzufügen von CSS und JavaScript lädt die lokale Entwicklungsumgebung der AEM-CLI die Änderungen neu, sodass schnell und einfach visualisiert werden kann, wie sich Code auf den Baustein auswirkt. Bewegen Sie den Mauszeiger über die CTA und überprüfen Sie, ob das Bild des Teasers ein- und ausgeblendet wird.
+Beim Hinzufügen von CSS und JavaScript lädt die lokale Entwicklungsumgebung der AEM-CLI die Änderungen neu, sodass die Auswirkungen des Codes auf den Block schnell und einfach visualisiert werden können. Bewegen Sie den Mauszeiger über den CTA und überprüfen Sie, ob das Bild des Teasers vergrößert und verkleinert wird.
 
 ![Lokale Entwicklungsvorschau des Teasers mithilfe von CSS und JS](./assets/7b-block-js-css/local-development-preview.png)
 
-## Code fusseln
+## Linten des Codes
 
-Achten Sie darauf[ Ihren Code regelmäßig ](./3-local-development-environment.md#linting) ändern, um ihn sauber und konsistent zu halten. Regelmäßige Links helfen, Probleme frühzeitig zu erkennen und so die Entwicklungszeit zu verkürzen. Denken Sie daran, dass Sie Ihre Entwicklungsarbeit erst dann mit der `main` zusammenführen können, wenn alle Verknüpfungsprobleme behoben sind!
+Achten Sie auf [regelmäßiges Linten](./3-local-development-environment.md#linting) Ihrer Code-Änderungen, um Sauberkeit und Konsistenz beizubehalten. Regelmäßiges Linten hilft, Probleme frühzeitig zu erkennen und so die Entwicklungszeit insgesamt zu verkürzen. Denken Sie daran, dass Sie Ihre Entwicklungsarbeit erst dann mit der `main`-Verzweigung zusammenführen können, wenn alle Lint-Probleme behoben sind.
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -326,7 +326,7 @@ $ npm run lint
 
 ## Vorschau im universellen Editor
 
-Um Änderungen im universellen Editor von AEM anzuzeigen, fügen Sie sie hinzu, übertragen Sie sie und übertragen Sie sie in die Git-Repository-Verzweigung, die vom universellen Editor verwendet wird. Dadurch wird sichergestellt, dass die Blockimplementierung das Authoring-Erlebnis nicht beeinträchtigt.
+Um Änderungen im universellen Editor von AEM anzuzeigen, können Sie sie hinzufügen, übertragen und in die Git-Repository-Verzweigung verschieben, die vom universellen Editor verwendet wird. Dadurch wird sichergestellt, dass die Blockimplementierung das Authoring-Erlebnis nicht beeinträchtigt.
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -336,7 +336,6 @@ $ git commit -m "CSS and JavaScript implementation for teaser block"
 $ git push origin teaser
 ```
 
-Jetzt können Sie die Änderungen im universellen Editor in der Vorschau anzeigen, wenn Sie den `?ref=teaser` Abfrageparameter hinzufügen.
+Sie können jetzt Sie eine Vorschau der Änderungen im universellen Editor anzeigen, wenn Sie den Abfrageparameter `?ref=teaser` hinzufügen.
 
 ![Teaser im universellen Editor](./assets/7b-block-js-css/universal-editor-preview.png)
-

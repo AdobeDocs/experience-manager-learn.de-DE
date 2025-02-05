@@ -1,6 +1,6 @@
 ---
-title: Entwickeln eines Bausteins mit CSS
-description: Entwickeln Sie einen Baustein mit CSS für Edge Delivery Services, der mit dem universellen Editor bearbeitet werden kann.
+title: Entwickeln eines Blocks mit CSS
+description: Entwickeln Sie einen Block mit CSS für Edge Delivery Services, der mit dem universellen Editor bearbeitet werden kann.
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -9,33 +9,33 @@ level: Beginner
 doc-type: Tutorial
 jira: KT-15832
 duration: 900
-source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
-workflow-type: tm+mt
+exl-id: 14cda9d4-752b-4425-a469-8b6f283ce1db
+source-git-commit: f8eb7b72ba58f03284947bc32d12cc001df9250c
+workflow-type: ht
 source-wordcount: '437'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Entwickeln eines Blocks mit CSS
 
-# Entwickeln eines Bausteins mit CSS
+Blöcke in Edge Delivery Services werden mit CSS formatiert. Die CSS-Datei für einen Block wird im Verzeichnis des Blocks gespeichert und hat denselben Namen wie der Block. Die CSS-Datei für einen Block mit dem Namen `teaser` befindet sich zum Beispiel unter `blocks/teaser/teaser.css`.
 
-Blöcke in Edge Delivery Services werden mit CSS formatiert. Die CSS-Datei für einen Block wird im Verzeichnis des Blocks gespeichert und hat denselben Namen wie der Block. Beispielsweise befindet sich die CSS-Datei für einen Block mit dem Namen `teaser` unter `blocks/teaser/teaser.css`.
+Ein Block sollte idealerweise nur CSS für die Formatierung benötigen, ohne für das Ändern des DOM oder das Hinzufügen von CSS-Klassen auf JavaScript angewiesen zu sein. Die Notwendigkeit von JavaScript hängt von der [Inhaltsmodellierung](./5-new-block.md#block-model) des Blocks und deren Komplexität ab. Bei Bedarf kann [Block-JavaScript](./7b-block-js-css.md) hinzugefügt werden.
 
-Idealerweise sollte ein Block nur CSS für die Formatierung benötigen, ohne sich darauf zu verlassen, dass JavaScript das DOM ändert oder CSS-Klassen hinzufügt. Die Notwendigkeit von JavaScript hängt von der Inhaltsmodellierung [ Bausteins ](./5-new-block.md#block-model) seiner Komplexität ab. Bei Bedarf kann [JavaScript blockieren](./7b-block-js-css.md) hinzugefügt werden.
+Bei einem reinen CSS-Ansatz werden die (meist) einfachen semantischen HTML-Elemente des Blocks zielgerichtet und formatiert.
 
-Bei einem reinen CSS-Ansatz werden die (meist) nackten semantischen HTML-Elemente des Bausteins zielgerichtet und formatiert.
+## Block – HTML
 
-## HTML blockieren
-
-Um zu verstehen, wie Sie einen Baustein formatieren, überprüfen Sie zunächst das von Edge Delivery Services angezeigte DOM, da es für die Formatierung verfügbar ist. Das DOM finden Sie, indem Sie den Baustein überprüfen, der von der lokalen Entwicklungsumgebung der AEM-CLI bereitgestellt wird. Verwenden Sie nicht das DOM des universellen Editors, da es leicht abweicht.
+Um zu verstehen, wie Sie einen Block formatieren, überprüfen Sie zunächst das von Edge Delivery Services angezeigte DOM, da nur dieses für die Formatierung verfügbar ist. Das DOM finden Sie, indem Sie den Block überprüfen, der von der lokalen Entwicklungsumgebung der AEM-CLI bereitgestellt wird. Verwenden Sie nicht das DOM des universellen Editors, da es leicht abweicht.
 
 >[!BEGINTABS]
 
->[!TAB DOM zu Stil]
+>[!TAB DOM für Stil]
 
-Im Folgenden finden Sie das DOM des Teaser-Blocks, das das Ziel für die Formatierung ist.
+Im Folgenden finden Sie das DOM des Teaser-Blocks, welches das Ziel für die Formatierung ist.
 
-Beachten Sie das `<p class="button-container">...`, das [automatisch erweitert](./4-website-branding.md#inferred-elements) als abgeleitetes Element von Edge Delivery Services JavaScript angezeigt wird.
+Beachten Sie, dass `<p class="button-container">...` durch das JavaScript von Edge Delivery Services als abgeleitetes Element [automatisch erweitert](./4-website-branding.md#inferred-elements) wird.
 
 ```html
 ...
@@ -75,15 +75,15 @@ Beachten Sie das `<p class="button-container">...`, das [automatisch erweitert](
 
 Um das zu formatierende DOM zu finden, öffnen Sie die Seite mit dem nicht formatierten Block in Ihrer lokalen Entwicklungsumgebung, wählen Sie den Block aus und überprüfen Sie das DOM.
 
-![Inspect-Block-DOM](./assets/7a-block-css/inspect-block-dom.png)
+![Überprüfen des Block-DOM](./assets/7a-block-css/inspect-block-dom.png)
 
 >[!ENDTABS]
 
-## CSS blockieren
+## Block – CSS
 
-Erstellen Sie eine neue CSS-Datei im -Ordner des Blocks, wobei der Name des Blocks als Dateiname verwendet wird. Beispiel: Für den **Teaser**-Block befindet sich die Datei unter `/blocks/teaser/teaser.css`.
+Erstellen Sie eine neue CSS-Datei im Ordner des Blocks, wobei Sie den Namen des Blocks als Dateinamen verwenden. Die Datei für den **Teaser**-Block befindet sich zum Beispiel unter `/blocks/teaser/teaser.css`.
 
-Diese CSS-Datei wird automatisch geladen, wenn JavaScript eines Edge Delivery Services ein DOM-Element auf der Seite erkennt, das einen Teaser-Block darstellt.
+Diese CSS-Datei wird automatisch geladen, wenn das JavaScript von Edge Delivery Services ein DOM-Element auf der Seite erkennt, das einen Teaser-Block darstellt.
 
 [!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -208,15 +208,15 @@ However since these element can only appear in the second/last div per our block
 }
 ```
 
-## Vorschau der Entwicklung
+## Entwicklungsvorschau
 
-Da das CSS in das Code-Projekt geschrieben wurde, werden die Änderungen durch die Hot-Neuladung der AEM-CLI übernommen, sodass schnell und einfach nachvollziehbar ist, wie sich das CSS auf den Block auswirkt.
+Da das CSS in das Code-Projekt geschrieben wird, lädt die AEM-CLI die Änderungen neu, sodass die Auswirkungen des CSS auf den Block schnell und einfach verstanden werden können.
 
 ![Nur CSS-Vorschau](./assets/7a-block-css/local-development-preview.png)
 
-## Code fusseln
+## Linten des Codes
 
-Achten Sie darauf[ dass Ihr Code häufig ](./3-local-development-environment.md#linting) wird, um sicherzustellen, dass er sauber und konsistent ist. Linting hilft, Probleme frühzeitig zu erkennen, und reduziert die gesamte Entwicklungszeit. Denken Sie daran, dass Sie Ihre Entwicklungsarbeit erst dann mit `main` zusammenführen können, wenn alle Ihre Verknüpfungsprobleme gelöst sind!
+Achten Sie auf [häufiges Linten](./3-local-development-environment.md#linting) Ihrer Code-Änderungen, um Sauberkeit und Konsistenz sicherzustellen. Linten hilft, Probleme frühzeitig zu erkennen, und reduziert die allgemeine Entwicklungszeit. Denken Sie daran, dass Sie Ihre Entwicklungsarbeit erst dann mit `main` zusammenführen können, wenn alle Lint-Probleme behoben sind.
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -226,7 +226,7 @@ $ npm run lint:css
 
 ## Vorschau im universellen Editor
 
-Um Änderungen im universellen Editor von AEM anzuzeigen, fügen Sie sie hinzu, übertragen Sie sie und übertragen Sie sie in die Git-Repository-Verzweigung, die vom universellen Editor verwendet wird. Mit diesem Schritt wird sichergestellt, dass die Blockimplementierung das Authoring-Erlebnis nicht beeinträchtigt.
+Um Änderungen im universellen Editor von AEM anzuzeigen, können Sie sie hinzufügen, übertragen und in die Git-Repository-Verzweigung verschieben, die vom universellen Editor verwendet wird. Mit diesem Schritt wird sichergestellt, dass die Blockimplementierung das Authoring-Erlebnis nicht beeinträchtigt.
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -236,7 +236,6 @@ $ git commit -m "Add CSS-only implementation for teaser block"
 $ git push origin teaser
 ```
 
-Jetzt können Sie die Änderungen im universellen Editor in der Vorschau anzeigen, wenn Sie den `?ref=teaser` Abfrageparameter hinzufügen.
+Sie können jetzt Sie eine Vorschau der Änderungen im universellen Editor anzeigen, wenn Sie den Abfrageparameter `?ref=teaser` hinzufügen.
 
 ![Teaser im universellen Editor](./assets/7a-block-css/universal-editor-preview.png)
-

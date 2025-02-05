@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
 source-git-commit: e8ce91b0be577ec6cf8f3ab07ba9ff09c7e7a6ab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '582'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -103,11 +103,11 @@ ht-degree: 96%
          + [Neues Code-Projekt](./edge-delivery-services/developing/universal-editor/1-new-code-project.md)
          + [Neue AEM-Site](./edge-delivery-services/developing/universal-editor/2-new-aem-site.md)
          + [Lokale Entwicklungsumgebung](./edge-delivery-services/developing/universal-editor/3-local-development-environment.md)
-         + [Website-Branding](./edge-delivery-services/developing/universal-editor/4-website-branding.md)
+         + [Branding der Website](./edge-delivery-services/developing/universal-editor/4-website-branding.md)
          + [Neuer Block](./edge-delivery-services/developing/universal-editor/5-new-block.md)
          + [Erstellen des Blocks](./edge-delivery-services/developing/universal-editor/6-author-block.md)
-         + [Nur mit CSS blockieren](./edge-delivery-services/developing/universal-editor/7a-block-css.md)
-         + [Mit CSS und JS blockieren](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
+         + [Block nur mit CSS](./edge-delivery-services/developing/universal-editor/7a-block-css.md)
+         + [Block mit CSS und JS](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
    + Anleitung {#how-to}
       + [RSS-Feeds](edge-delivery-services/how-to/rss.md)
       + [Freigabe in Social Media](edge-delivery-services/how-to/social-media-sharing.md)
