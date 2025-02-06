@@ -12,10 +12,10 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 907a313a9ed7e92358f0aa2503f8333fb26ba35d
-workflow-type: ht
-source-wordcount: '949'
-ht-degree: 100%
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
+workflow-type: tm+mt
+source-wordcount: '961'
+ht-degree: 96%
 
 ---
 
@@ -76,13 +76,14 @@ Es gibt zwei Funktionen in [ACS AEM Commons](https://adobe-consulting-services.g
 
 #### Redirect Map Manager
 
-[Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) ermöglicht AEM Admins die einfache Wartung und Veröffentlichung von [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)-Dateien, ohne direkt auf den Apache-Webserver zugreifen oder diesen neu starten zu müssen. Mit dieser Funktion können Benutzende über eine Konsole in AEM Weiterleitungsregeln erstellen, aktualisieren und löschen, ohne dabei auf Hilfe durch das Entwicklungs-Team oder eine AEM-Bereitstellung angewiesen zu sein. Der Redirect Manager ist sowohl mit **AEM as a Cloud Service** kompatibel (siehe Strategie [Pipeline-freie URL-Umleitungen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)) als auch mit **AEM 6.x** kompatibel.
+[Redirect Map Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-map-manager/index.html) ermöglicht AEM Admins die einfache Wartung und Veröffentlichung von [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html)-Dateien, ohne direkt auf den Apache-Webserver zugreifen oder diesen neu starten zu müssen. Mit dieser Funktion können Benutzende über eine Konsole in AEM Weiterleitungsregeln erstellen, aktualisieren und löschen, ohne dabei auf Hilfe durch das Entwicklungs-Team oder eine AEM-Bereitstellung angewiesen zu sein. Der Umleitungs-Map-Manager ist sowohl mit **AEM as a Cloud Service** (siehe [Pipeline-freie URL-Umleitungen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects) Strategie und das zugehörige [Tutorial](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/url-redirects-using-pipeline-free-configurations#acs-commons---redirect-map-manager)) als auch mit **AEM 6.x**.
 
 #### Redirect Manager
 
 [Redirect Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html) ermöglicht es Benutzenden in AEM, Umleitungen von AEM einfach zu verwalten und zu veröffentlichen. Die Implementierung basiert auf dem Java™-Servlet-Filter, es besteht also ein typischer JVM-Ressourcenverbrauch. Diese Funktion beseitigt auch die Abhängigkeit vom AEM-Entwicklungs-Team und von den AEM-Bereitstellungen. Redirect Manager ist mit **AEM as a Cloud Service** und **AEM 6.x** kompatibel. Während die ursprüngliche, weitergeleitete Anfrage auf den AEM Publish-Service abzielen muss, speichern (die meisten) CDNs 301/302 im Cache, um 301/302 zu generieren, sodass eine Edge-/CDN-Weiterleitung nachfolgender Anfragen möglich ist.
 
-[Redirect Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html) unterstützt auch die Strategie [Pipeline-freier URL-Umleitungen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects) für **AEM as a Cloud Service** durch [Kompilieren von Umleitungen in eine Textdatei](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html) für [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html), sodass im Apache-Webserver verwendete Umleitungen aktualisiert werden können, ohne dass ein direkter Zugriff darauf oder ein Neustart erforderlich ist. In diesem Szenario trifft die ursprüngliche Umleitungsanfrage den Apache-Webserver und nicht den AEM Publish-Dienst.
+[Redirect Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html) unterstützt auch die Strategie [Pipeline-freier URL-Umleitungen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects) für **AEM as a Cloud Service** durch [Kompilieren von Umleitungen in eine Textdatei](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/subpages/rewritemap.html) für [Apache RewriteMap](https://httpd.apache.org/docs/2.4/rewrite/rewritemap.html), sodass im Apache-Webserver verwendete Umleitungen aktualisiert werden können, ohne dass ein direkter Zugriff darauf oder ein Neustart erforderlich ist. Weitere Informationen finden Sie im [Tutorial](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/administration/url-redirects-using-pipeline-free-configurations#acs-commons---redirect-manager).
+In diesem Szenario trifft die ursprüngliche Umleitungsanfrage den Apache-Webserver und nicht den AEM Publish-Dienst.
 
 ### Die `Redirect`-Seiteneigenschaft
 

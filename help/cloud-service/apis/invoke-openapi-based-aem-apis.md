@@ -12,10 +12,10 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 24c641e7-ab4b-45ee-bbc7-bf6b88b40276
-source-git-commit: 3e91387368943b1b0d62c57f8172a0306758b28f
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '1803'
-ht-degree: 1%
+source-wordcount: '1831'
+ht-degree: 8%
 
 ---
 
@@ -47,7 +47,7 @@ Zum Durchführen dieses Tutorials benötigen Sie Folgendes:
 
 - Das Beispielprojekt [WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project) muss darin bereitgestellt werden.
 
-- Zugriff auf die [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/).
+- Rufen Sie die [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/) auf.
 
 - Installieren Sie [Node.js](https://nodejs.org/de/) auf Ihrem lokalen Computer, um die NodeJS-Beispielanwendung auszuführen.
 
@@ -172,15 +172,15 @@ Konfigurieren Sie anschließend das ADC-Projekt, um AEM-APIs hinzuzufügen, sein
 
 ## Konfigurieren der AEM-Instanz zur Aktivierung der ADC-Projektkommunikation
 
-Um die ClientID der OAuth-Server-zu-Server-Anmeldedaten des ADC-Projekts für die Kommunikation mit der AEM-Instanz zu aktivieren, müssen Sie die AEM-Instanz konfigurieren.
+Um die Client-ID der OAuth-Server-zu-Server-Anmeldeinformationen des ADC-Projekts für die Kommunikation mit der AEM-Instanz zu aktivieren, müssen Sie die AEM-Instanz konfigurieren.
 
-Definieren Sie dazu die Konfiguration in der `config.yaml` im AEM-Projekt. Stellen Sie dann die `config.yaml` mithilfe der Konfigurations-Pipeline in der Cloud Manager bereit.
+Definieren Sie dazu im AEM-Projekt die Konfiguration in der Datei `config.yaml`. Stellen Sie dann die Datei `config.yaml` mithilfe der Konfigurations-Pipeline in Cloud Manager bereit.
 
-1. Suchen oder erstellen Sie im AEM-Projekt die `config.yaml`-Datei aus dem `config`.
+1. Suchen Sie im AEM-Projekt im Ordner `config` nach der Datei `config.yaml` oder erstellen Sie diese.
 
-   ![Finden Sie die Konfiguration YAML](assets/locate-config-yaml.png)
+   ![Suchen nach der Datei „config.yaml“](assets/locate-config-yaml.png)
 
-1. Fügen Sie der `config.yaml`-Datei die folgende Konfiguration hinzu.
+1. Fügen Sie der Datei `config.yaml` die folgende Konfiguration hinzu:
 
    ```yaml
    kind: "API"
@@ -195,11 +195,15 @@ Definieren Sie dazu die Konfiguration in der `config.yaml` im AEM-Projekt. Stell
 
    Ersetzen Sie `<ADC Project's OAuth Server-to-Server credential ClientID>` durch die tatsächliche Client-ID der OAuth Server-zu-Server-Anmeldeinformationen des ADC-Projekts. Der in diesem Tutorial verwendete API-Endpunkt ist nur auf der Autorenebene verfügbar, aber für andere APIs kann die YAML-Konfiguration auch über einen Knoten _publish_ oder _preview_ verfügen.
 
-1. Übertragen Sie die Konfigurationsänderungen in das Git-Repository und übertragen Sie die Änderungen in das Remote-Repository.
+   >[!CAUTION]
+   >
+   > Zu Demozwecken wird für alle Umgebungen dieselbe Client-ID verwendet. Es wird empfohlen, für mehr Sicherheit und Kontrolle eine separate Client-ID pro Umgebung (dev, stage, prod) zu verwenden.
 
-1. Stellen Sie die oben genannten Änderungen mithilfe der Konfigurations-Pipeline in der Cloud Manager bereit. Beachten Sie, dass die `config.yaml`-Datei auch mithilfe von Befehlszeilen-Tools in einer RDE installiert werden kann.
+1. Übertragen Sie die Konfigurationsänderungen per Commit an das Git-Repository und per Push an das Remote-Repository.
 
-   ![Bereitstellen von config.yaml](assets/config-pipeline.png)
+1. Stellen Sie die oben genannten Änderungen mithilfe der Konfigurations-Pipeline in Cloud Manager bereit. Beachten Sie, dass die Datei `config.yaml` mithilfe von Befehlszeilenprogrammen auch in einer schnellen Entwicklungsumgebung installiert werden kann.
+
+   ![Bereitstellen der Datei „config.yaml“](assets/config-pipeline.png)
 
 ## Entwickeln einer NodeJS-Beispielanwendung
 

@@ -12,10 +12,11 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 99aa43460a76460175123a5bfe5138767491252b
-workflow-type: ht
-source-wordcount: '1489'
-ht-degree: 100%
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
+workflow-type: tm+mt
+source-wordcount: '1517'
+ht-degree: 98%
+
 ---
 
 # AEM Assets-Ereignisse für die PIM-Integration
@@ -125,6 +126,11 @@ Definieren Sie dazu im AEM-Projekt die Konfiguration in der Datei `config.yaml`.
   ```
 
   Ersetzen Sie `<ADC Project's OAuth Server-to-Server credential ClientID>` durch die tatsächliche Client-ID der OAuth-Server-zu-Server-Anmeldeinformationen des ADC-Projekts.
+
+  >[!CAUTION]
+  >
+  > Zu Demozwecken wird für alle Umgebungen dieselbe Client-ID verwendet. Es wird empfohlen, für mehr Sicherheit und Kontrolle eine separate Client-ID pro Umgebung (dev, stage, prod) zu verwenden.
+
 
 - Übertragen Sie die Konfigurationsänderungen per Commit an das Git-Repository und per Push an das Remote-Repository.
 

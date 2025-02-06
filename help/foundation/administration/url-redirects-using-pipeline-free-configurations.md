@@ -11,10 +11,10 @@ duration: 0
 last-substantial-update: 2025-02-05T00:00:00Z
 jira: KT-15739
 thumbnail: KT-15739.jpeg
-source-git-commit: f3e1bef93e53de19cf917a915c0fb836f7d3c194
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '954'
-ht-degree: 6%
+source-wordcount: '962'
+ht-degree: 7%
 
 ---
 
@@ -236,10 +236,13 @@ Nach erfolgreicher Bereitstellung sind die URL-Umleitungen aktiv und das Marketi
 
 Testen wir die URL-Umleitungen mithilfe des Browsers oder `curl` Befehls. Rufen Sie die `/ski/westcoast` URL auf und überprüfen Sie, ob sie zu `/us/en/adventures/tahoe-skiing.html` weiterleitet.
 
-
 ## Zusammenfassung
 
 In diesem Tutorial haben Sie gelernt, wie Sie URL-Umleitungen mithilfe von Konfigurationen ohne Pipeline in der AEM as a Cloud Service-Umgebung verwalten.
 
 Das Marketing-Team kann die URL-Umleitungen als Schlüssel-Wert-Paare in einer Textdatei verwalten und in das DAM hochladen oder ACS Commons - Umleitungs-Map-Manager oder Umleitungs-Manager verwenden. Die Dispatcher-Konfigurationen werden aktualisiert, um die URL-Umleitungen als RewriteMap zu laden und sie auf die eingehenden Anfragen anzuwenden.
 
+## Zusätzliche Ressourcen
+
+- [Pipeline-freie URL-Umleitungen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)
+- [URL-Umleitungen](url-redirection.md)

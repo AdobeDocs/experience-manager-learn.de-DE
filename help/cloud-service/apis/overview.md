@@ -12,7 +12,7 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2024-11-20T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: d5745a17af6b72b1871925dd7c50cbbb152012fe
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
 source-wordcount: '1024'
 ht-degree: 2%
@@ -75,7 +75,7 @@ Die [OpenAPI Spezifikation](https://swagger.io/specification/) (früher bekannt 
 
 In zukünftigen Versionen werden weitere OpenAPI-basierte AEM-APIs hinzugefügt, um weitere Anwendungsfälle zu unterstützen.
 
-## Authentifizierungs-Unterstützung{#authentication-support}
+### Authentifizierungs-Unterstützung{#authentication-support}
 
 Die OpenAPI-basierten AEM-APIs unterstützen die folgenden Authentifizierungsmethoden:
 
@@ -95,7 +95,7 @@ Die OpenAPI-basierten AEM-APIs unterstützen die folgenden Authentifizierungsmet
 | Sicherheitsaspekte | Sicheres Speichern sensibler Anmeldeinformationen (`client_id`, `client_secret`) in Backend-Systemen. | Die Benutzer authentifizieren sich und erhalten ihr eigenes temporäres Zugriffstoken. Sicheres Speichern sensibler Anmeldeinformationen (`client_id`, `client_secret`) in Backend-Systemen. |
 | Genehmigungstyp | _client_credentials_ | _authorization_code_ |
 
-## Zugriff auf Adobe-APIs und zugehörige Konzepte{#accessing-adobe-apis-and-related-concepts}
+### Zugriff auf Adobe-APIs und zugehörige Konzepte{#accessing-adobe-apis-and-related-concepts}
 
 Bevor Sie auf Adobe-APIs zugreifen, müssen Sie diese Schlüsselkonzepte verstehen:
 

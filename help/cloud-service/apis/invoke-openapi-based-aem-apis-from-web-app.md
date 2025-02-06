@@ -12,10 +12,10 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-01-09T00:00:00Z
 duration: 0
 exl-id: dc35256a-3873-413f-b282-90948efd5f31
-source-git-commit: 7fe1116de7cf69b3b7ce14ac0b97906f8986546b
+source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
 workflow-type: tm+mt
-source-wordcount: '2433'
-ht-degree: 1%
+source-wordcount: '2462'
+ht-degree: 8%
 
 ---
 
@@ -426,7 +426,7 @@ Zum Durchführen dieses Tutorials benötigen Sie Folgendes:
 
 - Das Beispielprojekt [WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project) muss darin bereitgestellt werden.
 
-- Zugriff auf die [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/).
+- Rufen Sie die [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/) auf.
 
 - Installieren Sie [Node.js](https://nodejs.org/de/) auf Ihrem lokalen Computer, um die NodeJS-Beispielanwendung auszuführen.
 
@@ -499,13 +499,13 @@ Konfigurieren Sie anschließend das ADC-Projekt für den Zugriff auf die Assets 
 
 Um die ClientID für die OAuth-Web-App-Anmeldeinformationen des ADC-Projekts für die Kommunikation mit der AEM-Instanz zu aktivieren, müssen Sie die AEM-Instanz konfigurieren.
 
-Definieren Sie dazu die Konfiguration in der `config.yaml` im AEM-Projekt. Stellen Sie dann die `config.yaml` mithilfe der Konfigurations-Pipeline in der Cloud Manager bereit.
+Definieren Sie dazu im AEM-Projekt die Konfiguration in der Datei `config.yaml`. Stellen Sie dann die Datei `config.yaml` mithilfe der Konfigurations-Pipeline in Cloud Manager bereit.
 
-1. Suchen oder erstellen Sie im AEM-Projekt die `config.yaml`-Datei aus dem `config`.
+1. Suchen Sie im AEM-Projekt im Ordner `config` nach der Datei `config.yaml` oder erstellen Sie diese.
 
-   ![Finden Sie die Konfiguration YAML](assets/web-app/locate-config-yaml.png)
+   ![Suchen nach der Datei „config.yaml“](assets/web-app/locate-config-yaml.png)
 
-1. Fügen Sie der `config.yaml`-Datei die folgende Konfiguration hinzu.
+1. Fügen Sie der Datei `config.yaml` die folgende Konfiguration hinzu:
 
    ```yaml
    kind: "API"
@@ -520,17 +520,22 @@ Definieren Sie dazu die Konfiguration in der `config.yaml` im AEM-Projekt. Stell
 
    Ersetzen Sie `<ADC Project's OAuth Web App credential ClientID>` durch die tatsächliche Client-ID der OAuth-Web-App-Anmeldeinformationen des ADC-Projekts. Der in diesem Tutorial verwendete API-Endpunkt ist nur auf der Autorenebene verfügbar, aber für andere APIs kann die YAML-Konfiguration auch über einen Knoten _publish_ oder _preview_ verfügen.
 
-1. Übertragen Sie die Konfigurationsänderungen in das Git-Repository und übertragen Sie die Änderungen in das Remote-Repository.
+   >[!CAUTION]
+   >
+   > Zu Demozwecken wird für alle Umgebungen dieselbe Client-ID verwendet. Es wird empfohlen, für mehr Sicherheit und Kontrolle eine separate Client-ID pro Umgebung (dev, stage, prod) zu verwenden.
 
-1. Stellen Sie die oben genannten Änderungen mithilfe der Konfigurations-Pipeline in der Cloud Manager bereit. Beachten Sie, dass die `config.yaml`-Datei auch mithilfe von Befehlszeilen-Tools in einer RDE installiert werden kann.
 
-   ![Bereitstellen von config.yaml](assets/deploy-config-yaml.png)
+1. Übertragen Sie die Konfigurationsänderungen per Commit an das Git-Repository und per Push an das Remote-Repository.
+
+1. Stellen Sie die oben genannten Änderungen mithilfe der Konfigurations-Pipeline in Cloud Manager bereit. Beachten Sie, dass die Datei `config.yaml` mithilfe von Befehlszeilenprogrammen auch in einer schnellen Entwicklungsumgebung installiert werden kann.
+
+   ![Bereitstellen der Datei „config.yaml“](assets/deploy-config-yaml.png)
 
 ### Erstellen und Anwenden eines Asset-Metadatenschemas
 
 Standardmäßig verfügt das WKND Sites-Projekt nicht über das erforderliche Asset-Metadatenschema zum Speichern von Produktattributen. Erstellen wir nun das Asset-Metadatenschema und wenden es auf einen Asset-Ordner in der AEM-Instanz an.
 
-1. Melden Sie sich bei der AEM as a Cloud Service Asset-Instanz an. Navigieren Sie mithilfe [Asset](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views)Ansicht zum `/content/dam/wknd-shared/en`.
+1. Melden Sie sich bei der AEM as a Cloud Service Asset-Instanz an. Navigieren Sie mithilfe [Asset](https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/authoring/switch-views)Ansicht zum `/content/dam/wknd-shared/en`.
 
    ![Navigieren Sie zum Ordner](assets/web-app/navigate-to-folder.png)
 
@@ -542,16 +547,16 @@ Als Nächstes erstellen wir das PIM-Attribut-spezifische Metadatenschema und wen
 
 1. Navigieren Sie in der **Leiste zur Option** Einstellungen **> Metadaten-Forms** und klicken Sie auf die Schaltfläche **Erstellen**.
 
-1. Geben **im Dialogfeld „Metadatenformular erstellen** die folgenden Details ein und klicken Sie auf **Erstellen**.
+1. Geben Sie im Dialogfeld **Metadatenformular erstellen** die folgenden Details ein und klicken Sie auf **Erstellen**.
    - Name: `PIM`
    - Vorhandene Formularstruktur als Vorlage verwenden: `Check`
-   - Wählen Sie aus: `default`
+   - Auswählen aus: `default`
 
    ![Erstellen eines Metadatenformulars](assets/web-app/create-metadata-form.png)
 
 1. Klicken Sie auf das Symbol **+** , um eine neue Registerkarte **PIM** hinzuzufügen und Komponenten **Einzeiliger Text** hinzuzufügen. Die Namen der Metadateneigenschaften sollten mit `pim:` Präfix beginnen.
 
-   ![Registerkarte „PIM hinzufügen“](assets/web-app/add-pim-tab.png)
+   ![Hinzufügen der Registerkarte „PIM“](assets/web-app/add-pim-tab.png)
 
    | Bezeichnung | Platzhalter | Metadaten-Eigenschaft |
    | --- | --- | --- |
@@ -566,7 +571,7 @@ Als Nächstes erstellen wir das PIM-Attribut-spezifische Metadatenschema und wen
 
 1. Wenden Sie abschließend das **PIM**-Metadatenschema auf den **PIM**-Ordner an.
 
-   ![Metadatenschema anwenden](assets/web-app/apply-metadata-schema.png)
+   ![Anwenden des Metadatenschemas](assets/web-app/apply-metadata-schema.png)
 
 Mit den oben genannten Schritten können die Assets aus dem **PIM**-Ordner die Metadaten der Produktattribute speichern.
 
