@@ -10,10 +10,10 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: a5cd9906-7e7a-43dd-a6b2-e80f67d37992
-source-git-commit: ceb82c48af10191cece72fe5f53dd79287f805d0
-workflow-type: ht
-source-wordcount: '1308'
-ht-degree: 100%
+source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
+workflow-type: tm+mt
+source-wordcount: '1315'
+ht-degree: 99%
 
 ---
 
@@ -292,6 +292,8 @@ Aktualisieren Sie abschließend die CSS-Variablen in `styles/styles.css` so, das
 Web-Schriften beeinträchtigen aufgrund ihrer Größe oft die Leistung, erhöhen möglicherweise die Werte für die kumulative Layout-Verschiebung (Cumulative Layout Shift, CLS) und verringern die Lighthouse-Gesamtbewertung. Um die sofortige Textanzeige beim Laden von Web-Schriften sicherzustellen, verwenden Edge Delivery Services-Projekte Browser-native Schriftarten als Fallback. Dieser Ansatz hilft, ein reibungsloses Benutzererlebnis aufrechtzuerhalten, während die gewünschte Schriftart angewendet wird.
 
 Um die beste Fallback-Schriftart auszuwählen, verwenden Sie die [Chrome-Erweiterung „Helix Font Fallback“](https://www.aem.live/developer/font-fallback) von Adobe, die eine stark übereinstimmende Schriftart für Browser festlegt, bevor die benutzerdefinierte Schriftart geladen wird. Die resultierenden Deklarationen der Fallback-Schriften sollten der Datei `styles/styles.css` hinzugefügt werden, um die Leistung zu verbessern und ein nahtloses Benutzererlebnis sicherzustellen.
+
+![Helix Font Fallback Chrome-Erweiterung](./assets/4-website-branding/font-fallback-chrome-plugin.png){align=center}
 
 Um die [Chrome-Erweiterung „Helix Font Fallback“](https://www.aem.live/developer/font-fallback) zu verwenden, stellen Sie sicher, dass Web-Schriften auf die Web-Seite in den gleichen Varianten angewendet werden wie auf der Edge Delivery Services-Website. Dieses Tutorial zeigt die Erweiterung für [wknd.site](http://wknd.site/us/en.html). Wenden Sie beim Entwickeln einer Website die Erweiterung auf die Site an, an der gearbeitet wird, und nicht auf [wknd.site](http://wknd.site/us/en.html).
 
