@@ -13,9 +13,9 @@ jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
 source-git-commit: 0e8b76b6e870978c6db9c9e7a07a6259e931bdcc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1924'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -224,7 +224,7 @@ data:
 
 ## Empfang von Warnhinweisen zu Traffic-Filterregeln {#receiving-alerts}
 
-Wie bereits erwähnt, wird ein Warnhinweis empfangen, wenn die Traffic *Filterregel &quot;*: true“ enthält, wenn die Regel abgeglichen wird.
+Falls die Traffic-Filterregel *alert: true* enthält, erhalten Sie einen Warnhinweis, wenn die Regel wie oben beschrieben zutrifft.
 
 ## Maßnahmen bei Warnhinweisen {#acting-on-alerts}
 

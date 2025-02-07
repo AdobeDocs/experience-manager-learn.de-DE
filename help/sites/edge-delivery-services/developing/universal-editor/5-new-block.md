@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
 source-git-commit: 775821f37df87905ea176b11ecf0ed4a42d00940
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1742'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -322,7 +322,7 @@ Die Blockdefinition registriert den Block im universellen Editor. Im Folgenden f
 | `definition.plugins.xwalk.page.resourceType` | Definiert den Sling-Ressourcentyp für das Rendern der Komponente im universellen Editor. Verwenden Sie immer den Ressourcentyp `core/franklin/components/block/v#/block`. |
 | `definition.plugins.xwalk.page.template.name` | Der Name des ersten Blocks. Er sollte in Kleinbuchstaben geschrieben und mit Bindestrichen versehen werden, um dem Ordnernamen des Blocks zu entsprechen. Dieser Wert wird auch zur Kennzeichnung der Instanz des Blocks im universellen Editor verwendet. |
 | `definition.plugins.xwalk.page.template.model` | Verknüpft diese Definition mit ihrer `model`-Definition, die die Erstellungsfelder steuert, die im universellen Editor für den Block angezeigt werden. Der Wert hier muss mit einem `model.id`-Wert übereinstimmen. |
-| `definition.plugins.xwalk.page.template.classes` | Optionale -Eigenschaft, deren Wert dem `class` des Block-HTML-Elements hinzugefügt wird. Dies ermöglicht Varianten desselben Blocks. Der `classes` kann durch Hinzufügen [ Klassenfelds ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options) das -Modell des [ bearbeitbar ](#block-model). |
+| `definition.plugins.xwalk.page.template.classes` | Optionale Eigenschaft, deren Wert zum `class`-Attribut des HTML-Elements des Blocks hinzugefügt wird. Dies ermöglicht Varianten desselben Blocks. Der `classes`-Wert kann durch [Hinzufügen eines Klassenfeldes](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options) zum [Modell des Blocks](#block-model) bearbeitet werden. |
 
 
 Im Folgenden finden Sie eine Beispiel-JSON für die Blockdefinition:

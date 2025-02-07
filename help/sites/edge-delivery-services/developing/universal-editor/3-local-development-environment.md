@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
 source-git-commit: 66bc4cb6f992c64b1a7e32310ce3e26515f3d380
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '973'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Dieses Video bietet einen Überblick über die Entwicklungstopologie für ein Ed
 
 >[!VIDEO](https://video.tv.adobe.com/v/3443978/?learn=on&enablevpops)
 
-+++Weitere Informationen zur Entwicklungstopologie finden Sie unter
++++Siehe zusätzliche Details zur Entwicklungstopologie.
 
 - **GitHub-Repository**:
    - **Zweck**: Hostet den Code der Website (CSS und JavaScript).
@@ -71,7 +71,7 @@ Bevor Sie mit der Entwicklung beginnen, installieren Sie Folgendes auf Ihrem Com
 
 ## Klonen des GitHub-Repositorys
 
-Klonen Sie das [GitHub-Repository, das im neuen Codeprojektkapitel erstellt wurde](./1-new-code-project.md) das das AEM Edge Delivery Services-Codeprojekt enthält, in Ihre lokale Entwicklungsumgebung.
+Klonen Sie das [GitHub-Repository, das im neuen Code-Projektkapitel erstellt wurde](./1-new-code-project.md) und welches das AEM Edge Delivery Services-Code-Projekt enthält, in Ihre lokale Entwicklungsumgebung.
 
 ![Klon des GitHub-Repositorys](./assets/3-local-development-environment/github-clone.png)
 
@@ -127,7 +127,7 @@ info: Enabled reverse proxy to https://main--aem-wknd-eds-ue--<YOUR_ORG>.aem.pag
 
 Die AEM-CLI öffnet die Website in Ihrem Browser unter `http://localhost:3000/`. Änderungen im Projekt werden automatisch im Webbrowser neu geladen, während Inhaltsänderungen [in der Vorschauumgebung](./6-author-block.md) veröffentlicht werden müssen und der Webbrowser aktualisiert werden muss.
 
-Wenn die Website mit einer 404-Seite geöffnet wird, ist es wahrscheinlich, dass die [fstab.yaml oder path.](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project), die im [neuen Code-Projekt](./1-new-code-project.md) aktualisiert wurden, falsch konfiguriert sind oder die Änderungen nicht in die `main`-Verzweigung übertragen wurden.
+Wenn die Website sich mit einer 404-Seite öffnet, ist es wahrscheinlich, dass die Dateien [fstab.yaml oder paths.json](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project), die in einem [neuen Code-Projekt](./1-new-code-project.md) aktualisiert wurden, falsch konfiguriert sind oder die Änderungen nicht in der `main`-Verzweigung übernommen wurden.
 
 ## Erstellen von JSON-Fragmenten
 
