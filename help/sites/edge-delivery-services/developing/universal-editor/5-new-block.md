@@ -10,10 +10,10 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
-source-git-commit: 775821f37df87905ea176b11ecf0ed4a42d00940
-workflow-type: ht
-source-wordcount: '1742'
-ht-degree: 100%
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
+workflow-type: tm+mt
+source-wordcount: '1767'
+ht-degree: 96%
 
 ---
 
@@ -420,15 +420,11 @@ $ npm run lint:js
 
 ## Erstellen der Projekt-JSON
 
-Nach dem Konfigurieren der JSON-Blockdateien (`blocks/teaser/_teaser.json`, `models/_section.json`) müssen sie in die Dateien `component-models.json`, `component-definitions.json` und `component-filters.json` des Projekts kompiliert werden. Die Kompilierung erfolgt durch Ausführen der npm-Skripte für die [Erstellungs-JSON](./3-local-development-environment.md#build-json-fragments) des Projekts.
+Nach der Konfiguration der JSON-Blockdateien (z. B. `blocks/teaser/_teaser.json`, `models/_section.json`) werden diese automatisch in die `component-models.json`-, `component-definitions.json`- und `component-filters.json` des Projekts kompiliert. Diese Kompilierung wird automatisch von einem [Husky](https://typicode.github.io/husky/)-Vorbestätigungs-Hook durchgeführt, der in der Projektvorlage [AEM Boilerplate XWalk enthalten ](https://github.com/adobe-rnd/aem-boilerplate-xwalk).
 
-```bash
-# ~/Code/aem-wknd-eds-ue
+Builds können auch manuell oder programmgesteuert mithilfe der NPM-Skripte [build JSON](./3-local-development-environment.md#build-json-fragments) des Projekts ausgelöst werden.
 
-$ npm run build:json
-```
-
-## Bereitstellen der Blockdefinition
+## Bereitstellen des JSON-Block
 
 Um den Block im universellen Editor verfügbar zu machen, muss das Projekt an die Verzweigung des GitHub-Repositorys übertragen werden, in diesem Fall an die `teaser`-Verzweigung.
 
@@ -439,6 +435,7 @@ Der genaue Name der Verzweigung, den der universelle Editor verwendet, kann für
 
 $ git add .
 $ git commit -m "Add teaser block JSON files so it is available in Universal Editor"
+# JSON files are compiled automatically and added to the commit via a husky precommit hook
 $ git push origin teaser
 ```
 

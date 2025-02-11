@@ -10,10 +10,10 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
-source-git-commit: 66bc4cb6f992c64b1a7e32310ce3e26515f3d380
-workflow-type: ht
-source-wordcount: '973'
-ht-degree: 100%
+source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
+workflow-type: tm+mt
+source-wordcount: '994'
+ht-degree: 94%
 
 ---
 
@@ -138,7 +138,10 @@ Edge Delivery Services-Projekte, die mit der Vorlage [AEM Boilerplate XWalk](htt
    - **Definitionsfragmente**: Werden unter `/blocks/example/_example.json` gespeichert.
    - **Filterfragmente**: Werden unter `/blocks/example/_example.json` gespeichert.
 
-NPM-Skripte kompilieren diese JSON-Fragmente und platzieren sie an den entsprechenden Stellen im Projektstamm. Verwenden Sie zum Erstellen von JSON-Dateien die bereitgestellten NPM-Skripte. Um beispielsweise alle Fragmente zu kompilieren, führen Sie Folgendes aus:
+
+Die [AEM Boilerplate XWalk-Projektvorlage](https://github.com/adobe-rnd/aem-boilerplate-xwalk) enthält einen [Husky](https://typicode.github.io/husky/)-Pre-Commit-Hook, der Änderungen an JSON-Fragmenten erkennt und bei der `git commit` in die entsprechenden `component-*.json`-Dateien kompiliert.
+
+Während die folgenden NPM-Skripte manuell über `npm run` ausgeführt werden können, um die JSON-Dateien zu erstellen, ist dies in der Regel nicht erforderlich, da der Husky-Pre-Commit-Hook dies automatisch verarbeitet.
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
