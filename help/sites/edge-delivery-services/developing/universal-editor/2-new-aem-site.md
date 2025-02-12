@@ -10,10 +10,10 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 500
 exl-id: d1ebcaf4-cea6-4820-8b05-3a0c71749d33
-source-git-commit: b40bf5afc28cb350c470336e38f8ca127fb05d79
-workflow-type: ht
+source-git-commit: ae3ade0f31846776aa9bdd3a615d6514b626f48d
+workflow-type: tm+mt
 source-wordcount: '302'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Auf der AEM-Site werden die Inhalte der Website bearbeitet, verwaltet und veröffentlicht. Um eine AEM-Site zu erstellen, die über Edge Delivery Services bereitgestellt und mit dem universellen Editor erstellt wurde, verwenden Sie die [Edge Delivery Services mit der AEM-Autoren-Site-Vorlage](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases), um eine neue Site in der AEM-Autoreninstanz zu erstellen.
 
-Auf der AEM-Site werden die Inhalte der Website gespeichert und erstellt. Das endgültige Erlebnis besteht aus der Kombination des AEM-Site-Inhalts mit dem [Code der Website](./1-new-code-project.md).
+Auf der AEM-Site werden die Inhalte der Website gespeichert und erstellt. Das endgültige Erlebnis ist eine Kombination aus dem Inhalt der AEM[Website und dem Code der ](./1-new-code-project.md).
 
 ![Neue AEM-Site für Edge Delivery Services und den universellen Editor](./assets/2-new-aem-site/new-site.png)
 
