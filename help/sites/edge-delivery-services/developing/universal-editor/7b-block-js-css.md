@@ -13,7 +13,7 @@ exl-id: 41c4cfcf-0813-46b7-bca0-7c13de31a20e
 source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
 workflow-type: tm+mt
 source-wordcount: '772'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -179,7 +179,7 @@ Erstellen Sie die Datei `teaser.css` im Ordner des Blocks. Diese Datei enthält 
 
 Einfache Elemente können weiterhin direkt oder mit den benutzerdefinierten CSS-Klassen formatiert werden. Bei komplexeren Blöcken kann die Anwendung semantischer CSS-Klassen zu verständlicherem und besser wartbarem CSS beitragen. Dies gilt insbesondere dann, wenn mit größeren Teams über längere Zeiträume hinweg gearbeitet wird.
 
-[Wie zuvor ](./7a-block-css.md#develop-a-block-with-css) Sie die CSS-Datei mithilfe von [CSS-Verschachtelung](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting) auf `.block.teaser` ein, um Konflikte mit anderen Blöcken zu vermeiden.
+Beziehen Sie [wie zuvor ](./7a-block-css.md#develop-a-block-with-css) das CSS mithilfe der [CSS-Verschachtelung](https://developer.mozilla.org/de/docs/Web/CSS/CSS_nesting) auf `.block.teaser`, um Konflikte mit anderen Blöcken zu vermeiden.
 
 [!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
