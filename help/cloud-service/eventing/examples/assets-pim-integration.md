@@ -13,9 +13,9 @@ jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
 source-git-commit: 2b5f7a033921270113eb7f41df33444c4f3d7723
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1517'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -129,7 +129,7 @@ Definieren Sie dazu im AEM-Projekt die Konfiguration in der Datei `config.yaml`.
 
   >[!CAUTION]
   >
-  > Zu Demozwecken wird für alle Umgebungen dieselbe Client-ID verwendet. Es wird empfohlen, für mehr Sicherheit und Kontrolle eine separate Client-ID pro Umgebung (dev, stage, prod) zu verwenden.
+  > Zu Demozwecken wird für alle Umgebungen dieselbe Client-ID verwendet. Es wird empfohlen, für mehr Sicherheit und Kontrolle eine separate Client-ID pro Umgebung (Entwicklung, Staging, Produktion) zu verwenden.
 
 
 - Übertragen Sie die Konfigurationsänderungen per Commit an das Git-Repository und per Push an das Remote-Repository.

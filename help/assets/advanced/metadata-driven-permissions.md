@@ -12,21 +12,21 @@ last-substantial-update: 2024-05-03T00:00:00Z
 exl-id: 57478aa1-c9ab-467c-9de0-54807ae21fb1
 duration: 158
 source-git-commit: 6e08e6830c4e2ab27e813d262f4f51c6aae2909b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '770'
-ht-degree: 69%
+ht-degree: 100%
 
 ---
 
 # Metadatengesteuerte Berechtigungen{#metadata-driven-permissions}
 
-Metadatengesteuerte Berechtigungen sind eine Funktion, mit der Zugriffssteuerungsentscheidungen in der AEM Assets-Autoreninstanz auf Asset-Inhalten oder Metadateneigenschaften anstatt auf der Ordnerstruktur basieren können. Mit dieser Funktion können Sie Zugriffssteuerungsrichtlinien definieren, die Attribute wie den Asset-Status, den Typ oder jede von Ihnen definierte benutzerdefinierte Eigenschaft auswerten.
+Metadatengesteuerte Berechtigungen sind eine Funktion, mit der Zugriffssteuerungsentscheidungen in AEM Assets Author auf Grundlage der Eigenschaften von Asset-Inhalten oder -Metadaten und nicht anhand der Ordnerstruktur festgelegt werden können. Mit dieser Funktion können Sie Zugriffssteuerungsrichtlinien definieren, die Attribute wie den Asset-Status, den Asset-Typ oder eine benutzerdefinierte Metadateneigenschaft auswerten.
 
-Sehen wir uns ein Beispiel an. Kreative laden ihre Arbeit in AEM Assets in den Ordner hoch, der mit der Kampagne in Verbindung steht. Möglicherweise handelt es sich um ein laufendes Asset, das noch nicht zur Verwendung freigegeben wurde. Wir möchten sicherstellen, dass Marketing-Fachkräfte nur genehmigte Assets für diese Kampagne sehen. Wir können eine Metadateneigenschaft verwenden, um anzugeben, dass ein Asset genehmigt wurde und von den Marketing-Fachleuten verwendet werden kann.
+Sehen wir uns ein Beispiel an. Kreative laden ihre Arbeit in AEM Assets in den Ordner hoch, der mit der Kampagne in Verbindung steht. Möglicherweise handelt es sich um ein laufendes Asset, das noch nicht zur Verwendung freigegeben wurde. Wir möchten sicherstellen, dass Marketing-Fachkräfte nur genehmigte Assets für diese Kampagne sehen. Wir können eine Metadateneigenschaft verwenden, um anzugeben, dass ein Asset genehmigt wurde und von Marketing-Fachkräften verwendet werden kann.
 
 ## Funktionsweise
 
-Die Aktivierung metadatengesteuerter Berechtigungen umfasst die Definition, welche Asset-Inhalte oder Metadateneigenschaften Zugriffsbeschränkungen wie „Status“ oder „Marke“ fördern. Diese Eigenschaften können dann verwendet werden, um Zugriffssteuerungseinträge zu erstellen, die angeben, welche Benutzergruppen Zugriff auf Assets mit bestimmten Eigenschaftswerten haben.
+Die Aktivierung metadatengesteuerter Berechtigungen umfasst die Definition, welche Eigenschaften von Asset-Inhalten oder -Metadaten Zugriffsbeschränkungen wie „Status“ oder „Marke“ bewirken sollen. Diese Eigenschaften können dann verwendet werden, um Zugriffssteuerungseinträge zu erstellen, die angeben, welche Benutzergruppen Zugriff auf Assets mit bestimmten Eigenschaftswerten haben.
 
 ## Voraussetzungen
 
@@ -34,9 +34,9 @@ Der Zugriff auf eine AEM as a Cloud Service-Umgebung, die auf die neueste Versio
 
 ## OSGi-Konfiguration {#configure-permissionable-properties}
 
-Um metadatengesteuerte Berechtigungen zu implementieren, müssen Entwicklerinnen und Entwickler eine OSGi-Konfiguration für AEM as a Cloud Service bereitstellen, die bestimmte Asset-Inhalte oder Metadateneigenschaften für metadatengesteuerte Berechtigungen aktiviert.
+Um metadatengesteuerte Berechtigungen zu implementieren, müssen Entwickelnde eine OSGi-Konfiguration für AEM as a Cloud Service bereitstellen, die zulässt, dass bestimmte Asset-Inhalts- oder Asset-Metadateneigenschaften metadatengesteuerte Berechtigungen aktivieren.
 
-1. Legen Sie fest, welche Asset-Inhalte oder Metadateneigenschaften für die Zugriffssteuerung verwendet werden. Die Eigenschaftsnamen sind die JCR-Eigenschaftsnamen in der `jcr:content` oder `jcr:content/metadata` Ressource des Assets. In unserem Fall handelt es sich um eine Eigenschaft namens `status`.
+1. Bestimmen Sie, welche Asset-Inhalts- oder Asset-Metadateneigenschaften für die Zugriffssteuerung verwendet werden. Die Namen der Eigenschaften sind die Namen der JCR-Eigenschaften in der `jcr:content`- oder `jcr:content/metadata`-Ressource des Assets. In unserem Fall handelt es sich um eine Eigenschaft namens `status`.
 1. Erstellen Sie eine OSGi-Konfiguration `com.adobe.cq.dam.assetmetadatarestrictionprovider.impl.DefaultRestrictionProviderConfiguration.cfg.json` in Ihrem AEM Maven-Projekt.
 1. Fügen Sie folgenden JSON-Inhalt in die erstellte Datei ein:
 
@@ -51,7 +51,7 @@ Um metadatengesteuerte Berechtigungen zu implementieren, müssen Entwicklerinnen
    }
    ```
 
-1. Ersetzen Sie die Eigenschaftsnamen durch die erforderlichen Werte.  Die `restrictionContentPropertyNames` Konfigurationseigenschaft wird verwendet, um Berechtigungen für `jcr:content` Ressourceneigenschaften zu aktivieren, während die `restrictionPropertyNames` Konfigurationseigenschaft Berechtigungen für `jcr:content/metadata` Ressourceneigenschaften für Assets aktiviert.
+1. Ersetzen Sie die Eigenschaftsnamen durch die erforderlichen Werte.  Die Konfigurationseigenschaft `restrictionContentPropertyNames` wird verwendet, um Berechtigungen für `jcr:content`-Ressourceneigenschaften zu aktivieren, während die `restrictionPropertyNames`-Konfigurationseigenschaft Berechtigungen für `jcr:content/metadata`-Ressourceneigenschaften für Assets aktiviert.
 
 ## Zurücksetzen der grundlegenden Asset-Berechtigungen
 
@@ -91,9 +91,9 @@ Beispielordner enthält einige Assets.
 
 ![Admin-Ansicht](./assets/metadata-driven-permissions/admin-view.png)
 
-Sobald Sie die Berechtigungen konfiguriert und die Metadateneigenschaften des Assets entsprechend festgelegt haben, sehen Benutzer (in unserem Fall Marketer-Benutzer) nur genehmigte Assets.
+Nachdem Sie Berechtigungen konfiguriert und die Asset-Metadateneigenschaften entsprechend festgelegt haben, sehen Benutzende (in unserem Fall Marketing-Fachleute) nur genehmigte Assets.
 
-![Marketing-Ansicht](./assets/metadata-driven-permissions/marketeer-view.png)
+![Ansicht für Marketing-Fachleute](./assets/metadata-driven-permissions/marketeer-view.png)
 
 ## Vorteile und Überlegungen
 
@@ -101,13 +101,13 @@ Zu den Vorteilen von metadatengesteuerten Berechtigungen gehören:
 
 - Präzise Kontrolle über den Asset-Zugriff basierend auf bestimmten Attributen.
 - Entkopplung von Richtlinien zur Zugriffssteuerung von der Ordnerstruktur, wodurch eine flexiblere Asset-Organisation möglich ist.
-- Möglichkeit, komplexe Zugriffssteuerungsregeln basierend auf mehreren Inhalts- oder Metadateneigenschaften zu definieren.
+- Möglichkeit zur Definition komplexer Zugriffssteuerungsregeln basierend auf mehreren Inhalts- oder Metadateneigenschaften.
 
 >[!NOTE]
 >
 > Beachten Sie Folgendes:
 > 
-> - Eigenschaften werden anhand der Einschränkungen mithilfe von __Zeichenfolgengleichheit__ (`=`) ausgewertet (andere Datentypen oder Operatoren werden noch nicht unterstützt, bei Eigenschaften für größer als (`>`) oder Datum)
+> - Eigenschaften werden anhand der Einschränkungen mit __Zeichenfolgengleichheit__ (`=`) ausgewertet (andere Datentypen oder Operatoren werden noch nicht unterstützt, z. B. größer als (`>`) oder Datumseigenschaften)
 > - Um mehrere Werte für eine Einschränkungseigenschaft zuzulassen, können dem Zugriffssteuerungseintrag zusätzliche Einschränkungen hinzugefügt werden, indem Sie dieselbe Eigenschaft aus der Dropdown-Liste „Typ auswählen“ auswählen und einen neuen Beschränkungswert eingeben (z B. `status=approved`, `status=wip`) und auf „+“ klicken, um die Einschränkung zum Eintrag hinzuzufügen
 > ![Zulassen von mehreren Werten](./assets/metadata-driven-permissions/allow-multiple-values.png)
 > - __UND-Einschränken__ werden mittels mehrerer Einschränkungen in einem einzelnen Zugriffssteuerungseintrag mit verschiedenen Eigenschaftsnamen (z. B. `status=approved`, `brand=Adobe`) unterstützt und als UND-Bedingung ausgewertet, d. h. die ausgewählte Benutzergruppe erhält Lesezugriff auf Assets mit `status=approved AND brand=Adobe`
