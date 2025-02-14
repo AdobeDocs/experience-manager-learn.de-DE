@@ -1,6 +1,6 @@
 ---
 title: Erstellen der ersten interaktiven Kommunikation für den Druckkanal
-description: Interaktive Kommunikationen sind neu in AEM Forms 6.4. Dieses Dokument führt Sie durch die Schritte, die zum Erstellen einer interaktiven Kommunikation für den Druckkanal erforderlich sind.
+description: Erfahren Sie, welche Schritte zum Erstellen einer interaktiven Kommunikation für den Druckkanal erforderlich sind. Interaktive Kommunikation ist neu in AEM Forms 6.4.
 feature: Interactive Communication
 doc-type: Tutorial
 version: 6.4,6.5
@@ -10,14 +10,14 @@ level: Beginner
 exl-id: 1949aeff-ae56-4abd-8e63-23c2fb4859f2
 last-substantial-update: 2019-08-07T00:00:00Z
 duration: 31
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 61d97738e295d9dc39281cb59e6ef1ca73944387
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 100%
+source-wordcount: '169'
+ht-degree: 76%
 
 ---
 
-# Erstellen der ersten interaktiven Kommunikation für den Druckkanal
+# Erstellen Sie Ihre erste interaktive Kommunikation für den Druckkanal
 
 Interaktive Kommunikationen sind neu in AEM Forms 6.4. Dieses Dokument führt Sie durch die Schritte, die zum Erstellen einer interaktiven Kommunikation für den Druckkanal erforderlich sind.
 
