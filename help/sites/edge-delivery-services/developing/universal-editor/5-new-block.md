@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
 source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1767'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -420,11 +420,11 @@ $ npm run lint:js
 
 ## Erstellen der Projekt-JSON
 
-Nach der Konfiguration der JSON-Blockdateien (z. B. `blocks/teaser/_teaser.json`, `models/_section.json`) werden diese automatisch in die `component-models.json`-, `component-definitions.json`- und `component-filters.json` des Projekts kompiliert. Diese Kompilierung wird automatisch von einem [Husky](https://typicode.github.io/husky/)-Vorbestätigungs-Hook durchgeführt, der in der Projektvorlage [AEM Boilerplate XWalk enthalten ](https://github.com/adobe-rnd/aem-boilerplate-xwalk).
+Nach dem Konfigurieren der JSON-Blockdateien (`blocks/teaser/_teaser.json`, `models/_section.json`) werden sie automatisch in die Dateien `component-models.json`, `component-definitions.json` und `component-filters.json` des Projekts kompiliert. Diese Kompilierung wird automatisch von einem [Husky](https://typicode.github.io/husky/)-Pre-Commit-Hook durchgeführt, der in der [AEM Boilerplate XWalk-Projektvorlage](https://github.com/adobe-rnd/aem-boilerplate-xwalk) enthalten ist.
 
-Builds können auch manuell oder programmgesteuert mithilfe der NPM-Skripte [build JSON](./3-local-development-environment.md#build-json-fragments) des Projekts ausgelöst werden.
+Builds können auch manuell oder programmgesteuert mithilfe der NPM-Skripte für die [Erstellungs-JSON](./3-local-development-environment.md#build-json-fragments) des Projekts ausgelöst werden.
 
-## Bereitstellen des JSON-Block
+## Bereitstellen der Block-JSON
 
 Um den Block im universellen Editor verfügbar zu machen, muss das Projekt an die Verzweigung des GitHub-Repositorys übertragen werden, in diesem Fall an die `teaser`-Verzweigung.
 

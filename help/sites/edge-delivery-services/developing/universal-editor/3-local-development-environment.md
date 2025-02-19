@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
 source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '994'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -139,9 +139,9 @@ Edge Delivery Services-Projekte, die mit der Vorlage [AEM Boilerplate XWalk](htt
    - **Filterfragmente**: Werden unter `/blocks/example/_example.json` gespeichert.
 
 
-Die [AEM Boilerplate XWalk-Projektvorlage](https://github.com/adobe-rnd/aem-boilerplate-xwalk) enthält einen [Husky](https://typicode.github.io/husky/)-Pre-Commit-Hook, der Änderungen an JSON-Fragmenten erkennt und bei der `git commit` in die entsprechenden `component-*.json`-Dateien kompiliert.
+Die [AEM Boilerplate XWalk-Projektvorlage](https://github.com/adobe-rnd/aem-boilerplate-xwalk) enthält einen [Husky](https://typicode.github.io/husky/)-Pre-Commit-Hook, der Änderungen an JSON-Fragmenten erkennt und bei `git commit` in die entsprechenden `component-*.json`-Dateien kompiliert.
 
-Während die folgenden NPM-Skripte manuell über `npm run` ausgeführt werden können, um die JSON-Dateien zu erstellen, ist dies in der Regel nicht erforderlich, da der Husky-Pre-Commit-Hook dies automatisch verarbeitet.
+Die folgenden NPM-Skripte können zwar manuell über `npm run` ausgeführt werden, um die JSON-Dateien zu erstellen, dies ist in der Regel nicht erforderlich, da der Husky-Pre-Commit-Hook dies automatisch ausführt.
 
 ```bash
 # ~/Code/aem-wknd-eds-ue

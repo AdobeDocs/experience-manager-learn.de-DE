@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: 6.4, 6.5, Cloud Service
 source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '585'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -109,8 +109,8 @@ ht-degree: 99%
          + [Block nur mit CSS](./edge-delivery-services/developing/universal-editor/7a-block-css.md)
          + [Block mit CSS und JS](./edge-delivery-services/developing/universal-editor/7b-block-js-css.md)
          + Anleitung {#how-to}
-            + [Optionen für Blöcke](./edge-delivery-services/developing/universal-editor/how-to/block-options.md)
-   + Anleitung {#how-to}
+            + [Blockoptionen](./edge-delivery-services/developing/universal-editor/how-to/block-options.md)
+   + Anleitung{#how-to}
       + [RSS-Feeds](edge-delivery-services/how-to/rss.md)
       + [Freigabe in Social Media](edge-delivery-services/how-to/social-media-sharing.md)
       + [Löschen von Seiten](edge-delivery-services/how-to/delete-page.md)

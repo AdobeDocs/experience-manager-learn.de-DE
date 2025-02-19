@@ -1,6 +1,6 @@
 ---
-title: Optionen für Blöcke
-description: Erfahren Sie, wie Sie einen Baustein mit mehreren Anzeigeoptionen erstellen.
+title: Blockoptionen
+description: Erfahren Sie, wie Sie einen Block mit mehreren Anzeigeoptionen erstellen.
 version: Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -11,51 +11,51 @@ jira: KT-17296
 duration: 700
 exl-id: f41dff22-bd47-4ea0-98cc-f5ca30b22c4b
 source-git-commit: ae3ade0f31846776aa9bdd3a615d6514b626f48d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1958'
-ht-degree: 12%
+ht-degree: 100%
 
 ---
 
-# Entwickeln eines Bausteins mit Optionen
+# Entwickeln eines Blocks mit Optionen
 
-Dieses Tutorial baut auf dem Tutorial für den Edge Delivery Services- und universellen Editor auf und führt Sie durch den Prozess des Hinzufügens von Blockoptionen zu einem Block. Durch die Definition von Blockoptionen können Sie das Erscheinungsbild und die Funktionalität eines Blocks anpassen und so verschiedene Varianten für unterschiedliche Inhaltsanforderungen ermöglichen. Dies ermöglicht eine größere Flexibilität und Wiederverwendbarkeit innerhalb des Designsystems Ihrer Site.
+Dieses Tutorial baut auf dem Tutorial für Edge Delivery Services und universellen Editor auf und führt Sie durch den Prozess des Hinzufügens von Blockoptionen zu einem Block. Durch die Definition von Blockoptionen können Sie das Erscheinungsbild und die Funktionalität eines Blocks anpassen, wodurch verschiedene Varianten für unterschiedliche Inhaltsanforderungen erstellt werden können. Dies ermöglicht eine größere Flexibilität und Wiederverwendbarkeit innerhalb des Designsystems Ihrer Site.
 
-![Option „Block nebeneinander“](./assets/block-options/main.png){align="center"}
+![Blockoption „Nebeneinander“](./assets/block-options/main.png){align="center"}
 
-In diesem Tutorial fügen Sie dem Teaser-Block Blockoptionen hinzu, sodass Autorinnen und Autoren zwischen zwei Anzeigeoptionen wählen können: **Standard** und **nebeneinander**. Mit der Option **Standard** wird das Bild über und hinter dem Text angezeigt, während **Option** Seite an Seite“ das Bild und den Text nebeneinander anzeigt.
+In diesem Tutorial fügen Sie dem Teaser-Block Blockoptionen hinzu, sodass Autorinnen und Autoren zwischen zwei Anzeigeoptionen wählen können: **Standard** und **Nebeneinander**. Mit der Option **Standard** wird das Bild über und hinter dem Text angezeigt und mit der Option **Nebeneinander** werden Bild und Text nebeneinander anzeigt.
 
 ## Häufige Anwendungsfälle
 
-Häufige Anwendungsfälle für die Verwendung von **Blockoptionen** in der **Edge Delivery Services**- und **Universal Editor**-Entwicklung sind unter anderem:
+Häufige Anwendungsfälle für die Verwendung von **Blockoptionen** in der Entwicklung von **Edge Delivery Services** und dem **universellen Editor** sind unter anderem:
 
-1. **Layout-Varianten:** zwischen Layouts wechseln. Beispiel: Horizontal vs. Vertikal oder Raster vs. Liste.
-2. **Stilvarianten:** Sie einfach zwischen Designs oder visuellen Abwandlungen wechseln. Zum Beispiel Hell vs. Dunkler Modus oder Groß vs. Kleiner Text.
-3. **Steuerung der Inhaltsanzeige:** Ein-/Ausschalten der Sichtbarkeit von Elementen oder Wechseln zwischen Inhaltsstilen (kompakt vs. detailliert).
+1. **Layout-Varianten:** Einfaches Wechseln zwischen Layouts. Zum Beispiel horizontal vs. Vertikal oder Raster vs. Liste.
+2. **Stilvarianten:** Einfaches Wechseln zwischen Designs oder visuellen Behandlungen. Zum Beispiel heller vs. dunkler Modus oder großer vs. kleiner Text.
+3. **Steuerung der Inhaltsanzeige:** Umschalten der Sichtbarkeit von Elementen oder Wechseln zwischen Inhaltsstilen (kompakt vs. detailliert).
 
-Diese Optionen bieten Flexibilität und Effizienz beim Erstellen dynamischer und anpassbarer Bausteine.
+Diese Optionen bieten Flexibilität und Effizienz beim Erstellen dynamischer und anpassbarer Blöcke.
 
-Dieses Tutorial zeigt den Anwendungsfall für Layout-Varianten, bei dem der Teaser-Block in zwei verschiedenen Layouts angezeigt werden kann **&quot;**&quot; und **nebeneinander**.
+Dieses Tutorial zeigt den Anwendungsfall für Layout-Varianten, bei dem der Teaser-Block in zwei verschiedenen Layouts angezeigt werden kann: **Standard** und **Nebeneinander**.
 
 ## Blockmodell
 
-Um Blockoptionen zum Teaser-Block hinzuzufügen, öffnen Sie sein JSON-Fragment unter `/block/teaser/_teaser.json` und fügen Sie der Modelldefinition ein neues Feld hinzu. In diesem Feld wird die `name`-Eigenschaft auf `classes` festgelegt. Dies ist ein geschütztes Feld, das von AEM zum Speichern von Blockoptionen verwendet wird, die auf die Edge Delivery Services-HTML des Blocks angewendet werden.
+Um Blockoptionen zum Teaser-Block hinzuzufügen, öffnen Sie sein JSON-Fragment unter `/block/teaser/_teaser.json` und fügen Sie der Modelldefinition ein neues Feld hinzu. In diesem Feld wird die Eigenschaft `name` auf `classes` festgelegt. Dies ist ein geschütztes Feld, das von AEM zum Speichern von Blockoptionen verwendet wird, die auf die Edge Delivery Services-HTML des Blocks angewendet werden.
 
 ### Feldkonfigurationen
 
-Die folgenden Registerkarten veranschaulichen verschiedene Möglichkeiten zum Konfigurieren von Blockoptionen im Blockmodell, einschließlich Einzelauswahl mit einer einzelnen CSS-Klasse, Einzelauswahl mit mehreren CSS-Klassen und Mehrfachauswahl mit mehreren CSS-Klassen. Dieses Tutorial [implementiert den einfacheren Ansatz, ](#field-configuration-for-this-tutorial) in &quot;**mit einer einzelnen CSS-Klasse“ verwendet**.
+Die folgenden Registerkarten veranschaulichen verschiedene Möglichkeiten zum Konfigurieren von Blockoptionen im Blockmodell, einschließlich der Einzelauswahl mit einer einzelnen CSS-Klasse, der Einzelauswahl mit mehreren CSS-Klassen und der Mehrfachauswahl mit mehreren CSS-Klassen. Dieses Tutorial [implementiert den einfacheren Ansatz](#field-configuration-for-this-tutorial), der bei der **Auswahl mit einer einzelnen CSS-Klasse** verwendet wird.
 
 >[!BEGINTABS]
 
->[!TAB Mit einzelner CSS-Klasse auswählen]
+>[!TAB Auswahl mit einer einzelnen CSS-Klasse]
 
 In diesem Tutorial erfahren Sie, wie Sie mit einem `select` (Dropdown)-Eingabetyp eine Option für einen einzelnen Block auswählen können, der dann als einzelne, entsprechende CSS-Klasse angewendet wird.
 
-![Mit einzelner CSS-Klasse auswählen](./assets/block-options/tab-1.png){align="center"}
+![Auswahl mit einer einzelnen CSS-Klasse](./assets/block-options/tab-1.png){align="center"}
 
 #### Blockmodell
 
-Die **Standard**-Option wird durch eine leere Zeichenfolge dargestellt (`""`), während die **Seite an Seite**-Option `"side-by-side"` verwendet. Die Optionen **name** und **value** müssen nicht identisch sein, aber der **value** bestimmt die CSS-Klasse(n), die auf die HTML des Blocks angewendet werden. Beispielsweise könnte der **der Option** Seite an Seite) anstelle von `side-by-side` `layout-10` werden. Es ist jedoch am besten, semantisch aussagekräftige Namen für CSS-Klassen zu verwenden, um Klarheit und Konsistenz in den Optionswerten sicherzustellen.
+Die Option **Default** wird durch eine leere Zeichenfolge angezeigt (`""`) und die Option **Nebeneinander** verwendet `"side-by-side"`. Der **Name** und **Wert** der Option müssen nicht identisch sein, aber der **Wert** bestimmt die CSS-Klasse(n), die auf das HTML des Blocks angewendet wird/werden. Beispielsweise könnte der Wert der Option **Nebeneinander** `layout-10` statt `side-by-side` sein. Am besten werden jedoch semantisch aussagekräftige Namen für CSS-Klassen verwendet, um Klarheit und Konsistenz in den Optionswerten sicherzustellen.
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -83,11 +83,11 @@ Die **Standard**-Option wird durch eine leere Zeichenfolge dargestellt (`""`), w
 ...
 ```
 
-#### Block – HTML
+#### Block-HTML
 
-Wenn der Autor eine Option auswählt, wird der entsprechende Wert als CSS-Klasse zum HTML des Blocks hinzugefügt:
+Wenn die Autorin oder der Autor eine Option auswählt, wird der entsprechende Wert als CSS-Klasse zum HTML des Blocks hinzugefügt:
 
-- Wenn **Standard** ausgewählt ist:
+- Bei Auswahl von **Standard**
 
   ```html
   <div class="block teaser">
@@ -95,7 +95,7 @@ Wenn der Autor eine Option auswählt, wird der entsprechende Wert als CSS-Klasse
   </div>
   ```
 
-- Wenn **Seite an Seite** ausgewählt ist:
+- Bei Auswahl von **Nebeneinander**:
 
   ```html
   <div class="block teaser side-by-side">
@@ -103,20 +103,20 @@ Wenn der Autor eine Option auswählt, wird der entsprechende Wert als CSS-Klasse
   </div>
   ```
 
-Dadurch können je nach ausgewählter Öffnung unterschiedliche Stile und bedingte JavaScript angewendet werden.
+Dadurch können je nach ausgewählter Option unterschiedliche Stile und bedingtes JavaScript angewendet werden.
 
 
->[!TAB Mit mehreren CSS-Klassen auswählen]
+>[!TAB Auswahl mit mehreren CSS-Klassen]
 
 **Dieser Ansatz wird in diesem Tutorial nicht verwendet, veranschaulicht jedoch eine alternative Methode und erweiterte Blockoptionen.**
 
-Mit dem `select`-Eingabetyp können Autoren eine Option für einen einzelnen Block auswählen, der optional mehreren CSS-Klassen zugeordnet werden kann. Listen Sie dazu die CSS-Klassen als durch Leerzeichen getrennte Werte auf.
+Mit dem Eingabetyp `select` können Autorinnen und Autoren eine Option für einen einzelnen Block auswählen, der optional mehreren CSS-Klassen zugeordnet werden kann. Listen Sie dazu die CSS-Klassen als durch Leerzeichen getrennte Werte auf.
 
-![Mit mehreren CSS-Klassen auswählen](./assets/block-options/tab-2.png){align="center"}
+![Auswahl mit mehreren CSS-Klassen](./assets/block-options/tab-2.png){align="center"}
 
 #### Blockmodell
 
-Beispielsweise kann die Option **Seite an Seite** Varianten unterstützen, bei denen das Bild links (`side-by-side left`) oder rechts (`side-by-side right`) angezeigt wird.
+Beispielsweise kann die Option **Nebeneinander** Varianten unterstützen, bei denen das Bild links (`side-by-side left`) oder rechts (`side-by-side right`) angezeigt wird.
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -148,11 +148,11 @@ Beispielsweise kann die Option **Seite an Seite** Varianten unterstützen, bei d
 ...
 ```
 
-#### Block – HTML
+#### Block-HTML
 
-Wenn der Autor eine Option auswählt, wird der entsprechende Wert als durch Leerzeichen getrennte Gruppe von CSS-Klassen im HTML des Blocks angewendet:
+Wenn die Autorin oder der Autor eine Option auswählt, wird der entsprechende Wert als ein durch Leerzeichen getrennter Satz von CSS-Klassen zum HTML des Blocks hinzugefügt:
 
-- Wenn **Standard** ausgewählt ist:
+- Bei Auswahl von **Standard**
 
   ```html
   <div class="block teaser">
@@ -160,7 +160,7 @@ Wenn der Autor eine Option auswählt, wird der entsprechende Wert als durch Leer
   </div>
   ```
 
-- Wenn **Seite an Seite mit Bild auf der linken Seite** ausgewählt ist:
+- Bei Auswahl von **Nebeneinander mit Bild auf der linken Seite**:
 
   ```html
   <div class="block teaser side-by-side left">
@@ -168,7 +168,7 @@ Wenn der Autor eine Option auswählt, wird der entsprechende Wert als durch Leer
   </div>
   ```
 
-- Wenn **Seite an Seite mit Bild auf der rechten Seite** ausgewählt ist:
+- Bei Auswahl von **Nebeneinander mit Bild auf der rechten Seite**:
 
   ```html
   <div class="block teaser side-by-side right">
@@ -176,20 +176,20 @@ Wenn der Autor eine Option auswählt, wird der entsprechende Wert als durch Leer
   </div>
   ```
 
-Dadurch können je nach ausgewählter Option unterschiedliche Stile und bedingte JavaScript angewendet werden.
+Dadurch können je nach ausgewählter Option unterschiedliche Stile und bedingtes JavaScript angewendet werden.
 
 
 >[!TAB Mehrfachauswahl mit mehreren CSS-Klassen]
 
 **Dieser Ansatz wird in diesem Tutorial nicht verwendet, veranschaulicht jedoch eine alternative Methode und erweiterte Blockoptionen.**
 
-Mit dem Eingabetyp von `"component": "multiselect"` kann der Autor mehrere Optionen gleichzeitig auswählen. Dies ermöglicht komplexe Permutationen des Erscheinungsbildes des Blocks, indem mehrere Design-Optionen kombiniert werden.
+Mit dem Eingabetyp von `"component": "multiselect"` kann die Autorin oder der Autor mehrere Optionen gleichzeitig auswählen. Dies ermöglicht komplexe Permutationen des Erscheinungsbildes des Blocks, indem mehrere Design-Optionen kombiniert werden.
 
 ![Mehrfachauswahl mit mehreren CSS-Klassen](./assets/block-options/tab-3.png){align="center"}
 
 ### Blockmodell
 
-Beispielsweise können **nebeneinander**, **Bild links** und **Bild rechts** Varianten unterstützen, bei denen das Bild links (`side-by-side left`) oder rechts (`side-by-side right`) positioniert ist.
+Beispielsweise können **Nebeneinander**, **Bild auf der linken Seite** und **Bild auf der rechten Seite** Varianten unterstützen, bei denen das Bild auf der linken Seite (`side-by-side left`) oder auf der rechten Seite (`side-by-side right`) positioniert wird.
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -221,11 +221,11 @@ Beispielsweise können **nebeneinander**, **Bild links** und **Bild rechts** Var
 ...
 ```
 
-#### Block – HTML
+#### Block-HTML
 
-Wenn der Autor mehrere Optionen auswählt, werden die entsprechenden Werte als durch Leerzeichen getrennte CSS-Klassen im HTML des Blocks angewendet:
+Wenn die Autorin oder der Autor mehrere Optionen auswählt, werden die entsprechenden Werte als durch Leerzeichen getrennte CSS-Klassen in dem HTML des Blocks angewendet:
 
-- Wenn **nebeneinander** und **Bild links** ausgewählt sind:
+- Bei Auswahl von **Nebeneinander** und **Bild auf der linken Seite**:
 
   ```html{highlight="1"}
   <div class="block teaser side-by-side left">
@@ -233,7 +233,7 @@ Wenn der Autor mehrere Optionen auswählt, werden die entsprechenden Werte als d
   </div>
   ```
 
-- Wenn **nebeneinander** und **Bild auf der rechten** ausgewählt sind:
+- Bei Auswahl von **Nebeneinander** und **Bild auf der rechten Seite**:
 
   ```html{highlight="1"}
   <div class="block teaser side-by-side right">
@@ -245,24 +245,24 @@ Die Mehrfachauswahl bietet zwar Flexibilität, führt aber auch zu Komplexität 
 
 Zum Beispiel:
 
-- **Bild links** oder **Bild rechts** ohne Auswahl **nebeneinander** wendet sie implizit auf **Standard** an, wodurch das Bild immer als Hintergrund festgelegt wird, sodass die Ausrichtung nach links und rechts irrelevant ist.
-- Die Auswahl von **Bild links** und **Bild rechts“ ist**.
-- Die Auswahl **nebeneinander** ohne **Bild links** oder **Bild rechts** kann als mehrdeutig angesehen werden, da die Bildposition nicht angegeben ist.
+- **Bild auf der linken Seite** oder **Bild auf der rechten Seite** ohne Auswahl von **Nebeneinander** wendet sie implizit auf **Standard** an, wodurch das Bild immer als Hintergrund festgelegt wird, sodass die Ausrichtung nach links und rechts irrelevant ist.
+- Die Auswahl von **Bild auf der linken Seite** und **Bild auf der rechten Seite** ist widersprüchlich.
+- Die Auswahl von **Nebeneinander** ohne **Bild auf der linken Seite** oder **Bild auf der rechten Seite** kann als mehrdeutig angesehen werden, da die Bildposition nicht angegeben ist.
 
-Um Probleme und Autorenverwirrung bei der Verwendung von Mehrfachauswahl zu vermeiden, stellen Sie sicher, dass die Optionen gut geplant sind und alle Permutationen getestet werden. Mehrfachauswahl eignet sich am besten für einfache, nicht widersprüchliche Verbesserungen wie „groß“ oder „Hervorhebung“ und nicht für Optionen zum Ändern des Layouts.
+Um bei Verwendung der Mehrfachauswahl Probleme und Verwirrung bei Autorinnen und Autoren zu vermeiden, stellen Sie sicher, dass die Optionen gut geplant sind und alle Permutationen getestet wurden. Die Mehrfachauswahl eignet sich am besten für einfache, nicht widersprüchliche Verbesserungen wie „groß“ oder „Hervorhebung“ und nicht für Optionen zum Ändern des Layouts.
 
 
 >[!TAB Standardoption]
 
 **Dieser Ansatz wird in diesem Tutorial nicht verwendet, veranschaulicht jedoch eine alternative Methode und erweiterte Blockoptionen.**
 
-Blockoptionen können als Standard festgelegt werden, wenn im universellen Editor eine neue Blockinstanz zu einer Seite hinzugefügt wird. Dies geschieht, indem der Standardwert der `classes`-Eigenschaft in der Definition [Blocks“ festgelegt ](../5-new-block.md#block-definition).
+Blockoptionen können als Standard festgelegt werden, wenn im universellen Editor eine neue Blockinstanz zu einer Seite hinzugefügt wird. Dies geschieht, indem der Standardwert der Eigenschaft `classes` in der [Definition des Blocks](../5-new-block.md#block-definition) festgelegt wird.
 
 #### Blockdefinition
 
-Im folgenden Beispiel wird die Standardoption auf **Seite an Seite“ festgelegt** indem `side-by-side` die `value` Eigenschaft des `classes` zugewiesen wird. Die entsprechende Blockoptionseingabe im -Blockmodell ist optional.
+Im folgenden Beispiel wird die Standardoption auf **Nebeneinander** gesetzt, indem die Eigenschaft `value` des Felds `classes` `side-by-side` zugewiesen wird. Die Eingabe der entsprechenden Blockoption im Blockmodell ist optional.
 
-Sie können auch mehrere Einträge für denselben Block mit jeweils einem anderen Namen und einer anderen Klasse definieren. Dadurch kann der universelle Editor einzelne Blockeinträge anzeigen, die jeweils mit einer bestimmten Blockoption vorkonfiguriert sind. Diese werden zwar als separate Blöcke im Editor angezeigt, die Codebasis enthält jedoch einen einzelnen Block, der basierend auf der ausgewählten Option dynamisch gerendert wird.
+Sie können auch mehrere Einträge für denselben Block mit jeweils einem anderen Namen und einer anderen Klasse definieren. Dadurch kann der universelle Editor einzelne Blockeinträge anzeigen, die jeweils mit einer bestimmten Blockoption vorkonfiguriert sind. Diese werden im Editor zwar als separate Blöcke angezeigt, die Code-Basis enthält jedoch einen einzelnen Block, der basierend auf der ausgewählten Option dynamisch gerendert wird.
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -298,9 +298,9 @@ Sie können auch mehrere Einträge für denselben Block mit jeweils einem andere
 ### Feldkonfiguration für dieses Tutorial
 
 
-In diesem Tutorial verwenden wir den oben auf der ersten Registerkarte beschriebenen Ansatz mit der Auswahl mit einzelnen CSS-Klassen, der zwei diskrete Blockoptionen ermöglicht: **Standard** und **nebeneinander**.
+In diesem Tutorial verwenden wir den oben auf der ersten Registerkarte beschriebenen Ansatz mit der Auswahl mit einer einzelnen CSS-Klasse, der zwei diskrete Blockoptionen ermöglicht: **Standard** und **Nebeneinander**.
 
-Fügen Sie in der Modelldefinition im JSON-Fragment des Blocks ein einzelnes Auswahlfeld für Blockoptionen hinzu. In diesem Feld können Autoren zwischen dem Standard-Layout und einem Layout wählen, das nebeneinander angezeigt wird.
+Fügen Sie in der Modelldefinition im JSON-Fragment des Blocks ein Einzelauswahlfeld für Blockoptionen hinzu. In diesem Feld können Autorinnen und Autoren zwischen dem Standard-Layout und dem Layout „Nebeneinander“ wählen.
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -369,13 +369,13 @@ Fügen Sie in der Modelldefinition im JSON-Fragment des Blocks ein einzelnes Aus
 }
 ```
 
-## Block im universellen Editor aktualisieren
+## Aktualisieren des Blocks im universellen Editor
 
-Um die aktualisierten Blockoptioneneingaben im universellen Editor verfügbar zu machen, stellen Sie die JSON-Code-Änderungen in GitHub bereit, erstellen Sie eine neue Seite, fügen Sie den Teaser-Block mit der Option **Seite an Seite** hinzu und erstellen Sie ihn und veröffentlichen Sie dann die Seite zur Vorschau. Laden Sie nach der Veröffentlichung die Seite zur Codierung in die lokale Entwicklungsumgebung.
+Um die Eingabe aktualisierter Blockoptionen im universellen Editor verfügbar zu machen, stellen Sie die Änderungen des JSON-Codes in GitHub bereit, erstellen Sie eine neue Seite und fügen Sie den Teaser-Block mit der Option **Nebeneinander** hinzu. Als Nächstes erstellen Sie ihn und veröffentlichen Sie die Seite in der Vorschau. Laden Sie die Seite nach der Veröffentlichung zur Codierung in die lokale Entwicklungsumgebung.
 
-### Änderungen an GitHub pushen
+### Senden von Änderungen an GitHub
 
-Um die aktualisierten Blockoptioneneingaben im universellen Editor zum Festlegen von Blockoptionen und zum Entwickeln für die resultierende HTML verfügbar zu machen, muss das Projekt verknüpft werden und die Änderungen an eine GitHub-Verzweigung - in diesem Fall die `block-options` - gepusht werden.
+Um die Eingabe aktualisierter Blockoptionen im universellen Editor zum Festlegen von Blockoptionen und zum Entwickeln für das resultierende HTML verfügbar zu machen, muss das Projekt verknüpft werden und die Änderungen an eine GitHub-Verzweigung, in diesem Fall die `block-options`-Verzweigung, gesendet werden.
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -390,31 +390,31 @@ $ git push origin teaser
 
 ### Erstellen einer Testseite
 
-Erstellen Sie im AEM-Autoren-Service eine neue Seite, um den Teaser-Block für die Entwicklung hinzuzufügen. Gemäß der Konvention im Kapitel [Erstellen eines Blocks](../6-author-block.md) des [Tutorials für die Entwicklung von Edge Delivery Services und dem universellen Editor](../0-overview.md) erstellen Sie eine Testseite unter einer `branches`, wobei Sie sie nach der Git-Verzweigung benennen, an der Sie arbeiten - in diesem Fall `block-options`.
+Erstellen Sie im AEM-Autoren-Service eine neue Seite, um den Teaser-Block für die Entwicklung hinzuzufügen. Gemäß der Konvention im Kapitel [Erstellen eines Blocks](../6-author-block.md) des [Entwickler-Tutorials für Edge Delivery Services und den universellen Editor](../0-overview.md) erstellen Sie eine Testseite unter einer `branches`-Seite, wobei Sie sie nach der Git-Verzweigung benennen, an der Sie arbeiten – in diesem Fall `block-options`.
 
 ### Erstellen des Blocks
 
-Bearbeiten Sie die neue Seite **Blockoptionen** im universellen Editor und fügen Sie den **Teaser**-Block hinzu. Fügen Sie den Abfrageparameter `?ref=block-options` zur URL hinzu, um die Seite mit Code aus der `block-options` GitHub-Verzweigung zu laden.
+Bearbeiten Sie die neue Seite **Blockoptionen** im universellen Editor und fügen Sie den **Teaser**-Block hinzu. Fügen Sie den Abfrageparameter `?ref=block-options` zur URL hinzu, um die Seite mit Code aus der GitHub-Verzweigung `block-options` zu laden.
 
-Das Dialogfeld „Block“ enthält jetzt **Dropdown-** „Teaser-Optionen **mit den** „Standard **und**. Wählen Sie **nebeneinander** und schließen Sie die verbleibende Inhaltserstellung ab.
+Das Block-Dialogfeld enthält jetzt eine Dropdown-Liste **Teaser-Optionen** mit den Auswahlmöglichkeiten **Standard** und **Nebeneinander**. Wählen Sie **Nebeneinander** und schließen Sie die verbleibende Inhaltserstellung ab.
 
-![Teaser mit dem Dialogfeld „Optionsblock“](./assets/block-options/block-dialog.png){align="center"}
+![Block-Dialogfeld „Teaser“ mit Optionen](./assets/block-options/block-dialog.png){align="center"}
 
-Optional können Sie zwei **Teaser**-Blöcke hinzufügen, von denen einer auf **Standard** und der andere auf **Seite an Seite** eingestellt ist. Auf diese Weise können Sie während der Entwicklung beide Optionen nebeneinander in der Vorschau anzeigen und stellen sicher, dass **Implementierung** Seite an Seite keine Auswirkungen auf die Option **Standard** hat.
+Sie können optional zwei **Teaser**-Blöcke hinzufügen, von denen einer auf **Standard** und der andere auf **Nebeneinander** gesetzt ist. Auf diese Weise können Sie während der Entwicklung beide Optionen nebeneinander in der Vorschau anzeigen. Dies stellt sicher, dass die Implementierung von **Nebeneinander** keine Auswirkungen auf die Option **Standard** hat.
 
-### In Vorschau veröffentlichen
+### Veröffentlichen in der Vorschau
 
-Sobald der Teaser-Block zur Seite hinzugefügt wurde, [ Sie die Seite zur Vorschau ](../6-author-block.md), indem Sie **Veröffentlichungen verwalten** und die Site-Admin der AEM-Autoreninstanz verwenden.
+Sobald der Teaser-Block zur Seite hinzugefügt wurde, [veröffentlichen Sie die Seite in der Vorschau ](../6-author-block.md), indem Sie **Veröffentlichungen verwalten** und die/den Site-Admin der AEM-Autoreninstanz verwenden.
 
-## Block – HTML
+## Block-HTML
 
-Um mit der Blockentwicklung zu beginnen, überprüfen Sie zunächst die DOM-Struktur, die von der Edge Delivery Services-Vorschau bereitgestellt wird. Das DOM wurde um JavaScript erweitert und mit CSS formatiert, wodurch die Grundlage für das Erstellen und Anpassen des Bausteins geschaffen wird.
+Überprüfen Sie zur Blockentwicklung zunächst die in der Edge Delivery Services-Vorschau angezeigte DOM-Struktur. Das DOM wurde um JavaScript erweitert und mit CSS formatiert und bildet somit die Grundlage für das Erstellen und Anpassen des Blocks.
 
 >[!BEGINTABS]
 
 >[!TAB Zu dekorierendes DOM]
 
-Im Folgenden finden Sie das DOM des Teaser-Blocks, wobei die Option **nebeneinander**-Block ausgewählt ist. Dies ist das Ziel, das mit JavaScript und CSS dekoriert werden soll.
+Im Folgenden finden Sie das DOM des Teaser-Blocks mit ausgewählter Option **Nebeneinander**, das mithilfe von JavaScript und CSS dekoriert werden soll.
 
 ```html{highlight="7"}
 ...
@@ -453,7 +453,7 @@ Im Folgenden finden Sie das DOM des Teaser-Blocks, wobei die Option **nebeneinan
 
 >[!TAB So finden Sie das DOM]
 
-Um das zu dekorierende DOM zu finden, öffnen Sie die Seite mit dem Block in Ihrer lokalen Entwicklungsumgebung, wählen Sie den Block mit den Entwickler-Tools Ihres Webbrowsers aus und überprüfen Sie das DOM. Auf diese Weise können Sie die relevanten Elemente für die Dekoration identifizieren.
+Um das zu dekorierende DOM zu finden, öffnen Sie die Seite mit dem Block in Ihrer lokalen Entwicklungsumgebung, wählen Sie den Block mithilfe der Entwicklerwerkzeuge Ihres Webbrowsers aus und überprüfen Sie das DOM. Auf diese Weise können Sie die relevanten Elemente identifizieren, die dekoriert werden sollen.
 
 ![Überprüfen des Block-DOM](./assets/block-options/dom.png){align="center"}
 
@@ -461,9 +461,9 @@ Um das zu dekorierende DOM zu finden, öffnen Sie die Seite mit dem Block in Ihr
 
 ## Block – CSS
 
-Bearbeiten Sie `blocks/teaser/teaser.css` , um bestimmte CSS-Stile für die Option **nebeneinander** hinzuzufügen. Diese Datei enthält das Standard-CSS für den -Block.
+Bearbeiten Sie `blocks/teaser/teaser.css`, um bestimmte CSS-Stile für die Option **Nebeneinander** hinzuzufügen. Diese Datei enthält den CSS-Standardcode für den Block. 
 
-Um Stile für die Option **nebeneinander** zu ändern, fügen Sie eine neue CSS-Regel mit dem Bereich in der `teaser.css`-Datei hinzu, die auf Teaser-Blöcke abzielt, die mit der `side-by-side`-Klasse konfiguriert wurden.
+Um Stile für die Option **Nebeneinander** zu ändern, fügen Sie in der `teaser.css`-Datei eine CSS-Regel mit neuem Umfang hinzu, die auf Teaser-Blöcke abzielt, die mit der `side-by-side`-Klasse konfiguriert wurden.
 
 ```css
 .block.teaser.side-by-side { ... }
@@ -483,7 +483,7 @@ Alternativ können Sie die CSS-Verschachtelung für eine präzisere Version verw
 
 Fügen Sie innerhalb der `&.side-by-side`-Regel die erforderlichen CSS-Eigenschaften hinzu, um den Block zu formatieren, wenn die `side-by-side`-Klasse angewendet wird.
 
-Ein gängiger Ansatz besteht darin, Standardstile zurückzusetzen, indem `all: initial` auf freigegebene Selektoren angewendet und dann die erforderlichen Stile für die `side-by-side` Variante hinzugefügt werden. Wenn die meisten Stile für mehrere Optionen freigegeben sind, kann das Überschreiben bestimmter Eigenschaften einfacher sein. Wenn jedoch mehrere Selektoren geändert werden müssen, kann das Zurücksetzen aller Stile und das erneute Anwenden nur der erforderlichen Stile den Code übersichtlicher und wartbarer machen.
+Ein gängiger Ansatz besteht im Zurücksetzen von Standardstilen durch das Anwenden von `all: initial` auf gemeinsame Selektoren und das anschließende Hinzufügen der erforderlichen Stile für die `side-by-side`-Variante. Wenn die meisten Stile für mehrere Optionen freigegeben sind, kann das Überschreiben bestimmter Eigenschaften einfacher sein. Wenn jedoch mehrere Selektoren geändert werden müssen, kann das Zurücksetzen aller Stile und das erneute Anwenden nur der erforderlichen Stile den Code übersichtlicher und wartungsfreundlicher machen.
 [!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
 ```css
@@ -662,9 +662,9 @@ Ein gängiger Ansatz besteht darin, Standardstile zurückzusetzen, indem `all: i
 
 ## Block – JavaScript
 
-Die Identifizierung der aktiven Option(en) für den Block ist einfach, indem Sie die auf das Blockelement angewendeten Klassen überprüfen. In diesem Beispiel müssen wir anpassen, wo die `.image-wrapper` Stile angewendet werden, je nach der aktiven Option.
+Aktive Optionen für den Block lassen sich ganz unkompliziert identifizieren, indem Sie die auf das Blockelement angewendeten Klassen überprüfen. In diesem Beispiel müssen wir anpassen, wo die `.image-wrapper` Stile abhängig von der aktiven Option angewendet werden.
 
-Die Funktion `getOptions` gibt ein Array von Klassen zurück, die auf den Block angewendet werden, mit Ausnahme von `block` und `teaser` (da alle Blöcke die `block` Klasse und alle Teaser-Blöcke die `teaser` Klasse aufweisen). Alle verbleibenden Klassen im -Array geben die aktiven Optionen an. Wenn das Array leer ist, wird die Standardoption angewendet.
+Die Funktion `getOptions` gibt ein Array von Klassen zurück, die auf den Block angewendet werden, mit Ausnahme von `block` und `teaser` (da alle Blöcke die `block`-Klasse und alle Teaser-Blöcke die `teaser`-Klasse aufweisen). Alle verbleibenden Klassen im Array geben die aktiven Optionen an. Wenn das Array leer ist, wird die Standardoption angewendet.
 
 ```javascript
 function getOptions(block) {
@@ -685,7 +685,7 @@ if (getOptions(block).includes('side-by-side')) {
 }
 ```
 
-Die vollständige aktualisierte JavaScript-Datei für den Teaser-Block mit den Optionen „Standard“ und „Nebeneinander“ lautet wie folgt:
+Die vollständig aktualisierte JavaScript-Datei für den Teaser-Block mit den Optionen „Standard“ und „Nebeneinander“ ist folgende:
 
 [!BADGE /blocks/teaser/teaser.js]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -783,13 +783,13 @@ $ git commit -m "CSS and JavaScript implementation for Teaser block option Side-
 $ git push origin block-options
 ```
 
-Jetzt sind die Änderungen im universellen Editor sichtbar, wenn Sie den `?ref=block-options` Abfrageparameter verwenden.
+Jetzt sind die Änderungen im universellen Editor sichtbar, wenn Sie den Abfrageparameter `?ref=block-options` verwenden.
 
 ![Teaser im universellen Editor](./assets/block-options/universal-editor-preview.png){align="center"}
 
 
 ## Herzlichen Glückwunsch!
 
-Sie haben jetzt Blockoptionen in Edge Delivery Services und im universellen Editor untersucht, mit denen Sie die Inhaltsbearbeitung mit größerer Flexibilität anpassen und optimieren können. Beginnen Sie mit der Anwendung dieser Optionen in Ihren Projekten, um die Effizienz zu verbessern und die Konsistenz zu wahren.
+Sie haben jetzt Blockoptionen in Edge Delivery Services und im universellen Editor erkundet, mit denen Sie die Inhaltsbearbeitung mit höherer Flexibilität anpassen und optimieren können. Beginnen Sie mit der Anwendung dieser Optionen in Ihren Projekten, um die Effizienz zu verbessern und die Konsistenz zu wahren.
 
 Weitere Best Practices und erweiterte Techniken finden Sie in der [Dokumentation zum universellen Editor](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options).

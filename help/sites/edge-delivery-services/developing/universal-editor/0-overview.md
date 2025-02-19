@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
 source-git-commit: ae3ade0f31846776aa9bdd3a615d6514b626f48d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '558'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -255,7 +255,7 @@ Erfahren Sie, wie Sie einen neuen Block erstellen, indem Sie sein Inhaltsmodell 
 
 ## Nächste Schritte
 
-Nachdem Sie nun dieses Tutorial abgeschlossen haben, bauen Sie auf dem auf, was Sie mit diesen fokussierten Anleitungen gelernt haben. In diesen Handbüchern werden der hier behandelte Code und die hier behandelten Konzepte erläutert. Es werden rollenspezifische Anwendungsfälle, erweiterte Techniken und zusätzliche Tipps zur Verbesserung der Entwicklungsfähigkeiten von Edge Delivery Services und dem universellen Editor untersucht.
+Nachdem Sie dieses Tutorial nun abgeschlossen haben, bauen Sie auf dem auf, was Sie mit diesen zielgerichteten Anleitungen gelernt haben. In diesen Handbüchern wird näher auf den hier behandelten Code und die hier behandelten Konzepte eingegangen. Es werden rollenspezifische Anwendungsfälle, erweiterte Techniken und zusätzliche Tipps zur Verbesserung der Entwicklungsfähigkeiten von Edge Delivery Services und dem universellen Editor untersucht.
 
 <!-- CARDS 
 
@@ -268,8 +268,8 @@ Nachdem Sie nun dieses Tutorial abgeschlossen haben, bauen Sie auf dem auf, was 
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./how-to/block-options.md" title="Optionen für Blöcke" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="how-to/assets/block-options/main.png" alt="Optionen für Blöcke"
+                    <a href="./how-to/block-options.md" title="Blockoptionen" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="how-to/assets/block-options/main.png" alt="Blockoptionen"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -277,13 +277,13 @@ Nachdem Sie nun dieses Tutorial abgeschlossen haben, bauen Sie auf dem auf, was 
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./how-to/block-options.md" target="_blank" rel="referrer" title="Optionen für Blöcke">Blockoptionen</a>
+                        <a href="./how-to/block-options.md" target="_blank" rel="referrer" title="Blockoptionen">Blockoptionen</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie einen Baustein mit mehreren Anzeigeoptionen erstellen.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie einen Block mit mehreren Anzeigeoptionen erstellen.</p>
                 </div>
                 <a href="./how-to/block-options.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-</a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+                </a>
             </div>
         </div>
     </div>
