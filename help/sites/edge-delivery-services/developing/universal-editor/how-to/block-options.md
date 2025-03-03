@@ -10,10 +10,10 @@ doc-type: Tutorial
 jira: KT-17296
 duration: 700
 exl-id: f41dff22-bd47-4ea0-98cc-f5ca30b22c4b
-source-git-commit: ae3ade0f31846776aa9bdd3a615d6514b626f48d
-workflow-type: ht
-source-wordcount: '1958'
-ht-degree: 100%
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
+workflow-type: tm+mt
+source-wordcount: '1961'
+ht-degree: 98%
 
 ---
 
@@ -404,7 +404,7 @@ Sie können optional zwei **Teaser**-Blöcke hinzufügen, von denen einer auf **
 
 ### Veröffentlichen in der Vorschau
 
-Sobald der Teaser-Block zur Seite hinzugefügt wurde, [veröffentlichen Sie die Seite in der Vorschau ](../6-author-block.md), indem Sie **Veröffentlichungen verwalten** und die/den Site-Admin der AEM-Autoreninstanz verwenden.
+Sobald der Teaser-Block zur Seite hinzugefügt wurde, klicken Sie auf [ Schaltfläche ](../6-author-block.md)**Veröffentlichen** und wählen Sie „Veröffentlichen“ aus, um **Vorschau** im universellen Editor zu veröffentlichen.
 
 ## Block-HTML
 

@@ -1,6 +1,7 @@
 ---
-title: Verwenden der GuideBridge-API für den Zugriff auf Formulardaten
-description: Greifen Sie mithilfe der GuideBridge-API auf Formulardaten und Anhänge eines auf Kernkomponenten basierenden adaptiven Formulars zu.
+title: Verwenden der GuideBridge-API zum Posten von Formulardaten
+description: Erfahren Sie, wie Sie mit der GuideBridge-API für adaptive Formulare auf Formulardaten zugreifen und diese senden können. Speichern und Abrufen von Formulardaten mit Leichtigkeit.
+duration: 68
 feature: Adaptive Forms
 version: 6.5
 topic: Development
@@ -9,33 +10,33 @@ level: Experienced
 jira: KT-15286
 last-substantial-update: 2024-04-05T00:00:00Z
 exl-id: 099aaeaf-2514-4459-81a7-2843baa1c981
-duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
 workflow-type: tm+mt
-source-wordcount: '148'
-ht-degree: 100%
+source-wordcount: '132'
+ht-degree: 1%
 
 ---
 
-# Verwenden der GuideBridge-API zur POST-Anfrage von Formulardaten
 
-Die Funktion „Speichern und Fortsetzen“ eines Formulars ermöglicht es Benutzenden, den Fortschritt beim Ausfüllen des Formulars zu speichern und es zu einem späteren Zeitpunkt fortzusetzen.
-Um diesen Anwendungsfall zu erreichen, müssen Sie mithilfe der GuideBridge-API auf die Formulardaten zugreifen und sie zum Speichern und Abrufen an den REST-Endpunkt senden.
+# Zugreifen auf und Senden von Formulardaten mit der GuideBridge-API
 
-Die Formulardaten werden mithilfe des Regeleditors beim Klicken auf eine Schaltfläche gespeichert
-![rule-editor](assets/rule-editor.png)
+Erfahren Sie, wie Sie mit der GuideBridge-API auf Formulardaten zugreifen und diese zur Speicherung und zum Abruf an einen REST-Endpunkt senden können. Mit dieser Funktion können Benutzer das Ausfüllen des Formulars nahtlos speichern und fortsetzen.
 
-Die folgende JavaScript-Funktion wurde geschrieben, um die Daten an den angegebenen Endpunkt zu senden
+Die Formulardaten werden gespeichert, indem beim Klicken auf eine Schaltfläche im Regeleditor eine JavaScript-Funktion ausgelöst wird.
+
+![Regeleditor](assets/rule-editor.png)
+
+Die folgende JavaScript-Funktion zeigt, wie die Formulardaten an den angegebenen Endpunkt gesendet werden:
 
 ```javascript
 /**
 * Submits data and attachments 
-* @name submitFormDataAndAttachments Submit form data and attachments to REST end point
-* @param {string} endpoint in Stringformat
+* @name submitFormDataAndAttachments Submit form data and attachments to REST endpoint
+* @param {string} endpoint in String format
 * @return {string} 
  */
  
- function submitFormDataAndAttachments(endpoint) {
+function submitFormDataAndAttachments(endpoint) {
     guideBridge.getFormDataObject({
         success: function(resultObj) {
             const afFormData = resultObj.data.data;
@@ -51,7 +52,7 @@ Die folgende JavaScript-Funktion wurde geschrieben, um die Daten an den angegebe
             })
             .then(response => {
                 if (response.ok) {
-                    console.log("successfully saved");
+                    console.log("Successfully saved");
                     const fld = guideBridge.resolveNode("$form.confirmation");
                     return "Form data was saved successfully";
                 } else {
@@ -66,14 +67,13 @@ Die folgende JavaScript-Funktion wurde geschrieben, um die Daten an den angegebe
 }
 ```
 
-
-
 ## Server-seitiger Code
 
-Der folgende Server-seitige Java-Code wurde geschrieben, um die Formulardaten zu verarbeiten. Im Folgenden finden Sie das Java-Servlet, das in AEM ausgeführt wird und über den XHR-Aufruf im obigen JavaScript aufgerufen wird.
+Der folgende Server-seitige Java-Code verarbeitet die Formulardatenverarbeitung. Dieses Java-Servlet in AEM wird über einen XHR-Aufruf in der obigen JavaScript-Funktion aufgerufen.
 
 ```java
 package com.azuredemo.core.servlets;
+
 import com.adobe.aemfd.docmanager.Document;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
@@ -83,12 +83,14 @@ import org.apache.sling.servlets.annotations.SlingServletResourceTypes;
 import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import javax.servlet.Servlet;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
+
 @Component(
    service = {
       Servlet.class
@@ -100,14 +102,17 @@ import java.util.List;
    extensions = "json"
 )
 public class StoreFormSubmission extends SlingAllMethodsServlet implements Serializable {
-   private static final long serialVersionUID = 1 L;
+   private static final long serialVersionUID = 1L;
    private final transient Logger log = LoggerFactory.getLogger(this.getClass());
+
    protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) throws IOException {
-      List < RequestParameter > listOfRequestParameters = request.getRequestParameterList();
-      log.debug("The size of list is " + listOfRequestParameters.size());
+      List<RequestParameter> listOfRequestParameters = request.getRequestParameterList();
+      log.debug("The size of the list is " + listOfRequestParameters.size());
+      
       for (int i = 0; i < listOfRequestParameters.size(); i++) {
          RequestParameter requestParameter = listOfRequestParameters.get(i);
-         log.debug("is this request parameter a form field?" + requestParameter.isFormField());
+         log.debug("Is this request parameter a form field?" + requestParameter.isFormField());
+         
          if (!requestParameter.isFormField()) {
             Document attachmentDOC = new Document(requestParameter.getInputStream());
             attachmentDOC.copyToFile(new File(requestParameter.getName()));
@@ -116,6 +121,7 @@ public class StoreFormSubmission extends SlingAllMethodsServlet implements Seria
             log.debug(requestParameter.getString());
          }
       }
+      
       response.setStatus(HttpServletResponse.SC_OK);
    }
 }

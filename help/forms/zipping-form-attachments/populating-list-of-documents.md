@@ -1,6 +1,6 @@
 ---
-title: Benutzerdefinierter Prozessschritt zum Auffüllen von Listenvariablen
-description: Benutzerdefinierter Prozessschritt zum Auffüllen von Listenvariablen des Typs „Document“ und „String“
+title: Benutzerdefinierter Prozessschritt zum Ausfüllen von Listenvariablen
+description: Erfahren Sie, wie Sie einen benutzerdefinierten Prozessschritt erstellen, um Listenvariablen vom Typ Dokument und Zeichenfolge in Adobe Experience Manager zu füllen.
 feature: Workflow
 topic: Development
 version: 6.5
@@ -9,28 +9,29 @@ level: Beginner
 kt: kt-8063
 exl-id: 09d9eabf-4815-4159-b6c7-cf2ebc8a2df5
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 100%
+source-wordcount: '170'
+ht-degree: 7%
 
 ---
 
+
 # Benutzerdefinierter Prozessschritt
 
+Dieses Handbuch führt Sie durch die Erstellung eines benutzerdefinierten Prozessschritts, um Listenvariablen des Typs Array-Liste mit Anhängen und Anlagennamen in Adobe Experience Manager zu füllen. Diese Variablen sind für die Workflow-Komponente „E-Mail senden“ von entscheidender Bedeutung.
 
-Ein benutzerdefinierter Prozessschritt wurde implementiert, um Workflow-Variablen des Typs „ArrayList“ mit Anhängen und Anhangsnamen aufzufüllen. Diese Variable wird dann in der Workflow-Komponente „E-Mail senden“ verwendet. Wenn Sie mit der Erstellung von OSGi-Bundles nicht vertraut sind, folgen Sie bitte [der folgenden Anleitung](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=de)
+Wenn Sie nicht mit der Erstellung eines OSGi-Bundles vertraut sind, befolgen Sie diese [Anweisungen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=de).
 
-Der Code im benutzerdefinierten Prozessschritt führt Folgendes aus:
+Der Code im benutzerdefinierten Prozessschritt führt die folgenden Aktionen aus:
 
-* Erstellt Abfragen aller Anlagen des adaptiven Formulars im Payload-Ordner Übergibt den Ordnernamen als Prozessargument an den Prozessschritt
-
-* Füllt die Workflow-Variable `listOfDocuments` auf
-* Füllt die Workflow-Variable `attachmentNames` auf
-* Legt den Wert der Workflow-Variablen fest (`no_of_attachments`)
+1. Abfragen für alle Anhänge adaptiver Formulare im Payload-Ordner. Der Ordnername wird als Prozessargument an den Schritt übergeben.
+2. Füllt die `listOfDocuments` Workflow-Variable aus.
+3. Füllt die `attachmentNames` Workflow-Variable aus.
+4. Legt den Wert der Workflow-Variablen `no_of_attachments` fest.
 
 ```java
- package com.aemforms.formattachments.core;
+package com.aemforms.formattachments.core;
 
 import java.io.InputStream;
 import java.util.HashMap;
@@ -57,9 +58,8 @@ import com.day.cq.search.result.SearchResult;
 
 @Component(property = {
         Constants.SERVICE_DESCRIPTION + "=PopulateListOfDocuments",
-        "process.label" + "=PopulateListOfDocuments"
+        "process.label=PopulateListOfDocuments"
 })
-
 public class PopulateListOfDocuments implements WorkflowProcess {
 
         private static final Logger log = LoggerFactory.getLogger(PopulateListOfDocuments.class);
@@ -70,7 +70,7 @@ public class PopulateListOfDocuments implements WorkflowProcess {
         public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaDataMap processArguments) throws WorkflowException
         {
                 String payloadPath = workItem.getWorkflowData().getPayload().toString();
-                log.debug("The payload path  is" + payloadPath);
+                log.debug("The payload path is" + payloadPath);
                 MetaDataMap metaDataMap = workItem.getWorkflow().getWorkflowData().getMetaDataMap();
                 Session session = workflowSession.adaptTo(Session.class);
                 Map < String, String > map = new HashMap < String, String > ();
@@ -113,9 +113,10 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 >[!NOTE]
 >
 > Stellen Sie sicher, dass in Ihrem Workflow die folgenden Variablen definiert sind, damit der Code funktioniert:
-> *listOfDocuments*: Variable des Typs „ArrayList of Documents“
-> *attachmentNames*: Variable des Typs „ArrayList of String“
-> *no_of_attachments*: Variable des Typs „Double“
+> 
+> - `listOfDocuments`: Variable vom Typ ArrayList von Dokumenten
+> - `attachmentNames`: Variable vom Typ ArrayList von String
+> - `no_of_attachments`: Variable vom Typ Double
 
 ## Nächste Schritte
 
