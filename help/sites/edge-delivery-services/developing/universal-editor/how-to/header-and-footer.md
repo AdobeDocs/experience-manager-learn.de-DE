@@ -9,13 +9,13 @@ level: Intermediate, Experienced
 doc-type: Tutorial
 jira: KT-17470
 duration: 300
-source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
+exl-id: 70ed4362-d4f1-4223-8528-314b2bf06c7c
+source-git-commit: d201afc730010f0bf202a1d72af4dfa3867239bc
 workflow-type: tm+mt
-source-wordcount: '1208'
+source-wordcount: '1207'
 ht-degree: 18%
 
 ---
-
 
 # Entwickeln einer Kopf- und Fußzeile
 
@@ -370,7 +370,7 @@ Die Fußzeile sollte mit einem dreispaltigen Layout implementiert sein, das Folg
 
 ![Fußzeilenvorschau](./assets/header-and-footer/footer-preview.png){align="center"}
 
->[!TAB Erstellen Sie die Fußzeile]
+>[!TAB Fußzeileninhalt]
 
 Verwenden Sie den Spaltenblock auf der Seite „Fußzeile“, um den dreispaltigen Effekt zu erstellen.
 
