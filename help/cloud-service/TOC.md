@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Cloud Service
 team: TM
-source-git-commit: 99aa43460a76460175123a5bfe5138767491252b
-workflow-type: ht
-source-wordcount: '1366'
-ht-degree: 100%
+source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
+workflow-type: tm+mt
+source-wordcount: '1377'
+ht-degree: 98%
 
 ---
 
@@ -143,8 +143,14 @@ ht-degree: 100%
          + [Durchlauf-Warnungen](./debugging/cloud-service/risks/traversals.md)
 + AEM-APIs{#aem-apis}
    + [Überblick](./apis/overview.md)
-   + [OpenAPI-basierte AEM-APIs (Server-zu-Server)](./apis/invoke-openapi-based-aem-apis.md)
-   + [OpenAPI-basierte AEM-APIs (benutzerauthentifiziert)](./apis/invoke-openapi-based-aem-apis-from-web-app.md)
+   + OpenAPIs {#openapis}
+      + [Überblick](./apis/openapis/overview.md)
+      + [Einrichtung](./apis/openapis/setup.md)
+      + [Server-zu-Server-Authentifizierung](./apis/openapis/use-cases/invoke-api-using-oauth-s2s.md)
+      + [Benutzerauthentifizierung (Web-App)](./apis/openapis/use-cases/invoke-api-using-oauth-web-app.md)
+      + Anleitung{#how-to}
+         + [Verwaltung von Anmeldeinformationen und Produktprofilen](./apis/openapis/how-to/credentials-and-product-profile-management.md)
+         + [Berechtigungsverwaltung](./apis/openapis/how-to/services-user-group-permission-management.md)
 + Inhaltsbereitstellung{#content-delivery}
    + [Benutzerdefinierter Domain-Name](./content-delivery/custom-domain-names.md)
    + [Benutzerdefinierter Domain-Name mit von Adobe verwaltetem CDN](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
