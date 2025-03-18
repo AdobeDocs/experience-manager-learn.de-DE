@@ -9,7 +9,7 @@ team: TM
 source-git-commit: a11dd10cedbc8e77fa23d128562d6b3a3ae23c14
 workflow-type: tm+mt
 source-wordcount: '1389'
-ht-degree: 97%
+ht-degree: 99%
 
 ---
 
@@ -144,11 +144,11 @@ ht-degree: 97%
          + [Durchlauf-Warnungen](./debugging/cloud-service/risks/traversals.md)
 + AEM-APIs{#aem-apis}
    + [Überblick](./apis/overview.md)
-   + OpenAPIs {#openapis}
+   + OpenAPIs{#openapis}
       + [Überblick](./apis/openapis/overview.md)
       + [Einrichtung](./apis/openapis/setup.md)
       + [Server-zu-Server-Authentifizierung](./apis/openapis/use-cases/invoke-api-using-oauth-s2s.md)
-      + [Benutzerauthentifizierung (Web-App)](./apis/openapis/use-cases/invoke-api-using-oauth-web-app.md)
+      + [Benutzerauthentifizierung (Web-Anwendung)](./apis/openapis/use-cases/invoke-api-using-oauth-web-app.md)
       + Anleitung{#how-to}
          + [Verwaltung von Anmeldeinformationen und Produktprofilen](./apis/openapis/how-to/credentials-and-product-profile-management.md)
          + [Berechtigungsverwaltung](./apis/openapis/how-to/services-user-group-permission-management.md)
@@ -310,12 +310,12 @@ ht-degree: 97%
       + [Zusammenführen von Daten und Vorlage](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [Testen der Lösung](./forms/doc-gen-forms-cs/test.md)
       + [Herausforderung](./forms/doc-gen-forms-cs/challenge.md)
-   + Verwenden der Forms Document Services-API{#forms-document-services-api}
+   + Verwenden der Forms-Dokumentendienste-API{#forms-document-services-api}
       + [Einführung](./forms/forms-document-services/introduction.md)
-      + [Konfigurieren der OpenAPI](./forms/forms-document-services/using-open-api.md)
+      + [Konfigurieren von OpenAPI](./forms/forms-document-services/using-open-api.md)
       + [Generieren eines Zugriffs-Tokens](./forms/forms-document-services/generate-access-token.md)
-      + [Verwendungsrechte anwenden](./forms/forms-document-services/make-api-calls.md)
-      + [Beispielcode](./forms/forms-document-services/sample-project.md)
+      + [Anwenden von Verwendungsrechten](./forms/forms-document-services/make-api-calls.md)
+      + [Beispiel-Code](./forms/forms-document-services/sample-project.md)
    + Dokumenterstellung mithilfe der Batch-API{#formscs-batch-api}
       + [Einführung](./forms/formscs-batch-api/introduction.md)
       + [Konfigurieren von Azure-Datenspeicherung](./forms/formscs-batch-api/configure-azure-storage.md)
