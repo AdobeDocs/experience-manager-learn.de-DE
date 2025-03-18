@@ -1,6 +1,6 @@
 ---
 title: Generieren eines Zugriffs-Tokens
-description: Beispielcode zum Generieren eines Zugriffstokens zum Aufrufen der Forms Document Services-API
+description: Beispiel-Code zum Generieren eines Zugriffs-Tokens zum Aufrufen der Forms-Dokumentendienste-API
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -9,17 +9,18 @@ feature: Document Services
 topic: Development
 jira: KT-17479
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
-workflow-type: tm+mt
+exl-id: 100cab4b-16bd-4358-b0f0-61dbfd64d412
+source-git-commit: 1a76256677d06aaffd142c46dc9167a669ac6455
+workflow-type: ht
 source-wordcount: '180'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
 # Generieren eines Zugriffs-Tokens
 
-Ein Zugriffs-Token ist eine Berechtigung, die zum Authentifizieren und Autorisieren von Anfragen an eine REST-API verwendet wird. Sie wird normalerweise von einem Authentifizierungs-Server (z. B. OAuth 2.0 oder OpenID Connect) ausgestellt, nachdem sich ein Benutzer oder eine Anwendung erfolgreich angemeldet hat. Beim Aufrufen einer gesicherten Forms Document Services-API wird ein Zugriffstoken in den Anfrage-Header eingefügt, um die Identität des Clients zu überprüfen.
-Im Folgenden finden Sie eine Beispielanfrage zum Senden eines Zugriffs-Tokens
+Ein Zugriffs-Token besteht aus Anmeldedaten und wird zum Authentifizieren und Autorisieren von Anfragen an eine REST-API verwendet. Es wird normalerweise von einem Authentifizierungs-Server (z. B. OAuth 2.0 oder OpenID Connect) ausgegeben, nachdem sich eine Person oder eine Anwendung erfolgreich angemeldet hat. Beim Aufrufen einer gesicherten Forms-Dokumentendienste-API wird ein Zugriffs-Token in die Anfrage-Kopfzeile eingefügt, um die Identität des Clients zu verifizieren.
+Im Folgenden finden Sie eine Beispielanfrage zum Senden eines Zugriffs-Tokens.
 
 ```java
 POST /api/data HTTP/1.1
@@ -27,7 +28,7 @@ Host: example.com
 Authorization: Bearer eyJhbGciOiJIUzI1...
 ```
 
-Der folgende Code wurde verwendet, um das Zugriffstoken zu generieren
+Der folgende Code wurde zum Generieren des Zugriff-Tokens verwendet.
 
 ```java
 import java.io.InputStream;
@@ -99,8 +100,8 @@ public class AccessTokenService {
 }
 ```
 
-Die AccessTokenService-Klasse ist für das Abrufen eines OAuth-Zugriffstokens aus dem IMS-Authentifizierungsdienst von Adobe verantwortlich. Er liest Client-Anmeldeinformationen aus einer JSON-Datei (server_credentials.json), erstellt eine Authentifizierungsanfrage und sendet sie an den Adobe-Token-Endpunkt. Die Antwort wird dann geparst, um das Zugriffstoken zu extrahieren, das für sichere API-Aufrufe verwendet wird. Die -Klasse umfasst eine ordnungsgemäße Protokollierung und Fehlerbehandlung, um Zuverlässigkeit und einfacheres Debuggen zu gewährleisten.
+Die Klasse „AccessTokenService“ ist für das Abrufen eines OAuth-Zugriffs-Tokens aus dem IMS-Authentifizierungsdienst von Adobe verantwortlich. Sie liest Client-Anmeldeinformationen aus einer JSON-Datei (server_credentials.json), erstellt eine Authentifizierungsanfrage und sendet sie an den Token-Endpunkt von Adobe. Die Antwort wird dann analysiert, um das Zugriffs-Token zu extrahieren, das für sichere API-Aufrufe verwendet wird. Die Klasse umfasst eine ordnungsgemäße Protokollierung und Fehlerverarbeitung, um Zuverlässigkeit und einfacheres Debuggen zu gewährleisten.
 
 ## Nächste Schritte
 
-[Durchführen von API-Aufrufen](./make-api-calls.md)
+[Tätigen von API-Aufrufen](./make-api-calls.md)

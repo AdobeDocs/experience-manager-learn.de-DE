@@ -11,9 +11,9 @@ jira: KT-17296
 duration: 700
 exl-id: f41dff22-bd47-4ea0-98cc-f5ca30b22c4b
 source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1961'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -404,7 +404,7 @@ Sie können optional zwei **Teaser**-Blöcke hinzufügen, von denen einer auf **
 
 ### Veröffentlichen in der Vorschau
 
-Sobald der Teaser-Block zur Seite hinzugefügt wurde, klicken Sie auf [ Schaltfläche ](../6-author-block.md)**Veröffentlichen** und wählen Sie „Veröffentlichen“ aus, um **Vorschau** im universellen Editor zu veröffentlichen.
+Sobald der Teaser-Block zur Seite hinzugefügt wurde, [veröffentlichen Sie die Seite in der Vorschau ](../6-author-block.md), indem Sie im universellen Editor die Schaltfläche **Veröffentlichen** und dann das Veröffentlichen in der **Vorschau** auswählen.
 
 ## Block-HTML
 
@@ -756,7 +756,7 @@ export default function decorate(block) {
 
 ## Entwicklungsvorschau
 
-Beim Hinzufügen von CSS und JavaScript lädt die lokale Entwicklungsumgebung der AEM-CLI die Änderungen neu, sodass die Auswirkungen des Codes auf den Block schnell und einfach visualisiert werden können. Bewegen Sie den Mauszeiger über den CTA und überprüfen Sie, ob das Bild des Teasers vergrößert und verkleinert wird.
+Beim Hinzufügen von CSS und JavaScript lädt die lokale Entwicklungsumgebung der AEM-CLI die Änderungen neu, sodass die Auswirkungen des Codes auf den Block schnell und einfach visualisiert werden können. Bewegen Sie den Mauszeiger über den CTA und überprüfen Sie, ob das Bild des Teasers dabei vergrößert und verkleinert wird.
 
 ![Lokale Entwicklungsvorschau des Teasers mithilfe von CSS und JS](./assets/block-options//local-development-preview.png)
 

@@ -1,6 +1,6 @@
 ---
-title: Verwenden der GuideBridge-API zum Posten von Formulardaten
-description: Erfahren Sie, wie Sie mit der GuideBridge-API für adaptive Formulare auf Formulardaten zugreifen und diese senden können. Speichern und Abrufen von Formulardaten mit Leichtigkeit.
+title: Verwenden der GuideBridge-API zur POST-Anfrage von Formulardaten
+description: Erfahren Sie, wie Sie mit der GuideBridge-API für adaptive Formulare auf Formulardaten zugreifen und diese senden können. Sie können Formulardaten ganz einfach speichern und abrufen.
 duration: 68
 feature: Adaptive Forms
 version: 6.5
@@ -11,16 +11,16 @@ jira: KT-15286
 last-substantial-update: 2024-04-05T00:00:00Z
 exl-id: 099aaeaf-2514-4459-81a7-2843baa1c981
 source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '132'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
 # Zugreifen auf und Senden von Formulardaten mit der GuideBridge-API
 
-Erfahren Sie, wie Sie mit der GuideBridge-API auf Formulardaten zugreifen und diese zur Speicherung und zum Abruf an einen REST-Endpunkt senden können. Mit dieser Funktion können Benutzer das Ausfüllen des Formulars nahtlos speichern und fortsetzen.
+Erfahren Sie, wie Sie mit der GuideBridge-API auf Formulardaten zugreifen und sie zum Speichern und Abrufen an den REST-Endpunkt senden. Mit dieser Funktion können Benutzende das Ausfüllen des Formulars nahtlos speichern und fortsetzen.
 
 Die Formulardaten werden gespeichert, indem beim Klicken auf eine Schaltfläche im Regeleditor eine JavaScript-Funktion ausgelöst wird.
 
@@ -69,7 +69,7 @@ function submitFormDataAndAttachments(endpoint) {
 
 ## Server-seitiger Code
 
-Der folgende Server-seitige Java-Code verarbeitet die Formulardatenverarbeitung. Dieses Java-Servlet in AEM wird über einen XHR-Aufruf in der obigen JavaScript-Funktion aufgerufen.
+Mit dem folgenden Server-seitigen Java-Code wird die Formulardatenverarbeitung durchgeführt. Dieses Java-Servlet in AEM wird über einen XHR-Aufruf in der obigen JavaScript-Funktion aufgerufen.
 
 ```java
 package com.azuredemo.core.servlets;

@@ -1,6 +1,6 @@
 ---
 title: Beispielprojekt
-description: Beispielprojekt, das in Ihre Umgebung importiert und ausgeführt werden kann
+description: Beispielprojekt, das in Ihre Umgebung importiert und dort ausgeführt werden kann.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -9,32 +9,31 @@ feature: Document Services
 topic: Development
 jira: KT-17479
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
-workflow-type: tm+mt
+exl-id: f1fcc4bb-cc31-45e8-b7bb-688ef6a236bb
+source-git-commit: 1a76256677d06aaffd142c46dc9167a669ac6455
+workflow-type: ht
 source-wordcount: '94'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
-
 # Testen in Ihrer lokalen Umgebung
 
-* Projekt importieren
+* Importieren des Projekts
 
-   * Herunterladen und Extrahieren des [Beispielprojekts](./assets/formsdocumentservices.zip)
-   * Öffnen Sie Ihre bevorzugte **Java-Entwicklungsumgebung** (IntelliJ IDEA, Eclipse oder VS Code) und importieren Sie das Projekt als Maven-Projekt
-* Konfigurieren von Anmeldeinformationen
+   * Laden Sie das [Beispielprojekt](./assets/formsdocumentservices.zip) herunter und exportieren Sie es.
+   * Öffnen Sie Ihre bevorzugte **Java-Entwicklungsumgebung** (IntelliJ IDEA, Eclipse oder VS Code) und importieren Sie das Projekt als Maven-Projekt.
+* Konfigurieren der Anmeldeinformationen
 
-   * Suchen Sie die Datei `resources/credentials/server_credentials.json`
-   * Öffnen Sie sie und **aktualisieren Sie die Anmeldeinformationen** die für Ihre Umgebung spezifisch sind.
-   * Stellen Sie sicher, dass gültige Werte enthalten sind für:
-     `clientId`, `clientSecret`, `adobeIMSV3TokenEndpointURL` und
+   * Suchen Sie die Datei `resources/credentials/server_credentials.json`.
+   * Öffnen Sie sie und **aktualisieren Sie die Anmeldeinformationen**, die für Ihre Umgebung spezifisch sind.
+   * Stellen Sie sicher, dass sie gültige Werte für Folgendes enthält:
+     `clientId`, `clientSecret`,`adobeIMSV3TokenEndpointURL` und
      `scopes`
 
-* Ausführen der Main-Klasse
+* Ausführen der Klasse „Haupt“
 
    * Navigieren Sie zu `src/main/java/Main.java` und führen Sie die Hauptmethode aus
 
-* Ausführung überprüfen
-   * Ausgabe im Terminalfenster überprüfen
-
+* Überprüfen der Ausführung
+   * Überprüfen Sie die Ausgabe im Terminal-Fenster.

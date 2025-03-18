@@ -11,9 +11,9 @@ jira: KT-17470
 duration: 300
 exl-id: 70ed4362-d4f1-4223-8528-314b2bf06c7c
 source-git-commit: d201afc730010f0bf202a1d72af4dfa3867239bc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1207'
-ht-degree: 18%
+ht-degree: 100%
 
 ---
 
@@ -21,17 +21,17 @@ ht-degree: 18%
 
 ![Kopf- und Fußzeile](./assets/header-and-footer/hero.png){align="center"}
 
-Kopf- und Fußzeilen spielen in Edge Delivery Services (EDS) eine einzigartige Rolle, da sie direkt an die HTML-`<header>` und -`<footer>` gebunden sind. Im Gegensatz zu regulären Seiteninhalten werden sie separat verwaltet und können unabhängig aktualisiert werden, ohne den gesamten Seitencache bereinigen zu müssen. Während ihre Implementierung im Code-Projekt als Blöcke unter `blocks/header` und `blocks/footer` lebt, können Autoren ihren Inhalt über dedizierte AEM-Seiten bearbeiten, die eine beliebige Blockkombination enthalten können.
+Kopf- und Fußzeilen spielen in Edge Delivery Services (EDS) eine einzigartige Rolle, da sie direkt an die HTML-Elemente `<header>` und `<footer>` gebunden sind. Sie werden im Gegensatz zu regulären Seiteninhalten separat verwaltet und können unabhängig aktualisiert werden, ohne den gesamten Seiten-Cache bereinigen zu müssen. Sie sind im Code-Projekt zwar in Form von Blöcken unter `blocks/header` und `blocks/footer` implementiert, Autorinnen und Autoren können ihren Inhalt jedoch über dedizierte AEM-Seiten bearbeiten, die eine beliebige Blockkombination enthalten können.
 
-## Kopfzeilenblock
+## Block „Kopfzeile“
 
-![Kopfzeilenblock](./assets/header-and-footer/header-local-development-preview.png){align="center"}
+![Block „Kopfzeile“](./assets/header-and-footer/header-local-development-preview.png){align="center"}
 
-Die Kopfzeile ist ein spezieller Block, der an das Edge Delivery Services HTML-`<header>` gebunden ist.
-Das `<header>` wird leer bereitgestellt und über XHR (AJAX) auf einer separaten AEM-Seite gefüllt.
-Auf diese Weise kann die -Kopfzeile unabhängig vom Seiteninhalt verwaltet und aktualisiert werden, ohne dass eine vollständige Cache-Bereinigung aller Seiten erforderlich ist.
+Die Kopfzeile ist ein spezieller Block, der an das HTML-Element `<header>` von Edge Delivery Services gebunden ist.
+Das Element `<header>` wird leer bereitgestellt und über XHR (AJAX) auf einer separaten AEM-Seite gefüllt.
+Auf diese Weise kann die Kopfzeile unabhängig vom Seiteninhalt verwaltet und aktualisiert werden, ohne dass eine vollständige Cache-Bereinigung aller Seiten erforderlich ist.
 
-Der Kopfzeilenblock ist dafür verantwortlich, das AEM-Seitenfragment anzufordern, das den Kopfzeileninhalt enthält, und es im `<header>` zu rendern.
+Der Block „Kopfzeile“ ist dafür verantwortlich, das AEM-Seitenfragment mit dem Kopfzeileninhalt anzufordern und es im Element `<header>` zu rendern.
 
 [!BADGE /blocks/header/header.js]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -58,45 +58,45 @@ export default async function decorate(block) {
 }
 ```
 
-Die `loadFragment()`-Funktion sendet eine XHR (AJAX)-Anfrage an `${navPath}.plain.html`, die eine EDS HTML-Ausgabedarstellung der HTML der AEM-Seite zurückgibt, die im `<main>`-Tag der Seite vorhanden ist, ihren Inhalt mit allen Blöcken verarbeitet, die sie möglicherweise enthält, und die aktualisierte DOM-Baumstruktur zurückgibt.
+Die Funktion `loadFragment()` sendet eine XHR(AJAX)-Anfrage an `${navPath}.plain.html`, die eine EDS-HTML-Ausgabedarstellung der HTML der AEM-Seite zurückgibt, die im Tag `<main>` der Seite vorhanden ist, ihren Inhalt mit allen Blöcken verarbeitet, die sie möglicherweise enthält, und die aktualisierte DOM-Baumstruktur zurückgibt.
 
-## Erstellen der Kopfzeilenseite
+## Erstellen der Seite „Kopfzeile“
 
-Bevor Sie den Kopfzeilenblock entwickeln, verfassen Sie zunächst dessen Inhalt im universellen Editor, gegen den Sie etwas entwickeln können.
+Bevor Sie den Block „Kopfzeile“ entwickeln, verfassen Sie zunächst dessen Inhalt im universellen Editor, um eine Grundlage für Ihre Entwicklung zu haben.
 
-Der Kopfzeileninhalt befindet sich auf einer dedizierten AEM-Seite mit dem Namen `nav`.
+Der Inhalt der Kopfzeile befindet sich auf einer dedizierten AEM-Seite mit dem Titel `nav`.
 
-![Standardkopfzeilenseite](./assets/header-and-footer/header-page.png){align="center"}
+![Standardseite „Kopfzeile“](./assets/header-and-footer/header-page.png){align="center"}
 
 So erstellen Sie die Kopfzeile:
 
-1. Öffnen Sie die `nav` im universellen Editor
-1. Ersetzen Sie die Standardschaltfläche durch einen **Bildblock** der das WKND-Logo enthält
-1. Aktualisieren Sie das Navigationsmenü im **Textblock** indem Sie:
+1. Öffnen Sie die Seite `nav` im universellen Editor.
+1. Ersetzen Sie die Standardschaltfläche durch einen **Bildblock** mit dem WKND-Logo.
+1. Aktualisieren Sie das Navigationsmenü im **Textblock** mit folgenden Schritten:
    - Hinzufügen der gewünschten Navigations-Links
    - Erstellen von Elementen der Unternavigation, wo erforderlich
-   - Vorerst alle Links auf die Startseite (`/`) einstellen
+   - Vorläufiges Einstellen aller Links auf die Startseite (`/`)
 
-![Authoring-Kopfzeilenblock im universellen Editor](./assets/header-and-footer/header-author.png){align="center"}
+![Autorenkopfzeilenblock im universellen Editor](./assets/header-and-footer/header-author.png){align="center"}
 
 ### Veröffentlichen in der Vorschau
 
-Wenn die Kopfzeilenseite aktualisiert wurde, [veröffentlichen Sie die Seite, um eine Vorschau anzuzeigen](../6-author-block.md).
+Wenn die Seite „Kopfzeile“ aktualisiert worden ist, [veröffentlichen Sie die Seite in der Vorschau](../6-author-block.md).
 
-Da sich der Kopfzeileninhalt auf einer eigenen Seite (der `nav` Seite) befindet, müssen Sie diese Seite veröffentlichen, damit die Kopfzeilenänderungen wirksam werden. Durch das Veröffentlichen anderer Seiten, die die -Kopfzeile verwenden, wird der Kopfzeileninhalt in Edge Delivery Services nicht aktualisiert.
+Da sich der Inhalt der Kopfzeile auf einer eigenen Seite befindet (der Seite `nav`), müssen Sie gezielt diese Seite veröffentlichen, damit die Änderungen an der Kopfzeile wirksam werden. Der Inhalt der Kopfzeile in Edge Delivery Services wird durch das Veröffentlichen anderer Seiten, die die Kopfzeile verwenden, nicht aktualisiert.
 
 ## Block-HTML
 
 Überprüfen Sie zur Blockentwicklung zunächst die in der Edge Delivery Services-Vorschau angezeigte DOM-Struktur. Das DOM wurde um JavaScript erweitert und mit CSS formatiert und bildet somit die Grundlage für das Erstellen und Anpassen des Blocks.
 
-Da die Kopfzeile als Fragment geladen wird, müssen wir den HTML untersuchen, der von der XHR-Anfrage zurückgegeben wird, nachdem er in das DOM eingefügt und über `loadFragment()` dekoriert wurde. Dies kann durch die Überprüfung des DOM in den Entwickler-Tools des Browsers erfolgen.
+Da die Kopfzeile als Fragment geladen wird, müssen wir die HTML untersuchen, die von der XHR-Anfrage zurückgegeben wird, nachdem sie in das DOM eingefügt und über `loadFragment()` ausgestattet wurde. Dies kann durch die Überprüfung des DOM in den Entwickler-Tools des Browsers erfolgen.
 
 
 >[!BEGINTABS]
 
->[!TAB Zu dekorierendes DOM]
+>[!TAB Auszustattendes DOM]
 
-Im Folgenden finden Sie die HTML der Kopfzeilenseite, nachdem sie mit dem bereitgestellten `header.js` geladen und in das DOM eingefügt wurde:
+Im Folgenden finden Sie die HTML der Seite „Kopfzeile“, nachdem sie mit der bereitgestellten `header.js` geladen und in das DOM eingefügt wurde:
 
 ```html
 <header class="header-wrapper">
@@ -141,7 +141,7 @@ Im Folgenden finden Sie die HTML der Kopfzeilenseite, nachdem sie mit dem bereit
 
 >[!TAB So finden Sie das DOM]
 
-So suchen und überprüfen Sie das `<header>` der Seite in den Entwickler-Tools des Webbrowsers.
+So suchen und überprüfen Sie das Element `<header>` der Seite in den Entwickler-Tools des Webbrowsers.
 
 ![Kopfzeilen-DOM](./assets/header-and-footer/header-dom.png){align="center"}
 
@@ -150,9 +150,9 @@ So suchen und überprüfen Sie das `<header>` der Seite in den Entwickler-Tools 
 
 ## Block – JavaScript
 
-Die `/blocks/header/header.js`-Datei aus der [AEM Boilerplate XWalk-Projektvorlage](https://github.com/adobe-rnd/aem-boilerplate-xwalk) stellt JavaScript für die Navigation bereit, einschließlich Dropdown-Menüs und einer responsiven Mobilansicht.
+Die Datei `/blocks/header/header.js` aus der [AEM Boilerplate XWalk-Projektvorlage](https://github.com/adobe-rnd/aem-boilerplate-xwalk) stellt JavaScript für die Navigation bereit, einschließlich Dropdown-Menüs und einer responsiven mobilen Ansicht.
 
-Während das `header.js`-Skript häufig stark an das Design einer Site angepasst ist, ist es wichtig, die ersten Zeilen in `decorate()` beizubehalten, die das Kopfzeilenseitenfragment abrufen und verarbeiten.
+Das Skript `header.js` wird zwar häufig stark an das Design einer Site angepasst, jedoch müssen die ersten Zeilen in `decorate()` unbedingt beibehalten werden, da sie das Fragment der Seite „Kopfzeile“ abrufen und verarbeiten.
 
 [!BADGE /blocks/header/header.js]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -165,23 +165,23 @@ export default async function decorate(block) {
   ...
 ```
 
-Der verbleibende Code kann an die Anforderungen Ihres Projekts angepasst werden.
+Der übrige Code kann an die Anforderungen Ihres Projekts angepasst werden.
 
-Je nach Header-Anforderung kann der Textbausteincode angepasst oder entfernt werden. In diesem Tutorial verwenden wir den bereitgestellten Code und erweitern ihn, indem wir einen Hyperlink um das erste erstellte Bild hinzufügen und es mit der Startseite der Site verknüpfen.
+Abhängig von den Anforderungen der Kopfzeile kann der Textbaustein-Code angepasst oder entfernt werden. In diesem Tutorial verwenden wir den bereitgestellten Code und erweitern ihn, indem wir einen Hyperlink um das erste erstellte Bild herum hinzufügen und es so mit der Startseite der Site verknüpfen.
 
-Der Code der Vorlage verarbeitet das Kopfzeilenseitenfragment, vorausgesetzt, es besteht aus drei Abschnitten in der folgenden Reihenfolge:
+Der Code der Vorlage verarbeitet das Fragment der Seite „Kopfzeile“ unter der Annahme, dass es aus drei Abschnitten in der folgenden Reihenfolge besteht:
 
-1. **Markenabschnitt** - Enthält das Logo und ist mit der `.nav-brand` Klasse formatiert.
-2. **Abschnitt** - Definiert das Hauptmenü der Site und ist mit `.nav-sections` formatiert.
-3. **Abschnitt Tools** - Enthält Elemente wie Suche, Anmeldung/Abmeldung und Profil, die mit `.nav-tools` formatiert sind.
+1. **Abschnitt „Marke“** – Enthält das Logo und ist mit der Klasse `.nav-brand` formatiert.
+2. **Abschnitt „Abschnitte“** – Definiert das Hauptmenü der Site und ist mit `.nav-sections` formatiert.
+3. **Abschnitt „Tools“** – Enthält Elemente wie „Suche“, „Anmeldung/Abmeldung“ und „Profil“, die mit `.nav-tools` formatiert sind.
 
-Um das Logobild mit der Startseite zu verknüpfen, aktualisieren wir den JavaScript-Block wie folgt:
+Um das Logobild über einen Hyperlink mit der Startseite zu verknüpfen, aktualisieren wir den Block „JavaScript“ wie folgt:
 
 >[!BEGINTABS]
 
->[!TAB JavaScript aktualisiert]
+>[!TAB Aktualisiertes JavaScript]
 
-Der aktualisierte Code, der das Logo-Bild mit einem Link zur Homepage der Website (`/`) umschließt, wird unten angezeigt:
+Der aktualisierte Code, der das Logobild mit einem Link zur Startseite der Site (`/`) umschließt, wird unten angezeigt:
 
 [!BADGE /blocks/header/header.js]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -214,9 +214,9 @@ export default async function decorate(block) {
 }
 ```
 
->[!TAB Original JavaScript]
+>[!TAB Originales JavaScript]
 
-Nachfolgend finden Sie die aus der Vorlage generierte `header.js`:
+Nachfolgend finden Sie die aus der Vorlage generierte, originale `header.js`:
 
 [!BADGE /blocks/header/header.js]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -252,11 +252,11 @@ export default async function decorate(block) {
 
 ## Block – CSS
 
-Aktualisieren Sie die `/blocks/header/header.css`, um sie entsprechend der Marke WKND zu gestalten.
+Aktualisieren Sie die Datei `/blocks/header/header.css`, um sie entsprechend der Marke WKND zu gestalten.
 
-Wir fügen das benutzerdefinierte CSS am Ende der `header.css` hinzu, damit die Änderungen am Tutorial leichter zu erkennen und zu verstehen sind. Diese Stile können direkt in die CSS-Regeln der Vorlage integriert werden. Wenn Sie sie jedoch voneinander trennen, können Sie die Änderungen besser veranschaulichen.
+Wir fügen das benutzerdefinierte CSS am Ende der Datei `header.css` hinzu, damit die Änderungen aufgrund des Tutorials leichter zu erkennen und zu verstehen sind. Diese Stile können zwar direkt in die CSS-Regeln der Vorlage integriert werden, aber wenn Sie sie voneinander trennen, können Sie die Änderungen besser veranschaulichen.
 
-Da wir unsere neuen Regeln nach dem ursprünglichen Satz hinzufügen, schließen wir sie mit einem `header .header.block nav` CSS-Selektor ein, um sicherzustellen, dass sie Vorrang vor den Vorlagenregeln haben.
+Da wir unsere neuen Regeln nach dem ursprünglichen Satz hinzufügen, schließen wir sie mit der CSS-Auswahl `header .header.block nav` ein, um sicherzustellen, dass sie Vorrang vor den Regeln der Vorlage haben.
 
 [!BADGE /blocks/header/header.css]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -322,9 +322,9 @@ header .header.block nav {
 
 ## Entwicklungsvorschau
 
-Bei der Entwicklung von CSS und JavaScript lädt die lokale Entwicklungsumgebung der AEM-CLI die Änderungen neu, sodass schnell und einfach visualisiert werden kann, wie sich Code auf den Baustein auswirkt. Bewegen Sie den Mauszeiger über den CTA und überprüfen Sie, ob das Bild des Teasers vergrößert und verkleinert wird.
+Beim Entwickeln von CSS und JavaScript lädt die lokale Entwicklungsumgebung der AEM-CLI die Änderungen neu, sodass die Auswirkungen des Codes auf den Block schnell und einfach visualisiert werden können. Bewegen Sie den Mauszeiger über den CTA und überprüfen Sie, ob das Bild des Teasers dabei vergrößert und verkleinert wird.
 
-![Vorschau der lokalen Entwicklung von Headern mithilfe von CSS und JS](./assets/header-and-footer/header-local-development-preview.png){align="center"}
+![Lokale Entwicklungsvorschau der Kopfzeile mithilfe von CSS und JS](./assets/header-and-footer/header-local-development-preview.png){align="center"}
 
 ## Linten des Codes
 
@@ -355,35 +355,35 @@ Jetzt sind die Änderungen im universellen Editor sichtbar, wenn Sie den Abfrage
 
 ## Fußzeile
 
-Der Inhalt der Fußzeile wird wie die Kopfzeile auf einer dedizierten AEM-Seite erstellt - in diesem Fall auf der Fußzeilenseite (`footer`). Die Fußzeile folgt demselben Muster, wenn sie als Fragment geladen und mit CSS und JavaScript versehen wird.
+Der Inhalt der Fußzeile wird ebenso wie die Kopfzeile auf einer dedizierten AEM-Seite erstellt – in diesem Fall auf der Seite „Fußzeile“ (`footer`). Die Fußzeile folgt demselben Muster und wird als Fragment geladen und mit CSS und JavaScript ausgestattet.
 
 >[!BEGINTABS]
 
 >[!TAB Fußzeile]
 
-Die Fußzeile sollte mit einem dreispaltigen Layout implementiert sein, das Folgendes enthält:
+Die Fußzeile sollte mit einem dreispaltigen Layout implementiert werden, das Folgendes enthält:
 
 - Eine linke Spalte mit einer Promotion (Bild und Text)
 - Eine mittlere Spalte mit Navigations-Links
-- Eine rechte Spalte mit Social-Media-Links
-- Eine Zeile am unteren Rand, die alle drei Spalten umfasst, mit dem Copyright
+- Eine rechte Spalte mit Social Media-Links
+- Eine Zeile ganz unten, die das Copyright enthält und sich über alle drei Spalten erstreckt.
 
-![Fußzeilenvorschau](./assets/header-and-footer/footer-preview.png){align="center"}
+![Vorschauen der Fußzeile](./assets/header-and-footer/footer-preview.png){align="center"}
 
->[!TAB Fußzeileninhalt]
+>[!TAB Inhalt der Fußzeile]
 
-Verwenden Sie den Spaltenblock auf der Seite „Fußzeile“, um den dreispaltigen Effekt zu erstellen.
+Verwenden Sie den Block „Spalten“ auf der Seite „Fußzeile“, um den dreispaltigen Effekt zu erzeugen.
 
 | Spalte 1 | Spalte 2 | Spalte 3 |
 | ---------|----------------|---------------|
 | Bild | Überschrift 3 | Überschrift 3 |
-| Text | Link-Liste | Link-Liste |
+| Text | Liste mit Links | Liste mit Links |
 
 ![Kopfzeilen-DOM](./assets/header-and-footer/footer-author.png){align="center"}
 
 >[!TAB Fußzeilen-Code]
 
-Im folgenden CSS wird der Fußzeilenblock mit einem dreispaltigen Layout, konsistenten Abständen und Typografie formatiert. Die Fußzeilenimplementierung verwendet nur die von der Vorlage bereitgestellte JavaScript.
+Das folgende CSS formatiert den Block „Fußzeile“ mit einem dreispaltigen Layout, konsistenten Abständen und Typografie. Die Fußzeilenimplementierung verwendet nur das von der Vorlage bereitgestellte JavaScript.
 
 [!BADGE /blocks/footer/footer.css]{type=Neutral tooltip="Dateiname des unten stehenden Code-Beispiels."}
 
@@ -462,13 +462,13 @@ footer {
 
 ## Herzlichen Glückwunsch!
 
-Sie haben nun untersucht, wie Kopf- und Fußzeilen in Edge Delivery Services und im universellen Editor verwaltet und entwickelt werden. Sie haben gelernt, wie sie sind:
+Sie haben sich nun mit der Verwaltung und Entwicklung von Kopf- und Fußzeilen in Edge Delivery Services und im universellen Editor vertraut gemacht. Sie haben gelernt, wie diese:
 
-- Erstellt auf dedizierten AEM-Seiten, die vom Hauptinhalt getrennt sind
-- Asynchron als Fragmente geladen, um unabhängige Aktualisierungen zu ermöglichen
-- Mit JavaScript und CSS zum Erstellen responsiver Navigationserlebnisse ausgestattet
-- Nahtlose Integration mit dem universellen Editor für einfaches Content-Management
+- vom Hauptinhalt getrennt auf dedizierten AEM-Seiten erstellt werden
+- asynchron als Fragmente geladen werden, um unabhängige Aktualisierungen zu ermöglichen
+- mit JavaScript und CSS zum Erstellen responsiver Navigationserlebnisse ausgestattet werden
+- für ein einfaches Content-Management nahtlos mit dem universellen Editor integriert werden
 
-Dieses Muster bietet einen flexiblen und verwaltbaren Ansatz zur Implementierung von Site-weiten Navigationskomponenten.
+Dieses Muster bietet einen flexiblen und gut verwaltbaren Ansatz zur Implementierung von Site-weiten Navigationskomponenten.
 
 Weitere Best Practices und erweiterte Techniken finden Sie in der [Dokumentation zum universellen Editor](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options).

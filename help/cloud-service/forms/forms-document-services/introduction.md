@@ -1,6 +1,6 @@
 ---
-title: Verwenden der Forms Document Services-API
-description: Erfahren Sie, wie Sie die OpenAPI-basierte Forms Document Services-API verwenden.
+title: Verwenden der Forms-Dokumentendienste-API
+description: Erfahren Sie, wie Sie die OpenAPI-basierte Forms-Dokumentendienste-API verwenden.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -9,22 +9,23 @@ feature: Document Services
 topic: Development
 jira: KT-17479
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
-workflow-type: tm+mt
+exl-id: 7d8755de-c227-40e9-a533-0b20c91f1610
+source-git-commit: 1a76256677d06aaffd142c46dc9167a669ac6455
+workflow-type: ht
 source-wordcount: '90'
-ht-degree: 8%
+ht-degree: 100%
 
 ---
 
-# Verwenden der Forms Document Services-API
+# Verwenden der Forms-Dokumentendienste-API
 
-Forms Document Services(https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) ermöglicht verschiedene PDF-Vorgänge, einschließlich des Konvertierens von PDFs in XDP, des Exports von Daten aus PDF forms und des Anwenden von Verwendungsrechten auf PDF-Dokumente.
+Die Forms-Dokumentendienste (https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) ermöglichen verschiedene PDF-Vorgänge, einschließlich des Konvertierens von PDFs in XDP, des Exportierens von Daten aus PDF-Formularen und des Anwendens von Verwendungsrechten auf PDF-Dokumente.
 
 >[!AVAILABILITY]
 >
->Diese Funktion ist im Rahmen des Early-Adopter-Programms verfügbar. Sie können von Ihrer offiziellen E-Mail-ID aus an aem-forms-ea@adobe.com schreiben, um dem Early-Adopter-Programm beizutreten und Zugriff auf diese Funktion anzufordern.
+>Diese Funktion ist im Rahmen des Early-Adopter-Programms verfügbar. Sie können von Ihrer offiziellen E-Mail-Adresse aus an aem-forms-ea@adobe.com schreiben, um dem Early-Adopter-Programm beizutreten und den Zugriff auf diese Funktion zu beantragen.
 
 
 ## Nächste Schritte
 
-[Konfigurieren von OpenAPI-basierten AEM Forms Document Services-APIs](using-open-api.md)
+[Konfigurieren von OpenAPI-basierten AEM Forms-Dokumentendienste-APIs](using-open-api.md)

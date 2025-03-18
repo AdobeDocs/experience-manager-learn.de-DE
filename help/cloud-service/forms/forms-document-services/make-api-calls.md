@@ -1,6 +1,6 @@
 ---
-title: Verwenden der UsageRights-API
-description: Beispielcode zum Anwenden von Verwendungsrechten auf die bereitgestellte PDF
+title: Verwenden der API „usagerights“
+description: Beispiel-Code zum Anwenden von Verwendungsrechten auf die bereitgestellte PDF
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
@@ -9,18 +9,19 @@ feature: Document Services
 topic: Development
 jira: KT-17479
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
-workflow-type: tm+mt
+exl-id: a4e2132b-3cfd-4377-8998-6944365edec5
+source-git-commit: 1a76256677d06aaffd142c46dc9167a669ac6455
+workflow-type: ht
 source-wordcount: '280'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-# Make API Call
+# Tätigen eines API-Aufrufs
 
-## Verwendungsrechte anwenden
+## Anwenden von Verwendungsrechten
 
-Sobald Sie über das Zugriffs-Token verfügen, besteht der nächste Schritt darin, eine API-Anfrage zu stellen, um Verwendungsrechte auf die angegebene PDF anzuwenden. Dazu gehört die Aufnahme des Zugriffstokens in den Anfrage-Header, um den Aufruf zu authentifizieren und eine sichere und autorisierte Verarbeitung des Dokuments sicherzustellen.
+Sobald Sie über das Zugriffs-Token verfügen, besteht der nächste Schritt darin, eine API-Anfrage zu stellen, um Verwendungsrechte auf die angegebene PDF anzuwenden. Dazu gehört das Aufnehmen des Zugriffs-Tokens in die Anfrage-Kopfzeile, um den Aufruf zu authentifizieren und eine sichere und autorisierte Verarbeitung des Dokuments sicherzustellen.
 
 Die folgende Funktion wendet die Verwendungsrechte an
 
@@ -87,36 +88,36 @@ public void applyUsageRights(String accessToken,String endPoint) {
 
 
 * **Einrichten von API-Endpunkt und Payload**
-   * Er erstellt die API-URL unter Verwendung der bereitgestellten `endPoint` und einer vordefinierten `BUCKET`.
-   * Definiert eine JSON-Zeichenfolge (`usageRights`), die die anzuwendenden Rechte angibt, z. B.:
+   * Erstellt die API-URL unter Verwendung des bereitgestellten `endPoint` und eines vordefinierten `BUCKET`.
+   * Definiert eine JSON-Zeichenfolge (`usageRights`), die die anzuwendenden Rechte angibt, z. B.:
       * Kommentare
       * Eingebettete Dateien
-      * Formular ausfüllen
-      * Exportieren von Formulardaten
+      * Ausfüllen von Formularen
+      * Formulardatenexport
 
-* **PDF-Datei laden**
-   * Ruft die `withoutusagerights.pdf` aus dem `pdffiles` ab.
-   * Protokolliert einen Fehler und beendet, wenn die Datei nicht gefunden wird.
+* **Laden der PDF-Datei**
+   * Ruft die Datei `withoutusagerights.pdf` aus dem Verzeichnis `pdffiles` ab.
+   * Protokolliert einen Fehler, wenn die Datei nicht gefunden wird, und beendet den Vorgang.
 
 * **Vorbereiten der HTTP-Anfrage**
    * Liest die PDF-Datei in ein Byte-Array.
    * Verwendet `MultipartEntityBuilder` zum Erstellen einer mehrteiligen Anfrage mit:
-      * Die PDF-Datei als binärer Hauptteil.
-      * Die `usageRights` JSON als Textkörper.
-   * Richtet eine HTTP-`POST` mit Headern ein:
+      * der PDF-Datei als Hauptteil der Binärdatei.
+      * der JSON `usageRights` als Textkörper.
+   * Richtet eine HTTP-`POST`-Anfrage mit Headern ein:
       * `Authorization: Bearer <accessToken>` für die Authentifizierung.
-      * `X-Adobe-Accept-Experimental: 1` (möglicherweise erforderlich für API-Kompatibilität).
+      * `X-Adobe-Accept-Experimental: 1` (möglicherweise für die API-Kompatibilität erforderlich).
 
 * **Senden der Anfrage und Verarbeiten der Antwort**
-   * Führt die HTTP-Anforderung mithilfe von `httpClient.execute(httpPost)` aus.
-   * liest die Antwort (die aktualisierte PDF mit angewendeten Nutzungsrechten wird erwartet).
+   * Führt die HTTP-Anfrage mithilfe von `httpClient.execute(httpPost)` aus.
+   * Liest die Antwort (erwartet wird die aktualisierte PDF mit angewendeten Verwendungsrechten).
    * Schreibt die erhaltenen PDF-Inhalte in **„ReaderExtended.pdf“** unter `SAVE_LOCATION`.
 
-* **Fehlerbehandlung und -bereinigung**
-   * Erfasst und protokolliert `IOException` Fehler.
-   * Stellt sicher, dass alle Ressourcen (Streams, HTTP-Client, Antwort) im `finally` ordnungsgemäß geschlossen werden.
+* **Fehlerverarbeitung und Bereinigung**
+   * Erfasst und protokolliert alle Fehler vom Typ `IOException`.
+   * Stellt sicher, dass alle Ressourcen (Streams, HTTP-Client, Antwort) im Block `finally` ordnungsgemäß geschlossen werden.
 
-Im Folgenden finden Sie den main.java-Code, der die Funktion applyUsageRights aufruft
+Im Folgenden finden Sie den main.java-Code, der die Funktion „applyUsageRights“ aufruft.
 
 ```java
 package com.aemformscs.communicationapi;
@@ -145,11 +146,11 @@ public class Main {
 }
 ```
 
-Die `main`-Methode wird initialisiert, indem `getAccessToken()` von `AccessTokenService` aufgerufen wird, von dem erwartet wird, dass es ein gültiges Token zurückgibt.
+Die `main`-Methode wird initialisiert, indem `getAccessToken()` über den `AccessTokenService` aufgerufen wird, von dem erwartet wird, dass er ein gültiges Token zurückgibt.
 
-* Anschließend ruft sie `applyUsageRights()` aus der `DocumentGeneration`-Klasse auf und übergibt:
-   * Die abgerufene `accessToken`
-   * Der API-Endpunkt zum Anwenden von Verwendungsrechten.
+* Anschließend ruft sie `applyUsageRights()` über die Klasse `DocumentGeneration` auf und übergibt:
+   * das abgerufene `accessToken`
+   * den API-Endpunkt zum Anwenden der Verwendungsrechte.
 
 
 ## Nächste Schritte

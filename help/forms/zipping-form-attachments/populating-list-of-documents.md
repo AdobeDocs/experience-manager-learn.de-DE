@@ -1,6 +1,6 @@
 ---
-title: Benutzerdefinierter Prozessschritt zum Ausfüllen von Listenvariablen
-description: Erfahren Sie, wie Sie einen benutzerdefinierten Prozessschritt erstellen, um Listenvariablen vom Typ Dokument und Zeichenfolge in Adobe Experience Manager zu füllen.
+title: Benutzerdefinierter Prozessschritt zum Auffüllen von Listenvariablen
+description: Erfahren Sie, wie Sie einen benutzerdefinierten Prozessschritt erstellen, um Listenvariablen vom Typ „Dokument“ und „Zeichenfolge“ in Adobe Experience Manager aufzufüllen.
 feature: Workflow
 topic: Development
 version: 6.5
@@ -10,24 +10,24 @@ kt: kt-8063
 exl-id: 09d9eabf-4815-4159-b6c7-cf2ebc8a2df5
 duration: 68
 source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '170'
-ht-degree: 7%
+ht-degree: 100%
 
 ---
 
 
 # Benutzerdefinierter Prozessschritt
 
-Dieses Handbuch führt Sie durch die Erstellung eines benutzerdefinierten Prozessschritts, um Listenvariablen des Typs Array-Liste mit Anhängen und Anlagennamen in Adobe Experience Manager zu füllen. Diese Variablen sind für die Workflow-Komponente „E-Mail senden“ von entscheidender Bedeutung.
+Dieses Handbuch führt Sie durch die Erstellung eines benutzerdefinierten Prozessschritts zum Auffüllen von Listenvariablen vom Typ „Array-Liste“ mit Anhängen und Namen von Anhängen in Adobe Experience Manager. Diese Variablen sind für die Workflow-Komponente „E-Mail senden“ von entscheidender Bedeutung.
 
-Wenn Sie nicht mit der Erstellung eines OSGi-Bundles vertraut sind, befolgen Sie diese [Anweisungen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=de).
+Wenn Sie mit der Erstellung von OSGi-Bundles nicht vertraut sind, folgen Sie bitte der folgenden [Anleitung](https://experienceleague.adobe.com/de/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle).
 
-Der Code im benutzerdefinierten Prozessschritt führt die folgenden Aktionen aus:
+Der Code im benutzerdefinierten Prozessschritt führt folgende Aktionen aus:
 
-1. Abfragen für alle Anhänge adaptiver Formulare im Payload-Ordner. Der Ordnername wird als Prozessargument an den Schritt übergeben.
-2. Füllt die `listOfDocuments` Workflow-Variable aus.
-3. Füllt die `attachmentNames` Workflow-Variable aus.
+1. Erstellt Abfragen aller Anhänge des adaptiven Formulars im Ordner „Payload“. Übergibt den Ordnernamen als Prozessargument an den Schritt.
+2. Füllt die Workflow-Variable `listOfDocuments` aus.
+3. Füllt die Workflow-Variable `attachmentNames` aus.
 4. Legt den Wert der Workflow-Variablen `no_of_attachments` fest.
 
 ```java
@@ -112,11 +112,11 @@ public class PopulateListOfDocuments implements WorkflowProcess {
 
 >[!NOTE]
 >
-> Stellen Sie sicher, dass in Ihrem Workflow die folgenden Variablen definiert sind, damit der Code funktioniert:
+> Stellen Sie sicher, dass die folgenden Variablen in Ihrem Workflow definiert sind, damit der Code funktioniert:
 > 
-> - `listOfDocuments`: Variable vom Typ ArrayList von Dokumenten
-> - `attachmentNames`: Variable vom Typ ArrayList von String
-> - `no_of_attachments`: Variable vom Typ Double
+> - `listOfDocuments`: Variable vom Typ „ArrayList of Documents“
+> - `attachmentNames`: Variable vom Typ „ArrayList of String“
+> - `no_of_attachments`: Variable vom Typ „Double“
 
 ## Nächste Schritte
 
