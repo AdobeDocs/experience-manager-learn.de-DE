@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: 6.4, 6.5, Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: efaf77a9f8e68f679be3469c39697b57366684b3
-workflow-type: ht
-source-wordcount: '447'
-ht-degree: 100%
+source-git-commit: 77beb9f543bc6dc8c1ab4993c969375ce3e238e8
+workflow-type: tm+mt
+source-wordcount: '450'
+ht-degree: 99%
 
 ---
 
@@ -62,7 +62,7 @@ ht-degree: 100%
    + [3D-Assets](./advanced/3d-assets.md)
    + [PDF-Ausgabe von Anmerkungen](./advanced/customizing-annotations-pdf-output.md)
    + [Asset-Berichte](./advanced/asset-reports.md)
-   + [Inhaltsurhebernachweise](./advanced/content-credentials.md)
+   + [Content Credentials](./advanced/content-credentials.md)
    + [Blockierte Tags](./advanced/blocked-tags.md)
    + [Extrahieren eines Archivs](./advanced/extract-archive.md)
    + [Berechtigungen (CUGs)](./advanced/closed-user-groups.md)
@@ -138,6 +138,7 @@ ht-degree: 100%
    + [Übersicht über Dynamic Media](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic Desktop-Anwendung](dynamic-media/dynamic-media-classic-desktop-application.md)
    + Bilder {#images}
+      + [Dynamic Media-Vorlagen](dynamic-media/dynamic-media-templates.md)
       + [Dynamic Media Snapshot](dynamic-media/dynamic-media-snapshot.md)
       + [Smartes Zuschneiden](dynamic-media/smart-crop-feature-video-use.md)
       + [Scharfzeichnen von Bildern](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
