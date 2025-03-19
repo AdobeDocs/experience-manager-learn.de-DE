@@ -11,10 +11,10 @@ level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 duration: 3508
-source-git-commit: e7a85e8d072d808683580a201dd10b3a847efaaa
+source-git-commit: b865156776865b1155af7c7f3bd234bd337be796
 workflow-type: tm+mt
-source-wordcount: '1301'
-ht-degree: 98%
+source-wordcount: '1308'
+ht-degree: 94%
 
 ---
 
@@ -205,28 +205,13 @@ Damit Adobe I/O-CLI mit Cloud Manager kommunizieren kann, muss eine [Cloud Manag
    + Wenn Sie ein neues Projekt erstellen, wählen Sie bei entsprechender Aufforderung „Leeres Projekt“ aus (vs. „Aus Vorlage erstellen“)
    + Adobe I/O Console-Programme unterscheiden sich von Cloud Manager-Programmen
 1. Erstellen Sie eine neue Cloud Manager-API-Integration.
-   + Wählen Sie den veralteten Authentifizierungstyp „Service-Konto (JWT)“ aus (OAuth wird derzeit für die CLI nicht unterstützt).
-   + Erstellen Sie Schlüssel oder laden Sie sie hoch.
-   + Wählen Sie das Produktprofil „Entwickler – Cloud Service“ aus.
-1. Rufen Sie die Anmeldeinformationen für das Dienstkonto (JWT) ab, die zum Auffüllen der Datei [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication) der Adobe I/O-CLI erforderlich sind.
-
-   ```json
-   //config.json 
-   {
-      "client_id": "Client ID from Service Account (JWT) credential",
-      "client_secret": "Client Secret from Service Account (JWT) credential",
-      "technical_account_id": "Technical Account ID from Service Account (JWT) credential",
-      "ims_org_id": "Organization ID from Service Account (JWT) credential",
-      "meta_scopes": [
-        "ent_cloudmgr_sdk"
-      ]
-   }
-   ```
-
+   + Wählen Sie den Berechtigungstyp „OAuth Server-zu-Server“ aus.
+   + Wählen Sie das Produktprofil „Bereitstellungs-Manager - Cloud Service&quot; aus.
+   + Konfigurierte API speichern
+1. Um die Anmeldeinformationen zu erhalten, müssen Sie die [config.json“ der Adobe I/O-CLI ](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication), indem Sie die neu erstellten „OAuth Server-zu-Server“-Anmeldeinformationen öffnen und „JSON herunterladen“ in der oberen rechten Aktionsleiste auswählen.
+1. Öffnen Sie die heruntergeladene JSON-Datei und benennen Sie alle Schlüssel in Kleinbuchstaben um. Beispielsweise wird `CLIENT_ID` zu `client_id`.
 1. Laden Sie die `config.json`-Datei in die Adobe I/O-CLI
-   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager ./path/to/config.json --file --json`
-1. Laden Sie die `private.key`-Datei in die Adobe I/O-CLI
-   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager.private_key ./path/to/private.key --file`
+   + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager /path/to/downloaded/json --file --json`
 
 Beginnen Sie mit der [Ausführung von Befehlen](https://github.com/adobe/aio-cli-plugin-cloudmanager#commands) für Cloud Manager über die Adobe I/O-CLI.
 
