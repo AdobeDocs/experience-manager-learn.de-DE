@@ -1,7 +1,7 @@
 ---
 title: AEM-Desktop-App
 description: Verwenden Sie die AEM-Desktop-App, um den Zugriff auf alle auf dem Desktop verwalteten Assets für alle Anwendungen und Dateiformate zu vereinfachen.
-version: 6.5, 6.4
+version: Experience Manager 6.5, Experience Manager 6.4
 topic: Content Management
 feature: Desktop App
 role: User
@@ -12,7 +12,7 @@ last-substantial-update: 2022-06-24T00:00:00Z
 doc-type: Feature Video
 exl-id: 6765758f-0719-4ed9-83be-8ed192a75b41
 duration: 367
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '129'
 ht-degree: 100%

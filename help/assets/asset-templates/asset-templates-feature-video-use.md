@@ -1,7 +1,7 @@
 ---
 title: Verwenden von Asset-Vorlagen mit AEM Assets und InDesign Server
 description: Mit der AEM Assets-Vorlage können Marketing-Fachkräfte digitale Assets für digitale und gedruckte Inhalte erstellen, verwalten und bereitstellen. Das Erstellen von Markierungsbroschüren, Visitenkarten, Flyern, Anzeigen und Postkarten ist mit Asset-Vorlagen bei der Integration mit dem InDesign-Server viel einfacher.
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 feature: Templates
 role: User
@@ -11,7 +11,7 @@ thumbnail: 25170.jpg
 doc-type: Feature Video
 exl-id: 45e0f3d5-db56-44e7-ad68-4d60991a6d77
 duration: 737
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 100%

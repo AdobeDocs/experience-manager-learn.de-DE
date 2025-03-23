@@ -1,7 +1,7 @@
 ---
 title: Erste Schritte mit dem AEM-SPA-Editor und Angular
 description: Erstellen Sie Ihre erste Angular-Single-Page-Application (SPA), die in Adobe Experience Manager mit der WKND-SPA bearbeitet werden kann.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5913
 thumbnail: 5913-spa-angular.jpg
 feature: SPA Editor
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Tutorial
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
 duration: 123
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 100%

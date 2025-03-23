@@ -1,7 +1,7 @@
 ---
 title: SQL-Verbindungen mit JDBC-DataSourcePool
 description: Herstellen einer Verbindung zu SQL-Datenbanken über AEM as a Cloud Service mit JDBC DataSourcePool und Ausgangs-Ports von AEM.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-9355
 thumbnail: KT-9355.jpeg
 exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
 duration: 117
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 100%

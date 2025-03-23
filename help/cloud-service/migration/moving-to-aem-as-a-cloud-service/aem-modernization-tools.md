@@ -1,7 +1,7 @@
 ---
 title: Verwenden von AEM-Modernisierungs-Tools für den Wechsel zu AEM as a Cloud Service
 description: Erfahren Sie, wie AEM-Modernisierungs-Tools verwendet werden, um ein vorhandenes AEM-Projekt und einen vorhandenen Inhalt zu aktualisieren, um so mit AEM as a Cloud Service kompatibel zu sein.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Migration, Upgrade
 feature: Migration
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
 duration: 2502
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 100%

@@ -2,7 +2,7 @@
 title: Verwenden des Stilsystems mit AEM Sites
 description: Das Stilsystem von Adobe Experience Manager ermöglicht visuelle Varianten von Komponenten ohne Backend-Entwicklung, was eine bessere Wiederverwendung von AEM-Komponenten und eine vielseitigere und effizientere Inhaltserstellung ermöglicht. Das Stilsystem bietet bei Verwendung in Verbindung mit AEM-Kernkomponenten, dem Vorlageneditor und dem responsiven Layout leistungsstarke Funktionen zum schnellen Zusammenstellen umfangreicher Erlebnisse.
 feature: Style System
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-974
 thumbnail: 21750.jpg
 topic: Content Management
@@ -11,7 +11,7 @@ level: Intermediate
 doc-type: Feature Video
 exl-id: 12490c29-91f4-4bb7-b7b6-7ed7cd3fb76d
 duration: 220
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 100%

@@ -1,14 +1,14 @@
 ---
 title: Persistierte GraphQL-Abfragen – Erweiterte Konzepte von AEM Headless – GraphQL
 description: In diesem Kapitel zu den erweiterten Konzepten von Adobe Experience Manager (AEM) Headless erfahren Sie, wie Sie persistierte GraphQL-Abfragen mit Parametern erstellen und aktualisieren. Erfahren Sie, wie Sie Cache-Steuerungsparameter in persistierten Abfragen übergeben.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 6a8e90ae-0765-4066-9df4-a3e4d2cda285
 duration: 183
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 100%

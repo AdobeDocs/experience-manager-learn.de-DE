@@ -2,14 +2,14 @@
 title: Verwenden des Video-Players in AEM Dynamic Media
 description: Der AEM Dynamic Media-Videoplayer war früher auf die Flash-Laufzeitumgebung angewiesen, um das adaptive Video-Streaming auf Desktop-Clients zu unterstützen, und die Browser wurden beim Streaming von Flash-basierten Inhalten immer aggressiver. Mit der Einführung von HLS (Apple-Protokoll zur Bereitstellung von HTTP-Live-Streaming-Videos) können Inhalte jetzt gestreamt werden, ohne auf Flash angewiesen zu sein.
 feature: Video Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
 duration: 568
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 100%

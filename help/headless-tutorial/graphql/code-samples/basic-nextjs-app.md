@@ -1,7 +1,7 @@
 ---
 title: Grundlegende Next.js-App
 description: Eine einfache Next.js-App, die eine Liste der WKND-Adventures und deren Details anzeigt
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
@@ -14,7 +14,7 @@ hide: true
 hidefromtoc: true
 exl-id: 2d4396dc-2346-4561-b040-eba0ab62a96f
 duration: 22
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 100%

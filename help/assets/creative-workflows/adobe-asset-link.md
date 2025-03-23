@@ -2,7 +2,7 @@
 title: Adobe Asset Link und AEM
 description: Adobe Experience Manager-Assets können von kreativen Benutzenden, die im Bereich Design arbeiten, in ihren bevorzugten Adobe Creative Cloud-Client-Anwendungen verwendet werden. Adobe Asset Link-Erweiterung für Adobe Creative Cloud for enterprise erweitert die Funktion zum Suchen, Durchsuchen, Sortieren, Anzeigen, Hochladen von Assets, Auschecken, Ändern, Einchecken und Anzeigen von Metadaten der AEM Assets in Creative Cloud-Tools wie Adobe XD, Photoshop, InDesign und Illustrator.
 feature: Adobe Asset Link
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Content Management
 role: User
 level: Beginner
@@ -12,7 +12,7 @@ last-substantial-update: 2022-06-25T00:00:00Z
 doc-type: Feature Video
 exl-id: 6c49f8c2-f468-4b29-b7b6-029c8ab39ce9
 duration: 1027
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1039'
 ht-degree: 96%
@@ -101,7 +101,7 @@ Funktionsweise der Adobe Asset Link-Authentifizierung im Kontext von Adobe Ident
 1. Adobe Asset Link stellt eine Verbindung zu AEM Author über HTTP(S) her, einschließlich des Bearer-Tokens, das in **Schritt 1** erhalten wurde, unter Verwendung des Schemas (HTTP/HTTPS), des Hosts und des Ports, die in den JSON-Einstellungen der Erweiterung angegeben sind.
 1. Der Bearer Authentication Handler von AEM extrahiert das Bearer-Token aus der Anfrage und validiert es mit Adobe IMS.
 1. Sobald Adobe IMS das Bearer-Token validiert hat, wird eine Benutzerin oder ein Benutzer in AEM erstellt (sofern noch nicht vorhanden) und die Profil- und Gruppen-/Mitgliedschaftsdaten aus Adobe IMS werden synchronisiert. Der AEM-Benutzer erhält ein standardmäßiges AEM-Anmelde-Token, das als Cookie in der HTTP(S)-Antwort an die Erweiterung Adobe Asset Link zurückgesendet wird.
-1. Nachfolgende Interaktionen (d. h. Das Durchsuchen, Suchen, Ein-/Auschecken von Assets usw.) mit der Adobe Asset Link-Erweiterung führt zu HTTP(S)-Anfragen an die AEM-Autoreninstanz, die mithilfe des AEM-Anmelde-Tokens unter Verwendung des standardmäßigen AEM-Token-Authentifizierungs-Handlers validiert werden.
+1. Nachfolgende Interaktionen (d. h. Das Durchsuchen, Suchen, Ein-/Auschecken von Assets usw.) mit der Adobe Asset Link-Erweiterung führt zu HTTP(S)-Anfragen an AEM Author, die mithilfe des AEM-Anmelde-Tokens und des standardmäßigen AEM Token Authentication Handlers validiert werden.
 
 >[!NOTE]
 >

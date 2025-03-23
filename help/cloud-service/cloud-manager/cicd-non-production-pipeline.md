@@ -2,7 +2,7 @@
 title: Verwenden von Adobe Cloud Manager – CI/CD-produktionsfremde Pipeline
 description: 'CI/CD-produktionsfremde Pipelines sind in zwei Kategorien unterteilt: Code-Qualitäts-Pipelines und Bereitstellungs-Pipelines. Code-Qualitäts-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll. Bereitstellungs-Pipelines unterstützen die automatisierte Bereitstellung von Code aus dem Git-Repository in einer Nicht-Produktionsumgebung, d. h. in einer AEM-Umgebung, die weder Staging- noch Produktionsumgebung ist.'
 doc-type: feature video
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6873
 thumbnail: 26316.jpg
 topic: Architecture
@@ -11,7 +11,7 @@ role: Architect, Developer, Admin
 level: Beginner
 exl-id: b28805d3-bb2d-4f66-8daa-9a8eb7ecf0a1
 duration: 211
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '213'
 ht-degree: 100%

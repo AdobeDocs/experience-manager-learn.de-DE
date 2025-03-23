@@ -1,7 +1,7 @@
 ---
 title: Cloud 5-AEM-Protokolldateien
 description: Dieses Video erhält eine umfassende Erläuterung des Zugriffs auf Protokolle in AEM as a Cloud Service, einschließlich des Zugriffs über die Benutzeroberfläche sowie über APIs.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 role: Admin, Developer
 level: Intermediate
 jira: KT-9927
@@ -9,7 +9,7 @@ hidefromtoc: true
 thumbnail: 341156.jpeg
 exl-id: 1d000b09-52e7-4828-a0b3-32a47131e66c
 duration: 314
-source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 100%

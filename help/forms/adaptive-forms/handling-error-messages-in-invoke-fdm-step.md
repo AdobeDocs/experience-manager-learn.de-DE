@@ -2,14 +2,14 @@
 title: Erfassen von Fehlermeldungen im Formulardatenmodelldienst als Schritt im Workflow
 description: Ab AEM Forms 6.5.1 können jetzt Fehlermeldungen erfasst werden, die beim Aufrufen des Formulardatenmodelldienstes als Schritt in einem AEM-Workflow generiert wurden. Workflow.
 feature: Workflow
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 8cae155c-c393-4ac3-a412-bf14fc411aac
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 51
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '249'
 ht-degree: 100%

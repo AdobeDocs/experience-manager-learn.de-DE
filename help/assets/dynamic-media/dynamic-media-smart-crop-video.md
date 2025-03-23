@@ -2,7 +2,7 @@
 title: Verwenden des smarten Zuschneidens für Videos in Dynamic Media
 description: Das smarte Zuschneiden für Videos in Dynamic Media verwendet Adobe Sensei, um die Bildmotive des Videos intelligent zu verfolgen und sicherzustellen, dass Videos in allen Bildschirmgrößen optimal aussehen.
 feature: Smart Crop, Video Profiles, Viewer Presets
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5977
 thumbnail: 37958.jpg
 topic: Content Management
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 15eb725c-d6f6-4ab9-8d39-dc05fbba1ff3
 duration: 397
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '94'
 ht-degree: 100%

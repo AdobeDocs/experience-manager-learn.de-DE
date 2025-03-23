@@ -1,7 +1,7 @@
 ---
 title: AEM as a Cloud Service-Integrationen in Adobe Experience Cloud
 description: Erfahren Sie mehr über die von AEM as a Cloud Service unterstützten Integrationen in andere Adobe Experience Cloud-Produkte.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations
 role: Leader, Architect, Admin, Developer
@@ -14,7 +14,7 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
 duration: 135
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 100%

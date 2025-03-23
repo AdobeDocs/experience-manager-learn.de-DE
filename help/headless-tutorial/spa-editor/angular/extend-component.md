@@ -2,7 +2,7 @@
 title: Erweitern einer Komponente | Erste Schritte mit dem AEM-SPA-Editor und Angular
 description: Erfahren Sie, wie Sie eine vorhandene Kernkomponente erweitern, um sie mit dem AEM-SPA-Editor zu verwenden. Das Verständnis, wie Eigenschaften und Inhalte zu einer vorhandenen Komponente hinzugefügt werden, liefert eine wirkungsvolle Methode, um die Funktionen einer AEM-SPA-Editor-Implementierung zu erweitern. Erfahren Sie, wie Sie mit dem Delegationsmuster Sling-Modelle und Sling Resource Merger-Funktionen erweitern können.
 feature: SPA Editor, Core Components
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5871
 thumbnail: 5871-spa-angular.jpg
 topic: SPA
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
 duration: 435
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1713'
 ht-degree: 100%

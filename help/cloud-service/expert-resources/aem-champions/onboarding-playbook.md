@@ -1,7 +1,7 @@
 ---
 title: Tipps und Tricks von AEM-Champions – Onboarding-Playbook für Cloud Manager
 description: Sehen Sie sich diese Cloud Manager-Onboarding-Tipps und das Onboarding-Playbook vom AEM-Champion und -Experten Rakesh Pasupuleti an.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager
 topic: Administration
 role: Admin, Architect
@@ -11,7 +11,7 @@ last-substantial-update: 2023-05-11T00:00:00Z
 jira: KT-13228
 exl-id: d1745cea-906b-46fa-adcc-7da6e7ee95db
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 100%

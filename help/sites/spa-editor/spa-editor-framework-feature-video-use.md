@@ -1,7 +1,7 @@
 ---
 title: Verwenden des SPA-Editors mit AEM Sites
 description: Das Single Page Application Editor-Framework von AEM bietet Autorinnen und Autoren die Möglichkeit, Inhalte für eine Single Page Application oder SPA zu bearbeiten.  Entwicklerinnen und Entwickler, die eines der beiden React-Frameworks verwenden, erstellen eine SPA und ordnen dann Bereiche der SPA den AEM-Komponenten zu, sodass die Autorinnen und Autoren die vertrauten AEM Sites-Bearbeitungstools verwenden können.
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: SPA
 feature: SPA Editor
 role: Developer
@@ -11,7 +11,7 @@ thumbnail: 22229.jpg
 doc-type: Feature Video
 exl-id: 645b6986-830f-4409-b46c-ddf15c33e84c
 duration: 473
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 100%

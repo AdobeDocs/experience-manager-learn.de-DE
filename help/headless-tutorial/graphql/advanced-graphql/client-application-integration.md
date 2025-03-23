@@ -1,14 +1,14 @@
 ---
 title: Client-Anwendungsintegration – Erweiterte AEM Headless-Konzepte – GraphQL
 description: Implementieren Sie persistierte Abfragen und integrieren Sie sie in die WKND-App.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: d0576962-a86a-4742-8635-02be1ec3243f
 duration: 241
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 100%

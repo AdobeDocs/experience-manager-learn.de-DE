@@ -1,7 +1,7 @@
 ---
 title: Ordnungsgemäßes Hinzufügen von Symlinks zu GIT
 description: Anleitung dazu, wie und wo Sie Symlinks beim Bearbeiten von Dispatcher-Konfigurationen hinzufügen.
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 6e751586-e92e-482d-83ce-6fcae4c1102c
 duration: 295
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 100%

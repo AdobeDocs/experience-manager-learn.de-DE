@@ -1,7 +1,7 @@
 ---
 title: Geschützte Inhalte in AEM Headless
 description: Erfahren Sie, wie Sie Inhalte in AEM Headless schützen können.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
 role: Developer, Architect
@@ -10,7 +10,7 @@ jira: KT-15233
 last-substantial-update: 2024-05-01T00:00:00Z
 exl-id: c4b093d4-39b8-4f0b-b759-ecfbb6e9e54f
 duration: 254
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 100%

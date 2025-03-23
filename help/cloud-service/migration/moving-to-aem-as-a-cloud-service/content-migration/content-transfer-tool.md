@@ -1,7 +1,7 @@
 ---
 title: Inhaltsmigration mithilfe des Content Transfer Tools
 description: Erfahren Sie, wie Sie mit dem Content Transfer Tool Inhalte von AEM 6 auf AEM as a Cloud Service migrieren können.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Migration, Upgrade
 feature: Migration
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-8919
 thumbnail: 336970.jpeg
 exl-id: c51ce8e3-e83c-4f8b-a835-70335ed3a5b9
 duration: 1362
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 100%

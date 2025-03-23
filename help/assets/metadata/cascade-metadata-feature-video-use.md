@@ -1,7 +1,7 @@
 ---
 title: Verwenden kaskadierender Metadaten in AEM Assets
 description: Mit der erweiterten Metadatenverwaltung können Benutzende kaskadierende Feldregeln erstellen, um in AEM Assets kontextbezogene Beziehungen zwischen Metadaten zu erstellen. Das folgende Video zeigt neue dynamische Regeln für Feldanforderungen, Sichtbarkeit und kontextbezogene Optionen. Im Video werden auch die Schritte beschrieben, die Administrierende durchführen müssen, um diese Regeln auf ein benutzerdefiniertes Metadatenschema anzuwenden.
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Content Management
 feature: Metadata
 role: User
@@ -12,7 +12,7 @@ last-substantial-update: 2022-06-08T00:00:00Z
 doc-type: Feature Video
 exl-id: 73e793e0-a20e-4954-ba1a-471b2cd85120
 duration: 345
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '190'
 ht-degree: 100%

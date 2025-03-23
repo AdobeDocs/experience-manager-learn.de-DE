@@ -1,7 +1,7 @@
 ---
 title: Erweiterte Einstellungen und Workflows für Workfront für den erweiterten Connector von AEM
 description: Erfahren Sie mehr über die erweiterten Einstellungen für Workfront für den erweiterten Connector von AEM und wie Sie erweiterte Workflows und Starter in AEM konfigurieren, um die Datensynchronisation zwischen AEM und Workfront zu verwalten.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
 role: Admin, Architect, Developer
@@ -14,7 +14,7 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: 7d44e1b7-7216-431d-b866-6adcc8673d53
 duration: 2844
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '107'
 ht-degree: 100%

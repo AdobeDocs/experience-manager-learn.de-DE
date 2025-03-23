@@ -1,7 +1,7 @@
 ---
 title: Verwenden der Funktion „Seitenunterschiede“ mit AEM Sites
 description: Die AEM Sites-Funktionen „Seitenunterschiede“ bieten eine schnelle, farbcodierte Ansicht des Inhalts, der sich auf einer Seite geändert hat (Version, Live Copy, Launches, Sprachkopie).
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-4633
 thumbnail: 32152.jpg
 topic: Content Management
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 4d365957-9a5a-44f8-a117-95c1c0dd757d
 duration: 502
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 100%

@@ -2,7 +2,7 @@
 title: Schutz Ihrer AEM-Website vor DoS-Angriffen mit Mod Security
 description: Erfahren Sie, wie Sie ModSecurity aktivieren, um Ihre Site mit dem OWASP ModSecurity Core Rule Set (CRS) vor DoS-Angriffen (Denial of Service) zu schützen.
 feature: Security
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
 role: Admin, Architect
 level: Experienced
@@ -12,10 +12,10 @@ doc-type: Article
 last-substantial-update: 2023-08-18T00:00:00Z
 exl-id: 9f689bd9-c846-4c3f-ae88-20454112cf9a
 duration: 783
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 100%
+source-wordcount: '1171'
+ht-degree: 98%
 
 ---
 
@@ -111,7 +111,7 @@ In dieser Beispielregelkonfiguration gilt Folgendes: **DOS_COUNTER_THRESHOLD** b
 Um das CRS zu initialisieren, entfernen Sie allgemeine falsch positive Werte und fügen Sie lokale Ausnahmen für Ihre Site hinzu:
 
 1. Entfernen Sie zum Initialisieren des CRS `.disabled` aus der Datei **REQUEST-901-INITIALISIERUNG**. Mit anderen Worten: Benennen Sie die Datei `REQUEST-901-INITIALIZATION.conf.disabled` in `REQUEST-901-INITIALIZATION.conf` um.
-1. Entfernen Sie zum Löschen der allgemeinen falsch positiven Werte wie „lokale IP (127.0.0.1) Ping“ den Befehl `.disabled` aus der Datei **REQUEST-905-COMMON-EXCEPTIONS**.
+1. Um häufig vorkommende falsch-positive Ereignisse wie den lokalen IP-Ping (127.0.0.1) zu entfernen, entfernen Sie `.disabled` aus der Datei **REQUEST-905-COMMON-EXCEPTIONS**.
 1. Um lokale Ausnahmen wie die AEM-Plattform oder Ihre Site-spezifischen Pfade hinzuzufügen, benennen Sie `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example` in `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf` um.
    1. Fügen Sie AEM-plattformspezifische Pfadausnahmen zur neu umbenannten Datei hinzu.
 

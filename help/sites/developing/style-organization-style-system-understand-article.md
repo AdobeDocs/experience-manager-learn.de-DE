@@ -2,14 +2,14 @@
 title: Best Practices für das Stilsystem mit AEM Sites
 description: Ein ausführlicher Artikel, der die Best Practices für die Implementierung des Stilsystems mit Adobe Experience Manager Sites erläutert.
 feature: Style System
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate, Experienced
 doc-type: Article
 exl-id: c51da742-5ce7-499a-83da-227a25fb78c9
 duration: 328
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1522'
 ht-degree: 100%

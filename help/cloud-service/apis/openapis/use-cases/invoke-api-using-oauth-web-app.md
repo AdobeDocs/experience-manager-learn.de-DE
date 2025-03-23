@@ -1,7 +1,7 @@
 ---
 title: Aufrufen von OpenAPI-basierten AEM-APIs mithilfe der OAuth-Web-App-Authentifizierung
 description: Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service mithilfe der benutzerbasierten Authentifizierung über eine benutzerdefinierte Web-App aufrufen, die die OAuth-Web-App verwendet.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
 role: Architect, Developer, Leader
@@ -11,7 +11,8 @@ jira: KT-16718
 thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
-source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
+exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2245'
 ht-degree: 5%
@@ -655,4 +656,3 @@ Sie können das Tutorial als Referenz verwenden, um die OpenAPI-basierten AEM-AP
 - [Anfrage autorisieren](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#authorize-request)
 - [Abrufen von Zugriffstoken](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#fetching-access-tokens)
 - [Aktualisieren von Zugriffstoken](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#refreshing-access-tokens)
-

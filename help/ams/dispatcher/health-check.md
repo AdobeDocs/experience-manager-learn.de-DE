@@ -1,7 +1,7 @@
 ---
 title: AMS Dispatcher-Konsistenzprüfung
 description: AMS stellt ein CGI-Bin-Skript für die Konsistenzprüfung bereit, das von den Cloud-Load-Balancern ausgeführt wird, um zu überprüfen, ob AEM fehlerfrei funktioniert und für den öffentlichen Traffic weiter betrieben werden sollte.
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 69b4e469-52cc-441b-b6e5-2fe7ef18da90
 duration: 247
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1143'
 ht-degree: 100%

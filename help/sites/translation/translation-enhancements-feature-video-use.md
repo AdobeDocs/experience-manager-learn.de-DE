@@ -1,7 +1,7 @@
 ---
 title: Übersetzungsverbesserungen in AEM
 description: Das leistungsfähige Übersetzungs-Framework von AEM ermöglicht die nahtlose Übersetzung von AEM-Inhalten durch unterstützte Übersetzungsdienstleister. Erfahren Sie mehr über die neuesten Verbesserungen.
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Localization
 feature: Multi Site Manager, Language Copy
 role: User
@@ -9,7 +9,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 21633308-ffe4-4023-affe-59269504da69
 duration: 677
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 100%

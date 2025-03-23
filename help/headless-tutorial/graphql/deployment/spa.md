@@ -1,7 +1,7 @@
 ---
 title: Bereitstellen der SPA für AEM GraphQL
 description: Erfahren Sie mehr über Implementierungsüberlegungen für AEM Headless-Single-Page-App (SPA)-Bereitstellungen.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -11,7 +11,7 @@ thumbnail: KT-10587.jpg
 mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
 duration: 136
-source-git-commit: f1b13bba9e83ac1d25f2af23ff2673554726eb19
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 100%

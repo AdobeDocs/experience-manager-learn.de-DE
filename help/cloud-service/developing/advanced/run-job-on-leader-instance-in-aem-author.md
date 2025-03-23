@@ -1,7 +1,7 @@
 ---
 title: Ausführen eines Auftrags auf einer führenden Instanz in AEM as a Cloud Service
 description: Erfahren Sie, wie Sie einen Auftrag auf der führenden Instanz in AEM as a Cloud Service ausführen.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: OSGI, Cloud Manager
 role: Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-10-23T00:00:00Z
 jira: KT-16399
 thumbnail: KT-16399.jpeg
 exl-id: b8b88fc1-1de1-4b5e-8c65-d94fcfffc5a5
-source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 100%

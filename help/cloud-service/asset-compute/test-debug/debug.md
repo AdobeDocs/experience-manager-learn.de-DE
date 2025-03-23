@@ -2,7 +2,7 @@
 title: Debugging eines Asset Compute-Sekundärs
 description: Zum Debugging von Asset Compute-Sekundären gibt es verschiedene Möglichkeiten – angefangen bei einfachen Debugging-Protokollanweisungen über das Anhängen von VS Code als Remote-Debugger bis hin zum Abruf von Protokollen für Aktivierungen in Adobe I/O Runtime, die von AEM as a Cloud Service initiiert wurden.
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6285
 thumbnail: 40383.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 4dea9cc4-2133-4ceb-8ced-e9b9874f6d89
 duration: 229
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '618'
 ht-degree: 100%

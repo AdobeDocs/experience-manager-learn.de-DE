@@ -1,7 +1,7 @@
 ---
 title: Öffentliche Link-Freigabe von Assets Essentials
 description: Erfahren Sie, wie die Link-Freigabe von Assets Essentials die Freigabe von Assets für interne und externe Beteiligte ermöglicht und gleichzeitig das Risiko der Freigabe falscher Assets minimiert ... (Beschreibungen sollten zwischen 60 und 160 Zeichen lang sein)
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Assets Essentials
 topic: Content Management
 role: User
@@ -12,7 +12,7 @@ last-substantial-update: 2022-10-08T00:00:00Z
 doc-type: Feature Video
 exl-id: 719d3101-2c27-4165-a9d7-97e6f637d71f
 duration: 161
-source-git-commit: 54509339ee8e538daf432b329ddebb55e98bb6d9
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 60%

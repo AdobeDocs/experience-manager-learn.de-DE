@@ -2,7 +2,7 @@
 title: Einrichten des lokalen AEM SDK für die AEM as a Cloud Service-Entwicklung
 description: Richten Sie das lokale AEM SDK mithilfe der Schnellstart-JAR des AEM as a Cloud Service-SDK ein.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 kt: 4678, 4677
 thumbnail: 32551.jpg
 topic: Development
@@ -11,7 +11,7 @@ level: Beginner
 last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
 duration: 411
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 100%

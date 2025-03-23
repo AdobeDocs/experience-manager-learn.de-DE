@@ -2,7 +2,7 @@
 title: Schnelle Entwicklungsumgebungen
 description: Erfahren Sie mehr über schnelle Entwicklungsumgebungen für AEM, was sie sind und wie sie bei der schnelleren Entwicklung zur Bereitstellung von Zyklen helfen können.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ thumbnail: KT-11860.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 8fc6d0ef-8753-480b-a504-e7943de8883c
 duration: 99
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 100%

@@ -1,7 +1,7 @@
 ---
 title: Einrichten einer lokalen Entwicklungsumgebung
 description: Richten Sie eine lokale Entwicklungsumgebung für Sites ein, die mit Edge Delivery Services bereitgestellt werden und mit dem universellen Editor bearbeitet werden können.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,8 +10,8 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 700
 exl-id: 187c305a-eb86-4229-9896-a74f5d9d822e
-source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 100%
 

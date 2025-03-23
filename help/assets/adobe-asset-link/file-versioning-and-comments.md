@@ -2,7 +2,7 @@
 title: Dateiversionierung und Kommentare
 description: Über das Bedienfeld „Adobe Asset Link“ können Sie auf Dateidetails für Assets in AEM Assets zugreifen, z. B. Miniaturansichten, grundlegende Metadaten und Versionen. Erfahren Sie, wie Sie Dateiversionen erstellen, in einer Vorschau anzeigen und vergleichen.
 feature: Adobe Asset Link
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 kt: 4911
 thumbnail: 34048.jpg
 topic: Content Management
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 6bcc5978-dac8-4112-8e50-de1722b1c289
 duration: 340
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 100%

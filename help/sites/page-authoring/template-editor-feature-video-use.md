@@ -2,7 +2,7 @@
 title: Verwenden bearbeitbarer Seitenvorlagen mit AEM Sites
 description: Bearbeitbare Vorlagen ermöglichen es spezialisierten Autorinnen und Autoren, Seitenvorlagen zu erstellen und zu aktualisieren und erweiterte Richtlinienkonfigurationen mit AEM Sites zu verwalten.
 feature: Editable Templates
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-193
 topic: Content Management
 role: User
@@ -10,7 +10,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 2213d1f2-37ed-4897-a68d-04ef423395a3
 duration: 369
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '189'
 ht-degree: 100%

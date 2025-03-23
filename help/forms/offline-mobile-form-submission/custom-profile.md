@@ -3,7 +3,7 @@ title: Auslösen des AEM-Workflows bei der Übermittlung von HTML5-Formularen �
 description: Erstellen Sie ein benutzerdefiniertes Profil, um ein interaktives PDF mit den Daten aus einem teilweise ausgefüllten HTML5-Formular herunterzuladen.
 feature: Mobile Forms
 doc-type: article
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
@@ -11,7 +11,7 @@ jira: kt-16133
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: b6e3acee-4a07-4d00-b3a1-f7aedda21e6e
 duration: 102
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 100%

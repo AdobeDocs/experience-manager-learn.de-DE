@@ -2,7 +2,7 @@
 title: Entwickeln eines Asset Compute-Sekundärs
 description: Asset Compute-Sekundäre bilden den Kern eines Asset Compute-Projekts, da sie eine benutzerdefinierte Funktion bereitstellen, mit der die an einem Asset durchgeführten Arbeiten zur Erstellung einer neuen Ausgabedarstellung ausgeführt oder orchestriert werden.
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6282
 thumbnail: KT-6282.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 7d51ec77-c785-4b89-b717-ff9060d8bda7
 duration: 451
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 100%

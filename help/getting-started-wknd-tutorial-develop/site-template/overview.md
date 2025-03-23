@@ -1,7 +1,7 @@
 ---
 title: Erste Schritte mit AEM Sites | Schnelle Site-Erstellung mit AEM
 description: Erfahren Sie, wie Sie mit wenig Code Ihre erste Site in Adobe Experience Manager mit dem Tool Quick Site Creation und einer vordefinierten Site-Vorlage erstellen können. Verwenden Sie vordefinierte Komponenten und Vorlagen, um eine Site schnell einzurichten und zu nutzen. Verwenden Sie einen von Adobe XD gesteuerten Design-Workflow, um markenspezifische Stile und Anpassungen nur mit CSS und JavaScript vorzunehmen. Empfohlen für neue Projekte und Entwickler.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components, Page Editor
 role: Developer
@@ -11,7 +11,7 @@ thumbnail: 333477.jpg
 doc-type: Tutorial
 exl-id: a55c1dda-f74a-4914-aa1b-c4de8ad1253e
 duration: 426
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 100%

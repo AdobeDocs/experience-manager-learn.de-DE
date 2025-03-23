@@ -1,7 +1,7 @@
 ---
 title: AEM Dispatcher – Allgemeine Protokolle
 description: Sehen Sie sich die gängigen Protokolleinträge des Dispatchers an und lernen Sie, was sie bedeuten und wie sie behandelt werden.
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration, Performance
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
 duration: 229
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 100%

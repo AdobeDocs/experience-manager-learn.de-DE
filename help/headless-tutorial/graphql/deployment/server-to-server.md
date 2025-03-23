@@ -1,7 +1,7 @@
 ---
 title: Bereitstellungen von AEM Headless von Server zu Server
 description: Erfahren Sie mehr über Bereitstellungsüberlegungen für AEM Headless-Bereitstellungen von Server zu Server.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -10,7 +10,7 @@ jira: KT-10798
 thumbnail: kt-10798.jpg
 exl-id: d4ae08d9-dc43-4414-ab75-26853186a301
 duration: 48
-source-git-commit: b607ea10e0eed73b70751b1dd76266a4812d5280
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 100%

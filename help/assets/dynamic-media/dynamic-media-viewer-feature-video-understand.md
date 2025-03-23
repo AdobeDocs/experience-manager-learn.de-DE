@@ -3,14 +3,14 @@ title: Verwenden des Asset-Viewers mit AEM Dynamic Media
 description: AEM Dynamic Media Viewer-Verbesserungen ermöglichen es AEM-Autorinnen und -Autoren, zu definieren und anzupassen, wie Assets Website-Benutzenden präsentiert werden.
 sub-product: Experience Manager Assets
 feature: Viewer Presets, Image Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
 doc-type: Feature Video
 exl-id: db4fc561-2368-4df8-9b02-fc08afa00805
 duration: 254
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 100%

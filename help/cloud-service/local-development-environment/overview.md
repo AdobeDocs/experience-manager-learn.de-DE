@@ -2,7 +2,7 @@
 title: Lokale Entwicklungsumgebung für AEM as a Cloud Service
 description: Übersicht über die lokale Entwicklungsumgebung in Adobe Experience Manager (AEM).
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: article
 jira: KT-3290
 thumbnail: 32565.jpg
@@ -12,7 +12,7 @@ level: Beginner
 last-substantial-update: 2022-09-01T00:00:00Z
 exl-id: 8b12f34c-be98-4f47-853c-411bb601990c
 duration: 835
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '530'
 ht-degree: 100%

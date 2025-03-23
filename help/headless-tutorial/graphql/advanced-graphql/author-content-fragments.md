@@ -1,14 +1,14 @@
 ---
 title: Erstellen von Inhaltsfragmenten – Erweiterte Konzepte von AEM Headless – GraphQL
 description: In diesem Kapitel über die erweiterten Konzepte von Adobe Experience Manager (AEM) Headless lernen Sie, mit Registerkarten, Datum und Uhrzeit, JSON-Objekten und Fragmentverweisen in Inhaltsfragmenten zu arbeiten. Richten Sie Ordnerrichtlinien ein, um zu begrenzen, welche Inhaltsfragmentmodelle einbezogen werden können.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 998d3678-7aef-4872-bd62-0e6ea3ff7999
 duration: 609
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 100%

@@ -1,7 +1,7 @@
 ---
 title: Konfigurieren eines sicheren Vorschau-Servers für AEM Dynamic Media
 description: Konfigurieren Sie den Testbild-Server für die sichere Vorschau mit der AEM Dynamic Media Classic-App.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 role: Developer
 level: Intermediate
 topic: Development
@@ -10,7 +10,7 @@ index: y
 doc-type: Tutorial
 exl-id: 7c12fc14-cdaf-45eb-807a-64de86a2a36a
 duration: 74
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 100%

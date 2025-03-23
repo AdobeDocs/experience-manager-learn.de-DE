@@ -1,7 +1,7 @@
 ---
 title: AEM Headless-Schnelleinrichtung für AEM as a Cloud Service
 description: Mit der AEM Headless-Schnelleinrichtung erhalten Sie praktische Informationen zu AEM Headless. Sie verwenden dabei Inhalte aus dem WKND-Site-Beispielprojekt und eine React-App, die Inhalte über AEM Headless-GraphQL-APIs bezieht.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-9442
 thumbnail: 339073.jpg
 exl-id: 62e807b7-b1a4-4344-9b1e-2c626b869e10
 duration: 781
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1078'
 ht-degree: 100%

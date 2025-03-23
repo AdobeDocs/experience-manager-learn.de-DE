@@ -1,7 +1,7 @@
 ---
 title: Benutzeroberflächenplanung mit Adobe XD | Schnelle Site-Erstellung mit AEM
 description: Erfahren Sie, wie Sie mit Adobe XD Benutzeroberflächen-Kits Ihre Adobe Experience Manager Sites-Implementierung entwerfen und schneller durchführen können.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 3155e0fa-56b7-4a52-8eef-fee488e95f68
 recommendations: noDisplay, noCatalog
 duration: 646
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 100%

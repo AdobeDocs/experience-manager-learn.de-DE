@@ -2,7 +2,7 @@
 title: Verwenden von Brand Portal
 description: Video-Erklärungen der Brand Portal-Integration für AEM-Autorinnen und -Autoren und AEM Assets.
 feature: Brand Portal
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
@@ -10,10 +10,10 @@ last-substantial-update: 2022-06-15T00:00:00Z
 doc-type: Feature Video
 exl-id: 42f13a19-52bf-413d-a141-63f1f0910dce
 duration: 2460
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
-source-wordcount: '1703'
-ht-degree: 100%
+source-wordcount: '1702'
+ht-degree: 98%
 
 ---
 
@@ -101,7 +101,7 @@ Dynamic Media-Videocodierungen können hier heruntergeladen werden:
 
 ### Geplante Veröffentlichung in Brand Portal
 
-Der Veröffentlichungs-Workflow für Assets (und Ordner) aus der [AEM (6.4.2.0)](https://helpx.adobe.com/de/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011)-Autoreninstanz in Brand Portal kann für einen späteren Zeitpunkt (Datum, Uhrzeit) geplant werden.
+Der Veröffentlichungs-Workflow von Assets (und Ordnern) aus der [AEM (6.4.2.0)](https://helpx.adobe.com/de/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011) Autoreninstanz in Brand Portal kann für einen späteren Zeitpunkt (Datum, Uhrzeit) geplant werden.
 
 Entsprechend können veröffentlichte Assets zu einem späteren Zeitpunkt aus dem Portal entfernt werden, indem der Workflow zum Rückgängigmachen der Veröffentlichung in Brand Portal geplant wird.
 

@@ -1,7 +1,7 @@
 ---
 title: Integrieren von AEM Sites mit Adobe Analytics mit der Adobe Analytics-Tag-Erweiterung
 description: Integrieren Sie AEM Sites mit Adobe Analytics mithilfe der ereignisgesteuerten Adobe Client-Datenschicht, um Daten zur Benutzeraktivität auf einer mit Adobe Experience Manager erstellten Website zu erfassen. Erfahren Sie, wie Sie mit Tag-Regeln diese Ereignisse überwachen und Daten an eine Adobe Analytics Report Suite senden können.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
 role: Developer
@@ -12,7 +12,7 @@ badgeIntegration: label="Integration" type="positive"
 doc-type: Tutorial
 exl-id: 33f2fd25-8696-42fd-b496-dd21b88397b2
 duration: 490
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2262'
 ht-degree: 100%

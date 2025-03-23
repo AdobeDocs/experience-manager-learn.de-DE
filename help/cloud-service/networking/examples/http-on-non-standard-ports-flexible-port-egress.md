@@ -1,7 +1,7 @@
 ---
 title: HTTP/HTTPS-Verbindungen auf Nicht-Standard-Ports für einen flexiblen Port-Ausgang
 description: Erfahren Sie, wie Sie HTTP/HTTPS-Anfragen von AEM as a Cloud Service an externe Web-Dienste stellen, die auf Nicht-Standard-Ports ausgeführt werden, um einen flexiblen Port-Ausgang zu ermöglichen.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-9354
 thumbnail: KT-9354.jpeg
 exl-id: c8cc0385-9e94-4120-9fb1-aeccbfcc8aa4
 duration: 86
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 100%

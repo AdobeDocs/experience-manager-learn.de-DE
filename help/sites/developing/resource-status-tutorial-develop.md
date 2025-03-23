@@ -2,9 +2,9 @@
 title: Entwickeln von Ressourcenstatus in AEM Sites
 description: Die Ressourcenstatus-API von Adobe Experience Manager ist ein Plug-in-Framework für die Darstellung von Statusmeldungen in den Web-Benutzeroberflächen der verschiedenen AEM-Editoren.
 doc-type: Tutorial
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 duration: 88
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 100%

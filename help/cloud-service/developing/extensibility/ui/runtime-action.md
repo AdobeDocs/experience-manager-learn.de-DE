@@ -2,7 +2,7 @@
 title: AEM-Benutzeroberflächen-Erweiterung von Adobe I/O Runtime-Aktionen
 description: Erfahren Sie, wie Sie ein AEM-Benutzeroberflächen-Erweiterungsmodul erstellen.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-11603
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: 3062900a-0461-4c6f-81e6-c76a7f613804
 duration: 240
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 100%

@@ -1,7 +1,7 @@
 ---
 title: Installieren von Drittanbieter-Artefakten – nicht im öffentlichen Maven-Repository verfügbar
 description: Erfahren Sie, wie Sie beim Erstellen und Bereitstellen eines AEM-Projekts Drittanbieter-Artefakte installieren, die *nicht im öffentlichen Maven-Repository verfügbar sind*.
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: OSGI
 topic: Development
 role: Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-09-13T00:00:00Z
 jira: KT-16207
 thumbnail: KT-16207.jpeg
 exl-id: 0cec14b3-4be5-4666-a36c-968ea2fc634f
-source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1569'
 ht-degree: 100%

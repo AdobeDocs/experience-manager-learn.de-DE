@@ -2,7 +2,7 @@
 title: Integrieren von Asset Compute-Sekundären mit AEM-Verarbeitungsprofilen
 description: AEM as a Cloud Service kann in Asset Compute-Sekundäre integriert werden, die über AEM Assets-Verarbeitungsprofile für Adobe I/O Runtime bereitgestellt werden. Verarbeitungsprofile werden im Author-Service so konfiguriert, dass bestimmte Assets mit benutzerdefinierten Sekundären verarbeitet und die von den Sekundären generierten Dateien als Asset-Ausgabedarstellungen gespeichert werden.
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6287
 thumbnail: KT-6287.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 1b398c8c-6b4e-4046-b61e-b44c45f973ef
 duration: 126
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '622'
 ht-degree: 100%

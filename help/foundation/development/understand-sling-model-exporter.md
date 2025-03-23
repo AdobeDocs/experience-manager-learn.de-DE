@@ -1,7 +1,7 @@
 ---
 title: Grundlegendes zum Sling-Modell-Exporter in AEM
 description: Apache Sling Models 1.3.0 führt den Sling-Modell-Exporter ein, eine elegante Methode zum Exportieren oder Serialisieren von Sling-Modell-Objekten in benutzerdefinierte Abstraktionen. In diesem Artikel wird der traditionelle Anwendungsfall der Verwendung von Sling-Modellen zum Ausfüllen von HTL-Skripten erläutert, wobei das Sling-Modell-Exporter-Framework genutzt wird, um ein Sling-Modell in JSON zu serialisieren.
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
 doc-type: Article
@@ -10,7 +10,7 @@ role: Developer
 level: Beginner
 exl-id: 03cdf5d1-3253-44c9-ae1f-ec5d3c562427
 duration: 133
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 100%

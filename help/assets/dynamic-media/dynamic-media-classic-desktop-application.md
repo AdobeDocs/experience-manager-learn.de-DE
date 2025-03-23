@@ -2,7 +2,7 @@
 title: Verwenden der Dynamic Media Classic-Desktop-Anwendung
 description: Adobe führt eine Desktop-Anwendung für Dynamic Media Classic-Benutzende ein, die im Browser nicht mehr auf Adobe Flash-Technologie angewiesen ist.
 feature: Dynamic Media Classic
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-5808
 thumbnail: 36645.jpg
 topic: Content Management
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 1600c0c0-0054-49ce-9b99-f8e6e29d6132
 duration: 189
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '173'
 ht-degree: 100%

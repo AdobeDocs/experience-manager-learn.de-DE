@@ -1,10 +1,10 @@
 ---
 title: Verwenden der Suche in AEM Assets
 description: In diesen Videos werden einige Verbesserungen der in AEM eingeführten Asset-Suche beschrieben. Autorinnen und Autoren können bestimmte Assets in Suchergebnissen mit Suchbegriffen verbessern, indem sie die entsprechenden Metadateneigenschaften aktualisieren. Wir betrachten auch einige erweiterte Konfigurationen für Assets OmniSearch-Eigenschaften.
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 doc-type: Feature Video
 duration: 373
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 100%

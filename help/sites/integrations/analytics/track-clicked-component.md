@@ -1,7 +1,7 @@
 ---
 title: Nachverfolgen angeklickter Komponenten mit Adobe Analytics
 description: Verwenden Sie die ereignisbasierte Adobe Client-Datenschicht, um Klicks auf bestimmte Komponenten einer Adobe Experience Manager-Site zu verfolgen. Erfahren Sie, wie Sie mit Tag-Regeln diese Ereignisse überwachen und Daten mithilfe eines Verfolgungs-Link-Beacons an eine Adobe Analytics Report Suite senden können.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
 role: Developer
@@ -12,7 +12,7 @@ badgeIntegration: label="Integration" type="positive"
 doc-type: Tutorial
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
 duration: 394
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1750'
 ht-degree: 100%

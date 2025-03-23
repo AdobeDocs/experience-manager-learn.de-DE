@@ -2,14 +2,14 @@
 title: Verwenden einer benutzerdefinierten Videominiatur mit AEM Dynamic Media
 description: Benutzerdefinierte AEM Assets-Videominiaturen bieten Autorinnen und Autoren die Möglichkeit, eine geeignete Miniaturansicht aus einer Reihe generierter Miniaturansichten auszuwählen. Die Anzahl der für ein Video generierten Miniaturansichten kann einfach angepasst werden.
 feature: Video Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: da3190bb-f350-420f-bf24-a6dede296efa
 duration: 376
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 100%

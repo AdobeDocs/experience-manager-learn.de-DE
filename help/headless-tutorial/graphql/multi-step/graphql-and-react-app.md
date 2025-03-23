@@ -1,7 +1,7 @@
 ---
 title: Erstellen einer React-App, die AEM mit GraphQL API abfragt – Erste Schritte mit AEM Headless – GraphQL
 description: Erste Schritte mit Adobe Experience Manager (AEM) und GraphQL. Erstellen Sie eine React-App, die Inhalte/Daten aus AEM GraphQL-API abruft. Außerdem sehen Sie, wie das AEM Headless-JS-SDK verwendet wird.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 jira: KT-6716
 thumbnail: KT-6716.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
 duration: 410
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 100%

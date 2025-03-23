@@ -1,7 +1,7 @@
 ---
 title: Einrichten von Asset-Vorlagen mit AEM Assets und InDesign Server
 description: Mit Asset-Vorlagen können Marketing-Fachleute digitale Assets für digitale sowie gedruckte Inhalte erstellen, verwalten und bereitstellen. Die Erstellung von Marketing-Broschüren, Visitenkarten, Flyern, Anzeigen und Postkarten mit Asset-Vorlagen ist bei Integration mit dem InDesign-Server viel einfacher. Die Konfiguration des InDesign-Servers mit AEM wird in diesem Abschnitt beschrieben.
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 feature: Templates
 role: Developer
@@ -9,7 +9,7 @@ level: Intermediate
 doc-type: Technical Video
 exl-id: 5b764d86-8ced-46ed-838e-4bd2e75fd64c
 duration: 428
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 100%

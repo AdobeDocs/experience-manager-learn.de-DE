@@ -1,7 +1,7 @@
 ---
 title: Entwickeln eines Blocks mit CSS und JS
 description: Entwickeln Sie einen Block mit CSS und JavaScript für Edge Delivery Services, der mit dem universellen Editor bearbeitet werden kann.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,8 +10,8 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 41c4cfcf-0813-46b7-bca0-7c13de31a20e
-source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
-workflow-type: ht
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 100%
 
@@ -312,7 +312,7 @@ Stellen Sie sicher, dass der Absatz in der lokalen Entwicklungsumgebung mit dem 
 
 ## Entwicklungsvorschau
 
-Beim Hinzufügen von CSS und JavaScript lädt die lokale Entwicklungsumgebung der AEM-CLI die Änderungen neu, sodass die Auswirkungen des Codes auf den Block schnell und einfach visualisiert werden können. Bewegen Sie den Mauszeiger über den CTA und überprüfen Sie, ob das Bild des Teasers vergrößert und verkleinert wird.
+Beim Hinzufügen von CSS und JavaScript lädt die lokale Entwicklungsumgebung der AEM-CLI die Änderungen neu, sodass die Auswirkungen des Codes auf den Block schnell und einfach visualisiert werden können. Bewegen Sie den Mauszeiger über den CTA und überprüfen Sie, ob das Bild des Teasers dabei vergrößert und verkleinert wird.
 
 ![Lokale Entwicklungsvorschau des Teasers mithilfe von CSS und JS](./assets/7b-block-js-css/local-development-preview.png)
 

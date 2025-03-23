@@ -6,9 +6,9 @@ user-guide-description: Eine Sammlung von AEM Forms-Ressourcen für Anfänger un
 solution: Experience Manager, Experience Manager Forms
 breadcrumb-title: AEM Forms-Tutorials
 sub-product: Experience Manager Forms
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 index: y
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2101'
 ht-degree: 100%

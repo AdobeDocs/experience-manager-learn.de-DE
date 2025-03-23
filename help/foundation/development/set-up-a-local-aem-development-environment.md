@@ -1,7 +1,7 @@
 ---
 title: Einrichten einer lokalen AEM-Entwicklungsumgebung
 description: Erfahren Sie, wie Sie eine lokale Entwicklungsumgebung für Experience Manager einrichten. Machen Sie sich mit der lokalen Installation, Apache Maven, integrierten Entwicklungsumgebungen sowie dem Debuggen und der Fehlerbehebung vertraut. Verwenden Sie Eclipse IDE, CRXDE-Lite, Visual Studio Code und IntelliJ.
-version: 6.5
+version: Experience Manager 6.5
 feature: Developer Tools
 topic: Development
 role: Developer
@@ -11,7 +11,7 @@ last-substantial-update: 2022-07-20T00:00:00Z
 doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
 duration: 4537
-source-git-commit: d731a7131b997fa272013e8d62aa2251e25c08e4
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2423'
 ht-degree: 100%
