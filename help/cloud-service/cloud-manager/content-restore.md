@@ -1,6 +1,6 @@
 ---
 title: Wiederherstellung von Inhalten in AEM as a Cloud Service
-description: In diesem Video erfahren Sie, wie Sie Inhalte in AEM as a Cloud Service wiederherstellen. Erfahren Sie, wann und wie Sie frühere Inhalte effizient wiederherstellen können, um die Integrität der Inhalte sicherzustellen.
+description: In diesem Video erfahren Sie, wie Sie Inhalte in AEM as a Cloud Service wiederherstellen. Erfahren Sie, wann und wie Sie frühere Inhalte effizient wiederherstellen, um die Integrität der Inhalte sicherzustellen.
 version: Experience Manager as a Cloud Service
 topic: Architecture
 feature: Cloud Manager
@@ -14,12 +14,12 @@ exl-id: 367ebee1-bce9-4d16-a128-ec678c8cd52d
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '69'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Wiederherstellung von Inhalten in AEM as a Cloud Service
 
-In diesem Schritt-für-Schritt-Tutorial erfahren Sie, wie Sie Inhalte in AEM as a Cloud Service wiederherstellen. Erfahren Sie, wann und wie Sie frühere Inhalte effizient wiederherstellen können, um die Integrität der Inhalte sicherzustellen.
+In diesem Tutorial mit schrittweisen Anleitungen erfahren Sie, wie Sie Inhalte in AEM as a Cloud Service wiederherstellen. Erfahren Sie, wann und wie Sie frühere Inhalte effizient wiederherstellen, um die Integrität der Inhalte sicherzustellen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416149/?learn=on&enablevpops)
