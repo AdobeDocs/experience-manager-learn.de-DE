@@ -2,14 +2,14 @@
 title: Verschlüsseln eines PDF mit einem Berechtigungskennwort.
 description: Verwenden von DocAssuranceService zum Verschlüsseln eines PDF
 feature: Document Services
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 jira: KT-15849
 last-substantial-update: 2024-07-19T00:00:00Z
 exl-id: 5df8581c-a44c-449c-bf3b-8cdf57635c4d
-source-git-commit: d01a56cd1fd3085b0230918b15b4635ba375e346
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 100%

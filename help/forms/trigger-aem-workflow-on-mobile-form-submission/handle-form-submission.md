@@ -3,14 +3,14 @@ title: Auslösen eines AEM-Workflows bei der Übermittlung eines HTML5-Formulars
 description: Durchführen der Übermittlung des HTML5-Formulars
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
 exl-id: 5fbc0cb9-5b55-4269-9172-039414db89cc
-source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 100%

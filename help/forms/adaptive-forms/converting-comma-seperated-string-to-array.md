@@ -2,7 +2,7 @@
 title: Konvertieren einer kommagetrennten Zeichenfolge in ein Zeichenfolgen-Array in AEM Forms Workflow
 description: Wenn Ihr Formulardatenmodell über ein Zeichenfolgen-Array als Eingabeparameter verfügt, müssen Sie die Daten, die aus der Übermittlungsaktion eines adaptiven Formulars generiert wurden, bereinigen, bevor Sie die Übermittlungsaktion des Formulardatenmodells aufrufen.
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
@@ -10,7 +10,7 @@ jira: KT-8507
 exl-id: 9ad69407-2413-416f-9cec-43f88989b31d
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 100%

@@ -3,7 +3,7 @@ title: Handhabung einer HTML5-Formularübermittlung
 description: Erstellen Sie einen Handler zur HTML5-Formularübermittlung.
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-5269
 thumbnail: kt-5269.jpg
 topic: Development
@@ -12,8 +12,8 @@ level: Experienced
 exl-id: 93e1262b-0e93-4ba8-aafc-f9c517688ce9
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 66
-source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
-workflow-type: ht
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 100%
 

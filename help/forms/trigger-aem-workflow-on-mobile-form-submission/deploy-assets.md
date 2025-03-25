@@ -3,14 +3,14 @@ title: Auslösen des AEM-Workflows bei der Übermittlung von HTML5-Formularen �
 description: Bereitstellen der Beispiel-Assets auf Ihrem lokalen System
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 9417235f-2e8d-45c7-86eb-104478a69a19
-source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '392'
 ht-degree: 100%

@@ -3,7 +3,7 @@ title: Auslösen eines AEM-Workflows bei der Übermittlung eines PDF-Formulars
 description: Fahren Sie mit dem Ausfüllen des Mobile-Formulars im Offline-Modus fort und übermitteln Sie das Mobile-Formular, um den AEM-Workflow auszulösen.
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
@@ -12,7 +12,7 @@ last-substantial-update: 2021-04-07T00:00:00Z
 jira: kt-16133
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 342
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 100%

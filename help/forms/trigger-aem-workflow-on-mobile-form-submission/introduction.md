@@ -3,7 +3,7 @@ title: Einführung in das Auslösen eines AEM-Workflows für die Übermittlung v
 description: Auslösen eines AEM-Workflows bei der Übermittlung eines Formulars für Mobilgeräte
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
@@ -11,7 +11,7 @@ last-substantial-update: 2024-09-17T00:00:00Z
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: ce51b25f-6069-4799-9a61-98c0a672e821
-source-git-commit: e764e573fba00a3b12bc60ec7dcc11e42ab96ed2
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '195'
 ht-degree: 100%

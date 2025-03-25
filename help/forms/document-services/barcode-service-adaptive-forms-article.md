@@ -2,14 +2,14 @@
 title: Barcode-Dienst mit adaptiven Formularen
 description: Verwenden des Barcode-Dienstes, um den Barcode zu decodieren und Formularfelder aus den extrahierten Daten auszufüllen.
 feature: Barcoded Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
 last-substantial-update: 2020-02-07T00:00:00Z
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 100%

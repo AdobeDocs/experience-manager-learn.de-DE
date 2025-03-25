@@ -3,14 +3,14 @@ title: Auslösen des AEM-Workflows bei der Übermittlung von HTML5-Formularen �
 description: Erfahren Sie, wie Sie den AEM-Workflow beim Übermitteln des HTML5-Formulars auslösen und die übermittelten Daten im Repository speichern.
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
 exl-id: eafeafe1-7a72-4023-b5bb-d83b056ba207
 duration: 116
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 100%

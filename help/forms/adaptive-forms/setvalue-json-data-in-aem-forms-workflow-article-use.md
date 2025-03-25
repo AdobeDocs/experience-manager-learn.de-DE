@@ -2,14 +2,14 @@
 title: Festlegen von Werten für das JSON-Datenelement in AEM Forms Workflow
 description: Da ein adaptives Formular im AEM-Workflow an verschiedene Benutzende weitergeleitet wird, müssen bestimmte Felder oder Panels abhängig davon, wer sich das Formular ansieht, ausgeblendet oder deaktiviert werden. Um diesen Anwendungsfällen gerecht zu werden, legen wir normalerweise ein Wert für ein ausgeblendetes Feld fest. Basierend auf dem Wert dieses ausgeblendeten Felds können Geschäftsregeln erstellt werden, um entsprechende Panels oder Felder auszublenden/zu deaktivieren.
 feature: Adaptive Forms
-version: 6.4
+version: Experience Manager 6.4
 topic: Development
 role: Developer
 level: Experienced
 exl-id: fbe6d341-7941-46f5-bcd8-58b99396d351
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 126
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 100%

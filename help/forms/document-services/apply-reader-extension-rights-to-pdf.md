@@ -1,7 +1,7 @@
 ---
 title: Anwenden von Verwendungsrechten auf hochgeladene PDF-Dateien
 description: Anwenden von Verwendungsrechten auf PDF-Dokumente
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Reader Extensions
 topic: Development
 role: Developer
@@ -9,7 +9,7 @@ level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 129
-source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 100%

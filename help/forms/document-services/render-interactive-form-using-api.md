@@ -2,14 +2,14 @@
 title: Rendern interaktiver PDF-Dateien mit Forms-Diensten in AEM Forms
 description: Verwenden der Forms Service-API in AEM Forms zum Rendern interaktiver PDF-Dateien
 feature: Forms Service
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 9b2ef4c9-8360-480d-9165-f56a959635fb
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 75
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 100%
