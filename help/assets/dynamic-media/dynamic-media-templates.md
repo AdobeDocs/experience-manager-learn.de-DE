@@ -11,14 +11,14 @@ last-substantial-update: 2025-03-18T00:00:00Z
 jira: KT-17563
 exl-id: 28098410-64d3-4cfc-8bc6-56e1d4016525
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '61'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
 # Dynamic Media-Vorlagen
 
-Erfahren Sie mehr über Dynamic Media-Vorlagen, ein zusammenstellbares Bild-Asset, ihre Best Practices und die Erfüllung der Nachfrage nach personalisierter Inhaltsbereitstellung. Erfahren Sie, wie Sie Vorlagen erstellen und verwalten und damit personalisierte Inhalte skaliert bereitstellen können.
+Erfahren Sie mehr über Dynamic Media-Vorlagen, ein zusammenstellbares Bild-Asset, ihre Best Practices und die Erfüllung der Nachfrage nach personalisierter Inhaltsbereitstellung. Erfahren Sie, wie Sie Vorlagen erstellen und verwalten und mit ihnen personalisierte Inhalte skaliert bereitstellen können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3451727/?learn=on&enablevpops)

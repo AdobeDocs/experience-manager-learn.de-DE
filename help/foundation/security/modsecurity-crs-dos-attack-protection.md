@@ -13,15 +13,15 @@ last-substantial-update: 2023-08-18T00:00:00Z
 exl-id: 9f689bd9-c846-4c3f-ae88-20454112cf9a
 duration: 783
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1171'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
 # Schutz Ihrer AEM-Website vor DoS-Angriffen mit ModSecurity
 
-Erfahren Sie, wie Sie ModSecurity aktivieren können, um Ihre Site vor Denial of Service(DoS)-Angriffen zu schützen, indem Sie den  **OWASP ModSecurity Core Rule Set (CRS)** auf dem Adobe Experience Manager (AEM) Dispatcher veröffentlichen.
+Erfahren Sie, wie Sie ModSecurity aktivieren können, um Ihre Site vor Denial of Service (DoS)-Angriffen zu schützen, indem Sie den **OWASP ModSecurity Core Rule Set (CRS)** auf dem Adobe Experience Manager (AEM) Dispatcher veröffentlichen.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3422976?quality=12&learn=on)
@@ -111,8 +111,8 @@ In dieser Beispielregelkonfiguration gilt Folgendes: **DOS_COUNTER_THRESHOLD** b
 Um das CRS zu initialisieren, entfernen Sie allgemeine falsch positive Werte und fügen Sie lokale Ausnahmen für Ihre Site hinzu:
 
 1. Entfernen Sie zum Initialisieren des CRS `.disabled` aus der Datei **REQUEST-901-INITIALISIERUNG**. Mit anderen Worten: Benennen Sie die Datei `REQUEST-901-INITIALIZATION.conf.disabled` in `REQUEST-901-INITIALIZATION.conf` um.
-1. Um häufig vorkommende falsch-positive Ereignisse wie den lokalen IP-Ping (127.0.0.1) zu entfernen, entfernen Sie `.disabled` aus der Datei **REQUEST-905-COMMON-EXCEPTIONS**.
-1. Um lokale Ausnahmen wie die AEM-Plattform oder Ihre Site-spezifischen Pfade hinzuzufügen, benennen Sie `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example` in `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf` um.
+1. Entfernen Sie zum Löschen der allgemeinen falsch positiven Werte wie „lokale IP (127.0.0.1) Ping“ `.disabled` aus der Datei **REQUEST-905-COMMON-EXCEPTIONS**.
+1. Um lokale Ausnahmen wie die AEM-Plattform oder Ihre Site-spezifischen Pfade hinzuzufügen, benennen Sie `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example` in `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf` um
    1. Fügen Sie AEM-plattformspezifische Pfadausnahmen zur neu umbenannten Datei hinzu.
 
    ```
@@ -254,7 +254,7 @@ Um eine größere Anzahl von Anforderungen (50 oder mehr) innerhalb eines kurzen
 
 Gehen Sie wie folgt vor, um einen DoS-Angriff mit JMeter zu simulieren:
 
-1. [Laden Sie Apache JMeter](https://jmeter.apache.org/download_jmeter.cgi) herunter und [installieren](https://jmeter.apache.org/usermanual/get-started.html#install) Sie es lokal.
+1. [Laden Sie Apache JMeter](https://jmeter.apache.org/download_jmeter.cgi) herunter und [installieren](https://jmeter.apache.org/usermanual/get-started.html#install) Sie es lokal
 1. [Führen](https://jmeter.apache.org/usermanual/get-started.html#running) Sie es lokal mithilfe des `jmeter`-Skripts im `<JMETER-INSTALL-DIR>/bin`-Verzeichnis aus.
 1. Öffnen Sie das JMX-Beispielskript [WKND-DoS-Attack-Simulation-Test](assets/modsecurity-crs/WKND-DoS-Attack-Simulation-Test.jmx) in JMeter über das Werkzeugmenü **Öffnen**.
 

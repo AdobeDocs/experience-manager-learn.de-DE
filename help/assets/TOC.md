@@ -8,16 +8,16 @@ version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '450'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
 
 # AEM Assets-Videos und -Tutorials {#assets}
 
-+ [Überblick](overview.md)
++ [Übersicht](overview.md)
 
 + Video-Playlists{#video-playlists}
    + [Assets-Ansicht](playlists/assets-view.md)
@@ -78,7 +78,7 @@ ht-degree: 99%
    + [Importieren und Exportieren von Metadaten](metadata/metadata-import-export.md)
 
 + Content Hub{#content-hub}
-   + [Überblick](./content-hub/overview.md)
+   + [Übersicht](./content-hub/overview.md)
    + [Setup](./content-hub/set-up.md)
    + [Konfigurieren](./content-hub/configure.md)
    + [Hinzufügen von Assets](./content-hub/add-assets.md)
@@ -130,7 +130,7 @@ ht-degree: 99%
    + [Asset-Suche](./adobe-asset-link/asset-search.md)
 
 + Inhaltsautomatisierung{#content-automation}
-   + [Überblick](./content-automation/overview.md)
+   + [Übersicht](./content-automation/overview.md)
    + [Kreative Vorgänge](./content-automation/creative-operations.md)
    + [Photoshop-Aktionen](./content-automation/photoshop-actions.md)
 
@@ -180,7 +180,7 @@ ht-degree: 99%
       + [Grundlegendes zum erweiterten Connector](./workfront/enhanced-connector/basics.md)
       + [Projektordner](./workfront/enhanced-connector/project-folders.md)
       + AEM-Expertenreihe{#aem-experts-series}
-         + [Überblick](./workfront/enhanced-connector/aem-experts-series/overview.md)
+         + [Übersicht](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [Setup](./workfront/enhanced-connector/aem-experts-series/setup.md)
          + [Workfront-Formulare und AEM-Metadaten](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
          + [Tags, projektverknüpfte Ordner und Ordnermetadaten](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)

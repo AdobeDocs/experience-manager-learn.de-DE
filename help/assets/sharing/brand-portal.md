@@ -11,9 +11,9 @@ doc-type: Feature Video
 exl-id: 42f13a19-52bf-413d-a141-63f1f0910dce
 duration: 2460
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1702'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -71,12 +71,12 @@ Beispielsweise werden durch die Angabe von „kletter*“ alle Assets zurückgeg
 #### Aktivieren der Ordnerhierarchie
 
 Admins können jetzt konfigurieren, wie die Ordner bei der Anmeldung für Nicht-Admins (Bearbeitende, Betrachtende und Gastbenutzende) angezeigt werden.
-Die Konfiguration [Ordnerhierarchie aktivieren](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) wird in den allgemeinen Einstellungen im Admin-Tools-Bereich hinzugefügt. Wenn die Konfiguration:
+Die Konfiguration [Ordnerhierarchie aktivieren](https://helpx.adobe.com/de/experience-manager/brand-portal/using/brand-portal-general-configuration.html) wird in den allgemeinen Einstellungen im Admin-Tools-Bereich hinzugefügt. Wenn die Konfiguration:
 
 * aktiviert ist, dann ist die Ordnerstruktur, die beim Stammordner beginnt, für Benutzerinnen und Benutzer ohne Administratorrechte sichtbar. Dadurch erhalten sie ein Navigationserlebnis, das dem von Admins ähnelt.
 * deaktiviert ist, werden auf der Landingpage nur die freigegebenen Ordner angezeigt.
 
-Wenn die Funktion [Ordnerhierarchie aktivieren](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal-general-configuration.html) aktiviert ist, können Sie besser zwischen verschiedenen Ordnern mit demselben Namen unterscheiden, die über verschiedene Hierarchien freigegeben werden. Bei der Anmeldung sehen Nicht-Administratoren nun die virtuellen übergeordneten (und untergeordneten) Ordner der freigegebenen Ordner.
+Wenn die Funktion [Ordnerhierarchie aktivieren](https://helpx.adobe.com/de/experience-manager/brand-portal/using/brand-portal-general-configuration.html) aktiviert ist, können Sie besser zwischen verschiedenen Ordnern mit demselben Namen unterscheiden, die über verschiedene Hierarchien freigegeben werden. Bei der Anmeldung sehen Nicht-Administratoren nun die virtuellen übergeordneten (und untergeordneten) Ordner der freigegebenen Ordner.
 
 Die freigegebenen Ordner sind in den jeweiligen Verzeichnissen in virtuellen Ordnern organisiert. Sie können diese virtuellen Ordner an einem Sperrsymbol erkennen.
 
@@ -101,7 +101,7 @@ Dynamic Media-Videocodierungen können hier heruntergeladen werden:
 
 ### Geplante Veröffentlichung in Brand Portal
 
-Der Veröffentlichungs-Workflow von Assets (und Ordnern) aus der [AEM (6.4.2.0)](https://helpx.adobe.com/de/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011) Autoreninstanz in Brand Portal kann für einen späteren Zeitpunkt (Datum, Uhrzeit) geplant werden.
+Der Veröffentlichungs-Workflow für Assets (und Ordner) aus der [AEM (6.4.2.0)](https://helpx.adobe.com/de/experience-manager/6-5/release-notes/sp-release-notes.html#main-pars_header_9658011)-Autoreninstanz in Brand Portal kann für einen späteren Zeitpunkt (Datum, Uhrzeit) geplant werden.
 
 Entsprechend können veröffentlichte Assets zu einem späteren Zeitpunkt aus dem Portal entfernt werden, indem der Workflow zum Rückgängigmachen der Veröffentlichung in Brand Portal geplant wird.
 
@@ -205,7 +205,7 @@ Beue und erweiterte Funktionen, die die Abstimmung von Brand Portal mit AEM verb
 
 ## Zusätzliche Ressourcen{#additional-resources}
 
-* [Neue Funktionen in Brand Portal](https://helpx.adobe.com/experience-manager/brand-portal/using/whats-new.html?lang=de)
+* [Neue Funktionen in Brand Portal](https://helpx.adobe.com/de/experience-manager/brand-portal/using/whats-new.html)
 * [AEM Author-Replikationsagenten](https://helpx.adobe.com/de/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [Anleitung zum beschleunigten Download](https://helpx.adobe.com/de/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [Adobe-Dokumente zu AEM Assets Brand Portal](https://helpx.adobe.com/de/experience-manager/brand-portal/using/brand-portal.html)

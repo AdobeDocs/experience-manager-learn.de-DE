@@ -10,9 +10,9 @@ topic: Integrations
 exl-id: 7b2b1e1c-820f-4387-a78b-5d889c31eec0
 duration: 25
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '150'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ Navigieren Sie zum Knoten „/conf/AzurePortalStorage/settings/wcm/templates/sto
 |--------------------|-------------------|-------------------------------------------------------|
 | sling:resourceType | Zeichenfolge | azureportalpagecomponent/component/page/storeandfetch |
 
-Navigieren Sie zum Knoten /conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefromazure/structure/jcr:content und fügen Sie die folgende Eigenschaft hinzu und speichern Sie die Änderungen.
+Navigieren Sie zum Knoten „/conf/AzurePortalStorage/settings/wcm/templates/storeandrestorefromazure/structure/jcr:content node“, fügen Sie die folgende Eigenschaft hinzu und speichern Sie die Änderungen.
 
 | **Eigenschaftsname** | **Eigenschaftstyp** | **Eigenschaftswert** |
 |--------------------|-------------------|-------------------------------------------------------|

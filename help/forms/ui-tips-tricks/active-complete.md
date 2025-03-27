@@ -12,9 +12,9 @@ exl-id: f7c1f991-0486-4355-8502-cd5b038537e3
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 68
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '328'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +37,7 @@ Vergewissern Sie sich, dass Sie sich in der Stilschicht befinden, und wählen Si
 Sie befinden sich im Standardzustand, wenn Sie den Stileditor für die Registerkarte öffnen, wie im Screenshot unten dargestellt
 ![navigation-tab](assets/navigation-tab.png)
 
-Legen Sie die CSS-Eigenschaften für den Standardstatus wie unten gezeigt fest
+Festlegen der CSS-Eigenschaften für den Standardstatus wie unten gezeigt
 
 | Kategorie | Eigenschaftsname | Eigenschaftswert |
 |:---|:---|:---|

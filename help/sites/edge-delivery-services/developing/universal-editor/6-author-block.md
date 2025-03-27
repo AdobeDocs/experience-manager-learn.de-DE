@@ -11,9 +11,9 @@ jira: KT-15832
 duration: 500
 exl-id: ca356d38-262d-4c30-83a0-01c8a1381ee6
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '376'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -54,7 +54,7 @@ Die Erstellung eines Blocks in der Entwicklung ist aus mehreren Gründen wichtig
 
    ![Universeller Editor – Erstellen eines Blocks](./assets/6-author-block/author-block.png)
 
-8. Klicken Sie nach Abschluss des **auf die Schaltfläche** Veröffentlichen“ oben rechts im universellen Editor, wählen Sie In **Vorschau** veröffentlichen und veröffentlichen Sie die Änderungen in der Vorschauumgebung. Die Änderungen werden dann in der Domain `aem.page` für die Website veröffentlicht.
+8. Klicken Sie nach Abschluss der Erstellung auf die Schaltfläche **Veröffentlichen** oben rechts im universellen Editor, veröffentlichen Sie als **Vorschau** und veröffentlichen Sie die Änderungen in der Vorschauumgebung. Die Änderungen werden dann in der Domain `aem.page` für die Website veröffentlicht.
    ![AEM Sites – Veröffentlichen oder Vorschau](./assets/6-author-block/publish-to-preview.png)
 
 9. Warten Sie, bis die Änderungen in der Vorschau veröffentlicht wurden, und öffnen Sie dann die Web-Seite über die [AEM CLI](./3-local-development-environment.md#install-the-aem-cli) unter [http://localhost:3000/branches/teaser](http://localhost:3000/branches/teaser).

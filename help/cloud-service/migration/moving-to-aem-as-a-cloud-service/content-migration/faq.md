@@ -12,9 +12,9 @@ thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 399
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1884'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -75,7 +75,7 @@ Neben JVM verwendet das Tool auch Datenträger-E/A, um die Daten an einem vorüb
 
 Die Menge der Ressourcen, die der CTT-Extraktionsprozess benötigt, hängt von der Anzahl der Knoten, der Anzahl der Blobs und ihrer aggregierten Größe ab. Es ist schwierig, eine Formel hierfür bereitzustellen. Daher wird empfohlen, einen kleinen Migrationsnachweis durchzuführen, um die Erweiterungsanforderungen für den Quell-Server zu ermitteln.
 
-Wenn Klonumgebungen für die Migration verwendet werden, hat dies keine Auswirkungen auf die Ressourcennutzung des Live-Produktions-Servers, sondern birgt eigene spezifische Nachteile bei der Synchronisierung von Inhalten zwischen Live-Produktion und Klon.
+Wenn Klonumgebungen für die Migration verwendet werden, hat dies keine Auswirkungen auf die Ressourcennutzung des Live-Produktions-Servers, sondern birgt eigene spezifische Nachteile bei der Synchronisierung von Inhalten zwischen Live-Produktion und Klon
 
 ### F: Was bedeuten die Begriffe „bereinigen“ und „überschreiben“ im CTT-Kontext?
 
@@ -87,11 +87,11 @@ Im Rahmen der [Aufnahmephase](https://experienceleague.adobe.com/docs/experience
 
 Ja, dies ist möglich, erfordert jedoch eine sorgfältige Planung in Bezug auf Folgendes:
 
-+ Die Migrationssätze werden unter der Annahme erstellt, dass sich die Sites und Assets in ihren jeweiligen Hierarchien befinden.
-   + Überprüfen Sie, ob es zulässig ist, alle Assets als Teil eines Migrationssatzes zu migrieren, und migrieren Sie dann die Sites, die diese verwenden, stufenweise.
-+ Im aktuellen Status ist die Autoreninstanz aufgrund des Autoren-Aufnahmevorgangs nicht für die Inhaltserstellung verfügbar, obwohl der Inhalt auf der Veröffentlichungsebene weiterhin bereitgestellt werden kann.
-   + Dies bedeutet, dass die Inhaltserstellungsaktivitäten eingefroren werden, bis die Aufnahme in der Autoreninstanz abgeschlossen ist.
-+ Benutzende werden nicht mehr migriert, Gruppen jedoch schon.
++ Die Migrationssätze werden unter der Annahme erstellt, dass sich die Sites und Assets in ihren jeweiligen Hierarchien befinden
+   + Überprüfen Sie, ob es zulässig ist, alle Assets als Teil eines Migrationssatzes zu migrieren, und migrieren Sie dann die Sites, die diese verwenden, stufenweise
++ Im aktuellen Status ist die Autoreninstanz aufgrund des Autoren-Aufnahmevorgangs nicht für die Inhaltserstellung verfügbar, obwohl der Inhalt auf der Veröffentlichungsebene weiterhin bereitgestellt werden kann
+   + Dies bedeutet, dass die Inhaltserstellungsaktivitäten eingefroren werden, bis die Aufnahme in der Autoreninstanz abgeschlossen ist
++ Benutzerinnen und Benutzer werden nicht mehr migriert, Gruppen jedoch schon.
 
 Lesen Sie vor dem Planen der Migration die Beschreibung für die Prozesse der Auffüllextraktion und Auffüllaufnahme.
 
@@ -111,7 +111,7 @@ Wenn `jcr:content` auf Ordnerebene fehlt, wird jede Aktion zum Übertragen von E
 
 Ja, in CTT gibt es eine Funktion zum [Überprüfen der Größe](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html?lang=de#migration-set-size).
 
-### F: Kann ich beim Durchführen der Migration (Extraktion, Aufnahme) überprüfen, ob alle meine extrahierten Inhalte in das Ziel aufgenommen werden?
+### F: Kann ich beim Durchführen der Migration (Extraktion, Aufnahme). überprüfen, ob alle meine extrahierten Inhalte in das Ziel aufgenommen werden?
 
 Ja, in CTT gibt es eine [Validierungsfunktion](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/validating-content-transfers.html?lang=de).
 
@@ -160,7 +160,7 @@ Ja. Die Assets werden basierend auf den in AEMaaCS verfügbaren Indexdefinitione
 
 ### F: Die AEM-Quelle verfügt über eine Dynamic Media-Integration. Gibt es irgendetwas, das vor der Inhaltsmigration berücksichtigt werden muss?
 
-Ja, bitte beachten Sie Folgendes, wenn die AEM-Quelle über eine Dynamic Media-Integration verfügt:
+Ja, bitte beachten Sie Folgendes, wenn die AEM-Quelle über eine Dynamic Media-Integration verfügt.
 
 + AEMaaCS unterstützt nur den Dynamic Media Scene7-Modus. Wenn sich das Quellsystem im Hybridmodus befindet, ist eine DM-Migration in Scene7-Modi erforderlich.
 + Wenn von geklonten Quellinstanzen migriert werden soll, stellt es kein Problem dar, die DM-Integration für den für CTT zu verwendenden Klon zu deaktivieren. Dieser Schritt dient lediglich dazu, Schreibvorgänge in DM oder das Laden von DM-Traffic zu vermeiden.
@@ -168,38 +168,38 @@ Ja, bitte beachten Sie Folgendes, wenn die AEM-Quelle über eine Dynamic Media-I
 
 ### F: Was sind unterschiedliche Migrationsansätze bei vorhandener DM-Integration in der AEM-Quelle?
 
-Bitte lesen Sie vorab die obige Frage und Antwort.
+Bitte lesen Sie vorab die obige Frage und Antwort
 
-(Im Folgenden werden zwei mögliche, aber nicht die einzigen Optionen beschrieben.) Dies ist abhängig vom gewünschten Ansatz der Kundin oder des Kunden in Bezug auf Benutzerakzeptanztests, Leistungstests, die verfügbare Umgebung und die Frage, ob für die Migration ein Klon verwendet wird oder nicht. Bitte betrachten Sie diese beiden Optionen als Ausgangspunkt für eine Diskussion.
+(Im Folgenden werden zwei mögliche, aber nicht die einzigen Optionen beschrieben.) Dies ist abhängig vom gewünschten Ansatz der Kundin oder des Kunden in Bezug auf Benutzerakzeptanztests, Leistungstests, die verfügbare Umgebung und die Frage, ob für die Migration ein Klon verwendet wird oder nicht. Bitte betrachten Sie diese beiden Optionen als Ausgangspunkt für eine Diskussion
 
 **Option 1**
 
 Wenn sich die Assets/Knoten in der Quellumgebung zahlenmäßig im unteren Bereich (~100.000) befinden und diese über einen Zeitraum von 24 + 72 Stunden migriert werden können, einschließlich Extraktion und Aufnahme, ist folgender Ansatz zu empfehlen:
 
-+ Führen Sie eine direkte Migration von der Produktion aus durch.
-+ Führen Sie eine erste Extraktion und Aufnahme in AEMaaCS mit `wipe=true` aus.
-   + Mit diesem Schritt werden alle Knoten und Binärdateien migriert.
-+ Arbeiten Sie weiterhin an der lokalen/AMS-Produktions-Authoring-Instanz.
-+ Führen Sie von nun an alle anderen Migrationsnachweiszyklen mit `wipe=true` aus.
++ Führen Sie eine direkte Migration von der Produktion aus durch
++ Führen Sie eine erste Extraktion und Aufnahme in AEMaaCS mit `wipe=true` aus
+   + Mit diesem Schritt werden alle Knoten und Binärdateien migriert
++ Arbeiten Sie weiterhin an der lokalen/AMS-Produktions-Authoring-Instanz
++ Führen Sie von nun an alle anderen Migrationsnachweiszyklen mit `wipe=true` aus
    + Beachten Sie, dass bei diesem Vorgang der vollständige Knotenspeicher migriert wird (aber nur geänderte Blobs, nicht ganze Blobs). Die vorherigen Blobs befinden sich im Azure-Blob-Speicher der AEMaaCS-Zielinstanz.
-   + Verwenden Sie diesen Migrationsnachweis zur Bemessung der Migrationsdauer, für Tests sowie zur Validierung aller anderen Funktionen.
-+ Führen Sie in der Woche vor der Live-Schaltung eine Migration vom Typ „wipe=true“ durch.
-   + Verbinden Sie Dynamic Media mit AEMaaCS.
-   + Trennen Sie die DM-Konfiguration von der lokalen AEM-Quelle.
+   + Verwenden Sie diesen Migrationsnachweis zur Bemessung der Migrationsdauer, für Tests sowie zur Validierung aller anderen Funktionen
++ Führen Sie in der Woche vor der Live-Schaltung eine Migration vom Typ „wipe=true“ durch
+   + Verbinden Sie Dynamic Media mit AEMaaCS
+   + Trennen Sie die DM-Konfiguration von der lokalen AEM-Quelle
 
 Mit dieser Option können Sie eine 1:1-Migration ausführen (d. h. von der lokalen Entwicklungsumgebung in die AEMaaCS-Entwicklungsumgebung usw.) und die DM-Konfigurationen aus den entsprechenden Umgebungen verschieben
 
-(falls die Migration vom Klon aus geplant ist).
+(falls die Migration vom Klon aus geplant ist)
 
 **Option 2**
 
-+ Erstellen Sie einen Klon der Produktions-Authoring-Instanz und entfernen Sie die DM-Konfiguration aus dem Klon.
-+ Migrieren Sie den lokalen Klon in die AEMaaCS-Entwicklungs-/-Staging-Umgebung.
-   + Verbinden Sie das Produktions-DM-Unternehmen zu Validierungszwecken kurz mit der AEMaaCS-Entwicklungs-/-Staging-Umgebung.
-   + Vermeiden Sie während einer aktiven DM-Verbindung die Asset-Aufnahme in AEMaaCS.
-   + Dadurch können CTT- und DM-spezifische Validierungen durchgeführt werden.
++ Erstellen Sie einen Klon der Produktions-Authoring-Instanz und entfernen Sie die DM-Konfiguration aus dem Klon
++ Migrieren Sie den lokalen Klon in die AEMaaCS-Entwicklungs-/-Staging-Umgebung
+   + Verbinden Sie das Produktions-DM-Unternehmen zu Validierungszwecken kurz mit der AEMaaCS-Entwicklungs-/-Staging-Umgebung
+   + Vermeiden Sie während einer aktiven DM-Verbindung die Asset-Aufnahme in AEMaaCS
+   + Dadurch können CTT- und DM-spezifische Validierungen durchgeführt werden
 + Gehen Sie wie folgt vor, sobald der Test in AEMaaCS abgeschlossen ist:
-   + Führen Sie eine „wipe“-Migration von der lokalen Staging- in die AEMaaCS-Staging-Umgebung durch.
+   + Führen Sie eine „wipe“-Migration von der lokalen Staging- in die AEMaaCS-Staging-Umgebung durch
 
 Führen Sie eine „wipe“-Migration von der lokalen Entwicklungs- in die AEMaaCS-Entwicklungsumgebung durch.
 

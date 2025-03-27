@@ -12,9 +12,9 @@ last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 duration: 3508
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1308'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 94%
 >[!CONTEXTUALHELP]
 >id="aemcloud_localdev_devtools"
 >title="Einrichten von Entwicklungs-Tools"
->abstract="Für Entwicklungsaufgaben in Adobe Experience Manager (AEM) müssen nur wenige Entwicklungs-Tools auf dem Computer der Entwicklungsperson installiert und eingerichtet werden. Zu diesen Tools gehören u. a. Java, Maven, Adobe I/O CLI und eine Entwicklungsumgebung (IDE)."
+>abstract="Für Entwicklungsaufgaben in Adobe Experience Manager (AEM) müssen nur wenige Entwicklungs-Tools auf dem Computer des Entwicklers bzw. der Entwicklerin installiert und eingerichtet werden. Zu diesen Tools gehören u. a. Java, Maven, Adobe I/O CLI und eine Entwicklungsumgebung (IDE)."
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines" text="Entwicklungsrichtlinien"
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk" text="Entwicklungsgrundlagen"
 
@@ -69,7 +69,7 @@ _Die Verwendung von Homebrew ist optional, wird jedoch empfohlen._
 Homebrew ist ein Open-Source-Package Manager für macOS, Windows und Linux. Alle unterstützenden Tools können separat installiert werden. Homebrew bietet eine praktische Möglichkeit, eine Vielzahl von Entwicklungs-Tools zu installieren und zu aktualisieren, die für die Entwicklung von Experience Manager erforderlich sind.
 
 1. Öffnen Sie Ihr Terminal
-1. Überprüfen Sie, ob Homebrew bereits installiert ist, indem Sie den folgenden Befehl ausführen: `brew --version`
+1. Überprüfen Sie, ob Homebrew bereits installiert ist, indem Sie den folgenden Befehl ausführen: `brew --version`.
 1. Wenn Homebrew nicht installiert ist, installieren Sie Homebrew
 
 >[!BEGINTABS]
@@ -152,7 +152,7 @@ Wenn Sie Homebrew verwenden, folgen Sie den Anweisungen __Installation mit Homeb
 
 ## Installieren von Maven
 
-Apache Maven ist das Open-Source-Java-Befehlszeilenwerkzeug, mit dem AEM-Projekte erstellt werden, die aus dem AEM-Projekt-Maven-Archetyp generiert wurden. Alle wichtigen IDEs ([IntelliJ IDEA](https://www.jetbrains.com/idea/), [Visual Studio Code](https://code.visualstudio.com/), [Eclipse](https://www.eclipse.org/) usw.) verfügen über integrierte Maven-Unterstützung.
+Apache Maven ist das Open-Source-Java-Befehlszeilenwerkzeug, mit dem AEM-Projekte erstellt werden, die aus dem AEM-Projekt-Maven-Archetyp generiert wurden. Alle gängigen IDEs ([IntelliJ IDEA](https://www.jetbrains.com/idea/), [Visual Studio Code](https://code.visualstudio.com/), [Eclipse](https://www.eclipse.org/) usw.) haben integrierte Maven-Unterstützung.
 
 
 >[!BEGINTABS]
@@ -199,17 +199,17 @@ Das Cloud Manager-Plug-in von Adobe I/O ermöglicht der AIO-CLI die Interaktion 
 Damit Adobe I/O-CLI mit Cloud Manager kommunizieren kann, muss eine [Cloud Manager-Integration in der Adobe I/O Console](https://github.com/adobe/aio-cli-plugin-cloudmanager) erstellt werden, und es müssen Anmeldeinformationen zur erfolgreichen Authentifizierung eingeholt werden.
 
 1. Melden Sie sich bei [console.adobe.io](https://console.adobe.io) an
-1. Stellen Sie sicher, dass Ihre Organisation, die das Cloud Manager-Produkt umfasst, mit dem eine Verbindung hergestellt werden soll, im Umschalter für Adobe-Organisationen aktiv ist.
+1. Stellen Sie sicher, dass Ihre Organisation, die das Cloud Manager-Produkt umfasst, mit dem eine Verbindung hergestellt werden soll, im Umschalter für Adobe-Organisationen aktiv ist
 1. Erstellen Sie ein neues [Adobe I/O-Programm](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects.md) oder öffnen Sie ein bestehendes
    + Adobe I/O Console-Projekte sind einfach organisatorische Gruppierungen von Integrationen. Erstellen Sie ein Programm oder verwenden Sie ein vorhandenes Projekt, je nachdem, wie die Integrationen verwaltet werden sollen.
    + Wenn Sie ein neues Projekt erstellen, wählen Sie bei entsprechender Aufforderung „Leeres Projekt“ aus (vs. „Aus Vorlage erstellen“)
    + Adobe I/O Console-Programme unterscheiden sich von Cloud Manager-Programmen
-1. Erstellen Sie eine neue Cloud Manager-API-Integration.
-   + Wählen Sie den Berechtigungstyp „OAuth Server-zu-Server“ aus.
-   + Wählen Sie das Produktprofil „Bereitstellungs-Manager - Cloud Service&quot; aus.
-   + Konfigurierte API speichern
-1. Um die Anmeldeinformationen zu erhalten, müssen Sie die [config.json“ der Adobe I/O-CLI ](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication), indem Sie die neu erstellten „OAuth Server-zu-Server“-Anmeldeinformationen öffnen und „JSON herunterladen“ in der oberen rechten Aktionsleiste auswählen.
-1. Öffnen Sie die heruntergeladene JSON-Datei und benennen Sie alle Schlüssel in Kleinbuchstaben um. Beispielsweise wird `CLIENT_ID` zu `client_id`.
+1. Erstellen Sie eine neue Cloud Manager-API-Integration
+   + Wählen Sie den Anmeldedatentyp „OAuth-Server-zu-Server“ aus.
+   + Wählen Sie das Produktprofil „Bereitstellungs-Manager – Cloud Service“ aus.
+   + Speichern des konfigurierten API
+1. Um die Anmeldedaten zu erhalten, müssen Sie die [config.json](https://github.com/adobe/aio-cli-plugin-cloudmanager#authentication) der Adobe I/O-CLI befüllen, indem Sie die neu erstellten „OAuth-Server-zu-Server“-Anmeldedaten öffnen und in der oberen rechten Aktionsleiste „JSON herunterladen“ auswählen.
+1. Öffnen Sie die heruntergeladene JSON-Datei und ändern Sie alle Schlüssel in Kleinbuchstaben. Zum Beispiel wird `CLIENT_ID` zu `client_id`.
 1. Laden Sie die `config.json`-Datei in die Adobe I/O-CLI
    + `$ aio config:set ims.contexts.aio-cli-plugin-cloudmanager /path/to/downloaded/json --file --json`
 
