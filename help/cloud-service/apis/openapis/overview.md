@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
+source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '1015'
 ht-degree: 2%
 
 ---
@@ -59,15 +59,18 @@ Die OpenAPI-basierten AEM-APIs unterstützen die OAuth 2.0-Authentifizierung, ei
 
 - **Anmeldedaten für OAuth Single Page App**: Entwickelt für SPAs, die im Browser ausgeführt werden. Dieser muss auf APIs für einen Benutzer ohne Backend-Server zugreifen. Sie verwendet den _authorization_code_-Gewährungstyp und verlässt sich auf Client-seitige Sicherheitsmechanismen, die PKCE (Proof Key for Code Exchange) verwenden, um den Autorisierungs-Code-Fluss zu sichern. Weitere Informationen finden Sie unter [OAuth Single Page App Credential](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential).
 
-## Unterschied zwischen OAuth Server-zu-Server- und OAuth Web App/Single Page App-Anmeldeinformationen{#difference-between-oauth-server-to-server-and-oauth-web-app-single-page-app-credentials}
+## Unterschied zwischen OAuth Server-zu-Server- und Web-App-Anmeldeinformationen im Vergleich zu den Anmeldeinformationen für Einzelseiten-App{#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials}
 
-| | OAuth-Server-zu-Server | OAuth-Benutzerauthentifizierung (Web-App) |
-| --- | --- | --- |
-| Authentifizierungszweck | Entwickelt für Maschine-zu-Maschine-Interaktionen. | Entwickelt für benutzergesteuerte Interaktionen. |
-| Token-Verhalten | Gibt Zugriffstoken aus, die für die Client-Anwendung selbst stehen. | Gibt Zugriffstoken für einen authentifizierten Benutzer aus. |
-| Anwendungsfälle | Backend-Services, die API-Zugriff ohne Benutzerinteraktion benötigen. | Web-Anwendungen mit Frontend- und Backend-Komponenten, die im Auftrag von Benutzern auf APIs zugreifen. |
-| Sicherheitsaspekte | Sicheres Speichern sensibler Anmeldeinformationen (`client_id`, `client_secret`) in Backend-Systemen. | Die Benutzer authentifizieren sich und erhalten ihr eigenes temporäres Zugriffstoken. Sicheres Speichern sensibler Anmeldeinformationen (`client_id`, `client_secret`) in Backend-Systemen. |
-| Genehmigungstyp | _client_credentials_ | _authorization_code_ |
+In der folgenden Tabelle werden die Unterschiede zwischen den drei OAuth-Authentifizierungsmethoden zusammengefasst, die von OpenAPI-basierten AEM-APIs unterstützt werden:
+
+|  | OAuth-Server-zu-Server | OAuth-Web-App | OAuth Single Page App (SPA) |
+| --- | --- | --- | --- |
+| **Authentifizierungszweck** | Entwickelt für Maschine-zu-Maschine-Interaktionen. | Entwickelt für benutzergesteuerte Interaktionen in einer Web-App mit einem _Backend_. | Entwickelt für benutzergesteuerte Interaktionen in einer _Client-seitigen JavaScript-Anwendung_. |
+| **Token-Verhalten** | Gibt Zugriffstoken aus, die für die Client-Anwendung selbst stehen. | Gibt Zugriffstoken für einen authentifizierten Benutzer aus _über ein Backend_. | Gibt Zugriffstoken für einen authentifizierten Benutzer aus _über einen reinen Frontend-Fluss_. |
+| **Anwendungsfälle** | Backend-Services, die API-Zugriff ohne Benutzerinteraktion benötigen. | Web-Anwendungen mit Frontend- und Backend-Komponenten, die im Auftrag von Benutzern auf APIs zugreifen. | Reine Frontend-Anwendungen (JavaScript), die ohne Backend für Benutzende auf APIs zugreifen. |
+| **Sicherheitsüberlegungen** | Sicheres Speichern sensibler Anmeldeinformationen (`client_id`, `client_secret`) in Backend-Systemen. | Nach der Benutzerauthentifizierung erhalten sie über einen Backend _Aufruf ein eigenes temporäres Zugriffstoken_. Speichern Sie vertrauliche Anmeldeinformationen (`client_id`, `client_secret`) sicher in Backend-Systemen, um Autorisierungs-Code gegen Zugriffs-Token auszutauschen. | Nach der Benutzerauthentifizierung erhalten sie über einen Frontend _Aufruf ein eigenes (temporäres Zugriffstoken_. verwendet keine `client_secret`, da die Speicherung in Frontend-Apps unsicher ist. stützt sich beim Austausch von Autorisierungs-Code gegen Zugriffs-Token auf PKCE. |
+| **Fördertyp** | _client_credentials_ | _authorization_code_ | _authorization_code_ mit **PKCE** |
+| **Adobe Developer Console-Berechtigungstyp** | OAuth-Server-zu-Server | OAuth-Web-App | OAuth Single-Page App |
 
 ## Zugriff auf Adobe-APIs und zugehörige Konzepte{#accessing-adobe-apis-and-related-concepts}
 
