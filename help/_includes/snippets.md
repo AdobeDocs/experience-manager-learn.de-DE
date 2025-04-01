@@ -1,15 +1,11 @@
 ---
-source-git-commit: 7f7bffa24539d0bba0dc9ac8cc94d0c8d1f2e871
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
 workflow-type: tm+mt
-source-wordcount: '89'
+source-wordcount: '74'
 ht-degree: 100%
 
 ---
 # Snippets
-
-## AEM Headless-Testversionen – Werbung{#aem-headless-trials-promo}
-
-[![Lernen Sie unser Headless-CMS mit der 30-Tage-Testversion kennen](./assets/aem-headless-trial-promo.png){align="left"}](https://commerce.adobe.com/business-trial/sign-up?items%5B0%5D%5Bid%5D=649A1AF5CBC5467A25E84F2561274821&amp;cli=headless_exl_banner_campaign&amp;co=US&amp;lang=de)
 
 ## Edge Delivery Services{#edge-delivery-services}
 

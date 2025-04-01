@@ -8,16 +8,14 @@ role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
 duration: 441
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
+workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 100%
 
 ---
 
 # Erweiterte Konzepte von AEM Headless
-
-{{aem-headless-trials-promo}}
 
 Dieses End-to-End-Tutorial setzt das [Grundlagentutorial](../multi-step/overview.md) fort, in dem die Grundlagen von Adobe Experience Manager (AEM) Headless und GraphQL behandelt wurden. Das erweiterte Tutorial veranschaulicht die tief greifenden Aspekte der Arbeit mit Inhaltsfragmentmodellen, Inhaltsfragmenten und den von AEM GraphQL persistierten Abfragen, einschließlich der Verwendung der von GraphQL persistierten Abfragen in einer Client-Anwendung.
 

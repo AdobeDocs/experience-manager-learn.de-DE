@@ -12,16 +12,14 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: b0ac4b50-5fe5-41a1-9530-8e593d7000c9
 duration: 89
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
+workflow-type: tm+mt
 source-wordcount: '421'
 ht-degree: 100%
 
 ---
 
 # Erstes Tutorial zu AEM Headless
-
-{{aem-headless-trials-promo}}
 
 Willkommen beim Tutorial zum Erstellen eines Web-Erlebnisses mit React, mit vollständiger Unterstützung von AEM Headless-APIs und GraphQL. In diesem Tutorial führen wir Sie durch den Prozess der Erstellung einer dynamischen und interaktiven Web-Anwendung, indem wir die Leistungsfähigkeit von React, Adobe Experience Manager (AEM) Headless-APIs und GraphQL kombinieren.
 
