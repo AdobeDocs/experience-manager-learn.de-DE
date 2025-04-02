@@ -12,9 +12,9 @@ last-substantial-update: 2022-09-02T00:00:00Z
 exl-id: 19f72254-2087-450b-909d-2d90c9821486
 duration: 411
 source-git-commit: 99e3cadc71ca4e26f9e4034085788dfc5407d1bb
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '1696'
+ht-degree: 100%
 
 ---
 
@@ -66,7 +66,7 @@ $ java --version
 
 Das AEM as a Cloud Service SDK bzw. AEM SDK enthält die Schnellstart-JAR, die zum lokalen Ausführen von AEM Author und Publish für die Entwicklung verwendet wird, sowie die kompatible Version der Dispatcher-Tools.
 
-1. Melden Sie sich mit Ihrer Adobe ID bei ](https://experience.adobe.com/#/downloads/content/software-distribution/de/aemcloud.html)0}https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html&quot; an[
+1. Melden Sie sich mit Ihrer Adobe ID auf [https://experience.adobe.com/#/downloads/content/software-distribution/de/aemcloud.html](https://experience.adobe.com/#/downloads/content/software-distribution/de/aemcloud.html) an.
    + Beachten Sie, dass Ihre Adobe-Organisation für AEM as a Cloud Service bereitgestellt werden __muss__, um das AEM as a Cloud Service-SDK herunterladen zu können.
 1. Navigieren Sie zur Registerkarte __AEM as a Cloud Service__
 1. Sortieren Sie nach __Veröffentlichungsdatum__ in __absteigender__ Reihenfolge
