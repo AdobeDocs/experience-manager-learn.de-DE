@@ -12,9 +12,9 @@ thumbnail: KT-17428.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 277b4789-b035-4904-b489-c827c970fb55
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: f125cffc72a6f0eb558492f8dde6f4f30bc074ec
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
@@ -93,24 +93,25 @@ Wenn beispielsweise der AEM Assets-Autoren-API-Aufruf den [403-Fehler für Nicht
 
 Um Produktprofile für eine AEM-API hinzuzufügen, klicken Sie **Produktprofile bearbeiten** im Abschnitt **APIs** des ADC-Projekts, wählen Sie das gewünschte Produktprofil im Dialogfeld **API konfigurieren** aus und speichern Sie Ihre Änderungen.
 
-    ![Produktprofile bearbeiten](../assets/how-to/edit-product-profiles.png)
+![Produktprofile bearbeiten](../assets/how-to/edit-product-profiles.png)
 
 Wählen Sie das gewünschte Produktprofil (z. B. **AEM-Administratoren - Autor - Programm XXX - Umgebung XXX**) aus, das mit den erforderlichen Services verknüpft ist, und speichern Sie dann Ihre Änderungen.
 
-    ![Produktprofil auswählen](../assets/how-to/select-product-profile.png)
+![Profil auswählen](../assets/how-to/select-product-profile.png)
 
 Beachten Sie, dass das Produktprofil **AEM-Administratoren - Autor - Programm XXX - Umgebung XXX** sowohl mit dem Service **AEM-Administratoren** als auch mit dem Service **AEM Assets-API-** verknüpft ist. Ohne Letzteres wird das Produktprofil nicht in der Liste der verfügbaren Produktprofile angezeigt.
 
-    ![Produktprofil-Services](../assets/how-to/product-profile-services.png)
+![Produktprofil-Services](../assets/how-to/product-profile-services.png)
 
 Die **PATCH**-Anfrage zum Aktualisieren der Asset-Metadaten sollte jetzt ohne Probleme funktionieren.
 
-    ![PATCH-Anfrage](../assets/how-to/patch-request.png)
+![PATCH-Anfrage](../assets/how-to/patch-request.png)
 
 
 >[!TAB Entfernen von Produktprofilen]
 
 Um Produktprofile für eine AEM-API zu entfernen, klicken Sie im Abschnitt **APIs** des ADC-Projekts auf **Produktprofile bearbeiten**, heben Sie die Auswahl des gewünschten Produktprofils im Dialogfeld **API konfigurieren** auf und speichern Sie Ihre Änderungen.
+
 ![Auswahl des Produktprofils ](../assets/how-to/deselect-product-profile.png)
 
 >[!ENDTABS]
