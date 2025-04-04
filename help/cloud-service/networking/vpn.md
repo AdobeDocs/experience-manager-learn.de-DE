@@ -11,9 +11,9 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: e1bea4320ed7a8b6d45f674649ba9ba946054b17
-workflow-type: ht
-source-wordcount: '1556'
+source-git-commit: 5f547d9a721c2072559e877d1c4a08fcd11327b7
+workflow-type: tm+mt
+source-wordcount: '1531'
 ht-degree: 100%
 
 ---
@@ -261,7 +261,7 @@ Nachdem das VPN erstellt wurde, können Sie es nun mithilfe der Cloud Manager-AP
    Wenn Ihre AEM-Bereitstellung __nur__ HTTP/HTTPS-Verbindungen zu externen Diensten erfordert, lassen Sie das Array `portForwards` leer, da diese Regeln nur für Nicht-HTTP/HTTPS-Anfragen erforderlich sind.
 
 
-&#x200B;2. Überprüfen Sie für jede Umgebung, ob die VPN-Routing-Regeln wirksam sind, indem Sie den Cloud Manager-API-Vorgang [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) verwenden.
+2. Überprüfen Sie für jede Umgebung, ob die VPN-Routing-Regeln wirksam sind, indem Sie den Cloud Manager-API-Vorgang [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) verwenden.
 
    __HTTP-Anfrage „getEnvironmentAdvancedNetworkingConfiguration“__
 
@@ -273,9 +273,9 @@ Nachdem das VPN erstellt wurde, können Sie es nun mithilfe der Cloud Manager-AP
        -H 'Content-Type: application/json'
    ```
 
-&#x200B;3. Proxy-Konfigurationen für virtuelle private Netzwerke können mit dem Cloud Manager-API-Vorgang [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) aktualisiert werden. Denken Sie daran, dass `enableEnvironmentAdvancedNetworkingConfiguration` ein `PUT`-Vorgang ist, weswegen alle Regeln bei jedem Aufruf dieses Vorgangs angegeben werden müssen.
+3. Proxy-Konfigurationen für virtuelle private Netzwerke können mit dem Cloud Manager-API-Vorgang [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) aktualisiert werden. Denken Sie daran, dass `enableEnvironmentAdvancedNetworkingConfiguration` ein `PUT`-Vorgang ist, weswegen alle Regeln bei jedem Aufruf dieses Vorgangs angegeben werden müssen.
 
-&#x200B;4. Nun können Sie die Konfiguration des Ausgangs des virtuellen privaten Netzwerks in Ihrem benutzerdefinierten AEM-Code und Ihrer Konfiguration verwenden.
+4. Nun können Sie die Konfiguration des Ausgangs des virtuellen privaten Netzwerks in Ihrem benutzerdefinierten AEM-Code und Ihrer Konfiguration verwenden.
 
 ## Verbindung zu externen Diensten über das virtuelle private Netzwerk
 
@@ -368,12 +368,6 @@ Die Konfiguration des virtuellen privaten Netzwerks beschränkt den Zugriff auf 
             Konfigurieren Sie eine IP-Zulassungsliste so, dass nur VPN-Traffic auf AEM zugreifen kann.
       </p>
     </td>
-   <td>
-      <a  href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking"><img alt="Pfadbasierte VPN-Zugriffsbeschränkungen für AEM Publish" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking">Pfadbasierte VPN-Zugriffsbeschränkungen für AEM Publish</a></strong></div>
-      <p>
-            VPN-Zugriff für bestimmte Pfade in AEM Publish erforderlich machen.
-      </p>
     </td>
    <td></td>
 </tr></table>
