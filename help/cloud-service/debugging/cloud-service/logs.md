@@ -11,10 +11,10 @@ role: Developer
 level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
 duration: 229
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '948'
-ht-degree: 100%
+source-git-commit: 0363505b426d6e4733c57409e17e9d69f7a567c7
+workflow-type: tm+mt
+source-wordcount: '962'
+ht-degree: 93%
 
 ---
 
@@ -167,14 +167,7 @@ __Pod cm-p12345-e56789-aem-author-abcdefg-2222__
 
 ## Empfohlene Protokollebenen{#log-levels}
 
-Adobe empfiehlt im Allgemeinen die folgenden Protokollebenen nach AEM as a Cloud Service-Umgebung:
-
-+ Lokale Entwicklung (AEM SDK): `DEBUG`
-+ Entwicklung: `DEBUG`
-+ Staging: `WARN`
-+ Produktion: `ERROR`
-
-Die optimale Protokollebene für jeden Umgebungstyp wird mit AEM as a Cloud Service festgelegt. Die Protokollebenen werden dabei im Code beibehalten.
+Adobe&#39;s general guidance on log levels per AEM as a Cloud Service environment is to stick with the default log settings of AEM (with the default log level of `INFO`). Adobe recommends that also the custom code is instrumented with log statements, which allows to run it with the log level of `INFO`. The log levels are maintained in code
 
 + Java-Protokollkonfigurationen werden in OSGi-Konfigurationen beibehalten
 + Apache-Webserver- und Dispatcher-Protokollebenen werden im Dispatcher-Projekt erfasst
