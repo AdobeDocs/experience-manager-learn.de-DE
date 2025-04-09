@@ -12,7 +12,7 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: b17e228c33ff2e3f2ee2d7e13da65a648c5df79d
+source-git-commit: 7ec2db883ba485b4062db84630cf94c8ed0967ee
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 7%
@@ -27,6 +27,9 @@ Erfahren Sie, wie Sie Ihre AEM as a Cloud Service-Umgebung einrichten, um den Zu
 >
 >OpenAPI-basierte AEM-APIs sind als Teil eines Early-Access-Programms verfügbar. Wenn Sie daran interessiert sind, darauf zuzugreifen, empfehlen wir Ihnen, eine E-Mail an [aem-apis@adobe.com](mailto:aem-apis@adobe.com) mit einer Beschreibung Ihres Anwendungsfalls zu senden.
 
+>[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
+
+
 Der Einrichtungsprozess auf hoher Ebene umfasst die folgenden Schritte:
 
 1. Modernisierung der AEM as a Cloud Service-Umgebung.
@@ -35,14 +38,14 @@ Der Einrichtungsprozess auf hoher Ebene umfasst die folgenden Schritte:
 1. ADC-Projekt konfigurieren
 1. Konfigurieren Sie die AEM-Instanz, um die ADC-Projektkommunikation zu aktivieren.
 
-## Modernisierung der AEM as a Cloud Service-Umgebung
+## Modernisierung der AEM as a Cloud Service-Umgebung{#modernization-of-aem-as-a-cloud-service-environment}
 
 Die Modernisierung der AEM as a Cloud Service-Umgebung ist eine einmalige Aktivität pro Umgebung, die die folgenden Schritte umfasst:
 
 - Aktualisierung auf die AEM-Version **2024.10.18459.20241031T210302Z** oder höher.
 - Fügen Sie neue Produktprofile hinzu, wenn die Umgebung vor der Version 2024.10.18459.20241031T.210302 erstellt wurde.
 
-### AEM-Instanz aktualisieren
+### AEM-Instanz aktualisieren{#update-aem-instance}
 
 Um die AEM-Instanz zu aktualisieren, klicken Sie im Abschnitt _Umgebungen_ von Adobe {0](https://my.cloudmanager.adobe.com/)Cloud Manager auf das Symbol _Auslassungspunkte_ neben dem Umgebungsnamen und wählen Sie die Option **Aktualisieren** aus.[
 
@@ -54,7 +57,7 @@ Klicken Sie dann auf **Senden** und führen Sie die _vorgeschlagene_ Full-Stack-
 
 In meinem Fall heißt die Full-Stack-Pipeline **dev :: fullstack-Deploy** und die AEM-Umgebung heißt **wknd-program-dev**. Ihre Namen können unterschiedlich sein.
 
-### Hinzufügen neuer Produktprofile
+### Hinzufügen neuer Produktprofile{#add-new-product-profiles}
 
 Um der AEM-Instanz neue Produktprofile hinzuzufügen, klicken Sie im Abschnitt _Umgebungen_ von Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) auf das Symbol _Auslassungspunkte_ neben dem Umgebungsnamen und wählen Sie die Option **Produktprofile hinzufügen** aus.
 
@@ -80,15 +83,15 @@ Sie können auch die mit dem Produktprofil verknüpften _Services_ auswählen od
 
 ![Mit dem Produktprofil verknüpfte Services überprüfen](./assets/setup/review-services-associated-with-product-profile.png)
 
-Standardmäßig ist der Service **AEM Assets API Users** mit keinem Produktprofil verknüpft. Verknüpfen wir sie mit dem neu hinzugefügten Produktprofil **AEM Assets Collaborator Users - Author - Program XXX - Environment XXX**. After this association, the ADC Project&#39;s _Asset Author API_ can setup the desired Server-to-Server authentication and associate the authentication account from ADC project (created in next step) with the Product Profile.
+Standardmäßig ist der Service **AEM Assets API Users** mit keinem Produktprofil verknüpft. Verknüpfen wir sie mit dem neu hinzugefügten Produktprofil **AEM Assets Collaborator Users - Author - Program XXX - Environment XXX**. Nach dieser Verknüpfung kann die _Asset-Autoren-API_ des ADC-Projekts die gewünschte Server-zu-Server-Authentifizierung einrichten und das Authentifizierungskonto aus dem ADC-Projekt (im nächsten Schritt erstellt) mit dem Produktprofil verknüpfen.
 
 ![Verknüpfen des AEM Assets-API-Benutzerdiensts mit dem Produktprofil](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
 
 >[!IMPORTANT]
 >
->The above step is critical to enable the Server-to-Server authentication for the AEM Assets API. Without this association, the AEM Assets API cannot be used with the Server-to-Server authentication method.
+>Der obige Schritt ist wichtig, um die Server-zu-Server-Authentifizierung für die AEM Assets-API zu aktivieren. Ohne diese Zuordnung kann die AEM Assets-API nicht mit der Server-zu-Server-Authentifizierungsmethode verwendet werden.
 
-## Erstellen eines Adobe Developer Console-Projekts (ADC)
+## Erstellen eines Adobe Developer Console-Projekts (ADC){#adc-project}
 
 Das ADC-Projekt wird verwendet, um die gewünschten APIs hinzuzufügen, seine Authentifizierung einzurichten und das Authentifizierungskonto mit dem Produktprofil zu verknüpfen.
 
@@ -110,7 +113,7 @@ Erstellen eines ADC-Projekts:
 
    ![Projektname bearbeiten](./assets/setup/edit-project-name.png)
 
-## ADC-Projekt konfigurieren
+## ADC-Projekt konfigurieren{#configure-adc-project}
 
 Nachdem Sie das ADC-Projekt erstellt haben, müssen Sie die gewünschten AEM-APIs hinzufügen, die Authentifizierung einrichten und das Authentifizierungskonto mit dem Produktprofil verknüpfen.
 
@@ -144,7 +147,7 @@ Nachdem Sie das ADC-Projekt erstellt haben, müssen Sie die gewünschten AEM-API
 
 Wenn Sie die Authentifizierungsmethode **OAuth Web App** oder **OAuth Single Page App** wählen, wird die Produktprofilzuordnung nicht aufgefordert, aber die Umleitungs-URI der Anwendung ist erforderlich. Der Anwendungsumleitungs-URI wird verwendet, um den Benutzer nach der Authentifizierung mit einem Autorisierungs-Code an die Anwendung umzuleiten. In den Tutorials zu den entsprechenden Anwendungsfällen werden solche authentifizierungsspezifischen Konfigurationen beschrieben.
 
-## Konfigurieren der AEM-Instanz, um die ADC-Projektkommunikation zu aktivieren
+## Konfigurieren der AEM-Instanz, um die ADC-Projektkommunikation zu aktivieren{#configure-aem-instance}
 
 Um die ClientID des ADC-Projekts für die Kommunikation mit der AEM-Instanz zu aktivieren, müssen Sie die AEM-Instanz konfigurieren.
 
