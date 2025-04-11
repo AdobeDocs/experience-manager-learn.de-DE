@@ -14,8 +14,8 @@ exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
 duration: 100
 source-git-commit: cf006f24abbc5aa4b91277b91d68538c41d33e15
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 87%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -27,9 +27,9 @@ Diese Cache-Header werden normalerweise in AEM Dispatcher-vhost-Konfigurationen 
 
 ## Caching-Standardverhalten
 
-Das Caching von HTTP-Antworten im CDN von AEM as a Cloud Service wird durch die folgenden HTTP-Antwort-Header aus dem `Cache-Control`, `Surrogate-Control` oder `Expires` gesteuert.  Ursprungsantworten, die `private`, `no-cache` oder `no-store` in `Cache-Control` enthalten, werden nicht zwischengespeichert.
+Das Caching von HTTP-Antworten im CDN von AEM as a Cloud Service wird durch die folgenden HTTP-Antwort-Header der ursprünglichen Elemente `Cache-Control`, `Surrogate-Control` oder `Expires` gesteuert.  Ursprungsantworten, die `private`, `no-cache` oder `no-store` in `Cache-Control` enthalten, werden nicht zwischengespeichert.
 
-Überprüfen Sie das [standardmäßige Caching](./enable-caching.md#default-caching-behavior)Verhalten für AEM Publish und Author, wenn ein auf dem AEM-Projektarchetyp basierendes AEM-Projekt bereitgestellt wird.
+Überprüfen Sie das [Caching-Standardverhalten](./enable-caching.md#default-caching-behavior) für AEM Publish und Author, wenn ein AEM-Projekt bereitgestellt wird, das auf einem AEM-Projektarchetyp basiert.
 
 
 ## Deaktivieren des Cachings
