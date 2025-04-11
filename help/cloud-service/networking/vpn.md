@@ -12,7 +12,7 @@ exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
 source-git-commit: 5f547d9a721c2072559e877d1c4a08fcd11327b7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1531'
 ht-degree: 100%
 
@@ -261,7 +261,7 @@ Nachdem das VPN erstellt wurde, können Sie es nun mithilfe der Cloud Manager-AP
    Wenn Ihre AEM-Bereitstellung __nur__ HTTP/HTTPS-Verbindungen zu externen Diensten erfordert, lassen Sie das Array `portForwards` leer, da diese Regeln nur für Nicht-HTTP/HTTPS-Anfragen erforderlich sind.
 
 
-&#x200B;2. Überprüfen Sie für jede Umgebung, ob die VPN-Routing-Regeln wirksam sind, indem Sie den Cloud Manager-API-Vorgang [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) verwenden.
+2. Überprüfen Sie für jede Umgebung, ob die VPN-Routing-Regeln wirksam sind, indem Sie den Cloud Manager-API-Vorgang [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) verwenden.
 
    __HTTP-Anfrage „getEnvironmentAdvancedNetworkingConfiguration“__
 
@@ -273,9 +273,9 @@ Nachdem das VPN erstellt wurde, können Sie es nun mithilfe der Cloud Manager-AP
        -H 'Content-Type: application/json'
    ```
 
-&#x200B;3. Proxy-Konfigurationen für virtuelle private Netzwerke können mit dem Cloud Manager-API-Vorgang [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) aktualisiert werden. Denken Sie daran, dass `enableEnvironmentAdvancedNetworkingConfiguration` ein `PUT`-Vorgang ist, weswegen alle Regeln bei jedem Aufruf dieses Vorgangs angegeben werden müssen.
+3. Proxy-Konfigurationen für virtuelle private Netzwerke können mit dem Cloud Manager-API-Vorgang [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) aktualisiert werden. Denken Sie daran, dass `enableEnvironmentAdvancedNetworkingConfiguration` ein `PUT`-Vorgang ist, weswegen alle Regeln bei jedem Aufruf dieses Vorgangs angegeben werden müssen.
 
-&#x200B;4. Nun können Sie die Konfiguration des Ausgangs des virtuellen privaten Netzwerks in Ihrem benutzerdefinierten AEM-Code und Ihrer Konfiguration verwenden.
+4. Nun können Sie die Konfiguration des Ausgangs des virtuellen privaten Netzwerks in Ihrem benutzerdefinierten AEM-Code und Ihrer Konfiguration verwenden.
 
 ## Verbindung zu externen Diensten über das virtuelle private Netzwerk
 
