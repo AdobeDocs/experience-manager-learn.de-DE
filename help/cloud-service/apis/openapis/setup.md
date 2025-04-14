@@ -12,7 +12,7 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 7ec2db883ba485b4062db84630cf94c8ed0967ee
+source-git-commit: 4cdab2b243af74a8075ae65e8f24e7f56ef2a23b
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 7%
@@ -35,7 +35,7 @@ Der Einrichtungsprozess auf hoher Ebene umfasst die folgenden Schritte:
 1. Modernisierung der AEM as a Cloud Service-Umgebung.
 1. Aktivieren des Zugriffs auf AEM-APIs.
 1. Erstellen Sie ein Adobe Developer Console-Projekt (ADC).
-1. ADC-Projekt konfigurieren
+1. Konfigurieren des ADC-Projekts.
 1. Konfigurieren Sie die AEM-Instanz, um die ADC-Projektkommunikation zu aktivieren.
 
 ## Modernisierung der AEM as a Cloud Service-Umgebung{#modernization-of-aem-as-a-cloud-service-environment}
