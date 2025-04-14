@@ -9,15 +9,14 @@ role: Developer
 level: Experienced
 exl-id: c588bdca-b8a8-4de2-97e0-ba08b195699f
 duration: 50
-source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
-workflow-type: ht
+source-git-commit: ed8749f312dc5ad18e047163bcae28d6753b6f8c
+workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 100%
 
 ---
 
 # Erstellen eines adaptiven Formulars basierend auf einem JSON-Schema
-
 
 Die Möglichkeit, adaptive Formulare auf der Grundlage eines JSON-Schemas zu erstellen, wurde mit AEM Forms 6.3 eingeführt. Die Details zum Erstellen adaptiver Formulare mit einem JSON-Schema werden in diesem [Artikel](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-json-schema-form-model.html?lang=de) ausführlich erläutert.
 
@@ -31,8 +30,6 @@ Der folgende Screenshot zeigt die gesendeten Formulardaten, die im JSON-Datentyp
 >
 >Stellen Sie sicher, dass Ihre JSON-Schemadatei entsprechend benannt ist. Sie muss beispielsweise im folgenden Format benannt werden: &lt;name>schema.json. Ihre Schemadatei kann daher „hypothek.schema.json“ oder „kredit.schema.json“ lauten.
 
-
 ![datastored](assets/datastored.gif)
-
 
 [Beispiele für JSON-Schemata, die zum Erstellen adaptiver Formulare verwendet werden können.](assets/samplejsonschemas.zip). Laden Sie die Zip-Datei herunter und entpacken Sie sie, um die JSON-Schemata zu erhalten
