@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '450'
-ht-degree: 100%
+source-git-commit: ebc609ae621ea5d4d0eba0e28202448b6eaeb8cc
+workflow-type: tm+mt
+source-wordcount: '454'
+ht-degree: 92%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 100%
 
 + [Übersicht](overview.md)
 
-+ Video-Playlists{#video-playlists}
++ Video-Wiedergabelisten{#video-playlists}
    + [Assets-Ansicht](playlists/assets-view.md)
    + [Admin-Ansicht](playlists/admin-view.md)
 
@@ -34,7 +34,7 @@ ht-degree: 100%
    + [Verarbeitungsprofile](configuring/processing-profiles.md)
    + [Automatisch startende Workflows](configuring/auto-start-workflows.md)
 
-+ Authoring{#authoring}
++ Erstellung{#authoring}
    + [Wechseln von Ansichten](./authoring/switch-views.md)
    + [Navigation](./authoring/navigation.md)
    + [Grundlegende Vorgänge](./authoring/basic-operations.md)
@@ -86,6 +86,8 @@ ht-degree: 100%
    + [Erstellen von Bildvarianten mit Adobe Express](./content-hub/image-variants.md)
    + [Sammlungen](./content-hub/collections.md)
    + [Freigabe](./content-hub/share.md)
+   + Anwendungsfälle{#use-cases}
+      + [Verwalten von Assets](./content-hub/use-cases/manage-assets.md)
 
 + Edge Delivery Services{#edge-delivery-services}
    + [Sidekick-Plug-in](./edge-delivery-services/sidekick-plugin.md)
@@ -109,7 +111,7 @@ ht-degree: 100%
       + [Themenerstellung mit Asset-Freigabe-Commons](./sharing/asset-share-commons-feature-video-theming.md)
       + [Asset Share Commons-Asset-Kits](./sharing/asset-share/asset-share-commons-asset-kits.md)
 
-+ Kreative Workflows{#creative-workflows}
++ Creative-Workflows{#creative-workflows}
    + [Integration mit Adobe Express](./creative-workflows/adobe-express.md)
    + [Adobe Express und AEM Assets](./creative-workflows/adobe-express-aem-assets.md)
    + [AEM Desktop App](./creative-workflows/aem-desktop-app.md)
@@ -155,7 +157,7 @@ ht-degree: 100%
       + [Viewer mit Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
    + 3D {#3d}
       + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + Verwendung mit AEM Sites {#dm-with-aem-sites}
+   + Verwenden von mit AEM Sites {#dm-with-aem-sites}
       + [Experience Fragments](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media-Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
 
@@ -176,10 +178,10 @@ ht-degree: 100%
       + [Dynamic Media Classic IPS-APIs](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
 + Workfront-Integration{#workfront}
-   + Erweiterter Connector{#enhanced-connector}
+   + Verbesserter Connector{#enhanced-connector}
       + [Grundlegendes zum erweiterten Connector](./workfront/enhanced-connector/basics.md)
       + [Projektordner](./workfront/enhanced-connector/project-folders.md)
-      + AEM-Expertenreihe{#aem-experts-series}
+      + AEM Experts-Reihe{#aem-experts-series}
          + [Übersicht](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [Setup](./workfront/enhanced-connector/aem-experts-series/setup.md)
          + [Workfront-Formulare und AEM-Metadaten](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
