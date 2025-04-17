@@ -13,9 +13,9 @@ thumbnail: KT-14224.jpeg
 exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
 duration: 100
 source-git-commit: cf006f24abbc5aa4b91277b91d68538c41d33e15
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '0'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 

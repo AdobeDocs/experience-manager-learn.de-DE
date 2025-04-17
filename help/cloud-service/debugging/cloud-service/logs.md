@@ -12,9 +12,9 @@ level: Beginner
 exl-id: d0bd64bd-9e6c-4a28-a8d9-52bb37b27a09
 duration: 229
 source-git-commit: 0363505b426d6e4733c57409e17e9d69f7a567c7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '962'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -167,7 +167,7 @@ __Pod cm-p12345-e56789-aem-author-abcdefg-2222__
 
 ## Empfohlene Protokollebenen{#log-levels}
 
-Adobe&#39;s general guidance on log levels per AEM as a Cloud Service environment is to stick with the default log settings of AEM (with the default log level of `INFO`). Adobe recommends that also the custom code is instrumented with log statements, which allows to run it with the log level of `INFO`. The log levels are maintained in code
+Die allgemeine Empfehlung von Adobe zu Protokollebenen je nach AEM as a Cloud Service-Umgebung lautet, die standardmäßigen Protokolleinstellungen von AEM (mit der Standardprotokollebene von `INFO`) beizubehalten. Adobe empfiehlt, auch den benutzerdefinierten Code mit Protokollanweisungen zu instrumentieren, sodass er mit der Protokollebene von `INFO` ausgeführt werden kann. Die Protokollebenen werden im Code beibehalten.
 
 + Java-Protokollkonfigurationen werden in OSGi-Konfigurationen beibehalten
 + Apache-Webserver- und Dispatcher-Protokollebenen werden im Dispatcher-Projekt erfasst
