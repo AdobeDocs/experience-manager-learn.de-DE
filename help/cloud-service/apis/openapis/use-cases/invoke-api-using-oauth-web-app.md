@@ -12,9 +12,9 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '2245'
+source-wordcount: '2213'
 ht-degree: 5%
 
 ---
@@ -24,10 +24,6 @@ ht-degree: 5%
 Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service mithilfe der benutzerbasierten Authentifizierung über eine benutzerdefinierte Web-App aufrufen, die die OAuth-Web-App verwendet.
 
 Die OAuth-Web-App-Authentifizierung ist ideal für Web-Anwendungen mit Frontend- und _Backend_-Komponenten, die (**eines Benutzers auf AEM-APIs zugreifen)**. Sie verwendet den Gewährungstyp OAuth 2.0 _authorization_code_, um ein Zugriffs-Token für den Benutzer abzurufen, der auf die AEM-APIs zugreift. Weitere Informationen finden Sie unter [Unterschied zwischen OAuth Server-zu-Server- und Web-App- bzw. Single Page App-Anmeldeinformationen](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
-
->[!AVAILABILITY]
->
->OpenAPI-basierte AEM-APIs sind als Teil eines Early-Access-Programms verfügbar. Wenn Sie daran interessiert sind, darauf zuzugreifen, empfehlen wir Ihnen, eine E-Mail an [aem-apis@adobe.com](mailto:aem-apis@adobe.com) mit einer Beschreibung Ihres Anwendungsfalls zu senden.
 
 ## Lerninhalt{#what-you-learn}
 

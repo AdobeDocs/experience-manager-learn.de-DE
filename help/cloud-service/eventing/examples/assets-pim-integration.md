@@ -12,10 +12,10 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '1517'
-ht-degree: 100%
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
+workflow-type: tm+mt
+source-wordcount: '1518'
+ht-degree: 99%
 
 ---
 
@@ -106,13 +106,13 @@ Um AEM Assets-Ereignisse zu empfangen und die im vorherigen Schritt erstellte Ad
 
 Um die Client-ID der OAuth-Server-zu-Server-Anmeldeinformationen des ADC-Projekts für die Kommunikation mit der AEM-Instanz zu aktivieren, müssen Sie die AEM-Instanz konfigurieren.
 
-Definieren Sie dazu im AEM-Projekt die Konfiguration in der Datei `config.yaml`. Stellen Sie dann die Datei `config.yaml` mithilfe der Konfigurations-Pipeline in Cloud Manager bereit.
+Definieren Sie dazu im AEM-Projekt die Konfiguration in der Datei `api.yaml`. Stellen Sie dann die Datei `api.yaml` mithilfe der Konfigurations-Pipeline in Cloud Manager bereit.
 
-- Suchen Sie im AEM-Projekt im Ordner `config` nach der Datei `config.yaml` oder erstellen Sie diese.
+- Suchen Sie im AEM-Projekt im Ordner `config` nach der Datei `api.yaml` oder erstellen Sie diese.
 
-  ![Suchen nach der Datei „config.yaml“](../assets/examples/assets-pim-integration/locate-config-yaml.png)
+  ![API-YAML suchen](../assets/examples/assets-pim-integration/locate-api-yaml.png)
 
-- Fügen Sie der Datei `config.yaml` die folgende Konfiguration hinzu:
+- Fügen Sie der Datei `api.yaml` die folgende Konfiguration hinzu:
 
   ```yaml
   kind: "API"
@@ -134,9 +134,9 @@ Definieren Sie dazu im AEM-Projekt die Konfiguration in der Datei `config.yaml`.
 
 - Übertragen Sie die Konfigurationsänderungen per Commit an das Git-Repository und per Push an das Remote-Repository.
 
-- Stellen Sie die oben genannten Änderungen mithilfe der Konfigurations-Pipeline in Cloud Manager bereit. Beachten Sie, dass die Datei `config.yaml` mithilfe von Befehlszeilenprogrammen auch in einer schnellen Entwicklungsumgebung installiert werden kann.
+- Stellen Sie die oben genannten Änderungen mithilfe der Konfigurations-Pipeline in Cloud Manager bereit. Beachten Sie, dass die Datei `api.yaml` mithilfe von Befehlszeilenprogrammen auch in einer schnellen Entwicklungsumgebung installiert werden kann.
 
-  ![Bereitstellen der Datei „config.yaml“](../assets/examples/assets-pim-integration/config-pipeline.png)
+  ![API-YAML bereitstellen](../assets/examples/assets-pim-integration/config-pipeline.png)
 
 ### Entwickeln der Runtime-Aktion
 
