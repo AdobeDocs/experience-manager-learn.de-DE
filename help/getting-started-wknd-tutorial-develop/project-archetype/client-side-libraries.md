@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
 duration: 557
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '2554'
+source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
+workflow-type: tm+mt
+source-wordcount: '2432'
 ht-degree: 100%
 
 ---
@@ -394,14 +394,6 @@ Diese Methode ist praktisch, wenn der Großteil der Stile und des Frontend-Codes
    > Die Bild-src des statischen Markups verweist auf eine Live-Bildkomponente in einer lokalen AEM-Instanz. Bilder erscheinen fehlerhaft, wenn sich der Pfad zum Bild ändert, wenn AEM nicht gestartet wird oder der Browser sich nicht bei der lokalen AEM-Instanz angemeldet hat. Bei Übergabe an eine externe Ressource ist es auch möglich, die Bilder durch statische Referenzen zu ersetzen.
 
 1. Sie können den Webpack-Server **stoppen**, indem Sie `CTRL+C` in die Befehlszeile eingeben.
-
-### aemfed {#develop-aemfed}
-
-**[aemfed](https://aemfed.io/)** ist ein Open-Source-Befehlszeilen-Tool, mit dem die Frontend-Entwicklung beschleunigt werden kann. Es wird unterstützt durch [aemsync](https://www.npmjs.com/package/aemsync), [BrowserSync](https://browsersync.io/) und [Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html).
-
-`aemfed` ist so konzipiert, dass es Dateiänderungen im **ui.apps**-Modul erfasst und diese direkt mit einer laufenden AEM-Instanz automatisch synchronisiert. Basierend auf den Änderungen wird ein lokaler Browser automatisch aktualisiert, wodurch die Frontend-Entwicklung beschleunigt wird. Es wurde auch für die Verwendung mit Sling Log Tracker entwickelt, um Server-seitige Fehler automatisch direkt im Terminal anzuzeigen.
-
-Wenn Sie im **ui.apps**-Modul häufig Aufgaben ausführen müssen, wie etwa HTL-Skripts ändern und benutzerdefinierte Komponenten erstellen, kann **aemfed** ein sehr nützliches Tool sein. [Die vollständige Dokumentation finden Sie hier](https://github.com/abmaonline/aemfed).
 
 ### Debuggen Client-seitiger Bibliotheken {#debugging-clientlibs}
 

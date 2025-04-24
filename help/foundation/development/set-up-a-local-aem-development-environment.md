@@ -11,9 +11,9 @@ last-substantial-update: 2022-07-20T00:00:00Z
 doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
 duration: 4537
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '2423'
+source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
+workflow-type: tm+mt
+source-wordcount: '2408'
 ht-degree: 100%
 
 ---
@@ -179,7 +179,6 @@ Die **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** ist eine der beliebte
 
 * [**Download**](https://code.visualstudio.com/Download) von **Visual Studio Code**
 * **[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)**: FTP-ähnliches Tool für JCR-Inhalte
-* **[aemfed](https://aemfed.io/)**: Beschleunigt AEM-Frontend-Workflows
 * **[AEM Sync](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)**: Von der Community unterstützte&#42; Erweiterung für Visual Studio Code
 * **[WKND-Projekt](https://github.com/adobe/aem-guides-wknd)**: In diesem Video dargestelltes AEM-Beispielprojekt.
 
@@ -189,8 +188,7 @@ Die **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** ist eine der beliebte
 * 00:53 – Erstellen und Bereitstellen von Quell-Code mit Maven
 * 04:03 – Pushen von Code-Änderungen mit dem Repo-Befehlszeilen-Tool
 * 08:29 – Abrufen von Code-Änderungen mit dem Repo-Befehlszeilen-Tool
-* 10:40 – Pushen von Code-Änderungen mit dem aemfed-Tool
-* 14:24 – Fehlerbehebung, Neuerstellung von Client-Bibliotheken
+* 10:32 – Fehlerbehebung, Neuerstellung von Client-Bibliotheken
 
 ### [!DNL CRXDE Lite]
 
