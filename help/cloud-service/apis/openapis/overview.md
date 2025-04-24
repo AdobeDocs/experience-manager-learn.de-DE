@@ -12,7 +12,7 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 182d7b76411ab885ab93b7724b97bf75cc52323c
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 2%
@@ -51,9 +51,9 @@ Die OpenAPI-basierten AEM-APIs unterstützen die OAuth 2.0-Authentifizierung, ei
 
 - **OAuth Server-zu-Server-Anmeldedaten**: Ideal für Backend-Services, die API-Zugriff ohne Benutzerinteraktion benötigen. Sie verwendet den _client_credentials_ Grant-Typ und ermöglicht so eine sichere Zugriffsverwaltung auf Server-Ebene. Weitere Informationen finden Sie unter [OAuth-Server-zu-Server-Anmeldedaten](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/#oauth-server-to-server-credential).
 
-- **Anmeldedaten für OAuth Web App**: Geeignet für Web-Anwendungen mit Frontend- und _Backend_-Komponenten, die im Namen von Benutzern auf AEM-APIs zugreifen. Es verwendet den _authorization_code_-Gewährungstyp, bei dem der Backend-Server Geheimnisse und Token sicher verwaltet. Weitere Informationen finden Sie unter [Anmeldedaten für OAuth-Web-Apps](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-web-app-credential).
+- **Anmeldedaten für OAuth Web App**: Geeignet für Web-Anwendungen mit Frontend- und _Backend_-Komponenten, die im Namen von Benutzern auf AEM-APIs zugreifen. Es verwendet den _authorization_code_-Gewährungstyp, bei dem der Backend-Server Geheimnisse und Token sicher verwaltet. Weitere Informationen finden Sie unter [Anmeldedaten für OAuth-Web-Apps](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential).
 
-- **Anmeldedaten für OAuth Single Page App**: Entwickelt für SPAs, die im Browser ausgeführt werden. Dieser muss auf APIs für einen Benutzer ohne Backend-Server zugreifen. Sie verwendet den _authorization_code_-Gewährungstyp und verlässt sich auf Client-seitige Sicherheitsmechanismen, die PKCE (Proof Key for Code Exchange) verwenden, um den Autorisierungs-Code-Fluss zu sichern. Weitere Informationen finden Sie unter [OAuth Single Page App Credential](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential).
+- **Anmeldedaten für OAuth Single Page App**: Entwickelt für SPAs, die im Browser ausgeführt werden. Dieser muss auf APIs für einen Benutzer ohne Backend-Server zugreifen. Sie verwendet den _authorization_code_-Gewährungstyp und verlässt sich auf Client-seitige Sicherheitsmechanismen, die PKCE (Proof Key for Code Exchange) verwenden, um den Autorisierungs-Code-Fluss zu sichern. Weitere Informationen finden Sie unter [OAuth Single Page App Credential](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential).
 
 ## Unterschied zwischen OAuth Server-zu-Server- und Web-App-Anmeldeinformationen im Vergleich zu den Anmeldeinformationen für Einzelseiten-App{#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials}
 

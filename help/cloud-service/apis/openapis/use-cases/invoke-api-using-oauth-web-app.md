@@ -12,7 +12,7 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '2213'
 ht-degree: 5%
@@ -428,7 +428,7 @@ Zum Durchführen dieses Tutorials benötigen Sie Folgendes:
 
 - Das Beispielprojekt [WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project) muss darin bereitgestellt werden.
 
-- Rufen Sie die [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/) auf.
+- Rufen Sie die [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started) auf.
 
 - Installieren Sie [Node.js](https://nodejs.org/de/) auf Ihrem lokalen Computer, um die NodeJS-Beispielanwendung auszuführen.
 
@@ -648,7 +648,7 @@ Sie können das Tutorial als Referenz verwenden, um die OpenAPI-basierten AEM-AP
 
 ## Zusätzliche Ressourcen
 
-- [Implementierungshandbuch für die Benutzerauthentifizierung](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/)
-- [Anfrage autorisieren](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#authorize-request)
-- [Abrufen von Zugriffstoken](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#fetching-access-tokens)
-- [Aktualisieren von Zugriffstoken](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#refreshing-access-tokens)
+- [Implementierungshandbuch für die Benutzerauthentifizierung](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation)
+- [Anfrage autorisieren](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/ims#authorize-request)
+- [Abrufen von Zugriffstoken](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/ims#fetching-access-tokens)
+- [Aktualisieren von Zugriffstoken](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/ims#refreshing-access-tokens)

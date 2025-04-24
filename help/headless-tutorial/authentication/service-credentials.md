@@ -12,10 +12,10 @@ last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 duration: 881
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+workflow-type: tm+mt
 source-wordcount: '1963'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -149,7 +149,7 @@ function getCommandLineParams() {
 
 Wenn die Dienstanmeldeinformationen gelesen sind, werden sie zum Generieren eines JWT verwendet, das dann über Adobe IMS-APIs gegen ein Zugriffs-Token ausgetauscht wird. Mit diesem Zugriffs-Token können Sie dann auf AEM as a Cloud Service zugreifen.
 
-Diese Beispielanwendung basiert auf Node.js. Daher empfiehlt es sich, das npm-Modul [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) zu verwenden, um (1) die JWT-Generierung und (2) den Austausch mit Adobe IMS zu vereinfachen. Wenn Ihre Anwendung in einer anderen Sprache entwickelt wurde, sehen Sie sich in [den entsprechenden Code-Beispielen](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) an, wie die HTTP-Anfrage an Adobe IMS mithilfe anderer Programmiersprachen erstellt wird.
+Diese Beispielanwendung basiert auf Node.js. Daher empfiehlt es sich, das npm-Modul [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) zu verwenden, um (1) die JWT-Generierung und (2) den Austausch mit Adobe IMS zu vereinfachen. Wenn Ihre Anwendung in einer anderen Sprache entwickelt wurde, sehen Sie sich in [den entsprechenden Code-Beispielen](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples) an, wie die HTTP-Anfrage an Adobe IMS mithilfe anderer Programmiersprachen erstellt wird.
 
 1. Aktualisieren Sie `getAccessToken(..)`, um den Inhalt der JSON-Datei zu überprüfen und festzustellen, ob es sich um ein lokales Entwicklungs-Zugriffs-Token oder um Dienstanmeldeinformationen handelt. Dies können Sie leicht feststellen, indem Sie prüfen, ob die Eigenschaft `.accessToken` vorhanden ist, was nur bei JSON-Zugriffs-Token für die lokale Entwicklung der Fall ist.
 

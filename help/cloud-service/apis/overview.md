@@ -12,7 +12,7 @@ thumbnail: KT-17425.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: b7cd1bb9584359e8bf8a168f8c062be54399f5ac
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '998'
 ht-degree: 5%
@@ -33,7 +33,7 @@ AEM bietet folgende APIs für die Interaktion mit den Autoren- und Veröffentlic
 
 | AEM-API-Typ | Beschreibung | Verfügbarkeit | Anwendungsfall | API-Beispiele |
 | --- | --- | --- | --- | --- |
-| OpenAPI-basierte AEM-APIs | Standardisierte, maschinenlesbare APIs für Assets, Sites und Forms. | **Nur AEM as a Cloud Service** | API-First-Entwicklung, moderne Anwendungen | [Assets-Autoren-](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/), [Ordner-](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/), [AEM Sites-](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/sites/delivery/), [Forms Acrobat Services](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) und andere |
+| OpenAPI-basierte AEM-APIs | Standardisierte, maschinenlesbare APIs für Assets, Sites und Forms. | **Nur AEM as a Cloud Service** | API-First-Entwicklung, moderne Anwendungen | [Assets-Autoren-](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/), [Ordner-](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/), [AEM Sites-](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/?lang=de), [Forms Acrobat Services](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) und andere |
 | RESTful-APIs | Herkömmliche REST-Endpunkte für die Interaktion mit AEM-Ressourcen. | AEM 6.x, AEM as a Cloud Service | CRUD-Vorgänge, moderne Anwendungen | [Assets HTTP-](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets), [Workflow-REST-](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-program-interaction#using-the-workflow-rest-api), [JSON Exporter für Content Services](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/components-templates/json-exporter) und andere |
 | GraphQL-APIs | Optimiert für das effiziente Abrufen strukturierter Inhalte mit flexiblen Abfragen. | AEM 6.x, AEM as a Cloud Service | Headless-CMS, SPAs, Mobile Apps | [GraphQL-API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments) |
 | Herkömmliche (nicht RESTful-)APIs | Ältere APIs wie JCR, Sling-Modelle, Query Builder und andere. | AEM 6.x, AEM as a Cloud Service | Alte Integrationen, Abwärtskompatibilität | [Query Builder-API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api) und andere |
@@ -110,8 +110,8 @@ Erfahren Sie mehr über die OpenAPI-basierten AEM-APIs und die wichtigen Konzept
                     <p class="is-size-6">Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs aus einem benutzerdefinierten NodeJS-Programm mithilfe der OAuth-Server-zu-Server-Authentifizierung aufrufen.</p>
                 </div>
                 <a href="./openapis/use-cases/invoke-api-using-oauth-s2s.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+</a>
             </div>
         </div>
     </div>
@@ -133,8 +133,8 @@ Erfahren Sie mehr über die OpenAPI-basierten AEM-APIs und die wichtigen Konzept
                     <p class="is-size-6">Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs über eine benutzerdefinierte Web-Anwendung mithilfe der OAuth-Web-App-Authentifizierung aufrufen.</p>
                 </div>
                 <a href="./openapis/use-cases/invoke-api-using-oauth-web-app.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+</a>
             </div>
         </div>
     </div>
@@ -156,8 +156,8 @@ Erfahren Sie mehr über die OpenAPI-basierten AEM-APIs und die wichtigen Konzept
                     <p class="is-size-6">Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs aus einer benutzerdefinierten Single Page App (SPA) mithilfe des OAuth 2.0 PKCE-Flusses aufrufen.</p>
                 </div>
                 <a href="./openapis/use-cases/invoke-api-using-oauth-single-page-app.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+</a>
             </div>
         </div>
     </div>
@@ -208,8 +208,8 @@ Weitere Informationen zu den GraphQL-APIs und deren Verwendung finden Sie unter 
                     <p class="is-size-6">Erfahren Sie, wie Sie mithilfe von GraphQL-APIs eine Single Page Application (SPA) erstellen, die Inhalte aus AEM abruft.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#example-single-page-app" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+</a>
             </div>
         </div>
     </div>
@@ -231,8 +231,8 @@ Weitere Informationen zu den GraphQL-APIs und deren Verwendung finden Sie unter 
                     <p class="is-size-6">Erfahren Sie, wie Sie mithilfe von GraphQL-APIs eine Mobile App erstellen, die Inhalte aus AEM abruft.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/mobile#example-mobile-apps" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+</a>
             </div>
         </div>
     </div>
@@ -254,8 +254,8 @@ Weitere Informationen zu den GraphQL-APIs und deren Verwendung finden Sie unter 
                     <p class="is-size-6">Erfahren Sie, wie Sie mithilfe von GraphQL-APIs eine Web-Komponente erstellen, die Inhalte aus AEM abruft.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/web-component#example-web-component" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+</a>
             </div>
         </div>
     </div>
@@ -300,8 +300,8 @@ Erfahren Sie mehr über die RESTful-APIs, z. B. [Assets HTTP](https://experience
                     <p class="is-size-6">Erfahren Sie, wie Sie mithilfe von Content Services RESTful-APIs eine native Mobile App erstellen, die Inhalte aus AEM abruft.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+</a>
             </div>
         </div>
     </div>
@@ -323,8 +323,8 @@ Erfahren Sie mehr über die RESTful-APIs, z. B. [Assets HTTP](https://experience
                     <p class="is-size-6">Erfahren Sie, wie Sie RESTful-APIs mithilfe der JSON Web Token (JWT)-Authentifizierung aufrufen.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+</a>
             </div>
         </div>
     </div>
