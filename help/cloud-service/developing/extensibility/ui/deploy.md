@@ -11,10 +11,10 @@ jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 duration: 166
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '765'
-ht-degree: 100%
+source-git-commit: 1049f605eb1c3b68e70e34d4cdad31858b076858
+workflow-type: tm+mt
+source-wordcount: '847'
+ht-degree: 90%
 
 ---
 
@@ -94,6 +94,22 @@ Um eine neue Version einer Erweiterung bereitzustellen, muss sie zunächst wider
 1. Melden Sie sich bei [Adobe Exchange](https://exchange.adobe.com/) an.
 1. Navigieren Sie zu __Verwalten__ > __App-Entwicklungs-Apps__.
 1. __Widerrufen__ Sie die zu aktualisierende Erweiterung.
+
+Nach dem Widerrufen der Erweiterung ist sie weiterhin mit dem Status „Widerrufen“ im Erweiterungs-Manager sichtbar. Um es vollständig zu entfernen, müssen Sie das Projekt entfernen.
+
+Die Schaltfläche zum Entfernen des Projekts befindet sich oben rechts:
+
+![Schaltfläche „Löschen“](./assets/deploy/extension-delete-button.png){align="center"}
+
+Solange die Verlängerung nicht widerrufen wird, ist es nicht möglich, das Projekt zu löschen:
+
+![Projekt kann nicht gelöscht werden](./assets/deploy/extension-can-not-delete-project.png){align="center"}
+
+Wenn die Erweiterung widerrufen wird, kann das Projekt entfernt werden:
+
+![Projekt kann nicht gelöscht werden](./assets/deploy/extension-delete-procject.png){align="center"}
+
+Nach dem Entfernen des Projekts ist die Erweiterung in Extension Manager nicht mehr sichtbar.
 
 ### Bereitstellen der Erweiterung
 
