@@ -13,9 +13,9 @@ doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
 source-git-commit: 62887c6251b09ac22664cfeb9c5513363efb555e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '961'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -50,7 +50,7 @@ Die folgenden Lösungsoptionen sind in der Reihenfolge ihrer Nähe zum Browser d
 
 Diese Option steht nur AEM as a Cloud Service-Kundinnen und -Kunden zur Verfügung.
 
-Das [AEM-verwaltete CDN](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn) bietet eine Weiterleitungslösung auf Edge-Ebene, wodurch Rundreisen zum Ursprung reduziert werden. Mit [ Funktion „Server-seitige Weiterleitungen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#server-side-redirectors) können Sie die Weiterleitungsregeln im AEM-Projekt-Code konfigurieren und mithilfe der [Konfigurations-Pipeline“ ](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager). Die CDN-Konfigurationsdatei (`cdn.yaml`) darf nicht größer sein als 100 KB.
+Das [AEM-verwaltete CDN](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn) bietet eine Weiterleitungslösung auf Edge-Ebene, wodurch Rundreisen zum Ursprung reduziert werden. Die Funktion [Client-seitige Weiterleitungen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#server-side-redirectors) ermöglicht es, die Weiterleitungsregeln im AEM-Projekt-Code zu konfigurieren und mithilfe der [Konfigurations-Pipeline](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager) zu implementieren. Die CDN-Konfigurationsdatei (`cdn.yaml`) darf nicht größer sein als 100 KB.
 
 Die Verwaltung von Weiterleitungen auf Edge- oder CDN-Ebene hat Leistungsvorteile.
 

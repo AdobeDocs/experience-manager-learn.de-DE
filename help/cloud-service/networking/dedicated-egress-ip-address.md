@@ -12,9 +12,9 @@ exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 891
 source-git-commit: 24d634fd1e62e873bc1dbb3ac0cd18f70129ee86
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1370'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -226,7 +226,7 @@ HTTP-/HTTPS-Anfragen von AEM an Standard-Ports (80/443) sind standardmäßig zul
 
 ### HTTP/HTTPS
 
-Beim Erstellen von HTTP/HTTPS-Verbindungen aus AEM werden bei Verwendung der dedizierten Ausgangs-IP-Adresse HTTP/HTTPS-Verbindungen automatisch über die dedizierte Ausgangs-IP-Adresse aus AEM abgeleitet. Zur Unterstützung von HTTP/HTTPS-Verbindungen ist kein zusätzlicher Code oder keine Konfiguration erforderlich, es sei denn, es wird ein dediziertes erweitertes Ausgangs-IP-Adressnetzwerk eingerichtet.
+Beim Erstellen von HTTP/HTTPS-Verbindungen aus AEM werden bei Verwendung der dedizierten Ausgangs-IP-Adresse HTTP/HTTPS-Verbindungen automatisch über die dedizierte Ausgangs-IP-Adresse aus AEM abgeleitet. Zur Unterstützung von HTTP/HTTPS-Verbindungen ist kein zusätzlicher Code oder keine Konfiguration erforderlich, es sei denn, Sie richten ein erweitertes Netzwerk mit einer dedizierten Ausgangs-IP-Adresse ein.
 
 #### Code-Beispiele
 
