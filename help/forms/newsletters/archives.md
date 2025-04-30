@@ -3,9 +3,10 @@ title: 'In: Experience League Monthly Newsletters Archive.'
 description: Herunterladen archivierter Versionen des Newsletters.
 hidefromtoc: true
 hide: true
-source-git-commit: c4b5a015f1c0d5e3877886052476871548ec9b0e
+exl-id: 16133400-b4c6-4d86-9c28-d5e230d55839
+source-git-commit: a1fe6f64894a63efadabd0fcd8910a2156e8fa64
 workflow-type: tm+mt
-source-wordcount: '45'
+source-wordcount: '46'
 ht-degree: 0%
 
 ---
@@ -19,3 +20,4 @@ Unsere monatlichen Experience League Content Newsletter stehen auf dieser Seite 
 | [Januar](assets/Jan-Newsletter.pdf) |
 | [Februar](assets/Feb-Newsletter.pdf) |
 | [März](assets/March-Newsletter.pdf) |
+| [April](assets/April-Newsletter.pdf) |
