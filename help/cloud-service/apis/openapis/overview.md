@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 58ae9e503bd278479d78d4df6ffe39356d5ec59b
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1100'
 ht-degree: 2%
 
 ---
@@ -54,6 +54,15 @@ Die OpenAPI-basierten AEM-APIs unterstützen die OAuth 2.0-Authentifizierung, ei
 - **Anmeldedaten für OAuth Web App**: Geeignet für Web-Anwendungen mit Frontend- und _Backend_-Komponenten, die im Namen von Benutzern auf AEM-APIs zugreifen. Es verwendet den _authorization_code_-Gewährungstyp, bei dem der Backend-Server Geheimnisse und Token sicher verwaltet. Weitere Informationen finden Sie unter [Anmeldedaten für OAuth-Web-Apps](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential).
 
 - **Anmeldedaten für OAuth Single Page App**: Entwickelt für SPAs, die im Browser ausgeführt werden. Dieser muss auf APIs für einen Benutzer ohne Backend-Server zugreifen. Sie verwendet den _authorization_code_-Gewährungstyp und verlässt sich auf Client-seitige Sicherheitsmechanismen, die PKCE (Proof Key for Code Exchange) verwenden, um den Autorisierungs-Code-Fluss zu sichern. Weitere Informationen finden Sie unter [OAuth Single Page App Credential](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential).
+
+## Welche Authentifizierungsmethode verwendet werden soll{#auth-method-decision}
+
+Beachten Sie bei der Entscheidung, welche Authentifizierungsmethode verwendet werden soll, Folgendes:
+
+![Welche Authentifizierungsmethode soll verwendet werden?](./assets/overview/which-authentication-method-to-use.png)
+
+Benutzerauthentifizierung (Web-App oder Einzelseiten-App) sollte die Standardoption sein, wenn AEM-Benutzerkontext betroffen ist. Dadurch wird sichergestellt, dass alle Aktionen im Repository ordnungsgemäß dem authentifizierten Benutzer zugeordnet werden und dass der Benutzer nur auf die Berechtigungen beschränkt ist, zu denen er berechtigt ist.
+Die Verwendung des Server-zu-Server-Kontos (oder des technischen Systemkontos) zum Ausführen von Aktionen für einen einzelnen Benutzer umgeht das Sicherheitsmodell und birgt Risiken wie Berechtigungseskalation und ungenaue Prüfung.
 
 ## Unterschied zwischen OAuth Server-zu-Server- und Web-App-Anmeldeinformationen im Vergleich zu den Anmeldeinformationen für Einzelseiten-App{#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials}
 
