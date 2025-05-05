@@ -104,4 +104,4 @@ Dynamic Media-Video unterstützt jetzt die Auswahl einer benutzerdefinierten Min
 
 ## Zusätzliche Ressourcen{#additional-resources}
 
-[Konfigurieren von Dynamic Media im Scene7-Modus](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[Konfigurieren von Dynamic Media im Scene7-Modus](https://helpx.adobe.com/de/experience-manager/6-5/assets/using/config-dms7.html)

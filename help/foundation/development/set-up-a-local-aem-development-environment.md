@@ -83,7 +83,7 @@ Eine Alternative zum Doppelklicken auf die JAR-Datei besteht darin, AEM über di
 $ java -Xmx2048M -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=30303 -jar aem-author-p4502.jar -gui -r"author,localdev"
 ```
 
-Hier sind die `-X` JVM-Optionen und die `-D` zusätzliche Framework-Eigenschaften. Weitere Informationen finden Sie unter [Bereitstellen und Verwalten einer AEM-Instanz](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=de) und unter [Weitere in der Schnellstartdatei verfügbare Optionen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/custom-standalone-install.html#further-options-available-from-the-quickstart-file).
+Hier sind die `-X` JVM-Optionen und die `-D` zusätzliche Framework-Eigenschaften. Weitere Informationen finden Sie unter [Bereitstellen und Verwalten einer AEM-Instanz](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=de) und unter [Weitere in der Schnellstartdatei verfügbare Optionen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/custom-standalone-install.html?lang=de#further-options-available-from-the-quickstart-file).
 
 ## Installieren von Apache Maven
 

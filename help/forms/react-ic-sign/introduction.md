@@ -34,7 +34,7 @@ Im Folgenden wird der Ablauf des Anwendungsfalls beschrieben
 Sie benötigen Folgendes, damit der Anwendungsfall funktioniert:
 
 * Einen AEM-Server mit Forms-Add-on-Paket
-* Einen [Integrationsschlüssel für eine Acrobat Sign-Anwendung](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html)
+* Einen [Integrationsschlüssel für eine Acrobat Sign-Anwendung](https://helpx.adobe.com/de/sign/kb/how-to-create-an-integration-key.html)
 
 ## Nächste Schritte
 

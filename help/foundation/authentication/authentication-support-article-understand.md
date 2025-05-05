@@ -81,7 +81,7 @@ Ein konsolidierter Überblick über die von AEM unterstützten Authentifizierung
                 <td>✔</td>
             </tr>
             <tr>
-                <td><a href="https://experienceleague.adobe.com/docs/events/assets/oauth-server-functionality-in-aem-7-23-14.pdf" target="_blank">OAuth 1.0a und 2.0</a></td>
+                <td><a href="https://experienceleague.adobe.com/docs/events/assets/oauth-server-functionality-in-aem-7-23-14.pdf?lang=de" target="_blank">OAuth 1.0a und 2.0</a></td>
                 <td>✔</td>
                 <td>✔</td>
                 <td>✔</td>

@@ -59,7 +59,7 @@ Wenn ein Asset in AEM gelöscht wird, kann der Verweis auf den zugrunde liegende
 
 Die Minimierung der Anzahl von Workflow-Instanzen steigert die Leistung der Workflow-Engine, sodass Sie regelmäßig abgeschlossene oder laufende Workflow-Instanzen aus dem Repository löschen können.
 
-#### [Auditprotokoll-Wartung](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html
+#### [Auditprotokoll-Wartung](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html?lang=de
 
 AEM-Ereignisse, die sich für die Administratorprotokollierung qualifizieren, generieren eine Menge archivierter Daten. Diese Datenmenge kann aufgrund von Replikationen, Asset-Uploads und anderen Systemaktivitäten schnell anwachsen.
 

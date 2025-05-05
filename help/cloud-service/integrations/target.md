@@ -42,7 +42,7 @@ In diesem Tutorial werden die Schritte zum Einrichten von AEM und Adobe Target b
 
 Eine Adobe IMS-Konfiguration, die die Authentifizierung zwischen AEM und Adobe Target erleichtert.
 
-In der [Dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/integrations/target#adobe-target-cloud-service) finden Sie eine schrittweise Anleitung zum Erstellen einer Adobe IMS-Konfiguration.
+In der [Dokumentation](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/integrations/target#adobe-target-cloud-service) finden Sie eine schrittweise Anleitung zum Erstellen einer Adobe IMS-Konfiguration.
 
 ## Adobe Target Cloud Service{#adobe-target-cloud-service}
 

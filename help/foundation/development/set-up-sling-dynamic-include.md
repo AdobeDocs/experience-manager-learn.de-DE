@@ -54,7 +54,7 @@ Eine Videoanleitung zur Installation und Verwendung von [!DNL Apache Sling Dynam
    -->
    ```
 
-1. (Optional) Wiederholen Sie den letzten Schritt, um zuzulassen, dass Komponenten zu [gesperrten (anfänglichen) Inhalten bearbeitbarer Vorlagen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html) ebenfalls über [!DNL SDI] bereitgestellt werden. Der Grund für die zusätzliche Konfiguration besteht darin, dass gesperrte Inhalte bearbeitbarer Vorlagen über `/conf` und nicht über `/content` bereitgestellt werden.
+1. (Optional) Wiederholen Sie den letzten Schritt, um zuzulassen, dass Komponenten zu [gesperrten (anfänglichen) Inhalten bearbeitbarer Vorlagen](https://helpx.adobe.com/de/experience-manager/6-5/sites/developing/using/page-templates-editable.html) ebenfalls über [!DNL SDI] bereitgestellt werden. Der Grund für die zusätzliche Konfiguration besteht darin, dass gesperrte Inhalte bearbeitbarer Vorlagen über `/conf` und nicht über `/content` bereitgestellt werden.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>

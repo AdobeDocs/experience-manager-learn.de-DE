@@ -65,7 +65,7 @@ Bei horizontalen Farbfeldern sind die Farbfelder je nach Desktop-Bildschirmgrö�
  </tbody>
 </table>
 
-[Konfigurieren von Dynamic Media im Scene7-Modus](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[Konfigurieren von Dynamic Media im Scene7-Modus](https://helpx.adobe.com/de/experience-manager/6-5/assets/using/config-dms7.html)
 
 [Konfigurieren von Dynamic Media im Hybridmodus](https://helpx.adobe.com/de/experience-manager/6-5/assets/using/config-dynamic.html)
 

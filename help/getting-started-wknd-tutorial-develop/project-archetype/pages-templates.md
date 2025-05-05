@@ -82,7 +82,7 @@ Normalerweise beginnt die Planung für eine neue Website mit Mockups und statisc
 
 >[!NOTE]
 >
-> Ein generisches [UI-Kit der AEM-Kernkomponenten ist ebenfalls verfügbar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd) und dient als Ausgangspunkt für benutzerdefinierte Projekte.
+> Ein generisches [UI-Kit der AEM-Kernkomponenten ist ebenfalls verfügbar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd?lang=de) und dient als Ausgangspunkt für benutzerdefinierte Projekte.
 
 ## Erstellen der Artikelseitenvorlage
 
