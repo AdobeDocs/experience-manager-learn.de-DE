@@ -32,4 +32,4 @@ Eine GET-Anfrage an diese eindeutige URL gibt Ihnen Auskunft über den Status de
 
 Das folgende Video zeigt, wie die Batch-Konfiguration ausgelöst wird
 
->[!VIDEO](https://video.tv.adobe.com/v/340242?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345714?quality=12&learn=on&captions=ger)

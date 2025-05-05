@@ -23,4 +23,4 @@ ht-degree: 100%
 
 In unserem informativen Video erfahren Sie, wie Sie das effiziente Digital Asset Management in AEM Assets bewältigen. Darin wird die Funktion „ZIP extrahieren“ vorgestellt, mit der Sie Ihre Asset-Hierarchien mühelos organisieren und direkt in DAM hochladen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426368/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447151/?learn=on&captions=ger)

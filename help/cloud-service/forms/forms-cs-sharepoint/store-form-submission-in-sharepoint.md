@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie adaptive Formulardaten in Microsoft Sharepoint konfigurieren und speichern.
 
->[!VIDEO](https://video.tv.adobe.com/v/3415793/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452534/?quality=12&learn=on&captions=ger)

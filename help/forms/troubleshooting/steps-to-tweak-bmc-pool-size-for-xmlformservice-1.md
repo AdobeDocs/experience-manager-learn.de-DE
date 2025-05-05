@@ -22,4 +22,4 @@ ht-degree: 100%
 
 *Dieses Video führt Sie durch die Schritte zum Anpassen der BMC-Pool-Größe für XMLFormService (1 von 2).*
 
->[!VIDEO](https://video.tv.adobe.com/v/335552?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438673?quality=12&learn=on&captions=ger)

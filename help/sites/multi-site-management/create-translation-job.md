@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie einem vorhandenen Übersetzungsprojekt einen Übersetzungsauftrag hinzufügen.
 
->[!VIDEO](https://video.tv.adobe.com/v/36488?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41637?quality=12&learn=on&captions=ger)

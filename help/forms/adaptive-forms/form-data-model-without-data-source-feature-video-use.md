@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Ab AEM Forms 6.4 können nun Formulardatenmodelle (FDM) definiert werden, ohne sie mit einer Datenquelle zu verknüpfen. Das folgende Video führt Sie durch die Schritte zum Erstellen eines FDM ohne Datenquelle.
 
->[!VIDEO](https://video.tv.adobe.com/v/21414?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39404?quality=12&learn=on&captions=ger)
 
 Dies bietet die folgenden Vorteile:
 

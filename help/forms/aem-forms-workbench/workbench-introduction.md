@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Kurzvideo zur Benutzeroberfläche von AEM Forms Workbench
 
->[!VIDEO](https://video.tv.adobe.com/v/3429493/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439812/?learn=on&captions=ger)

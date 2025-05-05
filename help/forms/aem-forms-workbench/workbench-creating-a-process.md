@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Kurzes Video zur Erstellung eines einfachen Forms-Prozesses in Workbench
 
->[!VIDEO](https://video.tv.adobe.com/v/3429494/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440234/?learn=on&captions=ger)

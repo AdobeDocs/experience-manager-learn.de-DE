@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit Edge Delivery Services Ihre Inhalte für die Freigabe in Social Media optimieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425974/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439446/?learn=on&captions=ger)

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Richten Sie das Code-Git-Repository mit der [AEM-Textbausteinvorlage](https://github.com/adobe/aem-boilerplate) für Edge Delivery Services ein.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425713/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434620/?learn=on&captions=ger)

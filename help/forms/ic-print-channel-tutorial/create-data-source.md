@@ -23,7 +23,7 @@ ht-degree: 100%
 
 In diesem Teil erstellen wir eine REST-gestützte Datenquelle. Im folgenden Video werden die Schritte zum Erstellen der Datenquelle beschrieben.
 
->[!VIDEO](https://video.tv.adobe.com/v/27765?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34400?quality=12&learn=on&captions=ger)
 
 Verwenden Sie die Swagger-Datei, die Ihnen im Rahmen der Assets dieses Tutorials zur Verfügung gestellt wird. Die Assets sind in der [Einführung](introduction.md) dieses Tutorials verfügbar.
 

@@ -25,7 +25,7 @@ AEM bietet viele OSGi-Konsolen, die jeweils wichtige Einblicke in verschiedene A
 
 ## Bundles
 
->[!VIDEO](https://video.tv.adobe.com/v/34335?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38102?quality=12&learn=on&captions=ger)
 
 Die Bundles-Konsole ist ein Katalog der OSGi-Bundles und deren Details, die in AEM bereitgestellt werden, zusammen mit der Ad-hoc-Fähigkeit, sie zu starten und zu stoppen.
 
@@ -42,7 +42,7 @@ Durch Klicken auf jedes Bundle erhalten Sie Details, die beim Debugging Ihrer An
 
 ## Komponenten
 
->[!VIDEO](https://video.tv.adobe.com/v/34336?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38100?quality=12&learn=on&captions=ger)
 
 Die Komponentenkonsole ist ein Katalog aller OSGi-Komponenten, die auf AEM bereitgestellt werden, und enthält alle Informationen zu ihnen, vom definierten Lebenszyklus der OSGi-Komponenten bis hin zu den OSGi-Diensten, auf die sie verweisen können.
 
@@ -61,7 +61,7 @@ Wichtige Aspekte, die bei Debugging-Aktivitäten helfen:
 
 ## Sling-Modelle
 
->[!VIDEO](https://video.tv.adobe.com/v/34337?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38097?quality=12&learn=on&captions=ger)
 
 Die Sling-Modelle-Konsole befindet sich unter:
 

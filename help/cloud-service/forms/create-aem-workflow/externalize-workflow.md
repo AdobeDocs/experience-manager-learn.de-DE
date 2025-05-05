@@ -23,4 +23,4 @@ ht-degree: 100%
 
 AEM Forms CS verfügt über eine neue Funktion, mit der Sie Ihre Workflow-Daten wie Variablen, Anhänge usw. in einem externen Speicherkonto speichern können. In diesem Video erfahren Sie, wie Sie Ihre Workflow-Daten im Azure-Speicher speichern.
 
->[!VIDEO](https://video.tv.adobe.com/v/339610?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343069?quality=12&learn=on&captions=ger)

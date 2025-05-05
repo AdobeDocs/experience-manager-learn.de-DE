@@ -23,7 +23,7 @@ Erfahren Sie, wie Sie mit dem Massenimportdienst von AEM as a Cloud Service Asse
 
 
 
->[!VIDEO](https://video.tv.adobe.com/v/336969?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453288?quality=12&learn=on&captions=ger)
 
 ## Verwenden des Massenimportdienstes
 

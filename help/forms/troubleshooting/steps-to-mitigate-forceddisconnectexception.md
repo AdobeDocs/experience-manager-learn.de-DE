@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *In diesem Video werden die möglichen Ursachen und Schritte zum Abmildern von ForcedDisconnectException erläutert*
 
->[!VIDEO](https://video.tv.adobe.com/v/335483?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438728?quality=12&learn=on&captions=ger)

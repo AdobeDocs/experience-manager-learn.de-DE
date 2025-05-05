@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit den Code-Refaktorierungs-Tools von AEM die Konvertierung vorhandener AEM-Projekte automatisieren können, damit diese mit AEM as a Cloud Service kompatibel sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/336693?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444724?quality=12&learn=on&captions=ger)

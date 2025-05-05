@@ -25,7 +25,7 @@ Ziel dieses mehrteiligen Tutorials ist es, Entwicklerinnen und Entwicklern, die 
 
 ## WKND-Entwickler-Tutorial {#wknd-developer-tutorial}
 
->[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35589?quality=12&learn=on&captions=ger)
 
 Das Tutorial wurde für die Verwendung mit **AEM as a Cloud Service** konzipiert und ist abwärtskompatibel mit **AEM 6.5+** und **AEM 6.4.2+**.
 
@@ -35,7 +35,7 @@ Das Tutorial wurde für die Verwendung mit **AEM as a Cloud Service** konzipiert
 
 Nach Abschluss des WKND-Tutorials finden Sie im folgenden Video einen Überblick darüber, wie Sie das WKND-Projekt in AEM as a Cloud Service bereitstellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/30191?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33376?quality=12&learn=on&captions=ger)
 
 Das Video zeigt, wie das WKND Site-Projekt ...
 

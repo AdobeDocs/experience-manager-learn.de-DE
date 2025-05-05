@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie die Suche von Drittanbietern am besten in Edge Delivery Services integriert werden kann.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427040?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452630?quality=12&learn=on&captions=ger)
 
 ## Zusätzliche Ressourcen
 

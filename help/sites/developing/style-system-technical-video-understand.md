@@ -23,7 +23,7 @@ In diesem Video werden wir uns die Anatomie von CSS (oder [!DNL LESS]) und JavaS
 
 ## Grundlegendes zum Code für das Stilsystem {#understanding-how-to-code-for-the-style-system}
 
->[!VIDEO](https://video.tv.adobe.com/v/21538?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40395?quality=12&learn=on&captions=ger)
 
 Das bereitgestellte AEM-Paket (**technical-review.sites.style-system-1.0.0.zip**) installiert den Beispieltitelstil, die Beispielrichtlinien für den We.Retail-Layout-Container und die Titelkomponenten sowie eine Beispielseite.
 

@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie wichtig Edge-Sekundäre in AEM Sites und Edge Delivery Services sind und wie Sie sie in Ihre Backend-Systeme integrieren können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427589?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448146?learn=on&captions=ger)
 
 ## Zusätzliche Ressourcen
 

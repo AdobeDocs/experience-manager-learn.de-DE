@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Fügen Sie eine Tabellenkomponente zum Einkommens-Bedienfeld hinzu, um die Einkommensquellen von Antragstellenden zu erfassen.
 
->[!VIDEO](https://video.tv.adobe.com/v/332233?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3425120?quality=12&learn=on&captions=ger)

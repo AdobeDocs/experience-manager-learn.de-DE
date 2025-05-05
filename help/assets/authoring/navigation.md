@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie mehr über die Grundlagen der Navigation mit AEM Assets.
 
->[!VIDEO](https://video.tv.adobe.com/v/32046?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37094?quality=12&learn=on&captions=ger)

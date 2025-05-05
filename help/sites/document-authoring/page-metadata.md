@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie die Dokumenterstellung mit Metadaten auf Seitenebene umgeht und wie Autoren und Autorinnen dies ohne technische Kenntnisse aktualisieren können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425706/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438077/?learn=on&captions=ger)

@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Bildern auf Seiten, die mit der AEM-Dokumenterstellung erstellt wurden, Alternativtext hinzufügen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425721/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438684/?learn=on&captions=ger)

@@ -18,7 +18,7 @@ ht-degree: 100%
 
 # Remote-Debugging des AEM SDK
 
->[!VIDEO](https://video.tv.adobe.com/v/34338?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38104?quality=12&learn=on&captions=ger)
 
 Der lokale Schnellstart des AEM SDK ermöglicht das Remote-Java-Debugging von Ihrer IDE aus, sodass Sie die Live-Code-Ausführung in AEM schrittweise durchführen können, um den genauen Ausführungsfluss zu überblicken.
 

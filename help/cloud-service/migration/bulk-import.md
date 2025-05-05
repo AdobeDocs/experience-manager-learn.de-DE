@@ -33,7 +33,7 @@ Erfahren Sie, wie Sie zahlreiche Dateien in der [Asset-Ansicht](https://experien
 
 >[!TAB Admin-Ansicht]
 
->[!VIDEO](https://video.tv.adobe.com/v/329680?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341385?quality=12&learn=on&captions=ger)
 
 >[!TIP]
 >

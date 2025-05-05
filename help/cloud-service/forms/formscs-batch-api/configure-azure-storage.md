@@ -23,4 +23,4 @@ ht-degree: 100%
 Ein Azure-Speicherkonto enthält alle Ihre Azure Storage-Datenobjekte, einschließlich Blobs, Dateifreigaben, Warteschlangen, Tabellen und Festplatten. Das Speicherkonto bietet einen eindeutigen Namespace für Ihre Azure Storage-Daten, auf die über HTTP oder HTTPS von überall auf der Welt aus zugegriffen werden kann. Daten in Ihrem Speicherkonto sind langlebig, hochgradig verfügbar, sicher und massiv skalierbar.
 Das folgende Video führt Sie durch die Konfiguration eines Azure-Speicherkontos.
 
->[!VIDEO](https://video.tv.adobe.com/v/340127?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345716?quality=12&learn=on&captions=ger)

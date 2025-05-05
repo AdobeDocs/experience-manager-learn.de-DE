@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Finden Sie heraus, wie Sie eine lokale Entwicklungsumgebung für die Entwicklung für Edge Delivery Services einrichten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425717/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434740/?learn=on&captions=ger)
 
 
 ## Im Video beschriebene Schritte

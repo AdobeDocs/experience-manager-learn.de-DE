@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Sites-Seiten mit Seitenvorlagen in Adobe Experience Manager erstellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/31827?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37208?quality=12&learn=on&captions=ger)

@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erstellen, Bearbeiten und Verwalten eines Übersetzungsprojekts für eine Sprachkopie
 
->[!VIDEO](https://video.tv.adobe.com/v/36486?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41621?quality=12&learn=on&captions=ger)

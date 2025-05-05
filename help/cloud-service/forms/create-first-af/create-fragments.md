@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Die Verwendung von Fragmenten vereinfacht und beschleunigt die Erstellung und Pflege großer Formularbestände. Beim Erstellen eines neuen Formulars fügen Sie einen Verweis auf das gewünschte Fragment ein. Das Fragment wird dann im Formular angezeigt.
 
->[!VIDEO](https://video.tv.adobe.com/v/332231?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438427?quality=12&learn=on&captions=ger)

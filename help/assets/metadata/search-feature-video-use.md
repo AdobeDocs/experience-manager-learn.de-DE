@@ -18,10 +18,10 @@ In diesen Videos werden einige Verbesserungen der in AEM eingeführten Asset-Suc
 
 ## Suchverstärkung mit Asset-Metadaten {#search-boost-asset}
 
->[!VIDEO](https://video.tv.adobe.com/v/16766?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444068?quality=12&learn=on&captions=ger)
 
 ## Erweiterte Konfiguration der Eigenschaften für Mehrwert- und Tag-Suche {#multi-value-tag-predicates}
 
 Die **Mehrwert-Sucheigenschaft** wird zur einfachen Textübereinstimmung in Suchergebnissen bereitgestellt. Außerdem wurden mehrere Verbesserungen an der Tag-Eigenschaft vorgenommen, um die Filterung von Asset-Suchergebnissen effizienter zu gestalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/16457?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39501?quality=12&learn=on&captions=ger)

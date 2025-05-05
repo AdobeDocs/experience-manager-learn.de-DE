@@ -22,7 +22,7 @@ Jedes adaptive Formular basiert auf einer adaptiven Formularvorlage. Die Vorlage
 Die hier erstellte Vorlage ist die Grundlage für unser adaptives Formular für die Zukunft.
 Das folgende Video zeigt Ihnen den grundlegenden Prozess der Erstellung einer adaptiven Formularvorlage
 
->[!VIDEO](https://video.tv.adobe.com/v/37324?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326690?quality=12&learn=on&captions=ger)
 
 Siehe [Dokumentation zu adaptiven Formularvorlagen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/template-editor.html?lang=de) für weitere Details
 

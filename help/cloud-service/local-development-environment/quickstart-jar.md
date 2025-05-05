@@ -18,6 +18,6 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie eine lokale Instanz von Adobe Experience Manager in nur wenigen Minuten mit der AEM-Schnellstart-JAR-Datei installieren und ausführen können. Die AEM-Schnellstart-JAR-Datei ist eine AEM-Laufzeit, die auf einem lokalen Computer installiert und ausgeführt werden kann.
 
->[!VIDEO](https://video.tv.adobe.com/v/32551?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36746?quality=12&learn=on&captions=ger)
 
 Für ein detaillierteres Setup

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Eine adaptive Formularvorlage ist eine spezielle AEM-Seitenvorlage mit bestimmten Eigenschaften und einer vorgegebenen Inhaltsstruktur, aus denen ein adaptives Formular erstellt wird. Die Vorlage verfügt über vorkonfigurierte Layouts, Stile und eine einfache, bereits vorgegebene Inhaltsstruktur. Jedes adaptive Formular basiert auf einer Vorlage.
 
->[!VIDEO](https://video.tv.adobe.com/v/332223?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424989?quality=12&learn=on&captions=ger)

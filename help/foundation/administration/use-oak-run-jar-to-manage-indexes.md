@@ -26,7 +26,7 @@ Der Index-Befehl [!DNL oak-run.jar] konsolidiert eine Reihe von Funktionen zur V
 
 ## [!DNL oak-run.jar] Grundlagen zum Index-Befehl
 
->[!VIDEO](https://video.tv.adobe.com/v/21475?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40114?quality=12&learn=on&captions=ger)
 
 * Die verwendete Version von [[!DNL oak-run.jar]](https://repository.apache.org/service/local/artifact/maven/redirect?r=releases&amp;g=org.apache.jackrabbit&amp;a=oak-run&amp;v=1.8.0) muss mit der auf der AEM-Instanz verwendeten Version von Oak übereinstimmen.
 * Die Verwaltung von Indizes mit [!DNL oak-run.jar] nutzt den Befehl **[!DNL index]** mit verschiedenen Flags zur Unterstützung verschiedener Operationen.
@@ -35,21 +35,21 @@ Der Index-Befehl [!DNL oak-run.jar] konsolidiert eine Reihe von Funktionen zur V
 
 ## Indexstatistiken
 
->[!VIDEO](https://video.tv.adobe.com/v/21477?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39296?quality=12&learn=on&captions=ger)
 
 * `oak-run.jar` sichert alle Indexdefinitionen, wichtige Indexstatistiken und Indexinhalte für Offline-Analysen. 
 * Das Sammeln von Indexstatistiken kann sicher auf in Betrieb befindlichen AEM-Instanzen ausgeführt werden.
 
 ## Indexkonsistenzprüfung
 
->[!VIDEO](https://video.tv.adobe.com/v/21476?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36747?quality=12&learn=on&captions=ger)
 
 * `oak-run.jar` ermittelt schnell, ob Lucene Oak-Indizes beschädigt sind.
 * Die Konsistenzprüfung kann problemlos auf einer verwendeten AEM-Instanz ausgeführt werden, um die Konsistenz auf den Ebenen 1 und 2 zu prüfen.
 
 ## TarMK Online-Indizierung mit [!DNL oak-run.jar] {#tarmkonlineindexingwithoakrunjar}
 
->[!VIDEO](https://video.tv.adobe.com/v/21479?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36750?quality=12&learn=on&captions=ger)
 
 * Die Online-Indizierung von [!DNL TarMK] über [!DNL oak-run.jar] ist schneller als die Einstellung von `reindex=true` auf dem Knoten `oak:queryIndexDefinition`.  Trotz dieser Leistungssteigerung erfordert die Online-Indizierung mit [!DNL oak-run.jar] immer noch ein Wartungsfenster, um die Indizierung durchzuführen.
 
@@ -57,13 +57,13 @@ Der Index-Befehl [!DNL oak-run.jar] konsolidiert eine Reihe von Funktionen zur V
 
 ## TarMK Offline-Indizierung mit oak-run.jar
 
->[!VIDEO](https://video.tv.adobe.com/v/21478?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36748?quality=12&learn=on&captions=ger)
 
 * Die Offline-Indizierung von [!DNL TarMK] unter Verwendung von [!DNL oak-run.jar] ist der einfachste [!DNL oak-run.jar]-basierte Indizierungsansatz für [!DNL TarMK], da er einen einzigen [!DNL oak-run.jar]-Befehl erfordert, allerdings muss dazu die AEM-Instanz heruntergefahren werden.
 
 ## TarMK Out-of-Band-Indizierung mit oak-run.jar
 
->[!VIDEO](https://video.tv.adobe.com/v/21480?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340808?quality=12&learn=on&captions=ger)
 
 * Die Out-of-Band-Indizierung auf [!DNL TarMK] mit [!DNL oak-run.jar] minimiert die Auswirkungen der Indizierung auf verwendete AEM-Instanzen.
 * Die Out-of-Band-Indizierung ist der empfohlene Indizierungsansatz für AEM-Installationen, bei denen die Zeit für die Neuindizierung/Indizierung die verfügbaren Wartungsfenster überschreitet.

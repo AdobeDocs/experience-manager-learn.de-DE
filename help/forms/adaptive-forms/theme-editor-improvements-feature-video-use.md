@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Verbesserungen am Design-Editor für adaptive Formulare in AEM 6.3
 
->[!VIDEO](https://video.tv.adobe.com/v/19497?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39214?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >

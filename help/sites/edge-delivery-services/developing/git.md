@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Konfigurieren Sie Ihre Edge Delivery Services-Entwicklungsumgebung mit Git.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425718/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441835/?learn=on&captions=ger)

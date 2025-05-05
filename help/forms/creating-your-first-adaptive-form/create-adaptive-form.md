@@ -22,7 +22,7 @@ Wir erstellen ein adaptives Formular auf der Grundlage der in der vorherigen Lek
 
 **Erstellen Ihres ersten adaptiven Formulars**
 
->[!VIDEO](https://video.tv.adobe.com/v/22173?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327842?quality=12&learn=on&captions=ger)
 
 ## Nächste Schritte
 

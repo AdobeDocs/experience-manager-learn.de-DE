@@ -20,7 +20,7 @@ ht-degree: 100%
 
 In diesem Video lernen Sie das Dynamic Media-Farb-Management kennen und erfahren, wie darüber Farbkorrektur-Vorschaufunktionen in AEM Assets bereitgestellt werden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/16792?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39124?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >

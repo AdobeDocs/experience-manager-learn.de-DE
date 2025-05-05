@@ -22,13 +22,13 @@ Die Live Copy-Übersicht und der Blueprint-Konfigurations-Manager sind AEM Autho
 
 ## Live Copy-Übersicht {#live-copy-overview}
 
->[!VIDEO](https://video.tv.adobe.com/v/17054?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38317?quality=12&learn=on&captions=ger)
 
 *Die Live Copy-Übersicht ist eine Touch-optimierte Benutzeroberfläche, die zum Verwalten von Live Copys und den entsprechenden Blueprints verwendet wird. Diese in AEM 6.3 eingeführte Funktion ersetzt das Blueprint-Kontrollzentrum der klassischen Benutzeroberfläche.*
 
 ## Blueprint-Konfigurations-Manager – Touch-optimierte Benutzeroberfläche {#blueprint-config-mgr}
 
->[!VIDEO](https://video.tv.adobe.com/v/17056?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39115?quality=12&learn=on&captions=ger)
 
 *AEM 6.3 bietet eine Touch-optimierte Benutzeroberfläche zur Verwaltung von Blueprint-Konfigurationen zur Verwendung im Multi-Site-Manager.*
 

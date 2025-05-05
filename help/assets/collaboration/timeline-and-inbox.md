@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Machen Sie sich mit den wichtigsten Web-Konsolen in AEM Assets vertraut, die für die Zusammenarbeit verwendet werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/32051?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36739?quality=12&learn=on&captions=ger)

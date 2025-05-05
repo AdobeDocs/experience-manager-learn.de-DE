@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie die Omni-Suche von AEM verwenden können, um schnell Assets zu finden.
 
->[!VIDEO](https://video.tv.adobe.com/v/32054?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37012?quality=12&learn=on&captions=ger)

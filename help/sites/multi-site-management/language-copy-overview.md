@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erhalten Sie einen Überblick darüber, wie Sie mit „Sprachkopie erstellen“ in AEM Sites eine mehrsprachige Website erstellen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/36487?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41613?quality=12&learn=on&captions=ger)

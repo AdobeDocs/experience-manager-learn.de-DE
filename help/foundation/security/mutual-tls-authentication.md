@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie HTTPS-Aufrufe von AEM zu Web-APIs durchführen, für die eine mTLS-Authentifizierung (Mutual Transport Layer Security) erforderlich ist.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447868?quality=12&learn=on&captions=ger)
 
 Die mTLS- oder bidirektionale TLS-Authentifizierung verbessert die Sicherheit des TLS-Protokolls, da sich **Client und Server gegenseitige authentifizieren müssen**. Diese Authentifizierung erfolgt mithilfe digitaler Zertifikate. Sie wird häufig in Szenarien verwendet, in denen eine starke Sicherheits- und Identitätsüberprüfung von entscheidender Bedeutung ist.
 

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mithilfe des Vorgangs „Platzieren und verknüpfen“ Assets aus AEM Assets verwenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/34839?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38606?quality=12&learn=on&captions=ger)

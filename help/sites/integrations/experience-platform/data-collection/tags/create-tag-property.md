@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie eine Tag-Eigenschaft mit der Mindestkonfiguration erstellen, um sie in Adobe Experience Manager zu integrieren. Benutzende erhalten eine Einführung in die Tag-Benutzeroberfläche und lernen mehr über Erweiterungen, Regeln und Veröffentlichungs-Workflows.
 
->[!VIDEO](https://video.tv.adobe.com/v/38553?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327445?quality=12&learn=on&captions=ger)
 
 ## Erstellung von Tag-Eigenschaften
 

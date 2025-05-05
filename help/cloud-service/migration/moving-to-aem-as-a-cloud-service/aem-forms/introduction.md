@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Erfahren Sie mehr über Anwendungsfälle und Funktionen, die von AEM Forms as a Cloud Service unterstützt werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/336968?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443377?quality=12&learn=on&captions=ger)

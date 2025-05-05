@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Erstellen Sie ein Adobe Developer Console-Projekt, das den Zugriff auf andere Adobe-Dienste definiert und die Bereitstellung verwaltet.
 
->[!VIDEO](https://video.tv.adobe.com/v/3412875?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3442023?quality=12&learn=on&captions=ger)
 
 >[!IMPORTANT]
 >

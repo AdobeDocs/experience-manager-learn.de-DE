@@ -190,7 +190,7 @@ Nach Verknüpfung der Tag-Eigenschaft kann die WKND-Site die JavaScript-Biblioth
 + Platform Web SDK-Bibliotheksversion, Datenspeicher-ID
 + XDM-Objekt als Teil des `events`-Attributs im Experience Platform Web SDK
 
->[!VIDEO](https://video.tv.adobe.com/v/3418897?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454509?quality=12&learn=on&captions=ger)
 
 ## Erstellen von Datensätzen – Experience Platform
 

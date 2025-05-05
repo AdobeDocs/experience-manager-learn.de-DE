@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Erfahren Sie mehr über Suchindizes von AEM as a Cloud Service, wie Sie AEM 6-Indexdefinitionen konvertieren, um mit AEM as a Cloud Service kompatibel zu sein, und wie Sie Indizes für AEM as a Cloud Service bereitstellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/336963?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454723?quality=12&learn=on&captions=ger)
 
 ## Index-Converter-Tool
 

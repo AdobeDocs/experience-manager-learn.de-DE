@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Sammlungen im Content-Hub von AEM Assets erstellen und verwenden können, um den Asset-Zugriff zu optimieren und die gemeinsame Nutzung von Ressourcen zu fördern, damit eine effiziente und gut organisierte Team-Arbeit in verschiedenen Projekten gewährleistet wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/3435687/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445309/?learn=on&captions=ger)

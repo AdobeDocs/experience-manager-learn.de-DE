@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie über die AEM-Projektkonsole ein mehrsprachiges Übersetzungsprojekt für Ihre Sprachkopie erstellen, bearbeiten und verwalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/36485?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326741?quality=12&learn=on&captions=ger)

@@ -23,7 +23,7 @@ ht-degree: 100%
 
 AEM Headless-Anwendungen unterstützen eine integrierte Authoring-Vorschau. Das Vorschauerlebnis verknüpft den Inhaltsfragmenteditor von AEM Author mit Ihrer benutzerdefinierten App (über HTTP adressierbar), sodass ein Deeplink in die App eingefügt werden kann, mit der das in der Vorschau angezeigte Inhaltsfragment gerendert wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/3416906?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449597?quality=12&learn=on&captions=ger)
 
 Zur Verwendung der Inhaltsfragmentvorschau müssen mehrere Bedingungen erfüllt sein:
 

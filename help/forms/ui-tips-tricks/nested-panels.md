@@ -36,7 +36,7 @@ Das Standardverhalten dieses Formulars besteht darin, alle Panels auf der linken
 
 Um dieses Standardverhalten zu ändern, müssen Sie die folgenden Schritte ausführen:
 
->[!VIDEO](https://video.tv.adobe.com/v/338369?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438640?quality=12&learn=on&captions=ger)
 
 
 Fügen Sie mit dem Code-Editor den folgenden Code zum Klick-Ereignis der Schaltfläche **Weiter** hinzu
@@ -57,7 +57,7 @@ Der obige Code hilft Ihnen bei der Navigation zwischen den Registerkarten und de
 
 Verwenden Sie den Stil-Editor, um den Titel der untergeordneten Registerkarten-Panels auszublenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/338370?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439138?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >

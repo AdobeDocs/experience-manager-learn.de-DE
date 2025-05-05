@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Automatisch startende Workflows erweitern die Asset-Verarbeitung in AEM as a Cloud Service, indem beim Hochladen oder erneuten Verarbeiten automatisch ein benutzerdefinierter Workflow aufgerufen wird, sobald die Asset-Verarbeitung abgeschlossen ist.
 
->[!VIDEO](https://video.tv.adobe.com/v/37323?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326761?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >

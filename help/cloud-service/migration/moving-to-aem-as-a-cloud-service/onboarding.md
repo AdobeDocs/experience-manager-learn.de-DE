@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Erfahren Sie mehr über das Onboarding in AEM as a Cloud Service, angefangen von der Vertragsphase bis hin zur Einrichtung der Umgebungen mit Cloud Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/336959?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431498?quality=12&learn=on&captions=ger)
 
 ## Cloud Manager und Admin Console
 

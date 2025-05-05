@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Der Repository-Browser ist ein leistungsfähiges Tool, das Einblick in den zugrunde liegenden Datenspeicher von AEM bietet und die Fehlersuche in einer AEM as a Cloud Service-Umgebung erleichtert. Der Repository-Browser unterstützt eine schreibgeschützte Ansicht der Ressourcen und Eigenschaften von AEM in den Bereichen Produktion, Staging und Entwicklung sowie Autoren-, Veröffentlichungs- und Vorschau-Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/341464?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447063?quality=12&learn=on&captions=ger)
 
 Der Repository-Browser ist __NUR__ in AEM as a Cloud Service-Umgebungen verfügbar (um das lokale AEM SDK zu debuggen, verwenden Sie [CRXDE Lite](../aem-sdk-local-quickstart/other-tools.md#crxde-lite)).
 

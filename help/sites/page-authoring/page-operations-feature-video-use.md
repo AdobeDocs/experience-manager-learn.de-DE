@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie grundlegende Seitenverwaltungsvorgänge für eine Adobe Experience Manager Sites-Seite durchführen.
 
->[!VIDEO](https://video.tv.adobe.com/v/32147?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37200?quality=12&learn=on&captions=ger)
 
 
 ## Zusätzliche Ressourcen {#additional-resources}

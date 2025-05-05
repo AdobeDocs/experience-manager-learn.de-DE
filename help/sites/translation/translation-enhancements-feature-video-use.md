@@ -22,7 +22,7 @@ Das leistungsfähige Übersetzungs-Framework von AEM ermöglicht die nahtlose Ü
 
 ## Übersetzungsverbesserungen in AEM 6.5
 
->[!VIDEO](https://video.tv.adobe.com/v/27405?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34312?quality=12&learn=on&captions=ger)
 
 Die AEM 6.5-Übersetzungsverbesserungen umfassen:
 
@@ -36,7 +36,7 @@ Die AEM 6.5-Übersetzungsverbesserungen umfassen:
 
 ## Übersetzungsverbesserungen in AEM 6.4
 
->[!VIDEO](https://video.tv.adobe.com/v/21309?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38295?quality=12&learn=on&captions=ger)
 
 Autorinnen und Autoren können jetzt schnell und einfach mehrsprachige Übersetzungsprojekte direkt von Sites- oder Projekt-Admins erstellen, diese Projekte so einrichten, dass sie automatisch Launches hochstufen, und sogar Zeitpläne für die Automatisierung festlegen.
 

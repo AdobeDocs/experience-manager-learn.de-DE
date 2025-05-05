@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie eine Seite in Adobe Experience Manager Sites mithilfe der Benutzeroberfläche des Site-Editors verfassen.
 
->[!VIDEO](https://video.tv.adobe.com/v/31828?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36940?quality=12&learn=on&captions=ger)
 
 In diesem Video werden die folgenden Funktionen behandelt:
 

@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Die Bildkomponente, die Teil der Experience Manager-Kernkomponenten ist, bietet integrierte Unterstützung für Dynamic Media. Die Bildkomponente ermöglicht es Inhaltsautorinnen und Inhaltsautoren, Dynamic Media-Funktionen wie Bildvorgaben, smartes Zuschneiden und Bildmodifikatoren auf einer AEM Sites-Seite zu verwenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/329331?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341402?quality=12&learn=on&captions=ger)
 
 ## Zusätzliche Ressourcen
 

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit der Link-Freigabe von AEM Assets für interne und externe Beteiligte freigeben können, während Sie gleichzeitig das Risiko minimieren, falsche Assets oder Informationen freizugeben.
 
->[!VIDEO](https://video.tv.adobe.com/v/341025?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/346220?quality=12&learn=on&captions=ger)

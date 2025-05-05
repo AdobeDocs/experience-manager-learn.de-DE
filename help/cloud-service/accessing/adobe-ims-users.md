@@ -28,7 +28,7 @@ ht-degree: 100%
 
 Benutzende, die Zugriff auf den AEM-Author-Service benötigen, werden als [Adobe IMS-Benutzende](https://helpx.adobe.com/de/enterprise/using/set-up-identity.html) in der [Admin Console von Adobe](https://adminconsole.adobe.com) verwaltet. Erfahren Sie, was Adobe IMS-Benutzende sind und wie sie in Admin Console aufgerufen und verwaltet werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/39149?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327556?quality=12&learn=on&captions=ger)
 
 ## Zusätzliche Ressourcen
 

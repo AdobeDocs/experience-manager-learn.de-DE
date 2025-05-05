@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie AEM Forms as a Cloud Service den Anwendungsfall „Digitale Registrierung“ unterstützt.
 
->[!VIDEO](https://video.tv.adobe.com/v/336966?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3455143?quality=12&learn=on&captions=ger)

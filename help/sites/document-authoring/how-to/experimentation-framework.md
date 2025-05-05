@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erfahren Sie mehr über das Experimente-Framework, mit dem Marketing-Fachleute bei der Dokumenterstellung in Edge Delivery Services testen können, welche Inhaltsvarianten am effektivsten sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429061/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437864/?learn=on&captions=ger)

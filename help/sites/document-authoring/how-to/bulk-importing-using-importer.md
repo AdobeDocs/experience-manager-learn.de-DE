@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie während der Site-Migration einen Massenimport von Web-Seiten mit dem AEM-Import-Tool durchführen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429597/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445894/?learn=on&captions=ger)

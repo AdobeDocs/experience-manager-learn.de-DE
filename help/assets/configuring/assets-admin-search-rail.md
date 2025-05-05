@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Die Asset-Admin-Suchleiste ermöglicht die Suche nach Assets mithilfe benutzerdefinierter Kriterien in Omnisearch.
 
->[!VIDEO](https://video.tv.adobe.com/v/35842?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40071?quality=12&learn=on&captions=ger)

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie die Web-optimierte Bildbereitstellung auf Sites von AEM as a Cloud Service mit AEM-Kernkomponenten aktivieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/346064?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3450001?quality=12&learn=on&captions=ger)

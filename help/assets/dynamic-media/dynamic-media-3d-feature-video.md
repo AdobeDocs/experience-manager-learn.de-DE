@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Mit der 3D-Unterstützung von Dynamic Media für Adobe Experience Manager können Sie interaktive 3D-basierte Erlebnisse ganz einfach anpassen und bereitstellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/35156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39523?quality=12&learn=on&captions=ger)

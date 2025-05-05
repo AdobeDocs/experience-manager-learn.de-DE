@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Metadatenformulare schnell und einfach konfiguriert werden können, um die in AEM Assets verfügbaren Asset-Metadaten anzupassen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3431686?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452056?quality=12&learn=on&captions=ger)

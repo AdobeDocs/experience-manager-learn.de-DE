@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Geschlossene Untertitel werden automatisch generiert, sobald eine Videodatei mit Dynamic Media in AEM Assets hochgeladen wurde.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432627/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446396/?learn=on&captions=ger)

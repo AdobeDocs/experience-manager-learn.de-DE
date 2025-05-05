@@ -21,7 +21,7 @@ ht-degree: 100%
 Ein Fragment ist ein wiederverwendbarer Teil eines Formulars. Beispielsweise kann ein Fragment einen Adressblock oder Copyright-Informationen enthalten. Die Verwendung von Fragmenten vereinfacht und beschleunigt die Erstellung und Pflege großer Formularbestände.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/37325?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326678?quality=12&learn=on&captions=ger)
 
 
 

@@ -39,19 +39,19 @@ Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](htt
 
 [Cloud Manager-Programme](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/getting-started/program-setup.html?lang=de) stellen eine Reihe von AEM-Umgebungen dar, die logische Gruppen von Geschäftsinitiativen unterstützen. Diese entsprechen in der Regel einem erworbenen Service Level Agreement (SLA). Beispielsweise kann ein Programm die AEM-Ressourcen zur Unterstützung der globalen öffentlichen Websites darstellen, während ein anderes Programm ein internes, zentrales DAM darstellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/26313?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34486?quality=12&learn=on&captions=ger)
 
 ## Umgebungen {#environments}
 
 [Cloud Manager-Umgebungen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/managing-environments.html?lang=de) bestehen aus AEM Author-, AEM Publish- und Dispatcher-Instanzen. Verschiedene Umgebungen unterstützen Rollen und können mit verschiedenen CI/CD-Pipelines (nachfolgend beschrieben) interagieren. Cloud Manager-Umgebungen verfügen in der Regel über eine Produktions- und eine Staging-Umgebung.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34566?quality=12&learn=on&captions=ger)
 
 ## Berichte {#reports}
 
 [Cloud Manager-Berichte](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/monitoring-environments.html?lang=de) bieten einen Einblick in die Programmumgebungen und AEM-Instanzen durch eine Reihe von Diagrammen, die über verschiedene Metriken für jede AEM-Instanz berichten und diese verfolgen.
 
->[!VIDEO](https://video.tv.adobe.com/v/26315?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34567?quality=12&learn=on&captions=ger)
 
 ## CI/CD Produktions-Pipeline {#cicd-production-pipeline}
 
@@ -65,19 +65,19 @@ Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](htt
 
 Die Konfiguration der [CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html?lang=de) definiert den Auslöser, der die Pipeline initiiert, sowie Parameter, die die Produktionsbereitstellung und die Leistungstestparameter steuern.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327785?quality=12&learn=on&captions=ger)
 
 ### Pipeline-Ausführung
 
 Die [CI/CD-Produktions-Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=de) wird zum Erstellen und Bereitstellen von Code über die Staging-Umgebung in der Produktionsumgebung verwendet, wodurch die Zeit bis zum Wert reduziert wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/26317?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327608?quality=12&learn=on&captions=ger)
 
 ## CI/CD produktionsfremde Pipelines {#cicd-non-production-pipeline}
 
 [CI/CD-Produktionsfremde Pipelines sind in zwei Kategorien unterteilt: Codequalitätspipelines und Bereitstellungs-Pipelines. ](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/pipelines/production-pipelines.html?lang=de) Code-Qualitäts-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll. Bereitstellungs-Pipelines unterstützen die automatisierte Bereitstellung von Code aus dem Git-Repository in einer Nicht-Produktionsumgebung, d. h. in einer AEM-Umgebung, die weder Staging- noch Produktionsumgebung ist.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327615?quality=12&learn=on&captions=ger)
 
 ## Aktivität {#activity}
 
@@ -85,4 +85,4 @@ Cloud Manager bietet eine Übersicht über die Aktivitäten eines Programms, in 
 
 Cloud Manager ist außerdem auf Benutzerebene mit [Adobe Experience Cloud-Benachrichtigungen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/notifications.html?lang=de) integriert und bietet einen allgegenwärtigen Überblick über Ereignisse und Aktionen von Interesse.
 
->[!VIDEO](https://video.tv.adobe.com/v/26319?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34570?quality=12&learn=on&captions=ger)

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie effizient zwischen der [Asset-Ansicht und der Admin-Ansicht](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/overview.html?lang=de#persona-based-experiences) in AEM Assets as a Cloud Service wechseln, um ein nahtloses Asset-Management zu gewährleisten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426806/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439041/?learn=on&captions=ger)

@@ -289,7 +289,7 @@ Es wird die Dispatcher-Tools-Version aus dem Lieferumfang des AEM as a Cloud Ser
 
 Die Apache- und Dispatcher-Basiskonfigurationen werden regelmäßig erweitert und mit der AEM as a Cloud Service SDK-Version veröffentlicht. Die Best Practise liegt darin, die erweiterten Basiskonfigurationen in Ihr AEM-Projekt zu integrieren, um [lokale Validierungs](#validate-configurations)- sowie Cloud Manager-Pipeline-Fehler zu vermeiden. Aktualisieren Sie sie mithilfe des `update_maven.sh`-Skripts aus dem Ordner `.../dispatcher-sdk-x.x.x/bin`.
 
->[!VIDEO](https://video.tv.adobe.com/v/3416744?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32986?quality=12&learn=on&captions=ger)
 
 *Dieses Video verwendet macOS zu Illustrationszwecken. Mit den entsprechenden Windows-/Linux-Befehlen werden ähnliche Ergebnisse erzielt.*
 

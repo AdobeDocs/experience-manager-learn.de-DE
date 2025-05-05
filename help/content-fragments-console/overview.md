@@ -38,7 +38,7 @@ Umfassende Informationen zur Inhaltsfragmentkonsole und ihren Funktionen finden 
             <a href="./basics/content-fragments-console.md" title="Übersicht über die Konsole"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3409492?format=jpeg"
+                src="https://video.tv.adobe.com/v/3449341?format=jpeg&captions=ger"
                 alt="Übersicht über die Konsole">
             </a>
           </figure>
@@ -104,7 +104,7 @@ Inhaltsfragmenteditor</p>
             <a href="./search/fast-filtering.md" title="Schnelles Filtern"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419310?format=jpeg" alt="Schnelles Filtern
+                src="https://video.tv.adobe.com/v/3436705?format=jpeg&captions=ger" alt="Schnelles Filtern
 ">
             </a>
           </figure>
@@ -172,7 +172,7 @@ Inhaltsfragmenteditor</p>
             <a href="./editor/non-asset-content-references.md" title="Nicht-Asset-Inhaltsreferenzen
 " tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419313?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436771?format=jpeg&captions=ger"
                 alt="Nicht-Asset-Inhaltsreferenzen">
             </a>
           </figure>
@@ -206,7 +206,7 @@ Inhaltsfragmenteditor</p>
             <a href="./editor/rte-variant-compare.md" title="Vergleich der RTE-Varianten"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419314?format=jpeg" alt="Vergleich der RTE-Variante
+                src="https://video.tv.adobe.com/v/3437560?format=jpeg&captions=ger" alt="Vergleich der RTE-Variante
 ">
             </a>
           </figure>
@@ -240,7 +240,7 @@ Inhaltsfragmenteditor</p>
             <a href="./editor/language-copies.md" title="Sprachkopien"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419311?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436965?format=jpeg&captions=ger"
                 alt="Sprachkopien">
             </a>
           </figure>
@@ -274,7 +274,7 @@ Inhaltsfragmenteditor</p>
             <a href="./search/references.md" title="Verweise"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3420950?format=jpeg"
+                src="https://video.tv.adobe.com/v/3423638?format=jpeg&captions=ger"
                 alt="Verweise">
             </a>
           </figure>

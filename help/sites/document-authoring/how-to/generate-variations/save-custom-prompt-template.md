@@ -24,5 +24,5 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie bei der Dokumenterstellung in Edge Delivery Services die benutzerdefinierten Prompt-Vorlagen für die Funktion „Varianten generieren“ speichern.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428317/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437517/?learn=on&captions=ger)
 

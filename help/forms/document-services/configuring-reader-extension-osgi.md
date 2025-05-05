@@ -37,7 +37,7 @@ Die Anmeldedaten für Reader Extensions sind mit der Benutzerin bzw. dem Benutze
 
 Bitte folgen Sie dem Video, um die Anmeldedaten der Benutzerin bzw. des Benutzers von fd-service hinzuzufügen.
 
->[!VIDEO](https://video.tv.adobe.com/v/335849?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447296?quality=12&learn=on&captions=ger)
 
 
 Der Befehl zum Auflisten der Details der pfx-Datei lautet. Der folgende Befehl setzt voraus, dass Sie sich in demselben Verzeichnis wie die pfx-Datei befinden.

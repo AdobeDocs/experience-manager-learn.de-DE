@@ -31,7 +31,7 @@ Jede Staffel variiert in ihrer Länge und wird nach einem festen Zeitplan veröf
     <tr>
         <td>
             <a href="./season-3/cloud5-3rd-party-search.md">
-                <img alt="Suche von Drittanbietern" src="https://video.tv.adobe.com/v/3427040?format=jpeg"/>
+                <img alt="Suche von Drittanbietern" src="https://video.tv.adobe.com/v/3452630?format=jpeg&captions=ger"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-3rd-party-search.md">
@@ -45,7 +45,7 @@ Erfahren Sie, wie die Suche von Drittanbietern am besten in Edge Delivery Servic
         </td>   
         <td>
             <a href="./season-3/cloud5-edge-workers.md">
-                <img alt="Edge-Sekundäre" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
+                <img alt="Edge-Sekundäre" src="https://video.tv.adobe.com/v/3448146?format=jpeg&captions=ger"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-edge-workers.md">
@@ -59,7 +59,7 @@ Erkunden Sie die Bedeutung von Edge-Sekundären mit Edge Delivery Services.
         </td>   
         <td>
             <a href="./season-3/cloud5-publish-events.md">
-                <img alt="Veröffentlichen von Ereignissen und Rückgängigmachen der Veröffentlichung in Edge Delivery Services" src="https://video.tv.adobe.com/v/3427681?format=jpeg"/>
+                <img alt="Veröffentlichen von Ereignissen und Rückgängigmachen der Veröffentlichung in Edge Delivery Services" src="https://video.tv.adobe.com/v/3446665?format=jpeg&captions=ger"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-publish-events.md">
@@ -75,7 +75,7 @@ Erkunden Sie Ereignisse, die beim Veröffentlichen und Aufheben einer Veröffent
     <tr>
         <td>
             <a href="./season-3/cloud5-query-indexes.md">
-                <img alt="Abfrageindizes und Excel-Formeln in Edge Delivery Services" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
+                <img alt="Abfrageindizes und Excel-Formeln in Edge Delivery Services" src="https://video.tv.adobe.com/v/3453772?format=jpeg&captions=ger"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-query-indexes.md">
@@ -89,7 +89,7 @@ Erkunden Sie Ereignisse, die beim Veröffentlichen und Aufheben einer Veröffent
         </td>  
         <td>
             <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
-                <img alt="Einbinden Ihres eigenen Cloudflare-CDN" src="https://video.tv.adobe.com/v/3428100?format=jpeg"/>
+                <img alt="Einbinden Ihres eigenen Cloudflare-CDN" src="https://video.tv.adobe.com/v/3452545?format=jpeg&captions=ger"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
@@ -103,7 +103,7 @@ Erfahren Sie, wie Sie Ihr eigenes Cloudflare-CDN in Edge Delivery Services konfi
         </td>           
         <td>
             <a href="./season-3/cloud5-integrate-assets.md">
-                <img alt="Integrieren von AEM Assets in die Dokumenterstellung" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
+                <img alt="Integrieren von AEM Assets in die Dokumenterstellung" src="https://video.tv.adobe.com/v/3448949?format=jpeg&captions=ger"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-integrate-assets.md">

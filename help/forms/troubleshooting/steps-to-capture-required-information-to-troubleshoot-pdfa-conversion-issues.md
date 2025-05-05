@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *In diesem Video werden die Schritte zum Erfassen der erforderlichen Informationen zur Fehlerbehebung bei PDF/A-Konvertierungs- und Validierungsproblemen im Forms-Assembler-Dienst erläutert.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335518?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439201?quality=12&learn=on&captions=ger)

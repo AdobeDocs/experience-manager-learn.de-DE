@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Eine schrittweise Anleitung zum Erstellen und Veröffentlichen von Inhalten mithilfe der Dokumenterstellung.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425700/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441351/?learn=on&captions=ger)

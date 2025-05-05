@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie im Content-Hub von Adobe Experience Manager Assets Assets hochladen sowie Tags anwenden und machen Sie sich mit dem Genehmigungs-Workflow vertraut.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432980/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3450291/?learn=on&captions=ger)

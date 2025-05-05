@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Eine kurze Einführung in die Online-Revisionsbereinigung, die die Notwendigkeit häufiger Offline-Revisionsbereinigungen verringert.
 
->[!VIDEO](https://video.tv.adobe.com/v/17004?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/30164?quality=12&learn=on&captions=ger)
 
 ## Hilfsmaterialien
 

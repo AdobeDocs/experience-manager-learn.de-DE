@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Mithilfe von Komponentensymbolen können Autorinnen und Autoren eine Komponente anhand von Symbolen oder aussagekräftigen Abkürzungen schnell erkennen. Autorinnen und Autoren können jetzt die zum Erstellen ihrer Web-Erlebnisse erforderlichen Komponenten schneller als je zuvor finden.
 
->[!VIDEO](https://video.tv.adobe.com/v/16778?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38290?quality=12&learn=on&captions=ger)
 
 Der Komponenten-Browser wird jetzt in einem konsistenten grauen Design mit folgenden Elementen angezeigt:
 

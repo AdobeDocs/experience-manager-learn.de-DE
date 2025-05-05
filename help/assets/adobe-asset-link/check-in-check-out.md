@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Mit Adobe Asset können Sie AEM Assets direkt aus der Kreativ-App auschecken, an der Sie gerade arbeiten, und sofort mit der Bearbeitung beginnen. Sie können Assets einfach wieder in AEM Assets einfügen, nachdem Sie die Bearbeitung in Ihrer Creative Cloud-App abgeschlossen und die Versionierung und Kommentierung ordnungsgemäß durchgeführt haben.
 
->[!VIDEO](https://video.tv.adobe.com/v/33886?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38636?quality=12&learn=on&captions=ger)

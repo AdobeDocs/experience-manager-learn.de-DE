@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Dokumente versionieren, die mit der AEM-Dokumenterstellung erstellt wurden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425728/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438805/?learn=on&captions=ger)

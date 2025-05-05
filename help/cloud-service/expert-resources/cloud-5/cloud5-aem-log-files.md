@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Dieses Video erhält eine umfassende Erläuterung des Zugriffs auf Protokolle in AEM as a Cloud Service, einschließlich des Zugriffs über die Benutzeroberfläche sowie über APIs.
 
->[!VIDEO](https://video.tv.adobe.com/v/341156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448487?quality=12&learn=on&captions=ger)
 
 ## Inhalt dieses Videos
 

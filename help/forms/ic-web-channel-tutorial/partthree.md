@@ -25,7 +25,7 @@ In diesem Teil erstellen wir ein Formulardatenmodell. Mit dem Formulardatenmodel
 
 **Erstellen eines Formulardatenmodells in AEM Forms 6.5 und höher**
 
->[!VIDEO](https://video.tv.adobe.com/v/27765?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34400?quality=12&learn=on&captions=ger)
 
 Das Formulardatenmodell ist auf eine korrekt konfigurierte Datenquelle angewiesen. Wir verwenden die im vorherigen Schritt konfigurierte Datenquelle als Grundlage für dieses Formulardatenmodell.
 

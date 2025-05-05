@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie AEM Experience Fragments als Adobe Target-Angebote exportieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/41245?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328971?quality=12&learn=on&captions=ger)
 
 ## Nächste Schritte
 

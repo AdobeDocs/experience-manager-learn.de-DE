@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Kurzvideo über das Verwenden von AEM Forms Reader Extensions, damit Endbenutzende PDF-Formulare aus Adobe Acrobat Reader ausfüllen und speichern können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427629/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439524/?learn=on&captions=ger)

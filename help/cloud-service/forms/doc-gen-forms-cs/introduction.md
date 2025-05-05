@@ -28,4 +28,4 @@ In diesem Kurs werden wir die Dokumenterstellungs-Microservices verwenden, um ei
 1. Konfigurieren des Zugriffs für das technische Konto in AEM
 1. Durchführen von HTTP-Aufrufen mithilfe des Zugriffs-Tokens
 
->[!VIDEO](https://video.tv.adobe.com/v/334859?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412599?quality=12&learn=on&captions=ger)

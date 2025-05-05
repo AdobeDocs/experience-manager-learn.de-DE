@@ -20,7 +20,7 @@ ht-degree: 100%
 
 AEM 6.3 führt in dieser Version mehrere neue Funktionen und Verbesserungen ein, um das Authoring-Erlebnis für adaptive Formulare und Dokumente zu vereinfachen. Die Verbesserungen helfen Ihnen dabei, die Markteinführungszeit zu verkürzen und geschäftlichen Benutzerinnen und Benutzern die Arbeit mit Formularen und Dokumenten zu ermöglichen
 
->[!VIDEO](https://video.tv.adobe.com/v/19500?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38446?quality=12&learn=on&captions=ger)
 
 **Einige der wichtigsten Verbesserungen für den adaptiven Formulareditor sind:**
 

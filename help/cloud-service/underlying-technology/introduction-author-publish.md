@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Eine Einführung in die Autoren- und Veröffentlichungsebene der Adobe Experience Manager-Architektur.
 
->[!VIDEO](https://video.tv.adobe.com/v/32033?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36767?quality=12&learn=on&captions=ger)

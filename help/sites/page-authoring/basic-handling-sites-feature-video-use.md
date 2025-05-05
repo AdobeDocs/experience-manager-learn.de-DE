@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Das folgende Video bietet einen Überblick über die grundlegende Handhabung der AEM-Authoring-Umgebung. Als Grundlage wird die Sites-Konsole verwendet.
 
->[!VIDEO](https://video.tv.adobe.com/v/31784?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36993?quality=12&learn=on&captions=ger)
 
 In diesem Video werden die folgenden Funktionen behandelt:
 

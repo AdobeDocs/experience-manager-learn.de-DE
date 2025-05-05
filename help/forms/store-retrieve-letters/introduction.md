@@ -26,7 +26,7 @@ In diesem Artikel werden die Metadaten der Briefinstanz mithilfe der MySQL-Daten
 
 Das folgende Video zeigt den Anwendungsfall:
 
->[!VIDEO](https://video.tv.adobe.com/v/342129?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441449?quality=12&learn=on&captions=ger)
 
 ## Voraussetzungen
 

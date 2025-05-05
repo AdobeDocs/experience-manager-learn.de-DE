@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie die Autoren-Authentifizierung über AEM Sidekick bei der Dokumenterstellung mit Edge Delivery Services konfigurieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429594/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438187/?learn=on&captions=ger)

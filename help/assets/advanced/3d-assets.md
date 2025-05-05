@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie mehr über die Unterstützung von 3D-Assets in AEM Assets as a Cloud Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/3420690/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423674/?learn=on&captions=ger)

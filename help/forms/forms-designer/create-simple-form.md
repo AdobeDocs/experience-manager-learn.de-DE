@@ -23,13 +23,13 @@ ht-degree: 100%
 
 Teil 1: Hinzufügen von Titeln, Bildern, Textfeldern und Datumsfeldern
 
->[!VIDEO](https://video.tv.adobe.com/v/3427620/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439735/?learn=on&captions=ger)
 
 Teil 2: Hinzufügen und Erstellen von benutzerdefinierten Objekten und Formularfragmenten
 
->[!VIDEO](https://video.tv.adobe.com/v/3427621/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439590/?learn=on&captions=ger)
 
 Zugreifen auf Hilfeinhalte
 
->[!VIDEO](https://video.tv.adobe.com/v/3427622/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437244/?learn=on&captions=ger)
 

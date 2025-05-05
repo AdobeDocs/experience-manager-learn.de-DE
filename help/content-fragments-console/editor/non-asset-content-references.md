@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Inhaltsfelder für Inhaltsfragmente das Referenzieren verschiedener Arten von AEM-Inhalten wie Experience Fragments und Seiten unterstützen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419313/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436771/?learn=on&captions=ger)

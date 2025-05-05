@@ -23,15 +23,15 @@ Konfigurieren Sie das Personen-Panel, indem Sie das Fragment mit den Ehepartner-
 
 **Konfigurieren des Personen-Panels in AEM Forms 6.3 und 6.4**
 
->[!VIDEO](https://video.tv.adobe.com/v/22193?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326920?quality=12&learn=on&captions=ger)
 
 **Konfigurieren des Personen-Panels in AEM Forms 6.5 und höher**
 
->[!VIDEO](https://video.tv.adobe.com/v/28385?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326936?quality=12&learn=on&captions=ger)
 
 **Regeln für Details des Partners**
 
->[!VIDEO](https://video.tv.adobe.com/v/22195?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326928?quality=12&learn=on&captions=ger)
 
 ## Nächste Schritte
 

@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erhalten Sie ausführliche Informationen zu den Konzepten des Standardinhalts und der Standardabschnitte bei der Dokumenterstellung und dazu, wie diese Ihnen dabei helfen, eine bessere Site zu schaffen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425702/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437984/?learn=on&captions=ger)

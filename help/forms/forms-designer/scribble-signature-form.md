@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Kurzvideo über das Hinzufügen einer Freihandsignatur zu AEM Forms
 
->[!VIDEO](https://video.tv.adobe.com/v/3427626/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437329/?learn=on&captions=ger)

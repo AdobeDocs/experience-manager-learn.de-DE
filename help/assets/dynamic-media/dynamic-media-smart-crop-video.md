@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Das smarte Zuschneiden für Videos in Dynamic Media verwendet Adobe Sensei, um die Bildmotive des Videos intelligent zu verfolgen und sicherzustellen, dass Videos in allen Bildschirmgrößen optimal aussehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/37958?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326469?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >

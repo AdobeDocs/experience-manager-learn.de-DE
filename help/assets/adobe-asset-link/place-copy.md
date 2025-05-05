@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mithilfe des Vorgangs „Platzieren von Kopien“ Assets aus AEM Assets verwenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/34049?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38615?quality=12&learn=on&captions=ger)

@@ -23,10 +23,10 @@ Konfigurieren Sie das Akkordeon-Layout für das Bedienfeld „Assets“. Das Akk
 
 **Konfigurieren des Bedienfelds „Assets“**
 
->[!VIDEO](https://video.tv.adobe.com/v/22200?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326884?quality=12&learn=on&captions=ger)
 
 **Festlegen des Zusammenfassungstitels**
->[!VIDEO](https://video.tv.adobe.com/v/28387?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33082?quality=12&learn=on&captions=ger)
 
 ## Nächste Schritte
 

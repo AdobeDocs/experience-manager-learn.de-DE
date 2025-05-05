@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Erfahren Sie mehr über die Modernisierung von Repositorys, veränderliche und unveränderliche Inhalte, die Paketstruktur und das Repository Modernizer-CLI-Tool.
 
->[!VIDEO](https://video.tv.adobe.com/v/336958?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454801?quality=12&learn=on&captions=ger)
 
 ## Repository Modernizer Tool
 

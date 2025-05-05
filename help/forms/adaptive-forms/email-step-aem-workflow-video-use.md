@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Der Schritt „E-Mail senden“ wurde in AEM Forms 6.4 eingeführt. Mithilfe dieses Schritts können wir Geschäftsprozesse oder Workflows erstellen, mit denen Sie E-Mails mit oder ohne Anhänge senden können. Im folgenden Video werden die Schritte zum Konfigurieren der Komponente „E-Mail senden“ erläutert.
 
->[!VIDEO](https://video.tv.adobe.com/v/21499?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38531?quality=12&learn=on&captions=ger)
 
 Im Rahmen dieses Artikels führen wir Sie durch folgenden Anwendungsfall:
 

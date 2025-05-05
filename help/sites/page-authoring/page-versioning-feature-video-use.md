@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Die Seitenversionierung hilft Inhaltsautorinnen und -autoren dabei, mit einer Seite verknüpfte Änderungen zu verfolgen, indem eine Seitenversion erstellt wird, und bietet eine Option zur Vorschau einer Version, zur Wiederherstellung einer Version und zum Vergleich einer Version mit der aktuellen Version einer Seite.
 
->[!VIDEO](https://video.tv.adobe.com/v/32151?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36834?quality=12&learn=on&captions=ger)
 
 Durch die Versionierung wird ein Snapshot einer Seite zu einem bestimmten Zeitpunkt festgehalten. Bei der Versionierung können Sie die folgenden Aktionen durchführen:
 * Erstellen einer neuen Version für eine Seite

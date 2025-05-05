@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie die CSV-Zielgruppendateien verwenden können, um bei der Dokumenterstellung in Edge Delivery Services die richtige Zielgruppe mit den entsprechenden Inhalten auszuwählen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428793/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436896/?learn=on&captions=ger)

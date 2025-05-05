@@ -31,7 +31,7 @@ Neben dem Caching von Inhalten bietet Adobe CDN mehrere erweiterte Funktionen, m
 
 Diese Funktionen sind **Self-Service**-Funktionen. Sie werden in der Datei `cdn.yaml` Ihres AEM-Projekts konfiguriert und mithilfe der Cloud Manager-Konfigurations-Pipeline bereitgestellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3433104?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440283?quality=12&learn=on&captions=ger)
 
 ## Konfigurieren von Traffic im CDN
 

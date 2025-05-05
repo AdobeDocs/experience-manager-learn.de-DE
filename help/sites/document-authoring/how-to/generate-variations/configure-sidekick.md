@@ -24,5 +24,5 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Sidekick für die Funktion „Varianten generieren“ bei der Dokumenterstellung in Edge Delivery Services konfigurieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428306/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436998/?learn=on&captions=ger)
 

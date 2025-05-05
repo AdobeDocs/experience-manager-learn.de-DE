@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Wasserzeichenfunktionen von AEM as a Cloud Service ermöglichen es, benutzerdefinierte Bildausgabedarstellungen mithilfe eines beliebigen PNG-Bilds mit Wasserzeichen zu versehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/41536?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329453?quality=12&learn=on&captions=ger)

@@ -30,7 +30,7 @@ Wenn Sie eine Variable vom Typ JSON erstellen, um die übermittelten Daten in Ih
 
 Sie können das Schema der Variablen vom Typ JSON in Ihrem Workflow-Modell zuordnen. Sie können dann den Schema-Browser verwenden, um die Schemaelemente den Zeichenfolgen-/Zahlenvariablen in Ihrem Workflow-Modell zuzuordnen
 
->[!VIDEO](https://video.tv.adobe.com/v/28097?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35315?quality=12&learn=on&captions=ger)
 
 Gehen Sie wie folgt vor, um die Assets auf Ihrem System verwenden zu können:
 

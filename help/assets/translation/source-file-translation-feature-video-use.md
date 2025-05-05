@@ -25,7 +25,7 @@ Mit Adobe Experience Manager (AEM) Assets können Sie Assets identifizieren, die
 
 ## Quelldatei-Management für Multisite-Assets {#multisite-asset-source-file-management}
 
->[!VIDEO](https://video.tv.adobe.com/v/18331?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38549?quality=12&learn=on&captions=ger)
 
 Zugehörige Assets helfen Benutzenden bei der besseren Verwaltung, der Vernetzung von Assets mit gemeinsamen Merkmalen und Eigenschaften sowie der Rationalisierung von Workflows:
 

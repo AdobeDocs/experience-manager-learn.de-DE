@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Erfahren Sie mehr über Abfrageindizes und darüber, wie Sie Excel-Formeln zum Bearbeiten und Sortieren von Datensätzen mit Edge Delivery Services erstellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427787/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453772/?learn=on&captions=ger)
 
 ## Zusätzliche Ressourcen
 

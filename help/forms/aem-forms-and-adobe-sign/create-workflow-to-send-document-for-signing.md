@@ -23,7 +23,7 @@ ht-degree: 100%
 Erstellen Sie einen AEM-Workflow mit der Komponente „Dokument signieren“. Verwenden Sie das automatisch generierte DoR, um mithilfe der Signaturkomponente Unterschriften einzufügen.
 In diesem Video werden die verschiedenen Schritte erläutert, die zum Erstellen eines effektiven Workflows zum Senden von Dokumenten zur Signatur erforderlich sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/38182?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327818?quality=12&learn=on&captions=ger)
 
 ## Nächste Schritte
 

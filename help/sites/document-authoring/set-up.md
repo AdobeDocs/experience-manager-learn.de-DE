@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Eine Anleitung zum Einrichten der Dokumenterstellung für Autoren und Autorinnen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425699/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438871/?learn=on&captions=ger)

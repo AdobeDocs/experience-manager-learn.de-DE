@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie das Asset-Workflow-Migrations-Tool bei der Migration vorhandener AEM Assets-Workflows zu AEM as a Cloud Service hilft.
 
->[!VIDEO](https://video.tv.adobe.com/v/336697?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438981?quality=12&learn=on&captions=ger)

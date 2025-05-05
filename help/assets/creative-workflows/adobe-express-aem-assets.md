@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit der Integration von AEM Assets in [Adobe Express](https://www.adobe.com/de/express/) Content-Lieferketten optimieren und die Produktivität und Barrierefreiheit für alle Team-Mitglieder verbessern.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425193/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453141/?learn=on&captions=ger)

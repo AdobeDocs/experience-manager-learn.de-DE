@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erstellen Sie ein Workflow-Modell mit AEM Forms Workflow-Komponenten. Verwenden Sie die ODER-Teilungskomponente, um den Workflow basierend auf dem Wert der Statusvariablen zu verzweigen.
 
->[!VIDEO](https://video.tv.adobe.com/v/332434?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453200?quality=12&learn=on&captions=ger)

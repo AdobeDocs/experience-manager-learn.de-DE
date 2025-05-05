@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Überprüfen und Überblicken der wichtigsten Implementierungsphasen oder des Wechsels zu AEM as a Cloud Service mithilfe von Cloud Acceleration Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/336691?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438288?quality=12&learn=on&captions=ger)

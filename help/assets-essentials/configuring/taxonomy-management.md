@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Ihre Tagging-Taxonomie in der Assets-Ansicht von AEM Assets verwalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3431081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447375/?learn=on&captions=ger)

@@ -341,7 +341,7 @@ Willkommen bei einer Sammlung von Erweiterungs-Code-Beispielen für die AEM-Benu
       <div class="card-image">
         <figure class="image is-16by9">
           <a href="./examples/editor-custom-field.md" title="Benutzerdefinierte Felder" tabindex="-1">
-            <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3427585?format=jpeg" alt="Benutzerdefinierte Felder">
+            <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3437643?format=jpeg&captions=ger" alt="Benutzerdefinierte Felder">
           </a>
         </figure>
       </div>

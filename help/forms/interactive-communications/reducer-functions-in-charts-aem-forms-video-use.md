@@ -59,4 +59,4 @@ Beispielsweise können wir die Reducer-Funktionen verwenden, um die Anzahl der T
 
 Im folgenden Video werden die Schritte zur Verwendung von Reducer-Funktionen erläutert.
 
->[!VIDEO](https://video.tv.adobe.com/v/21368?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38215?quality=12&learn=on&captions=ger)

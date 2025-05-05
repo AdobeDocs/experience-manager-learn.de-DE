@@ -36,7 +36,7 @@ Vergegenwärtigen Sie sich die erforderlichen Tools und Anweisungen zum Einricht
 
 ## Was Sie erstellen werden {#what-build}
 
->[!VIDEO](https://video.tv.adobe.com/v/30152?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35587?quality=12&learn=on&captions=ger)
 
 In diesem Kapitel erstellen Sie ein neues Projekt in Adobe Experience Manager mit dem [AEM-Projektarchetyp](https://github.com/adobe/aem-project-archetype). Ihr AEM-Projekt enthält den vollständigen Code, die Inhalte und Konfigurationen, die für eine Sites-Implementierung nötig sind. Das in diesem Kapitel erstellte Projekt dient als Grundlage für die Implementierung der WKND-Site und wird in künftigen Kapiteln verwendet.
 

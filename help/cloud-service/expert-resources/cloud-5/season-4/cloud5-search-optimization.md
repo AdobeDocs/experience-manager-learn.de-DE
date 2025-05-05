@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Holen Sie sich Ihren Lighthouse-Wert auf 100 Kaufen Sie mithilfe der Abfrage- und Suchoptimierung, wenn Sie mit einer großen Anzahl von Datensätzen arbeiten. Arbeiten Sie mit Techniken, um den Abfrageindex zu optimieren, die Suchfunktion zu verbessern und Abfrageindizes zu teilen, um eine optimale Leistungsoptimierung zu erzielen
 
->[!VIDEO](https://video.tv.adobe.com/v/3440976/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3440987/?learn=on&enablevpops&captions=ger)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *In diesem Video wird der Vorgang zum Erhöhen von „aries.transaction.timeout“ erläutert, um die Probleme im Zusammenhang mit der Konvertierung großer Dateien zu beheben.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335502?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437830?quality=12&learn=on&captions=ger)

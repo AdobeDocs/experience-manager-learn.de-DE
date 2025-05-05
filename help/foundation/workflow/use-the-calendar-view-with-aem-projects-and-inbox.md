@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Die AEM-Kalenderansicht erfasst Projekte und Aufgaben in einer Kalenderansicht, um die Projektverwaltung und -planung zu erleichtern. In der Kalenderansicht haben Benutzende eine Gesamtübersicht über laufende, geplante, bald fällige und überfällige Projekte und Aufgaben.
 
->[!VIDEO](https://video.tv.adobe.com/v/16804?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39127?quality=12&learn=on&captions=ger)
 
 Mit der Kalenderansicht können Sie Projekte und Aufgaben mit den folgenden Funktionen besser verwalten:
 

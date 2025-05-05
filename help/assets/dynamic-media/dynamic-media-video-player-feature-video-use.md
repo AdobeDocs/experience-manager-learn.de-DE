@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Der AEM Dynamic Media-Videoplayer war früher auf die Flash-Laufzeitumgebung angewiesen, um das adaptive Video-Streaming auf Desktop-Clients zu unterstützen, und die Browser wurden beim Streaming von Flash-basierten Inhalten immer aggressiver. Mit der Einführung von HLS (Apple-Protokoll zur Bereitstellung von HTTP-Live-Streaming-Videos) können Inhalte jetzt gestreamt werden, ohne auf Flash angewiesen zu sein.
 
->[!VIDEO](https://video.tv.adobe.com/v/16791?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38000?quality=12&learn=on&captions=ger)
 
 ## Kurzer Blick auf Videoplayer, die nicht Flash verwenden {#quick-look-into-non-flash-video-player}
 

@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Entwickelnde, die Integrationen erstellen, für die ein programmatischer Zugriff auf AEM as a Cloud Service erforderlich ist, müssen temporäre Zugriffstoken für AEM einfach und schnell beziehen können, um lokale Entwicklungsaktivitäten zu erleichtern. Hierzu ermöglicht AEM Developer Console es Entwickelnden, selbst temporäre Zugriffstoken für den programmatischen Zugriff auf AEM zu generieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/330477?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418948?quality=12&learn=on&captions=ger)
 
 ## Generieren eines lokalen Entwicklungs-Zugriffstoken
 

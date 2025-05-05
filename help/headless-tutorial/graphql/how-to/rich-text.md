@@ -533,7 +533,7 @@ Ein vollständiges Beispiel zum Schreiben eines benutzerdefinierten Verweis-Rend
 
 ## End-to-End-Beispiel
 
->[!VIDEO](https://video.tv.adobe.com/v/342105?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449709?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >

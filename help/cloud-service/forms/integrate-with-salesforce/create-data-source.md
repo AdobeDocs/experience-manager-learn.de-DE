@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Erstellen Sie eine REST-gesicherte Datenquelle mithilfe der Swagger-Datei, die Sie im vorherigen Schritt erstellt haben.
 
->[!VIDEO](https://video.tv.adobe.com/v/331755?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447275?quality=12&learn=on&captions=ger)
 
 | Einstellung | Wert |
 |---------------------|-----------------------------------------------------------------|

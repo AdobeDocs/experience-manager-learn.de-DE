@@ -41,7 +41,7 @@ In diesem Kapitel werden zwei Adobe XD-Dateien betrachtet, eine für die [Standa
 
 ## Benutzeroberflächen-Kit für die Standard-Site-Vorlage {#standard-site-template-uikit}
 
->[!VIDEO](https://video.tv.adobe.com/v/338680?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448439?quality=12&learn=on&captions=ger)
 
 Allgemeine Schritte:
 
@@ -51,7 +51,7 @@ Allgemeine Schritte:
 
 ## Benutzeroberflächen-Kit von WKND {#wknd-ui-kit}
 
->[!VIDEO](https://video.tv.adobe.com/v/30214?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35925?quality=12&learn=on&captions=ger)
 
 Allgemeine Schritte:
 

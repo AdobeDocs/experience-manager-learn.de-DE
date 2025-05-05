@@ -66,7 +66,7 @@ Eine gängige Praxis bei der Erstellung globaler Inhalte, wie Kopf- oder Fußzei
 
 Die Site-Vorlage hat schon eine Kopf- und Fußzeile generiert. Aktualisieren Sie anschließend die Experience Fragments, um sie an die Mockups anzupassen. Führen Sie die folgenden Schritte aus:
 
->[!VIDEO](https://video.tv.adobe.com/v/332916?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447808?quality=12&learn=on&captions=ger)
 
 Allgemeine Schritte für das folgende Video:
 
@@ -78,7 +78,7 @@ Allgemeine Schritte für das folgende Video:
 
 Erstellen Sie anschließend eine neue Seite mithilfe der Vorlage „Zeitschriftenartikelseite“. Verfassen Sie den Inhalt der Seite so, dass er mit den Mockups der Site übereinstimmt. Führen Sie die folgenden Schritte aus:
 
->[!VIDEO](https://video.tv.adobe.com/v/332917?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343383?quality=12&learn=on&captions=ger)
 
 Verwenden Sie den [vorgegebenen Text](./assets/page-templates/la-skateparks-copy.txt), um den Artikelinhalt zu füllen.
 

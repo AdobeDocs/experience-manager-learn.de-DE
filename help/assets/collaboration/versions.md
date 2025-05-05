@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie AEM Asset-Versionen erstellt und verwaltet.
 
->[!VIDEO](https://video.tv.adobe.com/v/32052?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37134?quality=12&learn=on&captions=ger)

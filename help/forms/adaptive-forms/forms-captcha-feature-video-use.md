@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Hinzufügen und Verwenden eines CAPTCHA mit adaptiven Formularen von AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/18336?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39204?quality=12&learn=on&captions=ger)
 
 *Dieses Video führt Sie durch den Prozess, ein CAPTCHA zu einem adaptiven Formular von AEM hinzuzufügen, das sowohl den integrierten AEM-CAPTCHA-Dienst als auch den reCAPTCHA-Dienst von Google verwendet.*
 

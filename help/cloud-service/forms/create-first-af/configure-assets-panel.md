@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfassen Sie die Assets der Antragstellenden mithilfe eines wiederholbaren Bedienfelds mit einem Akkordeon-Layout.
 
->[!VIDEO](https://video.tv.adobe.com/v/336473?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445187?quality=12&learn=on&captions=ger)

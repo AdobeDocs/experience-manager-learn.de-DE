@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Das folgende Video beschreibt den Anwendungsfall.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427096?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443505?learn=on&captions=ger)
 
 
 Um diesem Tutorial zu folgen, wird empfohlen, dass Sie auf Folgendes Zugriff haben:

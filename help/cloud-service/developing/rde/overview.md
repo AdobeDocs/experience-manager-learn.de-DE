@@ -27,7 +27,7 @@ In diesem Video wird beschrieben:
 - Was sind RDEs?
 - Wie können sie zur schnelleren Entwicklung zur Bereitstellung von Zyklen beitragen?
 
->[!VIDEO](https://video.tv.adobe.com/v/3414128?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453607?quality=12&learn=on&captions=ger)
 
 ## Nächster Schritt
 

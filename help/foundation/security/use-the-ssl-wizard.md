@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie SSL in Adobe Experience Manager so einrichten, dass es mithilfe des integrierten SSL-Assistenten über HTTPS ausgeführt wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/17993?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33828?quality=12&learn=on&captions=ger)
 
 
 >[!NOTE]

@@ -20,11 +20,11 @@ ht-degree: 100%
 
 Benutzerdefinierte AEM Assets-Videominiaturen bieten Autorinnen und Autoren die Möglichkeit, eine geeignete Miniaturansicht aus einer Reihe generierter Miniaturansichten auszuwählen. Die Anzahl der für ein Video generierten Miniaturansichten kann einfach angepasst werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/16467?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38202?quality=12&learn=on&captions=ger)
 
 ## Anpassen einer Videominiatur
 
->[!VIDEO](https://video.tv.adobe.com/v/18867?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38244?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >

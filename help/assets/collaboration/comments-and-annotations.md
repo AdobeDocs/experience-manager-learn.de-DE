@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Kommentare und Anmerkungen in AEM verwenden können, um zu kommunizieren und gemeinsam an Assets zu arbeiten.
 
->[!VIDEO](https://video.tv.adobe.com/v/32049?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36915?quality=12&learn=on&captions=ger)

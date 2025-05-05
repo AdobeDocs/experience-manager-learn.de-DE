@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie eine Seite in einer vorhandenen Sprachkopie erstellen und den Inhalt dann in eine andere Sprachkopie übersetzen.
 
->[!VIDEO](https://video.tv.adobe.com/v/36682?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41547?quality=12&learn=on&captions=ger)

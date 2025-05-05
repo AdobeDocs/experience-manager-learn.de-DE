@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erfahren Sie mehr über die Inhaltsaktionen, die bei der Dokumenterstellung in Edge Delivery Services für eine generierte Variante verwendet werden können, einschließlich Speichern, Kopieren, Bewerten und mehr.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428795/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437299/?learn=on&captions=ger)

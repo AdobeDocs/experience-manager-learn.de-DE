@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Eine ausführliche Anleitung zum Abrufen eines Anmelde-Tokens für Cloud Service-Integrationen und einige Anwendungsfälle dafür.
 
->[!VIDEO](https://video.tv.adobe.com/v/341277?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448646?quality=12&learn=on&captions=ger)
 
 ## Inhalt dieses Videos
 

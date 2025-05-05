@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Metadatenordnerschemata ermöglichen es Benutzenden, mit Asset-Ordnern verknüpfte Metadaten selbst zu verwalten und zu überprüfen, anstatt direkt mit Assets zu arbeiten.
 
->[!VIDEO](https://video.tv.adobe.com/v/34071?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37293?quality=12&learn=on&captions=ger)

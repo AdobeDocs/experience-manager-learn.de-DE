@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *In diesem Video werden die Schritte zum Erfassen von Debugging-Protokollen für Mobile-Formulare erläutert.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335516?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438596?quality=12&learn=on&captions=ger)

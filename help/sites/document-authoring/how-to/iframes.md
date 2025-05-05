@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit der AEM-Dokumenterstellung Inhalte mithilfe von iFrames einbetten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425719/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438398/?learn=on&captions=ger)

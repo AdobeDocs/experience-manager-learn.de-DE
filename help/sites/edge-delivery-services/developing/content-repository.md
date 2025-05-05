@@ -33,12 +33,12 @@ Es gibt zwei unterstützte Content-Repositorys für die [Dokumenterstellung](../
 
 Richten Sie SharePoint als Content-Repository für die Verwendung mit Edge Delivery Services ein.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425712/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446037/?learn=on&captions=ger)
 
 >[!TAB Google Drive]
 
 Richten Sie Google Drive als Content-Repository für die Verwendung mit Edge Delivery Services ein.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425711/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434729/?learn=on&captions=ger)
 
 >[!ENDTABS]

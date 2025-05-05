@@ -26,7 +26,7 @@ Der AEM Sites-Seiteneditor ist ein leistungsstarkes Tool zum Erstellen und Bearb
 
 Im folgenden Video werden einige der wichtigsten Funktionen des Seiteneditors vorgestellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/32011?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37188?quality=12&learn=on&captions=ger)
 
 
 Siehe die [AEM-Dokumentation für einen vollständigen Überblick über die Funktionen des Seiteneditors](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/editing-content.html?lang=de).

@@ -26,6 +26,6 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Workfront und AEM Assets konfigurieren, um Asset-Metadaten mithilfe von benutzerdefinierten Workfront-Formularen und AEM-Metadatenschemata zu verwalten und zu synchronisieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/340332?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3432533?quality=12&learn=on&captions=ger)
 
 _Teil zwei einer [vierteiligen Expertenreihe zum erweiterten Workfront-Connector für Experience Manager](./overview.md)_

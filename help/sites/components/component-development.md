@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Eine Übersicht über die Entwicklung von Komponenten mit Adobe Experience Manager Sites. Enthält eine Einführung in Dialogfelder, Sling-Modelle, HTL-Skripte und Client-seitige Bibliotheken.
 
->[!VIDEO](https://video.tv.adobe.com/v/32547?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36452?quality=12&learn=on&captions=ger)

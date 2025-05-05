@@ -21,4 +21,4 @@ ht-degree: 100%
 
 *In diesem Video werden die Schritte zur Aktivierung der Leistungsprotokollierung in AEM Forms erläutert, um Probleme im Zusammenhang mit Forms und dem Ausgabedienst zu beheben.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335499?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439724?quality=12&learn=on&captions=ger)

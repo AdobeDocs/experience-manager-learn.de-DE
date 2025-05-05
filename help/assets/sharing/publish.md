@@ -23,6 +23,6 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Assets und deren Ausgabeformate aus der AEM-Autoreninstanz in der AEM-Veröffentlichungsinstanz veröffentlichen.
 
->[!VIDEO](https://video.tv.adobe.com/v/330932?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/344740?quality=12&learn=on&captions=ger)
 
 _Stellen Sie sicher, dass die AEM Assets-Bereitstellung über einen lizenzierten AEM Publish-Service verfügt, bevor Sie Assets veröffentlichen._

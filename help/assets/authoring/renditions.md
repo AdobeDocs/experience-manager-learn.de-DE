@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie mehr über Ausgabedarstellungen in AEM Assets und darüber, wie sie in einer Vorschau angezeigt werden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/32047?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36962?quality=12&learn=on&captions=ger)

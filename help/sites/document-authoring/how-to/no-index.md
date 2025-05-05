@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie verhindern können, dass mit der AEM-Dokumenterstellung erstellte Web-Seiten durch Suchmaschinen indiziert werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425726/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438126/?learn=on&captions=ger)

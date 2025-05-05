@@ -34,7 +34,7 @@ Benutzerdefinierte Smarttags für Bilder setzen voraus, dass [Smarttags für Bil
 
 Erfahren Sie, wie Sie das Training für Smarttags in AEM Assets mit dem Smart Content Service und Adobe I/O konfigurieren. Benutzerdefinierte Smarttags für Bilder:
 
->[!VIDEO](https://video.tv.adobe.com/v/23405?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35537?quality=12&learn=on&captions=ger)
 
 ## Zusätzliche Ressourcen
 

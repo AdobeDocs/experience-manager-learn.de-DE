@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Adobe Asset Link bietet kreativen Benutzenden die Möglichkeit, in AEM Assets gespeicherte Assets über das In-App-Bedienfeld in InDesign, Photoshop und Illustrator zu durchsuchen, auszuchecken und einzuchecken. Lernen Sie die Benutzeroberfläche und Funktionen des Adobe Asset Link-Bedienfelds kennen.
 
->[!VIDEO](https://video.tv.adobe.com/v/33734?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38668?quality=12&learn=on&captions=ger)

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit [benutzerdefinierten Berechtigungen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/custom-permissions.html?lang=de) von Cloud Manager in AEM den Zugriff für verschiedene Teams strategisch zu verwalten und so Effizienz und Sicherheit bei Projekt-Management und -implementierung sicherstellen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425892/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449813/?learn=on&captions=ger)

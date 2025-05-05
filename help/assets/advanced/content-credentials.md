@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie [Content Credentials](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/assets-view/content-credentials) in AEM Assets verifizierbare Metadaten bereitstellen, um die Authentizität und Integrität digitaler Assets sicherzustellen und so Vertrauen und Transparenz bei der Inhaltserstellung zu fördern.
 
->[!VIDEO](https://video.tv.adobe.com/v/3441700/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441720/?learn=on&enablevpops&captions=ger)

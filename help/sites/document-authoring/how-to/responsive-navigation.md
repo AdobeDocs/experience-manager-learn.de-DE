@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie eine responsive Navigation bei der Dokumenterstellung durchführen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425707/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438176/?learn=on&captions=ger)

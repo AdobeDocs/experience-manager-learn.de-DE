@@ -47,11 +47,11 @@ Die Daten des adaptiven Formulars werden unter dem Datenelement gespeichert, wie
 
 **Zuordnen von XML-Variablen mit einem Schema (Funktion ab AEM Forms 6.5.1 verfügbar)**
 
->[!VIDEO](https://video.tv.adobe.com/v/28098?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35317?quality=12&learn=on&captions=ger)
 
 #### Verwenden von Variablen in „E-Mail senden“
 
->[!VIDEO](https://video.tv.adobe.com/v/26441?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35318?quality=12&learn=on&captions=ger)
 
 Gehen Sie wie folgt vor, um die Assets auf Ihrem System verwenden zu können:
 

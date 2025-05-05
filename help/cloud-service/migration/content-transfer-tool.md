@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Das Content Transfer Tool ist die empfohlene Methode, um Inhalte von einer On-Premise- oder AMS-gehosteten Version von AEM in eine AEM as a Cloud Service-Umgebung zu migrieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/35460?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327075?quality=12&learn=on&captions=ger)
 
 ## Zusätzliche Ressourcen {#additional-resources}
 

@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Eine Einführung in gängige Tools und Techniken, die zum Debugging einer Tag-Implementierung verwendet werden. Erfahren Sie, wie Sie mit der Developer Console des Browsers und der Experience Platform Debugger-Erweiterung wichtige Aspekte einer Tags-Implementierung identifizieren und beheben können.
 
->[!VIDEO](https://video.tv.adobe.com/v/38567?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327404?quality=12&learn=on&captions=ger)
 
 ## Client-seitiges Debugging über Satelliten-Objekt
 

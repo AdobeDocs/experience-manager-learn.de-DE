@@ -26,7 +26,7 @@ Dieser Artikel führt Sie durch die Schritte, die zum Öffnen der Agenten-Benutz
 
 Das folgende Video zeigt den Anwendungsfall:
 
->[!VIDEO](https://video.tv.adobe.com/v/40122?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328988?quality=12&learn=on&captions=ger)
 
 ```java
 String accountNumber = request.getParameter("accountnumber"))

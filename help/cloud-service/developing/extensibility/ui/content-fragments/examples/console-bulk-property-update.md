@@ -21,7 +21,7 @@ ht-degree: 100%
 
 # Stapelweise Aktualisierung einer Eigenschaft – Beispiel für eine Erweiterung
 
->[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454466?quality=12&learn=on&captions=ger)
 
 Diese beispielhafte AEM-Inhaltsfragmentkonsolenerweiterung ist eine [Aktionsleistenerweiterung](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/), bei der eine Inhaltsfragment-Eigenschaft stapelweise zu einem gemeinsamen Wert aktualisiert wird.
 

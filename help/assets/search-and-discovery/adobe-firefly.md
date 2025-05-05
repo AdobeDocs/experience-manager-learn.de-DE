@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie AEM Assets durch die Integration in Adobe Firefly leere Suchergebnisse in ein produktives Erlebnis der Asset-Generierung umwandelt und es Benutzenden damit ermöglicht, Assets mühelos zu finden und direkt in ihren Workflow zu laden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429070/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438266/?learn=on&captions=ger)
 
 
 >[!TIP]

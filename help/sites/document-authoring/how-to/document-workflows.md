@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Dokument-Workflows mit der AEM-Dokumenterstellung verwenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425720/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438299/?learn=on&captions=ger)

@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Mit der Batch-Datenkonfiguration können Sie eine bestimmte Instanz des Blob-Speichers für Batch-APIs konfigurieren. Damit können Sie die Ein- und Ausgabeverzeichnisse im kundeneigenen Microsoft Azure Blob-Datenspeicher angeben.
 
->[!VIDEO](https://video.tv.adobe.com/v/340128?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345715?quality=12&learn=on&captions=ger)

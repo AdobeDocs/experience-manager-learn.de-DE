@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie bei der Dokumenterstellung Standardinhalte, Blöcke und andere Elemente eingesetzt werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425701/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438823/?learn=on&captions=ger)

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie die AEM Assets-Funktion „Ähnliches Bild suchen“ Ihnen die Suche nach dem Bild erleichtert, das für Ihre Anforderungen am besten geeignet ist.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426796/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438486/?learn=on&captions=ger)

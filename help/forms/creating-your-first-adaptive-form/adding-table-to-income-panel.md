@@ -23,7 +23,7 @@ Im Folgenden fügen wir eine Tabelle zum Einkommensbedienfeld hinzu. Konfigurier
 
 **Hinzufügen und Konfigurieren der Tabellenkomponente**
 
->[!VIDEO](https://video.tv.adobe.com/v/22198?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326903?quality=12&learn=on&captions=ger)
 
 
 
@@ -44,7 +44,7 @@ Im Folgenden fügen wir eine Tabelle zum Einkommensbedienfeld hinzu. Konfigurier
 ## Erstellen einer Regel zur Berechnung der Gesamtsumme {#create-rule-to-calculate-grand-total}
 
 
->[!VIDEO](https://video.tv.adobe.com/v/22197?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326892?quality=12&learn=on&captions=ger)
 
 ## Nächste Schritte
 

@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie ein privates GitHub-Repository mit AEM Cloud Manager verbinden, um die Verwaltung der Code-Qualität und automatisierte Workflows zu optimieren. Verbessern Sie Ihren Entwicklungsprozess mit integrierten Prüfungen und nahtloser Zusammenarbeit.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429302/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452424/?learn=on&captions=ger)

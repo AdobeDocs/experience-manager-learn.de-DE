@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Machen Sie sich mit den verschiedenen Status vertraut, die mit einem Übersetzungsauftrag oder einem Element im Auftrag verknüpft sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/36685?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41555?quality=12&learn=on&captions=ger)

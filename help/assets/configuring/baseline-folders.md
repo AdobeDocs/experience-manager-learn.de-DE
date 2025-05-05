@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Die Definition von Baseline-Ordnern in AEM Assets hilft bei der Einrichtung einer soliden Inhaltsarchitektur als Grundlage für Ihr Digital Asset Management.
 
->[!VIDEO](https://video.tv.adobe.com/v/33496?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37329?quality=12&learn=on&captions=ger)

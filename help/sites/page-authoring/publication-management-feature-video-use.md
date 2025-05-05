@@ -25,7 +25,7 @@ ht-degree: 100%
 
 AEM Sites bietet verschiedene Optionen zum Veröffentlichen und Rückgängigmachen der Veröffentlichung von Inhalten. In diesem Video werden die verschiedenen Methoden und ihre Funktionen untersucht.
 
->[!VIDEO](https://video.tv.adobe.com/v/32193?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36744?quality=12&learn=on&captions=ger)
 
 AEM Sites bietet verschiedene Methoden zum Veröffentlichen und Rückgängigmachen der Veröffentlichung von Inhalten, basierend auf dem Workflow der Autorin bzw. des Autors.
 

@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Das smarte Zuschneiden nutzt Adobe Sensei, um zeitaufwendige und kostspielige Aufgaben beim Zuschneiden von Inhalten für responsives Design zu vermeiden.
 
->[!VIDEO](https://video.tv.adobe.com/v/21519?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40411?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >

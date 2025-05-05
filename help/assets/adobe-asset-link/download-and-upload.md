@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Asset-Dateien über das Bedienfeld „Asset-Link“ von und in AEM Assets herunterladen bzw. hochladen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/33885?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38652?quality=12&learn=on&captions=ger)

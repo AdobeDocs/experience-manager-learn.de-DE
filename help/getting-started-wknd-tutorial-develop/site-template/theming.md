@@ -39,7 +39,7 @@ Dies ist ein mehrteiliges Tutorial, und es wird davon ausgegangen, dass die im K
 
 Nehmen Sie als Nächstes Änderungen an den Themenquellen vor, damit die Seite dem Erscheinungsbild der WKND-Marke entspricht.
 
->[!VIDEO](https://video.tv.adobe.com/v/332918?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453629?quality=12&learn=on&captions=ger)
 
 Allgemeine Schritte für das Video:
 

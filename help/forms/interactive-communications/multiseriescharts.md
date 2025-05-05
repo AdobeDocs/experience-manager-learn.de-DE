@@ -29,11 +29,11 @@ Um in AEM Forms Diagramme mit mehreren Reihen zu erstellen, müssen Sie ein geei
 
 ## Erstellen eines Formulardatenmodells für Diagramme mit mehreren Reihen
 
->[!VIDEO](https://video.tv.adobe.com/v/26352?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33039?quality=12&learn=on&captions=ger)
 
 ### Konfigurieren von Diagrammen mit Linienreihen
 
->[!VIDEO](https://video.tv.adobe.com/v/26353?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33044?quality=12&learn=on&captions=ger)
 
 Führen Sie die folgenden Schritte aus, um dies auf Ihrem System zu testen:
 

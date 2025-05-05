@@ -28,15 +28,15 @@ Normalerweise besteht eine Client-Bibliothek aus CSS- und JavaScript-Dateien. Di
 
 ## Funktion zum Ausfüllen von Dropdown-Listen {#function-to-populate-drop-down-list}
 
->[!VIDEO](https://video.tv.adobe.com/v/22282?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326876?quality=12&learn=on&captions=ger)
 
 ### Festlegen des Zusammenfassungstitels des Bedienfelds {#set-the-summary-title-of-panels}
 
->[!VIDEO](https://video.tv.adobe.com/v/28387?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33082?quality=12&learn=on&captions=ger)
 
 #### Überprüfen des Bedienfelds {#validate-panels-using-rule-editor}
 
->[!VIDEO](https://video.tv.adobe.com/v/28409?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33078?quality=12&learn=on&captions=ger)
 
 Im Folgenden finden Sie den Code, der zum Überprüfen von Feldern im Bedienfeld verwendet wird:
 

@@ -22,7 +22,7 @@ ht-degree: 100%
 Unabhängig davon, ob Sie eine Hypothek beantragen oder ein neues Bankkonto eröffnen, müssen Sie mehrere Formulare ausfüllen und unterschreiben. Die Integration zwischen AEM Forms und Acrobat Sign erleichtert das Ausfüllen und Signieren mehrerer Formulare.
 Das folgende Video führt Sie durch den Anwendungsfall des Signierens mehrerer Formulare.
 
->[!VIDEO](https://video.tv.adobe.com/v/330165?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444977?quality=12&learn=on&captions=ger)
 
 ## Voraussetzungen
 

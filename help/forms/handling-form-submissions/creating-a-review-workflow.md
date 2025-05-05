@@ -28,7 +28,7 @@ Workflows werden normalerweise verwendet, um gesendete Daten zur Überprüfung u
 Stellen Sie sicher, dass Sie über eine funktionierende AEM Forms-Instanz verfügen. Folgen Sie dem [Installationshandbuch](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html?lang=de), um AEM Forms zu installieren und zu konfigurieren.
 
 Im folgenden Video wird die Erstellung des Workflows für Überprüfung und Genehmigung mithilfe von AEM Forms-Komponenten erläutert
->[!VIDEO](https://video.tv.adobe.com/v/40242?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329021?quality=12&learn=on&captions=ger)
 
 
 Wenn Sie aus irgendeinem Grund nicht in der Lage sind, den Workflow zu erstellen, können Sie den fertigen Workflow [hier](assets/review-submitted-data-workflow.zip) herunterladen und ihn mit [Package Manager](http://localhost:4502/crx/packmgr/index.jsp) in Ihre AEM-Instanz importieren.

@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Asset-Berichte in AEM Assets verwenden können, um Einblicke in Ihre DAM-Aktivität zu erhalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432496/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445764/?learn=on&captions=ger)

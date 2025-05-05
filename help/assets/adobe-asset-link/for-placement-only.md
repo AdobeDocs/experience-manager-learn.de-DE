@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie eine FPO(For Placement Only)-Ausgabedarstellung für AEM Assets erstellen und verwenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/34259?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38597?quality=12&learn=on&captions=ger)

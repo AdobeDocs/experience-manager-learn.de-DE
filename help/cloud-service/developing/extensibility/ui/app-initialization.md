@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Initialisieren Sie eine App-Entwicklungs-App für die AEM-Benutzeroberflächen-Erweiterung, die definiert, wo die Erweiterung angezeigt wird und welche Aufgaben sie durchführt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3412876?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447085?quality=12&learn=on&captions=ger)
 
 >[!IMPORTANT]
 >

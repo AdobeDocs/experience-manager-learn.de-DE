@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Mit Adobe Experience Manager Sites können Autorinnen und Autoren die Breite einer Komponente basierend auf der Gerätebreite verwalten, um ein responsives Site-Design zu erleichtern. Mit dem Layout-Modus und dem Layout-Container können Benutzende responsive Inhalte für verschiedene Geräte erstellen und eine Vorschau des Endbenutzererlebnisses anzeigen, ohne die AEM-Benutzeroberfläche verlassen zu müssen.
 
->[!VIDEO](https://video.tv.adobe.com/v/32012?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37167?quality=12&learn=on&captions=ger)
 
 ## Zusätzliche Ressourcen {#additional-resources}
 

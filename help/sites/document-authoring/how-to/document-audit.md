@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Dokumente prüfen, die mit der AEM-Dokumenterstellung erstellt wurden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425722/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437720/?learn=on&captions=ger)

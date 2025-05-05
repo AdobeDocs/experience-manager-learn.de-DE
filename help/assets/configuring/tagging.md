@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Tags sind ein wesentliches Tool für die Verwaltung von Assets in der Ordnerhierarchie von Assets. Die Einrichtung einer Tagging-Taxonomie ist entscheidend, damit Benutzende Assets in AEM finden und organisieren können.
 
->[!VIDEO](https://video.tv.adobe.com/v/34073?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37311?quality=12&learn=on&captions=ger)

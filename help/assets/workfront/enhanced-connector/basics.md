@@ -31,4 +31,4 @@ Erfahren Sie mehr über die Grundlagen des erweiterten Connectors für Adobe Wor
 + Versionieren von Assets
 + Automatisches Veröffentlichen von Assets
 
->[!VIDEO](https://video.tv.adobe.com/v/337575?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454304?quality=12&learn=on&captions=ger)

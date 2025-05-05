@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Erfahren Sie mehr über die Einrichtung und Verwendung der Komponente zur Social-Media-Freigabe.
 
->[!VIDEO](https://video.tv.adobe.com/v/18897?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328357?quality=12&learn=on&captions=ger)
 
 In diesem Video werden die folgenden Funktionen der Komponente zur Social-Media-Freigabe (Teil der [AEM-Kernkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de)) mithilfe der Beispiel-Website [We.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail#weretail) beschrieben.
 

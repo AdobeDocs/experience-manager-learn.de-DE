@@ -28,8 +28,8 @@ Der folgende Screenshot zeigt die berechneten Elemente „StateandZip“ und „
 
 ## Erstellen des berechneten monatlichen Gehalts
 
->[!VIDEO](https://video.tv.adobe.com/v/23855?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40403?quality=12&learn=on&captions=ger)
 
 ### Erstellen des berechneten StateandZip-Elements
 
->[!VIDEO](https://video.tv.adobe.com/v/23856?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40405?quality=12&learn=on&captions=ger)

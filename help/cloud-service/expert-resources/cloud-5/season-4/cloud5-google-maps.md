@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Erfahren Sie mehr über die Integration von Edge-Bereitstellungs-Services mit Google Maps und die Optimierung der Leistung mit Integrationen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440977/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3440998/?learn=on&enablevpops&captions=ger)

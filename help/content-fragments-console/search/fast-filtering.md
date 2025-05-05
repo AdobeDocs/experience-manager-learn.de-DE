@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie die AEM-Benutzeroberfläche für Inhaltsfragmente die einfache Suche nach Inhaltsfragmenten durch schnelles Filtern erleichtert. Mit dieser Funktion lässt sich die Suche nach bestimmten Inhaltsfragmenten schnell und mühelos durchführen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419310/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436705/?learn=on&captions=ger)

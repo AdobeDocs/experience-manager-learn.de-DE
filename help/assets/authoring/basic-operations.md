@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie mehr über die grundlegenden Vorgänge von AEM Assets, darunter das Erstellen von Ordnern sowie das Hochladen, Kopieren, Verschieben und Löschen von Assets.
 
->[!VIDEO](https://video.tv.adobe.com/v/32044?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37151?quality=12&learn=on&captions=ger)

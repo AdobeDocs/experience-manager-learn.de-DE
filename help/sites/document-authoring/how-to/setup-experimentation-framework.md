@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie bei der Dokumenterstellung in Edge Delivery Services das Experimente-Framework einrichten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429062/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438937/?learn=on&captions=ger)

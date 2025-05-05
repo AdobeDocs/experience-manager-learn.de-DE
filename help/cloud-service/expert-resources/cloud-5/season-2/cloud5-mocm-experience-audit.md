@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Im ersten Teil dieser dreiteiligen Serie beschäftigen wir uns mit den Grundlagen von Cloud Manager und lernen die Funktionen zur Erlebnisprüfung kennen.
 
->[!VIDEO](https://video.tv.adobe.com/v/343620?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449186?quality=12&learn=on&captions=ger)
 
 ## Inhalt dieses Videos
 

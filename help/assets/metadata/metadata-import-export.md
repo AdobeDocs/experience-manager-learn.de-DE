@@ -25,7 +25,7 @@ Erfahren Sie, wie Sie die Funktionen zum Metadatenimport und -export von Adobe E
 
 ## Metadatenexport {#metadata-export}
 
->[!VIDEO](https://video.tv.adobe.com/v/22132?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39394?quality=12&learn=on&captions=ger)
 
 >[!TIP]
 >

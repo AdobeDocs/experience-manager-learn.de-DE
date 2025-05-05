@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Kurzvideo zum Debugging des Forms-Prozesses in Workbench
 
->[!VIDEO](https://video.tv.adobe.com/v/3429495/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439824/?learn=on&captions=ger)

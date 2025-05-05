@@ -27,7 +27,7 @@ Erfahren Sie, wie Sie die Tags in Adobe Experience Platform mit Adobe Experience
 
 Tags sind die nächste Generation der Tag-Management-Technologien von Adobe Experience Platform. Tags stellen die einfachste Möglichkeit zur Bereitstellung von Adobe Analytics, Target, Audience Manager und vielen weiteren Lösungen dar. Verschaffen Sie sich einen Überblick über Tags und die empfohlene Integration in Adobe Experience Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/3417061?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445209?quality=12&learn=on&captions=ger)
 
 ## Voraussetzungen
 

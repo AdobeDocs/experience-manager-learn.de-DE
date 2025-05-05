@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Ein Design enthält Stildetails für Komponenten und Bedienfelder; Sie können ein Design in verschiedenen Formularen wiederverwenden. Die Stile umfassen Eigenschaften wie Hintergrundfarben, Statusfarben, Transparenz, Ausrichtung und Größe. Wenn Sie das Design auf Ihr Formular anwenden, spiegelt der angegebene Stil die entsprechenden Komponenten des Formulars wider.
 
->[!VIDEO](https://video.tv.adobe.com/v/332229?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424877?quality=12&learn=on&captions=ger)

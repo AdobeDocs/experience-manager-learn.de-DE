@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Über das Bedienfeld „Adobe Asset Link“ können Sie auf Dateidetails für Assets in AEM Assets zugreifen, z. B. Miniaturansichten, grundlegende Metadaten und Versionen. Erfahren Sie, wie Sie Dateiversionen erstellen, in einer Vorschau anzeigen und vergleichen.
 
->[!VIDEO](https://video.tv.adobe.com/v/34048?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38625?quality=12&learn=on&captions=ger)

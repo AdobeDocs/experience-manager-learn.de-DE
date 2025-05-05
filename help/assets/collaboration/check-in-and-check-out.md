@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie AEM-Funktionen zum Ein- und Auschecken verwenden können, um die Zusammenarbeit mehrerer Benutzender mit Assets zu erleichtern.
 
->[!VIDEO](https://video.tv.adobe.com/v/32048?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36900?quality=12&learn=on&captions=ger)

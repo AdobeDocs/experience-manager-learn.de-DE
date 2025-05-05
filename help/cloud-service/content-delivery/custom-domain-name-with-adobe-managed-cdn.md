@@ -46,7 +46,7 @@ Wenn Sie keinen Zugang zu Drittanbieterdiensten haben, _führen Sie diese Schrit
 
 ## Generieren eines SSL-Zertifikats
 
->[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441501?quality=12&learn=on&captions=ger)
 
 Es gibt zwei Optionen:
 

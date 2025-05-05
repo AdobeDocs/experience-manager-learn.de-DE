@@ -27,4 +27,4 @@ ht-degree: 100%
 
  Adobe IMS-Benutzergruppen teilen Benutzende, die AEM verwenden, in logische Gruppen ein. Über diese Gruppen können diesen AEM-Benutzenden präzise Zugriffsberechtigungen erteilt werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/39150?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327866?quality=12&learn=on&captions=ger)

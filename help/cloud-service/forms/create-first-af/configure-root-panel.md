@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Fügen Sie dem Stamm-Panel untergeordnete Panels hinzu und konfigurieren Sie das Layout der untergeordneten Panels.
 
->[!VIDEO](https://video.tv.adobe.com/v/332238?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447285?quality=12&learn=on&captions=ger)

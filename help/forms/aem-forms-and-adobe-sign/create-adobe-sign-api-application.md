@@ -24,7 +24,7 @@ Sie müssen eine API-Anwendung in Acrobat Sign erstellen, um sie in Ihre Acrobat
 
 Im folgenden Video werden die Schritte zum Erstellen einer Acrobat Sign-API-Anwendung erläutert.
 
->[!VIDEO](https://video.tv.adobe.com/v/38178?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327834?quality=12&learn=on&captions=ger)
 
 ## Nächste Schritte
 

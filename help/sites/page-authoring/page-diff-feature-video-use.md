@@ -26,7 +26,7 @@ Die AEM Sites-Funktionen „Seitenunterschiede“ bieten eine schnelle, farbcodi
 
 ## Vergleichen von Seitenversionen {#comparing-page-versions}
 
->[!VIDEO](https://video.tv.adobe.com/v/32152?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36790?quality=12&learn=on&captions=ger)
 
 **HTML-Änderungen**
 

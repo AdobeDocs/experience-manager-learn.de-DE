@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Verarbeitungsprofile definieren die Ausgabedarstellungen, die für Assets in AEM as a Cloud Service erstellt werden sollen.
 
->[!VIDEO](https://video.tv.adobe.com/v/35597?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40079?quality=12&learn=on&captions=ger)

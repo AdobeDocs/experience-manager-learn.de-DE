@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Inhaltsautorinnen und Inhaltsautoren Photoshop-Aktionen in AEM Assets durch Creative Cloud-APIs mit dem Add-on zur Inhaltsautomatisierung durchführen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/336539?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444075?quality=12&learn=on&captions=ger)

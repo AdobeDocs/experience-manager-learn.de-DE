@@ -24,7 +24,7 @@ ht-degree: 100%
 Eine verbundene App ist ein Framework, mit dem eine externe Applikation mithilfe von APIs und Standardprotokollen wie SAML, OAuth und OpenID Connect in Salesforce integriert werden kann. Verbundene Apps verwenden diese Protokolle, um externe Apps zu authentifizieren, zu autorisieren und Single Sign-On (SSO) bereitzustellen.
 <!--- 331757 was the old video -->
 
->[!VIDEO](https://video.tv.adobe.com/v/3447257?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447266?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >Bitte stellen Sie sicher, dass Sie ein Konto in der [Salesforce Developer Edition](https://developer.salesforce.com/signup) erstellen, da die REST-APIs in der Developer Edition standardmäßig aktiviert sind.

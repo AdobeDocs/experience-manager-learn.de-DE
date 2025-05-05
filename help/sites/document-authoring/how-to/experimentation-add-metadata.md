@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erfahren Sie mehr über das Hinzufügen von Metadaten zum Experimentieren bei der Dokumenterstellung in Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428796/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440122/?learn=on&captions=ger)

@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie der Dispatcher Converter bestehende AEM Dispatcher-Konfigurationen automatisch aktualisiert, damit sie mit AEM as a Cloud Service kompatibel sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/336695?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441460?quality=12&learn=on&captions=ger)

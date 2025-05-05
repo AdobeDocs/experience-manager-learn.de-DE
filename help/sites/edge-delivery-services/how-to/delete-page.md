@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie eine Seite in Edge Delivery Services löschen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425973/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438099/?learn=on&captions=ger)

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Metadatenschemata definieren die Benutzeroberfläche, über die Benutzende in AEM mit Asset-Metadaten interagieren. Ihre Definition und Anwendung auf Assets sind für das Digital Asset Management von entscheidender Bedeutung.
 
->[!VIDEO](https://video.tv.adobe.com/v/33696?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37301?quality=12&learn=on&captions=ger)

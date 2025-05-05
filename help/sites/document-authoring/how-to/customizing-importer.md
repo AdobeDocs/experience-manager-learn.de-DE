@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie das AEM-Import-Tool anpassen, um die Effizienz und Genauigkeit während der Migration einer Site zum Erstellen von Dokumenten mit Edge Delivery Services zu maximieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429596/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444254/?learn=on&captions=ger)

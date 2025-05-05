@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Kurzvideo über das Binden eines AEM-Formulars an eine XML-Datenquelle
 
->[!VIDEO](https://video.tv.adobe.com/v/3427625/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439835/?learn=on&captions=ger)

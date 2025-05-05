@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Die Adobe Client-Datenschicht führt eine Standardmethode ein, um Daten über ein Besuchererlebnis auf einer Web-Seite zu erfassen und zu speichern und so den Zugriff auf diese Daten zu erleichtern. Die Adobe Client-Datenschicht ist plattformunabhängig, aber für die Verwendung mit AEM vollständig in die Kernkomponenten integriert.
 
->[!VIDEO](https://video.tv.adobe.com/v/41195?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330109?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >

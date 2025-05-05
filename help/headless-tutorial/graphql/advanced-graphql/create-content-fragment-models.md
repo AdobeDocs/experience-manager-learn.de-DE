@@ -43,7 +43,7 @@ Dies ist ein fortgeschrittenes Tutorial. Bevor Sie mit diesem Kapitel fortfahren
 
 Das folgende Video bietet eine kurze Einführung in Inhaltsfragmentmodelle und deren Verwendung in diesem Tutorial.
 
->[!VIDEO](https://video.tv.adobe.com/v/340037?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449528?quality=12&learn=on&captions=ger)
 
 ## Erstellen von Inhaltsfragmentmodellen {#create-models}
 

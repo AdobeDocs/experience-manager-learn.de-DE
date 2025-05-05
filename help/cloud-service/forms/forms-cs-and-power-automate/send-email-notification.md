@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Senden Sie mit Microsoft Power Automate eine E-Mail-Benachrichtigung an die Person, die ein adaptives Formular übermittelt hat, wobei Feldwerte aus der Formularübermittlung extrahiert werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/345957?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431480?quality=12&learn=on&captions=ger)

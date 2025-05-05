@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Das folgende Video zeigt die Schritte, die zum Erstellen und Konfigurieren eines adaptiven Formulars für die automatische Generierung eines Datensatzdokuments erforderlich sind. Außerdem erfahren Sie, wie Sie das adaptive Formular zum Auslösen eines AEM-Workflows konfigurieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/38348?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327810?quality=12&learn=on&captions=ger)
 
 ## Nächste Schritte
 

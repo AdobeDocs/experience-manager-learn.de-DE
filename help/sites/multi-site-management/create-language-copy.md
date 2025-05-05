@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit dem Assistenten zum Erstellen einer Sprachkopie eine Sprachkopie für Ihre AEM-Website erstellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/36483?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41605?quality=12&learn=on&captions=ger)

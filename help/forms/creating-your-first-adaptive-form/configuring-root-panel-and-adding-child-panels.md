@@ -22,7 +22,7 @@ ht-degree: 100%
 Fügen Sie dem Stamm-Panel untergeordnete Panels hinzu.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/28536?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326912?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >Beim Hinzufügen untergeordneter Panels zum Stamm-Panel **stellen Sie bitte sicher, dass Sie sich im Bearbeitungsmodus befinden. Die Schaltfläche „Bearbeiten“ befindet sich oben rechts im Browser.**

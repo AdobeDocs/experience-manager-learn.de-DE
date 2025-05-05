@@ -24,7 +24,7 @@ ht-degree: 100%
 >
 > Das folgende Video wurde in AEM 6.3 aufgenommen. Ab AEM 6.4 wird eine neue Repository-Struktur zum Speichern der XML-Datei für Übersetzungsregeln eingeführt. Bei Verwendung der Benutzeroberfläche für die Übersetzungskonfiguration ab AEM 6.4 werden die Regeln am Speicherort `/conf/global/settings/translation/rules/translation_rules.xml` gespeichert. Weitere Details finden Sie unter [Identifizieren zu übersetzender Inhalte](https://helpx.adobe.com/de/experience-manager/6-5/sites/administering/using/tc-rules.html).
 
->[!VIDEO](https://video.tv.adobe.com/v/18135?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38438?quality=12&learn=on&captions=ger)
 
 Übersetzungsregeln identifizieren Inhalte in AEM, die für die Übersetzung extrahiert werden sollen. Vordefinierte Übersetzungsregeln decken häufige Anwendungsfälle ab, wie Textkomponenten und Alternativtext für Bildkomponenten. Je nach den Anforderungen an die Übersetzungsprojekte können zusätzliche Regeln erforderlich sein. Im Allgemeinen ermöglichen es Übersetzungsregeln Benutzenden, Folgendes anzugeben:
 

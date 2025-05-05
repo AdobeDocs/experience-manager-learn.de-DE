@@ -59,7 +59,7 @@ Das Adobe Developer Console-Projekt (ADC) ist so konfiguriert, dass es die OAuth
 >Das ADC-Projekt stellt KEIN &quot;__secret“_. Stattdessen generiert die SPA einen _code_verifier_ und _code_Challenge_, um den Autorisierungs-Code sicher gegen ein _Zugriffstoken_ einzutauschen. Dadurch entfällt die Notwendigkeit, Client-Geheimnisse Client-seitig zu speichern, was die Sicherheit erhöht.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3456973?quality=12&learn=on&captions=ger)
 
 
 

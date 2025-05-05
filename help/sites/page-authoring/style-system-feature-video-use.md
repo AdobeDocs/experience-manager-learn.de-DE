@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Das Stilsystem von Adobe Experience Manager ermöglicht visuelle Varianten von Komponenten ohne Backend-Entwicklung, was eine bessere Wiederverwendung von AEM-Komponenten und eine vielseitigere und effizientere Inhaltserstellung ermöglicht. Das Stilsystem bietet bei Verwendung in Verbindung mit AEM-Kernkomponenten, dem Vorlageneditor und dem responsiven Layout leistungsstarke Funktionen zum schnellen Zusammenstellen umfangreicher Erlebnisse.
 
->[!VIDEO](https://video.tv.adobe.com/v/21750?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340443?quality=12&learn=on&captions=ger)
 
 In diesem Video wird gezeigt, wie das Stilsystem genutzt werden kann, um deutlich unterschiedliche visuelle Erscheinungsformen für eine einzelne Komponente zu erstellen, wobei nur CSS verwendet wird.
 

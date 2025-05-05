@@ -26,7 +26,7 @@ Im Rahmen dieses Tutorials werden die in ChatBot erfassten Daten mit einem [W-9-
 
 Das folgende Video zeigt den Anwendungsfall:
 
->[!VIDEO](https://video.tv.adobe.com/v/3428432?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441801?learn=on&captions=ger)
 
 ## Voraussetzung
 

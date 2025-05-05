@@ -21,7 +21,7 @@ ht-degree: 100%
 
 AEM Dynamic Media Viewer-Verbesserungen ermöglichen es AEM-Autorinnen und -Autoren, zu definieren und anzupassen, wie Assets Website-Benutzenden präsentiert werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/17783?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40387?quality=12&learn=on&captions=ger)
 
 Zu den wichtigsten Verbesserungen gehören:
 

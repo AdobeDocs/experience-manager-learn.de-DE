@@ -21,4 +21,4 @@ ht-degree: 100%
 
 Erfahren Sie mehr über Dynamic Media-Vorlagen, ein zusammenstellbares Bild-Asset, ihre Best Practices und die Erfüllung der Nachfrage nach personalisierter Inhaltsbereitstellung. Erfahren Sie, wie Sie Vorlagen erstellen und verwalten und mit ihnen personalisierte Inhalte skaliert bereitstellen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3451727/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3451736/?learn=on&enablevpops&captions=ger)

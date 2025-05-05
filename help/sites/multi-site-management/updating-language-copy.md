@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mithilfe von Launches Änderungen in einer Sprachkopie aktualisieren, überprüfen und genehmigen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/36683?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41629?quality=12&learn=on&captions=ger)

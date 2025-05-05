@@ -28,4 +28,4 @@ In diesem Video erfahren Sie Folgendes:
 + Erfahren Sie, wie Sie GraphQL-Abfragen erstellen, aktualisieren und ausführen.
 + Machen Sie sich mit den Vorteilen persistenter Abfragen gegenüber Client-seitigen Abfragen vertraut.
 
->[!VIDEO](https://video.tv.adobe.com/v/333429?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447386?quality=12&learn=on&captions=ger)

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie ein Edge Delivery Services-Dokument mithilfe von Abschnitten, Standardinhalten und anderen Elementen zusammengestellt wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425716/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445198/?learn=on&captions=ger)

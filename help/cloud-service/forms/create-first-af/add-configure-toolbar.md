@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Die Symbolleiste wird normalerweise auf der Ebene des Formular-Containers hinzugefügt. Die Symbolleiste kann Schaltflächen enthalten, mit denen Sie zum nächsten und vorherigen Bereich Ihres Formulars navigieren, das Formular senden, die Formulardaten speichern usw.
 
->[!VIDEO](https://video.tv.adobe.com/v/332236?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424948?quality=12&learn=on&captions=ger)

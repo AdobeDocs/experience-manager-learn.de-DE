@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Erkunden Sie Ereignisse, die beim Veröffentlichen und Aufheben der Veröffentlichung in Edge Delivery Services ausgelöst werden, sowie Anwendungsfälle und Beispiele für die Verwendung dieser Ereignisse.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427681?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446665?learn=on&captions=ger)
 
 ## Zusätzliche Ressourcen
 

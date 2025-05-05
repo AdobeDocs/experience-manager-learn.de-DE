@@ -28,4 +28,4 @@ In diesem Video erfahren Sie Folgendes:
 + Wie Sie GraphQL-Abfragen an Endpunkten ausführen
 + Grundlegendes zum Veröffentlichen von GraphQL-Endpunkten
 
->[!VIDEO](https://video.tv.adobe.com/v/333339?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445032?quality=12&learn=on&captions=ger)

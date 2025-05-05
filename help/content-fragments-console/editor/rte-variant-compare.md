@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit AEM das RTE-Feld in Inhaltsfragmentvarianten mühelos vergleichen und synchronisieren können. Durch den Vergleich und die Synchronisierung dieser Varianten können Sie ein konsistentes Messaging über alle Kanäle hinweg sicherstellen, die das Inhaltsfragment verwenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419314/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437560/?learn=on&captions=ger)

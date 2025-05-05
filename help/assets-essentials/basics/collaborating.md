@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie beim Asset-Management mithilfe von Kommentaren, Anmerkungen und Aufgaben zusammenarbeiten können.
 
->[!VIDEO](https://video.tv.adobe.com/v/335856?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443995?quality=12&learn=on&captions=ger)

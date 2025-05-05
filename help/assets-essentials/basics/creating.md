@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Assets hochladen, Versionen erstellen und Assets mit Adobe Photoshop Express bearbeiten können.
 
->[!VIDEO](https://video.tv.adobe.com/v/335746?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444007?quality=12&learn=on&captions=ger)

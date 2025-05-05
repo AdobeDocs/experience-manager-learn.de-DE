@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, inwiefern Sammlungen eine alternative Ansicht in AEM Assets bieten.
 
->[!VIDEO](https://video.tv.adobe.com/v/32053?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36869?quality=12&learn=on&captions=ger)

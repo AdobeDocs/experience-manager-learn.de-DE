@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie den Sidekick der Edge Delivery Services anpassen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425725/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438008/?learn=on&captions=ger)

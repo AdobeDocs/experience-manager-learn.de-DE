@@ -36,13 +36,13 @@ Diese Videoreihe behandelt den Lebenszyklus für die Erstellung von Inhaltsfragm
 
 ## Definieren von Inhaltsfragmentmodellen {#defining-content-fragment-models}
 
->[!VIDEO](https://video.tv.adobe.com/v/22452?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38046?quality=12&learn=on&captions=ger)
 
 AEM-Inhaltsfragmentmodelle, die Datenschemata von Inhaltsfragmenten, müssen über den AEM-[[!UICONTROL Konfigurations-Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=de) aktiviert werden, wodurch Inhaltsfragmentmodelle für jede Konfiguration definiert werden können.
 
 ## Erstellen von Inhaltsfragmenten {#creating-content-fragments}
 
->[!VIDEO](https://video.tv.adobe.com/v/22451?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38051?quality=12&learn=on&captions=ger)
 
 AEM-Konfigurationen werden auf AEM Assets-Ordnerhierarchien angewendet, damit ihre Inhaltsfragmentmodelle als Inhaltsfragmente erstellt werden können. Inhaltsfragmente unterstützen ein umfangreiches formularbasiertes Verfassererlebnis, indem Inhalte als Sammlung von Elementen modelliert werden können.
 
@@ -53,7 +53,7 @@ Inhaltsfragmente können mehrere Varianten aufweisen, wobei jede Variante einen 
 
 ## Herunterladen von Inhaltsfragmenten {#downloading-content-fragments}
 
->[!VIDEO](https://video.tv.adobe.com/v/22450?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38055?quality=12&learn=on&captions=ger)
 
 AEM-Inhaltsfragmente können von AEM Author als ZIP-Datei mit Varianten, Elementen und Metadaten heruntergeladen werden.
 
@@ -62,7 +62,7 @@ AEM-Inhaltsfragmente können von AEM Author als ZIP-Datei mit Varianten, Element
 
 ## Redaktionelle Funktionen von Inhaltsfragmenten {#editorial-capabilities}
 
->[!VIDEO](https://video.tv.adobe.com/v/25891?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39651?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >

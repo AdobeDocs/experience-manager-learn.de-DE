@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mithilfe des Assistenten „Live Copy erstellen“ eine Live Copy für Ihre Site aus einem Blueprint erstellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/36677?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41580?quality=12&learn=on&captions=ger)

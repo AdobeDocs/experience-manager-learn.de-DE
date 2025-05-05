@@ -30,7 +30,7 @@ In dieser Videoreihe werden die Bereitstellungsoptionen für die Verwendung von 
 
 ## Verwenden von Inhaltsfragmenten auf Web-Seiten {#using-content-fragments-in-web-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/22449?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38060?quality=12&learn=on&captions=ger)
 
 Inhaltsfragmente können auf AEM Sites-Seiten eingesetzt werden. Ähnlich anwendbar sind Experience Fragments. Möglich macht dies die [Inhaltsfragment-Komponente](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=de) der AEM WCM-Kernkomponenten.
 
@@ -38,7 +38,7 @@ Inhaltsfragment-Komponenten können mit dem AEM-Stilsystem formatiert werden, um
 
 ## Bereitstellen von Inhaltsfragmenten als JSON {#exposing-content-fragments-as-json}
 
->[!VIDEO](https://video.tv.adobe.com/v/22448?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38066?quality=12&learn=on&captions=ger)
 
 AEM Content Services ermöglicht die Erstellung von auf AEM-Seiten basierenden HTTP-Endpunkten, durch die eine Ausgabedarstellung der Inhalte in einem normalisierten JSON-Format erfolgt.
 
@@ -49,7 +49,7 @@ Im obigen Video wird die [Inhaltsfragment-Komponente](https://experienceleague.a
 
 ## Verwenden der Assets-HTTP-API
 
->[!VIDEO](https://video.tv.adobe.com/v/26390?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40325?quality=12&learn=on&captions=ger)
 
 Mit der Assets-HTTP-API wurde in AEM 6.5 eine erweiterte Unterstützung für Inhaltsfragmente eingeführt. Dadurch können Entwicklungspersonen auf einfache Weise CRUD-Vorgänge für Inhaltsfragmente durchführen. (CRUD ist die Abkürzung für Create (Erstellen), Read (Lesen), Update (Aktualisieren) und Delete (Löschen).)
 

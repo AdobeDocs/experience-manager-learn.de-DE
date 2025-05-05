@@ -24,5 +24,5 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie bei der Dokumenterstellung in Edge Delivery Services Prompt-Vorlagen für die Funktion „Varianten generieren“ verwenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428307/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441342/?learn=on&captions=ger)
 

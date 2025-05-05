@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Ein kurzes Beispiel dafür, wie Sie den Dispatcher-Validator in Ihren AEM-Entwicklungs-Workflows verwenden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/342358?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448428?quality=12&learn=on&captions=ger)
 
 ## Inhalt dieses Videos
 

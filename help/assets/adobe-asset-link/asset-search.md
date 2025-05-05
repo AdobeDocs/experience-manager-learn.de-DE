@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Mit dem Bedienfeld „Adobe Asset Link“ können kreative Benutzerinnen und Benutzer mithilfe von Keywords nach in AEM Assets gespeicherten Assets suchen oder eine Suche in einem bestimmten Ort durchführen. Zusätzlich zu den grundlegenden Suchoptionen kann mit Adobe Asset Link auch ein Asset verwendet werden, um visuell ähnliche Ergebnisse in AEM Assets zu suchen. Die visuelle Suche, die durch maschinelles Lernen mit Adobe Sensei unterstützt wird, zeigt Ergebnisse mit ästhetischen Merkmalen, die mit dem Zielbild in Verbindung stehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/34260?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38589?quality=12&learn=on&captions=ger)

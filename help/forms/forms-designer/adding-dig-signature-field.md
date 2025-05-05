@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Kurzvideo über das Hinzufügen digitaler Signaturen zu AEM-Formularen
 
->[!VIDEO](https://video.tv.adobe.com/v/3427623/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439535/?learn=on&captions=ger)

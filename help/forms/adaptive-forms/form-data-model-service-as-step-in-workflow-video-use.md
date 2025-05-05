@@ -22,7 +22,7 @@ ht-degree: 100%
 Ab AEM Forms 6.4 haben wir jetzt die Möglichkeit, das Formulardatenmodell als Teil des AEM-Workflows zu verwenden. Im folgenden Video werden die Schritte erläutert, die zum Konfigurieren des Formulardatenmodell-Schritts im AEM-Workflow erforderlich sind
 
 
->[!VIDEO](https://video.tv.adobe.com/v/21719?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330117?quality=12&learn=on&captions=ger)
 
 Um dies auf Ihrem Server zu testen, folgen Sie den folgenden Anweisungen
 * [Laden Sie das setvalue-Bundle herunter und stellen Sie es bereit](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Dies ist das benutzerdefinierte OSGI-Paket, das Metadaten-Eigenschaften festlegt.

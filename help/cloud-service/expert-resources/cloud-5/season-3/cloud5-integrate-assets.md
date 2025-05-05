@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie AEM Assets in die Dokumenterstellung integrieren können, um mit Edge Delivery Services außergewöhnliche Erlebnisse bereitzustellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428302/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448949/?quality=12&learn=on&captions=ger)
 
 
 ## Zusätzliche Ressourcen

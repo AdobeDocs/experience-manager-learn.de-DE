@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Die Komponentenkonsole bietet Entwicklerinnern bzw. Entwicklern und Admins einen zentralen Speicherort, an dem sie alle verschiedenen Komponenten in einer Sites-Implementierung verwalten können. Im folgenden Video werden die Funktionen der Komponentenkonsole beschrieben.
 
->[!VIDEO](https://video.tv.adobe.com/v/17417?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38280?quality=12&learn=on&captions=ger)
 
 Die Komponentenkonsole bietet die folgenden Funktionen:
 

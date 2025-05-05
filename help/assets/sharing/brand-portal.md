@@ -29,7 +29,7 @@ Im September 2019 führte Brand Portal vor allem die Asset-Beschaffung ein, die 
 
 Die Asset-Beschaffung in Brand Portal wird verwendet, um Assets von Drittanbieter-Agenturen und -Teams zu erfassen und sie nahtlos zur Überprüfung und Verwendung mit Experience Manager Author zu synchronisieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/29365?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32999?quality=12&learn=on&captions=ger)
 
 *Für die Verwendung der Asset-Beschaffung ist Experience Manager Author 6.5 SP2 (6.5.2) oder höher erforderlich*
 
@@ -37,7 +37,7 @@ Lesen Sie das Dokument [Aktivieren von Experience Manager Author für die Asset-
 
 ## Funktionen von und Verbesserungen an Brand Portal vom Februar 2019{#brand-portal-features-and-enhancements-644}
 
->[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40330?quality=12&learn=on&captions=ger)
 
 Die Version Februar 2019 von Brand Portal konzentriert sich auf Verbesserungen der Textsuche und von Kundinnen und Kunden häufig gewünschte Funktionen.
 
@@ -165,7 +165,7 @@ Brand Portal verwendet die Adobe I/O-Benutzeroberfläche [https://legacy-oauth.c
 
 Beue und erweiterte Funktionen, die die Abstimmung von Brand Portal mit AEM verbessern.
 
->[!VIDEO](https://video.tv.adobe.com/v/26354?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40330?quality=12&learn=on&captions=ger)
 
 ### Navigationsverbesserungen
 

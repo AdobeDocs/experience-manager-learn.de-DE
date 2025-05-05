@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Verwenden Sie die AEM-Desktop-App, um den Zugriff auf alle auf dem Desktop verwalteten Assets für alle Anwendungen und Dateiformate zu vereinfachen.
 
->[!VIDEO](https://video.tv.adobe.com/v/28868?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32777?quality=12&learn=on&captions=ger)
 
 + Ermitteln Sie Assets in AEM durch Blättern und Suchen mit einer speziellen Desktop-Anwendung
 + Optimiertes Bandbreiten-Management ermöglicht das Hochladen und Herunterladen vieler großer Assets

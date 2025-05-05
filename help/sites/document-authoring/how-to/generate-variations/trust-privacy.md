@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Adobe bei der Dokumenterstellung in Edge Delivery Services bei der Funktion „Varianten generieren“ für Vertrauen und Datenschutz sorgt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429060/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440023/?learn=on&captions=ger)

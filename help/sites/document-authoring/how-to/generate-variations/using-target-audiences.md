@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Adobe Target-Zielgruppen verwenden, um bei der Dokumenterstellung mit Edge Delivery Services die richtige Zielgruppe mit den entsprechenden Inhalten anzusprechen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428792/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437764/?learn=on&captions=ger)

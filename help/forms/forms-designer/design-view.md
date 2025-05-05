@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Kurzvideo zur Designer-Ansicht in AEM Forms Designer
 
->[!VIDEO](https://video.tv.adobe.com/v/3427615/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436826/?learn=on&captions=ger)

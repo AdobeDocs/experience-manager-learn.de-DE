@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Ihre Web-Seiten in Adobe Experience Manager durch Tagging verwalten und organisieren können.
 
->[!VIDEO](https://video.tv.adobe.com/v/32150?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36811?quality=12&learn=on&captions=ger)

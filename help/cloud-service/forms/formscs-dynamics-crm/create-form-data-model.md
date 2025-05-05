@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Das folgende Video führt Sie durch die Schritte zum Erstellen und Konfigurieren eines Formulardatenmodells.
 
->[!VIDEO](https://video.tv.adobe.com/v/340790?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444801?quality=12&learn=on&captions=ger)

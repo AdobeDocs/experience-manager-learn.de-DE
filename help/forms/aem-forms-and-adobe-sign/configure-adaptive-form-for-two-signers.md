@@ -22,7 +22,7 @@ ht-degree: 100%
 
 In diesem Video werden die verschiedenen Schritte erläutert, die zum Konfigurieren eines adaptiven Formulars mit zwei Unterzeichnenden erforderlich sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/39294?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327742?quality=12&learn=on&captions=ger)
 
 Über die folgenden Links können Assets im Zusammenhang mit diesem Video heruntergeladen werden:
 

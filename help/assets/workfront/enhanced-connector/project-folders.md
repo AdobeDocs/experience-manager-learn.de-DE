@@ -29,4 +29,4 @@ Erfahren Sie mehr über Projektordner bei Verwendung des erweiterten Connectors 
 + Zuordnung von Ordnermetadaten
 + Vererbung von Ordnermetadaten
 
->[!VIDEO](https://video.tv.adobe.com/v/337586?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454768?quality=12&learn=on&captions=ger)

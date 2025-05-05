@@ -24,7 +24,7 @@ Nachdem Sie ein PDF-Formular in ein adaptives Formular konvertiert haben, müsse
 
 Im folgenden Video werden die Schritte erläutert, die zum Konfigurieren des Formulars für direktes Signieren erforderlich sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/39574?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327704?quality=12&learn=on&captions=ger)
 
 ## Herzlichen Glückwunsch!
 

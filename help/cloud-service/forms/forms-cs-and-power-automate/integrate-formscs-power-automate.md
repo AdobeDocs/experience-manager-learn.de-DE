@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Rufen Sie Ihre Power Automate-Flüsse bei der Übermittlung eines adaptiven Formulars auf. Das folgende Video zeigt die Schritte, die zur Konfiguration und Integration von Forms CS und Microsoft Power Automate erforderlich sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/345675?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413769?quality=12&learn=on&captions=ger)

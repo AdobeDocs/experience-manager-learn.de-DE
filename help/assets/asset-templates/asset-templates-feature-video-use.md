@@ -30,10 +30,10 @@ Mit der AEM Assets-Vorlage können Marketing-Fachkräfte digitale Assets für di
 
 In diesem Video werden Konzepte und Schritte zum Generieren druckfertiger Assets in AEM unter Verwendung von Adobe InDesign, Adobe InDesign Server und AEM Assets erläutert.
 
->[!VIDEO](https://video.tv.adobe.com/v/25170?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35224?quality=12&learn=on&captions=ger)
 
 ## Technischer Überblick {#technical-overview}
 
 Dieses Video bietet einen technischen Überblick über die Funktionen der AEM Assets-Asset-Vorlage und wie AEM die Komposition von AEM Assets und Inhalten durch InDesign erleichtert, um ansprechende Druckerlebnisse zu schaffen.
 
->[!VIDEO](https://video.tv.adobe.com/v/17071?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38227?quality=12&learn=on&captions=ger)

@@ -24,7 +24,7 @@ Erstellen einer Vorlage für Web-Kanaldokumente in AEM Forms 6.4
 >[!VIDEO](https://video.tv.adobe.com/v/22342?quality=12&learn=on)
 
 Erstellen einer Vorlage für Web-Kanaldokumente in AEM Forms 6.5
->[!VIDEO](https://video.tv.adobe.com/v/27807?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34401?quality=12&learn=on&captions=ger)
 
 Die Vorlage enthält Zielbereiche/Platzhalter für verschiedene Arten von Dokumentfragmenten. Beispielsweise kann eine Vorlage Zielbereiche für Logos und einen anderen Zielbereich für Textinhalte haben.
 

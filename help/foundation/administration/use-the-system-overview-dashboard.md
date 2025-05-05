@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Die [!UICONTROL Systemübersicht] von Adobe Experience Manager (AEM) bietet einen allgemeinen Überblick über die Konfiguration, Hardware und den Zustand der AEM-Instanz über ein einzelnes Dashboard.
 
->[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40393?quality=12&learn=on&captions=ger)
 
 1. Die Systemübersicht kann wie folgt aufgerufen werden: **AEM Start** > **[!UICONTROL Tools]** > **[!UICONTROL Vorgänge]** > **[!UICONTROL Systemübersicht]**
 

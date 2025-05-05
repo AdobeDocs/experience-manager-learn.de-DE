@@ -26,7 +26,7 @@ Um eine Batch-API zu verwenden, erstellen Sie eine Batch-Konfiguration und führ
 >Stellen Sie sicher, dass der oder die AEM-Benutzende zur ```forms-users```-Gruppe gehört, um API-Aufrufe durchzuführen.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/340241?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345713?quality=12&learn=on&captions=ger)
 
 ## Erstellen einer Batch-Konfiguration
 

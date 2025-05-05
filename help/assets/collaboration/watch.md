@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Benachrichtigungen erhalten können, wenn ein überwachtes Asset, ein überwachter Ordner oder eine überwachte Sammlung in AEM Assets geändert wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427646/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439634/?learn=on&captions=ger)
 
 >[!TIP]
 >

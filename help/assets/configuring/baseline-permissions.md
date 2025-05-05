@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Das Verwalten des Benutzerzugriffs auf die [Baseline-Asset-Ordner](./baseline-folders.md) ist ein wichtiger Aspekt in der Governance und stellt sicher, dass die Prozesse ordnungsgemäß unterstützt werden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/37696?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327033?quality=12&learn=on&captions=ger)

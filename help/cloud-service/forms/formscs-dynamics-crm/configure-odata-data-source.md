@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Das folgende Video führt Sie durch die Schritte zum Erstellen einer Cloud-Service-Konfiguration für die Verbindung mit Microsoft Dynamics.
 
->[!VIDEO](https://video.tv.adobe.com/v/340758?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448307?quality=12&learn=on&captions=ger)

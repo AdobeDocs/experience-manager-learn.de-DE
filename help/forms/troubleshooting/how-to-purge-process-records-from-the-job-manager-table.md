@@ -20,4 +20,4 @@ ht-degree: 100%
 
 *In diesem Video werden die Schritte zum Bereinigen von Prozessdatensätzen im Job Manager erläutert.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335577?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437676?quality=12&learn=on&captions=ger)

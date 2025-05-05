@@ -28,5 +28,5 @@ In diesem Video erfahren Sie Folgendes:
 + Sie lernen, wie Varianten in einem realen Szenario verwendet werden können.
 + Sie überprüfen die GraphQL-Syntax, um eine bestimmte Variante anzufordern.
 
->[!VIDEO](https://video.tv.adobe.com/v/333295?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449329?quality=12&learn=on&captions=ger)
 

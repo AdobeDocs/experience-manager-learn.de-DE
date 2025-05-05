@@ -20,4 +20,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie der Inhaltsfragment-Editor von AEM die Suche nach Inhaltsfragmenten mithilfe der schnellen Filterung erleichtert. Mit dieser Funktion lässt sich die Suche nach bestimmten Inhaltsfragmenten schnell und mühelos durchführen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419311/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436965/?learn=on&captions=ger)

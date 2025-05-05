@@ -22,4 +22,4 @@ ht-degree: 100%
 
 In diesem Tutorial mit schrittweisen Anleitungen erfahren Sie, wie Sie Inhalte in AEM as a Cloud Service wiederherstellen. Erfahren Sie, wann und wie Sie frühere Inhalte effizient wiederherstellen, um die Integrität der Inhalte sicherzustellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3416149/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441317/?learn=on&enablevpops&captions=ger)

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Metadatenprofile ermöglichen die automatische Anwendung von Standardmetadaten auf Assets in Asset-Ordnern. Dadurch werden AEM-Benutzende bei der Metadatenverwaltung entlastet und die Metadatenkonsistenz wird erhöht.
 
->[!VIDEO](https://video.tv.adobe.com/v/33974?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37278?quality=12&learn=on&captions=ger)

@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Konfigurieren Sie ein adaptives Formular, um den Überprüfungs-Workflow auszulösen.
 
->[!VIDEO](https://video.tv.adobe.com/v/332435?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446514?quality=12&learn=on&captions=ger)

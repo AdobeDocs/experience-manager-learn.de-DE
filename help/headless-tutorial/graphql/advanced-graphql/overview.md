@@ -45,7 +45,7 @@ Dieses Tutorial behandelt folgende Themen:
 
 Das folgende Video bietet einen allgemeinen Überblick über die Konzepte, die in diesem Tutorial behandelt werden. Das Tutorial umfasst das Definieren von Inhaltsfragmentmodellen mit erweiterten Datentypen, das Verschachteln von Inhaltsfragmenten und das Beibehalten von GraphQL-Abfragen in AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/340035?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446136?quality=12&learn=on&captions=ger)
 
 >[!CAUTION]
 >

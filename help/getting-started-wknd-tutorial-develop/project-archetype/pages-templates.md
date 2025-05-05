@@ -76,7 +76,7 @@ In diesem Teil des Tutorials erstellen Sie eine neue Artikelseitenvorlage, die v
 
 Normalerweise beginnt die Planung für eine neue Website mit Mockups und statischen Designs. [Adobe XD](https://helpx.adobe.com/de/support/xd.html) ist ein Design-Tool zum Erstellen von Anwendererlebnissen. Als Nächstes sehen wir uns ein UI-Kit und Mockups an, um die Struktur der Artikelseitenvorlage zu planen.
 
->[!VIDEO](https://video.tv.adobe.com/v/30214?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35925?quality=12&learn=on&captions=ger)
 
 **Laden Sie die [Design-Datei für WKND-Artikel](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd)** herunter.
 
@@ -96,7 +96,7 @@ Für [bearbeitbare Vorlagen](https://experienceleague.adobe.com/docs/experience-
 
 Erstellen Sie anschließend eine Vorlage in AEM, die der Struktur der Mockups entspricht. Dies geschieht in einer lokalen Instanz von AEM. Führen Sie die folgenden Schritte aus:
 
->[!VIDEO](https://video.tv.adobe.com/v/330991?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35928?quality=12&learn=on&captions=ger)
 
 Allgemeine Schritte für das obige Video:
 
@@ -164,7 +164,7 @@ Eine gängige Praxis bei der Erstellung globaler Inhalte, wie Kopf- oder Fußzei
 
 Der AEM-Projektarchetyp generiert eine Kopf- und Fußzeile. Aktualisieren Sie anschließend die Experience Fragments, um sie an die Mockups anzupassen. Führen Sie die folgenden Schritte aus:
 
->[!VIDEO](https://video.tv.adobe.com/v/330992?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447498?quality=12&learn=on&captions=ger)
 
 Allgemeine Schritte für das obige Video:
 
@@ -210,7 +210,7 @@ Allgemeine Schritte für das obige Video:
 
 Erstellen Sie anschließend eine Seite mithilfe der Artikelseiten-Vorlage. Verfassen Sie den Inhalt der Seite so, dass er mit den Mockups der Site übereinstimmt. Führen Sie die folgenden Schritte aus:
 
->[!VIDEO](https://video.tv.adobe.com/v/330993?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446451?quality=12&learn=on&captions=ger)
 
 Allgemeine Schritte für das obige Video:
 

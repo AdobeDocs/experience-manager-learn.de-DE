@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie das Asset-Management in AEM as a Cloud Service verbessern, indem Sie mit blockierten Tags die Anwendung von kultursensiblen, irrelevanten oder kontroversen Smart-Tags verhindern.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426839/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448509/?learn=on&captions=ger)

@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie die Vererbung auf einer Site anzeigen oder verwalten und Rollout-Vorgänge mithilfe der Live Copy-Übersichts-Konsole durchführen.
 
->[!VIDEO](https://video.tv.adobe.com/v/36680?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326733?quality=12&learn=on&captions=ger)

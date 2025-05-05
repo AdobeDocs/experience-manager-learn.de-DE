@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Nutzung vorhandener XDP-Vorlagen mit AEM Forms- und Sign-Integration.
 
->[!VIDEO](https://video.tv.adobe.com/v/39705?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327802?quality=12&learn=on&captions=ger)
 
 Über die folgenden Links können Assets im Zusammenhang mit diesem Video heruntergeladen werden:
 

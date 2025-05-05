@@ -23,7 +23,7 @@ ht-degree: 100%
 
 In diesem Video werden die verschiedenen Schritte erläutert, die zum Konfigurieren eines adaptiven Formulars mit einer einzigen unterzeichnenden Person erforderlich sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/39475?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327730?quality=12&learn=on&captions=ger)
 
 Assets, die sich auf dieses Video beziehen, können über den folgenden Link heruntergeladen werden.
 

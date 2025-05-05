@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Das folgende Video führt Sie durch die Schritte zum Erstellen und Konfigurieren eines adaptiven Formulars zum Erstellen und Anzeigen von Lead-Objekten.
 
->[!VIDEO](https://video.tv.adobe.com/v/340791?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449317?quality=12&learn=on&captions=ger)

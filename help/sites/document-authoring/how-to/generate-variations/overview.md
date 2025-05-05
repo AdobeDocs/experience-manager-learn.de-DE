@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Einführung in das Generieren von Varianten in Edge Delivery Services und Erläuterung des Nutzens für Marketing-Fachkräfte.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428304/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438563/?learn=on&captions=ger)

@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Die Dynamic Media Viewer-Verbesserungen in AEM 6.5 umfassen die Unterstützung von 360-Grad-Video-Rendern, 360-Grad-Media-Viewern (video360Social und video360VR) und die Möglichkeit, benutzerdefinierte Videominiaturen auszuwählen.
 
->[!VIDEO](https://video.tv.adobe.com/v/26391?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34488?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >

@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit einer Tags-Regel Parameter laden, an eine Seitenanfrage übergeben und einen Target-Aufruf von Ihrer Site-Seite aus auslösen. Informationen zu Web-Seiten werden mithilfe der Adobe Client-Datenschicht abgerufen und als Parameter übergeben, über die Sie Daten zum Besuchererlebnis auf einer Web-Seite erfassen und speichern und dann den Zugriff auf diese Daten erleichtern können.
 
->[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328996?quality=12&learn=on&captions=ger)
 
 ## Seitenladeregel
 

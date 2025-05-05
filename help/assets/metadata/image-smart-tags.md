@@ -23,14 +23,14 @@ ht-degree: 100%
 
 Die Smart-Tags für Bilder von AEM Assets erweitern die Suche von AEM Assets, indem sie automatisch abgeleitete Metadaten-Tags zu Bild-Assets hinzufügen. Dies verbessert das Authoring-Erlebnis, da es einfacher und schneller ist, das richtige Bild zu finden.
 
->[!VIDEO](https://video.tv.adobe.com/v/17019?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444063?quality=12&learn=on&captions=ger)
 
 ## Einrichtung für AEM 6.x{#set-up}
 
 >[!NOTE]
 > Smart-Tags für Bilder werden automatisch für AEM as a Cloud Service bereitgestellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/17023?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444174?quality=12&learn=on&captions=ger)
 
 Stellen Sie vor der Verwendung des Smart Content Service Folgendes sicher, um eine Integration in Adobe I/O zu erstellen:
 

@@ -30,7 +30,7 @@ Häufige Anwendungsfälle umfassen:
 
 ## Vorgehensweise
 
->[!VIDEO](https://video.tv.adobe.com/v/327313?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437020?quality=12&learn=on&captions=ger)
 
 In diesem Tutorial erstellen wir einen Asset Compute-Metadaten-Sekundär, der die am häufigsten verwendeten Farben in einem Bild-Asset ableitet und die Farbnamen in die Metadaten des Assets in AEM schreibt. Während der Sekundär selbst recht einfach ist, greift dieses Tutorial darauf zurück, um das Erstellen, Entwickeln und Bereitstellen eines benutzerdefinierten Asset Compute-Sekundärs für die Verwendung mit AEM as a Cloud Service zu untersuchen.
 

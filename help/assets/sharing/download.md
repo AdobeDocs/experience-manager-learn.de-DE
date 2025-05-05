@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Assets und deren Ausgabedarstellungen zur Verwendung und Freigabe auf Ihren lokalen Computer herunterladen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/35090?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39506?quality=12&learn=on&captions=ger)

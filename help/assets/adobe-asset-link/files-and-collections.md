@@ -22,5 +22,5 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie schnell und einfach über das Asset Link-Bedienfeld auf AEM Assets-Dateien und -Sammlungen zugreifen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/33884?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38660?quality=12&learn=on&captions=ger)
 

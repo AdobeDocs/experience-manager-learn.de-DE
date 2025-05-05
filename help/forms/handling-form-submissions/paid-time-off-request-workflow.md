@@ -31,11 +31,11 @@ Um die obige Anforderung zu erfüllen, verwenden wir ein ausgeblendetes Feld mit
 
 **Konfigurieren des Formulars zur Auslösung des Workflows**
 
->[!VIDEO](https://video.tv.adobe.com/v/28406?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33087?quality=12&learn=on&captions=ger)
 
 **Workflow-Anleitung**
 
->[!VIDEO](https://video.tv.adobe.com/v/28407?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33088?quality=12&learn=on&captions=ger)
 
 **Ansicht der Absenderin bzw. des Absenders des Formulars zur Zeit der Anfrage**
 

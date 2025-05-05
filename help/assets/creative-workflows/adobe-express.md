@@ -22,6 +22,6 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit Adobe Express mühelos Inhalte in Adobe Experience Manager Assets erstellen und bearbeiten. Dieses Video führt Sie durch die Verbesserung von Inhalts-Workflows und zeigt, wie Sie sowohl vorhandene Assets bearbeiten als auch neue Assets erstellen. Der Schwerpunkt liegt dabei auf der Optimierung von Effizienz und Benutzerfreundlichkeit.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425972/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444085/?learn=on&captions=ger)
 
 Erfahren Sie außerdem, wie Sie die [native AEM Assets-Integration mit Adobe Express](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/integration-adobe-express/native-integration-adobe-express) einrichten, um über Adobe Express nahtlos auf AEM Assets zuzugreifen.

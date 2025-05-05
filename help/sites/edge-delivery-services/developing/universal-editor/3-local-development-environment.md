@@ -27,7 +27,7 @@ Die Entwicklungs-Tools und -prozesse für ein Edge Delivery Services-Website-Pro
 
 Dieses Video bietet einen Überblick über die Entwicklungstopologie für ein Edge Delivery Services-Website-Projekt, das mit dem universellen Editor bearbeitet werden kann.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443978/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3443987/?learn=on&enablevpops&captions=ger)
 
 +++Siehe zusätzliche Details zur Entwicklungstopologie.
 

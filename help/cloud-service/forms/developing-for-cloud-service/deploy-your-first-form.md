@@ -29,7 +29,7 @@ Erstellen Sie zwei Ordner mit dem Namen „FormTemplates“ und „BankingApplic
 
 Um diese Assets über IntelliJ und das Repo-Tool mit Ihrem AEM-Projekt zu synchronisieren, sehen Sie sich das folgende Video an:
 
->[!VIDEO](https://video.tv.adobe.com/v/336937?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448631?quality=12&learn=on&captions=ger)
 
 ## Nächste Schritte
 

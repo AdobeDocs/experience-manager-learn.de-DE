@@ -39,8 +39,8 @@ Das in diesem Workflow verwendete Beispielformular basiert auf einer benutzerdef
 * Das adaptive Beispielformular wird in einem Ordner namens [Application Forms](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments/applicationforms) hinterlegt.
 
 Im folgenden Video wird erläutert, wie Sie ein adaptives Formular so konfigurieren, dass es einen AEM-Workflow auslöst.
->[!VIDEO](https://video.tv.adobe.com/v/40258?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329437?quality=12&learn=on&captions=ger)
 
 Das folgende Video zeigt die Payload des Workflows und andere Details im CRX-Repository.
 
->[!VIDEO](https://video.tv.adobe.com/v/40259?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329445?quality=12&learn=on&captions=ger)

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie die Prüfungsaufgabe von AEM Assets die gängigsten Prüfungs- und Genehmigungs-Workflows erleichtert.
 
->[!VIDEO](https://video.tv.adobe.com/v/32050?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36738?quality=12&learn=on&captions=ger)

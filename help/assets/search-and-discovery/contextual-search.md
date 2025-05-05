@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Assets mithilfe der Kontextsuche in Adobe Experience Manager Assets mit kostenlosen Sprachabfragen effizient finden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428667/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438963/?learn=on&captions=ger)
 
 ## Ein-/Ausschalten der Kontextsuche
 

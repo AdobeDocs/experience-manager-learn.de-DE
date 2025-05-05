@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit dem Add-on für die Inhaltsautomatisierung, das Adobe Experience Manager Assets as a Cloud Service mit den Adobe Creative Cloud Service-APIs integriert, Ihre Assets verarbeiten können.
 
->[!VIDEO](https://video.tv.adobe.com/v/336540?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444092?quality=12&learn=on&captions=ger)

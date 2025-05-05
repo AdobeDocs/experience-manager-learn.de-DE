@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie auf den verfügbaren Registerkarten navigieren und die Konfigurationsoptionen an die Anforderungen Ihres Unternehmens anpassen können. In diesem Video erfahren Admins mehr über die verschiedenen Einstellungen und erhalten allgemeine Anweisungen dazu, wie sie sich für optimale Leistung und Ausrichtung an den Organisationszielen anpassen lassen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3439311/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3439320/?learn=on&enablevpops&captions=ger)

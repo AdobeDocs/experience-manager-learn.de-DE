@@ -23,7 +23,7 @@ Durch den Zugriff auf die Protokolle des AEM SDK können entweder die lokalen Sc
 
 ## AEM-Protokolle
 
->[!VIDEO](https://video.tv.adobe.com/v/34334?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38103?quality=12&learn=on&captions=ger)
 
 Protokolle dienen als erste Anlaufstelle für das Debugging von AEM Anwendungen, hängen jedoch von einer angemessenen Protokollierung in der bereitgestellten AEM-Anwendung ab. Adobe empfiehlt, die lokale Entwicklung und die Konfigurationen für die AEM as a Cloud Service Dev-Protokollierung so ähnlich wie möglich zu halten. Dadurch wird die Protokollsichtbarkeit für den lokalen Schnellstart des AEM SDK und Entwicklungsumgebungen von AEM as a Cloud Service normalisiert, was das Anpassen von Konfigurationen und Neuimplementierungen reduziert.
 

@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Grundlegende Funktionalität und Funktionen der Authoring-Konsole für Inhaltsfragmente von AEM as a Cloud Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/3409492?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449341?quality=12&learn=on&captions=ger)

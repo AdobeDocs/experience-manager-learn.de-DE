@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie die Vererbung zwischen einer Live Copy und ihrem Blueprint auf Komponentenebene verwalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/36678?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/41597?quality=12&learn=on&captions=ger)

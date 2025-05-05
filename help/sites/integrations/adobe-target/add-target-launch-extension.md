@@ -26,7 +26,7 @@ Um diesem Video zu folgen, müssen Sie bereits [Tags in Adobe Experience Platfor
 
 Erfahren Sie, wie Sie Adobe Target mithilfe von Tags für Ihre AEM-Website aktivieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/41247?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329004?quality=12&learn=on&captions=ger)
 
 ## Nächste Schritte
 

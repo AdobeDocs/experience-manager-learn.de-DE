@@ -21,7 +21,7 @@ ht-degree: 100%
 
 In diesem Teil erstellen wir ein Dokumentfragment, das den Namen und die Adresse der Empfängerin bzw. des Empfängers enthält.
 
->[!VIDEO](https://video.tv.adobe.com/v/22350?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36353?quality=12&learn=on&captions=ger)
 
 Dokumentfragmente enthalten den Textinhalt interaktiver Kommunikationsdokumente. Dieser Textinhalt kann statischer Text sein oder aus den zugrunde liegenden Datenmodell-Elementwerten eingefügt werden. Beispiel: Liebe/Lieber {name}, wobei „Liebe/Lieber“ statischer Text und {name} der Name des Formulardaten-Elements ist. Zur Laufzeit wird dies je nach dem Wert des name-Elements in „Liebe Beate Bauer“ oder „Lieber Stefan Müller“ aufgelöst.
 

@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie das AEM-Import-Tool verwenden und konfigurieren, um mit der Dokumenterstellung erstellte Sites zu Edge Delivery Services zu migrieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429595/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443705/?learn=on&captions=ger)

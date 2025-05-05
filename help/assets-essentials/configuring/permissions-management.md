@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Unternehmen mit der Berechtigungsverwaltung von AEM Assets den Zugriff auf Assets steuern, ihre Marke schützen und die Compliance sicherstellen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/342113?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3410295?quality=12&learn=on&captions=ger)

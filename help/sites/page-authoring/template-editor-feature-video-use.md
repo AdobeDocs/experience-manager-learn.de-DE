@@ -23,7 +23,7 @@ ht-degree: 100%
 
 Bearbeitbare Vorlagen ermöglichen es spezialisierten Autorinnen und Autoren, Seitenvorlagen zu erstellen und zu aktualisieren und erweiterte Richtlinienkonfigurationen mit Adobe Experience Manager (AEM) Sites zu verwalten.
 
->[!VIDEO](https://video.tv.adobe.com/v/326784?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449620?quality=12&learn=on&captions=ger)
 
 Bearbeitbare Vorlagen werden zum Erstellen neuer AEM Sites empfohlen.
 

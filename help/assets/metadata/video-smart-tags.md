@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Experience Manager Assets nutzt Adobe Sensei, um Video-Assets intelligent mit Keywords zu versehen, die wichtige Elemente des Videos beschreiben, sodass sie durch die Suche nach Keywords von AEM-Benutzenden leicht zu erkennen sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/327005?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340529?quality=12&learn=on&captions=ger)

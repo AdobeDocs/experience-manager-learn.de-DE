@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Mit dem Regeleditor können Benutzende Logik zu adaptiven AEM-Formularen hinzufügen. AEM 6.3 verbessert den Regeleditor auf verschiedene Weise, um sowohl technischen als auch nichttechnischen Benutzenden die intelligente Nutzung zu erleichtern und zu beschleunigen.
 
->[!VIDEO](https://video.tv.adobe.com/v/19653?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/39209?quality=12&learn=on&captions=ger)
 
 **Zu den Verbesserungen am Regeleditor gehören:**
 

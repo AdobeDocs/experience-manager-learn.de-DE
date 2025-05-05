@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Es gibt eine Reihe von Vorlagen, die standardmäßig bereitgestellt werden und die Sie im Istzustand verwenden oder nach Ihren Wünschen anpassen können. Vorlagen können auch in AEM Forms Designer erstellt und verwaltet werden. Sie können mit einer leeren Seite, Vorlage, Tabelle, PDF oder Microsoft Word-Datei beginnen. In diesem Video werden alle diese Optionen und sofort verfügbare Funktionen behandelt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427678/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439157/?learn=on&captions=ger)

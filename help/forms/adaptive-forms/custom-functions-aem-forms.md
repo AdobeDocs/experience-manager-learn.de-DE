@@ -85,4 +85,4 @@ Wenn Sie Probleme beim Erstellen der benutzerdefinierten Funktionen haben, könn
 ## Verwenden benutzerdefinierter Funktionen
 
 Das folgende Video führt Sie durch die Schritte, die bei der Verwendung einer benutzerdefinierten Funktion im Regeleditor eines adaptiven Formulars erforderlich sind:
->[!VIDEO](https://video.tv.adobe.com/v/340305?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445850?quality=12&learn=on&captions=ger)

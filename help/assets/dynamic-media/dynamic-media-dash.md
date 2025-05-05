@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie das adaptive DASH-Streaming-Protokoll von AEM Assets Dynamic Media sicherstellt, dass die bereitgestellten Videos an die verfügbare Bandbreite angepasst werden, und eine reibungslose Wiedergabe gewährleistet.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429072/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443626/?learn=on&captions=ger)
