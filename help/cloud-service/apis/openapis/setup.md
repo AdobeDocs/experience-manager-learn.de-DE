@@ -42,7 +42,7 @@ Die Modernisierung der AEM as a Cloud Service-Umgebung ist eine einmalige Aktivi
 
 ### AEM-Instanz aktualisieren{#update-aem-instance}
 
-Um die AEM-Instanz zu aktualisieren, klicken Sie im Abschnitt _Umgebungen_ von Adobe {0](https://my.cloudmanager.adobe.com/)Cloud Manager auf das Symbol _Auslassungspunkte_ neben dem Umgebungsnamen und wählen Sie die Option **Aktualisieren** aus.[
+Um die AEM-Instanz zu aktualisieren, klicken Sie im Abschnitt _Umgebungen_ von Adobe &lbrace;0[&#128279;](https://my.cloudmanager.adobe.com/)Cloud Manager auf das Symbol _Auslassungspunkte_ neben dem Umgebungsnamen und wählen Sie die Option **Aktualisieren** aus.
 
 ![AEM-Instanz aktualisieren](./assets/setup/update-aem-instance.png)
 
@@ -92,7 +92,7 @@ Das ADC-Projekt wird verwendet, um die gewünschten APIs hinzuzufügen, seine Au
 
 Erstellen eines ADC-Projekts:
 
-1. Melden Sie sich mit Ihrer Adobe ID bei ](https://developer.adobe.com/console) [Adobe Developer Console an.
+1. Melden Sie sich mit Ihrer Adobe ID bei [&#128279;](https://developer.adobe.com/console) Adobe Developer Console an.
 
    ![Adobe-Entwicklerkonsole](./assets/setup/adobe-developer-console.png)
 

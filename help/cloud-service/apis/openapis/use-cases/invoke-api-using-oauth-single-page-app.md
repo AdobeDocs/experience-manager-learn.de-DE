@@ -375,7 +375,7 @@ Die allgemeinen Entwicklungsschritte lauten:
 
 Der Schritt zum Konfigurieren des ADC _Projekts wird_ der [OpenAPI-basierten AEM-APIs](../setup.md) wiederholt. Wiederholt wird, um die Assets Sites-API hinzuzufügen und ihre Authentifizierungsmethode als OAuth-Einzelseiten-App zu konfigurieren.
 
-1. Öffnen Sie in der {0](https://developer.adobe.com/console/projects)Adobe Developer Console} das gewünschte Projekt.[
+1. Öffnen Sie in der {0[&#128279;](https://developer.adobe.com/console/projects)Adobe Developer Console} das gewünschte Projekt.
 
 1. Um AEM-APIs hinzuzufügen, klicken Sie auf die Schaltfläche **API hinzufügen**.
 
