@@ -8,18 +8,18 @@ version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
 source-git-commit: ebc609ae621ea5d4d0eba0e28202448b6eaeb8cc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '454'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 
 # AEM Assets-Videos und -Tutorials {#assets}
 
-+ [Übersicht](overview.md)
++ [Überblick](overview.md)
 
-+ Video-Wiedergabelisten{#video-playlists}
++ Video-Playlists{#video-playlists}
    + [Assets-Ansicht](playlists/assets-view.md)
    + [Admin-Ansicht](playlists/admin-view.md)
 
@@ -34,7 +34,7 @@ ht-degree: 92%
    + [Verarbeitungsprofile](configuring/processing-profiles.md)
    + [Automatisch startende Workflows](configuring/auto-start-workflows.md)
 
-+ Erstellung{#authoring}
++ Authoring{#authoring}
    + [Wechseln von Ansichten](./authoring/switch-views.md)
    + [Navigation](./authoring/navigation.md)
    + [Grundlegende Vorgänge](./authoring/basic-operations.md)
@@ -50,7 +50,7 @@ ht-degree: 92%
    + [Versionen](./collaboration/versions.md)
    + [Prüfungsaufgabe](./collaboration/review-task.md)
 
-+ Suche und Erkennung{#search-and-discovery}
++ Suche und Entdeckung{#search-and-discovery}
    + [Suchen](./search-and-discovery/search.md)
    + [Kontextsuche](./search-and-discovery/contextual-search.md)
    + [Integration mit Adobe Firefly](./search-and-discovery/adobe-firefly.md)
@@ -78,7 +78,7 @@ ht-degree: 92%
    + [Importieren und Exportieren von Metadaten](metadata/metadata-import-export.md)
 
 + Content Hub{#content-hub}
-   + [Übersicht](./content-hub/overview.md)
+   + [Überblick](./content-hub/overview.md)
    + [Setup](./content-hub/set-up.md)
    + [Konfigurieren](./content-hub/configure.md)
    + [Hinzufügen von Assets](./content-hub/add-assets.md)
@@ -111,7 +111,7 @@ ht-degree: 92%
       + [Themenerstellung mit Asset-Freigabe-Commons](./sharing/asset-share-commons-feature-video-theming.md)
       + [Asset Share Commons-Asset-Kits](./sharing/asset-share/asset-share-commons-asset-kits.md)
 
-+ Creative-Workflows{#creative-workflows}
++ Kreative Workflows{#creative-workflows}
    + [Integration mit Adobe Express](./creative-workflows/adobe-express.md)
    + [Adobe Express und AEM Assets](./creative-workflows/adobe-express-aem-assets.md)
    + [AEM Desktop App](./creative-workflows/aem-desktop-app.md)
@@ -132,7 +132,7 @@ ht-degree: 92%
    + [Asset-Suche](./adobe-asset-link/asset-search.md)
 
 + Inhaltsautomatisierung{#content-automation}
-   + [Übersicht](./content-automation/overview.md)
+   + [Überblick](./content-automation/overview.md)
    + [Kreative Vorgänge](./content-automation/creative-operations.md)
    + [Photoshop-Aktionen](./content-automation/photoshop-actions.md)
 
@@ -157,7 +157,7 @@ ht-degree: 92%
       + [Viewer mit Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
    + 3D {#3d}
       + [Dynamic Media 3D](dynamic-media/dynamic-media-3d-feature-video.md)
-   + Verwenden von mit AEM Sites {#dm-with-aem-sites}
+   + Verwendung mit AEM Sites {#dm-with-aem-sites}
       + [Experience Fragments](dynamic-media/dynamic-media-experience-fragments-feature-video-use.md)
       + [Dynamic Media-Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
 
@@ -181,8 +181,8 @@ ht-degree: 92%
    + Verbesserter Connector{#enhanced-connector}
       + [Grundlegendes zum erweiterten Connector](./workfront/enhanced-connector/basics.md)
       + [Projektordner](./workfront/enhanced-connector/project-folders.md)
-      + AEM Experts-Reihe{#aem-experts-series}
-         + [Übersicht](./workfront/enhanced-connector/aem-experts-series/overview.md)
+      + AEM-Expertenreihe{#aem-experts-series}
+         + [Überblick](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [Setup](./workfront/enhanced-connector/aem-experts-series/setup.md)
          + [Workfront-Formulare und AEM-Metadaten](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
          + [Tags, projektverknüpfte Ordner und Ordnermetadaten](./workfront/enhanced-connector/aem-experts-series/aem-tags-project-linked-folders-and-folder-metadata.md)

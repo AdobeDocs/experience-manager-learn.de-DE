@@ -12,7 +12,7 @@ last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 duration: 3508
 source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1302'
 ht-degree: 100%
 
@@ -235,7 +235,7 @@ Die AEM-Entwicklung besteht in erster Linie aus der Java- und Frontend-Entwicklu
 
 __[IntelliJ IDEA](https://www.jetbrains.com/idea/)__ ist eine leistungsstarke IDE für die Java-Entwicklung. IntelliJ IDEA gibt es in zwei Varianten, einer kostenlosen Community-Edition und einer kommerziellen (kostenpflichtigen) Ultimate-Version. Die kostenlose Community-Version ist für die AEM-Entwicklung ausreichend, die Ultimate-Version [erweitert jedoch den Funktionsumfang](https://www.jetbrains.com/idea/download).
 
->[!VIDEO](https://video.tv.adobe.com/v/39740?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26089?quality=12&learn=on)
 
 + [IntelliJ IDEA herunterladen](https://www.jetbrains.com/idea/download)
 + [Repo-Tool herunterladen](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#installation)

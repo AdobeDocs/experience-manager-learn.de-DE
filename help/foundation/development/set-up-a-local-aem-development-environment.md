@@ -12,7 +12,7 @@ doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
 duration: 4537
 source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2408'
 ht-degree: 100%
 
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Anleitung zum Einrichten einer lokalen Entwicklung für Adobe Experience Manager, AEM. Behandelt wichtige Themen wie lokale Installation, Apache Maven, integrierte Entwicklungsumgebungen und Debuggen/Fehlerbehebung. Die Entwicklung mit **Eclipse IDE, CRXDE Lite, Visual Studio Code und IntelliJ** wird diskutiert.
 
-## Übersicht
+## Überblick
 
 Die Einrichtung einer lokalen Entwicklungsumgebung ist der erste Schritt bei der Entwicklung für Adobe Experience Manager oder AEM. Nehmen Sie sich Zeit für die Einrichtung einer qualitätsorientierten Entwicklungsumgebung, um Ihre Produktivität zu steigern und schneller besseren Code zu schreiben. Wir können eine lokale AEM-Entwicklungsumgebung in vier Bereiche unterteilen:
 
@@ -83,7 +83,7 @@ Eine Alternative zum Doppelklicken auf die JAR-Datei besteht darin, AEM über di
 $ java -Xmx2048M -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=30303 -jar aem-author-p4502.jar -gui -r"author,localdev"
 ```
 
-Hier sind die `-X` JVM-Optionen und die `-D` zusätzliche Framework-Eigenschaften. Weitere Informationen finden Sie unter [Bereitstellen und Verwalten einer AEM-Instanz](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=de) und unter [Weitere in der Schnellstartdatei verfügbare Optionen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/custom-standalone-install.html?lang=de#further-options-available-from-the-quickstart-file).
+Hier sind die `-X` JVM-Optionen und die `-D` zusätzliche Framework-Eigenschaften. Weitere Informationen finden Sie unter [Bereitstellen und Verwalten einer AEM-Instanz](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=de) und unter [Weitere in der Schnellstartdatei verfügbare Optionen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/custom-standalone-install.html#further-options-available-from-the-quickstart-file).
 
 ## Installieren von Apache Maven
 
@@ -161,7 +161,7 @@ Die **[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** ist eine der beliebte
 1. Laden Sie die [!DNL IntelliJ IDEA] herunter und installieren Sie sie: [https://www.jetbrains.com/idea/download](https://www.jetbrains.com/idea/download)
 1. Installieren Sie [!DNL Repo] (Befehlszeilen-Tool): [https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#installation)
 
->[!VIDEO](https://video.tv.adobe.com/v/39740?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26089?quality=12&learn=on)
 
 * 00:00 – Importieren des Maven Projects
 * 05:47 – Erstellen und Bereitstellen von Quell-Code mit Maven

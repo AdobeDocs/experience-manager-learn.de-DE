@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 63c23f22-533d-486c-846b-fae22a4d68db
 duration: 253
 source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '621'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -73,5 +73,5 @@ Service-Anmeldeinformationen sind die echten Anmeldeinformationen, die in allen 
 
 + [Beispielanwendung herunterladen](./assets/aem-guides_token-authentication-external-application.zip)
 + Andere Code-Beispiele für die JWT-Erstellung und den -Austausch
-   + [Code-Beispiele für Node.js, Java, Python, C#.NET und PHP](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples)
+   + [Code-Beispiele für Node.js, Java, Python, C#.NET und PHP](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples?lang=de)
    + [JavaScript/Axios-basiertes Code-Beispiel](https://github.com/adobe/aemcs-api-client-lib)

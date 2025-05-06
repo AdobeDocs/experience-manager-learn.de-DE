@@ -13,9 +13,9 @@ doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 duration: 881
 source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1963'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ Integrationen mit Adobe Experience Manager (AEM) as a Cloud Service müssen in d
 
 AEM kann mit anderen Adobe-Produkten mithilfe von [über Adobe Developer Console verwaltetes S2S OAuth](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) integriert werden. Bei benutzerdefinierten Integrationen mit Dienstkonten werden JWT-Anmeldedaten in der AEM Developer Console verwendet und verwaltet.
 
->[!VIDEO](https://video.tv.adobe.com/v/3412600?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
 Service-Anmeldeinformationen sehen zwar ähnlich aus wie [Zugriffstoken für die lokale Entwicklung](./local-development-access-token.md), unterscheiden sich aber in einigen wichtigen Punkten:
 
@@ -149,7 +149,7 @@ function getCommandLineParams() {
 
 Wenn die Dienstanmeldeinformationen gelesen sind, werden sie zum Generieren eines JWT verwendet, das dann über Adobe IMS-APIs gegen ein Zugriffs-Token ausgetauscht wird. Mit diesem Zugriffs-Token können Sie dann auf AEM as a Cloud Service zugreifen.
 
-Diese Beispielanwendung basiert auf Node.js. Daher empfiehlt es sich, das npm-Modul [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) zu verwenden, um (1) die JWT-Generierung und (2) den Austausch mit Adobe IMS zu vereinfachen. Wenn Ihre Anwendung in einer anderen Sprache entwickelt wurde, sehen Sie sich in [den entsprechenden Code-Beispielen](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples) an, wie die HTTP-Anfrage an Adobe IMS mithilfe anderer Programmiersprachen erstellt wird.
+Diese Beispielanwendung basiert auf Node.js. Daher empfiehlt es sich, das npm-Modul [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) zu verwenden, um (1) die JWT-Generierung und (2) den Austausch mit Adobe IMS zu vereinfachen. Wenn Ihre Anwendung in einer anderen Sprache entwickelt wurde, sehen Sie sich in [den entsprechenden Code-Beispielen](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples?lang=de) an, wie die HTTP-Anfrage an Adobe IMS mithilfe anderer Programmiersprachen erstellt wird.
 
 1. Aktualisieren Sie `getAccessToken(..)`, um den Inhalt der JSON-Datei zu überprüfen und festzustellen, ob es sich um ein lokales Entwicklungs-Zugriffs-Token oder um Dienstanmeldeinformationen handelt. Dies können Sie leicht feststellen, indem Sie prüfen, ob die Eigenschaft `.accessToken` vorhanden ist, was nur bei JSON-Zugriffs-Token für die lokale Entwicklung der Fall ist.
 

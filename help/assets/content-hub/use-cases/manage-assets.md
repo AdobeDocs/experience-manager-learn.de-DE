@@ -10,16 +10,16 @@ doc-type: Value Video
 duration: 321
 last-substantial-update: 2025-04-15T00:00:00Z
 jira: KT-17796
-source-git-commit: ebc609ae621ea5d4d0eba0e28202448b6eaeb8cc
-workflow-type: tm+mt
+exl-id: 96586583-5704-48a9-ad61-3c174895b120
+source-git-commit: 5c04483b410779661c0127ee65612d429211e778
+workflow-type: ht
 source-wordcount: '67'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-
 # Verwalten von Assets mit Content Hub
 
-Erfahren Sie, wie Sie mit AEM Assets Content Hub genehmigte Marken-Assets einfach verwalten und freigeben können - damit Ihre Teams Marketing-Kampagnen schneller als je zuvor durchführen können.
+Erfahren Sie, wie Sie mit AEM Assets Content Hub genehmigte Marken-Assets einfach verwalten und freigeben können – damit Ihre Teams Marketing-Kampagnen schneller als je zuvor durchführen können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457638/?learn=on&enablevpops)

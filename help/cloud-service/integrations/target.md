@@ -15,9 +15,9 @@ badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: be886c64-9b8e-498d-983c-75f32c34be4b
 duration: 1549
 source-git-commit: adc2f352544b4718522073642c6bf971b3600616
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1618'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 99%
 
 Erfahren Sie, wie Sie AEM Headless mit Adobe Target integrieren können, indem Sie AEM-Inhaltsfragmente in Adobe Target exportieren und sie verwenden, um Headless-Erlebnisse mithilfe der Datei „legate.js“ des Adobe Experience Platform Web SDK zu personalisieren. Die [React-WKND-App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html?lang=de) wird verwendet, um zu erforschen, wie eine personalisierte Target-Aktivität unter Verwendung von Inhaltsfragment-Angeboten zum Erlebnis hinzugefügt werden kann, um ein WKND-Abenteuer zu bewerben.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422150/?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3416585/?quality=12&learn=on)
 
 In diesem Tutorial werden die Schritte zum Einrichten von AEM und Adobe Target beschrieben:
 
@@ -42,7 +42,7 @@ In diesem Tutorial werden die Schritte zum Einrichten von AEM und Adobe Target b
 
 Eine Adobe IMS-Konfiguration, die die Authentifizierung zwischen AEM und Adobe Target erleichtert.
 
-In der [Dokumentation](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/integrations/target#adobe-target-cloud-service) finden Sie eine schrittweise Anleitung zum Erstellen einer Adobe IMS-Konfiguration.
+In der [Dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/integrations/target?lang=de#adobe-target-cloud-service) finden Sie eine schrittweise Anleitung zum Erstellen einer Adobe IMS-Konfiguration.
 
 ## Adobe Target Cloud Service{#adobe-target-cloud-service}
 
@@ -50,7 +50,7 @@ In AEM wird ein Adobe Target Cloud Service erstellt, um den Export von Inhaltsfr
 
 In der [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=de) finden Sie eine schrittweise Anleitung, wie Sie einen Adobe Target Cloud Service erstellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422646/?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3416499/?quality=12&learn=on)
 
 
 ## Konfigurieren von Asset-Ordnern{#configure-asset-folders}
@@ -71,7 +71,7 @@ Der in einer kontextsensitiven Konfiguration konfigurierte Adobe Target Cloud Se
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3422654/?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3416504/?quality=12&learn=on)
 
 ## Zugriffsberechtigung für die AEM Target-Integration{#permission}
 
@@ -90,7 +90,7 @@ Die Adobe Target-Integration, die sich als developer.adobe.com-Projekt manifesti
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3441982/?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3416505/?quality=12&learn=on)
 
 ## Exportieren von Inhaltsfragmenten in Target{#export-content-fragments}
 
@@ -121,7 +121,7 @@ Inhaltsfragmente, die in der [konfigurierten AEM-Assets-Ordnerhierarchie](#apply
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3422670/?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3416506/?quality=12&learn=on)
 
 ## Target-Aktivität mit Inhaltsfragmentangeboten{#activity}
 
@@ -160,7 +160,7 @@ Die Adobe Target-Aktivität, die auf den Speicherort `wknd-adventure-promo` abzi
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3444790/?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3416507/?quality=12&learn=on)
 
 ## Experience Platform-Datenstrom-ID{#datastream-id}
 
@@ -190,7 +190,7 @@ Eine [Adobe Experience Platform-Datenstrom-ID](https://experienceleague.adobe.co
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3422175/?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3416500/?quality=12&learn=on)
 
 ## Hinzufügen der Personalisierung zu einer AEM Headless-App{#code}
 

@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
 source-git-commit: 380bd2b3121db5810e4d295a5f7f9d1139d22402
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1385'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 87%
 # Tutorials zu Adobe Experience Manager as a Cloud Service {#cloud-service}
 
 + [Überblick](./overview.md)
-+ AEM-Tests {#aem-trials}
++ AEM-Testversionen {#aem-trials}
    + [Bilder](./aem-trials/images.md)
-+ Wiedergabelisten{#playlists}
++ Playlists{#playlists}
    + [AEM-Entwicklung](./playlists/development.md)
 + Einführung in AEM as a Cloud Service{#introduction}
    + [Was ist AEM as a Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
@@ -56,14 +56,14 @@ ht-degree: 87%
       + [Analysieren von Testergebnissen](./cloud-manager/devops/analyze-test-results.md)
       + [Dispatcher-Konfigurationen](./cloud-manager/devops/dispatcher-configurations.md)
       + [CDN-Protokollanalyse](./cloud-manager/devops/cdn-log-analysis.md)
-+ Einrichten einer lokalen Entwicklungsumgebung {#local-development-environment-set-up}
++ Einrichtung der lokalen Entwicklungsumgebung {#local-development-environment-set-up}
    + [Überblick](./local-development-environment/overview.md)
    + [Entwicklungs-Tools](./local-development-environment/development-tools.md)
    + [Lokales AEM SDK](./local-development-environment/aem-runtime.md)
    + [Lokale Dispatcher-Tools](./local-development-environment/dispatcher-tools.md)
-+ Entwickeln{#developing}
++ Entwicklung{#developing}
    + Erweiterbarkeit{#extensibility}
-      + App-Entwicklung{#app-builder}
+      + App Builder{#app-builder}
          + [Generieren von JWT-Zugriffs-Token](./developing/extensibility/app-builder/jwt-auth.md)
          + [Generieren von Server-zu-Server-Zugriffs-Token](./developing/extensibility/app-builder/server-to-server-auth.md)
          + [Verifizierung des Github-Webhooks](./developing/extensibility/app-builder/github-webhook-verification.md)
@@ -120,13 +120,13 @@ ht-degree: 87%
       + [Informationen zur Verwendung](./developing/rde/how-to-use.md)
       + [Entwicklungslebenszyklus](./developing/rde/development-life-cycle.md)
    + Universeller Editor{#universal-editor}
-      + React-App-Bearbeitung{#react-app-editing}
+      + Bearbeitung in der React-App{#react-app-editing}
          + [Überblick](./developing/universal-editor/react-app/overview.md)
          + [Lokale Entwicklungseinrichtung](./developing/universal-editor/react-app/local-development-setup.md)
          + [Instrumentieren der React-App](./developing/universal-editor/react-app/instrument-to-edit-content.md)
    + [AEM SDK-API-JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html){target=_blank}
 + Debugging von AEM{#debugging}
-   + Debuggen von AEM SDK{#debugging-aem-sdk}
+   + Debbuging des AEM SDK{#debugging-aem-sdk}
       + [Überblick](./debugging/aem-sdk-local-quickstart/overview.md)
       + [Protokolle](./debugging/aem-sdk-local-quickstart/logs.md)
       + [Remote-Debugging](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
@@ -192,12 +192,12 @@ ht-degree: 87%
       + [E-Mail-Dienst](./networking/examples/email-service.md)
 + Sicherheit {#security}
    + [Blockieren von DoS-/DDoS-Angriffen mithilfe von Traffic-Filterregeln](./security/blocking-dos-attack-using-traffic-filter-rules.md)
-   + Traffic-Filterregeln einschließlich WAF-Regeln{#traffic-filter-and-waf-rules}
+   + Traffic-Filterregeln, einschließlich WAF-Regeln{#traffic-filter-and-waf-rules}
       + [Überblick](./security/traffic-filter-rules/overview.md)
       + [Einrichtung](./security/traffic-filter-rules/how-to-setup.md)
       + [Beispiele und Ergebnisanalyse](./security/traffic-filter-rules/examples-and-analysis.md)
       + [Best Practices](./security/traffic-filter-rules/best-practices.md)
-+ AEM Eventing{#aem-eventing}
++ AEM-Ereignisse{#aem-eventing}
    + [Überblick](./eventing/overview.md)
    + Beispiele{#examples}
       + [Webhook – Empfangen von AEM-Ereignissen](./eventing/examples/webhook.md)
@@ -275,7 +275,7 @@ ht-degree: 87%
       + [2 – Einrichtung](./forms/create-address-block-component/set-up.md)
       + [3 – Erstellen der Komponente](./forms/create-address-block-component/creating-address-component.md)
       + [4 – Bereitstellen der Komponente](./forms/create-address-block-component/deploy-your-project.md)
-   + Erstellen einer anklickbaren Bildkomponente{#clickable-image-component}
+   + Erstellen einer klickbaren Bildkomponente{#clickable-image-component}
       + [1 – Einführung](./forms/clickable-image-component/introduction.md)
       + [2 – Erstellen der Komponente](./forms/clickable-image-component/create-component.md)
       + [3 – Verarbeiten des Klickereignises](./forms/clickable-image-component/handle-click-event.md)
@@ -284,7 +284,7 @@ ht-degree: 87%
       + [Erstellen von Datenelementen](./forms/form-data-analytics/data-elements.md)
       + [Erstellen von Regeln](./forms/form-data-analytics/rules.md)
       + [Testen der Lösung](./forms/form-data-analytics/test.md)
-   + Erstellen der Dropdown-Komponente „Länder“{#countries-drop-down}
+   + Erstellen einer Dropdown-Listen-Komponente für Länder{#countries-drop-down}
       + [Einführung](./forms/countries-drop-down/introduction.md)
       + [Erstellen einer Komponente](./forms/countries-drop-down/component.md)
       + [Erstellen eines Dialogfelds](./forms/countries-drop-down/dialog.md)
@@ -300,7 +300,7 @@ ht-degree: 87%
       + [2. Erstellen des Formulars](./forms/using-vertical-tabs/create-af.md)
       + [3. Navigieren](./forms/using-vertical-tabs/navigation.md)
       + [4. Hinzufügen von Symbolen](./forms/using-vertical-tabs/icons.md)
-   + Verwenden der Ausgabe und des Forms-Services{#forms-cs-output-and-forms-service}
+   + Verwenden des Ausgabe- und Formular-Dienstes{#forms-cs-output-and-forms-service}
       + [Generieren einer PDF](./forms/forms-cs-output-and-forms-service/outputservice.md)
    + Dokumenterstellung in AEM Forms CS{#doc-gen-formscs}
       + [Einführung](./forms/doc-gen-forms-cs/introduction.md)
@@ -310,19 +310,19 @@ ht-degree: 87%
       + [Zusammenführen von Daten und Vorlage](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [Testen der Lösung](./forms/doc-gen-forms-cs/test.md)
       + [Herausforderung](./forms/doc-gen-forms-cs/challenge.md)
-   + Verwenden der Forms-Dokumentendienste-API{#forms-document-services-api}
+   + Verwenden des Forms-Dokumentendienste-API{#forms-document-services-api}
       + [Einführung](./forms/forms-document-services/introduction.md)
       + [Konfigurieren von OpenAPI](./forms/forms-document-services/using-open-api.md)
       + [Generieren eines Zugriffs-Tokens](./forms/forms-document-services/generate-access-token.md)
       + [Anwenden von Verwendungsrechten](./forms/forms-document-services/make-api-calls.md)
       + [Beispiel-Code](./forms/forms-document-services/sample-project.md)
-   + Dokumenterstellung mithilfe der Batch-API{#formscs-batch-api}
+   + Dokumenterstellung mithilfe des Batch-API{#formscs-batch-api}
       + [Einführung](./forms/formscs-batch-api/introduction.md)
       + [Konfigurieren von Azure-Datenspeicherung](./forms/formscs-batch-api/configure-azure-storage.md)
       + [Erstellen der USC-Batch-Konfiguration](./forms/formscs-batch-api/configure-usc-batch.md)
       + [Erstellen einer Batch-Konfiguration](./forms/formscs-batch-api/create-batch-config.md)
       + [Ausführen eines Batches](./forms/formscs-batch-api/execute-batch-generate-documents.md)
-   + Manipulation von PDF in Forms CS{#forms-cs-assembler}
+   + Bearbeitung von PDFs in Forms CS{#forms-cs-assembler}
       + [Einführung](./forms/forms-cs-assembler/introduction.md)
       + [Erstellen von Service-Anmeldeinformationen](./forms/forms-cs-assembler/service-credentials.md)
       + [Erstellen eines JWT-Tokens](./forms/forms-cs-assembler/create-jwt.md)
@@ -331,7 +331,7 @@ ht-degree: 87%
       + [PDF/A-Dienstprogramme](./forms/forms-cs-assembler/pdfa-utilities.md)
       + [Testen der Lösung](./forms/forms-cs-assembler/test.md)
       + [Herausforderung](./forms/forms-cs-assembler/challenge.md)
-   + Integration mit Marketo{#froms-cs-with-marketo}
+   + Integrieren mit Marketo{#froms-cs-with-marketo}
       + [Einführung](./forms/forms-cs-with-marketo/part1.md)
       + [Erstellen einer Datenquelle](./forms/forms-cs-with-marketo/part2.md)
       + [Erstellen von Formulardatenmodellen](./forms/forms-cs-with-marketo/part3.md)
@@ -341,7 +341,7 @@ ht-degree: 87%
       + [Erstellen einer OSGi-Konfiguration](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
       + [Erstellen von Index-Tags](./forms/store-submiited-data-with-metadata-tags/create-blob-index-tags.md)
       + [Erstellen einer benutzerdefinierten Übermittlung](./forms/store-submiited-data-with-metadata-tags/create-custom-submit.md)
-   + Vorbefüllen eines auf Kernkomponenten basierenden Formulars{#prefill-core-component-based-form}
+   + Vorbefüllen von auf Kernkomponenten basierenden Formularen{#prefill-core-component-based-form}
       + [Einführung](./forms/prefill-core-component-form/introduction.md)
       + [Schreiben eines Vorbefüllungsdienstes](./forms/prefill-core-component-form/pre-fill-service.md)
       + [Testen der Lösung](./forms/prefill-core-component-form/test-solution.md)
@@ -351,7 +351,7 @@ ht-degree: 87%
       + [Speichern von Formulardaten im Azure-Speicher](./forms/forms-cs-azure-portal/create-af.md)
       + [Vorfüllen eines Formulars](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [Abfragesendungen](./forms/forms-cs-azure-portal/query-submitted-data.md)
-   + Speichern und Fortsetzen des Ausfüllens von Formularen{#prefill-azure-storage}
+   + Speichern und Fortsetzen der Formularausfüllung{#prefill-azure-storage}
       + [1 – Einführung](./forms/prefill-azure-storage/introduction.md)
       + [2 – Erstellen von Seitenkomponenten](./forms/prefill-azure-storage/page-component.md)
       + [3 – Erstellen einer adaptiven Formularvorlage](./forms/prefill-azure-storage/associate-page-component.md)
@@ -360,7 +360,7 @@ ht-degree: 87%
       + [6 – Erstellen des adaptiven Formulars](./forms/prefill-azure-storage/create-af.md)
       + [7 – Bereitstellen der Beispiel-Assets](./forms/prefill-azure-storage/deploy-sample-assets.md)
 
-   + Überprüfungs-Workflow erstellen{#create-aem-workflow}
+   + Erstellen eines Workflows für die Überprüfung{#create-aem-workflow}
       + [Externalisieren des Workflow-Speichers](./forms/create-aem-workflow/externalize-workflow.md)
       + [Erstellen eines Workflow-Modells](./forms/create-aem-workflow/create-workflow.md)
       + [Triggern eines Workflows](./forms/create-aem-workflow/configure-af.md)
@@ -388,13 +388,13 @@ ht-degree: 87%
       + [Erstellen von Formulardatenmodellen](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [Testformularübermittlung](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [Testklick-Ereignis](./forms/integrate-with-salesforce/create-lead-click-event.md)
-   + Speichern von Formularübermittlungen in One Drive und SharePoint{#one-drive}
+   + Speichern von Formularübermittlungen auf One Drive und Sharepoint{#one-drive}
       + [Speichern von Formulardaten auf One Drive](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [Speichern von Formulardaten in Sharepoint](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
       + [Vorbefüllen von Formularen mit Daten aus der SharePoint-Liste](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
       + [Einfügen von Daten in die SharePoint-Liste mithilfe eines Workflows](./forms/forms-cs-sharepoint/submit-data-sharepoint-list-workflow.md)
 + Asset Compute-Erweiterbarkeit{#asset-compute}
-   + [Übersicht](./asset-compute/overview.md)
+   + [Überblick](./asset-compute/overview.md)
    + Setup{#set-up}
       + [Konto- und Service-Bereitstellung](./asset-compute/set-up/accounts-and-services.md)
       + [Lokale Entwicklungsumgebung](./asset-compute/set-up/development-environment.md)
@@ -422,7 +422,7 @@ ht-degree: 87%
    + [AEM Sites und Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=de){target=_blank}
    + [Token-basierte Authentifizierung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=de){target=_blank}
 + Expertenressourcen {#expert-resources}
-   + AEM Champions {#aem-champions}
+   + AEM-Champions {#aem-champions}
       + [Onboarding-Playbook für Cloud Manager](./expert-resources/aem-champions/onboarding-playbook.md)
       + [Cloud Manager-Umgebungstypen](./expert-resources/aem-champions/environment-types.md)
       + [Cloud Manager-Benutzeroberfläche](./expert-resources/aem-champions/cloud-manager-ui.md)
