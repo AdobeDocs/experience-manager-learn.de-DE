@@ -25,4 +25,4 @@ Erfahren Sie, wie Sie andere Adobe-Lösungen von den veralteten Service-Kolnto(J
 Die Service-Konto(JWT)-Anmeldeinformationen wurden zwar als veraltet markiert, funktionieren jedoch noch bis zum 27. Januar 2025 weiter. Daher müssen Sie Ihre Anwendung oder Integration vor dem 27. Januar 2025 zur Verwendung der neuen OAuth-Server-zu-Server-Anmeldeinformationen migrieren. Weitere Informationen finden Sie im [Migrationshandbuch](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration?lang=de).
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3432960/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449247/?learn=on&captions=ger)
