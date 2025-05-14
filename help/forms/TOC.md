@@ -9,9 +9,9 @@ sub-product: Experience Manager Forms
 version: Experience Manager 6.4, Experience Manager 6.5
 index: y
 source-git-commit: c4b5a015f1c0d5e3877886052476871548ec9b0e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2104'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 92%
 + [Überblick](overview.md)
 + [Best Practices, die zu befolgen sind](adaptive-forms/best-practices-adaptive-forms.md)
 + [Einrichten der OKTA-Authentifizierung mit AEM Author](adaptive-forms/single-sign-on-with-okta.md)
-+ Erstellen des ersten adaptiven Formulars {#creating-your-first-adaptive-form}
++ Erstellen Ihres ersten adaptiven Formulars {#creating-your-first-adaptive-form}
    + [1 – Einführung und Einrichtung](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [2 – Erstellen einer adaptiven Formularvorlage](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [3 – Erstellen von Formularfragmenten](creating-your-first-adaptive-form/create-form-fragment.md)
@@ -106,13 +106,13 @@ ht-degree: 92%
    + [Vorausfüllen von HTML5 Formularen](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Formulardatenmodell mit Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Dynamisches Hinzufügen von Elementen zur Auswahlkomponente](adaptive-forms/choice-group-items-adding-dynamically-article.md)
-+ PDF-Formular mit ChatBot ausfüllen{#chatbot-and-aem-forms}
++ Ausfüllen eines PDF-Formulars mit ChatBot{#chatbot-and-aem-forms}
    + [1 – Einführung](chatbot-and-aem-forms/introduction.md)
    + [2 – Analysieren von ChatBot-Daten](chatbot-and-aem-forms/parse-chat-bot-data.md)
    + [3 – Erstellen einer PDF-Datei](chatbot-and-aem-forms/merge-data-with-template.md)
-+ Kernkomponentenbasierte Formulare{#core-component-based-forms}
-   + [Zugriff auf Formulardaten mithilfe der GuideBridge-API](core-components/submit-data-using-guidebridge-api.md)
-+ DAM-Ordnerinhalt auswählen und zusammenführen{#select-dam-folder-content}
++ Auf Kernkomponenten basierende Formulare{#core-component-based-forms}
+   + [Zugriff auf Formulardaten mithilfe des GuideBridge-API](core-components/submit-data-using-guidebridge-api.md)
++ Auswählen und Zusammenführen von DAM-Ordnerinhalt{#select-dam-folder-content}
    + [1 – Einführung](display-and-assemble-dam-folder-contents/introduction.md)
    + [2 – Befüllen der Auswahlgruppe](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
    + [3 – Zusammenführen ausgewählter Assets](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
@@ -138,7 +138,7 @@ ht-degree: 92%
    + [2 – ZIP-Formularanhänge](zipping-form-attachments/custom-process-step.md)
    + [3 – E-Mail-Formularanhänge](zipping-form-attachments/populating-list-of-documents.md)
    + [4 – Testen der Lösung](zipping-form-attachments/test.md)
-+ Vorbefüllen eines Formulars mit Daten und Anhängen{#prefill-form-with-data-attachments}
++ Vorausfüllen von Formularen mit Daten und Anhängen{#prefill-form-with-data-attachments}
    + [1 – Einführung](prefill-form-with-data-attachments/introduction.md)
    + [2 – Erstellen einer benutzerdefinierten Übermittlung](prefill-form-with-data-attachments/create-custom-submit.md)
    + [3 – Erstellen einer OSGi-Konfiguration](prefill-form-with-data-attachments/create-osgi-configuration.md)
@@ -180,7 +180,7 @@ ht-degree: 92%
    + [Konfigurieren eines konvertierten adaptiven Formulars](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Verwenden von XDP-Vorlagen mit Acrobat Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
    + [Verwenden von Hilfsmethoden von Acrobat Sign](aem-forms-and-adobe-sign/send-documents-signing-using-sign-api.md)
-+ Signieren mehrerer Forms{#sign-multiple-documents}
++ Signieren mehrerer Formulare{#sign-multiple-documents}
    + [1 – Einführung](sign-multiple-documents/introduction.md)
    + [2 – Konfigurieren einer Datenquelle](sign-multiple-documents/configure-data-source.md)
    + [3 – Erstellen eines OSGi-Dienstes](sign-multiple-documents/create-osgi-service.md)
@@ -210,7 +210,7 @@ ht-degree: 92%
    + [Formulardatenmodell-Variable](variables-aem-workflow/form-data-model.md)
    + [Regeleditor in AEM Workflow](variables-aem-workflow/part5.md)
    + [Protokoll-Workflow-Variablen](variables-aem-workflow/part6.md)
-+ Formulardaten überprüfen{#review-form-data}
++ Überprüfen der Formulardaten{#review-form-data}
    + [1 – Einführung](review-form-data/introduction.md)
    + [2 – Erstellen einer Komponente](review-form-data/create-component.md)
    + [3 – Bereitstellen von Assets](review-form-data/deploy-on-your-system.md)
@@ -222,14 +222,14 @@ ht-degree: 92%
    + [Client-Bibliothek](storing-retrieving-form-data/part4.md)
    + [Adaptive Formularvorlage](storing-retrieving-form-data/part5.md)
    + [Bereitstellen von Beispiel-Assets](storing-retrieving-form-data/part6.md)
-+ Auslösen von AEM-Workflows bei der Übermittlung von PDF-Formularen{#offline-mobile-form-submission}
++ Auslösen eines AEM-Workflows bei der Übermittlung eines PDF-Formulars{#offline-mobile-form-submission}
    + [Teil 1](offline-mobile-form-submission/introduction.md)
    + [Teil 2](offline-mobile-form-submission/custom-profile.md)
    + [Teil 3](offline-mobile-form-submission/handle-form-submission.md)
    + [Teil 4](offline-mobile-form-submission/author-servlet.md)
    + [Teil 5](offline-mobile-form-submission/review-workflow.md)
    + [Teil 6](offline-mobile-form-submission/deploy-assets.md)
-+ Trigger AEM-Workflow bei Übermittlung mobiler Formulare{#trigger-aem-workflow-on-mobile-form-submission}
++ Auslösen eines AEM-Workflows bei der Übermittlung eines mobilen Formulars{#trigger-aem-workflow-on-mobile-form-submission}
    + [Teil 1](trigger-aem-workflow-on-mobile-form-submission/introduction.md)
    + [Teil 2](trigger-aem-workflow-on-mobile-form-submission/handle-form-submission.md)
    + [Teil 3](trigger-aem-workflow-on-mobile-form-submission/author-servlet.md)
@@ -242,7 +242,7 @@ ht-degree: 92%
    + [Erstellen einer Abfrageschnittstelle](query-form-submissions/part3.md)
    + [Schreiben eines Vorbefüllungsdienstes](query-form-submissions/part4.md)
    + [Bereitstellen des Beispiels](query-form-submissions/part5.md)
-+ Auflisten benutzerdefinierter Asset-Typen in Forms Portal{#listing-custom-asset-types}
++ Auflisten benutzerdefinierter Asset-Typen im Formularportal{#listing-custom-asset-types}
    + [Teil 1: Registrieren von benutzerdefinierten Asset-Typen](listing-custom-asset-types/part1.md)
    + [Teil 2: Erstellen einer benutzerdefinierten Vorlage](listing-custom-asset-types/part2.md)
 + AEM Forms mit Marketo{#aem-forms-with-marketo}
@@ -258,12 +258,12 @@ ht-degree: 92%
    + [4 – Vorausfüllen des Formulars mit ACS-Profilinformationen](aem-forms-with-adobe-campaign/partthree.md)
    + [5 – Erstellen eines ACS-Profils mithilfe des Formulardatenmodells](aem-forms-with-adobe-campaign/partfour.md)
 
-+ Begrüßungsset {#welcome-kit}
++ Begrüßungs-Kit {#welcome-kit}
    + [Einführung](welcome-kit/introduction.md)
    + [Erstellen der Komponente des Begrüßungs-Kits](welcome-kit/create-welcomekit-component.md)
    + [Erstellen einer Workflow-Komponente](welcome-kit/create-workflow-component.md)
    + [Testen der Lösung](welcome-kit/testing-the-solution.md)
-+ Headless Forms-API {#embed-form-spa}
++ Headless-Forms-API {#embed-form-spa}
    + [1 – Einführung](headless-forms/introduction.md)
    + [2 – Installieren von Abhängigkeiten](headless-forms/install-af-react-libraries.md)
    + [3 – Abrufen des Formulars](headless-forms/fetch-the-form.md)
@@ -316,7 +316,7 @@ ht-degree: 92%
    + [Einführung in Workbench](aem-forms-workbench/workbench-introduction.md)
    + [Erstellen von Formularprozessen](aem-forms-workbench/workbench-creating-a-process.md)
    + [Debugging-Prozess](aem-forms-workbench/workbench-recording-and-testing-process.md)
-+ Interaktive Kommunikation für Druckkanal 
++ Interaktive Kommunikationen für Print-Kanal 
 {#ic-print-channel-tutorial}
    + [1 – Einführung](ic-print-channel-tutorial/introduction.md)
    + [2 – Einrichten von Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
@@ -345,7 +345,7 @@ ht-degree: 92%
    + [Anpassen des Texteditors](interactive-communications/customize-text-editor.md)
 + ExL-Newsletter{#exl-newsletters}
    + [Archive](./newsletters/archives.md)
-+ Interaktive Kommunikation für Webkanal {#ic-web-channel-tutorial}
++ Interaktive Kommunikationen für Web-Kanal {#ic-web-channel-tutorial}
    + [1 – Einführung](ic-web-channel-tutorial/introduction.md)
    + [2 – Einrichten von Tomcat](ic-web-channel-tutorial/partone.md)
    + [3 – Erstellen einer Datenquelle](ic-web-channel-tutorial/parttwo.md)
