@@ -12,16 +12,18 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
+source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
 workflow-type: tm+mt
-source-wordcount: '1274'
-ht-degree: 7%
+source-wordcount: '1440'
+ht-degree: 6%
 
 ---
 
 # Einrichten von OpenAPI-basierten AEM-APIs
 
 Erfahren Sie, wie Sie Ihre AEM as a Cloud Service-Umgebung einrichten, um den Zugriff auf die OpenAPI-basierten AEM-APIs zu ermöglichen.
+
+In diesem Beispiel wird die AEM Assets-API unter Verwendung der Server-zu-Server-Authentifizierungsmethode verwendet, um den Einrichtungsprozess zu demonstrieren. Die gleichen Schritte können für andere OpenAPI-basierte AEM-APIs ausgeführt werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
@@ -42,7 +44,7 @@ Die Modernisierung der AEM as a Cloud Service-Umgebung ist eine einmalige Aktivi
 
 ### AEM-Instanz aktualisieren{#update-aem-instance}
 
-Um die AEM-Instanz zu aktualisieren, klicken Sie im Abschnitt _Umgebungen_ von Adobe &lbrace;0[&#128279;](https://my.cloudmanager.adobe.com/)Cloud Manager auf das Symbol _Auslassungspunkte_ neben dem Umgebungsnamen und wählen Sie die Option **Aktualisieren** aus.
+Um die AEM-Instanz zu aktualisieren, klicken Sie im Abschnitt _Umgebungen_ von Adobe {0](https://my.cloudmanager.adobe.com/)Cloud Manager auf das Symbol _Auslassungspunkte_ neben dem Umgebungsnamen und wählen Sie die Option **Aktualisieren** aus.[
 
 ![AEM-Instanz aktualisieren](./assets/setup/update-aem-instance.png)
 
@@ -78,13 +80,25 @@ Sie können auch die mit dem Produktprofil verknüpften _Services_ auswählen od
 
 ![Mit dem Produktprofil verknüpfte Services überprüfen](./assets/setup/review-services-associated-with-product-profile.png)
 
-Standardmäßig ist der Service **AEM Assets API Users** mit keinem Produktprofil verknüpft. Verknüpfen wir sie mit dem neu hinzugefügten Produktprofil **AEM Assets Collaborator Users - Author - Program XXX - Environment XXX**. Nach dieser Verknüpfung kann die _Asset-Autoren-API_ des ADC-Projekts die gewünschte Server-zu-Server-Authentifizierung einrichten und das Authentifizierungskonto aus dem ADC-Projekt (im nächsten Schritt erstellt) mit dem Produktprofil verknüpfen.
+### Zugriff auf AEM Assets-APIs aktivieren{#enable-aem-assets-apis-access}
+
+Standardmäßig ist der Service **AEM Assets API Users** mit keinem Produktprofil verknüpft. Verknüpfen wir sie mit dem neu hinzugefügten **AEM Assets Collaborator Users - Author - Program XXX - Environment XXX**-Produktprofil oder jedem anderen Produktprofil, das Sie für den Zugriff auf die AEM Assets-API verwenden möchten.
 
 ![Verknüpfen des AEM Assets-API-Benutzerdiensts mit dem Produktprofil](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
 
+### Server-zu-Server-Authentifizierung aktivieren
+
+Um die Server-zu-Server-Authentifizierung für die gewünschten AEM-APIs zu aktivieren, muss die Person, die die Integration mit dem Adobe Developer Console (ADC) einrichtet, dem Produktprofil, mit dem der Service verknüpft ist, als Entwickler hinzugefügt werden.
+
+Um beispielsweise die Server-zu-Server-Authentifizierung für die AEM Assets-API zu aktivieren, muss der Benutzer dem Produktprofil **AEM Assets Collaborator Users - Author - Program XXX - Umgebung XXX** als Entwickler hinzugefügt werden.
+
+![Entwickler mit Produktprofil verknüpfen](./assets/setup/associate-developer-to-product-profile.png)
+
+Nach dieser Verknüpfung kann die _Asset-Autoren-API_ des ADC-Projekts die gewünschte Server-zu-Server-Authentifizierung einrichten und das Authentifizierungskonto aus dem ADC-Projekt (im nächsten Schritt erstellt) mit dem Produktprofil verknüpfen.
+
 >[!IMPORTANT]
 >
->Der obige Schritt ist wichtig, um die Server-zu-Server-Authentifizierung für die AEM Assets-API zu aktivieren. Ohne diese Zuordnung kann die AEM Assets-API nicht mit der Server-zu-Server-Authentifizierungsmethode verwendet werden.
+>Der obige Schritt ist wichtig, um die Server-zu-Server-Authentifizierung für die gewünschte AEM-API zu aktivieren. Ohne diese Zuordnung kann die AEM-API nicht mit der Server-zu-Server-Authentifizierungsmethode verwendet werden.
 
 ## Erstellen eines Adobe Developer Console-Projekts (ADC){#adc-project}
 
@@ -92,7 +106,7 @@ Das ADC-Projekt wird verwendet, um die gewünschten APIs hinzuzufügen, seine Au
 
 Erstellen eines ADC-Projekts:
 
-1. Melden Sie sich mit Ihrer Adobe ID bei [&#128279;](https://developer.adobe.com/console) Adobe Developer Console an.
+1. Melden Sie sich mit Ihrer Adobe ID bei ](https://developer.adobe.com/console) [Adobe Developer Console an.
 
    ![Adobe-Entwicklerkonsole](./assets/setup/adobe-developer-console.png)
 
@@ -126,6 +140,11 @@ Nachdem Sie das ADC-Projekt erstellt haben, müssen Sie die gewünschten AEM-API
 
    Die Server-zu-Server-Authentifizierung ist ideal für Backend-Services, die API-Zugriff ohne Benutzerinteraktion benötigen. Die Authentifizierungsoptionen für Web-Apps und Einzelseiten-Apps eignen sich für Anwendungen, die API-Zugriff im Namen von Benutzern benötigen. Weitere Informationen finden Sie [Unterschied zwischen OAuth Server-zu-Server- und Web-App-Anmeldeinformationen ](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials) Einzelseiten-App-Anmeldeinformationen“.
 
+   >[!TIP]
+   >
+   >Wenn die Option Server-zu-Server-Authentifizierung nicht angezeigt wird, bedeutet dies, dass der Benutzer, der die Integration einrichtet, nicht als Entwickler zum Produktprofil hinzugefügt wird, mit dem der Service verknüpft ist. Weitere Informationen finden [ unter „Server-zu-Server](#enable-server-to-server-authentication)Authentifizierung aktivieren“.
+
+
 1. Bei Bedarf können Sie die API umbenennen, um die Identifizierung zu erleichtern. Zu Demozwecken wird der Standardname verwendet.
 
    ![Berechtigung umbenennen](./assets/s2s/rename-credential.png)
@@ -150,7 +169,7 @@ Dies geschieht, indem die API-Konfiguration in einer YAML-Datei definiert und mi
 
 1. Suchen Sie im AEM-Projekt im Ordner `config` nach der Datei `api.yaml` oder erstellen Sie diese.
 
-   ![API-YAML suchen](./assets/setup/locate-api-yaml.png){width="500" zoomable="no"}
+   ![Suchen nach API YAML](./assets/setup/locate-api-yaml.png){width="500" zoomable="no"}
 
 1. Fügen Sie der Datei `api.yaml` die folgende Konfiguration hinzu:
 
