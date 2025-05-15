@@ -75,7 +75,7 @@ Der Schritt zum Konfigurieren des ADC _Projekts wird_ der [OpenAPI-basierten AEM
 >Vergewissern Sie sich, dass Sie den Schritt **Aktivieren des Zugriffs auf AEM** im Artikel [Einrichten von OpenAPI-basierten AEM-](../setup.md#enable-aem-apis-access)) abgeschlossen haben. Ohne diese Option ist die Server-zu-Server-Authentifizierung nicht verfügbar.
 
 
-1. Öffnen Sie in der {0](https://developer.adobe.com/console/projects)Adobe Developer Console} das gewünschte Projekt.[
+1. Öffnen Sie in der {0[&#128279;](https://developer.adobe.com/console/projects)Adobe Developer Console} das gewünschte Projekt.
 
 1. Um AEM-APIs hinzuzufügen, klicken Sie auf die Schaltfläche **API hinzufügen**.
 
