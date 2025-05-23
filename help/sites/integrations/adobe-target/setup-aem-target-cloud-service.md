@@ -12,10 +12,10 @@ badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: dd6c17ae-8e08-4db3-95f9-081cc7dbd86e
 duration: 316
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 22bd6237bb1665bf87c6302d2988135b505e40c0
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 100%
+source-wordcount: '191'
+ht-degree: 75%
 
 ---
 
@@ -25,7 +25,12 @@ Im folgenden Video erfahren Sie, wie Sie AEM as a Cloud Service mit Adobe Target
 
 Durch diese Integration kann der AEM-Author-Service direkt mit Adobe Target kommunizieren und Experience Fragments als Angebote von AEM an Target übertragen. Diese Integration fügt *nicht* das Adobe Target-JavaScript (AT.js) zu Web-Seiten von AEM Sites hinzu. Integrieren Sie dafür [AEM und Tags mithilfe der Target-Erweiterung](../experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/329013?quality=12&learn=on&captions=ger)
+>[!WARNING]
+>
+>Das Video zeigt eine veraltete JWT-Authentifizierungsmethode zum Verbinden von AEM mit Adobe Target. Die empfohlene Methode besteht jedoch darin, die OAuth-Server-zu-Server-Authentifizierungsmethode zu verwenden. Weitere Informationen finden Sie unter [ von JWT-zu-OAuth-Anmeldeinformationen für AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration.html). Wir arbeiten daran, das Video zu aktualisieren, um diese Änderung widerzuspiegeln.
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
 
 >[!CAUTION]
 >
