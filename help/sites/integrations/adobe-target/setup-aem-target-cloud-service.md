@@ -30,7 +30,7 @@ Durch diese Integration kann der AEM-Author-Service direkt mit Adobe Target komm
 >Das Video zeigt eine veraltete JWT-Authentifizierungsmethode zum Verbinden von AEM mit Adobe Target. Die empfohlene Methode besteht jedoch darin, die OAuth-Server-zu-Server-Authentifizierungsmethode zu verwenden. Weitere Informationen finden Sie unter [ von JWT-zu-OAuth-Anmeldeinformationen für AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration.html). Wir arbeiten daran, das Video zu aktualisieren, um diese Änderung widerzuspiegeln.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/329013?quality=12&learn=on&captions=ger)
 
 >[!CAUTION]
 >
