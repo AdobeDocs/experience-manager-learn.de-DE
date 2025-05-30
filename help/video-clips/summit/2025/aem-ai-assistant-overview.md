@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Erfahren Sie, wie der AEM AI-Assistent das Auffinden von Produktkenntnissen vereinfacht und die Erstellung von Support-Tickets automatisiert.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459225/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461930/?learn=on&enablevpops&captions=ger)

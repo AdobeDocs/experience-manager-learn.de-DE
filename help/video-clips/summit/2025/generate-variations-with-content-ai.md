@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Erfahren Sie, wie Sie mit Content AI schnell und effizient ansprechende Inhaltsvarianten erstellen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459227/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461886/?learn=on&enablevpops&captions=ger)

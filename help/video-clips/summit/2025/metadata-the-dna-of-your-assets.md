@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Erfahren Sie, wie Metadaten Workflows, Suchvorgänge und Einblicke fördern und wie die Automatisierung Metadaten anreichern kann, um sie an Markenstandards anzupassen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459218/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461974/?learn=on&enablevpops&captions=ger)

@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Entdecken Sie den einheitlichen Ausgangspunkt für AEM-Anwender mit Experience Hub, der zur Steigerung der Produktivität und Personalisierung entwickelt wurde.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459224/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462136/?learn=on&enablevpops&captions=ger)

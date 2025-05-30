@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Informieren Sie sich über die neuen Funktionen von Content Hub, einschließlich attributbasierter Zugriffssteuerung, markenbezogener Landingpages und einheitlicher Suche über verschiedene Plattformen hinweg.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459223/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461819/?learn=on&enablevpops&captions=ger)
