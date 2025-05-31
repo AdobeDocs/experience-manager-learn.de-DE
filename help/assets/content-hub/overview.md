@@ -221,7 +221,7 @@ Untersuchen Sie Anwendungsfälle und Szenarien, die zeigen, wie AEM Assets Conte
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./use-cases/manage-assets.md" title="Verwalten von Assets mit AEM Assets Content Hub" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3457638/?format=jpeg&nocache=1744751770120" alt="Verwalten von Assets mit AEM Assets Content Hub"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3463067/?format=jpeg&nocache=1744751770120&captions=ger" alt="Verwalten von Assets mit AEM Assets Content Hub"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

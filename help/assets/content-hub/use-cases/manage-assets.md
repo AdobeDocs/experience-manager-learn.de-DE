@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit AEM Assets Content Hub genehmigte Marken-Assets einfach verwalten und freigeben können – damit Ihre Teams Marketing-Kampagnen schneller als je zuvor durchführen können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3457638/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3463067/?learn=on&enablevpops&captions=ger)
