@@ -12,7 +12,7 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
+source-git-commit: 9a5d811cf92a09da27057f99e1b6b2ed8df2a414
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 4%
@@ -75,7 +75,7 @@ Der Schritt zum Konfigurieren des ADC _Projekts wird_ der [OpenAPI-basierten AEM
 >Vergewissern Sie sich, dass Sie den Schritt **Aktivieren des Zugriffs auf AEM** im Artikel [Einrichten von OpenAPI-basierten AEM-](../setup.md#enable-aem-apis-access)) abgeschlossen haben. Ohne diese Option ist die Server-zu-Server-Authentifizierung nicht verfügbar.
 
 
-1. Öffnen Sie in der {0[&#128279;](https://developer.adobe.com/console/projects)Adobe Developer Console} das gewünschte Projekt.
+1. Öffnen Sie in der {0](https://developer.adobe.com/console/projects)Adobe Developer Console} das gewünschte Projekt.[
 
 1. Um AEM-APIs hinzuzufügen, klicken Sie auf die Schaltfläche **API hinzufügen**.
 
@@ -139,9 +139,9 @@ Der `assetId` ist die JCR-UUID des Assets mit dem `urn:aaid:aem:` Präfix, z. B.
 
 ### Aufrufen der API über den Browser
 
-Bevor wir das Programm entwickeln, rufen wir die API mithilfe der Funktion &quot;**&quot;** der [API-Dokumentation](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/) auf.
+Bevor wir das Programm entwickeln, rufen wir die API mithilfe der Funktion &quot;**&quot;** der [API-Dokumentation](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/) auf.
 
-1. Öffnen Sie die Dokumentation zur [Assets Author](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)API im Browser.
+1. Öffnen Sie die Dokumentation zur [Assets Author](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/)API im Browser.
 
 1. Erweitern Sie den Abschnitt _Metadaten_ und klicken Sie auf die Option **Übermittelt die Metadaten des angegebenen Assets** .
 
