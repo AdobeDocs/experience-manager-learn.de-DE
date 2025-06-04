@@ -13,9 +13,9 @@ thumbnail: KT-15313.jpeg
 exl-id: d04c3316-6f8f-4fd1-9df1-3fe09d44f735
 duration: 256
 source-git-commit: 107a9a77a1bf2337f309d503a4a310d8d0781f0d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '510'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ Bevor Sie das Skript ausführen, müssen Sie es mit Ihrer AEM-Instanz-URL, den B
 
 ## Exportieren eines Skripts
 
-Das als JavaScript-Modul geschriebene Skript ist Teil eines Node.js-Projekts, da es eine Abhängigkeit von `node-fetch` und `p-limit` aufweist. Sie können das unten stehende Skript in ein leeres Node.js-Projekt vom Typ `module` kopieren und `npm install node-fetch p-limit` ausführen, um die Abhängigkeit zu installieren.
+Das als JavaScript-Modul geschriebene Skript ist Teil eines Node.js-Projekts, da es eine Abhängigkeit von `node-fetch` und `p-limit` hat. Sie können das unten stehende Skript in ein leeres Node.js-Projekt vom Typ `module` kopieren und `npm install node-fetch p-limit` ausführen, um die Abhängigkeit zu installieren.
 
 Dieses Skript durchläuft die Ordnerstruktur von AEM Assets und lädt Assets und Ordner in einen lokalen Ordner auf Ihrem Computer herunter. Es verwendet die [AEM Assets-HTTP-API](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets), um den Ordner und die Asset-Daten abzurufen, und lädt die Original-Ausgabeformate der Assets herunter.
 

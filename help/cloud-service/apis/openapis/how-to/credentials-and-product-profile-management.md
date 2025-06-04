@@ -1,6 +1,6 @@
 ---
-title: API-Anmeldeinformationen und Produktprofilverwaltung
-description: Erfahren Sie, wie Sie Anmeldeinformationen und Produktprofile für AEM-APIs verwalten.
+title: Verwaltung von API-Anmeldedaten und -Produktprofilen
+description: Erfahren Sie, wie Sie Anmeldedaten und Produktprofile für AEM-APIs verwalten.
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -13,93 +13,93 @@ last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 277b4789-b035-4904-b489-c827c970fb55
 source-git-commit: f125cffc72a6f0eb558492f8dde6f4f30bc074ec
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '726'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-# API-Anmeldeinformationen und Produktprofilverwaltung
+# Verwaltung von API-Anmeldedaten und -Produktprofilen
 
-Erfahren Sie, wie Sie _Anmeldeinformationen und Produktprofile_ für OpenAPI-basierte AEM-APIs verwalten.
+Erfahren Sie, wie Sie _Anmeldaten und Produktprofile_ für OpenAPI-basierte AEM-APIs verwalten.
 
-In diesem Tutorial erfahren Sie, wie Sie Folgendes hinzufügen oder entfernen:
+In diesem Tutorial lernen Sie, wie Sie Folgendes hinzufügen oder entfernen:
 
-- _Anmeldeinformationen_: Geben Sie Authentifizierung für eine AEM-API an.
-- _Produktprofile_: Geben Sie Berechtigungen (oder Autorisierungen) für Anmeldeinformationen für den Zugriff auf die AEM-Ressourcen an.
+- _Anmeldedaten_: Geben Sie die Authentifizierung für ein AEM-API an.
+- _Produktprofile_: Geben Sie Berechtigungen (oder Autorisierungen) für Anmeldedaten für den Zugriff auf die AEM-Ressourcen an.
 
 ## Hintergrund
 
-Wenn Sie eine AEM-API verwenden, müssen Sie die _Anmeldeinformationen_ und _Produktprofil_ im Adobe Developer Console-Projekt (oder ADC) definieren. Im folgenden Screenshot sehen Sie die _Anmeldedaten_ und _Produktprofil_ für eine AEM Assets Author-API:
+Wenn Sie ein AEM-API verwenden, müssen Sie die _Anmeldedaten_ und das _Produktprofil_ im Adobe Developer Console(ADC)-Projekt definieren. Im folgenden Screenshot sehen Sie die _Anmeldedaten_ und das _Produktprofil_ für ein AEM Assets Author-API:
 
 ![Anmeldedaten und Produktprofil](../assets/how-to/API-Credentials-Product-Profile.png)
 
-Die _Anmeldeinformationen_ stellen den Authentifizierungsmechanismus für die API bereit. Das _Produktprofil_ gewährt den Anmeldeinformationen _Berechtigungen (oder Autorisierung_ und gewährt so Zugriff auf die AEM-Ressourcen. Die API-Anfrage kann im Namen einer Anwendung oder eines Benutzers erfolgen.
+Die _Anmeldedaten_ stellen den Authentifizierungsmechanismus für das API bereit. Das _Produktprofil_ gewährt den Anmeldedaten _Berechtigungen (oder eine Autorisierung)_ und bietet so Zugriff auf die AEM-Ressourcen. Die API-Anfrage kann im Namen einer Anwendung oder einer Benutzerin bzw. eines Benutzers erfolgen.
 
-Ein Produktprofil ist mit einem oder mehreren _Services_ verknüpft. In AEM as a Cloud Service stellt ein _Service_ Benutzergruppen mit vordefinierten Zugriffssteuerungslisten (ACLs) für Repository-Knoten dar, was eine granulare Berechtigungsverwaltung ermöglicht.
+Ein Produktprofil ist mit einem oder mehreren _Services_ verknüpft. In AEM as a Cloud Service stellt ein _Service_ Benutzergruppen mit vordefinierten Zugriffssteuerungslisten (Access Control Lists, ACLs) für Repository-Knoten dar, was eine granulare Berechtigungsverwaltung ermöglicht.
 
-![Produktprofil des technischen Kontobenutzers](../assets/s2s/technical-account-user-product-profile.png)
+![Produktprofil des Benutzerprofils des technischen Kontos](../assets/s2s/technical-account-user-product-profile.png)
 
-Nach erfolgreichem API-Aufruf wird im AEM-Autoren-Service ein Benutzer erstellt, der die Anmeldeinformationen des ADC-Projekts darstellt, sowie die Benutzergruppen, die der Produktprofil- und Service-Konfiguration entsprechen.
+Nach erfolgreichem API-Aufruf werden im AEM-Autoren-Service ein Benutzerprofil, das die Anmeldedaten des ADC-Projekts darstellt, sowie Benutzergruppen erstellt, die der Produktprofil- und Service-Konfiguration entsprechen. 
 
-![Benutzermitgliedschaft für technisches Konto](../assets/s2s/technical-account-user-membership.png)
+![Mitgliedschaft des Produktprofils des technischen Kontos](../assets/s2s/technical-account-user-membership.png)
 
-Im obigen Szenario wird die `1323d2...` im AEM-Autoren-Service erstellt und ist Mitglied der Benutzergruppen `AEM Assets Collaborator Users - Service` und `AEM Assets Collaborator Users - author - Program XXX - Environment XXX`.
+Im obigen Szenario wird das Benutzerprofil `1323d2...` im AEM-Autoren-Service erstellt und ist Mitglied der Benutzergruppen `AEM Assets Collaborator Users - Service` und `AEM Assets Collaborator Users - author - Program XXX - Environment XXX`.
 
-## Hinzufügen oder Entfernen von Anmeldeinformationen
+## Hinzufügen oder Entfernen von Anmeldedaten
 
-Die AEM-APIs unterstützen die folgenden Arten von Anmeldeinformationen für die Authentifizierung:
+Die AEM-APIs unterstützen die folgenden Arten von Anmeldedaten für die Authentifizierung:
 
-1. **OAuth Server-zu-Server**: Für Maschine-zu-Maschine-Interaktionen entwickelt.
-1. **OAuth Web App**: Für benutzergesteuerte Interaktionen mit einem Backend-Server in Ihrer Client-Anwendung.
-1. **OAuth Single Page App**: Für benutzergesteuerte Interaktionen ohne Backend-Server in Ihrer Client-Anwendung.
+1. **OAuth-Server-zu-Server**: Entwickelt für Maschine-zu-Maschine-Interaktionen.
+1. **OAuth-Web-Anwendung**: Entwickelt für benutzergesteuerte Interaktionen mit einem Backend-Server in Ihrer Client-Anwendung.
+1. **OAuth-Single-Page-Application**: Entwickelt für benutzergesteuerte Interaktionen ohne Backend-Server in Ihrer Client-Anwendung.
 
-Sie können verschiedene Anwendungsfälle mit verschiedenen Arten von Anmeldeinformationen unterstützen.
+Sie können verschiedene Anwendungsfälle mit verschiedenen Arten von Anmeldedaten unterstützen.
 
-Alle Anmeldeinformationen werden in Ihrem ADC-Projekt verwaltet.
+Alle Anmeldedaten werden in Ihrem ADC-Projekt verwaltet.
 
 >[!BEGINTABS]
 
->[!TAB Anmeldeinformationen hinzufügen]
+>[!TAB Hinzufügen von Anmeldedaten]
 
-Um Anmeldeinformationen für eine AEM-API hinzuzufügen, gehen Sie zum Abschnitt **APIs** Ihres ADC-Projekts und klicken Sie auf **Weitere Anmeldeinformationen verbinden**. Befolgen Sie dann die Anweisungen für Ihren spezifischen Berechtigungstyp.
+Um Anmeldedaten für ein AEM-API hinzuzufügen, gehen Sie zum Abschnitt **APIs** Ihres ADC-Projekts und klicken Sie auf **Connect another credential** (Weitere Anmeldedaten verbinden). Befolgen Sie dann die Anweisungen für Ihre spezifische Art von Anmeldedaten.
 
-![Verbindung mit einer anderen Berechtigung herstellen](../assets/how-to/connect-another-credential.png)
+![Verbinden weiterer Anmeldedaten](../assets/how-to/connect-another-credential.png)
 
->[!TAB Entfernen von Anmeldeinformationen]
+>[!TAB Entfernen von Anmeldedaten]
 
-Um eine AEM-API-Berechtigung zu entfernen, wählen Sie sie im Abschnitt **APIs** Ihres ADC-Projekts aus und klicken Sie dann auf **Berechtigung löschen**.
+Um Anmeldedaten für ein AEM-API zu entfernen, wählen Sie das API im Abschnitt **APIs** Ihres ADC-Projekts aus und klicken Sie dann auf **Delete credential** (Anmeldedaten löschen).
 
-![Berechtigung löschen](../assets/how-to/delete-credential.png)
+![Löschen von Anmeldedaten](../assets/how-to/delete-credential.png)
 
 
 >[!ENDTABS]
 
-## Produktprofile hinzufügen oder entfernen
+## Hinzufügen oder Entfernen von Produktprofilen
 
-Das _Produktprofil_ stellt die _Berechtigungen (oder Autorisierung)_ zu den Anmeldeinformationen für den Zugriff auf die AEM-Ressourcen bereit. Die vom _Produktprofil_ bereitgestellten Berechtigungen basieren auf den _Services_, die mit dem _Produktprofil_ verknüpft sind. Die meisten _Services_ stellen den AEM-Ressourcen über die Benutzergruppen in _AEM-Instanz, die denselben Namen wie der_ Service _haben,_ Berechtigung „LESEN“ bereit.
+Das _Produktprofil_ gewährt den Anmeldedaten _Berechtigungen (oder eine Autorisierung)_ für den Zugriff auf die AEM-Ressourcen. Die vom _Produktprofil_ bereitgestellten Berechtigungen basieren auf den _Services_, die mit dem _Produktprofil_ verknüpft sind. Die meisten _Services_ stellen den AEM-Ressourcen die Berechtigung _READ_ (Lesen) über die Benutzergruppen in der AEM-Instanz bereit, die denselben Namen wie der _Service_ haben.
 
-Es gibt Fälle, in denen die Anmeldeinformationen (auch als Benutzer des technischen Kontos bezeichnet) zusätzliche Berechtigungen wie _Erstellen, Aktualisieren, Löschen_ (CUD) von AEM-Ressourcen benötigen. In solchen Fällen müssen Sie ein neues &quot;_&quot; hinzufügen_ das den _Services“ zugeordnet ist_ die die erforderlichen Berechtigungen bereitstellen.
+Es gibt Fälle, in denen die Anmeldedaten (auch als Benutzerprofil des technischen Kontos bezeichnet) zusätzliche Berechtigungen von AEM-Ressourcen benötigen, z. B. _Create, Update, Delete_ (CUD) (Erstellen, Aktualisieren, Löschen). In solchen Fällen müssen Sie ein neues _Produktprofil_ hinzufügen, das mit den _Services_ verknüpft ist, die die erforderlichen Berechtigungen bereitstellen.
 
-Wenn beispielsweise der AEM Assets-Autoren-API-Aufruf den [403-Fehler für Nicht-GET-Anfragen erhält](../use-cases/invoke-api-using-oauth-s2s.md#403-error-for-non-get-requests) können Sie **AEM-Administratoren - Autor - Programm XXX - Umgebung XXX** _Produktprofil_ hinzufügen, um das Problem zu beheben.
+Wenn beispielsweise der AEM Assets-Autoren-API-Aufruf den [Fehler 403 bei Nicht-GET-Anfragen](../use-cases/invoke-api-using-oauth-s2s.md#403-error-for-non-get-requests) erhält, können Sie das _Produktprofil_ **AEM Administrators - author - Program XXX - Environment XXX** (AEM-Admins - Autorin bzw. Autor - Programm XXX - Umgebung XXX) hinzufügen, um das Problem zu beheben.
 
 >[!CAUTION]
 >
->Der **AEM-**-Service bietet _VOLLSTÄNDIGEN_ Administratorzugriff auf Experience Manager. Alternativ können Sie &quot;[ Berechtigungen“ aktualisieren](./services-user-group-permission-management.md) um nur die erforderlichen Berechtigungen bereitzustellen.
+>Der Service **AEM Administrators** (AEM-Admins) bieten _vollen_ administrativem Zugriff auf Experience Manager. Alternativ können Sie [Berechtigungen für Services](./services-user-group-permission-management.md) aktualisieren, um nur die erforderlichen Berechtigungen bereitzustellen.
 
 >[!BEGINTABS]
 
 >[!TAB Hinzufügen von Produktprofilen]
 
-Um Produktprofile für eine AEM-API hinzuzufügen, klicken Sie **Produktprofile bearbeiten** im Abschnitt **APIs** des ADC-Projekts, wählen Sie das gewünschte Produktprofil im Dialogfeld **API konfigurieren** aus und speichern Sie Ihre Änderungen.
+Um Produktprofile für ein AEM-API hinzuzufügen, klicken Sie im Abschnitt **APIs** des ADC-Projekts auf **Edit product profiles** (Produktprofile bearbeiten), wählen Sie im Dialogfeld **Configure API** (API konfigurieren) das gewünschte Produktprofil aus und speichern Sie Ihre Änderungen.
 
-![Produktprofile bearbeiten](../assets/how-to/edit-product-profiles.png)
+![Bearbeiten von Produktprofilen](../assets/how-to/edit-product-profiles.png)
 
-Wählen Sie das gewünschte Produktprofil (z. B. **AEM-Administratoren - Autor - Programm XXX - Umgebung XXX**) aus, das mit den erforderlichen Services verknüpft ist, und speichern Sie dann Ihre Änderungen.
+Wählen Sie das gewünschte Produktprofil (z.B. **AEM Administrators - author - Program XXX - Environment XXX**) (AEM-Admins – Autorin bzw. Autor – Programm XXX – Umgebung XXX) aus, das mit den erforderlichen Services verknüpft ist, und speichern Sie dann Ihre Änderungen.
 
-![Profil auswählen](../assets/how-to/select-product-profile.png)
+![Auswählen eines Produktprofils](../assets/how-to/select-product-profile.png)
 
-Beachten Sie, dass das Produktprofil **AEM-Administratoren - Autor - Programm XXX - Umgebung XXX** sowohl mit dem Service **AEM-Administratoren** als auch mit dem Service **AEM Assets-API-** verknüpft ist. Ohne Letzteres wird das Produktprofil nicht in der Liste der verfügbaren Produktprofile angezeigt.
+Beachten Sie, dass das Produktprofil **AEM Administrators - author - Program XXX - Environment XXX** (AEM-Admins – Autorin bzw. Autor – Programm XXX – Umgebung XXX) sowohl mit dem Service **AEM Administrators** (AEM-Admins) als auch mit dem Service **AEM Assets API** (AEM Assets-API) verknüpft ist. Ohne Letzteres wird das Produktprofil nicht in der Liste der verfügbaren Produktprofile angezeigt.
 
 ![Produktprofil-Services](../assets/how-to/product-profile-services.png)
 
@@ -110,12 +110,12 @@ Die **PATCH**-Anfrage zum Aktualisieren der Asset-Metadaten sollte jetzt ohne Pr
 
 >[!TAB Entfernen von Produktprofilen]
 
-Um Produktprofile für eine AEM-API zu entfernen, klicken Sie im Abschnitt **APIs** des ADC-Projekts auf **Produktprofile bearbeiten**, heben Sie die Auswahl des gewünschten Produktprofils im Dialogfeld **API konfigurieren** auf und speichern Sie Ihre Änderungen.
+Um Produktprofile für ein AEM-API zu entfernen, klicken Sie im Abschnitt **APIs** des ADC-Projekts auf **Edit product profiles** (Produktprofile bearbeiten), wählen Sie im Dialogfeld **Configure API** (API konfigurieren) das gewünschte Produktprofil ab und speichern Sie Ihre Änderungen.
 
-![Auswahl des Produktprofils ](../assets/how-to/deselect-product-profile.png)
+![Abwählen des Produktprofils](../assets/how-to/deselect-product-profile.png)
 
 >[!ENDTABS]
 
 ## Zusammenfassung
 
-Sie haben gelernt, wie Sie den Authentifizierungsmechanismus und die Berechtigungen für AEM-APIs mithilfe von _Anmeldeinformationen und Produktprofil_ im Adobe Developer Console-Projekt (ADC) ändern können.
+Sie haben gelernt, wie Sie den Authentifizierungsmechanismus und die Berechtigungen für AEM-APIs mithilfe von _Anmeldedaten und dem Produktprofil_ in im Adobe Developer Console(ADC)-Projekt ändern können.

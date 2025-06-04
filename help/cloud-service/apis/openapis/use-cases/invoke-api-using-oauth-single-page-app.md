@@ -1,6 +1,6 @@
 ---
-title: Aufrufen von OpenAPI-basierten AEM-APIs mithilfe der OAuth-Einzelseiten-App
-description: Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service mithilfe der benutzerbasierten Authentifizierung von einer benutzerdefinierten Single Page App (SPA) über den OAuth 2.0 PKCE-Fluss aufrufen.
+title: Aufrufen von OpenAPI-basierten AEM-APIs mithilfe der OAuth-Single-Page-Application-Authentifizierung
+description: Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service mithilfe der benutzerbasierten Authentifizierung aus einer benutzerdefinierten Single Page Application (SPA) über den OAuth 2.0 PKCE-Fluss aufrufen.
 version: Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -13,95 +13,95 @@ last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
 source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2081'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
-# Aufrufen von OpenAPI-basierten AEM-APIs mithilfe der OAuth-Einzelseiten-App
+# Aufrufen von OpenAPI-basierten AEM-APIs mithilfe der OAuth-Single-Page-Application-Authentifizierung
 
-Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service mithilfe der **OAuth Single Page App-Authentifizierung** aufrufen. Es folgt dem OAuth 2.0 PKCE-Fluss (Proof Key for Code Exchange) für die benutzerbasierte Authentifizierung in einer Single Page Application (SPA).
+Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service mithilfe der **OAuth-Single-Page-Application-Authentifizierung** aufrufen. Gefolgt wird dabei dem OAuth 2.0 PKCE(Proof Key for Code Exchange)-Fluss zur benutzerbasierten Authentifizierung in einer Single Page Application (SPA).
 
-Die OAuth Single Page App-Authentifizierung ist ideal für JavaScript-basierte Anwendungen, die im Browser ausgeführt werden. Unabhängig davon, ob ein Backend-Server fehlt oder ob Zugriffstoken abgerufen werden müssen, um im Namen eines Benutzers mit AEM-APIs zu interagieren.
+Die OAuth-Single-Page-Application-Authentifizierung ist ideal für JavaScript-basierte Anwendungen, die im Browser ausgeführt werden. Dies gilt unabhängig davon, ob nun ein Backend-Server fehlt oder Zugriffs-Token abgerufen werden müssen, um im Namen einer Benutzerin oder eines Benutzers mit AEM-APIs zu interagieren.
 
-Der PKCE-Fluss erweitert den Gewährungstyp OAuth 2.0 _authorization_code_ und erhöht die Sicherheit, indem er das Abfangen von Autorisierungs-Code verhindert. Weitere Informationen finden Sie im Abschnitt [Unterschied zwischen OAuth Server-zu-Server- und Web-App- bzw. Single Page App-Anmeldeinformationen](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials) .
+Der PKCE-Fluss erweitert den OAuth 2.0-Grant-Typ _authorization_code_ und erhöht die Sicherheit, indem er das Abfangen von Autorisierungs-Code verhindert. Weitere Informationen finden Sie unter [Unterschied zwischen OAuth-Server-zu-Server-, Web-Anwendungs- und Single-Page-Application-Anmeldedaten](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
 
 ## Lerninhalt{#what-you-learn}
 
-In diesem Tutorial erfahren Sie, wie Sie:
+In diesem Tutorial lernen Sie Folgendes:
 
-- Konfigurieren Sie ein Adobe Developer Console (ADC)-Projekt für den Zugriff auf die OpenAPI-basierten AEM-APIs mithilfe der _OAuth Single Page App_-Authentifizierung oder allgemein als _OAuth 2.0 PKCE Flow_ bekannt.
+- Konfigurieren eines Adobe Developer Console(ADC)-Projekts für den Zugriff auf die OpenAPI-basierten AEM-APIs mithilfe der _OAuth-Single-Page-Application_-Authentifizierung, allgemein auch als _OAuth 2.0 PKCE-Fluss_ bekannt
 
-- Implementieren des OAuth Single Page App-Authentifizierungsflusses in einer benutzerdefinierten SPA.
-   - IMS-Benutzerauthentifizierung und App-Autorisierung.
-   - Abrufen von Zugriffstoken mithilfe des OAuth 2.0 PKCE-Flusses.
-   - Verwenden Sie das Zugriffstoken, um OpenAPI-basierte AEM-APIs aufzurufen.
+- Implementieren des OAuth-Single-Page-Application-Authentifizierungsflusses in einer benutzerdefinierten SPA
+   - IMS-Benutzerauthentifizierung und Anwendungsautorisierung
+   - Abrufen von Zugriffs-Token mithilfe des OAuth 2.0 PKCE-Flusses
+   - Verwenden des Zugriffs-Token, um OpenAPI-basierte AEM-APIs aufzurufen
 
-Bevor Sie beginnen, stellen Sie sicher, dass Sie Folgendes überprüft haben:
+Bevor Sie beginnen, stellen Sie sicher, dass Sie sich Folgendes angesehen haben:
 
-- [ Abschnitt „Zugriff auf Adobe-APIs und ](../overview.md#accessing-adobe-apis-and-related-concepts) Konzepte“.
-- [ Artikel zum Einrichten von OpenAPI-basierten AEM](../setup.md)APIs.
+- den Abschnitt [Zugreifen auf Adobe-APIs und zugehörige Konzepte](../overview.md#accessing-adobe-apis-and-related-concepts)
+- den Artikel [Einrichten von OpenAPI-basierten AEM-APIs](../setup.md)
 
-## Übersicht über WKND SPA und funktionaler Ablauf{#wknd-spa-overview-and-functional-flow}
+## WKND-SPA – Überblick und Funktionsfluss{#wknd-spa-overview-and-functional-flow}
 
-Lassen Sie uns untersuchen, was die WKND-SPA ist, wie sie aufgebaut ist und wie sie funktioniert.
+Im Folgenden erfahren Sie, was die WKND-SPA eigentlich ist, wie sie aufgebaut ist und wie sie funktioniert.
 
-Die WKND-SPA ist eine **React-basierte Einzelseitenanwendung** die zeigt, wie Sie ein benutzerspezifisches Zugriffstoken sicher abrufen und direkt von der Client-Seite aus mit AEM-APIs interagieren können. Es implementiert den OAuth 2.0 PKCE-Authentifizierungsfluss über Adobe IMS und integriert sich mit zwei wichtigen AEM-APIs:
+Die WKND-SPA ist eine **React-basierte Single Page Application**, die zeigt, wie Sie ein benutzerspezifisches Zugriffs-Token sicher abrufen und von der Client-Seite aus direkt mit AEM-APIs interagieren können. Sie implementiert den OAuth 2.0 PKCE-Authentifizierungsfluss über das IMS von Adobe und lässt sich mit zwei wichtigen AEM-APIs integrieren:
 
-1. **Sites-**: für den Zugriff auf Inhaltsfragmentmodelle
-1. **Assets API**: Zum Verwalten von DAM-Ordnern
+1. **Sites-API**: zum Zugreifen auf Inhaltsfragmentmodelle
+1. **Assets-API**: zum Verwalten von DAM-Ordnern
 
-Das Adobe Developer Console-Projekt (ADC) ist so konfiguriert, dass es die OAuth Single Page App-Authentifizierung aktiviert und die erforderliche **client_id** bereitstellt, um den OAuth 2.0 PKCE-Fluss zu initiieren.
+Das Adobe Developer Console(ADC)-Projekt ist so konfiguriert, dass es die OAuth-Single-Page-Application-Authentifizierung aktiviert und die erforderliche **client_id** bereitstellt, um den OAuth 2.0 PKCE-Fluss zu initiieren.
 
 >[!IMPORTANT]
 >
->Das ADC-Projekt stellt KEIN &quot;__secret“_. Stattdessen generiert die SPA einen _code_verifier_ und _code_Challenge_, um den Autorisierungs-Code sicher gegen ein _Zugriffstoken_ einzutauschen. Dadurch entfällt die Notwendigkeit, Client-Geheimnisse Client-seitig zu speichern, was die Sicherheit erhöht.
+>Das ADC-Projekt stellt KEIN _client_secret_ bereit. Stattdessen generiert die SPA einen _code_verifier_ und eine _code_challenge_, um den Autorisierungs-Code sicher gegen ein _Zugriffs-Token_ auszutauschen. Dadurch entfällt die Notwendigkeit, Client-Geheimnisse Client-seitig zu speichern, was die Sicherheit erhöht.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456973?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
 
 
 
-Das folgende Diagramm veranschaulicht den funktionalen Ablauf der WKND-SPA _Abrufen eines benutzerspezifischen Zugriffstokens zum Aufrufen von OpenAPI-basierten AEM-APIs_:
+Die folgende Abbildung zeigt den Funktionsfluss der WKND-SPA zum _Abrufen eines benutzerspezifischen Zugriffs-Token zum Aufrufen von OpenAPI-basierten AEM-APIs_:
 
 ![WKND-SPA-Authentifizierungsfluss](../assets/spa/wknd-spa-auth-flow.png)
 
-1. Die SPA initiiert den Authentifizierungsfluss, indem sie den Benutzer über eine Autorisierungsanfrage an das Adobe Identity Management System (IMS) weiterleitet.
-1. Im Rahmen der Autorisierungsanfrage sendet die SPA die _client_id_, _redirect_uri_ und _code_Challenge_ nach dem OAuth 2.0 PKCE-Fluss an IMS. Die SPA generiert einen zufälligen _code_verifier_, hasht ihn mit SHA-256, und Base64 codiert das Ergebnis, um die _code_Challenge_ zu erstellen.
-1. Das IMS authentifiziert den Benutzer und gibt nach erfolgreicher Authentifizierung einen _authorization_code_ aus, der über den _redirect_uri_ an die SPA zurückgesendet wird.
-1. Die SPA tauscht den _authorization_code_ gegen ein _Zugriffstoken_ durch Senden einer POST-Anfrage an den IMS-Token-Endpunkt aus. Er enthält den _code_verifier_ in der Anfrage zur Validierung der _code_Challenge_ die zuvor gesendet wurde. Dadurch wird sichergestellt, dass die Autorisierungsanfrage (Schritt 2) und die Token-Anfrage (Schritt 4) mit demselben Authentifizierungsfluss verknüpft sind, wodurch Abfangangriffe verhindert werden.
-1. Das IMS validiert den _code_verifier_ und gibt das benutzerspezifische _Zugriffstoken“_.
-1. Die SPA enthält das _Zugriffstoken_ in API-Anfragen an AEM zum Authentifizieren und Abrufen benutzerspezifischer Inhalte.
+1. Die SPA initiiert den Authentifizierungsfluss, indem sie die Benutzerin bzw. den Benutzer über eine Autorisierungsanfrage an das Identitäts-Management-System (IMS) von Adobe weiterleitet.
+1. Im Rahmen der Autorisierungsanfrage sendet die SPA die _client_id_, den _redirect_uri_ und die _code_challenge_ nach dem OAuth 2.0 PKCE-Fluss an das IMS. Die SPA generiert einen zufälligen _code_verifier_, hasht ihn mit SHA-256, und Base64-kodiert das Ergebnis, um die _code_challenge_ zu erstellen.
+1. Das IMS authentifiziert die Benutzerin bzw. den Benutzer und gibt nach erfolgreicher Authentifizierung einen _authorization_code_ aus, der über den _redirect_uri_ an die SPA zurückgesendet wird.
+1. Die SPA tauscht den _authorization_code_ gegen ein _Zugriffs-Token_ aus, indem eine POST-Anfrage an den IMS-Token-Endpunkt gesendet wird. In der Anfrage ist dabei der _code_verifier_ zur Validierung der zuvor gesendeten _code_challenge_ enthalten. So wird sichergestellt, dass die Autorisierungsanfrage (Schritt 2) und die Token-Anfrage (Schritt 4) mit demselben Authentifizierungsfluss verknüpft sind, wodurch Abfangangriffe verhindert werden.
+1. Das IMS validiert den _code_verifier_ und gibt das benutzerspezifische _Zugriffs-Token_ zurück.
+1. Die SPA enthält das _Zugriffs-Token_ in API-Anfragen an AEM zum Authentifizieren und Abrufen benutzerspezifischer Inhalte.
 
-Die WKND-SPA ist eine [React](https://react.dev/)-basierte Anwendung und verwendet [.React Context](https://react.dev/reference/react/createContext) für die Verwaltung des Authentifizierungsstatus [React Router](https://reactrouter.com/home) für die Navigation.
+Die WKND-SPA ist eine [React](https://react.dev/)-basierte Anwendung und verwendet den [React-Kontext](https://react.dev/reference/react/createContext) für die Verwaltung des Authentifizierungsstatus und [React Router](https://reactrouter.com/home) für die Navigation.
 
-Andere SPA-Frameworks wie Angular, Vue oder Vanilla JavaScript können verwendet werden, um SPA zu erstellen, die sich mithilfe der in diesem Tutorial beschriebenen Ansätze in die Adobe-APIs integrieren lässt.
+Andere SPA-Frameworks wie Angular, Vue oder Vanilla JavaScript können verwendet werden, um eine SPA zu erstellen, die sich mithilfe der in diesem Tutorial beschriebenen Ansätze mit Adobe-APIs integrieren lässt.
 
 ## Verwendung dieses Tutorials{#how-to-use-this-tutorial}
 
-Sie haben zwei Möglichkeiten, sich mit diesem Tutorial vertraut zu machen:
+Sie können dieses Tutorial auf zwei Arten angehen:
 
-- [Überprüfen von SPA-Schlüssel-Code-Snippets](#review-spa-key-code-snippets): Machen Sie sich mit dem Authentifizierungsfluss der OAuth-Single-Page-App vertraut und erkunden Sie die Implementierungen der wichtigsten API-Aufrufe in der WKND-SPA.
+- [Überprüfen der wichtigsten SPA-Code-Snippets](#review-spa-key-code-snippets): Machen Sie sich mit dem OAuth-SPA-Authentifizierungsfluss vertraut und erkunden Sie die Implementierungen der wichtigsten API-Aufrufe in der WKND-SPA.
 - [Einrichten und Ausführen der SPA](#setup-and-run-the-spa): Befolgen Sie die schrittweisen Anweisungen zum Konfigurieren und Ausführen der WKND-SPA auf Ihrem lokalen Computer.
 
-Wählen Sie den Weg, der Ihren Bedürfnissen am besten entspricht!
+Wählen Sie den Weg, der Ihren Bedürfnissen am besten entspricht.
 
-## Überprüfen von SPA-Schlüssel-Code-Snippets{#review-spa-key-code-snippets}
+## Überprüfen der wichtigsten SPA-Code-Snippets{#review-spa-key-code-snippets}
 
-Sehen wir uns die wichtigsten Code-Snippets aus der WKND-SPA an, die Folgendes zeigen:
+Sehen Sie sich die wichtigsten Code-Snippets aus der WKND-SPA an, die Folgendes zeigen:
 
-- Rufen Sie ein benutzerspezifisches Zugriffstoken mithilfe des OAuth-Authentifizierungsflusses für Einzelseiten-Apps ab.
+- Aufrufen eines benutzerspezifischen Zugriffs-Token mithilfe des OAuth-SPA-Authentifizierungsflusses
 
-- Rufen Sie OpenAPI-basierte AEM-APIs direkt von der Client-Seite aus auf.
+- Aufrufen von OpenAPI-basierten AEM-APIs direkt von der Client-Seite aus
 
 Diese Snippets helfen Ihnen, den Authentifizierungsprozess und die API-Interaktionen innerhalb der SPA zu verstehen.
 
 ### Herunterladen des SPA-Codes{#download-the-spa-code}
 
-1. Laden Sie die [WKND SPA &amp; AEM APIs - Demo App](../assets/spa/wknd-spa-with-aemapis-demo.zip) Zip-Datei herunter und extrahieren Sie sie.
+1. Laden Sie die ZIP-Datei [WKND SPA &amp; AEM APIs – Demo App](../assets/spa/wknd-spa-with-aemapis-demo.zip) herunter und extrahieren Sie sie.
 
-1. Navigieren Sie zum extrahierten Ordner und öffnen Sie die `.env.example` in Ihrem bevorzugten Code-Editor. Überprüfen Sie die erforderlichen Konfigurationsparameter.
+1. Navigieren Sie zum extrahierten Ordner und öffnen Sie die Datei `.env.example` in Ihrem bevorzugten Code-Editor. Überprüfen Sie die erforderlichen Konfigurationsparameter.
 
    ```plaintext
    ########################################################################
@@ -134,17 +134,17 @@ Diese Snippets helfen Ihnen, den Authentifizierungsprozess und die API-Interakti
    REACT_APP_REDIRECT_URI=https://localhost:3000/callback
    ```
 
-   Sie müssen die Platzhalter durch die tatsächlichen Werte aus dem Adobe Developer Console (ADC)-Projekt und der AEM as a Cloud Service Assets-Instanz ersetzen.
+   Sie müssen die Platzhalter durch die tatsächlichen Werte aus dem Adobe Developer Console(ADC)-Projekt und der AEM as a Cloud Service Assets-Instanz ersetzen.
 
 ### IMS-Benutzerauthentifizierung und SPA-Autorisierung{#ims-user-authentication-and-spa-authorization}
 
-Im Folgenden wird der Code für die IMS-Benutzerauthentifizierung und SPA-Autorisierung vorgestellt. Um Inhaltsfragmentmodelle und DAM-Ordner abzurufen, muss sich der Benutzer bei Adobe IMS authentifizieren und der WKND-SPA die Berechtigung zum Zugriff auf AEM-APIs in seinem Namen gewähren.
+Erkunden wir nun den Code, durch den die IMS-Benutzerauthentifizierung und die Anwendungsautorisierung verwaltet werden. Um Inhaltsfragmentmodelle und DAM-Ordner abzurufen, muss sich die Benutzerin bzw. der Benutzer beim IMS von Adobe authentifizieren und der WKND-SPA die Berechtigung zum Zugriff auf AEM-APIs in ihrem bzw. seinem Namen gewähren.
 
-Während der ersten Anmeldung wird der Benutzer aufgefordert, sein Einverständnis zu erteilen, sodass die WKND-SPA sicher auf die erforderlichen Ressourcen zugreifen kann.
+Während der ersten Anmeldung wird die Benutzerin bzw. der Benutzer aufgefordert, ihr bzw. sein Einverständnis zu erteilen, sodass die WKND-SPA sicher auf die erforderlichen Ressourcen zugreifen kann.
 
-![WKND SPA First Login and Consent](../assets/spa/wknd-spa-first-login-consent.png)
+![Erste Anmeldung und Einverständniserklärung für WKND-SPA](../assets/spa/wknd-spa-first-login-consent.png)
 
-1. In `src/context/IMSAuthContext.js` Datei initiiert die Funktion `login` den IMS-Benutzerauthentifizierungs- und App-Autorisierungsfluss. Es generiert eine zufällige `code_verifier` und `code_challenge`, um die `code` sicher gegen ein Zugriffstoken einzutauschen. Der `code_verifier` wird zur späteren Verwendung im lokalen Speicher gespeichert. Wie bereits erwähnt, speichert oder verwendet die SPA die `client_secret` nicht, sondern generiert eine spontan und verwendet sie in zwei Schritten: `authorize` und `token`.
+1. Die Funktion `login` initiiert in der Datei `src/context/IMSAuthContext.js` den Fluss zur IMS-Benutzerauthentifizierung und Anwendungsautorisierung. Sie generiert einen zufälligen `code_verifier` und eine zufällige `code_challenge`, um den `code` sicher gegen ein Zugriffs-Token auszutauschen. Der `code_verifier` wird zur späteren Verwendung im lokalen Speicher gespeichert. Wie bereits erwähnt, speichert oder verwendet die SPA das `client_secret` nicht, sondern generiert eines spontan und verwendet es in zwei Schritten: den Anfragen `authorize` und `token`.
 
    ```javascript
    ...
@@ -204,13 +204,13 @@ Während der ersten Anmeldung wird der Benutzer aufgefordert, sein Einverständn
 
    Wenn die Benutzerin bzw. der Benutzer nicht über Adobe IMS authentifiziert wird, wird die Adobe ID-Anmeldeseite angezeigt, auf der die Benutzerin bzw. der Benutzer zur Authentifizierung aufgefordert wird.
 
-   Wenn der Benutzer bereits authentifiziert ist, wird er mit einem _authorization_code_ zurück zum angegebenen _redirect_uri_ der WKND-SPA geleitet.
+   Bei bereits erfolgter Authentifizierung wird die Person mit einem _authorization_code_ wieder an den angegebenen _redirect_uri_ der WKND-SPA umgeleitet.
 
-### Abrufen von Zugriffstoken mithilfe des OAuth 2.0 PKCE-Flusses{#access-token-retrieval-using-oauth-20-pkce-flow}
+### Abrufen von Zugriffs-Token mithilfe des OAuth 2.0 PKCE-Flusses{#access-token-retrieval-using-oauth-20-pkce-flow}
 
-Die WKND-SPA tauscht den _authorization_code_ sicher mit dem Adobe IMS gegen ein benutzerspezifisches Zugriffstoken aus und verwendet dabei _client_id_ und _code_verifier_.
+Die WKND-SPA tauscht den _authorization_code_ auf sichere Weise mit dem IMS von Adobe gegen ein benutzerspezifisches Zugriffs-Token aus. Hierzu verwendet sie die _client_id_ und den _code_verifier_.
 
-1. In der `src/context/IMSAuthContext.js` tauscht die Funktion `exchangeCodeForToken` den _authorization_code_ gegen ein benutzerspezifisches Zugriffstoken aus.
+1. In der Datei `src/context/IMSAuthContext.js` tauscht die Funktion `exchangeCodeForToken` den _authorization_code_ gegen ein benutzerspezifisches Zugriffs-Token aus.
 
    ```javascript
    ...
@@ -276,13 +276,13 @@ Die WKND-SPA tauscht den _authorization_code_ sicher mit dem Adobe IMS gegen ein
    ...
    ```
 
-   Das Zugriffstoken wird im lokalen Speicher des Browsers gespeichert und in den nachfolgenden API-Aufrufen an die AEM-APIs verwendet.
+   Das Zugriffs-Token wird im lokalen Speicher des Browsers gespeichert und in den nachfolgenden API-Aufrufen an die AEM-APIs verwendet.
 
-### Zugriff auf OpenAPI-basierte AEM-APIs mithilfe des Zugriffstokens{#accessing-openapi-based-aem-apis-using-the-access-token}
+### Zugreifen auf OpenAPI-basierte AEM-APIs mithilfe des Zugriffs-Token{#accessing-openapi-based-aem-apis-using-the-access-token}
 
-Die WKND-SPA verwendet das benutzerspezifische Zugriffstoken, um die Inhaltsfragmentmodelle und DAM-Ordner-API-Endpunkte aufzurufen.
+Die WKND-SPA verwendet das benutzerspezifische Zugriffs-Token, um die Inhaltsfragmentmodelle und DAM-Ordner-API-Endpunkte aufzurufen.
 
-In der `src/components/InvokeAemApis.js`-Datei zeigt die `fetchContentFragmentModels`, wie Sie mit dem Zugriffstoken die OpenAPI-basierten AEM-APIs Client-seitig aufrufen können.
+Die Funktion `fetchContentFragmentModels` zeigt in der Datei `src/components/InvokeAemApis.js`, wie Sie mit dem Zugriffs-Token die OpenAPI-basierten AEM-APIs von der Client-Seite aus aufrufen können.
 
 ```javascript
     ...
@@ -340,72 +340,72 @@ In der `src/components/InvokeAemApis.js`-Datei zeigt die `fetchContentFragmentMo
 
 ## Einrichten und Ausführen der SPA{#setup-and-run-the-spa}
 
-Konfigurieren wir die WKND-SPA und führen sie auf Ihrem lokalen Computer aus, um den OAuth-Ablauf der Einzelseiten-App-Authentifizierung und die API-Aufrufe zu verstehen.
+Konfigurieren Sie nun die WKND-PIM-SPA auf Ihrem lokalen Computer und führen Sie sie aus, um den OAuth-SPA-Authentifizierungsfluss und die API-Aufrufe zu verstehen.
 
 ### Voraussetzungen{#prerequisites}
 
 Zum Durchführen dieses Tutorials benötigen Sie Folgendes:
 
-- Modernisierte AEM as a Cloud Service-Umgebung mit folgenden Neuerungen:
-   - AEM-Version `2024.10.18459.20241031T210302Z` oder höher.
-   - Neue Stil-Produktprofile (wenn die Umgebung vor November 2024 erstellt wurde)
+- Eine modernisierte AEM as a Cloud Service-Umgebung mit:
+   - AEM der Version `2024.10.18459.20241031T210302Z` oder höher
+   - Produktprofilen im neuen Stil (wenn die Umgebung vor November 2024 erstellt wurde)
 
-  Weitere Einzelheiten finden Sie [ Artikel zum Einrichten von OpenAPI](../setup.md)basierten AEM-APIs .
+  Weitere Informationen finden Sie im Artikel [Einrichten von OpenAPI-basierten AEM-APIs](../setup.md).
 
-- Das Beispielprojekt [WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project) muss darin bereitgestellt werden.
+- Das [WKND-Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project)-Beispielprojekt muss darin bereitgestellt sein.
 
-- Rufen Sie die [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started) auf.
+- Zugriff auf die [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started?lang=de) auf.
 
-- Installieren Sie [Node.js](https://nodejs.org/de/) auf Ihrem lokalen Computer, um die NodeJS-Beispielanwendung auszuführen.
+- Sie müssen [Node.js](https://nodejs.org/de/) auf Ihrem lokalen Computer installieren, um die NodeJS-Beispielanwendung auszuführen.
 
 ### Entwicklungsschritte{#development-steps}
 
 Die allgemeinen Entwicklungsschritte lauten:
 
-1. ADC-Projekt konfigurieren
-   1. Fügen Sie die Assets- und Sites-APIs hinzu.
-   1. Konfigurieren von OAuth Single Page App-Anmeldeinformationen.
+1. Konfigurieren des ADC-Projekts
+   1. Hinzufügen der Assets- und Sites-APIs
+   1. Konfigurieren der OAuth-Single-Page-Application-Anmeldedaten
 1. Konfigurieren der AEM-Instanz
-   1. So aktivieren Sie die ADC-Projektkommunikation
-   1. Um der SPA Zugriff auf die AEM-APIs zu gewähren, konfigurieren Sie die CORS-Einstellungen.
-1. Konfigurieren und führen Sie die WKND-SPA auf Ihrem lokalen Computer aus
+   1. Zum Aktivieren der ADC-Projektkommunikation
+   1. Zum Zulassen des SPA-Zugriffs auf die AEM-APIs, indem die CORS-Einstellungen konfiguriert werden
+1. Konfigurieren und Ausführen der WKND-SPA auf dem lokalen Computer
 1. Überprüfen des End-to-End-Flusses
 
-### ADC-Projekt konfigurieren{#configure-adc-project}
+### Konfigurieren des ADC-Projekts{#configure-adc-project}
 
-Der Schritt zum Konfigurieren des ADC _Projekts wird_ der [OpenAPI-basierten AEM-APIs](../setup.md) wiederholt. Wiederholt wird, um die Assets Sites-API hinzuzufügen und ihre Authentifizierungsmethode als OAuth-Einzelseiten-App zu konfigurieren.
+Der Schritt zum Konfigurieren des ADC-Projekts ist mit dem entsprechenden Schritt unter [Einrichten der OpenAPI-basierten AEM-APIs](../setup.md) identisch und wird _wiederholt_. Er wird wiederholt, um die Assets- und Site-API hinzuzufügen und „OAuth Single Page Application“ als zugehörige Authentifizierungsmethode zu konfigurieren.
 
-1. Öffnen Sie in der {0[&#128279;](https://developer.adobe.com/console/projects)Adobe Developer Console} das gewünschte Projekt.
+1. Öffnen Sie in der [Adobe Developer Console](https://developer.adobe.com/console/projects) das gewünschte Projekt.
 
-1. Um AEM-APIs hinzuzufügen, klicken Sie auf die Schaltfläche **API hinzufügen**.
+1. Um AEM-APIs hinzuzufügen, klicken Sie auf die Schaltfläche **Add API** (API hinzufügen).
 
-   ![API hinzufügen](../assets/spa/add-api.png)
+   ![Hinzufügen des APIs](../assets/spa/add-api.png)
 
-1. Filtern Sie _Dialogfeld „API hinzufügen_ nach _Experience Cloud_ und wählen Sie die Karte **Content-Management für AEM CS Sites** klicken Sie auf **Weiter**.
+1. Filtern Sie im Dialogfeld _Add an API_ (API hinzufügen) auf _Experience Cloud_, wählen Sie die Karte **AEM CS Sites Content Management** (AEM CS Sites-Content-Management) aus und klicken Sie auf **Next** (Weiter).
 
-   ![AEM-API hinzufügen](../assets/spa/add-aem-sites-api.png)
+   ![Hinzufügen eines AEM-APIs](../assets/spa/add-aem-sites-api.png)
 
-1. Wählen Sie anschließend im Dialogfeld _API konfigurieren_ die Option **Benutzerauthentifizierung** und klicken Sie auf **Weiter**.
+1. Wählen Sie anschließend im Dialogfeld _Configure API_ (API konfigurieren) die Authentifizierungsoption **User Authentication** (Benutzerauthentifizierung) aus und klicken Sie auf **Next** (Weiter). 
 
-   ![Konfigurieren der AEM-API](../assets/spa/configure-aem-api.png)
+   ![Konfigurieren des AEM-APIs](../assets/spa/configure-aem-api.png)
 
-1. Wählen Sie im nächsten _API konfigurieren_ die Authentifizierungsoption **OAuth Single-Page App** und klicken Sie auf **Weiter**.
+1. Wählen Sie im nächsten Dialogfeld _Configure API_ (API konfigurieren) die Authentifizierungsoption **OAuth Single-Page App** (OAuth-Single-Page-Application) aus und klicken Sie auf **Next** (Weiter). 
 
-   ![Konfigurieren der OAuth-Single-Page-App](../assets/spa/configure-oauth-spa.png)
+   ![Konfigurieren der OAuth-Single-Page-Application](../assets/spa/configure-oauth-spa.png)
 
-1. Geben _im Dialogfeld OAuth Single-Page App konfigurieren_ die folgenden Details ein und klicken Sie auf **Weiter**.
-   - Standard-Umleitungs-URI: `https://localhost:3001/callback`
-   - Umleitungs-URI-Muster: `https://localhost:3001/callback`
+1. Geben Sie im Dialogfeld _Configure OAuth Single-Page App_ (OAuth-Single-Page-Application konfigurieren) die folgenden Details ein und klicken Sie auf **Next** (Weiter).
+   - Default redirect URI (Standard-Umleitungs-URI): `https://localhost:3001/callback`
+   - Redirect URI pattern (Muster des Umleitungs-URI): `https://localhost:3001/callback`
 
-   ![Konfigurieren der OAuth-Single-Page-App](../assets/spa/configure-oauth-spa-details.png)
+   ![Konfigurieren der OAuth-Single-Page-Application](../assets/spa/configure-oauth-spa-details.png)
 
-1. Überprüfen Sie die verfügbaren Bereiche und klicken Sie auf **Konfigurierte API speichern**.
+1. Überprüfen Sie die verfügbaren Bereiche und klicken Sie auf **Save configured API** (Konfiguriertes API speichern).
 
-   ![Konfigurierte API speichern](../assets/spa/save-configured-api.png)
+   ![Speichern des konfigurierten APIs](../assets/spa/save-configured-api.png)
 
-1. Wiederholen Sie die obigen Schritte, um die **AEM Assets Author-API hinzuzufügen**.
+1. Wiederholen Sie die obigen Schritte, um das **AEM Assets Author-API** hinzuzufügen.
 
-1. Überprüfen Sie die AEM-API und die Authentifizierungskonfiguration.
+1. Überprüfen Sie das AEM-API und die Authentifizierungskonfiguration.
 
    ![AEM-API-Konfiguration](../assets/spa/aem-api-configuration.png)
 
@@ -413,15 +413,15 @@ Der Schritt zum Konfigurieren des ADC _Projekts wird_ der [OpenAPI-basierten AEM
 
 ### Konfigurieren der AEM-Instanz zur Aktivierung der ADC-Projektkommunikation{#configure-aem-instance-to-enable-adc-project-communication}
 
-Befolgen Sie die Anweisungen im Artikel [Einrichten von OpenAPI-basierten AEM](../setup.md#configure-the-aem-instance-to-enable-adc-project-communication)APIs , um die AEM-Instanz so zu konfigurieren, dass die ADC-Projektkommunikation aktiviert wird.
+Befolgen Sie die Anweisungen im Artikel [Einrichten von OpenAPI-basierten AEM-APIs](../setup.md#configure-the-aem-instance-to-enable-adc-project-communication), um die AEM-Instanz so zu konfigurieren, dass die ADC-Projektkommunikation aktiviert wird.
 
-### AEM CORS-Konfiguration{#aem-cors-configuration}
+### AEM-CORS-Konfiguration{#aem-cors-configuration}
 
-Die Ressourcenfreigabe zwischen verschiedenen Ursprüngen (Cross-Origin Resource Sharing, CORS) von AEM as a Cloud Service ermöglicht AEM-fremden Web-Eigenschaften browserbasierte Client-seitige Aufrufe an AEM-APIs.
+Cross-Origin Resource Sharing (CORS) von AEM as a Cloud Service ermöglicht AEM-fremde Web-Eigenschaften, um Browser-basierte Client-seitige Aufrufe an AEM-APIs durchzuführen.
 
 1. Suchen Sie im AEM-Projekt im Ordner `/ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author/` nach der Datei `com.adobe.granite.cors.impl.CORSPolicyImpl~wknd-graphql.cfg.json` oder erstellen Sie diese.
 
-   ![Suchen Sie die CORS-Konfigurationsdatei](../assets/spa/locate-cors-config-file.png)
+   ![Suchen der CORS-Konfigurationsdatei](../assets/spa/locate-cors-config-file.png)
 
 1. Fügen Sie der Datei die folgende Konfiguration hinzu.
 
@@ -460,17 +460,17 @@ Die Ressourcenfreigabe zwischen verschiedenen Ursprüngen (Cross-Origin Resource
    }
    ```
 
-1. Übergeben Sie die Konfigurationsänderungen und übertragen Sie die Änderungen an das Remote-Git-Repository, mit dem die Cloud Manager-Pipeline verbunden ist.
+1. Übergeben Sie die Konfigurationsänderungen und pushen Sie die Änderungen an das Remote-Git-Repository, mit dem die Cloud Manager-Pipeline verbunden ist.
 
-1. Stellen Sie die oben genannten Änderungen mithilfe der Full-Stack-Pipeline in der Cloud Manager bereit.
+1. Stellen Sie die oben genannten Änderungen mithilfe der Fullstack-Pipeline in Cloud Manager bereit.
 
 ### Konfigurieren und Ausführen der SPA{#configure-and-run-the-spa}
 
-1. Laden Sie die [WKND SPA &amp; AEM APIs - Demo App](../assets/spa/wknd-spa-with-aemapis-demo.zip) Zip-Datei herunter und extrahieren Sie sie.
+1. Laden Sie die ZIP-Datei [WKND SPA &amp; AEM APIs – Demo App](../assets/spa/wknd-spa-with-aemapis-demo.zip) herunter und extrahieren Sie sie.
 
-1. Navigieren Sie zum extrahierten Ordner und kopieren Sie die `.env.example` in `.env`.
+1. Navigieren Sie zum extrahierten Ordner und kopieren Sie die Datei `.env.example` nach `.env`.
 
-1. Aktualisieren Sie die `.env` mit den erforderlichen Konfigurationsparametern aus dem Adobe Developer Console (ADC)-Projekt und der AEM as a Cloud Service-Umgebung. Zum Beispiel:
+1. Aktualisieren Sie die `.env`-Datei mit den erforderlichen Konfigurationsparametern aus dem Adobe Developer Console(ADC)-Projekt und der AEM as a Cloud Service-Umgebung. Zum Beispiel:
 
    ```plaintext
    ########################################################################
@@ -513,59 +513,59 @@ Die Ressourcenfreigabe zwischen verschiedenen Ursprüngen (Cross-Origin Resource
 
 ### Überprüfen des End-to-End-Flusses{#verify-the-end-to-end-flow}
 
-1. Öffnen Sie einen Browser und navigieren Sie zu `https://localhost:3001` , um auf die WKND-SPA zuzugreifen. Akzeptieren Sie die Warnung zum selbstsignierten Zertifikat.
+1. Öffnen Sie einen Browser und navigieren Sie zu `https://localhost:3001`, um auf die WKND-SPA zuzugreifen. Akzeptieren Sie die Warnung zum selbstsignierten Zertifikat.
 
    ![WKND-SPA-Startseite](../assets/spa/wknd-spa-home.png)
 
-1. Klicken Sie auf die Schaltfläche **Adobe IMS-Anmeldung**, um den OAuth-Authentifizierungsfluss für Einzelseiten-Apps zu starten.
+1. Klicken Sie auf die Schaltfläche **Adobe IMS Login** (Adobe-IMS-Anmeldung), um den OAuth-Single-Page-Application-Authentifizierungsfluss zu initiieren.
 
-1. Authentifizierung über Adobe IMS und Einverständnis, um der WKND-SPA den Zugriff auf die Ressourcen in Ihrem Namen zu ermöglichen.
+1. Führen Sie eine Authentifizierung über das IMS von Adobe durch und geben Sie Ihr Einverständnis, dass die WKND-SPA in Ihrem Namen auf die Ressourcen zugreifen darf.
 
-1. Nach erfolgreicher Authentifizierung werden Sie zurück zur `/invoke-aem-apis` Route der WKND-SPA weitergeleitet, und das Zugriffstoken wird im lokalen Speicher des Browsers gespeichert.
+1. Nach erfolgreicher Authentifizierung werden Sie zurück zur Route `/invoke-aem-apis` der WKND-SPA geleitet, und das Zugriffs-Token wird im lokalen Speicher des Browsers gespeichert.
 
-   ![WKND-SPA - Aufrufen von AEM-APIs](../assets/spa/wknd-spa-invoke-aem-apis.png)
+   ![WKND-SPA – Aufrufen von AEM-APIs](../assets/spa/wknd-spa-invoke-aem-apis.png)
 
-1. Klicken Sie auf der `https://localhost:3001/invoke-aem-apis` Route auf die Schaltfläche **Inhaltsfragmentmodelle abrufen**, um die API für Inhaltsfragmentmodelle aufzurufen. Die SPA zeigt die Liste der Inhaltsfragmentmodelle an.
+1. Klicken Sie über `https://localhost:3001/invoke-aem-apis` auf die Schaltfläche **Fetch Content Fragment Models** (Inhaltsfragmentmodelle abrufen), um das API für Inhaltsfragmentmodelle aufzurufen. Die SPA zeigt die Liste der Inhaltsfragmentmodelle an.
 
-   ![WKND SPA-Fetch-CF-Modelle](../assets/spa/wknd-spa-fetch-cf-models.png)
+   ![WKND SPA – Abrufen von Inhaltsfragmentmodellen](../assets/spa/wknd-spa-fetch-cf-models.png)
 
-1. Ebenso können Sie auf der Registerkarte **Assets -**-API DAM-Ordner auflisten, erstellen und löschen.
+1. Ebenso können Sie auf der Registerkarte **Assets – Folders API** (Assets – Folders-API) DAM-Ordner auflisten, erstellen und löschen.
 
-   ![WKND SPA Assets API](../assets/spa/wknd-spa-assets-api.png)
+   ![WKND SPA – Assets-API](../assets/spa/wknd-spa-assets-api.png)
 
-1. In den Entwickler-Tools des Browsers können Sie die Netzwerkanfragen und -antworten einsehen, um die API-Aufrufe zu verstehen.
+1. In den Entwickler-Tools des Browsers können Sie die Netzwerkanfragen und -antworten einsehen, um die API-Aufrufe nachzuvollziehen
 
-   ![WKND-SPA-Netzwerkanfragen](../assets/spa/wknd-spa-network-requests.png)
+   ![WKND-SPA – Netzwerkanfragen](../assets/spa/wknd-spa-network-requests.png)
 
 >[!IMPORTANT]
 >
->Wenn der authentifizierte Benutzer nicht über die erforderlichen Berechtigungen zum Auflisten, Erstellen oder Löschen von AEM-Ressourcen verfügt, schlagen die API-Aufrufe mit dem Fehler „403 Forbidden“ fehl. Dadurch wird sichergestellt, dass Benutzende auch dann nicht ohne die erforderlichen Berechtigungen auf AEM-Ressourcen zugreifen können, wenn sie authentifiziert sind und über ein gültiges IMS-Zugriffstoken verfügen.
+>Wenn die authentifizierte Benutzerin bzw. der authentifizierte Benutzer nicht über die erforderlichen Berechtigungen zum Auflisten, Erstellen oder Löschen von AEM-Ressourcen verfügt, schlagen die API-Aufrufe mit dem Fehler 403 „Forbidden“ (403 Verboten) fehl. Dadurch wird sichergestellt, dass Benutzende auch dann nicht ohne die erforderlichen Berechtigungen auf AEM-Ressourcen zugreifen können, wenn sie authentifiziert sind und über ein gültiges IMS-Zugriffs-Token verfügen.
 
 ### Überprüfen des SPA-Codes{#review-the-spa-code}
 
-Sehen wir uns die allgemeine Code-Struktur und die wichtigsten Einstiegspunkte der WKND-SPA an. Die SPA wird mit dem React-Framework erstellt und verwendet die React Context-API für die Authentifizierung und die Statusverwaltung.
+Sehen Sie sich nun die allgemeine Code-Struktur und die wichtigsten Einstiegspunkte der WKND-SPA an. Die SPA basiert auf dem React-Framework und nutzt die React Context-API zur Authentifizierung und Statusverwaltung.
 
-1. Die `src/App.js`-Datei ist der Haupteinstiegspunkt der WKND-SPA. Die App-Komponente umschließt die gesamte Anwendung und initialisiert den `IMSAuthProvider`.
+1. Die Datei `src/App.js` ist der Haupteinstiegspunkt der WKND-SPA. Die App-Komponente umschließt die gesamte Anwendung und initialisiert den Kontext `IMSAuthProvider`.
 
-1. Der `src/context/IMSAuthContext.js` erstellt den Adobe IMSAuthContext, um den Authentifizierungsstatus für die untergeordneten Komponenten bereitzustellen. Sie enthält die Anmelde-, Abmelde- und HandleCallback-Funktionen, um den OAuth-Authentifizierungsfluss für Einzelseiten-Apps zu initiieren.
+1. Die `src/context/IMSAuthContext.js` erstellt den Adobe IMSAuthContext, um den Authentifizierungsstatus für die untergeordneten Komponenten bereitzustellen. Sie enthält die Anmelde-, Abmelde- und handleCallback-Funktionen, um den OAuth-Single-Page-Application-Authentifizierungsfluss zu initiieren.
 
-1. Der `src/components`-Ordner enthält verschiedene Komponenten, um die API-Aufrufe an die AEM-APIs zu veranschaulichen. Die `InvokeAemApis.js`-Komponente zeigt, wie das Zugriffstoken zum Aufrufen der AEM-APIs verwendet wird.
+1. Der Ordner `src/components` umfasst verschiedene Komponenten, um die API-Aufrufe an die AEM-APIs zu veranschaulichen. Die Komponente `InvokeAemApis.js` zeigt, wie das Zugriffs-Token zum Aufrufen der AEM-APIs verwendet wird.
 
-1. Die `src/config/config.js`-Datei lädt die Umgebungsvariablen aus der `.env`-Datei und exportiert sie zur Verwendung in der Anwendung.
+1. Die Datei `src/config/config.js` lädt die Umgebungsvariablen aus der `.env`-Datei und exportiert sie zur Verwendung in der Anwendung.
 
-1. Die `src/utils/auth.js`-Datei enthält Dienstprogrammfunktionen zum Generieren des Code Verifier und der Code Challenge für den OAuth 2.0 PKCE-Fluss.
+1. Die Datei `src/utils/auth.js` enthält Dienstprogrammfunktionen zum Generieren des code_verifier und der code_challenge für den OAuth 2.0 PKCE-Fluss.
 
-1. Der `ssl`-Ordner enthält das selbstsignierte Zertifikat und die Schlüsseldateien zum Ausführen des lokalen SSL-HTTP-Proxys.
+1. Der Ordner `ssl` enthält das selbstsignierte Zertifikat und die Schlüsseldateien zum Ausführen des lokalen SSL-HTTP-Proxys.
 
-Sie können die vorhandene SPA mit den Adobe-APIs entwickeln oder integrieren, indem Sie die in diesem Tutorial beschriebenen Ansätze verwenden.
+Sie können die vorhandene SPA entwickeln oder mit den Adobe-APIs integrieren, indem Sie so wie in diesem Tutorial beschrieben vorgehen.
 
 ## Zusammenfassung{#summary}
 
-In diesem Tutorial haben Sie erfahren, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service mithilfe der benutzerbasierten Authentifizierung von einer Single Page App (SPA) über den OAuth 2.0 PKCE-Fluss aufrufen.
+In diesem Tutorial haben Sie erfahren, wie Sie OpenAPI-basierte AEM-APIs in AEM as a Cloud Service mithilfe der benutzerbasierten Authentifizierung aus einer Single Page App (SPA) über den OAuth 2.0 PKCE-Fluss aufrufen.
 
 ## Zusätzliche Ressourcen{#additional-resources}
 
-- [Adobe Experience Manager as a Cloud Service-APIs](https://developer.adobe.com/experience-cloud/experience-manager-apis/)
-- [Implementierungshandbuch für die Benutzerauthentifizierung](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation)
-- [Anfrage autorisieren](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/ims#authorize-request)
-- [Abrufen von Zugriffstoken](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/ims#fetching-access-tokens)
+- [Adobe Experience Manager as a Cloud Service-APIs](https://developer.adobe.com/experience-cloud/experience-manager-apis/?lang=de)
+- [Implementierungshandbuch zur Benutzerauthentifizierung](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation)
+- [Autorisieren von Anfragen](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/ims#authorize-request)
+- [Abrufen von Zugriffs-Token](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/ims#fetching-access-tokens)
