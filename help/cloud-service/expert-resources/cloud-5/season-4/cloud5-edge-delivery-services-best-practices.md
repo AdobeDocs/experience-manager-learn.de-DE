@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Erkunden Sie mit einer erfahrenen Architekturfachkraft Techniken für die Entwicklung in Edge Delivery Services. Kiran führt Sie durch viele der Probleme, mit denen er bei Projekten konfrontiert war, und zeigt Ihnen, wie sie gelöst werden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440978/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441009/?learn=on&enablevpops&captions=ger)

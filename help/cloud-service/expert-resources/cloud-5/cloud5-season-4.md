@@ -42,7 +42,7 @@ Jede Staffel variiert in ihrer Länge und wird nach einem festen Zeitplan veröf
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" title="Best Practices zur Entwicklung für Edge Delivery Services" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440978/?format=jpeg&nocache=1734040055526" alt="Best Practices zur Entwicklung für Edge Delivery Services"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441009/?format=jpeg&nocache=1734040055526&captions=ger" alt="Best Practices zur Entwicklung für Edge Delivery Services"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -65,7 +65,7 @@ Jede Staffel variiert in ihrer Länge und wird nach einem festen Zeitplan veröf
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-search-optimization.md" title="Suchoptimierung in Edge Delivery Services" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440976/?format=jpeg&nocache=1734040055519" alt="Suchoptimierung in Edge Delivery Services"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440987/?format=jpeg&nocache=1734040055519&captions=ger" alt="Suchoptimierung in Edge Delivery Services"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -88,7 +88,7 @@ Jede Staffel variiert in ihrer Länge und wird nach einem festen Zeitplan veröf
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-google-maps.md" title="Integrieren mit Google Maps" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440977/?format=jpeg&nocache=1734040055523" alt="Integrieren mit Google Maps"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440998/?format=jpeg&nocache=1734040055523&captions=ger" alt="Integrieren mit Google Maps"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

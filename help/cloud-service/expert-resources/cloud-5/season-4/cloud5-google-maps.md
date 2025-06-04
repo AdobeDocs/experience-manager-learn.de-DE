@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Praxisberichte – Erfahren Sie, wie sich Edge Delivery Services mit Google Maps integrieren lassen und wie Sie die Leistung mit Integrationen optimieren können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440977/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3440998/?learn=on&enablevpops&captions=ger)

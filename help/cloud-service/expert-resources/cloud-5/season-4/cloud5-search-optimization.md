@@ -24,4 +24,4 @@ ht-degree: 100%
 
 Schrauben Sie Ihre Lighthouse-Bewertung auf 100, indem Sie bei einer großen Anzahl von Einträgen Abfrage- und Suchoptimierung nutzen. Arbeiten Sie mit Techniken zur Optimierung des Abfrageindex, zur Verbesserung der Suchfunktion und zur Teilung der Abfrageindizes für die bestmögliche Leistungsoptimierung.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440976/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3440987/?learn=on&enablevpops&captions=ger)
