@@ -1,21 +1,21 @@
 ---
-title: 'In: Experience League Monthly Newsletters Archive.'
-description: Herunterladen archivierter Versionen des Newsletters.
+title: Monatliche Newsletter zu Experience League – Archiv
+description: Laden Sie archivierte Versionen des Newsletters herunter.
 hidefromtoc: true
 hide: true
 exl-id: 16133400-b4c6-4d86-9c28-d5e230d55839
 source-git-commit: 39db0fd64d346566a640c94193a90bd8eabc2f20
 workflow-type: tm+mt
 source-wordcount: '47'
-ht-degree: 0%
+ht-degree: 97%
 
 ---
 
-# Experience League Monthly Newsletters Archive
+# Monatliche Newsletter zu Experience League – Archiv
 
-Unsere monatlichen Experience League Content Newsletter stehen auf dieser Seite zum Download bereit. Bitte einen Monat auswählen, um auf die entsprechende Edition zuzugreifen und sie herunterzuladen.
+Unsere monatlichen Newsletter mit Inhalten zu Experience League stehen auf dieser Seite zum Download bereit. Wählen Sie einen Monat aus, um auf die entsprechende Ausgabe zuzugreifen und sie herunterzuladen.
 
-| 2025 - Newsletter |
+| 2025 – Newsletter |
 |------------|
 | [Januar](assets/Jan-Newsletter.pdf) |
 | [Februar](assets/Feb-Newsletter.pdf) |

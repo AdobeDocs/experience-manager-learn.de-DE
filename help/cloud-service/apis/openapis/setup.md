@@ -1,6 +1,6 @@
 ---
 title: Einrichten von OpenAPI-basierten AEM-APIs
-description: Erfahren Sie, wie Sie Ihre AEM as a Cloud Service-Umgebung einrichten, um den Zugriff auf die OpenAPI-basierten AEM-APIs zu ermöglichen.
+description: Erfahren Sie, wie Sie Ihre AEM as a Cloud Service-Umgebung einrichten, um den Zugriff auf OpenAPI-basierte AEM-APIs zu aktivieren.
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -15,76 +15,76 @@ exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
 source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
 workflow-type: tm+mt
 source-wordcount: '1440'
-ht-degree: 6%
+ht-degree: 85%
 
 ---
 
 # Einrichten von OpenAPI-basierten AEM-APIs
 
-Erfahren Sie, wie Sie Ihre AEM as a Cloud Service-Umgebung einrichten, um den Zugriff auf die OpenAPI-basierten AEM-APIs zu ermöglichen.
+Erfahren Sie, wie Sie Ihre AEM as a Cloud Service-Umgebung einrichten, um den Zugriff auf OpenAPI-basierte AEM-APIs zu aktivieren.
 
 In diesem Beispiel wird die AEM Assets-API unter Verwendung der Server-zu-Server-Authentifizierungsmethode verwendet, um den Einrichtungsprozess zu demonstrieren. Die gleichen Schritte können für andere OpenAPI-basierte AEM-APIs ausgeführt werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
-Der Einrichtungsprozess auf hoher Ebene umfasst die folgenden Schritte:
+Der allgemeine Einrichtungsprozess umfasst die folgenden Schritte:
 
-1. Modernisierung der AEM as a Cloud Service-Umgebung.
-1. Aktivieren des Zugriffs auf AEM-APIs.
-1. Erstellen Sie ein Adobe Developer Console-Projekt (ADC).
-1. Konfigurieren des ADC-Projekts.
-1. Konfigurieren Sie die AEM-Instanz, um die ADC-Projektkommunikation zu aktivieren.
+1. Modernisieren der AEM as a Cloud Service-Umgebung
+1. Aktivieren des AEM-API-Zugriffs
+1. Erstellen eines Adobe Developer Console(ADC)-Projekts
+1. Konfigurieren des ADC-Projekts
+1. Konfigurieren der AEM-Instanz zur Aktivierung der ADC-Projektkommunikation
 
-## Modernisierung der AEM as a Cloud Service-Umgebung{#modernization-of-aem-as-a-cloud-service-environment}
+## Modernisieren der AEM as a Cloud Service-Umgebung{#modernization-of-aem-as-a-cloud-service-environment}
 
-Die Modernisierung der AEM as a Cloud Service-Umgebung ist eine einmalige Aktivität pro Umgebung, die die folgenden Schritte umfasst:
+Die Modernisierung der AEM as a Cloud Service-Umgebung ist eine einmalige Aktivität pro Umgebung, die die folgenden Schritte vorsieht:
 
-- Aktualisierung auf die AEM-Version **2024.10.18459.20241031T210302Z** oder höher.
-- Fügen Sie neue Produktprofile hinzu, wenn die Umgebung vor der Version 2024.10.18459.20241031T.210302 erstellt wurde.
+- Aktualisieren auf die AEM-Version **2024.10.18459.20241031T210302Z** oder höher
+- Hinzufügen neuer Produktprofile, wenn die Umgebung vor der Version 2024.10.18459.20241031T210302Z erstellt wurde
 
-### AEM-Instanz aktualisieren{#update-aem-instance}
+### Aktualisieren der AEM-Instanz{#update-aem-instance}
 
-Um die AEM-Instanz zu aktualisieren, klicken Sie im Abschnitt _Umgebungen_ von Adobe &lbrace;0[&#128279;](https://my.cloudmanager.adobe.com/)Cloud Manager auf das Symbol _Auslassungspunkte_ neben dem Umgebungsnamen und wählen Sie die Option **Aktualisieren** aus.
+Um die AEM-Instanz zu aktualisieren, wählen Sie im Abschnitt _Umgebungen_ von Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) das Symbol mit den _Auslassungspunkten_ neben dem Umgebungsnamen und dann die Option **Aktualisieren** aus.
 
-![AEM-Instanz aktualisieren](./assets/setup/update-aem-instance.png)
+![Aktualisieren der AEM-Instanz](./assets/setup/update-aem-instance.png)
 
-Klicken Sie dann auf **Senden** und führen Sie die _vorgeschlagene_ Full-Stack-Pipeline aus.
+Klicken Sie anschließend auf die Schaltfläche **Absenden** und führen Sie die _vorgeschlagene_ Fullstack-Pipeline aus.
 
-![Wählen Sie die neueste AEM-Release-Version aus](./assets/setup/select-latest-aem-release.png)
+![Auswählen der neuesten AEM-Version](./assets/setup/select-latest-aem-release.png)
 
-In meinem Fall heißt die Full-Stack-Pipeline **dev :: fullstack-Deploy** und die AEM-Umgebung heißt **wknd-program-dev**. Ihre Namen können unterschiedlich sein.
+Im vorliegenden Fall heißt die Fullstack-Pipeline **Dev :: Fullstack-Deploy** und die AEM-Umgebung **wknd-program-dev**. Bei Ihnen lauten die Namen womöglich anders.
 
 ### Hinzufügen neuer Produktprofile{#add-new-product-profiles}
 
-Um der AEM-Instanz neue Produktprofile hinzuzufügen, klicken Sie im Abschnitt _Umgebungen_ von Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) auf das Symbol _Auslassungspunkte_ neben dem Umgebungsnamen und wählen Sie die Option **Produktprofile hinzufügen** aus.
+Um der AEM-Instanz neue Produktprofile hinzuzufügen, wählen Sie im Abschnitt _Umgebungen_ von Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) das Symbol mit den _Auslassungspunkten_ neben dem Umgebungsnamen und dann die Option **Produktprofile hinzufügen** aus.
 
 ![Hinzufügen neuer Produktprofile](./assets/setup/add-new-product-profiles.png)
 
-Sie können die neu hinzugefügten Produktprofile überprüfen, indem Sie auf das Symbol _Auslassungspunkte_ neben dem Umgebungsnamen klicken und **Zugriff verwalten** > **Autorenprofile** auswählen.
+Sie können die neu hinzugefügten Produktprofile überprüfen, indem Sie auf das Symbol mit den _Auslassungspunkten_ neben dem Umgebungsnamen klicken und **Zugriff verwalten** > **Autorenprofile** auswählen.
 
 Im Fenster _Admin Console_ werden die neu hinzugefügten Produktprofile angezeigt.
 
-![Neue Produktprofile überprüfen](./assets/setup/review-new-product-profiles.png)
+![Überprüfen neuer Produktprofile](./assets/setup/review-new-product-profiles.png)
 
 Mit den oben genannten Schritten wird die Modernisierung der AEM as a Cloud Service-Umgebung abgeschlossen.
 
-## Zugriff auf AEM-APIs aktivieren{#enable-aem-apis-access}
+## Aktivieren des AEM-API-Zugriffs{#enable-aem-apis-access}
 
-Das Vorhandensein der _neuen Produktprofile_ ermöglicht den OpenAPI-basierten Zugriff auf AEM-APIs in Adobe Developer Console (ADC). Denken Sie daran, dass [Adobe Developer Console (ADC)](./overview.md#accessing-adobe-apis-and-related-concepts) der Entwicklungs-Hub für den Zugriff auf Adobe-APIs, SDKs, Echtzeit-Ereignisse, Server-lose Funktionen und mehr ist.
+Die vorhandenen _neuen Produktprofile_ ermöglichen den OpenAPI-basierten Zugriff auf AEM-APIs in der Adobe Developer Console (ADC). Denken Sie daran, dass die [Adobe Developer Console (ADC)](./overview.md#accessing-adobe-apis-and-related-concepts) der Entwicklungs-Hub für den Zugriff auf Adobe-APIs, SDKs, Echtzeitereignisse, Server-lose Funktionen usw. ist.
 
-Die neu hinzugefügten Produktprofile sind mit den _Services_ verknüpft, die _AEM-Benutzergruppen mit vordefinierten Zugriffssteuerungslisten (ACLs) darstellen_. Die _Services_ werden verwendet, um die Zugriffsebene auf die AEM-APIs zu steuern.
+Die neu hinzugefügten Produktprofile sind mit den _Services_ verknüpft, die _AEM-Benutzergruppen mit vordefinierten Zugriffssteuerungslisten (Access Control Lists, ACLs)_ darstellen. Die _Services_ werden verwendet, um die Zugriffsebene auf die AEM-APIs zu steuern.
 
-Sie können auch die mit dem Produktprofil verknüpften _Services_ auswählen oder die Auswahl aufheben, um die Zugriffsebene zu reduzieren oder zu erhöhen.
+Sie können auch die mit dem Produktprofil verknüpften _Services_ aus- oder abwählen, um die Zugriffsebene herab- oder heraufzusetzen.
 
-Überprüfen Sie die Verknüpfung, indem Sie auf das Symbol _Details anzeigen_ neben dem Namen des Produktprofils klicken.
+Überprüfen Sie die Verknüpfung, indem Sie neben dem Namen des Produktprofils auf das Symbol _Details anzeigen_ klicken.
 
-![Mit dem Produktprofil verknüpfte Services überprüfen](./assets/setup/review-services-associated-with-product-profile.png)
+![Überprüfen der mit dem Produktprofil verknüpften Services](./assets/setup/review-services-associated-with-product-profile.png)
 
 ### Zugriff auf AEM Assets-APIs aktivieren{#enable-aem-assets-apis-access}
 
-Standardmäßig ist der Service **AEM Assets API Users** mit keinem Produktprofil verknüpft. Verknüpfen wir sie mit dem neu hinzugefügten **AEM Assets Collaborator Users - Author - Program XXX - Environment XXX**-Produktprofil oder jedem anderen Produktprofil, das Sie für den Zugriff auf die AEM Assets-API verwenden möchten.
+Standardmäßig ist der Service für **AEM Assets-API-Benutzende** mit keinem Produktprofil verknüpft. Verknüpfen wir sie mit dem neu hinzugefügten **AEM Assets Collaborator Users - Author - Program XXX - Environment XXX**-Produktprofil oder jedem anderen Produktprofil, das Sie für den Zugriff auf die AEM Assets-API verwenden möchten.
 
-![Verknüpfen des AEM Assets-API-Benutzerdiensts mit dem Produktprofil](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
+![Verknüpfen des AEM Assets-API-Benutzer-Service mit dem Produktprofil](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
 
 ### Server-zu-Server-Authentifizierung aktivieren
 
@@ -94,78 +94,78 @@ Um beispielsweise die Server-zu-Server-Authentifizierung für die AEM Assets-API
 
 ![Entwickler mit Produktprofil verknüpfen](./assets/setup/associate-developer-to-product-profile.png)
 
-Nach dieser Verknüpfung kann die _Asset-Autoren-API_ des ADC-Projekts die gewünschte Server-zu-Server-Authentifizierung einrichten und das Authentifizierungskonto aus dem ADC-Projekt (im nächsten Schritt erstellt) mit dem Produktprofil verknüpfen.
+Nach dieser Verknüpfung kann die _Asset Author-API_ des ADC-Projekts die gewünschte Server-zu-Server-Authentifizierung einrichten und das Authentifizierungskonto aus dem (im nächsten Schritt erstellten) ADC-Projekt dem Produktprofil zuordnen.
 
 >[!IMPORTANT]
 >
 >Der obige Schritt ist wichtig, um die Server-zu-Server-Authentifizierung für die gewünschte AEM-API zu aktivieren. Ohne diese Zuordnung kann die AEM-API nicht mit der Server-zu-Server-Authentifizierungsmethode verwendet werden.
 
-## Erstellen eines Adobe Developer Console-Projekts (ADC){#adc-project}
+## Erstellen eines Adobe Developer Console(ADC)-Projekts{#adc-project}
 
-Das ADC-Projekt wird verwendet, um die gewünschten APIs hinzuzufügen, seine Authentifizierung einzurichten und das Authentifizierungskonto mit dem Produktprofil zu verknüpfen.
+Das ADC-Projekt wird verwendet, um die gewünschten APIs hinzuzufügen, die zugehörige Authentifizierung einzurichten und das Authentifizierungskonto mit dem Produktprofil zu verknüpfen.
 
-Erstellen eines ADC-Projekts:
+So erstellen Sie ein ADC-Projekt:
 
-1. Melden Sie sich mit Ihrer Adobe ID bei [&#128279;](https://developer.adobe.com/console) Adobe Developer Console an.
+1. Melden Sie sich mit Ihrer Adobe ID bei der [Adobe Developer Console](https://developer.adobe.com/console) an.
 
-   ![Adobe-Entwicklerkonsole](./assets/setup/adobe-developer-console.png)
+   ![Adobe Developer Console](./assets/setup/adobe-developer-console.png)
 
-1. Klicken Sie _Abschnitt „Schnellstart_ auf die Schaltfläche **Neues Projekt erstellen**.
+1. Klicken Sie im Abschnitt _Quick Start_ (Schnellstart) auf die Schaltfläche **Create new project** (Neues Projekt erstellen).
 
-   ![Neues Projekt erstellen](./assets/setup/create-new-project.png)
+   ![Erstellen eines neuen Projekts](./assets/setup/create-new-project.png)
 
 1. Es wird ein neues Projekt mit dem Standardnamen erstellt.
 
    ![Neues Projekt erstellt](./assets/setup/new-project-created.png)
 
-1. Bearbeiten Sie den Projektnamen, indem Sie auf die **Projekt bearbeiten** oben rechts klicken. Geben Sie einen aussagekräftigen Namen ein und klicken Sie auf **Speichern**.
+1. Bearbeiten Sie den Projektnamen, indem Sie oben rechts auf die Schaltfläche **Edit project** (Projekt bearbeiten) klicken. Geben Sie einen aussagekräftigen Namen ein und klicken Sie auf **Save** (Speichern).
 
-   ![Projektname bearbeiten](./assets/setup/edit-project-name.png)
+   ![Bearbeiten des Projektnamens](./assets/setup/edit-project-name.png)
 
-## ADC-Projekt konfigurieren{#configure-adc-project}
+## Konfigurieren des ADC-Projekts{#configure-adc-project}
 
-Nachdem Sie das ADC-Projekt erstellt haben, müssen Sie die gewünschten AEM-APIs hinzufügen, die Authentifizierung einrichten und das Authentifizierungskonto mit dem Produktprofil verknüpfen.
+Nachdem Sie das ADC-Projekt erstellt haben, müssen Sie die gewünschten AEM-APIs hinzufügen, die zugehörige Authentifizierung einrichten und das Authentifizierungskonto mit dem Produktprofil verknüpfen.
 
-1. Um AEM-APIs hinzuzufügen, klicken Sie auf die Schaltfläche **API hinzufügen**.
+1. Um AEM-APIs hinzuzufügen, klicken Sie auf die Schaltfläche **Add API** (API hinzufügen).
 
-   ![API hinzufügen](./assets/s2s/add-api.png)
+   ![Hinzufügen des APIs](./assets/s2s/add-api.png)
 
-1. Filtern _im Dialogfeld „API hinzufügen_ nach _Experience Cloud_ und wählen Sie die gewünschte AEM-API aus. In diesem Fall ist beispielsweise die _Asset-Autoren-API_ ausgewählt.
+1. Filtern Sie im Dialogfeld _Add an API_ (API hinzufügen) auf _Experience Cloud_ und wählen Sie das gewünschte AEM-API aus. In diesem Fall ist beispielsweise das _Asset Author-API_ ausgewählt.
 
-   ![AEM-API hinzufügen](./assets/s2s/add-aem-api.png)
+   ![Hinzufügen eines AEM-APIs](./assets/s2s/add-aem-api.png)
 
-1. Wählen Sie anschließend im Dialogfeld _API konfigurieren_ die gewünschte Authentifizierungsoption aus. In diesem Fall ist beispielsweise die Option **Server-zu-Server**-Authentifizierung ausgewählt.
+1. Wählen Sie anschließend im Dialogfeld _Configure API_ (API konfigurieren) die gewünschte Authentifizierungsoption aus. In diesem Fall ist beispielsweise die Option zur **Server-zu-Server**-Authentifizierung ausgewählt.
 
-   ![Authentifizierung auswählen](./assets/s2s/select-authentication.png)
+   ![Auswählen der Authentifizierung](./assets/s2s/select-authentication.png)
 
-   Die Server-zu-Server-Authentifizierung ist ideal für Backend-Services, die API-Zugriff ohne Benutzerinteraktion benötigen. Die Authentifizierungsoptionen für Web-Apps und Einzelseiten-Apps eignen sich für Anwendungen, die API-Zugriff im Namen von Benutzern benötigen. Weitere Informationen finden Sie [Unterschied zwischen OAuth Server-zu-Server- und Web-App-Anmeldeinformationen ](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials) Einzelseiten-App-Anmeldeinformationen“.
+   Die Server-zu-Server-Authentifizierung ist ideal für Backend-Services, die API-Zugriff ohne Benutzerinteraktion benötigen. Die Authentifizierungsoptionen für Web-Anwendungen und Single Page Applications eignen sich für Anwendungen, die API-Zugriff im Namen von Benutzenden benötigen. Weitere Informationen finden Sie unter [Unterschied zwischen OAuth-Server-zu-Server-, Web-Anwendungs- und Single-Page-Application-Anmeldedaten](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
 
    >[!TIP]
    >
    >Wenn die Option Server-zu-Server-Authentifizierung nicht angezeigt wird, bedeutet dies, dass der Benutzer, der die Integration einrichtet, nicht als Entwickler zum Produktprofil hinzugefügt wird, mit dem der Service verknüpft ist. Weitere Informationen finden [ unter „Server-zu-Server](#enable-server-to-server-authentication)Authentifizierung aktivieren“.
 
 
-1. Bei Bedarf können Sie die API umbenennen, um die Identifizierung zu erleichtern. Zu Demozwecken wird der Standardname verwendet.
+1. Bei Bedarf können Sie das API umbenennen, um eine einfachere Identifizierung zu ermöglichen. Zu Demozwecken wird der Standardname verwendet.
 
-   ![Berechtigung umbenennen](./assets/s2s/rename-credential.png)
+   ![Umbenennen der Anmeldedaten](./assets/s2s/rename-credential.png)
 
-1. In diesem Fall lautet die Authentifizierungsmethode **OAuth Server-zu-Server**. Daher müssen Sie das Authentifizierungskonto mit dem Produktprofil verknüpfen. Wählen Sie das Produktprofil **AEM Assets Collaborator Users - Author - Program XXX - Environment XXX** und klicken Sie auf **Speichern**.
+1. In diesem Fall wird die **OAuth-Server-zu-Server**-Authentifizierungsmethode verwendet. Daher müssen Sie das Authentifizierungskonto mit dem Produktprofil verknüpfen. Wählen Sie das Produktprofil für **AEM Assets-Mitarbeiter-Benutzende – Autorin/Autor – Programm XXX – Umgebung XXX** aus und klicken Sie auf **Save** (Speichern).
 
-   ![Profil auswählen](./assets/s2s/select-product-profile.png)
+   ![Auswählen des Produktprofils](./assets/s2s/select-product-profile.png)
 
-1. Überprüfen Sie die AEM-API und die Authentifizierungskonfiguration.
+1. Überprüfen Sie das AEM-API und die Authentifizierungskonfiguration.
 
    ![AEM-API-Konfiguration](./assets/s2s/aem-api-configuration.png)
 
    ![Authentifizierungskonfiguration](./assets/s2s/authentication-configuration.png)
 
-Wenn Sie die Authentifizierungsmethode **OAuth Web App** oder **OAuth Single Page App** wählen, wird die Produktprofilzuordnung nicht aufgefordert, aber die Umleitungs-URI der Anwendung ist erforderlich. Der Anwendungsumleitungs-URI wird verwendet, um den Benutzer nach der Authentifizierung mit einem Autorisierungs-Code an die Anwendung umzuleiten. In den Tutorials zu den entsprechenden Anwendungsfällen werden solche authentifizierungsspezifischen Konfigurationen beschrieben.
+Wenn Sie die Authentifizierungsmethode **OAuth Web App** (OAuth-Web-Anwendung) oder **OAuth Single Page App** (OAuth-Single-Page-Application) wählen, wird nicht zur Produktprofilzuordnung aufgerufen, aber der Umleitungs-URI der Anwendung ist erforderlich. Der Umleitungs-URI der Anwendung wird verwendet, um Benutzende nach der Authentifizierung mit einem Autorisierungs-Code an die Anwendung umzuleiten. In den Tutorials zu den entsprechenden Anwendungsfällen werden solche authentifizierungsspezifischen Konfigurationen beschrieben.
 
-## Konfigurieren der AEM-Instanz, um die ADC-Projektkommunikation zu aktivieren{#configure-aem-instance}
+## Konfigurieren der AEM-Instanz zur Aktivierung der ADC-Projektkommunikation{#configure-aem-instance}
 
-Um die ClientID des ADC-Projekts für die Kommunikation mit der AEM-Instanz zu aktivieren, müssen Sie die AEM-Instanz konfigurieren.
+Um die Client-ID des ADC-Projekts für die Kommunikation mit der AEM-Instanz zu aktivieren, müssen Sie die AEM-Instanz konfigurieren.
 
-Dies geschieht, indem die API-Konfiguration in einer YAML-Datei definiert und mithilfe der Konfigurations-Pipeline in der Cloud Manager bereitgestellt wird. Die YAML-Datei definiert die zulässigen Client-IDs aus dem ADC-Projekt, die mit der AEM-Instanz kommunizieren können.
+Definieren Sie hierzu die API-Konfiguration in einer YAML-Datei und stellen Sie sie mithilfe der Konfigurations-Pipeline in Cloud Manager bereit. Die YAML-Datei definiert die zulässigen Client-IDs aus dem ADC-Projekt, die mit der AEM-Instanz kommunizieren können.
 
 1. Suchen Sie im AEM-Projekt im Ordner `config` nach der Datei `api.yaml` oder erstellen Sie diese.
 
@@ -184,21 +184,21 @@ Dies geschieht, indem die API-Konfiguration in einer YAML-Datei definiert und mi
            - "<ADC Project's Credentials ClientID>"
    ```
 
-   Ersetzen Sie `<ADC Project's Credentials ClientID>` durch die tatsächliche ClientID des Wertes der Anmeldeinformationen des ADC-Projekts. Der in diesem Tutorial verwendete API-Endpunkt ist nur auf der Autorenebene verfügbar, aber für andere APIs kann die YAML-Konfiguration auch über einen Knoten _publish_ oder _preview_ verfügen.
+   Ersetzen Sie `<ADC Project's Credentials ClientID>` durch die tatsächliche Client-ID der Anmeldedaten des ADC-Projekts. Der in diesem Tutorial verwendete API-Endpunkt ist nur auf der Erstellungsebene verfügbar. Bei anderen APIs kann die YAML-Konfiguration auch über einen Knoten _publish_ oder _preview_ verfügen.
 
    >[!CAUTION]
    >
    > Zu Demozwecken wird für alle Umgebungen dieselbe Client-ID verwendet. Es wird empfohlen, für mehr Sicherheit und Kontrolle eine separate Client-ID pro Umgebung (Entwicklung, Staging, Produktion) zu verwenden.
 
-1. Übergeben Sie die Konfigurationsänderungen und übertragen Sie die Änderungen an das Remote-Git-Repository, mit dem die Cloud Manager-Pipeline verbunden ist.
+1. Übergeben Sie die Konfigurationsänderungen und pushen Sie die Änderungen an das Remote-Git-Repository, mit dem die Cloud Manager-Pipeline verbunden ist.
 
 1. Stellen Sie die oben genannten Änderungen mithilfe der Konfigurations-Pipeline in Cloud Manager bereit. Beachten Sie, dass die Datei `api.yaml` mithilfe von Befehlszeilenprogrammen auch in einer schnellen Entwicklungsumgebung installiert werden kann.
 
-   ![Bereitstellen von YAML](./assets/setup/config-pipeline.png)
+   ![Bereitstellen der YAML-Datei](./assets/setup/config-pipeline.png)
 
 ## Nächste Schritte
 
-Sobald die AEM-Instanz so konfiguriert ist, dass die ADC-Projektkommunikation aktiviert wird, können Sie mit der Verwendung der OpenAPI-basierten AEM-APIs beginnen. Erfahren Sie, wie Sie die OpenAPI-basierten AEM-APIs mit verschiedenen OAuth-Authentifizierungsmethoden verwenden:
+Sobald die AEM-Instanz so konfiguriert ist, dass die ADC-Projektkommunikation aktiviert wird, können Sie die OpenAPI-basierten AEM-APIs verwenden. Erfahren Sie, wie Sie die OpenAPI-basierten AEM-APIs mit verschiedenen OAuth-Authentifizierungsmethoden verwenden:
 
 <!-- CARDS
 {target = _self}
@@ -222,8 +222,8 @@ Sobald die AEM-Instanz so konfiguriert ist, dass die ADC-Projektkommunikation ak
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./use-cases/invoke-api-using-oauth-s2s.md" title="Aufrufen der API mithilfe der Server-zu-Server-Authentifizierung" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/s2s/OAuth-S2S.png" alt="Aufrufen der API mithilfe der Server-zu-Server-Authentifizierung"
+                    <a href="./use-cases/invoke-api-using-oauth-s2s.md" title="Aufrufen des APIs mit Server-zu-Server-Authentifizierung" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/s2s/OAuth-S2S.png" alt="Aufrufen des APIs mit Server-zu-Server-Authentifizierung"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -231,13 +231,13 @@ Sobald die AEM-Instanz so konfiguriert ist, dass die ADC-Projektkommunikation ak
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./use-cases/invoke-api-using-oauth-s2s.md" target="_self" rel="referrer" title="Aufrufen der API mithilfe der Server-zu-Server-Authentifizierung">Aufrufen der API mithilfe der Server-zu-Server-Authentifizierung</a>
+                        <a href="./use-cases/invoke-api-using-oauth-s2s.md" target="_self" rel="referrer" title="Aufrufen des APIs mit Server-zu-Server-Authentifizierung">Aufrufen des APIs mit Server-zu-Server-Authentifizierung</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs aus einem benutzerdefinierten NodeJS-Programm mithilfe der OAuth-Server-zu-Server-Authentifizierung aufrufen.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs aus einer benutzerdefinierten NodeJS-Anwendung mithilfe der OAuth-Server-zu-Server-Authentifizierung aufrufen.</p>
                 </div>
                 <a href="./use-cases/invoke-api-using-oauth-s2s.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-</a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+                </a>
             </div>
         </div>
     </div>
@@ -245,8 +245,8 @@ Sobald die AEM-Instanz so konfiguriert ist, dass die ADC-Projektkommunikation ak
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./use-cases/invoke-api-using-oauth-web-app.md" title="Aufrufen der API mithilfe der Web-App-Authentifizierung" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/web-app/OAuth-WebApp.png" alt="Aufrufen der API mithilfe der Web-App-Authentifizierung"
+                    <a href="./use-cases/invoke-api-using-oauth-web-app.md" title="Aufrufen des APIs mit Web-Anwendungs-Authentifizierung" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/web-app/OAuth-WebApp.png" alt="Aufrufen des APIs mit Web-Anwendungs-Authentifizierung"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -254,13 +254,13 @@ Sobald die AEM-Instanz so konfiguriert ist, dass die ADC-Projektkommunikation ak
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./use-cases/invoke-api-using-oauth-web-app.md" target="_self" rel="referrer" title="Aufrufen der API mithilfe der Web-App-Authentifizierung">Aufrufen der API mithilfe der Web-App-Authentifizierung</a>
+                        <a href="./use-cases/invoke-api-using-oauth-web-app.md" target="_self" rel="referrer" title="Aufrufen des APIs mit Web-Anwendungs-Authentifizierung">Aufrufen des APIs mit Web-Anwendungs-Authentifizierung</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs über eine benutzerdefinierte Web-Anwendung mithilfe der OAuth-Web-App-Authentifizierung aufrufen.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs aus einer benutzerdefinierten Web-Anwendung mithilfe der OAuth-Web-Anwendungs-Authentifizierung aufrufen.</p>
                 </div>
                 <a href="./use-cases/invoke-api-using-oauth-web-app.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-</a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+                </a>
             </div>
         </div>
     </div>
@@ -268,8 +268,8 @@ Sobald die AEM-Instanz so konfiguriert ist, dass die ADC-Projektkommunikation ak
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./use-cases/invoke-api-using-oauth-single-page-app.md" title="Aufrufen der API mithilfe der Authentifizierung über die Einzelseiten-App" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/spa/OAuth-SPA.png" alt="Aufrufen der API mithilfe der Authentifizierung über die Einzelseiten-App"
+                    <a href="./use-cases/invoke-api-using-oauth-single-page-app.md" title="Aufrufen des APIs mit Single-Page-Application-Authentifizierung" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/spa/OAuth-SPA.png" alt="Aufrufen des APIs mit Single-Page-Application-Authentifizierung"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -277,13 +277,13 @@ Sobald die AEM-Instanz so konfiguriert ist, dass die ADC-Projektkommunikation ak
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./use-cases/invoke-api-using-oauth-single-page-app.md" target="_self" rel="referrer" title="Aufrufen der API mithilfe der Authentifizierung über die Einzelseiten-App">Aufrufen der API mithilfe der Einzelseiten-App-Authentifizierung</a>
+                        <a href="./use-cases/invoke-api-using-oauth-single-page-app.md" target="_self" rel="referrer" title="Aufrufen des APIs mit Single-Page-Application-Authentifizierung">Aufrufen des APIs mit Single-Page-Application-Authentifizierung</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs aus einer benutzerdefinierten Single Page App (SPA) mithilfe des OAuth 2.0 PKCE-Flusses aufrufen.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs aus einer benutzerdefinierten Single Page Application (SPA) mithilfe des OAuth 2.0 PKCE-Flusses aufrufen.</p>
                 </div>
                 <a href="./use-cases/invoke-api-using-oauth-single-page-app.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
-</a>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+                </a>
             </div>
         </div>
     </div>

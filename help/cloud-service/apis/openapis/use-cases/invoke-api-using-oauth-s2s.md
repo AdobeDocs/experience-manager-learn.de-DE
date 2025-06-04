@@ -1,6 +1,6 @@
 ---
 title: Aufrufen von OpenAPI-basierten AEM-APIs mithilfe der OAuth-Server-zu-Server-Authentifizierung
-description: Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs für AEM as a Cloud Service aus benutzerdefinierten Programmen mithilfe der OAuth-Server-zu-Server-Authentifizierung aufrufen.
+description: Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs für AEM as a Cloud Service aus benutzerdefinierten Anwendungen mithilfe der OAuth-Server-zu-Server-Authentifizierung aufrufen.
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
@@ -15,40 +15,40 @@ exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
 source-git-commit: 9a5d811cf92a09da27057f99e1b6b2ed8df2a414
 workflow-type: tm+mt
 source-wordcount: '1727'
-ht-degree: 4%
+ht-degree: 97%
 
 ---
 
 # Aufrufen von OpenAPI-basierten AEM-APIs mithilfe der OAuth-Server-zu-Server-Authentifizierung
 
-Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs für AEM as a Cloud Service aus benutzerdefinierten Programmen mithilfe der _OAuth Server-zu-Server_-Authentifizierung aufrufen.
+Erfahren Sie, wie Sie OpenAPI-basierte AEM-APIs für AEM as a Cloud Service aus benutzerdefinierten Anwendungen mithilfe der _OAuth-Server-zu-Server_-Authentifizierung aufrufen.
 
-Die OAuth Server-zu-Server-Authentifizierung ist ideal für Backend-Services, die API-Zugriff ohne Benutzerinteraktion benötigen. Sie verwendet den Grant-Typ OAuth _.0_ client_credentials) für die Authentifizierung des Client-Programms.
+Die OAuth-Server-zu-Server-Authentifizierung ist ideal für Backend-Services, die API-Zugriff ohne Benutzerinteraktion benötigen. Sie nutzt den OAuth 2.0-Grant-Typ _client_credentials_ zur Authentifizierung der Client-Anwendung.
 
 ## Lerninhalt{#what-you-learn}
 
-In diesem Tutorial erfahren Sie, wie Sie:
+In diesem Tutorial lernen Sie Folgendes:
 
-- Konfigurieren Sie ein Adobe Developer Console-Projekt (ADC) für den Zugriff auf die Assets-Autoren-API mit _OAuth-Server-zu-Server-Authentifizierung_.
+- Konfigurieren eines Adobe Developer Console(ADC)-Projekts für den Zugriff auf das Assets Author-API mithilfe der _OAuth-Server-zu-Server-Authentifizierung_
 
-- Entwickeln Sie eine NodeJS-Beispielanwendung, die die Assets-Autoren-API aufruft, um Metadaten für ein bestimmtes Asset abzurufen.
+- Entwickeln einer NodeJS-Beispielanwendung, die das Assets Author-API aufruft, um Metadaten für ein bestimmtes Asset abzurufen
 
-Bevor Sie beginnen, stellen Sie sicher, dass Sie Folgendes überprüft haben:
+Bevor Sie beginnen, stellen Sie sicher, dass Sie sich Folgendes angesehen haben:
 
-- [ Abschnitt „Zugriff auf Adobe-APIs und ](../overview.md#accessing-adobe-apis-and-related-concepts) Konzepte“.
-- [ Artikel zum Einrichten von OpenAPI-basierten AEM](../setup.md)APIs.
+- den Abschnitt [Zugreifen auf Adobe-APIs und zugehörige Konzepte](../overview.md#accessing-adobe-apis-and-related-concepts)
+- den Artikel [Einrichten von OpenAPI-basierten AEM-APIs](../setup.md)
 
 ## Voraussetzungen
 
 Zum Durchführen dieses Tutorials benötigen Sie Folgendes:
 
-- Modernisierte AEM as a Cloud Service-Umgebung mit folgenden Neuerungen:
-   - AEM-Version `2024.10.18459.20241031T210302Z` oder höher.
-   - Neue Stil-Produktprofile (wenn die Umgebung vor November 2024 erstellt wurde)
+- Eine modernisierte AEM as a Cloud Service-Umgebung mit:
+   - AEM der Version `2024.10.18459.20241031T210302Z` oder höher
+   - Produktprofilen im neuen Stil (wenn die Umgebung vor November 2024 erstellt wurde)
 
-  Weitere [ finden Sie im Artikel zum Einrichten von OpenAPI](../setup.md)basierten AEM-APIs .
+  Weitere Informationen finden Sie im Artikel [Einrichten von OpenAPI-basierten AEM-APIs](../setup.md).
 
-- Das Beispielprojekt [WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project) muss darin bereitgestellt werden.
+- Außerdem muss das [WKND-Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project)-Beispielprojekt darin bereitgestellt sein.
 
 - Rufen Sie die [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started?lang=de) auf.
 
@@ -58,50 +58,50 @@ Zum Durchführen dieses Tutorials benötigen Sie Folgendes:
 
 Die allgemeinen Entwicklungsschritte lauten:
 
-1. ADC-Projekt konfigurieren
-   1. Hinzufügen der Assets Author-API
-   1. Konfigurieren Sie die Authentifizierungsmethode als OAuth-Server-zu-Server
+1. Konfigurieren des ADC-Projekts
+   1. Hinzufügen des Assets Author-APIs
+   1. Konfigurieren von „OAuth-Server-zu-Server“ als zugehörige Authentifizierungsmethode
    1. Verknüpfen des Produktprofils mit der Authentifizierungskonfiguration
-1. Konfigurieren der AEM-Instanz, um die ADC-Projektkommunikation zu aktivieren
+1. Konfigurieren der AEM-Instanz zur Aktivierung der ADC-Projektkommunikation
 1. Entwickeln einer NodeJS-Beispielanwendung
 1. Überprüfen des End-to-End-Flusses
 
-## ADC-Projekt konfigurieren
+## Konfigurieren des ADC-Projekts
 
-Der Schritt zum Konfigurieren des ADC _Projekts wird_ der [OpenAPI-basierten AEM-APIs](../setup.md) wiederholt. Wiederholt wird dies, um die Assets Author-API hinzuzufügen und ihre Authentifizierungsmethode als OAuth-Server-zu-Server zu konfigurieren.
+Der Schritt zum Konfigurieren des ADC-Projekts ist mit dem entsprechenden Schritt unter [Einrichten der OpenAPI-basierten AEM-APIs](../setup.md) identisch und wird _wiederholt_. Er wird wiederholt, um das Assets Author-API hinzuzufügen und „OAuth-Server-zu-Server“ als zugehörige Authentifizierungsmethode zu konfigurieren.
 
 >[!TIP]
 >
->Vergewissern Sie sich, dass Sie den Schritt **Aktivieren des Zugriffs auf AEM** im Artikel [Einrichten von OpenAPI-basierten AEM-](../setup.md#enable-aem-apis-access)) abgeschlossen haben. Ohne diese Option ist die Server-zu-Server-Authentifizierung nicht verfügbar.
+>Vergewissern Sie sich, dass Sie den Schritt **Aktivieren des AEM-API-Zugriffs** im Artikel [Einrichten von OpenAPI-basierten AEM-APIs](../setup.md#enable-aem-apis-access) abgeschlossen haben. Andernfalls ist die Server-zu-Server-Authentifizierungsoption nicht verfügbar.
 
 
-1. Öffnen Sie in der {0[&#128279;](https://developer.adobe.com/console/projects)Adobe Developer Console} das gewünschte Projekt.
+1. Öffnen Sie in der [Adobe Developer Console](https://developer.adobe.com/console/projects) das gewünschte Projekt.
 
-1. Um AEM-APIs hinzuzufügen, klicken Sie auf die Schaltfläche **API hinzufügen**.
+1. Um AEM-APIs hinzuzufügen, klicken Sie auf die Schaltfläche **Add API** (API hinzufügen).
 
-   ![API hinzufügen](../assets/s2s/add-api.png)
+   ![Hinzufügen des APIs](../assets/s2s/add-api.png)
 
-1. Filtern Sie _Dialogfeld &quot;_ hinzufügen“ nach _Experience Cloud_ und wählen Sie die Karte **AEM Assets Author API** aus und klicken Sie auf **Weiter**.
+1. Filtern Sie im Dialogfeld _Add API_ (API hinzufügen) auf _Experience Cloud_, wählen Sie die Karte **AEM Assets Author API** (AEM Assets Author-API) und klicken Sie auf **Next** (Weiter).
 
-   ![AEM-API hinzufügen](../assets/s2s/add-aem-api.png)
+   ![Hinzufügen eines AEM-APIs](../assets/s2s/add-aem-api.png)
 
-1. Wählen Sie anschließend im Dialogfeld _API konfigurieren_ die Option **Server-zu-Server**-Authentifizierung aus und klicken Sie auf **Weiter**. Die Server-zu-Server-Authentifizierung ist ideal für Backend-Services, die API-Zugriff ohne Benutzerinteraktion benötigen.
+1. Wählen Sie anschließend im Dialogfeld _Configure API_ (API konfigurieren) die Authentifizierungsoption **Server-to-Server** (Server-zu-Server) aus und klicken Sie auf **Next** (Weiter). Die Server-zu-Server-Authentifizierung ist ideal für Backend-Services, die API-Zugriff ohne Benutzerinteraktion benötigen. 
 
-   ![Authentifizierung auswählen](../assets/s2s/select-authentication.png)
+   ![Auswählen der Authentifizierung](../assets/s2s/select-authentication.png)
 
    >[!TIP]
    >
    >Wenn die Option Server-zu-Server-Authentifizierung nicht angezeigt wird, bedeutet dies, dass der Benutzer, der die Integration einrichtet, nicht als Entwickler zum Produktprofil hinzugefügt wird, mit dem der Service verknüpft ist. Weitere Informationen finden [ unter „Server-zu-Server](../setup.md#enable-server-to-server-authentication)Authentifizierung aktivieren“.
 
-1. Benennen Sie die Berechtigung um (falls erforderlich) und klicken Sie auf **Weiter**. Zu Demozwecken wird der Standardname verwendet.
+1. Benennen Sie die Anmeldedaten für eine einfachere Identifizierung um (falls erforderlich) und klicken Sie auf **Next** (Weiter). Zu Demozwecken wird der Standardname verwendet.
 
-   ![Berechtigung umbenennen](../assets/s2s/rename-credential.png)
+   ![Umbenennen der Anmeldedaten](../assets/s2s/rename-credential.png)
 
-1. Wählen Sie das Produktprofil **AEM Assets Collaborator Users - Author - Program XXX - Environment XXX** und klicken Sie auf **Speichern**. Wie zu sehen ist, steht nur das mit dem AEM Assets-API-Benutzerdienst verknüpfte Produktprofil zur Auswahl.
+1. Wählen Sie das Produktprofil **AEM Assets Collaborator Users - author - Program XXX - Environment XXX** (AEM Assets-Mitarbeiter-Benutzende – Autorin/Autor – Programm XXX – Umgebung XXX) und klicken Sie auf **Save** (Speichern). Wie Sie sehen können, steht nur das mit dem AEM Assets-API-Benutzerdienst verknüpfte Produktprofil zur Auswahl.
 
-   ![Profil auswählen](../assets/s2s/select-product-profile.png)
+   ![Auswählen des Produktprofils](../assets/s2s/select-product-profile.png)
 
-1. Überprüfen Sie die AEM-API und die Authentifizierungskonfiguration.
+1. Überprüfen Sie das AEM-API und die Authentifizierungskonfiguration.
 
    ![AEM-API-Konfiguration](../assets/s2s/aem-api-configuration.png)
 
@@ -109,86 +109,86 @@ Der Schritt zum Konfigurieren des ADC _Projekts wird_ der [OpenAPI-basierten AEM
 
 ## Konfigurieren der AEM-Instanz zur Aktivierung der ADC-Projektkommunikation
 
-Befolgen Sie die Anweisungen im Artikel [Einrichten von OpenAPI-basierten AEM](../setup.md#configure-the-aem-instance-to-enable-adc-project-communication)APIs , um die AEM-Instanz so zu konfigurieren, dass die ADC-Projektkommunikation aktiviert wird.
+Befolgen Sie die Anweisungen im Artikel [Einrichten von OpenAPI-basierten AEM-APIs](../setup.md#configure-the-aem-instance-to-enable-adc-project-communication), um die AEM-Instanz so zu konfigurieren, dass die ADC-Projektkommunikation aktiviert wird.
 
 ## Entwickeln einer NodeJS-Beispielanwendung
 
-Entwickeln wir ein NodeJS-Beispielprogramm, das die Assets Author-API aufruft.
+Entwickeln Sie eine NodeJS-Beispielanwendung, die das Assets Author-API aufruft.
 
 Sie können andere Programmiersprachen wie Java, Python usw. verwenden, um die Anwendung zu entwickeln.
 
-Zu Testzwecken können Sie den [Postman](https://www.postman.com/), [curl](https://curl.se/) oder einen anderen REST-Client verwenden, um die AEM-APIs aufzurufen.
+Zu Testzwecken können Sie den [Postman](https://www.postman.com/)-, [curl](https://curl.se/)- oder einen beliebigen anderen REST-Client verwenden, um die AEM APIs aufzurufen.
 
-### Überprüfen der API
+### Überprüfen des APIs
 
-Bevor wir das Programm entwickeln, sollten wir den Endpunkt [Bereitstellen der Metadaten des angegebenen Assets](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata) über die _Assets Author-API_ überprüfen. Die API-Syntax lautet:
+Überprüfen Sie vor der Entwicklung der Anwendung den Endpunkt [Bereitstellen der Metadaten des angegebenen Assets](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata) über das _Assets Author-API_. Die API-Syntax lautet:
 
 ```http
 GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
 ```
 
-Um die Metadaten eines bestimmten Assets abzurufen, benötigen Sie die `bucket` und `assetId` Werte. Der `bucket` ist der AEM-Instanzname ohne den Adobe-Domain-Namen (.adobeaemcloud.com), z. B. `author-p63947-e1420428`.
+Um die Metadaten eines bestimmten Assets abzurufen, benötigen Sie die Werte `bucket` und `assetId`. Der `bucket` ist der AEM-Instanzname ohne den Adobe-Domain-Namen (.adobeaemcloud.com), z. B. `author-p63947-e1420428`.
 
-Der `assetId` ist die JCR-UUID des Assets mit dem `urn:aaid:aem:` Präfix, z. B. `urn:aaid:aem:a200faf1-6d12-4abc-bc16-1b9a21f870da`. Es gibt mehrere Möglichkeiten, die `assetId` zu erhalten:
+Die `assetId` ist die JCR-UUID des Assets mit dem Präfix `urn:aaid:aem:`, z. B. `urn:aaid:aem:a200faf1-6d12-4abc-bc16-1b9a21f870da`. Es gibt mehrere Möglichkeiten, um die `assetId` zu erhalten:
 
-- Hängen Sie die Erweiterung AEM Asset Path `.json` an, um die Asset-Metadaten abzurufen. `https://author-p63947-e1420429.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/cycling-southern-utah/adobestock-221043703.jpg.json` Sie beispielsweise und suchen Sie nach der Eigenschaft `jcr:uuid` .
+- Hängen Sie die Erweiterung `.json` des AEM Asset-Pfads an, um die Asset-Metadaten abzurufen, zum Beispiel `https://author-p63947-e1420429.adobeaemcloud.com/content/dam/wknd-shared/en/adventures/cycling-southern-utah/adobestock-221043703.jpg.json`, und suchen Sie nach der Eigenschaft `jcr:uuid`.
 
-- Alternativ können Sie die `assetId` abrufen, indem Sie das Asset im Element-Inspektor des Browsers überprüfen. Suchen Sie nach dem Attribut `data-id="urn:aaid:aem:..."` .
+- Alternativ können Sie die `assetId` abrufen, indem Sie das Asset im Elementinspektor des Browsers überprüfen. Suchen Sie nach dem Attribut `data-id="urn:aaid:aem:..."`.
 
-  ![Überprüfen von Assets](../assets/s2s/inspect-asset.png)
+  ![Überprüfen eines Assets](../assets/s2s/inspect-asset.png)
 
-### Aufrufen der API über den Browser
+### Aufrufen des APIs über den Browser
 
-Bevor wir das Programm entwickeln, rufen wir die API mithilfe der Funktion &quot;**&quot;** der [API-Dokumentation](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/) auf.
+Rufen Sie vor der Entwicklung der Anwendung das API mithilfe der Funktion **Try it** (Ausprobieren) in der [API-Dokumentation](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/) auf. 
 
-1. Öffnen Sie die Dokumentation zur [Assets Author](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/)API im Browser.
+1. Öffnen Sie die [Dokumentation zum Assets Author-API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/) im Browser.
 
-1. Erweitern Sie den Abschnitt _Metadaten_ und klicken Sie auf die Option **Übermittelt die Metadaten des angegebenen Assets** .
+1. Erweitern Sie den Abschnitt _Metadaten_ und klicken Sie auf die Option **Stellt die Metadaten des angegebenen Assets bereit**.
 
-1. Klicken Sie im rechten Bereich auf die Schaltfläche **Probieren Sie es aus**.
+1. Klicken Sie im rechten Bereich auf die Schaltfläche **Try it** (Ausprobieren).
    ![API-Dokumentation](../assets/s2s/api-documentation.png)
 
 1. Geben Sie die folgenden Werte ein:
 
    | Abschnitt | Parameter | Wert  |
    | --- | --- | --- |
-   |  | Eimer | Der AEM-Instanzname ohne den Adobe-Domain-Namen (.adobeaemcloud.com), z. B. `author-p63947-e1420428`. |
-   | **Sicherheit** | Bearer-Token | Verwenden Sie das Zugriffstoken aus den OAuth Server-zu-Server-Anmeldeinformationen des ADC-Projekts. |
-   | **Sicherheit** | x-api-key | Verwenden Sie den `ClientID` aus den OAuth Server-zu-Server-Anmeldeinformationen des ADC-Projekts. |
-   | **Parameter** | assetId | Die eindeutige Kennung für das Asset in AEM, z. B. `urn:aaid:aem:a200faf1-6d12-4abc-bc16-1b9a21f870da` |
-   | **Parameter** | x-Adobe-Accept-Experimental | 1 |
+   |  | bucket | Der AEM-Instanzname ohne den Adobe-Domain-Namen (.adobeaemcloud.com), z. B. `author-p63947-e1420428`. |
+   | **Sicherheit** | Bearer Token | Verwenden Sie das Zugriffs-Token aus den OAuth-Server-zu-Server-Anmeldedaten des ADC-Projekts. |
+   | **Sicherheit** | X-Api-Key | Verwenden Sie den Wert `ClientID` aus den OAuth-Server-zu-Server-Anmeldedaten des ADC-Projekts. |
+   | **Parameter** | assetId | Die eindeutige Kennung für das Asset in AEM, z. B. `urn:aaid:aem:a200faf1-6d12-4abc-bc16-1b9a21f870da`. |
+   | **Parameter** | X-Adobe-Accept-Experimental | 1 |
 
-   ![API aufrufen - Zugriffstoken](../assets/s2s/generate-access-token.png)
+   ![Aufrufen des APIs – Zugriffs-Token](../assets/s2s/generate-access-token.png)
 
-   ![API aufrufen - Eingabewerte](../assets/s2s/invoke-api-input-values.png)
+   ![Aufrufen des APIs – Eingabewerte](../assets/s2s/invoke-api-input-values.png)
 
-1. Klicken Sie auf **Senden**, um die API aufzurufen, und überprüfen Sie die Antwort auf der Registerkarte **Antwort**.
+1. Klicken Sie auf **Send** (Senden), um das API aufzurufen, und überprüfen Sie die Antwort auf der Registerkarte **Response** (Antwort).
 
-   ![API aufrufen - Antwort](../assets/s2s/invoke-api-response.png)
+   ![Aufrufen des APIs – Antwort](../assets/s2s/invoke-api-response.png)
 
-Die oben genannten Schritte bestätigen die Modernisierung der AEM as a Cloud Service-Umgebung und ermöglichen den Zugriff auf AEM-APIs. Außerdem wird die erfolgreiche Konfiguration des ADC-Projekts und die Kommunikation der OAuth-Server-zu-Server-Anmeldeinformationen mit der ClientID mit der AEM-Autoreninstanz bestätigt.
+Mit den oben genannten Schritten wird die Modernisierung der AEM as a Cloud Service-Umgebung bestätigt und der AEM-API-Zugriff aktiviert. Außerdem werden die erfolgreiche Konfiguration des ADC-Projekts und die Client-ID der OAuth-Server-zu-Server-Anmeldedaten für die Kommunikation mit der AEM-Autoreninstanz bestätigt.
 
-### Beispielhafte NodeJS-Anwendung
+### NodeJS-Beispielanwendung
 
-Entwickeln wir ein NodeJS-Beispielprogramm.
+Entwickeln wir nun eine NodeJS-Beispielanwendung.
 
-Zur Entwicklung der Anwendung können Sie entweder die _Run-the-sample_ application) oder _Step-by-Step-Development_ Anweisungen verwenden.
+Zur Entwicklung der Anwendung können Sie entweder die Anweisungen zum _Ausführen der Beispielanwendung_ oder zur _schrittweisen Entwicklung_ befolgen.
 
 >[!BEGINTABS]
 
->[!TAB Run-the-sample-application]
+>[!TAB Ausführen der Beispielanwendung]
 
-1. Laden Sie die ZIP-Datei [ Beispielanwendung „demo-nodejs-app-to-invoke-aem-openapi](../assets/s2s/demo-nodejs-app-to-invoke-aem-openapi.zip) herunter und extrahieren Sie sie.
+1. Laden Sie die ZIP-Datei [demo-nodejs-app-to-invoke-aem-openapi](../assets/s2s/demo-nodejs-app-to-invoke-aem-openapi.zip) mit der Beispielanwendung herunter und extrahieren Sie sie.
 
-1. Navigieren Sie zum extrahierten Ordner und installieren Sie die Abhängigkeiten.
+1. Navigieren Sie zum extrahierten Ordner und installieren Sie die Abhängigkeiten. 
 
    ```bash
    $ npm install
    ```
 
-1. Ersetzen Sie die Platzhalter in der `.env`-Datei durch die tatsächlichen Werte aus den OAuth Server-zu-Server-Anmeldeinformationen des ADC-Projekts.
+1. Ersetzen Sie die Platzhalter in der `.env`-Datei durch die tatsächlichen Werte aus den OAuth-Server-zu-Server-Anmeldedaten des ADC-Projekts.
 
-1. Ersetzen Sie `<BUCKETNAME>` und `<ASSETID>` in der `src/index.js`-Datei durch die tatsächlichen Werte.
+1. Ersetzen Sie `<BUCKETNAME>` und `<ASSETID>` in der Datei `src/index.js` durch die tatsächlichen Werte.
 
 1. Führen Sie die NodeJS-Anwendung aus.
 
@@ -206,14 +206,14 @@ Zur Entwicklung der Anwendung können Sie entweder die _Run-the-sample_ applicat
    $ npm init -y
    ```
 
-1. Installieren Sie die _fetch_ und _dotenv_-Bibliothek, um HTTP-Anfragen durchzuführen bzw. die Umgebungsvariablen zu lesen.
+1. Installieren Sie die _fetch_- und _dotenv_-Bibliothek, um HTTP-Anfragen durchzuführen bzw. die Umgebungsvariablen zu lesen.
 
    ```bash
    $ npm install node-fetch
    $ npm install dotenv
    ```
 
-1. Öffnen Sie das Projekt in Ihrem bevorzugten Code-Editor und aktualisieren Sie die `package.json`, um die `type` zu `module` hinzuzufügen.
+1. Öffnen Sie das Projekt in Ihrem bevorzugten Code-Editor und aktualisieren Sie die Datei `package.json`, indem Sie `type` zu `module` hinzuzufügen.
 
    ```json
    {
@@ -225,7 +225,7 @@ Zur Entwicklung der Anwendung können Sie entweder die _Run-the-sample_ applicat
    }
    ```
 
-1. Erstellen Sie `.env` Datei und fügen Sie die folgende Konfiguration hinzu. Ersetzen Sie die Platzhalter durch die tatsächlichen Werte aus den OAuth Server-zu-Server-Anmeldeinformationen des ADC-Projekts.
+1. Erstellen Sie die `.env`-Datei und fügen Sie die folgende Konfiguration hinzu. Ersetzen Sie die Platzhalter durch die tatsächlichen Werte aus den OAuth-Server-zu-Server-Anmeldedaten des ADC-Projekts.
 
    ```properties
    CLIENT_ID=<ADC Project OAuth Server-to-Server credential ClientID>
@@ -233,7 +233,7 @@ Zur Entwicklung der Anwendung können Sie entweder die _Run-the-sample_ applicat
    SCOPES=<ADC Project OAuth Server-to-Server credential Scopes>
    ```
 
-1. Erstellen Sie `src/index.js` Datei , fügen Sie den folgenden Code hinzu und ersetzen Sie die `<BUCKETNAME>` und `<ASSETID>` durch die tatsächlichen Werte.
+1. Erstellen Sie die Datei `src/index.js`, fügen Sie den folgenden Code hinzu und ersetzen Sie `<BUCKETNAME>` und `<ASSETID>` durch die tatsächlichen Werte.
 
    ```javascript
    // Import the dotenv configuration to load environment variables from the .env file
@@ -345,13 +345,13 @@ Nach erfolgreicher Ausführung wird die API-Antwort in der Konsole angezeigt. Di
 }
 ```
 
-Herzlichen Glückwunsch! Sie haben die OpenAPI-basierten AEM-APIs erfolgreich aus Ihrem benutzerdefinierten Programm mithilfe der OAuth-Server-zu-Server-Authentifizierung aufgerufen.
+Herzlichen Glückwunsch! Sie haben die OpenAPI-basierten AEM-APIs erfolgreich aus Ihrer benutzerdefinierten Anwendung mithilfe der OAuth-Server-zu-Server-Authentifizierung aufgerufen.
 
 ### Überprüfen des Anwendungs-Codes
 
-Die wichtigsten Hinweise aus dem Beispiel-Code der NodeJS-Anwendung sind:
+Dies sind die wichtigsten Schritte aus dem Beispiel-Code der NodeJS-Anwendung:
 
-1. **IMS-Authentifizierung**: Ruft ein Zugriffstoken mithilfe der OAuth-Server-zu-Server-Anmeldedaten-Einrichtung im ADC-Projekt ab.
+1. **IMS-Authentifizierung**: Ruft ein Zugriffs-Token mithilfe der im ADC-Projekt eingerichteten OAuth-Server-zu-Server-Anmeldedaten ab.
 
    ```javascript
    // Function to obtain an access token from Adobe IMS
@@ -378,7 +378,7 @@ Die wichtigsten Hinweise aus dem Beispiel-Code der NodeJS-Anwendung sind:
    ...
    ```
 
-1. **API-Aufruf**: Ruft die Assets-Autoren-API auf, um Metadaten für ein bestimmtes Asset abzurufen, indem das Zugriffstoken zur Autorisierung angegeben wird.
+1. **API-Aufruf**: Ruft das Assets Author-API auf, um Metadaten für ein bestimmtes Asset abzurufen, indem das Zugriffs-Token zur Autorisierung angegeben wird.
 
    ```javascript
    // Function to retrieve metadata for a specific asset from AEM
@@ -412,67 +412,67 @@ Die wichtigsten Hinweise aus dem Beispiel-Code der NodeJS-Anwendung sind:
 
 ## Im Hintergrund
 
-Nach erfolgreichem API-Aufruf wird im AEM-Autoren-Service ein Benutzer erstellt, der die OAuth-Server-zu-Server-Anmeldedaten des ADC-Projekts darstellt, zusammen mit den Benutzergruppen, die der Produktprofil- und Service-Konfiguration entsprechen. Der _Benutzer des technischen Kontos_ ist mit der Benutzergruppe Produktprofil und _Services_ verknüpft, die über die erforderlichen Berechtigungen zum _LESEN_ der Asset-Metadaten verfügt.
+Nach erfolgreichem API-Aufruf werden im AEM Author-Service ein Benutzerprofil, das für die OAuth-Server-zu-Server-Anmeldedaten des ADC-Projekts steht, sowie Benutzergruppen, die der Produktprofil- und Service-Konfiguration entsprechen, erstellt. Das _Benutzerprofil des technischen Kontos_ ist der Benutzergruppe für Produktprofile und _Services_ zugeordnet, die über die erforderlichen Berechtigungen zum _LESEN_ der Asset-Metadaten verfügt.
 
-Gehen Sie wie folgt vor, um die Erstellung des technischen Benutzerkontos und der Benutzergruppe zu überprüfen:
+Gehen Sie wie folgt vor, um die Erstellung des Benutzerprofils des technischen Kontos und der Benutzergruppe zu überprüfen:
 
-- Navigieren Sie im ADC-Projekt zur **OAuth Server-zu-Server** Berechtigungskonfiguration. Notieren Sie den Wert **E-Mail des technischen Kontos**.
+- Navigieren Sie im ADC-Projekt zur Konfiguration mit den **OAuth-Server-zu-Server**-Anmeldedaten. Notieren Sie den Wert für die **E-Mail-Adresse des technischen Kontos**.
 
-  ![E-Mail zum technischen Konto](../assets/s2s/technical-account-email.png)
+  ![E-Mail-Adresse des technischen Kontos](../assets/s2s/technical-account-email.png)
 
-- Navigieren Sie im AEM-Autoren-Service zu **Tools** > **Sicherheit** > **Benutzer** und suchen Sie nach dem Wert **E-Mail für technisches Konto**.
+- Navigieren Sie im AEM Author-Service zu **Tools** > **Sicherheit** > **Benutzerinnen und Benutzer** und suchen Sie nach dem Wert für die **E-Mail-Adresse des technischen Kontos**.
 
-  ![Benutzer des technischen Kontos](../assets/s2s/technical-account-user.png)
+  ![Benutzerprofil des technischen Kontos](../assets/s2s/technical-account-user.png)
 
-- Klicken Sie auf den Benutzer des technischen Kontos, um die Benutzerdetails anzuzeigen, z. B. **Gruppen** Mitgliedschaft. Wie unten dargestellt, ist der Benutzer des technischen Kontos den Benutzergruppen **AEM Assets Collaborator Users - Author - Program XXX - Environment XXX** und **AEM Assets Collaborator Users - Service** zugeordnet.
+- Klicken Sie auf das Benutzerprofil des technischen Kontos, um Benutzerdetails anzuzeigen, z. B. die **Gruppenmitgliedschaft**. Wie unten dargestellt, ist das Benutzerprofil des technischen Kontos den Benutzergruppen für **AEM Assets-Mitarbeiter-Benutzende – Autorin/Autor – Programm XXX – Umgebung XXX** und **AEM Assets-Mitarbeiter-Benutzende – Service** zugeordnet.
 
-  ![Benutzermitgliedschaft für technisches Konto](../assets/s2s/technical-account-user-membership.png)
+  ![Mitgliedschaft des Benutzerprofils des technischen Kontos](../assets/s2s/technical-account-user-membership.png)
 
-- Beachten Sie, dass der Benutzer des technischen Kontos mit dem Produktprofil **AEM Assets Collaborator Users - Author - Program XXX - Environment XXX** verknüpft ist. Das Produktprofil ist mit den **AEM Assets-API-** und **AEM Assets Collaborator-** verknüpft.
+- Beachten Sie, dass das Benutzerprofil des technischen Kontos dem Produktprofil für **AEM Assets-Mitarbeiter-Benutzende – Autorin/Autor – Programm XXX – Umgebung XXX** zugeordnet ist. Das Produktprofil ist mit den Services für **AEM Assets-API-Benutzende** und **AEM Assets-Mitarbeiter-Benutzende** verknüpft.
 
-  ![Produktprofil des technischen Kontobenutzers](../assets/s2s/technical-account-user-product-profile.png)
+  ![Produktprofil des Benutzerprofils des technischen Kontos](../assets/s2s/technical-account-user-product-profile.png)
 
-- Die Zuordnung des Produktprofils und des technischen Kontos kann auf der Registerkarte **Produktprofile** der **API-Anmeldeinformationen** überprüft werden.
+- Die Zuordnung des Produktprofils und des Benutzerprofils des technischen Kontos kann in den **Produktprofilen** auf der Registerkarte **API-Zugangsberechtigungen** überprüft werden.
 
-  ![Produktprofil-API-Anmeldedaten](../assets/s2s/product-profile-api-credentials.png)
+  ![Registerkarte „API-Zugangsberechtigungen“ in den Produktprofilen](../assets/s2s/product-profile-api-credentials.png)
 
-## 403-Fehler bei Nicht-GET-Anfragen
+## Fehler 403 bei Nicht-GET-Anfragen
 
-Zum _LESEN_ der Asset-Metadaten verfügt der Benutzer des technischen Kontos, der für die OAuth-Server-zu-Server-Anmeldedaten erstellt wurde, über die erforderlichen Berechtigungen in der Services-Benutzergruppe (z. B. AEM Assets Collaborator Users - Service).
+Zum _LESEN_ der Asset-Metadaten verfügt das Benutzerprofil des technischen Kontos, das für die OAuth-Server-zu-Server-Anmeldedaten erstellt wurde, über die erforderlichen Berechtigungen in der Services-Benutzergruppe (z. B. für AEM Assets-Mitarbeiter-Benutzende – Service).
 
-Zum _(Erstellen, Aktualisieren, Löschen_ (CUD) der Asset-Metadaten benötigt der Benutzer des technischen Kontos jedoch zusätzliche Berechtigungen. Sie können dies überprüfen, indem Sie die -API mit einer Nicht-GET-Anfrage (z. B. PATCH, DELETE) aufrufen und die 403-Fehlerantwort beobachten.
+Zum _Erstellen, Aktualisieren, Löschen_ (Create, Update, Delete (CUD)) der Asset-Metadaten benötigt das Benutzerprofil des technischen Kontos jedoch zusätzliche Berechtigungen. Sie können dies überprüfen, indem Sie das API mit einer Nicht-GET-Anfrage (z. B. PATCH, DELETE) aufrufen und sich die 403-Fehlerantwort ansehen.
 
-Rufen wir die _PATCH_-Anfrage auf, um die Asset-Metadaten zu aktualisieren und die 403-Fehlerantwort zu beobachten.
+Rufen wir nun die _PATCH_-Anfrage auf, um die Asset-Metadaten zu aktualisieren und uns die 403-Fehlerantwort anzusehen.
 
-- Öffnen Sie die Dokumentation zur [Assets Author](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/)API im Browser.
+- Öffnen Sie die [Dokumentation zum Assets Author-API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/) im Browser.
 
 - Geben Sie die folgenden Werte ein:
 
   | Abschnitt | Parameter | Wert  |
   | --- | --- | --- |
-  | **Bucket** |  | Der AEM-Instanzname ohne den Adobe-Domain-Namen (.adobeaemcloud.com), z. B. `author-p63947-e1420428`. |
-  | **Sicherheit** | Bearer-Token | Verwenden Sie das Zugriffstoken aus den OAuth Server-zu-Server-Anmeldeinformationen des ADC-Projekts. |
-  | **Sicherheit** | x-api-key | Verwenden Sie den `ClientID` aus den OAuth Server-zu-Server-Anmeldeinformationen des ADC-Projekts. |
-  | **body** |  | `[{ "op": "add", "path": "foo","value": "bar"}]` |
-  | **Parameter** | assetId | Die eindeutige Kennung für das Asset in AEM, z. B. `urn:aaid:aem:a200faf1-6d12-4abc-bc16-1b9a21f870da` |
-  | **Parameter** | x-Adobe-Accept-Experimental | * |
-  | **Parameter** | x-Adobe-Accept-Experimental | 1 |
+  | **Bucket** |  | Der AEM-Instanzname ohne den Adobe-Domain-Namen (.adobeaemcloud.com), z. B. `author-p63947-e1420428`. |
+  | **Sicherheit** | Bearer Token | Verwenden Sie das Zugriffs-Token aus den OAuth-Server-zu-Server-Anmeldedaten des ADC-Projekts. |
+  | **Sicherheit** | X-Api-Key | Verwenden Sie den Wert `ClientID` aus den OAuth-Server-zu-Server-Anmeldedaten des ADC-Projekts. |
+  | **Text** |  | `[{ "op": "add", "path": "foo","value": "bar"}]` |
+  | **Parameter** | assetId | Die eindeutige Kennung für das Asset in AEM, z. B. `urn:aaid:aem:a200faf1-6d12-4abc-bc16-1b9a21f870da`. |
+  | **Parameter** | X-Adobe-Accept-Experimental | * |
+  | **Parameter** | X-Adobe-Accept-Experimental | 1 |
 
-- Klicken Sie auf **Senden**, um die _PATCH_-Anfrage aufzurufen und die 403-Fehlerantwort zu beobachten.
+- Klicken Sie auf **Send** (Senden), um die _PATCH_-Anfrage aufzurufen und sich die 403-Fehlerantwort anzusehen.
 
-  ![API aufrufen - PATCH-Anfrage](../assets/s2s/invoke-api-patch-request.png)
+  ![Aufrufen des APIs – PATCH-Anfrage](../assets/s2s/invoke-api-patch-request.png)
 
-Um den 403-Fehler zu beheben, haben Sie zwei Möglichkeiten:
+Um den Fehler 403 zu beheben, haben Sie zwei Möglichkeiten:
 
-- Aktualisieren Sie im ADC-Projekt das zugeordnete Produktprofil der OAuth-Server-zu-Server-Anmeldeinformationen mit einem entsprechenden Produktprofil, das über die erforderlichen Berechtigungen zum _Erstellen, Aktualisieren, Löschen_ (CUD) der Asset-Metadaten verfügt, z. B. **AEM-Administratoren - Autor - Programm XXX - Umgebung XXX**. Weitere Informationen finden Sie [ Artikel „Vorgehensweise - Verwaltung von verbundenen API-Anmeldeinformationen und Produktprofilen](../how-to/credentials-and-product-profile-management.md) .
+- Aktualisieren Sie im ADC-Projekt das zugeordnete Produktprofil der OAuth-Server-zu-Server-Anmeldedaten mit einem geeigneten Produktprofil, das über die erforderlichen Berechtigungen zum _Erstellen, Aktualisieren, Löschen_ (Create, Update, Delete (CUD)) der Asset-Metadaten verfügt, z. B. das Produktprofil für **AEM-Admins – Autorin/Autor – Programm XXX – Umgebung XXX**. Weitere Informationen finden Sie im Tutorial [Verwaltung von API-Anmeldedaten und -Produktprofilen](../how-to/credentials-and-product-profile-management.md).
 
-- Aktualisieren Sie mithilfe von AEM Project die Berechtigungen der zugehörigen AEM-Service-Benutzergruppe (z. B. AEM Assets Collaborator Users - Service) in der AEM-Autoreninstanz, um _Erstellen, Aktualisieren, Löschen_ (CUD) der Asset-Metadaten zuzulassen. Weitere Informationen finden Sie [ Artikel „So wird die Berechtigungsverwaltung für Benutzergruppen des AEM](../how-to/services-user-group-permission-management.md)Dienstes durchgeführt.
+- Aktualisieren Sie mit AEM-Projekten die Berechtigungen der zugehörigen AEM-Service-Benutzergruppe (z. B. für AEM Assets-Mitarbeiter-Benutzende – Service) in AEM Author, um das _Erstellen, Aktualisieren, Löschen_ (Create, Update, Delete (CUD)) der Asset-Metadaten zuzulassen. Weitere Informationen finden Sie im Tutorial [Verwalten von AEM-Service-Benutzergruppenberechtigungen](../how-to/services-user-group-permission-management.md).
 
 ## Zusammenfassung
 
-In diesem Tutorial haben Sie erfahren, wie Sie OpenAPI-basierte AEM-APIs aus benutzerdefinierten Programmen aufrufen. Sie haben APIs für AEM aktiviert, um auf ein Adobe Developer Console-Projekt (ADC) zuzugreifen, es zu erstellen und zu konfigurieren.
-Im ADC-Projekt haben Sie die AEM-APIs hinzugefügt, ihren Authentifizierungstyp konfiguriert und das Produktprofil zugeordnet. Sie haben auch die AEM-Instanz konfiguriert, um ADC Project-Kommunikation zu aktivieren, und eine NodeJS-Beispielanwendung entwickelt, die die Assets-Autoren-API aufruft.
+In diesem Tutorial haben Sie erfahren, wie Sie OpenAPI-basierte AEM-APIs aus benutzerdefinierten Anwendungen aufrufen. Sie haben den AEM-API-Zugriff aktiviert sowie ein Adobe Developer Console(ADC)-Projekt erstellt und konfiguriert.
+Im ADC-Projekt haben Sie die AEM-APIs hinzugefügt, den zugehörigen Authentifizierungstyp konfiguriert und das Produktprofil zugeordnet. Sie haben zudem die AEM-Instanz konfiguriert, um die ADC-Projektkommunikation zu aktivieren, und eine NodeJS-Beispielanwendung entwickelt, die das Assets Author-API aufruft.
 
 ## Zusätzliche Ressourcen
 
-- [OAuth-Implementierungshandbuch für Server-zu-Server-Anmeldedaten](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation?lang=de)
+- [OAuth-Implementierungshandbuch für Server-zu-Server-Anmeldedaten](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)
