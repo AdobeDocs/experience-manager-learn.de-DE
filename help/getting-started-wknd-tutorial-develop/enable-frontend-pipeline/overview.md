@@ -15,14 +15,16 @@ last-substantial-update: 2022-09-23T00:00:00Z
 doc-type: Tutorial
 exl-id: b795e7e8-f611-4fc3-9846-1d3f1a28ccbc
 duration: 206
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
+workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 100%
 
 ---
 
 # Aktivieren der Frontend-Pipeline für den standardmäßigen AEM-Projektarchetyp{#enable-front-end-pipeline-standard-aem-project}
+
+{{traditional-aem}}
 
 Erfahren Sie, wie Sie das [AEM-WKND-Sites-Projekt](https://github.com/adobe/aem-guides-wknd) (auch als Standard-AEM-Projekt bezeichnet) aktivieren, das mithilfe des [AEM-Projektarchetyps](https://github.com/adobe/aem-project-archetype) erstellt wurde, um Frontend-Ressourcen wie CSS, JavaScript, Schriftarten und Symbole über eine Frontend-Pipeline bereitzustellen und so einen schnelleren Entwicklungs-Bereitstellungs-Zyklus zu ermöglichen. Ferner geht es um die Trennung der Frontend-Entwicklung von der Full-Stack-Backend-Entwicklung in AEM. Außerdem erfahren Sie, dass diese Frontend-Ressourcen __nicht__ aus dem AEM-Repository, sondern aus dem CDN bereitgestellt werden, was eine Änderung des Bereitstellungsparadigmas bedeutet.
 
