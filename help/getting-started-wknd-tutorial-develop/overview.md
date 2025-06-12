@@ -30,7 +30,7 @@ Willkommen bei einem mehrteiligen Tutorial, das für Entwicklerinnen und Entwick
 
 Ziel dieses mehrteiligen Tutorials ist es, Entwicklerinnen und Entwicklern beizubringen, wie eine Website mit den neuesten Standards und Technologien in Adobe Experience Manager (AEM) implementiert wird. Nach Abschluss dieses Tutorials sollten Entwicklerinnen und Entwickler die grundlegende Basis der Plattform und die gängigen Designmuster in AEM verstehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35589?quality=12&learn=on&captions=ger)
 
 ## Optionen zum Starten eines Sites-Projekts
 
