@@ -13,9 +13,9 @@ last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
 source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1440'
-ht-degree: 85%
+ht-degree: 100%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 85%
 
 Erfahren Sie, wie Sie Ihre AEM as a Cloud Service-Umgebung einrichten, um den Zugriff auf OpenAPI-basierte AEM-APIs zu aktivieren.
 
-In diesem Beispiel wird die AEM Assets-API unter Verwendung der Server-zu-Server-Authentifizierungsmethode verwendet, um den Einrichtungsprozess zu demonstrieren. Die gleichen Schritte können für andere OpenAPI-basierte AEM-APIs ausgeführt werden.
+In diesem Beispiel wird das AEM Assets-API unter Verwendung der Server-zu-Server-Authentifizierungsmethode verwendet, um den Einrichtungsprozess zu demonstrieren. Die gleichen Schritte können für andere OpenAPI-basierte AEM-APIs ausgeführt werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
@@ -80,25 +80,25 @@ Sie können auch die mit dem Produktprofil verknüpften _Services_ aus- oder abw
 
 ![Überprüfen der mit dem Produktprofil verknüpften Services](./assets/setup/review-services-associated-with-product-profile.png)
 
-### Zugriff auf AEM Assets-APIs aktivieren{#enable-aem-assets-apis-access}
+### Aktivieren des AEM Assets-API-Zugriffs{#enable-aem-assets-apis-access}
 
-Standardmäßig ist der Service für **AEM Assets-API-Benutzende** mit keinem Produktprofil verknüpft. Verknüpfen wir sie mit dem neu hinzugefügten **AEM Assets Collaborator Users - Author - Program XXX - Environment XXX**-Produktprofil oder jedem anderen Produktprofil, das Sie für den Zugriff auf die AEM Assets-API verwenden möchten.
+Standardmäßig ist der Service für **AEM Assets-API-Benutzende** mit keinem Produktprofil verknüpft. Verknüpfen Sie ihn mit dem neu hinzugefügten Produktprofil für **AEM Assets-Mitarbeiter-Benutzende – Autorin/Autor – Programm XXX – Umgebung XXX** oder jedem anderen Produktprofil, das Sie für den Zugriff auf die AEM Assets-API verwenden möchten.
 
 ![Verknüpfen des AEM Assets-API-Benutzer-Service mit dem Produktprofil](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
 
-### Server-zu-Server-Authentifizierung aktivieren
+### Aktivieren der Server-zu-Server-Authentifizierung
 
-Um die Server-zu-Server-Authentifizierung für die gewünschten AEM-APIs zu aktivieren, muss die Person, die die Integration mit dem Adobe Developer Console (ADC) einrichtet, dem Produktprofil, mit dem der Service verknüpft ist, als Entwickler hinzugefügt werden.
+Um die Server-zu-Server-Authentifizierung für die gewünschten AEM-APIs zu aktivieren, müssen die Benutzenden, die die Integration mit Adobe Developer Console (ADC) einrichten, dem mit dem Dienst verknüpften Produktprofil als Entwickelnde hinzugefügt werden.
 
-Um beispielsweise die Server-zu-Server-Authentifizierung für die AEM Assets-API zu aktivieren, muss der Benutzer dem Produktprofil **AEM Assets Collaborator Users - Author - Program XXX - Umgebung XXX** als Entwickler hinzugefügt werden.
+Um beispielsweise die Server-zu-Server-Authentifizierung für die AEM Assets-API zu aktivieren, müssen die Benutzenden dem Produktprofil **AEM Assets-Mitarbeiter-Benutzende – Autorin/Autor – Programm XXX – Umgebung XXX** als Entwickelnde hinzugefügt werden.
 
-![Entwickler mit Produktprofil verknüpfen](./assets/setup/associate-developer-to-product-profile.png)
+![Verknüpfen von Entwickelnden mit Produktprofil](./assets/setup/associate-developer-to-product-profile.png)
 
-Nach dieser Verknüpfung kann die _Asset Author-API_ des ADC-Projekts die gewünschte Server-zu-Server-Authentifizierung einrichten und das Authentifizierungskonto aus dem (im nächsten Schritt erstellten) ADC-Projekt dem Produktprofil zuordnen.
+Nach dieser Verknüpfung kann das _Asset Author-API_ des ADC-Projekts die gewünschte Server-zu-Server-Authentifizierung einrichten und das Authentifizierungskonto aus dem (im nächsten Schritt erstellten) ADC-Projekt dem Produktprofil zuordnen.
 
 >[!IMPORTANT]
 >
->Der obige Schritt ist wichtig, um die Server-zu-Server-Authentifizierung für die gewünschte AEM-API zu aktivieren. Ohne diese Zuordnung kann die AEM-API nicht mit der Server-zu-Server-Authentifizierungsmethode verwendet werden.
+>Der obige Schritt ist wichtig, um die Server-zu-Server-Authentifizierung für das gewünschte AEM Assets-API zu aktivieren. Ohne diese Verknüpfung kann das AEM-API nicht mit der Server-zu-Server-Authentifizierungsmethode verwendet werden.
 
 ## Erstellen eines Adobe Developer Console(ADC)-Projekts{#adc-project}
 
@@ -142,7 +142,7 @@ Nachdem Sie das ADC-Projekt erstellt haben, müssen Sie die gewünschten AEM-API
 
    >[!TIP]
    >
-   >Wenn die Option Server-zu-Server-Authentifizierung nicht angezeigt wird, bedeutet dies, dass der Benutzer, der die Integration einrichtet, nicht als Entwickler zum Produktprofil hinzugefügt wird, mit dem der Service verknüpft ist. Weitere Informationen finden [ unter „Server-zu-Server](#enable-server-to-server-authentication)Authentifizierung aktivieren“.
+   >Wenn die Option für die Server-zu-Server-Authentifizierung nicht angezeigt wird, bedeutet dies, dass die Benutzenden, die die Integration einrichten, nicht als Entwickelnde zu dem mit dem Dienst verknüpften Produktprofil hinzugefügt werden. Weitere Informationen finden Sie unter [Aktivieren der Server-zu-Server-Authentifizierung](#enable-server-to-server-authentication).
 
 
 1. Bei Bedarf können Sie das API umbenennen, um eine einfachere Identifizierung zu ermöglichen. Zu Demozwecken wird der Standardname verwendet.

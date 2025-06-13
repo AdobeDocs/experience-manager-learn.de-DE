@@ -1,6 +1,6 @@
 ---
 title: Content Hub-Innovationen und einheitliche Suche
-description: Informieren Sie sich über die neuen Funktionen von Content Hub, einschließlich attributbasierter Zugriffssteuerung, markenbezogener Landingpages und einheitlicher Suche über verschiedene Plattformen hinweg.
+description: Entdecken Sie die neuen Funktionen von Content Hub, einschließlich attributbasierter Zugriffssteuerung, markenkonformer Landingpages und plattformübergreifender einheitlicher Suche.
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets
 feature-set: Experience Manager, Experience Manager Assets
@@ -13,16 +13,16 @@ feature: APIs, Integrations, Personalization, Search, Workflow
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: eac1d731-6860-4af4-aba4-bc93abb40073
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-
 # Content Hub-Innovationen und einheitliche Suche
 
-Informieren Sie sich über die neuen Funktionen von Content Hub, einschließlich attributbasierter Zugriffssteuerung, markenbezogener Landingpages und einheitlicher Suche über verschiedene Plattformen hinweg.
+Entdecken Sie die neuen Funktionen von Content Hub, einschließlich attributbasierter Zugriffssteuerung, markenkonformer Landingpages und plattformübergreifender einheitlicher Suche.
 
->[!VIDEO](https://video.tv.adobe.com/v/3461819/?learn=on&enablevpops&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3459223/?learn=on&enablevpops)

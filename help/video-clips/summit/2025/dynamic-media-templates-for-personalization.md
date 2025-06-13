@@ -1,6 +1,6 @@
 ---
-title: Dynamic Media-Vorlagen für Personalization
-description: Erfahren Sie, wie Dynamic Media-Vorlagen die spontane Personalisierung von Bannern ermöglichen, sodass Varianten für verschiedene Zielgruppen einfach erstellt werden können.
+title: Dynamic Media-Vorlagen für Personalisierung
+description: Erfahren Sie, wie Dynamic Media-Vorlagen die direkte Personalisierung von Bannern ermöglichen, sodass Varianten für verschiedene Zielgruppen einfach erstellt werden können.
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets
 feature-set: Experience Manager, Experience Manager Assets
@@ -13,16 +13,16 @@ feature: Generate Variations, Personalization, Rich Text Editor, Integrations
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: d4458e36-348a-4903-9990-1382443f128b
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '48'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Dynamic Media-Vorlagen für Personalisierung
 
-# Dynamic Media-Vorlagen für Personalization
-
-Erfahren Sie, wie Dynamic Media-Vorlagen die spontane Personalisierung von Bannern ermöglichen, sodass Varianten für verschiedene Zielgruppen einfach erstellt werden können.
+Erfahren Sie, wie Dynamic Media-Vorlagen die direkte Personalisierung von Bannern ermöglichen, sodass Varianten für verschiedene Zielgruppen einfach erstellt werden können.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3459222/?learn=on&enablevpops)

@@ -14,7 +14,7 @@ doc-type: Tutorial
 exl-id: c4a961fb-e440-4f78-b40d-e8049078b3c0
 duration: 307
 source-git-commit: b395b3b84e63fe6c24e597d1628f4aed5ba47469
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '595'
 ht-degree: 100%
 
@@ -30,7 +30,7 @@ In diesem Kapitel nehmen wir Konfigurationsänderungen am __WKND Sites-Projekt__
 
 ## Überblick über die Konfigurationsänderungen im Full-Stack-AEM-Projekt
 
->[!VIDEO](https://video.tv.adobe.com/v/3453618?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
 
 ## Voraussetzungen {#prerequisites}
 

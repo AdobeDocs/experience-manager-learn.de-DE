@@ -1,5 +1,5 @@
 ---
-title: Die Rolle des Storytelling in GenAI
+title: Die Rolle von Storytelling in GenAI
 description: Entdecken Sie, wie Storytelling-Prinzipien in der Country-Musik mit dem Design von GenAI-Tools für digitale Erlebnisse zusammenhängen.
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets, Experience Manager Forms, Experience Manager Sites, Sensei
@@ -13,15 +13,15 @@ feature: Generative AI
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: f3902c6e-7f32-49ce-982a-76d264b87fd0
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-
-# Die Rolle des Storytelling in GenAI
+# Die Rolle von Storytelling in GenAI
 
 Entdecken Sie, wie Storytelling-Prinzipien in der Country-Musik mit dem Design von GenAI-Tools für digitale Erlebnisse zusammenhängen.
 

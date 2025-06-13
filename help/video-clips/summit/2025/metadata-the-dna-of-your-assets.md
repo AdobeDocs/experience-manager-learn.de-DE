@@ -1,6 +1,6 @@
 ---
-title: Metadaten - Die DNA Ihres Assets
-description: Erfahren Sie, wie Metadaten Workflows, Suchvorgänge und Einblicke fördern und wie die Automatisierung Metadaten anreichern kann, um sie an Markenstandards anzupassen.
+title: Metadaten – Die DNA Ihrer Assets
+description: Erfahren Sie, wie Metadaten Workflows, Suchvorgänge und Einblicke steuern und wie die Automatisierung Metadaten anreichern kann, um sie an Markenstandards anzupassen.
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets
 feature-set: Experience Manager, Experience Manager Assets
@@ -13,16 +13,16 @@ feature: Search, Tagging, Workflow
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: dcc6c975-dd7e-402d-844c-eccf888d9b2c
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '50'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Metadaten: Die DNA Ihrer Assets
 
-# Metadaten: Die DNA Ihres Assets
+Erfahren Sie, wie Metadaten Workflows, Suchvorgänge und Einblicke steuern und wie die Automatisierung Metadaten anreichern kann, um sie an Markenstandards anzupassen.
 
-Erfahren Sie, wie Metadaten Workflows, Suchvorgänge und Einblicke fördern und wie die Automatisierung Metadaten anreichern kann, um sie an Markenstandards anzupassen.
-
->[!VIDEO](https://video.tv.adobe.com/v/3461974/?learn=on&enablevpops&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3459218/?learn=on&enablevpops)

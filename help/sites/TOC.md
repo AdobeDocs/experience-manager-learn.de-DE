@@ -7,9 +7,9 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 source-git-commit: 7e13dda1303e33181bdb6845c8274b0e59ea5505
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '594'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -41,7 +41,7 @@ ht-degree: 96%
       + [Site-Migration mit dem Import-Tool](./document-authoring/how-to/migration-using-importer.md)
       + [Anpassen des Import-Tools](./document-authoring/how-to/customizing-importer.md)
       + [Massenimport mit dem Import-Tool](./document-authoring/how-to/bulk-importing-using-importer.md)
-      + Varianten generieren{#generate-variations}
+      + Generieren von Varianten{#generate-variations}
          + [Überblick](./document-authoring/how-to/generate-variations/overview.md)
          + [Konfigurieren von Sidekick](./document-authoring/how-to/generate-variations/configure-sidekick.md)
          + [Prompt-Vorlagen](./document-authoring/how-to/generate-variations/prompt-templates.md)
@@ -55,12 +55,12 @@ ht-degree: 96%
       + [Experimentierungs-Framework](./document-authoring/how-to/experimentation-framework.md)
       + [Einrichten des Experimentierungs-Frameworks](./document-authoring/how-to/setup-experimentation-framework.md)
       + [Metadaten für Experimente](./document-authoring/how-to/experimentation-add-metadata.md)
-+ Bearbeiten von Seiten {#page-authoring}
++ Erstellung von Seiten {#page-authoring}
    + [Authoring](page-authoring/aem-sites-authoring-overview.md)
    + [Navigation](page-authoring/basic-handling-sites-feature-video-use.md)
    + [Site-Struktur](page-authoring/content-hierarchy-feature-video-use.md)
    + [Seitenerstellung](page-authoring/creating-page-feature-video-use.md)
-   + [Bearbeiten von Seiten](page-authoring/page-authoring-overview-feature-video-use.md)
+   + [Erstellung von Seiten](page-authoring/page-authoring-overview-feature-video-use.md)
    + [Seiteneditor](page-authoring/page-editor-feature-video-use.md)
    + [Seiten-Tagging](page-authoring/page-tagging-feature-video-use.md)
    + [Seitenversionierung](page-authoring/page-versioning-feature-video-use.md)
@@ -73,10 +73,10 @@ ht-degree: 96%
    + [Stilsystem](page-authoring/style-system-feature-video-use.md)
    + [Timewarp](page-authoring/timewarp-feature-video-use.md)
    + [Launches](page-authoring/launches.md)
-   + Von Kollegen lernen {#expert-advice}
+   + Lernen Sie von Ihren Kolleginnen und Kollegen {#expert-advice}
       + [Tipps zur Site-Hierarchie](page-authoring/expert-advice/site-hierarchy.md)
 + Generative KI {#generative-ai}
-   + [Varianten generieren](./generative-ai/generate-variations.md)
+   + [Generieren von Varianten](./generative-ai/generate-variations.md)
 + Inhaltsfragmente {#content-fragments}
    + [Inhaltsfragmentkonsole](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=de){target=_blank}
    + [Bearbeiten von Inhaltsfragmenten](content-fragments/content-fragments-feature-video-use.md)
@@ -176,10 +176,10 @@ ht-degree: 96%
       + [Verbinden von AEM mit Tag-Eigenschaften über IMS](integrations/experience-platform/data-collection/tags/connect-aem-tag-property-using-ims.md)
       + [Erstellen eines AEM-Tags-Cloud-Service](integrations/experience-platform/data-collection/tags/create-aem-launch-cloud-service.md)
       + [Debugging einer Tags-Implementierung](integrations/experience-platform/data-collection/tags/debug-tags-implementation.md)
-   + Adobe-Client-Datenschicht {#adobe-client-data-layer}
+   + Adobe Client-Datenschicht {#adobe-client-data-layer}
       + [Verwenden der Adobe Client-Datenschicht](integrations/adobe-client-data-layer/data-layer-overview.md)
       + [Anpassen der Adobe Client-Datenschicht](integrations/adobe-client-data-layer/data-layer-customize.md)
-   + Analyse {#analytics}
+   + Analytics {#analytics}
       + [Sammeln von Seitendaten mit Adobe Analytics](integrations/analytics/collect-data-analytics.md)
       + [Nachverfolgen angeklickter Komponenten mit Adobe Analytics](integrations/analytics/track-clicked-component.md)
       + [Analysieren von Daten mit Analysis Workspace](integrations/analytics/create-analytics-workspace.md)
@@ -192,7 +192,7 @@ ht-degree: 96%
       + [Erstellen einer Target-Aktivität mit Experience Fragment-Angeboten](integrations/adobe-target/create-target-activity.md)
       + [Personalisierung mit Visual Experience Composer](integrations/adobe-target/personalization-using-vec.md)
       + [Personalisierung des gesamten Web-Seitenerlebnisses](integrations/adobe-target/personalization-web-page.md)
-+ Von Kollegen lernen {#expert-resources}
++ Lernen Sie von Ihren Kolleginnen und Kollegen {#expert-resources}
    + [Überblick](expert-resources/learn-from-your-peers-overview.md)
    + [Erstellen eines Authoring-Handbuchs in AEM Sites](expert-resources/authoring-guide-in-sites.md)
    + [AEM Sites-Reifegradbewertung](expert-resources/maturity-assessment.md)

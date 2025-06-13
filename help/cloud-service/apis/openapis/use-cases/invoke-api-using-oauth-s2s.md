@@ -13,9 +13,9 @@ last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
 source-git-commit: 9a5d811cf92a09da27057f99e1b6b2ed8df2a414
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1727'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -91,7 +91,7 @@ Der Schritt zum Konfigurieren des ADC-Projekts ist mit dem entsprechenden Schrit
 
    >[!TIP]
    >
-   >Wenn die Option Server-zu-Server-Authentifizierung nicht angezeigt wird, bedeutet dies, dass der Benutzer, der die Integration einrichtet, nicht als Entwickler zum Produktprofil hinzugefügt wird, mit dem der Service verknüpft ist. Weitere Informationen finden [ unter „Server-zu-Server](../setup.md#enable-server-to-server-authentication)Authentifizierung aktivieren“.
+   >Wenn die Option für die Server-zu-Server-Authentifizierung nicht angezeigt wird, bedeutet dies, dass die Benutzenden, die die Integration einrichten, nicht als Entwickelnde zu dem mit dem Dienst verknüpften Produktprofil hinzugefügt werden. Weitere Informationen finden Sie unter [ Aktivieren der Server-zu-Server-Authentifizierung](../setup.md#enable-server-to-server-authentication).
 
 1. Benennen Sie die Anmeldedaten für eine einfachere Identifizierung um (falls erforderlich) und klicken Sie auf **Next** (Weiter). Zu Demozwecken wird der Standardname verwendet.
 

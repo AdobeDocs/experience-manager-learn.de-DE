@@ -13,13 +13,13 @@ feature: Brand Experiences, Content Personalization, Marketing Campaigns, Multic
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: 177150b3-6be3-4594-b1ca-f7f080effdfd
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
-
 
 # Beschleunigen der Inhaltsaktivierung mit Adobe Experience Manager
 

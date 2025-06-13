@@ -1,6 +1,6 @@
 ---
-title: Erlebnisse für verschiedene Kontexte anpassen
-description: Erfahren Sie, wie Marketing-Experten mithilfe der Erlebnisgenerierung Inhalte für verschiedene Rollen, Kanäle und Regionen anpassen und gleichzeitig die Kontrolle behalten können.
+title: Anpassen von Erlebnissen für unterschiedliche Kontexte
+description: Erfahren Sie, wie Marketing-Fachkräfte mithilfe der Erlebnisgenerierung Inhalte für verschiedene Rollen, Kanäle und geografische Regionen anpassen und gleichzeitig steuern können.
 cloud: Experience Cloud
 solution: Experience Manager Assets, Experience Manager Sites
 feature-set: Experience Manager Assets, Experience Manager Sites
@@ -13,16 +13,16 @@ feature: Brand Experiences, Content Personalization, Multichannel Delivery, Rend
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: 71c0c58e-5789-417b-9a61-f290ca1b4ae5
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
+# Anpassen von Erlebnissen für unterschiedliche Kontexte
 
-# Erlebnisse für verschiedene Kontexte anpassen
+Erfahren Sie, wie Marketing-Fachkräfte mithilfe der Erlebnisgenerierung Inhalte für verschiedene Rollen, Kanäle und geografische Regionen anpassen und gleichzeitig steuern können.
 
-Erfahren Sie, wie Marketing-Experten mithilfe der Erlebnisgenerierung Inhalte für verschiedene Rollen, Kanäle und Regionen anpassen und gleichzeitig die Kontrolle behalten können.
-
->[!VIDEO](https://video.tv.adobe.com/v/3462414/?learn=on&enablevpops&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3459245/?learn=on&enablevpops)

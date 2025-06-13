@@ -1,5 +1,5 @@
 ---
-title: Optimierung von Inhalts-Workflows mit Content Hub
+title: Optimieren von Inhalts-Workflows mit Content Hub
 description: Erfahren Sie, wie Content Hub den Zugriff auf Inhalte, Berechtigungen und die Lokalisierung für regionale Teams vereinfacht und so Effizienz und Relevanz gewährleistet.
 cloud: Experience Cloud
 solution: Experience Manager Assets, Sensei
@@ -13,15 +13,15 @@ feature: Asset Management, Collections, Metadata, Rulesets
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
-workflow-type: tm+mt
+exl-id: 5f7de18c-8859-4201-be24-4fa2ae4aeb8d
+source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
+workflow-type: ht
 source-wordcount: '46'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
-
-# Optimierung von Inhalts-Workflows mit Content Hub
+# Optimieren von Inhalts-Workflows mit Content Hub
 
 Erfahren Sie, wie Content Hub den Zugriff auf Inhalte, Berechtigungen und die Lokalisierung für regionale Teams vereinfacht und so Effizienz und Relevanz gewährleistet.
 
