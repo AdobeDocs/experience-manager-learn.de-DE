@@ -21,7 +21,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit Dynamic Media in AEM virtuelle Ausgabedarstellungen erstellen, die Transparenz verwalten und die Bildverarbeitung für die Wiederverwendung skalierbarer Inhalte automatisieren können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459589/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3463054/?learn=on&enablevpops&captions=ger)
 
 
 ## Beispiel-Dynamic Media-Assets

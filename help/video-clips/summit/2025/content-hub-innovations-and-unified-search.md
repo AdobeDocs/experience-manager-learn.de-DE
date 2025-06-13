@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Entdecken Sie die neuen Funktionen von Content Hub, einschließlich attributbasierter Zugriffssteuerung, markenkonformer Landingpages und plattformübergreifender einheitlicher Suche.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459223/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461819/?learn=on&enablevpops&captions=ger)

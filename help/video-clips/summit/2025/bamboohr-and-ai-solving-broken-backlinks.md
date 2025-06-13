@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie BambooHR mit KI fehlerhafte Backlinks identifizieren und reparieren konnte, was zu einem Anstieg des organischen Traffics um 4 % führte.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459238/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461996/?learn=on&enablevpops&captions=ger)

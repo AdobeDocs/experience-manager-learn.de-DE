@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Marketing-Fachkräfte mithilfe der Erlebnisgenerierung Inhalte für verschiedene Rollen, Kanäle und geografische Regionen anpassen und gleichzeitig steuern können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459245/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462414/?learn=on&enablevpops&captions=ger)

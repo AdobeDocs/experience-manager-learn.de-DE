@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Sehen Sie sich an, wie Experience Catalyst KI nutzt, um eine WordPress-Site mühelos zu AEM-Cloud-Services zu migrieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459228/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461985/?learn=on&enablevpops&captions=ger)
