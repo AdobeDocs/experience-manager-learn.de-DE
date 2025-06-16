@@ -31,7 +31,7 @@ ht-degree: 79%
 
 >[!IMPORTANT]
 >
->Der SPA-Editor wird für neue Projekte [nicht mehr unterstützt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/hybrid/spa-editor-deprecation). Er wird von Adobe zwar weiterhin für bestehende Projekte unterstützt, sollte jedoch nicht für neue Projekte verwendet werden. Die bevorzugten Editoren für die Verwaltung von Headless-Inhalten in AEM sind nun:
+>Der SPA-Editor wird für neue Projekte [nicht mehr unterstützt](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/hybrid/spa-editor-deprecation). Er wird von Adobe zwar weiterhin für bestehende Projekte unterstützt, sollte jedoch nicht für neue Projekte verwendet werden. Die bevorzugten Editoren für die Verwaltung von Headless-Inhalten in AEM sind nun:
 >
 >* der [universelle Editor](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/authoring) zum visuellen Bearbeiten von Headless-Inhalten.
->* der [Inhaltsfragmenteditor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing) zur formularbasierten Bearbeitung von Headless-Inhalten
+>* der [Inhaltsfragmenteditor](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing) zur formularbasierten Bearbeitung von Headless-Inhalten
