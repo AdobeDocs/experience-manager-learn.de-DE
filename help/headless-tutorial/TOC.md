@@ -8,10 +8,10 @@ sub-product: Experience Manager Sites
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-2963
 index: y
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '341'
-ht-degree: 100%
+source-git-commit: 6425188da75f789b0661ec9bfb79624b5704c92b
+workflow-type: tm+mt
+source-wordcount: '317'
+ht-degree: 96%
 
 ---
 
@@ -26,27 +26,27 @@ ht-degree: 100%
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)
       + [AEM SDK](./graphql/quick-setup/local-sdk.md)
    + Videoreihe{#video-series}
-      + [1. Modellierungsgrundlagen](./graphql/video-series/modeling-basics.md)
-      + [2. Erweiterte Modellierung](./graphql/video-series/advanced-modeling.md)
-      + [3. Erstellen von GraphQL-Abfragen](./graphql/video-series/creating-graphql-queries.md)
-      + [4. Inhaltsfragmentvarianten](./graphql/video-series/content-fragment-variations.md)
-      + [5. GraphQL-Endpunkte](./graphql/video-series/graphql-endpoints.md)
-      + [6. Authoring- und Veröffentlichungsinstanz-Architektur](./graphql/video-series/author-publish-architecture.md)
-      + [7. GraphQL-persistierte Abfragen](./graphql/video-series/graphql-persisted-queries.md)
+      + [&#x200B;1. Modellierungsgrundlagen](./graphql/video-series/modeling-basics.md)
+      + [&#x200B;2. Erweiterte Modellierung](./graphql/video-series/advanced-modeling.md)
+      + [&#x200B;3. Erstellen von GraphQL-Abfragen](./graphql/video-series/creating-graphql-queries.md)
+      + [&#x200B;4. Inhaltsfragmentvarianten](./graphql/video-series/content-fragment-variations.md)
+      + [&#x200B;5. GraphQL-Endpunkte](./graphql/video-series/graphql-endpoints.md)
+      + [&#x200B;6. Authoring- und Veröffentlichungsinstanz-Architektur](./graphql/video-series/author-publish-architecture.md)
+      + [&#x200B;7. GraphQL-persistierte Abfragen](./graphql/video-series/graphql-persisted-queries.md)
    + Grundlegendes Tutorial{#multi-step}
       + [Übersicht](./graphql/multi-step/overview.md)
-      + [1. Definieren von Inhaltsfragmentmodellen](./graphql/multi-step/content-fragment-models.md)
-      + [2. Authoring von Inhaltsfragmenten](./graphql/multi-step/author-content-fragments.md)
-      + [3. Erkunden von GraphQL-APIs](./graphql/multi-step/explore-graphql-api.md)
+      + [&#x200B;1. Definieren von Inhaltsfragmentmodellen](./graphql/multi-step/content-fragment-models.md)
+      + [&#x200B;2. Authoring von Inhaltsfragmenten](./graphql/multi-step/author-content-fragments.md)
+      + [&#x200B;3. Erkunden von GraphQL-APIs](./graphql/multi-step/explore-graphql-api.md)
       + [4. Erstellen einer React-App](./graphql/multi-step/graphql-and-react-app.md)
    + Erweitertes Tutorial{#advanced-tutorial}
       + [Übersicht](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
-      + [1. Erstellen von Inhaltsfragmentmodellen](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)
-      + [2. Authoring von Inhaltsfragmenten](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)
-      + [3. Erkunden der AEM GraphQL-API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
-      + [4. Persistierte GraphQL-Abfragen](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
-      + [5. Client-Anwendungsintegration](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
-   + Erstes Tutorial zu Headless{#headless-first}
+      + [&#x200B;1. Erstellen von Inhaltsfragmentmodellen](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)
+      + [&#x200B;2. Authoring von Inhaltsfragmenten](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)
+      + [&#x200B;3. Erkunden der AEM GraphQL-API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
+      + [&#x200B;4. Persistierte GraphQL-Abfragen](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
+      + [&#x200B;5. Client-Anwendungsintegration](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
+   + Erstes Headless-Tutorial{#headless-first}
       + [Übersicht](./graphql/headless-first-tutorial/overview.md)
       + [1 – Inhaltsmodellierung](./graphql/headless-first-tutorial/1-content-modeling.md)
       + [2 – AEM Headless-APIs und React](./graphql/headless-first-tutorial/2-aem-headless-apis-and-react.md)
@@ -72,51 +72,42 @@ ht-degree: 100%
    + [Installieren von GraphiQL auf AEM 6.5](./graphql/how-to/install-graphiql-aem-6-5.md)
    + Beispiele {#example-apps}
       + [React](./graphql/example-apps/react-app.md)
-      + [Next.js](./graphql/example-apps/next-js.md)
       + [Web-Komponente](./graphql/example-apps/web-component.md)
       + [iOS](./graphql/example-apps/ios-swiftui-app.md)
       + [Android](./graphql/example-apps/android-app.md)
       + [Node.js](./graphql/example-apps/server-to-server-app.md)
 + SPA-Editor{#spa-editor}
-   + React{#react}
-      + [Übersicht](./spa-editor/react/overview.md)
-      + [1. Erstellen eines Projekts](./spa-editor/react/create-project.md)
-      + [2. Integrieren der SPA](./spa-editor/react/integrate-spa.md)
-      + [3. Zuordnen von SPA-Komponenten](./spa-editor/react/map-components.md)
-      + [4. Navigation und Routing](./spa-editor/react/navigation-routing.md)
-      + [5. Benutzerdefinierte Komponente](./spa-editor/react/custom-component.md)
-      + [6. Erweitern der Komponente](./spa-editor/react/extend-component.md)
    + Angular{#angular}
       + [Übersicht](./spa-editor/angular/overview.md)
-      + [1. SPA-Editor-Projekt](./spa-editor/angular/create-project.md)
-      + [2. Integrieren der SPA](./spa-editor/angular/integrate-spa.md)
-      + [3. Zuordnen von SPA-Komponenten](./spa-editor/angular/map-components.md)
-      + [4. Navigation und Routing](./spa-editor/angular/navigation-routing.md)
-      + [5. Benutzerdefinierte Komponente](./spa-editor/angular/custom-component.md)
+      + [&#x200B;1. SPA-Editor-Projekt](./spa-editor/angular/create-project.md)
+      + [&#x200B;2. Integrieren der SPA](./spa-editor/angular/integrate-spa.md)
+      + [&#x200B;3. Zuordnen von SPA-Komponenten](./spa-editor/angular/map-components.md)
+      + [&#x200B;4. Navigation und Routing](./spa-editor/angular/navigation-routing.md)
+      + [&#x200B;5. Benutzerdefinierte Komponente](./spa-editor/angular/custom-component.md)
       + [6. Erweitern der Komponente](./spa-editor/angular/extend-component.md)
    + Remote-SPA{#remote-spa}
       + [Übersicht](./spa-editor/remote-spa/overview.md)
-      + [1. Konfigurieren von AEM](./spa-editor/remote-spa/aem-configure.md)
-      + [2. Bootstrapping der SPA](./spa-editor/remote-spa/spa-bootstrap.md)
-      + [3. Feste Komponenten](./spa-editor/remote-spa/spa-fixed-component.md)
-      + [4. Container-Komponenten](./spa-editor/remote-spa/spa-container-component.md)
-      + [5. Dynamische Routen](./spa-editor/remote-spa/spa-dynamic-routes.md)
+      + [&#x200B;1. Konfigurieren von AEM](./spa-editor/remote-spa/aem-configure.md)
+      + [&#x200B;2. Bootstrapping der SPA](./spa-editor/remote-spa/spa-bootstrap.md)
+      + [&#x200B;3. Feste Komponenten](./spa-editor/remote-spa/spa-fixed-component.md)
+      + [&#x200B;4. Container-Komponenten](./spa-editor/remote-spa/spa-container-component.md)
+      + [&#x200B;5. Dynamische Routen](./spa-editor/remote-spa/spa-dynamic-routes.md)
    + Anleitung{#how-to}
       + [AEM React Editable Components v2](./spa-editor/how-to/react-core-components-v2.md)
 + Token-basierte Authentifizierung {#authentication}
    + [Übersicht](./authentication/overview.md)
-   + [1. Zugriffstoken für lokale Entwicklung](./authentication/local-development-access-token.md)
-   + [2. Dienstanmeldeinformationen](./authentication/service-credentials.md)
+   + [&#x200B;1. Zugriffstoken für lokale Entwicklung](./authentication/local-development-access-token.md)
+   + [&#x200B;2. Dienstanmeldeinformationen](./authentication/service-credentials.md)
 + Content Services {#content-services}
    + [Übersicht](./content-services/overview.md)
-   + [1. Tutorial-Einrichtung](./content-services/chapter-1.md)
-   + [2. Definition von Ereignis-Inhaltsfragmentmodellen](./content-services/chapter-2.md)
-   + [3. Erstellen von Ereignis-Inhaltsfragmenten](./content-services/chapter-3.md)
-   + [4. Definieren von Content Services-Vorlagen](./content-services/chapter-4.md)
-   + [5. Inhaltserstellung von Content Services-Seiten](./content-services/chapter-5.md)
-   + [6. Freigeben der Inhalte in AEM Publish für die Bereitstellung](./content-services/chapter-6.md)
-   + [7. AEM Content Services von einer App aus nutzen](./content-services/chapter-7.md)
-+ Codebeispiele {#code-samples}
+   + [&#x200B;1. Tutorial-Einrichtung](./content-services/chapter-1.md)
+   + [&#x200B;2. Definition von Ereignis-Inhaltsfragmentmodellen](./content-services/chapter-2.md)
+   + [&#x200B;3. Erstellen von Ereignis-Inhaltsfragmenten](./content-services/chapter-3.md)
+   + [&#x200B;4. Definieren von Content Services-Vorlagen](./content-services/chapter-4.md)
+   + [&#x200B;5. Inhaltserstellung von Content Services-Seiten](./content-services/chapter-5.md)
+   + [&#x200B;6. Freigeben der Inhalte in AEM Publish für die Bereitstellung](./content-services/chapter-6.md)
+   + [&#x200B;7. AEM Content Services von einer App aus nutzen](./content-services/chapter-7.md)
++ Code-Beispiele {#code-samples}
    + [Filternde React-App](./graphql/code-samples/filtering-react-app.md)
    + [Preact-App zum Filtern](./graphql/code-samples/filtering-preact-app.md)
    + [Angular-App filtern](./graphql/code-samples/filtering-angular-app.md)

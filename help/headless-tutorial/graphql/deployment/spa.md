@@ -11,10 +11,10 @@ thumbnail: KT-10587.jpg
 mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
 duration: 136
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '655'
-ht-degree: 100%
+source-git-commit: 6425188da75f789b0661ec9bfb79624b5704c92b
+workflow-type: tm+mt
+source-wordcount: '640'
+ht-degree: 99%
 
 ---
 
@@ -94,47 +94,37 @@ In diesem Beispiel wird die SPA in eine Netlify-Domain bereitgestellt (`https://
 
 Adobe bietet eine beispielhafte Einzelseitenanwendung, die in React codiert ist.
 
-<div class="columns is-multiline">
-<!-- React app -->
-<div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="React app" tabindex="0">
-   <div class="card">
-       <div class="card-image">
-           <figure class="image is-16by9">
-               <a href="../example-apps/react-app.md" title="React-App" tabindex="-1">
-                   <img class="is-bordered-r-small" src="../example-apps/assets/react-app/react-app-card.png" alt="React-App">
-               </a>
-           </figure>
-       </div>
-       <div class="card-content is-padded-small">
-           <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/react-app.md" title="React-App">React-App</a></p>
-               <p class="is-size-6">Eine Beispiel-Einzelseiten-App, geschrieben in React, die Inhalte von AEM Headless-GraphQL-APIs nutzt.</p>
-               <a href="../example-apps/react-app.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Beispiel anzeigen</span>
-               </a>
-           </div>
-       </div>
-   </div>
+<!-- CARDS 
+
+* ../example-apps/react-app.md
+
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="React App - AEM Headless Example">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="../example-apps/react-app.md" title="React-App – AEM Headless-Beispiel" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="../example-apps/assets/react-app/react-app.png" alt="React-App – AEM Headless-Beispiel"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="../example-apps/react-app.md" target="_blank" rel="referrer" title="React-App – AEM Headless-Beispiel">React-App - AEM Headless-Beispiel</a>
+                    </p>
+                    <p class="is-size-6">Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese React-App zeigt, wie Sie mithilfe von AEM GraphQL-APIs unter Verwendung von persistierten Abfragen Inhalte abfragen können.</p>
+                </div>
+                <a href="../example-apps/react-app.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
-<!-- Next.js app -->
-<div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Next.js app" tabindex="0">
-   <div class="card">
-       <div class="card-image">
-           <figure class="image is-16by9">
-               <a href="../example-apps/next-js.md" title="Next.js-App" tabindex="-1">
-                   <img class="is-bordered-r-small" src="../example-apps/assets/next-js/next-js-card.png" alt="Next.js-App">
-               </a>
-           </figure>
-       </div>
-       <div class="card-content is-padded-small">
-           <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="../example-apps/next-js.md" title="Next.js-App">Next.js-App</a></p>
-               <p class="is-size-6">Eine Beispiel-Einzelseiten-App, geschrieben in Next.js, die Inhalte von AEM Headless-GraphQL-APIs nutzt.</p>
-               <a href="../example-apps/next-js.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
-                   <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Beispiel anzeigen</span>
-               </a>
-           </div>
-       </div>
-   </div>
-</div>
-</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
+
