@@ -27,7 +27,7 @@ Videoüberblick über das Authoring von Inhalten für eine Single Page Applicati
 
 Der SPA-Editor von AEM bietet Autorinnen und Autoren die Möglichkeit, Inhalte für Single Page Application oder SPA zu bearbeiten. Entwicklerinnen und Entwickler, die das React-Framework verwenden, erstellen eine SPA und ordnen dann Bereiche des SPA den AEM-Komponenten zu, sodass Autorinnen und Autoren vertraute AEM Sites-Bearbeitungswerkzeuge verwenden können. Das folgende Video zeigt einige kontextbezogene Bearbeitungsfunktionen mit der WKND-SPA-Beispielsite. Das WKND-SPA-Projekt umfasst beide React-Implementierungen.
 
->[!VIDEO](https://video.tv.adobe.com/v/22229?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326769?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >

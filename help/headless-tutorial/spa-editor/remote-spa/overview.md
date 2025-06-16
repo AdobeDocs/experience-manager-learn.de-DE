@@ -27,7 +27,7 @@ Willkommen beim mehrteiligen Tutorial für Entwickler, die eine vorhandene React
 
 Dieses Tutorial baut auf der [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de) auf, einer React-App, die AEM Inhaltsfragmentinhalte über GraphQL-APIs von AEM nutzt, jedoch keine kontextbezogene Bearbeitung von SPA-Inhalten bereitstellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444856?quality=12&learn=on&captions=ger)
 
 ## Über das Tutorial
 
