@@ -11,14 +11,17 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
 duration: 316
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 100%
 
 ---
 
 # Erweitern einer Kernkomponente {#extend-component}
+
+{{spa-editor-deprecation}}
 
 Erfahren Sie, wie Sie eine vorhandene Kernkomponente erweitern, um sie mit dem AEM-SPA-Editor zu verwenden. Das Verständnis, wie eine vorhandene Komponente erweitert wird, liefert eine wirkungsvolle Methode, um die Funktionen einer AEM-SPA-Editor-Implementierung anzupassen und zu erweitern.
 

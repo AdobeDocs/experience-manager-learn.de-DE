@@ -11,14 +11,17 @@ level: Beginner
 doc-type: Tutorial
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
 duration: 536
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 100%
 
 ---
 
 # Integrieren einer SPA {#integrate-spa}
+
+{{spa-editor-deprecation}}
 
 Erfahren Sie, wie der Quell-Code für eine in Angular geschriebene Single Page Application (SPA) in ein Adobe Experience Manager (AEM)-Projekt integriert werden kann. Finden Sie heraus, wie Sie mit modernen Frontend-Tools wie einem webpack-Dev-Server die SPA schnell für die AEM-JSON-Modell-API entwickeln können.
 

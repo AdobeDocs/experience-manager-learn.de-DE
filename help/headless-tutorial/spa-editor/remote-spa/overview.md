@@ -11,7 +11,8 @@ last-substantial-update: 2022-11-11T00:00:00Z
 doc-type: Tutorial
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
 duration: 294
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 100%
@@ -26,7 +27,7 @@ Willkommen beim mehrteiligen Tutorial für Entwickler, die eine vorhandene React
 
 Dieses Tutorial baut auf der [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=de) auf, einer React-App, die AEM Inhaltsfragmentinhalte über GraphQL-APIs von AEM nutzt, jedoch keine kontextbezogene Bearbeitung von SPA-Inhalten bereitstellt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3444856?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
 ## Über das Tutorial
 
@@ -67,31 +68,31 @@ Dieses Tutorial setzt Folgendes voraus:
 >
 > **Benötigen Sie Hilfe bei der Einrichtung Ihrer lokalen Entwicklungsumgebung?** Lesen Sie die [folgende Anleitung zum Einrichten einer lokalen Entwicklungsumgebung mit dem AEM as a Cloud Service-SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=de).
 
-## 1. Konfigurieren von AEM für SPA-Editor
+## &#x200B;1. Konfigurieren von AEM für SPA-Editor
 
 AEM-Konfigurationen sind erforderlich, um die SPA mit dem AEM-SPA-Editor zu integrieren. Diese Konfigurationen werden über ein AEM-Projekt verwaltet und bereitgestellt. In diesem Kapitel erfahren Sie, welche Konfigurationen erforderlich sind und wie sie definiert werden.
 
 + [Erfahren Sie, wie Sie AEM für den SPA-Editor konfigurieren](./aem-configure.md)
 
-## 2. Bootstrapping des SPA
+## &#x200B;2. Bootstrapping des SPA
 
 Damit der AEM-SPA-Editor eine SPA in den Authoring-Kontext integrieren kann, müssen einige Ergänzungen an der SPA vorgenommen werden.
 
 + [Erfahren Sie, wie Sie das Bootstrapping der SPA für den AEM-SPA-Editor durchführen.](./spa-bootstrap.md)
 
-## 3. Bearbeitbare feste Komponenten
+## &#x200B;3. Bearbeitbare feste Komponenten
 
 Erfahren Sie zunächst, wie Sie der SPA eine bearbeitbare „feste Komponente“ hinzufügen. Dies zeigt, wie Entwicklerinnen und Entwickler eine bestimmte bearbeitbare Komponente in die SPA platzieren können. Autorinnen und Autoren können zwar den Inhalt der Komponente ändern, sie können jedoch weder die Komponente entfernen noch ihre Platzierung, Position oder Größe ändern.
 
 + [Erfahren Sie mehr über bearbeitbare feste Komponenten](./spa-fixed-component.md)
 
-## 4. Bearbeitbare Container-Komponenten
+## &#x200B;4. Bearbeitbare Container-Komponenten
 
 Erkunden Sie als Nächstes das Hinzufügen einer bearbeitbaren „Container-Komponente“ zur SPA. Dies veranschaulicht, wie Entwicklerinnen und Entwickler eine Container-Komponente in der SPA platzieren können. Mit Container-Komponenten können Autorinnen und Autoren erlaubte Komponenten darin platzieren und das Komponenten-Layout anpassen.
 
 + [Erfahren Sie mehr über bearbeitbare Container-Komponenten](./spa-container-component.md)
 
-## 5. Dynamische Routen und bearbeitbare Komponenten
+## &#x200B;5. Dynamische Routen und bearbeitbare Komponenten
 
 Verwenden Sie schließlich die in den vorangegangenen Kapiteln erläuterten Konzepte für dynamische Routen, d. h. Routen, die je nach Parameter der Route unterschiedliche Inhalte anzeigen. Dies veranschaulicht, wie der AEM -SPA-Editor verwendet werden kann, um Inhalte auf programmgesteuerten und abgeleiteten Routen zu erstellen.
 

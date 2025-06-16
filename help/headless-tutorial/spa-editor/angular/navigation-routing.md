@@ -11,14 +11,17 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
 duration: 669
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '2531'
 ht-degree: 100%
 
 ---
 
 # Hinzufügen von Navigation und Routing {#navigation-routing}
+
+{{spa-editor-deprecation}}
 
 Erfahren Sie, wie mehrere Ansichten in der SPA mithilfe von AEM-Seiten und dem SPA Editor SDK unterstützt werden. Die dynamische Navigation wird mithilfe von Angular-Routen implementiert und zu einer vorhandenen Header-Komponente hinzugefügt.
 

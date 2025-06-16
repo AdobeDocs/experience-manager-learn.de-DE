@@ -12,7 +12,8 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: edd18f2f-6f24-4299-a31a-54ccc4f6d86e
 duration: 164
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '534'
 ht-degree: 100%
@@ -20,6 +21,8 @@ ht-degree: 100%
 ---
 
 # Bearbeitbare feste Komponenten
+
+{{spa-editor-deprecation}}
 
 Bearbeitbare React-Komponenten können in den SPA-Ansichten „befestigt“ oder hartcodiert werden. Auf diese Weise können Entwicklerinnen und Entwickler SPA-Editor-kompatible Komponenten in den SPA-Ansichten platzieren und Benutzenden ermöglichen, den Inhalt der Komponenten im AEM-SPA-Editor zu erstellen.
 
@@ -31,8 +34,8 @@ In diesem Kapitel ersetzen wir den Titel der Startansicht „Aktuelle Adventures
 
 So fügen Sie eine __feste__ Komponente zur Startansicht hinzu:
 
-+ Erstellen Sie eine benutzerdefinierte bearbeitbare Titelkomponente und registrieren Sie sie im Ressourcentyp des Projekttitels.
-+ Platzieren Sie die bearbeitbare Titelkomponente in der SPA-Startansicht.
+* Erstellen Sie eine benutzerdefinierte bearbeitbare Titelkomponente und registrieren Sie sie im Ressourcentyp des Projekttitels.
+* Platzieren Sie die bearbeitbare Titelkomponente in der SPA-Startansicht.
 
 ### Erstellen einer bearbeitbaren React-Titelkomponente
 
@@ -175,10 +178,10 @@ Die Datei `Home.js` sollte wie folgt aussehen:
    ![Aktionsleiste der Titelkomponente](./assets/spa-fixed-component/title-action-bar.png)
 
 1. Erstellen Sie die Titelkomponente:
-   + Titel: __WKND-Adventures__
-   + Typ/Größe: __H2__
+   1. Titel: __WKND-Adventures__
+   1. Typ/Größe: __H2__
 
-     ![Dialogfeld der Titelkomponente](./assets/spa-fixed-component/title-dialog.png)
+      ![Dialogfeld der Titelkomponente](./assets/spa-fixed-component/title-dialog.png)
 
 1. Tippen Sie auf __Fertig__, um zu speichern.
 1. Sehen Sie sich Ihre Änderungen in der Vorschau im AEM-SPA-Editor an.
@@ -190,9 +193,9 @@ Die Datei `Home.js` sollte wie folgt aussehen:
 
 Sie haben der WKND-App eine feste, bearbeitbare Komponente hinzugefügt! Sie wissen jetzt, wie man Folgendes tut:
 
-+ Eine feste, aber bearbeitbare Komponente für die SPA erstellen;
-+ die feste Komponente in AEM erstellen;
-+ die erstellten Inhalte in der Remote-SPA anzeigen.
+* Eine feste, aber bearbeitbare Komponente für die SPA erstellen;
+* die feste Komponente in AEM erstellen;
+* die erstellten Inhalte in der Remote-SPA anzeigen.
 
 ## Nächste Schritte
 

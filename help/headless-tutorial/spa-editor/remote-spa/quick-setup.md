@@ -12,7 +12,8 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
 duration: 647
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 100%
@@ -20,6 +21,8 @@ ht-degree: 100%
 ---
 
 # Schnelleinrichtung
+
+{{spa-editor-deprecation}}
 
 In der Schnelleinrichtung wird anschaulich erklärt, wie die WKND-App installiert und ausgeführt wird, wie sie als Remote-SPA ausgeführt wird und wie sie mit dem AEM SPA-Editor erstellt wird.
 
@@ -56,7 +59,7 @@ Dieses Tutorial setzt Folgendes voraus:
 
 Herunterladen und Installieren des AEM SDK-Schnellstarts auf Port 4502 mit den standardmäßigen `admin/admin`-Anmeldeinformationen.
 
-1. [Laden Sie das aktuelle AEM SDK herunter.](https://experience.adobe.com/#/downloads/content/software-distribution/de/aemcloud.html?fulltext=AEM*+SDK*&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=1)
+1. [Laden Sie das aktuelle AEM SDK herunter.](https://experience.adobe.com/#/downloads/content/software-distribution/de/aemcloud.html?fulltext=AEM*+SDK*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=1)
 1. Entpacken Sie das AEM SDK in `~/aem-sdk`.
 1. Führen Sie das AEM SDK-Schnellstart-JAR aus.
 

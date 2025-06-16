@@ -11,20 +11,23 @@ thumbnail: 22229.jpg
 doc-type: Feature Video
 exl-id: 645b6986-830f-4409-b46c-ddf15c33e84c
 duration: 473
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 100%
 
 ---
 
-# Verwenden des SPA-Editors mit AEM Sites {#using-the-spa-editor-with-aem-sites}
+# Verwenden des SPA-Editors mit AEM Sites
+
+{{spa-editor-deprecation}}
 
 Videoüberblick über das Authoring von Inhalten für eine Single Page Application in AEM Sites.
 
 Der SPA-Editor von AEM bietet Autorinnen und Autoren die Möglichkeit, Inhalte für Single Page Application oder SPA zu bearbeiten. Entwicklerinnen und Entwickler, die das React-Framework verwenden, erstellen eine SPA und ordnen dann Bereiche des SPA den AEM-Komponenten zu, sodass Autorinnen und Autoren vertraute AEM Sites-Bearbeitungswerkzeuge verwenden können. Das folgende Video zeigt einige kontextbezogene Bearbeitungsfunktionen mit der WKND-SPA-Beispielsite. Das WKND-SPA-Projekt umfasst beide React-Implementierungen.
 
->[!VIDEO](https://video.tv.adobe.com/v/326769?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/22229?quality=12&learn=on)
 
 >[!NOTE]
 >

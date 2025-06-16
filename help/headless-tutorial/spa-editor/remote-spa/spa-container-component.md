@@ -12,7 +12,8 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
 duration: 306
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '1112'
 ht-degree: 100%
@@ -20,6 +21,8 @@ ht-degree: 100%
 ---
 
 # Bearbeitbare Container-Komponenten
+
+{{spa-editor-deprecation}}
 
 [Feste Komponenten](./spa-fixed-component.md) bieten eine gewisse Flexibilität beim Erstellen von SPA-Inhalten. Dieser Ansatz ist jedoch starr und erfordert, dass Entwicklerinnen und Entwickler die genaue Komposition des bearbeitbaren Inhalts definieren. Um die Erstellung außergewöhnlicher Erlebnisse durch Autorinnen und Autoren zu unterstützen, unterstützt der SPA-Editor die Verwendung von Container-Komponenten in der SPA. Container-Komponenten ermöglichen es Autorinnen und Autoren, zulässige Komponenten per Drag-and-Drop in den Container zu ziehen und sie wie beim herkömmlichen Verfassen in AEM Sites zu erstellen.
 
@@ -31,8 +34,8 @@ In diesem Kapitel fügen wir der Startansicht einen bearbeitbaren Container hinz
 
 So fügen Sie eine Container-Komponente zur Startansicht hinzu:
 
-+ Importieren Sie die `ResponsiveGrid`-Komponente der AEM React Editable-Komponente
-+ Importieren und registrieren Sie benutzerdefinierte, bearbeitbare React-Komponenten (Text und Bild) für die Verwendung in der ResponsiveGrid-Komponente
+* Importieren Sie die `ResponsiveGrid`-Komponente der AEM React Editable-Komponente
+* Importieren und registrieren Sie benutzerdefinierte, bearbeitbare React-Komponenten (Text und Bild) für die Verwendung in der ResponsiveGrid-Komponente
 
 ### Verwenden der ResponsiveGrid-Komponente
 
@@ -41,12 +44,12 @@ So fügen Sie einen bearbeitbaren Bereich zur Startansicht hinzu:
 1. Öffnen und bearbeiten Sie `react-app/src/components/Home.js`
 1. Importieren Sie die `ResponsiveGrid`-Komponente aus `@adobe/aem-react-editable-components` und fügen Sie sie zur `Home`-Komponente hinzu.
 1. Legen Sie die folgenden Attribute für die `<ResponsiveGrid...>`-Komponente fest.
-   + `pagePath = '/content/wknd-app/us/en/home'`
-   + `itemPath = 'root/responsivegrid'`
+   1. `pagePath = '/content/wknd-app/us/en/home'`
+   1. `itemPath = 'root/responsivegrid'`
 
    Hierdurch wird die `ResponsiveGrid`-Komponente angewiesen, ihren Inhalt aus der AEM-Ressource abzurufen:
 
-   + `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
+   1. `/content/wknd-app/us/en/home/jcr:content/root/responsivegrid`
 
    `itemPath` ist dem Knoten `responsivegrid` zugeordnet, der in der AEM-Vorlage `Remote SPA Page` definiert ist, und wird automatisch auf neuen, auf Grundlage der AEM-Vorlage `Remote SPA Page` generierten AEM-Seiten erstellt.
 
@@ -284,9 +287,9 @@ Wenn diese Importe _nicht_ hinzugefügt werden, wird der `EditableText`- und `Ed
 
 AEM Container-Komponenten verwenden Richtlinien, um ihre zulässigen Komponenten anzugeben. Dies ist eine kritische Konfiguration bei der Verwendung des SPA-Editors, da nur AEM-Komponenten, die einem entsprechenden SPA-Komponentenmapping zugeordnet sind, vom SPA gerendert werden können. Stellen Sie sicher, dass nur die Komponenten zulässig sind, für die wir SPA-Implementierungen bereitgestellt haben:
 
-+ `EditableTitle` zugeordnet zu `wknd-app/components/title`
-+ `EditableText` zugeordnet zu `wknd-app/components/text`
-+ `EditableImage` zugeordnet zu `wknd-app/components/image`
+* `EditableTitle` zugeordnet zu `wknd-app/components/title`
+* `EditableText` zugeordnet zu `wknd-app/components/text`
+* `EditableImage` zugeordnet zu `wknd-app/components/image`
 
 So konfigurieren Sie den responsiven Raster-Container der Remote-SPA-Seitenvorlage:
 
@@ -304,9 +307,9 @@ So konfigurieren Sie den responsiven Raster-Container der Remote-SPA-Seitenvorla
 
 1. Erweitern Sie auf der rechten Seite unter der Registerkarte __Erlaubte Komponenten__ die Option __WKND APP – CONTENT__.
 1. Stellen Sie sicher, dass nur Folgendes ausgewählt ist:
-   + Bild
-   + Text
-   + Titel
+   1. Bild
+   1. Text
+   1. Titel
 
    ![Remote-SPA-Seite](./assets/spa-container-component/templates-allowed-components.png)
 
@@ -319,13 +322,13 @@ Nach der Aktualisierung der SPA zum Einbetten von `<ResponsiveGrid...>`, Wrapper
 1. Melden Sie sich bei AEM Author an
 1. Navigieren Sie zu __Sites > WKND App__
 1. Tippen Sie auf __Startseite__ und wählen Sie __Bearbeiten__ in der oberen Aktionsleiste.
-   + Eine „Hello World“-Textkomponente wird angezeigt, da diese beim Generieren des Projekts aus dem AEM-Projektarchetyp automatisch hinzugefügt wurde.
+   1. Eine „Hello World“-Textkomponente wird angezeigt, da diese beim Generieren des Projekts aus dem AEM-Projektarchetyp automatisch hinzugefügt wurde.
 1. Wählen Sie __Bearbeiten__ aus der Modusauswahl oben rechts im Seiteneditor.
 1. Suchen Sie den bearbeitbaren Bereich __Layout-Container__ unter dem Titel.
 1. Öffnen Sie die __Seitenleiste des Seiteneditors__ und wählen Sie die __Komponentenansicht__
 1. Ziehen Sie die folgenden Komponenten in den __Layout-Container__
-   + Bild
-   + Titel
+   1. Bild
+   1. Titel
 1. Ziehen Sie die Komponenten in die folgende Reihenfolge, um sie neu anzuordnen:
    1. Titel
    1. Bild
@@ -333,8 +336,8 @@ Nach der Aktualisierung der SPA zum Einbetten von `<ResponsiveGrid...>`, Wrapper
 1. __Erstellen__ Sie die __Titelkomponente__
    1. Tippen Sie auf die Titelkomponente und dann auf das __Schraubenschlüssel__-Symbol, um die Titelkomponente zu __bearbeiten__
    1. Fügen Sie den folgenden Text hinzu:
-      + Titel: __Der Sommer kommt, lassen Sie uns das Beste daraus machen!__
-      + Typ: __H1__
+      1. Titel: __Der Sommer kommt, lassen Sie uns das Beste daraus machen!__
+      1. Typ: __H1__
    1. Tippen Sie auf __Fertig__
 1. __Erstellen__ Sie die __Bildkomponente__
    1. Ziehen Sie ein Bild aus der Seitenleiste (nach dem Wechsel zur Asset-Ansicht) auf die Bildkomponente
@@ -344,19 +347,19 @@ Nach der Aktualisierung der SPA zum Einbetten von `<ResponsiveGrid...>`, Wrapper
 1. __Erstellen__ Sie die __Textkomponente__
    1. Bearbeiten Sie die Textkomponente, indem Sie auf die Textkomponente und dann auf das __Schraubenschlüssel__-Symbol tippen.
    1. Fügen Sie den folgenden Text hinzu:
-      + _Aktuell erhalten Sie 15 % Rabatt auf alle 1-wöchigen Adventures und 20 % Rabatt auf alle Adventures, die 2 Wochen oder länger dauern! Fügen Sie an der Kasse den Kampagnen-Code SUMMERISCOMING hinzu, um die Rabatte zu erhalten._
+      1. _Aktuell erhalten Sie 15 % Rabatt auf alle 1-wöchigen Adventures und 20 % Rabatt auf alle Adventures, die 2 Wochen oder länger dauern! Fügen Sie an der Kasse den Kampagnen-Code SUMMERISCOMING hinzu, um die Rabatte zu erhalten._
    1. Tippen Sie auf __Fertig__
 
 1. Ihre Komponenten werden jetzt erstellt, sind aber vertikal gestapelt.
 
    ![Erstellte Komponenten](./assets/spa-container-component/authored-components.png)
 
-Verwenden Sie den AEM-Layout-Modus, um die Größe und das Layout der Komponenten anzupassen.
+   Verwenden Sie den AEM-Layout-Modus, um die Größe und das Layout der Komponenten anzupassen.
 
 1. Wechseln Sie über die Modusauswahl oben rechts in den __Layout-Modus__.
 1. __Ändern Sie die Größe__ der Bild- und Textkomponenten so, dass sie nebeneinander angeordnet sind.
-   + Die __Bildkomponente__ sollte __8 Spalten breit__ sein.
-   + Die __Textkomponente__ sollte __3 Spalten breit__ sein.
+   1. Die __Bildkomponente__ sollte __8 Spalten breit__ sein.
+   1. Die __Textkomponente__ sollte __3 Spalten breit__ sein.
 
    ![Layout-Komponenten](./assets/spa-container-component/layout-components.png)
 
@@ -370,11 +373,11 @@ Verwenden Sie den AEM-Layout-Modus, um die Größe und das Layout der Komponente
 
 Sie haben eine Container-Komponente hinzugefügt, mit der Autorinnen und Autoren bearbeitbare Komponenten zur WKND-App hinzufügen können. Sie wissen jetzt, wie man Folgendes tut:
 
-+ Verwenden der AEM React Editable-Komponente `ResponsiveGrid` in der SPA.
-+ Erstellen und Registrieren bearbeitbarer React-Komponenten (Text und Bild) zur Verwendung in der SPA über die Container-Komponente.
-+ Konfigurieren der Remote-SPA-Seitenvorlage, um die SPA-aktivierten Komponenten zuzulassen.
-+ Hinzufügen bearbeitbarer Komponenten zur Container-Komponente.
-+ Erstellen und Anordnen von Komponenten im SPA-Editor.
+* Verwenden der AEM React Editable-Komponente `ResponsiveGrid` in der SPA.
+* Erstellen und Registrieren bearbeitbarer React-Komponenten (Text und Bild) zur Verwendung in der SPA über die Container-Komponente.
+* Konfigurieren der Remote-SPA-Seitenvorlage, um die SPA-aktivierten Komponenten zuzulassen.
+* Hinzufügen bearbeitbarer Komponenten zur Container-Komponente.
+* Erstellen und Anordnen von Komponenten im SPA-Editor.
 
 ## Nächste Schritte
 

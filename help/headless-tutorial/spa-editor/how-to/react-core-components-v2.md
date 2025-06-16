@@ -11,8 +11,9 @@ thumbnail: kt-10900.jpeg
 doc-type: Tutorial
 exl-id: e055b356-dd26-4366-8608-5a0ccf5b4c49
 duration: 190
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 100%
 
@@ -20,20 +21,20 @@ ht-degree: 100%
 
 # Verwenden von AEM React Editable Components v2
 
-{{edge-delivery-services}}
+{{spa-editor-deprecation}}
 
 AEM stellt das Node.js-basierte SDK [AEM React Editable Components v2](https://www.npmjs.com/package/@adobe/aem-react-editable-components) zur Verfügung. Es ermöglicht die Erstellung von React-Komponenten, die die kontextbezogene Komponentenbearbeitung mit dem AEM-SPA-Editor unterstützen.
 
-+ [NPM-Modul](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
-+ [GitHub-Projekt](https://github.com/adobe/aem-react-editable-components)
-+ [Adobe-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html?lang=de)
+* [NPM-Modul](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
+* [GitHub-Projekt](https://github.com/adobe/aem-react-editable-components)
+* [Adobe-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html?lang=de)
 
 
 Weitere Informationen und Code-Beispiele für AEM React Editable Components v2 finden Sie in der technischen Dokumentation:
 
-+ [Dokumentation zur Integration in AEM](https://github.com/adobe/aem-react-editable-components/tree/master/src/core)
-+ [Dokumentation zu bearbeitbaren Komponenten](https://github.com/adobe/aem-react-editable-components/tree/master/src/components)
-+ [Helper-Dokumentation](https://github.com/adobe/aem-react-editable-components/tree/master/src/api)
+* [Dokumentation zur Integration in AEM](https://github.com/adobe/aem-react-editable-components/tree/master/src/core)
+* [Dokumentation zu bearbeitbaren Komponenten](https://github.com/adobe/aem-react-editable-components/tree/master/src/components)
+* [Helper-Dokumentation](https://github.com/adobe/aem-react-editable-components/tree/master/src/api)
 
 ## AEM-Seiten
 
@@ -46,8 +47,7 @@ Stellen Sie sicher, dass die React-App auf Node.js ab Version 14 ausgeführt wir
 
 Der minimale Satz von Abhängigkeiten für die React-App zur Verwendung von AEM React Editable Components v2 besteht aus `@adobe/aem-react-editable-components`, `@adobe/aem-spa-component-mapping` und `@adobe/aem-spa-page-model-manager`.
 
-
-+ `package.json`
+* `package.json`
 
 ```json
 {
@@ -75,7 +75,7 @@ Wenn Sie die AEM React Editable Components mit einer auf dem SPA-Editor basieren
 
 Umschließen Sie die React-App mit einem initialisierten ModelManager und rendern Sie die React-App. Die React-App sollte eine Instanz der `<Page>`-Komponente enthalten, die von `@adobe/aem-react-editable-components` exportiert wurde. Die `<Page>`-Komponente verfügt über Logiken zum dynamischen Erstellen von React-Komponenten basierend auf der von AEM bereitgestellten `.model.json`.
 
-+ `src/index.js`
+* `src/index.js`
 
 ```javascript
 import { Constants, ModelManager } from '@adobe/aem-spa-page-model-manager';
@@ -107,7 +107,7 @@ Die `<Page>` wird als JSON-Darstellung der AEM-Seite über das `pageModel` über
 
 Der `<Page>` wird die Darstellung der AEM-Seite als JSON über den `ModelManager` übergeben. Die `<Page>`-Komponente erstellt dann dynamisch React-Komponenten für jedes Objekt im JSON-Code, indem sie den `resourceType`-Wert des JS-Objekts mit einer React-Komponente abgleicht, die sich über den `MapTo(..)`-Aufruf der Komponente beim Ressourcentyp registriert. Beispielsweise würde Folgendes verwendet, um eine Instanz zu instanziieren
 
-+ `HTTP GET /content/.../home.model.json`
+* `HTTP GET /content/.../home.model.json`
 
 ```json
 ...
@@ -181,7 +181,7 @@ Bearbeitbare Komponenten können wiederverwendet und ineinander eingebettet werd
 1. Der JSON-Inhalt von AEM für die einbettende Komponente muss den Inhalt enthalten, um die eingebetteten Komponenten zu versorgen. Dies geschieht durch Erstellen eines Dialogfelds für die AEM-Komponente, die die erforderlichen Daten erfasst.
 1. Die „nicht bearbeitbare“ Instanz der React-Komponente muss eingebettet sein und nicht die „bearbeitbare“ Instanz, die durch `<EditableComponent>` umschlossen ist. Der Grund dafür ist folgender: Wenn die eingebettete Komponente von `<EditableComponent>` umschlossen ist, versucht der SPA-Editor, die innere Komponente mit dem Bearbeitungs-Chrom (blaues Hover-Feld) zu versehen und nicht die äußere einbettende Komponente.
 
-+ `HTTP GET /content/.../home.model.json`
+* `HTTP GET /content/.../home.model.json`
 
 ```json
 ...
