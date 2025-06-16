@@ -1,6 +1,6 @@
 ---
 title: Erstellen eines Live-Authoring-Handbuchs in Sites
-description: AEM-Champion Brett Birschbach teilt Best Practices für die Erstellung eines Live-Authoring-Handbuchs in Adobe Experience Manager Sites
+description: AEM-Experte Brett Birschbach teilt Best Practices für die Erstellung eines Live-Authoring-Handbuchs in Adobe Experience Manager Sites.
 version: Experience Manager as a Cloud Service, Experience Manager 6.5
 feature: Learn From Your Peers
 topic: Collaboration, Content Management
@@ -11,10 +11,10 @@ duration: 847
 last-substantial-update: 2025-05-28T00:00:00Z
 jira: KT-18192
 exl-id: 8efe69a9-32d2-4b9e-8b8a-c7b7520f968a
-source-git-commit: f669233e821cdbd5f04e43ed02f50b85f130c02e
-workflow-type: ht
+source-git-commit: cbcfd53ac2cde0f0d8a62ea5821d586fd1f36808
+workflow-type: tm+mt
 source-wordcount: '52'
-ht-degree: 100%
+ht-degree: 36%
 
 ---
 
@@ -22,4 +22,4 @@ ht-degree: 100%
 
 AEM-Champion Brett Birschbach teilt Best Practices für die Erstellung eines Live-Authoring-Handbuchs in Adobe Experience Manager (AEM) Sites.
 
->[!VIDEO](https://video.tv.adobe.com/v/3463142/?learn=on&enablevpops&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3459572/?learn=on&enablevpops)
