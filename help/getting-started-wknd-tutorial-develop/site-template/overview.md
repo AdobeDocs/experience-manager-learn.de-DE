@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: a55c1dda-f74a-4914-aa1b-c4de8ad1253e
 duration: 426
 source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '257'
 ht-degree: 100%
 
@@ -24,7 +24,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit wenig Code Ihre erste Site in Adobe Experience Manager mit dem Tool Quick Site Creation und einer vordefinierten Site-Vorlage erstellen können. Verwenden Sie vordefinierte Komponenten und Vorlagen, um eine Site schnell einzurichten und zu nutzen. Verwenden Sie einen von Adobe XD gesteuerten Design-Workflow, um markenspezifische Stile und Anpassungen nur mit CSS und JavaScript vorzunehmen. Empfohlen für neue Projekte und Entwickelnde.
 
->[!VIDEO](https://video.tv.adobe.com/v/343367?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/333477?quality=12&learn=on)
 
 * [Adobe XD UI-Kit](https://github.com/adobe/aem-site-template-basic/blob/main/files/wireframe.xd)
 * [AEM Site-Vorlage](https://github.com/adobe/aem-site-template-basic)

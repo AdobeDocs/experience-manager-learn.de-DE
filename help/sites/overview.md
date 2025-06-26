@@ -7,9 +7,9 @@ topic: Content Management
 doc-type: Catalog
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
 source-git-commit: 36917be459162e5399620c976bfe953cc5553c82
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '637'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
@@ -23,15 +23,15 @@ Adobe Experience Manager (AEM) Sites ist eine führende Experience-Management-Pl
 
 AEM Sites bietet drei Möglichkeiten zum Aufbauen, Erstellen und Bereitstellen von Erlebnissen. Unabhängig davon, ob Sie komplette Seiten erstellen, die Edge-Leistung optimieren oder Headless-Apps nutzen, bietet AEM Sites flexible Optionen, um Ihren Projektanforderungen zu entsprechen:
 
-1. **Edge Delivery Services**-Websites nutzen das dokumentbasierte Authoring oder den universellen Adobe-Editor, um Inhalte zu erstellen, die dann aktiviert und dann von Edge Delivery Services as a HTML-Web-Seiten für Endbenutzer bereitgestellt werden. Diese Option ist in erster Linie für _neue und bestehende Projekte_ die hohe Leistung, Skalierbarkeit und Geschwindigkeit erfordern.
-1. **Headless/API-First** Web-Erlebnisse verwenden den Inhaltsfragment-Editor oder den universellen Editor, um Inhalte zu erstellen, die dann aktiviert und von AEM Publish als JSON bereitgestellt werden. Diese Option ist in erster Linie für _neue und bestehende Projekte_ die eine Headless-Bereitstellung von Inhalten an mobile Apps, Single Page Applications (SPAs) oder andere Headless-Anwendungen erfordern.
-1. **Traditionelles AEM** ist nicht der aktuellste Ansatz für den Web Builder-Erlebnisaufbau mit AEM Sites. Im herkömmlichen AEM wird der Seiteneditor von AEM Author verwendet, um Inhalte zu erstellen, die dann aktiviert und von AEM Publish as HTML WebPages an Endbenutzer übermittelt werden. Für (_Projekte) wird die herkömmliche_ AEM empfohlen.
+1. **Edge Delivery Services**-Websites nutzen das dokumentenbasierte Authoring oder den universellen Adobe-Editor, um Inhalte zu erstellen, die dann aktiviert und von Edge Delivery Services als HTML-Webseiten für Endbenutzende bereitgestellt werden. Diese Option ist in erster Linie für _neue und bestehende Projekte_, die hohe Leistung, Skalierbarkeit und Geschwindigkeit erfordern.
+1. **Headless/API-First**-Web-Erlebnisse verwenden den Inhaltsfragmenteditor oder den universellen Editor, um Inhalte zu erstellen, die dann aktiviert und von AEM Publish als JSON bereitgestellt werden. Diese Option ist in erster Linie für _neue und bestehende Projekte_ vorgesehen, die eine Headless-Bereitstellung von Inhalten für mobile Apps, Single-Page-Anwendungen (SPAs) oder andere Headless-Anwendungen erfordern.
+1. **Traditionelles AEM** ist nicht der aktuellste Ansatz für die Erstellung von Web-Erlebnissen mit AEM Sites. Traditionelles AEM verwendet den Seiteneditor der AEM-Autoreninstanz, um Inhalte zu erstellen, die dann aktiviert und von AEM Publish as HTML WebPages an Endbenutzende übermittelt werden. Für _bestehende Projekte_ wird traditionelles AEM empfohlen.
 
 Diese Optionen wurden entwickelt, um die unterschiedlichen Anforderungen von Marketing-Organisationen zu erfüllen, damit sie personalisierte, ansprechende Erlebnisse mit hoher Geschwindigkeit und auf jedem beliebigen Kanal oder Gerät bereitstellen können.
 
 >[!IMPORTANT]
 >
-> **Edge Delivery Services** ist die neueste Möglichkeit, mit AEM Sites zu erstellen. Es wurde entwickelt, um skalierte Hochleistungs-Websites bereitzustellen, wobei die Leistungsfähigkeit von Adobe Edge Network genutzt wird.
+> **Edge Delivery Services** ist die neueste Methode zum Erstellen mit AEM Sites. Es wurde entwickelt, um leistungsstarke Websites in großem Umfang bereitzustellen und dabei die Leistungsfähigkeit des Adobe Edge Network zu nutzen.
 
 Das folgende Diagramm veranschaulicht die unterschiedlichen Pfade:
 
@@ -43,14 +43,14 @@ Die folgende Tabelle bietet einen umfassenden Vergleich der drei Pfade. Der Schw
 
 |            | Edge Delivery Services | Headless/API-First | Traditionelles AEM |
 |---------------------|------------------------------|---------------------------------|---------------------------------------------|
-| **Am besten geeignet für** | Websites mit hohen Anforderungen an Traffic, Leistung und Skalierbarkeit | Mobile Apps, SPAs und andere Headless-Anwendungen | Bestehende Projekte (nicht der aktuellste Ansatz) |
+| **Am besten geeignet für:** | Websites mit hohen Anforderungen an Traffic, Leistung und Skalierbarkeit | Mobile Apps, SPAs und andere Headless-Anwendungen | Bestehende Projekte (nicht der aktuelle Ansatz) |
 | **Authoring-Tools** | Dokumentenbasiertes Authoring, universeller Editor | Inhaltsfragmente, universeller Editor | Seiteneditor |
-| **Erstellte Inhaltsfragmente** | Dokumente oder AEM Author (JCR) | AEM Author (JCR) | AEM Author (JCR) |
+| **Speicher erstellter Inhalte** | Dokumente oder AEM Author (JCR) | AEM Author (JCR) | AEM Author (JCR) |
 | **Versand** | Edge Delivery Services | AEM Publish (mit Adobe CDN + Dispatcher) | AEM Publish (mit Adobe CDN + Dispatcher) |
 | **Inhaltsspeicher des Versands** | Edge Delivery Services | AEM Publish (JCR) | AEM Publish (JCR) |
 | **Bereitstellungsformat** | HTML  | JSON | HTML  |
 | **Entwicklungstechnologie** | JavaScript, CSS | Beliebig (z. B. Swift, React usw.) | Java™, JavaScript, CSS |
-| **Implementierungsphase** | Neue und vorhandene Projekte | Neue und vorhandene Projekte | Nur vorhandene Projekte |
+| **Implementierungsphase** | Neue und bestehende Projekte | Neue und bestehende Projekte | Nur vorhandene Projekte |
 
 ## Tutorials
 
@@ -63,12 +63,12 @@ In den folgenden Tutorials erfahren Sie mehr über die drei Pfade, wie Sites mit
   {description = Explore Edge Delivery Services with comprehensive guides. The Build, Publish, and Launch guides cover everything you need to get started with EDS.}
   {image = ./assets/edge-delivery-services.png}
   {target = _blank}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview
   {title = Headless/API-First - Tutorials}
   {description = Learn how to build headless applications powered by AEM content. Tutorials cover frameworks like iOS, Android, and React—choose what fits your stack.}
   {image = ./assets/headless.png}
   {target = _self}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
   {title = Traditional AEM - WKND Tutorial}
   {description = Learn how to build a sample AEM Sites project using the WKND tutorial. This guide walks you through project setup, Core Components, Editable Templates, client-side libraries, and component development.}
   {image = ./assets/aem-wknd-spa-editor-tutorial.png}
@@ -114,7 +114,7 @@ In den folgenden Tutorials erfahren Sie mehr über die drei Pfade, wie Sites mit
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/overview" target="_self" rel="referrer" title="Headless/API-First – Tutorials">Headless/API-First – Tutorials</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie Headless-Anwendungen erstellen, die auf AEM-Inhalten basieren. Die Tutorials behandeln Frameworks wie iOS, Android und React - wählen Sie aus, was zu Ihrem Stack passt.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie Headless-Anwendungen erstellen, die auf AEM-Inhalten basieren. Die Tutorials behandeln Frameworks wie iOS, Android und React – wählen Sie das aus, was zu Ihrem Stapel passt.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
 <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
@@ -126,8 +126,8 @@ In den folgenden Tutorials erfahren Sie mehr über die drei Pfade, wie Sites mit
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview" title="Traditionelles AEM - WKND-Tutorial" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/aem-wknd-spa-editor-tutorial.png" alt="Traditionelles AEM - WKND-Tutorial"
+                    <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview" title="Traditionelles AEM – WKND-Tutorial" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/aem-wknd-spa-editor-tutorial.png" alt="Traditionelles AEM – WKND-Tutorial"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -135,7 +135,7 @@ In den folgenden Tutorials erfahren Sie mehr über die drei Pfade, wie Sites mit
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview" target="_self" rel="referrer" title="Traditionelles AEM - WKND-Tutorial">Traditionelles AEM - WKND-Tutorial</a>
+                        <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview" target="_self" rel="referrer" title="Traditionelles AEM – WKND-Tutorial">Traditionelles AEM – WKND-Tutorial</a>
                     </p>
                     <p class="is-size-6">Erfahren Sie im WKND-Tutorial, wie Sie ein Beispielprojekt für AEM Sites erstellen. Dieses Handbuch führt Sie durch die Einrichtung von Projekten, Kernkomponenten, bearbeitbare Vorlagen, Client-seitige Bibliotheken und die Entwicklung von Komponenten.</p>
                 </div>
