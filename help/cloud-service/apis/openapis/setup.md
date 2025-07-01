@@ -13,9 +13,9 @@ last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
 source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1493'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ In diesem Beispiel wird das AEM Assets-API unter Verwendung der Server-zu-Server
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
-Der Einrichtungsprozess auf hoher Ebene umfasst die folgenden Schritte:
+Der allgemeine Einrichtungsprozess umfasst die folgenden Schritte:
 
 1. Modernisieren der AEM as a Cloud Service-Umgebung
 1. Aktivieren des AEM-API-Zugriffs
@@ -40,7 +40,7 @@ Der Einrichtungsprozess auf hoher Ebene umfasst die folgenden Schritte:
 Die Modernisierung der AEM as a Cloud Service-Umgebung ist eine einmalige Aktivität pro Umgebung, die die folgenden Schritte vorsieht:
 
 - Aktualisieren auf die AEM-Version **2024.10.18459.20241031T210302Z** oder höher
-- Fügen Sie neue Produktprofile hinzu, wenn die Umgebung vor der Version 2024.10.18459.20241031T.210302 erstellt wurde.
+- Hinzufügen neuer Produktprofile, wenn die Umgebung vor der Version 2024.10.18459.20241031T210302Z erstellt wurde
 
 ### Aktualisieren der AEM-Instanz{#update-aem-instance}
 
@@ -70,7 +70,7 @@ Mit den oben genannten Schritten wird die Modernisierung der AEM as a Cloud Serv
 
 ## Aktivieren des AEM-API-Zugriffs{#enable-aem-apis-access}
 
-Die vorhandenen _neuen Produktprofile_ ermöglichen den OpenAPI-basierten Zugriff auf AEM-APIs in der Adobe Developer Console (ADC). Denken Sie daran, dass [Adobe Developer Console (ADC)](./overview.md#accessing-adobe-apis-and-related-concepts) der Entwicklungs-Hub für den Zugriff auf Adobe-APIs, SDKs, Echtzeit-Ereignisse, Server-lose Funktionen und mehr ist.
+Die vorhandenen _neuen Produktprofile_ ermöglichen den OpenAPI-basierten Zugriff auf AEM-APIs in der Adobe Developer Console (ADC). Denken Sie daran, dass die [Adobe Developer Console (ADC)](./overview.md#accessing-adobe-apis-and-related-concepts) der Entwicklungs-Hub für den Zugriff auf Adobe-APIs, SDKs, Echtzeitereignisse, Server-lose Funktionen usw. ist.
 
 Die neu hinzugefügten Produktprofile sind mit den _Services_ verknüpft, die _AEM-Benutzergruppen mit vordefinierten Zugriffssteuerungslisten (Access Control Lists, ACLs)_ darstellen. Die _Services_ werden verwendet, um die Zugriffsebene auf die AEM-APIs zu steuern.
 
@@ -94,7 +94,7 @@ Um beispielsweise die Server-zu-Server-Authentifizierung für die AEM Assets-API
 
 ![Verknüpfen von Entwickelnden mit Produktprofil](./assets/setup/associate-developer-to-product-profile.png)
 
-Nach dieser Verknüpfung kann die _Asset-Autoren-API_ des ADC-Projekts die gewünschte Server-zu-Server-Authentifizierung einrichten und das Authentifizierungskonto aus dem ADC-Projekt (das im nächsten Schritt erstellt wurde) mit dem Produktprofil verknüpfen.
+Nach dieser Verknüpfung kann das _Asset Author-API_ des ADC-Projekts die gewünschte Server-zu-Server-Authentifizierung einrichten und das Authentifizierungskonto aus dem (im nächsten Schritt erstellten) ADC-Projekt dem Produktprofil zuordnen.
 
 >[!IMPORTANT]
 >
@@ -136,7 +136,7 @@ Nachdem Sie das ADC-Projekt erstellt haben, müssen Sie die gewünschten AEM-API
 
    >[!TIP]
    >
-   >    Wenn die gewünschte **AEM-API-Karte** deaktiviert ist und _Warum ist diese deaktiviert?_ Informationen werden die Meldung **Lizenz erforderlich** angezeigt. Dies kann daran liegen, dass Sie Ihre AEM as a Cloud Service-Umgebung NICHT modernisiert haben. Weitere Informationen finden Sie unter [Modernisierung ](#modernization-of-aem-as-a-cloud-service-environment) AEM as a Cloud Service-Umgebung.
+   >    Wenn die gewünschte **AEM-API-Karte** deaktiviert ist und in den Informationen für _Warum ist dies deaktiviert?_ die Meldung **Lizenz erforderlich** angezeigt wird, könnte dies daran liegen, dass Sie Ihre AEM as a Cloud Service-Umgebung NICHT modernisiert haben. Weitere Informationen finden Sie unter [Modernisieren der AEM as a Cloud Service-Umgebung](#modernization-of-aem-as-a-cloud-service-environment).
 
 1. Wählen Sie anschließend im Dialogfeld _Configure API_ (API konfigurieren) die gewünschte Authentifizierungsoption aus. In diesem Fall ist beispielsweise die Option zur **Server-zu-Server**-Authentifizierung ausgewählt.
 
@@ -163,7 +163,7 @@ Nachdem Sie das ADC-Projekt erstellt haben, müssen Sie die gewünschten AEM-API
 
    ![Authentifizierungskonfiguration](./assets/s2s/authentication-configuration.png)
 
-Wenn Sie die Authentifizierungsmethode **OAuth Web App** (OAuth-Web-Anwendung) oder **OAuth Single Page App** (OAuth-Single-Page-Application) wählen, wird nicht zur Produktprofilzuordnung aufgerufen, aber der Umleitungs-URI der Anwendung ist erforderlich. Der Umleitungs-URI der Anwendung wird verwendet, um Benutzende nach der Authentifizierung mit einem Autorisierungs-Code an die Anwendung umzuleiten. In den entsprechenden Tutorials zu Anwendungsfällen werden solche authentifizierungsspezifischen Konfigurationen beschrieben.
+Wenn Sie die Authentifizierungsmethode **OAuth Web App** (OAuth-Web-Anwendung) oder **OAuth Single Page App** (OAuth-Single-Page-Application) wählen, wird nicht zur Produktprofilzuordnung aufgerufen, aber der Umleitungs-URI der Anwendung ist erforderlich. Der Umleitungs-URI der Anwendung wird verwendet, um Benutzende nach der Authentifizierung mit einem Autorisierungs-Code an die Anwendung umzuleiten. In den entsprechenden Tutorials zu den Anwendungsfällen werden solche authentifizierungsspezifischen Konfigurationen beschrieben.
 
 ## Konfigurieren der AEM-Instanz zur Aktivierung der ADC-Projektkommunikation{#configure-aem-instance}
 

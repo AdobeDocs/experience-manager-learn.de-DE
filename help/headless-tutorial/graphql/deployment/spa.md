@@ -12,9 +12,9 @@ mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
 duration: 136
 source-git-commit: 6425188da75f789b0661ec9bfb79624b5704c92b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '640'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -105,8 +105,8 @@ Adobe bietet eine beispielhafte Einzelseitenanwendung, die in React codiert ist.
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="../example-apps/react-app.md" title="React-App – AEM Headless-Beispiel" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="../example-apps/assets/react-app/react-app.png" alt="React-App – AEM Headless-Beispiel"
+                    <a href="../example-apps/react-app.md" title="React-App – AEM Headless-Beispiel" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="../example-apps/assets/react-app/react-app.png" alt="React-App – AEM Headless-Beispiel"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -114,7 +114,7 @@ Adobe bietet eine beispielhafte Einzelseitenanwendung, die in React codiert ist.
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="../example-apps/react-app.md" target="_blank" rel="referrer" title="React-App – AEM Headless-Beispiel">React-App - AEM Headless-Beispiel</a>
+                        <a href="../example-apps/react-app.md" target="_blank" rel="referrer" title="React-App – AEM Headless-Beispiel">React-App – AEM Headless-Beispiel</a>
                     </p>
                     <p class="is-size-6">Beispielanwendungen eignen sich hervorragend, um die Headless-Funktionen von Adobe Experience Manager (AEM) zu erkunden. Diese React-App zeigt, wie Sie mithilfe von AEM GraphQL-APIs unter Verwendung von persistierten Abfragen Inhalte abfragen können.</p>
                 </div>

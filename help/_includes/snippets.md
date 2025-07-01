@@ -1,8 +1,8 @@
 ---
 source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '168'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 # Snippets
@@ -23,9 +23,9 @@ ht-degree: 79%
 
 >[!TIP]
 >
->**Haben Sie Edge Delivery Services für AEM in Betracht gezogen?**
+>**Haben Sie schon Edge Delivery Services für AEM in Betracht gezogen?**
 >
->Sie können die in diesem Dokument beschriebenen Methoden für bestehende Projekte weiter verwenden. Für neue Projekte empfiehlt Adobe jedoch die Verwendung von [Edge Delivery Services.](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/edge-delivery/overview)
+>Sie können die in diesem Dokument beschriebenen Methoden für bestehende Projekte weiter verwenden. Für neue Projekte empfiehlt Adobe jedoch die Verwendung von [Edge Delivery Services](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/edge-delivery/overview).
 
 ## Einstellung des SPA-Editors{#spa-editor-deprecation}
 

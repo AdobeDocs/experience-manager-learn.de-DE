@@ -9,9 +9,9 @@ version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-2963
 index: y
 source-git-commit: 6425188da75f789b0661ec9bfb79624b5704c92b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '317'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 96%
       + [&#x200B;3. Erkunden der AEM GraphQL-API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
       + [&#x200B;4. Persistierte GraphQL-Abfragen](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [&#x200B;5. Client-Anwendungsintegration](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
-   + Erstes Headless-Tutorial{#headless-first}
+   + Erstes Tutorial zu Headless{#headless-first}
       + [Übersicht](./graphql/headless-first-tutorial/overview.md)
       + [1 – Inhaltsmodellierung](./graphql/headless-first-tutorial/1-content-modeling.md)
       + [2 – AEM Headless-APIs und React](./graphql/headless-first-tutorial/2-aem-headless-apis-and-react.md)

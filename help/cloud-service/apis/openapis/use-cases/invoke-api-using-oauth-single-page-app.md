@@ -13,9 +13,9 @@ last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
 source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2130'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -59,7 +59,7 @@ Das Adobe Developer Console(ADC)-Projekt ist so konfiguriert, dass es die OAuth-
 >Das ADC-Projekt stellt KEIN _client_secret_ bereit. Stattdessen generiert die SPA einen _code_verifier_ und eine _code_challenge_, um den Autorisierungs-Code sicher gegen ein _Zugriffs-Token_ auszutauschen. Dadurch entfällt die Notwendigkeit, Client-Geheimnisse Client-seitig zu speichern, was die Sicherheit erhöht.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456973?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
 
 
 
@@ -387,7 +387,7 @@ Der Schritt zum Konfigurieren des ADC-Projekts ist mit dem entsprechenden Schrit
 
    >[!TIP]
    >
-   >Wenn die gewünschte **AEM-API-Karte** deaktiviert ist und _Warum ist diese deaktiviert?_ Informationen werden die Meldung **Lizenz erforderlich** angezeigt. Dies kann daran liegen, dass Sie Ihre AEM as a Cloud Service-Umgebung NICHT modernisiert haben. Weitere Informationen finden Sie unter [Modernisierung ](../setup.md#modernization-of-aem-as-a-cloud-service-environment) AEM as a Cloud Service-Umgebung.
+   >Wenn die gewünschte **AEM-API-Karte** deaktiviert ist und in den Informationen für _Warum ist dies deaktiviert?_ die Meldung **Lizenz erforderlich** angezeigt wird, könnte dies daran liegen, dass Sie Ihre AEM as a Cloud Service-Umgebung NICHT modernisiert haben. Weitere Informationen finden Sie unter [Modernisieren der AEM as a Cloud Service-Umgebung](../setup.md#modernization-of-aem-as-a-cloud-service-environment).
 
 1. Wählen Sie anschließend im Dialogfeld _Configure API_ (API konfigurieren) die Authentifizierungsoption **User Authentication** (Benutzerauthentifizierung) aus und klicken Sie auf **Next** (Weiter). 
 

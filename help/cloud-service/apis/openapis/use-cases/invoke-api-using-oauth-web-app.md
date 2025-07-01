@@ -13,9 +13,9 @@ last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
 source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2262'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -49,7 +49,7 @@ Die WKND-PIM-Anwendung ist eine Beispiel-Web-Anwendung, die zur Verwaltung von P
 
 Das Adobe Developer Console(ADC)-Projekt ist so konfiguriert, dass es über die OAuth-Web-Anwendungs-Authentifizierung auf die Assets Author-API zugreift. Es stellt der Web-Anwendung WKND-PIM die erforderliche _client_id_ und das erforderliche _client_secret_ bereit, um den _authorization_code_-Grant-Fluss zu initiieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3442766?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
 
 
 Die folgende Abbildung zeigt den Funktionsfluss der Web-Anwendung WKND-PIM zum _Abrufen benutzerspezifischer Zugriffs-Token für die Interaktion mit dem Assets Author-API_.
@@ -463,7 +463,7 @@ Der Schritt zum Konfigurieren des ADC-Projekts ist mit dem entsprechenden Schrit
 
    >[!TIP]
    >
-   >Wenn die gewünschte **AEM-API-Karte** deaktiviert ist und _Warum ist diese deaktiviert?_ Informationen werden die Meldung **Lizenz erforderlich** angezeigt. Dies kann daran liegen, dass Sie Ihre AEM as a Cloud Service-Umgebung NICHT modernisiert haben. Weitere Informationen finden Sie unter [Modernisierung ](../setup.md#modernization-of-aem-as-a-cloud-service-environment) AEM as a Cloud Service-Umgebung.
+   >Wenn die gewünschte **AEM-API-Karte** deaktiviert ist und in den Informationen für _Warum ist dies deaktiviert?_ die Meldung **Lizenz erforderlich** angezeigt wird, könnte dies daran liegen, dass Sie Ihre AEM as a Cloud Service-Umgebung NICHT modernisiert haben. Weitere Informationen finden Sie unter [Modernisieren der AEM as a Cloud Service-Umgebung](../setup.md#modernization-of-aem-as-a-cloud-service-environment).
 
 1. Wählen Sie anschließend im Dialogfeld _Configure API_ (API konfigurieren) die Authentifizierungsoption **User Authentication** (Benutzerauthentifizierung) aus und klicken Sie auf **Next** (Weiter). 
 

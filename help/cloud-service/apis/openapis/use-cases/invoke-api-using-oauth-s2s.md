@@ -13,9 +13,9 @@ last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
 source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1776'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -87,7 +87,7 @@ Der Schritt zum Konfigurieren des ADC-Projekts ist mit dem entsprechenden Schrit
 
    >[!TIP]
    >
-   >Wenn die gewünschte **AEM-API-Karte** deaktiviert ist und _Warum ist diese deaktiviert?_ Informationen werden die Meldung **Lizenz erforderlich** angezeigt. Dies kann daran liegen, dass Sie Ihre AEM as a Cloud Service-Umgebung NICHT modernisiert haben. Weitere Informationen finden Sie unter [Modernisierung ](../setup.md#modernization-of-aem-as-a-cloud-service-environment) AEM as a Cloud Service-Umgebung.
+   >Wenn die gewünschte **AEM-API-Karte** deaktiviert ist und in den Informationen für _Warum ist dies deaktiviert?_ die Meldung **Lizenz erforderlich** angezeigt wird, könnte dies daran liegen, dass Sie Ihre AEM as a Cloud Service-Umgebung NICHT modernisiert haben. Weitere Informationen finden Sie unter [Modernisieren der AEM as a Cloud Service-Umgebung](../setup.md#modernization-of-aem-as-a-cloud-service-environment).
 
 1. Wählen Sie anschließend im Dialogfeld _Configure API_ (API konfigurieren) die Authentifizierungsoption **Server-to-Server** (Server-zu-Server) aus und klicken Sie auf **Next** (Weiter). Die Server-zu-Server-Authentifizierung ist ideal für Backend-Services, die API-Zugriff ohne Benutzerinteraktion benötigen. 
 
@@ -154,7 +154,7 @@ Rufen Sie vor der Entwicklung der Anwendung das API mithilfe der Funktion **Try 
 
 1. Geben Sie die folgenden Werte ein:
 
-   | Abschnitt | Parameter | Wert  |
+   | Abschnitt | Parameter | Wert |
    | --- | --- | --- |
    |  | bucket | Der AEM-Instanzname ohne den Adobe-Domain-Namen (.adobeaemcloud.com), z. B. `author-p63947-e1420428`. |
    | **Sicherheit** | Bearer Token | Verwenden Sie das Zugriffs-Token aus den OAuth-Server-zu-Server-Anmeldedaten des ADC-Projekts. |
@@ -452,7 +452,7 @@ Rufen wir nun die _PATCH_-Anfrage auf, um die Asset-Metadaten zu aktualisieren u
 
 - Geben Sie die folgenden Werte ein:
 
-  | Abschnitt | Parameter | Wert  |
+  | Abschnitt | Parameter | Wert |
   | --- | --- | --- |
   | **Bucket** |  | Der AEM-Instanzname ohne den Adobe-Domain-Namen (.adobeaemcloud.com), z. B. `author-p63947-e1420428`. |
   | **Sicherheit** | Bearer Token | Verwenden Sie das Zugriffs-Token aus den OAuth-Server-zu-Server-Anmeldedaten des ADC-Projekts. |
