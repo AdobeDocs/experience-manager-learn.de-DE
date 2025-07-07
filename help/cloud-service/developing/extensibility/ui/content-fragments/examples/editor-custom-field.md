@@ -11,8 +11,8 @@ last-substantial-update: 2024-02-27T00:00:00Z
 jira: KT-14903
 thumbnail: KT-14903.jpeg
 exl-id: 563bab0e-21e3-487c-9bf3-de15c3a81aba
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: be710750cd6f2c71fa6b5eb8a6309d5965d67c82
+workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 100%
 
@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie im AEM-Inhaltsfragmenteditor benutzerdefinierte Felder erstellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3437643?learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
 
 AEM-Erweiterungen der Benutzeroberfläche sollten mithilfe des [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html?lang=de)-Frameworks entwickelt werden, da dies ein konsistentes Look-and-Feel mit dem Rest von AEM beibehält. Es verfügt außerdem über eine umfangreiche Bibliothek vordefinierter Funktionen, was die Entwicklungszeit verkürzt.
 
@@ -189,7 +189,7 @@ const SkuField = (props) => {
    * In these cases adjust the Content Fragment Editor's iframe's height so the field doesn't get cut off.     *
    * @param {*} isOpen true if the picker is open, false if it's closed
    */
-  const onOpenChange = async (isOpen) => {
+  const onOpenChange = (isOpen) => {
     if (isOpen) {
       // Calculate the height of the picker box and its label, and surrounding padding.
       const pickerHeight = Number(document.body.clientHeight.toFixed(0));
@@ -202,12 +202,15 @@ const SkuField = (props) => {
       const height = Math.min(pickerHeight + optionsHeight, 400);
 
       // Set the height of the iframe in the Content Fragment Editor
-      await connection.host.field.setHeight(height);
+      connection.host.field.setStyles({
+        current: { height, },
+        parent: { height, },
+      })
     } else {
-      // Set the height of the iframe in the Content Fragment Editor to the height of the closed picker.
-      await connection.host.field.setHeight(
-        Number(document.body.clientHeight.toFixed(0))
-      );
+      connection.host.field.setStyles({
+        current: { height: 74 },
+        parent: { height: 74 },
+      })
     }
   };
 
