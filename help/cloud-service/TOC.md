@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 380bd2b3121db5810e4d295a5f7f9d1139d22402
-workflow-type: ht
-source-wordcount: '1385'
-ht-degree: 100%
+source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+workflow-type: tm+mt
+source-wordcount: '1400'
+ht-degree: 98%
 
 ---
 
@@ -192,11 +192,16 @@ ht-degree: 100%
       + [E-Mail-Dienst](./networking/examples/email-service.md)
 + Sicherheit {#security}
    + [Blockieren von DoS-/DDoS-Angriffen mithilfe von Traffic-Filterregeln](./security/blocking-dos-attack-using-traffic-filter-rules.md)
-   + Traffic-Filterregeln, einschließlich WAF-Regeln{#traffic-filter-and-waf-rules}
-      + [Überblick](./security/traffic-filter-rules/overview.md)
-      + [Einrichtung](./security/traffic-filter-rules/how-to-setup.md)
-      + [Beispiele und Ergebnisanalyse](./security/traffic-filter-rules/examples-and-analysis.md)
-      + [Best Practices](./security/traffic-filter-rules/best-practices.md)
+   + Traffic-Filterregeln einschließlich WAF-Regeln {#traffic-filter-and-waf-rules}
+      + [Schützen von AEM-Websites](./security/traffic-filter-and-waf-rules/overview.md)
+      + [Einrichtung](./security/traffic-filter-and-waf-rules/setup.md)
+      + [Verwenden von Traffic-Filterregeln](./security/traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md)
+      + [Verwenden von WAF-Regeln](./security/traffic-filter-and-waf-rules/use-cases/using-waf-rules.md)
+      + [Best Practices](./security/traffic-filter-and-waf-rules/best-practices.md)
+      + Anleitung{#how-to}
+         + [Überwachen sensibler Anfragen](./security/traffic-filter-and-waf-rules/how-to/request-logging.md)
+         + [Einschränken des Zugriffs](./security/traffic-filter-and-waf-rules/how-to/request-blocking.md)
+         + [Normalisieren von Anfragen](./security/traffic-filter-and-waf-rules/how-to/request-transformation.md)
 + AEM-Ereignisse{#aem-eventing}
    + [Überblick](./eventing/overview.md)
    + Beispiele{#examples}
@@ -296,10 +301,10 @@ ht-degree: 100%
       + [Definieren der Varianten](./forms/style-system/create-variations.md)
       + [Testen der Varianten](./forms/style-system/build.md)
    + Verwenden vertikaler Registerkarten{#using-vertical-tabs}
-      + [1. Einführung](./forms/using-vertical-tabs/introduction.md)
-      + [2. Erstellen des Formulars](./forms/using-vertical-tabs/create-af.md)
-      + [3. Navigieren](./forms/using-vertical-tabs/navigation.md)
-      + [4. Hinzufügen von Symbolen](./forms/using-vertical-tabs/icons.md)
+      + [&#x200B;1. Einführung](./forms/using-vertical-tabs/introduction.md)
+      + [&#x200B;2. Erstellen des Formulars](./forms/using-vertical-tabs/create-af.md)
+      + [&#x200B;3. Navigieren](./forms/using-vertical-tabs/navigation.md)
+      + [&#x200B;4. Hinzufügen von Symbolen](./forms/using-vertical-tabs/icons.md)
    + Verwenden des Ausgabe- und Formular-Dienstes{#forms-cs-output-and-forms-service}
       + [Generieren einer PDF](./forms/forms-cs-output-and-forms-service/outputservice.md)
    + Dokumenterstellung in AEM Forms CS{#doc-gen-formscs}

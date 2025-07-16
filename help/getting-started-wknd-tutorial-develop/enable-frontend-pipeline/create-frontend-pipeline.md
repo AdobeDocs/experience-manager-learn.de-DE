@@ -13,10 +13,10 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: d6da05e4-bd65-4625-b9a4-cad8eae3c9d7
 duration: 225
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+workflow-type: tm+mt
 source-wordcount: '685'
-ht-degree: 100%
+ht-degree: 99%
 
 ---
 
@@ -49,7 +49,7 @@ Benennen Sie die vorhandene Pipeline von __Bereitstellen für Entwicklung__ in _
 
 Überprüfen Sie auch auf der Registerkarte __Quell-Code__, ob die Feldwerte für Repository und Git-Verzweigung korrekt sind und die Verzweigung über die Änderungen an Ihrem Frontend-Pipeline-Vertrag verfügt.
 
-![Quell-Code-Konfigurations-Pipeline](assets/fullstack-wknd-source-code-config.png)
+![Source Code-Konfigurations-Pipeline](assets/fullstack-wknd-source-code-config.png)
 
 
 ## Erstellen einer Frontend-Pipeline
@@ -96,7 +96,7 @@ Und __am wichtigsten__ ist, dass für das Feld __Code-Speicherort__ der Wert `/u
 
 >[!TIP]
 >
->Der `$HASH_VALUE$` hier ist der gleiche wie der, den Sie im Feld __INHALTSHASH__ der Pipeline __Frontend-WKND-Bereitstellung für Entwicklung__ sehen. AEM wird über die CND-URL der Frontend-Ressource benachrichtigt und der Wert in `/conf/wknd/sling:configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/jcr:content` unter der Eigenschaft __prefixPath__ gespeichert.
+>Der `$HASH_VALUE$` hier ist der gleiche wie der, den Sie im Feld __INHALTSHASH__ der Pipeline __Frontend-WKND-Bereitstellung für Entwicklung__ sehen. AEM wird über die CDN-URL der Frontend-Ressource benachrichtigt und der Wert in `/conf/wknd/sling:configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/jcr:content` unter der Eigenschaft __prefixPath__ gespeichert.
 
 
 ![Hash-Wert-Korrelation](assets/hash-value-correlartion.png)
