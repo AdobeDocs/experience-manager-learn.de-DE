@@ -52,7 +52,7 @@ Die Regelsätze helfen Kunden dabei, gängige und komplexe Internet-Bedrohungen 
 
 Die standardmäßigen Traffic-Filterregeln sind nützlich, um geschäftsspezifische Richtlinien zu erzwingen, z. B. Ratenbeschränkungen oder die Blockierung bestimmter Regionen, sowie die Blockierung des Traffics basierend auf Anfrageeigenschaften und Kopfzeilen wie IP-Adresse, Pfad oder Benutzeragent.
 Die WAF-Traffic-Filterregeln bieten dagegen einen umfassenden proaktiven Schutz für bekannte Web-Exploits und Angriffsvektoren und verfügen über erweiterte Intelligenz, um falsch-positive Ergebnisse zu begrenzen (d. h. rechtmäßigen Traffic zu blockieren).
-Um beide Regeltypen zu definieren, verwenden Sie die YAML-Syntax. Weitere Informationen finden Sie unter [Syntax von Traffic](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax)Filterregeln“.
+Um beide Regeltypen zu definieren, verwenden Sie die YAML-Syntax. Weitere Informationen finden Sie unter [Syntax von Traffic](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax)Filterregeln“.
 
 ## Wann und warum sie verwendet werden sollten
 

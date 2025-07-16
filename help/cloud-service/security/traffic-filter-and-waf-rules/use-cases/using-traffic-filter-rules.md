@@ -388,6 +388,6 @@ Bei komplexeren Szenarien können Sie die folgenden Anwendungsfälle untersuchen
 
 ## Zusätzliche Ressourcen
 
-- [Empfohlene Starterregeln](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)
+- [Empfohlene Starterregeln](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)
 
 
