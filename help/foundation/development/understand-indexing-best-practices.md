@@ -14,9 +14,9 @@ jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
 source-git-commit: 7ada3c2e7deb414b924077a5d2988db16f28712c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1693'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Erfahren Sie mehr über Best Practices für die Indizierung in Adobe Experience 
 - AEM as a Cloud Service unterstützt nur Oak Lucene-Indizes.
 - Die Indexkonfiguration sollte in der AEM-Projekt-Code-Basis verwaltet und mithilfe von CI/CD-Pipelines in Cloud Manager bereitgestellt werden.
 - Wenn für eine bestimmte Abfrage mehrere Indizes verfügbar sind, wird der **Index mit den niedrigsten geschätzten Kosten verwendet**.
-- Wenn für eine bestimmte Abfrage kein Index verfügbar ist, wird die Inhaltsstruktur durchlaufen, um den entsprechenden Inhalt zu finden. Die Standardbegrenzung für über `org.apache.jackrabbit.oak.query.QueryEngineSettingsService` besteht jedoch darin, nur 100.000 Knoten zu durchlaufen.
+- Wenn für eine bestimmte Abfrage kein Index verfügbar ist, wird die Inhaltsstruktur durchlaufen, um den entsprechenden Inhalt zu finden. Allerdings werden über `org.apache.jackrabbit.oak.query.QueryEngineSettingsService` standardmäßig maximal 100.000 Knoten durchlaufen.
 - Die Ergebnisse einer Abfrage werden **zuletzt gefiltert**, um sicherzustellen, dass der aktuelle Benutzer bzw. die aktuelle Benutzerin Lesezugriff hat. Das bedeutet, dass die Anzahl der Abfrageergebnisse möglicherweise unter der Anzahl der indizierten Knoten liegt.
 - Die Neuindizierung des Repositorys nach Änderungen der Indexdefinition erfordert Zeit und hängt von der Größe des Repositorys ab.
 
@@ -41,7 +41,7 @@ Manchmal müssen Sie benutzerdefinierte Indizes erstellen, damit Ihre Suchanford
 
 - Verstehen Sie die Suchanforderungen und prüfen Sie, ob die vorkonfigurierten Indizes diese Suchanforderungen unterstützen können. Verwenden Sie das **Abfrageleistungs-Werkzeug**, das als [lokales SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) und AEMCS über die Developer Console oder unter `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` verfügbar ist.
 
-- Definieren Sie eine optimale Abfrage und orientieren Sie sich dabei am Diagramm zum [Optimieren von Abfragen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) sowie an der [JCR-Abfrage-Schnellübersicht](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=de).
+- Definieren Sie eine optimale Abfrage und orientieren Sie sich dabei am Diagramm zum [Optimieren von Abfragen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) sowie an der [JCR-Abfrage-Schnellübersicht](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf).
 
 - Wenn die vorkonfigurierten Indizes die Suchanforderungen nicht unterstützen können, haben Sie zwei Möglichkeiten. Überprüfen Sie jedoch die [Tipps zum Erstellen effizienter Indizes](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
    - Anpassen des vorkonfigurierten Index: Dies ist die bevorzugte Option, da Verwaltung und Aktualisierung einfach sind.
