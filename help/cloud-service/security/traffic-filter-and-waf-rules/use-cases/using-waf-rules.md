@@ -63,7 +63,7 @@ Sehen wir uns drei empfohlene WAF-Regeln an, die zur `cdn.yaml` im AEM WKND-Proj
 
 Diese Regel **blockiert** Anfragen, die sowohl verdächtig aussehen *als auch* von IP-Adressen stammen, die als bösartig gekennzeichnet sind. Da beide Kriterien erfüllt sind, können wir davon ausgehen, dass das Risiko falsch positiver Ergebnisse (Blockierung legitimen Traffics) sehr gering ist. Die bekannten fehlerhaften IPs werden auf der Grundlage von Bedrohungsdaten-Feeds und anderen Quellen identifiziert.
 
-Das `ATTACK-FROM-BAD-IP` WAF-Flag wird verwendet, um diese Anfragen zu identifizieren. Sie aggregiert mehrere der WAF-Flags [hier aufgelistet](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list).
+Das `ATTACK-FROM-BAD-IP` WAF-Flag wird verwendet, um diese Anfragen zu identifizieren. Sie aggregiert mehrere der WAF-Flags [hier aufgelistet](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list).
 
 ```yaml
 kind: "CDN"
@@ -224,7 +224,7 @@ Gehen Sie wie folgt vor, um die Regeln zu verfeinern:
 
 - **Traffic-Muster überwachen**: Verwenden Sie die CDN-Protokolle und das ELK-Dashboard, um Traffic-Muster zu überwachen und Anomalien oder Traffic-Spitzen zu identifizieren. Achten Sie auf die Bedienfelder _WAF Flags Distribution_ und _Top-_ im ELK-Dashboard, um die Arten von Angriffen zu verstehen, die erkannt werden.
 - **wafFlags anpassen**: Wenn `ATTACK` Flags zu häufig ausgelöst werden oder
-Um den Angriffsvektor zu optimieren, können Sie benutzerdefinierte Regeln mit bestimmten WAF-Flags erstellen. Eine vollständige Liste der [WAF-Flags finden Sie ](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) der Dokumentation. Erwägen Sie, zunächst neue benutzerdefinierte Regeln im `log` auszuprobieren.
+Um den Angriffsvektor zu optimieren, können Sie benutzerdefinierte Regeln mit bestimmten WAF-Flags erstellen. Eine vollständige Liste der [WAF-Flags finden Sie ](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) der Dokumentation. Erwägen Sie, zunächst neue benutzerdefinierte Regeln im `log` auszuprobieren.
 - **Zu Blockierungsregeln wechseln**: Nachdem Sie die Traffic-Muster validiert und die WAF-Flags angepasst haben, können Sie ggf. zu Blockierungsregeln wechseln.
 
 ## Zusammenfassung
@@ -320,5 +320,5 @@ Bei komplexeren Szenarien können Sie die folgenden Anwendungsfälle untersuchen
 
 ## Zusätzliche Ressourcen
 
-- [Empfohlene Starterregeln](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules)
-- [Liste der WAF-Flags](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)
+- [Empfohlene Starterregeln](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules)
+- [Liste der WAF-Flags](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)
