@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-13148
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+exl-id: e6d67204-2f76-441c-a178-a34798fe266d
+source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 1%
 
 ---
-
 
 # Überblick - Schutz von AEM-Websites
 
@@ -27,6 +27,9 @@ Außerdem erfahren Sie mehr über die Unterschiede zwischen standardmäßigen Tr
 >[!IMPORTANT]
 >
 > WAF-Traffic-Filterregeln erfordern eine zusätzliche Lizenz für **WAF-DDoS Protection** oder **Enhanced Security**. Standardmäßige Traffic-Filterregeln sind standardmäßig für Kunden von Sites und Forms verfügbar.
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/3469394/?quality=12&learn=on)
 
 ## Einführung in die Traffic-Sicherheit in AEM as a Cloud Service
 
@@ -52,7 +55,7 @@ Die Regelsätze helfen Kunden dabei, gängige und komplexe Internet-Bedrohungen 
 
 Die standardmäßigen Traffic-Filterregeln sind nützlich, um geschäftsspezifische Richtlinien zu erzwingen, z. B. Ratenbeschränkungen oder die Blockierung bestimmter Regionen, sowie die Blockierung des Traffics basierend auf Anfrageeigenschaften und Kopfzeilen wie IP-Adresse, Pfad oder Benutzeragent.
 Die WAF-Traffic-Filterregeln bieten dagegen einen umfassenden proaktiven Schutz für bekannte Web-Exploits und Angriffsvektoren und verfügen über erweiterte Intelligenz, um falsch-positive Ergebnisse zu begrenzen (d. h. rechtmäßigen Traffic zu blockieren).
-Um beide Regeltypen zu definieren, verwenden Sie die YAML-Syntax. Weitere Informationen finden Sie unter [Syntax von Traffic](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax)Filterregeln“.
+Um beide Regeltypen zu definieren, verwenden Sie die YAML-Syntax. Weitere Informationen finden Sie unter [Syntax von Traffic](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax)Filterregeln“.
 
 ## Wann und warum sie verwendet werden sollten
 
