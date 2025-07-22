@@ -12,10 +12,10 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
 exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '600'
-ht-degree: 100%
+source-git-commit: e01eb7ff050321a70d84f8a613705799017dbf5d
+workflow-type: tm+mt
+source-wordcount: '579'
+ht-degree: 87%
 
 ---
 
@@ -29,7 +29,13 @@ Das Journaling ist eine Abrufmethode zum Nutzen von AEM-Ereignissen und ein Jour
 
 Im Adobe Developer Console-Projekt wird das Journaling automatisch für jede Ereignisregistrierung aktiviert, was eine nahtlose Integration ermöglicht.
 
-In diesem Beispiel können Sie dank einer von Adobe bereitgestellten _gehosteten Web-Anwendung_ den ersten Batch von AEM-Ereignissen aus dem Journal abrufen, ohne Ihre Anwendung einrichten zu müssen. Diese von Adobe bereitgestellte Web-Anwendung wird auf [Glitch](https://glitch.com/) gehostet, einer Plattform, die eine Web-basierte Umgebung zum Erstellen und Bereitstellen von Web-Anwendungen bietet. Wenn Sie es vorziehen, können Sie jedoch auch Ihre eigene Anwendung verwenden.
+>[!IMPORTANT]
+>
+>Die Live-Demo-Endpunkte in diesem Tutorial wurden zuvor auf &quot;[&quot; ](https://glitch.com/). Seit Juli 2025 hat Glitch seinen Hosting-Service eingestellt, und die Endpunkte sind nicht mehr zugänglich.
+>>Wir arbeiten aktiv daran, die Demos auf eine alternative Plattform zu migrieren. Der Tutorial-Inhalt bleibt korrekt und aktualisierte Links werden in Kürze bereitgestellt.
+>>Vielen Dank für Ihr Verständnis und Ihre Geduld.
+
+Verwenden Sie Ihr eigenes Programm, bis die Live-Demo-Endpunkte wieder verfügbar sind.
 
 ## Voraussetzungen
 
@@ -82,7 +88,5 @@ Um die Dinge einfach zu halten, ruft diese gehostete Web-Anwendung nur den erste
   ![Vollständige AEM-Ereignis-Payload](../assets/examples/journaling/complete-journal-data.png)
 
 ## Zusätzliche Ressourcen
-
-- [Quell-Code für den Glitch-Webhook](https://glitch.com/edit/#!/indigo-speckle-antler) steht als Referenz zur Verfügung. Es ist eine einfache React-Anwendung, die [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html?lang=de)-Komponenten zum Rendern der Benutzeroberfläche verwendet.
 
 - Die [Adobe I/O-Ereignisjournal-API](https://developer.adobe.com/events/docs/guides/api/journaling_api/) bietet detaillierte Informationen zur API, z. B. den ersten, nächsten und letzten Ereignis-Batch, Paginierung und mehr.

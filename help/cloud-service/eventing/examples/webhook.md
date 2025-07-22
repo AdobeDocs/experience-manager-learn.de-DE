@@ -12,10 +12,10 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
 exl-id: 00954d74-c4c7-4dac-8d23-7140c49ae31f
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '520'
-ht-degree: 100%
+source-git-commit: e01eb7ff050321a70d84f8a613705799017dbf5d
+workflow-type: tm+mt
+source-wordcount: '533'
+ht-degree: 84%
 
 ---
 
@@ -23,9 +23,17 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie AEM-Ereignisse über einen Webhook empfangen und die Ereignisdetails wie Payload, Header und Metadaten überprüfen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449757?quality=12&learn=on&captions=ger)
 
-In diesem Beispiel wird ein von Adobe bereitgestellter _gehosteter Webhook_ verwendet, wodurch Sie AEM-Ereignisse empfangen können, ohne einen eigenen Webhook einrichten zu müssen. Dieser von Adobe bereitgestellte Webhook wird auf [Glitch](https://glitch.com/) gehostet, einer Plattform, die eine Web-basierte Umgebung zum Erstellen und Bereitstellen von Web-Anwendungen bietet. Wenn Sie dies vorziehen, können Sie jedoch auch Ihren eigenen Webhook verwenden.
+>[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
+
+
+>[!IMPORTANT]
+>
+>Die Live-Demo-Endpunkte in diesem Tutorial wurden zuvor auf &quot;[&quot; ](https://glitch.com/). Seit Juli 2025 hat Glitch seinen Hosting-Service eingestellt, und die Endpunkte sind nicht mehr zugänglich.
+>>Wir arbeiten aktiv daran, die Demos auf eine alternative Plattform zu migrieren. Der Tutorial-Inhalt bleibt korrekt und aktualisierte Links werden in Kürze bereitgestellt.
+>>Vielen Dank für Ihr Verständnis und Ihre Geduld.
+
+Verwenden Sie Ihren eigenen Webhook, bis die Live-Demo-Endpunkte wieder verfügbar sind.
 
 ## Voraussetzungen
 
@@ -155,4 +163,4 @@ Sie können sehen, dass die AEM-Ereignisdetails alle notwendigen Informationen e
 
 ## Zusätzliche Ressourcen
 
-- [Quell-Code für den Glitch-Webhook](https://glitch.com/edit/#!/lovely-ancient-coaster) steht als Referenz zur Verfügung. 
+- [AEM-Eventing Webhook](../assets/examples/webhook/aemeventing-webhook.tgz) Quellcode ist für Ihre Referenz verfügbar.
