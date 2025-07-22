@@ -32,8 +32,8 @@ Im Adobe Developer Console-Projekt wird das Journaling automatisch für jede Ere
 >[!IMPORTANT]
 >
 >Die Live-Demo-Endpunkte in diesem Tutorial wurden zuvor auf &quot;[&quot; ](https://glitch.com/). Seit Juli 2025 hat Glitch seinen Hosting-Service eingestellt, und die Endpunkte sind nicht mehr zugänglich.
->>Wir arbeiten aktiv daran, die Demos auf eine alternative Plattform zu migrieren. Der Tutorial-Inhalt bleibt korrekt und aktualisierte Links werden in Kürze bereitgestellt.
->>Vielen Dank für Ihr Verständnis und Ihre Geduld.
+>&#x200B;>Wir arbeiten aktiv daran, die Demos auf eine alternative Plattform zu migrieren. Der Tutorial-Inhalt bleibt korrekt und aktualisierte Links werden in Kürze bereitgestellt.
+>&#x200B;>Vielen Dank für Ihr Verständnis und Ihre Geduld.
 
 Verwenden Sie Ihr eigenes Programm, bis die Live-Demo-Endpunkte wieder verfügbar sind.
 
