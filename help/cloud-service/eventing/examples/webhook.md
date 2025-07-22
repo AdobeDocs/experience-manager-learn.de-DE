@@ -24,7 +24,7 @@ ht-degree: 84%
 Erfahren Sie, wie Sie AEM-Ereignisse über einen Webhook empfangen und die Ereignisdetails wie Payload, Header und Metadaten überprüfen.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449757?quality=12&learn=on&captions=ger)
 
 
 >[!IMPORTANT]
