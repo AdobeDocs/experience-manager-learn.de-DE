@@ -12,10 +12,10 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
 exl-id: 00954d74-c4c7-4dac-8d23-7140c49ae31f
-source-git-commit: e01eb7ff050321a70d84f8a613705799017dbf5d
+source-git-commit: 00301753eae983a17160b783a9b166537baf5ee0
 workflow-type: tm+mt
-source-wordcount: '533'
-ht-degree: 84%
+source-wordcount: '523'
+ht-degree: 67%
 
 ---
 
@@ -24,16 +24,17 @@ ht-degree: 84%
 Erfahren Sie, wie Sie AEM-Ereignisse über einen Webhook empfangen und die Ereignisdetails wie Payload, Header und Metadaten überprüfen.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3449757?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
 
 
 >[!IMPORTANT]
 >
->Die Live-Demo-Endpunkte in diesem Tutorial wurden zuvor auf &quot;[&quot; ](https://glitch.com/). Seit Juli 2025 hat Glitch seinen Hosting-Service eingestellt, und die Endpunkte sind nicht mehr zugänglich.
->&#x200B;>Wir arbeiten aktiv daran, die Demos auf eine alternative Plattform zu migrieren. Der Tutorial-Inhalt bleibt korrekt und aktualisierte Links werden in Kürze bereitgestellt.
->&#x200B;>Vielen Dank für Ihr Verständnis und Ihre Geduld.
+>Das Video verweist auf einen von Glitch gehosteten Webhook-Endpunkt. Seit Glitch seinen Hosting-Service eingestellt hat, wurde der Webhook zum Azure App Service migriert.
+>
+>Die Funktionalität bleibt gleich - nur die Hosting-Plattform hat sich geändert.
 
-Verwenden Sie Ihren eigenen Webhook, bis die Live-Demo-Endpunkte wieder verfügbar sind.
+
+Anstatt den von Adobe bereitgestellten Beispiel-Webhook zu verwenden, können Sie auch Ihren eigenen Webhook-Endpunkt verwenden, um AEM-Ereignisse zu empfangen.
 
 ## Voraussetzungen
 
@@ -46,15 +47,15 @@ Zum Durchführen dieses Tutorials benötigen Sie Folgendes:
 
 ## Zugriff auf den Webhook
 
-Gehen Sie wie folgt vor, um auf den von Adobe bereitgestellten Webhook zuzugreifen:
+Gehen Sie wie folgt vor, um auf den von Adobe bereitgestellten Beispiel-Webhook zuzugreifen:
 
-- Stellen Sie sicher, dass Sie in einer neuen Browser-Registerkarte auf den [von Glitch gehosteten Webhook](https://lovely-ancient-coaster.glitch.me/) zugreifen können.
+- Überprüfen Sie, ob Sie in einer neuen Browser-Registerkarte auf den [ Beispiel-Webhook von Adobe zugreifen können.](https://aemeventing-webhook.azurewebsites.net/)
 
-  ![Von Glitch gehosteter Webhook](../assets/examples/webhook/glitch-hosted-webhook.png)
+  Von ![Adobe bereitgestellter Beispiel-Webhook](../assets/examples/webhook/adobe-provided-webhook.png)
 
 - Geben Sie einen eindeutigen Namen für Ihren Webhook ein, beispielsweise `<YOUR_PETS_NAME>-aem-eventing`, und klicken Sie auf **Verbinden**. Auf dem Bildschirm sollte die Meldung `Connected to: ${YOUR-WEBHOOK-URL}` angezeigt werden.
 
-  ![Glitch: Webhook erstellen](../assets/examples/webhook/glitch-create-webhook.png)
+  ![Erstellen des Webhook-Endpunkts](../assets/examples/webhook/create-webhook-endpoint.png)
 
 - Notieren Sie sich die **Webhook-URL**. Sie benötigen sie später in diesem Tutorial.
 
@@ -72,13 +73,13 @@ Gehen Sie wie folgt vor, um AEM-Ereignisse über die oben aufgeführte Webhook-U
 
   ![Konfigurieren des Adobe Developer Console-Projekts](../assets/examples/webhook/adobe-developer-console-project-configure.png)
 
-- Wählen Sie im Schritt **How to receive events** (Empfangen von Ereignissen) die Option **Webhook** aus und fügen Sie die **Webhook-URL** ein, die Sie zuvor im von Glitch gehosteten Webhook kopiert haben. Klicken Sie auf **Save configured events** (Konfigurierte Ereignisse speichern).
+- Wählen **Schritt „Ereignisempfang** die Option **Webhook** aus und fügen Sie die **Webhook-URL** ein, die Sie zuvor aus dem von Adobe bereitgestellten Beispiel-Webhook kopiert haben, und klicken Sie auf **Konfigurierte Ereignisse speichern**.
 
   ![Webhook des Adobe Developer Console-Projekts](../assets/examples/webhook/adobe-developer-console-project-webhook.png)
 
-- Auf der Glitch-Webhook-Seite sollte eine GET-Anfrage angezeigt werden. Dabei handelt es sich um eine von den Adobe I/O-Ereignissen gesendete Challenge-Anfrage zum Überprüfen der Webhook-URL.
+- Auf der von Adobe bereitgestellten Beispiel-Webhook-Seite sollte eine GET-Anfrage angezeigt werden. Es handelt sich um eine Challenge-Anfrage, die von Adobe I/O Events gesendet wird, um die Webhook-URL zu überprüfen.
 
-  ![Glitch: Challenge-Anfrage](../assets/examples/webhook/glitch-challenge-request.png)
+  ![Webhook - Challenge-Anfrage](../assets/examples/webhook/webhook-challenge-request.png)
 
 
 ## Auslösen von AEM-Ereignissen
@@ -91,9 +92,9 @@ Gehen Sie wie folgt vor, um AEM-Ereignisse aus Ihrer AEM as a Cloud Service-Umge
 
 ## Überprüfen von Ereignisdetails
 
-Nachdem Sie die oben genannten Schritte ausgeführt haben, sollten die AEM-Ereignisse dem Webhook bereitgestellt werden. Suchen Sie auf der Glitch-Webhook-Seite nach der POST-Anfrage.
+Nachdem Sie die oben genannten Schritte ausgeführt haben, sollten die AEM-Ereignisse dem Webhook bereitgestellt werden. Suchen Sie in der von Adobe bereitgestellten Beispiel-Webhook-Seite nach der POST-Anfrage.
 
-![Glitch: POST-Anfrage](../assets/examples/webhook/glitch-post-request.png)
+![Webhook - POST-Anfrage](../assets/examples/webhook/webhook-post-request.png)
 
 Im Folgenden finden Sie wichtige Details zur POST-Anfrage:
 
@@ -103,25 +104,34 @@ Im Folgenden finden Sie wichtige Details zur POST-Anfrage:
 
 ```json
 {
-"connection": "close",
-"x-forwarded-for": "34.205.178.127,::ffff:10.10.10.136,::ffff:10.10.84.114",
-"x-forwarded-proto": "https,http,http",
-"x-forwarded-port": "443,80,80",
-"host": "lovely-ancient-coaster.glitch.me",
-"content-length": "826",
-"x-adobe-public-key2-path": "/prod/keys/pub-key-IkpzhSpTw0.pem",
-"x-adobe-delivery-id": "18abfb47-d24a-4684-ade8-f442a3444033",
-"x-adobe-provider": "aemsites_7ABB3E6A5A7491460A495D61@AdobeOrg_acct-aem-p46652-e1074060@adobe.com",
-"x-adobe-public-key1-path": "/prod/keys/pub-key-Ptc2pD9vT9.pem",
-"x-adobe-event-id": "a0f3fb7d-b02c-4612-aac6-e472b80af793",
-"x-adobe-event-code": "aem.sites.contentFragment.modified",
-"user-agent": "Adobe/1.0",
-"x-adobe-digital-signature-2": "zGLso15+6PV6X6763/x6WqgxDlEXpkv5ty8q4njaq3aUngAI9VCcYonbScEjljRluzjZ05uMJmRfNxwjj60syxEJPuc0dpmMU635gfna7I4T7IaHs496wx4m2E5mvCM+aKbNQ+NPOutyTqI8Ovq29P2P87GIgMlGhAtOaxRVGNc6ksBxc2tCWbrKUhW8hPJ0sHphU499dN4TT32xrZaiRw4akT3M/hYydsA8dcWpJ7S4dpuDS21YyDHAB8s9Dawtr3fyPEyLgZzpwZDfCqQ8gdSCGqKscE4pScwqPkKOYCHDnBvDZVe583jhcZbHGjk7Ncp/FrgQk7avWsk5XlzcuA==",
-"x-adobe-digital-signature-1": "QD7THFJ1vmJqD/BatIpzO6+ACQ9cSKPR7XVaW0LI7cN/xs7ucyri6dmkerOPe9EJpjGoqCg8rxWedrIRQB3lgVskChbHH3Ujx5YG0aTQLSd1Lsn5CFbW1U0l0GqId9Cnd6MccrqSznZXcdW1rMFuRk8+gqwabBifSaLbu3r30G5hmqQd72VtiYTE4m23O3jYIMiv62pRP+a+p4NjNj1XG320uRSry+BPniTjDJ6oN/Ng7aUEKML8idZ/ZTqeh/rJSrVO95UryUolFDRwDkRn5zKonbvhSLAeXzaPhvimWUHtldq9M1WTyRMpsBk8BRzaklxlq+woJ2UjYPUIEzjotw==",
-"accept-encoding": "deflate,compress,identity",
-"content-type": "application/cloudevents+json; charset=UTF-8",
-"x-forwarded-host": "lovely-ancient-coaster.glitch.me",
-"traceparent": "00-c27558588d994f169186ca6a3c6607d4-a7e7ee36625488d4-01"
+  "host": "aemeventing-webhook.azurewebsites.net",
+  "user-agent": "Adobe/1.0",
+  "accept-encoding": "deflate,compress,identity",
+  "max-forwards": "10",
+  "x-adobe-public-key2-path": "/prod/keys/pub-key-kruhWwu4Or.pem",
+  "x-adobe-delivery-id": "25c36f70-9238-4e4c-b1d8-4d9a592fed9d",
+  "x-adobe-provider": "aemsites_7ABB3E6A5A7491460A495D61@AdobeOrg_acct-aem-p63947-e1249010@adobe.com",
+  "x-adobe-public-key1-path": "/prod/keys/pub-key-lyTiz3gQe4.pem",
+  "x-adobe-event-id": "b555a1b1-935b-4541-b410-1915775338b5",
+  "x-adobe-event-code": "aem.sites.contentFragment.modified",
+  "x-adobe-digital-signature-2": "Lvw8+txbQif/omgOamJXJaJdJMLDH5BmPA+/RRLhKG2LZJYWKiomAE9DqKhM349F8QMdDq6FXJI0vJGdk0FGYQa6JMrU+LK+1fGhBpO98LaJOdvfUQGG/6vq8/uJlcaQ66tuVu1xwH232VwrQOKdcobE9Pztm6UX0J11Uc7vtoojUzsuekclKEDTQx5vwBIYK12bXTI9yLRsv0unBZfNRrV0O4N7KA9SRJFIefn7hZdxyYy7IjMdsoswG36E/sDOgcnW3FVM+rhuyWEizOd2AiqgeZudBKAj8ZPptv+6rZQSABbG4imOa5C3t85N6JOwffAAzP6qs7ghRID89OZwCg==",
+  "x-adobe-digital-signature-1": "ZQywLY1Gp/MC/sXzxMvnevhnai3ZG/GaO4ThSGINIpiA/RM47ssAw99KDCy1loxQyovllEmN0ifAwfErQGwDa5cuJYEoreX83+CxqvccSMYUPb5JNDrBkG6W0CmJg6xMeFeo8aoFbePvRkkDOHdz6nT0kgJ70x6mMKgCBM+oUHWG13MVU3YOmU92CJTzn4hiSK8o91/f2aIdfIui/FDp8U20cSKKMWpCu25gMmESorJehe4HVqxLgRwKJHLTqQyw6Ltwy2PdE0guTAYjhDq6AUd/8Fo0ORCY+PsS/lNxim9E9vTRHS7TmRuHf7dpkyFwNZA6Au4GWHHS87mZSHNnow==",
+  "x-arr-log-id": "881073f0-7185-4812-9f17-4db69faf2b68",
+  "client-ip": "52.37.214.82:46066",
+  "disguised-host": "aemeventing-webhook.azurewebsites.net",
+  "x-site-deployment-id": "aemeventing-webhook",
+  "was-default-hostname": "aemeventing-webhook.azurewebsites.net",
+  "x-forwarded-proto": "https",
+  "x-appservice-proto": "https",
+  "x-arr-ssl": "2048|256|CN=Microsoft Azure RSA TLS Issuing CA 03, O=Microsoft Corporation, C=US|CN=*.azurewebsites.net, O=Microsoft Corporation, L=Redmond, S=WA, C=US",
+  "x-forwarded-tlsversion": "1.3",
+  "x-forwarded-for": "52.37.214.82:46066",
+  "x-original-url": "/webhook/AdobeTechMarketing-aem-eventing",
+  "x-waws-unencoded-url": "/webhook/AdobeTechMarketing-aem-eventing",
+  "x-client-ip": "52.37.214.82",
+  "x-client-port": "46066",
+  "content-type": "application/cloudevents+json; charset=UTF-8",
+  "content-length": "1178"
 }
 ```
 
@@ -130,32 +140,41 @@ Im Folgenden finden Sie wichtige Details zur POST-Anfrage:
 ```json
 {
   "specversion": "1.0",
+  "id": "83b0eac0-56d6-4499-afa6-4dc58ff6ac7f",
+  "source": "acct:aem-p63947-e1249010@adobe.com",
   "type": "aem.sites.contentFragment.modified",
-  "source": "acct:aem-p46652-e1074060@adobe.com",
-  "id": "bf922a49-9db4-4377-baf4-70e96e15c45f",
-  "time": "2023-12-12T20:36:43.583228Z",
-  "dataschema": "https://ns.adobe.com/xdm/aem/sites/events/content-fragment-modified.json",
   "datacontenttype": "application/json",
+  "dataschema": "https://ns.adobe.com/xdm/aem/sites/events/content-fragment-modified.json",
+  "time": "2025-07-24T13:53:23.994109827Z",
+  "eventid": "b555a1b1-935b-4541-b410-1915775338b5",
+  "event_id": "b555a1b1-935b-4541-b410-1915775338b5",
+  "recipient_client_id": "606d4074c7ea4962aaf3bc2a5ac3b7f9",
+  "recipientclientid": "606d4074c7ea4962aaf3bc2a5ac3b7f9",
   "data": {
     "user": {
-      "imsUserId": "933E1F8A631CAA0F0A495E53@80761f6e631c0c7d495fb3.e",
-      "principalId": "xxx@adobe.com",
-      "displayName": "First LastName",
+      "imsUserId": "ims-933E1F8A631CAA0F0A495E53@80761f6e631c0c7d495fb3.e",
+      "principalId": "xx@adobe.com",
+      "displayName": "Sachin Mali"
     },
     "path": "/content/dam/wknd-shared/en/adventures/beervana-portland/beervana-in-portland",
+    "sourceUrl": "https://author-p63947-e1249010.adobeaemcloud.com",
     "model": {
-      "id": "/conf/wknd-shared/settings/dam/cfm/models/adventure"
+      "id": "L2NvbmYvd2tuZC1zaGFyZWQvc2V0dGluZ3MvZGFtL2NmbS9tb2RlbHMvYWR2ZW50dXJl",
+      "path": "/conf/wknd-shared/settings/dam/cfm/models/adventure"
     },
-    "id": "9a2d3e6a-efda-4079-a86e-0ef2ede692da",
+    "id": "9e1e9835-64c8-42dc-9d36-fbd59e28f753",
+    "tags": [
+      "wknd-shared:region/nam/united-states",
+      "wknd-shared:activity/social",
+      "wknd-shared:season/fall"
+    ],
     "properties": [
       {
-        "name": "groupSize",
+        "name": "price",
         "changeType": "modified"
       }
     ]
-  },
-  "event_id": "a0f3fb7d-b02c-4612-aac6-e472b80af793",
-  "recipient_client_id": "f51ea733ba404db299fefbf285dc1c42"
+  }
 }
 ```
 
