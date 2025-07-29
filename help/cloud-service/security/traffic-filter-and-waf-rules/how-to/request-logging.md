@@ -1,6 +1,6 @@
 ---
 title: Überwachen sensibler Anfragen
-description: Erfahren Sie, wie Sie sensible Anfragen überwachen, indem Sie sie mithilfe von Traffic-Filterregeln in AEM as a Cloud Service protokollieren.
+description: Erfahren Sie, wie Sie sensible Anfragen durch Protokollierung mit Traffic-Filterregeln in AEM as a Cloud Service überwachen.
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
@@ -10,40 +10,41 @@ doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18311
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: tm+mt
+exl-id: 8fa0488f-b901-49bf-afa5-5ed29242355f
+source-git-commit: 71454ea9f1302d8d1c08c99e937afefeda2b1322
+workflow-type: ht
 source-wordcount: '520'
-ht-degree: 34%
+ht-degree: 100%
 
 ---
 
 # Überwachen sensibler Anfragen
 
-Erfahren Sie, wie Sie sensible Anfragen überwachen, indem Sie sie mithilfe von Traffic-Filterregeln in AEM as a Cloud Service protokollieren.
+Erfahren Sie, wie Sie sensible Anfragen durch Protokollierung mit Traffic-Filterregeln in AEM as a Cloud Service überwachen.
 
-Die Protokollierung ermöglicht die Beobachtung von Traffic-Mustern, ohne die Endbenutzer oder Services zu beeinträchtigen, und ist ein wichtiger erster Schritt vor der Implementierung von Sperrregeln.
+Die Protokollierung ermöglicht die Beobachtung von Traffic-Mustern, ohne die Endbenutzenden oder Services zu beeinträchtigen, und ist ein wichtiger erster Schritt vor der Implementierung von Blockierungsregeln.
 
-In diesem Tutorial wird gezeigt, wie **Anfragen von WKND-Anmelde- und -Abmeldepfaden)** den AEM-Veröffentlichungs-Service protokollieren.
+In diesem Tutorial wird gezeigt, wie Sie an den AEM Publish-Service gerichtete **Anfragen von WKND-Anmelde- und Abmeldepfaden protokollieren**.
 
-## Warum und wann Anfragen protokolliert werden sollten
+## Gründe und Zeitpunkt für die Protokollierung von Anfragen
 
-Die Protokollierung spezifischer Anfragen ist eine risikoarme, wertvolle Vorgehensweise, um zu verstehen, wie Benutzende - und potenziell böswillige Akteure - mit Ihrer AEM-Anwendung interagieren. Dies ist besonders vor der Durchsetzung von Blockierungsregeln nützlich, da Sie so die Möglichkeit haben, Ihren Sicherheitszustand zu verbessern, ohne den rechtmäßigen Datenverkehr zu unterbrechen.
+Die Protokollierung spezifischer Anfragen ist eine risikoarme, wertvolle Vorgehensweise, um zu verstehen, wie Benutzende – und potenziell böswillige Akteure – mit Ihrer AEM-Anwendung interagieren. Dies ist besonders vor der Durchsetzung von Blockierungsregeln nützlich, da Sie so die Möglichkeit haben, Ihren Sicherheitsstatus zu optimieren, ohne den legitimen Traffic zu beeinträchtigen.
 
 Häufige Szenarien für die Protokollierung sind:
 
-- Validieren der Auswirkungen und der Reichweite einer Regel, bevor sie in den `block` Modus hochgestuft wird.
+- Validieren der Auswirkungen und der Reichweite einer Regel, bevor sie in den `block`-Modus hochgestuft wird.
 - Überwachen von Anmelde-/Abmeldepfaden und Authentifizierungsendpunkten auf ungewöhnliche Muster oder Brute-Force-Versuche.
-- Tracking des hochfrequenten Zugriffs auf API-Endpunkte für potenziellen Missbrauch oder DoS-Aktivitäten.
-- Festlegung von Grundlinien für das Verhalten von Bots vor Anwendung strengerer Kontrollen
-- Stellen Sie im Falle von Sicherheitsvorfällen forensische Daten bereit, um die Art des Angriffs und die betroffenen Ressourcen zu verstehen.
+- Tracking von hochfrequentem Zugriff auf API-Endpunkte auf potenziellen Missbrauch oder DoS-Aktivitäten.
+- Festlegen von Grundstandards für das Verhalten von Bots vor der Anwendung strengerer Kontrollen.
+- Bereitstellen forensischer Daten zur Analyse der Art des Angriffs und der betroffenen Ressourcen, falls es zu Sicherheitsvorfällen kommt.
 
 ## Voraussetzungen
 
-Bevor Sie fortfahren, stellen Sie sicher, dass Sie die erforderliche Einrichtung abgeschlossen haben, wie im Tutorial [Einrichten von Traffic-Filtern und WAF-Regeln](../setup.md) beschrieben. Außerdem müssen Sie das [AEM WKND Sites-Projekt geklont und in ](https://github.com/adobe/aem-guides-wknd) AEM-Umgebung bereitgestellt haben.
+Bevor Sie fortfahren, stellen Sie sicher, dass Sie die erforderliche Einrichtung wie im Tutorial [Einrichten von Traffic-Filter- und WAF-Regeln](../setup.md) beschrieben abgeschlossen haben. Außerdem müssen Sie das [AEM WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd) geklont und in Ihrer AEM-Umgebung bereitgestellt haben.
 
 ## Beispiel: Protokollieren von WKND-Anmelde- und Abmeldeanfragen
 
-In diesem Beispiel erstellen Sie eine Traffic-Filterregel, um Anfragen zu protokollieren, die an die WKND-Anmelde- und -Abmeldepfade im AEM-Veröffentlichungs-Service gesendet werden. Dies hilft Ihnen bei der Überwachung von Authentifizierungsversuchen und der Erkennung potenzieller Sicherheitsprobleme.
+In diesem Beispiel erstellen Sie eine Traffic-Filterregel, um Anfragen zu protokollieren, die an die WKND-Anmelde- und -Abmeldepfade im Service „AEM-Veröffentlichung“ gestellt werden. Dadurch können Sie Authentifizierungsversuche überwachen und potenzielle Sicherheitsprobleme identifizieren.
 
 - Fügen Sie die folgende Regel zur Datei `/config/cdn.yaml` des WKND-Projekts hinzu.
 
@@ -68,17 +69,17 @@ data:
       action: log   
 ```
 
-- Übertragen und pushen Sie die Änderungen in das Cloud Manager-Git-Repository.
+- Übernehmen Sie die Änderungen und pushen Sie sie in das Cloud Manager-Git-Repository.
 
-- Stellen Sie die Änderungen mithilfe der Cloud Manager-Konfigurations-Pipeline ([ erstellt) in der AEM-](../setup.md#deploy-rules-using-adobe-cloud-manager) bereit.
+- Implementieren Sie die Änderungen mit der [zuvor erstellten](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager-Konfigurations-Pipeline in der AEM-Entwicklungsumgebung.
 
-- Testen Sie die Regel, indem Sie sich an der WKND-Site Ihres Programms anmelden und von ihr abmelden (z. B. `https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`). Sie können `asmith/asmith` als Benutzernamen und Kennwort verwenden.
+- Testen Sie die Regel, indem Sie sich bei der WKND-Site Ihrer Anwendung anmelden und wieder abmelden (z. B. `https://publish-pXXXX-eYYYY.adobeaemcloud.com/us/en.html`). Sie können `asmith/asmith` als Benutzernamen und Kennwort verwenden.
 
   ![WKND-Anmeldung](../assets/how-to/wknd-login.png)
 
 ## Analysieren
 
-Analysieren wir die Ergebnisse der `publish-auth-requests`, indem wir die AEMCS-CDN-Protokolle aus Cloud Manager herunterladen und das [AEMCS CDN Log Analysis Tool“ ](../setup.md#setup-the-elastic-dashboard-tool).
+Analysieren wir nun die Ergebnisse der Regel `publish-auth-requests`, indem wir die AEMCS CDN-Protokolle aus Cloud Manager herunterladen und die [AEMCS CDN-Protokollanalyse-Tools](../setup.md#setup-the-elastic-dashboard-tool) verwenden.
 
 - Laden Sie auf der Karte **Umgebungen** von [Cloud Manager](https://my.cloudmanager.adobe.com/) die CDN-Protokolle des **Publish-Services** von AEMCS herunter.
 
@@ -104,4 +105,3 @@ Analysieren wir die Ergebnisse der `publish-auth-requests`, indem wir die AEMCS-
 - Überprüfen Sie die Bedienfelder **Analysierte Anfragen**, **Gekennzeichnete Anfragen**, und **Gekennzeichnete Anfragen – Details** im aktualisierten Dashboard. Bei übereinstimmenden CDN-Protokolleinträgen sollten die Werte der Client-IP (cli_ip), des Hosts, der URL, der Aktion (waf_action) und des Regelnamens (waf_match) jedes Eintrags angezeigt werden.
 
   ![ELK-Tool-Dashboard](../assets/how-to/elk-tool-dashboard.png)
-

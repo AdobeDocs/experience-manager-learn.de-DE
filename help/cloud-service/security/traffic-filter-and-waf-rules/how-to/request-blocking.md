@@ -1,6 +1,6 @@
 ---
 title: Einschränken des Zugriffs
-description: Erfahren Sie, wie Sie den Zugriff einschränken, indem Sie bestimmte Anfragen mithilfe von Traffic-Filterregeln in AEM as a Cloud Service blockieren.
+description: Erfahren Sie, wie Sie den Zugriff durch Blockierung bestimmter Anfragen mit Traffic-Filterregeln in AEM as a Cloud Service einschränken.
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
@@ -10,37 +10,38 @@ doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18312
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: tm+mt
+exl-id: 53cb8996-4944-4137-a979-6cf86b088d42
+source-git-commit: 71454ea9f1302d8d1c08c99e937afefeda2b1322
+workflow-type: ht
 source-wordcount: '390'
-ht-degree: 22%
+ht-degree: 100%
 
 ---
 
 # Einschränken des Zugriffs
 
-Erfahren Sie, wie Sie den Zugriff einschränken, indem Sie bestimmte Anfragen mithilfe von Traffic-Filterregeln in AEM as a Cloud Service blockieren.
+Erfahren Sie, wie Sie den Zugriff durch Blockierung bestimmter Anfragen mit Traffic-Filterregeln in AEM as a Cloud Service einschränken.
 
-In diesem Tutorial wird gezeigt, wie **Anfragen an interne Pfade von öffentlichen IPs** AEM-Veröffentlichungs-Service blockieren können.
+In diesem Tutorial wird gezeigt, wie Sie mit dem AEM Publish-Service **Anfragen an interne Pfade von öffentlichen IPs blockieren**.
 
-## Warum und wann Anfragen blockiert werden sollten
+## Gründe und Zeitpunkt für die Blockierung von Anfragen
 
-Die Blockierung des Traffics hilft bei der Durchsetzung von Sicherheitsrichtlinien des Unternehmens, indem unter bestimmten Bedingungen der Zugriff auf sensible Ressourcen oder URLs verhindert wird. Im Vergleich zur Protokollierung ist die Blockierung eine strengere Aktion und sollte verwendet werden, wenn Sie sicher sind, dass Traffic von bestimmten Quellen nicht autorisiert oder unerwünscht ist.
+Die Blockierung des Traffics hilft bei der Durchsetzung von Sicherheitsrichtlinien im Unternehmen, indem der Zugriff auf sensible Ressourcen oder URLs unter bestimmten Bedingungen verhindert wird. Im Vergleich zur Protokollierung ist die Blockierung eine strengere Aktion und sollte verwendet werden, wenn Sie sicher sind, dass Traffic von bestimmten Quellen nicht autorisiert oder nicht erwünscht ist.
 
 Häufige Szenarien, in denen eine Blockierung angemessen ist, umfassen:
 
-- Beschränken des Zugriffs auf `internal` oder `confidential` Seiten auf interne IP-Bereiche (z. B. hinter einem Unternehmens-VPN)
-- Sperren von Bot-Traffic, automatisierten Scannern oder Bedrohungsakteuren, die durch IP oder Geolokalisierung identifiziert werden.
+- Beschränken des Zugriffs auf als `internal` oder `confidential` eingestufte Seiten auf interne IP-Bereiche (z. B. hinter einem Unternehmens-VPN)
+- Sperren von Bot-Traffic, automatischen Scannern oder Bedrohungsakteuren, die über die IP-Adresse oder Geolokalisierung identifiziert werden.
 - Verhindern des Zugriffs auf veraltete oder ungesicherte Endpunkte während gestaffelter Migrationen.
 - Einschränken des Zugriffs auf Authoring-Tools oder Admin-Routen in Veröffentlichungsebenen.
 
 ## Voraussetzungen
 
-Bevor Sie fortfahren, stellen Sie sicher, dass Sie die erforderliche Einrichtung abgeschlossen haben, wie im Tutorial [Einrichten von Traffic-Filtern und WAF-Regeln](../setup.md) beschrieben. Außerdem haben Sie das [AEM WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd) geklont und in Ihrer AEM-Umgebung bereitgestellt.
+Bevor Sie fortfahren, stellen Sie sicher, dass Sie die erforderliche Einrichtung wie im Tutorial [Einrichten von Traffic-Filter- und WAF-Regeln](../setup.md) beschrieben abgeschlossen haben. Außerdem müssen Sie das [AEM WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd) geklont und in Ihrer AEM-Umgebung bereitgestellt haben.
 
-## Beispiel: Blockieren interner Pfade von öffentlichen IPs
+## Beispiel: Blockieren interner Pfade für öffentliche IPs
 
-In diesem Beispiel konfigurieren Sie eine Regel, um den externen Zugriff auf eine interne WKND-Seite, z. B. `https://publish-pXXXX-eYYYY.adobeaemcloud.com/content/wknd/internal/demo-page.html`, von öffentlichen IP-Adressen aus zu blockieren. Nur Benutzer innerhalb eines vertrauenswürdigen IP-Bereichs (z. B. ein Unternehmens-VPN) können auf diese Seite zugreifen.
+In diesem Beispiel konfigurieren Sie eine Regel, um den externen Zugriff auf eine interne WKND-Seite, z. B. `https://publish-pXXXX-eYYYY.adobeaemcloud.com/content/wknd/internal/demo-page.html`, von öffentlichen IP-Adressen aus zu blockieren. Nur Benutzende innerhalb eines vertrauenswürdigen IP-Bereichs (z. B. Unternehmens-VPN) können auf diese Seite zugreifen.
 
 Sie können entweder eine eigene interne Seite erstellen (z. B. `demo-page.html`) oder das [angehängte Paket](../assets/how-to/demo-internal-pages-package.zip) verwenden.
 
@@ -66,9 +67,9 @@ data:
       action: block    
 ```
 
-- Übertragen und pushen Sie die Änderungen in das Cloud Manager-Git-Repository.
+- Übernehmen Sie die Änderungen und pushen Sie sie in das Cloud Manager-Git-Repository.
 
-- Stellen Sie die Änderungen mithilfe der Cloud Manager-Konfigurations-Pipeline ([ erstellt) in der AEM-](../setup.md#deploy-rules-using-adobe-cloud-manager) bereit.
+- Implementieren Sie die Änderungen mit der [zuvor erstellten](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager-Konfigurations-Pipeline in der AEM-Entwicklungsumgebung.
 
 - Testen Sie die Regel, indem Sie auf die interne Seite der WKND-Site zugreifen, zum Beispiel `https://publish-pXXXX-eYYYY.adobeaemcloud.com/content/wknd/internal/demo-page.html`, oder mithilfe des folgenden CURL-Befehls:
 
@@ -80,8 +81,8 @@ data:
 
 ## Analysieren
 
-Gehen Sie zur Analyse der Ergebnisse der `block-internal-paths`-Regel wie im Einrichtungs[Tutorial beschrieben vor](../setup.md#cdn-logs-ingestion)
+Um die Ergebnisse der Regel `block-internal-paths` zu analysieren, führen Sie dieselben Schritte aus wie im [Einrichtungs-Tutorial](../setup.md#cdn-logs-ingestion) beschrieben.
 
-Sie sollten die **Blockierte Anfragen** und die entsprechenden Werte in den Spalten Client-IP (cli_ip), Host, URL, Aktion (waf_action) und Regelname (waf_match) sehen.
+Diesmal sollten Sie die **blockierten Anfragen** und die entsprechenden Werte in den Spalten für Client-IP (cli_ip), Host, URL, Aktion (waf_action) und Regelname (waf_match) sehen.
 
 ![ELK-Tool-Dashboard – Blockierte Anfragen](../assets/how-to/elk-tool-dashboard-blocked.png)

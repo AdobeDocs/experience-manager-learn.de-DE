@@ -14,9 +14,9 @@ doc-type: Tutorial
 exl-id: d6da05e4-bd65-4625-b9a4-cad8eae3c9d7
 duration: 225
 source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '685'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -49,7 +49,7 @@ Benennen Sie die vorhandene Pipeline von __Bereitstellen für Entwicklung__ in _
 
 Überprüfen Sie auch auf der Registerkarte __Quell-Code__, ob die Feldwerte für Repository und Git-Verzweigung korrekt sind und die Verzweigung über die Änderungen an Ihrem Frontend-Pipeline-Vertrag verfügt.
 
-![Source Code-Konfigurations-Pipeline](assets/fullstack-wknd-source-code-config.png)
+![Quell-Code-Konfigurations-Pipeline](assets/fullstack-wknd-source-code-config.png)
 
 
 ## Erstellen einer Frontend-Pipeline

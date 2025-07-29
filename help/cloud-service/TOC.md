@@ -7,9 +7,9 @@ sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
 source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1400'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -192,7 +192,7 @@ ht-degree: 98%
       + [E-Mail-Dienst](./networking/examples/email-service.md)
 + Sicherheit {#security}
    + [Blockieren von DoS-/DDoS-Angriffen mithilfe von Traffic-Filterregeln](./security/blocking-dos-attack-using-traffic-filter-rules.md)
-   + Traffic-Filterregeln einschließlich WAF-Regeln {#traffic-filter-and-waf-rules}
+   + Traffic-Filterregeln, einschließlich WAF-Regeln {#traffic-filter-and-waf-rules}
       + [Schützen von AEM-Websites](./security/traffic-filter-and-waf-rules/overview.md)
       + [Einrichtung](./security/traffic-filter-and-waf-rules/setup.md)
       + [Verwenden von Traffic-Filterregeln](./security/traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md)
