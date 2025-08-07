@@ -160,7 +160,7 @@ Um Adobe Web SDK mit Adobe Target zu verbinden, erstellen Sie einen Datenstrom i
 1. Nachdem der Datenstrom erstellt wurde, klicken Sie auf **Service hinzufügen**.\
    ![Service zum Datenstrom hinzufügen](../assets/use-cases/experiment/aep-add-service.png)
 
-1. Wählen Sie im **Service hinzufügen** aus dem Dropdown-Menü die **** Adobe Target und geben Sie die **Target-Umgebungs-ID** ein. Die ID der Zielumgebung finden Sie in Adobe Target unter **Administration** > **Umgebungen**. Klicken Sie **Speichern**, um den Dienst hinzuzufügen.\
+1. Wählen Sie im **Service hinzufügen** aus dem Dropdown-Menü die **&#x200B;**&#x200B;Adobe Target und geben Sie die **Target-Umgebungs-ID** ein. Die ID der Zielumgebung finden Sie in Adobe Target unter **Administration** > **Umgebungen**. Klicken Sie **Speichern**, um den Dienst hinzuzufügen.\
    ![Konfigurieren des Adobe Target-Service](../assets/use-cases/experiment/aep-target-service.png)
 
 1. Überprüfen Sie die Datenstromdetails, um sicherzustellen, dass der Adobe Target-Service aufgeführt und korrekt konfiguriert ist.\

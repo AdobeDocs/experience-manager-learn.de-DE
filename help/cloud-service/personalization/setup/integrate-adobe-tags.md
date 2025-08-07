@@ -100,7 +100,7 @@ Erstellen Sie eine Tags-Konfiguration in AEM, um die Eigenschaft und die Einstel
 
    ![Konfigurationsdetails für Adobe Launch](../assets/setup/aem-launch-configuration-details.png)
 
-4. Behalten Sie zu Demonstrationszwecken die Standardwerte für die Umgebungen **Staging** und **** bei. Klicken Sie auf **Erstellen**.\
+4. Behalten Sie zu Demonstrationszwecken die Standardwerte für die Umgebungen **Staging** und **&#x200B;**&#x200B;bei. Klicken Sie auf **Erstellen**.\
    ![Konfigurationsdetails für Adobe Launch](../assets/setup/aem-launch-configuration-create.png)
 
 5. Wählen Sie die neu erstellte Konfiguration aus und klicken Sie auf **Veröffentlichen**, um sie für Ihre Site-Seiten verfügbar zu machen.\

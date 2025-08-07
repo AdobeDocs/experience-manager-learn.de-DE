@@ -119,7 +119,7 @@ Verknüpfen Sie die Adobe Target-Konfiguration mit Ihren Experience Fragments, d
 3. Öffnen Sie auf **Seite** die Registerkarte **Cloud-**&quot;. Wählen Sie im Abschnitt **Cloud Service-** Ihre Adobe Target-Konfiguration aus.\
    ![Experience Fragments Cloud Services](../assets/setup/aem-experience-fragments-cloud-services.png)
 
-4. Füllen Sie im **** Adobe Target} Folgendes aus:
+4. Füllen Sie im **&#x200B;**&#x200B;Adobe Target&rbrace; Folgendes aus:
    - **Adobe Target-Exportformat**: HTML
    - **Adobe Target Workspace**: Wählen Sie den zu verwendenden Arbeitsbereich aus (z. B. „Standard-Workspace„)
    - **Externalizer-**: Geben Sie die Domains ein, aus denen externe URLs generiert werden sollen
