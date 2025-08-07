@@ -140,7 +140,7 @@ Um sich zu vergewissern, dass die Integration ordnungsgemäß funktioniert, test
 
 ## Zusätzliche Ressourcen
 
-- [Target-API - Übersicht](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/target-api-overview)
-- [Target-Angebot](https://experienceleague.adobe.com/en/docs/target/using/experiences/offers/manage-content)
+- [Target-API - Übersicht](https://experienceleague.adobe.com/de/docs/target-dev/developer/api/target-api-overview)
+- [Target-Angebot](https://experienceleague.adobe.com/de/docs/target/using/experiences/offers/manage-content)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/)
-- [Experience Fragments in AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use)
+- [Experience Fragments in AEM](https://experienceleague.adobe.com/de/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use)
