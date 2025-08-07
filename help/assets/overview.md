@@ -5,9 +5,9 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 doc-type: Catalog
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '177'
+source-git-commit: 82437ad5d395c5261b3a913b168e4068abb55206
+workflow-type: tm+mt
+source-wordcount: '128'
 ht-degree: 100%
 
 ---
@@ -36,54 +36,6 @@ Erfahren Sie, was AEM Assets ist und wie Sie damit die Geschäftsziele Ihres Unt
 <div id="recs-overview-body-4"></div>
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
-
-<div id="staff-picks-section">
-
-## Empfohlene Artikel
-
-<table>
-<td>
-   <a href="./creative-workflows/aem-desktop-app.md">
-   <img alt="Optimierte Smart-Tags" src="./assets/overview/desktop-app.png" />
-   </a>
-   <div>
-      <a href="./creative-workflows/aem-desktop-app.md">
-      <strong>Verwenden der AEM-Desktop-App</strong>
-      </a>
-   </div>
-   <p>
-      <em>Zugreifen auf Assets in AEM direkt über den Desktop</em>
-   </p>
-</td>
-<td>
-   <a href="../assets-essentials/overview.md">
-   <img alt="AEM Assets Essentials" src="../assets-essentials/assets/overview/getting-started.png"/>
-   </a>
-   <div>
-      <a href="../assets-essentials/overview.md">
- <strong>Erste Schritte mit Assets Essentials</strong>
- </a>
-   </div>
-   <p>
-      <em>Beschleunigen Sie die Erstellung von Erlebnissen vom Konzept über das Design bis zur Bereitstellung.</em>
-   <p>
-</td>
-<td>
-   <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-   <img alt="Übersicht über Dynamic Media" src="./assets/overview/dynamic-media.png" />
-   </a>
-   <div>
-      <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-      <strong>Übersicht über Dynamic Media</strong>
-      </a>
-   </div>
-   <p>
-      <em>Verwalten und Nutzen von Medieninhalten mit Dynamic Media</em>
-   <p>
-</td>
-</table>
-
-</div>
 
 ## Zusätzliche Ressourcen
 
