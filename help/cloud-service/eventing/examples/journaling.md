@@ -13,9 +13,9 @@ jira: KT-14734
 thumbnail: KT-14734.jpeg
 exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
 source-git-commit: e01eb7ff050321a70d84f8a613705799017dbf5d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '579'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -31,11 +31,11 @@ Im Adobe Developer Console-Projekt wird das Journaling automatisch für jede Ere
 
 >[!IMPORTANT]
 >
->Die Live-Demo-Endpunkte in diesem Tutorial wurden zuvor auf &quot;[&quot; ](https://glitch.com/). Seit Juli 2025 hat Glitch seinen Hosting-Service eingestellt, und die Endpunkte sind nicht mehr zugänglich.
->&#x200B;>Wir arbeiten aktiv daran, die Demos auf eine alternative Plattform zu migrieren. Der Tutorial-Inhalt bleibt korrekt und aktualisierte Links werden in Kürze bereitgestellt.
->&#x200B;>Vielen Dank für Ihr Verständnis und Ihre Geduld.
+>Die Live-Demo-Endpunkte in diesem Tutorial wurden in der Vergangenheit auf [Glitch](https://glitch.com/) gehostet. Seit Juli 2025 ist der Hosting-Service von Glitch eingestellt, und die Endpunkte sind nicht mehr zugänglich.
+>>Wir arbeiten aktiv daran, die Demos auf eine alternative Plattform zu migrieren. Der Tutorial-Inhalt ist immer noch korrekt und aktualisierte Links werden in Kürze bereitgestellt.
+>>Danke für Ihr Verständnis und Ihre Geduld.
 
-Verwenden Sie Ihr eigenes Programm, bis die Live-Demo-Endpunkte wieder verfügbar sind.
+Verwenden Sie Ihre eigene Anwendung, bis die Live-Demo-Endpunkte wieder verfügbar sind.
 
 ## Voraussetzungen
 
@@ -89,4 +89,4 @@ Um die Dinge einfach zu halten, ruft diese gehostete Web-Anwendung nur den erste
 
 ## Zusätzliche Ressourcen
 
-- Die [Adobe I/O-Ereignisjournal-API](https://developer.adobe.com/events/docs/guides/api/journaling_api/) bietet detaillierte Informationen zur API, z. B. den ersten, nächsten und letzten Ereignis-Batch, Paginierung und mehr.
+- Das [Adobe I/O-Ereignisjournal-API](https://developer.adobe.com/events/docs/guides/api/journaling_api/) bietet detaillierte Informationen zum API, z. B. den ersten, nächsten und letzten Ereignis-Batch, Paginierung und mehr.

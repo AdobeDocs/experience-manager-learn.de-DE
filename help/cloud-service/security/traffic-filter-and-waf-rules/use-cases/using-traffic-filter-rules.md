@@ -1,6 +1,6 @@
 ---
-title: Schützen von AEM-Websites mithilfe standardmäßiger Traffic-Filterregeln
-description: Erfahren Sie, wie Sie AEM-Websites mithilfe von Adobe-empfohlenen Standard-Traffic-Filterregeln in AEM as a Cloud Service vor DoS (Denial of Service) und Bot-Missbrauch schützen können.
+title: Schützen von AEM-Websites mit Standard-Traffic-Filterregeln
+description: Erfahren Sie, wie Sie AEM-Websites mit von Adobe empfohlenen Standard-Traffic-Filterregeln in AEM as a Cloud Service vor Denial of Service(DoS)-Angriffen und Bot-Missbrauch schützen.
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
@@ -12,65 +12,65 @@ jira: KT-18307
 thumbnail: null
 exl-id: 5e235220-82f6-46e4-b64d-315f027a7024
 source-git-commit: b7f567da159865ff04cb7e9bd4dae0b140048e7d
-workflow-type: tm+mt
-source-wordcount: '1780'
-ht-degree: 7%
+workflow-type: ht
+source-wordcount: '0'
+ht-degree: 100%
 
 ---
 
-# Schützen von AEM-Websites mithilfe standardmäßiger Traffic-Filterregeln
+# Schützen von AEM-Websites mit Standard-Traffic-Filterregeln
 
-Erfahren Sie, wie Sie AEM-Websites mithilfe von _von Adobe empfohlenen_ Standard-Traffic-Filterregeln **in AEM as a Cloud Service vor Denial of Service (DoS), Distributed Denial of Service (DDoS** und Bot-Missbrauch schützen können.
+Erfahren Sie, wie Sie AEM-Websites mit _von Adobe empfohlenen_ **Standard-Traffic-Filterregeln** in AEM as a Cloud Service vor Denial of Service(DoS)- und Distributed Denial of Service(DDoS)-Angriffen sowie Bot-Missbrauch schützen.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3469396/?quality=12&learn=on)
 
 ## Lernziele
 
-- Überprüfen Sie die von Adobe empfohlenen Standard-Traffic-Filterregeln.
-- Definieren, Bereitstellen, Testen und Analysieren der Ergebnisse der Regeln.
-- Erfahren Sie, wann und wie Sie die Regeln auf der Grundlage von Traffic-Mustern einschränken.
-- Erfahren Sie, wie Sie mit dem AEM-Aktionscenter von den Regeln generierte Warnhinweise überprüfen können.
+- Prüfen der von Adobe empfohlenen Standard-Traffic-Filterregeln.
+- Definieren, Implementieren und Testen der Regeln und Analysieren der Ergebnisse.
+- Erfahren Sie, wann und wie Sie die Regeln basierend auf Traffic-Mustern optimieren müssen.
+- Verwenden des AEM-Aktions-Centers zur Prüfung der von Regeln generierten Warnhinweise.
 
-### Implementierungsübersicht
+### Implementierung – Überblick
 
 Zu den Implementierungsschritten gehören:
 
-- Hinzufügen der standardmäßigen Traffic-Filterregeln zur `/config/cdn.yaml` des AEM-WKND-Projekts.
-- Übertragen und Übertragen der Änderungen in das Cloud Manager-Git-Repository.
-- Bereitstellen der Änderungen in der AEM-Umgebung mithilfe der Cloud Manager-Konfigurations-Pipeline.
-- Testen der Regeln durch Simulieren des DoS-Angriffs mit [Vegeta](https://github.com/tsenart/vegeta)
-- Analyse der Ergebnisse mithilfe der AEMCS CDN-Protokolle und des ELK-Dashboard-Tools
+- Hinzufügen der Standard-Traffic-Filterregeln zur Datei `/config/cdn.yaml` des AEM WKND-Projekts.
+- Übertragen und Pushen der Änderungen in das Cloud Manager-Git-Repository.
+- Bereitstellen der Änderungen in der AEM-Umgebung mit der Konfigurations-Pipeline von Cloud Manager. 
+- Testen der Regeln durch Simulieren eines DoS-Angriffs mit [Vegeta](https://github.com/tsenart/vegeta).
+- Analysieren der Ergebnisse mit den AEMCS CDN-Protokollen und den ELK-Dashboard-Tools.
 
 ## Voraussetzungen
 
-Bevor Sie fortfahren, vergewissern Sie sich, dass Sie die erforderlichen Schritte ausgeführt haben, wie im Tutorial [Einrichten von Traffic-Filtern und WAF-Regeln](../setup.md) beschrieben. Außerdem haben Sie das [AEM WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd) geklont und in Ihrer AEM-Umgebung bereitgestellt.
+Bevor Sie fortfahren, vergewissern Sie sich, dass Sie die erforderlichen Schritte ausgeführt haben, wie im Tutorial [Einrichten von Traffic-Filter- und WAF-Regeln](../setup.md) beschrieben. Außerdem müssen Sie das [AEM WKND Sites-Projekt](https://github.com/adobe/aem-guides-wknd) geklont und in Ihrer AEM-Umgebung bereitgestellt haben.
 
 ## Wichtigste Aktionen der Regeln
 
-Bevor wir in die Details der Standard-Traffic-Filterregeln eintauchen, lassen Sie uns die wichtigsten Aktionen verstehen, die diese Regeln durchführen. Das `action` Attribut in jeder Regel definiert, wie der Traffic-Filter reagieren soll, wenn die Bedingungen erfüllt sind. Zu den Maßnahmen gehören:
+Bevor wir in die Details der Standard-Traffic-Filterregeln eintauchen, klären wir die wichtigsten Aktionen, die von diesen Regeln durchgeführt werden. Das Attribut `action` in jeder Regel definiert, wie der Traffic-Filter reagieren soll, wenn die Bedingungen erfüllt sind. Zu den Aktionen gehören:
 
-- **Log**: Die Regeln protokollieren die Ereignisse für die Überwachung und Analyse, sodass Sie Traffic-Muster überprüfen und Schwellenwerte nach Bedarf anpassen können. Sie wird durch das `type: log`-Attribut angegeben.
+- **Protokollieren**: Die Regeln protokollieren die Ereignisse für die Überwachung und Analyse, sodass Sie Traffic-Muster überprüfen und Schwellenwerte nach Bedarf anpassen können. Diese Aktion wird durch das Attribut `type: log` angegeben.
 
-- **Warnhinweis**: Der Regel-Trigger warnt, wenn die Bedingungen erfüllt sind, und hilft Ihnen, potenzielle Probleme zu identifizieren. Sie wird durch das `alert: true`-Attribut angegeben.
+- **Warnhinweis**: Die Regeln lösen Warnhinweise aus, wenn die Bedingungen erfüllt sind, damit Sie potenzielle Probleme identifizieren können. Diese Aktion wird durch das Attribut `alert: true` angegeben.
 
-- **Blockieren**: Die Regeln blockieren den Traffic, wenn die Bedingungen erfüllt sind, und verhindern den Zugriff auf Ihre AEM-Site. Sie wird durch das `action: block`-Attribut angegeben.
+- **Blockieren**: Die Regeln blockieren den Traffic, wenn die Bedingungen erfüllt sind, und verhindern den Zugriff auf Ihre AEM-Site. Diese Aktion wird durch das Attribut `action: block` angegeben.
 
-## Regeln überprüfen und definieren
+## Prüfen und Definieren von Regeln
 
-Adobe-empfohlene Standard-Traffic-Filterregeln dienen als Grundlage für die Identifizierung potenziell schadhafter Traffic-Muster, indem Ereignisse wie IP-basierte Ratenbeschränkungen protokolliert und Traffic aus bestimmten Ländern blockiert werden. Diese Protokolle helfen Teams dabei, Schwellenwerte zu validieren und fundierte Entscheidungen für **Übergang zum Blockierungsmodus)** treffen, ohne den legitimen Traffic zu unterbrechen.
+Von Adobe empfohlene Standard-Traffic-Filterregeln dienen als Grundlage für die Identifizierung potenziell schadhafter Traffic-Muster, indem Ereignisse wie die Überschreitung IP-basierter Ratenbegrenzungen protokolliert und Traffic aus bestimmten Ländern blockiert werden. Diese Protokolle unterstützen Teams dabei, Schwellenwerte zu validieren und fundierte Entscheidungen für den **Übergang zu Blockmodus**-Regeln zu treffen, ohne den legitimen Traffic zu beeinträchtigen.
 
-Sehen wir uns die drei standardmäßigen Traffic-Filterregeln an, die Sie der `/config/cdn.yaml`-Datei des AEM-WKND-Projekts hinzufügen sollten:
+Sehen wir uns die drei Standard-Traffic-Filterregeln an, die Sie der Datei `/config/cdn.yaml` des AEM WKND-Projekts hinzufügen sollten:
 
-- **DoS am Edge verhindern**: Diese Regel erkennt potenzielle DoS-Angriffe (Denial of Service) am CDN-Edge, indem sie Anforderungen pro Sekunde (RPS) von Client-IPs überwacht.
+- **DoS am Edge verhindern**: Diese Regel erkennt potenzielle DoS-Angriffe (Denial of Service) am CDN-Edge, indem sie die Anzahl der Anforderungen pro Sekunde (RPS) von Client-IPs überwacht.
 - **DoS am Ursprung verhindern**: Diese Regel erkennt potenzielle DoS-Angriffe (Denial of Service) am Ursprung, indem sie Abrufanfragen von Client-IPs überwacht.
 - **OFAC-Länder blockieren**: Diese Regel blockiert den Zugriff von bestimmten Ländern, die unter die Einschränkungen des OFAC (Office of Foreign Assets Control) fallen.
 
-### &#x200B;1. Verhindern von DoS auf der Edge
+### &#x200B;1. DoS am Edge verhindern
 
-Diese Regel **sendet einen Warnhinweis** wenn sie einen potenziellen DoS-Angriff (Denial of Service) im CDN erkennt. Das Kriterium zum Auslösen dieser Regel besteht darin, dass ein Client am Edge **500 Anfragen pro Sekunde** (gemittelt über 10 Sekunden) pro CDN-POP (Point of Presence) überschreitet.
+Diese Regel **sendet einen Warnhinweis**, wenn sie einen potenziellen DoS-Angriff (Denial of Service) im CDN erkennt. Das Kriterium zum Auslösen dieser Regel besteht darin, dass ein Client am Edge **500 Anfragen pro Sekunde** (gemittelt über 10 Sekunden) pro CDN-POP (Point of Presence) überschreitet.
 
-Er zählt **alle** Anfragen und gruppiert sie nach Client-IP.
+**Alle** Anfragen werden gezählt und nach Client-IP gruppiert.
 
 ```yaml
 kind: "CDN"
@@ -96,13 +96,13 @@ data:
         alert: true
 ```
 
-Trigger Das `action`-Attribut gibt an, dass die Regel die Ereignisse protokollieren und einen Warnhinweis ausgeben soll, wenn die Bedingungen erfüllt sind. Auf diese Weise können Sie potenzielle DoS-Angriffe überwachen, ohne den rechtmäßigen Traffic zu blockieren. Ihr Ziel ist es jedoch, diese Regel letztendlich in den Blockierungsmodus zu überführen, sobald Sie die Traffic-Muster validiert und die Schwellenwerte angepasst haben.
+Das Attribut `action` gibt an, dass die Regel die Ereignisse protokollieren und einen Warnhinweis ausgeben soll, wenn die Bedingungen erfüllt sind. Auf diese Weise können Sie potenzielle DoS-Angriffe überwachen, ohne legitimen Traffic zu blockieren. Ihr Ziel ist es jedoch, diese Regel schließlich in den Blockmodus zu überführen, sobald Sie die Traffic-Muster validiert und die Schwellenwerte angepasst haben.
 
 ### &#x200B;2. DoS am Ursprung verhindern
 
-Diese Regel **sendet einen Warnhinweis** wenn sie einen potenziellen DoS-Angriff (Denial of Service) am Ursprung erkennt. Das Kriterium zum Auslösen dieser Regel besteht darin, dass ein Client zu Beginn **100 Anfragen pro Sekunde** (gemittelt über 10 Sekunden) pro Client-IP überschreitet.
+Diese Regel **sendet einen Warnhinweis** wenn sie einen potenziellen DoS-Angriff (Denial of Service) am Ursprung erkennt. Das Kriterium zum Auslösen dieser Regel besteht darin, dass ein Client **100 Anfragen pro Sekunde** (gemittelt über 10 Sekunden) pro Client-IP am Ursprung überschreitet.
 
-Er zählt **Abrufe** (Cache-Bypassing-Anfragen) und gruppiert sie nach Client-IP.
+**Abrufe** (Cache-Bypassing-Anfragen) werden gezählt und nach Client-IP gruppiert.
 
 ```yaml
 ...
@@ -122,12 +122,12 @@ Er zählt **Abrufe** (Cache-Bypassing-Anfragen) und gruppiert sie nach Client-IP
         alert: true
 ```
 
-Trigger Das `action`-Attribut gibt an, dass die Regel die Ereignisse protokollieren und einen Warnhinweis ausgeben soll, wenn die Bedingungen erfüllt sind. Auf diese Weise können Sie potenzielle DoS-Angriffe überwachen, ohne den rechtmäßigen Traffic zu blockieren. Ihr Ziel ist es jedoch, diese Regel letztendlich in den Blockierungsmodus zu überführen, sobald Sie die Traffic-Muster validiert und die Schwellenwerte angepasst haben.
+Das Attribut `action` gibt an, dass die Regel die Ereignisse protokollieren und einen Warnhinweis ausgeben soll, wenn die Bedingungen erfüllt sind. Auf diese Weise können Sie potenzielle DoS-Angriffe überwachen, ohne legitimen Traffic zu blockieren. Ihr Ziel ist es jedoch, diese Regel schließlich in den Blockmodus zu überführen, sobald Sie die Traffic-Muster validiert und die Schwellenwerte angepasst haben.
 
-### &#x200B;3. Block OFAC-Länder
+### &#x200B;3. OFAC-Länder blockieren
 
-Diese Regel blockiert den Zugriff aus bestimmten Ländern, die unter [OFAC](https://ofac.treasury.gov/sanctions-programs-and-country-information)-Beschränkungen fallen.
-Sie können die Länderliste nach Bedarf überprüfen und ändern.
+Diese Regel blockiert den Zugriff aus bestimmten Ländern, die unter [OFAC](https://ofac.treasury.gov/sanctions-programs-and-country-information)-Einschränkungen fallen.
+Sie können die Länderliste bei Bedarf prüfen und ändern.
 
 ```yaml
 ...
@@ -152,39 +152,39 @@ Sie können die Länderliste nach Bedarf überprüfen und ändern.
       action: block
 ```
 
-Das Attribut `action` gibt an, dass die Regel den Zugriff für die angegebenen Länder blockieren soll. So verhindern Sie den Zugriff auf Ihre AEM-Site aus Regionen, die Sicherheitsrisiken darstellen können.
+Das Attribut `action` gibt an, dass die Regel den Zugriff aus den angegebenen Länder blockieren soll. So verhindern Sie den Zugriff auf Ihre AEM-Site aus Regionen, die Sicherheitsrisiken darstellen können.
 
-Die vollständige `cdn.yaml` mit den oben genannten Regeln sieht wie folgt aus:
+Die vollständige Datei `cdn.yaml` mit den oben genannten Regeln sieht wie folgt aus:
 
 ![WKND CDN-YAML-Regeln](../assets/use-cases/wknd-cdn-yaml-rules.png)
 
-## Regeln bereitstellen
+## Bereitstellen der Regeln
 
-Gehen Sie wie folgt vor, um die oben genannten Regeln bereitzustellen:
+Gehen Sie zur Bereitstellung der Regeln wie folgt vor:
 
-- Übertragen und pushen Sie die Änderungen in das Cloud Manager-Git-Repository.
+- Übernehmen Sie die Änderungen und pushen Sie sie in das Cloud Manager-Git-Repository.
 
-- Stellen Sie die Änderungen mithilfe der Cloud Manager-Konfigurations-Pipeline ([ erstellt) in der AEM-](../setup.md#deploy-rules-using-adobe-cloud-manager) bereit.
+- Implementieren Sie die Änderungen mit der [zuvor erstellten](../setup.md#deploy-rules-using-adobe-cloud-manager) Cloud Manager-Konfigurations-Pipeline in der AEM-Entwicklungsumgebung.
 
   ![Cloud Manager-Konfigurations-Pipeline](../assets/use-cases/cloud-manager-config-pipeline.png)
 
-## Testregeln
+## Testen der Regeln
 
-Um die Effektivität der Standard-Traffic-Filterregeln zu überprüfen, simulieren Sie sowohl **CDN Edge** als auch **Origin** hohen Anfrage-Traffic mit [Vegeta](https://github.com/tsenart/vegeta), einem vielseitigen HTTP-Lasttest-Tool.
+Um die Effektivität der Standard-Traffic-Filterregeln zu überprüfen, simulieren Sie sowohl am **CDN-Edge** als auch am **Ursprung** hohen Anfrage-Traffic mit [Vegeta](https://github.com/tsenart/vegeta), einem vielseitigen Tool zum Testen der HTTP-Last.
 
-- DoS-Regel am Edge testen (Limit von 500 U/s). Der folgende Befehl simuliert 200 Anfragen pro Sekunde für 15 Sekunden, was den Edge-Schwellenwert (500 rps) überschreitet.
+- Testen Sie die DoS-Regel am Edge (Grenzwert: 500 Anfragen/s). Der folgende Befehl simuliert 15 Sekunden lang 200 Anfragen pro Sekunde, was den Edge-Schwellenwert (500 Anfragen/s) überschreitet.
 
   ```shell
   $echo "GET https://publish-p63947-e1249010.adobeaemcloud.com/us/en.html" | vegeta attack -rate=200 -duration=15s | vegeta report
   ```
 
-  ![Vegeta DoS greifen Edge an](../assets/use-cases/vegeta-dos-attack-edge.png)
+  ![Vegeta-DoS-Angriff am Edge](../assets/use-cases/vegeta-dos-attack-edge.png)
 
   >[!IMPORTANT]
   >
-  >  Beachten Sie die *100%* Erfolgs- und _200_ Status-Codes im obigen Bericht. Da Regeln auf `log` und `alert` festgelegt sind, werden die Anfragen _nicht blockiert_ aber zu Überwachungs-, Analyse- und Warnzwecken protokolliert.
+  >  Beachten Sie den Wert von *100%* für „Success“ und den Status-Code _200_ im obigen Bericht. Da die Regeln auf `log` und `alert` eingestellt sind, werden die Anfragen _nicht blockiert_, aber zu Überwachungs-, Analyse- und Warnzwecken protokolliert.
 
-- DoS-Regel am Ursprung testen (Grenzwert von 100 U/s). Der folgende Befehl simuliert 110 Abrufanforderungen pro Sekunde für 1 Sekunde, was den Ursprungsschwellenwert (100 rps) überschreitet. Um die Cache-Umgehung von Anfragen zu simulieren, wird die `targets.txt`-Datei mit eindeutigen Abfrageparametern erstellt, um sicherzustellen, dass jede Anfrage als Abrufanfrage behandelt wird.
+- Testen Sie die DoS-Regel am Ursprung (Grenzwert: 100 Anfragen/s). Der folgende Befehl simuliert 1 Sekunde lang 110 Abrufanfragen pro Sekunde, was den Ursprungsschwellenwert (100 Anfragen/s) überschreitet. Um die Cache-Umgehung von Anfragen zu simulieren, wird die Datei `targets.txt` mit eindeutigen Abfrageparametern erstellt, damit sichergestellt ist, dass jede Anfrage als Abrufanfrage behandelt wird.
 
   ```shell
   # Create targets.txt with unique query parameters
@@ -196,35 +196,35 @@ Um die Effektivität der Standard-Traffic-Filterregeln zu überprüfen, simulier
   $vegeta attack -rate=110 -duration=1s -targets=targets.txt | vegeta report
   ```
 
-  ![Vegeta DoS Attack Origin](../assets/use-cases/vegeta-dos-attack-origin.png)
+  ![Vegeta-DoS-Angriff am Ursprung](../assets/use-cases/vegeta-dos-attack-origin.png)
 
   >[!IMPORTANT]
   >
-  >  Beachten Sie die *100%* Erfolgs- und _200_ Status-Codes im obigen Bericht. Da Regeln auf `log` und `alert` festgelegt sind, werden die Anfragen _nicht blockiert_ aber zu Überwachungs-, Analyse- und Warnzwecken protokolliert.
+  >  Beachten Sie den Wert von *100%* für „Success“ und den Status-Code _200_ im obigen Bericht. Da die Regeln auf `log` und `alert` eingestellt sind, werden die Anfragen _nicht blockiert_, aber zu Überwachungs-, Analyse- und Warnzwecken protokolliert.
 
 - Der Einfachheit halber wird die OFAC-Regel hier nicht getestet.
 
-## Warnungen überprüfen
+## Prüfen von Warnhinweisen
 
-Warnhinweise werden generiert, wenn die Traffic-Filterregeln ausgelöst werden. Sie können diese Warnhinweise im [AEM-Aktionscenter](https://experience.adobe.com/aem/actions-center) überprüfen.
+Warnhinweise werden generiert, wenn die Traffic-Filterregeln ausgelöst werden. Sie können diese Warnhinweise im [AEM-Aktionscenter](https://experience.adobe.com/aem/actions-center) prüfen.
 
 ![WKND AEM-Aktionscenter](../assets/use-cases/wknd-aem-action-center.png)
 
-## Ergebnisse analysieren
+## Analysieren der Ergebnisse
 
-Um die Ergebnisse der Traffic-Filterregeln zu analysieren, können Sie die AEMCS-CDN-Protokolle und das ELK-Dashboard-Tool verwenden. Befolgen Sie die Anweisungen im Abschnitt [CDN-Protokollaufnahme](../setup.md#ingest-cdn-logs) Einrichtung , um die CDN-Protokolle in den ELK-Stack aufzunehmen.
+Um die Ergebnisse der Traffic-Filterregeln zu analysieren, können Sie die AEMCS CDN-Protokolle und das ELK-Dashboard-Tool verwenden. Befolgen Sie die Anweisungen im Einrichtungsabschnitt [CDN-Protokollaufnahme](../setup.md#ingest-cdn-logs), um die CDN-Protokolle in den ELK-Stack aufzunehmen.
 
 Im folgenden Screenshot sehen Sie die CDN-Protokolle der AEM-Entwicklungsumgebung, die in den ELK-Stack aufgenommen wurden.
 
-![WKND CDN Logs ELK](../assets/use-cases/wknd-cdn-logs-elk.png)
+![WKND CDN-Protokolle ELK](../assets/use-cases/wknd-cdn-logs-elk.png)
 
-Innerhalb des ELK-Programms sollte das **CDN Traffic Dashboard** die Spitze bei den **Edge** und **Origin** während der simulierten DoS-Angriffe anzeigen.
+Im ELK-Programm sollte das **CDN-Traffic-Dashboard** die während der simulierten DoS-Angriffe aufgetretenen Spitzen am **Edge** und am **Ursprung** anzeigen.
 
-Die beiden Bedienfelder _Edge RPS pro Client-IP und POP_ und _Origin RPS pro Client-IP und POP_ zeigen die Anforderungen pro Sekunde (RPS) am Edge bzw. am Ursprung an, gruppiert nach Client-IP und Point of Presence (POP).
+Die beiden Panels _Edge RPS per Client IP and POP_ und _Origin RPS per Client IP and POP_ zeigen die Anfragen pro Sekunde (RPS) am Edge bzw. am Ursprung an, gruppiert nach Client-IP und Point of Presence (POP).
 
-![WKND CDN Edge Traffic-Dashboard](../assets/use-cases/wknd-cdn-edge-traffic-dashboard.png)
+![WKND CDN Edge-Traffic-Dashboard](../assets/use-cases/wknd-cdn-edge-traffic-dashboard.png)
 
-Sie können auch andere Bedienfelder im CDN-Traffic-Dashboard verwenden, um die Traffic-Muster zu analysieren, z _B. „Top-Client_, _Top-Länder_ und _Top-Benutzeragenten_. Diese Bedienfelder helfen Ihnen, potenzielle Bedrohungen zu identifizieren und Ihre Traffic-Filterregeln entsprechend anzupassen.
+Sie können auch andere Panels im CDN-Traffic-Dashboard verwenden, um die Traffic-Muster zu analysieren, z. B. _Top Client IPs_, _Top Countries_ und _Top User Agents_. Diese Panels unterstützen Sie dabei, potenzielle Bedrohungen zu identifizieren und Ihre Traffic-Filterregeln entsprechend anzupassen.
 
 ### Splunk-Integration
 
@@ -234,34 +234,34 @@ Um Dashboards in Splunk zu erstellen, folgen Sie den Schritten [Splunk-Dashboard
 
 Der folgende Screenshot zeigt ein Beispiel für ein Splunk-Dashboard, das die maximalen Ursprungs- und Edge-Anforderungen pro IP anzeigt, damit Sie potenzielle DoS-Angriffe identifizieren können.
 
-![Splunk-Dashboard - Max. Ursprungs- und Edge-Anfragen pro IP](../assets/use-cases/splunk-dashboard-max-origin-edge-requests.png)
+![Splunk-Dashboard – Max. Anfragen pro IP am Ursprung und am Edge](../assets/use-cases/splunk-dashboard-max-origin-edge-requests.png)
 
-## Wann und wie Regeln verfeinert werden
+## Zeitpunkt und Methode zum Optimieren von Regeln
 
-Sie möchten verhindern, dass rechtmäßiger Traffic blockiert wird, und gleichzeitig Ihre AEM-Site vor potenziellen Bedrohungen schützen. Die standardmäßigen Traffic-Filterregeln sind so konzipiert, dass sie Bedrohungen warnen und protokollieren (und schließlich blockieren, wenn der Modus gewechselt wird), ohne den rechtmäßigen Traffic zu blockieren.
+Sie möchten verhindern, dass legitimer Traffic blockiert wird, und gleichzeitig Ihre AEM-Site vor potenziellen Bedrohungen schützen. Die Standard-Traffic-Filterregeln sind so konzipiert, dass sie vor Bedrohungen warnen und diese protokollieren (und schließlich blockieren, wenn der Modus gewechselt wird), ohne den legitimen Traffic zu blockieren.
 
-Gehen Sie wie folgt vor, um die Regeln zu verfeinern:
+Gehen Sie wie folgt vor, um die Regeln zu optimieren:
 
-- **Traffic-Muster überwachen**: Verwenden Sie die CDN-Protokolle und das ELK-Dashboard, um Traffic-Muster zu überwachen und Anomalien oder Traffic-Spitzen zu identifizieren.
-- **Anpassen von**: Passen Sie die Schwellenwerte (Erhöhen oder Verringern der Ratenbeschränkungen) in den Regeln basierend auf den Traffic-Mustern an, um sie besser an Ihre spezifischen Anforderungen anzupassen. Wenn Sie beispielsweise bemerken, dass rechtmäßiger Traffic die Warnhinweise ausgelöst hat, können Sie die Ratenbeschränkungen erhöhen oder die Gruppierungen anpassen.
-Die folgende Tabelle enthält Anleitungen zur Auswahl der Schwellenwerte:
+- **Überwachen Sie Traffic-Muster**: Verwenden Sie die CDN-Protokolle und das ELK-Dashboard, um Traffic-Muster zu überwachen und Anomalien oder Traffic-Spitzen zu identifizieren.
+- **Passen Sie Schwellenwerte an**: Passen Sie basierend auf den Traffic-Mustern die Schwellenwerte in den Regeln durch Erhöhen oder Verringern der Ratenbegrenzungen an, um sie besser auf Ihre spezifischen Anforderungen abzustimmen. Wenn Sie beispielsweise bemerken, dass legitimer Traffic die Warnhinweise ausgelöst hat, können Sie die Ratenbegrenzungen erhöhen oder die Gruppierungen anpassen.
+In der folgenden Tabelle finden Sie Anleitungen zur Auswahl der Schwellenwerte:
 
   | Variante | Wert |
   | :--------- | :------- |
   | Ursprung | Nehmen Sie den höchsten Wert der maximalen Ursprungsanfragen pro IP/POP unter **normalen** Traffic-Bedingungen (d. h. nicht die Rate zum Zeitpunkt eines DDoS-Angriffs) und erhöhen Sie ihn um ein Vielfaches |
   | Edge | Nehmen Sie den höchsten Wert der maximalen Edge-Anfragen pro IP/POP unter **normalen** Traffic-Bedingungen (d. h. nicht die Rate zum Zeitpunkt eines DDoS-Angriffs) und erhöhen Sie ihn um ein Vielfaches |
 
-  Weitere Einzelheiten finden Sie [ Abschnitt „Auswählen ](../../blocking-dos-attack-using-traffic-filter-rules.md#choosing-threshold-values) Schwellenwerten“.
+  Weitere Informationen finden Sie im Abschnitt [Auswählen von Schwellenwerten](../../blocking-dos-attack-using-traffic-filter-rules.md#choosing-threshold-values).
 
-- **Wechseln zu Blockierungsregeln**: Nachdem Sie die Traffic-Muster validiert und die Schwellenwerte angepasst haben, sollten Sie die Regeln in den Blockierungsmodus wechseln.
+- **Wechseln zu Blockierungsregeln**: Nachdem Sie die Traffic-Muster validiert und die Schwellenwerte angepasst haben, sollten Sie die Regeln in den Blockmodus überführen.
 
 ## Zusammenfassung
 
-In diesem Tutorial haben Sie gelernt, wie Sie AEM-Websites mithilfe von Adobe-empfohlenen Standard-Traffic-Filterregeln in AEM as a Cloud Service vor Denial of Service (DoS), Distributed Denial of Service (DDoS) und Bot-Missbrauch schützen können.
+In diesem Tutorial haben Sie gelernt, wie Sie AEM-Websites mit von Adobe empfohlenen Standard-Traffic-Filterregeln in AEM as a Cloud Service vor Denial of Service(DoS)- und Distributed Denial of Service(DDoS)-Angriffen sowie Bot-Missbrauch schützen.
 
 ## Empfohlene WAF-Regeln
 
-Erfahren Sie, wie Sie die von Adobe empfohlenen WAF-Regeln implementieren, um Ihre AEM-Websites vor komplexen Bedrohungen zu schützen, die herkömmliche Sicherheitsmaßnahmen durch fortschrittliche Verfahren umgehen.
+Erfahren Sie, wie Sie die von Adobe empfohlenen WAF-Regeln implementieren, um Ihre AEM-Websites vor komplexen Bedrohungen zu schützen, die herkömmliche Sicherheitsmaßnahmen durch erweiterte Methoden umgehen.
 
 <!-- CARDS
 {target = _self}
@@ -278,8 +278,8 @@ Erfahren Sie, wie Sie die von Adobe empfohlenen WAF-Regeln implementieren, um Ih
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./using-waf-rules.md" title="Schützen von AEM-Websites mithilfe von WAF-Traffic-Filterregeln" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="../assets/use-cases/using-waf-rules.png" alt="Schützen von AEM-Websites mithilfe von WAF-Traffic-Filterregeln"
+                    <a href="./using-waf-rules.md" title="Schützen von AEM-Websites mit WAF-Traffic-Filterregeln" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="../assets/use-cases/using-waf-rules.png" alt="Schützen von AEM-Websites mit WAF-Traffic-Filterregeln"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -287,9 +287,9 @@ Erfahren Sie, wie Sie die von Adobe empfohlenen WAF-Regeln implementieren, um Ih
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./using-waf-rules.md" target="_self" rel="referrer" title="Schützen von AEM-Websites mithilfe von WAF-Traffic-Filterregeln">Schutz von AEM-Websites mithilfe von WAF-Traffic-Filterregeln</a>
+                        <a href="./using-waf-rules.md" target="_self" rel="referrer" title="Schützen von AEM-Websites mit WAF-Traffic-Filterregeln">Schützen von AEM-Websites mit WAF-Traffic-Filterregeln</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie AEM-Websites mithilfe der von Adobe empfohlenen Traffic-Filterregeln der Web Application Firewall (WAF) in AEM as a Cloud Service vor komplexen Bedrohungen wie DoS, DDoS und Bot-Missbrauch schützen.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie AEM-Websites mit den von Adobe empfohlenen Traffic-Filterregeln der Web Application Firewall (WAF) in AEM as a Cloud Service vor komplexen Bedrohungen wie DoS, DDoS und Bot-Missbrauch schützen.</p>
                 </div>
                 <a href="./using-waf-rules.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">WAF aktivieren</span>
@@ -301,9 +301,9 @@ Erfahren Sie, wie Sie die von Adobe empfohlenen WAF-Regeln implementieren, um Ih
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
 
-## Anwendungsfälle - über Standardregeln hinaus
+## Anwendungsfälle – jenseits der Standardregeln
 
-Bei komplexeren Szenarien können Sie die folgenden Anwendungsfälle untersuchen, die zeigen, wie Sie benutzerdefinierte Traffic-Filterregeln basierend auf bestimmten Geschäftsanforderungen implementieren:
+Für komplexere Szenarien können Sie die folgenden Anwendungsfälle erkunden. Diese demonstrieren, wie Sie benutzerdefinierte Traffic-Filterregeln basierend auf bestimmten Unternehmensanforderungen implementieren:
 
 <!-- CARDS
 {target = _self}
@@ -331,10 +331,10 @@ Bei komplexeren Szenarien können Sie die folgenden Anwendungsfälle untersuchen
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="../how-to/request-logging.md" target="_self" rel="referrer" title="Überwachen sensibler Anfragen">Überwachen sensibler Anfragen</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie sensible Anfragen überwachen, indem Sie sie mithilfe von Traffic-Filterregeln in AEM as a Cloud Service protokollieren.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie sensible Anfragen überwachen, indem Sie sie mit Traffic-Filterregeln in AEM as a Cloud Service protokollieren.</p>
                 </div>
                 <a href="../how-to/request-logging.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Weitere Informationen</span>
                 </a>
             </div>
         </div>
@@ -354,10 +354,10 @@ Bei komplexeren Szenarien können Sie die folgenden Anwendungsfälle untersuchen
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="../how-to/request-blocking.md" target="_self" rel="referrer" title="Einschränken des Zugriffs">Einschränken des Zugriffs</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie den Zugriff einschränken, indem Sie bestimmte Anfragen mithilfe von Traffic-Filterregeln in AEM as a Cloud Service blockieren.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie den Zugriff durch Blockierung bestimmter Anfragen mit Traffic-Filterregeln in AEM as a Cloud Service einschränken.</p>
                 </div>
                 <a href="../how-to/request-blocking.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Weitere Informationen</span>
                 </a>
             </div>
         </div>
@@ -377,7 +377,7 @@ Bei komplexeren Szenarien können Sie die folgenden Anwendungsfälle untersuchen
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="../how-to/request-transformation.md" target="_self" rel="referrer" title="Normalisieren von Anfragen">Normalisieren von Anfragen</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie Anfragen normalisieren können, indem Sie sie mithilfe von Traffic-Filterregeln in AEM as a Cloud Service transformieren.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie Anfragen durch Transformation mit Traffic-Filterregeln in AEM as a Cloud Service normalisieren.</p>
                 </div>
                 <a href="../how-to/request-transformation.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
 <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>
@@ -391,4 +391,4 @@ Bei komplexeren Szenarien können Sie die folgenden Anwendungsfälle untersuchen
 
 ## Zusätzliche Ressourcen
 
-- [Empfohlene Starterregeln](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)
+- [Empfohlene Anfangsregeln](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)

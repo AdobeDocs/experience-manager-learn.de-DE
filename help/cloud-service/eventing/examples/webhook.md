@@ -13,9 +13,9 @@ jira: KT-14732
 thumbnail: KT-14732.jpeg
 exl-id: 00954d74-c4c7-4dac-8d23-7140c49ae31f
 source-git-commit: 00301753eae983a17160b783a9b166537baf5ee0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '523'
-ht-degree: 67%
+ht-degree: 100%
 
 ---
 
@@ -24,14 +24,14 @@ ht-degree: 67%
 Erfahren Sie, wie Sie AEM-Ereignisse über einen Webhook empfangen und die Ereignisdetails wie Payload, Header und Metadaten überprüfen.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3449757?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
 
 
 >[!IMPORTANT]
 >
->Das Video verweist auf einen von Glitch gehosteten Webhook-Endpunkt. Seit Glitch seinen Hosting-Service eingestellt hat, wurde der Webhook zum Azure App Service migriert.
+>Das Video verweist auf einen auf Glitch gehosteten Webhook-Endpunkt. Da Glitch seinen Hosting-Service eingestellt hat, wurde der Webhook zum Azure App Service migriert.
 >
->Die Funktionalität bleibt gleich - nur die Hosting-Plattform hat sich geändert.
+>Die Funktionalität ist weiterhin gleich, nur die Hosting-Plattform hat sich geändert.
 
 
 Anstatt den von Adobe bereitgestellten Beispiel-Webhook zu verwenden, können Sie auch Ihren eigenen Webhook-Endpunkt verwenden, um AEM-Ereignisse zu empfangen.
@@ -49,9 +49,9 @@ Zum Durchführen dieses Tutorials benötigen Sie Folgendes:
 
 Gehen Sie wie folgt vor, um auf den von Adobe bereitgestellten Beispiel-Webhook zuzugreifen:
 
-- Überprüfen Sie, ob Sie in einer neuen Browser-Registerkarte auf den [ Beispiel-Webhook von Adobe zugreifen können.](https://aemeventing-webhook.azurewebsites.net/)
+- Stellen Sie sicher, dass Sie auf den [von Adobe bereitgestellten Beispiel-Webhook](https://aemeventing-webhook.azurewebsites.net/) zugreifen können.
 
-  Von ![Adobe bereitgestellter Beispiel-Webhook](../assets/examples/webhook/adobe-provided-webhook.png)
+  ![Von Adobe bereitgestellter Beispiel-Webhook](../assets/examples/webhook/adobe-provided-webhook.png)
 
 - Geben Sie einen eindeutigen Namen für Ihren Webhook ein, beispielsweise `<YOUR_PETS_NAME>-aem-eventing`, und klicken Sie auf **Verbinden**. Auf dem Bildschirm sollte die Meldung `Connected to: ${YOUR-WEBHOOK-URL}` angezeigt werden.
 
@@ -73,13 +73,13 @@ Gehen Sie wie folgt vor, um AEM-Ereignisse über die oben aufgeführte Webhook-U
 
   ![Konfigurieren des Adobe Developer Console-Projekts](../assets/examples/webhook/adobe-developer-console-project-configure.png)
 
-- Wählen **Schritt „Ereignisempfang** die Option **Webhook** aus und fügen Sie die **Webhook-URL** ein, die Sie zuvor aus dem von Adobe bereitgestellten Beispiel-Webhook kopiert haben, und klicken Sie auf **Konfigurierte Ereignisse speichern**.
+- Wählen Sie im Schritt **How to receive events** (Empfangen von Ereignissen) die Option **Webhook** aus und fügen Sie die zuvor vom Adobe bereitgestellten Beispiel-Webhook kopierte **Webhook-URL** ein. Klicken Sie auf **Save configured events** (Konfigurierte Ereignisse speichern).
 
   ![Webhook des Adobe Developer Console-Projekts](../assets/examples/webhook/adobe-developer-console-project-webhook.png)
 
-- Auf der von Adobe bereitgestellten Beispiel-Webhook-Seite sollte eine GET-Anfrage angezeigt werden. Es handelt sich um eine Challenge-Anfrage, die von Adobe I/O Events gesendet wird, um die Webhook-URL zu überprüfen.
+- Auf der Seite des von Adobe bereitgestellten Beispiel-Webhooks sollte eine GET-Anfrage angezeigt werden. Dabei handelt es sich um eine von Adobe I/O Events gesendete Challenge-Anfrage zum Überprüfen der Webhook-URL.
 
-  ![Webhook - Challenge-Anfrage](../assets/examples/webhook/webhook-challenge-request.png)
+  ![Webhook – Challenge-Anfrage](../assets/examples/webhook/webhook-challenge-request.png)
 
 
 ## Auslösen von AEM-Ereignissen
@@ -92,9 +92,9 @@ Gehen Sie wie folgt vor, um AEM-Ereignisse aus Ihrer AEM as a Cloud Service-Umge
 
 ## Überprüfen von Ereignisdetails
 
-Nachdem Sie die oben genannten Schritte ausgeführt haben, sollten die AEM-Ereignisse dem Webhook bereitgestellt werden. Suchen Sie in der von Adobe bereitgestellten Beispiel-Webhook-Seite nach der POST-Anfrage.
+Nachdem Sie die oben genannten Schritte ausgeführt haben, sollten die AEM-Ereignisse dem Webhook bereitgestellt werden. Suchen Sie auf Seite des von Adobe bereitgestellten Beispiel-Webhooks nach der POST-Anfrage.
 
-![Webhook - POST-Anfrage](../assets/examples/webhook/webhook-post-request.png)
+![Webhook – POST-Anfrage](../assets/examples/webhook/webhook-post-request.png)
 
 Im Folgenden finden Sie wichtige Details zur POST-Anfrage:
 
@@ -182,4 +182,4 @@ Sie können sehen, dass die AEM-Ereignisdetails alle notwendigen Informationen e
 
 ## Zusätzliche Ressourcen
 
-- [AEM-Eventing Webhook](../assets/examples/webhook/aemeventing-webhook.tgz) Quellcode ist für Ihre Referenz verfügbar.
+- Der Quellcode des [AEM-Eventing-Webhook](../assets/examples/webhook/aemeventing-webhook.tgz) steht als Referenz zur Verfügung. 
