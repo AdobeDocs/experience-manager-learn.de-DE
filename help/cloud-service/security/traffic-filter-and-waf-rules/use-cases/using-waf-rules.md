@@ -30,7 +30,7 @@ Komplexe Angriffe zeichnen sich durch hohe Anfrageraten, komplizierte Muster und
 > WAF-Traffic-Filterregeln erfordern eine zusätzliche Lizenz für **WAF-DDoS-Schutz** oder **Erweiterte Sicherheit**. Standard-Traffic-Filterregeln sind für Kundinnen und Kunden von Sites und Forms standardmäßig verfügbar.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469439/?quality=12&learn=on&captions=ger)
 
 ## Lernziele
 
