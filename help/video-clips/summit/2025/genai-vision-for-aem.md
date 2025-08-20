@@ -25,4 +25,4 @@ ht-degree: 100%
 
 Erfahren Sie mehr über den Ansatz von Adobe, mit GenAI-Tools Markteintrittsbarrieren zu senken, Workflows zu vereinheitlichen und die Geschäftsauswirkungen zu maximieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459231/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462161/?learn=on&enablevpops&captions=ger)
