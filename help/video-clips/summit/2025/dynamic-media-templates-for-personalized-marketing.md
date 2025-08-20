@@ -2,7 +2,7 @@
 title: Dynamic Media-Vorlagen für personalisiertes Marketing
 description: Erfahren Sie, wie Marketing-Fachleute mit Dynamic Media-Vorlagen anpassbare Live-Inhalte für personalisierte Kampagnen erstellen können.
 cloud: Experience Cloud
-solution: Experience Manager Assets, Sensei
+solution: Experience Manager Assets
 feature-set: Experience Manager Assets
 role: User, Leader, Admin, Developer, Architect
 level: Beginner, Intermediate, Experienced
@@ -14,8 +14,8 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: e875feab-bf5b-47ab-b3be-ee0c2e418f50
-source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
-workflow-type: ht
+source-git-commit: 7c7c9070bb6061dc59530070dd32ca6b8c78bc8d
+workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 100%
 

@@ -2,7 +2,7 @@
 title: Beschleunigen der Inhaltsaktivierung mit Adobe Experience Manager
 description: Erfahren Sie, wie Adobe Experience Manager Marken dabei hilft, die Inhaltsaktivierung zu beschleunigen und gleichzeitig Vertrauen, Personalisierung und ROI aufrechtzuerhalten.
 cloud: Experience Cloud
-solution: Experience Manager Assets, Sensei
+solution: Experience Manager Assets
 feature-set: Experience Manager Assets
 role: User, Leader, Admin, Developer, Architect
 level: Beginner, Intermediate, Experienced
@@ -14,8 +14,8 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 177150b3-6be3-4594-b1ca-f7f080effdfd
-source-git-commit: b11d9d6844d6f551083c1d8e4a2e7c076965a713
-workflow-type: ht
+source-git-commit: 7c7c9070bb6061dc59530070dd32ca6b8c78bc8d
+workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 100%
 
