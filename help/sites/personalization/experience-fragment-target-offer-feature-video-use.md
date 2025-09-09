@@ -20,7 +20,7 @@ ht-degree: 93%
 
 Adobe Experience Manager stellt den Personalisierungs-Workflow zwischen AEM und Target um. Erlebnisse, die in AEM erstellt wurden, können jetzt direkt als HTML-Angebote an Adobe Target übermittelt werden. Damit können Marketing-Fachleute Inhalte kanalübergreifend nahtlos testen und personalisieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/22383?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/38083?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >

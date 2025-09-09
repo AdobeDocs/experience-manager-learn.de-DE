@@ -22,7 +22,7 @@ ht-degree: 48%
 
 Dynamic Media Smart Crop for Video verfolgt auf intelligente Weise den Zielpunkt des Videos und stellt sicher, dass Videos auf allen Bildschirmgrößen optimal aussehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/37958?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326469?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >

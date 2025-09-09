@@ -23,4 +23,4 @@ ht-degree: 13%
 
 Experience Manager Assets taggt Video-Assets intelligent mit Keywords, die Schlüsselelemente des Videos beschreiben, sodass sie von AEM-Benutzern mithilfe der Keyword-Suche leicht erkannt werden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/327005?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340529?quality=12&learn=on&captions=ger)

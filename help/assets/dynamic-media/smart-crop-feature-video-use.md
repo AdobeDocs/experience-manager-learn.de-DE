@@ -21,7 +21,7 @@ ht-degree: 87%
 
 Smartes Zuschneiden eliminiert die zeit- und kostenaufwendigen Aufgaben beim Zuschneiden von Inhalten für responsives Design.
 
->[!VIDEO](https://video.tv.adobe.com/v/21519?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40411?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >
