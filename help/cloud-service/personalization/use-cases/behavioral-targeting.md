@@ -58,7 +58,7 @@ Bevor Sie mit dem Anwendungsfall Verhaltens-Targeting fortfahren, stellen Sie si
 - [Adobe Target integrieren](../setup/integrate-adobe-target.md): Ermöglicht Teams die zentrale Erstellung und Verwaltung personalisierter Inhalte in AEM und deren Aktivierung als Angebote in Adobe Target.
 - [Tags in Adobe Experience Platform integrieren](../setup/integrate-adobe-tags.md): Ermöglicht Teams die Verwaltung und Bereitstellung von JavaScript für Personalisierung und Datenerfassung, ohne AEM-Code erneut bereitstellen zu müssen.
 
-Machen Sie sich auch mit den Konzepten von [Adobe Experience Cloud Identity Service (ECID)](https://experienceleague.adobe.com/en/docs/id-service/using/home) und [Adobe Experience Platform](https://experienceleague.adobe.com/de/docs/experience-platform/landing/home) vertraut, z. B. Schema, Datenstrom, Zielgruppen, Identitäten und Profile.
+Machen Sie sich auch mit den Konzepten von [Adobe Experience Cloud Identity Service (ECID)](https://experienceleague.adobe.com/de/docs/id-service/using/home) und [Adobe Experience Platform](https://experienceleague.adobe.com/de/docs/experience-platform/landing/home) vertraut, z. B. Schema, Datenstrom, Zielgruppen, Identitäten und Profile.
 
 Sie können in Adobe Target zwar einfache Zielgruppen erstellen, Adobe Experience Platform (AEP) bietet jedoch den modernen Ansatz, Zielgruppen zu erstellen und zu verwalten und vollständige Kundenprofile mithilfe verschiedener Datenquellen wie Verhaltens- und Transaktionsdaten zu erstellen.
 
@@ -661,6 +661,6 @@ Die erste Zielgruppe verwendet die **Edge**-Auswertung für die Echtzeit-Persona
 - [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/de/docs/experience-platform/web-sdk/home)
 - [Überblick über Datenströme](https://experienceleague.adobe.com/de/docs/experience-platform/datastreams/overview)
 - [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/de/docs/target/using/experiences/vec/visual-experience-composer)
-- [Edge-Segmentierung](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/edge-segmentation)
-- [Zielgruppentypen](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/overview)
-- [Adobe Target-Verbindung](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
+- [Edge-Segmentierung](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/methods/edge-segmentation)
+- [Zielgruppentypen](https://experienceleague.adobe.com/de/docs/experience-platform/segmentation/types/overview)
+- [Adobe Target-Verbindung](https://experienceleague.adobe.com/de/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
