@@ -113,9 +113,9 @@ So rufen Sie die React-App ab:
 >   Diese React-App ist teilweise implementiert. Führen Sie die Schritte in diesem Tutorial aus, um die Implementierung abzuschließen. Die JavaScript-Dateien, für die Implementierungsarbeiten erforderlich sind, enthalten den folgenden Kommentar: Stellen Sie sicher, dass Sie dem Code in diesen Dateien den in diesem Tutorial angegebenen Code hinzufügen bzw. ihn aktualisieren.
 >
 >
->  //*********************************
->  >  // TODO: Implementieren Sie dies, indem Sie die Schritte aus dem AEM Headless-Tutorial befolgen.
->  >  //*********************************
+>  //**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;***
+>  &#x200B;>  // TODO: Implementieren Sie dies, indem Sie die Schritte aus dem AEM Headless-Tutorial befolgen.
+>  &#x200B;>  //**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;***
 >
 
 ## Anatomie der React-App
