@@ -1,6 +1,6 @@
 ---
 title: Konvertieren eines PDF-Formulars in ein adaptives Formular
-description: Der von Adobe Sensei unterstützte Service zur automatisierten Formularkonvertierung von AEM Forms konvertiert Ihre PDF-Formulare automatisch in gerätefreundliche und responsive adaptive Formulare. Unabhängig davon, ob Sie nicht-interaktive PDF-Formulare, Acroforms oder XFA-basierte PDF-Formulare verwenden, kann der Service zur automatisierten Formularkonvertierung diese Formulare problemlos in adaptive Formulare konvertieren.
+description: Der Service für die automatische Formularkonvertierung von AEM Forms konvertiert Ihre PDF forms automatisch in gerätefreundliche und responsive adaptive Formulare. Unabhängig davon, ob Sie nicht-interaktive PDF-Formulare, Acroforms oder XFA-basierte PDF-Formulare verwenden, kann der Service zur automatisierten Formularkonvertierung diese Formulare problemlos in adaptive Formulare konvertieren.
 feature: Adaptive Forms
 thumbnail: 39495.jpg
 jira: KT-6115
@@ -11,20 +11,20 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 9aab3eb0-03a5-4962-a2ff-d44a17dc140e
 duration: 395
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 100%
+source-wordcount: '127'
+ht-degree: 73%
 
 ---
 
 # Konvertieren eines PDF-Formulars in ein adaptives Formular
 
-Der von Adobe Sensei unterstützte Service zur automatisierten Formularkonvertierung von AEM Forms konvertiert Ihre PDF-Formulare automatisch in gerätefreundliche und responsive adaptive Formulare. Unabhängig davon, ob Sie nicht-interaktive PDF-Formulare, Acroforms oder XFA-basierte PDF-Formulare verwenden, kann der Service zur automatisierten Formularkonvertierung diese Formulare problemlos in adaptive Formulare konvertieren.
+Der Service für die automatische Formularkonvertierung von AEM Forms konvertiert Ihre PDF forms automatisch in gerätefreundliche und responsive adaptive Formulare. Unabhängig davon, ob Sie nicht-interaktive PDF-Formulare, Acroforms oder XFA-basierte PDF-Formulare verwenden, kann der Service zur automatisierten Formularkonvertierung diese Formulare problemlos in adaptive Formulare konvertieren.
 
 Im folgenden Video werden die Schritte erläutert, die zum Konvertieren von PDF-Formularen in adaptive Formulare mithilfe des Service zur automatisierten Formularkonvertierung erforderlich sind
 
->[!VIDEO](https://video.tv.adobe.com/v/327713?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/39495?quality=12&learn=on)
 
 ## Nächste Schritte
 

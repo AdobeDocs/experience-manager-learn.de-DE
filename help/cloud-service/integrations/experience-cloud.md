@@ -14,9 +14,9 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
 duration: 135
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '682'
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+workflow-type: tm+mt
+source-wordcount: '640'
 ht-degree: 100%
 
 ---
@@ -41,7 +41,6 @@ Klicken Sie auf das Experience Cloud-Produkt, um Dokumentation zur Konfiguration
 | [Learning Manager](#adobe-learning-manager) | ✔ |            |          |
 | Marketo Engage |           |            |          |
 | Real-Time CDP |           |            |          |
-| [Sensei](#adobe-sensei) | ✔ | ✔ | ✔ |
 | [Ziel](#adobe-target) | ✔ |            |          |
 | [Workfront](#adobe-workfront) |           | ✔ |          |
 
@@ -125,11 +124,6 @@ Adobe Learning Manager (vormals Adobe Captivate Prime) bietet Kundinnen und Kund
 
 + [Integrieren von AEM Sites in Adobe Learning Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-learning-manager.html?lang=de)
 
-## Adobe Sensei
-
-Adobe Sensei bietet Technologie mit KI und maschinellem Lernen, um den Content-Management-Prozess über Smarttags, smartes Zuschneiden,
-visuelle Suche und mehr zu transformieren.
-
 ### AEM Sites
 
 + [Zusammenfassen von Text in Inhaltsfragmenten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-variations.html?lang=de#summarizing-text)
@@ -172,5 +166,5 @@ Die Integration von Adobe Workfront in AEM as a Cloud Service optimiert die Erst
 + [Videos zum erweiterten Workfront-Connector](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html?lang=de)
 + AEM Assets Essentials
 
-   + [Benutzerhandbuch zu Adobe Workfront für Assets Essentials](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
+   + [Benutzerhandbuch zu Adobe Workfront für Assets Essentials](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
    + [Videos zu Adobe Workfront und Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html?lang=de)

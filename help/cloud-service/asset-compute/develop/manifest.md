@@ -11,10 +11,10 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 766bfaff-ade0-41c8-a395-e79dfb4b3d76
 duration: 115
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+workflow-type: tm+mt
 source-wordcount: '401'
-ht-degree: 100%
+ht-degree: 89%
 
 ---
 
@@ -28,7 +28,7 @@ Die Datei `manifest.yml`, die sich im Stammverzeichnis des Asset Compute-Projekt
 
 Sekundäre werden als Adobe I/O Runtime-Aktionseinträge unter `actions` definiert und bestehen aus einer Reihe von Konfigurationen.
 
-Sekundäre, die auf andere Adobe I/O-Integrationen zugreifen, müssen die `annotations -> require-adobe-auth`-Eigenschaft auf `true` setzen, da dies [die Adobe I/O-Anmeldeinformationen](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=de#access-adobe-apis) des Sekundärs über das `params.auth`-Objekt offenlegt.  Dies ist in der Regel erforderlich, wenn der Sekundär Adobe I/O-APIs wie die Adobe Photoshop-, Lightroom- oder Sensei-APIs aufruft. Dies kann zudem für jeden Sekundär umgeschaltet werden.
+Sekundäre, die auf andere Adobe I/O-Integrationen zugreifen, müssen die `annotations -> require-adobe-auth`-Eigenschaft auf `true` setzen, da dies [die Adobe I/O-Anmeldeinformationen](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=de#access-adobe-apis) des Sekundärs über das `params.auth`-Objekt offenlegt.  Dies ist in der Regel erforderlich, wenn der Worker Adobe I/O-APIs wie die Adobe Photoshop- oder Lightroom-APIs aufruft, und kann pro Worker umgeschaltet werden.
 
 1. Öffnen und überprüfen Sie den automatisch generierten Sekundär `manifest.yml`. Projekte, die mehrere Asset Compute-Sekundäre enthalten, müssen für jeden Sekundär einen Eintrag unter dem Array `actions` definieren.
 
@@ -44,7 +44,7 @@ packages:
         limits:
           concurrency: 10
         annotations:
-          require-adobe-auth: true # set to true, to pass through Adobe I/O access token/client id via params.auth in the worker, typically required when the worker calls out to Adobe I/O APIs such as the Adobe Photoshop, Lightroom or Sensei APIs.
+          require-adobe-auth: true # set to true, to pass through Adobe I/O access token/client id via params.auth in the worker, typically required when the worker calls out to Adobe I/O APIs such as the Adobe Photoshop, or Lightroom.
 ```
 
 ## Definieren von Limits
@@ -113,12 +113,12 @@ So starten Sie das Asset Compute-Entwicklungs-Tool für das Asset Compute-Projek
    $ aio app run
    ```
 
-1. Das lokale Asset Compute-Entwicklungs-Tool wird in Ihrem Standard-Webbrowser unter __http://localhost:9000__ geöffnet.
+1. Das lokale Asset Compute-Entwicklungs-Tool wird in Ihrem Standard-Webbrowser unter __http://localhost :9000__geöffnet.
 
    ![aio app run](assets/environment-variables/aio-app-run.png)
 
 1. Beobachten Sie die Befehlszeilenausgabe und den Webbrowser auf Fehlermeldungen während der Initialisierung des Entwicklungs-Tools.
-1. Um das Asset Compute-Entwicklungs-Tool zu beenden, wählen Sie `Ctrl-C` in dem Fenster aus, in dem `aio app run` ausgeführt wurde.
+1. Um das Asset Compute-Entwicklungs-Tool zu stoppen, wählen Sie `Ctrl-C` in dem Fenster aus, in dem `aio app run` ausgeführt wurde.
 
 ## Fehlerbehebung
 
