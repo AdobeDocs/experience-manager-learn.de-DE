@@ -130,7 +130,7 @@ Ein Datensatz ist ein Container für Daten, die einem bestimmten Schema folgen. 
 
 Erstellen wir einen Datensatz zum Speichern der Seitenansichtsdaten.
 
-- Adobe Experience Platform Klicken Sie in **** im linken Navigationsbereich auf **Datensätze** und dann auf **Datensatz erstellen**.
+- Adobe Experience Platform Klicken Sie in **&#x200B;**&#x200B;im linken Navigationsbereich auf **Datensätze** und dann auf **Datensatz erstellen**.
   ![Erstellen eines Datensatzes](../assets/use-cases/behavioral-targeting/create-dataset.png)
 
 - Wählen Sie im Schritt **Datensatz erstellen** die Option **Datensatz aus Schema** und klicken Sie auf **Weiter**.
@@ -158,7 +158,7 @@ Ein Datenstrom ist eine Konfiguration, die definiert, wie Daten von Ihrer Websit
 
 Erstellen wir einen Datenstrom, um Seitenansichtsdaten über die Web-SDK an Experience Platform zu senden.
 
-- Klicken Sie in {0 **Adobe Experience Platform** im linken **auf „Datenströme“ und dann auf** Datenstrom erstellen **.**
+- Klicken Sie in &lbrace;0 **Adobe Experience Platform** im linken **auf „Datenströme“ und dann auf** Datenstrom erstellen **.**
 
 - Geben **im Schritt** Neuer Datenstrom“ Folgendes ein:
    - **name**: WKND-RDE-Behavioral-Targeting
@@ -200,7 +200,7 @@ Sie können die Eigenschaft „Tags“ aktualisieren, die Sie im Schritt [Integr
 
 Um eine Tags-Eigenschaft zu erstellen, führen Sie die folgenden Schritte aus:
 
-- Adobe Experience Platform Klicken Sie in **** im linken Navigationsbereich auf **Tags** und dann auf die Schaltfläche **Neue Eigenschaft**.
+- Adobe Experience Platform Klicken Sie in **&#x200B;**&#x200B;im linken Navigationsbereich auf **Tags** und dann auf die Schaltfläche **Neue Eigenschaft**.
   ![Erstellen einer neuen Tags-Eigenschaft](../assets/use-cases/behavioral-targeting/create-new-tags-property.png)
 
 - Geben Sie im Dialogfeld **Eigenschaft erstellen** Folgendes ein:
@@ -426,7 +426,7 @@ Für diesen Anwendungsfall wird eine Zusammenführungsrichtlinie erstellt oder a
 
 Um eine Zusammenführungsrichtlinie zu erstellen, führen Sie die folgenden Schritte aus:
 
-- Klicken Sie in {0 **Adobe Experience Platform** im **Navigationsbereich auf „Profile“ und dann auf die Registerkarte** Zusammenführungsrichtlinien **.**
+- Klicken Sie in &lbrace;0 **Adobe Experience Platform** im **Navigationsbereich auf „Profile“ und dann auf die Registerkarte** Zusammenführungsrichtlinien **.**
 
   ![Zusammenführungsrichtlinien](../assets/use-cases/behavioral-targeting/merge-policies.png)
 
@@ -465,7 +465,7 @@ Eine Zielgruppe definiert eine bestimmte Benutzergruppe anhand ihrer Verhaltensm
 
 Um eine Zielgruppe zu erstellen, führen Sie die folgenden Schritte aus:
 
-- Adobe Experience Platform Klicken Sie in **** im linken Navigationsbereich auf **Zielgruppen** und dann auf die Schaltfläche **Zielgruppe erstellen**.
+- Adobe Experience Platform Klicken Sie in **&#x200B;**&#x200B;im linken Navigationsbereich auf **Zielgruppen** und dann auf die Schaltfläche **Zielgruppe erstellen**.
   ![Zielgruppe erstellen](../assets/use-cases/behavioral-targeting/create-audience.png)
 
 - Wählen Sie **Dialogfeld** Zielgruppe erstellen“ die Option **Regel erstellen** und klicken Sie auf die Schaltfläche **Erstellen**.
