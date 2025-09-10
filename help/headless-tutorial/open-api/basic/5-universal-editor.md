@@ -46,7 +46,7 @@ Der universelle Editor erfordert [HTML-Attribute und Meta-](https://experiencele
 Fügen Sie zunächst die erforderlichen Meta-Tags hinzu, um die React-App als mit dem universellen Editor kompatibel zu identifizieren.
 
 1. Öffnen Sie `public/index.html` in Ihrer React-App.
-1. Fügen Sie [ Abschnitt &quot;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started)&quot; der React-App die Meta`<head>`Tags und das CORS-Skript des universellen Editors hinzu:
+1. Fügen Sie [ Abschnitt &quot;](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started)&quot; der React-App die Meta`<head>`Tags und das CORS-Skript des universellen Editors hinzu:
 
    ```html
    <!DOCTYPE html>
