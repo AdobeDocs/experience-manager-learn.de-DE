@@ -1,5 +1,5 @@
 ---
-title: React-App mit universellem Editor bearbeitbar machen | Headless-Tutorial, Teil 5
+title: Bearbeiten der React-App mit dem universellen Editor | Headless-Tutorial, Teil 5
 description: Erfahren Sie, wie Sie Ihre React-App im universellen Editor von AEM bearbeitbar machen können, indem Sie die erforderliche Instrumentierung und Konfiguration hinzufügen.
 version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
@@ -8,15 +8,15 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 duration: 800
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+source-git-commit: da3bfa25a424e3176fb7d53189169515db225228
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '759'
 ht-degree: 4%
 
 ---
 
 
-# React-App mit dem universellen Editor bearbeitbar machen
+# Bearbeiten der React-App mit dem universellen Editor
 
 In diesem Kapitel erfahren Sie, wie Sie die im vorherigen [ erstellte React-App mit ](./4-react-app.md) universellen Editor von AEM bearbeitbar machen. Mit dem universellen Editor können Inhaltsautorinnen und -autoren Inhalte direkt im Kontext des React-App-Erlebnisses bearbeiten, während das nahtlose Erlebnis einer Headless-Anwendung erhalten bleibt.
 
@@ -46,7 +46,7 @@ Der universelle Editor erfordert [HTML-Attribute und Meta-](https://experiencele
 Fügen Sie zunächst die erforderlichen Meta-Tags hinzu, um die React-App als mit dem universellen Editor kompatibel zu identifizieren.
 
 1. Öffnen Sie `public/index.html` in Ihrer React-App.
-1. Fügen Sie [ Abschnitt &quot;](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started)&quot; der React-App die Meta`<head>`Tags und das CORS-Skript des universellen Editors hinzu:
+1. Fügen Sie [ Abschnitt &quot;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started)&quot; der React-App die Meta`<head>`Tags und das CORS-Skript des universellen Editors hinzu:
 
    ```html
    <!DOCTYPE html>
