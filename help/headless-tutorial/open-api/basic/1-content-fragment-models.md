@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 duration: 430
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+source-git-commit: a3d2a88232cae941647464be8e215a47c85bc0ab
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 42%
 
 ---
 
-# Definieren von Inhaltsfragmentmodellen
+# Erstellen von Inhaltsfragmentmodellen
 
 In diesem Kapitel erfahren Sie, wie Sie Inhalte modellieren und ein Schema mit **Inhaltsfragmentmodellen** erstellen und wie die verschiedenen Datentypen ein Inhaltsfragmentmodell definieren.
 
