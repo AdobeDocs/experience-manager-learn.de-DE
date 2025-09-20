@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Assets und Sammlungen für Team-Mitglieder im Content-Hub von AEM Assets freigeben und so eine effektive Team-Arbeit und die sichere Asset-Freigabe fördern.
 
->[!VIDEO](https://video.tv.adobe.com/v/3474890/?learn=on&enablevpops=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3474928/?learn=on&enablevpops=on&captions=ger)
