@@ -13,9 +13,9 @@ last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
 source-git-commit: 57da04874cfb37dcccbf605c65fbcba8f12849fb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1811'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -81,12 +81,12 @@ Der Schritt zum Konfigurieren des ADC-Projekts ist mit dem entsprechenden Schrit
 
    ![Hinzufügen des APIs](../assets/s2s/add-api.png)
 
-1. Filtern Sie _Dialogfeld &quot;_ hinzufügen“ nach _Experience Cloud_ und wählen Sie die Karte **AEM Assets Author API** aus und klicken Sie auf **Weiter**.
-Wenn Sie eine andere OpenAPI-basierte AEM-API benötigen, finden Sie in der [Adobe Developer](https://developer.adobe.com/experience-cloud/experience-manager-apis/?lang=de#openapi-based-apis)Dokumentation die für Ihren Anwendungsfall geeignete.
+1. Filtern Sie im Dialogfeld _API hinzufügen_ nach _Experience Cloud_, wählen Sie die Karte **AEM Assets Author-API** aus, und klicken Sie auf **Weiter**.
+Wenn Sie ein anderes OpenAPI-basiertes AEM-API benötigen, finden Sie mithilfe der [Adobe Developer-Dokumentation](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) das für Ihren Anwendungsfall geeignete.
 
    Das folgende Beispiel führt Sie durch das Hinzufügen der **AEM Assets Author-API**.
 
-   ![Hinzufügen eines AEM-APIs](../assets/s2s/add-aem-api.png)
+   ![Hinzufügen einer AEM-API](../assets/s2s/add-aem-api.png)
 
    >[!TIP]
    >
@@ -431,9 +431,9 @@ Gehen Sie wie folgt vor, um die Erstellung des Benutzerprofils des technischen K
 
   ![Benutzerprofil des technischen Kontos](../assets/s2s/technical-account-user.png)
 
-- Klicken Sie auf das Benutzerprofil des technischen Kontos, um Benutzerdetails anzuzeigen, z. B. die **Gruppenzugehörigkeit**. Wie unten dargestellt, ist das Benutzerprofil des technischen Kontos den Benutzergruppen für **AEM Assets-Mitarbeiter-Benutzende – Autorin/Autor – Programm XXX – Umgebung XXX** und **AEM Assets-Mitarbeiter-Benutzende – Service** zugeordnet.
+- Klicken Sie auf das Benutzerprofil des technischen Kontos, um Benutzerdetails anzuzeigen, z. B. die **Gruppenmitgliedschaft**. Wie unten dargestellt, ist das Benutzerprofil des technischen Kontos den Benutzergruppen für **AEM Assets-Mitarbeiter-Benutzende – Autorin/Autor – Programm XXX – Umgebung XXX** und **AEM Assets-Mitarbeiter-Benutzende – Service** zugeordnet.
 
-  ![Zugehörigkeit des Produktprofils des technischen Kontos](../assets/s2s/technical-account-user-membership.png)
+  ![Mitgliedschaft des Benutzerprofils des technischen Kontos](../assets/s2s/technical-account-user-membership.png)
 
 - Beachten Sie, dass das Benutzerprofil des technischen Kontos dem Produktprofil für **AEM Assets-Mitarbeiter-Benutzende – Autorin/Autor – Programm XXX – Umgebung XXX** zugeordnet ist. Das Produktprofil ist mit den Services für **AEM Assets-API-Benutzende** und **AEM Assets-Mitarbeiter-Benutzende** verknüpft.
 

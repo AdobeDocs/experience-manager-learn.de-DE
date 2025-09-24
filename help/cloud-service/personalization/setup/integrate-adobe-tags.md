@@ -1,6 +1,6 @@
 ---
 title: Integrieren von Tags in Adobe Experience Platform
-description: Erfahren Sie, wie Sie AEM as a Cloud Service mit Tags in Adobe Experience Platform integrieren. Die Integration ermöglicht es Ihnen, Adobe Web SDK bereitzustellen und benutzerdefinierte JavaScript für die Datenerfassung und Personalisierung in Ihre AEM-Seiten einzufügen.
+description: Erfahren Sie, wie Sie AEM as a Cloud Service mit Tags in Adobe Experience Platform integrieren. Die Integration ermöglicht es Ihnen, das Adobe Web SDK bereitzustellen und benutzerdefiniertes JavaScript für die Datenerfassung und Personalisierung in Ihre AEM-Seiten einzufügen.
 version: Experience Manager as a Cloud Service
 feature: Personalization, Integrations
 topic: Personalization, Integrations, Architecture, Content Management
@@ -10,19 +10,19 @@ doc-type: Tutorial
 last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18719
 thumbnail: null
-source-git-commit: 70665c019f63df1e736292ad24c47624a3a80d49
-workflow-type: tm+mt
+exl-id: 71cfb9f5-57d9-423c-bd2a-f6940cc0b4db
+source-git-commit: df83c5a6436dba264bad72e485ee152a2a39d513
+workflow-type: ht
 source-wordcount: '745'
-ht-degree: 3%
+ht-degree: 100%
 
 ---
 
-
 # Integrieren von Tags in Adobe Experience Platform
 
-Erfahren Sie, wie Sie AEM as a Cloud Service (AEMCS) mit Tags in Adobe Experience Platform integrieren. Die Integration von Tags (auch als Launch bezeichnet) ermöglicht es Ihnen, Adobe Web SDK bereitzustellen und benutzerdefinierte JavaScript für die Datenerfassung und Personalisierung in Ihre AEM-Seiten einzufügen.
+Erfahren Sie, wie Sie AEM as a Cloud Service (AEMCS) mit Tags in Adobe Experience Platform integrieren. Die Integration von Tags (auch als Launch bezeichnet) ermöglicht es Ihnen, Adobe Web SDK bereitzustellen und benutzerdefiniertes JavaScript für die Datenerfassung und Personalisierung in Ihre AEM-Seiten einzufügen.
 
-Durch die Integration kann Ihr Marketing- oder Entwicklungs-Team JavaScript zur Personalisierung und Datenerfassung verwalten und bereitstellen, ohne dass AEM-Code erneut bereitgestellt werden muss.
+Durch die Integration kann Ihr Marketing- oder Entwicklungs-Team JavaScript zur Personalisierung und Datenerfassung verwalten und bereitstellen, ohne erneut AEM-Code bereitstellen zu müssen.
 
 ## Allgemeine Schritte
 
@@ -30,102 +30,102 @@ Der Integrationsprozess umfasst vier Hauptschritte, die die Verbindung zwischen 
 
 1. **Erstellen, Konfigurieren und Veröffentlichen einer Tags-Eigenschaft in Adobe Experience Platform**
 2. **Überprüfen einer Adobe IMS-Konfiguration für Tags in AEM**
-3. **Erstellen Sie eine Tags-Konfiguration in AEM**
-4. **Wenden Sie die Tags-Konfiguration auf Ihre AEM-Seiten an**
+3. **Erstellen einer Tags-Konfiguration in AEM**
+4. **Anwenden der Tags-Konfiguration auf Ihre AEM-Seiten**
 
 ## Erstellen, Konfigurieren und Veröffentlichen einer Tags-Eigenschaft in Adobe Experience Platform
 
-Erstellen Sie zunächst eine Tags-Eigenschaft in Adobe Experience Platform. Diese Eigenschaft hilft Ihnen bei der Verwaltung der Bereitstellung der Adobe Web SDK und aller benutzerdefinierten JavaScript, die für Personalisierung und Datenerfassung erforderlich sind.
+Erstellen Sie zunächst eine Tags-Eigenschaft in Adobe Experience Platform. Diese Eigenschaft hilft Ihnen, die Bereitstellung der Adobe Web SDK und des benutzerdefinierten JavaScript für die Personalisierung und Datenerfassung zu verwalten.
 
-1. Wechseln Sie zur [Adobe Experience Platform](https://experience.adobe.com/platform), melden Sie sich mit Ihrer Adobe ID an und navigieren Sie **Menü** Tags“.\
-   ![Adobe Experience Platform-Tags](../assets/setup/aep-tags.png)
+1. Gehen Sie Sie zur [Adobe Experience Platform](https://experience.adobe.com/platform), melden Sie sich mit Ihrer Adobe ID an, und navigieren Sie über das Menü links zu **Tags**.\
+   ![Adobe Experience Platform – Tags](../assets/setup/aep-tags.png)
 
-2. Klicken Sie auf **Neue Eigenschaft**, um eine neue Tag-Eigenschaft zu erstellen.\
-   ![Neue Tag-Eigenschaft erstellen](../assets/setup/aep-create-tags-property.png)
+2. Klicken Sie auf **Neue Eigenschaft**, um eine neue Tags-Eigenschaft zu erstellen.\
+   ![Erstellen einer neuen Tags-Eigenschaft](../assets/setup/aep-create-tags-property.png)
 
-3. Geben **im Dialogfeld „Eigenschaft**&quot; Folgendes ein:
-   - **Eigenschaftsname**: Ein Name für die Eigenschaft „Tags“
-   - **Eigenschaftstyp**: Wählen Sie **Web**
-   - **Domain**: Die Domain, in der Sie die Eigenschaft bereitstellen (z. B. `.adobeaemcloud.com`)
+3. Geben Sie im Dialogfeld **Eigenschaft erstellen** Folgendes ein:
+   - **Eigenschaftenname**: Name für die Tags-Eigenschaft
+   - **Eigenschaftstyp**: Wählen Sie **Web** aus.
+   - **Domain**: die Domain, in der Sie die Eigenschaft bereitstellen (z. B. `.adobeaemcloud.com`)
 
    Klicken Sie auf **Speichern**.
 
    ![Adobe Tags-Eigenschaft](../assets/setup/adobe-tags-property.png)
 
-4. Öffnen Sie die neue Eigenschaft. Die **Core**-Erweiterung sollte bereits enthalten sein. SDK Später fügen Sie beim Einrichten des Anwendungsfalls „Experimentieren **die Erweiterung „Web“**, da sie zusätzliche Konfigurationen erfordert, z. B. die **Datenstrom-ID**.\
-   ![Haupterweiterung für Adobe-Tags](../assets/setup/adobe-tags-core-extension.png)
+4. Öffnen Sie die neue Eigenschaft. Die **Core**-Erweiterung sollte bereits enthalten sein. Später fügen Sie beim Einrichten des Experimentieren-Anwendungsfalls die **Web SDK**-Erweiterung hinzu, da eine zusätzliche Konfiguration, wie die **Datenstrom-ID**, erforderlich ist.\
+   ![Adobe Tags Core-Erweiterung](../assets/setup/adobe-tags-core-extension.png)
 
-5. Veröffentlichen Sie die Tags-Eigenschaft, indem Sie zu **Veröffentlichungsfluss** wechseln und auf **Bibliothek hinzufügen** klicken, um eine Bereitstellungsbibliothek zu erstellen.
-   ![Veröffentlichungsablauf für Adobe-Tags](../assets/setup/adobe-tags-publishing-flow.png)
+5. Veröffentlichen Sie die Tags-Eigenschaft, indem Sie zu **Veröffentlichungsablauf** wechseln und auf **Bibliothek hinzufügen** klicken, um eine Bereitstellungsbibliothek zu erstellen.
+   ![Adobe Tags-Veröffentlichungsablauf](../assets/setup/adobe-tags-publishing-flow.png)
 
-6. Geben **im Dialogfeld „Bibliothek**&quot; Folgendes an:
-   - **Name**: Ein Name für Ihre Bibliothek
-   - **Umgebung**: Wählen Sie **Entwicklung**
-   - **Ressourcenänderungen**: Wählen Sie **Alle geänderten Ressourcen hinzufügen**
+6. Geben Sie im Dialogfeld **Bibliothek erstellen** Folgendes an:
+   - **Name**: Name Ihrer Bibliothek
+   - **Umgebung**: Wählen Sie **Entwicklung** aus.
+   - **Ressourcenänderungen**: Wählen Sie **Alle geänderten Ressourcen hinzufügen** aus.
 
-   Klicken Sie **Speichern und in Entwicklung erstellen**.
+   Klicken Sie auf **Speichern und für Entwicklung erstellen**.
 
-   ![Bibliothek für Adobe-Tags erstellen](../assets/setup/adobe-tags-create-library.png)
+   ![Adobe-Tags – Erstellen einer Bibliothek](../assets/setup/adobe-tags-create-library.png)
 
-7. Um die Bibliothek in der Produktion zu veröffentlichen, klicken Sie auf **Genehmigen und in Produktion veröffentlichen**. Sobald die Veröffentlichung abgeschlossen ist, kann die Eigenschaft in AEM verwendet werden.\
-   ![Adobe-Tags genehmigen und veröffentlichen](../assets/setup/adobe-tags-approve-publish.png)
+7. Um die Bibliothek in der Produktion zu veröffentlichen, klicken Sie auf **Genehmigen und zur Produktion veröffentlichen**. Sobald die Veröffentlichung abgeschlossen ist, kann die Eigenschaft in AEM verwendet werden.\
+   ![Genehmigen und Veröffentlichen der Adobe Tags-Eigenschaft](../assets/setup/adobe-tags-approve-publish.png)
 
 ## Überprüfen einer Adobe IMS-Konfiguration für Tags in AEM
 
-Wenn eine AEM CS-Umgebung bereitgestellt wird, enthält sie automatisch eine Adobe IMS-Konfiguration für Tags sowie ein entsprechendes Adobe Developer Console-Projekt. Diese Konfiguration gewährleistet eine sichere API-Kommunikation zwischen AEM und Tags.
+Wenn eine AEMCS-Umgebung bereitgestellt wird, enthält sie automatisch eine Adobe IMS-Konfiguration für Tags sowie ein entsprechendes Adobe Developer Console-Projekt. Diese Konfiguration gewährleistet eine sichere API-Kommunikation zwischen AEM und Tags.
 
-1. Navigieren Sie in AEM zu **Tools** > **Sicherheit** > **Adobe IMS-Konfigurationen**.\
+1. Navigieren Sie in AEM zu **Tools** > **Sicherheit** > **Adobe IMS-Konfiguration**.\
    ![Adobe IMS-Konfigurationen](../assets/setup/aem-ims-configurations.png)
 
-2. Suchen Sie die Konfiguration **Adobe Launch** . Falls verfügbar, wählen Sie diese aus und klicken Sie auf **Konsistenzprüfung**, um die Verbindung zu überprüfen. Es sollte eine Erfolgsantwort angezeigt werden.\
+2. Suchen Sie die Konfiguration **Adobe Launch**. Falls verfügbar, wählen Sie diese aus und klicken Sie auf **Konsistenzprüfung**, um die Verbindung zu überprüfen. Es sollte eine Erfolgsantwort zu sehen sein.\
    ![Konsistenzprüfung der Adobe IMS-Konfiguration](../assets/setup/aem-ims-configuration-health-check.png)
 
 ## Erstellen einer Tags-Konfiguration in AEM
 
-Erstellen Sie eine Tags-Konfiguration in AEM, um die Eigenschaft und die Einstellungen anzugeben, die für Ihre Sites-Seiten erforderlich sind.
+Erstellen Sie eine Tags-Konfiguration in AEM, um die Eigenschaft und die Einstellungen festzulegen, die für Ihre Website-Seiten erforderlich sind.
 
-1. Navigieren Sie in AEM zu **Tools** > **Cloud Services** > **Adobe Launch-Konfigurationen**.\
+1. Gehen Sie in AEM zu **Tools** > **Cloud-Services** > **Adobe Launch-Konfigurationen**.\
    ![Adobe Launch-Konfigurationen](../assets/setup/aem-launch-configurations.png)
 
-2. Wählen Sie den Stammordner Ihrer Site aus (z. B. WKND-Site) und klicken Sie auf **Erstellen**.\
-   ![Erstellen Sie die Adobe Launch-Konfiguration](../assets/setup/aem-create-launch-configuration.png)
+2. Wählen Sie den Stammordner Ihrer Website aus (z. B. WKND-Website), und klicken Sie auf **Erstellen**.\
+   ![Erstellen einer Adobe Launch-Konfiguration](../assets/setup/aem-create-launch-configuration.png)
 
 3. Geben Sie im Dialogfeld Folgendes ein:
-   - **Title**: z. B. &quot;Adobe Tags“
-   - **IMS-Konfiguration**: Wählen Sie die verifizierte **Adobe Launch** IMS-Konfiguration
-   - **Unternehmen**: Wählen Sie das Unternehmen aus, das mit Ihrer Tags-Eigenschaft verknüpft ist
-   - **Eigenschaft**: Wählen Sie die zuvor erstellte Eigenschaft „Tags“ aus
+   - **Titel**: z. B. „Adobe Tags“
+   - **IMS-Konfiguration**: Wählen Sie die überprüfte **Adobe Launch**-IMS-Konfiguration aus.
+   - **Unternehmen**: Wählen Sie das Unternehmen aus, das mit Ihrer Tags-Eigenschaft verknüpft ist.
+   - **Eigenschaft**: Wählen Sie die zuvor erstellte Tags-Eigenschaft aus.
 
    Klicken Sie auf **Weiter**.
 
-   ![Konfigurationsdetails für Adobe Launch](../assets/setup/aem-launch-configuration-details.png)
+   ![Details der Adobe Launch-Konfiguration](../assets/setup/aem-launch-configuration-details.png)
 
-4. Behalten Sie zu Demonstrationszwecken die Standardwerte für die Umgebungen **Staging** und **&#x200B;**&#x200B;bei. Klicken Sie auf **Erstellen**.\
-   ![Konfigurationsdetails für Adobe Launch](../assets/setup/aem-launch-configuration-create.png)
+4. Behalten Sie zu Demonstrationszwecken die Standardwerte für die Umgebungen **Staging** und **Produktion** bei. Klicken Sie auf **Erstellen**.\
+   ![Details der Adobe Launch-Konfiguration](../assets/setup/aem-launch-configuration-create.png)
 
-5. Wählen Sie die neu erstellte Konfiguration aus und klicken Sie auf **Veröffentlichen**, um sie für Ihre Site-Seiten verfügbar zu machen.\
-   ![Veröffentlichung der Adobe Launch-Konfiguration](../assets/setup/aem-launch-configuration-publish.png)
+5. Wählen Sie die neu erstellte Konfiguration aus und klicken Sie auf **Veröffentlichen**, um sie für Ihre Website-Seiten verfügbar zu machen.\
+   ![Veröffentlichen der Adobe Launch-Konfiguration](../assets/setup/aem-launch-configuration-publish.png)
 
 ## Anwenden der Tags-Konfiguration auf Ihre AEM-Site
 
-Wenden Sie die Tags -Konfiguration an, um die Web-SDK- und Personalisierungslogik in Ihre Website-Seiten einzufügen.
+Wenden Sie die Tags-Konfiguration an, um die Web SDK- und Personalisierungslogik in Ihre Website-Seiten einzufügen.
 
-1. Wechseln Sie in AEM zu **Sites**, wählen Sie Ihren Stammverzeichnis-Site-Ordner aus (z. B. WKND-Site) und klicken Sie auf **Eigenschaften**.\
-   ![Eigenschaften der AEM-Site](../assets/setup/aem-site-properties.png)
+1. Wechseln Sie in AEM zu **Sites**, wählen Sie den Stammornder der Website aus (z. B. WKND-Website), und klicken Sie auf **Eigenschaften**.\
+   ![AEM-Site-Eigenschaften](../assets/setup/aem-site-properties.png)
 
-2. Öffnen Sie **Dialogfeld „Site** Eigenschaften“ die Registerkarte **Erweitert**. Stellen **unter &quot;**&quot; sicher, dass `/conf/wknd` für „Cloud **Konfiguration“** ist.\
-   Erweiterte Eigenschaften der ![AEM-Site](../assets/setup/aem-site-advanced-properties.png)
+2. Öffnen Sie im Dialogfeld **Site-Eigenschaften** die Registerkarte **Erweitert**. Überprüfen Sie unter **Configurations**, ob `/conf/wknd` für **Cloud-Konfiguration** ausgewählt ist.\
+   ![Erweiterte Eigenschaften der AEM-Site](../assets/setup/aem-site-advanced-properties.png)
 
 ## Überprüfen der Integration
 
-Um sicherzustellen, dass die Tags-Konfiguration ordnungsgemäß funktioniert, haben Sie folgende Möglichkeiten:
+Um sicherzustellen, dass die Tags-Konfiguration ordnungsgemäß funktioniert, können Sie:
 
-1. Überprüfen Sie die Ansichtsquelle einer AEM-Veröffentlichungsseite oder untersuchen Sie sie mit Browser-Entwickler-Tools
-2. Verwenden Sie die [Adobe Experience Platform Debugger](https://chromewebstore.google.com/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) zur Validierung von Web-SDK und JavaScript-Injektion
+1. die Quelltext-Ansicht einer veröffentlichten AEM-Seite überprüfen oder den Quelltext mit Browser-Entwickler-Tools inspizieren
+2. mit dem [Adobe Experience Platform Debugger](https://chromewebstore.google.com/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) die Web SDK- und JavaScript-Einfügung validieren
 
 ![Adobe Experience Platform Debugger](../assets/setup/aep-debugger.png)
 
 ## Zusätzliche Ressourcen
 
 - [Überblick über Adobe Experience Platform Debugger](https://experienceleague.adobe.com/de/docs/experience-platform/debugger/home)
-- [Tags-Überblick](https://experienceleague.adobe.com/de/docs/experience-platform/tags/home)
+- [Überblick über Tags](https://experienceleague.adobe.com/de/docs/experience-platform/tags/home)
