@@ -20,7 +20,7 @@ ht-degree: 100%
 
 Erfahren Sie mehr über die Best Practices für die Veröffentlichung und Optimierung von Videos in AEM Dynamic Media, darunter zum adaptiven Streaming, smarten Zuschneiden für verschiedene Bildschirmgrößen, zu benutzerdefinierten Viewer-Vorgaben und zur Unterstützung von Untertiteln, Audiospuren und Kapitelmarken. Es wird hervorgehoben, wie das Zuschauererlebnis, die Barrierefreiheit und die Marketing-Wirkung geräteübergreifend verbessert werden können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3470634/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3470687/?learn=on&enablevpops&captions=ger)
 
 ## Unterstützende Ressourcen
 
