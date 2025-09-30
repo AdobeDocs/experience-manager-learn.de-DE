@@ -11,10 +11,10 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '792'
-ht-degree: 100%
+source-git-commit: 2f7e10680c7211da836e33fdd241cd7f5d633d5f
+workflow-type: tm+mt
+source-wordcount: '788'
+ht-degree: 98%
 
 ---
 
@@ -51,7 +51,7 @@ $ mvn clean package
 
 Stellen Sie zunächst sicher, dass das [neueste `aio` CLI-Modul installiert ist](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli).
 
-Verwenden Sie dann den Befehl `aio aem:rde:install`, um verschiedene AEM-Artefakte bereitzustellen. Nun geht es um das
+Verwenden Sie dann den Befehl `aio aem:rde:install` , um verschiedene AEM-Artefakte bereitzustellen.
 
 ### Bereitstellen von `all`- und `dispatcher`-Paketen
 
