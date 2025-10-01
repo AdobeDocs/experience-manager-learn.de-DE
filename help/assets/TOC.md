@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 16b106d88d51d68819470758abd536ad42b019db
+source-git-commit: 4d17b28ed67d7e5b03caa5fb57701ab7ddbcb77f
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '464'
 ht-degree: 99%
 
 ---
@@ -74,7 +74,7 @@ ht-degree: 99%
    + [GenAI-Metadaten](metadata/genai-metadata.md)
    + [Kaskadierende Metadaten](metadata/cascade-metadata-feature-video-use.md)
    + [Smart-Tags für Bilder](metadata/image-smart-tags.md)
-   + [Benutzerdefinierte Smarttags für Bilder](metadata/custom-smart-tags.md)
+   + [Benutzerdefinierte Smart-Tags für Bilder](metadata/custom-smart-tags.md)
    + [Smart-Tags für Videos](metadata/video-smart-tags.md)
    + [Importieren und Exportieren von Metadaten](metadata/metadata-import-export.md)
 
@@ -87,6 +87,7 @@ ht-degree: 99%
    + [Erstellen von Bildvarianten mit Adobe Express](./content-hub/image-variants.md)
    + [Sammlungen](./content-hub/collections.md)
    + [Freigabe](./content-hub/share.md)
+   + [Attributbasierte Zugriffssteuerung](./content-hub/attribute-based-access-control.md)
    + Anwendungsfälle{#use-cases}
       + [Verwalten von Assets](./content-hub/use-cases/manage-assets.md)
 
@@ -145,7 +146,7 @@ ht-degree: 99%
       + [Bildautomatisierung](dynamic-media/dynamic-media-image-automation.md)
       + [Dynamic Media-Vorlagen](dynamic-media/dynamic-media-templates.md)
       + [Dynamic Media Snapshot](dynamic-media/dynamic-media-snapshot.md)
-      + [Smartes Zuschneiden](dynamic-media/smart-crop-feature-video-use.md)
+      + [Intelligenter Zuschnitt](dynamic-media/smart-crop-feature-video-use.md)
       + [Scharfzeichnen von Bildern](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [Farbmanagement](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
    + Video {#video}
@@ -153,7 +154,7 @@ ht-degree: 99%
       + [360-Video](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
       + [Benutzerdefinierte Videominiaturen](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [Adaptives DASH-Streaming](dynamic-media/dynamic-media-dash.md)
-      + [Video zum smarten Zuschneiden in Dynamic Media](dynamic-media/dynamic-media-smart-crop-video.md)
+      + [Video zum intelligenten Zuschnitt in Dynamic Media](dynamic-media/dynamic-media-smart-crop-video.md)
       + [Video-Player](dynamic-media/dynamic-media-video-player-feature-video-use.md)
    + Viewer {#viewers}
       + [Viewer](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
@@ -169,7 +170,7 @@ ht-degree: 99%
       + [Erstellen von Karussell-Sets ](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [Erstellen von Bild-Sets](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [Erstellen von Bildvorgaben](dynamic-media/tutorials/creating-image-presets.md)
-      + [Erstellen von Bildprofilen mit smartem Zuschneiden](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
+      + [Erstellen von Bildprofilen mit intelligentem Zuschnitt](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
       + [Erstellen von Videoprofilen](dynamic-media/tutorials/creating-video-profile-to-process-videos-in-dynamic-media.md)
       + [Verarbeitung von Assets](dynamic-media/tutorials/how-to-run-dam-update-asset-workflow-on-an-asset-with-dynamic-media-enabled.md)
       + [Konfigurieren eines sicheren Vorschau-Servers](dynamic-media/tutorials/adding-test-image-server-details-in-dynamic-media-for-secure-preview.md)
