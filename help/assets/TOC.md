@@ -167,7 +167,7 @@ ht-degree: 99%
       + [Dynamic Media-Kernkomponenten](dynamic-media/dynamic-media-core-components.md)
 
    + Tutorials {#tutorials}
-      + [Erstellen von Karussell-Sets ](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
+      + [Erstellen von Karussell-Sets &#x200B;](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-carousel-sets.md)
       + [Erstellen von Bild-Sets](dynamic-media/tutorials/creating-different-kinds-of-sets-with-aem-dynamic-media-image-sets.md)
       + [Erstellen von Bildvorgaben](dynamic-media/tutorials/creating-image-presets.md)
       + [Erstellen von Bildprofilen mit intelligentem Zuschnitt](dynamic-media/tutorials/creating-image-profile-smart-crop.md)
