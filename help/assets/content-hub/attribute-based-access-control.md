@@ -24,4 +24,4 @@ Erfahren Sie, wie Sie den Zugriff auf Assets im AEM Assets Content Hub mithilfe 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3475413/?learn=on&enablevpops)
 
-[Laden Sie die Tabelle Attributbasierte Zugriffssteuerung - Definition ](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control) aus der Dokumentation Attributbasierte Zugriffssteuerung für AEM Assets Content Hub herunter.
+[Laden Sie die Tabelle Attributbasierte Zugriffssteuerung - Definition &#x200B;](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control) aus der Dokumentation Attributbasierte Zugriffssteuerung für AEM Assets Content Hub herunter.
