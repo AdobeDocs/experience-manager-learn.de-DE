@@ -47,7 +47,7 @@ Diese Videos behandeln die Hauptfunktionen von AEM Assets Content Hub – jedes 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/set-up" title="Setup" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472918/?format=jpeg&nocache=1759339176339" alt="Setup"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472944/?format=jpeg&nocache=1759339176339&captions=ger" alt="Setup"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -70,7 +70,7 @@ Diese Videos behandeln die Hauptfunktionen von AEM Assets Content Hub – jedes 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/configure" title="Konfigurieren" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472917/?format=jpeg&nocache=1759339176369" alt="Konfigurieren"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3472955/?format=jpeg&nocache=1759339176369&captions=ger" alt="Konfigurieren"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -93,7 +93,7 @@ Diese Videos behandeln die Hauptfunktionen von AEM Assets Content Hub – jedes 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/add-assets" title="Hinzufügen von Assets" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3432980/?format=jpeg&nocache=1759339176806" alt="Hinzufügen von Assets"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3450291/?format=jpeg&nocache=1759339176806&captions=ger" alt="Hinzufügen von Assets"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -162,7 +162,7 @@ Diese Videos behandeln die Hauptfunktionen von AEM Assets Content Hub – jedes 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/collections" title="Sammlungen" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435687/?format=jpeg&nocache=1759339176447" alt="Sammlungen"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3445309/?format=jpeg&nocache=1759339176447&captions=ger" alt="Sammlungen"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -185,7 +185,7 @@ Diese Videos behandeln die Hauptfunktionen von AEM Assets Content Hub – jedes 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/de/docs/experience-manager-learn/assets/content-hub/share" title="Freigabe" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474890/?format=jpeg&nocache=1759339176327" alt="Freigabe"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3474928/?format=jpeg&nocache=1759339176327&captions=ger" alt="Freigabe"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -244,7 +244,7 @@ Untersuchen Sie Anwendungsfälle und Szenarien, die zeigen, wie AEM Assets Conte
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./use-cases/manage-assets.md" title="Verwalten von Assets mit AEM Assets Content Hub" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3457638/?format=jpeg&nocache=1759339177153" alt="Verwalten von Assets mit AEM Assets Content Hub"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3463067/?format=jpeg&nocache=1759339177153&captions=ger" alt="Verwalten von Assets mit AEM Assets Content Hub"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
