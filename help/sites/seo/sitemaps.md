@@ -12,8 +12,8 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 duration: 937
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+source-git-commit: d2714443fa644ba17afdfbed5e6da8091425aeab
+workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 100%
 
@@ -27,7 +27,7 @@ Erfahren Sie, wie Sie Ihre SEO durch die Erstellung von Sitemaps für AEM Sites 
 >
 >In diesem Video wird die Verwendung von relativen URLs in der Sitemap veranschaulicht. Sitemaps [sollten absolute URLs verwenden](https://sitemaps.org/protocol.html). Informationen dazu, wie Sie absolute URLs aktivieren, finden Sie unter [Konfigurationen](#absolute-sitemap-urls), da dies im Video unten nicht behandelt wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/3454370?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
 
 ## Konfigurationen
 
@@ -52,7 +52,7 @@ Die folgende Abbildung zeigt eine ähnliche Konfiguration, jedoch für `http://w
 
 Definiert die [OSGi-Werkskonfiguration](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) für die Häufigkeit (mithilfe von [CRON-Ausdrücken](https://cron.help/)), mit der Sitemaps generiert (oder neu generiert) und in AEM zwischengespeichert werden.
 
-`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
+`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.author`
 
 ```json
 {
