@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie andere Adobe-Lösungen von den veralteten Service-Kolnto(JWT)-Anmeldeinformationen zu den neuen OAuth-Server-zu-Server-Anmeldeinformationen migrieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432960/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449247/?learn=on&captions=ger)
