@@ -11,9 +11,9 @@ thumbnail: KT-10436.png
 last-substantial-update: 2022-10-14T00:00:00Z
 exl-id: 4dba6c09-2949-4153-a9bc-d660a740f8f7
 duration: 28
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '147'
+source-git-commit: 777d5514d0fe79948289e9e24fe20273e48972f8
+workflow-type: tm+mt
+source-wordcount: '133'
 ht-degree: 100%
 
 ---
@@ -24,8 +24,8 @@ AEM as a Cloud Service unterstützt verschiedene Authentifizierungsoptionen und 
 
 |                       | AEM Author | AEM Publish |
 |-----------------------|:----------:|:-----------:|
-| [Adobe IMS](../accessing/overview.md) | ✔ | ✘ |
-| ・ [SAML 2.0 über Adobe IMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=de#how-to-set-up) | ✔ | ✘ |
+| [Adobe IMS](../accessing/overview.md) | ✔ | ✔ |
+| ・ [SAML 2.0 über Adobe IMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=de#how-to-set-up) | ✔ | ✔ |
 | [SAML 2.0](./saml-2-0.md) | ✘ | ✔ |
 | [Single Sign-On (SSO)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html?lang=de#integration-with-an-idp) | ✘ | ✔ |
 | [OAuth](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html?lang=de#integration-with-an-idp) | ✘ | ✔ |
