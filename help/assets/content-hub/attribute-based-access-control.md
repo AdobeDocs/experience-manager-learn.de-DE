@@ -22,6 +22,6 @@ ht-degree: 1%
 
 Erfahren Sie, wie Sie den Zugriff auf Assets im AEM Assets Content Hub mithilfe der attributbasierten Zugriffssteuerung (ABAC) einrichten und steuern.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475413/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475423/?learn=on&enablevpops&captions=ger)
 
 [Laden Sie die Tabelle Attributbasierte Zugriffssteuerung - Definition &#x200B;](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control) aus der Dokumentation Attributbasierte Zugriffssteuerung für AEM Assets Content Hub herunter.
