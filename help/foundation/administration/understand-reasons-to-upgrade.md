@@ -158,7 +158,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Foundation-Funktionen von AEM
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/storage-elements-in-aem-6.html?&amp;lang=de" target="_blank">TarMK- oder MongoMK-Repository-Speicher</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/storage-elements-in-aem-6.html?lang=de&&amp;lang=de" target="_blank">TarMK- oder MongoMK-Repository-Speicher</a>:</strong>
  <br> Optionen zur Verwendung eines einfachen, leistungsstarken dateibasierten TarMK-Speichers (TarPM-Version der nächsten Generation)
  <br> oder horizontalen Skalierung mit einem MongoDB-unterstützten Repository mit MongoMK.</td>
             <td> </td>
@@ -170,7 +170,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Foundation-Funktionen von AEM
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/aem-with-mongodb.html?&amp;lang=de" target="_blank">MongoMK-Leistung und -Stabilität</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/aem-with-mongodb.html?lang=de&&amp;lang=de" target="_blank">MongoMK-Leistung und -Stabilität</a>:</strong>
  MongoMK wurde seit seiner Einführung in AEM 6.0 kontinuierlich verbessert.</td>
             <td> </td>
             <td> </td>
@@ -645,7 +645,7 @@ Integrieren in den Tag Management Cloud Service der nächsten Generation von Ado
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/commerce/classic/administering/ecommerce.html?lang-de" target="_blank">eCommerce</a>:</strong>
+            <td><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-65/commerce/classic/administering/ecommerce.html?lang=de&lang-de" target="_blank">eCommerce</a>:</strong>
  Bereitstellen von markenspezifischen, personalisierten Einkaufserlebnissen über Web-, Mobile- und Social-Touchpoints hinweg.
             </td>
             <td>✔</td>
