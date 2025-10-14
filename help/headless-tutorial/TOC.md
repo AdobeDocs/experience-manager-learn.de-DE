@@ -9,9 +9,9 @@ version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-2963
 index: y
 source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '343'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -24,12 +24,12 @@ ht-degree: 94%
       + [Überblick](./open-api/basic/overview.md)
       + [&#x200B;1. Definieren von Inhaltsfragmentmodellen](./open-api/basic/1-content-fragment-models.md)
       + [&#x200B;2. Authoring von Inhaltsfragmenten](./open-api/basic/2-author-content-fragments.md)
-      + [&#x200B;3. Erkunden von OpenAPIs](./open-api/basic/3-explore-openapis.md)
+      + [&#x200B;3. Erkunden von APIs von OpenAPI](./open-api/basic/3-explore-openapis.md)
       + [&#x200B;4. Erstellen einer React-App](./open-api/basic/4-react-app.md)
-      + [&#x200B;5. Integration des universellen Editors](./open-api/basic/5-universal-editor.md)
+      + [&#x200B;5. Integrieren des universellen Editors](./open-api/basic/5-universal-editor.md)
 + GraphQL {#graphql}
    + [AEM Headless-Entwicklerportal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=de){target=_blank}
-   + [Übersicht](./graphql/overview.md)
+   + [Überblick](./graphql/overview.md)
    + Schnell-Setup {#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)
       + [AEM SDK](./graphql/quick-setup/local-sdk.md)
@@ -42,20 +42,20 @@ ht-degree: 94%
       + [&#x200B;6. Authoring- und Veröffentlichungsinstanz-Architektur](./graphql/video-series/author-publish-architecture.md)
       + [&#x200B;7. GraphQL-persistierte Abfragen](./graphql/video-series/graphql-persisted-queries.md)
    + Grundlegendes Tutorial{#multi-step}
-      + [Übersicht](./graphql/multi-step/overview.md)
+      + [Überblick](./graphql/multi-step/overview.md)
       + [&#x200B;1. Definieren von Inhaltsfragmentmodellen](./graphql/multi-step/content-fragment-models.md)
       + [&#x200B;2. Authoring von Inhaltsfragmenten](./graphql/multi-step/author-content-fragments.md)
       + [&#x200B;3. Erkunden von GraphQL-APIs](./graphql/multi-step/explore-graphql-api.md)
       + [4. Erstellen einer React-App](./graphql/multi-step/graphql-and-react-app.md)
    + Erweitertes Tutorial{#advanced-tutorial}
-      + [Übersicht](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
+      + [Überblick](/help/headless-tutorial/graphql/advanced-graphql/overview.md)
       + [&#x200B;1. Erstellen von Inhaltsfragmentmodellen](/help/headless-tutorial/graphql/advanced-graphql/create-content-fragment-models.md)
       + [&#x200B;2. Authoring von Inhaltsfragmenten](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md)
       + [&#x200B;3. Erkunden der AEM GraphQL-API](/help/headless-tutorial/graphql/advanced-graphql/explore-graphql-api.md)
       + [&#x200B;4. Persistierte GraphQL-Abfragen](/help/headless-tutorial/graphql/advanced-graphql/graphql-persisted-queries.md)
       + [&#x200B;5. Client-Anwendungsintegration](/help/headless-tutorial/graphql/advanced-graphql/client-application-integration.md)
    + Erstes Tutorial zu Headless{#headless-first}
-      + [Übersicht](./graphql/headless-first-tutorial/overview.md)
+      + [Überblick](./graphql/headless-first-tutorial/overview.md)
       + [1 – Inhaltsmodellierung](./graphql/headless-first-tutorial/1-content-modeling.md)
       + [2 – AEM Headless-APIs und React](./graphql/headless-first-tutorial/2-aem-headless-apis-and-react.md)
       + [3 – Komplexe Komponenten](./graphql/headless-first-tutorial/3-complex-components.md)
@@ -86,7 +86,7 @@ ht-degree: 94%
       + [Node.js](./graphql/example-apps/server-to-server-app.md)
 + SPA-Editor{#spa-editor}
    + Angular{#angular}
-      + [Übersicht](./spa-editor/angular/overview.md)
+      + [Überblick](./spa-editor/angular/overview.md)
       + [&#x200B;1. SPA-Editor-Projekt](./spa-editor/angular/create-project.md)
       + [&#x200B;2. Integrieren der SPA](./spa-editor/angular/integrate-spa.md)
       + [&#x200B;3. Zuordnen von SPA-Komponenten](./spa-editor/angular/map-components.md)
@@ -94,7 +94,7 @@ ht-degree: 94%
       + [&#x200B;5. Benutzerdefinierte Komponente](./spa-editor/angular/custom-component.md)
       + [6. Erweitern der Komponente](./spa-editor/angular/extend-component.md)
    + Remote-SPA{#remote-spa}
-      + [Übersicht](./spa-editor/remote-spa/overview.md)
+      + [Überblick](./spa-editor/remote-spa/overview.md)
       + [&#x200B;1. Konfigurieren von AEM](./spa-editor/remote-spa/aem-configure.md)
       + [&#x200B;2. Bootstrapping der SPA](./spa-editor/remote-spa/spa-bootstrap.md)
       + [&#x200B;3. Feste Komponenten](./spa-editor/remote-spa/spa-fixed-component.md)
@@ -103,11 +103,11 @@ ht-degree: 94%
    + Anleitung{#how-to}
       + [AEM React Editable Components v2](./spa-editor/how-to/react-core-components-v2.md)
 + Token-basierte Authentifizierung {#authentication}
-   + [Übersicht](./authentication/overview.md)
+   + [Überblick](./authentication/overview.md)
    + [&#x200B;1. Zugriffstoken für lokale Entwicklung](./authentication/local-development-access-token.md)
    + [&#x200B;2. Dienstanmeldeinformationen](./authentication/service-credentials.md)
 + Content Services {#content-services}
-   + [Übersicht](./content-services/overview.md)
+   + [Überblick](./content-services/overview.md)
    + [&#x200B;1. Tutorial-Einrichtung](./content-services/chapter-1.md)
    + [&#x200B;2. Definition von Ereignis-Inhaltsfragmentmodellen](./content-services/chapter-2.md)
    + [&#x200B;3. Erstellen von Ereignis-Inhaltsfragmenten](./content-services/chapter-3.md)

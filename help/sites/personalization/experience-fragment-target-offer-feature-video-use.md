@@ -10,9 +10,9 @@ doc-type: Feature Video
 exl-id: 9ee826cf-389f-4570-bfe1-0d43d3fed3e1
 duration: 574
 source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '298'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 93%
 
 Adobe Experience Manager stellt den Personalisierungs-Workflow zwischen AEM und Target um. Erlebnisse, die in AEM erstellt wurden, können jetzt direkt als HTML-Angebote an Adobe Target übermittelt werden. Damit können Marketing-Fachleute Inhalte kanalübergreifend nahtlos testen und personalisieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/38083?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/22383?quality=12&learn=on)
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ Adobe Experience Manager stellt den Personalisierungs-Workflow zwischen AEM und 
 * Der Hauptunterschied zwischen den HTML- und den Experience Fragment-Angeboten besteht darin, dass die Bearbeitung für letztere nur in AEM erfolgen kann und dann mit Adobe Target synchronisiert werden muss.
 * Die auf den Experience Fragment-Ordner angewendete Target Cloud Service-Konfiguration erbt alle Experience Fragments, die direkt unter dem übergeordneten Ordner erstellt wurden. Der untergeordnete Ordner übernimmt nicht die übergeordnete Cloud Service-Konfiguration.
 * Um ein personalisiertes Angebot zu erstellen, können wir nun einfach die in AEM gespeicherten Inhalte nutzen.
-* Sie können Typen von Target-Aktivitäten erstellen, einschließlich der KI-gestützten Aktivitäten wie Automatische Zuordnung, Automatisches Targeting und Automated Personalization
+* Sie können Target-Aktivitätstypen erstellen, einschließlich KI-gestützter Aktivitäten wie automatisierter Zuordnung, automatischem Targeting und automatisierter Personalisierung.
 
 ## Zusätzliche Ressourcen {#additional-resources}
 

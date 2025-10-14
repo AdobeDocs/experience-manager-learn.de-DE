@@ -13,7 +13,7 @@ jira: KT-15989
 thumbnail: KT-15989.jpeg
 exl-id: 83ca35c5-1db4-4297-afc7-67b6e7d2f085
 source-git-commit: 4a4334047f600cd64a6f6be82974f280b786d0c1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '61'
 ht-degree: 100%
 
@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie den Content-Hub von Experience Manager Assets mithilfe des Adobe Cloud Manager-Programms und des Assets-Add-ons einrichten. Erfahren Sie auch, wie Sie den Zugriff für Benutzende mithilfe von Produktprofilen konfigurieren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3472944/?learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3472918/?learn=on)

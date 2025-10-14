@@ -9,9 +9,9 @@ doc-type: Tutorial
 exl-id: 678671c3-af25-4da1-bc14-cbc4cc19be8d
 duration: 130
 source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '618'
-ht-degree: 91%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ Da Bilder einen Großteil der Seitenladezeit ausmachen, kann die Leistungssteige
 
 ## Funktionsweise der intelligenten Bildbearbeitung
 
-Wie bereits erwähnt, arbeitet die intelligente Bildbearbeitung mit vorhandenen Bildvorgaben, um Bilder automatisch in optimale Bildformate der nächsten Generation wie WebP zu konvertieren und dabei die visuelle Wiedergabetreue zu wahren.
+Wie bereits erwähnt, arbeitet die intelligente Bildbearbeitung mit vorhandenen Bildvorgaben zusammen, um Bilder automatisch in optimale Bildformate der nächsten Generation wie WebP zu konvertieren und dabei die visuelle Wiedergabetreue zu wahren.
 
 Informieren Sie sich hier über die [Funktionsweise der intelligenten Bildbearbeitung](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html?lang=de#how-does-smart-imaging-work), einschließlich Details wie unterstützte Bildformate (und was passiert, wenn Sie diese Formate nicht verwenden) und die Auswirkung auf vorhandene Bildvorgaben, die verwendet werden.
 
@@ -47,7 +47,7 @@ Intelligente Bildbearbeitung funktioniert mit Bildern, die über HTTP, HTTPS und
 
 Die intelligente Bildbearbeitung ist in Ihrer bestehenden Dynamic Media Classic-Lizenz enthalten. Für diese Funktion fallen keine zusätzlichen Kosten an. Um die Vorteile zu nutzen, müssen Sie zwei Voraussetzungen erfüllen: Sie müssen über ein von Adobe gebündeltes CDN und eine eigene Domain verfügen. Dann müssen Sie es für Ihr Konto aktivieren, da es nicht automatisch aktiviert ist.
 
-Die Aktivierung der intelligenten Bildbearbeitung beginnt mit dem Versand einer Anfrage an den technischen Support durch |Erstellen eines Support-Falles| [https://helpx.adobe.com/de/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/de/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). Der Support arbeitet mit Ihnen zusammen, um eine benutzerdefinierte Domain einzurichten, die Sie mit der intelligenten Bildbearbeitung verbinden. Sie ändern einen Parameter im Zusammenhang mit der Zwischenspeicherung (Time To Live oder TTL) und der Support löscht den Cache. Sie können auch einen optionalen Staging-Schritt ausführen, bevor Sie in die Produktion übertragen. Wenn die intelligente Bildbearbeitung aktiviert ist, liefern Sie Kundinnen und Kunden kleinere Bilder in derselben Qualität wie gewünscht. Das bedeutet, dass es schnellere Seitenladezeiten gibt - und das alles geschieht automatisch.
+Die Aktivierung der intelligenten Bildbearbeitung beginnt mit dem Versand einer Anfrage an den technischen Support durch |Erstellen eines Support-Falles| [https://helpx.adobe.com/de/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/de/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). Der Support arbeitet mit Ihnen zusammen, um eine benutzerdefinierte Domain einzurichten, die Sie mit der intelligenten Bildbearbeitung verbinden. Sie ändern einen Parameter im Zusammenhang mit der Zwischenspeicherung (Time To Live oder TTL) und der Support löscht den Cache. Sie können auch einen optionalen Staging-Schritt ausführen, bevor Sie in die Produktion übertragen. Wenn die intelligente Bildbearbeitung aktiviert ist, liefern Sie Kundinnen und Kunden kleinere Bilder in derselben Qualität wie gewünscht. Sie profitieren daher von kürzeren Ladezeiten – und das alles geschieht automatisch.
 
 Nachdem Sie die intelligente Bildbearbeitung aktiviert haben, möchten Sie sicher überprüfen, ob sie erwartungsgemäß funktioniert.
 

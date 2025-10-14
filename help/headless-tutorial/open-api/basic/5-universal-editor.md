@@ -1,6 +1,6 @@
 ---
 title: Bearbeiten der React-App mit dem universellen Editor | Headless-Tutorial, Teil 5
-description: Erfahren Sie, wie Sie Ihre React-App im universellen Editor von AEM bearbeitbar machen können, indem Sie die erforderliche Instrumentierung und Konfiguration hinzufügen.
+description: Erfahren Sie, wie Sie Ihre React-App im universellen Editor von AEM bearbeitbar machen können, indem Sie das erforderliche Instrumentarium und die Konfiguration hinzufügen.
 version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments
@@ -8,45 +8,45 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 duration: 800
-source-git-commit: da3bfa25a424e3176fb7d53189169515db225228
-workflow-type: tm+mt
+exl-id: de260762-eed4-4c2b-a3a8-e8563a2b7b4a
+source-git-commit: e7960fa75058c072b1b52ba1a0d7c99a0280d02f
+workflow-type: ht
 source-wordcount: '759'
-ht-degree: 4%
+ht-degree: 100%
 
 ---
 
-
 # Bearbeiten der React-App mit dem universellen Editor
 
-In diesem Kapitel erfahren Sie, wie Sie die im vorherigen [ erstellte React-App mit ](./4-react-app.md) universellen Editor von AEM bearbeitbar machen. Mit dem universellen Editor können Inhaltsautorinnen und -autoren Inhalte direkt im Kontext des React-App-Erlebnisses bearbeiten, während das nahtlose Erlebnis einer Headless-Anwendung erhalten bleibt.
+In diesem Kapitel erfahren Sie, wie Sie die [im vorherigen Kapitel](./4-react-app.md) erstellte React-App mit dem universellen Editor von AEM bearbeitbar machen. Mit dem universellen Editor können Inhaltsautorinnen und -autoren Inhalte direkt im Kontext des React-App-Erlebnisses bearbeiten, während das nahtlose Erlebnis einer Headless-Anwendung erhalten bleibt.
 
 ![Universeller Editor](./assets/5/main.png)
 
-Der universelle Editor bietet eine leistungsstarke Möglichkeit, die kontextbezogene Bearbeitung für jede Web-Anwendung zu aktivieren, sodass Autoren Inhalte bearbeiten können, ohne zwischen verschiedenen Authoring-Oberflächen zu wechseln.
+Der universelle Editor bietet eine leistungsstarke Möglichkeit, die kontextbezogene Bearbeitung für jede Web-Anwendung zu aktivieren, sodass Autorinnen und Autoren Inhalte bearbeiten können, ohne zwischen verschiedenen Authoring-Oberflächen zu wechseln.
 
 ## Voraussetzungen
 
-* Die vorherigen Schritte dieses Tutorials wurden abgeschlossen, insbesondere [Erstellen einer React-App, die die OpenAPIs zur Bereitstellung von Inhaltsfragmenten in AEM verwendet](./4-react-app.md)
-* Ein praktisches Wissen über [Verwendung und Implementierung des universellen Editors](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction).
+* Die vorherigen Schritte dieses Tutorials wurden abgeschlossen, insbesondere [Erstellen einer React-App, die die APIs von OpenAPI zur Bereitstellung von Inhaltsfragmenten in AEM verwendet](./4-react-app.md)
+* Praktisches Wissen über die [Verwendung und Implementierung des universellen Editors](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction).
 
 ## Ziele
 
 Erfahren Sie mehr über:
 
-* Fügen Sie der React-App universelle Editor-Instrumentierung hinzu.
+* Hinzufügen des Instrumentariums des universellen Editors zur React-App.
 * Konfigurieren der React-App für den universellen Editor.
 * Aktivieren der Inhaltsbearbeitung direkt in der React-App-Oberfläche mit dem universellen Editor.
 
-## Instrumentierung des universellen Editors
+## Instrumentarium des universellen Editors
 
-Der universelle Editor erfordert [HTML-Attribute und Meta-](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types), um bearbeitbare Inhalte zu identifizieren und die Verbindung zwischen der Benutzeroberfläche und AEM-Inhalten herzustellen.
+Der universelle Editor erfordert [HTML-Attribute und Meta-Tags](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types), um bearbeitbare Inhalte zu identifizieren und die Verbindung zwischen der Benutzeroberfläche und AEM-Inhalten herzustellen.
 
-### Hinzufügen universeller Editor-Tags
+### Hinzufügen von Tags des universellen Editors
 
 Fügen Sie zunächst die erforderlichen Meta-Tags hinzu, um die React-App als mit dem universellen Editor kompatibel zu identifizieren.
 
 1. Öffnen Sie `public/index.html` in Ihrer React-App.
-1. Fügen Sie [ Abschnitt &quot;](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started)&quot; der React-App die Meta`<head>`Tags und das CORS-Skript des universellen Editors hinzu:
+1. Fügen Sie im Abschnitt `<head>` der React-App die [Meta-Tags und das CORS-Skript des universellen Editors](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started) hinzu:
 
    ```html
    <!DOCTYPE html>
@@ -73,7 +73,7 @@ Fügen Sie zunächst die erforderlichen Meta-Tags hinzu, um die React-App als mi
    </html>
    ```
 
-1. Aktualisieren Sie die `.env` der React-App so, dass sie den Host des AEM-Autoren-Service enthält, um Writebacks im universellen Editor zu unterstützen (der im Wert des `urn:adobe:aue:system:aemconnection`-Metat-Tags verwendet wird).
+1. Aktualisieren Sie die Datei `.env` der React-App so, dass sie den Host des AEM-Autoren-Service enthält, um Writebacks im universellen Editor zu unterstützen (der im Wert des Meta-Tags `urn:adobe:aue:system:aemconnection` verwendet wird).
 
    ```bash
    # The AEM Publish (or Preview) service
@@ -83,14 +83,14 @@ Fügen Sie zunächst die erforderlichen Meta-Tags hinzu, um die React-App als mi
    REACT_APP_AEM_AUTHOR_HOST_URI=https://author-p123-e456.adobeaemcloud.com
    ```
 
-### Instrumentieren der Komponente Teams
+### Instrumentieren der Teams-Komponente
 
-Fügen Sie jetzt Attribute des universellen Editors hinzu, damit die Team-Komponente bearbeitet werden kann.
+Fügen Sie jetzt Attribute des universellen Editors hinzu, damit die Teams-Komponente bearbeitet werden kann.
 
 1. Öffnen Sie `src/components/Teams.js`.
-1. Aktualisieren Sie die `Team`-Komponente, um [Datenattribute des universellen Editors](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types) einzuschließen:
+1. Aktualisieren Sie die Komponente `Team`, um [Datenattribute des universellen Editors](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types) einzuschließen:
 
-   Stellen Sie beim Festlegen des `data-aue-resource` sicher, dass der AEM-Pfad zum Inhaltsfragment, wie er von der AEM-Inhaltsfragmentbereitstellung mit OpenAPIs zurückgegeben wird, mit dem Unterpfad zur Inhaltsfragmentvariante versehen ist. In diesem Fall `/jcr:content/data/master`.
+   Stellen Sie beim Festlegen des Attributs `data-aue-resource` sicher, dass der AEM-Pfad zum Inhaltsfragment, wie er von der AEM-Inhaltsfragmentbereitstellung mit APIs von OpenAPI zurückgegeben wird, mit dem Unterpfad zur Inhaltsfragmentvariante versehen ist. In diesem Fall `/jcr:content/data/master`.
 
    ```javascript
    import { useEffect, useState } from "react";
@@ -209,14 +209,14 @@ Fügen Sie jetzt Attribute des universellen Editors hinzu, damit die Team-Kompon
    export default Teams;
    ```
 
-### Instrumentieren der Personenkomponente
+### Instrumentieren der Personen-Komponente
 
-Fügen Sie auf ähnliche Weise der Komponente Person universelle Editor-Attribute hinzu.
+Fügen Sie auf ähnliche Weise der Personen-Komponente Attribute des universellen Editors hinzu.
 
 1. Öffnen Sie `src/components/Person.js`.
 1. Aktualisieren Sie die Komponente, um [Datenattribute des universellen Editors](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types) einzuschließen:
 
-   Stellen Sie beim Festlegen des `data-aue-resource` sicher, dass der AEM-Pfad zum Inhaltsfragment, wie er von der AEM-Inhaltsfragmentbereitstellung mit OpenAPIs zurückgegeben wird, mit dem Unterpfad zur Inhaltsfragmentvariante versehen ist. In diesem Fall `/jcr:content/data/master`.
+   Stellen Sie beim Festlegen des Attributs `data-aue-resource` sicher, dass der AEM-Pfad zum Inhaltsfragment, wie er von der AEM-Inhaltsfragmentbereitstellung mit APIs von OpenAPI zurückgegeben wird, mit dem Unterpfad zur Inhaltsfragmentvariante versehen ist. In diesem Fall `/jcr:content/data/master`.
 
    ```javascript
    import "./Person.scss";
@@ -292,7 +292,7 @@ Fügen Sie auf ähnliche Weise der Komponente Person universelle Editor-Attribut
    }
    ```
 
-### Abrufen des ausgefüllten Codes
+### Abrufen des vollständigen Codes
 
 Der vollständige Quell-Code für dieses Kapitel ist [auf Github.com verfügbar](https://github.com/adobe/aem-tutorials/tree/headless_open-api_basic_5-end).
 
@@ -303,7 +303,7 @@ $ git tag
 $ git checkout tags/headless_open-api_basic_5-end
 ```
 
-## Integration des universellen Editors testen
+## Testen der Integration des universellen Editors
 
 Testen Sie jetzt die Kompatibilitätsaktualisierungen für den universellen Editor, indem Sie die React-App im universellen Editor öffnen.
 
@@ -319,52 +319,52 @@ Testen Sie jetzt die Kompatibilitätsaktualisierungen für den universellen Edit
 
 1. Überprüfen Sie, ob die App unter `http://localhost:3000` geladen wird und die Inhalte von Teams und Personen anzeigt.
 
-### Lokalen SSL-Proxy ausführen
+### Ausführen des lokalen SSL-Proxys
 
 Für den universellen Editor muss die bearbeitbare Anwendung über HTTPS geladen werden.
 
-1. Um die lokale React-App über HTTPS auszuführen, verwenden Sie das npm-Modul [local-ssl-proxy](https://www.npmjs.com/package/local-ssl-proxy) von der Befehlszeile aus.
+1. Um die lokale React-App über HTTPS auszuführen, verwenden Sie das npm-Modul [local-ssl-proxy](https://www.npmjs.com/package/local-ssl-proxy) über die Befehlszeile.
 
    ```bash
    $ npm install -g local-ssl-proxy
    $ local-ssl-proxy --source 3001 --target 3000
    ```
 
-1. Öffnen Sie `https://localhost:3001` in Ihrem Webbrowser
-1. das selbstsignierte Zertifikat akzeptieren.
+1. Öffnen Sie `https://localhost:3001` in einem Webbrowser. 
+1. Akzeptieren Sie das selbstsignierte Zertifikat.
 1. Überprüfen Sie, ob die React-App geladen wird.
 
-### Im universellen Editor öffnen
+### Öffnen im universellen Editor
 
 ![App im universellen Editor öffnen](./assets/5/open-app-in-universal-editor.png)
 
-1. Navigieren Sie zu [universeller Editor](https://experience.adobe.com/#/@myOrg/aem/editor/canvas/).
-1. Geben Sie im Feld **Site** URL die HTTPS-React-App-URL ein: `https://localhost:3001`.
+1. Navigieren Sie zu [Universeller Editor](https://experience.adobe.com/#/@myOrg/aem/editor/canvas/).
+1. Geben Sie im Feld **Site-URL** die URL der HTTPS-React-App ein: `https://localhost:3001`.
 1. Klicken Sie auf **Öffnen**.
 
 Der universelle Editor sollte Ihre React-App mit aktivierten Bearbeitungsfunktionen laden.
 
 ### Testen der Bearbeitungsfunktion
 
-![Bearbeiten im universellen Editor](./assets/5/edit-in-universal-editor.png)
+![Im universellen Editor bearbeiten](./assets/5/edit-in-universal-editor.png)
 
 1. Bewegen Sie im universellen Editor den Mauszeiger über bearbeitbare Elemente in Ihrer React-App.
 
-1. Um in der React-App zu navigieren, aktivieren **den**-Modus und deaktivieren Sie ihn erneut, um ihn zu bearbeiten. Denken Sie daran **dass &quot;**&quot; nichts mit dem AEM-Vorschau-Service zu tun hat, sondern das Bearbeitungs-Chrome im universellen Editor ein- und ausschaltet.
+1. Um in der React-App zu navigieren, aktivieren Sie den **Vorschau**-Modus und deaktivieren Sie ihn wieder, um die Bearbeitung zu ermöglichen. Denken Sie daran dass **Vorschau** nichts mit dem AEM-Vorschau-Service zu tun hat, sondern den Bearbeitungsmodus im universellen Editor ein- und ausschaltet.
 
 1. Sie sollten Bearbeitungsindikatoren sehen und in der Lage sein, auf die verschiedenen bearbeitbaren Elemente der React-App zu klicken.
 
 1. Bearbeiten Sie einen Team-Titel:
-   * Auf einen Team-Titel klicken
-   * Bearbeiten Sie den Text im Bedienfeld „Eigenschaften“
+   * Klicken Sie auf einen Team-Titel
+   * Bearbeiten Sie den Text im Panel „Eigenschaften“
    * Speichern Sie die Änderungen
 
-1. Versuchen Sie, das Profilbild einer Person zu bearbeiten:
+1. Bearbeiten Sie das Profilbild einer Person:
    * Klicken Sie auf das Profilbild einer Person
-   * Neues Bild aus der Asset-Auswahl auswählen
+   * Wählen Sie ein neues Bild aus der Asset-Auswahl aus
    * Speichern Sie die Änderungen
 
-1. Klicken Sie **Veröffentlichen** oben rechts im universellen Editor, um Änderungen im Veröffentlichungs- (oder Vorschau-) Service von AEM zu veröffentlichen, sodass sie in der React-App im universellen Editor angezeigt werden.
+1. Klicken Sie oben rechts im universellen Editor auf **Veröffentlichen**, um Änderungen im Veröffentlichungs- (oder Vorschau-) Service von AEM zu veröffentlichen, sodass sie in der React-App im universellen Editor angezeigt werden.
 
 ## Datenattribute des universellen Editors
 
@@ -372,6 +372,6 @@ Die vollständige Dokumentation zum Instrumentieren einer Anwendung für den uni
 
 ## Herzlichen Glückwunsch!
 
-Herzlichen Glückwunsch! Sie haben den universellen Editor erfolgreich in Ihre React-App integriert. Inhaltsautoren können Inhaltsfragmente jetzt direkt in der React-App-Benutzeroberfläche bearbeiten, was ein nahtloses Authoring-Erlebnis bietet und gleichzeitig die Vorteile einer Headless-Architektur bietet.
+Herzlichen Glückwunsch! Sie haben den universellen Editor erfolgreich in Ihre React-App integriert. Inhaltsautorinnen und -autoren können Inhaltsfragmente jetzt direkt in der React-App-Benutzeroberfläche bearbeiten, was ein nahtloses Authoring-Erlebnis bietet und gleichzeitig die Vorteile einer Headless-Architektur bietet.
 
-Denken Sie daran, dass Sie den endgültigen Quell-Code für dieses Tutorial immer aus der `main` Verzweigung des Repositorys [GitHub.com abrufen ](https://github.com/adobe/aem-tutorials/tree/main).
+Denken Sie daran, dass Sie den endgültigen Quell-Code für dieses Tutorial immer aus dem Zweig `main` des [Repositorys auf GitHub.com](https://github.com/adobe/aem-tutorials/tree/main) abrufen können.

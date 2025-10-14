@@ -12,9 +12,9 @@ jira: KT-18717
 thumbnail: null
 exl-id: c4fb11b9-b613-4522-b9da-18d7ae0826ec
 source-git-commit: 5b91e7409ff0735bab40d78ad98410ac2ab006ed
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '338'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -156,8 +156,8 @@ Erkunden Sie die folgenden gängigen Anwendungsszenarien für die Personalisieru
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./use-cases/behavioral-targeting.md" title="Verhaltens-Targeting" target="_self" rel="referrer">
-                        <img class="is-bordered-r-small" src="./assets/use-cases/behavioral-targeting/behavioral-targeting.png" alt="Verhaltens-Targeting"
+                    <a href="./use-cases/behavioral-targeting.md" title="Verhaltensbasiertes Targeting" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/use-cases/behavioral-targeting/behavioral-targeting.png" alt="Verhaltensbasiertes Targeting"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -165,13 +165,13 @@ Erkunden Sie die folgenden gängigen Anwendungsszenarien für die Personalisieru
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./use-cases/behavioral-targeting.md" target="_self" rel="referrer" title="Verhaltens-Targeting">Verhaltens-Targeting</a>
+                        <a href="./use-cases/behavioral-targeting.md" target="_self" rel="referrer" title="Verhaltensbasiertes Targeting">Behavioral Targeting</a>
                     </p>
-                    <p class="is-size-6">Erfahren Sie, wie Sie Inhalte mithilfe von Adobe Experience Platform und Adobe Target basierend auf dem Benutzerverhalten personalisieren können.</p>
+                    <p class="is-size-6">Erfahren Sie, wie Sie Inhalte mit Adobe Experience Platform und Adobe Target basierend auf dem Benutzerverhalten personalisieren können.</p>
                 </div>
                 <a href="./use-cases/behavioral-targeting.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Erfahren Sie mehr über verhaltensbasiertes Targeting</span>
-                </a>
+<span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Erfahren Sie mehr über Behavioral Targeting</span>
+</a>
             </div>
         </div>
     </div>

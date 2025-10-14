@@ -9,9 +9,9 @@ doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
 source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '372'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -50,7 +50,7 @@ Adobe Experience Manager (AEM) bietet mehrere Optionen für die Definition von H
       </a>
     </div>
     <p>
-    <em>Erfahren Sie, wie eine Anwendung eine OpenAPI-basierte REST-APIs verwenden kann, um Inhalte zu nutzen.</em>
+    <em>Erfahren Sie, wie eine Anwendung OpenAPI-basierte REST-APIs verwenden kann, um Inhalte zu nutzen.</em>
     <p>
   </td>
   <td>

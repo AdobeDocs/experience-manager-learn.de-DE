@@ -1,6 +1,6 @@
 ---
-title: Verwenden von smartem Zuschneiden mit AEM Assets Dynamic Media
-description: Smartes Zuschneiden eliminiert die zeit- und kostenaufwendigen Aufgaben beim Zuschneiden von Inhalten für responsives Design.
+title: Verwenden von intelligentem Zuschnitt mit AEM Assets Dynamic Media
+description: Der intelligente Zuschnitt beseitigt das zeitaufwendige und kostspielige Zuschneiden von Inhalten für responsives Design.
 feature: Smart Crop, Image Profiles
 version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
@@ -11,17 +11,17 @@ doc-type: Feature Video
 exl-id: 295bbfb6-241f-41c0-972d-d9688863cea1
 duration: 443
 source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '231'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
-# Verwenden von smartem Zuschneiden mit AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
+# Verwenden von intelligentem Zuschnitt mit AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
 
-Smartes Zuschneiden eliminiert die zeit- und kostenaufwendigen Aufgaben beim Zuschneiden von Inhalten für responsives Design.
+Der intelligente Zuschnitt beseitigt das zeitaufwendige und kostspielige Zuschneiden von Inhalten für responsives Design.
 
->[!VIDEO](https://video.tv.adobe.com/v/40411?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/21519?quality=12&learn=on)
 
 >[!NOTE]
 >

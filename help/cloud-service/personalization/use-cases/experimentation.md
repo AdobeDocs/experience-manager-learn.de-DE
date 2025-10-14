@@ -12,9 +12,9 @@ jira: KT-18720
 thumbnail: KT-18720.jpeg
 exl-id: c8a4f0bf-1f80-4494-abe6-9fbc138e4039
 source-git-commit: 5b91e7409ff0735bab40d78ad98410ac2ab006ed
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1493'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ A/B-Tests helfen Ihnen, verschiedene Versionen von Inhalten zu vergleichen, um z
 - Vergleichen verschiedener Layouts oder Designs für eine Produktdetailseite
 - Bewerten von Werbeangeboten oder Rabattstrategien
 
-## Demo-Anwendungsszenario
+## Demo-Anwendungsfall
 
 In diesem Tutorial konfigurieren Sie A/B-Tests für das Experience Fragment (XF) **Camping in Western Australia** auf der WKND-Website. Sie erstellen drei XF-Varianten und verwalten den A/B-Test über Adobe Target.
 
@@ -38,13 +38,13 @@ Die Varianten werden auf der WKND-Startseite angezeigt, sodass Sie die Performan
 
 ### Live-Demo
 
-Besuchen Sie die [WKND-Aktivierungs](https://wknd.enablementadobe.com/us/en.html)Website, um den A/B-Test in Aktion zu sehen. Im folgenden Video sehen Sie alle drei Varianten von **Camping in Western Australia**, die über verschiedene Browser auf der Homepage angezeigt werden.
+Besuchen Sie die [WKND-Aktivierungs-Website](https://wknd.enablementadobe.com/de/de.html), um den A/B-Test in Aktion zu sehen. Im folgenden Video sehen Sie alle drei Varianten von **Camping in Western Australia**, die über verschiedene Browser auf der Startseite angezeigt werden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3473005/?learn=on&enablevpops)
 
 ## Voraussetzungen
 
-Bevor Sie mit dem Anwendungsfall „Experimentieren“ fortfahren, stellen Sie sicher, dass Sie Folgendes abgeschlossen haben:
+Bevor Sie mit diesem Experiment-Anwendungsszenario fortfahren, stellen Sie sicher, dass Sie Folgendes abgeschlossen haben:
 
 - [Adobe Target-Integration](../setup/integrate-adobe-target.md): Ermöglicht es Ihrem Team, personalisierte Inhalte zentral in AEM zu erstellen und zu verwalten und als Angebote in Adobe Target zu aktivieren.
 - [Integration von Tags in Adobe Experience Platform](../setup/integrate-adobe-tags.md): Ermöglicht Ihrem Team die Verwaltung und Bereitstellung von JavaScript für die Personalisierung und Datenerfassung, ohne AEM-Code erneut bereitstellen zu müssen.
@@ -237,7 +237,7 @@ Um Personalisierungs- und Datenerfassungsereignisse von AEM-Seiten zu senden, f�
 
 Sobald die Aktivität live ist und die Tags-Bibliothek in der Produktion veröffentlicht wurde, können Sie den A/B-Test auf Ihren AEM-Seiten überprüfen.
 
-1. Besuchen Sie die veröffentlichte Website (z. B. [WKND-Aktivierungs-Website](https://wknd.enablementadobe.com/us/en.html)), und beobachten Sie, welche Variante angezeigt wird. Versuchen Sie, über einen anderen Browser oder ein Mobilgerät darauf zuzugreifen, um alternative Varianten anzuzeigen.
+1. Besuchen Sie die veröffentlichte Website (z. B. [WKND-Aktivierungs-Website](https://wknd.enablementadobe.com/de/de.html)), und beobachten Sie, welche Variante angezeigt wird. Versuchen Sie, über einen anderen Browser oder ein Mobilgerät darauf zuzugreifen, um alternative Varianten anzuzeigen.
    ![Anzeigen von A/B-Testvarianten](../assets/use-cases/experiment/view-ab-test-variations.png)
 
 1. Öffnen Sie die Entwickler-Tools Ihres Browsers, und wählen Sie die Registerkarte **Netzwerk** aus. Filtern Sie nach `interact`, um die Web SDK-Anfrage zu finden. Die Anfrage sollte die Web SDK-Ereignisdetails enthalten.
@@ -252,7 +252,7 @@ Die Antwort sollte die Personalisierungsentscheidungen enthalten, die von Adobe 
 
 ## Live-Demo
 
-Um den A/B-Test in Aktion zu sehen, besuchen Sie die [WKND-Aktivierungs-Website](https://wknd.enablementadobe.com/us/en.html) und beobachten Sie, wie verschiedene Varianten des Experience Fragments auf der Startseite angezeigt werden.
+Um den A/B-Test in Aktion zu sehen, besuchen Sie die [WKND-Aktivierungs-Website](https://wknd.enablementadobe.com/de/de.html) und beobachten Sie, wie verschiedene Varianten des Experience Fragments auf der Startseite angezeigt werden.
 
 ## Zusätzliche Ressourcen
 

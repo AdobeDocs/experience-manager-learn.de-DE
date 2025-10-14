@@ -1,6 +1,6 @@
 ---
-title: Verwenden des smarten Zuschneidens für Videos in Dynamic Media
-description: Dynamic Media Smart Crop for Video verfolgt auf intelligente Weise den Zielpunkt des Videos und stellt sicher, dass Videos auf allen Bildschirmgrößen optimal aussehen.
+title: Verwenden des intelligenten Zuschnitts in Dynamic Media
+description: Der intelligente Zuschnitt für Videos in Dynamic Media verfolgt die Bildmotive des Videos intelligent und stellt sicher, dass Videos bei allen Bildschirmgrößen optimal aussehen.
 feature: Smart Crop, Video Profiles, Viewer Presets
 version: Experience Manager as a Cloud Service
 jira: KT-5977
@@ -12,17 +12,17 @@ doc-type: Feature Video
 exl-id: 15eb725c-d6f6-4ab9-8d39-dc05fbba1ff3
 duration: 397
 source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '86'
-ht-degree: 48%
+ht-degree: 100%
 
 ---
 
-# Verwenden des smarten Zuschneidens für Videos in Dynamic Media {#using-smart-crop-video}
+# Verwenden des intelligenten Zuschnitts in Dynamic Media {#using-smart-crop-video}
 
-Dynamic Media Smart Crop for Video verfolgt auf intelligente Weise den Zielpunkt des Videos und stellt sicher, dass Videos auf allen Bildschirmgrößen optimal aussehen.
+Der intelligente Zuschnitt für Videos in Dynamic Media verfolgt die Bildmotive des Videos intelligent und stellt sicher, dass Videos bei allen Bildschirmgrößen optimal aussehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/326469?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/37958?quality=12&learn=on)
 
 >[!NOTE]
 >

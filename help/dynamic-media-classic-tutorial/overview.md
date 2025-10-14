@@ -9,9 +9,9 @@ doc-type: Tutorial
 exl-id: 975b85af-ca6a-419e-ab2a-6e1781bfee4a
 duration: 173
 source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '867'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -40,7 +40,7 @@ In diesem Handbuch werden die folgenden Kernfunktionen von Dynamic Media Classic
 
 - **Dynamic Imaging.** Der Überbegriff für die Bearbeitung, Formatierung und Größenanpassung in Echtzeit sowie interaktives Zoomen und Schwenken, Farb- und Texturmuster, 360-Grad-Rotation, Bildvorlagen und Multimedia-Viewer.
 - **Video.** Laden Sie fertige Videos hoch, veröffentlichen Sie sie und laden Sie sie progressiv in konfigurierbare Video-Viewer herunter.
-- **Intelligente Bildbearbeitung.**-Technologie, die mit vorhandenen „Bildvorgaben“ zusammenarbeitet, um die Leistung der Bildbereitstellung zu verbessern, indem Bildformat, Größe und Qualität basierend auf den Funktionen des Client-Browsers automatisch optimiert werden.
+- **Intelligente Bildbearbeitung.** Diese Technologie nutzt vorhandene „Bildvorgaben“, um die Bereitstellung von Bildern zu verbessern, indem Bildformat, -größe und -qualität basierend auf den Fähigkeiten des Client-Browsers automatisch optimiert werden.
 
 Weitere Informationen zu den zusätzlichen Funktionen der Lösung finden Sie in der [Dokumentation für Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html?lang=de).
 

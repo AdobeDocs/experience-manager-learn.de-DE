@@ -12,9 +12,9 @@ level: Intermediate, Experienced
 exl-id: 766bfaff-ade0-41c8-a395-e79dfb4b3d76
 duration: 115
 source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '401'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ Die Datei `manifest.yml`, die sich im Stammverzeichnis des Asset Compute-Projekt
 
 Sekundäre werden als Adobe I/O Runtime-Aktionseinträge unter `actions` definiert und bestehen aus einer Reihe von Konfigurationen.
 
-Sekundäre, die auf andere Adobe I/O-Integrationen zugreifen, müssen die `annotations -> require-adobe-auth`-Eigenschaft auf `true` setzen, da dies [die Adobe I/O-Anmeldeinformationen](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=de#access-adobe-apis) des Sekundärs über das `params.auth`-Objekt offenlegt.  Dies ist in der Regel erforderlich, wenn der Worker Adobe I/O-APIs wie die Adobe Photoshop- oder Lightroom-APIs aufruft, und kann pro Worker umgeschaltet werden.
+Sekundäre, die auf andere Adobe I/O-Integrationen zugreifen, müssen die `annotations -> require-adobe-auth`-Eigenschaft auf `true` setzen, da dies [die Adobe I/O-Anmeldeinformationen](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=de#access-adobe-apis) des Sekundärs über das `params.auth`-Objekt offenlegt.  Dies ist in der Regel erforderlich, wenn der Sekundär Adobe I/O-APIs wie die Adobe Photoshop- oder Lightroom-APIs aufruft. Dies kann zudem für jeden Sekundär umgeschaltet werden.
 
 1. Öffnen und überprüfen Sie den automatisch generierten Sekundär `manifest.yml`. Projekte, die mehrere Asset Compute-Sekundäre enthalten, müssen für jeden Sekundär einen Eintrag unter dem Array `actions` definieren.
 

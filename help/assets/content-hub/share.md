@@ -12,7 +12,7 @@ last-substantial-update: 2025-09-15T00:00:00Z
 jira: KT-15987
 exl-id: db898193-6075-49c6-87df-0fcc86b5c4b3
 source-git-commit: abed29d87dec79f2240724cf62b83b87f30d1a01
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '57'
 ht-degree: 100%
 
@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie Assets und Sammlungen für Team-Mitglieder im Content-Hub von AEM Assets freigeben und so eine effektive Team-Arbeit und die sichere Asset-Freigabe fördern.
 
->[!VIDEO](https://video.tv.adobe.com/v/3474928/?learn=on&enablevpops=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3474890/?learn=on&enablevpops=on)
