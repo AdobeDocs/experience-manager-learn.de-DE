@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Experience Manager Assets versieht Video-Assets intelligent mit Keywords, die wichtige Elemente des Videos beschreiben, sodass sie von AEM-Benutzenden bei der Suche nach Keywords leicht zu erkennen sind.
 
->[!VIDEO](https://video.tv.adobe.com/v/327005?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/340529?quality=12&learn=on&captions=ger)

@@ -46,7 +46,7 @@ Besuchen Sie die [WKND-Aktivierungs-Website](https://wknd.enablementadobe.com/de
 
 - **Seite „Magazine“**: Wenn eine Person _drei oder mehr_ Artikel liest, werden sie der Zielgruppe **Magazine Readers** zugeordnet und sieht einen personalisierten Hero-Abschnitt auf der Seite „Magazine“.
 
->[!VIDEO](https://video.tv.adobe.com/v/3474001/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474010/?learn=on&enablevpops&captions=ger)
 
 >[!TIP]
 >

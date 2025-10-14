@@ -24,7 +24,7 @@ Der Service zur automatisierten Formularkonvertierung von AEM Forms konvertiert 
 
 Im folgenden Video werden die Schritte erläutert, die zum Konvertieren von PDF-Formularen in adaptive Formulare mithilfe des Service zur automatisierten Formularkonvertierung erforderlich sind
 
->[!VIDEO](https://video.tv.adobe.com/v/39495?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327713?quality=12&learn=on&captions=ger)
 
 ## Nächste Schritte
 

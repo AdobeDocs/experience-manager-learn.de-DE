@@ -22,7 +22,7 @@ ht-degree: 100%
 
 Der intelligente Zuschnitt für Videos in Dynamic Media verfolgt die Bildmotive des Videos intelligent und stellt sicher, dass Videos bei allen Bildschirmgrößen optimal aussehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/37958?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/326469?quality=12&learn=on&captions=ger)
 
 >[!NOTE]
 >
