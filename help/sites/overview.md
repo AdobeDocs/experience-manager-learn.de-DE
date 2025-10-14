@@ -9,7 +9,7 @@ exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
 source-git-commit: 999bbe542e5c71ae537f93a4c89acf6d304a4292
 workflow-type: tm+mt
 source-wordcount: '786'
-ht-degree: 38%
+ht-degree: 89%
 
 ---
 
@@ -17,15 +17,15 @@ ht-degree: 38%
 
 {{edge-delivery-services}}
 
-Adobe Experience Manager (AEM) Sites ist die Erlebnis-Management-Plattform von Adobe, die die Erstellung, Verwaltung und Bereitstellung digitaler Erlebnisse ermöglicht, sei es über eine Website, eine Mobile App oder einen anderen digitalen Kanal.
+Adobe Experience Manager (AEM) Sites ist die Erlebnis-Management-Plattform von Adobe, die die Erstellung, Verwaltung und Bereitstellung digitaler Erlebnisse ermöglicht, sei es über eine Website, eine App oder einen anderen digitalen Kanal.
 
 ## Drei Möglichkeiten zur Bereitstellung von Erlebnissen mit AEM Sites
 
-AEM Sites bietet drei Möglichkeiten zum Aufbauen, Erstellen und Bereitstellen von Erlebnissen. Unabhängig davon, ob Sie Websites erstellen, die Edge-Leistung optimieren oder Headless-Apps nutzen, bietet AEM Sites flexible Optionen, die Ihren Projektanforderungen entsprechen:
+AEM Sites bietet drei Möglichkeiten zum Aufbauen, Erstellen und Bereitstellen von Erlebnissen. Unabhängig davon, ob Sie Websites erstellen, die Edge-Leistung optimieren oder Headless-Apps nutzen, bietet AEM Sites flexible Optionen, um Ihren Projektanforderungen zu entsprechen:
 
-1. **Edge Delivery Services**-Erlebnisse verwenden Adobes Edge Network, um Inhalte mit hoher Geschwindigkeit und geringer Latenz bereitzustellen. Der Service optimiert automatisch Inhalte für das verbrauchende Gerät, Suchmaschinen und GenAI-Agenten. Autoren erstellen Inhalte mit dem universellen Editor von Adobe oder der dokumentbasierten Inhaltserstellung.
-1. **Headless-/API-First**-Erlebnisse verwenden AEM Publish, um Inhalte als JSON über HTTP-APIs für Mobile Apps, Single Page Applications (SPAs) oder andere Headless-Clients bereitzustellen. Autoren erstellen Inhalte mit dem Inhaltsfragment-Editor oder dem universellen Editor.
-1. **Herkömmliche AEM**-Erlebnisse verwenden AEM Publish , um Inhalte als HTML-Web-Seiten bereitzustellen. Autorinnen und Autoren erstellen Inhalte mit dem Seiteneditor der AEM-Autoreninstanz. Diese Option eignet sich am besten für vorhandene Projekte oder bereits migrierte Projekte.
+1. **Edge Delivery Services**-Erlebnisse verwenden Adobes Edge Network, um Inhalte mit hoher Geschwindigkeit und geringer Latenz bereitzustellen. Der Service optimiert automatisch Inhalte für das verbrauchende Gerät, Suchmaschinen und GenAI-Agenten. Autorinnen und Autoren erstellen Inhalte mit dem universellen Editor von Adobe oder der dokumentbasierten Inhaltserstellung.
+1. **Headless-/API-First**-Erlebnisse verwenden AEM Publish, um Inhalte als JSON über HTTP-APIs für Mobile Apps, Single Page Applications (SPAs) oder andere Headless-Clients bereitzustellen. Autorinnen und Autoren erstellen Inhalte mit dem Inhaltsfragment-Editor oder dem universellen Editor.
+1. **Herkömmliche AEM**-Erlebnisse verwenden AEM Publish, um Inhalte als HTML-Web-Seiten bereitzustellen. Autorinnen und Autoren erstellen Inhalte mit dem Seiteneditor der AEM-Autoreninstanz. Diese Option eignet sich am besten für vorhandene Projekte oder bereits migrierte Projekte.
 
 Alle drei Optionen sind überzeugende Ansätze. Die beste Wahl hängt von Ihrem Anwendungsfall und den betrieblichen Anforderungen ab. Jeder Ansatz ermöglicht es Teams, personalisierte, ansprechende Erlebnisse schnell und skalierbar über jeden Kanal oder jedes Gerät bereitzustellen.
 
@@ -44,21 +44,21 @@ Die folgende Tabelle bietet einen umfassenden Vergleich der drei Pfade. Der Schw
 |            | Edge Delivery Services | Headless/API-First | Traditionelles AEM |
 |---------------------|------------------------------|---------------------------------|---------------------------------------------|
 | **Am besten geeignet für** | Websites mit hohen Anforderungen an Traffic, Leistung und Skalierbarkeit | Mobile Apps, SPAs und andere Headless-Anwendungen | Bestehende Projekte oder migrierte Projekte |
-| **Authoring-Tools** | Dokumentenbasiertes Authoring, universeller Editor, Seiteneditor | Inhaltsfragmente, universeller Editor | Seiten-Editor, universeller Editor |
-| **Erstellter Inhaltsspeicher** | Dokumente oder AEM Author (JCR) | AEM Author (JCR) | AEM Author (JCR) |
+| **Authoring-Tools** | Dokumentenbasiertes Authoring, universeller Editor, Seiteneditor | Inhaltsfragmente, universeller Editor | Seiteneditor, universeller Editor |
+| **Speicher für erstellte Inhalte** | Dokumente oder AEM Author (JCR) | AEM Author (JCR) | AEM Author (JCR) |
 | **Versand** | Edge Delivery Services | AEM Publish (mit Adobe CDN + Dispatcher) | AEM Publish (mit Adobe CDN + Dispatcher) |
-| **Inhaltsspeicher des Versands** | Edge Delivery Services | AEM Publish (JCR) | AEM Publish (JCR) |
-| **Versandformat** | HTML  | JSON | HTML  |
+| **Speicher für Versandinhalte** | Edge Delivery Services | AEM Publish (JCR) | AEM Publish (JCR) |
+| **Bereitstellungsformat** | HTML  | JSON | HTML  |
 | **Entwicklungstechnologie** | JavaScript, CSS | Beliebig (z. B. Swift, React usw.) | Java™, HTL, JavaScript, CSS |
-| **Support für Bots und GenAI-Agenten** | Optimiert für Bots, Suchmaschinen und GenAI-Agenten | Funktioniert für Bots und Agenten, erfordert jedoch möglicherweise SSR oder eine zusätzliche Einrichtung | Geeignet für Bots, aber die Leistung kann im Vergleich zu Edge Delivery Services langsamer sein |
+| **Unterstützung von Such-Bots und GenAI-Agenten** | Optimiert für Bots, Suchmaschinen und GenAI-Agenten | Funktioniert für Bots und Agenten, erfordert jedoch möglicherweise SSR oder ein zusätzliches Setup | Geeignet für Bots, aber die Leistung kann im Vergleich zu Edge Delivery Services langsamer sein |
 
 ## Migration von AMS oder On-Premise
 
-Wenn Sie von AMS oder On-Premise (OTP) zu AEM as a Cloud Service migrieren, empfiehlt Ihnen Adobe, den direkten Wechsel zu Edge Delivery Services zu prüfen. Dieser Aufwand ist in der Regel nicht größer als die Migration zu AEM as a Cloud Service Publish bei gleichzeitiger schnellerer Leistung und höherer Skalierbarkeit. Wenn Sie sich entscheiden, dass Edge Delivery Services derzeit nicht die richtige Wahl für Sie ist, oder wenn die anderen Ansätze Ihren Anforderungen besser entsprechen, bleiben sie vollständig unterstützt und gültige Optionen für Ihr Projekt.
+Wenn Sie von AMS oder On-Premise (OTP) zu AEM as a Cloud Service migrieren, empfiehlt Ihnen Adobe, den direkten Wechsel zu Edge Delivery Services in Erwägung zu ziehen. Dieser Aufwand ist in der Regel nicht größer als bei der Migration zur AEM as a Cloud Service Publish-Veröffentlichung und bietet gleichzeitig eine schnellere Leistung und höhere Skalierbarkeit. Wenn Sie sich entscheiden, dass Edge Delivery Services derzeit nicht die richtige Wahl für Sie ist, oder wenn die anderen Ansätze Ihren Anforderungen besser entsprechen, bleiben sie vollständig unterstützt und gültige Optionen für Ihr Projekt.
 
 ## Tutorials
 
-Erfahren Sie mehr über die drei Ansätze zum Erstellen mit AEM Sites. Die folgenden Tutorials zeigen Ihnen, wie die einzelnen Optionen funktionieren, welche Tools beteiligt sind und wann sie verwendet werden sollten.
+Lernen Sie die drei Ansätze zum Erstellen mit AEM Sites genauer kennen. Die folgenden Tutorials zeigen Ihnen Schritt für Schritt, wie die einzelnen Optionen funktionieren, welche Tools Sie benötigen und wann Sie sie verwenden müssen.
 
 <!-- CARDS
 
@@ -67,12 +67,12 @@ Erfahren Sie mehr über die drei Ansätze zum Erstellen mit AEM Sites. Die folge
   {description = Explore Edge Delivery Services with comprehensive guides. The Build, Publish, and Launch guides cover everything you need to get started with Edge Delivery Services.}
   {image = ./assets/edge-delivery-services.png}
   {target = _blank}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview
   {title = Headless/API-First - Tutorials}
   {description = Learn how to build headless applications powered by AEM content. Tutorials cover frameworks like iOS, Android, and React—choose what fits your stack.}
   {image = ./assets/headless.png}
   {target = _self}
-* https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
   {title = Traditional AEM - WKND Tutorial}
   {description = Learn how to build a sample AEM Sites project using the WKND tutorial. This guide walks you through project setup, Core Components, Editable Templates, client-side libraries, and component development.}
   {image = ./assets/aem-wknd-spa-editor-tutorial.png}
@@ -95,7 +95,7 @@ Erfahren Sie mehr über die drei Ansätze zum Erstellen mit AEM Sites. Die folge
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://www.aem.live/docs/" target="_blank" rel="referrer" title="Handbücher zu Edge Delivery Services">Edge Delivery Services – Handbücher</a>
                     </p>
-                    <p class="is-size-6">Erkunden Sie Edge Delivery Services mit umfassenden Handbüchern. Die Handbücher zu Erstellen, Veröffentlichen und Launch behandeln alles, was Sie für die ersten Schritte mit Edge Delivery Services benötigen.</p>
+                    <p class="is-size-6">Erkunden Sie Edge Delivery Services mit umfassenden Handbüchern. Die Build-, Veröffentlichungs- und Launch-Handbücher decken alles ab, was Sie für die ersten Schritte mit Edge Delivery Services benötigen.</p>
                 </div>
                 <a href="https://www.aem.live/docs/" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
 <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Mehr erfahren</span>

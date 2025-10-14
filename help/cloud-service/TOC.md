@@ -9,7 +9,7 @@ team: TM
 source-git-commit: ef790e3f4fccb2c8b2205332df3466731c2826dc
 workflow-type: tm+mt
 source-wordcount: '1410'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -150,7 +150,7 @@ ht-degree: 99%
       + [Integrieren von Tags](./personalization/setup/integrate-adobe-tags.md)
    + Anwendungsszenarien {#use-cases}
       + [Experimente (A/B-Tests)](./personalization/use-cases/experimentation.md)
-      + [Verhaltens-Targeting](./personalization/use-cases/behavioral-targeting.md)
+      + [Verhaltensbasiertes Targeting](./personalization/use-cases/behavioral-targeting.md)
 + AEM-APIs{#aem-apis}
    + [Überblick](./apis/overview.md)
    + OpenAPIs{#openapis}
