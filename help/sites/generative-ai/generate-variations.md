@@ -11,9 +11,9 @@ last-substantial-update: 2024-03-14T00:00:00Z
 jira: KT-14911
 exl-id: 1055c45c-7f04-4f8e-bca8-a4a085a718c8
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '73'
-ht-degree: 100%
+ht-degree: 67%
 
 ---
 
@@ -25,4 +25,4 @@ Die Funktion „Varianten generieren“ in Adobe Experience Manager ist ein dyna
 
 ## Verwenden von „Varianten generieren“ in AEM Authoring
 
-+ __Dokumenterstellung:__ Erfahren Sie, wie Sie „Varianten generieren“ für die dynamische und personalisierte Dokumenterstellung verwenden und Ihre dokumentbasierten Websites zu überzeugenderen und ansprechenderen Erlebnissen erweitern. [Dokumentation anzeigen](https://www.aem.live/docs/sidekick-generate-variations)
++ __Dokumenterstellung :__Erfahren Sie, wie Sie Varianten für die dynamische und personalisierte Erstellung von Dokumenten verwenden können, um Ihre dokumentbasierten Websites zu ansprechenderen und ansprechenderen Erlebnissen zu machen. [Dokumentation anzeigen](https://www.aem.live/docs/sidekick-generate-variations)
