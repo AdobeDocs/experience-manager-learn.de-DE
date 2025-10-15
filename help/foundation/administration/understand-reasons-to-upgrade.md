@@ -136,7 +136,7 @@ Nachfolgend finden Sie eine Matrix der wichtigsten Foundation-Funktionen von AEM
             <td>✔<sup>+</sup></td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/queries-and-indexing.html?lang=de" target="_blank">Benutzerdefinierte Suchindizes</a>: </strong>
+            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/sites/deploying/using/queries-and-indexing.html?lang=de" target="_blank">Benutzerdefinierte Suchindizes</a>: </strong>
  Möglichkeit zum Hinzufügen benutzerdefinierter Indexdefinitionen zur Optimierung der Abfrageleistung und Suchrelevanz.</td>
             <td> </td>
             <td>✔</td>
@@ -674,7 +674,7 @@ Integrieren in den Tag Management Cloud Service der nächsten Generation von Ado
 
 Nachfolgend finden Sie eine Matrix der wichtigsten Asset-Funktionen von AEM. Einige dieser Funktionen wurden in früheren Versionen eingeführt, mit inkrementellen Verbesserungen in jeder Version.
 
-+ [AEM Assets-Versionshinweise](https://helpx.adobe.com/experience-manager/6-5/release-notes/assets.html?lang=de)
++ [AEM Assets-Versionshinweise](https://helpx.adobe.com/de/experience-manager/6-5/release-notes/assets.html?lang=de)
 
 ***✔bedeutet, dass die Funktion in dieser Version erheblich verbessert wurde.***
 
@@ -794,7 +794,7 @@ Vorkonfigurierte Workflows und Aufgaben zur Überprüfung und Genehmigung digita
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/multilingual-assets.html?lang=de" target="_blank">Mehrsprachige Assets</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/multilingual-assets.html?lang=de" target="_blank">Mehrsprachige Assets</a>:</strong>
  Automatische Übersetzungsunterstützung von Asset-Metadaten mit Sprachstämmen.</td>
             <td> </td>
             <td> </td>
@@ -827,7 +827,7 @@ Verwenden Sie Adobe-KI, um Bilder automatisch mit nützlichen Metadaten zu verse
             <td>✔</td>
         </tr>
         <tr>
-            <td><strong><a href="https://helpx.adobe.com/experience-manager/6-5/assets/using/indesign.html?lang=de" target="_blank">Adobe InDesign Server-Integration</a>:</strong>
+            <td><strong><a href="https://helpx.adobe.com/de/experience-manager/6-5/assets/using/indesign.html?lang=de" target="_blank">Adobe InDesign Server-Integration</a>:</strong>
  Generieren von Produktkatalogen. Erstellen von Broschüren, Flyern und Druckanzeigen anhand von InDesign-Vorlagen.</td>
             <td> </td>
             <td> </td>
