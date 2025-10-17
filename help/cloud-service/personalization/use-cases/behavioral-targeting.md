@@ -11,10 +11,10 @@ last-substantial-update: 2025-09-10T00:00:00Z
 jira: KT-19113
 thumbnail: KT-19113.jpeg
 exl-id: fd7204fa-03f2-40df-9f0a-487a5aec2891
-source-git-commit: e7960fa75058c072b1b52ba1a0d7c99a0280d02f
-workflow-type: ht
-source-wordcount: '4180'
-ht-degree: 100%
+source-git-commit: c367564acb6465d5f203e5db943c5470607b63c9
+workflow-type: tm+mt
+source-wordcount: '4185'
+ht-degree: 99%
 
 ---
 
@@ -46,7 +46,7 @@ Besuchen Sie die [WKND-Aktivierungs-Website](https://wknd.enablementadobe.com/de
 
 - **Seite „Magazine“**: Wenn eine Person _drei oder mehr_ Artikel liest, werden sie der Zielgruppe **Magazine Readers** zugeordnet und sieht einen personalisierten Hero-Abschnitt auf der Seite „Magazine“.
 
->[!VIDEO](https://video.tv.adobe.com/v/3474010/?learn=on&enablevpops&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/3474001/?learn=on&enablevpops)
 
 >[!TIP]
 >
@@ -87,7 +87,7 @@ Der Einrichtungsprozess für verhaltensbasiertes Targeting umfasst Schritte für
 
 4. **Überprüfen der Implementierung des verhaltensbasierten Targetings auf Ihren AEM-Seiten**
 
-Die verschiedenen Lösungen von AEP werden verwendet, um zur Erstellung von Zielgruppen Verhaltensdaten zu erfassen, zu verwalten und zu sammeln. Diese Zielgruppen werden dann in Adobe Target aktiviert. Mithilfe von Aktivitäten in Adobe Target werden den Benutzenden personalisierte Erlebnisse bereitgestellt.
+Die verschiedenen Lösungen von AEP werden verwendet, um zur Erstellung von Zielgruppen Verhaltensdaten zu erfassen, zu verwalten und zu sammeln. Diese Zielgruppen werden dann in Adobe Target aktiviert. Mithilfe von Aktivitäten in Adobe Target werden personalisierte Erlebnisse für Benutzende bereitgestellt, die den Zielgruppenkriterien entsprechen.
 
 ## Schritte in Adobe Experience Platform
 

@@ -6,10 +6,10 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: ef790e3f4fccb2c8b2205332df3466731c2826dc
+source-git-commit: c367564acb6465d5f203e5db943c5470607b63c9
 workflow-type: tm+mt
-source-wordcount: '1410'
-ht-degree: 100%
+source-wordcount: '1412'
+ht-degree: 99%
 
 ---
 
@@ -151,6 +151,7 @@ ht-degree: 100%
    + Anwendungsszenarien {#use-cases}
       + [Experimente (A/B-Tests)](./personalization/use-cases/experimentation.md)
       + [Verhaltensbasiertes Targeting](./personalization/use-cases/behavioral-targeting.md)
+      + [Personalization mit bekanntem Benutzer](./personalization/use-cases/known-user-personalization.md)
 + AEM-APIs{#aem-apis}
    + [Überblick](./apis/overview.md)
    + OpenAPIs{#openapis}
