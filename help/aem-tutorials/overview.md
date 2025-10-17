@@ -29,9 +29,9 @@ Adobe Experience Manager (AEM) ist die führende Erlebnis-Management-Plattform. 
 
 + [Erste Schritte mit AEM Sites – WKND-Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de)
 + [Erste Schritte mit AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=de)
-+ [Erste Schritte mit der Bereitstellung von AEM-Inhaltsfragmenten mit OpenAPIs](https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/open-api/basic/overview)
++ [Erste Schritte mit der Bereitstellung von AEM-Inhaltsfragmenten mit OpenAPIs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/open-api/basic/overview)
 + [Bearbeiten von React-Apps mit dem universellen Editor](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview)
-+ [Erste Schritte mit Personalization](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/personalization/overview)
++ [Erste Schritte mit Personalization](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
 + [Erste Schritte mit RDE](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/developing/rde/overview)
-+ [Erste Schritte mit AEM-APIs](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/aem-apis/overview)
++ [Erste Schritte mit AEM-APIs](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/overview)
 + [Schutz von AEM-Websites](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
