@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
-source-git-commit: bc1c7a96a3d5dbc23fb7d34343cee0cfc2853be9
-workflow-type: ht
-source-wordcount: '597'
-ht-degree: 100%
+source-git-commit: e5a1ab5fcc5314bddfbc4ad900127804bc019009
+workflow-type: tm+mt
+source-wordcount: '564'
+ht-degree: 99%
 
 ---
 
@@ -171,6 +171,7 @@ ht-degree: 100%
       + [Generieren von FPIDs](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [Analytics mit dem Platform Web SDK](integrations/platform/analytics-using-web-sdk.md)
+      + [Adobe Target](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
    + Tags in Adobe Experience Platform {#experience-platform-data-collection-tags}
       + [Überblick](integrations/experience-platform/data-collection/tags/overview.md)
       + [Erstellen einer Tag-Eigenschaft](integrations/experience-platform/data-collection/tags/create-tag-property.md)
@@ -185,14 +186,9 @@ ht-degree: 100%
       + [Nachverfolgen angeklickter Komponenten mit Adobe Analytics](integrations/analytics/track-clicked-component.md)
       + [Analysieren von Daten mit Analysis Workspace](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
-      + [Überblick](integrations/adobe-target/overview.md)
-      + [Hinzufügen der Target-Erweiterung zur Tags-Eigenschaft](integrations/adobe-target/add-target-launch-extension.md)
-      + [Laden und Auslösen eines Target-Aufrufs](integrations/adobe-target/load-and-fire-target.md)
-      + [Erstellen eines Adobe Target Cloud Service-Kontos](integrations/adobe-target/setup-aem-target-cloud-service.md)
-      + [Exportieren von Experience Fragments nach Adobe Target](integrations/adobe-target/export-experience-fragment-target.md)
-      + [Erstellen einer Target-Aktivität mit Experience Fragment-Angeboten](integrations/adobe-target/create-target-activity.md)
-      + [Personalisierung mit Visual Experience Composer](integrations/adobe-target/personalization-using-vec.md)
-      + [Personalisierung des gesamten Web-Seitenerlebnisses](integrations/adobe-target/personalization-web-page.md)
+      + [Übersicht](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
+      + [Setup](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
+      + [Anwendungsfälle](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
 + Lernen Sie von Ihren Kolleginnen und Kollegen {#expert-resources}
    + [Überblick](expert-resources/learn-from-your-peers-overview.md)
    + [Erstellen eines Authoring-Handbuchs in AEM Sites](expert-resources/authoring-guide-in-sites.md)

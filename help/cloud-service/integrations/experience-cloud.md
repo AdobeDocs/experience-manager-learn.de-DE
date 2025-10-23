@@ -14,10 +14,10 @@ badgeIntegration: label="Integration" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
 duration: 135
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: ht
-source-wordcount: '640'
-ht-degree: 100%
+source-git-commit: e5a1ab5fcc5314bddfbc4ad900127804bc019009
+workflow-type: tm+mt
+source-wordcount: '638'
+ht-degree: 99%
 
 ---
 
@@ -131,9 +131,9 @@ Adobe Learning Manager (vormals Adobe Captivate Prime) bietet Kundinnen und Kund
 ### AEM Assets
 
 + [Smart-Tags für Bilder](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=de)
-+ [Benutzerdefinierte Smarttags für Bilder](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/custom-smart-tags.html?lang=de)
-+ [Smarttags für Videos](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/video-smart-tags.html?lang=de)
-+ [Smartes Zuschneiden](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/smart-crop-feature-video-use.html?lang=de)
++ [Benutzerdefinierte Smart-Tags für Bilder](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/custom-smart-tags.html?lang=de)
++ [Smart-Tags für Videos](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/video-smart-tags.html?lang=de)
++ [Intelligenter Zuschnitt](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/smart-crop-feature-video-use.html?lang=de)
 + [Visuelle Suche](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search.html?lang=de)
 
 ### AEM Forms
@@ -147,14 +147,16 @@ Adobe Target ist in AEM as a Cloud Service integriert, um jeder Endbenutzerin un
 
 ### AEM Sites
 
-+ [Konfigurieren der Adobe Target-Integration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=de)
++ [Konfigurieren der Adobe Target-Integration](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-target)
+
++[Personalization-Anwendungsfälle](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
+
 + Experience Fragments in Target
 
    + [Veröffentlichen von Experience Fragments in Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=de)
    + [Veröffentlichen von Experience Fragments als JSON in Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=de)
 
 + [Verwenden von AEM ContextHub mit Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/audiences.html?lang=de#creating-an-adobe-target-audience-using-the-audience-console)
-+ [Tutorial zu AEM Sites und Target](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/target/overview.html?lang=de)
 
 ## Adobe Workfront
 
