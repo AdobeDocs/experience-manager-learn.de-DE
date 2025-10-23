@@ -33,7 +33,7 @@ In Ihrer Organisation gibt es möglicherweise verschiedene Anwendungsfälle für
 
 ## Anwendungsbeispiel
 
-![VIDEO](https://video.tv.adobe.com/v/3476105/?learn=on&enablevpops)
+![VIDEO](https://video.tv.adobe.com/v/3476118/?captions=ger&learn=on&enablevpops)
 
 In diesem Tutorial unter Verwendung der [Beispiel-WKND-Site](https://github.com/adobe/aem-guides-wknd) zeigt der Prozess, wie **angemeldete**, die ein **Ski**-Abenteuer erworben haben, einen personalisierten Helden auf der **WKND-Startseite**.
 
