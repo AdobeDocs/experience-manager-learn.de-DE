@@ -147,9 +147,9 @@ Adobe Target ist in AEM as a Cloud Service integriert, um jeder Endbenutzerin un
 
 ### AEM Sites
 
-+ [Konfigurieren der Adobe Target-Integration](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-target)
++ [Konfigurieren der Adobe Target-Integration](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-target)
 
-+[Personalization-Anwendungsfälle](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
++[Personalization-Anwendungsfälle](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
 
 + Experience Fragments in Target
 

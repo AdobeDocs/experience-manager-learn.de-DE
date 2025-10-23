@@ -171,7 +171,7 @@ ht-degree: 99%
       + [Generieren von FPIDs](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [Analytics mit dem Platform Web SDK](integrations/platform/analytics-using-web-sdk.md)
-      + [Adobe Target](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
+      + [Adobe Target](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/personalization/overview)
    + Tags in Adobe Experience Platform {#experience-platform-data-collection-tags}
       + [Überblick](integrations/experience-platform/data-collection/tags/overview.md)
       + [Erstellen einer Tag-Eigenschaft](integrations/experience-platform/data-collection/tags/create-tag-property.md)
@@ -186,9 +186,9 @@ ht-degree: 99%
       + [Nachverfolgen angeklickter Komponenten mit Adobe Analytics](integrations/analytics/track-clicked-component.md)
       + [Analysieren von Daten mit Analysis Workspace](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
-      + [Übersicht](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
-      + [Setup](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
-      + [Anwendungsfälle](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
+      + [Übersicht](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/personalization/overview)
+      + [Setup](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
+      + [Anwendungsfälle](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
 + Lernen Sie von Ihren Kolleginnen und Kollegen {#expert-resources}
    + [Überblick](expert-resources/learn-from-your-peers-overview.md)
    + [Erstellen eines Authoring-Handbuchs in AEM Sites](expert-resources/authoring-guide-in-sites.md)
