@@ -7,10 +7,10 @@ topic: Personalization, Integrations
 role: Developer, Architect, Leader, User
 level: Beginner
 doc-type: Tutorial
-last-substantial-update: 2025-11-01T00:00:00Z
+last-substantial-update: 2025-11-03T00:00:00Z
 jira: KT-19546
 thumbnail: KT-19546.jpeg
-source-git-commit: 055dc7d666d082244d73d3494bac54d7eb4bb886
+source-git-commit: 9e99936fb03e085f6bc276c7d6ef5cc08e34d1e5
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 3%
@@ -21,12 +21,14 @@ ht-degree: 3%
 
 Besuchen Sie die [WKND-Aktivierungs](https://wknd.enablementadobe.com/de/de.html){target="wknd"}Website, um reale Beispiele für A/B-Tests, Verhaltens-Targeting und bekannte Benutzerpersonalisierung zu sehen.
 
+>[!VIDEO](https://video.tv.adobe.com/v/3476461/?learn=on&enablevpops)
+
 Diese Seite führt Sie durch praktische Demonstrationen der einzelnen Personalisierungsszenarien. Erkunden Sie die Möglichkeiten, bevor Sie diese Funktionen auf Ihrer eigenen AEM-Site erstellen.
 
 >[!IMPORTANT]
 >
 > Öffnen Sie die Demo-Site in mehreren Browser-Fenstern oder im Inkognito-/privaten Browser-Modus, um verschiedene personalisierte Varianten gleichzeitig zu erleben.
-> &#x200B;> Bei Verwendung des privaten Browser-Modus können Firefox und Safari das ECID-Cookie blockieren. Alternativ können Sie den regulären Browser-Modus verwenden oder Cookies löschen, bevor Sie ein neues Personalisierungsszenario ausprobieren.
+> Bei Verwendung des privaten Browser-Modus können Firefox und Safari das ECID-Cookie blockieren. Alternativ können Sie den regulären Browser-Modus verwenden oder Cookies löschen, bevor Sie ein neues Personalisierungsszenario ausprobieren.
 
 ## Demo-Anwendungsfälle
 
@@ -51,7 +53,7 @@ Diese Erlebnisse werden sofort basierend auf Ihrem aktuellen Browser-Verhalten a
 | [Home](https://wknd.enablementadobe.com/de/de.html){target="wknd"} | Ein personalisiertes **familienfreundliches Adventures Hero-Banner** mit einem Familien-Bike am See, das geführte Erlebnisse fördert, die gemeinsame Erinnerungen schaffen | Besuchen Sie [Bali Surf Camp](https://wknd.enablementadobe.com/us/en/adventures/bali-surf-camp.html){target="wknd"} oder [Gastronomische Marais Tour](https://wknd.enablementadobe.com/us/en/adventures/gastronomic-marais-tour.html){target="wknd"} und kehren Sie dann auf die Homepage zurück | ![Home - Familien-Abenteuer-Held](./assets/live-demo/behavioral-home-family-hero.png){width="200" zoomable="yes"} |
 | [Abenteuer](https://wknd.enablementadobe.com/us/en/adventures.html){target="wknd"} | Ein Werbe-Held für den Radsport-**„Free Bike Tune Up** mit „We&#39;ve Got You Covered“-Nachrichten und einem kostenlosen Angebot für die Wartung von Fahrrädern von WKND-Experten-Partnern | Besuchen Sie alle mit dem Fahrrad verbundenen Abenteuer (z. B. [Radfahren Toskana](https://wknd.enablementadobe.com/us/en/adventures/cycling-tuscany.html){target="wknd"}) und navigieren Sie dann zur Seite Adventures . | ![Abenteuer - Free Bike Tune Up Hero](./assets/live-demo/behavioral-adventures-bike-hero.png){width="200" zoomable="yes"} |
 | [Abenteuer](https://wknd.enablementadobe.com/us/en/adventures.html){target="wknd"} | Ein Camping-Thema **Gear Collection Hero** präsentiert wichtige Camping-Ausrüstung (Schlafsäcke, Jacken, Stiefel) mit der Botschaft „Dein nächstes Abenteuer beginnt mit dem richtigen Zahnrad“ | Besuchen Sie alle Campingabenteuer (z. B. [Yosemite Backpacking](https://wknd.enablementadobe.com/us/en/adventures/yosemite-backpacking.html){target="wknd"}) und navigieren Sie dann zur Seite Adventures . | ![Adventures - Camp Gear Collection Hero](./assets/live-demo/behavioral-adventures-camp-hero.png){width="200" zoomable="yes"} |
-| [Magazin](https://wknd.enablementadobe.com/us/en/magazine.html){target="wknd"} | Eine zeitkritische **Magazin-Verkaufsaktion** mit gerollten WKND-Magazinen mit hervorgehobenem „SALE!“ Abzeichen und spezielle Leserpreise für Anfragen und Outdoor-Kollektionen | Lesen Sie einen oder mehrere Zeitschriftenartikel (z. B[&#x200B; „Skitouren](https://wknd.enablementadobe.com/us/en/magazine/ski-touring.html){target="wknd"}) und navigieren Sie dann zur Landingpage für das Magazin | ![Magazin - Verkaufsheld](./assets/live-demo/behavioral-magazine-sale-hero.png){width="200" zoomable="yes"} |
+| [Magazin](https://wknd.enablementadobe.com/us/en/magazine.html){target="wknd"} | Eine zeitkritische **Magazin-Verkaufsaktion** mit gerollten WKND-Magazinen mit hervorgehobenem „SALE!“ Abzeichen und spezielle Leserpreise für Anfragen und Outdoor-Kollektionen | Lesen Sie einen oder mehrere Zeitschriftenartikel (z. B[ „Skitouren](https://wknd.enablementadobe.com/us/en/magazine/ski-touring.html){target="wknd"}) und navigieren Sie dann zur Landingpage für das Magazin | ![Magazin - Verkaufsheld](./assets/live-demo/behavioral-magazine-sale-hero.png){width="200" zoomable="yes"} |
 
 ### Adventures und Magazine Pages (Batch)
 
@@ -95,6 +97,6 @@ Auf der WKND-Homepage wird ein aktiver A/B-Test mit drei Varianten des Artikels 
 
 ## Nächste Schritte
 
-Sind Sie bereit, die Personalisierung auf Ihrer eigenen AEM-Site zu implementieren? Beginnen Sie mit der [Übersicht über &#x200B;](./overview.md) Personalization, um mehr über den vollständigen Einrichtungsprozess zu erfahren.
+Sind Sie bereit, die Personalisierung auf Ihrer eigenen AEM-Site zu implementieren? Beginnen Sie mit der [Übersicht über ](./overview.md) Personalization, um mehr über den vollständigen Einrichtungsprozess zu erfahren.
 
 
