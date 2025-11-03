@@ -11,7 +11,7 @@ last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18717
 thumbnail: null
 exl-id: c4fb11b9-b613-4522-b9da-18d7ae0826ec
-source-git-commit: 055dc7d666d082244d73d3494bac54d7eb4bb886
+source-git-commit: 4d345ba7b10ea21d7bc7eee89157de782e1c4350
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 51%
@@ -38,7 +38,7 @@ Um verschiedene Personalisierungsszenarien zu demonstrieren, verwendet dieses Tu
 
 ## Live-Demo von Personalization-Anwendungsfällen
 
-Erleben Sie die Personalisierung in Aktion auf der [WKND-Website](https://wknd.enablementadobe.com/de/de.html){target="_blank"}. Auf der Demo-Site werden drei Arten der Personalisierung veranschaulicht: A/B-Tests, Verhaltens-Targeting und Personalisierung für bekannte Benutzende.
+Erleben Sie die Personalisierung in Aktion auf der [WKND-Website](https://wknd.enablementadobe.com/de/de.html){target="wknd"}. Auf der Demo-Site werden drei Arten der Personalisierung veranschaulicht: A/B-Tests, Verhaltens-Targeting und Personalisierung für bekannte Benutzende.
 
 >[!TIP]
 >
