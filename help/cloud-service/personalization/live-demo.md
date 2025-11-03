@@ -21,7 +21,7 @@ ht-degree: 3%
 
 Besuchen Sie die [WKND-Aktivierungs](https://wknd.enablementadobe.com/de/de.html){target="wknd"}Website, um reale Beispiele für A/B-Tests, Verhaltens-Targeting und bekannte Benutzerpersonalisierung zu sehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3476461/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3476470/?captions=ger&learn=on&enablevpops)
 
 Diese Seite führt Sie durch praktische Demonstrationen der einzelnen Personalisierungsszenarien. Erkunden Sie die Möglichkeiten, bevor Sie diese Funktionen auf Ihrer eigenen AEM-Site erstellen.
 
