@@ -131,7 +131,7 @@ Eine Videoanleitung zur Installation und Verwendung von [!DNL Apache Sling Dynam
 
    >[!TIP]
    >
-   > Wird das nachstehende `*` in der glob-Regel `*.nocache.html*` belassen, kann dies zu [Problemen bei Anfragen für Unterressourcen](https://github.com/AdobeDocs/experience-manager-learn.en/issues/16) führen.
+   > Wird das nachstehende `*` in der glob-Regel `*.nocache.html*` belassen, kann dies zu [Problemen bei Anfragen für Unterressourcen](https://github.com/AdobeDocs/experience-manager-learn.de-DE/issues/16) führen.
 
    ```shell
    /cache {
