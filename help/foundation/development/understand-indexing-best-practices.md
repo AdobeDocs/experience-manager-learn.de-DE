@@ -13,10 +13,10 @@ last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
-source-git-commit: 7ada3c2e7deb414b924077a5d2988db16f28712c
-workflow-type: ht
-source-wordcount: '1693'
-ht-degree: 100%
+source-git-commit: 1048beba42011eccb1ebdd43458591c8e953fb8a
+workflow-type: tm+mt
+source-wordcount: '1706'
+ht-degree: 97%
 
 ---
 
@@ -41,7 +41,7 @@ Manchmal müssen Sie benutzerdefinierte Indizes erstellen, damit Ihre Suchanford
 
 - Verstehen Sie die Suchanforderungen und prüfen Sie, ob die vorkonfigurierten Indizes diese Suchanforderungen unterstützen können. Verwenden Sie das **Abfrageleistungs-Werkzeug**, das als [lokales SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) und AEMCS über die Developer Console oder unter `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` verfügbar ist.
 
-- Definieren Sie eine optimale Abfrage und orientieren Sie sich dabei am Diagramm zum [Optimieren von Abfragen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) sowie an der [JCR-Abfrage-Schnellübersicht](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=de).
+- Definieren Sie eine optimale Abfrage und orientieren Sie sich dabei am Diagramm zum [Optimieren von Abfragen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) sowie an der [JCR-Abfrage-Schnellübersicht](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf).
 
 - Wenn die vorkonfigurierten Indizes die Suchanforderungen nicht unterstützen können, haben Sie zwei Möglichkeiten. Überprüfen Sie jedoch die [Tipps zum Erstellen effizienter Indizes](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
    - Anpassen des vorkonfigurierten Index: Dies ist die bevorzugte Option, da Verwaltung und Aktualisierung einfach sind.
@@ -53,7 +53,7 @@ Manchmal müssen Sie benutzerdefinierte Indizes erstellen, damit Ihre Suchanford
 
 - In **AEM 6.x** funktioniert die oben angegebene Benennung _nicht_. Aktualisieren Sie jedoch einfach den vorkonfigurierten Index mit den erforderlichen Eigenschaften im Knoten `indexRules`.
 
-- Kopieren Sie immer die neueste vordefinierte Indexdefinition aus der AEM-Instanz mit CRX DE Package Manager (/crx/packmgr/), benennen Sie sie um und passen Sie die XML-Datei an.
+- Kopieren Sie immer die neueste vordefinierte Indexdefinition aus der AEM-Instanz mit dem CRX DE-Paket-Manager (/crx/packmgr/), benennen Sie sie um und passen Sie die XML-Datei an.
 
 - Speichern Sie die Indexdefinition im AEM-Projekt unter `ui.apps/src/main/content/jcr_root/_oak_index` und stellen Sie sie mithilfe von CI/CD-Pipelines in Cloud Manager bereit. Weitere Informationen finden Sie unter [Bereitstellen benutzerdefinierter Indexdefinitionen](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/indexing).
 
@@ -112,7 +112,7 @@ Die richtige Vorgehensweise besteht darin, den vorkonfigurierten Index anzupasse
 
 Die folgende Abbildung zeigt den benutzerdefinierten Index für den Knotentyp `dam:Asset`, wobei die Eigenschaft `includedPaths` auf einen bestimmten Pfad gesetzt ist.
 
-![Index auf dem Knotentyp „dam:Asset“](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)
+![Index auf dem dam:Asset-Knotentyp](./assets/understand-indexing-best-practices/index-for-damAsset-type.png)
 
 ##### Analyse
 
@@ -243,13 +243,13 @@ Um Apache Tika vollständig zu deaktivieren, gehen Sie wie folgt vor:
 
 Sehen wir uns einige Tools an, die Ihnen beim Definieren, Analysieren und Optimieren der Indizes helfen können.
 
-### Indexerstellungs-Tool
+### Tool zur Indexerstellung und Oak-Tools
 
-Das Tool [Oak Index Definition Generator](https://oakutils.appspot.com/generate/index) hilft beim **Generieren der Indexdefinition** basierend auf den Eingabeabfragen. Es bietet einen guten Ausgangspunkt zum Erstellen eines benutzerdefinierten Index.
+Das Tool [Oak Index Definition Generator](https://thomasmueller.github.io/oakTools/indexDefGenerator.html) hilft beim **Generieren der Indexdefinition** basierend auf den Eingabeabfragen. Es bietet einen guten Ausgangspunkt zum Erstellen eines benutzerdefinierten Index.
 
-### Indexanalyse-Tool
-
-Das Tool [Index Definition Analyzer](https://oakutils.appspot.com/analyze/index) hilft beim **Analysieren der Indexdefinition** und gibt Empfehlungen zum Verbessern der Indexdefinition.
+Die [Oak-Tools](https://thomasmueller.github.io/oakTools/index.html) enthalten auch andere
+-Dienstprogramme für Indizierung und Abfrage, z. B. zum Konvertieren von Indizes zwischen JSON- und XML-Format,
+, um XPath-Abfragen in SQL-2 zu konvertieren und Indizes zu vergleichen.
 
 ### Abfrageleistungs-Tool
 

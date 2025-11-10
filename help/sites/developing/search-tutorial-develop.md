@@ -11,10 +11,10 @@ exl-id: aa268c5f-d29e-4868-a58b-444379cb83be
 last-substantial-update: 2022-08-10T00:00:00Z
 thumbnail: 32090.jpg
 duration: 138
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
-source-wordcount: '627'
-ht-degree: 100%
+source-git-commit: 1048beba42011eccb1ebdd43458591c8e953fb8a
+workflow-type: tm+mt
+source-wordcount: '630'
+ht-degree: 98%
 
 ---
 
@@ -36,9 +36,9 @@ Bei der Implementierung der einfachen Suche handelt es sich um die Materialien v
 * [Index-Manager](http://localhost:4502/libs/granite/operations/content/diagnosis/tool.html/granite_oakindexmanager)
 * [Erläutern der Abfrage](http://localhost:4502/libs/granite/operations/content/diagnosis/tool.html/granite_queryperformance)
 * [CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/oak%3Aindex/cqPageLucene) > /oak:index/cqPageLucene
-* [CRX Package Manager](http://localhost:4502/crx/packmgr/index.jsp)
+* [CRX-Paket-Manager](http://localhost:4502/crx/packmgr/index.jsp)
 * [QueryBuilder-Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?)
-* [Oak Index Definition Generator](https://oakutils.appspot.com/generate/index)
+* [Oak Index Definition Generator](https://thomasmueller.github.io/oakTools/indexDefGenerator.html)
 
 ### Kapitel {#chapters}
 
@@ -86,7 +86,7 @@ Korrekturen und Erläuterungen aus den Lab-Diskussionen und Antworten auf weiter
 
 1. **Wie lässt sich eine Neuindizierung stoppen?**
 
-   Die Neuindizierung kann über IndexStats MBean gestoppt werden, verfügbar über [AEM Web Console > JMX](http://localhost:4502/system/console/jmx).
+   Die Neuindizierung kann über IndexStats MBean gestoppt werden, verfügbar über [AEM-Web-Konsole > JMX](http://localhost:4502/system/console/jmx).
 
    * [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats)
       * Führen Sie `abortAndPause()` aus, um die Neuindizierung abzubrechen. Dadurch wird der Index für eine weitere Neuindizierung so lange gesperrt, bis `resume()` aufgerufen wird.
@@ -138,7 +138,7 @@ Korrekturen und Erläuterungen aus den Lab-Diskussionen und Antworten auf weiter
    PLAN: [cq:Page] as [a] /* lucene:cqPageLucene(/oak:index/cqPageLucene) *:* */ union [dam:Asset] as [a] /* lucene:damAssetLucene(/oak:index/damAssetLucene) *:* */
    ```
 
-   Untersuchen Sie die Abfrage und Ergebnisse über den [QueryBuilder-Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Ddam%3AAsset%0D%0A%23+add+all+asset+restrictions+to+this+group) und das [AEM-Chrome-Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=de-DE).
+   Untersuchen Sie die Abfrage und Ergebnisse über den [QueryBuilder-Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Ddam%3AAsset%0D%0A%23+add+all+asset+restrictions+to+this+group) und das [AEM-Chrome-Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=de-DE).
 
 5. **Wie kann in derselben Abfrage über mehrere Pfade hinweg gesucht werden?**
 
@@ -162,4 +162,4 @@ Korrekturen und Erläuterungen aus den Lab-Diskussionen und Antworten auf weiter
    PLAN: [cq:Page] as [a] /* traverse "/content/docs/en/6-2//*" where isdescendantnode([a], [/content/docs/en/6-2]) */ union [cq:Page] as [a] /* traverse "/content/docs/en/6-3//*" where isdescendantnode([a], [/content/docs/en/6-3]) */
    ```
 
-   Untersuchen Sie die Abfrage und Ergebnisse über den [QueryBuilder-Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&amp;query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0Agroup.1_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-2%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Dcq%3APage%0D%0Agroup.2_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-3%0D%0A%23+add+all+asset+restrictions+to+this+group) und das [AEM-Chrome-Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=de-DE).
+   Untersuchen Sie die Abfrage und Ergebnisse über den [QueryBuilder-Debugger](http://localhost:4502/libs/cq/search/content/querydebug.html?_charset_=UTF-8&query=group.p.or%3Dtrue%0D%0Agroup.1_group.type%3Dcq%3APage%0D%0Agroup.1_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-2%0D%0A%23+add+all+page+restrictions+to+this+group%0D%0Agroup.2_group.type%3Dcq%3APage%0D%0Agroup.2_group.path%3D%2Fcontent%2Fdocs%2Fen%2F6-3%0D%0A%23+add+all+asset+restrictions+to+this+group) und das [AEM-Chrome-Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode?hl=de-DE).
