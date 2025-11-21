@@ -9,7 +9,7 @@ sub-product: Experience Manager Forms
 version: Experience Manager 6.4, Experience Manager 6.5
 index: y
 source-git-commit: c4b5a015f1c0d5e3877886052476871548ec9b0e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2104'
 ht-degree: 100%
 
@@ -38,7 +38,7 @@ ht-degree: 100%
    + [Danke-Seite anpassen](handling-form-submissions/thank-you-page-on-fdm-submission.md)
    + [Übermittlung an externen Endpunkt](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
    + [Senden von E-Mails](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
-   + [Arbeitsablauf für gebührenpflichtige Zeitüberschreitung bei Anfrage](handling-form-submissions/paid-time-off-request-workflow.md)
+   + [Workflow für gebührenpflichtige Zeitüberschreitung bei Anfrage](handling-form-submissions/paid-time-off-request-workflow.md)
    + [Konfigurieren des adaptiven Formulars zum Auslösen von AEM Workflow – Video](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
    + [Anpassen der Benachrichtigung „Aufgabe zuweisen“](handling-form-submissions/customize-assign-task-notification.md)
 + Nützliche Integrationen{#some-useful-integrations}
@@ -69,7 +69,7 @@ ht-degree: 100%
    + [Verwenden von eingestellten Werten in XML im OSGI-Workflow](adaptive-forms/setvalue-aem-forms-workflow-tutorial-use.md)
    + [Verwenden von eingestellten Werten in JSON im OSGI-Workflow](adaptive-forms/setvalue-json-data-in-aem-forms-workflow-article-use.md)
    + [Senden von E-Mail-Komponente im AEM Forms Workflow](adaptive-forms/email-step-aem-workflow-video-use.md)
-   + [Generieren von DocumentOfRecord mithilfe der API](adaptive-forms/document-of-record-api-tutorial-use.md)
+   + [Generieren eines DocumentOfRecord mithilfe der API](adaptive-forms/document-of-record-api-tutorial-use.md)
    + [Anzeigen von Inline-Bildern](adaptive-forms/inline-images-adaptive-forms.md)
    + [DAM-Bilder inline anzeigen](adaptive-forms/inline-images-from-dam.md)
    + [Verwenden der GeoLocation-API](adaptive-forms/using-geolocation-api-in-aem-forms-article.md)
@@ -406,7 +406,7 @@ ht-degree: 100%
    + [Designer: Installieren von Designer-Patches](troubleshooting/how-to-install-designer-patches.md)
    + [JEE Foundation: Ändern des Werts der Entropie](troubleshooting/how-to-change-the-value-of-entropy.md)
    + [JEE Foundation: Ändern des Transaktions-Timeouts jedes Dienstes in AEM Forms für JEE](troubleshooting/how-to-change-transaction-timeout-of-any-service-in-aem-forms-jee.md)
-   + [JEE Foundation: Bereinigen von Prozessdatensätzen in der Job Manager-Tabelle](troubleshooting/how-to-purge-process-records-from-the-job-manager-table.md)
+   + [JEE Foundation: Bereinigen von Prozesseinträgen in der Job Manager-Tabelle](troubleshooting/how-to-purge-process-records-from-the-job-manager-table.md)
    + [JEE Foundation: Ausführen der Prozessbereinigung über die Befehlszeile](troubleshooting/how-to-run-process-purge-from-command-line.md)
    + [JEE Foundation: Schritte beim manuellen Bootstrapping](troubleshooting/steps-to-bootstrap-manually.md)
    + [JEE Foundation: Schritte zum Erfassen von Debugging-Protokollen für mobile Formulare](troubleshooting/steps-to-capture-debug-logs-for-mobile-forms.md)

@@ -9,7 +9,7 @@ version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-2963
 index: y
 source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '343'
 ht-degree: 100%
 

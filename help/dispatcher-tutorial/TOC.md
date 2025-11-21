@@ -7,7 +7,7 @@ jira: KT-2233
 index: y
 team: TM
 source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '39'
 ht-degree: 100%
 
@@ -17,6 +17,6 @@ ht-degree: 100%
 # AEM Dispatcher-Cache-Tutorial{#dispatcher-tutorial}
 
 + [Übersicht](overview.md)
-+ [1. Konzepte, Muster und Antimuster](chapter-1.md)
-+ [2. Infrastrukturmuster](chapter-2.md)
-+ [3. Fortgeschrittene Zwischenspeicherungsthemen](chapter-3.md)
++ [&#x200B;1. Konzepte, Muster und Antimuster](chapter-1.md)
++ [&#x200B;2. Infrastrukturmuster](chapter-2.md)
++ [&#x200B;3. Fortgeschrittene Zwischenspeicherungsthemen](chapter-3.md)
