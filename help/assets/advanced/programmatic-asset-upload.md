@@ -103,7 +103,7 @@ Es _(mehrere Authentifizierungsmethoden),_ von der Bibliothek [aem-upload](https
 
 | | Standardauthentifizierung | [Lokales Entwicklungstoken](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token) | [Service-Anmeldeinformationen](https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) | [OAuth S2S](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) | [OAuth-Web-App](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) | [OAuth SPA](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) |
 |---|---|---|---|---|---|---|
-| Wird unterstützt? | &amp;check; | &amp;check; | &amp;check; | &amp;cross; | &amp;cross; | &amp;cross; |
+| Wird unterstützt? | &check; | &check; | &check; | &cross; | &cross; | &cross; |
 | Zweck | Lokale Entwicklung | Lokale Entwicklung | Produktion | Nicht zutreffend | Nicht zutreffend | Nicht zutreffend |
 
 Gehen Sie wie folgt vor, um die Beispielanwendung zu konfigurieren:
@@ -180,7 +180,7 @@ Um die Dienstanmeldeinformationen abzurufen, müssen Sie die **AEM**-Developer C
 
 1. Aktualisieren Sie die Umgebungsvariable `AEM_SERVICE_CREDENTIALS_FILE` mit dem Pfad zur Datei service-credentials.json.
 
-1. Stellen Sie sicher, dass der Benutzer mit den Service-Anmeldeinformationen über die erforderlichen Berechtigungen zum Hochladen von Assets in die AEM as a Cloud Service-Umgebung verfügt. Weitere Informationen finden Sie auf [ Seite „Zugriff in AEM ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials#configure-access-in-aem).
+1. Stellen Sie sicher, dass der Benutzer mit den Service-Anmeldeinformationen über die erforderlichen Berechtigungen zum Hochladen von Assets in die AEM as a Cloud Service-Umgebung verfügt. Weitere Informationen finden Sie auf [&#x200B; Seite „Zugriff in AEM &#x200B;](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials#configure-access-in-aem).
 
 >[!ENDTABS]
 
