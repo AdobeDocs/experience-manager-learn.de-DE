@@ -22,4 +22,4 @@ ht-degree: 100%
 
 Erfahren Sie, wie Sie mit dem Umschalter „Neuer Editor“ problemlos zwischen dem standardmäßigen neuen Inhaltsfragmenteditor und dem klassischen Editor wechseln können.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419312/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3477325/?captions=ger&learn=on)

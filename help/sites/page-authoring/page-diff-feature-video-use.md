@@ -41,7 +41,7 @@ Die AEM Sites-Funktionen „Seitenunterschiede“ bieten eine schnelle, farbcodi
 
 ## Vergleichen von Launch-Seiten {#comparing-launch-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/17746?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3477347?captions=ger&quality=12&learn=on)
 
 Die Funktion „Seitenunterschiede“ kann auch verwendet werden, um den Unterschied zwischen Blueprints und Live Copys sowie Blueprints und Sprachkopien zu identifizieren.
 

@@ -71,7 +71,7 @@ Umfassende Informationen zur Inhaltsfragmentkonsole und ihren Funktionen finden 
             <a href="./basics/content-fragment-editor.md" title="Übersicht über den Editor"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3424373?format=jpeg"
+                src="https://video.tv.adobe.com/v/3477336?captions=ger&format=jpeg"
                 alt="Übersicht über den Editor">
             </a>
           </figure>
@@ -138,7 +138,7 @@ Inhaltsfragmenteditor</p>
             <a href="./editor/new-editor-toggle.md" title="Umschalter „Neuer Editor“"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="Umschalter „Neuer Editor“
+                src="https://video.tv.adobe.com/v/3477325?captions=ger&format=jpeg" alt="Umschalter „Neuer Editor“
 ">
             </a>
           </figure>

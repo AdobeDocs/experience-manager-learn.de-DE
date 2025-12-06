@@ -23,4 +23,4 @@ ht-degree: 100%
 
 Eine kurze Einführung zum AEM Inhaltsfragmenteditor.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424373/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3477336/?captions=ger&learn=on)

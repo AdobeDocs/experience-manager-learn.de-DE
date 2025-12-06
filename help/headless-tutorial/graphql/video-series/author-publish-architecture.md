@@ -27,4 +27,4 @@ In diesem Video erfahren Sie Folgendes:
 + Grundlegendes zur Architektur von AEM Author and Publish und zur Veröffentlichung von Inhalten
 + Best Practices für die Headless-Bereitstellung mit einer AEM-Veröffentlichungsumgebung
 
->[!VIDEO](https://video.tv.adobe.com/v/333296?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3450958?captions=ger&quality=12&learn=on)
