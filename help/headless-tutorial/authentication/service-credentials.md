@@ -12,10 +12,10 @@ last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 duration: 881
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
-workflow-type: ht
-source-wordcount: '1963'
-ht-degree: 100%
+source-git-commit: dc29a4b7857ee8d1405c9ef8d14f09374c2bfd01
+workflow-type: tm+mt
+source-wordcount: '1962'
+ht-degree: 98%
 
 ---
 
@@ -25,7 +25,7 @@ Integrationen mit Adobe Experience Manager (AEM) as a Cloud Service müssen in d
 
 AEM kann mit anderen Adobe-Produkten mithilfe von [über Adobe Developer Console verwaltetes S2S OAuth](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service) integriert werden. Bei benutzerdefinierten Integrationen mit Dienstkonten werden JWT-Anmeldedaten in der AEM Developer Console verwendet und verwaltet.
 
->[!VIDEO](https://video.tv.adobe.com/v/3412600?quality=12&learn=on&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
 Service-Anmeldeinformationen sehen zwar ähnlich aus wie [Zugriffstoken für die lokale Entwicklung](./local-development-access-token.md), unterscheiden sich aber in einigen wichtigen Punkten:
 
@@ -77,7 +77,7 @@ Das Herunterladen der Service-Anmeldeinformationen erfolgt in ähnlichen Schritt
    + __Administrierende der Adobe IMS-Organisation__
    + Mitglied beim IMS-Produktprofil der __AEM-Administrierenden__ auf __AEM Author__
 1. Melden Sie sich bei [Adobe Cloud Manager](https://my.cloudmanager.adobe.com) an.
-1. Öffnen Sie das Programm mit der AEM as a Cloud Service Umgebung, mit der integriert werden soll
+1. Öffnen Sie das Programm mit der AEM as a Cloud Service-Umgebung, mit der integriert werden soll
 1. Tippen Sie auf die Auslassungspunkte neben der Umgebung im Abschnitt __Umgebungen__ und wählen Sie __Developer Console__ aus
 1. Tippen Sie auf die Registerkarte __Integrationen__.
 1. Tippen Sie auf die Registerkarte __Technische Konten__
@@ -124,7 +124,7 @@ Damit Sie auf AEM as a Cloud Service unter Verwendung der Dienstanmeldeinformati
 
 + Wenn Dienstanmeldeinformationen vorhanden sind, verwendet die externe Anwendung beim Zugriff auf AEM as a Cloud Service dieses Zugriffs-Token anstelle des Zugriffs-Tokens für die lokale Entwicklung.
 
-In diesem Tutorial wird das npm-Modul von Adobe `@adobe/jwt-auth` verwendet, um in einem einzigen Funktionsaufruf (1) das JWT auf Basis der Dienst-Anmeldeinformationen zu generieren und (2) es gegen ein Zugriffs-Token einzutauschen. Wenn Ihre Anwendung nicht auf JavaScript basiert, prüfen Sie bitte den [Muster-Code in anderen Sprachen](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/), um zu sehen, wie ein JWT aus den Dienstanmeldeinformationen erstellt und gegen ein Zugriffs-Token für Adobe IMS eingetauscht werden kann.
+In diesem Tutorial wird das npm-Modul von Adobe `@adobe/jwt-auth` verwendet, um in einem einzigen Funktionsaufruf (1) das JWT auf Basis der Dienst-Anmeldeinformationen zu generieren und (2) es gegen ein Zugriffs-Token einzutauschen. Wenn Ihre Anwendung nicht auf JavaScript basiert, können Sie benutzerdefinierten Code in der Sprache Ihrer Wahl entwickeln, der das JWT aus den Dienstanmeldeinformationen erstellt und gegen ein Zugriffs-Token für Adobe IMS eintauscht.
 
 ## Lesen der Dienstanmeldeinformationen
 
@@ -213,7 +213,7 @@ Diese Beispielanwendung basiert auf Node.js. Daher empfiehlt es sich, das npm-Mo
 
 ## Konfigurieren des Zugriffs in AEM
 
-Das aus Service-Anmeldeinformationen abgeleitete Zugriffstoken verwendet ein technisches Konto AEM-Benutzer mit Mitgliedschaft in der AEM-Benutzergruppe __Mitwirkende__.
+Das aus Service-Anmeldeinformationen abgeleitete Zugriffstoken verwendet ein technisches Konto AEM-Benutzer mit Zugehörigkeit zur AEM-Benutzergruppe __Mitwirkende__.
 
 ![Service-Anmeldeinformationen – Technisches Konto AEM-Benutzer](./assets/service-credentials/technical-account-user.png)
 
