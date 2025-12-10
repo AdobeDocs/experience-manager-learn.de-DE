@@ -6,10 +6,10 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
-source-git-commit: e5a1ab5fcc5314bddfbc4ad900127804bc019009
+source-git-commit: 6acf7f1d5c91b29a64b372b678f04b7cb880039b
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 99%
+source-wordcount: '566'
+ht-degree: 98%
 
 ---
 
@@ -98,6 +98,7 @@ ht-degree: 99%
       + [Dokumentstruktur](edge-delivery-services/developing/document-structure.md)
       + [Lokale Entwicklung](edge-delivery-services/developing/local-development.md)
       + [Git](edge-delivery-services/developing/git.md)
+      + [Konfigurations-Pipeline](edge-delivery-services/developing/cloud-manager-configuration-pipeline.md)
       + Universeller Editor {#universal-editor}
          + [Überblick](./edge-delivery-services/developing/universal-editor/0-overview.md)
          + [Neues Code-Projekt](./edge-delivery-services/developing/universal-editor/1-new-code-project.md)
@@ -171,7 +172,7 @@ ht-degree: 99%
       + [Generieren von FPIDs](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
       + [Analytics mit dem Platform Web SDK](integrations/platform/analytics-using-web-sdk.md)
-      + [Adobe Target](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/personalization/overview)
+      + [Adobe Target](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
    + Tags in Adobe Experience Platform {#experience-platform-data-collection-tags}
       + [Überblick](integrations/experience-platform/data-collection/tags/overview.md)
       + [Erstellen einer Tag-Eigenschaft](integrations/experience-platform/data-collection/tags/create-tag-property.md)
@@ -186,9 +187,9 @@ ht-degree: 99%
       + [Nachverfolgen angeklickter Komponenten mit Adobe Analytics](integrations/analytics/track-clicked-component.md)
       + [Analysieren von Daten mit Analysis Workspace](integrations/analytics/create-analytics-workspace.md)
    + Adobe Target {#target}
-      + [Übersicht](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/personalization/overview)
-      + [Setup](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
-      + [Anwendungsfälle](https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
+      + [Übersicht](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview)
+      + [Setup](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/setup/integrate-adobe-tags)
+      + [Anwendungsfälle](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/personalization/overview#use-cases)
 + Lernen Sie von Ihren Kolleginnen und Kollegen {#expert-resources}
    + [Überblick](expert-resources/learn-from-your-peers-overview.md)
    + [Erstellen eines Authoring-Handbuchs in AEM Sites](expert-resources/authoring-guide-in-sites.md)
