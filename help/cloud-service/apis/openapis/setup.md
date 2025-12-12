@@ -23,7 +23,7 @@ ht-degree: 61%
 
 Erfahren Sie, wie Sie Ihre AEM as a Cloud Service-Umgebung einrichten, um den Zugriff auf OpenAPI-basierte AEM-APIs zu aktivieren.
 
-In diesem Beispiel wird die **AEM Assets** API unter Verwendung der **Server-zu-Server**-Authentifizierungsmethode verwendet, um den OpenAPI-basierten Einrichtungsprozess von AEM-APIs zu demonstrieren. Sie können ähnliche Schritte ausführen, um ([ andere OpenAPI-basierte AEM-APIs) ](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis).
+In diesem Beispiel wird die **AEM Assets** API unter Verwendung der **Server-zu-Server**-Authentifizierungsmethode verwendet, um den OpenAPI-basierten Einrichtungsprozess von AEM-APIs zu demonstrieren. Sie können ähnliche Schritte ausführen, um ([&#x200B; andere OpenAPI-basierte AEM-APIs) &#x200B;](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
