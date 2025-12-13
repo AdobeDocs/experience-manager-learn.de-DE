@@ -87,8 +87,8 @@ Dieses Tutorial weist eine Abhängigkeit vom Projekt __WKND 2.1.0+__ auf (für d
 
 Um eine Schnelleinrichtung zu ermöglichen, werden hier AEM-Pakete mit der endgültigen AEM-Konfiguration und den fertiggestellten AEM-Inhalten für das Tutorial bereitgestellt.
 
-1. [Herunterladen ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [Herunterladen ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
+1. [Herunterladen &#x200B;](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [Herunterladen &#x200B;](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
 1. Melden Sie sich beim Package Manager von AEM SDK unter [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) mit den `admin` Anmeldeinformationen an.
 1. __Laden__ Sie die in Schritt 1 heruntergeladene Datei `wknd-app.all.x.x.x.zip` hoch.
 1. Tippen Sie auf die Schaltfläche __Installieren__ für den Eintrag `wknd-app.all.x.x.x.zip`

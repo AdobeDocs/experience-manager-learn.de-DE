@@ -106,7 +106,7 @@ Grundsätzlich können Sie, wenn alle Dateien zwischengespeichert und daher stat
 
 Um den Dispatcher detaillierter zu verstehen, schauen wir uns die Struktur einer einfachen Beispiel-URL erneut an. Sehen wir uns das folgende Beispiel an:
 
-`http://domain.com/path/to/resource/pagename.selectors.html/path/suffix.ext?parameter=value&amp;otherparameter=value#fragment`
+`http://domain.com/path/to/resource/pagename.selectors.html/path/suffix.ext?parameter=value&otherparameter=value#fragment`
 
 * `http` bezeichnet das Protokoll
 

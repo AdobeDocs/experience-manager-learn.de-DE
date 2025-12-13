@@ -191,7 +191,7 @@ Diese Beispielanwendung basiert auf Node.js. Daher empfiehlt es sich, das npm-Mo
 
    Je nachdem, welche JSON-Datei über `file` Befehlszeilenparameter übergeben wird - entweder das Zugriffs-Token-JSON für die lokale Entwicklung oder das Dienstanmeldeinformationen-JSON -, leitet die Anwendung jetzt ein Zugriffs-Token ab.
 
-   Beachten Sie, dass die Dienstanmeldeinformationen zwar nur alle 365 Tage ablaufen, das JWT und das entsprechende Zugriffstoken jedoch häufiger ablaufen und vor ihrem Ablauf aktualisiert werden müssen. Dies kann mit einem `refresh_token` (bereitgestellt [ Adobe IMS) ](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens).
+   Beachten Sie, dass die Dienstanmeldeinformationen zwar nur alle 365 Tage ablaufen, das JWT und das entsprechende Zugriffstoken jedoch häufiger ablaufen und vor ihrem Ablauf aktualisiert werden müssen. Dies kann mit einem `refresh_token` (bereitgestellt [&#x200B; Adobe IMS) &#x200B;](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#access-tokens).
 
 1. Mit diesen Änderungen wurde die JSON-Datei für Dienstanmeldeinformationen von der AEM Developer Console heruntergeladen und der Einfachheit halter im selben Ordner wie `index.js` als `service_token.json` gespeichert. Lassen Sie uns nun die Anwendung ausführen, indem wir den Befehlszeilenparameter `file` durch `service_token.json` ersetzen und `propertyValue` in einen neuen Wert ändern, damit die Auswirkungen in AEM sichtbar werden.
 

@@ -30,7 +30,7 @@ Um dies auf Ihrem Server zu testen, folgen Sie den folgenden Anweisungen
 
   >[!NOTE]
   >
-  >In AEM Forms 6.5 und höher ist diese Funktion standardmäßig verfügbar ([ hier beschrieben](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
+  >In AEM Forms 6.5 und höher ist diese Funktion standardmäßig verfügbar ([&#x200B; hier beschrieben](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
 * Einrichten von Tomcat mit der Datei „SampleRest.war“, wie [hier](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html?lang=de) beschrieben. Die in Tomcat bereitgestellte WAR-Datei hat den Code, um die Kreditwürdigkeit des Antragstellers zurückzugeben. Die Kreditwürdigkeit ist eine Zufallszahl zwischen 200 und 800
 
